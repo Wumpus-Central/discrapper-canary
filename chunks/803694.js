@@ -235,7 +235,7 @@ function y(e) {
             },
             [s],
         ),
-        M = l.useCallback(
+        O = l.useCallback(
             (e) => {
                 if (e && null != v) {
                     r !== v.id && x(r ?? null), s(v.id);
@@ -246,15 +246,15 @@ function y(e) {
             [s, v, r, N],
         ),
         {
-            walletCoversSubtotal: O,
+            walletCoversSubtotal: M,
             walletCoversTotal: L,
             isWalletBalanceLoaded: k,
             isWalletCoverageLoading: w,
         } = f({ giftCardsEnabled: y, checkoutPaymentSources: i }),
         U = null != S && null != v && S === v.id;
     l.useEffect(() => {
-        !U && k && !O && T && s(N);
-    }, [U, k, O, T, s, N]);
+        !U && k && !M && T && s(N);
+    }, [U, k, M, T, s, N]);
     let D = l.useMemo(
         () =>
             null == v
@@ -262,12 +262,12 @@ function y(e) {
                 : {
                       giftCardWallet: v,
                       checked: T,
-                      onChange: M,
+                      onChange: O,
                       loading: w,
-                      disabled: !w && !O,
-                      disabledTooltip: w || O ? void 0 : C.intl.string(h.default.ccWIdu),
+                      disabled: !w && !M,
+                      disabledTooltip: w || M ? void 0 : C.intl.string(h.default.ccWIdu),
                   },
-        [v, T, M, O, w],
+        [v, T, O, M, w],
     );
     return {
         giftCardsEnabled: y,
@@ -276,10 +276,10 @@ function y(e) {
         giftCardWallet: v,
         isGiftCardCreditsChecked: T,
         isSubscriptionPaidByWallet: U,
-        handleGiftCardCreditsToggle: M,
+        handleGiftCardCreditsToggle: O,
         handleDropdownPaymentSourceChange: R,
         giftCardCheckboxProps: D,
-        walletCoversSubtotal: O,
+        walletCoversSubtotal: M,
         walletCoversTotal: L,
         isWalletBalanceLoaded: k,
         isWalletCoverageLoading: w,

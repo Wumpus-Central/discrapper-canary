@@ -36,11 +36,11 @@ function A(e) {
     let t = e.nodeType === Node.ELEMENT_NODE ? e : e.parentElement;
     return t?.closest('[contenteditable="true"]') != null;
 }
-function E(e) {
+function C(e) {
     let t = e.nodeType === Node.ELEMENT_NODE ? e : e.parentElement;
     return t?.closest(`[${g}]`) ?? null;
 }
-function C(e) {
+function E(e) {
     let t;
     if (null == e.clipboardData) return;
     let n = window.getSelection();
@@ -53,8 +53,8 @@ function C(e) {
     if (t.collapsed || A(t.startContainer) || A(t.endContainer)) return;
     let l = t.cloneContents(),
         i = null != l.querySelector(`[${g}]`),
-        s = E(t.startContainer),
-        r = E(t.endContainer),
+        s = C(t.startContainer),
+        r = C(t.endContainer),
         a = !i && null != s && s === r;
     if (i || a) {
         let t, n;
@@ -112,12 +112,12 @@ let S = function (e) {
         g = (0, o.K)(t),
         x = null != g,
         A = g?.gameName ?? I.intl.string(I.t["11pdXZ"]),
-        E = g?.gameIcon;
+        C = g?.gameIcon;
     i.useEffect(
         () => (
-            1 === (p += 1) && document.addEventListener("copy", C),
+            1 === (p += 1) && document.addEventListener("copy", E),
             () => {
-                0 == (p -= 1) && document.removeEventListener("copy", C);
+                0 == (p -= 1) && document.removeEventListener("copy", E);
             }
         ),
         [],
@@ -134,13 +134,13 @@ let S = function (e) {
             },
             [x, t, A, f],
         ),
-        N = i.useCallback(() => {
+        v = i.useCallback(() => {
             (0, s.openModalLazy)(async () => {
                 let { default: e } = await n.e("256466").then(n.bind(n, 188841));
                 return (t) => (0, l.jsx)(e, { ...t });
             });
         }, []),
-        v = i.useCallback(
+        N = i.useCallback(
             (e) => {
                 (e.stopPropagation(), e.preventDefault(), x)
                     ? u.default.openGameProfileModal({
@@ -149,9 +149,9 @@ let S = function (e) {
                           source: c.GameProfileSources.GameMention,
                           sourceUserId: f,
                       })
-                    : N();
+                    : v();
             },
-            [t, x, N, f],
+            [t, x, v, f],
         ),
         _ = x ? `@game ${A}` : void 0;
     return (0, l.jsx)(r.m, {
@@ -163,13 +163,13 @@ let S = function (e) {
         children: (0, l.jsxs)(h.A, {
             "data-mention-game-id": t,
             onContextMenu: S,
-            onClick: v,
+            onClick: N,
             children: [
                 (0, l.jsx)(m.A, {
                     children: (0, l.jsx)("span", {
                         "aria-hidden": "true",
                         className: y.P0,
-                        children: (0, l.jsx)(d.A, { game: { id: t, icon: E }, iconClassName: y.Kk, allowFetch: !1 }),
+                        children: (0, l.jsx)(d.A, { game: { id: t, icon: C }, iconClassName: y.Kk, allowFetch: !1 }),
                     }),
                 }),
                 (0, l.jsx)("span", { className: y.UU, children: A }),

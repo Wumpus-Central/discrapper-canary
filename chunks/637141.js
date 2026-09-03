@@ -94,8 +94,8 @@ function b(e) {
             dropdownLoading: b,
             paymentGatewayRestrictions: j,
             newPaymentMethodOptionLabel: R,
-            defaultPaymentSourceId: M,
-            tooltipText: O,
+            defaultPaymentSourceId: O,
+            tooltipText: M,
             resolvePaymentSourceOptions: L,
         } = e,
         {
@@ -205,7 +205,7 @@ function b(e) {
                 }
             }
             return null;
-        })({ isTrial: P, selectedPaymentSource: U, paymentSources: n, defaultPaymentSourceId: M }),
+        })({ isTrial: P, selectedPaymentSource: U, paymentSources: n, defaultPaymentSourceId: O }),
         B = i.useMemo(() => {
             let e = D.map((e) => {
                 let { label: t, brand: n, ...l } = e;
@@ -225,5 +225,5 @@ function b(e) {
         newPaymentMethodOptionLabel: R,
         noticeMessage: F,
     });
-    return null != O ? (0, l.jsx)(o.m, { asContainer: !0, text: O, children: W }) : W;
+    return null != M ? (0, l.jsx)(o.m, { asContainer: !0, text: M, children: W }) : W;
 }

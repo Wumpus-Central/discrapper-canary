@@ -28,8 +28,8 @@ var l = n(477900),
     b = n(351906),
     j = n(287809),
     R = n(957565),
-    M = n(45938),
-    O = n(158045),
+    O = n(45938),
+    M = n(158045),
     L = n(427262),
     k = n(951305),
     w = n(482132),
@@ -71,7 +71,7 @@ function B(e) {
             : null == s
               ? null
               : ((e = s.interval === D.WT.MONTH ? (W ? G.t["4ZJ+7Z"] : G.t["P+z55d"]) : W ? G.t.p0pZXP : G.t.bXqk3o),
-                G.intl.format(e, { skuName: (0, O.RH)(s.id), intervalCount: s.intervalCount }));
+                G.intl.format(e, { skuName: (0, M.RH)(s.id), intervalCount: s.intervalCount }));
     }
     return x
         ? (0, l.jsxs)("div", {
@@ -158,12 +158,12 @@ function B(e) {
                                                             label: G.intl.string(G.t["/dG4NA"]),
                                                             children: (0, l.jsx)(p.e, {
                                                                 hideMessage: B ? G.intl.string(G.t["0RLn47"]) : null,
-                                                                value: (0, M.Zq)(t),
+                                                                value: (0, O.Zq)(t),
                                                                 mode: N,
                                                                 text: e,
                                                                 onCopy: (e) => {
                                                                     null != r &&
-                                                                        (0, M.AK)(new T.A({ code: t, maxUses: 1 }), r),
+                                                                        (0, O.AK)(new T.A({ code: t, maxUses: 1 }), r),
                                                                         (0, R.C)(
                                                                             e,
                                                                             () => j(p.e.Modes.SUCCESS),

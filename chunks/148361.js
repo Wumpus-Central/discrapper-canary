@@ -20,9 +20,9 @@ let p = function (e) {
             channel: g,
             emojiDescriptor: x,
             pickerIntention: A,
-            analyticsLocation: E,
+            analyticsLocation: C,
         } = e,
-        C = (0, r.RQ)((e) => e.searchQuery),
+        E = (0, r.RQ)((e) => e.searchQuery),
         { analyticsLocations: I } = (0, s.Ay)(i.A.EMOJI_PICKER);
     t =
         A === h.EmojiIntention.REACTION
@@ -36,8 +36,8 @@ let p = function (e) {
                   : m.e.EMOJI_PICKER_EMOJI_CLICKED;
     let y = null != x ? x.emoji : void 0,
         S = null != y && y.animated,
-        N = null != y && !o.Ay.isInternalEmojiForGuildId(y, g?.getGuildId()),
-        v = null != y ? d.ZSU.EMOJI : d.ZSU.EMOJI_PICKER_FLOATING_UPSELL;
+        v = null != y && !o.Ay.isInternalEmojiForGuildId(y, g?.getGuildId()),
+        N = null != y ? d.ZSU.EMOJI : d.ZSU.EMOJI_PICKER_FLOATING_UPSELL;
     return (0, l.jsx)(a.A, {
         title: f.intl.string(f.t["0+11FF"]),
         description: f.intl.string(f.t.dURIzS),
@@ -46,11 +46,11 @@ let p = function (e) {
         onUpsellClicked: p,
         upsellViewedTrackingData: {
             type: t,
-            is_external: N,
-            location: { ...E, object: v },
+            is_external: v,
+            location: { ...C, object: N },
             location_stack: I,
             sku_id: (0, u.mH)(u.Ay.getSkuIdForPremiumType(m.PremiumTypes.TIER_2)),
-            has_search_query: null != C && "" !== C,
+            has_search_query: null != E && "" !== E,
             is_animated: S,
         },
         isEmojiPickerOverlay: !0,

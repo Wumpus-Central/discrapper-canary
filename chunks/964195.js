@@ -1,4 +1,4 @@
-n.d(t, { A: () => E, F: () => I });
+n.d(t, { A: () => C, F: () => I });
 var l = n(477900),
     i = n(582128),
     s = n(503698),
@@ -15,11 +15,11 @@ var l = n(477900),
     g = n(903209),
     x = n(375708),
     A = n(374129);
-function E(e) {
-    let t = (0, h.g)(e.activityApplication);
-    return null == t ? null : (0, l.jsx)(C, { ...e, widgetApplication: t });
-}
 function C(e) {
+    let t = (0, h.g)(e.activityApplication);
+    return null == t ? null : (0, l.jsx)(E, { ...e, widgetApplication: t });
+}
+function E(e) {
     var t, n;
     let s,
         { hasWidget: r, isLoadingProfile: a } =

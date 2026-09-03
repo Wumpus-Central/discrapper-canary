@@ -1,4 +1,4 @@
-n.d(t, { r3: () => eS, Ay: () => eL, xS: () => eR });
+n.d(t, { r3: () => eS, Ay: () => eM, xS: () => eR });
 var l = n(477900),
     i = n(582128),
     s = n(503698),
@@ -15,28 +15,28 @@ var l = n(477900),
     g = n(232042),
     x = n(906754),
     A = n(332173),
-    E = n(37632),
-    C = n(534890),
+    C = n(37632),
+    E = n(534890),
     I = n(375708),
     y = n(879386);
 let S = function () {
-    return (0, l.jsx)(C.ChatIcon, {
+    return (0, l.jsx)(E.ChatIcon, {
         size: "md",
         color: "currentColor",
         className: y.K,
         "aria-label": I.intl.string(I.t.BAB0yK),
     });
 };
-var N = n(112107),
-    v = n(930101),
+var v = n(112107),
+    N = n(930101),
     _ = n(976860),
-    T = n(302031),
-    j = n(157941),
+    j = n(302031),
+    T = n(157941),
     b = n(696451),
     R = n(317525),
     O = n(71393),
-    M = n(957565),
-    L = n(143145),
+    L = n(957565),
+    M = n(143145),
     k = n(785562),
     w = n(192308),
     P = n(588975),
@@ -75,7 +75,7 @@ var z = n(380610),
 function ef(e) {
     let { url: t } = e,
         n = i.useCallback(() => {
-            (0, M.C)(t, () =>
+            (0, L.C)(t, () =>
                 (0, X.P0)({ id: "experiment-link-copied", message: "Copied experiment link", type: Q.Ck.SUCCESS }),
             );
         }, [t]);
@@ -108,12 +108,12 @@ function ep(e) {
     let g = (0, J.hp)(c).find((e) => e.value === s),
         x = null != g ? eh.Ps.EXPERIMENT_TREATMENT : eh.Ps.EXPERIMENT,
         A = null != d && null != g && d.variantId === g.value,
-        E = (0, l.jsx)(ef, { url: t }),
-        C = null;
+        C = (0, l.jsx)(ef, { url: t }),
+        E = null;
     return (x === eh.Ps.EXPERIMENT_TREATMENT && null != g
-        ? (C = (0, l.jsx)(et.E, { variant: "text-xs/normal", color: "text-muted", children: g.label }))
+        ? (E = (0, l.jsx)(et.E, { variant: "text-xs/normal", color: "text-muted", children: g.label }))
         : null != m &&
-          (C = (0, l.jsxs)(et.E, { variant: "text-xs/normal", color: "text-muted", children: ["Server Config: ", f] })),
+          (E = (0, l.jsxs)(et.E, { variant: "text-xs/normal", color: "text-muted", children: ["Server Config: ", f] })),
     p)
         ? (0, l.jsxs)("div", {
               className: em.zr,
@@ -135,12 +135,12 @@ function ep(e) {
                                               gap: 0,
                                               children: [
                                                   (0, l.jsx)(et.E, { variant: "text-md/semibold", children: c.title }),
-                                                  C,
+                                                  E,
                                               ],
                                           }),
                                       ],
                                   }),
-                                  E,
+                                  C,
                               ],
                           }),
                       }),
@@ -176,28 +176,28 @@ let ex = i.lazy(() =>
             .then(n.bind(n, 909261))
             .then((e) => ({ default: e.DevToolsLinkEmbed })),
     ),
-    eE = RegExp("^" + Y.st.source, Y.st.flags);
-var eC = n(569926),
+    eC = RegExp("^" + Y.st.source, Y.st.flags);
+var eE = n(569926),
     eI = n(266645);
 function ey(e) {
     let { gameId: t, authorId: n } = e;
-    return (0, eC.I)(t), (0, l.jsx)(eI.A, { gameId: t, authorId: n });
+    return (0, eE.I)(t), (0, l.jsx)(eI.A, { gameId: t, authorId: n });
 }
 function eS() {
     return { gameMention: { react: (e, t, n) => (0, l.jsx)(ey, { gameId: e.gameId, authorId: n.authorId }, n.key) } };
 }
-var eN = n(881140),
-    ev = n(746080),
+var ev = n(881140),
+    eN = n(746080),
     e_ = n(165648),
-    eT = n(969490);
-let ej = { display: "inline" };
+    ej = n(969490);
+let eT = { display: "inline" };
 function eb(e) {
     return e.stopPropagation();
 }
 function eR(e) {
     return {
         ...e,
-        react: (t, n, i) => (0, l.jsx)("span", { style: ej, onClick: eb, children: e.react(t, n, i) }, i.key),
+        react: (t, n, i) => (0, l.jsx)("span", { style: eT, onClick: eb, children: e.react(t, n, i) }, i.key),
     };
 }
 function eO(e) {
@@ -205,7 +205,7 @@ function eO(e) {
         [n, s] = i.useState(!1);
     return (0, l.jsx)(o.D, {
         onClick: function () {
-            (0, M.C)(
+            (0, L.C)(
                 t,
                 () => s(!0),
                 () => s(!1),
@@ -216,7 +216,7 @@ function eO(e) {
             : (0, l.jsx)(c.CopyIcon, { size: "xs", color: "currentColor" }),
     });
 }
-let eM = {
+let eL = {
     blockQuote: {
         react: (e, t, n) =>
             (0, l.jsxs)(
@@ -234,11 +234,11 @@ let eM = {
     s: { react: (e, t, n) => (0, l.jsx)("s", { children: t(e.content, n) }, n.key) },
     highlight: { react: (e, t, n) => (0, l.jsx)("span", { className: "highlight", children: e.content }, n.key) },
     paragraph: { react: (e, t, n) => (0, l.jsx)("p", { children: t(e.content, n) }, n.key) },
-    inlineCode: { react: (e, t, n) => (0, l.jsx)("code", { className: "inline", children: (0, L.t)(e, t, n) }, n.key) },
+    inlineCode: { react: (e, t, n) => (0, l.jsx)("code", { className: "inline", children: (0, M.t)(e, t, n) }, n.key) },
     codeBlock: {
         react(e, t, i) {
             function s() {
-                return (0, l.jsx)("code", { className: r()(eT.kw, "hljs"), children: (0, L.t)(e, t, i) });
+                return (0, l.jsx)("code", { className: r()(ej.kw, "hljs"), children: (0, M.t)(e, t, i) });
             }
             return (0, l.jsx)(
                 "pre",
@@ -246,14 +246,14 @@ let eM = {
                     children: (0, l.jsxs)("div", {
                         className: e_.Hy,
                         children: [
-                            M.p5
+                            L.p5
                                 ? (0, l.jsx)("div", { className: e_.lB, children: (0, l.jsx)(eO, { text: e.content }) })
                                 : null,
-                            (0, l.jsx)(j.l, {
+                            (0, l.jsx)(T.l, {
                                 location: "MarkupReactRules",
                                 code: e.content,
                                 lang: e.lang,
-                                className: r()(eT.kw, "hljs"),
+                                className: r()(ej.kw, "hljs"),
                                 children: (0, l.jsx)(f.c2, {
                                     createPromise: () =>
                                         Promise.all([n.e("818449"), n.e("175134")]).then(n.bind(n, 981776)),
@@ -266,7 +266,7 @@ let eM = {
                                             return null == n
                                                 ? s()
                                                 : (0, l.jsx)("code", {
-                                                      className: r()(eT.kw, "hljs", n.language),
+                                                      className: r()(ej.kw, "hljs", n.language),
                                                       dangerouslySetInnerHTML: { __html: n.value },
                                                   });
                                         }
@@ -289,9 +289,9 @@ let eM = {
     spoiler: {
         react: (e, t, n) =>
             (0, l.jsx)(
-                T.Ay,
+                j.Ay,
                 {
-                    type: T.Ay.Types.TEXT,
+                    type: j.Ay.Types.TEXT,
                     inline: n.formatInline,
                     renderTextElement: (e, t) =>
                         null == e || e.type !== m.A || t ? e : i.cloneElement(e, { tabIndex: -1 }),
@@ -302,7 +302,7 @@ let eM = {
     },
     soundboard: {
         react: (e, t, n) =>
-            (0, l.jsx)(N.Ay, {
+            (0, l.jsx)(v.Ay, {
                 channelId: e.channelId,
                 messageId: e.messageId,
                 soundId: e.soundId,
@@ -312,7 +312,7 @@ let eM = {
     },
     staticRouteLink: {
         react: (e, t, n) =>
-            (0, L.d)(e.id)
+            (0, M.d)(e.id)
                 ? (0, l.jsxs)(
                       A.A,
                       {
@@ -324,13 +324,13 @@ let eM = {
                                       switch (t) {
                                           case "home":
                                           case "guide":
-                                              i(ev.VV.GUILD_HOME);
+                                              i(eN.VV.GUILD_HOME);
                                               break;
                                           case "browse":
-                                              i(ev.VV.CHANNEL_BROWSER);
+                                              i(eN.VV.CHANNEL_BROWSER);
                                               break;
                                           case "customize":
-                                              i(ev.VV.CUSTOMIZE_COMMUNITY);
+                                              i(eN.VV.CUSTOMIZE_COMMUNITY);
                                               break;
                                           case "linked-roles":
                                               if (null != n) {
@@ -365,7 +365,7 @@ let eM = {
                           iconType: e.id,
                           children: [
                               t(e.mainContent, n),
-                              null != e.itemContent ? (0, l.jsx)(E.A, {}) : null,
+                              null != e.itemContent ? (0, l.jsx)(C.A, {}) : null,
                               null != e.itemContent ? t(e.itemContent, n) : null,
                           ],
                       },
@@ -403,10 +403,10 @@ let eM = {
     guild: {
         react: (e, t, n) => {
             let i = O.A.getGuild(e.guildId);
-            return (0, l.jsx)(x.A, { guild: i, children: (0, L.t)(e, t, n) }, n.key);
+            return (0, l.jsx)(x.A, { guild: i, children: (0, M.t)(e, t, n) }, n.key);
         },
     },
-    channel: { react: (e, t, n) => (0, l.jsx)(g.A, { iconType: e.iconType, children: (0, L.t)(e, t, n) }, n.key) },
+    channel: { react: (e, t, n) => (0, l.jsx)(g.A, { iconType: e.iconType, children: (0, M.t)(e, t, n) }, n.key) },
     message: { react: (e, t, n) => (0, l.jsx)(S, {}, n.key) },
     subtext: {
         react: (e, t, n) => {
@@ -424,16 +424,16 @@ let eM = {
                 : (0, l.jsx)("span", { children: t(e.content, n) }, n.key),
     },
 };
-function eL(e) {
+function eM(e) {
     let { shouldStopPropagation: t } = e;
     function s(e) {
         return !0 === t ? eR(e) : e;
     }
     return {
-        ...eM,
-        link: (0, eN.A)(e),
+        ...eL,
+        link: (0, ev.A)(e),
         devLink: {
-            match: (e, t) => (t.allowLinks && t.allowDevLinks ? eE.exec(e) : null),
+            match: (e, t) => (t.allowLinks && t.allowDevLinks ? eC.exec(e) : null),
             parse: (e, t) => ({ target: e, type: "devLink" }),
             react: (e, t, n) => {
                 let s = e.target[0];
@@ -483,7 +483,7 @@ function eL(e) {
                         let { key: a, channelId: o, messageId: u } = r;
                         return e.src
                             ? (0, l.jsx)(
-                                  v.H,
+                                  N.H,
                                   {
                                       node: e,
                                       tooltipPosition: t,
@@ -511,7 +511,7 @@ function eL(e) {
                             e = { ...e, name: t ? `:${d.name}:` : d.name };
                         }
                         return (0, l.jsx)(
-                            v.X,
+                            N.X,
                             { node: e, tooltipPosition: t, enableClick: n, focusable: i, channelId: u, messageId: c },
                             a,
                         );
@@ -555,14 +555,14 @@ function eL(e) {
                         className: "attachmentLink",
                         children: [
                             (0, l.jsx)(P.P, { size: "xs", className: r()(B.Kk, H.K), color: "currentColor" }),
-                            (0, L.t)(t, i, s),
+                            (0, M.t)(t, i, s),
                         ],
                     },
                     s.key,
                 );
             },
         },
-        soundboard: s(eM.soundboard),
+        soundboard: s(eL.soundboard),
         gameMention: {
             react(e, t, n) {
                 let { gameId: i } = e;

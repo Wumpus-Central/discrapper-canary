@@ -24,7 +24,7 @@ function x(e) {
 }
 function A(e) {
     let { image: t, smallImage: n, aspectRatio: l, onClick: s, size: a, className: p } = e,
-        { imageSize: A, smallImageSize: E, mask: C } = g[a];
+        { imageSize: A, smallImageSize: C, mask: E } = g[a];
     if (null == t)
         return (0, i.jsx)(c.V, {
             src: void 0,
@@ -53,7 +53,7 @@ function A(e) {
                                   text: t.text,
                                   children: (0, i.jsx)(u.Ay, {
                                       className: m.ZS,
-                                      mask: C,
+                                      mask: E,
                                       width: A,
                                       height: A,
                                       children: I,
@@ -77,7 +77,7 @@ function A(e) {
                                 children: (0, i.jsx)(c.V, {
                                     src: n.src,
                                     alt: n.alt ?? n.text,
-                                    size: E,
+                                    size: C,
                                     className: m.fO,
                                     constrain: "width",
                                 }),

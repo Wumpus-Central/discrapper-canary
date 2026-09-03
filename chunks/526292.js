@@ -1,4 +1,4 @@
-n.d(t, { Bv: () => I, ar: () => g, f9: () => C, g5: () => E, k0: () => y, k5: () => x, nf: () => A });
+n.d(t, { Bv: () => I, ar: () => g, f9: () => E, g5: () => C, k0: () => y, k5: () => x, nf: () => A });
 var l = n(582128),
     i = n(536637),
     s = n.n(i),
@@ -56,7 +56,7 @@ function A() {
             return;
     }
 }
-function E(e) {
+function C(e) {
     let t = (0, h.A)(p.q),
         n = (0, h.A)(p.EG),
         [i, s] = l.useState(!1),
@@ -82,7 +82,7 @@ function E(e) {
         { churnUserDiscountOffer: o, isFetchingChurnDiscountOffer: r }
     );
 }
-function C() {
+function E() {
     let e = (0, r.bG)([o.A], () => o.A.getPremiumTypeSubscription()),
         t = x(),
         n = null !== e && e.hasPremiumNitroMonthly,

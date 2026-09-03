@@ -28,8 +28,8 @@ var l = n(477900),
     b = n.n(N),
     j = n(17928),
     R = n(10716),
-    M = n(206828),
-    O = n(20015),
+    O = n(206828),
+    M = n(20015),
     L = n(31823),
     k = n(427675),
     w = n(977445),
@@ -188,10 +188,10 @@ function X(e) {
         { upperInlineNoticeProps: N, footerInlineNoticeProps: Y } = (function (e) {
             let { sku: t, application: n, isGift: l } = e,
                 r = (0, j.bG)([R.A], () => R.A.getFetchState()),
-                { fetched: a, hasAlreadyLinked: s } = (0, M.RD)(n),
+                { fetched: a, hasAlreadyLinked: s } = (0, O.RD)(n),
                 o = (0, w.uS)(n.id),
                 u = null != t && t.productLine === G.EZt.SOCIAL_LAYER_GAME_ITEM,
-                c = (0, O.n)(n, G.gfo.EMBEDDED) && r === R.$.ERROR,
+                c = (0, M.n)(n, G.gfo.EMBEDDED) && r === R.$.ERROR,
                 d = u && a && !s && !l ? (0, U.k3)(n) : null;
             return {
                 upperInlineNoticeProps: i.useMemo(() => {

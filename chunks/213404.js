@@ -20,24 +20,24 @@ function f(e) {
             className: g,
             selectable: x = !1,
             isSquircle: A,
-            onFocus: E,
-            onBlur: C,
+            onFocus: C,
+            onBlur: E,
             onMouseOver: I,
             onMouseLeave: y,
             ...S
         } = e,
-        [N, v] = i.useState(!1),
+        [v, N] = i.useState(!1),
         _ = i.useCallback(() => {
-            v(!0), E?.();
-        }, [E]),
-        T = i.useCallback(() => {
-            v(!1), C?.();
+            N(!0), C?.();
         }, [C]),
         j = i.useCallback(() => {
-            v(!0), I?.();
+            N(!1), E?.();
+        }, [E]),
+        T = i.useCallback(() => {
+            N(!0), I?.();
         }, [I]),
         b = i.useCallback(() => {
-            v(!1), y?.();
+            N(!1), y?.();
         }, [y]),
         R = (0, a.bG)([u.Ay], () =>
             t.application?.bot?.id != null ? u.Ay.getMember(n, t.application?.bot?.id) : null,
@@ -60,12 +60,12 @@ function f(e) {
         ...S,
         className: r()(h.iE, g, { [h.rb]: x, [h.wH]: x && s }),
         onFocus: _,
-        onBlur: T,
-        onMouseOver: j,
+        onBlur: j,
+        onMouseOver: T,
         onMouseLeave: b,
         children: (0, l.jsx)(o.Ay, {
             className: h.dK,
-            mask: A || (x && (s || N)) ? o.hW.SQUIRCLE : o.hW.AVATAR_DEFAULT,
+            mask: A || (x && (s || v)) ? o.hW.SQUIRCLE : o.hW.AVATAR_DEFAULT,
             width: f,
             height: p,
             children: (0, l.jsx)("img", { alt: "", className: h.Kk, style: { width: f, height: p }, src: O }),

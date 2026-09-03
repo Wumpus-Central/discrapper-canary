@@ -56,9 +56,9 @@ let h = i.forwardRef((e, t) => {
             title: x,
         } = e,
         A = i.useRef(null),
-        [E, C] = i.useState(!1);
+        [C, E] = i.useState(!1);
     async function I(e) {
-        g?.(!0), await d(e, o), C(!0), g?.(!1);
+        g?.(!0), await d(e, o), E(!0), g?.(!1);
     }
     async function y(e) {
         if (
@@ -75,8 +75,8 @@ let h = i.forwardRef((e, t) => {
     }
     return (
         i.useEffect(() => {
-            E && null !== A.current && ((0, s.closeModal)(A.current), (A.current = null));
-        }, [E]),
+            C && null !== A.current && ((0, s.closeModal)(A.current), (A.current = null));
+        }, [C]),
         (0, l.jsx)(r.A, {
             ref: t,
             onChange: y,

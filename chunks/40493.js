@@ -14,15 +14,15 @@ var l = n(477900),
 function p(e) {
     let { onComplete: t, onCheckItOutClick: n, markAsDismissed: p, coachmarkConfig: g, children: x } = e,
         A = (0, d.T)(g?.asset),
-        E = (0, s.bG)([h.A], () => h.A.getGiftPromotion()),
-        C = (0, c.dA)(E?.endDate),
-        I = null != C,
+        C = (0, s.bG)([h.A], () => h.A.getGiftPromotion()),
+        E = (0, c.dA)(C?.endDate),
+        I = null != E,
         y = (0, u.Ay)(I),
         S = i.useRef(null);
     i.useEffect(() => {
         !0 !== y || I || (t(), p(m.i.AUTO_DISMISS));
     }, [y, I, t, p]);
-    let N = {
+    let v = {
         text: f.intl.string(f.t.Ve9Ge6),
         icon: a.GiftIcon,
         onClick: () => {
@@ -41,8 +41,8 @@ function p(e) {
                 title: g?.header ?? "",
                 body: g?.body ?? "",
                 assetUrl: A ?? "",
-                badge: null != C ? { type: { text: C.toUpperCase() }, variant: "brand", icon: o.ClockIcon } : void 0,
-                action: N,
+                badge: null != E ? { type: { text: E.toUpperCase() }, variant: "brand", icon: o.ClockIcon } : void 0,
+                action: v,
                 caretConfig: { align: "center" },
                 onRequestClose: function () {
                     t(), p(m.i.USER_DISMISS);

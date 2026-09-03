@@ -15,18 +15,18 @@ var l = n(582128),
     g = n(407315);
 let x = new Set(["line", "blockQuote"]),
     A = ["applicationCommand"],
-    E = ["gameMentionInput", "timestampMentionInput"];
-function C(e) {
+    C = ["gameMentionInput", "timestampMentionInput"];
+function E(e) {
     let t = p.VW.getCurrentBlock(e),
         n = p.VW.getCurrentInline(e);
-    return null != t && !A.includes(t[0].type) && !E.includes(n?.[0]?.type);
+    return null != t && !A.includes(t[0].type) && !C.includes(n?.[0]?.type);
 }
 function I(e) {
     return { type: "other", mergeable: !1, createdAt: Date.now(), value: p.VW.richValue(e), selection: e.selection };
 }
 var y = n(113001),
     S = n(2368);
-function N(e, t, n) {
+function v(e, t, n) {
     let l = p.VW.getCurrentInline(e);
     if ("block" === t) return !0;
     let i = p.VW.getCurrentText(e);
@@ -70,10 +70,10 @@ function N(e, t, n) {
         }
     return f.b.delete(e, { at: u, unit: t, reverse: n, select: !0 }), !0;
 }
-var v = n(694403),
+var N = n(694403),
     _ = n(323350),
-    T = n(530795),
-    j = n(551483);
+    j = n(530795),
+    T = n(551483);
 function b(e) {
     let t = l.useContext(o.Ay),
         n = c.SI.useSetting(),
@@ -81,7 +81,7 @@ function b(e) {
             let l = (0, s.ie)();
             return (
                 (l.children = (0, d.x7)("")),
-                (l.selection = { anchor: j.K, focus: j.K }),
+                (l.selection = { anchor: T.K, focus: T.K }),
                 R({ ...e, editor: l, windowContext: t, previewMarkdown: n }),
                 l
             );
@@ -119,18 +119,18 @@ function R(e) {
             onChangeEnd: d,
             updateState: A,
         } = e,
-        E = n,
-        { onChange: b } = E;
-    (E.chatInputType = l),
-        (E.windowContext = a),
-        (E.previewMarkdown = o),
-        (E.composition = null),
-        (E.events = new i.EventEmitter()),
-        (E.isMac = "MacIntel" === navigator.platform),
-        (E.onChange = () => {
-            E.events.emit("onChange"), b();
+        C = n,
+        { onChange: b } = C;
+    (C.chatInputType = l),
+        (C.windowContext = a),
+        (C.previewMarkdown = o),
+        (C.composition = null),
+        (C.events = new i.EventEmitter()),
+        (C.isMac = "MacIntel" === navigator.platform),
+        (C.onChange = () => {
+            C.events.emit("onChange"), b();
         }),
-        ((t = E =
+        ((t = C =
             (function (e, t) {
                 let {
                     addMark: n,
@@ -143,7 +143,7 @@ function R(e) {
                     insertTextData: u,
                 } = e;
                 return (
-                    ((e = (0, T.o$)(e)).addMark = n),
+                    ((e = (0, j.o$)(e)).addMark = n),
                     (e.removeMark = l),
                     (e.setFragmentData = r),
                     (e.insertData = a),
@@ -183,7 +183,7 @@ function R(e) {
                     }),
                     e
                 );
-            })(E, !0 === u)).setFragmentData = (e) => {
+            })(C, !0 === u)).setFragmentData = (e) => {
             if (null != t.selection && !p.Kh.equals(t.selection.anchor, t.selection.focus)) {
                 let n = (0, _.WO)(p.VW.richValue(t), { mode: "plain", range: t.selection, preventEmojiSurrogates: !0 });
                 e.setData("text/plain", n);
@@ -198,8 +198,8 @@ function R(e) {
             if (0 === n.length) return !1;
             if (null != t.selection && p.ZF.isExpanded(t.selection)) {
                 let e = s.KE.string(t, t.selection),
-                    l = (0, v.W1)(n),
-                    i = (0, v.W1)(e);
+                    l = (0, N.W1)(n),
+                    i = (0, N.W1)(e);
                 if (null != l && null == i) {
                     let [e, n] = p.ZF.edges(t.selection);
                     return (
@@ -218,7 +218,7 @@ function R(e) {
             }
             return t.insertText(n), !0;
         }),
-        (E = (function (e) {
+        (C = (function (e) {
             let { apply: t, deleteBackward: n, deleteForward: l, deleteFragment: i, insertText: s } = e;
             return (
                 (e.apply = (n) => {
@@ -239,10 +239,10 @@ function R(e) {
                     null != e.selection && null != p.VW.getCurrentInline(e) ? f.b.insertText(e, t) : s(t);
                 }),
                 (e.deleteBackward = (t) => {
-                    N(e, t, !0) || n(t);
+                    v(e, t, !0) || n(t);
                 }),
                 (e.deleteForward = (t) => {
-                    N(e, t, !1) || l(t);
+                    v(e, t, !1) || l(t);
                 }),
                 (e.deleteFragment = (t) => {
                     if (null != e.selection && p.ZF.isExpanded(e.selection)) {
@@ -276,11 +276,11 @@ function R(e) {
                 }),
                 e
             );
-        })((E = t))),
-        l.commands?.enabled && (E = (0, h.A)(E, r)),
-        (E = (0, S.Ay)(E, r.guild_id, r.id)),
+        })((C = t))),
+        l.commands?.enabled && (C = (0, h.A)(C, r)),
+        (C = (0, S.Ay)(C, r.guild_id, r.id)),
         l.markdown?.disableBlockQuotes ||
-            (E = (function (e) {
+            (C = (function (e) {
                 let { deleteBackward: t, deleteFragment: n, insertBreak: l, onChange: i } = e;
                 (e.deleteBackward = (n) => {
                     let l = p.VW.getCurrentBlock(e);
@@ -382,18 +382,18 @@ function R(e) {
                     }),
                     e
                 );
-            })(E)),
-        l.markdown?.disableCodeBlocks || (E = (0, g.Ay)(E)),
+            })(C)),
+        l.markdown?.disableCodeBlocks || (C = (0, g.Ay)(C)),
         u &&
-            (E = (function (e) {
+            (C = (function (e) {
                 let { isInline: t, isVoid: n } = e;
                 return (
                     (e.isInline = (e) => "testInline" === e.type || "testInlineVoid" === e.type || t(e)),
                     (e.isVoid = (e) => "testInlineVoid" === e.type || n(e)),
                     e
                 );
-            })(E)),
-        (E = (function (e, t) {
+            })(C)),
+        (C = (function (e, t) {
             let {
                 apply: n,
                 deleteBackward: l,
@@ -490,7 +490,7 @@ function R(e) {
                 e
             );
         })(
-            (E = (function (e, t, n) {
+            (C = (function (e, t, n) {
                 let { onChange: l } = e,
                     i = !1,
                     s = !1;
@@ -519,7 +519,7 @@ function R(e) {
                     e
                 );
             })(
-                (E = (function (e) {
+                (C = (function (e) {
                     let { apply: t, onChange: n } = e;
                     return (
                         (e.apply = (n) => {
@@ -545,12 +545,12 @@ function R(e) {
                                     s = !1;
                                 for (
                                     ;
-                                    null != l && null != (t = p.VW.getParentVoid(e, l)) && !j.XR.includes(t[0].type);
+                                    null != l && null != (t = p.VW.getParentVoid(e, l)) && !T.XR.includes(t[0].type);
                                 )
                                     (l = p.VW.before(e, l, { unit: "offset" })), (s = !0);
                                 for (
                                     ;
-                                    null != i && null != (n = p.VW.getParentVoid(e, i)) && !j.XR.includes(n[0].type);
+                                    null != i && null != (n = p.VW.getParentVoid(e, i)) && !T.XR.includes(n[0].type);
                                 )
                                     (i = p.VW.after(e, i, { unit: "offset" })), (s = !0);
                                 s &&
@@ -565,11 +565,11 @@ function R(e) {
                         e
                     );
                 })(
-                    (E = (function (e) {
+                    (C = (function (e) {
                         let { insertBreak: t, insertText: n } = e;
                         return (
                             (e.insertBreak = () => {
-                                C(e) && t();
+                                E(e) && t();
                             }),
                             (e.insertSoftBreak = () => {
                                 e.insertBreak();
@@ -577,7 +577,7 @@ function R(e) {
                             (e.insertText = (t) => {
                                 if (0 > t.indexOf("\r") && 0 > t.indexOf("\n")) return void n(t);
                                 let l = t.split(/\r\n|\r|\n/);
-                                C(e)
+                                E(e)
                                     ? m.o.withSingleEntry(e, () => {
                                           let t = !1;
                                           for (let i of l) t && f.b.splitNodes(e, { always: !0 }), n(i), (t = !0);
@@ -586,14 +586,14 @@ function R(e) {
                             }),
                             e
                         );
-                    })((E = (0, y.A)(E)))),
+                    })((C = (0, y.A)(C)))),
                 )),
                 c,
                 d,
             )),
             (e) => {
                 let { newValue: t, newSelection: n } = e;
-                return A(E, "undo", { value: t, selection: n });
+                return A(C, "undo", { value: t, selection: n });
             },
         ));
 }

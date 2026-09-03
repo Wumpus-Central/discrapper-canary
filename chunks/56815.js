@@ -1,4 +1,4 @@
-i.d(t, { Dv: () => a });
+i.d(t, { Dv: () => l });
 var s = i(945810),
     n = i(202541);
 let r = (0, s.mj)({
@@ -7,7 +7,7 @@ let r = (0, s.mj)({
     defaultConfig: { enabled: !1, premiumSkuToPlan: n.zE },
     variations: { 1: { enabled: !0, premiumSkuToPlan: n.zE }, 2: { enabled: !0, premiumSkuToPlan: n.En } },
 });
-function a(e, t, i) {
+function l(e, t, i) {
     if (!t) return {};
     let s = r.getConfig({ location: i });
     if (s.enabled) {

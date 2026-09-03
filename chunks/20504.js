@@ -77,22 +77,22 @@ class f extends i.PureComponent {
                 minValue: g,
                 maxValue: x,
                 value: A,
-                onVolumeShow: E,
-                onVolumeHide: C,
+                onVolumeShow: C,
+                onVolumeHide: E,
             } = this.props,
             { hovered: I, focused: y, dragging: S } = this.state,
-            N = a.H;
+            v = a.H;
         return (
-            p || A === g ? (N = o._) : A < x / 2 && (N = u.S),
+            p || A === g ? (v = o._) : A < x / 2 && (v = u.S),
             (0, l.jsxs)("div", {
                 className: r()(n, m.kL),
                 onMouseEnter: () => {
-                    clearTimeout(this._hoverTimeout), this.setState({ hovered: !0 }), E?.();
+                    clearTimeout(this._hoverTimeout), this.setState({ hovered: !0 }), C?.();
                 },
                 onMouseLeave: () => {
                     clearTimeout(this._hoverTimeout),
                         (this._hoverTimeout = setTimeout(() => {
-                            this.setState({ hovered: !1 }), C?.();
+                            this.setState({ hovered: !1 }), E?.();
                         }, 150));
                 },
                 onBlur: () => this.setState({ focused: !1 }),
@@ -123,7 +123,7 @@ class f extends i.PureComponent {
                         className: m.bk,
                         "aria-label": h.intl.string(h.t["19lt24"]),
                         onClick: this.handleToggleMute,
-                        children: (0, l.jsx)(N, { color: t, className: e }),
+                        children: (0, l.jsx)(v, { color: t, className: e }),
                     }),
                 ],
             })

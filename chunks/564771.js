@@ -1,4 +1,4 @@
-n.d(t, { A: () => v, e: () => N });
+n.d(t, { A: () => N, e: () => v });
 var l = n(477900),
     i = n(582128),
     s = n(503698),
@@ -28,13 +28,13 @@ let A = {
                 }));
     },
 };
-var E = n(46054),
-    C = n(453771),
+var C = n(46054),
+    E = n(453771),
     I = n(375708),
     y = n(745268);
 function S(e) {
     let { filename: t } = e,
-        i = (0, C.GD)(t),
+        i = (0, E.GD)(t),
         s = n(492313)(`./icon-file-${i}.svg`);
     return (0, l.jsx)("img", {
         className: y.Kk,
@@ -43,7 +43,7 @@ function S(e) {
         title: i,
     });
 }
-function N(e) {
+function v(e) {
     let { channelId: t, file: n } = e,
         s = (0, u.bG)([x.A], () => x.A.getMessageForFile(n.id)?.content),
         r = i.useMemo(() => {
@@ -59,7 +59,7 @@ function N(e) {
         }, [t, n]),
         m = 100 === n.progress,
         f = !m && n.currentSize > 0,
-        p = i.useMemo(() => (null == s || "" === s.trim() ? null : E.A.parse(s)), [s]);
+        p = i.useMemo(() => (null == s || "" === s.trim() ? null : C.A.parse(s)), [s]);
     return (0, l.jsxs)(l.Fragment, {
         children: [
             null != p && (0, l.jsx)("div", { className: y.Qs, children: p }),
@@ -104,7 +104,7 @@ function N(e) {
         ],
     });
 }
-let v = function (e) {
+let N = function (e) {
     let { className: t, url: n, fileName: i, fileSize: s, onClick: a, onContextMenu: u, renderAdjacentContent: c } = e;
     return (0, l.jsxs)("div", {
         className: r()(y.Ig, t),

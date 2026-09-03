@@ -23,17 +23,17 @@ function c(e) {
             enabled: g = !0,
             onDispatch: x,
             autoFocusElement: A = !0,
-            useVirtualFocus: E = !1,
+            useVirtualFocus: C = !1,
         } = e,
-        C = l.useCallback(
+        E = l.useCallback(
             (e, t) => {
                 let n = (0, i.A)(e, t);
                 return null != x && x(e, n, t), n;
             },
             [x],
         ),
-        [I, y] = l.useReducer(C, { focusedX: c, focusedY: d, columnCounts: n }),
-        { columnCounts: S, focusedX: N, focusedY: v } = I,
+        [I, y] = l.useReducer(E, { focusedX: c, focusedY: d, columnCounts: n }),
+        { columnCounts: S, focusedX: v, focusedY: N } = I,
         [_] = l.useState(() => (0, r.nF)(y, 16));
     return (
         l.useEffect(() => {
@@ -52,14 +52,14 @@ function c(e) {
                     maintainFocusPosition: g,
                     enabled: x,
                     autoFocusElement: A,
-                    useVirtualFocus: E,
+                    useVirtualFocus: C,
                 } = e,
-                C = l.useRef(x),
+                E = l.useRef(x),
                 I = u(o(t, c, d)),
                 [y, S] = l.useState(!1),
-                [N, v] = l.useState(!1),
-                [_, T] = l.useState(!1),
-                [j] = l.useState(
+                [v, N] = l.useState(!1),
+                [_, j] = l.useState(!1),
+                [T] = l.useState(
                     () =>
                         new r.Lp((e) => {
                             let [t, n] = e.split(",").map(Number);
@@ -68,10 +68,10 @@ function c(e) {
                             };
                         }),
                 );
-            l.useEffect(() => () => j.clean(), [j]);
+            l.useEffect(() => () => T.clean(), [T]);
             let b = l.useCallback(
                     (e) => {
-                        if (!C.current || !A) return !1;
+                        if (!E.current || !A) return !1;
                         e.focus();
                     },
                     [A],
@@ -81,7 +81,7 @@ function c(e) {
                         let l = o(t, e, n);
                         (null != m ? m(e, n, l) : Promise.resolve()).then(() => {
                             let e = u(l);
-                            null != e ? (b(e), v(!1)) : requestAnimationFrame(() => v(!0));
+                            null != e ? (b(e), N(!1)) : requestAnimationFrame(() => N(!0));
                         });
                     },
                     [t, m, b],
@@ -91,36 +91,36 @@ function c(e) {
                         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
                             [n, l] = null != f ? f(c, d) : [c, d];
                         if ((n !== c || l !== d) && (p({ type: i.n.SET_FOCUSED_POSITION, x: n, y: l }), !e))
-                            return void T(!0);
+                            return void j(!0);
                         let s = u(o(t, n, l));
-                        null != s && (T(!0), b(s));
+                        null != s && (j(!0), b(s));
                     },
                     [p, c, d, f, t, b],
                 ),
-                [M, L] = l.useState(!1);
+                [L, M] = l.useState(!1);
             l.useEffect(() => {
-                if (!M || !y) return;
-                L(!1);
+                if (!L || !y) return;
+                M(!1);
                 let e = u(o(t, c, d));
                 if (null != e) return void b(e);
                 S(!1);
                 let n = u(o(t));
                 null != n && b(n);
-            }, [t, M, y, b, c, d]);
+            }, [t, L, y, b, c, d]);
             let k = l.useCallback((e) => {
-                C.current && null == e && L(!0);
+                E.current && null == e && M(!0);
             }, []);
             l.useEffect(() => {
-                y && N && null != I && (b(I), v(!1));
-            }, [N, I]),
+                y && v && null != I && (b(I), N(!1));
+            }, [v, I]),
                 l.useEffect(() => {
-                    y && (_ || R(c, d), T(!1));
+                    y && (_ || R(c, d), j(!1));
                 }, [c, d]);
             let w = l.useCallback(
                     (e) => {
-                        if (!C.current) return;
+                        if (!E.current) return;
                         if (
-                            !E &&
+                            !C &&
                             a.includes(e.key) &&
                             !(e.shiftKey || e.altKey || e.metaKey || e.ctrlKey) &&
                             e.currentTarget === e.target
@@ -175,7 +175,7 @@ function c(e) {
                 P = l.useCallback(
                     (e) =>
                         e.currentTarget !== e.target
-                            ? (y || (S(!0), T(!0)), !1)
+                            ? (y || (S(!0), j(!0)), !1)
                             : y
                               ? (O(!1), !1)
                               : void (g && null != I ? R(c, d) : O(!0)),
@@ -209,11 +209,11 @@ function c(e) {
                             "aria-colindex": e + 1,
                             id: (0, r.Aq)(t, e, n),
                             tabIndex: g && e === c && n === d ? 0 : -1,
-                            onFocus: j.get(`${e},${n}`),
+                            onFocus: T.get(`${e},${n}`),
                         };
                         return e === c && n === d && (l.ref = k), l;
                     },
-                    [t, g, c, d, j, k],
+                    [t, g, c, d, T, k],
                 ),
                 F = l.useCallback((e) => ({ role: "row", "aria-rowindex": e + 1 }), []);
             return l.useMemo(
@@ -223,8 +223,8 @@ function c(e) {
         })({
             navId: t,
             columnCounts: S,
-            focusedX: N,
-            focusedY: v,
+            focusedX: v,
+            focusedY: N,
             dispatch: _,
             onSelect: h,
             prepareFocus: m,
@@ -232,7 +232,7 @@ function c(e) {
             maintainFocusPosition: p,
             enabled: g,
             autoFocusElement: A,
-            useVirtualFocus: E,
+            useVirtualFocus: C,
         })
     );
 }

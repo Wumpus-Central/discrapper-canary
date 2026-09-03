@@ -1,4 +1,4 @@
-n.d(t, { JA: () => S, Tv: () => N, bA: () => _, xu: () => v });
+n.d(t, { JA: () => S, Tv: () => v, bA: () => _, xu: () => N });
 var l = n(284009),
     i = n.n(l),
     s = n(228366),
@@ -15,8 +15,8 @@ var l = n(284009),
     g = n(761640),
     x = n(31717),
     A = n(309010),
-    E = n(625494),
-    C = n(37411),
+    C = n(625494),
+    E = n(37411),
     I = n(652215),
     y = n(746080);
 function S(e, t, n) {
@@ -39,13 +39,13 @@ function S(e, t, n) {
     e.parent_id === a || (0, y.mP)(a) || (0, m.iN)(e.parent_id),
         (0, h.pX)(
             I.BVt.CHANNEL_THREAD_VIEW((0, f.j)(e), (0, y.mP)(a) ? y.VV.GUILD_HOME : e.parent_id, e.id),
-            e.isForumPost() ? { source: C.H9.FORUM } : void 0,
+            e.isForumPost() ? { source: E.H9.FORUM } : void 0,
         ),
         setTimeout(() => {
-            E._.dispatch(I.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: e.id });
+            C._.dispatch(I.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: e.id });
         }, 0);
 }
-function N(e, t, n) {
+function v(e, t, n) {
     if (
         (i()(!e.isForumLikeChannel(), "cannot open thread creation sidebar in forums"),
         i()(!__OVERLAY__, "Cannot create threads in the overlay."),
@@ -61,7 +61,7 @@ function N(e, t, n) {
         s.h.dispatch({ type: "SIDEBAR_CREATE_THREAD", parentChannelId: e.id, parentMessageId: t?.id, location: n });
     }, 0);
 }
-function v(e, t) {
+function N(e, t) {
     (0, h.pX)(I.BVt.CHANNEL(e, (0, y.mP)(t) ? y.VV.GUILD_HOME : t)),
         s.h.dispatch({ type: "SIDEBAR_CLOSE", baseChannelId: t });
 }

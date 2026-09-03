@@ -16,8 +16,8 @@ var i = n(477900),
     A = n(363195),
     x = n(870570),
     v = n(446868),
-    E = n(503698),
-    C = n.n(E),
+    C = n(503698),
+    E = n.n(C),
     T = n(607399),
     _ = n(821609),
     I = n(331322),
@@ -52,7 +52,7 @@ class k extends l.PureComponent {
                 (0, i.jsxs)(I.B, {
                     gap: 16,
                     fullWidth: !1,
-                    className: C()(R.kL, { [R.Fr]: T.Fr }),
+                    className: E()(R.kL, { [R.Fr]: T.Fr }),
                     align: "center",
                     direction: "vertical",
                     justify: "center",
@@ -114,7 +114,7 @@ class k extends l.PureComponent {
                                     className: R.qr,
                                     children: M.intl.format(M.t.WL51ZR, { supportURL: b.A.getSubmitRequestURL() }),
                                 }),
-                                (0, i.jsx)("div", { className: C()(R.qr, R.mf), children: "\u2022" }),
+                                (0, i.jsx)("div", { className: E()(R.qr, R.mf), children: "\u2022" }),
                                 (0, i.jsx)(N.E, {
                                     variant: "text-sm/semibold",
                                     className: R.qr,
@@ -136,9 +136,9 @@ var O = n(87404),
     P = n(53516);
 function L() {
     let { action: e, theme: t } = (0, s.cf)([x.A, A.A], () => ({ action: x.A.getAction(), theme: A.A.theme })),
-        E = v.A.getVerificationTypes(e),
-        [C, T] = l.useState(0),
-        _ = (0, h.Ay)(E);
+        C = v.A.getVerificationTypes(e),
+        [E, T] = l.useState(0),
+        _ = (0, h.Ay)(C);
     function I() {
         (0, u.Cw)(),
             (0, o.openModalLazy)(
@@ -156,10 +156,10 @@ function L() {
             {
                 type: a.ImpressionTypes.MODAL,
                 name: a.ImpressionNames.USER_ACTION_REQUIRED,
-                properties: { verification_type: E[0], verification_types: E },
+                properties: { verification_type: C[0], verification_types: C },
             },
             {},
-            [E.toString()],
+            [C.toString()],
         ),
         l.useEffect(
             () => (
@@ -172,7 +172,7 @@ function L() {
         ),
         l.useEffect(() => {
             _?.[0] === y.Fz7.PHONE &&
-                E?.[0] === y.Fz7.EMAIL &&
+                C?.[0] === y.Fz7.EMAIL &&
                 (0, o.openModalLazy)(
                     async () => {
                         let { default: e } = await Promise.all([n.e("844331"), n.e("410919")]).then(n.bind(n, 556506));
@@ -186,10 +186,10 @@ function L() {
                     },
                     { modalKey: O.Pr, Layer: g.Ay, onCloseCallback: I },
                 );
-        }, [E, _]),
+        }, [C, _]),
         (0, i.jsx)(k, {
-            types: E,
-            captchaKey: C,
+            types: C,
+            captchaKey: E,
             onCaptchaVerify: function (e) {
                 r.Bo.post({
                     url: y.Rsh.CAPTCHA,

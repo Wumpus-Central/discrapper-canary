@@ -4,7 +4,7 @@ n.d(t, {
     Wj: () => eq,
     mL: () => eo,
     Cv: () => eJ,
-    Yl: () => ev,
+    Yl: () => eO,
     Nb: () => e1,
     tZ: () => eH,
     pT: () => e0,
@@ -13,7 +13,7 @@ n.d(t, {
     YW: () => ek,
     zW: () => eX,
     NC: () => eT,
-    Hv: () => eO,
+    Hv: () => ev,
     j$: () => eQ,
     fc: () => eL,
     SD: () => e_,
@@ -69,8 +69,8 @@ var E = n(517846),
 n(674658);
 var S = n(27620),
     g = n(773669),
-    O = n(885386),
-    v = n(734057),
+    v = n(885386),
+    O = n(734057),
     b = n(30370),
     y = n(287809),
     N = n(174459),
@@ -612,11 +612,11 @@ function eS(e) {
 function eg(e) {
     return (0, A.bG)([Q.A], () => null != e && Q.A.isQuestExpired(e.id), [e]);
 }
-function eO() {
+function ev() {
     return (0, A.bG)([Q.A], () => Q.A.isQuestAccessSuspended, []);
 }
-function ev(e, t, n) {
-    let i = (0, A.bG)([v.A], () => v.A.getChannel(t?.channelId) ?? null),
+function eO(e, t, n) {
+    let i = (0, A.bG)([O.A], () => O.A.getChannel(t?.channelId) ?? null),
         r = (0, A.bG)([Q.A], () => null != Q.A.questEnrollmentBlockedUntil, []),
         s = (0, A.bG)([y.default], () => y.default.getCurrentUser()?.id),
         o = (0, A.bG)([Q.A], () => null != e && Q.A.isQuestExpired(e.id), [e]);
@@ -1018,7 +1018,7 @@ function e8(e) {
     }, [t, n]);
 }
 function e4(e) {
-    let t = O.H1.useSetting(),
+    let t = v.H1.useSetting(),
         n = e.userStatus?.enrolledAt != null;
     return o.useCallback(() => {
         if (n) return;

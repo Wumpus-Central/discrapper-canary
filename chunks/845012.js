@@ -35,8 +35,8 @@ function _(e) {
         } = e,
         {
             selectedPlan: R,
-            selectedPlanPrice: M,
-            isPrepaid: O,
+            selectedPlanPrice: O,
+            isPrepaid: M,
             isPlansEligibleForDiscount: L,
             shouldShowHRKEuroWarning: k,
             shouldShowTotalInSubscriptionFlow: w,
@@ -89,7 +89,7 @@ function _(e) {
                     discountInfo: e.premiumDiscountInfo,
                 })),
                 j = (0, o.bG)([f.default], () => f.default.locale),
-                { discountOffer: R, discountAmountOff: M, applicablePlan: O } = b;
+                { discountOffer: R, discountAmountOff: O, applicablePlan: M } = b;
             return i.useMemo(
                 () =>
                     e.map((e) => {
@@ -130,7 +130,7 @@ function _(e) {
                                     : (0, I.$g)(e.amount, e.currency);
                             })(w, { isEligibleForTrial: c }),
                             F = G,
-                            B = r && null != O && e === O ? M : null;
+                            B = r && null != M && e === M ? O : null;
                         if (
                             (null != R &&
                                 !c &&
@@ -191,7 +191,7 @@ function _(e) {
                             isDisabled: f || n,
                         };
                     }),
-                [l, e, r, s, c, v, _, x, T, M, O, R, N, j, n],
+                [l, e, r, s, c, v, _, x, T, O, M, R, N, j, n],
             );
         })(r, {
             disabled: T,
@@ -219,8 +219,8 @@ function _(e) {
                   N
                       ? (0, C.LR)({
                             selectedPlan: R,
-                            selectedPlanPrice: M,
-                            isPrepaid: O,
+                            selectedPlanPrice: O,
+                            isPrepaid: M,
                             shouldShowHRKEuroWarning: k,
                             shouldShowTrialOrDiscountLayout: U,
                             showTotal: N,

@@ -38,7 +38,7 @@ function A(e) {
     }
     return { updatedKeys: t, matchedKeys: n };
 }
-function E() {
+function C() {
     let e = !1,
         t = Array.from(g.keys()),
         n = new Set(),
@@ -54,17 +54,17 @@ function E() {
     for (let n of i().difference(t, [...l])) g.delete(n), (e = !0);
     return e;
 }
-class C extends a.Ay.Store {
+class E extends a.Ay.Store {
     static displayName = "ContentInventoryActivityStore";
     initialize() {
-        this.waitFor(c.A, u.A), this.syncWith([u.A], E);
+        this.waitFor(c.A, u.A), this.syncWith([u.A], C);
     }
     canRenderContent = (e) => !(0, m.I5)(e) && (!p.has(e.content_type) || null != this.getMatchingActivity(e));
     getMatchingActivity(e) {
         return (0, m.I5)(e) ? null : g.get(x(e));
     }
 }
-let I = new C(o.h, {
+let I = new E(o.h, {
     CONNECTION_OPEN: function () {
         g.clear();
     },

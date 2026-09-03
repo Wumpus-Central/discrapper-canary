@@ -15,21 +15,21 @@ var l = n(582128),
     g = n(550151),
     x = n(55730),
     A = n(765379),
-    E = n(946255),
-    C = n(688810),
+    C = n(946255),
+    E = n(688810),
     I = n(429913),
     y = n(20015),
     S = n(207371),
-    N = n(498642),
-    v = n(71393),
+    v = n(498642),
+    N = n(71393),
     _ = n(480595),
-    T = n(576705),
-    j = n(994500),
+    j = n(576705),
+    T = n(994500),
     b = n(309010),
     R = n(461213),
     O = n(287809),
-    M = n(689168),
-    L = n(723702),
+    L = n(689168),
+    M = n(723702),
     k = n(928550),
     w = n(652215),
     P = n(360469),
@@ -45,7 +45,7 @@ function U(e) {
             location: H,
             supportsAskToJoin: B = !0,
         } = e,
-        { analyticsLocations: W } = (0, C.Ay)(H ?? []),
+        { analyticsLocations: W } = (0, E.Ay)(H ?? []),
         [K, z] = l.useState(!1),
         Z = U?.applicationId ?? n?.application_id,
         Y = null != U || (0, A.A)(n),
@@ -69,13 +69,13 @@ function U(e) {
             }),
         ),
         et = (0, i.bG)(
-            [M.A],
-            () => null != n && null != n.application_id && M.A.getState(n.application_id, w.xL.JOIN) === w.eAD.LOADING,
+            [L.A],
+            () => null != n && null != n.application_id && L.A.getState(n.application_id, w.xL.JOIN) === w.eAD.LOADING,
         ),
         en = (0, I.h)(Z),
         el = (0, S.x)(en),
         ei = (0, g.vG)({ userId: G.id, activity: n, channelId: $, application: en }),
-        es = (0, i.bG)([m.A, v.A, N.A, j.A, b.Ay, f.A, T.A, _.A, R.A, u.Ay], () =>
+        es = (0, i.bG)([m.A, N.A, v.A, T.A, b.Ay, f.A, j.A, _.A, R.A, u.Ay], () =>
             null != U
                 ? ei === g.Gy.CAN_JOIN
                     ? p.o.CAN_JOIN
@@ -88,12 +88,12 @@ function U(e) {
                       currentUser: q,
                       isEmbedded: Y,
                       ChannelStore: m.A,
-                      GuildStore: v.A,
-                      GuildMemberCountStore: N.A,
-                      RelationshipStore: j.A,
+                      GuildStore: N.A,
+                      GuildMemberCountStore: v.A,
+                      RelationshipStore: T.A,
                       SelectedChannelStore: b.Ay,
                       VoiceStateStore: f.A,
-                      PermissionStore: T.A,
+                      PermissionStore: j.A,
                       LocalActivityStore: _.A,
                       SelfPresenceStore: R.A,
                       EmbeddedActivitiesStore: u.Ay,
@@ -108,7 +108,7 @@ function U(e) {
         ),
         ea = (0, o.p)();
     if (Y && null == U && (null == n || !(0, x.A)(n, w.jUm.CONTEXTLESS))) return null;
-    let eo = !L.isPlatformEmbedded;
+    let eo = !M.isPlatformEmbedded;
     if (!((0, x.A)(n, w.jUm.JOIN) || Y) || null == Z) return null;
     let eu = (!Y && es === p.o.JOINED) || (Y && er),
         ec = !J || Y,
@@ -136,7 +136,7 @@ function U(e) {
             analyticsLocations: W,
         }),
             n ||
-                (0, E.A)({
+                (0, C.A)({
                     type: w.UqL.JOIN,
                     userId: e.id,
                     guildId: i?.guild_id,

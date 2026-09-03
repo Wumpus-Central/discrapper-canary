@@ -1,4 +1,4 @@
-n.d(t, { A: () => E }), n(321073);
+n.d(t, { A: () => C }), n(321073);
 var l,
     i = n(477900),
     s = n(582128),
@@ -18,20 +18,20 @@ function x(e) {
     f.default.track(p.HAw.PLAY_CTA_IMPRESSION, { location_stack: t, distributor: n, game_id: l, level: i });
 }
 var A = n(375708);
-function E(e) {
+function C(e) {
     let {
             distributorCTAConfigs: t,
             applicationId: n,
             analyticsLocations: l,
-            buttonVariant: E = "secondary",
-            fullWidth: C = !0,
+            buttonVariant: C = "secondary",
+            fullWidth: E = !0,
             stopPropagation: I = !1,
             onAction: y,
             onClose: S,
         } = e,
-        N = (0, m.A)(),
-        v = s.useRef(null),
-        [_, T] = s.useState(!1);
+        v = (0, m.A)(),
+        N = s.useRef(null),
+        [_, j] = s.useState(!1);
     if (
         ((0, h.Ay)(() => {
             0 !== t.length &&
@@ -52,25 +52,25 @@ function E(e) {
         0 === t.length)
     )
         return null;
-    function j(e, t, i, s) {
+    function T(e, t, i, s) {
         !(function (e) {
             let { analyticsLocations: t, distributor: n, gameId: l, level: i } = e;
             f.default.track(p.HAw.PLAY_CTA_CLICKED, { location_stack: t, distributor: n, game_id: l, level: i });
         })({ analyticsLocations: l, distributor: t, gameId: n, level: s }),
             y?.({ action: i }),
             S?.(),
-            N(e);
+            v(e);
     }
     if (1 === t.length) {
         let { ctaConfig: e, skuId: n } = t[0];
         return (0, i.jsx)(r.$, {
-            variant: E,
+            variant: C,
             size: "sm",
             icon: e.icon,
             text: e.getLabel(),
-            fullWidth: C,
+            fullWidth: E,
             onClick: (t) => {
-                I && t.stopPropagation(), j(e.getStoreUrl(n), e.distributor, e.analyticsAction, g.PRIMARY);
+                I && t.stopPropagation(), T(e.getStoreUrl(n), e.distributor, e.analyticsAction, g.PRIMARY);
             },
         });
     }
@@ -87,7 +87,7 @@ function E(e) {
                         label: n.getStoreName(),
                         iconLeft: n.icon,
                         leadingAccessory: { type: "icon", icon: n.icon },
-                        action: () => j(n.getStoreUrl(l), n.distributor, n.analyticsAction, g.SECONDARY),
+                        action: () => T(n.getStoreUrl(l), n.distributor, n.analyticsAction, g.SECONDARY),
                     },
                     n.distributor,
                 ),
@@ -96,18 +96,18 @@ function E(e) {
         );
     });
     return (0, i.jsx)(o.Y, {
-        targetElementRef: v,
+        targetElementRef: N,
         position: "bottom",
         onRequestOpen: function () {
-            for (let { ctaConfig: e } of (T(!0), t))
+            for (let { ctaConfig: e } of (j(!0), t))
                 x({ analyticsLocations: l, distributor: e.distributor, gameId: n, level: g.SECONDARY });
         },
-        onRequestClose: () => T(!1),
+        onRequestClose: () => j(!1),
         renderPopout: (e) => {
             let { closePopout: t } = e;
             return (0, i.jsx)("div", {
                 onClick: (e) => e.stopPropagation(),
-                style: { width: "fit-content", minWidth: v.current?.offsetWidth },
+                style: { width: "fit-content", minWidth: N.current?.offsetWidth },
                 children: (0, i.jsx)(u.W, {
                     "data-menu-migrated": !0,
                     navId: "play-on-distributor-menu",
@@ -120,13 +120,13 @@ function E(e) {
         },
         children: (e) =>
             (0, i.jsx)(r.$, {
-                buttonRef: v,
-                variant: E,
+                buttonRef: N,
+                variant: C,
                 size: "sm",
                 icon: _ ? c.t : d.a,
                 iconPosition: "end",
                 text: A.intl.string(A.t.nSHoxC),
-                fullWidth: C,
+                fullWidth: E,
                 ...e,
                 onClick: (t) => {
                     I && t.stopPropagation(), e.onClick?.(t);

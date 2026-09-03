@@ -18,14 +18,14 @@ function f(e, t) {
         [g] = (0, h.A)(p),
         x = l.useMemo(() => (0, i.VG)(n?.profile ?? void 0), [n?.profile]),
         A = (0, s.bG)([u.A], () => u.A.getFetchState(e) !== u.e.FETCHED),
-        E = (0, s.bG)([a.A], () => a.A.getAssets(t)),
-        C = l.useMemo(() => Object.values(E ?? {}).filter(d.Vq), [E]),
+        C = (0, s.bG)([a.A], () => a.A.getAssets(t)),
+        E = l.useMemo(() => Object.values(C ?? {}).filter(d.Vq), [C]),
         I = l.useCallback((e) => (0, r.Q)(t, e, e.metadata.width), [t]);
     return {
         locale: f,
         surfaceConfigs: g?.surfaces ?? {},
         isLoading: A,
         hasIdentity: null != n,
-        resolutionContext: { data: x, applicationAssets: C, getApplicationAssetUrl: I, localizedStrings: m },
+        resolutionContext: { data: x, applicationAssets: E, getApplicationAssetUrl: I, localizedStrings: m },
     };
 }

@@ -39,8 +39,8 @@ function I(e) {
             activeSubscription: e.activeSubscription,
         })),
         { purchaseErrorBlockRef: R } = (0, c.Gm)(),
-        { paymentAuthenticationState: M } = (0, s.o)(),
-        { isPremiumGroupPurchase: O, isEligibleForTrial: L } = (0, o.i)(),
+        { paymentAuthenticationState: O } = (0, s.o)(),
+        { isPremiumGroupPurchase: M, isEligibleForTrial: L } = (0, o.i)(),
         { step: k } = (0, u.Ay)(),
         { isGift: w } = (0, h.Pv)(),
         U = {
@@ -51,7 +51,7 @@ function I(e) {
             purchaseError: N,
             setPurchaseError: b,
             purchaseErrorBlockRef: R,
-            paymentAuthenticationState: M,
+            paymentAuthenticationState: O,
             isGift: w,
         },
         D =
@@ -71,7 +71,7 @@ function I(e) {
         appendSteps: [f.pn.REVIEW, f.pn.CONFIRM],
         useCheckoutStep: !0,
         analyticsData: t,
-        onReturn: O ? void 0 : D,
+        onReturn: M ? void 0 : D,
         onComplete: (e) => {
             f.l_.has(e)
                 ? (v(E.h.COMPLETED), l(f.pn.CONFIRM, { trackedFromStep: e }))

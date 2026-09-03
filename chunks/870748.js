@@ -15,17 +15,17 @@ var l = n(485845),
     g = n(734057),
     x = n(31717),
     A = n(317525),
-    E = n(287809),
-    C = n(317681),
+    C = n(287809),
+    E = n(317681),
     I = n(186306),
     y = n(323350),
     S = n(35277),
-    N = n(820066),
-    v = n(551483),
+    v = n(820066),
+    N = n(551483),
     _ = n(652215);
 n(827669);
-let T = new Set(["applicationCommandOption"]),
-    j = new Set([s.n4.ATTACHMENT]),
+let j = new Set(["applicationCommandOption"]),
+    T = new Set([s.n4.ATTACHMENT]),
     b = new Set(["line", "applicationCommand"]);
 function R(e, t) {
     let {
@@ -33,12 +33,12 @@ function R(e, t) {
         isInline: h,
         isVoid: g,
         onChange: A,
-        deleteBackward: E,
+        deleteBackward: C,
         deleteForward: _,
         deleteFragment: R,
     } = e;
     (e.insertData = (l) => {
-        if (null != t && N.VW.isEditorEmpty(e) && l.types.includes("application/x-discord-interaction-data")) {
+        if (null != t && v.VW.isEditorEmpty(e) && l.types.includes("application/x-discord-interaction-data")) {
             let e = JSON.parse(l.getData("application/x-discord-interaction-data")),
                 { commandKey: n, interactionOptions: i } = (0, d.Ez)(e),
                 { application: s, command: u } = o.EW({ channel: t, type: "channel" }, n);
@@ -67,10 +67,10 @@ function R(e, t) {
         }
         return n(l);
     }),
-        (e.isInline = (e) => !!T.has(e.type) || h(e)),
-        (e.isVoid = (e) => !!("applicationCommandOption" === e.type && j.has(e.optionType)) || g(e)),
+        (e.isInline = (e) => !!j.has(e.type) || h(e)),
+        (e.isVoid = (e) => !!("applicationCommandOption" === e.type && T.has(e.optionType)) || g(e)),
         (e.deleteBackward = (t) => {
-            w(e, () => E(t));
+            w(e, () => C(t));
         }),
         (e.deleteForward = (t) => {
             w(e, () => _(t));
@@ -89,8 +89,8 @@ function R(e, t) {
                 let n = u.A.getState(t.id),
                     a = o.j8({ channel: t, type: "channel" });
                 if (
-                    N.VW.richValue(e) !== D ||
-                    !N.Ot.equals(e.selection, U) ||
+                    v.VW.richValue(e) !== D ||
+                    !v.Ot.equals(e.selection, U) ||
                     n.activeCommand !== G ||
                     null == F ||
                     a.some((e, t) => F[t] !== e)
@@ -106,10 +106,10 @@ function R(e, t) {
                                 } = e,
                                 { command: h, commandText: g } = k(t),
                                 A = n.activeCommand,
-                                E = t.chatInputType.commands?.enabled === !0,
+                                C = t.chatInputType.commands?.enabled === !0,
                                 I = null != p.A.getPendingReply(a.id);
                             if (
-                                (!E && A?.integration_types?.includes(l.b.GUILD_INSTALL)) ||
+                                (!C && A?.integration_types?.includes(l.b.GUILD_INSTALL)) ||
                                 (I && A?.inputType !== c.y$.BUILT_IN_TEXT && A?.inputType !== c.y$.BUILT_IN_INTEGRATION)
                             )
                                 return (
@@ -119,12 +119,12 @@ function R(e, t) {
                                     null
                                 );
                             if (null != h) {
-                                if (N.VW.isEditorEmpty(t) || null == A) return O(t, a.id, A, !1), null;
+                                if (v.VW.isEditorEmpty(t) || null == A) return O(t, a.id, A, !1), null;
                                 let e = `/${h.displayName}`;
                                 if (
                                     null == g ||
                                     !g.startsWith(e) ||
-                                    (0 === C.O7(t).length && (g.length < e.length + 1 || " " !== g[e.length]))
+                                    (0 === E.O7(t).length && (g.length < e.length + 1 || " " !== g[e.length]))
                                 )
                                     return i.A.clearDraftCommand(a.id, x.C.ChannelMessage), O(t, a.id, A, !0), null;
                             } else {
@@ -133,12 +133,12 @@ function R(e, t) {
                                             let l,
                                                 { initialValues: i, activeCommand: s } = n;
                                             if (null == s) return null;
-                                            let r = (s.options?.length ?? 0) > 0 ? C.pY(e, s) : null,
-                                                a = (0, y.WO)(N.VW.richValue(e), {
+                                            let r = (s.options?.length ?? 0) > 0 ? E.pY(e, s) : null,
+                                                a = (0, y.WO)(v.VW.richValue(e), {
                                                     mode: "raw",
                                                     range: {
-                                                        anchor: N.VW.start(e, []),
-                                                        focus: r?.[0]?.keyRange.anchor ?? N.VW.end(e, []),
+                                                        anchor: v.VW.start(e, []),
+                                                        focus: r?.[0]?.keyRange.anchor ?? v.VW.end(e, []),
                                                     },
                                                 }),
                                                 o = "",
@@ -169,7 +169,7 @@ function R(e, t) {
                                                 for (let l of s.options)
                                                     if (!e.has(l.name) && (l.required || null != i[l.name])) {
                                                         let e, i;
-                                                        o.length > 0 && !j.has(l.type)
+                                                        o.length > 0 && !T.has(l.type)
                                                             ? ((e = o), (o = ""))
                                                             : (e = (i = P(n, t, l.name)) ?? "");
                                                         let s = {
@@ -200,10 +200,10 @@ function R(e, t) {
                                                     displayName: s.displayName,
                                                 },
                                             };
-                                            N.VW.withoutNormalizing(e, () => {
-                                                for (let [, t] of (S.b.insertNodes(e, [p], { at: v.Xg }),
-                                                N.VW.blocks(e).reverse()))
-                                                    N.PW.isAfter(t, v.Xg) && S.b.removeNodes(e, { at: t, voids: !0 });
+                                            v.VW.withoutNormalizing(e, () => {
+                                                for (let [, t] of (S.b.insertNodes(e, [p], { at: N.Xg }),
+                                                v.VW.blocks(e).reverse()))
+                                                    v.PW.isAfter(t, N.Xg) && S.b.removeNodes(e, { at: t, voids: !0 });
                                             });
                                             let g = null;
                                             return (
@@ -213,13 +213,13 @@ function R(e, t) {
                                                       ? (S.b.selectCommandOption(e, f.optionName, !1),
                                                         (g = f.optionName))
                                                       : S.b.resetSelectionToEditorEnd(e),
-                                                null == f && M(e, s),
+                                                null == f && L(e, s),
                                                 g
                                             );
                                         })(t, a, n),
-                                        l = C.SQ(t, A, a.id);
+                                        l = E.SQ(t, A, a.id);
                                     return (
-                                        L({
+                                        M({
                                             guildId: a.guild_id,
                                             channelId: a.id,
                                             command: A,
@@ -234,9 +234,9 @@ function R(e, t) {
                                 }
                                 if (null != A && !u)
                                     return r.Gf({ channelId: a.id, command: null, section: null }), null;
-                                let e = N.VW.richValue(t)[0],
+                                let e = v.VW.richValue(t)[0],
                                     l = e.children[0];
-                                if (b.has(e.type) && N.l5.isText(l)) {
+                                if (b.has(e.type) && v.l5.isText(l)) {
                                     let e = (function (e, t) {
                                         if (!e.startsWith("/")) return null;
                                         let n = (0, m.p)(t, e, x.A.getDraftCommand(t.id, x.C.ChannelMessage));
@@ -270,10 +270,10 @@ function R(e, t) {
                             if (null != A && null != h) {
                                 !(function (e, t) {
                                     if (null == t.options || 0 === t.options.length) return !1;
-                                    let n = C.pY(e, t);
+                                    let n = E.pY(e, t);
                                     return (
                                         0 !== n.length &&
-                                        (N.VW.withoutNormalizing(e, () => {
+                                        (v.VW.withoutNormalizing(e, () => {
                                             for (let t = n.length - 1; t >= 0; t--) {
                                                 let l = n[t];
                                                 S.b.textToInline(
@@ -288,26 +288,26 @@ function R(e, t) {
                                                     { anchor: l.keyRange.anchor, focus: l.valueRange.focus },
                                                 );
                                             }
-                                            let t = N.VW.getFirstText(e);
+                                            let t = v.VW.getFirstText(e);
                                             if (null == t) return !1;
                                             let l = t.text.trim();
                                             t.text !== l &&
                                                 S.b.textToText(e, l, {
-                                                    anchor: { path: v.fP, offset: 0 },
-                                                    focus: { path: v.fP, offset: t.text.length },
+                                                    anchor: { path: N.fP, offset: 0 },
+                                                    focus: { path: N.fP, offset: t.text.length },
                                                 });
                                         }),
                                         !0)
                                     );
-                                })(t, A) && M(t, A);
-                                let e = C.SQ(t, A, a.id),
-                                    n = N.VW.above(t, {
-                                        match: (e) => N.VW.isInline(t, e) && "applicationCommandOption" === e.type,
+                                })(t, A) && L(t, A);
+                                let e = E.SQ(t, A, a.id),
+                                    n = v.VW.above(t, {
+                                        match: (e) => v.VW.isInline(t, e) && "applicationCommandOption" === e.type,
                                         mode: "lowest",
                                     }),
                                     l = n?.[0].optionName ?? null;
                                 return (
-                                    L({
+                                    M({
                                         guildId: a.guild_id,
                                         channelId: a.id,
                                         command: A,
@@ -333,7 +333,7 @@ function R(e, t) {
                         let t = I.o.currentEntry(e);
                         null != t && (t.commandId = u.commandId), (V = u.optionValues);
                     } else V = null;
-                    (D = N.VW.richValue(e)), (U = e.selection), (G = n.activeCommand), (F = a);
+                    (D = v.VW.richValue(e)), (U = e.selection), (G = n.activeCommand), (F = a);
                 }
             }
             A();
@@ -342,32 +342,32 @@ function R(e, t) {
     );
 }
 function O(e, t, n, l) {
-    let [i] = N.VW.blocks(e)[0],
+    let [i] = v.VW.blocks(e)[0],
         s = (l ? (0, y.IQ)(i, { mode: "plain" }).trimEnd() : "")
             .split("\n")
             .map((e) => ({ type: "line", children: [{ text: e }] })),
         a = [s.length - 1];
-    for (let [, t] of (S.b.insertNodes(e, s, { at: v.Xg }), N.VW.blocks(e).reverse()))
-        N.PW.isAfter(t, a) && S.b.removeNodes(e, { at: t, voids: !0 });
+    for (let [, t] of (S.b.insertNodes(e, s, { at: N.Xg }), v.VW.blocks(e).reverse()))
+        v.PW.isAfter(t, a) && S.b.removeNodes(e, { at: t, voids: !0 });
     null != n && r.Gf({ channelId: t, command: null, section: null });
 }
-function M(e, t) {
+function L(e, t) {
     if (
         null == t.options ||
         1 !== t.options.length ||
         !0 === t.options[0].required ||
-        j.has(t.options[0].type) ||
-        C.O7(e).length > 0 ||
-        null == C.n$(e)
+        T.has(t.options[0].type) ||
+        E.O7(e).length > 0 ||
+        null == E.n$(e)
     )
         return !1;
-    let n = N.VW.getFirstText(e);
+    let n = v.VW.getFirstText(e);
     if (null == n) return !1;
     let l = t.options[0],
-        i = { path: v.fP, offset: t.displayName.length + 2 },
-        s = { path: v.fP, offset: n.text.length };
+        i = { path: N.fP, offset: t.displayName.length + 2 },
+        s = { path: N.fP, offset: n.text.length };
     return (
-        !(!n.text.startsWith(`/${t.displayName} `.toLocaleLowerCase()) || N.Kh.equals(i, s)) &&
+        !(!n.text.startsWith(`/${t.displayName} `.toLocaleLowerCase()) || v.Kh.equals(i, s)) &&
         (S.b.textToInline(
             e,
             {
@@ -382,7 +382,7 @@ function M(e, t) {
         !0)
     );
 }
-function L(e) {
+function M(e) {
     let {
         guildId: t,
         channelId: n,
@@ -426,20 +426,20 @@ function L(e) {
     p && r.H2(n, m);
 }
 function k(e) {
-    let t = C.n$(e);
+    let t = E.n$(e);
     if (null == t) return { command: null, commandText: null };
     let [n] = t,
         l = n.children[0];
-    return N.l5.isText(l) ? { command: n.command, commandText: l.text } : { command: n.command, commandText: null };
+    return v.l5.isText(l) ? { command: n.command, commandText: l.text } : { command: n.command, commandText: null };
 }
 function w(e, t) {
-    let n = C.O7(e)[0];
+    let n = E.O7(e)[0];
     t();
-    let l = N.ZF.toPoint(e.selection);
-    if (null == l || n === C.O7(e)[0]) return;
+    let l = v.ZF.toPoint(e.selection);
+    if (null == l || n === E.O7(e)[0]) return;
     let { command: i, commandText: s } = k(e);
     !(null == i || null == s || s.endsWith(" ")) &&
-        N.Kh.equals(l, { path: v.fP, offset: i.displayName.length + 1 }) &&
+        v.Kh.equals(l, { path: N.fP, offset: i.displayName.length + 1 }) &&
         S.b.insertText(e, " ");
 }
 function P(e, t, n) {
@@ -450,7 +450,7 @@ function P(e, t, n) {
     let r = i.value?.toString();
     return l.type === s.n4.CHANNEL || (l.type === s.n4.MENTIONABLE && null != g.A.getChannel(r))
         ? `<#${r}>	`
-        : l.type === s.n4.USER || (l.type === s.n4.MENTIONABLE && null != E.default.getUser(r))
+        : l.type === s.n4.USER || (l.type === s.n4.MENTIONABLE && null != C.default.getUser(r))
           ? `<@${r}>`
           : l.type === s.n4.ROLE || (l.type === s.n4.MENTIONABLE && null != A.A.getRole(t.guild_id, r ?? _.dJq))
             ? `<@&${r}>`

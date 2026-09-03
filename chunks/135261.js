@@ -1,4 +1,4 @@
-n.d(t, { A: () => v, P: () => N });
+n.d(t, { A: () => N, P: () => v });
 var l = n(477900),
     i = n(582128),
     s = n(503698),
@@ -15,12 +15,12 @@ var l = n(477900),
     g = n(259678),
     x = n(750506),
     A = n(267102),
-    E = n(186306),
-    C = n(339871),
+    C = n(186306),
+    E = n(339871),
     I = n(820066),
     y = n(375708),
     S = n(9287);
-function N(e) {
+function v(e) {
     let { slateEditor: t, options: n, iconClassName: i, dividerClassName: s } = e;
     return null == t
         ? null
@@ -49,7 +49,7 @@ function N(e) {
                   }),
                   (0, l.jsx)("div", { className: r()(S.yF, s) }),
                   !n?.disableBlockQuotes &&
-                      (0, l.jsx)(T, {
+                      (0, l.jsx)(j, {
                           slateEditor: t,
                           blockType: "blockQuote",
                           children: (0, l.jsx)(m.c, { size: "md", color: "currentColor", className: r()(S.Kk, i) }),
@@ -74,7 +74,7 @@ function N(e) {
               ],
           });
 }
-let v = i.forwardRef(function (e, t) {
+let N = i.forwardRef(function (e, t) {
     let { getSlateEditor: n, containerRef: s, options: r } = e,
         u = i.useRef(null),
         [c, d] = i.useState(!1),
@@ -127,7 +127,7 @@ let v = i.forwardRef(function (e, t) {
                 }
             );
         }, [m, f, p, g]);
-    let { x: E, y: C } = i.useMemo(() => {
+    let { x: C, y: E } = i.useMemo(() => {
             let e = n();
             if (e?.selection == null || I.ZF.isCollapsed(e.selection) || !c) return { x: null, y: null };
             let t = a.rL.findDocumentOrShadowRoot(e),
@@ -149,33 +149,33 @@ let v = i.forwardRef(function (e, t) {
                 y: Math.max(s.current?.getBoundingClientRect()?.y ?? 0, Math.min(u.y, r.y)),
             };
         }, [s, c, n]),
-        [y, v] = i.useState(0),
-        [_, T] = i.useState(0);
+        [y, N] = i.useState(0),
+        [_, j] = i.useState(0);
     if (
         (i.useLayoutEffect(() => {
-            if (null == E || null == C || null == u.current) return;
+            if (null == C || null == E || null == u.current) return;
             let e = u.current.getBoundingClientRect();
-            T(e.width / 2), v(e.height + 12);
-        }, [E, C]),
-        null == E || null == C)
+            j(e.width / 2), N(e.height + 12);
+        }, [C, E]),
+        null == C || null == E)
     )
         return null;
-    let j = n();
-    return null == j
+    let T = n();
+    return null == T
         ? null
         : (0, l.jsx)(x.Ay, {
               children: (0, l.jsx)("div", {
                   id: "slate-toolbar",
                   ref: u,
                   className: S.KE,
-                  style: { top: C - y, left: E - _ },
+                  style: { top: E - y, left: C - _ },
                   onMouseDown: (e) => {
                       e.preventDefault(), e.stopPropagation();
                   },
                   onMouseUp: (e) => {
                       e.stopPropagation();
                   },
-                  children: (0, l.jsx)(N, { slateEditor: j, options: r }),
+                  children: (0, l.jsx)(v, { slateEditor: T, options: r }),
               }),
           });
 });
@@ -184,7 +184,7 @@ function _(e) {
         s = !1;
     if (t?.selection != null) {
         let [e, l] = I.ZF.edges(t.selection);
-        s = null != (0, C.Sx)(t, e, l).before[n];
+        s = null != (0, E.Sx)(t, e, l).before[n];
     }
     return (0, l.jsx)(g.vN, {
         children: (0, l.jsx)("button", {
@@ -207,13 +207,13 @@ function _(e) {
             "aria-pressed": s,
             className: S.x6,
             onClick: function () {
-                null != t && E.o.withSingleEntry(t, () => (0, C.Px)(t, n));
+                null != t && C.o.withSingleEntry(t, () => (0, E.Px)(t, n));
             },
             children: i,
         }),
     });
 }
-function T(e) {
+function j(e) {
     let { blockType: t, slateEditor: n, children: i } = e,
         s = null != n ? I.VW.getCurrentBlock(n) : null,
         r = null != s && I.AS.isType(s[0], t);
@@ -225,7 +225,7 @@ function T(e) {
             "aria-pressed": r,
             className: S.x6,
             onClick: function () {
-                null != n && E.o.withSingleEntry(n, () => (0, C.fO)(n, t));
+                null != n && C.o.withSingleEntry(n, () => (0, E.fO)(n, t));
             },
             children: i,
         }),

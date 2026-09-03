@@ -43,11 +43,11 @@ function p(e) {
             onNudgeChange: I,
             ...j
         } = e,
-        [T, C] = l.useState(h ?? "top");
+        [y, C] = l.useState(h ?? "top");
     l.useEffect(() => {
         null != h && C(h);
     }, [h]);
-    let y = l.useMemo(() => ({ align: x?.align ?? "center", customOffset: x?.customOffset }), [x]),
+    let T = l.useMemo(() => ({ align: x?.align ?? "center", customOffset: x?.customOffset }), [x]),
         S = l.useCallback(() => {
             b?.();
         }, [b]),
@@ -57,19 +57,19 @@ function p(e) {
             },
             [b],
         ),
-        M = l.useCallback((e) => {
+        P = l.useCallback((e) => {
             C(e);
         }, []),
-        P = v ? g.caretHoverable : void 0,
+        M = v ? g.caretHoverable : void 0,
         O = {
             targetElementRef: j.targetElementRef,
             shouldShow: j.shouldShow,
             hasVideo: j.hasVideo,
-            position: T,
-            caretConfig: y,
+            position: y,
+            caretConfig: T,
             onRequestClose: S,
             gradientColor: p,
-            onPositionChange: M,
+            onPositionChange: P,
             onNudgeChange: I,
             scrollBehavior: _,
             modal: N,
@@ -96,7 +96,7 @@ function p(e) {
                     }),
                 (0, a.jsx)(E, { title: t, body: n }),
                 null != m && m.length > 0 ? (0, a.jsx)(o.Z, { actions: m, className: g.actionBar }) : null,
-                null != y && (0, a.jsx)(d.F, { className: P }),
+                null != T && (0, a.jsx)(d.F, { className: M }),
             ],
         }),
     });

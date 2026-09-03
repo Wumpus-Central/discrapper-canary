@@ -70,7 +70,7 @@ function R(e) {
                 return null != u
                     ? (0, C.Tp)(u, i)
                     : T.intl.formatToPlainString(b.default["8bPDtb"], { premiumGroupProductName: (0, x.DP)() });
-            if (O(t)) {
+            if (M(t)) {
                 let e = (0, P.iK)(i);
                 return (
                     o > 1 && (e = T.intl.format(N.default.kyGViz, { quantity: o, label: e })),
@@ -96,7 +96,7 @@ function R(e) {
         Z = (function (e) {
             let { guildId: t, invoiceSummaryType: n, giftRecipient: l } = e,
                 i = (0, r.bG)([f.A], () => (null != t ? f.A.getGuild(t) : null), [t]);
-            return O(n) && null != l
+            return M(n) && null != l
                 ? { type: "gift", user: l }
                 : null != i
                   ? { type: "guildSubscription", guild: i }
@@ -104,7 +104,7 @@ function R(e) {
         })({ guildId: w, invoiceSummaryType: t, giftRecipient: L }),
         q = (function (e) {
             let { invoiceSummaryType: t, guildId: n, giftRecipient: l } = e;
-            return O(t)
+            return M(t)
                 ? null != l
                     ? ""
                     : T.intl.string(N.default["3wsYeI"])
@@ -156,7 +156,7 @@ function R(e) {
                             quantity: u,
                         } = e,
                         { subscriptionPlanInvoiceItem: c } = (0, C.Sb)(l, n),
-                        d = O(t),
+                        d = M(t),
                         m = t === s.u$.PREMIUM_WITH_TRIAL,
                         f = (d ? c?.amount : c?.subscriptionPlanPrice) ?? 0,
                         E = (0, A.$g)(f, l.currency),
@@ -220,7 +220,7 @@ function R(e) {
         priceSubText: el,
         priceSubTextHasStrikethrough: ei,
         target: Z,
-        graphic: (0, l.jsx)(M, { subscriptionPlan: c, storeListing: D }),
+        graphic: (0, l.jsx)(O, { subscriptionPlan: c, storeListing: D }),
         omitDefaultIconBackground: er,
         header: z,
         headerIconSrc: Q,
@@ -229,12 +229,12 @@ function R(e) {
         onClick: V,
     });
 }
-function M(e) {
+function O(e) {
     let { subscriptionPlan: t, storeListing: n } = e,
         i = (0, r.bG)([S.A], () => S.A.get(t.skuId), [t.skuId]),
         a = (0, I.ys)(t.id) ? (0, I.m6)(t.id) : void 0;
     return (0, I.z4)(t.id) ? (0, l.jsx)(c.a6, {}) : (0, l.jsx)(c.WH, { sku: i, premiumType: a, storeListing: n });
 }
-function O(e) {
+function M(e) {
     return e === s.u$.PREMIUM_GIFT;
 }

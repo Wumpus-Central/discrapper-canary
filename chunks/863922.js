@@ -1,4 +1,4 @@
-n.d(t, { $T: () => A, Ay: () => j, C6: () => E, C7: () => S, O$: () => _, Oz: () => C, sK: () => I, s_: () => y });
+n.d(t, { $T: () => A, Ay: () => T, C6: () => C, C7: () => S, O$: () => _, Oz: () => E, sK: () => I, s_: () => y });
 var l = n(582128),
     i = n(435558),
     s = n.n(i),
@@ -54,10 +54,10 @@ async function A(e) {
             receivedAt: Date.now(),
         });
 }
-function E(e, t) {
+function C(e, t) {
     o.h.dispatch({ type: "SET_HIGHLIGHTED_SUMMARY", channelId: e, summaryId: t ?? null });
 }
-function C() {
+function E() {
     o.h.dispatch({ type: "TOGGLE_TOPICS_BAR" });
 }
 function I(e, t) {
@@ -70,7 +70,7 @@ function y(e, t) {
 function S(e, t) {
     o.h.dispatch({ type: "SET_SUMMARY_FEEDBACK", summary: e, rating: t });
 }
-async function N() {
+async function v() {
     let e, t;
     if (!f.A.shouldFetchChannelAffinities()) return Promise.resolve(null);
     let n = Date.now();
@@ -89,7 +89,7 @@ async function N() {
         receivedAt: Date.now(),
     });
 }
-async function v(e) {
+async function N(e) {
     let t,
         n,
         { useQuickSwitcher: l = !0, useChannelAffinities: i = !0 } =
@@ -138,15 +138,15 @@ async function _(e) {
         throw new u.LG(e);
     }
 }
-let T =
+let j =
         221552 == n.j
             ? {
                   setSummaryFeedback: S,
                   updateVisibleMessages: y,
                   setSelectedSummary: I,
-                  setHighlightedSummary: E,
+                  setHighlightedSummary: C,
                   fetchSummaries: A,
-                  fetchSummariesBulk: v,
+                  fetchSummariesBulk: N,
                   useChannelSummaries: function (e) {
                       let { channelIds: t = [] } = e;
                       return (
@@ -158,9 +158,9 @@ let T =
                                   t && e();
                                   async function e() {
                                       try {
-                                          await N();
+                                          await v();
                                       } catch (e) {}
-                                      await v(n.split(","));
+                                      await N(n.split(","));
                                   }
                               }, [n, t]);
                           })(t),
@@ -170,4 +170,4 @@ let T =
                   deleteSummary: _,
               }
             : null,
-    j = 221552 == n.j ? T : null;
+    T = 221552 == n.j ? j : null;

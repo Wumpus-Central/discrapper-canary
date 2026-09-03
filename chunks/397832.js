@@ -29,8 +29,8 @@ var P = n(202541),
     b = n(815545),
     j = n(344159),
     R = n(45938),
-    M = n(158045),
-    O = n(577381),
+    O = n(158045),
+    M = n(577381),
     L = n(750532),
     k = n(216641),
     w = n(222707),
@@ -221,21 +221,21 @@ function $(e) {
                     let { proratedInvoicePreview: b } = i.useMemo(() => ({ proratedInvoicePreview: c }), [c]),
                         { discountInvoiceError: j } = (0, E.W)({ priceOptions: n, trialId: l, metadata: r }),
                         R = i.useMemo(() => S ?? j, [S, j]),
-                        M = i.useMemo(
+                        O = i.useMemo(
                             () =>
                                 y ? d.u$.PREMIUM_GIFT : a ? d.u$.PREMIUM_WITH_TRIAL : d.u$.SUBSCRIPTION_NEW_PURCHASE,
                             [y, a],
                         ),
-                        { discriminatedInvoicePreview: O } = (0, d.KY)({
+                        { discriminatedInvoicePreview: M } = (0, d.KY)({
                             invoiceError: R,
                             subscriptionPlan: I,
-                            invoiceTypeDiscriminator: M,
+                            invoiceTypeDiscriminator: O,
                             shouldSetPurchasePreviewErrorFromInvoice: !0,
                         }),
                         L = i.useMemo(() => (null != b ? b.subscriptionPeriodEnd : void 0), [b]);
                     return {
                         checkoutInvoicePreview: c,
-                        discriminatedInvoicePreview: O,
+                        discriminatedInvoicePreview: M,
                         proratedInvoicePreview: b,
                         renewalInvoicePreview: m,
                         purchaseDisabled: A,
@@ -272,7 +272,7 @@ function $(e) {
                 })),
                 a = l.paymentSourceId,
                 s = (0, k.g)(n, a),
-                o = (0, M.J$)(l.paymentSourceId),
+                o = (0, O.J$)(l.paymentSourceId),
                 { hasEntitlements: u, entitlements: c } = (0, j.X)(t.id, r),
                 d = i.useMemo(
                     () => (u && null == a ? _.intl.format(_.t["2wPRSF"], { months: c.length }) : null),
@@ -299,8 +299,8 @@ function $(e) {
             disabled: eh,
             hasEntitlements: e_,
         }),
-        eM = (0, T.V)(J),
-        { copy: eO, daysCount: eL, userTrialOffer: ek } = (0, N.O8)(),
+        eO = (0, T.V)(J),
+        { copy: eM, daysCount: eL, userTrialOffer: ek } = (0, N.O8)(),
         ew = (0, w.pt)({
             fractionalPremiumInfo: eP,
             selectedPlanId: ea,
@@ -308,8 +308,8 @@ function $(e) {
             premiumSubscription: ee,
             isGift: X,
         }),
-        eU = X && er.interval === P.WT.YEAR && (0, M.xq)(er.id),
-        eD = (0, M.L_)({ planId: er.id, isGift: !0, priceOptions: V, subscriptionPlan: er }),
+        eU = X && er.interval === P.WT.YEAR && (0, O.xq)(er.id),
+        eD = (0, O.L_)({ planId: er.id, isGift: !0, priceOptions: V, subscriptionPlan: er }),
         eG = i.useMemo(() => {
             if (null != eD && eU)
                 return { headerBadgeText: _.intl.formatToPlainString(Q.default["Mi5BH/"], { percentOff: eD }) };
@@ -349,7 +349,7 @@ function $(e) {
                 [n, t, r],
             );
         })({ skuId: er.skuId, isGift: X }),
-        eW = (0, O.i)({ planSkuId: er.skuId, invoice: eb }),
+        eW = (0, M.i)({ planSkuId: er.skuId, invoice: eb }),
         eY = (0, x.Mq)(er) && ey.includes(r.a.SUMMER_2026_GOGO_FAKE_SKU_ID),
         eV = i.useMemo(() => {
             let e = eB ?? eW ?? null;
@@ -365,7 +365,7 @@ function $(e) {
                           directContent: (0, l.jsx)(H.l, {
                               fractionalPremiumInfo: eP,
                               isEligibleForTrial: es,
-                              trialPeriodCopy: eO,
+                              trialPeriodCopy: eM,
                               subscriptionPeriodEnd: ep,
                           }),
                           key: "fractional-premium-notice",
@@ -374,9 +374,9 @@ function $(e) {
                 null != eH && e.push({ directContent: eH, key: "xbox-perks-notice" }),
                 e.length > 0 ? e : null
             );
-        }, [D, eN, ew, eP, es, eO, ep, ec, eH]),
+        }, [D, eN, ew, eP, es, eM, ep, ec, eH]),
         eZ = null != em ? em.invoicePreview : null,
-        { priceOptions: eq, planPricesLoading: ez } = (0, M.Pr)(V, eZ, $),
+        { priceOptions: eq, planPricesLoading: ez } = (0, O.Pr)(V, eZ, $),
         eQ = {
             shouldShowGlobalNotices: !0,
             upperInlineNoticeProps: eK,
@@ -397,7 +397,7 @@ function $(e) {
     if (null == em && null != $) return (0, l.jsx)(u.T_, { ...eQ, legalContent: null });
     if (null == em || em.type === d.u$.LOADING)
         return (0, l.jsx)(u.Ed, { shouldShowUnifiedHeader: !0, headerBadgeConfig: eF });
-    let e$ = null != eM ? eM.subscriptionTrial : void 0,
+    let e$ = null != eO ? eO.subscriptionTrial : void 0,
         eJ =
             em.type === d.u$.PREMIUM_WITH_TRIAL
                 ? null

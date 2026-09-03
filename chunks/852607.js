@@ -76,13 +76,13 @@ var g = n(702841),
     b = n(20742),
     j = n(430993),
     R = n(315949),
-    M = n(599062);
-function O() {
+    O = n(599062);
+function M() {
     let { refreshCategories: e } = (0, R.A)();
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsx)(b.rQ, { title: f.intl.string(f.t["p8+qtU"]) }),
-            (0, l.jsx)(j.c, { children: (0, l.jsx)(M.h, { onRetry: e, errorOrigin: M.A.GIFT_MODAL }) }),
+            (0, l.jsx)(j.c, { children: (0, l.jsx)(O.h, { onRetry: e, errorOrigin: O.A.GIFT_MODAL }) }),
         ],
     });
 }
@@ -130,7 +130,7 @@ function K(e) {
         : u
           ? (0, l.jsx)(x.oO, {})
           : null != f
-            ? (0, l.jsx)(O, {})
+            ? (0, l.jsx)(M, {})
             : null;
 }
 function Z(e) {

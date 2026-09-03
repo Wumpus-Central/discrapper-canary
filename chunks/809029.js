@@ -114,7 +114,7 @@ function A(e) {
         { claimableRewards: b } = (0, a.Pv)(),
         j = (0, u.px)(_, S, b),
         R = e.handleStepChange,
-        M = i.useCallback(
+        O = i.useCallback(
             () =>
                 A
                     ? void R(s.pn.SKU_SELECT)
@@ -125,7 +125,7 @@ function A(e) {
                         : R(s.pn.PLAN_SELECT),
             [R, A, j, n],
         ),
-        O = (0, d.J$)(y.paymentSourceId),
+        M = (0, d.J$)(y.paymentSourceId),
         L = (0, C.R)({ hasOpenInvoice: x ?? !1 }),
         k = i.useMemo(
             () =>
@@ -135,10 +135,10 @@ function A(e) {
                     selectedPlan: _,
                     premiumSubscription: m,
                     planGroup: v,
-                    isPrepaidPaymentSource: O,
+                    isPrepaidPaymentSource: M,
                     isInPastDueCheckout: L,
                 }),
-            [S, _, m, v, O, t, L],
+            [S, _, m, v, M, t, L],
         ),
         w = null != m && !S,
         U = i.useCallback(
@@ -167,7 +167,7 @@ function A(e) {
     return (0, l.jsx)(p.Y, {
         ...e,
         isBackButtonEligible: N,
-        onFooterBackClick: M,
+        onFooterBackClick: O,
         subscriptionMetadata: G,
         customFooterProps: F,
         renderStepBody: U,

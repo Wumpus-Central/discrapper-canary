@@ -42,10 +42,10 @@ async function A(e) {
         loadId: b,
         giftInfoOptions: j,
         invoicePreview: R,
-        quantity: M,
+        quantity: O,
     } = e;
     try {
-        let e, n, i, O;
+        let e, n, i, M;
         if ((t(), r)) return;
         if (T === y.VVm.ONE_TIME)
             a()(null != x, "SKU must exist and be fetched."),
@@ -57,7 +57,7 @@ async function A(e) {
                     paymentSource: A,
                     loadId: b,
                     giftInfoOptions: j,
-                    quantity: M,
+                    quantity: O,
                 }));
         else {
             a()(null != d, "Missing subscriptionPlan"), a()(null != R, "Missing invoicePreview");
@@ -80,7 +80,7 @@ async function A(e) {
                     isGift: !0,
                     loadId: b,
                     giftInfoOptions: j,
-                    quantity: M,
+                    quantity: O,
                 });
             } else if (null != A && null != P && P.status === y.Dmq.PAST_DUE && null != g) {
                 let n = C.currency ?? R.currency;
@@ -112,11 +112,11 @@ async function A(e) {
             ? (n = null != e.subscription ? E.A.createFromServer(e.subscription) : null)
             : "entitlements" in e && (i = null != e.entitlements ? e.entitlements : void 0),
             "appliedUserDiscounts" in e &&
-                (O =
+                (M =
                     null != e.appliedUserDiscounts && e.appliedUserDiscounts.length > 0
                         ? e.appliedUserDiscounts
                         : void 0),
-            v(n, i, O);
+            v(n, i, M);
     } catch (e) {
         n(e);
     } finally {
@@ -133,8 +133,8 @@ var g = n(166532),
     b = n(708791),
     j = n(17928),
     R = n(10716),
-    M = n(20015),
-    O = n(202475),
+    O = n(20015),
+    M = n(202475),
     L = n(31823),
     k = n(666646),
     w = n(206441),
@@ -234,7 +234,7 @@ function W(e) {
                     onPaymentSourceAdd: a,
                     resolveTenantReviewButtonProps: s,
                 } = e,
-                { hasPaymentSources: o } = (0, O.j)(),
+                { hasPaymentSources: o } = (0, M.j)(),
                 {
                     hasAcceptedTerms: u,
                     paymentSourceId: c,
@@ -252,7 +252,7 @@ function W(e) {
                 h = (0, k.mx)(),
                 { application: f } = (0, L.V)(),
                 E = (0, j.bG)([R.A], () => R.A.getFetchState()),
-                S = (0, M.n)(f, y.gfo.EMBEDDED) && E === R.$.LOADING,
+                S = (0, O.n)(f, y.gfo.EMBEDDED) && E === R.$.LOADING,
                 I = l ?? !1,
                 A = (null != h || r) ?? !1,
                 g = i.useMemo(
@@ -304,7 +304,7 @@ function Y(e) {
             metadata: I,
             backButtonEligible: j,
             disablePurchase: R,
-            onPaymentSourceAdd: M,
+            onPaymentSourceAdd: O,
             handleStepChange: L,
             postPurchaseStep: k = g.pn.CONFIRM,
             resolveTenantReviewButtonProps: U,
@@ -351,7 +351,7 @@ function Y(e) {
             setIsOrderSigning: e.setIsOrderSigning,
         })),
         ea = (0, w.Q9)(),
-        { paymentSources: es } = (0, O.j)(),
+        { paymentSources: es } = (0, M.j)(),
         eo = (0, F.A)(),
         eu = (0, B.gU)(),
         {
@@ -390,12 +390,12 @@ function Y(e) {
         [],
     );
     let { hasEntitlements: eR } = (0, x.X)(eI, ec),
-        eM = null;
+        eO = null;
     Q === y.VVm.ONE_TIME &&
         (a()(null != G, "SKU must be selected for one-time purchases"),
-        (eM = eu[G] ?? null),
-        a()(null != eM, "SKU must exist and be fetched."));
-    let eO = i.useCallback(() => {
+        (eO = eu[G] ?? null),
+        a()(null != eO, "SKU must exist and be fetched."));
+    let eM = i.useCallback(() => {
             V(P.h.PURCHASING),
                 Y(!0),
                 ex(!0),
@@ -456,7 +456,7 @@ function Y(e) {
             [L, k, et, X, ee],
         );
     async function eF() {
-        eO(), er(!0);
+        eM(), er(!0);
         try {
             await eB();
         } finally {
@@ -499,7 +499,7 @@ function Y(e) {
         }
         let t = e ?? eg;
         await A({
-            onPurchaseAttempt: eO,
+            onPurchaseAttempt: eM,
             onPurchaseError: eL,
             onPurchaseComplete: eU,
             onPurchaseFinalize: eD,
@@ -516,7 +516,7 @@ function Y(e) {
             premiumSubscription: D ?? null,
             onNext: eG,
             metadata: I,
-            sku: eM,
+            sku: eO,
             purchaseType: Q,
             referralCode: $,
             loadId: K.loadId,
@@ -536,6 +536,6 @@ function Y(e) {
         isSubmitting: e_,
         makePurchase: eH,
         needsPaymentSource: null == eg && !eR,
-        onPaymentSourceAdd: M,
+        onPaymentSourceAdd: O,
     });
 }

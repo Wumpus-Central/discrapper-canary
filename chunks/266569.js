@@ -20,8 +20,8 @@ var i = n(477900),
     _ = n(859703),
     S = n(104886),
     g = n(710969),
-    O = n(851936),
-    v = n(561844),
+    v = n(851936),
+    O = n(561844),
     b = n(590202),
     y = n(910463),
     N = n(971649),
@@ -172,7 +172,7 @@ class R {
                             adCreativeType: this.entity.adCreativeType,
                             adCreativeId: this.entity.adContentIds[r],
                         }),
-                    (0, O.L)().info(
+                    (0, v.L)().info(
                         `${i} ad content viewed for at least ${this.minViewTimeSeconds}s at ${(0, b.jO)(this.questContent)}`,
                         { impressionId: this.id },
                     );
@@ -182,11 +182,11 @@ class R {
                 let e = this.entity.adContentIds[r],
                     i = _.A.getQuest(e);
                 null == i || (0, g.Ic)(i) || (0, h.zh)(o.p.QUEST, [e]),
-                    (0, O.L)().info(
+                    (0, v.L)().info(
                         `${i?.config.messages.questName ?? e} Quest viewed for at least ${this.minViewTimeSeconds}s at ${(0, b.jO)(this.questContent)}`,
                         { impressionId: this.id },
                     ),
-                    (0, v.av)({
+                    (0, O.av)({
                         ...t,
                         shouldExtendSession: a,
                         questId: e,
@@ -201,11 +201,11 @@ class R {
                     });
             } else {
                 let e = this.entity.adContentIds[r];
-                (0, O.L)().info(
+                (0, v.L)().info(
                     `${e} ad content viewed for at least ${this.minViewTimeSeconds}s at ${(0, b.jO)(this.questContent)}`,
                     { impressionId: this.id },
                 ),
-                    (0, v.Qg)({
+                    (0, O.Qg)({
                         ...t,
                         shouldExtendSession: a,
                         adContentId: e,
@@ -237,11 +237,11 @@ class R {
                     if (e.entity.adCreativeType === o.p.QUEST) {
                         let s = e.entity.adContentIds[a],
                             o = _.A.getQuest(s);
-                        (0, O.L)().info(
+                        (0, v.L)().info(
                             `${o?.config.messages.questName ?? s} Quest impression ${t ? "terminal " : ""}heartbeat: ${n}ms since last heartbeat`,
                             { impressionId: e.id },
                         ),
-                            (0, v.av)({
+                            (0, O.av)({
                                 ...i,
                                 questId: s,
                                 event: w.HAw.QUEST_CONTENT_VIEW_TIME,
@@ -249,11 +249,11 @@ class R {
                             });
                     } else {
                         let s = e.entity.adContentIds[a];
-                        (0, O.L)().info(
+                        (0, v.L)().info(
                             `${s} ad content impression ${t ? "terminal " : ""}heartbeat: ${n}ms since last heartbeat`,
                             { impressionId: e.id },
                         ),
-                            (0, v.Qg)({
+                            (0, O.Qg)({
                                 ...i,
                                 adContentId: s,
                                 relatedQuestId: e.entity.relatedQuestId,
@@ -332,11 +332,11 @@ class R {
             if (this.entity.adCreativeType === o.p.QUEST) {
                 let n = this.entity.adContentIds[i],
                     s = _.A.getQuest(n);
-                (0, O.L)().info(
+                (0, v.L)().info(
                     `${s?.config.messages.questName ?? n} Quest became visible at ${(0, b.jO)(this.questContent)}`,
                     { impressionId: this.id },
                 ),
-                    (0, v.av)({
+                    (0, O.av)({
                         ...e,
                         questId: n,
                         event: w.HAw.QUEST_CONTENT_LOADED,
@@ -349,10 +349,10 @@ class R {
                     });
             } else {
                 let n = this.entity.adContentIds[i];
-                (0, O.L)().info(`${n} ad content became visible at ${(0, b.jO)(this.questContent)}`, {
+                (0, v.L)().info(`${n} ad content became visible at ${(0, b.jO)(this.questContent)}`, {
                     impressionId: this.id,
                 }),
-                    (0, v.Qg)({
+                    (0, O.Qg)({
                         ...e,
                         adContentId: n,
                         relatedQuestId: this.entity.relatedQuestId,

@@ -1,4 +1,4 @@
-n.d(t, { $2: () => M, Ky: () => b, L_: () => R, no: () => T, vV: () => y, xz: () => O, yC: () => j }), n(938796);
+n.d(t, { $2: () => L, Ky: () => b, L_: () => R, no: () => j, vV: () => y, xz: () => O, yC: () => T }), n(938796);
 var l,
     i = n(582128),
     s = n(665260),
@@ -15,16 +15,16 @@ var l,
     g = n(935208),
     x = n(998218),
     A = n(652215);
-function E(e) {
+function C(e) {
     if (null == e) return !1;
     let { filename: t, height: n, width: l } = e;
     return (0, u.u)(t) && null != n && n > 0 && null != l && l > 0;
 }
-function C(e) {
+function E(e) {
     return null != e && null != e && (0, u.AE)(e.filename) && null != e.proxy_url;
 }
 function I(e) {
-    return E(e) || C(e);
+    return C(e) || E(e);
 }
 var y = (((l = {}).EMBED = "embed"), (l.ATTACHMENT = "attachment"), (l.COMPONENT = "component"), l);
 function S(e) {
@@ -78,7 +78,7 @@ function S(e) {
                   .filter(p.Vq);
     })(e, d.X6.useSetting());
 }
-function N(e, t) {
+function v(e, t) {
     let n = d.hD.useSetting(),
         l = d.rs.useSetting();
     if (null == e) return [];
@@ -107,7 +107,7 @@ function N(e, t) {
               .filter(p.Vq)
         : [];
 }
-function v(e) {
+function N(e) {
     let t = d.hD.useSetting();
     if (null == e) return [];
     let n = e.components;
@@ -143,9 +143,9 @@ function _(e, t) {
               srcUnfurledMediaItem: e,
           };
 }
-function T(e, t) {
+function j(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        l = j(e, n);
+        l = T(e, n);
     return i.useMemo(() => {
         if (null == t) return [];
         if (!t.isMediaChannel()) return l;
@@ -155,19 +155,19 @@ function T(e, t) {
         }
     }, [t, l]);
 }
-function j(e, t) {
-    return [...S(e), ...N(e, t), ...v(e)];
+function T(e, t) {
+    return [...S(e), ...v(e, t), ...N(e)];
 }
 function b(e, t) {
     let n = S(e),
-        l = N(e, t),
-        i = v(e);
+        l = v(e, t),
+        i = N(e);
     return n[0] ?? l[0] ?? i[0] ?? null;
 }
 function R(e, t) {
     let n = S(e),
-        l = N(e, t),
-        i = v(e);
+        l = v(e, t),
+        i = N(e);
     return null == n[0] && null == i[0] && null != l[0];
 }
 function O(e, t) {
@@ -181,10 +181,10 @@ function O(e, t) {
         n.isForumPost() &&
         n.ownerId === f.default.getCurrentUser()?.id &&
         0 === c.A.getCount(n.id) &&
-        (0 === l.attachments.length || null == l.attachments.find((e) => E(e) || C(e)))
+        (0 === l.attachments.length || null == l.attachments.find((e) => C(e) || E(e)))
     );
 }
-function M(e) {
+function L(e) {
     return e.reduce(
         (e, t) => ({ containsVideo: e.containsVideo || t.isVideo, containsGif: e.containsGif || (0, u.ge)(t.src) }),
         { containsVideo: !1, containsGif: !1 },

@@ -1,6 +1,6 @@
-a.r(t), a.d(t, { collectiblesCollection: () => Y, playgroundConfig: () => J });
-var n = a(34188),
-    o = a(477900),
+a.r(t), a.d(t, { collectiblesCollection: () => Y, playgroundConfig: () => Z });
+var o = a(34188),
+    n = a(477900),
     r = a(582128),
     l = a(331322),
     s = a(834730),
@@ -16,7 +16,7 @@ var n = a(34188),
 function v(e) {
     return e.split(/[\s,]+/).filter((e) => "" !== e);
 }
-let f = {
+let b = {
     title: "Shop Loading",
     stories: [
         {
@@ -25,35 +25,35 @@ let f = {
             component: function (e) {
                 let { skuIds: t } = e,
                     a = r.useMemo(() => v(t), [t]),
-                    n = (0, d.hv)(a, { needsCategory: !1 });
-                return (0, o.jsxs)(l.B, {
+                    o = (0, d.hv)(a, { needsCategory: !1 });
+                return (0, n.jsxs)(l.B, {
                     direction: "vertical",
                     gap: 16,
                     align: "start",
                     children: [
-                        (0, o.jsx)(s.E, {
+                        (0, n.jsx)(s.E, {
                             variant: "text-sm/normal",
                             color: "text-muted",
                             children:
                                 "Comma- or space-separate shop SKU IDs in the controls. Each tile resolves via the storefront APIs through CollectiblesShopManager \u2014 all IDs entered here coalesce into one batched request. Tiles show the skeleton until the SKU resolves.",
                         }),
-                        (0, o.jsx)("div", {
+                        (0, n.jsx)("div", {
                             className: x.Vg,
                             children: a.map((e) => {
-                                let { state: t, product: a } = n[e] ?? { state: "loading", product: null };
-                                return (0, o.jsx)(
+                                let { state: t, product: a } = o[e] ?? { state: "loading", product: null };
+                                return (0, n.jsx)(
                                     "div",
                                     {
                                         className: x.Vs,
                                         children:
                                             "ready" === t && null != a
-                                                ? (0, o.jsxs)(o.Fragment, {
+                                                ? (0, n.jsxs)(n.Fragment, {
                                                       children: [
-                                                          (0, o.jsx)(s.E, {
+                                                          (0, n.jsx)(s.E, {
                                                               variant: "text-sm/semibold",
                                                               children: a.name,
                                                           }),
-                                                          (0, o.jsx)(s.E, {
+                                                          (0, n.jsx)(s.E, {
                                                               variant: "text-xs/normal",
                                                               color: "text-muted",
                                                               children: e,
@@ -61,12 +61,12 @@ let f = {
                                                       ],
                                                   })
                                                 : "error" === t
-                                                  ? (0, o.jsxs)(s.E, {
+                                                  ? (0, n.jsxs)(s.E, {
                                                         variant: "text-sm/semibold",
                                                         color: "text-feedback-critical",
                                                         children: ["error: ", e],
                                                     })
-                                                  : (0, o.jsx)(p.A, {}),
+                                                  : (0, n.jsx)(p.A, {}),
                                     },
                                     e,
                                 );
@@ -82,27 +82,27 @@ let f = {
             id: "shop-product-card",
             component: function (e) {
                 let { skuIds: t, improvedLoading: a } = e,
-                    n = r.useMemo(() => v(t), [t]);
-                return (0, o.jsx)(u.k, {
+                    o = r.useMemo(() => v(t), [t]);
+                return (0, n.jsx)(u.k, {
                     value: a,
-                    children: (0, o.jsx)(c.iM, {
+                    children: (0, n.jsx)(c.iM, {
                         tab: g.G2.HOME,
-                        children: (0, o.jsx)(i.R9, {
+                        children: (0, n.jsx)(i.R9, {
                             newValue: { sessionId: "playground" },
-                            children: (0, o.jsxs)(l.B, {
+                            children: (0, n.jsxs)(l.B, {
                                 direction: "vertical",
                                 gap: 16,
                                 align: "start",
                                 children: [
-                                    (0, o.jsx)(s.E, {
+                                    (0, n.jsx)(s.E, {
                                         variant: "text-sm/normal",
                                         color: "text-muted",
                                         children:
                                             "Renders real ProductCards. With the experiment toggle on, each card resolves through CollectiblesShopManager and shows a skeleton until ready; with it off, cards use the legacy CollectiblesCategoryStore path (empty in the playground).",
                                     }),
-                                    (0, o.jsx)("div", {
+                                    (0, n.jsx)("div", {
                                         className: x.Vg,
-                                        children: n.map((e) => (0, o.jsx)(m.A, { skuId: e }, e)),
+                                        children: o.map((e) => (0, n.jsx)(m.A, { skuId: e }, e)),
                                     }),
                                 ],
                             }),
@@ -120,15 +120,15 @@ let f = {
             id: "shop-home-feed",
             component: function (e) {
                 let { improvedLoading: t } = e;
-                return (0, o.jsx)(u.k, {
+                return (0, n.jsx)(u.k, {
                     value: t,
-                    children: (0, o.jsx)(c.iM, {
+                    children: (0, n.jsx)(c.iM, {
                         tab: g.G2.HOME,
-                        children: (0, o.jsx)(i.R9, {
+                        children: (0, n.jsx)(i.R9, {
                             newValue: { sessionId: "playground" },
-                            children: (0, o.jsx)("div", {
+                            children: (0, n.jsx)("div", {
                                 className: x.rO,
-                                children: (0, o.jsx)(h.A, {
+                                children: (0, n.jsx)(h.A, {
                                     handleTransition: () => {},
                                     tab: g.G2.HOME,
                                     transitionState: g.Pf.VISIBLE,
@@ -144,7 +144,7 @@ let f = {
         },
     ],
 };
-var b = a(297264),
+var f = a(297264),
     y = a(503698),
     k = a.n(y),
     C = a(3666),
@@ -153,8 +153,8 @@ var b = a(297264),
     w = a(477782),
     A = a(847374),
     E = a(922016),
-    L = a(980707),
-    I = a(955572),
+    I = a(980707),
+    L = a(955572),
     M = a(775602),
     D = a(421773),
     N = a(361779);
@@ -162,23 +162,23 @@ function K(e) {
     return !e.defaultPrevented && 0 === e.button && !e.metaKey && !e.ctrlKey && !e.shiftKey && !e.altKey;
 }
 function R(e) {
-    let { navId: t, option: a, selectedKey: n } = e;
+    let { navId: t, option: a, selectedKey: o } = e;
     return "page" === a.type
-        ? (0, o.jsx)(T, { option: a, selectedKey: n })
-        : (0, o.jsx)(H, { navId: t, option: a, selectedKey: n });
+        ? (0, n.jsx)(T, { option: a, selectedKey: o })
+        : (0, n.jsx)(H, { navId: t, option: a, selectedKey: o });
 }
 function T(e) {
     var t;
-    let { option: a, selectedKey: n } = e,
-        l = a.key === n,
+    let { option: a, selectedKey: o } = e,
+        l = a.key === o,
         i = r.useCallback(
             (e) => {
                 K(e) && (e.preventDefault(), a.onClick(e));
             },
             [a],
         );
-    return (0, o.jsx)("li", {
-        children: (0, o.jsxs)(S.D, {
+    return (0, n.jsx)("li", {
+        children: (0, n.jsxs)(S.D, {
             tag: "a",
             role: "link",
             href: a.route,
@@ -186,45 +186,45 @@ function T(e) {
             "aria-current": l ? "page" : void 0,
             className: k()(N.ie, N.LA, { [N.wH]: l, [N.C3]: null != a.badge }),
             children: [
-                (0, o.jsx)(s.E, { variant: "text-md/medium", color: "none", children: a.text }),
+                (0, n.jsx)(s.E, { variant: "text-md/medium", color: "none", children: a.text }),
                 null == (t = a.badge)
                     ? null
                     : "object" == typeof t && "type" in t
-                      ? (0, o.jsx)(j.E, { ...t })
-                      : (0, o.jsx)(j.E, { type: t }),
+                      ? (0, n.jsx)(j.E, { ...t })
+                      : (0, n.jsx)(j.E, { type: t }),
             ],
         }),
     });
 }
 function H(e) {
-    let { navId: t, option: a, selectedKey: n } = e,
+    let { navId: t, option: a, selectedKey: o } = e,
         { route: l } = a,
         i = `${t}-${a.key}`,
         c = (function e(t, a) {
             return t.key === a || ("menu" === t.type && t.options.some((t) => e(t, a)));
-        })(a, n),
+        })(a, o),
         u = r.useRef(null),
         d = r.useRef(null),
         m = r.useRef(!1),
         { isHovered: p, setIsHovered: h, onMouseEnter: g, onMouseLeave: x, cancelTimers: v } = (0, D.A)(100, 100),
-        f = r.useCallback(() => {
+        b = r.useCallback(() => {
             (m.current = M.Ay.keyboardModeEnabled), g();
         }, [g]),
-        b = r.useCallback(() => {
+        f = r.useCallback(() => {
             v(), h(!0), (m.current = M.Ay.keyboardModeEnabled);
         }, [v, h]),
         y = r.useCallback(
             (e) => {
                 v(),
-                    m.current && !M.Ay.keyboardModeEnabled && (0, I.uS)(),
+                    m.current && !M.Ay.keyboardModeEnabled && (0, L.uS)(),
                     h(!1),
                     e && requestAnimationFrame(() => (null != d.current ? d.current.focus() : u.current?.focus()));
             },
             [v, h],
         ),
         C = r.useCallback(() => {
-            p ? y(!1) : b();
-        }, [p, b, y]),
+            p ? y(!1) : f();
+        }, [p, f, y]),
         j = r.useCallback(
             (e) => {
                 y(!1), null != a.route && K(e) && (e.preventDefault(), a.onClick(e));
@@ -234,27 +234,27 @@ function H(e) {
         R = r.useCallback(
             (e) => {
                 "ArrowDown" === e.key &&
-                    (e.preventDefault(), e.stopPropagation(), p ? (y(!1), requestAnimationFrame(b)) : b());
+                    (e.preventDefault(), e.stopPropagation(), p ? (y(!1), requestAnimationFrame(f)) : f());
             },
-            [p, b, y],
+            [p, f, y],
         ),
-        T = (0, o.jsx)(s.E, { variant: "text-md/medium", color: "none", children: a.text }),
-        H = (0, o.jsx)(A.a, { size: "sm", color: "currentColor", className: k()(N.OW, { [N.g3]: p }) });
-    return (0, o.jsx)("li", {
-        children: (0, o.jsx)(E.Y, {
+        T = (0, n.jsx)(s.E, { variant: "text-md/medium", color: "none", children: a.text }),
+        H = (0, n.jsx)(A.a, { size: "sm", color: "currentColor", className: k()(N.OW, { [N.g3]: p }) });
+    return (0, n.jsx)("li", {
+        children: (0, n.jsx)(E.Y, {
             targetElementRef: u,
             shouldShow: p,
             position: "bottom",
             align: "left",
             spacing: 4,
-            onRequestOpen: b,
+            onRequestOpen: f,
             onRequestClose: () => y(!0),
             animation: E.Y.Animation.NONE,
             renderPopout: () =>
-                (0, o.jsx)("div", {
+                (0, n.jsx)("div", {
                     onMouseEnter: g,
                     onMouseLeave: x,
-                    children: (0, o.jsx)(L.W, {
+                    children: (0, n.jsx)(I.W, {
                         navId: i,
                         "aria-label": a.expandLabel,
                         onClose: () => y(!0),
@@ -262,7 +262,7 @@ function H(e) {
                         children: (function e(t) {
                             return t.map((t) =>
                                 "page" === t.type
-                                    ? (0, o.jsx)(
+                                    ? (0, n.jsx)(
                                           w.Dr,
                                           {
                                               id: t.key,
@@ -274,7 +274,7 @@ function H(e) {
                                           },
                                           t.key,
                                       )
-                                    : (0, o.jsx)(
+                                    : (0, n.jsx)(
                                           w.Dr,
                                           { id: t.key, label: t.text, action: t.onClick, children: e(t.options) },
                                           t.key,
@@ -285,23 +285,23 @@ function H(e) {
                 }),
             children: (e) =>
                 null != l
-                    ? (0, o.jsxs)("span", {
+                    ? (0, n.jsxs)("span", {
                           ref: u,
                           className: k()(N.ie, N.iL, { [N.wH]: c }),
                           children: [
-                              (0, o.jsx)(S.D, {
+                              (0, n.jsx)(S.D, {
                                   tag: "a",
                                   role: "link",
                                   href: l,
                                   onClick: j,
-                                  onMouseEnter: f,
+                                  onMouseEnter: b,
                                   onMouseLeave: x,
-                                  "aria-current": a.key === n ? "page" : void 0,
+                                  "aria-current": a.key === o ? "page" : void 0,
                                   focusProps: { offset: { bottom: -2 } },
                                   className: k()(N.LA, N.tH),
                                   children: T,
                               }),
-                              (0, o.jsx)(S.D, {
+                              (0, n.jsx)(S.D, {
                                   ...e,
                                   innerRef: d,
                                   role: "button",
@@ -309,7 +309,7 @@ function H(e) {
                                   "aria-label": a.expandLabel,
                                   onClick: C,
                                   onKeyDown: R,
-                                  onMouseEnter: f,
+                                  onMouseEnter: b,
                                   onMouseLeave: x,
                                   focusProps: { offset: { bottom: -2 } },
                                   className: k()(N.LA, N.nE),
@@ -317,14 +317,14 @@ function H(e) {
                               }),
                           ],
                       })
-                    : (0, o.jsxs)(S.D, {
+                    : (0, n.jsxs)(S.D, {
                           ...e,
                           innerRef: u,
                           role: "button",
                           "aria-haspopup": "true",
                           onClick: C,
                           onKeyDown: R,
-                          onMouseEnter: f,
+                          onMouseEnter: b,
                           onMouseLeave: x,
                           className: k()(N.ie, N.LA, { [N.wH]: c }),
                           children: [T, H],
@@ -336,8 +336,8 @@ var B = a(765671);
 let O = 'a[href], [role="button"]';
 function G(e, t) {
     let a = Array.from(e.querySelectorAll(O)),
-        n = a.indexOf(document.activeElement);
-    -1 !== n && a[n + t]?.focus();
+        o = a.indexOf(document.activeElement);
+    -1 !== o && a[o + t]?.focus();
 }
 function P(e) {
     switch (e.key) {
@@ -358,7 +358,7 @@ function P(e) {
     }
 }
 function U(e) {
-    let { options: t, selectedKey: a, overflowLabel: n, overflowExpandLabel: l, className: s, ...i } = e,
+    let { options: t, selectedKey: a, overflowLabel: o, overflowExpandLabel: l, className: s, ...i } = e,
         c = r.useId(),
         u = `collectibles-shop-navigation-menu-${c}`,
         {
@@ -367,66 +367,66 @@ function U(e) {
             visibleOptions: p,
             onItemLayout: h,
             overflowItemsRef: g,
-        } = (function (e, t, a, n) {
-            let { ref: o, width: l } = (0, B.Ay)(),
+        } = (function (e, t, a, o) {
+            let { ref: n, width: l } = (0, B.Ay)(),
                 {
                     lastVisibleIndex: s,
                     onItemLayout: i,
                     overflowItemsRef: c,
                 } = (0, C.Wv)({ items: e, itemGapPx: 32, maxLines: 1, containerWidth: l ?? 0 });
             return {
-                containerRef: o,
+                containerRef: n,
                 isMeasured: null != l,
                 visibleOptions: r.useMemo(() => {
                     if (s >= e.length - 1) return e;
-                    let o = { type: "menu", key: t, text: a, expandLabel: n, options: e.slice(s + 1) };
-                    return [...e.slice(0, s + 1), o];
-                }, [e, s, t, a, n]),
+                    let n = { type: "menu", key: t, text: a, expandLabel: o, options: e.slice(s + 1) };
+                    return [...e.slice(0, s + 1), n];
+                }, [e, s, t, a, o]),
                 onItemLayout: i,
                 overflowItemsRef: c,
             };
-        })(t, `${u}-more`, n, l);
-    return (0, o.jsxs)("nav", {
+        })(t, `${u}-more`, o, l);
+    return (0, n.jsxs)("nav", {
         "aria-label": i["aria-label"],
         className: k()(N.C$, s),
         ref: d,
         children: [
-            (0, o.jsx)(V, {
+            (0, n.jsx)(V, {
                 navId: u,
                 options: t,
-                overflowLabel: n,
+                overflowLabel: o,
                 overflowExpandLabel: l,
                 onItemLayout: h,
                 overflowItemsRef: g,
             }),
             m &&
-                (0, o.jsx)("ul", {
+                (0, n.jsx)("ul", {
                     onKeyDown: P,
                     className: N.P_,
-                    children: p.map((e) => (0, o.jsx)(R, { navId: u, option: e, selectedKey: a }, e.key)),
+                    children: p.map((e) => (0, n.jsx)(R, { navId: u, option: e, selectedKey: a }, e.key)),
                 }),
         ],
     });
 }
 function V(e) {
-    let { options: t, navId: a, overflowLabel: n, overflowExpandLabel: r, onItemLayout: l, overflowItemsRef: s } = e,
+    let { options: t, navId: a, overflowLabel: o, overflowExpandLabel: r, onItemLayout: l, overflowItemsRef: s } = e,
         i = `${a}-measure`;
-    return (0, o.jsxs)("div", {
+    return (0, n.jsxs)("div", {
         "aria-hidden": !0,
         className: N.Zb,
         children: [
             t.map((e, t) =>
-                (0, o.jsx)(
+                (0, n.jsx)(
                     C.Ae,
-                    { index: t, onItemLayout: l, children: (0, o.jsx)(R, { navId: i, option: e }) },
+                    { index: t, onItemLayout: l, children: (0, n.jsx)(R, { navId: i, option: e }) },
                     e.key,
                 ),
             ),
-            (0, o.jsx)("div", {
+            (0, n.jsx)("div", {
                 ref: s,
-                children: (0, o.jsx)(R, {
+                children: (0, n.jsx)(R, {
                     navId: i,
-                    option: { type: "menu", key: "more-measure", text: n, expandLabel: r, options: [] },
+                    option: { type: "menu", key: "more-measure", text: o, expandLabel: r, options: [] },
                 }),
             }),
         ],
@@ -460,23 +460,23 @@ let Y = {
                         component: function (e) {
                             let { skuId: t } = e,
                                 a = t.trim(),
-                                { state: n } = (0, d.IK)(a, { needsCategory: !0 });
-                            return (0, o.jsxs)(l.B, {
+                                { state: o } = (0, d.IK)(a, { needsCategory: !0 });
+                            return (0, n.jsxs)(l.B, {
                                 direction: "vertical",
                                 gap: 16,
                                 align: "start",
                                 children: [
-                                    (0, o.jsx)(s.E, {
+                                    (0, n.jsx)(s.E, {
                                         variant: "text-sm/normal",
                                         color: "text-muted",
                                         children:
                                             "Enter a shop SKU ID in the controls, then open the product details modal. The loader resolves the product + category from the storefront APIs (store-first, single item).",
                                     }),
-                                    (0, o.jsxs)(s.E, {
+                                    (0, n.jsxs)(s.E, {
                                         variant: "text-sm/semibold",
-                                        children: ["Resolver state: ", "" === a ? "idle (no skuId)" : n],
+                                        children: ["Resolver state: ", "" === a ? "idle (no skuId)" : o],
                                     }),
-                                    (0, o.jsx)(F.$, {
+                                    (0, n.jsx)(F.$, {
                                         text: "Open product details",
                                         disabled: "" === a,
                                         onClick: () =>
@@ -489,7 +489,7 @@ let Y = {
                     },
                 ],
             },
-            f,
+            b,
             {
                 title: "Navigation",
                 stories: [
@@ -504,7 +504,7 @@ let Y = {
                                     },
                                     [],
                                 ),
-                                n = r.useMemo(
+                                o = r.useMemo(
                                     () => [
                                         {
                                             type: "page",
@@ -582,22 +582,22 @@ let Y = {
                                     ],
                                     [a],
                                 );
-                            return (0, o.jsxs)("div", {
+                            return (0, n.jsxs)("div", {
                                 className: _.MY,
                                 children: [
-                                    (0, o.jsx)("div", {
+                                    (0, n.jsx)("div", {
                                         className: _.jr,
-                                        children: (0, o.jsx)(U, {
+                                        children: (0, n.jsx)(U, {
                                             "aria-label": "Playground Navigation",
-                                            options: n,
+                                            options: o,
                                             selectedKey: e,
                                             overflowLabel: "More",
                                             overflowExpandLabel: "More navigation options",
                                         }),
                                     }),
-                                    (0, o.jsx)("div", {
+                                    (0, n.jsx)("div", {
                                         className: _.Qs,
-                                        children: (0, o.jsx)(b.D, { variant: "heading-lg/bold", children: q[e] ?? e }),
+                                        children: (0, n.jsx)(f.D, { variant: "heading-lg/bold", children: q[e] ?? e }),
                                     }),
                                 ],
                             });
@@ -607,6 +607,6 @@ let Y = {
             },
         ],
         tags: ["Collectibles", "Shop", "Storefront"],
-        IconComponent: n.U,
+        IconComponent: o.U,
     },
-    J = { playgroundBaseUrl: "collectibles", collections: [Y] };
+    Z = { playgroundBaseUrl: "collectibles", collections: [Y] };

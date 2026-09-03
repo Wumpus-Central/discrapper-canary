@@ -1,5 +1,5 @@
 let l;
-n.d(t, { A: () => v });
+n.d(t, { A: () => N });
 var i = n(17928),
     s = n(636537),
     r = n(228366),
@@ -15,8 +15,8 @@ let m = 10 * o.A.Millis.SECOND,
     g = {},
     x = {},
     A = Object.freeze({}),
-    E = Object.freeze({});
-function C(e) {
+    C = Object.freeze({});
+function E(e) {
     return c.A.getChannel(e)?.getGuildId() ?? void 0;
 }
 function I(e) {
@@ -36,7 +36,7 @@ function I(e) {
             (n = o),
             (l = u),
             (i = f),
-            clearTimeout((a = { ...((s = { ...(g[t] ?? E) })[n] ?? A) })[l]),
+            clearTimeout((a = { ...((s = { ...(g[t] ?? C) })[n] ?? A) })[l]),
             (a[l] = i),
             (s[n] = a),
             (g[t] = s)),
@@ -72,7 +72,7 @@ function y(e) {
 function S() {
     (p = {}), (g = {}), (x = {});
 }
-class N extends i.Ay.Store {
+class v extends i.Ay.Store {
     initialize() {
         this.waitFor(u.default, c.A);
     }
@@ -81,7 +81,7 @@ class N extends i.Ay.Store {
         return p[e] ?? A;
     }
     getTypingUsersByGuild(e) {
-        return g[e] ?? E;
+        return g[e] ?? C;
     }
     isTyping(e, t) {
         return null != (p[e] ?? A)[t];
@@ -90,7 +90,7 @@ class N extends i.Ay.Store {
         return x[e] ?? null;
     }
 }
-let v = new N(r.h, {
+let N = new v(r.h, {
     TYPING_START: I,
     TYPING_STOP: y,
     TYPING_START_LOCAL: function (e) {
@@ -133,7 +133,7 @@ let v = new N(r.h, {
             },
             null == l || l.prevSend > i - 2 * o ? f : 0,
         );
-        return (l = { channelId: t, timeout: c, prevSend: i }), I({ channelId: t, userId: n, guildId: C(t) });
+        return (l = { channelId: t, timeout: c, prevSend: i }), I({ channelId: t, userId: n, guildId: E(t) });
     },
     TYPING_STOP_LOCAL: function (e) {
         let { channelId: t } = e,
@@ -143,7 +143,7 @@ let v = new N(r.h, {
             null != l &&
             l.channelId === t &&
             null != l.timeout &&
-            (clearTimeout(l.timeout), (l = null), y({ channelId: t, userId: n, guildId: C(t) }))
+            (clearTimeout(l.timeout), (l = null), y({ channelId: t, userId: n, guildId: E(t) }))
         );
     },
     CONNECTION_OPEN: S,
@@ -159,7 +159,7 @@ let v = new N(r.h, {
         return (
             r &&
                 ((t = n), null == l || l.channelId !== t || (null != l.timeout && clearTimeout(l.timeout), (l = null))),
-            null != s && y({ channelId: n, userId: s.id, guildId: i ?? C(n) })
+            null != s && y({ channelId: n, userId: s.id, guildId: i ?? E(n) })
         );
     },
 });

@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => T, Ce: () => I, c$: () => v, n2: () => R });
+n.d(t, { Ay: () => y, Ce: () => I, c$: () => v, n2: () => R });
 var a = n(477900);
 n(582128);
 var l = n(503698),
@@ -147,7 +147,7 @@ function j(e) {
         ],
     });
 }
-function T(e) {
+function y(e) {
     let {
         user: t,
         guildId: n,

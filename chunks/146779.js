@@ -1,4 +1,4 @@
-n.d(t, { JC: () => v, Ay: () => _, rC: () => T });
+n.d(t, { JC: () => N, Ay: () => _, rC: () => j });
 var l = n(582128),
     i = n(554146),
     s = n(522305),
@@ -21,10 +21,10 @@ var p = n(174459),
     g = n(881698),
     x = n(49999);
 let A = new Set();
-function E(e) {
+function C(e) {
     return (0, o.n)(e, m.gfo.CLOUD_GAMING_DEMO) && (0, o.n)(e, m.gfo.EMBEDDED);
 }
-function C() {
+function E() {
     (0, u.Dr)(i.M.CLOUD_PLAY_NEW_BADGE, { dismissAction: x.i.TAKE_ACTION }),
         (0, u.Dr)(i.M.CLOUD_PLAY_POPOVER, { dismissAction: x.i.TAKE_ACTION });
 }
@@ -51,32 +51,32 @@ function S(e) {
         t
     );
 }
-function N(e) {
+function v(e) {
     return S((0, g.A)(e?.linkedGames)?.id);
 }
-function v(e) {
+function N(e) {
     let { data: t } = f(),
-        n = N(e);
+        n = v(e);
     return (
         null != e &&
         (e?.embeddedActivityConfig == null || !!I({ countryCode: t?.alpha2, activity: e.embeddedActivityConfig })) &&
-        (!!E(e) || y(n, t?.alpha2))
+        (!!C(e) || y(n, t?.alpha2))
     );
 }
 function _(e) {
     let { application: t, analyticsLocations: n } = e,
-        i = v(t),
+        i = N(t),
         { bot: r } = t ?? { bot: null },
-        a = N(t),
+        a = v(t),
         { bot: o } = a ?? { bot: null },
         u = a?.id,
         c = o?.id;
     return l.useMemo(
         () =>
             i && null != t
-                ? E(t) && null != r
+                ? C(t) && null != r
                     ? () => {
-                          C(),
+                          E(),
                               p.default.track(m.HAw.CLOUD_PLAY_CTA_CLICKED, {
                                   source_application_id: t.id,
                                   launching_application_id: t.id,
@@ -86,7 +86,7 @@ function _(e) {
                       }
                     : null != u && null != c
                       ? () => {
-                            C(),
+                            E(),
                                 p.default.track(m.HAw.CLOUD_PLAY_CTA_CLICKED, {
                                     source_application_id: t.id,
                                     launching_application_id: u,
@@ -99,7 +99,7 @@ function _(e) {
         [i, t, r, u, c, n],
     );
 }
-function T(e) {
+function j(e) {
     let { applicationId: t, sourceApplicationId: n, analyticsLocations: i } = e,
         { data: r } = f(),
         a = S(t);
@@ -107,7 +107,7 @@ function T(e) {
         if (a?.bot == null || !y(a, r?.alpha2)) return null;
         let e = a.bot;
         return () => {
-            C(),
+            E(),
                 p.default.track(m.HAw.CLOUD_PLAY_CTA_CLICKED, {
                     source_application_id: n ?? a.id,
                     launching_application_id: a.id,

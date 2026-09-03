@@ -15,7 +15,7 @@ var l = n(477900),
     g = n(953792);
 let x = "/assets/b6c2e5ec03845c03.jpg",
     A = "/assets/f2e13fd1d0c497be.jpg";
-function E() {
+function C() {
     return (0, l.jsx)("div", {
         className: g.k,
         children: (0, l.jsxs)("svg", {
@@ -89,10 +89,10 @@ function E() {
         }),
     });
 }
-var C = n(781380);
+var E = n(781380);
 function I() {
     return (0, l.jsx)("div", {
-        className: C.k,
+        className: E.k,
         children: (0, l.jsxs)("svg", {
             width: "248",
             height: "67",
@@ -242,41 +242,41 @@ function I() {
 }
 var y = n(462180),
     S = n(97808),
-    N = n(778712),
-    v = n(571694),
+    v = n(778712),
+    N = n(571694),
     _ = n(548118),
-    T = n(366811),
-    j = n(734057),
+    j = n(366811),
+    T = n(734057),
     b = n(71393),
     R = n(287809),
     O = n(486020),
-    M = n(316386);
-function L() {
-    let { guildId: e, channelId: t } = (0, T.A)((e) => {
+    L = n(316386);
+function M() {
+    let { guildId: e, channelId: t } = (0, j.A)((e) => {
             let { guildId: t, channelId: n } = e;
             return { guildId: t, channelId: n };
         }, y.x),
         n = (0, c.bG)([b.A], () => b.A.getGuild(e)),
-        i = (0, c.bG)([j.A], () => (null == n ? j.A.getChannel(t) : null)),
+        i = (0, c.bG)([T.A], () => (null == n ? T.A.getChannel(t) : null)),
         s = (0, c.bG)([R.default], () => R.default.getCurrentUser()),
-        r = null != i ? (0, v.Y)(i) : null,
+        r = null != i ? (0, N.Y)(i) : null,
         a = null != s ? s.getAvatarURL(e, 80) : O.vI["0"],
-        o = (0, l.jsx)(S.eu, { src: a, "aria-hidden": !0, size: N._3.SIZE_80, className: M.HT }),
+        o = (0, l.jsx)(S.eu, { src: a, "aria-hidden": !0, size: v._3.SIZE_80, className: L.HT }),
         u = null;
     return (
         (u =
             null != n
                 ? (0, l.jsx)(_.Ay, { guild: n })
                 : null != r
-                  ? (0, l.jsx)(S.eu, { "aria-hidden": !0, src: r, size: N._3.SIZE_80, className: M.HT })
+                  ? (0, l.jsx)(S.eu, { "aria-hidden": !0, src: r, size: v._3.SIZE_80, className: L.HT })
                   : o),
         (0, l.jsxs)("div", {
-            className: M.kL,
+            className: L.kL,
             children: [
-                (0, l.jsx)("div", { className: M.$H, children: o }),
-                (0, l.jsx)("div", { className: M.XN, children: u }),
+                (0, l.jsx)("div", { className: L.$H, children: o }),
+                (0, l.jsx)("div", { className: L.XN, children: u }),
                 (0, l.jsx)("svg", {
-                    className: M.bm,
+                    className: L.bm,
                     xmlns: "http://www.w3.org/2000/svg",
                     width: "156",
                     height: "70",
@@ -367,7 +367,7 @@ let k = Object.freeze({
         highPriority: !0,
         textAlign: p.YL.CENTER,
         spacing: 10,
-        media: () => (0, l.jsx)(L, {}),
+        media: () => (0, l.jsx)(M, {}),
     },
     "direct-messages": { popoutPosition: "right" },
     "create-first-server": { popoutPosition: "right", highPriority: !0 },
@@ -375,7 +375,7 @@ let k = Object.freeze({
         popoutPosition: "right",
         textAlign: p.YL.CENTER,
         spacing: 8,
-        media: () => (0, l.jsx)(E, {}),
+        media: () => (0, l.jsx)(C, {}),
     },
     "instant-invite": { popoutPosition: "right", spacing: 24, highPriority: !0 },
     "whos-online": { spacing: 16, popoutPosition: "left" },
@@ -498,11 +498,11 @@ class B extends i.PureComponent {
             } = s,
             { offsetX: g, offsetY: x } = this.state,
             A = { left: null != g ? i.x + g : void 0, top: null != x ? i.y + x : void 0 };
-        function E(e) {
+        function C(e) {
             let t = n && !e;
             return { [H.bW]: t, [H.EO]: !t, [H.TX]: c };
         }
-        let C = this.getTutorialPopoutText();
+        let E = this.getTutorialPopoutText();
         return (0, l.jsx)(p.Ay, {
             innerRef: this.contentRef,
             position: f,
@@ -515,7 +515,7 @@ class B extends i.PureComponent {
             arrowAlignment: m,
             onSkipAll: this.handleSkipTips,
             onComplete: this.handleDismiss,
-            ...C,
+            ...E,
             children: (e, t) => {
                 let i,
                     { isShown: s } = t;
@@ -526,7 +526,7 @@ class B extends i.PureComponent {
                     style: A,
                     innerRef: this.contentRef,
                     children: (0, l.jsxs)("div", {
-                        className: r()(H.Mp, E(s)),
+                        className: r()(H.Mp, C(s)),
                         children: [
                             ((i = n && !s),
                             !0 !== c
@@ -537,8 +537,8 @@ class B extends i.PureComponent {
                                           (0, l.jsx)("div", { className: r()(H.sQ, { [H.bW]: i, [H.EO]: !i }) }),
                                       ],
                                   })),
-                            (0, l.jsx)("div", { className: r()(H.r6, E(s)) }),
-                            (0, l.jsx)("div", { className: r()(H.CY, E(s)) }),
+                            (0, l.jsx)("div", { className: r()(H.r6, C(s)) }),
+                            (0, l.jsx)("div", { className: r()(H.CY, C(s)) }),
                         ],
                     }),
                 });

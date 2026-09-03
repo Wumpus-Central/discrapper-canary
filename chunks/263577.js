@@ -21,21 +21,21 @@ function f(e) {
             "aria-hidden": x,
             showTooltip: A = !1,
         } = e,
-        E = (0, d.Ay)(),
-        C = `${n}px`,
+        C = (0, d.Ay)(),
+        E = `${n}px`,
         [I, y] = i.useState(!1),
-        [S, N] = i.useState(!1),
-        v = null == g || S;
-    if (null == t || (I && v))
+        [S, v] = i.useState(!1),
+        N = null == g || S;
+    if (null == t || (I && N))
         return (0, l.jsx)(o._, {
             size: "custom",
             width: "100%",
             height: "100%",
-            color: (0, a.M)(E) ? u.A.colors.WHITE : u.A.colors.BLACK,
-            style: { maxWidth: C },
+            color: (0, a.M)(C) ? u.A.colors.WHITE : u.A.colors.BLACK,
+            style: { maxWidth: E },
             className: r()(m.f, f),
         });
-    let _ = "height" === s ? { maxWidth: C, height: C } : { maxWidth: C, minHeight: C };
+    let _ = "height" === s ? { maxWidth: E, height: E } : { maxWidth: E, minHeight: E };
     return (0, l.jsx)(
         c.m,
         {
@@ -48,7 +48,7 @@ function f(e) {
                 src: I && null != g ? g : t,
                 "aria-hidden": x,
                 alt: p ?? (x ? void 0 : h.intl.string(h.t["2B/phM"])),
-                onError: (e) => (I ? N(!0) : y(!0)),
+                onError: (e) => (I ? v(!0) : y(!0)),
             }),
         },
         "content-image",

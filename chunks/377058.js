@@ -98,8 +98,8 @@ function N(e) {
         })({ setPaymentSourceId: t, paymentSourceId: n }),
         [j, R] = i.useState(!1),
         {
-            giftCardsEnabled: M,
-            giftCardCheckboxProps: O,
+            giftCardsEnabled: O,
+            giftCardCheckboxProps: M,
             walletCoversSubtotal: L,
             basePaymentSourceDropdownProps: k,
             isSubscriptionPaidByWallet: w,
@@ -233,9 +233,9 @@ function N(e) {
         { giftCardCheckboxProps: K, disabled: Z } = i.useMemo(
             () =>
                 null != I
-                    ? I({ giftCardCheckboxProps: O, disabled: V }, { isSubscriptionPaidByWallet: w })
-                    : { giftCardCheckboxProps: O, disabled: V },
-            [V, I, O, w],
+                    ? I({ giftCardCheckboxProps: M, disabled: V }, { isSubscriptionPaidByWallet: w })
+                    : { giftCardCheckboxProps: M, disabled: V },
+            [V, I, M, w],
         ),
         q = null != K && !0 === K.locked,
         z = i.useMemo(() => {
@@ -260,12 +260,12 @@ function N(e) {
         J = null != K && K.checked,
         X = L || q,
         ee = i.useMemo(() => {
-            if (!M || null == K) return null;
+            if (!O || null == K) return null;
             let e = X ? T.r : T.K,
                 t = K.disabled || Z;
             return (0, l.jsx)(v.o, { ...K, className: e, disabled: t });
-        }, [M, K, X, Z]),
-        et = X && M && J,
+        }, [O, K, X, Z]),
+        et = X && O && J,
         en = null != z,
         el = i.useMemo(() => (null != z ? z : (0, l.jsx)(s.Ay, { ...$, disabled: Z })), [z, Z, $]);
     return (0, l.jsxs)(l.Fragment, {
@@ -274,7 +274,7 @@ function N(e) {
                 label: c,
                 children: [X && ee, !et && el, !X && ee, !en && !et && void 0 !== Q && (0, l.jsx)(x.q, { ...Q })],
             }),
-            M ? (0, l.jsx)(A, { onGiftCardRedeemed: Y }) : null,
+            O ? (0, l.jsx)(A, { onGiftCardRedeemed: Y }) : null,
             (0, l.jsx)(g, { onPaymentSourceAdd: f }),
         ],
     });

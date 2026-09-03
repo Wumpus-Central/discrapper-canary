@@ -188,8 +188,8 @@ var b =
         l),
     j = (((i = j || {}).EDIT = "edit"), (i.CREATE = "create"), i);
 let R = { US: c, CA: s },
-    M = { US: d, CA: o },
-    O = (e, t) => ({
+    O = { US: d, CA: o },
+    M = (e, t) => ({
         name: "name",
         id: g,
         title: () => E.intl.string(E.t.vyuULb),
@@ -399,7 +399,7 @@ let R = { US: c, CA: s },
                                     return n === t.value;
                                 })),
                     { onChange: a, ...s } = t,
-                    o = M[e];
+                    o = O[e];
                 return ["US", "CA"].includes(e) && i
                     ? (0, r.jsx)(p.Z, {
                           ...s,
@@ -424,12 +424,12 @@ let R = { US: c, CA: s },
     F = {
         modalUS: [[L], [k], [w], [U], [G, D]],
         modalInternational: [[L], [k], [w], [U], [G], [D]],
-        modalUSWithName: [[L], [O], [k], [w], [U], [G, D]],
-        modalInternationalWithName: [[L], [O], [k], [w], [U], [G], [D]],
-        settingsUS: [[O], [k, w], [U, G, D], [L]],
-        settingsUSMobile: [[O], [k], [w], [U], [G], [D], [L]],
-        settingsInternational: [[O], [k, w], [U], [G, D], [L]],
-        settingsInternationalMobile: [[O], [k], [w], [U], [G], [D], [L]],
+        modalUSWithName: [[L], [M], [k], [w], [U], [G, D]],
+        modalInternationalWithName: [[L], [M], [k], [w], [U], [G], [D]],
+        settingsUS: [[M], [k, w], [U, G, D], [L]],
+        settingsUSMobile: [[M], [k], [w], [U], [G], [D], [L]],
+        settingsInternational: [[M], [k, w], [U], [G, D], [L]],
+        settingsInternationalMobile: [[M], [k], [w], [U], [G], [D], [L]],
         settingsInternationalWithoutName: [[k, w], [U], [G, D], [L]],
         settingsInternationalWithoutNameMobile: [[k], [w], [U], [G], [D], [L]],
     };

@@ -28,7 +28,7 @@ var a = n(635377),
     g = n(927813);
 let x = /^[a-z0-9_+\-.#]+$/i,
     A = new d.A("MarkdownToSlate"),
-    E = {
+    C = {
         link: { type: "skip" },
         highlight: { type: "skip" },
         blockQuote: { type: "skip" },
@@ -72,27 +72,27 @@ let x = /^[a-z0-9_+\-.#]+$/i,
         inlineCode: { type: "inlineStyle", before: "`", after: "`" },
         subtext: { type: "inlineStyle", before: "-# ", after: "" },
     },
-    C = new Set(["start", "end"]),
+    E = new Set(["start", "end"]),
     I = new Map([
-        ["inlineCode", C],
-        ["spoiler", C],
-        ["s", C],
+        ["inlineCode", E],
+        ["spoiler", E],
+        ["s", E],
         ["subtext", new Set(["start"])],
-        ["u", C],
+        ["u", E],
     ]),
     y = new Set(["*", "_", "~", "|", "\\"]),
     S = {},
-    N = {};
+    v = {};
 for (let e in m.Ay.RULES) {
-    if (!(e in E))
+    if (!(e in C))
         throw Error(
             `Slate: Unknown markdown rule: ${e}.  If you have just added a new markdown rule then you probably need to add it to this file so that the rich chat box understands it.`,
         );
-    let t = E[e];
-    "skip" !== t.type && (S[e] = v(m.Ay.RULES[e])),
-        "skip" !== t.type && "inlineObject" !== t.type && (N[e] = v("text" === e ? f.Ay : m.Ay.RULES[e]));
+    let t = C[e];
+    "skip" !== t.type && (S[e] = N(m.Ay.RULES[e])),
+        "skip" !== t.type && "inlineObject" !== t.type && (v[e] = N("text" === e ? f.Ay : m.Ay.RULES[e]));
 }
-function v(e) {
+function N(e) {
     i()(null != e.parse, "Slate: rule must have a parse function");
     let t = e.parse;
     return {
@@ -106,7 +106,7 @@ function v(e) {
 function _(e) {
     return { type: "autolink", content: e[1], originalMatch: e };
 }
-let T = {
+let j = {
         url: {
             parse: (e) =>
                 null == (0, h.W1)(e[1])
@@ -130,14 +130,14 @@ let T = {
                     : { type: "codeBlockSyntax", content: e[0], originalMatch: e },
         },
     },
-    j = /(-# +)/,
-    b = (0, p.A)([S, T]),
-    R = (0, p.A)([N, T]),
+    T = /(-# +)/,
+    b = (0, p.A)([S, j]),
+    R = (0, p.A)([v, j]),
     O = c.X(b),
-    M = c.X(R),
-    L = { max: 1 / 0, maxAge: +g.A.Millis.MINUTE, updateAgeOnGet: !0 },
-    k = new (o())(L),
-    w = new (o())(L);
+    L = c.X(R),
+    M = { max: 1 / 0, maxAge: +g.A.Millis.MINUTE, updateAgeOnGet: !0 },
+    k = new (o())(M),
+    w = new (o())(M);
 function P(e, t, n, l, s) {
     let { content: r, type: a } = n,
         o = null == n.originalMatch && "text" === a && "string" == typeof r;
@@ -226,8 +226,8 @@ function P(e, t, n, l, s) {
             let { before: n, after: i } = (function (e, t, n, l) {
                     if ("inlineCode" === t) return { before: l[1], after: l[1] };
                     if ("em" === t && "_" === e.substring(n, n + 1)) return { before: "_", after: "_" };
-                    if ("subtext" === t) return { before: j.exec(l.input)[1], after: "" };
-                    let i = E["link" === t ? "url" : t];
+                    if ("subtext" === t) return { before: T.exec(l.input)[1], after: "" };
+                    let i = C["link" === t ? "url" : t];
                     if ("inlineStyle" === i.type) return i;
                     throw Error("Slate: rule must be an inlineStyle");
                 })(t, a, l, u),
@@ -372,10 +372,10 @@ if ((n(654821), !s.KE._addedDiscordOverrides)) {
                     p = f.length,
                     g = $.isAncestor(f, c.path),
                     x = $.isAncestor(f, d.path),
-                    E = g ? c.path[p] : 0,
-                    C = x ? d.path[p] : h.children.length - 1,
-                    I = o ? C : E,
-                    y = o ? E : C;
+                    C = g ? c.path[p] : 0,
+                    E = x ? d.path[p] : h.children.length - 1,
+                    I = o ? E : C,
+                    y = o ? C : E;
                 for (let r = I; !A && (!o ? r <= y : r >= y); r += m) {
                     let m = h.children[r],
                         p = $.child(f, r);
@@ -607,7 +607,7 @@ let Z = {
                                         a = {
                                             originalMatch: { index: 0, 0: "" },
                                             type: "paragraph",
-                                            content: (n ? M : O)(r, !0, {
+                                            content: (n ? L : O)(r, !0, {
                                                 returnMentionIds: !0,
                                                 disableAutoBlockNewlines: !0,
                                                 guildId: t,

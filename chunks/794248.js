@@ -50,7 +50,7 @@ function x(e) {
     });
 }
 var A = n(33683);
-function E(e) {
+function C(e) {
     let {
             component: t,
             variant: n,
@@ -62,29 +62,29 @@ function E(e) {
             hideLabel: u = !1,
         } = e,
         { resolveFieldValue: c, numberFormat: f, renderText: g } = en(),
-        E = (0, m.Hx)(t, c, f, s, u);
-    if ("hidden" === E.status) return null;
-    if ("skeleton" === E.status) return (0, i.jsx)(x, { variant: n, className: r });
-    let C = null != E.icon ? (0, i.jsx)(p, { media: E.icon, variant: n }) : null;
+        C = (0, m.Hx)(t, c, f, s, u);
+    if ("hidden" === C.status) return null;
+    if ("skeleton" === C.status) return (0, i.jsx)(x, { variant: n, className: r });
+    let E = null != C.icon ? (0, i.jsx)(p, { media: C.icon, variant: n }) : null;
     return (0, i.jsxs)("div", {
         className: d()(A.k, r),
         children: [
-            null != C && "left" === o ? C : null,
-            (0, i.jsx)(h.E, { variant: n, color: l, lineClamp: a, children: g?.(E.text) ?? E.text }),
-            null != C && "right" === o ? C : null,
+            null != E && "left" === o ? E : null,
+            (0, i.jsx)(h.E, { variant: n, color: l, lineClamp: a, children: g?.(C.text) ?? C.text }),
+            null != E && "right" === o ? E : null,
         ],
     });
 }
-var C = n(640056);
+var E = n(640056);
 function I(e) {
     let { variant: t = "default", textColor: n } = e,
         { surfaceConfig: l } = en(),
         s = "badge" === t;
     return (0, i.jsx)("div", {
-        className: C.z,
-        children: (0, i.jsx)(E, {
+        className: E.z,
+        children: (0, i.jsx)(C, {
             component: l.components.stat,
-            className: C.Q,
+            className: E.Q,
             variant: s ? "text-xs/normal" : "text-xs/semibold",
             color: n,
             hideLabel: s,
@@ -99,27 +99,27 @@ function S(e) {
     let { className: t } = e;
     return (0, i.jsx)("div", { className: d()(y.z, t) });
 }
-var N = n(620632),
-    v = n(836032);
+var v = n(620632),
+    N = n(836032);
 function _(e) {
     let { small: t = !1, image: n } = e;
     return (0, i.jsxs)("div", {
-        className: d()(v.kL, { [v.PG]: t }),
+        className: d()(N.kL, { [N.PG]: t }),
         children: [
             (0, i.jsxs)("div", {
-                className: v.Qs,
+                className: N.Qs,
                 children: [
-                    (0, i.jsx)("div", { className: v.wx }),
-                    (0, i.jsx)("div", { className: v.yF }),
+                    (0, i.jsx)("div", { className: N.wx }),
+                    (0, i.jsx)("div", { className: N.yF }),
                     (0, i.jsxs)("div", {
-                        className: v.M1,
+                        className: N.M1,
                         children: [
-                            (0, i.jsx)("div", { className: v.dJ }),
-                            (0, i.jsx)("div", { className: v.dJ }),
-                            (0, i.jsx)("div", { className: v.dJ }),
-                            (0, i.jsx)("div", { className: v.dJ }),
-                            (0, i.jsx)("div", { className: v.dJ }),
-                            (0, i.jsx)("div", { className: v.dJ }),
+                            (0, i.jsx)("div", { className: N.dJ }),
+                            (0, i.jsx)("div", { className: N.dJ }),
+                            (0, i.jsx)("div", { className: N.dJ }),
+                            (0, i.jsx)("div", { className: N.dJ }),
+                            (0, i.jsx)("div", { className: N.dJ }),
+                            (0, i.jsx)("div", { className: N.dJ }),
                         ],
                     }),
                 ],
@@ -128,19 +128,19 @@ function _(e) {
         ],
     });
 }
-var T = n(170118);
-function j(e) {
+var j = n(170118);
+function T(e) {
     let { small: t = !1 } = e,
         { surfaceConfig: n, resolveFieldValue: l } = en(),
-        s = l(n.components.contained_image?.fields.image, [N.o.MEDIA]);
+        s = l(n.components.contained_image?.fields.image, [v.o.MEDIA]);
     return (0, i.jsx)(_, {
         small: t,
         image: (0, i.jsx)("div", {
-            className: T.ZS,
+            className: j.ZS,
             children:
                 null != s
-                    ? (0, i.jsx)("img", { alt: "", src: s.media.url, className: T.Sl })
-                    : (0, i.jsx)(S, { className: T.h2 }),
+                    ? (0, i.jsx)("img", { alt: "", src: s.media.url, className: j.Sl })
+                    : (0, i.jsx)(S, { className: j.h2 }),
         }),
     });
 }
@@ -155,9 +155,9 @@ function b(e) {
 }
 var R = n(506619),
     O = n(15555);
-function M(e) {
+function L(e) {
     let { surfaceConfig: t, resolveFieldValue: n } = en(),
-        l = n(t.components.hero_image?.fields.image, [N.o.MEDIA]);
+        l = n(t.components.hero_image?.fields.image, [v.o.MEDIA]);
     return (0, i.jsx)(_, {
         ...e,
         image: (0, i.jsx)("div", {
@@ -169,7 +169,7 @@ function M(e) {
         }),
     });
 }
-var L = n(123292),
+var M = n(123292),
     k = n(402233);
 function w(e) {
     let { image: t } = e,
@@ -184,13 +184,13 @@ function w(e) {
                     (0, i.jsxs)("div", {
                         className: k.Qs,
                         children: [
-                            (0, i.jsx)(E, {
+                            (0, i.jsx)(C, {
                                 component: l.components.stat,
                                 variant: "heading-sm/semibold",
                                 lineClamp: 1,
                                 required: !0,
                             }),
-                            (0, i.jsx)(L.Q, {
+                            (0, i.jsx)(M.Q, {
                                 textVariant: "text-xs/normal",
                                 variant: "secondary",
                                 text: "View All Stats",
@@ -207,7 +207,7 @@ function w(e) {
 var P = n(425367);
 function D() {
     let { surfaceConfig: e, resolveFieldValue: t } = en(),
-        n = t(e.components.contained_image?.fields.image, [N.o.MEDIA]);
+        n = t(e.components.contained_image?.fields.image, [v.o.MEDIA]);
     return (0, i.jsx)(w, {
         image: (0, i.jsx)("div", {
             className: P.ZS,
@@ -221,7 +221,7 @@ function D() {
 var U = n(853512);
 function G() {
     let { surfaceConfig: e, resolveFieldValue: t } = en(),
-        n = t(e.components.hero_image?.fields.image, [N.o.MEDIA]);
+        n = t(e.components.hero_image?.fields.image, [v.o.MEDIA]);
     return (0, i.jsx)(w, {
         image:
             null != n
@@ -235,9 +235,9 @@ function G() {
 var V = n(193396);
 function F(e) {
     let { resolveFieldValue: t } = en(),
-        n = t(e.componentConfig?.fields.image, [N.o.MEDIA]),
-        l = t(e.componentConfig?.fields.name, [N.o.STRING]),
-        s = t(e.componentConfig?.fields.description, [N.o.STRING]);
+        n = t(e.componentConfig?.fields.image, [v.o.MEDIA]),
+        l = t(e.componentConfig?.fields.name, [v.o.STRING]),
+        s = t(e.componentConfig?.fields.description, [v.o.STRING]);
     return (0, i.jsxs)("div", {
         className: V.E4,
         children: [
@@ -279,11 +279,11 @@ var B = n(141255);
 function W() {
     let { surfaceConfig: e, resolveFieldValue: t } = en(),
         n = s.useId(),
-        l = t(e.components.objective?.fields.image, [N.o.MEDIA]),
-        r = t(e.components.objective?.fields.name, [N.o.STRING]),
-        a = t(e.components.objective?.fields.description, [N.o.STRING]),
-        o = t(e.components.progress?.fields.current, [N.o.NUMBER]),
-        u = t(e.components.progress?.fields.max, [N.o.NUMBER]),
+        l = t(e.components.objective?.fields.image, [v.o.MEDIA]),
+        r = t(e.components.objective?.fields.name, [v.o.STRING]),
+        a = t(e.components.objective?.fields.description, [v.o.STRING]),
+        o = t(e.components.progress?.fields.current, [v.o.NUMBER]),
+        u = t(e.components.progress?.fields.max, [v.o.NUMBER]),
         c = (0, m.eq)(o, u);
     return (0, i.jsxs)("div", {
         className: B.zr,
@@ -418,26 +418,26 @@ function J() {
     return (0, i.jsxs)("div", {
         className: q.Q,
         children: [
-            (0, i.jsx)(E, {
+            (0, i.jsx)(C, {
                 component: e.components.title,
                 variant: "text-lg/medium",
                 lineClamp: 2,
                 required: !0,
                 className: q.D,
             }),
-            (0, i.jsx)(E, {
+            (0, i.jsx)(C, {
                 component: e.components.subtitle_1,
                 variant: "text-sm/normal",
                 color: "text-subtle",
                 lineClamp: 2,
             }),
-            (0, i.jsx)(E, {
+            (0, i.jsx)(C, {
                 component: e.components.subtitle_2,
                 variant: "text-sm/normal",
                 color: "text-subtle",
                 lineClamp: 2,
             }),
-            (0, i.jsx)(E, {
+            (0, i.jsx)(C, {
                 component: e.components.subtitle_3,
                 variant: "text-sm/normal",
                 color: "text-subtle",
@@ -449,7 +449,7 @@ function J() {
 var $ = n(828575);
 function X() {
     let { surfaceConfig: e, resolveFieldValue: t, header: n } = en(),
-        l = t(e.components.contained_image?.fields.image, [N.o.MEDIA]);
+        l = t(e.components.contained_image?.fields.image, [v.o.MEDIA]);
     return (0, i.jsxs)("div", {
         className: $.zr,
         children: [
@@ -464,7 +464,7 @@ function X() {
 var Q = n(775176);
 function ee() {
     let { surfaceConfig: e, resolveFieldValue: t, header: n } = en(),
-        l = t(e.components.hero_image?.fields.image, [N.o.MEDIA]);
+        l = t(e.components.hero_image?.fields.image, [v.o.MEDIA]);
     return (0, i.jsxs)("div", {
         className: Q.zr,
         children: [
@@ -504,8 +504,8 @@ let el = {
     },
     [a.m.ACTIVITY_ACCESSORY]: { [o.ACTIVITY_ACCESSORY_STAT]: (e) => (0, i.jsx)(I, { ...e }) },
     [a.m.ADD_WIDGET_PREVIEW]: {
-        [o.ADD_WIDGET_PREVIEW_HERO]: (e) => (0, i.jsx)(M, { ...e }),
-        [o.ADD_WIDGET_PREVIEW_CONTAINED]: (e) => (0, i.jsx)(j, { ...e }),
+        [o.ADD_WIDGET_PREVIEW_HERO]: (e) => (0, i.jsx)(L, { ...e }),
+        [o.ADD_WIDGET_PREVIEW_CONTAINED]: (e) => (0, i.jsx)(T, { ...e }),
     },
 };
 function ei(e) {
@@ -535,7 +535,7 @@ function ei(e) {
                   onClick: c,
                   renderText: d,
                   resolutionContext: l,
-                  resolveFieldValue: (0, N.J)(l),
+                  resolveFieldValue: (0, v.J)(l),
               },
               children: p(h),
           });

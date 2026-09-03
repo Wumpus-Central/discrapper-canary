@@ -1,4 +1,4 @@
-n.d(t, { K: () => T, A: () => C });
+n.d(t, { K: () => y, A: () => C });
 var a = n(477900);
 n(582128);
 var l = n(503698),
@@ -48,7 +48,7 @@ function N(e) {
 var R = n(140049),
     I = n(518477),
     j = n(881518);
-function T(e) {
+function y(e) {
     let {
             children: t,
             title: n,
@@ -60,18 +60,18 @@ function T(e) {
             progressCircle: _,
             rarity: A,
             isAnimated: v = !1,
-            targetElementRef: T,
+            targetElementRef: y,
             onShow: C,
-            position: y = "top",
+            position: T = "top",
             shouldShow: S,
         } = e,
         D = v && null == _,
         {
-            tooltipId: M,
-            isVisible: P,
+            tooltipId: P,
+            isVisible: M,
             targetElementRef: O,
             trigger: U,
-        } = (0, o.D)({ children: t, targetElementRef: T, delay: I.In, onTooltipShow: C, shouldShow: S }),
+        } = (0, o.D)({ children: t, targetElementRef: y, delay: I.In, onTooltipShow: C, shouldShow: S }),
         B = null != A && A !== s.x.COMMON,
         k = (0, a.jsxs)("div", {
             className: j.Qs,
@@ -120,16 +120,16 @@ function T(e) {
             ],
         }),
         G = null != p ? `${x}. ${p}` : x,
-        w = (0, m.j)({ shouldShow: P })((e, t) =>
+        w = (0, m.j)({ shouldShow: M })((e, t) =>
             t
                 ? (0, a.jsx)(f.Bc, {
                       isRichTooltip: !0,
                       children: (0, a.jsx)(g.R, {
-                          isVisible: P,
+                          isVisible: M,
                           isRendered: !0,
                           targetElementRef: O,
                           content: k,
-                          position: y,
+                          position: T,
                           align: "center",
                           animationStyle: e,
                           positionKey: (0, E.Xj)(n),
@@ -137,6 +137,6 @@ function T(e) {
                   })
                 : null,
         );
-    return (0, a.jsxs)(a.Fragment, { children: [U, (0, a.jsx)(i.A, { id: M, children: G }), w] });
+    return (0, a.jsxs)(a.Fragment, { children: [U, (0, a.jsx)(i.A, { id: P, children: G }), w] });
 }
-let C = T;
+let C = y;

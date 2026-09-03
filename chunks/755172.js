@@ -1,6 +1,6 @@
 a.d(t, { y: () => p });
-var n = a(582128),
-    o = a(635358),
+var o = a(582128),
+    n = a(635358),
     r = a(17928),
     l = a(736056),
     s = a(839534),
@@ -13,7 +13,7 @@ function p(e, t, a) {
     let p = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         h = (0, r.bG)([l.A], () => l.A.hasLoadedExperiments),
         g = (0, r.bG)([i.A], () => i.A.skipNumCategories),
-        [x, v, f, b, y, k, C, j] = (0, r.yK)([c.A], () => [
+        [x, v, b, f, y, k, C, j] = (0, r.yK)([c.A], () => [
             c.A.getShopBlocks(e),
             c.A.getLastSuccessfulFetch(e) ?? 0,
             c.A.getLastErrorTimestamp(e) ?? 0,
@@ -23,10 +23,10 @@ function p(e, t, a) {
             c.A.getHasKnownStaleData(e),
             c.A.getShopHomeConfigOverride(),
         ]),
-        S = (0, n.useMemo)(
+        S = (0, o.useMemo)(
             () => ({
                 ...t,
-                variantsReturnStyle: o.g.VARIANTS_GROUP,
+                variantsReturnStyle: n.g.VARIANTS_GROUP,
                 includeBundles: !0,
                 includeDynamicBlocks: !0,
                 shopHomeConfig: j,
@@ -34,24 +34,24 @@ function p(e, t, a) {
             }),
             [t, j, g],
         ),
-        w = (0, n.useMemo)(() => !(0, s.gn)(b, S), [b, S]),
+        w = (0, o.useMemo)(() => !(0, s.gn)(f, S), [f, S]),
         A = ((e, t, a) => {
-            let [o, r] = (0, n.useState)(!1);
+            let [n, r] = (0, o.useState)(!1);
             return (
-                (0, n.useEffect)(() => {
-                    let n,
-                        o =
-                            ((n = null),
+                (0, o.useEffect)(() => {
+                    let o,
+                        n =
+                            ((o = null),
                             e.forEach((e) => {
                                 let t = null;
                                 e.type === u.g.IMMERSIVE_BANNER
                                     ? (t = null != e.endTime ? e.endTime.getTime() : null)
                                     : e.type === u.g.COUNTDOWN_TIMER && (t = e.endTime.getTime()),
-                                    (null == n || (null != t && t < n)) && (n = t);
+                                    (null == o || (null != t && t < o)) && (o = t);
                             }),
-                            n);
-                    if (t || a || null == o) return void r(!1);
-                    let l = o - Date.now();
+                            o);
+                    if (t || a || null == n) return void r(!1);
+                    let l = n - Date.now();
                     if (l <= 0) return void r(!0);
                     r(!1);
                     let s = setTimeout(
@@ -62,21 +62,21 @@ function p(e, t, a) {
                     );
                     return () => clearTimeout(s);
                 }, [t, a, e]),
-                o
+                n
             );
         })(x, k ?? !1, p),
-        E = (0, n.useMemo)(() => !A && Date.now() - v < m.i0, [v, A]);
+        E = (0, o.useMemo)(() => !A && Date.now() - v < m.i0, [v, A]);
     return (
-        (0, n.useEffect)(() => {
+        (0, o.useEffect)(() => {
             if (!h || k) return;
-            let t = Date.now() - f < m.Zq;
+            let t = Date.now() - b < m.Zq;
             (null != y && t) || ((w || !E || C) && (0, s.h$)(e, S, a));
-        }, [h, k, y, f, E, C, w, S, e, a]),
+        }, [h, k, y, b, E, C, w, S, e, a]),
         {
             isFetchingShopHome: k,
             fetchShopHomeError: y,
             shopBlocks: x,
-            refreshShopHome: (0, n.useCallback)(() => {
+            refreshShopHome: (0, o.useCallback)(() => {
                 (0, s.h$)(e, S, a);
             }, [e, S, a]),
         }

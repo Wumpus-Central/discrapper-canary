@@ -70,9 +70,9 @@ function b(e) {
             isCurrentPlan: j,
             disabled: R,
         } = e,
-        M = (0, u.bG)([h.default], () => h.default.locale),
+        O = (0, u.bG)([h.default], () => h.default.locale),
         {
-            discountInfo: O,
+            discountInfo: M,
             setSelectedPlanId: L,
             isGift: k,
         } = (0, p.t4)((e) => ({
@@ -82,7 +82,7 @@ function b(e) {
         })),
         { giftRecipient: w } = (0, C.Pv)(),
         U = k && (0, E.Ik)(w),
-        { discountOffer: D, discountAmountOff: G, applicablePlan: F } = O,
+        { discountOffer: D, discountAmountOff: G, applicablePlan: F } = M,
         B = (0, u.bG)([f.A], () => f.A.get(n));
     o()(null != B, "Missing subscriptionPlan");
     let H = (0, y.m6)(B.id),
@@ -92,7 +92,7 @@ function b(e) {
         K = null != Y && !g,
         Z = i.useCallback(() => {
             let e = N(t, B, {
-                userLocale: M,
+                userLocale: O,
                 isEligibleForBOGOPromotion: W,
                 shouldShowSavingsPercent: K,
                 isGift: k,
@@ -113,7 +113,7 @@ function b(e) {
                         children: e.text,
                     }))
                   : null;
-        }, [M, W, B, t, K, k, n, Y, s, b]),
+        }, [O, W, B, t, K, k, n, Y, s, b]),
         q = i.useMemo(
             () => (0, y.D8)(B.interval, k, S, B.intervalCount, U, H),
             [B.interval, B.intervalCount, k, S, U, H],

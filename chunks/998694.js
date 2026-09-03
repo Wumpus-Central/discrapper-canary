@@ -1,5 +1,5 @@
-a.d(t, { A: () => o });
-var n = a(354328);
-let o = function () {
-    return { noCache: (0, n.A)("shop_disable_cache"), includeUnpublished: (0, n.A)("shop_include_unpublished") };
+a.d(t, { A: () => n });
+var o = a(354328);
+let n = function () {
+    return { noCache: (0, o.A)("shop_disable_cache"), includeUnpublished: (0, o.A)("shop_include_unpublished") };
 };

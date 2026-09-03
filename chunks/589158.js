@@ -15,41 +15,41 @@ var l,
     g = n(97808),
     x = n(778712),
     A = n(922016),
-    E = n(960076),
-    C = n(397244),
+    C = n(960076),
+    E = n(397244),
     I = n(714114),
     y = n(394871),
     S = n(296948),
-    N = n(709066),
-    v = n(235986),
+    v = n(709066),
+    N = n(235986),
     _ = n(141504),
-    T = (((l = T || {}).SINGLE_AVATAR = "1"), (l.MULTIPLE_AVATAR = "2"), l);
-let j = { [x._3.SIZE_32]: _.dT, [x._3.SIZE_40]: _.Jb };
+    j = (((l = j || {}).SINGLE_AVATAR = "1"), (l.MULTIPLE_AVATAR = "2"), l);
+let T = { [x._3.SIZE_32]: _.dT, [x._3.SIZE_40]: _.Jb };
 class b extends s.Component {
     placeholderMaxWidth = `${Math.floor(40 * Math.random()) + 40}%`;
     static defaultProps = { type: "1" };
-    static Types = T;
+    static Types = j;
     render() {
         let { type: e, avatarSize: t, className: n, childrenClassName: l, doNotAnimate: s } = this.props;
         return "2" === e
             ? (0, i.jsxs)("div", {
                   className: a()(_.ce, _.jO, n),
                   children: [
-                      (0, i.jsxs)(v.A, {
+                      (0, i.jsxs)(N.A, {
                           children: [
-                              (0, i.jsx)("div", { className: a()(_.RH, j[t], _.hC) }),
-                              (0, i.jsx)("div", { className: a()(_.RH, j[t], _.hC) }),
-                              (0, i.jsx)("div", { className: a()(_.RH, j[t]) }),
+                              (0, i.jsx)("div", { className: a()(_.RH, T[t], _.hC) }),
+                              (0, i.jsx)("div", { className: a()(_.RH, T[t], _.hC) }),
+                              (0, i.jsx)("div", { className: a()(_.RH, T[t]) }),
                           ],
                       }),
-                      (0, i.jsx)(v.A, { grow: 1, className: _.eC, style: { maxWidth: this.placeholderMaxWidth } }),
+                      (0, i.jsx)(N.A, { grow: 1, className: _.eC, style: { maxWidth: this.placeholderMaxWidth } }),
                   ],
               })
-            : (0, i.jsxs)(v.A, {
+            : (0, i.jsxs)(N.A, {
                   className: a()(_.qf, !s && _.lN, n),
                   children: [
-                      (0, i.jsx)("div", { className: a()(_.RH, j[t], l) }),
-                      (0, i.jsx)(v.A, {
+                      (0, i.jsx)("div", { className: a()(_.RH, T[t], l) }),
+                      (0, i.jsx)(N.A, {
                           grow: 1,
                           className: a()(_.gM, l),
                           style: { maxWidth: this.placeholderMaxWidth },
@@ -60,8 +60,8 @@ class b extends s.Component {
 }
 var R = n(268218),
     O = n(193663),
-    M = n(490427),
-    L = n(609425),
+    L = n(490427),
+    M = n(609425),
     k = n(922301),
     w = n(660184),
     P = n(73392),
@@ -167,7 +167,7 @@ let en = s.memo(function (e) {
         let { user: t } = e;
         if (null == t) return null;
         let n = (0, S.r)(t);
-        return null == n ? null : (0, i.jsx)(N.A, { className: ee.AO, type: n, verified: t.isVerifiedBot() });
+        return null == n ? null : (0, i.jsx)(v.A, { className: ee.AO, type: n, verified: t.isVerifiedBot() });
     }),
     es = s.memo(function (e) {
         let {
@@ -197,7 +197,7 @@ let en = s.memo(function (e) {
                 guildId: o,
                 isHovering: u,
             } = e,
-            c = (0, L.A)({ userId: a?.id, guildId: o }),
+            c = (0, M.A)({ userId: a?.id, guildId: o }),
             d = (0, P.a)({ displayNameStyles: c }),
             h = null == o && null != c;
         return (0, i.jsxs)(i.Fragment, {
@@ -247,9 +247,9 @@ let en = s.memo(function (e) {
             } = e,
             p = s === $.clD.OFFLINE,
             A = n ? g.Js : g.eu,
-            C = (0, E.A)(l) ? $.clD.STREAMING : s;
+            E = (0, C.A)(l) ? $.clD.STREAMING : s;
         return (
-            (C = p ? void 0 : C),
+            (E = p ? void 0 : E),
             (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsx)(A, {
@@ -259,7 +259,7 @@ let en = s.memo(function (e) {
                         isMobile: o,
                         isVR: u,
                         isTyping: c,
-                        status: C,
+                        status: E,
                         "aria-label": t.username,
                         statusTooltip: !0,
                         avatarDecoration: d,
@@ -288,12 +288,12 @@ let en = s.memo(function (e) {
                 quest: h,
             } = e,
             m = s.useMemo(
-                () => (0, C.A)({ activities: l, status: r, applicationStream: a, voiceChannel: o }),
+                () => (0, E.A)({ activities: l, status: r, applicationStream: a, voiceChannel: o }),
                 [l, r, a, o],
             ),
             f = s.useMemo(
                 () =>
-                    !(0, M.A)({
+                    !(0, L.A)({
                         activity: l?.find((e) => {
                             let { type: t } = e;
                             return t === $.$pd.CUSTOM_STATUS;
@@ -329,18 +329,18 @@ let en = s.memo(function (e) {
                 nick: f,
                 user: p,
                 currentUser: g,
-                activities: E,
-                applicationStream: C,
+                activities: C,
+                applicationStream: E,
                 status: y,
                 shouldAnimateStatus: S = !1,
-                isMobile: N,
-                isVR: v,
+                isMobile: v,
+                isVR: N,
                 premiumSince: _,
-                channel: T,
-                guildId: j,
+                channel: j,
+                guildId: T,
                 className: R,
-                nameplate: M,
-                hideClanTag: L = !1,
+                nameplate: L,
+                hideClanTag: M = !1,
                 hideSubtext: k = !1,
                 hideTooltip: w = !1,
                 onMouseDown: P,
@@ -364,25 +364,25 @@ let en = s.memo(function (e) {
             [eh, em] = s.useState(!1),
             [ef, ep] = s.useState(!1),
             [eg, ex] = s.useState(null),
-            { voiceChannel: eA } = (0, I.Ay)({ userId: ei, guildId: j }),
+            { voiceChannel: eA } = (0, I.Ay)({ userId: ei, guildId: T }),
             {
-                avatarDecorationSrc: eE,
-                avatarSrc: eC,
+                avatarDecorationSrc: eC,
+                avatarSrc: eE,
                 eventHandlers: eI,
-            } = (0, Y.A)({ userId: ei, size: x._3.SIZE_32, animateOnHover: !(t || eh), guildId: j }),
+            } = (0, Y.A)({ userId: ei, size: x._3.SIZE_32, animateOnHover: !(t || eh), guildId: T }),
             { onFocus: ey, ...eS } = en ?? {},
-            eN = (0, W.gn)(j, ei, l ?? null),
-            [ev, e_] = s.useState(!1);
+            ev = (0, W.gn)(T, ei, l ?? null),
+            [eN, e_] = s.useState(!1);
         s.useEffect(() => {
             t && e_(!1);
         }, [t]);
-        let eT = (0, Z.YW)(E),
-            ej = (0, o.bG)([K.A], () => K.A.getQuestPreviewOverride(z.uF.MEMBERS_LIST), []),
-            eb = null != ej,
-            eR = eb ? ej : eT,
-            eO = (0, Z.Yl)(eT, C, ei),
-            eM = (eb || eO) && t && !ev,
-            eL = s.useCallback(() => {
+        let ej = (0, Z.YW)(C),
+            eT = (0, o.bG)([K.A], () => K.A.getQuestPreviewOverride(z.uF.MEMBERS_LIST), []),
+            eb = null != eT,
+            eR = eb ? eT : ej,
+            eO = (0, Z.Yl)(ej, E, ei),
+            eL = (eb || eO) && t && !eN,
+            eM = s.useCallback(() => {
                 em(!0);
             }, []),
             ek = s.useCallback(() => {
@@ -405,11 +405,11 @@ let en = s.memo(function (e) {
                               name: f ?? eu,
                               quest: eR,
                               memberListItemRef: ed,
-                              applicationStream: C,
+                              applicationStream: E,
                               ...e,
                               closePopout: () => e_(!0),
                           }),
-                [eR, ed, C, f, eu],
+                [eR, ed, E, f, eu],
             );
         return null == p
             ? (0, i.jsx)(b, { avatarSize: x._3.SIZE_32, className: ee.qf })
@@ -417,7 +417,7 @@ let en = s.memo(function (e) {
                   targetElementRef: ed,
                   renderPopout: eU,
                   position: "bottom",
-                  shouldShow: eM,
+                  shouldShow: eL,
                   nudgeAlignIntoViewport: !1,
                   useRawTargetDimensions: !0,
                   animation: A.Y.Animation.NONE,
@@ -426,13 +426,13 @@ let en = s.memo(function (e) {
                       (0, i.jsx)(O.A, {
                           ref: ed,
                           selected: t,
-                          className: a()(ee.Dc, R, { [ee.WK]: y === $.clD.OFFLINE && !t, [ee.PJ]: eM }),
+                          className: a()(ee.Dc, R, { [ee.WK]: y === $.clD.OFFLINE && !t, [ee.PJ]: eL }),
                           innerClassName: ee.Hz,
                           onClick: U,
                           onKeyDown: D,
                           onMouseDown: P,
                           onContextMenu: G,
-                          onMouseEnter: eL,
+                          onMouseEnter: eM,
                           onMouseLeave: ek,
                           onBlur: eP,
                           hovered: eh,
@@ -444,10 +444,10 @@ let en = s.memo(function (e) {
                                             colorRoleName: r,
                                             colorString: n ?? null,
                                             name: f ?? eu,
-                                            colorStrings: eN,
-                                            hideClanTag: L,
+                                            colorStrings: ev,
+                                            hideClanTag: M,
                                             user: p,
-                                            guildId: j,
+                                            guildId: T,
                                             isHovering: eh,
                                         }),
                                     })
@@ -459,10 +459,10 @@ let en = s.memo(function (e) {
                                                 colorRoleName: r,
                                                 colorString: n ?? null,
                                                 name: f ?? eu,
-                                                colorStrings: eN,
-                                                hideClanTag: L,
+                                                colorStrings: ev,
+                                                hideClanTag: M,
                                                 user: p,
-                                                guildId: j,
+                                                guildId: T,
                                                 isHovering: eh,
                                             }),
                                         }),
@@ -470,29 +470,29 @@ let en = s.memo(function (e) {
                           avatar: (0, i.jsx)(ea, {
                               user: p,
                               shouldAnimateStatus: S,
-                              activities: E,
+                              activities: C,
                               status: y,
                               eventHandlers: eI,
-                              avatarSrc: eC,
-                              isMobile: N,
-                              isVR: v,
+                              avatarSrc: eE,
+                              isMobile: v,
+                              isVR: N,
                               isTyping: m,
-                              avatarDecorationSrc: eE,
+                              avatarDecorationSrc: eC,
                               handleSetTypingRef: eD,
                               typingRef: eg,
                               currentUser: g,
                           }),
-                          nameplate: M,
+                          nameplate: L,
                           subText: (0, i.jsx)(eo, {
                               hideSubtext: k,
-                              activities: E,
+                              activities: C,
                               status: y,
-                              applicationStream: C,
+                              applicationStream: E,
                               voiceStatusChannel: eA,
                               user: p,
-                              channel: T,
+                              channel: j,
                               isHoveringOrFocusing: eh || ef,
-                              quest: eT,
+                              quest: ej,
                               hideTooltip: w,
                           }),
                           decorators: (0, i.jsx)(es, {

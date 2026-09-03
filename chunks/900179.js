@@ -36,10 +36,10 @@ function A(e) {
         } = e,
         I = (0, E.GV)(),
         j = l.useRef(null),
-        T = (0, b.g)(),
-        C = null != R && T === R;
+        y = (0, b.g)(),
+        C = null != R && y === R;
     (0, p.A)(j, C);
-    let y = "function" == typeof c ? { icon: c } : c;
+    let T = "function" == typeof c ? { icon: c } : c;
     return (0, a.jsxs)("section", {
         ref: C ? j : void 0,
         className: s()(h.uW, N),
@@ -61,7 +61,7 @@ function A(e) {
                                       id: I,
                                       children: n,
                                   }),
-                                  null != y && (0, a.jsx)(_, { ...y }),
+                                  null != T && (0, a.jsx)(_, { ...T }),
                               ],
                           }),
                           null != v && (0, a.jsx)(g.E, { variant: "text-xs/normal", children: v }),

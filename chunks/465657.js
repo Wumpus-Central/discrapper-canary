@@ -35,8 +35,8 @@ function E(e) {
             purchaseError: b,
             setCheckoutCurrency: j,
             setLinkWalletEnabled: R,
-            checkoutPaymentSources: M,
-            hasCheckoutContextLoaded: O,
+            checkoutPaymentSources: O,
+            hasCheckoutContextLoaded: M,
         } = (0, h.t4)((e) => ({
             customCheckoutFlow: e.customCheckoutFlow,
             contextMetadata: e.contextMetadata,
@@ -56,11 +56,11 @@ function E(e) {
         D = (0, c.W)(w, _),
         G = i.useMemo(() => {
             if (null == _) return !1;
-            if (!O) return !0;
-            let e = M.find((e) => e.id === _);
+            if (!M) return !0;
+            let e = O.find((e) => e.id === _);
             return null != e && !e.enabled;
-        }, [M, O, _]),
-        F = (0, s.iB)({ checkoutPaymentSources: M, paymentSourceId: _, location: "CheckoutBaseReviewStep" }),
+        }, [O, M, _]),
+        F = (0, s.iB)({ checkoutPaymentSources: O, paymentSourceId: _, location: "CheckoutBaseReviewStep" }),
         { disablePurchase: B } = i.useMemo(() => {
             let e = { disablePurchase: F || T === f.uH.DEV_STORYBOOK_CHECKOUT };
             return null != y

@@ -15,21 +15,21 @@ var l,
     g = n(922016),
     x = n(866665),
     A = n(983851),
-    E = n(885574),
-    C = n(967198),
+    C = n(885574),
+    E = n(967198),
     I = n(287809),
     y = n(824744),
     S = n(158045),
-    N = n(926972),
-    v = n(885386),
+    v = n(926972),
+    N = n(885386),
     _ = n(862482),
-    T = n(821609),
-    j = n(66834),
+    j = n(821609),
+    T = n(66834),
     b = n(624793),
     R = n(639245),
     O = n(966245),
-    M = n(796774),
-    L = n(807348),
+    L = n(796774),
+    M = n(807348),
     k = n(805945),
     w = n(71393),
     P = n(725807);
@@ -50,7 +50,7 @@ function B(e) {
         r = s.useCallback(async () => {
             if ((n(), null != t))
                 try {
-                    await j.A.joinGuild(t), j.A.transitionToGuildSync(t);
+                    await T.A.joinGuild(t), T.A.transitionToGuildSync(t);
                 } catch {}
         }, [n, t]);
     return l === G.GET_NITRO
@@ -65,7 +65,7 @@ function B(e) {
               textOptions: { textOverride: U.intl.string(U.t.pj0XBN) },
           })
         : l === G.JOIN_GUILD
-          ? (0, i.jsx)(T.$, {
+          ? (0, i.jsx)(j.$, {
                 variant: "primary",
                 size: "sm",
                 text: U.intl.string(U.t.riu2R5),
@@ -83,25 +83,25 @@ function W(e) {
         p = "0" === a.guildId,
         g = (0, o.bG)([w.A], () => w.A.getGuild(a.guildId)),
         x = !p && null != g,
-        [A, E] = s.useState(),
-        C = (0, N.tj)({ location: "SoundmojiGuildInfo" }),
-        y = p || x || null != A || !C,
-        [v, _] = s.useState(!y);
+        [A, C] = s.useState(),
+        E = (0, v.tj)({ location: "SoundmojiGuildInfo" }),
+        y = p || x || null != A || !E,
+        [N, _] = s.useState(!y);
     s.useEffect(() => {
         y ||
             (_(!0),
-            (0, M.nh)(a.soundId, a.guildId)
+            (0, L.nh)(a.soundId, a.guildId)
                 .then((e) => {
-                    E(e);
+                    C(e);
                 })
                 .finally(() => {
                     _(!1), f();
                 }));
     }, [f, y, a.guildId, a.soundId]);
-    let { buttonType: T, description: j } =
+    let { buttonType: j, description: T } =
             ((t = "0" === a.guildId),
             (n = (0, o.bG)([I.default], () => S.Ay.canUseSoundboardEverywhere(I.default.getCurrentUser()))),
-            (l = (0, N.tj)({ location: "useSoundmojiGuildInfoData" })),
+            (l = (0, v.tj)({ location: "useSoundmojiGuildInfoData" })),
             (r = a.guildId !== c?.guild_id),
             {
                 buttonType: s.useMemo(() => (t || !l ? 2 : n ? (x || null == A ? 2 : 0) : 1), [t, n, l, x, A]),
@@ -145,8 +145,8 @@ function W(e) {
                         .exhaustive();
                 }, [t, A, n, x, r, l]),
             }),
-        P = T === G.JOIN_GUILD,
-        V = !p && v,
+        P = j === G.JOIN_GUILD,
+        V = !p && N,
         F = s.useMemo(
             () => (x ? b.GO.createFromGuildRecord(g) : null != A ? b.GO.createFromDiscoverableGuild(A) : void 0),
             [g, x, A],
@@ -162,13 +162,13 @@ function W(e) {
                               className: H.g4,
                               children: [
                                   (0, i.jsx)(k.Ay, {
-                                      buttonOverlay: L.If.NONE,
+                                      buttonOverlay: M.If.NONE,
                                       sound: a,
                                       channel: void 0,
                                       isSoundmoji: !0,
                                       onSelectItem: () => {},
                                   }),
-                                  (0, i.jsx)(d.E, { variant: "text-sm/normal", children: j }),
+                                  (0, i.jsx)(d.E, { variant: "text-sm/normal", children: T }),
                               ],
                           }),
                           null != F &&
@@ -190,7 +190,7 @@ function W(e) {
                                               closePopout: h,
                                           }),
                                       }),
-                                      (0, i.jsx)(B, { buttonType: T, discoverableGuildId: A?.id, closePopout: h }),
+                                      (0, i.jsx)(B, { buttonType: j, discoverableGuildId: A?.id, closePopout: h }),
                                   ],
                               }),
                       ],
@@ -202,12 +202,12 @@ function W(e) {
 var K = n(948611);
 function z() {
     let { volume: e, onVolumeChange: t } = (function () {
-        let [e, t] = s.useState(v.HO.getSetting());
+        let [e, t] = s.useState(N.HO.getSetting());
         return {
             volume: e,
             onVolumeChange: s.useCallback((e) => {
                 let n = (0, y.w)(e);
-                t(n), v.HO.updateSetting(n);
+                t(n), N.HO.updateSetting(n);
             }, []),
         };
     })();
@@ -222,9 +222,9 @@ function z() {
 }
 function Z(e) {
     let { sound: t, forceShowBetaLabel: n = !1 } = e,
-        l = (0, N.tj)({ location: "SoundmojiBanner" }),
+        l = (0, v.tj)({ location: "SoundmojiBanner" }),
         s = (0, o.bG)([I.default], () => S.Ay.canUseSoundboardEverywhere(I.default.getCurrentUser())),
-        r = (0, o.bG)([C.A], () => C.A.getGuildId());
+        r = (0, o.bG)([E.A], () => E.A.getGuildId());
     return n || s || "0" === t.guildId || t.guildId === r || !l
         ? (0, i.jsx)(m.Lp, { text: "BETA", color: u.A.colors.BACKGROUND_BRAND.css, className: H.aZ })
         : (0, i.jsxs)("div", {
@@ -289,7 +289,7 @@ function q(e) {
     s.useEffect(() => {
         u ? A.current?.focus() : A.current?.blur(), a?.(u);
     }, [u, a]);
-    let E = !u;
+    let C = !u;
     return (0, i.jsx)(g.Y, {
         targetElementRef: A,
         renderPopout: (e) =>
@@ -309,14 +309,14 @@ function q(e) {
         children: (e) =>
             (0, i.jsx)(x.m, {
                 onTooltipHide: () => {
-                    E && a?.(!1);
+                    C && a?.(!1);
                 },
                 onTooltipShow: () => {
-                    E && a?.(!0);
+                    C && a?.(!0);
                 },
                 text: l,
                 position: "top",
-                shouldShow: E,
+                shouldShow: C,
                 children: (0, i.jsx)(c.D, {
                     ...e,
                     innerRef: A,
@@ -344,7 +344,7 @@ function J(e) {
                 renderPopout: (e) => (0, i.jsx)(W, { sound: t, channel: n, ...e }),
                 tooltipText: U.intl.string(U.t["KVbJU/"]),
                 position: "right",
-                children: (0, i.jsx)(E.CircleInformationIcon, { size: "md", color: "currentColor", className: K.Wo }),
+                children: (0, i.jsx)(C.CircleInformationIcon, { size: "md", color: "currentColor", className: K.Wo }),
             }),
         ],
     });

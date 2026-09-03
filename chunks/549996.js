@@ -1,48 +1,48 @@
-n.d(t, { c: () => a });
-var r = n(582128),
-    i = n(17928),
-    l = n(354670),
-    u = n(962644),
-    o = n(412260),
-    c = n(852218);
-function a(e) {
-    r.useEffect(() => {
-        (0, u.BE)();
+i.d(t, { c: () => c });
+var s = i(582128),
+    n = i(17928),
+    r = i(354670),
+    l = i(962644),
+    a = i(412260),
+    o = i(852218);
+function c(e) {
+    s.useEffect(() => {
+        (0, l.BE)();
     }, []);
-    let t = (0, i.bG)([o.A, l.A], () => {
-            let t = o.A.getMarketingComponentByType(e);
+    let t = (0, n.bG)([a.A, r.A], () => {
+            let t = a.A.getMarketingComponentByType(e);
             if (null == t) return null;
-            let n = t.promotionId,
-                r = o.A.getPromotionByTypeAndId(c.pt.MARKETING_MOMENT, n);
-            if (r?.trialId != null) {
-                let e = l.A.getUserTrialOffer(r.trialId);
+            let i = t.promotionId,
+                s = a.A.getPromotionByTypeAndId(o.pt.MARKETING_MOMENT, i);
+            if (s?.trialId != null) {
+                let e = r.A.getUserTrialOffer(s.trialId);
                 if (null == e || e.hasExpired) return null;
             }
             return t;
         }),
-        n = (0, i.bG)([o.A], () => o.A.getPromotionByTypeAndId(c.pt.MARKETING_MOMENT, t?.promotionId ?? "")),
-        a = n?.endDate,
-        [s, d] = r.useState(!1),
-        p = r.useRef(null);
+        i = (0, n.bG)([a.A], () => a.A.getPromotionByTypeAndId(o.pt.MARKETING_MOMENT, t?.promotionId ?? "")),
+        c = i?.endDate,
+        [d, u] = s.useState(!1),
+        m = s.useRef(null);
     return (
-        r.useEffect(() => {
-            if (null != a) {
-                let e = a.getTime() - Date.now();
+        s.useEffect(() => {
+            if (null != c) {
+                let e = c.getTime() - Date.now();
                 return (
                     e > 0 && e < 864e5
-                        ? (d(!1),
-                          clearTimeout(p.current),
-                          (p.current = setTimeout(() => {
-                              d(!0);
+                        ? (u(!1),
+                          clearTimeout(m.current),
+                          (m.current = setTimeout(() => {
+                              u(!0);
                           }, e)))
-                        : e <= 0 && d(!0),
+                        : e <= 0 && u(!0),
                     () => {
-                        clearTimeout(p.current);
+                        clearTimeout(m.current);
                     }
                 );
             }
-            d(!1), clearTimeout(p.current);
-        }, [a]),
-        s ? null : t
+            u(!1), clearTimeout(m.current);
+        }, [c]),
+        d ? null : t
     );
 }

@@ -1,4 +1,4 @@
-n.d(t, { A: () => E, MemberListContentSettingsMenu: () => A });
+n.d(t, { A: () => C, MemberListContentSettingsMenu: () => A });
 var l = n(477900),
     i = n(582128),
     s = n(17928),
@@ -56,7 +56,7 @@ function A(e) {
         }),
     });
 }
-let E = function (e) {
+let C = function (e) {
     let t = i.useRef(null);
     return (0, l.jsx)(d.Y, {
         targetElementRef: t,

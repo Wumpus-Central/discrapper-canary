@@ -28,15 +28,15 @@ let A = s.forwardRef(function (e, t) {
             className: r,
             children: g,
             actions: A,
-            handleEditModal: E,
-            keyboardModeEnabled: C,
+            handleEditModal: C,
+            keyboardModeEnabled: E,
             onKeyDown: I,
             draftType: y,
             size: S = 1,
         } = e,
-        N = s.useRef(null),
-        { onFocus: v, ..._ } = (0, o.rm)(n),
-        { handleFocus: T, handleBlur: j } = (function (e) {
+        v = s.useRef(null),
+        { onFocus: N, ..._ } = (0, o.rm)(n),
+        { handleFocus: j, handleBlur: T } = (function (e) {
             let [t, n] = (0, s.useState)(!1);
             return {
                 handleFocus: (0, s.useCallback)(
@@ -54,28 +54,28 @@ let A = s.forwardRef(function (e, t) {
                 ),
                 isFocused: t,
             };
-        })(v),
+        })(N),
         b = 0 === S,
         R = null != A;
     return (0, i.jsx)(u.vN, {
         children: (0, i.jsx)("li", {
             ..._,
-            onFocus: T,
-            onBlur: j,
+            onFocus: j,
+            onBlur: T,
             onClick: function (e) {
-                if (0 === e.detail && null != N.current) {
-                    let e = N.current.querySelector('[role="button"], button');
+                if (0 === e.detail && null != v.current) {
+                    let e = v.current.querySelector('[role="button"], button');
                     e?.click();
                 }
             },
             onKeyDown: function (e) {
-                if (C) {
+                if (E) {
                     switch (e.which) {
                         case m.Ks6.D:
                             e.preventDefault(), c.A.remove(l, n, y);
                             return;
                         case m.Ks6.E:
-                            null != E && (e.preventDefault(), E(e));
+                            null != C && (e.preventDefault(), C(e));
                             return;
                         case m.Ks6.BACKSPACE:
                             e.ctrlKey
@@ -93,7 +93,7 @@ let A = s.forwardRef(function (e, t) {
             ref: t,
             children: (0, i.jsxs)("div", {
                 className: p.PO,
-                ref: N,
+                ref: v,
                 children: [
                     g,
                     R
