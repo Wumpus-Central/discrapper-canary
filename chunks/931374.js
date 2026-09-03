@@ -1,27 +1,29 @@
 n.d(t, {
-    cc: () => z,
+    AN: () => Y,
+    cc: () => X,
     p9: () => G,
-    dZ: () => et,
-    YU: () => $,
-    uN: () => Y,
-    tC: () => es,
-    Y2: () => W,
+    I7: () => eo,
+    YU: () => Z,
+    uN: () => z,
+    tC: () => ed,
+    Y2: () => $,
+    dZ: () => er,
     lU: () => P,
     Dn: () => j,
-    b8: () => X,
+    b8: () => ee,
     yM: () => V,
     $8: () => B,
     NI: () => F,
-    mK: () => er,
-    Q9: () => Z,
-    Sr: () => en,
-    ST: () => ei,
+    mK: () => el,
+    Q9: () => J,
+    Sr: () => ea,
+    ST: () => es,
     i2: () => x,
-    nn: () => J,
-    Ny: () => ee,
-    I7: () => ea,
-    lW: () => q,
-    Wv: () => K,
+    nn: () => en,
+    Ny: () => ei,
+    H: () => K,
+    lW: () => Q,
+    Wv: () => q,
     uE: () => H,
 });
 var i,
@@ -108,17 +110,21 @@ function j() {
     let e = (0, l.bG)([p.default], () => p.default.getCurrentUser());
     return e?.ageVerificationStatus === d.Tk.VERIFIED_ADULT;
 }
-function W() {
-    let e = (0, l.bG)([p.default], () => {
-        var e;
-        return (
-            (e = p.default.getCurrentUser()?.ageVerificationStatus) === d.Tk.INFERRED_ADULT || e === d.Tk.INFERRED_TEEN
-        );
-    });
+function W(e) {
+    return e === d.Tk.INFERRED_ADULT || e === d.Tk.INFERRED_TEEN;
+}
+function Y() {
+    return W(p.default.getCurrentUser()?.ageVerificationStatus);
+}
+function K() {
+    return (0, l.bG)([p.default], () => W(p.default.getCurrentUser()?.ageVerificationStatus));
+}
+function $() {
+    let e = K();
     return (0, A.aX)(s.t.REACTIVE_CHECK) && e;
 }
-var Y = (((i = {}).CTAS = "ctas"), (i.CONTENT_TYPE = "content_type"), i),
-    K =
+var z = (((i = {}).CTAS = "ctas"), (i.CONTENT_TYPE = "content_type"), i),
+    q =
         (((r = {}).VERIFIED_ADULT = "verified_adult"),
         (r.VERIFIED_TEEN = "verified_teen"),
         (r.ERROR = "error"),
@@ -126,7 +132,7 @@ var Y = (((i = {}).CTAS = "ctas"), (i.CONTENT_TYPE = "content_type"), i),
         (r.ID_FAILED = "id_failed"),
         (r.UNDERAGE = "underage"),
         r);
-function $(e, t) {
+function Z(e, t) {
     let n = f.A.getMessage(e, t);
     if (
         null == n ||
@@ -139,7 +145,7 @@ function $(e, t) {
     let i = n.embeds[0].fields.find((e) => "ctas" === e.rawName);
     return i?.rawValue.split(",").includes("retry");
 }
-function z(e, t) {
+function X(e, t) {
     let n = f.A.getMessage(e, t);
     if (
         null == n ||
@@ -155,7 +161,7 @@ function z(e, t) {
         N.getConfig({ location: "isAgeVerificationMessageWithManualReviewCta" }).enabled
     );
 }
-function q(e, t) {
+function Q(e, t) {
     if (null == _.A.getPendingConnection()) return !1;
     let n = f.A.getMessage(e, t);
     if (
@@ -172,15 +178,15 @@ function q(e, t) {
         u.q.getConfig({ location: "isAgeVerificationMessageWithConnectToTeenCta" }).enabled
     );
 }
-function Z() {
+function J() {
     let e = p.default.getCurrentUser();
     return e?.ageVerificationStatus !== d.Tk.UNVERIFIED && e?.ageVerificationStatus !== d.Tk.CLIENT_ONLY_PENDING;
 }
-function X() {
+function ee() {
     let e = (0, l.bG)([p.default], () => p.default.getCurrentUser());
     return e?.ageVerificationStatus !== d.Tk.UNVERIFIED && e?.ageVerificationStatus !== d.Tk.CLIENT_ONLY_PENDING;
 }
-function Q(e) {
+function et(e) {
     let { onComplete: t, entryPoint: n, shouldShowExpressiveModal: i = !1, onMethodUnavailable: r } = e,
         [s, d] = a.useState(!1),
         c = (0, l.bG)([p.default], () => p.default.getCurrentUser()),
@@ -223,9 +229,9 @@ function Q(e) {
         ),
     };
 }
-function J(e) {
+function en(e) {
     let { onComplete: t, entryPoint: n, shouldShowExpressiveModal: i = !1, classificationId: r = null } = e,
-        { loading: s, startVerification: l } = Q({ onComplete: t, entryPoint: n, shouldShowExpressiveModal: i });
+        { loading: s, startVerification: l } = et({ onComplete: t, entryPoint: n, shouldShowExpressiveModal: i });
     return {
         loading: s,
         initiateAgeVerification: a.useCallback(
@@ -234,9 +240,9 @@ function J(e) {
         ),
     };
 }
-function ee(e) {
+function ei(e) {
     let { onComplete: t, entryPoint: n, onMethodUnavailable: i } = e,
-        { loading: r, startVerification: s } = Q({
+        { loading: r, startVerification: s } = et({
             onComplete: t,
             entryPoint: n,
             shouldShowExpressiveModal: !0,
@@ -247,7 +253,7 @@ function ee(e) {
         initiateAgeVerificationV2: a.useCallback((e) => s(() => (0, S.en)(e.method, e.vendor), e), [s]),
     };
 }
-function et(e) {
+function er(e) {
     let t = (0, l.bG)([p.default], () => p.default.getCurrentUser()?.ageVerificationStatus),
         n = (0, c.Ay)(t),
         i = (0, l.bG)([I.default], () => null != I.default.getSuspendedUserToken()),
@@ -258,14 +264,14 @@ function et(e) {
         (s || o) && e();
     }, [e, s, o]);
 }
-function en(e) {
+function ea(e) {
     return null != e && O.zn.has(e);
 }
-function ei(e) {
+function es(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     return b.has(e) ? v.intl.string(v.t.lSWVTM) : t ? v.intl.string(D.default["/kgWIg"]) : v.intl.string(v.t.xYXsr6);
 }
-function er(e, t) {
+function el(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         i = arguments.length > 3 ? arguments[3] : void 0,
         r = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
@@ -281,17 +287,17 @@ function er(e, t) {
                 ? v.intl.format(D.default.RpMIT0, { handleOnHelpUrlHook: t })
                 : v.intl.string(v.t.HxS3oQ);
 }
-function ea(e) {
+function eo(e) {
     let t,
         n,
         i =
-            ((t = X()),
+            ((t = ee()),
             (n = (0, A.aX)(s.t.REACTIVE_CHECK)),
             (0, l.bG)([g.A], () => !t && n && g.A.shouldCallReactiveCheck(), [t, n]));
     a.useEffect(() => {
         i && L.Qx.has(e) && (0, C.z)();
     }, [i, e]);
 }
-async function es() {
-    return !Z() && U() && g.A.shouldCallReactiveCheck() ? await (0, C.z)() : null;
+async function ed() {
+    return !J() && U() && g.A.shouldCallReactiveCheck() ? await (0, C.z)() : null;
 }
