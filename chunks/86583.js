@@ -17245,7 +17245,7 @@ let Ii = (0, d.zZ)(c.X.SECURITY_KEYS_CATEGORY, {
         useTitle: () => R.intl.string(R.t["0iH2vc"]),
         buildLayout: () => [fA, Ir, fU],
     }),
-    Io = { adult: xw.PMznGO, teen: xw.qSkhZH, unverified: xw.vGxRDB },
+    Io = { [xD.ADULT]: xw.PMznGO, [xD.TEEN]: xw.qSkhZH, [xD.UNVERIFIED]: xw.vGxRDB },
     Iu = [eu.M.TINY_BRONCO_NOTICE],
     Id = [];
 function Ic() {
