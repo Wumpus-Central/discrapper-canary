@@ -32,9 +32,9 @@ class i {
 }
 function n(e) {
     return s.useMemo(() => {
-        let t = new i(e.items);
+        let t;
         return {
-            firstProfileEffect: t.firstProfileEffect,
+            firstProfileEffect: (t = new i(e.items)).firstProfileEffect,
             firstAvatarDecoration: t.firstAvatarDecoration,
             firstNameplate: t.firstNameplate,
             firstProfileFrame: t.firstProfileFrame,
