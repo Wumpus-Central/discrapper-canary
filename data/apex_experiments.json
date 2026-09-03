@@ -5357,32 +5357,6 @@
     }
   },
   {
-    "name": "2026-08-bounties-ctr-experiment-1",
-    "kind": "user",
-    "defaultConfig": {
-      "enabled": false,
-      "variant": 0
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true,
-        "variant": 1
-      },
-      "2": {
-        "enabled": true,
-        "variant": 2
-      },
-      "3": {
-        "enabled": true,
-        "variant": 3
-      }
-    }
-  },
-  {
     "name": "2026-08-bounties-mobile-quest-bar",
     "kind": "user",
     "defaultConfig": {
