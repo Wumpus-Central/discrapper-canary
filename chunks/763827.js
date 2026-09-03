@@ -92,7 +92,7 @@ class h {
 var I = n(626584),
     f = n(643501),
     p = n(75076),
-    T = n(957658),
+    T = n(844981),
     m = n(280450),
     g = n(652215);
 let S = new I.A("RTCConnectionStore"),
@@ -444,7 +444,7 @@ let H = new B(
               },
               AUDIO_SET_AUDIO_MIXER_SETTINGS: function (e) {
                   if (e.context !== A.x.DEFAULT) return !1;
-                  let t = (e.settings.enabled ?? !1) && (0, T.E)("RTCConnectionStore");
+                  let t = (e.settings.enabled ?? !1) && (0, T.Q2)("RTCConnectionStore");
                   i?.setSpatialAudioEnabled(t);
               },
               VOICE_SERVER_UPDATE: function (e) {

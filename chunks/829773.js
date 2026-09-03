@@ -11,7 +11,7 @@ var i = n(477900),
     h = n(688810),
     g = n(139286),
     f = n(270816),
-    A = n(957658),
+    A = n(844981),
     p = n(486487),
     E = n(110027),
     m = n(298242),
@@ -82,7 +82,7 @@ function O(e) {
         Z = (0, m.A)(k),
         $ = a.x.DEFAULT,
         K = I.Ay.isSelfDeaf($),
-        q = (0, A.A)("AudioDeviceMenu"),
+        q = (0, A.Ay)("AudioDeviceMenu"),
         X = (0, s.bG)([I.Ay], () => I.Ay.isSpatialAudioEnabled()),
         Q = (0, s.bG)([I.Ay], () => I.Ay.getMode()),
         ee = Q === v.TBI.VOICE_ACTIVITY ? v.TBI.PUSH_TO_TALK : v.TBI.VOICE_ACTIVITY,
@@ -151,11 +151,19 @@ function O(e) {
                                 "self-deafen",
                             ),
                         V &&
-                            q &&
+                            q !== A.L3.HIDDEN &&
                             (0, i.jsx)(u.sL, {
                                 id: "spatial-audio",
                                 label: D.intl.string(R.default.EWQJcc),
                                 checked: X,
+                                disabled: (0, A.Xt)(q),
+                                subtext: (function (e) {
+                                    if ((0, A.Xt)(e))
+                                        return D.intl.format(
+                                            e === A.L3.BLOCKED_MONO_OUTPUT ? R.default.rOXfEw : R.default.O7Aa3Y,
+                                            {},
+                                        );
+                                })(q),
                                 action: () => d.A.setSpatialAudio(!X, k),
                             }),
                         j && H,
