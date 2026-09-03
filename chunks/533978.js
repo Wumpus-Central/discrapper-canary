@@ -17,15 +17,15 @@ var l = t(477900),
     g = t(674168),
     f = t(987933),
     x = t(662080),
-    I = t(930946),
+    I = t(827059),
     T = t(173660),
     v = t(45630),
     _ = t(607567),
     j = t(246356),
     N = t(204651);
 t(980504);
-var S = t(376086),
-    b = t(375708);
+var b = t(376086),
+    S = t(375708);
 function O(e) {
     let { channel: n, themeable: O, whichPopoutIsOpen: y, setWhichPopoutIsOpen: R, idle: M } = e,
         { parentAnalyticsLocation: L } = (0, u.Ay)(),
@@ -51,7 +51,7 @@ function O(e) {
         ),
         Q = i.useCallback(() => q(!1), [q]),
         { isHovered: $, setIsHovered: Z, onMouseEnter: ee, onMouseLeave: en } = (0, h.A)(200, 300),
-        et = i.useMemo(() => ($ && (y === S.P.SOUNDBOARD || null == y)) || y === S.P.SOUNDBOARD, [$, y]);
+        et = i.useMemo(() => ($ && (y === b.P.SOUNDBOARD || null == y)) || y === b.P.SOUNDBOARD, [$, y]);
     function el(e) {
         null != V &&
             (0, c.L3)(e, async () => {
@@ -66,16 +66,16 @@ function O(e) {
             });
     }
     function ei() {
-        P(), null != y && ee(), J && Q(), R?.(S.P.SOUNDBOARD);
+        P(), null != y && ee(), J && Q(), R?.(b.P.SOUNDBOARD);
     }
     function es() {
-        (0, d.X)(L, d.O.SOUNDBOARD), y === S.P.SOUNDBOARD ? (R?.(void 0), en()) : ei();
+        (0, d.X)(L, d.O.SOUNDBOARD), y === b.P.SOUNDBOARD ? (R?.(void 0), en()) : ei();
     }
     i.useEffect(() => {
         et || J || q(!0);
     }, [et, J, q]);
     let ea = i.useCallback(() => {
-            null == y && R?.(S.P.SOUNDBOARD);
+            null == y && R?.(b.P.SOUNDBOARD);
         }, [y, R]),
         er = i.useRef(null),
         { enabled: eo } = (0, C.H)("SoundboardButton"),
@@ -113,7 +113,13 @@ function O(e) {
                                       onMouseLeave: en,
                                       onMouseDown: ea,
                                       children: J
-                                          ? (0, l.jsx)(x.A, { openFullPicker: Q })
+                                          ? (0, l.jsx)(x.A, {
+                                                channel: n,
+                                                guildId: V,
+                                                openFullPicker: Q,
+                                                onClose: t,
+                                                analyticsSource: "action bar button",
+                                            })
                                           : (0, l.jsx)(I.A, {
                                                 guildId: V,
                                                 channel: n,
@@ -132,12 +138,12 @@ function O(e) {
                             isTrayButton: !0,
                             themeable: O,
                             label: U
-                                ? b.intl.string(b.t["Ox4/zU"])
+                                ? S.intl.string(S.t["Ox4/zU"])
                                 : B
-                                  ? b.intl.string(b.t["+YBKYI"])
+                                  ? S.intl.string(S.t["+YBKYI"])
                                   : H
-                                    ? b.intl.string(b.t.X1lQli)
-                                    : b.intl.string(b.t["6EJvHt"]),
+                                    ? S.intl.string(S.t.X1lQli)
+                                    : S.intl.string(S.t["6EJvHt"]),
                             iconComponent: D,
                             disabled: w,
                             onContextMenu: el,
@@ -148,8 +154,8 @@ function O(e) {
                             onMouseLeave: () => {
                                 null == y && (en(), G());
                             },
-                            isActive: $ || y === S.P.SOUNDBOARD,
-                            color: $ || y === S.P.SOUNDBOARD ? "primaryDark" : void 0,
+                            isActive: $ || y === b.P.SOUNDBOARD,
+                            color: $ || y === b.P.SOUNDBOARD ? "primaryDark" : void 0,
                         }),
                 }),
                 eo &&

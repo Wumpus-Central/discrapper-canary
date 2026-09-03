@@ -1,4 +1,4 @@
-n.d(t, { dT: () => q, Ay: () => $ });
+n.d(t, { dT: () => q, PI: () => J, Ay: () => X, Zu: () => $ });
 var l = n(477900),
     i = n(582128),
     s = n(503698),
@@ -92,6 +92,27 @@ function q(e) {
     });
 }
 function J(e) {
+    let { sound: t, previewSound: n, disabled: i = !1, tooltipPosition: s = "top" } = e,
+        r = (0, o.bG)([P.A], () => P.A.getGuildId());
+    return (0, l.jsx)(q, {
+        tooltipPosition: s,
+        disabled: i,
+        onClick: function (e) {
+            D.default.track(W.HAw.EXPRESSION_PICKER_SOUNDBOARD_SOUND_PREVIEWED, {
+                sound_id: t.soundId,
+                sound_name: t.name,
+                sound_guild_id: t.guildId,
+                location_guild_id: r,
+            }),
+                e.stopPropagation(),
+                e.currentTarget.blur(),
+                n();
+        },
+        text: Z.intl.formatToPlainString(Z.t["/8fYO5"], { emojiName: t.emojiName, soundName: t.name }),
+        children: (0, l.jsx)(m.H, { size: "md", color: "currentColor", className: Y.Wo }),
+    });
+}
+function $(e) {
     let { sound: t, disabled: n = !1 } = e,
         { analyticsLocations: s } = (0, S.Ay)(),
         a = (0, o.bG)([G.A], () => G.A.isFavoriteSound(t.soundId), [t.soundId]),
@@ -119,189 +140,169 @@ function J(e) {
             : (0, l.jsx)(p.y, { size: "xs", color: "currentColor", className: Y.Wo }),
     });
 }
-let $ = i.forwardRef(function (e, t) {
+let X = i.forwardRef(function (e, t) {
     var n, s, c;
     let h,
         {
-            sound: f,
-            channel: p,
-            containerClassName: S,
-            className: T,
-            focused: j,
-            forceSecondaryActions: b = !1,
-            interactive: R = !0,
-            enableSecondaryActions: M = !1,
-            suppressPlaySound: L,
-            onMouseEnter: U,
-            onSelectItem: G,
-            analyticsLocations: $,
-            buttonOverlay: X = V.If.PLAY,
-            showLockForDisabledSound: Q = !0,
-            inNitroLockedSection: ee = !1,
-            isAnimated: et = !0,
-            isPlayingSoundOverride: en,
-            isSoundmoji: el,
-            soundmojiVisualEffectRef: ei,
-            tooltipOverride: es,
-            ...er
+            sound: m,
+            channel: f,
+            containerClassName: p,
+            className: S,
+            focused: T,
+            forceSecondaryActions: j = !1,
+            interactive: b = !0,
+            enableSecondaryActions: R = !1,
+            suppressPlaySound: M,
+            onMouseEnter: L,
+            onSelectItem: P,
+            analyticsLocations: D,
+            buttonOverlay: U = V.If.PLAY,
+            showLockForDisabledSound: G = !0,
+            inNitroLockedSection: W = !1,
+            isAnimated: q = !0,
+            isPlayingSoundOverride: X,
+            isSoundmoji: Q,
+            soundmojiVisualEffectRef: ee,
+            tooltipOverride: et,
+            ...en
         } = e,
-        { name: ea, emojiId: eo, emojiName: eu } = f,
-        ec = (0, o.bG)([O.default], () => O.default.getCurrentUser()),
-        ed = (0, B.v)(f, p?.guild_id),
+        { name: el, emojiId: ei, emojiName: es } = m,
+        er = (0, o.bG)([O.default], () => O.default.getCurrentUser()),
+        ea = (0, B.v)(m, f?.guild_id),
         {
-            playSoundboardSound: eh,
-            previewSound: em,
-            isPlayingSound: ef,
+            playSoundboardSound: eo,
+            previewSound: eu,
+            isPlayingSound: ec,
         } = (0, H.A)(
-            f,
-            p?.id ?? null,
-            (el ? w.HO.getSetting() : w.dG.getSetting()?.volume) ?? 100,
-            !el && p?.isVocal() ? z.a.VOICE : z.a.DEFAULT,
+            m,
+            f?.id ?? null,
+            (Q ? w.HO.getSetting() : w.dG.getSetting()?.volume) ?? 100,
+            !Q && f?.isVocal() ? z.a.VOICE : z.a.DEFAULT,
         ),
-        { createMultipleConfettiAt: ep } = i.useContext(N.x),
-        eg = i.useRef(null),
-        ex =
-            ((n = f.soundId),
-            (s = eg.current),
+        { createMultipleConfettiAt: ed } = i.useContext(N.x),
+        eh = i.useRef(null),
+        em =
+            ((n = m.soundId),
+            (s = eh.current),
             i.useMemo(() => {
                 if (null == s || "1" !== n) return { x: 0, y: 0 };
                 let e = s.getBoundingClientRect();
                 return { x: e.left + e.width / 2, y: e.top + e.height / 2 };
             }, [s, n])),
-        eA = (0, o.bG)([y.Ay], () => y.Ay.useReducedMotion),
-        eE = i.useRef(0.01),
-        eC = i.useRef(new u.IX()),
-        eI = "1" === f.soundId,
-        ey = `sound-${f.soundId}`,
-        eS = (0, a.rm)(ey),
-        eN = null != eo || null != eu,
-        ev = !(0, F.Ir)(ec, f, p) && !el,
-        e_ = b || (M && !ev),
-        eT = v.LW.useStore().bottomPosition ?? 0,
-        ej = eg.current?.getBoundingClientRect().bottom ?? 0,
-        [eb, eR] = i.useState(!1),
-        eO = i.useCallback(() => {
-            eR(!0);
+        ef = (0, o.bG)([y.Ay], () => y.Ay.useReducedMotion),
+        ep = i.useRef(0.01),
+        eg = i.useRef(new u.IX()),
+        ex = "1" === m.soundId,
+        eA = `sound-${m.soundId}`,
+        eE = (0, a.rm)(eA),
+        eC = null != ei || null != es,
+        eI = !(0, F.Ir)(er, m, f) && !Q,
+        ey = j || (R && !eI),
+        eS = v.LW.useStore().bottomPosition ?? 0,
+        eN = eh.current?.getBoundingClientRect().bottom ?? 0,
+        [ev, e_] = i.useState(!1),
+        eT = i.useCallback(() => {
+            e_(!0);
         }, []),
-        eM = i.useCallback(() => {
-            eR(!1);
+        ej = i.useCallback(() => {
+            e_(!1);
         }, []),
-        eL = ev && Q;
-    function ek(e) {
-        (eI &&
-            !eA &&
-            ((eE.current = Math.min(eE.current + 0.01, 0.1)),
-            Math.random() < eE.current && ep(ex.x, ex.y, void 0, void 0, { sprite: K.dR })),
-        null != G)
-            ? G(e)
-            : L || eh($);
+        eb = eI && G;
+    function eR(e) {
+        (ex &&
+            !ef &&
+            ((ep.current = Math.min(ep.current + 0.01, 0.1)),
+            Math.random() < ep.current && ed(em.x, em.y, void 0, void 0, { sprite: K.dR })),
+        null != P)
+            ? P(e)
+            : M || eo(D);
     }
-    let ew = (0, l.jsx)("div", {
-        onMouseEnter: eO,
-        onMouseLeave: eM,
-        children: (function (e) {
-            let { sound: t, previewSound: n, disabled: i = !1, tooltipPosition: s = "top" } = e,
-                r = (0, o.bG)([P.A], () => P.A.getGuildId());
-            return (0, l.jsx)(q, {
-                tooltipPosition: s,
-                disabled: i,
-                onClick: function (e) {
-                    D.default.track(W.HAw.EXPRESSION_PICKER_SOUNDBOARD_SOUND_PREVIEWED, {
-                        sound_id: t.soundId,
-                        sound_name: t.name,
-                        sound_guild_id: t.guildId,
-                        location_guild_id: r,
-                    }),
-                        e.stopPropagation(),
-                        e.currentTarget.blur(),
-                        n();
-                },
-                text: Z.intl.formatToPlainString(Z.t["/8fYO5"], { emojiName: t.emojiName, soundName: t.name }),
-                children: (0, l.jsx)(m.H, { size: "md", color: "currentColor", className: Y.Wo }),
-            });
-        })({ sound: f, previewSound: em, disabled: ev && !b }),
+    let eO = (0, l.jsx)("div", {
+        onMouseEnter: eT,
+        onMouseLeave: ej,
+        children: J({ sound: m, previewSound: eu, disabled: eI && !j }),
     });
-    function eP(e) {
-        return L || ev
-            ? eL
+    function eM(e) {
+        return M || eI
+            ? eb
                 ? (0, l.jsx)(x.LockIcon, {
                       size: "xs",
                       color: "currentColor",
-                      className: r()(Y.C4, Y.hz, e, { [Y.hn]: eN }),
+                      className: r()(Y.C4, Y.hz, e, { [Y.hn]: eC }),
                   })
                 : null
             : (0, l.jsx)(g.PlayIcon, { size: "xs", color: "currentColor", className: r()(Y.C4, e) });
     }
-    let eD = (0, l.jsx)("div", {
-        onMouseEnter: eO,
-        onMouseLeave: eM,
-        children: (0, l.jsx)(J, { sound: f, disabled: !R && !b }),
+    let eL = (0, l.jsx)("div", {
+        onMouseEnter: eT,
+        onMouseLeave: ej,
+        children: (0, l.jsx)($, { sound: m, disabled: !b && !j }),
     });
     i.useEffect(() => {
-        let e = eC.current;
+        let e = eg.current;
         return (
-            eI &&
+            ex &&
                 e.start(1e3, () => {
-                    eE.current = Math.max(eE.current - 0.01, 0.01);
+                    ep.current = Math.max(ep.current - 0.01, 0.01);
                 }),
             () => e.stop()
         );
-    }, [eI]);
-    let eU =
-        ((c = eg.current),
+    }, [ex]);
+    let ek =
+        ((c = eh.current),
         null == (h = c?.parentElement?.getBoundingClientRect())
             ? { width: 0, height: 0 }
             : { width: h.width, height: h.height });
     return (0, l.jsxs)("li", {
         ref: t,
-        className: r()(Y.H, S),
-        onMouseEnter: U,
+        className: r()(Y.H, p),
+        onMouseEnter: L,
         children: [
             (0, l.jsx)(d.m, {
-                "aria-label": null != es ? f.name : void 0,
-                __unsupportedReactNodeAsText: es ?? f.name,
-                position: ej + 50 > eT ? "top" : "bottom",
-                shouldShow: !eb,
+                "aria-label": null != et ? m.name : void 0,
+                __unsupportedReactNodeAsText: et ?? m.name,
+                position: eN + 50 > eS ? "top" : "bottom",
+                shouldShow: !ev,
                 delay: 500,
                 children: (0, l.jsxs)(C.s, {
-                    ...er,
-                    buttonProps: { ...eS, id: ey, role: "button" },
-                    "aria-label": Z.intl.formatToPlainString(Z.t.tuMUJ2, { emojiName: f.emojiName, soundName: f.name }),
+                    ...en,
+                    buttonProps: { ...eE, id: eA, role: "button" },
+                    "aria-label": Z.intl.formatToPlainString(Z.t.tuMUJ2, { emojiName: m.emojiName, soundName: m.name }),
                     className: r()(
                         Y.aG,
                         {
-                            [Y.CS]: et,
-                            [Y.he]: en ?? ef,
-                            [Y.ju]: L,
-                            [Y.wT]: R,
-                            [Y.$9]: !R && !b,
-                            [Y.Au]: ev && !b,
-                            [Y.fx]: !R && b,
-                            [Y.in]: R && j,
+                            [Y.CS]: q,
+                            [Y.he]: X ?? ec,
+                            [Y.ju]: M,
+                            [Y.wT]: b,
+                            [Y.$9]: !b && !j,
+                            [Y.Au]: eI && !j,
+                            [Y.fx]: !b && j,
+                            [Y.in]: b && T,
                         },
-                        T,
+                        S,
                     ),
                     onClick: (e) => {
-                        ek?.(e);
+                        eR?.(e);
                     },
-                    onContextMenu: M && !ev ? ed : void 0,
+                    onContextMenu: R && !eI ? ea : void 0,
                     children: [
                         (0, l.jsxs)("div", {
-                            className: r()(Y.KM, { [Y.hn]: eN }),
+                            className: r()(Y.KM, { [Y.hn]: eC }),
                             "aria-hidden": !0,
-                            ref: eg,
+                            ref: eh,
                             children: [
-                                eN && (0, l.jsx)(I.A, { emojiId: eo, emojiName: eu, className: Y.Zg }),
+                                eC && (0, l.jsx)(I.A, { emojiId: ei, emojiName: es, className: Y.Zg }),
                                 (0, l.jsx)(E.E, {
                                     variant: "text-xs/medium",
-                                    color: R ? void 0 : "text-muted",
-                                    className: r()(Y.TW, { [Y.hn]: eN }),
-                                    children: ea,
+                                    color: b ? void 0 : "text-muted",
+                                    className: r()(Y.TW, { [Y.hn]: eC }),
+                                    children: el,
                                 }),
                             ],
                         }),
                         (function () {
-                            switch (X) {
+                            switch (U) {
                                 case V.If.ADD:
                                     return (0, l.jsxs)("div", {
                                         className: Y.ec,
@@ -310,7 +311,7 @@ let $ = i.forwardRef(function (e, t) {
                                             (0, l.jsxs)("div", {
                                                 className: Y.O5,
                                                 children: [
-                                                    ew,
+                                                    eO,
                                                     (0, l.jsxs)("div", {
                                                         className: Y.c9,
                                                         children: [
@@ -326,7 +327,7 @@ let $ = i.forwardRef(function (e, t) {
                                                             }),
                                                         ],
                                                     }),
-                                                    e_ && eD,
+                                                    ey && eL,
                                                 ],
                                             }),
                                         ],
@@ -336,16 +337,16 @@ let $ = i.forwardRef(function (e, t) {
                                 case V.If.PLAY:
                                 case V.If.SOUNDMOJI:
                                 default:
-                                    return eL && !ee
+                                    return eb && !W
                                         ? (0, l.jsxs)(l.Fragment, {
                                               children: [
                                                   (0, l.jsx)("div", { className: Y.LQ }),
-                                                  eP(Y.B3),
+                                                  eM(Y.B3),
                                                   (0, l.jsx)("div", {
                                                       className: Y.d7,
                                                       children: (0, l.jsxs)("div", {
                                                           className: Y.O5,
-                                                          children: [e_ && ew, e_ && eD],
+                                                          children: [ey && eO, ey && eL],
                                                       }),
                                                   }),
                                               ],
@@ -353,18 +354,18 @@ let $ = i.forwardRef(function (e, t) {
                                         : (0, l.jsxs)("div", {
                                               className: Y.d7,
                                               children: [
-                                                  (0, l.jsx)("div", { className: r()({ [Y.LQ]: !L }) }),
+                                                  (0, l.jsx)("div", { className: r()({ [Y.LQ]: !M }) }),
                                                   (0, l.jsx)("div", {
                                                       className: Y.O5,
                                                       children:
-                                                          X === V.If.SOUNDMOJI
+                                                          U === V.If.SOUNDMOJI
                                                               ? (0, l.jsx)(_.Ay, {
-                                                                    sound: f,
-                                                                    channel: p,
-                                                                    setTooltipShowing: eR,
+                                                                    sound: m,
+                                                                    channel: f,
+                                                                    setTooltipShowing: e_,
                                                                 })
                                                               : (0, l.jsxs)(l.Fragment, {
-                                                                    children: [e_ && ew, eP(), e_ && eD],
+                                                                    children: [ey && eO, eM(), ey && eL],
                                                                 }),
                                                   }),
                                               ],
@@ -374,16 +375,16 @@ let $ = i.forwardRef(function (e, t) {
                     ],
                 }),
             }),
-            !f.available &&
+            !m.available &&
                 (0, l.jsx)(d.m, {
                     text: Z.intl.string(Z.t.MDOXJR),
-                    shouldShow: !eb,
+                    shouldShow: !ev,
                     children: (0, l.jsx)("div", {
                         className: Y.ET,
-                        children: !ee && (0, l.jsxs)("div", { className: Y.ld, children: [ew, eD] }),
+                        children: !W && (0, l.jsxs)("div", { className: Y.ld, children: [eO, eL] }),
                     }),
                 }),
-            !0 === el && (0, l.jsx)(k, { sound: f, containerDimensions: eU, ref: ei }),
+            !0 === Q && (0, l.jsx)(k, { sound: m, containerDimensions: ek, ref: ee }),
         ],
     });
 });

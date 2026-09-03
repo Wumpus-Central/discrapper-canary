@@ -1458,7 +1458,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19));
 let e2 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new eB.A().log(
-    `[BUILD INFO] Release Channel: ${e2}, Build Number: 607001, Version Hash: 12597f4f271223e94e74061af343888628c5a3a3`,
+    `[BUILD INFO] Release Channel: ${e2}, Build Number: 607007, Version Hash: db516d6312ba3dcbe441c7daf0541b0568cf646b`,
 ),
     D.A.setTags({ appContext: G.QCW }),
     eI.A.initBasic(),
@@ -21138,7 +21138,7 @@ let NA = "isHideDevBanner",
                     className: ta()(NE.Wz, NE.mr),
                     children: [
                         (0, O.jsx)(N_, { className: NE.Kk }),
-                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "607001" }),
+                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "607007" }),
                         (0, O.jsx)(r, {}),
                     ],
                 })
@@ -22050,7 +22050,7 @@ var CB = n(880144),
     CJ = n(813564),
     C0 = n(674168),
     C1 = n(662080),
-    C2 = n(930946);
+    C2 = n(827059);
 n(980504);
 var C3 = n(187529);
 function C5(e) {
@@ -22137,7 +22137,13 @@ function C5(e) {
                               onMouseLeave: L,
                               onMouseDown: v,
                               children: T
-                                  ? (0, O.jsx)(C1.A, { openFullPicker: S })
+                                  ? (0, O.jsx)(C1.A, {
+                                        channel: t,
+                                        guildId: u,
+                                        openFullPicker: S,
+                                        onClose: n,
+                                        analyticsSource: "rtc panel",
+                                    })
                                   : (0, O.jsx)(C2.A, {
                                         guildId: u,
                                         channel: t,

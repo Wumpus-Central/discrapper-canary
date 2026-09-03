@@ -23,7 +23,7 @@ var l = n(477900),
     N = n(750506),
     v = n(267102),
     _ = n(926972),
-    T = n(930946),
+    T = n(827059),
     j = n(256449),
     b = n(750385),
     R = n(649852),
@@ -512,9 +512,9 @@ let e2 = (0, z.xI)(L.A.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_B
             titleSecondary: (0, ec.FD)(s) || (0, ec.Xw)(s) ? a : null,
         });
     });
-var e5 = n(140735),
-    e7 = n(442433),
-    e6 = n(304072),
+var e6 = n(140735),
+    e5 = n(442433),
+    e7 = n(304072),
     e4 = n(194261),
     e9 = n(513902);
 let te = function (e) {
@@ -561,7 +561,7 @@ let tn = i.memo(function (e) {
             [t, c, b],
         ),
         O = i.useMemo(() => ({ width: y, height: y, padding: I }), [I, y]),
-        [M, L] = (0, e6.A)(null, 300);
+        [M, L] = (0, e7.A)(null, 300);
     return (0, l.jsx)("div", {
         className: tt.nM,
         style: R,
@@ -649,7 +649,7 @@ let tn = i.memo(function (e) {
                                     x?.(e, n);
                             },
                             onContextMenu: function (e) {
-                                (0, e7.L3)(e, async () => {
+                                (0, e5.L3)(e, async () => {
                                     let { default: e } = await Promise.all([n.e("904774"), n.e("446132")]).then(
                                         n.bind(n, 233503),
                                     );
@@ -662,7 +662,7 @@ let tn = i.memo(function (e) {
                             "data-name": e.sticker.name,
                             "data-format-type": e.sticker.format_type,
                             children: [
-                                (0, l.jsx)(e5.A, { children: (0, ed.h)(e.sticker) }),
+                                (0, l.jsx)(e6.A, { children: (0, ed.h)(e.sticker) }),
                                 (0, l.jsxs)("div", {
                                     "aria-hidden": !0,
                                     children: [
