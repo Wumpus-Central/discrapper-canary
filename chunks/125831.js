@@ -32,4 +32,8 @@ let d = new o(r.h, {
         let { guildId: t, topSoundsMetadata: n } = e;
         (s.topSoundboardSoundsByGuildId[t] = n.map((e) => e.soundId)), (l[t] = !1);
     },
+    TOP_SOUNDBOARD_SOUNDS_FETCH_FAILURE: function (e) {
+        let { guildId: t } = e;
+        l[t] = !1;
+    },
 });
