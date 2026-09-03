@@ -1458,7 +1458,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19));
 let e2 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new eB.A().log(
-    `[BUILD INFO] Release Channel: ${e2}, Build Number: 607286, Version Hash: 25bcc9397a183ee9d2035f11636717b18001c114`,
+    `[BUILD INFO] Release Channel: ${e2}, Build Number: 607292, Version Hash: 0549645e56f90d85fa78ae029465e8627b4c142c`,
 ),
     D.A.setTags({ appContext: G.QCW }),
     eI.A.initBasic(),
@@ -3717,7 +3717,7 @@ let rP = (0, nX.Fe)({
                 n.e("657682"),
                 n.e("600336"),
                 n.e("535413"),
-                n.e("969003"),
+                n.e("172413"),
                 n.e("145006"),
                 n.e("799951"),
                 n.e("302458"),
@@ -4308,7 +4308,7 @@ function rG() {
         n.e("180644"),
         n.e("600336"),
         n.e("535413"),
-        n.e("969003"),
+        n.e("172413"),
         n.e("145006"),
         n.e("799951"),
         n.e("401425"),
@@ -6931,7 +6931,7 @@ let oS =
                             n.e("57358"),
                             n.e("866539"),
                             n.e("722765"),
-                            n.e("969003"),
+                            n.e("172413"),
                             n.e("145006"),
                             n.e("33909"),
                             n.e("249169"),
@@ -21143,7 +21143,7 @@ let NA = "isHideDevBanner",
                     className: ta()(NE.Wz, NE.mr),
                     children: [
                         (0, O.jsx)(N_, { className: NE.Kk }),
-                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "607286" }),
+                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "607292" }),
                         (0, O.jsx)(r, {}),
                     ],
                 })
@@ -24573,9 +24573,11 @@ let O7 = (0, tV.Fe)({
                 n.e("769476"),
                 n.e("882736"),
                 n.e("136738"),
+                n.e("736410"),
                 n.e("148620"),
                 n.e("243062"),
-                n.e("443790"),
+                n.e("815852"),
+                n.e("303810"),
                 n.e("530615"),
             ]).then(n.bind(n, 495677)),
         webpackId: 495677,
@@ -24800,7 +24802,7 @@ let O7 = (0, tV.Fe)({
                 n.e("883221"),
                 n.e("384236"),
                 n.e("64640"),
-                n.e("969003"),
+                n.e("400780"),
                 n.e("235812"),
                 n.e("498589"),
                 n.e("308093"),
@@ -25086,10 +25088,9 @@ let O7 = (0, tV.Fe)({
                 n.e("380469"),
                 n.e("725344"),
                 n.e("732100"),
-                n.e("631189"),
+                n.e("282910"),
                 n.e("623685"),
                 n.e("592313"),
-                n.e("282910"),
                 n.e("433957"),
             ]).then(n.bind(n, 578839)),
         webpackId: 578839,
@@ -25803,7 +25804,8 @@ let O7 = (0, tV.Fe)({
                 n.e("883221"),
                 n.e("384236"),
                 n.e("64640"),
-                n.e("969003"),
+                n.e("400780"),
+                n.e("172413"),
                 n.e("145006"),
                 n.e("401106"),
                 n.e("498589"),
@@ -26108,9 +26110,8 @@ let O7 = (0, tV.Fe)({
                 n.e("725344"),
                 n.e("113446"),
                 n.e("630313"),
-                n.e("631189"),
-                n.e("79473"),
                 n.e("282910"),
+                n.e("79473"),
                 n.e("472165"),
             ]).then(n.bind(n, 807780)),
         webpackId: 807780,
@@ -26234,7 +26235,7 @@ let O7 = (0, tV.Fe)({
             Promise.all([
                 n.e("145006"),
                 n.e("522052"),
-                n.e("969003"),
+                n.e("172413"),
                 n.e("51967"),
                 n.e("444113"),
                 n.e("381673"),
@@ -27309,7 +27310,7 @@ let O7 = (0, tV.Fe)({
                 n.e("883221"),
                 n.e("384236"),
                 n.e("64640"),
-                n.e("969003"),
+                n.e("400780"),
                 n.e("475775"),
                 n.e("348567"),
                 n.e("900277"),
@@ -27832,6 +27833,7 @@ let O7 = (0, tV.Fe)({
                 n.e("434001"),
                 n.e("694315"),
                 n.e("788849"),
+                n.e("400780"),
                 n.e("348567"),
                 n.e("900277"),
                 n.e("905581"),
@@ -28142,21 +28144,23 @@ let O7 = (0, tV.Fe)({
                 n.e("386861"),
                 n.e("64500"),
                 n.e("352566"),
-                n.e("631189"),
+                n.e("282910"),
                 n.e("384042"),
                 n.e("770961"),
                 n.e("882830"),
                 n.e("646855"),
                 n.e("59228"),
                 n.e("788563"),
+                n.e("736410"),
                 n.e("592313"),
                 n.e("807521"),
                 n.e("980782"),
                 n.e("885681"),
+                n.e("979513"),
                 n.e("997934"),
                 n.e("192461"),
-            ]).then(n.bind(n, 966469)),
-        webpackId: 966469,
+            ]).then(n.bind(n, 675782)),
+        webpackId: 675782,
         name: "Channel",
         renderLoader: nQ.l3,
     }),
@@ -28661,13 +28665,16 @@ let O7 = (0, tV.Fe)({
                 n.e("380469"),
                 n.e("769476"),
                 n.e("882736"),
+                n.e("736410"),
                 n.e("148620"),
                 n.e("243062"),
+                n.e("815852"),
                 n.e("407845"),
-                n.e("443790"),
+                n.e("979513"),
+                n.e("303810"),
                 n.e("173092"),
-            ]).then(n.bind(n, 55984)),
-        webpackId: 55984,
+            ]).then(n.bind(n, 625280)),
+        webpackId: 625280,
         name: "VibegrationsChannel",
         renderLoader: nQ.l3,
     }),
@@ -31200,7 +31207,7 @@ let Lk = (0, nX.Fe)({
                 n.e("57358"),
                 n.e("866539"),
                 n.e("722765"),
-                n.e("969003"),
+                n.e("172413"),
                 n.e("145006"),
                 n.e("33909"),
                 n.e("249169"),
@@ -33541,8 +33548,8 @@ let D2 = (0, nX.Fe)({
                 n.e("380469"),
                 n.e("621343"),
                 n.e("815057"),
-                n.e("426792"),
                 n.e("725344"),
+                n.e("426792"),
                 n.e("654624"),
                 n.e("322094"),
                 n.e("45916"),
@@ -34279,8 +34286,8 @@ let D2 = (0, nX.Fe)({
                 n.e("874821"),
                 n.e("701485"),
                 n.e("360536"),
-                n.e("426792"),
                 n.e("725344"),
+                n.e("426792"),
                 n.e("464287"),
                 n.e("654624"),
                 n.e("322094"),
@@ -34854,8 +34861,8 @@ let D2 = (0, nX.Fe)({
                 n.e("380469"),
                 n.e("621343"),
                 n.e("815057"),
-                n.e("426792"),
                 n.e("725344"),
+                n.e("426792"),
                 n.e("654624"),
                 n.e("322094"),
                 n.e("45916"),
@@ -45817,20 +45824,17 @@ class xR extends eu.PureComponent {
                         let { summaryId: e } = (0, tF.parse)(t);
                         null != e && UB.Ay.setSelectedSummary(r, e);
                     }
-                    if (
-                        (o &&
-                            l &&
-                            null != r &&
-                            null != U$.Ay.getCurrentSidebarChannelId(r) &&
-                            UT.A.closeChannelSidebar(r),
-                        null != s && d)
-                    ) {
+                    if (o && l && null != r) {
+                        let e = U$.Ay.getCurrentSidebarChannelId(r);
+                        null != e && e !== r && UT.A.closeChannelSidebar(r);
+                    }
+                    if (null != s && d) {
                         let e = U$.Ay.getCurrentSidebarChannelId(n),
                             t = e !== s;
                         if (null != r && null != s && t)
                             if (o) (0, oY.bG)(G.BVt.CHANNEL(i, s, a));
                             else {
-                                let e = { type: Um.LU.THREAD };
+                                let e = { type: Um.kk.CHAT };
                                 null != a && (e.initialMessageId = a),
                                     UT.A.openThreadAsSidebar({
                                         guildId: i,
@@ -45839,8 +45843,13 @@ class xR extends eu.PureComponent {
                                         details: e,
                                     });
                             }
-                        else o && null != e && null != r && UT.A.closeChannelSidebar(r);
-                    } else null == r || l || UT.A.closeChannelSidebar(r);
+                        else
+                            o &&
+                                null != e &&
+                                null != r &&
+                                U$.Ay.getCurrentSidebarChannelId(r) !== r &&
+                                UT.A.closeChannelSidebar(r);
+                    } else null == r || l || U$.Ay.getCurrentSidebarChannelId(r) === r || UT.A.closeChannelSidebar(r);
                     let _ = a1.getIsOpen();
                     if (r === aA.VV.ROLE_SUBSCRIPTIONS) aQ.closeSidebar();
                     else if (u && _) {
@@ -46531,7 +46540,7 @@ let x1 = (0, tV.Fe)({
             n.e("657682"),
             n.e("600336"),
             n.e("535413"),
-            n.e("969003"),
+            n.e("172413"),
             n.e("145006"),
             n.e("799951"),
             n.e("302458"),
@@ -48958,7 +48967,7 @@ let Fd = (0, nX.Fe)({
                 n.e("82731"),
                 n.e("145006"),
                 n.e("522052"),
-                n.e("969003"),
+                n.e("172413"),
                 n.e("51967"),
                 n.e("444113"),
                 n.e("381673"),
@@ -49212,6 +49221,7 @@ let Fd = (0, nX.Fe)({
                 n.e("434001"),
                 n.e("694315"),
                 n.e("788849"),
+                n.e("400780"),
                 n.e("845636"),
                 n.e("348567"),
                 n.e("900277"),
@@ -49532,8 +49542,8 @@ let Fd = (0, nX.Fe)({
                 n.e("228011"),
                 n.e("529225"),
                 n.e("51212"),
-                n.e("770698"),
                 n.e("725344"),
+                n.e("770698"),
                 n.e("732100"),
                 n.e("630313"),
                 n.e("450541"),
@@ -49552,7 +49562,7 @@ let Fd = (0, nX.Fe)({
                 n.e("236999"),
                 n.e("352566"),
                 n.e("736793"),
-                n.e("631189"),
+                n.e("282910"),
                 n.e("384042"),
                 n.e("770961"),
                 n.e("136738"),
@@ -49563,6 +49573,7 @@ let Fd = (0, nX.Fe)({
                 n.e("59228"),
                 n.e("788563"),
                 n.e("515398"),
+                n.e("736410"),
                 n.e("25159"),
                 n.e("592313"),
                 n.e("567076"),
@@ -49576,6 +49587,7 @@ let Fd = (0, nX.Fe)({
                 n.e("433186"),
                 n.e("407845"),
                 n.e("79362"),
+                n.e("979513"),
                 n.e("697585"),
                 n.e("997934"),
                 n.e("687634"),

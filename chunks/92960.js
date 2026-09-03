@@ -46,7 +46,7 @@ function j(e) {
                 l = e ?? v.Ay.getChannelId(r),
                 s = f.A.getChannel(l),
                 u = g.Ay.getSection(l, s?.isDM()) === y.YvQ.SIDEBAR_CHAT ? g.Ay.getSidebarState(l) : null,
-                c = u?.type === A.PE.VIEW_THREAD || u?.type === A.PE.VIEW_CHANNEL ? u.channelId : null;
+                c = u?.type === A.PE.VIEW_CHANNEL ? u.channelId : null;
             if (!1 === R(l) || !1 === R(c)) return !1;
             if (x._.hasSubscribers(y.jej.GUILD_ROOM_NOTE_PLACEMENT_CANCEL))
                 return x._.dispatch(y.jej.GUILD_ROOM_NOTE_PLACEMENT_CANCEL), !1;

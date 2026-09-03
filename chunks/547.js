@@ -168,7 +168,7 @@ function B() {
         t = N.A.getGuildId();
     if (null == t || null == e) return;
     let n = p.Ay.getSidebarState(e);
-    n?.type !== I.PE.VIEW_CHANNEL && V(t, e);
+    (n?.type !== I.PE.VIEW_CHANNEL || n.channelId !== e) && V(t, e);
 }
 function H(e) {
     let { guildId: t, channelId: n, context: i } = e;

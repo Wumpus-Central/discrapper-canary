@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => N, In: () => m });
+n.d(t, { Ay: () => O, In: () => m });
 var i = n(477900),
     r = n(582128),
     a = n(503698),
@@ -17,114 +17,124 @@ var i = n(477900),
     p = n(640708),
     T = n(114640);
 let m = r.forwardRef(function (e, t) {
-        let {
-                className: n,
-                iconClassName: r,
-                children: a,
-                selected: l = !1,
-                disabled: o = !1,
-                showBadge: d = !1,
-                badgePosition: c = "bottom",
-                color: E,
-                foreground: A,
-                background: h,
-                icon: I,
-                iconSize: p = 24,
-                onClick: m,
-                onContextMenu: g,
-                tooltip: S = null,
-                tooltipPosition: N = "bottom",
-                tooltipAlign: C,
-                tooltipDisabled: O,
-                tooltipSpacing: R,
-                role: L,
-                "aria-label": y,
-                "aria-hidden": D,
-                "aria-checked": v,
-                "aria-expanded": b,
-                "aria-haspopup": M,
-                "data-jump-section": P,
-            } = e,
-            U = null != h ? { secondaryColorClass: h } : {},
-            w = (0, i.jsx)(I, {
-                x: 0,
-                y: 0,
-                width: p,
-                height: p,
-                size: "custom",
-                className: s()(r, T.Kk),
-                colorClass: A ?? void 0,
-                color: E ?? "currentColor",
-                ...U,
-            }),
-            G = y;
-        return (
-            null == G && "string" == typeof S && (G = S),
-            (0, i.jsx)(_.m, {
-                __unsupportedReactNodeAsText: S,
-                position: N,
-                align: C,
-                shouldShow: !O,
-                spacing: R,
-                ariaHidden: !0,
-                children:
-                    null == m
-                        ? (0, i.jsx)("div", {
-                              ref: t,
-                              className: s()(n, T.P0, { [T.Ir]: o }),
-                              "aria-label": G,
-                              children: (0, i.jsx)(I, {
-                                  x: 0,
-                                  y: 0,
-                                  width: p,
-                                  height: p,
-                                  size: "custom",
-                                  className: s()(r, T.Kk),
-                                  colorClass: A ?? void 0,
-                                  color: E ?? "currentColor",
-                                  "aria-hidden": D,
-                                  ...U,
-                              }),
-                          })
-                        : (0, i.jsxs)(u.D, {
-                              innerRef: t,
-                              tag: "div",
-                              onClick: o ? void 0 : m,
-                              onContextMenu: o ? void 0 : g,
-                              className: s()(n, { [T.P0]: !0, [T.vk]: !o && null != m, [T.wH]: l, [T.Ir]: o }),
-                              role: L,
-                              "aria-label": G,
-                              "aria-hidden": D,
-                              "aria-disabled": o,
-                              "aria-checked": v,
-                              "aria-haspopup": M,
-                              "aria-expanded": b,
-                              tabIndex: o || null == m ? -1 : 0,
-                              "data-jump-section": P,
-                              children: [
-                                  d
-                                      ? (0, i.jsx)(f.Ay, {
-                                            mask:
-                                                "top" === c
-                                                    ? f.Ay.Masks.HEADER_BAR_BADGE_TOP
-                                                    : f.Ay.Masks.HEADER_BAR_BADGE_BOTTOM,
-                                            height: p,
-                                            width: p,
-                                            children: w,
-                                        })
-                                      : w,
-                                  d ? (0, i.jsx)("span", { className: s()(T.bG, "top" === c ? T.uZ : T.kl) }) : null,
-                                  a,
-                              ],
-                          }),
-            })
-        );
-    }),
-    g = r.forwardRef(function (e, t) {
-        let { className: n, ...r } = e;
-        return (0, i.jsx)(m, { ...r, className: s()(T.p, n), ref: t });
-    });
+    let {
+            className: n,
+            iconClassName: r,
+            children: a,
+            selected: l = !1,
+            disabled: o = !1,
+            badge: d,
+            color: c,
+            foreground: E,
+            background: A,
+            icon: h,
+            iconSize: I = 24,
+            onClick: f,
+            onContextMenu: p,
+            tooltip: m = null,
+            tooltipPosition: S = "bottom",
+            tooltipAlign: N,
+            tooltipDisabled: C,
+            tooltipSpacing: O,
+            role: R,
+            "aria-label": L,
+            "aria-hidden": y,
+            "aria-checked": D,
+            "aria-expanded": v,
+            "aria-haspopup": b,
+            "data-jump-section": M,
+        } = e,
+        P = null != A ? { secondaryColorClass: A } : {};
+    function U(e) {
+        return (0, i.jsx)(h, {
+            x: 0,
+            y: 0,
+            width: I,
+            height: I,
+            size: "custom",
+            className: s()(r, T.Kk),
+            colorClass: E ?? void 0,
+            color: c ?? "currentColor",
+            "aria-hidden": e,
+            ...P,
+        });
+    }
+    let w = L;
+    return (
+        null == w && "string" == typeof m && (w = m),
+        (0, i.jsx)(_.m, {
+            __unsupportedReactNodeAsText: m,
+            position: S,
+            align: N,
+            shouldShow: !C,
+            spacing: O,
+            ariaHidden: !0,
+            children:
+                null == f
+                    ? (0, i.jsx)("div", {
+                          ref: t,
+                          className: s()(n, T.P0, { [T.Ir]: o }),
+                          "aria-label": w,
+                          children: U(y),
+                      })
+                    : (0, i.jsxs)(u.D, {
+                          innerRef: t,
+                          tag: "div",
+                          onClick: o ? void 0 : f,
+                          onContextMenu: o ? void 0 : p,
+                          className: s()(n, { [T.P0]: !0, [T.vk]: !o && null != f, [T.wH]: l, [T.Ir]: o }),
+                          role: R,
+                          "aria-label": w,
+                          "aria-hidden": y,
+                          "aria-disabled": o,
+                          "aria-checked": D,
+                          "aria-haspopup": b,
+                          "aria-expanded": v,
+                          tabIndex: o || null == f ? -1 : 0,
+                          "data-jump-section": M,
+                          children: [(0, i.jsx)(g, { iconSize: I, badge: d, children: U(void 0) }), a],
+                      }),
+        })
+    );
+});
+function g(e) {
+    let { badge: t } = e;
+    return null == t ? e.children : (0, i.jsx)(S, { ...e, badge: t });
+}
 function S(e) {
+    let { badge: t, iconSize: n, children: a } = e,
+        { width: l, offset: o } = r.useMemo(() => {
+            let e = t.text?.length ?? 0;
+            return e <= 0 ? { width: 8, offset: 0 } : { width: 6 + 4 * e, offset: 4 };
+        }, [t.text]),
+        d = r.useMemo(() => ({ "--__badgeWidth": l + "px", "--__badgeOffset": o + "px" }), [l, o]);
+    return (0, i.jsxs)(i.Fragment, {
+        children: [
+            (0, i.jsx)(f.Ay, {
+                mask: "top" === t.position ? f.Ay.Masks.HEADER_BAR_BADGE_TOP : f.Ay.Masks.HEADER_BAR_BADGE_BOTTOM,
+                height: n + o,
+                width: n + o,
+                rightOverhang: -o,
+                bottomOverhang: -o,
+                children: a,
+            }),
+            (0, i.jsx)("span", {
+                style: d,
+                className: s()(T.bG, "top" === t.position ? T.uZ : T.kl, {
+                    [T.E1]: (t.text?.length ?? 0) > 0,
+                    [T.Uy]: "important" === t.type,
+                    [T.VF]: "unread" === t.type,
+                }),
+                children: (t.text?.length ?? 0) > 0 ? t.text : null,
+            }),
+        ],
+    });
+}
+let N = r.forwardRef(function (e, t) {
+    let { className: n, ...r } = e;
+    return (0, i.jsx)(m, { ...r, className: s()(T.p, n), ref: t });
+});
+function C(e) {
     let {
             className: t,
             innerClassName: n,
@@ -155,7 +165,7 @@ function S(e) {
                     className: T.cM,
                     children: [
                         (0, i.jsxs)("div", {
-                            className: s()(T.Y_, n, { [T.E1]: p }),
+                            className: s()(T.Y_, n, { [T.lE]: p }),
                             onDoubleClick: _,
                             children: [o.Fr && null != N ? (0, i.jsx)(l._, { onClick: N, className: T.cz }) : null, d],
                         }),
@@ -167,9 +177,9 @@ function S(e) {
         }),
     });
 }
-(S.Icon = m),
-    (S.ChannelIcon = g),
-    (S.Title = function (e) {
+(C.Icon = m),
+    (C.ChannelIcon = N),
+    (C.Title = function (e) {
         let {
                 className: t,
                 wrapperClassName: n,
@@ -238,14 +248,14 @@ function S(e) {
                   children: L,
               });
     }),
-    (S.Divider = function (e) {
+    (C.Divider = function (e) {
         let { className: t } = e;
         return (0, i.jsx)(p.A, { className: s()(T.Om, t) });
     }),
-    (S.Caret = function (e) {
+    (C.Caret = function (e) {
         let { direction: t = "right", className: n } = e;
         return "right" === t
             ? (0, i.jsx)(E._, { size: "md", color: "currentColor", className: s()(T.OW, n) })
             : (0, i.jsx)(A.n, { size: "md", color: "currentColor", className: s()(T.OW, n) });
     });
-let N = S;
+let O = C;

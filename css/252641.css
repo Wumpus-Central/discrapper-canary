@@ -5831,11 +5831,30 @@ svg.radioIcon_c1e9c4 {
 }
 
 .iconBadge__9293f {
-    background-color: var(--background-feedback-notification);
+    --__badgeWidth: 8px;
+    --__badgeHeight: 8px;
     border-radius: 8px;
-    height: 8px;
+    font-size: 8px;
+    height: var(--__badgeHeight);
     position: absolute;
-    width: 8px
+    width: var(--__badgeWidth)
+}
+
+.iconBadgeWithText__9293f {
+    --__badgeHeight: 10px;
+    align-items: center;
+    color: var(--white);
+    display: flex;
+    font-weight: 600;
+    justify-content: center
+}
+
+.iconBadgeStyleImportant__9293f {
+    background-color: var(--background-feedback-notification)
+}
+
+.iconBadgeStyleUnread__9293f {
+    background-color: var(--background-brand)
 }
 
 .iconBadgeTop__9293f {
@@ -5844,9 +5863,8 @@ svg.radioIcon_c1e9c4 {
 }
 
 .iconBadgeBottom__9293f {
-    --custom-icon-offset: calc((var(--chat-input-icon-size) - 8px)/2);
-    bottom: var(--custom-icon-offset);
-    inset-inline-end: var(--custom-icon-offset)
+    margin-inline-end: calc((var(--__badgeWidth) + (var(--__badgeOffset) + 2px))*-1);
+    margin-bottom: calc(var(--__badgeHeight)*-1 + var(--__badgeOffset)*-1 + -2px)
 }
 
 .divider__9293f {
@@ -6203,4 +6221,4 @@ svg.radioIcon_c1e9c4 {
     top: -4px
 }
 
-/*# sourceMappingURL=252641.40b73c48a0eadec4.css.map*/
+/*# sourceMappingURL=252641.dd9e0a596cbb9d59.css.map*/

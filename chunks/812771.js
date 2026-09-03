@@ -1,42 +1,54 @@
-a.d(i, { A: () => g, X: () => R });
-var n,
-    t = a(477900),
-    s = a(582128),
-    d = a(503698),
-    r = a.n(d),
-    l = a(435558),
-    o = a(661531),
-    u = a(602853),
-    c = a(817281),
-    h = a(761929),
-    b = a(742023),
-    m = a(743898),
-    S = a(909735),
-    f = a(53569),
-    R =
-        (((n = {})[(n.PostSidebar = 0)] = "PostSidebar"),
-        (n[(n.ThreadSidebar = 1)] = "ThreadSidebar"),
-        (n[(n.CallChatSidebar = 2)] = "CallChatSidebar"),
-        (n[(n.MessageRequestSidebar = 3)] = "MessageRequestSidebar"),
-        (n[(n.HomeSidebar = 4)] = "HomeSidebar"),
-        n);
+n.d(t, { A: () => x, X: () => S });
+var r,
+    a = n(477900),
+    i = n(582128),
+    s = n(503698),
+    d = n.n(s),
+    l = n(435558),
+    u = n(661531),
+    c = n(602853),
+    o = n(817281),
+    b = n(761929),
+    h = n(742023),
+    f = n(743898),
+    m = n(909735),
+    p = n(53569),
+    S =
+        (((r = {})[(r.PostSidebar = 0)] = "PostSidebar"),
+        (r[(r.ThreadSidebar = 1)] = "ThreadSidebar"),
+        (r[(r.CallChatSidebar = 2)] = "CallChatSidebar"),
+        (r[(r.MessageRequestSidebar = 3)] = "MessageRequestSidebar"),
+        (r[(r.HomeSidebar = 4)] = "HomeSidebar"),
+        r);
 function C(e) {
-    let { resizableNode: i, onResize: a, onResizeEnd: n, maxWidth: s, minWidth: d } = e,
-        r = (0, h.A)({
-            minDimension: d,
-            maxDimension: s,
-            resizableDomNodeRef: i,
-            onElementResize: a,
-            onElementResizeEnd: n,
-            orientation: h.R.HORIZONTAL_LEFT,
+    let { resizableNode: t, onApply: n, onEmit: r, onEnd: i, capturePointer: s } = e,
+        d = (0, b.A)({
+            resizableDomNodeRef: t,
+            onApplyDimension: n,
+            onElementResize: r,
+            onElementResizeEnd: i,
+            orientation: b.R.HORIZONTAL_LEFT,
             throttleDuration: 16,
+            usePointerEvents: s,
         });
-    return (0, t.jsx)("div", { onMouseDown: r, className: f.Di });
+    return s ? (0, a.jsx)(R, { handleResizeStart: d }) : (0, a.jsx)("div", { onMouseDown: d, className: p.Di });
 }
-function g(e) {
-    let { sidebarType: i, maxWidth: a, onWidthChange: n, children: d, floatingLayer: h } = e,
-        R = s.useRef(null),
-        g = (function (e) {
+function R(e) {
+    let { handleResizeStart: t } = e,
+        n = i.useCallback(
+            (e) => {
+                0 === e.button && (e.currentTarget.setPointerCapture(e.pointerId), t(e));
+            },
+            [t],
+        );
+    return (0, a.jsx)("div", { onPointerDown: n, className: p.Di });
+}
+function x(e) {
+    let { sidebarType: t, maxWidth: n, onWidthChange: r, children: s, floatingLayer: b, capturePointer: S = !1 } = e,
+        R = i.useRef(null),
+        x = i.useRef(null),
+        g = i.useRef(null),
+        j = (function (e) {
             switch (e) {
                 case 0:
                     return "postSidebarWidth";
@@ -49,45 +61,41 @@ function g(e) {
                 case 4:
                     return "homeSidebarWidth";
             }
-        })(i),
-        [W, p] = s.useState(b.Ay[g]),
-        x = s.useCallback(
+        })(t),
+        D = (0, f.P)({ maxWidth: n, minWidth: 450 }),
+        E = (0, c.r)(u.A.modules.chat.RESIZE_HANDLE_WIDTH),
+        k = (0, m.f4)("ChannelChatResizableSidebar") && (1 === t || 0 === t),
+        y = i.useRef(h.Ay[j] ?? 450),
+        A = i.useCallback(
             (e) => {
-                c.Ay.updatedUnsyncedSettings({ [g]: e });
+                let t = (0, l.clamp)(e, 450, n);
+                (y.current = t), null != R.current && (R.current.style.width = `${t}px`);
+                let r = D || k ? t : t + E;
+                null != x.current && (x.current.style.minWidth = `${r}px`),
+                    null != g.current && (g.current.style.width = `${r}px`);
             },
-            [g],
+            [450, n, D, k, E],
         ),
-        D = (0, m.P)({ maxWidth: a, minWidth: 450 }),
-        E = (0, u.r)(o.A.modules.chat.RESIZE_HANDLE_WIDTH),
-        j = (0, S.f4)("ChannelChatResizableSidebar") && (1 === i || 0 === i),
-        N = (0, l.clamp)(W, 450, a),
-        z = N + (D || j ? 0 : E);
-    s.useEffect(() => {
-        n?.(N, D);
-    }, [N, n, D]);
-    let A = h ?? s.Fragment;
-    return (0, t.jsxs)(t.Fragment, {
+        N = i.useCallback(() => {
+            r?.(y.current, D);
+        }, [r, D]),
+        v = i.useCallback(() => {
+            o.Ay.updatedUnsyncedSettings({ [j]: y.current });
+        }, [j]);
+    i.useLayoutEffect(() => {
+        A(y.current), N();
+    }, [A, N]);
+    let P = b ?? i.Fragment;
+    return (0, a.jsxs)(a.Fragment, {
         children: [
-            !D && (0, t.jsx)("div", { style: { minWidth: z } }),
-            (0, t.jsx)(A, {
-                children: (0, t.jsxs)("div", {
-                    className: r()(f.PA, { [f.aW]: j }),
+            !D && (0, a.jsx)("div", { ref: x }),
+            (0, a.jsx)(P, {
+                children: (0, a.jsxs)("div", {
+                    className: d()(p.PA, { [p.aW]: k }),
                     children: [
-                        (0, t.jsx)("div", { className: r()(f.Uc, { [f.DU]: D, [f.iK]: !D }), style: { width: z } }),
-                        (0, t.jsx)("div", {
-                            ref: R,
-                            className: r()(f.kL, { [f.DU]: D }),
-                            style: { width: N },
-                            children: d,
-                        }),
-                        !D &&
-                            (0, t.jsx)(C, {
-                                minWidth: 450,
-                                maxWidth: a,
-                                resizableNode: R,
-                                onResize: p,
-                                onResizeEnd: x,
-                            }),
+                        (0, a.jsx)("div", { ref: g, className: d()(p.Uc, { [p.DU]: D, [p.iK]: !D }) }),
+                        !D && (0, a.jsx)(C, { resizableNode: R, onApply: A, onEmit: N, onEnd: v, capturePointer: S }),
+                        (0, a.jsx)("div", { ref: R, className: d()(p.kL, { [p.DU]: D }), children: s }),
                     ],
                 }),
             }),

@@ -1,0 +1,24 @@
+.frameTarget_e92794,
+.stateContainer_e92794 {
+    flex: 1;
+    min-height: 0;
+    min-width: 0
+}
+
+.stateContainer_e92794 {
+    align-items: center;
+    background: var(--background-gradient-chat, var(--background-base-lower));
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    justify-content: center;
+    padding: var(--space-24);
+    text-align: center
+}
+
+.stateText_e92794 {
+    max-width: 360px
+}
+
+/*# sourceMappingURL=6b94d780e79ce03c.css.map*/

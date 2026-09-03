@@ -2,7 +2,7 @@ n.d(t, { A: () => en });
 var l = n(477900),
     i = n(582128),
     s = n(38021),
-    r = n(357701),
+    r = n(736924),
     a = n(796637),
     o = n(117600);
 n(321073);
@@ -189,8 +189,8 @@ function w() {
     });
 }
 var H = n(866665),
-    B = n(939249),
-    k = n(789645),
+    k = n(939249),
+    B = n(789645),
     F = n(821609),
     K = n(47167),
     z = n(485947),
@@ -222,12 +222,12 @@ function ee(e) {
                                   (0, l.jsx)(z.A, { className: Q.TK, children: D.intl.string(U.default.oHWnLy) }),
                                   (0, l.jsx)(H.m, {
                                       text: D.intl.string(D.t.WAI6xu),
-                                      children: (0, l.jsx)(B.D, {
+                                      children: (0, l.jsx)(k.D, {
                                           className: Q.r,
                                           onClick: i,
                                           role: "button",
                                           "aria-label": D.intl.string(U.default.F3dWTe),
-                                          children: (0, l.jsx)(k.P, {
+                                          children: (0, l.jsx)(B.P, {
                                               size: "xs",
                                               color: "currentColor",
                                               className: Q.CB,

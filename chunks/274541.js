@@ -1,118 +1,121 @@
-l.d(n, { A: () => q }), l(321073);
-var i = l(477900),
-    t = l(582128),
-    u = l(17928),
-    a = l(789645),
-    d = l(442433),
-    s = l(738876),
-    c = l(323073),
-    r = l(95561),
-    h = l(973854),
-    A = l(355622),
-    o = l(225142),
-    g = l(701785),
-    p = l(429933),
-    f = l(58736),
-    C = l(187360),
-    b = l(353428),
-    j = l(857071),
-    x = l(976860),
-    I = l(138298),
-    N = l(288254),
-    k = l(873614),
-    _ = l(522556),
-    w = l(734057),
-    y = l(31717),
-    E = l(71393),
-    G = l(232835),
-    L = l(47167),
-    m = l(802426),
-    T = l(652215),
-    v = l(375708),
-    S = l(172039);
-function q(e) {
-    let { channelId: n, baseChannelId: q, channelViewSource: B = "Split View", isResourceChannelView: F } = e,
-        H = (0, u.bG)([w.A], () => w.A.getChannel(n)),
-        M = (0, u.bG)([E.A], () => E.A.getGuild(H?.getGuildId())),
-        P = (0, L.Ay)(H),
-        R = (0, u.bG)([j.A], () => M?.id != null && j.A.isLurking(M.id), [M]),
-        V = (0, p.A)(n),
-        z = (0, u.bG)([g.h], () => g.h.getResourceForChannel(M?.id, n)?.title),
-        D = (0, c.vL)(H),
-        U = (0, N.Uf)(H),
-        O = t.useRef(!1);
+n.d(l, { A: () => w }), n(321073);
+var t = n(477900),
+    i = n(582128),
+    a = n(17928),
+    s = n(789645),
+    r = n(442433),
+    c = n(738876),
+    u = n(323073),
+    d = n(95561),
+    o = n(973854),
+    A = n(355622),
+    h = n(225142),
+    g = n(701785),
+    m = n(429933),
+    x = n(58736),
+    f = n(187360),
+    j = n(353428),
+    N = n(857071),
+    C = n(976860),
+    E = n(138298),
+    p = n(288254),
+    I = n(873614),
+    _ = n(522556),
+    b = n(734057),
+    T = n(31717),
+    S = n(71393),
+    y = n(232835),
+    v = n(47167),
+    k = n(802426),
+    R = n(652215),
+    G = n(375708),
+    L = n(172039);
+function w(e) {
+    let { channelId: l, baseChannelId: w, channelViewSource: D = "Split View", isResourceChannelView: F } = e,
+        B = (0, a.bG)([b.A], () => b.A.getChannel(l)),
+        H = (0, a.bG)([S.A], () => S.A.getGuild(B?.getGuildId())),
+        O = (0, v.Ay)(B),
+        P = (0, a.bG)([N.A], () => H?.id != null && N.A.isLurking(H.id), [H]),
+        V = (0, m.A)(l),
+        M = (0, a.bG)([g.h], () => g.h.getResourceForChannel(H?.id, l)?.title),
+        U = (0, u.vL)(B),
+        q = (0, p.Uf)(B),
+        z = i.useRef(!1);
     if (
-        (t.useEffect(() => {
-            null == H ||
-                O.current ||
-                ((O.current = !0),
-                (0, r.zV)(T.HAw.CHANNEL_OPENED, { ...(0, r.qL)(H.id), channel_view: B }),
-                (0, h.A)({ channelId: H.id }));
-        }, [H, B]),
-        null == H || null == M)
+        (i.useEffect(() => {
+            null == B ||
+                z.current ||
+                ((z.current = !0),
+                (0, d.zV)(R.HAw.CHANNEL_OPENED, { ...(0, d.qL)(B.id), channel_view: D }),
+                (0, o.A)({ channelId: B.id }));
+        }, [B, D]),
+        null == B || null == H)
     )
         return null;
-    let X = [];
-    return (R || X.push((0, i.jsx)(C.A, { channel: H }, "notifications")),
+    let W = l === w,
+        X = [];
+    return (P || W || X.push((0, t.jsx)(f.A, { channel: B }, "notifications")),
     X.push(
-        (0, i.jsx)(
-            f.Ay.Icon,
-            { icon: a.P, tooltip: v.intl.string(v.t.cpT0Cq), onClick: () => I.A.closeChannelSidebar(q) },
+        (0, t.jsx)(
+            x.Ay.Icon,
+            { icon: s.P, tooltip: G.intl.string(G.t.cpT0Cq), onClick: () => E.A.closeChannelSidebar(w) },
             "close",
         ),
     ),
-    D)
-        ? (0, i.jsx)(_.A, { guild: M, channelId: H.id })
-        : null != U
-          ? (0, i.jsx)(k.A, { guild: M, channelId: U })
-          : (0, i.jsxs)(i.Fragment, {
+    U)
+        ? (0, t.jsx)(_.A, { guild: H, channelId: B.id })
+        : null != q
+          ? (0, t.jsx)(I.A, { guild: H, channelId: q })
+          : (0, t.jsxs)(t.Fragment, {
                 children: [
-                    (0, i.jsx)(s.A, { channel: H, draftType: y.C.ChannelMessage }),
-                    (0, i.jsx)(f.Ay, {
+                    (0, t.jsx)(c.A, { channel: B, draftType: T.C.ChannelMessage }),
+                    (0, t.jsx)(x.Ay, {
                         toolbar: X,
-                        "aria-label": v.intl.string(v.t.BIYAqa),
-                        children: (0, b.zF)({
-                            channel: H,
-                            channelName: V ? z : P,
-                            guild: M,
+                        "aria-label": G.intl.string(G.t.BIYAqa),
+                        children: (0, j.zF)({
+                            channel: B,
+                            channelName: V ? M : O,
+                            guild: H,
                             inSidebar: !0,
                             handleContextMenu: function (e) {
-                                null != H &&
-                                    null != M &&
-                                    (0, d.L3)(e, async () => {
+                                null != B &&
+                                    null != H &&
+                                    (0, r.L3)(e, async () => {
                                         let { default: e } = await Promise.all([
-                                            l.e("926132"),
-                                            l.e("947502"),
-                                            l.e("343266"),
-                                            l.e("309004"),
-                                            l.e("412255"),
-                                            l.e("63340"),
-                                            l.e("430997"),
-                                            l.e("379995"),
-                                            l.e("544058"),
-                                            l.e("591377"),
-                                            l.e("35723"),
-                                            l.e("256372"),
-                                            l.e("29542"),
-                                            l.e("359545"),
-                                        ]).then(l.bind(l, 22496));
-                                        return (n) => (0, i.jsx)(e, { ...n, channel: H, guild: M });
+                                            n.e("926132"),
+                                            n.e("947502"),
+                                            n.e("343266"),
+                                            n.e("309004"),
+                                            n.e("412255"),
+                                            n.e("63340"),
+                                            n.e("430997"),
+                                            n.e("379995"),
+                                            n.e("544058"),
+                                            n.e("591377"),
+                                            n.e("35723"),
+                                            n.e("256372"),
+                                            n.e("29542"),
+                                            n.e("359545"),
+                                        ]).then(n.bind(n, 22496));
+                                        return (l) => (0, t.jsx)(e, { ...l, channel: B, guild: H });
                                     });
                             },
-                            handleClick: function () {
-                                if (null == H) return;
-                                let e = G.A.getMessages(H.id);
-                                if (F) {
-                                    (0, x.pX)(T.BVt.CHANNEL(H.guild_id, H.id)), (0, o.bN)(H.guild_id, null);
-                                    return;
-                                }
-                                (0, x.uh)(H.guild_id, H.id, e.jumpTargetId);
-                            },
+                            handleClick: W
+                                ? void 0
+                                : function () {
+                                      if (null == B) return;
+                                      let e = y.A.getMessages(B.id);
+                                      if (F) {
+                                          (0, C.pX)(R.BVt.CHANNEL(B.guild_id, B.id)), (0, h.bN)(B.guild_id, null);
+                                          return;
+                                      }
+                                      (0, C.uh)(B.guild_id, B.id, e.jumpTargetId);
+                                  },
                         }),
                     }),
-                    (0, i.jsx)("div", {
-                        className: S.T,
-                        children: (0, i.jsx)(m.A, { channel: H, guild: M, chatInputType: A.oU.SIDEBAR }, n),
+                    (0, t.jsx)("div", {
+                        className: L.T,
+                        children: (0, t.jsx)(k.A, { channel: B, guild: H, chatInputType: A.oU.SIDEBAR }, l),
                     }),
                 ],
             });
