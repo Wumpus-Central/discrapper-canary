@@ -1,4 +1,4 @@
-s.d(e, { QB: () => x, _k: () => _, aO: () => g, bh: () => E }), s(582128);
+s.d(e, { QB: () => g, _k: () => _, aO: () => x, bh: () => E }), s(582128);
 var n = s(661531),
     i = s(628284),
     r = s(695366),
@@ -9,77 +9,77 @@ var n = s(661531),
     d = s(739010),
     u = s(335891),
     m = s(259960),
-    h = s(239093),
-    N = s(375708);
-function x() {
+    N = s(239093),
+    h = s(375708);
+function g() {
     return {
         [d.PN.ALL_GOOD]: {
-            title: N.t.uaKrRi,
-            description: N.intl.format(N.t.pEdBD4, {
-                termsOfService: h.d$.TOS_LINK,
-                communityGuidelines: h.d$.COMMUNITY_GUIDELINES,
+            title: h.t.uaKrRi,
+            description: h.intl.format(h.t.pEdBD4, {
+                termsOfService: N.d$.TOS_LINK,
+                communityGuidelines: N.d$.COMMUNITY_GUIDELINES,
             }),
-            status: N.t["/Idfao"],
+            status: h.t["/Idfao"],
             Icon: i.y,
             color: n.A.colors.STATUS_POSITIVE,
         },
         [d.PN.LIMITED]: {
-            title: N.t.epkcmS,
-            description: N.intl.string(N.t["774juc"]),
-            status: N.t.umleq4,
+            title: h.t.epkcmS,
+            description: h.intl.string(h.t["774juc"]),
+            status: h.t.umleq4,
             Icon: r.E,
             color: n.A.colors.STATUS_WARNING,
         },
         [d.PN.VERY_LIMITED]: {
-            title: N.t.crzE2X,
-            description: N.intl.string(N.t["T/Ufh9"]),
-            status: N.t.WBtMHf,
+            title: h.t.crzE2X,
+            description: h.intl.string(h.t["T/Ufh9"]),
+            status: h.t.WBtMHf,
             Icon: r.E,
             color: n.A.unsafe_rawColors.ORANGE_345,
         },
         [d.PN.AT_RISK]: {
-            title: N.t.XRNVzO,
-            description: N.intl.string(N.t["hbH+9S"]),
-            status: N.t["7f+4Lg"],
+            title: h.t.XRNVzO,
+            description: h.intl.string(h.t["hbH+9S"]),
+            status: h.t["7f+4Lg"],
             Icon: r.E,
             color: n.A.colors.ICON_FEEDBACK_CRITICAL,
         },
         [d.PN.SUSPENDED]: {
-            title: N.t.MExFkz,
-            description: N.intl.string(N.t["2liUvt"]),
-            status: N.t["0OONGB"],
+            title: h.t.MExFkz,
+            description: h.intl.string(h.t["2liUvt"]),
+            status: h.t["0OONGB"],
             Icon: a.a,
             color: n.A.colors.ICON_MUTED,
         },
     };
 }
-function g() {
+function x() {
     let t = (0, u.K)();
-    if (!(0, m.v)()) return null;
-    let { status: e } = x()[t.state];
-    return N.intl.formatToPlainString(e, { hook: (t) => t });
+    if (!(0, m.v)()) return h.intl.string(h.t.ZTNur7);
+    let { status: e } = g()[t.state];
+    return h.intl.formatToPlainString(e, { hook: (t) => t });
 }
 function E() {
     let t = (0, u.K)();
-    if (!(0, m.v)()) return N.intl.string(N.t["9m2Bkk"]);
+    if (!(0, m.v)()) return h.intl.string(h.t["9m2Bkk"]);
     switch (t.state) {
         case d.PN.ALL_GOOD:
-            return N.intl.format(N.t.pEdBD4, {
+            return h.intl.format(h.t.pEdBD4, {
                 termsOfService: (t) => {
-                    t.stopPropagation(), (0, c.A)(h.d$.TOS_LINK);
+                    t.stopPropagation(), (0, c.A)(N.d$.TOS_LINK);
                 },
                 communityGuidelines: (t) => {
-                    t.stopPropagation(), (0, c.A)(h.d$.COMMUNITY_GUIDELINES);
+                    t.stopPropagation(), (0, c.A)(N.d$.COMMUNITY_GUIDELINES);
                 },
             });
         case d.PN.LIMITED:
-            return N.intl.string(N.t["774juc"]);
+            return h.intl.string(h.t["774juc"]);
         case d.PN.VERY_LIMITED:
-            return N.intl.string(N.t["T/Ufh9"]);
+            return h.intl.string(h.t["T/Ufh9"]);
         case d.PN.AT_RISK:
-            return N.intl.string(N.t["hbH+9S"]);
+            return h.intl.string(h.t["hbH+9S"]);
         case d.PN.SUSPENDED:
-            return N.intl.string(N.t["2liUvt"]);
+            return h.intl.string(h.t["2liUvt"]);
     }
 }
 let I = {
