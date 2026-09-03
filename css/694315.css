@@ -79,6 +79,11 @@
     width: 400px
 }
 
+.chatLayerWrapper__01ae2.connected__01ae2 .container__01ae2 {
+    border-inline-start-color: var(--border-normal);
+    border-radius: 0
+}
+
 .floating__01ae2 {
     border-inline-end: 1px solid var(--background-base-lower);
     border-inline-start: 1px solid var(--background-base-lower);
@@ -99,9 +104,15 @@
 .resizeHandle__01ae2 {
     background: var(--background-gradient-app-frame, var(--background-base-lowest));
     cursor: ew-resize;
-    flex-shrink: 0;
-    height: 100%;
+    inset-block: 0;
+    inset-inline-start: calc(var(--chat-resize-handle-width)*-1);
+    position: absolute;
     width: var(--chat-resize-handle-width)
+}
+
+.chatLayerWrapper__01ae2.connected__01ae2 .resizeHandle__01ae2 {
+    background: none;
+    inset-inline-start: calc(var(--chat-resize-handle-width)/-2)
 }
 
 .chatTarget__01ae2 {
@@ -161,4 +172,4 @@
     width: 580px
 }
 
-/*# sourceMappingURL=694315.015afc23579477bc.css.map*/
+/*# sourceMappingURL=694315.a95bb9301a68f027.css.map*/
