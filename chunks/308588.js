@@ -16,6 +16,7 @@ var i,
         (i[(i.OPEN_PLAN_SELECTION_MODAL = 5)] = "OPEN_PLAN_SELECTION_MODAL"),
         (i[(i.OPEN_PREMIUM_GROUP_PAYMENT_MODAL = 6)] = "OPEN_PREMIUM_GROUP_PAYMENT_MODAL"),
         (i[(i.OPEN_SOCIAL_LAYER_STOREFRONT = 7)] = "OPEN_SOCIAL_LAYER_STOREFRONT"),
+        (i[(i.OPEN_GUILD_BOOST_CHECKOUT = 8)] = "OPEN_GUILD_BOOST_CHECKOUT"),
         i);
 class u extends l.G {
     constructor() {
