@@ -1,91 +1,91 @@
-t.d(l, { A: () => x, Y: () => f });
-var i = t(477900),
-    n = t(582128),
-    s = t(821609),
-    a = t(376728),
-    r = t(415951),
-    u = t(849841),
-    c = t(976860),
-    o = t(345942),
-    d = t(449054),
-    I = t(348943),
-    A = t(461888),
-    m = t(652215),
-    C = t(375708);
-function f(e) {
+i.d(l, { A: () => g, Y: () => x });
+var t = i(477900),
+    n = i(582128),
+    s = i(821609),
+    a = i(376728),
+    r = i(415951),
+    u = i(849841),
+    c = i(976860),
+    o = i(345942),
+    d = i(449054),
+    I = i(348943),
+    m = i(461888),
+    A = i(652215),
+    C = i(375708);
+function x(e) {
     let {
             guildId: l,
-            ctaType: t,
+            ctaType: i,
             submitting: a,
             onGoToGuild: r,
             onAcceptInvite: o,
             onStartApplication: I,
-            onComplete: f,
+            onComplete: x,
         } = e,
-        [x, E] = n.useState(!1),
-        g = (0, u.A)(l),
-        N = n.useCallback(() => {
-            (0, c.pX)(m.BVt.GUILD_MEMBER_VERIFICATION(l));
+        [g, N] = n.useState(!1),
+        E = (0, u.A)(l),
+        h = n.useCallback(() => {
+            (0, c.pX)(A.BVt.GUILD_MEMBER_VERIFICATION(l));
         }, [l]),
         v = n.useCallback(async () => {
-            await (0, d.Z2)(l, { object: m.ZSU.GUILD_PROFILE });
+            await (0, d.Z2)(l, { object: A.ZSU.GUILD_PROFILE });
         }, [l]),
-        { text: _, onClick: h } = n.useMemo(() => {
-            switch (t) {
-                case A.SP.IS_MEMBER:
+        { text: j, onClick: _ } = n.useMemo(() => {
+            switch (i) {
+                case m.SP.IS_MEMBER:
                     return { text: C.intl.string(C.t.IRoQXr), onClick: r };
-                case A.SP.ADOPT_TAG:
-                    return { text: C.intl.string(C.t.cQDYRu), onClick: g };
-                case A.SP.HAS_APPLICATION:
-                    return { text: C.intl.string(C.t["4yfIDk"]), onClick: N };
-                case A.SP.APPLY_TO_JOIN:
+                case m.SP.ADOPT_TAG:
+                    return { text: C.intl.string(C.t.cQDYRu), onClick: E };
+                case m.SP.HAS_APPLICATION:
+                    return { text: C.intl.string(C.t["4yfIDk"]), onClick: h };
+                case m.SP.APPLY_TO_JOIN:
                     return { text: C.intl.string(C.t["7XdMW2"]), onClick: I };
-                case A.SP.LURK_DISCOVERABLE:
+                case m.SP.LURK_DISCOVERABLE:
                     return { text: C.intl.string(C.t.VJlc0S), onClick: v };
-                case A.SP.JOIN_VIA_INVITE:
+                case m.SP.JOIN_VIA_INVITE:
                     return { text: C.intl.string(C.t.VJlc0S), onClick: o };
-                case A.SP.ACCEPT_ROLES:
+                case m.SP.ACCEPT_ROLES:
                     return { text: C.intl.string(C.t.MMlhsr), onClick: o };
                 default:
                     return { text: null, onClick: null };
             }
-        }, [t, N, v, o, r, I, g]),
-        j = n.useCallback(
+        }, [i, h, v, o, r, I, E]),
+        f = n.useCallback(
             async (e) => {
-                e.stopPropagation(), E(!0);
+                e.stopPropagation(), N(!0);
                 try {
-                    await h?.();
+                    await _?.();
                 } catch {
                 } finally {
-                    f?.(), E(!1);
+                    x?.(), N(!1);
                 }
             },
-            [h, f],
+            [_, x],
         );
-    return null == _
+    return null == j
         ? null
-        : (0, i.jsx)(s.$, { variant: "active", size: "sm", text: _, fullWidth: !0, loading: x || a, onClick: j });
+        : (0, t.jsx)(s.$, { variant: "active", size: "sm", text: j, fullWidth: !0, loading: g || a, onClick: f });
 }
-function x(e) {
-    let { profile: l, onComplete: t } = e,
-        { guildId: s, validInviteKey: u, ctaType: c } = (0, A.Ay)(l),
+function g(e) {
+    let { profile: l, onComplete: i } = e,
+        { guildId: s, validInviteKey: u, ctaType: c } = (0, m.Ay)(l),
         d = n.useCallback(() => (0, o.u)(s), [s]),
-        m = n.useCallback(() => {
+        A = n.useCallback(() => {
             null != u && a.Ay.acceptInvite({ inviteKey: u, context: { location: "guild_profile" } });
         }, [u]),
         C = n.useCallback(() => {
             l.visibility !== I.n.PUBLIC_WITH_RECRUITMENT && null != u
-                ? m()
+                ? A()
                 : r.A.openMemberVerificationModal(s, void 0, u);
-        }, [m, s, l.visibility, u]);
+        }, [A, s, l.visibility, u]);
     return null == c
         ? null
-        : (0, i.jsx)(f, {
+        : (0, t.jsx)(x, {
               guildId: s,
               ctaType: c,
               onGoToGuild: d,
-              onAcceptInvite: m,
+              onAcceptInvite: A,
               onStartApplication: C,
-              onComplete: t,
+              onComplete: i,
           });
 }

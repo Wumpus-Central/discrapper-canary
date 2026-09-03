@@ -42,8 +42,8 @@ var l,
     O = n(701785),
     S = n(446600),
     m = n(750385),
-    D = n(411153),
-    R = n(734057),
+    R = n(411153),
+    D = n(734057),
     h = n(317525),
     L = n(994500),
     C = n(287809),
@@ -860,7 +860,7 @@ function el(e, t) {
                             return eu(
                                 e,
                                 k.gGk.NAME,
-                                (e) => R.A.getChannel(e),
+                                (e) => D.A.getChannel(e),
                                 (e) => (0, g.m1)(e, C.default, L.A, !0),
                             );
                         case k.GaG.USER:
@@ -977,7 +977,7 @@ function el(e, t) {
                             return eu(
                                 e,
                                 k.gGk.STATUS,
-                                (e) => R.A.getChannel(e),
+                                (e) => D.A.getChannel(e),
                                 (e) => (0, g.m1)(e, C.default, L.A, !0),
                             );
                         default:
@@ -1018,7 +1018,7 @@ function el(e, t) {
                                         (t.channel = eu(
                                             e,
                                             "",
-                                            (e) => R.A.getChannel(e),
+                                            (e) => D.A.getChannel(e),
                                             (e) => e,
                                             e.options.channel_id,
                                         )),
@@ -1067,7 +1067,7 @@ function el(e, t) {
                                             ? (e.subtarget = b.intl.string(b.t.MSYhgh))
                                             : (e.subtarget = eo(
                                                   t.id,
-                                                  (e) => R.A.getChannel(e),
+                                                  (e) => D.A.getChannel(e),
                                                   (e) => (0, g.m1)(e, C.default, L.A, !0),
                                               ));
                                 }
@@ -1083,7 +1083,7 @@ function el(e, t) {
                                 case k.gGk.PUBLIC_UPDATES_CHANNEL_ID:
                                     return eE(
                                         e,
-                                        (e) => R.A.getChannel(e),
+                                        (e) => D.A.getChannel(e),
                                         (e) => (0, g.m1)(e, C.default, L.A, !0),
                                     );
                                 case k.gGk.AFK_TIMEOUT:
@@ -1106,11 +1106,11 @@ function el(e, t) {
                                     let t = [],
                                         { added: n, removed: l } = er(e.oldValue, e.newValue);
                                     if (n.length > 0) {
-                                        let e = new D.QO(k.gGk.PERMISSIONS_GRANTED, null, n);
+                                        let e = new R.QO(k.gGk.PERMISSIONS_GRANTED, null, n);
                                         t.push(e);
                                     }
                                     if (l.length > 0) {
-                                        let e = new D.QO(k.gGk.PERMISSIONS_DENIED, null, l);
+                                        let e = new R.QO(k.gGk.PERMISSIONS_DENIED, null, l);
                                         t.push(e);
                                     }
                                     return t;
@@ -1120,11 +1120,11 @@ function el(e, t) {
                                     let t = [],
                                         { added: n, removed: l } = er(e.oldValue, e.newValue);
                                     if (n.length > 0) {
-                                        let l = new D.QO(e.key, null, n);
+                                        let l = new R.QO(e.key, null, n);
                                         t.push(l);
                                     }
                                     if (l.length > 0) {
-                                        let e = new D.QO(k.gGk.PERMISSIONS_RESET, l, l);
+                                        let e = new R.QO(k.gGk.PERMISSIONS_RESET, l, l);
                                         t.push(e);
                                     }
                                     return t;
@@ -1145,11 +1145,11 @@ function el(e, t) {
                                             return { added: i, removed: s };
                                         })(e.oldValue, e.newValue);
                                     if (n.length > 0) {
-                                        let l = new D.QO(e.key, null, n);
+                                        let l = new R.QO(e.key, null, n);
                                         t.push(l);
                                     }
                                     if (l.length > 0) {
-                                        let n = new D.QO(e.key, l, null);
+                                        let n = new R.QO(e.key, l, null);
                                         t.push(n);
                                     }
                                     return t;
@@ -1181,7 +1181,7 @@ function el(e, t) {
                                             let n = (e.oldValue & t) === t,
                                                 a = (e.newValue & t) === t;
                                             if (n === a) return;
-                                            let i = new D.QO(l[t], !n, !a);
+                                            let i = new R.QO(l[t], !n, !a);
                                             r.push(i);
                                         }),
                                         r
@@ -1231,7 +1231,7 @@ function el(e, t) {
                                             e,
                                             (e) =>
                                                 e
-                                                    .map(R.A.getChannel)
+                                                    .map(D.A.getChannel)
                                                     .filter((e) => null != e)
                                                     .map((e) => (0, g.m1)(e, C.default, L.A, !0)),
                                             (e) =>
@@ -1307,8 +1307,8 @@ function ea(e) {
 function ei(e, t) {
     let n = Array.isArray(e.oldValue) ? e.oldValue : [],
         l = Array.isArray(e.newValue) ? e.newValue : [],
-        r = R.A.getChannel(t.targetId),
-        a = r?.parent_id != null ? R.A.getChannel(r.parent_id) : null,
+        r = D.A.getChannel(t.targetId),
+        a = r?.parent_id != null ? D.A.getChannel(r.parent_id) : null,
         i = a?.availableTags ?? [],
         s = {};
     i.forEach((e) => {
@@ -1321,11 +1321,11 @@ function ei(e, t) {
         _ = [];
     for (let e of o) {
         let t = s[e] ?? { id: e, name: e };
-        _.push(new D.QO(k.gGk.AVAILABLE_TAG_ADD, null, t));
+        _.push(new R.QO(k.gGk.AVAILABLE_TAG_ADD, null, t));
     }
     for (let e of c) {
         let t = s[e] ?? { id: e, name: e };
-        _.push(new D.QO(k.gGk.AVAILABLE_TAG_DELETE, null, t));
+        _.push(new R.QO(k.gGk.AVAILABLE_TAG_DELETE, null, t));
     }
     return _.length > 0 ? _ : e;
 }
@@ -1345,16 +1345,16 @@ function es(e) {
         }),
         l.length < r.length)
     ) {
-        for (let e in i) if (null == a[e]) return new D.QO(k.gGk.AVAILABLE_TAG_ADD, null, ea(i[e]));
+        for (let e in i) if (null == a[e]) return new R.QO(k.gGk.AVAILABLE_TAG_ADD, null, ea(i[e]));
     }
     if (l.length > r.length) {
-        for (let e in a) if (null == i[e]) return new D.QO(k.gGk.AVAILABLE_TAG_DELETE, null, ea(a[e]));
+        for (let e in a) if (null == i[e]) return new R.QO(k.gGk.AVAILABLE_TAG_DELETE, null, ea(a[e]));
     }
     for (let e in a) {
         let t = a[e],
             n = i[e];
         if (n?.name !== t.name || n?.emoji_id !== t.emoji_id || n?.emoji_name !== t.emoji_name)
-            return new D.QO(k.gGk.AVAILABLE_TAG_EDIT, ea(t), ea(n));
+            return new R.QO(k.gGk.AVAILABLE_TAG_EDIT, ea(t), ea(n));
     }
     return e;
 }
@@ -1364,7 +1364,7 @@ function eE(e, t, n) {
     return (
         null != e.newValue && ((l = t(e.newValue)), null != n && null != l && (l = n(l))),
         null != e.oldValue && ((r = t(e.oldValue)), null != n && null != r && (r = n(r))),
-        new D.QO(e.key, r || e.oldValue, l || e.newValue)
+        new R.QO(e.key, r || e.oldValue, l || e.newValue)
     );
 }
 function eu(e, t, n, l, r) {

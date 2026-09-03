@@ -1,5 +1,5 @@
-s.d(i, { P: () => t });
-function t(e) {
-    let { maxWidth: i, minWidth: s } = e;
-    return i <= s;
+a.d(i, { P: () => n });
+function n(e) {
+    let { maxWidth: i, minWidth: a } = e;
+    return i <= a;
 }

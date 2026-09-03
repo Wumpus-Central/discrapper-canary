@@ -6,8 +6,8 @@ var i = n(729937),
     a = n(107750),
     o = n(210528),
     c = n(655116),
-    d = n(272984),
-    u = n(652215);
+    u = n(272984),
+    d = n(652215);
 let h = 30 * r.A.Millis.SECOND;
 function m(e) {
     return null != e.getActiveSocketAndDevice() || o.A.isProtocolRegistered();
@@ -17,7 +17,7 @@ function g() {
     if (null != e) return Promise.resolve(e);
     if (!o.A.isProtocolRegistered()) return Promise.reject(Error("protocol is not registered"));
     let t = c.A.getPlayableComputerDevices();
-    if (s.Ay.isObservedAppRunning(l.A.get(u.fg2.SPOTIFY).name) && t.length > 0) {
+    if (s.Ay.isObservedAppRunning(l.A.get(d.fg2.SPOTIFY).name) && t.length > 0) {
         let { socket: e, device: n } = t[0];
         return (0, a.VR)(e.accountId, n.id), Promise.resolve({ socket: e, device: n });
     }
@@ -34,7 +34,7 @@ function g() {
                         (0, a.VR)(n.accountId, s.id), e({ socket: n, device: s });
                     }));
         }
-        c.A.addChangeListener(l), window.open(`${d.gY}:`);
+        c.A.addChangeListener(l), window.open(`${u.gY}:`);
     });
 }
 function f() {
@@ -59,7 +59,7 @@ function p(e) {
 }
 async function A(e, t) {
     let n = await (0, i.yb)(e, t),
-        l = (0, d.NJ)(p(n.type ?? d.M0.TRACK));
+        l = (0, u.NJ)(p(n.type ?? u.M0.TRACK));
     if (null === l) throw Error(`invalid type ${n.type}`);
     return {
         context_uri: "string" == typeof n.context_uri ? n.context_uri : void 0,

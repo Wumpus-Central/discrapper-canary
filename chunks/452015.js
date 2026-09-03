@@ -540,8 +540,8 @@ function e3(e) {
     });
 }
 var e8 = n(650583),
-    e6 = n(872330);
-let e4 = (0, J.Ld)(),
+    e4 = n(872330);
+let e6 = (0, J.Ld)(),
     te = "PrivateChannelRecipientsInvite",
     tt = { ADD_FRIENDS_TO_DM: "Add Friends to DM", NEW_GROUP_DM: "New Group DM", MEMBER_LIST: "Member List" };
 function tn(e) {
@@ -574,17 +574,17 @@ function ts(e) {
             (0, eO.uh)(el.ME, t.id), n();
         },
         children: (0, i.jsxs)("div", {
-            className: e6.us,
+            className: e4.us,
             children: [
                 (0, i.jsx)(p.eu, { src: (0, W.Y)(t), size: E._3.SIZE_24, "aria-label": l }),
                 (0, i.jsx)(m.E, {
                     variant: "text-sm/medium",
                     color: "text-strong",
                     tag: "span",
-                    className: e6.J2,
+                    className: e4.J2,
                     children: l,
                 }),
-                (0, i.jsx)("span", { className: e6.Pd, children: a()(ez.default.extractTimestamp(r)).fromNow() }),
+                (0, i.jsx)("span", { className: e4.Pd, children: a()(ez.default.extractTimestamp(r)).fromNow() }),
             ],
         }),
     });
@@ -605,7 +605,7 @@ function ta(e) {
                 },
             },
         ],
-        input: (0, i.jsx)(m.E, { variant: "text-md/normal", className: e6.Jv, children: ea.intl.string(ea.t.cjE7wH) }),
+        input: (0, i.jsx)(m.E, { variant: "text-md/normal", className: e4.Jv, children: ea.intl.string(ea.t.cjE7wH) }),
         ...l,
         children: r
             .filter(eW.Vq)
@@ -871,7 +871,7 @@ class tu extends l.PureComponent {
             }
         }
         return (0, i.jsxs)("div", {
-            className: e6.ON,
+            className: e4.ON,
             children: [
                 (0, i.jsx)(S.k, {
                     inputRef: this.searchBarRef,
@@ -887,7 +887,7 @@ class tu extends l.PureComponent {
                     role: "combobox",
                     "aria-autocomplete": "list",
                     "aria-haspopup": "listbox",
-                    "aria-controls": e4,
+                    "aria-controls": e6,
                     "aria-expanded": d,
                     "aria-activedescendant": d ? `user-row-${o}` : void 0,
                 }),
@@ -900,7 +900,7 @@ class tu extends l.PureComponent {
         let { isInNitroCapTreatment: e, nitroAudience: t } = this.props;
         return e && (0, ei.yh)(t)
             ? (0, i.jsx)("div", {
-                  className: e6.qu,
+                  className: e4.qu,
                   children: (0, i.jsx)(eI, {
                       ref: this.nitroUpsellBannerRef,
                       location: te,
@@ -927,12 +927,12 @@ class tu extends l.PureComponent {
     }
     renderMobileCloseButton = () =>
         (0, i.jsx)("div", {
-            className: e6.Lh,
+            className: e4.Lh,
             ref: this._mobileCloseRef,
             children: (0, i.jsx)(C.xp, {
                 containerRef: this._mobileCloseRef,
                 children: (0, i.jsx)("div", {
-                    children: (0, i.jsx)(V.A, { className: e6.RR, closeAction: this.props.onClose, keybind: "ESC" }),
+                    children: (0, i.jsx)(V.A, { className: e4.RR, closeAction: this.props.onClose, keybind: "ESC" }),
                 }),
             }),
         });
@@ -959,8 +959,8 @@ class tu extends l.PureComponent {
               : {
                     ref: this.scrollerRef,
                     sections: [t.length],
-                    className: e6.XG,
-                    innerClassName: e6.bv,
+                    className: e4.XG,
+                    innerClassName: e4.bv,
                     renderRow: this.renderFlatRow,
                     rowHeight: this.getFlatRowHeight,
                     renderSection: this.renderEmptySection,
@@ -971,7 +971,7 @@ class tu extends l.PureComponent {
                     fade: !0,
                     role: void 0,
                     innerRole: "group",
-                    innerId: e4,
+                    innerId: e6,
                 };
     }
     getEmptyStateListProps() {
@@ -984,7 +984,7 @@ class tu extends l.PureComponent {
             renderRow: () => {
                 let t = null != e && e.isMultiUserDM();
                 return (0, i.jsxs)("div", {
-                    className: e6.wV,
+                    className: e4.wV,
                     children: [
                         (0, i.jsx)(m.E, {
                             variant: "text-md/normal",
@@ -1010,16 +1010,16 @@ class tu extends l.PureComponent {
         return {
             ref: this.scrollerRef,
             sections: e.map((e) => e.results.length + +!!e.showSpinner),
-            className: e6.XG,
-            innerClassName: e6.bv,
+            className: e4.XG,
+            innerClassName: e4.bv,
             renderRow: (l) => {
                 let { section: s, row: a } = l,
                     o = e[s];
                 if (null == o || t.has(o.type)) return null;
                 if (a >= o.results.length)
                     return (0, i.jsx)("div", {
-                        className: e6.Q_,
-                        children: (0, i.jsx)(_.y, { type: _.t.SPINNING_CIRCLE, className: e6.u1 }),
+                        className: e4.Q_,
+                        children: (0, i.jsx)(_.y, { type: _.t.SPINNING_CIRCLE, className: e4.u1 }),
                     });
                 let u = o.results[a];
                 if (null == u) return null;
@@ -1038,7 +1038,7 @@ class tu extends l.PureComponent {
                     a = "friends" === r.type ? ea.intl.string(ea.t.TdEu5X) : ea.intl.string(ea.t.y29JXs),
                     o = s ? N._ : T.a;
                 return (0, i.jsxs)(A.D, {
-                    className: e6.bV,
+                    className: e4.bV,
                     onClick: () => this.handleSectionToggle(r.type),
                     "aria-expanded": !s,
                     "aria-label": a,
@@ -1055,7 +1055,7 @@ class tu extends l.PureComponent {
             fade: !0,
             role: void 0,
             innerRole: "group",
-            innerId: e4,
+            innerId: e6,
         };
     }
     handleSectionToggle = (e) => {
@@ -1494,10 +1494,10 @@ function td(e) {
         { analyticsLocations: o } = (0, Y.Ay)(H.A.NEW_GROUP_DM_INVITE_MODAL),
         u = (0, z.Jo)(Array.from(t), eM.default, ek.A);
     return (0, i.jsxs)("div", {
-        className: e6.zj,
+        className: e4.zj,
         children: [
             (0, i.jsx)(q.X, {
-                className: e6.r9,
+                className: e4.r9,
                 channel: null,
                 previewIcon: l,
                 onIconChange: r,
@@ -1507,7 +1507,7 @@ function td(e) {
                 allowRemovingIcon: !1,
             }),
             (0, i.jsx)(m.E, {
-                className: e6.hL,
+                className: e4.hL,
                 variant: "text-sm/medium",
                 color: "text-muted",
                 children: ea.intl.string(ea.t.YynaLK),

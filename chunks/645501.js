@@ -1,4 +1,4 @@
-n.d(t, { A: () => g });
+n.d(t, { A: () => h });
 var l = n(477900);
 n(582128);
 var s = n(297264),
@@ -10,13 +10,13 @@ var s = n(297264),
     d = n(652215),
     u = n(375708),
     m = n(373599);
-let g = function (e) {
+let h = function (e) {
     let { personalizedResults: t, label: n } = e,
-        g = n ?? u.intl.string(u.t.NSv5KV);
+        h = n ?? u.intl.string(u.t.NSv5KV);
     return (0, l.jsxs)("div", {
         className: m.L,
         children: [
-            (0, l.jsx)(s.D, { variant: "heading-lg/semibold", children: g }),
+            (0, l.jsx)(s.D, { variant: "heading-lg/semibold", children: h }),
             t &&
                 (0, l.jsx)(i.m, {
                     text: u.intl.string(u.t["3taPdj"]),

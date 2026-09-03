@@ -19,8 +19,8 @@ var l = n(477900),
     O = n(147036),
     S = n(403362),
     m = n(240248),
-    D = n(427262),
-    R = n(555067),
+    R = n(427262),
+    D = n(555067),
     h = n(652215),
     L = n(375708),
     C = n(165259);
@@ -87,7 +87,7 @@ function p(e) {
                 let u = 0,
                     g = t.changes
                         .flatMap((a) => {
-                            if (R.shouldNotRenderChangeDetail(t, a)) return null;
+                            if (D.shouldNotRenderChangeDetail(t, a)) return null;
                             let { oldValue: i, newValue: s } = (() => {
                                     if (
                                         (t.action === h.F_X.CHANNEL_UPDATE || t.action === h.F_X.CHANNEL_CREATE) &&
@@ -109,8 +109,8 @@ function p(e) {
                                     }
                                     return t.action === h.F_X.GUILD_UPDATE && a.key === h.gGk.OWNER_ID
                                         ? {
-                                              oldValue: D.Ay.getUserTag(a.oldValue, { mode: "username" }),
-                                              newValue: D.Ay.getUserTag(a.newValue, { mode: "username" }),
+                                              oldValue: R.Ay.getUserTag(a.oldValue, { mode: "username" }),
+                                              newValue: R.Ay.getUserTag(a.newValue, { mode: "username" }),
                                           }
                                         : a;
                                 })(),
@@ -144,7 +144,7 @@ function p(e) {
                                                           "div",
                                                           {
                                                               className: C.subListItem,
-                                                              children: R.getStringForPermission(e, t),
+                                                              children: D.getStringForPermission(e, t),
                                                           },
                                                           n,
                                                       ),
@@ -165,7 +165,7 @@ function p(e) {
                                                             "div",
                                                             {
                                                                 className: C.subListItem,
-                                                                children: R.getStringForRemovedChannelFlag(e),
+                                                                children: D.getStringForRemovedChannelFlag(e),
                                                             },
                                                             e,
                                                         ),
@@ -178,7 +178,7 @@ function p(e) {
                                                             "div",
                                                             {
                                                                 className: C.subListItem,
-                                                                children: R.getStringForAddedChannelFlag(e),
+                                                                children: D.getStringForAddedChannelFlag(e),
                                                             },
                                                             e,
                                                         ),
@@ -557,12 +557,12 @@ function p(e) {
                                                         })
                                                     );
                                                 case h.gGk.RESOURCE_CHANNELS:
-                                                    let D, R, M, x, U, p;
+                                                    let R, D, M, x, U, p;
                                                     return (
-                                                        (D = (r = a ?? []).map((e) => e.channel_id)),
-                                                        (R = i.map((e) => e.channel_id)),
-                                                        (M = E().difference(R, D)),
-                                                        (x = E().difference(D, R)),
+                                                        (R = (r = a ?? []).map((e) => e.channel_id)),
+                                                        (D = i.map((e) => e.channel_id)),
+                                                        (M = E().difference(D, R)),
+                                                        (x = E().difference(R, D)),
                                                         (U = i.filter((e) => M.includes(e.channel_id))),
                                                         (p = r.filter((e) => x.includes(e.channel_id))),
                                                         (0, l.jsxs)("ul", {
@@ -734,5 +734,5 @@ function p(e) {
             },
             [t, n, a, s],
         );
-    return r.useMemo(() => u(R.getChangeStrings(t)), [u, t]);
+    return r.useMemo(() => u(D.getChangeStrings(t)), [u, t]);
 }

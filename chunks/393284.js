@@ -85,7 +85,7 @@ var j = n(366010),
     D = n(363195),
     P = n(885386),
     G = n(818348);
-let M = (0, i.zD)(l.X.APPEARANCE_DARK_SIDEBAR, {
+let U = (0, i.zD)(l.X.APPEARANCE_DARK_SIDEBAR, {
     useTitle: () => u.intl.string(u.t.EpSHAQ),
     useSearchTerms: () => [u.intl.string(u.t.Ksh3ik)],
     useValue: function () {
@@ -115,7 +115,7 @@ let M = (0, i.zD)(l.X.APPEARANCE_DARK_SIDEBAR, {
     },
     setValue: (e) => P.l$.updateSetting(e),
 });
-var U = n(331322),
+var M = n(331322),
     V = n(487245),
     k = n(385803);
 let w = (0, i.E2)(l.X.APPEARANCE_DEFAULT_THEMES, {
@@ -129,7 +129,7 @@ let w = (0, i.E2)(l.X.APPEARANCE_DEFAULT_THEMES, {
                     color: "text-default",
                     children: u.intl.string(u.t["0EzVst"]),
                 }),
-                (0, c.jsx)(U.B, {
+                (0, c.jsx)(M.B, {
                     direction: "horizontal",
                     wrap: !0,
                     gap: 8,
@@ -178,7 +178,7 @@ let W = (0, i.E2)(l.X.APPEARANCE_DUAL_THEME_SELECTOR, {
                             color: "text-default",
                             children: u.intl.string(u.t.NoFvjZ),
                         }),
-                        (0, c.jsxs)(U.B, {
+                        (0, c.jsxs)(M.B, {
                             direction: "horizontal",
                             wrap: !0,
                             gap: 8,
@@ -215,7 +215,7 @@ let W = (0, i.E2)(l.X.APPEARANCE_DUAL_THEME_SELECTOR, {
                             color: "text-default",
                             children: u.intl.string(u.t["EgvHH/"]),
                         }),
-                        (0, c.jsxs)(U.B, {
+                        (0, c.jsxs)(M.B, {
                             direction: "horizontal",
                             wrap: !0,
                             gap: 8,
@@ -284,5 +284,5 @@ let Q = (0, i.zD)(l.X.APPEARANCE_SAME_AS_DEVICE_THEME, {
     J = (0, i.FW)(l.X.APPEARANCE_THEME_FIELDSET, {
         useTitle: () => u.intl.string(u.t.Ksh3ik),
         isTitleHiddenVisually: !0,
-        buildLayout: () => [Q, W, w, M, v, d],
+        buildLayout: () => [Q, W, w, U, v, d],
     });

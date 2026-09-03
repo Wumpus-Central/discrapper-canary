@@ -3,8 +3,8 @@ n.d(t, {
     IG: () => L,
     Ps: () => G,
     UR: () => v,
-    W1: () => N,
-    WU: () => y,
+    W1: () => y,
+    WU: () => N,
     _Q: () => D,
     b6: () => q,
     bg: () => b,
@@ -59,12 +59,12 @@ function b(e) {
         }
     return n;
 }
-function N(e) {
+function y(e) {
     let t = (0, _.vv)(e),
         n = (0, _.vl)(e);
     return t || n;
 }
-var y = (((i = {}).DESKTOP = "desktop"), (i.XBOX = "xbox"), (i.PLAYSTATION = "playstation"), i);
+var N = (((i = {}).DESKTOP = "desktop"), (i.XBOX = "xbox"), (i.PLAYSTATION = "playstation"), i);
 function P(e) {
     return "xbox" === e.connected_account_type ? g.fg2.XBOX : g.fg2.PLAYSTATION;
 }

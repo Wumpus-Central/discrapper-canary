@@ -19,8 +19,8 @@ var l = n(477900),
     O = n(966327),
     S = n(429913),
     m = n(47167),
-    D = n(769015),
-    R = n(967144),
+    R = n(769015),
+    D = n(967144),
     h = n(903209),
     L = n(734057),
     C = n(696451),
@@ -122,7 +122,7 @@ let v = r.memo(function () {
 function y(e) {
     let { guildId: t, inviterUser: n, joinSourceType: a, className: E, onClickInviter: o } = e,
         c = (0, s.bG)([C.Ay], () => (null == n ? null : C.Ay.getMember(t, n.id)), [n, t]),
-        _ = (0, R.gn)(c?.guildId, c?.userId, c?.colorStrings ?? null),
+        _ = (0, D.gn)(c?.guildId, c?.userId, c?.colorStrings ?? null),
         d = r.useCallback(
             (e) => {
                 e.stopPropagation(), e.preventDefault(), null != n && o?.(n);
@@ -255,7 +255,7 @@ function w(e) {
                         tabIndex: 0,
                         onClick: m,
                         children: [
-                            (0, l.jsx)(D.A, { game: G, size: D.M.XXSMALL }),
+                            (0, l.jsx)(R.A, { game: G, size: R.M.XXSMALL }),
                             (0, l.jsx)(u.E, { variant: "text-sm/medium", className: j.YL, children: G.name }),
                         ],
                     }),

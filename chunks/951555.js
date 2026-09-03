@@ -1,4 +1,4 @@
-n.d(t, { A: () => M });
+n.d(t, { A: () => U });
 var i = n(477900),
     l = n(582128),
     s = n(503698),
@@ -57,7 +57,7 @@ var R = n(652215),
     D = n(375708),
     P = n(153345),
     G = n(938442);
-function M(e) {
+function U(e) {
     let {
             subscription: t,
             onPaymentSourceAdded: n,
@@ -67,7 +67,7 @@ function M(e) {
             disabled: j = !1,
             openInvoice: O,
         } = e,
-        M = (0, u.bG)([f.A], () => f.A.hidePersonalInformation),
+        U = (0, u.bG)([f.A], () => f.A.hidePersonalInformation),
         [V, k] = (0, u.yK)([I.A], () => [I.A.paymentSources, I.A.hasFetchedPaymentSources]),
         w = (0, x.Y)((0, b.MP)(t)),
         { analyticsLocations: F } = (0, p.Ay)(),
@@ -95,7 +95,7 @@ function M(e) {
             }),
             s = { amount: l.subtotal, currency: l.currency };
         v.currency !== l.currency || (v.currency === l.currency && v.total !== l.total)
-            ? await U(
+            ? await M(
                   l,
                   () => {
                       i(e, l.currency, s);
@@ -159,7 +159,7 @@ function M(e) {
                     prependOption:
                         null == (e = t.paymentSourceId) ? { label: D.intl.string(D.t.iA5vA1), value: null } : null,
                     paymentSources: B,
-                    hidePersonalInformation: M,
+                    hidePersonalInformation: U,
                     selectedPaymentSourceId: e,
                     onChange: function (e) {
                         null != e && W(e, void 0, K);
@@ -192,7 +192,7 @@ function M(e) {
         });
     }
 }
-async function U(e, t, l) {
+async function M(e, t, l) {
     let s = await (0, d.openModalLazy)(
         async () => {
             let { default: s } = await n.e("771678").then(n.bind(n, 760941));

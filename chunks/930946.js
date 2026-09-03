@@ -611,8 +611,8 @@ var eZ = n(554146),
     e3 = n(182922),
     e8 = n(532624),
     e5 = n(531685),
-    e6 = n(723702),
-    e7 = n(350535),
+    e7 = n(723702),
+    e6 = n(350535),
     e4 = n(115023);
 function e9(e) {
     let { soundboardSound: t, closePicker: i } = e,
@@ -647,9 +647,9 @@ function e9(e) {
     }
     let f = (0, e2.k8)(eZ.M.SOUNDBOARD_KEYBIND_TIP),
         g =
-            null != c && (0, e6.isWindows)() && !f
+            null != c && (0, e7.isWindows)() && !f
                 ? eU.intl.format(eU.t.udMTth, {
-                      keybind: (0, e7.dI)(c.shortcut, !0),
+                      keybind: (0, e6.dI)(c.shortcut, !0),
                       openSettingsHook: (e, t) => (0, l.jsx)(eJ.Anchor, { onClick: m, children: e }, t),
                   })
                 : null;
@@ -1269,7 +1269,7 @@ function tg(e) {
             },
             [M],
         ),
-        e6 = i.useCallback(
+        e7 = i.useCallback(
             () =>
                 v
                     ? (0, l.jsx)(J.Gq, {
@@ -1288,7 +1288,7 @@ function tg(e) {
                       }),
             [v, e5],
         ),
-        e7 = i.useCallback(
+        e6 = i.useCallback(
             (e) =>
                 (0, l.jsx)(ez, {
                     soundboardListRef: e,
@@ -1375,8 +1375,8 @@ function tg(e) {
                     renderSectionHeader: e2,
                     renderSectionFooter: e3,
                     renderSection: e1,
-                    renderCategoryList: e7,
-                    renderHeaderAccessories: e6,
+                    renderCategoryList: e6,
+                    renderHeaderAccessories: e7,
                     rowHeight: 48,
                     sectionHeaderHeight: eQ,
                     sectionFooterHeight: e0,

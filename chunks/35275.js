@@ -11,13 +11,13 @@ function a(e) {
             height: a,
             color: o = s.A.colors.INTERACTIVE_TEXT_DEFAULT,
             colorClass: c = "",
-            ...d
+            ...u
         } = e,
-        u = (0, l.J)(t),
-        h = u?.width ?? n,
-        m = u?.height ?? a;
+        d = (0, l.J)(t),
+        h = d?.width ?? n,
+        m = d?.height ?? a;
     return (0, i.jsx)("svg", {
-        ...(0, r.A)(d),
+        ...(0, r.A)(u),
         width: h,
         height: m,
         viewBox: "0 0 16 16",
