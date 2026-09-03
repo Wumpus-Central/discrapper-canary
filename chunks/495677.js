@@ -20,8 +20,8 @@ var n,
     y = l(866665),
     C = l(408278),
     N = l(92446),
-    k = l(625903),
-    w = l(297264),
+    w = l(625903),
+    k = l(297264),
     A = l(821609),
     E = l(364522),
     I = l(103557),
@@ -55,6 +55,11 @@ function J(e) {
 }
 var ee = l(58703);
 let et = [
+    {
+        date: "2026-09-03",
+        summary:
+            "Your published app stays playable while Conjure drives the preview, instead of both freezing at once.",
+    },
     {
         date: "2026-09-02",
         summary:
@@ -320,8 +325,8 @@ function eC(e) {
           });
 }
 var eN = l(663417),
-    ek = l(70688),
-    ew = l(173936),
+    ew = l(70688),
+    ek = l(173936),
     eA = l(365199),
     eE = l(770818),
     eI = l(147036),
@@ -350,7 +355,7 @@ function eM(e) {
             isRefreshing: x = !1,
             onClose: y,
             refreshApplicationId: N,
-            previewProjectId: w,
+            previewProjectId: k,
         } = e,
         A = a.useRef(null),
         { pending: E, refresh: I } = (0, eE.A)(N ?? null),
@@ -380,8 +385,8 @@ function eM(e) {
                     [e, i],
                 ),
             };
-        })(w ?? null),
-        P = (0, c.bG)([$.Ay], () => (null == w ? eD : $.Ay.getDeclaredConnections(w))),
+        })(k ?? null),
+        P = (0, c.bG)([$.Ay], () => (null == k ? eD : $.Ay.getDeclaredConnections(k))),
         _ = (function (e) {
             let { canRefresh: t, refreshPending: l, offers: n, connectPending: i } = e,
                 a = [];
@@ -453,8 +458,8 @@ function eM(e) {
                                         null != y
                                             ? (0, i.jsx)(er.Dr, {
                                                   id: "close",
-                                                  icon: ek.DoorExitIcon,
-                                                  leadingAccessory: { type: "icon", icon: ek.DoorExitIcon },
+                                                  icon: ew.DoorExitIcon,
+                                                  leadingAccessory: { type: "icon", icon: ew.DoorExitIcon },
                                                   label: Y.intl.string(F.default.Ea0Wrr),
                                                   action: y,
                                               })
@@ -529,8 +534,8 @@ function eM(e) {
                                     children: (0, i.jsx)(er.Dr, {
                                         id: "copy-link",
                                         label: Y.intl.string(Y.t.WqhZss),
-                                        icon: ew.LinkIcon,
-                                        leadingAccessory: { type: "icon", icon: ew.LinkIcon },
+                                        icon: ek.LinkIcon,
+                                        leadingAccessory: { type: "icon", icon: ek.LinkIcon },
                                         action: () =>
                                             (0, eS.C)((0, eI.n)(n, eV.VV.VIBEGRATIONS, t), () =>
                                                 (0, j.P0)((0, v.o)(Y.intl.string(Y.t["L/PwZf"]), b.Ck.SUCCESS)),
@@ -544,8 +549,8 @@ function eM(e) {
                                         (0, i.jsx)(er.Dr, {
                                             id: "settings",
                                             label: Y.intl.string(F.default["xhcY+n"]),
-                                            icon: k.SettingsIcon,
-                                            leadingAccessory: { type: "icon", icon: k.SettingsIcon },
+                                            icon: w.SettingsIcon,
+                                            leadingAccessory: { type: "icon", icon: w.SettingsIcon },
                                             action: () => (0, eP.A)(t, s ?? n),
                                         }),
                                         (0, i.jsx)(er.Dr, {
@@ -672,7 +677,7 @@ function eQ(e) {
                         (0, i.jsxs)("div", {
                             className: eZ.R_,
                             children: [
-                                (0, i.jsx)(w.D, { variant: "heading-xl/semibold", color: "text-strong", children: o }),
+                                (0, i.jsx)(k.D, { variant: "heading-xl/semibold", color: "text-strong", children: o }),
                                 (0, i.jsx)(x.E, {
                                     variant: "redesign/heading-18/medium",
                                     color: "text-subtle",
@@ -943,16 +948,16 @@ function e4(e) {
         ),
         ey = (0, c.bG)([Z.A], () => Z.A.isBuilderPreviewMobile()),
         eN = Y.intl.string(ey ? F.default["3uCc8U"] : F.default["+nzCxZ"]),
-        ek = a.useCallback(() => (0, X.GG)(!ey), [ey]),
-        ew = (0, D.A)(t?.preview_application_id ?? null, e1.sd),
-        eA = (0, e1.x1)(ew) && ew.data.proxyTicketRefreshing,
+        ew = a.useCallback(() => (0, X.GG)(!ey), [ey]),
+        ek = (0, D.A)(t?.preview_application_id ?? null, e1.sd),
+        eA = (0, e1.x1)(ek) && ek.data.proxyTicketRefreshing,
         eE = a.useCallback(() => {
-            null == ew || eA || V.A.refreshProxyTicket(ew.id);
-        }, [ew, eA]),
+            null == ek || eA || V.A.refreshProxyTicket(ek.id);
+        }, [ek, eA]),
         eI = a.useCallback(() => {
             var e, l;
-            null != t && ((e = t.id), (l = ew?.id), (0, $.Bn)(e), (0, eH.A)().leaveFrame(l)), s();
-        }, [t, ew?.id, s]),
+            null != t && ((e = t.id), (l = ek?.id), (0, $.Bn)(e), (0, eH.A)().leaveFrame(l)), s();
+        }, [t, ek?.id, s]),
         eS = a.useCallback(() => {
             null != t && (p(!0), (0, $.dv)(t.id, Y.intl.string(F.default["2ejwtJ"])));
         }, [t]),
@@ -1079,7 +1084,7 @@ function e4(e) {
                                       variant: "icon-only",
                                       "aria-label": eN,
                                       "aria-pressed": ey,
-                                      onClick: ek,
+                                      onClick: ew,
                                   }),
                               }),
                               (0, i.jsx)("div", { className: e6.YJ }),
@@ -1116,7 +1121,7 @@ function e4(e) {
                                         text: Y.intl.string(F.default["xhcY+n"]),
                                         ariaHidden: !0,
                                         children: (0, i.jsx)(C.K, {
-                                            icon: k.SettingsIcon,
+                                            icon: w.SettingsIcon,
                                             size: "sm",
                                             variant: "icon-only",
                                             "aria-label": Y.intl.string(F.default["xhcY+n"]),
@@ -1146,7 +1151,7 @@ function e4(e) {
                                   projectGuildId: t.guild_id,
                                   isOwner: (0, Q.PV)(t),
                                   isShared: (0, K.tr)(t),
-                                  onRefresh: (0, e1.x1)(ew) ? eE : void 0,
+                                  onRefresh: (0, e1.x1)(ek) ? eE : void 0,
                                   isRefreshing: eA,
                                   onClose: eI,
                                   onExport: eS,
@@ -1196,7 +1201,7 @@ function e4(e) {
                                   (0, i.jsxs)("div", {
                                       className: e6.sD,
                                       children: [
-                                          (0, i.jsx)(w.D, {
+                                          (0, i.jsx)(k.D, {
                                               variant: "heading-lg/semibold",
                                               children: Y.intl.string(F.default.F2dRba),
                                           }),
@@ -1264,7 +1269,7 @@ function te(e) {
             onImportNewProject: C,
             importing: N,
         } = e,
-        k = a.useMemo(
+        w = a.useMemo(
             () =>
                 l
                     .slice()
@@ -1330,7 +1335,7 @@ function te(e) {
                                     children: (0, i.jsxs)("section", {
                                         className: r()(e6.Qs, e6.Ix),
                                         children: [
-                                            (0, i.jsx)(w.D, {
+                                            (0, i.jsx)(k.D, {
                                                 variant: "heading-xl/semibold",
                                                 children: Y.intl.string(F.default["2tYpRK"]),
                                             }),
@@ -1601,7 +1606,7 @@ function te(e) {
                                                       ),
                                                   ),
                                               }),
-                                    k.length > 0
+                                    w.length > 0
                                         ? (0, i.jsxs)("div", {
                                               className: e6.qx,
                                               children: [
@@ -1622,7 +1627,7 @@ function te(e) {
                                                   }),
                                                   (0, i.jsx)("div", {
                                                       className: e6.Dq,
-                                                      children: k.map((e) =>
+                                                      children: w.map((e) =>
                                                           (0, i.jsx)(
                                                               e5,
                                                               {
@@ -1663,7 +1668,7 @@ function tt(e) {
         [h, f] = a.useState(!1),
         [x, y] = a.useState(null),
         [C, N] = a.useState("guild"),
-        [k, w] = a.useState(null),
+        [w, k] = a.useState(null),
         [A, E] = a.useState(null);
     a.useEffect(() => {
         (0, X.hF)(l);
@@ -1672,14 +1677,14 @@ function tt(e) {
             (0, X.dm)(l, g);
         }, [l, g]);
     let I = a.useCallback((e) => {
-            N(e), w(null);
+            N(e), k(null);
         }, []),
         S = a.useCallback(
             async (e) => {
                 let t = (e ?? m).trim(),
                     n = J({ idea: t, installScope: C, submitting: h });
                 if ("idea" !== n && "submitting" !== n) {
-                    if (null == C) return void w(Y.intl.string(F.default.jQ3nQB));
+                    if (null == C) return void k(Y.intl.string(F.default.jQ3nQB));
                     null != e && p(e), f(!0), y(null);
                     try {
                         let e = await (0, X.gA)({ guild_id: l, install_scope: C });
@@ -1759,6 +1764,6 @@ function tt(e) {
               importing: R,
               installScope: C,
               onInstallScopeChange: I,
-              installScopeError: k,
+              installScopeError: w,
           });
 }

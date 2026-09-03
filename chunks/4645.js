@@ -6364,12 +6364,12 @@ var rt = l(11055),
     rl = l(333007),
     rn = l(342667);
 function ra(e) {
-    let { projectId: t, resolveIframe: l } = e,
-        n = (0, lH.o4)(t),
-        i = (0, eH.useHasAnyModalOpen)(),
-        [s, o] = r.useState(null);
+    let { projectId: t, applicationId: l, previewApplicationId: n, resolveIframe: i } = e,
+        s = (0, lH.o4)(null != l && l === n ? t : null),
+        o = (0, eH.useHasAnyModalOpen)(),
+        [u, d] = r.useState(null);
     r.useEffect(() => {
-        if (!n) return;
+        if (!s) return;
         function e() {
             let e = (function (e) {
                 if (null == e) return null;
@@ -6377,8 +6377,8 @@ function ra(e) {
                 return t.width < 1 || t.height < 1
                     ? null
                     : { left: t.left, top: t.top, width: t.width, height: t.height };
-            })(l());
-            o((t) =>
+            })(i());
+            d((t) =>
                 (
                     null == t || null == e
                         ? t === e
@@ -6396,8 +6396,8 @@ function ra(e) {
                 window.clearInterval(t), window.removeEventListener("resize", e);
             }
         );
-    }, [n, l]);
-    let u = n && null != s && !i;
+    }, [s, i]);
+    let c = s && null != u && !o;
     return (0, rl.createPortal)(
         (0, a.jsxs)(a.Fragment, {
             children: [
@@ -6406,12 +6406,12 @@ function ra(e) {
                     role: "status",
                     "aria-live": "polite",
                     "data-testid": "vibegrations-control-announcer",
-                    children: n ? _.intl.string(P.default.dIE9zO) : "",
+                    children: s ? _.intl.string(P.default.dIE9zO) : "",
                 }),
-                u
+                c
                     ? (0, a.jsx)("div", {
                           className: rn.o,
-                          style: { left: s.left, top: s.top, width: s.width, height: s.height },
+                          style: { left: u.left, top: u.top, width: u.width, height: u.height },
                           "data-testid": "vibegrations-control-block",
                           "aria-hidden": !0,
                       })
@@ -6544,10 +6544,19 @@ var rc = l(120426),
     rp = l(171936),
     rv = l(796036);
 function rj(e) {
-    let { projectId: t, applicationId: l, surface: n, header: i, mainClassName: o, content: d, sidebar: c } = e,
-        [m, f] = r.useState(null),
-        h = (0, u.A)(l, n),
-        g = h?.id ?? null;
+    let {
+            projectId: t,
+            applicationId: l,
+            previewApplicationId: n,
+            surface: i,
+            header: o,
+            mainClassName: d,
+            content: c,
+            sidebar: m,
+        } = e,
+        [f, h] = r.useState(null),
+        g = (0, u.A)(l, i),
+        x = g?.id ?? null;
     !(function (e, t) {
         let l = (0, N.bG)([nf.A], () => (0, rm.x4)(nf.A.theme)),
             n = (0, N.bG)([rf.A], () => rf.A.gradientPreset),
@@ -6637,19 +6646,19 @@ function rj(e) {
                     () => e.disconnect()
                 );
             }, [v]);
-    })(m, g),
+    })(f, x),
         r.useEffect(() => {
-            if (null != t) return (0, rp.mn)(t, () => (0, rc.F)(m, g));
-        }, [t, m, g]);
-    let x = r.useCallback(() => (0, rc.F)(m, g), [m, g]);
+            if (null != t) return (0, rp.mn)(t, () => (0, rc.F)(f, x));
+        }, [t, f, x]);
+    let p = r.useCallback(() => (0, rc.F)(f, x), [f, x]);
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsxs)("div", {
-                className: s()(ev.Mh, o),
-                children: [i, (0, a.jsx)("div", { ref: f, className: ev.fm, children: d })],
+                className: s()(ev.Mh, d),
+                children: [o, (0, a.jsx)("div", { ref: h, className: ev.fm, children: c })],
             }),
-            c,
-            (0, a.jsx)(ra, { projectId: t ?? null, resolveIframe: x }),
+            m,
+            (0, a.jsx)(ra, { projectId: t ?? null, applicationId: l, previewApplicationId: n, resolveIframe: p }),
         ],
     });
 }
@@ -6703,6 +6712,7 @@ function rb(e) {
         children: (0, a.jsx)(rj, {
             projectId: t,
             applicationId: l,
+            previewApplicationId: n,
             surface: i,
             header: u,
             mainClassName: null == u ? void 0 : s()(ev.ez, { [ev.zt]: R }),
