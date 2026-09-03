@@ -39,6 +39,7 @@ function h(e, t, n) {
             target_message_id: h,
             with_permissions: !0,
             with_games: !!n?.withGames || void 0,
+            with_guild_experiments: !!n?.withGuildExperiments || void 0,
         },
         p = o.A.get({
             url: _.Rsh.INVITE(c),

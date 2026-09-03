@@ -65,7 +65,8 @@ let A = new E(r.h, {
                 (t.roles = e.invite.roles),
                 (t.target_channel_id = e.invite.target_channel_id),
                 (t.target_message_id = e.invite.target_message_id),
-                (t.liveliness = e.invite.liveliness);
+                (t.liveliness = e.invite.liveliness),
+                (t.guild_experiments = e.invite.guild_experiments);
         });
     },
     INVITE_RESOLVE_FAILURE: _,
