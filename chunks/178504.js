@@ -695,6 +695,7 @@ function ep(e) {
         ref: v,
         children: (0, n.jsxs)(E.A, {
             disableDoubleClick: !0,
+            disableFocusRingScope: !0,
             className: ef.jr,
             toolbar: (0, n.jsxs)(n.Fragment, {
                 children: [

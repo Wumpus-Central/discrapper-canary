@@ -149,17 +149,11 @@ function C(e) {
             scrollable: p,
             transparent: m = !1,
             hidden: g = !1,
+            disableFocusRingScope: S = !1,
         } = e,
-        S = r.useRef(null),
-        N = r.useContext(I.A);
-    return (0, i.jsx)("section", {
-        className: s()(t, T.kL, { [T.Sp]: !m, [T.JO]: m, [T.GY]: o.Fr, [T.R]: g }),
-        "aria-label": E,
-        "aria-labelledby": A,
-        role: f,
-        ref: S,
-        children: (0, i.jsxs)(h.xp, {
-            containerRef: S,
+        N = r.useRef(null),
+        C = r.useContext(I.A),
+        O = (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)("div", {
                     className: T.cM,
@@ -167,14 +161,21 @@ function C(e) {
                         (0, i.jsxs)("div", {
                             className: s()(T.Y_, n, { [T.lE]: p }),
                             onDoubleClick: _,
-                            children: [o.Fr && null != N ? (0, i.jsx)(l._, { onClick: N, className: T.cz }) : null, d],
+                            children: [o.Fr && null != C ? (0, i.jsx)(l._, { onClick: C, className: T.cz }) : null, d],
                         }),
                         null != u ? (0, i.jsx)("div", { className: s()(T.KE, a), children: u }) : null,
                     ],
                 }),
                 c,
             ],
-        }),
+        });
+    return (0, i.jsx)("section", {
+        className: s()(t, T.kL, { [T.Sp]: !m, [T.JO]: m, [T.GY]: o.Fr, [T.R]: g }),
+        "aria-label": E,
+        "aria-labelledby": A,
+        role: f,
+        ref: N,
+        children: S ? O : (0, i.jsx)(h.xp, { containerRef: N, children: O }),
     });
 }
 (C.Icon = m),

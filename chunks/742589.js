@@ -55,6 +55,7 @@ function C(e) {
         role: p,
         hideSearch: S,
         disableDoubleClick: N,
+        disableFocusRingScope: L,
     } = e;
     return (0, i.jsx)(u.Ay, {
         className: n,
@@ -80,17 +81,27 @@ function C(e) {
         "aria-labelledby": I,
         role: p,
         scrollable: T,
+        disableFocusRingScope: L,
         children: t,
     });
 }
 function _(e) {
-    let { children: t, className: n, "aria-label": l, "aria-labelledby": r, role: s, disableDoubleClick: a } = e;
+    let {
+        children: t,
+        className: n,
+        "aria-label": l,
+        "aria-labelledby": r,
+        role: s,
+        disableDoubleClick: a,
+        disableFocusRingScope: o,
+    } = e;
     return (0, i.jsx)(u.Ay, {
         className: n,
         onDoubleClick: () => g(a),
         "aria-label": l,
         "aria-labelledby": r,
         role: s,
+        disableFocusRingScope: o,
         children: t,
     });
 }
