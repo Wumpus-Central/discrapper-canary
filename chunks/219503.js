@@ -24,7 +24,7 @@ async function v() {
     });
     return 204 === e.status ? null : e.body;
 }
-async function E(e) {
+async function C(e) {
     return (
         await A.A.post({
             url: x.Rsh.SAFETY_FLOWS_TASK,
@@ -34,9 +34,9 @@ async function E(e) {
         })
     ).body;
 }
-let C = s.createContext(null);
+let E = s.createContext(null);
 function T() {
-    let e = s.useContext(C);
+    let e = s.useContext(E);
     if (null == e) throw Error("useSafetyFlowTask must be used within a SafetyFlowTaskContext Provider");
     return e;
 }
@@ -191,14 +191,14 @@ function ex(e) {
                 o = "declined" === n;
             return { isConnected: r, isDeclined: o, isResolved: r || o };
         })(n.parent_id),
-        E = ((t = n.created_at), (0, ep.mV)(Date.parse(t), eg)),
-        C = em.Ay.getUserAvatarURL({ id: n.parent_id, avatar: A }, !1, (0, eo.FT)(eo._3.SIZE_40));
+        C = ((t = n.created_at), (0, ep.mV)(Date.parse(t), eg)),
+        E = em.Ay.getUserAvatarURL({ id: n.parent_id, avatar: A }, !1, (0, eo.FT)(eo._3.SIZE_40));
     return (0, a.jsxs)("div", {
         className: eA.nM,
         children: [
             (0, a.jsx)("div", {
                 className: eA.R3,
-                children: (0, a.jsx)(ed.eu, { src: C, size: eo._3.SIZE_40, "aria-label": g }),
+                children: (0, a.jsx)(ed.eu, { src: E, size: eo._3.SIZE_40, "aria-label": g }),
             }),
             (0, a.jsxs)("div", {
                 className: eA.zH,
@@ -216,7 +216,7 @@ function ex(e) {
                             lineClamp: 1,
                             children: g,
                         }),
-                    (0, a.jsx)(c.E, { variant: "text-xs/normal", color: "text-muted", children: E }),
+                    (0, a.jsx)(c.E, { variant: "text-xs/normal", color: "text-muted", children: C }),
                 ],
             }),
             v
@@ -302,20 +302,20 @@ function ev(e) {
                     [h, g, d],
                 ),
                 [x, v] = s.useState(t),
-                [E, C] = s.useState(t),
+                [C, E] = s.useState(t),
                 [T, _] = s.useState(n);
             return (
                 n && !T
                     ? (_(!0),
-                      C(t),
+                      E(t),
                       v((e) => {
                           let n = new Map();
                           for (let t of e) m.has(t.parent_id) && n.set(t.parent_id, t);
                           for (let e of t) n.set(e.parent_id, e);
                           return Array.from(n.values());
                       }))
-                    : t !== E &&
-                      (C(t),
+                    : t !== C &&
+                      (E(t),
                       v((e) => {
                           let n = new Map(e.map((e) => [e.parent_id, e]));
                           for (let e of t) n.set(e.parent_id, e);
@@ -360,8 +360,8 @@ function ev(e) {
               ),
           });
 }
-var eE = n(231723),
-    eC = n(818348),
+var eC = n(231723),
+    eE = n(818348),
     eT = n(703687);
 let e_ = "https://support.discord.com/hc/articles/14155060633623";
 var eI = n(846330);
@@ -437,7 +437,7 @@ let ej = {
             var t;
             let n,
                 i,
-                { configData: l, onSubmit: r, disabled: d, transitionState: m = eE.ip.ENTERED } = e,
+                { configData: l, onSubmit: r, disabled: d, transitionState: m = eC.ip.ENTERED } = e,
                 { getLinkCode: p } = (0, et.A)();
             (0, h.Ay)(() => {
                 (0, ee._z)();
@@ -454,7 +454,7 @@ let ej = {
                 A = (0, ei.Du)(),
                 x = (0, w.bG)([Q.A], () => Q.A.getLinkedUsers()),
                 v = (0, w.bG)([Q.A], () => Q.A.getAreLinkedUsersProcessed()),
-                E =
+                C =
                     ((t = g.pending_requests),
                     (n = (0, w.bG)([Q.A], () => Q.A.getLinkedUsers())),
                     (i = (0, w.bG)([P.default], () => P.default.getCurrentUser()?.id)),
@@ -475,7 +475,7 @@ let ej = {
                         }
                         return l;
                     }, [v, n, i, t])),
-                C = v ? Object.values(x).some((e) => null != e) : g.pending_requests.length > 0,
+                E = v ? Object.values(x).some((e) => null != e) : g.pending_requests.length > 0,
                 T = v ? f : g.pending_requests.length,
                 j = (0, w.bG)([Q.A], () => Q.A.getLinkCode()),
                 N = (0, w.bG)([Q.A], () => Q.A.getLinkCodeExpiresAt()),
@@ -488,8 +488,8 @@ let ej = {
                         (0, Y.P0)((0, $.o)(I.intl.string(_.default["+QRSxc"]), X.Ck.FAILURE));
                     }
                 }, [r]),
-                [k, O] = s.useState(C);
-            C && !k && O(!0);
+                [k, O] = s.useState(E);
+            E && !k && O(!0);
             let [D, U] = s.useState(!1),
                 G = s.useCallback(() => {
                     U(!1), p();
@@ -501,7 +501,7 @@ let ej = {
                     : I.intl.format(_.default["Ke+kz5"], { pendingCount: T, link: e_ });
             return (0, a.jsxs)(z.d, {
                 transitionState: m,
-                onClose: eC.tE,
+                onClose: eE.tE,
                 dismissable: !1,
                 size: "md",
                 "aria-label": I.intl.string(_.default.dMMSA0),
@@ -529,7 +529,7 @@ let ej = {
                                 }),
                             (0, a.jsx)("div", {
                                 hidden: F,
-                                children: (0, a.jsx)(ev, { pendingRequests: E, linkedUsersProcessed: v }),
+                                children: (0, a.jsx)(ev, { pendingRequests: C, linkedUsersProcessed: v }),
                             }),
                         ],
                     }),
@@ -570,7 +570,7 @@ let ej = {
             let { disabled: t } = e,
                 n = s.useCallback(() => {
                     window.open(
-                        "https://support.discord.com/hc/articles/14155060633623",
+                        "https://support.discord.com/hc/en-us/articles/42855178312087",
                         "_blank",
                         "noopener,noreferrer",
                     );
@@ -700,7 +700,7 @@ function ek(e) {
         o(t);
     }, [t]);
     let c = b.has(r.task_type);
-    return (0, a.jsxs)(C.Provider, {
+    return (0, a.jsxs)(E.Provider, {
         value: d,
         children: [!c && (0, a.jsx)(eM, {}), (0, a.jsx)(eN, { onSubmit: n, disabled: i, transitionState: l })],
     });
@@ -709,10 +709,10 @@ let eO = function (e) {
     let { transitionState: t, onClose: n } = e,
         [i, l] = s.useState(null),
         [f, A] = s.useState(!0),
-        [x, C] = s.useState(null),
+        [x, E] = s.useState(null),
         [T, y] = s.useState(!1),
         w = s.useCallback(async () => {
-            A(!0), C(null);
+            A(!0), E(null);
             try {
                 let e = await v();
                 if (null == e) return void n();
@@ -726,7 +726,7 @@ let eO = function (e) {
                           flow_context: { tasks: [], flow_id: e.flow_context.flow_id },
                       });
             } catch {
-                C(I.intl.string(_.default["/f++3g"]));
+                E(I.intl.string(_.default["/f++3g"]));
             } finally {
                 A(!1);
             }
@@ -737,10 +737,10 @@ let eO = function (e) {
                     y(!0);
                     try {
                         let t = { task_id: i.task_id, flow_id: i.flow_context.flow_id, data: e };
-                        await E(t), w();
+                        await C(t), w();
                     } catch (e) {
                         if (b.has(i.task_type)) throw e;
-                        C(I.intl.string(_.default["+QRSxc"]));
+                        E(I.intl.string(_.default["+QRSxc"]));
                     } finally {
                         y(!1);
                     }
@@ -759,16 +759,16 @@ let eO = function (e) {
             (0, a.jsx)("img", { className: eR.xX, src: ew, alt: "" }),
             O
                 ? (0, a.jsx)(p.default, {
-                      transitionState: t ?? eE.ip.ENTERED,
+                      transitionState: t ?? eC.ip.ENTERED,
                       entryPoint: m.q1.SAFETY_FLOWS,
-                      onClose: eC.tE,
+                      onClose: eE.tE,
                       onComplete: async () => {
                           await k({ type: M.Empty });
                       },
                       dismissable: !1,
                   })
                 : P && null != i
-                  ? (0, a.jsx)(ek, { task: i, handleSubmit: k, disabled: T, transitionState: t ?? eE.ip.ENTERED })
+                  ? (0, a.jsx)(ek, { task: i, handleSubmit: k, disabled: T, transitionState: t ?? eC.ip.ENTERED })
                   : (0, a.jsx)("div", {
                         className: eR.nA,
                         children: f
