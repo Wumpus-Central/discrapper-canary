@@ -1235,6 +1235,7 @@
     display: flex;
     flex: 1 0 0;
     height: 32px;
+    isolation: isolate;
     justify-content: space-between;
     min-width: 1px;
     position: relative
@@ -1270,7 +1271,7 @@
 }
 
 .handle__8ddc3 {
-    background: var(--white);
+    background: var(--icon-strong);
     border-radius: var(--radius-sm);
     box-shadow: var(--shadow-low);
     height: 32px;
@@ -1398,7 +1399,9 @@
 }
 
 .customCard__3e134 {
-    gap: var(--space-12)
+    gap: var(--space-12);
+    position: relative;
+    z-index: 1
 }
 
 .header__3e134 {
@@ -2934,4 +2937,4 @@
     white-space: nowrap
 }
 
-/*# sourceMappingURL=ec325d71c15cda40.css.map*/
+/*# sourceMappingURL=13f6a3e67af92085.css.map*/

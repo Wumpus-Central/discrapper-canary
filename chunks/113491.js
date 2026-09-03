@@ -18,8 +18,8 @@ var p = l(224341),
     v = l(947936);
 let j = 1e3 / 30,
     b = [
-        { hz: 0.19, stagger: 0.17, weight: 0.62, salt: 47 },
-        { hz: 0.083, stagger: -0.29, weight: 0.38, salt: 91 },
+        { hz: 0.285, stagger: 0.17, weight: 0.62, salt: 47 },
+        { hz: 0.1245, stagger: -0.29, weight: 0.38, salt: 91 },
     ],
     y = 2 * Math.PI;
 function k(e, t) {
@@ -37,108 +37,116 @@ function N() {
                 a = t.closest('[role="group"]'),
                 r = a?.querySelector("[data-vibegrations-effort-handle]") ?? null,
                 i = 0,
-                s = 0,
+                s = [],
                 o = 0,
-                u = 8,
-                d = 9,
-                c = 0,
+                u = 0,
+                d = 8,
+                c = 9,
                 m = 0,
-                f = !1,
-                h = 0,
-                g = performance.now();
-            function x() {
+                f = 0,
+                h = !1,
+                g = 0,
+                x = 0,
+                v = performance.now();
+            function N() {
                 if (null == l) return;
                 (l.textAlign = "center"),
                     (l.textBaseline = "middle"),
-                    (l.font = `${u}px 'AI Visual Identity Glyphs', monospace`);
+                    (l.font = `${d}px 'AI Visual Identity Glyphs', monospace`);
                 let e = 0;
                 for (let t of p.QI + p.vd) {
                     let n = l.measureText(t);
                     e = Math.max(e, n.actualBoundingBoxAscent + n.actualBoundingBoxDescent);
                 }
-                let t = e > 0 ? Math.max(4, (u * u) / e) : u;
+                let t = e > 0 ? Math.max(4, (d * d) / e) : d;
                 l.font = `${t}px 'AI Visual Identity Glyphs', monospace`;
             }
-            function v() {
+            function A() {
                 if (null == t || null == l) return;
                 let e = t.clientWidth,
                     n = t.clientHeight;
-                if (e === s && n === o) return;
-                (s = e), (d = (u = ((o = n) - 3) / 4) + 1);
+                if (e === o && n === u) return;
+                (o = e), (c = (d = ((u = n) - 2 - 2) / 3) + 1);
                 let r = a?.querySelectorAll("[data-stop]"),
-                    c = r?.[r.length - 1];
-                null != c && (i = c.offsetLeft + c.offsetWidth / 2);
-                let m = window.devicePixelRatio,
-                    f = Number.isFinite(m) && m > 0 ? m : 1;
-                (t.width = Math.round(s * f)), (t.height = Math.round(o * f)), l.setTransform(f, 0, 0, f, 0, 0), x();
+                    m = r?.[r.length - 1];
+                null != m && (i = m.offsetLeft + m.offsetWidth / 2),
+                    (s = null == r ? [] : Array.from(r, (e) => e.offsetLeft + e.offsetWidth / 2));
+                let f = window.devicePixelRatio,
+                    h = Number.isFinite(f) && f > 0 ? f : 1;
+                (t.width = Math.round(o * h)), (t.height = Math.round(u * h)), l.setTransform(h, 0, 0, h, 0, 0), N();
             }
-            v(),
-                (c = requestAnimationFrame(function e(a) {
-                    if (((c = requestAnimationFrame(e)), a - m < j)) return;
-                    let x = a - m;
-                    if (((m = a), null == t || null == l || 0 === s || null == r)) return;
-                    let v = Number(r.dataset.effortCentre),
-                        N = r.hasAttribute("data-effort-live"),
-                        A = Number.isFinite(v) && Math.abs(v - i) > 16;
-                    if (!f && (!N || A)) return;
-                    h = Math.min(1, Math.max(0, h + ((N ? 1 : -1) * x) / 260));
-                    let w = t.getBoundingClientRect(),
-                        S = w.width > 0 ? w.width / s : 1,
-                        E = r.getBoundingClientRect(),
-                        C = (E.left - w.left) / S,
-                        I = (1 - Math.min(1, Math.abs(C + E.width / S / 2 - i) / 16)) * h;
-                    if (I < 0.01) {
-                        f && l.clearRect(0, 0, s, o), (f = !1);
+            A(),
+                (m = requestAnimationFrame(function e(a) {
+                    if (((m = requestAnimationFrame(e)), a - f < j)) return;
+                    let N = a - f;
+                    if (((f = a), null == t || null == l || 0 === o || null == r)) return;
+                    let A = Number(r.dataset.effortCentre),
+                        w = r.hasAttribute("data-effort-live"),
+                        S = Number.isFinite(A) && Math.abs(A - i) > 16;
+                    if (!h && (!w || S)) return;
+                    g = Math.min(1, Math.max(0, g + ((w ? 1 : -1) * N) / 260));
+                    let E = t.getBoundingClientRect(),
+                        C = E.width > 0 ? E.width / o : 1,
+                        I = r.getBoundingClientRect(),
+                        T = (I.left - E.left) / C,
+                        M = (1 - Math.min(1, Math.abs(T + I.width / C / 2 - i) / 16)) * g;
+                    if (M < 0.01) {
+                        h && l.clearRect(0, 0, o, u), (h = !1);
                         return;
                     }
-                    (f = !0), l.clearRect(0, 0, s, o);
-                    let T = C - (1 - I) * 16,
-                        M = (a - g) / 1e3,
-                        P = Math.ceil(T / d);
+                    h || (x = a), (h = !0), l.clearRect(0, 0, o, u);
+                    let P = T - 1 - (1 - M) * 16,
+                        _ = (a - v) / 1e3,
+                        R = 0.1 + 0.9 * (1 - (1 - Math.min(1, Math.max(0, (a - x) / 1500))) ** 3),
+                        L = Math.ceil(P / c);
                     l.fillStyle = n;
-                    for (let e = 0; e < 4; e++) {
+                    for (let e = 0; e < 3; e++) {
                         let t = 72 * (0.825 + 0.35 * k(e, 11)),
-                            n = 224 * (0.88 + 0.12 * (0.5 + 0.5 * Math.sin(M * y * 0.13 + k(e, 29) * y))),
+                            n = 224 * (0.88 + 0.12 * (0.5 + 0.5 * Math.sin(_ * y * 0.13 + k(e, 29) * y))) * R,
                             a = 0;
                         for (let t of b) {
                             let l = (e * t.stagger + 0.07 * k(e, t.salt)) * y;
-                            a += t.weight * Math.sin(M * y * t.hz + l);
+                            a += t.weight * Math.sin(_ * y * t.hz + l);
                         }
                         let r = 0.30000000000000004 + 0.7 * (1 + a),
-                            i = Math.floor((M * t) / d);
-                        for (let t = 0; t < P; t++) {
+                            i = Math.floor((_ * t) / c),
+                            o = 1 + e * c + d / 2,
+                            m = d / 2 + 3,
+                            f = Math.abs(o - u / 2) < m;
+                        for (let t = 0; t < L; t++) {
                             let a,
-                                s = T - (t * d + u / 2);
-                            if (s < 0) break;
-                            let o = (T - s) / n;
-                            if (o >= 1) break;
-                            let c = 1 - o ** r,
-                                m = Math.min(p.QI.length, Math.floor(c * (p.QI.length + 1)));
+                                u = P - (t * c + d / 2);
+                            if (u < 0) break;
+                            let h = (P - u) / n;
+                            if (h >= 1) break;
+                            let g = 1 - h ** r,
+                                x = Math.min(p.QI.length, Math.floor(g * (p.QI.length + 1)));
                             (a =
                                 0.07 > k(t - i, e + 613)
                                     ? p.QI.charAt(0)
-                                    : m < p.QI.length
-                                      ? p.QI.charAt(m)
+                                    : x < p.QI.length
+                                      ? p.QI.charAt(x)
                                       : p.vd.charAt(Math.floor(k(e, 977) * p.vd.length))),
-                                (l.globalAlpha =
-                                    0.5 *
-                                    (function (e) {
-                                        let t = Math.min(1, Math.max(0, e));
-                                        return t * t * (3 - 2 * t);
-                                    })((1 - o) / 0.34) *
-                                    I),
-                                l.fillText(a, s, e * d + u / 2);
+                                (f && s.some((e) => Math.abs(u - e) < m)) ||
+                                    ((l.globalAlpha =
+                                        0.5 *
+                                        (function (e) {
+                                            let t = Math.min(1, Math.max(0, e));
+                                            return t * t * (3 - 2 * t);
+                                        })((1 - h) / 0.34) *
+                                        M),
+                                    l.fillText(a, u, o));
                         }
                     }
                     l.globalAlpha = 1;
                 }));
-            let N = document.fonts;
-            null != N && N.load(`${u}px 'AI Visual Identity Glyphs'`, p.QI + p.vd).then(x, () => void 0);
-            let A = "u" < typeof ResizeObserver ? null : new ResizeObserver(v);
+            let w = document.fonts;
+            null != w && w.load(`${d}px 'AI Visual Identity Glyphs'`, p.QI + p.vd).then(N, () => void 0);
+            let S = "u" < typeof ResizeObserver ? null : new ResizeObserver(A);
             return (
-                A?.observe(t),
+                S?.observe(t),
                 () => {
-                    cancelAnimationFrame(c), A?.disconnect();
+                    cancelAnimationFrame(m), S?.disconnect();
                 }
             );
         }, []),
