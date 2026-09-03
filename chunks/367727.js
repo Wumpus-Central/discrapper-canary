@@ -1,31 +1,32 @@
 n.d(t, {
-    $l: () => Y,
+    $l: () => K,
     D4: () => x,
     D8: () => G,
     En: () => b,
     FZ: () => M,
     G4: () => D,
-    J8: () => W,
+    J8: () => Y,
+    NZ: () => F,
     R2: () => R,
-    Sx: () => j,
+    Sx: () => W,
     Tg: () => g,
     Uu: () => C,
-    Vh: () => F,
-    Wx: () => z,
-    X0: () => B,
-    YV: () => V,
+    Vh: () => V,
+    Wx: () => q,
+    X0: () => H,
+    YV: () => B,
     bQ: () => S,
     cN: () => w,
-    d6: () => H,
+    d6: () => j,
     fb: () => v,
     gG: () => L,
     iC: () => U,
     j6: () => P,
-    qr: () => K,
+    qr: () => $,
     rZ: () => y,
     rw: () => m,
     ss: () => N,
-    uh: () => $,
+    uh: () => z,
     wH: () => O,
 });
 var i = n(17928),
@@ -187,27 +188,30 @@ function x(e, t) {
     return null != n && null != n[e] && null != n[e].lastDismissedObjectId && "0" !== n[e].lastDismissedObjectId;
 }
 let k = new Set([r.M.ACCOUNT_LINK_INVITE_FRIENDS, r.M.ACCOUNT_LINK_PROMPT, r.M.AUTOCLIPPING_ACCOUNT_PANEL_COACHMARK]);
-function F(e, t, n, i) {
-    if ((0, A.dD)(e) || E.A.hasUserHitDCCap(e, t?.guildId)) return;
-    let r = null == i && k.has(e);
-    (!n || r) &&
+function F(e, t, n) {
+    return t && !(null == n && k.has(e));
+}
+function V(e, t, n, i) {
+    (0, A.dD)(e) ||
+        E.A.hasUserHitDCCap(e, t?.guildId) ||
+        F(e, n ?? !1, i ?? null) ||
         (a.h.dispatch({ type: "DCF_EVENT_LOGGED", eventType: c.r.DC_SHOW_REQUEST, dismissibleContent: e }),
         (0, A.oo)({
             content: e,
             groupName: t?.groupName,
             onAdded: (n) => {
-                (0, _.rF)(e, t?.guildId), z(e, t, n), t?.onShown?.();
+                (0, _.rF)(e, t?.guildId), q(e, t, n), t?.onShown?.();
             },
         }));
 }
-function V(e, t) {
+function B(e, t) {
     ((0, A.dD)(e) || t.forceTrack) &&
         (function (e, t) {
             let [n] = (0, A.oF)(),
                 i = E.A.getRenderedAtTimestamp(e),
                 a = new Date(),
                 s = null == i ? null : a.getTime() - i,
-                l = t?.guildId != null ? j(e, t.guildId) : W(e, t ?? {});
+                l = t?.guildId != null ? W(e, t.guildId) : Y(e, t ?? {});
             o.default.track(T.HAw.DISMISSIBLE_CONTENT_DISMISSED, {
                 type: r.M[e],
                 action: t?.dismissAction ?? p.i.UNKNOWN,
@@ -223,36 +227,36 @@ function V(e, t) {
         })(e, t),
         (0, _.Xw)(e, t.guildId ?? void 0);
 }
-function B(e, t) {
+function H(e, t) {
     let n = !E.A.hasUserHitDCCap();
     (0, A.pd)({ content: e, groupName: t?.groupName }, n);
 }
-async function H(e, t) {
+async function j(e, t) {
     let n = (0, f.c)(e);
-    await Y(e, n, t);
+    await K(e, n, t);
 }
-function j(e, t) {
+function W(e, t) {
     let n = l.A.getGuildDismissedContentState(t)?.[e];
     return (n?.numTimesDismissed ?? 0) + 1;
 }
-function W(e, t) {
+function Y(e, t) {
     if (null != t.numTimesDismissed) return t.numTimesDismissed;
     let n = l.A.settings.userContent?.recurringDismissibleContentStates[e];
     return (n?.numTimesDismissed ?? 0) + 1;
 }
-async function Y(e, t, n) {
-    let i = W(e, n);
-    V(e, n), await S(e, t, i), B(e, n);
-}
 async function K(e, t, n) {
-    let i = W(e, n);
-    V(e, { ...n, snowflakeId: t }), await C(e, t, i), B(e, n);
+    let i = Y(e, n);
+    B(e, n), await S(e, t, i), H(e, n);
 }
-async function $(e, t) {
-    let n = W(e, t);
-    V(e, t), await N(e, n), B(e, t);
+async function $(e, t, n) {
+    let i = Y(e, n);
+    B(e, { ...n, snowflakeId: t }), await C(e, t, i), H(e, n);
 }
-function z(e, t) {
+async function z(e, t) {
+    let n = Y(e, t);
+    B(e, t), await N(e, n), H(e, t);
+}
+function q(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
         [i, a] = (0, A.oF)();
     o.default.track(T.HAw.DISMISSIBLE_CONTENT_SHOWN, {
