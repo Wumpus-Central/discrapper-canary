@@ -1,4 +1,3 @@
-"use strict";
 var n = r(969001),
     i = function () {
         return !!n;

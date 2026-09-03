@@ -1,4 +1,3 @@
-"use strict";
 function r(e, t, r) {
     (this.locales = e), (this.formats = t), (this.pluralFn = r);
 }

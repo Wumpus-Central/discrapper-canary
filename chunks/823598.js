@@ -1,4 +1,3 @@
-"use strict";
 let i, r;
 function a() {
     if (null == i) throw Error("Native dependencies have not been injected.");

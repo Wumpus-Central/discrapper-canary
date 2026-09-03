@@ -1,4 +1,3 @@
-"use strict";
 t.extend = function (e) {
     var t,
         n,

@@ -1,4 +1,3 @@
-"use strict";
 r.r(t), r.d(t, { XXH64: () => u, hash: () => c });
 let n = 2n ** 64n - 1n,
     i = new TextEncoder();

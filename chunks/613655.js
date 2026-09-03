@@ -1,4 +1,3 @@
-"use strict";
 var n = e(248438),
     o = String,
     s = TypeError;

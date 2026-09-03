@@ -1,4 +1,3 @@
-"use strict";
 var n = t(436701);
 function o() {}
 function p() {}

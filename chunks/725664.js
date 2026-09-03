@@ -1,4 +1,3 @@
-"use strict";
 function n(t, r) {
     if (null == t) return {};
     var e = {};

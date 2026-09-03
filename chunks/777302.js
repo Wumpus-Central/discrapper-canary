@@ -1,4 +1,3 @@
-"use strict";
 var n = e(610475),
     o = e(208909).has,
     s = e(433979),

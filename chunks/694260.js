@@ -1,4 +1,3 @@
-"use strict";
 function r(e) {
     return "[object Object]" === Object.prototype.toString.call(e);
 }

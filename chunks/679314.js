@@ -1,4 +1,3 @@
-"use strict";
 function n() {
     let e = 0,
         t = 0;

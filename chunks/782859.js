@@ -1,4 +1,3 @@
-"use strict";
 var r = n(834647),
     a = n(794938);
 r(

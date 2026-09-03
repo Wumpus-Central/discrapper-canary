@@ -1,4 +1,3 @@
-"use strict";
 async function i(e) {
     if (e.size > 0) return e.size;
     try {

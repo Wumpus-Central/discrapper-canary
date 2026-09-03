@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { DX: () => a, Xq: () => r });
 var i = n(778712);
 let r = 1.2;

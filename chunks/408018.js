@@ -1,4 +1,3 @@
-"use strict";
 function i() {
     return { textValue: "", richValue: [{ type: "line", children: [{ text: "" }] }] };
 }

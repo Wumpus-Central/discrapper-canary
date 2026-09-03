@@ -1,4 +1,3 @@
-"use strict";
 var n = r(439619)("%Symbol.species%", !0),
     i = r(741623),
     o = r(358073),

@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { BJ: () => d, GX: () => i, LD: () => r, Ny: () => l, lq: () => a, vX: () => s });
 let i = "sticker-picker-tab-panel",
     r = "sticker-picker-tab",

@@ -1,4 +1,3 @@
-"use strict";
 n.r(t), n.d(t, { DISCORD_EPOCH: () => l, default: () => u, SnowflakeSequence: () => c });
 var i = n(435558),
     r = n.n(i),

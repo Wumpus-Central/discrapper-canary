@@ -1,4 +1,3 @@
-"use strict";
 var r = n(145595),
     a = n(515541);
 e.exports =

@@ -1,4 +1,3 @@
-"use strict";
 var n = e(61748),
     o = e(158610),
     s = n("iterator"),

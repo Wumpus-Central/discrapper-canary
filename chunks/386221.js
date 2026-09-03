@@ -1,4 +1,3 @@
-"use strict";
 (t.createDateTimeFormat = u),
     (t.createDateTimeFormats = function (e) {
         var t,

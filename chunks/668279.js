@@ -1,4 +1,3 @@
-"use strict";
 function i(e) {
     window.DiscordSentry?.addBreadcrumb({
         type: "default",

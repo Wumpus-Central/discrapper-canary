@@ -1,4 +1,3 @@
-"use strict";
 r.d(t, { Cc: () => l, wR: () => d });
 var n = r(582128);
 let i = { prefix: String(Math.round(1e10 * Math.random())), current: 0 },

@@ -8,7 +8,6 @@ var s,
                   return e && "function" == typeof Symbol && e.constructor === Symbol ? "symbol" : typeof e;
               };
 (s = function (e) {
-    "use strict";
     function i(e, i) {
         if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
         return i && ((void 0 === i ? "undefined" : t(i)) === "object" || "function" == typeof i) ? i : e;

@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { A: () => s }), n(667532), n(321073);
 let i = globalThis.__getTotalRequireTime ?? (() => 0),
     r = "u" > typeof performance;

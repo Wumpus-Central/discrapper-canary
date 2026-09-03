@@ -1,4 +1,3 @@
-"use strict";
 function i(e, t) {
     return 0 !== e.length && (e[Math.floor(t / 8)] & (1 << (t % 8))) != 0;
 }

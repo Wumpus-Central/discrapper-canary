@@ -1,4 +1,3 @@
-"use strict";
 let l;
 s.r(t), s.d(t, { default: () => x, renderChangelogMessageMarkup: () => A });
 var a = s(478676),

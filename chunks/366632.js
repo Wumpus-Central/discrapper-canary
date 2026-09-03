@@ -1,4 +1,3 @@
-"use strict";
 r.d(t, { C: () => y, Y: () => g });
 let n = new Set(["Arab", "Syrc", "Samr", "Mand", "Thaa", "Mend", "Nkoo", "Adlm", "Rohg", "Hebr"]),
     i = new Set([

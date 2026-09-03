@@ -1,4 +1,3 @@
-"use strict";
 n.r(t), n.d(t, { CalendarPicker: () => E, default: () => A });
 var i = n(477900),
     r = n(582128),

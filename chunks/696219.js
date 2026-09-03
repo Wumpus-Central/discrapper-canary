@@ -1,4 +1,3 @@
-"use strict";
 var t,
     r,
     n = Function.prototype.toString,

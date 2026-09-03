@@ -1,4 +1,3 @@
-"use strict";
 var a = t(605685);
 t(697509)(r, "__esModule", { value: !0 }), (r.roleElements = r.elementRoles = r.roles = r.dom = r.aria = void 0);
 var l = a(t(63088)),

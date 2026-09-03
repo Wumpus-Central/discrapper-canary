@@ -1,4 +1,3 @@
-"use strict";
 function i(e, t) {
     let [, , n, i] = e.split("/"),
         r = {};

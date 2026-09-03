@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { Ay: () => a, U1: () => r, f5: () => i });
 let i = "@silent",
     r = RegExp(`^${i}(\\s|$)`);

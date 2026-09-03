@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { ag: () => i.ag, sz: () => r });
 var i = n(576908);
 let r = "__installation__";

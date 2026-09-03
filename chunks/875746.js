@@ -1,4 +1,3 @@
-"use strict";
 var n = e(738538),
     o = e(486816),
     s = e(308227).String;

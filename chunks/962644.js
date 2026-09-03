@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { LI: () => m, Ay: () => g, BE: () => f, Ak: () => p, b8: () => T });
 var i,
     r = (((i = {})[(i.DESKTOP = 0)] = "DESKTOP"), (i[(i.MOBILE = 1)] = "MOBILE"), i),

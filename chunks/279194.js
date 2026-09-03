@@ -1,3 +1,2 @@
-"use strict";
 n.d(t, { qx: () => i });
 let i = "domainMigrationSuccess";

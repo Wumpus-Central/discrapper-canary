@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { J9: () => i, sE: () => r });
 let i = [
         "rgba(237, 66, 69, 0.12)",

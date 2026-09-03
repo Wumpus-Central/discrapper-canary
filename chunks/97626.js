@@ -1,4 +1,3 @@
-"use strict";
 function r(e, t, n, r, i) {
     var a = e[t];
     if (void 0 === a) return i;

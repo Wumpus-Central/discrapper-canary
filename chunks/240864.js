@@ -1,4 +1,3 @@
-"use strict";
 function l(e) {
     let {
         listRef: t,

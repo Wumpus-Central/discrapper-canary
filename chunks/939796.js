@@ -1,5 +1,4 @@
 t.exports = (function () {
-    "use strict";
     function t() {
         (this.dataPoints_ = []),
             (this.color_ = "red"),

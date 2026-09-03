@@ -1,4 +1,3 @@
-"use strict";
 r(848950), r(407544), r(887130);
 var n = r(497784);
 Object.defineProperty(t, "Hue", {

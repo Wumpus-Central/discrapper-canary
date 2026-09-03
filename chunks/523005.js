@@ -1,4 +1,3 @@
-"use strict";
 var n = e(208909),
     o = e(587822),
     s = n.Set,

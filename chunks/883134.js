@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     8: "backspace",
     9: "tab",

@@ -1,4 +1,3 @@
-"use strict";
 function t() {
     this._cache = [];
 }

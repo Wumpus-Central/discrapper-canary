@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { As: () => l, IU: () => s, z8: () => a }), n(321073);
 var i = n(677623);
 let r = new (n.n(i)())(5e3);

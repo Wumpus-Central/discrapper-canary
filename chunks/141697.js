@@ -1,4 +1,3 @@
-"use strict";
 var t;
 (e.exports.timeout = function (e, r) {
     var n,

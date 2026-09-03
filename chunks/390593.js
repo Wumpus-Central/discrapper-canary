@@ -1,4 +1,3 @@
-"use strict";
 r.r(t);
 var n = r(410075),
     i = {};

@@ -1,4 +1,3 @@
-"use strict";
 function n(e, t) {
     return "function" == typeof t.getChildren ? t.getChildren(e.key) : e.childNodes;
 }

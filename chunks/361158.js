@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { B8: () => L, dF: () => y, up: () => R, xr: () => S });
 var i = n(477900),
     r = n(582128),

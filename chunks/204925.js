@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { AM: () => c, Qx: () => d, Uy: () => a, bm: () => i, jc: () => r, w_: () => o });
 let i = 2 * n(927813).A.Millis.HOUR,
     r = "new-user-age-gate-modal",

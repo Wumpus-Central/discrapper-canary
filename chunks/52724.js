@@ -1,4 +1,3 @@
-"use strict";
 function i(e) {
     let { getFocusableElements: t, getActiveElement: n, scrollToStart: i, scrollToEnd: r } = e;
     function a() {

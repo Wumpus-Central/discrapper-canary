@@ -1,4 +1,3 @@
-"use strict";
 function i(e, t) {
     if (null == t) return !1;
     let [n, i] = e.split(":");

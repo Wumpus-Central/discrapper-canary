@@ -1,4 +1,3 @@
-"use strict";
 Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.DEFAULT_FORMAT_CONFIG = void 0),
     (t.resolveFormatConfigOptions = function (e, t) {

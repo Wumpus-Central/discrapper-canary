@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { DP: () => o, E5: () => s, II: () => l });
 let i = new Set(["image/heic", "image/heif", "image/heic-sequence", "image/heif-sequence"]),
     r = new Set([".heic", ".heif", ".hif"]),

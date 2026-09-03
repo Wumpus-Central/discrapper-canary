@@ -1,4 +1,3 @@
-"use strict";
 var n = e(172164);
 t.exports = function (t) {
     var r = +t;

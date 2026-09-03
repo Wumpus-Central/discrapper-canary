@@ -1,4 +1,3 @@
-"use strict";
 let n = r(17101);
 function i() {}
 (e.exports = i),

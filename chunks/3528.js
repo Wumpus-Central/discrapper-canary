@@ -1,4 +1,3 @@
-"use strict";
 var n = Array.prototype.slice,
     i = r(560332),
     o = Object.keys,

@@ -1,4 +1,3 @@
-"use strict";
 Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.dataFormatterCache = void 0),
     (t.dataFormatterCache = new (class {

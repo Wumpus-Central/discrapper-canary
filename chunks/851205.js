@@ -1,4 +1,3 @@
-"use strict";
 Object.defineProperty(t, "__esModule", { value: !0 }), (t.hover = void 0);
 var n,
     o =

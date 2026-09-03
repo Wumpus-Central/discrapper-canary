@@ -1,4 +1,3 @@
-"use strict";
 Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.ReactCSS = t.loop = t.handleActive = t.handleHover = t.hover = void 0);
 var n = s(r(342114)),

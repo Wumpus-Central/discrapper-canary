@@ -1,4 +1,3 @@
-"use strict";
 function r(e) {
     return "object" == typeof e && null != e && 1 === e.nodeType;
 }

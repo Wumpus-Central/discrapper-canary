@@ -1,4 +1,3 @@
-"use strict";
 Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.calculateChange = function (e, t, r) {
         var n = r.getBoundingClientRect(),

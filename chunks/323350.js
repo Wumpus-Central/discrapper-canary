@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { IQ: () => A, WO: () => g }), n(321073);
 var l = n(284009),
     i = n.n(l),

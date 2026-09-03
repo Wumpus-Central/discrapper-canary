@@ -1,4 +1,3 @@
-"use strict";
 let t = /^xn--/,
     r = /[^\0-\x7E]/,
     n = /[\x2E\u3002\uFF0E\uFF61]/g,

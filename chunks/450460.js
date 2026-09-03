@@ -1,4 +1,3 @@
-"use strict";
 var n = r(839036)("%Reflect.construct%", !0),
     i = r(173081);
 try {

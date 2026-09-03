@@ -1,4 +1,3 @@
-"use strict";
 t.default = (function () {
     function e(e, t, r, n, i, o) {
         (this.message = e),

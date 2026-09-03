@@ -1,4 +1,3 @@
-"use strict";
 r.r(t), r.d(t, { default: () => n });
 let n = {
     transparent: 0,

@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { B: () => r, u: () => i }), n(632459);
 let r = [
         "years",

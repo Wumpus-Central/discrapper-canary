@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { q: () => i });
 let r = new WeakMap();
 function i(e, t) {

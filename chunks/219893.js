@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, {
     I2: () => f,
     a3: () => h,

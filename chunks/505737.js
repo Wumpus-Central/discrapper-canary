@@ -1,4 +1,3 @@
-"use strict";
 var t = {
         animationIterationCount: !0,
         borderImageOutset: !0,

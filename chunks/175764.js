@@ -32,4 +32,5 @@ e.exports = {
     TE: "progressFill_e12da8",
     E_: "hoverCtas_e12da8",
     lO: "cta_e12da8",
+    mi: "pendingOverlay_e12da8",
 };

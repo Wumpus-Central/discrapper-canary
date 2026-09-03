@@ -1,3 +1,2 @@
-"use strict";
 n.d(t, { A: () => i });
 let i = n(579872).A;

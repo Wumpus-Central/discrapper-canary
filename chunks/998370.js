@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { J: () => l });
 let l = (0, n(945810).mj)({
     name: "2026-04-gifting-badge",

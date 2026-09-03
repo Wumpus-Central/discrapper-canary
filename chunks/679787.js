@@ -1,4 +1,3 @@
-"use strict";
 function i(e) {
     return null == e
         ? null

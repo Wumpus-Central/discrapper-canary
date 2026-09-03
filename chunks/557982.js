@@ -1,4 +1,3 @@
-"use strict";
 var n = r(439619),
     i = r(741623),
     o = n("%Number%"),

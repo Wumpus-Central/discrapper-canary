@@ -1,4 +1,3 @@
-"use strict";
 function i(e) {
     let t = null,
         n = null;

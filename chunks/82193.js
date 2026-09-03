@@ -1,4 +1,3 @@
-"use strict";
 n.r(t), n.d(t, { getDeviceState: () => s, logger: () => a });
 var i = n(626584),
     r = n(817476);

@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { TrophyIcon: () => a });
 var l = n(477900);
 n(582128);

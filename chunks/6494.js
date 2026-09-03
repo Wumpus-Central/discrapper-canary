@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { A: () => i });
 let i = new (class {
     setActive(e) {

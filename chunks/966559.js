@@ -1,4 +1,3 @@
-"use strict";
 e.exports = function () {
     var e = r(367e3),
         t = this.element;

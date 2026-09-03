@@ -1,4 +1,3 @@
-"use strict";
 var n = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator,
     i = r(476744),
     o = r(696219),

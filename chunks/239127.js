@@ -1,4 +1,3 @@
-"use strict";
 var n =
     (this && this.__awaiter) ||
     function (e, t, r, n) {

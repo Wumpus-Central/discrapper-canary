@@ -1,4 +1,3 @@
-"use strict";
 let i;
 n.d(t, { A: () => v, c: () => p });
 var r = n(17928),

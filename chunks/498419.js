@@ -1,6 +1,5 @@
 !(function () {
     var t = function (e) {
-        "use strict";
         e = e || {};
         var t,
             r,

@@ -1,4 +1,3 @@
-"use strict";
 function l(e, t, n) {
     return "string" == typeof e.content || void 0 === e.content ? e.content : t(e.content, n);
 }

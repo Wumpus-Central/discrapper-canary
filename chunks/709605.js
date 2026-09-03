@@ -1,4 +1,3 @@
-"use strict";
 var r = n(596479),
     a = Math.floor,
     o = function (e, t) {

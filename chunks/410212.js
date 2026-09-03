@@ -1,4 +1,3 @@
-"use strict";
 function i(e) {
     let t = e?.tenant_metadata?.guild_monetization,
         n = e?.sku?.tenant_metadata?.guild_monetization;

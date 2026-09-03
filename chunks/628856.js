@@ -1,4 +1,3 @@
-"use strict";
 function i(e) {
     return "string" == typeof e.skuId || "number" == typeof e.skuId
         ? String(e.skuId)

@@ -1,4 +1,3 @@
-"use strict";
 e.exports = function (e, t, r, n, i, o, a, s) {
     if (!e) {
         var l;

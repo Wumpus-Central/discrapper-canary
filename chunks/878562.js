@@ -1,4 +1,3 @@
-"use strict";
 var n = r(428427);
 e.exports = function () {
     return String.prototype.trim &&

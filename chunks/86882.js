@@ -1,4 +1,3 @@
-"use strict";
 e.exports = function (e) {
     "number" != typeof e.which && (e.which = e.keyCode);
     var t,

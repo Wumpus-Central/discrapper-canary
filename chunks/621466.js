@@ -1,4 +1,3 @@
-"use strict";
 function i(e, t) {
     if (null == e) return !1;
     let n = e?.ownerDocument?.defaultView;

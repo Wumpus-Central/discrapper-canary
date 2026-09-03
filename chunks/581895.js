@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { M: () => r, f: () => a });
 let i = (0, n(240921).Ay)({
     kind: "user",

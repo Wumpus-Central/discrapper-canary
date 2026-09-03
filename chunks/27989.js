@@ -1,4 +1,3 @@
-"use strict";
 function i(e) {
     if ("custom" === e) return null;
     let t = r[e];

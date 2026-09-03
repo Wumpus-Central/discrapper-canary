@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { Do: () => a, PW: () => c, V5: () => d, _f: () => u, lb: () => i, tL: () => r });
 let i = "CHANGELOG_MODAL",
     r = "1232523165893132288",

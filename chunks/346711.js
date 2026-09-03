@@ -1,4 +1,3 @@
-"use strict";
 function n(e) {
     if (
         (function () {

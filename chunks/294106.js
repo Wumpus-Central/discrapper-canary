@@ -1,4 +1,3 @@
-"use strict";
 for (
     var n = "u" > typeof window && /Mac|iPod|iPhone|iPad/.test(window.navigator.platform),
         r = { alt: "altKey", control: "ctrlKey", meta: "metaKey", shift: "shiftKey" },

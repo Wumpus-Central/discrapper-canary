@@ -290,6 +290,14 @@
     min-width: 0
 }
 
+.pendingOverlay_e12da8 {
+    align-items: center;
+    display: flex;
+    inset: 0;
+    justify-content: center;
+    position: absolute
+}
+
 .sectionHeaderContainer__32534 {
     padding: var(--space-12) 0
 }
@@ -334,4 +342,4 @@
     animation-delay: var(--custom-entrance-delay, 0s)
 }
 
-/*# sourceMappingURL=5f1a895af57740b1.css.map*/
+/*# sourceMappingURL=80137cd408ba986d.css.map*/

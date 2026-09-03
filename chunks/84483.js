@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { uX: () => s, v9: () => l });
 var i = n(240921);
 let r = { control: 0, treatment_a: 250, treatment_b: 500, treatment_c: 250, treatment_d: 500 },

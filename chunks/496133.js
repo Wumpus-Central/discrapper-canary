@@ -1,4 +1,3 @@
-"use strict";
 var n = e(918078),
     o = Math.min;
 t.exports = function (t) {

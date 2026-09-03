@@ -1,4 +1,3 @@
-"use strict";
 Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.FormatBuilder = void 0),
     (t.bindFormatValuesWithBuilder = a),

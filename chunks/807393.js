@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { A: () => c }), n(321073);
 let i = {
     WEB_AND_IOS: new Set(["canary", "ptb", "stable"]),
@@ -68,7 +67,7 @@ let d = new Set(["darwin", "linux", "win32", "ios", "android"]),
                 let e = [...this._metrics];
                 r.Bo.post({
                     url: o.Rsh.METRICS_V2,
-                    body: { metrics: e, client_info: { built_at: "1788388660829", build_number: "606559" } },
+                    body: { metrics: e, client_info: { built_at: "1788439208698", build_number: "606784" } },
                     retries: 1,
                     rejectWithError: !0,
                 }).catch((t) => {

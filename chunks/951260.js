@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { n: () => i });
 let l = (0, n(945810).mj)({
     name: "2026-06-chat-bar-customization",

@@ -1,4 +1,3 @@
-"use strict";
 var n = e(308227),
     o = Object.defineProperty;
 t.exports = function (t, r) {

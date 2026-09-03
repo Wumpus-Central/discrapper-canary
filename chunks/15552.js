@@ -1,4 +1,3 @@
-"use strict";
 function i(e) {
     let t = {};
     if (((t.error_code = e.code), null != e.errors)) {

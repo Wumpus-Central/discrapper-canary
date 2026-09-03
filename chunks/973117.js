@@ -1,4 +1,3 @@
-"use strict";
 let i;
 n.d(t, { J: () => a, n: () => s });
 let r = "__d6gp33cibjs";

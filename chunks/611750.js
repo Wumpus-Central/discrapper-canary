@@ -1,4 +1,3 @@
-"use strict";
 var r = n(834647),
     a = n(780940),
     o = n(976467).CONSTRUCTOR,

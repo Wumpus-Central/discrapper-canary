@@ -1,4 +1,3 @@
-"use strict";
 function i(e) {
     let { muted: t, mute_config: n } = e;
     return !!t && (null == n || null == n.end_time || new Date(n.end_time) >= new Date());

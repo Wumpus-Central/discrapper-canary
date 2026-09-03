@@ -1,4 +1,3 @@
-"use strict";
 var r = n(834647),
     a = n(744679).left,
     o = n(242291),

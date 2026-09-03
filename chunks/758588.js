@@ -1,4 +1,3 @@
-"use strict";
 r.d(t, { A: () => p });
 var n = r(299146),
     i = r(1139),

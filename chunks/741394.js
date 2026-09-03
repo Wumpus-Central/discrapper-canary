@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { CN: () => r, kh: () => s, uk: () => a });
 var i = n(723702);
 function r() {

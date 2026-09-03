@@ -1,4 +1,3 @@
-"use strict";
 function i(e) {
     if (null == e.application_id) return null;
     let t =

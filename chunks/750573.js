@@ -1,4 +1,3 @@
-"use strict";
 function n(t, r) {
     return (n = Object.setPrototypeOf
         ? Object.setPrototypeOf.bind()

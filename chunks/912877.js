@@ -1,4 +1,3 @@
-"use strict";
 var n = "u" > typeof Symbol && Symbol,
     i = r(640847);
 e.exports = function () {

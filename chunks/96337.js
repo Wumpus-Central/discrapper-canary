@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { A: () => i });
 let i = [
     { name: "Afghanistan", alpha2: "AF", phoneCountryCode: "+93", phoneCountryCodes: ["+93"] },

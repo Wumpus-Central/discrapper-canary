@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { A: () => E, MemberListContentSettingsMenu: () => A });
 var l = n(477900),
     i = n(582128),

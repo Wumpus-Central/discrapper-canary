@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { SettingsIcon: () => l });
 var i = n(477900);
 n(582128);

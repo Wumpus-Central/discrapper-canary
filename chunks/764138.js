@@ -1,4 +1,3 @@
-"use strict";
 var t = {
     current: function (e) {
         return e;

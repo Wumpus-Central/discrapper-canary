@@ -1,4 +1,3 @@
-"use strict";
 Object.defineProperty(t, "__esModule", { value: !0 }), (t.IntlManager = t.DEFAULT_LOCALE = void 0);
 let n = r(896745),
     i = r(668317),

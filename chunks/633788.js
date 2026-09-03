@@ -1,2 +1,1 @@
-"use strict";
 n(318002), (e.exports = n(229781).setTimeout);

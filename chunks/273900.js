@@ -1,4 +1,3 @@
-"use strict";
 var n = e(308227),
     o = e(407057),
     s = n.document,

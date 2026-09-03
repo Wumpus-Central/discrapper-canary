@@ -1,4 +1,3 @@
-"use strict";
 var n = e(414123),
     o = e(512008),
     s = Function.prototype,

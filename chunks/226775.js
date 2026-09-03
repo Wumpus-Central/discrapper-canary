@@ -1,4 +1,3 @@
-"use strict";
 var n = e(675879),
     o = 0,
     s = Math.random(),

@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, {
     $0: () => c,
     UZ: () => I,

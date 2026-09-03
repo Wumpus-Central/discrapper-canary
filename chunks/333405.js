@@ -1,4 +1,3 @@
-"use strict";
 let n;
 function i(e, t) {
     (null == t || t > e.length) && (t = e.length);

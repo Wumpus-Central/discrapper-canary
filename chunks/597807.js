@@ -1,4 +1,3 @@
-"use strict";
 function a(e) {
     return 1 === e.nodeType;
 }

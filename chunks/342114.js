@@ -1,4 +1,3 @@
-"use strict";
 Object.defineProperty(t, "__esModule", { value: !0 }), (t.flattenNames = void 0);
 var n = u(r(565102)),
     o = u(r(43646)),

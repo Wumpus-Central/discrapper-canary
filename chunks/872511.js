@@ -1,4 +1,3 @@
-"use strict";
 var n =
         Object.assign ||
         function (e) {

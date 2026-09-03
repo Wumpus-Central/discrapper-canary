@@ -1,4 +1,3 @@
-"use strict";
 let i;
 n.d(t, { A: () => _ });
 var r = n(723702),

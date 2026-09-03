@@ -1,4 +1,3 @@
-"use strict";
 var n = e(715804),
     o = e(664957),
     s = Array.prototype;

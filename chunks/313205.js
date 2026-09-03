@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { J2: () => r, LH: () => i, ZS: () => s, e8: () => a });
 let i = (0, n(600975).C)({
     kind: "guild",

@@ -1,4 +1,3 @@
-"use strict";
 var n = e(308227),
     o = e(229781);
 t.exports = function (t, r) {

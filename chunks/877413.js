@@ -1,4 +1,3 @@
-"use strict";
 e.exports = function (e) {
     return ((e = String(e || "")), r.test(e)) ? "rtl" : i.test(e) ? "ltr" : "neutral";
 };

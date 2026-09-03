@@ -1,5 +1,4 @@
 !(function (e) {
-    "use strict";
     function _(e, _, s) {
         var t, d, a;
         return "m" === s

@@ -1,4 +1,3 @@
-"use strict";
 function i(e, t) {
     if (e.score === t.score) {
         let n = e.sortable ?? e.comparator?.toLocaleLowerCase() ?? "",

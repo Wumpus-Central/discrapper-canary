@@ -1,4 +1,3 @@
-"use strict";
 r.d(t, { $: () => u });
 let n = new Set(["id"]),
     i = new Set(["aria-label", "aria-labelledby", "aria-describedby", "aria-details"]),

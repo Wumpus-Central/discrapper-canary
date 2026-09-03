@@ -1,4 +1,3 @@
-"use strict";
 e.exports = function (e, t, r, n, i) {
     this.directMap[e + ":" + r] = t;
     var o,

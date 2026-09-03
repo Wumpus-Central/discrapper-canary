@@ -1,4 +1,3 @@
-"use strict";
 var n = r(227106);
 e.exports = function (e) {
     return null === e

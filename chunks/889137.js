@@ -1,4 +1,3 @@
-"use strict";
 r.d(t, { P: () => H, YW: () => q });
 let n = Symbol.for("@ts-pattern/matcher"),
     i = Symbol.for("@ts-pattern/isVariadic"),

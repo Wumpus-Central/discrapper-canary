@@ -1,4 +1,3 @@
-"use strict";
 Object.defineProperty(t, "__esModule", { value: !0 }), (t.EditableInput = void 0);
 var n = (function () {
         function e(e, t) {

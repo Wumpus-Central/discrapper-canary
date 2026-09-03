@@ -1,4 +1,3 @@
-"use strict";
 function i(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         { onBeforeBatch: i } = n,

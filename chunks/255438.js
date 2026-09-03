@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { XF: () => r, Xq: () => s, up: () => l });
 var i = n(375708);
 let r = 1024,

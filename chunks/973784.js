@@ -1,4 +1,3 @@
-"use strict";
 e.exports = function (e, t, r, n) {
     (t = t || "&"), (r = r || "=");
     var i = {};

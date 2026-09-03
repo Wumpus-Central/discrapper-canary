@@ -1,4 +1,3 @@
-"use strict";
 r.d(t, { G: () => s });
 var n = r(582128);
 class i {

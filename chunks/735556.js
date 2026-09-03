@@ -1,4 +1,3 @@
-"use strict";
 function t(e) {
     return (e - 30) * 3.62 + 194;
 }

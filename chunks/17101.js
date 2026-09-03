@@ -1,4 +1,3 @@
-"use strict";
 function r(e, t) {
     var r = ("u" > typeof Symbol && e[Symbol.iterator]) || e["@@iterator"];
     if (!r) {

@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { Ay: () => r, P8: () => i, sK: () => s });
 var l = n(945810);
 let i = { CHANNEL_TEXT_AREA_BARS: "ChannelTextAreaBars", TYPING_USERS: "TypingUsers" },

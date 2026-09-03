@@ -1,4 +1,3 @@
-"use strict";
 function i() {
     let e = window;
     return (

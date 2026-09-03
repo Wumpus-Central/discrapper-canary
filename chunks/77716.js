@@ -1,4 +1,3 @@
-"use strict";
 function n() {
     return !1;
 }

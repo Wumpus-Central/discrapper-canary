@@ -1,4 +1,3 @@
-"use strict";
 n.r(t), n.d(t, { USER_SETTINGS_MODAL_KEY: () => E, openUserSettings: () => A });
 var i = n(477900),
     r = n(192308),

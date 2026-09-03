@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { c: () => i });
 class i {
     searchFetchers = new Map();

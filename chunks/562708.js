@@ -1,4 +1,3 @@
-"use strict";
 let i, r, a, s, l, o, d, c;
 n.r(t),
     n.d(t, {
@@ -495,7 +494,7 @@ eh(
     (o = window.GLOBAL_ENV.RELEASE_CHANNEL) &&
         (null == l.release_channel || "" === l.release_channel) &&
         (l.release_channel = o.split("-")[0]),
-    isNaN((d = parseInt("606559", 10))) || (l.client_build_number = d),
+    isNaN((d = parseInt("606784", 10))) || (l.client_build_number = d),
     null == (c = eo?.app.getBuildNumber()) || isNaN(c) || (l.native_build_number = c),
     (l.client_event_source = (function () {
         try {

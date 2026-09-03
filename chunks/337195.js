@@ -1,4 +1,3 @@
-"use strict";
 var r = n(407057),
     a = n(459547),
     o = n(61748)("match");

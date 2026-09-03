@@ -1,4 +1,3 @@
-"use strict";
 n.r(t), n.d(t, { openPlayground: () => d, openPlaygroundFromParsedUrl: () => c });
 var i = n(398590),
     r = n(790271),

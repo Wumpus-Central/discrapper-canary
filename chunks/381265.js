@@ -1,4 +1,3 @@
-"use strict";
 var n = r(3528),
     i = "function" == typeof Symbol && "symbol" == typeof Symbol("foo"),
     o = Object.prototype.toString,

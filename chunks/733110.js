@@ -1,4 +1,3 @@
-"use strict";
 n.r(t), n.d(t, { FetchState: () => c, default: () => m });
 var i,
     r = n(17928),

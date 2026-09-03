@@ -1,4 +1,3 @@
-"use strict";
 var n =
         (this && this.__createBinding) ||
         (Object.create

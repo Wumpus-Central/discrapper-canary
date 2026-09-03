@@ -1,4 +1,3 @@
-"use strict";
 r.r(t), r.d(t, { deprecateInterpolate: () => i });
 var n = !1;
 function i() {

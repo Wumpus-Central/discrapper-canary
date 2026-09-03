@@ -1,4 +1,3 @@
-"use strict";
 Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.stringSimilarity = void 0),
     (t.stringSimilarity = function (e, t, r, n) {

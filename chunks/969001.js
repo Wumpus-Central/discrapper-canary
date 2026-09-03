@@ -1,4 +1,3 @@
-"use strict";
 var t = Object.defineProperty || !1;
 if (t)
     try {

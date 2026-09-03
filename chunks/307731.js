@@ -1,4 +1,3 @@
-"use strict";
 n.r(t),
     n.d(t, {
         DEFAULT_EMOJI_SLOTS: () => i,

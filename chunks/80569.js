@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { j: () => s, y: () => l });
 let l = "EMOJI_STUDIO_MODAL_KEY";
 var i,

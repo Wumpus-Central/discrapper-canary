@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, {
     BC: () => o,
     It: () => R,

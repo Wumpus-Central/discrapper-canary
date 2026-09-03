@@ -1,4 +1,3 @@
-"use strict";
 var n,
     i = r(934169),
     o = r(386221),

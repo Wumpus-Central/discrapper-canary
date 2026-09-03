@@ -1,4 +1,3 @@
-"use strict";
 r.d(e, { P: () => aZ, fiscalQrMachine: () => az });
 var n,
     o,

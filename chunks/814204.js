@@ -1,4 +1,3 @@
-"use strict";
 function n(...e) {
     return 1 === e.length && e[0]
         ? e[0]

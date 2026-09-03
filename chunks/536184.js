@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { A: () => s });
 var l = n(76788);
 let i = "" !== new Audio().canPlayType("audio/ogg; codecs=opus");

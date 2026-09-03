@@ -1,4 +1,3 @@
-"use strict";
 function i(e) {
     let t = document.createElement("a");
     return (t.href = e), t.hostname;

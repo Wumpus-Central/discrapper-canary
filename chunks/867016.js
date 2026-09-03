@@ -1,4 +1,3 @@
-"use strict";
 t.default = {
     locale: "en",
     pluralRuleFunction: function (e, t) {

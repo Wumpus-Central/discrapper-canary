@@ -1,4 +1,3 @@
-"use strict";
 r.r(t),
     r.d(t, { parseNumberSkeleton: () => m, parseNumberSkeletonFromString: () => s, parseDateTimeSkeleton: () => i });
 var n =

@@ -2,7 +2,6 @@
     (function (t) {
         module.exports = t();
     })(function () {
-        "use strict";
         var svgNS = "http://www.w3.org/2000/svg",
             locationHref = "",
             _useWebWorker = !1,

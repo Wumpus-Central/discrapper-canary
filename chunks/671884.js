@@ -30,7 +30,7 @@ var n = l(477900),
     I = l(723702),
     M = l(553933),
     D = l(915725),
-    T = l(406064),
+    T = l(655180),
     _ = l(951592),
     R = l(309777),
     F = l(362081),
@@ -254,42 +254,44 @@ function e0(e) {
 function e1(e) {
     let { actionsDisabled: t, isNew: a, onClick: r, onEdit: o, gridItemProps: c } = e,
         d = (0, eR.Y_)(),
-        { analyticsLocations: m } = (0, k.Ay)(A.A.CLIPS_GALLERY_ITEM),
-        { selectedClipIds: h, toggleClipSelection: x, isMultiSelectMode: g, onSelectClip: f } = i.useContext(eZ.$),
-        [p, j] = i.useState(!1),
+        m = !0 === d.pending,
+        h = t || m,
+        { analyticsLocations: x } = (0, k.Ay)(A.A.CLIPS_GALLERY_ITEM),
+        { selectedClipIds: g, toggleClipSelection: f, isMultiSelectMode: p, onSelectClip: j } = i.useContext(eZ.$),
         [y, v] = i.useState(!1),
         [b, N] = i.useState(!1),
         [w, P] = i.useState(!1),
-        [E, L] = i.useState(0),
-        S = h.has(d.id),
-        I = d.type === eq.nQ.SCREENSHOT,
-        M = (0, u.bG)([C.Ay], () => C.Ay.keyboardModeEnabled),
-        T = (y || p || (b && M)) && !S,
-        _ = i.useCallback(() => N(!0), []),
-        R = i.useCallback((e) => {
-            e.currentTarget.contains(e.relatedTarget) || N(!1);
+        [E, L] = i.useState(!1),
+        [S, I] = i.useState(0),
+        M = g.has(d.id),
+        T = d.type === eq.nQ.SCREENSHOT,
+        _ = (0, u.bG)([C.Ay], () => C.Ay.keyboardModeEnabled),
+        R = (b || y || (w && _)) && !M,
+        F = i.useCallback(() => P(!0), []),
+        H = i.useCallback((e) => {
+            e.currentTarget.contains(e.relatedTarget) || P(!1);
         }, []);
     i.useEffect(() => {
-        if (!T || I) return;
-        let e = window.setTimeout(() => P(!0), 150);
+        if (!R || T || m) return;
+        let e = window.setTimeout(() => L(!0), 150);
         return () => {
-            window.clearTimeout(e), P(!1);
+            window.clearTimeout(e), L(!1);
         };
-    }, [T, I]);
-    let F = i.useRef(null),
-        H = i.useCallback(() => {
-            F.current?.releaseSource();
+    }, [R, T, m]);
+    let z = i.useRef(null),
+        G = i.useCallback(() => {
+            z.current?.releaseSource();
         }, []),
-        z = i.useCallback((e) => {
-            F.current?.seek(e);
+        O = i.useCallback((e) => {
+            z.current?.seek(e);
         }, []),
-        G = i.useCallback(() => j(!1), []),
-        O = i.useCallback(
+        U = i.useCallback(() => v(!1), []),
+        K = i.useCallback(
             (e) => {
-                j(!0);
-                let i =
-                    g && h.size > 0
-                        ? Array.from(h)
+                v(!0);
+                let t =
+                    p && g.size > 0
+                        ? Array.from(g)
                               .map((e) => D.Ay.getClipById(e))
                               .filter(eT.Vq)
                         : [d];
@@ -315,10 +317,10 @@ function e1(e) {
                         return (l) =>
                             (0, n.jsx)(e, {
                                 ...l,
-                                analyticsLocations: m,
-                                clips: i,
-                                actionsDisabled: t,
-                                onSelectClip: null != f ? () => f(d) : void 0,
+                                analyticsLocations: x,
+                                clips: t,
+                                actionsDisabled: h,
+                                onSelectClip: null != j ? () => j(d) : void 0,
                                 onShare: () => {
                                     eD.default.track(eo.HAw.CLIP_GALLERY_CARD_BUTTON_CLICKED, {
                                         type: "share",
@@ -334,7 +336,7 @@ function e1(e) {
                                             ...e_.Zy(d),
                                         });
                                 },
-                                onBeforeDelete: H,
+                                onBeforeDelete: G,
                                 onAfterDelete: () => {
                                     eD.default.track(eo.HAw.CLIP_GALLERY_CARD_BUTTON_CLICKED, {
                                         type: "delete",
@@ -344,24 +346,24 @@ function e1(e) {
                                 },
                             });
                     },
-                    { onClose: G },
+                    { onClose: U },
                 );
             },
-            [d, g, h, t, G, o, H, f, m],
-        ),
-        U = i.useCallback(
-            (e) => {
-                t || (e.preventDefault(), e.stopPropagation(), O(e));
-            },
-            [t, O],
-        ),
-        K = i.useCallback(
-            (e) => {
-                e.preventDefault(), e.stopPropagation(), O(e);
-            },
-            [O],
+            [d, p, g, h, U, o, G, j, x],
         ),
         V = i.useCallback(
+            (e) => {
+                h || (e.preventDefault(), e.stopPropagation(), K(e));
+            },
+            [h, K],
+        ),
+        $ = i.useCallback(
+            (e) => {
+                e.preventDefault(), e.stopPropagation(), K(e);
+            },
+            [K],
+        ),
+        B = i.useCallback(
             (e) => {
                 e.preventDefault(),
                     e.stopPropagation(),
@@ -370,53 +372,54 @@ function e1(e) {
             },
             [o, d],
         ),
-        $ = i.useCallback(
+        Q = i.useCallback(
             (e) => {
-                !t &&
+                !h &&
                     (!(0, ef.vq)(e.target, Element) ||
                         (null == e.target.closest("[data-clips-avatars]") &&
                             null == e.target.closest("[data-clips-progress]") &&
                             e.currentTarget.contains(e.target))) &&
-                    (e.shiftKey ? (e.preventDefault(), x(d.id)) : g ? x(d.id) : null != r && r(d),
+                    (e.shiftKey ? (e.preventDefault(), f(d.id)) : p ? f(d.id) : null != r && r(d),
                     eD.default.track(eo.HAw.CLIP_GALLERY_CARD_CLICKED, {
                         ...e_.lc("ClipsGalleryCard.handleClick"),
                         ...e_.Zy(d),
                     }));
             },
-            [t, g, x, d, r],
+            [h, p, f, d, r],
         );
     return (0, n.jsx)(k.f5, {
-        value: m,
+        value: x,
         children: (0, n.jsx)("div", {
             className: eJ.hl,
-            onFocus: _,
-            onBlur: R,
+            onFocus: F,
+            onBlur: H,
             children: (0, n.jsxs)(ey.s, {
-                "aria-disabled": t,
-                "aria-label": eu.intl.string(I ? eu.t["HO/oXl"] : eu.t.bt75uw),
-                onClick: t ? void 0 : $,
-                onContextMenu: U,
+                "aria-disabled": h,
+                "aria-label": eu.intl.string(T ? eu.t["HO/oXl"] : eu.t.bt75uw),
+                onClick: h ? void 0 : Q,
+                onContextMenu: V,
                 buttonProps: null != c ? { role: "button", id: c.id, tabIndex: c.tabIndex } : void 0,
                 buttonRef: c?.ref,
                 onFocus: c?.onFocus,
-                className: s()(eJ.Nr, { [eJ.r9]: t, [eJ.in]: p, [eJ.wH]: S }),
-                onMouseEnter: () => v(!0),
-                onMouseLeave: () => v(!1),
+                className: s()(eJ.Nr, { [eJ.r9]: h, [eJ.in]: y, [eJ.wH]: M }),
+                onMouseEnter: () => N(!0),
+                onMouseLeave: () => N(!1),
                 children: [
                     (0, n.jsx)("div", {
                         className: eJ.w7,
                         children: (0, n.jsxs)(e2, {
-                            ref: F,
-                            isPlaying: w,
-                            onProgressChange: L,
+                            ref: z,
+                            isPlaying: E,
+                            onProgressChange: I,
                             children: [
+                                m && (0, n.jsx)("div", { className: eJ.mi, children: (0, n.jsx)(q.y, {}) }),
                                 (0, n.jsx)(e3, { isNew: a }),
-                                T && !t ? (0, n.jsx)(e5, { onMenu: K, onBeforeDelete: H }) : (0, n.jsx)(e9, {}),
+                                R && !h ? (0, n.jsx)(e5, { onMenu: $, onBeforeDelete: G }) : (0, n.jsx)(e9, {}),
                                 (0, n.jsx)("div", { className: eJ.dH, "aria-hidden": "true" }),
                             ],
                         }),
                     }),
-                    (0, n.jsx)(e8, { showHoverState: T, playbackProgress: E, onEdit: V, onSeek: z }),
+                    (0, n.jsx)(e8, { showHoverState: R, playbackProgress: S, onEdit: B, onSeek: O }),
                 ],
             }),
         }),

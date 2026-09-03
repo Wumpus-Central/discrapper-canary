@@ -23,8 +23,8 @@ var n,
     C = a(45630),
     S = a(157257),
     N = a(915725),
-    A = a(406064),
-    k = a(822151),
+    A = a(655180),
+    k = a(282098),
     I = a(227628),
     D = a(468550);
 let T = (0, a(196765).v)(() => ({ enabled: !1, pending: null, lastResult: null }));
@@ -307,6 +307,14 @@ function G() {
                                     onClick: () => {
                                         k.i.debugRerunRanking(K).catch((e) => {
                                             L.nx.error("re-run ranking failed", e);
+                                        });
+                                    },
+                                }),
+                                (0, r.jsx)(x.$, {
+                                    text: "run automontage",
+                                    onClick: () => {
+                                        k.i.debugRunAutoMontage(K).catch((e) => {
+                                            L.nx.error("run automontage failed", e);
                                         });
                                     },
                                 }),

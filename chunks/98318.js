@@ -1,4 +1,3 @@
-"use strict";
 function i(e) {
     return e?.tags?.subscription_listing_id != null;
 }

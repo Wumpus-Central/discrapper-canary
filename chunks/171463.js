@@ -1,4 +1,3 @@
-"use strict";
 var n = r(721602),
     i = r(870064),
     o = "object" == typeof StopIteration ? StopIteration : null;

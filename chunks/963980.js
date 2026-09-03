@@ -1,4 +1,3 @@
-"use strict";
 var n;
 if (!Object.keys) {
     var i = Object.prototype.hasOwnProperty,

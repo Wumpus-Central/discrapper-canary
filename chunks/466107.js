@@ -1,4 +1,3 @@
-"use strict";
 var n = r(589841),
     i = Object.prototype.hasOwnProperty,
     o = Array.isArray,

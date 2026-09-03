@@ -1,4 +1,3 @@
-"use strict";
 var t = {
     current: { createInteractionHandle: function () {}, clearInteractionHandle: function () {} },
     inject: function (e) {

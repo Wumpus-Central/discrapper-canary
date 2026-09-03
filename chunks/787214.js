@@ -1,4 +1,3 @@
-"use strict";
 e(840077)(
     "Map",
     function (t) {

@@ -6,7 +6,6 @@ var n = r(225063),
     l = r(12994),
     u = r(601300);
 function c() {
-    "use strict";
     var t = i(),
         r = t.m(c),
         f = (Object.getPrototypeOf ? Object.getPrototypeOf(r) : r.__proto__).constructor;

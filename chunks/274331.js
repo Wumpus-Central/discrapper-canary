@@ -1,4 +1,3 @@
-"use strict";
 var a = r(359470),
     n = r(466208),
     s = [].slice,

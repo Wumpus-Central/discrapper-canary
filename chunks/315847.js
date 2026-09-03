@@ -1,4 +1,3 @@
-"use strict";
 function r(e, t) {
     let n = t && t.cache ? t.cache : s,
         r = t && t.serializer ? t.serializer : o;

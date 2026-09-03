@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { P: () => r });
 let r = [
     "adlm",

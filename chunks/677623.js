@@ -1,4 +1,3 @@
-"use strict";
 function t(e) {
     if (((this._capacity = i(e)), (this._length = 0), (this._front = 0), this._makeCapacity(), r(e))) {
         for (var t = e.length, n = 0; n < t; ++n) this[n] = e[n];

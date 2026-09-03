@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { W: () => i });
 let i = {
     bg: () => n.e("344834").then(n.t.bind(n, 625881, 23)),

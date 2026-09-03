@@ -1,4 +1,3 @@
-"use strict";
 var n = e(34714).charAt,
     o = e(57284),
     s = e(605944),

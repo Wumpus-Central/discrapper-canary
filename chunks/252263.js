@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { B: () => i });
 var l = n(228366);
 function i(e) {

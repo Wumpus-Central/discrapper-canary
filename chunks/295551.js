@@ -1,4 +1,3 @@
-"use strict";
 let n;
 r.d(t, { X1: () => d, Tw: () => f, Bi: () => c });
 var i = r(361854),

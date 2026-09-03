@@ -1,4 +1,3 @@
-"use strict";
 var n = {
     current: function (e) {
         return r.g.cancelAnimationFrame(e);

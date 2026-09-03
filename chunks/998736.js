@@ -1,4 +1,3 @@
-"use strict";
 var t = function (e) {
     switch (typeof e) {
         case "string":

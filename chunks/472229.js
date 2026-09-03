@@ -1,4 +1,3 @@
-"use strict";
 function i() {
     if (null == Intl.DateTimeFormat) return null;
     let e = Intl.DateTimeFormat();

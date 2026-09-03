@@ -1,4 +1,3 @@
-"use strict";
 var t = Object.prototype.toString;
 e.exports = function (e) {
     var r = t.call(e),

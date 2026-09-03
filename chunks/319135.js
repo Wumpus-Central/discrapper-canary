@@ -1,4 +1,3 @@
-"use strict";
 var n = r(696219),
     i = Object.prototype.toString,
     o = Object.prototype.hasOwnProperty,

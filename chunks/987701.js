@@ -1,4 +1,3 @@
-"use strict";
 function r(e) {
     return e.valueOf ? e.valueOf() : Object.prototype.valueOf.call(e);
 }

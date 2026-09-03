@@ -1,4 +1,3 @@
-"use strict";
 var n, i;
 Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.astFormatter = t.RichTextNodeType = void 0),

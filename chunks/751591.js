@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { Ay: () => o });
 let i = Object.freeze({ overflowY: "scroll", overflowX: "hidden" }),
     r = Object.freeze({ overflowY: "auto", overflowX: "hidden" }),

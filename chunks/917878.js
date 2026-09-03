@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { A: () => s, a: () => i }), n(134528), n(947204);
 let i = "NativeAppStartup";
 function r(e, t, n, i, r) {

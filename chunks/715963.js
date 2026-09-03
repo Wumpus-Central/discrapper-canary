@@ -1,4 +1,3 @@
-"use strict";
 t.exports = {
     CSSRuleList: 0,
     CSSStyleDeclaration: 0,

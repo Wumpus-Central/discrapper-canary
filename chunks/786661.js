@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { E: () => d }), n(321073), n(775443);
 var i = n(284009),
     r = n.n(i),
@@ -10,28 +9,34 @@ class o {
     gameStateTimeline = [];
     constructor(e) {
         this.gameStateTimeline = (function (e) {
-            let t = !0,
-                n = !1,
-                i = [{ inGame: !0, bombPlanted: !1, timestamp_ms: 0 }];
-            function r(e, r, a) {
-                (e !== t || r !== n) && ((t = e), (n = r), i.push({ inGame: t, bombPlanted: n, timestamp_ms: a }));
+            let t = { inGame: !0, inMatch: !0, bombPlanted: !1 },
+                n = [{ ...t, timestamp_ms: 0 }];
+            function i(e, i) {
+                let r = { ...t, ...e };
+                (r.inGame !== t.inGame || r.inMatch !== t.inMatch || r.bombPlanted !== t.bombPlanted) &&
+                    (Object.assign(t, r), n.push({ ...r, timestamp_ms: i }));
             }
-            for (let i of e)
-                switch (i.eventName) {
+            for (let n of e)
+                switch (n.eventName) {
                     case s.C.PlayStateChange: {
-                        let e = i.additionalData?.playing === !0;
-                        r(e, e && n, i.timestamp_ms);
+                        let e = n.additionalData?.playing === !0;
+                        i({ inGame: e, bombPlanted: e && t.bombPlanted }, n.timestamp_ms);
+                        break;
+                    }
+                    case s.C.InMatchChange: {
+                        let e = n.additionalData?.inMatch === !0;
+                        i(e ? { inMatch: e } : { inMatch: e, inGame: !1, bombPlanted: !1 }, n.timestamp_ms);
                         break;
                     }
                     case s.C.BombPlant:
-                        r(t, !0, i.timestamp_ms);
+                        i({ bombPlanted: !0 }, n.timestamp_ms);
                         break;
                     case s.C.BombDefused:
                     case s.C.BombExploded:
                     case s.C.RoundEnd:
-                        r(t, !1, i.timestamp_ms);
+                        i({ bombPlanted: !1 }, n.timestamp_ms);
                 }
-            return i;
+            return n;
         })(e);
     }
     calculateModifiers(e, t) {
@@ -54,6 +59,9 @@ class o {
     }
     isInGame(e) {
         return c(this.gameStateTimeline, e).inGame;
+    }
+    isInMatch(e) {
+        return c(this.gameStateTimeline, e).inMatch;
     }
     canAnchorReaction(e) {
         let t = e.eventName;

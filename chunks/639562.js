@@ -1,4 +1,3 @@
-"use strict";
 e.exports = function (e) {
     e = e || {};
     var t,

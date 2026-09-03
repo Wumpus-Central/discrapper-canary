@@ -1,4 +1,3 @@
-"use strict";
 n.r(t), n.d(t, { collectNonHeapMetrics: () => s, initWasmTracking: () => a }), n(321073);
 let i = [],
     r = !1;

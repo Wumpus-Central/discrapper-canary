@@ -1,4 +1,3 @@
-"use strict";
 var n = e(61748)("iterator"),
     o = !1;
 try {

@@ -1,4 +1,3 @@
-"use strict";
 var r, i;
 n.d(t, { U: () => r }),
     ((i = r || (r = {})).BORDER_BOX = "border-box"),

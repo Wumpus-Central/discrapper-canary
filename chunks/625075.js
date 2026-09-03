@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { M: () => r, k: () => a });
 var i = n(945810);
 let r = "https://discord.com/blog/a-letter-to-the-discord-community-in-brazil",

@@ -1,4 +1,3 @@
-"use strict";
 var n = r(906046),
     i = n("String.prototype.valueOf"),
     o = function (e) {

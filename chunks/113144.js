@@ -1,4 +1,3 @@
-"use strict";
 var t = {
         childContextTypes: !0,
         contextTypes: !0,

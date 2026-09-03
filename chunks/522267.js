@@ -1,4 +1,3 @@
-"use strict";
 Object.defineProperty(t, "__esModule", { value: !0 }), (t.InternalIntlMessage = void 0);
 let n = r(524897);
 t.InternalIntlMessage = class {

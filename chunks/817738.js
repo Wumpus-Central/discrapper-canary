@@ -1,4 +1,3 @@
-"use strict";
 r.d(t, { A: () => n });
 var n = {};
 n = {

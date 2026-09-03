@@ -1,4 +1,3 @@
-"use strict";
 function i(e) {
     return Math.max(Math.min(e, 1), 0);
 }

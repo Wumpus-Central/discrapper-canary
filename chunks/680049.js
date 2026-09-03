@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { NJ: () => r, zv: () => a });
 let i = { DARK: "dark", LIGHT: "light", MIDNIGHT: "midnight", DARKER: "darker" },
     r = i;

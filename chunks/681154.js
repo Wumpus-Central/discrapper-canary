@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { ContentInventoryEntryType: () => r });
 var i,
     r =

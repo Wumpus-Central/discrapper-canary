@@ -1,4 +1,3 @@
-"use strict";
 var t = Object.prototype.hasOwnProperty,
     r = "~";
 function n() {}

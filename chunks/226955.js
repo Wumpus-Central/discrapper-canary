@@ -1,4 +1,3 @@
-"use strict";
 e.exports = function (e, t, n, i) {
     var o = this;
     function a(t) {

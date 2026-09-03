@@ -1,4 +1,3 @@
-"use strict";
 var n = r(439619)("%Array.prototype%"),
     i = r(333654),
     o = r(870064),

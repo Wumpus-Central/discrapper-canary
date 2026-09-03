@@ -1,4 +1,3 @@
-"use strict";
 var r = n(834647),
     a = n(375797),
     o = n(654272).indexOf,

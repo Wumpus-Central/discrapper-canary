@@ -1,4 +1,3 @@
-"use strict";
 r.r(t), r.d(t, { Manager: () => a, usePopper: () => y, Reference: () => E, Popper: () => _ });
 var n = r(582128),
     i = n.createContext(),

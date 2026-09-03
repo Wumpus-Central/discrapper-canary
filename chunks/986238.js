@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { VP: () => a, ZR: () => s, fL: () => r, v_: () => i });
 let i = {
         discord_marketing: "Discord Marketing",

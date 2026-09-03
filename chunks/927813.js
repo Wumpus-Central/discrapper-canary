@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { A: () => r });
 let i = Object.freeze({
         HALF_SECOND: 500,

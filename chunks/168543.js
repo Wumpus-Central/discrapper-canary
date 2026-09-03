@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { c: () => r, l: () => a });
 let i = (0, n(945810).mj)({
     name: "2026-08-profile-embed-rendering",

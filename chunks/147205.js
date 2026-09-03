@@ -1,4 +1,3 @@
-"use strict";
 e.exports = [
     "Float16Array",
     "Float32Array",

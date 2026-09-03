@@ -1,4 +1,3 @@
-"use strict";
 var n = r(582128),
     i =
         "function" == typeof Object.is

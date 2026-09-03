@@ -10,7 +10,6 @@ var r = n(797407).default,
     p = n(782186),
     h = n(151502);
 function f() {
-    "use strict";
     (e.exports = f =
         function () {
             return n;

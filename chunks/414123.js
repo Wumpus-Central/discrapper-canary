@@ -1,4 +1,3 @@
-"use strict";
 t.exports = !e(486816)(function () {
     return (
         7 !==

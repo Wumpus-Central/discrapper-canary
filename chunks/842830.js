@@ -1,4 +1,3 @@
-"use strict";
 function r(e) {
     return Intl.getCanonicalLocales(e);
 }

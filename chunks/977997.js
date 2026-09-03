@@ -1,4 +1,3 @@
-"use strict";
 let i, r;
 n.d(t, { A: () => D });
 var a = n(435558),

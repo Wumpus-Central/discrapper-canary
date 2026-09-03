@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { M: () => i });
 let i = (0, n(945810).mj)({
     name: "2026-06-battlenet-social-sdk-migration",

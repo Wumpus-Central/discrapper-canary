@@ -1,4 +1,3 @@
-"use strict";
 n.r(t),
     n.d(t, {
         GLOBAL_DISCOVERY_DEFAULT_TAB: () => _,

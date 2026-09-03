@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { C: () => i });
 let i = n(582128).createContext({
     reducedMotion: { enabled: !1, rawValue: "no-preference" },

@@ -1,4 +1,3 @@
-"use strict";
 function i() {
     return "u" > typeof globalThis
         ? globalThis

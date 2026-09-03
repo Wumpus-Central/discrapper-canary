@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { cg: () => N });
 var i = n(536637),
     r = n.n(i),

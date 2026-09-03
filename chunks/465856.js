@@ -1,4 +1,3 @@
-"use strict";
 function i(e) {
     if (null != e.title && null != e.filename) {
         let t = e.filename.lastIndexOf("."),

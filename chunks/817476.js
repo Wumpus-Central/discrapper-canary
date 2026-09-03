@@ -1,3 +1,2 @@
-"use strict";
 n.d(t, { t: () => i });
 let i = { thermalState: "UNKNOWN", batteryLevel: 1, isLowPowerMode: !1 };

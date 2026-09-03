@@ -1,4 +1,3 @@
-"use strict";
 var n = r(473560),
     i = r(969001),
     o = n.hasArrayLengthDefineBug(),

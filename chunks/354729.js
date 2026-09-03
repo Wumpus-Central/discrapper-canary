@@ -1,4 +1,3 @@
-"use strict";
 function r(e) {
     return (r =
         "function" == typeof Symbol && "symbol" == typeof Symbol.iterator

@@ -1,4 +1,3 @@
-"use strict";
 function i(e) {
     let { storeState: t, surface: n } = e,
         i = Date.now(),

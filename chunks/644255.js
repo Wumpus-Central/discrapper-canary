@@ -1,4 +1,3 @@
-"use strict";
 function n(e) {
     if ("u" < typeof window || null == window.navigator) return !1;
     let t = window.navigator.userAgentData?.brands;

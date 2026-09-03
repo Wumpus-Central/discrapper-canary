@@ -1,4 +1,3 @@
-"use strict";
 function i(e) {
     if (null != e) return "channel_id" in e ? e.channel_id : void 0;
 }

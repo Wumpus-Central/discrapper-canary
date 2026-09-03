@@ -1,4 +1,3 @@
-"use strict";
 var n = (function () {
     function e(e, t) {
         for (var r = 0; r < t.length; r++) {

@@ -1,4 +1,3 @@
-"use strict";
 var t = function () {
     (this.head = null), (this.tail = null);
 };

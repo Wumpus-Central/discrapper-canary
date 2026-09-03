@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { v: () => i });
 let i = {
     bg: async () => (await Promise.all([n.e("986042"), n.e("385047")]).then(n.bind(n, 827146))).default,

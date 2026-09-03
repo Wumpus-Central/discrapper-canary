@@ -1,4 +1,3 @@
-"use strict";
 var r, n;
 function i(e) {
     for (let t = 0; t < e.length; t++) e[t] = o(e[t]);

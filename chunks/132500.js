@@ -1,4 +1,3 @@
-"use strict";
 let n;
 e.d(r, { A: () => u });
 let o = "u" > typeof crypto && crypto.randomUUID && crypto.randomUUID.bind(crypto),

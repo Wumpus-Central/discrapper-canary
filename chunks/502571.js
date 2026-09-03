@@ -1,4 +1,3 @@
-"use strict";
 n.r(t), n.d(t, { default: () => l, getAttachmentImageLadderConfig: () => s });
 var i = n(945810);
 n(459830);

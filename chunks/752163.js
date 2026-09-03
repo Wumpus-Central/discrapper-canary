@@ -1,4 +1,3 @@
-"use strict";
 function i(e, t, n) {
     let i = e[t];
     return null == i ? (n ? `${e.any} (any)` : "100") : i.toString();

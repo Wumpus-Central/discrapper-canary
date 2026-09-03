@@ -1,4 +1,3 @@
-"use strict";
 e.exports = function () {
     var e = this;
     clearTimeout(e.resetTimer),

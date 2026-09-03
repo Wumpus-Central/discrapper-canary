@@ -1,4 +1,3 @@
-"use strict";
 n.r(t),
     n.d(t, { enable: () => O, isNotSupported: () => N, trackToggleSelfDeaf: () => L, trackToggleSelfMute: () => R });
 var i = n(477900);

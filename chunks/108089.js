@@ -1,4 +1,3 @@
-"use strict";
 function l(e) {
     let t = (function (e) {
             let t = new Intl.NumberFormat(e, { useGrouping: !1 }),

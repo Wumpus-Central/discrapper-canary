@@ -1,4 +1,3 @@
-"use strict";
 var n = r(147205),
     i = "u" < typeof globalThis ? r.g : globalThis;
 e.exports = function () {

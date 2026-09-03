@@ -1,4 +1,3 @@
-"use strict";
 var n = function (t) {
     return t && t.Math === Math && t;
 };

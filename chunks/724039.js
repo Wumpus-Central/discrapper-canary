@@ -1,4 +1,3 @@
-"use strict";
 var t = Object.getOwnPropertySymbols,
     r = Object.prototype.hasOwnProperty,
     n = Object.prototype.propertyIsEnumerable;

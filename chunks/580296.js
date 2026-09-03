@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { openRestrictedHoursModal: () => C, k: () => O });
 var i = n(477900),
     r = n(582128),

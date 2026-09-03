@@ -1,4 +1,3 @@
-"use strict";
 var r = n(675879),
     a = /[^\0-\u007E]/,
     o = /[.\u3002\uFF0E\uFF61]/g,

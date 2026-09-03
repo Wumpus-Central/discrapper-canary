@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { C: () => i });
 var l,
     i =

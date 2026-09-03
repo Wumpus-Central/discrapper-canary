@@ -1,4 +1,3 @@
-"use strict";
 var t,
     r = "function" == typeof Map && Map.prototype ? Map : null,
     n = "function" == typeof Set && Set.prototype ? Set : null;

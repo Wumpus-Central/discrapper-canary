@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { Z: () => r, u: () => i });
 let i = { favorite_games: 1, current_games: 5, want_to_play_games: 20, played_games: 20 },
     r = new Set([

@@ -1,4 +1,3 @@
-"use strict";
 function i(e, t) {
     if (e === t) return !0;
     if (null == e || null == t || e.length !== t.length) return !1;

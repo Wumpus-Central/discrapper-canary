@@ -1,4 +1,3 @@
-"use strict";
 function n() {
     return (n = Object.assign
         ? Object.assign.bind()

@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { SendMessageIcon: () => a });
 var l = n(477900);
 n(582128);

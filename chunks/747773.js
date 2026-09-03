@@ -1,4 +1,3 @@
-"use strict";
 function n(e, t) {
     if (!e) return !1;
     let r = window.getComputedStyle(e),

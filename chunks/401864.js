@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { A: () => r });
 var i,
     r = (((i = {}).ASC = "asc"), (i.DESC = "desc"), i);

@@ -1,4 +1,3 @@
-"use strict";
 var t = {
     linear: function (e, t, n, r) {
         return ((n - t) * e) / r + t;

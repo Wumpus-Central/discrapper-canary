@@ -1,4 +1,3 @@
-"use strict";
 n.r(t), n.d(t, { WebAudioSound: () => g, playGiftSound: () => f, voiceSinkId: () => I });
 var i = n(435558),
     r = n.n(i),

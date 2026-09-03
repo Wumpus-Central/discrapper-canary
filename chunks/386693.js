@@ -1,4 +1,3 @@
-"use strict";
 r.d(t, { QP: () => eV, eV: () => n });
 let n = (e, t) => ({ event: e, check: t });
 var i,

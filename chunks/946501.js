@@ -1,4 +1,3 @@
-"use strict";
 var t = Object.prototype.toString,
     r = Math.max,
     n = function (e, t) {

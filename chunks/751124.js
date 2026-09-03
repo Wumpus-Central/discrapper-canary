@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { A: () => r });
 let i = new (n(626584).A)("createWebSocket");
 function r(e, t) {

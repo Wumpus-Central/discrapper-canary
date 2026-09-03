@@ -1,4 +1,3 @@
-"use strict";
 r.r(t), r.d(t, { IGNORE_CLASS_NAME: () => h, default: () => v });
 var n,
     i,

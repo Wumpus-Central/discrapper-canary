@@ -1,4 +1,3 @@
-"use strict";
 var n = r(691262),
     i = (function () {
         try {

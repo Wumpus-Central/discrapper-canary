@@ -1,4 +1,3 @@
-"use strict";
 var e = {}.propertyIsEnumerable,
     n = Object.getOwnPropertyDescriptor;
 r.f =

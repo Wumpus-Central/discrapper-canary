@@ -1,4 +1,3 @@
-"use strict";
 var i = n(928439);
 let r = {
     AppAnalyticsManager: { inlineRequire: () => n(376151).A, hasStoreChangeListeners: !0 },
@@ -638,7 +637,7 @@ let r = {
             "VOICE_CHANNEL_SELECT",
             "RUNNING_GAMES_CHANGE",
         ],
-        inlineRequire: () => n(822151).A,
+        inlineRequire: () => n(282098).A,
     },
     ClipsSignalManager: {
         actions: ["RUNNING_GAMES_CHANGE", "CLIPS_SETTINGS_UPDATE", "VOICE_CHANNEL_SELECT", "VOICE_STATE_UPDATES"],

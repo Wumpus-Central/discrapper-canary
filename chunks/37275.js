@@ -1,4 +1,3 @@
-"use strict";
 var r = n(61748)("match");
 e.exports = function (e) {
     var t = /./;

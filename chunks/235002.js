@@ -1,5 +1,4 @@
 t.exports = (function () {
-    "use strict";
     function t(t, i) {
         (this.scrollbar_ = { position_: 0, range_: 0 }),
             (this.devicePixelRatio = i || 1),

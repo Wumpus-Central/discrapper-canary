@@ -1,4 +1,3 @@
-"use strict";
 function i(e, t) {
     let n = e.effectiveStartDate?.getTime() ?? -1 / 0,
         i = t.effectiveStartDate?.getTime() ?? -1 / 0;

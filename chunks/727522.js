@@ -1,4 +1,3 @@
-"use strict";
 r.r(t), r.d(t, { useCallback: () => s, useCallbackOne: () => o, useMemo: () => a, useMemoOne: () => i });
 var n = r(582128);
 function i(e, t) {

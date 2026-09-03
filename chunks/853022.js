@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { b9: () => r, bH: () => i, jA: () => s });
 let l = "discord7937464",
     i = "www.xbox.com";

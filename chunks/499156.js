@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { A: () => a });
 var i = n(945810);
 let r = { showPTTJoinTooltip: !1, showPTTIconIndicator: !1, showPTTNoKeybindWarning: !1, showPTTSpeakingIndicator: !1 },

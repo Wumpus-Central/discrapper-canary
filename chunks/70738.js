@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { mF: () => s, tX: () => i, vf: () => r });
 let i = 2 * n(927813).A.Millis.DAY;
 function r(e) {

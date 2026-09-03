@@ -1,4 +1,3 @@
-"use strict";
 var n = e(61748),
     o = e(164336).f,
     s = n("metadata"),

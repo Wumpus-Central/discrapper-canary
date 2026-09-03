@@ -1,4 +1,3 @@
-"use strict";
 let n;
 r.d(t, { B: () => a });
 let i = Symbol.for("react-aria.i18n.locale"),

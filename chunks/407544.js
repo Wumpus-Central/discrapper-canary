@@ -1,4 +1,3 @@
-"use strict";
 Object.defineProperty(t, "__esModule", { value: !0 }), (t.Checkboard = void 0);
 var n =
         Object.assign ||

@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { Cu: () => a, eU: () => i, sq: () => s });
 let i = (e) => new Promise((t) => setTimeout(t, e)),
     r = () => Promise.resolve();

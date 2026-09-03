@@ -1,4 +1,3 @@
-"use strict";
 Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.stringFormatter =
         t.DEFAULT_REACT_RICH_TEXT_ELEMENTS =

@@ -1,4 +1,3 @@
-"use strict";
 e.exports = function (e) {
     var t, n;
     if (((t = r(883134)), (n = r(391986)), "keypress" === e.type)) {

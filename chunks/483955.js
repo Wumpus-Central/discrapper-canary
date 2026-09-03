@@ -1,4 +1,3 @@
-"use strict";
 var n = r(439619),
     i = n("%RegExp%"),
     o = r(741623),

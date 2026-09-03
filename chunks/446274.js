@@ -1,4 +1,3 @@
-"use strict";
 let n;
 Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.runtimeHashMessageKey = function (e) {

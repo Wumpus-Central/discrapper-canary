@@ -1,4 +1,3 @@
-"use strict";
 var t = "%[a-f0-9]{2}",
     r = RegExp("(" + t + ")|([^%]+?)", "gi"),
     n = RegExp("(" + t + ")+", "gi");

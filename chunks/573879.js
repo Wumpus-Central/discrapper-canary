@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { Gl: () => r, JE: () => a, WX: () => l, ov: () => i });
 let i = "switch-accounts-modal",
     r = "multiaccount-login-modal",

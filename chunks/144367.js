@@ -1,4 +1,3 @@
-"use strict";
 function n(e, t, r) {
     let n, i;
     for (let o of e.fields) {

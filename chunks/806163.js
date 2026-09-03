@@ -1,4 +1,3 @@
-"use strict";
 r.d(t, {
     B6: () => R,
     Ix: () => b,

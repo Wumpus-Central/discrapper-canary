@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { AG: () => s, my: () => i, uJ: () => r });
 let l = RegExp("^dev://devtools/([-\\w._0-9]+)(/([-\\w._0-9]+))?$", "i");
 function i(e) {

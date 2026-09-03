@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { a: () => R });
 var i = n(636537),
     r = n(306173),
@@ -306,7 +305,7 @@ ${R}`;
     })()}
 
     Metadata:
-    ${JSON.stringify({ logsUploaded: new Date().toISOString(), releaseChannel: window.GLOBAL_ENV.RELEASE_CHANNEL, buildNumber: "606559", versionHash: "309f69f92abbe8b29a3abf9055785381e1cee607" }, void 0, 2)}
+    ${JSON.stringify({ logsUploaded: new Date().toISOString(), releaseChannel: window.GLOBAL_ENV.RELEASE_CHANNEL, buildNumber: "606784", versionHash: "7e8013f0231462e3cb0e7811f1090f3a900bce70" }, void 0, 2)}
 
     ChannelStore:
     ${JSON.stringify(I.A.getDebugInfo(), void 0, 2)}

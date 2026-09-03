@@ -1,4 +1,3 @@
-"use strict";
 n.r(t), n.d(t, { hasDomParent: () => i, isDOMRangeCollapsed: () => s, normalizeDOMPoint: () => r });
 var l = n(530795);
 {

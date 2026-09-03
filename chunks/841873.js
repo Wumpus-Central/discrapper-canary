@@ -1,4 +1,3 @@
-"use strict";
 let i;
 function r(e) {
     i = e;

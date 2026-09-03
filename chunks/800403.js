@@ -1,4 +1,3 @@
-"use strict";
 var n = e(486816),
     o = e(309270),
     s = /#|\.prototype\./,
