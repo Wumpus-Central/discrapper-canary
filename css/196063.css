@@ -1,3 +1,47 @@
+.container__1774c {
+    align-items: center;
+    background: var(--background-mod-subtle);
+    border-radius: var(--radius-md);
+    display: flex;
+    gap: var(--space-16);
+    margin-block-end: var(--space-32);
+    margin-inline: auto;
+    max-width: 500px;
+    padding: var(--space-8)
+}
+
+.asset__1774c {
+    border-radius: var(--radius-sm);
+    flex-shrink: 0;
+    height: 80px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 142px
+}
+
+.textStack__1774c {
+    flex-direction: column;
+    min-width: 0
+}
+
+.countdown__1774c,
+.textStack__1774c {
+    display: flex;
+    gap: var(--space-4)
+}
+
+.countdown__1774c {
+    align-items: center
+}
+
+.link__1774c {
+    color: var(--text-link)
+}
+
+.clockIcon__1774c {
+    color: var(--icon-default)
+}
+
 .wrapper__3b770 {
     align-items: center;
     display: flex;
@@ -975,4 +1019,4 @@
     }
 }
 
-/*# sourceMappingURL=63092.e855b7b8bf9a67ea.css.map*/
+/*# sourceMappingURL=196063.ef8e9cff6ece862f.css.map*/

@@ -27,10 +27,12 @@ class l extends r.A {
     marketingComponents;
     rewardSkuIds;
     bogoRewardEnabled;
+    boostBogoMaxCredits;
     promotionKey;
     static createFromServer(e) {
         let t = new Date(e.start_date),
-            n = new Date(e.end_date);
+            n = new Date(e.end_date),
+            i = e.metadata?.premium_promotion?.reward_config?.boost_bogo;
         return new l({
             id: e.id,
             trialId: e.trial_id,
@@ -59,6 +61,7 @@ class l extends r.A {
             rewardSkuIds:
                 e.metadata?.premium_promotion?.reward_sku_ids ?? e.metadata?.gift_promotion?.reward_sku_ids ?? [],
             bogoRewardEnabled: e.metadata?.premium_promotion?.reward_config?.bogo?.enabled === !0,
+            boostBogoMaxCredits: i?.enabled === !0 ? (i.max_credits_per_user ?? null) : null,
             promotionKey: e.promotion_key ?? "",
         });
     }
@@ -87,6 +90,7 @@ class l extends r.A {
             (this.marketingComponents = e.marketingComponents),
             (this.rewardSkuIds = e.rewardSkuIds),
             (this.bogoRewardEnabled = e.bogoRewardEnabled ?? !1),
+            (this.boostBogoMaxCredits = e.boostBogoMaxCredits ?? null),
             (this.promotionKey = e.promotionKey);
     }
     get isBogo() {

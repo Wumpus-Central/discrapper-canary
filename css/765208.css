@@ -1961,6 +1961,56 @@
     padding-inline-start: 48px
 }
 
+.container_be3184 {
+    background: var(--background-mod-subtle);
+    border-radius: var(--radius-md);
+    justify-content: space-between;
+    padding: var(--space-8)
+}
+
+.container_be3184,
+.content_be3184 {
+    align-items: center;
+    display: flex;
+    gap: var(--space-8)
+}
+
+.content_be3184 {
+    min-width: 0
+}
+
+.asset_be3184 {
+    border-radius: var(--radius-xs);
+    flex-shrink: 0;
+    height: 40px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 71px
+}
+
+.textStack_be3184 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0;
+    overflow-wrap: anywhere
+}
+
+.countdown_be3184 {
+    align-items: center;
+    display: flex;
+    flex-shrink: 0;
+    gap: var(--space-4)
+}
+
+.clockIcon_be3184 {
+    color: var(--icon-default)
+}
+
+.link_be3184 {
+    color: var(--text-link)
+}
+
 .heading-sm\/normal__390b6 {
     font-family: var(--font-primary);
     font-size: 14px;
@@ -3882,8 +3932,18 @@
     border-radius: var(--radius-sm);
     display: flex;
     gap: var(--space-8);
-    margin: var(--space-24) 0;
     padding: var(--space-8)
+}
+
+.refreshCallouts__390b6 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+    margin-block: var(--space-24)
+}
+
+.refreshCallouts__390b6>* {
+    margin-block: 0
 }
 
 .refreshDiscountCalloutIconWrapper__390b6 {
@@ -3954,4 +4014,4 @@
     text-decoration: underline
 }
 
-/*# sourceMappingURL=245726.3670a1e88688ed60.css.map*/
+/*# sourceMappingURL=765208.4aba268ac94f3780.css.map*/
