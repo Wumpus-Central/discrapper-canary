@@ -8,20 +8,20 @@ var i = n(477900),
     d = n(375708),
     c = n(382701);
 function u(e) {
-    let { tag: t, variant: n = "default", onRemove: u, className: g, removeButtonClassName: m, ref: x } = e,
-        f = (0, o.W3)(t);
-    if (null == f) return null;
-    let { getText: h, icon: p } = f,
-        j = "filled" === n;
+    let { tag: t, variant: n = "default", onRemove: u, className: g, ref: m } = e,
+        x = (0, o.W3)(t);
+    if (null == x) return null;
+    let { getText: f, icon: h } = x,
+        p = "filled" === n;
     return (0, i.jsxs)("li", {
-        className: g ?? (j ? c.zE : c.Tc),
-        ref: x,
+        className: g ?? (p ? c.zE : c.Tc),
+        ref: m,
         children: [
-            (0, i.jsx)(p, { size: "xxs", color: j ? "currentColor" : void 0 }),
+            (0, i.jsx)(h, { size: "xxs", color: p ? "currentColor" : void 0 }),
             (0, i.jsx)(l.E, {
                 variant: "text-xxs/medium",
-                color: j ? "text-overlay-light" : "text-subtle",
-                children: h(),
+                color: p ? "text-overlay-light" : "text-subtle",
+                children: f(),
             }),
             null != u &&
                 (0, i.jsx)(s.m, {
@@ -29,8 +29,8 @@ function u(e) {
                     ariaHidden: !0,
                     children: (0, i.jsx)(r.D, {
                         onClick: u,
-                        className: m ?? (j ? c.to : c.DT),
-                        "aria-label": d.intl.formatToPlainString(d.t.GCn1ne, { tag: h() }),
+                        className: p ? c.to : c.DT,
+                        "aria-label": d.intl.formatToPlainString(d.t.GCn1ne, { tag: f() }),
                         children: (0, i.jsx)(a.P, { size: "xxs", color: "currentColor" }),
                     }),
                 }),

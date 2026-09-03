@@ -6,5 +6,4 @@ e.exports = {
     Kt: "overflowPopout_a48410",
     ns: "overflowList_a48410",
     Hl: "overflowRow_a48410 " + f(382701).AS,
-    Nf: "overflowRemoveButton_a48410 " + f(382701).DT,
 };

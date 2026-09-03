@@ -1083,16 +1083,7 @@ function tm(e) {
                           onOpenChange: E,
                           disableInteraction: r,
                           children: c.map((e) =>
-                              (0, i.jsx)(
-                                  td.A,
-                                  {
-                                      tag: e,
-                                      className: tg.Hl,
-                                      removeButtonClassName: tg.Nf,
-                                      onRemove: o ? () => P(e) : void 0,
-                                  },
-                                  e,
-                              ),
+                              (0, i.jsx)(td.A, { tag: e, className: tg.Hl, onRemove: o ? () => P(e) : void 0 }, e),
                           ),
                       }),
                   g && (0, i.jsx)(to.A, { tags: c, onTagsChange: N, onOpen: k, onClose: y, variant: "filled", ref: j }),
