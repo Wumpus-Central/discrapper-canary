@@ -22,8 +22,6 @@ class c extends l.A {
     badgeOverride;
     hideBadge;
     isFirstParty;
-    baseVariantName;
-    variantLabel;
     constructor(e) {
         super(e),
             (this.summary = e.summary),
@@ -40,9 +38,7 @@ class c extends l.A {
             (this.eligibleOffers = e.eligibleOffers),
             (this.badgeOverride = e.badgeOverride),
             (this.hideBadge = e.hideBadge),
-            (this.isFirstParty = e.isFirstParty),
-            (this.baseVariantName = e.baseVariantName),
-            (this.variantLabel = e.variantLabel);
+            (this.isFirstParty = e.isFirstParty);
     }
     static fromServer(e) {
         let {
@@ -88,80 +84,74 @@ class c extends l.A {
         });
     }
     static fromStorefrontProductRecord(e) {
-        let { flattenVariantSkuId: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            n = null != t ? e.skus.find((e) => e.id === t) : void 0,
-            r = n ?? e.skus[0];
-        if (null == r) return;
-        let l = r.tenantMetadata?.collectibles;
-        if (null == l) return;
-        let _ = null != n && e.skus.length > 1,
-            E = e.skus.length > 1 && !_ ? i.R.VARIANTS_GROUP : l.type,
-            { items: A, item: h } = (0, s.T)(r) ?? {},
-            [I] = r.selectedOptions;
+        let t = e.skus[0];
+        if (null == t) return;
+        let n = t.tenantMetadata?.collectibles;
+        if (null == n) return;
+        let r = e.skus.length > 1 ? i.R.VARIANTS_GROUP : n.type,
+            { items: l, item: _ } = (0, s.T)(t) ?? {};
         return new c({
-            storeListingId: r.id,
-            skuId: r.id,
+            storeListingId: t.id,
+            skuId: t.id,
             name: e.name,
             summary: e.summary,
             styles: e.primaryCollectionStyles,
-            type: E,
-            baseVariantName: _ ? e.name : void 0,
-            variantLabel: _ ? (I?.optionValue ?? "") : void 0,
-            premiumType: l.premiumType === d.oA2 ? null : l.premiumType,
-            items: A ?? [h].filter((e) => null != e),
-            categorySkuId: e.primaryCollectionId ?? l.categorySkuId ?? "",
+            type: r,
+            premiumType: n.premiumType === d.oA2 ? null : n.premiumType,
+            items: l ?? [_].filter((e) => null != e),
+            categorySkuId: e.primaryCollectionId ?? n.categorySkuId ?? "",
             isCategoryReward: o.MS.some((e) => {
-                let { rewardSkuId: t } = e;
-                return t === r.id;
+                let { rewardSkuId: n } = e;
+                return n === t.id;
             }),
-            prices: r.prices,
+            prices: t.prices,
             badgeOverride: e.badgeOverride,
             hideBadge: e.hideBadge,
-            previewAssets: r.previewAssetPaths ?? void 0,
+            previewAssets: t.previewAssetPaths ?? void 0,
             variants:
-                E === i.R.VARIANTS_GROUP
+                r === i.R.VARIANTS_GROUP
                     ? e.skus
-                          .map((t) => {
-                              let n = t.tenantMetadata?.collectibles;
-                              if (null == n) return null;
-                              let { items: i, item: a } = (0, s.T)(t) ?? {},
-                                  [l] = t.selectedOptions;
+                          .map((n) => {
+                              let i = n.tenantMetadata?.collectibles;
+                              if (null == i) return null;
+                              let { items: r, item: a } = (0, s.T)(n) ?? {},
+                                  [l] = n.selectedOptions;
                               return new u({
                                   baseVariantName: e.name,
-                                  baseVariantSkuId: r.id,
+                                  baseVariantSkuId: t.id,
                                   variantLabel: l?.optionValue ?? "",
-                                  variantValue: n.optionSelectorDisplayValue ?? "",
-                                  storeListingId: t.id,
-                                  skuId: t.id,
-                                  name: t.name,
-                                  summary: t.summary,
+                                  variantValue: i.optionSelectorDisplayValue ?? "",
+                                  storeListingId: n.id,
+                                  skuId: n.id,
+                                  name: n.name,
+                                  summary: n.summary,
                                   styles: void 0,
-                                  type: n.type,
-                                  premiumType: n.premiumType === d.oA2 ? null : n.premiumType,
-                                  items: i ?? [a].filter((e) => null != e),
-                                  categorySkuId: e.primaryCollectionId ?? n.categorySkuId ?? "",
+                                  type: i.type,
+                                  premiumType: i.premiumType === d.oA2 ? null : i.premiumType,
+                                  items: r ?? [a].filter((e) => null != e),
+                                  categorySkuId: e.primaryCollectionId ?? i.categorySkuId ?? "",
                                   isCategoryReward: o.MS.some((e) => {
-                                      let { rewardSkuId: n } = e;
-                                      return n === t.id;
+                                      let { rewardSkuId: t } = e;
+                                      return t === n.id;
                                   }),
-                                  prices: t.prices,
-                                  previewAssets: t.previewAssetPaths ?? void 0,
-                                  googleSkuIds: t.googleSkuIds ?? {
+                                  prices: n.prices,
+                                  previewAssets: n.previewAssetPaths ?? void 0,
+                                  googleSkuIds: n.googleSkuIds ?? {
                                       [d.lid.MOBILE]: "",
                                       [d.lid.MOBILE_PREMIUM_TIER_2]: "",
                                   },
-                                  eligibleOffers: t.eligibleOffers,
+                                  eligibleOffers: n.eligibleOffers,
                                   variants: void 0,
                                   bundledProducts: void 0,
-                                  isFirstParty: n.isFirstParty,
+                                  isFirstParty: i.isFirstParty,
                               });
                           })
                           .filter((e) => null != e)
                     : void 0,
-            googleSkuIds: r.googleSkuIds ?? { [d.lid.MOBILE]: "", [d.lid.MOBILE_PREMIUM_TIER_2]: "" },
-            eligibleOffers: r.eligibleOffers,
-            isFirstParty: l.isFirstParty,
-            bundledProducts: r.bundledSkus
+            googleSkuIds: t.googleSkuIds ?? { [d.lid.MOBILE]: "", [d.lid.MOBILE_PREMIUM_TIER_2]: "" },
+            eligibleOffers: t.eligibleOffers,
+            isFirstParty: n.isFirstParty,
+            bundledProducts: t.bundledSkus
                 ?.map((e) => {
                     let t = e.tenantMetadata?.collectibles;
                     return null == t

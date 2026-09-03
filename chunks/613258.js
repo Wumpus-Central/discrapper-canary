@@ -9,8 +9,8 @@ var l = n(477900),
     d = n(395856),
     u = n(682301),
     m = n(929283),
-    h = n(758836),
-    g = n(171934);
+    g = n(758836),
+    h = n(171934);
 let x = [],
     f = [
         "1212569433839636530",
@@ -37,12 +37,12 @@ function p(e) {
         o = i ?? c.A.getProduct(t.skuId),
         d = o?.items[0],
         u = o?.type,
-        h = n + t.horizontalJitter;
+        g = n + t.horizontalJitter;
     return (0, l.jsx)("div", {
-        className: g.LY,
+        className: h.LY,
         style: {
             top: s ? -r - 384 : t.top,
-            left: s ? h + t.transitionOffsetLeft : h,
+            left: s ? g + t.transitionOffsetLeft : g,
             transform: `rotate(${t.rotation}deg)`,
             height: 160,
             width: 160,
@@ -54,9 +54,9 @@ function p(e) {
 }
 let E = (e) => {
         let { peaking: t, transitioning: n, parentWidth: i } = e,
-            [o, c] = s.useState(!1),
-            [m, E] = s.useState([]),
-            [b] = s.useState(() =>
+            [a, o] = s.useState(!1),
+            [c, m] = s.useState([]),
+            [E] = s.useState(() =>
                 [...f]
                     .sort(() => Math.random() - 0.5)
                     .map((e) => ({
@@ -66,43 +66,43 @@ let E = (e) => {
                         horizontalJitter: -(20 * Math.random()),
                         transitionOffsetLeft: -20 - 35 * Math.random(),
                         transitionDelay: `${Math.random() / 3}s`,
-                        transitionDuration: `${h.H1 - 200 * Math.random()}ms`,
+                        transitionDuration: `${g.H1 - 200 * Math.random()}ms`,
                     })),
+            );
+        s.useEffect(() => {
+            if (null != i && i > 0) {
+                let e = Math.max(1, Math.floor(i / 130)),
+                    t = i / e;
+                m(Array.from({ length: e }, (e, n) => ({ config: E[n % E.length], baseLeft: n * t })));
+            }
+        }, [i, E]),
+            s.useEffect(() => {
+                n && setTimeout(() => o(!0), g.H1);
+            }, [n]);
+        let b = (0, d.$)("shop_transition_jumble"),
+            v = s.useMemo(
+                () => [
+                    ...new Set(
+                        c.map((e) => {
+                            let { config: t } = e;
+                            return t.skuId;
+                        }),
+                    ),
+                ],
+                [c],
             ),
-            v = (0, d.$)("shop_transition_jumble"),
-            j = s.useMemo(() => f, []),
-            S = (0, u.hv)(v ? j : x, { needsCategory: !1 }),
-            C = s.useMemo(() => {
-                if (!v) return b;
-                let e = b.filter((e) => {
-                    let t = S[e.skuId]?.product;
-                    return t?.items[0] != null && t.type === a.R.AVATAR_DECORATION;
-                });
-                return e.length > 0 ? e : b;
-            }, [v, b, S]);
-        return (
-            s.useEffect(() => {
-                if (null != i && i > 0) {
-                    let e = Math.max(1, Math.floor(i / 130)),
-                        t = i / e;
-                    E(Array.from({ length: e }, (e, n) => ({ config: C[n % C.length], baseLeft: n * t })));
-                }
-            }, [i, C]),
-            s.useEffect(() => {
-                n && setTimeout(() => c(!0), h.H1);
-            }, [n]),
-            (0, l.jsx)("div", {
-                className: r()(g.rA, { [g.Kb]: t, [g.pp]: o }),
-                children: m.map((e, t) => {
-                    let { config: s, baseLeft: i } = e;
-                    return (0, l.jsx)(
-                        p,
-                        { config: s, baseLeft: i, transitioning: n, resolvedProduct: S[s.skuId]?.product },
-                        s.skuId + t,
-                    );
-                }),
-            })
-        );
+            j = (0, u.hv)(b ? v : x, { needsCategory: !1 });
+        return (0, l.jsx)("div", {
+            className: r()(h.rA, { [h.Kb]: t, [h.pp]: a }),
+            children: c.map((e, t) => {
+                let { config: s, baseLeft: i } = e;
+                return (0, l.jsx)(
+                    p,
+                    { config: s, baseLeft: i, transitioning: n, resolvedProduct: j[s.skuId]?.product },
+                    s.skuId + t,
+                );
+            }),
+        });
     },
     b = function (e) {
         let { peaking: t, transitioning: n } = e,
@@ -115,7 +115,7 @@ let E = (e) => {
             (0, o.g)(i, c),
             (0, l.jsx)("div", {
                 ref: i,
-                className: g.eL,
+                className: h.eL,
                 children: (0, l.jsx)(E, { peaking: t, transitioning: n, parentWidth: r }),
             })
         );
