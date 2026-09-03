@@ -2,7 +2,7 @@ n.d(t, {
     $J: () => P,
     IG: () => L,
     Ps: () => G,
-    UR: () => v,
+    UR: () => O,
     W1: () => y,
     WU: () => N,
     _Q: () => D,
@@ -39,8 +39,8 @@ var i,
     _ = n(792620),
     S = n(190107),
     g = n(652215),
-    O = n(375708);
-function v(e) {
+    v = n(375708);
+function O(e) {
     let t = (0, _.t)({ quest: e }) || (0, _.fE)({ quest: e }) || (0, _.I6)(e),
         n = (0, _.uD)(e),
         i = [];
@@ -90,7 +90,7 @@ function w(e, t) {
         (0, f.A)({ platformType: n, location: t.ctaContent });
 }
 function L(e) {
-    return P(e) === g.fg2.XBOX ? O.t["mytEv+"] : O.t.iDiwby;
+    return P(e) === g.fg2.XBOX ? v.t["mytEv+"] : v.t.iDiwby;
 }
 function R(e) {
     if (((0, A.isIOS)() || "ios" === (0, A.getOS)()) && e.ios?.iosAppId != null) {
@@ -116,9 +116,15 @@ function M(e) {
     return null;
 }
 function k(e) {
-    let t,
-        { link: n, directLink: i, inlineStoreParams: r, trackOverlayEvent: s, getIosAttribution: o } = e;
-    (t = T.OO.getConfig({ location: "quest_open_game_link" }).enabled), (0, l.A)(n);
+    let {
+        link: t,
+        directLink: n,
+        inlineStoreParams: i,
+        trackOverlayEvent: r,
+        getIosAttribution: s,
+        allowExternalOpen: o = !0,
+    } = e;
+    return T.OO.getConfig({ location: "quest_open_game_link" }).enabled, o && (0, l.A)(t), Promise.resolve(!1);
 }
 function Q(e, t) {
     let n,
