@@ -1,39 +1,40 @@
 n.d(t, {
-    yr: () => H,
-    Fw: () => k,
-    Ko: () => C,
-    ej: () => w,
-    K3: () => z,
-    hK: () => B,
-    ZV: () => N,
-    J6: () => W,
-    zO: () => $,
-    rE: () => m,
-    eA: () => x,
-    tZ: () => S,
-    Ls: () => K,
-    Li: () => A.L,
-    BQ: () => X,
-    fP: () => U,
-    B3: () => Y,
-    gB: () => V,
-    A6: () => R,
-    fO: () => L,
-    Pc: () => Z,
-    mg: () => G,
-    uz: () => j,
-    Tz: () => g,
-    aA: () => O,
-    EM: () => v,
-    i$: () => D,
-    WQ: () => Q,
-    aJ: () => F,
-    CI: () => P,
-    pc: () => ee,
-    GD: () => M,
-    qh: () => y,
-    kL: () => q,
-    TY: () => T,
+    yr: () => j,
+    Fw: () => F,
+    Ko: () => O,
+    ej: () => G,
+    K3: () => Z,
+    hK: () => H,
+    ZV: () => C,
+    J6: () => Y,
+    zO: () => q,
+    rE: () => g,
+    eA: () => k,
+    tZ: () => N,
+    Ls: () => z,
+    Li: () => h.L,
+    BQ: () => J,
+    fP: () => w,
+    B3: () => $,
+    gB: () => B,
+    A6: () => L,
+    fO: () => y,
+    Pc: () => Q,
+    mg: () => x,
+    cY: () => K,
+    uz: () => W,
+    Tz: () => S,
+    aA: () => R,
+    EM: () => b,
+    i$: () => v,
+    WQ: () => ee,
+    aJ: () => V,
+    CI: () => U,
+    pc: () => en,
+    GD: () => P,
+    qh: () => D,
+    kL: () => X,
+    TY: () => m,
 });
 var i,
     r,
@@ -45,16 +46,17 @@ var i,
     c,
     u,
     _ = n(435558),
-    E = n(412703),
-    A = n(902173),
-    h =
+    E = n(323889),
+    A = n(412703),
+    h = n(902173),
+    I =
         (((i = {})[(i.ConsecutiveHeartbeatPeriodMinutes = 2)] = "ConsecutiveHeartbeatPeriodMinutes"),
         (i[(i.StatusLookbackPeriodDays = 30)] = "StatusLookbackPeriodDays"),
         i),
-    I = n(636537),
-    f = n(927813),
-    p = n(738822);
-let T = {
+    f = n(636537),
+    p = n(927813),
+    T = n(738822);
+let m = {
     GIFT_INVENTORY_SETTINGS_BADGE: 1,
     QUEST_BAR: 2,
     QUEST_BAR_V2: 2,
@@ -62,7 +64,7 @@ let T = {
     ACTIVITY_PANEL: 4,
     QUEST_LIVE_STREAM: 8,
 };
-var m =
+var g =
     (((r = {}).ACTIVITY_PANEL = "quests_bar_activity_panel"),
     (r.QUESTS_MANAGER = "quests_manager"),
     (r.QUESTS_CONSOLE_OPTIMISTIC_UPDATES_MANAGER = "quests_console_optimistic_updates_manager"),
@@ -117,92 +119,93 @@ var m =
     (r.QUEST_ORB_MULTIPLIER_TAB_TOOLTIP = "quest_orb_multiplier_tab_tooltip"),
     (r.PLAY_QUEST_CONNECTION_MODAL = "play_quest_connection_modal"),
     r);
-let g = new Set([A.L.NITRO_2_POINT_0_CTA, A.L.ORBS_MULTIPLIER_QUEST, A.L.XBOX_GAME_PASS_QUEST]),
-    S = f.A.Millis.MINUTE * h.ConsecutiveHeartbeatPeriodMinutes,
-    N = { tension: 900, friction: 45, clamp: !0 },
-    C = { tension: 360, friction: 30, clamp: !0 },
-    O = 6,
-    R = 2;
-var L = (((a = {}).CONSOLE = "CONSOLE"), (a.DESKTOP = "DESKTOP"), a),
-    y = (((s = {}).IN_GAME = "in_game"), (s.WEB = "web"), s);
-let D = 454,
-    v = 2640 / 740,
-    b = (0, I.TP)(),
-    M =
-        -1 !== b.indexOf("localhost") || -1 !== b.indexOf("127.0.0.1")
-            ? `${b}/_cdn_storage/`
+let S = new Set([h.L.NITRO_2_POINT_0_CTA, h.L.ORBS_MULTIPLIER_QUEST, h.L.XBOX_GAME_PASS_QUEST]),
+    N = p.A.Millis.MINUTE * I.ConsecutiveHeartbeatPeriodMinutes,
+    C = { tension: 900, friction: 45, clamp: !0 },
+    O = { tension: 360, friction: 30, clamp: !0 },
+    R = 6,
+    L = 2;
+var y = (((a = {}).CONSOLE = "CONSOLE"), (a.DESKTOP = "DESKTOP"), a),
+    D = (((s = {}).IN_GAME = "in_game"), (s.WEB = "web"), s);
+let v = 454,
+    b = 2640 / 740,
+    M = (0, f.TP)(),
+    P =
+        -1 !== M.indexOf("localhost") || -1 !== M.indexOf("127.0.0.1")
+            ? `${M}/_cdn_storage/`
             : "https://cdn.discordapp.com/",
-    P = M + "quests/";
-var U =
+    U = P + "quests/";
+var w =
     (((l = {}).COLLAPSED = "collapsed"),
     (l.EXPANDED = "expanded"),
     (l.CLOSED = "closed"),
     (l.SOFT_DISMISSED = "soft-dismissed"),
     (l.RESET_TO_PREVIOUS = "reset-to-previous"),
     l);
-let w = "545364944258990091",
-    G = "{reward_code}";
-var x =
+let G = "545364944258990091",
+    x = "{reward_code}";
+var k =
     (((o = {}).EXCLUDED_QUEST = "excluded_quest"),
     (o.UNKNOWN_QUEST = "unknown_quest"),
     (o.NOT_SHAREABLE_QUEST = "not_shareable_quest"),
     o);
-let k = "1333839522189938740",
-    F = "1410358070831480904",
-    V = "1420556874629251124",
-    B = "1402418703554842694",
-    H = "1496993616537587813",
-    j = "1496993616537587812",
-    W = new Set([
-        p.p9.DESKTOP_ACCOUNT_PANEL_AREA,
-        p.p9.MOBILE_HOME_DOCK_AREA,
-        p.p9.QUEST_HOME_BANNER_DESKTOP,
-        p.p9.QUEST_HOME_MOBILE_CAROUSEL,
-        p.p9.VIDEO_MODAL_MOBILE,
-    ]),
+let F = "1333839522189938740",
+    V = "1410358070831480904",
+    B = "1420556874629251124",
+    H = "1402418703554842694",
+    j = "1496993616537587813",
+    W = "1496993616537587812",
     Y = new Set([
-        E.n.STREAM_ON_DESKTOP,
-        E.n.PLAY_ON_DESKTOP,
-        E.n.PLAY_ON_XBOX,
-        E.n.PLAY_ON_PLAYSTATION,
-        E.n.PLAY_ACTIVITY,
+        T.p9.DESKTOP_ACCOUNT_PANEL_AREA,
+        T.p9.MOBILE_HOME_DOCK_AREA,
+        T.p9.QUEST_HOME_BANNER_DESKTOP,
+        T.p9.QUEST_HOME_MOBILE_CAROUSEL,
+        T.p9.VIDEO_MODAL_MOBILE,
     ]),
-    K = new Set([
-        E.n.STREAM_ON_DESKTOP,
-        E.n.PLAY_ON_DESKTOP,
-        E.n.PLAY_ON_XBOX,
-        E.n.PLAY_ON_PLAYSTATION,
-        E.n.PLAY_ACTIVITY,
-    ]),
+    K = new Set([E.p.NO_FILL]),
     $ = new Set([
-        E.n.STREAM_ON_DESKTOP,
-        E.n.PLAY_ON_DESKTOP,
-        E.n.PLAY_ON_XBOX,
-        E.n.PLAY_ON_PLAYSTATION,
-        E.n.PLAY_ACTIVITY,
+        A.n.STREAM_ON_DESKTOP,
+        A.n.PLAY_ON_DESKTOP,
+        A.n.PLAY_ON_XBOX,
+        A.n.PLAY_ON_PLAYSTATION,
+        A.n.PLAY_ACTIVITY,
     ]),
-    z = { is_targeted: !1 };
-var q =
+    z = new Set([
+        A.n.STREAM_ON_DESKTOP,
+        A.n.PLAY_ON_DESKTOP,
+        A.n.PLAY_ON_XBOX,
+        A.n.PLAY_ON_PLAYSTATION,
+        A.n.PLAY_ACTIVITY,
+    ]),
+    q = new Set([
+        A.n.STREAM_ON_DESKTOP,
+        A.n.PLAY_ON_DESKTOP,
+        A.n.PLAY_ON_XBOX,
+        A.n.PLAY_ON_PLAYSTATION,
+        A.n.PLAY_ACTIVITY,
+    ]),
+    Z = { is_targeted: !1 };
+var X =
         (((d = {}).SUGGESTED = "suggested"),
         (d.MOST_RECENT = "most_recent"),
         (d.EXPIRING_SOON = "expiring_soon"),
         (d.RECENTLY_ENROLLED = "recently_enrolled"),
         d),
-    Z = (((c = {}).VIDEO = "task_video"), (c.PLAY = "task_play"), c),
-    X =
+    Q = (((c = {}).VIDEO = "task_video"), (c.PLAY = "task_play"), c),
+    J =
         (((u = {}).VIRTUAL_CURRENCY = "reward_virtual_currency"),
         (u.COLLECTIBLE = "reward_collectible"),
         (u.IN_GAME = "reward_in_game"),
         u);
-function Q(e) {
-    return Object.values(Z).includes(e)
+function ee(e) {
+    return Object.values(Q).includes(e)
         ? { group: "task", filter: e }
-        : Object.values(X).includes(e)
+        : Object.values(J).includes(e)
           ? { group: "reward", filter: e }
           : null;
 }
-let J = ["reward", "task"],
-    ee = Object.entries(
+let et = ["reward", "task"],
+    en = Object.entries(
         (0, _.groupBy)(
             [
                 { group: "task", filter: "task_play" },
@@ -214,7 +217,7 @@ let J = ["reward", "task"],
             "group",
         ),
     ).sort((e, t) => {
-        let n = J.indexOf(e[0]),
-            i = J.indexOf(t[0]);
+        let n = et.indexOf(e[0]),
+            i = et.indexOf(t[0]);
         return n < i ? -1 : +(i < n);
     });

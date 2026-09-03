@@ -1,4 +1,5 @@
 e.exports = {
+    ui: "noFillPlaceholder__0d616",
     iE: "wrapper__0d616",
     Xc: "wrapperInvisible__0d616",
     uv: "wrapperVisible__0d616",

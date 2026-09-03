@@ -42,7 +42,7 @@ function N(e, t, n, i) {
         a = (0, h.Kc)(e, t);
     return {
         client_ad_session_id: r,
-        billing_session_id: S(r, (0, h.xn)(t)),
+        billing_session_id: S(r, (0, h.xn)(t, n)),
         ad_content_id: e,
         ...a,
         creative_type: a.creative_type ?? n,

@@ -123,7 +123,7 @@ var S = s(408278),
     _ = s(815021),
     L = s(590202),
     q = s(814793),
-    A = s(201805),
+    A = s(130490),
     Q = s(88561);
 function I(e) {
     let { quest: t, questContent: s, sourceQuestContent: l, onClose: a } = e,

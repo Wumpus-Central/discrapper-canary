@@ -86,9 +86,10 @@ let S = {
 function N(e) {
     return S[e];
 }
-function C(e) {
-    let t = S[e];
-    return null != t && u.J6.has(t);
+function C(e, t) {
+    if (null != t && u.cY.has(t)) return !1;
+    let n = S[e];
+    return null != n && u.J6.has(n);
 }
 function O(e) {
     return {
@@ -114,12 +115,18 @@ function R(e, t) {
 function L(e, t) {
     let n = S[t];
     if (null == n) return u.K3;
-    let { adDecisionData: i, questId: r, adCreativeId: a } = R(n, e) ?? {};
-    return null == i ? u.K3 : r === e || a === e || i.ad_id === e ? i : u.K3;
+    let { adDecisionData: i, questId: a, adCreativeId: s } = R(n, e) ?? {};
+    if (null != i && (a === e || s === e || i.ad_id === e)) return i;
+    let l = r.A.getNoFillForPlacement(n, { includeExpired: !0 });
+    return null != l && l.decisionId === e ? { decision_id: l.decisionId, is_targeted: !1 } : u.K3;
 }
 function y(e, t) {
     let n = S[e];
-    if (null != n) return R(n, t)?.metadataSealed;
+    if (null == n) return;
+    let i = R(n, t)?.metadataSealed;
+    if (null != i) return i;
+    let a = r.A.getNoFillForPlacement(n, { includeExpired: !0 });
+    return null != a && a.decisionId === t ? a.metadataSealed : void 0;
 }
 function D(e, t) {
     let n = S[e];
@@ -128,8 +135,10 @@ function D(e, t) {
 function v(e, t, n) {
     let i = S[e];
     if (null != i) {
-        let { trafficMetadataSealed: e, questId: r } = R(i, n) ?? {};
-        if (null != e && (null != n || r === t)) return e;
+        let e = r.A.getNoFillForPlacement(i, { includeExpired: !0 });
+        if (null != e && e.decisionId === n) return e.trafficMetadataSealed;
+        let { trafficMetadataSealed: a, questId: s } = R(i, n) ?? {};
+        if (null != a && (null != n || s === t)) return a;
     }
     if (null != t) {
         let e = d.A.getQuest(t);

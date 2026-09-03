@@ -1,24 +1,24 @@
-let i, r, a, s, l;
-n.d(t, { A: () => S });
-var o = n(158390),
-    d = n(323889),
-    c = n(252313),
-    u = n(17928),
-    _ = n(228366),
-    E = n(927813),
-    A = n(107195);
-let h = 30 * E.A.Millis.SECOND,
-    I = 10 * E.A.Millis.MINUTE,
-    f = null,
-    p = !1;
-function T() {
-    (i = new Map()), (r = 0), (a = new Map()), (s = new Map()), (l = new Map()), (f = null), (p = !1);
+let i, r, a, s, l, o;
+n.d(t, { A: () => N });
+var d = n(158390),
+    c = n(323889),
+    u = n(252313),
+    _ = n(17928),
+    E = n(228366),
+    A = n(927813),
+    h = n(107195);
+let I = 30 * A.A.Millis.SECOND,
+    f = 10 * A.A.Millis.MINUTE,
+    p = null,
+    T = !1;
+function m() {
+    (i = new Map()), (r = 0), (a = new Map()), (s = new Map()), (l = new Map()), (o = new Map()), (p = null), (T = !1);
 }
-function m(e, t) {
+function g(e, t) {
     (i = new Map(i)).set(e, t);
 }
-T();
-class g extends u.Ay.Store {
+m();
+class S extends _.Ay.Store {
     static displayName = "AdDeliveryStore";
     get lastFetchedQuestToDeliver() {
         return r;
@@ -27,78 +27,98 @@ class g extends u.Ay.Store {
         return i?.get(e) ?? !1;
     }
     canRefreshAd(e) {
-        let t = l?.get(e);
+        let t = o?.get(e);
         return null == t || Date.now() >= t;
     }
     get deliveryAdDecisionByPlacement() {
         return a;
     }
+    getNoFillForPlacement(e) {
+        let { includeExpired: t = !1 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            n = s.get(e);
+        return null == n ? null : t || n.fetchedAt + n.ttlMillis >= Date.now() ? n : null;
+    }
     isFetchingQuestHomeHero() {
-        return p;
+        return T;
     }
     getLastFetchedQuestHomeHero() {
-        return f;
+        return p;
     }
     getQuestHomeHero() {
-        let e = a.get(c.p.QUEST_HOME_BANNER_DESKTOP)?.creative;
-        return e?.type === d.p.QUEST_HOME_HERO ? e.questHomeHero : null;
+        let e = a.get(u.p.QUEST_HOME_BANNER_DESKTOP)?.creative;
+        return e?.type === c.p.QUEST_HOME_HERO ? e.questHomeHero : null;
     }
 }
-let S = new g(_.h, {
+let N = new S(E.h, {
     LOGOUT: function () {
-        T();
+        m();
     },
     QUESTS_FETCH_QUEST_TO_DELIVER_BEGIN: function (e) {
         let { placement: t } = e;
-        m(t, !0);
+        g(t, !0);
     },
     QUESTS_FETCH_QUEST_TO_DELIVER_SUCCESS: function (e) {
         let {
-            creative: t,
-            placement: n,
-            adDecisionData: i,
-            adContext: o,
-            responseTtlSeconds: d,
-            metadataSealed: c,
-            trafficMetadataSealed: u,
-            provenanceMetadataSealed: _,
-            fetchedAt: E,
+            quest: t,
+            creative: n,
+            isNoFill: i,
+            placement: d,
+            adDecisionData: c,
+            adContext: u,
+            responseTtlSeconds: _,
+            metadataSealed: E,
+            trafficMetadataSealed: A,
+            provenanceMetadataSealed: I,
+            fetchedAt: f,
         } = e;
-        (r = Date.now()), m(n, !1), s.get(n)?.succeed(), l.delete(n);
-        let h = {
-            creative: t ?? null,
-            fetchedAt: E,
-            ttlMillis: (0, A.Ce)(d),
-            adDecisionData: i,
-            adContext: o,
-            metadataSealed: c,
-            trafficMetadataSealed: u,
-            provenanceMetadataSealed: _,
+        (r = Date.now()),
+            g(d, !1),
+            (s = new Map(s)),
+            !0 === i && null == t && c?.decision_id != null
+                ? s.set(d, {
+                      decisionId: c.decision_id,
+                      metadataSealed: E,
+                      trafficMetadataSealed: A,
+                      fetchedAt: f,
+                      ttlMillis: (0, h.Ce)(_),
+                  })
+                : s.delete(d),
+            l.get(d)?.succeed(),
+            o.delete(d);
+        let p = {
+            creative: n ?? null,
+            fetchedAt: f,
+            ttlMillis: (0, h.Ce)(_),
+            adDecisionData: c,
+            adContext: u,
+            metadataSealed: E,
+            trafficMetadataSealed: A,
+            provenanceMetadataSealed: I,
         };
-        (a = new Map(a)).set(n, h);
+        (a = new Map(a)).set(d, p);
     },
     QUESTS_FETCH_QUEST_TO_DELIVER_FAILURE: function (e) {
         let { placement: t } = e;
-        (r = Date.now()), m(t, !1);
-        let n = s.get(t);
-        null == n && ((n = new o.A(h, I)), s.set(t, n)), l.set(t, Date.now() + n.fail());
+        (s = new Map(s)).delete(t), (r = Date.now()), g(t, !1);
+        let n = l.get(t);
+        null == n && ((n = new d.A(I, f)), l.set(t, n)), o.set(t, Date.now() + n.fail());
     },
     QUESTS_CLEAR_EXPIRED_QUEST_TO_DELIVER: function (e) {
         let { placement: t, responseTtlSeconds: n, fetchedAt: i } = e;
-        m(t, !1);
-        let r = { creative: null, fetchedAt: i, ttlMillis: (0, A.Ce)(n) };
+        g(t, !1);
+        let r = { creative: null, fetchedAt: i, ttlMillis: (0, h.Ce)(n) };
         (a = new Map(a)).set(t, r);
     },
     QUESTS_FETCH_QUEST_HOME_HERO_BEGIN: function (e) {
         let { placement: t } = e;
-        (p = !0), m(t, !0);
+        (T = !0), g(t, !0);
     },
     QUESTS_FETCH_QUEST_HOME_HERO_SUCCESS: function (e) {
-        (p = !1), (f = Date.now()), m(e.placement, !1);
+        (T = !1), (p = Date.now()), g(e.placement, !1);
         let t = {
-            creative: null != e.questHomeHero ? { type: d.p.QUEST_HOME_HERO, questHomeHero: e.questHomeHero } : null,
+            creative: null != e.questHomeHero ? { type: c.p.QUEST_HOME_HERO, questHomeHero: e.questHomeHero } : null,
             fetchedAt: e.fetchedAt,
-            ttlMillis: (0, A.Ce)(e.responseTtlSeconds),
+            ttlMillis: (0, h.Ce)(e.responseTtlSeconds),
             adDecisionData: e.adDecisionData,
             adContext: e.adContext,
             metadataSealed: e.metadataSealed,
@@ -109,6 +129,6 @@ let S = new g(_.h, {
     },
     QUESTS_FETCH_QUEST_HOME_HERO_FAILURE: function (e) {
         let { placement: t } = e;
-        (p = !1), m(t, !1);
+        (T = !1), g(t, !1);
     },
 });

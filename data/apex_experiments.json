@@ -5654,6 +5654,25 @@
     }
   },
   {
+    "name": "2026-08-no-fill-logging",
+    "kind": "user",
+    "defaultConfig": {
+      "enableNoFill": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enableNoFill": false
+      },
+      "2": {
+        "enableNoFill": true
+      }
+    }
+  },
+  {
     "name": "2026-08-premium-gifting-gogo-promotion",
     "kind": "user",
     "defaultConfig": {

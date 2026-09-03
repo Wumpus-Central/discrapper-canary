@@ -512,6 +512,16 @@
     gap: 8px
 }
 
+.noFillPlaceholder__0d616 {
+    inset-inline: 0;
+    bottom: 100%;
+    height: 70px;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    visibility: hidden
+}
+
 .wrapper__0d616 {
     background: var(--background-base-lower);
     border-start-end-radius: var(--radius-sm);
@@ -588,4 +598,4 @@
     top: 0
 }
 
-/*# sourceMappingURL=e7d69489bbe8034f.css.map*/
+/*# sourceMappingURL=bb86dd070ce1c2f7.css.map*/

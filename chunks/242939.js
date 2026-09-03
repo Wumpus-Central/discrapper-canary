@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { QuestBar: () => tK, default: () => tX });
+n.r(t), n.d(t, { QuestBar: () => tK, default: () => tY });
 var s = n(477900),
     r = n(582128),
     l = n(503698),
@@ -9,17 +9,17 @@ var s = n(477900),
     c = n(475743),
     d = n(840251),
     x = n(688151);
-let m = new d.E([], x.$G.QUEST_BAR_RENDERED, { location: "quest bar rendered" });
-var C = n(186111),
+let C = new d.E([], x.$G.QUEST_BAR_RENDERED, { location: "quest bar rendered" });
+var m = n(186111),
     p = n(859703),
     f = n(738822),
     E = n(309593),
-    h = n(971276),
-    _ = n(851936),
+    _ = n(971276),
+    h = n(851936),
     g = n(792620),
-    S = n(557637),
-    A = n(73473),
-    j = n(201805),
+    A = n(557637),
+    S = n(73473),
+    j = n(130490),
     R = n(617986),
     v = n(939249),
     T = n(834730),
@@ -55,16 +55,16 @@ let q = "#00000000",
                 registerComponent: c,
                 unregisterComponent: d,
                 expansionSpring: x,
-                mountPoints: m,
+                mountPoints: C,
             } = r.useContext(w),
-            C = r.useRef(null),
+            m = r.useRef(null),
             p = r.useRef(null),
             f = r.useRef(void 0);
         r.useEffect(() => {
             u();
         }, [u]),
             r.useLayoutEffect(() => {
-                let e = C.current;
+                let e = m.current;
                 return (
                     null != e && c(e, l, i),
                     () => {
@@ -79,14 +79,14 @@ let q = "#00000000",
             },
             [u],
         );
-        (0, L.i4)(C, E);
-        let h = m.get(l)?.current,
-            _ = null;
+        (0, L.i4)(m, E);
+        let _ = C.get(l)?.current,
+            h = null;
         return (
-            null == h
-                ? (_ = null)
+            null == _
+                ? (h = null)
                 : o && null != x
-                  ? (_ = (0, s.jsxs)(s.Fragment, {
+                  ? (h = (0, s.jsxs)(s.Fragment, {
                         children: [
                             "collapsed" === i &&
                                 (0, V.createPortal)(
@@ -97,7 +97,7 @@ let q = "#00000000",
                                         },
                                         children: n(p),
                                     }),
-                                    h,
+                                    _,
                                 ),
                             "expanded" === i &&
                                 (0, V.createPortal)(
@@ -108,15 +108,15 @@ let q = "#00000000",
                                         },
                                         children: n(p),
                                     }),
-                                    h,
+                                    _,
                                 ),
                         ],
                     }))
-                  : "collapsed" === i && (_ = (0, V.createPortal)(n(p), h)),
+                  : "collapsed" === i && (h = (0, V.createPortal)(n(p), _)),
             (0, s.jsxs)("div", {
-                style: { opacity: +((null == _ && "collapsed" === i) || null == h) },
+                style: { opacity: +((null == h && "collapsed" === i) || null == _) },
                 ref: t,
-                children: [n(C), _],
+                children: [n(m), h],
             })
         );
     }),
@@ -125,7 +125,7 @@ let q = "#00000000",
             [a, o] = r.useState({}),
             [u, c] = r.useState([]),
             [d, x] = r.useState(() => new Map()),
-            m = r.useCallback((e, t, n) => {
+            C = r.useCallback((e, t, n) => {
                 o((s) => {
                     let r = s[t] ?? { expanded: null, collapsed: null };
                     return { ...s, [t]: { ...r, [n]: e } };
@@ -135,7 +135,7 @@ let q = "#00000000",
                         return n.set(t, r.createRef()), n;
                     });
             }, []),
-            C = r.useCallback((e, t) => {
+            m = r.useCallback((e, t) => {
                 let n = !1;
                 o((s) => {
                     let r = s[e] ?? { expanded: null, collapsed: null };
@@ -160,14 +160,14 @@ let q = "#00000000",
                         c = l.current.getBoundingClientRect(),
                         d = i.top - o.top + 12,
                         x = u.top - c.top,
-                        m = i.left - o.left + 12,
-                        C = u.left - c.left,
+                        C = i.left - o.left + 12,
+                        m = u.left - c.left,
                         p = -i.right + o.right + 12,
                         f = -u.right + c.right;
                     e.push({
                         id: t,
-                        collapsedLeft: C,
-                        expandedLeft: m,
+                        collapsedLeft: m,
+                        expandedLeft: C,
                         collapsedRight: f,
                         expandedRight: p,
                         collapsedTop: x,
@@ -179,8 +179,8 @@ let q = "#00000000",
             }, [a, n, l, c]);
         return (0, s.jsx)(w.Provider, {
             value: {
-                registerComponent: m,
-                unregisterComponent: C,
+                registerComponent: C,
+                unregisterComponent: m,
                 animatedComponents: a,
                 expandedContentRef: n,
                 collapsedContentRef: l,
@@ -232,9 +232,9 @@ function X(e) {
             onGameSheetClose: c,
             collapsedHeight: d,
             quest: x,
-            taskDetails: m,
+            taskDetails: C,
         } = e,
-        C = r.useMemo(
+        m = r.useMemo(
             () => ({
                 isExpanded: n,
                 isExpansionAnimationComplete: l,
@@ -245,11 +245,11 @@ function X(e) {
                 onGameSheetClose: c,
                 collapsedHeight: d,
                 quest: x,
-                taskDetails: m,
+                taskDetails: C,
             }),
-            [n, l, i, a, o, u, c, d, x, m],
+            [n, l, i, a, o, u, c, d, x, C],
         );
-    return (0, s.jsx)(z.Provider, { value: C, children: (0, g.I6)(x) ? (0, s.jsx)(K, { quest: x, children: t }) : t });
+    return (0, s.jsx)(z.Provider, { value: m, children: (0, g.I6)(x) ? (0, s.jsx)(K, { quest: x, children: t }) : t });
 }
 var Y = n(775602),
     Z = n(646764),
@@ -352,7 +352,7 @@ let el = (0, a.animated)(b.Ay),
                     sourceQuestContent: f.uF.QUEST_BAR_V2,
                 });
             }, [d]),
-            m = r.useCallback(() => {
+            C = r.useCallback(() => {
                 (0, B.pu)(d, {
                     content: f.uF.QUEST_BAR_V2,
                     ctaContent: U.Cy.OPEN_GAME_LINK,
@@ -360,10 +360,10 @@ let el = (0, a.animated)(b.Ay),
                     sourceQuestContent: f.uF.QUEST_BAR_V2,
                 });
             }, [e, d]),
-            C = u && c,
+            m = u && c,
             p = (0, s.jsx)(v.D, {
-                onClick: m,
-                className: i()(er.vk, { [er.wm]: C }),
+                onClick: C,
+                className: i()(er.vk, { [er.wm]: m }),
                 children: (0, s.jsx)(el, {
                     quest: d,
                     withGameTile: !1,
@@ -376,14 +376,14 @@ let el = (0, a.animated)(b.Ay),
                 }),
             });
         return (0, s.jsxs)(a.animated.div, {
-            className: i()(er.iE, er.Ht, { [er.tT]: C }),
+            className: i()(er.iE, er.Ht, { [er.tT]: m }),
             style: { transform: (0, a.to)([t.to({ range: [0, 1], output: [6, 0] })], (e) => `translateY(${e}px)`) },
             children: [
                 (0, s.jsx)(a.animated.div, {
                     className: er.Tu,
                     style: { opacity: (0, O.a)(t.to({ range: [0, 1], output: [0, 1] })) },
                 }),
-                (0, s.jsx)(es, { isFullyExpanded: C, partnerBranding: p }),
+                (0, s.jsx)(es, { isFullyExpanded: m, partnerBranding: p }),
                 (0, s.jsxs)(a.animated.div, {
                     className: er.P0,
                     style: { opacity: (0, O.a)(t.to({ range: [0, 1], output: [0, 1] })) },
@@ -432,13 +432,13 @@ var ea = n(821609),
     ec = n(651892),
     ed = n(814793),
     ex = n(753386),
-    em = n(608935),
-    eC = n(657113),
+    eC = n(608935),
+    em = n(657113),
     ep = n(79545),
     ef = n(862611),
     eE = n(630037),
-    eh = n(191559);
-function e_(e) {
+    e_ = n(191559);
+function eh(e) {
     let { quest: t, sourceQuestContent: n, taskDetails: r } = e,
         l = (0, E.Hv)(),
         i = (0, s.jsx)(ea.$, {
@@ -467,7 +467,7 @@ function e_(e) {
             text: (0, ex.WM)(r),
             "aria-disabled": l || void 0,
         });
-    return l ? (0, s.jsx)(em.A, { children: i }) : i;
+    return l ? (0, s.jsx)(eC.A, { children: i }) : i;
 }
 function eg(e) {
     let { quest: t, sourceQuestContent: n } = e,
@@ -486,7 +486,7 @@ function eg(e) {
         text: l,
     });
 }
-function eS(e) {
+function eA(e) {
     let { quest: t, sourceQuestContent: n } = e,
         r = (0, F.wW)();
     return (0, s.jsx)(ea.$, {
@@ -505,7 +505,7 @@ function eS(e) {
         text: et.intl.string(et.t.csptqV),
     });
 }
-function eA(e) {
+function eS(e) {
     let { quest: t } = e,
         n = (0, eo.NA)({ quest: t }),
         { launchInGameActivity: r } = (0, E.zW)(t);
@@ -562,30 +562,30 @@ function ev(e) {
         } = e,
         { quest: o, onGameSheetOpen: u, onGameSheetClose: c, taskDetails: d } = r.useContext(z),
         [x] = (0, E.Qo)(o, d),
-        m = o.userStatus?.completedAt != null,
-        C = (0, g.vv)(o),
+        C = o.userStatus?.completedAt != null,
+        m = (0, g.vv)(o),
         p = (0, g.I6)(o),
-        h = x !== f.X0.SELECT && !l && !i,
-        _ = null;
+        _ = x !== f.X0.SELECT && !l && !i,
+        h = null;
     return (
-        m
-            ? (_ = (0, s.jsx)(eR, { quest: o, sourceQuestContent: t }))
+        C
+            ? (h = (0, s.jsx)(eR, { quest: o, sourceQuestContent: t }))
             : p
-              ? (_ = (0, s.jsx)(eC.A, {
+              ? (h = (0, s.jsx)(em.A, {
                     quest: o,
                     surface: ep.V3.QUEST_BAR_FOOTER,
                     size: "sm",
                     analyticsCtxQuestContent: f.uF.QUEST_BAR_V2,
                     analyticsCtxSourceQuestContent: t,
                 }))
-              : C
-                ? (_ = (0, s.jsx)(e_, { quest: o, sourceQuestContent: t, taskDetails: d }))
+              : m
+                ? (h = (0, s.jsx)(eh, { quest: o, sourceQuestContent: t, taskDetails: d }))
                 : (0, ed.vA)(o)
-                  ? (_ = (0, s.jsx)(eA, { quest: o }))
+                  ? (h = (0, s.jsx)(eS, { quest: o }))
                   : x === f.X0.CONSOLE && n
-                    ? (_ = (0, s.jsx)(eS, { quest: o, sourceQuestContent: t }))
-                    : h && (0, ed.ui)(o)
-                      ? (_ = (0, s.jsx)(ej, {
+                    ? (h = (0, s.jsx)(eA, { quest: o, sourceQuestContent: t }))
+                    : _ && (0, ed.ui)(o)
+                      ? (h = (0, s.jsx)(ej, {
                             quest: o,
                             sourceQuestContent: t,
                             taskDetails: d,
@@ -593,8 +593,8 @@ function ev(e) {
                             onGameSheetOpened: u,
                             onGameSheetClosed: c,
                         }))
-                      : h && (_ = (0, s.jsx)(eg, { quest: o, sourceQuestContent: t })),
-        null == _ ? null : (0, s.jsx)("div", { className: eh.lO, children: _ })
+                      : _ && (h = (0, s.jsx)(eg, { quest: o, sourceQuestContent: t })),
+        null == h ? null : (0, s.jsx)("div", { className: e_.lO, children: h })
     );
 }
 function eT(e) {
@@ -607,7 +607,7 @@ let eU = (e) => {
     let { overlayRef: t, progressBarRef: n, isHovered: l } = e,
         { quest: o, isExpanded: d } = r.useContext(z),
         { expansionSpring: x } = r.useContext(w),
-        { completionSpring: m, startCompletionAnimation: p } = (function () {
+        { completionSpring: C, startCompletionAnimation: p } = (function () {
             let [{ spring: e }, t] = (0, J.z)(() => ({ spring: 0 }), "animate-always");
             return {
                 completionSpring: e,
@@ -618,19 +618,19 @@ let eU = (e) => {
         })(),
         f = o.userStatus?.completedAt != null,
         E = r.useRef(!1),
-        h = (0, u.bG)([Y.Ay], () => Y.Ay.useReducedMotion),
-        _ = r.useRef(null),
-        g = (0, u.bG)([C.A], () => C.A.hasLayers()),
-        S = (0, c.Ay)(g),
-        [A, j] = r.useState(null),
+        _ = (0, u.bG)([Y.Ay], () => Y.Ay.useReducedMotion),
+        h = r.useRef(null),
+        g = (0, u.bG)([m.A], () => m.A.hasLayers()),
+        A = (0, c.Ay)(g),
+        [S, j] = r.useState(null),
         [R, v] = r.useState(null),
         T = r.useRef(new ey.OH({ gravity: 0, wind: 0 })),
-        y = (0, ey.f9)(A, R),
+        y = (0, ey.f9)(S, R),
         Q = r.useMemo(() => ["#51BC9D"], []),
         N = r.useCallback(() => {
-            if (h) return;
+            if (_) return;
             let e = n.current,
-                t = _.current;
+                t = h.current;
             if (null != t && null != e && y.isReady) {
                 var s, r, l, i;
                 let { x: n, y: a } = e.getBoundingClientRect(),
@@ -651,7 +651,7 @@ let eU = (e) => {
                     100,
                 );
             }
-        }, [n, _, y, h]),
+        }, [n, h, y, _]),
         U = (0, c.Ay)(d);
     return (r.useEffect(() => {
         f && d && !U && (p(), N());
@@ -659,26 +659,26 @@ let eU = (e) => {
     r.useEffect(() => {
         f &&
             !g &&
-            S &&
+            A &&
             setTimeout(() => {
                 p(), N();
             }, 200);
-    }, [f, S, g, p, N]),
+    }, [f, A, g, p, N]),
     r.useEffect(() => {
         y.isReady && (!E.current && f && (p(), N()), (E.current = f));
     }, [f, E, N, p, y]),
     r.useEffect(() => {
         l && f && (p(), N());
     }, [l, f, p, N]),
-    h)
+    _)
         ? null
         : (0, s.jsxs)("div", {
               className: eN.iE,
               "aria-hidden": "true",
-              ref: _,
+              ref: h,
               children: [
-                  (0, s.jsx)(a.animated.div, { className: eN.Tp, style: { opacity: (0, O.a)(m) } }),
-                  (0, s.jsx)(a.animated.div, { className: i()(eN.sJ, eN.ix), style: { opacity: (0, O.a)(m) } }),
+                  (0, s.jsx)(a.animated.div, { className: eN.Tp, style: { opacity: (0, O.a)(C) } }),
+                  (0, s.jsx)(a.animated.div, { className: i()(eN.sJ, eN.ix), style: { opacity: (0, O.a)(C) } }),
                   (0, s.jsxs)(a.animated.div, {
                       className: eN.KG,
                       style: { transform: x.to({ range: [0, 1], output: [-35, 0] }).to((e) => `translateY(${e}px)`) },
@@ -695,7 +695,7 @@ let eU = (e) => {
                               (0, V.createPortal)(
                                   (0, s.jsx)(a.animated.div, {
                                       className: i()(eN.sJ, eN.d7),
-                                      style: { opacity: (0, O.a)(m) },
+                                      style: { opacity: (0, O.a)(C) },
                                   }),
                                   t.current,
                               ),
@@ -709,19 +709,19 @@ var eF = n(453384),
 let eI = function (e) {
     let { isExpanded: t, contentLocation: n, progressBarRef: l, percentComplete: i, popoutTargetElementRef: a } = e,
         { quest: o, onGameSheetOpen: u, onGameSheetClose: c, taskDetails: d } = r.useContext(z),
-        { hasAlreadyLinked: x, onClickGameTitle: m } = r.useContext($),
-        [C] = (0, E.Qo)(o, d),
+        { hasAlreadyLinked: x, onClickGameTitle: C } = r.useContext($),
+        [m] = (0, E.Qo)(o, d),
         p = (0, eo.VX)(o, x),
-        h = (0, eo.tH)({
+        _ = (0, eo.tH)({
             quest: o,
             isExpanded: t,
-            activeScreen: C,
+            activeScreen: m,
             sourceQuestContent: f.uF.QUEST_BAR_V2,
             popoutTargetElementRef: a,
             onGameSheetOpened: u,
             onGameSheetClosed: c,
             hasAlreadyLinked: x,
-            onClickGameTitle: m,
+            onClickGameTitle: C,
         });
     return (0, s.jsxs)("div", {
         className: eB.Z0,
@@ -770,7 +770,7 @@ let eI = function (e) {
                                 className: eB.FZ,
                                 color: "text-subtle",
                                 variant: "text-xs/normal",
-                                children: h,
+                                children: _,
                             }),
                     }),
                 ],
@@ -820,15 +820,15 @@ let eL = r.forwardRef(function (e, t) {
         { expansionSpring: o } = r.useContext(w),
         { quest: u, taskDetails: c, isExpanded: d } = r.useContext(z),
         x = u.userStatus?.completedAt != null,
-        m = (0, E.I3)(u),
-        C = r.useRef(null),
+        C = (0, E.I3)(u),
+        m = r.useRef(null),
         p = u.userStatus?.enrolledAt != null,
-        h = null != m ? m.percentComplete : c.percentComplete,
-        _ = r.useRef(null),
-        [g, S] = r.useState(!1);
+        _ = null != C ? C.percentComplete : c.percentComplete,
+        h = r.useRef(null),
+        [g, A] = r.useState(!1);
     return (0, s.jsxs)(s.Fragment, {
         children: [
-            x && (0, s.jsx)(eU, { overlayRef: l, progressBarRef: C, isHovered: g }),
+            x && (0, s.jsx)(eU, { overlayRef: l, progressBarRef: m, isHovered: g }),
             (0, s.jsx)(a.animated.div, {
                 ref: t,
                 "aria-hidden": d,
@@ -837,8 +837,8 @@ let eL = r.forwardRef(function (e, t) {
                     opacity: (0, O.a)(o.to({ range: [0, 1], output: [1, 0] })),
                     backgroundImage: x ? `linear-gradient(90deg, ${q}, ${k})` : void 0,
                 },
-                onMouseEnter: () => S(!0),
-                onMouseLeave: () => S(!1),
+                onMouseEnter: () => A(!0),
+                onMouseLeave: () => A(!1),
                 children: (0, s.jsxs)("div", {
                     className: eV.o8,
                     children: [
@@ -849,16 +849,16 @@ let eL = r.forwardRef(function (e, t) {
                         p
                             ? (0, s.jsx)(eI, {
                                   contentLocation: "collapsed",
-                                  progressBarRef: C,
+                                  progressBarRef: m,
                                   isExpanded: !1,
-                                  percentComplete: h,
+                                  percentComplete: _,
                               })
                             : null,
                         x &&
                             (0, s.jsx)("div", {
-                                ref: _,
+                                ref: h,
                                 children: (0, s.jsx)(eT, {
-                                    parentContainerRef: _,
+                                    parentContainerRef: h,
                                     awaitingConsoleConnections: !1,
                                     hasMadeProgress: !0,
                                     isProgressing: !1,
@@ -894,8 +894,8 @@ var eq = n(889137),
     e3 = n(442734),
     e6 = n(139384),
     e7 = n(114046),
-    e8 = n(695366),
-    e9 = n(274670),
+    e9 = n(695366),
+    e8 = n(274670),
     e5 = n(144779),
     e4 = n(30370),
     te = n(178540),
@@ -913,7 +913,7 @@ function ta(e) {
         className: ti.Z0,
         onClick: () => {
             (0, tt.E5)(tt.kI.STEP_2_CLICKED_INTERNAL, "console_connection_step")
-                ? (0, e9.r)({
+                ? (0, e8.r)({
                       type: e5.F.CLICK_INTERNAL,
                       adCreativeType: o.p.QUEST,
                       adCreativeId: n.id,
@@ -955,11 +955,11 @@ function tx(e) {
         u = (0, tn.Ut)(),
         c = (0, F.go)(),
         d = (0, te.O)((e) => e.getErrorHints(t.id)),
-        { startingConsoleQuest: x, startConsoleQuest: m } = (0, E.Wj)({
+        { startingConsoleQuest: x, startConsoleQuest: C } = (0, E.Wj)({
             questId: t.id,
             beforeRequest: () => {
                 (0, tt.E5)(tt.kI.STEP_2_CLICKED_INTERNAL, "quest_bar_console_task_checklist")
-                    ? (0, e9.r)({
+                    ? (0, e8.r)({
                           type: e5.F.CLICK_INTERNAL,
                           adCreativeType: o.p.QUEST,
                           adCreativeId: t.id,
@@ -978,7 +978,7 @@ function tx(e) {
             },
             afterRequest: a.stopAnimation,
         }),
-        { header: C, renderBody: p } = r.useMemo(() => {
+        { header: m, renderBody: p } = r.useMemo(() => {
             let e = d.length > 0,
                 n = t.config.messages.gameTitle;
             return {
@@ -1039,15 +1039,15 @@ function tx(e) {
             (0, s.jsxs)("div", {
                 className: tc.oK,
                 children: [
-                    (0, s.jsx)(e8.E, {
+                    (0, s.jsx)(e9.E, {
                         size: "custom",
                         color: "currentColor",
                         className: 0 === d.length ? tc.pH : tc.JA,
                         width: 16,
                         height: 16,
                     }),
-                    (0, s.jsx)(T.E, { variant: "text-xs/medium", children: C }),
-                    (0, s.jsx)(v.D, { className: i()(tc.w, { [tc.r9]: x }), onClick: () => m(), children: a.render() }),
+                    (0, s.jsx)(T.E, { variant: "text-xs/medium", children: m }),
+                    (0, s.jsx)(v.D, { className: i()(tc.w, { [tc.r9]: x }), onClick: () => C(), children: a.render() }),
                 ],
             }),
             (0, s.jsxs)("div", {
@@ -1057,7 +1057,7 @@ function tx(e) {
         ],
     });
 }
-let tm = function (e) {
+let tC = function (e) {
         let { quest: t, taskDetails: n } = e,
             l = (0, u.bG)([Y.Ay], () => Y.Ay.useReducedMotion),
             i = (0, E.Du)(),
@@ -1110,34 +1110,34 @@ let tm = function (e) {
             children: c && !d && !x && (0, s.jsx)(tx, { useReducedMotion: l, quest: t }),
         });
     },
-    tC = r.createContext({ springConfig: {}, isExpanded: !1 });
+    tm = r.createContext({ springConfig: {}, isExpanded: !1 });
 function tp(e) {
     let t = r.useMemo(
         () => ({ springConfig: e.springConfig, isExpanded: e.isExpanded }),
         [e.springConfig, e.isExpanded],
     );
-    return (0, s.jsx)(tC.Provider, { value: t, children: e.children });
+    return (0, s.jsx)(tm.Provider, { value: t, children: e.children });
 }
 function tf(e) {
     let { children: t } = e,
-        { springConfig: n, isExpanded: l } = r.useContext(tC),
+        { springConfig: n, isExpanded: l } = r.useContext(tm),
         i = (0, u.bG)([Y.Ay], () => Y.Ay.useReducedMotion),
         { ref: o, height: d = null } = (0, L.Ay)(),
         x = (0, c.Ay)(d) ?? null,
-        [{ height: m }, C] = (0, J.z)(() => ({ from: { height: 0 }, config: n }));
+        [{ height: C }, m] = (0, J.z)(() => ({ from: { height: 0 }, config: n }));
     return (
         r.useLayoutEffect(() => {
-            null !== d && C({ height: d, immediate: !l || i || null === x });
-        }, [d, C, l, i, x]),
+            null !== d && m({ height: d, immediate: !l || i || null === x });
+        }, [d, m, l, i, x]),
         (0, s.jsx)(a.animated.div, {
-            style: { height: null === x ? "auto" : m, overflow: "hidden" },
+            style: { height: null === x ? "auto" : C, overflow: "hidden" },
             children: (0, s.jsx)("div", { style: { overflow: "hidden" }, ref: o, children: t }),
         })
     );
 }
 n(134528), n(947204);
 var tE = n(934225);
-function th(e) {
+function t_(e) {
     let { header: t, children: n } = e;
     return (0, s.jsxs)("div", {
         className: tE.Nr,
@@ -1145,7 +1145,7 @@ function th(e) {
             (0, s.jsxs)("div", {
                 className: tE.wx,
                 children: [
-                    (0, s.jsx)(e8.E, {
+                    (0, s.jsx)(e9.E, {
                         size: "custom",
                         color: "currentColor",
                         className: tE.Kk,
@@ -1159,26 +1159,26 @@ function th(e) {
         ],
     });
 }
-let t_ = function (e) {
+let th = function (e) {
     let { quest: t } = e,
         n = (0, E.aC)(t);
     if (0 === n.length) return null;
     let r = n.at(0);
     return r === et.intl.string(et.t.BV6xDm)
-        ? (0, s.jsx)(th, { header: et.intl.string(et.t.onh6ct), children: et.intl.string(et.t.arVHRA) })
+        ? (0, s.jsx)(t_, { header: et.intl.string(et.t.onh6ct), children: et.intl.string(et.t.arVHRA) })
         : r === et.intl.string(et.t.MFGxFM)
-          ? (0, s.jsx)(th, { header: et.intl.string(et.t.JPihZA), children: et.intl.string(et.t.MFGxFM) })
+          ? (0, s.jsx)(t_, { header: et.intl.string(et.t.JPihZA), children: et.intl.string(et.t.MFGxFM) })
           : null;
 };
 var tg = n(31300),
-    tS = n(687966),
-    tA = n(35558);
+    tA = n(687966),
+    tS = n(35558);
 let tj = function (e) {
     let { onDesktop: t, onConsole: n } = e;
     return (0, s.jsxs)(eP.e, {
         direction: "vertical",
         fullWidth: !0,
-        className: tA.G,
+        className: tS.G,
         size: "sm",
         children: [
             (0, s.jsx)(ea.$, {
@@ -1192,7 +1192,7 @@ let tj = function (e) {
                 onClick: n,
                 text: et.intl.string(et.t["8lAfuB"]),
                 variant: "secondary",
-                icon: tS.GameControllerIcon,
+                icon: tA.GameControllerIcon,
                 iconPosition: "end",
             }),
         ],
@@ -1232,8 +1232,8 @@ function tT(e) {
         c = (0, eJ.tW)(n, eJ.fY.QUEST_BAR_HERO_VIDEO, void 0, !1),
         d = (0, eJ.tW)(n, eJ.fY.VIDEO_PLAYER_THUMBNAIL, void 0, !1),
         x = (0, eK.Kr)((e) => e.getVideoProgressState)(n.id),
-        m = n.userStatus?.completedAt != null && x === eK.K2.COMPLETED,
-        C = !m && (!l || a);
+        C = n.userStatus?.completedAt != null && x === eK.K2.COMPLETED,
+        m = !C && (!l || a);
     return (0, s.jsxs)(v.D, {
         className: tR.QO,
         onClick: t,
@@ -1245,12 +1245,12 @@ function tT(e) {
         },
         children: [
             null != d &&
-                (0, s.jsx)(S._M, {
+                (0, s.jsx)(A._M, {
                     id: "QuestBarContentExpanded_videoThumbnail",
                     children: (e) => (0, s.jsx)("img", { ref: e, alt: "", src: d.url, className: tR.Ue }),
                 }),
             null != c
-                ? (0, s.jsx)(S._M, {
+                ? (0, s.jsx)(A._M, {
                       id: "QuestBarContentExpanded_video",
                       children: (e) =>
                           (0, s.jsx)(tv, {
@@ -1259,13 +1259,13 @@ function tT(e) {
                               autoPlay: !1,
                               asset: c,
                               poster: d?.url,
-                              className: i()(tR.NM, { [tR.Gc]: C }),
+                              className: i()(tR.NM, { [tR.Gc]: m }),
                           }),
                   })
                 : null,
             (0, s.jsx)("div", {
                 className: tR.LT,
-                children: m
+                children: C
                     ? (0, s.jsx)(ek.RetryIcon, { color: Q.A.colors.WHITE, className: tR.t })
                     : (0, s.jsx)(ew.PlayIcon, { color: Q.A.colors.WHITE, className: tR.t }),
             }),
@@ -1285,12 +1285,12 @@ function ty(e) {
 function tQ(e) {
     let { isCtaInteractable: t, containerRef: n, onAcceptQuest: l } = e,
         { quest: o, onGameSheetOpen: c, onGameSheetClose: d, taskDetails: x } = r.useContext(z),
-        { expansionSpring: m } = r.useContext(w),
-        C = r.useRef(null),
-        h = (0, u.bG)([p.A], () => p.A.isEnrolling(o.id), [o]),
-        _ = r.useMemo(() => (0, eJ.tW)(o, eJ.fY.QUEST_BAR_HERO), [o]),
-        { enabled: g, showPlayInstantlyLabel: A } = eX.Bm.useConfig({ location: W.rE.QUESTS_BAR }),
-        j = (0, eo.NA)({ quest: o, showPlayInstantlyLabel: A }),
+        { expansionSpring: C } = r.useContext(w),
+        m = r.useRef(null),
+        _ = (0, u.bG)([p.A], () => p.A.isEnrolling(o.id), [o]),
+        h = r.useMemo(() => (0, eJ.tW)(o, eJ.fY.QUEST_BAR_HERO), [o]),
+        { enabled: g, showPlayInstantlyLabel: S } = eX.Bm.useConfig({ location: W.rE.QUESTS_BAR }),
+        j = (0, eo.NA)({ quest: o, showPlayInstantlyLabel: S }),
         v = r.useMemo(() => (0, eJ.tW)(o, eJ.fY.HERO_IMAGE), [o]),
         y = r.useMemo(() => (null == v ? {} : { backgroundImage: `url(${v.url})` }), [v]),
         Q = eY.t.useConfig({ location: W.rE.QUESTS_BAR }),
@@ -1299,7 +1299,7 @@ function tQ(e) {
             location: W.rE.QUESTS_BAR,
             taskDetails: x,
             sourceQuestContent: f.uF.QUEST_BAR_V2,
-            popoutTargetElementRef: C,
+            popoutTargetElementRef: m,
             onGameSheetOpened: c,
             onGameSheetClosed: d,
             gameProfileSource: D.GameProfileSources.QuestBar,
@@ -1317,7 +1317,7 @@ function tQ(e) {
     return (0, s.jsxs)(s.Fragment, {
         children: [
             (0, s.jsx)("div", {
-                ref: C,
+                ref: m,
                 children: (0, s.jsxs)("div", {
                     className: tR.do,
                     ref: n,
@@ -1364,21 +1364,21 @@ function tQ(e) {
                                             }),
                                         }),
                                     Q.enabled && F === ep.UA.UNENROLLED && Q.enabledQuestStates.has(ep.UA.UNENROLLED)
-                                        ? (0, s.jsx)(eC.A, {
+                                        ? (0, s.jsx)(em.A, {
                                               quest: o,
                                               surface: ep.V3.QUEST_BAR_FOOTER,
                                               size: "sm",
-                                              showPlayInstantlyLabel: A,
+                                              showPlayInstantlyLabel: S,
                                               analyticsCtxQuestContent: f.uF.QUEST_BAR_V2,
                                               analyticsCtxSourceQuestContent: f.uF.QUEST_BAR_V2,
                                           })
                                         : (0, s.jsx)(ea.$, {
                                               onClick: l,
                                               variant: "primary",
-                                              loading: h,
+                                              loading: _,
                                               text: j,
                                               size: "sm",
-                                              icon: (0, R.Oz)(o, A),
+                                              icon: (0, R.Oz)(o, S),
                                               fullWidth: !0,
                                           }),
                                 ],
@@ -1391,24 +1391,24 @@ function tQ(e) {
             null != v &&
                 (0, s.jsx)(a.animated.div, {
                     className: tR.AK,
-                    style: { opacity: (0, O.a)(m.to([0, 1], [1, 0])) },
+                    style: { opacity: (0, O.a)(C.to([0, 1], [1, 0])) },
                     children: (0, s.jsx)("div", { className: i()(tR.LC, tR.Ge), style: y }),
                 }),
             (0, s.jsxs)(a.animated.div, {
                 className: tR.IC,
                 style: {
-                    backdropFilter: (0, O.Q)(m.to([0, 1], [5, 0]).to((e) => `blur(${e}px)`)),
-                    filter: (0, O.Q)(m.to([0, 1], [0.8, 1]).to((e) => `brightness(${e})`)),
+                    backdropFilter: (0, O.Q)(C.to([0, 1], [5, 0]).to((e) => `blur(${e}px)`)),
+                    filter: (0, O.Q)(C.to([0, 1], [0.8, 1]).to((e) => `brightness(${e})`)),
                 },
                 children: [
-                    _.isAnimated
-                        ? (0, s.jsx)(S._M, {
+                    h.isAnimated
+                        ? (0, s.jsx)(A._M, {
                               id: "QuestBarContentExpanded_heroAnimated",
-                              children: (e) => (0, s.jsx)(tv, { ref: e, autoPlay: !0, asset: _, className: tR.LO }),
+                              children: (e) => (0, s.jsx)(tv, { ref: e, autoPlay: !0, asset: h, className: tR.LO }),
                           })
-                        : (0, s.jsx)(S._M, {
+                        : (0, s.jsx)(A._M, {
                               id: "QuestBarContentExpanded_heroStatic",
-                              children: (e) => (0, s.jsx)("img", { ref: e, alt: "", className: tR.LO, src: _.url }),
+                              children: (e) => (0, s.jsx)("img", { ref: e, alt: "", className: tR.LO, src: h.url }),
                           }),
                     (0, s.jsx)("div", { className: tR.tV }),
                 ],
@@ -1426,8 +1426,8 @@ function tU(e) {
         { quest: l, taskDetails: i } = r.useContext(z);
     return (0, eq.YW)(t)
         .with(f.X0.SELECT, () => (0, s.jsx)(tj, { onConsole: () => n(W.fO.CONSOLE), onDesktop: () => n(W.fO.DESKTOP) }))
-        .with(f.X0.DESKTOP, () => ((0, g.I6)(l) ? (0, s.jsx)(tN, { quest: l }) : (0, s.jsx)(t_, { quest: l })))
-        .with(f.X0.CONSOLE, () => (0, s.jsx)(tm, { quest: l, taskDetails: i }))
+        .with(f.X0.DESKTOP, () => ((0, g.I6)(l) ? (0, s.jsx)(tN, { quest: l }) : (0, s.jsx)(th, { quest: l })))
+        .with(f.X0.CONSOLE, () => (0, s.jsx)(tC, { quest: l, taskDetails: i }))
         .exhaustive();
 }
 function tF(e) {
@@ -1533,7 +1533,7 @@ function tO(e) {
         c = r.useRef(null),
         d = r.useRef(null),
         x = (0, E.I3)(l),
-        m = null != x ? x.percentComplete : o.percentComplete;
+        C = null != x ? x.percentComplete : o.percentComplete;
     return (0, s.jsxs)(s.Fragment, {
         children: [
             (0, s.jsx)(a.animated.div, {
@@ -1556,7 +1556,7 @@ function tO(e) {
                         contentLocation: "expanded",
                         progressBarRef: c,
                         isExpanded: !0,
-                        percentComplete: m,
+                        percentComplete: C,
                         popoutTargetElementRef: d,
                     }),
                     (0, s.jsx)(tb, { parentContainerRef: d }),
@@ -1579,20 +1579,20 @@ async function tV(e, t, n, s) {
 let tL = r.forwardRef(function (e, t) {
     let { children: n, className: l, overlayRef: o } = e,
         { collapsedHeight: u, isExpanded: c, isExpansionAnimationComplete: d, quest: x } = r.useContext(z),
-        { expansionSpring: m } = r.useContext(w),
-        { launchInGameActivity: C } = (0, E.zW)(x),
+        { expansionSpring: C } = r.useContext(w),
+        { launchInGameActivity: m } = (0, E.zW)(x),
         p = (0, ed.vA)(x),
-        h = r.useCallback(async () => {
+        _ = r.useCallback(async () => {
             let e = p ? U.Cy.START_QUEST : U.Cy.ACCEPT_QUEST;
-            await tV(x, f.uF.QUEST_BAR_V2, e, f.uF.QUEST_BAR_V2), p && C();
-        }, [x, C, p]),
-        _ = x.userStatus?.enrolledAt != null;
+            await tV(x, f.uF.QUEST_BAR_V2, e, f.uF.QUEST_BAR_V2), p && m();
+        }, [x, m, p]),
+        h = x.userStatus?.enrolledAt != null;
     return (0, s.jsxs)(a.animated.div, {
         "aria-hidden": !c,
-        className: i()(l, tR.Rh, { [tR.iH]: _ }),
+        className: i()(l, tR.Rh, { [tR.iH]: h }),
         style: {
             transform: (0, a.to)(
-                [m.to({ range: [0, 1], output: [0, -100] }), m.to({ range: [0, 1], output: [0, u] })],
+                [C.to({ range: [0, 1], output: [0, -100] }), C.to({ range: [0, 1], output: [0, u] })],
                 (e, t) => `translateY(calc(${e}% + ${t}px))`,
             ),
         },
@@ -1600,9 +1600,9 @@ let tL = r.forwardRef(function (e, t) {
             n,
             (0, s.jsx)(a.animated.div, {
                 style: { opacity: 1 },
-                children: _
+                children: h
                     ? (0, s.jsx)(tO, { overlayRef: o, containerRef: t })
-                    : (0, s.jsx)(tQ, { isCtaInteractable: !c || d, containerRef: t, onAcceptQuest: h }),
+                    : (0, s.jsx)(tQ, { isCtaInteractable: !c || d, containerRef: t, onAcceptQuest: _ }),
             }),
         ],
     });
@@ -1678,25 +1678,25 @@ function tz(e) {
 function t$() {
     return (
         r.useEffect(() => {
-            m.trigger();
+            C.trigger();
         }, []),
         null
     );
 }
 function tK(e) {
     let { quest: t } = e,
-        n = (0, _.L)({ quest: t, location: W.rE.QUESTS_BAR }),
-        l = (0, h.s)(),
+        n = (0, h.L)({ quest: t, location: W.rE.QUESTS_BAR }),
+        l = (0, _.s)(),
         o = (0, u.bG)([p.A], () => null != p.A.questEnrollmentBlockedUntil),
         { isQuestBarVisible: d, reason: x } = (0, j.TQ)({ quest: t }),
-        m = (0, u.bG)([C.A], () => C.A.hasLayers()),
+        C = (0, u.bG)([m.A], () => m.A.hasLayers()),
         v = r.useRef(null),
         T = r.useMemo(() => (0, g.vv)(t), [t]),
         y = t.id,
         Q = t.userStatus?.enrolledAt != null,
         N = (0, c.Ay)(Q),
         F = t.userStatus?.completedAt != null,
-        { hasError: B, isLoading: I } = (0, S.zT)(),
+        { hasError: B, isLoading: I } = (0, A.zT)(),
         b = r.useContext(tq.Z),
         O = b || (l && d && !I && !o),
         {
@@ -1714,21 +1714,21 @@ function tK(e) {
                 [i, a] = r.useState(!1),
                 [o, c] = r.useState(!0),
                 [d, x] = r.useState(!0),
-                m = r.useRef(s),
-                C = r.useCallback(
+                C = r.useRef(s),
+                m = r.useCallback(
                     (e) => {
                         (n && e) || (i !== e && (c(!1), a(e)));
                     },
                     [n, i],
                 ),
                 p = r.useCallback(() => {
-                    C(!0);
-                }, [C]),
+                    m(!0);
+                }, [m]),
                 f = r.useCallback(() => {
-                    C(!1);
-                }, [C]),
+                    m(!1);
+                }, [m]),
                 E = t ? W.ZV : W.Ko,
-                [{ expansionSpring: h }, _] = (0, J.z)(() => ({
+                [{ expansionSpring: _ }, h] = (0, J.z)(() => ({
                     from: { expansionSpring: 0 },
                     config: E,
                     onRest: () => {
@@ -1739,8 +1739,8 @@ function tK(e) {
                     },
                 }));
             r.useEffect(() => {
-                _({ expansionSpring: +!!i, immediate: l });
-            }, [i, _, l]);
+                h({ expansionSpring: +!!i, immediate: l });
+            }, [i, h, l]);
             let { visibilitySpring: g } = (0, J.z)({
                 from: { visibilitySpring: 0 },
                 to: { visibilitySpring: +!!s },
@@ -1754,16 +1754,16 @@ function tK(e) {
             });
             return (
                 r.useLayoutEffect(() => {
-                    s !== m.current && x(!1), (m.current = s);
+                    s !== C.current && x(!1), (C.current = s);
                 }, [s]),
                 {
                     isExpanded: i,
-                    setIsExpanded: C,
+                    setIsExpanded: m,
                     expandQuestBar: p,
                     collapseQuestBar: f,
                     isExpansionAnimationComplete: o,
                     isVisibilityAnimationAtRest: d,
-                    expansionSpring: h,
+                    expansionSpring: _,
                     visibilitySpring: g,
                     springConfig: E,
                 }
@@ -1792,24 +1792,24 @@ function tK(e) {
                 } = e,
                 c = r.useRef(-1),
                 d = r.useRef(!1),
-                [x, m] = r.useState(!1),
-                [C, p] = r.useState(!1),
+                [x, C] = r.useState(!1),
+                [m, p] = r.useState(!1),
                 E = r.useCallback(() => {
-                    m(!0);
+                    C(!0);
                 }, []),
-                h = r.useCallback(() => {
-                    m(!1), d.current || i || s(!1);
-                }, [i, s]),
                 _ = r.useCallback(() => {
-                    m(!1), i || s(!1), (d.current = !1);
+                    C(!1), d.current || i || s(!1);
+                }, [i, s]),
+                h = r.useCallback(() => {
+                    C(!1), i || s(!1), (d.current = !1);
                 }, [i, s]),
                 g = r.useCallback(() => {
                     p(!0);
                 }, []),
-                S = r.useCallback(() => {
+                A = r.useCallback(() => {
                     p(!1), s(!1);
                 }, [s]),
-                A = r.useCallback(
+                S = r.useCallback(
                     function () {
                         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
                         if (n) return;
@@ -1819,18 +1819,18 @@ function tK(e) {
                     [l, n],
                 ),
                 j = r.useCallback(() => {
-                    A();
-                }, [A]),
+                    S();
+                }, [S]),
                 R = r.useCallback(
                     (e) => {
                         window.clearTimeout(c.current),
                             ((0, tw.vq)(e?.relatedTarget, Node) && e.currentTarget.contains(e.relatedTarget)) ||
                                 x ||
-                                C ||
+                                m ||
                                 d.current ||
                                 s(!1);
                     },
-                    [x, C, s],
+                    [x, m, s],
                 ),
                 v = r.useCallback(() => {
                     (0, eu.av)({
@@ -1845,8 +1845,8 @@ function tK(e) {
                         sourceQuestContent: f.uF.QUEST_BAR_V2,
                     }),
                         (d.current = !0),
-                        A({ withDelay: !0 });
-                }, [A, u, t.id]),
+                        S({ withDelay: !0 });
+                }, [S, u, t.id]),
                 T = r.useCallback(() => {
                     (0, eu.av)({
                         questId: t.id,
@@ -1862,8 +1862,8 @@ function tK(e) {
                         R();
                 }, [R, u, t.id]);
             r.useEffect(() => {
-                C && d.current && T();
-            }, [C, T]),
+                m && d.current && T();
+            }, [m, T]),
                 r.useLayoutEffect(() => {
                     a && !o && d.current && l();
                 }, [l, a, o]),
@@ -1877,13 +1877,13 @@ function tK(e) {
                 }, [T, y]),
                 {
                     ctxMenuOpen: x,
-                    gameSheetOpen: C,
+                    gameSheetOpen: m,
                     handleCtxMenuOpened: E,
-                    handleCtxMenuClosed: h,
-                    handleCtxMenuSelection: _,
+                    handleCtxMenuClosed: _,
+                    handleCtxMenuSelection: h,
                     handleGameSheetOpened: g,
-                    handleGameSheetClosed: S,
-                    handleFocus: A,
+                    handleGameSheetClosed: A,
+                    handleFocus: S,
                     handleFocusWithoutDelay: j,
                     handleBlur: R,
                     handleMouseEnter: v,
@@ -1995,10 +1995,10 @@ function tK(e) {
             B && !b ? n.log("Not rendered due to asset error") : l || n.log("Not rendered due to ineligibility"), null
         );
     let ed = 70 + 78 * !!F;
-    return (0, s.jsx)(A.Z, {
+    return (0, s.jsx)(S.Z, {
         questOrQuests: t,
         questContent: f.uF.QUEST_BAR_V2,
-        overrideVisibility: !m && O,
+        overrideVisibility: !C && O,
         onImpression: ec,
         sourceQuestContent: f.uF.QUEST_BAR_V2,
         children: (e, n) => (
@@ -2065,21 +2065,36 @@ function tK(e) {
         ),
     });
 }
-let tX =
+function tX(e) {
+    let { decisionId: t } = e,
+        n = (0, u.bG)([m.A], () => m.A.hasLayers());
+    return (0, s.jsx)(S.Z, {
+        adContentId: t,
+        adCreativeType: o.p.NO_FILL,
+        questContent: f.uF.QUEST_BAR_V2,
+        overrideVisibility: !n,
+        sourceQuestContent: f.uF.QUEST_BAR_V2,
+        children: (e) => (0, s.jsx)("div", { ref: e, "aria-hidden": !0, className: tW.ui }),
+    });
+}
+let tY =
     221552 == n.j
         ? function () {
-              let e = (0, j.dN)();
-              return null == e
-                  ? null
-                  : (0, s.jsx)(
-                        S.y5,
-                        {
-                            source: W.rE.QUESTS_BAR,
-                            adCreativeId: e.id,
-                            adCreativeType: o.p.QUEST,
-                            children: (0, s.jsx)(tK, { quest: e }),
-                        },
-                        e.id,
-                    );
+              let e = (0, j.dN)(),
+                  t = (0, j.f4)();
+              return null == e && null != t
+                  ? (0, s.jsx)(tX, { decisionId: t.decisionId })
+                  : null == e
+                    ? null
+                    : (0, s.jsx)(
+                          A.y5,
+                          {
+                              source: W.rE.QUESTS_BAR,
+                              adCreativeId: e.id,
+                              adCreativeType: o.p.QUEST,
+                              children: (0, s.jsx)(tK, { quest: e }),
+                          },
+                          e.id,
+                      );
           }
         : null;

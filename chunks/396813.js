@@ -586,6 +586,7 @@ async function ef(e, t) {
                 case a.p.BOUNTY:
                     let v = (0, c.t)(L.creative_content);
                     y = { type: a.p.BOUNTY, bounty: v };
+                case a.p.NO_FILL:
             }
         else {
             let e = R.quest;
@@ -596,6 +597,7 @@ async function ef(e, t) {
                 type: "QUESTS_FETCH_QUEST_TO_DELIVER_SUCCESS",
                 quest: i,
                 creative: y,
+                isNoFill: L?.creative_type === a.p.NO_FILL,
                 adDecisionData: {
                     ad_id: R.ad_identifiers?.ad_id,
                     adset_id: R.ad_identifiers?.adset_id,

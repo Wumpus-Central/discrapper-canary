@@ -1,4 +1,4 @@
-n.d(t, { n0: () => M, xs: () => k });
+n.d(t, { n0: () => M, xs: () => Q });
 var i = n(477900),
     r = n(582128),
     s = n(132500),
@@ -23,8 +23,8 @@ var i = n(477900),
     O = n(851936),
     v = n(561844),
     b = n(590202),
-    N = n(910463),
-    y = n(971649),
+    y = n(910463),
+    N = n(971649),
     P = n(823784);
 n(23766);
 var w = n(652215);
@@ -80,7 +80,7 @@ class R {
                 "quest_content_impression",
             )),
             (this.migrateQuestContentViewedToCaptureAdUserAction = (0, S.E5)(
-                (0, g.xn)(r) ? S.kI.STEP_5_VIEWED_IMPRESSION : S.kI.STEP_4_VIEWED_NON_IMPRESSION,
+                (0, g.xn)(r, n) ? S.kI.STEP_5_VIEWED_IMPRESSION : S.kI.STEP_4_VIEWED_NON_IMPRESSION,
                 "quest_content_impression",
             )),
             n === o.p.QUEST
@@ -95,11 +95,11 @@ class R {
     }
     trackViewedPlacement = (e) => {
         let t = (0, g.HN)(this.questContent);
-        null != t && (0, g.xn)(this.questContent) && L.add(`${e}_${t}`);
+        null != t && (0, g.xn)(this.questContent, this.entity.adCreativeType) && L.add(`${e}_${t}`);
     };
     shouldExtendSession = (e) => {
         let t = (0, g.HN)(this.questContent);
-        return null != t && !L.has(`${e}_${t}`) && (0, g.xn)(this.questContent);
+        return null != t && !L.has(`${e}_${t}`) && (0, g.xn)(this.questContent, this.entity.adCreativeType);
     };
     maybeRegisterIosAttributionImpression = (e, t) => {
         if (this.iosAttributionRegistered || !(0, C.C$)()) return;
@@ -126,7 +126,7 @@ class R {
                 apple_advertising_id: null != e && (0, I.isIOS)() ? e.advertisingId : null,
                 android_advertising_id: null != e && (0, I.isAndroid)() ? e.advertisingId : null,
                 ...(0, T.A)(),
-                ...(0, N.X)(this.questContent),
+                ...(0, y.X)(this.questContent),
             };
         this.entity.adContentIds.forEach((i, r) => {
             let s = (0, g.L4)(this.sourceQuestContent, i),
@@ -138,7 +138,7 @@ class R {
                     null == t || (0, g.Ic)(t) || (0, h.zh)(o.p.QUEST, [e]);
                 }
                 let t = {
-                    type: (0, g.xn)(this.questContent)
+                    type: (0, g.xn)(this.questContent, this.entity.adCreativeType)
                         ? c.F.VIEW_EXTERNAL_PAID_AD_PLACEMENT_IMPRESSION
                         : c.F.VIEW_INTERNAL_SURFACE_IMPRESSION,
                     surfaceId: this.questContent,
@@ -382,9 +382,9 @@ class R {
     })();
 }
 let M = r.createContext(void 0);
-function k(e) {
+function Q(e) {
     let { visible: t, visibleChanged: n, focused: s, reference: a, focusedChanged: d, sourceQuestContent: c } = e,
-        C = (0, y.iY)(e),
+        C = (0, N.iY)(e),
         f = e.adCreativeType === o.p.QUEST ? void 0 : e.relatedQuestId,
         E = r.useRef(null),
         m = (0, l.bG)([_.A], () => null != _.A.questEnrollmentBlockedUntil, []);
