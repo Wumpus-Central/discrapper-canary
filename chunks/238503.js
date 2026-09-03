@@ -1458,7 +1458,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19));
 let e2 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new eB.A().log(
-    `[BUILD INFO] Release Channel: ${e2}, Build Number: 607112, Version Hash: 5880f70ecfb8165b8012fda15a36197f45a9f938`,
+    `[BUILD INFO] Release Channel: ${e2}, Build Number: 607118, Version Hash: 0a945ccfa1fa0ecbcd99601012fcbd669791499e`,
 ),
     D.A.setTags({ appContext: G.QCW }),
     eI.A.initBasic(),
@@ -21143,7 +21143,7 @@ let NA = "isHideDevBanner",
                     className: ta()(NE.Wz, NE.mr),
                     children: [
                         (0, O.jsx)(N_, { className: NE.Kk }),
-                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "607112" }),
+                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "607118" }),
                         (0, O.jsx)(r, {}),
                     ],
                 })
@@ -22166,6 +22166,7 @@ function C5(e) {
                         children: (0, O.jsx)(ip.m, {
                             text: x(),
                             ariaHidden: !0,
+                            shouldShow: !p,
                             children: (0, O.jsx)(rj.$n, {
                                 "data-migration-pending": !0,
                                 "aria-label": x(),
