@@ -1,28 +1,3 @@
-.counter__90981 {
-    background-color: var(--background-surface-highest);
-    border: 1px solid var(--border-muted);
-    border-radius: var(--radius-md);
-    box-shadow: none;
-    flex-direction: column;
-    padding: 10px 20px 12px
-}
-
-.counter__90981,
-.textRow__90981 {
-    align-items: center;
-    display: flex
-}
-
-.info__90981 {
-    color: var(--text-default);
-    margin-inline-start: 4px
-}
-
-.counterText__90981,
-.tooltip__90981 {
-    text-align: center
-}
-
 .purchasePlaceholder__32d1b {
     align-items: center;
     background: var(--background-mod-normal, hsla(240, 4%, 61%, .16));
@@ -426,4 +401,4 @@
     display: none
 }
 
-/*# sourceMappingURL=2130bf6436850647.css.map*/
+/*# sourceMappingURL=5d2b29e6668ea215.css.map*/
