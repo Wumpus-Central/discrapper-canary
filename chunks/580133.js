@@ -6,7 +6,7 @@ var l = n(477900),
     s = n(427675),
     o = n(206441),
     u = n(584160),
-    c = n(480642);
+    c = n(169797);
 function d(e) {
     let { headerBadgeConfig: t } = e,
         {

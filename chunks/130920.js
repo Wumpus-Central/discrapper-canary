@@ -33,7 +33,7 @@ var t = n(477900),
     L = n(821269),
     D = n(397562),
     M = n(93246),
-    w = n(594832),
+    w = n(561794),
     G = n(71393),
     F = n(994500),
     V = n(351906),
@@ -202,10 +202,10 @@ var eJ = n(403581),
     e1 = n(83013),
     e2 = n(81400),
     e3 = n(84540),
-    e5 = n(290386),
-    e7 = n(621466),
-    e8 = n(231088),
-    e9 = n(786826);
+    e7 = n(290386),
+    e5 = n(621466),
+    e9 = n(231088),
+    e8 = n(786826);
 function e6(e) {
     return e?.querySelector('[aria-expanded="true"][aria-controls]') ?? null;
 }
@@ -237,7 +237,7 @@ function e4(e) {
             (null != h && (l ? i : n).length > h
                 ? eY.intl.formatToPlainString(eY.t.ICT5S6, { maxLength: h })
                 : void 0) ?? b;
-    return (0, t.jsx)(e8.ZL, {
+    return (0, t.jsx)(e9.ZL, {
         isEditing: l,
         preview: m,
         placeholder: f,
@@ -251,7 +251,7 @@ function e4(e) {
         onKeyDown: u,
         previewErrorMessage: y,
         previewWarningMessage: j,
-        input: (0, t.jsx)(e9.f, {
+        input: (0, t.jsx)(e8.f, {
             editorRef: c,
             label: x,
             hideLabel: !0,
@@ -291,7 +291,7 @@ function ln(e) {
         g = d?.guildId != null,
         m = d?.guildId ?? null,
         f = W.Ay.canUsePremiumProfileCustomization(c),
-        p = (0, e5.U)({ location: "user_profile_modal_edit" }),
+        p = (0, e7.U)({ location: "user_profile_modal_edit" }),
         {
             value: x,
             previewValue: h,
@@ -312,7 +312,7 @@ function ln(e) {
             ),
         }),
         A = (function (e) {
-            let { isEditing: l, wrapperRef: n, handleCommit: t, ...r } = (0, e8.Ww)(e),
+            let { isEditing: l, wrapperRef: n, handleCommit: t, ...r } = (0, e9.Ww)(e),
                 a = i.useCallback(
                     (e) =>
                         (function (e, l) {
@@ -327,7 +327,7 @@ function ln(e) {
                 if (!l) return;
                 let e = n.current?.ownerDocument ?? document;
                 function i(e) {
-                    (0, e7.vq)(e.target) && !a(e.target) && t();
+                    (0, e5.vq)(e.target) && !a(e.target) && t();
                 }
                 return e.addEventListener("mousedown", i), () => e.removeEventListener("mousedown", i);
             }, [l, n, a, t]);
@@ -335,7 +335,7 @@ function ln(e) {
                 (e) => {
                     if (!l) return;
                     let i = e.relatedTarget;
-                    !(0, e7.vq)(i) || a(i) || (null == e6(n.current) && t());
+                    !(0, e5.vq)(i) || a(i) || (null == e6(n.current) && t());
                 },
                 [l, a, t, n],
             );
@@ -724,13 +724,13 @@ let l2 = (0, l1.mj)({
             2: { enabled: !0, showPresetName: !1, clientThemeAdaptedColorsEnabled: !0 },
         },
     });
-function l5(e) {
+function l7(e) {
     let { location: l } = e;
     return l3.useConfig({ location: l });
 }
-var l7 = n(487233),
-    l8 = n(120386),
-    l9 = n(317097),
+var l5 = n(487233),
+    l9 = n(120386),
+    l8 = n(317097),
     l6 = n(602853),
     l4 = n(922016),
     ne = n(508274),
@@ -745,7 +745,7 @@ function nt(e) {
             pendingAccentColor: ep.A.getPendingChanges().pendingAccentColor,
             savedAccentColor: K.A.getUserProfile(l.id)?.accentColor,
         })),
-        c = d ?? u ?? (0, l9.LX)(o[0] ?? a),
+        c = d ?? u ?? (0, l8.LX)(o[0] ?? a),
         g = i.useCallback((e) => (0, e3.p)({ accentColor: e }), []);
     return (0, t.jsx)(l4.Y, {
         targetElementRef: r,
@@ -757,10 +757,10 @@ function nt(e) {
                 buttonRef: r,
                 disabled: n,
                 accessibleLabel: eY.intl.string(eY.t["/X3fkf"]),
-                accessibleValue: (0, l9.Hl)(c),
+                accessibleValue: (0, l8.Hl)(c),
                 showOverlayOnHover: !0,
                 renderPreview: () =>
-                    (0, t.jsx)("div", { style: { width: "100%", height: "100%", backgroundColor: (0, l9.Hl)(c) } }),
+                    (0, t.jsx)("div", { style: { width: "100%", height: "100%", backgroundColor: (0, l8.Hl)(c) } }),
             }),
     });
 }
@@ -782,7 +782,7 @@ function no(e) {
 function nd(e) {
     let { displayProfile: l, bannerChange: n, shouldAnimate: i } = e,
         r = (0, l6.r)(x.A.unsafe_rawColors.PRIMARY_800).hex(),
-        a = l?.primaryColor ?? (0, l9.LX)(r),
+        a = l?.primaryColor ?? (0, l8.LX)(r),
         { hex: s } = (0, ni.A)(a),
         o = l?.getPreviewBanner(n, i, 296) ?? void 0;
     return null != o ? (0, t.jsx)(no, { src: o }) : (0, t.jsx)(ns, { backgroundColor: s });
@@ -1187,32 +1187,32 @@ function n1(e) {
 }
 var n2 = n(684732),
     n3 = n(498596),
-    n5 = n(871524);
-function n7(e) {
+    n7 = n(871524);
+function n5(e) {
     let { primaryColor: l, secondaryColor: n, children: i } = e,
-        r = `linear-gradient(to bottom, ${(0, l9.Hl)(l)}, ${(0, l9.Hl)(n)})`;
-    return (0, t.jsx)("div", { className: n5.D7, style: { background: r }, children: i });
-}
-function n8(e) {
-    let { color: l } = e,
-        n = (0, l9.Hl)(l),
-        i = (0, l9.bJ)(l, 0xffffff) < n3.Tr.NonText;
-    return (0, t.jsx)("div", {
-        className: n5.OS,
-        children: (0, t.jsx)("div", { className: a()(n5.Hy, { [n5.rY]: i }), style: { backgroundColor: n } }),
-    });
+        r = `linear-gradient(to bottom, ${(0, l8.Hl)(l)}, ${(0, l8.Hl)(n)})`;
+    return (0, t.jsx)("div", { className: n7.D7, style: { background: r }, children: i });
 }
 function n9(e) {
+    let { color: l } = e,
+        n = (0, l8.Hl)(l),
+        i = (0, l8.bJ)(l, 0xffffff) < n3.Tr.NonText;
+    return (0, t.jsx)("div", {
+        className: n7.OS,
+        children: (0, t.jsx)("div", { className: a()(n7.Hy, { [n7.rY]: i }), style: { backgroundColor: n } }),
+    });
+}
+function n8(e) {
     let { color: l, disabled: n, onClick: r, buttonRef: a, ...s } = e,
         o = i.useRef(null);
     return (0, t.jsx)(eV.D, {
         ...s,
         innerRef: a ?? o,
-        className: n5.Dh,
+        className: n7.Dh,
         onClick: n ? void 0 : r,
         "aria-disabled": n,
         tabIndex: n ? -1 : 0,
-        children: (0, t.jsx)(n8, { color: l }),
+        children: (0, t.jsx)(n9, { color: l }),
     });
 }
 function n6(e) {
@@ -1235,7 +1235,7 @@ function n6(e) {
         renderPopout: (e) => (0, t.jsx)(ne.VN, { ...e, value: l, onChange: d, suggestedColors: i, showEyeDropper: !0 }),
         children: (e) => {
             let { onClick: i, ...a } = e;
-            return (0, t.jsx)(n9, { color: l, onClick: i, disabled: r, buttonRef: u, "aria-label": n, ...a });
+            return (0, t.jsx)(n8, { color: l, onClick: i, disabled: r, buttonRef: u, "aria-label": n, ...a });
         },
     });
 }
@@ -1254,8 +1254,8 @@ function n4(e) {
         [g, m] = i.useState(null),
         f = i.useRef(null),
         p = i.useRef(null),
-        x = (0, l9.Hl)(l),
-        h = (0, l9.Hl)(n),
+        x = (0, l8.Hl)(l),
+        h = (0, l8.Hl)(n),
         v = eY.intl.formatToPlainString(eY.t.FquTfm, { colorLabel: x }),
         A = eY.intl.formatToPlainString(eY.t.xOnm4z, { colorLabel: h });
     i.useEffect(() => {
@@ -1279,7 +1279,7 @@ function n4(e) {
         variant: u,
         disabled: o,
         deleteButton: b,
-        children: (0, t.jsxs)(n7, {
+        children: (0, t.jsxs)(n5, {
             primaryColor: l,
             secondaryColor: n,
             children: [
@@ -1622,16 +1622,16 @@ function tR(e) {
     let { user: l, onClickPrimary: n, onClickSecondary: i } = e,
         { primaryColor: r, secondaryColor: a } = tS(l);
     if (null == r || null == a) return null;
-    let s = eY.intl.formatToPlainString(eY.t.FquTfm, { colorLabel: (0, l9.Hl)(r) }),
-        o = eY.intl.formatToPlainString(eY.t.xOnm4z, { colorLabel: (0, l9.Hl)(a) });
+    let s = eY.intl.formatToPlainString(eY.t.FquTfm, { colorLabel: (0, l8.Hl)(r) }),
+        o = eY.intl.formatToPlainString(eY.t.xOnm4z, { colorLabel: (0, l8.Hl)(a) });
     return (0, t.jsx)(nn.Y, {
         variant: "full-height-bar",
-        children: (0, t.jsxs)(n7, {
+        children: (0, t.jsxs)(n5, {
             primaryColor: r,
             secondaryColor: a,
             children: [
-                (0, t.jsx)(n9, { color: r, onClick: n, "aria-label": s }),
-                (0, t.jsx)(n9, { color: a, onClick: i, "aria-label": o }),
+                (0, t.jsx)(n8, { color: r, onClick: n, "aria-label": s }),
+                (0, t.jsx)(n8, { color: a, onClick: i, "aria-label": o }),
             ],
         }),
     });
@@ -2096,17 +2096,17 @@ var t0 = n(462887),
     t1 = n(765178),
     t2 = n(461797),
     t3 = n(469054),
-    t5 = n(601298);
-function t7() {
+    t7 = n(601298);
+function t5() {
     let { preset: e, setPreset: l } = (0, lF.RQ)(),
-        { clientThemeAdaptedColorsEnabled: n } = l5({ location: "useRandomPremiumTryItOutPreset" }),
+        { clientThemeAdaptedColorsEnabled: n } = l7({ location: "useRandomPremiumTryItOutPreset" }),
         t = (0, nO.Ay)(),
         r = (0, t0.q)(t),
         a = i.useCallback(
             (e) => {
                 let l = (0, t2.Wt)(e);
                 (0, tT.w5)({
-                    banner: (0, t5.X)({
+                    banner: (0, t7.X)({
                         assetOrigin: t3.E.NEW_ASSET,
                         imageUri: l.getBannerSrc(!1),
                         staticImageUri: l.getBannerSrc(!0),
@@ -2132,8 +2132,8 @@ function t7() {
     }, [e, l, a]);
     return { preset: e, onShuffle: s };
 }
-var t8 = n(23722),
-    t9 = n(49999),
+var t9 = n(23722),
+    t8 = n(49999),
     t6 = n(288490);
 let t4 = "profile-editing-nameplate-error",
     ie = "profile-editing-avatar-error",
@@ -2238,8 +2238,8 @@ function ic(e) {
         heading: eY.intl.string(eY.t["50Nwpc"]),
         disabled: i,
         children: [
-            (0, t.jsx)(l7.A, { user: l, guildId: n, disabled: i, errorMessageId: null != r ? ie : void 0 }),
-            (0, t.jsx)(l8.A, { user: l, guildId: n, disabled: i, errorMessageId: null != a ? il : void 0 }),
+            (0, t.jsx)(l5.A, { user: l, guildId: n, disabled: i, errorMessageId: null != r ? ie : void 0 }),
+            (0, t.jsx)(l9.A, { user: l, guildId: n, disabled: i, errorMessageId: null != a ? il : void 0 }),
             (0, t.jsx)(nk, { id: ie, message: (0, l0.d3)(r) }),
             (0, t.jsx)(nk, { id: il, message: a }),
         ],
@@ -2261,7 +2261,7 @@ function ig(e) {
                 guildId: n,
                 disabled: i,
                 errorMessageId: null != r ? ii : void 0,
-                onOpen: d ? () => o(t9.i.TAKE_ACTION) : void 0,
+                onOpen: d ? () => o(t8.i.TAKE_ACTION) : void 0,
             }),
             (0, t.jsx)(nk, { id: ii, message: r }),
         ],
@@ -2306,7 +2306,7 @@ function iv(e) {
         n = tm(),
         { navigate: i } = (0, lF.pA)();
     return (
-        t7(),
+        t5(),
         (0, t.jsxs)("div", {
             role: "group",
             "aria-labelledby": ih,
@@ -2350,8 +2350,8 @@ function iA(e) {
             onSelectGuildId: c,
         } = e,
         g = (0, s.bG)([V.A], () => V.A.hidePersonalInformation),
-        { enabled: m } = l5({ location: "DefaultEditingPanelView" }),
-        f = (0, t8.A)(c),
+        { enabled: m } = l7({ location: "DefaultEditingPanelView" }),
+        f = (0, t9.A)(c),
         p = null != i,
         x = W.Ay.canUsePremiumProfileCustomization(l),
         h = p && !x,
@@ -2496,8 +2496,8 @@ var iy = n(477155),
     iP = n(145934);
 let ik = "shuffle-options-a11y-description";
 function iT() {
-    let { preset: e, onShuffle: l } = t7(),
-        { showPresetName: n } = l5({ location: "TryItOutShufflePreset" }),
+    let { preset: e, onShuffle: l } = t5(),
+        { showPresetName: n } = l7({ location: "TryItOutShufflePreset" }),
         { presetName: r, presetHeader: a } = i.useMemo(() => {
             let l = (0, t2.Wt)(e);
             return { presetName: l.getName(), presetHeader: l.getPreviewThumbnailSrc() };
@@ -2725,7 +2725,7 @@ function iW(e) {
             [l, u, a],
         ),
         h = d && null == p,
-        v = (0, e8.Ww)({ value: p ?? "", onCommit: x, disabled: h }),
+        v = (0, e9.Ww)({ value: p ?? "", onCommit: x, disabled: h }),
         { handleStartEditing: A } = v,
         b = i.useRef(!1);
     if (
@@ -2831,14 +2831,14 @@ function i1(e) {
 }
 var i2 = n(568602),
     i3 = n(625494),
-    i5 = n(61881);
-function i7(e) {
+    i7 = n(61881);
+function i5(e) {
     let { children: l } = e,
         [n, r] = i.useState(!1),
         [a, o] = i.useState(1.4),
         d = i.useRef(null),
         u = i.useRef(1.4),
-        c = (0, s.bG)([i5.A, ep.A], () => i5.A.hasUnsavedChanges() || ep.A.hasUnsavedChanges());
+        c = (0, s.bG)([i7.A, ep.A], () => i7.A.hasUnsavedChanges() || ep.A.hasUnsavedChanges());
     i.useEffect(() => {
         c || (u.current = 1.4);
     }, [c]);
@@ -2873,8 +2873,8 @@ function i7(e) {
     );
 }
 n(46121);
-var i8 = n(140355),
-    i9 = n(933832),
+var i9 = n(140355),
+    i8 = n(933832),
     i6 = n(972213),
     i4 = n(97483),
     re = n(775602),
@@ -2882,11 +2882,11 @@ var i8 = n(140355),
 let rn = {
         [iH.jM.WIDGET_ADDED]: {
             message: eY.intl.string(eY.t.fFP1Uy),
-            icon: (0, t.jsx)(i9.CheckmarkLargeIcon, { size: "sm", color: x.A.colors.STATUS_POSITIVE.css }),
+            icon: (0, t.jsx)(i8.CheckmarkLargeIcon, { size: "sm", color: x.A.colors.STATUS_POSITIVE.css }),
         },
         [iH.jM.WIDGET_REMOVED]: {
             message: eY.intl.string(eY.t.zzsK7h),
-            icon: (0, t.jsx)(i9.CheckmarkLargeIcon, { size: "sm", color: x.A.colors.STATUS_POSITIVE.css }),
+            icon: (0, t.jsx)(i8.CheckmarkLargeIcon, { size: "sm", color: x.A.colors.STATUS_POSITIVE.css }),
         },
         [iH.jM.PROFILE_SAVE_GENERIC_FAILURE]: {
             message: eY.intl.string(eY.t["84MExs"]),
@@ -3014,7 +3014,7 @@ function rc(e) {
                     S && O(),
                     y &&
                         (0, ra.Dr)(lV.M.DISPLAY_NAME_STYLES_FLYWHEEL_NEW_BADGE_PROFILE_PAGE, {
-                            dismissAction: t9.i.INDIRECT_ACTION,
+                            dismissAction: t8.i.INDIRECT_ACTION,
                         }),
                     (0, nm.L)({ analyticsLocations: v, guildId: b, stackingBehavior: "stack", returnRef: B });
             },
@@ -3724,12 +3724,12 @@ var rK = n(777480),
     r1 = n(186272),
     r2 = n(447538);
 let r3 = (e) => e * (2 - e),
-    r5 = { "compact-sm": { avatarOffsetX: 16 }, "compact-xs": { avatarSize: d._3.SIZE_96, avatarOffsetX: 16 } };
-function r7(e) {
+    r7 = { "compact-sm": { avatarOffsetX: 16 }, "compact-xs": { avatarSize: d._3.SIZE_96, avatarOffsetX: 16 } };
+function r5(e) {
     let { type: l, anchor: n } = e;
     return "staple" !== l || "bottom" !== n;
 }
-function r8(e) {
+function r9(e) {
     let { displayProfile: l, pendingBanner: n } = e;
     if ((0, el.Nx)()) return null;
     let i = l?.getPreviewBanner(n, !1, 1024);
@@ -3737,7 +3737,7 @@ function r8(e) {
         ? null
         : (0, t.jsx)("div", { className: r2.backgroundImage, style: { backgroundImage: `url(${i})` } });
 }
-function r9(e) {
+function r8(e) {
     let { displayProfile: l, profileEffectOverride: n, isHovering: r } = e,
         a = void 0 !== n ? n : l?.profileEffect,
         s = i.useSyncExternalStore(
@@ -3785,7 +3785,7 @@ function r6(e) {
             l <= 350 ? q("compact-xs") : l <= 380 ? q("compact-sm") : q(void 0);
         }, []);
     (0, A.g)(U, K, [], { fireOnMount: !0 });
-    let Y = null != H ? r5[H] : void 0,
+    let Y = null != H ? r7[H] : void 0,
         X = i.useMemo(() => v ?? (0, R.A)(), [v]),
         { relationshipType: ee, originApplicationId: el } = (0, s.cf)([F.A], () => ({
             relationshipType: F.A.getRelationshipType(o.id),
@@ -4016,8 +4016,8 @@ function r6(e) {
                     (0, t.jsx)(iK, { userId: o.id }),
                 ],
             }),
-            (0, t.jsx)(r9, { displayProfile: p, profileEffectOverride: E, isHovering: W }),
-            null != P && (0, t.jsx)(k.A, { frame: P, filterLayer: r7, fadeIn: T }),
+            (0, t.jsx)(r8, { displayProfile: p, profileEffectOverride: E, isHovering: W }),
+            null != P && (0, t.jsx)(k.A, { frame: P, filterLayer: r5, fadeIn: T }),
         ],
     });
 }
@@ -4056,7 +4056,7 @@ function ae(e) {
             themeContainerClassName: z,
         } = e,
         $ = l.id === n.id,
-        Z = (0, t8.A)(L, $),
+        Z = (0, t9.A)(L, $),
         {
             guildId: J,
             pendingGuildId: Q,
@@ -4287,9 +4287,9 @@ function ae(e) {
         e2 = (0, X.Ay)(l.id, J);
     (0, D.A)(eJ, e2, iH.R7.MODAL_V2);
     let e3 = void 0 !== e_ ? e_?.skuId : e2?.profileFrame?.skuId,
-        e5 = (0, E.A)(e3, "UserProfileModalV2"),
-        e7 = (0, N.A)(e3),
-        { profileFrameStyle: e8, profileFrameClassName: e9 } = (0, T.A)(e5);
+        e7 = (0, E.A)(e3, "UserProfileModalV2"),
+        e5 = (0, N.A)(e3),
+        { profileFrameStyle: e9, profileFrameClassName: e8 } = (0, T.A)(e7);
     (0, P.A)({ skuId: e2?.profileFrame?.skuId, openedAt: _, context: eQ, analyticsLocations: eJ });
     let e6 = (0, s.bG)([U.default], () => W.Ay.canUsePremiumProfileCustomization(U.default.getCurrentUser())),
         e4 = ea || ($ && null != e2 && e6),
@@ -4321,14 +4321,14 @@ function ae(e) {
                         "aria-labelledby": ll,
                         parentComponent: "UserProfileModalV2",
                         children: [
-                            (0, t.jsx)(i7, {
+                            (0, t.jsx)(i5, {
                                 children: (0, t.jsxs)("div", {
-                                    className: a()(r2.layoutContainer, e9, {
+                                    className: a()(r2.layoutContainer, e8, {
                                         [r2.editingPanelEnabled]: eu,
                                         [r2.editingPanelExpanded]: eu && eL,
                                         [r2.isAnimating]: eM,
                                     }),
-                                    style: e8,
+                                    style: e9,
                                     children: [
                                         (0, t.jsxs)(r4, {
                                             user: l,
@@ -4391,7 +4391,7 @@ function ae(e) {
                                                     isPrivate: e2?.private === !0,
                                                     forceShowPremium: e4,
                                                     children: [
-                                                        (0, t.jsx)(r8, { displayProfile: e2, pendingBanner: ek }),
+                                                        (0, t.jsx)(r9, { displayProfile: e2, pendingBanner: ek }),
                                                         e2?.private === !0 && (0, t.jsx)(eR.A, {}),
                                                         !eI && (0, t.jsx)(rt, { className: r2.noticeContainer }),
                                                         eK &&
@@ -4438,12 +4438,12 @@ function ae(e) {
                                                                     bannerOverride: ek,
                                                                     accentColorOverride: eT,
                                                                     profileEffectOverride: eO,
-                                                                    profileFrame: e5,
-                                                                    fadeInProfileFrame: e7,
+                                                                    profileFrame: e7,
+                                                                    fadeInProfileFrame: e5,
                                                                     editingMode: eC,
                                                                     isLoading: ee,
                                                                 }),
-                                                                (0, t.jsx)(i8.A, {
+                                                                (0, t.jsx)(i9.A, {
                                                                     user: l,
                                                                     currentUser: n,
                                                                     displayProfile: e2,

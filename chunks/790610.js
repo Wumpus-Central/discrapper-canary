@@ -371,8 +371,8 @@ var eJ = n(734066),
     e3 = n(866665),
     e5 = n(408278),
     e7 = n(625903),
-    e6 = n(404778),
-    e8 = n(689175),
+    e8 = n(404778),
+    e6 = n(689175),
     e4 = n(821609),
     e9 = n(532624),
     te = n(927813),
@@ -562,9 +562,9 @@ function t_(e) {
                             }),
                     ],
                 }),
-                (0, a.jsx)(e6.c, {}),
+                (0, a.jsx)(e8.c, {}),
                 A.length > 0
-                    ? (0, a.jsxs)(e8.Ch, {
+                    ? (0, a.jsxs)(e6.Ch, {
                           className: tT.Vg,
                           fade: !0,
                           disableFocusRingScope: !0,
@@ -800,8 +800,8 @@ var tY = n(397562),
     t3 = n(915614),
     t5 = n(744753),
     t7 = n(559506),
-    t6 = n(646986),
-    t8 = n(657538),
+    t8 = n(646986),
+    t6 = n(657538),
     t4 = n(946356),
     t9 = n(465829),
     ne = n(624479),
@@ -1016,7 +1016,8 @@ function nB(e) {
                 n.e("341161"),
                 n.e("401696"),
                 n.e("202985"),
-                n.e("603619"),
+                n.e("455021"),
+                n.e("812196"),
                 n.e("661630"),
                 n.e("349687"),
                 n.e("227853"),
@@ -1106,7 +1107,7 @@ function nB(e) {
                 n.e("784569"),
                 n.e("25279"),
                 n.e("861060"),
-                n.e("752457"),
+                n.e("952372"),
                 n.e("262156"),
                 n.e("960235"),
                 n.e("959880"),
@@ -1116,7 +1117,7 @@ function nB(e) {
                 n.e("797595"),
                 n.e("147662"),
                 n.e("344057"),
-                n.e("413736"),
+                n.e("641248"),
                 n.e("128504"),
                 n.e("331988"),
                 n.e("544571"),
@@ -1130,7 +1131,7 @@ function nB(e) {
                 n.e("293159"),
                 n.e("171202"),
                 n.e("755936"),
-                n.e("489088"),
+                n.e("172503"),
                 n.e("730760"),
                 n.e("330316"),
                 n.e("362931"),
@@ -1141,7 +1142,7 @@ function nB(e) {
                 n.e("595653"),
                 n.e("221856"),
                 n.e("958038"),
-                n.e("262436"),
+                n.e("18387"),
                 n.e("576909"),
                 n.e("45594"),
                 n.e("406174"),
@@ -1165,7 +1166,7 @@ function nB(e) {
                 n.e("229787"),
                 n.e("709640"),
                 n.e("952548"),
-                n.e("795596"),
+                n.e("298408"),
                 n.e("979483"),
                 n.e("553984"),
                 n.e("943780"),
@@ -1186,11 +1187,12 @@ function nB(e) {
                 n.e("830938"),
                 n.e("392075"),
                 n.e("174016"),
+                n.e("852557"),
                 n.e("790417"),
-                n.e("367022"),
+                n.e("160920"),
                 n.e("699292"),
                 n.e("50097"),
-                n.e("800257"),
+                n.e("153209"),
                 n.e("252229"),
                 n.e("36877"),
                 n.e("203930"),
@@ -1690,12 +1692,12 @@ function n3(e) {
                                                 onClose: n,
                                             }),
                                             W &&
-                                                (0, a.jsx)(t8.A, {
+                                                (0, a.jsx)(t6.A, {
                                                     user: t,
                                                     widgets: u?.widgets,
                                                     onOpenUserProfileModal: H,
                                                 }),
-                                            (0, a.jsx)(t6.A, {
+                                            (0, a.jsx)(t8.A, {
                                                 user: t,
                                                 currentUser: t,
                                                 onOpenUserProfileModal: H,
@@ -1865,8 +1867,8 @@ function n3(e) {
 }
 var n5 = n(130490),
     n7 = n(655116),
-    n6 = n(106531),
-    n8 = n(454719),
+    n8 = n(106531),
+    n6 = n(454719),
     n4 = n(342296),
     n9 = n(852712),
     ie = n(389960),
@@ -2242,8 +2244,8 @@ var i1 = n(615675),
     i3 = n(847374),
     i5 = n(348858),
     i7 = n(617354),
-    i6 = n(829773),
-    i8 = n(42473),
+    i8 = n(829773),
+    i6 = n(42473),
     i4 = n(516171),
     i9 = n(577755);
 function le(e) {
@@ -2280,7 +2282,7 @@ function le(e) {
                         u(),
                         (0, a.jsx)(P.f5, {
                             value: E,
-                            children: (0, a.jsx)(i6.A, {
+                            children: (0, a.jsx)(i8.A, {
                                 onInteraction: (0, et.s)("AudioDeviceMenu", O.A.ACCOUNT),
                                 onClose: t,
                                 renderOutputDevices: !0,
@@ -2303,7 +2305,7 @@ function le(e) {
                         ref: T,
                         className: o()(i4.Lh, { [i4.v8]: h, [i4.q6]: u }),
                         children: [
-                            (0, a.jsx)(i8.A, {
+                            (0, a.jsx)(i6.A, {
                                 "aria-checked": h,
                                 "aria-label": B.intl.string(B.t.wjcRFX),
                                 className: i4.eT,
@@ -2326,7 +2328,7 @@ function le(e) {
                                 role: "switch",
                                 tooltipText: C,
                             }),
-                            (0, a.jsx)(i8.A, {
+                            (0, a.jsx)(i6.A, {
                                 className: o()(i4.UT, { [i4.q6]: u }),
                                 disabled: i,
                                 icon: (0, a.jsx)(m, {
@@ -2444,7 +2446,7 @@ function lh(e) {
                         C(),
                         (0, a.jsx)(P.f5, {
                             value: w,
-                            children: (0, a.jsx)(i6.A, {
+                            children: (0, a.jsx)(i8.A, {
                                 onInteraction: (0, et.s)("AudioDeviceMenu", O.A.ACCOUNT),
                                 onClose: t,
                                 maybeRenderPTTCheckbox: !0,
@@ -2469,7 +2471,7 @@ function lh(e) {
                         ref: y,
                         className: o()(i4.Lh, { [i4.v8]: M, [i4.q6]: l }),
                         children: [
-                            (0, a.jsx)(i8.A, {
+                            (0, a.jsx)(i6.A, {
                                 "aria-checked": M,
                                 "aria-label": B.intl.string(B.t.w4m945),
                                 className: i4.eT,
@@ -2489,7 +2491,7 @@ function lh(e) {
                                 ...t,
                                 children: F ? (0, a.jsx)("div", { className: o()(lc.U, { [lc.z]: E }) }) : null,
                             }),
-                            (0, a.jsx)(i8.A, {
+                            (0, a.jsx)(i6.A, {
                                 "aria-label": x
                                     ? B.intl.formatToPlainString(B.t["18wnuD"], { inputDeviceName: S })
                                     : B.intl.string(B.t.fRzCbB),
@@ -2625,7 +2627,7 @@ function lI(e) {
         g(!1), r();
     }, [r]);
     if (null != i) {
-        let e = (0, l_.A)("1788477084111", !0);
+        let e = (0, l_.A)("1788477130864", !0);
         t =
             null != e
                 ? B.intl.formatToPlainString(B.t.wve4kg, { webBuildOverride: i.id, builtAt: e })
@@ -2637,7 +2639,7 @@ function lI(e) {
         (A = null != i ? lg.H : x.Component),
         (0, a.jsxs)(a.Fragment, {
             children: [
-                (0, a.jsx)(i8.A, {
+                (0, a.jsx)(i6.A, {
                     ref: h,
                     tooltipText: t,
                     tooltipPositionKey: n,
@@ -2733,7 +2735,7 @@ function lR(e) {
                   targetElementRef: C,
                   clickTrap: !0,
                   preload: () =>
-                      (0, n8.A)(r.id, r.getAvatarURL(void 0, n4.S), {
+                      (0, n6.A)(r.id, r.getAvatarURL(void 0, n4.S), {
                           type: "account_popout",
                           withMutualGuilds: !1,
                           withMutualFriends: !1,
@@ -2852,7 +2854,8 @@ class lw extends s.PureComponent {
                     n.e("341161"),
                     n.e("401696"),
                     n.e("202985"),
-                    n.e("603619"),
+                    n.e("455021"),
+                    n.e("812196"),
                     n.e("661630"),
                     n.e("349687"),
                     n.e("162775"),
@@ -3183,7 +3186,7 @@ class lw extends s.PureComponent {
                     n.e("784569"),
                     n.e("25279"),
                     n.e("861060"),
-                    n.e("752457"),
+                    n.e("952372"),
                     n.e("262156"),
                     n.e("960235"),
                     n.e("959880"),
@@ -3193,7 +3196,7 @@ class lw extends s.PureComponent {
                     n.e("797595"),
                     n.e("147662"),
                     n.e("344057"),
-                    n.e("413736"),
+                    n.e("641248"),
                     n.e("128504"),
                     n.e("331988"),
                     n.e("544571"),
@@ -3207,7 +3210,7 @@ class lw extends s.PureComponent {
                     n.e("293159"),
                     n.e("171202"),
                     n.e("755936"),
-                    n.e("489088"),
+                    n.e("172503"),
                     n.e("730760"),
                     n.e("330316"),
                     n.e("362931"),
@@ -3218,7 +3221,7 @@ class lw extends s.PureComponent {
                     n.e("595653"),
                     n.e("221856"),
                     n.e("958038"),
-                    n.e("262436"),
+                    n.e("18387"),
                     n.e("576909"),
                     n.e("45594"),
                     n.e("406174"),
@@ -3289,8 +3292,8 @@ class lw extends s.PureComponent {
                     n.e("37977"),
                     n.e("720590"),
                     n.e("691671"),
+                    n.e("298408"),
                     n.e("147626"),
-                    n.e("795596"),
                     n.e("803434"),
                     n.e("613867"),
                     n.e("979483"),
@@ -3371,17 +3374,18 @@ class lw extends s.PureComponent {
                     n.e("310235"),
                     n.e("392075"),
                     n.e("174016"),
+                    n.e("852557"),
                     n.e("987478"),
                     n.e("790417"),
+                    n.e("160920"),
                     n.e("535321"),
                     n.e("436564"),
                     n.e("603998"),
-                    n.e("367022"),
                     n.e("844780"),
                     n.e("939171"),
                     n.e("699292"),
                     n.e("50097"),
-                    n.e("800257"),
+                    n.e("153209"),
                     n.e("692513"),
                     n.e("550033"),
                     n.e("883952"),
@@ -4010,7 +4014,7 @@ function lP() {
             );
         }),
         W = { avatar: [], settings: [] },
-        Z = (0, n6.lX)("AccountCoachmark"),
+        Z = (0, n8.lX)("AccountCoachmark"),
         K = (0, ed.ux)("AccountCoachmark"),
         q = (0, L.VV)({ location: "AccountCoachmark" }),
         J = (function (e) {

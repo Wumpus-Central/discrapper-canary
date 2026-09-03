@@ -26,7 +26,7 @@ var i = n(477900),
     y = n(543767),
     v = n(793574),
     j = n(166532),
-    O = n(532794);
+    O = n(75678);
 function L(e) {
     let { dropdownProps: t, subscription: n, openInvoice: l } = e,
         { analyticsLocations: s } = (0, p.Ay)(v.A.SUBSCRIPTION_DETAILS);

@@ -1,44 +1,44 @@
-r.d(e, { g: () => I, l: () => p });
+r.d(e, { g: () => A, l: () => h });
 var i = r(477900),
     n = r(582128),
-    s = r(17928),
-    l = r(139146),
+    l = r(17928),
+    s = r(139146),
     u = r(895360),
     a = r(152472),
-    o = r(594832),
+    o = r(561794),
     c = r(280450),
     d = r(202541),
     S = r(375708);
-let I = {
+let A = {
         type: "image",
         src: "https://cdn.discordapp.com/assets/content/e6a95b370154817e3cec977345baf14c7643d3dacb99c3034005b10be99a36c7.svg",
     },
-    p = n.forwardRef(function (t, e) {
-        let { className: r, disabled: n, size: p, variant: _, location: h, forceDarkTheme: A } = t,
-            f = d.pe.TIER_2,
+    h = n.forwardRef(function (t, e) {
+        let { className: r, disabled: n, size: h, variant: I, location: p, forceDarkTheme: f } = t,
+            _ = d.pe.TIER_2,
             E = S.intl.string(S.t.lG6a5x),
-            m = (0, s.bG)([c.default], () => c.default.getId());
+            m = (0, l.bG)([c.default], () => c.default.getId());
         (0, o.pE)();
         let {
             isWishlisted: y,
-            isBusy: T,
-            isFirstTimeWishlister: R,
-            handleToggle: L,
-        } = (0, a.c)({ userId: m, location: h, skuId: f, nuxGraphic: I, onNuxShow: u.D });
+            isBusy: g,
+            isFirstTimeWishlister: T,
+            handleToggle: R,
+        } = (0, a.c)({ userId: m, location: p, skuId: _, nuxGraphic: A, onNuxShow: u.D });
         return (0, i.jsx)("div", {
             ref: e,
-            className: A ? "theme-dark" : void 0,
-            children: (0, i.jsx)(l._, {
-                skuId: f,
+            className: f ? "theme-dark" : void 0,
+            children: (0, i.jsx)(s._, {
+                skuId: _,
                 productName: E,
                 className: r,
                 disabled: n,
-                size: p,
-                variant: _,
+                size: h,
+                variant: I,
                 isWishlisted: y,
-                isBusy: T,
-                isFirstTimeWishlister: R,
-                onClick: L,
+                isBusy: g,
+                isFirstTimeWishlister: T,
+                onClick: R,
                 tooltipConfig: { add: S.intl.string(S.t.cjmnm6) },
             }),
         });

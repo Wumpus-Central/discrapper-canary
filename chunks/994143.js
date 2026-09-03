@@ -9,7 +9,7 @@ var l = n(477900),
     c = n(120700),
     d = n(377058),
     m = n(38785),
-    p = n(848584),
+    p = n(270537),
     C = n(241989),
     h = n(206441),
     f = n(993408),
@@ -17,8 +17,8 @@ var l = n(477900),
     S = n(629042),
     y = n(1076),
     I = n(151115),
-    A = n(812095),
-    g = n(287809),
+    g = n(812095),
+    A = n(287809),
     P = n(486020),
     v = n(158045),
     _ = n(580630),
@@ -28,8 +28,8 @@ var l = n(477900),
     b = n.n(N),
     j = n(17928),
     R = n(10716),
-    O = n(206828),
-    M = n(20015),
+    M = n(206828),
+    O = n(20015),
     L = n(31823),
     k = n(427675),
     w = n(977445),
@@ -97,7 +97,7 @@ function $(e) {
         r =
             null != n
                 ? (function (e) {
-                      let t = g.default.getCurrentUser(),
+                      let t = A.default.getCurrentUser(),
                           n = v.Ay.canUseShopDiscounts(t),
                           l = (0, f.xM)(t),
                           i = (0, f.WD)(e, { hasShopDiscount: n, discount: (0, f.fT)(e, n) });
@@ -147,7 +147,7 @@ function X(e) {
         {
             sku: f,
             application: y,
-            eligiblePaymentGateways: g,
+            eligiblePaymentGateways: A,
             disabled: P,
         } = (function () {
             let { selectedSkuId: e, purchaseState: t } = (0, h.t4)((e) => ({
@@ -188,10 +188,10 @@ function X(e) {
         { upperInlineNoticeProps: N, footerInlineNoticeProps: Y } = (function (e) {
             let { sku: t, application: n, isGift: l } = e,
                 r = (0, j.bG)([R.A], () => R.A.getFetchState()),
-                { fetched: a, hasAlreadyLinked: s } = (0, O.RD)(n),
+                { fetched: a, hasAlreadyLinked: s } = (0, M.RD)(n),
                 o = (0, w.uS)(n.id),
                 u = null != t && t.productLine === G.EZt.SOCIAL_LAYER_GAME_ITEM,
-                c = (0, M.n)(n, G.gfo.EMBEDDED) && r === R.$.ERROR,
+                c = (0, O.n)(n, G.gfo.EMBEDDED) && r === R.$.ERROR,
                 d = u && a && !s && !l ? (0, U.k3)(n) : null;
             return {
                 upperInlineNoticeProps: i.useMemo(() => {
@@ -222,7 +222,7 @@ function X(e) {
                 }, [d]),
             };
         })({ sku: f, application: y, isGift: s }),
-        K = i.useMemo(() => ({ paymentGatewayRestrictions: g, shouldUseUnifiedCheckoutUI: !0 }), [g]),
+        K = i.useMemo(() => ({ paymentGatewayRestrictions: A, shouldUseUnifiedCheckoutUI: !0 }), [A]),
         Z = (0, l.jsx)(d.N, {
             label: F.intl.string(F.t["u+Cw58"]),
             location: "OneTimePurchaseReviewStepBody",
@@ -294,7 +294,7 @@ function X(e) {
                             ? null
                             : (0, l.jsx)(u.J, {
                                   Icon: (0, I.sj)(t?.icon),
-                                  text: (0, A.U)(i),
+                                  text: (0, g.U)(i),
                                   gradientColor: (0, I.lx)(n),
                               });
                     }

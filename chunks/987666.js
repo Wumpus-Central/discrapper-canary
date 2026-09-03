@@ -5,7 +5,7 @@ var i = n(888751),
     r = n(692440),
     a = n(400612),
     s = n(818824),
-    o = n(936477),
+    o = n(557026),
     u = n(206441);
 function c(e) {
     let {
@@ -26,15 +26,15 @@ function c(e) {
         }));
     if (d.type === a.u$.LOADING) return null;
     let { invoicePreview: I } = d,
-        A = ("renewalInvoicePreview" in d ? d.renewalInvoicePreview : null) ?? I,
-        g = (0, r.de)({
+        g = ("renewalInvoicePreview" in d ? d.renewalInvoicePreview : null) ?? I,
+        A = (0, r.de)({
             overrideRenewalDate: m,
             currentInvoice: C ? I : void 0,
-            renewalInvoice: A,
+            renewalInvoice: g,
             isSubscriptionUpdate: null != c,
             fractionalPremiumInfo: p,
         }),
-        { renewalPrice: P, multiPeriodDiscountAttributes: v } = (0, i.QM)(A, t, {
+        { renewalPrice: P, multiPeriodDiscountAttributes: v } = (0, i.QM)(g, t, {
             discountOffer: f,
             subscriptionTrial: E,
         }),
@@ -46,7 +46,7 @@ function c(e) {
             currency: I.currency,
             interval: t.interval,
             intervalCount: t.intervalCount,
-            startDate: g,
+            startDate: A,
         };
     return (0, l.jsx)(o._P, { variant: { type: h, ..._ }, paymentSourceType: n, immediateDelivery: S });
 }

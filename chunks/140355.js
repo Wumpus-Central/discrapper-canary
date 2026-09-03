@@ -409,7 +409,7 @@ var ew = n(721932),
     eP = n(44724),
     eD = n(808247),
     eM = n(673843),
-    eG = n(594832),
+    eG = n(561794),
     eU = n(855052),
     eF = n(287809),
     eW = n(321191),
@@ -559,9 +559,9 @@ function e5(e) {
     });
 }
 var e3 = n(815021),
-    e4 = n(299679);
+    e6 = n(299679);
 n(667532);
-var e6 = n(862772),
+var e4 = n(862772),
     e9 = n(202541),
     te = n(172218),
     tt = n(575593),
@@ -594,7 +594,7 @@ function tp(e) {
             children: x,
         } = e,
         { trackUserProfileWishlistAction: h } = (0, g.NJ)(),
-        p = (0, e4.Ar)(),
+        p = (0, e6.Ar)(),
         I = (0, eC.A)(() => (0, ef.A)()),
         { handleVisibilityChange: j } = (0, tc.G)(I),
         A = (0, te.K)(j, 0.5, p?.surface != null),
@@ -730,7 +730,7 @@ function tS(e) {
         children: o.map((e, r) => {
             let { sku: a, itemSource: o } = e;
             return (0, i.jsx)(
-                e4.dB,
+                e6.dB,
                 {
                     newValue: { positionInSection: r, skuId: a.id, itemSource: o, productLine: a.productLine },
                     children: (0, i.jsx)(tv, {
@@ -825,7 +825,7 @@ function t_(e) {
                     maxWishlistItemsToShow: s = i,
                     source: r,
                 } = e,
-                { recommendations: a, status: o } = (0, e6.Ul)({ userId: t, numItems: i, source: r }),
+                { recommendations: a, status: o } = (0, e4.Ul)({ userId: t, numItems: i, source: r }),
                 c = l.useMemo(() => new Set(n?.items.map((e) => e.skuId) ?? []), [n]),
                 d = "success" === o && !c.has(e9.pe.TIER_2);
             return {
@@ -862,7 +862,7 @@ function t_(e) {
                               }),
                       ],
                   }),
-                  (0, i.jsx)(e4.dB, {
+                  (0, i.jsx)(e6.dB, {
                       newValue: {
                           impressionSessionId: o,
                           surface: "user_profile_wishlist_suggestions_grid",
