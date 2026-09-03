@@ -3276,6 +3276,31 @@
     }
   },
   {
+    "name": "2026-05-frontier-tuning",
+    "kind": "guild",
+    "defaultConfig": null,
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "maxBitrate": 3500000,
+        "maskReportedQuality": true
+      },
+      "2": {
+        "maxBitrate": 5000000,
+        "maskReportedQuality": true
+      },
+      "3": {
+        "maxBitrate": 3500000
+      },
+      "4": {
+        "maxBitrate": 5000000
+      }
+    }
+  },
+  {
     "name": "2026-05-global-soundboard-wheel-popout",
     "kind": "user",
     "defaultConfig": {

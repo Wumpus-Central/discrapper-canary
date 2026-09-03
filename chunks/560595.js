@@ -47,13 +47,15 @@ async function b(e, n) {
         { allowAutoQuality: j } = (0, f.eO)({ location: "startStreamWithSource" });
     $ !== I.jQ.PRESET_AUTO || j || ($ = I.jQ.PRESET_VIDEO);
     let G = $ === I.jQ.PRESET_AUTO ? I.jQ.PRESET_VIDEO : $,
-        [M, Q] = (0, A.Ay)(G, t, O) ?? [],
+        [M, Q] = (0, A.Ay)(G, t, O, D) ?? [],
         U = M ?? n?.resolution ?? T,
         V = Q ?? n?.fps ?? L,
         N = n?.previewDisabled ?? u.uh.getSetting(),
         F = n?.soundshareEnabled ?? W;
     return (
-        (0, E.A)(G, U, V, t, O, b) || (($ = I.jQ.PRESET_VIDEO), (U = I.on.RESOLUTION_720), (V = I.kn.FPS_30)),
+        null != M ||
+            (0, E.A)(G, U, V, t, O, b) ||
+            (($ = I.jQ.PRESET_VIDEO), (U = I.on.RESOLUTION_720), (V = I.kn.FPS_30)),
         (0, a.Xd)({ preset: $, resolution: U, frameRate: V, soundshareEnabled: F }),
         (0, a.XI)(D, r, {
             ...(function (e) {

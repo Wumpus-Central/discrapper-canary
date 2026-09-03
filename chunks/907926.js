@@ -36,7 +36,7 @@ class g extends s.A {
         let g = E.default.getCurrentUser(),
             S = c.A.getGuild(e.guildId),
             [N, C] = (0, f.Ay)(p.jQ.PRESET_DOCUMENTS, g, S?.premiumTier) ?? [p.on.RESOLUTION_SOURCE, p.kn.FPS_5],
-            [O, R] = (0, f.Ay)(p.jQ.PRESET_VIDEO, g, S?.premiumTier) ?? [p.on.RESOLUTION_720, p.kn.FPS_30],
+            [O, R] = (0, f.Ay)(p.jQ.PRESET_VIDEO, g, S?.premiumTier, e.guildId) ?? [p.on.RESOLUTION_720, p.kn.FPS_30],
             L = null;
         if (
             (s.entropy < 10 && (i.resolution !== N || i.fps !== C)
