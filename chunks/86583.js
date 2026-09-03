@@ -17252,7 +17252,7 @@ function Ic() {
     xO.A.openUrl("https://discord.com/blog/safer-for-teens-same-discord-for-everyone-else");
 }
 var Ig = n(308645),
-    Im = n(271995),
+    Im = n(555725),
     IA = n(855267);
 let IE = (0, d.E2)(c.X.ACCOUNT_STANDING_SETTING, {
         useSearchTerms: () => [R.intl.string(R.t["16r9jm"])],

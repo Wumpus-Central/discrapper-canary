@@ -1,39 +1,47 @@
-r.d(t, { p: () => _ }), r(321073);
+r.d(t, { p: () => E }), r(321073);
 var l = r(228366),
     o = r(350172),
     u = r(730202),
-    c = r(540737),
-    n = r(821925);
+    n = r(540737),
+    c = r(821925);
 let s = new Set(),
     a = new Set(),
-    S = null,
-    f = null;
-function d(e) {
+    d = null,
+    i = null,
+    S = !1;
+function f(e) {
     let t = [];
     for (let r = 0; r < e.length; r += 100) t.push(e.slice(r, r + 100));
     return t;
 }
-function i() {
-    S = null;
-    let e = [...s];
-    for (let t of (s.clear(), d(e))) (0, c.tu)({ skuIds: t });
-}
 function h() {
-    f = null;
-    let e = [...a];
-    for (let t of (a.clear(), d(e))) (0, o._v)({ collectionIds: t });
+    d = null;
+    let e = [...s];
+    for (let t of (s.clear(), f(e))) (0, n.tu)({ skuIds: t });
 }
-let _ = {
+function _() {
+    i = null;
+    let e = [...a],
+        t = S;
+    for (let r of (a.clear(), (S = !1), f(e)))
+        (0, o._v)({ collectionIds: r, includeUnpublishedCollections: t, includeUnpublishedProducts: t });
+}
+let E = {
     requestProducts(e) {
-        for (let t of e) "" !== t && "loading" !== n.A.getFetchStateForSku(t) && s.add(t);
-        s.size > 0 && null == S && (S = setTimeout(i, 32));
+        for (let t of e) "" !== t && "loading" !== c.A.getFetchStateForSku(t) && s.add(t);
+        s.size > 0 && null == d && (d = setTimeout(h, 32));
     },
     requestCollections(e) {
+        let { includeUnpublished: t = !1 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
         for (let t of e) "" !== t && "loading" !== u.A.getFetchState(t) && a.add(t);
-        a.size > 0 && null == f && (f = setTimeout(h, 32));
+        t && (S = !0), a.size > 0 && null == i && (i = setTimeout(_, 32));
     },
     reset() {
-        s.clear(), a.clear(), null != S && (clearTimeout(S), (S = null)), null != f && (clearTimeout(f), (f = null));
+        s.clear(),
+            a.clear(),
+            (S = !1),
+            null != d && (clearTimeout(d), (d = null)),
+            null != i && (clearTimeout(i), (i = null));
     },
 };
-l.h.subscribe("LOGOUT", _.reset);
+l.h.subscribe("LOGOUT", E.reset);
