@@ -3450,3 +3450,95 @@ class ti extends O.G {
     }
 }
 let tr = new ti();
+class ta extends O.G {
+    constructor() {
+        super("discord_protos.users.v1.AgreementAcceptance", [
+            { no: 1, name: "accepted_at", kind: "message", T: () => L.D },
+            { no: 2, name: "version", kind: "message", T: () => R.hU },
+        ]);
+    }
+    create(e) {
+        let t = {};
+        return (
+            globalThis.Object.defineProperty(t, C.$, { enumerable: !1, value: this }),
+            void 0 !== e && (0, N.x)(this, t, e),
+            t
+        );
+    }
+    internalBinaryRead(e, t, n, i) {
+        let r = i ?? this.create(),
+            a = e.pos + t;
+        for (; e.pos < a; ) {
+            let [t, i] = e.tag();
+            switch (t) {
+                case 1:
+                    r.acceptedAt = L.D.internalBinaryRead(e, e.uint32(), n, r.acceptedAt);
+                    break;
+                case 2:
+                    r.version = R.hU.internalBinaryRead(e, e.uint32(), n, r.version);
+                    break;
+                default:
+                    let a = n.readUnknownField;
+                    if ("throw" === a)
+                        throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
+                    let s = e.skip(i);
+                    !1 !== a && (!0 === a ? S.f$.onRead : a)(this.typeName, r, t, i, s);
+            }
+        }
+        return r;
+    }
+    internalBinaryWrite(e, t, n) {
+        e.acceptedAt && L.D.internalBinaryWrite(e.acceptedAt, t.tag(1, S.O0.LengthDelimited).fork(), n).join(),
+            e.version && R.hU.internalBinaryWrite(e.version, t.tag(2, S.O0.LengthDelimited).fork(), n).join();
+        let i = n.writeUnknownFields;
+        return !1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t;
+    }
+}
+let ts = new ta();
+class tl extends O.G {
+    constructor() {
+        super("discord_protos.users.v1.AgreementsHistory", [
+            { no: 1, name: "terms", kind: "message", repeat: 1, T: () => ts },
+            { no: 2, name: "privacy", kind: "message", repeat: 1, T: () => ts },
+        ]);
+    }
+    create(e) {
+        let t = { terms: [], privacy: [] };
+        return (
+            globalThis.Object.defineProperty(t, C.$, { enumerable: !1, value: this }),
+            void 0 !== e && (0, N.x)(this, t, e),
+            t
+        );
+    }
+    internalBinaryRead(e, t, n, i) {
+        let r = i ?? this.create(),
+            a = e.pos + t;
+        for (; e.pos < a; ) {
+            let [t, i] = e.tag();
+            switch (t) {
+                case 1:
+                    r.terms.push(ts.internalBinaryRead(e, e.uint32(), n));
+                    break;
+                case 2:
+                    r.privacy.push(ts.internalBinaryRead(e, e.uint32(), n));
+                    break;
+                default:
+                    let a = n.readUnknownField;
+                    if ("throw" === a)
+                        throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
+                    let s = e.skip(i);
+                    !1 !== a && (!0 === a ? S.f$.onRead : a)(this.typeName, r, t, i, s);
+            }
+        }
+        return r;
+    }
+    internalBinaryWrite(e, t, n) {
+        for (let i = 0; i < e.terms.length; i++)
+            ts.internalBinaryWrite(e.terms[i], t.tag(1, S.O0.LengthDelimited).fork(), n).join();
+        for (let i = 0; i < e.privacy.length; i++)
+            ts.internalBinaryWrite(e.privacy[i], t.tag(2, S.O0.LengthDelimited).fork(), n).join();
+        let i = n.writeUnknownFields;
+        return !1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t;
+    }
+}
+new tl();
