@@ -2,7 +2,7 @@ n.d(t, {
     O: () =>
         function e(t) {
             return "string" == typeof t || "number" == typeof t
-                ? t
+                ? t.toString()
                 : t instanceof Array
                   ? t.map(e).join("")
                   : l.isValidElement(t)
