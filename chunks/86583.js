@@ -17249,7 +17249,7 @@ let Ii = (0, d.zZ)(c.X.SECURITY_KEYS_CATEGORY, {
     Iu = [eu.M.TINY_BRONCO_NOTICE],
     Id = [];
 function Ic() {
-    xO.A.openUrl("https://discord.com/blog/safer-for-teens-same-discord-for-everyone-else");
+    xO.A.openUrl("https://discord.com/blog/safer-for-teens-same-discord-for-adults");
 }
 var Ig = n(308645),
     Im = n(555725),
