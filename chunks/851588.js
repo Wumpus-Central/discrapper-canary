@@ -33,15 +33,15 @@ var d = l(477900),
     N = l(383199),
     S = l(461116),
     G = l(559506),
-    w = l(900179),
-    F = l(646986),
-    V = l(465829),
-    W = l(570314),
-    M = l(571077),
-    z = l(243166),
-    H = l(442228),
-    q = l(403369),
-    B = l(360563),
+    w = l(791556),
+    F = l(900179),
+    V = l(646986),
+    W = l(465829),
+    M = l(570314),
+    z = l(571077),
+    H = l(243166),
+    q = l(442228),
+    B = l(403369),
     D = l(996988),
     J = l(375708),
     K = l(96804),
@@ -67,26 +67,26 @@ function Y(e) {
         className: X.rf,
         children: [
             (0, d.jsx)(G.A, { userId: i.id }),
-            (0, d.jsx)(V.Ay, {
+            (0, d.jsx)(W.Ay, {
                 user: i,
                 guildId: r?.id,
                 displayName: c,
                 onClickName: a,
-                displayNameTrailing: h ? null : (0, d.jsx)(z.A, { userId: i.id, isVisible: o, onOpenProfile: a }),
+                displayNameTrailing: h ? null : (0, d.jsx)(H.A, { userId: i.id, isVisible: o, onOpenProfile: a }),
                 pronouns: s?.pronouns,
                 onClose: u,
                 trailing: (0, d.jsx)(S.A, { displayProfile: s, themeType: D.d.POPOUT, onClose: u }),
             }),
-            (0, d.jsx)(B.A, { user: i, onOpenProfile: (e) => a?.({ tabSection: e }) }),
+            (0, d.jsx)(w.A, { user: i, onOpenProfile: (e) => a?.({ tabSection: e }) }),
             (0, d.jsxs)("div", {
                 className: K.U,
                 children: [
-                    (0, d.jsx)(W.A, { user: i, closePopout: u, fullWidth: !0 }),
-                    (0, d.jsx)(M.A, { user: i, guildId: r?.id, fullWidth: !0 }),
+                    (0, d.jsx)(M.A, { user: i, closePopout: u, fullWidth: !0 }),
+                    (0, d.jsx)(z.A, { user: i, guildId: r?.id, fullWidth: !0 }),
                 ],
             }),
-            (0, d.jsx)(H.A, { userId: i.id, userBio: s?.bio, hidePersonalInformation: h, onClose: u }),
-            (0, d.jsx)(F.A, { user: i, currentUser: l, guildId: r?.id, onOpenUserProfileModal: a, onClose: u }),
+            (0, d.jsx)(q.A, { userId: i.id, userBio: s?.bio, hidePersonalInformation: h, onClose: u }),
+            (0, d.jsx)(V.A, { user: i, currentUser: l, guildId: r?.id, onOpenUserProfileModal: a, onClose: u }),
             A?.popularApplicationCommandIds != null &&
                 null != p &&
                 (0, d.jsx)(N.A, {
@@ -98,9 +98,9 @@ function Y(e) {
                 }),
             null != r &&
                 P &&
-                (0, d.jsx)(w.A, {
+                (0, d.jsx)(F.A, {
                     heading: J.intl.string(J.t["LPJmL/"]),
-                    children: (0, d.jsx)(q.A, { userId: i.id, guild: r }),
+                    children: (0, d.jsx)(B.A, { userId: i.id, guild: r }),
                 }),
         ],
     });

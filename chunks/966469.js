@@ -4020,11 +4020,11 @@ var a_ = t(221877),
     aK = t(559506),
     aX = t(361311),
     a$ = t(931481),
-    aQ = t(501193),
-    aZ = t(383448),
-    aJ = t(646986),
-    a0 = t(243166),
-    a1 = t(360563),
+    aQ = t(791556),
+    aZ = t(501193),
+    aJ = t(383448),
+    a0 = t(646986),
+    a1 = t(243166),
     a2 = t(123292),
     a5 = t(840411);
 let a3 = (0, sJ.mj)({
@@ -4378,7 +4378,7 @@ function rC(e) {
                         onClickName: o,
                         displayNameTrailing: m
                             ? null
-                            : (0, l.jsx)(a0.A, { userId: n.id, isVisible: r, onOpenProfile: o }),
+                            : (0, l.jsx)(a1.A, { userId: n.id, isVisible: r, onOpenProfile: o }),
                         pronouns: i?.pronouns,
                         trailing: (0, l.jsx)(an.A, {
                             displayProfile: i,
@@ -4386,7 +4386,7 @@ function rC(e) {
                             isRedesignEnabled: d,
                         }),
                     }),
-                    d && (0, l.jsx)(a1.A, { user: n, onOpenProfile: (e) => o?.({ tabSection: e }) }),
+                    d && (0, l.jsx)(aQ.A, { user: n, onOpenProfile: (e) => o?.({ tabSection: e }) }),
                 ],
             }),
             c === er.eA$.PENDING_INCOMING &&
@@ -4407,9 +4407,9 @@ function rC(e) {
                     e.applicationId,
                 ),
             ),
-            (0, l.jsx)(aZ.A, { user: n }),
+            (0, l.jsx)(aJ.A, { user: n }),
             i?.private &&
-                (0, l.jsx)(aa.A.Overlay, { children: (0, l.jsx)(aQ.A, { username: sZ.Ay.getName(null, a.id, n) }) }),
+                (0, l.jsx)(aa.A.Overlay, { children: (0, l.jsx)(aZ.A, { username: sZ.Ay.getName(null, a.id, n) }) }),
             n.isProvisional &&
                 (0, l.jsx)(aa.A.Overlay, {
                     className: aj.Lw,
@@ -4442,7 +4442,7 @@ function rC(e) {
                 className: aj.kR,
                 children: [
                     d && p && (0, l.jsx)(aU.A, { user: n, widgets: i?.widgets, onOpenUserProfileModal: o }),
-                    (0, l.jsx)(aJ.A, { user: n, currentUser: t, onOpenUserProfileModal: o }),
+                    (0, l.jsx)(a0.A, { user: n, currentUser: t, onOpenUserProfileModal: o }),
                     d
                         ? (0, l.jsxs)(l.Fragment, {
                               children: [

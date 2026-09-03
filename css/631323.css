@@ -11,8 +11,13 @@
     z-index: var(--custom-user-profile-bottom-layer-z-index)
 }
 
+.mutuals_b4a4b2,
 .userInfo_b4a4b2 {
     padding-inline: var(--custom-user-profile-content-inset)
+}
+
+.mutuals_b4a4b2 {
+    margin-block-start: var(--space-8)
 }
 
 .componentEmbedContainer__6e6eb {
@@ -266,4 +271,4 @@
     padding: var(--space-4)
 }
 
-/*# sourceMappingURL=631323.414444ee97e3e085.css.map*/
+/*# sourceMappingURL=631323.f995da90fbf6da68.css.map*/

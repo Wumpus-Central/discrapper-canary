@@ -55,7 +55,11 @@ function h(e, t) {
                     if ((0, l.l)("MessageCodedLinkManager")) {
                         let e = null == t ? null : d.A.getChannel(t);
                         (i = async () => {
-                            await (0, o.A)(u, void 0, { guildId: e?.guild_id ?? void 0 });
+                            await (0, o.A)(u, void 0, {
+                                guildId: e?.guild_id ?? void 0,
+                                withMutualGuilds: !0,
+                                withMutualFriends: !0,
+                            });
                         }),
                             E.add(i);
                     }

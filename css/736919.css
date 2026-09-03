@@ -49,4 +49,35 @@
     border-radius: 0
 }
 
-/*# sourceMappingURL=696224.288ad9a294b7457b.css.map*/
+.mutuals__6aa84 {
+    -moz-column-gap: 6px;
+    column-gap: 6px;
+    flex-wrap: wrap;
+    row-gap: 2px
+}
+
+.mutuals__6aa84,
+.section__6aa84 {
+    align-items: center;
+    display: flex;
+    flex-direction: row
+}
+
+.section__6aa84 {
+    cursor: pointer;
+    gap: 4px
+}
+
+.section__6aa84:focus-visible .text__6aa84,
+.section__6aa84:hover .text__6aa84 {
+    text-decoration: underline
+}
+
+.spacer__6aa84 {
+    background-color: var(--interactive-text-default);
+    border-radius: var(--radius-round);
+    height: 4px;
+    width: 4px
+}
+
+/*# sourceMappingURL=736919.4063579d6a2a62d0.css.map*/
