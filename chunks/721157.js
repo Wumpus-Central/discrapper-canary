@@ -10,13 +10,13 @@ var o =
     (s.SUBSCRIPTION_STATUS_NOT_ALLOWED = "subscription_status_not_allowed"),
     (s.TRIAL_USER_NOT_ELIGIBLE = "trial_user_not_eligible"),
     s);
-function d(e, t, i, s) {
+function d(e, t, i) {
     if (null == t)
-        return s && e?.isPremiumGroupMember() === !0
+        return e?.isPremiumGroupMember() === !0
             ? { isEligible: !0, reason: null }
             : { isEligible: !1, reason: "no_subscription" };
-    let n = (0, r.EL)(t);
-    return null == n || a.hd[n.planId]?.premiumType !== a.PremiumTypes.TIER_2
+    let s = (0, r.EL)(t);
+    return null == s || a.hd[s.planId]?.premiumType !== a.PremiumTypes.TIER_2
         ? { isEligible: !1, reason: "not_tier_2_subscription" }
         : t.statusAllowsPerks || i === a.xc.FP_SUB_PAUSED
           ? null != t.trialId && t.hasActiveTrial && !l.has(t.trialId)

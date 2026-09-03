@@ -5508,7 +5508,7 @@ let ul = (0, d.zZ)(c.X.GIFTING_BADGE_CATEGORY, {
     });
 var ur = n(264779),
     ua = n(412260),
-    uo = n(815987),
+    uo = n(555393),
     uu = n(725807),
     ud = n(212168),
     uc = n(469778),

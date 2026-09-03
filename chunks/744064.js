@@ -22,7 +22,7 @@ var s = i(477900),
     E = i(174459),
     R = i(872725),
     P = i(721157),
-    A = i(815987),
+    A = i(555393),
     y = i(51965),
     N = i(465794),
     I = i(202541),
@@ -41,9 +41,9 @@ function M(e) {
             primaryAssetClassName: B,
             backgroundAssetUrl: D,
             progress: V,
-            ctaIcon: F,
-            ctaIconPosition: H,
-            ctaText: Y,
+            ctaIcon: H,
+            ctaIconPosition: Y,
+            ctaText: F,
             ctaVariant: G,
             ctaDisabled: W,
             ctaLoading: K,
@@ -90,11 +90,11 @@ function M(e) {
         ef = !(0, l.isEmpty)(D),
         eb = ef && (0, m.q)(el),
         eh = (0, p.r)(f.A.colors.BACKGROUND_BASE_LOW).hex(),
-        eg = ep || !(0, l.isEmpty)(Y),
+        eg = ep || !(0, l.isEmpty)(F),
         ex = G ?? (!ef && (0, m.q)(el) ? "primary" : "overlay-primary"),
-        eC = (0, l.isEmpty)(Y)
+        eC = (0, l.isEmpty)(F)
             ? null
-            : { icon: F, iconPosition: H, text: Y, variant: ex, onClick: em, disabled: W, loading: K },
+            : { icon: H, iconPosition: Y, text: F, variant: ex, onClick: em, disabled: W, loading: K },
         ev = (0, s.jsx)(N.A, { fullWidth: !0, defaultTextOverride: O.intl.string(O.t.sEAnVH) }),
         e_ = null == eC ? null : X ? (0, s.jsx)(y.A, { ...eC }) : (0, s.jsx)(d.$, { ...eC });
     return (0, s.jsx)(c.N, {

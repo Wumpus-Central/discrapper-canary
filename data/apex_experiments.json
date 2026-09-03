@@ -5699,18 +5699,6 @@
     }
   },
   {
-    "name": "2026-08-premium-group-perk-check",
-    "kind": "user",
-    "defaultConfig": false,
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": true
-    }
-  },
-  {
     "name": "2026-08-profile-embed-rendering",
     "kind": "user",
     "defaultConfig": {
