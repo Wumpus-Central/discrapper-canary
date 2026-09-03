@@ -84,10 +84,10 @@ function w(e) {
                                 (0, i.jsxs)("div", {
                                     className: P.TK,
                                     children: [
-                                        (0, i.jsx)(_.J, { size: "xs", color: E.A.colors.ICON_MUTED }),
+                                        (0, i.jsx)(_.J, { size: "xs", color: E.A.colors.ICON_DEFAULT }),
                                         (0, i.jsx)(u.E, {
                                             variant: "text-sm/medium",
-                                            color: "text-muted",
+                                            color: "text-default",
                                             children: M.intl.string(M.t["1a/hIV"]),
                                         }),
                                     ],
