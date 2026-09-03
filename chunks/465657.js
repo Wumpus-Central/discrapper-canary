@@ -1,4 +1,4 @@
-n.d(t, { Y: () => E });
+n.d(t, { Y: () => f });
 var l = n(477900),
     i = n(582128),
     r = n(284009),
@@ -10,34 +10,34 @@ var l = n(477900),
     d = n(786948),
     m = n(202475),
     p = n(883645),
-    C = n(666646),
-    h = n(206441),
-    f = n(26279);
-function E(e) {
+    C = n(206441),
+    h = n(26279);
+function f(e) {
     let {
             customFooterProps: t,
             onFooterBackClick: n,
             isBackButtonEligible: r,
-            subscriptionMetadata: E,
-            renderStepBody: S,
-            resolveInternalState: y,
-            resolveTenantReviewButtonProps: I,
-            handleStepChange: A,
-            openInvoiceId: g,
-            analyticsData: P,
-            analyticsLocation: v,
+            subscriptionMetadata: f,
+            renderStepBody: E,
+            resolveInternalState: S,
+            resolveTenantReviewButtonProps: y,
+            handleStepChange: I,
+            openInvoiceId: A,
+            analyticsData: g,
+            analyticsLocation: P,
         } = e,
         {
-            paymentSourceId: _,
-            purchasePreviewError: x,
-            customCheckoutFlow: T,
-            contextMetadata: N,
-            purchaseError: b,
-            setCheckoutCurrency: j,
-            setLinkWalletEnabled: R,
-            checkoutPaymentSources: O,
-            hasCheckoutContextLoaded: M,
-        } = (0, h.t4)((e) => ({
+            paymentSourceId: v,
+            purchasePreviewError: _,
+            customCheckoutFlow: x,
+            contextMetadata: T,
+            purchaseError: N,
+            setCheckoutCurrency: b,
+            setLinkWalletEnabled: j,
+            checkoutPaymentSources: R,
+            hasCheckoutContextLoaded: O,
+            invoicePreview: M,
+        } = (0, C.t4)((e) => ({
             customCheckoutFlow: e.customCheckoutFlow,
             contextMetadata: e.contextMetadata,
             paymentSourceId: e.paymentSourceId,
@@ -47,64 +47,64 @@ function E(e) {
             setLinkWalletEnabled: e.setLinkWalletEnabled,
             checkoutPaymentSources: e.get("checkoutPaymentSources"),
             hasCheckoutContextLoaded: e.get("hasCheckoutContextLoaded"),
+            invoicePreview: e.checkoutInvoicePreview,
         })),
         L = (0, p.s2)();
     a()(null != L, "Step should be set");
     let k = i.useRef(null),
         { paymentSources: w } = (0, m.j)(),
-        U = (0, C.sw)(),
-        D = (0, c.W)(w, _),
-        G = i.useMemo(() => {
-            if (null == _) return !1;
-            if (!M) return !0;
-            let e = O.find((e) => e.id === _);
+        U = (0, c.W)(w, v),
+        D = i.useMemo(() => {
+            if (null == v) return !1;
+            if (!O) return !0;
+            let e = R.find((e) => e.id === v);
             return null != e && !e.enabled;
-        }, [O, M, _]),
-        F = (0, s.iB)({ checkoutPaymentSources: O, paymentSourceId: _, location: "CheckoutBaseReviewStep" }),
-        { disablePurchase: B } = i.useMemo(() => {
-            let e = { disablePurchase: F || T === f.uH.DEV_STORYBOOK_CHECKOUT };
-            return null != y
-                ? y(
+        }, [R, O, v]),
+        G = (0, s.iB)({ checkoutPaymentSources: R, paymentSourceId: v, location: "CheckoutBaseReviewStep" }),
+        { disablePurchase: F } = i.useMemo(() => {
+            let e = { disablePurchase: G || x === h.uH.DEV_STORYBOOK_CHECKOUT };
+            return null != S
+                ? S(
                       { ...e },
                       {
-                          paymentSource: D,
-                          paymentSourceId: _,
-                          isSelectedPaymentSourceDisabled: G,
-                          invoicePreview: U,
-                          purchasePreviewError: x,
+                          paymentSource: U,
+                          paymentSourceId: v,
+                          isSelectedPaymentSourceDisabled: D,
+                          invoicePreview: M,
+                          purchasePreviewError: _,
                       },
                   )
                 : e;
-        }, [y, D, _, G, U, x, F, T]);
+        }, [S, U, v, D, M, _, G, x]);
     i.useEffect(() => {
-        null != b && null != k.current && k.current.scrollIntoView({ behavior: "smooth" });
-    }, [b]);
-    let H = i.useCallback(() => {
-            j(void 0), n();
-        }, [j, n]),
-        W = i.useCallback(
+        null != N && null != k.current && k.current.scrollIntoView({ behavior: "smooth" });
+    }, [N]);
+    let B = i.useCallback(() => {
+            b(void 0), n();
+        }, [b, n]),
+        H = i.useCallback(
             (e) => {
-                R(e?.linkWalletEnabled ?? !0), A(o.pn.ADD_PAYMENT_STEPS);
+                j(e?.linkWalletEnabled ?? !0), I(o.pn.ADD_PAYMENT_STEPS);
             },
-            [A, R],
+            [I, j],
         ),
-        Y = i.useMemo(() => S({ handlePaymentSourceAdd: W }), [S, W]),
-        V = (0, l.jsx)(d.U, {
-            resolveTenantReviewButtonProps: I,
-            onBack: H,
-            flowStartTime: N.startTime,
-            onPaymentSourceAdd: W,
-            disablePurchase: B,
-            analyticsLocation: v,
-            baseAnalyticsData: P,
-            openInvoiceId: g,
-            handleStepChange: A,
+        W = i.useMemo(() => E({ handlePaymentSourceAdd: H }), [E, H]),
+        Y = (0, l.jsx)(d.U, {
+            resolveTenantReviewButtonProps: y,
+            onBack: B,
+            flowStartTime: T.startTime,
+            onPaymentSourceAdd: H,
+            disablePurchase: F,
+            analyticsLocation: P,
+            baseAnalyticsData: g,
+            openInvoiceId: A,
+            handleStepChange: I,
             postPurchaseStep: o.pn.CONFIRM,
             backButtonEligible: r,
-            metadata: E,
+            metadata: f,
             ...t,
         });
     return (0, l.jsxs)(l.Fragment, {
-        children: [(0, l.jsx)(u.dZ, { children: Y }), (0, l.jsx)(u.UX, { children: V })],
+        children: [(0, l.jsx)(u.dZ, { children: W }), (0, l.jsx)(u.UX, { children: Y })],
     });
 }

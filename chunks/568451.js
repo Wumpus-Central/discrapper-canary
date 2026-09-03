@@ -877,65 +877,84 @@ function tK(e) {
             premiumSubscriptionPaymentSourceId: s,
             premiumSubscriptionPlan: o,
             newAdditionalPlans: u,
-            paymentSourceId: c,
-            setPaymentSourceId: d,
-            onPaymentSourceAdd: m,
+            paymentSourceId: d,
+            setPaymentSourceId: m,
+            onPaymentSourceAdd: p,
         } = e,
-        p = (function (e) {
-            let t,
-                {
-                    guildId: n,
-                    priceOptions: l,
-                    currentPremiumSubscription: i,
-                    premiumSubscriptionPlan: r,
-                    newAdditionalPlans: s,
+        C = (function (e) {
+            let {
+                    guildId: t,
+                    priceOptions: n,
+                    currentPremiumSubscription: l,
+                    premiumSubscriptionPlan: i,
+                    newAdditionalPlans: r,
                 } = e,
-                o = (0, U.bG)([eC.A, ec.A], () => {
-                    let e = eC.A.getGuild(n);
-                    return null != e ? e : ec.A.isGuildFetching(n) ? null : ec.A.getGuild(n);
-                }, [n]),
-                u = r.interval,
-                c = r.intervalCount,
-                d = (0, U.bG)([eU.A], () => eU.A.getForSkuAndInterval((0, k.mH)(eG.pe.GUILD), u, c));
+                s = (0, U.bG)([eC.A, ec.A], () => {
+                    let e = eC.A.getGuild(t);
+                    return null != e ? e : ec.A.isGuildFetching(t) ? null : ec.A.getGuild(t);
+                }, [t]),
+                o = i.interval,
+                u = i.intervalCount,
+                d = (0, U.bG)([eU.A], () => eU.A.getForSkuAndInterval((0, k.mH)(eG.pe.GUILD), o, u));
             ez()(null != d, "Missing guildBoostingSubscriptionPlan");
-            let m = (0, k.J$)(l.paymentSourceId),
-                p = (0, td.ds)();
-            t = null != i ? (0, k.Om)(i, s[0].quantity, s[0].planId) : s;
-            let { analyticsLocations: C } = (0, ta.Ay)(),
-                [h, f] = (0, tc.YV)({
-                    subscriptionId: i?.id,
-                    items: t,
-                    renewal: !1,
-                    applyEntitlements: !0,
-                    paymentSourceId: l.paymentSourceId,
-                    currency: void 0,
-                    analyticsLocations: C,
-                    analyticsLocation: a.A.GUILD_BOOSTING_REVIEW_PRORATED,
-                }),
-                [E, S] = (0, tc.YV)({
-                    subscriptionId: i?.id,
-                    items: t,
-                    renewal: !0,
-                    paymentSourceId: l.paymentSourceId,
-                    currency: void 0,
-                    analyticsLocations: C,
-                    analyticsLocation: a.A.GUILD_BOOSTING_REVIEW_RENEWAL,
-                });
-            return (
-                (0, to.OQ)({
-                    checkoutInvoicePreview: h,
-                    checkoutInvoiceError: f,
-                    renewalInvoicePreview: E,
-                    renewalInvoiceError: S,
-                }),
+            let m = (0, k.J$)(n.paymentSourceId),
+                p = (0, td.ds)(),
+                C = c.useMemo(() => {
+                    if (null != l) {
+                        let e = r[0];
+                        return (0, k.Om)(l, e.quantity, e.planId);
+                    }
+                    return r;
+                }, [l, r]),
+                { analyticsLocations: h } = (0, ta.Ay)(),
                 {
-                    guild: o ?? null,
+                    setFetchCheckoutInvoicePreviewRequest: f,
+                    setFetchRenewalInvoicePreviewRequest: E,
+                    checkoutInvoicePreview: y,
+                    renewalInvoicePreview: I,
+                } = (0, S.t4)((e) => ({
+                    setFetchCheckoutInvoicePreviewRequest: e.setFetchCheckoutInvoicePreviewRequest,
+                    setFetchRenewalInvoicePreviewRequest: e.setFetchRenewalInvoicePreviewRequest,
+                    checkoutInvoicePreview: e.checkoutInvoicePreview,
+                    renewalInvoicePreview: e.renewalInvoicePreview,
+                })),
+                A = null != l ? l.id : void 0,
+                { checkoutInvoicePreviewRequest: g, renewalInvoicePreviewRequest: P } = c.useMemo(() => {
+                    let e = {
+                        subscriptionId: A,
+                        items: C,
+                        paymentSourceId: n.paymentSourceId,
+                        currency: void 0,
+                        analyticsLocations: h,
+                    };
+                    return {
+                        checkoutInvoicePreviewRequest: {
+                            type: "subscription_checkout_invoice",
+                            params: {
+                                ...e,
+                                renewal: !1,
+                                applyEntitlements: !0,
+                                analyticsLocation: a.A.GUILD_BOOSTING_REVIEW_PRORATED,
+                            },
+                        },
+                        renewalInvoicePreviewRequest: {
+                            type: "subscription_renewal_invoice",
+                            params: { ...e, renewal: !0, analyticsLocation: a.A.GUILD_BOOSTING_REVIEW_RENEWAL },
+                        },
+                    };
+                }, [A, C, n.paymentSourceId, h]);
+            return (
+                c.useEffect(() => {
+                    f(g), E(P);
+                }, [f, E, g, P]),
+                {
+                    guild: s ?? null,
                     guildBoostingSubscriptionPlan: d,
                     isPrepaid: m,
                     isReverseTrial: p,
-                    checkoutInvoicePreview: h,
-                    renewalInvoicePreview: E,
-                    isSubscriptionUpdate: null != i,
+                    checkoutInvoicePreview: y,
+                    renewalInvoicePreview: I,
+                    isSubscriptionUpdate: null != l,
                 }
             );
         })({
@@ -946,31 +965,31 @@ function tK(e) {
             newAdditionalPlans: u,
         }),
         {
-            isSubscriptionUpdate: C,
-            guild: h,
-            isPrepaid: f,
-            isReverseTrial: E,
-            checkoutInvoicePreview: S,
-            renewalInvoicePreview: y,
-        } = p,
-        I = (0, tL.A)({ location: "GuildBoostReview", message: H.intl.string(Z.default["tK8A/8"]) });
-    if (null == S || null == y || null == h) return (0, r.jsx)(v.Ed, { shouldShowUnifiedHeader: !0 });
-    let A = (0, r.jsx)(tV, {
-            isSubscriptionUpdate: C,
+            isSubscriptionUpdate: h,
+            guild: f,
+            isPrepaid: E,
+            isReverseTrial: y,
+            checkoutInvoicePreview: I,
+            renewalInvoicePreview: A,
+        } = C,
+        P = (0, tL.A)({ location: "GuildBoostReview", message: H.intl.string(Z.default["tK8A/8"]) });
+    if (null == I || null == A || null == f) return (0, r.jsx)(v.Ed, { shouldShowUnifiedHeader: !0 });
+    let _ = (0, r.jsx)(tV, {
+            isSubscriptionUpdate: h,
             premiumSubscription: i,
-            checkoutInvoicePreview: S,
-            renewalInvoicePreview: y,
+            checkoutInvoicePreview: I,
+            renewalInvoicePreview: A,
         }),
-        P = (0, r.jsx)(g.n, {
-            setPaymentSourceId: d,
-            paymentSourceId: c,
+        x = (0, r.jsx)(g.n, {
+            setPaymentSourceId: m,
+            paymentSourceId: d,
             location: "GuildBoostReview",
             label: H.intl.string(H.t["u+Cw58"]),
-            onPaymentSourceAdd: m,
+            onPaymentSourceAdd: p,
             premiumSubscriptionPaymentSourceId: s,
             hideCurrencySelect: !0,
         }),
-        _ = (function (e) {
+        T = (function (e) {
             let {
                 isSubscriptionUpdate: t,
                 premiumSubscriptionPlan: n,
@@ -988,15 +1007,15 @@ function tK(e) {
                 startDate: (0, tD.de)({ isSubscriptionUpdate: t, currentInvoice: i, renewalInvoice: l }),
             };
         })({
-            isSubscriptionUpdate: C,
+            isSubscriptionUpdate: h,
             premiumSubscriptionPlan: o,
-            renewalInvoicePreview: y,
-            checkoutInvoicePreview: S,
+            renewalInvoicePreview: A,
+            checkoutInvoicePreview: I,
             paymentSources: n,
-            paymentSourceId: c,
+            paymentSourceId: d,
         }),
-        x = (0, r.jsx)(tB, { ..._ }),
-        T = (function (e) {
+        N = (0, r.jsx)(tB, { ...T }),
+        b = (function (e) {
             let {
                     premiumSubscription: t,
                     premiumSubscriptionPlan: n,
@@ -1052,13 +1071,13 @@ function tK(e) {
         })({
             premiumSubscription: i,
             premiumSubscriptionPlan: o,
-            checkoutInvoicePreview: S,
-            renewalInvoicePreview: y,
+            checkoutInvoicePreview: I,
+            renewalInvoicePreview: A,
             priceOptions: l,
-            reviewState: p,
+            reviewState: C,
         }),
-        N = (0, r.jsx)(tY, { ...T }),
-        b = (function (e, t, n) {
+        j = (0, r.jsx)(tY, { ...b }),
+        R = (function (e, t, n) {
             let {
                     addedQuantity: l,
                     guildBoostingSubscriptionPlan: i,
@@ -1082,23 +1101,23 @@ function tK(e) {
                 bottomSubText: n?.text ?? null,
             };
         })(
-            h,
-            T,
+            f,
+            b,
             (function (e) {
                 let { isPrepaid: t, isReverseTrial: n, premiumSubscription: l } = e;
                 return !t && n && null != l ? { type: "reverseTrial", text: tH(l.currentPeriodEnd) } : null;
-            })({ isPrepaid: f, isReverseTrial: E, premiumSubscription: i }),
+            })({ isPrepaid: E, isReverseTrial: y, premiumSubscription: i }),
         ),
-        j = (0, r.jsx)(tw.f7, { ...b });
+        O = (0, r.jsx)(tw.f7, { ...R });
     return (0, r.jsx)(v.T_, {
         shouldShowGlobalNotices: !0,
-        upperInlineNoticeProps: I,
-        purchaseItemContent: j,
-        subscriptionDetailsContent: A,
-        paymentMethodContent: P,
-        invoiceSummaryContent: N,
-        legalContent: x,
-        invoiceTotalDueValue: T.formattedTotal,
+        upperInlineNoticeProps: P,
+        purchaseItemContent: O,
+        subscriptionDetailsContent: _,
+        paymentMethodContent: x,
+        invoiceSummaryContent: j,
+        legalContent: N,
+        invoiceTotalDueValue: b.formattedTotal,
         invoiceTotalDueLabel: H.intl.string(Z.default.R0cZsM),
     });
 }
@@ -1412,7 +1431,7 @@ function t1(e) {
                     analyticsLocations: _,
                     analyticsLocation: a.A.GUILD_BOOSTING_PLAN_SELECT,
                 });
-            (0, to.Tr)(x, T);
+            (0, to.T)(x, T);
             let N = !v && null == x && null == T;
             c.useLayoutEffect(() => {
                 s(N);
@@ -1967,6 +1986,7 @@ let nC = [
                                 setPurchaseState: v,
                                 quantity: _,
                                 checkoutPaymentSources: x,
+                                invoicePreview: T,
                             } = (0, S.t4)((e) => ({
                                 activeSubscription: e.activeSubscription,
                                 paymentSourceId: e.paymentSourceId,
@@ -1975,8 +1995,8 @@ let nC = [
                                 setPurchaseState: e.setPurchaseState,
                                 quantity: e.quantity,
                                 checkoutPaymentSources: e.get("checkoutPaymentSources"),
+                                invoicePreview: e.checkoutInvoicePreview,
                             })),
-                            T = (0, to.sw)(),
                             {
                                 newAdditionalPlans: N,
                                 currentPremiumSubscriptionPlan: b,
@@ -2236,7 +2256,7 @@ function nA(e) {
 function ng(e) {
     let { handleClose: t } = e,
         { guildProductListing: l, guildId: i } = nI(),
-        a = (0, to.sw)();
+        a = (0, S.t4)((e) => e.checkoutInvoicePreview);
     return (
         (0, en.Ay)(() => {
             var e;
@@ -5269,19 +5289,20 @@ function rQ(e) {
             setPurchaseError: b,
             purchaseState: j,
             contextMetadata: R,
+            renewalInvoicePreview: O,
         } = (0, S.t4)((e) => ({
             setPurchaseState: e.setPurchaseState,
             setPurchaseError: e.setPurchaseError,
             purchaseState: e.purchaseState,
             contextMetadata: e.contextMetadata,
+            renewalInvoicePreview: e.checkoutInvoicePreview,
         })),
-        { displayCurrency: O } = (0, e_.Jn)(),
-        L = (0, to.sw)(),
+        { displayCurrency: L } = (0, e_.Jn)(),
         k = m?.subscriptionPlan,
         w = m?.promotion,
         D = m?.subscriptionTrial,
         G = null != k ? (0, rZ._w)(k, P, !1) : [],
-        F = L?.currency ?? O ?? G[0],
+        F = O?.currency ?? L ?? G[0],
         B = c.useMemo(() => (null != P ? { paymentSourceId: P, currency: F } : { currency: F }), [P, F]),
         H = c.useMemo(
             () => ({
@@ -5686,13 +5707,18 @@ let ar = [...eG.oz],
                 let { paymentSources: h, paymentSourceId: f, setPaymentSourceId: E, isSubmittingCurrentStep: I } = u,
                     A = (0, U.bG)([ef.A], () => ef.A.getPremiumTypeSubscription()),
                     { analyticsLocations: P } = (0, ta.Ay)(),
-                    { hasAcceptedTerms: v, checkoutPaymentSources: _ } = (0, S.t4)((e) => ({
+                    {
+                        hasAcceptedTerms: v,
+                        checkoutPaymentSources: _,
+                        checkoutInvoicePreview: x,
+                    } = (0, S.t4)((e) => ({
                         hasAcceptedTerms: e.hasAcceptedTerms,
                         checkoutPaymentSources: e.get("checkoutPaymentSources"),
+                        checkoutInvoicePreview: e.checkoutInvoicePreview,
                     })),
-                    x = (0, ts.A)(),
-                    { immediateDelivery: T } = (0, b.U)(),
-                    [N, j] = (0, tc.YV)({
+                    T = (0, ts.A)(),
+                    { immediateDelivery: N } = (0, b.U)(),
+                    [j, R] = (0, tc.YV)({
                         items: [{ planId: l.id, quantity: 1 }],
                         renewal: !0,
                         paymentSourceId: f,
@@ -5701,9 +5727,8 @@ let ar = [...eG.oz],
                         analyticsLocations: P,
                         analyticsLocation: eB.ThZ.INBOUND_PARTNER_PROMOTION_REDEMPTION_MODAL,
                     });
-                (0, to.F0)(N, j);
-                let R = (0, to.sw)(),
-                    L = c.useCallback(async () => {
+                (0, to.F)(j, R);
+                let L = c.useCallback(async () => {
                         function e() {
                             return t(o.pn.CONFIRM);
                         }
@@ -5711,7 +5736,7 @@ let ar = [...eG.oz],
                             ? (await d()) && e()
                             : (0, nE.openModal)((t) => {
                                   let n;
-                                  if (null == R) n = (0, r.jsx)(ti.y, { className: rX.wG });
+                                  if (null == x) n = (0, r.jsx)(ti.y, { className: rX.wG });
                                   else {
                                       let e = (0, k.y8)(l.id, !1, !1, s);
                                       n = (0, r.jsxs)(r.Fragment, {
@@ -5751,7 +5776,7 @@ let ar = [...eG.oz],
                                                       trialMonths: i.intervalCount,
                                                       helpCenterLink:
                                                           a.inboundHelpCenterLink ?? tA.A.getArticleURL(eB.MVz.BILLING),
-                                                      planPrice: (0, w.$g)(e.amount, R.currency),
+                                                      planPrice: (0, w.$g)(e.amount, x.currency),
                                                   }),
                                               }),
                                           ],
@@ -5769,7 +5794,7 @@ let ar = [...eG.oz],
                                       children: n,
                                   });
                               });
-                    }, [t, A, m, i, a, l, s, R, d, p]),
+                    }, [t, A, m, i, a, l, s, x, d, p]),
                     D = (0, tL.iB)({
                         checkoutPaymentSources: _,
                         paymentSourceId: f,
@@ -5785,7 +5810,7 @@ let ar = [...eG.oz],
                         }),
                         [h],
                     );
-                if (null != j && null == R)
+                if (null != R && null == x)
                     return (0, r.jsx)(r4, {
                         title: H.intl.string(H.t.ARIsMA),
                         bodyText: H.intl.string(H.t["3u+6q7"]),
@@ -5794,7 +5819,7 @@ let ar = [...eG.oz],
                         user: void 0,
                         code: n,
                     });
-                if (!F || null == R) return (0, r.jsx)(ti.y, {});
+                if (!F || null == x) return (0, r.jsx)(ti.y, {});
                 let Y = (0, r.jsx)(g.N, {
                         setPaymentSourceId: E,
                         paymentSourceId: f,
@@ -5804,8 +5829,8 @@ let ar = [...eG.oz],
                         onPaymentSourceAdd: () => t(o.pn.ADD_PAYMENT_STEPS),
                         hideCurrencySelect: !0,
                     }),
-                    V = (0, tD.de)({ renewalInvoice: R, isSubscriptionUpdate: !1 }),
-                    { renewalPrice: K, multiPeriodDiscountAttributes: Z } = (0, O.QM)(R, l, {
+                    V = (0, tD.de)({ renewalInvoice: x, isSubscriptionUpdate: !1 }),
+                    { renewalPrice: K, multiPeriodDiscountAttributes: Z } = (0, O.QM)(x, l, {
                         discountOffer: null,
                         subscriptionTrial: i,
                     }),
@@ -5816,14 +5841,14 @@ let ar = [...eG.oz],
                             purchaseButtonText: q,
                             totalDue: 0,
                             renewalPrice: K,
-                            currency: R.currency,
+                            currency: x.currency,
                             interval: l.interval,
                             intervalCount: l.intervalCount,
                             startDate: V,
                             multiPeriodDiscountAttributes: Z,
                         },
                         paymentSourceType: (0, M.W)(h, f)?.type ?? null,
-                        immediateDelivery: T,
+                        immediateDelivery: N,
                     }),
                     Q = null;
                 return (
@@ -5835,10 +5860,10 @@ let ar = [...eG.oz],
                                     (0, r.jsx)(nX.A, {}),
                                     (0, r.jsx)(at, {
                                         plan: l,
-                                        renewalInvoicePreview: R,
+                                        renewalInvoicePreview: x,
                                         subscriptionTrial: i,
-                                        shouldShowFractionalPremiumBanner: x.isFractionalPremiumActive,
-                                        fractionalPremiumInfo: x,
+                                        shouldShowFractionalPremiumBanner: T.isFractionalPremiumActive,
+                                        fractionalPremiumInfo: T,
                                         paymentMethodContent: Y,
                                         legalContent: z,
                                     }),

@@ -1,17 +1,16 @@
-n.d(t, { p: () => p });
+n.d(t, { p: () => m });
 var l = n(477900),
     i = n(582128),
     r = n(166532),
     a = n(994143),
     s = n(465657),
-    o = n(666646),
-    u = n(206441),
-    c = n(375708);
-let d = (e) => {
+    o = n(206441),
+    u = n(375708);
+let c = (e) => {
     let { handlePaymentSourceAdd: t } = e;
     return (0, l.jsx)(a.RL, { handlePaymentSourceAdd: t });
 };
-class m {
+class d {
     isGift;
     isFree;
     constructor({ isGift: e, isFree: t }) {
@@ -24,10 +23,10 @@ class m {
     resolveInternalState = (e, t) => ({ disablePurchase: this.resolveDisabledPurchase(e, t) });
     resolveReviewButtonLabel() {
         return this.isGift
-            ? c.intl.string(c.t.ouo4FK)
+            ? u.intl.string(u.t.ouo4FK)
             : this.isFree
-              ? c.intl.string(c.t["302tKP"])
-              : c.intl.string(c.t.ExD0Ng);
+              ? u.intl.string(u.t["302tKP"])
+              : u.intl.string(u.t.ExD0Ng);
     }
     resolveTenantReviewButtonProps = (e) => {
         let { onReviewButtonClick: t, loading: n, disabled: l } = e;
@@ -41,21 +40,23 @@ class m {
         };
     };
 }
-function p(e) {
-    let { isGift: t } = (0, u.t4)((e) => ({ isGift: e.isGift })),
-        n = (0, o.sw)(),
+function m(e) {
+    let { isGift: t, invoicePreview: n } = (0, o.t4)((e) => ({
+            isGift: e.isGift,
+            invoicePreview: e.checkoutInvoicePreview,
+        })),
         a = n?.total === 0,
-        c = e.handleStepChange,
-        p = i.useCallback(() => {
-            if (t) return void c(r.pn.GIFT_CUSTOMIZATION);
-        }, [c, t]),
-        C = i.useMemo(() => new m({ isGift: t, isFree: a }), [t, a]);
+        u = e.handleStepChange,
+        m = i.useCallback(() => {
+            if (t) return void u(r.pn.GIFT_CUSTOMIZATION);
+        }, [u, t]),
+        p = i.useMemo(() => new d({ isGift: t, isFree: a }), [t, a]);
     return (0, l.jsx)(s.Y, {
         ...e,
         isBackButtonEligible: t,
-        onFooterBackClick: p,
-        renderStepBody: d,
-        resolveInternalState: C.resolveInternalState,
-        resolveTenantReviewButtonProps: C.resolveTenantReviewButtonProps,
+        onFooterBackClick: m,
+        renderStepBody: c,
+        resolveInternalState: p.resolveInternalState,
+        resolveTenantReviewButtonProps: p.resolveTenantReviewButtonProps,
     });
 }
