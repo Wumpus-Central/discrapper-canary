@@ -1,14 +1,13 @@
 n.d(t, {
-    Aw: () => C,
-    GD: () => T,
-    Hb: () => m,
+    Aw: () => O,
+    GD: () => m,
+    Hb: () => g,
     Iu: () => R,
-    SH: () => N,
-    TX: () => p,
-    VE: () => I,
-    bB: () => O,
-    o2: () => S,
-    ww: () => h,
+    SH: () => C,
+    TX: () => T,
+    VE: () => f,
+    o2: () => N,
+    ww: () => I,
 });
 var i = n(796873),
     r = n.n(i),
@@ -19,16 +18,17 @@ var i = n(796873),
     d = n(287809),
     c = n(255438),
     u = n(158045),
-    _ = n(652215),
-    E = n(202541),
-    A = n(375708);
-function h(e, t) {
-    return e instanceof File ? e : I(e.data.buffer, e.filename, t ?? "text/plain");
+    _ = n(292348),
+    E = n(652215),
+    A = n(202541),
+    h = n(375708);
+function I(e, t) {
+    return e instanceof File ? e : f(e.data.buffer, e.filename, t ?? "text/plain");
 }
-function I(e, t, n) {
+function f(e, t, n) {
     return new File([e], t, { type: n });
 }
-let f = [
+let p = [
     { reType: /^image\/vnd.adobe.photoshop/, klass: "photoshop" },
     { reType: /^image\/svg\+xml/, klass: "webcode" },
     { reType: /^image\//, klass: "image" },
@@ -47,25 +47,25 @@ let f = [
     { reName: /\.(?:html|xhtml|htm|xml|xsd|css|styl)$/, klass: "webcode" },
     { reName: /\.(?:mp3|ogg|opus|wav|aiff|flac)$/, klass: "audio" },
 ];
-function p(e) {
-    return T(e.name, e.type);
+function T(e) {
+    return m(e.name, e.type);
 }
-function T(e, t) {
+function m(e, t) {
     e = e?.toLowerCase() ?? "";
-    let n = s().find(f, (n) =>
+    let n = s().find(p, (n) =>
         null != n.reType && null != t ? n.reType.test(t) : null != n.reName && "" !== e && n.reName.test(e),
     );
     return null != n ? n.klass : "unknown";
 }
-function m(e) {
+function g(e) {
     return r().filesize(e);
 }
-let g = [
-    [_.GuildFeatures.MAX_FILE_SIZE_250_MB, E.q9],
-    [_.GuildFeatures.MAX_FILE_SIZE_100_MB, E.w6],
-    [_.GuildFeatures.MAX_FILE_SIZE_50_MB, E.eZ],
+let S = [
+    [E.GuildFeatures.MAX_FILE_SIZE_250_MB, A.q9],
+    [E.GuildFeatures.MAX_FILE_SIZE_100_MB, A.w6],
+    [E.GuildFeatures.MAX_FILE_SIZE_50_MB, A.eZ],
 ];
-function S(e) {
+function N(e) {
     let t = d.default.getCurrentUser(),
         n = u.Ay.getUserMaxFileSize(t);
     if (null == e) return n;
@@ -74,37 +74,33 @@ function S(e) {
         null != i
             ? (function (e) {
                   let { enabled: t } = l.E.getConfig({ location: "getGuildMaxFileSize" });
-                  return g.reduce((n, i) => {
+                  return S.reduce((n, i) => {
                       let [r, a] = i;
-                      return t && r === _.GuildFeatures.MAX_FILE_SIZE_250_MB ? n : e.features.has(r) && a > n ? a : n;
-                  }, _.TbF);
+                      return t && r === E.GuildFeatures.MAX_FILE_SIZE_250_MB ? n : e.features.has(r) && a > n ? a : n;
+                  }, E.TbF);
               })(i)
-            : _.TbF,
+            : E.TbF,
         n,
     );
 }
-function N(e, t) {
-    let n = S(t);
+function C(e, t) {
+    let n = N(t);
     return Array.from(e).some((e) => e.size > n);
 }
-function C(e) {
+function O(e) {
     return (
         (function (e) {
             let t = 0;
             for (let n of e) t += n.size;
             return t;
-        })(e) > O()
+        })(e) > (0, _.jS)({ location: "uploadSumTooLarge" })
     );
-}
-function O() {
-    let e = d.default.getCurrentUser();
-    return null != e && e.isStaff(), 524288e3;
 }
 function R(e) {
     let { guildId: t, onClick: n, maxSize: i, hideLearnMore: r } = e,
-        a = (0, c.Xq)((i ?? S(t)) / 1024, { useKibibytes: !0 }),
-        s = (0, c.Xq)(E.f3 / 1024, { useKibibytes: !0 });
+        a = (0, c.Xq)((i ?? N(t)) / 1024, { useKibibytes: !0 }),
+        s = (0, c.Xq)(A.f3 / 1024, { useKibibytes: !0 });
     return !0 === r
-        ? A.intl.format(A.t["+R2TzS"], { maxSize: a, premiumMaxSize: s })
-        : A.intl.format(A.t.tRuxk9, { maxSize: a, premiumMaxSize: s, onClick: n });
+        ? h.intl.format(h.t["+R2TzS"], { maxSize: a, premiumMaxSize: s })
+        : h.intl.format(h.t.tRuxk9, { maxSize: a, premiumMaxSize: s, onClick: n });
 }

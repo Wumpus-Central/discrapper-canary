@@ -1,7 +1,8 @@
-n.d(t, { OW: () => o, YK: () => l, dm: () => d, eM: () => s, ly: () => c });
+n.d(t, { OW: () => c, YK: () => o, dm: () => u, eM: () => l, jS: () => d, ly: () => _ });
 var i = n(565150),
-    r = n(762555);
-let a = [
+    r = n(762555),
+    a = n(219882);
+let s = [
         { reName: /\.jpe?g$/i, name: (e) => `image${e}.jpg`, type: "image/jpeg" },
         { reName: /\.jfif$/i, name: (e) => `image${e}.jpg`, type: "image/jpeg" },
         { reName: /\.png$/i, name: (e) => `image${e}.png`, type: "image/png" },
@@ -17,9 +18,13 @@ let a = [
         { reName: /\.mp4$/i, name: (e) => `video${e}.mp4`, type: "video/mp4" },
         { reName: /\.webm$/i, name: (e) => `video${e}.webm`, type: "image/webm" },
     ],
-    s = 524288e3,
-    l = 500;
-function o(e) {
+    l = 524288e3,
+    o = 500;
+function d(e) {
+    let { location: t } = e;
+    return (0, a.J6)({ location: t }).enabled ? 0x40000000 : l;
+}
+function c(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
         n = arguments.length > 2 ? arguments[2] : void 0,
         a = { id: t?.toString() ?? e.id };
@@ -50,7 +55,7 @@ function o(e) {
         a
     );
 }
-function d(e) {
+function u(e) {
     let t = new XMLHttpRequest();
     return new Promise((n, i) => {
         t.open("GET", e, !0),
@@ -62,14 +67,14 @@ function d(e) {
             t.send();
     });
 }
-function c(e) {
+function _(e) {
     let t,
-        { uri: n, i, overrideFilename: r, overrideType: s } = e,
+        { uri: n, i, overrideFilename: r, overrideType: a } = e,
         l = n.split("/"),
         o = l[l.length - 1];
     o = o.split("?")?.[0]?.toLowerCase() ?? "";
-    let d = a.find((e) => e.reName.test(o));
-    if ((null == d && null != r && (d = a.find((e) => e.reName.test(r))), null != d && null != r)) {
+    let d = s.find((e) => e.reName.test(o));
+    if ((null == d && null != r && (d = s.find((e) => e.reName.test(r))), null != d && null != r)) {
         let e = d.name(i).split(".").pop(),
             n = r.lastIndexOf(".");
         t = -1 !== n ? `${r.substr(0, n)}.${e}` : `${r}.${e}`;
@@ -77,8 +82,8 @@ function c(e) {
     return {
         uri: n,
         filename: t,
-        type: s ?? d?.type ?? "unknown",
-        isVideo: -1 !== (s ?? d?.name(i) ?? "").indexOf("video"),
-        isImage: -1 !== (s ?? d?.name(i) ?? "").indexOf("image"),
+        type: a ?? d?.type ?? "unknown",
+        isVideo: -1 !== (a ?? d?.name(i) ?? "").indexOf("video"),
+        isImage: -1 !== (a ?? d?.name(i) ?? "").indexOf("image"),
     };
 }

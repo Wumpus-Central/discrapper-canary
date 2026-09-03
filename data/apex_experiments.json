@@ -6030,6 +6030,38 @@
     }
   },
   {
+    "name": "2026-09-nitro-file-upload-rollout",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-09-non-nitro-file-upload-marketing",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
     "name": "2026-09-profile-link-fetch",
     "kind": "user",
     "defaultConfig": {

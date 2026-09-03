@@ -378,19 +378,20 @@ async function W(e, t) {
     return { totalSize: n, largestUploadedFileSize: i };
 }
 async function Y(e, t, n, i) {
-    let r = (0, O.o2)(n);
-    function a(e) {
+    let r = (0, O.o2)(n),
+        a = (0, L.jS)({ location: "executeCommand.stageAttachments" });
+    function s(e) {
         i?.(r, e), I.C1(t, w.t02.ENTITY_TOO_LARGE, x.intl.formatToPlainString(x.t.fxEKdS, { maxSize: (0, O.Hb)(r) }));
     }
-    let { totalSize: s, largestUploadedFileSize: l } = await W(e, !1);
-    if (l > Math.max(r, G.VP) || s > L.eM) return a(l), !1;
+    let { totalSize: l, largestUploadedFileSize: o } = await W(e, !1);
+    if (o > Math.max(r, G.VP) || l > a) return s(o), !1;
     try {
         await (0, u.A)(e);
     } catch {
         I.C1(t, void 0, x.intl.formatToPlainString(x.t["9h1/1p"], { count: e.length }));
     }
     return (
-        ({ totalSize: s, largestUploadedFileSize: l } = await W(e, !0)),
-        (!e.some((e) => e.error === w.t02.ENTITY_TOO_LARGE) && !(s > L.eM)) || (a(l), !1)
+        ({ totalSize: l, largestUploadedFileSize: o } = await W(e, !0)),
+        (!e.some((e) => e.error === w.t02.ENTITY_TOO_LARGE) && !(l > a)) || (s(o), !1)
     );
 }

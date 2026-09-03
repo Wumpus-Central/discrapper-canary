@@ -17,7 +17,7 @@ class l {
         return s.XgB;
     }
     getMaxTotalAttachmentSize() {
-        return a.eM;
+        return (0, a.jS)({ location: "ICYMIAttachmentUploadTarget" });
     }
     get shouldReactNativeCompressUploads() {
         return !0;
@@ -40,7 +40,7 @@ class c {
         return s.XgB;
     }
     getMaxTotalAttachmentSize() {
-        return a.eM;
+        return (0, a.jS)({ location: "MessageAttachmentUploadTarget" });
     }
     get shouldReactNativeCompressUploads() {
         return !0;
