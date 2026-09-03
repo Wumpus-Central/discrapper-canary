@@ -1,17 +1,17 @@
-i.d(s, { A: () => u });
-var a = i(582128),
-    n = i(17928),
-    t = i(73825),
-    l = i(97352),
-    r = i(394300);
+n.d(s, { A: () => u });
+var l = n(582128),
+    t = n(17928),
+    i = n(73825),
+    a = n(97352),
+    r = n(394300);
 function u(e) {
-    let s = a.useMemo(() => e?.items.find((e) => (0, r.P)(e))?.skuId ?? null, [e]),
-        { isLoaded: i, isFetching: u } = (0, n.cf)([l.A], () => ({
-            isLoaded: null == s || l.A.isLoadedForSKU(s),
-            isFetching: null != s && l.A.isFetchingForSKU(s),
+    let s = l.useMemo(() => e?.items.find((e) => (0, r.P)(e))?.skuId ?? null, [e]),
+        { isLoaded: n, isFetching: u } = (0, t.cf)([a.A], () => ({
+            isLoaded: null == s || a.A.isLoadedForSKU(s),
+            isFetching: null != s && a.A.isFetchingForSKU(s),
         })),
-        o = a.useRef(!1);
-    a.useEffect(() => {
-        null == s || i || u || o.current || ((o.current = !0), (0, t.ur)(s).catch(() => {}));
-    }, [s, i, u]);
+        o = l.useRef(!1);
+    l.useEffect(() => {
+        null == s || n || u || o.current || ((o.current = !0), (0, i.ur)(s).catch(() => {}));
+    }, [s, n, u]);
 }

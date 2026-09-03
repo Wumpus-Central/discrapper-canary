@@ -37,7 +37,7 @@ var s,
     B = i.n(k),
     D = i(907581),
     V = i(830370);
-let F = l.forwardRef((e, t) => {
+let H = l.forwardRef((e, t) => {
     let { className: i } = e,
         s = l.useRef(null);
     return (
@@ -53,9 +53,9 @@ let F = l.forwardRef((e, t) => {
         })
     );
 });
-F.displayName = "PremiumRewardsBentoBoxAsset";
-var H = i(440005),
-    Y = i(26508),
+H.displayName = "PremiumRewardsBentoBoxAsset";
+var Y = i(440005),
+    F = i(26508),
     G = i(592909),
     W = i(398523),
     K = i(881373),
@@ -188,7 +188,7 @@ let ev = function () {
             orbMultiplier: { thumbnail: eu, assetUrl: V ? ed : ec },
             combinedOrbs: { thumbnail: eu, assetUrl: V ? ed : ec },
             callOfDuty: { thumbnail: em, assetUrl: em },
-            threePPromotions: { thumbnail: ej ? (0, a.jsx)(F, { ref: e_ }) : eo, assetUrl: ej ? void 0 : eo },
+            threePPromotions: { thumbnail: ej ? (0, a.jsx)(H, { ref: e_ }) : eo, assetUrl: ej ? void 0 : eo },
         },
         eR = (0, w.Y)({ location: "bento_box" }),
         eP = (0, L.A)(!eR),
@@ -393,7 +393,7 @@ let ev = function () {
                 { enabled: s } = W.Ay.useConfig({ location: "bento_box" }),
                 n = t ? eC.CALL_OF_DUTY : eC.THREE_P_PROMOTIONS,
                 r = (0, Z.O9)(),
-                a = (0, Y.DK)(H.W.NITRO, "useBentoBoxes"),
+                a = (0, F.DK)(Y.W.NITRO, "useBentoBoxes"),
                 l = a && e;
             return [
                 ...(t || i || s ? [n] : []),

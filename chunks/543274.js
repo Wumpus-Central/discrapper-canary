@@ -1,4 +1,4 @@
-t.d(n, { K: () => S }), t(321073);
+t.d(n, { K: () => b }), t(321073);
 var l = t(477900),
     i = t(582128),
     s = t(17928),
@@ -23,8 +23,8 @@ var l = t(477900),
     _ = t(652215),
     j = t(49999),
     N = t(375708);
-function S(e) {
-    let { channel: n, idle: t, whichPopoutIsOpen: S, setWhichPopoutIsOpen: b } = e,
+function b(e) {
+    let { channel: n, idle: t, whichPopoutIsOpen: b, setWhichPopoutIsOpen: S } = e,
         O = (0, s.bG)([u.Ay], () => u.Ay.isLaunchingActivity()),
         y = (0, A.et)(n.id),
         R = (0, A.dL)(y),
@@ -69,14 +69,14 @@ function S(e) {
                 (0, l.jsx)(r.Y, {
                     targetElementRef: z,
                     fixed: !0,
-                    shouldShow: L && (S === v.P.ACTIVITY || null == S),
+                    shouldShow: L && (b === v.P.ACTIVITY || null == b),
                     animation: r.Y.Animation.FADE,
                     animationPosition: "top",
                     position: "top",
                     align: "center",
                     spacing: 16,
                     onRequestClose: () => {
-                        D(!1), b?.(void 0);
+                        D(!1), S?.(void 0);
                     },
                     renderPopout: (e) => {
                         let { closePopout: t, setPopoutRef: i } = e;

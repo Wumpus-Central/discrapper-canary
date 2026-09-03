@@ -1,4 +1,4 @@
-n.d(t, { TX: () => o, yV: () => c });
+n.d(t, { TX: () => o, yV: () => d });
 var i = n(477900),
     l = n(582128),
     s = n(95477),
@@ -13,7 +13,7 @@ function o(e) {
         { isEditing: t, inputRef: n, ...i }
     );
 }
-function d(e) {
+function c(e) {
     let {
         inputRef: t,
         label: n,
@@ -21,8 +21,8 @@ function d(e) {
         onChange: r,
         onKeyDown: a,
         maxLength: o,
-        placeholder: d,
-        trailing: c,
+        placeholder: c,
+        trailing: d,
         error: u,
         helperText: g,
         spellCheck: m,
@@ -35,21 +35,21 @@ function d(e) {
         onChange: r,
         onKeyDown: a,
         maxLength: o,
-        placeholder: d,
-        trailing: c,
+        placeholder: c,
+        trailing: d,
         error: u,
         helperText: g,
         spellCheck: m,
     });
 }
-function c(e) {
+function d(e) {
     let {
             isEditing: t,
             committedValue: n,
             editedValue: l,
             setEditedValue: s,
             editButtonRef: o,
-            handleStartEditing: c,
+            handleStartEditing: d,
             wrapperRef: u,
             onBlur: g,
             onContainerKeyDown: m,
@@ -57,49 +57,49 @@ function c(e) {
             onInputKeyDown: f,
             preview: h,
             placeholder: p,
-            editButtonAriaLabel: j,
-            label: I,
+            editButtonAriaLabel: I,
+            label: j,
             size: A = "default",
-            maxLength: v,
-            error: E,
+            maxLength: E,
+            error: v,
             warning: C,
             trailing: S,
             className: b,
-            disabled: T = !1,
-            growWidth: N,
-            removeVerticalPadding: k,
-            textVariant: y,
+            disabled: k = !1,
+            growWidth: T,
+            removeVerticalPadding: y,
+            textVariant: N,
             textColor: R,
             spellCheck: w,
         } = e,
         L =
-            (null != v && (t ? l : n).length > v ? a.intl.formatToPlainString(a.t.ICT5S6, { maxLength: v }) : void 0) ??
-            E,
-        O = "compact" === A ? { variant: "compact" } : { variant: "default", trailing: S };
+            (null != E && (t ? l : n).length > E ? a.intl.formatToPlainString(a.t.ICT5S6, { maxLength: E }) : void 0) ??
+            v,
+        _ = "compact" === A ? { variant: "compact" } : { variant: "default", trailing: S };
     return (0, i.jsx)(r.ZL, {
-        ...O,
+        ..._,
         isEditing: t,
         preview: h,
         placeholder: p,
         editButtonRef: o,
-        editButtonAriaLabel: j,
-        onStartEditing: c,
+        editButtonAriaLabel: I,
+        onStartEditing: d,
         className: b,
-        growWidth: N,
-        removeVerticalPadding: k,
+        growWidth: T,
+        removeVerticalPadding: y,
         wrapperRef: u,
         onBlur: g,
         onKeyDown: m,
-        disabled: T,
-        textVariant: y,
+        disabled: k,
+        textVariant: N,
         textColor: R,
-        input: (0, i.jsx)(d, {
+        input: (0, i.jsx)(c, {
             inputRef: x,
-            label: I,
+            label: j,
             value: l,
             onChange: s,
             onKeyDown: f,
-            maxLength: v,
+            maxLength: E,
             placeholder: p,
             trailing: S,
             error: L,

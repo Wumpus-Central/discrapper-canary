@@ -5,8 +5,8 @@ var i = n(477900),
     r = n(17928),
     a = n(425763),
     o = n(724834),
-    d = n(287809),
-    c = n(788593),
+    c = n(287809),
+    d = n(788593),
     u = n(943793),
     g = n(314531),
     m = n(711871),
@@ -22,9 +22,9 @@ function f(e) {
             item: e.getItem(),
             sourceClientOffset: e.getSourceClientOffset(),
         })),
-        p = (0, r.bG)([d.default], () => d.default.getCurrentUser()),
-        j = (0, a.VU)(),
-        I = l.useMemo(
+        p = (0, r.bG)([c.default], () => c.default.getCurrentUser()),
+        I = (0, a.VU)(),
+        j = l.useMemo(
             () =>
                 null == p || null == f
                     ? null
@@ -49,7 +49,7 @@ function f(e) {
                                   a = r?.() ?? 90;
                               return (0, i.jsx)("div", {
                                   style: { width: a },
-                                  children: (0, i.jsx)(c.A, {
+                                  children: (0, i.jsx)(d.A, {
                                       className: x.XJ,
                                       imageSrc: e,
                                       gameName: l,
@@ -100,7 +100,7 @@ function f(e) {
             [f, p],
         ),
         A = l.useRef(null),
-        v = l.useCallback(() => {
+        E = l.useCallback(() => {
             if (null == t.current) return;
             let e = t.current.getBoundingClientRect();
             A.current = { x: e.left, y: e.top };
@@ -111,14 +111,14 @@ function f(e) {
                 A.current = null;
                 return;
             }
-            null == A.current && v();
-        }, [n, v]),
-        !0 !== n || null == h || null == I)
+            null == A.current && E();
+        }, [n, E]),
+        !0 !== n || null == h || null == j)
     )
         return null;
-    null == A.current && v();
-    let { x: E, y: C } = A.current ?? { x: 0, y: 0 },
-        S = h.x - E - 60 * !!j,
+    null == A.current && E();
+    let { x: v, y: C } = A.current ?? { x: 0, y: 0 },
+        S = h.x - v - 60 * !!I,
         b = h.y - C;
-    return (0, i.jsx)("div", { className: x.kL, style: { transform: `translate3d(${S}px, ${b}px, 0)` }, children: I });
+    return (0, i.jsx)("div", { className: x.kL, style: { transform: `translate3d(${S}px, ${b}px, 0)` }, children: j });
 }

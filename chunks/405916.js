@@ -12,8 +12,8 @@ var i = n(477900),
     h = n(929921),
     m = n(45630),
     g = n(723702),
-    E = n(74329),
-    f = n(192308),
+    f = n(74329),
+    E = n(192308),
     b = n(231723),
     p = n(212245),
     C = n(327649),
@@ -48,7 +48,7 @@ function I(e) {
             let { preset: a, resolution: o, fps: c, soundshareEnabled: d } = (0, l.cf)([h.A], () => h.A.getState()),
                 A = (0, l.bG)([m.Ay], () => m.Ay.getGoLiveSource()),
                 g = (0, l.bG)([O.default], () => O.default.getCurrentUser()),
-                E = (0, l.bG)([v.A], () => v.A.getGuild(e?.guildId)?.premiumTier),
+                f = (0, l.bG)([v.A], () => v.A.getGuild(e?.guildId)?.premiumTier),
                 { location: R } = (0, p.p)(),
                 I = (0, l.bG)([_.Ay, S.A], () => S.A.getChannel(_.Ay.getVoiceChannelId())),
                 N = r.useCallback(
@@ -72,7 +72,7 @@ function I(e) {
                         } else {
                             var a;
                             (a = { ...R, object: T.ZSU.RADIO_ITEM, objectType: s }),
-                                (0, f.openModalLazy)(
+                                (0, E.openModalLazy)(
                                     async () => {
                                         let { default: e } = await Promise.all([
                                             n.e("629972"),
@@ -104,7 +104,7 @@ function I(e) {
             let M = a === x.jQ.PRESET_DOCUMENTS ? x.kn.FPS_30 : c,
                 L = x.ce.map((e) => {
                     let { value: t, label: n, subtext: r } = e,
-                        l = (0, C.A)(x.jQ.PRESET_CUSTOM, o, t, g, E, I);
+                        l = (0, C.A)(x.jQ.PRESET_CUSTOM, o, t, g, f, I);
                     return (0, i.jsx)(
                         s.iD,
                         {
@@ -120,7 +120,7 @@ function I(e) {
                 }),
                 D = x.Jk.map((e) => {
                     let { value: t, label: n, subtext: r } = e,
-                        l = (0, C.A)(x.jQ.PRESET_CUSTOM, t, M, g, E, I);
+                        l = (0, C.A)(x.jQ.PRESET_CUSTOM, t, M, g, f, I);
                     return (0, i.jsx)(
                         s.iD,
                         {
@@ -141,7 +141,7 @@ function I(e) {
                 ],
             });
         })(t, D),
-        F = (0, E.A)(t, D, R.FX),
+        F = (0, f.A)(t, D, R.FX),
         K = null != k && z && (!k.startsWith("screen") || G),
         B = (0, l.bG)([m.Ay], () => m.Ay.getUseSystemScreensharePicker() && (0, g.isLinux)()),
         H = r.useCallback(() => {

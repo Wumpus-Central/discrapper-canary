@@ -23,8 +23,8 @@ var l = t(477900),
     _ = t(994500),
     j = t(486020),
     N = t(927813),
-    S = t(403362),
-    b = t(240248),
+    b = t(403362),
+    S = t(240248),
     O = t(652215),
     y = t(838541),
     R = t(538347);
@@ -47,10 +47,10 @@ function L(e) {
             },
             [n.channel_id, n.id],
         ),
-        v = (0, b.uJ)(n.content) ? null : (0, p.Ay)(n, { allowGameMentions: !0 }).content,
+        v = (0, S.uJ)(n.content) ? null : (0, p.Ay)(n, { allowGameMentions: !0 }).content,
         {
             contentPlaceholder: N,
-            renderedContent: S,
+            renderedContent: b,
             trailingIcon: O,
             leadingIcon: M,
         } = (0, f.o)(n, v, t, s, R.BK, { trailingIconClass: R.sl, leadingIconClass: R.aG, iconSize: y.eJ }),
@@ -75,7 +75,7 @@ function L(e) {
                     className: a()(R.kn, { [R.mK]: n.mentioned }),
                     children: [
                         null != D ? null : M,
-                        S ?? D ?? (0, l.jsx)("span", { children: N }),
+                        b ?? D ?? (0, l.jsx)("span", { children: N }),
                         null != D ? null : O,
                     ],
                 }),
@@ -139,7 +139,7 @@ function D(e) {
             let C = d.current ?? a;
             return {
                 toastsHidden: o,
-                toastMessages: (0, c.yK)([v.A], () => C.map((e) => v.A.getMessage(n, e)), [n, C]).filter(S.Vq),
+                toastMessages: (0, c.yK)([v.A], () => C.map((e) => v.A.getMessage(n, e)), [n, C]).filter(b.Vq),
             };
         })({ channelId: n, isFrozen: s, count: 3, lingerMs: M }),
         E = i.useRef({}),

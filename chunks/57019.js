@@ -1,4 +1,4 @@
-n.d(t, { Fn: () => h, Gt: () => m, Ru: () => f });
+n.d(t, { Fn: () => h, Gt: () => m, Ru: () => E });
 var i = n(582128),
     r = n(717421),
     l = n(232554),
@@ -90,14 +90,14 @@ let m = i.createContext(new h(!0));
 function g(e, t, n) {
     return t && 0 !== e ? 20 * Math.max(e / 5, 0) : n;
 }
-let E = { mass: 0.8, friction: 25, tension: 320 };
-function f(e, t, n) {
+let f = { mass: 0.8, friction: 25, tension: 320 };
+function E(e, t, n) {
     let [s, h] = (0, r.z)(
             () => ({ from: { opacity: 0, scale: 1, transform: 0, height: 0, contentOpacity: 1 } }),
             void 0,
             [],
         ),
-        f = i.useRef(h),
+        E = i.useRef(h),
         b = i.useContext(m),
         p = i.useMemo(() => {
             let t = !1;
@@ -115,7 +115,7 @@ function f(e, t, n) {
                                   n,
                               );
                           }
-                          let { current: m } = f,
+                          let { current: m } = E,
                               b = {
                                   opacity: i && h > 4 ? 0 : i ? Math.min(1 - h / 4, 1) : 1,
                                   scale: i ? Math.min(1 - h / 4, 1) : 1,
@@ -134,7 +134,7 @@ function f(e, t, n) {
                                         height: i ? r : l,
                                     },
                               to: b,
-                              config: E,
+                              config: f,
                           }),
                               (t = !0);
                       });
@@ -145,13 +145,13 @@ function f(e, t, n) {
             if (t === l.wL.YEETED) {
                 let t = b.getLayoutSpecs(e);
                 if (null == t) return void n();
-                f.current({
+                E.current({
                     to: {
                         scale: 0.8,
                         opacity: 0,
                         transform: g(t.index, b.locked, t.top) + (b.locked ? 0 : t.height / 2),
                     },
-                    config: E,
+                    config: f,
                 }),
                     setTimeout(n, 300);
             }

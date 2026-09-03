@@ -16,8 +16,8 @@ var i = n(477900),
     A = n(363195),
     x = n(870570),
     v = n(446868),
-    C = n(503698),
-    E = n.n(C),
+    E = n(503698),
+    C = n.n(E),
     T = n(607399),
     _ = n(821609),
     I = n(331322),
@@ -28,8 +28,8 @@ var i = n(477900),
     y = n(652215),
     M = n(375708),
     R = n(690807);
-let O = b.A.getArticleURL(y.MVz.VERIFICATION_FAQ);
-class P extends l.PureComponent {
+let w = b.A.getArticleURL(y.MVz.VERIFICATION_FAQ);
+class k extends l.PureComponent {
     static defaultProps = { types: [y.Fz7.CAPTCHA], onCaptchaVerify: y.tEg, onLogout: y.tEg };
     renderFields() {
         let { types: e, captchaKey: t, theme: n, onCaptchaVerify: l } = this.props;
@@ -52,7 +52,7 @@ class P extends l.PureComponent {
                 (0, i.jsxs)(I.B, {
                     gap: 16,
                     fullWidth: !1,
-                    className: E()(R.kL, { [R.Fr]: T.Fr }),
+                    className: C()(R.kL, { [R.Fr]: T.Fr }),
                     align: "center",
                     direction: "vertical",
                     justify: "center",
@@ -77,7 +77,7 @@ class P extends l.PureComponent {
                                         }),
                                         (0, i.jsx)(N.E, {
                                             variant: "text-md/normal",
-                                            children: M.intl.format(M.t["0rqMV5"], { helpCenterURL: O }),
+                                            children: M.intl.format(M.t["0rqMV5"], { helpCenterURL: w }),
                                         }),
                                     ],
                                 }),
@@ -114,7 +114,7 @@ class P extends l.PureComponent {
                                     className: R.qr,
                                     children: M.intl.format(M.t.WL51ZR, { supportURL: b.A.getSubmitRequestURL() }),
                                 }),
-                                (0, i.jsx)("div", { className: E()(R.qr, R.mf), children: "\u2022" }),
+                                (0, i.jsx)("div", { className: C()(R.qr, R.mf), children: "\u2022" }),
                                 (0, i.jsx)(N.E, {
                                     variant: "text-sm/semibold",
                                     className: R.qr,
@@ -132,13 +132,13 @@ class P extends l.PureComponent {
         t?.(e);
     };
 }
-var k = n(87404),
-    w = n(53516);
+var O = n(87404),
+    P = n(53516);
 function L() {
     let { action: e, theme: t } = (0, s.cf)([x.A, A.A], () => ({ action: x.A.getAction(), theme: A.A.theme })),
-        C = v.A.getVerificationTypes(e),
-        [E, T] = l.useState(0),
-        _ = (0, h.Ay)(C);
+        E = v.A.getVerificationTypes(e),
+        [C, T] = l.useState(0),
+        _ = (0, h.Ay)(E);
     function I() {
         (0, u.Cw)(),
             (0, o.openModalLazy)(
@@ -148,7 +148,7 @@ function L() {
                     );
                     return (t) => (0, i.jsx)(e, { ...t });
                 },
-                { modalKey: k.H1, Layer: g.Ay },
+                { modalKey: O.H1, Layer: g.Ay },
             );
     }
     return (
@@ -156,10 +156,10 @@ function L() {
             {
                 type: a.ImpressionTypes.MODAL,
                 name: a.ImpressionNames.USER_ACTION_REQUIRED,
-                properties: { verification_type: C[0], verification_types: C },
+                properties: { verification_type: E[0], verification_types: E },
             },
             {},
-            [C.toString()],
+            [E.toString()],
         ),
         l.useEffect(
             () => (
@@ -172,7 +172,7 @@ function L() {
         ),
         l.useEffect(() => {
             _?.[0] === y.Fz7.PHONE &&
-                C?.[0] === y.Fz7.EMAIL &&
+                E?.[0] === y.Fz7.EMAIL &&
                 (0, o.openModalLazy)(
                     async () => {
                         let { default: e } = await Promise.all([n.e("844331"), n.e("410919")]).then(n.bind(n, 556506));
@@ -184,12 +184,12 @@ function L() {
                                 confirmText: M.intl.string(M.t["3oK4qw"]),
                             });
                     },
-                    { modalKey: k.Pr, Layer: g.Ay, onCloseCallback: I },
+                    { modalKey: O.Pr, Layer: g.Ay, onCloseCallback: I },
                 );
-        }, [C, _]),
-        (0, i.jsx)(P, {
-            types: C,
-            captchaKey: E,
+        }, [E, _]),
+        (0, i.jsx)(k, {
+            types: E,
+            captchaKey: C,
             onCaptchaVerify: function (e) {
                 r.Bo.post({
                     url: y.Rsh.CAPTCHA,
@@ -218,7 +218,7 @@ function L() {
                               return (t) =>
                                   (0, i.jsx)(e, { layerContext: g.OH, reason: f.d.USER_ACTION_REQUIRED, ...t });
                           },
-                          { modalKey: w.V, Layer: g.Ay },
+                          { modalKey: P.V, Layer: g.Ay },
                       );
             },
             onLogout: function () {

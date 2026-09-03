@@ -1,15 +1,15 @@
-l.d(t, { A: () => s });
-var n = l(582128),
-    i = l(17928),
-    a = l(733391),
-    r = l(832163);
-function s(e) {
-    let { applicationId: t } = e,
-        l = (0, i.bG)([r.A], () => (null != t ? r.A.getStorefrontDataForApplicationId(t) : void 0), [t]);
+t.d(l, { A: () => a });
+var r = t(582128),
+    n = t(17928),
+    u = t(733391),
+    o = t(832163);
+function a(e) {
+    let { applicationId: l } = e,
+        t = (0, n.bG)([o.A], () => (null != l ? o.A.getStorefrontDataForApplicationId(l) : void 0), [l]);
     return (
-        n.useEffect(() => {
-            null != t && (0, a.ap)(t, { eager: !1 });
-        }, [t]),
-        l
+        r.useEffect(() => {
+            null != l && (0, u.ap)(l, { eager: !1 });
+        }, [l]),
+        t
     );
 }

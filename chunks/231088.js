@@ -5,8 +5,8 @@ var i = n(477900),
     r = n.n(s),
     a = n(621466),
     o = n(219869),
-    d = n(17928),
-    c = n(866665),
+    c = n(17928),
+    d = n(866665),
     u = n(695366),
     g = n(738188),
     m = n(834730),
@@ -16,26 +16,26 @@ var i = n(477900),
 function p(e) {
     let { value: t, onCommit: n, disabled: i = !1 } = e,
         [s, r] = l.useState("idle"),
-        [o, c] = l.useState(t),
+        [o, d] = l.useState(t),
         u = "editing" === s && !i,
-        g = (0, d.bG)([f.Ay], () => f.Ay.useReducedMotion),
+        g = (0, c.bG)([f.Ay], () => f.Ay.useReducedMotion),
         m = l.useRef(null),
         x = l.useRef(null),
         h = l.useRef(null),
         p = l.useRef(!1),
-        j = l.useRef(!0),
-        I = l.useCallback(() => {
-            (j.current = !1), c(t), r("editing");
+        I = l.useRef(!0),
+        j = l.useCallback(() => {
+            (I.current = !1), d(t), r("editing");
         }, [t]),
         A = l.useRef(o);
     l.useLayoutEffect(() => {
         A.current = o;
     });
-    let v = l.useCallback(() => {
-            j.current || ((j.current = !0), n(A.current), r("done"));
+    let E = l.useCallback(() => {
+            I.current || ((I.current = !0), n(A.current), r("done"));
         }, [n]),
-        E = l.useCallback(() => {
-            j.current || ((j.current = !0), r("done"));
+        v = l.useCallback(() => {
+            I.current || ((I.current = !0), r("done"));
         }, []);
     l.useEffect(() => {
         "done" === s && (p.current && m.current?.focus({ preventScroll: !0 }), (p.current = !1));
@@ -47,57 +47,57 @@ function p(e) {
         }, [u, g]);
     let C = l.useCallback(
             (e) => {
-                !u || (null != x.current && (0, a.vq)(e.relatedTarget) && x.current.contains(e.relatedTarget)) || v();
-            },
-            [u, v],
-        ),
-        S = l.useCallback(
-            (e) => {
-                u && "Escape" === e.key && (e.preventDefault(), e.stopPropagation(), (p.current = !0), E());
+                !u || (null != x.current && (0, a.vq)(e.relatedTarget) && x.current.contains(e.relatedTarget)) || E();
             },
             [u, E],
         ),
+        S = l.useCallback(
+            (e) => {
+                u && "Escape" === e.key && (e.preventDefault(), e.stopPropagation(), (p.current = !0), v());
+            },
+            [u, v],
+        ),
         b = l.useCallback(() => {
-            (p.current = !0), v();
-        }, [v]),
-        T = l.useCallback(() => {
             (p.current = !0), E();
         }, [E]),
-        N = l.useCallback(
+        k = l.useCallback(() => {
+            (p.current = !0), v();
+        }, [v]),
+        T = l.useCallback(
             (e) => {
                 "Enter" !== e.key || e.shiftKey
-                    ? "Escape" === e.key && (e.preventDefault(), e.stopPropagation(), T())
+                    ? "Escape" === e.key && (e.preventDefault(), e.stopPropagation(), k())
                     : (e.preventDefault(), b());
             },
-            [b, T],
+            [b, k],
         );
     return {
         isEditing: u,
         committedValue: t,
         editedValue: o,
-        setEditedValue: c,
+        setEditedValue: d,
         editButtonRef: m,
         wrapperRef: x,
         inputRef: h,
-        handleStartEditing: I,
-        handleCommit: v,
-        handleCancel: E,
+        handleStartEditing: j,
+        handleCommit: E,
+        handleCancel: v,
         handleInputCommit: b,
-        handleInputCancel: T,
-        onInputKeyDown: N,
+        handleInputCancel: k,
+        onInputKeyDown: T,
         onBlur: C,
         onContainerKeyDown: S,
     };
 }
-function j(e) {
+function I(e) {
     let { tooltip: t, ...n } = e,
         l = (0, i.jsx)("div", {
             className: h.L7,
             children: (0, i.jsx)(o.T, { ...n, size: "sm", variant: "input-accessory" }),
         });
-    return null == t ? l : (0, i.jsx)(c.m, { text: t, ariaHidden: !0, children: l });
+    return null == t ? l : (0, i.jsx)(d.m, { text: t, ariaHidden: !0, children: l });
 }
-function I(e) {
+function j(e) {
     let { id: t, message: n, type: l } = e,
         s = "error" === l,
         r = s ? u.E : g.WarningIcon;
@@ -115,37 +115,37 @@ function A(e) {
             preview: n,
             placeholder: s,
             input: o,
-            editButtonRef: d,
-            editButtonAriaLabel: c,
+            editButtonRef: c,
+            editButtonAriaLabel: d,
             onStartEditing: u,
             variant: g = "default",
             trailing: f,
             previewErrorMessage: p,
             previewWarningMessage: A,
-            className: v,
-            wrapperRef: E,
+            className: E,
+            wrapperRef: v,
             onBlur: C,
             onKeyDown: S,
             textVariant: b,
-            textColor: T,
-            disabled: N = !1,
-            growWidth: k = !1,
-            removeVerticalPadding: y = !1,
+            textColor: k,
+            disabled: T = !1,
+            growWidth: y = !1,
+            removeVerticalPadding: N = !1,
         } = e,
         R = l.useRef(null),
         w = l.useId(),
         L = l.useId(),
-        O = null == n,
-        P = null != p,
-        _ = null != A && !P,
-        D = P ? "error" : _ ? "warning" : null,
-        G = P ? p : A,
-        M = null != D && null != G,
+        _ = null == n,
+        O = null != p,
+        P = null != A && !O,
+        D = O ? "error" : P ? "warning" : null,
+        M = O ? p : A,
+        G = null != D && null != M,
         [U] = l.useState(t),
-        [W, F] = l.useState(!1);
-    W || t === U || F(!0);
+        [F, W] = l.useState(!1);
+    F || t === U || W(!0);
     let H = [];
-    O && H.push(w), M && "compact" !== g && H.push(L);
+    _ && H.push(w), G && "compact" !== g && H.push(L);
     let V = H.length > 0 ? H.join(" ") : void 0;
     function B() {
         let { activeElement: e } = R.current?.ownerDocument ?? document;
@@ -153,27 +153,27 @@ function A(e) {
     }
     let z = (0, i.jsxs)("div", {
         ref: R,
-        className: r()(h.LL, { [h.JD]: P, [h.xe]: _, [h.r9]: N }),
-        onMouseDown: N
+        className: r()(h.LL, { [h.JD]: O, [h.xe]: P, [h.r9]: T }),
+        onMouseDown: T
             ? void 0
             : function (e) {
                   e.preventDefault();
               },
-        onClick: N ? void 0 : B,
+        onClick: T ? void 0 : B,
         children: [
-            O
+            _
                 ? (0, i.jsx)(m.E, {
                       id: w,
                       variant: b ?? "text-sm/normal",
-                      color: T ?? "text-muted",
+                      color: k ?? "text-muted",
                       className: h.qf,
                       children: s,
                   })
                 : n,
-            !N &&
+            !T &&
                 (0, i.jsx)(x.D, {
-                    innerRef: d,
-                    "aria-label": c,
+                    innerRef: c,
+                    "aria-label": d,
                     "aria-describedby": V,
                     "aria-expanded": !1,
                     onClick: (e) => {
@@ -181,28 +181,28 @@ function A(e) {
                     },
                     focusProps: { ringTarget: R },
                 }),
-            null != f && (0, i.jsx)("div", { className: h.lD, children: (0, i.jsx)(j, { ...f }) }),
+            null != f && (0, i.jsx)("div", { className: h.lD, children: (0, i.jsx)(I, { ...f }) }),
         ],
     });
     return (0, i.jsx)("div", {
-        ref: E,
+        ref: v,
         className: r()(
             h.kL,
-            { [h.oE]: "compact" === g, [h.c1]: "multiline" === g, [h.CP]: k, [h.WK]: y, [h.Dy]: t },
-            v,
+            { [h.oE]: "compact" === g, [h.c1]: "multiline" === g, [h.CP]: y, [h.WK]: N, [h.Dy]: t },
+            E,
         ),
         onBlur: C,
         onKeyDown: S,
         children: (0, i.jsx)(
             "div",
             {
-                className: W ? h.qG : void 0,
+                className: F ? h.qG : void 0,
                 children: t
                     ? o
                     : (0, i.jsxs)(i.Fragment, {
                           children: [
                               (0, i.jsx)("div", { className: h.VH, children: z }),
-                              M && "compact" !== g && (0, i.jsx)(I, { id: L, message: G, type: D }),
+                              G && "compact" !== g && (0, i.jsx)(j, { id: L, message: M, type: D }),
                           ],
                       }),
             },

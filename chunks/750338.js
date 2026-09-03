@@ -42,10 +42,10 @@ let A = (e) => {
             previewImageStyle: B = j.Tb.CONTAINED,
             actions: D,
             mediaRef: V,
-            boxArtContainerClassName: F,
-            containerClassName: H,
+            boxArtContainerClassName: H,
+            containerClassName: Y,
         } = e,
-        Y = (0, v.TM)(),
+        F = (0, v.TM)(),
         G = n.useRef(null),
         W = n.useRef(0),
         { sectionRef: K, handleVisibilityChange: Z } = (0, _.A)({ boxType: t }),
@@ -130,7 +130,7 @@ let A = (e) => {
     }
     function en() {
         return (0, s.jsx)("div", {
-            className: a()(P.boxArtContainer, P[`${S}`], F),
+            className: a()(P.boxArtContainer, P[`${S}`], H),
             children:
                 null == N && (0, u.O)(y) && "string" != typeof y
                     ? y
@@ -144,7 +144,7 @@ let A = (e) => {
                               loop: !0,
                               className: a()($ ? P.overlayImage : P.boxVideo, { [O]: null != O }),
                               ref: G,
-                              children: (0, s.jsx)("source", { src: N, type: Y ? R.a.MP4 : R.a.WEBM }),
+                              children: (0, s.jsx)("source", { src: N, type: F ? R.a.MP4 : R.a.WEBM }),
                           },
                           N,
                       ),
@@ -163,7 +163,7 @@ let A = (e) => {
                 P.boxContainer,
                 P[`${S}`],
                 P.gradientBackground,
-                H,
+                Y,
                 X && P.overlayImageMode,
                 $ && P.overlayMode,
             ),

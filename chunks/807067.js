@@ -23,8 +23,8 @@ var l = t(477900),
     _ = t(111042),
     j = t(939635),
     N = t(267102),
-    S = t(246356),
-    b = t(111162),
+    b = t(246356),
+    S = t(111162),
     O = t(174459),
     y = t(795816),
     R = t(648027),
@@ -39,7 +39,7 @@ function V(e) {
         t,
         { channel: s, openInPopout: r, onClick: d } = e,
         { fetchState: A, voiceBannerCollection: m } =
-            ((n = (0, c.bG)([b.default], () => b.default.onlyShowPreviewAppCollections) ? a.W.PREVIEW : a.W.ACTIVE),
+            ((n = (0, c.bG)([S.default], () => S.default.onlyShowPreviewAppCollections) ? a.W.PREVIEW : a.W.ACTIVE),
             i.useEffect(() => {
                 (0, v.An)({ surface: k, activeState: n });
             }, [n]),
@@ -94,7 +94,7 @@ let U = i.forwardRef(function (e, n) {
             a || r();
         }, [r, a]);
     let j = (0, N.Us)(),
-        { analyticsLocations: b, newestAnalyticsLocation: k } = (0, g.Ay)(p.A.ACTIVITIES_MINI_SHELF),
+        { analyticsLocations: S, newestAnalyticsLocation: k } = (0, g.Ay)(p.A.ACTIVITIES_MINI_SHELF),
         U = j === L.BRT.POPOUT,
         B = ((t = s.getGuildId()), (0, R.A)({ guildId: t }).slice(0, 5));
     i.useEffect(() => {
@@ -121,8 +121,8 @@ let U = i.forwardRef(function (e, n) {
             [o, s],
         );
     return (0, l.jsx)(g.f5, {
-        value: b,
-        children: (0, l.jsx)(S.A, {
+        value: S,
+        children: (0, l.jsx)(b.A, {
             children: (0, l.jsxs)(d.l, {
                 ref: n,
                 "aria-labelledby": G,

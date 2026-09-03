@@ -12,8 +12,8 @@ var i = n(367513),
     h = n(931664),
     m = n(631576),
     g = n(761640),
-    E = n(734057),
-    f = n(72314),
+    f = n(734057),
+    E = n(72314),
     b = n(31717),
     p = n(580745),
     C = n(232835),
@@ -44,7 +44,7 @@ function j(e) {
                 return n.dispatch(y.jej.POPOUT_CLOSE_AFTER_MODALS), !1;
             let r = _.A.getGuildId(),
                 l = e ?? v.Ay.getChannelId(r),
-                s = E.A.getChannel(l),
+                s = f.A.getChannel(l),
                 u = g.Ay.getSection(l, s?.isDM()) === y.YvQ.SIDEBAR_CHAT ? g.Ay.getSidebarState(l) : null,
                 c = u?.type === A.PE.VIEW_THREAD || u?.type === A.PE.VIEW_CHANNEL ? u.channelId : null;
             if (!1 === R(l) || !1 === R(c)) return !1;
@@ -57,7 +57,7 @@ function j(e) {
                 m = I(c);
             return (
                 null == l || h || m || null == u
-                    ? null != l && !h && !1 !== f.A.isAtBottom(l) && a.A.getChatOpen(l)
+                    ? null != l && !h && !1 !== E.A.isAtBottom(l) && a.A.getChatOpen(l)
                         ? i.A.updateChatOpen(l, !1)
                         : x._.dispatch(y.jej.SCROLLTO_PRESENT)
                     : d.A.closeChannelSidebar(l),

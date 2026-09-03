@@ -1,4 +1,4 @@
-n.d(t, { A: () => C });
+n.d(t, { A: () => E });
 var i = n(477900),
     l = n(582128),
     a = n(435558),
@@ -48,7 +48,7 @@ function v(e) {
             : (0, i.jsx)(u.J, { size: "refresh_sm", color: h.A.colors.ICON_DEFAULT });
     return (0, i.jsx)(A, { avatarURL: n.getAvatarURL(l, 24, !1), avatarLabel: n.username, text: t.name, leading: a });
 }
-let C = l.memo(function (e) {
+let E = l.memo(function (e) {
     let { speakingUserIds: t, activeSoundboards: n, userIds: l, guildId: a, channelId: o } = e,
         d = (0, r.cf)([p.default], () => s().pick(p.default.getUsers(), l));
     return (0, i.jsxs)("div", {

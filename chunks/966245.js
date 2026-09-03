@@ -812,10 +812,10 @@ let e2 = s.forwardRef(function (e, t) {
 });
 var e3 = n(20504),
     e8 = n(625494),
-    e5 = n(927813),
-    e7 = n(824744);
+    e6 = n(927813),
+    e5 = n(824744);
 n(508300);
-var e6 = n(661531),
+var e7 = n(661531),
     e4 = n(602853),
     e9 = n(765671);
 function te(e, t) {
@@ -985,11 +985,11 @@ function tm(e) {
             lastInactiveFillColor: j,
             inactiveFillColor: b,
         } = (function (e, t) {
-            let n = (0, e4.r)(e6.A.colors.BACKGROUND_MOD_MUTED).hex(),
-                l = (0, e4.r)(e6.A.colors.INTERACTIVE_TEXT_DEFAULT).hex(),
-                i = (0, e4.r)(e6.A.colors.INTERACTIVE_TEXT_ACTIVE).hex(),
-                s = (0, e4.r)(e6.A.unsafe_rawColors.BRAND_430).hex(),
-                r = (0, e4.r)(e6.A.unsafe_rawColors.WHITE).hex(),
+            let n = (0, e4.r)(e7.A.colors.BACKGROUND_MOD_MUTED).hex(),
+                l = (0, e4.r)(e7.A.colors.INTERACTIVE_TEXT_DEFAULT).hex(),
+                i = (0, e4.r)(e7.A.colors.INTERACTIVE_TEXT_ACTIVE).hex(),
+                s = (0, e4.r)(e7.A.unsafe_rawColors.BRAND_430).hex(),
+                r = (0, e4.r)(e7.A.unsafe_rawColors.WHITE).hex(),
                 a = t ? s : n,
                 [o, u] = td(a, t, e),
                 [c, d] = td(t ? r : e ? i : l, t, e),
@@ -1197,7 +1197,7 @@ let tx = s.memo(function (e) {
         }, [A]),
         J = s.useCallback(
             (e) => {
-                let t = (0, e7.w)(e, 1);
+                let t = (0, e5.w)(e, 1);
                 R(0 === t), V(t), r?.(t);
             },
             [r],
@@ -1237,7 +1237,7 @@ let tx = s.memo(function (e) {
                     !L &&
                     (e = setInterval(() => {
                         K(C.current?.currentTime ?? 0);
-                    }, e5.A.Millis.SECOND)),
+                    }, e6.A.Millis.SECOND)),
                 () => {
                     null != e && clearInterval(e);
                 }
@@ -1246,7 +1246,7 @@ let tx = s.memo(function (e) {
         s.useEffect(() => {
             let { played: e, currentTime: t, onPause: n, onPlay: l } = el.current;
             if (e || O)
-                if (O) (et.current = performance.now()), l?.(!1, t, (C.current?.duration ?? 0) * e5.A.Millis.SECOND);
+                if (O) (et.current = performance.now()), l?.(!1, t, (C.current?.duration ?? 0) * e6.A.Millis.SECOND);
                 else {
                     let e = performance.now(),
                         l = et.current;
@@ -1364,7 +1364,7 @@ let tx = s.memo(function (e) {
                 iconColor: "currentColor",
                 sliderWrapperClassName: tf.MQ,
                 muted: b,
-                value: (0, e7.M)(G, 1),
+                value: (0, e5.M)(G, 1),
                 minValue: 0,
                 maxValue: 1,
                 currentWindow: window,

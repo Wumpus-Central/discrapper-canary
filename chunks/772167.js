@@ -1,4 +1,4 @@
-i.d(t, { u5: () => W, vw: () => F, Cf: () => V, wx: () => K });
+i.d(t, { u5: () => W, vw: () => H, Cf: () => V, wx: () => K });
 var s,
     n = i(477900),
     r = i(582128),
@@ -234,7 +234,7 @@ function V() {
         },
     };
 }
-function F() {
+function H() {
     let e = (0, E.N5)(),
         t = (0, E.P6)();
     return (0, n.jsxs)("div", {
@@ -254,11 +254,11 @@ function F() {
         ],
     });
 }
-function H(e) {
+function Y(e) {
     let { children: t } = e;
     return (0, n.jsx)("div", { className: D.oP, children: (0, n.jsx)("div", { className: D.t0, children: t }) });
 }
-let Y = (e) => {
+let F = (e) => {
     let { recurrence: t, analyticsLocations: i = [] } = e,
         s = (0, n.jsx)(o.r, { color: g.A.colors.CONTROL_CONNECTED_BACKGROUND_DEFAULT }),
         l = (0, n.jsx)("span", {
@@ -464,10 +464,10 @@ function K(e) {
                 ],
             }),
             "footer" === p && g,
-            null != v && (0, n.jsx)(Y, { recurrence: { ...a, code: v }, analyticsLocations: C }),
+            null != v && (0, n.jsx)(F, { recurrence: { ...a, code: v }, analyticsLocations: C }),
             "footer" === p &&
                 null == v &&
-                (0, n.jsx)(H, {
+                (0, n.jsx)(Y, {
                     children: (0, n.jsx)(G, {
                         recurrence: a,
                         canBeClaimed: y,

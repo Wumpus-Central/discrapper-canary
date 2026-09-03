@@ -1,36 +1,36 @@
-t.d(l, { A: () => N });
-var s = t(477900);
-t(582128);
-var n = t(503698),
-    i = t.n(n),
-    a = t(261958),
-    r = t(444570),
-    c = t(866665),
-    u = t(939249),
-    d = t(183555),
-    o = t(612630),
-    x = t(518477),
-    h = t(375708),
-    m = t(935922);
-function N(e) {
-    let { userId: l, isVisible: t, onOpenProfile: n } = e,
-        { note: N } = (0, o.A)(l),
-        j = null != N && "" !== N,
-        v = j ? a.u : r.i,
-        A = j ? h.intl.string(h.t["gs+qcM"]) : h.intl.string(h.t["1ZZtts"]),
-        p = j ? N : h.intl.string(h.t["1ZZtts"]),
-        { trackUserProfileAction: g } = (0, d.NJ)();
-    return (0, s.jsx)(c.m, {
+n.d(i, { A: () => x });
+var s = n(477900);
+n(582128);
+var r = n(503698),
+    a = n.n(r),
+    c = n(261958),
+    e = n(444570),
+    l = n(866665),
+    o = n(939249),
+    u = n(183555),
+    d = n(612630),
+    h = n(518477),
+    p = n(375708),
+    k = n(935922);
+function x(t) {
+    let { userId: i, isVisible: n, onOpenProfile: r } = t,
+        { note: x } = (0, d.A)(i),
+        b = null != x && "" !== x,
+        g = b ? c.u : e.i,
+        C = b ? p.intl.string(p.t["gs+qcM"]) : p.intl.string(p.t["1ZZtts"]),
+        N = b ? x : p.intl.string(p.t["1ZZtts"]),
+        { trackUserProfileAction: _ } = (0, u.NJ)();
+    return (0, s.jsx)(l.m, {
         asContainer: !0,
-        text: p,
-        ariaHidden: !j,
-        children: (0, s.jsx)(u.D, {
-            "aria-label": A,
+        text: N,
+        ariaHidden: !b,
+        children: (0, s.jsx)(o.D, {
+            "aria-label": C,
             onClick: function () {
-                g({ action: "PRESS_ADD_NOTE" }), n?.({ tabSection: x.RP.USER_INFO, scrollTarget: x.bk.NOTE });
+                _({ action: "PRESS_ADD_NOTE" }), r?.({ tabSection: h.RP.USER_INFO, scrollTarget: h.bk.NOTE });
             },
-            className: i()(m.x, t && m.R),
-            children: (0, s.jsx)(v, { size: "xs", color: "currentColor" }),
+            className: a()(k.x, n && k.R),
+            children: (0, s.jsx)(g, { size: "xs", color: "currentColor" }),
         }),
     });
 }

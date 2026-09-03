@@ -28,8 +28,8 @@ function j(e) {
     let { context: n, activityItem: t, onClick: l, aspectRatio: a = 0, animatedDivClass: _, commandOrigin: j } = e,
         {
             onActivityItemSelected: N,
-            imageBackground: S,
-            activityAction: b,
+            imageBackground: b,
+            activityAction: S,
             labelType: O,
         } = (0, C.Ay)({
             context: n,
@@ -57,7 +57,7 @@ function j(e) {
             [O],
         ),
         P = s.useMemo(() => {
-            switch (b) {
+            switch (S) {
                 case C.o6.JOIN:
                     return (0, i.jsx)("div", {
                         className: I.m9,
@@ -86,7 +86,7 @@ function j(e) {
                 default:
                     return null;
             }
-        }, [b]);
+        }, [S]);
     return (0, i.jsx)(d.D, {
         onClick: N,
         onFocus: M,
@@ -113,7 +113,7 @@ function j(e) {
                                     style: { transform: n.to([0, 1], [1, 1.05]).to((e) => `scale(${e})`) },
                                     children: [
                                         (0, i.jsx)(E.A, {
-                                            imageBackground: S,
+                                            imageBackground: b,
                                             applicationName: t.application.name,
                                             imageClassName: I.jj,
                                             imageNotFoundClassName: I.v_,

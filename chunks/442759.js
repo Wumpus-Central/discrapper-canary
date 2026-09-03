@@ -1,43 +1,43 @@
-r.d(e, { f5: () => a }), r(321073);
+r.d(t, { f5: () => n }), r(321073);
 var s = r(582128),
-    i = r(575593);
+    a = r(575593);
 r(375708);
-class f {
+class i {
     itemsByTypes;
-    constructor(t) {
-        this.itemsByTypes = this.sortByTypes(t);
+    constructor(e) {
+        this.itemsByTypes = this.sortByTypes(e);
     }
     get firstAvatarDecoration() {
-        return this.getFirstItemByType(i.R.AVATAR_DECORATION);
+        return this.getFirstItemByType(a.R.AVATAR_DECORATION);
     }
     get firstProfileEffect() {
-        return this.getFirstItemByType(i.R.PROFILE_EFFECT);
+        return this.getFirstItemByType(a.R.PROFILE_EFFECT);
     }
     get firstNameplate() {
-        return this.getFirstItemByType(i.R.NAMEPLATE);
+        return this.getFirstItemByType(a.R.NAMEPLATE);
     }
     get firstProfileFrame() {
-        return this.getFirstItemByType(i.R.PROFILE_FRAME);
+        return this.getFirstItemByType(a.R.PROFILE_FRAME);
     }
-    getFirstItemByType(t) {
-        let e = (this.itemsByTypes.get(t) ?? [])[0];
-        if (null != e) return e;
+    getFirstItemByType(e) {
+        let t = (this.itemsByTypes.get(e) ?? [])[0];
+        if (null != t) return t;
     }
-    sortByTypes(t) {
-        return t.reduce((t, e) => {
-            let r = t.get(e.type);
-            return null != r ? r.push(e) : t.set(e.type, [e]), t;
+    sortByTypes(e) {
+        return e.reduce((e, t) => {
+            let r = e.get(t.type);
+            return null != r ? r.push(t) : e.set(t.type, [t]), e;
         }, new Map());
     }
 }
-function a(t) {
+function n(e) {
     return s.useMemo(() => {
-        let e = new f(t.items);
+        let t = new i(e.items);
         return {
-            firstProfileEffect: e.firstProfileEffect,
-            firstAvatarDecoration: e.firstAvatarDecoration,
-            firstNameplate: e.firstNameplate,
-            firstProfileFrame: e.firstProfileFrame,
+            firstProfileEffect: t.firstProfileEffect,
+            firstAvatarDecoration: t.firstAvatarDecoration,
+            firstNameplate: t.firstNameplate,
+            firstProfileFrame: t.firstProfileFrame,
         };
-    }, [t]);
+    }, [e]);
 }

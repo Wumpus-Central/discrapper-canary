@@ -25,8 +25,8 @@ function h(e) {
             onMouseLeave: A,
             "aria-label": x,
             "aria-checked": v,
-            role: C,
-            plated: E,
+            role: E,
+            plated: C,
             ref: T,
         } = e,
         _ =
@@ -42,7 +42,7 @@ function h(e) {
         disabled: o,
         innerClassName: m,
         wrapperClassName: a()(u.x6, p),
-        className: a()(u.x6, p, { [u.Xr]: g, [u.r9]: o, [u.Sn]: !o, [u.ZQ]: E, [u.OH]: g && E }),
+        className: a()(u.x6, p, { [u.Xr]: g, [u.r9]: o, [u.Sn]: !o, [u.ZQ]: C, [u.OH]: g && C }),
         onClick: (e) => {
             null != l && l(e);
         },
@@ -50,7 +50,7 @@ function h(e) {
         onMouseEnter: f,
         onMouseLeave: A,
         onContextMenu: n,
-        role: C,
+        role: E,
         "aria-checked": v,
         focusProps: { offset: { left: -1, top: -1, right: 1, bottom: 1 } },
         children: [

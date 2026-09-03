@@ -6,14 +6,14 @@ var i = n(477900),
     a = n(307301),
     o = n(834730);
 n(321073);
-var d = n(477782),
-    c = n(980707),
+var c = n(477782),
+    d = n(980707),
     u = n(753437),
     g = n(375708),
     m = n(382701);
 let x = l.memo(function (e) {
     let { currentTags: t, onTagSelect: n, onNoneSelect: l, onClose: s } = e;
-    return (0, i.jsx)(c.W, {
+    return (0, i.jsx)(d.W, {
         "data-menu-migrated-auto": !0,
         navId: "widget-game-tags",
         "aria-label": g.intl.string(g.t.r6EJOu),
@@ -28,7 +28,7 @@ let x = l.memo(function (e) {
                     a.type === u.me.RADIO &&
                         s.push(
                             (0, i.jsx)(
-                                d.iD,
+                                c.iD,
                                 {
                                     id: `${r}-none`,
                                     group: r,
@@ -45,7 +45,7 @@ let x = l.memo(function (e) {
                             (a.type === u.me.RADIO
                                 ? s.push(
                                       (0, i.jsx)(
-                                          d.iD,
+                                          c.iD,
                                           {
                                               id: e,
                                               group: r,
@@ -58,26 +58,26 @@ let x = l.memo(function (e) {
                                   )
                                 : s.push(
                                       (0, i.jsx)(
-                                          d.sL,
+                                          c.sL,
                                           { id: e, label: l.getText(), checked: t.includes(e), action: () => n(e, !1) },
                                           e,
                                       ),
                                   ));
                     }),
                     s);
-            return (0, i.jsx)(d.rX, { label: a.getLabel(), children: o }, r);
+            return (0, i.jsx)(c.rX, { label: a.getLabel(), children: o }, r);
         }),
     });
 });
 function f(e) {
-    let { tags: t, onTagsChange: n, onOpen: d, onClose: c, variant: f = "default", ref: h } = e,
+    let { tags: t, onTagsChange: n, onOpen: c, onClose: d, variant: f = "default", ref: h } = e,
         p = "filled" === f,
-        j = (0, l.useRef)(null),
-        I = (0, l.useMemo)(() => (null != t ? t : []), [t]),
+        I = (0, l.useRef)(null),
+        j = (0, l.useMemo)(() => (null != t ? t : []), [t]),
         A = (0, l.useCallback)(
             function (e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-                    i = new Set(I),
+                    i = new Set(j),
                     l = "added";
                 if (t) {
                     let t = Object.values(u.Pb).find((t) => t.tags.includes(e));
@@ -89,34 +89,34 @@ function f(e) {
                 } else i.has(e) ? (i.delete(e), (l = "removed")) : i.add(e);
                 n(Array.from(i), l);
             },
-            [I, n],
+            [j, n],
         ),
-        v = (0, l.useCallback)(
+        E = (0, l.useCallback)(
             (e) => {
-                let t = new Set(I);
+                let t = new Set(j);
                 e.forEach((e) => {
                     t.delete(e);
                 }),
                     n(Array.from(t), "removed");
             },
-            [I, n],
+            [j, n],
         );
     return (0, i.jsx)(s.Y, {
-        targetElementRef: j,
+        targetElementRef: I,
         position: "right",
         align: "top",
-        onRequestOpen: d,
-        onRequestClose: c,
+        onRequestOpen: c,
+        onRequestClose: d,
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, i.jsx)(x, { currentTags: I, onTagSelect: A, onNoneSelect: v, onClose: t });
+            return (0, i.jsx)(x, { currentTags: j, onTagSelect: A, onNoneSelect: E, onClose: t });
         },
         children: (e) =>
             (0, i.jsx)("div", {
                 ref: (e) => (
-                    null != e && ((j.current = e), (h.current = e)),
+                    null != e && ((I.current = e), (h.current = e)),
                     () => {
-                        (j.current = null), (h.current = null);
+                        (I.current = null), (h.current = null);
                     }
                 ),
                 children: (0, i.jsxs)(r.D, {

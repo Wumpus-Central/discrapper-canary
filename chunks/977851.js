@@ -47,8 +47,8 @@ function _(e) {
         } = e,
         { parentAnalyticsLocation: j } = (0, u.Ay)(),
         { disabled: N } = _,
-        S = i.useRef(null),
-        b = (0, o.bG)([d.A], () => d.A.getChatOpen(t), [t]),
+        b = i.useRef(null),
+        S = (0, o.bG)([d.A], () => d.A.getChatOpen(t), [t]),
         {
             isShowing: O,
             unreadCount: y,
@@ -70,8 +70,8 @@ function _(e) {
             );
         })(t),
         M = i.useCallback(() => {
-            (0, A.X)(j, A.O.CHAT, !b), m?.(), !b && C && g?.(), c.A.updateChatOpen(t, !b);
-        }, [t, b, m, C, g, j]),
+            (0, A.X)(j, A.O.CHAT, !S), m?.(), !S && C && g?.(), c.A.updateChatOpen(t, !S);
+        }, [t, S, m, C, g, j]),
         L = i.useCallback(
             (e) => {
                 let { className: n } = e;
@@ -80,7 +80,7 @@ function _(e) {
             [t],
         ),
         D = i.useCallback(() => {
-            S.current?.focus();
+            b.current?.focus();
         }, []);
     (0, E.Vo)({ event: x.jej.FOCUS_CHAT_BUTTON, handler: N ? null : D });
     let [P, k] = i.useState(!1),
@@ -100,12 +100,12 @@ function _(e) {
                 }
             );
         }, [P]);
-    let V = [(n = h && N ? I.intl.string(I.t.DPgc5h) : b ? I.intl.string(I.t.nthdxB) : I.intl.string(I.t["5KxXrK"]))];
+    let V = [(n = h && N ? I.intl.string(I.t.DPgc5h) : S ? I.intl.string(I.t.nthdxB) : I.intl.string(I.t["5KxXrK"]))];
     return (
         R > 0 && V.push(I.intl.formatToPlainString(I.t["3l1GOx"], { mentionCount: R })),
         y > 0 && V.push(I.intl.string(I.t.x5zAGZ)),
         (0, l.jsx)(f.A, {
-            buttonRef: S,
+            buttonRef: b,
             onClick: M,
             label: n,
             "aria-label": V.join(", "),

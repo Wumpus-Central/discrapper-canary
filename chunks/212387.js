@@ -1,51 +1,51 @@
-t.d(s, { $: () => U, A: () => B });
+t.d(s, { $: () => z, A: () => U });
 var i = t(477900),
     n = t(582128),
-    a = t(503698),
-    r = t.n(a),
-    l = t(890856),
+    l = t(503698),
+    r = t.n(l),
+    a = t(890856),
     c = t(140735),
     u = t(707554),
     d = t(17928),
     o = t(97808),
     h = t(587895),
-    x = t(713517),
+    g = t(713517),
     m = t(575593),
-    g = t(38021),
-    j = t(844222),
-    I = t(583094),
-    p = t(661531),
-    E = t(775602),
-    f = t(139136),
-    v = t(665411),
-    A = t(474012),
+    x = t(38021),
+    f = t(844222),
+    p = t(583094),
+    j = t(661531),
+    v = t(775602),
+    I = t(139136),
+    A = t(665411),
+    E = t(474012),
     N = t(929283),
-    R = t(245068),
-    C = t(761365),
-    T = t(366523),
+    C = t(245068),
+    R = t(761365),
+    b = t(366523),
     L = t(403362),
-    _ = t(652215),
+    T = t(652215),
     k = t(778712),
-    b = t(880465);
-function S(e) {
-    let { sku: s, isFocused: t, user: a, guildId: r } = e,
-        l = n.useMemo(() => (0, A.T)(s), [s]);
-    if (null == l) return null;
-    if ("bundle" === l.type) {
-        let e = l.previewAssets?.fgStatic != null;
+    P = t(880465);
+function _(e) {
+    let { sku: s, isFocused: t, user: l, guildId: r } = e,
+        a = n.useMemo(() => (0, E.T)(s), [s]);
+    if (null == a) return null;
+    if ("bundle" === a.type) {
+        let e = a.previewAssets?.fgStatic != null;
         return (0, i.jsx)("div", {
-            className: e ? b.Nq : b.hT,
-            children: (0, i.jsx)(R.X, { product: l, isHighlighted: t, user: a }),
+            className: e ? P.Nq : P.hT,
+            children: (0, i.jsx)(C.X, { product: a, isHighlighted: t, user: l }),
         });
     }
-    switch (l.item.type) {
+    switch (a.item.type) {
         case m.R.AVATAR_DECORATION:
-            return (0, i.jsx)(N.i, { user: a, guildId: r, avatarSize: k._3.SIZE_80, item: l.item, isHighlighted: t });
+            return (0, i.jsx)(N.i, { user: l, guildId: r, avatarSize: k._3.SIZE_80, item: a.item, isHighlighted: t });
         case m.R.PROFILE_EFFECT:
             return (0, i.jsx)("div", {
-                className: b.xC,
-                children: (0, i.jsx)(f.A, {
-                    skuId: l.item.skuId,
+                className: P.xC,
+                children: (0, i.jsx)(I.A, {
+                    skuId: a.item.skuId,
                     isHighlighted: t,
                     removeSetHeight: !0,
                     hideBackground: !0,
@@ -53,13 +53,13 @@ function S(e) {
             });
         case m.R.NAMEPLATE:
             return (0, i.jsx)("div", {
-                className: b.M4,
+                className: P.M4,
                 children: (0, i.jsx)("div", {
-                    className: b.N1,
-                    children: (0, i.jsx)(C.A, {
-                        user: a,
+                    className: P.N1,
+                    children: (0, i.jsx)(R.A, {
+                        user: l,
                         guildId: r,
-                        nameplate: l.item,
+                        nameplate: a.item,
                         isHighlighted: t,
                         size: "small",
                     }),
@@ -67,125 +67,125 @@ function S(e) {
             });
         case m.R.PROFILE_FRAME:
             return (0, i.jsx)("div", {
-                className: b.pI,
-                children: (0, i.jsx)(v.A, { frame: l.item, transparentBackground: !0 }),
+                className: P.pI,
+                children: (0, i.jsx)(A.A, { frame: a.item, transparentBackground: !0 }),
             });
         default:
             return null;
     }
 }
-function M(e) {
+function F(e) {
     let { sku: s, isFocused: t } = e;
-    return (0, i.jsx)(T.e, {
+    return (0, i.jsx)(b.e, {
         shape: "custom",
-        containerClassName: r()(b.JS, t && b.P3),
-        backgroundImageClassName: b.m1,
-        foregroundImageClassName: b.aF,
+        containerClassName: r()(P.JS, t && P.P3),
+        backgroundImageClassName: P.m1,
+        foregroundImageClassName: P.aF,
         sku: s,
     });
 }
-function O(e) {
-    let { eventTargetRef: s, assetClassName: t, disableHover: a } = e,
-        l = (0, d.bG)([E.Ay], () => E.Ay.useReducedMotion),
-        { theme: c, saturation: u } = (0, g.wR)(),
-        { highContrastModeEnabled: o } = n.useContext(j.C),
-        [h, x, m, f] = p.A.colors.TEXT_DEFAULT.resolve({ theme: c, saturation: u, highContrastModeEnabled: o }).rgba();
+function S(e) {
+    let { eventTargetRef: s, assetClassName: t, disableHover: l } = e,
+        a = (0, d.bG)([v.Ay], () => v.Ay.useReducedMotion),
+        { theme: c, saturation: u } = (0, x.wR)(),
+        { highContrastModeEnabled: o } = n.useContext(f.C),
+        [h, g, m, I] = j.A.colors.TEXT_DEFAULT.resolve({ theme: c, saturation: u, highContrastModeEnabled: o }).rgba();
     return (0, i.jsx)("div", {
-        className: b.yv,
-        children: (0, i.jsx)(I.u, {
-            className: r()(b.MO, t),
-            dataBinding: { reducedMotion: a || l, logoColor: { r: h, g: x, b: m, a: f } },
+        className: P.yv,
+        children: (0, i.jsx)(p.u, {
+            className: r()(P.MO, t),
+            dataBinding: { reducedMotion: l || a, logoColor: { r: h, g, b: m, a: I } },
             eventTargetRef: s,
             fit: "contain",
         }),
     });
 }
 function y(e) {
-    let { sku: s, isFocused: t, user: n, guildId: a, eventTargetRef: r, assetClassName: l, disableHover: c } = e;
+    let { sku: s, isFocused: t, user: n, guildId: l, eventTargetRef: r, assetClassName: a, disableHover: c } = e;
     switch (s.productLine) {
-        case _.EZt.COLLECTIBLES:
-            return (0, i.jsx)(S, { sku: s, isFocused: t, user: n, guildId: a });
-        case _.EZt.SOCIAL_LAYER_GAME_ITEM:
-            return (0, i.jsx)(M, { sku: s, isFocused: t });
-        case _.EZt.APPLICATION:
-        case _.EZt.BOOST:
-        case _.EZt.GUILD_ROLE:
+        case T.EZt.COLLECTIBLES:
+            return (0, i.jsx)(_, { sku: s, isFocused: t, user: n, guildId: l });
+        case T.EZt.SOCIAL_LAYER_GAME_ITEM:
+            return (0, i.jsx)(F, { sku: s, isFocused: t });
+        case T.EZt.APPLICATION:
+        case T.EZt.BOOST:
+        case T.EZt.GUILD_ROLE:
             return null;
-        case _.EZt.PREMIUM:
-            return (0, i.jsx)(O, { eventTargetRef: r, assetClassName: l, disableHover: c });
-        case _.EZt.GUILD_PRODUCT:
+        case T.EZt.PREMIUM:
+            return (0, i.jsx)(S, { eventTargetRef: r, assetClassName: a, disableHover: c });
+        case T.EZt.GUILD_PRODUCT:
             return null;
         default:
             (0, L.xb)(s.productLine);
     }
 }
-var F = t(661492),
-    P = t(627001),
+var M = t(661492),
+    O = t(627001),
     Z = t(375708),
     w = t(491685),
-    H = t(476324);
-function z(e) {
+    G = t(476324);
+function H(e) {
     return { width: e.size, height: e.size };
 }
-function U(e) {
+function z(e) {
     let { spec: s, cardStyle: t } = e;
     return (0, i.jsx)("div", {
         className: r()(w.Nr, t),
-        style: z(s),
+        style: H(s),
         children: (0, i.jsx)("div", {
             className: w.ho,
-            children: (0, i.jsx)(o.eu, { src: H, size: k._3.SIZE_80, "aria-label": Z.intl.string(Z.t.lqaIxI) }),
+            children: (0, i.jsx)(o.eu, { src: G, size: k._3.SIZE_80, "aria-label": Z.intl.string(Z.t.lqaIxI) }),
         }),
     });
 }
-function B(e) {
+function U(e) {
     let {
             sku: s,
             user: t,
-            guildId: a,
+            guildId: l,
             spec: o,
             children: m,
-            cardStyle: g,
-            skuPreviewStyle: j,
-            skuAssetClassName: I,
-            disableHoverOrFocus: p,
-            disableRiveHover: E,
-            onHoverOrFocusChange: f,
-            onClick: v,
-            "aria-label": A,
+            cardStyle: x,
+            skuPreviewStyle: f,
+            skuAssetClassName: p,
+            disableHoverOrFocus: j,
+            disableRiveHover: v,
+            onHoverOrFocusChange: I,
+            onClick: A,
+            "aria-label": E,
         } = e,
         N = n.useRef(null),
-        { isHoveringOrFocusing: R } = (0, x.A)(N),
-        C = n.useRef(f),
-        T = (0, d.bG)([h.A], () => h.A.getApplication(s.applicationId));
+        { isHoveringOrFocusing: C } = (0, g.A)(N),
+        R = n.useRef(I),
+        b = (0, d.bG)([h.A], () => h.A.getApplication(s.applicationId));
     return (
         n.useEffect(() => {
-            C.current = f;
-        }, [f]),
+            R.current = I;
+        }, [I]),
         n.useEffect(() => {
-            C.current?.(R);
-        }, [R]),
-        (0, i.jsxs)(l.s, {
+            R.current?.(C);
+        }, [C]),
+        (0, i.jsxs)(a.s, {
             ref: N,
-            className: r()(w.Nr, g),
-            onClick: v,
-            "aria-label": A,
-            style: z(o),
+            className: r()(w.Nr, x),
+            onClick: A,
+            "aria-label": E,
+            style: H(o),
             children: [
-                (0, i.jsx)(c.A, { children: (0, i.jsx)(u.H, { children: (0, F.T)(s) }) }),
+                (0, i.jsx)(c.A, { children: (0, i.jsx)(u.H, { children: (0, M.T)(s) }) }),
                 (0, i.jsx)("div", {
-                    className: r()(w.ev, j),
+                    className: r()(w.ev, f),
                     children: (0, i.jsx)(y, {
                         sku: s,
-                        isFocused: !p && R,
+                        isFocused: !j && C,
                         user: t,
-                        guildId: a,
-                        eventTargetRef: E ? void 0 : N,
-                        assetClassName: I,
-                        disableHover: E,
+                        guildId: l,
+                        eventTargetRef: v ? void 0 : N,
+                        assetClassName: p,
+                        disableHover: v,
                     }),
                 }),
-                (0, i.jsx)(P.P, { spec: o, application: T }),
+                (0, i.jsx)(O.P, { spec: o, application: b }),
                 m,
             ],
         })

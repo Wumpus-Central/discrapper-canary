@@ -109,8 +109,8 @@ function w(e) {
 }
 var H = n(519222),
     V = n(356974),
-    B = n(988626);
-function F(e) {
+    F = n(988626);
+function B(e) {
     let { message: t, channel: n, useChatFontScaling: s, className: r } = e,
         c = (0, _.jv)("message_reactions"),
         d = (0, h.bG)([v.A], () => v.A.getSavedMessage(n.id, t.id)),
@@ -147,7 +147,7 @@ function F(e) {
         })(x);
     if ((!(0, h.bG)([b], () => b.hasRecentlyReacted(n.id, t.id)) && !u) || !c || t.author.id === f.default.getId() || m)
         return null;
-    let N = s ? B : V,
+    let N = s ? F : V,
         j = u ? g.BookmarkIcon : A.c;
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -198,7 +198,7 @@ let Q = l.memo(function (e) {
             E = x === u.v.BURST,
             I = (0, Z.IN)(c, d, x),
             C = (0, X.g)(E && null != h ? h : []),
-            _ = l ? B : V,
+            _ = l ? F : V,
             v = E ? m : o,
             N = (0, W.x)(v, q.$),
             j = {};
@@ -278,7 +278,7 @@ class et extends l.PureComponent {
                 visibleReactionsCount: I,
             } = this.props,
             { disableTransitionAppear: C } = this.state,
-            _ = p ? B : V;
+            _ = p ? F : V;
         return I > 0
             ? (0, i.jsxs)(r.F, {
                   component: "div",
@@ -314,7 +314,7 @@ class et extends l.PureComponent {
                       !t &&
                           !x &&
                           (0, i.jsx)(m.t, { message: e, channel: h, useChatFontScaling: p, className: _.forceShow }),
-                      !u && (0, i.jsx)(F, { message: e, channel: h, useChatFontScaling: p }),
+                      !u && (0, i.jsx)(B, { message: e, channel: h, useChatFontScaling: p }),
                   ],
               })
             : null;

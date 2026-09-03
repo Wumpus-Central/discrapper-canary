@@ -28,7 +28,7 @@ function x(e) {
     function N() {
         null != T && (0, p.A)(T) ? (0, C.Py)(T, x) : t();
     }
-    function S() {
+    function b() {
         null != I && E.default.endEvent(I.id, I.guild_id);
     }
     return _
@@ -46,7 +46,7 @@ function x(e) {
                           children: (0, l.jsx)(o.Dr, {
                               id: "end-voice-event",
                               color: "danger",
-                              action: S,
+                              action: b,
                               label: f.intl.string(f.t.qaYzPA),
                               leadingAccessory: { type: "icon", icon: c.a },
                               icon: c.a,
