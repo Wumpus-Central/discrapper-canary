@@ -198,6 +198,7 @@
 }
 
 .sidebar__409aa {
+    background-color: var(--background-base-lower);
     border-inline-end: 1px solid var(--border-muted);
     display: flex;
     flex: 0 0 240px;
@@ -311,4 +312,4 @@
     height: 100%
 }
 
-/*# sourceMappingURL=7003e4b02a7e0fdd.css.map*/
+/*# sourceMappingURL=90d2b19f860294e7.css.map*/
