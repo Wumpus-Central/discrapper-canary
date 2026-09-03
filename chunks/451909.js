@@ -69,6 +69,7 @@ let k = _.Ay.RULES,
     W = /(@everyone|@here|@Clyde)\b/,
     Y = /^[^\s]+@[^\s]+\.[^\s.]+/,
     K = {
+        escape: G(k.escape),
         link: G(s().defaultRules.link),
         autolink: G(s().defaultRules.autolink),
         url: G(s().defaultRules.url),
