@@ -20,38 +20,39 @@ let b = function (t) {
             onClose: C,
             onSecondaryClick: h,
             secondaryCTA: T,
-            badgeType: x = null,
-            subscriptionTier: g = p.pe.TIER_2,
-            hidePremiumOfferUpsell: y,
-            children: m,
+            gradientColor: x = "nitro-pink",
+            badgeType: g = null,
+            subscriptionTier: y = p.pe.TIER_2,
+            hidePremiumOfferUpsell: m,
+            children: w,
         } = t,
-        w = (0, o.V)(),
-        _ = (0, s.O)(),
-        f = !y && (w?.subscriptionTrial?.skuId === g || (0, u.U9)(_, g)) && null == v,
-        j = d.intl.string(d.t.pj0XBN);
-    f &&
-        (null != w
-            ? (j = (0, l.FY)({
-                  intervalType: w?.subscriptionTrial?.interval,
-                  intervalCount: w?.subscriptionTrial?.intervalCount,
+        _ = (0, o.V)(),
+        f = (0, s.O)(),
+        j = !m && (_?.subscriptionTrial?.skuId === y || (0, u.U9)(f, y)) && null == v,
+        z = d.intl.string(d.t.pj0XBN);
+    j &&
+        (null != _
+            ? (z = (0, l.FY)({
+                  intervalType: _?.subscriptionTrial?.interval,
+                  intervalCount: _?.subscriptionTrial?.intervalCount,
               }))
-            : null != _ && (j = d.intl.formatToPlainString(d.t.bkQ4bH, { percent: _.discount.amount })));
-    let z = "beta" === x ? "beta" : null != w ? "free_trial" : x;
+            : null != f && (z = d.intl.formatToPlainString(d.t.bkQ4bH, { percent: f.discount.amount })));
+    let A = "beta" === g ? "beta" : null != _ ? "free_trial" : g;
     return (0, e.jsx)(c.A, {
-        subscriptionTier: g,
+        subscriptionTier: y,
         children: (t) => {
             let { onClick: l } = t;
             return (0, e.jsx)(a.k, {
                 title: n,
                 subtitle: b,
                 graphic: k,
-                gradientColor: "nitro-pink",
+                gradientColor: x,
                 transitionState: i,
                 onClose: async () => await C(),
                 actions: [
                     { text: T, variant: "secondary", size: "md", onClick: h },
                     {
-                        text: j,
+                        text: z,
                         variant: "expressive",
                         size: "md",
                         onClick: async (t) => {
@@ -60,8 +61,8 @@ let b = function (t) {
                         icon: r.t,
                     },
                 ],
-                ...(null !== z && { badge: { type: z, variant: "expressive" } }),
-                children: m,
+                ...(null !== A && { badge: { type: A, variant: "expressive" } }),
+                children: w,
             });
         },
     });

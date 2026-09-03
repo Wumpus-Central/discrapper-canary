@@ -5,6 +5,11 @@
     padding: var(--space-md)
 }
 
+.containerWithUpsell_b2dcc1 {
+    border-bottom: none;
+    border-radius: var(--radius-md) var(--radius-md) 0 0
+}
+
 .headerContainer_b2dcc1 {
     display: flex;
     justify-content: space-between
@@ -22,6 +27,21 @@
     gap: var(--space-xs);
     grid-template-columns: repeat(3, 1fr);
     padding-top: var(--space-sm)
+}
+
+.upsellBanner_b2dcc1 {
+    align-items: center;
+    background-color: var(--modal-background);
+    background-image: radial-gradient(410.96% 144.82% at 50% 144.82%, var(--modal-background) 60%, rgba(20, 20, 21, 0) 100%), linear-gradient(99deg, rgba(25, 23, 92, .65) 1.67%, rgba(140, 50, 151, .65) 87.95%, rgba(6, 6, 6, .65) 174.23%);
+    background-position: 50% -1px;
+    background-repeat: no-repeat;
+    background-size: 100% 494px;
+    border: 1px solid var(--border-subtle);
+    border-radius: 0 0 var(--radius-md) var(--radius-md);
+    border-top: none;
+    display: flex;
+    justify-content: space-between;
+    padding: var(--space-sm) var(--space-md) var(--space-sm)
 }
 
 .container__9fa5a {
@@ -104,4 +124,4 @@
     transform: scale(1.025)
 }
 
-/*# sourceMappingURL=740705.e2cc58bae37c562c.css.map*/
+/*# sourceMappingURL=740705.5fa57ce7a9db4950.css.map*/

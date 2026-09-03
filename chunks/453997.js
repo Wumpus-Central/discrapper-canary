@@ -108,6 +108,7 @@ function _(e) {
                 return i ? [...d, e] : d;
             }, [r, s, t, n]);
         })({ allSounds: h, currentGuildId: n, unlockedFavoritesAndFrequentlyUsedSounds: p, lockedSounds: T }),
+        hasLockedSound: T.length > 0,
         isFetching: A,
     };
 }
