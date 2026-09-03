@@ -82,9 +82,8 @@ function L() {
 function y(e) {
     if (h.A.getStorefrontGuildIds().has(e.id)) return !0;
     if ("type" in e) return !1;
-    let t = Z(e, h.A.getApplicationIdFromGuildId(e.id)),
-        n = h.A.getStorefrontApplicationIds();
-    return !!(null != t && n.has(t)) || (e.features?.has(p.GuildFeatures.SOCIAL_LAYER_STOREFRONT) ?? !1);
+    let t = Z(e, h.A.getApplicationIdFromGuildId(e.id));
+    return !!h.A.hasStorefrontForApplicationId(t) || (e.features?.has(p.GuildFeatures.SOCIAL_LAYER_STOREFRONT) ?? !1);
 }
 function D(e) {
     return { logoAssetId: e.logo_asset_id ?? null, lightThemeLogoAssetId: e.light_theme_logo_asset_id ?? null };

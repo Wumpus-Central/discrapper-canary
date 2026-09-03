@@ -1458,7 +1458,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19));
 let e2 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new eB.A().log(
-    `[BUILD INFO] Release Channel: ${e2}, Build Number: 606965, Version Hash: f3a68802057889233e8c1c673d48c8d54265c1d1`,
+    `[BUILD INFO] Release Channel: ${e2}, Build Number: 606970, Version Hash: 3da217d7117d7248f2a2be08e8001291ee5b073c`,
 ),
     D.A.setTags({ appContext: G.QCW }),
     eI.A.initBasic(),
@@ -21041,7 +21041,7 @@ let NA = "isHideDevBanner",
                     className: ta()(NE.Wz, NE.mr),
                     children: [
                         (0, O.jsx)(N_, { className: NE.Kk }),
-                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "606965" }),
+                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "606970" }),
                         (0, O.jsx)(r, {}),
                     ],
                 })
@@ -45113,8 +45113,8 @@ let xN = [
                             n.e("501962"),
                             n.e("893767"),
                             n.e("238672"),
-                            n.e("759842"),
-                        ]).then(n.bind(n, 743609));
+                            n.e("795732"),
+                        ]).then(n.bind(n, 92287));
                         return (t) => (0, O.jsx)(e, { gameId: i, source: lt.GameProfileSources.Deeplink, ...t });
                     });
                 }),

@@ -100,6 +100,9 @@ class b extends r.Ay.Store {
     getStorefrontApplicationIds() {
         return g;
     }
+    hasStorefrontForApplicationId(e) {
+        return null != e && g.has(e);
+    }
     getStorefrontGuildIds() {
         return R;
     }

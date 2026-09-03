@@ -31,8 +31,7 @@ function _(e) {
         shouldHideGuildPurchaseEntryPoints:
             !(
                 t?.features.has(c.GuildFeatures.CREATOR_MONETIZABLE) ||
-                t?.features.has(c.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL) ||
-                t?.features.has(c.GuildFeatures.SOCIAL_LAYER_STOREFRONT)
+                t?.features.has(c.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL)
             ) || (i ? (t?.features.has(c.GuildFeatures.CREATOR_MONETIZABLE_RESTRICTED) ?? !0) : (0, d.Y5)(n)),
         restrictionsLoading: i,
     };
