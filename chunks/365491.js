@@ -237,7 +237,6 @@ function p(e) {
                     sort_direction: u.sortDirection,
                     search: "" !== f ? f : void 0,
                     include_unpublished: !!t || void 0,
-                    representative_only: !!r || void 0,
                     published_collections_only: !!r || void 0,
                 };
             })(t, e, l);

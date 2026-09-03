@@ -100,6 +100,7 @@ let C = Object.assign(
                 onOpenChange: s,
                 reference: r,
                 returnFocusElement: r,
+                ownerDocument: r?.ownerDocument,
                 focus: "non-modal",
                 placement: d,
                 spacing: -16,
