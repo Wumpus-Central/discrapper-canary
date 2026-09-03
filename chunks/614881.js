@@ -4,7 +4,7 @@ var i = n(477900),
     a = n(684339),
     s = n(51092),
     r = n(280450),
-    o = n(45630),
+    o = n(916546),
     c = n(85448);
 function d(e) {
     let { participant: t, avatarClassName: n, children: d, ...u } = e,

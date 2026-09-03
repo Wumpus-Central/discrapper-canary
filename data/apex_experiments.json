@@ -125,53 +125,6 @@
     }
   },
   {
-    "kind": "user",
-    "name": "2025-09-agc2-v2",
-    "defaultConfig": {
-      "noiseCancellationDuringProcessing": false,
-      "noiseCancellationConfig": {
-        "useAGC2": false
-      }
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "noiseCancellationDuringProcessing": true,
-        "noiseCancellationConfig": {
-          "useAGC2": false
-        }
-      },
-      "2": {
-        "noiseCancellationDuringProcessing": true,
-        "noiseCancellationConfig": null,
-        "vadKrispActivationThreshold": 0.5
-      },
-      "3": {
-        "noiseCancellationDuringProcessing": true,
-        "noiseCancellationConfig": null,
-        "vadKrispActivationThreshold": 0.7
-      },
-      "4": {
-        "noiseCancellationDuringProcessing": true,
-        "noiseCancellationConfig": null,
-        "vadKrispActivationThreshold": 0.8
-      },
-      "5": {
-        "noiseCancellationDuringProcessing": true,
-        "noiseCancellationConfig": null,
-        "vadKrispActivationThreshold": 0.9
-      },
-      "6": {
-        "noiseCancellationDuringProcessing": true,
-        "noiseCancellationConfig": null,
-        "vadKrispActivationThreshold": 0.95
-      }
-    }
-  },
-  {
     "name": "2025-09-image-attachment-mezzanine-v2",
     "kind": "user",
     "defaultConfig": {
