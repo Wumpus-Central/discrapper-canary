@@ -1,4 +1,4 @@
-l.r(t), l.d(t, { slayerStorefrontPlaygroundConfig: () => en, storefrontCollection: () => eo });
+l.r(t), l.d(t, { slayerStorefrontPlaygroundConfig: () => er, storefrontCollection: () => en });
 var a = l(34188),
     o = l(477900),
     n = l(582128),
@@ -10,19 +10,20 @@ var a = l(34188),
     c = l(536637),
     p = l.n(c),
     m = l(122817),
-    b = l(17928),
-    g = l(228366),
-    f = l(288106),
-    y = l(95701),
-    h = l(280450),
-    S = l(652215),
-    E = l(818348);
-let I = "000000000000000100",
-    v = "000000000000000200",
-    x = "000000000000000300",
+    b = l(136722),
+    g = l(17928),
+    f = l(228366),
+    y = l(288106),
+    h = l(95701),
+    S = l(280450),
+    E = l(652215),
+    I = l(818348);
+let v = "000000000000000100",
+    x = "000000000000000200",
+    A = "000000000000000300",
     C = "000000000000000400",
-    A = "playground-nitro-promotion";
-function _(e, t, l) {
+    _ = "playground-nitro-promotion";
+function R(e, t, l) {
     let {
             name: a,
             price: o,
@@ -35,12 +36,12 @@ function _(e, t, l) {
         } = t,
         c = `playground-pricing-result-${e}`,
         b = `playground-reward-result-${e}`,
-        y = null != d ? p()().add(d, "days").toISOString() : void 0,
+        g = null != d ? p()().add(d, "days").toISOString() : void 0,
         h = {
             id: e,
-            type: S.Puh.DURABLE_PRIMARY,
-            application_id: v,
-            product_line: S.EZt.SOCIAL_LAYER_GAME_ITEM,
+            type: E.Puh.DURABLE_PRIMARY,
+            application_id: x,
+            product_line: E.EZt.SOCIAL_LAYER_GAME_ITEM,
             name: a,
             summary: "",
             description: "A playground preview item for testing storefront component states.",
@@ -51,7 +52,7 @@ function _(e, t, l) {
             available_regions: [],
             access_type: null,
             legal_notice: "",
-            price: { amount: o, currency: E.Yr.USD, sale_amount: n ?? void 0, sale_percentage: r ?? void 0 },
+            price: { amount: o, currency: I.Yr.USD, sale_amount: n ?? void 0, sale_percentage: r ?? void 0 },
             price_tier: 0,
             premium: !1,
             show_age_gate: !1,
@@ -64,34 +65,34 @@ function _(e, t, l) {
             bundled_sku_ids: [],
             orbs_reward: s ?? 0,
             eligible_offers: [],
-            tenant_metadata: { social_layer: { carousel_items: [], expires_at: y } },
+            tenant_metadata: { social_layer: { carousel_items: [], expires_at: g } },
         };
-    if ((g.h.dispatch({ type: "SKU_FETCH_SUCCESS", sku: h }), null != n && null != r)) {
+    if ((f.h.dispatch({ type: "SKU_FETCH_SUCCESS", sku: h }), null != n && null != r)) {
         let t = {
-            skuPriceMap: { [e]: { pricingResultId: c, storefrontPromotionIds: [A], rewardResultIds: [b] } },
+            skuPriceMap: { [e]: { pricingResultId: c, storefrontPromotionIds: [_], rewardResultIds: [b] } },
             pricingResultIdMap: {
                 [c]: {
-                    [f.QK.SELF_PURCHASE]: {
+                    [y.QK.SELF_PURCHASE]: {
                         userPrice: [
-                            { currency: E.Yr.USD, amount: n },
-                            { currency: E.Yr.DISCORD_ORB, amount: n },
+                            { currency: I.Yr.USD, amount: n },
+                            { currency: I.Yr.DISCORD_ORB, amount: n },
                         ],
                         prices: {
-                            [S.FBC.BASE]: {
-                                [f.v8.NORMAL]: [
-                                    { currency: E.Yr.USD, amount: o },
-                                    { currency: E.Yr.DISCORD_ORB, amount: o },
+                            [E.FBC.BASE]: {
+                                [y.v8.NORMAL]: [
+                                    { currency: I.Yr.USD, amount: o },
+                                    { currency: I.Yr.DISCORD_ORB, amount: o },
                                 ],
-                                [f.v8.DISCOUNTED]: [{ currency: E.Yr.USD, amount: n }],
+                                [y.v8.DISCOUNTED]: [{ currency: I.Yr.USD, amount: n }],
                             },
                         },
                     },
-                    [f.QK.GIFT]: {
-                        userPrice: [{ currency: E.Yr.USD, amount: n }],
+                    [y.QK.GIFT]: {
+                        userPrice: [{ currency: I.Yr.USD, amount: n }],
                         prices: {
-                            [S.FBC.BASE]: {
-                                [f.v8.NORMAL]: [{ currency: E.Yr.USD, amount: o }],
-                                [f.v8.DISCOUNTED]: [{ currency: E.Yr.USD, amount: n }],
+                            [E.FBC.BASE]: {
+                                [y.v8.NORMAL]: [{ currency: I.Yr.USD, amount: o }],
+                                [y.v8.DISCOUNTED]: [{ currency: I.Yr.USD, amount: n }],
                             },
                         },
                     },
@@ -99,41 +100,41 @@ function _(e, t, l) {
             },
             rewardResultIdMap: {
                 [b]: {
-                    [f.QK.SELF_PURCHASE]: { type: f.Ns.DISCOUNT, amount: Number(r) },
-                    [f.QK.GIFT]: { type: f.Ns.DISCOUNT, amount: Number(r) },
+                    [y.QK.SELF_PURCHASE]: { type: y.Ns.DISCOUNT, amount: Number(r) },
+                    [y.QK.GIFT]: { type: y.Ns.DISCOUNT, amount: Number(r) },
                 },
             },
         };
-        g.h.dispatch({ type: "SKUS_PRICING_FETCH_SUCCESS", priceId: { type: "skus", skuIds: [e] }, data: t });
+        f.h.dispatch({ type: "SKUS_PRICING_FETCH_SUCCESS", priceId: { type: "skus", skuIds: [e] }, data: t });
     } else
-        g.h.dispatch({
+        f.h.dispatch({
             type: "SKUS_PRICING_FETCH_SUCCESS",
             priceId: { type: "skus", skuIds: [e] },
             data: {
                 skuPriceMap: { [e]: { pricingResultId: c, storefrontPromotionIds: [], rewardResultIds: [] } },
                 pricingResultIdMap: {
                     [c]: {
-                        [f.QK.SELF_PURCHASE]: {
+                        [y.QK.SELF_PURCHASE]: {
                             userPrice: [
-                                { currency: E.Yr.USD, amount: o },
-                                { currency: E.Yr.DISCORD_ORB, amount: o },
+                                { currency: I.Yr.USD, amount: o },
+                                { currency: I.Yr.DISCORD_ORB, amount: o },
                             ],
                             prices: {
-                                [S.FBC.BASE]: {
-                                    [f.v8.NORMAL]: [
-                                        { currency: E.Yr.USD, amount: o },
-                                        { currency: E.Yr.DISCORD_ORB, amount: o },
+                                [E.FBC.BASE]: {
+                                    [y.v8.NORMAL]: [
+                                        { currency: I.Yr.USD, amount: o },
+                                        { currency: I.Yr.DISCORD_ORB, amount: o },
                                     ],
-                                    [f.v8.DISCOUNTED]: [],
+                                    [y.v8.DISCOUNTED]: [],
                                 },
                             },
                         },
-                        [f.QK.GIFT]: {
-                            userPrice: [{ currency: E.Yr.USD, amount: o }],
+                        [y.QK.GIFT]: {
+                            userPrice: [{ currency: I.Yr.USD, amount: o }],
                             prices: {
-                                [S.FBC.BASE]: {
-                                    [f.v8.NORMAL]: [{ currency: E.Yr.USD, amount: o }],
-                                    [f.v8.DISCOUNTED]: [],
+                                [E.FBC.BASE]: {
+                                    [y.v8.NORMAL]: [{ currency: I.Yr.USD, amount: o }],
+                                    [y.v8.DISCOUNTED]: [],
                                 },
                             },
                         },
@@ -142,17 +143,17 @@ function _(e, t, l) {
                 rewardResultIdMap: {},
             },
         });
-    g.h.dispatch({
+    f.h.dispatch({
         type: "SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_RESPONSE",
         interactionId: "playground-interaction",
-        applicationId: v,
+        applicationId: x,
         skuId: e,
         recipientId: l,
         eligible: u,
     });
 }
 function P(e) {
-    let t = (0, b.bG)([h.default], () => h.default.getId()),
+    let t = (0, g.bG)([S.default], () => S.default.getId()),
         {
             name: l,
             price: a,
@@ -164,10 +165,10 @@ function P(e) {
             isEligible: u,
         } = e;
     n.useEffect(() => {
-        _(I, e, t);
+        R(v, e, t);
     }, [l, a, o, r, i, s, d, u, t]);
 }
-let R = [
+let T = [
         {
             id: "000000000000000101",
             params: {
@@ -221,37 +222,38 @@ let R = [
             },
         },
     ],
-    T = (0, y.createChannelRecord)({
+    O = (0, h.createChannelRecord)({
         id: "000000000000000500",
-        type: S.rbe.GUILD_TEXT,
-        guild_id: x,
+        type: E.rbe.GUILD_TEXT,
+        guild_id: A,
         name: "playground-channel",
     });
-function O() {
+function D() {
     n.useEffect(() => {
         let e = {
-            id: v,
+            id: x,
             name: "Playground Game",
             description: "A playground preview application for testing storefront component states.",
             is_monetized: !0,
             is_verified: !0,
             is_discoverable: !0,
-            flags_new: S.gfo.SOCIAL_LAYER_INTEGRATION.toString(),
+            flags: b.pG(32, E.gfo.SOCIAL_LAYER_INTEGRATION),
+            flags_new: E.gfo.SOCIAL_LAYER_INTEGRATION.toString(),
         };
-        g.h.dispatch({ type: "APPLICATION_FETCH_SUCCESS", application: e });
+        f.h.dispatch({ type: "APPLICATION_FETCH_SUCCESS", application: e });
     }, []);
 }
-function D() {
+function N() {
     n.useEffect(() => {
-        g.h.dispatch({
+        f.h.dispatch({
             type: "SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_SUCCESS",
             config: {
                 promotionalSkuIds: [],
                 promotionEndDatetime: null,
                 storefronts: [
                     {
-                        guildId: x,
-                        applicationId: v,
+                        guildId: A,
+                        applicationId: x,
                         gameId: C,
                         collectiblesShopNavigationEnabled: !1,
                         excludedPlatforms: [],
@@ -263,17 +265,17 @@ function D() {
                 announcementModalConfig: null,
             },
         }),
-            g.h.dispatch({
+            f.h.dispatch({
                 type: "SOCIAL_LAYER_STOREFRONT_LOAD_SUCCESS",
-                guildOrApplicationId: { type: "guild", guildId: x },
+                guildOrApplicationId: { type: "guild", guildId: A },
                 storefront: {
-                    id: v,
+                    id: x,
                     publishedAt: null,
-                    applicationId: v,
+                    applicationId: x,
                     title: "Playground Game",
                     logoAssetId: null,
                     lightThemeLogoAssetId: null,
-                    pages: [{ title: "Shop", skuIds: [I], sections: [], leaderboard: null }],
+                    pages: [{ title: "Shop", skuIds: [v], sections: [], leaderboard: null }],
                     assets: {},
                     promotions: {},
                 },
@@ -282,8 +284,8 @@ function D() {
 }
 let V = "/assets/863cb535889630a2.svg";
 var w = l(50777),
-    N = l(467884);
-let L = {
+    L = l(467884);
+let U = {
     name: "Shop Card",
     id: "storefront-card",
     docs: 'Preview the SocialLayerStorefrontCard in various states. The card uses a fallback icon since no real asset images are loaded. The "Embedded" variant renders the full in-chat product details embed.',
@@ -313,29 +315,29 @@ let L = {
             daysUntilExpiry: c ? p : null,
             isEligible: m,
         }),
-            O();
+            D();
         let f = n.useCallback((e) => {
             e.preventDefault();
         }, []);
-        return t === N.s.EMBEDDED
+        return t === L.s.EMBEDDED
             ? (0, o.jsx)("div", {
                   style: { padding: 16 },
-                  children: (0, o.jsx)(w.A, { applicationId: v, guildId: x, skuId: I, channel: T }),
+                  children: (0, o.jsx)(w.A, { applicationId: x, guildId: A, skuId: v, channel: O }),
               })
             : (0, o.jsx)("div", {
-                  style: { maxWidth: t === N.s.SMALL ? 220 : 300, padding: 16 },
-                  children: (0, o.jsx)(N.A, { skuId: I, variant: t, onClick: f }),
+                  style: { maxWidth: t === L.s.SMALL ? 220 : 300, padding: 16 },
+                  children: (0, o.jsx)(L.A, { skuId: v, variant: t, onClick: f }),
               });
     },
     controls: {
         variant: {
             label: "Card Variant",
             type: "select",
-            defaultValue: N.s.SMALL,
+            defaultValue: L.s.SMALL,
             options: [
-                { label: "Small", value: N.s.SMALL },
-                { label: "Medium", value: N.s.MEDIUM },
-                { label: "Embedded", value: N.s.EMBEDDED },
+                { label: "Small", value: L.s.SMALL },
+                { label: "Medium", value: L.s.MEDIUM },
+                { label: "Embedded", value: L.s.EMBEDDED },
             ],
         },
         name: { label: "Product Name", type: "text", defaultValue: "Legendary Dragon Armor" },
@@ -350,26 +352,26 @@ let L = {
         isEligible: { label: "Purchase Eligible", type: "boolean", defaultValue: !0 },
     },
 };
-var U = l(439325);
+var k = l(439325);
 l(323874), l(14289), l(35956);
-var k = l(366523);
-let M = new URL("https://cdn.discordapp.com/embed/avatars/0.png"),
-    B = new URL("https://cdn.discordapp.com/embed/avatars/1.png");
-var F = l(263911),
-    G = l(403581),
+var M = l(366523);
+let B = new URL("https://cdn.discordapp.com/embed/avatars/0.png"),
+    F = new URL("https://cdn.discordapp.com/embed/avatars/1.png");
+var G = l(263911),
+    Y = l(403581),
     j = l(873297),
-    Y = l(758836),
-    H = l(375708);
-function q() {}
-let K = {
+    H = l(758836),
+    q = l(375708);
+function K() {}
+let Q = {
     storefront: "linear-gradient(90deg, rgba(88, 101, 242, 0.4) 0%, rgba(157, 60, 178, 0.4) 100%)",
     nitro: "linear-gradient(90deg, rgba(179, 38, 156, 0.4) 0%, rgba(20, 20, 203, 0.4) 100%)",
     none: void 0,
 };
-var Q = l(971146),
-    X = l(849134);
-function z() {}
-let W = {
+var X = l(971146),
+    z = l(849134);
+function W() {}
+let $ = {
     name: "Storefront Promo Popover",
     id: "social-layer-storefront-popover",
     docs: "The guild-sidebar storefront promo popover. Switch the graphic between the video slot (a VideoPopover, backed by `video_asset_fully_qualified_url`) and the static image slot (the standard Popover graphic) to compare.",
@@ -379,10 +381,10 @@ let W = {
         return (0, o.jsxs)(o.Fragment, {
             children: [
                 (0, o.jsx)("div", { ref: d }),
-                (0, o.jsx)(X.A, {
+                (0, o.jsx)(z.A, {
                     targetElementRef: d,
-                    onRequestClose: z,
-                    onActionClick: z,
+                    onRequestClose: W,
+                    onActionClick: W,
                     position: "bottom",
                     align: "center",
                     graphicSource: "video" === t ? { type: "video", src: l } : { type: "asset", src: a },
@@ -419,18 +421,18 @@ let W = {
         actionLabel: { label: "Action Label", type: "text", defaultValue: "Check it out" },
     },
 };
-var $ = l(79871),
-    Z = l(760716),
-    J = l(962299),
-    ee = l(202541);
-let et = "playground-promotion";
-var el = l(454491);
-function ea() {}
-let eo = {
+var Z = l(79871),
+    J = l(760716),
+    ee = l(962299),
+    et = l(202541);
+let el = "playground-promotion";
+var ea = l(454491);
+function eo() {}
+let en = {
         id: "slayer-storefront",
         name: "Slayer Storefront",
         groups: [
-            { title: "Shop Card", stories: [L] },
+            { title: "Shop Card", stories: [U] },
             {
                 title: "Modals",
                 stories: [
@@ -454,7 +456,7 @@ let eo = {
                                 y = a ? String(u) : null,
                                 h = a ? Math.round(l * (1 - u / 100)) : null,
                                 [S, E] = n.useState(!1),
-                                x = n.useRef(null);
+                                I = n.useRef(null);
                             return (P({
                                 name: t,
                                 price: l,
@@ -465,13 +467,13 @@ let eo = {
                                 daysUntilExpiry: b ? g : null,
                                 isEligible: f,
                             }),
-                            D(),
+                            N(),
                             S)
-                                ? (0, o.jsx)(U.default, {
+                                ? (0, o.jsx)(k.default, {
                                       transitionState: d.ip.ENTERED,
-                                      returnRef: x,
-                                      skuId: I,
-                                      applicationId: v,
+                                      returnRef: I,
+                                      skuId: v,
+                                      applicationId: x,
                                       isStorefront: !0,
                                       onClose: () => Promise.resolve(E(!1)),
                                   })
@@ -540,7 +542,7 @@ let eo = {
                                 feature2Subtitle: b,
                                 buttonText: g,
                             } = e;
-                            D();
+                            N();
                             let [f, y] = n.useState(!1),
                                 h = n.useRef(null),
                                 S = [t, l].filter((e) => "" !== e);
@@ -549,7 +551,7 @@ let eo = {
                                       version: 0,
                                       transitionState: d.ip.ENTERED,
                                       returnRef: h,
-                                      applicationId: v,
+                                      applicationId: x,
                                       logo: "https://cdn.discordapp.com/app-assets/1346069614634864772/store/1461676971728572478.webp?size=128",
                                       backgroundImage:
                                           "https://cdn.discordapp.com/assets/content/1d7af7dacdba453b6fa4a773c5c3ff829f2eff26bde9f036ef61cb3c2f984ba9.png",
@@ -623,7 +625,7 @@ let eo = {
                                         children:
                                             "The exclusive badge shown on storefront cards and the PDP modal for exclusive items.",
                                     }),
-                                    (0, o.jsx)(F.I, {}),
+                                    (0, o.jsx)(G.I, {}),
                                 ],
                             });
                         },
@@ -642,7 +644,7 @@ let eo = {
                                         children:
                                             "The in-game item indicator tag shown on storefront cards and the PDP modal.",
                                     }),
-                                    (0, o.jsx)(Q.V, { textColor: t }),
+                                    (0, o.jsx)(X.V, { textColor: t }),
                                 ],
                             });
                         },
@@ -666,9 +668,9 @@ let eo = {
                             let { shape: t, useBackgroundImage: l } = e;
                             return (0, o.jsx)("div", {
                                 style: { width: 220, height: 220 },
-                                children: (0, o.jsx)(k.A, {
-                                    cardImage: M,
-                                    cardBackgroundImage: l ? B : null,
+                                children: (0, o.jsx)(M.A, {
+                                    cardImage: B,
+                                    cardBackgroundImage: l ? F : null,
                                     altText: "Playground preview",
                                     shape: t,
                                 }),
@@ -704,27 +706,27 @@ let eo = {
                                     cardCount: p,
                                     gradientPreset: m,
                                 } = e,
-                                f =
-                                    ((t = (0, b.bG)([h.default], () => h.default.getId())),
+                                b =
+                                    ((t = (0, g.bG)([S.default], () => S.default.getId())),
                                     (l = n.useMemo(
                                         () =>
-                                            R.slice(0, p).map((e) => {
+                                            T.slice(0, p).map((e) => {
                                                 let { id: t } = e;
                                                 return t;
                                             }),
                                         [p],
                                     )),
                                     n.useEffect(() => {
-                                        for (let { id: e, params: l } of R.slice(0, p)) _(e, l, t);
-                                        g.h.dispatch({
+                                        for (let { id: e, params: l } of T.slice(0, p)) R(e, l, t);
+                                        f.h.dispatch({
                                             type: "SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_SUCCESS",
                                             config: {
                                                 promotionalSkuIds: l,
                                                 promotionEndDatetime: null,
                                                 storefronts: [
                                                     {
-                                                        guildId: x,
-                                                        applicationId: v,
+                                                        guildId: A,
+                                                        applicationId: x,
                                                         gameId: C,
                                                         collectiblesShopNavigationEnabled: !1,
                                                         excludedPlatforms: [],
@@ -736,13 +738,13 @@ let eo = {
                                                 announcementModalConfig: null,
                                             },
                                         }),
-                                            g.h.dispatch({
+                                            f.h.dispatch({
                                                 type: "SOCIAL_LAYER_STOREFRONT_LOAD_SUCCESS",
-                                                guildOrApplicationId: { type: "guild", guildId: x },
+                                                guildOrApplicationId: { type: "guild", guildId: A },
                                                 storefront: {
-                                                    id: v,
+                                                    id: x,
                                                     publishedAt: null,
-                                                    applicationId: v,
+                                                    applicationId: x,
                                                     title: "Playground Game",
                                                     logoAssetId: null,
                                                     lightThemeLogoAssetId: null,
@@ -763,19 +765,19 @@ let eo = {
                                                   node: (0, o.jsx)(s.$, {
                                                       variant: "expressive",
                                                       size: "sm",
-                                                      icon: G.t,
-                                                      text: H.intl.string(H.t.pj0XBN),
-                                                      onClick: q,
+                                                      icon: Y.t,
+                                                      text: q.intl.string(q.t.pj0XBN),
+                                                      onClick: K,
                                                   }),
                                               }
-                                            : { kind: "button", text: "Shop All", onClick: q },
+                                            : { kind: "button", text: "Shop All", onClick: K },
                                     [r],
                                 );
                             return (0, o.jsx)(j.A, {
-                                onDismiss: q,
-                                skuIds: f,
-                                tab: Y.G2.GAME_SHOPS,
-                                applicationId: v,
+                                onDismiss: K,
+                                skuIds: b,
+                                tab: H.G2.GAME_SHOPS,
+                                applicationId: x,
                                 headerText: a,
                                 logoUrl: i
                                     ? "https://cdn.discordapp.com/app-assets/1346069614634864772/store/1461676971728572478.webp?size=128"
@@ -785,7 +787,7 @@ let eo = {
                                 analyticsSection: "playground",
                                 analyticsTileType: "PLAYGROUND_BANNER",
                                 analyticsImpressionType: "playground_banner",
-                                backgroundGradient: K[m],
+                                backgroundGradient: Q[m],
                             });
                         },
                         controls: {
@@ -839,31 +841,31 @@ let eo = {
                                 requiresAnnualPlan: i,
                                 isOnQualifyingPlan: s,
                             } = e;
-                            O();
-                            let d = (0, Z.i)((e) => e.setOverrideNitroEligibilityForSocialLayerStorefront),
-                                u = (0, Z.i)((e) => e.setIsNitroEligibleForSocialLayerStorefront),
-                                c = (0, Z.i)((e) => e.setOverrideCurrentPremiumPlanId),
-                                m = (0, Z.i)((e) => e.setCurrentPremiumPlanId);
+                            D();
+                            let d = (0, J.i)((e) => e.setOverrideNitroEligibilityForSocialLayerStorefront),
+                                u = (0, J.i)((e) => e.setIsNitroEligibleForSocialLayerStorefront),
+                                c = (0, J.i)((e) => e.setOverrideCurrentPremiumPlanId),
+                                m = (0, J.i)((e) => e.setCurrentPremiumPlanId);
                             return (
                                 n.useEffect(() => (d(!0), u(a), () => d(!1)), [d, u, a]),
                                 n.useEffect(
                                     () => (
                                         c(!0),
-                                        m(s ? ee.gD.PREMIUM_YEAR_TIER_2 : ee.gD.PREMIUM_MONTH_TIER_2),
+                                        m(s ? et.gD.PREMIUM_YEAR_TIER_2 : et.gD.PREMIUM_MONTH_TIER_2),
                                         () => c(!1)
                                     ),
                                     [c, m, s],
                                 ),
                                 n.useEffect(() => {
-                                    g.h.dispatch({
+                                    f.h.dispatch({
                                         type: "SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_SUCCESS",
                                         config: {
                                             promotionalSkuIds: [],
                                             promotionEndDatetime: null,
                                             storefronts: [
                                                 {
-                                                    guildId: x,
-                                                    applicationId: v,
+                                                    guildId: A,
+                                                    applicationId: x,
                                                     gameId: C,
                                                     collectiblesShopNavigationEnabled: !1,
                                                     excludedPlatforms: [],
@@ -875,21 +877,21 @@ let eo = {
                                             announcementModalConfig: null,
                                         },
                                     }),
-                                        g.h.dispatch({
+                                        f.h.dispatch({
                                             type: "SOCIAL_LAYER_STOREFRONT_LOAD_SUCCESS",
-                                            guildOrApplicationId: { type: "guild", guildId: x },
+                                            guildOrApplicationId: { type: "guild", guildId: A },
                                             storefront: {
-                                                id: v,
+                                                id: x,
                                                 publishedAt: null,
-                                                applicationId: v,
+                                                applicationId: x,
                                                 title: "Playground Game",
                                                 logoAssetId: null,
                                                 lightThemeLogoAssetId: null,
                                                 pages: [{ title: "Shop", skuIds: [], sections: [], leaderboard: null }],
                                                 assets: {},
                                                 promotions: {
-                                                    [et]: {
-                                                        id: et,
+                                                    [el]: {
+                                                        id: el,
                                                         endsAt: r > 0 ? p()().add(r, "days").toISOString() : null,
                                                         flavor: t,
                                                         pdp: { label: null, tooltip: null, icon: "ORBS" },
@@ -899,8 +901,8 @@ let eo = {
                                                         rewardRequirements: i
                                                             ? [
                                                                   {
-                                                                      type: $.X.SUBSCRIPTION,
-                                                                      planIds: [ee.gD.PREMIUM_YEAR_TIER_2],
+                                                                      type: Z.X.SUBSCRIPTION,
+                                                                      planIds: [et.gD.PREMIUM_YEAR_TIER_2],
                                                                       progress: null,
                                                                   },
                                                               ]
@@ -910,7 +912,7 @@ let eo = {
                                             },
                                         });
                                 }, [t, l, r, i]),
-                                (0, o.jsx)(J.M, { applicationId: v, analyticsLocations: [] })
+                                (0, o.jsx)(ee.M, { applicationId: x, analyticsLocations: [] })
                             );
                         },
                         controls: {
@@ -954,15 +956,15 @@ let eo = {
                                     requiresAnnualPlan: i,
                                     isOnQualifyingPlan: s,
                                 } = e,
-                                d = (0, Z.i)((e) => e.setOverrideNitroEligibilityForSocialLayerStorefront),
-                                u = (0, Z.i)((e) => e.setIsNitroEligibleForSocialLayerStorefront),
-                                c = (0, Z.i)((e) => e.setOverrideCurrentPremiumPlanId),
-                                m = (0, Z.i)((e) => e.setCurrentPremiumPlanId);
+                                d = (0, J.i)((e) => e.setOverrideNitroEligibilityForSocialLayerStorefront),
+                                u = (0, J.i)((e) => e.setIsNitroEligibleForSocialLayerStorefront),
+                                c = (0, J.i)((e) => e.setOverrideCurrentPremiumPlanId),
+                                m = (0, J.i)((e) => e.setCurrentPremiumPlanId);
                             n.useEffect(() => (d(!0), u(a), () => d(!1)), [d, u, a]),
                                 n.useEffect(
                                     () => (
                                         c(!0),
-                                        m(s ? ee.gD.PREMIUM_YEAR_TIER_2 : ee.gD.PREMIUM_MONTH_TIER_2),
+                                        m(s ? et.gD.PREMIUM_YEAR_TIER_2 : et.gD.PREMIUM_MONTH_TIER_2),
                                         () => c(!1)
                                     ),
                                     [c, m, s],
@@ -975,16 +977,16 @@ let eo = {
                                 flavor: t,
                                 reward: null,
                                 rewardRequirements: i
-                                    ? [{ type: $.X.SUBSCRIPTION, planIds: [ee.gD.PREMIUM_YEAR_TIER_2], progress: null }]
+                                    ? [{ type: Z.X.SUBSCRIPTION, planIds: [et.gD.PREMIUM_YEAR_TIER_2], progress: null }]
                                     : [],
                             };
                             return (0, o.jsx)("div", {
                                 style: { maxWidth: 400, padding: 16 },
-                                children: (0, o.jsx)(el.e, {
+                                children: (0, o.jsx)(ea.e, {
                                     promotion: b,
-                                    applicationId: v,
+                                    applicationId: x,
                                     analyticsLocations: [],
-                                    onUpsellClick: ea,
+                                    onUpsellClick: eo,
                                 }),
                             });
                         },
@@ -1031,17 +1033,17 @@ let eo = {
                                 daysUntilExpiry: null,
                                 isEligible: !0,
                             }),
-                                O(),
+                                D(),
                                 n.useEffect(() => {
-                                    g.h.dispatch({
+                                    f.h.dispatch({
                                         type: "SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_SUCCESS",
                                         config: {
                                             promotionalSkuIds: [],
                                             promotionEndDatetime: null,
                                             storefronts: [
                                                 {
-                                                    guildId: x,
-                                                    applicationId: v,
+                                                    guildId: A,
+                                                    applicationId: x,
                                                     gameId: C,
                                                     collectiblesShopNavigationEnabled: !1,
                                                     excludedPlatforms: [],
@@ -1053,23 +1055,23 @@ let eo = {
                                             announcementModalConfig: null,
                                         },
                                     }),
-                                        g.h.dispatch({
+                                        f.h.dispatch({
                                             type: "SOCIAL_LAYER_STOREFRONT_LOAD_SUCCESS",
-                                            guildOrApplicationId: { type: "guild", guildId: x },
+                                            guildOrApplicationId: { type: "guild", guildId: A },
                                             storefront: {
-                                                id: v,
+                                                id: x,
                                                 publishedAt: null,
-                                                applicationId: v,
+                                                applicationId: x,
                                                 title: "Playground Game",
                                                 logoAssetId: null,
                                                 lightThemeLogoAssetId: null,
                                                 pages: [
-                                                    { title: "Shop", skuIds: [I], sections: [], leaderboard: null },
+                                                    { title: "Shop", skuIds: [v], sections: [], leaderboard: null },
                                                 ],
                                                 assets: {},
                                                 promotions: {
-                                                    [A]: {
-                                                        id: A,
+                                                    [_]: {
+                                                        id: _,
                                                         endsAt: null,
                                                         flavor: "nitro",
                                                         pdp: { label: "Free with Nitro", tooltip: null, icon: null },
@@ -1087,7 +1089,7 @@ let eo = {
                             }, []);
                             return (0, o.jsx)("div", {
                                 style: { maxWidth: 300, padding: 16 },
-                                children: (0, o.jsx)(N.A, { skuId: I, variant: N.s.MEDIUM, onClick: r }),
+                                children: (0, o.jsx)(L.A, { skuId: v, variant: L.s.MEDIUM, onClick: r }),
                             });
                         },
                         controls: {
@@ -1102,11 +1104,11 @@ let eo = {
                             },
                         },
                     },
-                    W,
+                    $,
                 ],
             },
         ],
         tags: ["Slayer Storefront", "Social Layer", "Shop", "Storefront Playground"],
         IconComponent: a.U,
     },
-    en = { playgroundBaseUrl: "slayer-storefront", collections: [eo] };
+    er = { playgroundBaseUrl: "slayer-storefront", collections: [en] };

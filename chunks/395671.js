@@ -43,6 +43,7 @@ class h extends s.A {
     parentId;
     _connectionEntrypointUrl;
     contentClassification;
+    flags;
     static createFromServer(e) {
         return new h({
             ...e,
@@ -54,6 +55,7 @@ class h extends s.A {
             parentId: e.parent_id,
             _connectionEntrypointUrl: e.connection_entrypoint_url,
             contentClassification: e.content_classification,
+            flags: a.iu(e.flags_new ?? e.flags ?? 0),
         });
     }
     constructor(e) {
@@ -74,7 +76,8 @@ class h extends s.A {
                 e.role_connections_verification_url ?? e.roleConnectionsVerificationUrl),
             (this.parentId = e.parent_id ?? e.parentId),
             (this._connectionEntrypointUrl = e.connection_entrypoint_url ?? e._connectionEntrypointUrl),
-            (this.contentClassification = e.content_classification ?? e.contentClassification);
+            (this.contentClassification = e.content_classification ?? e.contentClassification),
+            (this.flags = a.iu(e.flags ?? 0));
     }
     get connectionEntrypointUrl() {
         let { APPLICATION_IDENTITY_CONNECTIONS_WITH_OVERRIDE_ENTRYPOINT_URLS: e } = n(534952),
@@ -116,7 +119,6 @@ class I extends h {
     hashes;
     eulaId;
     slug;
-    flags;
     maxParticipants;
     tags;
     embeddedActivityConfig;
@@ -196,7 +198,6 @@ class I extends h {
             (this.hashes = e.hashes ?? []),
             (this.eulaId = e.eulaId),
             (this.slug = e.slug),
-            (this.flags = a.iu(e.flags ?? 0)),
             (this.tags = e.tags ?? []),
             (this.maxParticipants = e.maxParticipants),
             (this.embeddedActivityConfig = e.embedded_activity_config ?? e.embeddedActivityConfig),
