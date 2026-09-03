@@ -4,16 +4,15 @@
 
 .avatarContainer_b4a4b2 {
     display: flex;
-    justify-content: center;
     margin-bottom: var(--space-12);
     margin-top: calc(var(--custom-user-profile-avatar-size)/-2);
+    padding-inline-start: var(--custom-user-profile-content-inset);
     position: relative;
     z-index: var(--custom-user-profile-bottom-layer-z-index)
 }
 
 .userInfo_b4a4b2 {
-    padding: 0 var(--space-16);
-    text-align: center
+    padding-inline: var(--custom-user-profile-content-inset)
 }
 
 .componentEmbedContainer__6e6eb {
@@ -267,4 +266,4 @@
     padding: var(--space-4)
 }
 
-/*# sourceMappingURL=631323.ee7a264e9313d399.css.map*/
+/*# sourceMappingURL=631323.414444ee97e3e085.css.map*/

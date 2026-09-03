@@ -1836,10 +1836,6 @@
     vertical-align: baseline
 }
 
-.user-profile-embed .displayNameRow__26b1f {
-    justify-content: center
-}
-
 .displayNameTrailing__26b1f {
     align-items: center;
     align-self: flex-start;
@@ -1899,10 +1895,6 @@
 
 .usernameAndPronounsRow__26b1f.isBot__26b1f {
     margin-block-start: 8px
-}
-
-.user-profile-embed .usernameAndPronounsRow__26b1f {
-    justify-content: center
 }
 
 .userTag__26b1f {}
@@ -2003,4 +1995,4 @@
     forced-color-adjust: none
 }
 
-/*# sourceMappingURL=866212.95630cd6416a251b.css.map*/
+/*# sourceMappingURL=866212.896bdd2852c1a14d.css.map*/

@@ -24,27 +24,28 @@ var i = n(477900),
     j = n(714719),
     T = n(859161);
 function S(e) {
-    let { user: t, displayProfile: n, guildId: s, bannerHeight: r, avatarSize: o } = e,
-        [c, d] = g.useState(!1),
-        u = (0, l.bG)([C.A], () => C.A.isFocused()),
-        m = I.kt.getSetting(),
-        h = (0, v.Nx)(),
-        { bannerSrc: S, status: y } = (0, N.A)({ displayProfile: n ?? null, size: 480, canAnimate: m ? u : c }),
-        b = h ? null : (S ?? null),
-        R = (0, x.r)(p.A.unsafe_rawColors.PRIMARY_800).hex(),
-        M = null != n ? n.guildId : s,
-        L = t.getAvatarURL(M ?? void 0, (0, a.FT)(o)),
-        k = (0, A.LX)((0, f.Ay)(L, R, !1)),
-        O = (0, E.A)(n?.primaryColor ?? k).hex,
-        P = { align: "center", insetBottom: 0, radius: (0, T.A)(o) };
+    let { user: t, displayProfile: n, guildId: s, bannerHeight: r, avatarSize: o, avatarInsetStart: c } = e,
+        [d, u] = g.useState(!1),
+        m = (0, l.bG)([C.A], () => C.A.isFocused()),
+        h = I.kt.getSetting(),
+        S = (0, v.Nx)(),
+        { bannerSrc: y, status: b } = (0, N.A)({ displayProfile: n ?? null, size: 480, canAnimate: h ? m : d }),
+        R = S ? null : (y ?? null),
+        M = (0, x.r)(p.A.unsafe_rawColors.PRIMARY_800).hex(),
+        L = null != n ? n.guildId : s,
+        k = t.getAvatarURL(L ?? void 0, (0, a.FT)(o)),
+        O = (0, A.LX)((0, f.Ay)(k, M, !1)),
+        P = (0, E.A)(n?.primaryColor ?? O).hex,
+        D = (0, T.A)(o),
+        U = c + (0, a.Kj)(o).size / 2;
     return (0, i.jsx)(j.A, {
-        bannerSrc: b,
-        backgroundColor: y === N.D.COMPLETE || h ? O : p.A.unsafe_rawColors.PRIMARY_800.css,
-        showGifTag: !m && (0, _.o4)(b),
+        bannerSrc: R,
+        backgroundColor: b === N.D.COMPLETE || S ? P : p.A.unsafe_rawColors.PRIMARY_800.css,
+        showGifTag: !h && (0, _.o4)(R),
         height: r,
-        cutout: P,
-        onInteractionStart: () => d(!0),
-        onInteractionEnd: () => d(!1),
+        cutout: { align: "start", insetStart: U - D, insetBottom: 0, radius: D },
+        onInteractionStart: () => u(!0),
+        onInteractionEnd: () => u(!1),
     });
 }
 var y = n(280450),
@@ -99,6 +100,7 @@ let z = c.Ay.getEnableHardwareAcceleration() ? s.Js : s.eu,
     K = {
         "--custom-user-profile-banner-height": "120px",
         "--custom-user-profile-avatar-size": `${((0, a.Kj))(J).size}px`,
+        "--custom-user-profile-content-inset": "16px",
     };
 function Y(e) {
     let { user: t, displayProfile: n, guildId: l, channelId: s } = e,
@@ -127,7 +129,14 @@ function W(e) {
               headingRef: a,
               headingText: H.intl.formatToPlainString(H.t["8yRya1"], { name: A }),
               children: [
-                  (0, i.jsx)(S, { user: c, displayProfile: u, guildId: n, bannerHeight: 120, avatarSize: J }),
+                  (0, i.jsx)(S, {
+                      user: c,
+                      displayProfile: u,
+                      guildId: n,
+                      bannerHeight: 120,
+                      avatarSize: J,
+                      avatarInsetStart: 16,
+                  }),
                   (0, i.jsx)(D, { user: c, guildId: n }),
                   (0, i.jsx)(Y, { user: c, displayProfile: u, guildId: n, channelId: s }),
                   (0, i.jsx)(h.Ay, {
