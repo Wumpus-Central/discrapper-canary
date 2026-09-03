@@ -204,7 +204,7 @@ var eE = n(47167),
     eM = n(832163),
     eL = n(565688),
     ek = n(533562),
-    ew = n(221877),
+    ew = n(950372),
     eP = n(805901),
     eD = n(565645);
 n(915089);
@@ -269,8 +269,8 @@ var eB = n(636585),
     e2 = n(22869),
     e3 = n(623671),
     e8 = n(428249),
-    e6 = n(327098),
-    e5 = n(576757),
+    e5 = n(327098),
+    e6 = n(576757),
     e7 = n(202195),
     e4 = n(140651),
     e9 = n(43105),
@@ -788,7 +788,7 @@ function ty(e) {
                       }),
             };
         })({ channel: o, entry: m, onVoiceChannelPreview: x }),
-        { embeddedActivity: R } = (0, e6.A)(m),
+        { embeddedActivity: R } = (0, e5.A)(m),
         O =
             ((t = R),
             (n = (0, u.bG)([eK.A], () => eK.A.getGuild((0, es.D)(t?.location)))),
@@ -1047,7 +1047,7 @@ let tS = (e) => {
 function tN(e) {
     let { channel: t, userDescription: n, entry: i, disableGameProfileLinks: s, onUserPopoutClosed: r } = e,
         a = t?.guild_id,
-        { displayParticipants: o, participant1: c, participant2: d, numOtherParticipants: h } = (0, e5.A)(i, 3),
+        { displayParticipants: o, participant1: c, participant2: d, numOtherParticipants: h } = (0, e6.A)(i, 3),
         m = (0, u.bG)([g.default], () => g.default.getUser(i.author_id)),
         { streamPreviewUrl: f } = (0, e7.A)(i),
         p = [c, d];
@@ -1258,7 +1258,7 @@ function tT(e) {
             { onOpened: () => m?.(tm.PA.OPENED_GAME_PROFILE) },
         ),
         y = A ? I : void 0,
-        { activity: S, activityApplication: N, fallbackApplication: v } = (0, e6.A)(x),
+        { activity: S, activityApplication: N, fallbackApplication: v } = (0, e5.A)(x),
         { largeImage: _, smallImage: T } = (0, e0.D8)(S, N ?? v),
         { largeImage: j } = (0, e0.nO)({ entry: x, trackingSource: "memberlist_streaming_content_popout" }),
         b = (0, eL.w)({ location: "content_inventory" }),
@@ -1665,8 +1665,8 @@ n(321073);
 var t2 = n(205327),
     t3 = n(52133),
     t8 = n(835723),
-    t6 = n(172710),
-    t5 = n(655116),
+    t5 = n(172710),
+    t6 = n(655116),
     t7 = n(763758),
     t4 = n(286617),
     t9 = n(533207),
@@ -1713,8 +1713,8 @@ function na(e) {
         { activity: d, currentEntry: h, artist: m, title: f, user: p } = (0, t1.u7)(r),
         g = tZ(em.fg2.SPOTIFY),
         x = (0, u.bG)(
-            [t5.A, ne.default],
-            () => (d?.type === em.$pd.LISTENING && null != p ? (0, t4.A)(t5.A, ne.default, p, d) : void 0),
+            [t6.A, ne.default],
+            () => (d?.type === em.$pd.LISTENING && null != p ? (0, t4.A)(t6.A, ne.default, p, d) : void 0),
             [d, p],
             t3.A,
         );
@@ -1723,20 +1723,20 @@ function na(e) {
         E = [];
     h.media.provider === t2.X.SPOTIFY &&
         ((n = () => {
-            (0, t6.Mp)(d);
+            (0, t5.Mp)(d);
         }),
         (i = () => {
-            (0, t6.QX)(d, p.id);
+            (0, t5.QX)(d, p.id);
         }),
         (t = () => {
-            null != g ? g() : (0, t6.Mp)(d);
+            null != g ? g() : (0, t5.Mp)(d);
         }),
         (A = (0, l.jsx)(t7.A, {
             artists: m,
             canOpen: null != d.sync_id,
             linkClassName: tg.zA,
             onOpenSpotifyArtist: function (e) {
-                null != d && null != p && (0, t6.mN)(d, p.id, e);
+                null != d && null != p && (0, t5.mN)(d, p.id, e);
             },
         })),
         x?.syncDisabled === !1 &&

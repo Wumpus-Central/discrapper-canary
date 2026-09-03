@@ -944,15 +944,15 @@ function e4(e) {
         })
     );
 }
-var e8 = t(754744),
-    e5 = t(138298);
+var e5 = t(754744),
+    e8 = t(138298);
 function e2(e) {
     let { guildId: l } = e,
         t = (0, d.bG)([C.A], () => C.A.getGuild(l)),
         { analyticsLocations: s } = (0, x.Ay)(u.A.MEMBER_SAFETY_PAGE),
         r = (0, d.bG)([T.Ay], () => T.Ay.getGuildSidebarState(l), [l]),
         a = i.useCallback(() => {
-            e5.A.closeGuildSidebar(l);
+            e8.A.closeGuildSidebar(l);
         }, [l]),
         c = null != r;
     return null != t && c && null != r
@@ -961,7 +961,7 @@ function e2(e) {
               children: (0, n.jsx)("div", {
                   className: eZ.__invalid_sidebarContainer,
                   style: { width: ea.da6 },
-                  children: (0, n.jsx)(e8.default, {
+                  children: (0, n.jsx)(e5.default, {
                       userId: r.details.userId,
                       guildId: r.details.guildId,
                       onClose: a,
@@ -971,7 +971,7 @@ function e2(e) {
         : null;
 }
 var e3 = t(856768),
-    e6 = t(221877),
+    e6 = t(950372),
     e9 = t(702841),
     e1 = t(717421),
     le = t(144073),
