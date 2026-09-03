@@ -2031,7 +2031,8 @@
 }
 
 .customizable__8061a {
-    cursor: pointer
+    cursor: pointer;
+    position: relative
 }
 
 .overflowSlot__8061a {
@@ -2050,14 +2051,40 @@
     background: none
 }
 
-.hiddenCount__8061a {
-    visibility: hidden
+.customizable__8061a:has(:focus-visible) .hiddenCount__8061a,
+.customizable__8061a:hover .hiddenCount__8061a {
+    opacity: 0
+}
+
+.editButton__8061a {
+    align-items: center;
+    background: none;
+    box-sizing: border-box;
+    color: var(--text-default);
+    display: flex;
+    height: 20px;
+    inset-block-start: 50%;
+    inset-inline-end: 3px;
+    justify-content: center;
+    opacity: 0;
+    padding: 0;
+    position: absolute;
+    transform: translateY(-50%);
+    width: 20px
+}
+
+.customizable__8061a:has(:focus-visible):not(:has(:focus-visible .badgeCovered__8061a)) .editButton__8061a,
+.customizable__8061a:hover .editButton__8061a {
+    opacity: 1
 }
 
 .editIcon__8061a {
-    inset: 0;
-    margin: auto;
-    position: absolute
+    display: block
+}
+
+.customizable__8061a:has(:focus-visible):not(:has(:focus-visible .badgeCovered__8061a)) .badgeCovered__8061a,
+.customizable__8061a:hover .badgeCovered__8061a {
+    opacity: 0
 }
 
 .badge__8061a {
@@ -2092,4 +2119,4 @@
     object-fit: contain
 }
 
-/*# sourceMappingURL=641877.39df59de943350a9.css.map*/
+/*# sourceMappingURL=641877.be279fd0276a49b6.css.map*/
