@@ -26,10 +26,10 @@ function m(e) {
     return { name: (0, u.A)(e), className: f[e] ?? "" };
 }
 function N(e) {
-    let { displayNameStyles: t } = e,
-        n = (0, i.W)({ location: "useDisplayNameStylesFont" }),
-        l = (0, o.DW)("useDisplayNameStylesFont");
-    if (!n || null == t || (!l && c._k.includes(t.fontId))) return "";
-    let a = m(t.fontId);
-    return "" === a.className ? "" : s()(d.zt, a.className, { [d.VM]: (0, r.nr)() });
+    let { displayNameStyles: t, compensateForSafari: n = !0 } = e,
+        l = (0, i.W)({ location: "useDisplayNameStylesFont" }),
+        a = (0, o.DW)("useDisplayNameStylesFont");
+    if (!l || null == t || (!a && c._k.includes(t.fontId))) return "";
+    let u = m(t.fontId);
+    return "" === u.className ? "" : s()(d.zt, u.className, { [d.VM]: n && (0, r.nr)() });
 }
