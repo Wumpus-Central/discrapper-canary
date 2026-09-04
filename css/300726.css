@@ -73,12 +73,11 @@
     margin-inline-start: var(--space-12)
 }
 
-.logoHeader_f1578d {
+html:not(.mana-type-consolidation) .logoHeader_f1578d {
+    font-family: var(--font-headline);
     font-size: 16px;
-    font-style: italic;
     font-weight: 900;
-    line-height: 23.643px;
-    text-transform: uppercase
+    line-height: 23.643px
 }
 
 .container_f1578d {
@@ -230,4 +229,4 @@
     width: 67px
 }
 
-/*# sourceMappingURL=300726.13b55a07b52e5a27.css.map*/
+/*# sourceMappingURL=300726.6fc5cb2904dc910d.css.map*/

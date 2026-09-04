@@ -315,7 +315,7 @@ function W(e) {
                             (0, r.jsxs)("div", {
                                 className: z.Z,
                                 children: [
-                                    (0, r.jsx)(k.D, { variant: "display-md", className: I()(z.TK, m), children: u }),
+                                    (0, r.jsx)(k.D, { variant: "nitro-md", className: I()(z.TK, m), children: u }),
                                     (0, r.jsxs)(P.E, {
                                         variant: "text-md/medium",
                                         color: "text-subtle",

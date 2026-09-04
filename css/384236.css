@@ -1313,9 +1313,9 @@
 }
 
 .experimental\/display-xs__3aab5 {
-    font-family: var(--font-headline);
+    font-family: var(--font-nitro);
     font-size: 16px;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 1.125
 }
 
@@ -1324,9 +1324,9 @@
 }
 
 .experimental\/display-sm__3aab5 {
-    font-family: var(--font-headline);
+    font-family: var(--font-nitro);
     font-size: 24px;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 1.0833333333333333
 }
 
@@ -1335,9 +1335,9 @@
 }
 
 .experimental\/display-md__3aab5 {
-    font-family: var(--font-headline);
+    font-family: var(--font-nitro);
     font-size: 32px;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 1.0625
 }
 
@@ -1346,13 +1346,117 @@
 }
 
 .experimental\/display-lg__3aab5 {
-    font-family: var(--font-headline);
+    font-family: var(--font-nitro);
     font-size: 44px;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 1
 }
 
 .experimental\/display-lg__3aab5.fontScaling__3aab5 {
+    font-size: 2.75rem
+}
+
+.nitro-sm__3aab5 {
+    font-family: var(--font-headline);
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 800;
+    line-height: 1;
+    text-transform: uppercase
+}
+
+.nitro-sm__3aab5.fontScaling__3aab5 {
+    font-size: 1.25rem
+}
+
+.nitro-md__3aab5 {
+    font-family: var(--font-headline);
+    font-size: 34px;
+    font-style: italic;
+    font-weight: 800;
+    line-height: 1.0588235294117647;
+    text-transform: uppercase
+}
+
+.nitro-md__3aab5.fontScaling__3aab5 {
+    font-size: 2.125rem
+}
+
+.nitro-lg__3aab5 {
+    font-family: var(--font-headline);
+    font-size: 44px;
+    font-style: italic;
+    font-weight: 800;
+    line-height: .9545454545454546;
+    text-transform: uppercase
+}
+
+.nitro-lg__3aab5.fontScaling__3aab5 {
+    font-size: 2.75rem
+}
+
+.nitro-xs__3aab5 {
+    font-family: var(--font-primary);
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 800;
+    line-height: 1.2857142857142858;
+    text-transform: uppercase
+}
+
+.nitro-xs__3aab5.fontScaling__3aab5 {
+    font-size: .875rem
+}
+
+.experimental\/nitro-xs__3aab5 {
+    font-family: var(--font-nitro);
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 1.125;
+    text-transform: uppercase
+}
+
+.experimental\/nitro-xs__3aab5.fontScaling__3aab5 {
+    font-size: 1rem
+}
+
+.experimental\/nitro-sm__3aab5 {
+    font-family: var(--font-nitro);
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 1.0833333333333333;
+    text-transform: uppercase
+}
+
+.experimental\/nitro-sm__3aab5.fontScaling__3aab5 {
+    font-size: 1.5rem
+}
+
+.experimental\/nitro-md__3aab5 {
+    font-family: var(--font-nitro);
+    font-size: 32px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 1.0625;
+    text-transform: uppercase
+}
+
+.experimental\/nitro-md__3aab5.fontScaling__3aab5 {
+    font-size: 2rem
+}
+
+.experimental\/nitro-lg__3aab5 {
+    font-family: var(--font-nitro);
+    font-size: 44px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase
+}
+
+.experimental\/nitro-lg__3aab5.fontScaling__3aab5 {
     font-size: 2.75rem
 }
 
@@ -2074,9 +2178,9 @@
 }
 
 :where(.mana-type-consolidation) .display-sm__3aab5 {
-    font-family: var(--font-headline);
+    font-family: var(--font-nitro);
     font-size: 24px;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 1.0833333333333333
 }
 
@@ -2085,9 +2189,9 @@
 }
 
 :where(.mana-type-consolidation) .display-md__3aab5 {
-    font-family: var(--font-headline);
+    font-family: var(--font-nitro);
     font-size: 32px;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 1.0625
 }
 
@@ -2096,14 +2200,66 @@
 }
 
 :where(.mana-type-consolidation) .display-lg__3aab5 {
-    font-family: var(--font-headline);
+    font-family: var(--font-nitro);
     font-size: 44px;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 1
 }
 
 :where(.mana-type-consolidation) .display-lg__3aab5.fontScaling__3aab5 {
     font-size: 2.75rem
+}
+
+:where(.mana-type-consolidation) .nitro-sm__3aab5 {
+    font-family: var(--font-nitro);
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 1.0833333333333333;
+    text-transform: uppercase
+}
+
+:where(.mana-type-consolidation) .nitro-sm__3aab5.fontScaling__3aab5 {
+    font-size: 1.5rem
+}
+
+:where(.mana-type-consolidation) .nitro-md__3aab5 {
+    font-family: var(--font-nitro);
+    font-size: 32px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 1.0625;
+    text-transform: uppercase
+}
+
+:where(.mana-type-consolidation) .nitro-md__3aab5.fontScaling__3aab5 {
+    font-size: 2rem
+}
+
+:where(.mana-type-consolidation) .nitro-lg__3aab5 {
+    font-family: var(--font-nitro);
+    font-size: 44px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase
+}
+
+:where(.mana-type-consolidation) .nitro-lg__3aab5.fontScaling__3aab5 {
+    font-size: 2.75rem
+}
+
+:where(.mana-type-consolidation) .nitro-xs__3aab5 {
+    font-family: var(--font-nitro);
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 1.125;
+    text-transform: uppercase
+}
+
+:where(.mana-type-consolidation) .nitro-xs__3aab5.fontScaling__3aab5 {
+    font-size: 1rem
 }
 
 :where(.mana-type-consolidation) .code__3aab5 {
@@ -3410,9 +3566,9 @@
 }
 
 .experimental\/display-xs__257af {
-    font-family: var(--font-headline);
+    font-family: var(--font-nitro);
     font-size: 16px;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 1.125
 }
 
@@ -3421,9 +3577,9 @@
 }
 
 .experimental\/display-sm__257af {
-    font-family: var(--font-headline);
+    font-family: var(--font-nitro);
     font-size: 24px;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 1.0833333333333333
 }
 
@@ -3432,9 +3588,9 @@
 }
 
 .experimental\/display-md__257af {
-    font-family: var(--font-headline);
+    font-family: var(--font-nitro);
     font-size: 32px;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 1.0625
 }
 
@@ -3443,13 +3599,117 @@
 }
 
 .experimental\/display-lg__257af {
-    font-family: var(--font-headline);
+    font-family: var(--font-nitro);
     font-size: 44px;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 1
 }
 
 .experimental\/display-lg__257af.fontScaling__257af {
+    font-size: 2.75rem
+}
+
+.nitro-sm__257af {
+    font-family: var(--font-headline);
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 800;
+    line-height: 1;
+    text-transform: uppercase
+}
+
+.nitro-sm__257af.fontScaling__257af {
+    font-size: 1.25rem
+}
+
+.nitro-md__257af {
+    font-family: var(--font-headline);
+    font-size: 34px;
+    font-style: italic;
+    font-weight: 800;
+    line-height: 1.0588235294117647;
+    text-transform: uppercase
+}
+
+.nitro-md__257af.fontScaling__257af {
+    font-size: 2.125rem
+}
+
+.nitro-lg__257af {
+    font-family: var(--font-headline);
+    font-size: 44px;
+    font-style: italic;
+    font-weight: 800;
+    line-height: .9545454545454546;
+    text-transform: uppercase
+}
+
+.nitro-lg__257af.fontScaling__257af {
+    font-size: 2.75rem
+}
+
+.nitro-xs__257af {
+    font-family: var(--font-primary);
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 800;
+    line-height: 1.2857142857142858;
+    text-transform: uppercase
+}
+
+.nitro-xs__257af.fontScaling__257af {
+    font-size: .875rem
+}
+
+.experimental\/nitro-xs__257af {
+    font-family: var(--font-nitro);
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 1.125;
+    text-transform: uppercase
+}
+
+.experimental\/nitro-xs__257af.fontScaling__257af {
+    font-size: 1rem
+}
+
+.experimental\/nitro-sm__257af {
+    font-family: var(--font-nitro);
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 1.0833333333333333;
+    text-transform: uppercase
+}
+
+.experimental\/nitro-sm__257af.fontScaling__257af {
+    font-size: 1.5rem
+}
+
+.experimental\/nitro-md__257af {
+    font-family: var(--font-nitro);
+    font-size: 32px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 1.0625;
+    text-transform: uppercase
+}
+
+.experimental\/nitro-md__257af.fontScaling__257af {
+    font-size: 2rem
+}
+
+.experimental\/nitro-lg__257af {
+    font-family: var(--font-nitro);
+    font-size: 44px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase
+}
+
+.experimental\/nitro-lg__257af.fontScaling__257af {
     font-size: 2.75rem
 }
 
@@ -4171,9 +4431,9 @@
 }
 
 :where(.mana-type-consolidation) .display-sm__257af {
-    font-family: var(--font-headline);
+    font-family: var(--font-nitro);
     font-size: 24px;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 1.0833333333333333
 }
 
@@ -4182,9 +4442,9 @@
 }
 
 :where(.mana-type-consolidation) .display-md__257af {
-    font-family: var(--font-headline);
+    font-family: var(--font-nitro);
     font-size: 32px;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 1.0625
 }
 
@@ -4193,14 +4453,66 @@
 }
 
 :where(.mana-type-consolidation) .display-lg__257af {
-    font-family: var(--font-headline);
+    font-family: var(--font-nitro);
     font-size: 44px;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 1
 }
 
 :where(.mana-type-consolidation) .display-lg__257af.fontScaling__257af {
     font-size: 2.75rem
+}
+
+:where(.mana-type-consolidation) .nitro-sm__257af {
+    font-family: var(--font-nitro);
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 1.0833333333333333;
+    text-transform: uppercase
+}
+
+:where(.mana-type-consolidation) .nitro-sm__257af.fontScaling__257af {
+    font-size: 1.5rem
+}
+
+:where(.mana-type-consolidation) .nitro-md__257af {
+    font-family: var(--font-nitro);
+    font-size: 32px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 1.0625;
+    text-transform: uppercase
+}
+
+:where(.mana-type-consolidation) .nitro-md__257af.fontScaling__257af {
+    font-size: 2rem
+}
+
+:where(.mana-type-consolidation) .nitro-lg__257af {
+    font-family: var(--font-nitro);
+    font-size: 44px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase
+}
+
+:where(.mana-type-consolidation) .nitro-lg__257af.fontScaling__257af {
+    font-size: 2.75rem
+}
+
+:where(.mana-type-consolidation) .nitro-xs__257af {
+    font-family: var(--font-nitro);
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 1.125;
+    text-transform: uppercase
+}
+
+:where(.mana-type-consolidation) .nitro-xs__257af.fontScaling__257af {
+    font-size: 1rem
 }
 
 :where(.mana-type-consolidation) .code__257af {
@@ -4519,4 +4831,4 @@
     margin-inline-end: 16px
 }
 
-/*# sourceMappingURL=384236.1d0af0a4c880d638.css.map*/
+/*# sourceMappingURL=384236.e4a1157bbde40ef0.css.map*/

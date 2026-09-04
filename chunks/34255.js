@@ -1,9 +1,9 @@
 s.d(t, { default: () => N });
-var a = s(477900),
-    e = s(582128),
-    c = s(935399),
-    n = s(212776),
-    r = s(22856),
+var e = s(477900),
+    a = s(582128),
+    n = s(935399),
+    r = s(212776),
+    c = s(22856),
     l = s(224640),
     d = s(315629),
     o = s(20742),
@@ -23,62 +23,62 @@ var a = s(477900),
 function N(i) {
     let { renderModalProps: t, dismissibleContent: s, markAsDismissed: N } = i,
         { onClose: w, transitionState: y } = t,
-        { headingId: D } = (0, r.k)(),
+        { headingId: D } = (0, c.k)(),
         T = (0, g.$g)(0, (0, j.Rr)(), { minimumFractionDigits: 0, maximumFractionDigits: 0 });
     return (
-        (0, c.Ay)(() => {
+        (0, n.Ay)(() => {
             (0, u.Wx)(s);
         }),
-        e.useEffect(
+        a.useEffect(
             () => () => {
                 N(S.i.AUTO_DISMISS);
             },
             [N],
         ),
-        (0, a.jsx)(k.A, {
+        (0, e.jsx)(k.A, {
             subscriptionTier: f.pe.TIER_2,
             children: (i) => {
                 let { onClick: t } = i;
-                return (0, a.jsx)(l.d, {
+                return (0, e.jsx)(l.d, {
                     transitionState: y,
                     onClose: w,
                     size: "md",
                     paddingSize: "lg",
-                    children: (0, a.jsxs)(d.h, {
+                    children: (0, e.jsxs)(d.h, {
                         color: "nitro-pink",
                         className: C.D7,
                         children: [
-                            (0, a.jsx)("div", { className: C.cG, children: (0, a.jsx)(o.s_, { shouldColorMix: !0 }) }),
-                            (0, a.jsx)("div", {
+                            (0, e.jsx)("div", { className: C.cG, children: (0, e.jsx)(o.s_, { shouldColorMix: !0 }) }),
+                            (0, e.jsx)("div", {
                                 className: C.tW,
-                                children: (0, a.jsx)(n.x, { alt: "", width: 400, height: "auto" }),
+                                children: (0, e.jsx)(r.x, { alt: "", width: 400, height: "auto" }),
                             }),
-                            (0, a.jsxs)("div", {
+                            (0, e.jsxs)("div", {
                                 className: C.Qs,
                                 children: [
-                                    (0, a.jsx)(x.D, {
+                                    (0, e.jsx)(x.D, {
                                         id: D,
-                                        variant: "display-md",
+                                        variant: "nitro-md",
                                         color: "text-strong",
                                         className: C.wx,
                                         children: b.intl.string(b.t["M/ytwa"]),
                                     }),
-                                    (0, a.jsx)(m.E, {
+                                    (0, e.jsx)(m.E, {
                                         variant: "text-md/normal",
                                         color: "text-subtle",
                                         className: C.rf,
                                         children: b.intl.formatToPlainString(b.t.xMkRkc, { price: T }),
                                     }),
-                                    (0, a.jsxs)("div", {
+                                    (0, e.jsxs)("div", {
                                         className: C.v0,
                                         children: [
-                                            (0, a.jsx)(h.$, {
+                                            (0, e.jsx)(h.$, {
                                                 variant: "secondary",
                                                 size: "md",
                                                 onClick: () => (0, v.x)(w),
                                                 text: b.intl.string(b.t.j7LkaR),
                                             }),
-                                            (0, a.jsx)(h.$, {
+                                            (0, e.jsx)(h.$, {
                                                 variant: "expressive",
                                                 size: "md",
                                                 icon: p.t,

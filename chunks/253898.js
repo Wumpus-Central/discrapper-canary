@@ -1,4 +1,4 @@
-a.r(
+i.r(
     (e.exports = {
         "heading-sm/normal": "heading-sm/normal_f369db",
         fontScaling: "fontScaling_f369db",
@@ -97,6 +97,14 @@ a.r(
         "experimental/display-sm": "experimental/display-sm_f369db",
         "experimental/display-md": "experimental/display-md_f369db",
         "experimental/display-lg": "experimental/display-lg_f369db",
+        "nitro-sm": "nitro-sm_f369db",
+        "nitro-md": "nitro-md_f369db",
+        "nitro-lg": "nitro-lg_f369db",
+        "nitro-xs": "nitro-xs_f369db",
+        "experimental/nitro-xs": "experimental/nitro-xs_f369db",
+        "experimental/nitro-sm": "experimental/nitro-sm_f369db",
+        "experimental/nitro-md": "experimental/nitro-md_f369db",
+        "experimental/nitro-lg": "experimental/nitro-lg_f369db",
         code: "code_f369db",
         "experimental/mono-md/normal": "experimental/mono-md/normal_f369db",
         "experimental/mono-md/bold": "experimental/mono-md/bold_f369db",

@@ -77,7 +77,7 @@ function D(e) {
                 align: "center",
                 className: w.wx,
                 children: [
-                    (0, l.jsx)(d.D, { variant: "display-md", className: w.Ss, children: (0, L.DP)() }),
+                    (0, l.jsx)(d.D, { variant: "nitro-sm", className: w.Ss, children: (0, L.DP)() }),
                     (0, l.jsx)(N.E, { type: "beta", variant: "expressive" }),
                 ],
             }),
@@ -153,8 +153,8 @@ function es(e) {
         i = (0, u.Ay)();
     if (n)
         if (s === Y.PremiumTypes.TIER_0)
-            return (0, l.jsx)(d.D, { variant: "display-md", className: q.dW, children: P.intl.string(P.t.tUbSDK) });
-        else return (0, l.jsx)(d.D, { variant: "display-md", className: q.dW, children: P.intl.string(P.t.Ipxkog) });
+            return (0, l.jsx)(d.D, { variant: "nitro-md", className: q.dW, children: P.intl.string(P.t.tUbSDK) });
+        else return (0, l.jsx)(d.D, { variant: "nitro-md", className: q.dW, children: P.intl.string(P.t.Ipxkog) });
     t =
         s === Y.PremiumTypes.TIER_0
             ? (0, o.M)(i)

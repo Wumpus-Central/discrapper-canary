@@ -255,7 +255,7 @@ function eh(e) {
             children: [
                 v && (0, n.jsx)(Q.R, { text: N, className: ed.pill }),
                 (0, n.jsx)(o.D, {
-                    variant: "display-md",
+                    variant: "nitro-md",
                     color: A ? "text-strong" : "text-overlay-light",
                     className: ed.cardTitle,
                     children: E,
@@ -393,7 +393,7 @@ function ef(e) {
                         className: ed.pill,
                     }),
                 (0, n.jsx)(o.D, {
-                    variant: "display-md",
+                    variant: "nitro-md",
                     color: G ? "text-strong" : "text-overlay-light",
                     className: ed.cardTitle,
                     children: w.intl.string(w.t.lG6a5x),
@@ -441,7 +441,7 @@ function eN(e) {
                     className: ed.cardHeader,
                     children: [
                         (0, n.jsx)(o.D, {
-                            variant: "display-md",
+                            variant: "nitro-md",
                             color: a ? "text-strong" : "text-overlay-light",
                             className: ed.cardTitle,
                             children: w.intl.string(ee.default.eSKiXk),
@@ -556,7 +556,7 @@ function eT(e) {
             className: s()(ed.premiumCardsContainer, t),
             children: [
                 (0, n.jsx)(o.D, {
-                    variant: "display-md",
+                    variant: "nitro-md",
                     color: "text-strong",
                     className: ed.premiumCardsHeader,
                     children: w.intl.string(w.t.vLz3Zs),

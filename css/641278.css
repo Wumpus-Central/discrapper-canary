@@ -6,16 +6,17 @@
 }
 
 .header__75558 {
-    font-size: 38px;
-    font-style: italic;
-    font-weight: 900;
-    letter-spacing: -.76px;
-    line-height: 100%;
     overflow-wrap: anywhere;
     padding: 0 var(--space-16);
     text-align: center;
-    text-transform: uppercase;
     word-break: break-word
+}
+
+html:not(.mana-type-consolidation) .header__75558 {
+    font-size: 38px;
+    font-weight: 900;
+    letter-spacing: -.76px;
+    line-height: 100%
 }
 
 .textContainer__75558 {
@@ -68,4 +69,4 @@
     margin-top: 16px
 }
 
-/*# sourceMappingURL=641278.40c47f79d681faa5.css.map*/
+/*# sourceMappingURL=641278.f3c8746c77542950.css.map*/

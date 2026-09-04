@@ -175,7 +175,7 @@ let O = function (e) {
                                           children: (0, n.jsx)(o.E, { type: "beta", variant: "expressive" }),
                                       }),
                                   (0, n.jsx)(c.D, {
-                                      variant: "display-md",
+                                      variant: "nitro-sm",
                                       color: "text-strong",
                                       className: S.cf,
                                       children: Y,

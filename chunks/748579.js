@@ -1,8 +1,8 @@
-a.r(t), a.d(t, { default: () => y });
+a.r(t), a.d(t, { default: () => N });
 var n = a(477900),
     s = a(582128),
-    i = a(503698),
-    r = a.n(i),
+    r = a(503698),
+    i = a.n(r),
     l = a(562708),
     d = a(834730),
     c = a(866665),
@@ -18,10 +18,10 @@ var n = a(477900),
     x = a(652215),
     v = a(375708),
     T = a(31233);
-function y(e) {
+function N(e) {
     let { levelUpData: t } = e,
-        [a, i] = s.useState(!1),
-        [y, N] = s.useState(!1),
+        [a, r] = s.useState(!1),
+        [N, y] = s.useState(!1),
         [b, j] = s.useState(!1),
         k = (0, f.Xb)(),
         R = s.useRef(null),
@@ -49,7 +49,7 @@ function y(e) {
             null != A.current && A.current.load();
         }, []);
     let w = s.useCallback(() => {
-            N(!1),
+            y(!1),
                 j(!1),
                 P(),
                 (R.current.style.display = "none"),
@@ -62,7 +62,7 @@ function y(e) {
             "--custom-new-badge-color": `linear-gradient(to right, ${t.currentBadgeTextGradient})`,
         };
     return (0, n.jsxs)("div", {
-        className: r()(T.Qs, { [T.v6]: y, [T.Kc]: a, [T.A4]: b }),
+        className: i()(T.Qs, { [T.v6]: N, [T.Kc]: a, [T.A4]: b }),
         style: C,
         ref: R,
         children: [
@@ -71,8 +71,8 @@ function y(e) {
                 className: T.Ki,
                 src: L,
                 playsInline: !0,
-                onLoadedData: () => i(!0),
-                onEnded: () => N(!0),
+                onLoadedData: () => r(!0),
+                onEnded: () => y(!0),
             }),
             (0, n.jsxs)("div", {
                 className: T.FS,
@@ -80,13 +80,13 @@ function y(e) {
                     (0, n.jsx)(h.A, { width: 60, height: 15 }),
                     null != U &&
                         (0, n.jsx)(d.E, {
-                            variant: "display-md",
-                            className: r()(T.Vv, T.km),
+                            variant: "nitro-md",
+                            className: i()(T.Vv, T.km),
                             children: v.intl.string(U.nameUnformatted),
                         }),
                     (0, n.jsx)(d.E, {
-                        variant: "display-md",
-                        className: r()(T.Vv, T.Hl),
+                        variant: "nitro-md",
+                        className: i()(T.Vv, T.Hl),
                         children: v.intl.string(I.nameUnformatted),
                     }),
                     null != k &&

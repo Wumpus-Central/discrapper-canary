@@ -21,6 +21,7 @@ var r = {
     "graphic--lg": "graphic--lg__2ee1b " + o(489387)["graphic--lg"],
     "graphic--video": "graphic--video__2ee1b " + o(489387)["graphic--video"],
     title: "title__2ee1b " + o(489387).title,
+    titleRefresh: "titleRefresh__2ee1b " + o(489387).title,
     headerBody: "headerBody__2ee1b " + o(489387).headerBody,
     caretHoverable: "caretHoverable__2ee1b",
 };

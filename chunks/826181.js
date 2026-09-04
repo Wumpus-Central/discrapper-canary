@@ -14,9 +14,9 @@ var i = a(477900),
     S = a(821609),
     m = a(964486),
     P = a(975807),
-    p = a(344346),
-    N = a(303136),
-    U = a(811656),
+    N = a(344346),
+    U = a(303136),
+    p = a(811656),
     b = a(976860),
     O = a(287809),
     R = a(174459),
@@ -57,20 +57,20 @@ function B(t) {
                     (0, i.jsx)("div", { className: G.ZB }),
                     (0, i.jsx)(c.D, {
                         className: G.wx,
-                        variant: "display-md",
+                        variant: "nitro-lg",
                         color: "text-strong",
                         children: h.intl.string(h.t.QWljxE),
                     }),
                     (0, i.jsxs)("div", {
                         className: G.Dz,
                         children: [
-                            (0, i.jsx)(N.A, {
+                            (0, i.jsx)(U.A, {
                                 fallbackImage:
                                     "https://cdn.discordapp.com/assets/content/b0bb3929d31ac9ae0bf431b4b92ee6c334165d518a03e286a9d664691750ad04.png",
                                 className: G.d9,
                                 children: (0, i.jsx)("source", { src: _ }),
                             }),
-                            (0, i.jsx)(p.A, {
+                            (0, i.jsx)(N.A, {
                                 user: r,
                                 isHighlighted: !0,
                                 nameplate: null,
@@ -107,7 +107,7 @@ function B(t) {
         }),
     });
 }
-function y(t) {
+function A(t) {
     let {
             setModalState: e,
             onClose: a,
@@ -120,16 +120,16 @@ function y(t) {
             ...I
         } = t,
         f = (0, C.DP)(),
-        [S, p] = (0, n.useState)(!1);
-    async function N() {
+        [S, N] = (0, n.useState)(!1);
+    async function U() {
         R.default.track(E.HAw.PREMIUM_GROUP_ACCEPT_INVITE_CTA_CLICKED, {
             invite_id: s,
             subscription_id: r,
             is_existing_sub: l,
         }),
-            p(!0);
+            N(!0);
         let t = await (0, g.wc)(r, c.id, s);
-        if ((p(!1), t.ok)) e(1);
+        if ((N(!1), t.ok)) e(1);
         else {
             var a;
             let i = null == (a = t.body?.code) ? 0 : (x[a] ?? 0);
@@ -207,12 +207,12 @@ function y(t) {
                     },
                     variant: "secondary",
                 },
-                { text: h.intl.string(L.default.odQeh3), onClick: N, variant: "expressive", icon: u.t, loading: S },
+                { text: h.intl.string(L.default.odQeh3), onClick: U, variant: "expressive", icon: u.t, loading: S },
             ],
         })
     );
 }
-function A(t) {
+function y(t) {
     let e,
         a,
         { error: n, onClose: r, ...s } = t,
@@ -288,7 +288,7 @@ function k(t) {
     let S = null;
     switch (c) {
         case 0:
-            S = (0, i.jsx)(y, {
+            S = (0, i.jsx)(A, {
                 setModalState: d,
                 premiumGroupSubscriptionId: e,
                 premiumGroupInviteId: a,
@@ -303,9 +303,9 @@ function k(t) {
             S = (0, i.jsx)(B, { ...o, isExistingSub: r, premiumGroupPrimaryName: l, currentUser: I });
             break;
         case 2:
-            S = (0, i.jsx)(A, { error: _, ...o });
+            S = (0, i.jsx)(y, { error: _, ...o });
     }
-    return (0, i.jsx)(U.A, {
+    return (0, i.jsx)(p.A, {
         isConfirmationStep: 1 === c,
         isEligibleForWowMoment: !0,
         shouldPrefetchWowMoment: !0,

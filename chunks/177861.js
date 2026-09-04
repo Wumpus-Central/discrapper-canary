@@ -34,7 +34,7 @@ e.exports = {
     pC: "badgeAccessoryGroup__6db38",
     Hq: "badgeAccessorySegment__6db38",
     $L: "badgeAccessoryText__6db38",
-    tN: "uppercaseItalic__6db38",
+    ve: "nitroTitle__6db38",
     oA: "badgeDetails__6db38",
     $S: "badgeStatsGrid__6db38",
     jQ: "badgeStatsGridSingle__6db38",

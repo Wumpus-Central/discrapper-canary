@@ -1013,9 +1013,9 @@
 }
 
 .experimental\/display-xs__09ccc {
-    font-family: var(--font-headline);
+    font-family: var(--font-nitro);
     font-size: 16px;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 1.125
 }
 
@@ -1024,9 +1024,9 @@
 }
 
 .experimental\/display-sm__09ccc {
-    font-family: var(--font-headline);
+    font-family: var(--font-nitro);
     font-size: 24px;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 1.0833333333333333
 }
 
@@ -1035,9 +1035,9 @@
 }
 
 .experimental\/display-md__09ccc {
-    font-family: var(--font-headline);
+    font-family: var(--font-nitro);
     font-size: 32px;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 1.0625
 }
 
@@ -1046,13 +1046,117 @@
 }
 
 .experimental\/display-lg__09ccc {
-    font-family: var(--font-headline);
+    font-family: var(--font-nitro);
     font-size: 44px;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 1
 }
 
 .experimental\/display-lg__09ccc.fontScaling__09ccc {
+    font-size: 2.75rem
+}
+
+.nitro-sm__09ccc {
+    font-family: var(--font-headline);
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 800;
+    line-height: 1;
+    text-transform: uppercase
+}
+
+.nitro-sm__09ccc.fontScaling__09ccc {
+    font-size: 1.25rem
+}
+
+.nitro-md__09ccc {
+    font-family: var(--font-headline);
+    font-size: 34px;
+    font-style: italic;
+    font-weight: 800;
+    line-height: 1.0588235294117647;
+    text-transform: uppercase
+}
+
+.nitro-md__09ccc.fontScaling__09ccc {
+    font-size: 2.125rem
+}
+
+.nitro-lg__09ccc {
+    font-family: var(--font-headline);
+    font-size: 44px;
+    font-style: italic;
+    font-weight: 800;
+    line-height: .9545454545454546;
+    text-transform: uppercase
+}
+
+.nitro-lg__09ccc.fontScaling__09ccc {
+    font-size: 2.75rem
+}
+
+.nitro-xs__09ccc {
+    font-family: var(--font-primary);
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 800;
+    line-height: 1.2857142857142858;
+    text-transform: uppercase
+}
+
+.nitro-xs__09ccc.fontScaling__09ccc {
+    font-size: .875rem
+}
+
+.experimental\/nitro-xs__09ccc {
+    font-family: var(--font-nitro);
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 1.125;
+    text-transform: uppercase
+}
+
+.experimental\/nitro-xs__09ccc.fontScaling__09ccc {
+    font-size: 1rem
+}
+
+.experimental\/nitro-sm__09ccc {
+    font-family: var(--font-nitro);
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 1.0833333333333333;
+    text-transform: uppercase
+}
+
+.experimental\/nitro-sm__09ccc.fontScaling__09ccc {
+    font-size: 1.5rem
+}
+
+.experimental\/nitro-md__09ccc {
+    font-family: var(--font-nitro);
+    font-size: 32px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 1.0625;
+    text-transform: uppercase
+}
+
+.experimental\/nitro-md__09ccc.fontScaling__09ccc {
+    font-size: 2rem
+}
+
+.experimental\/nitro-lg__09ccc {
+    font-family: var(--font-nitro);
+    font-size: 44px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase
+}
+
+.experimental\/nitro-lg__09ccc.fontScaling__09ccc {
     font-size: 2.75rem
 }
 
@@ -1774,9 +1878,9 @@
 }
 
 :where(.mana-type-consolidation) .display-sm__09ccc {
-    font-family: var(--font-headline);
+    font-family: var(--font-nitro);
     font-size: 24px;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 1.0833333333333333
 }
 
@@ -1785,9 +1889,9 @@
 }
 
 :where(.mana-type-consolidation) .display-md__09ccc {
-    font-family: var(--font-headline);
+    font-family: var(--font-nitro);
     font-size: 32px;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 1.0625
 }
 
@@ -1796,14 +1900,66 @@
 }
 
 :where(.mana-type-consolidation) .display-lg__09ccc {
-    font-family: var(--font-headline);
+    font-family: var(--font-nitro);
     font-size: 44px;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 1
 }
 
 :where(.mana-type-consolidation) .display-lg__09ccc.fontScaling__09ccc {
     font-size: 2.75rem
+}
+
+:where(.mana-type-consolidation) .nitro-sm__09ccc {
+    font-family: var(--font-nitro);
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 1.0833333333333333;
+    text-transform: uppercase
+}
+
+:where(.mana-type-consolidation) .nitro-sm__09ccc.fontScaling__09ccc {
+    font-size: 1.5rem
+}
+
+:where(.mana-type-consolidation) .nitro-md__09ccc {
+    font-family: var(--font-nitro);
+    font-size: 32px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 1.0625;
+    text-transform: uppercase
+}
+
+:where(.mana-type-consolidation) .nitro-md__09ccc.fontScaling__09ccc {
+    font-size: 2rem
+}
+
+:where(.mana-type-consolidation) .nitro-lg__09ccc {
+    font-family: var(--font-nitro);
+    font-size: 44px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase
+}
+
+:where(.mana-type-consolidation) .nitro-lg__09ccc.fontScaling__09ccc {
+    font-size: 2.75rem
+}
+
+:where(.mana-type-consolidation) .nitro-xs__09ccc {
+    font-family: var(--font-nitro);
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 1.125;
+    text-transform: uppercase
+}
+
+:where(.mana-type-consolidation) .nitro-xs__09ccc.fontScaling__09ccc {
+    font-size: 1rem
 }
 
 :where(.mana-type-consolidation) .code__09ccc {
@@ -2896,9 +3052,9 @@
 }
 
 .experimental\/display-xs_c9e42f {
-    font-family: var(--font-headline);
+    font-family: var(--font-nitro);
     font-size: 16px;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 1.125
 }
 
@@ -2907,9 +3063,9 @@
 }
 
 .experimental\/display-sm_c9e42f {
-    font-family: var(--font-headline);
+    font-family: var(--font-nitro);
     font-size: 24px;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 1.0833333333333333
 }
 
@@ -2918,9 +3074,9 @@
 }
 
 .experimental\/display-md_c9e42f {
-    font-family: var(--font-headline);
+    font-family: var(--font-nitro);
     font-size: 32px;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 1.0625
 }
 
@@ -2929,13 +3085,117 @@
 }
 
 .experimental\/display-lg_c9e42f {
-    font-family: var(--font-headline);
+    font-family: var(--font-nitro);
     font-size: 44px;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 1
 }
 
 .experimental\/display-lg_c9e42f.fontScaling_c9e42f {
+    font-size: 2.75rem
+}
+
+.nitro-sm_c9e42f {
+    font-family: var(--font-headline);
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 800;
+    line-height: 1;
+    text-transform: uppercase
+}
+
+.nitro-sm_c9e42f.fontScaling_c9e42f {
+    font-size: 1.25rem
+}
+
+.nitro-md_c9e42f {
+    font-family: var(--font-headline);
+    font-size: 34px;
+    font-style: italic;
+    font-weight: 800;
+    line-height: 1.0588235294117647;
+    text-transform: uppercase
+}
+
+.nitro-md_c9e42f.fontScaling_c9e42f {
+    font-size: 2.125rem
+}
+
+.nitro-lg_c9e42f {
+    font-family: var(--font-headline);
+    font-size: 44px;
+    font-style: italic;
+    font-weight: 800;
+    line-height: .9545454545454546;
+    text-transform: uppercase
+}
+
+.nitro-lg_c9e42f.fontScaling_c9e42f {
+    font-size: 2.75rem
+}
+
+.nitro-xs_c9e42f {
+    font-family: var(--font-primary);
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 800;
+    line-height: 1.2857142857142858;
+    text-transform: uppercase
+}
+
+.nitro-xs_c9e42f.fontScaling_c9e42f {
+    font-size: .875rem
+}
+
+.experimental\/nitro-xs_c9e42f {
+    font-family: var(--font-nitro);
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 1.125;
+    text-transform: uppercase
+}
+
+.experimental\/nitro-xs_c9e42f.fontScaling_c9e42f {
+    font-size: 1rem
+}
+
+.experimental\/nitro-sm_c9e42f {
+    font-family: var(--font-nitro);
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 1.0833333333333333;
+    text-transform: uppercase
+}
+
+.experimental\/nitro-sm_c9e42f.fontScaling_c9e42f {
+    font-size: 1.5rem
+}
+
+.experimental\/nitro-md_c9e42f {
+    font-family: var(--font-nitro);
+    font-size: 32px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 1.0625;
+    text-transform: uppercase
+}
+
+.experimental\/nitro-md_c9e42f.fontScaling_c9e42f {
+    font-size: 2rem
+}
+
+.experimental\/nitro-lg_c9e42f {
+    font-family: var(--font-nitro);
+    font-size: 44px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase
+}
+
+.experimental\/nitro-lg_c9e42f.fontScaling_c9e42f {
     font-size: 2.75rem
 }
 
@@ -3657,9 +3917,9 @@
 }
 
 :where(.mana-type-consolidation) .display-sm_c9e42f {
-    font-family: var(--font-headline);
+    font-family: var(--font-nitro);
     font-size: 24px;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 1.0833333333333333
 }
 
@@ -3668,9 +3928,9 @@
 }
 
 :where(.mana-type-consolidation) .display-md_c9e42f {
-    font-family: var(--font-headline);
+    font-family: var(--font-nitro);
     font-size: 32px;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 1.0625
 }
 
@@ -3679,14 +3939,66 @@
 }
 
 :where(.mana-type-consolidation) .display-lg_c9e42f {
-    font-family: var(--font-headline);
+    font-family: var(--font-nitro);
     font-size: 44px;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 1
 }
 
 :where(.mana-type-consolidation) .display-lg_c9e42f.fontScaling_c9e42f {
     font-size: 2.75rem
+}
+
+:where(.mana-type-consolidation) .nitro-sm_c9e42f {
+    font-family: var(--font-nitro);
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 1.0833333333333333;
+    text-transform: uppercase
+}
+
+:where(.mana-type-consolidation) .nitro-sm_c9e42f.fontScaling_c9e42f {
+    font-size: 1.5rem
+}
+
+:where(.mana-type-consolidation) .nitro-md_c9e42f {
+    font-family: var(--font-nitro);
+    font-size: 32px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 1.0625;
+    text-transform: uppercase
+}
+
+:where(.mana-type-consolidation) .nitro-md_c9e42f.fontScaling_c9e42f {
+    font-size: 2rem
+}
+
+:where(.mana-type-consolidation) .nitro-lg_c9e42f {
+    font-family: var(--font-nitro);
+    font-size: 44px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase
+}
+
+:where(.mana-type-consolidation) .nitro-lg_c9e42f.fontScaling_c9e42f {
+    font-size: 2.75rem
+}
+
+:where(.mana-type-consolidation) .nitro-xs_c9e42f {
+    font-family: var(--font-nitro);
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 1.125;
+    text-transform: uppercase
+}
+
+:where(.mana-type-consolidation) .nitro-xs_c9e42f.fontScaling_c9e42f {
+    font-size: 1rem
 }
 
 :where(.mana-type-consolidation) .code_c9e42f {
@@ -3821,4 +4133,4 @@
     padding: 8px
 }
 
-/*# sourceMappingURL=811198.bd4b3774c26fdc32.css.map*/
+/*# sourceMappingURL=811198.cd973ebff113339c.css.map*/

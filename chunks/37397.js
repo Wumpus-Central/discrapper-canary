@@ -177,7 +177,7 @@ function em(e) {
                 align: "center",
                 gap: 10,
                 children: [
-                    (0, i.jsx)(m.D, { variant: "display-md", className: eg.Nd, children: (0, ed.DP)() }),
+                    (0, i.jsx)(m.D, { variant: "nitro-xs", className: eg.Nd, children: (0, ed.DP)() }),
                     (0, i.jsx)(M.E, { type: "beta", variant: "expressive" }),
                 ],
             }),

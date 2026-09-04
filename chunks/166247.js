@@ -51,7 +51,7 @@ function S(s) {
                         children: [
                             (0, a.jsx)(o.D, {
                                 id: N,
-                                variant: "display-md",
+                                variant: "nitro-md",
                                 color: "text-strong",
                                 className: k.wx,
                                 children: f.intl.string(f.t.Xm5q5l),

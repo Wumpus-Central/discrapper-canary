@@ -29,14 +29,15 @@
 
 .headerText__3e32a {
     color: var(--text-strong);
+    text-align: center;
+    width: 620px
+}
+
+html:not(.mana-type-consolidation) .headerText__3e32a {
     font-size: 32px;
-    font-style: italic;
     font-weight: 900;
     letter-spacing: -.64px;
-    line-height: 100%;
-    text-align: center;
-    text-transform: uppercase;
-    width: 620px
+    line-height: 100%
 }
 
 .closeButtonContainer__3e32a {
@@ -192,4 +193,4 @@
     margin-top: var(--space-24)
 }
 
-/*# sourceMappingURL=545749.8d2e223e3b965248.css.map*/
+/*# sourceMappingURL=545749.5bdc2b81051afaa6.css.map*/

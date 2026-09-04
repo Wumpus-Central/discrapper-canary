@@ -805,7 +805,7 @@ function eV() {
                 children: [
                     r
                         ? (0, n.jsx)(f.D, {
-                              variant: "display-md",
+                              variant: "nitro-md",
                               color: "text-overlay-light",
                               className: eG._K,
                               children: (0, ew.DP)(),
