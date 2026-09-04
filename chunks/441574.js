@@ -1280,6 +1280,7 @@ var j =
         (_[(_.NEW_METHOD = 10)] = "NEW_METHOD"),
         (_[(_.MANUAL_REVIEW = 11)] = "MANUAL_REVIEW"),
         (_[(_.OS_SIGNAL_CONFIRMED = 12)] = "OS_SIGNAL_CONFIRMED"),
+        (_[(_.TNS_DETERMINATION = 13)] = "TNS_DETERMINATION"),
         _),
     Z =
         (((E = {})[(E.UNSPECIFIED = 0)] = "UNSPECIFIED"),
