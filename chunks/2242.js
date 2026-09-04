@@ -1,9 +1,9 @@
 i.d(t, {
     M_: () => p,
     P7: () => C,
-    TQ: () => h,
+    TQ: () => d,
     Xn: () => _,
-    Yl: () => d,
+    Yl: () => h,
     bN: () => o,
     c4: () => u,
     f7: () => c,
@@ -16,8 +16,8 @@ var l,
     s = i(202541),
     r = i(818348);
 let c = 3,
-    d = "(max-width: 485px)",
-    h = "(max-height: 450px)";
+    h = "(max-width: 485px)",
+    d = "(max-height: 450px)";
 var o = (((l = {})[(l.CHANNEL = 1)] = "CHANNEL"), (l[(l.INTANGIBLE = 2)] = "INTANGIBLE"), l),
     u = (((a = {})[(a.SOME_CHANNELS = 0)] = "SOME_CHANNELS"), (a[(a.ALL_CHANNELS = 1)] = "ALL_CHANNELS"), a);
 let f = [

@@ -1,4 +1,4 @@
-n.d(t, { B: () => d, r: () => c });
+n.d(t, { B: () => u, r: () => d });
 var i = n(477900),
     l = n(582128),
     s = n(775602),
@@ -10,16 +10,16 @@ let a = l.createContext(null),
         manageFocusOnReorder: r.tE,
         manageFocusOnDelete: r.tE,
     };
-function c() {
+function d() {
     return l.useContext(a) ?? o;
 }
-function d(e) {
+function u(e) {
     let { children: t, emptyListFallbackRef: n } = e,
         r = l.useRef(new Map()),
         o = l.useRef(new Map()),
-        c = l.useRef([]),
-        d = l.useCallback(() => {
-            c.current = Array.from(r.current.keys()).sort((e, t) => {
+        d = l.useRef([]),
+        u = l.useCallback(() => {
+            d.current = Array.from(r.current.keys()).sort((e, t) => {
                 let n = r.current.get(e),
                     i = r.current.get(t);
                 if (null == n || null == i) return 0;
@@ -29,7 +29,7 @@ function d(e) {
                     : +((l & Node.DOCUMENT_POSITION_PRECEDING) != 0);
             });
         }, []),
-        u = l.useCallback(
+        c = l.useCallback(
             (e) => (t) => {
                 null != t ? o.current.set(e, t) : o.current.delete(e);
             },
@@ -48,11 +48,11 @@ function d(e) {
                     t?.focus();
                 });
         }, []),
-        x = l.useCallback(
+        f = l.useCallback(
             (e) => {
                 if (!s.Ay.keyboardModeEnabled) return;
-                d();
-                let t = c.current,
+                u();
+                let t = d.current,
                     i = t.indexOf(e);
                 if (-1 === i) return;
                 let l = i + 1 < t.length ? i + 1 : i - 1;
@@ -67,11 +67,11 @@ function d(e) {
                         n?.focus();
                     });
             },
-            [n, d],
+            [n, u],
         ),
-        f = l.useMemo(
-            () => ({ registerDragHandleRef: u, registerItemRef: g, manageFocusOnReorder: m, manageFocusOnDelete: x }),
-            [u, g, m, x],
+        x = l.useMemo(
+            () => ({ registerDragHandleRef: c, registerItemRef: g, manageFocusOnReorder: m, manageFocusOnDelete: f }),
+            [c, g, m, f],
         );
-    return (0, i.jsx)(a.Provider, { value: f, children: t });
+    return (0, i.jsx)(a.Provider, { value: x, children: t });
 }

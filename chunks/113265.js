@@ -5,12 +5,12 @@ var i = r(582128),
     s = r(116833),
     u = r(152472);
 function a(t) {
-    let { userId: e, product: r, selectedVariantIndex: a, location: o, onError: c } = t,
-        d = i.useMemo(
+    let { userId: e, product: r, selectedVariantIndex: a, location: o, onError: d } = t,
+        c = i.useMemo(
             () => (r.type === n.R.VARIANTS_GROUP && null != a && r.variants?.[a] != null ? r.variants[a] : r),
             [r, a],
         ),
-        S = d.skuId,
+        S = c.skuId,
         A = (0, u.c)({
             userId: e,
             skuId: S,
@@ -33,10 +33,10 @@ function a(t) {
                     aspectRatio: r,
                     props: { product: e, forCollectedModal: !0 },
                 };
-            })({ product: d }),
+            })({ product: c }),
             location: o,
-            onError: c,
+            onError: d,
         }),
-        { isPurchased: h } = (0, l.h)(d);
-    return { ...A, specificProductOrVariant: d, isPurchased: h };
+        { isPurchased: h } = (0, l.h)(c);
+    return { ...A, specificProductOrVariant: c, isPurchased: h };
 }

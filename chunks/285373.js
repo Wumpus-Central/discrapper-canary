@@ -6,8 +6,8 @@ var i = r(477900),
     u = r(895360),
     a = r(152472),
     o = r(561794),
-    c = r(280450),
-    d = r(202541),
+    d = r(280450),
+    c = r(202541),
     S = r(375708);
 let A = {
         type: "image",
@@ -15,9 +15,9 @@ let A = {
     },
     h = n.forwardRef(function (t, e) {
         let { className: r, disabled: n, size: h, variant: I, location: p, forceDarkTheme: f } = t,
-            _ = d.pe.TIER_2,
+            _ = c.pe.TIER_2,
             E = S.intl.string(S.t.lG6a5x),
-            m = (0, l.bG)([c.default], () => c.default.getId());
+            m = (0, l.bG)([d.default], () => d.default.getId());
         (0, o.pE)();
         let {
             isWishlisted: y,

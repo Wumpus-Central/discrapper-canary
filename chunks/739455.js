@@ -7,8 +7,8 @@ var l = i(582128),
     s = i(665260),
     r = i(702841),
     c = i(228366),
-    d = i(755584),
-    h = i(734057),
+    h = i(755584),
+    d = i(734057),
     o = i(567305),
     u = i(636194),
     f = i(846922),
@@ -19,7 +19,7 @@ var l = i(582128),
 n().shim();
 let E = {};
 function g(e) {
-    let t = (0, r.bG)([h.A], () => h.A.getChannel(e)),
+    let t = (0, r.bG)([d.A], () => d.A.getChannel(e)),
         i = (0, r.bG)([S.A], () => S.A.getChannel(e)),
         a = (0, r.bG)([u.A], () => u.A.getBenefitChannel(e)),
         n = (0, l.useMemo)(
@@ -44,12 +44,12 @@ function v(e, t, i) {
                 i = t?.priceTier;
             null != i && c.push(i);
         });
-    let d = new Set(c.concat(s));
-    if (!d.has(i)) return null;
-    let h = t.indexOf(i);
-    if (-1 === h) return null;
+    let h = new Set(c.concat(s));
+    if (!h.has(i)) return null;
+    let d = t.indexOf(i);
+    if (-1 === d) return null;
     let o = [];
-    for (let e = h + 1; e < t.length && (d.has(t[e]) || o.push(t[e]), 3 !== o.length); e++);
+    for (let e = d + 1; e < t.length && (h.has(t[e]) || o.push(t[e]), 3 !== o.length); e++);
     return o;
 }
 function I(e) {
@@ -91,7 +91,7 @@ async function A(e, t) {
         l = [];
     t.forEach((t) => {
         let a = S.A.getChannel(t.ref_id);
-        null != a && (i.push(d.A.createRoleSubscriptionTemplateChannel(e, a.name, a.type, a.topic)), l.push(a));
+        null != a && (i.push(h.A.createRoleSubscriptionTemplateChannel(e, a.name, a.type, a.topic)), l.push(a));
     }),
         0 === i.length ||
             (await Promise.allSettled(i)).forEach((i, a) => {

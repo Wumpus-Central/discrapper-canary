@@ -535,8 +535,8 @@ function e7(e) {
 }
 var e3 = n(650583),
     e8 = n(872330);
-let e6 = (0, J.Ld)(),
-    e4 = "PrivateChannelRecipientsInvite",
+let e4 = (0, J.Ld)(),
+    e6 = "PrivateChannelRecipientsInvite",
     te = { ADD_FRIENDS_TO_DM: "Add Friends to DM", NEW_GROUP_DM: "New Group DM", MEMBER_LIST: "Member List" };
 function tt(e) {
     if (ek.A.isFriend(e)) return !0;
@@ -867,7 +867,7 @@ class to extends l.PureComponent {
                     role: "combobox",
                     "aria-autocomplete": "list",
                     "aria-haspopup": "listbox",
-                    "aria-controls": e6,
+                    "aria-controls": e4,
                     "aria-expanded": o,
                     "aria-activedescendant": o ? `user-row-${s}` : void 0,
                 }),
@@ -883,7 +883,7 @@ class to extends l.PureComponent {
                   className: e8.qu,
                   children: (0, i.jsx)(eI, {
                       ref: this.nitroUpsellBannerRef,
-                      location: e4,
+                      location: e6,
                       memberCount: this.getTotalSelectedMemberCount(),
                       recipientLimit: (0, K.A)({ useNitroCapExperiment: !0 }),
                   }),
@@ -951,7 +951,7 @@ class to extends l.PureComponent {
                     fade: !0,
                     role: void 0,
                     innerRole: "group",
-                    innerId: e6,
+                    innerId: e4,
                 };
     }
     getEmptyStateListProps() {
@@ -1035,7 +1035,7 @@ class to extends l.PureComponent {
             fade: !0,
             role: void 0,
             innerRole: "group",
-            innerId: e6,
+            innerId: e4,
         };
     }
     handleSectionToggle = (e) => {
@@ -1163,7 +1163,7 @@ class to extends l.PureComponent {
     }
     renderNitroCapFullState() {
         let { transitionState: e, onClose: t, nitroAudience: n } = this.props;
-        if ((0, ei.yh)(n)) return (0, i.jsx)(ed, { transitionState: e, onClose: t, location: e4, nitroAudience: n });
+        if ((0, ei.yh)(n)) return (0, i.jsx)(ed, { transitionState: e, onClose: t, location: e6, nitroAudience: n });
         let l = (0, K.A)({ useNitroCapExperiment: !0 });
         return (0, i.jsx)(o.Modal, {
             transitionState: e ?? D.ip.ENTERED,
@@ -1528,7 +1528,7 @@ function td(e) {
             [t],
         ),
         o = (0, ei.qH)(),
-        { enabled: d } = $.A.useConfig({ location: e4 });
+        { enabled: d } = $.A.useConfig({ location: e6 });
     return (0, i.jsx)(to, {
         channel: t,
         isStaffOnlyDM: a,
@@ -1605,7 +1605,7 @@ function tg(e) {
                   }),
                   null != t &&
                       t.isMultiUserDM() &&
-                      (0, i.jsx)(eo, { targetElementRef: c, channelId: t.id, location: e4, onAddToGroup: g }, t.id),
+                      (0, i.jsx)(eo, { targetElementRef: c, channelId: t.id, location: e6, onAddToGroup: g }, t.id),
               ],
           });
 }

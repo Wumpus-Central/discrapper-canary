@@ -1,4 +1,4 @@
-i.d(t, { A: () => d });
+i.d(t, { A: () => h });
 var l = i(477900);
 i(582128);
 var a = i(503698),
@@ -16,10 +16,10 @@ function s(e) {
 }
 var r = i(403581),
     c = i(512376);
-function d(e) {
-    let { size: t, iconSize: i, color: a, className: d } = e;
+function h(e) {
+    let { size: t, iconSize: i, color: a, className: h } = e;
     return (0, l.jsxs)("div", {
-        className: n()(c.j, d),
+        className: n()(c.j, h),
         "aria-hidden": !0,
         children: [
             (0, l.jsx)("div", {

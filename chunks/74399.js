@@ -1,11 +1,11 @@
-i.d(t, { A: () => h });
+i.d(t, { A: () => d });
 var l = i(17928),
     a = i(228366),
     n = i(95701),
     s = i(734057);
 let r = {},
     c = {};
-class d extends l.Ay.Store {
+class h extends l.Ay.Store {
     initialize() {
         this.waitFor(s.A);
     }
@@ -20,7 +20,7 @@ class d extends l.Ay.Store {
         return c[e];
     }
 }
-let h = new d(a.h, {
+let d = new h(a.h, {
     GUILD_ROLE_SUBSCRIPTIONS_STASH_TEMPLATE_CHANNELS: function (e) {
         let { selectedTemplate: t, guildId: i } = e,
             l = Object.values(s.A.getMutableGuildChannelsForGuild(i));

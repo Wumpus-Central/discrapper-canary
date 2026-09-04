@@ -8,7 +8,7 @@ n.d(t, {
     Nb: () => e2,
     tZ: () => eK,
     pT: () => e1,
-    UH: () => e6,
+    UH: () => e4,
     $P: () => e3,
     YW: () => eQ,
     zW: () => eJ,
@@ -18,13 +18,13 @@ n.d(t, {
     fc: () => eR,
     SD: () => eS,
     aC: () => e$,
-    FA: () => eX,
+    FA: () => ej,
     LS: () => ev,
     p5: () => eZ,
     Ns: () => e8,
     Iq: () => e_,
     Qh: () => eh,
-    t9: () => e4,
+    t9: () => e6,
     RR: () => eG,
     XD: () => e5,
     ZP: () => eg,
@@ -36,7 +36,7 @@ n.d(t, {
     Qo: () => eF,
     In: () => ex,
     H6: () => eY,
-    a5: () => ej,
+    a5: () => eX,
     F3: () => eV,
     L1: () => eI,
     do: () => eN,
@@ -264,8 +264,8 @@ var F = n(291749),
     W = n(561844);
 n(590202);
 var Y = n(971649),
-    j = n(651892),
-    X = n(639214),
+    X = n(651892),
+    j = n(639214),
     J = n(576761),
     z = n(901406),
     Z = n(801365),
@@ -507,7 +507,7 @@ function eh(e) {
         T =
             ((t = (function () {
                 let e = (0, A.bG)([I.A], () => I.A.getQuestHomeHero()),
-                    { isShelfEnabled: t } = e4(e),
+                    { isShelfEnabled: t } = e6(e),
                     n = (0, A.bG)([y.default], () => y.default.getCurrentUser()?.id ?? null),
                     { enabled: i } = K.useConfig({ location: ei.rE.QUEST_HOME_MOBILE });
                 return o.useMemo(
@@ -691,7 +691,7 @@ function eQ(e) {
         n = ek(Array.from(t.values())),
         i = o.useMemo(() => {
             let n = (0, et.$e)(t, ei.zO);
-            return (0, X.BM)(n, e);
+            return (0, j.BM)(n, e);
         }, [e, t, n]);
     return ev(i) ? null : i;
 }
@@ -907,7 +907,7 @@ function eY(e) {
                 };
         }, [u, l]);
 }
-function ej(e, t) {
+function eX(e, t) {
     let n = (0, A.bG)([D.A], () => D.A.getQuest(e), [e]),
         i = (0, T.Ay)();
     return o.useMemo(() => {
@@ -916,7 +916,7 @@ function ej(e, t) {
         return (0, F.tW)(n, F.fY.COSPONSOR_LOGO_TYPE, e);
     }, [i, t, n]);
 }
-function eX(e) {
+function ej(e) {
     let t = (0, A.bG)([y.default], () => y.default.getCurrentUser()),
         n = (0, Z.mq)(e, t),
         i = (0, Z.k5)(e),
@@ -966,13 +966,13 @@ function e2() {
         () =>
             e.map((e) => {
                 let [t, n] = e;
-                return { heading: (0, j.fx)(t), options: n };
+                return { heading: (0, X.fx)(t), options: n };
             }),
         [e],
     );
 }
 function e5() {
-    return o.useMemo(() => Object.keys(ei.kL).map((e) => ({ label: (0, j.Js)(ei.kL[e]), value: ei.kL[e] })), []);
+    return o.useMemo(() => Object.keys(ei.kL).map((e) => ({ label: (0, X.Js)(ei.kL[e]), value: ei.kL[e] })), []);
 }
 function e3(e) {
     let { selectedSortMethod: t, selectedFilters: n, numQuestsVisible: i } = e,
@@ -999,7 +999,7 @@ function e7(e, t) {
     let n = e.userStatus?.completedAt != null;
     return e.userStatus?.enrolledAt != null && !n && Date.now() - new Date(e.userStatus?.enrolledAt).getTime() > t;
 }
-function e4(e) {
+function e6(e) {
     let t = (0, A.bG)([D.A], () => D.A.quests),
         n = e?.questIds;
     return o.useMemo(() => {
@@ -1011,7 +1011,7 @@ function e4(e) {
         return e.length <= 1 ? { shelfQuests: [], isShelfEnabled: !1 } : { shelfQuests: e, isShelfEnabled: !0 };
     }, [t, n]);
 }
-function e6(e) {
+function e4(e) {
     let t = v.H1.useSetting(),
         n = e.userStatus?.enrolledAt != null;
     return o.useCallback(() => {

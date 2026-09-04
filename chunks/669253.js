@@ -5,35 +5,35 @@ var i = n(477900),
     r = n.n(s),
     a = n(17928),
     o = n(425763),
-    c = n(447453),
-    d = n(280450),
-    u = n(591179),
+    d = n(447453),
+    u = n(280450),
+    c = n(591179),
     g = n(993165),
     m = n(403581),
-    x = n(783420),
-    f = n(206697),
+    f = n(783420),
+    x = n(206697),
     h = n(874402),
     I = n(570002),
     p = n(202541),
-    j = n(375708);
-function A() {
+    A = n(375708);
+function j() {
     let e = (0, g.YW)(),
         { goBack: t } = (0, g.pA)(),
-        n = (0, I.A)(j.intl.string(j.t.pj0XBN));
-    return (0, i.jsx)(x.A, {
+        n = (0, I.A)(A.intl.string(A.t.pj0XBN));
+    return (0, i.jsx)(f.A, {
         subscriptionTier: p.pe.TIER_2,
         onSubscribeModalClose: (e) => {
-            e && (0, f.T)();
+            e && (0, x.T)();
         },
         children: (l) => {
             let { onClick: s } = l;
             return (0, i.jsx)(h.$, {
                 isVisible: e,
                 labelId: "premium-try-it-out-footer-bar-label",
-                noticeText: j.intl.string(j.t.X0ir7L),
-                a11yAnnounceOnShow: j.intl.string(j.t.X0ir7L),
-                a11yAnnounceOnHide: j.intl.string(j.t.ZcyFYa),
-                secondaryAction: { text: j.intl.string(j.t.V3S9WW), onClick: t },
+                noticeText: A.intl.string(A.t.X0ir7L),
+                a11yAnnounceOnShow: A.intl.string(A.t.X0ir7L),
+                a11yAnnounceOnHide: A.intl.string(A.t.ZcyFYa),
+                secondaryAction: { text: A.intl.string(A.t.V3S9WW), onClick: t },
                 primaryAction: { text: n, onClick: s, icon: m.t, variant: "expressive" },
             });
         },
@@ -46,7 +46,7 @@ var E = n(803306),
     b = n(228366),
     k = n(38405),
     T = n(652215);
-async function y(e) {
+async function N(e) {
     let { displayOrder: t, hiddenBadges: n } = e,
         i = { ...(null != t ? { display_order: t } : {}), ...(null != n ? { hidden_badges: n } : {}) };
     if (0 === Object.keys(i).length) return !0;
@@ -57,9 +57,9 @@ async function y(e) {
         return k.A.captureException(e), !1;
     }
 }
-var N = n(234e3),
-    R = n(159001),
-    w = n(933725),
+var y = n(234e3),
+    w = n(159001),
+    R = n(933725),
     _ = n(287809),
     L = n(625494),
     O = n(56348),
@@ -68,57 +68,57 @@ var N = n(234e3),
     M = n(289173),
     G = n(836602),
     U = n(958805),
-    F = n(61881),
-    W = n(624826),
+    W = n(61881),
+    F = n(624826),
     H = n(384377),
-    V = n(518477);
-function B(e) {
+    B = n(518477);
+function V(e) {
     let { guildId: t } = e,
         { trackUserProfileEditSaved: n } = (0, D.NJ)(),
         [s, r] = l.useState(!1),
-        [o, c] = l.useState(!1),
+        [o, d] = l.useState(!1),
         {
-            widgetsToSave: d,
+            widgetsToSave: u,
             changedWidgets: g,
             removedWidgets: m,
-            hasUnsavedWidgets: x,
-            canSaveWidgets: f,
+            hasUnsavedWidgets: f,
+            canSaveWidgets: x,
         } = (function () {
-            let e = (0, a.yK)([F.A], () => F.A.getSaveablePendingWidgets() ?? []),
-                t = (0, a.yK)([F.A], () => F.A.getChangedWidgets()),
-                n = (0, a.yK)([F.A], () => F.A.getRemovedWidgets()),
-                { hasUnsavedWidgets: i, canSaveWidgets: l } = (0, a.cf)([F.A], () => ({
-                    hasUnsavedWidgets: F.A.hasUnsavedChanges(),
-                    canSaveWidgets: F.A.canSaveChanges(),
+            let e = (0, a.yK)([W.A], () => W.A.getSaveablePendingWidgets() ?? []),
+                t = (0, a.yK)([W.A], () => W.A.getChangedWidgets()),
+                n = (0, a.yK)([W.A], () => W.A.getRemovedWidgets()),
+                { hasUnsavedWidgets: i, canSaveWidgets: l } = (0, a.cf)([W.A], () => ({
+                    hasUnsavedWidgets: W.A.hasUnsavedChanges(),
+                    canSaveWidgets: W.A.canSaveChanges(),
                 }));
             return { widgetsToSave: e, changedWidgets: t, removedWidgets: n, hasUnsavedWidgets: i, canSaveWidgets: l };
         })(),
-        I = (0, u.X)("UserProfileModalV2SaveBar"),
+        I = (0, c.X)("UserProfileModalV2SaveBar"),
         {
             hasUnsavedProfileChanges: p,
-            canSubmitProfileChanges: A,
+            canSubmitProfileChanges: j,
             hasBadgeChangesToSave: C,
         } = (0, a.cf)([G.A], () => ({
             hasUnsavedProfileChanges: G.A.hasUnsavedChanges(),
             canSubmitProfileChanges: G.A.canSubmit(),
-            hasBadgeChangesToSave: (0, N.gz)(G.A.getPendingChanges()),
+            hasBadgeChangesToSave: (0, y.gz)(G.A.getPendingChanges()),
         })),
         b = I && p,
-        k = x || b || C,
-        B = !(x && !f) && (!I || A),
+        k = f || b || C,
+        V = !(f && !x) && (!I || j),
         z = l.useCallback(() => {
-            U.A.clearPendingWidgets(), I ? (0, P.XQ)() : C && (0, N.Jp)();
+            U.A.clearPendingWidgets(), I ? (0, P.XQ)() : C && (0, y.Jp)();
         }, [I, C]),
-        Y = l.useCallback(async () => {
+        K = l.useCallback(async () => {
             if (I && !G.A.canSubmit()) return;
-            c(!0);
+            d(!0);
             let e = !0;
             if (C) {
                 let t = G.A.getPendingChanges(),
-                    n = await y({ displayOrder: t.pendingBadgeDisplayOrder, hiddenBadges: t.pendingBadgeHiddenBadges });
+                    n = await N({ displayOrder: t.pendingBadgeDisplayOrder, hiddenBadges: t.pendingBadgeHiddenBadges });
                 if (n) {
                     let e = _.default.getCurrentUser()?.id;
-                    null != e && (await (0, E.fetchProfile)(e).catch(() => {})), await (0, S.RS)(), (0, N.Jp)();
+                    null != e && (await (0, E.fetchProfile)(e).catch(() => {})), await (0, S.RS)(), (0, y.Jp)();
                 }
                 e = n;
             }
@@ -133,7 +133,7 @@ function B(e) {
                             (e = e && (i?.ok ?? !1)),
                                 i?.ok &&
                                     (void 0 !== t.pendingAvatar &&
-                                        (0, W.t)({
+                                        (0, F.t)({
                                             avatarHash: i.body.avatar,
                                             avatarId: n.avatarId,
                                             avatarAssetOrigin: t.pendingAvatar?.assetOrigin,
@@ -150,11 +150,11 @@ function B(e) {
                             i = (0, O.C5)(n),
                             l = (0, O.yX)(n, t);
                         if (Object.keys(i).length > 0) {
-                            let l = await (0, R.GL)(t, i);
+                            let l = await (0, w.GL)(t, i);
                             (e = e && (l?.ok ?? !1)),
                                 l?.ok &&
                                     (void 0 !== n.pendingAvatar &&
-                                        (0, W.t)({
+                                        (0, F.t)({
                                             isGuildProfile: !0,
                                             avatarHash: l.body.avatar,
                                             avatarId: i.avatarId,
@@ -172,16 +172,16 @@ function B(e) {
                     if (Object.keys(n).length > 0) {
                         let { primaryGuildId: t } = n;
                         if (void 0 !== t) {
-                            let n = await (0, w.m)(t, null !== t);
+                            let n = await (0, R.m)(t, null !== t);
                             (e = e && (n?.ok ?? !1)), n?.ok && (0, v.fw)();
                         }
                     }
                 } catch {
                     e = !1;
                 }
-            if (x)
+            if (f)
                 try {
-                    for (let e of (await U.A.savePendingWidgets(d), g)) {
+                    for (let e of (await U.A.savePendingWidgets(u), g)) {
                         let t = { widgetEdited: e.type, isWidgetRemoved: !1 };
                         (0, M.fu)(e) &&
                             ((t.gameIds = e.games.map((e) => e.gameId)),
@@ -193,8 +193,8 @@ function B(e) {
                 } catch {
                     e = !1;
                 }
-            e ? (0, v.x8)() : (0, H.XA)(V.jM.PROFILE_SAVE_GENERIC_FAILURE), c(!1);
-        }, [I, b, C, x, d, g, m, n, t]);
+            e ? (0, v.x8)() : (0, H.XA)(B.jM.PROFILE_SAVE_GENERIC_FAILURE), d(!1);
+        }, [I, b, C, f, u, g, m, n, t]);
     return (
         l.useEffect(() => {
             let e = null;
@@ -216,43 +216,43 @@ function B(e) {
             preventsPopoutDismiss: !0,
             isVisible: k,
             labelId: "user-profile-save-reset-toolbar-label",
-            noticeText: j.intl.string(j.t["/lQiX/"]),
+            noticeText: A.intl.string(A.t["/lQiX/"]),
             isEmphasized: s,
-            a11yAnnounceOnShow: j.intl.string(j.t["0Y/qkL"]),
-            secondaryAction: { text: j.intl.string(j.t.yBZMsQ), onClick: z, disabled: !k || o },
-            primaryAction: { text: j.intl.string(j.t["R3BPH+"]), onClick: Y, loading: o, disabled: !B || !k },
+            a11yAnnounceOnShow: A.intl.string(A.t["0Y/qkL"]),
+            secondaryAction: { text: A.intl.string(A.t.yBZMsQ), onClick: z, disabled: !k || o },
+            primaryAction: { text: A.intl.string(A.t["R3BPH+"]), onClick: K, loading: o, disabled: !V || !k },
         })
     );
 }
 var z = n(485745),
-    Y = n(893757);
-function K() {
-    let e = !(0, u.X)("useEditingFooterState"),
+    K = n(893757);
+function Y() {
+    let e = !(0, c.X)("useEditingFooterState"),
         t = (0, o.VU)(),
         n = (0, z.A)(e),
         i = (0, g.YW)();
     return t ? "dnd" : i ? "premium-try-it-out" : n ? "save" : null;
 }
 function X(e) {
-    let t = (0, a.bG)([d.default], () => d.default.getId() === e),
-        n = K();
+    let t = (0, a.bG)([u.default], () => u.default.getId() === e),
+        n = Y();
     return t && null != n;
 }
 function q(e) {
     let { userId: t, guildId: n, className: s } = e,
-        o = (0, a.bG)([d.default], () => d.default.getId() === t),
-        u = K(),
-        [g, m] = l.useState(u);
-    return (null != u && g !== u && m(u), o)
+        o = (0, a.bG)([u.default], () => u.default.getId() === t),
+        c = Y(),
+        [g, m] = l.useState(c);
+    return (null != c && g !== c && m(c), o)
         ? (0, i.jsx)("div", {
-              className: r()(Y.k, s),
+              className: r()(K.k, s),
               children:
                   "dnd" === g
-                      ? (0, i.jsx)(c.S, { className: Y.W })
+                      ? (0, i.jsx)(d.S, { className: K.W })
                       : "premium-try-it-out" === g
-                        ? (0, i.jsx)(A, {})
+                        ? (0, i.jsx)(j, {})
                         : "save" === g
-                          ? (0, i.jsx)(B, { guildId: n })
+                          ? (0, i.jsx)(V, { guildId: n })
                           : null,
           })
         : null;

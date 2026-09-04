@@ -6,13 +6,13 @@ var a = i(996682),
 function s(e) {
     let { size: t = "md", width: i, height: s, ...r } = e,
         c = (0, n.J)(t),
-        d = c?.width ?? i,
-        h = c?.height ?? s;
+        h = c?.width ?? i,
+        d = c?.height ?? s;
     return (0, l.jsxs)("svg", {
         ...(0, a.A)(r),
         xmlns: "http://www.w3.org/2000/svg",
-        width: d,
-        height: h,
+        width: h,
+        height: d,
         fill: "none",
         viewBox: "0 0 24 24",
         children: [

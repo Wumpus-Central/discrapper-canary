@@ -1,4 +1,4 @@
-n.d(t, { A: () => f });
+n.d(t, { A: () => x });
 var i = n(477900),
     l = n(582128),
     s = n(922016),
@@ -6,29 +6,29 @@ var i = n(477900),
     a = n(307301),
     o = n(834730);
 n(321073);
-var c = n(477782),
-    d = n(980707),
-    u = n(753437),
+var d = n(477782),
+    u = n(980707),
+    c = n(753437),
     g = n(375708),
     m = n(382701);
-let x = l.memo(function (e) {
+let f = l.memo(function (e) {
     let { currentTags: t, onTagSelect: n, onNoneSelect: l, onClose: s } = e;
-    return (0, i.jsx)(d.W, {
+    return (0, i.jsx)(u.W, {
         "data-menu-migrated-auto": !0,
         navId: "widget-game-tags",
         "aria-label": g.intl.string(g.t.r6EJOu),
         onClose: s,
         onSelect: () => {},
         className: m.X2,
-        children: Object.entries(u.Pb).map((e) => {
+        children: Object.entries(c.Pb).map((e) => {
             let s,
                 [r, a] = e,
                 o =
                     ((s = []),
-                    a.type === u.me.RADIO &&
+                    a.type === c.me.RADIO &&
                         s.push(
                             (0, i.jsx)(
-                                c.iD,
+                                d.iD,
                                 {
                                     id: `${r}-none`,
                                     group: r,
@@ -40,12 +40,12 @@ let x = l.memo(function (e) {
                             ),
                         ),
                     a.tags.forEach((e) => {
-                        let l = u.PT[e];
+                        let l = c.PT[e];
                         null != l &&
-                            (a.type === u.me.RADIO
+                            (a.type === c.me.RADIO
                                 ? s.push(
                                       (0, i.jsx)(
-                                          c.iD,
+                                          d.iD,
                                           {
                                               id: e,
                                               group: r,
@@ -58,29 +58,29 @@ let x = l.memo(function (e) {
                                   )
                                 : s.push(
                                       (0, i.jsx)(
-                                          c.sL,
+                                          d.sL,
                                           { id: e, label: l.getText(), checked: t.includes(e), action: () => n(e, !1) },
                                           e,
                                       ),
                                   ));
                     }),
                     s);
-            return (0, i.jsx)(c.rX, { label: a.getLabel(), children: o }, r);
+            return (0, i.jsx)(d.rX, { label: a.getLabel(), children: o }, r);
         }),
     });
 });
-function f(e) {
-    let { tags: t, onTagsChange: n, onOpen: c, onClose: d, variant: f = "default", ref: h } = e,
-        I = "filled" === f,
+function x(e) {
+    let { tags: t, onTagsChange: n, onOpen: d, onClose: u, variant: x = "default", ref: h } = e,
+        I = "filled" === x,
         p = (0, l.useRef)(null),
-        j = (0, l.useMemo)(() => (null != t ? t : []), [t]),
-        A = (0, l.useCallback)(
+        A = (0, l.useMemo)(() => (null != t ? t : []), [t]),
+        j = (0, l.useCallback)(
             function (e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-                    i = new Set(j),
+                    i = new Set(A),
                     l = "added";
                 if (t) {
-                    let t = Object.values(u.Pb).find((t) => t.tags.includes(e));
+                    let t = Object.values(c.Pb).find((t) => t.tags.includes(e));
                     if (null == t) return;
                     t.tags.forEach((e) => {
                         i.delete(e);
@@ -89,27 +89,27 @@ function f(e) {
                 } else i.has(e) ? (i.delete(e), (l = "removed")) : i.add(e);
                 n(Array.from(i), l);
             },
-            [j, n],
+            [A, n],
         ),
         E = (0, l.useCallback)(
             (e) => {
-                let t = new Set(j);
+                let t = new Set(A);
                 e.forEach((e) => {
                     t.delete(e);
                 }),
                     n(Array.from(t), "removed");
             },
-            [j, n],
+            [A, n],
         );
     return (0, i.jsx)(s.Y, {
         targetElementRef: p,
         position: "right",
         align: "top",
-        onRequestOpen: c,
-        onRequestClose: d,
+        onRequestOpen: d,
+        onRequestClose: u,
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, i.jsx)(x, { currentTags: j, onTagSelect: A, onNoneSelect: E, onClose: t });
+            return (0, i.jsx)(f, { currentTags: A, onTagSelect: j, onNoneSelect: E, onClose: t });
         },
         children: (e) =>
             (0, i.jsx)("div", {

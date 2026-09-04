@@ -1,12 +1,12 @@
-a.d(t, { A: () => E, N: () => U });
-var l = a(477900),
-    i = a(582128),
+a.d(t, { A: () => k, N: () => E });
+var i = a(477900),
+    l = a(582128),
     n = a(503698),
     s = a.n(n),
     r = a(866665),
     o = a(750943),
-    c = a(259678),
-    d = a(289873),
+    d = a(259678),
+    c = a(289873),
     u = a(22231),
     p = a(661531),
     m = a(922016),
@@ -18,65 +18,65 @@ var l = a(477900),
     j = a(652215);
 function A(e, t) {
     let { animated: a = !1 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        l = window.GLOBAL_ENV.CDN_HOST ?? j.f34,
-        i = `https://${l}/widget-assets/${e}/${t}`,
+        i = window.GLOBAL_ENV.CDN_HOST ?? j.f34,
+        l = `https://${i}/widget-assets/${e}/${t}`,
         n = x.QB ? "webp" : a ? "gif" : "png";
-    return `${i}?format=${n}&animated=${a}`;
+    return `${l}?format=${n}&animated=${a}`;
 }
 var N = a(458499),
-    w = a(375708),
-    y = a(842730);
-function I(e, t, a) {
-    let l = f.kt.useSetting(),
-        [n, s] = i.useState(!1),
-        r = i.useCallback(() => s(!0), []),
-        o = i.useCallback(() => s(!1), []),
-        c = a && null != t && !("localDataUri" in t) && t.isAnimated && !l;
-    return (i.useEffect(() => {
-        !c || null == t || "localDataUri" in t || (new Image().src = A(e, t.fileId, { animated: !0 }));
-    }, [c, e, t]),
+    U = a(375708),
+    b = a(842730);
+function y(e, t, a) {
+    let i = f.kt.useSetting(),
+        [n, s] = l.useState(!1),
+        r = l.useCallback(() => s(!0), []),
+        o = l.useCallback(() => s(!1), []),
+        d = a && null != t && !("localDataUri" in t) && t.isAnimated && !i;
+    return (l.useEffect(() => {
+        !d || null == t || "localDataUri" in t || (new Image().src = A(e, t.fileId, { animated: !0 }));
+    }, [d, e, t]),
     null == t)
         ? { src: void 0, showGifTag: !1, onMouseMove: r, onMouseLeave: o, isHovering: n }
         : "localDataUri" in t
           ? { src: t.localDataUri, showGifTag: !1, onMouseMove: r, onMouseLeave: o, isHovering: n }
           : {
-                src: A(e, t.fileId, { animated: a && t.isAnimated && (l || n) }),
-                showGifTag: c,
+                src: A(e, t.fileId, { animated: a && t.isAnimated && (i || n) }),
+                showGifTag: d,
                 isHovering: n,
                 onMouseMove: r,
                 onMouseLeave: o,
             };
 }
-function U(e) {
-    let { className: t, userId: a, image: i, canAnimate: n = !0 } = e,
-        { src: r, showGifTag: o, onMouseMove: c, onMouseLeave: d } = I(a, i, n);
-    return "localDataUri" in i
-        ? (0, l.jsx)("div", { className: t, children: (0, l.jsx)("img", { className: y.Sl, alt: "", src: r }) })
-        : (0, l.jsxs)("div", {
-              className: s()(y.ZS, t),
-              onMouseMove: c,
-              onMouseLeave: d,
+function E(e) {
+    let { className: t, userId: a, image: l, canAnimate: n = !0 } = e,
+        { src: r, showGifTag: o, onMouseMove: d, onMouseLeave: c } = y(a, l, n);
+    return "localDataUri" in l
+        ? (0, i.jsx)("div", { className: t, children: (0, i.jsx)("img", { className: b.Sl, alt: "", src: r }) })
+        : (0, i.jsxs)("div", {
+              className: s()(b.ZS, t),
+              onMouseMove: d,
+              onMouseLeave: c,
               children: [
-                  (0, l.jsx)("img", { className: y.Sl, alt: "", src: r, width: i.width, height: i.height }),
-                  o ? (0, l.jsx)(h.A, { className: y.pH }) : null,
+                  (0, i.jsx)("img", { className: b.Sl, alt: "", src: r, width: l.width, height: l.height }),
+                  o ? (0, i.jsx)(h.A, { className: b.pH }) : null,
               ],
           });
 }
-function b(e) {
+function I(e) {
     let { canEdit: t, isHovering: a } = e;
-    return (0, l.jsx)("div", {
-        className: y.qf,
+    return (0, i.jsx)("div", {
+        className: b.qf,
         children: t
-            ? (0, l.jsx)(r.m, {
-                  text: w.intl.string(w.t["MsUY/S"]),
+            ? (0, i.jsx)(r.m, {
+                  text: U.intl.string(U.t["MsUY/S"]),
                   forceOpen: a,
                   ariaHidden: !0,
-                  children: (0, l.jsx)(o.X, { className: y.Dm, size: "md" }),
+                  children: (0, i.jsx)(o.X, { className: b.Dm, size: "md" }),
               })
             : null,
     });
 }
-function C(e) {
+function w(e) {
     let {
             className: t,
             userId: a,
@@ -88,66 +88,66 @@ function C(e) {
             editVariant: j,
             lastEdit: A,
         } = e,
-        { src: U, showGifTag: C, onMouseMove: E, onMouseLeave: k, isHovering: L } = I(a, n, f),
-        R = o ?? U,
-        M = i.useRef(null),
+        { src: E, showGifTag: w, onMouseMove: k, onMouseLeave: L, isHovering: R } = y(a, n, f),
+        C = o ?? E,
+        M = l.useRef(null),
         S = r ?? M,
-        D = i.useRef(null);
+        D = l.useRef(null);
     function _() {
         S.current?.activateUploadDialogue();
     }
-    let H = null != A && null != R && null == o;
-    return (0, l.jsx)(c.vN, {
+    let H = null != A && null != C && null == o;
+    return (0, i.jsx)(d.vN, {
         within: !0,
-        children: (0, l.jsxs)("div", {
-            className: s()(y.kL, t),
-            onMouseMove: E,
-            onMouseLeave: k,
+        children: (0, i.jsxs)("div", {
+            className: s()(b.kL, t),
+            onMouseMove: k,
+            onMouseLeave: L,
             children: [
-                null != R
-                    ? (0, l.jsx)("img", { alt: "", src: R, className: y.Sl })
-                    : (0, l.jsx)(b, { canEdit: !0, isHovering: "tooltip" === j && L }),
+                null != C
+                    ? (0, i.jsx)("img", { alt: "", src: C, className: b.Sl })
+                    : (0, i.jsx)(I, { canEdit: !0, isHovering: "tooltip" === j && R }),
                 null != o
-                    ? (0, l.jsx)("div", {
-                          className: y.ob,
-                          children: (0, l.jsx)(d.y, { type: d.t.SPINNING_CIRCLE_SIMPLE }),
+                    ? (0, i.jsx)("div", {
+                          className: b.ob,
+                          children: (0, i.jsx)(c.y, { type: c.t.SPINNING_CIRCLE_SIMPLE }),
                       })
-                    : C
-                      ? (0, l.jsx)(h.A, { className: y.pH })
+                    : w
+                      ? (0, i.jsx)(h.A, { className: b.pH })
                       : null,
-                "overlay" === j && null != R && null == o
-                    ? (0, l.jsx)("div", {
-                          className: y.HU,
+                "overlay" === j && null != C && null == o
+                    ? (0, i.jsx)("div", {
+                          className: b.HU,
                           "aria-hidden": !0,
-                          children: (0, l.jsx)(u.PencilIcon, { size: "md", color: p.A.colors.WHITE, className: y._1 }),
+                          children: (0, i.jsx)(u.PencilIcon, { size: "md", color: p.A.colors.WHITE, className: b._1 }),
                       })
                     : null,
-                (0, l.jsx)(v.Ay, {
+                (0, i.jsx)(v.Ay, {
                     ref: S,
                     tabIndex: H ? -1 : 0,
-                    className: H ? y.YZ : void 0,
+                    className: H ? b.YZ : void 0,
                     "aria-hidden": H,
                     onChange: x,
                     multiple: !1,
-                    "aria-label": w.intl.string(w.t["MsUY/S"]),
+                    "aria-label": U.intl.string(U.t["MsUY/S"]),
                     title: "",
                 }),
                 H && null != A
-                    ? (0, l.jsx)(m.Y, {
+                    ? (0, i.jsx)(m.Y, {
                           targetElementRef: D,
                           position: "bottom",
                           disablePointerEvents: !1,
                           renderPopout: (e) => {
                               let { closePopout: t } = e;
-                              return (0, l.jsx)(N.A, { lastEdit: A, cropAndUpload: x, onChangeImage: _, onClose: t });
+                              return (0, i.jsx)(N.A, { lastEdit: A, cropAndUpload: x, onChangeImage: _, onClose: t });
                           },
                           children: (e) =>
-                              (0, l.jsx)(g.D, {
+                              (0, i.jsx)(g.D, {
                                   ...e,
                                   innerRef: D,
-                                  className: y.Eq,
+                                  className: b.Eq,
                                   "aria-haspopup": "menu",
-                                  "aria-label": w.intl.string(w.t.RWkUzH),
+                                  "aria-label": U.intl.string(U.t.RWkUzH),
                               }),
                       })
                     : null,
@@ -155,32 +155,32 @@ function C(e) {
         }),
     });
 }
-function E(e) {
+function k(e) {
     let {
         className: t,
         canEdit: a,
-        userId: i,
+        userId: l,
         image: n,
         imageInputRef: s,
         previewUri: r,
         canAnimate: o = !0,
-        cropAndUpload: c,
-        editVariant: d,
+        cropAndUpload: d,
+        editVariant: c,
         lastEdit: u,
     } = e;
     return a
-        ? (0, l.jsx)(C, {
+        ? (0, i.jsx)(w, {
               className: t,
-              userId: i,
+              userId: l,
               image: n,
               imageInputRef: s,
               previewUri: r,
               canAnimate: o,
-              cropAndUpload: c,
-              editVariant: d,
+              cropAndUpload: d,
+              editVariant: c,
               lastEdit: u,
           })
         : null == n
-          ? (0, l.jsx)("div", { className: t, children: (0, l.jsx)(b, { canEdit: !1, isHovering: !1 }) })
-          : (0, l.jsx)(U, { className: t, userId: i, image: n, canAnimate: o });
+          ? (0, i.jsx)("div", { className: t, children: (0, i.jsx)(I, { canEdit: !1, isHovering: !1 }) })
+          : (0, i.jsx)(E, { className: t, userId: l, image: n, canAnimate: o });
 }

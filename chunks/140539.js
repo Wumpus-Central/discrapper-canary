@@ -17,21 +17,21 @@ var n = r(477900),
     A = r(47167),
     F = r(386467),
     b = r(979186),
-    v = r(734057),
-    C = r(31717),
+    D = r(734057),
+    v = r(31717),
     E = r(309010),
-    D = r(164617),
+    C = r(164617),
     x = r(540462),
-    S = r(748337);
-let R = [c.L, m.T, p.w, h.z];
+    R = r(748337);
+let S = [c.L, m.T, p.w, h.z];
 function j(e) {
     let { windowKey: t, channelId: r } = e,
-        i = (0, o.bG)([v.A], () => v.A.getChannel(r));
+        i = (0, o.bG)([D.A], () => D.A.getChannel(r));
     l()(null != i, "channel cannot be null for popout");
     let s = (0, A.Ay)(i);
     return (0, n.jsx)(b.A, {
         withTitleBar: !0,
-        keybinds: R,
+        keybinds: S,
         windowKey: t,
         title: s ?? "",
         channelId: i.id,
@@ -52,12 +52,12 @@ function j(e) {
             } else r();
         },
         children: (0, n.jsx)("div", {
-            className: a()("root", S.M),
+            className: a()("root", R.M),
             children: (0, n.jsxs)(F.A.Provider, {
                 value: i.guild_id,
                 children: [
-                    (0, n.jsx)(u.A, { channel: i, draftType: C.C.ChannelMessage }),
-                    (0, n.jsx)(x.default, { channel: i, popoutType: D.N.VOICE_UI }),
+                    (0, n.jsx)(u.A, { channel: i, draftType: v.C.ChannelMessage }),
+                    (0, n.jsx)(x.default, { channel: i, popoutType: C.N.VOICE_UI }),
                     (0, n.jsx)(d.A, { popoutWindowKey: t, popoutWindowHasTitleBar: !0 }),
                 ],
             }),

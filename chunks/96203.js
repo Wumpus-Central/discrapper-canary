@@ -1,4 +1,4 @@
-r.d(e, { A: () => d });
+r.d(e, { A: () => c });
 var i = r(582128),
     n = r(435558),
     l = r(17928),
@@ -6,14 +6,14 @@ var i = r(582128),
     u = r(289173),
     a = r(999291),
     o = r(832163),
-    c = r(501838);
-function d(t) {
+    d = r(501838);
+function c(t) {
     let { userId: e } = t,
         r = (0, a.Ay)(e),
-        d = i.useMemo(() => (r?.userId != null ? [r.userId] : []), [r]),
-        S = (0, c.w)({ userIds: d }),
-        A = (0, c.mn)({ userIds: d }),
-        h = (0, c.tR)(d),
+        c = i.useMemo(() => (r?.userId != null ? [r.userId] : []), [r]),
+        S = (0, d.w)({ userIds: c }),
+        A = (0, d.mn)({ userIds: c }),
+        h = (0, d.tR)(c),
         I = (0, l.yK)([o.A], () => {
             if (r?.widgets == null) return [];
             let t = new Set();
