@@ -1,4 +1,4 @@
-n.d(t, { kc: () => O, Fe: () => R });
+n.d(t, { Fe: () => M, kc: () => L });
 var l = n(477900),
     i = n(582128),
     r = n(17928),
@@ -25,55 +25,52 @@ var l = n(477900),
     x = n(202541),
     T = n(375708),
     N = n(341535),
-    b = n(894575);
-function j(e) {
+    b = n(894575),
+    j = n(711729);
+function R(e) {
     let { onClose: t } = e,
         {
             selectedSkuId: n,
             selectedPlanId: d,
             purchaseState: S,
-            quantity: j,
+            quantity: R,
         } = (0, m.t4)((e) => ({
             selectedSkuId: e.selectedSkuId,
             selectedPlanId: e.selectedPlanId,
             purchaseState: e.purchaseState,
             quantity: e.quantity,
         })),
-        R = (0, r.bG)([C.A], () => C.A.isDisplayingWowMomentConfirmation),
-        { isPremium: M, isPremiumGroupPurchase: O, isEligibleForTrial: L, isEligibleForDiscount: k } = (0, o.i)(),
-        w = (0, c.S3)(),
-        U = (0, u.s2)(),
-        { isGift: D, selectedGiftStyle: G, giftRecipient: F } = (0, P.Pv)(),
-        B = (0, E.p)("PremiumUnifiedCheckoutCustomHeader"),
-        H = (0, h.Wh)({ location: "PremiumUnifiedCheckoutCustomHeader" }),
-        W = w?.productLine === _.EZt.COLLECTIBLES,
-        Y = w?.productLine === _.EZt.SOCIAL_LAYER_GAME_ITEM,
-        V = U === v.pn.CONFIRM && H && (0, f.M)({ isGift: D, giftRecipient: F, selectedPlanId: d }),
-        K = D && (0, A.Ik)(F) && U === v.pn.CONFIRM && null != G && !W && !Y,
-        Z = [v.pn.SKU_SELECT, v.pn.SELECT_FREE_SKU],
-        q = null != U && !Z.includes(U) && null != n,
-        z = i.useCallback(() => t(!1), [t]);
+        M = (0, r.bG)([C.A], () => C.A.isDisplayingWowMomentConfirmation),
+        { isPremium: O, isPremiumGroupPurchase: L, isEligibleForTrial: k, isEligibleForDiscount: w } = (0, o.i)(),
+        U = (0, c.S3)(),
+        D = (0, u.s2)(),
+        { isGift: G, selectedGiftStyle: F, giftRecipient: B } = (0, P.Pv)(),
+        H = (0, E.p)("PremiumUnifiedCheckoutCustomHeader"),
+        W = (0, h.Wh)({ location: "PremiumUnifiedCheckoutCustomHeader" }),
+        Y = U?.productLine === _.EZt.COLLECTIBLES,
+        V = U?.productLine === _.EZt.SOCIAL_LAYER_GAME_ITEM,
+        K = D === v.pn.CONFIRM && W && (0, f.M)({ isGift: G, giftRecipient: B, selectedPlanId: d }),
+        Z = G && (0, A.Ik)(B) && D === v.pn.CONFIRM && null != F && !Y && !V,
+        q = [v.pn.SKU_SELECT, v.pn.SELECT_FREE_SKU],
+        z = null != D && !q.includes(D) && null != n,
+        Q = i.useCallback(() => t(!1), [t]);
     return i.useMemo(() => {
-        if (null == U) return;
+        if (null == D) return;
         let e = null;
         return (
-            V
+            K
                 ? (e = (0, l.jsx)(s.rQ, {
                       alignCenter: !0,
                       gradientColor: "nitro-pink",
-                      graphic: {
-                          type: "image",
-                          src: "https://cdn.discordapp.com/assets/content/93307a8b4bf1e7aa669b27c8237eb687acfe65de7db2c1bf4adef192a9c86424.svg",
-                          aspectRatio: "16/9",
-                      },
-                      title: T.intl.formatToPlainString(N.default["7Zw7AB"], { giftCount: j }),
+                      graphic: { type: "image", src: j.A, aspectRatio: "16/9" },
+                      title: T.intl.formatToPlainString(N.default["7Zw7AB"], { giftCount: R }),
                       titleTextVariant: "heading-xl/semibold",
                       subtitle: T.intl.format(N.default.geFoof, {
-                          giftCount: j,
+                          giftCount: R,
                           skuName: null != d ? (0, g.RH)(d) : "",
                       }),
                   }))
-                : K
+                : Z
                   ? (e = (0, l.jsxs)("div", {
                         className: b.kL,
                         children: [
@@ -82,38 +79,38 @@ function j(e) {
                                 style: { display: "contents" },
                                 children: (0, l.jsx)(y.A, {
                                     defaultAnimationState: p.oA.LOOP,
-                                    giftStyle: G,
+                                    giftStyle: F,
                                     className: b.qq,
                                 }),
                             }),
-                            (0, l.jsx)(a.s_, { onClick: z, className: b.b, "data-migration-pending": !0 }),
+                            (0, l.jsx)(a.s_, { onClick: Q, className: b.b, "data-migration-pending": !0 }),
                         ],
                     }))
-                  : B
+                  : H
                     ? (e = (0, l.jsx)(s.rQ, { gradientColor: "nitro-pink", title: T.intl.string(T.t["7YWj6+"]) }))
-                    : q &&
+                    : z &&
                       (e =
                           n in x.WN
                               ? (0, l.jsx)(I.A, {
-                                    currentStep: U ?? void 0,
+                                    currentStep: D ?? void 0,
                                     purchaseState: S,
                                     premiumType: x.WN[n],
-                                    onClose: z,
-                                    showTrialBadge: L,
-                                    showDiscountBadge: k,
-                                    isGift: D,
-                                    giftRecipient: F,
-                                    isEligibleForTrial: L,
-                                    enablePremiumBrandRefresh: M,
-                                    isDisplayingWowMomentConfirmation: R,
-                                    isPremiumGroupPurchase: O,
+                                    onClose: Q,
+                                    showTrialBadge: k,
+                                    showDiscountBadge: w,
+                                    isGift: G,
+                                    giftRecipient: B,
+                                    isEligibleForTrial: k,
+                                    enablePremiumBrandRefresh: O,
+                                    isDisplayingWowMomentConfirmation: M,
+                                    isPremiumGroupPurchase: L,
                                 })
                               : (0, l.jsx)(s.rQ, { title: T.intl.string(T.t.q9EGps) })),
             e
         );
-    }, [G, z, S, n, U, L, k, j, d, V, K, B, q, D, F, M, R, O]);
+    }, [F, Q, S, n, D, k, w, R, d, K, Z, H, z, G, B, O, M, L]);
 }
-function R(e) {
+function M(e) {
     let { premiumDiscountPercent: t, isPremiumDiscountAppliedToCheckoutInvoice: n } = (0, m.t4)((e) => ({
             premiumDiscountPercent: e.get("premiumDiscountPercent"),
             isPremiumDiscountAppliedToCheckoutInvoice: e.get("isPremiumDiscountAppliedToCheckoutInvoice"),
@@ -136,11 +133,11 @@ function R(e) {
               : { headerBadgePreset: o };
     }, [e, l, r, a, s, t, n]);
 }
-function M() {
-    let e = R();
+function O() {
+    let e = M();
     return (0, l.jsx)(d.f, { headerBadgeConfig: e });
 }
-function O(e) {
+function L(e) {
     let { isGift: t } = (0, P.Pv)();
-    return e.step !== v.pn.PLAN_SELECT || t ? (0, l.jsx)(j, { ...e }) : (0, l.jsx)(M, {});
+    return e.step !== v.pn.PLAN_SELECT || t ? (0, l.jsx)(R, { ...e }) : (0, l.jsx)(O, {});
 }
