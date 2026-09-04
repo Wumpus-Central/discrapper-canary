@@ -57,6 +57,10 @@ var ee = l(58703);
 let et = [
     {
         date: "2026-09-03",
+        summary: "Remix an app and Conjure builds your copy first, so the ideas it suggests are ones you can try.",
+    },
+    {
+        date: "2026-09-03",
         summary:
             "Your published app stays playable while Conjure drives the preview, instead of both freezing at once.",
     },
