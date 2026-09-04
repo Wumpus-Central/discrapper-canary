@@ -1,0 +1,52 @@
+.header_b5f5a6 {
+    border-bottom: 1px solid var(--border-subtle)
+}
+
+.modeSelectButton_b5f5a6 {
+    border-radius: var(--radius-sm);
+    cursor: pointer
+}
+
+.modeSelectButton_b5f5a6:hover {
+    background-color: var(--background-mod-subtle)
+}
+
+.modeSelectButton_b5f5a6.ghost_b5f5a6 {
+    position: absolute;
+    visibility: hidden
+}
+
+.controlsPopout_b5f5a6 {
+    background-color: var(--background-surface-high);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-border), var(--shadow-high)
+}
+
+.container_b17982 {
+    border-inline-start: 1px solid var(--border-subtle);
+    border-start-start-radius: var(--radius-md);
+    border-top: 1px solid var(--border-subtle);
+    box-sizing: border-box;
+    flex: 0 0 auto;
+    margin-inline-start: var(--space-8);
+    min-height: 0;
+    overflow: hidden;
+    position: relative
+}
+
+.resizeHandle_b17982 {
+    background-color: transparent;
+    cursor: ew-resize;
+    inset-block: 0;
+    inset-inline-start: 0;
+    position: absolute;
+    transition: background-color .2s ease;
+    width: 6px
+}
+
+.resizeHandle_b17982:active,
+.resizeHandle_b17982:hover {
+    background-color: var(--background-mod-strong)
+}
+
+/*# sourceMappingURL=7771c455d899b86d.css.map*/

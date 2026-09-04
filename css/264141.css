@@ -29,14 +29,14 @@
     position: fixed
 }
 
-.chat_f75fb0.threadSidebarOpen_f75fb0 {
+.chat_f75fb0.hasSidebar_f75fb0 {
     border-inline-end: 1px solid var(--border-subtle);
-    border-radius: 0 8px 8px 0
+    border-start-end-radius: var(--radius-md)
 }
 
 .chat_f75fb0.threadSidebarOpen_f75fb0 .uploadArea_f75fb0 {
     border-radius: 0 8px 8px 0;
-    margin-inline-end: 8px;
+    margin-inline-end: var(--chat-resize-handle-width);
     width: auto
 }
 
@@ -108,6 +108,14 @@
     overflow: hidden
 }
 
+.channelArea_f75fb0 {
+    display: flex;
+    flex: 1 1 auto;
+    min-height: 0;
+    min-width: 0;
+    position: relative
+}
+
 .content_f75fb0:before {
     box-shadow: var(--shadow-ledge);
     content: "";
@@ -170,7 +178,7 @@
 
 .title_f75fb0 {
     flex: 0 0 auto;
-    padding-inline-end: var(--space-xs);
+    padding-inline-end: var(--space-8);
     padding-top: var(--space-8);
     position: relative;
     z-index: 100
@@ -377,4 +385,4 @@
     background-color: var(--background-mod-normal)
 }
 
-/*# sourceMappingURL=264141.892edaeea326c011.css.map*/
+/*# sourceMappingURL=264141.cd679c7af40cd14a.css.map*/

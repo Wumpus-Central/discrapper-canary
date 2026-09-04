@@ -5926,6 +5926,22 @@
     }
   },
   {
+    "name": "2026-09-friends-sidebar",
+    "kind": "user",
+    "defaultConfig": {
+      "sidebarEnabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "sidebarEnabled": true
+      }
+    }
+  },
+  {
     "name": "2026-09-nitro-file-upload-rollout",
     "kind": "user",
     "defaultConfig": {

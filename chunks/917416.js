@@ -436,8 +436,8 @@ n.r(C),
         PaintbrushThinMinusIcon: () => If,
         PaintbrushThinPlusIcon: () => Ip,
         PaintbrushThinRetryIcon: () => IT,
-        PanelClosedIcon: () => Ig,
-        PanelOpenIcon: () => IS,
+        PanelClosedIcon: () => Ig.U,
+        PanelOpenIcon: () => IS.E,
         PaperClockIcon: () => IN,
         PaperIcon: () => IC.u,
         PaperLockIcon: () => IO,
@@ -1458,7 +1458,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19));
 let e2 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new eB.A().log(
-    `[BUILD INFO] Release Channel: ${e2}, Build Number: 607534, Version Hash: 4d9c92f86d07e8c63f35055267cda5329ca05299`,
+    `[BUILD INFO] Release Channel: ${e2}, Build Number: 607547, Version Hash: 3565a398a8f933aff3f10549f6935a230283cbf6`,
 ),
     D.A.setTags({ appContext: G.QCW }),
     eI.A.initBasic(),
@@ -14709,77 +14709,9 @@ function IT(e) {
         }),
     });
 }
-var Im = n(650809);
-function Ig(e) {
-    let {
-            size: t = "md",
-            width: n,
-            height: i,
-            color: r = iv.A.colors.INTERACTIVE_ICON_DEFAULT,
-            colorClass: a = "",
-            ...s
-        } = e,
-        l = (0, cf.J)(t),
-        o = l?.width ?? n,
-        d = l?.height ?? i;
-    return (0, O.jsxs)("svg", {
-        ...(0, cI.A)(s),
-        xmlns: "http://www.w3.org/2000/svg",
-        width: o,
-        height: d,
-        fill: "none",
-        viewBox: "0 0 24 24",
-        children: [
-            (0, O.jsx)("path", {
-                fill: "string" == typeof r ? r : r.css,
-                d: "M16.4 8.63c0-.63.5-1.13 1.1-1.13.6 0 1.1.5 1.1 1.13v6.74c0 .63-.5 1.13-1.1 1.13-.6 0-1.1-.5-1.1-1.13V8.63Z",
-                className: a,
-            }),
-            (0, O.jsx)("path", {
-                fill: "string" == typeof r ? r : r.css,
-                fillRule: "evenodd",
-                d: "M19.7 21H4.13A3.34 3.34 0 0 1 1 17.62V6.38A3.34 3.34 0 0 1 4.3 3h15.4C21.52 3 23 4.51 23 6.38v11.25c0 1.8-1.39 3.28-3.13 3.37h-.17Zm0-2.25H4.3c-.6 0-1.1-.5-1.1-1.13V6.38c0-.62.5-1.12 1.1-1.12h15.4c.6 0 1.1.5 1.1 1.13v11.25c0 .62-.5 1.12-1.1 1.12Z",
-                clipRule: "evenodd",
-                className: a,
-            }),
-        ],
-    });
-}
-function IS(e) {
-    let {
-            size: t = "md",
-            width: n,
-            height: i,
-            color: r = iv.A.colors.INTERACTIVE_ICON_DEFAULT,
-            colorClass: a = "",
-            ...s
-        } = e,
-        l = (0, cf.J)(t),
-        o = l?.width ?? n,
-        d = l?.height ?? i;
-    return (0, O.jsxs)("svg", {
-        ...(0, cI.A)(s),
-        xmlns: "http://www.w3.org/2000/svg",
-        width: o,
-        height: d,
-        fill: "none",
-        viewBox: "0 0 24 24",
-        children: [
-            (0, O.jsx)("path", {
-                fill: "string" == typeof r ? r : r.css,
-                d: "M12 8.63c0-.63.5-1.13 1.1-1.13h4.4c.6 0 1.1.5 1.1 1.13v6.74c0 .63-.5 1.13-1.1 1.13h-4.4c-.6 0-1.1-.5-1.1-1.13V8.63Z",
-                className: a,
-            }),
-            (0, O.jsx)("path", {
-                fill: "string" == typeof r ? r : r.css,
-                fillRule: "evenodd",
-                d: "M19.7 21H4.13A3.34 3.34 0 0 1 1 17.62V6.38A3.34 3.34 0 0 1 4.3 3h15.4C21.52 3 23 4.51 23 6.38v11.25c0 1.8-1.39 3.28-3.13 3.37h-.17Zm0-2.25H4.3c-.6 0-1.1-.5-1.1-1.13V6.38c0-.62.5-1.12 1.1-1.12h15.4c.6 0 1.1.5 1.1 1.13v11.25c0 .62-.5 1.12-1.1 1.12Z",
-                clipRule: "evenodd",
-                className: a,
-            }),
-        ],
-    });
-}
+var Im = n(650809),
+    Ig = n(450030),
+    IS = n(259730);
 function IN(e) {
     let {
             size: t = "md",
@@ -21148,7 +21080,7 @@ let NA = "isHideDevBanner",
                     className: ta()(NE.Wz, NE.mr),
                     children: [
                         (0, O.jsx)(N_, { className: NE.Kk }),
-                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "607534" }),
+                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "607547" }),
                         (0, O.jsx)(r, {}),
                     ],
                 })

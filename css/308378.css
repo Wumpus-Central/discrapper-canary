@@ -105,7 +105,7 @@
 
 .search__49676 {
     flex: 0 1 244px;
-    margin: 0 4px;
+    margin-inline-start: 4px;
     max-width: 244px;
     width: clamp(var(--space-64), 100cqi - 320px, 244px)
 }
@@ -433,4 +433,4 @@
     color: var(--text-feedback-critical)
 }
 
-/*# sourceMappingURL=308378.d487a006c0aad230.css.map*/
+/*# sourceMappingURL=308378.353263f45351904c.css.map*/

@@ -68,7 +68,8 @@
     background: var(--background-gradient-app-frame, var(--background-base-lowest));
     border-inline-end: 1px solid var(--app-frame-border);
     border-inline-start: 1px solid var(--app-frame-border);
-    border-radius: 8px 0 0 8px;
+    border-start-end-radius: var(--radius-md);
+    border-start-start-radius: var(--radius-md);
     border-top: 1px solid var(--app-frame-border);
     box-sizing: border-box;
     display: flex;
@@ -79,9 +80,12 @@
     width: 400px
 }
 
-.chatLayerWrapper__01ae2.connected__01ae2 .container__01ae2 {
-    border-inline-start-color: var(--border-normal);
-    border-radius: 0
+.chatLayerWrapper__01ae2.connectedLeft__01ae2>.container__01ae2 {
+    border-start-start-radius: 0
+}
+
+.chatLayerWrapper__01ae2.connectedRight__01ae2>.container__01ae2 {
+    border-start-end-radius: 0
 }
 
 .floating__01ae2 {
@@ -102,7 +106,6 @@
 }
 
 .resizeHandle__01ae2 {
-    background: var(--background-gradient-app-frame, var(--background-base-lowest));
     cursor: ew-resize;
     inset-block: 0;
     inset-inline-start: calc(var(--chat-resize-handle-width)*-1);
@@ -110,8 +113,7 @@
     width: var(--chat-resize-handle-width)
 }
 
-.chatLayerWrapper__01ae2.connected__01ae2 .resizeHandle__01ae2 {
-    background: none;
+.chatLayerWrapper__01ae2.connectedLeft__01ae2 .resizeHandle__01ae2 {
     inset-inline-start: calc(var(--chat-resize-handle-width)/-2)
 }
 
@@ -172,4 +174,4 @@
     width: 580px
 }
 
-/*# sourceMappingURL=694315.a95bb9301a68f027.css.map*/
+/*# sourceMappingURL=694315.782d7877a95352d0.css.map*/

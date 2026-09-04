@@ -16,4 +16,7 @@ let l = {
     openConversationsSection() {
         s.h.dispatch({ type: "CHANNEL_OPEN_CONVERSATIONS_SECTION" });
     },
+    setFriendsSidebarCollapsed(e) {
+        s.h.dispatch({ type: "FRIENDS_SIDEBAR_SET_COLLAPSED", collapsed: e });
+    },
 };

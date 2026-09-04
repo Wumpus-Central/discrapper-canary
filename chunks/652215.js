@@ -728,6 +728,7 @@ var i,
         (E.PROFILE = "PROFILE"),
         (E.SUMMARIES = "SUMMARIES"),
         (E.CONVERSATIONS = "CONVERSATIONS"),
+        (E.FRIENDS = "FRIENDS"),
         E),
     t3 =
         (((A = {}).ADD_FRIEND = "ADD_FRIEND"),
