@@ -79,9 +79,7 @@ class _ extends l.A {
         this.useElectronVideo = e;
     }
     setClipRecordUser(e, t, n) {}
-    setViewerSideClip(e) {}
     setRemoteAudioHistory(e) {}
-    setClipsKeyFrameInterval(e) {}
     setQualityDecoupling(e) {}
     presentDesktopSourcePicker(e) {}
     getStreamParameters() {

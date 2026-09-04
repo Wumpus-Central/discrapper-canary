@@ -1272,7 +1272,7 @@ ${a}`),
                                                 l.message.attachments.some((e) => e.clip_remote_id === a.remoteClipId);
                                             D.default.track(v.HAw.CLIP_SHARED, {
                                                 ...p.Zy(a),
-                                                ...p.lc("trackClipsShared"),
+                                                ...p.lc(),
                                                 channel_id: t,
                                                 guild_id: s.getGuildId(),
                                                 channel_type: s.type,

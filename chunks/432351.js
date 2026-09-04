@@ -82,12 +82,11 @@ class o extends i.A {
     }
     setClipsModulePath(e) {}
     setClipsDataPath(e) {}
-    setClipsV3Enabled(e) {}
-    setClipsV3MLEnabled(e) {}
-    setClipsRecordingEnabled(e) {}
-    hasSetClipsRecordingEnabled() {
+    hasClipsV3Support() {
         return !1;
     }
+    setClipsV3MLEnabled(e) {}
+    setClipsRecordingEnabled(e) {}
     setClipsUIActive(e) {}
     setClipBufferLength(e) {}
     getSystemSteadyClockNowMs() {
@@ -98,12 +97,6 @@ class o extends i.A {
     }
     updateClipMetadata(e, t) {
         return Promise.reject(Error("UNSUPPORTED"));
-    }
-    exportClip(e, t) {
-        return Promise.reject(Error("UNSUPPORTED"));
-    }
-    hasExportClipToFile() {
-        return !1;
     }
     exportClipToFile(e, t, n) {
         return Promise.reject(Error("UNSUPPORTED"));

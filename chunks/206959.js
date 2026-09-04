@@ -529,7 +529,6 @@ class j extends S.A {
     postponeDecodeLevel = 100;
     reconnectInterval = 6e4;
     keyframeInterval = 0;
-    clipsKeyFrameInterval = 0;
     videoQualityMeasurement = "";
     videoEncoderExperiments = "";
     numFastUdpReconnects = 0;
@@ -936,17 +935,6 @@ class j extends S.A {
                 this.conn.setClipRecordUser?.(e, i, n);
         }
     }
-    setClipsKeyFrameInterval(e) {
-        this.context === C.x.STREAM &&
-            ((this.clipsKeyFrameInterval = e),
-            this.conn.setTransportOptions({
-                keyframeInterval: this.getKeyFrameInterval(),
-                alwaysSendVideo: this.keyframeInterval > 0,
-            }));
-    }
-    setViewerSideClip(e) {
-        this.context === C.x.STREAM && this.conn.setTransportOptions({ enableViewerSideClip: e });
-    }
     setRemoteAudioHistory(e) {
         this.conn.setTransportOptions({ remoteAudioHistoryMs: e });
     }
@@ -1088,7 +1076,7 @@ class j extends S.A {
     setKeyframeInterval(e) {
         (this.keyframeInterval = e),
             this.conn.setTransportOptions({
-                keyframeInterval: this.getKeyFrameInterval(),
+                keyframeInterval: this.keyframeInterval,
                 alwaysSendVideo: this.keyframeInterval > 0,
             });
     }
@@ -1435,11 +1423,6 @@ class j extends S.A {
                     this.experimentFlags.has(C.fd.INTEL_GPU_DISABLE) && (l.params["intel-gpu"] = "0"));
         }
         return { videoEncoder: l, videoDecoders: s, audioEncoder: r, audioDecoders: a };
-    }
-    getKeyFrameInterval() {
-        return this.keyframeInterval > 0 && this.clipsKeyFrameInterval > 0
-            ? Math.min(this.keyframeInterval, this.clipsKeyFrameInterval)
-            : Math.max(this.keyframeInterval, this.clipsKeyFrameInterval);
     }
     getConnectionTransportOptions() {
         let e = {
@@ -2233,7 +2216,8 @@ class er extends d.A {
         );
     }
     setClipsModulePath(e) {
-        (0, v.lE)().setClipsModulePath?.(e);
+        let t = (0, v.lE)();
+        this.registerClipsRecordingEventHandler(), t.setClipsV3Enabled?.(!0), t.setClipsModulePath?.(e);
     }
     setClipsDataPath(e) {
         (0, v.lE)().setClipsDataPath?.(e);
@@ -2241,8 +2225,9 @@ class er extends d.A {
     setClipsSentryConfig(e, t, n) {
         (0, v.lE)().setClipsSentryConfig?.(e, t, n);
     }
-    setClipsV3Enabled(e) {
-        e && this.registerClipsRecordingEventHandler(), (0, v.lE)().setClipsV3Enabled?.(e);
+    hasClipsV3Support() {
+        let e = (0, v.lE)();
+        return null != e.setClipsModulePath && null != e.setClipsRecordingEnabled && null != e.exportClipToFile;
     }
     registerClipsRecordingEventHandler() {
         let e = (0, v.lE)();
@@ -2280,9 +2265,6 @@ class er extends d.A {
     }
     setClipsRecordingEnabled(e) {
         (0, v.lE)().setClipsRecordingEnabled?.(e);
-    }
-    hasSetClipsRecordingEnabled() {
-        return null != (0, v.lE)().setClipsRecordingEnabled;
     }
     setClipBufferLength(e) {
         (0, v.lE)().setClipBufferLength?.(e);
@@ -2377,17 +2359,6 @@ class er extends d.A {
                       l,
                   );
               });
-    }
-    exportClip(e, t) {
-        let n = (0, v.lE)();
-        return null == n.exportClip
-            ? Promise.reject("unsupported")
-            : new Promise((i, r) => {
-                  n.exportClip(e, t, (e) => i(new Blob([e])), r);
-              });
-    }
-    hasExportClipToFile() {
-        return null != (0, v.lE)().exportClipToFile;
     }
     setClipsPerfMonitoring(e, t, n) {
         let i = (0, v.lE)().setClipsPerfMonitoring;

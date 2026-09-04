@@ -49,8 +49,6 @@ let m = "default",
         clipsLength: f.LX.SECONDS_30,
         remindersEnabled: !0,
         decoupledClipsEnabled: !1,
-        viewerClipsEnabled: !0,
-        viewerConnectivity: f.on.ALL,
         maxAutoClips: 20,
         clipSignals: { enableDistributedSignals: !0, enableGameSignals: !0 },
         debugTooltipsEnabled: !1,
@@ -272,9 +270,6 @@ class K extends s.Ay.DeviceSettingsStore {
     isVoiceRecordingAllowedForUser(e) {
         return M[e]?.allowVoiceRecording ?? !1;
     }
-    isViewerClippingAllowedForUser(e) {
-        return M[e]?.allowAnyViewerClips ?? !1;
-    }
     hasClips() {
         return H.hasClips;
     }
@@ -420,7 +415,6 @@ let $ = new K(l.h, {
             M[e.userId] = {
                 clipsEnabled: (0, a.Lt)(e.flags, p.Ajs.CLIPS_ENABLED),
                 allowVoiceRecording: (0, a.Lt)(e.flags, p.Ajs.ALLOW_VOICE_RECORDING),
-                allowAnyViewerClips: (0, a.Lt)(e.flags, p.Ajs.ALLOW_ANY_VIEWER_CLIPS),
             };
         },
         CLIPS_SHOW_CALL_WARNING: function (e) {

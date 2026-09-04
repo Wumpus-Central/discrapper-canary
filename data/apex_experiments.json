@@ -2226,7 +2226,6 @@
     "kind": "user",
     "name": "2026-04-clips-v3-runtime",
     "defaultConfig": {
-      "enableClipsV3": false,
       "enableClipsV3ML": false
     },
     "variations": {
@@ -2235,11 +2234,9 @@
         "variant": 0
       },
       "1": {
-        "enableClipsV3": true,
         "enableClipsV3ML": false
       },
       "2": {
-        "enableClipsV3": true,
         "enableClipsV3ML": true
       }
     }

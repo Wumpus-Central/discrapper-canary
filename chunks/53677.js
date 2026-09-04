@@ -1,4 +1,4 @@
-n.d(t, { NM: () => I, PQ: () => C, TX: () => T, WR: () => S, Zy: () => f, lc: () => p, u2: () => g }), n(321073);
+n.d(t, { NM: () => h, PQ: () => N, TX: () => p, WR: () => g, Zy: () => I, lc: () => f, u2: () => m }), n(321073);
 var i = n(811315),
     r = n.n(i),
     a = n(166929),
@@ -9,40 +9,39 @@ var i = n(811315),
     c = n(116956),
     u = n(174459),
     _ = n(915725),
-    E = n(974293),
-    A = n(696016),
-    h = n(652215);
-function I(e) {
+    E = n(696016),
+    A = n(652215);
+function h(e) {
     switch (e.decision?.signal?.type) {
-        case A.Gy.MANUAL:
+        case E.Gy.MANUAL:
             return "manual";
-        case A.Gy.DISTRIBUTED:
+        case E.Gy.DISTRIBUTED:
             return "distributed";
-        case A.Gy.LAUGHTER:
-        case A.Gy.SHOUTING:
-        case A.Gy.GAME_EVENT:
+        case E.Gy.LAUGHTER:
+        case E.Gy.SHOUTING:
+        case E.Gy.GAME_EVENT:
             return "auto_ml";
         default:
             return "unknown";
     }
 }
-function f(e) {
+function I(e) {
     return {
-        clip_type: I(e),
+        clip_type: h(e),
         num_clip_participants: e.users.length,
         clip_session_id: e.gameSessionId,
         is_candidate: e.isCandidate,
     };
 }
-function p(e) {
-    return { clip_runtime: (0, E.GN)(e), current_clip_session_id: _.Ay.getCurrentClipsSession()?.id };
+function f() {
+    return { clip_runtime: E.sT, current_clip_session_id: _.Ay.getCurrentClipsSession()?.id };
 }
-function T(e) {
+function p(e) {
     let t = o.A.getCurrentUserActiveStream(),
         n = null != t ? c.A.getRTCConnection((0, s._z)(t)) : null;
     return {
-        ...f(e),
-        ...p("getPreSaveClipAnalytics"),
+        ...I(e),
+        ...f(),
         rtc_connection_id: n?.getRTCConnectionId(),
         media_session_id: n?.getMediaSessionId(),
         parent_media_session_id: d.A.getMediaSessionId(),
@@ -54,7 +53,7 @@ function T(e) {
         clip_event_timeline_size: e.timeline.length,
     };
 }
-function m(e, t) {
+function T(e, t) {
     let n = new Map();
     for (let e in t.framesEncodedByEncoder) {
         let i = t.framesEncodedByEncoder[e],
@@ -100,33 +99,28 @@ function m(e, t) {
         saved_at: t.savedAt,
     };
 }
-function g(e, t, n, i) {
-    let r = m(e, t);
+function m(e, t, n, i) {
+    let r = T(e, t);
     return (
         (r.clip_save_time_ms = t.clipSaveTimeMs),
         (r.clip_size_bytes = t.clipSizeBytes),
-        null != t.viewerDecodeFps &&
-            ((r.decode_fps_during_clip = t.viewerDecodeFps),
-            (r.encode_fps_during_clip = t.viewerEncodeFps),
-            (r.target_fps = null),
-            (r.remote_clip_id = n.remoteClipId)),
         (r.clip_signal_types = (function (e) {
             let t = [];
             for (let n of e.timeline)
                 switch (n.signal.type) {
-                    case A.Gy.MANUAL:
+                    case E.Gy.MANUAL:
                         t.push("manual");
                         break;
-                    case A.Gy.DISTRIBUTED:
+                    case E.Gy.DISTRIBUTED:
                         t.push("distributed");
                         break;
-                    case A.Gy.LAUGHTER:
+                    case E.Gy.LAUGHTER:
                         t.push("laughter");
                         break;
-                    case A.Gy.SHOUTING:
+                    case E.Gy.SHOUTING:
                         t.push("shouting");
                         break;
-                    case A.Gy.GAME_EVENT:
+                    case E.Gy.GAME_EVENT:
                         t.push(`game_event:${n.signal.eventType}`);
                 }
             return t;
@@ -135,24 +129,23 @@ function g(e, t, n, i) {
         r
     );
 }
-function S(e, t) {
-    let n = m(e, t);
+function g(e, t) {
+    let n = T(e, t);
     return (n.error_at = t.errorAt), (n.error_message = t.errorMessage), n;
 }
-function N(e, t) {
+function S(e, t) {
     if (null != t && !r()(t, e)) return t;
 }
-function C(e, t) {
+function N(e, t) {
     let n = {
-        is_favorite: N(e.isFavorite, t.isFavorite),
-        title_length: N(e.name, t.name)?.length,
-        edit_start_time: N(e.editMetadata?.start, t.editMetadata?.start),
-        edit_end_time: N(e.editMetadata?.end, t.editMetadata?.end),
-        application_audio_enabled: N(e.editMetadata?.applicationAudio, t.editMetadata?.applicationAudio),
-        voice_audio_enabled: N(e.editMetadata?.voiceAudio, t.editMetadata?.voiceAudio),
-        soundboard_audio_enabled: N(e.editMetadata?.soundboardAudio, t.editMetadata?.soundboardAudio),
-        crop: N(e.editMetadata?.crop?.preset, t.editMetadata?.crop?.preset),
+        is_favorite: S(e.isFavorite, t.isFavorite),
+        title_length: S(e.name, t.name)?.length,
+        edit_start_time: S(e.editMetadata?.start, t.editMetadata?.start),
+        edit_end_time: S(e.editMetadata?.end, t.editMetadata?.end),
+        application_audio_enabled: S(e.editMetadata?.applicationAudio, t.editMetadata?.applicationAudio),
+        voice_audio_enabled: S(e.editMetadata?.voiceAudio, t.editMetadata?.voiceAudio),
+        soundboard_audio_enabled: S(e.editMetadata?.soundboardAudio, t.editMetadata?.soundboardAudio),
+        crop: S(e.editMetadata?.crop?.preset, t.editMetadata?.crop?.preset),
     };
-    Object.values(n).every((e) => null == e) ||
-        u.default.track(h.HAw.CLIP_EDITED, { ...p("updateClipMetadata"), clip_uuid: e.id, ...n });
+    Object.values(n).every((e) => null == e) || u.default.track(A.HAw.CLIP_EDITED, { ...f(), clip_uuid: e.id, ...n });
 }
