@@ -213,7 +213,7 @@ if (null == i)
     (l = window.GLOBAL_ENV.RELEASE_CHANNEL) &&
         (null == I.release_channel || "" === I.release_channel) &&
         (I.release_channel = l.split("-")[0]),
-    isNaN((s = parseInt("607644", 10))) || (I.client_build_number = s),
+    isNaN((s = parseInt("607656", 10))) || (I.client_build_number = s),
     null == (a = U?.app.getBuildNumber()) || isNaN(a) || (I.native_build_number = a),
     (I.client_event_source = (function () {
         try {
@@ -536,6 +536,7 @@ let X = Object.freeze({
     REPORT: `${j}/report`,
     QUEST_PREVIEW_TOOL_2: (e) => `${j}/quest-preview/${e}`,
     QUEST_HOME_PREVIEW: (e) => `${j}/quest-home?ad_creative_ids=${e}`,
+    QUEST_BAR_PREVIEW: (e) => `${j}/quest-bar-preview?ad_creative_ids=${e}`,
 });
 var q =
     (((A = q || {}).INDEX = "/"),

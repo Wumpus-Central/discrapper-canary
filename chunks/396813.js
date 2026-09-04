@@ -783,9 +783,11 @@ async function eR(e) {
         n = Date.now();
     l.h.dispatch({ type: "QUESTS_FETCH_QUEST_HOME_HERO_BEGIN", placement: t });
     try {
-        let i = new URLSearchParams();
-        i.append("ad_creative_ids", e);
-        let r = (await s.Bo.get({ url: `${D.Rsh.QUESTS_CREATIVE_PREVIEW}?${i.toString()}`, rejectWithError: !1 })).body,
+        let i = new URLSearchParams([
+                ["ad_creative_ids", e],
+                ["placement", String(t)],
+            ]),
+            r = (await s.Bo.get({ url: `${D.Rsh.QUESTS_CREATIVE_PREVIEW}?${i.toString()}`, rejectWithError: !1 })).body,
             o = r.decisions?.[0] ?? null,
             d = o?.creative ?? null,
             c = null;

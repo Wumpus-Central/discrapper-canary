@@ -605,6 +605,7 @@ let eL = 250,
         REPORT: `${w}/report`,
         QUEST_PREVIEW_TOOL_2: (e) => `${w}/quest-preview/${e}`,
         QUEST_HOME_PREVIEW: (e) => `${w}/quest-home?ad_creative_ids=${e}`,
+        QUEST_BAR_PREVIEW: (e) => `${w}/quest-bar-preview?ad_creative_ids=${e}`,
     });
 var eU =
     (((g = eU || {}).INDEX = "/"),
