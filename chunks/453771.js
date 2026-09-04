@@ -99,7 +99,7 @@ function O(e) {
 function R(e) {
     let { guildId: t, onClick: n, maxSize: i, hideLearnMore: r } = e,
         a = (0, c.Xq)((i ?? N(t)) / 1024, { useKibibytes: !0 }),
-        s = (0, c.Xq)(A.f3 / 1024, { useKibibytes: !0 });
+        s = (0, u.EJ)(A.PremiumTypes.TIER_2, { useSpace: !1 });
     return !0 === r
         ? h.intl.format(h.t["+R2TzS"], { maxSize: a, premiumMaxSize: s })
         : h.intl.format(h.t.tRuxk9, { maxSize: a, premiumMaxSize: s, onClick: n });

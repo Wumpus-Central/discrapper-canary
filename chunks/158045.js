@@ -1280,7 +1280,7 @@ function tC(e) {
 }
 function tO(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { useSpace: !0 },
-        n = C.f5[e].fileSize;
+        n = e === C.PremiumTypes.TIER_2 ? (0, S.ew)({ location: "getMaxFileSizeForPremiumType" }) : C.f5[e].fileSize;
     return (0, eN.Xq)(n / 1024, { useKibibytes: !0, useSpace: t.useSpace });
 }
 function tR(e) {
