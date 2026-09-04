@@ -1,11 +1,11 @@
-n.d(t, { TX: () => o, yV: () => d });
+n.d(t, { T: () => o, y: () => c });
 var i = n(477900),
     l = n(582128),
-    s = n(95477),
-    r = n(231088),
-    a = n(375708);
+    s = n(103557),
+    r = n(95477),
+    a = n(231088);
 function o(e) {
-    let { isEditing: t, inputRef: n, ...i } = (0, r.Ww)(e);
+    let { isEditing: t, inputRef: n, ...i } = (0, a.Ww)(e);
     return (
         l.useEffect(() => {
             t && null != n.current && n.current.setSelectionRange(n.current.value.length, n.current.value.length);
@@ -15,40 +15,11 @@ function o(e) {
 }
 function c(e) {
     let {
-        inputRef: t,
-        label: n,
-        value: l,
-        onChange: r,
-        onKeyDown: a,
-        maxLength: o,
-        placeholder: c,
-        trailing: d,
-        error: u,
-        helperText: g,
-        spellCheck: m,
-    } = e;
-    return (0, i.jsx)(s.k, {
-        label: n,
-        hideLabel: !0,
-        inputRef: t,
-        value: l,
-        onChange: r,
-        onKeyDown: a,
-        maxLength: o,
-        placeholder: c,
-        trailing: d,
-        error: u,
-        helperText: g,
-        spellCheck: m,
-    });
-}
-function d(e) {
-    let {
             isEditing: t,
             committedValue: n,
             editedValue: l,
-            setEditedValue: s,
-            editButtonRef: o,
+            setEditedValue: o,
+            editButtonRef: c,
             handleStartEditing: d,
             wrapperRef: u,
             onBlur: g,
@@ -56,57 +27,64 @@ function d(e) {
             inputRef: x,
             onInputKeyDown: f,
             preview: h,
-            placeholder: p,
-            editButtonAriaLabel: I,
+            placeholder: I,
+            editButtonAriaLabel: p,
             label: j,
-            size: A = "default",
-            maxLength: E,
-            error: v,
-            warning: C,
-            trailing: S,
-            className: b,
-            disabled: k = !1,
-            growWidth: T,
-            removeVerticalPadding: y,
-            textVariant: N,
-            textColor: R,
-            spellCheck: w,
+            variant: A = "default",
+            rows: E,
+            maxRows: v,
+            maxLength: S,
+            error: C,
+            warning: b,
+            trailing: k,
+            className: T,
+            disabled: y = !1,
+            growWidth: N,
+            removeVerticalPadding: R,
+            textVariant: w,
+            textColor: _,
+            spellCheck: L,
         } = e,
-        L =
-            (null != E && (t ? l : n).length > E ? a.intl.formatToPlainString(a.t.ICT5S6, { maxLength: E }) : void 0) ??
-            v,
-        _ = "compact" === A ? { variant: "compact" } : { variant: "default", trailing: S };
-    return (0, i.jsx)(r.ZL, {
-        ..._,
+        O = (0, a.n4)(t ? l : n, S),
+        P = t && l !== n,
+        D = O ?? (P ? void 0 : C),
+        M = "default" === A ? { variant: "default", trailing: k } : { variant: A },
+        G = {
+            label: j,
+            hideLabel: !0,
+            inputRef: x,
+            value: l,
+            onChange: o,
+            onKeyDown: f,
+            maxLength: S,
+            placeholder: I,
+            error: D,
+            helperText: b,
+            disabled: y,
+            spellCheck: L,
+        };
+    return (0, i.jsx)(a.ZL, {
+        ...M,
         isEditing: t,
         preview: h,
-        placeholder: p,
-        editButtonRef: o,
-        editButtonAriaLabel: I,
+        placeholder: I,
+        editButtonRef: c,
+        editButtonAriaLabel: p,
         onStartEditing: d,
-        className: b,
-        growWidth: T,
-        removeVerticalPadding: y,
+        className: T,
+        growWidth: N,
+        removeVerticalPadding: R,
         wrapperRef: u,
         onBlur: g,
         onKeyDown: m,
-        disabled: k,
-        textVariant: N,
-        textColor: R,
-        input: (0, i.jsx)(c, {
-            inputRef: x,
-            label: j,
-            value: l,
-            onChange: s,
-            onKeyDown: f,
-            maxLength: E,
-            placeholder: p,
-            trailing: S,
-            error: L,
-            helperText: C,
-            spellCheck: w,
-        }),
-        previewErrorMessage: L,
-        previewWarningMessage: C,
+        disabled: y,
+        textVariant: w,
+        textColor: _,
+        input:
+            "multiline" === A
+                ? (0, i.jsx)(s.f, { ...G, rows: E, maxRows: v, autosize: !0 })
+                : (0, i.jsx)(r.k, { ...G, trailing: k }),
+        previewErrorMessage: D,
+        previewWarningMessage: b,
     });
 }

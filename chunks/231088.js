@@ -1,4 +1,4 @@
-n.d(t, { Ww: () => p, ZL: () => A }), n(321073);
+n.d(t, { Ww: () => p, ZL: () => v, n4: () => j }), n(321073);
 var i = n(477900),
     l = n(582128),
     s = n(503698),
@@ -12,7 +12,8 @@ var i = n(477900),
     m = n(834730),
     x = n(939249),
     f = n(775602),
-    h = n(404760);
+    h = n(375708),
+    I = n(404760);
 function p(e) {
     let { value: t, onCommit: n, disabled: i = !1 } = e,
         [s, r] = l.useState("idle"),
@@ -22,46 +23,46 @@ function p(e) {
         m = l.useRef(null),
         x = l.useRef(null),
         h = l.useRef(null),
-        p = l.useRef(!1),
-        I = l.useRef(!0),
+        I = l.useRef(!1),
+        p = l.useRef(!0),
         j = l.useCallback(() => {
-            (I.current = !1), d(t), r("editing");
+            (p.current = !1), d(t), r("editing");
         }, [t]),
         A = l.useRef(o);
     l.useLayoutEffect(() => {
         A.current = o;
     });
     let E = l.useCallback(() => {
-            I.current || ((I.current = !0), n(A.current), r("done"));
+            p.current || ((p.current = !0), n(A.current), r("done"));
         }, [n]),
         v = l.useCallback(() => {
-            I.current || ((I.current = !0), r("done"));
+            p.current || ((p.current = !0), r("done"));
         }, []);
     l.useEffect(() => {
-        "done" === s && (p.current && m.current?.focus({ preventScroll: !0 }), (p.current = !1));
+        "done" === s && (I.current && m.current?.focus({ preventScroll: !0 }), (I.current = !1));
     }, [s]),
         l.useEffect(() => {
             u &&
                 (x.current?.scrollIntoView({ block: "nearest", behavior: g ? "auto" : "smooth" }),
                 h.current?.focus({ preventScroll: !0 }));
         }, [u, g]);
-    let C = l.useCallback(
+    let S = l.useCallback(
             (e) => {
                 !u || (null != x.current && (0, a.vq)(e.relatedTarget) && x.current.contains(e.relatedTarget)) || E();
             },
             [u, E],
         ),
-        S = l.useCallback(
+        C = l.useCallback(
             (e) => {
-                u && "Escape" === e.key && (e.preventDefault(), e.stopPropagation(), (p.current = !0), v());
+                u && "Escape" === e.key && (e.preventDefault(), e.stopPropagation(), (I.current = !0), v());
             },
             [u, v],
         ),
         b = l.useCallback(() => {
-            (p.current = !0), E();
+            (I.current = !0), E();
         }, [E]),
         k = l.useCallback(() => {
-            (p.current = !0), v();
+            (I.current = !0), v();
         }, [v]),
         T = l.useCallback(
             (e) => {
@@ -85,19 +86,22 @@ function p(e) {
         handleInputCommit: b,
         handleInputCancel: k,
         onInputKeyDown: T,
-        onBlur: C,
-        onContainerKeyDown: S,
+        onBlur: S,
+        onContainerKeyDown: C,
     };
 }
-function I(e) {
+function j(e, t) {
+    return null != t && e.length > t ? h.intl.formatToPlainString(h.t.ICT5S6, { maxLength: t }) : void 0;
+}
+function A(e) {
     let { tooltip: t, ...n } = e,
         l = (0, i.jsx)("div", {
-            className: h.L7,
+            className: I.L7,
             children: (0, i.jsx)(o.T, { ...n, size: "sm", variant: "input-accessory" }),
         });
     return null == t ? l : (0, i.jsx)(d.m, { text: t, ariaHidden: !0, children: l });
 }
-function j(e) {
+function E(e) {
     let { id: t, message: n, type: l } = e,
         s = "error" === l,
         r = s ? u.E : g.WarningIcon;
@@ -105,11 +109,11 @@ function j(e) {
         id: t,
         variant: "text-xs/normal",
         color: s ? "text-feedback-critical" : "text-feedback-warning",
-        className: h.VP,
-        children: [(0, i.jsx)(r, { size: "xs", color: "currentColor", className: s ? h.ik : h.QW }), n],
+        className: I.VP,
+        children: [(0, i.jsx)(r, { size: "xs", color: "currentColor", className: s ? I.ik : I.QW }), n],
     });
 }
-function A(e) {
+function v(e) {
     let {
             isEditing: t,
             preview: n,
@@ -120,12 +124,12 @@ function A(e) {
             onStartEditing: u,
             variant: g = "default",
             trailing: f,
-            previewErrorMessage: p,
-            previewWarningMessage: A,
-            className: E,
+            previewErrorMessage: h,
+            previewWarningMessage: p,
+            className: j,
             wrapperRef: v,
-            onBlur: C,
-            onKeyDown: S,
+            onBlur: S,
+            onKeyDown: C,
             textVariant: b,
             textColor: k,
             disabled: T = !1,
@@ -134,18 +138,18 @@ function A(e) {
         } = e,
         R = l.useRef(null),
         w = l.useId(),
-        L = l.useId(),
-        _ = null == n,
-        O = null != p,
-        P = null != A && !O,
+        _ = l.useId(),
+        L = null == n,
+        O = null != h,
+        P = null != p && !O,
         D = O ? "error" : P ? "warning" : null,
-        M = O ? p : A,
+        M = O ? h : p,
         G = null != D && null != M,
         [U] = l.useState(t),
         [F, W] = l.useState(!1);
     F || t === U || W(!0);
     let H = [];
-    _ && H.push(w), G && "compact" !== g && H.push(L);
+    L && H.push(w), G && "compact" !== g && H.push(_);
     let V = H.length > 0 ? H.join(" ") : void 0;
     function B() {
         let { activeElement: e } = R.current?.ownerDocument ?? document;
@@ -153,7 +157,7 @@ function A(e) {
     }
     let z = (0, i.jsxs)("div", {
         ref: R,
-        className: r()(h.LL, { [h.JD]: O, [h.xe]: P, [h.r9]: T }),
+        className: r()(I.LL, { [I.JD]: O, [I.xe]: P, [I.r9]: T }),
         onMouseDown: T
             ? void 0
             : function (e) {
@@ -161,12 +165,12 @@ function A(e) {
               },
         onClick: T ? void 0 : B,
         children: [
-            _
+            L
                 ? (0, i.jsx)(m.E, {
                       id: w,
                       variant: b ?? "text-sm/normal",
                       color: k ?? "text-muted",
-                      className: h.qf,
+                      className: I.qf,
                       children: s,
                   })
                 : n,
@@ -181,28 +185,28 @@ function A(e) {
                     },
                     focusProps: { ringTarget: R },
                 }),
-            null != f && (0, i.jsx)("div", { className: h.lD, children: (0, i.jsx)(I, { ...f }) }),
+            null != f && (0, i.jsx)("div", { className: I.lD, children: (0, i.jsx)(A, { ...f }) }),
         ],
     });
     return (0, i.jsx)("div", {
         ref: v,
         className: r()(
-            h.kL,
-            { [h.oE]: "compact" === g, [h.c1]: "multiline" === g, [h.CP]: y, [h.WK]: N, [h.Dy]: t },
-            E,
+            I.kL,
+            { [I.oE]: "compact" === g, [I.c1]: "multiline" === g, [I.CP]: y, [I.WK]: N, [I.Dy]: t },
+            j,
         ),
-        onBlur: C,
-        onKeyDown: S,
+        onBlur: S,
+        onKeyDown: C,
         children: (0, i.jsx)(
             "div",
             {
-                className: F ? h.qG : void 0,
+                className: F ? I.qG : void 0,
                 children: t
                     ? o
                     : (0, i.jsxs)(i.Fragment, {
                           children: [
-                              (0, i.jsx)("div", { className: h.VH, children: z }),
-                              G && "compact" !== g && (0, i.jsx)(j, { id: L, message: M, type: D }),
+                              (0, i.jsx)("div", { className: I.VH, children: z }),
+                              G && "compact" !== g && (0, i.jsx)(E, { id: _, message: M, type: D }),
                           ],
                       }),
             },
