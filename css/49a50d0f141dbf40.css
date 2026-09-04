@@ -1,6 +1,6 @@
 .container__9c314 {
     --custom-preview-inline-padding: 6px;
-    --custom-preview-block-padding: 0;
+    --custom-preview-block-padding: 0px;
     margin-inline: calc((var(--custom-preview-inline-padding) + 1px)*-1);
     position: relative
 }
@@ -187,4 +187,4 @@
     margin-inline-end: calc((var(--custom-preview-inline-padding) + 1px)*-1)
 }
 
-/*# sourceMappingURL=df15ec2955c9d12f.css.map*/
+/*# sourceMappingURL=49a50d0f141dbf40.css.map*/
