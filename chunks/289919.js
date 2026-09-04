@@ -175,10 +175,14 @@ class p {
         (null != i && "" !== i && (f.includes(i) || (f.unshift(i), f.splice(50), 0))) ||
             this.subscriptions.forEach((i) => {
                 var r;
-                i.evt === e &&
-                    ("function" != typeof t || t(i)) &&
-                    ("object" != typeof t || ((r = i.args ?? {}), l().isEqual(t, l().pick(r, Object.keys(t))))) &&
-                    ("function" == typeof n && (n = n(i)), this.dispatch(i.socket, null, h.e$_.DISPATCH, i.evt, n));
+                if (
+                    i.evt !== e ||
+                    ("function" == typeof t && !t(i)) ||
+                    ("object" == typeof t && ((r = i.args ?? {}), !l().isEqual(t, l().pick(r, Object.keys(t)))))
+                )
+                    return;
+                let a = "function" == typeof n ? n(i) : n;
+                this.dispatch(i.socket, null, h.e$_.DISPATCH, i.evt, a);
             });
     }
     updateSubscriptions() {
