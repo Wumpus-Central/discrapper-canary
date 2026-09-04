@@ -3188,10 +3188,19 @@ class tR extends S.G {
             },
             { no: 6, name: "configuration", kind: "message", T: () => k.hU },
             { no: 7, name: "owning_experiment_id", kind: "scalar", T: 6 },
+            { no: 8, name: "owning_slot_id", kind: "scalar", T: 5 },
         ]);
     }
     create(e) {
-        let t = { id: 0, label: "", targetAllocation: 0, buckets: [], type: 0, owningExperimentId: "0" };
+        let t = {
+            id: 0,
+            label: "",
+            targetAllocation: 0,
+            buckets: [],
+            type: 0,
+            owningExperimentId: "0",
+            owningSlotId: 0,
+        };
         return (
             globalThis.Object.defineProperty(t, g.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, m.x)(this, t, e),
@@ -3225,6 +3234,9 @@ class tR extends S.G {
                 case 7:
                     r.owningExperimentId = e.fixed64().toString();
                     break;
+                case 8:
+                    r.owningSlotId = e.int32();
+                    break;
                 default:
                     let a = n.readUnknownField;
                     if ("throw" === a)
@@ -3244,7 +3256,8 @@ class tR extends S.G {
         0 !== e.type && t.tag(5, T.O0.Varint).int32(e.type),
             e.configuration &&
                 k.hU.internalBinaryWrite(e.configuration, t.tag(6, T.O0.LengthDelimited).fork(), n).join(),
-            "0" !== e.owningExperimentId && t.tag(7, T.O0.Bit64).fixed64(e.owningExperimentId);
+            "0" !== e.owningExperimentId && t.tag(7, T.O0.Bit64).fixed64(e.owningExperimentId),
+            0 !== e.owningSlotId && t.tag(8, T.O0.Varint).int32(e.owningSlotId);
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? T.f$.onWrite : i)(this.typeName, e, t), t;
     }
