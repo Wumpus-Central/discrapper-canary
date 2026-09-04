@@ -43,6 +43,9 @@ class g extends r.Ay.Store {
     getSwitchResult() {
         return p;
     }
+    getTargetUserId() {
+        return E;
+    }
 }
 let S = new g(a.h, {
     MULTI_ACCOUNT_SWITCH_START: function (e) {
@@ -153,5 +156,9 @@ let S = new g(a.h, {
             (f = !1),
             (I = !0),
             (u = t.id);
+    },
+    CONNECTION_CLOSED: function (e) {
+        if (40004 !== e.code || !h) return !1;
+        (_ = null), (E = null), (A = null), (f = !1);
     },
 });

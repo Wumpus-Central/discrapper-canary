@@ -1,12 +1,11 @@
-n.d(t, { A: () => c });
-var i = n(65412),
-    r = n(638504),
-    a = n(181370),
-    s = n.n(a),
-    l = n(384939),
-    o = n(315069),
-    d = n(927813);
-class c extends o.A {
+n.d(t, { A: () => d });
+var i = n(181370),
+    r = n.n(i),
+    a = n(384939),
+    s = n(315069),
+    l = n(927813),
+    o = n(767589);
+class d extends s.A {
     id;
     componentType;
     properties;
@@ -16,23 +15,19 @@ class c extends o.A {
     effectiveStartDate;
     effectiveEndDate;
     static createFromServer(e, t) {
-        let n = new TextDecoder("utf-8", { ignoreBOM: !0 }),
-            a = null != e.start_date ? new Date(e.start_date) : null,
-            s = null != e.end_date ? new Date(e.end_date) : null,
-            o = t?.startDate ?? null,
-            d = t?.endDate ?? null;
-        return new c({
+        let n = null != e.start_date ? new Date(e.start_date) : null,
+            i = null != e.end_date ? new Date(e.end_date) : null,
+            r = t?.startDate ?? null,
+            s = t?.endDate ?? null;
+        return new d({
             id: e.id,
             componentType: e.component_type,
-            properties: l.m.fromBinary((0, i.A)(e.properties), {
-                readUnknownField: !0,
-                readerFactory: (e) => new r.V(e, n),
-            }),
+            properties: (0, o.ii)(a.m, e.properties),
             promotionId: e.promotion_id,
-            startDate: a,
-            endDate: s,
-            effectiveStartDate: a ?? o,
-            effectiveEndDate: s ?? d,
+            startDate: n,
+            endDate: i,
+            effectiveStartDate: n ?? r,
+            effectiveEndDate: i ?? s,
         });
     }
     constructor(e) {
@@ -52,7 +47,7 @@ class c extends o.A {
     isIncludedInRollout(e, t) {
         if (!this.isTimed || null == this.effectiveStartDate) return !0;
         let n =
-            1e4 * Math.min(1, Math.max(0, ((t.getTime() - this.effectiveStartDate.getTime()) / d.A.Millis.HOUR) * 0.2));
-        return s().v3(`${this.promotionId}:${e}`) % 1e4 < n;
+            1e4 * Math.min(1, Math.max(0, ((t.getTime() - this.effectiveStartDate.getTime()) / l.A.Millis.HOUR) * 0.2));
+        return r().v3(`${this.promotionId}:${e}`) % 1e4 < n;
     }
 }

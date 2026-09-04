@@ -157,6 +157,7 @@ function ed(e) {
                 "OverlaySettingsStore",
                 "ApexExperimentStore",
                 "AccessibilityStore",
+                "DerivedQosDataStore",
             ],
             type: e?.isSwitchingAccount ? "user-data-only" : "all",
         }),

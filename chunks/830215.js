@@ -25,7 +25,7 @@ let C = new _.A("AuthenticationActionCreators"),
 var R = (((r = {}).MFA = "MFA"), (r.SUCCESS = "SUCCESS"), r);
 function L(e) {
     T.A.clearNavigationHistory();
-    let t = { type: "LOGOUT", ...e };
+    let t = { type: "LOGOUT", userId: f.default.getId() ?? void 0, ...e };
     d.h.dispatch(t).catch((e) => {
         throw (C.error("Error while dispatching LOGOUT", e), window.DiscordErrors?.softCrash(e), e);
     });
