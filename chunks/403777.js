@@ -1,41 +1,35 @@
-n.d(t, { Ay: () => T, kN: () => I, n1: () => E });
+n.d(t, { Ay: () => I, kN: () => E, n1: () => u });
 var i = n(477900);
 n(582128);
 var r = n(192308),
     a = n(439372),
     s = n(267102),
     l = n(287809),
-    o = n(207803),
-    d = n(591179),
-    c = n(485745),
-    u = n(652215);
-let _ = new Set();
-function E(e, t) {
+    o = n(415916),
+    d = n(652215);
+let c = new Set();
+function u(e, t) {
     return `USER_PROFILE_MODAL_KEY:${e}:${null == t ? "" : t}`;
 }
-function A() {
-    let e = !(0, d.E)("UserProfileModalManager");
-    return (0, c.b)(e);
-}
-async function h(e) {
+async function _(e) {
     let {
             userId: t,
             tabSection: a,
-            scrollTarget: d,
-            guildId: c,
-            originGuildId: h,
-            channelId: I,
-            appContext: f,
-            customStatusPrompt: p,
-            onModalOpen: T,
-            ...m
+            scrollTarget: _,
+            guildId: E,
+            originGuildId: A,
+            channelId: h,
+            appContext: I,
+            customStatusPrompt: f,
+            onModalOpen: p,
+            ...T
         } = e,
-        g = l.default.getUser(t);
+        m = l.default.getUser(t);
+    if (null == m) return;
+    let g = l.default.getCurrentUser();
     if (null == g) return;
-    let S = l.default.getCurrentUser();
-    if (null == S) return;
-    let N = E(t, c);
-    _.add(
+    let S = u(t, E);
+    c.add(
         await (0, r.openModalLazy)(
             async () => {
                 let e = (
@@ -703,54 +697,53 @@ async function h(e) {
                 ).default;
                 return (t) =>
                     (0, i.jsx)(e, {
-                        user: g,
-                        currentUser: S,
-                        guildId: c,
-                        originGuildId: h ?? c,
+                        user: m,
+                        currentUser: g,
+                        guildId: E,
+                        originGuildId: A ?? E,
                         initialTabSection: a,
-                        initialScrollTarget: d,
-                        channelId: I,
-                        customStatusPrompt: p,
+                        initialScrollTarget: _,
+                        channelId: h,
+                        customStatusPrompt: f,
                         ...t,
-                        ...m,
+                        ...T,
                     });
             },
             {
-                modalKey: N,
-                contextKey: (0, r.modalContextFromAppContext)(f ?? (0, s.zd)() ?? u.BRT.APP),
+                modalKey: S,
+                contextKey: (0, r.modalContextFromAppContext)(I ?? (0, s.zd)() ?? d.BRT.APP),
                 onCloseRequest: () => {
-                    t === S.id && A() ? (0, o.VQ)() : ((0, r.closeModal)(N), _.delete(N));
+                    (0, o.A)(t === g.id, () => {
+                        (0, r.closeModal)(S), c.delete(S);
+                    });
                 },
-                onCloseCallback: () => _.delete(N),
+                onCloseCallback: () => c.delete(S),
             },
         ),
     ),
-        T?.();
+        p?.();
 }
-function I(e) {
-    let t = E(e, null);
+function E(e) {
+    let t = u(e, null);
     for (let e of (0, r.getOpenModalKeys)()) if (e.startsWith(t)) return !0;
     return !1;
 }
-function f() {
-    if (0 === _.size) return;
+function A() {
+    if (0 === c.size) return;
     let e = l.default.getCurrentUser();
-    for (let t of _) {
-        if (
+    for (let t of c) {
+        let n =
             null != e &&
             (function (e) {
                 let t = e.indexOf(":", 23);
                 return -1 !== t ? e.slice(23, t) : e.slice(23);
-            })(t) === String(e.id) &&
-            A()
-        ) {
-            A() && (0, o.VQ)();
-            continue;
-        }
-        (0, r.closeModal)(t), _.delete(t);
+            })(t) === String(e.id);
+        (0, o.A)(n, () => {
+            (0, r.closeModal)(t), c.delete(t);
+        });
     }
 }
-class p extends a.A {
-    actions = { USER_PROFILE_MODAL_OPEN: h, USER_PROFILE_MODAL_CLOSE: f };
+class h extends a.A {
+    actions = { USER_PROFILE_MODAL_OPEN: _, USER_PROFILE_MODAL_CLOSE: A };
 }
-let T = new p();
+let I = new h();
