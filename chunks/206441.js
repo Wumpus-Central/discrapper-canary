@@ -461,7 +461,11 @@ function V(e) {
             setOrder: (t) => e({ order: t, orderRecord: f.createFromServer(t), pendingPaymentSourceId: null }),
             selectedSkuId: void 0,
             selectedPlanId: void 0,
-            setSelectedSkuId: (t) => e({ selectedSkuId: t ?? void 0, quantity: G }),
+            setSelectedSkuId: (t) =>
+                e((e) => {
+                    let n = t ?? void 0;
+                    return n === e.selectedSkuId ? e : { selectedSkuId: n, quantity: G };
+                }),
             setSelectedPlanId: function (t) {
                 let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { shouldUpdateQuantity: !0 },
                     i = t ?? void 0;

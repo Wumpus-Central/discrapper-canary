@@ -120,7 +120,7 @@ function b(e) {
         ),
         z = null != F && n === F;
     function Q() {
-        R || r || L(n);
+        R || r || L(n, { shouldUpdateQuantity: !1 });
     }
     let $ = A
         ? v.intl.format(v.t.hXcaLT, {
