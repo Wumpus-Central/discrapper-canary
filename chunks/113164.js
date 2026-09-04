@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     wx: "header__06f80",
     qd: "headerTitle__06f80",
     YF: "headerTabs__06f80",

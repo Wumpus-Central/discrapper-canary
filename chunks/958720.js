@@ -88,13 +88,13 @@ function b(e) {
     let H = (0, y.m6)(B.id),
         W = (0, A.cg)(),
         Y = (0, y.L_)({ planId: n, isGift: k, priceOptions: s, subscriptionPlan: B }),
-        K = (0, y.y8)(n, !1, k, s),
-        V = null != Y && !g,
+        V = (0, y.y8)(n, !1, k, s),
+        K = null != Y && !g,
         Z = i.useCallback(() => {
             let e = N(t, B, {
                 userLocale: M,
                 isEligibleForBOGOPromotion: W,
-                shouldShowSavingsPercent: V,
+                shouldShowSavingsPercent: K,
                 isGift: k,
                 planId: n,
                 savingsPercent: Y,
@@ -113,7 +113,7 @@ function b(e) {
                         children: e.text,
                     }))
                   : null;
-        }, [M, W, B, t, V, k, n, Y, s, b]),
+        }, [M, W, B, t, K, k, n, Y, s, b]),
         q = i.useMemo(
             () => (0, y.D8)(B.interval, k, S, B.intervalCount, U, H),
             [B.interval, B.intervalCount, k, S, U, H],
@@ -126,12 +126,12 @@ function b(e) {
         ? v.intl.format(v.t.hXcaLT, {
               price:
                   T && null != G && z
-                      ? (0, I.$g)(K.amount - G, K.currency)
+                      ? (0, I.$g)(V.amount - G, V.currency)
                       : b
-                        ? (0, I.$g)(0, K.currency, { minimumFractionDigits: 0, maximumFractionDigits: 0 })
-                        : (0, I.$g)(K.amount, K.currency),
+                        ? (0, I.$g)(0, V.currency, { minimumFractionDigits: 0, maximumFractionDigits: 0 })
+                        : (0, I.$g)(V.amount, V.currency),
           })
-        : (0, I.$g)(K.amount, K.currency);
+        : (0, I.$g)(V.amount, V.currency);
     return (0, l.jsxs)(d.D, {
         role: "radio",
         "aria-checked": r,
@@ -167,7 +167,7 @@ function b(e) {
                                         (0, l.jsx)("div", {
                                             className: _._R,
                                             children: v.intl.format(v.t.ori2Jm, {
-                                                currencyAmount: (0, I.$g)(K.amount, K.currency),
+                                                currencyAmount: (0, I.$g)(V.amount, V.currency),
                                             }),
                                         }),
                                 ],
@@ -219,7 +219,7 @@ function b(e) {
                                     ? v.intl.formatToPlainString(v.t.rtLTJP, { percent: o ?? "" })
                                     : null;
                         })(B, {
-                            price: K,
+                            price: V,
                             isEligibleForDiscount: T,
                             isEligibleForTrial: b,
                             discountAmountOff: G,

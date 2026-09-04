@@ -307,7 +307,7 @@ function B() {
 var H = n(818348),
     W = n(624210),
     Y = n(739508);
-class K {
+class V {
     checkoutStore;
     isPatchingRef;
     constructor(e, t) {
@@ -359,7 +359,7 @@ class K {
         }
     }
 }
-function V() {
+function K() {
     let {
         paymentSourceId: e,
         paymentGateway: t,
@@ -375,7 +375,7 @@ function V() {
         !(function (e) {
             let t = (0, d.Q9)(),
                 n = (0, i.useRef)(!1),
-                l = (0, i.useMemo)(() => new K(t, n), [t]),
+                l = (0, i.useMemo)(() => new V(t, n), [t]),
                 { order: r, orderSyncError: a } = (0, d.t4)((e) => ({
                     order: e.order,
                     orderSyncError: e.orderSyncError,
@@ -653,7 +653,7 @@ function em(e) {
             (0, l.jsx)(ei, {}),
             (0, l.jsx)(X, {}),
             (0, l.jsx)(es, {}),
-            (0, l.jsx)(V, {}),
+            (0, l.jsx)(K, {}),
             (0, l.jsx)(ee, {}),
             (0, l.jsx)(g, {
                 isGift: r.isGift,

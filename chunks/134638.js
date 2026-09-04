@@ -52,10 +52,10 @@ function R(e) {
             shouldDisallowPlanSelection: e.getShouldDisallowPlanSelection(),
         })),
         Y = F && W,
-        K = i.useMemo(() => {
+        V = i.useMemo(() => {
             if (Y && null != G) return () => G(g.pn.PLAN_SELECT);
         }, [Y, G]),
-        V = (function (e) {
+        K = (function (e) {
             let {
                     invoiceSummaryType: t,
                     invoicePreview: n,
@@ -213,7 +213,7 @@ function R(e) {
         ),
         er = ((0, I.ys)(c.id) ? (0, I.m6)(c.id) : void 0) === _.PremiumTypes.TIER_2;
     return (0, l.jsx)(u.f7, {
-        label: V,
+        label: K,
         description: q,
         price: et,
         priceStrikethroughText: en,
@@ -226,7 +226,7 @@ function R(e) {
         headerIconSrc: Q,
         headerIconComponent: J,
         bottomSubText: U,
-        onClick: K,
+        onClick: V,
     });
 }
 function M(e) {

@@ -1,4 +1,4 @@
-n.d(t, { _5: () => I, rV: () => A });
+n.d(t, { _5: () => I, rV: () => g });
 var l = n(477900),
     i = n(582128),
     r = n(430993),
@@ -24,12 +24,12 @@ let y = i.createContext(null);
 function I() {
     return i.useContext(y);
 }
-function g(e) {
+function A(e) {
     let { renderModalProps: t, children: n } = e,
         i = (0, l.jsxs)(l.Fragment, { children: [(0, l.jsx)(s.rQ, {}), (0, l.jsx)(r.c, { children: n })] });
     return null != t ? (0, l.jsx)(E.Jg, { ...t, children: i }) : i;
 }
-function A(e) {
+function g(e) {
     let {
             loadId: t,
             skuIDs: n,
@@ -38,7 +38,7 @@ function A(e) {
             checkoutFlow: C,
             isGift: E,
             onOrderCreated: I,
-            renderModalProps: A,
+            renderModalProps: g,
             children: P,
         } = e,
         {
@@ -62,11 +62,11 @@ function A(e) {
                 y = r === h.kM.VIRTUAL_CURRENCY,
                 I = null != a && f.has(a);
             t = y ? E : !!I && !0 !== s && S;
-            let g = y && E,
-                A = null != n ? n[0] : void 0,
+            let A = y && E,
+                g = null != n ? n[0] : void 0,
                 [P, v] = (0, i.useState)(null),
                 [_, x] = (0, i.useState)(null),
-                [T, N] = (0, i.useState)(g),
+                [T, N] = (0, i.useState)(A),
                 b = (0, i.useRef)(!1),
                 j = (0, i.useCallback)(
                     async (e) => {
@@ -92,9 +92,9 @@ function A(e) {
                 );
             return (
                 (0, i.useEffect)(() => {
-                    t && null != A && (null != P || null != _ || b.current || ((b.current = !0), j({ skuId: A })));
-                }, [A, t, P, j, _]),
-                { order: P, isCreateOrderLoading: T, createOrderError: _, shouldBlockOnOrderCreation: g }
+                    t && null != g && (null != P || null != _ || b.current || ((b.current = !0), j({ skuId: g })));
+                }, [g, t, P, j, _]),
+                { order: P, isCreateOrderLoading: T, createOrderError: _, shouldBlockOnOrderCreation: A }
             );
         })({
             skuIDs: n,
@@ -106,10 +106,10 @@ function A(e) {
             onOrderCreated: I,
         });
     if (T) {
-        if (_) return (0, l.jsx)(g, { renderModalProps: A, children: (0, l.jsx)(o.A, {}) });
+        if (_) return (0, l.jsx)(A, { renderModalProps: g, children: (0, l.jsx)(o.A, {}) });
         else if (null != x)
-            return (0, l.jsx)(g, {
-                renderModalProps: A,
+            return (0, l.jsx)(A, {
+                renderModalProps: g,
                 children: (0, l.jsx)(a.E, { variant: "text-md/normal", children: S.intl.string(S.t.F8FvUy) }),
             });
     }

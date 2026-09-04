@@ -2,11 +2,11 @@ t.d(n, { N: () => g });
 var l = t(477900),
     r = t(582128),
     a = t(503698),
-    i = t.n(a),
-    s = t(939249),
+    s = t.n(a),
+    i = t(939249),
     c = t(933832),
-    u = t(624479),
-    d = t(268218),
+    d = t(624479),
+    u = t(268218),
     o = t(157941),
     h = t(957565),
     m = t(165648),
@@ -14,7 +14,7 @@ var l = t(477900),
 function j(e) {
     let { text: n } = e,
         [t, a] = r.useState(!1);
-    return (0, l.jsx)(s.D, {
+    return (0, l.jsx)(i.D, {
         onClick: function () {
             (0, h.C)(
                 n,
@@ -24,13 +24,13 @@ function j(e) {
         },
         children: t
             ? (0, l.jsx)(c.CheckmarkLargeIcon, { size: "xs", color: "currentColor" })
-            : (0, l.jsx)(u.CopyIcon, { size: "xs", color: "currentColor" }),
+            : (0, l.jsx)(d.CopyIcon, { size: "xs", color: "currentColor" }),
     });
 }
 function g(e) {
     let { language: n, content: r } = e;
     function a() {
-        return (0, l.jsx)("code", { className: i()(x.kw, "hljs"), children: r });
+        return (0, l.jsx)("code", { className: s()(x.kw, "hljs"), children: r });
     }
     return (0, l.jsx)("pre", {
         children: (0, l.jsxs)("div", {
@@ -41,8 +41,8 @@ function g(e) {
                     location: "CodeBlock",
                     code: r,
                     lang: n,
-                    className: i()(x.kw, "hljs"),
-                    children: (0, l.jsx)(d.c2, {
+                    className: s()(x.kw, "hljs"),
+                    children: (0, l.jsx)(u.c2, {
                         createPromise: () => Promise.all([t.e("818449"), t.e("175134")]).then(t.bind(t, 981776)),
                         webpackId: 981776,
                         renderFallback: a,
@@ -53,7 +53,7 @@ function g(e) {
                                 return null == t
                                     ? a()
                                     : (0, l.jsx)("code", {
-                                          className: i()(x.kw, "hljs", t.language),
+                                          className: s()(x.kw, "hljs", t.language),
                                           dangerouslySetInnerHTML: { __html: t.value },
                                       });
                             }

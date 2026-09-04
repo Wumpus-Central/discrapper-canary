@@ -1,4 +1,4 @@
-n.d(t, { RL: () => ee, oO: () => Z, dL: () => K }), n(321073);
+n.d(t, { RL: () => ee, oO: () => Z, dL: () => V }), n(321073);
 var l = n(477900),
     i = n(582128),
     r = n(575593),
@@ -41,10 +41,10 @@ var l = n(477900),
     H = n(52635),
     W = n(583741),
     Y = n(181666);
-function K(e) {
+function V(e) {
     return e.name;
 }
-let V = {
+let K = {
     [r.R.BUNDLE]: () => F.intl.string(W.default["jM8/71"]),
     [r.R.AVATAR_DECORATION]: () => F.intl.string(W.default.r29Oel),
     [r.R.PROFILE_EFFECT]: () => F.intl.string(W.default.eTYAvF),
@@ -54,7 +54,7 @@ let V = {
 function Z(e) {
     let t = F.intl.string(W.default.iZe9Wy);
     if (null == e);
-    else if (e.type in V) return (0, V[e.type])();
+    else if (e.type in K) return (0, K[e.type])();
     return t;
 }
 function q(e) {
@@ -67,7 +67,7 @@ function q(e) {
             ...s
         } = e,
         o = (0, l.jsx)(C.WH, { sku: t, product: n }),
-        u = K(t);
+        u = V(t);
     return (0, l.jsx)(C.f7, {
         description: r,
         price: i,
@@ -222,12 +222,12 @@ function X(e) {
                 }, [d]),
             };
         })({ sku: f, application: y, isGift: s }),
-        V = i.useMemo(() => ({ paymentGatewayRestrictions: g, shouldUseUnifiedCheckoutUI: !0 }), [g]),
+        K = i.useMemo(() => ({ paymentGatewayRestrictions: g, shouldUseUnifiedCheckoutUI: !0 }), [g]),
         Z = (0, l.jsx)(d.N, {
             label: F.intl.string(F.t["u+Cw58"]),
             location: "OneTimePurchaseReviewStepBody",
             onPaymentSourceAdd: t,
-            additionalPaymentSourceDropdownProps: V,
+            additionalPaymentSourceDropdownProps: K,
             disabled: P,
         }),
         { product: X } = (0, B.AO)({ sku: f }),
@@ -239,7 +239,7 @@ function X(e) {
                     if (null != n) {
                         let { discount: e, basePrice: i, showTaxes: r } = (0, B.yh)({ invoicePreview: n });
                         return (
-                            l.push({ id: "sku", label: K(t), amount: i }),
+                            l.push({ id: "sku", label: V(t), amount: i }),
                             null != e &&
                                 l.push({
                                     id: "discount",

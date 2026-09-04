@@ -31,13 +31,13 @@ var c = r(803805),
     g = r(821609),
     f = r(27232),
     I = r(364522),
-    R = r(92008),
-    E = r(442433),
+    E = r(92008),
+    R = r(442433),
     _ = r(497685),
     y = r(25277),
     S = r(537652),
-    C = r(267102),
-    v = r(679164),
+    v = r(267102),
+    C = r(679164),
     A = r(439401),
     w = r(957565),
     x = r(998218),
@@ -135,10 +135,10 @@ class U extends s.PureComponent {
                   src:
                       ((t =
                           null != (e = x.A.toURLSafe(r)) &&
-                          (v.BX(e) || v.i(e)) &&
+                          (C.BX(e) || C.i(e)) &&
                           e.pathname.toLowerCase().endsWith(".gif")),
                       null != e &&
-                      (((v.BX(e) || v.i(e)) &&
+                      (((C.BX(e) || C.i(e)) &&
                           (e.pathname.toLowerCase().endsWith(".webp") || e.pathname.toLowerCase().endsWith(".avif"))) ||
                           t)
                           ? (t && e.searchParams.set("format", "webp"),
@@ -211,7 +211,7 @@ class O extends s.PureComponent {
     };
     handleContextMenu = (e, t) => {
         w.p5 &&
-            (0, E.L3)(e, async () => {
+            (0, R.L3)(e, async () => {
                 let { default: e } = await r.e("22282").then(r.bind(r, 400017));
                 return (r) => (0, n.jsx)(e, { ...r, link: t.url });
             });
@@ -360,7 +360,7 @@ class O extends s.PureComponent {
         let { className: s, data: l, resultQuery: a, query: o, resultType: u } = this.props;
         return 0 === l.length && (a !== o || u === T.dD.TRENDING_GIFS)
             ? (0, n.jsx)(
-                  R.f,
+                  E.f,
                   {
                       fade: !0,
                       className: i()(G.Xv, s),
@@ -375,7 +375,7 @@ class O extends s.PureComponent {
                   a,
               )
             : (0, n.jsx)(
-                  R.f,
+                  E.f,
                   {
                       ref: this._masonryRef,
                       fade: !0,
@@ -425,7 +425,7 @@ class O extends s.PureComponent {
     }
 }
 function V() {
-    let { renderWindow: e } = s.useContext(C.Ay),
+    let { renderWindow: e } = s.useContext(v.Ay),
         t = e.document,
         [r] = s.useState(
             () =>

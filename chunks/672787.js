@@ -13,10 +13,10 @@ var n = s(289873),
     g = s(962644),
     x = s(35587),
     f = s(412260),
-    p = s(772167);
-function h(e) {
-    let { promotion: t, claimButtonPlacement: s = p.u5.INLINE, analyticsLocations: n } = e;
-    return (0, i.jsx)(p.wx, {
+    h = s(772167);
+function p(e) {
+    let { promotion: t, claimButtonPlacement: s = h.u5.INLINE, analyticsLocations: n } = e;
+    return (0, i.jsx)(h.wx, {
         recurrence: t,
         titleVariant: "secondary",
         showPartnerImage: null != t.asset,
@@ -71,7 +71,7 @@ let I = {
                 getAsset: (e, t) => (0, b.WD)(e.id, t),
                 getClaimCtaText: () => R.intl.string(T.default["lbyFG+"]),
                 getRedeemCtaText: () => R.intl.string(T.default["6rwUm2"]),
-                claimButtonPlacement: p.u5.FOOTER,
+                claimButtonPlacement: h.u5.FOOTER,
             },
         },
     },
@@ -117,7 +117,7 @@ function S(e) {
                 let t = P(e, b[e.id] ?? null, g),
                     s = m?.outboundConfigs[e.outboundTitle];
                 return (0, i.jsx)(
-                    h,
+                    p,
                     {
                         promotion: t,
                         claimButtonPlacement: s?.claimButtonPlacement,
@@ -150,14 +150,14 @@ function S(e) {
                                 children: N.map((e) => {
                                     var t;
                                     return (0, i.jsx)(
-                                        p.wx,
+                                        h.wx,
                                         {
                                             recurrence:
                                                 ((t = b[e.id] ?? null),
-                                                { ...P(e, t, g), asset: (0, p.Cf)()[e.partnerId ?? ""]?.asset ?? "" }),
+                                                { ...P(e, t, g), asset: (0, h.Cf)()[e.partnerId ?? ""]?.asset ?? "" }),
                                             showPartnerImage: !0,
-                                            claimButtonPlacement: p.u5.FOOTER,
-                                            footerContent: (0, i.jsx)(p.vw, {}),
+                                            claimButtonPlacement: h.u5.FOOTER,
+                                            footerContent: (0, i.jsx)(h.vw, {}),
                                             analyticsLocations: [d.A.THIRD_PARTY_PROMOTIONS_MODAL],
                                         },
                                         e.id,

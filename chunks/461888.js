@@ -1,74 +1,74 @@
-i.d(l, { Ay: () => h, SP: () => N, cn: () => E }), i(938796);
-var t,
+t.d(l, { Ay: () => N, SP: () => j, cn: () => A }), t(938796);
+var i,
     n,
-    s = i(582128),
-    a = i(821418),
-    r = i(665260),
-    u = i(17928),
-    c = i(685073),
-    o = i(928568),
-    d = i(280450),
-    I = i(696451),
-    m = i(71393),
-    A = i(299091),
-    C = i(287809),
-    x = i(348943),
-    g = i(652215),
-    N =
-        (((t = {})[(t.IS_MEMBER = 0)] = "IS_MEMBER"),
-        (t[(t.ADOPT_TAG = 1)] = "ADOPT_TAG"),
-        (t[(t.HAS_APPLICATION = 2)] = "HAS_APPLICATION"),
-        (t[(t.APPLY_TO_JOIN = 3)] = "APPLY_TO_JOIN"),
-        (t[(t.LURK_DISCOVERABLE = 4)] = "LURK_DISCOVERABLE"),
-        (t[(t.JOIN_VIA_INVITE = 5)] = "JOIN_VIA_INVITE"),
-        (t[(t.ACCEPT_ROLES = 6)] = "ACCEPT_ROLES"),
-        t),
-    E = (((n = {}).INVITE = "INVITE"), n);
-function h(e, l, i) {
-    let { id: t, features: n } = e,
-        N = (0, u.bG)([d.default], () => d.default.getId()),
-        E = (0, u.bG)([m.A], () => m.A.getGuild(t)),
-        h = (0, u.bG)([C.default], () => C.default.getUser(N), [N]),
-        v = (0, u.bG)([I.Ay], () => (null != t ? I.Ay.getMember(t, N) : null)?.joinedAt != null, [t, N]),
+    s = t(582128),
+    a = t(821418),
+    r = t(665260),
+    o = t(17928),
+    c = t(685073),
+    d = t(928568),
+    u = t(280450),
+    m = t(696451),
+    x = t(71393),
+    v = t(299091),
+    g = t(287809),
+    h = t(348943),
+    I = t(652215),
+    j =
+        (((i = {})[(i.IS_MEMBER = 0)] = "IS_MEMBER"),
+        (i[(i.ADOPT_TAG = 1)] = "ADOPT_TAG"),
+        (i[(i.HAS_APPLICATION = 2)] = "HAS_APPLICATION"),
+        (i[(i.APPLY_TO_JOIN = 3)] = "APPLY_TO_JOIN"),
+        (i[(i.LURK_DISCOVERABLE = 4)] = "LURK_DISCOVERABLE"),
+        (i[(i.JOIN_VIA_INVITE = 5)] = "JOIN_VIA_INVITE"),
+        (i[(i.ACCEPT_ROLES = 6)] = "ACCEPT_ROLES"),
+        i),
+    A = (((n = {}).INVITE = "INVITE"), n);
+function N(e, l, t) {
+    let { id: i, features: n } = e,
+        j = (0, o.bG)([u.default], () => u.default.getId()),
+        A = (0, o.bG)([x.A], () => x.A.getGuild(i)),
+        N = (0, o.bG)([g.default], () => g.default.getUser(j), [j]),
+        f = (0, o.bG)([m.Ay], () => (null != i ? m.Ay.getMember(i, j) : null)?.joinedAt != null, [i, j]),
         {
-            validInviteKey: j,
-            isBypassInvite: _,
-            inviteRoles: f,
-        } = (0, u.cf)([A.A], () => {
-            let e = i ?? A.A.getInviteKeyForGuildId(t),
-                l = null != e ? A.A.getInvite(e) : null;
-            return null == l || l.state === g.elq.BANNED || l.state === g.elq.EXPIRED
+            validInviteKey: C,
+            isBypassInvite: p,
+            inviteRoles: b,
+        } = (0, o.cf)([v.A], () => {
+            let e = t ?? v.A.getInviteKeyForGuildId(i),
+                l = null != e ? v.A.getInvite(e) : null;
+            return null == l || l.state === I.elq.BANNED || l.state === I.elq.EXPIRED
                 ? { validInviteKey: null, isBypassInvite: !1, inviteRoles: null }
                 : {
                       validInviteKey: e,
                       isBypassInvite: (0, r.Lt)(l.flags ?? 0, a.Q.IS_APPLICATION_BYPASS),
                       inviteRoles: l.roles,
                   };
-        }, [t, i]),
-        p = (0, o.A)(),
+        }, [i, t]),
+        E = (0, d.A)(),
         y = s.useMemo(() => {
-            if (v) {
-                if ("INVITE" === l && null != f && f.length > 0 && null != h) {
-                    let e = I.Ay.getMember(t, h.id),
+            if (f) {
+                if ("INVITE" === l && null != b && b.length > 0 && null != N) {
+                    let e = m.Ay.getMember(i, N.id),
                         l = new Set(e?.roles ?? []);
-                    if (f.some((e) => !l.has(e.id))) return 6;
+                    if (b.some((e) => !l.has(e.id))) return 6;
                 }
-                let i = h?.primaryGuild,
-                    n = i?.identityGuildId === t && i?.identityEnabled === !0;
-                return "INVITE" !== l && null != e.tag && !n && null != E && (0, c.Rg)(E) ? 1 : 0;
+                let t = N?.primaryGuild,
+                    n = t?.identityGuildId === i && t?.identityEnabled === !0;
+                return "INVITE" !== l && null != e.tag && !n && null != A && (0, c.Rg)(A) ? 1 : 0;
             }
-            return p.includes(t)
+            return E.includes(i)
                 ? 2
-                : n?.includes(g.GuildFeatures.MEMBER_VERIFICATION_GATE_ENABLED) &&
-                    n?.includes(g.GuildFeatures.MEMBER_VERIFICATION_MANUAL_APPROVAL) &&
-                    (null != j || e.visibility === x.n.PUBLIC_WITH_RECRUITMENT) &&
-                    !_
+                : n?.includes(I.GuildFeatures.MEMBER_VERIFICATION_GATE_ENABLED) &&
+                    n?.includes(I.GuildFeatures.MEMBER_VERIFICATION_MANUAL_APPROVAL) &&
+                    (null != C || e.visibility === h.n.PUBLIC_WITH_RECRUITMENT) &&
+                    !p
                   ? 3
-                  : null != j
+                  : null != C
                     ? 5
-                    : n?.includes(g.GuildFeatures.DISCOVERABLE)
+                    : n?.includes(I.GuildFeatures.DISCOVERABLE)
                       ? 4
                       : null;
-        }, [v, p, t, n, j, e.visibility, e.tag, _, l, E, f, h]);
-    return { guildId: t, ctaType: y, validInviteKey: j };
+        }, [f, E, i, n, C, e.visibility, e.tag, p, l, A, b, N]);
+    return { guildId: i, ctaType: y, validInviteKey: C };
 }

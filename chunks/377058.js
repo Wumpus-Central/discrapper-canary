@@ -229,15 +229,15 @@ function N(e) {
         })),
         { dropdownCurrencies: H, displayCurrency: W } = (0, P.Jn)(),
         Y = i.useCallback(() => R(!0), []),
-        K = i.useMemo(() => B || F || (p ?? !1), [B, F, p]),
-        { giftCardCheckboxProps: V, disabled: Z } = i.useMemo(
+        V = i.useMemo(() => B || F || (p ?? !1), [B, F, p]),
+        { giftCardCheckboxProps: K, disabled: Z } = i.useMemo(
             () =>
                 null != I
-                    ? I({ giftCardCheckboxProps: O, disabled: K }, { isSubscriptionPaidByWallet: w })
-                    : { giftCardCheckboxProps: O, disabled: K },
-            [K, I, O, w],
+                    ? I({ giftCardCheckboxProps: O, disabled: V }, { isSubscriptionPaidByWallet: w })
+                    : { giftCardCheckboxProps: O, disabled: V },
+            [V, I, O, w],
         ),
-        q = null != V && !0 === V.locked,
+        q = null != K && !0 === K.locked,
         z = i.useMemo(() => {
             if (null != _)
                 return _({
@@ -257,14 +257,14 @@ function N(e) {
                 };
         }, [y, D.currency, W, H, G, Z]),
         $ = i.useMemo(() => ({ ...k, ...m, onPaymentSourceAdd: f }), [k, f, m]),
-        J = null != V && V.checked,
+        J = null != K && K.checked,
         X = L || q,
         ee = i.useMemo(() => {
-            if (!M || null == V) return null;
+            if (!M || null == K) return null;
             let e = X ? T.r : T.K,
-                t = V.disabled || Z;
-            return (0, l.jsx)(v.o, { ...V, className: e, disabled: t });
-        }, [M, V, X, Z]),
+                t = K.disabled || Z;
+            return (0, l.jsx)(v.o, { ...K, className: e, disabled: t });
+        }, [M, K, X, Z]),
         et = X && M && J,
         en = null != z,
         el = i.useMemo(() => (null != z ? z : (0, l.jsx)(s.Ay, { ...$, disabled: Z })), [z, Z, $]);

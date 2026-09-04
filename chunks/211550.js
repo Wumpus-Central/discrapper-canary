@@ -1,1 +1,1 @@
-e.exports = { k: "container__8cb2e", q: "widerInbox__8cb2e" };
+_.exports = { k: "container__8cb2e", q: "widerInbox__8cb2e" };

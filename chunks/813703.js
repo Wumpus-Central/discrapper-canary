@@ -14,13 +14,13 @@ var n = r(477900),
     g = r(151271),
     f = r(821102),
     I = r(996566),
-    R = r(336807),
-    E = r(435558),
-    _ = r.n(E),
+    E = r(336807),
+    R = r(435558),
+    _ = r.n(R),
     y = r(803805),
     S = r(661531),
-    C = r(27232),
-    v = r(555704),
+    v = r(27232),
+    C = r(555704),
     A = r(92008),
     w = r(25277),
     x = r(583613),
@@ -116,7 +116,7 @@ class V extends s.PureComponent {
             return {
                 type: b.dD.FAVORITES,
                 name: M.intl.string(M.t.y3LQCG),
-                icon: C.StarIcon,
+                icon: v.StarIcon,
                 src: null != t ? t.src : "https://media.giphy.com/media/1TOSaJsWtnhe0/giphy.gif",
                 format: t?.format ?? y.TL.IMAGE,
             };
@@ -159,7 +159,7 @@ class V extends s.PureComponent {
                 (0, n.jsxs)("div", {
                     className: U.O1,
                     children: [
-                        r === b.dD.TRENDING_GIFS ? (0, n.jsx)(v.U, { className: U.Yl, color: "currentColor" }) : null,
+                        r === b.dD.TRENDING_GIFS ? (0, n.jsx)(C.U, { className: U.Yl, color: "currentColor" }) : null,
                         (0, n.jsx)("span", { className: U.yb, children: t }),
                     ],
                 }),
@@ -331,7 +331,7 @@ class B extends s.PureComponent {
                     children: M.intl.string(M.t.H6zNFz),
                 });
             default: {
-                let t = (0, R.wT)();
+                let t = (0, E.wT)();
                 return (0, n.jsx)(u.I, {
                     query: e,
                     onChange: this.handleChangeQuery,

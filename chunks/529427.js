@@ -30,7 +30,7 @@ function C(e) {
         { hasPaymentSources: S } = (0, d.j)(),
         y = S ? o.pn.REVIEW : o.pn.ADD_PAYMENT_STEPS,
         I = s.useCallback(() => t(y), [t, y]),
-        g = s.useMemo(
+        A = s.useMemo(
             () =>
                 n === l.X.CUSTOM_STEP_BODY
                     ? i()
@@ -39,11 +39,11 @@ function C(e) {
                       }),
             [n, i, r, C, h],
         ),
-        A = s.useMemo(() => ({ ...f, onClick: I, text: m.intl.string(m.t.XiOHRX) }), [f, I]);
+        g = s.useMemo(() => ({ ...f, onClick: I, text: m.intl.string(m.t.XiOHRX) }), [f, I]);
     return (0, a.jsxs)(a.Fragment, {
         children: [
-            (0, a.jsx)(u.dZ, { children: g }),
-            (0, a.jsx)(u.UX, { children: (0, a.jsx)(c.cy, { onBackClick: E, primaryCTAButtonProps: A }) }),
+            (0, a.jsx)(u.dZ, { children: A }),
+            (0, a.jsx)(u.UX, { children: (0, a.jsx)(c.cy, { onBackClick: E, primaryCTAButtonProps: g }) }),
         ],
     });
 }

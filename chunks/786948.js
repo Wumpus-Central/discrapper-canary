@@ -314,8 +314,8 @@ function W(e) {
             selectedSkuId: B,
             invoicePreview: W,
             setHasAcceptedTerms: Y,
-            setPurchaseState: K,
-            contextMetadata: V,
+            setPurchaseState: V,
+            contextMetadata: K,
             paymentSourceId: Z,
             setPurchaseError: q,
             priceOptions: z,
@@ -396,7 +396,7 @@ function W(e) {
         (eM = eu[B] ?? null),
         a()(null != eM, "SKU must exist and be fetched."));
     let eO = i.useCallback(() => {
-            K(P.h.PURCHASING),
+            V(P.h.PURCHASING),
                 Y(!0),
                 ex(!0),
                 s.h.wait(o.ET),
@@ -411,10 +411,10 @@ function W(e) {
                     gift_card_balance: eP,
                     gift_card_currency: ev,
                 });
-        }, [K, Y, q, n, r, W, eP, ev]),
+        }, [V, Y, q, n, r, W, eP, ev]),
         eL = i.useCallback(
             (e) => {
-                K(P.h.FAIL),
+                V(P.h.FAIL),
                     q(e),
                     T.default.track(y.HAw.PAYMENT_FLOW_FAILED, {
                         ...n,
@@ -426,7 +426,7 @@ function W(e) {
                         gift_card_currency: ev,
                     });
             },
-            [K, q, n, r, eg, eP, ev],
+            [V, q, n, r, eg, eP, ev],
         ),
         { signOrder: ek, reportError: ew } = (0, p.f)({
             order: el,
@@ -436,11 +436,11 @@ function W(e) {
         eU = i.useCallback(
             (e) =>
                 e.customerActionCancelled
-                    ? ((0, c.fE)(), K(P.h.WAITING), { shouldReturnEarly: !0 })
+                    ? ((0, c.fE)(), V(P.h.WAITING), { shouldReturnEarly: !0 })
                     : e.redirectConfirmation || e.pendingCustomerAction
                       ? (eN(null != e.redirectURL), { shouldReturnEarly: !0 })
-                      : (K(P.h.COMPLETED), { shouldReturnEarly: !1 }),
-            [K],
+                      : (V(P.h.COMPLETED), { shouldReturnEarly: !1 }),
+            [V],
         ),
         eD = i.useCallback(() => {
             eT || ex(!1);
@@ -464,15 +464,15 @@ function W(e) {
         }
     }
     async function eB() {
-        let e = await ek({ loadId: V.loadId });
+        let e = await ek({ loadId: K.loadId });
         if ("signed" === e.type)
             try {
                 let t = await (0, m.Vw)(e.order.id);
                 if (!eb.current) return;
                 if (0 === t.length) throw new m.j2();
-                K(P.h.COMPLETED), eG(null, t);
+                V(P.h.COMPLETED), eG(null, t);
             } catch (t) {
-                ew(t, { orderId: e.order.id, loadId: V.loadId });
+                ew(t, { orderId: e.order.id, loadId: K.loadId });
             }
     }
     async function eH(e) {
@@ -519,7 +519,7 @@ function W(e) {
             sku: eM,
             purchaseType: Q,
             referralCode: $,
-            loadId: V.loadId,
+            loadId: K.loadId,
             giftInfoOptions: ey,
             invoicePreview: W,
             quantity: J,

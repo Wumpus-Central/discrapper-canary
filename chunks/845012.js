@@ -49,7 +49,7 @@ function _(e) {
             thePriceOptions: W,
             skuId: Y,
         } = (0, C.RO)({ selectedPlanId: t, priceOptions: n, planOptions: r, subscriptionPeriodEnd: _, showTotal: N }),
-        { shouldShowPremiumSwitchPlanSelectText: K, premiumSwitchPlanSelectText: V } = i.useMemo(() => {
+        { shouldShowPremiumSwitchPlanSelectText: V, premiumSwitchPlanSelectText: K } = i.useMemo(() => {
             let e = (0, C.U_)(H, { isEligibleForBOGOPromotion: B });
             return {
                 shouldShowPremiumSwitchPlanSelectText: e,
@@ -207,8 +207,8 @@ function _(e) {
         ? null
         : (0, l.jsxs)(l.Fragment, {
               children: [
-                  K &&
-                      (0, l.jsx)(s.E, { variant: "text-md/medium", color: "text-subtle", className: v.S, children: V }),
+                  V &&
+                      (0, l.jsx)(s.E, { variant: "text-md/medium", color: "text-subtle", className: v.S, children: K }),
                   (0, l.jsx)(c.me, {
                       headingComponent: (0, l.jsx)(c.ec, { size: "sm", color: "text-strong", premiumType: q }),
                       headingSubText: Z,

@@ -26,11 +26,11 @@ function I(e) {
             innerClassName: h,
             disableThemedBackground: I = !1,
         } = e,
-        [g, A] = i.useState(r ?? m),
-        [P, v] = i.useState((0, c.x7)(g)),
+        [A, g] = i.useState(r ?? m),
+        [P, v] = i.useState((0, c.x7)(A)),
         _ = i.useRef(!1);
     function x(e, t, l) {
-        t !== g && (A(t), v(l), n(t));
+        t !== A && (g(t), v(l), n(t));
     }
     function T() {
         return new Promise((e) => {
@@ -44,7 +44,7 @@ function I(e) {
         i.useEffect(() => {
             if (void 0 === r) {
                 let e = (0, c.x7)(m);
-                A(m), v(e);
+                g(m), v(e);
             }
         }, [r, m]),
         (0, l.jsx)("div", {
@@ -62,7 +62,7 @@ function I(e) {
                                 maxCharacterCount: C.Jo,
                                 onChange: x,
                                 channel: S,
-                                textValue: g,
+                                textValue: A,
                                 richValue: P,
                                 type: u.oU.CUSTOM_GIFT,
                                 onBlur: () => {

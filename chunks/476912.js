@@ -1,4 +1,4 @@
-i.r(
+t.r(
     (e.exports = {
         track: "track__55b14",
         fill: "fill__55b14",
