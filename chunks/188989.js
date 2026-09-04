@@ -9,7 +9,7 @@ let l = function (t) {
         l = e ? n.P : r.a;
     return (0, i.jsx)(l, { className: s, size: "sm", color: "currentColor", ...a });
 };
-var c = s(986268),
+var c = s(537547),
     u = s(473145),
     o = s(631305),
     d = s(625633),

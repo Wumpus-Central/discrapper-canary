@@ -69,72 +69,6 @@
     }
 }
 
-.inviteCardProfileOuter__742a4 {
-    background: transparent;
-    border-radius: var(--radius-md);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, .2);
-    margin: 8px;
-    max-width: 480px;
-    overflow: hidden;
-    padding: 0;
-    text-align: start;
-    width: calc(100vw - 32px)
-}
-
-@media (max-height:640px) {
-    .inviteCardProfileOuter__742a4 {
-        margin: 0;
-        width: calc(100vw - 64px)
-    }
-}
-
-.inviteCardProfile__742a4 {
-    display: flex;
-    flex-direction: column;
-    min-height: 0;
-    --custom-invite-banner-overlap: 32px
-}
-
-.inviteCardProfileModal__742a4 {
-    display: flex;
-    flex-direction: column;
-    overflow: hidden
-}
-
-.bannerFrosted__742a4 {
-    background-position: 50%;
-    background-size: cover;
-    border-radius: var(--custom-border-radius, var(--radius-md)) var(--custom-border-radius, var(--radius-md)) 0 0;
-    height: 80px;
-    overflow: hidden;
-    position: relative
-}
-
-.bannerFrostedGlass__742a4 {
-    -webkit-backdrop-filter: blur(48px);
-    backdrop-filter: blur(48px);
-    background: color-mix(in oklab, var(--modal-background) 50%, transparent);
-    inset: 0;
-    position: absolute
-}
-
-.inviteCardProfileContentWrapper__742a4 {
-    background: linear-gradient(to bottom, transparent 0, transparent calc(var(--custom-invite-banner-overlap) - 1px), var(--modal-background) calc(var(--custom-invite-banner-overlap) - 1px), var(--modal-background) 100%);
-    display: flex;
-    flex: 1 1 auto;
-    flex-direction: column;
-    margin-top: calc(var(--custom-invite-banner-overlap)*-1);
-    min-height: 0;
-    padding: 0 24px;
-    position: relative
-}
-
-.inviteCardProfileFooterWrapper__742a4 {
-    background: var(--modal-background);
-    margin-top: -1px;
-    padding: 24px
-}
-
 .inviteChildContainer__742a4 {
     overflow: hidden
 }
@@ -306,4 +240,4 @@
     display: none
 }
 
-/*# sourceMappingURL=9c61d5d784b6cc6d.css.map*/
+/*# sourceMappingURL=39690e89ba36da18.css.map*/

@@ -171,7 +171,7 @@ var q = n(363195),
     X = n(576705),
     J = n(486020),
     Z = n(885631),
-    ee = n(986268),
+    ee = n(537547),
     et = n(486506);
 function en(e) {
     let { guild: t, controller: n, guildBanner: i, animate: a } = e,
