@@ -1737,11 +1737,10 @@ function tH(e) {
                           children: (0, i.jsx)("span", { id: l, className: tN.Lnh, children: t }),
                       }),
                   }),
-                  (0, i.jsx)(f.vN, {
-                      offset: 4,
-                      within: !0,
-                      children: (0, i.jsx)("div", {
-                          className: tN._ov,
+                  (0, i.jsx)("div", {
+                      className: tN._ov,
+                      children: (0, i.jsx)(f.vN, {
+                          offset: 4,
                           children: (0, i.jsxs)("button", {
                               type: "button",
                               onClick: o,
