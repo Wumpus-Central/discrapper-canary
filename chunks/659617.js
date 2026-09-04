@@ -99,7 +99,8 @@ function H(e) {
             }
             let p = (0, v.Gl)(t),
                 m = N.A.getChannel(y.default.castMessageIdAsChannelId(n)),
-                g = await Y(t, [], void 0, () => {
+                g = C.A.getDraft(t.id, C.C.FirstThreadMessage),
+                S = await Y(t, [], void 0, () => {
                     let e = null != n ? U.Rsh.CHANNEL_MESSAGE_THREADS(t.id, n) : U.Rsh.CHANNEL_THREADS(t.id);
                     return s.Bo.post({
                         url: e,
@@ -116,24 +117,23 @@ function H(e) {
                         rejectWithError: (0, s.fT)(),
                     });
                 });
-            if (g !== m) {
-                var S, O, R, L, D;
-                let n = C.A.getDraft(t.id, C.C.FirstThreadMessage),
-                    i = n.trim();
+            if (S !== m) {
+                var O, R, L, D, b;
+                let n = g.trim();
                 c.A.clearDraft(t.id, C.C.ThreadSettings),
                     c.A.clearDraft(t.id, C.C.FirstThreadMessage),
-                    "" !== i && i !== e.trim() && c.A.saveDraft(g.id, n, C.C.ChannelMessage),
-                    o?.(g),
+                    "" !== n && n !== e.trim() && c.A.saveDraft(S.id, g, C.C.ChannelMessage),
+                    o?.(S),
                     (h || e.length > 0 || (null != r && r.length > 0) || (null != A && A.length > 0)) &&
-                        ((S = g),
-                        (O = e),
-                        (R = r),
-                        (L = A),
-                        null != (D = E) && null != L && L.length > 0
-                            ? D(S, L, O, R)
-                            : null != R && R.length > 0
-                              ? u.A.sendStickers(S.id, R, T.Ay.parse(S, O), { location: w.Hx.THREAD_CREATION })
-                              : u.A.sendMessage(S.id, T.Ay.parse(S, O), void 0, { location: w.Hx.THREAD_CREATION }));
+                        ((O = S),
+                        (R = e),
+                        (L = r),
+                        (D = A),
+                        null != (b = E) && null != D && D.length > 0
+                            ? b(O, D, R, L)
+                            : null != L && L.length > 0
+                              ? u.A.sendStickers(O.id, L, T.Ay.parse(O, R), { location: w.Hx.THREAD_CREATION })
+                              : u.A.sendMessage(O.id, T.Ay.parse(O, R), void 0, { location: w.Hx.THREAD_CREATION }));
             }
             _.A.clearAll(t.id, C.C.FirstThreadMessage);
         },
