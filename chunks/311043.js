@@ -15,6 +15,7 @@ function u(e) {
                 l.has(e.id) ||
                 (l.set(e.id, new s.A(e)), (t = !0), c.delete(e.id), d.delete(e.id));
         }),
+        null != e.referenced_message && (t = u(e.referenced_message) || t),
         t
     );
 }
