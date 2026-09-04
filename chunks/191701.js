@@ -195,17 +195,17 @@ var tQ = i(554146),
     t0 = i(429913),
     t1 = i(263577),
     t2 = i(826673),
-    t9 = i(916546),
-    t8 = i(308726),
-    t5 = i(46282),
-    t7 = i(360469),
+    t8 = i(303277),
+    t9 = i(308726),
+    t7 = i(46282),
+    t5 = i(360469),
     t3 = i(731854),
     t4 = i(709946),
     t6 = i(302933);
 function et(t) {
     let { game: e } = t,
         i = (0, t0.h)(e.id);
-    return null == i ? null : (0, z.jsx)(t1.V, { src: i.getIconURL(t7.iu.LARGE), size: 40 });
+    return null == i ? null : (0, z.jsx)(t1.V, { src: i.getIconURL(t5.iu.LARGE), size: 40 });
 }
 let ee = 5 * k.A.Millis.SECOND,
     ei = 8 * k.A.Millis.SECOND,
@@ -584,7 +584,7 @@ let eS = new eN(s.h, {
         if (j.default.hasChangedRenderMode(n)) return;
         let l = (function (t, e) {
             if (P.A.isNotificationDisabled(H.KS.WelcomeNudge)) return null;
-            t9.Ay.supports(t3.O5.VIDEO) ||
+            t8.Ay.supports(t3.O5.VIDEO) ||
                 (e = e.filter((t) => t.type !== H.Jr.GO_LIVE_VOICE && t.type !== H.Jr.GO_LIVE_NON_VOICE));
             let { trackView: n, trackClick: l } = (0, Y.Y9)(H.KS.WelcomeNudge, {
                     notif_type: H.KS.WelcomeNudge,
@@ -616,7 +616,7 @@ let eS = new eN(s.h, {
                                     l("one-click-go-live");
                                 }
                                 o.A.updateNotificationStatus(e),
-                                    (0, t5.H)({
+                                    (0, t7.H)({
                                         pid: w.A.getTargetPID(),
                                         analyticsLocation: $.ThZ.OVERLAY_NUDGE,
                                         allowOneClickGoLive: !0,
@@ -634,7 +634,7 @@ let eS = new eN(s.h, {
                             });
                         }),
                             (a.renderFooter = () =>
-                                (0, z.jsx)(t8.ru, {
+                                (0, z.jsx)(t9.ru, {
                                     gamingId: t?.altId ?? t?.id,
                                     maxUserShowCount: 5,
                                     variant: "default",

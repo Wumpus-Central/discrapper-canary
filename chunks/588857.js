@@ -136,7 +136,7 @@ var C = n(149741),
     el = n(51092),
     ea = n(802867),
     eo = n(110234),
-    ed = n(916546),
+    ed = n(303277),
     eu = n(287809),
     ec = n(562153),
     eh = n(761661),
@@ -1127,8 +1127,8 @@ function e$(e) {
 }
 var e0 = n(417098),
     e1 = n(55619),
-    e5 = n(734066),
-    e2 = n(200542),
+    e2 = n(734066),
+    e5 = n(200542),
     e3 = n(351906),
     e4 = n(377802),
     e6 = n(348858),
@@ -1773,7 +1773,7 @@ function t1(e) {
             return null;
     }
 }
-function t5(e) {
+function t2(e) {
     let { voiceChannel: t } = e,
         n = (0, tg.gU)(t),
         i = (0, tm.Ay)(t);
@@ -1793,7 +1793,7 @@ function t5(e) {
         ],
     });
 }
-function t2(e) {
+function t5(e) {
     let { voiceChannel: t } = e,
         n = t?.id,
         i = (0, y.cf)([a.A], () => ({ quality: a.A.getQuality(), state: a.A.getState(), lastPing: a.A.getLastPing() })),
@@ -1811,7 +1811,7 @@ function t2(e) {
                         children: [
                             (0, r.jsx)(t1, { voiceChannel: t }),
                             (0, r.jsx)("div", { className: tX.rK }),
-                            (0, r.jsx)(t5, { voiceChannel: t }),
+                            (0, r.jsx)(t2, { voiceChannel: t }),
                         ],
                     }),
             ],
@@ -1891,8 +1891,8 @@ let t6 = c.memo(function () {
 function t8(e) {
     let { locked: t } = e,
         n = (0, y.bG)([P.Ay], () => P.Ay.getVoiceChannelId()),
-        { enableOverlayEntrypoint: i } = e2.A.useConfig({ location: "QuickActionsWidget" }),
-        s = (0, e5.sw)(),
+        { enableOverlayEntrypoint: i } = e5.A.useConfig({ location: "QuickActionsWidget" }),
+        s = (0, e2.sw)(),
         l = (0, y.bG)([D.A], () => D.A.getChannel(n)),
         a = null != l;
     return (0, r.jsxs)("div", {
@@ -1924,7 +1924,7 @@ function t8(e) {
                     }),
                 ],
             }),
-            a && (0, r.jsx)("div", { className: t4.Pm, children: (0, r.jsx)(t2, { voiceChannel: l, locked: t }) }),
+            a && (0, r.jsx)("div", { className: t4.Pm, children: (0, r.jsx)(t5, { voiceChannel: l, locked: t }) }),
         ],
     });
 }
@@ -2680,8 +2680,8 @@ let n$ = c.memo(function (e) {
 });
 var n0 = n(148494),
     n1 = n(802426),
-    n5 = n(355622),
-    n2 = n(232835),
+    n2 = n(355622),
+    n5 = n(232835),
     n3 = n(576705),
     n4 = n(625494),
     n6 = n(973196),
@@ -2709,7 +2709,7 @@ function n9(e) {
         m = (0, n6.A)();
     return ((t = d?.id ?? null),
     (n = c.useRef(new Set())),
-    (i = (0, y.bG)([n2.A], () => (null != t ? n2.A.getMessages(t) : null), [t])),
+    (i = (0, y.bG)([n5.A], () => (null != t ? n5.A.getMessages(t) : null), [t])),
     (s = (0, y.bG)([n3.A], () => n3.A.can(em.xBc.READ_MESSAGE_HISTORY, d), [d])),
     (l = i?.first() ?? null),
     (a = null != d && null == l && null != i && !i.loadingMore && !i.ready && !i.hasFetched && s),
@@ -2728,7 +2728,7 @@ function n9(e) {
               className: n8.Q,
               children: (0, r.jsx)("div", {
                   className: n8.T,
-                  children: (0, r.jsx)(n1.A, { channel: d, guild: h, chatInputType: n5.oU.OVERLAY }, d.id),
+                  children: (0, r.jsx)(n1.A, { channel: d, guild: h, chatInputType: n2.oU.OVERLAY }, d.id),
               }),
           })
         : null;

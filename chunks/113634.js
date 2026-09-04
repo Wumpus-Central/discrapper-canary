@@ -994,6 +994,7 @@ class eE extends S.A {
     };
     setNoiseCancellationDuringProcessing(e) {}
     setNoiseCancellationCpuDisablement(e) {}
+    setSkipNoiseCancellationIfMuted(e) {}
     setEchoReferenceMode(e) {}
     getSelfMute() {
         return this.selfMute;

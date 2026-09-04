@@ -36,7 +36,7 @@ var E = n(503698),
     R = n(616356),
     M = n(734057),
     U = n(71393),
-    K = n(916546),
+    K = n(303277),
     G = n(532624),
     F = n(184809),
     B = n(625494),
@@ -652,8 +652,8 @@ function e8(e, t) {
 n(96175);
 var e4 = n(366032);
 n(191701), n(921955);
-let e5 = !p.isPlatformEmbedded && !1,
-    e7 = new c.A("AppOverlay");
+let e7 = !p.isPlatformEmbedded && !1,
+    e5 = new c.A("AppOverlay");
 function e6(e, t) {
     return new Promise((n, r) => {
         let i = Date.now();
@@ -689,7 +689,7 @@ async function e9(e, t) {
         try {
             await m.Ay.isAlwaysOnTop(t);
         } catch (e) {
-            e7.error("Window does not exist while trying to show inactive", e), (0, y.pj)(e, x.Ue.OutOfProcess);
+            e5.error("Window does not exist while trying to show inactive", e), (0, y.pj)(e, x.Ue.OutOfProcess);
         }
         for (let i = 0; i < r; i++)
             try {
@@ -699,7 +699,7 @@ async function e9(e, t) {
             } catch (e) {
                 if (e.message?.includes("IPC") && i < r - 1) {
                     let t = (n / 2) * Math.pow(2, i + 1);
-                    e7.error(`Failed to show inactive, retrying in ${t}ms`, e),
+                    e5.error(`Failed to show inactive, retrying in ${t}ms`, e),
                         await new Promise((e) => setTimeout(e, t));
                 } else throw ((0, y.pj)(e, x.Ue.OutOfProcess), e);
             }
@@ -717,7 +717,7 @@ let tn = i.memo(function (e) {
     (t = (0, s.bG)([d.A], () => d.A.getWindow(c))),
         (0, o.Ay)(() => {
             if (null == t) return;
-            let e = e5 || (0, eP.SE)();
+            let e = e7 || (0, eP.SE)();
             return (
                 e &&
                     (t.document.hasFocus() && l.A.setFocusedPID(A.DEV_PID, null),
@@ -759,7 +759,7 @@ let tn = i.memo(function (e) {
                             if ((await e6(e, N), b.current)) return;
                             e8("cssLoaded", !0);
                         } catch (e) {
-                            e7.error("Timed out waiting for CSS to load", e),
+                            e5.error("Timed out waiting for CSS to load", e),
                                 l.A.setOverlayCrashed(eO.A.getTargetPID(), e),
                                 e8("errorMessage", "CSS failed load");
                             return;

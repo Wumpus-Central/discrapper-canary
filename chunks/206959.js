@@ -1017,6 +1017,9 @@ class j extends S.A {
                 noiseCancellationConsecutiveFailures: this.noiseCancellationConsecutiveFailures,
             });
     }
+    setSkipNoiseCancellationIfMuted(e) {
+        (0, v.lE)().setTransportOptions({ skipNoiseCancellationIfMuted: e });
+    }
     setEchoReferenceMode(e) {
         (this.echoReferenceMode = e), (0, v.lE)().setTransportOptions({ echoReferenceMode: this.echoReferenceMode });
     }

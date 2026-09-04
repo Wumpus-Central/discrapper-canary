@@ -125,7 +125,7 @@ class K extends s.Ay.DeviceSettingsStore {
         (e) => ({ ...e, clipsSettings: { ...e.clipsSettings, decoupledClipsEnabled: B.decoupledClipsEnabled } }),
         (e) => ({ ...e, hardwareClassificationForDecoupled: e.hardwareClassificationForDecoupled ?? null }),
         (e) => {
-            let t = n(916546).Ay.getHardwareEncoding();
+            let t = n(303277).Ay.getHardwareEncoding();
             return {
                 ...e,
                 clipsSettings: {

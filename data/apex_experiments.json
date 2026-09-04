@@ -5538,6 +5538,22 @@
   },
   {
     "kind": "user",
+    "name": "2026-08-mute-aware-noise-cancellation",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "kind": "user",
     "name": "2026-08-nitro-tenure-badge-total-progress",
     "defaultConfig": {
       "measureFromStreakStart": false
