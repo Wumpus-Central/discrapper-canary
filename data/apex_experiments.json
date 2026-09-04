@@ -5910,6 +5910,22 @@
     }
   },
   {
+    "name": "2026-09-collectibles-navigation-menu",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
     "name": "2026-09-connected-thread-sidebar",
     "kind": "user",
     "defaultConfig": {
