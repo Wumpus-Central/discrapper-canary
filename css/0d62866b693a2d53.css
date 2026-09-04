@@ -19,10 +19,36 @@
     padding-top: 8px
 }
 
+.scrollerContainer__13d18 {
+    position: relative
+}
+
 .horizontalAutocompletes__13d18 {
+    display: flex;
     margin-bottom: -4px;
     overflow-x: auto;
     padding: 0 8px
+}
+
+.scrollButton__13d18 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: opacity .15s ease;
+    z-index: 1
+}
+
+.scrollButtonStart__13d18 {
+    inset-inline-start: var(--space-8)
+}
+
+.scrollButtonEnd__13d18 {
+    inset-inline-end: var(--space-8)
+}
+
+.scrollButtonHidden__13d18 {
+    opacity: 0;
+    pointer-events: none
 }
 
 .no-webkit-scrollbar .horizontalAutocompletes__13d18 {
@@ -38,4 +64,4 @@
     width: auto
 }
 
-/*# sourceMappingURL=4f5ebcb6dcd65116.css.map*/
+/*# sourceMappingURL=0d62866b693a2d53.css.map*/
