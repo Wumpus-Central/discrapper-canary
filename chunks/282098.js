@@ -1215,6 +1215,7 @@ class el extends l.A {
             applicationId: n?.gameId ?? i.applicationId,
             users: Array.from(a),
             length: e.recipe.output.duration_ms,
+            syncTimestamp: void 0,
             pending: !0,
         };
     }
