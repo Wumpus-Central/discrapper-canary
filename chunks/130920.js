@@ -206,10 +206,10 @@ var eJ = n(403581),
     e5 = n(621466),
     e9 = n(231088),
     e8 = n(786826);
-function e6(e) {
+function e4(e) {
     return e?.querySelector('[aria-expanded="true"][aria-controls]') ?? null;
 }
-function e4(e) {
+function e6(e) {
     let {
             isEditing: l,
             committedValue: n,
@@ -314,7 +314,7 @@ function ln(e) {
                     (e) =>
                         (function (e, l) {
                             if (l?.contains(e)) return !0;
-                            let n = e6(l),
+                            let n = e4(l),
                                 t = n?.getAttribute("aria-controls");
                             return null != t && null != e.closest(`#${t}`);
                         })(e, n.current),
@@ -332,7 +332,7 @@ function ln(e) {
                 (e) => {
                     if (!l) return;
                     let i = e.relatedTarget;
-                    !(0, e5.vq)(i) || a(i) || (null == e6(n.current) && t());
+                    !(0, e5.vq)(i) || a(i) || (null == e4(n.current) && t());
                 },
                 [l, a, t, n],
             );
@@ -349,7 +349,7 @@ function ln(e) {
         }, []),
         E = g ? eY.intl.string(eY.t.yPJ9xr) : N.label();
     return !g || f
-        ? (0, t.jsx)(e4, {
+        ? (0, t.jsx)(e6, {
               ...A,
               className: u,
               preview: b ? (0, t.jsx)(e0.A, { userBio: h, setLineClamp: !1 }) : null,
@@ -728,15 +728,15 @@ function l7(e) {
 var l5 = n(487233),
     l9 = n(120386),
     l8 = n(317097),
-    l6 = n(602853),
-    l4 = n(922016),
+    l4 = n(602853),
+    l6 = n(922016),
     ne = n(508274),
     nl = n(654107),
     nn = n(930349);
 function nt(e) {
     let { user: l, disabled: n = !1 } = e,
         r = i.useRef(null),
-        a = (0, l6.r)(x.A.unsafe_rawColors.PRIMARY_530).hex(),
+        a = (0, l4.r)(x.A.unsafe_rawColors.PRIMARY_530).hex(),
         o = (0, nl.rh)(l.getAvatarURL(null, 80), a, !1),
         { pendingAccentColor: d, savedAccentColor: u } = (0, s.cf)([ep.A, K.A], () => ({
             pendingAccentColor: ep.A.getPendingChanges().pendingAccentColor,
@@ -744,7 +744,7 @@ function nt(e) {
         })),
         c = d ?? u ?? (0, l8.LX)(o[0] ?? a),
         g = i.useCallback((e) => (0, e3.p)({ accentColor: e }), []);
-    return (0, t.jsx)(l4.Y, {
+    return (0, t.jsx)(l6.Y, {
         targetElementRef: r,
         renderPopout: (e) => (0, t.jsx)(ne.VN, { ...e, value: c, onChange: g, suggestedColors: o, showEyeDropper: !0 }),
         children: (e) =>
@@ -778,7 +778,7 @@ function no(e) {
 }
 function nd(e) {
     let { displayProfile: l, bannerChange: n, shouldAnimate: i } = e,
-        r = (0, l6.r)(x.A.unsafe_rawColors.PRIMARY_800).hex(),
+        r = (0, l4.r)(x.A.unsafe_rawColors.PRIMARY_800).hex(),
         a = l?.primaryColor ?? (0, l8.LX)(r),
         { hex: s } = (0, ni.A)(a),
         o = l?.getPreviewBanner(n, i, 296) ?? void 0;
@@ -1212,7 +1212,7 @@ function n8(e) {
         children: (0, t.jsx)(n9, { color: l }),
     });
 }
-function n6(e) {
+function n4(e) {
     let {
         color: l,
         ariaLabel: n,
@@ -1224,7 +1224,7 @@ function n6(e) {
         onSelect: d,
         buttonRef: u,
     } = e;
-    return (0, t.jsx)(l4.Y, {
+    return (0, t.jsx)(l6.Y, {
         targetElementRef: u,
         shouldShow: a,
         onRequestOpen: s,
@@ -1236,7 +1236,7 @@ function n6(e) {
         },
     });
 }
-function n4(e) {
+function n6(e) {
     let {
             primaryColor: l,
             secondaryColor: n,
@@ -1280,7 +1280,7 @@ function n4(e) {
             primaryColor: l,
             secondaryColor: n,
             children: [
-                (0, t.jsx)(n6, {
+                (0, t.jsx)(n4, {
                     color: l,
                     ariaLabel: v,
                     suggestedColors: s,
@@ -1291,7 +1291,7 @@ function n4(e) {
                     onRequestClose: () => m(null),
                     buttonRef: f,
                 }),
-                (0, t.jsx)(n6, {
+                (0, t.jsx)(n4, {
                     color: n,
                     ariaLabel: A,
                     suggestedColors: s,
@@ -1331,7 +1331,7 @@ function te(e) {
             pendingAvatarSrc: g ?? void 0,
             isPreview: !0,
         }),
-        p = (0, l6.r)(x.A.unsafe_rawColors.PRIMARY_530).hex(),
+        p = (0, l4.r)(x.A.unsafe_rawColors.PRIMARY_530).hex(),
         h = null != g ? g : l.getAvatarURL(n ?? void 0, 80),
         v = (0, nl.rh)(h, p, !1),
         A = i.useCallback(
@@ -1350,7 +1350,7 @@ function te(e) {
                 : void 0;
     return null == m || null == f
         ? null
-        : (0, t.jsx)(n4, {
+        : (0, t.jsx)(n6, {
               primaryColor: m,
               secondaryColor: f,
               onSelectPrimaryColor: (e) => {
@@ -1369,7 +1369,7 @@ function tn(e) {
     let { children: l, hasGradientBackground: n = !1 } = e;
     return (0, t.jsx)(f.F, { children: (0, t.jsx)("div", { className: a()(tl.k, { [tl.V]: n }), children: l }) });
 }
-var tt = n(950372),
+var tt = n(74445),
     ti = n(689175),
     tr = n(424290);
 function ta(e) {
@@ -1593,7 +1593,7 @@ function tS(e) {
 function tO(e) {
     let { user: l, initialOpenPopout: n } = e,
         { primaryColor: r, secondaryColor: a, pendingAvatarSrc: s, tryItOutThemeColors: o } = tS(l),
-        d = (0, l6.r)(x.A.unsafe_rawColors.PRIMARY_530).hex(),
+        d = (0, l4.r)(x.A.unsafe_rawColors.PRIMARY_530).hex(),
         u = null != s ? s : l.getAvatarURL(void 0, 80),
         c = (0, nl.rh)(u, d, !1),
         g = i.useCallback((e) => {
@@ -1601,7 +1601,7 @@ function tO(e) {
         }, []);
     return null == r || null == a
         ? null
-        : (0, t.jsx)(n4, {
+        : (0, t.jsx)(n6, {
               variant: "full-height-bar",
               primaryColor: r,
               secondaryColor: a,
@@ -2131,8 +2131,8 @@ function t5() {
 }
 var t9 = n(23722),
     t8 = n(49999),
-    t6 = n(288490);
-let t4 = "profile-editing-nameplate-error",
+    t4 = n(288490);
+let t6 = "profile-editing-nameplate-error",
     ie = "profile-editing-avatar-error",
     il = "profile-editing-avatar-decoration-error",
     it = "profile-editing-banner-error",
@@ -2140,8 +2140,8 @@ let t4 = "profile-editing-nameplate-error",
 function ir(e) {
     let { className: l } = e;
     return (0, t.jsx)("div", {
-        className: a()(t6.D0, l),
-        children: (0, t.jsx)("div", { className: t6.ZN, children: (0, t.jsx)(lU.LockIcon, { size: "xs" }) }),
+        className: a()(t4.D0, l),
+        children: (0, t.jsx)("div", { className: t4.ZN, children: (0, t.jsx)(lU.LockIcon, { size: "xs" }) }),
     });
 }
 function ia() {
@@ -2149,7 +2149,7 @@ function ia() {
         l = tm();
     return (0, t.jsxs)(lB.h, {
         color: "nitro-pink",
-        className: t6.Lu,
+        className: t4.Lu,
         children: [
             (0, t.jsx)(eE.E, {
                 variant: "text-sm/medium",
@@ -2165,7 +2165,7 @@ function is() {
     return e
         ? null
         : (0, t.jsxs)("div", {
-              className: t6.X6,
+              className: t4.X6,
               children: [
                   (0, t.jsx)(eE.E, {
                       variant: "text-sm/normal",
@@ -2174,7 +2174,7 @@ function is() {
                   }),
                   (0, t.jsx)(eV.D, {
                       "aria-label": eY.intl.string(eY.t.rSe9ra),
-                      className: t6.TD,
+                      className: t4.TD,
                       onClick: () => l(!0),
                       children: (0, t.jsx)(lz.P, { size: "refresh_sm", color: "currentColor" }),
                   }),
@@ -2185,10 +2185,10 @@ function io() {
     let e = tm(),
         l = (0, tf.A)(eY.intl.string(eY.t["7IWwak"]));
     return (0, t.jsxs)("div", {
-        className: t6.eW,
+        className: t4.eW,
         children: [
             (0, t.jsxs)("div", {
-                className: t6.tm,
+                className: t4.tm,
                 children: [
                     (0, t.jsx)(lW.D, {
                         variant: "text-md/medium",
@@ -2203,7 +2203,7 @@ function io() {
                 ],
             }),
             (0, t.jsx)(lQ.A, { subscriptionTier: tp.pe.TIER_2, buttonTextOverride: l, size: "sm", fullWidth: !0 }),
-            (0, t.jsx)(ir, { className: t6.nd }),
+            (0, t.jsx)(ir, { className: t4.nd }),
         ],
     });
 }
@@ -2211,10 +2211,10 @@ function id() {
     return (0, t.jsx)(eE.E, {
         variant: "text-xs/normal",
         color: "text-subtle",
-        className: t6.BJ,
+        className: t4.BJ,
         "aria-hidden": !0,
         children: eY.intl.format(eY.t.kYv9DM, {
-            nitroIconHook: () => (0, t.jsx)(eJ.t, { size: "xxs", color: "currentColor", className: t6.qp }),
+            nitroIconHook: () => (0, t.jsx)(eJ.t, { size: "xxs", color: "currentColor", className: t4.qp }),
         }),
     });
 }
@@ -2224,8 +2224,8 @@ function iu(e) {
         heading: eY.intl.string(eY.t.x5CoXR),
         disabled: i,
         children: [
-            (0, t.jsx)(nT.A, { user: l, guildId: n, disabled: i, errorMessageId: null != r ? t4 : void 0 }),
-            (0, t.jsx)(nk, { id: t4, message: r }),
+            (0, t.jsx)(nT.A, { user: l, guildId: n, disabled: i, errorMessageId: null != r ? t6 : void 0 }),
+            (0, t.jsx)(nk, { id: t6, message: r }),
         ],
     });
 }
@@ -2307,11 +2307,11 @@ function iv(e) {
         (0, t.jsxs)("div", {
             role: "group",
             "aria-labelledby": ih,
-            className: t6.DX,
+            className: t4.DX,
             children: [
-                (0, t.jsx)(ir, { className: t6.x$ }),
+                (0, t.jsx)(ir, { className: t4.x$ }),
                 (0, t.jsxs)("div", {
-                    className: t6.sb,
+                    className: t4.sb,
                     children: [
                         (0, t.jsx)(eE.E, {
                             id: ih,
@@ -2369,14 +2369,14 @@ function iA(e) {
         hasGradientBackground: b,
         children: [
             (0, t.jsxs)("div", {
-                className: t6.wx,
+                className: t4.wx,
                 children: [
                     (0, t.jsx)(lv.m, {
                         text: eY.intl.string(eY.t["l/A351"]),
                         ariaHidden: !0,
                         children: (0, t.jsx)(eV.D, {
                             innerRef: d,
-                            className: t6.cS,
+                            className: t4.cS,
                             "aria-label": eY.intl.string(eY.t["l/A351"]),
                             onClick: u,
                             "aria-controls": n,
@@ -2873,8 +2873,8 @@ function i5(e) {
 n(46121);
 var i9 = n(140355),
     i8 = n(933832),
-    i6 = n(972213),
-    i4 = n(97483),
+    i4 = n(972213),
+    i6 = n(97483),
     re = n(775602),
     rl = n(384377);
 let rn = {
@@ -2888,13 +2888,13 @@ let rn = {
         },
         [iH.jM.PROFILE_SAVE_GENERIC_FAILURE]: {
             message: eY.intl.string(eY.t["84MExs"]),
-            icon: (0, t.jsx)(i6.XLargeIcon, { size: "sm", color: x.A.colors.ICON_FEEDBACK_CRITICAL }),
-            type: i4.Ck.FAILURE,
+            icon: (0, t.jsx)(i4.XLargeIcon, { size: "sm", color: x.A.colors.ICON_FEEDBACK_CRITICAL }),
+            type: i6.Ck.FAILURE,
         },
         [iH.jM.SOMETHING_WENT_WRONG]: {
             message: eY.intl.string(eY.t.F8FvUy),
-            icon: (0, t.jsx)(i6.XLargeIcon, { size: "sm", color: x.A.colors.ICON_FEEDBACK_CRITICAL }),
-            type: i4.Ck.FAILURE,
+            icon: (0, t.jsx)(i4.XLargeIcon, { size: "sm", color: x.A.colors.ICON_FEEDBACK_CRITICAL }),
+            type: i6.Ck.FAILURE,
         },
     },
     rt = (e) => {
@@ -3445,10 +3445,10 @@ function rB(e) {
               },
               children: [
                   (0, t.jsx)(rF, { ...r, imageClassName: a()(rw.Lw, rG.HU) }),
-                  (0, t.jsx)(l4.Y, {
+                  (0, t.jsx)(l6.Y, {
                       targetElementRef: c,
                       shouldShow: d,
-                      animation: l4.Y.Animation.NONE,
+                      animation: l6.Y.Animation.NONE,
                       position: "right",
                       align: "top",
                       onRequestClose: m,
@@ -3682,10 +3682,10 @@ function rH(e) {
               },
               children: [
                   (0, t.jsx)(eC.A, { ...e, className: rz.Pr }),
-                  (0, t.jsx)(l4.Y, {
+                  (0, t.jsx)(l6.Y, {
                       targetElementRef: d,
                       shouldShow: r,
-                      animation: l4.Y.Animation.NONE,
+                      animation: l6.Y.Animation.NONE,
                       position: "right",
                       align: "top",
                       onRequestClose: c,
@@ -4018,7 +4018,7 @@ function r8(e) {
         ],
     });
 }
-function r6(e) {
+function r4(e) {
     let { user: l, displayProfile: n, pendingThemeColors: i, forceShowPremium: r, children: a } = e,
         {
             theme: s,
@@ -4033,7 +4033,7 @@ function r6(e) {
         });
     return (0, t.jsx)("div", { className: c, style: u, children: a });
 }
-function r4(e) {
+function r6(e) {
     let {
             user: l,
             currentUser: n,
@@ -4288,8 +4288,8 @@ function r4(e) {
         e5 = (0, N.A)(e3),
         { profileFrameStyle: e9, profileFrameClassName: e8 } = (0, T.A)(e7);
     (0, P.A)({ skuId: e2?.profileFrame?.skuId, openedAt: _, context: eQ, analyticsLocations: eJ });
-    let e6 = (0, s.bG)([U.default], () => W.Ay.canUsePremiumProfileCustomization(U.default.getCurrentUser())),
-        e4 = ea || ($ && null != e2 && e6),
+    let e4 = (0, s.bG)([U.default], () => W.Ay.canUsePremiumProfileCustomization(U.default.getCurrentUser())),
+        e6 = ea || ($ && null != e2 && e4),
         le = B.Ay.useName(e2?.guildId, c, l),
         ll = (0, S.GV)(),
         ln = (0, s.bG)([G.A], () => (null != J ? G.A.getGuild(J) : null)),
@@ -4327,11 +4327,11 @@ function r4(e) {
                                     }),
                                     style: e9,
                                     children: [
-                                        (0, t.jsxs)(r6, {
+                                        (0, t.jsxs)(r4, {
                                             user: l,
                                             displayProfile: e2,
                                             pendingThemeColors: eN,
-                                            forceShowPremium: e4,
+                                            forceShowPremium: e6,
                                             children: [
                                                 (0, t.jsxs)("div", {
                                                     className: tN.Oo,
@@ -4386,7 +4386,7 @@ function r4(e) {
                                                     themeType: ex.d.MODAL_V2,
                                                     pendingThemeColors: eN,
                                                     isPrivate: e2?.private === !0,
-                                                    forceShowPremium: e4,
+                                                    forceShowPremium: e6,
                                                     children: [
                                                         (0, t.jsx)(r5, { displayProfile: e2, pendingBanner: ek }),
                                                         e2?.private === !0 && (0, t.jsx)(eR.A, {}),
@@ -4468,5 +4468,5 @@ function r4(e) {
     });
 }
 function ae(e) {
-    return (0, t.jsx)(lF.tM, { children: (0, t.jsx)(r4, { ...e }) });
+    return (0, t.jsx)(lF.tM, { children: (0, t.jsx)(r6, { ...e }) });
 }
