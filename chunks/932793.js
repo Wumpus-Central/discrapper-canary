@@ -1,4 +1,4 @@
-t.d(a, { m: () => y });
+t.d(a, { m: () => v });
 var s,
     n = t(477900),
     l = t(582128),
@@ -79,8 +79,8 @@ class k extends l.PureComponent {
     }
 }
 var x = t(375708),
-    N = t(875634);
-function C(e) {
+    C = t(875634);
+function N(e) {
     let { page: a, totalPageCount: t, disabled: s, onPageChange: i } = e,
         [h, c] = l.useState(!1),
         [g, p] = l.useState(void 0),
@@ -88,12 +88,12 @@ function C(e) {
     return s
         ? (0, n.jsx)(
               o.D,
-              { className: N.rQ, "aria-hidden": !0, variant: "heading-sm/semibold", children: "\u2026" },
+              { className: C.rQ, "aria-hidden": !0, variant: "heading-sm/semibold", children: "\u2026" },
               a.key,
           )
         : h
           ? (0, n.jsx)("div", {
-                className: N.mF,
+                className: C.mF,
                 children: (0, n.jsx)(
                     u.Q,
                     {
@@ -119,7 +119,7 @@ function C(e) {
                 {
                     onClick: () => c(!0),
                     children: (0, n.jsx)(o.D, {
-                        className: r()(N.hJ, N.rQ),
+                        className: r()(C.hJ, C.rQ),
                         "aria-hidden": !0,
                         variant: "heading-sm/semibold",
                         children: "\u2026",
@@ -128,7 +128,7 @@ function C(e) {
                 a.key,
             );
 }
-function y(e) {
+function v(e) {
     let {
             currentPage: a,
             totalCount: t,
@@ -140,9 +140,9 @@ function y(e) {
             className: p,
             renderPageWrapper: P,
         } = e,
-        y = Math.ceil(t / s);
+        v = Math.ceil(t / s);
     return (0, n.jsx)(k, {
-        totalPageCount: y,
+        totalPageCount: v,
         selectedPage: a,
         maxVisiblePages: l,
         hideMaxPage: u,
@@ -153,9 +153,9 @@ function y(e) {
             let { pages: a, hasMultiplePages: t } = e;
             return t
                 ? (0, n.jsx)("div", {
-                      className: r()(N.Ug, p),
+                      className: r()(C.Ug, p),
                       children: (0, n.jsx)("nav", {
-                          className: N.DU,
+                          className: C.DU,
                           children: a.map((e) => {
                               switch (e.type) {
                                   case m.BACK:
@@ -164,8 +164,8 @@ function y(e) {
                                           return (0, n.jsxs)(
                                               g.$n,
                                               {
-                                                  className: N.Cp,
-                                                  innerClassName: N.MO,
+                                                  className: C.Cp,
+                                                  innerClassName: C.MO,
                                                   look: g.$n.Looks.BLANK,
                                                   color: g.$n.Colors.TRANSPARENT,
                                                   onClick: s,
@@ -175,10 +175,10 @@ function y(e) {
                                                       (0, n.jsx)(h.n, {
                                                           size: "md",
                                                           color: "currentColor",
-                                                          className: N.B7,
+                                                          className: C.B7,
                                                           "aria-hidden": !0,
                                                       }),
-                                                      (0, n.jsx)("span", { children: x.intl.string(x.t["13/7kX"]) }),
+                                                      (0, n.jsx)("span", { children: x.intl.string(x.t.vgfxaA) }),
                                                   ],
                                               },
                                               a,
@@ -190,7 +190,7 @@ function y(e) {
                                           (a = (0, n.jsx)(
                                               d.D,
                                               {
-                                                  className: r()(N.hJ, { [N.Xs]: e.selected }),
+                                                  className: r()(C.hJ, { [C.Xs]: e.selected }),
                                                   onClick: e.selected ? void 0 : e.navigateToPage,
                                                   "aria-label": x.intl.formatToPlainString(x.t.IGMs8S, {
                                                       pageNumber: e.targetPage,
@@ -204,8 +204,8 @@ function y(e) {
                                       );
                                   case m.GAP:
                                       return (0, n.jsx)(
-                                          C,
-                                          { page: e, totalPageCount: y, disabled: !!i, onPageChange: o },
+                                          N,
+                                          { page: e, totalPageCount: v, disabled: !!i, onPageChange: o },
                                           e.key,
                                       );
                                   case m.NEXT:
@@ -214,19 +214,19 @@ function y(e) {
                                           return (0, n.jsxs)(
                                               g.$n,
                                               {
-                                                  className: N.Cp,
-                                                  innerClassName: N.MO,
+                                                  className: C.Cp,
+                                                  innerClassName: C.MO,
                                                   look: g.$n.Looks.BLANK,
                                                   color: g.$n.Colors.TRANSPARENT,
                                                   onClick: s,
                                                   disabled: t,
                                                   rel: "next",
                                                   children: [
-                                                      (0, n.jsx)("span", { children: x.intl.string(x.t.PDTjLN) }),
+                                                      (0, n.jsx)("span", { children: x.intl.string(x.t.XiOHRX) }),
                                                       (0, n.jsx)(c._, {
                                                           size: "md",
                                                           color: "currentColor",
-                                                          className: N.B7,
+                                                          className: C.B7,
                                                           "aria-hidden": !0,
                                                       }),
                                                   ],
