@@ -7,7 +7,7 @@ var l = n(477900),
     o = n(17928),
     u = n(854354),
     c = n(557026),
-    d = n(206441),
+    d = n(721836),
     m = n(511484),
     p = n(186223),
     C = n(73663),
@@ -17,8 +17,8 @@ var l = n(477900),
     S = n(252424),
     y = n(158045),
     I = n(580630),
-    g = n(202541),
-    A = n(375708),
+    A = n(202541),
+    g = n(375708),
     P = n(583741),
     v = n(904541);
 function _(e) {
@@ -49,7 +49,7 @@ function _(e) {
             thePriceOptions: W,
             skuId: Y,
         } = (0, C.RO)({ selectedPlanId: t, priceOptions: n, planOptions: r, subscriptionPeriodEnd: _, showTotal: N }),
-        { shouldShowPremiumSwitchPlanSelectText: V, premiumSwitchPlanSelectText: K } = i.useMemo(() => {
+        { shouldShowPremiumSwitchPlanSelectText: K, premiumSwitchPlanSelectText: V } = i.useMemo(() => {
             let e = (0, C.U_)(H, { isEligibleForBOGOPromotion: B });
             return {
                 shouldShowPremiumSwitchPlanSelectText: e,
@@ -60,7 +60,7 @@ function _(e) {
             () => (N && F ? (0, C.Ct)(D, { subscriptionPeriodEnd: _, trialPeriodCopy: G }) : b),
             [N, F, D, _, G, b],
         ),
-        q = i.useMemo(() => (r.length > 0 ? g.hd[r[0]].premiumType : void 0), [r]),
+        q = i.useMemo(() => (r.length > 0 ? A.hd[r[0]].premiumType : void 0), [r]),
         { setSelectedPlanId: z } = (0, d.t4)((e) => ({ setSelectedPlanId: e.setSelectedPlanId })),
         Q = i.useCallback(
             (e) => {
@@ -121,7 +121,7 @@ function _(e) {
                             G = (function (e, t) {
                                 let { isEligibleForTrial: n } = t;
                                 return n
-                                    ? A.intl.formatToPlainString(A.t.hXcaLT, {
+                                    ? g.intl.formatToPlainString(g.t.hXcaLT, {
                                           price: (0, I.$g)(0, e.currency, {
                                               minimumFractionDigits: 0,
                                               maximumFractionDigits: 0,
@@ -135,31 +135,31 @@ function _(e) {
                             (null != R &&
                                 !c &&
                                 ((0, m.p2)(R)
-                                    ? b.interval === g.WT.YEAR
-                                        ? (t = A.intl.format(P.default.ODKoJd, { percent: L ?? "" }))
-                                        : b.interval === g.WT.MONTH &&
+                                    ? b.interval === A.WT.YEAR
+                                        ? (t = g.intl.format(P.default.ODKoJd, { percent: L ?? "" }))
+                                        : b.interval === A.WT.MONTH &&
                                           (null != B &&
-                                              (F = A.intl.format(A.t.hXcaLT, {
+                                              (F = g.intl.format(g.t.hXcaLT, {
                                                   price: (0, I.$g)(w.amount - B, w.currency),
                                               })),
-                                          (t = A.intl.format(P.default.JsSin7, {
+                                          (t = g.intl.format(P.default.JsSin7, {
                                               priceRate: (0, I.CE)(G, b.interval, b.intervalCount),
                                               intervalCount: R.discount.intervalCount,
                                           })))
                                     : (0, m.hm)(R) &&
-                                      b.interval === g.WT.YEAR &&
+                                      b.interval === A.WT.YEAR &&
                                       null != B &&
-                                      ((F = A.intl.format(A.t.hXcaLT, { price: (0, I.$g)(w.amount - B, w.currency) })),
+                                      ((F = g.intl.format(g.t.hXcaLT, { price: (0, I.$g)(w.amount - B, w.currency) })),
                                       (i = G),
-                                      (t = A.intl.format(A.t.VZ8Tvh, { regularPrice: G })),
-                                      (o = A.intl.formatToPlainString(P.default.nsG1jw, {
+                                      (t = g.intl.format(g.t.VZ8Tvh, { regularPrice: G })),
+                                      (o = g.intl.formatToPlainString(P.default.nsG1jw, {
                                           savingsText: (0, S.l9)(j, parseInt(R.discount.amount) / 100),
                                       })))),
                             _ &&
                                 (x && c
                                     ? (t = (0, h.O7)(b, w))
                                     : d
-                                      ? (t = A.intl.string(A.t.ymSxhy))
+                                      ? (t = g.intl.string(g.t.ymSxhy))
                                       : "string" != typeof U || D || (t = U)),
                             D && !d)
                         ) {
@@ -184,7 +184,7 @@ function _(e) {
                             id: e,
                             value: e,
                             primaryText: (0, u.YR)(b.interval, b.intervalCount, !0),
-                            subText: l ? A.intl.string(A.t.ZTNur7) : F,
+                            subText: l ? g.intl.string(g.t.ZTNur7) : F,
                             subTextStrikethrough: l ? null : i,
                             secondarySubText: l ? null : t,
                             badgeText: l ? null : H,
@@ -207,8 +207,8 @@ function _(e) {
         ? null
         : (0, l.jsxs)(l.Fragment, {
               children: [
-                  V &&
-                      (0, l.jsx)(s.E, { variant: "text-md/medium", color: "text-subtle", className: v.S, children: K }),
+                  K &&
+                      (0, l.jsx)(s.E, { variant: "text-md/medium", color: "text-subtle", className: v.S, children: V }),
                   (0, l.jsx)(c.me, {
                       headingComponent: (0, l.jsx)(c.ec, { size: "sm", color: "text-strong", premiumType: q }),
                       headingSubText: Z,

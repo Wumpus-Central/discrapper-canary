@@ -1,125 +1,125 @@
-n.d(t, { E: () => I, O: () => g });
+n.d(t, { E: () => x, O: () => _ });
 var r = n(477900),
     l = n(582128),
-    i = n(643909),
-    o = n(503698),
-    a = n.n(o),
+    o = n(643909),
+    i = n(503698),
+    a = n.n(i),
     s = n(277984),
     u = n(942340),
     c = n(97352),
     d = n(158045),
-    C = n(71532),
-    h = n(169797),
-    E = n(206441),
-    m = n(783327),
-    p = n(202541),
-    _ = n(375708),
-    f = n(969933);
-let S = { [p.WT.DAY]: "day", [p.WT.MONTH]: "month", [p.WT.YEAR]: "year" };
-function A(e) {
-    let { makePurchase: t, isSubmitting: n, setIsSubmitting: o } = e,
-        u = (0, i.useElements)(),
-        p = (0, m.S)(),
-        [A, I] = l.useState(null),
-        g = l.useRef(null),
-        N = l.useRef(null),
+    h = n(71532),
+    C = n(169797),
+    m = n(721836),
+    p = n(783327),
+    f = n(202541),
+    g = n(375708),
+    E = n(969933);
+let S = { [f.WT.DAY]: "day", [f.WT.MONTH]: "month", [f.WT.YEAR]: "year" };
+function y(e) {
+    let { makePurchase: t, isSubmitting: n, setIsSubmitting: i } = e,
+        u = (0, o.useElements)(),
+        f = (0, p.S)(),
+        [y, x] = l.useState(null),
+        _ = l.useRef(null),
+        I = l.useRef(null),
         {
-            checkoutInvoicePreview: T,
-            checkoutPaymentSources: y,
-            hasFiatCheckoutPaymentSources: x,
-            expressCheckoutSubmitting: P,
-            setExpressCheckoutSubmitting: R,
-        } = (0, E.t4)((e) => ({
+            checkoutInvoicePreview: A,
+            checkoutPaymentSources: k,
+            hasFiatCheckoutPaymentSources: v,
+            expressCheckoutSubmitting: N,
+            setExpressCheckoutSubmitting: j,
+        } = (0, m.t4)((e) => ({
             checkoutInvoicePreview: e.checkoutInvoicePreview,
             hasFiatCheckoutPaymentSources: e.get("hasFiatCheckoutPaymentSources"),
             checkoutPaymentSources: e.get("checkoutPaymentSources"),
             expressCheckoutSubmitting: e.expressCheckoutSubmitting,
             setExpressCheckoutSubmitting: e.setExpressCheckoutSubmitting,
         })),
-        k = n || P,
-        v = l.useCallback(
+        w = n || N,
+        T = l.useCallback(
             (e) => {
-                o(e), R(e);
+                i(e), j(e);
             },
-            [o, R],
-        ),
-        w = l.useCallback(() => {
-            I(null), (g.current = null), v(!1);
-        }, [v]),
-        M = l.useCallback(
-            async (e) => {
-                try {
-                    await t(e), v(!1);
-                } catch (e) {
-                    v(!1);
-                }
-            },
-            [t, v],
+            [i, j],
         ),
         F = l.useCallback(() => {
-            if (null != A && null != y && null != T && y.some((e) => e.id === A.id)) {
-                if (g.current !== A.id) (g.current = A.id), N.current !== T.total ? v(!1) : M(A);
+            x(null), (_.current = null), T(!1);
+        }, [T]),
+        P = l.useCallback(
+            async (e) => {
+                try {
+                    await t(e), T(!1);
+                } catch (e) {
+                    T(!1);
+                }
+            },
+            [t, T],
+        ),
+        b = l.useCallback(() => {
+            if (null != y && null != k && null != A && k.some((e) => e.id === y.id)) {
+                if (_.current !== y.id) (_.current = y.id), I.current !== A.total ? T(!1) : P(y);
             }
-        }, [A, y, T, M, v]),
+        }, [y, k, A, P, T]),
         O = l.useCallback(
             async (e, t) => {
                 let { stripe: n, elements: r, currentInvoiceTotal: l } = t;
-                function i(t) {
-                    w(),
+                function o(t) {
+                    F(),
                         e.paymentFailed({
                             reason: "invalid_payment_data",
                             message: t ?? "There was an error with creating this payment method.",
                         });
                 }
                 try {
-                    v(!0), (N.current = l);
+                    T(!0), (I.current = l);
                     let { error: e } = await r.submit();
                     if (null != e) {
-                        console.error("elements.submit failed: ", e), i(e.message);
+                        console.error("elements.submit failed: ", e), o(e.message);
                         return;
                     }
-                    let { paymentMethod: t, error: o } = await n.createPaymentMethod({ elements: r });
+                    let { paymentMethod: t, error: i } = await n.createPaymentMethod({ elements: r });
                     if (null == t) {
                         console.error("createPaymentMethod failed to return payment method: ", {
                             paymentMethod: t,
-                            error: o,
+                            error: i,
                         }),
-                            i();
+                            o();
                         return;
                     }
-                    let { billingAddressInfo: a } = (0, C.uK)(t),
+                    let { billingAddressInfo: a } = (0, h.uK)(t),
                         u = t.id,
                         c = await (0, s.IC)({ stripePaymentMethodId: u, billingAddress: a });
-                    I(c);
+                    x(c);
                 } catch (e) {
-                    console.error("handleExpressCheckoutConfirm failed: ", e), i();
+                    console.error("handleExpressCheckoutConfirm failed: ", e), o();
                 }
             },
-            [v, I, w],
+            [T, x, F],
         );
     l.useEffect(() => {
-        null != A && F();
-    }, [A, F]);
-    let U = l.useMemo(() => {
-        if (null == T) return {};
+        null != y && b();
+    }, [y, b]);
+    let R = l.useMemo(() => {
+        if (null == A) return {};
         let e = (function (e) {
             let t = e.invoiceItems.find((e) => null != e.subscriptionPlanId);
             if (null == t) return null;
             let n = c.A.get(t.subscriptionPlanId);
             if (null == n) return null;
-            let { subtotal: r, tax: l, total: i, taxInclusive: o } = e,
+            let { subtotal: r, tax: l, total: o, taxInclusive: i } = e,
                 a = S[n.interval],
                 s = n.intervalCount,
                 u = (0, d.Mn)(n.id),
-                C = o ? i - l : r;
+                h = i ? o - l : r;
             return {
                 lineItems:
                     l > 0
                         ? [
-                              { name: u, amount: C },
-                              { name: _.intl.string(_.t.jiRvC7), amount: l },
+                              { name: u, amount: h },
+                              { name: g.intl.string(g.t.jiRvC7), amount: l },
                           ]
-                        : [{ name: u, amount: C }],
+                        : [{ name: u, amount: h }],
                 applePay: {
                     recurringPaymentRequest: {
                         paymentDescription: u,
@@ -133,32 +133,32 @@ function A(e) {
                     },
                 },
             };
-        })(T);
+        })(A);
         if (null == e) return {};
         let { lineItems: t, applePay: n } = e;
         return { billingAddressRequired: !0, lineItems: t, applePay: n };
-    }, [T]);
-    return null == p || null == u || null == T || (x && !P)
+    }, [A]);
+    return null == f || null == u || null == A || (v && !N)
         ? null
         : (0, r.jsxs)(r.Fragment, {
               children: [
-                  k && (0, r.jsx)(h.Ig, {}),
+                  w && (0, r.jsx)(C.Ig, {}),
                   (0, r.jsx)("div", {
-                      className: a()({ [f.X]: k }),
-                      children: (0, r.jsx)(i.ExpressCheckoutElement, {
-                          onConfirm: (e) => O(e, { stripe: p, elements: u, currentInvoiceTotal: T.total }),
-                          onCancel: w,
-                          options: U,
+                      className: a()({ [E.X]: w }),
+                      children: (0, r.jsx)(o.ExpressCheckoutElement, {
+                          onConfirm: (e) => O(e, { stripe: f, elements: u, currentInvoiceTotal: A.total }),
+                          onCancel: F,
+                          options: R,
                       }),
                   }),
               ],
           });
 }
-function I(e) {
-    let { makePurchase: t, isSubmitting: n, setIsSubmitting: o } = e,
-        a = (0, m.S)(),
+function x(e) {
+    let { makePurchase: t, isSubmitting: n, setIsSubmitting: i } = e,
+        a = (0, p.S)(),
         { elementsAppearance: s } = (0, u.E)(),
-        c = (0, E.t4)((e) => e.checkoutInvoicePreview),
+        c = (0, m.t4)((e) => e.checkoutInvoicePreview),
         d = l.useMemo(
             () =>
                 null == c
@@ -174,20 +174,20 @@ function I(e) {
         );
     return null == a || null == d
         ? null
-        : (0, r.jsx)(i.Elements, {
+        : (0, r.jsx)(o.Elements, {
               stripe: a,
               options: d,
-              children: (0, r.jsx)(A, { makePurchase: t, isSubmitting: n, setIsSubmitting: o }),
+              children: (0, r.jsx)(y, { makePurchase: t, isSubmitting: n, setIsSubmitting: i }),
           });
 }
-function g(e) {
+function _(e) {
     let { stripeExpressCheckoutComponent: t, primaryCheckoutButton: n } = e,
-        { hasFiatCheckoutPaymentSources: l, expressCheckoutSubmitting: i } = (0, E.t4)((e) => ({
+        { hasFiatCheckoutPaymentSources: l, expressCheckoutSubmitting: o } = (0, m.t4)((e) => ({
             hasFiatCheckoutPaymentSources: e.get("hasFiatCheckoutPaymentSources"),
             expressCheckoutSubmitting: e.expressCheckoutSubmitting,
         })),
-        o = i || !l;
+        i = o || !l;
     return (0, r.jsxs)(r.Fragment, {
-        children: [(0, r.jsx)("div", { className: a()(f.n, { [f.X]: !o }), children: t }), !o && n],
+        children: [(0, r.jsx)("div", { className: a()(E.n, { [E.X]: !i }), children: t }), !i && n],
     });
 }

@@ -13,12 +13,12 @@ let m = ["country", "city", "line1"],
     C = new Set([d.d.ID, d.d.CO, d.d.HK, d.d.AG, d.d.SM, d.d.VG]);
 var h = n(648335),
     f = n(211528),
-    E = n(206441),
+    E = n(721836),
     S = n(783327),
     y = n(166532),
     I = n(38405),
-    g = n(240248),
-    A = n(891640),
+    A = n(240248),
+    g = n(891640),
     P = n(818348),
     v = n(400400);
 let _ = [y.pn.PAYMENT_ELEMENT],
@@ -51,7 +51,7 @@ function N(e) {
     let {
             shouldShowPaymentElement: S,
             shouldShowAddressElement: I,
-            excludeBodySpacing: g,
+            excludeBodySpacing: A,
         } = i.useMemo(
             () => ({
                 shouldShowPaymentElement: _.includes(t),
@@ -62,13 +62,13 @@ function N(e) {
         ),
         T = i.useMemo(() => {
             if (null == d) return !1;
-            if ((0, A.i)(d)) {
-                let { renderAddressElementInStandaloneMode: e } = A.F[d];
+            if ((0, g.i)(d)) {
+                let { renderAddressElementInStandaloneMode: e } = g.F[d];
                 return e ?? !1;
             }
         }, [d]);
     return (0, l.jsxs)("div", {
-        className: s()(v.kL, { [v.rf]: !g }),
+        className: s()(v.kL, { [v.rf]: !A }),
         children: [
             (0, l.jsxs)("div", {
                 className: s()(S ? v.RK : [v.R, v.$u], {
@@ -135,7 +135,7 @@ function M(e) {
         } = e,
         c = i.useRef(null),
         d = i.useRef(null),
-        [S, A] = i.useState(!1),
+        [S, g] = i.useState(!1),
         [v, _] = i.useState(!1),
         x = o === y.pn.CREDIT_CARD_INFORMATION || o === y.pn.PAYMENT_ELEMENT,
         [N, b] = i.useState(x ? P.he.CARD : null),
@@ -156,7 +156,7 @@ function M(e) {
         G = i.useMemo(
             () => ({
                 onChange: (e, t) => {
-                    s && null != l && l.log("PaymentElements onChange event:", e), A(e.complete), b(t);
+                    s && null != l && l.log("PaymentElements onChange event:", e), g(e.complete), b(t);
                 },
                 onReady: () => {
                     _(!0);
@@ -212,7 +212,7 @@ function M(e) {
                                     emptyFields: Object.entries(o)
                                         .filter((e) => {
                                             let [, t] = e;
-                                            return (0, g.uJ)(t);
+                                            return (0, A.uJ)(t);
                                         })
                                         .map((e) => {
                                             let [t] = e;

@@ -11,14 +11,14 @@ var l = n(477900),
     m = n(463376),
     p = n(266060),
     C = n(951305),
-    h = n(206441),
+    h = n(721836),
     f = n(473617),
     E = n(699595),
     S = n(558620),
     y = n(669510),
     I = n(683071),
-    g = n(834730),
-    A = n(212739);
+    A = n(834730),
+    g = n(212739);
 n(216238);
 var P = n(202541),
     v = n(181666),
@@ -76,26 +76,26 @@ function B(e) {
 var H = n(340034),
     W = n(753261),
     Y = n(531536),
-    V = n(924799);
-function K(e) {
+    K = n(924799);
+function V(e) {
     let { fallback: t } = e,
         { enabled: n } = W.E.useConfig({ location: "PremiumUnifiedCheckoutOrbsRewardNotice" });
     return n
         ? (0, l.jsx)("div", {
-              className: V.kL,
+              className: K.kL,
               children: (0, l.jsx)(Y.W, {
-                  className: V.Vs,
+                  className: K.Vs,
                   image: (0, l.jsx)("img", {
-                      className: V.L8,
+                      className: K.L8,
                       alt: "",
                       src: "https://cdn.discordapp.com/assets/content/b6d1d954e5c9ccfd2356d7af86ca2a4a59717635cc6f558f731edb2e6046b25c.png",
                   }),
-                  title: (0, l.jsx)(g.E, {
+                  title: (0, l.jsx)(A.E, {
                       variant: "text-md/medium",
                       color: "text-strong",
                       children: _.intl.formatToPlainString(_.t.vXqqUc, { orbCount: 5e3 }),
                   }),
-                  body: (0, l.jsx)(g.E, {
+                  body: (0, l.jsx)(A.E, {
                       variant: "text-sm/medium",
                       color: "text-muted",
                       children: _.intl.string(_.t.Ev7DO6),
@@ -119,7 +119,7 @@ function $(e) {
         } = e,
         {
             checkoutInvoicePreview: Y,
-            checkoutPriceOptions: V,
+            checkoutPriceOptions: K,
             checkoutInvoiceError: $,
             referralTrialOfferId: J,
             isGift: X,
@@ -186,8 +186,8 @@ function $(e) {
                         { isGift: y } = (0, C.Pv)(),
                         {
                             subscriptionPlan: I,
-                            purchaseDisabled: g,
-                            newItems: A,
+                            purchaseDisabled: A,
+                            newItems: g,
                             preventInvoiceFetch: P,
                         } = (0, f.TP)({ selectedPlanId: t, priceOptions: n }),
                         {
@@ -195,7 +195,7 @@ function $(e) {
                             checkoutInvoiceRequestParams: _,
                             renewalInvoiceRequestParams: x,
                         } = (0, f.jq)({
-                            items: A,
+                            items: g,
                             preventFetch: P,
                             priceOptions: n,
                             trialId: l,
@@ -238,7 +238,7 @@ function $(e) {
                         discriminatedInvoicePreview: O,
                         proratedInvoicePreview: b,
                         renewalInvoicePreview: m,
-                        purchaseDisabled: g,
+                        purchaseDisabled: A,
                         invoiceError: R,
                         subscriptionPeriodEnd: L,
                     };
@@ -255,8 +255,8 @@ function $(e) {
         eE = eu ?? eo,
         { giftRecipient: eS, selectedGiftingPromotionRewards: ey } = (0, C.Pv)(),
         eI = X && (0, R.Ik)(eS),
-        eg = (0, h.t4)((e) => e.getIsInOneStepSubscriptionCheckout({ isTrial: ed })) && !ec && !et,
-        eA = U?.guild_id ?? void 0,
+        eA = (0, h.t4)((e) => e.getIsInOneStepSubscriptionCheckout({ isTrial: ed })) && !ec && !et,
+        eg = U?.guild_id ?? void 0,
         eP = (0, a.A)({ forceFetch: !1, excludeReverseTrial: !1, excludeReverseTrialFromCountdown: !0 }),
         { paymentSources: ev } = (0, c.j)(),
         {
@@ -309,7 +309,7 @@ function $(e) {
             isGift: X,
         }),
         eU = X && er.interval === P.WT.YEAR && (0, M.xq)(er.id),
-        eD = (0, M.L_)({ planId: er.id, isGift: !0, priceOptions: V, subscriptionPlan: er }),
+        eD = (0, M.L_)({ planId: er.id, isGift: !0, priceOptions: K, subscriptionPlan: er }),
         eG = i.useMemo(() => {
             if (null != eD && eU)
                 return { headerBadgeText: _.intl.formatToPlainString(Q.default["Mi5BH/"], { percentOff: eD }) };
@@ -334,14 +334,14 @@ function $(e) {
         }, [ek, ej, eE, eL, em, eD, eU]),
         eH = (function (e) {
             let { skuId: t, isGift: n } = e,
-                r = (0, A.O)();
+                r = (0, g.O)();
             return i.useMemo(
                 () =>
                     n || t !== P.pe.TIER_2 || !1 === r
                         ? null
                         : (0, l.jsx)(I.w, {
                               type: "info",
-                              children: (0, l.jsx)(g.E, {
+                              children: (0, l.jsx)(A.E, {
                                   variant: "text-sm/medium",
                                   children: _.intl.format(v.default.Urtyu9, { days: 7 }),
                               }),
@@ -351,11 +351,11 @@ function $(e) {
         })({ skuId: er.skuId, isGift: X }),
         eW = (0, O.i)({ planSkuId: er.skuId, invoice: eb }),
         eY = (0, x.Mq)(er) && ey.includes(r.a.SUMMER_2026_GOGO_FAKE_SKU_ID),
-        eV = i.useMemo(() => {
-            let e = eB ?? eW ?? null;
-            return eY ? (0, l.jsx)(K, { fallback: e }) : e;
-        }, [eY, eB, eW]),
         eK = i.useMemo(() => {
+            let e = eB ?? eW ?? null;
+            return eY ? (0, l.jsx)(V, { fallback: e }) : e;
+        }, [eY, eB, eW]),
+        eV = i.useMemo(() => {
             let e = [];
             return (
                 null != D && "" !== D && e.push({ type: "warning", message: D, key: "review-warning" }),
@@ -376,11 +376,11 @@ function $(e) {
             );
         }, [D, eN, ew, eP, es, eO, ep, ec, eH]),
         eZ = null != em ? em.invoicePreview : null,
-        { priceOptions: eq, planPricesLoading: ez } = (0, M.Pr)(V, eZ, $),
+        { priceOptions: eq, planPricesLoading: ez } = (0, M.Pr)(K, eZ, $),
         eQ = {
             shouldShowGlobalNotices: !0,
-            upperInlineNoticeProps: eK,
-            planSelectContent: eg
+            upperInlineNoticeProps: eV,
+            planSelectContent: eA
                 ? (0, l.jsx)(Z.X, {
                       disabled: eh || en,
                       selectedPlanId: ea,
@@ -391,7 +391,7 @@ function $(e) {
                   })
                 : void 0,
             paymentMethodContent: eR,
-            promotionalNoticeContent: eV,
+            promotionalNoticeContent: eK,
             headerBadgeConfig: eF,
         };
     if (null == em && null != $) return (0, l.jsx)(u.T_, { ...eQ, legalContent: null });
@@ -422,7 +422,7 @@ function $(e) {
         });
         eX = (0, l.jsx)(y._, { ...e, defaultExpanded: el });
     }
-    let e0 = eg
+    let e0 = eA
             ? void 0
             : (0, l.jsx)(q._, {
                   type: em.type,
@@ -432,7 +432,7 @@ function $(e) {
                   isPrepaidPaymentSource: eT,
                   giftRecipient: eS,
                   isPremiumGroupPurchase: ec,
-                  guildId: eA,
+                  guildId: eg,
                   handleStepChange: W,
               }),
         e1 = (0, l.jsx)(H.P, {

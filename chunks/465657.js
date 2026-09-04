@@ -10,7 +10,7 @@ var l = n(477900),
     d = n(786948),
     m = n(202475),
     p = n(883645),
-    C = n(206441),
+    C = n(721836),
     h = n(26279);
 function f(e) {
     let {
@@ -22,8 +22,8 @@ function f(e) {
             resolveInternalState: S,
             resolveTenantReviewButtonProps: y,
             handleStepChange: I,
-            openInvoiceId: g,
-            analyticsData: A,
+            openInvoiceId: A,
+            analyticsData: g,
             analyticsLocation: P,
         } = e,
         {
@@ -96,8 +96,8 @@ function f(e) {
             onPaymentSourceAdd: H,
             disablePurchase: F,
             analyticsLocation: P,
-            baseAnalyticsData: A,
-            openInvoiceId: g,
+            baseAnalyticsData: g,
+            openInvoiceId: A,
             handleStepChange: I,
             postPurchaseStep: o.pn.CONFIRM,
             backButtonEligible: r,

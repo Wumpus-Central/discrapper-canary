@@ -8,7 +8,7 @@ var l = n(477900),
     u = n(883645),
     c = n(427675),
     d = n(580133),
-    m = n(206441),
+    m = n(721836),
     p = n(242874),
     C = n(573359),
     h = n(892349),
@@ -17,8 +17,8 @@ var l = n(477900),
     S = n(237412),
     y = n(45938),
     I = n(951305),
-    g = n(166532),
-    A = n(652215),
+    A = n(166532),
+    g = n(652215),
     P = n(202541),
     v = n(375708),
     _ = n(894575);
@@ -34,10 +34,10 @@ function x(e) {
         R = (0, u.s2)(),
         { isGift: M, selectedGiftStyle: O, giftRecipient: L } = (0, I.Pv)(),
         k = (0, h.p)("PremiumUnifiedCheckoutCustomHeader"),
-        w = j?.productLine === A.EZt.COLLECTIBLES,
-        U = j?.productLine === A.EZt.SOCIAL_LAYER_GAME_ITEM,
-        D = M && (0, y.Ik)(L) && R === g.pn.CONFIRM && null != O && !w && !U,
-        G = [g.pn.SKU_SELECT, g.pn.SELECT_FREE_SKU],
+        w = j?.productLine === g.EZt.COLLECTIBLES,
+        U = j?.productLine === g.EZt.SOCIAL_LAYER_GAME_ITEM,
+        D = M && (0, y.Ik)(L) && R === A.pn.CONFIRM && null != O && !w && !U,
+        G = [A.pn.SKU_SELECT, A.pn.SELECT_FREE_SKU],
         F = null != R && !G.includes(R) && null != n,
         B = i.useCallback(() => t(!1), [t]);
     return i.useMemo(() => {
@@ -113,5 +113,5 @@ function N() {
 }
 function b(e) {
     let { isGift: t } = (0, I.Pv)();
-    return e.step !== g.pn.PLAN_SELECT || t ? (0, l.jsx)(x, { ...e }) : (0, l.jsx)(N, {});
+    return e.step !== A.pn.PLAN_SELECT || t ? (0, l.jsx)(x, { ...e }) : (0, l.jsx)(N, {});
 }

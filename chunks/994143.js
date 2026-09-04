@@ -1,4 +1,4 @@
-n.d(t, { RL: () => ee, oO: () => Z, dL: () => V }), n(321073);
+n.d(t, { RL: () => ee, oO: () => Z, dL: () => K }), n(321073);
 var l = n(477900),
     i = n(582128),
     r = n(575593),
@@ -11,14 +11,14 @@ var l = n(477900),
     m = n(38785),
     p = n(270537),
     C = n(241989),
-    h = n(206441),
+    h = n(721836),
     f = n(993408),
     E = n(80151),
     S = n(629042),
     y = n(1076),
     I = n(151115),
-    g = n(812095),
-    A = n(287809),
+    A = n(812095),
+    g = n(287809),
     P = n(486020),
     v = n(158045),
     _ = n(580630),
@@ -41,10 +41,10 @@ var l = n(477900),
     H = n(52635),
     W = n(583741),
     Y = n(181666);
-function V(e) {
+function K(e) {
     return e.name;
 }
-let K = {
+let V = {
     [r.R.BUNDLE]: () => F.intl.string(W.default["jM8/71"]),
     [r.R.AVATAR_DECORATION]: () => F.intl.string(W.default.r29Oel),
     [r.R.PROFILE_EFFECT]: () => F.intl.string(W.default.eTYAvF),
@@ -54,7 +54,7 @@ let K = {
 function Z(e) {
     let t = F.intl.string(W.default.iZe9Wy);
     if (null == e);
-    else if (e.type in K) return (0, K[e.type])();
+    else if (e.type in V) return (0, V[e.type])();
     return t;
 }
 function q(e) {
@@ -67,7 +67,7 @@ function q(e) {
             ...s
         } = e,
         o = (0, l.jsx)(C.WH, { sku: t, product: n }),
-        u = V(t);
+        u = K(t);
     return (0, l.jsx)(C.f7, {
         description: r,
         price: i,
@@ -97,7 +97,7 @@ function $(e) {
         r =
             null != n
                 ? (function (e) {
-                      let t = A.default.getCurrentUser(),
+                      let t = g.default.getCurrentUser(),
                           n = v.Ay.canUseShopDiscounts(t),
                           l = (0, f.xM)(t),
                           i = (0, f.WD)(e, { hasShopDiscount: n, discount: (0, f.fT)(e, n) });
@@ -147,7 +147,7 @@ function X(e) {
         {
             sku: f,
             application: y,
-            eligiblePaymentGateways: A,
+            eligiblePaymentGateways: g,
             disabled: P,
         } = (function () {
             let { selectedSkuId: e, purchaseState: t } = (0, h.t4)((e) => ({
@@ -222,12 +222,12 @@ function X(e) {
                 }, [d]),
             };
         })({ sku: f, application: y, isGift: s }),
-        K = i.useMemo(() => ({ paymentGatewayRestrictions: A, shouldUseUnifiedCheckoutUI: !0 }), [A]),
+        V = i.useMemo(() => ({ paymentGatewayRestrictions: g, shouldUseUnifiedCheckoutUI: !0 }), [g]),
         Z = (0, l.jsx)(d.N, {
             label: F.intl.string(F.t["u+Cw58"]),
             location: "OneTimePurchaseReviewStepBody",
             onPaymentSourceAdd: t,
-            additionalPaymentSourceDropdownProps: K,
+            additionalPaymentSourceDropdownProps: V,
             disabled: P,
         }),
         { product: X } = (0, B.AO)({ sku: f }),
@@ -239,7 +239,7 @@ function X(e) {
                     if (null != n) {
                         let { discount: e, basePrice: i, showTaxes: r } = (0, B.yh)({ invoicePreview: n });
                         return (
-                            l.push({ id: "sku", label: V(t), amount: i }),
+                            l.push({ id: "sku", label: K(t), amount: i }),
                             null != e &&
                                 l.push({
                                     id: "discount",
@@ -294,7 +294,7 @@ function X(e) {
                             ? null
                             : (0, l.jsx)(u.J, {
                                   Icon: (0, I.sj)(t?.icon),
-                                  text: (0, g.U)(i),
+                                  text: (0, A.U)(i),
                                   gradientColor: (0, I.lx)(n),
                               });
                     }

@@ -1,4 +1,4 @@
-n.d(t, { y0: () => G, Ni: () => x, t4: () => F, Q9: () => k, y$: () => V });
+n.d(t, { y0: () => K, Ni: () => $, t4: () => q, Q9: () => z, y$: () => Z });
 var i = n(462180),
     r = n(882035),
     a = n(315069),
@@ -250,18 +250,37 @@ function L(e, t) {
 var y = n(652215),
     D = n(504275),
     v = n(219538),
-    b = n(811315),
-    M = n.n(b),
-    P = n(75304),
-    U = n(403362),
-    w = n(427262);
-let G = 1,
-    [x, k] = (0, m.A)();
-function F(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.x;
-    return k()(e, t);
+    b = n(228366),
+    M = n(158032),
+    P = n(830382),
+    U = n(136857),
+    w = n(739508),
+    G = n(71532),
+    x = n(375708);
+let k = [y.__0.COMPLETED, y.__0.FAILED, y.__0.CANCELED];
+async function F(e) {
+    if (null == e) return;
+    let { error: t } = await (0, G.ap)(e);
+    null != t && (0, w.pM)(Error(t), { extra: { authenticationError: t } });
 }
-function V(e) {
+let V = {
+    paymentAuthError: null,
+    isAwaitingPaymentAuthentication: !1,
+    awaitingPaymentId: null,
+    paymentAuthWasCancelled: !1,
+};
+var B = n(811315),
+    H = n.n(B),
+    j = n(75304),
+    W = n(403362),
+    Y = n(427262);
+let K = 1,
+    [$, z] = (0, m.A)();
+function q(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.x;
+    return z()(e, t);
+}
+function Z(e) {
     let {
         checkoutInitParameters: t,
         startingValues: n,
@@ -384,12 +403,61 @@ function V(e) {
                 },
             },
             ...{
+                ...V,
+                handlePaymentFailure: (t) => {
+                    let { error: n } = t,
+                        { code: r, paymentId: a } = n;
+                    if (r !== U.tG.CONFIRMATION_REQUIRED && r !== U.tG.AUTHENTICATION_REQUIRED) {
+                        i().isAwaitingPaymentAuthentication && e({ isAwaitingPaymentAuthentication: !1 });
+                        return;
+                    }
+                    i().isAwaitingPaymentAuthentication ||
+                        (e({
+                            isAwaitingPaymentAuthentication: !0,
+                            awaitingPaymentId: a ?? null,
+                            paymentAuthWasCancelled: !1,
+                        }),
+                        r === U.tG.AUTHENTICATION_REQUIRED && F(a));
+                },
+                handlePaymentUpdate: (t) => {
+                    let { payment: n } = t;
+                    if (i().isAwaitingPaymentAuthentication && n.id === i().awaitingPaymentId && k.includes(n.status)) {
+                        if (n.status === y.__0.FAILED) {
+                            let t = n.metadata?.billing_error_code,
+                                i = t === U.tG.BILLING_INSUFFICIENT_FUNDS ? t : null;
+                            e({
+                                isAwaitingPaymentAuthentication: !1,
+                                awaitingPaymentId: null,
+                                paymentAuthError: new U.Ay(x.intl.string(x.t.khEaRI), i),
+                            });
+                            return;
+                        }
+                        e({ isAwaitingPaymentAuthentication: !1, awaitingPaymentId: null, paymentAuthError: null }),
+                            b.h.wait(M.ET),
+                            b.h.wait(P.T3);
+                    }
+                },
+                handlePaymentAuthenticationError: (t) => {
+                    let { error: n } = t;
+                    e({ paymentAuthError: n, isAwaitingPaymentAuthentication: !1 });
+                },
+                handlePaymentAuthenticationCancel: () => {
+                    e({
+                        isAwaitingPaymentAuthentication: !1,
+                        awaitingPaymentId: null,
+                        paymentAuthError: null,
+                        paymentAuthWasCancelled: !0,
+                    });
+                },
+                resetPaymentAuthentication: () => e({ ...V }),
+            },
+            ...{
                 expressCheckoutSubmitting: !1,
                 setExpressCheckoutSubmitting: (t) => e({ expressCheckoutSubmitting: t }),
                 getShouldUseStripeExpressCheckout: () => {
                     let e = i().getSharedTenantParams();
                     return (
-                        !!((0, w.Gn)() || "staging" === window.GLOBAL_ENV.RELEASE_CHANNEL || (0, U.m6)()) &&
+                        !!((0, Y.Gn)() || "staging" === window.GLOBAL_ENV.RELEASE_CHANNEL || (0, W.m6)()) &&
                         null != e &&
                         !!e.shouldUseStripeExpressCheckout
                     );
@@ -399,7 +467,7 @@ function V(e) {
             (c = { premiumPlanOptions: null }),
             {
                 getShouldDisallowPlanSelection: () => {
-                    let e = i().getTenantParams(P.C.PREMIUM_CHECKOUT);
+                    let e = i().getTenantParams(j.C.PREMIUM_CHECKOUT);
                     return null != e && (e.shouldDisallowPlanSelection ?? !1);
                 },
                 getIsInOneStepSubscriptionCheckout: (e) => {
@@ -447,7 +515,7 @@ function V(e) {
                         r = n("isPremiumPurchase");
                     try {
                         let n = (0, N.Tm)({ skuId: e, isPremium: r, defaultPlanId: t });
-                        if (M()(n, c.premiumPlanOptions)) return c.premiumPlanOptions;
+                        if (H()(n, c.premiumPlanOptions)) return c.premiumPlanOptions;
                         return (c.premiumPlanOptions = n), n;
                     } catch (e) {
                         return null;
@@ -464,14 +532,14 @@ function V(e) {
             setSelectedSkuId: (t) =>
                 e((e) => {
                     let n = t ?? void 0;
-                    return n === e.selectedSkuId ? e : { selectedSkuId: n, quantity: G };
+                    return n === e.selectedSkuId ? e : { selectedSkuId: n, quantity: K };
                 }),
             setSelectedPlanId: function (t) {
                 let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { shouldUpdateQuantity: !0 },
                     i = t ?? void 0;
-                return n.shouldUpdateQuantity ? e({ selectedPlanId: i, quantity: G }) : e({ selectedPlanId: i });
+                return n.shouldUpdateQuantity ? e({ selectedPlanId: i, quantity: K }) : e({ selectedPlanId: i });
             },
-            quantity: G,
+            quantity: K,
             setQuantity: (t) => e({ quantity: t }),
             fetchCheckoutInvoicePreviewRequest: null,
             setFetchCheckoutInvoicePreviewRequest: (t) => e({ fetchCheckoutInvoicePreviewRequest: L(t, i) }),

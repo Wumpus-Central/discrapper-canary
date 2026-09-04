@@ -18,7 +18,7 @@ var i = n(477900),
     m = n(558620),
     h = n(427675),
     I = n(169797),
-    P = n(206441),
+    P = n(721836),
     k = n(174459),
     v = n(840251),
     y = n(688151),
@@ -190,12 +190,12 @@ function ee(e) {
             if (null != e0) return e0.options;
         }, [e0]),
         e2 = (0, f.qv)(),
-        e4 = "sm";
-    eA ? (e4 = "xl") : (eT || e1 === U.pn.ADD_PAYMENT_STEPS) && (e4 = "md");
-    let e8 = null != e5 ? e5.modalSizeGetter : void 0,
+        e8 = "sm";
+    eA ? (e8 = "xl") : (eT || e1 === U.pn.ADD_PAYMENT_STEPS) && (e8 = "md");
+    let e4 = null != e5 ? e5.modalSizeGetter : void 0,
         e9 = (0, w.O)(),
-        e6 = null != X && !eZ && (0, b.U9)(e9, X),
-        [e3, e7] = l.useState({
+        e3 = null != X && !eZ && (0, b.U9)(e9, X),
+        [e6, e7] = l.useState({
             load_id: eO.loadId,
             discovery_session_id: eO.discoverySessionId,
             payment_type: M.frM[eF],
@@ -211,7 +211,7 @@ function ee(e) {
             guild_id: e_,
             payment_modal_version: ev,
             activity_session_id: ez,
-            eligible_for_discount: e6,
+            eligible_for_discount: e3,
             sku_product_line: eK?.productLine,
             quantity: eY,
             checkout_design: p.r.UNIFIED,
@@ -243,7 +243,7 @@ function ee(e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
                 k.default.track(M.HAw.PAYMENT_FLOW_STARTED, e, t), C.trigger();
             })({
-                ...e3,
+                ...e6,
                 continue_session_initial_step: eI,
                 custom_checkout_flow: eH,
                 has_saved_payment_source: eM,
@@ -258,7 +258,7 @@ function ee(e) {
             let e = (0, H.lo)(eB) === H.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
                 t = Date.now();
             k.default.track(M.HAw.PAYMENT_FLOW_SUCCEEDED, {
-                ...e3,
+                ...e6,
                 is_custom_message_edited: eZ && e && null != eQ ? eQ !== B.intl.string(B.t.ZkOo1U) : void 0,
                 is_custom_emoji_sound_available: eZ && e,
                 emoji_name: eZ && e && eX?.id == null ? eX?.surrogates : void 0,
@@ -268,7 +268,7 @@ function ee(e) {
                 gift_card_balance: tt,
                 gift_card_currency: tn,
             });
-        }, [e3, eX, eQ, eB, eZ, e$, eO.startTime, te, tt, tn]),
+        }, [e6, eX, eQ, eB, eZ, e$, eO.startTime, te, tt, tn]),
         ts = l.useCallback(() => {
             let e = null != I ? (0, g.NE)(I) : null;
             eZ && null != eB && null != e && (0, D.Yd)(eB.id, e);
@@ -285,13 +285,13 @@ function ee(e) {
                 let u = null != n ? n : e1;
                 null === u || s
                     ? k.default.track(M.HAw.PAYMENT_FLOW_LOADED, {
-                          ...e3,
+                          ...e6,
                           initial_step: u ?? e,
                           continue_session_initial_step: eI,
                           has_saved_payment_source: eM,
                       })
                     : k.default.track(M.HAw.PAYMENT_FLOW_STEP, {
-                          ...e3,
+                          ...e6,
                           ...i,
                           from_step: u,
                           to_step: e === U.pn.ADD_PAYMENT_STEPS ? U.pn.PAYMENT_ELEMENT : e,
@@ -301,7 +301,7 @@ function ee(e) {
                           gift_card_currency: tn,
                       });
             },
-            [e2, eE, eR, e1, eI, e3, tu, eO.startTime, tl, z, ts, eh, ta, eM, tt, tn],
+            [e2, eE, eR, e1, eI, e6, tu, eO.startTime, tl, z, ts, eh, ta, eM, tt, tn],
         );
     return (
         (0, R.b)(e1, eq, to, ew, !1, void 0, ek),
@@ -323,9 +323,9 @@ function ee(e) {
                 isGift: eZ,
                 giftRecipient: eB,
                 returnRef: em,
-                manaModalSize: e4,
+                manaModalSize: e8,
                 modalSizeOverride: ef,
-                modalSizeGetter: e8,
+                modalSizeGetter: e4,
                 handleClose: ta,
                 children: (0, i.jsx)(K.Ay, {
                     header: (0, i.jsx)(J, { handleClose: ta, renderHeader: er }),
@@ -334,7 +334,7 @@ function ee(e) {
                         subscriptionTier: X,
                         handleStepChange: to,
                         handleClose: ta,
-                        analyticsData: e3,
+                        analyticsData: e6,
                         setAnalyticsData: e7,
                         trialId: et,
                         reviewWarningMessage: en,

@@ -4,10 +4,10 @@ var l,
     r = n(17928),
     a = n(451988),
     s = n(277984),
-    o = n(597643),
-    u = n(166532),
-    c = n(566980),
-    d = n(153084),
+    o = n(721836),
+    u = n(597643),
+    c = n(166532),
+    d = n(566980),
     m =
         (((l = {})[(l.PENDING = 1)] = "PENDING"),
         (l[(l.ERROR = 2)] = "ERROR"),
@@ -21,20 +21,20 @@ function p(e, t, n, l) {
     i.useEffect(() => {
         s ||
             null == e ||
-            (1 === t && e !== u.pn.AWAITING_AUTHENTICATION
-                ? n(u.pn.AWAITING_AUTHENTICATION)
-                : e === u.pn.AWAITING_AUTHENTICATION &&
+            (1 === t && e !== c.pn.AWAITING_AUTHENTICATION
+                ? n(c.pn.AWAITING_AUTHENTICATION)
+                : e === c.pn.AWAITING_AUTHENTICATION &&
                   (2 === t || 4 === t
-                      ? n(u.pn.REVIEW)
-                      : 3 === t && (r ? (null != a ? a() : n(u.pn.REVIEW)) : (l(c.h.COMPLETED), n(u.pn.CONFIRM)))));
+                      ? n(c.pn.REVIEW)
+                      : 3 === t && (r ? (null != a ? a() : n(c.pn.REVIEW)) : (l(d.h.COMPLETED), n(c.pn.CONFIRM)))));
     }, [e, t, n, l, r, a, s]);
 }
 function C(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        n = (0, r.bG)([d.A], () => d.A.awaitingPaymentId),
-        l = (0, r.bG)([o.A], () => o.A.isConnected()),
-        u = i.useRef(new a.IX());
+        n = (0, o.t4)((e) => e.awaitingPaymentId),
+        l = (0, r.bG)([u.A], () => u.A.isConnected()),
+        c = i.useRef(new a.IX());
     i.useEffect(() => {
-        t || l || null == n || 1 !== e ? u.current.stop() : u.current.start(5e3, () => (0, s.TK)(n));
+        t || l || null == n || 1 !== e ? c.current.stop() : c.current.start(5e3, () => (0, s.TK)(n));
     }, [n, e, l, t]);
 }
