@@ -73,6 +73,7 @@ var S =
     (r.PRIVATE_MESSAGE_COMMAND = "private_message_command"),
     (r.POLL_CREATION = "poll_creation"),
     (r.SHARE_CUSTOM_THEME = "share_custom_theme"),
+    (r.VIBEGRATIONS_PATCH_NOTES = "vibegrations_patch_notes"),
     (r.GIF_REPLY = "gif_reply"),
     (r.STICKER_REPLY = "sticker_reply"),
     (r.SEND_WAVE = "send_wave"),
