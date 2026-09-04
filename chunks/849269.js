@@ -122,7 +122,17 @@ function b(e) {
             return async () => {
                 if (b) {
                     try {
-                        await u.A.launchFrame({ applicationId: S, surface: v.sd }), o?.({ applicationId: S });
+                        await u.A.launchFrame({
+                            applicationId: S,
+                            surface: v.sd,
+                            analyticsContext: {
+                                isStart: !0,
+                                analyticsLocations: _,
+                                source: x,
+                                channelId: "channel" === l.type ? l.channel.id : void 0,
+                            },
+                        }),
+                            o?.({ applicationId: S });
                     } catch (e) {}
                     return;
                 }

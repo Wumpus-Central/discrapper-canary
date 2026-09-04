@@ -4,10 +4,10 @@ var i = n(587895),
     a = n(207371),
     s = n(165610);
 function l(e) {
-    let { applicationId: t, customId: n, referrerId: l } = e,
-        o = i.A.getApplication(t);
+    let { applicationId: t, customId: n, referrerId: l, analyticsContext: o } = e,
+        d = i.A.getApplication(t);
     return (
-        !!(null != o && (0, a.x)(o)) &&
-        (r.A.launchFrame({ applicationId: t, surface: s.sd, customId: n, referrerId: l }), !0)
+        !!(null != d && (0, a.x)(d)) &&
+        (r.A.launchFrame({ applicationId: t, surface: s.sd, customId: n, referrerId: l, analyticsContext: o }), !0)
     );
 }

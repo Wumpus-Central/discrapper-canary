@@ -26,32 +26,33 @@ var d = n(91242),
     u = n(165610),
     _ = n(5867);
 async function E(e) {
-    let { applicationId: t, surface: n, customId: l, referrerId: c } = e,
-        _ = (0, u.VA)(t, n),
-        E = d.A.getFrame(_);
-    if (null != E) return E.intent === u.sV.MAIN && (I(_), f({ frameId: _, layoutMode: u.y0.FOCUSED })), _;
+    let { applicationId: t, surface: n, customId: l, referrerId: c, analyticsContext: _ } = e,
+        E = (0, u.VA)(t, n),
+        h = d.A.getFrame(E);
+    if (null != h) return h.intent === u.sV.MAIN && (I(E), f({ frameId: E, layoutMode: u.y0.FOCUSED })), E;
     (0, u.Yf)(n) === u.sV.MAIN && (o(), A()),
-        i.h.dispatch({ type: "FRAME_LAUNCH_START", applicationId: t, frameId: _, surface: n });
+        i.h.dispatch({ type: "FRAME_LAUNCH_START", applicationId: t, frameId: E, surface: n });
     try {
         let e = await (0, r.D2)(t, (0, u.h)(n));
         return (
             i.h.dispatch({
                 type: "FRAME_LAUNCH",
                 applicationId: t,
-                frameId: _,
+                frameId: E,
                 surface: n,
                 proxyTicket: e,
                 customId: l,
                 referrerId: c,
+                analyticsContext: _,
             }),
-            _
+            E
         );
     } catch (r) {
         let e = (0, s.A)(),
             n = await (0, a.f)(r, t);
         throw (
             (e.showLaunchErrorModal(n.message),
-            i.h.dispatch({ type: "FRAME_LAUNCH_FAIL", applicationId: t, frameId: _, error: r }),
+            i.h.dispatch({ type: "FRAME_LAUNCH_FAIL", applicationId: t, frameId: E, error: r }),
             r)
         );
     }

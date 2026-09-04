@@ -90,7 +90,11 @@ function el(e) {
                               label: W.intl.string(W.t.RscU7I),
                               trackingArea: q.kY.PLAY,
                               onClick() {
-                                  R.A.launchFrame({ applicationId: t.id, surface: en.sd });
+                                  R.A.launchFrame({
+                                      applicationId: t.id,
+                                      surface: en.sd,
+                                      analyticsContext: { isStart: !0, analyticsLocations: _ },
+                                  });
                               },
                           })
                         : (G &&
@@ -272,7 +276,11 @@ function eh(e) {
               label: W.intl.string(W.t.RscU7I),
               trackingArea: q.kY.PLAY,
               onClick() {
-                  R.A.launchFrame({ applicationId: t.id, surface: en.sd });
+                  R.A.launchFrame({
+                      applicationId: t.id,
+                      surface: en.sd,
+                      analyticsContext: { isStart: !0, analyticsLocations: m, channelId: h },
+                  });
               },
           })
         : (C &&

@@ -28,7 +28,11 @@ function f(e) {
         f?.();
         try {
             p
-                ? await a.A.launchFrame({ applicationId: t, surface: C.sd })
+                ? await a.A.launchFrame({
+                      applicationId: t,
+                      surface: C.sd,
+                      analyticsContext: { isStart: !0, analyticsLocations: n },
+                  })
                 : m?.bot?.id != null && (await (0, s.Q)({ appId: t, botId: m?.bot?.id, analyticsLocations: n ?? [] }));
         } catch (e) {}
         E?.();

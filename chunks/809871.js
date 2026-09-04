@@ -20,8 +20,8 @@ class f extends c.A {
             this.handleRPCDisconnect(e);
         },
         FRAME_LAUNCH: (e) => {
-            let { applicationId: t } = e;
-            (0, u.Pd)(t);
+            let { applicationId: t, analyticsContext: n } = e;
+            (0, u.Pd)(t, n);
         },
         FRAME_LAUNCH_FAIL: (e) => {
             let { applicationId: t } = e;
