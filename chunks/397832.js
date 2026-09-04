@@ -31,7 +31,7 @@ var P = n(202541),
     R = n(45938),
     M = n(158045),
     O = n(577381),
-    L = n(750532),
+    L = n(127175),
     k = n(216641),
     w = n(222707),
     U = n(403581),
@@ -76,17 +76,17 @@ function B(e) {
 var H = n(340034),
     W = n(753261),
     Y = n(531536),
-    K = n(924799);
-function V(e) {
+    V = n(924799);
+function K(e) {
     let { fallback: t } = e,
         { enabled: n } = W.E.useConfig({ location: "PremiumUnifiedCheckoutOrbsRewardNotice" });
     return n
         ? (0, l.jsx)("div", {
-              className: K.kL,
+              className: V.kL,
               children: (0, l.jsx)(Y.W, {
-                  className: K.Vs,
+                  className: V.Vs,
                   image: (0, l.jsx)("img", {
-                      className: K.L8,
+                      className: V.L8,
                       alt: "",
                       src: "https://cdn.discordapp.com/assets/content/b6d1d954e5c9ccfd2356d7af86ca2a4a59717635cc6f558f731edb2e6046b25c.png",
                   }),
@@ -119,7 +119,7 @@ function $(e) {
         } = e,
         {
             checkoutInvoicePreview: Y,
-            checkoutPriceOptions: K,
+            checkoutPriceOptions: V,
             checkoutInvoiceError: $,
             referralTrialOfferId: J,
             isGift: X,
@@ -309,7 +309,7 @@ function $(e) {
             isGift: X,
         }),
         eU = X && er.interval === P.WT.YEAR && (0, M.xq)(er.id),
-        eD = (0, M.L_)({ planId: er.id, isGift: !0, priceOptions: K, subscriptionPlan: er }),
+        eD = (0, M.L_)({ planId: er.id, isGift: !0, priceOptions: V, subscriptionPlan: er }),
         eG = i.useMemo(() => {
             if (null != eD && eU)
                 return { headerBadgeText: _.intl.formatToPlainString(Q.default["Mi5BH/"], { percentOff: eD }) };
@@ -351,11 +351,11 @@ function $(e) {
         })({ skuId: er.skuId, isGift: X }),
         eW = (0, O.i)({ planSkuId: er.skuId, invoice: eb }),
         eY = (0, x.Mq)(er) && ey.includes(r.a.SUMMER_2026_GOGO_FAKE_SKU_ID),
-        eK = i.useMemo(() => {
-            let e = eB ?? eW ?? null;
-            return eY ? (0, l.jsx)(V, { fallback: e }) : e;
-        }, [eY, eB, eW]),
         eV = i.useMemo(() => {
+            let e = eB ?? eW ?? null;
+            return eY ? (0, l.jsx)(K, { fallback: e }) : e;
+        }, [eY, eB, eW]),
+        eK = i.useMemo(() => {
             let e = [];
             return (
                 null != D && "" !== D && e.push({ type: "warning", message: D, key: "review-warning" }),
@@ -376,10 +376,10 @@ function $(e) {
             );
         }, [D, eN, ew, eP, es, eO, ep, ec, eH]),
         eZ = null != em ? em.invoicePreview : null,
-        { priceOptions: eq, planPricesLoading: ez } = (0, M.Pr)(K, eZ, $),
+        { priceOptions: eq, planPricesLoading: ez } = (0, M.Pr)(V, eZ, $),
         eQ = {
             shouldShowGlobalNotices: !0,
-            upperInlineNoticeProps: eV,
+            upperInlineNoticeProps: eK,
             planSelectContent: eA
                 ? (0, l.jsx)(Z.X, {
                       disabled: eh || en,
@@ -391,7 +391,7 @@ function $(e) {
                   })
                 : void 0,
             paymentMethodContent: eR,
-            promotionalNoticeContent: eK,
+            promotionalNoticeContent: eV,
             headerBadgeConfig: eF,
         };
     if (null == em && null != $) return (0, l.jsx)(u.T_, { ...eQ, legalContent: null });

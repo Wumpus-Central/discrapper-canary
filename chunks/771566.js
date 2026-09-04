@@ -12,7 +12,7 @@ var l,
     p = n(71804),
     C = n(721836),
     h = n(951305),
-    f = n(972607),
+    f = n(605151),
     E = n(419212),
     S = n(97352),
     y = n(67480),
@@ -185,8 +185,8 @@ function H(e) {
             startingIsInPastDueCheckout: e.startingIsInPastDueCheckout,
         })),
         { theme: Y } = (0, c.wR)(),
-        K = (0, o.bG)([y.A], () => (null != h ? y.A.get(h.id) : null)),
-        V = (0, g.b2)(T),
+        V = (0, o.bG)([y.A], () => (null != h ? y.A.get(h.id) : null)),
+        K = (0, g.b2)(T),
         Z = H === k.uH.META_QUEST_WEB_REDIRECT_CHECKOUT;
     function q(e) {
         return B
@@ -205,10 +205,10 @@ function H(e) {
     }
     if (
         (r.useEffect(() => {
-            if (null == h || null != K) return;
+            if (null == h || null != V) return;
             let { applicationId: e, id: t } = h;
             (0, m.EX)(e, t).catch(L.FXj);
-        }, [h, K]),
+        }, [h, V]),
         W)
     )
         t = (0, i.jsx)(u.E, {
@@ -224,14 +224,14 @@ function H(e) {
             className: G.Qq,
             children: (0, i.jsxs)("p", { children: [U.intl.string(U.t.bIVRSQ), " ", U.intl.string(U.t["0UJqOy"])] }),
         });
-    else if (null != K)
+    else if (null != V)
         t = (0, i.jsx)(u.E, {
             variant: "text-md/medium",
             color: "interactive-text-default",
             className: G.Qq,
-            children: U.intl.format(U.t["tsQOs+"], { skuName: K.name }),
+            children: U.intl.format(U.t["tsQOs+"], { skuName: V.name }),
         });
-    else if (V && !f) {
+    else if (K && !f) {
         let e = S.A.get(l);
         s()(null != e, "Missing plan"),
             e.skuId === M.pe.TIER_0
@@ -308,8 +308,8 @@ function H(e) {
             ? U.intl.string(w.default.clIveA)
             : "deeplink_to_desktop_app" === N || H === k.uH.MOBILE_WEB_REDIRECT_CHECKOUT
               ? U.intl.string(U.t.sRApon)
-              : null != K
-                ? U.intl.formatToPlainString(U.t["1qGgm4"], { skuName: K.name })
+              : null != V
+                ? U.intl.formatToPlainString(U.t["1qGgm4"], { skuName: V.name })
                 : f
                   ? U.intl.string(U.t.QJ9EyM)
                   : null != v
@@ -335,25 +335,34 @@ function H(e) {
     });
 }
 function W(e) {
-    let { planId: t, onClose: n } = e,
+    let { planId: t, onClose: n, shouldUsePostPurchaseRecipientDelivery: l = !1 } = e,
         {
-            giftRecipient: l,
-            selectedGiftStyle: r,
-            hasSentMessage: a,
-            giftMessageError: u,
-            isSendingMessage: c,
+            giftRecipient: r,
+            selectedGiftStyle: a,
+            hasSentMessage: u,
+            giftMessageError: c,
+            isSendingMessage: d,
         } = (0, h.Pv)(),
-        d = (0, o.bG)([S.A], () => S.A.get(t));
-    s()(null != d, "Missing plan");
-    let m = (0, o.bG)([E.A], () => E.A.getGiftCode(d.skuId));
+        m = (0, o.bG)([S.A], () => S.A.get(t));
+    s()(null != m, "Missing plan");
+    let p = (0, o.bG)([E.A], () => E.A.getGiftCode(m.skuId)),
+        { quantity: y, checkoutSessionId: I } = (0, C.t4)((e) => ({
+            quantity: e.quantity,
+            checkoutSessionId: e.contextMetadata.loadId,
+        })),
+        A = (0, o.bG)([E.A], () => E.A.isGiftCodeDeliveryReady(I), [I]);
     return (0, i.jsx)(f.A, {
-        giftCode: m,
-        subscriptionPlan: d,
+        giftCode: p,
+        giftCount: y,
+        checkoutSessionId: I,
+        giftCodeDeliveryReady: A,
+        shouldUsePostPurchaseRecipientDelivery: l,
+        subscriptionPlan: m,
         onClose: n,
-        selectedGiftStyle: r,
-        hasSentMessage: a,
-        giftRecipient: l,
-        giftMessageError: u,
-        isSendingMessage: c,
+        selectedGiftStyle: a,
+        hasSentMessage: u,
+        giftRecipient: r,
+        giftMessageError: c,
+        isSendingMessage: d,
     });
 }

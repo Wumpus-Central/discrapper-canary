@@ -1,12 +1,12 @@
-i.d(e, { Ay: () => g, GM: () => S, HY: () => C });
+i.d(e, { Ay: () => g, GM: () => S, HY: () => C, kW: () => y });
 var s = i(636537),
     r = i(228366),
     n = i(913122),
-    l = i(178253),
-    o = i(627363),
+    o = i(178253),
+    l = i(627363),
     a = i(587895),
-    p = i(197111),
-    c = i(839534),
+    c = i(197111),
+    p = i(839534),
     d = i(590180),
     u = i(166590),
     _ = i(45938),
@@ -23,11 +23,11 @@ async function S(t) {
             let t = a.A.getApplication(s.application_id);
             if (null == t)
                 try {
-                    await o.Ay.fetchApplication(s.application_id);
+                    await l.Ay.fetchApplication(s.application_id);
                 } catch (t) {}
         }
         if (s.application_id === h.FYj) {
-            await (0, c.Jp)(s.sku_id);
+            await (0, p.Jp)(s.sku_id);
             let t = d.A.getProduct(s.sku_id);
             if (t?.items.some(u.g) === !0) throw new n.eR("Client update required to redeem this gift");
         }
@@ -38,12 +38,22 @@ async function S(t) {
 }
 function C(t) {
     return (
-        t instanceof l.A
+        t instanceof o.A
             ? 404 !== t.status &&
               E.A.captureException(t.error, { tags: { gift_code_resolve_status: String(t.status ?? "unknown") } })
             : t instanceof Error && E.A.captureException(t),
         null
     );
+}
+async function y(t, e) {
+    return (
+        await s.Bo.post({
+            url: h.Rsh.USER_GIFT_CODE_DELIVERIES,
+            body: { checkout_session_id: e, recipient_ids: t },
+            oldFormErrors: !0,
+            rejectWithError: !0,
+        })
+    ).body;
 }
 let g = {
     resolveGiftCode: S,
@@ -89,7 +99,7 @@ let g = {
         }
     },
     openNativeGiftCodeModal(t) {
-        p.A.openNativeAppModal(t, h.e$_.GIFT_CODE_BROWSER);
+        c.A.openNativeAppModal(t, h.e$_.GIFT_CODE_BROWSER);
     },
     ...i(75255).A,
 };

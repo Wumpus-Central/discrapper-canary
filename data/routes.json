@@ -536,6 +536,7 @@
   "GIFT_CODE_REDEEM": "/entitlements/gift-codes/:param/redeem",
   "PARTNER_PROMOTIONS": "/entitlements/partner-promotions/:param",
   "USER_GIFT_CODE_CREATE": "/users/@me/entitlements/gift-codes",
+  "USER_GIFT_CODE_DELIVERIES": "/users/@me/gift-code-deliveries",
   "USER_GIFT_CODE_REVOKE": "/users/@me/entitlements/gift-codes/:param",
   "USER_GIFT_CODES": "/users/@me/entitlements/gift-codes",
   "GIFT_INTENTS_DISMISS": "/users/@me/gift-intents/dismiss",

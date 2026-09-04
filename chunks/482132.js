@@ -15,79 +15,81 @@ var l = n(477900),
     f = n(166532),
     E = n(819252);
 function S(e) {
-    let { header: t, stepProps: n } = (function (e) {
-            let { header: t, ...n } = e;
-            return { header: t, stepProps: n };
+    let {
+            header: t,
+            disableDefaultSlideTransformStyling: n,
+            stepProps: r,
+        } = (function (e) {
+            let { header: t, disableDefaultSlideTransformStyling: n, ...l } = e;
+            return { header: t, disableDefaultSlideTransformStyling: n, stepProps: l };
         })(e),
-        { step: r, stepConfigs: s } = (0, m.Ay)(),
-        { setBodyNode: S, setFooterNode: y, setModalOverlayNode: I } = (0, p.Gm)(),
-        A = (0, u.bG)([h.A], () => h.A.isDisplayingWowMomentConfirmation),
-        { setReadySlideId: g, unifiedCheckoutFlow: P } = (0, C.t4)((e) => ({
+        { step: s, stepConfigs: S } = (0, m.Ay)(),
+        { setBodyNode: y, setFooterNode: I, setModalOverlayNode: A } = (0, p.Gm)(),
+        g = (0, u.bG)([h.A], () => h.A.isDisplayingWowMomentConfirmation),
+        { setReadySlideId: P, unifiedCheckoutFlow: v } = (0, C.t4)((e) => ({
             setReadySlideId: e.setReadySlideId,
             unifiedCheckoutFlow: e.unifiedCheckoutFlow,
         })),
-        v = s.find((e) => e.key === r);
+        _ = S.find((e) => e.key === s);
     if (
         (i.useEffect(() => {
-            I(null);
-        }, [r, I]),
-        null == v)
+            A(null);
+        }, [s, A]),
+        null == _)
     )
         throw new d.vd({
             message: "Unknown step for current payment flow (PaymentModalStep)",
-            extraSentryInformation: { stepConfig: v, step: r, unifiedCheckoutFlow: P, stepConfigs: s },
+            extraSentryInformation: { stepConfig: _, step: s, unifiedCheckoutFlow: v, stepConfigs: S },
         });
-    let _ = v?.options?.hideSlider ?? !1,
-        x = v?.options?.hideDefaultModalBody ?? !1,
-        T = v?.options?.sliderBodyClassName,
-        N = r === f.pn.REVIEW,
-        b = i.useCallback(
+    let x = _?.options?.hideSlider ?? !1,
+        T = _?.options?.hideDefaultModalBody ?? !1,
+        N = _?.options?.sliderBodyClassName,
+        b = s === f.pn.REVIEW,
+        j = i.useCallback(
             (e, t) => {
-                t === r && S(e);
+                t === s && y(e);
             },
-            [r, S],
+            [s, y],
         );
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (v?.options?.renderHeader ?? !0) ? t : null,
-            v.renderStep(n),
-            null == r || _
+            (_?.options?.renderHeader ?? !0) ? t : null,
+            _.renderStep(r),
+            null == s || x
                 ? null
                 : (0, l.jsxs)(l.Fragment, {
                       children: [
-                          x
+                          T
                               ? null
                               : (0, l.jsx)(o.c, {
                                     children: (0, l.jsx)(c.t, {
                                         shouldUseMediaQueriesForSizing: !0,
-                                        activeSlide: r,
+                                        activeSlide: s,
                                         centered: !1,
-                                        onSlideReady: (e) => g(e),
+                                        onSlideReady: (e) => P(e),
                                         width: "100%",
-                                        disableDefaultTransformStyling: N,
-                                        overflow: A ? "visible" : void 0,
-                                        children: s
-                                            .filter((e) => null != e.key)
-                                            .map((e) =>
-                                                (0, l.jsx)(
-                                                    c.q,
-                                                    {
-                                                        id: e.key,
-                                                        children: (0, l.jsx)("form", {
-                                                            className: a()(E.OO, { [E.Wq]: N }, T),
-                                                            ref: (t) => b(t, e.key),
-                                                            onSubmit: (e) => e.preventDefault(),
-                                                        }),
-                                                    },
-                                                    e.key,
-                                                ),
+                                        disableDefaultTransformStyling: b || n,
+                                        overflow: g ? "visible" : void 0,
+                                        children: S.filter((e) => null != e.key).map((e) =>
+                                            (0, l.jsx)(
+                                                c.q,
+                                                {
+                                                    id: e.key,
+                                                    children: (0, l.jsx)("form", {
+                                                        className: a()(E.OO, { [E.Wq]: b }, N),
+                                                        ref: (t) => j(t, e.key),
+                                                        onSubmit: (e) => e.preventDefault(),
+                                                    }),
+                                                },
+                                                e.key,
                                             ),
+                                        ),
                                     }),
                                 }),
-                          (0, l.jsx)("div", { ref: (e) => y(e) }),
+                          (0, l.jsx)("div", { ref: (e) => I(e) }),
                           (0, l.jsx)("div", {
                               ref: (e) => {
-                                  I(e);
+                                  A(e);
                               },
                           }),
                       ],

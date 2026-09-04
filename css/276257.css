@@ -1,3 +1,18 @@
+.content__6f0cc {
+    gap: var(--space-24)
+}
+
+.content__6f0cc,
+.fields__6f0cc {
+    display: flex;
+    flex-direction: column;
+    width: 100%
+}
+
+.fields__6f0cc {
+    gap: var(--space-16)
+}
+
 .blurb_cd2ff7 {
     color: var(--text-default);
     margin-top: 10px
@@ -127,4 +142,4 @@
     padding-bottom: var(--space-8)
 }
 
-/*# sourceMappingURL=609110.be37fbb7d7deb236.css.map*/
+/*# sourceMappingURL=276257.06b3f8aa659df324.css.map*/
