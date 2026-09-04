@@ -4634,22 +4634,6 @@
     }
   },
   {
-    "kind": "user",
-    "name": "2026-07-create-gdm-title",
-    "defaultConfig": {
-      "enabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true
-      }
-    }
-  },
-  {
     "name": "2026-07-custom-app-store-overlay",
     "kind": "user",
     "defaultConfig": {
