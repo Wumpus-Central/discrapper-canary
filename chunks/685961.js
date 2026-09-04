@@ -907,27 +907,27 @@ let e2 = (e) => {
         ],
     });
 };
-var e7 = l(285496);
-let e5 = (e) => {
+var e5 = l(285496);
+let e9 = (e) => {
     let { event: t } = e,
         l = (0, G.bG)([eZ.A], () => eZ.A.getGuild(t.guild_id));
     return null == l
         ? null
         : (0, n.jsxs)("div", {
-              className: e7.kL,
+              className: e5.kL,
               children: [
                   (0, n.jsx)(_.D, {
-                      className: e7.wx,
+                      className: e5.wx,
                       variant: "heading-sm/semibold",
                       children: T.intl.string(T.t.SDTOL7),
                   }),
                   (0, n.jsxs)("div", {
-                      className: e7.bo,
+                      className: e5.bo,
                       children: [
                           (0, n.jsxs)("div", {
-                              className: e7.OA,
+                              className: e5.OA,
                               children: [
-                                  (0, n.jsx)(eJ.Ay, { guild: l, size: eJ.Ay.Sizes.MINI, className: e7.$f }),
+                                  (0, n.jsx)(eJ.Ay, { guild: l, size: eJ.Ay.Sizes.MINI, className: e5.$f }),
                                   (0, n.jsx)(P.E, {
                                       color: "text-default",
                                       variant: "text-sm/normal",
@@ -941,7 +941,7 @@ let e5 = (e) => {
               ],
           });
 };
-var e9 = l(101405);
+var e7 = l(101405);
 let e6 = (e) => {
         let {
                 node: { header: t, subheader: l, button: i },
@@ -952,7 +952,7 @@ let e6 = (e) => {
             u = i?.type === "submit",
             o = a.useMemo(() => e_.A.reactParserFor({ ...e_.A.defaultRules, link: eA }), []);
         return (0, n.jsxs)("div", {
-            className: e9.N,
+            className: e7.N,
             children: [
                 d || null == t || "" === t
                     ? null
@@ -961,7 +961,7 @@ let e6 = (e) => {
                     ? (0, n.jsx)(P.E, {
                           variant: "text-md/normal",
                           color: "text-subtle",
-                          className: e9.m,
+                          className: e7.m,
                           children: o(l),
                       })
                     : null,
@@ -1519,19 +1519,19 @@ function t4(e) {
 }
 var t8 = l(778712),
     t2 = l(730134),
-    t7 = l(243899);
-let t5 = (e) => {
+    t5 = l(243899);
+let t9 = (e) => {
     let { user: t } = e;
     return (0, n.jsxs)("div", {
-        className: t7.kL,
+        className: t5.kL,
         children: [
-            (0, n.jsx)(_.D, { className: t7.wx, variant: "heading-sm/semibold", children: T.intl.string(T.t.Rsth7z) }),
+            (0, n.jsx)(_.D, { className: t5.wx, variant: "heading-sm/semibold", children: T.intl.string(T.t.Rsth7z) }),
             (0, n.jsx)("div", {
-                className: t7.f1,
+                className: t5.f1,
                 children: (0, n.jsxs)("div", {
-                    className: t7.eF,
+                    className: t5.eF,
                     children: [
-                        (0, n.jsx)(t2.A, { className: t7.Hk, user: t, size: t8._3.SIZE_40 }),
+                        (0, n.jsx)(t2.A, { className: t5.Hk, user: t, size: t8._3.SIZE_40 }),
                         (0, n.jsxs)("div", {
                             children: [
                                 null != t.globalName &&
@@ -1553,7 +1553,7 @@ let t5 = (e) => {
         ],
     });
 };
-var t9 = l(711871),
+var t7 = l(159454),
     t6 = l(287809),
     le = l(818972);
 let lt = (e) => {
@@ -1569,7 +1569,7 @@ let lt = (e) => {
                           variant: "heading-sm/semibold",
                           children: T.intl.string(T.t.SpsnDY),
                       }),
-                      (0, n.jsx)(t9.u, { widget: t, user: a, allowEditing: !1, disableInteraction: !0 }),
+                      (0, n.jsx)(t7.u, { widget: t, user: a, allowEditing: !1, disableInteraction: !0 }),
                   ],
               });
     },
@@ -1807,7 +1807,7 @@ let ls = (e) => {
                     null != la(t, "message_preview") &&
                         ("message" === l.name || "first_dm" === l.name || "report_to_mod_message" === l.name) &&
                         (0, n.jsx)(tj, { message: l.record }),
-                    null != la(t, "user_preview") && "user" === l.name ? (0, n.jsx)(t5, { user: l.record }) : null,
+                    null != la(t, "user_preview") && "user" === l.name ? (0, n.jsx)(t9, { user: l.record }) : null,
                     null != la(t, "widget_preview") && "widget" === l.name
                         ? (0, n.jsx)(lt, { widget: l.widget, userId: l.user_id })
                         : null,
@@ -1887,7 +1887,7 @@ let ls = (e) => {
                         (0, n.jsx)(tY, { stageInstance: l.record }),
                     null != la(t, "guild_scheduled_event_preview") &&
                         "guild_scheduled_event" === l.name &&
-                        (0, n.jsx)(e5, { event: l.record }),
+                        (0, n.jsx)(e9, { event: l.record }),
                     null != la(t, "guild_directory_entry_preview") &&
                         "guild_directory_entry" === l.name &&
                         (0, n.jsx)(e0, { entry: l.record }),

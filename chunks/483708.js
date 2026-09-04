@@ -1,4 +1,4 @@
-n.d(t, { K: () => t9, A: () => t6 });
+n.d(t, { K: () => t4, A: () => t6 });
 var i = n(477900),
     l = n(582128),
     s = n(503698),
@@ -185,7 +185,7 @@ function el(e) {
         L = d.length > 0;
     return _ || L || !m
         ? _ || L || m
-            ? (0, i.jsxs)(t9, {
+            ? (0, i.jsxs)(t4, {
                   className: ei.XG,
                   fade: !0,
                   children: [
@@ -299,7 +299,7 @@ function eg(e) {
         l.useEffect(() => {
             (0, eo.A)(t.id, m);
         }, [t.id, m]),
-        (0, i.jsx)(t9, {
+        (0, i.jsx)(t4, {
             className: ec.XG,
             children:
                 null == u
@@ -350,7 +350,7 @@ function eh(e) {
     let { user: t, onClose: n } = e,
         { trackUserProfileAction: l } = (0, g.NJ)(),
         { mutualGuilds: s, isFetching: r } = (0, ea.A)(t);
-    return (0, i.jsx)(t9, {
+    return (0, i.jsx)(t4, {
         className: ec.XG,
         fade: !0,
         children:
@@ -387,7 +387,7 @@ function eh(e) {
                   : (0, i.jsx)(J, {}),
     });
 }
-var eI = n(711871),
+var eI = n(159454),
     ep = n(132500),
     eA = n(777480),
     ej = n(821609),
@@ -435,13 +435,13 @@ let e2 = (0, n(945810).mj)({
     variations: { 1: { isEnabled: !0 } },
 });
 var e7 = n(724834),
-    e3 = n(451395),
-    e5 = n(823016),
-    e9 = n(100741);
-function e4(e) {
+    e5 = n(451395),
+    e3 = n(823016),
+    e4 = n(100741);
+function e9(e) {
     let { item: t, index: n, wishlistId: l, onReorder: s, children: r } = e,
-        { manageFocusOnReorder: a } = (0, e5.r)();
-    return (0, i.jsx)(e3.mG, {
+        { manageFocusOnReorder: a } = (0, e3.r)();
+    return (0, i.jsx)(e5.mG, {
         index: n,
         itemId: String(t.skuId),
         listType: String(l),
@@ -450,11 +450,11 @@ function e4(e) {
         "aria-label": B.intl.formatToPlainString(B.t["7SnyMA"], { positionNumber: n + 1 }),
         onReorder: s,
         onEnd: () => a(String(t.skuId)),
-        className: e9.C,
-        dropBeforeClassName: e9.A,
-        dropAfterClassName: e9.Ze,
-        draggingClassName: e9.Id,
-        children: (0, i.jsx)("div", { className: e9.An, children: r }),
+        className: e4.C,
+        dropBeforeClassName: e4.A,
+        dropAfterClassName: e4.Ze,
+        draggingClassName: e4.Id,
+        children: (0, i.jsx)("div", { className: e4.An, children: r }),
     });
 }
 let e6 = l.memo(function (e) {
@@ -469,13 +469,13 @@ let e6 = l.memo(function (e) {
             onReorder: u,
             isNew: c,
         } = e,
-        { registerDragHandleRef: g } = (0, e5.r)(),
+        { registerDragHandleRef: g } = (0, e3.r)(),
         m = l.useMemo(
             () =>
                 a
-                    ? (0, i.jsx)(e3.jV, {
+                    ? (0, i.jsx)(e5.jV, {
                           buttonRef: g(String(t.skuId)),
-                          className: e9.BU,
+                          className: e4.BU,
                           onFocus: (e) => e.stopPropagation(),
                       })
                     : void 0,
@@ -496,7 +496,7 @@ let e6 = l.memo(function (e) {
         );
     return a
         ? (0, i.jsx)("li", {
-              children: (0, i.jsx)(e4, { item: t, index: n, wishlistId: o, onReorder: u, children: f }),
+              children: (0, i.jsx)(e9, { item: t, index: n, wishlistId: o, onReorder: u, children: f }),
           })
         : (0, i.jsx)("li", { children: f });
 });
@@ -537,7 +537,7 @@ function te(e) {
         );
     if (null == d || null == u) return null;
     let h = (0, i.jsx)("ul", {
-        className: e9.Vg,
+        className: e4.Vg,
         children: m.map((e, t) =>
             (0, i.jsx)(
                 e6,
@@ -556,7 +556,7 @@ function te(e) {
             ),
         ),
     });
-    return a ? (0, i.jsx)(e5.B, { emptyListFallbackRef: null, children: h }) : h;
+    return a ? (0, i.jsx)(e3.B, { emptyListFallbackRef: null, children: h }) : h;
 }
 function tt(e) {
     let t = eB.default.getCurrentUser()?.id,
@@ -1271,7 +1271,7 @@ function t7(e) {
         ],
     });
 }
-function t3(e) {
+function t5(e) {
     let { profileOwner: t, guildId: n } = e,
         s = l.useRef(null);
     (0, eX.i)({ containerRef: s, itemType: "WISHLIST_ITEM" });
@@ -1337,7 +1337,7 @@ function t3(e) {
         });
     if (null == o || null != x) return null;
     let b = null == g || 0 === g.items.length;
-    return (0, i.jsxs)(t9, {
+    return (0, i.jsxs)(t4, {
         scrollerRef: s,
         className: r()({ [t$.XG]: !b }),
         fade: !0,
@@ -1385,12 +1385,12 @@ function t3(e) {
         ],
     });
 }
-var t5 = n(131058);
-function t9(e) {
-    let { children: t, className: n, scrollerRef: l, ...s } = e;
-    return (0, i.jsx)(a.Ip, { ref: l, className: r()(t5.gN, n), fade: !0, ...s, children: t });
-}
+var t3 = n(131058);
 function t4(e) {
+    let { children: t, className: n, scrollerRef: l, ...s } = e;
+    return (0, i.jsx)(a.Ip, { ref: l, className: r()(t3.gN, n), fade: !0, ...s, children: t });
+}
+function t9(e) {
     let { user: t, currentUser: n, section: l, displayProfile: s, guildId: r, channelId: a, onClose: o } = e;
     return l === en.RP.ACTIVITY
         ? (0, i.jsx)(el, { user: t, currentUser: n, displayProfile: s, guildId: r, channelId: a, onClose: o })
@@ -1401,7 +1401,7 @@ function t4(e) {
             : l === en.RP.WIDGETS
               ? (0, i.jsx)(eI.A, { user: t, guildId: r, channelId: a })
               : l === en.RP.WISHLIST
-                ? (0, i.jsx)(t3, { profileOwner: t, guildId: r })
+                ? (0, i.jsx)(t5, { profileOwner: t, guildId: r })
                 : null;
 }
 function t6(e) {
@@ -1427,12 +1427,12 @@ function t6(e) {
     return (
         T.section !== b && k(T.section),
         (0, i.jsxs)("div", {
-            className: t5.kL,
+            className: t3.kL,
             children: [
                 v && (0, i.jsx)(f.kM, { location: "UserProfileModalV2Tabs" }),
                 (0, i.jsx)(a.Ip, {
                     orientation: "horizontal",
-                    className: t5.gU,
+                    className: t3.gU,
                     fade: !0,
                     scrollbarGutter: !1,
                     children: (0, i.jsx)(o.V, {
@@ -1448,7 +1448,7 @@ function t6(e) {
                             (0, i.jsxs)(
                                 o.V.Item,
                                 {
-                                    className: t5.YU,
+                                    className: t3.YU,
                                     id: e.section,
                                     "aria-label":
                                         !0 === e.showNewContentDot
@@ -1456,7 +1456,7 @@ function t6(e) {
                                             : e.text,
                                     children: [
                                         e.text,
-                                        !0 === e.showNewContentDot && (0, i.jsx)(h.A, { className: t5.Pf }),
+                                        !0 === e.showNewContentDot && (0, i.jsx)(h.A, { className: t3.Pf }),
                                     ],
                                 },
                                 e.section,
@@ -1467,10 +1467,10 @@ function t6(e) {
                 (0, i.jsx)(o.V.Panel, {
                     id: T.section,
                     "aria-label": T.text,
-                    className: t5.NM,
+                    className: t3.NM,
                     children: (0, i.jsx)(d.F, {
                         component: (0, i.jsx)(u.A, { children: (0, i.jsx)(d.H, { children: T.text }) }),
-                        children: (0, i.jsx)(t4, {
+                        children: (0, i.jsx)(t9, {
                             user: t,
                             currentUser: n,
                             displayProfile: s,
