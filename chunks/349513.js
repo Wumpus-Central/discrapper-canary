@@ -1,13 +1,13 @@
 let r;
-t.d(n, { Ay: () => A, qg: () => m, rX: () => v });
+t.d(n, { Ay: () => j, qg: () => m });
 let i = Array(128).fill(void 0);
 i.push(void 0, null, !0, !1);
 let o = 0,
     _ = null;
-function a() {
+function u() {
     return (null === _ || 0 === _.byteLength) && (_ = new Uint8Array(r.memory.buffer)), _;
 }
-let u =
+let a =
         "u" > typeof TextEncoder
             ? new TextEncoder("utf-8")
             : {
@@ -16,20 +16,20 @@ let u =
                   },
               },
     c =
-        "function" == typeof u.encodeInto
+        "function" == typeof a.encodeInto
             ? function (e, n) {
-                  return u.encodeInto(e, n);
+                  return a.encodeInto(e, n);
               }
             : function (e, n) {
-                  let t = u.encode(e);
+                  let t = a.encode(e);
                   return n.set(t), { read: e.length, written: t.length };
               };
 function b(e, n, t) {
     if (void 0 === t) {
-        let t = u.encode(e),
+        let t = a.encode(e),
             r = n(t.length, 1) >>> 0;
         return (
-            a()
+            u()
                 .subarray(r, r + t.length)
                 .set(t),
             (o = t.length),
@@ -38,7 +38,7 @@ function b(e, n, t) {
     }
     let r = e.length,
         i = n(r, 1) >>> 0,
-        _ = a(),
+        _ = u(),
         b = 0;
     for (; b < r; b++) {
         let n = e.charCodeAt(b);
@@ -47,17 +47,17 @@ function b(e, n, t) {
     }
     if (b !== r) {
         0 !== b && (e = e.slice(b)), (i = t(i, r, (r = b + 3 * e.length), 1) >>> 0);
-        let n = c(e, a().subarray(i + b, i + r));
+        let n = c(e, u().subarray(i + b, i + r));
         (b += n.written), (i = t(i, r, b, 1) >>> 0);
     }
     return (o = b), i;
 }
-let f = null;
-function s() {
+let s = null;
+function f() {
     return (
-        (null === f || !0 === f.buffer.detached || (void 0 === f.buffer.detached && f.buffer !== r.memory.buffer)) &&
-            (f = new DataView(r.memory.buffer)),
-        f
+        (null === s || !0 === s.buffer.detached || (void 0 === s.buffer.detached && s.buffer !== r.memory.buffer)) &&
+            (s = new DataView(r.memory.buffer)),
+        s
     );
 }
 let l = i.length;
@@ -89,37 +89,20 @@ let p =
               },
           };
 function h(e, n) {
-    return (e >>>= 0), p.decode(a().subarray(e, e + n));
+    return (e >>>= 0), p.decode(u().subarray(e, e + n));
 }
 function m(e, n, t) {
     try {
-        let a = r.__wbindgen_add_to_stack_pointer(-16),
-            u = b(e, r.__wbindgen_export_0, r.__wbindgen_export_1),
+        let u = r.__wbindgen_add_to_stack_pointer(-16),
+            a = b(e, r.__wbindgen_export_0, r.__wbindgen_export_1),
             c = o;
-        r.parse(a, u, c, g(n), y(t) ? 0x100000001 : t >>> 0);
-        var i = s().getInt32(a + 0, !0),
-            _ = s().getInt32(a + 4, !0);
-        if (s().getInt32(a + 8, !0)) throw w(_);
+        r.parse(u, a, c, g(n), y(t) ? 0x100000001 : t >>> 0);
+        var i = f().getInt32(u + 0, !0),
+            _ = f().getInt32(u + 4, !0);
+        if (f().getInt32(u + 8, !0)) throw w(_);
         return w(i);
     } finally {
         r.__wbindgen_add_to_stack_pointer(16);
-    }
-}
-function v(e) {
-    let n, t;
-    try {
-        let b = r.__wbindgen_add_to_stack_pointer(-16);
-        r.unparse(b, g(e));
-        var i = s().getInt32(b + 0, !0),
-            o = s().getInt32(b + 4, !0),
-            _ = s().getInt32(b + 8, !0),
-            a = s().getInt32(b + 12, !0),
-            u = i,
-            c = o;
-        if (a) throw ((u = 0), (c = 0), w(_));
-        return (n = u), (t = c), h(u, c);
-    } finally {
-        r.__wbindgen_add_to_stack_pointer(16), r.__wbindgen_export_3(n, t, 1);
     }
 }
 async function x(e, n) {
@@ -143,7 +126,7 @@ async function x(e, n) {
         return t instanceof WebAssembly.Instance ? { instance: t, module: e } : t;
     }
 }
-async function j(e) {
+async function v(e) {
     let n;
     if (void 0 !== r) return r;
     void 0 !== e &&
@@ -152,13 +135,13 @@ async function j(e) {
             : console.warn(
                   "using deprecated parameters for the initialization function; pass a single object instead",
               )),
-        void 0 === e && (e = new URL(t(607921), t.b));
-    let a =
+        void 0 === e && (e = new URL(t(424932), t.b));
+    let u =
         (((n = {}).wbg = {}),
         (n.wbg.__wbg_String_8f0eb39a4a4c2f66 = function (e, n) {
             let t = b(String(i[n]), r.__wbindgen_export_0, r.__wbindgen_export_1),
                 _ = o;
-            s().setInt32(e + 4, _, !0), s().setInt32(e + 0, t, !0);
+            f().setInt32(e + 4, _, !0), f().setInt32(e + 0, t, !0);
         }),
         (n.wbg.__wbg_buffer_609cc3eee51ed158 = function (e) {
             return g(i[e].buffer);
@@ -173,9 +156,6 @@ async function j(e) {
         }),
         (n.wbg.__wbg_entries_3265d4158b33e5dc = function (e) {
             return g(Object.entries(i[e]));
-        }),
-        (n.wbg.__wbg_from_2a5d3e218e67aa85 = function (e) {
-            return g(Array.from(i[e]));
         }),
         (n.wbg.__wbg_get_67b2ba62fc30de12 = function () {
             return d(function (e, n) {
@@ -242,9 +222,6 @@ async function j(e) {
         (n.wbg.__wbg_new_a12002a7f91c75be = function (e) {
             return g(new Uint8Array(i[e]));
         }),
-        (n.wbg.__wbg_newwithbyteoffsetandlength_d97e637ebe145a9a = function (e, n, t) {
-            return g(new Uint8Array(i[e], n >>> 0, t >>> 0));
-        }),
         (n.wbg.__wbg_next_25feadfc0913fea9 = function (e) {
             return g(i[e].next);
         }),
@@ -280,7 +257,7 @@ async function j(e) {
         (n.wbg.__wbindgen_bigint_get_as_i64 = function (e, n) {
             let t = i[n],
                 r = "bigint" == typeof t ? t : void 0;
-            s().setBigInt64(e + 8, y(r) ? BigInt(0) : r, !0), s().setInt32(e + 0, !y(r), !0);
+            f().setBigInt64(e + 8, y(r) ? BigInt(0) : r, !0), f().setInt32(e + 0, !y(r), !0);
         }),
         (n.wbg.__wbindgen_boolean_get = function (e) {
             let n = i[e];
@@ -325,7 +302,7 @@ ${n.stack}`
                     r.__wbindgen_export_1,
                 ),
                 _ = o;
-            s().setInt32(e + 4, _, !0), s().setInt32(e + 0, t, !0);
+            f().setInt32(e + 4, _, !0), f().setInt32(e + 0, t, !0);
         }),
         (n.wbg.__wbindgen_error_new = function (e, n) {
             return g(Error(h(e, n)));
@@ -364,7 +341,7 @@ ${n.stack}`
         (n.wbg.__wbindgen_number_get = function (e, n) {
             let t = i[n],
                 r = "number" == typeof t ? t : void 0;
-            s().setFloat64(e + 8, y(r) ? 0 : r, !0), s().setInt32(e + 0, !y(r), !0);
+            f().setFloat64(e + 8, y(r) ? 0 : r, !0), f().setInt32(e + 0, !y(r), !0);
         }),
         (n.wbg.__wbindgen_number_new = function (e) {
             return g(e);
@@ -378,9 +355,9 @@ ${n.stack}`
         (n.wbg.__wbindgen_string_get = function (e, n) {
             let t = i[n],
                 _ = "string" == typeof t ? t : void 0;
-            var a = y(_) ? 0 : b(_, r.__wbindgen_export_0, r.__wbindgen_export_1),
-                u = o;
-            s().setInt32(e + 4, u, !0), s().setInt32(e + 0, a, !0);
+            var u = y(_) ? 0 : b(_, r.__wbindgen_export_0, r.__wbindgen_export_1),
+                a = o;
+            f().setInt32(e + 4, a, !0), f().setInt32(e + 0, u, !0);
         }),
         (n.wbg.__wbindgen_string_new = function (e, n) {
             return g(h(e, n));
@@ -393,8 +370,8 @@ ${n.stack}`
         ("function" == typeof Request && e instanceof Request) ||
         ("function" == typeof URL && e instanceof URL)) &&
         (e = fetch(e));
-    let { instance: u, module: c } = await x(await e, a);
-    return (r = u.exports), (j.__wbindgen_wasm_module = c), (f = null), (_ = null), r;
+    let { instance: a, module: c } = await x(await e, u);
+    return (r = a.exports), (v.__wbindgen_wasm_module = c), (s = null), (_ = null), r;
 }
 "u" > typeof TextDecoder && p.decode();
-let A = j;
+let j = v;

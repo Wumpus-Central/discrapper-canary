@@ -4,28 +4,31 @@ function i(e, n) {
     if (null == e) throw Error(`Attempted to render "${n}" but no renderer was provided`);
 }
 function o({ node: e, renderers: n, ...t }) {
-    let a = n[e.type];
-    if ((i(a, e.type), Array.isArray(e.value)))
-        return (0, r.jsx)(a, { node: e, ...t, children: (0, r.jsx)(_, { nodes: e.value, renderers: n }) });
+    let u = n[e.type];
+    if ((i(u, e.type), Array.isArray(e.value)))
+        return (0, r.jsx)(u, { node: e, ...t, children: (0, r.jsx)(_, { nodes: e.value, renderers: n }) });
     switch (e.type) {
         case "mention":
         case "timestamp":
         case "emoji":
         case "code_block":
-            return (0, r.jsx)(a, { node: e, ...e.value, ...t });
+            return (0, r.jsx)(u, { node: e, ...e.value, ...t });
         case "link": {
-            let { text: i, target: o } = e.value,
-                u = null;
-            return (
-                i ? (u = (0, r.jsx)(_, { nodes: i, renderers: n })) : "url" === o.type && (u = o.value),
-                (0, r.jsx)(a, { node: e, ...e.value, ...t, children: u })
-            );
+            let i = e.value,
+                o = null;
+            if ("normal" === i.type) {
+                let {
+                    value: { text: e, url: t },
+                } = i;
+                o = e ? (0, r.jsx)(_, { nodes: e, renderers: n }) : t;
+            }
+            return (0, r.jsx)(u, { node: e, ...e.value, ...t, children: o });
         }
         case "text":
         case "code":
-            return (0, r.jsx)(a, { node: e, ...t, children: e.value });
+            return (0, r.jsx)(u, { node: e, ...t, children: e.value });
         case "heading":
-            return (0, r.jsx)(a, {
+            return (0, r.jsx)(u, {
                 node: e,
                 level: e.value.level,
                 ...t,
@@ -35,7 +38,7 @@ function o({ node: e, renderers: n, ...t }) {
             let o = n.listItem;
             return (
                 i(o, "listItem"),
-                (0, r.jsx)(a, {
+                (0, r.jsx)(u, {
                     node: e,
                     ...e.value,
                     ...t,
@@ -55,9 +58,9 @@ function o({ node: e, renderers: n, ...t }) {
             );
         }
         case "empty":
-            return (0, r.jsx)(a, { ...t });
+            return (0, r.jsx)(u, { ...t });
         case "small":
-            return (0, r.jsx)(a, { node: e, ...t, children: (0, r.jsx)(_, { nodes: e.value.content, renderers: n }) });
+            return (0, r.jsx)(u, { node: e, ...t, children: (0, r.jsx)(_, { nodes: e.value.content, renderers: n }) });
         default:
             throw TypeError(`Unknown node type "${e.type}"`);
     }

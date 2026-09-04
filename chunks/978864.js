@@ -20,7 +20,7 @@ t.d(n, {
                         for (let n of t.value.items) yield* e(n.content);
                         break;
                     case "link":
-                        t.value.text && (yield* e(t.value.text));
+                        t.text && (yield* e(t.text));
                 }
         },
 });
