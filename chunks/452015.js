@@ -84,22 +84,21 @@ function eo(e) {
         a = (0, ei.qH)(),
         o = "staff" === a,
         c = "entitled" === a,
-        h = "upgrade" === a,
-        g = (0, u.bG)([et.Ay], () => et.Ay.getSection(n)),
-        { enabled: f } = $.A.useConfig({ location: r }),
-        [A, E] = (0, Z.kn)(f && !o ? [d.M.NITRO_GDM_CAP_COACHMARK] : []),
-        p = A === d.M.NITRO_GDM_CAP_COACHMARK,
-        m = l.useCallback(() => {
+        h = (0, u.bG)([et.Ay], () => et.Ay.getSection(n)),
+        { enabled: g } = $.A.useConfig({ location: r }),
+        [f, A] = (0, Z.kn)(g && !o ? [d.M.NITRO_GDM_CAP_COACHMARK] : []),
+        E = f === d.M.NITRO_GDM_CAP_COACHMARK,
+        p = l.useCallback(() => {
             en.default.track(el.HAw.PREMIUM_PROMOTION_OPENED, { location: r, location_object: el.ZSU.BUTTON_CTA }),
-                E(er.i.TAKE_ACTION);
-        }, [r, E]),
-        I = l.useCallback(() => {
-            s(), E(er.i.TAKE_ACTION);
-        }, [s, E]);
-    return p
+                A(er.i.TAKE_ACTION);
+        }, [r, A]),
+        m = l.useCallback(() => {
+            s(), A(er.i.TAKE_ACTION);
+        }, [s, A]);
+    return E
         ? (0, i.jsx)(ee.A, {
               subscriptionTier: es.pe.TIER_2,
-              onClick: m,
+              onClick: p,
               children: (e) => {
                   let { onClick: n } = e;
                   return (0, i.jsx)(
@@ -111,10 +110,10 @@ function eo(e) {
                           gradientColor: "nitro-pink",
                           badge: { type: "beta", variant: "expressive" },
                           title: ea.intl.string(ea.t.d8Spvj),
-                          body: ea.intl.formatToPlainString(h ? ea.t.ePNvSP : ea.t.SXkUiv, { number: 25 }),
+                          body: ea.intl.formatToPlainString(ea.t.SXkUiv, { number: 25 }),
                           actions: [
                               c
-                                  ? { text: ea.intl.string(ea.t.yZOtoD), variant: "primary", icon: U.D, onClick: I }
+                                  ? { text: ea.intl.string(ea.t.yZOtoD), variant: "primary", icon: U.D, onClick: m }
                                   : {
                                         text: ea.intl.string((0, ei.o9)(a)),
                                         variant: "expressive",
@@ -122,9 +121,9 @@ function eo(e) {
                                         onClick: n,
                                     },
                           ],
-                          onRequestClose: () => E(er.i.USER_DISMISS),
+                          onRequestClose: () => A(er.i.USER_DISMISS),
                       },
-                      g,
+                      h,
                   );
               },
           })
@@ -134,8 +133,7 @@ if (221552 != n.j) var Q = n(403581);
 var eu = n(87719);
 function ed(e) {
     let { location: t, nitroAudience: n, transitionState: r, onClose: s } = e,
-        a = "upgrade" === n,
-        u = l.useCallback(async () => {
+        a = l.useCallback(async () => {
             en.default.track(el.HAw.PREMIUM_PROMOTION_OPENED, { location: t, location_object: el.ZSU.BUTTON_CTA }),
                 await s(),
                 (0, eu.e)();
@@ -148,9 +146,9 @@ function ed(e) {
                 transitionState: r ?? D.ip.ENTERED,
                 onClose: async () => await s(),
                 title: ea.intl.formatToPlainString(ea.t.IyBYPN, { number: el.wLU }),
-                subtitle: ea.intl.formatToPlainString(a ? ea.t["8+6MUw"] : ea.t["Ae97n/"], { number: 25 }),
+                subtitle: ea.intl.formatToPlainString(ea.t["Ae97n/"], { number: 25 }),
                 actions: [
-                    { text: ea.intl.string(ea.t.PUZmk4), variant: "secondary", onClick: u },
+                    { text: ea.intl.string(ea.t.PUZmk4), variant: "secondary", onClick: a },
                     {
                         text: ea.intl.string((0, ei.o9)(n)),
                         variant: "expressive",
@@ -184,9 +182,8 @@ let em = { mass: 1, tension: 320, friction: 30, clamp: !0 },
             p = l.useRef(1.4),
             S = l.useRef(null),
             C = l.useRef(null),
-            _ = "upgrade" === a,
-            N = (0, ei.yh)(a) && r >= s && o,
-            T = l.useCallback(() => {
+            _ = (0, ei.yh)(a) && r >= s && o,
+            N = l.useCallback(() => {
                 E(p.current),
                     (p.current = Math.min(p.current + 2, 15)),
                     h(!0),
@@ -200,20 +197,20 @@ let em = { mass: 1, tension: 320, friction: 30, clamp: !0 },
                         f(!1), (C.current = null);
                     }, 1e3));
             }, []);
-        l.useImperativeHandle(t, () => ({ shake: T }), [T]),
+        l.useImperativeHandle(t, () => ({ shake: N }), [N]),
             l.useEffect(() => {
-                N || (p.current = 1.4);
-            }, [N]),
+                _ || (p.current = 1.4);
+            }, [_]),
             l.useEffect(
                 () => () => {
                     null != S.current && clearTimeout(S.current), null != C.current && clearTimeout(C.current);
                 },
                 [],
             );
-        let v = l.useCallback(() => {
+        let T = l.useCallback(() => {
             en.default.track(el.HAw.PREMIUM_PROMOTION_OPENED, { location: n });
         }, [n]);
-        return (0, ef.p)(N, {
+        return (0, ef.p)(_, {
             from: { transform: "translateY(16px)", opacity: 0.4 },
             enter: { transform: "translateY(0)", opacity: 1 },
             leave: { transform: "translateY(16px)", opacity: 0 },
@@ -240,9 +237,7 @@ let em = { mass: 1, tension: 320, friction: 30, clamp: !0 },
                                     (0, i.jsx)(m.E, {
                                         variant: "text-xs/normal",
                                         color: "text-default",
-                                        children: ea.intl.formatToPlainString(_ ? ea.t["9k2yq6"] : ea.t["8o8Zk5"], {
-                                            number: 25,
-                                        }),
+                                        children: ea.intl.formatToPlainString(ea.t["8o8Zk5"], { number: 25 }),
                                     }),
                                 ],
                             }),
@@ -258,7 +253,7 @@ let em = { mass: 1, tension: 320, friction: 30, clamp: !0 },
                                             text: ea.intl.string((0, ei.o9)(a)),
                                             icon: Q.t,
                                             onClick: (e) => {
-                                                v(), t(e);
+                                                T(), t(e);
                                             },
                                         });
                                     },
