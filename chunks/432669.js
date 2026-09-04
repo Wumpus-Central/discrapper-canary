@@ -1,42 +1,42 @@
-a.d(e, { default: () => c });
+a.d(t, { default: () => u });
 var s = a(477900),
     i = a(582128),
-    r = a(285899),
-    l = a(498480),
-    n = a(349085),
-    o = a(394107),
-    d = a(375708),
-    u = a(512743);
-function c(t) {
-    let { guildId: e, gameInstance: a, ...c } = t,
-        [f, m] = i.useState(!1),
-        [k, v] = i.useState(void 0),
-        g = (0, n.A)(a.gameId, "cover");
-    return (0, s.jsx)(r.O, {
+    n = a(922545),
+    d = a(498480),
+    l = a(349085),
+    c = a(394107),
+    r = a(375708),
+    o = a(512743);
+function u(e) {
+    let { guildId: t, gameInstance: a, ...u } = e,
+        [m, g] = i.useState(!1),
+        [h, p] = i.useState(void 0),
+        k = (0, l.A)(a.gameId, "cover");
+    return (0, s.jsx)(n.O, {
         size: "sm",
         title: a.name,
         body: (0, s.jsx)("div", {
-            className: u.Z,
-            children: (0, s.jsx)("img", { alt: "", src: g ?? "", className: u.S }),
+            className: o.Z,
+            children: (0, s.jsx)("img", { alt: "", src: k ?? "", className: o.S }),
         }),
-        warningText: d.intl.string(o.default.ukbS3E),
-        acknowledgementText: d.intl.string(o.default.xjRtF9),
-        isLoading: f,
-        error: k,
+        warningText: r.intl.string(c.default.ukbS3E),
+        acknowledgementText: r.intl.string(c.default.xjRtF9),
+        isLoading: m,
+        error: h,
         onDeactivate: () => {
-            v(void 0),
-                m(!0),
-                (0, l.e_)(e, a.planId, a.entitlementId)
+            p(void 0),
+                g(!0),
+                (0, d.e_)(t, a.planId, a.entitlementId)
                     .then(() => {
-                        c.onClose();
+                        u.onClose();
                     })
-                    .catch((t) => {
-                        v(t.body.message ?? t.message);
+                    .catch((e) => {
+                        p(e.body.message ?? e.message);
                     })
                     .finally(() => {
-                        m(!1);
+                        g(!1);
                     });
         },
-        ...c,
+        ...u,
     });
 }

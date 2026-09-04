@@ -1,99 +1,114 @@
-l.d(t, { A: () => E });
-var n = l(582128),
-    u = l(17928),
-    o = l(192308),
-    r = l(688810),
-    i = l(987144),
-    s = l(71393),
-    a = l(403362),
-    d = l(645619),
-    c = l(864310),
-    p = l(568065),
-    b = l(181940),
-    A = l(477900),
-    h = l(652215);
-function f(e, t, n) {
-    n && (0, o.closeAllModals)(),
-        null != t &&
-            (0, o.openModalLazy)(async () => {
-                let { default: n } = await Promise.all([
-                    l.e("954422"),
-                    l.e("522052"),
-                    l.e("226850"),
-                    l.e("454048"),
-                    l.e("364827"),
-                    l.e("784569"),
-                    l.e("322455"),
-                    l.e("770698"),
-                    l.e("706350"),
-                    l.e("652038"),
-                    l.e("669149"),
-                    l.e("51763"),
-                    l.e("135016"),
-                    l.e("980565"),
-                    l.e("200957"),
-                    l.e("50186"),
-                    l.e("542592"),
-                ]).then(l.bind(l, 843214));
-                return (l) => (0, A.jsx)(n, { guildId: e, powerup: t, ...l });
-            });
-}
-function E(e, t) {
-    let { skipActivateModal: l } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        { analyticsLocations: o } = (0, r.Ay)(),
-        { onToggle: A, isLoading: E, error: g } = (0, b.A)(e, t),
-        P = (0, u.bG)([s.A], () => s.A.getGuild(e)),
-        m = (function (e, t) {
-            let l = (0, u.bG)([s.A], () => s.A.getGuild(e)),
-                o = (0, u.bG)([d.A], () => d.A.getStateForGuild(e)),
-                { spent: r } = (0, c.A)(e),
-                i = n.useMemo(() => {
-                    if (null == t || t.type !== p.o9.LEVEL || null == o) return [];
+n.d(t, { A: () => f });
+var l = n(582128),
+    u = n(17928),
+    r = n(192308),
+    o = n(688810),
+    i = n(987144),
+    s = n(71393),
+    a = n(403362),
+    c = n(645619),
+    d = n(864310),
+    p = n(568065),
+    b = n(181940),
+    A = n(477900),
+    E = n(652215);
+function f(e, t) {
+    let { skipActivateModal: f } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+        { analyticsLocations: h } = (0, o.Ay)(),
+        { onToggle: L, isLoading: P, error: g } = (0, b.A)(e, t),
+        m = (0, u.bG)([s.A], () => s.A.getGuild(e)),
+        y = (function (e, t) {
+            let n = (0, u.bG)([s.A], () => s.A.getGuild(e)),
+                r = (0, u.bG)([c.A], () => c.A.getStateForGuild(e)),
+                { spent: o } = (0, d.A)(e),
+                i = l.useMemo(() => {
+                    if (null == t || t.type !== p.o9.LEVEL || null == r) return [];
                     let e = p.y7[t.skuId];
                     return null == e
                         ? []
                         : Object.entries(p.wr)
                               .filter((t) => {
-                                  let [l, n] = t;
-                                  return n === e && null != o.unlockedPowerups[l];
+                                  let [n, l] = t;
+                                  return l === e && null != r.unlockedPowerups[n];
                               })
                               .map((e) => {
                                   let [t] = e;
-                                  return o.allPowerups[t];
+                                  return r.allPowerups[t];
                               })
                               .filter(a.Vq);
-                }, [t, o]),
+                }, [t, r]),
                 b = i?.reduce((e, t) => e + t.cost, 0);
-            return Math.max((l?.premiumSubscriberCount ?? 0) - r + (b ?? 0), 0);
+            return Math.max((n?.premiumSubscriberCount ?? 0) - o + (b ?? 0), 0);
         })(e, t);
     return {
-        onActivate: n.useCallback(
+        onActivate: l.useCallback(
             function () {
-                let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-                    { shouldCloseAllModals: n = !0 } = e;
-                if (null != P && null != t)
-                    return m < t.cost
-                        ? void (0, i.g)({
-                              analyticsLocation: {
-                                  page: h.liQ.GUILD_POWERUPS_OVERVIEW,
-                                  section: h.JJy.GUILD_POWERUPS_OVERVIEW_CARD,
-                              },
-                              numberOfBoostsToAdd: t.cost - m,
-                              analyticsLocations: o,
-                              guild: P,
-                              intent: t.type === p.o9.LEVEL ? p.Pn.LEVEL : p.Pn.PERK,
-                              onSubscribeComplete: () =>
-                                  A(!0)?.then(() => {
-                                      l || f(P.id, t, n);
-                                  }),
-                          })
-                        : A(!0)?.then(() => {
-                              l || f(P.id, t, n);
-                          });
+                let l = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+                    { shouldCloseAllModals: u = !0 } = l;
+                if (null == m || null == t) return;
+                let o = !1;
+                function s() {
+                    if (!o)
+                        return (
+                            (o = !0),
+                            L(!0)?.then(() => {
+                                f ||
+                                    (u && (0, r.closeAllModals)(),
+                                    null != t &&
+                                        (0, r.openModalLazy)(async () => {
+                                            let { default: l } = await Promise.all([
+                                                n.e("414522"),
+                                                n.e("522052"),
+                                                n.e("514024"),
+                                                n.e("645499"),
+                                                n.e("454048"),
+                                                n.e("364827"),
+                                                n.e("784569"),
+                                                n.e("147786"),
+                                                n.e("87306"),
+                                                n.e("123216"),
+                                                n.e("784041"),
+                                                n.e("843719"),
+                                                n.e("322455"),
+                                                n.e("504045"),
+                                                n.e("770698"),
+                                                n.e("706350"),
+                                                n.e("149379"),
+                                                n.e("445046"),
+                                                n.e("669149"),
+                                                n.e("980565"),
+                                                n.e("135016"),
+                                                n.e("200957"),
+                                                n.e("979541"),
+                                                n.e("486032"),
+                                                n.e("50186"),
+                                                n.e("302211"),
+                                            ]).then(n.bind(n, 843214));
+                                            return (n) => (0, A.jsx)(l, { guildId: e, powerup: t, ...n });
+                                        }));
+                            })
+                        );
+                }
+                return y < t.cost
+                    ? void (0, i.g)({
+                          analyticsLocation: {
+                              page: E.liQ.GUILD_POWERUPS_OVERVIEW,
+                              section: E.JJy.GUILD_POWERUPS_OVERVIEW_CARD,
+                          },
+                          numberOfBoostsToAdd: t.cost - y,
+                          analyticsLocations: h,
+                          guild: m,
+                          intent: t.type === p.o9.LEVEL ? p.Pn.LEVEL : p.Pn.PERK,
+                          onSubscribeComplete: s,
+                          handleSubscribeModalClose: (e) => {
+                              if (e) return s();
+                          },
+                      })
+                    : s();
             },
-            [A, t, m, o, P, l],
+            [L, t, y, h, m, e, f],
         ),
-        isLoading: E,
+        isLoading: P,
         error: g,
     };
 }

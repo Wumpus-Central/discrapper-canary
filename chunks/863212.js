@@ -163,7 +163,7 @@ let _ = [
                             t);
                     return (0, l.jsx)("div", {
                         className: i()(b.frame, b[a]),
-                        children: (0, l.jsx)(h.A, { guildId: n, widgets: _ }),
+                        children: (0, l.jsx)(h.A, { canEdit: !0, guildId: n, widgets: _ }),
                     });
                 },
                 controls: {
