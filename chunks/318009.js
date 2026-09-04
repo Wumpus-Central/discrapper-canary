@@ -2,8 +2,8 @@ n.d(t, { A: () => y });
 var r = n(477900),
     i = n(582128),
     s = n(562708),
-    o = n(508382),
-    l = n(17928),
+    l = n(508382),
+    o = n(17928),
     a = n(980707),
     c = n(442433),
     d = n(139286),
@@ -19,7 +19,7 @@ function A(e) {
     let {
             children: t,
             close: n,
-            onUnmount: l,
+            onUnmount: o,
             target: a,
             rect: c,
             position: h,
@@ -33,9 +33,9 @@ function A(e) {
     i.useEffect(() => {
         x.current = n;
     });
-    let w = i.useRef(l);
+    let w = i.useRef(o);
     i.useEffect(() => {
-        w.current = l;
+        w.current = o;
     }),
         i.useEffect(() => () => w.current?.(), []),
         (0, d.A)({ type: s.ImpressionTypes.MENU, name: g, properties: A });
@@ -47,7 +47,7 @@ function A(e) {
             E.dispatch(p.jej.POPOUT_HIDE);
         }, [E]),
         N = a.ownerDocument;
-    return (0, r.jsx)(o.Ow, {
+    return (0, r.jsx)(l.Ow, {
         focus: "modal",
         returnFocusElement: a,
         spacing: 0,
@@ -57,7 +57,7 @@ function A(e) {
             e ? C() : (b(), "outside-press" === n && setTimeout(m, 0), x.current());
         },
         overrideTargetRect: c,
-        placement: (0, o.Pv)(h ?? "right", f ?? "top"),
+        placement: (0, l.Pv)(h ?? "right", f ?? "top"),
         blockPointerEvents: !v,
         crossAccessFlip: !1,
         autoUpdate: y,
@@ -109,21 +109,21 @@ class v extends i.PureComponent {
                 isOpen: n,
                 theme: i,
                 config: s,
-                rect: o,
-                renderWindow: l,
+                rect: l,
+                renderWindow: o,
                 renderLazy: a,
             } = this.props,
             c = this.state.render ?? this.props.render;
         return n &&
-            null != o &&
+            null != l &&
             null != s &&
             null != t &&
             null != c &&
             s.context === e &&
-            t.ownerDocument?.defaultView === l
+            t.ownerDocument?.defaultView === o
             ? (0, r.jsx)(A, {
                   target: t,
-                  rect: o,
+                  rect: l,
                   close: this.close,
                   onUnmount: s.onClose,
                   align: s.align,
@@ -133,8 +133,8 @@ class v extends i.PureComponent {
                   disableClickTrap: s.disableClickTrap ?? !1,
                   repositionOnContentChange: null != a || !0 === s.repositionOnContentChange,
                   children: (n, r) => {
-                      let { position: o } = n;
-                      return c({ position: o, theme: i, onHeightUpdate: r, config: s, target: t, context: e });
+                      let { position: l } = n;
+                      return c({ position: l, theme: i, onHeightUpdate: r, config: s, target: t, context: e });
                   },
               })
             : null;
@@ -145,8 +145,8 @@ function y() {
             contextMenu: e,
             version: t,
             isOpen: n,
-        } = (0, l.cf)([f.A], () => ({ contextMenu: f.A.getContextMenu(), version: f.A.version, isOpen: f.A.isOpen() })),
-        s = (0, l.bG)([h.A], () => h.A.theme),
-        { appContext: o, renderWindow: a } = i.useContext(u.Ay);
-    return (0, r.jsx)(v, { appContext: o, renderWindow: a, ...e, isOpen: n, theme: s, closeContextMenu: c.Z_ }, t);
+        } = (0, o.cf)([f.A], () => ({ contextMenu: f.A.getContextMenu(), version: f.A.version, isOpen: f.A.isOpen() })),
+        s = (0, o.bG)([h.A], () => h.A.theme),
+        { appContext: l, renderWindow: a } = i.useContext(u.Ay);
+    return (0, r.jsx)(v, { appContext: l, renderWindow: a, ...e, isOpen: n, theme: s, closeContextMenu: c.Z_ }, t);
 }

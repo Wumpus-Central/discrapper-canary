@@ -1,5 +1,5 @@
 n.d(t, {
-    $x: () => w,
+    $x: () => N,
     AO: () => S,
     MO: () => R,
     YB: () => x,
@@ -8,7 +8,7 @@ n.d(t, {
     sl: () => I,
     uK: () => _,
     vr: () => k,
-    x5: () => N,
+    x5: () => w,
     zk: () => E,
 }),
     n(321073);
@@ -93,10 +93,10 @@ async function T(e) {
 async function R(e, t, n) {
     return (await i.Bo.patch({ url: y.Rsh.GUILD_STICKER(e, t), body: n, rejectWithError: (0, i.fT)() })).body;
 }
-function w(e, t, n) {
+function N(e, t, n) {
     a.h.dispatch({ type: "ADD_STICKER_PREVIEW", channelId: e, sticker: t, draftType: n });
 }
-function N(e, t) {
+function w(e, t) {
     a.h.dispatch({ type: "CLEAR_STICKER_PREVIEW", channelId: e, draftType: t });
 }
 function b(e) {

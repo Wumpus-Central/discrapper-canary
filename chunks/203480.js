@@ -2,8 +2,8 @@ n.d(t, { A: () => A });
 var r = n(582128),
     i = n(621466),
     s = n(17928),
-    o = n(192308),
-    l = n(312138),
+    l = n(192308),
+    o = n(312138),
     a = n(775121),
     c = n(955572),
     d = n(775602),
@@ -16,7 +16,7 @@ function p(e) {
     e.key !== g.N$.Tab ||
         t ||
         __OVERLAY__ ||
-        (0, o.hasAnyModalOpen)() ||
+        (0, l.hasAnyModalOpen)() ||
         u.A.maybeShowKeyboardNavigationExplainerModal();
 }
 function m() {
@@ -24,8 +24,8 @@ function m() {
 }
 let A = function (e, t) {
     let n = (0, s.bG)([d.Ay], () => d.Ay.keyboardModeEnabled);
-    (0, l.Op)(n);
-    let o = (0, r.useCallback)(
+    (0, o.Op)(n);
+    let l = (0, r.useCallback)(
         (e) => {
             !(function (e, t) {
                 let n = (0, i.Cw)((0, i.BF)(e)?.activeElement);
@@ -65,14 +65,14 @@ let A = function (e, t) {
             () => (
                 n
                     ? (e.addEventListener("mousedown", m), e.addEventListener("keydown", p))
-                    : e.addEventListener("keydown", o),
+                    : e.addEventListener("keydown", l),
                 () => {
                     n
                         ? (e.removeEventListener("mousedown", m), e.removeEventListener("keydown", p))
-                        : e.removeEventListener("keydown", o);
+                        : e.removeEventListener("keydown", l);
                 }
             ),
-            [e, o, n],
+            [e, l, n],
         ),
         n
     );

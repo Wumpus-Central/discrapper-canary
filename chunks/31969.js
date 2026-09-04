@@ -1,4 +1,4 @@
-t.d(l, { F: () => w });
+t.d(l, { F: () => _ });
 var r = t(582128),
     n = t(17928),
     u = t(318254),
@@ -12,13 +12,13 @@ var r = t(582128),
     m = t(375708);
 let p = "{value}",
     v = { ORBS: u.C, TAG: o.TagIcon, NITRO: a.t };
-function _(e) {
+function g(e) {
     return null != e ? v[e] : void 0;
 }
-function g(e, l) {
+function w(e, l) {
     return null == e ? null : e.includes(p) ? (null == l ? null : e.replaceAll(p, String(l))) : e;
 }
-function w(e, l) {
+function _(e, l) {
     let { applicationId: t, skuId: u } = l,
         o = (0, f.A)({ applicationId: t }),
         a = (0, n.bG)([i.A], () => i.A.getPromotionIdsForSkuId(u), [u]),
@@ -37,7 +37,7 @@ function w(e, l) {
             "gift_customization" === e || "sku_gift_badge" === e || "vc_gift_recommendations" === e
                 ? c.QK.GIFT
                 : c.QK.SELF_PURCHASE,
-        w = (0, n.bG)(
+        _ = (0, n.bG)(
             [i.A],
             () =>
                 (function (e, l) {
@@ -58,7 +58,7 @@ function w(e, l) {
                 let e = p.storefront?.headerText;
                 if ((0, s.uJ)(e)) return null;
                 return {
-                    Icon: _(p.pdp?.icon ?? null),
+                    Icon: g(p.pdp?.icon ?? null),
                     text: e,
                     tooltip: null,
                     endsAt: l,
@@ -71,7 +71,7 @@ function w(e, l) {
                 let e = p.storefront?.headerText;
                 if ((0, s.uJ)(e)) return null;
                 return {
-                    Icon: _("TAG"),
+                    Icon: g("TAG"),
                     text: m.intl.string(d.default.hriMCc),
                     tooltip: e,
                     endsAt: l,
@@ -81,31 +81,31 @@ function w(e, l) {
                 };
             }
             case "gift_customization": {
-                if (null == w) return null;
-                let e = g(p.checkout?.label ?? null, w.amount);
+                if (null == _) return null;
+                let e = w(p.checkout?.label ?? null, _.amount);
                 if ((0, s.uJ)(e)) return null;
                 return {
-                    Icon: _(p.checkout?.icon ?? null),
+                    Icon: g(p.checkout?.icon ?? null),
                     text: e,
-                    tooltip: g(p.checkout?.tooltip ?? null, w.amount),
+                    tooltip: w(p.checkout?.tooltip ?? null, _.amount),
                     endsAt: l,
                     flavor: p.flavor,
-                    reward: w,
+                    reward: _,
                     rewardRequirements: p.rewardRequirements,
                 };
             }
             case "pdp":
             case "card": {
                 let e = p.pdp,
-                    t = g(e?.label ?? null, w?.amount ?? null);
+                    t = w(e?.label ?? null, _?.amount ?? null);
                 if ((0, s.uJ)(t)) return null;
                 return {
-                    Icon: _(e?.icon ?? null),
+                    Icon: g(e?.icon ?? null),
                     text: t,
-                    tooltip: g(e?.tooltip ?? null, w?.amount ?? null),
+                    tooltip: w(e?.tooltip ?? null, _?.amount ?? null),
                     endsAt: l,
                     flavor: p.flavor,
-                    reward: w,
+                    reward: _,
                     rewardRequirements: p.rewardRequirements,
                 };
             }
@@ -114,7 +114,7 @@ function w(e, l) {
                 let e = p.vcStream?.label;
                 if ((0, s.uJ)(e)) return null;
                 return {
-                    Icon: _(p.vcStream?.icon ?? null),
+                    Icon: g(p.vcStream?.icon ?? null),
                     text: e,
                     tooltip: p.vcStream?.tooltip ?? null,
                     endsAt: l,
@@ -125,20 +125,20 @@ function w(e, l) {
             }
             case "sku_purchase_badge":
             case "sku_gift_badge": {
-                if (null == w) return null;
+                if (null == _) return null;
                 let t = "sku_gift_badge" === e ? p.checkout : p.pdp,
-                    r = g(t?.label ?? null, w.amount);
+                    r = w(t?.label ?? null, _.amount);
                 if ((0, s.uJ)(r)) return null;
                 return {
-                    Icon: _("TAG"),
+                    Icon: g("TAG"),
                     text: m.intl.string(d.default.hriMCc),
-                    tooltip: g(t?.tooltip ?? null, w.amount),
+                    tooltip: w(t?.tooltip ?? null, _.amount),
                     endsAt: l,
                     flavor: p.flavor,
-                    reward: w,
+                    reward: _,
                     rewardRequirements: p.rewardRequirements,
                 };
             }
         }
-    }, [e, p, w]);
+    }, [e, p, _]);
 }

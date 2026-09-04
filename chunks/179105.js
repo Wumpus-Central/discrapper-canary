@@ -10,13 +10,13 @@ var i = l(477900),
     o = l(825484),
     f = l(821609),
     h = l(95477),
-    m = l(866665),
-    g = l(408278),
+    g = l(866665),
+    m = l(408278),
     E = l(241326),
     x = l(683071),
     A = l(2553),
-    _ = l(405810),
-    p = l(967198),
+    p = l(405810),
+    _ = l(967198),
     v = l(488428),
     S = l(776231),
     I = l(486020),
@@ -29,22 +29,22 @@ function D(e, t, l) {
         d = { size: (0, S.kr)(500 * (0, S.mZ)()) };
     return "jpg" === i && (d.quality = "lossless"), (r += `?${v.stringify(d)}`);
 }
-var y = l(61567),
-    C = l(375708),
-    b = l(868602),
+var b = l(61567),
+    y = l(375708),
+    C = l(868602),
     N = l(834730),
     T = l(445187),
     G = l(890497),
-    R = l(734057),
-    L = l(317525),
-    w = l(576705),
+    w = l(734057),
+    R = l(317525),
+    L = l(576705),
     U = l(935208);
 l(321073);
 var k = l(485845),
     B = l(136722),
-    W = l(435183),
-    M = l(155718),
-    P = l(795816),
+    P = l(435183),
+    W = l(155718),
+    M = l(795816),
     F = l(933958),
     O = l(574152),
     H = l(627363),
@@ -55,15 +55,15 @@ var k = l(485845),
     V = l(716357),
     $ = l(360469);
 function K() {
-    return (0, r.bG)([p.A, V.A], () => {
-        let e = p.A.getGuildId();
+    return (0, r.bG)([_.A, V.A], () => {
+        let e = _.A.getGuildId();
         return null != e ? V.A.getSpace(e)?.channel_id : void 0;
     });
 }
 async function Q(e) {
     null == q.A.getApplication($.NW) && (await (0, H.TA)($.NW));
     let t = F.Ay.getEmbeddedActivitiesForChannel(e).every((e) => e.applicationId !== $.NW);
-    return await (0, P.su)({
+    return await (0, M.su)({
         channelId: e,
         applicationId: $.NW,
         isStart: t,
@@ -75,10 +75,10 @@ async function Z(e) {
     let { channel: t, selectedRoleIds: l } = e,
         i = [];
     if (l.length > 0)
-        for (let e of (i.push({ id: t.guild_id, type: M.r2.ROLE, allow: X.x3, deny: j.xBc.USE_EMBEDDED_ACTIVITIES }),
+        for (let e of (i.push({ id: t.guild_id, type: W.r2.ROLE, allow: X.x3, deny: j.xBc.USE_EMBEDDED_ACTIVITIES }),
         l))
-            i.push({ id: e, type: M.r2.ROLE, allow: j.xBc.USE_EMBEDDED_ACTIVITIES, deny: X.x3 });
-    let n = await (0, W.RT)(t.id, { permissionOverwrites: i });
+            i.push({ id: e, type: W.r2.ROLE, allow: j.xBc.USE_EMBEDDED_ACTIVITIES, deny: X.x3 });
+    let n = await (0, P.RT)(t.id, { permissionOverwrites: i });
     if (!n.ok) throw n;
 }
 let J = [];
@@ -108,90 +108,90 @@ let ea = {
                 [S, I] = n.useState(v.title ?? ""),
                 [j, N] = n.useState(v.text ?? ""),
                 [T, G] = n.useState(v.image),
-                [R, L] = n.useState(null),
-                w = (0, r.bG)([p.A], () => p.A.getGuildId()),
-                U = void 0 !== T ? T : null != v.image_hash && null != w ? D(w, t.id, v.image_hash) : null;
+                [w, R] = n.useState(null),
+                L = (0, r.bG)([_.A], () => _.A.getGuildId()),
+                U = void 0 !== T ? T : null != v.image_hash && null != L ? D(L, t.id, v.image_hash) : null;
             return (0, i.jsxs)(d.B, {
                 gap: 16,
                 children: [
                     (0, i.jsx)(h.k, {
-                        label: C.intl.string(C.t.gnwWrx),
+                        label: y.intl.string(y.t.gnwWrx),
                         value: S,
                         onChange: function (e) {
-                            L(null), I(e);
+                            R(null), I(e);
                         },
                         maxLength: 100,
                         showCharacterCount: !0,
                     }),
                     (0, i.jsx)(c.D, {
-                        label: C.intl.string(C.t.X4IxWL),
+                        label: y.intl.string(y.t.X4IxWL),
                         children: (0, i.jsxs)(d.B, {
                             gap: 16,
                             direction: "horizontal",
                             align: "center",
                             justify: "space-between",
-                            className: b.B,
+                            className: C.B,
                             children: [
                                 (0, i.jsxs)(d.B, {
                                     gap: 8,
                                     direction: "horizontal",
                                     children: [
-                                        (0, i.jsx)(_.A, {
+                                        (0, i.jsx)(p.A, {
                                             variant: "secondary",
-                                            text: C.intl.string(C.t["MsUY/S"]),
+                                            text: y.intl.string(y.t["MsUY/S"]),
                                             onChange: function (e) {
-                                                L(null), G(e);
+                                                R(null), G(e);
                                             },
                                             maxFileSizeBytes: 0xa00000,
                                             onFileSizeError: () => (0, A.A)(0xa00000),
                                         }),
                                         null != U &&
-                                            (0, i.jsx)(m.m, {
-                                                text: C.intl.string(C.t.N86XcP),
+                                            (0, i.jsx)(g.m, {
+                                                text: y.intl.string(y.t.N86XcP),
                                                 ariaHidden: !0,
-                                                children: (0, i.jsx)(g.K, {
+                                                children: (0, i.jsx)(m.K, {
                                                     variant: "critical-secondary",
                                                     icon: E.TrashIcon,
                                                     onClick: function () {
-                                                        L(null), G(null);
+                                                        R(null), G(null);
                                                     },
-                                                    "aria-label": C.intl.string(C.t.N86XcP),
+                                                    "aria-label": y.intl.string(y.t.N86XcP),
                                                 }),
                                             }),
                                     ],
                                 }),
-                                null != U && (0, i.jsx)("img", { className: b.V, src: U, alt: "" }),
+                                null != U && (0, i.jsx)("img", { className: C.V, src: U, alt: "" }),
                             ],
                         }),
                     }),
                     (0, i.jsx)(u.f, {
-                        label: C.intl.string(C.t.COGMNC),
+                        label: y.intl.string(y.t.COGMNC),
                         value: j,
                         onChange: function (e) {
-                            L(null), N(e);
+                            R(null), N(e);
                         },
                         rows: 3,
                         autosize: !0,
                         maxLength: 500,
                         showCharacterCount: !0,
                     }),
-                    null != R &&
+                    null != w &&
                         (0, i.jsx)("div", {
                             role: "alert",
-                            children: (0, i.jsx)(x.w, { type: "critical", children: R }),
+                            children: (0, i.jsx)(x.w, { type: "critical", children: w }),
                         }),
                     (0, i.jsxs)(o.e, {
                         fullWidth: !0,
                         children: [
-                            (0, i.jsx)(f.$, { variant: "secondary", text: C.intl.string(C.t["ETE/oC"]), onClick: s }),
+                            (0, i.jsx)(f.$, { variant: "secondary", text: y.intl.string(y.t["ETE/oC"]), onClick: s }),
                             (0, i.jsx)(f.$, {
                                 variant: "primary",
-                                text: C.intl.string(C.t["R3BPH+"]),
+                                text: y.intl.string(y.t["R3BPH+"]),
                                 onClick: function () {
                                     let e;
                                     if (
                                         ((e = void 0 !== T ? null !== T : null != v.image_hash),
-                                        0 === j.length && !e && (L(C.intl.string(y.default.zleX9q)), 1))
+                                        0 === j.length && !e && (R(y.intl.string(b.default.zleX9q)), 1))
                                     )
                                         return;
                                     let t = {
@@ -218,9 +218,9 @@ let ea = {
             let t,
                 l,
                 a = K(),
-                s = (0, r.bG)([R.A, w.A], () => {
-                    let e = null != a ? R.A.getChannel(a) : void 0;
-                    return null != e && w.A.can(j.xBc.USE_EMBEDDED_ACTIVITIES, e);
+                s = (0, r.bG)([w.A, L.A], () => {
+                    let e = null != a ? w.A.getChannel(a) : void 0;
+                    return null != e && L.A.can(j.xBc.USE_EMBEDDED_ACTIVITIES, e);
                 }, [a]),
                 d = (0, r.bG)([F.Ay], () => {
                     let e = F.Ay.getCurrentEmbeddedActivity();
@@ -256,10 +256,10 @@ let ea = {
             n.useEffect(() => {
                 null == d && null != a && s && u && o && !h.current && ((h.current = !0), Q(a));
             }, [s, a, d, u, o]);
-            let m = n.useCallback(() => {
+            let g = n.useCallback(() => {
                     null != a && ((h.current = !0), Q(a));
                 }, [a]),
-                g = null != a && u && !o;
+                m = null != a && u && !o;
             return s
                 ? (0, i.jsxs)("div", {
                       className: en.kL,
@@ -271,14 +271,14 @@ let ea = {
                                   className: en.t$,
                               }),
                           null == d &&
-                              g &&
+                              m &&
                               (0, i.jsx)("div", {
                                   className: en.P5,
                                   children: (0, i.jsx)(f.$, {
                                       variant: "secondary",
-                                      text: C.intl.string(y.default.PSuly6),
+                                      text: y.intl.string(b.default.PSuly6),
                                       loading: c,
-                                      onClick: m,
+                                      onClick: g,
                                   }),
                               }),
                       ],
@@ -290,20 +290,20 @@ let ea = {
                           children: (0, i.jsx)(N.E, {
                               variant: "text-sm/normal",
                               color: "text-muted",
-                              children: C.intl.string(y.default["nXc/MQ"]),
+                              children: y.intl.string(b.default["nXc/MQ"]),
                           }),
                       }),
                   });
         },
         Edit: function (e) {
             let { cancel: t } = e,
-                l = (0, r.bG)([p.A], () => p.A.getGuildId()),
+                l = (0, r.bG)([_.A], () => _.A.getGuildId()),
                 a = U.default.castGuildIdAsEveryoneGuildRoleId(l),
                 s = K(),
-                c = (0, r.bG)([R.A], () => (null != s ? R.A.getChannel(s) : void 0), [s]),
-                u = (0, r.bG)([w.A], () => null != c && w.A.can(j.xBc.MANAGE_ROLES, c), [c]),
-                h = (0, r.bG)([L.A], () => (null == l ? J : L.A.getSortedRoles(l).filter((e) => e.id !== a)), [l, a]),
-                m = n.useMemo(() => {
+                c = (0, r.bG)([w.A], () => (null != s ? w.A.getChannel(s) : void 0), [s]),
+                u = (0, r.bG)([L.A], () => null != c && L.A.can(j.xBc.MANAGE_ROLES, c), [c]),
+                h = (0, r.bG)([R.A], () => (null == l ? J : R.A.getSortedRoles(l).filter((e) => e.id !== a)), [l, a]),
+                g = n.useMemo(() => {
                     let e;
                     return null != c
                         ? null != (e = c.permissionOverwrites[c.guild_id]) &&
@@ -317,18 +317,18 @@ let ea = {
                             : []
                         : [];
                 }, [c, h]),
-                [g, E] = n.useState(null),
-                [A, _] = n.useState(!1),
+                [m, E] = n.useState(null),
+                [A, p] = n.useState(!1),
                 [v, S] = n.useState(!1),
-                I = g ?? m,
+                I = m ?? g,
                 D = n.useMemo(() => h.map((e) => ({ id: e.id, label: e.name, value: e.id })), [h]);
-            async function b() {
+            async function C() {
                 if (null != c) {
-                    S(!1), _(!0);
+                    S(!1), p(!0);
                     try {
                         await Z({ channel: c, selectedRoleIds: I }), t();
                     } catch {
-                        _(!1), S(!0);
+                        p(!1), S(!0);
                     }
                 }
             }
@@ -339,9 +339,9 @@ let ea = {
                       children: [
                           (0, i.jsx)(G.Z, {
                               selectionMode: "multiple",
-                              label: C.intl.string(y.default.XXLbfv),
-                              description: C.intl.string(y.default.XrpYIG),
-                              placeholder: C.intl.string(y.default.pp6WeD),
+                              label: y.intl.string(b.default.XXLbfv),
+                              description: y.intl.string(b.default.XrpYIG),
+                              placeholder: y.intl.string(b.default.pp6WeD),
                               options: D,
                               value: I,
                               onSelectionChange: function (e) {
@@ -351,13 +351,13 @@ let ea = {
                               fullWidth: !0,
                               wrapTags: !0,
                           }),
-                          !u && (0, i.jsx)(x.w, { type: "warning", children: C.intl.string(y.default.UPLtlA) }),
+                          !u && (0, i.jsx)(x.w, { type: "warning", children: y.intl.string(b.default.UPLtlA) }),
                           v &&
                               (0, i.jsx)("div", {
                                   role: "alert",
                                   children: (0, i.jsx)(x.w, {
                                       type: "critical",
-                                      children: C.intl.string(y.default.xyCJYs),
+                                      children: y.intl.string(b.default.xyCJYs),
                                   }),
                               }),
                           (0, i.jsxs)(o.e, {
@@ -365,14 +365,14 @@ let ea = {
                               children: [
                                   (0, i.jsx)(f.$, {
                                       variant: "secondary",
-                                      text: C.intl.string(C.t["ETE/oC"]),
+                                      text: y.intl.string(y.t["ETE/oC"]),
                                       onClick: t,
                                       disabled: A,
                                   }),
                                   (0, i.jsx)(f.$, {
                                       variant: "primary",
-                                      text: C.intl.string(C.t["R3BPH+"]),
-                                      onClick: b,
+                                      text: y.intl.string(y.t["R3BPH+"]),
+                                      onClick: C,
                                       disabled: !u,
                                       loading: A,
                                   }),

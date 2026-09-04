@@ -27,8 +27,8 @@ let p = r.forwardRef(function (e, t) {
         } = e,
         [I, T] = r.useState(null),
         R = r.useRef(null),
-        w = r.useRef(null),
         N = r.useRef(null),
+        w = r.useRef(null),
         b = "custom" === g ? { width: y, height: v } : (0, d.J)(g),
         _ = !(0, h.A)("lottie_hover_multiple_loop"),
         k = r.useContext(u.C).reducedMotion.enabled,
@@ -37,38 +37,38 @@ let p = r.forwardRef(function (e, t) {
         O = r.useRef(E);
     return (
         (0, f.l0)(() => {
-            A?.({ finalFrame: N.current?.currentFrame ?? null });
+            A?.({ finalFrame: w.current?.currentFrame ?? null });
         }),
         r.useImperativeHandle(
             t,
             () => ({
                 play: (e) => {
-                    if (null == N.current) return;
-                    let t = null == w.current;
-                    if (((w.current = e), j)) {
+                    if (null == w.current) return;
+                    let t = null == N.current;
+                    if (((N.current = e), j)) {
                         let t = S[e];
-                        N.current.resetSegments(!0),
-                            N.current.setSegment(t.start + t.duration, t.start + t.duration),
-                            N.current.stop();
+                        w.current.resetSegments(!0),
+                            w.current.setSegment(t.start + t.duration, t.start + t.duration),
+                            w.current.stop();
                     } else {
-                        N.current.setLoop(!_ && e.includes("hover")), N.current.resetSegments(!0);
+                        w.current.setLoop(!_ && e.includes("hover")), w.current.resetSegments(!0);
                         let n = t && null != x && x >= S[e].start && x <= S[e].start + S[e].duration ? x : S[e].start;
-                        N.current.playSegments([n, S[e].start + S[e].duration], !0);
+                        w.current.playSegments([n, S[e].start + S[e].duration], !0);
                     }
                 },
                 stop: () => {
-                    if (null == N.current || j) return;
+                    if (null == w.current || j) return;
                 },
                 stopIfPlaying: (e) => {
-                    null == N.current ||
+                    null == w.current ||
                         j ||
-                        (w.current === e &&
-                            (N.current.resetSegments(!0),
-                            N.current.setSegment(S[e].start, S[e].start),
-                            N.current.stop()));
+                        (N.current === e &&
+                            (w.current.resetSegments(!0),
+                            w.current.setSegment(S[e].start, S[e].start),
+                            w.current.stop()));
                 },
-                getDuration: (e) => (null == N.current ? null : N.current.getDuration(e)),
-                getCurrentFrame: () => (null == N.current ? null : N.current.currentFrame),
+                getDuration: (e) => (null == w.current ? null : w.current.getDuration(e)),
+                getCurrentFrame: () => (null == w.current ? null : w.current.currentFrame),
             }),
             [j, _, S, x],
         ),
@@ -85,12 +85,12 @@ let p = r.forwardRef(function (e, t) {
                             { default: n } = e;
                         if (null == R.current) return;
                         let l = 1 === Object.keys(S).length ? Object.values(S)[0].name : void 0,
-                            r = w.current ?? O.current ?? l;
+                            r = N.current ?? O.current ?? l;
                         if (null != r && null != S[r]) {
                             let e = S[r];
                             t = null != e ? [x ?? e.start, e.start + e.duration] : void 0;
                         }
-                        N.current = n.loadAnimation({
+                        w.current = n.loadAnimation({
                             container: R.current,
                             renderer: "svg",
                             loop: !1,
@@ -100,7 +100,7 @@ let p = r.forwardRef(function (e, t) {
                         });
                     }),
                 () => {
-                    N.current?.destroy();
+                    w.current?.destroy();
                 }
             ),
             [I, S, x],

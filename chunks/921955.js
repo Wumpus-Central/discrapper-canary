@@ -2,8 +2,8 @@ let r;
 n.d(t, { A: () => _ }), n(321073);
 var i = n(17928),
     s = n(228366),
-    o = n(308368),
-    l = n(115718),
+    l = n(308368),
+    o = n(115718),
     a = n(47167),
     c = n(734057),
     d = n(71393),
@@ -13,7 +13,7 @@ var i = n(17928),
     g = n(287809),
     p = n(645959),
     m = n(652215);
-let A = [l.rD.TEXT_CHANNEL, l.rD.GROUP_DM, l.rD.USER],
+let A = [o.rD.TEXT_CHANNEL, o.rD.GROUP_DM, o.rD.USER],
     v = null,
     y = null,
     x = [],
@@ -49,7 +49,7 @@ let O = new N(s.h, {
                 (y = e.resolve),
                 (x = []),
                 null == r &&
-                    (r = new l.Ay(
+                    (r = new o.Ay(
                         (e, t) => {
                             let n;
                             (w = (
@@ -61,40 +61,40 @@ let O = new N(s.h, {
                                               if (t.type === m.rbe.DM) {
                                                   let e = t.getRecipientId(),
                                                       r = null != e ? g.default.getUser(e) : null;
-                                                  null != r && n.push({ type: l.rD.USER, record: r, score: 0 });
+                                                  null != r && n.push({ type: o.rD.USER, record: r, score: 0 });
                                               } else
                                                   t.isMultiUserDM() &&
-                                                      n.push({ type: l.rD.GROUP_DM, record: t, score: 0 });
+                                                      n.push({ type: o.rD.GROUP_DM, record: t, score: 0 });
                                       }),
                                       n)
                                     : e
                             )
                                 .map((e) => {
                                     switch (e.type) {
-                                        case l.rD.USER: {
+                                        case o.rD.USER: {
                                             let { record: t } = e;
                                             return {
-                                                type: l.rD.USER,
+                                                type: o.rD.USER,
                                                 sent: x.includes(t.id),
                                                 status: h.A.getStatus(t.id),
                                                 data: e,
                                             };
                                         }
-                                        case l.rD.TEXT_CHANNEL: {
+                                        case o.rD.TEXT_CHANNEL: {
                                             let { record: t } = e,
                                                 n = c.A.getChannel(t.parent_id),
                                                 r = d.A.getGuild(t.guild_id);
                                             return {
-                                                type: l.rD.TEXT_CHANNEL,
+                                                type: o.rD.TEXT_CHANNEL,
                                                 sent: x.includes(t.id),
                                                 categoryName: null != n ? (0, a.m1)(n, g.default, f.A) : "",
                                                 guildName: r?.name ?? "",
                                                 data: e,
                                             };
                                         }
-                                        case l.rD.GROUP_DM: {
+                                        case o.rD.GROUP_DM: {
                                             let { record: t } = e;
-                                            return { type: l.rD.GROUP_DM, sent: x.includes(t.id), data: e };
+                                            return { type: o.rD.GROUP_DM, sent: x.includes(t.id), data: e };
                                         }
                                         default:
                                             return null;
@@ -117,14 +117,14 @@ let O = new N(s.h, {
             let t = e.channelId,
                 n = e.userId;
             null != t
-                ? o.A.sendActivityInvite({
+                ? l.A.sendActivityInvite({
                       channelId: t,
                       type: m.xL.JOIN,
                       activity: v,
                       location: "Channel Text Area - Invite to Join Modal",
                   }).then(() => E(t))
                 : null != n &&
-                  o.A.sendActivityInviteUser({
+                  l.A.sendActivityInviteUser({
                       userId: n,
                       type: m.xL.JOIN,
                       activity: v,

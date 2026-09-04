@@ -63,12 +63,12 @@ let o = function (e) {
             }
             let T = h ? "pointerup" : "mouseup",
                 R = h ? "pointermove" : "mousemove",
-                w = n.current.ownerDocument;
+                N = n.current.ownerDocument;
             return (
-                w.addEventListener(T, I),
-                w.addEventListener(R, A),
+                N.addEventListener(T, I),
+                N.addEventListener(R, A),
                 () => {
-                    w.removeEventListener(T, I), w.removeEventListener(R, A), r.cancel();
+                    N.removeEventListener(T, I), N.removeEventListener(R, A), r.cancel();
                 }
             );
         }, [g, o, a, l, f, n, d, c, h, m, u, p]),

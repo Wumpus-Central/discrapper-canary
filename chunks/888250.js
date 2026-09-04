@@ -2,8 +2,8 @@ n.r(t), n.d(t, { waitForCSSLoad: () => e6, default: () => tn });
 var r = n(477900),
     i = n(582128),
     s = n(17928),
-    o = n(684013),
-    l = n(964486),
+    l = n(684013),
+    o = n(964486),
     a = n(573435),
     c = n(626584),
     d = n(567249),
@@ -31,8 +31,8 @@ var E = n(503698),
     j = n(442433),
     k = n(793574),
     S = n(688810),
-    P = n(607470),
-    L = n(880144),
+    L = n(607470),
+    P = n(880144),
     R = n(616356),
     M = n(734057),
     U = n(71393),
@@ -46,10 +46,10 @@ var E = n(503698),
     Y = n(834730),
     z = n(257581);
 function J(e) {
-    let { onClick: t, keybind: n, className: i, IconComponent: s, "data-testid": o } = e;
+    let { onClick: t, keybind: n, className: i, IconComponent: s, "data-testid": l } = e;
     return (0, r.jsxs)("div", {
         className: C()(z.UD, i),
-        "data-testid": o,
+        "data-testid": l,
         children: [
             (0, r.jsx)(N.D, {
                 className: z.x6,
@@ -163,8 +163,8 @@ function es(e) {
               }),
           });
 }
-var eo = n(232554),
-    el = n(351906),
+var el = n(232554),
+    eo = n(351906),
     ea = n(243612),
     ec = n(391973),
     ed = n(5463),
@@ -191,7 +191,7 @@ let ev = [],
             A = (0, ef.RE)(t.id, ef.X1),
             y = (0, eg.A)(),
             [w, E] = i.useState(() => u?.stores ?? ev);
-        (0, l.Ay)(() => {
+        (0, o.Ay)(() => {
             E(u?.stores ?? ev);
         });
         let b = (0, s.bG)(w, () => u?.shouldRender({ widget: t, locked: y }) ?? !0, [u, y, t]),
@@ -199,12 +199,12 @@ let ev = [],
             O = (0, s.bG)([g.A], () => g.A.windowSize((0, v.Q2)(N))),
             _ = i.useCallback((e, t, n, r, i) => {
                 let s = g.A.windowSize((0, v.Q2)((0, ep.b)())),
-                    l = (0, ed.NO)(n, s),
+                    o = (0, ed.NO)(n, s),
                     a = (0, ed.R9)(r, s);
-                (0, ec.uD)(t), (0, ec.Ju)({ widgetId: t, anchor: l, size: a });
+                (0, ec.uD)(t), (0, ec.Ju)({ widgetId: t, anchor: o, size: a });
                 let c = e === eu.P.MOVE,
                     d = (0, ed.Ly)(n, s.width, s.height, i.width, i.height);
-                o.A.track(em.HAw.OVERLAY_LAYOUT_UPDATED, {
+                l.A.track(em.HAw.OVERLAY_LAYOUT_UPDATED, {
                     was_resized: !c,
                     was_dragged: c,
                     widget_type: h.A.getWidgetType(t),
@@ -219,8 +219,8 @@ let ev = [],
             D = i.useCallback((e) => {
                 (0, ec.uD)(e);
             }, []),
-            { id: I, pinned: T, zIndex: j, size: k, anchor: S, minSize: P } = t,
-            L = i.useMemo(() => (0, ed.fd)(k, O), [k, O]),
+            { id: I, pinned: T, zIndex: j, size: k, anchor: S, minSize: L } = t,
+            P = i.useMemo(() => (0, ed.fd)(k, O), [k, O]),
             R = (0, ed.Nv)(S, O),
             { resizeX: M, resizeY: U, dragAnywhere: K, constrainAutoSizeToExplicitResizeEvents: G } = m ?? {},
             F = !y,
@@ -245,10 +245,10 @@ let ev = [],
             ? (0, r.jsx)(eu.A, {
                   className: C()({ [eA.Yz]: Y, [eA.xu]: Y && !T, [eA.E]: Y && T }, p),
                   id: I,
-                  size: L,
+                  size: P,
                   anchor: R,
                   container: V,
-                  minSize: P ?? { width: 0, height: 0 },
+                  minSize: L ?? { width: 0, height: 0 },
                   hidden: !B,
                   locked: y,
                   resizeX: M ?? !1,
@@ -273,15 +273,15 @@ function eE(e) {
     return e.widget.id;
 }
 function eC(e, t, n, i) {
-    return n === eo.wL.YEETED ? null : (0, r.jsx)(ey, { ...t, transitionState: n, cleanUp: i }, e);
+    return n === el.wL.YEETED ? null : (0, r.jsx)(ey, { ...t, transitionState: n, cleanUp: i }, e);
 }
 let eb = [],
     eN = i.memo(function (e) {
         let { className: t } = e,
             n = (0, ep.A)(),
-            o = (0, s.bG)([g.A], () => g.A.windowSize((0, v.Q2)(n))),
-            l = (0, s.bG)(
-                [h.A, el.A],
+            l = (0, s.bG)([g.A], () => g.A.windowSize((0, v.Q2)(n))),
+            o = (0, s.bG)(
+                [h.A, eo.A],
                 () => {
                     let e = h.A.getLayout(ew.G);
                     if (null == e) return eb;
@@ -292,15 +292,15 @@ let eb = [],
                         let r = ex.A[e.type];
                         null != r &&
                             (null == r.predicate || r.predicate()) &&
-                            (el.A.isOverlayWidgetDisabled(e.type) || t.push({ widget: e, ...r }));
+                            (eo.A.isOverlayWidgetDisabled(e.type) || t.push({ widget: e, ...r }));
                     }
                     return t;
                 },
                 [],
                 ea.VC,
             ),
-            a = i.useCallback((e) => (0, r.jsx)("div", { className: t, style: o, children: e }), [t, o]);
-        return (0, r.jsx)(eo.F, { items: l, renderItem: eC, getItemKey: eE, wrapChildren: a });
+            a = i.useCallback((e) => (0, r.jsx)("div", { className: t, style: l, children: e }), [t, l]);
+        return (0, r.jsx)(el.F, { items: o, renderItem: eC, getItemKey: eE, wrapChildren: a });
     });
 var eO = n(489277),
     e_ = n(222506);
@@ -321,8 +321,8 @@ function eT(e, t) {
 var ej = n(302614),
     ek = n(296027),
     eS = n(592598),
-    eP = n(237984),
-    eL = n(394072),
+    eL = n(237984),
+    eP = n(394072),
     eR = n(528772),
     eM = n(944775),
     eU = n(317084),
@@ -333,14 +333,14 @@ let eB = i.memo(function () {
     let [e, t] = (0, s.yK)([eR.A], () => [eR.A.enabled, eR.A.keepOpen]),
         n = (0, s.bG)([f.Ay], () => f.Ay.getVoiceChannelId()),
         i = (0, s.bG)([M.A], () => M.A.getChannel(n), [n]),
-        o = i?.getGuildId();
+        l = i?.getGuildId();
     return e && null != i
         ? (0, r.jsx)(ej.A, {
               className: eF.k,
               children: (0, r.jsx)(eU.A, {
                   width: eG.ed.width,
                   height: eG.ed.height,
-                  guildId: o,
+                  guildId: l,
                   channel: i,
                   keepOpen: t,
                   onClose: function () {
@@ -356,7 +356,7 @@ var eV = n(672396),
     eH = n(558606);
 let eW = !p.isPlatformEmbedded && !1,
     eY = eW
-        ? (0, r.jsx)(P.A, {
+        ? (0, r.jsx)(L.A, {
               src: "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNzdpcnRrYXdrNzVuNjZ3NXpmeTJvNGl4Z2N4OXBsamx5aXphdHhxaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9dg/OPg2B0FPBL94H12uM0/giphy480p.mp4",
               className: eH.pN,
               autoPlay: !0,
@@ -395,7 +395,7 @@ let eX = i.memo(function (e) {
                       children: [
                           (0, r.jsx)(J, {
                               "data-testid": "overlay-report-button",
-                              onClick: () => (0, eP.b)(k.A.OVERLAY, em.BRT.OVERLAY),
+                              onClick: () => (0, eL.b)(k.A.OVERLAY, em.BRT.OVERLAY),
                               IconComponent: O.FlagIcon,
                           }),
                           (0, r.jsx)(J, {
@@ -415,14 +415,14 @@ let eX = i.memo(function (e) {
                   className: eH.BE,
                   children: (0, r.jsx)(J, {
                       "data-testid": "overlay-unlock-button",
-                      onClick: () => o.A.setInputLocked(!1, eO.A.getTargetPID()),
+                      onClick: () => l.A.setInputLocked(!1, eO.A.getTargetPID()),
                       IconComponent: D.w,
                   }),
               })
             : null;
     });
 function eZ() {
-    o.A.setInputLocked(!0, eO.A.getTargetPID());
+    l.A.setInputLocked(!0, eO.A.getTargetPID());
 }
 function eq(e) {
     let t = e_.A.isInputLocked(eO.A.getTargetPID());
@@ -434,9 +434,9 @@ function eq(e) {
         (function (e, t) {
             if (t || "keydown" !== e.type.toLowerCase()) return;
             let n = e.key.toLowerCase();
-            ("escape" === n || "esc" === n) && o.A.setInputLocked(!0, eO.A.getTargetPID());
+            ("escape" === n || "esc" === n) && l.A.setInputLocked(!0, eO.A.getTargetPID());
         })(e, t),
-        (eW || (0, eL.SE)()) &&
+        (eW || (0, eP.SE)()) &&
             (function (e) {
                 if ("keydown" !== e.type.toLowerCase() || e.repeat) return !1;
                 let t = G.Ay.getOverlayKeybind();
@@ -454,7 +454,7 @@ function eq(e) {
                     )
                 );
             })(e) &&
-            (e.preventDefault(), e.stopPropagation(), o.A.setInputLocked(!t, eO.A.getTargetPID()));
+            (e.preventDefault(), e.stopPropagation(), l.A.setInputLocked(!t, eO.A.getTargetPID()));
 }
 let eQ = i.memo(function () {
         return (0, s.bG)([eh.A], () => eh.A.hasRenderDebugMode(x.x7.WindowContainer))
@@ -465,8 +465,8 @@ let eQ = i.memo(function () {
         let e = (0, ep.A)(),
             t = (0, s.bG)([eO.A], () => eO.A.getTargetPID()),
             n = (0, s.bG)([e_.A], () => e_.A.isInputLocked(t), [t]),
-            o = (0, s.bG)([eO.A], () => eO.A.isFocused(t), [t]),
-            l = (0, s.bG)(
+            l = (0, s.bG)([eO.A], () => eO.A.isFocused(t), [t]),
+            o = (0, s.bG)(
                 [G.Ay],
                 () => (null != G.Ay.getOverlayKeybind() ? (0, V.dI)(G.Ay.getOverlayKeybind()?.shortcut, !0) : "???"),
                 [],
@@ -485,9 +485,9 @@ let eQ = i.memo(function () {
             }, [n, e]),
             (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, r.jsx)(eX, { locked: n, keybind: l, onClick: eZ }),
+                    (0, r.jsx)(eX, { locked: n, keybind: o, onClick: eZ }),
                     (0, r.jsx)(eN, { className: C()({ [eH.ZK]: n, [eH.al]: !n }) }),
-                    (eW || (0, eL.SE)()) && (0, r.jsx)(e$, { locked: n, focused: o }),
+                    (eW || (0, eP.SE)()) && (0, r.jsx)(e$, { locked: n, focused: l }),
                     (0, r.jsx)(es, { locked: n }),
                 ],
             })
@@ -568,12 +568,12 @@ function e1() {
                 }
             );
         }, [A, p, n]),
-        (0, l.Ay)(() => {
+        (0, o.Ay)(() => {
             (0, H.E)();
         }),
         (y = (0, ep.A)()),
         (e = () => {
-            o.A.overlayReady(eO.A.getTargetPID()),
+            l.A.overlayReady(eO.A.getTargetPID()),
                 y.addEventListener("keydown", eq, !0),
                 y.addEventListener("keyup", eq);
         }),
@@ -594,14 +594,14 @@ function e1() {
             [],
         ),
         ((w = i.useRef(null)),
-        (0, l.Ay)(() => {
+        (0, o.Ay)(() => {
             let e = (0, ea.qv)(),
                 t = f.Ay.getVoiceChannelId(),
                 n = M.A.getChannel(t),
                 r = null != n ? U.A.getGuild(n.guild_id) : null,
                 i = null != R.A.getCurrentUserActiveStream(),
                 s = null != t,
-                l = (0, L.A)(K.Ay) && !i && null != e,
+                o = (0, P.A)(K.Ay) && !i && null != e,
                 a = s && null != r && null != t,
                 c = eO.A.getTargetPID();
             if (ek.default.hasChangedRenderMode(c)) return;
@@ -612,16 +612,16 @@ function e1() {
             !d &&
                 (g.push({ type: eV.Jr.WELCOME }),
                 !u &&
-                    (l && a
+                    (o && a
                         ? g.push({ type: eV.Jr.GO_LIVE_VOICE, game: e, voiceChannelId: t, voiceGuild: r })
-                        : l && g.push({ type: eV.Jr.GO_LIVE_NON_VOICE, game: e })),
+                        : o && g.push({ type: eV.Jr.GO_LIVE_NON_VOICE, game: e })),
                 h || g.push({ type: eV.Jr.CONTENT_INVENTORY, entries: [] })),
                 null != w.current && clearTimeout(w.current),
                 (w.current = setTimeout(() => {
-                    o.A.overlayMounted(...g);
+                    l.A.overlayMounted(...g);
                 }, 1e3));
         }),
-        (0, l.l0)(() => {
+        (0, o.l0)(() => {
             null != w.current && (clearTimeout(w.current), (w.current = null));
         }),
         b || C)
@@ -650,10 +650,10 @@ function e8(e, t) {
         e3.h.dispatch({ type: "OVERLAY_OOP_POPOUT_INITIALIZATION_STAGE_CHANGED", update: { [e]: t } });
 }
 n(96175);
-var e5 = n(366032);
+var e4 = n(366032);
 n(191701), n(921955);
-let e7 = !p.isPlatformEmbedded && !1,
-    e4 = new c.A("AppOverlay");
+let e5 = !p.isPlatformEmbedded && !1,
+    e7 = new c.A("AppOverlay");
 function e6(e, t) {
     return new Promise((n, r) => {
         let i = Date.now();
@@ -689,7 +689,7 @@ async function e9(e, t) {
         try {
             await m.Ay.isAlwaysOnTop(t);
         } catch (e) {
-            e4.error("Window does not exist while trying to show inactive", e), (0, y.pj)(e, x.Ue.OutOfProcess);
+            e7.error("Window does not exist while trying to show inactive", e), (0, y.pj)(e, x.Ue.OutOfProcess);
         }
         for (let i = 0; i < r; i++)
             try {
@@ -699,28 +699,28 @@ async function e9(e, t) {
             } catch (e) {
                 if (e.message?.includes("IPC") && i < r - 1) {
                     let t = (n / 2) * Math.pow(2, i + 1);
-                    e4.error(`Failed to show inactive, retrying in ${t}ms`, e),
+                    e7.error(`Failed to show inactive, retrying in ${t}ms`, e),
                         await new Promise((e) => setTimeout(e, t));
                 } else throw ((0, y.pj)(e, x.Ue.OutOfProcess), e);
             }
     }
 }
 function te() {
-    o.A.setFocusedPID(A.DEV_PID, null);
+    l.A.setFocusedPID(A.DEV_PID, null);
 }
 function tt() {
-    o.A.setFocusedPID(null, null);
+    l.A.setFocusedPID(null, null);
 }
 let tn = i.memo(function (e) {
     let t,
         { withTitleBar: n, windowKey: c } = e;
     (t = (0, s.bG)([d.A], () => d.A.getWindow(c))),
-        (0, l.Ay)(() => {
+        (0, o.Ay)(() => {
             if (null == t) return;
-            let e = e7 || (0, eL.SE)();
+            let e = e5 || (0, eP.SE)();
             return (
                 e &&
-                    (t.document.hasFocus() && o.A.setFocusedPID(A.DEV_PID, null),
+                    (t.document.hasFocus() && l.A.setFocusedPID(A.DEV_PID, null),
                     t.addEventListener("focus", te),
                     t.addEventListener("blur", tt)),
                 () => {
@@ -733,17 +733,17 @@ let tn = i.memo(function (e) {
                 r,
                 a = (0, s.bG)(
                     [eO.A],
-                    () => !!(!p.isPlatformEmbedded || (0, eL.SE)()) || eO.A.isWindowHandleInitialized(),
+                    () => !!(!p.isPlatformEmbedded || (0, eP.SE)()) || eO.A.isWindowHandleInitialized(),
                 ),
                 c = (0, s.bG)([d.A], () => d.A.getWindow(e)),
                 u = (0, s.bG)([eO.A], () => eO.A.getFocusedPID()),
-                m = i.useMemo(() => !!(!p.isPlatformEmbedded || (0, eL.SE)()) || (null != u && u !== A.UNSET_PID), [u]),
+                m = i.useMemo(() => !!(!p.isPlatformEmbedded || (0, eP.SE)()) || (null != u && u !== A.UNSET_PID), [u]),
                 [y, w] = i.useState(!1),
                 E = i.useRef(!1),
                 C = i.useCallback(() => {
                     let e = eO.A.getTargetPID(),
                         n = null != f.Ay.getVoiceChannelId();
-                    o.A.track(em.HAw.OVERLAY_INITIALIZED, {
+                    l.A.track(em.HAw.OVERLAY_INITIALIZED, {
                         voice_widget_connected: n,
                         text_widget_connected: eO.A.isPinned(em.uss.TEXT),
                         overlay_render_method: x.Ue[ek.default.getOverlayMethod(e)],
@@ -759,8 +759,8 @@ let tn = i.memo(function (e) {
                             if ((await e6(e, N), b.current)) return;
                             e8("cssLoaded", !0);
                         } catch (e) {
-                            e4.error("Timed out waiting for CSS to load", e),
-                                o.A.setOverlayCrashed(eO.A.getTargetPID(), e),
+                            e7.error("Timed out waiting for CSS to load", e),
+                                l.A.setOverlayCrashed(eO.A.getTargetPID(), e),
                                 e8("errorMessage", "CSS failed load");
                             return;
                         }
@@ -768,7 +768,7 @@ let tn = i.memo(function (e) {
                             if ((await e9(e, t), b.current)) return;
                             (0, e2.Mq)();
                         } catch (e) {
-                            o.A.setOverlayCrashed(eO.A.getTargetPID(), e), e8("errorMessage", "showInactive failed");
+                            l.A.setOverlayCrashed(eO.A.getTargetPID(), e), e8("errorMessage", "showInactive failed");
                             return;
                         }
                         await new Promise((t) => {
@@ -785,7 +785,7 @@ let tn = i.memo(function (e) {
                         if (null == c) return void e8("errorMessage", "No targetOverlayWindow");
                         if (!m) {
                             _.current ||
-                                (o.A.updateOverlayState(
+                                (l.A.updateOverlayState(
                                     eO.A.getTargetPID(),
                                     x.AR.WAITING_FOR_PID_FOCUS,
                                     "AppOverlay - not focused",
@@ -796,7 +796,7 @@ let tn = i.memo(function (e) {
                         (E.current = !0), e8("reactInitializationStarted", !0), O(c, e);
                     }
                 }, [O, m, e, c, a]),
-                (0, l.l0)(() => {
+                (0, o.l0)(() => {
                     clearInterval(N.current), (b.current = !0);
                 }),
                 (n = (0, s.bG)([g.A], () => g.A.windowSize(null != c ? (0, v.Q2)(c) : void 0))),
@@ -807,11 +807,11 @@ let tn = i.memo(function (e) {
                         return (
                             (e = c.requestAnimationFrame(() => {
                                 e = c.requestAnimationFrame(() => {
-                                    c.clearTimeout(t), o.A.overlayUIFocusedPid(u ?? A.UNSET_PID, r);
+                                    c.clearTimeout(t), l.A.overlayUIFocusedPid(u ?? A.UNSET_PID, r);
                                 });
                             })),
                             (t = c.setTimeout(() => {
-                                c.cancelAnimationFrame(e), o.A.overlayUIFocusedPid(u ?? A.UNSET_PID, r);
+                                c.cancelAnimationFrame(e), l.A.overlayUIFocusedPid(u ?? A.UNSET_PID, r);
                             }, 500)),
                             () => {
                                 c.cancelAnimationFrame(e), c.clearTimeout(t);
@@ -824,7 +824,7 @@ let tn = i.memo(function (e) {
         y = (0, s.bG)([eO.A], () => eO.A.getFocusedPID()),
         E = (0, s.bG)([e_.A], () => e_.A.isInputLocked(y), [y]),
         C = (0, s.bG)([ek.default, eO.A], () =>
-            (0, e5.S)(eO.A.getNativeLimitedInteraction(), ek.default.getOverlayMethod(eO.A.getTargetPID())),
+            (0, e4.S)(eO.A.getNativeLimitedInteraction(), ek.default.getOverlayMethod(eO.A.getTargetPID())),
         );
     return m
         ? (0, r.jsx)(w.p, {

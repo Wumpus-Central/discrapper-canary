@@ -2,8 +2,8 @@ n.d(t, { l: () => u });
 var r = n(477900),
     i = n(582128),
     s = n(776310),
-    o = n(17928),
-    l = n(309010),
+    l = n(17928),
+    o = n(309010),
     a = n(21161),
     c = n(536283),
     d = n(920822);
@@ -14,7 +14,7 @@ function u(e) {
         g = i.useRef(void 0),
         p = i.useRef(new Set()),
         [m, A] = i.useState(!1),
-        v = (0, o.bG)([l.Ay], () => l.Ay.getCurrentlySelectedChannelId()),
+        v = (0, l.bG)([o.Ay], () => o.Ay.getCurrentlySelectedChannelId()),
         y = i.useCallback((e) => {
             p.current.delete(e), A(p.current.size > 0);
         }, []),

@@ -1,43 +1,43 @@
-a.d(t, { default: () => v });
-var i = a(477900);
-a(582128);
-var r = a(821609),
-    n = a(43594),
-    l = a(523084),
-    o = a(722523),
-    s = a(490557),
-    u = a(772707),
-    d = a(834730),
-    p = a(503852),
-    c = a(689906),
-    m = a(743569),
-    f = a(568065),
-    g = a(25525),
-    k = a(375708);
-function I(e) {
-    let { guildId: t, powerup: a, onClose: r, ...n } = e,
-        l = f.HO.has(a.skuId),
-        o = (0, c.A)(t, a);
-    (0, p.Z)(t, a, p.q.DETAIL);
-    let s =
-            a.type === f.o9.LEVEL
-                ? { type: "rive", rive: m.T[a.skuId], aspectRatio: "16/9" }
-                : { type: "image", src: a.animatedImageUrl ?? a.staticImageUrl ?? "", aspectRatio: "16/9" },
-        I = k.intl.formatToPlainString(g.default.lFuOFF, { perkName: a.title }),
-        h = l
+i.d(e, { default: () => v });
+var a = i(477900);
+i(582128);
+var r = i(821609),
+    l = i(43594),
+    n = i(523084),
+    s = i(722523),
+    o = i(490557),
+    p = i(772707),
+    d = i(834730),
+    c = i(503852),
+    u = i(689906),
+    m = i(743569),
+    k = i(568065),
+    g = i(25525),
+    x = i(375708);
+function f(t) {
+    let { guildId: e, powerup: i, onClose: r, ...l } = t,
+        n = k.HO.has(i.skuId),
+        s = (0, u.A)(e, i);
+    (0, c.Z)(e, i, c.q.DETAIL);
+    let o =
+            i.type === k.o9.LEVEL
+                ? { type: "rive", rive: m.T[i.skuId], aspectRatio: "16/9" }
+                : { type: "image", src: i.animatedImageUrl ?? i.staticImageUrl ?? "", aspectRatio: "16/9" },
+        f = x.intl.formatToPlainString(g.default.lFuOFF, { perkName: i.title }),
+        h = n
             ? [
                   {
-                      text: k.intl.string(g.default.g5Ds69),
+                      text: x.intl.string(g.default.g5Ds69),
                       variant: "primary",
                       size: "md",
-                      onClick: (e) => {
-                          o?.(e), r();
+                      onClick: (t) => {
+                          s?.(t), r();
                       },
                   },
               ]
             : [
                   {
-                      text: k.intl.string(k.t.cpT0Cq),
+                      text: x.intl.string(x.t.cpT0Cq),
                       variant: "primary",
                       size: "md",
                       onClick: () => {
@@ -45,43 +45,43 @@ function I(e) {
                       },
                   },
               ];
-    return (0, i.jsx)(u.k, {
-        graphic: s,
-        title: I,
+    return (0, a.jsx)(p.k, {
+        graphic: o,
+        title: f,
         actions: h,
         onClose: r,
-        ...n,
+        ...l,
         children:
-            l &&
-            (0, i.jsx)(d.E, {
+            n &&
+            (0, a.jsx)(d.E, {
                 variant: "text-md/normal",
-                children: k.intl.formatToPlainString(g.default.y3wHot, { perkName: a.title }),
+                children: x.intl.formatToPlainString(g.default.y3wHot, { perkName: i.title }),
             }),
     });
 }
-var h = a(823980);
-function v(e) {
-    let { guildId: t, powerup: a, ...u } = e;
-    if ("control" === (0, n.D)("GuildPowerupActivateModalExperimentWrapper")) {
-        let e = f.HO.has(a.skuId),
-            n = e ? k.intl.formatToPlainString(g.default.y3wHot, { perkName: a.title }) : void 0;
-        return (0, i.jsx)(l.A, {
-            title: k.intl.formatToPlainString(g.default.lFuOFF, { perkName: a.title }),
-            description: n,
-            image: (0, i.jsx)(s.l, { className: h.Sl, powerup: a }),
-            button: e
-                ? (0, i.jsx)(o.GU, { className: h.x6, guildId: t, powerup: a, onClick: u.onClose })
-                : (0, i.jsx)("div", {
+var h = i(823980);
+function v(t) {
+    let { guildId: e, powerup: i, ...p } = t;
+    if ("control" === (0, l.D)("GuildPowerupActivateModalExperimentWrapper")) {
+        let t = k.HO.has(i.skuId),
+            l = t ? x.intl.formatToPlainString(g.default.y3wHot, { perkName: i.title }) : void 0;
+        return (0, a.jsx)(n.A, {
+            title: x.intl.formatToPlainString(g.default.lFuOFF, { perkName: i.title }),
+            description: l,
+            image: (0, a.jsx)(o.l, { className: h.Sl, powerup: i }),
+            button: t
+                ? (0, a.jsx)(s.GU, { className: h.x6, guildId: e, powerup: i, onClick: p.onClose })
+                : (0, a.jsx)("div", {
                       "data-button-hoisted-classname-wrapper": !0,
                       className: h.x6,
-                      children: (0, i.jsx)(r.$, {
+                      children: (0, a.jsx)(r.$, {
                           variant: "primary",
-                          text: k.intl.string(k.t.cpT0Cq),
-                          onClick: u.onClose,
+                          text: x.intl.string(x.t.cpT0Cq),
+                          onClick: p.onClose,
                       }),
                   }),
-            ...u,
+            ...p,
         });
     }
-    return (0, i.jsx)(I, { guildId: t, powerup: a, ...u });
+    return (0, a.jsx)(f, { guildId: e, powerup: i, ...p });
 }

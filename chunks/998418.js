@@ -41,20 +41,20 @@ function E(e, u) {
                 })(e),
                 c = ((u = e), E && n.o2.has(u.skuId)),
                 v = ((r = e), s?.unlockedPowerups?.[r.skuId] ?? null),
-                A = { type: n.b_.INACTIVE, powerup: e, sourceEntitlement: void 0, sourcePowerup: void 0 };
+                I = { type: n.b_.INACTIVE, powerup: e, sourceEntitlement: void 0, sourcePowerup: void 0 };
             return (
                 l
-                    ? (A = { type: n.b_.LEVEL_ACTIVATED, powerup: e, sourceEntitlement: o, sourcePowerup: d })
+                    ? (I = { type: n.b_.LEVEL_ACTIVATED, powerup: e, sourceEntitlement: o, sourcePowerup: d })
                     : c
-                      ? (A = {
+                      ? (I = {
                             type: n.b_.TIER_OVERRIDE_ACTIVATED,
                             powerup: e,
                             sourceEntitlement: void 0,
                             sourcePowerup: e,
                         })
                       : null != v &&
-                        (A = { type: n.b_.POWERUP_ACTIVATED, powerup: e, sourceEntitlement: v, sourcePowerup: e }),
-                A
+                        (I = { type: n.b_.POWERUP_ACTIVATED, powerup: e, sourceEntitlement: v, sourcePowerup: e }),
+                I
             );
         })(e),
     );

@@ -6,8 +6,8 @@ var l = r(228366),
     c = r(821925);
 let s = new Set(),
     a = new Set(),
-    d = null,
     i = null,
+    d = null,
     S = !1;
 function f(e) {
     let t = [];
@@ -15,12 +15,12 @@ function f(e) {
     return t;
 }
 function h() {
-    d = null;
+    i = null;
     let e = [...s];
     for (let t of (s.clear(), f(e))) (0, n.tu)({ skuIds: t });
 }
 function _() {
-    i = null;
+    d = null;
     let e = [...a],
         t = S;
     for (let r of (a.clear(), (S = !1), f(e)))
@@ -29,19 +29,19 @@ function _() {
 let E = {
     requestProducts(e) {
         for (let t of e) "" !== t && "loading" !== c.A.getFetchStateForSku(t) && s.add(t);
-        s.size > 0 && null == d && (d = setTimeout(h, 32));
+        s.size > 0 && null == i && (i = setTimeout(h, 32));
     },
     requestCollections(e) {
         let { includeUnpublished: t = !1 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
         for (let t of e) "" !== t && "loading" !== u.A.getFetchState(t) && a.add(t);
-        t && (S = !0), a.size > 0 && null == i && (i = setTimeout(_, 32));
+        t && (S = !0), a.size > 0 && null == d && (d = setTimeout(_, 32));
     },
     reset() {
         s.clear(),
             a.clear(),
             (S = !1),
-            null != d && (clearTimeout(d), (d = null)),
-            null != i && (clearTimeout(i), (i = null));
+            null != i && (clearTimeout(i), (i = null)),
+            null != d && (clearTimeout(d), (d = null));
     },
 };
 l.h.subscribe("LOGOUT", E.reset);

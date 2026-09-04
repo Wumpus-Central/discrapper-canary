@@ -3,8 +3,8 @@ var r = n(477900);
 n(582128);
 var i = n(228366),
     s = n(489277),
-    o = n(979186),
-    l = n(574172),
+    l = n(979186),
+    o = n(574172),
     a = n(734057),
     c = n(763827),
     d = n(184809),
@@ -36,10 +36,10 @@ async function x(e) {
         i = a.A.getChannel(n);
     if (null == t || null == i) return;
     let { x: s, y: d } = await u.Ay.invoke("GET_MOUSE_COORDINATES");
-    (0, l.open)(
+    (0, o.open)(
         g.MLl.SOUNDBOARD,
         (n) =>
-            (0, r.jsx)(o.A, {
+            (0, r.jsx)(l.A, {
                 windowKey: n,
                 withTitleBar: !1,
                 title: p.intl.string(p.t["IiA///"]),
@@ -58,7 +58,7 @@ async function x(e) {
     );
 }
 function w() {
-    (0, l.close)(g.MLl.SOUNDBOARD);
+    (0, o.close)(g.MLl.SOUNDBOARD);
 }
 function E(e, t) {
     let n = s.A.isOverlayV3EnabledForPID(t),

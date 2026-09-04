@@ -2,8 +2,8 @@ n.d(t, { A: () => I });
 var r = n(477900),
     i = n(582128),
     s = n(435558),
-    o = n.n(s),
-    l = n(258873),
+    l = n.n(s),
+    o = n(258873),
     a = n(622242),
     c = n(731738),
     d = n(70298),
@@ -41,12 +41,12 @@ function O() {
         loading: e,
     });
 }
-let _ = o().throttle(
+let _ = l().throttle(
     (e) => {
         A.A.increment(
             {
                 name: c.K.APP_CRASHED,
-                tags: [`reason:${l.J.UNHANDLED_JS_ERROR}`, `level:${a.k.FATAL}`, `modded_client:${e}`],
+                tags: [`reason:${o.J.UNHANDLED_JS_ERROR}`, `level:${a.k.FATAL}`, `modded_client:${e}`],
             },
             !0,
         );

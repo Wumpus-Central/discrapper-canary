@@ -2,8 +2,8 @@ n.d(t, { N: () => f });
 var r = n(477900),
     i = n(582128),
     s = n(950372),
-    o = n(866323),
-    l = n(857250),
+    l = n(866323),
+    o = n(857250),
     a = n(691540),
     c = n(97483),
     d = n(773019);
@@ -38,7 +38,7 @@ function f(e) {
             ((d.current = n.options?.position ?? c.jg.position), (u.current = n.options?.duration ?? c.jg.duration));
     }, [n]);
     let f = i.useMemo(() => h[n?.options?.position ?? d.current], [n]),
-        g = (0, o.p)(n, { keys: (e) => e?.id ?? "", ...f.transition });
+        g = (0, l.p)(n, { keys: (e) => e?.id ?? "", ...f.transition });
     return (
         i.useEffect(() => {
             null != n &&
@@ -49,7 +49,7 @@ function f(e) {
         (0, r.jsx)("div", {
             className: f.styles,
             children: g((e, t) =>
-                null == t ? null : (0, r.jsx)(s.animated.div, { style: e, children: (0, r.jsx)(l.y, { ...t }) }, t.id),
+                null == t ? null : (0, r.jsx)(s.animated.div, { style: e, children: (0, r.jsx)(o.y, { ...t }) }, t.id),
             ),
         })
     );

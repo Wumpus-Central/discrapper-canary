@@ -3,8 +3,8 @@ var r = n(477900);
 n(582128);
 var i = n(676999),
     s = n(386693),
-    o = n(765178),
-    l = n(425763),
+    l = n(765178),
+    o = n(425763),
     a = n(375708);
 class c {
     announcer;
@@ -326,7 +326,7 @@ class y {
 let x = (0, s.eV)("keydown", (e) => !!v(e) && (e.preventDefault(), !0)),
     w = (0, s.eV)(
         "mousedown",
-        (e) => -1 === e.type.indexOf("touch") && -1 !== e.type.indexOf("mouse") && ((0, l.ef)(!1), !0),
+        (e) => -1 === e.type.indexOf("touch") && -1 !== e.type.indexOf("mouse") && ((0, o.ef)(!1), !0),
     ),
     E = {
         backends: [
@@ -335,7 +335,7 @@ let x = (0, s.eV)("keydown", (e) => !!v(e) && (e.preventDefault(), !0)),
                 id: "keyboard",
                 backend: (e, t, n) => new y(e, t, n),
                 context: { window, document },
-                options: { onDndModeChanged: l.ef, announcer: o.O },
+                options: { onDndModeChanged: o.ef, announcer: l.O },
                 preview: !0,
                 transition: x,
             },
