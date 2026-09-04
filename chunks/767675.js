@@ -1,4 +1,4 @@
-r.r(t), r.d(t, { default: () => ew });
+r.r(t), r.d(t, { default: () => eG });
 var n = r(477900),
     i = r(582128),
     a = r(979186);
@@ -18,17 +18,17 @@ var s = r(435558),
     A = r(363195),
     F = r(734057),
     b = r(696451),
-    v = r(763827),
-    C = r(412780),
+    D = r(763827),
+    v = r(412780),
     E = r(994500),
-    D = r(287809),
+    C = r(287809),
     x = r(427262),
-    S = r(289873),
-    R = r(331322),
+    R = r(289873),
+    S = r(331322),
     j = r(503698),
     N = r.n(j),
-    P = r(23339),
-    I = r(691885),
+    I = r(23339),
+    P = r(691885),
     k = r(761508),
     B = r(684339),
     w = r(51092),
@@ -78,7 +78,7 @@ class H extends i.PureComponent {
         });
     }
 }
-let z = {
+let K = {
     accelerateRate: "Accelerate Rate",
     audioDetected: "Audio Detected",
     audioLevel: "Audio Level",
@@ -210,7 +210,7 @@ let z = {
     x11Frames: "X11 Frames",
     pipewireFrames: "Pipewire Frames",
 };
-function K(e) {
+function z(e) {
     return `${(e / 1e3).toFixed(2)} Kbps`;
 }
 function J(e) {
@@ -281,13 +281,13 @@ let er = {
         audioLevel: function (e) {
             return e <= 0 ? "-\u221E dB" : `${Z(e).toFixed(2)} dB`;
         },
-        availableOutgoingBitrate: K,
+        availableOutgoingBitrate: z,
         averageDecodeTime: Q,
         averageEncodeTime: Q,
         bandwidthLimitedFrameRate: Y,
         bandwidthLimitedResolution: Y,
-        bitrate: K,
-        bitrateTarget: K,
+        bitrate: z,
+        bitrateTarget: z,
         bytesReceived: J,
         bytesSent: J,
         codec: function (e) {
@@ -306,23 +306,25 @@ let er = {
             return `${Math.max(e, 0).toFixed(2)} dB`;
         },
         encoderQualityVmaf: et,
+        encoderReady: Y,
         encodeUsage: X,
         expandRate: X,
         filter: _,
         fractionLost: X,
-        inboundBitrateEstimate: K,
+        inboundBitrateEstimate: z,
         jitter: Q,
         jitterBuffer: Q,
         jitterBufferPreferred: Q,
         keyFrameInterval: Q,
         minPlayoutDelay: Q,
-        outboundBitrateEstimate: K,
+        outboundBitrateEstimate: z,
         pacerDelay: Q,
         ping: Q,
         powerEfficientDecoder: Y,
         powerEfficientEncoder: Y,
         preemptiveExpandRate: X,
-        receiverBitrateEstimate: K,
+        processRunning: Y,
+        receiverBitrateEstimate: z,
         relativePlayoutDelay: ee,
         relativeReceptionDelay: ee,
         renderDelay: Q,
@@ -366,14 +368,14 @@ function el(e) {
         a = en[t] ?? ea,
         s = ei[t],
         l =
-            C.iA[t] &&
+            v.iA[t] &&
             (Array.isArray(r) && r.length > 0 && "number" == typeof r[0].value
                 ? (0, n.jsx)(M.A, { converter: s, dataPoints: r, width: 300, height: 100 })
                 : "number" == typeof r
                   ? (0, n.jsx)(es, { converter: s, value: r, width: 300, height: 100 })
                   : void 0),
         o = Array.isArray(r) ? r.at(-1)?.value : r;
-    return (0, n.jsx)(H, { label: t, valueRendered: a(o), section: i, renderGraph: l, children: z[t] ?? t });
+    return (0, n.jsx)(H, { label: t, valueRendered: a(o), section: i, renderGraph: l, children: K[t] ?? t });
 }
 var eo = r(731854),
     ed = r(221851);
@@ -398,10 +400,10 @@ function ep(e) {
             showSimulcastOverride: p = !1,
         } = e,
         [h, y] = i.useState("0"),
-        g = (0, o.bG)([v.A], () => (u ? v.A.getGuildId() : null)),
-        A = (0, o.bG)([D.default], () => (u && null != s ? D.default.getUser(s) : null)),
+        g = (0, o.bG)([D.A], () => (u ? D.A.getGuildId() : null)),
+        A = (0, o.bG)([C.default], () => (u && null != s ? C.default.getUser(s) : null)),
         F = (0, o.bG)([b.Ay], () => (u && null != g && null != s ? b.Ay.getNick(g, s) : null));
-    if (null == t || (u && null == s) || 0 === t.length) return (0, n.jsx)(S.y, { type: S.y.Type.SPINNING_CIRCLE });
+    if (null == t || (u && null == s) || 0 === t.length) return (0, n.jsx)(R.y, { type: R.y.Type.SPINNING_CIRCLE });
     let E = d;
     u && null != A && (E = `${d} \u{2014} ${F ?? x.Ay.getName(A)}`);
     let j = t.map((e, t) => {
@@ -411,7 +413,7 @@ function ep(e) {
                 {
                     id: t.toString(),
                     children:
-                        ((r = (0, P.$G)(e.type)),
+                        ((r = (0, I.$G)(e.type)),
                         (i = ""),
                         "resolution" in e &&
                             null != e.resolution &&
@@ -437,8 +439,8 @@ function ep(e) {
                         : void 0 === n
                           ? -1
                           : r - n
-                    : C.iA[e] !== C.iA[t]
-                      ? C.iA[e]
+                    : v.iA[e] !== v.iA[t]
+                      ? v.iA[e]
                           ? 1
                           : -1
                       : e > t
@@ -486,9 +488,9 @@ function ep(e) {
                 className: ed.SX,
                 children: (0, n.jsx)(f.A.Child, {
                     basis: "100%",
-                    children: (0, n.jsx)(I.l, {
+                    children: (0, n.jsx)(P.l, {
                         label: "Simulcast Override",
-                        value: C.Ay.getSimulcastDebugOverride(s, r),
+                        value: v.Ay.getSimulcastDebugOverride(s, r),
                         onSelectionChange: (e) => {
                             m.z0(s, r, e);
                         },
@@ -498,7 +500,7 @@ function ep(e) {
                     }),
                 }),
             });
-    return (0, n.jsxs)(R.B, {
+    return (0, n.jsxs)(S.B, {
         gap: 16,
         children: [
             (0, n.jsx)(c.D, { variant: "heading-md/medium", children: E }),
@@ -518,41 +520,81 @@ function ep(e) {
 var eh = r(375708);
 function ey(e) {
     let { camera: t } = e;
-    if (null == t) return (0, n.jsx)(S.y, { type: S.y.Type.SPINNING_CIRCLE });
+    if (null == t) return (0, n.jsx)(R.y, { type: R.y.Type.SPINNING_CIRCLE });
     let r = l().map(t, (e, t) => {
         if (!(er[t] || void 0 === e)) return (0, n.jsx)(el, { label: t, value: e }, t);
     });
-    return (0, n.jsxs)(R.B, {
+    return (0, n.jsxs)(S.B, {
         children: [(0, n.jsx)(c.D, { variant: "heading-md/medium", children: eh.intl.string(eh.t["2AGBWH"]) }), ec(r)],
     });
 }
 let ef = {
-    userId: 1,
-    dataType: 2,
-    savedKB: 3,
-    numFrames: 4,
-    startTimestampMs: 5,
-    endTimestampMs: 6,
-    width: 7,
-    height: 8,
-    audioChannels: 9,
-    sampleRate: 10,
-};
-function eg(e) {
-    let { clips: t } = e;
-    if (null == t) return (0, n.jsx)(S.y, { type: S.y.Type.SPINNING_CIRCLE });
-    let r = l().map(t, (e, t) => {
-        if (void 0 !== e && "buffers" !== t) return (0, n.jsx)(el, { label: t, value: e }, t);
+        userId: 1,
+        dataType: 2,
+        savedKB: 3,
+        numFrames: 4,
+        startTimestampMs: 5,
+        endTimestampMs: 6,
+        width: 7,
+        height: 8,
+        audioChannels: 9,
+        sampleRate: 10,
+    },
+    eg = {
+        processRunning: 1,
+        encoderReady: 2,
+        encodeWidth: 3,
+        encodeHeight: 4,
+        encodeFps: 5,
+        measuredFps: 6,
+        encoderImplementationName: 7,
+        referenceBitrateKbps: 8,
+        bitrateKbps: 9,
+        maxBitrateKbps: 10,
+        submittedFrames: 11,
+        encodedFrames: 12,
+        droppedFrames: 13,
+        recentEncodedFrames: 14,
+        recentDroppedFrames: 15,
+        recentDurationMs: 16,
+        clipDurationMs: 17,
+        totalSavedKB: 18,
+    };
+function eA(e, t) {
+    return Object.keys(e).sort((e, r) => {
+        let n = t[e],
+            i = t[r];
+        return n !== i ? (void 0 === n ? 1 : void 0 === i ? -1 : n - i) : e > r ? 1 : -1;
     });
+}
+function eF(e) {
+    let { clips: t } = e;
+    if (null == t) return (0, n.jsx)(R.y, { type: R.y.Type.SPINNING_CIRCLE });
+    let r = (function (e) {
+        let t = [];
+        for (let r of eA(e, eg)) {
+            let i = e[r];
+            void 0 !== i &&
+                "buffers" !== r &&
+                ("bitrateKbps" === r &&
+                    t.length % 2 != 0 &&
+                    t.push((0, n.jsx)(f.A, { basis: "50%", grow: 0 }, "bitrate-alignment")),
+                t.push((0, n.jsx)(el, { label: r, value: i }, r)));
+        }
+        return t;
+    })(t);
     return (
-        r.push(
-            (0, n.jsx)(
-                el,
-                { label: "Frames Per Second", value: t.recentEncodedFrames / (t.recentDurationMs / 1e3) },
-                "framerate",
+        null != t.recentEncodedFrames &&
+            null != t.recentDurationMs &&
+            t.recentDurationMs > 0 &&
+            r.push(
+                (0, n.jsx)(
+                    el,
+                    { label: "Frames Per Second", value: t.recentEncodedFrames / (t.recentDurationMs / 1e3) },
+                    "framerate",
+                ),
             ),
-        ),
-        (0, n.jsxs)(R.B, {
+        (0, n.jsxs)(S.B, {
             children: [
                 (0, n.jsx)(c.D, { variant: "heading-md/medium", children: eh.intl.string(eh.t.MKrFKE) }),
                 ec(r),
@@ -560,11 +602,7 @@ function eg(e) {
                     if (null != e.buffers)
                         return e.buffers.map((e) => {
                             let t = [];
-                            for (let r of Object.keys(e).sort((e, t) => {
-                                let r = ef[e],
-                                    n = ef[t];
-                                return r !== n ? (void 0 === r ? 1 : void 0 === n ? -1 : r - n) : e > t ? 1 : -1;
-                            })) {
+                            for (let r of eA(e, ef)) {
                                 let i = e[r];
                                 null !== i && "key" !== r && t.push((0, n.jsx)(el, { label: r, value: i }, r));
                             }
@@ -585,10 +623,10 @@ function eg(e) {
         })
     );
 }
-let eA = o.Ay.connectStores([C.Ay], (e) => {
+let eb = o.Ay.connectStores([v.Ay], (e) => {
         let { context: t, index: r, videoStreams: n } = e,
-            i = C.Ay.getAllStats(t)[r],
-            { section: a } = (0, C.Bz)(C.Ay.getSection());
+            i = v.Ay.getAllStats(t)[r],
+            { section: a } = (0, v.Bz)(v.Ay.getSection());
         if (null == a) throw Error("Unrecognized section format");
         let s = null;
         return (
@@ -608,9 +646,9 @@ let eA = o.Ay.connectStores([C.Ay], (e) => {
             showUserInfo: !0,
         });
     }),
-    eF = o.Ay.connectStores([C.Ay], (e) => {
+    eD = o.Ay.connectStores([v.Ay], (e) => {
         let { context: t, index: r } = e,
-            n = C.Ay.getAllStats(t)[r];
+            n = v.Ay.getAllStats(t)[r];
         return { outbound: null != n ? n.rtp.outbound : null };
     })(function (e) {
         let { outbound: t, context: r, index: i } = e;
@@ -623,7 +661,7 @@ let eA = o.Ay.connectStores([C.Ay], (e) => {
             showSimulcastOverride: !1,
         });
     }),
-    eb = {
+    ev = {
         hdrFrames: { key: "hdrFramesCapable", suffix: "Capable" },
         hybridDxgiFrames: { key: "hybridDxgiFramesUnique", suffix: "Unique" },
         hybridGdiBitBltFrames: { key: "hybridGdiBitBltFramesUnique", suffix: "Unique" },
@@ -631,7 +669,7 @@ let eA = o.Ay.connectStores([C.Ay], (e) => {
         hybridGraphicsCaptureFrames: { key: "hybridGraphicsCaptureFramesUnique", suffix: "Unique" },
         hybridVideohookFrames: { key: "hybridVideohookFramesUnique", suffix: "Unique" },
     },
-    ev = [
+    eE = [
         "hdrFrames",
         "hybridCaptureMethodSwitches",
         "hybridDxgiFrames",
@@ -650,24 +688,24 @@ let eA = o.Ay.connectStores([C.Ay], (e) => {
         "x11Frames",
         "pipewireFrames",
     ],
-    eC = new Set([...ev, ...Object.values(eb).map((e) => e.key)]);
-class eE extends i.PureComponent {
+    eC = new Set([...eE, ...Object.values(ev).map((e) => e.key)]);
+class ex extends i.PureComponent {
     render() {
         let { screenshare: e } = this.props;
         return null == e
-            ? (0, n.jsx)(S.y, { type: S.y.Type.SPINNING_CIRCLE })
-            : (0, n.jsxs)(R.B, {
+            ? (0, n.jsx)(R.y, { type: R.y.Type.SPINNING_CIRCLE })
+            : (0, n.jsxs)(S.B, {
                   children: [
                       (0, n.jsx)(c.D, { variant: "heading-md/medium", children: eh.intl.string(eh.t["gWbr/U"]) }),
                       ec(
                           (function (e) {
                               let t = null != e.hybridGdiBitBltFrames && null != e.hybridGdiPrintWindowFrames,
                                   r = [];
-                              for (let i of ev) {
+                              for (let i of eE) {
                                   if ("hybridGdiFrames" === i && t) continue;
                                   let a = e[i];
                                   if (void 0 === a) continue;
-                                  let s = eb[i],
+                                  let s = ev[i],
                                       l = null != s ? e[s.key] : void 0;
                                   null != s && void 0 !== l
                                       ? r.push(
@@ -677,7 +715,7 @@ class eE extends i.PureComponent {
                                                     label: i,
                                                     valueRendered: `${a} (${l})`,
                                                     renderGraph: null,
-                                                    children: `${z[i] ?? i} (${s.suffix})`,
+                                                    children: `${K[i] ?? i} (${s.suffix})`,
                                                 },
                                                 i,
                                             ),
@@ -696,15 +734,15 @@ class eE extends i.PureComponent {
               });
     }
 }
-var eD = r(967198),
-    ex = r(116956),
-    eS = r(351906),
-    eR = r(562153),
-    ej = r(917592);
-class eN extends i.PureComponent {
+var eR = r(967198),
+    eS = r(116956),
+    ej = r(351906),
+    eN = r(562153),
+    eI = r(917592);
+class eP extends i.PureComponent {
     render() {
         let { transport: e, mediaSessionId: t, hidePersonalInformation: r, hostname: i } = this.props;
-        if (null == e) return (0, n.jsx)(S.y, { type: S.y.Type.SPINNING_CIRCLE });
+        if (null == e) return (0, n.jsx)(R.y, { type: R.y.Type.SPINNING_CIRCLE });
         let a = { ...e, hostname: i },
             s = l().map(a, (e, t) => {
                 if ("receiverReports" !== t && (!r || "localAddress" !== t))
@@ -712,8 +750,8 @@ class eN extends i.PureComponent {
             }),
             o = l().map(a.receiverReports, (e) => {
                 let t = Array.isArray(e.bitrate) ? e.bitrate.at(-1)?.value : e.bitrate,
-                    r = D.default.getUser(e.id);
-                var n = eR.Ay.getNickname(eD.A.getGuildId(), void 0, r);
+                    r = C.default.getUser(e.id);
+                var n = eN.Ay.getNickname(eR.A.getGuildId(), void 0, r);
                 return (
                     null == n && (n = null != r ? r.username : e.id),
                     { displayName: n, bitrate: t / 1e3, lost: (100 * e.fractionLost) / 256 }
@@ -746,7 +784,7 @@ class eN extends i.PureComponent {
                     (0, n.jsx)(H, { label: t, valueRendered: [a, s], children: t }, t)
                 );
             });
-        return (0, n.jsxs)(R.B, {
+        return (0, n.jsxs)(S.B, {
             className: W._8,
             children: [
                 (0, n.jsx)(c.D, {
@@ -760,25 +798,25 @@ class eN extends i.PureComponent {
         });
     }
 }
-let eP = o.Ay.connectStores([C.Ay, v.A, eS.A, ex.A], (e) => {
+let ek = o.Ay.connectStores([v.Ay, D.A, ej.A, eS.A], (e) => {
     let { context: t, index: r } = e,
-        n = C.Ay.getAllStats(t)[r],
+        n = v.Ay.getAllStats(t)[r],
         i =
             t === eo.x.STREAM
-                ? Object.values(ex.A.getRTCConnections()).find(
+                ? Object.values(eS.A.getRTCConnections()).find(
                       (e) => e.getMediaEngineConnectionId() === n.mediaEngineConnectionId,
                   )
                 : null,
         a = i?.hostname ?? "";
     return {
-        hidePersonalInformation: eS.A.hidePersonalInformation,
+        hidePersonalInformation: ej.A.hidePersonalInformation,
         transport: null != n ? n.transport : null,
-        mediaSessionId: v.A.getMediaSessionId(),
-        hostname: ej.A.getShortHostname(a),
+        mediaSessionId: D.A.getMediaSessionId(),
+        hostname: eI.A.getShortHostname(a),
     };
-})(eN);
-var eI = r(652215);
-function ek(e, t, r, i, a) {
+})(eP);
+var eB = r(652215);
+function ew(e, t, r, i, a) {
     let s = [];
     if (null == t) return s;
     let {
@@ -790,22 +828,22 @@ function ek(e, t, r, i, a) {
         (s.push({ section: h.Fq.HEADER, label: eh.intl.formatToPlainString(eh.t.PK5fOC, { context: e }) }),
         null != o &&
             s.push({
-                section: (0, C.Xi)(e, eI.zWA.TRANSPORT, r),
+                section: (0, v.Xi)(e, eB.zWA.TRANSPORT, r),
                 label: eh.intl.string(eh.t.wU9IN2),
-                element: eP,
+                element: ek,
                 elementProps: { context: e, index: r },
             }),
         null == p ||
             l().isEmpty(p) ||
             s.push({
-                section: (0, C.Xi)(e, eI.zWA.OUTBOUND, r),
+                section: (0, v.Xi)(e, eB.zWA.OUTBOUND, r),
                 label: eh.intl.string(eh.t["3u0gII"]),
-                element: eF,
+                element: eD,
                 elementProps: { context: e, index: r },
             }),
         null != y &&
             s.push({
-                section: (0, C.Xi)(e, eI.zWA.CAMERA, r),
+                section: (0, v.Xi)(e, eB.zWA.CAMERA, r),
                 label: eh.intl.string(eh.t["2AGBWH"]),
                 element: ey,
                 elementProps: { context: e, index: r, camera: y },
@@ -815,9 +853,9 @@ function ek(e, t, r, i, a) {
         let t = [];
         Object.keys(c).forEach((s) => {
             var l;
-            let o = D.default.getUser(s),
+            let o = C.default.getUser(s),
                 p = b.Ay.getNick(a, s),
-                h = (0, C.Xi)(e, s, r);
+                h = (0, v.Xi)(e, s, r);
             null != c[s] &&
                 c[s].length > 0 &&
                 t.push({
@@ -855,7 +893,7 @@ function ek(e, t, r, i, a) {
                     onClick: () => {
                         m.c4(h);
                     },
-                    element: eA,
+                    element: eb,
                     elementProps: { context: e, index: r, videoStreams: i },
                 });
         }),
@@ -863,19 +901,19 @@ function ek(e, t, r, i, a) {
     }
     return s;
 }
-function eB() {
+function eT() {
     let { defaultStats: e, streamStats: t } = (0, o.bG)(
-            [C.Ay],
-            () => ({ defaultStats: C.Ay.getAllStats(eo.x.DEFAULT), streamStats: C.Ay.getAllStats(eo.x.STREAM) }),
+            [v.Ay],
+            () => ({ defaultStats: v.Ay.getAllStats(eo.x.DEFAULT), streamStats: v.Ay.getAllStats(eo.x.STREAM) }),
             [],
             o.My,
         ),
-        r = (0, o.bG)([v.A, F.A], () => F.A.getChannel(v.A.getChannelId())),
+        r = (0, o.bG)([D.A, F.A], () => F.A.getChannel(D.A.getChannelId())),
         a = e.concat(t).find((e) => null != e.screenshare)?.screenshare,
         s = t.find((e) => null != e.clips)?.clips,
         l = (0, o.bG)([A.A], () => A.A.theme),
         d = (0, g.NC)(),
-        u = (0, o.bG)([C.Ay], () => C.Ay.getSection()),
+        u = (0, o.bG)([v.Ay], () => v.Ay.getSection()),
         f = (function (e) {
             let {
                     defaultStats: t,
@@ -886,8 +924,8 @@ function eB() {
                     channel: l,
                     connectionState: o,
                 } = e,
-                d = t.flatMap((e, t) => ek(eo.x.DEFAULT, e, t, i, l?.getGuildId())),
-                u = r.flatMap((e, t) => ek(eo.x.STREAM, e, t, i, l?.getGuildId())),
+                d = t.flatMap((e, t) => ew(eo.x.DEFAULT, e, t, i, l?.getGuildId())),
+                u = r.flatMap((e, t) => ew(eo.x.STREAM, e, t, i, l?.getGuildId())),
                 m = [],
                 p = [],
                 f = { section: h.Fq.DIVIDER };
@@ -895,17 +933,17 @@ function eB() {
                 null != a &&
                     (m.push(f),
                     m.push({
-                        section: eI.zWA.SCREENSHARE,
+                        section: eB.zWA.SCREENSHARE,
                         label: eh.intl.string(eh.t["gWbr/U"]),
-                        element: eE,
+                        element: ex,
                         elementProps: { screenshare: a },
                     })),
                 null != s &&
                     (p.push(f),
                     p.push({
-                        section: eI.zWA.CLIPS,
+                        section: eB.zWA.CLIPS,
                         label: eh.intl.string(eh.t.MKrFKE),
-                        element: eg,
+                        element: eF,
                         elementProps: { clips: s },
                     })),
                 u.length > 0 && u.unshift(f),
@@ -919,7 +957,7 @@ function eB() {
                                       (0, n.jsx)(c.D, {
                                           className: W.HA,
                                           variant: "heading-lg/semibold",
-                                          children: (0, y.m1)(l, D.default, E.A),
+                                          children: (0, y.m1)(l, C.default, E.A),
                                       }),
                               },
                           ]
@@ -931,7 +969,7 @@ function eB() {
                             (0, n.jsx)(c.D, {
                                 className: W.HA,
                                 variant: "heading-md/normal",
-                                children: o === eI.S7L.RTC_CONNECTED ? "Connected" : "Disconnected",
+                                children: o === eB.S7L.RTC_CONNECTED ? "Connected" : "Disconnected",
                             }),
                     },
                     ...d,
@@ -943,11 +981,11 @@ function eB() {
         })({
             defaultStats: e,
             streamStats: t,
-            videoStreams: (0, o.bG)([C.Ay], () => C.Ay.getVideoStreams()),
+            videoStreams: (0, o.bG)([v.Ay], () => v.Ay.getVideoStreams()),
             screenshare: a,
             clips: s,
             channel: r,
-            connectionState: (0, o.bG)([v.A], () => v.A.getState()),
+            connectionState: (0, o.bG)([D.A], () => D.A.getState()),
         });
     return (
         i.useEffect(
@@ -957,17 +995,17 @@ function eB() {
             [],
         ),
         i.useEffect(() => {
-            f.some((e) => e.section === u) || u === C.EM || m.c4(C.EM);
+            f.some((e) => e.section === u) || u === v.EM || m.c4(v.EM);
         }, [f, u]),
         (0, n.jsx)(p.A, { theme: l, sidebarTheme: d, section: u, onSetSection: m.c4, sections: f })
     );
 }
-function ew(e) {
+function eG(e) {
     let { windowKey: t } = e;
     return (0, n.jsx)(a.A, {
         withTitleBar: !0,
         windowKey: t,
         title: eh.intl.string(eh.t["5I/1fl"]),
-        children: (0, n.jsx)(eB, {}),
+        children: (0, n.jsx)(eT, {}),
     });
 }
