@@ -4733,28 +4733,6 @@
     }
   },
   {
-    "name": "2026-07-invite-server-liveliness",
-    "kind": "installation",
-    "defaultConfig": {
-      "enabled": false,
-      "variant": null
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true,
-        "variant": "chart"
-      },
-      "2": {
-        "enabled": true,
-        "variant": "highlights"
-      }
-    }
-  },
-  {
     "name": "2026-07-ios-attribution",
     "kind": "user",
     "defaultConfig": {
