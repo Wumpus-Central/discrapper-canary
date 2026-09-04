@@ -1,251 +1,271 @@
 o.r(e),
     o.d(e, {
-        CheckpointNumbersCenterAlignedRive: () => L,
-        UnlockRive: () => J.V,
-        ThemeAwareNitroWishlistingWumpusRive: () => H.u,
-        CheckpointKnickKnacksRive: () => y,
+        CheckpointNumbersCenterAlignedRive: () => F,
+        UnlockRive: () => z.V,
+        ThemeAwareNitroWishlistingWumpusRive: () => Z.u,
+        CheckpointKnickKnacksRive: () => L,
         AnimatedNitroOrbRewardsRive: () => i.Z,
-        FistBumpRive: () => R.l,
-        PerfTestRive: () => j.Q,
-        NitroRewardsMouseRive: () => E.C,
-        BoostGemLevelTwoRive: () => s.J,
-        GameServerHostingRive: () => B.E,
-        CheckpointFriendsRive: () => f,
-        BoostGemLevelOneRive: () => n.t,
-        TabHoverGradientRive: () => X.U,
-        WandAndSparklesRive: () => Y,
-        BoostThisServerRive: () => b.D,
-        NitroQuestOrbsMultiplierRive: () => W.E,
-        BoostGemLevelThreeRive: () => l.z,
+        FistBumpRive: () => O.l,
+        PerfTestRive: () => Q.Q,
+        NitroRewardsMouseRive: () => j.C,
+        BoostGemLevelTwoRive: () => v.J,
+        GameServerHostingRive: () => W.E,
+        CheckpointFriendsRive: () => C,
+        BoostGemLevelOneRive: () => u.t,
+        TabHoverGradientRive: () => J.U,
+        WandAndSparklesRive: () => re,
+        BoostThisServerRive: () => g.D,
+        NitroQuestOrbsMultiplierRive: () => G.E,
+        BoostGemLevelThreeRive: () => m.z,
         AVSurveyFacesRive: () => a.i,
-        NitroCoinRive: () => _.s,
-        CheckpointIntroRive: () => V,
+        NitroCoinRive: () => x.s,
+        CheckpointIntroRive: () => y,
         AIVisualIdentitySmallSurfaceRive: () => t.j,
-        DiceRive: () => U.m,
-        CheckpointCardRive: () => g,
-        CheckpointNumbersLeftAlignedRive: () => F,
-        PulseGradientRive: () => T.M,
-        VibingWumpusBackgroundRive: () => Z.R,
-        JetpackWumpusWithTrinketsRive: () => O.e,
-        GlowButtonRive: () => N.s,
-        TeenScreenTimeRive: () => Q.w,
-        NitroWishlistingWumpusRive: () => D,
-        VibingWumpusRive: () => K.Z,
+        DiceRive: () => N.m,
+        CheckpointCardRive: () => f,
+        BadgesCoachmarkRive: () => d,
+        CheckpointNumbersLeftAlignedRive: () => R,
+        PulseGradientRive: () => H.M,
+        VibingWumpusBackgroundRive: () => Y.R,
+        JetpackWumpusWithTrinketsRive: () => E.e,
+        GlowButtonRive: () => _.s,
+        TeenScreenTimeRive: () => K.w,
+        NitroWishlistingWumpusRive: () => X,
+        VibingWumpusRive: () => q.Z,
     });
 var t = o(402386),
     i = o(567341),
     a = o(896572),
-    n = o(565553),
-    l = o(285828),
-    s = o(168900),
-    b = o(527383),
-    c = o(477900);
+    n = o(477900);
 o(582128);
-let d =
-    "https://cdn.discordapp.com/assets/content/90100f5bba072ea8759cb5badbe01f05187ed7b573e7b6d6553775a3f78eef9d.riv";
-var u = o(502377),
-    m = o(799226);
-let v = {
-    Main: {
-        reducedMotion: "boolean",
-        Icon: "artboard",
-        Illustration: "artboard",
-        AnimationState: "number",
-        PowerMeter: "number",
-        LVL: "string",
-        PersonaName: "string",
-        "id#": "string",
-        Outof: "string",
-        FillColor: "color",
-    },
-    "Cassette Icon": {},
-    Cassette: {
-        reducedMotion: "boolean",
-        Icon: "artboard",
-        Illustration: "artboard",
-        AnimationState: "number",
-        PowerMeter: "number",
-        LVL: "string",
-        PersonaName: "string",
-        "id#": "string",
-        Outof: "string",
-        FillColor: "color",
-    },
-    "Cat Icon": {},
-    Cat: {
-        reducedMotion: "boolean",
-        Icon: "artboard",
-        Illustration: "artboard",
-        AnimationState: "number",
-        PowerMeter: "number",
-        LVL: "string",
-        PersonaName: "string",
-        "id#": "string",
-        Outof: "string",
-        FillColor: "color",
-    },
-    "Banana Icon": {},
-    Banana: {
-        reducedMotion: "boolean",
-        Icon: "artboard",
-        Illustration: "artboard",
-        AnimationState: "number",
-        PowerMeter: "number",
-        LVL: "string",
-        PersonaName: "string",
-        "id#": "string",
-        Outof: "string",
-        FillColor: "color",
-    },
-    "Duck Icon": {},
-    Duck: {
-        reducedMotion: "boolean",
-        Icon: "artboard",
-        Illustration: "artboard",
-        AnimationState: "number",
-        PowerMeter: "number",
-        LVL: "string",
-        PersonaName: "string",
-        "id#": "string",
-        Outof: "string",
-        FillColor: "color",
-    },
-    "Snail Icon": {},
-    Snail: {
-        reducedMotion: "boolean",
-        Icon: "artboard",
-        Illustration: "artboard",
-        AnimationState: "number",
-        PowerMeter: "number",
-        LVL: "string",
-        PersonaName: "string",
-        "id#": "string",
-        Outof: "string",
-        FillColor: "color",
-    },
-    "Origami Icon": {},
-    Origami: {
-        reducedMotion: "boolean",
-        Icon: "artboard",
-        Illustration: "artboard",
-        AnimationState: "number",
-        PowerMeter: "number",
-        LVL: "string",
-        PersonaName: "string",
-        "id#": "string",
-        Outof: "string",
-        FillColor: "color",
-    },
-    "Disco Icon": {},
-    Disco: {
-        reducedMotion: "boolean",
-        Icon: "artboard",
-        Illustration: "artboard",
-        AnimationState: "number",
-        PowerMeter: "number",
-        LVL: "string",
-        PersonaName: "string",
-        "id#": "string",
-        Outof: "string",
-        FillColor: "color",
-    },
-    "Capybara Icon": {},
-    Capybara: {
-        reducedMotion: "boolean",
-        Icon: "artboard",
-        Illustration: "artboard",
-        AnimationState: "number",
-        PowerMeter: "number",
-        LVL: "string",
-        PersonaName: "string",
-        "id#": "string",
-        Outof: "string",
-        FillColor: "color",
-    },
-    "Donut Icon": {},
-    Donut: {
-        reducedMotion: "boolean",
-        Icon: "artboard",
-        Illustration: "artboard",
-        AnimationState: "number",
-        PowerMeter: "number",
-        LVL: "string",
-        PersonaName: "string",
-        "id#": "string",
-        Outof: "string",
-        FillColor: "color",
-    },
-    "Bonsai Icon": {},
-    Bonsai: {
-        reducedMotion: "boolean",
-        Icon: "artboard",
-        Illustration: "artboard",
-        AnimationState: "number",
-        PowerMeter: "number",
-        LVL: "string",
-        PersonaName: "string",
-        "id#": "string",
-        Outof: "string",
-        FillColor: "color",
-    },
-    "Globe Single Line": {},
-    "Card Back": {
-        reducedMotion: "boolean",
-        Icon: "artboard",
-        Illustration: "artboard",
-        AnimationState: "number",
-        PowerMeter: "number",
-        LVL: "string",
-        PersonaName: "string",
-        "id#": "string",
-        Outof: "string",
-        FillColor: "color",
-    },
-    knickknack: {
-        reducedMotion: "boolean",
-        Icon: "artboard",
-        Illustration: "artboard",
-        AnimationState: "number",
-        PowerMeter: "number",
-        LVL: "string",
-        PersonaName: "string",
-        "id#": "string",
-        Outof: "string",
-        FillColor: "color",
-    },
-    Globe: {},
-    Card: {
-        reducedMotion: "boolean",
-        Icon: "artboard",
-        Illustration: "artboard",
-        AnimationState: "number",
-        PowerMeter: "number",
-        LVL: "string",
-        PersonaName: "string",
-        "id#": "string",
-        Outof: "string",
-        FillColor: "color",
-    },
-};
-function g(r) {
-    let { artboard: e = "Main", stateMachine: o, ...t } = r,
-        { status: i, buffer: a } = (0, m.CE)(d),
-        n = (0, m.m2)(d);
-    return i === m.BW.Loading
+let l =
+    "https://cdn.discordapp.com/assets/content/478c4e2368b95b01e5322800305a95640e4044e34f0da08b51845bc91b51526e.riv";
+var s = o(502377),
+    b = o(799226);
+let c = { "Badges Coachmark": { on: "boolean", reducedMotion: "boolean" } };
+function d(r) {
+    let { artboard: e = "Badges Coachmark", stateMachine: o, ...t } = r,
+        { status: i, buffer: a } = (0, b.CE)(l),
+        d = (0, b.m2)(l);
+    return i === b.BW.Loading
         ? null
-        : (0, c.jsx)(u.w, {
-              ...(n ? { key: "override" } : {}),
+        : (0, n.jsx)(s.w, {
+              ...(d ? { key: "override" } : {}),
               buffer: a,
               artboard: e,
               stateMachine: o,
-              artboardProperties: v,
+              artboardProperties: c,
               ...t,
           });
 }
-g.riveSrc = d;
+d.riveSrc = l;
+var u = o(565553),
+    m = o(285828),
+    v = o(168900),
+    g = o(527383);
 let A =
-        "https://cdn.discordapp.com/assets/content/944cf05122af903e5091602b52fbd726c5c4956954d3628f659f21040a431c4e.riv",
+        "https://cdn.discordapp.com/assets/content/90100f5bba072ea8759cb5badbe01f05187ed7b573e7b6d6553775a3f78eef9d.riv",
     S = {
+        Main: {
+            reducedMotion: "boolean",
+            Icon: "artboard",
+            Illustration: "artboard",
+            AnimationState: "number",
+            PowerMeter: "number",
+            LVL: "string",
+            PersonaName: "string",
+            "id#": "string",
+            Outof: "string",
+            FillColor: "color",
+        },
+        "Cassette Icon": {},
+        Cassette: {
+            reducedMotion: "boolean",
+            Icon: "artboard",
+            Illustration: "artboard",
+            AnimationState: "number",
+            PowerMeter: "number",
+            LVL: "string",
+            PersonaName: "string",
+            "id#": "string",
+            Outof: "string",
+            FillColor: "color",
+        },
+        "Cat Icon": {},
+        Cat: {
+            reducedMotion: "boolean",
+            Icon: "artboard",
+            Illustration: "artboard",
+            AnimationState: "number",
+            PowerMeter: "number",
+            LVL: "string",
+            PersonaName: "string",
+            "id#": "string",
+            Outof: "string",
+            FillColor: "color",
+        },
+        "Banana Icon": {},
+        Banana: {
+            reducedMotion: "boolean",
+            Icon: "artboard",
+            Illustration: "artboard",
+            AnimationState: "number",
+            PowerMeter: "number",
+            LVL: "string",
+            PersonaName: "string",
+            "id#": "string",
+            Outof: "string",
+            FillColor: "color",
+        },
+        "Duck Icon": {},
+        Duck: {
+            reducedMotion: "boolean",
+            Icon: "artboard",
+            Illustration: "artboard",
+            AnimationState: "number",
+            PowerMeter: "number",
+            LVL: "string",
+            PersonaName: "string",
+            "id#": "string",
+            Outof: "string",
+            FillColor: "color",
+        },
+        "Snail Icon": {},
+        Snail: {
+            reducedMotion: "boolean",
+            Icon: "artboard",
+            Illustration: "artboard",
+            AnimationState: "number",
+            PowerMeter: "number",
+            LVL: "string",
+            PersonaName: "string",
+            "id#": "string",
+            Outof: "string",
+            FillColor: "color",
+        },
+        "Origami Icon": {},
+        Origami: {
+            reducedMotion: "boolean",
+            Icon: "artboard",
+            Illustration: "artboard",
+            AnimationState: "number",
+            PowerMeter: "number",
+            LVL: "string",
+            PersonaName: "string",
+            "id#": "string",
+            Outof: "string",
+            FillColor: "color",
+        },
+        "Disco Icon": {},
+        Disco: {
+            reducedMotion: "boolean",
+            Icon: "artboard",
+            Illustration: "artboard",
+            AnimationState: "number",
+            PowerMeter: "number",
+            LVL: "string",
+            PersonaName: "string",
+            "id#": "string",
+            Outof: "string",
+            FillColor: "color",
+        },
+        "Capybara Icon": {},
+        Capybara: {
+            reducedMotion: "boolean",
+            Icon: "artboard",
+            Illustration: "artboard",
+            AnimationState: "number",
+            PowerMeter: "number",
+            LVL: "string",
+            PersonaName: "string",
+            "id#": "string",
+            Outof: "string",
+            FillColor: "color",
+        },
+        "Donut Icon": {},
+        Donut: {
+            reducedMotion: "boolean",
+            Icon: "artboard",
+            Illustration: "artboard",
+            AnimationState: "number",
+            PowerMeter: "number",
+            LVL: "string",
+            PersonaName: "string",
+            "id#": "string",
+            Outof: "string",
+            FillColor: "color",
+        },
+        "Bonsai Icon": {},
+        Bonsai: {
+            reducedMotion: "boolean",
+            Icon: "artboard",
+            Illustration: "artboard",
+            AnimationState: "number",
+            PowerMeter: "number",
+            LVL: "string",
+            PersonaName: "string",
+            "id#": "string",
+            Outof: "string",
+            FillColor: "color",
+        },
+        "Globe Single Line": {},
+        "Card Back": {
+            reducedMotion: "boolean",
+            Icon: "artboard",
+            Illustration: "artboard",
+            AnimationState: "number",
+            PowerMeter: "number",
+            LVL: "string",
+            PersonaName: "string",
+            "id#": "string",
+            Outof: "string",
+            FillColor: "color",
+        },
+        knickknack: {
+            reducedMotion: "boolean",
+            Icon: "artboard",
+            Illustration: "artboard",
+            AnimationState: "number",
+            PowerMeter: "number",
+            LVL: "string",
+            PersonaName: "string",
+            "id#": "string",
+            Outof: "string",
+            FillColor: "color",
+        },
+        Globe: {},
+        Card: {
+            reducedMotion: "boolean",
+            Icon: "artboard",
+            Illustration: "artboard",
+            AnimationState: "number",
+            PowerMeter: "number",
+            LVL: "string",
+            PersonaName: "string",
+            "id#": "string",
+            Outof: "string",
+            FillColor: "color",
+        },
+    };
+function f(r) {
+    let { artboard: e = "Main", stateMachine: o, ...t } = r,
+        { status: i, buffer: a } = (0, b.CE)(A),
+        l = (0, b.m2)(A);
+    return i === b.BW.Loading
+        ? null
+        : (0, n.jsx)(s.w, {
+              ...(l ? { key: "override" } : {}),
+              buffer: a,
+              artboard: e,
+              stateMachine: o,
+              artboardProperties: S,
+              ...t,
+          });
+}
+f.riveSrc = A;
+let p =
+        "https://cdn.discordapp.com/assets/content/944cf05122af903e5091602b52fbd726c5c4956954d3628f659f21040a431c4e.riv",
+    k = {
         MAIN: {
             reducedMotion: "boolean",
             twoFriends: "boolean",
@@ -388,25 +408,25 @@ let A =
             ConnectorColor: "color",
         },
     };
-function f(r) {
+function C(r) {
     let { artboard: e = "MAIN", stateMachine: o, ...t } = r,
-        { status: i, buffer: a } = (0, m.CE)(A),
-        n = (0, m.m2)(A);
-    return i === m.BW.Loading
+        { status: i, buffer: a } = (0, b.CE)(p),
+        l = (0, b.m2)(p);
+    return i === b.BW.Loading
         ? null
-        : (0, c.jsx)(u.w, {
-              ...(n ? { key: "override" } : {}),
+        : (0, n.jsx)(s.w, {
+              ...(l ? { key: "override" } : {}),
               buffer: a,
               artboard: e,
               stateMachine: o,
-              artboardProperties: S,
+              artboardProperties: k,
               ...t,
           });
 }
-f.riveSrc = A;
-let p =
+C.riveSrc = p;
+let V =
         "https://cdn.discordapp.com/assets/content/756c8e37a14fc267712502cc0892be86b2e98d9132fe075f9ba75fd9e9a0aa48.riv",
-    k = {
+    M = {
         "Checkpoint Intro Desktop": {
             reducedMotion: "boolean",
             Subtitle: "string",
@@ -435,25 +455,25 @@ let p =
             StartButton: "string",
         },
     };
-function V(r) {
+function y(r) {
     let { artboard: e = "Checkpoint Intro Desktop", stateMachine: o, ...t } = r,
-        { status: i, buffer: a } = (0, m.CE)(p),
-        n = (0, m.m2)(p);
-    return i === m.BW.Loading
+        { status: i, buffer: a } = (0, b.CE)(V),
+        l = (0, b.m2)(V);
+    return i === b.BW.Loading
         ? null
-        : (0, c.jsx)(u.w, {
-              ...(n ? { key: "override" } : {}),
+        : (0, n.jsx)(s.w, {
+              ...(l ? { key: "override" } : {}),
               buffer: a,
               artboard: e,
               stateMachine: o,
-              artboardProperties: k,
+              artboardProperties: M,
               ...t,
           });
 }
-V.riveSrc = p;
-let C =
+y.riveSrc = V;
+let h =
         "https://cdn.discordapp.com/assets/content/b938a7ed497f825ee131572ca37f34e5c674b47edec8a88661d2a7d380966f1c.riv",
-    M = {
+    w = {
         Preview: { reducedMotion: "boolean", iconColor: "color" },
         Friends: { reducedMotion: "boolean", iconColor: "color" },
         Globe: { reducedMotion: "boolean", iconColor: "color" },
@@ -469,35 +489,14 @@ let C =
         Messages: { reducedMotion: "boolean", iconColor: "color" },
         Servers: { reducedMotion: "boolean", iconColor: "color" },
     };
-function y(r) {
-    let { artboard: e = "Preview", stateMachine: o, ...t } = r,
-        { status: i, buffer: a } = (0, m.CE)(C),
-        n = (0, m.m2)(C);
-    return i === m.BW.Loading
-        ? null
-        : (0, c.jsx)(u.w, {
-              ...(n ? { key: "override" } : {}),
-              buffer: a,
-              artboard: e,
-              stateMachine: o,
-              artboardProperties: M,
-              ...t,
-          });
-}
-y.riveSrc = C;
-let h =
-        "https://cdn.discordapp.com/assets/content/ce09db302fba4b6308baf379d0cbd02ee57cbf2503a998192e31df9637cc161e.riv",
-    w = {
-        Artboard: { reducedMotion: "boolean", TextColor: "color", "Fire CountUp": "trigger", DisplayValue: "number" },
-    };
 function L(r) {
-    let { artboard: e = "Artboard", stateMachine: o, ...t } = r,
-        { status: i, buffer: a } = (0, m.CE)(h),
-        n = (0, m.m2)(h);
-    return i === m.BW.Loading
+    let { artboard: e = "Preview", stateMachine: o, ...t } = r,
+        { status: i, buffer: a } = (0, b.CE)(h),
+        l = (0, b.m2)(h);
+    return i === b.BW.Loading
         ? null
-        : (0, c.jsx)(u.w, {
-              ...(n ? { key: "override" } : {}),
+        : (0, n.jsx)(s.w, {
+              ...(l ? { key: "override" } : {}),
               buffer: a,
               artboard: e,
               stateMachine: o,
@@ -506,78 +505,99 @@ function L(r) {
           });
 }
 L.riveSrc = h;
-let I =
-        "https://cdn.discordapp.com/assets/content/b5a7e4dd53b173c7d1f38ddbd65142267a79529a228987d184c858c16c21ddf6.riv",
-    P = {
+let P =
+        "https://cdn.discordapp.com/assets/content/ce09db302fba4b6308baf379d0cbd02ee57cbf2503a998192e31df9637cc161e.riv",
+    I = {
         Artboard: { reducedMotion: "boolean", TextColor: "color", "Fire CountUp": "trigger", DisplayValue: "number" },
     };
 function F(r) {
     let { artboard: e = "Artboard", stateMachine: o, ...t } = r,
-        { status: i, buffer: a } = (0, m.CE)(I),
-        n = (0, m.m2)(I);
-    return i === m.BW.Loading
+        { status: i, buffer: a } = (0, b.CE)(P),
+        l = (0, b.m2)(P);
+    return i === b.BW.Loading
         ? null
-        : (0, c.jsx)(u.w, {
-              ...(n ? { key: "override" } : {}),
+        : (0, n.jsx)(s.w, {
+              ...(l ? { key: "override" } : {}),
               buffer: a,
               artboard: e,
               stateMachine: o,
-              artboardProperties: P,
+              artboardProperties: I,
               ...t,
           });
 }
-F.riveSrc = I;
-var U = o(908803),
-    R = o(90517),
-    B = o(289704),
-    N = o(570950),
-    O = o(970002),
-    _ = o(149282),
-    W = o(122720),
-    E = o(907581);
-let G =
+F.riveSrc = P;
+let B =
+        "https://cdn.discordapp.com/assets/content/b5a7e4dd53b173c7d1f38ddbd65142267a79529a228987d184c858c16c21ddf6.riv",
+    U = {
+        Artboard: { reducedMotion: "boolean", TextColor: "color", "Fire CountUp": "trigger", DisplayValue: "number" },
+    };
+function R(r) {
+    let { artboard: e = "Artboard", stateMachine: o, ...t } = r,
+        { status: i, buffer: a } = (0, b.CE)(B),
+        l = (0, b.m2)(B);
+    return i === b.BW.Loading
+        ? null
+        : (0, n.jsx)(s.w, {
+              ...(l ? { key: "override" } : {}),
+              buffer: a,
+              artboard: e,
+              stateMachine: o,
+              artboardProperties: U,
+              ...t,
+          });
+}
+R.riveSrc = B;
+var N = o(908803),
+    O = o(90517),
+    W = o(289704),
+    _ = o(570950),
+    E = o(970002),
+    x = o(149282),
+    G = o(122720),
+    j = o(907581);
+let D =
         "https://cdn.discordapp.com/assets/content/7d79185ce3c3038667277ee16ba8cb835b1b012f20b92ef5428b9166c5347c59.riv",
-    x = { "Nitro Wishlist": { reducedMotion: "boolean" } };
-function D(r) {
+    T = { "Nitro Wishlist": { reducedMotion: "boolean" } };
+function X(r) {
     let { artboard: e = "Nitro Wishlist", stateMachine: o, ...t } = r,
-        { status: i, buffer: a } = (0, m.CE)(G),
-        n = (0, m.m2)(G);
-    return i === m.BW.Loading
+        { status: i, buffer: a } = (0, b.CE)(D),
+        l = (0, b.m2)(D);
+    return i === b.BW.Loading
         ? null
-        : (0, c.jsx)(u.w, {
-              ...(n ? { key: "override" } : {}),
+        : (0, n.jsx)(s.w, {
+              ...(l ? { key: "override" } : {}),
               buffer: a,
               artboard: e,
               stateMachine: o,
-              artboardProperties: x,
+              artboardProperties: T,
               ...t,
           });
 }
-D.riveSrc = G;
-var j = o(102079),
-    T = o(440166),
-    X = o(549254),
-    Q = o(632679),
-    H = o(583094),
-    J = o(242644),
-    K = o(773350),
-    Z = o(615429);
-let z =
+X.riveSrc = D;
+var Q = o(102079),
+    H = o(440166),
+    J = o(549254),
+    K = o(632679),
+    Z = o(583094),
+    z = o(242644),
+    q = o(773350),
+    Y = o(615429);
+let $ =
         "https://cdn.discordapp.com/assets/content/026e9c119f280f5edf3ba486ba20c26e21c5dac14dfedd0a238373298bf289f0.riv",
-    q = { "Surprise Me": { fill: "color" } };
-function Y(r) {
+    rr = { "Surprise Me": { fill: "color" } };
+function re(r) {
     let { artboard: e = "Surprise Me", stateMachine: o, ...t } = r,
-        { status: i, buffer: a } = (0, m.CE)(z),
-        n = (0, m.m2)(z);
-    return i === m.BW.Loading
+        { status: i, buffer: a } = (0, b.CE)($),
+        l = (0, b.m2)($);
+    return i === b.BW.Loading
         ? null
-        : (0, c.jsx)(u.w, {
-              ...(n ? { key: "override" } : {}),
+        : (0, n.jsx)(s.w, {
+              ...(l ? { key: "override" } : {}),
               buffer: a,
               artboard: e,
               stateMachine: o,
-              artboardProperties: q,
+              artboardProperties: rr,
               ...t,
           });
 }
-Y.riveSrc = z;
+re.riveSrc = $;
