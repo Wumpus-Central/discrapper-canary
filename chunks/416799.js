@@ -7395,7 +7395,7 @@ var aP = n(691223),
     aF = n(396478),
     aB = n(157559),
     aH = n(554375),
-    aV = n(299905);
+    aV = n(523600);
 class az extends R.Component {
     inputRef = R.createRef();
     state = { focused: !1, lastGoodValue: this.props.value, value: this.props.value };
@@ -7409,17 +7409,17 @@ class az extends R.Component {
     }
     handleChange = (e) => {
         let { onChange: t } = this.props;
-        this.setState({ value: e.currentTarget.value }), t?.(e);
+        this.setState({ value: e.currentTarget.value }), t?.(e.currentTarget.value);
     };
     handleFocus = (e) => {
         let { onFocus: t } = this.props;
         this.setState({ focused: !0, lastGoodValue: e.currentTarget.value }), t?.(e);
     };
-    handleBlur = (e) => {
+    handleBlur = () => {
         if (aY("", this.props, this.state)) {
             this.setState({ focused: !1 });
-            let { onBlur: t } = this.props;
-            t?.(e);
+            let { onCommit: e } = this.props;
+            e?.(this.state.value ?? "");
         } else this.setState({ focused: !1, value: this.state.lastGoodValue });
     };
     handleMouseEnter = (e) => {
@@ -7431,10 +7431,10 @@ class az extends R.Component {
     };
     render() {
         let e,
-            { className: t, name: n, autoComplete: i, maxLen: l, disabled: s } = this.props,
-            r = { position: "absolute", left: 0, width: "100%", opacity: 1 };
+            { className: t, name: n, autoComplete: i, maxLength: l, disabled: s, "aria-label": r } = this.props,
+            a = { position: "absolute", left: 0, width: "100%", opacity: 1 };
         return (
-            this.state.focused ? (e = { visibility: "hidden", pointerEvents: "none" }) : (r.opacity = 0),
+            this.state.focused ? (e = { visibility: "hidden", pointerEvents: "none" }) : (a.opacity = 0),
             (0, p.jsx)("div", {
                 className: k()(aV.A7, t),
                 children: (0, p.jsxs)("div", {
@@ -7444,9 +7444,10 @@ class az extends R.Component {
                             type: "text",
                             className: aV.hF,
                             ref: this.inputRef,
-                            style: r,
+                            style: a,
                             value: this.state.value,
                             name: n,
+                            "aria-label": r,
                             maxLength: l,
                             autoComplete: i,
                             onKeyPress: this.handleKeyPress,
@@ -7468,7 +7469,7 @@ function aY() {
         t = arguments.length > 1 ? arguments[1] : void 0,
         n = arguments.length > 2 ? arguments[2] : void 0,
         i = "" !== e ? e : null != n.value && "" !== n.value ? n.value : "";
-    return (null == t.minLen || !(i.length < t.minLen)) && (null == t.maxLen || !(i.length > t.maxLen));
+    return (null == t.minLength || !(i.length < t.minLength)) && (null == t.maxLength || !(i.length > t.maxLength));
 }
 var aW = n(824832),
     aK = n(65593),
@@ -7602,19 +7603,18 @@ function oa(e) {
                     children: (0, p.jsx)(az, {
                         className: k()({ [ol.XH]: l }),
                         disabled: l,
-                        minLen: 1,
-                        maxLen: rw.EMOJI_MAX_LENGTH,
+                        minLength: 1,
+                        maxLength: rw.EMOJI_MAX_LENGTH,
                         name: el.intl.string(el.t.qUpzYO),
+                        "aria-label": el.intl.string(el.t.qUpzYO),
                         autoComplete: "off",
                         value: r ?? "",
-                        onBlur: function () {
+                        onCommit: function () {
                             if (r === n.name) return;
                             let e = ot.Ay.sanitizeEmojiName(r);
                             e !== n.name && (0, aH.Cp)({ guildId: t, emojiId: n.id, name: e }), a(e);
                         },
-                        onChange: function (e) {
-                            a(e.target.value);
-                        },
+                        onChange: a,
                     }),
                 }),
             }),
