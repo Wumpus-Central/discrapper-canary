@@ -29,7 +29,8 @@ class s extends l.z {
             purchaseType: s,
             skuIds: i,
             locationStack: o,
-            checkoutStepsHistory: u,
+            checkoutStepsHistory:
+                null != u ? u.map((e) => (e.toLowerCase().includes("auth") ? e.replaceAll("auth", "a") : e)) : [],
             ...(e instanceof r.v ? { checkoutErrorExtraInformation: e.extraSentryInformation } : {}),
         };
     }
