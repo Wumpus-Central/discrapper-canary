@@ -1,0 +1,3 @@
+e.exports = JSON.parse(
+    '{"BLKD4B":["Aktualisierung konnte nicht angefordert werden. Versuche es gleich noch einmal."],"1UFWet":["F\xfcr diese App ist noch keine Profilkarte eingerichtet."],"T1n7hc":["Du hast das gerade aktualisiert. Versuche es in einer Minute erneut."],"um/5Kc":["Aktualisierung angefordert. Deine Karte wird in K\xfcrze aktualisiert."],"30UxZU":["Diese App kann deine Karte erst aktualisieren, wenn du sie unter \u201EAutorisierte Apps\u201C erneut autorisierst."],"ypKX9A":["Die App konnte nicht erreicht werden, um eine Aktualisierung anzufordern. Versuche es gleich noch einmal."]}',
+);

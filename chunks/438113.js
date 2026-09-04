@@ -1,0 +1,3 @@
+a.exports = JSON.parse(
+    '{"BLKD4B":["N\xe3o foi poss\xedvel solicitar uma atualiza\xe7\xe3o. Tente novamente em instantes."],"1UFWet":["Este app ainda n\xe3o tem um cart\xe3o de perfil configurado."],"T1n7hc":["Voc\xea acabou de atualizar isso. Tente novamente em um minuto."],"um/5Kc":["Atualiza\xe7\xe3o solicitada. Seu cart\xe3o ser\xe1 atualizado em breve."],"30UxZU":["Este app n\xe3o pode atualizar seu cart\xe3o at\xe9 que voc\xea o autorize novamente em Aplicativos Autorizados."],"ypKX9A":["N\xe3o foi poss\xedvel acessar este app para solicitar uma atualiza\xe7\xe3o. Tente novamente em instantes."]}',
+);

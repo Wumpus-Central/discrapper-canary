@@ -1,3 +1,3 @@
-a.exports = JSON.parse(
-    '{"WmfVjs":["Vincular"],"o6s7yg":["Explorar a loja"],"U9UQJE":["Obter o Nitro"],"qa1xyr":["Loja"]}',
+o.exports = JSON.parse(
+    '{"H6Ny8N":["Desafios ativos"],"k6h2J3":["Desafio conclu\xeddo"],"WmfVjs":["Resgatar"],"h2qWpS":["Ganhe ",[8,"orbIconHook",["orbIcon"]]," ",[1,"orbAmount"]," Orbs"],"B8Fxns":["Ganhe ",[8,"orbIconHook",["orbIcon"]]," ",[1,"orbAmount"]," Orbs"],"o6s7yg":["Explorar a loja"],"OHLdjq":[[1,"multiplier"],"x"],"04j3XV":[[1,"orbAmount"]," Orbs em ",[1,"days"]," dias"],"+kdkTi":["Orbs em ",[1,"days"]," dias"],"XW2CuY":["Continue ganhando para desbloquear sua pr\xf3xima recompensa!"],"xOP5OP":["Voc\xea est\xe1 por dentro"],"pJz0/A":["Assine o Nitro para ganhar mais Orbs"],"FkfrRH":["Orbs Nitro"],"U9UQJE":["Obter o Nitro"],"Ba/7wO":["Assinantes do Nitro ganham ",[1,"multiplier"],"x em tudo"],"ZqCAos":["Ganhe Orbs mais r\xe1pido"],"qa1xyr":["Loja"],"HACucK":["Voc\xea tem Orbs suficientes para comprar algo na loja!"],"WOMrJf":["Desbloquear ",[1,"multiplier"],"x"]}',
 );

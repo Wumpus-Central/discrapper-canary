@@ -1,3 +1,3 @@
-s.exports = JSON.parse(
-    '{"WmfVjs":["Riscatta"],"o6s7yg":["Esplora il negozio"],"U9UQJE":["Ottieni Nitro"],"qa1xyr":["Negozio"]}',
+a.exports = JSON.parse(
+    '{"H6Ny8N":["Sfide attive"],"k6h2J3":["Sfida completata"],"WmfVjs":["Riscatta"],"h2qWpS":["Riscatta ",[8,"orbIconHook",["orbIcon"]]," ",[1,"orbAmount"]," Orbs"],"B8Fxns":["Ottieni ",[8,"orbIconHook",["orbIcon"]]," ",[1,"orbAmount"]," Orbs"],"o6s7yg":["Esplora il negozio"],"OHLdjq":[[1,"multiplier"],"x"],"04j3XV":[[1,"orbAmount"]," Orbs tra ",[1,"days"]," giorni"],"+kdkTi":["Orbs tra ",[1,"days"]," giorni"],"XW2CuY":["Continua a guadagnare per sbloccare la prossima ricompensa!"],"xOP5OP":["Ora hai letto tutto"],"pJz0/A":["Passa a Nitro per guadagnare pi\xf9 Orbs"],"FkfrRH":["Orbs con Nitro"],"U9UQJE":["Ottieni Nitro"],"Ba/7wO":["I membri Nitro hanno un moltiplicatore di ",[1,"multiplier"],"x su tutto"],"ZqCAos":["Guadagna Orbs pi\xf9 velocemente"],"qa1xyr":["Negozio"],"HACucK":["Hai abbastanza Orbs per acquistare qualcosa nel Negozio!"],"WOMrJf":["Sblocca x",[1,"multiplier"]]}',
 );

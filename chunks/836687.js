@@ -1,0 +1,3 @@
+p.exports = JSON.parse(
+    '{"au4mU4":["\u0E40\u0E1E\u0E34\u0E48\u0E21\u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E19"],"7kJd9e":["\u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E19"]}',
+);

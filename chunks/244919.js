@@ -1,1 +1,3 @@
-p.exports = JSON.parse('{"mRy6sO":["L\xe5s upp med Nitro"]}');
+p.exports = JSON.parse(
+    '{"Ocbn9P":[[8,"$link",["L\xe4s mer"],[[1,"deepLinkToNitroHome"]]]],"IyCdAU":["Nu kan du ladda upp filer p\xe5 1 GB"],"n8j5s/":["Skicka filer p\xe5 upp till 1 GB. Perfekt f\xf6r spelklipp, konst och mer"],"mRy6sO":["L\xe5s upp med Nitro"],"Uty2/X":["St\xf6rre filer v\xe4ntar"],"VAgI8Q":["Nitro har precis l\xe5st upp 1 GB-uppladdningar. Det \xe4r en rej\xe4l fil det."],"rY0e9i":["1 GB-uppladdningar \xe4r h\xe4r"],"LhfXZN":["Din uppladdningsgr\xe4ns f\xf6r filer h\xf6jdes just till 1 GB. Det \xe4r en rej\xe4l fil det."],"H523FI":["Din uppladdningsgr\xe4ns h\xf6jdes just till 1 GB."],"/cV3ka":["1\xa0GB-uppladdningar"]}',
+);

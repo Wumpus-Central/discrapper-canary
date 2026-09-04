@@ -1,3 +1,3 @@
-p.exports = JSON.parse(
-    '{"WmfVjs":["Beanspruchen"],"o6s7yg":["Shop erkunden"],"U9UQJE":["Hol dir Nitro"],"qa1xyr":["Shop"]}',
+e.exports = JSON.parse(
+    '{"H6Ny8N":["Aktive Herausforderungen"],"k6h2J3":["Herausforderung abgeschlossen"],"WmfVjs":["Beanspruchen"],"h2qWpS":["Beanspruche ",[8,"orbIconHook",["orbIcon"]]," ",[1,"orbAmount"],"\xa0Orbs"],"B8Fxns":["Verdiene ",[8,"orbIconHook",["orbIcon"]]," ",[1,"orbAmount"]," Orbs"],"o6s7yg":["Shop erkunden"],"OHLdjq":[[1,"multiplier"],"x"],"04j3XV":[[1,"orbAmount"],"\xa0Orbs in ",[1,"days"],"\xa0Tagen"],"+kdkTi":["Orbs in ",[1,"days"],"\xa0Tagen"],"XW2CuY":["Verdiene noch mehr, um deine n\xe4chste Belohnung freizuschalten!"],"xOP5OP":["Du bist auf dem neusten Stand."],"pJz0/A":["Hol dir Nitro, um mehr Orbs zu verdienen"],"FkfrRH":["Nitro-Orbs"],"U9UQJE":["Nitro holen"],"Ba/7wO":["Nitro-Mitglieder verdienen bei allem ",[1,"multiplier"],"-fach"],"ZqCAos":["Verdiene Orbs schneller"],"qa1xyr":["Shop"],"HACucK":["Du hast genug Orbs, um dir etwas im Shop zu holen!"],"WOMrJf":[[1,"multiplier"],"-fach Multiplikator freischalten"]}',
 );

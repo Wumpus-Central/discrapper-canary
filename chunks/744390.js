@@ -1,3 +1,3 @@
-s.exports = JSON.parse(
-    '{"WmfVjs":["Zajmij"],"o6s7yg":["Poznaj sklep"],"U9UQJE":["Zdob\u0105d\u017A Nitro"],"qa1xyr":["Sklep"]}',
+o.exports = JSON.parse(
+    '{"H6Ny8N":["Aktywne wyzwania"],"k6h2J3":["Wyzwanie uko\u0144czone"],"WmfVjs":["Odbierz"],"h2qWpS":["Odbierz ",[8,"orbIconHook",["orbIcon"]]," ",[1,"orbAmount"]," Orbs"],"B8Fxns":["Zdob\u0105d\u017A ",[8,"orbIconHook",["orbIcon"]]," ",[1,"orbAmount"]," Orbs"],"o6s7yg":["Poznaj sklep"],"OHLdjq":[[1,"multiplier"],"x"],"04j3XV":[[1,"orbAmount"]," Orbs za ",[1,"days"]," dni"],"+kdkTi":["Orbs za ",[1,"days"]," dni"],"XW2CuY":["Zdobywaj dalej i odblokuj kolejn\u0105 nagrod\u0119!"],"xOP5OP":["Wszystko przeczytane"],"pJz0/A":["Kup Nitro, aby zdobywa\u0107 wi\u0119cej Orbs"],"FkfrRH":["Nitro Orbs"],"U9UQJE":["Kup Nitro"],"Ba/7wO":["Subskrybenci Nitro zdobywaj\u0105 ",[1,"multiplier"],"x wi\u0119cej za wszystko"],"ZqCAos":["Zdobywaj Orbs szybciej"],"qa1xyr":["Sklep"],"HACucK":["Masz do\u015B\u0107 Orbs, aby kupi\u0107 co\u015B w Sklepie!"],"WOMrJf":["Odblokuj ",[1,"multiplier"],"x"]}',
 );

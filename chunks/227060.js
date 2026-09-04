@@ -1,3 +1,3 @@
-s.exports = JSON.parse(
-    '{"WmfVjs":["H\xe4mta"],"o6s7yg":["Utforska butiken"],"U9UQJE":["Skaffa Nitro"],"qa1xyr":["Butik"]}',
+r.exports = JSON.parse(
+    '{"H6Ny8N":["Aktiva utmaningar"],"k6h2J3":["Utmaning slutf\xf6rd"],"WmfVjs":["H\xe4mta"],"h2qWpS":["H\xe4mta ",[8,"orbIconHook",["orbIcon"]]," ",[1,"orbAmount"]," Orbs"],"B8Fxns":["Tj\xe4na ",[8,"orbIconHook",["orbIcon"]]," ",[1,"orbAmount"]," Orbs"],"o6s7yg":["Utforska butiken"],"OHLdjq":[[1,"multiplier"],"x"],"04j3XV":[[1,"orbAmount"]," Orbs om ",[1,"days"]," dagar"],"+kdkTi":["Orbs om ",[1,"days"]," dagar"],"XW2CuY":["Forts\xe4tt tj\xe4na f\xf6r att l\xe5sa upp din n\xe4sta bel\xf6ning!"],"xOP5OP":["Du \xe4r ikapp"],"pJz0/A":["Skaffa Nitro f\xf6r att tj\xe4na fler Orbs"],"FkfrRH":["Nitro Orbs"],"U9UQJE":["Skaffa Nitro"],"Ba/7wO":["Nitro-medlemmar tj\xe4nar ",[1,"multiplier"],"x p\xe5 allt"],"ZqCAos":["Tj\xe4na Orbs snabbare"],"qa1xyr":["Butik"],"HACucK":["Du har tillr\xe4ckligt med Orbs f\xf6r att k\xf6pa n\xe5got i Butiken!"],"WOMrJf":["L\xe5s upp ",[1,"multiplier"],"x"]}',
 );

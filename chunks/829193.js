@@ -1,3 +1,3 @@
-s.exports = JSON.parse(
-    '{"WmfVjs":["Indl\xf8s"],"o6s7yg":["Udforsk shoppen"],"U9UQJE":["F\xe5 Nitro"],"qa1xyr":["Shop"]}',
+r.exports = JSON.parse(
+    '{"H6Ny8N":["Aktive udfordringer"],"k6h2J3":["Udfordring gennemf\xf8rt"],"WmfVjs":["Indl\xf8s"],"h2qWpS":["Optjen ",[8,"orbIconHook",["orbIcon"]]," ",[1,"orbAmount"]," Orbs"],"B8Fxns":["Optjen ",[8,"orbIconHook",["orbIcon"]]," ",[1,"orbAmount"]," Orbs"],"o6s7yg":["Udforsk Shoppen"],"OHLdjq":[[1,"multiplier"],"x"],"04j3XV":[[1,"orbAmount"]," Orbs i ",[1,"days"]," dage"],"+kdkTi":["Orbs om ",[1,"days"]," dage"],"XW2CuY":["Bliv ved med at optjene for at l\xe5se din n\xe6ste bel\xf8nning op."],"xOP5OP":["Du er helt ajour"],"pJz0/A":["F\xe5 Nitro for at optjene flere Orbs"],"FkfrRH":["Nitro Orbs"],"U9UQJE":["F\xe5 Nitro"],"Ba/7wO":["Nitro-medlemmer optjener ",[1,"multiplier"],"x p\xe5 alt"],"ZqCAos":["Optjen Orbs hurtigere"],"qa1xyr":["Shop"],"HACucK":["Du har nok Orbs til at f\xe5 noget i Shoppen."],"WOMrJf":["L\xe5s op for x",[1,"multiplier"]]}',
 );

@@ -1,1 +1,3 @@
-s.exports = JSON.parse('{"mRy6sO":["Desbloquear com Nitro"]}');
+e.exports = JSON.parse(
+    '{"Ocbn9P":[[8,"$link",["Saiba mais"],[[1,"deepLinkToNitroHome"]]]],"IyCdAU":["Os envios de 1GB chegaram"],"n8j5s/":["Envie arquivos de at\xe9 1GB. Perfeito para clipes de jogo, artes e muito mais"],"mRy6sO":["Desbloquear com Nitro"],"Uty2/X":["Arquivos maiores esperam por voc\xea"],"VAgI8Q":["O Nitro acabou de desbloquear envios de 1GB. \xc9 arquivo de mont\xe3o."],"rY0e9i":["Envios de 1GB, j\xe1 t\xe1 valendo"],"LhfXZN":["Seu limite de envio de arquivos subiu para 1GB. Isso \xe9 arquivo pra caramba."],"H523FI":["Seu limite de envios acabou de subir para 1GB."],"/cV3ka":["Envios de 1GB"]}',
+);

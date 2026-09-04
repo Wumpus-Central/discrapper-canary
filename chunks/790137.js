@@ -1,3 +1,3 @@
-r.exports = JSON.parse(
-    '{"WmfVjs":["Confirmar"],"o6s7yg":["Explorar tienda"],"U9UQJE":["Obt\xe9n Nitro"],"qa1xyr":["Tienda"]}',
+o.exports = JSON.parse(
+    '{"H6Ny8N":["Desaf\xedos activos"],"k6h2J3":["Desaf\xedo completado"],"WmfVjs":["Confirmar"],"h2qWpS":["Reclama ",[8,"orbIconHook",["orbIcon"]]," ",[1,"orbAmount"]," Orbs"],"B8Fxns":["Obt\xe9n ",[8,"orbIconHook",["orbIcon"]]," ",[1,"orbAmount"]," Orbs"],"o6s7yg":["Explorar tienda"],"OHLdjq":[[1,"multiplier"],"x"],"04j3XV":[[1,"orbAmount"]," Orbs en ",[1,"days"]," d\xedas"],"+kdkTi":["Orbs en ",[1,"days"]," d\xedas"],"XW2CuY":["\xa1Sigue ganando para desbloquear tu pr\xf3xima recompensa!"],"xOP5OP":["\xa1Ya est\xe1s al d\xeda!"],"pJz0/A":["Consigue Nitro para ganar m\xe1s Orbs"],"FkfrRH":["Orbs de Nitro"],"U9UQJE":["Obt\xe9n Nitro"],"Ba/7wO":["Los miembros de Nitro ganan x",[1,"multiplier"]," en todo"],"ZqCAos":["Gana Orbs m\xe1s r\xe1pido"],"qa1xyr":["Tienda"],"HACucK":["\xa1Tienes suficientes Orbs para conseguir algo en la tienda!"],"WOMrJf":["Desbloquea x",[1,"multiplier"]]}',
 );

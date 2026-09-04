@@ -1,1 +1,3 @@
-s.exports = JSON.parse('{"mRy6sO":["Nitro ile a\xe7"]}');
+e.exports = JSON.parse(
+    '{"Ocbn9P":[[8,"$link",["Daha Fazla Bilgi Edin"],[[1,"deepLinkToNitroHome"]]]],"IyCdAU":["1 GB\'l\u0131k y\xfcklemeler geldi"],"n8j5s/":["1 GB\'a kadar dosya g\xf6nder. Oyun klipleri, sanat ve daha fazlas\u0131 i\xe7in m\xfckemmel"],"mRy6sO":["Nitro ile A\xe7"],"Uty2/X":["Daha b\xfcy\xfck dosyalar seni bekliyor"],"VAgI8Q":["Nitro ile 1 GB\'lik dosya y\xfckleme a\xe7\u0131ld\u0131. Bu \xe7ok fazla dosya anlam\u0131na geliyor."],"rY0e9i":["1 GB y\xfckleme \xf6zelli\u011Fi \u015Fimdi yay\u0131nda"],"LhfXZN":["Dosya y\xfckleme limitin az \xf6nce 1 GB\'ye \xe7\u0131kt\u0131. Bu \xe7ok dosya demek."],"H523FI":["Dosya y\xfckleme limitin az \xf6nce 1 GB\'ye \xe7\u0131kt\u0131."],"/cV3ka":["1 GB Y\xfckleme"]}',
+);

@@ -1,0 +1,3 @@
+a.exports = JSON.parse(
+    '{"BLKD4B":["Nie uda\u0142o si\u0119 wys\u0142a\u0107 pro\u015Bby o od\u015Bwie\u017Cenie. Spr\xf3buj ponownie za chwil\u0119."],"1UFWet":["Ta aplikacja nie ma jeszcze skonfigurowanej karty profilu."],"T1n7hc":["Od\u015Bwie\u017Cono to przed chwil\u0105. Spr\xf3buj ponownie za minut\u0119."],"um/5Kc":["Wys\u0142ano pro\u015Bb\u0119 o od\u015Bwie\u017Cenie. Twoja karta wkr\xf3tce si\u0119 zaktualizuje."],"30UxZU":["Ta aplikacja nie zaktualizuje Twojej karty, dop\xf3ki nie autoryzujesz jej ponownie w sekcji Autoryzowane aplikacje."],"ypKX9A":["Nie uda\u0142o si\u0119 skontaktowa\u0107 z t\u0105 aplikacj\u0105 w sprawie od\u015Bwie\u017Cenia. Spr\xf3buj ponownie za chwil\u0119."]}',
+);

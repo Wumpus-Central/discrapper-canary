@@ -1,1 +1,3 @@
-s.exports = JSON.parse('{"mRy6sO":["Odblokuj dzi\u0119ki Nitro"]}');
+i.exports = JSON.parse(
+    '{"Ocbn9P":[[8,"$link",["Dowiedz si\u0119 wi\u0119cej"],[[1,"deepLinkToNitroHome"]]]],"IyCdAU":["Przesy\u0142anie plik\xf3w do 1 GB ju\u017C jest"],"n8j5s/":["Wysy\u0142aj pliki do 1 GB. Idealne do klip\xf3w z gier, grafik i nie tylko"],"mRy6sO":["Odblokuj dzi\u0119ki Nitro"],"Uty2/X":["Czekaj\u0105 na Ciebie wi\u0119ksze pliki"],"VAgI8Q":["Nitro w\u0142a\u015Bnie odblokowa\u0142o przesy\u0142anie plik\xf3w do 1 GB. To naprawd\u0119 sporo pliku."],"rY0e9i":["Przesy\u0142anie plik\xf3w do 1 GB ju\u017C dzia\u0142a"],"LhfXZN":["Tw\xf3j limit przesy\u0142ania plik\xf3w w\u0142a\u015Bnie wzr\xf3s\u0142 do 1 GB. To naprawd\u0119 sporo pliku."],"H523FI":["Tw\xf3j limit przesy\u0142ania w\u0142a\u015Bnie wzr\xf3s\u0142 do 1 GB."],"/cV3ka":["Przesy\u0142anie plik\xf3w do 1 GB"]}',
+);

@@ -918,7 +918,7 @@ function e5(e) {
                 s({ action: "PRESS_ADD_WIDGET" }),
                 (0, ep.openModalLazy)(
                     async () => {
-                        let { default: e } = await Promise.all([n.e("740601"), n.e("422420"), n.e("264707")]).then(
+                        let { default: e } = await Promise.all([n.e("962982"), n.e("422420"), n.e("264707")]).then(
                             n.bind(n, 480142),
                         );
                         return (t) => (0, i.jsx)(e, { ...t, trackUserProfileEditAction: s });

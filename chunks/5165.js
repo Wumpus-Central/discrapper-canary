@@ -1,1 +1,3 @@
-s.exports = JSON.parse('{"mRy6sO":["Ontgrendel met Nitro"]}');
+e.exports = JSON.parse(
+    '{"Ocbn9P":[[8,"$link",["Meer informatie"],[[1,"deepLinkToNitroHome"]]]],"IyCdAU":["1 GB-uploads zijn gearriveerd"],"n8j5s/":["Verstuur bestanden tot 1 GB. Perfect voor gameclips, kunst en meer"],"mRy6sO":["Ontgrendel met Nitro"],"Uty2/X":["Grotere bestanden wachten op je"],"VAgI8Q":["Nitro heeft zojuist 1 GB-uploads ontgrendeld. Dat is een aardige hoeveelheid bestand."],"rY0e9i":["1 GB-uploads, nu live"],"LhfXZN":["Je uploadlimiet is zojuist naar 1 GB gestegen. Dat is een flinke berg bestand."],"H523FI":["Je uploadlimiet is zojuist naar 1 GB gestegen."],"/cV3ka":["1 GB-uploads"]}',
+);
