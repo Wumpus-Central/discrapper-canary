@@ -508,6 +508,7 @@ var eX =
         (c.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL = "premium_client_theme_settings_upsell"),
         (c.VIDEO_STAGE_LIMIT = "video_stage_limit"),
         (c.SOUND_PICKER_SOUND_CLICKED = "sound_picker_sound_clicked"),
+        (c.SOUND_QUICK_ACCESS_PICKER_SOUND_CLICKED = "sound_quick_access_picker_sound_clicked"),
         (c.APP_ICON_UPSELL = "app_icon_upsell"),
         (c.COLLECTIBLES_SHOP = "collectibles_shop"),
         (c.COLLECTIBLES_PROFILE_SETTINGS_UPSELL = "collectibles_profile_settings_upsell"),
