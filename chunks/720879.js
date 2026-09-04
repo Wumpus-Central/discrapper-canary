@@ -12,8 +12,8 @@ function c(e) {
             targetElementRef: n,
             estimatedTooltipHeight: c,
             delay: u = 300,
-            onShow: m,
-            title: f,
+            onShow: f,
+            title: m,
             body: g,
             graphic: E,
             size: p = "md",
@@ -77,20 +77,20 @@ function c(e) {
         if ("opening-mouse" === _)
             return (
                 (v.current = window.setTimeout(() => {
-                    (v.current = null), A("open-mouse"), m?.();
+                    (v.current = null), A("open-mouse"), f?.();
                 }, u)),
                 D
             );
-    }, [_, u, m, D]),
+    }, [_, u, f, D]),
         l.useEffect(() => {
             if ("opening-keyboard" === _)
                 return (
                     (v.current = window.setTimeout(() => {
-                        (v.current = null), A("open-keyboard"), m?.();
+                        (v.current = null), A("open-keyboard"), f?.();
                     }, u)),
                     D
                 );
-        }, [_, u, m, D]),
+        }, [_, u, f, D]),
         l.useEffect(() => {
             if ("closing" === _)
                 return (
@@ -139,7 +139,7 @@ function c(e) {
                 shouldShow: j,
                 position: S,
                 align: "center",
-                title: f,
+                title: m,
                 body: g,
                 graphic: E,
                 size: p,

@@ -12,8 +12,8 @@ var i = n(477900),
     g = n(939249),
     f = n(793574),
     A = n(384059),
-    p = n(917592),
-    E = n(978171),
+    E = n(917592),
+    p = n(978171),
     m = n(834730),
     I = n(29160),
     S = n(375708),
@@ -51,8 +51,8 @@ function R(e) {
         } = e,
         S = l.useRef(null),
         C = r === N.S7L.RTC_CONNECTED,
-        y = l.useCallback((e) => (0, i.jsx)(E.A, { ...e, channelId: u }), [u]),
-        { connectionStatus: R, connectionStatusText: x } = p.A.getStatus(r, I);
+        y = l.useCallback((e) => (0, i.jsx)(p.A, { ...e, channelId: u }), [u]),
+        { connectionStatus: R, connectionStatusText: x } = E.A.getStatus(r, I);
     return (0, i.jsxs)("div", {
         className: T.pe,
         children: [

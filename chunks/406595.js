@@ -12,8 +12,8 @@ var i = n(17928),
     g = n(994500),
     f = n(287809),
     A = n(914853),
-    p = n(956753),
-    E = n(652215);
+    E = n(956753),
+    p = n(652215);
 let m = Number.MAX_SAFE_INTEGER,
     I = new l.J(
         function (e) {
@@ -67,10 +67,10 @@ function U(e, t) {
         case A.x.MESSAGES:
             if (n.isDM() || n.isMultiUserDM() || n.isPrivate()) return !0;
             if (!(0, a.ke)(n.type)) return !1;
-            return d.A.can(E.xBc.READ_MESSAGE_HISTORY, n);
+            return d.A.can(p.xBc.READ_MESSAGE_HISTORY, n);
         case A.x.VOICE:
             if (!(0, a.ay)(n.type)) return !1;
-            return d.A.can(E.xBc.VIEW_CHANNEL, n);
+            return d.A.can(p.xBc.VIEW_CHANNEL, n);
         case A.x.FRIENDS:
             return !1;
         default:
@@ -113,7 +113,7 @@ function P(e) {
         let e = (function (e, t, n) {
             var i;
             if (e !== A.x.FRIENDS || null == f.default.getUser(t) || !g.A.isFriend(t)) return null;
-            let l = (i = c.A.getStatus(t)) === E.clD.ONLINE || i === E.clD.IDLE || i === E.clD.DND,
+            let l = (i = c.A.getStatus(t)) === p.clD.ONLINE || i === p.clD.IDLE || i === p.clD.DND,
                 r = s.A.getUserAffinity(t)?.communicationProbability ?? 0,
                 a = o.A.getDMFromUserId(t),
                 { hasMention: u, hasUnread: d } = null != a ? O(a) : { hasMention: !1, hasUnread: !1 };
@@ -321,7 +321,7 @@ class B extends i.Ay.PersistedStore {
     }
 }
 function Y(e) {
-    return (0, p.v$)(e, "OverlayFriendsWidgetFavoritesStore");
+    return (0, E.v$)(e, "OverlayFriendsWidgetFavoritesStore");
 }
 let W = new B(
     r.h,

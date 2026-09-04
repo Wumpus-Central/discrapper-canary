@@ -1,25 +1,25 @@
-l.d(t, { dI: () => m, k3: () => d, x0: () => x });
-var n = l(811996),
-    r = l(773669),
-    a = l(832163);
-l(652215);
-var i = l(206285),
-    s = l(375708);
+n.d(t, { dI: () => m, k3: () => d, x0: () => x });
+var l = n(811996),
+    r = n(773669),
+    a = n(832163);
+n(652215);
+var i = n(206285),
+    s = n(375708);
 let o = {
-        [n.U.DESKTOP]: "PC",
-        [n.U.XBOX]: "Xbox",
-        [n.U.PLAYSTATION]: "PlayStation",
-        [n.U.SWITCH]: "Switch",
-        [n.U.APPLE_ARCADE]: "Apple Arcade",
-        [n.U.NETFLIX]: "Netflix",
-        [n.U.AMAZON_KIDS_PLUS]: "Amazon Kids+",
+        [l.U.DESKTOP]: "PC",
+        [l.U.XBOX]: "Xbox",
+        [l.U.PLAYSTATION]: "PlayStation",
+        [l.U.SWITCH]: "Switch",
+        [l.U.APPLE_ARCADE]: "Apple Arcade",
+        [l.U.NETFLIX]: "Netflix",
+        [l.U.AMAZON_KIDS_PLUS]: "Amazon Kids+",
     },
-    c = [n.U.PLAYSTATION];
-function u(e) {
+    u = [l.U.PLAYSTATION];
+function c(e) {
     let t = (function (e) {
-        if (null == e) return c;
+        if (null == e) return u;
         let t = a.A.getConfigForApplicationId(e);
-        return null == t ? c : t.excludedPlatforms;
+        return null == t ? u : t.excludedPlatforms;
     })(e);
     return 0 === t.length
         ? ""
@@ -29,15 +29,15 @@ function u(e) {
           });
 }
 function d(e) {
-    return s.intl.format(i.default.Q0dHYO, { platforms_info: u(e?.id) });
+    return s.intl.format(i.default.Q0dHYO, { platforms_info: c(e?.id) });
 }
 function m(e) {
     let t = e.name;
-    return s.intl.format(i.default.fO4b1C, { applicationName: t, platforms_info: u(e.id) });
+    return s.intl.format(i.default.fO4b1C, { applicationName: t, platforms_info: c(e.id) });
 }
 function x(e, t) {
-    let { hasAlreadyLinked: l } = t,
-        n = e.name,
-        r = l ? i.default.yqAKVO : i.default.vyAtfo;
-    return s.intl.format(r, { applicationName: n, platforms_info: u(e.id) });
+    let { hasAlreadyLinked: n } = t,
+        l = e.name,
+        r = n ? i.default.yqAKVO : i.default.vyAtfo;
+    return s.intl.format(r, { applicationName: l, platforms_info: c(e.id) });
 }

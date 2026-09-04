@@ -1,25 +1,25 @@
-n.d(t, { Ay: () => o, BQ: () => g, Gf: () => c, Z8: () => p, qv: () => x, s2: () => f }), n(321073);
-var s = n(477900),
-    r = n(582128),
-    i = n(284009),
-    a = n.n(i),
-    l = n(196765);
-let u = r.createContext(null);
-function c(e) {
-    let { stepConfigs: t, breadcrumbs: n, children: i } = e,
-        a = r.useMemo(() => {
-            var e, s;
+t.d(s, { Ay: () => o, BQ: () => f, Gf: () => u, Z8: () => p, qv: () => C, s2: () => x }), t(321073);
+var n = t(477900),
+    r = t(582128),
+    a = t(284009),
+    i = t.n(a),
+    l = t(196765);
+let c = r.createContext(null);
+function u(e) {
+    let { stepConfigs: s, breadcrumbs: t, children: a } = e,
+        i = r.useMemo(() => {
+            var e, n;
             return (
-                (e = t),
-                (s = n),
-                (0, l.v)((t, n) => ({
+                (e = s),
+                (n = t),
+                (0, l.v)((s, t) => ({
                     stepConfigs: e,
                     stepsHistory: [],
                     steps: e.map((e) => e.key).filter((e) => null != e),
                     step: null != e[0] ? e[0].key : null,
                     setStep(e) {
-                        let s = [...n().stepsHistory];
-                        s.push(e), t({ step: e, previousStep: n().step, stepsHistory: s });
+                        let n = [...t().stepsHistory];
+                        n.push(e), s({ step: e, previousStep: t().step, stepsHistory: n });
                     },
                     breadcrumbsData: e
                         .filter((e) => null != e.key && e?.options?.useBreadcrumbLabel != null)
@@ -28,16 +28,16 @@ function c(e) {
                             useBreadcrumbLabel: e.options.useBreadcrumbLabel,
                             sectionHeaderText: e.options.sectionHeaderText,
                         }))
-                        .sort((e, t) => (null != s ? s.indexOf(e.id) - s.indexOf(t.id) : 0)),
+                        .sort((e, s) => (null != n ? n.indexOf(e.id) - n.indexOf(s.id) : 0)),
                     previousStep: null,
                 }))
             );
-        }, [t, n]);
-    return (0, s.jsx)(u, { value: a, children: i });
+        }, [s, t]);
+    return (0, n.jsx)(c, { value: i, children: a });
 }
 function o(e) {
-    let t = r.useContext(u);
-    return a()(null != t, "useSteps must be used inside CheckoutStepContext"), t(e);
+    let s = r.useContext(c);
+    return i()(null != s, "useSteps must be used inside CheckoutStepContext"), s(e);
 }
 function d(e) {
     return e.step;
@@ -46,18 +46,18 @@ function m(e) {
     return e.setStep;
 }
 function p() {
-    let { step: e, stepConfigs: t } = o();
-    return t.find((t) => t.key === e) ?? null;
-}
-function f() {
-    return o(d);
+    let { step: e, stepConfigs: s } = o();
+    return s.find((s) => s.key === e) ?? null;
 }
 function x() {
+    return o(d);
+}
+function C() {
     return o(m);
 }
-function v(e) {
+function L(e) {
     return e.stepsHistory;
 }
-function g() {
-    return o(v);
+function f() {
+    return o(L);
 }

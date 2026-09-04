@@ -12,14 +12,14 @@ var i = n(665260),
     g = n(887560),
     f = n(652215),
     A = n(790782),
-    p = n(355097);
-let E = [
+    E = n(355097);
+let p = [
         { timeSinceJoin: +c.A.Millis.HOUR, sends: 1, viewTime: +c.A.Millis.MINUTE },
         { timeSinceJoin: +c.A.Millis.DAY, sends: 2, viewTime: 2 * c.A.Millis.MINUTE },
         { timeSinceJoin: +c.A.Millis.WEEK, sends: 5, viewTime: 5 * c.A.Millis.MINUTE },
         { timeSinceJoin: +c.A.Millis.DAYS_30, sends: 10, viewTime: 30 * c.A.Millis.MINUTE },
     ],
-    m = 5 * E[E.length - 1].viewTime,
+    m = 5 * p[p.length - 1].viewTime,
     I = c.A.Millis.WEEK,
     S = { channels: {} },
     C = new Set(),
@@ -67,7 +67,7 @@ function R(e, t) {
         null != n &&
         !!(
             (null != n.message_notifications && n.message_notifications !== f.orn.NULL) ||
-            (null != n.flags && (0, i.br)(n.flags, p.vv.UNREADS_ALL_MESSAGES | p.vv.UNREADS_ONLY_MENTIONS))
+            (null != n.flags && (0, i.br)(n.flags, E.vv.UNREADS_ALL_MESSAGES | E.vv.UNREADS_ONLY_MENTIONS))
         )
     );
 }
@@ -95,7 +95,7 @@ class x extends l.Ay.PersistedStore {
                     i = Math.min(h.default.age(e.id), Date.now() - n.getTime()),
                     l = S.channels[e.id];
                 if (null == l || l.lastActionTime < Date.now() - I) return !1;
-                for (let e of E)
+                for (let e of p)
                     if (i < e.timeSinceJoin && (l.numSends >= e.sends || l.viewDuration >= e.viewTime)) return !0;
                 return !1;
             })(t) &&

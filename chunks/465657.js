@@ -22,8 +22,8 @@ function f(e) {
             resolveInternalState: S,
             resolveTenantReviewButtonProps: y,
             handleStepChange: I,
-            openInvoiceId: A,
-            analyticsData: g,
+            openInvoiceId: g,
+            analyticsData: A,
             analyticsLocation: P,
         } = e,
         {
@@ -35,8 +35,8 @@ function f(e) {
             setCheckoutCurrency: b,
             setLinkWalletEnabled: j,
             checkoutPaymentSources: R,
-            hasCheckoutContextLoaded: O,
-            invoicePreview: M,
+            hasCheckoutContextLoaded: M,
+            invoicePreview: O,
         } = (0, C.t4)((e) => ({
             customCheckoutFlow: e.customCheckoutFlow,
             contextMetadata: e.contextMetadata,
@@ -56,10 +56,10 @@ function f(e) {
         U = (0, c.W)(w, v),
         D = i.useMemo(() => {
             if (null == v) return !1;
-            if (!O) return !0;
+            if (!M) return !0;
             let e = R.find((e) => e.id === v);
             return null != e && !e.enabled;
-        }, [R, O, v]),
+        }, [R, M, v]),
         G = (0, s.iB)({ checkoutPaymentSources: R, paymentSourceId: v, location: "CheckoutBaseReviewStep" }),
         { disablePurchase: F } = i.useMemo(() => {
             let e = { disablePurchase: G || x === h.uH.DEV_STORYBOOK_CHECKOUT };
@@ -70,12 +70,12 @@ function f(e) {
                           paymentSource: U,
                           paymentSourceId: v,
                           isSelectedPaymentSourceDisabled: D,
-                          invoicePreview: M,
+                          invoicePreview: O,
                           purchasePreviewError: _,
                       },
                   )
                 : e;
-        }, [S, U, v, D, M, _, G, x]);
+        }, [S, U, v, D, O, _, G, x]);
     i.useEffect(() => {
         null != N && null != k.current && k.current.scrollIntoView({ behavior: "smooth" });
     }, [N]);
@@ -96,8 +96,8 @@ function f(e) {
             onPaymentSourceAdd: H,
             disablePurchase: F,
             analyticsLocation: P,
-            baseAnalyticsData: g,
-            openInvoiceId: A,
+            baseAnalyticsData: A,
+            openInvoiceId: g,
             handleStepChange: I,
             postPurchaseStep: o.pn.CONFIRM,
             backButtonEligible: r,

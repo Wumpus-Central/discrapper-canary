@@ -1,11 +1,11 @@
-l.d(t, { s: () => c });
+l.d(t, { s: () => u });
 var n = l(477900);
 l(582128);
 var r = l(834730),
     i = l(500380),
     s = l(423764),
     a = l(464086);
-function c(e) {
+function u(e) {
     let { storeCountry: t } = e;
     return (0, n.jsxs)("div", {
         className: a.n,

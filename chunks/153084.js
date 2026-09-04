@@ -1,77 +1,77 @@
-n.d(t, { A: () => p });
+n.d(t, { A: () => I });
 var r = n(17928),
     l = n(228366),
     i = n(158032),
-    s = n(830382),
-    u = n(136857),
-    o = n(739508),
-    a = n(71532),
+    o = n(830382),
+    a = n(136857),
+    s = n(739508),
+    u = n(71532),
     c = n(652215),
     d = n(375708);
-let E = !1,
+let C = !1,
     h = null,
-    A = null,
-    f = !1;
-function g() {
-    (E = !1), (A = null), (h = null), (f = !1);
+    E = null,
+    m = !1;
+function p() {
+    (C = !1), (E = null), (h = null), (m = !1);
 }
 function _(e) {
     let { error: t } = e,
         { code: n, paymentId: r } = t;
-    if (n !== u.Ay.ErrorCodes.CONFIRMATION_REQUIRED && n !== u.Ay.ErrorCodes.AUTHENTICATION_REQUIRED)
-        return (E = !1), !1;
-    E || ((E = !0), (h = r), (f = !1), n === u.Ay.ErrorCodes.AUTHENTICATION_REQUIRED && C(r));
+    if (n !== a.Ay.ErrorCodes.CONFIRMATION_REQUIRED && n !== a.Ay.ErrorCodes.AUTHENTICATION_REQUIRED)
+        return (C = !1), !1;
+    C || ((C = !0), (h = r), (m = !1), n === a.Ay.ErrorCodes.AUTHENTICATION_REQUIRED && f(r));
 }
-async function C(e) {
+async function f(e) {
     if (null == e) return;
-    let { error: t } = await (0, a.ap)(e);
+    let { error: t } = await (0, u.ap)(e);
     if (null != t) {
         let e = Error(t);
-        (0, o.pM)(e, { extra: { authenticationError: t } });
+        (0, s.pM)(e, { extra: { authenticationError: t } });
     }
 }
 function S(e) {
     let { payment: t } = e,
         n = [c.__0.COMPLETED, c.__0.FAILED, c.__0.CANCELED];
-    if (!E || t.id !== h || !n.includes(t.status)) return !1;
-    if (((E = !1), (h = null), t.status === c.__0.FAILED)) {
+    if (!C || t.id !== h || !n.includes(t.status)) return !1;
+    if (((C = !1), (h = null), t.status === c.__0.FAILED)) {
         let e = null;
-        t.metadata?.billing_error_code === u.tG.BILLING_INSUFFICIENT_FUNDS && (e = u.tG.BILLING_INSUFFICIENT_FUNDS),
-            (A = new u.Ay(d.intl.string(d.t.khEaRI), e));
-    } else (A = null), l.h.wait(i.ET), l.h.wait(s.T3);
+        t.metadata?.billing_error_code === a.tG.BILLING_INSUFFICIENT_FUNDS && (e = a.tG.BILLING_INSUFFICIENT_FUNDS),
+            (E = new a.Ay(d.intl.string(d.t.khEaRI), e));
+    } else (E = null), l.h.wait(i.ET), l.h.wait(o.T3);
 }
-class N extends r.Ay.Store {
+class A extends r.Ay.Store {
     static displayName = "PaymentAuthenticationStore";
     get isAwaitingAuthentication() {
-        return E;
+        return C;
     }
     get error() {
-        return A;
+        return E;
     }
     get awaitingPaymentId() {
         return h;
     }
     get wasCancelled() {
-        return f;
+        return m;
     }
 }
-let p = new N(l.h, {
-    BILLING_SUBSCRIPTION_UPDATE_START: g,
-    PAYMENT_AUTHENTICATION_CLEAR_ERROR: g,
+let I = new A(l.h, {
+    BILLING_SUBSCRIPTION_UPDATE_START: p,
+    PAYMENT_AUTHENTICATION_CLEAR_ERROR: p,
     PAYMENT_AUTHENTICATION_CANCEL: function () {
-        (E = !1), (h = null), (A = null), (f = !0);
+        (C = !1), (h = null), (E = null), (m = !0);
     },
-    PREMIUM_PAYMENT_ERROR_CLEAR: g,
-    PREMIUM_PAYMENT_MODAL_CLOSE: g,
-    PREMIUM_PAYMENT_MODAL_OPEN: g,
-    CHECKOUT_MODAL_CLOSE: g,
-    PREMIUM_PAYMENT_SUBSCRIBE_START: g,
-    PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS: g,
-    PREMIUM_PAYMENT_UPDATE_SUCCESS: g,
-    SKU_PURCHASE_MODAL_CLOSE: g,
-    SKU_PURCHASE_MODAL_OPEN: g,
-    SKU_PURCHASE_START: g,
-    SKU_PURCHASE_SUCCESS: g,
+    PREMIUM_PAYMENT_ERROR_CLEAR: p,
+    PREMIUM_PAYMENT_MODAL_CLOSE: p,
+    PREMIUM_PAYMENT_MODAL_OPEN: p,
+    CHECKOUT_MODAL_CLOSE: p,
+    PREMIUM_PAYMENT_SUBSCRIBE_START: p,
+    PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS: p,
+    PREMIUM_PAYMENT_UPDATE_SUCCESS: p,
+    SKU_PURCHASE_MODAL_CLOSE: p,
+    SKU_PURCHASE_MODAL_OPEN: p,
+    SKU_PURCHASE_START: p,
+    SKU_PURCHASE_SUCCESS: p,
     BILLING_SUBSCRIPTION_UPDATE_FAIL: _,
     PREMIUM_PAYMENT_SUBSCRIBE_FAIL: _,
     PREMIUM_PAYMENT_UPDATE_FAIL: _,
@@ -79,7 +79,7 @@ let p = new N(l.h, {
     GIFT_CODE_REDEEM_FAILURE: _,
     PAYMENT_AUTHENTICATION_ERROR: function (e) {
         let { error: t } = e;
-        (A = t), (E = !1);
+        (E = t), (C = !1);
     },
     PAYMENT_UPDATE: S,
     BILLING_PAYMENT_FETCH_SUCCESS: S,

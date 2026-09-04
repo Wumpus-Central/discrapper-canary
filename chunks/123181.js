@@ -71,8 +71,8 @@ let x = l.memo(function (e) {
 });
 function f(e) {
     let { tags: t, onTagsChange: n, onOpen: c, onClose: d, variant: f = "default", ref: h } = e,
-        p = "filled" === f,
-        I = (0, l.useRef)(null),
+        I = "filled" === f,
+        p = (0, l.useRef)(null),
         j = (0, l.useMemo)(() => (null != t ? t : []), [t]),
         A = (0, l.useCallback)(
             function (e) {
@@ -102,7 +102,7 @@ function f(e) {
             [j, n],
         );
     return (0, i.jsx)(s.Y, {
-        targetElementRef: I,
+        targetElementRef: p,
         position: "right",
         align: "top",
         onRequestOpen: c,
@@ -114,21 +114,21 @@ function f(e) {
         children: (e) =>
             (0, i.jsx)("div", {
                 ref: (e) => (
-                    null != e && ((I.current = e), (h.current = e)),
+                    null != e && ((p.current = e), (h.current = e)),
                     () => {
-                        (I.current = null), (h.current = null);
+                        (p.current = null), (h.current = null);
                     }
                 ),
                 children: (0, i.jsxs)(r.D, {
                     ...e,
-                    className: p ? m._m : m.c9,
+                    className: I ? m._m : m.c9,
                     "aria-label": g.intl.string(g.t.r6EJOu),
                     children: [
-                        p && (0, i.jsx)(a.j, { size: "xxs", color: "currentColor" }),
+                        I && (0, i.jsx)(a.j, { size: "xxs", color: "currentColor" }),
                         (0, i.jsx)(o.E, {
                             variant: "text-xxs/medium",
                             color: "none",
-                            children: p ? g.intl.string(g.t.DccrfU) : g.intl.string(g.t.fZSejy),
+                            children: I ? g.intl.string(g.t.DccrfU) : g.intl.string(g.t.fZSejy),
                         }),
                     ],
                 }),

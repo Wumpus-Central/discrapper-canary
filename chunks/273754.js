@@ -515,9 +515,9 @@ var eM = n(931664),
     e1 = n(140735),
     e2 = n(176781),
     e3 = n(463930),
-    e6 = n(935063),
+    e5 = n(935063),
     e8 = n(73392),
-    e5 = n(650019),
+    e6 = n(650019),
     e7 = n(763754),
     e4 = n(967144),
     e9 = n(118517),
@@ -591,7 +591,7 @@ function tu(e) {
         } = (0, e7.Ay)(u),
         I = (0, e4.gn)(f, C, x),
         y = (0, e8.a)({ displayNameStyles: E }),
-        S = (0, e5.A)(h, u.attachments),
+        S = (0, e6.A)(h, u.attachments),
         v =
             ((t = o.id),
             (n = u.id),
@@ -689,7 +689,7 @@ function tu(e) {
                                                         color: c ? "text-link" : "text-muted",
                                                         className: tr.Z4,
                                                         children: [
-                                                            (0, l.jsx)(e6.X, {
+                                                            (0, l.jsx)(e5.X, {
                                                                 size: "md",
                                                                 color: "currentColor",
                                                                 "aria-label": T.intl.string(T.t.P8tvKG),
@@ -1068,9 +1068,9 @@ function t0(e) {
 var t1 = n(575293),
     t2 = n(536637),
     t3 = n.n(t2),
-    t6 = n(31717),
+    t5 = n(31717),
     t8 = n(551640),
-    t5 = n(970244),
+    t6 = n(970244),
     t7 = n(29621);
 function t4(e) {
     let { channel: t, scheduledMessageDraft: n } = e,
@@ -1086,7 +1086,7 @@ function t4(e) {
                         className: t7.a3,
                         "aria-label": T.intl.string(T.t.SBcdAN),
                         onClick: function () {
-                            (0, t5.e0)({
+                            (0, t6.e0)({
                                 channel: t,
                                 defaultValue: t3()(i),
                                 entryPoint: t8.t.COMPOSER_BAR,
@@ -1104,7 +1104,7 @@ function t4(e) {
                         className: t7.o1,
                         children: (0, l.jsx)(ts, {
                             onClick: function (e) {
-                                e.stopPropagation(), x.A.clearDraft(t.id, t6.C.ScheduledMessage);
+                                e.stopPropagation(), x.A.clearDraft(t.id, t5.C.ScheduledMessage);
                             },
                             "aria-label": T.intl.string(T.t.cpT0Cq),
                         }),
@@ -1621,9 +1621,9 @@ let nD = i.memo(
             e1 = b.toolbarType === eX.O1.STATIC,
             e2 = !eD.D_.useSetting() && !(0, eJ.isAndroidWeb)() && null != window.ResizeObserver,
             e3 = !e2 || !b.commands?.enabled || !R || "/" !== a,
-            e6 = (0, eS.A)(),
+            e5 = (0, eS.A)(),
             { fontSize: e8 } = (0, m.cf)([C.Ay], () => ({ fontSize: C.Ay.fontSize })),
-            e5 = (0, m.bG)([eH.A], () => eH.A.isEnabled());
+            e6 = (0, m.bG)([eH.A], () => eH.A.isEnabled());
         nb(b, eK, T.id);
         let { eventEmitter: e7, handleEditorSelectionChanged: e4 } = nR(eE, a, o),
             e9 = i.useRef(a);
@@ -1818,7 +1818,7 @@ let nD = i.memo(
             tQ = b.layout === eX.wt.INLINE,
             t2 = b.layout === eX.wt.FLUSH,
             t3 = (0, l.jsx)("div", { ref: em, className: t9.BW }),
-            t6 = tk ? (0, l.jsx)(M, { align: "right", positionTargetRef: em, channel: T }) : null,
+            t5 = tk ? (0, l.jsx)(M, { align: "right", positionTargetRef: em, channel: T }) : null,
             t8 =
                 null != P
                     ? P()
@@ -1831,7 +1831,7 @@ let nD = i.memo(
                           showAllButtons: !ek && !eM,
                           expressionButtonsHidden: eM,
                       }),
-            t5 = tB
+            t6 = tB
                 ? (0, l.jsx)(nf.A, {
                       type: b,
                       textValue: a,
@@ -1889,7 +1889,7 @@ let nD = i.memo(
                                             }),
                                             onMouseDown: tR,
                                             children: [
-                                                t6,
+                                                t5,
                                                 tU,
                                                 (0, l.jsx)(p.vN, {
                                                     ringTarget: ec,
@@ -1910,7 +1910,7 @@ let nD = i.memo(
                                                         type: b,
                                                         canPasteFiles: eZ,
                                                         uploadPromptCharacterCount: ea.CS1,
-                                                        maxCharacterCount: Y ?? e6,
+                                                        maxCharacterCount: Y ?? e5,
                                                         allowNewLines: J,
                                                         "aria-describedby": tX,
                                                         onChange: te,
@@ -1929,7 +1929,7 @@ let nD = i.memo(
                                                         onHideAutocomplete: tr,
                                                         promptToUpload: W,
                                                         fontSize: e8,
-                                                        spellcheckEnabled: e5,
+                                                        spellcheckEnabled: e6,
                                                         canOnlyUseTextCommands: tP,
                                                         className: r()(
                                                             {
@@ -1976,7 +1976,7 @@ let nD = i.memo(
                                     position: et,
                                 }),
                                 (0, l.jsx)(eL, { textValue: a, editorHeight: tC, channelId: T.id }),
-                                t5,
+                                t6,
                                 en,
                             ],
                         }),

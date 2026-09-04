@@ -1,4 +1,4 @@
-t.d(a, { R: () => u, S: () => o });
+t.d(e, { R: () => d, S: () => o });
 var l = t(477900),
     n = t(582128),
     r = t(643909),
@@ -6,15 +6,15 @@ var l = t(477900),
     i = t(652215);
 let c = n.createContext("unset_context");
 function o() {
-    let e = n.useContext(c);
-    if ("unset_context" === e) throw Error("useCheckoutStripeInstance must be used within a CheckoutStripeProvider");
-    return e;
+    let a = n.useContext(c);
+    if ("unset_context" === a) throw Error("useCheckoutStripeInstance must be used within a CheckoutStripeProvider");
+    return a;
 }
-function u(e) {
-    let { children: a } = e,
+function d(a) {
+    let { children: e } = a,
         t = (0, s.A)();
     return (0, l.jsx)(c.Provider, {
         value: t,
-        children: (0, l.jsx)(r.Elements, { options: i.XL8, stripe: t, children: a }),
+        children: (0, l.jsx)(r.Elements, { options: i.XL8, stripe: t, children: e }),
     });
 }

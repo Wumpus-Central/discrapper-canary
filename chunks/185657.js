@@ -12,8 +12,8 @@ var l,
     g = n(309010),
     f = n(461213),
     A = n(287809),
-    p = n(977997),
-    E = n(562153),
+    E = n(977997),
+    p = n(562153),
     m = n(914853),
     I = n(956753),
     S = n(406595),
@@ -118,7 +118,7 @@ function U(e) {
                             (n = i),
                             (l = t?.name != null && null != n),
                             (r = c.A.getStatus(A)),
-                            (s = p.A.getVoiceStateForUser(A)),
+                            (s = E.A.getVoiceStateForUser(A)),
                             (a = s?.channelId != null),
                             (u = (o = _.filter(O)).filter(C.A)),
                             (h = o.filter((e) => e.application_id === n)),
@@ -140,7 +140,7 @@ function U(e) {
                         G = b === N.clD.ONLINE,
                         F = R.some(O),
                         j = b === N.clD.DND || b === N.clD.IDLE,
-                        V = E.Ay.getName(L, P, I);
+                        V = p.Ay.getName(L, P, I);
                     return {
                         id: A,
                         userId: A,
@@ -186,11 +186,11 @@ function U(e) {
               : (function (e) {
                     let { userId: t, user: n, activities: i, nickname: l, affinity: r } = e;
                     if (!(r > _.u.HIGH_AFFINITY_MINIMUM)) return null;
-                    let s = p.A.getVoiceStateForUser(t),
+                    let s = E.A.getVoiceStateForUser(t),
                         a = s?.channelId,
                         o = null != a ? d.A.getChannel(a)?.guild_id : null,
                         u = i.length > 0 || null != a,
-                        c = E.Ay.getName(o, a, n);
+                        c = p.Ay.getName(o, a, n);
                     return {
                         id: t,
                         userId: t,
@@ -218,7 +218,7 @@ function w() {
 class P extends r.Ay.Store {
     static displayName = "FriendsWidgetFriendsStore";
     initialize() {
-        this.waitFor(d.A, o.A, S.A, c.A, h.A, g.Ay, f.A, u.A, A.default, p.A), w();
+        this.waitFor(d.A, o.A, S.A, c.A, h.A, g.Ay, f.A, u.A, A.default, E.A), w();
     }
     getRows(e) {
         return [v.values(e), v.version];

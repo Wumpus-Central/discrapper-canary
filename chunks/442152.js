@@ -466,7 +466,7 @@ var eQ = n(307301),
     e1 = n(683522);
 let e2 = (0, z.xI)(M.A.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_PRIMARY_DIMENSIONS),
     e3 = (0, z.xI)(M.A.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_SECONDARY_DIMENSIONS),
-    e6 = i.memo(function (e) {
+    e5 = i.memo(function (e) {
         let { stickersGrid: t } = e,
             n = U.bM.useStore((e) => e.inspectedExpressionPosition),
             s = i.useMemo(() => {
@@ -513,7 +513,7 @@ let e2 = (0, z.xI)(M.A.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_B
         });
     });
 var e8 = n(140735),
-    e5 = n(442433),
+    e6 = n(442433),
     e7 = n(304072),
     e4 = n(194261),
     e9 = n(513902);
@@ -649,7 +649,7 @@ let tn = i.memo(function (e) {
                                     x?.(e, n);
                             },
                             onContextMenu: function (e) {
-                                (0, e5.L3)(e, async () => {
+                                (0, e6.L3)(e, async () => {
                                     let { default: e } = await Promise.all([n.e("904774"), n.e("446132")]).then(
                                         n.bind(n, 233503),
                                     );
@@ -1101,7 +1101,7 @@ let ty = i.forwardRef(function (e, t) {
                                   stickyHeaders: !0,
                                   ref: I,
                               }),
-                        (0, l.jsx)(e6, { stickersGrid: x }),
+                        (0, l.jsx)(e5, { stickersGrid: x }),
                     ],
                 }),
             })

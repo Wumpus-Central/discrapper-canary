@@ -17,8 +17,8 @@ var l = n(284009),
     S = n(652215),
     y = n(202541);
 function I(e) {
-    let { analyticsData: t, initialPlanId: n, handleStepChange: l, onReturn: I, continueSessionToInitialStep: A } = e,
-        { paymentSources: g } = (0, a.j)(),
+    let { analyticsData: t, initialPlanId: n, handleStepChange: l, onReturn: I, continueSessionToInitialStep: g } = e,
+        { paymentSources: A } = (0, a.j)(),
         {
             selectedSkuId: P,
             setPurchaseState: v,
@@ -39,25 +39,25 @@ function I(e) {
             activeSubscription: e.activeSubscription,
         })),
         { purchaseErrorBlockRef: R } = (0, c.Gm)(),
-        { paymentAuthenticationState: O } = (0, s.o)(),
-        { isPremiumGroupPurchase: M, isEligibleForTrial: L } = (0, o.i)(),
+        { paymentAuthenticationState: M } = (0, s.o)(),
+        { isPremiumGroupPurchase: O, isEligibleForTrial: L } = (0, o.i)(),
         { step: k } = (0, u.Ay)(),
         { isGift: w } = (0, h.Pv)(),
         U = {
             ...(0, m._)(),
-            paymentSources: g,
+            paymentSources: A,
             paymentSourceId: x,
             setPaymentSourceId: T,
             purchaseError: N,
             setPurchaseError: b,
             purchaseErrorBlockRef: R,
-            paymentAuthenticationState: O,
+            paymentAuthenticationState: M,
             isGift: w,
         },
         D =
             I ??
             function () {
-                l(Object.values(g).length < 1 && null == n ? f.pn.PLAN_SELECT : f.pn.REVIEW, {
+                l(Object.values(A).length < 1 && null == n ? f.pn.PLAN_SELECT : f.pn.REVIEW, {
                     trackedFromStep: f.pn.PAYMENT_ELEMENT,
                 });
             };
@@ -71,7 +71,7 @@ function I(e) {
         appendSteps: [f.pn.REVIEW, f.pn.CONFIRM],
         useCheckoutStep: !0,
         analyticsData: t,
-        onReturn: M ? void 0 : D,
+        onReturn: O ? void 0 : D,
         onComplete: (e) => {
             f.l_.has(e)
                 ? (v(E.h.COMPLETED), l(f.pn.CONFIRM, { trackedFromStep: e }))
@@ -91,7 +91,7 @@ function I(e) {
         isEligibleForTrial: L,
         allowDesktopRedirectPurchase:
             (0, C.isDesktop)() && null != P && [y.pe.TIER_0, y.pe.TIER_2].includes(P) && !w && null == j,
-        continueSessionToInitialStep: A,
+        continueSessionToInitialStep: g,
         shouldUseManaModal: !0,
     });
 }

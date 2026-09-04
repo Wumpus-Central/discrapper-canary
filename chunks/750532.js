@@ -17,8 +17,8 @@ var l = n(477900),
     S = n(237412),
     y = n(45938),
     I = n(951305),
-    A = n(166532),
-    g = n(652215),
+    g = n(166532),
+    A = n(652215),
     P = n(202541),
     v = n(375708),
     _ = n(894575);
@@ -32,12 +32,12 @@ function x(e) {
         { isPremium: x, isPremiumGroupPurchase: T, isEligibleForTrial: N, isEligibleForDiscount: b } = (0, o.i)(),
         j = (0, c.S3)(),
         R = (0, u.s2)(),
-        { isGift: O, selectedGiftStyle: M, giftRecipient: L } = (0, I.Pv)(),
+        { isGift: M, selectedGiftStyle: O, giftRecipient: L } = (0, I.Pv)(),
         k = (0, h.p)("PremiumUnifiedCheckoutCustomHeader"),
-        w = j?.productLine === g.EZt.COLLECTIBLES,
-        U = j?.productLine === g.EZt.SOCIAL_LAYER_GAME_ITEM,
-        D = O && (0, y.Ik)(L) && R === A.pn.CONFIRM && null != M && !w && !U,
-        G = [A.pn.SKU_SELECT, A.pn.SELECT_FREE_SKU],
+        w = j?.productLine === A.EZt.COLLECTIBLES,
+        U = j?.productLine === A.EZt.SOCIAL_LAYER_GAME_ITEM,
+        D = M && (0, y.Ik)(L) && R === g.pn.CONFIRM && null != O && !w && !U,
+        G = [g.pn.SKU_SELECT, g.pn.SELECT_FREE_SKU],
         F = null != R && !G.includes(R) && null != n,
         B = i.useCallback(() => t(!1), [t]);
     return i.useMemo(() => {
@@ -53,7 +53,7 @@ function x(e) {
                               style: { display: "contents" },
                               children: (0, l.jsx)(E.A, {
                                   defaultAnimationState: p.oA.LOOP,
-                                  giftStyle: M,
+                                  giftStyle: O,
                                   className: _.qq,
                               }),
                           }),
@@ -72,7 +72,7 @@ function x(e) {
                                   onClose: B,
                                   showTrialBadge: N,
                                   showDiscountBadge: b,
-                                  isGift: O,
+                                  isGift: M,
                                   giftRecipient: L,
                                   isEligibleForTrial: N,
                                   enablePremiumBrandRefresh: x,
@@ -82,7 +82,7 @@ function x(e) {
                             : (0, l.jsx)(s.rQ, { title: v.intl.string(v.t.q9EGps) })),
             e
         );
-    }, [M, B, d, n, R, N, b, D, k, F, O, L, x, f, T]);
+    }, [O, B, d, n, R, N, b, D, k, F, M, L, x, f, T]);
 }
 function T(e) {
     let { premiumDiscountPercent: t, isPremiumDiscountAppliedToCheckoutInvoice: n } = (0, m.t4)((e) => ({
@@ -113,5 +113,5 @@ function N() {
 }
 function b(e) {
     let { isGift: t } = (0, I.Pv)();
-    return e.step !== A.pn.PLAN_SELECT || t ? (0, l.jsx)(x, { ...e }) : (0, l.jsx)(N, {});
+    return e.step !== g.pn.PLAN_SELECT || t ? (0, l.jsx)(x, { ...e }) : (0, l.jsx)(N, {});
 }

@@ -12,8 +12,8 @@ var i,
     g = n(834730),
     f = n(452027),
     A = n(821609),
-    p = n(866665),
-    E = n(827343),
+    E = n(866665),
+    p = n(827343),
     m = n(765671),
     I = n(661531),
     S = n(953727);
@@ -64,11 +64,11 @@ function y(e) {
         h = v[i],
         { ref: g, width: f } = (0, m.Ay)(),
         A = r.useMemo(() => (null != f ? M(f) : 0), [f]),
-        p = r.useMemo(() => {
+        E = r.useMemo(() => {
             let e = Math.abs(M((A * (100 - Math.max(0, Math.min(100, n)))) / 100) - A);
             return { transform: `translateX(${e}px)` };
         }, [n, A]),
-        E = r.useMemo(
+        p = r.useMemo(
             () => ({ width: `${A}px`, background: n <= 0 ? "none" : `linear-gradient(to right, ${s}, ${o})` }),
             [o, s, n, A],
         );
@@ -79,9 +79,9 @@ function y(e) {
         children: [
             (0, l.jsxs)("div", {
                 className: a()(_.kL, u),
-                style: E,
+                style: p,
                 children: [
-                    (0, l.jsx)("div", { className: _.qB, style: p }),
+                    (0, l.jsx)("div", { className: _.qB, style: E }),
                     0 !== A && (0, l.jsx)(C, { width: A, height: h, className: a()(_.DR, T[t], d) }),
                 ],
             }),
@@ -139,8 +139,8 @@ class P extends r.PureComponent {
                 isDeafened: u,
             } = this.props,
             d = !1;
-        e && !u && (E.A.toggleSelfDeaf(), (d = !0)),
-            E.A.setLoopback("mic_test", !0),
+        e && !u && (p.A.toggleSelfDeaf(), (d = !0)),
+            p.A.setLoopback("mic_test", !0),
             (this._micTestStartTime = Date.now()),
             this.setState({ isMicTesting: !0, isDetectingInput: !0, didDeafenUser: d }),
             x.default.track(O.HAw.MIC_TESTING_STARTED, {
@@ -158,8 +158,8 @@ class P extends r.PureComponent {
         let { didDeafenUser: e, isMicTesting: t } = this.state,
             { isVoiceConnected: n, isDeafened: i } = this.props;
         t &&
-            (n && i && e && E.A.toggleSelfDeaf(),
-            E.A.setLoopback("mic_test", !1),
+            (n && i && e && p.A.toggleSelfDeaf(),
+            p.A.setLoopback("mic_test", !1),
             this.setState({ isMicTesting: !1, didDeafenUser: !1 }),
             null != this._micTestStartTime &&
                 x.default.track(O.HAw.MIC_TESTING_STOPPED, {
@@ -199,7 +199,7 @@ class P extends r.PureComponent {
                 isDeafened: d,
                 buttonMinWidth: c,
                 measureButtonRef: h,
-                meterOnly: E = !1,
+                meterOnly: p = !1,
                 containerClassName: m,
                 helpText: I,
             } = this.props,
@@ -212,12 +212,12 @@ class P extends r.PureComponent {
             children: [
                 (0, l.jsx)(f.D, {
                     label: t ?? void 0,
-                    hideLabel: E,
-                    description: E ? null : n,
+                    hideLabel: p,
+                    description: p ? null : n,
                     children: (0, l.jsxs)("div", {
-                        className: a()(w.ak, { [w.mi]: E, [w.EX]: "sm" === u }),
+                        className: a()(w.ak, { [w.mi]: p, [w.EX]: "sm" === u }),
                         children: [
-                            !E &&
+                            !p &&
                                 (0, l.jsxs)(l.Fragment, {
                                     children: [
                                         (0, l.jsx)("div", {
@@ -231,7 +231,7 @@ class P extends r.PureComponent {
                                                 tabIndex: -1,
                                             }),
                                         }),
-                                        (0, l.jsx)(p.m, {
+                                        (0, l.jsx)(E.m, {
                                             text: N,
                                             children: (0, l.jsx)("div", {
                                                 style: null != c ? { minWidth: c } : { opacity: 0 },
@@ -247,7 +247,7 @@ class P extends r.PureComponent {
                                     ],
                                 }),
                             (0, l.jsx)(y, {
-                                progress: S || E ? C + 100 : 0,
+                                progress: S || p ? C + 100 : 0,
                                 notchBackground: i,
                                 notchClassName: this.props.notchClassName,
                                 size: u,

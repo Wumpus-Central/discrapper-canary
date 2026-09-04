@@ -1,4 +1,4 @@
-n.d(t, { A: () => q, k: () => Y });
+n.d(t, { A: () => q, k: () => X });
 var i = n(477900),
     l = n(582128),
     s = n(503698),
@@ -13,15 +13,15 @@ var i = n(477900),
     x = n(783420),
     f = n(206697),
     h = n(874402),
-    p = n(570002),
-    I = n(202541),
+    I = n(570002),
+    p = n(202541),
     j = n(375708);
 function A() {
     let e = (0, g.YW)(),
         { goBack: t } = (0, g.pA)(),
-        n = (0, p.A)(j.intl.string(j.t.pj0XBN));
+        n = (0, I.A)(j.intl.string(j.t.pj0XBN));
     return (0, i.jsx)(x.A, {
-        subscriptionTier: I.pe.TIER_2,
+        subscriptionTier: p.pe.TIER_2,
         onSubscribeModalClose: (e) => {
             e && (0, f.T)();
         },
@@ -41,8 +41,8 @@ function A() {
 }
 var E = n(803306),
     v = n(631670),
-    C = n(682618),
-    S = n(636537),
+    S = n(682618),
+    C = n(636537),
     b = n(228366),
     k = n(38405),
     T = n(652215);
@@ -51,7 +51,7 @@ async function y(e) {
         i = { ...(null != t ? { display_order: t } : {}), ...(null != n ? { hidden_badges: n } : {}) };
     if (0 === Object.keys(i).length) return !0;
     try {
-        let e = await S.Bo.patch({ url: T.Rsh.USER_BADGE_SETTINGS, body: i, rejectWithError: !0 });
+        let e = await C.Bo.patch({ url: T.Rsh.USER_BADGE_SETTINGS, body: i, rejectWithError: !0 });
         return b.h.dispatch({ type: "BADGE_SETTINGS_UPDATE", settings: e.body }), !0;
     } catch (e) {
         return k.A.captureException(e), !1;
@@ -60,8 +60,8 @@ async function y(e) {
 var N = n(234e3),
     R = n(159001),
     w = n(933725),
-    L = n(287809),
-    _ = n(625494),
+    _ = n(287809),
+    L = n(625494),
     O = n(56348),
     P = n(207803),
     D = n(183555),
@@ -93,32 +93,32 @@ function B(e) {
                 }));
             return { widgetsToSave: e, changedWidgets: t, removedWidgets: n, hasUnsavedWidgets: i, canSaveWidgets: l };
         })(),
-        p = (0, u.X)("UserProfileModalV2SaveBar"),
+        I = (0, u.X)("UserProfileModalV2SaveBar"),
         {
-            hasUnsavedProfileChanges: I,
+            hasUnsavedProfileChanges: p,
             canSubmitProfileChanges: A,
-            hasBadgeChangesToSave: S,
+            hasBadgeChangesToSave: C,
         } = (0, a.cf)([G.A], () => ({
             hasUnsavedProfileChanges: G.A.hasUnsavedChanges(),
             canSubmitProfileChanges: G.A.canSubmit(),
             hasBadgeChangesToSave: (0, N.gz)(G.A.getPendingChanges()),
         })),
-        b = p && I,
-        k = x || b || S,
-        B = !(x && !f) && (!p || A),
+        b = I && p,
+        k = x || b || C,
+        B = !(x && !f) && (!I || A),
         z = l.useCallback(() => {
-            U.A.clearPendingWidgets(), p ? (0, P.XQ)() : S && (0, N.Jp)();
-        }, [p, S]),
-        K = l.useCallback(async () => {
-            if (p && !G.A.canSubmit()) return;
+            U.A.clearPendingWidgets(), I ? (0, P.XQ)() : C && (0, N.Jp)();
+        }, [I, C]),
+        Y = l.useCallback(async () => {
+            if (I && !G.A.canSubmit()) return;
             c(!0);
             let e = !0;
-            if (S) {
+            if (C) {
                 let t = G.A.getPendingChanges(),
                     n = await y({ displayOrder: t.pendingBadgeDisplayOrder, hiddenBadges: t.pendingBadgeHiddenBadges });
                 if (n) {
-                    let e = L.default.getCurrentUser()?.id;
-                    null != e && (await (0, E.fetchProfile)(e).catch(() => {})), await (0, C.RS)(), (0, N.Jp)();
+                    let e = _.default.getCurrentUser()?.id;
+                    null != e && (await (0, E.fetchProfile)(e).catch(() => {})), await (0, S.RS)(), (0, N.Jp)();
                 }
                 e = n;
             }
@@ -194,7 +194,7 @@ function B(e) {
                     e = !1;
                 }
             e ? (0, v.x8)() : (0, H.XA)(V.jM.PROFILE_SAVE_GENERIC_FAILURE), c(!1);
-        }, [p, b, S, x, d, g, m, n, t]);
+        }, [I, b, C, x, d, g, m, n, t]);
     return (
         l.useEffect(() => {
             let e = null;
@@ -206,9 +206,9 @@ function B(e) {
                     }, 2500));
             }
             return (
-                _._.subscribe(T.jej.EMPHASIZE_NOTICE, t),
+                L._.subscribe(T.jej.EMPHASIZE_NOTICE, t),
                 () => {
-                    _._.unsubscribe(T.jej.EMPHASIZE_NOTICE, t), null != e && clearTimeout(e);
+                    L._.unsubscribe(T.jej.EMPHASIZE_NOTICE, t), null != e && clearTimeout(e);
                 }
             );
         }, []),
@@ -220,35 +220,35 @@ function B(e) {
             isEmphasized: s,
             a11yAnnounceOnShow: j.intl.string(j.t["0Y/qkL"]),
             secondaryAction: { text: j.intl.string(j.t.yBZMsQ), onClick: z, disabled: !k || o },
-            primaryAction: { text: j.intl.string(j.t["R3BPH+"]), onClick: K, loading: o, disabled: !B || !k },
+            primaryAction: { text: j.intl.string(j.t["R3BPH+"]), onClick: Y, loading: o, disabled: !B || !k },
         })
     );
 }
 var z = n(485745),
-    K = n(893757);
-function X() {
+    Y = n(893757);
+function K() {
     let e = !(0, u.X)("useEditingFooterState"),
         t = (0, o.VU)(),
         n = (0, z.A)(e),
         i = (0, g.YW)();
     return t ? "dnd" : i ? "premium-try-it-out" : n ? "save" : null;
 }
-function Y(e) {
+function X(e) {
     let t = (0, a.bG)([d.default], () => d.default.getId() === e),
-        n = X();
+        n = K();
     return t && null != n;
 }
 function q(e) {
     let { userId: t, guildId: n, className: s } = e,
         o = (0, a.bG)([d.default], () => d.default.getId() === t),
-        u = X(),
+        u = K(),
         [g, m] = l.useState(u);
     return (null != u && g !== u && m(u), o)
         ? (0, i.jsx)("div", {
-              className: r()(K.k, s),
+              className: r()(Y.k, s),
               children:
                   "dnd" === g
-                      ? (0, i.jsx)(c.S, { className: K.W })
+                      ? (0, i.jsx)(c.S, { className: Y.W })
                       : "premium-try-it-out" === g
                         ? (0, i.jsx)(A, {})
                         : "save" === g

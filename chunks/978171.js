@@ -12,8 +12,8 @@ var i = n(477900),
     g = n(834730),
     f = n(821609),
     A = n(92446),
-    p = n(628284),
-    E = n(95635),
+    E = n(628284),
+    p = n(95635),
     m = n(993077),
     I = n(194261),
     S = n(661531),
@@ -150,7 +150,7 @@ let P = function (e) {
                                         onClick: r,
                                     }),
                                 (0, i.jsx)(f.$, {
-                                    icon: "success" === t ? p.y : E.UploadIcon,
+                                    icon: "success" === t ? E.y : p.UploadIcon,
                                     text: "success" === t ? O.intl.string(O.t.i4jeWR) : O.intl.string(O.t.EbwFfR),
                                     variant: "secondary",
                                     size: "sm",
@@ -226,7 +226,7 @@ function Y(e) {
                         (0, i.jsx)("div", {
                             className: a ? w.t6 : w.Dx,
                             children: (0, i.jsx)(f.$, {
-                                icon: p.y,
+                                icon: E.y,
                                 text: O.intl.string(O.t.t5VZ88),
                                 variant: "secondary",
                                 size: "sm",

@@ -1,8 +1,8 @@
 r.d(e, { z: () => a });
 var i = r(582128),
     n = r(575593),
-    s = r(466459),
-    l = r(116833),
+    l = r(466459),
+    s = r(116833),
     u = r(152472);
 function a(t) {
     let { userId: e, product: r, selectedVariantIndex: a, location: o, onError: c } = t,
@@ -11,7 +11,7 @@ function a(t) {
             [r, a],
         ),
         S = d.skuId,
-        I = (0, u.c)({
+        A = (0, u.c)({
             userId: e,
             skuId: S,
             nuxGraphic: (function (t) {
@@ -29,7 +29,7 @@ function a(t) {
                 }
                 return {
                     type: "dynamic",
-                    component: l.DynamicGraphicComponent.COLLECTIBLES_PREVIEW,
+                    component: s.DynamicGraphicComponent.COLLECTIBLES_PREVIEW,
                     aspectRatio: r,
                     props: { product: e, forCollectedModal: !0 },
                 };
@@ -37,6 +37,6 @@ function a(t) {
             location: o,
             onError: c,
         }),
-        { isPurchased: p } = (0, s.h)(d);
-    return { ...I, specificProductOrVariant: d, isPurchased: p };
+        { isPurchased: h } = (0, l.h)(d);
+    return { ...A, specificProductOrVariant: d, isPurchased: h };
 }

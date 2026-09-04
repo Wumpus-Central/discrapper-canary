@@ -30,11 +30,11 @@ function c(e) {
                 miniProfile: y?.[a.m.MINI_PROFILE] != null,
             }).hasAny,
         { data: N } = (0, s.YY)(l ?? void 0),
-        A = null != l && N?.bot?.id != null,
-        { data: w, isLoading: S } = (0, s.YY)(t ?? void 0),
-        E = c || (0, o.x)(w),
+        w = null != l && N?.bot?.id != null,
+        { data: A, isLoading: S } = (0, s.YY)(t ?? void 0),
+        E = c || (0, o.x)(A),
         C = null != t && S,
-        I = (0, d.Xm)({ installScope: m, hasFrame: E, hasProfileWidget: k, hasBotDm: A, ownerAuthorizationRevoked: f });
+        I = (0, d.Xm)({ installScope: m, hasFrame: E, hasProfileWidget: k, hasBotDm: w, ownerAuthorizationRevoked: f });
     return {
         availability: I,
         isResolving: C,

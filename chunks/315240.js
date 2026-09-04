@@ -12,8 +12,8 @@ var i,
     g = n(573163),
     f = n(543465),
     A = n(287809),
-    p = n(977997),
-    E = n(927813),
+    E = n(977997),
+    p = n(927813),
     m = n(935208),
     I = n(914853),
     S = n(41984),
@@ -486,7 +486,7 @@ function et(e, t, n) {
     let s = new w(l, t, n);
     return B.upsert(s), s;
 }
-let en = 30 * E.A.Millis.MINUTE;
+let en = 30 * p.A.Millis.MINUTE;
 function ei() {
     let e = Date.now(),
         t = e - en,
@@ -518,7 +518,7 @@ function ei() {
                 }
                 if (s.isVocal()) {
                     if (null != B.getChannel(i)) continue;
-                    let t = Object.entries(p.A.getVoiceStatesForChannel(i));
+                    let t = Object.entries(E.A.getVoiceStatesForChannel(i));
                     if (0 === t.length) continue;
                     let n = new Map();
                     for (let [i] of t) n.set(i, e);
@@ -541,7 +541,7 @@ function el(e) {
 class er extends r.Ay.Store {
     static displayName = "OverlayActiveNowStore";
     initialize() {
-        this.waitFor(u.A, d.A, P.A, _.default, c.A, g.Ay, h.A, a.A, A.default, f.Ay, p.A);
+        this.waitFor(u.A, d.A, P.A, _.default, c.A, g.Ay, h.A, a.A, A.default, f.Ay, E.A);
     }
     getActiveNowChannelByChannelId(e, t) {
         return "TEXT" === t ? H.getChannel(e) : B.getChannel(e);
@@ -652,7 +652,7 @@ let ea = new er(
                       g = a.prepareForUpdate(l),
                       f = new Map(g.recentMessageAuthorIds);
                   f.set(n, l);
-                  let p = {
+                  let E = {
                       lastMessageAtMs: l,
                       unread: !0,
                       lastUnreadAtMs: l,
@@ -661,10 +661,10 @@ let ea = new er(
                   };
                   return (
                       (d || h) &&
-                          ((p.mentionCount = Math.max(g.mentionCount, +!!d + +!!h)),
-                          d && (p.lastDirectMentionAtMs = l),
-                          h && (p.lastRoleMentionAtMs = l)),
-                      a.updateSignalsAndRescore(p, l),
+                          ((E.mentionCount = Math.max(g.mentionCount, +!!d + +!!h)),
+                          d && (E.lastDirectMentionAtMs = l),
+                          h && (E.lastRoleMentionAtMs = l)),
+                      a.updateSignalsAndRescore(E, l),
                       a.prunable && H.delete(e.channelId),
                       K(),
                       !0
@@ -787,15 +787,15 @@ let ea = new er(
                                   l.selfStream ? f.has(e) || f.set(e, t) : f.delete(e);
                                   let A = new Map(c.videoUsersWithTimestampMs);
                                   l.selfVideo ? A.has(e) || A.set(e, t) : A.delete(e);
-                                  let p = new Map(c.lastUnmuteActivityAtMs);
+                                  let E = new Map(c.lastUnmuteActivityAtMs);
                                   if (!l.selfMute && !l.mute) {
-                                      let n = p.get(e) ?? null;
-                                      (null == n || t - n >= 15e3) && p.set(e, t);
-                                  }
-                                  let E = new Map(c.lastUndeafenActivityAtMs);
-                                  if (!l.selfDeaf && !l.deaf) {
                                       let n = E.get(e) ?? null;
                                       (null == n || t - n >= 15e3) && E.set(e, t);
+                                  }
+                                  let p = new Map(c.lastUndeafenActivityAtMs);
+                                  if (!l.selfDeaf && !l.deaf) {
+                                      let n = p.get(e) ?? null;
+                                      (null == n || t - n >= 15e3) && p.set(e, t);
                                   }
                                   d.updateSignalsAndRescore(
                                       {
@@ -803,8 +803,8 @@ let ea = new er(
                                           lastVoiceJoinAtMs: h ? t : c.lastVoiceJoinAtMs,
                                           streamUsersWithTimestampMs: f,
                                           videoUsersWithTimestampMs: A,
-                                          lastUnmuteActivityAtMs: p,
-                                          lastUndeafenActivityAtMs: E,
+                                          lastUnmuteActivityAtMs: E,
+                                          lastUndeafenActivityAtMs: p,
                                       },
                                       t,
                                   ),

@@ -8,22 +8,22 @@ var a = n(477900),
     d = n(174459),
     c = n(559868),
     u = n(652215),
-    m = n(375708);
-function f() {
+    f = n(375708);
+function m() {
     d.default.track(u.HAw.CHANGE_LOG_CTA_CLICKED, { cta_type: "profile_bio", target: c.Do });
 }
 function g() {
     return (0, a.jsxs)(a.Fragment, {
         children: [
-            (0, a.jsx)("span", { children: m.intl.string(m.t.OJmNR9) }),
+            (0, a.jsx)("span", { children: f.intl.string(f.t.OJmNR9) }),
             (0, a.jsx)("br", {}),
             (0, a.jsx)("br", {}),
             (0, a.jsx)("span", {
-                children: m.intl.format(m.t.RCYeBL, {
+                children: f.intl.format(f.t.RCYeBL, {
                     blogHook: (e, t) =>
                         (0, a.jsx)(
                             o.Anchor,
-                            { onClick: f, target: "_blank", rel: "noreferrer noopener", href: c.Do, children: e },
+                            { onClick: m, target: "_blank", rel: "noreferrer noopener", href: c.Do, children: e },
                             t,
                         ),
                 }),
@@ -45,13 +45,13 @@ function _(e) {
             lineClamp: d = 6,
             setLineClamp: c = !0,
             textColor: u,
-            userId: m,
+            userId: f,
         } = e,
-        f = l.useMemo(
-            () => ((0, E.A)(m) ? (0, a.jsx)(g, {}) : null == t || "" === t ? null : (0, b.parseBioReact)(t)),
-            [m, t],
+        m = l.useMemo(
+            () => ((0, E.A)(f) ? (0, a.jsx)(g, {}) : null == t || "" === t ? null : (0, b.parseBioReact)(t)),
+            [f, t],
         );
-    return null == f
+    return null == m
         ? null
         : (0, a.jsx)("div", {
               className: s()(n, x.PT),
@@ -61,7 +61,7 @@ function _(e) {
                   color: void 0 !== u ? u : void 0,
                   children: (0, a.jsx)(p.Y.Provider, {
                       value: { disableAnimations: r && !o, disableInteractions: !1 },
-                      children: f,
+                      children: m,
                   }),
               }),
           });
@@ -69,6 +69,6 @@ function _(e) {
 function A(e) {
     let { userBio: t, userId: n } = e;
     return (0, E.A)(n) || (null != t && "" !== t)
-        ? (0, a.jsx)(h.A, { heading: m.intl.string(m.t.ZzAR2Y), hideHeading: !0, children: (0, a.jsx)(_, { ...e }) })
+        ? (0, a.jsx)(h.A, { heading: f.intl.string(f.t.ZzAR2Y), hideHeading: !0, children: (0, a.jsx)(_, { ...e }) })
         : null;
 }

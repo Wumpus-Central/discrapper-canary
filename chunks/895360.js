@@ -1,29 +1,29 @@
-n.d(t, { D: () => g });
-var l = n(477900),
-    r = n(503698),
-    i = n.n(r),
-    a = n(933832),
-    s = n(661531),
-    u = n(834730),
-    o = n(691540),
-    c = n(857250),
-    d = n(97483),
-    f = n(375708),
-    h = n(819296),
-    p = n(655214);
-function m() {
-    return (0, l.jsxs)("div", {
-        className: i()(p.oR, h.o),
+i.d(s, { D: () => b });
+var t = i(477900),
+    n = i(503698),
+    a = i.n(n),
+    r = i(933832),
+    l = i(661531),
+    o = i(834730),
+    d = i(691540),
+    c = i(857250),
+    u = i(97483),
+    m = i(375708),
+    h = i(819296),
+    x = i(655214);
+function f() {
+    return (0, t.jsxs)("div", {
+        className: a()(x.oR, h.o),
         children: [
-            (0, l.jsx)(a.CheckmarkLargeIcon, { size: "custom", className: h.K, color: s.A.colors.STATUS_POSITIVE.css }),
-            (0, l.jsx)(u.E, {
+            (0, t.jsx)(r.CheckmarkLargeIcon, { size: "custom", className: h.K, color: l.A.colors.STATUS_POSITIVE.css }),
+            (0, t.jsx)(o.E, {
                 color: "text-strong",
                 variant: "text-sm/semibold",
-                children: f.intl.string(f.t["3T2jbf"]),
+                children: m.intl.string(m.t["3T2jbf"]),
             }),
         ],
     });
 }
-function g() {
-    (0, o.P0)((0, c.o)("", d.Ck.CUSTOM, { component: (0, l.jsx)(m, {}) }));
+function b() {
+    (0, d.P0)((0, c.o)("", u.Ck.CUSTOM, { component: (0, t.jsx)(f, {}) }));
 }

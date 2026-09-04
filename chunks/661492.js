@@ -1,16 +1,16 @@
-r.d(e, { T: () => l, q: () => u });
+r.d(e, { T: () => s, q: () => u });
 var i = r(575593),
     n = r(993408),
-    s = r(375708);
-function l(t) {
+    l = r(375708);
+function s(t) {
     var e = t.name;
     switch (t.tenantMetadata?.collectibles?.type) {
         case i.R.AVATAR_DECORATION:
-            return s.intl.formatToPlainString(s.t.lvBzLi, { product: e });
+            return l.intl.formatToPlainString(l.t.lvBzLi, { product: e });
         case i.R.PROFILE_EFFECT:
-            return s.intl.formatToPlainString(s.t.eR7moP, { product: e });
+            return l.intl.formatToPlainString(l.t.eR7moP, { product: e });
         case i.R.NAMEPLATE:
-            return s.intl.formatToPlainString(s.t.YFOwHj, { product: e });
+            return l.intl.formatToPlainString(l.t.YFOwHj, { product: e });
         default:
             return e;
     }

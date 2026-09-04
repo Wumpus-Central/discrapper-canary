@@ -1,4 +1,4 @@
-t.d(a, { Ay: () => f, Or: () => g });
+t.d(e, { Ay: () => g, Or: () => A });
 var l,
     n = t(477900),
     r = t(582128),
@@ -6,20 +6,20 @@ var l,
     i = t.n(s),
     c = t(615300),
     o = t(661531),
-    u = t(462887),
-    d = t(930861),
-    h = t(602853),
+    d = t(462887),
+    h = t(930861),
+    u = t(602853),
     m = t(404374),
     p = t(998304),
     x = t(202541),
-    C = t(855310);
-let E = Object.freeze({
+    E = t(855310);
+let C = Object.freeze({
     DURATION: { [x.PremiumTypes.TIER_0]: 1e3, [x.PremiumTypes.TIER_1]: 1e3, [x.PremiumTypes.TIER_2]: 1500 },
     DELAY: { [x.PremiumTypes.TIER_0]: 400, [x.PremiumTypes.TIER_1]: 400, [x.PremiumTypes.TIER_2]: 2200 },
     FLASH_TIME_PERCENT: 0.72,
     FLASH_DURATION_PERCENT: 0.08,
 });
-var g =
+var A =
     (((l = {}).PREMIUM_ACTIVATED = "PREMIUM_ACTIVATED"),
     (l.PREMIUM_UPDATED = "PREMIUM_UPDATED"),
     (l.PREMIUM_UPGRADED = "PREMIUM_UPGRADED"),
@@ -28,23 +28,23 @@ var g =
     l);
 class v extends r.PureComponent {
     animation = new c.A.Value(0);
-    static Types = g;
+    static Types = A;
     componentDidMount() {
         this.animate();
     }
     animate() {
-        let { premiumType: e } = this.props;
-        c.A.timing(this.animation, { toValue: 1, delay: E.DELAY[e], duration: E.DURATION[e] }).start();
+        let { premiumType: a } = this.props;
+        c.A.timing(this.animation, { toValue: 1, delay: C.DELAY[a], duration: C.DURATION[a] }).start();
     }
     getContainerStyle() {
-        let { flashColor: e } = this.props,
-            a = E.FLASH_TIME_PERCENT,
-            t = E.FLASH_DURATION_PERCENT,
-            l = (0, p.tp)(e, 0);
+        let { flashColor: a } = this.props,
+            e = C.FLASH_TIME_PERCENT,
+            t = C.FLASH_DURATION_PERCENT,
+            l = (0, p.tp)(a, 0);
         return {
             backgroundColor: this.animation.interpolate({
-                inputRange: [0, a, a, a + t, 1],
-                outputRange: [l, l, e, e, l],
+                inputRange: [0, e, e, e + t, 1],
+                outputRange: [l, l, a, a, l],
             }),
         };
     }
@@ -56,27 +56,27 @@ class v extends r.PureComponent {
         });
     }
     getSvgBorderGradientId() {
-        let { premiumType: e, type: a } = this.props;
-        switch (a) {
+        let { premiumType: a, type: e } = this.props;
+        switch (e) {
             case "GUILD_BOOST_APPLIED":
                 return m.gi.PREMIUM_GUILD;
             case "PREMIUM_ACTIVATED":
             case "PREMIUM_PAYMENT_STARTED":
             case "PREMIUM_UPGRADED":
             case "PREMIUM_UPDATED":
-                if (e === x.PremiumTypes.TIER_0) return m.gi.PREMIUM_TIER_0;
-                if (e === x.PremiumTypes.TIER_1) return m.gi.PREMIUM_TIER_1;
+                if (a === x.PremiumTypes.TIER_0) return m.gi.PREMIUM_TIER_0;
+                if (a === x.PremiumTypes.TIER_1) return m.gi.PREMIUM_TIER_1;
                 return m.gi.PREMIUM_TIER_2;
             default:
                 throw Error("Unsupported ShineAnimation type specified");
         }
     }
     renderSvgBorder() {
-        let { type: e } = this.props;
-        switch (e) {
+        let { type: a } = this.props;
+        switch (a) {
             case "GUILD_BOOST_APPLIED":
                 return (0, n.jsx)("svg", {
-                    className: C.bG,
+                    className: E.bG,
                     width: "304",
                     height: "48",
                     viewBox: "0 0 304 48",
@@ -93,7 +93,7 @@ class v extends r.PureComponent {
                 });
             case "PREMIUM_PAYMENT_STARTED":
                 return (0, n.jsx)("svg", {
-                    className: C.bG,
+                    className: E.bG,
                     width: "156",
                     height: "48",
                     viewBox: "0 0 156 48",
@@ -111,7 +111,7 @@ class v extends r.PureComponent {
             case "PREMIUM_ACTIVATED":
             case "PREMIUM_UPGRADED":
                 return (0, n.jsx)("svg", {
-                    className: C.bG,
+                    className: E.bG,
                     width: "298",
                     height: "48",
                     viewBox: "0 0 298 48",
@@ -128,7 +128,7 @@ class v extends r.PureComponent {
                 });
             case "PREMIUM_UPDATED":
                 return (0, n.jsx)("svg", {
-                    className: C.bG,
+                    className: E.bG,
                     width: "276",
                     height: "48",
                     viewBox: "0 0 276 48",
@@ -148,11 +148,11 @@ class v extends r.PureComponent {
         }
     }
     renderSvgCopy() {
-        let { type: e } = this.props;
-        switch (e) {
+        let { type: a } = this.props;
+        switch (a) {
             case "GUILD_BOOST_APPLIED":
                 return (0, n.jsx)("svg", {
-                    className: C.gd,
+                    className: E.gd,
                     width: "304",
                     height: "48",
                     viewBox: "0 0 304 48",
@@ -206,7 +206,7 @@ class v extends r.PureComponent {
                 });
             case "PREMIUM_PAYMENT_STARTED":
                 return (0, n.jsx)("svg", {
-                    className: C.gd,
+                    className: E.gd,
                     width: "156",
                     height: "48",
                     viewBox: "0 0 156 48",
@@ -233,7 +233,7 @@ class v extends r.PureComponent {
                 });
             case "PREMIUM_ACTIVATED":
                 return (0, n.jsx)("svg", {
-                    className: C.gd,
+                    className: E.gd,
                     width: "298",
                     height: "48",
                     viewBox: "0 0 298 48",
@@ -244,7 +244,7 @@ class v extends r.PureComponent {
                 });
             case "PREMIUM_UPGRADED":
                 return (0, n.jsx)("svg", {
-                    className: C.gd,
+                    className: E.gd,
                     width: "298",
                     height: "48",
                     viewBox: "0 0 298 48",
@@ -255,7 +255,7 @@ class v extends r.PureComponent {
                 });
             case "PREMIUM_UPDATED":
                 return (0, n.jsx)("svg", {
-                    className: C.gd,
+                    className: E.gd,
                     width: "276",
                     height: "48",
                     viewBox: "0 0 276 48",
@@ -269,18 +269,18 @@ class v extends r.PureComponent {
         }
     }
     render() {
-        let { className: e } = this.props;
+        let { className: a } = this.props;
         return (0, n.jsxs)("div", {
-            className: i()(C.kL, e),
+            className: i()(E.kL, a),
             children: [
                 this.renderSvgBorder(),
                 (0, n.jsxs)(c.A.div, {
-                    className: C.Mp,
+                    className: E.Mp,
                     style: this.getContainerStyle(),
                     children: [
-                        (0, n.jsx)(d.kF, {
+                        (0, n.jsx)(h.kF, {
                             "data-migration-pending": !0,
-                            className: C.q2,
+                            className: E.q2,
                             style: this.getShineStyle(),
                         }),
                         this.renderSvgCopy(),
@@ -290,11 +290,11 @@ class v extends r.PureComponent {
         });
     }
 }
-function f(e) {
-    let { theme: a, ...t } = e,
-        l = (0, h.r)(o.A.unsafe_rawColors.WHITE).hex(),
-        r = (0, h.r)(o.A.unsafe_rawColors.BRAND_500).hex(),
-        s = (0, u.M)(a) ? l : r;
-    return (0, n.jsx)(v, { ...t, theme: a, flashColor: s });
+function g(a) {
+    let { theme: e, ...t } = a,
+        l = (0, u.r)(o.A.unsafe_rawColors.WHITE).hex(),
+        r = (0, u.r)(o.A.unsafe_rawColors.BRAND_500).hex(),
+        s = (0, d.M)(e) ? l : r;
+    return (0, n.jsx)(v, { ...t, theme: e, flashColor: s });
 }
-f.Types = g;
+g.Types = A;

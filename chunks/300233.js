@@ -2,12 +2,12 @@ n.d(t, { H: () => d, X: () => c });
 var r = n(477900),
     l = n(582128),
     i = n(702841),
-    s = n(597643),
-    u = n(579908),
-    o = n(636194);
-let a = l.createContext(void 0);
+    o = n(597643),
+    a = n(579908),
+    s = n(636194);
+let u = l.createContext(void 0);
 function c(e) {
-    let t = l.useContext(a);
+    let t = l.useContext(u);
     if (null == t)
         throw Error(`${e ?? "useGroupListingsFetchContext"} must be used within a GroupListingsFetchContextProvider`);
     let { listingsLoaded: n, fetchGroupListingsForGuild: r } = t;
@@ -24,17 +24,17 @@ function d(e) {
             children: n,
             refetchOnMount: c,
             includeSoftDeleted: d,
-            countryCode: E,
+            countryCode: C,
             dontFetchWhileTrue: h,
         } = e,
-        A = (0, i.bG)([s.A], () => s.A.isConnected()),
-        f = (0, i.bG)([o.A], () => (null != t ? o.A.getSubscriptionGroupListingsForGuildFetchState(t) : o.e.FETCHED)),
-        [g, _] = l.useState(!0 === c),
-        C = l.useCallback(() => {
-            if (null == t || !A || !0 === h) return;
-            let e = o.A.getSubscriptionGroupListingsForGuildFetchState(t);
-            (g || e === o.e.NOT_FETCHED) && (_(!1), u.WA(t, { includeSoftDeleted: d, countryCode: E }));
-        }, [A, t, d, E, h, g]),
-        S = f === o.e.FETCHED && !g;
-    return (0, r.jsx)(a.Provider, { value: { listingsLoaded: S, fetchGroupListingsForGuild: C }, children: n });
+        E = (0, i.bG)([o.A], () => o.A.isConnected()),
+        m = (0, i.bG)([s.A], () => (null != t ? s.A.getSubscriptionGroupListingsForGuildFetchState(t) : s.e.FETCHED)),
+        [p, _] = l.useState(!0 === c),
+        f = l.useCallback(() => {
+            if (null == t || !E || !0 === h) return;
+            let e = s.A.getSubscriptionGroupListingsForGuildFetchState(t);
+            (p || e === s.e.NOT_FETCHED) && (_(!1), a.WA(t, { includeSoftDeleted: d, countryCode: C }));
+        }, [E, t, d, C, h, p]),
+        S = m === s.e.FETCHED && !p;
+    return (0, r.jsx)(u.Provider, { value: { listingsLoaded: S, fetchGroupListingsForGuild: f }, children: n });
 }

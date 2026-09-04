@@ -61,7 +61,7 @@ function N() {
                 let t = e > 0 ? Math.max(4, (d * d) / e) : d;
                 l.font = `${t}px 'AI Visual Identity Glyphs', monospace`;
             }
-            function A() {
+            function w() {
                 if (null == t || null == l) return;
                 let e = t.clientWidth,
                     n = t.clientHeight;
@@ -75,16 +75,16 @@ function N() {
                     h = Number.isFinite(f) && f > 0 ? f : 1;
                 (t.width = Math.round(o * h)), (t.height = Math.round(u * h)), l.setTransform(h, 0, 0, h, 0, 0), N();
             }
-            A(),
+            w(),
                 (m = requestAnimationFrame(function e(a) {
                     if (((m = requestAnimationFrame(e)), a - f < j)) return;
                     let N = a - f;
                     if (((f = a), null == t || null == l || 0 === o || null == r)) return;
-                    let A = Number(r.dataset.effortCentre),
-                        w = r.hasAttribute("data-effort-live"),
-                        S = Number.isFinite(A) && Math.abs(A - i) > 16;
-                    if (!h && (!w || S)) return;
-                    g = Math.min(1, Math.max(0, g + ((w ? 1 : -1) * N) / 260));
+                    let w = Number(r.dataset.effortCentre),
+                        A = r.hasAttribute("data-effort-live"),
+                        S = Number.isFinite(w) && Math.abs(w - i) > 16;
+                    if (!h && (!A || S)) return;
+                    g = Math.min(1, Math.max(0, g + ((A ? 1 : -1) * N) / 260));
                     let E = t.getBoundingClientRect(),
                         C = E.width > 0 ? E.width / o : 1,
                         I = r.getBoundingClientRect(),
@@ -140,9 +140,9 @@ function N() {
                     }
                     l.globalAlpha = 1;
                 }));
-            let w = document.fonts;
-            null != w && w.load(`${d}px 'AI Visual Identity Glyphs'`, p.QI + p.vd).then(N, () => void 0);
-            let S = "u" < typeof ResizeObserver ? null : new ResizeObserver(A);
+            let A = document.fonts;
+            null != A && A.load(`${d}px 'AI Visual Identity Glyphs'`, p.QI + p.vd).then(N, () => void 0);
+            let S = "u" < typeof ResizeObserver ? null : new ResizeObserver(w);
             return (
                 S?.observe(t),
                 () => {
@@ -153,8 +153,8 @@ function N() {
         (0, n.jsx)("canvas", { ref: e, className: v.Z, "aria-hidden": "true" })
     );
 }
-var A = l(757713);
-function w(e) {
+var w = l(757713);
+function A(e) {
     let { activeIndex: t, stops: l, ariaLabel: r, disabled: s, onSelect: o, className: u } = e,
         d = a.useRef(null),
         c = a.useRef(null),
@@ -192,7 +192,7 @@ function w(e) {
             },
             [y],
         );
-    function w(e) {
+    function A(e) {
         if (s) return;
         let n = "ArrowRight" === e.key ? 1 : "ArrowLeft" === e.key ? -1 : 0;
         if (0 === n) return;
@@ -330,23 +330,23 @@ function w(e) {
             );
         }, [p, v, y]),
         (0, n.jsx)("div", {
-            className: i()(A.u4, u),
+            className: i()(w.u4, u),
             role: "group",
             "aria-label": r,
             children: (0, n.jsxs)("div", {
                 ref: d,
-                className: A.Gb,
+                className: w.Gb,
                 children: [
                     (0, n.jsx)("span", {
-                        className: A.Ek,
+                        className: w.Ek,
                         "aria-hidden": "true",
-                        children: (0, n.jsx)("span", { ref: m, className: i()(A.GS, { [A.eG]: t < 0 }) }),
+                        children: (0, n.jsx)("span", { ref: m, className: i()(w.GS, { [w.eG]: t < 0 }) }),
                     }),
                     (0, n.jsx)("span", {
                         ref: c,
                         "data-vibegrations-effort-handle": "",
                         "data-effort-live": t >= 0 ? "" : void 0,
-                        className: i()(A.p$, { [A.Jb]: j < 0, [A.jz]: b, [A.al]: t >= 0 && !s }),
+                        className: i()(w.p$, { [w.Jb]: j < 0, [w.jz]: b, [w.al]: t >= 0 && !s }),
                         "aria-hidden": "true",
                     }),
                     l.map((e, l) =>
@@ -358,19 +358,19 @@ function w(e) {
                                 "aria-pressed": l === t,
                                 "aria-label": e,
                                 disabled: s,
-                                className: A.ds,
-                                onKeyDown: w,
+                                className: w.ds,
+                                onKeyDown: A,
                                 onPointerEnter: () => h(l),
                                 onPointerLeave: () => h((e) => (e === l ? -1 : e)),
                                 onFocus: () => h(l),
                                 onBlur: () => h((e) => (e === l ? -1 : e)),
                                 onClick: () => o(l),
-                                children: (0, n.jsx)("span", { className: A.Om, "aria-hidden": "true" }),
+                                children: (0, n.jsx)("span", { className: w.Om, "aria-hidden": "true" }),
                             },
                             e,
                         ),
                     ),
-                    (0, n.jsx)("span", { className: A.jN, "aria-hidden": "true", children: (0, n.jsx)(N, {}) }),
+                    (0, n.jsx)("span", { className: w.jN, "aria-hidden": "true", children: (0, n.jsx)(N, {}) }),
                 ],
             }),
         })
@@ -415,7 +415,7 @@ function M(e) {
             [l.main],
         ),
         N = a.useMemo(() => l.thinking.map((e) => ({ id: e, label: x.h[e] ?? e, value: e })), [l.thinking]);
-    function A(e) {
+    function w(e) {
         c((0, g.ko)(e));
     }
     let M = g.Q0.map((e) => e.summary()),
@@ -437,7 +437,7 @@ function M(e) {
                                   label: C.intl.string(E.default["9FRudW"]),
                                   options: k,
                                   value: t.main.model,
-                                  onSelectionChange: (e) => A({ ...t.main, model: e }),
+                                  onSelectionChange: (e) => w({ ...t.main, model: e }),
                                   selectionMode: "single",
                                   disabled: r,
                                   fullWidth: !0,
@@ -446,7 +446,7 @@ function M(e) {
                                   label: C.intl.string(E.default["4AsQHS"]),
                                   options: N,
                                   value: t.main.thinking,
-                                  onSelectionChange: (e) => A({ ...t.main, thinking: e }),
+                                  onSelectionChange: (e) => w({ ...t.main, thinking: e }),
                                   selectionMode: "single",
                                   disabled: r,
                                   fullWidth: !0,
@@ -511,14 +511,14 @@ function M(e) {
                                         }),
                                     ],
                                 }),
-                                (0, n.jsx)(w, {
+                                (0, n.jsx)(A, {
                                     activeIndex: b,
                                     stops: M,
                                     ariaLabel: C.intl.string(E.default.GDs9Vq),
                                     disabled: r,
                                     onSelect: function (e) {
                                         let t = g.Q0[e];
-                                        null != t && A({ model: t.model, thinking: t.thinking });
+                                        null != t && w({ model: t.model, thinking: t.thinking });
                                     },
                                 }),
                             ],

@@ -1,4 +1,4 @@
-n.d(t, { Mx: () => y, kj: () => E, iH: () => I, KF: () => f, ri: () => S, $K: () => A });
+n.d(t, { Mx: () => y, kj: () => E, iH: () => I, KF: () => f, ri: () => S, $K: () => g });
 var l = n(477900);
 n(582128);
 var i = n(503698),
@@ -115,7 +115,7 @@ function I(e) {
         children: (0, l.jsx)(m, { applicationId: t, storeListingBenefits: n, skuBenefits: i, className: h.gX }),
     });
 }
-function A(e) {
+function g(e) {
     let { children: t, className: n, ...i } = e;
     return (0, l.jsx)("div", { className: r()(h.kL, n), ...i, children: t });
 }

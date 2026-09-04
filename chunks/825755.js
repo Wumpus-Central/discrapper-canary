@@ -17,8 +17,8 @@ let a = "",
     S = "",
     y = !1,
     I = null,
-    A = null,
     g = null,
+    A = null,
     P = null;
 function v() {
     (a = ""),
@@ -36,8 +36,8 @@ function v() {
         (S = ""),
         (y = !1),
         (I = null),
-        (A = null),
         (g = null),
+        (A = null),
         (P = null);
 }
 function _() {
@@ -54,7 +54,7 @@ function T(e) {
 class N extends l.Ay.Store {
     static displayName = "NewPaymentSourceStore";
     get popupCallbackCalled() {
-        return g;
+        return A;
     }
     get braintreeEmail() {
         return a;
@@ -66,7 +66,7 @@ class N extends l.Ay.Store {
         return o;
     }
     get redirectedPaymentId() {
-        return A;
+        return g;
     }
     get adyenPaymentData() {
         return c;
@@ -151,10 +151,10 @@ let b = new N(i.h, {
     BILLING_POPUP_BRIDGE_CALLBACK: function (e) {
         let { query: t } = e;
         t?.payment_id != null
-            ? ((g = !0), (A = t.payment_id))
-            : t?.payment_source_id != null && ((g = !0), (P = t.payment_source_id));
+            ? ((A = !0), (g = t.payment_id))
+            : t?.payment_source_id != null && ((A = !0), (P = t.payment_source_id));
     },
     RESET_PAYMENT_ID: function () {
-        (g = !1), (A = null);
+        (A = !1), (g = null);
     },
 });

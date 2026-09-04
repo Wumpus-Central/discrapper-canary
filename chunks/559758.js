@@ -2,8 +2,8 @@ r.d(e, { y: () => u });
 var i = r(477900);
 r(582128);
 var n = r(661531),
-    s = r(996682),
-    l = r(27989);
+    l = r(996682),
+    s = r(27989);
 function u(t) {
     let {
             size: e = "md",
@@ -13,14 +13,14 @@ function u(t) {
             colorClass: o = "",
             ...c
         } = t,
-        d = (0, l.J)(e),
+        d = (0, s.J)(e),
         S = d?.width ?? r,
-        I = d?.height ?? u;
+        A = d?.height ?? u;
     return (0, i.jsx)("svg", {
-        ...(0, s.A)(c),
+        ...(0, l.A)(c),
         xmlns: "http://www.w3.org/2000/svg",
         width: S,
-        height: I,
+        height: A,
         fill: "none",
         viewBox: "0 0 24 24",
         children: (0, i.jsx)("path", {

@@ -1,4 +1,4 @@
-n.d(t, { E: () => A });
+n.d(t, { E: () => g });
 var l = n(477900),
     i = n(582128),
     r = n(403581),
@@ -86,15 +86,15 @@ class I {
     };
     resolveInternalState = (e, t) => ({ disablePurchase: this.resolveDisabledPurchase(e, t) });
 }
-function A(e) {
+function g(e) {
     let { isEligibleForTrial: t, isPremiumGroupPurchase: n, userTrialOffer: r } = (0, C.i)(),
         {
             activeSubscription: m,
             isPremium: E,
             isGift: S,
             checkoutPriceOptions: y,
-            isInOneStepSubscriptionCheckout: A,
-            shouldDisallowPlanSelection: g,
+            isInOneStepSubscriptionCheckout: g,
+            shouldDisallowPlanSelection: A,
             verifiedTrialId: P,
             effectivePlanGroup: v,
         } = (0, f.t4)((n) => ({
@@ -110,22 +110,22 @@ function A(e) {
         _ = (0, h.A)(),
         x = null != e.openInvoiceId,
         T = null == e.initialPlanId && null == e.subscriptionTier,
-        N = i.useMemo(() => !g && (A ? T && E : E), [A, T, E, g]),
+        N = i.useMemo(() => !A && (g ? T && E : E), [g, T, E, A]),
         { claimableRewards: b } = (0, a.Pv)(),
         j = (0, u.px)(_, S, b),
         R = e.handleStepChange,
-        O = i.useCallback(
+        M = i.useCallback(
             () =>
-                A
+                g
                     ? void R(s.pn.SKU_SELECT)
                     : n
                       ? void R(s.pn.ADD_PAYMENT_STEPS)
                       : j
                         ? void R(s.pn.SELECT_FREE_SKU)
                         : R(s.pn.PLAN_SELECT),
-            [R, A, j, n],
+            [R, g, j, n],
         ),
-        M = (0, d.J$)(y.paymentSourceId),
+        O = (0, d.J$)(y.paymentSourceId),
         L = (0, C.R)({ hasOpenInvoice: x ?? !1 }),
         k = i.useMemo(
             () =>
@@ -135,10 +135,10 @@ function A(e) {
                     selectedPlan: _,
                     premiumSubscription: m,
                     planGroup: v,
-                    isPrepaidPaymentSource: M,
+                    isPrepaidPaymentSource: O,
                     isInPastDueCheckout: L,
                 }),
-            [S, _, m, v, M, t, L],
+            [S, _, m, v, O, t, L],
         ),
         w = null != m && !S,
         U = i.useCallback(
@@ -167,7 +167,7 @@ function A(e) {
     return (0, l.jsx)(p.Y, {
         ...e,
         isBackButtonEligible: N,
-        onFooterBackClick: O,
+        onFooterBackClick: M,
         subscriptionMetadata: G,
         customFooterProps: F,
         renderStepBody: U,

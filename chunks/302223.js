@@ -19,17 +19,17 @@ function u(e) {
             hideEmoji: f = !1,
             children: A,
         } = e,
-        p = (0, a.G)(t?.state);
+        E = (0, a.G)(t?.state);
     if (null == t) return null;
-    let { emoji: E } = t,
-        m = null != p && "" !== p ? p : d;
+    let { emoji: p } = t,
+        m = null != E && "" !== E ? E : d;
     return (0, i.jsxs)("div", {
         className: r()(o.__invalid_container, n),
         children: [
-            f || null == E
+            f || null == p
                 ? null
                 : (0, i.jsx)(s.A, {
-                      emoji: E,
+                      emoji: p,
                       className: r()(o.Z, l, null != c ? { [c]: null == m || "" === m } : null),
                       animate: h,
                       hideTooltip: g,

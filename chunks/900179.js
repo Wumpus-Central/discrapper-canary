@@ -8,8 +8,8 @@ var a = n(477900),
     d = n(661531),
     c = n(866665),
     u = n(140735),
-    m = n(707554),
-    f = n(297264),
+    f = n(707554),
+    m = n(297264),
     g = n(834730),
     E = n(915089),
     p = n(94343),
@@ -46,7 +46,7 @@ function A(e) {
         "aria-labelledby": I,
         children: [
             A
-                ? (0, a.jsx)(u.A, { children: (0, a.jsx)(m.H, { id: I, children: n }) })
+                ? (0, a.jsx)(u.A, { children: (0, a.jsx)(f.H, { id: I, children: n }) })
                 : (0, a.jsxs)("div", {
                       className: h.so,
                       children: [
@@ -54,7 +54,7 @@ function A(e) {
                               className: h.wx,
                               style: { color: d.A.colors[x[o]]?.css },
                               children: [
-                                  (0, a.jsx)(f.D, {
+                                  (0, a.jsx)(m.D, {
                                       variant: i,
                                       color: "currentColor",
                                       className: r,
@@ -67,7 +67,7 @@ function A(e) {
                           null != v && (0, a.jsx)(g.E, { variant: "text-xs/normal", children: v }),
                       ],
                   }),
-            (0, a.jsx)(m.F, { children: t }),
+            (0, a.jsx)(f.F, { children: t }),
         ],
     });
 }

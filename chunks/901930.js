@@ -1,63 +1,63 @@
-n.d(t, { A: () => N, j: () => S });
+n.d(t, { A: () => A, j: () => S });
 var r = n(477900),
     l = n(582128),
     i = n(192308),
-    s = n(28863),
-    u = n(683071),
-    o = n(308528),
-    a = n(913122),
+    o = n(28863),
+    a = n(683071),
+    s = n(308528),
+    u = n(913122),
     c = n(136857),
     d = n(211083),
-    E = n(655857),
+    C = n(655857),
     h = n(206441),
-    A = n(834981),
-    f = n(975571),
-    g = n(166532),
+    E = n(834981),
+    m = n(975571),
+    p = n(166532),
     _ = n(652215),
-    C = n(375708);
+    f = n(375708);
 function S(e) {
     let { planError: t } = e,
         { paymentError: n } = (0, d.o)(),
-        { dropdownCurrencies: u } = (0, E.Jn)(),
-        { purchaseError: S, purchasePreviewError: N } = (0, h.t4)((e) => ({
+        { dropdownCurrencies: a } = (0, C.Jn)(),
+        { purchaseError: S, purchasePreviewError: A } = (0, h.t4)((e) => ({
             purchaseError: e.purchaseError,
             purchasePreviewError: e.purchasePreviewError,
         })),
-        p = null;
-    null != N ? (p = N) : null != n && null == (0, g.ou)(n) ? (p = n) : null != S ? (p = S) : null != t && (p = t);
-    let I = (0, A.vx)(),
-        m = l.useCallback(() => {
-            (0, i.closeAllModals)(), o.A.openPrivateChannel({ recipientIds: I });
-        }, [I]),
-        L = u.length > 1,
-        x = null != p ? p.message : "";
+        I = null;
+    null != A ? (I = A) : null != n && null == (0, p.ou)(n) ? (I = n) : null != S ? (I = S) : null != t && (I = t);
+    let g = (0, E.vx)(),
+        N = l.useCallback(() => {
+            (0, i.closeAllModals)(), s.A.openPrivateChannel({ recipientIds: g });
+        }, [g]),
+        T = a.length > 1,
+        y = null != I ? I.message : "";
     if (
-        null != p &&
-        p instanceof a.Ey &&
-        (p.code === c.tG.CARD_DECLINED && L && (x += ` ${C.intl.string(C.t.iWvwQS)}`),
-        p.code === c.tG.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (x = C.intl.string(C.t.ypuSd8)),
-        p.code === _.t02.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (x = C.intl.string(C.t.mXMmWE)),
-        p.code === c.tG.INVALID_CURRENCY_FOR_PAYMENT_SOURCE && (x = C.intl.string(C.t.mC1Fjz)),
-        (p.code === c.tG.BILLING_SPENDING_LIMIT_REACHED || p.code === c.tG.BILLING_SPENDING_LIMIT_WILL_EXCEED) &&
-            (x = C.intl.format(C.t["mv/fF2"], {
+        null != I &&
+        I instanceof u.Ey &&
+        (I.code === c.tG.CARD_DECLINED && T && (y += ` ${f.intl.string(f.t.iWvwQS)}`),
+        I.code === c.tG.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (y = f.intl.string(f.t.ypuSd8)),
+        I.code === _.t02.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (y = f.intl.string(f.t.mXMmWE)),
+        I.code === c.tG.INVALID_CURRENCY_FOR_PAYMENT_SOURCE && (y = f.intl.string(f.t.mC1Fjz)),
+        (I.code === c.tG.BILLING_SPENDING_LIMIT_REACHED || I.code === c.tG.BILLING_SPENDING_LIMIT_WILL_EXCEED) &&
+            (y = f.intl.format(f.t["mv/fF2"], {
                 guardianHook: (e, t) =>
-                    I.length > 0
-                        ? (0, r.jsx)(s.Anchor, { onClick: m, children: e }, t)
+                    g.length > 0
+                        ? (0, r.jsx)(o.Anchor, { onClick: N, children: e }, t)
                         : (0, r.jsx)(l.Fragment, { children: e }, t),
             })),
-        p.code === c.tG.INVALID_BILLING_ADDRESS)
+        I.code === c.tG.INVALID_BILLING_ADDRESS)
     ) {
-        let e = C.intl.format(C.t.BPDKoA, {
-            helpdeskArticle: f.A.getArticleURL(_.MVz.BILLING).concat(_.bNI.INVALID_BILLING_ADDRESS),
+        let e = f.intl.format(f.t.BPDKoA, {
+            helpdeskArticle: m.A.getArticleURL(_.MVz.BILLING).concat(_.bNI.INVALID_BILLING_ADDRESS),
         });
-        x = (0, r.jsxs)(r.Fragment, { children: [C.intl.string(C.t["yVIm/G"]), " ", e] });
+        y = (0, r.jsxs)(r.Fragment, { children: [f.intl.string(f.t["yVIm/G"]), " ", e] });
     }
-    return { error: p, errorMessage: x };
+    return { error: I, errorMessage: y };
 }
-function N(e) {
+function A(e) {
     let { planError: t, purchaseErrorBlockRef: n, className: l } = e,
-        { error: i, errorMessage: s } = S({ planError: t });
+        { error: i, errorMessage: o } = S({ planError: t });
     return null == i
         ? null
-        : (0, r.jsx)("div", { ref: n, className: l, children: (0, r.jsx)(u.w, { type: "critical", children: s }) });
+        : (0, r.jsx)("div", { ref: n, className: l, children: (0, r.jsx)(a.w, { type: "critical", children: o }) });
 }

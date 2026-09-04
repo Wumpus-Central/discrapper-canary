@@ -1,4 +1,4 @@
-n.d(t, { RQ: () => p, YW: () => f, pA: () => h, tM: () => m });
+n.d(t, { RQ: () => I, YW: () => f, pA: () => h, tM: () => m });
 var i = n(477900),
     l = n(582128),
     s = n(17928),
@@ -14,36 +14,36 @@ function m(e) {
         [n, m] = l.useState(d),
         [x, f] = l.useState(null),
         [h] = l.useState(r.B$),
-        p = l.useRef(h),
-        I = (0, c.A)((e) => {
+        I = l.useRef(h),
+        p = (0, c.A)((e) => {
             m(e);
         }),
         j = l.useCallback(() => {
             m(d);
         }, []),
-        A = l.useCallback(() => p.current, []),
+        A = l.useCallback(() => I.current, []),
         E = (0, s.bG)([a.default], () => o.Ay.canUsePremiumProfileCustomization(a.default.getCurrentUser())),
         v = E ? d : n,
-        C = !E && x?.id === "premiumTryItOut",
-        S = l.useCallback(() => {
+        S = !E && x?.id === "premiumTryItOut",
+        C = l.useCallback(() => {
             f(v);
         }, [v]),
         b = l.useCallback((e) => {
-            p.current = e;
+            I.current = e;
         }, []),
         k = l.useMemo(
             () => ({
                 selectedPanel: v,
                 readyPanel: x,
-                handlePanelTransitionComplete: S,
-                navigate: I,
+                handlePanelTransitionComplete: C,
+                navigate: p,
                 goBack: j,
                 getCurrentPreset: A,
                 cachePreset: b,
             }),
-            [v, x, S, I, j, A, b],
+            [v, x, C, p, j, A, b],
         );
-    return (0, i.jsx)(g.Provider, { value: C, children: (0, i.jsx)(u.Provider, { value: k, children: t }) });
+    return (0, i.jsx)(g.Provider, { value: S, children: (0, i.jsx)(u.Provider, { value: k, children: t }) });
 }
 function x() {
     let e = l.useContext(u);
@@ -70,7 +70,7 @@ function h() {
         goBack: l,
     };
 }
-function p() {
+function I() {
     let { getCurrentPreset: e, cachePreset: t } = x(),
         [n, i] = l.useState(e);
     return {

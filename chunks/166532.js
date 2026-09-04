@@ -1,12 +1,12 @@
-n.d(t, { Ir: () => p, l_: () => d, ou: () => I, pn: () => u, zT: () => S });
+n.d(t, { Ir: () => I, l_: () => d, ou: () => p, pn: () => u, zT: () => S });
 var a,
     r = n(582128),
     s = n(913122),
     i = n(71804),
     o = n(626584),
     l = n(739508),
-    c = n(566980),
-    E = n(375708);
+    E = n(566980),
+    c = n(375708);
 let _ = new o.A("PaymentSteps");
 var u =
     (((a = {}).PAYMENT_ELEMENT = "payment_element"),
@@ -44,36 +44,36 @@ let d = new Set([
     "awaiting_browser_checkout_google_pay",
     "awaiting_browser_checkout_apple_pay",
 ]);
-function p(e) {
+function I(e) {
     switch (e) {
         case "plan_select":
-            return E.intl.string(E.t["r+SebU"]);
+            return c.intl.string(c.t["r+SebU"]);
         case "awaiting_purchase_token_auth":
         case "review":
-            return E.intl.string(E.t.QBnNHq);
+            return c.intl.string(c.t.QBnNHq);
         case "shop":
-            return E.intl.string(E.t.xj9ooX);
+            return c.intl.string(c.t.xj9ooX);
         case "add_payment_steps":
         case "payment_element":
-            return E.intl.string(E.t.Sb6wI1);
+            return c.intl.string(c.t.Sb6wI1);
         case "credit_card_information":
-            return E.intl.string(E.t.yMPCXL);
+            return c.intl.string(c.t.yMPCXL);
         case "address":
-            return E.intl.string(E.t["50Auo2"]);
+            return c.intl.string(c.t["50Auo2"]);
         case "paypal_information":
-            return E.intl.string(E.t.RVHDnH);
+            return c.intl.string(c.t.RVHDnH);
         case "venmo_information":
-            return E.intl.string(E.t.bzQdwW);
+            return c.intl.string(c.t.bzQdwW);
         case "przelewy24_information":
-            return E.intl.string(E.t.BW0R4v);
+            return c.intl.string(c.t.BW0R4v);
         case "cash_app_information":
-            return E.intl.string(E.t.Gz1fyE);
+            return c.intl.string(c.t.Gz1fyE);
         case "gift_customization":
-            return E.intl.string(E.t.R0vK0N);
+            return c.intl.string(c.t.R0vK0N);
     }
     throw new i.v({ message: `Unexpected step: ${e}`, extraSentryInformation: { step: e } });
 }
-function I(e) {
+function p(e) {
     if (null != e) {
         if (!(e instanceof s.Ey)) throw (_.error(e), (0, l.pM)(e), Error("Unexpected error type"));
         if (e.hasCardError()) return "credit_card_information";
@@ -83,6 +83,6 @@ function I(e) {
 }
 function S(e, t, n) {
     r.useEffect(() => {
-        null != e && "review" !== e && t !== c.h.WAITING && t !== c.h.COMPLETED && n(c.h.WAITING);
+        null != e && "review" !== e && t !== E.h.WAITING && t !== E.h.COMPLETED && n(E.h.WAITING);
     }, [e, t, n]);
 }

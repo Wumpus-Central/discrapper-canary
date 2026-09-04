@@ -1,7 +1,7 @@
-r.d(e, { A: () => s });
+r.d(e, { A: () => l });
 var i = r(315069),
     n = r(32731);
-class s extends i.A {
+class l extends i.A {
     skuId;
     skuProductLine;
     skuName;
@@ -18,13 +18,13 @@ class s extends i.A {
             (this.sku = t.sku);
     }
     static fromServer(t) {
-        let { sku_id: e, sku_product_line: r, sku_name: i, is_owned: l, gifter_user_id: u, sku: a, ...o } = t;
-        return new s({
+        let { sku_id: e, sku_product_line: r, sku_name: i, is_owned: s, gifter_user_id: u, sku: a, ...o } = t;
+        return new l({
             ...o,
             sku_id: e,
             sku_product_line: r,
             sku_name: i,
-            is_owned: l,
+            is_owned: s,
             gifter_user_id: u,
             sku: null != a ? n.A.createFromServer(a) : void 0,
         });

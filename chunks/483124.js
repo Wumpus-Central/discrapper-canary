@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     OV: "clickableContainer__67467",
     Kk: "icon__67467",
     bI: "iconShine__67467",

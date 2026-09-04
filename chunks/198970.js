@@ -166,8 +166,8 @@ let y = [
     I = u.A.map((e) => ({ id: e.alpha2, value: e.alpha2, label: e.name })).filter(
         (e) => "KP" !== e.value && "SY" !== e.value,
     ),
-    A = Object.freeze(I.reduce((e, t) => ({ ...e, [t.label.toLowerCase()]: t.value }), {})),
-    g = (0, C.Ld)(),
+    g = Object.freeze(I.reduce((e, t) => ({ ...e, [t.label.toLowerCase()]: t.value }), {})),
+    A = (0, C.Ld)(),
     P = (0, C.Ld)(),
     v = (0, C.Ld)(),
     _ = (0, C.Ld)(),
@@ -188,10 +188,10 @@ var b =
         l),
     j = (((i = j || {}).EDIT = "edit"), (i.CREATE = "create"), i);
 let R = { US: c, CA: s },
-    O = { US: d, CA: o },
-    M = (e, t) => ({
+    M = { US: d, CA: o },
+    O = (e, t) => ({
         name: "name",
-        id: g,
+        id: A,
         title: () => E.intl.string(E.t.vyuULb),
         autoComplete: "name",
         getClassNameForLayout: (e) =>
@@ -242,7 +242,7 @@ let R = { US: c, CA: s },
                         let l = t.target.value;
                         if (null == n) return;
                         let i = l.toLowerCase();
-                        i in A && n(A[i], e.name);
+                        i in g && n(g[i], e.name);
                     },
                     onSelectionChange: (t) => {
                         null != n && n(t, e.name);
@@ -399,7 +399,7 @@ let R = { US: c, CA: s },
                                     return n === t.value;
                                 })),
                     { onChange: a, ...s } = t,
-                    o = O[e];
+                    o = M[e];
                 return ["US", "CA"].includes(e) && i
                     ? (0, r.jsx)(p.Z, {
                           ...s,
@@ -424,12 +424,12 @@ let R = { US: c, CA: s },
     F = {
         modalUS: [[L], [k], [w], [U], [G, D]],
         modalInternational: [[L], [k], [w], [U], [G], [D]],
-        modalUSWithName: [[L], [M], [k], [w], [U], [G, D]],
-        modalInternationalWithName: [[L], [M], [k], [w], [U], [G], [D]],
-        settingsUS: [[M], [k, w], [U, G, D], [L]],
-        settingsUSMobile: [[M], [k], [w], [U], [G], [D], [L]],
-        settingsInternational: [[M], [k, w], [U], [G, D], [L]],
-        settingsInternationalMobile: [[M], [k], [w], [U], [G], [D], [L]],
+        modalUSWithName: [[L], [O], [k], [w], [U], [G, D]],
+        modalInternationalWithName: [[L], [O], [k], [w], [U], [G], [D]],
+        settingsUS: [[O], [k, w], [U, G, D], [L]],
+        settingsUSMobile: [[O], [k], [w], [U], [G], [D], [L]],
+        settingsInternational: [[O], [k, w], [U], [G, D], [L]],
+        settingsInternationalMobile: [[O], [k], [w], [U], [G], [D], [L]],
         settingsInternationalWithoutName: [[k, w], [U], [G, D], [L]],
         settingsInternationalWithoutNameMobile: [[k], [w], [U], [G], [D], [L]],
     };

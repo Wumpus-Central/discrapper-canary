@@ -12,8 +12,8 @@ var l = n(17928),
     g = n(427262),
     f = n(734057),
     A = n(153488),
-    p = n(205761),
-    E = n(696451),
+    E = n(205761),
+    p = n(696451),
     m = n(71393),
     I = n(994500),
     S = n(287809),
@@ -92,16 +92,16 @@ function w() {
                 blacklist: a,
                 boosters:
                     ((t = Math.max(
-                        ...(e = p.A.getFrequentlyWithoutFetchingLatest().filter(
+                        ...(e = E.A.getFrequentlyWithoutFetchingLatest().filter(
                             (e) => e instanceof d.cq && e.isDM(),
                         )).map((e) => {
                             let { id: t } = e;
-                            return p.A.getScoreWithoutFetchingLatest(t);
+                            return E.A.getScoreWithoutFetchingLatest(t);
                         }),
                     )),
                     (n = {}),
                     e.forEach((e) => {
-                        let i = p.A.getScoreWithoutFetchingLatest(e.id),
+                        let i = E.A.getScoreWithoutFetchingLatest(e.id),
                             l = e.getRecipientId(),
                             r = 0.2 * !!I.A.isFriend(l),
                             s = 0.1 * (null != f.A.getDMFromUserId(l));
@@ -131,7 +131,7 @@ function b(e, t) {
     let n = u.$s.getSetting(),
         i = [];
     for (let l of t) {
-        if (n.includes(l) || !E.Ay.isMember(l, e)) continue;
+        if (n.includes(l) || !p.Ay.isMember(l, e)) continue;
         let t = m.A.getGuild(l);
         null != t && i.push(t);
     }
@@ -177,7 +177,7 @@ function H() {
 class B extends l.Ay.Store {
     static displayName = "PrivateChannelRecipientsInviteStore";
     initialize() {
-        this.waitFor(f.A, A.A, a.A, p.A, E.Ay, m.A, I.A, o.A, S.default),
+        this.waitFor(f.A, A.A, a.A, E.A, p.Ay, m.A, I.A, o.A, S.default),
             this.syncWith([S.default, f.A], w),
             this.syncWith([o.A], H),
             this.syncWith([I.A], P);

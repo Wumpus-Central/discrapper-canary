@@ -1,25 +1,25 @@
-n.d(t, { S: () => o });
-var s = n(477900);
-n(582128);
-var r = n(355522),
-    i = n(352224),
-    a = n(834730),
-    l = n(866665),
-    u = n(812745),
-    c = n(113072);
+t.d(s, { S: () => o });
+var n = t(477900);
+t(582128);
+var r = t(355522),
+    a = t(352224),
+    i = t(834730),
+    l = t(866665),
+    c = t(812745),
+    u = t(113072);
 function o(e) {
-    let { label: t, icon: n, tooltipText: o } = e,
+    let { label: s, icon: t, tooltipText: o } = e,
         d =
-            null != n
-                ? n === u.Be.BANK
-                    ? (0, s.jsx)(r.M, { className: c.s7 })
-                    : n === u.Be.IDEAL
-                      ? (0, s.jsx)(i.E, { className: c.s7 })
-                      : (0, s.jsx)("img", { src: (0, u.Nj)(n), alt: "", className: c.s7 })
+            null != t
+                ? t === c.Be.BANK
+                    ? (0, n.jsx)(r.M, { className: u.s7 })
+                    : t === c.Be.IDEAL
+                      ? (0, n.jsx)(a.E, { className: u.s7 })
+                      : (0, n.jsx)("img", { src: (0, c.Nj)(t), alt: "", className: u.s7 })
                 : void 0,
-        m = (0, s.jsxs)("div", {
-            className: c.kL,
-            children: [d, (0, s.jsx)(a.E, { variant: "text-md/normal", className: c.Pf, children: t })],
+        m = (0, n.jsxs)("div", {
+            className: u.kL,
+            children: [d, (0, n.jsx)(i.E, { variant: "text-md/normal", className: u.Pf, children: s })],
         });
-    return null != o ? (0, s.jsx)(l.m, { text: o, asContainer: !0, children: m }) : m;
+    return null != o ? (0, n.jsx)(l.m, { text: o, asContainer: !0, children: m }) : m;
 }

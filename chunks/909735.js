@@ -1,5 +1,5 @@
-n.d(t, { UN: () => i, f4: () => a });
-let r = (0, n(945810).mj)({
+t.d(n, { UN: () => i, f4: () => a });
+let r = (0, t(945810).mj)({
     name: "2026-09-connected-thread-sidebar",
     kind: "user",
     defaultConfig: { enabled: !1 },

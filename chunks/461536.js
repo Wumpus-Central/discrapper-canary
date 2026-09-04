@@ -9,8 +9,8 @@ var l = n(503698),
     d = n(331322),
     c = n(834730),
     u = n(297264),
-    m = n(280336),
-    f = n(747556),
+    f = n(280336),
+    m = n(747556),
     g = n(255434),
     E = n(710778),
     p = n(260981),
@@ -120,9 +120,9 @@ function y(e) {
             ],
         }),
         G = null != p ? `${x}. ${p}` : x,
-        w = (0, m.j)({ shouldShow: M })((e, t) =>
+        w = (0, f.j)({ shouldShow: M })((e, t) =>
             t
-                ? (0, a.jsx)(f.Bc, {
+                ? (0, a.jsx)(m.Bc, {
                       isRichTooltip: !0,
                       children: (0, a.jsx)(g.R, {
                           isVisible: M,
