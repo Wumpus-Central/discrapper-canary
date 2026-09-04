@@ -1889,6 +1889,7 @@ class er extends d.A {
                   (this.audioSubsystem = (0, v.lE)().getUseLegacyAudioDevice() ? C.rB.LEGACY : C.rB.STANDARD),
             null != e.pingVoiceThread && this.watchdogTick(),
             null != e.setActiveSinksChangeCallback && e.setActiveSinksChangeCallback(this.handleActiveSinksChange),
+            e.setClipsV3Enabled?.(!0),
             e.setOnClipsMlDetection?.((e) => {
                 e.length > 0 && this.emit(u.bg.ClipsMlDetection, e);
             }),
@@ -2219,8 +2220,7 @@ class er extends d.A {
         );
     }
     setClipsModulePath(e) {
-        let t = (0, v.lE)();
-        this.registerClipsRecordingEventHandler(), t.setClipsV3Enabled?.(!0), t.setClipsModulePath?.(e);
+        this.registerClipsRecordingEventHandler(), (0, v.lE)().setClipsModulePath?.(e);
     }
     setClipsDataPath(e) {
         (0, v.lE)().setClipsDataPath?.(e);
