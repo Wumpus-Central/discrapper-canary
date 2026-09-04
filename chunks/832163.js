@@ -92,7 +92,7 @@ class b extends r.Ay.Store {
         return null != e ? N[e] : void 0;
     }
     getApplicationIdFromGuildId(e) {
-        return null != e ? S[e] : void 0;
+        if (null != e) return S[e] ?? d[e]?.storefront?.applicationId;
     }
     getConfigFetchState() {
         return m;

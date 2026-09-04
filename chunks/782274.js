@@ -648,7 +648,7 @@ function eZ(e) {
             getSocialLayerStorefrontLink: v,
         } = e,
         { analyticsLocations: k } = (0, g.Ay)(p.A.SOCIAL_LAYER_STOREFRONT),
-        C = (0, L.A)({ applicationId: t }),
+        C = (0, L.A)({ applicationId: t, guildId: l }),
         y = C?.storefront ?? null,
         T = (function (e) {
             let { applicationId: t } = e,
