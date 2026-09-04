@@ -6,8 +6,8 @@ var l = r(582128),
     c = r(540737),
     s = r(821925),
     a = r(839534),
-    d = r(295586),
-    i = r(510801),
+    i = r(295586),
+    d = r(510801),
     S = r(986630);
 function f(e) {
     let {
@@ -45,7 +45,7 @@ function _(e) {
         flattenVariants: T = !1,
     } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
     l.useEffect(() => {
-        _ && d.p.requestProducts([e]);
+        _ && i.p.requestProducts([e]);
     }, [e, _]);
     let { products: F, fetchState: C } = (0, o.cf)(
             [s.A],
@@ -53,14 +53,14 @@ function _(e) {
             [e],
         ),
         O = F?.[0],
-        R = t ? (O?.primaryCollectionId ?? "") : "";
+        p = t ? (O?.primaryCollectionId ?? "") : "";
     l.useEffect(() => {
-        t && "" !== R && d.p.requestCollections([R], { includeUnpublished: E });
-    }, [t, R, E]);
-    let { collection: p, fetchState: A } = (0, o.cf)(
+        t && "" !== p && i.p.requestCollections([p], { includeUnpublished: E });
+    }, [t, p, E]);
+    let { collection: R, fetchState: A } = (0, o.cf)(
             [n.A],
-            () => ({ collection: n.A.getCollection(R), fetchState: n.A.getFetchState(R) }),
-            [R],
+            () => ({ collection: n.A.getCollection(p), fetchState: n.A.getFetchState(p) }),
+            [p],
         ),
         g = l.useMemo(
             () =>
@@ -69,9 +69,9 @@ function _(e) {
                     : null,
             [O, T, e],
         ),
-        U = l.useMemo(() => (t && null != p ? i.A.fromStorefrontCollectionRecord(p) : null), [t, p]),
+        U = l.useMemo(() => (t && null != R ? d.A.fromStorefrontCollectionRecord(R) : null), [t, R]),
         I = h(e, C),
-        P = h(t ? R : "", A),
+        P = h(t ? p : "", A),
         k = l.useMemo(
             () =>
                 f({
@@ -80,11 +80,11 @@ function _(e) {
                     collectionFetchState: A,
                     collectionAbsent: P,
                     needsCategory: t,
-                    collectionId: R,
+                    collectionId: p,
                     product: g,
                     category: U,
                 }),
-            [C, I, A, P, t, R, g, U],
+            [C, I, A, P, t, p, g, U],
         );
     return (
         l.useEffect(() => {
@@ -97,14 +97,14 @@ function _(e) {
             retry: l.useCallback(() => {
                 (0, c.tu)({ skuIds: [e], ignoreCache: !0 }),
                     t &&
-                        "" !== R &&
+                        "" !== p &&
                         (0, u._v)({
-                            collectionIds: [R],
+                            collectionIds: [p],
                             includeUnpublishedCollections: E,
                             includeUnpublishedProducts: E,
                             ignoreCache: !0,
                         });
-            }, [e, t, R, E]),
+            }, [e, t, p, E]),
         }
     );
 }
@@ -122,9 +122,17 @@ function E(e) {
         u = o.some((e) => !t.has(e)),
         n = u ? new Set([...t, ...o]) : t;
     u && r(n);
-    let c = new Set();
-    for (let [t, r] of Object.entries(e)) "" !== t && null == r && n.has(t) && c.add(t);
-    return c;
+    let c = Object.entries(e)
+        .filter((e) => {
+            let [t, r] = e;
+            return "" !== t && null == r && n.has(t);
+        })
+        .map((e) => {
+            let [t] = e;
+            return t;
+        })
+        .join(",");
+    return l.useMemo(() => new Set("" === c ? [] : c.split(",")), [c]);
 }
 function T(e) {
     let { needsCategory: t = !1, flattenVariants: r = !1 } =
@@ -132,7 +140,7 @@ function T(e) {
         u = l.useMemo(() => e.filter((e) => "" !== e), [e]),
         c = u.join(",");
     l.useEffect(() => {
-        u.length > 0 && d.p.requestProducts(u);
+        u.length > 0 && i.p.requestProducts(u);
     }, [c]);
     let a = (0, o.cf)([s.A], () => {
             let e = {};
@@ -152,7 +160,7 @@ function T(e) {
         T = l.useMemo(() => [...new Set(Object.values(_).filter((e) => "" !== e))], [_]),
         F = T.join(",");
     l.useEffect(() => {
-        t && T.length > 0 && d.p.requestCollections(T);
+        t && T.length > 0 && i.p.requestCollections(T);
     }, [t, F]);
     let C = (0, o.cf)([n.A], () => {
             let e = {};
@@ -164,8 +172,8 @@ function T(e) {
             for (let t of T) e[t] = n.A.getFetchState(t);
             return e;
         }, [T]),
-        R = E(h),
-        p = E(O);
+        p = E(h),
+        R = E(O);
     return l.useMemo(() => {
         let e = {};
         for (let l of u) {
@@ -174,26 +182,26 @@ function T(e) {
                 n = _[l] ?? "",
                 c = C[n] ?? null,
                 s = O[n],
-                d =
+                i =
                     null != o
                         ? (S.A.fromStorefrontProductRecord(o, { flattenVariantSkuId: r ? l : void 0 }) ?? null)
                         : null,
-                E = t && null != c ? i.A.fromStorefrontCollectionRecord(c) : null;
+                E = t && null != c ? d.A.fromStorefrontCollectionRecord(c) : null;
             e[l] = {
-                product: d,
+                product: i,
                 category: E,
                 state: f({
                     productFetchState: u,
-                    productAbsent: R.has(l),
+                    productAbsent: p.has(l),
                     collectionFetchState: s,
-                    collectionAbsent: "" !== n && p.has(n),
+                    collectionAbsent: "" !== n && R.has(n),
                     needsCategory: t,
                     collectionId: n,
-                    product: d,
+                    product: i,
                     category: E,
                 }),
             };
         }
         return e;
-    }, [u, a, h, _, C, O, R, p, t, r]);
+    }, [u, a, h, _, C, O, p, R, t, r]);
 }

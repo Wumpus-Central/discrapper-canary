@@ -21,60 +21,61 @@ let x = { isPurchased: !1, isPartiallyOwnedBundle: !1, isPartiallyOwnedVariantsG
     A = function (e) {
         let {
                 skuId: t,
-                transitionState: r,
-                onClose: A,
-                returnRef: O,
-                analyticsLocations: R,
-                analyticsSource: S,
-                shouldCheckoutWithOrbs: k,
-                tab: P,
-                giftRecipient: _,
-                giftingOrigin: w,
+                flattenVariants: r = !1,
+                transitionState: A,
+                onClose: O,
+                returnRef: R,
+                analyticsLocations: S,
+                analyticsSource: k,
+                shouldCheckoutWithOrbs: P,
+                tab: _,
+                giftRecipient: w,
+                giftingOrigin: E,
             } = e,
-            E = (0, u.A)("shop_include_unpublished"),
+            N = (0, u.A)("shop_include_unpublished"),
             {
-                product: N,
-                category: m,
-                state: v,
-                retry: D,
-            } = (0, p.IK)(t, { needsCategory: !0, seedCategoryStore: !0, includeUnpublished: E }),
-            { hasPreviouslyFetched: G, fetchPurchasesError: L } = (0, f.b5)(),
-            M = G || null != L;
+                product: m,
+                category: v,
+                state: D,
+                retry: G,
+            } = (0, p.IK)(t, { needsCategory: !0, seedCategoryStore: !0, includeUnpublished: N, flattenVariants: r }),
+            { hasPreviouslyFetched: L, fetchPurchasesError: M } = (0, f.b5)(),
+            B = L || null != M;
         (0, d.A)(b.FYj), (0, o.pE)();
-        let B = (0, s.cf)([c.A], () => (null != N ? (0, y.o)(c.A, N) : x), [N]),
-            F = N?.isCategoryReward === !0 && !B.isPurchased;
+        let F = (0, s.cf)([c.A], () => (null != m ? (0, y.o)(c.A, m) : x), [m]),
+            Y = m?.isCategoryReward === !0 && !F.isPurchased;
         i.useEffect(() => {
-            "ready" === v && M && F && A();
-        }, [v, M, F, A]);
-        let Y = i.useRef(!1);
+            "ready" === D && B && Y && O();
+        }, [D, B, Y, O]);
+        let z = i.useRef(!1);
         return (i.useEffect(() => {
-            if (Y.current || null == N || !(0, C.B1)(N)) return;
-            let e = N.variants.findIndex((e) => e.skuId === t);
-            e > -1 && (0, h.n)(N, e), (Y.current = !0);
-        }, [N, t]),
-        "ready" === v && M && !F && null != N && null != m)
+            if (z.current || null == m || !(0, C.B1)(m)) return;
+            let e = m.variants.findIndex((e) => e.skuId === t);
+            e > -1 && (0, h.n)(m, e), (z.current = !0);
+        }, [m, t]),
+        "ready" === D && B && !Y && null != m && null != v)
             ? (0, n.jsx)(I.default, {
-                  transitionState: r,
-                  onClose: A,
-                  returnRef: O,
-                  product: N,
-                  category: m,
-                  analyticsLocations: R,
-                  analyticsSource: S,
-                  shouldCheckoutWithOrbs: k,
-                  tab: P,
-                  giftRecipient: _,
-                  giftingOrigin: w,
+                  transitionState: A,
+                  onClose: O,
+                  returnRef: R,
+                  product: m,
+                  category: v,
+                  analyticsLocations: S,
+                  analyticsSource: k,
+                  shouldCheckoutWithOrbs: P,
+                  tab: _,
+                  giftRecipient: w,
+                  giftingOrigin: E,
               })
             : (0, n.jsx)(a.EO, {
-                  returnRef: O,
-                  transitionState: r,
+                  returnRef: R,
+                  transitionState: A,
                   size: a.rI.DYNAMIC,
                   parentComponent: "CollectiblesShopStandaloneProductDetailsModal",
                   children: (0, n.jsx)(a.$m, {
                       children:
-                          "error" === v
-                              ? (0, n.jsx)(g.h, { onRetry: D, errorOrigin: g.A.GIFT_MODAL })
+                          "error" === D
+                              ? (0, n.jsx)(g.h, { onRetry: G, errorOrigin: g.A.GIFT_MODAL })
                               : (0, n.jsx)("div", {
                                     className: j.g,
                                     children: (0, n.jsx)(l.y, { type: l.t.SPINNING_CIRCLE }),

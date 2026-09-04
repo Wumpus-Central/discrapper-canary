@@ -1,21 +1,22 @@
-a.d(t, { B: () => c });
+a.d(t, { B: () => n });
 var i = a(477900);
 a(582128);
 var s = a(192308),
     l = a(440938);
-let c = (e) => {
+let n = (e) => {
     let {
         skuId: t,
+        flattenVariants: n,
         analyticsLocations: c,
-        analyticsSource: n,
+        analyticsSource: r,
         shouldCheckoutWithOrbs: d,
         tab: o,
-        giftRecipient: r,
-        giftingOrigin: u,
-        returnRef: h,
-        cardId: p,
-        sessionId: b,
-        tilePosition: k,
+        giftRecipient: u,
+        giftingOrigin: h,
+        returnRef: p,
+        cardId: b,
+        sessionId: k,
+        tilePosition: f,
     } = e;
     (0, s.openModalLazy)(
         async () => {
@@ -580,17 +581,18 @@ let c = (e) => {
             ]).then(a.bind(a, 336495));
             return (a) =>
                 (0, i.jsx)(l.R9, {
-                    newValue: { cardId: p, sessionId: b, tilePosition: k },
+                    newValue: { cardId: b, sessionId: k, tilePosition: f },
                     children: (0, i.jsx)(e, {
                         ...a,
                         skuId: t,
+                        flattenVariants: n,
                         analyticsLocations: c,
-                        analyticsSource: n,
+                        analyticsSource: r,
                         shouldCheckoutWithOrbs: d,
                         tab: o,
-                        giftRecipient: r,
-                        giftingOrigin: u,
-                        returnRef: h,
+                        giftRecipient: u,
+                        giftingOrigin: h,
+                        returnRef: p,
                     }),
                 });
         },
