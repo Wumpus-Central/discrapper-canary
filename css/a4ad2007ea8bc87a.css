@@ -916,28 +916,33 @@
 }
 
 .game_b53c4e {
-    background-color: var(--background-mod-normal);
-    border-radius: 12px;
-    box-shadow: var(--shadow-border);
-    margin-bottom: 12px;
-    padding: 16px;
+    gap: 16px;
+    margin-bottom: 16px;
+    min-height: 40px;
     position: relative
 }
 
-.game_b53c4e .removeGame_b53c4e {
-    cursor: pointer;
-    inset-inline-end: -15px;
-    opacity: 0;
-    position: absolute;
-    top: -12px
+.game_b53c4e:last-child {
+    margin-bottom: 0
 }
 
-.game_b53c4e:focus-within .overlayStatusText_b53c4e,
-.game_b53c4e:focus-within .overlayWarningIcon_b53c4e,
-.game_b53c4e:focus-within .removeGame_b53c4e,
-.game_b53c4e:hover .overlayStatusText_b53c4e,
-.game_b53c4e:hover .overlayWarningIcon_b53c4e,
-.game_b53c4e:hover .removeGame_b53c4e {
+.currentGameStack_b53c4e {
+    gap: 8px
+}
+
+.overflowMenuTrigger_b53c4e {
+    opacity: 0;
+    transition: opacity .1s ease-in
+}
+
+.overflowMenuTrigger_b53c4e.overflowMenuOpen_b53c4e {
+    opacity: 1
+}
+
+.activeGame_b53c4e:focus-within .overflowMenuTrigger_b53c4e,
+.activeGame_b53c4e:hover .overflowMenuTrigger_b53c4e,
+.game_b53c4e:focus-within .overflowMenuTrigger_b53c4e,
+.game_b53c4e:hover .overflowMenuTrigger_b53c4e {
     opacity: 1
 }
 
@@ -947,7 +952,7 @@
 
 .activeGame_b53c4e {
     border-radius: 12px;
-    box-shadow: var(--shadow-border);
+    gap: 16px;
     position: relative
 }
 
@@ -973,7 +978,8 @@
 }
 
 .gameNameLastPlayed_b53c4e {
-    flex: 1
+    flex: 1;
+    gap: 4px
 }
 
 .gameVerifiedIcon_b53c4e {
@@ -1000,11 +1006,6 @@
 .gameNameInput_b53c4e:hover {
     background-color: var(--background-mod-normal);
     border-color: hsl(var(--primary-500-hsl)/.3)
-}
-
-.lastPlayed_b53c4e {
-    color: var(--primary-400);
-    font-size: 14px
 }
 
 .overlayStatusText_b53c4e {
@@ -1066,11 +1067,11 @@
 }
 
 .nowPlaying_b53c4e {
-    background-color: var(--status-positive-background)
+    background-color: var(--background-mod-subtle)
 }
 
 .nowPlaying_b53c4e .gameName_b53c4e {
-    color: var(--white)
+    color: var(--interactive-text-active)
 }
 
 .nowPlaying_b53c4e .gameNameInput_b53c4e:focus,
@@ -1079,7 +1080,6 @@
     border-color: var(--green-560)
 }
 
-.nowPlaying_b53c4e .lastPlayed_b53c4e,
 .nowPlaying_b53c4e .overlayStatusText_b53c4e {
     color: var(--white)
 }
@@ -1091,7 +1091,7 @@
 }
 
 .notDetected_b53c4e {
-    background-color: var(--background-base-lower)
+    background-color: var(--background-mod-subtle)
 }
 
 .notDetected_b53c4e .gameName_b53c4e {
@@ -1126,8 +1126,11 @@
 .addGamePopout__254c2 {
     background-color: var(--background-surface-higher);
     border: 1px solid var(--border-subtle);
-    border-radius: 3px;
-    padding: 10px;
+    border-radius: var(--radius-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16);
+    padding: var(--space-8);
     width: 300px
 }
 
@@ -1137,4 +1140,4 @@
     justify-content: flex-end
 }
 
-/*# sourceMappingURL=d4deafc5b553075d.css.map*/
+/*# sourceMappingURL=a4ad2007ea8bc87a.css.map*/

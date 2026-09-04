@@ -2477,7 +2477,7 @@ let le = function (e) {
     return null;
 };
 function lt(e) {
-    return (0, i.jsx)(h.$, { ...e, variant: "secondary", fullWidth: !0, role: "link" });
+    return (0, i.jsx)(h.$, { ...e, variant: "primary", fullWidth: !0, role: "link" });
 }
 var ln = n(48460);
 function ll(e) {
