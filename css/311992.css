@@ -225,7 +225,8 @@
 }
 
 .statusTagRed_e9cb00 {
-    background-color: var(--background-feedback-critical)
+    background-color: var(--background-feedback-critical);
+    color: var(--text-feedback-critical)
 }
 
 .statusTagGrey_e9cb00 {
@@ -434,4 +435,4 @@
     width: 100%
 }
 
-/*# sourceMappingURL=311992.ddde1bcdc0d6c5a2.css.map*/
+/*# sourceMappingURL=311992.0e05e35b29e8a092.css.map*/
