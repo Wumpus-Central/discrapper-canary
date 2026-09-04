@@ -196,6 +196,7 @@ var f =
         (l.GIFT = "GIFT"),
         (l.SHOW_STYLES_PANEL = "SHOW_STYLES_PANEL"),
         (l.HIDE_STYLES_PANEL = "HIDE_STYLES_PANEL"),
+        (l.VIEW_NEW_CONTENT_TAB_BADGE = "VIEW_NEW_CONTENT_TAB_BADGE"),
         l),
     S =
         (((o = {}).WISHLIST_ITEM_CLICKED = "WISHLIST_ITEM_CLICKED"),

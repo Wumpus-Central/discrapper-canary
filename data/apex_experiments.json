@@ -5652,6 +5652,17 @@
     }
   },
   {
+    "name": "2026-08-profile-read-state-v1",
+    "kind": "user",
+    "defaultConfig": null,
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      }
+    }
+  },
+  {
     "kind": "user",
     "name": "2026-08-rich-presence-invite-banner",
     "defaultConfig": {

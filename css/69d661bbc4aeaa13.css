@@ -354,6 +354,12 @@
     color: var(--text-strong)
 }
 
+.newContentDot__37bfc {
+    display: inline-block;
+    margin-inline-start: var(--space-4);
+    vertical-align: middle
+}
+
 .tabBarPanel__37bfc {
     box-sizing: border-box;
     display: flex;
@@ -382,4 +388,4 @@
     }
 }
 
-/*# sourceMappingURL=1318f12251d1b0d3.css.map*/
+/*# sourceMappingURL=69d661bbc4aeaa13.css.map*/

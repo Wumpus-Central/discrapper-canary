@@ -457,7 +457,7 @@ function e$(e) {
     });
 }
 var e0 = s(717877);
-function e3(e) {
+function e7(e) {
     let { section: i, user: s, currentUser: n, displayProfile: t, guildId: d, channelId: r, onClose: a } = e;
     return i === ex.RP.ACTIVITY
         ? (0, l.jsx)(eU, { user: s, currentUser: n, guildId: d, onClose: a })
@@ -471,7 +471,7 @@ function e3(e) {
                 ? (0, l.jsx)(em, { user: s, displayProfile: t, guildId: d, onClose: a })
                 : (0, l.jsx)(ew, { user: s, displayProfile: t, onClose: a });
 }
-function e5(e) {
+function e3(e) {
     let {
             user: i,
             currentUser: s,
@@ -532,7 +532,7 @@ function e5(e) {
                           );
                       }),
                   }),
-                  (0, l.jsx)(e3, {
+                  (0, l.jsx)(e7, {
                       items: r,
                       section: A,
                       user: i,
@@ -544,7 +544,7 @@ function e5(e) {
               ],
           });
 }
-var e7 = s(186272),
+var e5 = s(186272),
     e1 = s(996988),
     e9 = s(207634),
     e2 = s(174217);
@@ -589,7 +589,7 @@ function e6(e) {
                 s = i?.length;
             return [
                 { section: ex.RP.BOT_INFO, text: X.intl.string(X.t.ZzAR2Y) },
-                { section: ex.RP.MUTUAL_GUILDS, text: (0, e7.A)(s) },
+                { section: ex.RP.MUTUAL_GUILDS, text: (0, e5.A)(s) },
                 { section: ex.RP.BOT_DATA_ACCESS, text: X.intl.string(X.t.WstFb0) },
             ];
         })(i),
@@ -690,7 +690,7 @@ function e6(e) {
                                                 onClose: z,
                                             }),
                                         }),
-                                        (0, l.jsx)(e5, {
+                                        (0, l.jsx)(e3, {
                                             user: i,
                                             currentUser: s,
                                             displayProfile: Y,
@@ -992,7 +992,7 @@ function im(e) {
         }),
     });
 }
-var ip = s(130920);
+var ip = s(792778);
 function ig(e) {
     let { hideRestrictedProfile: i, ...s } = e,
         { user: u } = s,
