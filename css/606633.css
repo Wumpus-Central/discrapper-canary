@@ -368,6 +368,16 @@
     user-select: text
 }
 
+.slateBlockquoteContainer__75297:has(+.slateBlockquoteContainer__75297) .blockquoteDivider__75297 {
+    border-end-end-radius: 0;
+    border-end-start-radius: 0
+}
+
+.slateBlockquoteContainer__75297+.slateBlockquoteContainer__75297 .blockquoteDivider__75297 {
+    border-start-end-radius: 0;
+    border-start-start-radius: 0
+}
+
 .background-opacity-low .markup__75297,
 .background-opacity-medium .markup__75297 {
     font-weight: var(--font-weight-normal)
@@ -503,4 +513,4 @@
     text-decoration: underline
 }
 
-/*# sourceMappingURL=606633.5cdfc89771dcc54b.css.map*/
+/*# sourceMappingURL=606633.18ac0cf82e24c71d.css.map*/
