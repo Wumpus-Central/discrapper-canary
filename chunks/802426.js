@@ -1861,6 +1861,7 @@ class n8 extends i.PureComponent {
                     tutorialId: "writing-messages",
                     position: "left",
                     offsetX: 75,
+                    disabled: null == n,
                     children: (0, l.jsx)(n4, {
                         ref: this.refToChannelTextAreaFormComponent,
                         refInstance: this.containerDomRef,
