@@ -1,0 +1,21 @@
+.newContentCard__62256 {
+    cursor: pointer
+}
+
+.newContentCard__62256:hover .newContentRow__62256 {
+    background: var(--user-profile-overlay-background-hover)
+}
+
+.newContentRow__62256 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-8);
+    padding: var(--space-8)
+}
+
+.newContentDot__62256 {
+    flex-shrink: 0
+}
+
+/*# sourceMappingURL=1c49dc1c38512cda.css.map*/
