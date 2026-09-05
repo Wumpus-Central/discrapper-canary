@@ -2298,7 +2298,7 @@ let iF = function (e) {
             t || a((e) => !e);
         }, [t]),
         c = (0, A.bG)([e$.Ay], () => e$.Ay.hasUnreadPins(n.id), [n]),
-        u = s.useMemo(() => (c ? { type: "important", position: "bottom" } : void 0), [c]);
+        u = s.useMemo(() => (c ? { type: "unread", position: "bottom" } : void 0), [c]);
     function h(e) {
         e?.shiftKey || r.dispatch(er.jej.POPOUT_CLOSE);
     }
