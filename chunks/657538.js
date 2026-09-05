@@ -32,8 +32,8 @@ var C = t(80330),
     P = t(123292),
     w = t(946356),
     y = t(3026),
-    _ = t(939249),
-    S = t(782134),
+    _ = t(782134),
+    S = t(939249),
     M = t(834730),
     T = t(314531),
     L = t(798108),
@@ -42,12 +42,11 @@ var C = t(80330),
     V = t(375708),
     W = t(599672);
 function G(e) {
-    let { size: a, className: t, onPlay: l } = e;
-    return (0, i.jsx)(_.D, {
+    let { size: a, className: t } = e;
+    return (0, i.jsx)("div", {
         className: k()(W.playButton, W[a], t),
-        "aria-label": V.intl.string(V.t.CscLHM),
-        onClick: l,
-        children: (0, i.jsx)(S.PlayIcon, {
+        "aria-hidden": !0,
+        children: (0, i.jsx)(_.PlayIcon, {
             size: "custom",
             width: "lg" === a ? 14 : 8,
             height: "lg" === a ? 14 : 8,
@@ -56,12 +55,14 @@ function G(e) {
     });
 }
 function U(e) {
-    let { item: a, isPlaying: t, onHoverStart: l, onHoverEnd: s, className: n, children: r } = e;
-    return (0, i.jsxs)("div", {
-        className: k()(W.tile, n),
-        onMouseEnter: () => l(a.key),
-        onMouseLeave: s,
-        children: [(0, i.jsx)(T.A, { item: a, ringSize: "sm", isPlaying: t, className: W.tileMedia }), r],
+    let { item: a, isPlaying: t, onPlay: l, onHoverStart: s, onHoverEnd: n, className: r, children: c } = e;
+    return (0, i.jsxs)(S.D, {
+        className: k()(W.tile, r),
+        "aria-label": V.intl.string(V.t.CscLHM),
+        onClick: l,
+        onMouseEnter: () => s(a.key),
+        onMouseLeave: n,
+        children: [(0, i.jsx)(T.A, { item: a, ringSize: "sm", isPlaying: t, className: W.tileMedia }), c],
     });
 }
 function z(e) {
@@ -83,14 +84,16 @@ function z(e) {
     l.useEffect(() => () => window.clearTimeout(n.current), []);
     let [d, ...u] = a;
     if (null == d) return null;
-    let m = 1 === u.length,
-        x = d.title;
+    let m = u.slice(0, 2),
+        x = 1 === m.length,
+        f = d.title;
     return (0, i.jsxs)("div", {
         className: W.mosaic,
         children: [
             (0, i.jsx)(U, {
                 item: d,
                 isPlaying: t === d.key,
+                onPlay: () => r(0),
                 onHoverStart: c,
                 onHoverEnd: o,
                 className: W.feature,
@@ -99,36 +102,33 @@ function z(e) {
                     children: (0, i.jsxs)("div", {
                         className: W.featureFooter,
                         children: [
-                            null != x &&
-                                "" !== x.trim() &&
+                            null != f &&
+                                "" !== f.trim() &&
                                 (0, i.jsx)(M.E, {
                                     variant: "text-xs/semibold",
                                     color: "text-overlay-light",
                                     className: W.featureTitle,
-                                    children: (0, i.jsx)(y.A, { children: x }),
+                                    children: (0, i.jsx)(y.A, { children: f }),
                                 }),
-                            (0, i.jsx)(G, { size: "lg", className: W.featurePlayButton, onPlay: () => r(0) }),
+                            (0, i.jsx)(G, { size: "lg", className: W.featurePlayButton }),
                         ],
                     }),
                 }),
             }),
-            u.length > 0 &&
+            m.length > 0 &&
                 (0, i.jsx)("div", {
-                    className: k()(W.stack, { [W.equallySizedTile]: m }),
-                    children: u.map((e, a) =>
+                    className: k()(W.stack, { [W.equallySizedTile]: x }),
+                    children: m.map((e, a) =>
                         (0, i.jsx)(
                             U,
                             {
                                 item: e,
                                 isPlaying: t === e.key,
+                                onPlay: () => r(a + 1),
                                 onHoverStart: c,
                                 onHoverEnd: o,
                                 className: W.stackTile,
-                                children: (0, i.jsx)(G, {
-                                    size: m ? "lg" : "sm",
-                                    className: W.stackPlayButton,
-                                    onPlay: () => r(a + 1),
-                                }),
+                                children: (0, i.jsx)(G, { size: x ? "lg" : "sm", className: W.stackPlayButton }),
                             },
                             e.key,
                         ),
@@ -270,7 +270,7 @@ function et(e) {
         l.useEffect(() => {
             c.current || (r({ action: "VIEW_PERSONAL_WIDGET_PREVIEW" }), (c.current = !0));
         }, [r, n.id]),
-        (0, i.jsx)(_.D, {
+        (0, i.jsx)(S.D, {
             onClick: function () {
                 r({ action: "PRESS_PERSONAL_WIDGET_PREVIEW" }), t?.();
             },
@@ -340,7 +340,7 @@ function er(e) {
         (0, l.useEffect)(() => {
             0 === I.length || f.current || (c({ action: "VIEW_GAME_WIDGET_BREADCRUMB" }), (f.current = !0));
         }, [c, I.length]),
-        (0, i.jsx)(_.D, {
+        (0, i.jsx)(S.D, {
             "aria-label": V.intl.string(V.t.JjiwFx),
             onClick: () => {
                 c({ action: "PRESS_GAME_WIDGET_BREADCRUMB" }), n();
@@ -500,8 +500,7 @@ function ed(e) {
                                       ]
                                     : [],
                             )
-                            .filter(O.K)
-                            .slice(0, 3);
+                            .filter(O.K);
                         if (0 === a.length) continue;
                         l.push((0, i.jsx)(F, { items: a, onViewAll: P, ...e }, n.id ?? "clips-gallery-widget"));
                     }

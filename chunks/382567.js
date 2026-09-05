@@ -1,4 +1,4 @@
-n.d(t, { default: () => e6 });
+n.d(t, { default: () => e3 });
 var i = n(477900),
     s = n(582128),
     r = n(562708),
@@ -15,9 +15,9 @@ var i = n(477900),
     f = n(775602),
     p = n(531685),
     A = n(625494),
-    b = n(140735),
-    v = n(297264),
-    y = n(707554),
+    v = n(140735),
+    y = n(297264),
+    b = n(707554),
     S = n(964486);
 n(667532), n(134528), n(947204);
 var j = n(503698),
@@ -439,7 +439,7 @@ function ef(e) {
 }
 var ep = n(686380);
 let eA = "refresh_sm";
-function eb(e) {
+function ev(e) {
     let { onClick: t, active: n, node: r, dismissibleBadge: l, panelKey: c, listItemProps: o, children: u } = e,
         {
             icon: d,
@@ -465,17 +465,17 @@ function eb(e) {
                     return en.A.colors.ICON_FEEDBACK_CRITICAL;
             }
         })(x),
-        b = h?.(n),
-        v = s.useMemo(
+        v = h?.(n),
+        y = s.useMemo(
             () =>
                 null != l
                     ? n
                         ? null
                         : (0, i.jsx)(er, { badge: l })
-                    : null != b
-                      ? (0, i.jsx)(O.A, { badge: b })
+                    : null != v
+                      ? (0, i.jsx)(O.A, { badge: v })
                       : void 0,
-            [n, l, b],
+            [n, l, v],
         );
     return (0, i.jsxs)("li", {
         "data-settings-sidebar-item": c,
@@ -497,14 +497,14 @@ function eb(e) {
                                   (0, i.jsx)(a.E, { variant: "text-md/medium", color: p, children: f }),
                               ],
                           }),
-                    v,
+                    y,
                 ],
             }),
             u,
         ],
     });
 }
-function ev(e) {
+function ey(e) {
     let { node: t, visibleContent: n, dismissibleBadges: r, hoisted: l = !1 } = e,
         a = s.useMemo(() => t.layout[0], [t]),
         c = L.A.useField("currentPanelKey"),
@@ -543,7 +543,7 @@ function ev(e) {
         ),
         f = s.useMemo(() => et(t.key, n, r), [t.key, n, r]);
     return l
-        ? (0, i.jsx)(eb, {
+        ? (0, i.jsx)(ev, {
               panelKey: a?.key,
               onClick: h,
               active: d,
@@ -555,7 +555,7 @@ function ev(e) {
         : (0, i.jsx)(X.tG, {
               id: a?.key ?? t.key,
               children: (e) =>
-                  (0, i.jsx)(eb, {
+                  (0, i.jsx)(ev, {
                       panelKey: a?.key,
                       onClick: h,
                       active: d,
@@ -566,7 +566,7 @@ function ev(e) {
                   }),
           });
 }
-var ey = n(639876);
+var eb = n(639876);
 function eS(e) {
     let { currentPanelKey: t, root: n, onClose: r, footer: l, emptyState: a, searchBar: c } = e,
         o = L.A.useField("showNavigationMobile"),
@@ -641,23 +641,23 @@ function eS(e) {
         children: (e) =>
             (0, i.jsxs)("aside", {
                 "aria-labelledby": P,
-                className: I()(ey.pz, e, { [ey.Hw]: N.Fr, [ey.n7]: o }),
+                className: I()(eb.pz, e, { [eb.Hw]: N.Fr, [eb.n7]: o }),
                 children: [
-                    (0, i.jsx)(b.A, {
-                        children: (0, i.jsx)(v.D, {
+                    (0, i.jsx)(v.A, {
+                        children: (0, i.jsx)(y.D, {
                             variant: "text-sm/bold",
                             id: P,
                             children: K.intl.string(K.t["ZU3/B4"]),
                         }),
                     }),
-                    (0, i.jsxs)(y.F, {
+                    (0, i.jsxs)(b.F, {
                         children: [
                             (0, i.jsxs)("div", {
-                                className: I()(ey.gM, { [ey.to]: S }),
+                                className: I()(eb.gM, { [eb.to]: S }),
                                 children: [
                                     N.Fr &&
                                         (0, i.jsx)("div", {
-                                            className: ey.hg,
+                                            className: eb.hg,
                                             children: (0, i.jsx)(E.K, {
                                                 icon: R.XLargeIcon,
                                                 onClick: r,
@@ -680,7 +680,7 @@ function eS(e) {
                                 ],
                             }),
                             (0, i.jsx)("nav", {
-                                className: ey.C$,
+                                className: eb.C$,
                                 "aria-label": K.intl.string(K.t.MqTGqz),
                                 children: (0, i.jsx)(X.hD, {
                                     navigator: A,
@@ -691,12 +691,12 @@ function eS(e) {
                                                 ref: (e) => {
                                                     (u.current = e), ee.A.setSidebarScrollerRef(e), C();
                                                 },
-                                                className: ey.Mt,
+                                                className: eb.Mt,
                                                 fade: !0,
                                                 onScroll: C,
                                                 children: [
                                                     (0, i.jsx)("ul", {
-                                                        className: ey.jV,
+                                                        className: eb.jV,
                                                         ...n,
                                                         ref: t,
                                                         children: f.map((e) =>
@@ -723,11 +723,11 @@ function eS(e) {
 function ej(e) {
     let { section: t, visibleContent: n, dismissibleBadges: s } = e;
     return (0, i.jsx)("div", {
-        className: ey.uW,
+        className: eb.uW,
         children: (0, i.jsx)("ul", {
-            className: ey.C4,
+            className: eb.C4,
             children: t.layout.map((e) =>
-                (0, i.jsx)(ev, { node: e, visibleContent: n, dismissibleBadges: s, hoisted: !0 }, e.key),
+                (0, i.jsx)(ey, { node: e, visibleContent: n, dismissibleBadges: s, hoisted: !0 }, e.key),
             ),
         }),
     });
@@ -737,25 +737,25 @@ function eI(e) {
         l = t.useTitle?.() ?? K.intl.string(K.t["3D5yo/"]),
         a = s.useId();
     return (0, i.jsxs)("li", {
-        className: ey.uW,
+        className: eb.uW,
         "aria-labelledby": a,
         children: [
             t.hideTitle
-                ? (0, i.jsx)(b.A, { children: (0, i.jsx)(v.D, { id: a, variant: "heading-sm/medium", children: l }) })
+                ? (0, i.jsx)(v.A, { children: (0, i.jsx)(y.D, { id: a, variant: "heading-sm/medium", children: l }) })
                 : (0, i.jsx)("div", {
-                      className: ey.a9,
-                      children: (0, i.jsx)(v.D, {
+                      className: eb.a9,
+                      children: (0, i.jsx)(y.D, {
                           id: a,
-                          className: ey.Pf,
+                          className: eb.Pf,
                           variant: "heading-sm/medium",
                           color: "text-muted",
                           children: l,
                       }),
                   }),
             (0, i.jsx)("ul", {
-                className: ey.C4,
+                className: eb.C4,
                 children: t.layout.map((e) =>
-                    (0, i.jsx)(ev, { node: e, visibleContent: n, dismissibleBadges: r }, e.key),
+                    (0, i.jsx)(ey, { node: e, visibleContent: n, dismissibleBadges: r }, e.key),
                 ),
             }),
         ],
@@ -815,8 +815,8 @@ function eT(e) {
         children: (0, i.jsxs)("div", {
             className: eC.k,
             children: [
-                (0, i.jsx)(b.A, { children: (0, i.jsx)(v.D, { variant: "text-sm/bold", children: w }) }),
-                (0, i.jsxs)(y.F, {
+                (0, i.jsx)(v.A, { children: (0, i.jsx)(y.D, { variant: "text-sm/bold", children: w }) }),
+                (0, i.jsxs)(b.F, {
                     children: [
                         (0, i.jsx)(eS, {
                             currentPanelKey: h,
@@ -850,8 +850,8 @@ function eR(e) {
             searchBar: d,
             ...m
         } = e,
-        [b, v] = s.useState(!1),
-        [y, S] = s.useState(1.4),
+        [v, y] = s.useState(!1),
+        [b, S] = s.useState(1.4),
         j = s.useRef(null),
         I = (0, h.bG)([f.Ay], () => f.Ay.useReducedMotion),
         N = (0, h.bG)([p.A], () => p.A.isFocused());
@@ -861,7 +861,7 @@ function eR(e) {
                 let { intensity: t, duration: n } = e;
                 !I &&
                     N &&
-                    (v(!0), S(t ?? 1.4), clearTimeout(j.current), (j.current = setTimeout(() => v(!1), n ?? 1e3)));
+                    (y(!0), S(t ?? 1.4), clearTimeout(j.current), (j.current = setTimeout(() => y(!1), n ?? 1e3)));
             }
             return (
                 A._.subscribe(ew.jej.SHAKE_SETTINGS_MODAL, e),
@@ -871,8 +871,8 @@ function eR(e) {
             );
         }, [I, N]),
         (0, i.jsx)(x.b, {
-            isShaking: b,
-            intensity: y,
+            isShaking: v,
+            intensity: b,
             children: (0, i.jsx)(g.N, {
                 ...m,
                 children: (0, i.jsx)(eP, {
@@ -915,13 +915,13 @@ var ek = n(280450),
 function eJ() {
     let e = (0, eY.GV)(),
         t = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        n = "608202",
-        s = "34bfde2b040e2c651baba72e781b99bb65568f29".substring(0, 7),
+        n = "608236",
+        s = "aa2017bf1f5a7b8fae65706f474d667d9a795f38".substring(0, 7),
         r = eV.A?.app.getVersion(),
         l = eV.A?.app.getBuildNumber(),
         c = eV.A?.app.getAppArch(),
         o = eX.A.getCurrentBuildOverride().overrides?.discord_web,
-        u = null != o ? (0, eq.A)("1788564914154", !1) : null,
+        u = null != o ? (0, eq.A)("1788566427900", !1) : null,
         d = null != u ? ` (built ${u})` : "",
         m = (function () {
             let e = ez()?.os?.toString();
@@ -998,7 +998,7 @@ function eJ() {
                             ],
                         }),
                 }),
-                (0, i.jsx)(b.A, { id: e, children: K.intl.string(K.t["9Al4Qd"]) }),
+                (0, i.jsx)(v.A, { id: e, children: K.intl.string(K.t["9Al4Qd"]) }),
             ],
         })
     );
@@ -1091,8 +1091,8 @@ var e5 = n(402651),
     e9 = n(830543),
     e4 = n(953056);
 let e8 = new Set([e_.X.PROFILE_PANEL, e_.X.SUBSCRIPTIONS_PANEL, e_.X.FAMILY_CENTER_PANEL, e_.X.POGGERMODE_PANEL]),
-    e3 = new Map([[e_.X.SESSIONS_PANEL, r.ImpressionNames.USER_SETTINGS_SESSIONS]]);
-function e6(e) {
+    e6 = new Map([[e_.X.SESSIONS_PANEL, r.ImpressionNames.USER_SETTINGS_SESSIONS]]);
+function e3(e) {
     let { target: t, ...n } = e,
         l = eL.A.useField("query"),
         a = s.useCallback(() => {
@@ -1119,7 +1119,7 @@ function e6(e) {
               sidebarFooter: e2,
               onViewChange: function (e) {
                   e8.has(e) || (0, e7._)(e);
-                  let t = e3.get(e);
+                  let t = e6.get(e);
                   null != t &&
                       (0, o.x)({
                           type: r.ImpressionTypes.PANE,
