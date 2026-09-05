@@ -281,7 +281,7 @@ function e6(e) {
             return (s) => (0, c.jsx)(e, { ...s, startingScreen: t });
         });
 }
-function e5(e) {
+function e8(e) {
     let { user: t } = e,
         { avatarSrc: s, eventHandlers: i } = (0, eq.A)({ userId: t.id, size: eY._3.SIZE_24 });
     return (0, c.jsx)(
@@ -290,7 +290,7 @@ function e5(e) {
         t.id,
     );
 }
-function e8(e) {
+function e5(e) {
     let { slotIndex: t } = e;
     return (0, c.jsx)("div", { className: e3.p, children: t });
 }
@@ -302,10 +302,10 @@ function e9(e) {
             let e = [];
             for (let s = 0; s < e0.Z; s++)
                 if (t?.[s] !== void 0) {
-                    let i = (0, c.jsx)(e5, { user: t[s] }, t[s].id);
+                    let i = (0, c.jsx)(e8, { user: t[s] }, t[s].id);
                     e.push(i);
                 } else {
-                    let t = (0, c.jsx)(e8, { slotIndex: s + 1 }, s);
+                    let t = (0, c.jsx)(e5, { slotIndex: s + 1 }, s);
                     e.push(t);
                 }
             return e;
@@ -1073,8 +1073,8 @@ function tV(e, t, i) {
             s.e("861060"),
             s.e("952372"),
             s.e("959880"),
-            s.e("910486"),
-            s.e("56366"),
+            s.e("716460"),
+            s.e("264572"),
             s.e("797595"),
             s.e("641248"),
             s.e("544571"),
@@ -1542,8 +1542,8 @@ let t7 = function () {
 };
 var t3 = s(325499),
     t6 = s(562708),
-    t5 = s(885574),
-    t8 = s(43990),
+    t8 = s(885574),
+    t5 = s(43990),
     t9 = s(993077),
     t4 = s(139286),
     se = s(872725),
@@ -1552,7 +1552,7 @@ var t3 = s(325499),
     si = s(375776),
     sn = s(727811),
     sa = s(222652),
-    sl = s(553875),
+    sl = s(428685),
     sr = s(934353);
 function sc(e) {
     let { openRewardModal: t } = e,
@@ -1602,7 +1602,7 @@ function sc(e) {
                 (0, c.jsxs)("div", {
                     className: sr.ed,
                     children: [
-                        (0, c.jsx)(t5.CircleInformationIcon, { size: "xs", color: "var(--text-subtle)" }),
+                        (0, c.jsx)(t8.CircleInformationIcon, { size: "xs", color: "var(--text-subtle)" }),
                         (0, c.jsx)(ec.E, {
                             variant: "text-xs/medium",
                             color: "text-subtle",
@@ -1627,7 +1627,7 @@ function so(e) {
                 return (t) => (0, c.jsx)(e, { ...t, sourceAnalyticsLocations: i });
             });
         }, [i]);
-    return (0, c.jsx)(t8.N, {
+    return (0, c.jsx)(t5.N, {
         theme: e1.NJ8.DARKER,
         children: (e) =>
             (0, c.jsx)(j.f5, {
@@ -1748,8 +1748,8 @@ var sh = s(789861),
     sC = s(852218),
     sE = s(161319),
     sT = s(672787),
-    sv = s(310235),
-    sR = s(334551);
+    sv = s(14429),
+    sR = s(810889);
 let sI =
         "https://cdn.discordapp.com/assets/content/74dd725dde373bfdbced9606d5201ed2c555fc895f4da644a8de314de6906be3.webp",
     s_ =
@@ -1968,8 +1968,8 @@ let sL = function (e) {
                                 s.e("861060"),
                                 s.e("952372"),
                                 s.e("959880"),
-                                s.e("910486"),
-                                s.e("56366"),
+                                s.e("716460"),
+                                s.e("264572"),
                                 s.e("797595"),
                                 s.e("641248"),
                                 s.e("544571"),
@@ -2167,14 +2167,14 @@ var s$ = s(462887),
     s7 = s(591179),
     s3 = s(462463),
     s6 = s(19886),
-    s5 = s(425713),
-    s8 = s(696292),
+    s8 = s(425713),
+    s5 = s(696292),
     s9 = s(192444),
     s4 = s(617986),
     ie = s(892227),
     it = s(81466),
     is = s(318254),
-    ii = s(1889),
+    ii = s(249755),
     ia = s(749012);
 let il = function () {
     let { passesGeneralUIInvariant: e, programReward: t } = (0, Z.F)({ location: "NitroOrbsWhatsNewCardFooter" });
@@ -2267,7 +2267,7 @@ function id(e) {
                           primaryAsset:
                               "https://cdn.discordapp.com/assets/content/6a45cf480a4894d29a155fbc23df4dca701a69e7f09227ef964a61bdb6e5833a.png",
                           ctaText: ex.intl.string(ex.t.jVcuVY),
-                          onCtaClick: () => (0, s4.mA)({ fromContent: s8.u.NITRO_HOME_PERK_CARD }),
+                          onCtaClick: () => (0, s4.mA)({ fromContent: s5.u.NITRO_HOME_PERK_CARD }),
                           primaryAssetClassName: io.Nf,
                       }
                     : null,
@@ -2279,7 +2279,7 @@ var iu = s(975807),
     im = s(95035),
     ig = s(989790),
     ix = s(88001),
-    ih = s(148155),
+    ih = s(259589),
     ip = s(817577);
 function iN() {
     (0, iu.A)(ix.TE);
@@ -2383,7 +2383,7 @@ function iM() {
                 a = i?.status === s6.Wo.UPCOMING || s,
                 l = i?.status === s6.Wo.WITHHELD,
                 r = a || l,
-                c = (0, s5.N)(i?.id),
+                c = (0, s8.N)(i?.id),
                 d = (function () {
                     let e = (0, s6.$F)(),
                         t = (0, iE.P)(),
@@ -2554,7 +2554,7 @@ function iH(e) {
             let e = (0, s0.DP)(),
                 t = (0, s7.X)("useFavoritesPerkCards"),
                 s = (0, s6.Lh)(),
-                i = (0, s5.N)(s)?.standard ?? null,
+                i = (0, s8.N)(s)?.standard ?? null,
                 { analyticsLocations: n } = (0, j.Ay)(A.A.PREMIUM_MARKETING_PERK_CARD),
                 a = (0, s2.A)({ scrollPosition: iO._F.TRY_IT_OUT, analyticsLocations: n }),
                 l = (0, o.useCallback)(() => {
@@ -3027,8 +3027,8 @@ function i3(e) {
     });
 }
 var i6 = s(37537),
-    i5 = s(783420),
-    i8 = s(204413),
+    i8 = s(783420),
+    i5 = s(204413),
     i9 = s(245383),
     i4 = s(824069),
     ne = s(785007),
@@ -3151,7 +3151,7 @@ function nf(e) {
     let { skuId: t, selectedPlanId: s, subscribeButtonProps: i } = e,
         n = null == s || !0 === i.disabled,
         a = null == s ? "secondary" : i.variant;
-    return (0, c.jsx)(i5.A, {
+    return (0, c.jsx)(i8.A, {
         subscriptionTier: t,
         initialPlanId: s,
         shouldDisallowPlanSelection: !0,
@@ -3275,7 +3275,7 @@ function nh(e) {
         })({ skuId: t }),
         A = i && null == x ? "expressive" : "secondary",
         { buttonText: j } = (0, i9.A)({ subscriptionTier: t }),
-        { subscribeButtonProps: b } = (0, i8.$)({
+        { subscribeButtonProps: b } = (0, i5.$)({
             subscriptionTier: t,
             variantOverride: A,
             buttonTextOverride: N ? j : void 0,
@@ -3386,7 +3386,7 @@ function np(e) {
                   premiumGroupProductName: (0, ix.DP)(),
               })
             : ex.intl.string(ex.t["2pG5Ga"]),
-        p = (0, c.jsx)(i5.A, {
+        p = (0, c.jsx)(i8.A, {
             subscriptionTier: tF.pe.TIER_2,
             initialPlanId: tF.gD.PREMIUM_GROUP_MONTH,
             children: (e) => {
@@ -3794,7 +3794,7 @@ function nB() {
                                                                                 text: ex.intl.string(i),
                                                                                 position: "top",
                                                                                 children: (0, c.jsx)(
-                                                                                    t5.CircleInformationIcon,
+                                                                                    t8.CircleInformationIcon,
                                                                                     {
                                                                                         size: "xxs",
                                                                                         color: "var(--icon-default)",
@@ -4088,12 +4088,12 @@ let n3 = o.memo(
     }),
 );
 var n6 = s(820081),
-    n5 = s(140735),
-    n8 = s(401432),
+    n8 = s(140735),
+    n5 = s(401432),
     n9 = s(580630),
     n4 = s(795269),
     ae = s(84483),
-    at = s(701974),
+    at = s(763052),
     as = s(55647),
     ai = s(202600);
 function an(e) {
@@ -4102,13 +4102,13 @@ function an(e) {
         ? (0, c.jsxs)(c.Fragment, {
               children: [
                   (0, c.jsx)(n6.B, { size: "sm", color: en.A.colors.TEXT_STRONG, "aria-hidden": !0 }),
-                  (0, c.jsx)(n5.A, { children: ex.intl.string(ex.t["tq+6t/"]) }),
+                  (0, c.jsx)(n8.A, { children: ex.intl.string(ex.t["tq+6t/"]) }),
               ],
           })
         : (0, c.jsxs)(c.Fragment, {
               children: [
-                  (0, c.jsx)(n8.a, { size: "xs", color: en.A.colors.TEXT_STRONG, "aria-hidden": !0 }),
-                  (0, c.jsx)(n5.A, { children: ex.intl.string(ex.t.l4qZrp) }),
+                  (0, c.jsx)(n5.a, { size: "xs", color: en.A.colors.TEXT_STRONG, "aria-hidden": !0 }),
+                  (0, c.jsx)(n8.A, { children: ex.intl.string(ex.t.l4qZrp) }),
               ],
           });
 }
@@ -4646,7 +4646,7 @@ let ax = () => {
                 (0, c.jsx)(nC, { className: am.MF }),
             ],
         });
-    return (0, c.jsx)(t8.N, {
+    return (0, c.jsx)(t5.N, {
         theme: au.NJ.DARKER,
         children: (e) => (0, c.jsx)(Y.Gt, { className: u()(am.XG, e), ref: t, children: X }),
     });

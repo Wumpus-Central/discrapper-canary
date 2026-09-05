@@ -1,6 +1,6 @@
 Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.AbstractParserWithLeftRightBoundaryChecking = t.AbstractParserWithLeftBoundaryChecking = void 0);
-let n = r(167385),
+let n = r(389766),
     a = r(41943);
 class i extends n.AbstractParserWithWordBoundaryChecking {
     patternLeftBoundary() {

@@ -4,7 +4,7 @@ let n = r(574253),
     i = r(474726),
     s = r(474726),
     o = r(798401),
-    u = r(167385),
+    u = r(389766),
     l = RegExp(
         `(?:on\\s{0,3})?(${s.ORDINAL_NUMBER_PATTERN})(?:\\s{0,3}(?:al|\\-|\\\u{2013}|fino|alle|allo)?\\s{0,3}(${s.ORDINAL_NUMBER_PATTERN}))?(?:-|/|\\s{0,3}(?:dal)?\\s{0,3})(${(0, o.matchAnyPattern)(a.MONTH_DICTIONARY)})(?:(?:-|/|,?\\s{0,3})(${i.YEAR_PATTERN}(?![^\\s]\\d)))?(?=\\W|$)`,
         "i",

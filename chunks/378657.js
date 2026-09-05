@@ -42,11 +42,11 @@ function L(e) {
     }, [t?.entitlements]);
 }
 var T = l(375708),
-    k = l(25525),
+    k = l(356863),
     D = l(144977),
     O = l(628049),
     V = l(568065),
-    U = l(394107),
+    U = l(344045),
     M = l(929729),
     W = l(517826);
 function B(e) {
@@ -794,7 +794,7 @@ function e0(e) {
     });
 }
 var e1 = l(690118);
-function e5(e) {
+function e6(e) {
     let { guildId: t } = e,
         l = (0, s.bG)([c.A], () => c.A.getGuild(t)),
         { available: i, spent: r, total: o } = (0, eB.A)(t),
@@ -847,19 +847,19 @@ function e5(e) {
         });
 }
 var e8 = l(97808),
-    e6 = l(778712),
+    e5 = l(778712),
     e9 = l(463930),
-    e2 = l(730134),
-    e3 = l(878678),
-    e7 = l(483625),
-    e4 = l(854627),
+    e3 = l(730134),
+    e4 = l(878678),
+    e2 = l(483625),
+    e7 = l(854627),
     te = l(696451),
     tt = l(317525),
     tl = l(287809),
     tn = l(562153),
     ti = l(19575),
     tr = l(985827);
-let ts = ti.Ay.getEnableHardwareAcceleration() ? e8.Js : e2.A;
+let ts = ti.Ay.getEnableHardwareAcceleration() ? e8.Js : e3.A;
 function to(e) {
     let { guildId: t } = e,
         l = (0, s.bG)([c.A], () => c.A.getGuild(t)),
@@ -873,7 +873,7 @@ function to(e) {
             avatarDecorationSrc: m,
             avatarSrc: p,
             eventHandlers: x,
-        } = (0, e4.A)({ userId: r?.id, guildId: t, size: e6._3.SIZE_40, animateOnHover: !d }),
+        } = (0, e7.A)({ userId: r?.id, guildId: t, size: e5._3.SIZE_40, animateOnHover: !d }),
         A = (0, j.c)("GuildPowerupsBoostInfoContainerMember");
     return null == l || null == a || null == r
         ? null
@@ -892,7 +892,7 @@ function to(e) {
                               variant: A ? "text-sm/normal" : "text-sm/medium",
                               children: T.intl.format(u ? k.default["7fWTg4"] : k.default["7PXeeQ"], {
                                   onClick: () => {
-                                      (0, e3.K4)({
+                                      (0, e4.K4)({
                                           guildId: t,
                                           location: {
                                               section: eA.JJy.GUILD_POWERUPS_OVERVIEW_SIDEBAR,
@@ -906,13 +906,13 @@ function to(e) {
                   }),
                   null != i &&
                       !u &&
-                      (0, n.jsx)(e7.V, {
+                      (0, n.jsx)(e2.V, {
                           avatar: (0, n.jsx)(ts, {
                               ...x,
                               user: r,
                               src: p,
                               avatarDecoration: m,
-                              size: e6._3.SIZE_40,
+                              size: e5._3.SIZE_40,
                               "aria-hidden": !0,
                               animate: !0,
                           }),
@@ -1396,7 +1396,7 @@ function tI(e) {
                               children: [
                                   U
                                       ? (0, n.jsxs)(n.Fragment, {
-                                            children: [(0, n.jsx)(e5, { guildId: P }), (0, n.jsx)(eJ, { guildId: P })],
+                                            children: [(0, n.jsx)(e6, { guildId: P }), (0, n.jsx)(eJ, { guildId: P })],
                                         })
                                       : (0, n.jsxs)("div", {
                                             className: tv.CG,

@@ -1,5 +1,5 @@
 Object.defineProperty(t, "__esModule", { value: !0 });
-let n = r(167385),
+let n = r(389766),
     a = r(249869),
     i = RegExp("(?:\u661F\u671F|\u79AE\u62DC|\u9031)(?<weekday>" + Object.keys(a.WEEKDAY_OFFSET).join("|") + ")");
 class s extends n.AbstractParserWithWordBoundaryChecking {

@@ -67,7 +67,7 @@ class m extends i.A {
                     name: "cs2-gsi",
                     applicationId: I,
                     isEnabled: () => d.Ay.getEnableAutoclipping() && u.A.getConfig({ location: T }).enableCs2Gsi,
-                    importHandler: () => Promise.all([n.e("556967"), n.e("860838")]).then(n.bind(n, 525509)),
+                    importHandler: () => Promise.all([n.e("772493"), n.e("860838")]).then(n.bind(n, 525509)),
                 },
                 {
                     type: "application",
@@ -75,7 +75,7 @@ class m extends i.A {
                     applicationId: p.e,
                     isEnabled: () =>
                         d.Ay.getEnableAutoclipping() && A.getConfig({ location: T }).enableRocketLeagueEvents,
-                    importHandler: () => Promise.all([n.e("556967"), n.e("182150")]).then(n.bind(n, 446885)),
+                    importHandler: () => Promise.all([n.e("772493"), n.e("182150")]).then(n.bind(n, 446885)),
                 },
             ]))
                 switch (e.type) {

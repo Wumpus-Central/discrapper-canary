@@ -44,7 +44,7 @@ var n,
             return i(t, e), t;
         });
 Object.defineProperty(t, "__esModule", { value: !0 });
-let o = r(167385),
+let o = r(389766),
     u = s(r(681743));
 class l extends o.AbstractParserWithWordBoundaryChecking {
     innerPattern(e) {

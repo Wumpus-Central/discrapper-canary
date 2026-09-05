@@ -908,7 +908,7 @@ let e9 = { [eC.Ur.UNREAD]: !0, [eC.Ur.TODAY]: !0, [eC.Ur.YESTERDAY]: !1, [eC.Ur.
                     e({ lastInitializedWithUnreads: t, messageCategoryOpenStates: t ? e5 : e9 }));
         },
     }));
-var nn = t(871423),
+var nn = t(645617),
     nt = t(875436);
 function ns(e) {
     e.stopPropagation();

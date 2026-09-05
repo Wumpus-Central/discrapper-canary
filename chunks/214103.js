@@ -40,8 +40,8 @@ var a = t(477900),
     J = t(652215),
     H = t(818348),
     O = t(375708),
-    X = t(72191),
-    $ = t(98908),
+    X = t(328157),
+    $ = t(376134),
     K = t(438221);
 function z(e) {
     return P.A.getGuild(e)?.features.has(J.GuildFeatures.GUILD_THEME) === !0;

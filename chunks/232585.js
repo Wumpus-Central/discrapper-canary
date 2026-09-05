@@ -1,7 +1,7 @@
 Object.defineProperty(t, "__esModule", { value: !0 });
 let n = r(793277),
     a = r(115835),
-    i = r(167385),
+    i = r(389766),
     s = r(798401),
     o = RegExp(
         `(dit|deze|(?:aan)?komend|volgend|afgelopen|vorig)e?\\s*(${(0, s.matchAnyPattern)(n.TIME_UNIT_DICTIONARY)})(?=\\s*)(?=\\W|$)`,

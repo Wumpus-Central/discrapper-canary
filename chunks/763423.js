@@ -1,7 +1,7 @@
 Object.defineProperty(t, "__esModule", { value: !0 });
 let n = r(793277),
     a = r(115835),
-    i = r(167385),
+    i = r(389766),
     s = r(628403),
     o = RegExp(`(dit|deze|vorig|afgelopen|(?:aan)?komend|over|\\+|-)e?\\s*(${n.TIME_UNITS_PATTERN})(?=\\W|$)`, "i");
 class u extends i.AbstractParserWithWordBoundaryChecking {

@@ -1835,7 +1835,7 @@ var tf = t(826673),
     tQ = t(267102),
     tZ = t(474397),
     tJ = t(486974),
-    t0 = t(39470);
+    t0 = t(256416);
 function t1(e) {
     let { channel: n } = e,
         t = s.useContext(en.AnalyticsContext),
@@ -2408,7 +2408,7 @@ function i0(e) {
 }
 var i1 = t(290136),
     i2 = t(975571),
-    i5 = t(490094);
+    i5 = t(670064);
 function i6() {
     let e = z.intl.string(i5.default.pdipXI);
     return (0, l.jsx)(ns.In, {
@@ -5052,7 +5052,7 @@ function dc() {
         t.e("93461"),
         t.e("309291"),
         t.e("829260"),
-        t.e("327198"),
+        t.e("25212"),
         t.e("504098"),
         t.e("176911"),
         t.e("36624"),
@@ -5112,7 +5112,7 @@ function dh() {
         t.e("93461"),
         t.e("309291"),
         t.e("829260"),
-        t.e("327198"),
+        t.e("25212"),
         t.e("504098"),
         t.e("176911"),
         t.e("949013"),
@@ -5201,7 +5201,7 @@ let dA = (0, nU.Fe)({ createPromise: dh, webpackId: 67319, name: "StageChannelCa
         name: "GuildMemberModViewSidebar",
     }),
     dx = (0, nU.Fe)({
-        createPromise: () => Promise.all([t.e("226291"), t.e("208927"), t.e("796778")]).then(t.bind(t, 173489)),
+        createPromise: () => Promise.all([t.e("226291"), t.e("799949"), t.e("796778")]).then(t.bind(t, 173489)),
         webpackId: 173489,
         name: "FriendsSidebar",
     });

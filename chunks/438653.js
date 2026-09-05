@@ -20,7 +20,7 @@ var i = l(435558),
     m = l(93055),
     G = l(5180),
     x = l(652215),
-    j = l(22277),
+    j = l(384539),
     y = l(375708);
 function C(n) {
     return n ? y.intl.string(j.default.TN4nAX) : y.intl.string(j.default.G9fGlP);

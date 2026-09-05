@@ -1,31 +1,3 @@
-Object.defineProperty(t, "__esModule", { value: !0 }),
-    (t.AbstractParserWithWordBoundaryChecking = void 0),
-    (t.AbstractParserWithWordBoundaryChecking = class {
-        constructor() {
-            (this.cachedInnerPattern = null), (this.cachedPattern = null);
-        }
-        innerPatternHasChange(e, t) {
-            return this.innerPattern(e) !== t;
-        }
-        patternLeftBoundary() {
-            return "(\\W|^)";
-        }
-        pattern(e) {
-            return (
-                (this.cachedInnerPattern && !this.innerPatternHasChange(e, this.cachedInnerPattern)) ||
-                    ((this.cachedInnerPattern = this.innerPattern(e)),
-                    (this.cachedPattern = RegExp(
-                        `${this.patternLeftBoundary()}${this.cachedInnerPattern.source}`,
-                        this.cachedInnerPattern.flags,
-                    ))),
-                this.cachedPattern
-            );
-        }
-        extract(e, t) {
-            var r;
-            let n = null != (r = t[1]) ? r : "";
-            (t.index = t.index + n.length), (t[0] = t[0].substring(n.length));
-            for (let e = 2; e < t.length; e++) t[e - 1] = t[e];
-            return this.innerExtract(e, t);
-        }
-    });
+e.exports = JSON.parse(
+    '{"wRLmM0":["Salon"],"qMj+2W":[[1,"userName"]," do\u0142\u0105czy\u0142(-a)"],"u7LUkR":["Pozosta\u0142o ",[1,"userName"]],"nPRAZX":[[1,"userName"]," przeszed\u0142(-esz\u0142a) do ",[1,"seatLabel"]],"zTbxKr":[[1,"userName"]," zostawi\u0142(-a) notatk\u0119"],"DO8iXB":["Notatka od ",[1,"userName"]," zosta\u0142a usuni\u0119ta"],"gzrysL":[[1,"userName"]," zmieni\u0142(-a) sw\xf3j stan na: ",[1,"postureLabel"]],"vNuh/e":[[1,"userName"]," wyczy\u015Bci\u0142(-a) sw\xf3j stan"],"f7g0DK":["Wr\xf3\u0107 do salonu"],"uUhyVw":["Uschni\u0119ta ro\u015Blina"],"iXldTS":["Widok siatki"],"93KE7U":["Kaczka"],"yITFQ7":["Wi\u0119dn\u0105ca ro\u015Blina"],"zQkVWf":["Salon"],"c/OmBC":["Pok\xf3j jest teraz pe\u0142ny. Zosta\u0144 na chwil\u0119 \u2013 nied\u0142ugo mo\u017Ce zwolni\u0107 si\u0119 miejsce."],"IrukuA":["\u017Bywa ro\u015Blina"],"y33CVg":["Salon"],"3xb4VY":["Salon ",[1,"number"]],"t+GPi4":["Nast\u0119pny stream"],"Vj+S0/":["Notatka w salonie"],"zzZaRe":["Uwagi"],"w5Latp":["Notatka od ",[1,"userName"]],"IAcEEn":["Zostaw notatk\u0119"],"k4cbsb":["Osi\u0105gni\u0119to limit notatek w pokoju"],"bUGP71":["Anulowano notatk\u0119"],"xyO7AD":["Naci\u015Bnij Enter, aby umie\u015Bci\u0107 tu notatk\u0119. Naci\u015Bnij Escape, aby anulowa\u0107."],"NBm6jz":["Umieszczanie notatki obok ",[1,"targetLabel"]],"lL1Y+d":["Podrzu\u0107 notatk\u0119"],"JYlbK5":["Przedmioty w pokoju"],"DYoT0n":["Przejd\u017A do salonu"],"sV/+Cu":["Wolne miejsca \u2013 wybierz jedno, aby usi\u0105\u015B\u0107"],"F9DcvR":["Wolne miejsca"],"/l5Wn+":[[6,"seatedCount",{"one":["Jest tu ",[7]," osoba"],"few":["S\u0105 tu ",[7]," osoby"],"many":["Jest tu ",[7]," os\xf3b"],"other":["Jest tu ",[7]," osoby"]},0,"cardinal"],", ",[6,"openSeatCount",{"one":[[7]," wolne miejsce"],"few":[[7]," wolne miejsca"],"many":[[7]," wolnych miejsc"],"other":[[7]," wolnego miejsca"]},0,"cardinal"],", ",[6,"objectCount",{"one":[[7]," przedmiot"],"few":[[7]," przedmioty"],"many":[[7]," przedmiot\xf3w"],"other":[[7]," przedmiotu"]},0,"cardinal"]],"xn1EI9":["Osoby tutaj"],"B0gnKP":["Dzia\u0142ania na ro\u015Blinie"],"cPQCeg":["Doniczka"],"kEnnV1":["AFK"],"Iq4IWe":[[1,"username"],", miejsce: ",[1,"seatLabel"],", jest AFK"],"i338qh":["Koc"],"x38hbr":[[1,"username"],", miejsce: ",[1,"seatLabel"],", z kocem"],"WsrDmY":["Ksi\u0105\u017Cka"],"WLBG6w":[[1,"username"],", miejsce: ",[1,"seatLabel"],", z ksi\u0105\u017Ck\u0105"],"/4AL9E":["Kontroler"],"GZrfhf":[[1,"username"],", miejsce: ",[1,"seatLabel"],", z kontrolerem"],"ViDycn":["Laptop"],"m5tldI":[[1,"username"],", miejsce: ",[1,"seatLabel"],", z laptopem"],"Rqmi9/":["Wybierz pok\xf3j, kt\xf3rego ma u\u017Cywa\u0107 Twoja przestrze\u0144."],"kmzWUc":["Wybierz pok\xf3j"],"crFI7e":[[1,"seatType"],", miejsce ",[1,"number"]],"LFdLjz":[[1,"seatType"],", ",[1,"position"]],"wxkoLF":["ty\u0142"],"CScWZe":["krzes\u0142o"],"lQKxC5":["skrajnie po lewej"],"iVfA9i":["skrajnie po prawej"],"8s37XL":["poduszka pod\u0142ogowa"],"YpJ7QS":["prz\xf3d"],"yG+xS0":["\u015Brodek"],"WMBV4i":["\u015Brodek po lewej"],"5ZigwU":["\u015Brodek po prawej"],"Qt29nt":["miejsce stoj\u0105ce"],"xLrkpg":["miejsce przy oknie"],"FlAboG":["To miejsce jest zaj\u0119te."],"lkzfot":["Zaplecze"],"wjBOG8":["Sofa"],"p7JgFM":["Miejsce dla dwojga"],"WaL+LA":["Lewa strona strefy relaksu"],"E/jYGS":["Loft"],"ytIYuY":["Komputer do gier"],"IE3e0y":["Belki stropowe"],"UzA4FM":["Prawa strona strefy relaksu"],"C+LGlh":["Grupa z boku"],"NYm6Cb":[[1,"seatLabel"],", wolne"],"+vMoL1":["Po do\u0142\u0105czeniu do kana\u0142u g\u0142osowego trafisz do ostatnio u\u017Cywanego widoku \u2013 Salonu lub Siatki \u2013 zamiast zawsze do Salonu. Salon to funkcja w wersji beta."],"qYzpsI":["Zapami\u0119taj m\xf3j ostatni widok"],"2Ll0vk":["Udost\u0119pnianie ekranu"],"0tpZJ0":["AFK"],"+rg7Lp":["Praca"],"7YL3BQ":["Chilluj\u0119"],"LkY/of":["Gracze"],"LTAf2V":["Spersonalizuj sw\xf3j wygl\u0105d"],"gSS3O/":["Salon jest teraz niedost\u0119pny."],"4bL+KW":[[1,"username"],", miejsce: ",[1,"seatLabel"]],"zW6Hyu":["Zobacz stream"],"hZobvN":["Ogl\u0105daj stream u\u017Cytkownika ",[1,"username"]],"aduS3B":["Podlej ro\u015Blin\u0119"]}',
+);
