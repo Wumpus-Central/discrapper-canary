@@ -5,7 +5,7 @@ var n = l(313265),
 let i = [
         { model: "gpt-5.6-luna", thinking: "high", summary: () => r.intl.string(a.default.Mo0a1m) },
         { model: "gpt-5.6-sol", thinking: "high", summary: () => r.intl.string(a.default.dkt78K) },
-        { model: "claude-fable-5", thinking: "high", summary: () => r.intl.string(a.default.Ly6zYL) },
+        { model: "claude-fable-5-1", thinking: "high", summary: () => r.intl.string(a.default.Ly6zYL) },
     ],
     s = i[1] ?? { model: "gpt-5.6-sol", thinking: "high" },
     o = d({ model: s.model, thinking: s.thinking });
