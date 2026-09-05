@@ -221,7 +221,7 @@ function eu(e) {
         tE = l.useMemo(() => (0, Q.L)({ quest: es, location: et.rE.VIDEO_MODAL }), [es]),
         tf = (0, E.g)(tt, e0, ex.progressSeconds),
         [t_, tm] = l.useState(Y.oA.MD),
-        tp = { [Y.oA.MD]: 56, [Y.oA.LG]: 64 };
+        tp = { [Y.oA.SM]: 56, [Y.oA.MD]: 56, [Y.oA.LG]: 64 };
     (0, g.u5)(() => {
         te.current &&
             ((te.current = !1),

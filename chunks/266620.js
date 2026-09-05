@@ -1,4 +1,4 @@
-i.d(t, { Cr: () => A, I1: () => I, Nj: () => _, R6: () => w, SX: () => k, UB: () => M }), i(938796);
+i.d(t, { Cr: () => A, I1: () => I, Nj: () => _, R6: () => w, SX: () => k, UB: () => z }), i(938796);
 var n = i(477900),
     a = i(582128),
     l = i(665260);
@@ -14,8 +14,8 @@ var r = i(682176),
     p = i(465856),
     g = i(966245),
     f = i(447991),
-    v = i(838541),
-    S = i(652215);
+    S = i(838541),
+    v = i(652215);
 i(516653);
 var y = i(375708);
 function A(e) {
@@ -29,7 +29,7 @@ function A(e) {
         placeholderVersion: t.placeholder_version,
         contentType: t.content_type,
         originalContentType: t.original_content_type,
-        srcIsAnimated: (0, l.Lt)(t.flags ?? 0, S.sbO.IS_ANIMATED),
+        srcIsAnimated: (0, l.Lt)(t.flags ?? 0, v.sbO.IS_ANIMATED),
         sourceMetadata: {
             message: e.message,
             identifier: { type: "attachment", attachmentId: t.id, filename: t.filename, title: t.title, size: t.size },
@@ -39,7 +39,7 @@ function A(e) {
 }
 function I(e) {
     let t = e.item.originalItem,
-        i = (0, l.Lt)(t.flags ?? 0, S.sbO.IS_CLIP),
+        i = (0, l.Lt)(t.flags ?? 0, v.sbO.IS_CLIP),
         a = h.A.toURLSafe(t.proxy_url);
     return null == a
         ? null
@@ -61,7 +61,7 @@ function I(e) {
                         onSeekRequest: e.onSeekRequest,
                         onContextMenu: e.onContextMenu ?? void 0,
                         maxWidth: e.maxWidth,
-                        maxHeight: e.maxHeight ?? v.Rk,
+                        maxHeight: e.maxHeight ?? S.Rk,
                         showParticipants: e.isSingleMosaicItem,
                         allowFullScreen: e.allowFullScreen,
                         onPlay: e.onPlay ?? void 0,
@@ -86,7 +86,7 @@ function x(e, t) {
         src: i.url,
         placeholder: i.placeholder,
         placeholderVersion: i.placeholder_version,
-        srcIsAnimated: (0, l.Lt)(i.flags ?? 0, S.sbO.IS_ANIMATED),
+        srcIsAnimated: (0, l.Lt)(i.flags ?? 0, v.sbO.IS_ANIMATED),
         sourceMetadata: {
             message: e.message,
             identifier: { type: "attachment", attachmentId: i.id, filename: i.filename, size: i.size },
@@ -104,8 +104,8 @@ function C(e) {
             o = null != a.width && null != a.height && a.height > a.width ? "portrait" : "landscape",
             s = null != a.description && "" !== a.description ? a.description : y.intl.string(y.t.FlNoSV),
             { width: d, height: c } =
-                ((e = t.maxWidth ?? v.k6),
-                (l = t.maxHeight ?? v.Rk),
+                ((e = t.maxWidth ?? S.k6),
+                (l = t.maxHeight ?? S.Rk),
                 (r = e >= 240 && l >= 180),
                 (0, u.Uj)({
                     width: t.width ?? 0,
@@ -149,6 +149,7 @@ function C(e) {
                             hideSkipButtons: !0,
                             compactTimeDisplay: !0,
                             autoHideVolumeSlider: !0,
+                            autoSizeControlBar: !0,
                             withVideoHalo: !0,
                         }),
                         (0, n.jsx)(g._z, {
@@ -208,7 +209,7 @@ function w(e) {
     let t = e.item.originalItem;
     return (0, g._d)({ ...e, url: t.url, fileName: (0, p.A)(t), fileSize: t.size, contentType: t.content_type });
 }
-function M(e) {
+function z(e) {
     let t = e.item.originalItem;
     return (0, g.Dk)({ ...e, url: t.url, fileName: (0, p.A)(t), fileSize: t.size });
 }

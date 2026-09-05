@@ -187,7 +187,7 @@
 .videoFooterContGradient_b824c5 {
     background: linear-gradient(180deg, rgba(7, 7, 9, 0), rgba(7, 7, 9, .5) 27.95%, #070709 64.57%);
     bottom: 0;
-    height: 113px;
+    height: var(--custom-footer-scrim-height, 113px);
     padding: 0;
     pointer-events: none
 }
@@ -205,24 +205,29 @@
 }
 
 .videoControlsGroup_b824c5 {
-    gap: 16px
+    gap: var(--custom-controls-gap, 16px)
 }
 
 .videoControlsGroupMid_b824c5 {
     flex: 1;
     gap: 8px;
-    margin-inline-start: 16px
+    margin-inline-start: var(--custom-controls-gap, 16px)
 }
 
 .videoControlsGroupEnd_b824c5 {
     display: flex;
     justify-content: flex-end;
     margin-inline-start: auto;
-    width: 200px
+    width: var(--custom-controls-end-width, 200px)
 }
 
 .videoControlsBtnCont_b824c5 {
-    border-radius: 4px
+    align-items: center;
+    border-radius: 4px;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    min-width: 24px
 }
 
 .videoControlsBtn_b824c5 {
@@ -1110,4 +1115,4 @@
     white-space: nowrap
 }
 
-/*# sourceMappingURL=434168.2ffc77a6156e34d5.css.map*/
+/*# sourceMappingURL=434168.60cfc551d233fcd2.css.map*/
