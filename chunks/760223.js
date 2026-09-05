@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => e7 });
+n.r(t), n.d(t, { default: () => e5 });
 var l,
     i = n(477900),
     a = n(582128),
@@ -56,6 +56,11 @@ function J(e) {
 var ee = n(58703);
 let et = [
     { date: "2026-09-05", summary: "GPT-6 Astra joins the model picker and now powers the Big Brain effort stop." },
+    {
+        date: "2026-09-05",
+        summary:
+            "The rune panel is simpler now: one Conjuring count covers all the work in a turn, with Compacting listed separately.",
+    },
     {
         date: "2026-09-05",
         summary:
@@ -1621,7 +1626,7 @@ function e3(e) {
         ],
     });
 }
-function e7(e) {
+function e5(e) {
     let t,
         { guildId: n, projectId: l } = e,
         s = (0, c.yK)([Q.Ay], () => Q.Ay.getOwnedProjects()),

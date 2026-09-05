@@ -3037,7 +3037,8 @@ function lW(e) {
 function lV(e) {
     let { project: t } = e,
         l = (0, tR.wU)(t.compaction),
-        a = (0, tR.wV)((0, tR.wV)(t.orchestrator, t.codegen), l);
+        a = (0, tR.wV)(t.orchestrator, t.codegen),
+        r = (0, tR.wV)(a, l);
     return (0, n.jsxs)("div", {
         className: lB.si,
         role: "dialog",
@@ -3061,8 +3062,7 @@ function lV(e) {
                     ],
                 }),
             }),
-            (0, n.jsx)(lW, { label: E.intl.string(S.default.hk4jJr), usage: t.orchestrator }),
-            (0, n.jsx)(lW, { label: E.intl.string(S.default.R9aduM), usage: t.codegen }),
+            (0, n.jsx)(lW, { label: E.intl.string(S.default.R9aduM), usage: a }),
             (0, n.jsx)(lW, { label: E.intl.string(S.default.Tj6b30), usage: l }),
             (0, n.jsxs)("div", {
                 className: lB.mf,
@@ -3075,7 +3075,7 @@ function lV(e) {
                     (0, n.jsx)(p.E, {
                         variant: "text-sm/medium",
                         color: "text-default",
-                        children: 0 === (0, tR.sj)(a) ? "\u2014" : `${Math.round(100 * (0, tR.CA)(a))}%`,
+                        children: 0 === (0, tR.sj)(r) ? "\u2014" : `${Math.round(100 * (0, tR.CA)(r))}%`,
                     }),
                 ],
             }),
