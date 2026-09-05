@@ -131,4 +131,10 @@
     margin: 0 calc(var(--space-8)*-1) calc(var(--space-8)*-1)
 }
 
-/*# sourceMappingURL=8283d14c1e9add7d.css.map*/
+.headerTitle__06b03 {
+    align-items: center;
+    display: flex;
+    gap: var(--space-8)
+}
+
+/*# sourceMappingURL=64dfe7df09dc43d7.css.map*/
