@@ -31,7 +31,7 @@ var s = n(477900),
     k = n(380335),
     y = n(157550),
     P = n(923457),
-    U = n(931374),
+    U = n(36149),
     Q = n(207560);
 let w = (0, n(945810).mj)({
     name: "2026-06-non-friend-messages-requests-in-uk",
@@ -252,10 +252,10 @@ var eB = n(707539),
     e$ = n(903209),
     e0 = n(346055),
     e7 = n(863439),
-    e3 = n(521981),
-    e9 = n(308334),
-    e8 = n(302031),
-    e6 = n(885386),
+    e9 = n(521981),
+    e3 = n(308334),
+    e6 = n(302031),
+    e8 = n(885386),
     e1 = n(576705),
     e2 = n(652215),
     e4 = n(838541),
@@ -273,11 +273,11 @@ let tt = l.memo(function (e) {
             [r],
         ),
         u = (0, o.bG)([e1.A], () => e1.A.can(e2.xBc.MANAGE_MESSAGES, t)),
-        h = e6.gs.useSetting(),
+        h = e8.gs.useSetting(),
         { content: m } = l.useMemo(
             () =>
                 r?.content != null && "" !== r.content
-                    ? (0, e3.Ay)(r, { formatInline: !0, noStyleAndInteraction: !0 })
+                    ? (0, e9.Ay)(r, { formatInline: !0, noStyleAndInteraction: !0 })
                     : { content: null },
             [r],
         ),
@@ -305,7 +305,7 @@ let tt = l.memo(function (e) {
                 children: B.intl.string(B.t.uxrh1O),
             });
         else if (null != r) {
-            let { contentPlaceholder: e, renderedContent: t } = (0, e9.o)(r, m, c, d, a()(e5.BK, te.tZ), {
+            let { contentPlaceholder: e, renderedContent: t } = (0, e3.o)(r, m, c, d, a()(e5.BK, te.tZ), {
                 leadingIconClass: e5.AF,
                 trailingIconClass: e5.AF,
                 iconSize: e4.eJ,
@@ -328,7 +328,7 @@ let tt = l.memo(function (e) {
                 children: B.intl.string(B.t["0KfDxM"]),
             });
     else g = null;
-    return (0, s.jsx)(e8.Bs.Provider, {
+    return (0, s.jsx)(e6.Bs.Provider, {
         value: (0, e7.A)(h, u),
         children: (0, s.jsx)(e0.M, { className: e5.JY, children: g }),
     });

@@ -1,4 +1,4 @@
-n.d(t, { A: () => S });
+n.d(t, { A: () => C });
 var i = n(477900);
 n(582128);
 var r = n(892491),
@@ -27,16 +27,17 @@ let A = (0, u.mj)({
 function h(e) {
     return A.getConfig({ location: e }).enabled;
 }
-var I = n(931374),
+var I = n(36149),
     f = n(462924),
-    p = n(40449);
-function T(e) {
+    p = n(895595),
+    T = n(40449);
+function m(e) {
     if (null != e) return (0, I.Sr)(e) ? r.F.LIGHTBOX : void 0;
 }
-function m(e) {
+function g(e) {
     var t;
     let { entryPoint: r, onClose: s, onComplete: o, onCancel: d, incodeParameters: c } = e,
-        u = (t = c?.method) === p.VF.FACIAL_AGE_ESTIMATION || t === p.VF.ID_VERIFICATION ? c.method : null,
+        u = (t = c?.method) === T.VF.FACIAL_AGE_ESTIMATION || t === T.VF.ID_VERIFICATION ? c.method : null,
         _ =
             null != c && null != u
                 ? {
@@ -77,10 +78,10 @@ function m(e) {
                       })
                     : (0, i.jsx)(e, { pickerMode: !0, entryPoint: r, onComplete: o, onCancel: d, ...t });
         },
-        { modalKey: p.SW, onCloseCallback: s, backdropStyle: T(r), Layer: l.Ay },
+        { modalKey: T.SW, onCloseCallback: s, backdropStyle: m(r), Layer: l.Ay },
     );
 }
-function g(e) {
+function S(e) {
     let {
             onClose: t,
             entryPoint: r,
@@ -90,8 +91,8 @@ function g(e) {
             incodeParameters: c,
             ...u
         } = e,
-        _ = { modalKey: p.SW, onCloseCallback: t, backdropStyle: T(r), Layer: l.Ay };
-    if (d === p.XM.INCODE && h(r))
+        _ = { modalKey: T.SW, onCloseCallback: t, backdropStyle: m(r), Layer: l.Ay };
+    if (d === T.XM.INCODE && h(r))
         return (
             !!(
                 null != c &&
@@ -99,7 +100,7 @@ function g(e) {
                     (e) => "string" == typeof c[e] && c[e].length > 0,
                 )
             ) &&
-            (m({ entryPoint: r, onClose: t, onComplete: u.onComplete, onCancel: u.onCancel, incodeParameters: c }), !0)
+            (g({ entryPoint: r, onClose: t, onComplete: u.onComplete, onCancel: u.onCancel, incodeParameters: c }), !0)
         );
     if (null == o) return !1;
     if (s || E(r)) {
@@ -123,8 +124,17 @@ function g(e) {
         }, _);
     return !0;
 }
-let S = {
-    showAgeVerification: g,
+function N(e, t) {
+    (0, a.openModalLazy)(
+        async () => {
+            let { default: e } = await Promise.all([n.e("164776"), n.e("409609")]).then(n.bind(n, 475376));
+            return (t) => (0, i.jsx)(e, { ...t });
+        },
+        { modalKey: T.NC, backdropStyle: m(e), Layer: l.Ay, onCloseCallback: t },
+    );
+}
+let C = {
+    showAgeVerification: S,
     showAgeVerificationGetStartedModal: function (e) {
         let { onClose: t, entryPoint: r } = e;
         if (h(r)) {
@@ -133,7 +143,7 @@ let S = {
                 s.h.dispatch({ type: "CLOSE_AGE_VERIFICATION_MODAL", status: e });
             }
             s.h.dispatch({ type: "INITIATE_AGE_VERIFICATION" }),
-                m({
+                g({
                     entryPoint: r,
                     onClose: () => {
                         c(), t?.();
@@ -144,18 +154,21 @@ let S = {
             return;
         }
         (0, f.d)(r)
-            ? (0, a.openModalLazy)(
-                  async () => {
-                      let { default: e } = await Promise.all([
-                          n.e("32039"),
-                          n.e("454048"),
-                          n.e("253729"),
-                          n.e("985505"),
-                      ]).then(n.bind(n, 630008));
-                      return (t) => (0, i.jsx)(e, { ...t, entryPoint: r });
-                  },
-                  { modalKey: p.NC, backdropStyle: T(r), Layer: l.Ay, onCloseCallback: t },
-              )
+            ? (async () => {
+                  if (await (0, p.L)(r)) return N(r, t);
+                  (0, a.openModalLazy)(
+                      async () => {
+                          let { default: e } = await Promise.all([
+                              n.e("32039"),
+                              n.e("454048"),
+                              n.e("253729"),
+                              n.e("930375"),
+                          ]).then(n.bind(n, 188602));
+                          return (t) => (0, i.jsx)(e, { ...t, entryPoint: r });
+                      },
+                      { modalKey: T.NC, backdropStyle: m(r), Layer: l.Ay, onCloseCallback: t },
+                  );
+              })()
             : (0, I.Q9)() && (0, o.u0)()
               ? (0, a.openModalLazy)(
                     async () => {
@@ -170,7 +183,7 @@ let S = {
                         ]).then(n.bind(n, 297102));
                         return (t) => (0, i.jsx)(e, { ...t, entryPoint: r });
                     },
-                    { modalKey: p.NC, backdropStyle: T(r), Layer: l.Ay, onCloseCallback: t },
+                    { modalKey: T.NC, backdropStyle: m(r), Layer: l.Ay, onCloseCallback: t },
                 )
               : E(r)
                 ? (0, a.openModalLazy)(
@@ -187,7 +200,7 @@ let S = {
                           ]).then(n.bind(n, 595746));
                           return (t) => (0, i.jsx)(e, { ...t, entryPoint: r });
                       },
-                      { modalKey: p.NC, backdropStyle: T(r), Layer: l.Ay, onCloseCallback: t },
+                      { modalKey: T.NC, backdropStyle: m(r), Layer: l.Ay, onCloseCallback: t },
                   )
                 : (0, a.openModalLazy)(
                       async () => {
@@ -202,13 +215,13 @@ let S = {
                           ]).then(n.bind(n, 654041));
                           return (t) => (0, i.jsx)(e, { ...t, entryPoint: r });
                       },
-                      { modalKey: p.NC, backdropStyle: T(r), Layer: l.Ay, onCloseCallback: t },
+                      { modalKey: T.NC, backdropStyle: m(r), Layer: l.Ay, onCloseCallback: t },
                   );
     },
     showManualReviewWebview: function (e) {
-        return g({
+        return S({
             webviewUrl: e,
-            verificationVendorName: p.XM.K_ID,
+            verificationVendorName: T.XM.K_ID,
             entryPoint: c.q1.SYSTEM_DM_MANUAL_REVIEW,
             onComplete: () => {},
         });
@@ -219,6 +232,7 @@ let S = {
             return (t) => (0, i.jsx)(e, { ...t });
         });
     },
+    showManualReviewFallbackModal: N,
     openUrl: function (e) {
         window.open(e, "_blank");
     },
