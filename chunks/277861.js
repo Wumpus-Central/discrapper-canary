@@ -1,35 +1,47 @@
-n.d(t, { Vq: () => h, a6: () => A });
+n.d(t, { Vq: () => p, a6: () => f });
 var i = n(636537),
     r = n(381689),
-    a = n(927813),
-    s = n(379257),
-    l = n(652215),
-    o = n(835002);
-let d = a.A.Millis.MINUTE;
-async function c() {
-    return (await i.Bo.post({ url: l.Rsh.AGE_VERIFICATION_MANUAL_REVIEW, rejectWithError: !0 })).body;
+    a = n(393033),
+    s = n(280450),
+    l = n(927813),
+    o = n(379257),
+    d = n(652215),
+    c = n(835002);
+let u = l.A.Millis.MINUTE;
+async function _() {
+    return (await i.Bo.post({ url: d.Rsh.AGE_VERIFICATION_MANUAL_REVIEW, rejectWithError: !0 })).body;
 }
-let u = !1,
-    _ = null,
-    E = 0;
-function A() {
-    _ = null;
+async function E() {
+    let e = s.default.getSuspendedUserToken();
+    return (
+        await i.Bo.post({
+            url: d.Rsh.AGE_VERIFICATION_SUSPENDED_MANUAL_REVIEW,
+            body: { token: e },
+            rejectWithError: !0,
+        })
+    ).body;
 }
-async function h() {
-    if (!u) {
-        u = !0;
+let A = !1,
+    h = null,
+    I = 0;
+function f() {
+    h = null;
+}
+async function p() {
+    if (!A) {
+        A = !0;
         try {
-            let e = _;
+            let e = h;
             if (
-                ((null == e || Date.now() - E >= d) && ((_ = e = await c()), (E = Date.now())),
+                ((null == e || Date.now() - I >= u) && ((h = e = await ((0, a.qn)() ? E() : _())), (I = Date.now())),
                 "decided_teen" === e.status)
             )
-                return void s.A.showManualReviewDecidedTeenModal();
-            s.A.showManualReviewWebview(e.verification_webview_url);
+                return void o.A.showManualReviewDecidedTeenModal();
+            o.A.showManualReviewWebview(e.verification_webview_url);
         } catch {
-            r.A.showFailedToast(o.OB.TIGGER_PAWTECT_ERROR);
+            r.A.showFailedToast(c.OB.TIGGER_PAWTECT_ERROR);
         } finally {
-            u = !1;
+            A = !1;
         }
     }
 }
