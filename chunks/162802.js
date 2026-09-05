@@ -12,8 +12,8 @@ var r = n(477900),
     m = n(851907),
     h = n(435558),
     E = n(17928),
-    A = n(192308),
-    p = n(267102),
+    p = n(192308),
+    A = n(267102),
     x = n(186111),
     j = n(712687),
     O = n(652215),
@@ -90,6 +90,7 @@ function C(e) {
         align: "top",
         appContext: (0, w.cH)(n),
         positionKey: `${s},${o}`,
+        clickTrap: !0,
         onRequestClose: () => (0, S.OR)(t.iframeId),
         children: () => (0, r.jsx)("span", { ref: i, className: y.Y, style: { left: s, top: o } }),
     });
@@ -118,7 +119,7 @@ function k(e) {
             let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : window,
                 r = (0, E.bG)([I.Ay], () => I.Ay.keyboardModeEnabled),
                 i = (function () {
-                    let e = (0, A.useModalsStore)(
+                    let e = (0, p.useModalsStore)(
                             (e) =>
                                 !Object.entries(e).every((e) => {
                                     let [t, n] = e;
@@ -128,7 +129,7 @@ function k(e) {
                         t = (0, E.bG)([j.A], () => j.A.isOpen()),
                         n = (0, E.bG)([x.A], () => x.A.hasLayers()),
                         [r, i] = l.useState(!1),
-                        u = (0, p.aL)();
+                        u = (0, A.aL)();
                     return (
                         l.useEffect(() => {
                             function e() {
@@ -149,7 +150,7 @@ function k(e) {
                     );
                 })(),
                 [u, a] = l.useState(!1),
-                s = (0, p.aL)();
+                s = (0, A.aL)();
             return (
                 l.useEffect(() => {
                     if (t) return n.addEventListener("blur", e), () => n.removeEventListener("blur", e);
