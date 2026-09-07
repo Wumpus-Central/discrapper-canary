@@ -12,20 +12,20 @@ var r = n(477900),
     m = n(162802),
     h = n(709066),
     E = n(681827),
-    A = n(981355),
-    p = n(240248),
+    p = n(981355),
+    A = n(240248),
     x = n(969508),
     j = n(705751),
     O = n(375708),
     I = n(589478);
-let N = (0, p.xI)(i.A.INTERACTION_IFRAME_MODAL_MODAL_MIN_WIDTH),
-    M = (0, p.xI)(i.A.INTERACTION_IFRAME_MODAL_MODAL_MAX_WIDTH),
-    _ = (0, p.xI)(i.A.INTERACTION_IFRAME_MODAL_MODAL_MARGIN),
-    v = (0, p.xI)(i.A.INTERACTION_IFRAME_MODAL_MODAL_HEADER_HEIGHT);
+let N = (0, A.xI)(i.A.INTERACTION_IFRAME_MODAL_MODAL_MIN_WIDTH),
+    M = (0, A.xI)(i.A.INTERACTION_IFRAME_MODAL_MODAL_MAX_WIDTH),
+    _ = (0, A.xI)(i.A.INTERACTION_IFRAME_MODAL_MODAL_MARGIN),
+    v = (0, A.xI)(i.A.INTERACTION_IFRAME_MODAL_MODAL_HEADER_HEIGHT);
 function R(e) {
     let { title: t, onClose: n } = e,
-        { applicationIconURL: i, applicationName: p, queryParams: R, iframeUrl: b } = (0, x.aV)(e),
-        { width: L, height: T } = (0, A.A)(),
+        { applicationIconURL: i, applicationName: A, queryParams: R, iframeUrl: b } = (0, x.aV)(e),
+        { width: L, height: T } = (0, p.A)(),
         w = l.useMemo(() => {
             let e = Math.min(((T - v - 2 * _) * 16) / 9, M);
             return Math.max(N, Math.min(L - 2 * _, e));
@@ -44,13 +44,13 @@ function R(e) {
                     className: I.Hc,
                     "data-migration-pending": !0,
                     children: [
-                        (0, r.jsx)(s.eu, { src: i, size: o._3.SIZE_32, "aria-label": p, className: I.In }),
+                        (0, r.jsx)(s.eu, { src: i, size: o._3.SIZE_32, "aria-label": A, className: I.In }),
                         (0, r.jsxs)("div", {
                             className: I.Wh,
                             children: [
                                 (0, r.jsxs)("div", {
                                     children: [
-                                        (0, r.jsx)(c.D, { variant: "heading-sm/bold", children: p }),
+                                        (0, r.jsx)(c.D, { variant: "heading-sm/bold", children: A }),
                                         (0, r.jsx)(d.E, {
                                             variant: "text-xs/medium",
                                             color: "interactive-text-default",

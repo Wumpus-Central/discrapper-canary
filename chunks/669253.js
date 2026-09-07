@@ -5,35 +5,35 @@ var i = n(477900),
     r = n.n(s),
     a = n(17928),
     o = n(425763),
-    d = n(447453),
-    u = n(280450),
-    c = n(591179),
+    c = n(447453),
+    d = n(280450),
+    u = n(591179),
     g = n(993165),
     m = n(403581),
-    f = n(783420),
-    x = n(206697),
+    x = n(783420),
+    f = n(206697),
     h = n(874402),
-    I = n(570002),
-    p = n(202541),
-    A = n(375708);
-function j() {
+    p = n(570002),
+    I = n(202541),
+    j = n(375708);
+function A() {
     let e = (0, g.YW)(),
         { goBack: t } = (0, g.pA)(),
-        n = (0, I.A)(A.intl.string(A.t.pj0XBN));
-    return (0, i.jsx)(f.A, {
-        subscriptionTier: p.pe.TIER_2,
+        n = (0, p.A)(j.intl.string(j.t.pj0XBN));
+    return (0, i.jsx)(x.A, {
+        subscriptionTier: I.pe.TIER_2,
         onSubscribeModalClose: (e) => {
-            e && (0, x.T)();
+            e && (0, f.T)();
         },
         children: (l) => {
             let { onClick: s } = l;
             return (0, i.jsx)(h.$, {
                 isVisible: e,
                 labelId: "premium-try-it-out-footer-bar-label",
-                noticeText: A.intl.string(A.t.X0ir7L),
-                a11yAnnounceOnShow: A.intl.string(A.t.X0ir7L),
-                a11yAnnounceOnHide: A.intl.string(A.t.ZcyFYa),
-                secondaryAction: { text: A.intl.string(A.t.V3S9WW), onClick: t },
+                noticeText: j.intl.string(j.t.X0ir7L),
+                a11yAnnounceOnShow: j.intl.string(j.t.X0ir7L),
+                a11yAnnounceOnHide: j.intl.string(j.t.ZcyFYa),
+                secondaryAction: { text: j.intl.string(j.t.V3S9WW), onClick: t },
                 primaryAction: { text: n, onClick: s, icon: m.t, variant: "expressive" },
             });
         },
@@ -44,17 +44,17 @@ var E = n(803306),
     S = n(682618),
     C = n(636537),
     b = n(228366),
-    k = n(38405),
-    T = n(652215);
+    T = n(38405),
+    k = n(652215);
 async function N(e) {
     let { displayOrder: t, hiddenBadges: n } = e,
         i = { ...(null != t ? { display_order: t } : {}), ...(null != n ? { hidden_badges: n } : {}) };
     if (0 === Object.keys(i).length) return !0;
     try {
-        let e = await C.Bo.patch({ url: T.Rsh.USER_BADGE_SETTINGS, body: i, rejectWithError: !0 });
+        let e = await C.Bo.patch({ url: k.Rsh.USER_BADGE_SETTINGS, body: i, rejectWithError: !0 });
         return b.h.dispatch({ type: "BADGE_SETTINGS_UPDATE", settings: e.body }), !0;
     } catch (e) {
-        return k.A.captureException(e), !1;
+        return T.A.captureException(e), !1;
     }
 }
 var y = n(234e3),
@@ -68,50 +68,50 @@ var y = n(234e3),
     M = n(289173),
     G = n(836602),
     U = n(958805),
-    W = n(61881),
-    F = n(624826),
+    F = n(61881),
+    W = n(624826),
     H = n(384377),
-    B = n(518477);
-function V(e) {
+    V = n(518477);
+function B(e) {
     let { guildId: t } = e,
         { trackUserProfileEditSaved: n } = (0, D.NJ)(),
         [s, r] = l.useState(!1),
-        [o, d] = l.useState(!1),
+        [o, c] = l.useState(!1),
         {
-            widgetsToSave: u,
+            widgetsToSave: d,
             changedWidgets: g,
             removedWidgets: m,
-            hasUnsavedWidgets: f,
-            canSaveWidgets: x,
+            hasUnsavedWidgets: x,
+            canSaveWidgets: f,
         } = (function () {
-            let e = (0, a.yK)([W.A], () => W.A.getSaveablePendingWidgets() ?? []),
-                t = (0, a.yK)([W.A], () => W.A.getChangedWidgets()),
-                n = (0, a.yK)([W.A], () => W.A.getRemovedWidgets()),
-                { hasUnsavedWidgets: i, canSaveWidgets: l } = (0, a.cf)([W.A], () => ({
-                    hasUnsavedWidgets: W.A.hasUnsavedChanges(),
-                    canSaveWidgets: W.A.canSaveChanges(),
+            let e = (0, a.yK)([F.A], () => F.A.getSaveablePendingWidgets() ?? []),
+                t = (0, a.yK)([F.A], () => F.A.getChangedWidgets()),
+                n = (0, a.yK)([F.A], () => F.A.getRemovedWidgets()),
+                { hasUnsavedWidgets: i, canSaveWidgets: l } = (0, a.cf)([F.A], () => ({
+                    hasUnsavedWidgets: F.A.hasUnsavedChanges(),
+                    canSaveWidgets: F.A.canSaveChanges(),
                 }));
             return { widgetsToSave: e, changedWidgets: t, removedWidgets: n, hasUnsavedWidgets: i, canSaveWidgets: l };
         })(),
-        I = (0, c.X)("UserProfileModalV2SaveBar"),
+        p = (0, u.X)("UserProfileModalV2SaveBar"),
         {
-            hasUnsavedProfileChanges: p,
-            canSubmitProfileChanges: j,
+            hasUnsavedProfileChanges: I,
+            canSubmitProfileChanges: A,
             hasBadgeChangesToSave: C,
         } = (0, a.cf)([G.A], () => ({
             hasUnsavedProfileChanges: G.A.hasUnsavedChanges(),
             canSubmitProfileChanges: G.A.canSubmit(),
             hasBadgeChangesToSave: (0, y.gz)(G.A.getPendingChanges()),
         })),
-        b = I && p,
-        k = f || b || C,
-        V = !(f && !x) && (!I || j),
+        b = p && I,
+        T = x || b || C,
+        B = !(x && !f) && (!p || A),
         z = l.useCallback(() => {
-            U.A.clearPendingWidgets(), I ? (0, P.XQ)() : C && (0, y.Jp)();
-        }, [I, C]),
+            U.A.clearPendingWidgets(), p ? (0, P.XQ)() : C && (0, y.Jp)();
+        }, [p, C]),
         K = l.useCallback(async () => {
-            if (I && !G.A.canSubmit()) return;
-            d(!0);
+            if (p && !G.A.canSubmit()) return;
+            c(!0);
             let e = !0;
             if (C) {
                 let t = G.A.getPendingChanges(),
@@ -133,7 +133,7 @@ function V(e) {
                             (e = e && (i?.ok ?? !1)),
                                 i?.ok &&
                                     (void 0 !== t.pendingAvatar &&
-                                        (0, F.t)({
+                                        (0, W.t)({
                                             avatarHash: i.body.avatar,
                                             avatarId: n.avatarId,
                                             avatarAssetOrigin: t.pendingAvatar?.assetOrigin,
@@ -154,7 +154,7 @@ function V(e) {
                             (e = e && (l?.ok ?? !1)),
                                 l?.ok &&
                                     (void 0 !== n.pendingAvatar &&
-                                        (0, F.t)({
+                                        (0, W.t)({
                                             isGuildProfile: !0,
                                             avatarHash: l.body.avatar,
                                             avatarId: i.avatarId,
@@ -179,9 +179,9 @@ function V(e) {
                 } catch {
                     e = !1;
                 }
-            if (f)
+            if (x)
                 try {
-                    for (let e of (await U.A.savePendingWidgets(u), g)) {
+                    for (let e of (await U.A.savePendingWidgets(d), g)) {
                         let t = { widgetEdited: e.type, isWidgetRemoved: !1 };
                         (0, M.fu)(e) &&
                             ((t.gameIds = e.games.map((e) => e.gameId)),
@@ -193,8 +193,8 @@ function V(e) {
                 } catch {
                     e = !1;
                 }
-            e ? (0, v.x8)() : (0, H.XA)(B.jM.PROFILE_SAVE_GENERIC_FAILURE), d(!1);
-        }, [I, b, C, f, u, g, m, n, t]);
+            e ? (0, v.x8)() : (0, H.XA)(V.jM.PROFILE_SAVE_GENERIC_FAILURE), c(!1);
+        }, [p, b, C, x, d, g, m, n, t]);
     return (
         l.useEffect(() => {
             let e = null;
@@ -206,53 +206,53 @@ function V(e) {
                     }, 2500));
             }
             return (
-                L._.subscribe(T.jej.EMPHASIZE_NOTICE, t),
+                L._.subscribe(k.jej.EMPHASIZE_NOTICE, t),
                 () => {
-                    L._.unsubscribe(T.jej.EMPHASIZE_NOTICE, t), null != e && clearTimeout(e);
+                    L._.unsubscribe(k.jej.EMPHASIZE_NOTICE, t), null != e && clearTimeout(e);
                 }
             );
         }, []),
         (0, i.jsx)(h.$, {
             preventsPopoutDismiss: !0,
-            isVisible: k,
+            isVisible: T,
             labelId: "user-profile-save-reset-toolbar-label",
-            noticeText: A.intl.string(A.t["/lQiX/"]),
+            noticeText: j.intl.string(j.t["/lQiX/"]),
             isEmphasized: s,
-            a11yAnnounceOnShow: A.intl.string(A.t["0Y/qkL"]),
-            secondaryAction: { text: A.intl.string(A.t.yBZMsQ), onClick: z, disabled: !k || o },
-            primaryAction: { text: A.intl.string(A.t["R3BPH+"]), onClick: K, loading: o, disabled: !V || !k },
+            a11yAnnounceOnShow: j.intl.string(j.t["0Y/qkL"]),
+            secondaryAction: { text: j.intl.string(j.t.yBZMsQ), onClick: z, disabled: !T || o },
+            primaryAction: { text: j.intl.string(j.t["R3BPH+"]), onClick: K, loading: o, disabled: !B || !T },
         })
     );
 }
 var z = n(485745),
     K = n(893757);
 function Y() {
-    let e = !(0, c.X)("useEditingFooterState"),
+    let e = !(0, u.X)("useEditingFooterState"),
         t = (0, o.VU)(),
         n = (0, z.A)(e),
         i = (0, g.YW)();
     return t ? "dnd" : i ? "premium-try-it-out" : n ? "save" : null;
 }
 function X(e) {
-    let t = (0, a.bG)([u.default], () => u.default.getId() === e),
+    let t = (0, a.bG)([d.default], () => d.default.getId() === e),
         n = Y();
     return t && null != n;
 }
 function q(e) {
     let { userId: t, guildId: n, className: s } = e,
-        o = (0, a.bG)([u.default], () => u.default.getId() === t),
-        c = Y(),
-        [g, m] = l.useState(c);
-    return (null != c && g !== c && m(c), o)
+        o = (0, a.bG)([d.default], () => d.default.getId() === t),
+        u = Y(),
+        [g, m] = l.useState(u);
+    return (null != u && g !== u && m(u), o)
         ? (0, i.jsx)("div", {
               className: r()(K.k, s),
               children:
                   "dnd" === g
-                      ? (0, i.jsx)(d.S, { className: K.W })
+                      ? (0, i.jsx)(c.S, { className: K.W })
                       : "premium-try-it-out" === g
-                        ? (0, i.jsx)(j, {})
+                        ? (0, i.jsx)(A, {})
                         : "save" === g
-                          ? (0, i.jsx)(V, { guildId: n })
+                          ? (0, i.jsx)(B, { guildId: n })
                           : null,
           })
         : null;

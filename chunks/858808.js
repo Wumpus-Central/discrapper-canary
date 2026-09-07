@@ -1,4 +1,4 @@
-n.d(t, { A: () => c });
+n.d(t, { A: () => u });
 var i = n(477900);
 n(582128);
 var l = n(765178),
@@ -6,25 +6,25 @@ var l = n(765178),
     r = n(408278),
     a = n(241326),
     o = n(183555),
-    d = n(735321),
-    u = n(375708);
-function c(e) {
-    let { game: t, widgetType: n, className: c, onRemove: g } = e,
+    c = n(735321),
+    d = n(375708);
+function u(e) {
+    let { game: t, widgetType: n, className: u, onRemove: g } = e,
         { trackUserProfileEditAction: m } = (0, o.NJ)(),
-        f = u.intl.string(u.t.HUvyDc);
+        x = d.intl.string(d.t.HUvyDc);
     return (0, i.jsx)("div", {
-        className: c,
+        className: u,
         children: (0, i.jsx)(s.m, {
-            text: f,
+            text: x,
             ariaHidden: !0,
             children: (0, i.jsx)(r.K, {
-                "aria-label": f,
+                "aria-label": x,
                 icon: a.TrashIcon,
                 size: "sm",
                 variant: "overlay-secondary",
                 onClick: function () {
-                    (0, d.ef)(n, t.gameId),
-                        l.O.announce(u.intl.string(u.t["08HmMj"])),
+                    (0, c.ef)(n, t.gameId),
+                        l.O.announce(d.intl.string(d.t["08HmMj"])),
                         m({ action: "GAME_REMOVED", gameId: t.gameId, widgetEdited: n }),
                         g?.();
                 },

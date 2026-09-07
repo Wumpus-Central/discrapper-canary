@@ -1,4 +1,4 @@
-n.d(t, { B4: () => o, C6: () => m, CT: () => h, GO: () => r, Lf: () => f, SY: () => d, WQ: () => s, lt: () => g }),
+n.d(t, { B4: () => o, C6: () => m, CT: () => g, GO: () => r, Lf: () => h, SY: () => d, WQ: () => s, lt: () => f }),
     n(321073),
     n(134528),
     n(947204);
@@ -117,9 +117,9 @@ function r(e) {
                 null != n.message && "" !== n.message && (l.detail = [n.message]);
         }
     }
-    let h = [...a.values()];
-    for (let e of h) n || "running" !== e.task.status || (e.task.status = "incomplete");
-    return { steps: l, tasks: h, ...(null != t ? { turn: t } : {}) };
+    let g = [...a.values()];
+    for (let e of g) n || "running" !== e.task.status || (e.task.status = "incomplete");
+    return { steps: l, tasks: g, ...(null != t ? { turn: t } : {}) };
 }
 function d(e) {
     let t;
@@ -216,14 +216,14 @@ function m(e) {
     }
     return o;
 }
-function h(e, t) {
+function g(e, t) {
     let { turnActive: n } = t,
         l = e.filter((e) => e.hasWork || e.hasTodos).at(-1)?.index,
         a = e.at(-1)?.index,
         i = n && null != l && l === a ? l : void 0;
     return { ...(null != l ? { lastWork: l } : {}), ...(null != i ? { open: i } : {}) };
 }
-function f(e) {
+function h(e) {
     for (let t = e.length - 1; t >= 0; t--) {
         let n = e[t];
         if (null != n) {
@@ -233,7 +233,7 @@ function f(e) {
     }
     return !1;
 }
-function g(e) {
+function f(e) {
     for (let t = e.length - 1; t >= 0; t--) {
         let n = e[t];
         if (n?.kind === "todos" && (null == n.task_id || "" === n.task_id) && null != n.items && n.items.length > 0)

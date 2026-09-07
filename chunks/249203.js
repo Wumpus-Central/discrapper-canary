@@ -1,35 +1,35 @@
-n.d(t, { A: () => a });
-var i = n(17928),
-    l = n(228366);
-let s = {};
-class r extends i.Ay.PersistedStore {
+l.d(e, { A: () => u });
+var i = l(17928),
+    n = l(228366);
+let r = {};
+class s extends i.Ay.PersistedStore {
     static displayName = "ProfileReadStateStore";
     static persistKey = "ProfileReadStateStore";
-    initialize(e) {
-        s = { ...(e?.entries ?? {}) };
+    initialize(t) {
+        r = { ...(t?.entries ?? {}) };
     }
     getState() {
-        return { entries: { ...s } };
+        return { entries: { ...r } };
     }
-    getEntry(e) {
-        return s[e] ?? null;
+    getEntry(t) {
+        return r[t] ?? null;
     }
 }
-let a = new r(l.h, {
-    PROFILE_READ_STATE_ACK_WISHLIST: function (e) {
-        let t,
-            { userId: n, wishlistUpdatedAt: i } = e,
-            l = s[n],
-            r = l?.ackedWishlistUpdatedAt != null && l.ackedWishlistUpdatedAt >= i;
-        null == (t = s[n]) &&
+let u = new s(n.h, {
+    PROFILE_READ_STATE_ACK_WISHLIST: function (t) {
+        let e,
+            { userId: l, wishlistUpdatedAt: i } = t,
+            n = r[l],
+            s = n?.ackedWishlistUpdatedAt != null && n.ackedWishlistUpdatedAt >= i;
+        null == (e = r[l]) &&
             (function () {
-                let e = Object.keys(s);
-                if (e.length < 500) return;
-                let t = e.sort((e, t) => s[e].lastViewedAt - s[t].lastViewedAt).slice(e.length - 499),
-                    n = {};
-                for (let e of t) n[e] = s[e];
-                s = n;
+                let t = Object.keys(r);
+                if (t.length < 500) return;
+                let e = t.sort((t, e) => r[t].lastViewedAt - r[e].lastViewedAt).slice(t.length - 499),
+                    l = {};
+                for (let t of e) l[t] = r[t];
+                r = l;
             })(),
-            (s = { ...s, [n]: { ...t, ...(r ? {} : { ackedWishlistUpdatedAt: i }), lastViewedAt: Date.now() } });
+            (r = { ...r, [l]: { ...e, ...(s ? {} : { ackedWishlistUpdatedAt: i }), lastViewedAt: Date.now() } });
     },
 });

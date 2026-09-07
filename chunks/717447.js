@@ -16,9 +16,9 @@ function c(e) {
         : (t.tasks.find((e) => null != e.task.groupLabel)?.task.groupLabel ?? u.intl.string(d.default.nv6pUM));
 }
 function m(e) {
-    let { projectId: t, steps: n, fallbackLabel: c, live: m, durationMs: h, connectsDown: f = !1, closed: g = !1 } = e,
+    let { projectId: t, steps: n, fallbackLabel: c, live: m, durationMs: g, connectsDown: h = !1, closed: f = !1 } = e,
         x = (0, a.SY)(n),
-        p = m ? void 0 : h,
+        p = m ? void 0 : g,
         k =
             null != p
                 ? (function (e) {
@@ -41,8 +41,8 @@ function m(e) {
         line: k,
         anchor: !0,
         live: m,
-        settled: null != p || (!m && g),
-        connectsDown: f,
+        settled: null != p || (!m && f),
+        connectsDown: h,
         detail: v
             ? (0, l.jsx)("ol", {
                   className: o.dO,

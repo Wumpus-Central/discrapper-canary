@@ -10,7 +10,7 @@ var l = n(477900),
     c = n(375068);
 function m(e) {
     let { projectId: t, attachments: n } = e,
-        i = n.filter(h),
+        i = n.filter(g),
         [s, r] = a.useState(() => new Set()),
         d = a.useCallback((e) => {
             r((t) => (t.has(e) ? t : new Set(t).add(e)));
@@ -19,8 +19,8 @@ function m(e) {
         className: c.KT,
         children: n.map((e, n) =>
             null == e.id
-                ? (0, l.jsx)(f, { name: e.name }, n)
-                : h(e)
+                ? (0, l.jsx)(h, { name: e.name }, n)
+                : g(e)
                   ? (0, l.jsx)(
                         x,
                         {
@@ -32,19 +32,19 @@ function m(e) {
                         },
                         n,
                     )
-                  : (0, l.jsx)(g, { projectId: t, id: e.id, name: e.name }, n),
+                  : (0, l.jsx)(f, { projectId: t, id: e.id, name: e.name }, n),
         ),
     });
 }
-function h(e) {
+function g(e) {
     return null != e.id && s.Wb.has(e.content_type);
 }
-function f(e) {
+function h(e) {
     let { name: t, unavailable: n = !1 } = e,
         a = n ? o.intl.formatToPlainString(u.default.OBr7WW, { name: t }) : t;
     return (0, l.jsx)(d.p, { name: a, compact: !0 });
 }
-function g(e) {
+function f(e) {
     let { projectId: t, id: n, name: i } = e,
         [s, c] = a.useState(!1),
         m = a.useCallback(() => {
@@ -60,7 +60,7 @@ function g(e) {
                 .catch(() => {});
         }, [t, n]);
     return s
-        ? (0, l.jsx)(f, { name: i, unavailable: !0 })
+        ? (0, l.jsx)(h, { name: i, unavailable: !0 })
         : (0, l.jsx)(d.n, {
               name: i,
               thumbSrc: null,
@@ -70,14 +70,14 @@ function g(e) {
 }
 function x(e) {
     let { projectId: t, viewableImages: n, viewerIndex: s, unavailableIds: c, markUnavailable: m } = e,
-        { id: h, name: g } = n[s],
+        { id: g, name: f } = n[s],
         [x, p] = a.useState(null),
-        k = c.has(h),
+        k = c.has(g),
         [v, j] = a.useState(0);
     a.useEffect(() => {
         let e = !1;
         return (
-            (0, r.PK)(t, h).then(
+            (0, r.PK)(t, g).then(
                 (t) => {
                     e || p(t);
                 },
@@ -87,7 +87,7 @@ function x(e) {
                 e = !0;
             }
         );
-    }, [t, h, v]);
+    }, [t, g, v]);
     let b = a.useCallback(() => {
         Promise.all(
             n.map(async (e) => (c.has(e.id) ? null : { type: "IMAGE", url: await (0, r.PK)(t, e.id), alt: e.name })),
@@ -105,17 +105,17 @@ function x(e) {
         );
     }, [t, n, s, c]);
     return k
-        ? (0, l.jsx)(f, { name: g, unavailable: !0 })
+        ? (0, l.jsx)(h, { name: f, unavailable: !0 })
         : (0, l.jsx)(d.n, {
-              name: g,
+              name: f,
               thumbSrc: x,
-              ariaLabel: o.intl.formatToPlainString(u.default.QUFLUq, { name: g }),
+              ariaLabel: o.intl.formatToPlainString(u.default.QUFLUq, { name: f }),
               onClick: b,
               onThumbError: () => {
                   p(null),
-                      (0, r.n6)(t, h).then(
+                      (0, r.n6)(t, g).then(
                           (e) => {
-                              e ? 0 === v && j(1) : m(h);
+                              e ? 0 === v && j(1) : m(g);
                           },
                           () => {},
                       );

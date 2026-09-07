@@ -1,4 +1,4 @@
-n.d(t, { n: () => h, p: () => m });
+n.d(t, { n: () => g, p: () => m });
 var l = n(477900);
 n(582128);
 var a = n(503698),
@@ -31,7 +31,7 @@ function c(e) {
 function m(e) {
     return (0, l.jsx)("div", { className: o(e.compact ?? !1), children: c(e) });
 }
-function h(e) {
+function g(e) {
     let { name: t, thumbSrc: n, ariaLabel: a, onClick: s, onThumbError: r } = e;
     return (0, l.jsx)(d.D, {
         className: i()(o(!0), u.w8),

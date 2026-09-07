@@ -1,6 +1,6 @@
-E.d(t, { A: () => n });
-var _ = E(17928),
-    i = E(207913);
-function n() {
-    return (0, _.bG)([i.A], () => i.A.isFetching());
+_.d(t, { A: () => a });
+var E = _(17928),
+    i = _(207913);
+function a() {
+    return (0, E.bG)([i.A], () => i.A.isFetching());
 }
