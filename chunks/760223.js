@@ -58,6 +58,11 @@ let et = [
     {
         date: "2026-09-06",
         summary:
+            "Every build step now shows its progress behind the curtain \u2014 what is syncing, installing, bundling, packing, checking, and publishing \u2014 instead of one silent line.",
+    },
+    {
+        date: "2026-09-06",
+        summary:
             "Collaborators on an app shared with their server can now remix it into a copy of their own, with no need for the owner to turn sharing on first.",
     },
     {

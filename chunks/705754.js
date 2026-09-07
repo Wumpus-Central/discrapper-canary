@@ -5,9 +5,9 @@ var a = n(834730),
     i = n(13699);
 let s = /^(.*?)\s*\((\+\d+)?[\s,]*([\u2212-]\d+)?\)$/,
     r =
-        /^(.*?)\s*\((\d+ lines?|\d+ match(?:es)?|no matches|\d+ files?|empty|no logs yet|\d+ not found(?:, \d+ read-only)?|\d+ read-only|\d+KB|\d+ steps?|started|done|\d+\xd7\d+(?: @\d+(?:\.\d+)?x| narrow)?|(?:low|medium|high), (?:\d+x\d+|auto)(?:, transparent)?(?:, from \d+ source images?)?)\)$/,
+        /^(.*?)\s*\((\d+ lines?|\d+ match(?:es)?|no matches|\d+ files?|empty|no logs yet|\d+ not found(?:, \d+ read-only)?|\d+ read-only|\d+KB|\d+ steps?|started|done|\d+\xd7\d+(?: @\d+(?:\.\d+)?x| narrow)?|(?:low|medium|high), (?:\d+x\d+|auto)(?:, transparent)?(?:, from \d+ source images?)?|\d+\/\d+ files|\d+ files?, (?:no changes|\d+ uploaded, \d+ reused, \d+ inlined)|\d+ packages?(?:, no changes)?|no changes|[0-9a-f]{7}(?:, \d+ files)?|\d+(?:\.\d+)?s|\d+ ms|\d+(?:\.\d+)? [KMG]?i?B(?:, \d+(?:\.\d+)? [KMG]?i?B gzipped)?|\d+ lines?, no errors|status \d+)\)$/,
     d =
-        /^(Reading|Writing|Editing|Listing|Searching|Deleting|Running|Downloading|Saving|Sending|Importing|Imported|Building|Generating|Viewing|Loaded|Updating|Registering|Collecting|Clicking|Right-clicking|Double-clicking|Dragging|Typing|Pressing|Hovering|Scrolling|Selecting|Waiting|Navigating|Going|Reloading|Capturing|Checking|Setting|Answering|Delegating|Driving|Working|TODO)(?= )/,
+        /^(Reading|Writing|Editing|Listing|Searching|Deleting|Running|Downloading|Saving|Sending|Importing|Imported|Building|Generating|Viewing|Loaded|Updating|Registering|Collecting|Clicking|Right-clicking|Double-clicking|Dragging|Typing|Pressing|Hovering|Scrolling|Selecting|Waiting|Navigating|Going|Reloading|Capturing|Checking|Setting|Answering|Delegating|Driving|Working|Saved|Syncing|Synced|Resolving|Resolved|Installing|Installed|Fetching|Verifying|Vendoring|Ran|Skipping|Bundling|Bundled|Packing|Packed|Sealed|Pinging|Answered|Loading|Watching|Watched|Deferring|Deferred|Switching|Publishing|Published|Serving|TODO)(?= )/,
     u = {
         "text-xs/normal": "text-xs/semibold",
         "text-sm/normal": "text-sm/semibold",
