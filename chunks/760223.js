@@ -57,6 +57,11 @@ let ee = [
     {
         date: "2026-09-12",
         summary:
+            "While you preview an app, every notification it sends arrives as a DM to you, naming anyone it concerns, so nothing you test posts to a channel or messages anyone else.",
+    },
+    {
+        date: "2026-09-12",
+        summary:
             "Plans for an app you imported or remixed no longer invent a wireframe sketch: the sketch is reserved for brand-new apps that have no screens yet.",
     },
     {
