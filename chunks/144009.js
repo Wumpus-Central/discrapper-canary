@@ -1,7 +1,7 @@
 n.d(t, { a: () => R });
-var i = n(636537),
-    r = n(306173),
-    a = n(913122),
+var i = n(306173),
+    r = n(913122),
+    a = n(636537),
     s = n(626584),
     l = n(544576),
     o = n(453771),
@@ -9,15 +9,15 @@ var i = n(636537),
     c = n(652215);
 let u = new s.A("uploadRtcLogFiles");
 async function _(e, t, n) {
-    let r;
-    if (null == d.A.fileManager.readLogFiles) throw new a._(a.ct.GENERAL);
+    let i;
+    if (null == d.A.fileManager.readLogFiles) throw new r._(r.ct.GENERAL);
     let s = [];
     try {
         s = (s = await d.A.fileManager.readLogFiles(e, t)).map((e) => (0, o.ww)(e, "application/octet-stream"));
     } catch (e) {
-        throw (u.error(`uploadDebugFiles: read error '${e}'`), new a._(a.ct.READ));
+        throw (u.error(`uploadDebugFiles: read error '${e}'`), new r._(r.ct.READ));
     }
-    if (0 === s.length) throw new a._(a.ct.NO_FILE);
+    if (0 === s.length) throw new r._(r.ct.NO_FILE);
     let _ = { extraInfo: n, mediaEngineState: l.Ay.getState() },
         E = [
             ...s.map((e) => ({ name: e.name, file: e, filename: e.name })),
@@ -29,7 +29,7 @@ async function _(e, t, n) {
         ],
         A = new Set();
     try {
-        r = await i.Bo.post({
+        i = await a.Bo.post({
             url: c.Rsh.DEBUG_LOGS(c.Umv.RTC),
             attachments: [
                 ...E.map((e) => {
@@ -48,23 +48,23 @@ async function _(e, t, n) {
             rejectWithError: !1,
         });
     } catch (e) {
-        if (429 === e.status) throw new a._(a.ct.PROGRESS);
-        throw (u.error(`Debug log upload error: status: ${e.status}, message: ${e.message}`), new a._(a.ct.UPLOAD));
+        if (429 === e.status) throw new r._(r.ct.PROGRESS);
+        throw (u.error(`Debug log upload error: status: ${e.status}, message: ${e.message}`), new r._(r.ct.UPLOAD));
     }
-    if ("success_count" in r.body && r.body.success_count !== E.length)
+    if ("success_count" in i.body && i.body.success_count !== E.length)
         throw (
-            u.error(`Debug log upload: stored files ${r.body.success_count} !== ${E.length}`), new a._(a.ct.GENERAL)
+            u.error(`Debug log upload: stored files ${i.body.success_count} !== ${E.length}`), new r._(r.ct.GENERAL)
         );
     if (
-        ("store_success" in r.body && !r.body.store_success) ||
-        ("id_match" in r.body && !r.body.id_match) ||
-        ("all_success" in r.body && !r.body.all_success)
+        ("store_success" in i.body && !i.body.store_success) ||
+        ("id_match" in i.body && !i.body.id_match) ||
+        ("all_success" in i.body && !i.body.all_success)
     )
         throw (
             u.error(
-                `Debug log upload: store_success: ${r.body.store_success} / id_match: ${r.body.id_match} / all_success: ${r.body.all_success}`,
+                `Debug log upload: store_success: ${i.body.store_success} / id_match: ${i.body.id_match} / all_success: ${i.body.all_success}`,
             ),
-            new a._(a.ct.GENERAL)
+            new r._(r.ct.GENERAL)
         );
 }
 var E = n(487329);
@@ -105,18 +105,18 @@ async function R(e, t) {
     } catch (t) {
         let e;
         throw (
-            t instanceof a._ &&
+            t instanceof r._ &&
                 (e = (function (e) {
                     switch (e.code) {
-                        case a.ct.GENERAL:
+                        case r.ct.GENERAL:
                             return E.B6.UploadErrorGeneral;
-                        case a.ct.NO_FILE:
+                        case r.ct.NO_FILE:
                             return E.B6.UploadErrorNoFile;
-                        case a.ct.PROGRESS:
+                        case r.ct.PROGRESS:
                             return E.B6.UploadErrorProgress;
-                        case a.ct.UPLOAD:
+                        case r.ct.UPLOAD:
                             return E.B6.UploadErrorUpload;
-                        case a.ct.READ:
+                        case r.ct.READ:
                             return E.B6.UploadErrorRead;
                         default:
                             return;
@@ -129,7 +129,7 @@ async function R(e, t) {
 }
 async function L(e) {
     try {
-        let t, n, a, s;
+        let t, n, r, s;
         try {
             t = p.As();
         } catch (e) {
@@ -141,7 +141,7 @@ async function L(e) {
             n = `System Logs failed ${e}`;
         }
         try {
-            a = await Promise.resolve([]).then((e) =>
+            r = await Promise.resolve([]).then((e) =>
                 (function (e, t) {
                     if (0 === e.length) return "No logs";
                     let n = C.w.get(c.Xlh),
@@ -162,19 +162,19 @@ ${s}`;
                 })(e, !0),
             );
         } catch (e) {
-            a = `Push logs failed: ${e}`;
+            r = `Push logs failed: ${e}`;
         }
         try {
-            s = (0, r.G1)() ?? "";
+            s = (0, i.G1)() ?? "";
         } catch (e) {
             s = `LibDiscore logs failed: ${e}`;
         }
-        let l = t.length + n.length + a.length + s.length;
+        let l = t.length + n.length + r.length + s.length;
         if (l > 9437184) {
             let e = 1 - 9437184 / l;
             ((t = t.slice(t.length - Math.floor(t.length * e))),
                 (n = n.slice(n.length - Math.floor(n.length * e))),
-                (a = a.slice(a.length - Math.floor(a.length * e))),
+                (r = r.slice(r.length - Math.floor(r.length * e))),
                 (s = s.slice(s.length - Math.floor(s.length * e))));
         }
         let o = `
@@ -305,7 +305,7 @@ ${R}`;
     })()}
 
     Metadata:
-    ${JSON.stringify({ logsUploaded: new Date().toISOString(), releaseChannel: window.GLOBAL_ENV.RELEASE_CHANNEL, buildNumber: "612251", versionHash: "10ca29f02d2f260d9c9c8eeac53e57ee58509d78" }, void 0, 2)}
+    ${JSON.stringify({ logsUploaded: new Date().toISOString(), releaseChannel: window.GLOBAL_ENV.RELEASE_CHANNEL, buildNumber: "612294", versionHash: "ff372acfa3e5455233bb9745d88662be6ff66038" }, void 0, 2)}
 
     ChannelStore:
     ${JSON.stringify(I.A.getDebugInfo(), void 0, 2)}
@@ -320,18 +320,20 @@ ${R}`;
     ${s}
 
     Push Notifications:
-    ${a}
+    ${r}
     `;
-        p.IU();
-        let d = c.Rsh.DEBUG_LOG(e, "discord_app_logs");
-        await i.Bo.post({
-            url: d,
-            body: o,
-            retries: 3,
-            headers: { "Content-Type": "text/plain" },
-            oldFormErrors: !0,
-            rejectWithError: !1,
-        });
+        (p.IU(),
+            await (function (e) {
+                let { category: t, filename: n, body: i } = e;
+                return a.Bo.post({
+                    url: c.Rsh.DEBUG_LOG(t, n),
+                    body: i,
+                    headers: { "Content-Type": "text/plain; charset=utf-8" },
+                    timeout: 6e4,
+                    retries: 3,
+                    rejectWithError: !0,
+                });
+            })({ category: e, filename: "discord_app_logs", body: o }));
     } catch (e) {
         O.error(`uploadAppLogFiles: upload app log files error ${e.message}`);
     }

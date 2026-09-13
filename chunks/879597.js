@@ -1115,7 +1115,7 @@ var eD = n(141931),
     eM = n(287809),
     eP = n(723702),
     eU = n(19575),
-    ew = n(135286);
+    ew = n(144009);
 let eG = window.DiscordNative,
     ex = `${G.HAw.APP_NATIVE_CRASH}Storage`;
 function ek(e, t) {
@@ -1463,7 +1463,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e2 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eV.A().log(
-    `[BUILD INFO] Release Channel: ${e2}, Build Number: 612251, Version Hash: 10ca29f02d2f260d9c9c8eeac53e57ee58509d78`,
+    `[BUILD INFO] Release Channel: ${e2}, Build Number: 612294, Version Hash: ff372acfa3e5455233bb9745d88662be6ff66038`,
 ),
     D.A.setTags({ appContext: G.QCW }),
     eh.A.initBasic(),
@@ -21412,7 +21412,7 @@ let ND = "isHideDevBanner",
                     className: ta()(Ny.Wz, Ny.mr),
                     children: [
                         (0, O.jsx)(NL, { className: Ny.Kk }),
-                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "612251" }),
+                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "612294" }),
                         (0, O.jsx)(r, {}),
                     ],
                 })
