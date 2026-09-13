@@ -55,6 +55,11 @@ function Q(e) {
 var J = n(58703);
 let ee = [
     {
+        date: "2026-09-12",
+        summary:
+            "Plans for an app you imported or remixed no longer invent a wireframe sketch: the sketch is reserved for brand-new apps that have no screens yet.",
+    },
+    {
         date: "2026-09-10",
         summary:
             "Hitting your project limit, or conjuring too fast, now says so instead of just asking you to try again.",
