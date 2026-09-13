@@ -850,6 +850,8 @@
   "jK1PL5": "A tour of everything an app can do inside Discord: sign-in, sharing, menus, live voice and video, saved data.",
   "9D9L0S": "Can you import the {templateName} template",
   "ER1uQ4": "Start from the {name} template",
+  "ieAgex": "Rust Sphere",
+  "5yvj+f": "A spinning, lit 3D globe drawn by Rust running as WebAssembly, on WebGPU where available.",
   "Ly7F7x": "Thinking…",
   "QDGuNS": "Conjuring…",
   "SzdX35": "Conjuring your app. Show how the thinking is going.",

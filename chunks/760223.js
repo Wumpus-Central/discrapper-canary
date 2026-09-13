@@ -13,8 +13,8 @@ var a,
     h = n(31300),
     g = n(939249),
     f = n(834730),
-    x = n(691540),
-    y = n(857250),
+    y = n(691540),
+    x = n(857250),
     b = n(97483),
     j = n(821609),
     v = n(92446),
@@ -63,6 +63,11 @@ let ee = [
         date: "2026-09-12",
         summary:
             "Plans for an app you imported or remixed no longer invent a wireframe sketch: the sketch is reserved for brand-new apps that have no screens yet.",
+    },
+    {
+        date: "2026-09-11",
+        summary:
+            "A new Rust Sphere template: a spinning, lit 3D globe drawn by Rust running as WebAssembly, ready to remix into your own renderer.",
     },
     {
         date: "2026-09-10",
@@ -347,7 +352,7 @@ let ef = [
     { value: "user", icon: eh.UserIcon, nameMessage: F.default.iqXIRN },
     { value: "guild", icon: eg.R, nameMessage: F.default.LdgKdI },
 ];
-function ex(e) {
+function ey(e) {
     let { importing: t, onImport: n } = e,
         a = l.useRef(null),
         s = em(l.useCallback((e) => n(e, "user"), [n])),
@@ -408,7 +413,7 @@ function ex(e) {
         ],
     });
 }
-var ey = n(113491),
+var ex = n(113491),
     eb = n(629584),
     ej = n(148853),
     ev = n(491920);
@@ -490,7 +495,7 @@ function eL(e) {
                                 "setup" === (0, eR.rq)(n.error)
                                     ? B.intl.string(F.default.avu1u4)
                                     : B.intl.string(F.default["5fwOcF"]);
-                            (0, x.P0)((0, y.o)(a, b.Ck.FAILURE));
+                            (0, y.P0)((0, x.o)(a, b.Ck.FAILURE));
                         }
                         null != l && ((a.current = l), n(l), s().catch(() => i(t.type)));
                     },
@@ -660,8 +665,8 @@ function eL(e) {
                                                   leadingAccessory: { type: "icon", icon: eA.LinkIcon },
                                                   action: () =>
                                                       (0, eP.C)((0, eS.n)(a, eM.VV.VIBEGRATIONS, t), () =>
-                                                          (0, x.P0)(
-                                                              (0, y.o)(B.intl.string(B.t["L/PwZf"]), b.Ck.SUCCESS),
+                                                          (0, y.P0)(
+                                                              (0, x.o)(B.intl.string(B.t["L/PwZf"]), b.Ck.SUCCESS),
                                                           ),
                                                       ),
                                               })
@@ -673,7 +678,7 @@ function eL(e) {
                                             leadingAccessory: { type: "icon", icon: eN.L },
                                             action: () =>
                                                 (0, eP.C)(t, () =>
-                                                    (0, x.P0)((0, y.o)(B.intl.string(F.default.WOKsTg), b.Ck.SUCCESS)),
+                                                    (0, y.P0)((0, x.o)(B.intl.string(F.default.WOKsTg), b.Ck.SUCCESS)),
                                                 ),
                                         }),
                                     ],
@@ -816,13 +821,13 @@ function e7(e) {
             (s = l.useCallback(() => {
                 a.current ||
                     ((a.current = !0),
-                    (0, x.P0)((0, y.o)(B.intl.formatToPlainString(F.default.u9TapG, { name: n }), b.Ck.MESSAGE)),
+                    (0, y.P0)((0, x.o)(B.intl.formatToPlainString(F.default.u9TapG, { name: n }), b.Ck.MESSAGE)),
                     ep(t, n)
                         .catch((e) => {
                             let n;
                             (console.error("[vibegrations] project export failed", t, e),
-                                (0, x.P0)(
-                                    (0, y.o)(
+                                (0, y.P0)(
+                                    (0, x.o)(
                                         409 === (n = e instanceof Z._v ? e.status : null)
                                             ? B.intl.string(F.default.uB40Hz)
                                             : 404 === n
@@ -843,7 +848,7 @@ function e7(e) {
                         (e) => {
                             let a = eu(e);
                             null != a
-                                ? (0, x.P0)((0, y.o)(a, b.Ck.FAILURE))
+                                ? (0, y.P0)((0, x.o)(a, b.Ck.FAILURE))
                                 : (0, u.A)({
                                       title: B.intl.formatToPlainString(F.default.XYZqZK, { name: n }),
                                       subtitle: B.intl.string(F.default["6syXoH"]),
@@ -854,7 +859,7 @@ function e7(e) {
                                           try {
                                               await ec(t, e, B.intl.string(F.default.C7GU2r));
                                           } catch {
-                                              (0, x.P0)((0, y.o)(B.intl.string(F.default["02GpNr"]), b.Ck.FAILURE));
+                                              (0, y.P0)((0, x.o)(B.intl.string(F.default["02GpNr"]), b.Ck.FAILURE));
                                           }
                                       },
                                   });
@@ -981,14 +986,14 @@ function e5(e) {
         eh = B.intl.string(F.default["5gU57O"]),
         eg = p && !N && !h && !C,
         ef = B.intl.string(eg ? F.default.YdgE0j : F.default.aWVf4j),
-        ex = l.useCallback(() => {
+        ey = l.useCallback(() => {
             if (N || h || C) {
                 (I(!1), g(!1), A(!1), m(!0));
                 return;
             }
             m((e) => !e);
         }, [N, h, C]),
-        ey = l.useCallback(() => m(!1), []),
+        ex = l.useCallback(() => m(!1), []),
         { active: eb } = (0, eJ.Q_)(G),
         ej = (0, e0.o4)(G),
         ev = B.intl.string(ej ? F.default.bfQ4Ki : eb ? F.default.rfNEHn : F.default.lXcEa2),
@@ -1022,7 +1027,7 @@ function e5(e) {
                                 a() &&
                                     (V({ entry: e, status: "failed" }),
                                     console.error("[vibegrations] version restore failed", n, t),
-                                    (0, x.P0)((0, y.o)(B.intl.string(F.default.q6iZ84), b.Ck.FAILURE)));
+                                    (0, y.P0)((0, x.o)(B.intl.string(F.default.q6iZ84), b.Ck.FAILURE)));
                             },
                         )
                         .finally(() => {
@@ -1053,7 +1058,7 @@ function e5(e) {
                     let n = t.id,
                         a = eu(e);
                     null != a
-                        ? (0, x.P0)((0, y.o)(a, b.Ck.FAILURE))
+                        ? (0, y.P0)((0, x.o)(a, b.Ck.FAILURE))
                         : (0, u.A)({
                               title: B.intl.formatToPlainString(F.default.XYZqZK, { name: t.name }),
                               subtitle: B.intl.string(F.default["6syXoH"]),
@@ -1064,7 +1069,7 @@ function e5(e) {
                                   try {
                                       await ec(n, e, B.intl.string(F.default.C7GU2r));
                                   } catch {
-                                      (0, x.P0)((0, y.o)(B.intl.string(F.default["02GpNr"]), b.Ck.FAILURE));
+                                      (0, y.P0)((0, x.o)(B.intl.string(F.default["02GpNr"]), b.Ck.FAILURE));
                                   }
                               },
                           });
@@ -1140,8 +1145,8 @@ function e5(e) {
             return (
                 t
                     .catch((e) => {
-                        (0, x.P0)(
-                            (0, y.o)(e instanceof Error ? e.message : B.intl.string(F.default.fNP6Cd), b.Ck.FAILURE),
+                        (0, y.P0)(
+                            (0, x.o)(e instanceof Error ? e.message : B.intl.string(F.default.fNP6Cd), b.Ck.FAILURE),
                         );
                     })
                     .finally(() => d(!1)),
@@ -1155,7 +1160,7 @@ function e5(e) {
             if ("user" === t.install_scope)
                 return void te(t.id)
                     .then(() => {
-                        (0, x.P0)((0, y.o)(B.intl.string(F.default.wA0o0L), b.Ck.SUCCESS));
+                        (0, y.P0)((0, x.o)(B.intl.string(F.default.wA0o0L), b.Ck.SUCCESS));
                     })
                     .catch(() => {});
             let e = (0, Z.$C)(t.id);
@@ -1261,7 +1266,7 @@ function e5(e) {
                               }),
                               eg
                                   ? null
-                                  : (0, i.jsx)(D.A.Icon, { icon: e9, tooltip: ef, "aria-label": ef, onClick: ex }),
+                                  : (0, i.jsx)(D.A.Icon, { icon: e9, tooltip: ef, "aria-label": ef, onClick: ey }),
                           ],
                       }),
         });
@@ -1308,7 +1313,7 @@ function e5(e) {
                                   surface: e1.sd,
                                   header: ta,
                                   chatOpen: p,
-                                  onCloseChat: ey,
+                                  onCloseChat: ex,
                                   chatHeaderAction: tn,
                                   versionHistoryOpen: h,
                                   onCloseVersionHistory: () => g(!1),
@@ -1344,8 +1349,8 @@ function e4(e) {
             installScope: p,
             onInstallScopeChange: m,
             installScopeError: h,
-            modelSettings: x,
-            onModelSettingsChange: y,
+            modelSettings: y,
+            onModelSettingsChange: x,
             onSelectProject: b,
             onIdeaChange: v,
             onCreate: w,
@@ -1391,6 +1396,11 @@ function e4(e) {
                 id: "collaborative-whiteboard",
                 name: B.intl.string(F.default["+abXa8"]),
                 description: B.intl.string(F.default.OZYPMR),
+            },
+            {
+                id: "rust-sphere",
+                name: B.intl.string(F.default.ieAgex),
+                description: B.intl.string(F.default["5yvj+f"]),
             },
         ],
         L = B.intl.string(F.default.FYK2xQ),
@@ -1580,8 +1590,8 @@ function e4(e) {
                                                         errorMessage: h,
                                                     }),
                                                 }),
-                                                (0, i.jsx)(ey.A, {
-                                                    settings: x ?? X.Cl,
+                                                (0, i.jsx)(ex.A, {
+                                                    settings: y ?? X.Cl,
                                                     choices: (0, q.e)()
                                                         ? {
                                                               main: [...Y.S8.main, ...Y.wF.main],
@@ -1590,7 +1600,7 @@ function e4(e) {
                                                           }
                                                         : Y.S8,
                                                     disabled: d,
-                                                    onChange: y,
+                                                    onChange: x,
                                                 }),
                                                 (0, i.jsx)(j.$, {
                                                     variant: "primary",
@@ -1629,7 +1639,7 @@ function e4(e) {
                                             }),
                                         ],
                                     }),
-                                    (0, i.jsx)(ex, { importing: R, onImport: P }),
+                                    (0, i.jsx)(ey, { importing: R, onImport: P }),
                                 ],
                             }),
                             (0, i.jsxs)(C.Ip, {
@@ -1794,7 +1804,7 @@ function te(e) {
         _ = l.useCallback(
             async (e, t) => {
                 let a = eu(e);
-                if (null != a) return void (0, x.P0)((0, y.o)(a, b.Ck.FAILURE));
+                if (null != a) return void (0, y.P0)((0, x.o)(a, b.Ck.FAILURE));
                 R(!0);
                 let i = null;
                 try {
@@ -1806,7 +1816,7 @@ function te(e) {
                         I(null));
                 } catch {
                     (null != i && (await (0, O.xx)(i).catch(() => void 0)),
-                        (0, x.P0)((0, y.o)(B.intl.string(F.default["02GpNr"]), b.Ck.FAILURE)));
+                        (0, y.P0)((0, x.o)(B.intl.string(F.default["02GpNr"]), b.Ck.FAILURE)));
                 } finally {
                     R(!1);
                 }
