@@ -31,8 +31,8 @@ function E(e) {
         d = [o, c(l)].filter(Boolean).join("/"),
         _ = {
             [s.od.ACCOUNT]: a.X.ACCOUNT_PANEL,
-            [s.od.ACCOUNT_STANDING]: a.X.ACCOUNT_STANDING_CATEGORY,
-            [s.od.ACCOUNT_ACCOUNT_STANDING]: a.X.ACCOUNT_STANDING_CATEGORY,
+            [s.od.ACCOUNT_STANDING]: a.X.ACCOUNT_STANDING_PANEL,
+            [s.od.ACCOUNT_ACCOUNT_STANDING]: a.X.ACCOUNT_STANDING_PANEL,
             [s.od.PROFILE_CUSTOMIZATION]: a.X.PROFILE_PANEL,
             [s.od.CONTENT_AND_SOCIAL]: a.X.MESSAGING_PERMISSIONS_PANEL,
             [s.od.CONNECTED_GAMES]: a.X.CONNECTED_GAMES_CATEGORY,
