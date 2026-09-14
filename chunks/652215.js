@@ -3387,6 +3387,7 @@ var i3 =
         (eA.ADD_FRIENDS_MODAL = "Add Friends Modal"),
         (eA.ADD_FRIENDS_WIDGET = "Add Friends Widget"),
         (eA.ADD_FRIENDS_MODAL_SEARCH = "Add Friends Modal Search"),
+        (eA.ADD_FRIENDS_POPOUT = "Add Friends Popout"),
         (eA.PROFILE_CTA = "Profile CTA"),
         (eA.CHAT_SIDEBAR = "Chat Sidebar"),
         (eA.VOICE_CHANNEL = "Voice Channel"),
