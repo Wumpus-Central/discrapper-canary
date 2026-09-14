@@ -16,4 +16,5 @@ a.exports = {
     On: "clickableGameName__0a5bd",
     HD: "avatars__0a5bd",
     RB: "participantAvatar__0a5bd",
+    i9: "gridViewReturn__0a5bd",
 };
