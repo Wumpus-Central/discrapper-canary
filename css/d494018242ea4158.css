@@ -129,10 +129,20 @@
 }
 
 .previewControls__91876 {
-    gap: var(--space-8);
-    inset-inline-end: var(--space-12);
     opacity: 0;
     transition: opacity 50ms ease-in
+}
+
+.previewControls__91876,
+.uploadControls__91876 {
+    gap: var(--space-8);
+    inset-inline-end: var(--space-12)
+}
+
+.uploadControls__91876 {
+    display: flex;
+    position: absolute;
+    top: var(--space-12)
 }
 
 .previewControls__91876:focus-within,
@@ -142,4 +152,4 @@
     transition: opacity .15s ease-out
 }
 
-/*# sourceMappingURL=e5c2f584ec6c0871.css.map*/
+/*# sourceMappingURL=d494018242ea4158.css.map*/

@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     p$: "emptyState__91876",
     nV: "gallery__91876",
     $k: "suggestedClips__91876",
@@ -7,4 +7,5 @@ e.exports = {
     Hf: "playHitArea__91876",
     AT: "previewGameIcon__91876",
     nP: "previewControls__91876",
+    MY: "uploadControls__91876",
 };

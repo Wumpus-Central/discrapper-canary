@@ -1,4 +1,14 @@
-n.d(t, { Eo: () => d, JC: () => E, UE: () => u, UQ: () => _, nE: () => o, ox: () => A, qc: () => c, vQ: () => h });
+n.d(t, {
+    $Q: () => c,
+    Eo: () => d,
+    JC: () => E,
+    SG: () => h,
+    UE: () => u,
+    UQ: () => _,
+    nE: () => o,
+    ox: () => A,
+    vQ: () => I,
+});
 var i = n(196765),
     r = n(314116),
     a = n(375708);
@@ -14,7 +24,8 @@ function d(e, t) {
     });
 }
 function c(e) {
-    return s.getState().localClips.has(e);
+    for (let t of s.getState().localClips.values()) if (t.clip.id === e) return !0;
+    return !1;
 }
 function u(e) {
     s.setState((t) => {
@@ -32,6 +43,9 @@ function A(e) {
     l.delete(e);
 }
 function h(e) {
+    (l.get(e)?.abort(), l.delete(e), u(e));
+}
+function I(e) {
     return (
         !!(function () {
             for (let e of s.getState().localClips.values()) if ("uploaded" !== e.status) return !0;
@@ -43,7 +57,7 @@ function h(e) {
             confirmText: a.intl.string(a.t["ETE/oC"]),
             cancelText: a.intl.string(a.t["3ilveh"]),
             onConfirm: () => {
-                for (let e of l.values()) e.abort();
+                for (let [e, t] of s.getState().localClips) "uploaded" !== t.status && h(e);
                 (l.clear(), s.setState({ localClips: new Map() }), e());
             },
         }),

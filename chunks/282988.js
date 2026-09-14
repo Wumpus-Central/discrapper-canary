@@ -1,40 +1,36 @@
-a.d(t, { UE: () => c.UE, UQ: () => c.UQ, _A: () => m });
+a.d(t, { UE: () => d.UE, UQ: () => d.UQ, _A: () => p });
 var i = a(691540),
-    l = a(857250),
-    n = a(97483),
+    n = a(857250),
+    l = a(97483),
     s = a(655180),
     r = a(195880),
     o = a(958805),
-    d = a(735321),
-    c = a(219222),
-    u = a(696016),
-    p = a(375708);
-async function m(e, t) {
-    if ((0, c.qc)(e.id)) return;
-    if (null == e.applicationId) return void (0, i.P0)((0, l.o)(p.intl.string(p.t.xcLXWy), n.Ck.FAILURE));
-    let a = new AbortController();
-    ((0, c.JC)(e.id, a), (0, c.nE)(e.id, { status: "exporting", clip: e }));
+    u = a(735321),
+    d = a(219222),
+    c = a(696016),
+    m = a(375708);
+function p(e, t) {
+    if ((0, d.$Q)(e.id)) return null;
+    if (null == e.applicationId) return ((0, i.P0)((0, n.o)(m.intl.string(m.t.xcLXWy), l.Ck.FAILURE)), null);
+    let a = (0, r.m)(),
+        s = new AbortController();
+    return ((0, d.JC)(a, s), (0, d.nE)(a, { status: "exporting", clip: e }), g(e, a, e.applicationId, s, t), a);
+}
+async function g(e, t, a, r, p) {
     try {
-        let i = await (0, s.VO)(e, { analyticsLocations: t });
-        if (a.signal.aborted) return;
-        (0, c.nE)(e.id, { status: "uploading", clip: e, progress: 0 });
-        let l = new File([i], "clip.mp4", { type: "video/mp4" }),
-            n = await o.A.uploadWidgetClip(l, { onProgress: (t) => (0, c.Eo)(e.id, t), signal: a.signal });
-        ((0, c.nE)(e.id, { status: "uploaded", clip: e, uploadFilename: n }),
-            (0, d.XW)({
-                status: "pending",
-                id: (0, r.m)(),
-                localClipId: e.id,
-                gameId: e.applicationId,
-                title: e.name,
-                uploadFilename: n,
-            }));
-    } catch (t) {
-        if (a.signal.aborted) return;
-        ((0, c.UE)(e.id),
-            u.nx.error("Failed to upload a clip for the clips gallery widget", t),
-            (0, i.P0)((0, l.o)(p.intl.string(p.t.iufib1), n.Ck.FAILURE)));
+        let i = await (0, s.VO)(e, { analyticsLocations: p });
+        if (r.signal.aborted) return;
+        (0, d.nE)(t, { status: "uploading", clip: e, progress: 0 });
+        let n = new File([i], "clip.mp4", { type: "video/mp4" }),
+            l = await o.A.uploadWidgetClip(n, { onProgress: (e) => (0, d.Eo)(t, e), signal: r.signal });
+        ((0, d.nE)(t, { status: "uploaded", clip: e, uploadFilename: l }),
+            (0, u.XW)({ status: "pending", id: t, localClipId: e.id, gameId: a, title: e.name, uploadFilename: l }));
+    } catch (e) {
+        if (r.signal.aborted) return;
+        ((0, d.UE)(t),
+            c.nx.error("Failed to upload a clip for the clips gallery widget", e),
+            (0, i.P0)((0, n.o)(m.intl.string(m.t.iufib1), l.Ck.FAILURE)));
     } finally {
-        (0, c.ox)(e.id);
+        (0, d.ox)(t);
     }
 }

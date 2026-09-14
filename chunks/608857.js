@@ -1,11 +1,11 @@
-a.d(t, { A: () => s, K: () => n });
+a.d(t, { A: () => s, K: () => l });
 var i = a(582128),
-    l = a(282988);
-function n(e) {
+    n = a(282988);
+function l(e) {
     return "saved" === e.status && null != e.videoURL;
 }
 function s(e) {
-    let t = (0, l.UQ)();
+    let t = (0, n.UQ)();
     return i.useMemo(
         () => [
             ...e.clips.flatMap((e) => {
@@ -21,14 +21,13 @@ function s(e) {
                             tags: e.tags,
                         },
                     ];
-                let a = t.get(e.localClipId);
+                let a = t.get(e.id);
                 return null != a
                     ? [
                           {
                               status: "pending",
                               key: e.id,
                               gameId: e.gameId,
-                              localClipId: e.localClipId,
                               thumbnail: a.clip.thumbnail,
                               title: e.title,
                               tags: e.tags,
@@ -36,14 +35,13 @@ function s(e) {
                       ]
                     : [];
             }),
-            ...Array.from(t.values()).flatMap((e) => {
-                switch (e.status) {
+            ...Array.from(t).flatMap((e) => {
+                let [t, a] = e;
+                switch (a.status) {
                     case "exporting":
-                        return [{ status: "exporting", key: e.clip.id, thumbnail: e.clip.thumbnail }];
+                        return [{ status: "exporting", key: t, thumbnail: a.clip.thumbnail }];
                     case "uploading":
-                        return [
-                            { status: "uploading", key: e.clip.id, thumbnail: e.clip.thumbnail, progress: e.progress },
-                        ];
+                        return [{ status: "uploading", key: t, thumbnail: a.clip.thumbnail, progress: a.progress }];
                     case "uploaded":
                         return [];
                 }
