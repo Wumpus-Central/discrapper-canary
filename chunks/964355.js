@@ -3,8 +3,8 @@ var i = n(477900),
     r = n(582128),
     a = n(435558),
     s = n.n(a),
-    l = n(900283),
-    o = n(106236),
+    l = n(299163),
+    o = n(900283),
     d = n(889553);
 function c(e) {
     return `${e.toFixed(0)}%`;
@@ -21,7 +21,7 @@ let u = r.forwardRef(function (e, t) {
             "aria-label": I,
         } = e,
         f = r.useRef(null),
-        p = r.useMemo(() => s().debounce(() => A?.(l.Q.SLIDER), 100), [A]);
+        p = r.useMemo(() => s().debounce(() => A?.(o.Q.SLIDER), 100), [A]);
     return (
         r.useImperativeHandle(
             t,
@@ -30,7 +30,7 @@ let u = r.forwardRef(function (e, t) {
         ),
         (0, i.jsx)("div", {
             className: d.x,
-            children: (0, i.jsx)(o.A, {
+            children: (0, i.jsx)(l.A, {
                 ref: f,
                 mini: !0,
                 handleSize: 16,

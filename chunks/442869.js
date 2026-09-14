@@ -832,7 +832,7 @@ let J = K.kqX.PREMIUM_TIER_0,
             customText: { label: "Text color (Custom color only)", type: "color", defaultValue: void 0 },
         },
     };
-var el = a(106236);
+var el = a(299163);
 let ea = {
     title: "Slider",
     stories: [

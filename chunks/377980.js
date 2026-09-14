@@ -342,7 +342,7 @@ function q(e) {
         }),
     });
 }
-var W = t(106236);
+var W = t(299163);
 function Y(e) {
     let { node: n } = e,
         {
@@ -1068,7 +1068,7 @@ function e5(e) {
     }, [n, i]);
     return (0, r.jsxs)(r.Fragment, { children: [t, (0, r.jsx)(eJ.F, { component: "div", children: o })] });
 }
-function e2(e) {
+function e9(e) {
     let { decoration: n } = e,
         t = n.component;
     return (0, r.jsx)("div", {
@@ -1077,7 +1077,7 @@ function e2(e) {
         children: (0, r.jsx)(t, {}),
     });
 }
-function e9(e) {
+function e2(e) {
     let { notice: n, children: t, useObscuredNotice: i } = e,
         s = l.useRef(null),
         a = i?.();
@@ -1107,7 +1107,7 @@ function e3(e) {
     return (0, r.jsxs)("div", {
         className: e7.LZ,
         children: [
-            null != t && (0, r.jsx)(e2, { decoration: t }),
+            null != t && (0, r.jsx)(e9, { decoration: t }),
             (0, r.jsx)(e1.F, {
                 forceLevel: 2,
                 children: n.map((e, t) =>
@@ -1131,7 +1131,7 @@ function e4(e) {
         { layout: t } = n;
     if ((0, i.zS)(t))
         return (0, r.jsx)(
-            e9,
+            e2,
             {
                 notice: n.notice,
                 useObscuredNotice: n.useObscuredNotice,

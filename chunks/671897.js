@@ -8,11 +8,11 @@ var r = n(477900),
     o = n(17928),
     c = n(661531),
     d = n(876230),
-    m = n(106236),
-    f = n(717421),
-    h = n(358618),
-    p = n(793920),
-    v = n(983851),
+    m = n(717421),
+    f = n(358618),
+    h = n(793920),
+    p = n(983851),
+    v = n(299163),
     x = n(86147),
     g = n(729475),
     E = n(261958),
@@ -36,8 +36,8 @@ var r = n(477900),
     F = n(866665),
     _ = n(375708),
     U = n(862649);
-let K = "-:--",
-    $ = {
+let $ = "-:--",
+    K = {
         [d.Q6.PLAYING]: { icon: D.PauseIcon, label: _.intl.string(_.t.ZcgDJX) },
         [d.Q6.PAUSED]: { icon: k.PlayIcon, label: _.intl.string(_.t.RscU7I) },
         [d.Q6.ENDED]: { icon: I.RetryIcon, label: _.intl.string(_.t.hsvh0i) },
@@ -69,8 +69,8 @@ function Q(e) {
             );
     }, [d]);
     let m = Number.isFinite(n) && Number.isFinite(u) ? Math.max(0, u - n) : null,
-        f = o ? (null != m ? `-${(0, j.rB)(m)}` : K) : Number.isFinite(n) ? (0, j.rB)(n) : K,
-        h = Number.isFinite(u) ? (0, j.rB)(u) : K;
+        f = o ? (null != m ? `-${(0, j.rB)(m)}` : $) : Number.isFinite(n) ? (0, j.rB)(n) : $,
+        h = Number.isFinite(u) ? (0, j.rB)(u) : $;
     return (0, r.jsxs)(B.D, {
         className: i()(U.d$, U.jk),
         "data-testid": "discord-web-video-player-duration",
@@ -180,7 +180,7 @@ function en(e) {
             keyDownHandlerRef: I,
             volume: B,
             muted: F,
-            transcriptEnabled: K,
+            transcriptEnabled: $,
             captionEnabled: H,
             handlePlaybackBtnClick: G,
             handleTranscriptBtnClick: q,
@@ -201,7 +201,7 @@ function en(e) {
         [ev, ex] = l.useState(F ? 0 : B),
         [eg, eE] = l.useState(!1),
         [eb, eS] = l.useState(!1),
-        [{ volumeAnimSpring: eC }, ey] = (0, f.z)(() => ({
+        [{ volumeAnimSpring: eC }, ey] = (0, m.z)(() => ({
             from: { volumeAnimSpring: 0 },
             config: { tension: 100, friction: 3, clamp: !0 },
         })),
@@ -295,20 +295,20 @@ function en(e) {
             ),
             [ei, eb, eg, ey, em, eC],
         ));
-    let e_ = 0 === ev ? h._ : ev < 0.5 ? p.S : v.H,
+    let e_ = 0 === ev ? f._ : ev < 0.5 ? h.S : p.H,
         eU = _.intl.string(0 === ev ? _.t.YqAjXy : _.t.w4m945),
-        { icon: eK, label: e$ } = $[t];
+        { icon: e$, label: eK } = K[t];
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)("div", {
                 className: U.X3,
                 children: [
                     (0, r.jsx)(V, {
-                        iconComponent: eK,
+                        iconComponent: e$,
                         animationTime: n,
                         visible: a,
-                        ariaLabel: e$,
-                        tooltipLabel: e$,
+                        ariaLabel: eK,
+                        tooltipLabel: eK,
                         shortcut: d.TJ.PLAYBACK,
                         onClick: G,
                         ref: ew,
@@ -381,7 +381,7 @@ function en(e) {
                                     ),
                                     width: (0, u.to)([eC.to({ range: [0, 1], output: [0, J[P]] })], (e) => `${e}px`),
                                 },
-                                children: (0, r.jsx)(m.A, {
+                                children: (0, r.jsx)(v.A, {
                                     mini: !0,
                                     value: ev,
                                     keyboardStep: 0.1,
@@ -464,7 +464,7 @@ function en(e) {
                         })({
                             hideTranscriptBtn: y,
                             hideCaptionBtn: C,
-                            transcriptEnabled: K,
+                            transcriptEnabled: $,
                             captionEnabled: H,
                             playerState: t,
                             handleTranscriptBtnClick: q,
@@ -660,7 +660,7 @@ function ei(e) {
                     className: U.xl,
                     children: a,
                 }),
-                (0, r.jsx)(m.A, {
+                (0, r.jsx)(v.A, {
                     value: t,
                     initialValue: 1,
                     minValue: ee,
