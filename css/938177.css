@@ -65,6 +65,26 @@
     position: relative
 }
 
+.stage__0c12a {
+    display: grid;
+    grid-auto-rows: minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr);
+    inset: 0;
+    position: absolute
+}
+
+.stageGrid__0c12a {
+    gap: var(--space-8);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: var(--space-12);
+    --custom-grid-tile-width: 100cqw
+}
+
+.stageGrid__0c12a>:last-child:nth-child(odd) {
+    grid-column: 1/-1;
+    --custom-grid-tile-width: calc((100cqw - var(--space-8))/2)
+}
+
 .povStack__0c12a {
     align-items: center;
     bottom: var(--space-16);
@@ -87,6 +107,7 @@
 }
 
 .switchFreezeFrame__0c12a {
+    background-color: var(--black);
     border-radius: inherit;
     height: 100%;
     inset: 0;
@@ -102,4 +123,31 @@
     transition: filter .15s ease, transform .15s ease
 }
 
-/*# sourceMappingURL=938177.a985fd1940d9e479.css.map*/
+.stage__0c12a .videoCover__0c12a {
+    -o-object-fit: cover;
+    object-fit: cover
+}
+
+.gridChip__0c12a {
+    align-items: center;
+    background-color: var(--opacity-black-60);
+    border-radius: var(--radius-round);
+    color: var(--white);
+    cursor: pointer;
+    display: flex;
+    flex: 0 0 auto;
+    justify-content: center;
+    padding: var(--space-8);
+    pointer-events: auto
+}
+
+.full-motion .gridChip__0c12a {
+    transition: background-color .15s ease, color .15s ease
+}
+
+.gridChip__0c12a:focus-visible,
+.gridChip__0c12a:hover {
+    background-color: var(--opacity-black-80)
+}
+
+/*# sourceMappingURL=938177.1b552d5a8ce54f97.css.map*/

@@ -153,6 +153,17 @@
     margin-inline-end: 0
 }
 
+.gridViewReturn__0a5bd {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    gap: var(--space-6)
+}
+
+.gridViewReturn__0a5bd:hover {
+    text-decoration: underline
+}
+
 .actionBarIcon_a7e304 {
     display: block;
     height: 20px;
@@ -596,4 +607,4 @@
     border-inline-start: 1px solid var(--border-subtle)
 }
 
-/*# sourceMappingURL=911680.cea30151b4319535.css.map*/
+/*# sourceMappingURL=911680.5891395456f751eb.css.map*/
