@@ -4,8 +4,8 @@
 
 .avatarContainer_b4a4b2 {
     display: flex;
-    margin-bottom: var(--space-12);
-    margin-top: calc(var(--custom-user-profile-avatar-size)/-2);
+    margin-bottom: var(--space-8);
+    margin-top: calc((var(--custom-user-profile-avatar-size) + var(--custom-user-profile-avatar-stroke))/-2);
     padding-inline-start: var(--custom-user-profile-content-inset);
     position: relative;
     z-index: var(--custom-user-profile-bottom-layer-z-index)
@@ -18,6 +18,16 @@
 
 .mutuals_b4a4b2 {
     margin-block-start: var(--space-8)
+}
+
+.customStatus_b4a4b2 {
+    inset-block-start: calc(var(--custom-user-profile-banner-height) - var(--space-8));
+    inset-inline-end: var(--custom-user-profile-content-inset);
+    inset-inline-start: calc(var(--custom-user-profile-content-inset) + var(--custom-user-profile-avatar-size) + var(--custom-user-profile-avatar-stroke) + var(--space-4))
+}
+
+.customStatusReference_b4a4b2.customStatusReference_b4a4b2 {
+    position: absolute
 }
 
 .componentEmbedContainer__6e6eb {
@@ -271,4 +281,4 @@
     padding: var(--space-4)
 }
 
-/*# sourceMappingURL=631323.f995da90fbf6da68.css.map*/
+/*# sourceMappingURL=631323.2c58ce52601928f5.css.map*/
