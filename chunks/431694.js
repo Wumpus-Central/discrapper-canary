@@ -19,8 +19,8 @@ let s = {
                 autoMute: p,
                 allowFullScreen: c,
                 embed: m,
-                fillContainer: h,
-                showTextContent: x,
+                fillContainer: x,
+                showTextContent: h,
                 showParticipants: g,
             } = e,
             b = i.useMemo(
@@ -39,7 +39,7 @@ let s = {
                 [t],
             );
         return (0, o.jsx)("div", {
-            style: h ? { width: "100%", height: "500px" } : { display: "flex", justifyContent: "center" },
+            style: x ? { width: "100%", height: "500px" } : { display: "flex", justifyContent: "center" },
             children: (0, o.jsx)(n.A, {
                 attachment: b,
                 src: t,
@@ -49,11 +49,11 @@ let s = {
                 autoMute: p,
                 allowFullScreen: c,
                 embed: m,
-                fillContainer: h,
+                fillContainer: x,
                 minWidth: l,
                 maxWidth: 0 === r ? void 0 : r,
                 maxHeight: 0 === s ? void 0 : s,
-                showTextContent: x,
+                showTextContent: h,
                 showParticipants: g,
             }),
         });
@@ -81,7 +81,7 @@ let s = {
 var d = a(231723),
     u = a(664111),
     p = a(3451),
-    c = a(53774);
+    c = a(49870);
 let m = {
     orientation: {
         label: "Orientation",
@@ -92,7 +92,6 @@ let m = {
         ],
         defaultValue: "landscape",
     },
-    suppressSourceSelection: { label: "Suppress source selection", type: "boolean", defaultValue: !1 },
     autoplay: { label: "Autoplay", type: "boolean", defaultValue: !1 },
     originalUrl: { label: "Original URL", type: "text", defaultValue: r.kz },
     originalDurationSec: { label: "Master timeline length (sec)", type: "number", defaultValue: 30 },
@@ -106,8 +105,8 @@ let m = {
     clipBStartSec: { label: "Clip B start (sec)", type: "number", defaultValue: 18 },
     clipBDurationSec: { label: "Clip B length (sec)", type: "number", defaultValue: 8 },
 };
-var h = a(479669),
-    x = a(831544),
+var x = a(479669),
+    h = a(831544),
     g = a(717421),
     b = a(834730),
     f = a(831056);
@@ -144,7 +143,7 @@ function S(e) {
             showEndScreen: p,
             initialActive: c,
             autoHideVolumeSlider: m,
-            numExtraButtons: h,
+            numExtraButtons: x,
             sizing: g,
             persistPlayhead: b,
             hideFullScreenBtn: f,
@@ -157,15 +156,15 @@ function S(e) {
         }, [n, S]),
         T = i.useMemo(
             () =>
-                Array.from({ length: h }, (e, t) => ({
+                Array.from({ length: x }, (e, t) => ({
                     id: `extra-button-${t}`,
                     label: `Extra Button ${t + 1}`,
-                    iconComponent: x.MicrophoneIcon,
+                    iconComponent: h.MicrophoneIcon,
                     onClick: () => {
                         console.log(`Extra Button ${t + 1} clicked`);
                     },
                 })),
-            [h],
+            [x],
         );
     return (0, o.jsxs)("div", {
         style: { display: "flex", flexDirection: "column", alignItems: "center", gap: "8px" },
@@ -312,7 +311,7 @@ let V = {
                             (e, t) => {
                                 let a = l === e.index;
                                 return (0, o.jsx)(
-                                    h.animated.div,
+                                    x.animated.div,
                                     {
                                         "data-testid": "timeline-indicator",
                                         onMouseEnter: () => u(e.index),
@@ -382,8 +381,8 @@ var C = a(405670),
     L = a(412703),
     R = a(440703),
     U = a(267548),
-    k = a(668824),
-    j = a(738822),
+    j = a(668824),
+    k = a(738822),
     I = a(73473),
     D = a(55759),
     O = a(795068),
@@ -448,7 +447,7 @@ function W(e) {
                     },
                 ],
                 rewardsExpireAt: "2030-01-01T00:00:00+00:00",
-                platforms: [j.pY.CROSS_PLATFORM],
+                platforms: [k.pY.CROSS_PLATFORM],
             },
             assets: {
                 hero: "",
@@ -459,13 +458,13 @@ function W(e) {
                 gameTile: "",
                 logotype: "",
             },
-            taskConfigV2: { joinOperator: k.K.AND, tasks: { [L.n.WATCH_VIDEO]: e } },
+            taskConfigV2: { joinOperator: j.K.AND, tasks: { [L.n.WATCH_VIDEO]: e } },
             features: [],
             sharePolicy: U.i.SHAREABLE_EVERYWHERE,
             ctaConfig: { link: "https://discord.com/", buttonLabel: "Learn More" },
         },
         userStatus: B({ enrolledAt: new Date().toISOString() }),
-        targetedContent: [j.uF.QUEST_HOME_DESKTOP],
+        targetedContent: [k.uF.QUEST_HOME_DESKTOP],
     };
 }
 function H(e) {
@@ -473,7 +472,7 @@ function H(e) {
         s = i.useMemo(
             () => ({
                 quest: t,
-                sourceQuestContent: j.uF.INTERNAL_PREVIEW_TOOL,
+                sourceQuestContent: k.uF.INTERNAL_PREVIEW_TOOL,
                 videoSessionId: "playground-session",
                 isPortrait: a,
                 onClose: F.tEg,
@@ -487,8 +486,8 @@ function H(e) {
         d = i.useMemo(() => ({ questConfig: t.config }), [t.config]);
     return (0, o.jsx)(I.R, {
         questOrQuests: t,
-        questContent: j.uF.VIDEO_MODAL,
-        sourceQuestContent: j.uF.INTERNAL_PREVIEW_TOOL,
+        questContent: k.uF.VIDEO_MODAL,
+        sourceQuestContent: k.uF.INTERNAL_PREVIEW_TOOL,
         children: (e, t) =>
             (0, o.jsx)(O.l.Provider, { value: d, children: (0, o.jsx)(O.a.Provider, { value: s, children: l }) }),
     });
@@ -505,20 +504,20 @@ function q(e) {
             videoTitle: u ? "Test Portrait Video" : "Test Landscape Video",
             transcript: "transcript.txt",
         }),
-        h = W(m),
-        x = i.useRef(!1);
-    (x.current || ((x.current = !0), C.Kr.getState().clearState()),
-        n && (h.config.features = [M.Li.FULL_EPISODE_VIDEO_QUEST]));
+        x = W(m),
+        h = i.useRef(!1);
+    (h.current || ((h.current = !0), C.Kr.getState().clearState()),
+        n && (x.config.features = [M.Li.FULL_EPISODE_VIDEO_QUEST]));
     let g = l
         ? {
-              ...h,
+              ...x,
               userStatus: B({
-                  enrolledAt: h.userStatus?.enrolledAt ?? null,
-                  completedAt: h.userStatus?.enrolledAt ?? null,
+                  enrolledAt: x.userStatus?.enrolledAt ?? null,
+                  completedAt: x.userStatus?.enrolledAt ?? null,
                   streamProgressSeconds: m.target,
               }),
           }
-        : h;
+        : x;
     return (0, o.jsx)("div", {
         style: {
             display: "flex",
@@ -621,8 +620,8 @@ function X(e) {
             transcript: "transcript.txt",
         }),
         m = W(c),
-        h = i.useRef(!1);
-    (h.current || ((h.current = !0), C.Kr.getState().clearState()),
+        x = i.useRef(!1);
+    (x.current || ((x.current = !0), C.Kr.getState().clearState()),
         i.useEffect(() => {
             let e = document.querySelector('[data-testid="discord-web-video-player-video"]');
             if (null != e)
@@ -637,7 +636,7 @@ function X(e) {
             }
         }, []),
         n && (m.config.features = [M.Li.FULL_EPISODE_VIDEO_QUEST]));
-    let x = l
+    let h = l
         ? {
               ...m,
               userStatus: B({
@@ -652,7 +651,7 @@ function X(e) {
             (0, o.jsx)("div", {
                 style: J(u, p),
                 children: (0, o.jsx)(H, {
-                    quest: x,
+                    quest: h,
                     isPortrait: p,
                     children: (0, o.jsx)(_.A, {
                         targetTimeSec: c.target,
@@ -691,7 +690,7 @@ let Z = { label: "Full Episode (shows reward indicator)", type: "boolean", defau
                     {
                         name: "Multi Video (POV switching)",
                         id: "multi-video-player",
-                        docs: "Demonstrates `renderVideo`. The player is handed a renderer that mounts several clips as one continuous timeline \u2014 its scrubber, clock and seek buttons keep working in master-timeline seconds, and it is told nothing about the extra sources. Pick a POV circle to switch; playback returns to the original when a clip runs out or you seek outside its window. The grid chip below the circles lays every source out at once \u2014 the original keeps driving the timeline and the sound, the rest follow it muted, and a clip the playhead has not reached yet sits blurred behind a countdown. Tapping the chip again restores the POV it was opened from.",
+                        docs: "Demonstrates `renderVideo`. The player is handed a renderer that mounts several clips as one continuous timeline \u2014 its scrubber, clock and seek buttons keep working in master-timeline seconds, and it is told nothing about the extra sources. Pick a POV circle to switch; playback returns to the original when a clip runs out or you seek outside its window.",
                         component: function (e) {
                             let {
                                     orientation: t,
@@ -701,11 +700,10 @@ let Z = { label: "Full Episode (shows reward indicator)", type: "boolean", defau
                                     subUrl: r,
                                     clipAStartSec: s,
                                     clipADurationSec: m,
-                                    clipBStartSec: h,
-                                    clipBDurationSec: x,
-                                    suppressSourceSelection: g,
+                                    clipBStartSec: x,
+                                    clipBDurationSec: h,
                                 } = e,
-                                b = i.useMemo(
+                                g = i.useMemo(
                                     () => ({
                                         id: "original",
                                         url: l,
@@ -715,7 +713,7 @@ let Z = { label: "Full Episode (shows reward indicator)", type: "boolean", defau
                                     }),
                                     [l, n],
                                 ),
-                                f = i.useMemo(
+                                b = i.useMemo(
                                     () => [
                                         {
                                             id: "clip-a",
@@ -728,15 +726,14 @@ let Z = { label: "Full Episode (shows reward indicator)", type: "boolean", defau
                                         {
                                             id: "clip-b",
                                             url: r,
-                                            startSec: h,
-                                            durationSec: x,
+                                            startSec: x,
+                                            durationSec: h,
                                             poster: "https://cdn.discordapp.com/assets/activities/platform/activities_pipfab_tutorial_redesign.png",
                                             owner: { avatarUrl: p.A.DEFAULT_AVATARS["2"], name: "Nelly" },
                                         },
                                     ],
-                                    [r, s, m, h, x],
-                                ),
-                                [y, v] = i.useState(!1);
+                                    [r, s, m, x, h],
+                                );
                             return (0, o.jsx)("div", {
                                 style: {
                                     maxWidth: "landscape" === t ? "800px" : void 0,
@@ -753,17 +750,9 @@ let Z = { label: "Full Episode (shows reward indicator)", type: "boolean", defau
                                         parentTransitionState: d.ip.ENTERED,
                                         orientation: t,
                                         autoplay: a,
-                                        src: b.url,
-                                        poster: b.poster,
-                                        renderVideo: (e) =>
-                                            (0, o.jsx)(c.A, {
-                                                ...e,
-                                                isGridView: y,
-                                                setIsGridView: v,
-                                                original: b,
-                                                subSources: f,
-                                                suppressSourceSelection: g,
-                                            }),
+                                        src: g.url,
+                                        poster: g.poster,
+                                        renderVideo: (e) => (0, o.jsx)(c.A, { ...e, original: g, subSources: b }),
                                     },
                                     `${l}-${n}`,
                                 ),
