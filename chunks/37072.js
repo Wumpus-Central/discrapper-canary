@@ -1,9 +1,9 @@
-(a.r(t), a.d(t, { playgroundConfig: () => L, guildSpaceCollection: () => k }));
+(a.r(t), a.d(t, { playgroundConfig: () => H, guildSpaceCollection: () => U }));
 var l = a(477900),
-    s = a(582128),
-    r = a(503698),
-    i = a.n(r),
-    n = a(834730),
+    r = a(582128),
+    s = a(503698),
+    n = a.n(s),
+    i = a(834730),
     o = a(872188),
     d = a(450284);
 let u = {
@@ -15,10 +15,10 @@ let u = {
             docs: "The admin-only bar shown while a hub is unpublished; members can't reach a draft hub at all. Publishing is what reveals the tab to the rest of the server, and it unmounts the notice \u2014 the success case swaps in a placeholder because the real page stops rendering it. Success also fires a screen-reader announcement, since a bar disappearing is otherwise silent. No control triggers a real request.",
             component: function (e) {
                 let { width: t, outcome: a } = e,
-                    [r, u] = s.useState(!1),
-                    [c, p] = s.useState(a);
-                c !== a && (p(a), u(!1));
-                let h = s.useCallback(() => {
+                    [s, u] = r.useState(!1),
+                    [c, m] = r.useState(a);
+                c !== a && (m(a), u(!1));
+                let h = r.useCallback(() => {
                     switch (a) {
                         case "success":
                             return (u(!0), Promise.resolve());
@@ -29,9 +29,9 @@ let u = {
                     }
                 }, [a]);
                 return (0, l.jsx)("div", {
-                    className: i()(d.frame, d[t]),
-                    children: r
-                        ? (0, l.jsx)(n.E, {
+                    className: n()(d.frame, d[t]),
+                    children: s
+                        ? (0, l.jsx)(i.E, {
                               variant: "text-sm/normal",
                               color: "text-muted",
                               children:
@@ -65,42 +65,42 @@ let u = {
     ],
 };
 var c = a(228366),
-    p = a(593673),
+    m = a(593673),
     h = a(518782),
-    m = a(529609);
+    p = a(529609);
 let g = 0;
 function v(e, t, a, l) {
-    let s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
+    let r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
     return {
         id: e,
         type: t,
         default_title: null,
         position: { column: a, order: l },
-        config: { type: t, ...s },
-        requires_hydration: t === p.a.LEADERBOARD,
+        config: { type: t, ...r },
+        requires_hydration: t === m.a.LEADERBOARD,
         locked: !1,
     };
 }
 var b = a(81253);
 let _ = [
-        v("left-2", p.a.LEADERBOARD, 0, 1, { heading: "Top chatters this week" }),
-        v("right-1", p.a.LEADERBOARD, 1, 0, { heading: "Top boosters" }),
-        v("left-1", p.a.IMAGE_TEXT, 0, 0, {
+        v("left-2", m.a.LEADERBOARD, 0, 1, { heading: "Top chatters this week" }),
+        v("right-1", m.a.LEADERBOARD, 1, 0, { heading: "Top boosters" }),
+        v("left-1", m.a.IMAGE_TEXT, 0, 0, {
             title: "Welcome to the server",
             body: "Drop in, say hi, and check the pinned posts for the rules and event schedule.",
             imageUrl: "https://placehold.co/640x180",
             imageAlt: "Server banner placeholder",
         }),
-        v("right-2", p.a.IMAGE_TEXT, 1, 1, { title: "Events", body: "Game night every Friday." }),
+        v("right-2", m.a.IMAGE_TEXT, 1, 1, { title: "Events", body: "Game night every Friday." }),
     ],
-    y = _.filter((e) => {
+    f = _.filter((e) => {
         let { requires_hydration: t } = e;
         return t;
     }).map((e) => {
         let { id: t } = e;
         return t;
     }),
-    f = {
+    y = {
         stat: h.R.GAMING_LEADERBOARD_STAT_HOURS_PLAYED,
         week_start_ts: 1756512e3,
         next_stat: h.R.GAMING_LEADERBOARD_STAT_DAYS_PLAYED,
@@ -119,7 +119,7 @@ let _ = [
             { user_id: "3", name: "nelly", value: 2715, rank: 3, application_ids: ["2"], time_played_seconds: 4100 },
         ],
     },
-    w = {
+    x = {
         title: "Server Hub Page",
         stories: [
             {
@@ -128,21 +128,21 @@ let _ = [
                 docs: "Read-only hub layout. Widgets are placed by position.column then position.order (the mock set is deliberately out of array order). Wide renders 2fr/1fr; narrow collapses to one column with the left column first. The hydration control drives the real GuildSpaceHydrationStore: ImageText never hydrates, the leaderboards do.",
                 component: function (e) {
                     let t,
-                        { width: a, hydration: r } = e,
-                        n =
-                            ((t = `guild-space-story-${r}`),
-                            s.useEffect(() => {
+                        { width: a, hydration: s } = e,
+                        i =
+                            ((t = `guild-space-story-${s}`),
+                            r.useEffect(() => {
                                 let e = g++;
                                 if (
                                     (c.h.dispatch({
                                         type: "GUILD_SPACE_HYDRATE_START",
                                         guildId: t,
                                         requestId: e,
-                                        widgetIds: y,
+                                        widgetIds: f,
                                     }),
-                                    "loading" !== r)
+                                    "loading" !== s)
                                 ) {
-                                    if ("error" === r)
+                                    if ("error" === s)
                                         return void c.h.dispatch({
                                             type: "GUILD_SPACE_HYDRATE_FAILURE",
                                             guildId: t,
@@ -153,17 +153,17 @@ let _ = [
                                         type: "GUILD_SPACE_HYDRATE_SUCCESS",
                                         guildId: t,
                                         requestId: e,
-                                        widgets: y.map((e) => ({
+                                        widgets: f.map((e) => ({
                                             id: e,
-                                            data: "success" === r ? { type: p.a.LEADERBOARD, ...f } : null,
+                                            data: "success" === s ? { type: m.a.LEADERBOARD, ...y } : null,
                                         })),
                                     });
                                 }
-                            }, [t, r]),
+                            }, [t, s]),
                             t);
                     return (0, l.jsx)("div", {
-                        className: i()(b.frame, b[a]),
-                        children: (0, l.jsx)(m.A, { canEdit: !0, guildId: n, widgets: _ }),
+                        className: n()(b.frame, b[a]),
+                        children: (0, l.jsx)(p.A, { canEdit: !0, guildId: i, widgets: _ }),
                     });
                 },
                 controls: {
@@ -194,21 +194,67 @@ let _ = [
             },
         ],
     };
-var E = a(539888),
-    A = a(546184);
-function S(e) {
-    let { label: t, className: a, children: s } = e;
+var w = a(17928),
+    E = a(287809),
+    A = a(539888),
+    S = a(845021);
+let D = "leaderboard-fixture-guild",
+    R = [
+        "wumpus",
+        "clyde",
+        "nelly",
+        "gigi",
+        "arcadia",
+        "bramble",
+        "pixelpanda",
+        "quasar",
+        "ravenwing",
+        "sundrop",
+        "thistle",
+        "umbra",
+        "vellum",
+        "wisp",
+        "xenon",
+        "yarrow",
+        "zephyr",
+        "aurora",
+        "basalt",
+        "cinder",
+        "dahlia",
+        "ember",
+    ];
+function j(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+    return {
+        stat: h.R.GAMING_LEADERBOARD_STAT_HOURS_PLAYED,
+        week_start_ts: 0,
+        entries: e,
+        next_stat: h.R.GAMING_LEADERBOARD_STAT_DAYS_PLAYED,
+        previous_winner: "1",
+        streak_count: 1,
+        ...t,
+    };
+}
+let T = j([]);
+var N = a(546184);
+let k = v("leaderboard", m.a.LEADERBOARD, 0, 0);
+function L(e) {
+    let { children: t } = e;
+    return (0, l.jsx)("div", { className: `${N.Gt} ${N.U}`, children: t });
+}
+function P(e) {
+    let { label: t, className: a, children: r } = e;
     return (0, l.jsxs)("div", {
-        className: `${A.Gt} ${a}`,
-        children: [(0, l.jsx)(n.E, { variant: "text-xs/medium", color: "text-muted", children: t }), s],
+        className: `${N.Gt} ${a}`,
+        children: [(0, l.jsx)(i.E, { variant: "text-xs/medium", color: "text-muted", children: t }), r],
     });
 }
-function x(e) {
-    let { mode: t, hydration: a, type: r, initialConfig: i, successData: n } = e,
-        [o, d] = s.useState(i),
-        u = (0, l.jsx)(E.P, {
+function I(e) {
+    let { mode: t, hydration: a, type: s, initialConfig: n, successData: i } = e,
+        [o, d] = r.useState(n),
+        u = (0, l.jsx)(A.P, {
             guildId: "widget-slot-story-guild",
-            widget: { id: "1", type: r, config: o },
+            widget: { id: "1", type: s, config: o },
             guildSpaceMode: t,
             hydration: (function (e, t) {
                 switch (e) {
@@ -219,24 +265,24 @@ function x(e) {
                     default:
                         return { status: e };
                 }
-            })(a, n),
+            })(a, i),
             onRemove: () => {},
             onCommitConfig: d,
         });
     return (0, l.jsxs)("div", {
-        className: A.Zp,
+        className: N.Zp,
         children: [
-            (0, l.jsx)(S, { label: "Narrow column (380px)", className: A.sc, children: u }),
-            (0, l.jsx)(S, { label: "Wide column (685px)", className: A.U, children: u }),
+            (0, l.jsx)(P, { label: "Narrow column (380px)", className: N.sc, children: u }),
+            (0, l.jsx)(P, { label: "Wide column (685px)", className: N.U, children: u }),
         ],
     });
 }
-let D = {
+let M = {
         text: "Drop in, say hi, and check the pinned posts for the rules and event schedule.",
         image_hash: "some_hash",
     },
-    R = {},
-    T = {
+    G = {},
+    C = {
         stat: h.R.GAMING_LEADERBOARD_STAT_HOURS_PLAYED,
         week_start_ts: 1756512e3,
         next_stat: h.R.GAMING_LEADERBOARD_STAT_DAYS_PLAYED,
@@ -263,11 +309,11 @@ let D = {
             },
         ],
     },
-    k = {
+    U = {
         id: "guild-space",
         name: "Server Hub",
         groups: [
-            w,
+            x,
             u,
             {
                 title: "Server Hub Widget Framework",
@@ -277,11 +323,11 @@ let D = {
                         id: "guild-space-widget-slot-image-text",
                         docs: "ImageText reference widget (no hydration) across view/edit and each mock hydration state. In edit mode the pencil opens the framework-owned Edit modal; Save commits config through onCommitConfig, Cancel/close discards.",
                         component: function (e) {
-                            return (0, l.jsx)(x, {
+                            return (0, l.jsx)(I, {
                                 ...e,
-                                type: p.a.IMAGE_TEXT,
+                                type: m.a.IMAGE_TEXT,
                                 title: "Image + Text",
-                                initialConfig: D,
+                                initialConfig: M,
                                 successData: void 0,
                             });
                         },
@@ -314,12 +360,12 @@ let D = {
                         id: "guild-space-widget-slot-leaderboard",
                         docs: "Leaderboard reference widget (hydrated) rendering content from the mock data prop on success, and the widget-owned loading/error states otherwise. The pencil opens the framework-owned Edit modal for its config.",
                         component: function (e) {
-                            return (0, l.jsx)(x, {
+                            return (0, l.jsx)(I, {
                                 ...e,
-                                type: p.a.LEADERBOARD,
+                                type: m.a.LEADERBOARD,
                                 title: "Leaderboard",
-                                initialConfig: R,
-                                successData: T,
+                                initialConfig: G,
+                                successData: C,
                             });
                         },
                         controls: {
@@ -348,7 +394,73 @@ let D = {
                     },
                 ],
             },
+            {
+                title: "Server Hub Leaderboard",
+                stories: [
+                    {
+                        name: "Rows",
+                        id: "guild-space-leaderboard-rows",
+                        component: function (e) {
+                            let t,
+                                { rowCount: a, viewerPlace: s } = e,
+                                n =
+                                    ((t = (0, w.bG)([E.default], () => E.default.getCurrentUser()?.id)),
+                                    r.useMemo(() => {
+                                        let e = Math.min(S.c, Math.max(1, Math.round(a))),
+                                            l = Math.min(e, Math.max(1, Math.round(s))),
+                                            r = Array.from({ length: e }, (e, t) =>
+                                                (function (e) {
+                                                    let { rank: t, ...a } = e;
+                                                    return {
+                                                        user_id: String(t),
+                                                        name: R[(t - 1) % R.length],
+                                                        value: Math.max(1, 500 - 20 * t),
+                                                        rank: t,
+                                                        application_ids: ["1"],
+                                                        time_played_seconds: Math.max(600, 4e4 - 1500 * t),
+                                                        ...a,
+                                                    };
+                                                })({ rank: t + 1, application_ids: ["1", "2"].slice(0, (t % 2) + 1) }),
+                                            );
+                                        return (null != t && (r[l - 1] = { ...r[l - 1], user_id: t }), j(r));
+                                    }, [t, a, s]));
+                            return (0, l.jsx)("div", {
+                                className: N.Zp,
+                                children: (0, l.jsx)(L, {
+                                    children: (0, l.jsx)(A.P, {
+                                        guildId: D,
+                                        widget: k,
+                                        guildSpaceMode: "view",
+                                        hydration: { status: "success", data: n },
+                                    }),
+                                }),
+                            });
+                        },
+                        controls: {
+                            rowCount: { label: "Total rows [1, 20]", type: "number", defaultValue: 20 },
+                            viewerPlace: { label: "Viewer ranking [1, rowCount]", type: "number", defaultValue: 1 },
+                        },
+                    },
+                    {
+                        name: "Empty leaderboard",
+                        id: "guild-space-leaderboard-empty-fixture",
+                        component: function () {
+                            return (0, l.jsx)("div", {
+                                className: N.Zp,
+                                children: (0, l.jsx)(L, {
+                                    children: (0, l.jsx)(A.P, {
+                                        guildId: D,
+                                        widget: k,
+                                        guildSpaceMode: "view",
+                                        hydration: { status: "success", data: T },
+                                    }),
+                                }),
+                            });
+                        },
+                    },
+                ],
+            },
         ],
         tags: ["Server Hub", "Widgets", "GuildSpace", "Publish"],
     },
-    L = { playgroundBaseUrl: "guild-space", collections: [k] };
+    H = { playgroundBaseUrl: "guild-space", collections: [U] };

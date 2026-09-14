@@ -3267,7 +3267,7 @@ async function s() {
             await Promise.all([
                 n.e("65764"),
                 n.e("265708"),
-                n.e("821325"),
+                n.e("520909"),
                 n.e("142753"),
                 n.e("186856"),
                 n.e("936875"),
@@ -3296,8 +3296,8 @@ async function s() {
                 n.e("503853"),
                 n.e("553465"),
                 n.e("486032"),
-                n.e("972580"),
-            ]).then(n.bind(n, 863212))
+                n.e("822089"),
+            ]).then(n.bind(n, 37072))
         ).playgroundConfig,
         (
             await Promise.all([
