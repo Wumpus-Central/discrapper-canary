@@ -11,8 +11,8 @@ var s = a(477900),
     p = a(192308),
     d = a(403581),
     E = a(866665),
-    m = a(939249),
-    A = a(812993),
+    A = a(939249),
+    m = a(812993),
     y = a(844222),
     I = a(866323),
     R = a(717421),
@@ -23,8 +23,8 @@ var s = a(477900),
     S = a(82498),
     h = a(287809),
     U = a(174459),
-    N = a(158045),
-    D = a(650338),
+    D = a(158045),
+    N = a(650338),
     f = a(821715),
     C = a(652215),
     M = a(202541),
@@ -55,19 +55,19 @@ function W(e) {
         { analyticsLocations: v } = (0, T.Ay)(),
         g = null != (0, f.A)(n);
     try {
-        t = (0, D.HB)(V);
+        t = (0, N.HB)(V);
     } catch (e) {
         t = !1;
     }
     try {
-        r = (0, D.OI)(V);
+        r = (0, N.OI)(V);
     } catch (e) {
         r = !1;
     }
     let w = t || r,
         { location: H } = (0, x.p)(),
         G = (0, o.bG)([h.default], () => h.default.getCurrentUser()),
-        W = c && !N.Ay.isPremium(G, M.PremiumTypes.TIER_1) && !N.Ay.canStreamQuality(N.Ay.StreamQuality.MID, G),
+        W = c && !D.Ay.isPremium(G, M.PremiumTypes.TIER_1) && !D.Ay.canStreamQuality(D.Ay.StreamQuality.MID, G),
         Y = l.useCallback(() => {
             W &&
                 w &&
@@ -97,18 +97,18 @@ function W(e) {
         $ = (0, s.jsxs)(s.Fragment, {
             children: [
                 w ? (0, s.jsx)(d.t, { size: "md", color: "currentColor", className: b.fY }) : null,
-                (0, s.jsx)("span", { className: b.UD, children: (0, D.ME)(V.maxResolution) }),
-                (0, s.jsx)("span", { children: (0, D.Bs)(V.maxFrameRate) }),
+                (0, s.jsx)("span", { className: b.UD, children: (0, N.ME)(V.maxResolution) }),
+                (0, s.jsx)("span", { children: (0, N.Bs)(V.maxFrameRate) }),
             ],
         }),
         z = (0, s.jsx)(E.m, {
             text: g ? P.intl.string(P.t.q8TiVt) : w ? P.intl.string(P.t.IHgpEn) : P.intl.string(P.t.vLb0VW),
             position: "bottom",
             children: F
-                ? (0, s.jsx)(m.D, { onClick: Y, className: Q, children: $ })
+                ? (0, s.jsx)(A.D, { onClick: Y, className: Q, children: $ })
                 : (0, s.jsx)("span", { className: Q, children: $ }),
         });
-    return (0, s.jsx)(A.Lp, {
+    return (0, s.jsx)(m.Lp, {
         text: z,
         className: i()(j, b.AA, { [b.Dc]: w && k }),
         color: _.A.unsafe_rawColors.PRIMARY_500.css,
@@ -118,15 +118,15 @@ function W(e) {
 let Y = (e) => {
     let { participant: t, showQuality: a, isUpsellEnabled: r = !0, size: c, className: o, premiumIndicator: _ } = e,
         [u, p] = l.useState(!1),
-        d = (0, D.N5)(t),
+        d = (0, N.N5)(t),
         { reducedMotion: E } = l.useContext(y.C),
-        m = a && null != d,
+        A = a && null != d,
         x = (0, I.p)(
-            m,
+            A,
             { enter: { from: E.enabled ? v : k, to: E.enabled ? g : V }, leave: E.enabled ? v : k, config: G },
             "animate-always",
         ),
-        T = (0, R.z)({ to: m ? H : w, config: G }, "animate-always");
+        T = (0, R.z)({ to: A ? H : w, config: G }, "animate-always");
     return ((e) => {
         let { className: a, popoutProps: l } = e;
         return (0, s.jsxs)("div", {
@@ -138,10 +138,9 @@ let Y = (e) => {
                         ? (0, s.jsx)(n.animated.div, {
                               style: e,
                               children: (0, s.jsx)(W, {
-                                  className: b.LZ,
                                   participant: t,
                                   size: c,
-                                  shape: A.EG.ROUND_LEFT,
+                                  shape: m.EG.ROUND_LEFT,
                                   isUpsellEnabled: r,
                                   didTrackUpsellViewed: u,
                                   setDidTrackUpsellViewed: p,
@@ -154,7 +153,7 @@ let Y = (e) => {
                 (0, s.jsx)(n.animated.div, {
                     style: T,
                     className: b.Ok,
-                    children: (0, s.jsx)(L.Ay, { look: L.gv.RED, size: c, shape: m ? A.EG.ROUND_RIGHT : A.EG.ROUND }),
+                    children: (0, s.jsx)(L.Ay, { look: L.gv.RED, size: c, shape: A ? m.EG.ROUND_RIGHT : m.EG.ROUND }),
                 }),
             ],
         });

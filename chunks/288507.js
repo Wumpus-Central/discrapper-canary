@@ -1,4 +1,4 @@
-t.exports = {
+a.exports = {
     t5: "qualityIndicator__30845",
     vk: "clickable__30845",
     Lc: "qualityIndicatorFullQuality__30845",
@@ -9,5 +9,4 @@ t.exports = {
     Dc: "qualityIndicatorBadgePremium__30845",
     dr: "streamQualityIndicator__30845",
     Ok: "liveIndicator__30845",
-    LZ: "liveQualityIndicator__30845",
 };
