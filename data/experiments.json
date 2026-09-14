@@ -78,23 +78,6 @@
     ]
   },
   {
-    "kind": "user",
-    "id": "2022-03_block_russian_purchases",
-    "label": "Block purchases based on country",
-    "defaultConfig": {
-      "paymentsBlocked": false
-    },
-    "treatments": [
-      {
-        "id": 1,
-        "label": "Payments Blocked",
-        "config": {
-          "paymentsBlocked": true
-        }
-      }
-    ]
-  },
-  {
     "id": "2022-07_voice_in_threads",
     "label": "Voice in Threads",
     "kind": "guild",

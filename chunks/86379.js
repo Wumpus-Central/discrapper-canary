@@ -1,28 +1,18 @@
-n.d(t, { Hp: () => o, dw: () => d });
-var i = n(600975),
-    r = n(945810),
-    a = n(477421);
-let s = (0, i.C)({
-        kind: "user",
-        id: "2022-03_block_russian_purchases",
-        label: "Block purchases based on country",
-        defaultConfig: { paymentsBlocked: !1 },
-        treatments: [{ id: 1, label: "Payments Blocked", config: { paymentsBlocked: !0 } }],
-    }),
-    l = (0, r.mj)({
-        name: "2026-03-block-purchases",
-        kind: "user",
-        defaultConfig: { enabled: !1 },
-        variations: { 1: { enabled: !0 } },
-    });
-function o() {
-    let { paymentsBlocked: e } = s.useExperiment({ location: "c519a9_1" }, { autoTrackExposure: !1 }),
-        { enabled: t } = l.useConfig({ location: "c519a9_1" }),
-        { defaultBillingCountryCode: n } = (0, a.A)();
-    return e || t || "RU" === n;
+n.d(t, { Hp: () => s, dw: () => l });
+var i = n(945810),
+    r = n(477421);
+let a = (0, i.mj)({
+    name: "2026-03-block-purchases",
+    kind: "user",
+    defaultConfig: { enabled: !1 },
+    variations: { 1: { enabled: !0 } },
+});
+function s() {
+    let { enabled: e } = a.useConfig({ location: "c519a9_1" }),
+        { defaultBillingCountryCode: t } = (0, r.A)();
+    return e || "RU" === t;
 }
-function d() {
-    let { paymentsBlocked: e } = s.useExperiment({ location: "dc120b_3" }, { autoTrackExposure: !1 }),
-        { enabled: t } = l.useConfig({ location: "dc120b_3" });
-    return e || t;
+function l() {
+    let { enabled: e } = a.useConfig({ location: "dc120b_3" });
+    return e;
 }
