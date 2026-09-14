@@ -117,7 +117,7 @@ let O = new C(s.h, {
         }
         if (n === u.f.OUTPUT || n === u.f.INPUT_AND_OUTPUT) {
             let e = f[t];
-            s.h.wait(() => l.A.setOutputDevice(e, { location: i }));
+            null != e && s.h.wait(() => l.A.setOutputDevice(e, { location: i }));
         }
         p = {};
     },
