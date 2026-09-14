@@ -746,6 +746,10 @@
     padding: 2px var(--space-8)
 }
 
+.mana-type-consolidation .badge__9b718>[data-text-variant=eyebrow] {
+    text-transform: uppercase
+}
+
 .clickable__9b718 {
     cursor: pointer
 }
@@ -889,4 +893,4 @@
     margin-bottom: 0
 }
 
-/*# sourceMappingURL=9daf3daa4d96b015.css.map*/
+/*# sourceMappingURL=04e96c005c701ed5.css.map*/
