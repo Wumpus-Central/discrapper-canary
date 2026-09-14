@@ -111,6 +111,7 @@
 }
 
 .directoryContent__6db38 {
+    --custom-badge-directory-content-padding-inline: var(--space-24);
     display: flex;
     flex: 1;
     flex-direction: column;
@@ -120,13 +121,17 @@
     overflow-y: auto;
     padding-block-end: var(--space-24);
     padding-block-start: var(--space-4);
-    padding-inline: var(--space-24)
+    padding-inline: var(--custom-badge-directory-content-padding-inline)
 }
 
 @media (max-width:485px) {
     .directoryContent__6db38 {
-        padding-inline: var(--space-16)
+        --custom-badge-directory-content-padding-inline: var(--space-16)
     }
+}
+
+.has-webkit-scrollbar .directoryContent__6db38 {
+    padding-inline-end: calc(var(--custom-badge-directory-content-padding-inline) - var(--space-8))
 }
 
 .badgeSection__6db38 {
@@ -150,10 +155,10 @@
     cursor: pointer;
     display: flex;
     flex-shrink: 0;
-    height: 60px;
+    height: 62px;
     justify-content: center;
     position: relative;
-    width: 60px
+    width: 62px
 }
 
 .badgeSlot__6db38:hover {
@@ -594,4 +599,4 @@
     display: block
 }
 
-/*# sourceMappingURL=3e4f99e6a709239d.css.map*/
+/*# sourceMappingURL=bb80c3236c7b9ca1.css.map*/
