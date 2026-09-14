@@ -9,9 +9,9 @@ var s,
     h,
     c,
     f = {};
-(r.r(f), r.d(f, { decode: () => _, encode: () => m, format: () => b, parse: () => z }));
+(r.r(f), r.d(f, { decode: () => _, encode: () => R, format: () => b, parse: () => z }));
 var p = {};
-(r.r(p), r.d(p, { Any: () => J, Cc: () => j, Cf: () => T, P: () => I, S: () => S, Z: () => L }));
+(r.r(p), r.d(p, { Any: () => j, Cc: () => J, Cf: () => T, P: () => I, S: () => S, Z: () => M }));
 let d = {};
 function g(e, t) {
     "string" != typeof t && (t = g.defaultChars);
@@ -77,13 +77,13 @@ function g(e, t) {
 }
 ((g.defaultChars = ";/?:@&=+$,#"), (g.componentChars = ""));
 let _ = g,
-    R = {};
+    m = {};
 function k(e, t, r) {
     ("string" != typeof t && ((r = t), (t = k.defaultChars)), void 0 === r && (r = !0));
     let n = (function (e) {
-            let t = R[e];
+            let t = m[e];
             if (t) return t;
-            t = R[e] = [];
+            t = m[e] = [];
             for (let e = 0; e < 128; e++) {
                 let r = String.fromCharCode(e);
                 /^[0-9a-z]$/i.test(r) ? t.push(r) : t.push("%" + ("0" + e.toString(16).toUpperCase()).slice(-2));
@@ -118,7 +118,7 @@ function k(e, t, r) {
     return s;
 }
 ((k.defaultChars = ";/?:@&=+$,-_.!~*'()#"), (k.componentChars = "-_.!~*'()"));
-let m = k;
+let R = k;
 function b(e) {
     let t = "";
     return (
@@ -236,32 +236,32 @@ let z = function (e, t) {
         let r = new D();
         return (r.parse(e, t), r);
     },
-    J =
+    j =
         /[\0-\uD7FF\uE000-\uFFFF]|[\uD800-\uDBFF][\uDC00-\uDFFF]|[\uD800-\uDBFF](?![\uDC00-\uDFFF])|(?:[^\uD800-\uDBFF]|^)[\uDC00-\uDFFF]/,
-    j = /[\0-\x1F\x7F-\x9F]/,
+    J = /[\0-\x1F\x7F-\x9F]/,
     T =
         /[\xAD\u0600-\u0605\u061C\u06DD\u070F\u0890\u0891\u08E2\u180E\u200B-\u200F\u202A-\u202E\u2060-\u2064\u2066-\u206F\uFEFF\uFFF9-\uFFFB]|\uD804[\uDCBD\uDCCD]|\uD80D[\uDC30-\uDC3F]|\uD82F[\uDCA0-\uDCA3]|\uD834[\uDD73-\uDD7A]|\uDB40[\uDC01\uDC20-\uDC7F]/,
     I =
         /[!-#%-\*,-\/:;\?@\[-\]_\{\}\xA1\xA7\xAB\xB6\xB7\xBB\xBF\u037E\u0387\u055A-\u055F\u0589\u058A\u05BE\u05C0\u05C3\u05C6\u05F3\u05F4\u0609\u060A\u060C\u060D\u061B\u061D-\u061F\u066A-\u066D\u06D4\u0700-\u070D\u07F7-\u07F9\u0830-\u083E\u085E\u0964\u0965\u0970\u09FD\u0A76\u0AF0\u0C77\u0C84\u0DF4\u0E4F\u0E5A\u0E5B\u0F04-\u0F12\u0F14\u0F3A-\u0F3D\u0F85\u0FD0-\u0FD4\u0FD9\u0FDA\u104A-\u104F\u10FB\u1360-\u1368\u1400\u166E\u169B\u169C\u16EB-\u16ED\u1735\u1736\u17D4-\u17D6\u17D8-\u17DA\u1800-\u180A\u1944\u1945\u1A1E\u1A1F\u1AA0-\u1AA6\u1AA8-\u1AAD\u1B4E\u1B4F\u1B5A-\u1B60\u1B7D-\u1B7F\u1BFC-\u1BFF\u1C3B-\u1C3F\u1C7E\u1C7F\u1CC0-\u1CC7\u1CD3\u2010-\u2027\u2030-\u2043\u2045-\u2051\u2053-\u205E\u207D\u207E\u208D\u208E\u2308-\u230B\u2329\u232A\u2768-\u2775\u27C5\u27C6\u27E6-\u27EF\u2983-\u2998\u29D8-\u29DB\u29FC\u29FD\u2CF9-\u2CFC\u2CFE\u2CFF\u2D70\u2E00-\u2E2E\u2E30-\u2E4F\u2E52-\u2E5D\u3001-\u3003\u3008-\u3011\u3014-\u301F\u3030\u303D\u30A0\u30FB\uA4FE\uA4FF\uA60D-\uA60F\uA673\uA67E\uA6F2-\uA6F7\uA874-\uA877\uA8CE\uA8CF\uA8F8-\uA8FA\uA8FC\uA92E\uA92F\uA95F\uA9C1-\uA9CD\uA9DE\uA9DF\uAA5C-\uAA5F\uAADE\uAADF\uAAF0\uAAF1\uABEB\uFD3E\uFD3F\uFE10-\uFE19\uFE30-\uFE52\uFE54-\uFE61\uFE63\uFE68\uFE6A\uFE6B\uFF01-\uFF03\uFF05-\uFF0A\uFF0C-\uFF0F\uFF1A\uFF1B\uFF1F\uFF20\uFF3B-\uFF3D\uFF3F\uFF5B\uFF5D\uFF5F-\uFF65]|\uD800[\uDD00-\uDD02\uDF9F\uDFD0]|\uD801\uDD6F|\uD802[\uDC57\uDD1F\uDD3F\uDE50-\uDE58\uDE7F\uDEF0-\uDEF6\uDF39-\uDF3F\uDF99-\uDF9C]|\uD803[\uDD6E\uDEAD\uDED0\uDF55-\uDF59\uDF86-\uDF89]|\uD804[\uDC47-\uDC4D\uDCBB\uDCBC\uDCBE-\uDCC1\uDD40-\uDD43\uDD74\uDD75\uDDC5-\uDDC8\uDDCD\uDDDB\uDDDD-\uDDDF\uDE38-\uDE3D\uDEA9\uDFD4\uDFD5\uDFD7\uDFD8]|\uD805[\uDC4B-\uDC4F\uDC5A\uDC5B\uDC5D\uDCC6\uDDC1-\uDDD7\uDE41-\uDE43\uDE60-\uDE6C\uDEB9\uDF3C-\uDF3E]|\uD806[\uDC3B\uDD44-\uDD46\uDDE2\uDE3F-\uDE46\uDE9A-\uDE9C\uDE9E-\uDEA2\uDF00-\uDF09\uDFE1]|\uD807[\uDC41-\uDC45\uDC70\uDC71\uDEF7\uDEF8\uDF43-\uDF4F\uDFFF]|\uD809[\uDC70-\uDC74]|\uD80B[\uDFF1\uDFF2]|\uD81A[\uDE6E\uDE6F\uDEF5\uDF37-\uDF3B\uDF44]|\uD81B[\uDD6D-\uDD6F\uDE97-\uDE9A\uDFE2]|\uD82F\uDC9F|\uD836[\uDE87-\uDE8B]|\uD839\uDDFF|\uD83A[\uDD5E\uDD5F]/,
     S =
         /[\$\+<->\^`\|~\xA2-\xA6\xA8\xA9\xAC\xAE-\xB1\xB4\xB8\xD7\xF7\u02C2-\u02C5\u02D2-\u02DF\u02E5-\u02EB\u02ED\u02EF-\u02FF\u0375\u0384\u0385\u03F6\u0482\u058D-\u058F\u0606-\u0608\u060B\u060E\u060F\u06DE\u06E9\u06FD\u06FE\u07F6\u07FE\u07FF\u0888\u09F2\u09F3\u09FA\u09FB\u0AF1\u0B70\u0BF3-\u0BFA\u0C7F\u0D4F\u0D79\u0E3F\u0F01-\u0F03\u0F13\u0F15-\u0F17\u0F1A-\u0F1F\u0F34\u0F36\u0F38\u0FBE-\u0FC5\u0FC7-\u0FCC\u0FCE\u0FCF\u0FD5-\u0FD8\u109E\u109F\u1390-\u1399\u166D\u17DB\u1940\u19DE-\u19FF\u1B61-\u1B6A\u1B74-\u1B7C\u1FBD\u1FBF-\u1FC1\u1FCD-\u1FCF\u1FDD-\u1FDF\u1FED-\u1FEF\u1FFD\u1FFE\u2044\u2052\u207A-\u207C\u208A-\u208C\u20A0-\u20C1\u2100\u2101\u2103-\u2106\u2108\u2109\u2114\u2116-\u2118\u211E-\u2123\u2125\u2127\u2129\u212E\u213A\u213B\u2140-\u2144\u214A-\u214D\u214F\u218A\u218B\u2190-\u2307\u230C-\u2328\u232B-\u2429\u2440-\u244A\u249C-\u24E9\u2500-\u2767\u2794-\u27C4\u27C7-\u27E5\u27F0-\u2982\u2999-\u29D7\u29DC-\u29FB\u29FE-\u2B73\u2B76-\u2BFF\u2CE5-\u2CEA\u2E50\u2E51\u2E80-\u2E99\u2E9B-\u2EF3\u2F00-\u2FD5\u2FF0-\u2FFF\u3004\u3012\u3013\u3020\u3036\u3037\u303E\u303F\u309B\u309C\u3190\u3191\u3196-\u319F\u31C0-\u31E5\u31EF\u3200-\u321E\u322A-\u3247\u3250\u3260-\u327F\u328A-\u32B0\u32C0-\u33FF\u4DC0-\u4DFF\uA490-\uA4C6\uA700-\uA716\uA720\uA721\uA789\uA78A\uA828-\uA82B\uA836-\uA839\uAA77-\uAA79\uAB5B\uAB6A\uAB6B\uFB29\uFBB2-\uFBD2\uFD40-\uFD4F\uFD90\uFD91\uFDC8-\uFDCF\uFDFC-\uFDFF\uFE62\uFE64-\uFE66\uFE69\uFF04\uFF0B\uFF1C-\uFF1E\uFF3E\uFF40\uFF5C\uFF5E\uFFE0-\uFFE6\uFFE8-\uFFEE\uFFFC\uFFFD]|\uD800[\uDD37-\uDD3F\uDD79-\uDD89\uDD8C-\uDD8E\uDD90-\uDD9C\uDDA0\uDDD0-\uDDFC]|\uD802[\uDC77\uDC78\uDEC8]|\uD803[\uDD8E\uDD8F\uDED1-\uDED8]|\uD805\uDF3F|\uD807[\uDFD5-\uDFF1]|\uD81A[\uDF3C-\uDF3F\uDF45]|\uD82F\uDC9C|\uD833[\uDC00-\uDCEF\uDCFA-\uDCFC\uDD00-\uDEB3\uDEBA-\uDED0\uDEE0-\uDEF0\uDF50-\uDFC3]|\uD834[\uDC00-\uDCF5\uDD00-\uDD26\uDD29-\uDD64\uDD6A-\uDD6C\uDD83\uDD84\uDD8C-\uDDA9\uDDAE-\uDDEA\uDE00-\uDE41\uDE45\uDF00-\uDF56]|\uD835[\uDEC1\uDEDB\uDEFB\uDF15\uDF35\uDF4F\uDF6F\uDF89\uDFA9\uDFC3]|\uD836[\uDC00-\uDDFF\uDE37-\uDE3A\uDE6D-\uDE74\uDE76-\uDE83\uDE85\uDE86]|\uD838[\uDD4F\uDEFF]|\uD83B[\uDCAC\uDCB0\uDD2E\uDEF0\uDEF1]|\uD83C[\uDC00-\uDC2B\uDC30-\uDC93\uDCA0-\uDCAE\uDCB1-\uDCBF\uDCC1-\uDCCF\uDCD1-\uDCF5\uDD0D-\uDDAD\uDDE6-\uDE02\uDE10-\uDE3B\uDE40-\uDE48\uDE50\uDE51\uDE60-\uDE65\uDF00-\uDFFF]|\uD83D[\uDC00-\uDED8\uDEDC-\uDEEC\uDEF0-\uDEFC\uDF00-\uDFD9\uDFE0-\uDFEB\uDFF0]|\uD83E[\uDC00-\uDC0B\uDC10-\uDC47\uDC50-\uDC59\uDC60-\uDC87\uDC90-\uDCAD\uDCB0-\uDCBB\uDCC0\uDCC1\uDCD0-\uDCD8\uDD00-\uDE57\uDE60-\uDE6D\uDE70-\uDE7C\uDE80-\uDE8A\uDE8E-\uDEC6\uDEC8\uDECD-\uDEDC\uDEDF-\uDEEA\uDEEF-\uDEF8\uDF00-\uDF92\uDF94-\uDFEF\uDFFA]/,
-    L = /[ \xA0\u1680\u2000-\u200A\u2028\u2029\u202F\u205F\u3000]/,
-    M = [
+    M = /[ \xA0\u1680\u2000-\u200A\u2028\u2029\u202F\u205F\u3000]/,
+    $ = [
         8364, 0, 8218, 402, 8222, 8230, 8224, 8225, 710, 8240, 352, 8249, 338, 0, 381, 0, 0, 8216, 8217, 8220, 8221,
         8226, 8211, 8212, 732, 8482, 353, 8250, 339, 0, 382, 376,
     ],
-    q = (() => {
+    L = (() => {
         let e = new Uint8Array(127),
             t = 0;
         for (let r = 33; r <= 126; r++) 34 !== r && 36 !== r && 92 !== r && (e[r] = t++);
         return e;
     })(),
-    $ = (function (e) {
+    q = (function (e) {
         let t = e.length,
             r = 0,
             n = () => {
-                let t = q[e.charCodeAt(r++)];
-                return t < 61 ? t : 91 * t - 5490 + q[e.charCodeAt(r++)];
+                let t = L[e.charCodeAt(r++)];
+                return t < 61 ? t : 91 * t - 5490 + L[e.charCodeAt(r++)];
             },
             s = new Int32Array(2738);
         (s.fill(-1, 49, 61), s.fill(-1, 2725, 2738));
@@ -272,18 +272,18 @@ let z = function (e, t) {
                 i = n,
                 u = n + t;
             for (; i < u;) {
-                let t = q[e.charCodeAt(r++)];
+                let t = L[e.charCodeAt(r++)];
                 if (t < 89) ((a += t), (s[i++] = a));
                 else if (89 === t) {
-                    let t = q[e.charCodeAt(r++)] + 2;
+                    let t = L[e.charCodeAt(r++)] + 2;
                     for (; t--;) s[i++] = ++a;
                 } else {
-                    let t = q[e.charCodeAt(r++)];
+                    let t = L[e.charCodeAt(r++)];
                     ((a +=
                         89 +
                         (t < 90
-                            ? 91 * t + q[e.charCodeAt(r++)]
-                            : 8281 * q[e.charCodeAt(r++)] + 91 * q[e.charCodeAt(r++)] + q[e.charCodeAt(r++)])),
+                            ? 91 * t + L[e.charCodeAt(r++)]
+                            : 8281 * L[e.charCodeAt(r++)] + 91 * L[e.charCodeAt(r++)] + L[e.charCodeAt(r++)])),
                         (s[i++] = a));
                 }
             }
@@ -318,8 +318,8 @@ let z = function (e, t) {
         let d = new Uint16Array(13494),
             g = 0;
         for (; r < t;) {
-            let t = q[e.charCodeAt(r++)];
-            t >= 61 && (t = 91 * t - 5490 + q[e.charCodeAt(r++)]);
+            let t = L[e.charCodeAt(r++)];
+            t >= 61 && (t = 91 * t - 5490 + L[e.charCodeAt(r++)]);
             let n = s[t];
             if (n < 0) {
                 let e = a[t],
@@ -373,7 +373,7 @@ function X(e) {
         let s = e.length,
             a = 0,
             i = "",
-            u = $[0],
+            u = q[0],
             h = u & l.JUMP_TABLE,
             c = (u & l.BRANCH_LENGTH) >> 7;
         do {
@@ -420,7 +420,7 @@ function X(e) {
                                       : String.fromCodePoint(
                                             0 === e || (e >= 55296 && e <= 57343) || e > 1114111
                                                 ? 65533
-                                                : (e >= 128 && e <= 159 && M[e - 128]) || e,
+                                                : (e >= 128 && e <= 159 && $[e - 128]) || e,
                                         );
                               })(2097151 & r)));
             } else if (U(g)) {
@@ -428,12 +428,12 @@ function X(e) {
                 ((u = 0), (p = ""));
                 let n = g - h;
                 if (n >>> 0 < c) {
-                    let e = $[1 + n];
+                    let e = q[1 + n];
                     r = 0 === e ? -1 : (c + e) & 65535;
                 } else r = -1;
                 let a = 0,
                     i = 0,
-                    f = r < 0 ? 0 : $[r],
+                    f = r < 0 ? 0 : q[r],
                     _ = d + 1;
                 e: for (; _ < s;) {
                     for (; (f & (l.VALUE_LENGTH | l.FLAG13)) == 0 && (f & l.JUMP_TABLE) != 0;) {
@@ -445,11 +445,11 @@ function X(e) {
                         } else {
                             let s = e.charCodeAt(_) - t;
                             if (s >>> 0 >= n) break e;
-                            let a = $[r + 1 + s];
+                            let a = q[r + 1 + s];
                             if (0 === a) break e;
                             r = (r + n + a) & 65535;
                         }
-                        if (((f = $[r]), (_ += 1) >= s)) break e;
+                        if (((f = q[r]), (_ += 1) >= s)) break e;
                     }
                     if ((f & (l.VALUE_LENGTH | l.FLAG13)) === l.FLAG13) {
                         let t = (f & l.BRANCH_LENGTH) >> 7;
@@ -459,23 +459,23 @@ function X(e) {
                             s = r + 1,
                             a = 0;
                         for (; a + 1 < n; a += 2) {
-                            let t = $[s];
+                            let t = q[s];
                             if (e.charCodeAt(_) !== (255 & t) || ((_ += 1), e.charCodeAt(_) !== ((t >> 8) & 255)))
                                 break e;
                             ((_ += 1), (s += 1));
                         }
                         if (a < n) {
-                            if (e.charCodeAt(_) !== (255 & $[s])) break;
+                            if (e.charCodeAt(_) !== (255 & q[s])) break;
                             _ += 1;
                         }
-                        ((r += 1 + (t >> 1)), (f = $[r]));
+                        ((r += 1 + (t >> 1)), (f = q[r]));
                         continue;
                     }
                     let n = f >>> 14,
                         h = e.charCodeAt(_);
                     if (0 !== n) {
                         if (h === o.SEMI) {
-                            ((u = _ - d + 1), (p = 1 === n ? String.fromCharCode(f & l.VALUE_MASK) : N($, r, n)));
+                            ((u = _ - d + 1), (p = 1 === n ? String.fromCharCode(f & l.VALUE_MASK) : N(q, r, n)));
                             break;
                         }
                         if ((t || (f & l.FLAG13) != 0 || ((u = _ - d), (a = r), (i = n)), 1 === n)) break;
@@ -499,13 +499,13 @@ function X(e) {
                             if (s > n) break;
                         }
                         return -1;
-                    })($, f, r + (n || 1), h);
+                    })(q, f, r + (n || 1), h);
                     if (c < 0) break;
-                    ((f = $[(r = c)]), (_ += 1));
+                    ((f = q[(r = c)]), (_ += 1));
                 }
                 if ("" === p) {
                     let e = f >>> 14;
-                    (0 === e || t || (f & l.FLAG13) != 0 || ((u = _ - d), (a = r), (i = e)), u > 0 && (p = N($, a, i)));
+                    (0 === e || t || (f & l.FLAG13) != 0 || ((u = _ - d), (a = r), (i = e)), u > 0 && (p = N(q, a, i)));
                 }
             } else ((u = 0), (p = ""));
             (0 === u ||
@@ -522,9 +522,9 @@ function X(e) {
     })(e, !0, !1);
 }
 var Y = class {
-        src_Any = J.source;
-        src_Cc = j.source;
-        src_Z = L.source;
+        src_Any = j.source;
+        src_Cc = J.source;
+        src_Z = M.source;
         src_P = I.source;
         src_ZPCc = [this.src_Z, this.src_P, this.src_Cc].join("|");
         src_ZCc = [this.src_Z, this.src_Cc].join("|");
@@ -930,9 +930,9 @@ var Y = class {
                 )
                     break;
                 _ === a ? (a = void 0) : _ === s && (s = void 0);
-                let R = new G(e, _.schema, _.index, _.lastIndex);
-                (R.schema ? this.__schemas__[R.schema].normalize(R, this) : this.normalize(R),
-                    u.push(R),
+                let m = new G(e, _.schema, _.index, _.lastIndex);
+                (m.schema ? this.__schemas__[m.schema].normalize(m, this) : this.normalize(m),
+                    u.push(m),
                     (f = _.lastIndex));
             }
             return u.length ? u : null;
@@ -1085,13 +1085,13 @@ var eh = Object.defineProperty,
         escapeHtml: () => ew,
         escapeRE: () => eE,
         fromCodePoint: () => e_,
-        isMdAsciiPunct: () => ej,
+        isMdAsciiPunct: () => eJ,
         isPunctChar: () => ez,
-        isPunctCharCode: () => eJ,
+        isPunctCharCode: () => ej,
         isSpace: () => ey,
         isValidEntityCode: () => eg,
         isWhiteSpace: () => eB,
-        lib: () => eL,
+        lib: () => eM,
         normalizeReference: () => eT,
         unescapeAll: () => eD,
         unescapeMd: () => eb,
@@ -1124,18 +1124,18 @@ function eg(e) {
 function e_(e) {
     return e > 65535 ? String.fromCharCode(55296 + ((e -= 65536) >> 10), 56320 + (1023 & e)) : String.fromCharCode(e);
 }
-var eR = /\\([!"#$%&'()*+,\-./:;<=>?@[\\\]^_`{|}~])/g,
-    ek = RegExp(`${eR.source}|${/&([a-z#][a-z0-9]{1,31});/gi.source}`, "gi"),
-    em = /^#((?:x[a-f0-9]{1,8}|[0-9]{1,8}))$/i;
+var em = /\\([!"#$%&'()*+,\-./:;<=>?@[\\\]^_`{|}~])/g,
+    ek = RegExp(`${em.source}|${/&([a-z#][a-z0-9]{1,31});/gi.source}`, "gi"),
+    eR = /^#((?:x[a-f0-9]{1,8}|[0-9]{1,8}))$/i;
 function eb(e) {
-    return 0 > e.indexOf("\\") ? e : e.replace(eR, "$1");
+    return 0 > e.indexOf("\\") ? e : e.replace(em, "$1");
 }
 function eD(e) {
     return 0 > e.indexOf("\\") && 0 > e.indexOf("&")
         ? e
         : e.replace(ek, function (e, t, r) {
               if (t) return t;
-              if (35 === r.charCodeAt(0) && em.test(r)) {
+              if (35 === r.charCodeAt(0) && eR.test(r)) {
                   let t = "x" === r[1].toLowerCase() ? parseInt(r.slice(2), 16) : parseInt(r.slice(1), 10);
                   return eg(t) ? e_(t) : e;
               }
@@ -1185,10 +1185,10 @@ function eB(e) {
 function ez(e) {
     return I.test(e) || S.test(e);
 }
-function eJ(e) {
+function ej(e) {
     return ez(e_(e));
 }
-function ej(e) {
+function eJ(e) {
     switch (e) {
         case 33:
         case 34:
@@ -1240,8 +1240,8 @@ function eS(e) {
     for (; r >= t && eI(e.charCodeAt(r)); r--);
     return e.slice(t, r + 1);
 }
-var eL = { mdurl: f, ucmicro: p };
-function eM(e, t, r) {
+var eM = { mdurl: f, ucmicro: p };
+function e$(e, t, r) {
     let n,
         s,
         a,
@@ -1261,7 +1261,7 @@ function eM(e, t, r) {
     let o = -1;
     return (s && (o = e.pos), (e.pos = l), o);
 }
-function eq(e, t, r) {
+function eL(e, t, r) {
     let n,
         s = t,
         a = { ok: !1, pos: 0, str: "" };
@@ -1298,7 +1298,7 @@ function eq(e, t, r) {
     }
     return (t === s || 0 !== i || ((a.str = eD(e.slice(t, s))), (a.pos = s), (a.ok = !0)), a);
 }
-function e$(e, t, r, n) {
+function eq(e, t, r, n) {
     let s,
         a = t,
         i = { ok: !1, can_continue: !1, pos: 0, str: "", marker: 0 };
@@ -1316,7 +1316,7 @@ function e$(e, t, r, n) {
     }
     return ((i.can_continue = !0), (i.str += eD(e.slice(t, a))), i);
 }
-var eZ = ec({ parseLinkDestination: () => eq, parseLinkLabel: () => eM, parseLinkTitle: () => e$ });
+var eZ = ec({ parseLinkDestination: () => eL, parseLinkLabel: () => e$, parseLinkTitle: () => eq });
 function eW(e) {
     return (eW =
         "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
@@ -1851,15 +1851,15 @@ var e6 = [
                                                     g = e[r].content.charCodeAt(0);
                                                     break;
                                                 }
-                                        let _ = ej(d) || eJ(d),
-                                            R = ej(g) || eJ(g),
+                                        let _ = eJ(d) || ej(d),
+                                            m = eJ(g) || ej(g),
                                             k = eB(d),
-                                            m = eB(g);
+                                            R = eB(g);
                                         if (
-                                            (m ? (c = !1) : R && !(k || _) && (c = !1),
-                                            k ? (f = !1) : _ && !(m || R) && (f = !1),
+                                            (R ? (c = !1) : m && !(k || _) && (c = !1),
+                                            k ? (f = !1) : _ && !(R || m) && (f = !1),
                                             34 === g && '"' === i[0] && d >= 48 && d <= 57 && (f = c = !1),
-                                            c && f && ((c = _), (f = R)),
+                                            c && f && ((c = _), (f = m)),
                                             !c && !f)
                                         ) {
                                             p && e5(s, a, i.index, "\u2019");
@@ -2172,7 +2172,7 @@ var tr =
                     ((n.content = h[t].trim()), (n.children = []), e.push("th_close", "th", -1));
                 }
                 (e.push("tr_close", "tr", -1), e.push("thead_close", "thead", -1));
-                let R = 0;
+                let m = 0;
                 for (a = t + 2; a < r && !(e.sCount[a] < e.blkIndent); a++) {
                     let n = !1;
                     for (let t = 0, s = d.length; t < s; t++)
@@ -2186,7 +2186,7 @@ var tr =
                         e.sCount[a] - e.blkIndent >= 4 ||
                         ((h = e7(o)).length && "" === h[0] && h.shift(),
                         h.length && "" === h[h.length - 1] && h.pop(),
-                        (R += f - h.length) > 65536)
+                        (m += f - h.length) > 65536)
                     )
                         break;
                     (a === t + 2 && (e.push("tbody_open", "tbody", 1).map = s = [t + 2, 0]),
@@ -2346,13 +2346,13 @@ var tr =
                 e.blkIndent = 0;
                 let _ = e.push("blockquote_open", "blockquote", 1);
                 _.markup = ">";
-                let R = [t, 0];
-                ((_.map = R),
+                let m = [t, 0];
+                ((_.map = m),
                     e.md.block.tokenize(e, t, s),
                     (e.push("blockquote_close", "blockquote", -1).markup = ">"),
                     (e.lineMax = u),
                     (e.parentType = p),
-                    (R[1] = e.line));
+                    (m[1] = e.line));
                 for (let r = 0; r < c.length; r++)
                     ((e.bMarks[r + t] = l[r]),
                         (e.tShift[r + t] = c[r]),
@@ -2420,9 +2420,9 @@ var tr =
                     : (u = e.push("bullet_list_open", "ul", 1));
                 let _ = [c, 0];
                 ((u.map = _), (u.markup = String.fromCharCode(d)));
-                let R = !1,
+                let m = !1,
                     k = e.md.block.ruler.getRules("list"),
-                    m = e.parentType;
+                    R = e.parentType;
                 for (e.parentType = "list"; c < r;) {
                     let t;
                     ((a = h), (s = e.eMarks[c]));
@@ -2441,7 +2441,7 @@ var tr =
                     (u = e.push("list_item_open", "li", 1)).markup = String.fromCharCode(d);
                     let _ = [c, 0];
                     ((u.map = _), l && (u.info = e.src.slice(i, h - 1)));
-                    let m = e.tight,
+                    let R = e.tight,
                         b = e.tShift[c],
                         D = e.sCount[c],
                         C = e.listIndent;
@@ -2452,13 +2452,13 @@ var tr =
                         (e.tShift[c] = p - e.bMarks[c]),
                         (e.sCount[c] = o),
                         p >= s && e.isEmpty(c + 1) ? (e.line = Math.min(e.line + 2, r)) : e.md.block.tokenize(e, c, r),
-                        (!e.tight || R) && (f = !1),
-                        (R = e.line - c > 1 && e.isEmpty(e.line - 1)),
+                        (!e.tight || m) && (f = !1),
+                        (m = e.line - c > 1 && e.isEmpty(e.line - 1)),
                         (e.blkIndent = e.listIndent),
                         (e.listIndent = C),
                         (e.tShift[c] = b),
                         (e.sCount[c] = D),
-                        (e.tight = m),
+                        (e.tight = R),
                         ((u = e.push("list_item_close", "li", -1)).markup = String.fromCharCode(d)),
                         (c = e.line),
                         (_[1] = c),
@@ -2483,7 +2483,7 @@ var tr =
                         String.fromCharCode(d)),
                     (_[1] = c),
                     (e.line = c),
-                    (e.parentType = m),
+                    (e.parentType = R),
                     f &&
                         (function (e, t) {
                             let r = e.level + 2;
@@ -2580,15 +2580,15 @@ var tr =
                     a++;
                 if (a < i && 10 !== o.charCodeAt(a) && s) for (s = "", a = p, u = d; a < i && ey(o.charCodeAt(a));) a++;
                 if (a < i && 10 !== o.charCodeAt(a)) return !1;
-                let R = eT(o.slice(1, h));
-                if (!R) return !1;
+                let m = eT(o.slice(1, h));
+                if (!m) return !1;
                 if (n) return !0;
                 (void 0 === e.env.references && (e.env.references = {}),
-                    void 0 === e.env.references[R] && (e.env.references[R] = { title: s, href: f }));
+                    void 0 === e.env.references[m] && (e.env.references[m] = { title: s, href: f }));
                 let k = e.push("reference_definition", "", 0);
                 ((k.map = [t, u]), (k.hidden = !0));
-                let m = Object.create(null);
-                return ((m.label = R), (k.meta = m), (e.line = u), !0);
+                let R = Object.create(null);
+                return ((R.label = m), (k.meta = R), (e.line = u), !0);
             },
         ],
         [
@@ -2826,8 +2826,8 @@ var tr =
                 let e = this.src.charCodeAt(a + 1);
                 u = (64512 & e) == 56320 ? 65536 + ((u - 55296) << 10) + (e - 56320) : 65533;
             } else (64512 & u) == 56320 && (u = 65533);
-            let l = ej(r) || eJ(r),
-                o = ej(u) || eJ(u),
+            let l = eJ(r) || ej(r),
+                o = eJ(u) || ej(u),
                 h = eB(r),
                 c = eB(u),
                 f = !c && (!o || h || l),
@@ -2900,7 +2900,7 @@ var tp =
     td = /^([a-zA-Z][a-zA-Z0-9+.-]{1,31}):([^<>\x00-\x20]*)$/,
     tg = /^&#((?:x[a-f0-9]{1,6}|[0-9]{1,7}));/i,
     t_ = /^&([a-z][a-z0-9]{1,31});/i;
-function tR(e) {
+function tm(e) {
     let t = {},
         r = e.length;
     if (!r) return;
@@ -3400,17 +3400,17 @@ var tk = [
             },
         ],
     ],
-    tm = [
+    tR = [
         [
             "balance_pairs",
             function (e) {
                 let t = e.tokens_meta,
                     r = e.tokens_meta.length;
-                tR(e.delimiters);
+                tm(e.delimiters);
                 for (let e = 0; e < r; e++) {
                     var n;
                     let r = null == (n = t[e]) ? void 0 : n.delimiters;
-                    r && tR(r);
+                    r && tm(r);
                 }
             },
         ],
@@ -3463,7 +3463,7 @@ var tk = [
         constructor() {
             (eU(this, "ruler", new eX()), eU(this, "ruler2", new eX()), eU(this, "State", to));
             for (let e = 0; e < tk.length; e++) this.ruler.push(tk[e][0], tk[e][1]);
-            for (let e = 0; e < tm.length; e++) this.ruler2.push(tm[e][0], tm[e][1]);
+            for (let e = 0; e < tR.length; e++) this.ruler2.push(tR[e][0], tR[e][1]);
         }
         skipToken(e) {
             let t = e.pos,
@@ -3614,11 +3614,11 @@ var tk = [
                         })));
                 } catch (e) {}
             return (
-                t.auth && (t.auth = m(t.auth)),
-                t.hostname && (t.hostname = m(t.hostname)),
-                t.pathname && (t.pathname = m(t.pathname)),
-                t.search && (t.search = m(t.search)),
-                t.hash && (t.hash = m(t.hash)),
+                t.auth && (t.auth = R(t.auth)),
+                t.hostname && (t.hostname = R(t.hostname)),
+                t.pathname && (t.pathname = R(t.pathname)),
+                t.search && (t.search = R(t.search)),
+                t.hash && (t.hash = R(t.hash)),
                 b(t)
             );
         }

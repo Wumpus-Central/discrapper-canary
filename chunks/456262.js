@@ -1,17 +1,22 @@
-(n.r(t), n.d(t, { default: () => b }), n(321073));
-var r = n(477900),
-    l = n(582128),
-    s = n(503698),
-    a = n.n(s),
+(n.r(t), n.d(t, { default: () => k }), n(321073));
+var l = n(477900),
+    r = n(582128),
+    a = n(503698),
+    s = n.n(a),
     i = n(342324),
-    c = n(834730),
-    h = n(9578),
-    d = n(694403),
-    u = n(540168),
-    o = n(176002),
-    g = n(165648);
-let p = new i.A({ html: !1, linkify: !1, typographer: !1 }),
-    m = new Set([
+    c = n(905799),
+    h = n(834730),
+    d = n(9578),
+    u = n(694403),
+    o = n(540168),
+    g = n(176002),
+    p = n(165648);
+let m = new i.A({ html: !1, linkify: !1, typographer: !1 }).use(c.h, {
+        allow_space: !1,
+        allow_digits: !1,
+        allow_labels: !1,
+    }),
+    b = new Set([
         "h1",
         "h2",
         "h3",
@@ -32,147 +37,152 @@ let p = new i.A({ html: !1, linkify: !1, typographer: !1 }),
         "th",
         "td",
     ]);
-function f(e, t) {
-    let { tag: n, attrs: s, children: i } = e,
-        c = a()(o.p_, { [o.J2]: !0 === e.loose });
+function x(e, t) {
+    let { tag: n, attrs: a, children: i } = e,
+        c = s()(g.p_, { [g.J2]: !0 === e.loose });
     switch (n) {
         case "a": {
-            let e = (0, d.W1)(s.href ?? "");
-            if (null == e) return (0, r.jsx)("span", { children: i }, t);
-            return (0, r.jsx)(h.A, { href: e.target, title: s.title, children: i.length > 0 ? i : e.displayTarget }, t);
+            let e = (0, u.W1)(a.href ?? "");
+            if (null == e) return (0, l.jsx)("span", { children: i }, t);
+            return (0, l.jsx)(d.A, { href: e.target, title: a.title, children: i.length > 0 ? i : e.displayTarget }, t);
         }
         case "blockquote":
-            return (0, r.jsxs)(
+            return (0, l.jsxs)(
                 "div",
                 {
-                    className: g.h,
-                    children: [(0, r.jsx)("div", { className: g.r }), (0, r.jsx)("blockquote", { children: i })],
+                    className: p.h,
+                    children: [(0, l.jsx)("div", { className: p.r }), (0, l.jsx)("blockquote", { children: i })],
                 },
                 t,
             );
         case "ul":
-            return (0, r.jsx)("ul", { className: c, children: i }, t);
+            return (0, l.jsx)("ul", { className: c, children: i }, t);
         case "ol": {
-            let e = null != s.start ? parseInt(s.start) : NaN,
+            let e = null != a.start ? parseInt(a.start) : NaN,
                 n = Number.isNaN(e) ? 1 : e,
-                l = String(n + Math.max(i.length - 1, 0)).length;
-            return (0, r.jsx)(
+                r = String(n + Math.max(i.length - 1, 0)).length;
+            return (0, l.jsx)(
                 "ol",
-                { className: c, start: 1 === n ? void 0 : n, style: { "--totalCharacters": l }, children: i },
+                { className: c, start: 1 === n ? void 0 : n, style: { "--totalCharacters": r }, children: i },
                 t,
             );
         }
         case "th":
         case "td":
-            return l.createElement(n, { key: t, style: { cssText: s.style } }, i);
+            return r.createElement(n, { key: t, style: { cssText: a.style } }, i);
         default:
-            if (!m.has(n)) return (0, r.jsx)("span", { children: i }, t);
-            return l.createElement(n, { key: t }, i);
+            if (!b.has(n)) return (0, l.jsx)("span", { children: i }, t);
+            return r.createElement(n, { key: t }, i);
     }
 }
-function x(e, t) {
+function f(e, t) {
     let n = e.pop(),
-        r = e[e.length - 1];
-    n.hidden ? r.children.push(...n.children) : r.children.push(f(n, t));
+        l = e[e.length - 1];
+    n.hidden ? l.children.push(...n.children) : l.children.push(x(n, t));
 }
-function b(e) {
+function k(e) {
     let { text: t, notice: n } = e,
-        s = l.useMemo(
+        a = r.useMemo(
             () =>
                 (function e(t, n) {
-                    let l = [{ tag: "", attrs: {}, children: [] }];
-                    for (let s = 0; s < t.length && !(n.remaining <= 0); s++) {
+                    let r = [{ tag: "", attrs: {}, children: [] }];
+                    for (let a = 0; a < t.length && !(n.remaining <= 0); a++) {
                         n.remaining--;
-                        let a = t[s],
-                            i = l[l.length - 1];
-                        if (1 === a.nesting) {
-                            ("p" === a.tag &&
-                                !a.hidden &&
+                        let s = t[a],
+                            i = r[r.length - 1];
+                        if (1 === s.nesting) {
+                            ("p" === s.tag &&
+                                !s.hidden &&
                                 "li" === i.tag &&
-                                l.length >= 2 &&
-                                (l[l.length - 2].loose = !0),
-                                l.push({
-                                    tag: a.tag,
+                                r.length >= 2 &&
+                                (r[r.length - 2].loose = !0),
+                                r.push({
+                                    tag: s.tag,
                                     attrs: Object.fromEntries(
-                                        (a.attrs ?? []).map((e) => {
+                                        (s.attrs ?? []).map((e) => {
                                             let [t, n] = e;
                                             return [t, String(n)];
                                         }),
                                     ),
                                     children: [],
-                                    hidden: a.hidden,
+                                    hidden: s.hidden,
                                 }));
                             continue;
                         }
-                        if (-1 === a.nesting) {
-                            l.length > 1 && x(l, s);
+                        if (-1 === s.nesting) {
+                            r.length > 1 && f(r, a);
                             continue;
                         }
-                        switch (a.type) {
+                        switch (s.type) {
                             case "inline":
-                                i.children.push(...e(a.children ?? [], n));
+                                i.children.push(...e(s.children ?? [], n));
                                 break;
                             case "text":
                             case "text_special":
-                                i.children.push(a.content);
+                                i.children.push(s.content);
                                 break;
                             case "code_inline":
-                                i.children.push((0, r.jsx)("code", { className: "inline", children: a.content }, s));
+                            case "math_inline":
+                            case "math_inline_double":
+                                i.children.push((0, l.jsx)("code", { className: "inline", children: s.content }, a));
                                 break;
                             case "fence":
                             case "code_block":
                                 i.children.push(
-                                    (0, r.jsx)(
-                                        u.d,
+                                    (0, l.jsx)(
+                                        o.d,
                                         {
                                             language: (function (e) {
                                                 let t = e.trim().split(/\s+/)[0];
                                                 return "" !== t ? t : void 0;
-                                            })(a.info),
-                                            text: a.content,
+                                            })(s.info),
+                                            text: s.content,
                                         },
-                                        s,
+                                        a,
                                     ),
                                 );
+                                break;
+                            case "math_block":
+                                i.children.push((0, l.jsx)(o.d, { language: "latex", text: s.content }, a));
                                 break;
                             case "softbreak":
                                 i.children.push(" ");
                                 break;
                             case "hardbreak":
-                                i.children.push((0, r.jsx)("br", {}, s));
+                                i.children.push((0, l.jsx)("br", {}, a));
                                 break;
                             case "hr":
-                                i.children.push((0, r.jsx)("hr", {}, s));
+                                i.children.push((0, l.jsx)("hr", {}, a));
                                 break;
                             case "image": {
-                                let e = String(a.attrGet("src") ?? ""),
-                                    t = "" !== a.content ? a.content : e;
+                                let e = String(s.attrGet("src") ?? ""),
+                                    t = "" !== s.content ? s.content : e;
                                 i.children.push(
-                                    f(
+                                    x(
                                         {
                                             tag: "a",
-                                            attrs: { href: e, title: String(a.attrGet("title") ?? "") },
+                                            attrs: { href: e, title: String(s.attrGet("title") ?? "") },
                                             children: [t],
                                         },
-                                        s,
+                                        a,
                                     ),
                                 );
                                 break;
                             }
                             default:
-                                "" !== a.content && i.children.push(a.content);
+                                "" !== s.content && i.children.push(s.content);
                         }
                     }
-                    for (; l.length > 1;) x(l, t.length + l.length);
-                    return (n.remaining <= 0 && l[0].children.push("\u2026"), l[0].children);
-                })(p.parse(t, {}), { remaining: 5e3 }),
+                    for (; r.length > 1;) f(r, t.length + r.length);
+                    return (n.remaining <= 0 && r[0].children.push("\u2026"), r[0].children);
+                })(m.parse(t, {}), { remaining: 5e3 }),
             [t],
         );
-    return (0, r.jsxs)(r.Fragment, {
+    return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, r.jsx)("div", { className: a()(g.PT, o.l_), children: s }),
+            (0, l.jsx)("div", { className: s()(p.PT, g.l_), children: a }),
             "" !== n
-                ? (0, r.jsx)(c.E, { variant: "text-sm/normal", color: "text-subtle", className: o.VX, children: n })
+                ? (0, l.jsx)(h.E, { variant: "text-sm/normal", color: "text-subtle", className: g.VX, children: n })
                 : null,
         ],
     });
