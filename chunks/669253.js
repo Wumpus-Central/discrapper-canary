@@ -1,4 +1,4 @@
-n.d(t, { A: () => X, k: () => Y });
+n.d(t, { A: () => q, k: () => X });
 var i = n(477900),
     l = n(582128),
     s = n(503698),
@@ -57,20 +57,21 @@ async function y(e) {
 }
 var T = n(234e3),
     N = n(159001),
-    w = n(933725),
-    R = n(287809),
+    R = n(933725),
+    w = n(287809),
     L = n(625494),
-    _ = n(56348),
-    P = n(207803),
+    P = n(56348),
+    _ = n(207803),
     O = n(183555),
-    D = n(289173),
+    D = n(646976),
+    G = n(289173),
     M = n(836602),
-    G = n(958805),
-    U = n(61881),
+    U = n(958805),
+    W = n(61881),
     F = n(624826),
-    W = n(384377),
-    H = n(518477);
-function V(e) {
+    H = n(384377),
+    V = n(518477);
+function B(e) {
     let { guildId: t } = e,
         { trackUserProfileEditSaved: n } = (0, O.NJ)(),
         [s, r] = l.useState(!1),
@@ -82,12 +83,12 @@ function V(e) {
             hasUnsavedWidgets: x,
             canSaveWidgets: f,
         } = (function () {
-            let e = (0, a.yK)([U.A], () => U.A.getSaveablePendingWidgets() ?? []),
-                t = (0, a.yK)([U.A], () => U.A.getChangedWidgets()),
-                n = (0, a.yK)([U.A], () => U.A.getRemovedWidgets()),
-                { hasUnsavedWidgets: i, canSaveWidgets: l } = (0, a.cf)([U.A], () => ({
-                    hasUnsavedWidgets: U.A.hasUnsavedChanges(),
-                    canSaveWidgets: U.A.canSaveChanges(),
+            let e = (0, a.yK)([W.A], () => W.A.getSaveablePendingWidgets() ?? []),
+                t = (0, a.yK)([W.A], () => W.A.getChangedWidgets()),
+                n = (0, a.yK)([W.A], () => W.A.getRemovedWidgets()),
+                { hasUnsavedWidgets: i, canSaveWidgets: l } = (0, a.cf)([W.A], () => ({
+                    hasUnsavedWidgets: W.A.hasUnsavedChanges(),
+                    canSaveWidgets: W.A.canSaveChanges(),
                 }));
             return { widgetsToSave: e, changedWidgets: t, removedWidgets: n, hasUnsavedWidgets: i, canSaveWidgets: l };
         })(),
@@ -102,10 +103,10 @@ function V(e) {
             hasBadgeChangesToSave: (0, T.gz)(M.A.getPendingChanges()),
         })),
         b = p && I,
-        V = x || b || S,
-        B = !(x && !f) && (!p || A),
-        z = l.useCallback(() => {
-            (G.A.clearPendingWidgets(), p ? (0, P.XQ)() : S && (0, T.Jp)());
+        B = x || b || S,
+        z = !(x && !f) && (!p || A),
+        Y = l.useCallback(() => {
+            (U.A.clearPendingWidgets(), p ? (0, _.XQ)() : S && (0, T.Jp)());
         }, [p, S]),
         K = l.useCallback(async () => {
             if (p && !M.A.canSubmit()) return;
@@ -115,7 +116,7 @@ function V(e) {
                 let t = M.A.getPendingChanges(),
                     n = await y({ displayOrder: t.pendingBadgeDisplayOrder, hiddenBadges: t.pendingBadgeHiddenBadges });
                 if (n) {
-                    let e = R.default.getCurrentUser()?.id;
+                    let e = w.default.getCurrentUser()?.id;
                     (null != e && (await (0, E.fetchProfile)(e).catch(() => {})), await (0, C.RS)(), (0, T.Jp)());
                 }
                 e = n;
@@ -124,8 +125,8 @@ function V(e) {
                 try {
                     if (null == t) {
                         let t = M.A.getPendingChanges(),
-                            n = (0, _.Sk)(t),
-                            i = (0, _.yX)(t);
+                            n = (0, P.Sk)(t),
+                            i = (0, P.yX)(t);
                         if (Object.keys(n).length > 0) {
                             let i = await (0, v._L)(n);
                             ((e = e && (i?.ok ?? !1)),
@@ -140,13 +141,13 @@ function V(e) {
                         }
                         if (Object.keys(i).length > 0) {
                             let { bannerOriginalMd5: t, ...n } = i,
-                                l = await (0, P.gi)(n, void 0, t);
-                            ((e = e && (l?.ok ?? !1)), l?.ok && (0, P.RE)());
+                                l = await (0, _.gi)(n, void 0, t);
+                            ((e = e && (l?.ok ?? !1)), l?.ok && (0, _.RE)());
                         }
                     } else {
                         let n = M.A.getPendingChanges(t),
-                            i = (0, _.C5)(n),
-                            l = (0, _.yX)(n, t);
+                            i = (0, P.C5)(n),
+                            l = (0, P.yX)(n, t);
                         if (Object.keys(i).length > 0) {
                             let l = await (0, N.GL)(t, i);
                             ((e = e && (l?.ok ?? !1)),
@@ -162,15 +163,15 @@ function V(e) {
                         }
                         if (Object.keys(l).length > 0) {
                             let { bannerOriginalMd5: n, ...i } = l,
-                                s = await (0, P.gi)(i, t, n);
-                            ((e = e && (s?.ok ?? !1)), s?.ok && (0, P.RE)());
+                                s = await (0, _.gi)(i, t, n);
+                            ((e = e && (s?.ok ?? !1)), s?.ok && (0, _.RE)());
                         }
                     }
-                    let n = (0, _.yg)(M.A.getPendingChanges());
+                    let n = (0, P.yg)(M.A.getPendingChanges());
                     if (Object.keys(n).length > 0) {
                         let { primaryGuildId: t } = n;
                         if (void 0 !== t) {
-                            let n = await (0, w.m)(t, null !== t);
+                            let n = await (0, R.m)(t, null !== t);
                             ((e = e && (n?.ok ?? !1)), n?.ok && (0, v.fw)());
                         }
                     }
@@ -179,19 +180,22 @@ function V(e) {
                 }
             if (x)
                 try {
-                    for (let e of (await G.A.savePendingWidgets(c), g)) {
+                    for (let e of (await U.A.savePendingWidgets(c), g)) {
                         let t = { widgetEdited: e.type, isWidgetRemoved: !1 };
-                        ((0, D.fu)(e) &&
-                            ((t.gameIds = e.games.map((e) => e.gameId)),
-                            (t.tags = e.games.flatMap((e) => e.tags ?? []).map((e) => e.toString())),
-                            (t.numCharactersCommentary = e.games.reduce((e, t) => e + (t.comment?.length ?? 0), 0))),
+                        ((0, G.fu)(e)
+                            ? ((t.gameIds = e.games.map((e) => e.gameId)),
+                              (t.tags = e.games.flatMap((e) => e.tags ?? []).map((e) => e.toString())),
+                              (t.numCharactersCommentary = e.games.reduce((e, t) => e + (t.comment?.length ?? 0), 0)))
+                            : e instanceof D.k &&
+                              ((t.gameIds = e.clips.map((e) => e.gameId)),
+                              (t.tags = e.clips.flatMap((e) => e.tags ?? []).map((e) => e.toString()))),
                             n(t));
                     }
                     for (let e of m) n({ widgetEdited: e.type, isWidgetRemoved: !0 });
                 } catch {
                     e = !1;
                 }
-            (e ? (0, v.x8)() : (0, W.XA)(H.jM.PROFILE_SAVE_GENERIC_FAILURE), d(!1));
+            (e ? (0, v.x8)() : (0, H.XA)(V.jM.PROFILE_SAVE_GENERIC_FAILURE), d(!1));
         }, [p, b, S, x, c, g, m, n, t]);
     return (
         l.useEffect(() => {
@@ -212,45 +216,45 @@ function V(e) {
         }, []),
         (0, i.jsx)(h.$, {
             preventsPopoutDismiss: !0,
-            isVisible: V,
+            isVisible: B,
             labelId: "user-profile-save-reset-toolbar-label",
             noticeText: j.intl.string(j.t["/lQiX/"]),
             isEmphasized: s,
             a11yAnnounceOnShow: j.intl.string(j.t["0Y/qkL"]),
-            secondaryAction: { text: j.intl.string(j.t.yBZMsQ), onClick: z, disabled: !V || o },
-            primaryAction: { text: j.intl.string(j.t["R3BPH+"]), onClick: K, loading: o, disabled: !B || !V },
+            secondaryAction: { text: j.intl.string(j.t.yBZMsQ), onClick: Y, disabled: !B || o },
+            primaryAction: { text: j.intl.string(j.t["R3BPH+"]), onClick: K, loading: o, disabled: !z || !B },
         })
     );
 }
-var B = n(485745),
-    z = n(893757);
+var z = n(485745),
+    Y = n(893757);
 function K() {
     let e = !(0, u.X)("useEditingFooterState"),
         t = (0, o.VU)(),
-        n = (0, B.A)(e),
+        n = (0, z.A)(e),
         i = (0, g.YW)();
     return t ? "dnd" : i ? "premium-try-it-out" : n ? "save" : null;
 }
-function Y(e) {
+function X(e) {
     let t = (0, a.bG)([c.default], () => c.default.getId() === e),
         n = K();
     return t && null != n;
 }
-function X(e) {
+function q(e) {
     let { userId: t, guildId: n, className: s } = e,
         o = (0, a.bG)([c.default], () => c.default.getId() === t),
         u = K(),
         [g, m] = l.useState(u);
     return (null != u && g !== u && m(u), o)
         ? (0, i.jsx)("div", {
-              className: r()(z.k, s),
+              className: r()(Y.k, s),
               children:
                   "dnd" === g
-                      ? (0, i.jsx)(d.S, { className: z.W })
+                      ? (0, i.jsx)(d.S, { className: Y.W })
                       : "premium-try-it-out" === g
                         ? (0, i.jsx)(A, {})
                         : "save" === g
-                          ? (0, i.jsx)(V, { guildId: n })
+                          ? (0, i.jsx)(B, { guildId: n })
                           : null,
           })
         : null;

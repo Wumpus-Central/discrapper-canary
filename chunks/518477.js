@@ -1,17 +1,18 @@
 n.d(t, {
-    AQ: () => O,
-    BM: () => h,
-    In: () => A,
-    KM: () => I,
-    L7: () => N,
-    Mq: () => S,
-    R7: () => T,
-    RP: () => f,
-    bk: () => p,
-    d6: () => m,
-    dS: () => C,
-    jM: () => R,
-    pt: () => g,
+    AQ: () => L,
+    BM: () => I,
+    IE: () => N,
+    In: () => h,
+    KM: () => f,
+    L7: () => O,
+    Mq: () => C,
+    R7: () => m,
+    RP: () => p,
+    bk: () => T,
+    d6: () => g,
+    dS: () => R,
+    jM: () => y,
+    pt: () => S,
 });
 var i,
     r,
@@ -22,15 +23,16 @@ var i,
     d,
     c,
     u,
-    _ = n(70283),
-    E = n(652215);
-let A = 300;
-function h(e) {
-    let t = _.$[e];
+    _,
+    E = n(70283),
+    A = n(652215);
+let h = 300;
+function I(e) {
+    let t = E.$[e];
     return null != t ? t.toLowerCase() : String(e);
 }
-let I = "user-profile-popout";
-var f =
+let f = "user-profile-popout";
+var p =
         (((i = {}).FEATURED = "FEATURED"),
         (i.USER_INFO = "USER_INFO"),
         (i.BOT_INFO = "BOT_INFO"),
@@ -43,14 +45,14 @@ var f =
         (i.WISHLIST = "WISHLIST"),
         (i.MAIN = "MAIN"),
         i),
-    p =
+    T =
         (((r = {}).ROLES = "ROLES"),
         (r.CONNECTIONS = "CONNECTIONS"),
         (r.APPS = "APPS"),
         (r.NOTE = "NOTE"),
         (r.RECENT_ACTIVITY = "RECENT_ACTIVITY"),
         r),
-    T =
+    m =
         (((a = {}).POPOUT = "POPOUT"),
         (a.MODAL = "MODAL"),
         (a.MODAL_V2 = "MODAL_V2"),
@@ -59,7 +61,7 @@ var f =
         (a.ACTION_SHEET = "ACTION_SHEET"),
         (a.YOU_SCREEN = "YOU_SCREEN"),
         a),
-    m =
+    g =
         (((s = {})[(s.NICKNAME = 0)] = "NICKNAME"),
         (s[(s.PRONOUNS = 1)] = "PRONOUNS"),
         (s[(s.AVATAR = 2)] = "AVATAR"),
@@ -71,7 +73,7 @@ var f =
         (s[(s.AVATAR_DECORATION = 8)] = "AVATAR_DECORATION"),
         (s[(s.PROFILE_EFFECT = 9)] = "PROFILE_EFFECT"),
         s),
-    g =
+    S =
         (((l = {}).VIEW = "VIEW"),
         (l.SEND_MESSAGE = "SEND_MESSAGE"),
         (l.SEND_DIRECT_MESSAGE = "SEND_DIRECT_MESSAGE"),
@@ -192,6 +194,13 @@ var f =
         (l.VIEW_PERSONAL_WIDGET_PREVIEW = "VIEW_PERSONAL_WIDGET_PREVIEW"),
         (l.PRESS_PERSONAL_WIDGET_PREVIEW = "PRESS_PERSONAL_WIDGET_PREVIEW"),
         (l.PRESS_SHOW_MORE_WIDGETS = "PRESS_SHOW_MORE_WIDGETS"),
+        (l.VIEW_CLIPS_WIDGET_PREVIEW = "VIEW_CLIPS_WIDGET_PREVIEW"),
+        (l.PRESS_CLIPS_WIDGET_PREVIEW = "PRESS_CLIPS_WIDGET_PREVIEW"),
+        (l.PRESS_PLAY_CLIP = "PRESS_PLAY_CLIP"),
+        (l.SELECT_CLIP = "SELECT_CLIP"),
+        (l.HOVER_PLAY_CLIP = "HOVER_PLAY_CLIP"),
+        (l.MUTE_CLIP_PREVIEW = "MUTE_CLIP_PREVIEW"),
+        (l.UNMUTE_CLIP_PREVIEW = "UNMUTE_CLIP_PREVIEW"),
         (l.VIEW_AVATAR = "VIEW_AVATAR"),
         (l.COPY_AVATAR_IMAGE_LINK = "COPY_AVATAR_IMAGE_LINK"),
         (l.COPY_BANNER_IMAGE_LINK = "COPY_BANNER_IMAGE_LINK"),
@@ -203,25 +212,26 @@ var f =
         (l.VIEW_NEW_CONTENT_TAB_BADGE = "VIEW_NEW_CONTENT_TAB_BADGE"),
         (l.VIEW_NEW_CONTENT_SIDEBAR = "VIEW_NEW_CONTENT_SIDEBAR"),
         l),
-    S =
-        (((o = {}).WISHLIST_ITEM_CLICKED = "WISHLIST_ITEM_CLICKED"),
-        (o.WISHLIST_TOGGLE_PRIVATE = "WISHLIST_TOGGLE_PRIVATE"),
-        (o.WISHLIST_TOGGLE_PUBLIC = "WISHLIST_TOGGLE_PUBLIC"),
-        (o.PRESS_WISHLIST_BREADCRUMB_CARD = "PRESS_WISHLIST_BREADCRUMB_CARD"),
-        (o.PRESS_WISHLIST_BREADCRUMB_OVERFLOW_CARD = "PRESS_WISHLIST_BREADCRUMB_OVERFLOW_CARD"),
-        (o.VIEW_WISHLIST = "VIEW_WISHLIST"),
-        (o.PRESS_EDIT_WISHLIST = "PRESS_EDIT_WISHLIST"),
-        (o.PRESS_ADD_WISHLIST_ITEM = "PRESS_ADD_WISHLIST_ITEM"),
-        o);
-function N(e) {
+    N = (((o = {}).PICKER = "PICKER"), (o.SUGGESTED = "SUGGESTED"), o),
+    C =
+        (((d = {}).WISHLIST_ITEM_CLICKED = "WISHLIST_ITEM_CLICKED"),
+        (d.WISHLIST_TOGGLE_PRIVATE = "WISHLIST_TOGGLE_PRIVATE"),
+        (d.WISHLIST_TOGGLE_PUBLIC = "WISHLIST_TOGGLE_PUBLIC"),
+        (d.PRESS_WISHLIST_BREADCRUMB_CARD = "PRESS_WISHLIST_BREADCRUMB_CARD"),
+        (d.PRESS_WISHLIST_BREADCRUMB_OVERFLOW_CARD = "PRESS_WISHLIST_BREADCRUMB_OVERFLOW_CARD"),
+        (d.VIEW_WISHLIST = "VIEW_WISHLIST"),
+        (d.PRESS_EDIT_WISHLIST = "PRESS_EDIT_WISHLIST"),
+        (d.PRESS_ADD_WISHLIST_ITEM = "PRESS_ADD_WISHLIST_ITEM"),
+        d);
+function O(e) {
     let { API_ENDPOINT: t, CDN_HOST: n } = window.GLOBAL_ENV;
-    return null != n ? `https://${n}/badge-icons/${e}.png` : `${location.protocol}${t}${E.Rsh.BADGE_ICON(e)}`;
+    return null != n ? `https://${n}/badge-icons/${e}.png` : `${location.protocol}${t}${A.Rsh.BADGE_ICON(e)}`;
 }
-var C = (((d = {}).ACTIVITY = "ACTIVITY"), (d.AVATAR = "AVATAR"), (d.STATUS = "STATUS"), d),
-    O = (((c = {}).REPLY = "REPLY"), (c.REACT = "REACT"), c),
-    R =
-        (((u = {}).WIDGET_ADDED = "WIDGET_ADDED"),
-        (u.WIDGET_REMOVED = "WIDGET_REMOVED"),
-        (u.PROFILE_SAVE_GENERIC_FAILURE = "PROFILE_SAVE_GENERIC_FAILURE"),
-        (u.SOMETHING_WENT_WRONG = "SOMETHING_WENT_WRONG"),
-        u);
+var R = (((c = {}).ACTIVITY = "ACTIVITY"), (c.AVATAR = "AVATAR"), (c.STATUS = "STATUS"), c),
+    L = (((u = {}).REPLY = "REPLY"), (u.REACT = "REACT"), u),
+    y =
+        (((_ = {}).WIDGET_ADDED = "WIDGET_ADDED"),
+        (_.WIDGET_REMOVED = "WIDGET_REMOVED"),
+        (_.PROFILE_SAVE_GENERIC_FAILURE = "PROFILE_SAVE_GENERIC_FAILURE"),
+        (_.SOMETHING_WENT_WRONG = "SOMETHING_WENT_WRONG"),
+        _);
