@@ -302,9 +302,9 @@ let K = { tension: 250, friction: 5, clamp: !0 },
             nv = l.useRef(ei);
         nv.current = ei;
         let nx = l.useCallback(() => {
-            let e = (0, C.qf)(t0.current?.parentNode, t0.current);
+            let e = (0, C.qf)(tQ.current);
             null == e || (0, C._U)(e) || (e.removeEventListener(C.Wb, nx), tO(!1), nv.current?.(!1));
-        }, [t0]);
+        }, []);
         function ng() {
             null == tG.current ||
                 (nb(Math.max((tp.current ?? tG.current.currentTime) - 10, 0)),
@@ -316,12 +316,12 @@ let K = { tension: 250, friction: 5, clamp: !0 },
             (nb(e), e9 !== c.Q6.ENDED && e >= tG.current.duration && ns(c.Q6.ENDED, c.KB.SEEK));
         }
         l.useEffect(() => {
-            let e = t0.current;
+            let e = tQ.current;
             return () => {
-                let t = (0, C.qf)(e?.parentNode, e);
+                let t = (0, C.qf)(e);
                 null != t && t.removeEventListener(C.Wb, nx);
             };
-        }, [nx, t0]);
+        }, [nx]);
         let nb = l.useCallback(
             function (e) {
                 let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
@@ -838,7 +838,7 @@ let K = { tension: 250, friction: 5, clamp: !0 },
                                                     },
                                                     handleFullScreenBtnClick: function () {
                                                         let e = !t$,
-                                                            t = (0, C.qf)(t0.current?.parentNode, t0.current);
+                                                            t = (0, C.qf)(tQ.current);
                                                         (e && null != t
                                                             ? ((0, C.tl)(t), t.addEventListener(C.Wb, nx), ei?.(!0))
                                                             : e ||
