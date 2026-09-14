@@ -1463,7 +1463,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e2 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eV.A().log(
-    `[BUILD INFO] Release Channel: ${e2}, Build Number: 612910, Version Hash: 79883ce5209d1a20fda117935d3c699dbd36f861`,
+    `[BUILD INFO] Release Channel: ${e2}, Build Number: 612915, Version Hash: 9d33ec3f9236134dbdb2bcbd5bff10559bbb9d54`,
 ),
     D.A.setTags({ appContext: G.QCW }),
     eh.A.initBasic(),
@@ -21403,7 +21403,7 @@ let ND = "isHideDevBanner",
                     className: ta()(Ny.Wz, Ny.mr),
                     children: [
                         (0, O.jsx)(NL, { className: Ny.Kk }),
-                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "612910" }),
+                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "612915" }),
                         (0, O.jsx)(r, {}),
                     ],
                 })
@@ -43670,6 +43670,17 @@ let wV = [
                     r.format !== wx.TL.IMAGE && t.test(r.src) && ((r.format = wx.TL.IMAGE), (n = !0)));
             }
             return n;
+        },
+        cleanup() {},
+    },
+    {
+        version: 12,
+        run(e) {
+            if (null == e.favoriteSoundboardSounds) return !1;
+            let { soundIds: t, orderedSoundIds: n } = e.favoriteSoundboardSounds;
+            return (
+                !(0 === nM().size(t) || nM().size(n) > 0) && ((e.favoriteSoundboardSounds.orderedSoundIds = [...t]), !0)
+            );
         },
         cleanup() {},
     },

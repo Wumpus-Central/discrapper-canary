@@ -597,10 +597,11 @@ class y extends l.G {
     constructor() {
         super("discord_protos.discord_users.v1.FavoriteSoundboardSounds", [
             { no: 1, name: "sound_ids", kind: "scalar", repeat: 1, T: 6 },
+            { no: 2, name: "ordered_sound_ids", kind: "scalar", repeat: 1, T: 6 },
         ]);
     }
     create(e) {
-        let t = { soundIds: [] };
+        let t = { soundIds: [], orderedSoundIds: [] };
         return (
             globalThis.Object.defineProperty(t, s.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, a.x)(this, t, e),
@@ -612,16 +613,23 @@ class y extends l.G {
             s = e.pos + t;
         for (; e.pos < s;) {
             let [t, i] = e.tag();
-            if (1 === t)
-                if (i === r.O0.LengthDelimited)
-                    for (let t = e.int32() + e.pos; e.pos < t;) a.soundIds.push(e.fixed64().toString());
-                else a.soundIds.push(e.fixed64().toString());
-            else {
-                let s = n.readUnknownField;
-                if ("throw" === s)
-                    throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
-                let l = e.skip(i);
-                !1 !== s && (!0 === s ? r.f$.onRead : s)(this.typeName, a, t, i, l);
+            switch (t) {
+                case 1:
+                    if (i === r.O0.LengthDelimited)
+                        for (let t = e.int32() + e.pos; e.pos < t;) a.soundIds.push(e.fixed64().toString());
+                    else a.soundIds.push(e.fixed64().toString());
+                    break;
+                case 2:
+                    if (i === r.O0.LengthDelimited)
+                        for (let t = e.int32() + e.pos; e.pos < t;) a.orderedSoundIds.push(e.fixed64().toString());
+                    else a.orderedSoundIds.push(e.fixed64().toString());
+                    break;
+                default:
+                    let s = n.readUnknownField;
+                    if ("throw" === s)
+                        throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
+                    let l = e.skip(i);
+                    !1 !== s && (!0 === s ? r.f$.onRead : s)(this.typeName, a, t, i, l);
             }
         }
         return a;
@@ -630,6 +638,11 @@ class y extends l.G {
         if (e.soundIds.length) {
             t.tag(1, r.O0.LengthDelimited).fork();
             for (let n = 0; n < e.soundIds.length; n++) t.fixed64(e.soundIds[n]);
+            t.join();
+        }
+        if (e.orderedSoundIds.length) {
+            t.tag(2, r.O0.LengthDelimited).fork();
+            for (let n = 0; n < e.orderedSoundIds.length; n++) t.fixed64(e.orderedSoundIds[n]);
             t.join();
         }
         let i = n.writeUnknownFields;

@@ -103,13 +103,15 @@ function R(e) {
     c.bW.updateAsync(
         "favoriteSoundboardSounds",
         (t) =>
-            r().size(t.soundIds) >= 250
+            r().size(t.soundIds) >= 250 || r().size(t.orderedSoundIds) >= 250
                 ? (l.A.show({
                       title: p.intl.string(p.t["+XYXtZ"]),
                       body: p.intl.formatToPlainString(p.t.JaIyFi, { count: 250 }),
                   }),
                   !1)
-                : !t.soundIds.includes(e) && void t.soundIds.push(e),
+                : !(t.soundIds.includes(e) && t.orderedSoundIds.includes(e)) &&
+                  void (!t.soundIds.includes(e) && t.soundIds.push(e),
+                  !t.orderedSoundIds.includes(e) && t.orderedSoundIds.push(e)),
         f.Sb.INFREQUENT_USER_ACTION,
     );
 }
@@ -117,7 +119,8 @@ function L(e) {
     c.bW.updateAsync(
         "favoriteSoundboardSounds",
         (t) => {
-            t.soundIds = t.soundIds.filter((t) => t !== e);
+            ((t.soundIds = t.soundIds.filter((t) => t !== e)),
+                (t.orderedSoundIds = t.orderedSoundIds.filter((t) => t !== e)));
         },
         f.Sb.INFREQUENT_USER_ACTION,
     );
