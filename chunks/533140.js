@@ -1,7 +1,7 @@
-l.d(t, { Uv: () => i, V0: () => c, c2: () => u, w4: () => o });
-var n = l(582128),
-    a = l(621466),
-    r = l(475815);
+n.d(t, { Uv: () => i, V0: () => c, c2: () => u, w4: () => o });
+var l = n(582128),
+    a = n(621466),
+    r = n(475815);
 function i(e) {
     return null == e ? null : document.querySelector(`[data-frame-id="${CSS.escape(e)}"]`);
 }
@@ -31,5 +31,5 @@ function d(e) {
     return (0, r.a3)(document, e);
 }
 function c(e) {
-    return n.useSyncExternalStore(d, () => s(e));
+    return l.useSyncExternalStore(d, () => s(e));
 }

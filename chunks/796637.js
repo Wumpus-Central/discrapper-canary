@@ -23,8 +23,8 @@ var i = n(582128),
     m = n(93055),
     f = n(774452),
     O = n(349828),
-    R = n(281405),
-    b = n(818348);
+    b = n(281405),
+    R = n(818348);
 let v = 221552 == n.j ? [a.Ay, L.A, o.A, d.Ay, u.A, A.A, g.A, C.A, I.A, T.Ay, p.Ay, S.Ay] : null;
 function y(e) {
     let { limit: t, includeLoading: n } = e,
@@ -109,7 +109,7 @@ function D(e) {
         let { isCollapsed: l, isMuted: s } = t;
         return r()(e)
             .map((e) => {
-                if (!e.isPrivate() && !I.A.can(b.xB.VIEW_CHANNEL, e)) return null;
+                if (!e.isPrivate() && !I.A.can(R.xB.VIEW_CHANNEL, e)) return null;
                 let d = null != a && (a.id === e.id || o === e.id),
                     h = null != a && a.isThread() && a.parent_id === e.id,
                     g =
@@ -185,7 +185,7 @@ function D(e) {
     for (let e of [U, ...D]) for (let t of ((e.position = ++G), e.channelList)) t.position = ++G;
     let M = { isEmpty: () => !0, getRows: () => [], getRow: () => null },
         x = [];
-    t && x.push(R.r.FAVORITES_SUGGESTIONS);
+    t && x.push(b.r.FAVORITES_SUGGESTIONS);
     let P = { isEmpty: () => 0 === x.length, getRows: () => x, getRow: (e) => x[e] ?? null };
     return {
         id: O.Vc,

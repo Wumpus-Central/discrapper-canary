@@ -1,4 +1,4 @@
-(n.d(t, { M$: () => b, Fv: () => O, kF: () => m, Oc: () => f, GY: () => R }), n(667532));
+(n.d(t, { M$: () => R, Fv: () => O, kF: () => m, Oc: () => f, GY: () => b }), n(667532));
 var i = n(310953),
     l = n(473529),
     r = n(519059),
@@ -77,12 +77,12 @@ let m = { binds: ["alt+down"], comboKeysBindGlobal: !0, action: () => (I(), !1) 
             return (null != e && (0, p.u)(e), !1);
         },
     },
-    R = {
+    b = {
         binds: (0, L.isMac)() || (0, L.isMacWeb)() ? ["mod+["] : ["alt+left"],
         comboKeysBindGlobal: !0,
         action: () => ((0, T.OE)("keybind"), !1),
     },
-    b = {
+    R = {
         binds: (0, L.isMac)() || (0, L.isMacWeb)() ? ["mod+]"] : ["alt+right"],
         comboKeysBindGlobal: !0,
         action: () => ((0, T.Qb)("keybind"), !1),

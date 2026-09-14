@@ -40,8 +40,8 @@ let f = function (e) {
           : null;
 };
 var O = n(769015),
-    R = n(106191),
-    b = n(548118),
+    b = n(106191),
+    R = n(548118),
     v = n(376943),
     y = n(636585),
     U = n(71393),
@@ -100,7 +100,7 @@ class j extends l.Component {
         let { guild: e } = this.props;
         return (0, i.jsx)("div", {
             className: w._C,
-            children: (0, i.jsx)(b.Ay, { tabIndex: -1, guild: e, size: b.Ay.Sizes.MINI, className: w.$f }),
+            children: (0, i.jsx)(R.Ay, { tabIndex: -1, guild: e, size: R.Ay.Sizes.MINI, className: w.$f }),
         });
     }
     renderName() {
@@ -371,7 +371,7 @@ function W(e) {
         children: (0, i.jsxs)("div", {
             className: w.xr,
             children: [
-                (0, i.jsx)("div", { className: w.zc, children: (0, i.jsx)(R.A, { game: t, iconClassName: w.bN }) }),
+                (0, i.jsx)("div", { className: w.zc, children: (0, i.jsx)(b.A, { game: t, iconClassName: w.bN }) }),
                 (0, i.jsxs)("div", {
                     className: w.UU,
                     children: [

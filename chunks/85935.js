@@ -11,7 +11,7 @@ n.d(t, {
     bU: () => tY,
     Uk: () => tU,
     GN: () => t0,
-    Y0: () => t7,
+    Y0: () => t5,
     P$: () => tz,
     _d: () => tq,
     gL: () => tK,
@@ -916,7 +916,7 @@ function e2() {
 var e3 = n(652215),
     e8 = n(670455),
     e6 = n(750557);
-function e7(e) {
+function e5(e) {
     let { summary: t, channel: l, members: r, guildId: a, unread: o, onClick: u } = e,
         [c, m] = s.useState(!1),
         f = (0, eV.aK)(eK.default.extractTimestamp(t.startId)),
@@ -998,7 +998,7 @@ function e7(e) {
         ],
     });
 }
-function e5(e) {
+function e7(e) {
     let { summaries: t, summariesMembers: n, channel: l, selectTopic: r, setOpen: a } = e,
         o = (0, d.bG)([eH.Ay], () => eH.Ay.getOldestUnreadMessageId(l.id)),
         u = s.useCallback(
@@ -1013,7 +1013,7 @@ function e5(e) {
               children: t.map((e, t) => {
                   let s = n[t] ?? [];
                   return (0, i.jsx)(
-                      e7,
+                      e5,
                       {
                           summary: e,
                           channel: l,
@@ -2162,7 +2162,7 @@ function t1(e) {
             [B],
         ));
     let W = s.useMemo(
-            () => (0, i.jsx)(e5, { channel: t, summaries: _, summariesMembers: b, selectTopic: F, setOpen: H }),
+            () => (0, i.jsx)(e7, { channel: t, summaries: _, summariesMembers: b, selectTopic: F, setOpen: H }),
             [_, b, F, H, t],
         ),
         K = s.useCallback(() => {
@@ -2436,7 +2436,7 @@ function t3(e) {
             [W],
         ));
     let K = s.useMemo(
-        () => (0, i.jsx)(e5, { channel: t, summaries: A, summariesMembers: N, selectTopic: V, setOpen: B }),
+        () => (0, i.jsx)(e7, { channel: t, summaries: A, summariesMembers: N, selectTopic: V, setOpen: B }),
         [A, N, V, B, t],
     );
     if (!(0, d.bG)([ew.A], () => ew.A.shouldShowTopicsBar())) return null;
@@ -2568,7 +2568,7 @@ function t6(e) {
     let { children: t, className: n } = e;
     return (0, i.jsx)("div", { className: a()(tD.jCT, n), children: t });
 }
-function t7(e) {
+function t5(e) {
     let { className: t } = e;
     return (0, i.jsx)(t6, {
         className: t,

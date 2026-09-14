@@ -1,4 +1,4 @@
-(n.r(t), n.d(t, { COMPACT_CONTROL_BAR_MAX_WIDTH_PX: () => $, default: () => G }), n(321073));
+(n.r(t), n.d(t, { COMPACT_CONTROL_BAR_MAX_WIDTH_PX: () => O, default: () => G }), n(321073));
 var r = n(477900),
     l = n(582128),
     a = n(503698),
@@ -37,8 +37,8 @@ var r = n(477900),
     _ = n(375708),
     U = n(862649);
 let K = { tension: 250, friction: 5, clamp: !0 },
-    O = { visibility: "hidden" },
-    $ = 400,
+    $ = { visibility: "hidden" },
+    O = 400,
     H = {
         [c.oA.SM]: {
             barHeightPx: 40,
@@ -117,8 +117,8 @@ let K = { tension: 250, friction: 5, clamp: !0 },
                 persistTimeline: e_ = !1,
                 persistPlayhead: eU = !0,
                 autoFocus: eK = !1,
-                autoHideVolumeSlider: eO = !1,
-                timelineIndicatorConfig: e$,
+                autoHideVolumeSlider: e$ = !1,
+                timelineIndicatorConfig: eO,
                 scrubPreviewVttUrl: eH,
                 scrubPreviewImageUrl: eG,
                 loadingSpinnerPosition: eQ = "top-left",
@@ -162,10 +162,10 @@ let K = { tension: 250, friction: 5, clamp: !0 },
             [tT, tM] = l.useState(a || Z),
             [tL, tj] = l.useState(eo),
             [tD, tk] = l.useState(ec),
-            [tI, tB] = l.useState(!eO),
+            [tI, tB] = l.useState(!e$),
             [tF, t_] = l.useState(!1),
             [tU, tK] = l.useState(!1),
-            [tO, t$] = l.useState(!1),
+            [t$, tO] = l.useState(!1),
             tH = (0, o.bG)([S.Ay], () => S.Ay.useReducedMotion),
             tG = (0, l.useRef)(null),
             tQ = (0, l.useRef)(null),
@@ -207,10 +207,10 @@ let K = { tension: 250, friction: 5, clamp: !0 },
             [nr, nl] = l.useState(!1),
             na = (0, b.A)((e) => {
                 let t = e.contentRect.width;
-                t <= 0 || nl(t < $);
+                t <= 0 || nl(t < O);
             });
         (0, E.g)(tQ, na, [], { enabled: ek, fireOnMount: ek });
-        let ni = tO ? c.oA.LG : ek && nr ? c.oA.SM : c.oA.MD,
+        let ni = t$ ? c.oA.LG : ek && nr ? c.oA.SM : c.oA.MD,
             nu = H[ni];
         (0, g.u5)(() => {
             tz.current && (tz.current = !1);
@@ -303,7 +303,7 @@ let K = { tension: 250, friction: 5, clamp: !0 },
         nv.current = ei;
         let nx = l.useCallback(() => {
             let e = (0, C.qf)(t0.current?.parentNode, t0.current);
-            null == e || (0, C._U)(e) || (e.removeEventListener(C.Wb, nx), t$(!1), nv.current?.(!1));
+            null == e || (0, C._U)(e) || (e.removeEventListener(C.Wb, nx), tO(!1), nv.current?.(!1));
         }, [t0]);
         function ng() {
             null == tG.current ||
@@ -473,8 +473,8 @@ let K = { tension: 250, friction: 5, clamp: !0 },
                 autoPlay: a,
                 alt: V,
                 playsInline: !0,
-                mediaLayoutType: tO ? F.dG.STATIC : F.dG.RESPONSIVE,
-                className: i()({ [U.R]: nL, [U.IR]: !0, [U.FP]: "cover" === ez && !tO }),
+                mediaLayoutType: t$ ? F.dG.STATIC : F.dG.RESPONSIVE,
+                className: i()({ [U.R]: nL, [U.IR]: !0, [U.FP]: "cover" === ez && !t$ }),
                 controls: !1,
                 poster: z,
                 preload: tT ? eN : "none",
@@ -565,15 +565,15 @@ let K = { tension: 250, friction: 5, clamp: !0 },
             },
             nB = (0, r.jsx)(P.BK, {
                 children: (0, r.jsx)(A.pT, {
-                    activeLayer: tO ? P.$W : void 0,
-                    isFullscreen: tO,
+                    activeLayer: t$ ? P.$W : void 0,
+                    isFullscreen: t$,
                     videoRef: tG,
                     isActive: tT,
                     isControlBarExpanded: np,
                     children: (0, r.jsx)(f.D, {
                         className: i()(U.W6, { [U.nZ]: !tT }),
                         style: { minWidth: eZ, minHeight: eX },
-                        "data-fullscreen": tO,
+                        "data-fullscreen": t$,
                         "data-testid": "discord-web-video-player-container",
                         tabIndex: tT ? -1 : 0,
                         focusProps: tT ? void 0 : { ringTarget: ts },
@@ -729,7 +729,7 @@ let K = { tension: 250, friction: 5, clamp: !0 },
                                                     ),
                                                 },
                                                 children: (0, r.jsx)("div", {
-                                                    style: np || tg || e_ ? void 0 : O,
+                                                    style: np || tg || e_ ? void 0 : $,
                                                     children: (0, r.jsx)(T.Ay, {
                                                         percent: null != ta ? ta : tr,
                                                         animate:
@@ -776,7 +776,7 @@ let K = { tension: 250, friction: 5, clamp: !0 },
                                                                       : t && ns(c.Q6.ENDED, c.KB.PLAYBACK_COMPLETE);
                                                             }
                                                         },
-                                                        indicatorConfig: e$,
+                                                        indicatorConfig: eO,
                                                         scrubPreviewCues: tJ,
                                                         onIndicatorSeek: nA,
                                                         getCurrentTimeSec: tq,
@@ -837,18 +837,18 @@ let K = { tension: 250, friction: 5, clamp: !0 },
                                                         tK(!tU);
                                                     },
                                                     handleFullScreenBtnClick: function () {
-                                                        let e = !tO,
+                                                        let e = !t$,
                                                             t = (0, C.qf)(t0.current?.parentNode, t0.current);
                                                         (e && null != t
                                                             ? ((0, C.tl)(t), t.addEventListener(C.Wb, nx), ei?.(!0))
                                                             : e ||
                                                               null == t ||
                                                               (t.removeEventListener(C.Wb, nx), ei?.(!1), (0, C.sP)(t)),
-                                                            t$(e));
+                                                            tO(e));
                                                     },
                                                     handleSeekBackBtnClick: ng,
                                                     handleSeekForwardBtnClick: nE,
-                                                    autoHideVolumeSlider: eO,
+                                                    autoHideVolumeSlider: e$,
                                                     handleControlBarPendingInteraction: tE,
                                                     onVolumeChange: function (e) {
                                                         (tj(e), eu?.(e));
@@ -892,5 +892,5 @@ let K = { tension: 250, friction: 5, clamp: !0 },
                     }),
                 }),
             });
-        return (0, r.jsx)(s.Jh, { enabled: tO, children: nB });
+        return (0, r.jsx)(s.Jh, { enabled: t$, children: nB });
     });

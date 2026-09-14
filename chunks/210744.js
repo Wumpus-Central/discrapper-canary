@@ -1,22 +1,22 @@
-l.d(t, { A: () => x });
-var n = l(477900);
-l(582128);
-var a = l(17928),
-    r = l(86147),
-    i = l(729475),
-    s = l(91242),
-    o = l(742589),
-    u = l(869146),
-    d = l(475815),
-    c = l(533140),
-    m = l(985451),
-    f = l(652215),
-    h = l(165610),
-    g = l(375708);
+n.d(t, { A: () => x });
+var l = n(477900);
+n(582128);
+var a = n(17928),
+    r = n(86147),
+    i = n(729475),
+    s = n(91242),
+    o = n(742589),
+    u = n(869146),
+    d = n(475815),
+    c = n(533140),
+    m = n(985451),
+    f = n(652215),
+    h = n(165610),
+    g = n(375708);
 function x(e) {
-    let { frame: t, controlProjectId: l } = e,
+    let { frame: t, controlProjectId: n } = e,
         x = (0, c.V0)(t?.id ?? null),
-        p = (0, m.o4)(l),
+        p = (0, m.o4)(n),
         v = (0, a.bG)(
             [u.A, s.A],
             () => null != t && u.A.getWindowOpen(f.MLl.ACTIVITY_POPOUT) && s.A.getMainFrame()?.id === t.id,
@@ -26,7 +26,7 @@ function x(e) {
     let b = (0, c.Uv)(t.id);
     if (null == b || !(0, d.Ub)(b)) return null;
     let j = g.intl.string(x ? g.t.Z7MyNB : g.t.OIDkcp);
-    return (0, n.jsx)(o.A.Icon, {
+    return (0, l.jsx)(o.A.Icon, {
         tooltip: j,
         icon: x ? r.z : i.T,
         "aria-label": j,

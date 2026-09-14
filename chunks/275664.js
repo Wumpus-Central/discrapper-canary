@@ -156,10 +156,10 @@ function y(e) {
             scrubPreviewCues: _,
             onIndicatorSeek: U,
             getCurrentTimeSec: K,
-            "data-testid": O,
+            "data-testid": $,
         } = e,
         {
-            contRef: $,
+            contRef: O,
             boundingRect: H,
             handleMouseEnter: G,
             handleMouseLeave: Q,
@@ -426,8 +426,8 @@ function y(e) {
         );
     return (0, r.jsx)("div", {
         className: g.jD,
-        ref: $,
-        "data-testid": O,
+        ref: O,
+        "data-testid": $,
         style: {
             "--custom-timeline-height": `${null != M && X ? M : R}px`,
             "--custom-initial-timeline-height": `${L}px`,

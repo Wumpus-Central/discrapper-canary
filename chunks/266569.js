@@ -28,8 +28,8 @@ var i = n(477900),
     w = n(823784);
 n(23766);
 var b = n(652215);
-let L = new Set();
-class R {
+let R = new Set();
+class L {
     id;
     entity;
     questContent;
@@ -95,11 +95,11 @@ class R {
     }
     trackViewedPlacement = (e) => {
         let t = (0, S.HN)(this.questContent);
-        null != t && (0, S.xn)(this.questContent, this.entity.adCreativeType) && L.add(`${e}_${t}`);
+        null != t && (0, S.xn)(this.questContent, this.entity.adCreativeType) && R.add(`${e}_${t}`);
     };
     shouldExtendSession = (e) => {
         let t = (0, S.HN)(this.questContent);
-        return null != t && !L.has(`${e}_${t}`) && (0, S.xn)(this.questContent, this.entity.adCreativeType);
+        return null != t && !R.has(`${e}_${t}`) && (0, S.xn)(this.questContent, this.entity.adCreativeType);
     };
     maybeRegisterIosAttributionImpression = (e, t) => {
         if (this.iosAttributionRegistered || !(0, C.C$)()) return;
@@ -276,7 +276,7 @@ class R {
         let { triggeredByStatusChange: t } = e;
         return (
             this.stop(),
-            new R({
+            new L({
                 questContent: this.questContent,
                 questContentRowIndex: this.questContentRowIndex,
                 questContentPosition: this.questContentPosition,
@@ -409,8 +409,8 @@ function M(e) {
                     triggeredByStatusChange: C,
                 };
                 (e.adCreativeType === o.p.QUEST
-                    ? (A.current = new R({ ...t, adContentIds: e.adContentIds, adCreativeType: e.adCreativeType }))
-                    : (A.current = new R({
+                    ? (A.current = new L({ ...t, adContentIds: e.adContentIds, adCreativeType: e.adCreativeType }))
+                    : (A.current = new L({
                           ...t,
                           adContentIds: e.adContentIds,
                           adCreativeType: e.adCreativeType,

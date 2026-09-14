@@ -1,6 +1,6 @@
 (n.d(t, {
     $J: () => w,
-    IG: () => L,
+    IG: () => R,
     Ps: () => G,
     UR: () => v,
     W1: () => y,
@@ -89,10 +89,10 @@ function b(e, t) {
           }),
         (0, f.A)({ platformType: n, location: t.ctaContent }));
 }
-function L(e) {
+function R(e) {
     return w(e) === S.fg2.XBOX ? O.t["mytEv+"] : O.t.iDiwby;
 }
-function R(e) {
+function L(e) {
     if (((0, p.isIOS)() || "ios" === (0, p.getOS)()) && e.ios?.iosAppId != null) {
         let t = e.ios.iosAppId.startsWith("id") ? e.ios.iosAppId : `id${e.ios.iosAppId}`;
         return `https://apps.apple.com/app/${t}`;
@@ -131,7 +131,7 @@ function k(e, t) {
         i,
         o,
         u = (0, h.Jx)(e.config),
-        a = null == (n = e.config.ctaConfig) ? null : R({ url: (0, h.Jx)(e.config), android: n.android, ios: n.ios });
+        a = null == (n = e.config.ctaConfig) ? null : L({ url: (0, h.Jx)(e.config), android: n.android, ios: n.ios });
     (null != a && (u = a),
         (function (e) {
             try {
@@ -198,7 +198,7 @@ function D(e, t) {
         let { adContentId: i, adCreativeType: r, cta: s } = e,
             { preferExternalAppStore: o } = n,
             u = s.url,
-            f = R(s);
+            f = L(s);
         (null != f && (u = f),
             (0, T.E5)(T.kI.STEP_3_CLICKED_EXTERNAL, "open_ad_game_link_directly")
                 ? (0, l.r)({

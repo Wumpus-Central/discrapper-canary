@@ -1,4 +1,4 @@
-n.d(t, { US: () => v, BD: () => U, X8: () => D, mH: () => b });
+n.d(t, { US: () => v, BD: () => U, X8: () => D, mH: () => R });
 var i = n(477900);
 n(582128);
 var l = n(435558),
@@ -44,9 +44,9 @@ let I = r().throttle(function (e, t) {
                 : (r.splice(a, 0, l), r.slice(a + 1).concat(r.slice(0, a + 1)))),
         f = e > 0 ? 0 : m.length - 1,
         O = _(N, S),
-        R = O.indexOf(L) + e;
+        b = O.indexOf(L) + e;
     for (; null != N && "" !== N;) {
-        if (((A = O[R]), I(N)))
+        if (((A = O[b]), I(N)))
             for (; null != A && "" !== A;) {
                 if ("string" == typeof A) {
                     if (C(N, A)) return (0, E.i)(N, A, !1, p(N, A));
@@ -82,10 +82,10 @@ let I = r().throttle(function (e, t) {
                             return (t) => (0, i.jsx)(e, { ...t, guildId: N });
                         })
                     );
-                ((R += e), (A = O[R]));
+                ((b += e), (A = O[b]));
             }
         if (((f += e), null == (N = m[f]) || "" === N)) break;
-        ((O = _(N, S)), (R = e < 0 ? O.length - 1 : 0));
+        ((O = _(N, S)), (b = e < 0 ? O.length - 1 : 0));
     }
     h._.dispatch(g.jej.SHAKE_APP, { duration: 200, intensity: 2 });
 }, g.ugG);
@@ -106,7 +106,7 @@ let f = (e, t) => {
     },
     O = (e, t) =>
         t === C.P.GUILD_EVENT ? !m.Ay.isMuteScheduledEventsEnabled(e) && N.Ay.hasUnread(e, t) : N.Ay.hasUnread(e, t),
-    R = (e, t) => {
+    b = (e, t) => {
         let n = S.A.getChannel(t);
         return (
             null != n &&
@@ -114,7 +114,7 @@ let f = (e, t) => {
             (N.Ay.getMentionCount(t) > 0 || (L.Ay.getVoiceChannelId() === t && N.Ay.getUnreadCount(t) > 0))
         );
     },
-    b = {
+    R = {
         binds: ["alt+shift+down"],
         comboKeysBindGlobal: !0,
         action() {
@@ -124,7 +124,7 @@ let f = (e, t) => {
                     channelPredicate: f,
                     guildPredicate: (t) => t === e || !m.Ay.isMuted(t),
                     guildFeaturePredicate: O,
-                    ensureChatIsVisible: R,
+                    ensureChatIsVisible: b,
                     withVoiceChannels: !0,
                 }),
                 !1
@@ -141,7 +141,7 @@ let f = (e, t) => {
                     channelPredicate: f,
                     guildPredicate: (t) => t === e || !m.Ay.isMuted(t),
                     guildFeaturePredicate: O,
-                    ensureChatIsVisible: R,
+                    ensureChatIsVisible: b,
                     withVoiceChannels: !0,
                 }),
                 !1
@@ -152,10 +152,10 @@ let f = (e, t) => {
     U = {
         binds: ["mod+shift+alt+down"],
         comboKeysBindGlobal: !0,
-        action: () => (I(1, { channelPredicate: y, ensureChatIsVisible: R, withVoiceChannels: !0 }), !1),
+        action: () => (I(1, { channelPredicate: y, ensureChatIsVisible: b, withVoiceChannels: !0 }), !1),
     },
     D = {
         binds: ["mod+shift+alt+up"],
         comboKeysBindGlobal: !0,
-        action: () => (I(-1, { channelPredicate: y, ensureChatIsVisible: R, withVoiceChannels: !0 }), !1),
+        action: () => (I(-1, { channelPredicate: y, ensureChatIsVisible: b, withVoiceChannels: !0 }), !1),
     };

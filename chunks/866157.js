@@ -1,6 +1,6 @@
 (n.d(t, {
     O9: () => eH,
-    Vn: () => eL,
+    Vn: () => eR,
     Wj: () => eq,
     mL: () => eu,
     Cv: () => ez,
@@ -15,7 +15,7 @@
     NC: () => eT,
     Hv: () => ev,
     j$: () => eD,
-    fc: () => eR,
+    fc: () => eL,
     SD: () => eg,
     aC: () => eF,
     FA: () => ej,
@@ -76,8 +76,8 @@ var g = n(27620),
     P = n(174459),
     w = n(927813),
     b = n(403362),
-    L = n(975571),
-    R = n(252424),
+    R = n(975571),
+    L = n(252424),
     Q = n(723702),
     M = n(158045);
 (n(323874), n(14289), n(35956), n(636537), n(228366), n(181658), n(314329), n(107195), n(881615), n(390595));
@@ -479,7 +479,7 @@ function eP(e) {
         s = (0, X.wW)();
     return o.useCallback(() => {
         t.id === ei.Fw
-            ? window.open(L.A.getArticleURL(G.MVz.VIRTUAL_CURRENCY_LEARN_MORE))
+            ? window.open(R.A.getArticleURL(G.MVz.VIRTUAL_CURRENCY_LEARN_MORE))
             : (0, z.pu)(t, { content: n, ctaContent: i, impressionId: s(), sourceQuestContent: r });
     }, [t, n, i, s, r]);
 }
@@ -489,7 +489,7 @@ function ew(e) {
 function eb(e) {
     return o.useMemo(() => (0, ee.YL)(e), [e]);
 }
-function eL(e) {
+function eR(e) {
     let t,
         n = ew(e),
         i = eb(e),
@@ -498,11 +498,11 @@ function eL(e) {
             o.useMemo(() => (0, en.J$)(e), [e, t]));
     return n || i || r;
 }
-let eR = (e) => {
+let eL = (e) => {
     let t = o.useCallback(() => (0, ee.Yh)(e), [e]),
         [n, i] = o.useState(t()),
         r = o.useCallback(() => i(t()), [t]),
-        s = eL(e);
+        s = eR(e);
     return (
         o.useEffect(() => {
             if (
@@ -604,7 +604,7 @@ function eq(e) {
 function eG(e) {
     let { quest: t } = e,
         { xboxAndPlaystationAccounts: n } = eU(),
-        i = eL(t),
+        i = eR(t),
         r = 0 === n.length;
     return (0, ee.g5)(t) && r && !i;
 }
@@ -612,8 +612,8 @@ function eB() {
     let { xboxAccounts: e, playstationAccounts: t } = eU(),
         n = e.length > 0,
         i = t.length > 0,
-        r = L.A.getArticleURL(G.MVz.QUEST_HOW_TO_PLAYSTATION),
-        s = L.A.getArticleURL(G.MVz.QUEST_HOW_TO_XBOX),
+        r = R.A.getArticleURL(G.MVz.QUEST_HOW_TO_PLAYSTATION),
+        s = R.A.getArticleURL(G.MVz.QUEST_HOW_TO_XBOX),
         o = es.intl.format(es.t.beN4DG, { psHelpdeskArticle: r, xboxHelpdeskArticle: s }),
         u = es.intl.format(es.t.HVS7nh, { helpdeskArticle: i ? r : s });
     return { message: (n && !i) || (!n && i) ? u : o, xboxURL: s, playstationURL: r };
@@ -629,17 +629,17 @@ function eV(e) {
     let t = e.userStatus?.enrolledAt != null,
         n = e.userStatus?.completedAt != null,
         i = e.userStatus?.claimedAt != null,
-        r = eR(e).percentComplete > 0;
+        r = eL(e).percentComplete > 0;
     return i ? 4 : n ? 3 : r && t ? 2 : 1 * !!t;
 }
 function eH(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = (0, p.bG)([S.default], () => S.default.locale),
-        { percentComplete: i } = eR(e),
+        { percentComplete: i } = eL(e),
         r = eQ(e),
         s = null != r ? r.percentComplete : i,
         o = 100 * s,
-        u = null == r || t ? (0, R.l9)(n, s, { roundingMode: "floor" }) : `${r?.progress}/${r?.target}`;
+        u = null == r || t ? (0, L.l9)(n, s, { roundingMode: "floor" }) : `${r?.progress}/${r?.target}`;
     return { completedRatio: s, percentComplete: o, completedRatioDisplay: u };
 }
 function eK(e) {
@@ -706,7 +706,7 @@ function e$(e, t) {
 }
 function eF(e) {
     let t = eQ(e),
-        n = eR(e),
+        n = eL(e),
         [i] = e$(e, n),
         r = eO(e),
         s = e.userStatus?.enrolledAt != null,
