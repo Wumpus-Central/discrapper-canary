@@ -14,6 +14,7 @@
         LOGITECH_3PP_CARD_ID: () => m,
         MONTHLY_TO_YEARLY_UPSELL_CARD_ID: () => f,
         MORE_EMOJIS_CARD_ID: () => _,
+        NITRO_FILE_UPLOAD_WHATS_NEW_CARD_ID: () => y,
         NITRO_ORBS_REWARDS_CARD_ID: () => p,
         PERMADECOS_CARD_ID: () => A,
         PREMIUM_GROUP_CARD_ID: () => d,
@@ -58,4 +59,5 @@ let i = "badge",
     g = "xgppPerk",
     h = "callOfDuty3PP",
     U = "callOfDuty3PPExpired",
-    L = "youtube3PP";
+    L = "youtube3PP",
+    y = "nitroFileUpload1gb";
