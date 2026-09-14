@@ -17,12 +17,12 @@ var _ =
         (i[(i.REDUCE_SATURATION_ENABLED = 64)] = "REDUCE_SATURATION_ENABLED"),
         i),
     E = n(460890),
-    A = n(38021),
-    h = n(818348);
+    A = n(812743),
+    h = n(38021);
 function I(e) {
     let {
             children: t,
-            theme: n = h.NJ.DARK,
+            theme: n = A.NJ.DARK,
             primaryColor: i = null,
             secondaryColor: s = null,
             gradient: l = null,
@@ -35,7 +35,7 @@ function I(e) {
         } = e,
         I = a.useMemo(
             () =>
-                (0, A.dI)({
+                (0, h.dI)({
                     theme: n,
                     primaryColor: i,
                     secondaryColor: s,
@@ -49,7 +49,7 @@ function I(e) {
                 }),
             [n, i, s, l, o, d, c, u, _, E],
         );
-    return (0, r.jsx)(A.Dx.Provider, { value: I, children: t });
+    return (0, r.jsx)(h.Dx.Provider, { value: I, children: t });
 }
 var f = n(775602),
     p = n(989395),

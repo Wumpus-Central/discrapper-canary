@@ -8,11 +8,11 @@ var A,
     c,
     u,
     L,
-    C,
     d,
+    C,
     D = E(214958),
-    g = E.n(D);
-function p() {
+    p = E.n(D);
+function g() {
     let e = window;
     return (
         null != e.jQuery ||
@@ -71,11 +71,11 @@ if (null != U) {
             os_arch: r,
             app_arch: _,
             system_locale: I,
-            has_client_mods: p(),
+            has_client_mods: g(),
             client_launch_id: M,
         }),
-        g().name?.toLocaleLowerCase() === "electron" &&
-            ((i.browser_user_agent = g().ua || ""), (i.browser_version = g().version || "")),
+        p().name?.toLocaleLowerCase() === "electron" &&
+            ((i.browser_user_agent = p().ua || ""), (i.browser_version = p().version || "")),
         "linux" === E)
     ) {
         let e = U.crashReporter.getMetadata();
@@ -184,7 +184,7 @@ if (null == i)
                         else return "";
                     })()),
                     (t.system_locale = P()),
-                    (t.has_client_mods = p()),
+                    (t.has_client_mods = g()),
                     (e = t),
                     n.set(f, e));
             }
@@ -199,8 +199,8 @@ if (null == i)
             return {
                 ...e,
                 ...{
-                    ...{ browser_user_agent: window.navigator.userAgent || "", browser_version: g().version || "" },
-                    os_version: g()?.os?.version ?? "",
+                    ...{ browser_user_agent: window.navigator.userAgent || "", browser_version: p().version || "" },
+                    os_version: p()?.os?.version ?? "",
                 },
                 ...t,
                 ...E,
@@ -213,7 +213,7 @@ if (null == i)
     (l = window.GLOBAL_ENV.RELEASE_CHANNEL) &&
         (null == I.release_channel || "" === I.release_channel) &&
         (I.release_channel = l.split("-")[0]),
-    isNaN((s = parseInt("612440", 10))) || (I.client_build_number = s),
+    isNaN((s = parseInt("612448", 10))) || (I.client_build_number = s),
     null == (a = U?.app.getBuildNumber()) || isNaN(a) || (I.native_build_number = a),
     (I.client_event_source = (function () {
         try {
@@ -221,7 +221,7 @@ if (null == i)
         } catch (e) {}
         return null;
     })()),
-    (I.has_client_mods = p()),
+    (I.has_client_mods = g()),
     (I.client_launch_id = M),
     (function (e) {
         try {
@@ -399,8 +399,9 @@ function K(e, t) {
     }
     return E;
 }
-let j = location.protocol + window.GLOBAL_ENV.WEBAPP_ENDPOINT,
-    Q = location.protocol + "//discord.gg";
+let j = "u" < typeof location ? "" : location.protocol,
+    Q = j + ("u" < typeof window ? "" : window.GLOBAL_ENV.WEBAPP_ENDPOINT),
+    x = j + "//discord.gg";
 (Object.freeze({
     HINT_PURPLE: "#c9d2f0",
     DARK_PURPLE: "#697ec4",
@@ -437,13 +438,13 @@ let j = location.protocol + window.GLOBAL_ENV.WEBAPP_ENDPOINT,
         10: "TDS",
     }),
     Object.freeze({
-        BRAINTREE: { KEY: window.GLOBAL_ENV.BRAINTREE_KEY, PAYMENT_GATEWAY: "braintree" },
-        STRIPE: { KEY: window.GLOBAL_ENV.STRIPE_KEY, PAYMENT_GATEWAY: "stripe" },
-        ADYEN: { KEY: window.GLOBAL_ENV.ADYEN_KEY, PAYMENT_GATEWAY: "adyen" },
+        BRAINTREE: { KEY: "u" < typeof window ? "" : window.GLOBAL_ENV.BRAINTREE_KEY, PAYMENT_GATEWAY: "braintree" },
+        STRIPE: { KEY: "u" < typeof window ? "" : window.GLOBAL_ENV.STRIPE_KEY, PAYMENT_GATEWAY: "stripe" },
+        ADYEN: { KEY: "u" < typeof window ? "" : window.GLOBAL_ENV.ADYEN_KEY, PAYMENT_GATEWAY: "adyen" },
     }),
     Object.freeze({ CONSTANT: 1, APPLE_STICKER: 2 }),
     Object.freeze({ 0: "subscription", 1: "sku" }));
-let x = Object.freeze({
+let X = Object.freeze({
     CREATE_INSTANT_INVITE: W(0),
     KICK_MEMBERS: W(1),
     BAN_MEMBERS: W(2),
@@ -503,43 +504,43 @@ let x = Object.freeze({
     let n = t[0];
     for (let e = 1; e < t.length; e++) n = V(n, t[e]);
 })(
-    x.KICK_MEMBERS,
-    x.BAN_MEMBERS,
-    x.ADMINISTRATOR,
-    x.MANAGE_CHANNELS,
-    x.MANAGE_GUILD,
-    x.MANAGE_ROLES,
-    x.MANAGE_MESSAGES,
-    x.MANAGE_THREADS,
-    x.MODERATE_MEMBERS,
+    X.KICK_MEMBERS,
+    X.BAN_MEMBERS,
+    X.ADMINISTRATOR,
+    X.MANAGE_CHANNELS,
+    X.MANAGE_GUILD,
+    X.MANAGE_ROLES,
+    X.MANAGE_MESSAGES,
+    X.MANAGE_THREADS,
+    X.MODERATE_MEMBERS,
 ),
     Object.freeze({
         TWITTER: Object.freeze({ default: "https://twitter.com/discord", ja: "https://twitter.com/discord_jp" }),
     }));
-let X = Object.freeze({
-    WELCOME: `${j}/welcome/`,
-    ME: `${j}/channels/@me`,
-    SETTINGS: (e, t) => `${j}/settings/${e}${t ? `/${t}` : ""}`,
-    CONNECTION: (e) => `${j}/connections/${e}`,
-    CHANGELOGS: `${j}/settings/changelogs`,
-    LOGIN: `${j}/login`,
-    LOGIN_WITH_REDIRECT: (e) => `${j}/login?redirect_to=${e}`,
-    REGISTER: `${j}/register`,
-    REGISTER_WITH_REDIRECT: (e) => `${j}/register?redirect_to=${e}`,
-    CREATE_GUILD: `${j}/guilds/create`,
-    VANITY_INVITE: (e) => `${Q}/${e}`,
-    HYPESQUAD_ONLINE: `${j}/settings/hypesquad-online`,
-    BROWSE_NITRO_TITLES: `${j}/store/browse?type=nitro`,
-    SKU_DETAILS: (e, t) => `${j}/store/skus/${e}${null != t ? `?store_listing_id=${t}` : ""}`,
+let q = Object.freeze({
+    WELCOME: `${Q}/welcome/`,
+    ME: `${Q}/channels/@me`,
+    SETTINGS: (e, t) => `${Q}/settings/${e}${null != t && "" !== t ? `/${t}` : ""}`,
+    CONNECTION: (e) => `${Q}/connections/${e}`,
+    CHANGELOGS: `${Q}/settings/changelogs`,
+    LOGIN: `${Q}/login`,
+    LOGIN_WITH_REDIRECT: (e) => `${Q}/login?redirect_to=${e}`,
+    REGISTER: `${Q}/register`,
+    REGISTER_WITH_REDIRECT: (e) => `${Q}/register?redirect_to=${e}`,
+    CREATE_GUILD: `${Q}/guilds/create`,
+    VANITY_INVITE: (e) => `${x}/${e}`,
+    HYPESQUAD_ONLINE: `${Q}/settings/hypesquad-online`,
+    BROWSE_NITRO_TITLES: `${Q}/store/browse?type=nitro`,
+    SKU_DETAILS: (e, t) => `${Q}/store/skus/${e}${null != t ? `?store_listing_id=${t}` : ""}`,
     MESSAGE: (e, t, E) => `/channels/${e}/${t}/${E}`,
     CHANNEL: (e, t) => `/channels/${e}/${t}`,
-    REPORT: `${j}/report`,
-    QUEST_PREVIEW_TOOL_2: (e) => `${j}/quest-preview/${e}`,
-    QUEST_HOME_PREVIEW: (e) => `${j}/quest-home?ad_creative_ids=${e}`,
-    QUEST_BAR_PREVIEW: (e) => `${j}/quest-bar-preview?ad_creative_ids=${e}`,
+    REPORT: `${Q}/report`,
+    QUEST_PREVIEW_TOOL_2: (e) => `${Q}/quest-preview/${e}`,
+    QUEST_HOME_PREVIEW: (e) => `${Q}/quest-home?ad_creative_ids=${e}`,
+    QUEST_BAR_PREVIEW: (e) => `${Q}/quest-bar-preview?ad_creative_ids=${e}`,
 });
-var q =
-    (((A = q || {}).INDEX = "/"),
+var z =
+    (((A = z || {}).INDEX = "/"),
     (A.INDEX_WORD = "/index"),
     (A.INDEX_BUCKET = "/index/:bucketId"),
     (A.CHANGELOGS = "/changelogs/:date"),
@@ -627,29 +628,29 @@ var q =
     (A.SNOWSGIVING_GIVEAWAY_INSTAGRAM = "/terms/snowsgiving-2020/instagram"),
     (A.SNOWSGIVING_GIVEAWAY_TWITTER = "/terms/snowsgiving-2020/twitter"),
     A);
-(K(X),
-    K(q),
+(K(q),
+    K(z),
     Object.freeze({
         FACEBOOK_URL: "https://www.facebook.com/discord/",
         INSTAGRAM_URL: "https://www.instagram.com/discord/",
         YOUTUBE_URL: "https://www.youtube.com/discord/",
         TIKTOK_URL: "https://www.tiktok.com/@discord",
     }));
-let z = "dQw4w9WgXcQ:",
-    J = null,
-    Z = window.DiscordNative;
-null != Z && (J = Z.safeStorage);
-let ee = !1,
-    et = {},
-    eE = !1;
-function en(e) {
+let J = "dQw4w9WgXcQ:",
+    Z = null,
+    ee = window.DiscordNative;
+null != ee && (Z = ee.safeStorage);
+let et = !1,
+    eE = {},
+    en = !1;
+function er(e) {
     return null == e || 0 === e.length
         ? { decryptedToken: null, wasEncrypted: !1 }
-        : J?.isEncryptionAvailable() && e.startsWith(z)
-          ? { decryptedToken: J.decryptString(e.substring(z.length)), wasEncrypted: !0 }
+        : Z?.isEncryptionAvailable() && e.startsWith(J)
+          ? { decryptedToken: Z.decryptString(e.substring(J.length)), wasEncrypted: !0 }
           : { decryptedToken: e, wasEncrypted: !1 };
 }
-var er =
+var ei =
         (((S = {})[(S.DISPATCH = 0)] = "DISPATCH"),
         (S[(S.HEARTBEAT = 1)] = "HEARTBEAT"),
         (S[(S.IDENTIFY = 2)] = "IDENTIFY"),
@@ -683,9 +684,9 @@ var er =
         (S[(S.UPDATE_TIME_SPENT_SESSION_ID = 41)] = "UPDATE_TIME_SPENT_SESSION_ID"),
         (S[(S.REQUEST_CHANNEL_INFO = 43)] = "REQUEST_CHANNEL_INFO"),
         S),
-    ei = E(377941),
-    e_ = E.n(ei),
-    eo =
+    e_ = E(377941),
+    eo = E.n(e_),
+    eI =
         (((T = {}).ALL = "ALL"),
         (T.AVATAR_DECORATION = "AVATAR_DECORATION"),
         (T.PROFILE_EFFECT = "PROFILE_EFFECT"),
@@ -693,20 +694,20 @@ var er =
         (T.PROFILE_FRAME = "PROFILE_FRAME"),
         (T.BUNDLE = "BUNDLE"),
         T),
-    eI = (((O = {}).ASC = "asc"), (O.DESC = "desc"), O),
-    el =
+    el = (((O = {}).ASC = "asc"), (O.DESC = "desc"), O),
+    es =
         (((R = {}).PRICE = "price"),
         (R.ALPHABETICAL = "alphabetical"),
         (R.RECENCY = "recency"),
         (R.POPULARITY = "popularity"),
         (R.RELEVANCE = "relevance"),
         R),
-    es =
+    ea =
         (((N = {}).PREMIUM_TIER_2_1_HOUR = "1271583180566036480"),
         (N.PREMIUM_TIER_2_1_DAY = "1298745361602449479"),
         (N.PREMIUM_TIER_2_3_DAY = "1333912750274904064"),
         N),
-    ea =
+    eA =
         (((c = {}).HOME = "home"),
         (c.CATALOG = "catalog"),
         (c.ORBS = "orbs"),
@@ -724,34 +725,34 @@ var er =
         c);
 (Object.values({
     ORB_PROFILE_BADGE: "1342211853484429445",
-    FRACTIONAL_PREMIUM: es.PREMIUM_TIER_2_3_DAY,
-    FRACTIONAL_PREMIUM_1_DAY: es.PREMIUM_TIER_2_1_DAY,
+    FRACTIONAL_PREMIUM: ea.PREMIUM_TIER_2_3_DAY,
+    FRACTIONAL_PREMIUM_1_DAY: ea.PREMIUM_TIER_2_1_DAY,
 }),
-    eo.AVATAR_DECORATION,
-    eo.NAMEPLATE,
-    eo.PROFILE_EFFECT,
-    eo.PROFILE_FRAME,
-    eo.BUNDLE,
-    el.RELEVANCE,
-    eI.DESC,
-    el.RECENCY,
-    eI.DESC,
-    el.PRICE,
-    eI.ASC,
-    el.PRICE,
-    eI.DESC,
-    el.POPULARITY,
-    eI.DESC);
-var eA = (((u = {}).ABOUT = "about"), (u.STORE = "store"), u),
-    eS =
+    eI.AVATAR_DECORATION,
+    eI.NAMEPLATE,
+    eI.PROFILE_EFFECT,
+    eI.PROFILE_FRAME,
+    eI.BUNDLE,
+    es.RELEVANCE,
+    el.DESC,
+    es.RECENCY,
+    el.DESC,
+    es.PRICE,
+    el.ASC,
+    es.PRICE,
+    el.DESC,
+    es.POPULARITY,
+    el.DESC);
+var eS = (((u = {}).ABOUT = "about"), (u.STORE = "store"), u),
+    eT =
         (((L = {}).GENERAL = "general"),
         (L.IMAGES = "images"),
         (L.PREMIUM_DEPRECATED = "premium"),
         (L.STORE = "store"),
         (L.PRIVACY = "privacy"),
         L);
-let eT = ["@me", "@favorites", "@guilds-empty-nux", "@inbox", "@guild-upsell-list"],
-    eO = K(
+let eO = ["@me", "@favorites", "@guilds-empty-nux", "@inbox", "@guild-upsell-list"],
+    eR = K(
         Object.freeze({
             INDEX: "/",
             APP: "/app",
@@ -857,7 +858,7 @@ let eT = ["@me", "@favorites", "@guilds-empty-nux", "@inbox", "@guild-upsell-lis
             GLOBAL_DISCOVERY_APPS_CATEGORY: (e) => `/discovery/applications/categories/${e}`,
             GLOBAL_DISCOVERY_APPS_PROFILE: (e) => `/discovery/applications/${e}`,
             GLOBAL_DISCOVERY_APPS_PROFILE_SECTION: (e, t) => `/discovery/applications/${e}/${t}`,
-            GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU: (e, t) => `/discovery/applications/${e}/${eA.STORE}/${t}`,
+            GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU: (e, t) => `/discovery/applications/${e}/${eS.STORE}/${t}`,
             GLOBAL_DISCOVERY_APPS_SEARCH: "/discovery/applications/search",
             GUILD_MEMBER_VERIFICATION: (e) => `/member-verification/${e}`,
             GUILD_MEMBER_VERIFICATION_FOR_HUB: (e, t) => `/member-verification-for-hub/${e}${null != t ? `/${t}` : ""}`,
@@ -893,7 +894,7 @@ let eT = ["@me", "@favorites", "@guilds-empty-nux", "@inbox", "@guild-upsell-lis
             APPLICATION_DIRECTORY: "/application-directory",
             APPLICATION_DIRECTORY_PROFILE: (e) => `/application-directory/${e}`,
             APPLICATION_DIRECTORY_PROFILE_SECTION: (e, t) => `/application-directory/${e}/${t}`,
-            APPLICATION_DIRECTORY_PROFILE_STORE_SKU: (e, t) => `/application-directory/${e}/${eS.STORE}/${t}`,
+            APPLICATION_DIRECTORY_PROFILE_STORE_SKU: (e, t) => `/application-directory/${e}/${eT.STORE}/${t}`,
             APPLICATION_DIRECTORY_SEARCH: "/application-directory/search",
             FAMILY_CENTER: "/family-center",
             FAMILY_CENTER_MY_FAMILY: (e, t) => `/feature/family-center/my-family/${e}/${t}`,
@@ -911,7 +912,7 @@ let eT = ["@me", "@favorites", "@guilds-empty-nux", "@inbox", "@guild-upsell-lis
             REPORT_SECOND_LOOK: "/report-review",
             COLLECTIBLES_SHOP: "/shop",
             COLLECTIBLES_SHOP_GAME_SHOP: (e, t, E, n) => {
-                let r = `/shop?tab=${ea.GAME_SHOPS}&applicationId=${e}`;
+                let r = `/shop?tab=${eA.GAME_SHOPS}&applicationId=${e}`;
                 return (
                     null != t && (r += `&pageIndex=${t}`),
                     null != E && (r += `&skuId=${E}`),
@@ -940,30 +941,30 @@ let eT = ["@me", "@favorites", "@guilds-empty-nux", "@inbox", "@guild-upsell-lis
         }),
         [":", "?", "@"],
     ),
-    eR = new Set(
+    eN = new Set(
         Object.values(
-            (((C = {}).VIBEGRATIONS = "conjuring"),
-            (C.ROLE_SUBSCRIPTIONS = "role-subscriptions"),
-            (C.SERVER_MONETIZATION_ONBOARDING = "server-monetization-onboarding"),
-            (C.GAME_SHOP = "game-shop"),
-            (C.GUILD_SHOP = "shop"),
-            (C.MEMBER_APPLICATIONS = "member-applications"),
-            (C.GUILD_HOME = "@home"),
-            (C.CHANNEL_BROWSER = "channel-browser"),
-            (C.GUILD_ONBOARDING = "onboarding"),
-            (C.CUSTOMIZE_COMMUNITY = "customize-community"),
-            (C.MEMBER_SAFETY = "member-safety"),
-            (C.GUILD_BOOSTS = "boosts"),
-            (C.GAME_SERVERS = "game-servers"),
-            (C.REPORT_TO_MOD = "report-to-mod"),
-            (C.GUILD_OFFICIAL_MESSAGES = "official-messages"),
-            (C.GUILD_SPACE = "guild-space"),
-            C),
+            (((d = {}).VIBEGRATIONS = "conjuring"),
+            (d.ROLE_SUBSCRIPTIONS = "role-subscriptions"),
+            (d.SERVER_MONETIZATION_ONBOARDING = "server-monetization-onboarding"),
+            (d.GAME_SHOP = "game-shop"),
+            (d.GUILD_SHOP = "shop"),
+            (d.MEMBER_APPLICATIONS = "member-applications"),
+            (d.GUILD_HOME = "@home"),
+            (d.CHANNEL_BROWSER = "channel-browser"),
+            (d.GUILD_ONBOARDING = "onboarding"),
+            (d.CUSTOMIZE_COMMUNITY = "customize-community"),
+            (d.MEMBER_SAFETY = "member-safety"),
+            (d.GUILD_BOOSTS = "boosts"),
+            (d.GAME_SERVERS = "game-servers"),
+            (d.REPORT_TO_MOD = "report-to-mod"),
+            (d.GUILD_OFFICIAL_MESSAGES = "official-messages"),
+            (d.GUILD_SPACE = "guild-space"),
+            d),
         ),
     );
-function eN(e, t) {
+function ec(e, t) {
     let { optional: E = !1 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-    return new k(`:${e_()(e)}(${t})${E ? "?" : ""}`);
+    return new k(`:${eo()(e)}(${t})${E ? "?" : ""}`);
 }
 (Object.freeze({
     GUILD_FEED_REMOVED: 1,
@@ -987,81 +988,81 @@ function eN(e, t) {
     HAS_ONLY_SYSTEM_MESSAGES: 8388608,
 }),
     Object.values(
-        (((d = {}).GUILD_HOME = "home"),
-        (d.SERVER_GUIDE = "guide"),
-        (d.CHANNEL_BROWSER = "browse"),
-        (d.CUSTOMIZE_COMMUNITY = "customize"),
-        (d.LINKED_ROLES = "linked-roles"),
-        d),
+        (((C = {}).GUILD_HOME = "home"),
+        (C.SERVER_GUIDE = "guide"),
+        (C.CHANNEL_BROWSER = "browse"),
+        (C.CUSTOMIZE_COMMUNITY = "customize"),
+        (C.LINKED_ROLES = "linked-roles"),
+        C),
     ));
-let ec = {
+let eu = {
     guildId() {
         let { name: e = "guildId", optional: t = !1 } =
                 arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-            E = eT.map(e_()).join("|");
-        return eN(e, `${E}|\\d+`, { optional: t });
+            E = eO.map(eo()).join("|");
+        return ec(e, `${E}|\\d+`, { optional: t });
     },
     channelId() {
         let { name: e = "channelId", optional: t = !1 } =
                 arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-            E = [...eR].map(e_()).join("|");
-        return eN(e, `${E}|\\d+`, { optional: t });
+            E = [...eN].map(eo()).join("|");
+        return ec(e, `${E}|\\d+`, { optional: t });
     },
 };
-var eu = E(806163);
-let eL = new Set([
-    eO.APP_WITH_INVITE_AND_GUILD_ONBOARDING(":inviteCode"),
-    eO.APP_WITH_GIFT_CODE(":giftCode"),
-    eO.APP,
-    eO.PICK_GUILD_SETTINGS(":section?", ":subsection?"),
-    eO.SETTINGS(":section", ":subsection?"),
-    eO.USER_GUILD_NOTIFICATION_SETTINGS(ec.guildId()),
-    eO.APPLICATION_LIBRARY_INVENTORY,
-    eO.WELCOME(ec.guildId({ optional: !0 }), ec.channelId({ optional: !0 })),
-    eO.GUILD_EVENT_DETAILS(ec.guildId({ optional: !0 }), ":guildEventId"),
-    eO.GUILD_SETTINGS(ec.guildId(), ":section?", ":subsection?"),
-    eO.CHANNEL_THREAD_VIEW(ec.guildId(), ec.channelId(), ":threadId", ":messageId?"),
-    eO.CHANNEL(ec.guildId(), ec.channelId({ optional: !0 }), ":messageId?"),
-    eO.ACTIVITY,
-    eO.ACTIVITIES,
-    eO.ACTIVITIES_HAPPENING_NOW,
-    eO.ACTIVITY_DETAILS(":applicationId"),
-    eO.APPLICATION_LIBRARY,
-    eO.APPLICATION_STORE,
-    eO.MESSAGE_REQUESTS,
-    eO.COLLECTIBLES_SHOP,
-    eO.COLLECTIBLES_SHOP_COLLECTION_DETAIL(":collectionId"),
-    eO.COLLECTIBLES_SHOP_PRODUCT_DETAIL(":skuId"),
-    eO.COLLECTIBLES_SHOP_LAYOUT(":layoutId"),
-    eO.GUILD_DISCOVERY,
-    eO.QUEST_HOME_DEPRECATED,
-    eO.QUEST_HOME,
-    eO.ICYMI,
-    eO.GLOBAL_DISCOVERY,
-    eO.GUILD_MEMBER_VERIFICATION(ec.guildId()),
-    eO.GUILD_MEMBER_VERIFICATION_FOR_HUB(ec.guildId(), ":inviteCode?"),
-    eO.GUILD_BOOSTING_MARKETING(ec.guildId()),
-    eO.GUILD_FEATURE(":feature", ec.guildId()),
-    eO.FEATURE(":feature"),
-    eO.FAMILY_CENTER,
-    eO.APPLICATION_DIRECTORY,
-    eO.GAME_SHOP(ec.guildId(), ":shopSkuId?", ":shopSlug?"),
+var eL = E(806163);
+let ed = new Set([
+    eR.APP_WITH_INVITE_AND_GUILD_ONBOARDING(":inviteCode"),
+    eR.APP_WITH_GIFT_CODE(":giftCode"),
+    eR.APP,
+    eR.PICK_GUILD_SETTINGS(":section?", ":subsection?"),
+    eR.SETTINGS(":section", ":subsection?"),
+    eR.USER_GUILD_NOTIFICATION_SETTINGS(eu.guildId()),
+    eR.APPLICATION_LIBRARY_INVENTORY,
+    eR.WELCOME(eu.guildId({ optional: !0 }), eu.channelId({ optional: !0 })),
+    eR.GUILD_EVENT_DETAILS(eu.guildId({ optional: !0 }), ":guildEventId"),
+    eR.GUILD_SETTINGS(eu.guildId(), ":section?", ":subsection?"),
+    eR.CHANNEL_THREAD_VIEW(eu.guildId(), eu.channelId(), ":threadId", ":messageId?"),
+    eR.CHANNEL(eu.guildId(), eu.channelId({ optional: !0 }), ":messageId?"),
+    eR.ACTIVITY,
+    eR.ACTIVITIES,
+    eR.ACTIVITIES_HAPPENING_NOW,
+    eR.ACTIVITY_DETAILS(":applicationId"),
+    eR.APPLICATION_LIBRARY,
+    eR.APPLICATION_STORE,
+    eR.MESSAGE_REQUESTS,
+    eR.COLLECTIBLES_SHOP,
+    eR.COLLECTIBLES_SHOP_COLLECTION_DETAIL(":collectionId"),
+    eR.COLLECTIBLES_SHOP_PRODUCT_DETAIL(":skuId"),
+    eR.COLLECTIBLES_SHOP_LAYOUT(":layoutId"),
+    eR.GUILD_DISCOVERY,
+    eR.QUEST_HOME_DEPRECATED,
+    eR.QUEST_HOME,
+    eR.ICYMI,
+    eR.GLOBAL_DISCOVERY,
+    eR.GUILD_MEMBER_VERIFICATION(eu.guildId()),
+    eR.GUILD_MEMBER_VERIFICATION_FOR_HUB(eu.guildId(), ":inviteCode?"),
+    eR.GUILD_BOOSTING_MARKETING(eu.guildId()),
+    eR.GUILD_FEATURE(":feature", eu.guildId()),
+    eR.FEATURE(":feature"),
+    eR.FAMILY_CENTER,
+    eR.APPLICATION_DIRECTORY,
+    eR.GAME_SHOP(eu.guildId(), ":shopSkuId?", ":shopSlug?"),
 ]);
 !(function () {
     if (null == window.WebSocket || null == window._ws) return;
     let e =
         ((function () {
-            if (eE) return;
-            ((o = n.get("token")), (et = n.get("tokens") || {}));
-            let { decryptedToken: e, wasEncrypted: t } = en(o);
-            ((ee = t),
+            if (en) return;
+            ((o = n.get("token")), (eE = n.get("tokens") || {}));
+            let { decryptedToken: e, wasEncrypted: t } = er(o);
+            ((et = t),
                 (_ = e),
                 [
-                    ...Object.entries(et)
+                    ...Object.entries(eE)
                         .map((e) => {
                             let [t, E] = e,
-                                { decryptedToken: n, wasEncrypted: r } = en(E);
-                            return ((ee = r || ee), [t, n]);
+                                { decryptedToken: n, wasEncrypted: r } = er(E);
+                            return ((et = r || et), [t, n]);
                         })
                         .filter((e) => {
                             let [t, E] = e;
@@ -1071,7 +1072,7 @@ let eL = new Set([
                     let [E, n] = t;
                     return ((e[E] = n), e);
                 }, {}),
-                (eE = !0));
+                (en = !0));
         })(),
         _);
     if (null == e || __OVERLAY__) return;
@@ -1084,7 +1085,7 @@ let eL = new Set([
             (performance.mark("FastConnect-identify-handler-running"),
             (E.open = !0),
             !(function (e) {
-                for (let t of eL) if (null != (0, eu.B6)(e, { path: t })) return !0;
+                for (let t of ed) if (null != (0, eL.B6)(e, { path: t })) return !0;
                 return !1;
             })(window.location.pathname))
         )
@@ -1105,7 +1106,7 @@ let eL = new Set([
         }
         let _ = n.get("installation_id_v3") ?? n.get("analytics_installation");
         var o = r({
-            op: er.IDENTIFY,
+            op: ei.IDENTIFY,
             d: {
                 token: e,
                 capabilities: (function (e) {
