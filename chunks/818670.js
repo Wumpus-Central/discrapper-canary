@@ -17,9 +17,13 @@ let c = r.memo(function (e) {
         height: 2 * t,
         className: l()(c, d.r$, s ? d.Sp : null, _ ? null : d.Ft),
         "aria-hidden": !0,
-        children: [0, 1, 2].map((e) =>
-            (0, i.jsx)("circle", { className: d.Om, cx: t + t * a * e, cy: t, r: t, fill: "currentColor" }, e),
-        ),
+        children: (0, i.jsx)("foreignObject", {
+            width: "100%",
+            height: "100%",
+            children: [0, 1, 2].map((e) =>
+                (0, i.jsx)("div", { className: d.Om, style: { left: e * t * a, width: 2 * t, height: 2 * t } }, e),
+            ),
+        }),
     });
 });
 var u = n(863610);

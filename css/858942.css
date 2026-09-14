@@ -918,9 +918,12 @@
 
 .dot_bc2923 {
     animation: css-dots-pulse_bc2923 1.2s cubic-bezier(.45, 0, .55, 1) infinite;
+    background-color: currentColor;
+    border-radius: 50%;
     opacity: .32;
+    position: absolute;
     scale: .8;
-    transform-box: fill-box;
+    top: 0;
     transform-origin: center
 }
 
@@ -6130,4 +6133,4 @@ svg.radioIcon_c1e9c4 {
     color: var(--text-strong)
 }
 
-/*# sourceMappingURL=858942.3a29066561c69de6.css.map*/
+/*# sourceMappingURL=858942.230aa3c7deb28595.css.map*/
