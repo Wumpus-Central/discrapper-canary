@@ -1,4 +1,4 @@
-(n.d(t, { P: () => ev, ThirdPartyPromotionsModal: () => ex }), n(321073));
+(n.d(t, { P: () => e_, ThirdPartyPromotionsModal: () => ev }), n(321073));
 var i,
     a = n(477900),
     r = n(582128),
@@ -9,21 +9,22 @@ var i,
     c = n(189213),
     u = n(403581),
     m = n(17928),
-    b = n(52133),
-    p = n(192308),
+    p = n(52133),
+    b = n(192308),
     f = n(793574),
-    g = n(363195),
-    h = n(174459),
-    x = n(792656),
-    v = n(962644),
-    _ = n(35587),
-    P = n(412260),
-    R = n(852218),
-    C = n(194261),
-    T = n(297264),
-    A = n(144165),
+    g = n(688810),
+    h = n(363195),
+    x = n(174459),
+    v = n(792656),
+    _ = n(962644),
+    P = n(35587),
+    R = n(412260),
+    C = n(852218),
+    T = n(194261),
+    A = n(297264),
+    y = n(144165),
     E = n(341973);
-function y(e) {
+function N(e) {
     let { title: t, body: n, asset: i } = e;
     return (0, a.jsx)("div", {
         className: E.lA,
@@ -35,13 +36,13 @@ function y(e) {
                     children: [
                         (0, a.jsx)("div", {
                             className: E.MC,
-                            children: (0, a.jsx)(C.LockIcon, { size: "refresh_sm" }),
+                            children: (0, a.jsx)(T.LockIcon, { size: "refresh_sm" }),
                         }),
                         (0, a.jsxs)("div", {
                             className: E.yO,
                             children: [
-                                (0, a.jsx)(T.D, { variant: "heading-lg/semibold", color: "text-strong", children: t }),
-                                (0, a.jsx)(T.D, { variant: "heading-sm/medium", color: "text-subtle", children: n }),
+                                (0, a.jsx)(A.D, { variant: "heading-lg/semibold", color: "text-strong", children: t }),
+                                (0, a.jsx)(A.D, { variant: "heading-sm/medium", color: "text-subtle", children: n }),
                             ],
                         }),
                     ],
@@ -49,7 +50,7 @@ function y(e) {
                 null != i &&
                     (0, a.jsx)("div", {
                         className: E.R4,
-                        children: (0, a.jsx)(A._, {
+                        children: (0, a.jsx)(y._, {
                             src: i,
                             className: E.Ys,
                             width: 100,
@@ -62,24 +63,24 @@ function y(e) {
         }),
     });
 }
-var N = n(947641),
-    j = n(408278),
-    O = n(624479),
-    I = n(821609),
-    L = n(695366),
-    U = n(331322),
-    S = n(661531),
-    M = n(914410),
-    w = n(58703),
-    k = n(975571),
-    D = n(38405),
-    B = n(264779),
-    Y = n(652215),
-    G = n(334551),
-    V = n(375708);
-function H() {
-    let e = (0, w.N5)(),
-        t = (0, w.P6)();
+var j = n(947641),
+    O = n(408278),
+    I = n(624479),
+    L = n(821609),
+    U = n(695366),
+    S = n(331322),
+    M = n(661531),
+    w = n(914410),
+    k = n(58703),
+    D = n(975571),
+    B = n(38405),
+    Y = n(264779),
+    G = n(652215),
+    V = n(334551),
+    H = n(375708);
+function z() {
+    let e = (0, k.N5)(),
+        t = (0, k.P6)();
     return (0, a.jsxs)("div", {
         className: `${E.G9} ${E.sQ}`,
         children: [
@@ -87,34 +88,34 @@ function H() {
                 variant: "text-sm/normal",
                 color: "text-muted",
                 className: E.kT,
-                children: V.intl.format(G.default["65EEvD"], { days: t }),
+                children: H.intl.format(V.default["65EEvD"], { days: t }),
             }),
-            (0, a.jsx)(M.Ay, {
+            (0, a.jsx)(w.Ay, {
                 progress: e,
-                variant: M.qP.UNSET,
+                variant: w.qP.UNSET,
                 override: { default: { gradientStart: "var(--illo-blue-70)", gradientEnd: "var(--illo-blue-10)" } },
             }),
         ],
     });
 }
-function z(e) {
+function F(e) {
     let { children: t } = e;
     return (0, a.jsx)("div", { className: E.oP, children: (0, a.jsx)("div", { className: E.t0, children: t }) });
 }
-let F = (e) => {
+let K = (e) => {
     let { recurrence: t, analyticsLocations: n = [] } = e,
-        i = (0, a.jsx)(N.r, { color: S.A.colors.CONTROL_CONNECTED_BACKGROUND_DEFAULT }),
+        i = (0, a.jsx)(j.r, { color: M.A.colors.CONTROL_CONNECTED_BACKGROUND_DEFAULT }),
         s = (0, a.jsx)("span", {
             className: E.nP,
-            children: (0, a.jsx)(j.K, {
-                icon: O.CopyIcon,
+            children: (0, a.jsx)(O.K, {
+                icon: I.CopyIcon,
                 size: "sm",
                 variant: "icon-only",
                 "aria-label": "",
                 onClick: () => {
                     (navigator.clipboard.writeText(t.code),
                         d(i),
-                        h.default.track(Y.HAw.THIRD_PARTY_PARTNER_CTA_CLICKED, {
+                        x.default.track(G.HAw.THIRD_PARTY_PARTNER_CTA_CLICKED, {
                             partner: t.partnerId,
                             cta_type: "copy code",
                             promotion: t.outboundTitle,
@@ -140,16 +141,16 @@ let F = (e) => {
                         }),
                     }),
                     l,
-                    (0, a.jsx)(I.$, {
+                    (0, a.jsx)(L.$, {
                         variant: "secondary",
                         size: "sm",
                         text:
                             t.redeemCtaText ??
-                            V.intl.formatToPlainString(V.t.DF68t7, { redemptionURL: t.redemptionURL }),
+                            H.intl.formatToPlainString(H.t.DF68t7, { redemptionURL: t.redemptionURL }),
                         onClick: () => {
                             (window.open(t.redemptionURL, "_blank"),
-                                h.default.track(Y.HAw.RECURRING_PROMOTION_CLAIMED),
-                                h.default.track(Y.HAw.THIRD_PARTY_PARTNER_CTA_CLICKED, {
+                                x.default.track(G.HAw.RECURRING_PROMOTION_CLAIMED),
+                                x.default.track(G.HAw.THIRD_PARTY_PARTNER_CTA_CLICKED, {
                                     partner: t.partnerId,
                                     cta_type: "visit store",
                                     promotion: t.outboundTitle,
@@ -163,7 +164,7 @@ let F = (e) => {
             }),
         });
 };
-function K(e) {
+function W(e) {
     let {
         recurrence: t,
         canBeClaimed: n,
@@ -177,41 +178,41 @@ function K(e) {
         ? i
             ? (0, a.jsx)("div", {
                   className: l,
-                  children: (0, a.jsx)(I.$, {
-                      icon: L.E,
+                  children: (0, a.jsx)(L.$, {
+                      icon: U.E,
                       variant: "critical-secondary",
                       size: "sm",
                       disabled: !0,
-                      text: V.intl.string(V.t["8LKchl"]),
+                      text: H.intl.string(H.t["8LKchl"]),
                   }),
               })
             : (0, a.jsx)("div", {
                   className: l,
-                  children: (0, a.jsx)(I.$, {
-                      icon: C.LockIcon,
+                  children: (0, a.jsx)(L.$, {
+                      icon: T.LockIcon,
                       variant: "secondary",
                       size: "sm",
-                      text: t.claimCtaText ?? V.intl.string(V.t.vwASIl),
+                      text: t.claimCtaText ?? H.intl.string(H.t.vwASIl),
                       onClick: () => {
-                          (0, B.kd)({
+                          (0, Y.kd)({
                               promotionId: t.id,
                               promotionTitle: t.outboundTitle,
                               partnerId: t.partnerId,
                               analyticsLocations: o,
                           })
                               .then((e) => {
-                                  ((0, v.LI)(e), r(e.code));
+                                  ((0, _.LI)(e), r(e.code));
                               })
                               .catch((e) => {
-                                  (s(!0), D.A.captureException(e));
+                                  (s(!0), B.A.captureException(e));
                               });
                       },
                   }),
               })
         : null;
 }
-var W = (((i = {}).INLINE = "inline"), (i.FOOTER = "footer"), i);
-function X(e) {
+var X = (((i = {}).INLINE = "inline"), (i.FOOTER = "footer"), i);
+function $(e) {
     let {
             recurrence: t,
             titleClassName: n,
@@ -223,8 +224,8 @@ function X(e) {
             footerContent: c,
             analyticsLocations: u = [],
         } = e,
-        [m, b] = r.useState(t.code),
-        [p, f] = r.useState(!1),
+        [m, p] = r.useState(t.code),
+        [b, f] = r.useState(!1),
         g = null == m;
     return (0, a.jsxs)("div", {
         className: E.lA,
@@ -239,35 +240,35 @@ function X(e) {
                             (0, a.jsxs)("div", {
                                 className: null != n ? `${E.yO} ${n}` : E.yO,
                                 children: [
-                                    (0, a.jsx)(T.D, {
+                                    (0, a.jsx)(A.D, {
                                         variant: "secondary" === o ? "heading-md/semibold" : "heading-lg/semibold",
                                         color: "text-strong",
                                         children: t.title,
                                     }),
-                                    (0, a.jsxs)(U.B, {
+                                    (0, a.jsxs)(S.B, {
                                         direction: "vertical",
                                         gap: 8,
                                         children: [
-                                            (0, a.jsx)(T.D, {
+                                            (0, a.jsx)(A.D, {
                                                 variant: "heading-sm/medium",
                                                 color: "text-subtle",
-                                                children: p
-                                                    ? V.intl.format(V.t.i2EuFO, {
-                                                          helpdeskArticle: k.A.getArticleURL(Y.MVz.RECURRING_PROMOTION),
+                                                children: b
+                                                    ? H.intl.format(H.t.i2EuFO, {
+                                                          helpdeskArticle: D.A.getArticleURL(G.MVz.RECURRING_PROMOTION),
                                                       })
                                                     : g
                                                       ? t.body
                                                       : null != t.bodyClaimed
-                                                        ? V.intl.format(t.bodyClaimed, { date: t.endDate })
+                                                        ? H.intl.format(t.bodyClaimed, { date: t.endDate })
                                                         : t.body,
                                             }),
                                             null != t.bodyNote &&
-                                                (0, a.jsx)(T.D, {
+                                                (0, a.jsx)(A.D, {
                                                     variant: "heading-sm/medium",
                                                     color: "text-subtle",
-                                                    children: V.intl.format(t.bodyNote, {
-                                                        partnerName: R.CD[t.partnerId].label,
-                                                        helpdeskArticle: k.A.getArticleURL(Y.MVz.RECURRING_PROMOTION),
+                                                    children: H.intl.format(t.bodyNote, {
+                                                        partnerName: C.CD[t.partnerId].label,
+                                                        helpdeskArticle: D.A.getArticleURL(G.MVz.RECURRING_PROMOTION),
                                                     }),
                                                 }),
                                         ],
@@ -275,11 +276,11 @@ function X(e) {
                                 ],
                             }),
                             "inline" === d &&
-                                (0, a.jsx)(K, {
+                                (0, a.jsx)(W, {
                                     recurrence: t,
                                     canBeClaimed: g,
-                                    hasClaimError: p,
-                                    setCode: b,
+                                    hasClaimError: b,
+                                    setCode: p,
                                     setHasClaimError: f,
                                     analyticsLocations: u,
                                 }),
@@ -288,10 +289,10 @@ function X(e) {
                     s &&
                         (0, a.jsx)("div", {
                             className: E.R4,
-                            children: (0, a.jsx)(A._, {
+                            children: (0, a.jsx)(y._, {
                                 src: t.asset ?? "",
                                 className: E.Ys,
-                                imageClassName: l || t.partnerId === R.XY ? E.Cy : void 0,
+                                imageClassName: l || t.partnerId === C.XY ? E.Cy : void 0,
                                 width: 100,
                                 height: 100,
                                 zoomable: !1,
@@ -300,15 +301,15 @@ function X(e) {
                 ],
             }),
             "footer" === d && c,
-            null != m && (0, a.jsx)(F, { recurrence: { ...t, code: m }, analyticsLocations: u }),
+            null != m && (0, a.jsx)(K, { recurrence: { ...t, code: m }, analyticsLocations: u }),
             "footer" === d &&
                 null == m &&
-                (0, a.jsx)(z, {
-                    children: (0, a.jsx)(K, {
+                (0, a.jsx)(F, {
+                    children: (0, a.jsx)(W, {
                         recurrence: t,
                         canBeClaimed: g,
-                        hasClaimError: p,
-                        setCode: b,
+                        hasClaimError: b,
+                        setCode: p,
                         setHasClaimError: f,
                         className: E.qx,
                         analyticsLocations: u,
@@ -317,9 +318,9 @@ function X(e) {
         ],
     });
 }
-function $(e) {
-    let { promotion: t, claimButtonPlacement: n = W.INLINE, analyticsLocations: i } = e;
-    return (0, a.jsx)(X, {
+function q(e) {
+    let { promotion: t, claimButtonPlacement: n = X.INLINE, analyticsLocations: i } = e;
+    return (0, a.jsx)($, {
         recurrence: t,
         titleVariant: "secondary",
         showPartnerImage: null != t.asset,
@@ -328,113 +329,113 @@ function $(e) {
         analyticsLocations: i,
     });
 }
-var q = n(325499),
-    J = n(789861),
-    Z = n(398523),
-    Q = n(881373),
-    ee = n(310235),
-    et = n(762359);
-let en =
+var J = n(325499),
+    Z = n(789861),
+    Q = n(398523),
+    ee = n(881373),
+    et = n(310235),
+    en = n(762359);
+let ei =
         "https://cdn.discordapp.com/assets/content/c93472f5033e3079579ad496c9a54a95faa23623f5b1d11590d536c861f52e7c.svg",
-    ei =
+    ea =
         "https://cdn.discordapp.com/assets/content/6bbac5a155872455d86969ce5309725d9aa0317ba3b104b3027716e70040e11f.webp";
-function ea(e, t) {
+function er(e, t) {
     if (null != e) return "single_promo" === e.type ? e.config : e.configsByOutboundTitle[t];
 }
-function er() {
-    return V.intl.formatToPlainString(V.t.p7BkHh, { discountPercentage: Z.b });
-}
 function es() {
-    return (0, q.i)("ThirdPartyPromotionPartnerConfigs") ? V.intl.string(V.t.nmvvaN) : V.intl.string(V.t.igiSKe);
+    return H.intl.formatToPlainString(H.t.p7BkHh, { discountPercentage: Q.b });
 }
-let el = {
-    [R.KS]: {
-        getLockedPreview: () => ({ title: er(), body: es(), asset: ei }),
+function el() {
+    return (0, J.i)("ThirdPartyPromotionPartnerConfigs") ? H.intl.string(H.t.nmvvaN) : H.intl.string(H.t.igiSKe);
+}
+let eo = {
+    [C.KS]: {
+        getLockedPreview: () => ({ title: es(), body: el(), asset: ea }),
         landingUrl: "https://steelseries.com/",
-        recurringCardAsset: ei,
+        recurringCardAsset: ea,
         outboundConfigs: {
             type: "single_promo",
-            config: { getTitle: er, getBody: es, getBodyClaimed: () => V.t.w8CXUl },
+            config: { getTitle: es, getBody: el, getBodyClaimed: () => H.t.w8CXUl },
         },
     },
-    [R.XY]: {
+    [C.XY]: {
         getLockedPreview: () => ({
-            title: (0, q.i)("ThirdPartyPromotionPartnerConfigs")
-                ? V.intl.formatToPlainString(G.default.PF1aT5, { discountPercentage: Q.aW })
-                : V.intl.formatToPlainString(G.default.LsJ9hj, { discountPercent: Q.aW }),
-            body: (0, q.i)("ThirdPartyPromotionPartnerConfigs")
-                ? V.intl.formatToPlainString(G.default.KoKwMn, {})
-                : V.intl.formatToPlainString(G.default.Yl5ww1, {}),
-            asset: en,
+            title: (0, J.i)("ThirdPartyPromotionPartnerConfigs")
+                ? H.intl.formatToPlainString(V.default.PF1aT5, { discountPercentage: ee.aW })
+                : H.intl.formatToPlainString(V.default.LsJ9hj, { discountPercent: ee.aW }),
+            body: (0, J.i)("ThirdPartyPromotionPartnerConfigs")
+                ? H.intl.formatToPlainString(V.default.KoKwMn, {})
+                : H.intl.formatToPlainString(V.default.Yl5ww1, {}),
+            asset: ei,
         }),
         landingUrl: "https://www.logitech.com/",
-        recurringCardAsset: en,
+        recurringCardAsset: ei,
         outboundConfigs: {
             type: "multiple_promo",
             configsByOutboundTitle: {
                 "Logitech G": {
-                    getTitle: () => V.intl.formatToPlainString(G.default.jkdhZq, { discountPercent: Q.aW }),
-                    getBody: () => V.intl.formatToPlainString(G.default.mH30Yx, {}),
+                    getTitle: () => H.intl.formatToPlainString(V.default.jkdhZq, { discountPercent: ee.aW }),
+                    getBody: () => H.intl.formatToPlainString(V.default.mH30Yx, {}),
                 },
                 "Logitech 5%": {
-                    getTitle: () => V.intl.formatToPlainString(G.default.zeBjoX, { discountPercent: Q.y$ }),
-                    getBody: () => V.intl.formatToPlainString(G.default.fC4abC, { months: 6 }),
+                    getTitle: () => H.intl.formatToPlainString(V.default.zeBjoX, { discountPercent: ee.y$ }),
+                    getBody: () => H.intl.formatToPlainString(V.default.fC4abC, { months: 6 }),
                 },
                 "Logitech PRO Series Sim": {
-                    getTitle: () => V.intl.formatToPlainString(G.default.pSBCjv, { discountPercent: Q.K2 }),
-                    getBody: () => V.intl.formatToPlainString(G.default.lsRjfl, {}),
+                    getTitle: () => H.intl.formatToPlainString(V.default.pSBCjv, { discountPercent: ee.K2 }),
+                    getBody: () => H.intl.formatToPlainString(V.default.lsRjfl, {}),
                 },
             },
         },
     },
-    [R.Bt]: {
+    [C.Bt]: {
         showSectionHeaders: !1,
         landingUrl: "https://www.callofduty.com/",
         outboundConfigs: {
             type: "single_promo",
             config: {
-                getTitle: () => V.intl.string(ee.default["6vVfeK"]),
-                getBody: (e) => V.intl.formatToPlainString(ee.default.nsmhS2, { date: (0, J.mh)(e.endDate) }),
-                getAsset: (e, t) => (0, B.WD)(e.id, t),
-                getClaimCtaText: () => V.intl.string(ee.default["lbyFG+"]),
-                getRedeemCtaText: () => V.intl.string(ee.default["6rwUm2"]),
-                claimButtonPlacement: W.FOOTER,
+                getTitle: () => H.intl.string(et.default["6vVfeK"]),
+                getBody: (e) => H.intl.formatToPlainString(et.default.nsmhS2, { date: (0, Z.mh)(e.endDate) }),
+                getAsset: (e, t) => (0, Y.WD)(e.id, t),
+                getClaimCtaText: () => H.intl.string(et.default["lbyFG+"]),
+                getRedeemCtaText: () => H.intl.string(et.default["6rwUm2"]),
+                claimButtonPlacement: X.FOOTER,
             },
         },
     },
-    [R.NC]: {
+    [C.NC]: {
         getLockedPreview: () => ({
-            title: V.intl.string(et.default.CwMGMb),
-            body: V.intl.string(et.default.TgHy6p),
-            asset: en,
+            title: H.intl.string(en.default.CwMGMb),
+            body: H.intl.string(en.default.TgHy6p),
+            asset: ei,
         }),
         landingUrl: "https://www.youtube.com/redeem",
         outboundConfigs: {
             type: "single_promo",
             config: {
-                getTitle: () => V.intl.string(et.default.CwMGMb),
-                getBody: () => V.intl.string(et.default.TgHy6p),
-                getRedeemCtaText: () => V.intl.string(et.default.KfOPbQ),
-                claimButtonPlacement: W.FOOTER,
+                getTitle: () => H.intl.string(en.default.CwMGMb),
+                getBody: () => H.intl.string(en.default.TgHy6p),
+                getRedeemCtaText: () => H.intl.string(en.default.KfOPbQ),
+                claimButtonPlacement: X.FOOTER,
             },
         },
     },
 };
-var eo = n(553875);
-function ed() {
-    return (0, a.jsx)(y, {
-        title: V.intl.string(eo.default.oDfh3O),
-        body: V.intl.string(eo.default.nDEuO1),
+var ed = n(553875);
+function ec() {
+    return (0, a.jsx)(N, {
+        title: H.intl.string(ed.default.oDfh3O),
+        body: H.intl.string(ed.default.nDEuO1),
         asset: "https://cdn.discordapp.com/assets/content/7ce3849519c8d8cd4657b08bd2c689ea934bb60f53b959a04eb3b1db5d2f002a.png",
     });
 }
-var ec = n(202541);
-function eu(e, t) {
-    return (0, b.v)(e[0], t[0]) && (0, b.v)(e[1], t[1]);
+var eu = n(202541);
+function em(e, t) {
+    return (0, p.v)(e[0], t[0]) && (0, p.v)(e[1], t[1]);
 }
-function em(e, t, n) {
-    let i = el[e.partnerId ?? ""],
-        a = ea(i?.outboundConfigs, e.outboundTitle);
+function ep(e, t, n) {
+    let i = eo[e.partnerId ?? ""],
+        a = er(i?.outboundConfigs, e.outboundTitle);
     return {
         id: e.id,
         partnerId: e.partnerId ?? "",
@@ -455,28 +456,28 @@ function eb(e) {
     let n,
         i,
         { records: d, claimedOutboundPromotionCodeMap: c, theme: u } = e,
-        [b, p] = r.useState(!1),
-        h = [...d].sort((e, t) => (t.startDate > e.startDate ? 1 : -1)),
-        x = b ? h : h.slice(0, 1),
-        v = !b && h.length > 1,
+        [p, b] = r.useState(!1),
+        g = [...d].sort((e, t) => (t.startDate > e.startDate ? 1 : -1)),
+        x = p ? g : g.slice(0, 1),
+        v = !p && g.length > 1,
         _ =
             ((t = d[0]?.partnerId ?? ""),
-            (n = (0, m.bG)([g.A], () => (0, s.M)(g.A.theme))),
-            null == (i = el[t]?.logos) ? void 0 : n ? i.dark : i.light);
+            (n = (0, m.bG)([h.A], () => (0, s.M)(h.A.theme))),
+            null == (i = eo[t]?.logos) ? void 0 : n ? i.dark : i.light);
     return (0, a.jsxs)("div", {
         children: [
             x.map((e) => {
                 var t;
                 let n, i;
                 return (0, a.jsx)(
-                    X,
+                    $,
                     {
                         recurrence:
                             ((t = c[e.id] ?? null),
-                            (n = el[e.partnerId ?? ""]),
-                            (i = ea(n?.outboundConfigs, e.outboundTitle)),
+                            (n = eo[e.partnerId ?? ""]),
+                            (i = er(n?.outboundConfigs, e.outboundTitle)),
                             {
-                                ...em(e, t, u),
+                                ...ep(e, t, u),
                                 asset: n?.recurringCardAsset ?? "",
                                 bodyClaimed: i?.getBodyClaimed?.(),
                                 redemptionURL:
@@ -486,8 +487,8 @@ function eb(e) {
                             }),
                         partnerLogo: _,
                         showPartnerImage: !0,
-                        claimButtonPlacement: W.FOOTER,
-                        footerContent: (0, a.jsx)(H, {}),
+                        claimButtonPlacement: X.FOOTER,
+                        footerContent: (0, a.jsx)(z, {}),
                         analyticsLocations: [f.A.THIRD_PARTY_PROMOTIONS_MODAL],
                     },
                     e.id,
@@ -497,23 +498,23 @@ function eb(e) {
                 (0, a.jsx)(l.D, {
                     className: E.K8,
                     onClick: () => {
-                        p(!0);
+                        b(!0);
                     },
                     children: (0, a.jsx)(o.E, {
                         variant: "text-sm/medium",
                         color: "text-subtle",
-                        children: V.intl.string(V.t.rjjZxV),
+                        children: H.intl.string(H.t.rjjZxV),
                     }),
                 }),
         ],
     });
 }
-function ep(e) {
-    let { partnerId: t } = e,
-        n = el[t]?.getLockedPreview?.() ?? null;
-    return null == n ? null : (0, a.jsx)(y, { title: n.title, body: n.body, asset: n.asset });
-}
 function ef(e) {
+    let { partnerId: t } = e,
+        n = eo[t]?.getLockedPreview?.() ?? null;
+    return null == n ? null : (0, a.jsx)(N, { title: n.title, body: n.body, asset: n.asset });
+}
+function eg(e) {
     let {
             partnerIds: t,
             title: n,
@@ -522,34 +523,39 @@ function ef(e) {
             showXboxCard: s = !1,
             transitionState: l,
             onClose: o,
+            analyticsLocationsProp: u,
         } = e,
-        { promotionsLoaded: u } = (0, _.y7)();
-    return u
-        ? (0, a.jsxs)(c.Modal, {
-              title: n,
-              subtitle: i,
-              actions: [],
-              preview: (0, a.jsx)(x.A, {
-                  subscriptionTier: ec.pe.TIER_2,
-                  fullWidth: !0,
-                  onClick: () => {
-                      o();
-                  },
-                  onSubscribeModalClose: (e) => {
-                      if (e) return v.Ay.fetchActivePromotions();
-                  },
+        { promotionsLoaded: m } = (0, P.y7)(),
+        { analyticsLocations: p } = (0, g.Ay)(u);
+    return m
+        ? (0, a.jsx)(g.f5, {
+              value: p,
+              children: (0, a.jsxs)(c.Modal, {
+                  title: n,
+                  subtitle: i,
+                  actions: [],
+                  preview: (0, a.jsx)(v.A, {
+                      subscriptionTier: eu.pe.TIER_2,
+                      fullWidth: !0,
+                      onClick: () => {
+                          o();
+                      },
+                      onSubscribeModalClose: (e) => {
+                          if (e) return _.Ay.fetchActivePromotions();
+                      },
+                  }),
+                  transitionState: l,
+                  onClose: o,
+                  children: [
+                      s && (0, a.jsx)(ec, {}),
+                      t.map((e) => (0, a.jsx)(ef, { partnerId: e }, e)),
+                      (0, a.jsx)(eh, { modalTeaser: r }),
+                  ],
               }),
-              transitionState: l,
-              onClose: o,
-              children: [
-                  s && (0, a.jsx)(ed, {}),
-                  t.map((e) => (0, a.jsx)(ep, { partnerId: e }, e)),
-                  (0, a.jsx)(eg, { modalTeaser: r }),
-              ],
           })
         : (0, a.jsx)(d.y, {});
 }
-function eg(e) {
+function eh(e) {
     let { modalTeaser: t } = e;
     if (null == t) return null;
     let n = t.icon ?? u.t;
@@ -567,43 +573,43 @@ function eg(e) {
         ],
     });
 }
-function eh(e) {
+function ex(e) {
     let { partnerIds: t, title: n, subtitle: i, modalTeaser: r, transitionState: s, onClose: l } = e,
-        u = (0, m.bG)([g.A], () => g.A.theme),
-        [b, p] = (0, m.bG)(
-            [P.A],
+        u = (0, m.bG)([h.A], () => h.A.theme),
+        [p, b] = (0, m.bG)(
+            [R.A],
             () => {
                 let e = [],
                     n = [];
                 return (
                     t.forEach((t) => {
-                        let i = el[t]?.outboundConfigs;
+                        let i = eo[t]?.outboundConfigs;
                         function a(e) {
-                            return null != ea(i, e.outboundTitle);
+                            return null != er(i, e.outboundTitle);
                         }
-                        let r = P.A.getPromotionsByPartner(t);
+                        let r = R.A.getPromotionsByPartner(t);
                         (e.push(...r.recurring.filter(a)), n.push(...r.oneTime.filter(a)));
                     }),
                     [e, n]
                 );
             },
             [t],
-            eu,
+            em,
         ),
-        { promotionsLoaded: h, claimedOutboundPromotionCodeMap: x } = (0, _.y7)();
-    if (!h) return (0, a.jsx)(d.y, {});
+        { promotionsLoaded: g, claimedOutboundPromotionCodeMap: x } = (0, P.y7)();
+    if (!g) return (0, a.jsx)(d.y, {});
     let v = t
-            .map((e) => el[e])
+            .map((e) => eo[e])
             .filter(Boolean)
             .every((e) => !1 !== e.showSectionHeaders),
-        R = v ? { recurring: V.intl.string(G.default["9Y2p6p"]), oneTime: V.intl.string(G.default.Wm58LR) } : void 0,
+        _ = v ? { recurring: H.intl.string(V.default["9Y2p6p"]), oneTime: H.intl.string(V.default.Wm58LR) } : void 0,
         C = (0, a.jsx)("div", {
             className: E.kR,
-            children: p.map((e) => {
-                let t = em(e, x[e.id] ?? null, u),
-                    n = ea(el[e.partnerId ?? ""]?.outboundConfigs, e.outboundTitle);
+            children: b.map((e) => {
+                let t = ep(e, x[e.id] ?? null, u),
+                    n = er(eo[e.partnerId ?? ""]?.outboundConfigs, e.outboundTitle);
                 return (0, a.jsx)(
-                    $,
+                    q,
                     {
                         promotion: t,
                         claimButtonPlacement: n?.claimButtonPlacement,
@@ -622,42 +628,42 @@ function eh(e) {
         children: (0, a.jsxs)("div", {
             className: E.kL,
             children: [
-                b.length > 0 &&
+                p.length > 0 &&
                     (0, a.jsxs)(a.Fragment, {
                         children: [
-                            null != R &&
+                            null != _ &&
                                 (0, a.jsx)(o.E, {
                                     variant: "text-md/medium",
                                     color: "text-subtle",
-                                    children: R.recurring,
+                                    children: _.recurring,
                                 }),
                             (0, a.jsx)("div", {
                                 className: E.kR,
-                                children: (0, a.jsx)(eb, { records: b, claimedOutboundPromotionCodeMap: x, theme: u }),
+                                children: (0, a.jsx)(eb, { records: p, claimedOutboundPromotionCodeMap: x, theme: u }),
                             }),
                         ],
                     }),
-                p.length > 0 &&
+                b.length > 0 &&
                     (v
                         ? (0, a.jsxs)("div", {
                               className: E.E7,
                               children: [
-                                  null != R &&
+                                  null != _ &&
                                       (0, a.jsx)(o.E, {
                                           variant: "text-md/medium",
                                           color: "text-subtle",
-                                          children: R.oneTime,
+                                          children: _.oneTime,
                                       }),
                                   C,
                               ],
                           })
                         : C),
-                (0, a.jsx)(eg, { modalTeaser: r }),
+                (0, a.jsx)(eh, { modalTeaser: r }),
             ],
         }),
     });
 }
-function ex(e) {
+function ev(e) {
     let {
         partnerIds: t,
         isLocked: n = !1,
@@ -667,9 +673,10 @@ function ex(e) {
         showXboxCard: l,
         transitionState: o,
         onClose: d,
+        analyticsLocations: c,
     } = e;
     return n
-        ? (0, a.jsx)(ef, {
+        ? (0, a.jsx)(eg, {
               partnerIds: t,
               title: i,
               subtitle: r,
@@ -677,10 +684,11 @@ function ex(e) {
               showXboxCard: l,
               transitionState: o,
               onClose: d,
+              analyticsLocationsProp: c,
           })
-        : (0, a.jsx)(eh, { partnerIds: t, title: i, subtitle: r, modalTeaser: s, transitionState: o, onClose: d });
+        : (0, a.jsx)(ex, { partnerIds: t, title: i, subtitle: r, modalTeaser: s, transitionState: o, onClose: d });
 }
-function ev(e) {
+function e_(e) {
     let {
             partnerIds: t,
             isLocked: i = !1,
@@ -691,9 +699,9 @@ function ev(e) {
             analyticsLocations: d,
         } = e,
         c = o ? [...t, "xbox"] : t;
-    (h.default.track(Y.HAw.THIRD_PARTY_PROMOTION_MODAL_OPENED, { partner_ids: c, partner_id: c[0], location_stack: d }),
-        v.Ay.fetchActivePromotions(),
-        (0, p.openModalLazy)(async () => {
+    (x.default.track(G.HAw.THIRD_PARTY_PROMOTION_MODAL_OPENED, { partner_ids: c, partner_id: c[0], location_stack: d }),
+        _.Ay.fetchActivePromotions(),
+        (0, b.openModalLazy)(async () => {
             let { ThirdPartyPromotionsModal: e } = await Promise.resolve().then(n.bind(n, 923650));
             return (n) =>
                 (0, a.jsx)(e, {
@@ -704,6 +712,7 @@ function ev(e) {
                     subtitle: s,
                     modalTeaser: l,
                     showXboxCard: o,
+                    analyticsLocations: d,
                 });
         }));
 }

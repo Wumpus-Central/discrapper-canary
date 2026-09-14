@@ -1463,7 +1463,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e2 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eV.A().log(
-    `[BUILD INFO] Release Channel: ${e2}, Build Number: 612499, Version Hash: 335de0126378ee100c01f1e4f22264884f4783a5`,
+    `[BUILD INFO] Release Channel: ${e2}, Build Number: 612501, Version Hash: 67bb6ea64779ceee51445203a7a9d5acc313fa8c`,
 ),
     D.A.setTags({ appContext: G.QCW }),
     eh.A.initBasic(),
@@ -20125,7 +20125,7 @@ function SM(e) {
         n,
         i,
         { targetElementRef: r, dismissPopover: a, isSubscriber: s, children: l } = e,
-        { analyticsLocations: o } = (0, sa.Ay)(),
+        { analyticsLocations: o } = (0, sa.Ay)(nT.A.YOUTUBE_NITRO_TAB_POPOVER),
         d = ec.useCallback(() => {
             (0, g2.A)(G.BVt.NITRO_HOME, { search: (0, tF.stringify)({ perk: g5.YOUTUBE_3PP_CARD_ID }) });
         }, []),
@@ -21412,7 +21412,7 @@ let ND = "isHideDevBanner",
                     className: ta()(Ny.Wz, Ny.mr),
                     children: [
                         (0, O.jsx)(NL, { className: Ny.Kk }),
-                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "612499" }),
+                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "612501" }),
                         (0, O.jsx)(r, {}),
                     ],
                 })

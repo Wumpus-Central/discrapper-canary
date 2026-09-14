@@ -646,5 +646,6 @@ var i,
         (i.CROISSANT_REWARD_MODAL = "xgpp reward modal"),
         (i.XBOX_PERKS_CONNECTION_FOOTER = "xbox perks connection footer"),
         (i.XBOX_PERKS_MODAL = "xbox perks modal"),
+        (i.YOUTUBE_NITRO_TAB_POPOVER = "youtube nitro tab popover"),
         i);
 let a = r;
