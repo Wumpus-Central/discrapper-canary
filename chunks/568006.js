@@ -124,8 +124,8 @@ var S = n(666176),
     w = n(43105),
     H = n(414499),
     F = n(116833),
-    V = n(735991);
-let B = (0, n(945810).mj)({
+    B = n(735991);
+let V = (0, n(945810).mj)({
     name: "2025-12-game-invite-account-linking-entry-point",
     kind: "user",
     defaultConfig: { enabled: !1 },
@@ -345,7 +345,7 @@ function ef(e) {
             partyStatusElement: f,
             presenceActivity: I,
         } = e,
-        C = (0, V.Ag)(o),
+        C = (0, B.Ag)(o),
         { iconSrc: _, name: v } = (function (e, t) {
             let { bot: n } = t;
             return {
@@ -413,7 +413,7 @@ function ef(e) {
         }, [y]),
         R = (0, K.F)(o),
         M = l.useMemo(() => (null != T ? T : null != R && C ? R : void 0), [C, T, R]),
-        k = B.useConfig({ location: "RichPresenceGameActivityInviteEmbed" }),
+        k = V.useConfig({ location: "RichPresenceGameActivityInviteEmbed" }),
         { canStartAuthorization: L, hasAlreadyLinked: O, startAuthorization: P } = (0, J.RD)(o),
         D = (0, z.z)(P, O),
         U = !(0, $.A)(I, A, o.id),

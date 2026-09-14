@@ -13,21 +13,21 @@ let r = [
         { offset: 0.08, span: 0.92, ease: 9 },
     ],
     a = [0.5, 0.5, 0.45, 0.9];
-function o(e, t, n) {
+function l(e, t, n) {
     let r = 1 - e;
     return 3 * r * r * e * t + 3 * r * e * e * n + e * e * e;
 }
-function l(e) {
+function o(e) {
     if (e <= 0) return 0;
     if (e >= 1) return 1;
-    let [t, n, r, l] = a,
+    let [t, n, r, o] = a,
         i = 0,
         u = 1;
     for (let n = 0; n < 20; n++) {
         let n = (i + u) / 2;
-        o(n, t, r) < e ? (i = n) : (u = n);
+        l(n, t, r) < e ? (i = n) : (u = n);
     }
-    return o((i + u) / 2, n, l);
+    return l((i + u) / 2, n, o);
 }
 function i(e, t) {
     if (t <= 0) return 0;
@@ -35,7 +35,7 @@ function i(e, t) {
         r = 1;
     for (let a = 0; a < 24; a++) {
         let a = (n + r) / 2;
-        h(e, l(a)) < t ? (n = a) : (r = a);
+        h(e, o(a)) < t ? (n = a) : (r = a);
     }
     return (n + r) / 2;
 }
@@ -59,9 +59,9 @@ function m(e, t) {
             : e;
 }
 function h(e, t) {
-    let { offset: n, span: a, ease: o } = r[e],
-        l = (t - n) / a;
-    return l <= 0 ? 0 : l >= 1 ? 1 : l ** o;
+    let { offset: n, span: a, ease: l } = r[e],
+        o = (t - n) / a;
+    return o <= 0 ? 0 : o >= 1 ? 1 : o ** l;
 }
 function p(e, t) {
     let n = {
@@ -80,7 +80,7 @@ function p(e, t) {
             "u" > typeof window && "function" == typeof window.matchMedia
                 ? window.matchMedia("(prefers-reduced-motion: reduce)")
                 : null,
-        o = null,
+        l = null,
         i = null,
         u = [],
         s = [],
@@ -107,39 +107,39 @@ function p(e, t) {
         ((u = Array.from(n.from)),
             (s = Array.from(n.to)),
             (v = Math.max(u.length, s.length)),
-            ((o = document.createElement("span")).className = n.classNames.textLayer),
+            ((l = document.createElement("span")).className = n.classNames.textLayer),
             (A = !1),
             (f = Array(v)),
             (y = new Uint8Array(v)));
         for (let e = 0; e < v; e++) {
             let t = document.createElement("span");
-            ((t.className = n.classNames.char), (t.textContent = u[e] ?? ""), o.appendChild(t), (f[e] = t));
+            ((t.className = n.classNames.char), (t.textContent = u[e] ?? ""), l.appendChild(t), (f[e] = t));
         }
         (((i = document.createElement("span")).className = n.classNames.glyphLayer),
             (i.style.opacity = "0"),
             (w = 0),
             (e.textContent = ""),
-            e.appendChild(o),
+            e.appendChild(l),
             e.appendChild(i),
             (function () {
                 if (
                     ((C = Array(v).fill(0)),
                     (M = Array(v).fill(0)),
-                    null == o || null == i || "function" != typeof getComputedStyle)
+                    null == l || null == i || "function" != typeof getComputedStyle)
                 ) {
                     R = Math.max(1, v);
                     return;
                 }
-                let e = o.getBoundingClientRect().width;
+                let e = l.getBoundingClientRect().width;
                 for (let e = 0; e < v; e++) C[e] = f[e].getBoundingClientRect().width;
                 for (let e = 0; e < v; e++) f[e].textContent = s[e] ?? "";
-                let t = o.getBoundingClientRect().width;
+                let t = l.getBoundingClientRect().width;
                 for (let e = 0; e < v; e++) M[e] = f[e].getBoundingClientRect().width;
                 for (let e = 0; e < v; e++) ((f[e].textContent = u[e] ?? ""), (f[e].style.width = `${C[e]}px`));
                 let r = parseFloat(getComputedStyle(i).fontSize),
                     a = Number.isFinite(r) && 0 !== r ? r : 16,
-                    l = Math.max(e, t);
-                R = 0 === l ? Math.max(1, v) : Math.max(1, Math.ceil((l + n.trailingWidth) / a));
+                    o = Math.max(e, t);
+                R = 0 === o ? Math.max(1, v) : Math.max(1, Math.ceil((o + n.trailingWidth) / a));
             })(),
             (p = Array(R)),
             (x = Array(R).fill(-1)),
@@ -159,7 +159,7 @@ function p(e, t) {
                 ("loaded" !== document.fonts.status &&
                     ((g = !0),
                     document.fonts.ready.then(() => {
-                        if (((g = !1), null == o || 0 === v || $)) return;
+                        if (((g = !1), null == l || 0 === v || $)) return;
                         let e = 4 === y[v - 1];
                         (j(), e && U());
                     }))));
@@ -187,25 +187,25 @@ function p(e, t) {
                     : 1 === t || 3 === t
                       ? `${n.classNames.char} ${n.classNames.shifted}`
                       : n.classNames.char));
-        let o = t >= 3;
-        (o !== r >= 3 && (a.style.width = `${(o ? M : C)[e] ?? 0}px`), (y[e] = t));
+        let l = t >= 3;
+        (l !== r >= 3 && (a.style.width = `${(l ? M : C)[e] ?? 0}px`), (y[e] = t));
     }
     function W(e) {
-        let t = l(Math.min(1, Math.max(0, (e - E) / n.duration))),
+        let t = o(Math.min(1, Math.max(0, (e - E) / n.duration))),
             a = Math.max(0, Math.floor(h(3, t) * v)),
-            o = Math.min(v, Math.ceil(h(0, t) * v)),
-            u = Math.min(f.length, Math.max(o, T));
+            l = Math.min(v, Math.ceil(h(0, t) * v)),
+            u = Math.min(f.length, Math.max(l, T));
         for (let e = Math.min(a, L); e < u; e++)
             q(
                 e,
                 (function (e, t, n) {
                     let a = 0;
-                    for (let o = 0; o < r.length; o++) h(o, t) * n > e + 0.5 && (a = o + 1);
+                    for (let l = 0; l < r.length; l++) h(l, t) * n > e + 0.5 && (a = l + 1);
                     return a;
                 })(e, t, v),
             );
         ((L = a),
-            (T = o),
+            (T = l),
             (function (e) {
                 let t = Math.round(
                     100 *
@@ -222,10 +222,10 @@ function p(e, t) {
                     let r = (function (e, t, n) {
                         let r = h(1, t) * n,
                             a = h(2, t) * n,
-                            o = e + 0.5;
-                        return o >= r || o < a
+                            l = e + 0.5;
+                        return l >= r || l < a
                             ? -1
-                            : Math.max(0, Math.min(Math.floor((Math.min(o - a, r - o) / 4) * c.length), c.length));
+                            : Math.max(0, Math.min(Math.floor((Math.min(l - a, r - l) / 4) * c.length), c.length));
                     })(t, e, R);
                     if (r !== x[t]) {
                         var n;
@@ -241,11 +241,11 @@ function p(e, t) {
     }
     function B(e) {
         A !== e &&
-            null != o &&
-            ((o.className = e ? `${n.classNames.textLayer} ${n.classNames.hidden}` : n.classNames.textLayer), (A = e));
+            null != l &&
+            ((l.className = e ? `${n.classNames.textLayer} ${n.classNames.hidden}` : n.classNames.textLayer), (A = e));
     }
     function I(e) {
-        null != o && (o.style.transition = e ? "opacity 220ms linear" : "");
+        null != l && (l.style.transition = e ? "opacity 220ms linear" : "");
     }
     function U() {
         for (let e = 0; e < v; e++) q(e, 4);
@@ -306,7 +306,7 @@ function p(e, t) {
                     ($ = !1),
                     (e.textContent = n.to),
                     (A = !1),
-                    (o = null),
+                    (l = null),
                     (i = null),
                     (f = []),
                     (p = []),

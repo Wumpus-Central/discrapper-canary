@@ -1,4 +1,4 @@
-n.d(t, { A: () => eA });
+n.d(t, { A: () => ep });
 var l = n(477900),
     i = n(582128),
     s = n(284009),
@@ -11,8 +11,8 @@ var l = n(477900),
     h = n(477155),
     m = n(922016),
     g = n(939249),
-    p = n(830215),
-    A = n(857182),
+    A = n(830215),
+    p = n(857182),
     f = n(66834),
     C = n(775602),
     x = n(315982),
@@ -24,15 +24,15 @@ var l = n(477900),
     y = n(652215),
     b = n(624458),
     N = n(821124),
-    v = n(202384),
-    T = n(513461),
+    T = n(202384),
+    v = n(513461),
     M = n(709977),
     R = n(212455),
     D = n(224640),
     L = n(430993),
     k = n(696208),
-    O = n(604121),
-    P = n(297264),
+    P = n(604121),
+    O = n(297264),
     G = n(834730),
     U = n(915089),
     w = n(375708),
@@ -52,12 +52,12 @@ let B = function (e) {
         ...e,
         size: "sm",
         children: [
-            (0, l.jsx)("div", { className: F.Mp, children: (0, l.jsx)(O.a, { importData: H, className: F.WG }) }),
+            (0, l.jsx)("div", { className: F.Mp, children: (0, l.jsx)(P.a, { importData: H, className: F.WG }) }),
             (0, l.jsx)(L.c, {
                 children: (0, l.jsxs)("div", {
                     className: F.lq,
                     children: [
-                        (0, l.jsx)(P.D, {
+                        (0, l.jsx)(O.D, {
                             variant: "heading-lg/semibold",
                             className: F.wx,
                             id: t,
@@ -115,7 +115,7 @@ let X = function (e) {
             (0, l.jsxs)("div", {
                 className: Y.Qs,
                 children: [
-                    (0, l.jsx)(P.D, {
+                    (0, l.jsx)(O.D, {
                         variant: "heading-md/semibold",
                         children: w.intl.format(w.t.THgVCC, { guild: t.name }),
                     }),
@@ -149,13 +149,13 @@ var Q = n(698405),
     eh = n(360469),
     em = n(53516),
     eg = n(514559);
-class ep extends i.PureComponent {
+class eA extends i.PureComponent {
     state = { submitting: !1, shouldShowLurkerModeUpsellPopout: !1, shouldShowLurkerModeSuccessPopout: !1 };
     textAreaContainerRef = i.createRef();
     upsellTargetRef = i.createRef();
     componentDidMount() {
         let { isFollowable: e, channelFollowingUsersSeen: t, channel: n } = this.props;
-        e && null == t && A.A.fetchChannelFollowerStats(n.id);
+        e && null == t && p.A.fetchChannelFollowerStats(n.id);
     }
     componentDidUpdate(e) {
         let { shouldShowLurkerModeSuccessPopout: t, guild: n, showMemberVerificationModal: l } = this.props;
@@ -191,7 +191,7 @@ class ep extends i.PureComponent {
     };
     handleShowMemberVerification = () => {
         let { guild: e } = this.props;
-        null != e && (0, v.Ze)(e.id);
+        null != e && (0, T.Ze)(e.id);
     };
     handleClaimAccount = () => {
         x.R();
@@ -215,7 +215,7 @@ class ep extends i.PureComponent {
         );
     };
     handleResendVerification = () => {
-        p.A.verifyResend();
+        A.A.verifyResend();
         let e = eo.default.getCurrentUser()?.email;
         null != e && (0, o.A)({ title: w.intl.string(w.t.LykQYk), subtitle: w.intl.format(w.t.azKEPy, { email: e }) });
     };
@@ -254,7 +254,7 @@ class ep extends i.PureComponent {
     };
     renderMemberVerificationSuccessModal = () => {
         let { guild: e, guildJoinRequest: t } = this.props,
-            n = t?.applicationStatus === T.B5.APPROVED;
+            n = t?.applicationStatus === v.B5.APPROVED;
         if (null == e || null == t || !n || (0, N.NK)(t)) return null;
         function i() {
             null != e && null != t && b.A.ackUserGuildJoinRequest(e.id, t.joinRequestId);
@@ -277,8 +277,8 @@ class ep extends i.PureComponent {
                 accountDeadline: c,
                 theme: d,
                 children: u,
-                canSendMessages: p,
-                channelFollowingUsersSeen: A,
+                canSendMessages: A,
+                channelFollowingUsersSeen: p,
                 showLurkerModeUpsellPopout: f,
                 showMemberVerificationModal: C,
                 missingVerificationRole: x,
@@ -288,22 +288,22 @@ class ep extends i.PureComponent {
                 guildJoinRequest: j,
                 showLinkedLobbyApplicationLoadingIndicator: b,
                 requiredLinkedLobbyApplication: N,
-                shouldRelaunchLinkedLobbyApplication: v,
+                shouldRelaunchLinkedLobbyApplication: T,
                 pendingGameProfileReturn: M,
                 guild: R,
             } = this.props,
             { shouldShowLurkerModeUpsellPopout: D, shouldShowLurkerModeSuccessPopout: L } = this.state,
             k = { theme: d, useReducedMotion: I };
-        if (e && !p && null != M)
+        if (e && !A && null != M)
             (null != M.gameIconUrl && (k.imageSrc = M.gameIconUrl),
                 (k.message = w.intl.format(w.t["qxH/YE"], { gameName: M.gameName })),
                 (k.buttonText = w.intl.string(w.t.DjifDP)),
                 (k.buttonIcon = h.r),
                 (k.buttonVariant = "primary"),
                 (k.onButtonClick = M.onReturnToGameProfile));
-        else if (e && !p) {
-            if (((k.message = w.intl.string(w.t.Hl0Mqh)), null != A && A >= 1e3)) {
-                let e = 1e3 * Math.floor(A / 1e3);
+        else if (e && !A) {
+            if (((k.message = w.intl.string(w.t.Hl0Mqh)), null != p && p >= 1e3)) {
+                let e = 1e3 * Math.floor(p / 1e3);
                 k.subtitle = w.intl.formatToPlainString(w.t.C5bgrC, { count: e.toLocaleString() });
             }
             ((k.buttonText = w.intl.string(w.t["3aOv+h"])),
@@ -317,13 +317,13 @@ class ep extends i.PureComponent {
                 (k.onButtonClick = C ? this.handleShowMemberVerification : this.handleClaimAccount));
         else if (C)
             switch (j?.applicationStatus) {
-                case T.B5.SUBMITTED:
+                case v.B5.SUBMITTED:
                     ((k.message = w.intl.string(w.t["5iLvSx"])),
                         (k.subtitle = w.intl.string(w.t.FdsK4h)),
                         (k.buttonText = w.intl.string(w.t.mqtdmQ)),
                         (k.onButtonClick = this.handleCancelApplication));
                     break;
-                case T.B5.REJECTED:
+                case v.B5.REJECTED:
                     ((k.message = w.intl.string(w.t.lk30cY)),
                         (k.buttonText = w.intl.string(w.t["8RrsHr"])),
                         (k.onButtonClick = this.handleViewApplicationRejection));
@@ -355,7 +355,7 @@ class ep extends i.PureComponent {
                             ((k.message = w.intl.formatToPlainString(w.t["2JA2GH"], { min: y.$8o.ACCOUNT_AGE })),
                             (k.countdown = c))
                   : ((k.imageSrc = N.getIconURL(eh.iu.SMALL) ?? void 0),
-                    v
+                    T
                         ? (k.message = w.intl.format(w.t["SU2mY/"], { name: N.name }))
                         : ((k.message = w.intl.format(w.t.EvDn1D, { name: N.name })),
                           null != N.connectionEntrypointUrl &&
@@ -399,7 +399,7 @@ class ep extends i.PureComponent {
         });
     }
 }
-function eA(e) {
+function ep(e) {
     let { channel: t, children: n } = e,
         s = t.getGuildId(),
         a = (0, r.bG)([es.A], () => es.A.getGuild(s)),
@@ -410,8 +410,8 @@ function eA(e) {
         h = (0, r.bG)([eo.default], () => eo.default.getCurrentUser()),
         m = h?.isStaff() ?? !1,
         g = (0, r.bG)([ei.Ay], () => null != h && (ei.Ay.getMember(s, h.id)?.isPending ?? !1)),
-        p = !!(0, M.Qd)(a),
-        A = (0, r.bG)([q], () => q.shouldShowPopout(s)),
+        A = !!(0, M.Qd)(a),
+        p = (0, r.bG)([q], () => q.shouldShowPopout(s)),
         f = (0, r.bG)([er.A], () => er.A.can(y.xBc.SEND_MESSAGES, t)),
         x = (0, r.bG)([R.A], () => R.A.getRequest(s)),
         {
@@ -419,7 +419,7 @@ function eA(e) {
             requiredLinkedLobbyApplication: b,
             shouldRelaunchLinkedLobbyApplication: N,
         } = (0, ed.A)(t.linkedLobby),
-        v = (function (e) {
+        T = (function (e) {
             let { channelId: t } = e,
                 n = (0, r.bG)([j.A], () => {
                     let e = j.A.getPendingReturn();
@@ -447,21 +447,21 @@ function eA(e) {
             guild: a,
             isLurking: u,
             isFollowable: c,
-            shouldShowLurkerModeSuccessPopout: A,
+            shouldShowLurkerModeSuccessPopout: p,
             showLurkerModeUpsellPopout: u && null != a && ec.MJ(y.xBc.SEND_MESSAGES, t),
             theme: en.A.theme,
             canSendMessages: f,
             channelFollowingUsersSeen: null != d ? d.usersSeenEver : null,
-            hasVerificationGate: p,
-            showMemberVerificationModal: g && p,
-            guildJoinRequestStatus: x?.applicationStatus ?? T.B5.STARTED,
+            hasVerificationGate: A,
+            showMemberVerificationModal: g && A,
+            guildJoinRequestStatus: x?.applicationStatus ?? v.B5.STARTED,
             guildJoinRequest: x,
             showLinkedLobbyApplicationLoadingIndicator: E,
             requiredLinkedLobbyApplication: b,
             shouldRelaunchLinkedLobbyApplication: N,
             useReducedMotion: C.Ay.useReducedMotion,
             isStaff: m,
-            pendingGameProfileReturn: v,
+            pendingGameProfileReturn: T,
         };
-    return (0, l.jsx)(ep, { ...D, channel: t, children: n });
+    return (0, l.jsx)(eA, { ...D, channel: t, children: n });
 }

@@ -9,8 +9,8 @@ var i,
     c = n(17928),
     u = n(192308),
     m = n(403581),
-    b = n(793574),
-    p = n(688810),
+    p = n(793574),
+    b = n(688810),
     f = n(793943),
     g = n(259065),
     h = n(741231),
@@ -22,8 +22,8 @@ var i,
     C = n(591179),
     T = n(462463),
     A = n(780964),
-    E = n(766075),
-    y = n(166403),
+    y = n(766075),
+    E = n(166403),
     N = n(676279),
     j = n(975571),
     O = n(158045),
@@ -81,9 +81,9 @@ var q = n(88001),
 let eu = "/assets/035ad0fba4997f3f.svg",
     em =
         "https://cdn.discordapp.com/assets/content/a3d8a5ad88850f5dbfb86dcff1844ef525771e03d2e6bf64328980a361538f05.mov",
-    eb =
-        "https://cdn.discordapp.com/assets/content/1950d090a67ef578499d21526718bbbbc01d5799318f64435930ecef3e524241.webm",
     ep =
+        "https://cdn.discordapp.com/assets/content/1950d090a67ef578499d21526718bbbbc01d5799318f64435930ecef3e524241.webm",
+    eb =
         "https://cdn.discordapp.com/assets/content/de126b095fb3d2353650e750d46c54b7156297482f9205ca1645a45fb0082169.png",
     ef =
         "https://cdn.discordapp.com/assets/content/94614efcdbc454cb327b5744501edff7f4342aaf09cc67720a7b25a79262b08a.webp";
@@ -112,7 +112,7 @@ var eg = n(576765),
         r);
 let eC = function () {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-        { analyticsLocations: t } = (0, p.Ay)(b.A.PREMIUM_MARKETING_BENTO_BOX),
+        { analyticsLocations: t } = (0, b.Ay)(p.A.PREMIUM_MARKETING_BENTO_BOX),
         i = (0, C.X)("useBentoBoxes"),
         a = (0, T.A)({ analyticsLocations: t }),
         r = (0, l.useCallback)(() => {
@@ -120,7 +120,7 @@ let eC = function () {
         }, []),
         B = (0, _.A)({ scrollPosition: Q._F.TRY_IT_OUT, analyticsLocations: t }),
         Y = (0, l.useCallback)(() => {
-            (0, E.openUserSettings)(A.X.PROFILE_PANEL, { analyticsLocations: t }, () =>
+            (0, y.openUserSettings)(A.X.PROFILE_PANEL, { analyticsLocations: t }, () =>
                 (0, g.L)({ analyticsLocations: t }),
             );
         }, [t]),
@@ -132,7 +132,7 @@ let eC = function () {
         { shouldShowBonusOrbsUX: eP, multiplier: eC } = (0, P.lk)(Z.rE.NITRO_HOME_MARKETING),
         eT = l.useRef(null),
         eA = (0, x.b)("bento_box"),
-        eE = (function () {
+        ey = (function () {
             let { enabled: e } = k.A.useConfig({ location: "useRecurring3PModalEligiblePartnerIds" }),
                 t = (0, D.YS)({ location: "useRecurring3PModalEligiblePartnerIds" }).functionalityEnabled;
             return l.useMemo(() => {
@@ -140,7 +140,7 @@ let eC = function () {
                 return M.mY.filter((e) => n[e]);
             }, [e, t, void 0]);
         })(),
-        ey = {
+        eE = {
             premiumGroup: { thumbnail: ec, assetUrl: ec },
             serverProfiles: {
                 thumbnail: "/assets/27e5bfe55cd9ceac.png",
@@ -197,15 +197,15 @@ let eC = function () {
                     : "https://cdn.discordapp.com/assets/content/2951de28d84d4fcba8b5c4db54b094b98dca5bfb168d77d356e9896708768a5f.webm",
             },
             orbRewards: { thumbnail: ev.A, assetUrl: ex.A },
-            orbMultiplier: { thumbnail: ep, assetUrl: V ? em : eb },
-            combinedOrbs: { thumbnail: ep, assetUrl: V ? em : eb },
+            orbMultiplier: { thumbnail: eb, assetUrl: V ? em : ep },
+            combinedOrbs: { thumbnail: eb, assetUrl: V ? em : ep },
             callOfDuty: { thumbnail: ef, assetUrl: ef },
             threePPromotions: { thumbnail: eA ? (0, s.jsx)(H, { ref: eT }) : eu, assetUrl: eA ? void 0 : eu },
             youtube: { thumbnail: ef, assetUrl: ef },
         },
         eN = (0, L.Y)({ location: "bento_box" }),
         ej = (0, S.A)(!eN),
-        eO = (0, c.bG)([y.A], () => y.A.getPremiumTypeSubscription()),
+        eO = (0, c.bG)([E.A], () => E.A.getPremiumTypeSubscription()),
         eI = null != eO && (0, O.Nc)(eO),
         eL = {
             serverProfiles: {
@@ -214,35 +214,35 @@ let eC = function () {
                 description: er.intl.string(er.t.HMSHeH),
                 descriptionCta: er.intl.string(er.t.jVcuVY),
                 onClick: i ? a : B,
-                previewImage: ey.serverProfiles.thumbnail,
-                videoUrl: ey.serverProfiles.assetUrl,
+                previewImage: eE.serverProfiles.thumbnail,
+                videoUrl: eE.serverProfiles.assetUrl,
             },
             referralProgram: {
                 name: "referralProgram",
                 title: er.intl.string(er.t.tPY4o9),
                 description: er.intl.format(er.t.jRPQUH, { learnMoreLink: e_ }),
-                previewImage: ey.referralProgram.thumbnail,
-                videoUrl: ey.referralProgram.assetUrl,
+                previewImage: eE.referralProgram.thumbnail,
+                videoUrl: eE.referralProgram.assetUrl,
             },
             customThemes: {
                 name: "customThemes",
                 title: er.intl.string(es.default.XokIHM),
                 description: er.intl.string(es.default["7esQMC"]),
                 descriptionCta: er.intl.string(er.t.jVcuVY),
-                previewImage: ey.customThemes.thumbnail,
+                previewImage: eE.customThemes.thumbnail,
                 onClick: () => {
                     (0, f.nf)(f.HP.CUSTOM_THEME);
                 },
-                videoUrl: ey.customThemes.assetUrl,
+                videoUrl: eE.customThemes.assetUrl,
             },
             displayNameStyles: {
                 name: "displayNameStyles",
                 title: er.intl.string(el.default.ABtBDQ),
                 description: er.intl.string(el.default.MFNXZh),
                 descriptionCta: er.intl.string(er.t.jVcuVY),
-                previewImage: ey.displayNameStyles.thumbnail,
+                previewImage: eE.displayNameStyles.thumbnail,
                 onClick: i ? a : Y,
-                videoUrl: ey.displayNameStyles.assetUrl,
+                videoUrl: eE.displayNameStyles.assetUrl,
             },
             premiumGroup: {
                 name: "premiumGroup",
@@ -254,8 +254,8 @@ let eC = function () {
                               totalSeats: q.aw,
                               premiumGroupProductName: (0, q.DP)(),
                           }),
-                previewImage: ey.premiumGroup.thumbnail,
-                videoUrl: ey.premiumGroup.assetUrl,
+                previewImage: eE.premiumGroup.thumbnail,
+                videoUrl: eE.premiumGroup.assetUrl,
                 actions: [
                     {
                         variant: "primary",
@@ -288,44 +288,44 @@ let eC = function () {
                 title: er.intl.string(er.t.Ij3Zmv),
                 description: er.intl.string(er.t.UsOUxY),
                 descriptionCta: er.intl.string(er.t.jVcuVY),
-                previewImage: ey.showYourStyle.thumbnail,
+                previewImage: eE.showYourStyle.thumbnail,
                 onClick: i ? a : B,
-                videoUrl: ey.showYourStyle.assetUrl,
+                videoUrl: eE.showYourStyle.assetUrl,
             },
             yourSpace: {
                 name: "yourSpace",
                 title: er.intl.string(er.t.Wme3nX),
                 description: er.intl.string(er.t["/aAIqV"]),
                 descriptionCta: er.intl.string(er.t.jVcuVY),
-                previewImage: ey.yourSpace.thumbnail,
+                previewImage: eE.yourSpace.thumbnail,
                 onClick: function () {
                     {
                         let { openUserSettings: e } = n(766075);
                         e(A.X.APPEARANCE_THEME_CATEGORY, { analyticsLocations: t });
                     }
                 },
-                videoUrl: ey.yourSpace.assetUrl,
+                videoUrl: eE.yourSpace.assetUrl,
             },
             emojis: {
                 name: "emojis",
                 title: er.intl.string(er.t.zY5PPb),
                 description: er.intl.string(er.t.R5Xag2),
-                previewImage: ey.emojis.thumbnail,
-                videoUrl: ey.emojis.assetUrl,
+                previewImage: eE.emojis.thumbnail,
+                videoUrl: eE.emojis.assetUrl,
             },
             noLimits: {
                 name: "noLimits",
                 title: er.intl.string(er.t["6b3ydG"]),
                 description: er.intl.string(er.t["Y+IJyg"]),
-                previewImage: ey.noLimits.thumbnail,
-                videoUrl: ey.noLimits.assetUrl,
+                previewImage: eE.noLimits.thumbnail,
+                videoUrl: eE.noLimits.assetUrl,
             },
             callOfDuty: {
                 name: "callOfDuty",
                 title: er.intl.string(ee.default.sB5V0c),
                 description: er.intl.formatToPlainString(ee.default["RuZS+B"], { validDates: (0, I.a1)() }),
-                previewImage: ey.callOfDuty.thumbnail,
-                videoUrl: ey.callOfDuty.assetUrl,
+                previewImage: eE.callOfDuty.thumbnail,
+                videoUrl: eE.callOfDuty.assetUrl,
                 containerClassName: ed.callOfDutyGradient,
                 actions: [
                     {
@@ -347,12 +347,12 @@ let eC = function () {
                 title: eA ? er.intl.string(er.t.E4U4SS) : er.intl.string(et.default.OlObRa),
                 description: eA ? er.intl.string(er.t["B4uSy/"]) : er.intl.string(et.default["8Gl8gP"]),
                 descriptionCta: eA ? er.intl.string(er.t.RzWDqY) : er.intl.string(et.default.HINTfJ),
-                previewImage: ey.threePPromotions.thumbnail,
-                videoUrl: ey.threePPromotions.assetUrl,
+                previewImage: eE.threePPromotions.thumbnail,
+                videoUrl: eE.threePPromotions.assetUrl,
                 onClick: () =>
                     (0, w.P)({
                         analyticsLocations: t,
-                        partnerIds: eE,
+                        partnerIds: ey,
                         isLocked: !0,
                         showXboxCard: eA,
                         title: eA ? er.intl.string(er.t.NG1e6l) : er.intl.string(er.t["7ioAjs"]),
@@ -374,9 +374,9 @@ let eC = function () {
                 onClick: () => {
                     window.open(j.A.getArticleURL(J.MVz.ORBS_REWARDS_FAQ), "_blank");
                 },
-                previewImage: ey.orbRewards.thumbnail,
+                previewImage: eE.orbRewards.thumbnail,
                 previewImageStyle: "overlay",
-                backgroundVideoUrl: ey.orbRewards.assetUrl,
+                backgroundVideoUrl: eE.orbRewards.assetUrl,
                 badgeText: eA ? void 0 : er.intl.string(er.t.oW0eUd).toLocaleUpperCase(),
                 badgeVariant: "expressive",
             },
@@ -387,8 +387,8 @@ let eC = function () {
                 descriptionCta: er.intl.string(er.t.jVcuVY),
                 onClick: () => (0, R.m)({ fromContent: d.u.NITRO_HOME_PERK_CARD }),
                 badgeVariant: "expressive",
-                previewImage: ey.orbMultiplier.thumbnail,
-                videoUrl: ey.orbMultiplier.assetUrl,
+                previewImage: eE.orbMultiplier.thumbnail,
+                videoUrl: eE.orbMultiplier.assetUrl,
             },
             combinedOrbs: {
                 name: "combinedOrbs",
@@ -398,8 +398,8 @@ let eC = function () {
                 onClick: () => (0, R.m)({ fromContent: d.u.NITRO_HOME_PERK_CARD }),
                 badgeText: eA ? void 0 : er.intl.string(er.t.oW0eUd).toLocaleUpperCase(),
                 badgeVariant: "expressive",
-                previewImage: ey.combinedOrbs.thumbnail,
-                videoUrl: ey.combinedOrbs.assetUrl,
+                previewImage: eE.combinedOrbs.thumbnail,
+                videoUrl: eE.combinedOrbs.assetUrl,
             },
             youtube: {
                 name: "youtube",
@@ -407,8 +407,8 @@ let eC = function () {
                 description: er.intl.format(ea.default.P5sLUo, {
                     helpCenterUrl: j.A.getArticleURL(J.MVz.YOUTUBE_PROMOTION),
                 }),
-                previewImage: ey.youtube.thumbnail,
-                videoUrl: ey.youtube.assetUrl,
+                previewImage: eE.youtube.thumbnail,
+                videoUrl: eE.youtube.assetUrl,
                 descriptionCta: er.intl.string(ea.default.VwLXyT),
                 onClick: () =>
                     (0, w.P)({

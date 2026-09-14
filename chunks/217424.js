@@ -38,8 +38,8 @@ var i = n(477900),
     w = n(402860),
     H = n(734057),
     F = n(317525),
-    V = n(71393),
-    B = n(994500);
+    B = n(71393),
+    V = n(994500);
 n(827669);
 var z = n(375708),
     J = n(894625);
@@ -65,7 +65,7 @@ let X = l.memo(function (e) {
             }, [])),
             D.D3({ channel: r, type: "channel" }, t),
             { onCopy: s, copyRef: n }),
-        g = (0, u.bG)([V.A], () => V.A.getGuild(r.guild_id), [r.guild_id]);
+        g = (0, u.bG)([B.A], () => B.A.getGuild(r.guild_id), [r.guild_id]);
     if (
         (l.useEffect(() => {
             (null == c || (c.type === A.kc.CHAT && void 0 === c.application_command)) && U.S7(r.id, o);
@@ -145,7 +145,7 @@ let X = l.memo(function (e) {
                                 let e = s.value.toString(),
                                     t = H.A.getChannel(e);
                                 null != t &&
-                                    (n = (0, i.jsxs)(G.A, { ...Y, children: ["#", (0, P.m1)(t, S.default, B.A)] }));
+                                    (n = (0, i.jsxs)(G.A, { ...Y, children: ["#", (0, P.m1)(t, S.default, V.A)] }));
                                 break;
                             }
                             case A.n4.ROLE: {
@@ -365,17 +365,17 @@ function ei(e) {
         w = (0, M.d8)(D, s),
         H = l.useMemo(() => (e.compact ? (0, Z.A)((0, R.i$)(d()(), "LT")) : null), [e.compact]),
         F = (0, x.Gp)(s.id),
-        V = n.interaction;
-    if (null == V || null == G) return null;
-    function B() {
-        if (null == V) return null;
-        let t = ee(e, V.user, 0, G, (e) => L(e, V.user, [E.A.AVATAR]), y),
-            n = et(e, V.user, 0, G, (e) => L(e, V.user));
+        B = n.interaction;
+    if (null == B || null == G) return null;
+    function V() {
+        if (null == B) return null;
+        let t = ee(e, B.user, 0, G, (e) => L(e, B.user, [E.A.AVATAR]), y),
+            n = et(e, B.user, 0, G, (e) => L(e, B.user));
         return (0, i.jsxs)(l.Fragment, { children: [t, n] }, "user");
     }
     if (n?.activityInstance === null || (0, N.V)(n))
         ((t = z.intl.format(z.t["rg7U+C"], {
-            userHook: B,
+            userHook: V,
             commandHook: function () {
                 let t = (function (e, t, n) {
                     let { showDataPopout: l, message: s, onClickCommand: r, onPopoutRequestClose: o } = e,
@@ -470,7 +470,7 @@ function ei(e) {
         }
         t = F
             ? z.intl.format(z.t.kfV8WM, {
-                  userHook: B,
+                  userHook: V,
                   activityHook: function () {
                       return (0, i.jsx)(h.D, {
                           tag: "span",
@@ -482,7 +482,7 @@ function ei(e) {
                       });
                   },
               })
-            : z.intl.format(z.t["6FeSyT"], { userHook: B });
+            : z.intl.format(z.t["6FeSyT"], { userHook: V });
     }
     return (0, i.jsx)(I.f5, {
         value: r,

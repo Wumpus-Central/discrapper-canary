@@ -1,8 +1,8 @@
 n.d(t, { o: () => c });
 var r = n(477900),
     a = n(582128),
-    o = n(844222),
-    l = n(834730),
+    l = n(844222),
+    o = n(834730),
     i = n(140735),
     u = n(504290),
     s = n(411239);
@@ -25,7 +25,7 @@ let c = a.memo(function (e) {
         x = Array.isArray(t) ? t.join("\0") : t,
         N = a.useMemo(() => x.split("\0"), [x]),
         [A, v] = a.useState(0),
-        { reducedMotion: R } = a.useContext(o.C),
+        { reducedMotion: R } = a.useContext(l.C),
         b = (function () {
             let [e, t] = a.useState(() => "u" < typeof document || document.hasFocus());
             return (
@@ -118,7 +118,7 @@ let c = a.memo(function (e) {
                 (window.clearTimeout(n), (E.current = Math.max(0, t - Date.now())));
             };
         }, [b, A, U, d]),
-        (0, r.jsxs)(l.E, {
+        (0, r.jsxs)(o.E, {
             variant: n,
             color: c,
             tag: "span",

@@ -1,4 +1,4 @@
-n.d(t, { A: () => y });
+n.d(t, { A: () => E });
 var i = n(477900),
     a = n(582128),
     r = n(503698),
@@ -9,8 +9,8 @@ var i = n(477900),
     c = n(821609),
     u = n(745396),
     m = n(85463),
-    b = n(297264),
-    p = n(825484),
+    p = n(297264),
+    b = n(825484),
     f = n(834730),
     g = n(315629),
     h = n(241524),
@@ -22,13 +22,13 @@ var i = n(477900),
     C = n(19290),
     T = n(652215),
     A = n(693591),
-    E = n(505051);
-let y = (e) => {
+    y = n(505051);
+let E = (e) => {
     let {
             name: t,
             title: n,
             description: r,
-            descriptionCta: y,
+            descriptionCta: E,
             previewImage: N,
             videoUrl: j,
             shouldLoadVideo: O,
@@ -70,13 +70,13 @@ let y = (e) => {
     }
     let ei = k === C.A0.LARGE ? "heading-xxl/bold" : "heading-xl/bold";
     function ea() {
-        let e = null != y && null != S,
+        let e = null != E && null != S,
             t = null != Y && Y.length > 0;
         if (!e && !t) return null;
-        let n = e ? [{ variant: "secondary", onClick: S, text: y }] : Y;
+        let n = e ? [{ variant: "secondary", onClick: S, text: E }] : Y;
         return (0, i.jsx)("div", {
-            className: E.bentoBoxButton,
-            children: (0, i.jsx)(p.e, {
+            className: y.bentoBoxButton,
+            children: (0, i.jsx)(b.e, {
                 children: n?.map((e, t) => {
                     let { onClick: n, ...a } = e;
                     return (0, i.jsx)(
@@ -95,7 +95,7 @@ let y = (e) => {
     }
     function er() {
         return (0, i.jsxs)("div", {
-            className: s()(E.textBox, E[`${k}`], Z && E.overlayTextBox),
+            className: s()(y.textBox, y[`${k}`], Z && y.overlayTextBox),
             children: [
                 (0, i.jsxs)("div", {
                     children: [
@@ -103,10 +103,10 @@ let y = (e) => {
                             ? null
                             : "gradient" === w
                               ? (0, i.jsx)("div", {
-                                    className: E.badgeContainer,
+                                    className: y.badgeContainer,
                                     children: (0, i.jsx)("div", {
-                                        className: E.badge,
-                                        children: (0, i.jsx)(b.D, {
+                                        className: y.badge,
+                                        children: (0, i.jsx)(p.D, {
                                             variant: z,
                                             color: "text-overlay-light",
                                             children: M,
@@ -114,16 +114,16 @@ let y = (e) => {
                                     }),
                                 })
                               : (0, i.jsx)("div", {
-                                    className: E.badgeContainer,
+                                    className: y.badgeContainer,
                                     children: (0, i.jsx)(d.E, { type: { text: M }, variant: w }),
                                 }),
-                        (0, i.jsx)(b.D, { variant: ei, color: "text-strong", className: E.header, children: n }),
+                        (0, i.jsx)(p.D, { variant: ei, color: "text-strong", className: y.header, children: n }),
                     ],
                 }),
                 (0, i.jsx)(f.E, {
                     variant: "text-md/medium",
                     color: "text-strong",
-                    className: E.description,
+                    className: y.description,
                     children: r,
                 }),
                 (0, i.jsx)(ea, {}),
@@ -132,7 +132,7 @@ let y = (e) => {
     }
     function es() {
         return (0, i.jsx)("div", {
-            className: s()(E.boxArtContainer, E[`${k}`], V),
+            className: s()(y.boxArtContainer, y[`${k}`], V),
             children:
                 null == j && (0, u.O)(N) && "string" != typeof N
                     ? N
@@ -144,7 +144,7 @@ let y = (e) => {
                               muted: !0,
                               poster: N,
                               loop: !0,
-                              className: s()(Z ? E.overlayImage : E.boxVideo, { [L]: null != L }),
+                              className: s()(Z ? y.overlayImage : y.boxVideo, { [L]: null != L }),
                               ref: K,
                               children: (0, i.jsx)("source", { src: j, type: F ? A.a.MP4 : A.a.WEBM }),
                           },
@@ -161,13 +161,13 @@ let y = (e) => {
             ref: X,
             id: t,
             className: s()(
-                E.backgroundColor,
-                E.boxContainer,
-                E[`${k}`],
-                E.gradientBackground,
+                y.backgroundColor,
+                y.boxContainer,
+                y[`${k}`],
+                y.gradientBackground,
                 H,
-                J && E.overlayImageMode,
-                Z && E.overlayMode,
+                J && y.overlayImageMode,
+                Z && y.overlayMode,
             ),
             onMouseEnter: et,
             onFocus: et,
@@ -177,10 +177,10 @@ let y = (e) => {
             children: [
                 Q &&
                     (0, i.jsx)("div", {
-                        className: E.backgroundVideoContainer,
+                        className: y.backgroundVideoContainer,
                         children: (0, i.jsx)(x.A, {
                             preload: O ? "auto" : "none",
-                            className: E.backgroundVideo,
+                            className: y.backgroundVideo,
                             src: D,
                         }),
                     }),

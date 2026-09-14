@@ -11,7 +11,7 @@ var l = n(477900),
     h = n(744898),
     m = n(562708),
     g = n(139286);
-function p(e) {
+function A(e) {
     return (
         (0, g.A)({ type: m.ImpressionTypes.VIEW, name: m.ImpressionNames.NOTIFICATION_SETTING_UNREAD_NUDGE }, void 0, [
             e.id,
@@ -19,7 +19,7 @@ function p(e) {
         null
     );
 }
-var A = n(832712),
+var p = n(832712),
     f = n(543465),
     C = n(477427),
     x = n(393432),
@@ -33,7 +33,7 @@ function y(e) {
     return (0, l.jsxs)("div", {
         className: j.l,
         children: [
-            (0, l.jsx)(p, { id: t.id }),
+            (0, l.jsx)(A, { id: t.id }),
             (0, l.jsx)("div", {
                 className: j.p,
                 children: (0, l.jsx)(d.E, { variant: "text-sm/medium", children: _.intl.format(_.t.P6Y2N1, {}) }),
@@ -48,7 +48,7 @@ function y(e) {
                     ((e = t.guild_id),
                         (l = t.id),
                         (i = I.vv.UNREADS_ONLY_MENTIONS),
-                        A.A.updateChannelOverrideSettings(
+                        p.A.updateChannelOverrideSettings(
                             e,
                             l,
                             { flags: (0, x.mD)(f.Ay.getChannelIdFlags(e, l), i) },
@@ -63,14 +63,14 @@ function y(e) {
 }
 var b = n(228098),
     N = n(157259),
-    v = n(503698),
-    T = n.n(v),
+    T = n(503698),
+    v = n.n(T),
     M = n(95561),
     R = n(174459),
     D = n(867455),
     L = n(406704),
     k = n(215741);
-function O(e) {
+function P(e) {
     let { channel: t, narrow: n } = e,
         s = (0, L.lK)(t);
     return (
@@ -82,7 +82,7 @@ function O(e) {
             });
         }, [t]),
         (0, l.jsxs)("div", {
-            className: T()(k.JD, { [k.sc]: n }),
+            className: v()(k.JD, { [k.sc]: n }),
             children: [
                 (0, l.jsx)(d.E, {
                     className: k.E5,
@@ -110,7 +110,7 @@ function O(e) {
         })
     );
 }
-function P(e) {
+function O(e) {
     let { channel: t, narrow: n } = e,
         s = (0, L.H_)(t);
     return (
@@ -122,7 +122,7 @@ function P(e) {
             });
         }, [t]),
         (0, l.jsxs)("div", {
-            className: T()(k.JD, { [k.sc]: n }),
+            className: v()(k.JD, { [k.sc]: n }),
             children: [
                 (0, l.jsx)(d.E, {
                     className: k.E5,
@@ -171,9 +171,9 @@ let U = i.memo(function (e) {
     return t.isMediaThread()
         ? null
         : t.isArchivedLockedThread()
-          ? (0, l.jsx)(O, { channel: t, narrow: n })
+          ? (0, l.jsx)(P, { channel: t, narrow: n })
           : t.isLockedThread()
-            ? (0, l.jsx)(P, { channel: t, narrow: n })
+            ? (0, l.jsx)(O, { channel: t, narrow: n })
             : h
               ? (0, l.jsx)(y, { channel: t, clearUnreadsNotice: m })
               : d && u.includes(G.i.OPT_IN_CHANNEL)
