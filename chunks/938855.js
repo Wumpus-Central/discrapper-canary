@@ -29,7 +29,7 @@ function c(e) {
             try {
                 l.setText(t);
                 let { html: e, missingInjections: r } = l.highlightToHtml();
-                return { html: e, missingInjections: r };
+                return { html: e, missingInjections: r.sort() };
             } finally {
                 l.free();
             }

@@ -404,7 +404,7 @@ function eS(e) {
             (S
                 ? (N += " " + em.intl.formatToPlainString(em.t.DQnFp2, { lines: E - I }))
                 : (N += " " + em.intl.formatToPlainString(em.t["1+gGcK"], { formattedBytes: (0, eu.up)(x) }))));
-    let _ = (0, es.sJ)(C?.slice(0, I).join("\n") ?? ""),
+    let _ = C?.slice(0, I).join("\n") ?? "",
         j = r || I < E;
     return (0, i.jsxs)("div", {
         className: a()(A, ef.kL),
@@ -573,8 +573,9 @@ let eN = s.memo(
                                     })(t).decode(await n.arrayBuffer()),
                                     s = n.headers.get("content-range") ?? "0",
                                     a = n.headers.get("content-length") ?? "1",
-                                    u = parseInt(s.split("/")[1]) - parseInt(a);
-                                (r(0 === u ? i : i.slice(0, -1)), o(u), l(!1));
+                                    u = parseInt(s.split("/")[1]) - parseInt(a),
+                                    c = 0 === u ? i : i.slice(0, -1);
+                                (r((0, es.sJ)(c)), o(u), l(!1));
                             } catch (e) {
                                 (o(0), l(!0));
                             }
