@@ -194,22 +194,6 @@
     }
   },
   {
-    "name": "2025-09-threads-also-send-to-channel",
-    "kind": "user",
-    "defaultConfig": {
-      "enabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true
-      }
-    }
-  },
-  {
     "name": "2025-09-video-qoe-metrics-tracking",
     "kind": "user",
     "defaultConfig": {
