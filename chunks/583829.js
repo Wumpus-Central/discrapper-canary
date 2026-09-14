@@ -355,15 +355,15 @@ let e1 = i.memo(function (e) {
                         (window.clearInterval(n.current), (n.current = window.setInterval(l, 3500)));
                 }, [t, l]);
             return (
-                i.useEffect(() => {
-                    if (t)
-                        return (
-                            (n.current = window.setInterval(l, 3500)),
-                            () => {
-                                null != n.current && window.clearInterval(n.current);
-                            }
-                        );
-                }, [t, l]),
+                i.useEffect(
+                    () => (
+                        t && (n.current = window.setInterval(l, 3500)),
+                        () => {
+                            null != n.current && window.clearInterval(n.current);
+                        }
+                    ),
+                    [t, l],
+                ),
                 r
             );
         })({ isEnabled: v, advance: q }),
