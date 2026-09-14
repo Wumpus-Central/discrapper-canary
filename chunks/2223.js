@@ -17285,6 +17285,7 @@ let Id = (0, d.E2)(c.X.ACCOUNT_STANDING_SETTING, {
                 ? {
                       type: m.lT.INLINE_NOTICE,
                       noticeType: "info",
+                      iconAlign: "start",
                       text: R.intl.format(Ii[t], { handleOnBlogHook: Ir }),
                       onDismiss: () => i(cy.i.USER_DISMISS),
                   }
