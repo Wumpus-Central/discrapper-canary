@@ -1750,8 +1750,8 @@ var nj = n(635377),
     nb = n(191096),
     nS = n(90721),
     nT = n(258924);
-function nC(e) {
-    return (0, nE.Ec)(e, { size: 106, keepAspectRatio: !0, format: tT.QB ? "webp" : null });
+function nC(e, t) {
+    return (0, nE.Ec)(e, { size: t, keepAspectRatio: !0, format: tT.QB ? "webp" : null });
 }
 let ny = new (nA())({ max: 100 }),
     nL = a.memo(function (e) {
@@ -1772,37 +1772,38 @@ let ny = new (nA())({ max: 100 }),
             children: [
                 (0, i.jsx)("img", {
                     ref: d,
-                    src: nC(t),
+                    src: nC(t, 106),
                     className: r()(nT.r4, !o && nT.l5),
                     alt: "",
                     draggable: !1,
                     onLoad: u,
                 }),
-                (0, i.jsx)("img", { ref: d, src: t, className: r()(nT.c8, o && nT.D7, l), alt: n, onLoad: u }),
+                (0, i.jsx)("img", { ref: d, src: nC(t, 900), className: r()(nT.c8, o && nT.D7, l), alt: n, onLoad: u }),
             ],
         });
     }),
     nR = a.memo(function (e) {
-        let { item: t, index: n, isSelected: l, isPlaying: s, onSelect: c, gameName: o } = e,
-            d = a.useCallback(() => c(n), [c, n]);
+        var t;
+        let { item: n, index: l, isSelected: s, isPlaying: c, onSelect: o, gameName: d } = e,
+            u = a.useCallback(() => o(l), [o, l]);
         return (0, i.jsx)(Q.D, {
-            className: r()(nT.JS, l && nT.Y4),
-            onClick: d,
+            className: r()(nT.JS, s && nT.Y4),
+            onClick: u,
             children: (0, i.jsxs)("div", {
                 className: nT.ub,
                 children: [
                     (0, i.jsx)("img", {
-                        src: nC("VIDEO" === t.type ? (t.poster ?? t.url) : t.url),
+                        src: nC("VIDEO" === (t = n).type ? (t.poster ?? t.url) : t.url, 106),
                         className: nT.xn,
-                        alt: ex.intl.formatToPlainString(ex.t.COYYrn, { game: o }),
+                        alt: ex.intl.formatToPlainString(ex.t.COYYrn, { game: d }),
                         loading: "lazy",
                         decoding: "async",
                         draggable: !1,
                     }),
-                    "VIDEO" === t.type &&
+                    "VIDEO" === n.type &&
                         (0, i.jsx)("div", {
                             className: nT.UZ,
-                            children: (0, i.jsx)(np.D, { playing: l && s, size: "sm" }),
+                            children: (0, i.jsx)(np.D, { playing: s && c, size: "sm" }),
                         }),
                 ],
             }),
