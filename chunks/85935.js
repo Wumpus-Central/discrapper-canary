@@ -551,7 +551,6 @@ function eT(e) {
 }
 function eR(e) {
     return (0, i.jsx)(z.m, {
-        asContainer: !0,
         ariaHidden: !0,
         text: ef.intl.string(ef.t["0PQYk3"]),
         children: (0, i.jsx)(x.D, {

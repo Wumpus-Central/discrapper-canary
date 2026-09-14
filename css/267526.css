@@ -77,6 +77,7 @@
 
 .openFullPreviewSection__4d95d {
     cursor: pointer;
+    display: flex;
     margin-inline-start: var(--space-16)
 }
 
@@ -234,4 +235,4 @@
     padding: 0 var(--space-16) var(--space-8)
 }
 
-/*# sourceMappingURL=267526.a91ebb5583cd152a.css.map*/
+/*# sourceMappingURL=267526.52ba030d0b459467.css.map*/
