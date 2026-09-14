@@ -36,11 +36,11 @@
 }
 
 .profileFramePreview__00f8b {
+    aspect-ratio: 2/3;
     box-sizing: border-box;
     height: 100%;
-    max-width: calc(100% - var(--space-40)*2);
-    padding: var(--space-12) 0;
-    width: 164px
+    max-width: 100%;
+    padding: var(--space-12) 0
 }
 
-/*# sourceMappingURL=31159.9d9f8d694aa79bfa.css.map*/
+/*# sourceMappingURL=31159.1d3b8b476d3b530f.css.map*/
