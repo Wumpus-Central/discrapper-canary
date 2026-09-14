@@ -20,4 +20,5 @@ a.exports = {
     eB: "cardActions__57467",
     nv: "cardConfirm__57467",
     y4: "announcer__57467",
+    Li: "portalRoot__57467",
 };

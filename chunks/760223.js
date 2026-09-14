@@ -55,6 +55,11 @@ function Q(e) {
 var J = n(58703);
 let ee = [
     {
+        date: "2026-09-13",
+        summary:
+            "Escape or a click outside the frame now leaves select mode from anywhere, closing whatever was open without picking anything.",
+    },
+    {
         date: "2026-09-12",
         summary:
             "While you preview an app, every notification it sends arrives as a DM to you, naming anyone it concerns, so nothing you test posts to a channel or messages anyone else.",
@@ -995,19 +1000,20 @@ function e5(e) {
         }, [N, h, C]),
         ex = l.useCallback(() => m(!1), []),
         { active: eb } = (0, eJ.Q_)(G),
-        ej = (0, e0.o4)(G),
-        ev = B.intl.string(ej ? F.default.bfQ4Ki : eb ? F.default.rfNEHn : F.default.lXcEa2),
-        ek = l.useCallback(() => {
+        ej = l.useRef(null),
+        ev = (0, e0.o4)(G),
+        ek = B.intl.string(ev ? F.default.bfQ4Ki : eb ? F.default.rfNEHn : F.default.lXcEa2),
+        eC = l.useCallback(() => {
             if (null != G) {
                 if (eb) return void (0, eJ.PS)(G);
                 (I(!1), g(!1), A(!1), m(!0), (0, eJ.nI)(G));
             }
         }, [G, eb]),
-        eC = l.useCallback(() => {
+        eA = l.useCallback(() => {
             I((e) => !e && (m(!0), g(!1), A(!1), !0));
         }, []),
-        eA = l.useCallback(() => I(!1), []),
-        eN = l.useCallback(
+        eN = l.useCallback(() => I(!1), []),
+        eI = l.useCallback(
             (e) => {
                 if (null == t || X.current) return;
                 let n = t.id;
@@ -1036,22 +1042,22 @@ function e5(e) {
             },
             [t],
         ),
-        eI = (0, c.bG)([W.A], () => W.A.isBuilderPreviewMobile()),
-        eE = B.intl.string(eI ? F.default["3uCc8U"] : F.default["+nzCxZ"]),
-        eS = l.useCallback(() => (0, O.GG)(!eI), [eI]),
-        eP = (0, _.A)(t?.preview_application_id ?? null, e1.sd),
-        eR = (0, e1.x1)(eP) && eP.data.proxyTicketRefreshing,
-        eD = l.useCallback(() => {
-            null == eP || eR || R.A.refreshProxyTicket(eP.id);
-        }, [eP, eR]),
+        eE = (0, c.bG)([W.A], () => W.A.isBuilderPreviewMobile()),
+        eS = B.intl.string(eE ? F.default["3uCc8U"] : F.default["+nzCxZ"]),
+        eP = l.useCallback(() => (0, O.GG)(!eE), [eE]),
+        eR = (0, _.A)(t?.preview_application_id ?? null, e1.sd),
+        eD = (0, e1.x1)(eR) && eR.data.proxyTicketRefreshing,
         eT = l.useCallback(() => {
-            var e, n;
-            (null != t && ((e = t.id), (n = eP?.id), (0, Z.Bn)(e), (0, eO.A)().leaveFrame(n)), s());
-        }, [t, eP?.id, s]),
+            null == eR || eD || R.A.refreshProxyTicket(eR.id);
+        }, [eR, eD]),
         eV = l.useCallback(() => {
+            var e, n;
+            (null != t && ((e = t.id), (n = eR?.id), (0, Z.Bn)(e), (0, eO.A)().leaveFrame(n)), s());
+        }, [t, eR?.id, s]),
+        ez = l.useCallback(() => {
             null != t && (m(!0), (0, Z.dv)(t.id, B.intl.string(F.default["2ejwtJ"])));
         }, [t]),
-        ez = em(
+        eG = em(
             l.useCallback(
                 (e) => {
                     if (null == t) return;
@@ -1077,10 +1083,10 @@ function e5(e) {
                 [t],
             ),
         ),
-        eG = l.useCallback(() => {
+        eY = l.useCallback(() => {
             null != t && (0, eZ.A)(t, r);
         }, [t, r]),
-        eY = l.useCallback(async () => {
+        eX = l.useCallback(async () => {
             if (null == G || Y.current !== G) return;
             K.current?.abort();
             let e = new AbortController();
@@ -1094,47 +1100,47 @@ function e5(e) {
         }, [G]);
     l.useEffect(
         () => (
-            eY(),
+            eX(),
             () => {
                 (K.current?.abort(), (K.current = null));
             }
         ),
-        [eY],
+        [eX],
     );
-    let eX = q?.integration_installed === !0 && t?.guild_id != null ? t.guild_id : r,
-        eK = l.useCallback(async () => {
-            null == t ||
-                (t.guild_id === eX && t.preview_guild_id === eX) ||
-                (await (0, O.M7)(t.id, { guild_id: eX, preview_guild_id: eX }));
-        }, [eX, t]),
+    let eK = q?.integration_installed === !0 && t?.guild_id != null ? t.guild_id : r,
         e7 = l.useCallback(async () => {
+            null == t ||
+                (t.guild_id === eK && t.preview_guild_id === eK) ||
+                (await (0, O.M7)(t.id, { guild_id: eK, preview_guild_id: eK }));
+        }, [eK, t]),
+        e5 = l.useCallback(async () => {
             try {
-                await eK();
+                await e7();
             } catch {}
-            await eY();
-        }, [eY, eK]),
-        e5 = l.useCallback(() => {
+            await eX();
+        }, [eX, e7]),
+        e4 = l.useCallback(() => {
             let e = t?.preview_application_id;
             null != t &&
                 null != e &&
                 U.A.openVibegrationsAppInstallModal({
                     applicationId: e,
                     application: Q ?? null,
-                    guildId: eX,
+                    guildId: eK,
                     onClose: () => {
-                        e7();
+                        e5();
                     },
                 });
-        }, [e7, eX, Q, t]),
-        e4 = ed
-            ? { type: "permissions", onReviewPermissions: e5, loading: J || ee }
+        }, [e5, eK, Q, t]),
+        te = ed
+            ? { type: "permissions", onReviewPermissions: e4, loading: J || ee }
             : ee && null == q
               ? { type: "checking" }
               : void 0;
     l.useEffect(() => {
         null == t && a && (0, T.pX)(eQ.BVt.CHANNEL(r, eM.VV.VIBEGRATIONS));
     }, [r, t, a]);
-    let te = l.useCallback((e) => {
+    let tt = l.useCallback((e) => {
             d(!0);
             let t = (0, Z.TV)(e).then((t) => {
                 if (!0 !== t.ok) throw Error(B.intl.string(F.default.fNP6Cd));
@@ -1153,12 +1159,12 @@ function e5(e) {
                 t
             );
         }, []),
-        tt = l.useCallback(() => {
+        tn = l.useCallback(() => {
             if (null == t) return;
             if (!et) return void eq(eU.NO_PREVIEW);
             if (ed) return void eq(eU.PERMISSIONS);
             if ("user" === t.install_scope)
-                return void te(t.id)
+                return void tt(t.id)
                     .then(() => {
                         (0, y.P0)((0, x.o)(B.intl.string(F.default.wA0o0L), b.Ck.SUCCESS));
                     })
@@ -1170,15 +1176,15 @@ function e5(e) {
                     guildId: r,
                     applicationId: t.application_id,
                     projectName: t.name,
-                    publish: te(t.id),
+                    publish: tt(t.id),
                     initialDraft: e,
                 }));
-        }, [r, ed, et, t, te]),
-        tn =
+        }, [r, ed, et, t, tt]),
+        ta =
             null != t && (0, $.jf)(t)
-                ? (0, i.jsx)(j.$, { size: "sm", variant: "primary", loading: o, disabled: ep, onClick: tt, text: eh })
+                ? (0, i.jsx)(j.$, { size: "sm", variant: "primary", loading: o, disabled: ep, onClick: tn, text: eh })
                 : null,
-        ta = (0, i.jsx)(eF, {
+        ti = (0, i.jsx)(eF, {
             title: t?.name ?? B.intl.string(F.default.F2dRba),
             breadcrumb: { title: B.intl.string(F.default.Xmvb23), onClick: s },
             actions:
@@ -1189,21 +1195,22 @@ function e5(e) {
                           children: [
                               el.showModeSwitch ? (0, i.jsx)(ew, { modes: el.modes, mode: es, onChange: er }) : null,
                               (0, i.jsx)(D.A.Icon, {
-                                  icon: eI ? e3 : e8,
-                                  tooltip: eE,
-                                  "aria-label": eE,
-                                  selected: eI,
-                                  onClick: eS,
+                                  icon: eE ? e3 : e8,
+                                  tooltip: eS,
+                                  "aria-label": eS,
+                                  selected: eE,
+                                  onClick: eP,
                               }),
                               (0, i.jsx)(D.A.Icon, {
+                                  ref: ej,
                                   icon: eB.A,
-                                  tooltip: ev,
-                                  "aria-label": ev,
+                                  tooltip: ek,
+                                  "aria-label": ek,
                                   selected: eb,
-                                  disabled: ej,
-                                  onClick: ek,
+                                  disabled: ev,
+                                  onClick: eC,
                               }),
-                              "frame" === es ? (0, i.jsx)(ei.A, { frame: eP, controlProjectId: t.id }) : null,
+                              "frame" === es ? (0, i.jsx)(ei.A, { frame: eR, controlProjectId: t.id }) : null,
                               (0, i.jsx)("div", { className: e6.YJ }),
                               E
                                   ? (0, i.jsx)(D.A.Icon, {
@@ -1211,7 +1218,7 @@ function e5(e) {
                                         tooltip: B.intl.string(F.default["8MLfBT"]),
                                         "aria-label": B.intl.string(F.default["8MLfBT"]),
                                         selected: N,
-                                        onClick: eC,
+                                        onClick: eA,
                                     })
                                   : null,
                               (0, $.PV)(t)
@@ -1229,12 +1236,12 @@ function e5(e) {
                                   projectGuildId: t.guild_id,
                                   isOwner: (0, $.PV)(t),
                                   canRemix: (0, $.H_)(t),
-                                  onRefresh: (0, e1.x1)(eP) ? eD : void 0,
-                                  isRefreshing: eR,
-                                  onClose: eT,
-                                  onExport: eV,
-                                  onImport: ez.open,
-                                  onRemix: eG,
+                                  onRefresh: (0, e1.x1)(eR) ? eT : void 0,
+                                  isRefreshing: eD,
+                                  onClose: eV,
+                                  onExport: ez,
+                                  onImport: eG.open,
+                                  onRemix: eY,
                                   onConnectTool: () => {
                                       var e;
                                       return (
@@ -1273,7 +1280,7 @@ function e5(e) {
     return (0, i.jsxs)("div", {
         className: e6.nj,
         children: [
-            ez.input,
+            eG.input,
             (0, i.jsx)("main", {
                 className: e6.JX,
                 children:
@@ -1281,7 +1288,7 @@ function e5(e) {
                         ? (0, i.jsxs)("div", {
                               className: e6.j5,
                               children: [
-                                  ta,
+                                  ti,
                                   (0, i.jsxs)("div", {
                                       className: e6.sD,
                                       children: [
@@ -1308,24 +1315,25 @@ function e5(e) {
                               ea.A,
                               {
                                   projectId: t.id,
+                                  designFeedbackToggleRef: ej,
                                   applicationId: t.preview_application_id,
                                   previewApplicationId: t.preview_application_id,
                                   surface: e1.sd,
-                                  header: ta,
+                                  header: ti,
                                   chatOpen: p,
                                   onCloseChat: ex,
-                                  chatHeaderAction: tn,
+                                  chatHeaderAction: ta,
                                   versionHistoryOpen: h,
                                   onCloseVersionHistory: () => g(!1),
                                   restorePointsOpen: C,
                                   onCloseRestorePoints: () => A(!1),
                                   installScope: t.install_scope,
                                   debugOpen: E && N,
-                                  onCloseDebug: eA,
-                                  onRestoreVersion: eN,
+                                  onCloseDebug: eN,
+                                  onRestoreVersion: eI,
                                   restoreState: S,
                                   previewReady: et,
-                                  previewGate: e4,
+                                  previewGate: te,
                                   availability: el,
                                   activeMode: es,
                                   widgetApplicationId: eo,
