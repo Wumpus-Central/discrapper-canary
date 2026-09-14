@@ -1,23 +1,24 @@
 (n.d(t, {
     TE: () => ep,
     yT: () => eh,
+    jE: () => eF,
     h$: () => ed,
     YP: () => er,
     Uh: () => es,
     Fb: () => eO,
     VO: () => ew,
-    uL: () => eF,
+    uL: () => eB,
     GS: () => eo,
     h5: () => eb,
-    Ts: () => eB,
+    Ts: () => eV,
     H1: () => ex,
-    l0: () => eH,
+    l0: () => ej,
     yd: () => eA,
     YV: () => eT,
     ef: () => ey,
     Su: () => eg,
     yO: () => ei,
-    $N: () => eV,
+    $N: () => eH,
     t9: () => eD,
     YK: () => eS,
     eQ: () => en,
@@ -60,7 +61,7 @@ function L() {
     return (0, g.isDesktop)() && a.A.features.supports("clips_storage_size");
 }
 function y(e) {
-    return "auto" === e && L() && (0, O.s)() && C.Ay.getEnableAutoclipping();
+    return "auto" === e && L() && (0, O.s$)() && C.Ay.getEnableAutoclipping();
 }
 function D(e) {
     return a.A.fileManager.join(e, R.SC);
@@ -995,6 +996,9 @@ function ek(e) {
     r.h.dispatch({ type: "CLIPS_SET_AUTO_STASH_ENABLED", enabled: e });
 }
 function eF(e) {
+    r.h.dispatch({ type: "CLIPS_AUTOCLIPS_STAFF_BYPASS_OVERRIDE", disabled: e });
+}
+function eB(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         n = arguments.length > 2 ? arguments[2] : void 0,
         i = y("auto");
@@ -1006,12 +1010,12 @@ function eF(e) {
     }
     t && m.default.track(d.HAw.CLIPS_SETTINGS_UPDATED, { ...N.lc(), autoclips_enabled: e, location: n });
 }
-function eB(e, t) {
+function eV(e, t) {
     r.h.dispatch({ type: "CLIPS_SIGNAL_CREATED", signal: e, timestamp: t });
 }
-function eV(e) {
+function eH(e) {
     r.h.dispatch({ type: "CLIPS_ML_DETECTION", detections: e });
 }
-function eH() {
-    eB({ type: R.Gy.MANUAL });
+function ej() {
+    eV({ type: R.Gy.MANUAL });
 }

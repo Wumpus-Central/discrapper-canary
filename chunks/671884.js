@@ -1592,7 +1592,7 @@ function tK(e) {
         ),
         B = null == f,
         Q = null == p,
-        Y = (0, tx.H)() && d !== K.oH.AUTO_CLIPS,
+        Y = (0, tx.HN)() && d !== K.oH.AUTO_CLIPS,
         W = eu.intl.string(tz[m]),
         X = (0, n.jsxs)(n.Fragment, {
             children: [
@@ -2292,7 +2292,7 @@ function lr(e) {
             )),
         d = (0, te.P)((e) => e.gameFacet),
         m = (0, te.P)((e) => e.clippedWithFacet),
-        h = (0, tx.H)(),
+        h = (0, tx.HN)(),
         x = null != d || null != m;
     function g(e) {
         return !x && c === e;

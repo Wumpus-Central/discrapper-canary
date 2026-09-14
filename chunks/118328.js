@@ -12,7 +12,7 @@ let o = (0, r.mj)({
 });
 function d(e) {
     let t = (0, s.sw)(),
-        n = (0, l.H)(),
+        n = (0, l.HN)(),
         r = (0, i.bG)([a.Ay], () => a.Ay.getGamesSeen(!1).length > 0),
         d = o.useConfig({ location: e }).enableMarketing;
     return t && n && r && d;

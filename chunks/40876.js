@@ -640,7 +640,14 @@ let r = {
         inlineRequire: () => n(282098).A,
     },
     ClipsSignalManager: {
-        actions: ["RUNNING_GAMES_CHANGE", "CLIPS_SETTINGS_UPDATE", "VOICE_CHANNEL_SELECT", "VOICE_STATE_UPDATES"],
+        actions: [
+            "RUNNING_GAMES_CHANGE",
+            "CLIPS_SETTINGS_UPDATE",
+            "VOICE_CHANNEL_SELECT",
+            "VOICE_STATE_UPDATES",
+            "CLIPS_AUTOCLIPS_CAPABILITIES_UPDATE",
+            "CLIPS_AUTOCLIPS_STAFF_BYPASS_OVERRIDE",
+        ],
         inlineRequire: () => n(353582).A,
     },
     DistributedClipsManager: { actions: ["CLIPS_REMOTE_TRIGGER"], inlineRequire: () => n(109624).A },

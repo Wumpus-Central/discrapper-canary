@@ -1,27 +1,31 @@
-n.d(t, { A: () => g });
+n.d(t, { A: () => N });
 var i = n(439372),
     r = n(952818),
     a = n(287809),
     s = n(977997),
     l = n(572164),
     o = n(655180),
-    d = n(915725),
-    c = n(974293),
-    u = n(240899),
-    _ = n(458977),
-    E = n(526233);
-let A = (0, n(945810).mj)({
+    d = n(507868),
+    c = n(915725),
+    u = n(974293),
+    _ = n(240899),
+    E = n(458977),
+    A = n(526233);
+let h = (0, n(945810).mj)({
     kind: "user",
     name: "2026-08-rocketleague-events",
     defaultConfig: { enableRocketLeagueEvents: !1 },
     variations: { 1: { enableRocketLeagueEvents: !0 } },
 });
-var h = n(270962);
-let I = n(786661).E.applicationIds["0"];
-var f = n(876474),
-    p = n(190443);
-let T = "Clip signal handler registration";
-class m extends i.A {
+var I = n(270962);
+let f = n(786661).E.applicationIds["0"];
+var p = n(876474),
+    T = n(190443);
+let m = "Clip signal handler registration";
+function g(e) {
+    return !!c.Ay.getEnableAutoclipping() && d.A.isGameAllowed(e ?? r.Ay.getVisibleGame()?.id);
+}
+class S extends i.A {
     registrations = new Map();
     activeHandlers = new Map();
     initialized = !1;
@@ -31,6 +35,8 @@ class m extends i.A {
         CLIPS_SETTINGS_UPDATE: () => this.updateActiveHandlers(),
         VOICE_CHANNEL_SELECT: () => this.updateActiveHandlers(),
         VOICE_STATE_UPDATES: () => this.updateActiveHandlers(),
+        CLIPS_AUTOCLIPS_CAPABILITIES_UPDATE: () => this.updateActiveHandlers(),
+        CLIPS_AUTOCLIPS_STAFF_BYPASS_OVERRIDE: () => this.updateActiveHandlers(),
     };
     ensureInitialized() {
         if (!this.initialized)
@@ -39,42 +45,40 @@ class m extends i.A {
                 {
                     type: "voiceChannel",
                     name: "ml-audio-classification",
-                    isEnabled: () => (0, c.$i)(T) && d.Ay.getEnableAutoclipping(),
+                    isEnabled: () => (0, u.$i)(m) && g(),
                     importHandler: () => n.e("553725").then(n.bind(n, 691148)),
                 },
                 {
                     type: "voiceChannel",
                     name: "distributed-clipping",
-                    isEnabled: () =>
-                        d.Ay.getEnableAutoclipping() && _.A.getConfig({ location: T }).enableDistributedClips,
+                    isEnabled: () => g() && E.A.getConfig({ location: m }).enableDistributedClips,
                     importHandler: () => n.e("878045").then(n.bind(n, 359788)),
                 },
                 {
                     type: "application",
                     name: "steam-timeline",
-                    isEnabled: () => d.Ay.getEnableAutoclipping() && h.A.getConfig({ location: T }).enableSteamTimeline,
+                    isEnabled: () => g() && I.A.getConfig({ location: m }).enableSteamTimeline,
                     importHandler: () => n.e("533196").then(n.bind(n, 551367)),
                 },
                 {
                     type: "application",
                     name: "league-of-legends",
-                    applicationId: f.m,
-                    isEnabled: () => d.Ay.getEnableAutoclipping() && E.A.getConfig({ location: T }).enableLeagueEvents,
+                    applicationId: p.m,
+                    isEnabled: () => g(p.m) && A.A.getConfig({ location: m }).enableLeagueEvents,
                     importHandler: () => n.e("618549").then(n.bind(n, 877588)),
                 },
                 {
                     type: "application",
                     name: "cs2-gsi",
-                    applicationId: I,
-                    isEnabled: () => d.Ay.getEnableAutoclipping() && u.A.getConfig({ location: T }).enableCs2Gsi,
+                    applicationId: f,
+                    isEnabled: () => g(f) && _.A.getConfig({ location: m }).enableCs2Gsi,
                     importHandler: () => Promise.all([n.e("556967"), n.e("860838")]).then(n.bind(n, 525509)),
                 },
                 {
                     type: "application",
                     name: "rocket-league",
-                    applicationId: p.e,
-                    isEnabled: () =>
-                        d.Ay.getEnableAutoclipping() && A.getConfig({ location: T }).enableRocketLeagueEvents,
+                    applicationId: T.e,
+                    isEnabled: () => g(T.e) && h.getConfig({ location: m }).enableRocketLeagueEvents,
                     importHandler: () => Promise.all([n.e("556967"), n.e("182150")]).then(n.bind(n, 446885)),
                 },
             ]))
@@ -148,4 +152,4 @@ class m extends i.A {
         (this.terminatedCount++, this.stopAllHandlers());
     }
 }
-let g = new m();
+let N = new S();

@@ -17440,7 +17440,7 @@ let IB = (0, d.zD)(c.X.CLIPS_ENABLE_AUTOCLIPPING, {
     IX = (0, d.zZ)(c.X.CLIPS_AUTOCLIPPING_CATEGORY, {
         useTitle: () => R.intl.string(IF.default.XWkJoi),
         useSubtitle: () => R.intl.string(IF.default["MJ/VsO"]),
-        usePredicate: IM.H,
+        usePredicate: IM.HN,
         usePersistentBadge: () => ({ badgeType: m.Xi.BETA }),
         useInlineNotice: () =>
             (0, IV.E)()
