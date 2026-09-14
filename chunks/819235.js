@@ -112,7 +112,8 @@ function x(e) {
     null == t || (o.A.getAccount(t, f.fg2.SPOTIFY)?.showActivity && O(t, n));
 }
 function k() {
-    b({ feedId: I.X1.GLOBAL_FEED, feature: r.M.GAME_PROFILE });
+    let e = h.A.getFeed(T);
+    (null != e && new Date(e.expired_at).getTime() > Date.now()) || b({ feedId: T, feature: r.M.GAME_PROFILE });
 }
 class F extends s.A {
     actions = {
