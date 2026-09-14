@@ -1,1 +1,1 @@
-p.exports = JSON.parse('{"KfOPbQ":["KfOPbQ"]}');
+p.exports = JSON.parse('{"KfOPbQ":["Valorific\u0103"]}');
