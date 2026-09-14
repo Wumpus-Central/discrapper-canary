@@ -1,4 +1,4 @@
-l.d(t, { A: () => d });
+l.d(t, { A: () => c });
 var i = l(17928),
     n = l(228366);
 let a = {};
@@ -18,7 +18,7 @@ class r extends i.Ay.Store {
         return a[e]?.fetchStatus ?? "idle";
     }
 }
-let d = new r(n.h, {
+let c = new r(n.h, {
     GUILD_SPACE_CATALOG_FETCH_START: function (e) {
         let { guildId: t } = e;
         s(t).fetchStatus = "loading";

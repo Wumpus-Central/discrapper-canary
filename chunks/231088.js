@@ -159,18 +159,18 @@ function v(e) {
         } = e,
         w = l.useRef(null),
         R = l.useId(),
-        _ = l.useId(),
-        L = null == n,
-        O = null != h,
-        P = null != I && !O,
-        D = O ? "error" : P ? "warning" : null,
-        M = O ? h : I,
+        L = l.useId(),
+        _ = null == n,
+        P = null != h,
+        O = null != I && !P,
+        D = P ? "error" : O ? "warning" : null,
+        M = P ? h : I,
         G = null != D && null != M,
         [U] = l.useState(t),
         [F, W] = l.useState(!1);
     F || t === U || W(!0);
     let H = [];
-    (L && H.push(R), G && "compact" !== g && H.push(_));
+    (_ && H.push(R), G && "compact" !== g && H.push(L));
     let V = H.length > 0 ? H.join(" ") : void 0;
     function B() {
         let { activeElement: e } = w.current?.ownerDocument ?? document;
@@ -178,7 +178,7 @@ function v(e) {
     }
     let z = (0, i.jsxs)("div", {
         ref: w,
-        className: r()(p.LL, { [p.JD]: O, [p.xe]: P, [p.r9]: y }),
+        className: r()(p.LL, { [p.JD]: P, [p.xe]: O, [p.r9]: y }),
         onMouseDown: y
             ? void 0
             : function (e) {
@@ -186,7 +186,7 @@ function v(e) {
               },
         onClick: y ? void 0 : B,
         children: [
-            L
+            _
                 ? (0, i.jsx)(m.E, {
                       id: R,
                       variant: b ?? "text-sm/normal",
@@ -227,7 +227,7 @@ function v(e) {
                     : (0, i.jsxs)(i.Fragment, {
                           children: [
                               (0, i.jsx)("div", { className: p.VH, children: z }),
-                              G && "compact" !== g && (0, i.jsx)(E, { id: _, message: M, type: D }),
+                              G && "compact" !== g && (0, i.jsx)(E, { id: L, message: M, type: D }),
                           ],
                       }),
             },

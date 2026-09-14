@@ -1,7 +1,7 @@
-a.d(t, { A: () => d });
+a.d(t, { A: () => u });
 var i = a(256905),
-    l = a(625494),
-    n = a(652215);
+    n = a(625494),
+    l = a(652215);
 let s = { width: 1920, height: 1080 };
 async function r(e) {
     if (null == e) return s;
@@ -19,22 +19,22 @@ async function r(e) {
 }
 async function o(e, t) {
     let { videoURL: a, thumbnailURL: i, title: s } = e,
-        { width: o, height: d } = await r(i);
+        { width: o, height: u } = await r(i);
     return {
         type: "VIDEO",
         url: a,
         proxyUrl: a,
         poster: i,
         width: o,
-        height: d,
+        height: u,
         alt: s,
-        onEnded: t ? () => l._.dispatch(n.jej.MODAL_CAROUSEL_NEXT) : void 0,
+        onEnded: t ? () => n._.dispatch(l.jej.MODAL_CAROUSEL_NEXT) : void 0,
     };
 }
-async function d(e) {
+async function u(e) {
     let { clips: t, startingIndex: a } = e;
     if (0 === t.length) return;
-    let l = t.length > 1,
-        n = await Promise.all(t.map((e) => o(e, l)));
-    (0, i.R)({ location: "user_profile_widget_clip", items: n, startingIndex: a, shouldHideMediaOptions: !0 });
+    let n = t.length > 1,
+        l = await Promise.all(t.map((e) => o(e, n)));
+    (0, i.R)({ location: "user_profile_widget_clip", items: l, startingIndex: a, shouldHideMediaOptions: !0 });
 }

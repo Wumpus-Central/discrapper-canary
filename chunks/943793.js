@@ -29,8 +29,8 @@ var a = n(297264),
     N = n(229087),
     w = n(753437),
     R = n(375708),
-    _ = n(149253);
-function L(e) {
+    L = n(149253);
+function _(e) {
     let { tags: t, allowEditing: n, widgetType: s, gameId: a, className: o, disableInteraction: d = !1 } = e,
         c = n && !d,
         u = t?.filter((e) => null != (0, w.W3)(e)) ?? [],
@@ -67,17 +67,17 @@ function L(e) {
         !g && !m)
     )
         return null;
-    let L = C ? u : u.slice(0, u.length - E);
+    let _ = C ? u : u.slice(0, u.length - E);
     return (0, i.jsxs)("div", {
-        className: r()(_.I4, o),
+        className: r()(L.I4, o),
         children: [
             g &&
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)("ul", {
-                            className: _.Tw,
+                            className: L.Tw,
                             "aria-label": R.intl.string(R.t.EfjTi4),
-                            children: L.map((e) =>
+                            children: _.map((e) =>
                                 (0, i.jsx)(
                                     N.A,
                                     {
@@ -115,12 +115,12 @@ function L(e) {
         ],
     });
 }
-function O(e) {
+function P(e) {
     let { numberOfOverflowingTags: t } = e;
     return (0, i.jsx)(c.E, { variant: "text-xxs/medium", color: "none", children: `+${t}` });
 }
-function P() {
-    return (0, i.jsx)(y.A, { direction: y.A.Directions.LEFT, width: 12, height: 12, className: _.OW });
+function O() {
+    return (0, i.jsx)(y.A, { direction: y.A.Directions.LEFT, width: 12, height: 12, className: L.OW });
 }
 function D(e) {
     let {
@@ -135,9 +135,9 @@ function D(e) {
         u = t ? R.intl.string(R.t.z9VPrQ) : R.intl.formatToPlainString(R.t.F6iMs4, { count: n });
     return a
         ? (0, i.jsx)("div", {
-              className: r()(_.X1, _.r9),
+              className: r()(L.X1, L.r9),
               ref: d,
-              children: (0, i.jsx)(O, { numberOfOverflowingTags: n }),
+              children: (0, i.jsx)(P, { numberOfOverflowingTags: n }),
           })
         : (0, i.jsx)(k.m, {
               text: c,
@@ -146,8 +146,8 @@ function D(e) {
                   innerRef: d,
                   onClick: t ? s : l,
                   "aria-label": u,
-                  className: t ? _.cS : _.X1,
-                  children: t ? (0, i.jsx)(P, {}) : (0, i.jsx)(O, { numberOfOverflowingTags: n }),
+                  className: t ? L.cS : L.X1,
+                  children: t ? (0, i.jsx)(O, {}) : (0, i.jsx)(P, { numberOfOverflowingTags: n }),
               }),
           });
 }
@@ -303,9 +303,9 @@ function Y(e) {
         N = { variant: "heading-sm/medium", color: "text-default" },
         w = c && !u,
         R = 1 === (0, A.cv)(d),
-        _ = w && (0, A.y9)(d),
-        O = w && !R,
-        { registerDragHandleRef: P } = (0, C.r)();
+        L = w && (0, A.y9)(d),
+        P = w && !R,
+        { registerDragHandleRef: O } = (0, C.r)();
     if (T) return (0, i.jsx)(b.E, {});
     function D() {
         return (0, i.jsx)(S.A, {
@@ -324,10 +324,10 @@ function Y(e) {
             ref: h,
             className: r()(F.Nr, f),
             children: [
-                O
+                P
                     ? (0, i.jsxs)("div", {
                           className: F.An,
-                          children: [D(), (0, i.jsx)(E.jV, { buttonRef: P(o.gameId), className: F.BU })],
+                          children: [D(), (0, i.jsx)(E.jV, { buttonRef: O(o.gameId), className: F.BU })],
                       })
                     : D(),
                 (0, i.jsxs)("div", {
@@ -336,10 +336,10 @@ function Y(e) {
                         u
                             ? (0, i.jsx)(a.D, { ...N, children: y })
                             : (0, i.jsx)(H, { gameId: I, userId: t.id, gameName: y, ...N }),
-                        _
+                        L
                             ? (0, i.jsx)(K, { text: j, user: t, guildId: n, channelId: s, widgetType: d, gameId: I })
                             : (0, i.jsx)(z, { text: j, user: t, guildId: n, channelId: s }),
-                        (0, i.jsx)(L, {
+                        (0, i.jsx)(_, {
                             tags: v,
                             allowEditing: c,
                             widgetType: d,
@@ -353,7 +353,7 @@ function Y(e) {
             ],
         });
     }
-    return O
+    return P
         ? (0, i.jsx)(W, {
               index: g ?? 0,
               widgetType: d,

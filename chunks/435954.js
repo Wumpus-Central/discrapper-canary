@@ -68,8 +68,8 @@ var y = l(957565),
     M = l(986238),
     O = l(652215),
     _ = l(375708),
-    B = l(100281);
-function I(e) {
+    I = l(100281);
+function B(e) {
     let { url: t } = e,
         [l, s] = n.useState(!1),
         i = n.useRef(void 0),
@@ -83,10 +83,10 @@ function I(e) {
         n.useEffect(() => () => clearTimeout(i.current), []),
         y.p5
             ? (0, r.jsxs)(m.D, {
-                  className: d()(B.S, l ? B.pG : null),
+                  className: d()(I.S, l ? I.pG : null),
                   onClick: a,
                   children: [
-                      (0, r.jsx)(p.LinkIcon, { size: "md", color: "currentColor", className: B.n7 }),
+                      (0, r.jsx)(p.LinkIcon, { size: "md", color: "currentColor", className: I.n7 }),
                       l ? _.intl.string(_.t.GmrIJY) : _.intl.string(_.t.iVzBOh),
                   ],
               })
@@ -106,10 +106,10 @@ function T(e) {
     return (0, r.jsxs)(n.Fragment, {
         children: [
             (0, r.jsxs)("div", {
-                className: B.NT,
+                className: I.NT,
                 children: [
-                    (0, r.jsx)(g.E, { variant: "text-sm/medium", className: B.V$, children: t }),
-                    (0, r.jsx)("div", { className: B.Jb, children: l }),
+                    (0, r.jsx)(g.E, { variant: "text-sm/medium", className: I.V$, children: t }),
+                    (0, r.jsx)("div", { className: I.Jb, children: l }),
                 ],
             }),
             (0, r.jsx)(f.$, { text: a, loading: c, variant: s, onClick: i, fullWidth: !0, disabled: o }),
@@ -126,47 +126,47 @@ let S = function (e) {
             c || (u(!0), o().catch(() => u(!1)));
         }, [o, c]);
     return (0, r.jsxs)("div", {
-        className: B.iE,
+        className: I.iE,
         children: [
             (0, r.jsxs)(g.E, {
                 variant: "text-xs/normal",
-                className: B.lS,
+                className: I.lS,
                 children: [
                     (0, r.jsx)("strong", {
-                        className: B.DD,
+                        className: I.DD,
                         children:
                             null != s && null != s.releaseChannel
                                 ? _.intl.formatToPlainString(_.t.bFj63b, { releaseChannel: s.releaseChannel })
                                 : _.intl.string(_.t.Wj3LW4),
                     }),
                     (0, r.jsx)(v.Anchor, {
-                        className: B.Pl,
+                        className: I.Pl,
                         href: k.A.getArticleURL(O.MVz.BUILD_OVERRIDE_EMBED),
                         target: "_blank",
                         children: (0, r.jsx)(j.CircleInformationIcon, {
                             size: "xs",
                             color: "currentColor",
-                            className: B.G,
+                            className: I.G,
                         }),
                     }),
-                    t ? null : (0, r.jsx)(I, { url: i }),
+                    t ? null : (0, r.jsx)(B, { url: i }),
                 ],
             }),
             (0, r.jsxs)("div", {
-                className: B.Qs,
+                className: I.Qs,
                 children: [
-                    (0, r.jsx)(w, { className: B.Kk }),
+                    (0, r.jsx)(w, { className: I.Kk }),
                     t
                         ? (0, r.jsxs)(n.Fragment, {
                               children: [
                                   (0, r.jsxs)("div", {
-                                      className: B.NT,
+                                      className: I.NT,
                                       children: [
-                                          (0, r.jsx)("div", { className: d()(B.Pz, B.w9) }),
-                                          (0, r.jsx)("div", { className: B.Pz }),
+                                          (0, r.jsx)("div", { className: d()(I.Pz, I.w9) }),
+                                          (0, r.jsx)("div", { className: I.Pz }),
                                       ],
                                   }),
-                                  (0, r.jsx)("div", { className: B.MM }),
+                                  (0, r.jsx)("div", { className: I.MM }),
                               ],
                           })
                         : (function (e) {

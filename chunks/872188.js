@@ -4,20 +4,20 @@ var i = l(477900),
     a = l(765178),
     s = l(885574),
     r = l(834730),
-    d = l(821609),
-    c = l(61567),
+    c = l(821609),
+    d = l(61567),
     u = l(375708),
     o = l(146108);
 function f(e) {
     let { onPublish: t } = e,
         [l, f] = n.useState(!1),
-        [h, m] = n.useState(!1),
-        x = n.useCallback(async () => {
-            (f(!0), m(!1));
+        [h, g] = n.useState(!1),
+        m = n.useCallback(async () => {
+            (f(!0), g(!1));
             try {
-                (await t(), a.O.announce(u.intl.string(c.default.pDzipI)));
+                (await t(), a.O.announce(u.intl.string(d.default.pDzipI)));
             } catch {
-                m(!0);
+                g(!0);
             } finally {
                 f(!1);
             }
@@ -38,14 +38,14 @@ function f(e) {
                       variant: "text-sm/medium",
                       color: "text-muted",
                       className: o.iU,
-                      children: u.intl.string(c.default.Z2z85q),
+                      children: u.intl.string(d.default.Z2z85q),
                   }),
-            (0, i.jsx)(d.$, {
+            (0, i.jsx)(c.$, {
                 variant: "secondary",
                 size: "sm",
-                text: u.intl.string(c.default["yul+0g"]),
+                text: u.intl.string(d.default["yul+0g"]),
                 loading: l,
-                onClick: x,
+                onClick: m,
             }),
         ],
     });

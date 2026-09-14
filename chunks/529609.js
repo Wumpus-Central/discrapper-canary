@@ -4,8 +4,8 @@ var i = l(477900),
     a = l(17928),
     s = l(363957),
     r = l(754674),
-    d = l(42499),
-    c = l(539888),
+    c = l(42499),
+    d = l(539888),
     u = l(721995);
 function o(e) {
     let { canEdit: t, guildId: l, widget: n } = e,
@@ -14,9 +14,9 @@ function o(e) {
             n.id,
             n.requires_hydration,
         ]),
-        u = (0, d.K)(l, n);
+        u = (0, c.K)(l, n);
     return t || null == u
-        ? (0, i.jsx)(c.P, { guildId: l, widget: n, guildSpaceMode: "view", hydration: r, lock: u })
+        ? (0, i.jsx)(d.P, { guildId: l, widget: n, guildSpaceMode: "view", hydration: r, lock: u })
         : null;
 }
 function f(e) {

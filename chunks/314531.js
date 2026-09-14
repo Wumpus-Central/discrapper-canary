@@ -1,45 +1,45 @@
-a.d(t, { A: () => m });
+a.d(t, { A: () => p });
 var i = a(477900),
-    l = a(582128),
-    n = a(503698),
-    s = a.n(n),
+    n = a(582128),
+    l = a(503698),
+    s = a.n(l),
     r = a(607470),
     o = a(590251),
-    d = a(375708),
-    c = a(869006);
-function u(e) {
+    u = a(375708),
+    d = a(869006);
+function c(e) {
     let { item: t, size: a } = e,
-        l = "exporting" === t.status,
-        n = "uploading" === t.status ? Math.round(100 * t.progress) : 25;
+        n = "exporting" === t.status,
+        l = "uploading" === t.status ? Math.round(100 * t.progress) : 25;
     return (0, i.jsx)("div", {
-        className: s()(c.ring, c[a], { [c.indeterminate]: l }),
+        className: s()(d.ring, d[a], { [d.indeterminate]: n }),
         role: "progressbar",
-        "aria-label": d.intl.string(d.t.RFRuwZ),
-        "aria-valuenow": l ? void 0 : n,
+        "aria-label": u.intl.string(u.t.RFRuwZ),
+        "aria-valuenow": n ? void 0 : l,
         children: (0, i.jsx)(o.a, {
-            percent: n,
+            percent: l,
             strokeSize: o.a.StrokeSizes.MEDIUM,
             colorOverride: "var(--icon-overlay-light)",
         }),
     });
 }
-var p = a(579460);
-function m(e) {
-    let { item: t, ringSize: a, isPlaying: n = !1, isMuted: o = !0, fit: d = "cover", onEnded: c, className: m } = e,
-        g = l.useRef(null),
+var m = a(579460);
+function p(e) {
+    let { item: t, ringSize: a, isPlaying: l = !1, isMuted: o = !0, fit: u = "cover", onEnded: d, className: p } = e,
+        g = n.useRef(null),
         h = "exporting" === t.status || "uploading" === t.status,
-        v = s()(p.Gt, { [p.ob]: h, [p.k6]: "contain" === d });
+        v = s()(m.Gt, { [m.ob]: h, [m.k6]: "contain" === u });
     return (
-        l.useEffect(() => {
+        n.useEffect(() => {
             let e = g.current;
             null != e && (e.muted = o);
         }, [o]),
-        l.useEffect(() => {
+        n.useEffect(() => {
             let e = g.current;
-            null != e && (n ? e.play().catch(() => {}) : e.pause());
-        }, [n, t.key]),
+            null != e && (l ? e.play().catch(() => {}) : e.pause());
+        }, [l, t.key]),
         (0, i.jsxs)("div", {
-            className: s()(p.$_, m),
+            className: s()(m.$_, p),
             children: [
                 "saved" === t.status
                     ? null != t.videoURL
@@ -49,13 +49,13 @@ function m(e) {
                               poster: t.thumbnailURL,
                               preload: "none",
                               muted: !0,
-                              loop: null == c,
-                              onEnded: c,
+                              loop: null == d,
+                              onEnded: d,
                               className: v,
                           })
                         : null
                     : (0, i.jsx)("img", { src: t.thumbnail, alt: "", className: v, loading: "lazy" }),
-                h && (0, i.jsx)(u, { item: t, size: a }),
+                h && (0, i.jsx)(c, { item: t, size: a }),
             ],
         })
     );

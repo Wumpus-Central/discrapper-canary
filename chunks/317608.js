@@ -1,29 +1,29 @@
 a.d(t, { A: () => o });
 var l = a(477900),
-    s = a(582128),
-    r = a(333007),
-    i = a(649248);
-function n(e) {
-    return i.A.subscribeEntries(e);
+    r = a(582128),
+    s = a(333007),
+    n = a(649248);
+function i(e) {
+    return n.A.subscribeEntries(e);
 }
 function o(e) {
     let { frameId: t, level: a, className: o, overlay: d } = e,
-        u = s.useRef(null);
-    s.useLayoutEffect(() => {
+        u = r.useRef(null);
+    r.useLayoutEffect(() => {
         let e = u.current;
         if (null != e)
             return (
-                i.A.registerFrameTarget(t, e, a),
+                n.A.registerFrameTarget(t, e, a),
                 () => {
-                    i.A.removeFrameTarget(t, e);
+                    n.A.removeFrameTarget(t, e);
                 }
             );
     }, [t, a]);
-    let c = s.useSyncExternalStore(n, () => i.A.getPoolEntry(t)?.overlay ?? null);
+    let c = r.useSyncExternalStore(i, () => n.A.getPoolEntry(t)?.overlay ?? null);
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsx)("div", { ref: u, className: o, style: { pointerEvents: "none" } }),
-            null != d && null != c ? (0, r.createPortal)(d, c) : null,
+            null != d && null != c ? (0, s.createPortal)(d, c) : null,
         ],
     });
 }
