@@ -5,7 +5,7 @@ function i(e) {
 }
 var a = n(183580);
 function o(e, t, n, o, u, s) {
-    let l, c;
+    let l, d;
     if ("lookup" === n.localeMatcher)
         l = (function (e, t, n) {
             let i = { locale: "" };
@@ -17,15 +17,15 @@ function o(e, t, n, o, u, s) {
             return ((i.locale = n()), i);
         })(Array.from(e), t, s);
     else {
-        var d;
+        var c;
         let n, i, a, o, u;
-        ((d = Array.from(e)),
+        ((c = Array.from(e)),
             (a = []),
             (o = t.reduce((e, t) => {
                 let n = t.replace(r.KB, "");
                 return (a.push(n), (e[n] = t), e);
             }, {})),
-            (u = (0, r.B4)(a, d)).matchedSupportedLocale &&
+            (u = (0, r.B4)(a, c)).matchedSupportedLocale &&
                 u.matchedDesiredLocale &&
                 ((n = u.matchedSupportedLocale),
                 (i = o[u.matchedDesiredLocale].slice(u.matchedDesiredLocale.length) || void 0)),
@@ -35,7 +35,7 @@ function o(e, t, n, o, u, s) {
     let f = l.locale,
         h = u[f],
         p = { locale: "en", dataLocale: f };
-    c = l.extension
+    d = l.extension
         ? (function (e) {
               let t;
               ((0, r.V1)(e === e.toLowerCase(), "Expected extension to be lowercase"),
@@ -69,7 +69,7 @@ function o(e, t, n, o, u, s) {
         (0, r.V1)(Array.isArray(i), `keyLocaleData for ${e} must be an array`);
         let a = i[0];
         (0, r.V1)(void 0 === a || "string" == typeof a, "value must be a string or undefined");
-        let o = c.find((t) => t.key === e);
+        let o = d.find((t) => t.key === e);
         if (o) {
             let n = o.value;
             "" !== n

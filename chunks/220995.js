@@ -5,8 +5,8 @@ var n = t(477900),
     a = t.n(s),
     r = t(479669),
     d = t(562708),
-    o = t(17928),
-    u = t(192308),
+    u = t(17928),
+    o = t(192308),
     c = t(717421),
     m = t(922016),
     A = t(939249),
@@ -44,9 +44,9 @@ function k(e) {
         type: d.ImpressionTypes.VIEW,
         properties: { voice_channel_id: i.id, voice_guild_id: i.guild_id, location_stack: U },
     });
-    let L = (0, o.bG)([y.A], () => y.A.can(j.xBc.CREATE_INSTANT_INVITE, i), [i]),
-        F = (0, o.bG)([N.A], () => N.A.getGuild(i.guild_id)),
-        z = (0, o.bG)([v.Ay], () => v.Ay.useReducedMotion),
+    let L = (0, u.bG)([y.A], () => y.A.can(j.xBc.CREATE_INSTANT_INVITE, i), [i]),
+        F = (0, u.bG)([N.A], () => N.A.getGuild(i.guild_id)),
+        z = (0, u.bG)([v.Ay], () => v.Ay.useReducedMotion),
         [B, K] = l.useState(!1),
         Y = l.useRef(null),
         q = (0, E.M)(L ? k : Y),
@@ -70,7 +70,7 @@ function k(e) {
         ),
         ee = l.useCallback(() => {
             null != F &&
-                (0, u.openModalLazy)(async () => {
+                (0, o.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
                         t.e("683621"),
                         t.e("711162"),

@@ -1,1 +1,1 @@
-t.exports = { T: "chat_f02135" };
+a.exports = { T: "chat_f02135" };

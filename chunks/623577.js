@@ -1,4 +1,4 @@
-n.d(t, { P: () => g, m: () => _ });
+n.d(t, { P: () => _, m: () => v });
 var r = n(838259),
     i = n(162563),
     a = n(47361),
@@ -38,8 +38,8 @@ var r = n(838259),
     u = n(916784),
     s = n(717205),
     l = new WeakMap(),
-    c = /auto|scroll/,
-    d = /^tb|vertical/,
+    d = /auto|scroll/,
+    c = /^tb|vertical/,
     f = /msie|trident/i.test(s.S.navigator && s.S.navigator.userAgent),
     h = function (e) {
         return parseFloat(e || "0");
@@ -58,43 +58,43 @@ var r = n(838259),
         contentBoxSize: p(),
         contentRect: new o(0, 0, 0, 0),
     }),
-    _ = function (e, t) {
+    v = function (e, t) {
         if ((void 0 === t && (t = !1), l.has(e) && !t)) return l.get(e);
         if ((0, u.dK)(e)) return (l.set(e, m), m);
         var n = getComputedStyle(e),
             r = (0, u.XJ)(e) && e.ownerSVGElement && e.getBBox(),
             i = !f && "border-box" === n.boxSizing,
-            s = d.test(n.writingMode || ""),
-            _ = !r && c.test(n.overflowY || ""),
-            g = !r && c.test(n.overflowX || ""),
-            v = r ? 0 : h(n.paddingTop),
+            s = c.test(n.writingMode || ""),
+            v = !r && d.test(n.overflowY || ""),
+            _ = !r && d.test(n.overflowX || ""),
+            g = r ? 0 : h(n.paddingTop),
             y = r ? 0 : h(n.paddingRight),
             b = r ? 0 : h(n.paddingBottom),
             D = r ? 0 : h(n.paddingLeft),
             w = r ? 0 : h(n.borderTopWidth),
-            C = r ? 0 : h(n.borderRightWidth),
-            E = r ? 0 : h(n.borderBottomWidth),
+            E = r ? 0 : h(n.borderRightWidth),
+            C = r ? 0 : h(n.borderBottomWidth),
             A = r ? 0 : h(n.borderLeftWidth),
-            k = D + y,
-            B = v + b,
-            F = A + C,
-            x = w + E,
-            T = g ? e.offsetHeight - x - e.clientHeight : 0,
-            R = _ ? e.offsetWidth - F - e.clientWidth : 0,
-            V = r ? r.width : h(n.width) - (i ? k + F : 0) - R,
-            S = r ? r.height : h(n.height) - (i ? B + x : 0) - T,
-            P = V + k + R + F,
-            O = S + B + T + x,
-            z = (0, a.C)({
-                devicePixelContentBoxSize: p(Math.round(V * devicePixelRatio), Math.round(S * devicePixelRatio), s),
-                borderBoxSize: p(P, O, s),
-                contentBoxSize: p(V, S, s),
-                contentRect: new o(D, v, V, S),
+            B = D + y,
+            k = g + b,
+            F = A + E,
+            T = w + C,
+            V = _ ? e.offsetHeight - T - e.clientHeight : 0,
+            x = v ? e.offsetWidth - F - e.clientWidth : 0,
+            P = r ? r.width : h(n.width) - (i ? B + F : 0) - x,
+            O = r ? r.height : h(n.height) - (i ? k + T : 0) - V,
+            S = P + B + x + F,
+            z = O + k + V + T,
+            R = (0, a.C)({
+                devicePixelContentBoxSize: p(Math.round(P * devicePixelRatio), Math.round(O * devicePixelRatio), s),
+                borderBoxSize: p(S, z, s),
+                contentBoxSize: p(P, O, s),
+                contentRect: new o(D, g, P, O),
             });
-        return (l.set(e, z), z);
+        return (l.set(e, R), R);
     },
-    g = function (e, t, n) {
-        var i = _(e, n),
+    _ = function (e, t, n) {
+        var i = v(e, n),
             a = i.borderBoxSize,
             o = i.contentBoxSize,
             u = i.devicePixelContentBoxSize;

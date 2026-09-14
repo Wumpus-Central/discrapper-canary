@@ -5,8 +5,8 @@ var n = t(477900),
     a = t.n(s),
     r = t(834730),
     d = t(597601),
-    o = t(866665),
-    u = t(922016),
+    u = t(866665),
+    o = t(922016),
     c = t(367513),
     m = t(442433),
     A = t(730852),
@@ -89,11 +89,11 @@ let M = (0, h.J)(function (e) {
             game: er,
         } = e,
         ed = (0, I.Ay)(r),
-        eo = l.useRef(null),
-        [eu, ec] = l.useState(!1),
+        eu = l.useRef(null),
+        [eo, ec] = l.useState(!1),
         em = l.useRef(null);
     function eA() {
-        ec(!eu);
+        ec(!eo);
     }
     function eg(e) {
         eh();
@@ -190,17 +190,17 @@ let M = (0, h.J)(function (e) {
         onMouseEnter: en
             ? void 0
             : function () {
-                  eu || (em.current = setTimeout(() => X?.(s.id), 100));
+                  eo || (em.current = setTimeout(() => X?.(s.id), 100));
               },
         onMouseLeave: en ? void 0 : eh,
         children: (0, n.jsx)(N.A, {
-            clickTrap: s?.id === T.default.getCurrentUser()?.id && eu,
-            targetElementRef: eo,
+            clickTrap: s?.id === T.default.getCurrentUser()?.id && eo,
+            targetElementRef: eu,
             user: s,
             guildId: r.guild_id,
             channelId: r.id,
             newAnalyticsLocations: [p.A.VOICE_USER],
-            shouldShow: eu,
+            shouldShow: eo,
             onRequestClose: () => ec(!1),
             children: (e) => {
                 let t, l;
@@ -230,7 +230,7 @@ let M = (0, h.J)(function (e) {
                         embeddedApplication: U,
                         avatarContainerClass: a()({ [w.dj]: !0 }),
                         disabled: en && !t,
-                        selected: eu,
+                        selected: eo,
                         onClick: t ? void 0 : eA,
                         onDoubleClick: ef,
                         onContextMenu: eI,
@@ -241,12 +241,12 @@ let M = (0, h.J)(function (e) {
                         channelId: r.id,
                     }),
                     en
-                        ? (0, n.jsx)(o.m, {
+                        ? (0, n.jsx)(u.m, {
                               text: (0, x.A)(ei) ?? V.intl.string(V.t.IyYqqY),
-                              children: (0, n.jsx)(y.Ay, { ref: eo, ...l }),
+                              children: (0, n.jsx)(y.Ay, { ref: eu, ...l }),
                           })
-                        : (0, n.jsx)(u.Y, {
-                              targetElementRef: eo,
+                        : (0, n.jsx)(o.Y, {
+                              targetElementRef: eu,
                               position: "right",
                               renderPopout: (e) => {
                                   let { setPopoutRef: i } = e;
@@ -258,13 +258,13 @@ let M = (0, h.J)(function (e) {
                                       setPopoutRef: i,
                                   });
                               },
-                              shouldShow: ee && !eu,
+                              shouldShow: ee && !eo,
                               onRequestClose: eg,
                               spacing: 17,
                               children: () =>
                                   (0, n.jsx)(y.Ay, {
                                       ...l,
-                                      ref: eo,
+                                      ref: eu,
                                       onMouseDown: e.onMouseDown,
                                       onKeyDown: e.onKeyDown,
                                   }),

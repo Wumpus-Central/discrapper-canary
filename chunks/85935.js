@@ -105,12 +105,12 @@ class O extends s.PureComponent {
         return (0, i.jsx)(j.Ay, { ...n, onZoom: this.onZoom, onMouseEnter: this.onMouseEnter, shouldAnimate: t });
     }
 }
-function L(e) {
+function M(e) {
     let t = (0, _.Us)(),
         n = (0, R.j)();
     return (0, i.jsx)(O, { ...e, isWindowFocused: n, appContext: t });
 }
-var M = n(9578),
+var L = n(9578),
     k = n(56562),
     w = n(475743),
     P = n(564771),
@@ -613,8 +613,8 @@ var e_ = n(863922),
     eT = n(442433),
     eR = n(640708),
     eO = n(941971),
-    eL = n(707539),
-    eM = n(576705),
+    eM = n(707539),
+    eL = n(576705),
     ek = n(573163),
     ew = n(340833),
     eP = n(913642),
@@ -707,12 +707,12 @@ var eq = n(652215),
 function eX(e) {
     let { summary: t, channel: l, members: r, guildId: a, unread: o, onClick: u } = e,
         [c, m] = s.useState(!1),
-        f = (0, eL.aK)(eD.default.extractTimestamp(t.startId)),
+        f = (0, eM.aK)(eD.default.extractTimestamp(t.startId)),
         p = (0, d.bG)([ej.A], () => ej.A.summaryFeedback(t));
     function g(e, n) {
         (e.stopPropagation(), (0, eU.A)({ summary: t, channel: l, rating: n }));
     }
-    let A = eM.A.can(eq.xBc.MANAGE_MESSAGES, l);
+    let A = eL.A.can(eq.xBc.MANAGE_MESSAGES, l);
     return (0, i.jsxs)(x.D, {
         className: e$.kL,
         onClick: u,
@@ -1122,7 +1122,7 @@ function tx(e) {
                 }
             );
         }, [p, S, C, g, o, u, c, d, v, N, _, j, b, T]));
-    let [, L] = (function (e) {
+    let [, M] = (function (e) {
         let { ref: t, onDrag: n, onDragStart: l, onDragEnd: i } = e,
             [r, a] = s.useState(!1);
         return (
@@ -1157,7 +1157,7 @@ function tx(e) {
         );
     })({ ref: p, onDrag: h, onDragStart: m, onDragEnd: f });
     return (0, i.jsx)("canvas", {
-        onMouseDown: L,
+        onMouseDown: M,
         className: a()(td.J, l),
         style: { width: x },
         ref: p,
@@ -1195,14 +1195,14 @@ let tI = s.memo(function (e) {
         [N, _] = s.useState(I),
         [j, b] = s.useState(c),
         [T, R] = s.useState(!1),
-        [O, L] = s.useState(!1),
-        [M, k] = s.useState(!1),
+        [O, M] = s.useState(!1),
+        [L, k] = s.useState(!1),
         [w, P] = s.useState(!1),
         [D, U] = s.useState("none"),
         [G, V] = s.useState(() => ("function" == typeof l ? l() : l)),
         F = s.useRef(void 0),
         H = s.useCallback(() => {
-            (L((e) => !e), P(!0));
+            (M((e) => !e), P(!0));
         }, []),
         B = s.useCallback(() => {
             U("metadata");
@@ -1220,15 +1220,15 @@ let tI = s.memo(function (e) {
             [C, c],
         ),
         z = s.useCallback(() => {
-            (L(!1),
+            (M(!1),
                 null == F.current &&
                     (F.current = setTimeout(() => {
                         (v(!1), P(!1), (F.current = void 0));
                     }, 500)));
         }, []),
         Z = s.useCallback(() => {
-            M || (K(0), z());
-        }, [z, M, K]),
+            L || (K(0), z());
+        }, [z, L, K]),
         Y = s.useCallback((e) => {
             let t = E.current;
             null != t && (_(e), (t.currentTime = e), v(!0));
@@ -1278,7 +1278,7 @@ let tI = s.memo(function (e) {
             let e;
             return (
                 O &&
-                    !M &&
+                    !L &&
                     (e = setInterval(() => {
                         K(E.current?.currentTime ?? 0);
                     }, e9.A.Millis.SECOND)),
@@ -1286,7 +1286,7 @@ let tI = s.memo(function (e) {
                     null != e && clearInterval(e);
                 }
             );
-        }, [O, M, K]),
+        }, [O, L, K]),
         s.useEffect(() => {
             let { played: e, currentTime: t, onPause: n, onPlay: l } = el.current;
             if (e || O)
@@ -1320,9 +1320,9 @@ let tI = s.memo(function (e) {
                 );
             function e(e) {
                 let { src: t } = e;
-                n !== t && L(!1);
+                n !== t && M(!1);
             }
-        }, [n, O, L]));
+        }, [n, O, M]));
     let ei = O ? e1.PauseIcon : e2.PlayIcon,
         es = O ? em.intl.string(em.t["3XohGn"]) : em.intl.string(em.t.AlHqHT),
         er = em.intl.formatToPlainString(em.t.LgCPMt, { playbackRate: y }),
@@ -1335,7 +1335,7 @@ let tI = s.memo(function (e) {
                       className: tA.Zn,
                       src: n,
                       preload: D,
-                      playing: O && !M,
+                      playing: O && !L,
                       onEnded: Z,
                       onLoadedMetadata: W,
                       onError: q,
@@ -1355,7 +1355,7 @@ let tI = s.memo(function (e) {
                   muted: T,
                   volume: G,
                   playbackRate: y,
-                  playing: O && !M,
+                  playing: O && !L,
                   children: (0, i.jsx)("source", { src: n }),
               });
     let eo = (0, d.bG)([e3.Ay], () => e3.Ay.useReducedMotion);
@@ -1435,12 +1435,12 @@ function tO(e) {
         (e?.(t), (0, tN.ls)(t));
     };
 }
-function tL(e) {
+function tM(e) {
     return (t) => {
         (e?.(t), (0, tN.y5)(t));
     };
 }
-function tM(e) {
+function tL(e) {
     let { altText: t, altButtonRef: n } = e;
     return (0, i.jsxs)("div", {
         role: "dialog",
@@ -1478,7 +1478,7 @@ function tk(e) {
               children: (0, i.jsx)(m.Y, {
                   targetElementRef: d,
                   animation: m.Y.Animation.FADE,
-                  renderPopout: () => (0, i.jsx)(tM, { altText: t, altButtonRef: d }),
+                  renderPopout: () => (0, i.jsx)(tL, { altText: t, altButtonRef: d }),
                   children: (e) =>
                       (0, i.jsx)(f.vN, {
                           offset: 4,
@@ -1514,7 +1514,7 @@ function tw(e) {
             ...g
         } = e,
         x = tO(t),
-        A = tL(n);
+        A = tM(n);
     ((l = null == l ? tN.v1 : l), (r = null == r ? tN.uj : r));
     let [C, E] = s.useState(!0),
         I = f === t_.dG.MOSAIC || !0 === m,
@@ -1569,7 +1569,7 @@ function tD(e) {
             ...u
         } = e,
         c = tO(t),
-        d = tL(l);
+        d = tM(l);
     return (
         (n = null == n ? tN.v1 : n),
         (0, i.jsxs)(s.Fragment, {
@@ -1594,7 +1594,7 @@ function tD(e) {
 function tU(e) {
     let { onVolumeChange: t, volume: n, onMute: l, ...s } = e,
         r = tO(t),
-        a = tL(l);
+        a = tM(l);
     return ((n = null == n ? tN.v1 : n), (0, i.jsx)(tI, { ...s, onVolumeChange: r, onMute: a, volume: n }));
 }
 function tG(e) {
@@ -1619,7 +1619,7 @@ function tG(e) {
             (0, i.jsxs)("div", {
                 className: a()(tT.ZSk, o),
                 style: p,
-                children: [(0, i.jsx)(L, { ...e }), null != l && l()],
+                children: [(0, i.jsx)(M, { ...e }), null != l && l()],
             }),
             x &&
                 A &&
@@ -1628,7 +1628,7 @@ function tG(e) {
                     children: (0, i.jsx)(m.Y, {
                         targetElementRef: C,
                         animation: m.Y.Animation.FADE,
-                        renderPopout: () => (0, i.jsx)(tM, { altText: t, altButtonRef: C }),
+                        renderPopout: () => (0, i.jsx)(tL, { altText: t, altButtonRef: C }),
                         children: (e) =>
                             (0, i.jsx)(f.vN, {
                                 offset: 4,
@@ -1656,7 +1656,7 @@ function tG(e) {
     });
 }
 function tV(e) {
-    return (0, i.jsx)(M.A, { ...e });
+    return (0, i.jsx)(L.A, { ...e });
 }
 function tF(e) {
     let { renderAdjacentContent: t, ...n } = e;
@@ -1837,7 +1837,7 @@ function tZ(e) {
                 }, 64),
             [m],
         ),
-        L = s.useMemo(
+        M = s.useMemo(
             () =>
                 u().throttle(
                     () => {
@@ -1848,11 +1848,11 @@ function tZ(e) {
                 ),
             [],
         ),
-        M = s.useCallback(
+        L = s.useCallback(
             (e) => {
-                (L(), O(e));
+                (M(), O(e));
             },
-            [O, L],
+            [O, M],
         ),
         [P, U] = s.useState(!1),
         V = s.useCallback(() => {
@@ -1876,11 +1876,11 @@ function tZ(e) {
                 null != i &&
                     ((0, e_.sK)(t.id, i.id),
                     (0, e_.C6)(t.id, i.id),
-                    l.removeAutomaticAnchorCallback(M),
+                    l.removeAutomaticAnchorCallback(L),
                     l.addScrollCompleteCallback(function e() {
                         (l.removeScrollCompleteCallback(e),
                             setTimeout(() => {
-                                l.addAutomaticAnchorCallback(M, !1);
+                                l.addAutomaticAnchorCallback(L, !1);
                             }, 100));
                     }),
                     tv.default.track(eq.HAw.SUMMARIES_TOPIC_CLICKED, {
@@ -1899,7 +1899,7 @@ function tZ(e) {
                         context: "Summary Jump",
                     }));
             },
-            [_, t, M, l],
+            [_, t, L, l],
         ),
         H = s.useCallback((e) => {
             U(e);
@@ -1930,12 +1930,12 @@ function tZ(e) {
     );
     (s.useEffect(
         () => (
-            l.addAutomaticAnchorCallback(M),
+            l.addAutomaticAnchorCallback(L),
             () => {
-                l.removeAutomaticAnchorCallback(M);
+                l.removeAutomaticAnchorCallback(L);
             }
         ),
-        [l, M],
+        [l, L],
     ),
         s.useEffect(() => {
             (0, e_.$T)(t.id);
@@ -2116,16 +2116,16 @@ function tq(e) {
                 ),
             [],
         ),
-        L = s.useCallback(
+        M = s.useCallback(
             (e) => {
                 (O(), R(e));
             },
             [R, O],
         ),
-        [M, P] = s.useState(!1),
+        [L, P] = s.useState(!1),
         U = s.useCallback(() => {
             (tv.default.track(eq.HAw.SUMMARIES_TOPICS_PILL_TOGGLED, {
-                topics_dropdown_open: !M,
+                topics_dropdown_open: !L,
                 num_summaries: A.length,
                 message_counts: A.map((e) => e.count),
                 start_message_ids: A.map((e) => e.startId),
@@ -2135,8 +2135,8 @@ function tq(e) {
                 channel_id: t.id,
                 channel_type: t.type,
             }),
-                P(!M));
-        }, [M, A, P, t]),
+                P(!L));
+        }, [L, A, P, t]),
         V = s.useCallback(
             function (e) {
                 let l = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : tj.eh.PILL_DROPDOWN,
@@ -2144,11 +2144,11 @@ function tq(e) {
                 null != i &&
                     ((0, e_.sK)(t.id, i.id),
                     (0, e_.C6)(t.id, i.id),
-                    n.removeAutomaticAnchorCallback(L),
+                    n.removeAutomaticAnchorCallback(M),
                     n.addScrollCompleteCallback(function e() {
                         (n.removeScrollCompleteCallback(e),
                             setTimeout(() => {
-                                n.addAutomaticAnchorCallback(L, !1);
+                                n.addAutomaticAnchorCallback(M, !1);
                             }, 100));
                     }),
                     tv.default.track(eq.HAw.SUMMARIES_TOPIC_CLICKED, {
@@ -2167,7 +2167,7 @@ function tq(e) {
                         context: "Summary Jump",
                     }));
             },
-            [A, t, L, n],
+            [A, t, M, n],
         ),
         F = s.useCallback(() => {
             V(_ - 1, tj.eh.PILL_NEXT_ARROW);
@@ -2181,12 +2181,12 @@ function tq(e) {
             null != t && p(t);
         }, []);
     s.useEffect(() => {
-        null != f && M && g.current?.scrollTo({ top: f });
-    }, [f, M]);
+        null != f && L && g.current?.scrollTo({ top: f });
+    }, [f, L]);
     let W = s.useCallback(
         (e) => {
             ((0, c.vq)(e.target) && m.current?.contains(e.target)) ||
-                (M &&
+                (L &&
                     tv.default.track(eq.HAw.SUMMARIES_TOPICS_PILL_TOGGLED, {
                         topics_dropdown_open: !1,
                         num_summaries: A.length,
@@ -2200,16 +2200,16 @@ function tq(e) {
                     }),
                 B(!1));
         },
-        [M, A, t, B],
+        [L, A, t, B],
     );
     (s.useEffect(
         () => (
-            n.addAutomaticAnchorCallback(L),
+            n.addAutomaticAnchorCallback(M),
             () => {
-                n.removeAutomaticAnchorCallback(L);
+                n.removeAutomaticAnchorCallback(M);
             }
         ),
-        [n, L],
+        [n, M],
     ),
         s.useEffect(() => {
             (0, e_.$T)(t.id);
@@ -2245,7 +2245,7 @@ function tq(e) {
                                   "aria-label": em.intl.string(em.t.RT3MPz),
                                   onClick: U,
                                   children: (0, i.jsxs)("div", {
-                                      className: a()({ [tT.Nv2]: !M, [tT.Ann]: M }),
+                                      className: a()({ [tT.Nv2]: !L, [tT.Ann]: L }),
                                       children: [
                                           (0, i.jsx)(C.K, { size: "xs", color: "currentColor", className: tT.Npc }),
                                           (0, i.jsx)(h.E, {
@@ -2289,7 +2289,7 @@ function tq(e) {
                               }),
                           ],
                       }),
-                      M &&
+                      L &&
                           (0, i.jsxs)("div", {
                               className: tT.A1T,
                               children: [

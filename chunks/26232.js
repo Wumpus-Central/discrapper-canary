@@ -1559,15 +1559,15 @@ function l(e, t, n) {
     } else u &&= !e.region || "*" === a || a === e.region;
     return ((u &&= !e.script || "*" === i || i === e.script), (u &&= !e.language || "*" === r || r === e.language));
 }
-function c(e) {
+function d(e) {
     return [e.language, e.script, e.region].filter(Boolean).join("-");
 }
-function d(e, t, n) {
+function c(e, t, n) {
     for (let r of n.matches) {
         let i = l(e, r.desired, n.matchVariables) && l(t, r.supported, n.matchVariables);
         if ((r.oneway || i || (i = l(e, r.supported, n.matchVariables) && l(t, r.desired, n.matchVariables)), i)) {
             let i = 10 * r.distance;
-            if (n.paradigmLocales.indexOf(c(e)) > -1 != n.paradigmLocales.indexOf(c(t)) > -1) return i - 1;
+            if (n.paradigmLocales.indexOf(d(e)) > -1 != n.paradigmLocales.indexOf(d(t)) > -1) return i - 1;
             return i;
         }
     }
@@ -1610,18 +1610,18 @@ let f = (0, i.B)(
                 })();
             return (
                 o.language !== u.language &&
-                    (s += d(
+                    (s += c(
                         { language: n.language, script: "", region: "" },
                         { language: i.language, script: "", region: "" },
                         l,
                     )),
                 o.script !== u.script &&
-                    (s += d(
+                    (s += c(
                         { language: n.language, script: o.script, region: "" },
                         { language: i.language, script: u.script, region: "" },
                         l,
                     )),
-                o.region !== u.region && (s += d(o, u, l)),
+                o.region !== u.region && (s += c(o, u, l)),
                 s
             );
         },

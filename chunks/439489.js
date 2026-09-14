@@ -8,14 +8,14 @@ function i(e, t, n, i, a, o) {
             ? ("hours" !== e && "minutes" !== e && "seconds" !== e && (s = "auto"), (u = a))
             : ((s = "auto"), (u = "numeric" === o || "2-digit" === o ? "numeric" : n)));
     let l = `${e}Display`,
-        c = (0, r.W)(t, l, "string", ["always", "auto"], s);
+        d = (0, r.W)(t, l, "string", ["always", "auto"], s);
     if ("numeric" === o || "2-digit" === o) {
         if ("numeric" !== u && "2-digit" !== u) throw RangeError("Can't mix numeric and non-numeric styles");
         if (
             (("minutes" === e || "seconds" === e) && (u = "2-digit"),
-            "numeric" === u && "always" === c && ("milliseconds" === e || "microseconds" === e || "nanoseconds" === e))
+            "numeric" === u && "always" === d && ("milliseconds" === e || "microseconds" === e || "nanoseconds" === e))
         )
             throw RangeError("Can't display milliseconds, microseconds, or nanoseconds in numeric format");
     }
-    return { style: u, display: c };
+    return { style: u, display: d };
 }

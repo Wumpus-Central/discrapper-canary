@@ -1,4 +1,4 @@
-n.d(t, { A: () => A });
+n.d(t, { A: () => p });
 var l = n(477900),
     i = n(582128),
     s = n(607399),
@@ -11,12 +11,12 @@ var l = n(477900),
     h = n(576470),
     m = n(761640),
     g = n(473745);
-let A = function (e) {
+let p = function (e) {
     let {
             message: t,
             subtitle: n,
-            countdown: A,
-            buttonText: p,
+            countdown: p,
+            buttonText: A,
             buttonIcon: f,
             buttonSubmitting: C,
             onButtonClick: x,
@@ -61,11 +61,11 @@ let A = function (e) {
                                 className: g.x6,
                                 children: (0, l.jsx)(d.Q, { textVariant: "text-sm/semibold", text: I, onClick: _ }),
                             }),
-                        null != p &&
+                        null != A &&
                             (0, l.jsx)("div", {
                                 className: g.x6,
                                 children: (0, l.jsx)(u.$, {
-                                    text: p,
+                                    text: A,
                                     size: "sm",
                                     variant: b ?? "secondary",
                                     onClick: x,
@@ -75,7 +75,7 @@ let A = function (e) {
                             }),
                     ],
                 }),
-                null != A && (0, l.jsx)(h.A, { className: g.qW, deadline: A }),
+                null != p && (0, l.jsx)(h.A, { className: g.qW, deadline: p }),
             ],
         })
     );

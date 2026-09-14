@@ -1,4 +1,4 @@
-n.d(t, { A: () => p });
+n.d(t, { A: () => A });
 var l = n(477900),
     i = n(582128),
     s = n(503698),
@@ -11,8 +11,8 @@ var l = n(477900),
     h = n(816662),
     m = n(652215),
     g = n(375708),
-    A = n(859937);
-function p(e) {
+    p = n(859937);
+function A(e) {
     let { channel: t, narrow: n } = e;
     return (
         i.useEffect(() => {
@@ -23,10 +23,10 @@ function p(e) {
             });
         }, [t]),
         (0, l.jsxs)("div", {
-            className: a()(A.JD, { [A.sc]: n }),
+            className: a()(p.JD, { [p.sc]: n }),
             children: [
                 (0, l.jsx)(r.E, {
-                    className: A.E5,
+                    className: p.E5,
                     variant: "text-sm/normal",
                     color: "text-default",
                     children: g.intl.string(g.t.iOWmmB),

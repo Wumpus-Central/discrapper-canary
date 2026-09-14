@@ -78,15 +78,15 @@ function H(e) {
               ],
           });
 }
-var F = n(213994),
-    B = n(821609),
+var B = n(213994),
+    F = n(821609),
     V = n(375708),
     z = n(820555);
 function J(e) {
     let { userId: t, guildId: n, channelId: l } = e;
     return (0, i.jsx)("div", {
         className: z.k,
-        children: (0, i.jsx)(B.$, {
+        children: (0, i.jsx)(F.$, {
             variant: "primary",
             size: "md",
             fullWidth: !0,
@@ -142,7 +142,7 @@ function Q(e) {
         h = o.Ay.useName(m, s, c);
     return null == c
         ? null
-        : (0, i.jsxs)(F.A, {
+        : (0, i.jsxs)(B.A, {
               user: c,
               displayProfile: u,
               size: "sm",

@@ -5,8 +5,8 @@ var n = t(477900),
     a = t.n(s),
     r = t(284009),
     d = t.n(r),
-    o = t(562708),
-    u = t(17928),
+    u = t(562708),
+    o = t(17928),
     c = t(192308),
     m = t(315710),
     A = t(834730),
@@ -46,7 +46,7 @@ var n = t(477900),
     $ = t(65406);
 let H = "VoiceInviteSuggestionsPopover";
 function W(e) {
-    let { channel: i, forceOpen: s, onHover: r, setPopoutRef: u, closePopout: p } = e,
+    let { channel: i, forceOpen: s, onHover: r, setPopoutRef: o, closePopout: p } = e,
         I = l.useRef(null),
         v = (0, k.M)(I),
         x = (0, K.kt)({ channel: i }),
@@ -56,13 +56,13 @@ function W(e) {
         s && I.current?.focus();
     }, [s]),
         (0, O.A)({
-            name: o.ImpressionNames.VOICE_INVITE_SUGGESTIONS_POPOVER,
-            type: o.ImpressionTypes.POPOUT,
+            name: u.ImpressionNames.VOICE_INVITE_SUGGESTIONS_POPOVER,
+            type: u.ImpressionTypes.POPOUT,
             properties: { voice_channel_id: i.id, voice_guild_id: i.guild_id, location_stack: _ },
         }),
         l.useEffect(() => {
-            u?.(I.current);
-        }, [u]),
+            o?.(I.current);
+        }, [o]),
         l.useEffect(() => {
             r?.(v);
         }, [r, v]));
@@ -132,7 +132,7 @@ function Z(e) {
     let { channel: i, user: t, ringingEnabled: s } = e,
         r = i.guild_id,
         d = l.useRef(null),
-        o = (0, u.bG)([M.Ay], () => M.Ay.getMember(r, t.id), [r, t.id]),
+        u = (0, o.bG)([M.Ay], () => M.Ay.getMember(r, t.id), [r, t.id]),
         { isHoveringOrFocusing: c } = (0, k.A)(d),
         [m, h] = l.useState(null),
         {
@@ -147,7 +147,7 @@ function Z(e) {
             status: W,
             isMobileOnline: Z,
             activities: J,
-        } = (0, u.cf)(
+        } = (0, o.cf)(
             [z.A],
             () => ({
                 status: z.A.getStatus(t.id, r),
@@ -207,9 +207,9 @@ function Z(e) {
             avatarSrc: er,
             eventHandlers: ed,
         } = (0, V.A)({ userId: t.id, size: I._3.SIZE_24, animateOnHover: !c, guildId: r });
-    if (null == o) return null;
-    let eo = B.Ay.getName(t),
-        eu = Y.intl.string(Y.t.jYnGPG),
+    if (null == u) return null;
+    let eu = B.Ay.getName(t),
+        eo = Y.intl.string(Y.t.jYnGPG),
         ec = W !== f.clD.OFFLINE ? W : void 0,
         em = null != X.text,
         eA = null != ee && null != ei;
@@ -219,11 +219,11 @@ function Z(e) {
         className: a()(q.nM, { [q.vk]: !en }),
         "aria-disabled": en,
         onClick: es,
-        "aria-label": eu,
+        "aria-label": eo,
         children: [
             (0, n.jsx)(v.eu, {
                 className: q.my,
-                "aria-label": eo,
+                "aria-label": eu,
                 size: I._3.SIZE_24,
                 src: er,
                 avatarDecoration: ea,
@@ -234,7 +234,7 @@ function Z(e) {
             (0, n.jsxs)("div", {
                 className: q.VW,
                 children: [
-                    (0, n.jsx)(A.E, { variant: "text-sm/medium", className: q.UU, lineClamp: 1, children: eo }),
+                    (0, n.jsx)(A.E, { variant: "text-sm/medium", className: q.UU, lineClamp: 1, children: eu }),
                     (eA || em) &&
                         (0, n.jsxs)("div", {
                             className: q.J2,

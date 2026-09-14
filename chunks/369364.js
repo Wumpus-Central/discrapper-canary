@@ -8,16 +8,16 @@ function u(e, t) {
         u = !1,
         s = !1,
         l = (0, o.n)(e),
-        c = l.dataLocale,
-        d = a.Y.localeData[c];
-    if (!d) throw TypeError("Invalid locale");
+        d = l.dataLocale,
+        c = a.Y.localeData[d];
+    if (!c) throw TypeError("Invalid locale");
     let f = l.numberingSystem,
-        h = d.digitalFormat[f];
+        h = c.digitalFormat[f];
     for (let e = 0; e < i.u.length && !u; e++) {
         let a = i.u[e],
             o = t[a.valueField],
-            c = l[a.styleSlot],
-            d = l[a.displaySlot],
+            d = l[a.styleSlot],
+            c = l[a.displaySlot],
             { unit: f, numberFormatUnit: p } = a,
             m = Object.create(null);
         ("seconds" === f || "milliseconds" === f || "microseconds" === f) &&
@@ -32,35 +32,35 @@ function u(e, t) {
                 : ((m.maximumFractionDigits = l.fractionalDigits), (m.minimumFractionDigits = l.fractionalDigits)),
             (m.roundingMode = "trunc"),
             (u = !0));
-        if (0 !== o || "auto" !== d) {
+        if (0 !== o || "auto" !== c) {
             let e;
             ((m.numberingSystem = l.numberingSystem),
-                "2-digit" === c && (m.minimumIntegerDigits = 2),
-                "2-digit" !== c && "numeric" !== c && ((m.style = "unit"), (m.unit = p), (m.unitDisplay = c)));
+                "2-digit" === d && (m.minimumIntegerDigits = 2),
+                "2-digit" !== d && "numeric" !== d && ((m.style = "unit"), (m.unit = p), (m.unitDisplay = d)));
             let t = (0, r.Nt)(l.locale, m);
             (s ? (e = n[n.length - 1]).push({ type: "literal", value: h }) : (e = []),
                 t.formatToParts(o).forEach(({ type: t, value: n }) => {
                     e.push({ type: t, value: n, unit: p });
                 }),
-                s || (("2-digit" === c || "numeric" === c) && (s = !0), n.push(e)));
+                s || (("2-digit" === d || "numeric" === d) && (s = !0), n.push(e)));
         } else s = !1;
     }
     let p = Object.create(null);
     p.type = "unit";
     let m = l.style;
     ("digital" === m && (m = "short"), (p.style = m));
-    let _ = (0, r.A4)(l.locale, p),
-        g = [];
+    let v = (0, r.A4)(l.locale, p),
+        _ = [];
     for (let e of n) {
         let t = "";
         for (let { value: n } of e) t += n;
-        g.push(t);
+        _.push(t);
     }
-    let v = _.formatToParts(g),
+    let g = v.formatToParts(_),
         y = 0,
         b = n.length,
         D = [];
-    for (let { type: e, value: t } of v)
+    for (let { type: e, value: t } of g)
         if ("element" === e) {
             for (let e of ((0, r.V1)(y < b, "Index out of bounds"), n[y])) D.push(e);
             y++;

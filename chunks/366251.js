@@ -5,20 +5,20 @@ var n = t(17928),
 let a = {},
     r = !1,
     d = null;
-function o(e) {
+function u(e) {
     e in a && delete a[e];
 }
-function u() {
+function o() {
     if (!r && s.A.isConnected()) {
         let e = s.A.getChannelId();
-        if (null != e) return (o(e), (d = e), (r = !0), !0);
-    } else if (r && !s.A.isConnected() && null != d) return (o(d), (d = null), (r = !1), !0);
+        if (null != e) return (u(e), (d = e), (r = !0), !0);
+    } else if (r && !s.A.isConnected() && null != d) return (u(d), (d = null), (r = !1), !0);
     return !1;
 }
 class c extends n.Ay.Store {
     static displayName = "VoiceInvitesuggestionsStore ";
     initialize() {
-        (this.waitFor(s.A), this.syncWith([s.A], u));
+        (this.waitFor(s.A), this.syncWith([s.A], o));
     }
     getIsPopoverDismissed(e) {
         return null != e && (a[e] ?? !1);

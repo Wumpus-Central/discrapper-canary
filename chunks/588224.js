@@ -5,8 +5,8 @@ var n = t(477900),
     a = t.n(s),
     r = t(17928),
     d = t(451988),
-    o = t(717558),
-    u = t(933958),
+    u = t(717558),
+    o = t(933958),
     c = t(191424),
     m = t(627363),
     A = t(429913),
@@ -44,13 +44,13 @@ let w = l.memo((e) => {
             [I, f],
         ),
         V = (0, r.bG)([j.A], () => j.A.isPrioritySpeaker(f)),
-        w = (0, o.A)({ userId: f, checkSoundSharing: !0 }),
+        w = (0, u.A)({ userId: f, checkSoundSharing: !0 }),
         D = (0, p.A)(s.guild_id, f),
         R = (0, r.bG)([g.A], () => g.A.getGuildRingingUsers(s.id).has(f)),
         M = (0, r.bG)(
-            [u.Ay],
+            [o.Ay],
             () =>
-                u.Ay.getEmbeddedActivitiesForChannel(s.id).find((e) => {
+                o.Ay.getEmbeddedActivitiesForChannel(s.id).find((e) => {
                     let { userIds: i } = e;
                     return i.has(f);
                 }),
@@ -103,8 +103,8 @@ let D = [],
                 allowPreviews: i = !0,
                 allowDragging: t = !0,
                 channel: s,
-                voiceStates: o,
-                collapsed: u,
+                voiceStates: u,
+                collapsed: o,
                 collapsedMax: c = 6,
                 tabIndex: m,
                 numAudience: h,
@@ -115,8 +115,8 @@ let D = [],
             } = e,
             [b, j] = l.useState(null),
             T = l.useRef(null),
-            G = (0, x.$n)(s.id, o ?? D),
-            { shouldShow: k, dismiss: R } = (0, I.Z0)(s, { collapsed: u }),
+            G = (0, x.$n)(s.id, u ?? D),
+            { shouldShow: k, dismiss: R } = (0, I.Z0)(s, { collapsed: o }),
             M = l.useRef(
                 new d.J_(50, () => {
                     (j(T.current), (T.current = null));
@@ -142,7 +142,7 @@ let D = [],
             z = (0, r.bG)([y.A], () => y.A.can(P.xBc.MOVE_MEMBERS, s)),
             B = t && z,
             K = (0, r.yK)([C.A], () => {
-                if (u) return [];
+                if (o) return [];
                 let e = new Set();
                 return (
                     G?.forEach((i) => {
@@ -157,7 +157,7 @@ let D = [],
         (0, A.A)(K);
         let Y = (function () {
             if (null == G || 0 === G.length) return null;
-            let e = u && G.length > c + 1 ? G.slice(0, c) : G,
+            let e = o && G.length > c + 1 ? G.slice(0, c) : G,
                 i = g.A.getGuildRingingUsers(s.id),
                 t = e.map((e) => {
                     let { user: t, nick: l, voiceState: a } = e,
@@ -175,7 +175,7 @@ let D = [],
                             serverDeaf: a.deaf,
                             sessionId: a.sessionId ?? "",
                             channel: s,
-                            collapsed: u,
+                            collapsed: o,
                             canDrag: B,
                             showPreview: L,
                             hidePreview: F,
@@ -187,8 +187,8 @@ let D = [],
                 });
             return (
                 null != h && h > 0
-                    ? t.push((0, n.jsx)(O.aI, { collapsed: u, numAudience: h }, "audience"))
-                    : u && G.length > c + 1 && t.push((0, n.jsx)(O.LR, { numUsers: G.length - c }, "collapsed-users")),
+                    ? t.push((0, n.jsx)(O.aI, { collapsed: o, numAudience: h }, "audience"))
+                    : o && G.length > c + 1 && t.push((0, n.jsx)(O.LR, { numUsers: G.length - c }, "collapsed-users")),
                 k && t.push((0, n.jsx)(f.p, { channel: s, onClose: R }, "voice-invite-suggestions-button")),
                 t
             );
@@ -196,8 +196,8 @@ let D = [],
         return null == Y && null == _
             ? null
             : (0, n.jsxs)(S.Wr, {
-                  className: a()(v, V.p_, { [V.yZ]: u, [V.lY]: p, [V.fT]: N }),
-                  collapsed: u,
+                  className: a()(v, V.p_, { [V.yZ]: o, [V.lY]: p, [V.fT]: N }),
+                  collapsed: o,
                   children: [Y, _],
               });
     };

@@ -45,8 +45,8 @@ let y = l.memo(function (e) {
         w = t.isFirstMessageInForumPost(R),
         H = (0, c.S)((t.editedTimestamp ?? t.timestamp).valueOf()),
         {
-            content: F,
-            hasSpoilerEmbeds: B,
+            content: B,
+            hasSpoilerEmbeds: F,
             hasBailedAst: V,
         } = (0, f.A)(t, {
             hideSimpleEmbedContent: b,
@@ -74,8 +74,8 @@ let y = l.memo(function (e) {
         childrenRepliedMessage: (0, j.A)(t, R, z, J, n),
         childrenExecutedCommand: (0, N.A)(t, R, n),
         childrenHeader: (0, _.A)({ ...e, guildId: R.guild_id, author: Y, roleIcon: X }),
-        childrenAccessories: e.hideAccessories ? void 0 : (0, I.J)(e, B, V),
-        childrenMessageContent: D ?? (0, C.A)(e, F),
+        childrenAccessories: e.hideAccessories ? void 0 : (0, I.J)(e, F, V),
+        childrenMessageContent: D ?? (0, C.A)(e, B),
         childrenSystemMessage: (0, v.A)({ ...e, disableInteraction: G }),
         onContextMenu: s,
         onClick: y,
