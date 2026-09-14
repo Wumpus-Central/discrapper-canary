@@ -142,15 +142,21 @@
 }
 
 .channelStatusTooltipAnchor__49508 {
-    align-self: flex-start
+    align-self: flex-start;
+    max-width: 100%;
+    min-width: 0
 }
 
 .channelStatusClickable__49508 {
     align-items: center;
+    box-sizing: border-box;
     color: var(--channel-icon);
     display: flex;
     margin-inline-start: 28px;
-    max-width: 75cqw
+    max-width: 75cqw;
+    padding-inline-end: var(--space-md);
+    width: -moz-fit-content;
+    width: fit-content
 }
 
 .channelStatusClickable__49508 .channelStatus__49508 {
@@ -159,8 +165,12 @@
 }
 
 .hoverable__49508:hover {
-    color: var(--interactive-text-hover);
     cursor: pointer
+}
+
+.hoverable__49508:hover,
+.hoverable__49508:hover .channelStatus__49508 {
+    color: var(--interactive-text-hover)
 }
 
 .channelStatus__49508 {
@@ -176,13 +186,8 @@
     position: relative
 }
 
-.pencilIcon__49508,
 .secureFramesIcon__49508 {
     margin-inline-start: 4px
-}
-
-.pencilIcon__49508 {
-    min-width: 16px
 }
 
 .playingText__49508 {
@@ -285,4 +290,4 @@
     visibility: hidden
 }
 
-/*# sourceMappingURL=546813.c17344a93e50988c.css.map*/
+/*# sourceMappingURL=546813.7bc2cc8b9b8a967d.css.map*/

@@ -6,7 +6,6 @@ _.exports = {
     Gh: "channelStatus__49508",
     BI: "hoverable__49508",
     SC: "subtitleContainer__49508",
-    rD: "pencilIcon__49508",
     vW: "secureFramesIcon__49508",
     W$: "playingText__49508",
     kL: "container__49508",
