@@ -179,4 +179,7 @@ class _ extends l.A {
     setCalcMaxBitrateFunc(e) {
         this.calcMaxBitrateFunc = e;
     }
+    setFakeGoLiveEncodePixelCount(e) {
+        this.videoQualityManager.setFakeGoLiveEncodePixelCount(e);
+    }
 }

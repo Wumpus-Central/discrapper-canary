@@ -3561,24 +3561,30 @@ class tA extends p.A {
         let _ = null != this.guildId ? Q.A.getGuild(this.guildId) : null,
             E = _?.premiumTier === ef.TVA.TIER_1,
             A = eo.Ay.canStreamQuality(eo.Ay.StreamQuality.MID, ei.default.getCurrentUser());
-        (u.setCalcMaxBitrateFunc((e) => {
-            let { height: t, framerate: n, videoCodec: i } = e,
-                r = t > 0 && t <= 720,
-                a = n <= 30;
-            if (t === ta.on.RESOLUTION_1080 && n === ta.kn.FPS_30) {
-                let e = (0, U.A)("RTCConnection", ei.default.getCurrentUser(), this.guildId);
-                if (e?.maxBitrate != null) return e.maxBitrate;
-            }
-            if (E && !A && r && !a) {
-                let { bitrate: e } = W.getConfig({ location: "RTCConnection" });
-                return e;
-            }
-            return "AV1" === i && ((0 === t && n < 10) || (r && a))
-                ? G.getConfig({ location: "RTCConnection" }).bitrate
-                : null;
-        }),
-            J.Ay.supports(H.O5.IMAGE_QUALITY_MEASUREMENT) &&
-                u.setVideoQualityMeasurement("imageQualityWebrtcPsnrDb:5000,imageQualityVmaf_v061:5000,hwdec"),
+        if (
+            (u.setCalcMaxBitrateFunc((e) => {
+                let { height: t, framerate: n, videoCodec: i } = e,
+                    r = t > 0 && t <= 720,
+                    a = n <= 30;
+                if (t === ta.on.RESOLUTION_1080 && n === ta.kn.FPS_30) {
+                    let e = (0, U.A)("RTCConnection", ei.default.getCurrentUser(), this.guildId);
+                    if (e?.maxBitrate != null) return e.maxBitrate;
+                }
+                if (E && !A && r && !a) {
+                    let { bitrate: e } = W.getConfig({ location: "RTCConnection" });
+                    return e;
+                }
+                return "AV1" === i && ((0 === t && n < 10) || (r && a))
+                    ? G.getConfig({ location: "RTCConnection" }).bitrate
+                    : null;
+            }),
+            this.context === H.x.STREAM && "streamer" === this.getVoiceParticipantType())
+        ) {
+            let e = (0, U.A)("RTCConnection", ei.default.getCurrentUser(), this.guildId);
+            u.setFakeGoLiveEncodePixelCount(e?.maxResolution === ta.on.RESOLUTION_1080 ? 921600 : null);
+        }
+        (J.Ay.supports(H.O5.IMAGE_QUALITY_MEASUREMENT) &&
+            u.setVideoQualityMeasurement("imageQualityWebrtcPsnrDb:5000,imageQualityVmaf_v061:5000,hwdec"),
             u.setVideoEncoderExperiments(J.Ay.getVideoEncoderExperiments(this.context, this.getVoiceParticipantType())),
             u.on(T.yq.Speaking, (e, t, n) => {
                 (this.userId === e && this.sendSpeaking(t, n), this.emit(eI.q.Speaking, e, t));

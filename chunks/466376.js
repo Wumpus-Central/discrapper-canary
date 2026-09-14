@@ -54,6 +54,7 @@ class o {
     isStreamContext;
     ladder;
     lastGoLivePixelCount;
+    fakeGoLiveEncodePixelCount = null;
     constructor(e, t, n = r.eQ) {
         ((this.contextType = e),
             (this.connection = t),
@@ -138,36 +139,35 @@ class o {
             localWant: e,
         });
     }
+    setFakeGoLiveEncodePixelCount(e) {
+        this.fakeGoLiveEncodePixelCount = e;
+    }
     scaleLinearly(e, t, n) {
         return 0 === t ? 0 : (e * n) / t;
     }
     getGoliveQuality(e, t) {
-        if (
-            this.goliveMaxQuality.encode?.pixelCount === void 0 ||
-            t >= this.goliveMaxQuality.encode.pixelCount ||
-            t <= 0
-        )
-            return this.goliveMaxQuality;
-        let n = Math.min(
+        if (this.goliveMaxQuality.encode?.pixelCount === void 0 || t <= 0) return this.goliveMaxQuality;
+        let n =
+            null !== this.fakeGoLiveEncodePixelCount
+                ? Math.min(this.fakeGoLiveEncodePixelCount, this.goliveMaxQuality.encode.pixelCount)
+                : this.goliveMaxQuality.encode.pixelCount;
+        if (t >= n) return this.goliveMaxQuality;
+        let i = Math.min(
                 r.YU * this.goliveMaxQuality.encode.pixelCount * this.goliveMaxQuality.encode.framerate,
                 this.goliveMaxQuality.bitrateMax,
             ),
-            i = this.scaleLinearly(t, this.goliveMaxQuality.encode.pixelCount, this.goliveMaxQuality.bitrateMin),
-            a = this.scaleLinearly(t, this.goliveMaxQuality.encode.pixelCount, this.goliveMaxQuality.bitrateMax),
-            l =
+            a = this.scaleLinearly(t, n, this.goliveMaxQuality.bitrateMin),
+            l = this.scaleLinearly(t, n, this.goliveMaxQuality.bitrateMax),
+            o =
                 null != this.goliveMaxQuality.bitrateTarget
-                    ? this.scaleLinearly(
-                          t,
-                          this.goliveMaxQuality.encode.pixelCount,
-                          this.goliveMaxQuality.bitrateTarget,
-                      )
+                    ? this.scaleLinearly(t, n, this.goliveMaxQuality.bitrateTarget)
                     : void 0;
         return new s({
             encode: this.goliveMaxQuality.encode,
             capture: this.goliveMaxQuality.capture,
-            bitrateMin: Math.max(Math.ceil(i), this.options.videoBitrateFloor),
-            bitrateMax: Math.max(Math.ceil(a), n),
-            bitrateTarget: null != l ? Math.max(Math.ceil(l), this.options.videoBitrateFloor) : void 0,
+            bitrateMin: Math.max(Math.ceil(a), this.options.videoBitrateFloor),
+            bitrateMax: Math.max(Math.ceil(l), i),
+            bitrateTarget: null != o ? Math.max(Math.ceil(o), this.options.videoBitrateFloor) : void 0,
             localWant: e,
         });
     }
