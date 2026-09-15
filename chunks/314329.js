@@ -17,5 +17,6 @@ function r(e) {
             ios: null != t.ios ? { iosAppId: t.ios.ios_app_id } : void 0,
         },
         rewardTimerSeconds: e.reward_timer_seconds ?? 15,
+        videoDurationSeconds: e.video_duration_seconds,
     };
 }
