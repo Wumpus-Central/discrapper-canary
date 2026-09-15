@@ -6274,7 +6274,7 @@ let u3 = (0, d.zZ)(c.X.REDEEM_GIFT_CATEGORY, {
         buildLayout: () => [u5],
     });
 var u8 = n(659758),
-    u7 = n(813981),
+    u7 = n(829639),
     u9 = n(815846);
 let de = (0, d.E2)(c.X.NITRO_SETTING, {
         Component: function () {
