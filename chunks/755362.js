@@ -58,6 +58,12 @@ let ee = [
         date: "2026-09-15",
         platforms: ["mobile"],
         summary:
+            "With Discord\u2019s Developer Mode on, a project\u2019s menu on phones has a Debug entry: your app\u2019s runtime logs, its resource use, and the agent\u2019s spend and limits.",
+    },
+    {
+        date: "2026-09-15",
+        platforms: ["mobile"],
+        summary:
             "On phones, a project has the same menu as desktop: remix it, export or import it, get its coding tool link, browse version history and rewind its data from the chat menu, and copy its link or ID, open its settings or delete it from the landing.",
     },
     {
@@ -373,7 +379,7 @@ function en() {
         ],
     });
 }
-var ea = n(401145),
+var ea = n(349203),
     el = n(210744),
     ei = n(922016),
     es = n(980707),
