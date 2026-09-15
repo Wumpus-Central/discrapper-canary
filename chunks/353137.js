@@ -1,19 +1,20 @@
 (o.r(e),
     o.d(e, {
-        CheckpointNumbersCenterAlignedRive: () => I,
-        UnlockRive: () => K.V,
-        ThemeAwareNitroWishlistingWumpusRive: () => J.u,
+        CheckpointNumbersCenterAlignedRive: () => L,
+        UnlockRive: () => q.V,
+        ThemeAwareNitroWishlistingWumpusRive: () => z.u,
         CheckpointKnickKnacksRive: () => h,
         AnimatedNitroOrbRewardsRive: () => i.Z,
+        ServerHubPerkRive: () => J,
         FistBumpRive: () => B.l,
         PerfTestRive: () => T.Q,
-        NitroRewardsMouseRive: () => G.C,
+        NitroRewardsMouseRive: () => x.C,
         BoostGemLevelTwoRive: () => b.J,
         GameServerHostingRive: () => N.E,
         CheckpointFriendsRive: () => p,
         BoostGemLevelOneRive: () => l.t,
-        TabHoverGradientRive: () => Q.U,
-        WandAndSparklesRive: () => $,
+        TabHoverGradientRive: () => K.U,
+        WandAndSparklesRive: () => ro,
         BoostThisServerRive: () => c.D,
         NitroQuestOrbsMultiplierRive: () => E.E,
         BoostGemLevelThreeRive: () => s.z,
@@ -25,13 +26,13 @@
         CheckpointCardRive: () => A,
         BadgesCoachmarkRive: () => n.U,
         CheckpointNumbersLeftAlignedRive: () => U,
-        PulseGradientRive: () => X.M,
-        VibingWumpusBackgroundRive: () => z.R,
+        PulseGradientRive: () => H.M,
+        VibingWumpusBackgroundRive: () => $.R,
         JetpackWumpusWithTrinketsRive: () => _.e,
         GlowButtonRive: () => O.s,
-        TeenScreenTimeRive: () => H.w,
-        NitroWishlistingWumpusRive: () => j,
-        VibingWumpusRive: () => Z.Z,
+        TeenScreenTimeRive: () => Z.w,
+        NitroWishlistingWumpusRive: () => D,
+        VibingWumpusRive: () => Y.Z,
     }));
 var t = o(402386),
     i = o(567341),
@@ -489,10 +490,10 @@ function h(r) {
 h.riveSrc = M;
 let w =
         "https://cdn.discordapp.com/assets/content/ce09db302fba4b6308baf379d0cbd02ee57cbf2503a998192e31df9637cc161e.riv",
-    L = {
+    P = {
         Artboard: { reducedMotion: "boolean", TextColor: "color", "Fire CountUp": "trigger", DisplayValue: "number" },
     };
-function I(r) {
+function L(r) {
     let { artboard: e = "Artboard", stateMachine: o, ...t } = r,
         { status: i, buffer: a } = (0, v.CE)(w),
         n = (0, v.m2)(w);
@@ -503,20 +504,20 @@ function I(r) {
               buffer: a,
               artboard: e,
               stateMachine: o,
-              artboardProperties: L,
+              artboardProperties: P,
               ...t,
           });
 }
-I.riveSrc = w;
-let P =
+L.riveSrc = w;
+let I =
         "https://cdn.discordapp.com/assets/content/b5a7e4dd53b173c7d1f38ddbd65142267a79529a228987d184c858c16c21ddf6.riv",
     F = {
         Artboard: { reducedMotion: "boolean", TextColor: "color", "Fire CountUp": "trigger", DisplayValue: "number" },
     };
 function U(r) {
     let { artboard: e = "Artboard", stateMachine: o, ...t } = r,
-        { status: i, buffer: a } = (0, v.CE)(P),
-        n = (0, v.m2)(P);
+        { status: i, buffer: a } = (0, v.CE)(I),
+        n = (0, v.m2)(I);
     return i === v.BW.Loading
         ? null
         : (0, d.jsx)(m.w, {
@@ -528,7 +529,7 @@ function U(r) {
               ...t,
           });
 }
-U.riveSrc = P;
+U.riveSrc = I;
 var R = o(908803),
     B = o(90517),
     N = o(289704),
@@ -536,14 +537,14 @@ var R = o(908803),
     _ = o(970002),
     W = o(149282),
     E = o(122720),
-    G = o(907581);
-let x =
+    x = o(907581);
+let G =
         "https://cdn.discordapp.com/assets/content/7d79185ce3c3038667277ee16ba8cb835b1b012f20b92ef5428b9166c5347c59.riv",
-    D = { "Nitro Wishlist": { reducedMotion: "boolean" } };
-function j(r) {
+    j = { "Nitro Wishlist": { reducedMotion: "boolean" } };
+function D(r) {
     let { artboard: e = "Nitro Wishlist", stateMachine: o, ...t } = r,
-        { status: i, buffer: a } = (0, v.CE)(x),
-        n = (0, v.m2)(x);
+        { status: i, buffer: a } = (0, v.CE)(G),
+        n = (0, v.m2)(G);
     return i === v.BW.Loading
         ? null
         : (0, d.jsx)(m.w, {
@@ -551,26 +552,20 @@ function j(r) {
               buffer: a,
               artboard: e,
               stateMachine: o,
-              artboardProperties: D,
+              artboardProperties: j,
               ...t,
           });
 }
-j.riveSrc = x;
+D.riveSrc = G;
 var T = o(102079),
-    X = o(440166),
-    Q = o(549254),
-    H = o(632679),
-    J = o(583094),
-    K = o(242644),
-    Z = o(773350),
-    z = o(615429);
-let q =
-        "https://cdn.discordapp.com/assets/content/026e9c119f280f5edf3ba486ba20c26e21c5dac14dfedd0a238373298bf289f0.riv",
-    Y = { "Surprise Me": { fill: "color" } };
-function $(r) {
-    let { artboard: e = "Surprise Me", stateMachine: o, ...t } = r,
-        { status: i, buffer: a } = (0, v.CE)(q),
-        n = (0, v.m2)(q);
+    H = o(440166);
+let X =
+        "https://cdn.discordapp.com/assets/content/67d52916de05ae5374f3644778bee66c05ae690f07026521e7d55ff97dd80850.riv",
+    Q = { "Server Hub Perk": { on: "boolean", reducedMotion: "boolean" }, _Asset_Pencil: {} };
+function J(r) {
+    let { artboard: e = "Server Hub Perk", stateMachine: o, ...t } = r,
+        { status: i, buffer: a } = (0, v.CE)(X),
+        n = (0, v.m2)(X);
     return i === v.BW.Loading
         ? null
         : (0, d.jsx)(m.w, {
@@ -578,8 +573,33 @@ function $(r) {
               buffer: a,
               artboard: e,
               stateMachine: o,
-              artboardProperties: Y,
+              artboardProperties: Q,
               ...t,
           });
 }
-$.riveSrc = q;
+J.riveSrc = X;
+var K = o(549254),
+    Z = o(632679),
+    z = o(583094),
+    q = o(242644),
+    Y = o(773350),
+    $ = o(615429);
+let rr =
+        "https://cdn.discordapp.com/assets/content/026e9c119f280f5edf3ba486ba20c26e21c5dac14dfedd0a238373298bf289f0.riv",
+    re = { "Surprise Me": { fill: "color" } };
+function ro(r) {
+    let { artboard: e = "Surprise Me", stateMachine: o, ...t } = r,
+        { status: i, buffer: a } = (0, v.CE)(rr),
+        n = (0, v.m2)(rr);
+    return i === v.BW.Loading
+        ? null
+        : (0, d.jsx)(m.w, {
+              ...(n ? { key: "override" } : {}),
+              buffer: a,
+              artboard: e,
+              stateMachine: o,
+              artboardProperties: re,
+              ...t,
+          });
+}
+ro.riveSrc = rr;

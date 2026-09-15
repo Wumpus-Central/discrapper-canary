@@ -13,6 +13,7 @@ let i = {
     populated_clip_gallery_closed: 100,
     topical_navigation_multiple_impressions: 100,
     guild_room_joined: 100,
+    youtube_3pp_modal_dismissed: 100,
 };
 var r = n(636537),
     a = n(228366),
