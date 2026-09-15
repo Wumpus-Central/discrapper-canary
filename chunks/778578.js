@@ -124,7 +124,7 @@ function W(e) {
                     : "in_progress" === e.status && null == i
                       ? (i = e)
                       : "pending" === e.status && null == a && (a = e);
-            return { activityLine: (0, Z.b9)(t.steps), todos: l, completed: n, total: l.length, focus: i ?? a };
+            return { activityLine: (0, Z.b)(t.steps), todos: l, completed: n, total: l.length, focus: i ?? a };
         },
         [e],
         X,
