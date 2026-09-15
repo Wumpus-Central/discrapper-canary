@@ -1,8 +1,8 @@
 n.d(t, { A: () => E });
 var o = n(477900),
     r = n(582128),
-    a = n(503698),
-    s = n.n(a),
+    s = n(503698),
+    a = n.n(s),
     l = n(3666),
     c = n(508770),
     u = n(939249),
@@ -26,14 +26,15 @@ function k(e) {
 }
 function v(e) {
     var t;
-    let { option: n, selectedKey: a } = e,
-        l = n.key === a,
+    let { option: n, selectedKey: s } = e,
+        l = n.key === s,
         d = r.useCallback(
             (e) => {
                 $(e) && (e.preventDefault(), n.onClick(e));
             },
             [n],
-        );
+        ),
+        p = n.icon;
     return (0, o.jsx)("li", {
         className: x.I,
         children: (0, o.jsxs)(u.D, {
@@ -42,8 +43,9 @@ function v(e) {
             href: n.route,
             onClick: d,
             "aria-current": l ? "page" : void 0,
-            className: s()(x.ie, x.LA, { [x.wH]: l, [x.C3]: null != n.badge }),
+            className: a()(x.ie, x.LA, { [x.wH]: l, [x.C3]: null != n.badge }),
             children: [
+                null != p && (0, o.jsx)(p, { size: "sm", color: "currentColor" }),
                 (0, o.jsx)(i.E, { variant: "text-md/medium", color: "none", children: n.text }),
                 null == (t = n.badge)
                     ? null
@@ -55,12 +57,12 @@ function v(e) {
     });
 }
 function C(e) {
-    let { navId: t, option: n, selectedKey: a } = e,
+    let { navId: t, option: n, selectedKey: s } = e,
         { route: l } = n,
         c = `${t}-${n.key}`,
         k = (function e(t, n) {
             return t.key === n || ("menu" === t.type && t.options.some((t) => e(t, n)));
-        })(n, a),
+        })(n, s),
         v = r.useRef(null),
         C = r.useRef(null),
         g = r.useRef(!1),
@@ -97,7 +99,7 @@ function C(e) {
             [j, D, M],
         ),
         R = (0, o.jsx)(i.E, { variant: "text-md/medium", color: "none", children: n.text }),
-        P = (0, o.jsx)(p.a, { size: "sm", color: "currentColor", className: s()(x.OW, { [x.g3]: j }) });
+        P = (0, o.jsx)(p.a, { size: "sm", color: "currentColor", className: a()(x.OW, { [x.g3]: j }) });
     return (0, o.jsx)("li", {
         className: x.I,
         children: (0, o.jsx)(m.Y, {
@@ -147,7 +149,7 @@ function C(e) {
                 null != l
                     ? (0, o.jsxs)("span", {
                           ref: v,
-                          className: s()(x.ie, x.iL, { [x.wH]: k }),
+                          className: a()(x.ie, x.iL, { [x.wH]: k }),
                           children: [
                               (0, o.jsx)(u.D, {
                                   tag: "a",
@@ -156,9 +158,9 @@ function C(e) {
                                   onClick: S,
                                   onMouseEnter: w,
                                   onMouseLeave: E,
-                                  "aria-current": n.key === a ? "page" : void 0,
+                                  "aria-current": n.key === s ? "page" : void 0,
                                   focusProps: { offset: { top: -2, bottom: -2 } },
-                                  className: s()(x.LA, x.tH),
+                                  className: a()(x.LA, x.tH),
                                   children: R,
                               }),
                               (0, o.jsx)(u.D, {
@@ -172,7 +174,7 @@ function C(e) {
                                   onMouseEnter: w,
                                   onMouseLeave: E,
                                   focusProps: { offset: { top: -2, bottom: -2 } },
-                                  className: s()(x.LA, x.nE),
+                                  className: a()(x.LA, x.nE),
                                   children: P,
                               }),
                           ],
@@ -186,7 +188,7 @@ function C(e) {
                           onKeyDown: K,
                           onMouseEnter: w,
                           onMouseLeave: E,
-                          className: s()(x.ie, x.LA, { [x.wH]: k }),
+                          className: a()(x.ie, x.LA, { [x.wH]: k }),
                           children: [R, P],
                       }),
         }),
@@ -218,7 +220,7 @@ function I(e) {
     }
 }
 function E(e) {
-    let { options: t, selectedKey: n, overflowLabel: a, overflowExpandLabel: c, className: u, ...i } = e,
+    let { options: t, selectedKey: n, overflowLabel: s, overflowExpandLabel: c, className: u, ...i } = e,
         d = r.useId(),
         p = `collectibles-shop-navigation-menu-${d}`,
         {
@@ -228,15 +230,15 @@ function E(e) {
             onItemLayout: y,
             overflowItemsRef: h,
         } = (function (e, t, n, o) {
-            let { ref: a, width: s } = (0, g.Ay)(),
+            let { ref: s, width: a } = (0, g.Ay)(),
                 {
                     lastVisibleIndex: c,
                     onItemLayout: u,
                     overflowItemsRef: i,
-                } = (0, l.Wv)({ items: e, itemGapPx: 32, maxLines: 1, containerWidth: s ?? 0 });
+                } = (0, l.Wv)({ items: e, itemGapPx: 32, maxLines: 1, containerWidth: a ?? 0 });
             return {
-                containerRef: a,
-                isMeasured: null != s,
+                containerRef: s,
+                isMeasured: null != a,
                 visibleOptions: r.useMemo(() => {
                     if (c >= e.length - 1) return e;
                     let r = { type: "menu", key: t, text: n, expandLabel: o, options: e.slice(c + 1) };
@@ -245,16 +247,16 @@ function E(e) {
                 onItemLayout: u,
                 overflowItemsRef: i,
             };
-        })(t, `${p}-more`, a, c);
+        })(t, `${p}-more`, s, c);
     return (0, o.jsxs)("nav", {
         "aria-label": i["aria-label"],
-        className: s()(x.C$, u),
+        className: a()(x.C$, u),
         ref: m,
         children: [
             (0, o.jsx)(L, {
                 navId: p,
                 options: t,
-                overflowLabel: a,
+                overflowLabel: s,
                 overflowExpandLabel: c,
                 onItemLayout: y,
                 overflowItemsRef: h,
@@ -269,7 +271,7 @@ function E(e) {
     });
 }
 function L(e) {
-    let { options: t, navId: n, overflowLabel: r, overflowExpandLabel: a, onItemLayout: s, overflowItemsRef: c } = e,
+    let { options: t, navId: n, overflowLabel: r, overflowExpandLabel: s, onItemLayout: a, overflowItemsRef: c } = e,
         u = `${n}-measure`;
     return (0, o.jsxs)("div", {
         "aria-hidden": !0,
@@ -278,7 +280,7 @@ function L(e) {
             t.map((e, t) =>
                 (0, o.jsx)(
                     l.Ae,
-                    { index: t, onItemLayout: s, children: (0, o.jsx)(k, { navId: u, option: e }) },
+                    { index: t, onItemLayout: a, children: (0, o.jsx)(k, { navId: u, option: e }) },
                     e.key,
                 ),
             ),
@@ -286,7 +288,7 @@ function L(e) {
                 ref: c,
                 children: (0, o.jsx)(k, {
                     navId: u,
-                    option: { type: "menu", key: "more-measure", text: r, expandLabel: a, options: [] },
+                    option: { type: "menu", key: "more-measure", text: r, expandLabel: s, options: [] },
                 }),
             }),
         ],

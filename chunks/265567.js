@@ -1464,7 +1464,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e2 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eV.A().log(
-    `[BUILD INFO] Release Channel: ${e2}, Build Number: 613571, Version Hash: 7a0e58872fa7aa1a470a530ae3c7184f14e68b41`,
+    `[BUILD INFO] Release Channel: ${e2}, Build Number: 613574, Version Hash: 57f37979e0f0c9f75fd0be7071cd1344abf1c3e9`,
 ),
     D.A.setTags({ appContext: G.QCW }),
     eh.A.initBasic(),
@@ -2526,7 +2526,7 @@ let ir = (0, nZ.Fe)({
                 n.e("307120"),
                 n.e("709204"),
                 n.e("564758"),
-                n.e("999354"),
+                n.e("640212"),
                 n.e("916138"),
                 n.e("460703"),
                 n.e("775951"),
@@ -2749,7 +2749,7 @@ let ir = (0, nZ.Fe)({
                 n.e("709204"),
                 n.e("564758"),
                 n.e("282561"),
-                n.e("999354"),
+                n.e("640212"),
                 n.e("916138"),
                 n.e("812618"),
                 n.e("460703"),
@@ -2952,7 +2952,7 @@ let ir = (0, nZ.Fe)({
                 n.e("307120"),
                 n.e("564758"),
                 n.e("282561"),
-                n.e("999354"),
+                n.e("640212"),
                 n.e("200828"),
                 n.e("82583"),
             ]).then(n.bind(n, 479808)),
@@ -21465,7 +21465,7 @@ let NF = "isHideDevBanner",
                     className: ta()(Nk.Wz, Nk.mr),
                     children: [
                         (0, O.jsx)(Nx, { className: Nk.Kk }),
-                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "613571" }),
+                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "613574" }),
                         (0, O.jsx)(r, {}),
                     ],
                 })
@@ -31354,7 +31354,7 @@ let yr = (0, nZ.Fe)({
                 n.e("709204"),
                 n.e("564758"),
                 n.e("282561"),
-                n.e("999354"),
+                n.e("640212"),
                 n.e("916138"),
                 n.e("812618"),
                 n.e("460703"),

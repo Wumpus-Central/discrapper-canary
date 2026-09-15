@@ -31,6 +31,7 @@ function S(e) {
                     return l.A.COLLECTIBLES_SHOP_PROFILE_FRAMES_TAB;
                 case _.G2.COLLECTION_INDEX:
                     return l.A.COLLECTIBLES_SHOP_INDEX_PAGE;
+                case _.G2.PROMOTION:
                 case _.G2.COLLABS:
                 case _.G2.OFFER_ELIGIBLE:
                 case _.G2.CATALOG:

@@ -63,6 +63,7 @@ var g =
     (a.BUNDLES = "bundles"),
     (a.COLLABS = "collabs"),
     (a.OFFER_ELIGIBLE = "offer-eligible"),
+    (a.PROMOTION = "promotion"),
     (a.LAYOUT = "layout"),
     (a.COLLECTION_INDEX = "collection-index"),
     (a.GAME_SHOPS = "game-shops"),
