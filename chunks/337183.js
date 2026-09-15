@@ -25,15 +25,10 @@ var r = n(477900),
     k = n(815280),
     f = n(449543),
     x = n(197935),
-    T = n(590180);
-let B = (0, n(945810).mj)({
-    name: "2026-09-new-hscroll",
-    kind: "user",
-    defaultConfig: { useNewHScroll: !1 },
-    variations: { 0: { useNewHScroll: !1 }, 1: { useNewHScroll: !0 } },
-});
-var P = n(511265),
-    b = n(313276),
+    T = n(590180),
+    b = n(879221),
+    B = n(511265),
+    P = n(313276),
     R = n(206077),
     j = n(258245),
     H = n(561769),
@@ -66,7 +61,7 @@ function F(e) {
     let { isLoading: t, products: n, tab: s } = e,
         l = (0, H.Mk)(s),
         i = G.intl.string(G.t.HP8LNG);
-    if (B.useConfig({ location: "hero_block_cards" }).useNewHScroll) {
+    if ((0, b.O)("hero_block_cards")) {
         if (t) {
             let e = [void 0, void 0, void 0, void 0].map((e, t) => t);
             return (0, r.jsx)(x.A, {
@@ -116,8 +111,8 @@ let K = function (e) {
         l,
         { heroBlockRecord: i, layout: a, tab: o, isBlockLoading: u = !1 } = e,
         { products: c } =
-            ((t = (0, b.A)()),
-            (n = (0, P.p)()),
+            ((t = (0, P.A)()),
+            (n = (0, B.p)()),
             (l = s.useMemo(() => (u ? [] : n(t(i.rankedSkuIds))), [u, t, i.rankedSkuIds, n])),
             { products: (0, R.X)(l) }),
         d = s.useMemo(
@@ -156,9 +151,9 @@ let Y = {
                 heroBlock: f,
                 tab: x,
                 onVisibilityChange: T,
-                badge: B,
-                hideButton: P = !1,
-                hideCards: b = !1,
+                badge: b,
+                hideButton: B = !1,
+                hideCards: P = !1,
             } = e,
             R = (0, a.K)(
                 (e) => {
@@ -233,7 +228,7 @@ let Y = {
         }
         if (null == N || (!t && w === Y)) return null;
         function el() {
-            return t || P ? null : (0, r.jsx)(E.$, { variant: "overlay-primary", onClick: es, text: er });
+            return t || B ? null : (0, r.jsx)(E.$, { variant: "overlay-primary", onClick: es, text: er });
         }
         return (0, r.jsx)(p.f5, {
             value: U,
@@ -277,8 +272,8 @@ let Y = {
                                                         (0, r.jsxs)("div", {
                                                             className: M.Wq,
                                                             children: [
-                                                                null != B &&
-                                                                    (0, r.jsx)("div", { className: M._I, children: B }),
+                                                                null != b &&
+                                                                    (0, r.jsx)("div", { className: M._I, children: b }),
                                                                 null != z &&
                                                                     (0, r.jsx)("img", {
                                                                         className: M.rm,
@@ -308,10 +303,10 @@ let Y = {
                                                         }),
                                                     ],
                                                 }),
-                                          !P && !t && (0, r.jsx)("div", { className: M.IS, children: el() }),
+                                          !B && !t && (0, r.jsx)("div", { className: M.IS, children: el() }),
                                       ],
                                   }),
-                            !b &&
+                            !P &&
                                 (0, r.jsx)(K, {
                                     heroBlockRecord: w,
                                     tab: x,

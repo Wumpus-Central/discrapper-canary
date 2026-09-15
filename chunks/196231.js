@@ -26,40 +26,42 @@ function I(e) {
             pageType: y = L.G2.HOME,
             className: O,
             handleTransition: h,
+            listItemProps: v,
         } = e,
-        v = n?.categorySkuId;
-    null == v && null != n && (v = E.A.getCategoryByStoreListingId(n?.categoryStoreListingId)?.skuId);
-    let k = v ?? t?.skuId ?? "",
-        { handleCardVisibilityChange: f } = (0, S.Z)(k, y, "marketing featured block"),
-        x = (0, p.s4)(t, n, I),
-        T = s.useRef(null),
+        k = n?.categorySkuId;
+    null == k && null != n && (k = E.A.getCategoryByStoreListingId(n?.categoryStoreListingId)?.skuId);
+    let f = k ?? t?.skuId ?? "",
+        { handleCardVisibilityChange: x } = (0, S.Z)(f, y, "marketing featured block"),
+        T = (0, p.s4)(t, n, I),
+        b = s.useRef(null),
         B = n?.bodyText,
         P = n?.name ?? t?.name,
-        b = null != P ? A.intl.formatToPlainString(A.t.frSHlf, { destination: P }) : void 0,
-        R = (0, g.uM)();
+        R = null != P ? A.intl.formatToPlainString(A.t.frSHlf, { destination: P }) : void 0,
+        j = (0, g.uM)();
     return (0, r.jsx)(a.L, {
-        innerRef: T,
-        onChange: f,
+        innerRef: b,
+        onChange: x,
         threshold: 0,
         children: (0, r.jsxs)(o.D, {
             className: i()(C.oT, O),
-            innerRef: T,
-            style: { ...(null != x && { backgroundImage: `url(${x})` }) },
+            innerRef: b,
+            style: { ...(null != T && { backgroundImage: `url(${T})` }) },
+            ...v,
             onClick: () => {
                 (h({
                     sourceButton: "shop marketing tile",
-                    categorySkuId: k,
+                    categorySkuId: f,
                     isInternalShopDeeplink: !0,
                     isOrbsExclusive: t?.isOrbsExclusive,
                 }),
                     _.default.track(m.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                        collectibles_shop_session_id: R?.sessionId,
-                        sku_id: k,
+                        collectibles_shop_session_id: j?.sessionId,
+                        sku_id: f,
                         page_type: y,
-                        page_section: R?.pageSection,
-                        page_category: R?.pageCategory,
+                        page_section: j?.pageSection,
+                        page_category: j?.pageCategory,
                         tile_type: "FEATURED_BLOCK",
-                        tile_position: String(R?.tilePosition),
+                        tile_position: String(j?.tilePosition),
                         cta_name: null,
                     }));
             },
@@ -82,23 +84,24 @@ function I(e) {
                     children: (0, r.jsx)(d.$, {
                         variant: "overlay-primary",
                         text: A.intl.string(A.t.jVcuVY),
-                        "aria-label": b,
+                        "aria-label": R,
+                        tabIndex: v?.tabIndex,
                         onClick: (e) => {
                             (h({
                                 sourceButton: "shop marketing take me there button",
-                                categorySkuId: k,
+                                categorySkuId: f,
                                 isInternalShopDeeplink: !0,
                                 isOrbsExclusive: t?.isOrbsExclusive,
                             }),
                                 e.stopPropagation(),
                                 _.default.track(m.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                                    collectibles_shop_session_id: R?.sessionId,
-                                    sku_id: k,
+                                    collectibles_shop_session_id: j?.sessionId,
+                                    sku_id: f,
                                     page_type: y,
-                                    page_section: R?.pageSection,
-                                    page_category: R?.pageCategory,
+                                    page_section: j?.pageSection,
+                                    page_category: j?.pageCategory,
                                     tile_type: "FEATURED_BLOCK",
-                                    tile_position: String(R?.tilePosition),
+                                    tile_position: String(j?.tilePosition),
                                     cta_name: "Take me there button",
                                 }));
                         },
