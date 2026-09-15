@@ -243,7 +243,7 @@ var c,
         EmojiSalutingFaceIcon: () => Eb,
         EmojiSkullIcon: () => EM,
         EmojiSleepingFaceIcon: () => EP,
-        EmojiSlightlyFrowningFaceIcon: () => EU.R,
+        EmojiSlightlyFrowningFaceIcon: () => EU,
         EmojiSlightlySmilingFaceIcon: () => Ew,
         EmojiSmilingFaceWithHaloIcon: () => EG,
         EmojiSmilingFaceWithHeartsIcon: () => Ex,
@@ -1465,7 +1465,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e2 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eV.A().log(
-    `[BUILD INFO] Release Channel: ${e2}, Build Number: 613889, Version Hash: 2e52be8fc0cdc7c493d6305a2a010be865085599`,
+    `[BUILD INFO] Release Channel: ${e2}, Build Number: 613909, Version Hash: 7d805d78ffcf1e71f8285857e7f26ac610f1340b`,
 ),
     D.A.setTags({ appContext: G.QCW }),
     eh.A.initBasic(),
@@ -12360,7 +12360,34 @@ function EP(e) {
         ],
     });
 }
-var EU = n(8285);
+function EU(e) {
+    let {
+            size: t = "md",
+            width: n,
+            height: i,
+            color: r = ib.A.colors.INTERACTIVE_ICON_DEFAULT,
+            colorClass: a = "",
+            ...s
+        } = e,
+        l = (0, ch.J)(t),
+        o = l?.width ?? n,
+        d = l?.height ?? i;
+    return (0, O.jsx)("svg", {
+        ...(0, cA.A)(s),
+        xmlns: "http://www.w3.org/2000/svg",
+        width: o,
+        height: d,
+        fill: "none",
+        viewBox: "0 0 24 24",
+        children: (0, O.jsx)("path", {
+            fill: "string" == typeof r ? r : r.css,
+            fillRule: "evenodd",
+            d: "M12 23a11 11 0 1 0 0-22 11 11 0 0 0 0 22ZM6.5 13a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Zm11 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Zm-8.4 5.91a1 1 0 0 0 1.35.45 3.48 3.48 0 0 1 3.1 0 1 1 0 1 0 .9-1.79 5.48 5.48 0 0 0-4.9 0 1 1 0 0 0-.45 1.34Z",
+            clipRule: "evenodd",
+            className: a,
+        }),
+    });
+}
 function Ew(e) {
     let {
             size: t = "md",
@@ -21439,7 +21466,7 @@ let NP = "isHideDevBanner",
                     className: ta()(NM.Wz, NM.mr),
                     children: [
                         (0, O.jsx)(Nb, { className: NM.Kk }),
-                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "613889" }),
+                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "613909" }),
                         (0, O.jsx)(r, {}),
                     ],
                 })

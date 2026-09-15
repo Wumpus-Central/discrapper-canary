@@ -2042,17 +2042,9 @@
     padding: var(--space-xs) var(--space-xs) 0
 }
 
-.infoBlock_fcd769 {
-    align-items: center;
-    align-self: stretch;
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-xs);
-    padding: var(--space-md) var(--space-xl)
-}
-
 .infoBlockText_fcd769 {
     color: var(--text-muted);
+    padding: var(--space-md) var(--space-xl);
     text-align: center
 }
 
@@ -2139,4 +2131,4 @@
     background-color: var(--background-mod-strong)
 }
 
-/*# sourceMappingURL=e6f121f8eda73aff.css.map*/
+/*# sourceMappingURL=d27f852ce250e392.css.map*/
