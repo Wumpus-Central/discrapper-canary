@@ -1,4 +1,4 @@
-(s.r(t), s.d(t, { VideoQuestModalContext: () => M.a, VideoQuestConfigContext: () => M.l, default: () => en }));
+(s.r(t), s.d(t, { VideoQuestModalContext: () => O.a, VideoQuestConfigContext: () => O.l, default: () => en }));
 var n = s(477900),
     a = s(582128),
     l = s(503698),
@@ -16,52 +16,52 @@ var n = s(477900),
     C = s(192444),
     f = s(866157),
     j = s(792620),
-    v = s(753386),
+    A = s(753386),
     S = s(73473),
-    A = s(441512),
+    v = s(441512),
     N = s(55759),
-    M = s(795068),
-    O = s(781121),
+    O = s(795068),
+    M = s(781121),
     E = s(821609),
-    _ = s(590202),
-    D = s(651892);
+    D = s(590202),
+    _ = s(651892);
 function y(e) {
     let { handlePrimaryCtaClick: t } = e,
-        { quest: s } = a.useContext(M.a);
+        { quest: s } = a.useContext(O.a);
     return (0, n.jsx)(E.$, {
         fullWidth: !0,
         variant: "primary",
-        onClick: () => t(g.uF.VIDEO_MODAL_PRIMARY_CTA, _.Cy.OPEN_GAME_LINK),
-        text: (0, D.wr)(s),
+        onClick: () => t(g.uF.VIDEO_MODAL_PRIMARY_CTA, D.Cy.OPEN_GAME_LINK),
+        text: (0, _.wr)(s),
     });
 }
 var T = s(262254);
 function P() {
-    let { quest: e, sourceQuestContent: t, onClose: s } = a.useContext(M.a);
+    let { quest: e, sourceQuestContent: t, onClose: s } = a.useContext(O.a);
     return (0, n.jsx)(T.A, { quest: e, questContent: g.uF.QUEST_HOME_DESKTOP, sourceQuestContent: t, onClose: s });
 }
 var b = s(866665),
     V = s(939249),
     k = s(297264),
-    q = s(628284),
-    I = s(661531),
+    I = s(628284),
+    q = s(661531),
     Q = s(713517),
     L = s(240248),
     R = s(375708),
     w = s(248627),
     G = s(862649);
 function F() {
-    let { quest: e, sourceQuestContent: t, isPortrait: s, onClose: l } = a.useContext(M.a),
+    let { quest: e, sourceQuestContent: t, isPortrait: s, onClose: l } = a.useContext(O.a),
         o = (0, f.LS)(e),
         r = a.useRef(null),
         { isHoveringOrFocusing: u } = (0, Q.A)(r),
-        c = (0, O.H)({ quest: e, onClose: l, sourceQuestContent: t }),
+        c = (0, M.H)({ quest: e, onClose: l, sourceQuestContent: t }),
         d = e.config.ctaConfig.subtitle,
         m = void 0 !== d && !(0, L.uJ)(d);
     return (0, n.jsx)(b.m, {
         text: R.intl.string(R.t.EuHF34),
         children: (0, n.jsx)(V.D, {
-            onClick: () => c(g.uF.VIDEO_MODAL, _.Cy.OPEN_GAME_LINK),
+            onClick: () => c(g.uF.VIDEO_MODAL, D.Cy.OPEN_GAME_LINK),
             className: w._S,
             children: (0, n.jsxs)("div", {
                 className: i()(G.hA, w.t8, { [w.Mc]: o }),
@@ -82,9 +82,9 @@ function F() {
                         children: [
                             (0, n.jsx)("div", {
                                 className: i()(w.PV, { [w.WV]: s, [w.mq]: s }),
-                                children: (0, n.jsx)(q.y, {
+                                children: (0, n.jsx)(I.y, {
                                     size: "xs",
-                                    color: u ? I.A.colors.ICON_STRONG.css : I.A.colors.ICON_MUTED.css,
+                                    color: u ? q.A.colors.ICON_STRONG.css : q.A.colors.ICON_MUTED.css,
                                 }),
                             }),
                             (0, n.jsx)(k.D, {
@@ -125,14 +125,15 @@ var H = s(604121),
     z = s(252424),
     Y = s(801365),
     B = s(453384),
-    X = s(646764),
+    X = s(62405),
     $ = s(630037),
-    J = s(150387);
-async function Z() {
+    J = s(190107),
+    Z = s(150387);
+async function ee() {
     return await s.e("40119").then(s.t.bind(s, 718698, 19));
 }
-function ee() {
-    let { quest: e, sourceQuestContent: t, onClose: s, maxProgressSec: l, targetSec: i } = a.useContext(M.a),
+function et() {
+    let { quest: e, sourceQuestContent: t, onClose: s, maxProgressSec: l, targetSec: i } = a.useContext(O.a),
         [o, r] = a.useState(!1),
         u = (0, c.bG)([U.Ay], () => U.Ay.useReducedMotion),
         d = (0, c.bG)([W.default], () => W.default.locale),
@@ -142,14 +143,14 @@ function ee() {
         C = (0, Y.mq)(e.config, m),
         f = e.userStatus?.completedAt != null,
         j = i > 0 ? Math.min(l / i, 0.99) : 0,
-        v = f ? 1 : j,
-        S = (0, z.l9)(d, v, { roundingMode: "floor" }),
-        A = e.userStatus?.claimedAt != null,
-        N = R.intl.formatToPlainString(f && !A ? R.t.NRp4K4 : R.t["12IWP2"], { rewardName: C });
+        A = f ? 1 : j,
+        S = (0, z.l9)(d, A, { roundingMode: "floor" }),
+        v = e.userStatus?.claimedAt != null,
+        N = R.intl.formatToPlainString(f && !v ? R.t.NRp4K4 : R.t["12IWP2"], { rewardName: C });
     a.useEffect(() => {
         (null == x.current && e.userStatus?.completedAt != null && p(!0), (x.current = e.userStatus?.completedAt));
     }, [e.userStatus?.completedAt]);
-    let O = (0, $.D)({
+    let M = (0, $.D)({
         quest: e,
         questContent: g.uF.QUEST_HOME_DESKTOP,
         sourceQuestContent: t,
@@ -157,9 +158,9 @@ function ee() {
         onCloseModal: s,
     });
     return (0, n.jsxs)("div", {
-        className: J.Tr,
+        className: Z.Tr,
         children: [
-            f && (0, n.jsx)(H.a, { importData: Z, className: J.t_, loop: !1, autoplay: !1, shouldAnimate: h && !u }),
+            f && (0, n.jsx)(H.a, { importData: ee, className: Z.t_, loop: !1, autoplay: !1, shouldAnimate: h && !u }),
             (0, n.jsx)(b.m, {
                 position: "top",
                 text: N,
@@ -170,19 +171,20 @@ function ee() {
                     r(!1);
                 },
                 children: (0, n.jsx)(V.D, {
-                    className: J.md,
+                    className: Z.md,
                     style: f ? { cursor: "pointer" } : void 0,
                     onClick: () => {
-                        f && O();
+                        f && M();
                     },
                     children: (0, n.jsx)(B.A, {
                         size: 48,
-                        percentComplete: v,
+                        percentComplete: A,
                         overlayText: o ? S : void 0,
                         overlayTextVariant: "text-sm/medium",
                         children: (0, n.jsx)(X.A, {
                             fullWidth: !0,
                             quest: e,
+                            location: J.rE.VIDEO_MODAL,
                             questContent: g.uF.VIDEO_MODAL,
                             autoplay: !1,
                             sourceQuestContent: t,
@@ -193,7 +195,6 @@ function ee() {
         ],
     });
 }
-var et = s(190107);
 function es(e) {
     let {
             transitionState: t,
@@ -207,7 +208,7 @@ function es(e) {
         } = e,
         S = (0, j.Yh)(l),
         E = (0, f.LS)(l),
-        { maxProgressSec: _, trackProgress: D } = (function (e) {
+        { maxProgressSec: D, trackProgress: _ } = (function (e) {
             let { initialProgressSec: t, targetSec: s, completedAt: n } = e,
                 [l, i] = (0, a.useState)(t);
             return {
@@ -223,16 +224,16 @@ function es(e) {
         }),
         [T, b] = a.useState(142),
         [V, k] = a.useState(!1),
-        q = l.config.taskConfigV2?.tasks?.[u.n.WATCH_VIDEO];
-    r()(null != q, "VideoQuestModal: videoTask must not be null");
-    let I = (0, v.eG)(q),
-        Q = "portrait" === I,
+        I = l.config.taskConfigV2?.tasks?.[u.n.WATCH_VIDEO];
+    r()(null != I, "VideoQuestModal: videoTask must not be null");
+    let q = (0, A.eG)(I),
+        Q = "portrait" === q,
         L = (0, x.A)((e) => {
             b(e.target.offsetHeight);
         }),
         R = (0, m.w)(L),
-        { enabled: H } = C.n6.useConfig({ location: et.rE.VIDEO_MODAL }),
-        U = (0, O.H)({ quest: l, onClose: s, sourceQuestContent: g }),
+        { enabled: H } = C.n6.useConfig({ location: J.rE.VIDEO_MODAL }),
+        U = (0, M.H)({ quest: l, onClose: s, sourceQuestContent: g }),
         W = a.useMemo(
             () => ({
                 quest: l,
@@ -242,12 +243,12 @@ function es(e) {
                 onClose: s,
                 isFullscreenEnabled: V,
                 setIsFullscreenEnabled: k,
-                maxProgressSec: _,
+                maxProgressSec: D,
                 targetSec: S.targetSeconds,
             }),
-            [l, g, c, Q, s, V, k, _, S.targetSeconds],
+            [l, g, c, Q, s, V, k, D, S.targetSeconds],
         );
-    return (0, n.jsx)(M.a.Provider, {
+    return (0, n.jsx)(O.a.Provider, {
         value: W,
         children: (0, n.jsx)("div", {
             style: Q ? { "--custom-portrait-footer-height": `${T}px` } : void 0,
@@ -255,7 +256,7 @@ function es(e) {
                 "data-migration-pending": !0,
                 transitionState: t,
                 size: d.rI.DYNAMIC,
-                className: i()(G.CR, { [G.VX]: "landscape" === I, [G.Zy]: "portrait" === I }),
+                className: i()(G.CR, { [G.VX]: "landscape" === q, [G.Zy]: "portrait" === q }),
                 fullscreenOnMobile: !1,
                 parentComponent: "Modal",
                 children: (0, n.jsx)("div", {
@@ -270,21 +271,21 @@ function es(e) {
                             className: G.jE,
                             children: [
                                 H
-                                    ? (0, n.jsx)(A.A, {
-                                          targetTimeSec: q.target,
+                                    ? (0, n.jsx)(v.A, {
+                                          targetTimeSec: I.target,
                                           parentTransitionState: t,
-                                          onOptimisticProgressUpdate: D,
+                                          onOptimisticProgressUpdate: _,
                                           autoplay: o,
                                           openedAtMs: p,
-                                          orientation: I,
+                                          orientation: q,
                                       })
                                     : (0, n.jsx)(N.A, {
-                                          targetTimeSec: q.target,
+                                          targetTimeSec: I.target,
                                           parentTransitionState: t,
-                                          onOptimisticProgressUpdate: D,
+                                          onOptimisticProgressUpdate: _,
                                           autoplay: o,
                                           openedAtMs: p,
-                                          orientation: I,
+                                          orientation: q,
                                       }),
                                 Q
                                     ? (0, n.jsxs)("div", {
@@ -293,7 +294,7 @@ function es(e) {
                                           children: [
                                               (0, n.jsxs)("div", {
                                                   className: w.Df,
-                                                  children: [E ? null : (0, n.jsx)(ee, {}), (0, n.jsx)(F, {})],
+                                                  children: [E ? null : (0, n.jsx)(et, {}), (0, n.jsx)(F, {})],
                                               }),
                                               (0, n.jsxs)("div", {
                                                   className: w.eX,
@@ -315,7 +316,7 @@ function es(e) {
                                           children: [
                                               (0, n.jsxs)("div", {
                                                   className: w.uu,
-                                                  children: [E ? null : (0, n.jsx)(ee, {}), (0, n.jsx)(F, {})],
+                                                  children: [E ? null : (0, n.jsx)(et, {}), (0, n.jsx)(F, {})],
                                               }),
                                               (0, n.jsxs)("div", {
                                                   className: w.NY,
@@ -342,7 +343,7 @@ function en(e) {
         m = null != s ? s.config : u,
         x = a.useMemo(() => (null != m ? { questConfig: m } : null), [m]);
     return null != d && null != m && null != x
-        ? (0, n.jsx)(M.l.Provider, {
+        ? (0, n.jsx)(O.l.Provider, {
               value: x,
               children: (0, n.jsx)(S.R, {
                   questOrQuests: d,

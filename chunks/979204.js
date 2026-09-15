@@ -12,7 +12,7 @@ var r = n(477900),
     f = n(834730),
     _ = n(613373),
     m = n(738822),
-    p = n(646764);
+    p = n(62405);
 n(795068);
 var S = n(190107),
     C = n(774041);
@@ -25,54 +25,55 @@ let v = { duration: 250 },
                 quest: s,
                 sourceQuestContent: a,
                 expansionSpring: o,
-                onClick: S,
-                onMouseEnter: A,
-                onMouseLeave: h,
+                onClick: A,
+                onMouseEnter: h,
+                onMouseLeave: g,
             } = e,
-            { label: g, targetSec: I, leftPx: D, rightPx: T, index: R } = n,
-            x = s.userStatus?.completedAt != null,
-            [L, O] = l.useState(!1),
-            P = D - 4,
-            k = t >= P ? Math.min(1, (t - P) / (T - P)) : 0,
-            N = 0 === R && !x,
-            { fill: b } = (0, i.z)({
-                fill: 100 * k,
+            { label: I, targetSec: D, leftPx: T, rightPx: R, index: x } = n,
+            L = s.userStatus?.completedAt != null,
+            [O, P] = l.useState(!1),
+            k = T - 4,
+            N = t >= k ? Math.min(1, (t - k) / (R - k)) : 0,
+            b = 0 === x && !L,
+            { fill: y } = (0, i.z)({
+                fill: 100 * N,
                 config: v,
                 onRest: () => {
-                    k <= 0 && O(!1);
+                    N <= 0 && P(!1);
                 },
                 onStart: () => {
-                    O(!0);
+                    P(!0);
                 },
             });
-        function y(e) {
+        function V(e) {
             return e.stopPropagation();
         }
-        let V =
-            null != S
+        let U =
+            null != A
                 ? (e) => {
-                      (e.stopPropagation(), S());
+                      (e.stopPropagation(), A());
                   }
                 : void 0;
         return (0, r.jsxs)(d.animated.div, {
-            className: c()(C.ck, { [C.a]: N && L, [C.C9]: !N && L }),
+            className: c()(C.ck, { [C.a]: b && O, [C.C9]: !b && O }),
             style: {
-                left: u ? o.to((e) => D - e) : D,
+                left: u ? o.to((e) => T - e) : T,
                 "--custom-indicator-size": u ? o.to((e) => `${26 + 2 * e}px`) : "26px",
-                "--custom-indicator-fill": b.to((e) => e),
+                "--custom-indicator-fill": y.to((e) => e),
             },
-            onMouseDown: y,
+            onMouseDown: V,
             children: [
                 (0, r.jsx)(E.D, {
                     className: C.E6,
                     "data-testid": "video-quest-reward-indicator",
-                    onClick: V,
-                    onMouseDown: y,
-                    onMouseEnter: A,
-                    onMouseLeave: h,
+                    onClick: U,
+                    onMouseDown: V,
+                    onMouseEnter: h,
+                    onMouseLeave: g,
                     children: (0, r.jsx)(p.A, {
                         fullWidth: !0,
                         quest: s,
+                        location: S.rE.VIDEO_MODAL,
                         questContent: m.uF.VIDEO_MODAL,
                         sourceQuestContent: a,
                         autoplay: !1,
@@ -81,21 +82,21 @@ let v = { duration: 250 },
                 (0, r.jsxs)("div", {
                     className: C.Ru,
                     role: "tooltip",
-                    "aria-label": null != g ? `${(0, _.rB)(I)} - ${g}` : (0, _.rB)(I),
+                    "aria-label": null != I ? `${(0, _.rB)(D)} - ${I}` : (0, _.rB)(D),
                     children: [
                         (0, r.jsx)(f.E, {
                             variant: "text-xs/normal",
                             color: "text-overlay-light",
-                            children: (0, _.rB)(I),
+                            children: (0, _.rB)(D),
                         }),
-                        null != g &&
+                        null != I &&
                             (0, r.jsxs)(r.Fragment, {
                                 children: [
                                     (0, r.jsx)("span", { className: C.AE, "aria-hidden": "true" }),
                                     (0, r.jsx)(f.E, {
                                         variant: "text-xs/normal",
                                         color: "text-overlay-light",
-                                        children: g,
+                                        children: I,
                                     }),
                                 ],
                             }),

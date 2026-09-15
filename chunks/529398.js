@@ -7,7 +7,7 @@ var n = s(477900),
     o = s(396813),
     d = s(866157),
     c = s(801365),
-    u = s(646764),
+    u = s(62405),
     m = s(801870),
     h = s(586035),
     x = s(190107),
@@ -25,6 +25,7 @@ function C(e) {
                     className: g.Qq,
                     learnMoreStyle: null,
                     quest: t,
+                    location: x.rE.INGAME_REWARD_MODAL,
                     questContent: a,
                     sourceQuestContent: o,
                 }),
@@ -61,16 +62,16 @@ function j(e) {
         f = a.useMemo(() => (0, c.f)(u.config), [u]),
         g = u.userStatus?.claimedAt != null,
         j = !u.preview && !g,
-        [v, p] = a.useState(j ? "loading" : "claimed");
+        [v, A] = a.useState(j ? "loading" : "claimed");
     a.useEffect(() => {
         if (j) {
             let e = (0, c.$s)(u.config);
             (0, o.Oq)(u.id, e, i)
-                .then(() => p("claimed"))
-                .catch(() => p("error"));
+                .then(() => A("claimed"))
+                .catch(() => A("error"));
         }
     }, [u, i, j]);
-    let w = "error" === v || null == f;
+    let E = "error" === v || null == f;
     return (0, n.jsx)(h.A, {
         onClose: s,
         transitionState: r,
@@ -78,8 +79,8 @@ function j(e) {
         sourceQuestContent: l,
         location: x.rE.INGAME_REWARD_MODAL,
         isRewardContentLoading: "loading" === v,
-        rewardContentHasError: w,
-        rewardContent: w
+        rewardContentHasError: E,
+        rewardContent: E
             ? null
             : (0, n.jsx)(m.A, {
                   rewardName: f.messages.name,

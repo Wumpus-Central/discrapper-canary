@@ -2,8 +2,8 @@
 var s = n(477900),
     a = n(582128),
     i = n(479669),
-    u = n(837381),
-    r = n(323889),
+    r = n(837381),
+    u = n(323889),
     l = n(17928),
     d = n(821609),
     c = n(462887),
@@ -27,13 +27,13 @@ var s = n(477900),
     g = n(738822),
     x = n(104886),
     F = n(3738),
-    k = n(291749),
-    B = n(561844),
+    B = n(291749),
+    k = n(561844),
     v = n(590202),
     q = n(792620),
     j = n(814793),
     b = n(73473),
-    P = n(646764),
+    P = n(62405),
     Q = n(398025),
     G = n(617986),
     O = n(630037),
@@ -61,11 +61,11 @@ function z(e) {
         es = t?.userStatus?.completedAt != null,
         ea = (0, l.bG)([N.A], () => N.A.getState().theme),
         ei = (0, c.M)(ea) ? w.NJ.DARK : w.NJ.LIGHT,
-        eu = (0, l.bG)([m.Ay], () => m.Ay.useReducedMotion),
-        { ref: er, height: el } = (0, h.Ay)(),
-        [ed, ec] = a.useState(eu),
+        er = (0, l.bG)([m.Ay], () => m.Ay.useReducedMotion),
+        { ref: eu, height: el } = (0, h.Ay)(),
+        [ed, ec] = a.useState(er),
         eo = (0, f.aL)(),
-        eC = (0, u.KF)();
+        eC = (0, r.KF)();
     (a.useEffect(() => {
         let e = eC.current;
         return (
@@ -102,14 +102,14 @@ function z(e) {
         ((0, x.E5)(x.kI.STEP_2_CLICKED_INTERNAL, "quest_members_list_popout")
             ? (0, p.r)({
                   type: R.F.CLICK_INTERNAL,
-                  adCreativeType: r.p.QUEST,
+                  adCreativeType: u.p.QUEST,
                   adCreativeId: t.id,
                   questContentCTA: v.Cy.LEARN_MORE,
                   surfaceId: g.uF.MEMBERS_LIST,
                   sourceQuestContent: g.uF.MEMBERS_LIST,
                   trackGuildAndChannelMetadata: !0,
               })
-            : (0, B.Y5)({
+            : (0, k.Y5)({
                   questId: t.id,
                   questContent: g.uF.MEMBERS_LIST,
                   questContentCTA: v.Cy.LEARN_MORE,
@@ -123,14 +123,14 @@ function z(e) {
             ? ((0, x.E5)(x.kI.STEP_2_CLICKED_INTERNAL, "quest_members_list_popout")
                   ? (0, p.r)({
                         type: R.F.CLICK_INTERNAL,
-                        adCreativeType: r.p.QUEST,
+                        adCreativeType: u.p.QUEST,
                         adCreativeId: t.id,
                         questContentCTA: v.Cy.WATCH_STREAM,
                         surfaceId: g.uF.MEMBERS_LIST,
                         sourceQuestContent: g.uF.MEMBERS_LIST,
                         trackGuildAndChannelMetadata: !0,
                     })
-                  : (0, B.Y5)({
+                  : (0, k.Y5)({
                         questId: t.id,
                         questContent: g.uF.MEMBERS_LIST,
                         questContentCTA: v.Cy.WATCH_STREAM,
@@ -146,14 +146,14 @@ function z(e) {
                               (0, x.E5)(x.kI.STEP_2_CLICKED_INTERNAL, "quest_members_list_popout")
                                   ? (0, p.r)({
                                         type: R.F.CLICK_INTERNAL,
-                                        adCreativeType: r.p.QUEST,
+                                        adCreativeType: u.p.QUEST,
                                         adCreativeId: t.id,
                                         questContentCTA: v.Cy.WATCH_STREAM_CONFIRM,
                                         surfaceId: g.uF.MEMBERS_LIST,
                                         sourceQuestContent: g.uF.MEMBERS_LIST,
                                         trackGuildAndChannelMetadata: !0,
                                     })
-                                  : (0, B.Y5)({
+                                  : (0, k.Y5)({
                                         questId: t.id,
                                         questContent: g.uF.MEMBERS_LIST,
                                         questContentCTA: v.Cy.WATCH_STREAM_CONFIRM,
@@ -216,7 +216,7 @@ function z(e) {
         },
         children: (0, s.jsxs)("div", {
             ref: (e) => {
-                er.current = e;
+                eu.current = e;
             },
             className: U.kL,
             style: { borderRadius: eM },
@@ -236,14 +236,14 @@ function z(e) {
                                             (0, x.E5)(x.kI.STEP_2_CLICKED_INTERNAL, "quest_members_list_popout")
                                                 ? (0, p.r)({
                                                       type: R.F.CLICK_INTERNAL,
-                                                      adCreativeType: r.p.QUEST,
+                                                      adCreativeType: u.p.QUEST,
                                                       adCreativeId: t.id,
                                                       questContentCTA: v.Cy.OPEN_DISCLOSURE,
                                                       surfaceId: g.uF.MEMBERS_LIST,
                                                       sourceQuestContent: g.uF.MEMBERS_LIST,
                                                       trackGuildAndChannelMetadata: !0,
                                                   })
-                                                : (0, B.Y5)({
+                                                : (0, k.Y5)({
                                                       questId: t.id,
                                                       questContent: g.uF.MEMBERS_LIST,
                                                       questContentCTA: v.Cy.OPEN_DISCLOSURE,
@@ -296,12 +296,13 @@ function z(e) {
                                                 gamePublisher: t.config.messages.gamePublisher,
                                             }),
                                             className: U.TW,
-                                            src: (0, k.tW)(t, k.fY.GAME_TILE, ei).url,
+                                            src: (0, B.tW)(t, B.fY.GAME_TILE, ei).url,
                                         }),
                                     "reward" === eL.tileAssetType &&
                                         (0, s.jsx)(P.A, {
                                             className: U.TW,
                                             quest: t,
+                                            location: D.rE.MEMBERS_LIST,
                                             questContent: g.uF.MEMBERS_LIST,
                                             learnMoreStyle: "icon",
                                             onClick: eS,

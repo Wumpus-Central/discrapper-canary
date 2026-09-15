@@ -9,17 +9,17 @@ var n = s(477900),
     c = s(554146),
     d = s(922016),
     C = s(192308),
-    m = s(131607),
-    I = s(625180),
+    I = s(131607),
+    m = s(625180),
     N = s(363195),
     T = s(396813),
     A = s(859703),
-    x = s(738822),
-    E = s(759366),
-    p = s(3738),
-    h = s(866157),
-    j = s(590202),
-    _ = s(639214),
+    E = s(738822),
+    x = s(759366),
+    _ = s(3738),
+    p = s(866157),
+    h = s(590202),
+    j = s(639214),
     f = s(43105),
     R = s(375708);
 function v(e) {
@@ -42,49 +42,50 @@ function v(e) {
 var g = s(323889),
     y = s(305866),
     q = s(939249),
-    b = s(789645),
-    S = s(274670),
-    U = s(144779),
-    F = s(915089),
-    Y = s(104886),
-    V = s(18437),
+    S = s(789645),
+    U = s(274670),
+    b = s(144779),
+    Y = s(915089),
+    V = s(104886),
+    F = s(18437),
     Q = s(971649),
     G = s(453384),
-    k = s(646764),
+    k = s(62405),
     D = s(617986),
-    z = s(621485);
-function L(e) {
+    z = s(190107),
+    L = s(621485);
+function M(e) {
     let { quest: t, questDescription: s, completedRatio: a, minimizeFrame: o, onClose: u } = e,
-        c = (0, F.GV)(),
-        d = (0, V.Ut)(),
+        c = (0, Y.GV)(),
+        d = (0, F.Ut)(),
         C = (0, Q.go)(),
-        m = i.useCallback(() => {
-            ((0, Y.E5)(Y.kI.STEP_2_CLICKED_INTERNAL, "quest_activity_header_popout")
-                ? (0, S.r)({
-                      type: U.F.CLICK_INTERNAL,
+        I = i.useCallback(() => {
+            ((0, V.E5)(V.kI.STEP_2_CLICKED_INTERNAL, "quest_activity_header_popout")
+                ? (0, U.r)({
+                      type: b.F.CLICK_INTERNAL,
                       adCreativeType: g.p.QUEST,
                       adCreativeId: t.id,
-                      questContentCTA: j.Cy.LEARN_MORE,
-                      surfaceId: x.uF.RUNNING_ACTIVITY,
-                      sourceQuestContent: x.uF.RUNNING_ACTIVITY,
+                      questContentCTA: h.Cy.LEARN_MORE,
+                      surfaceId: E.uF.RUNNING_ACTIVITY,
+                      sourceQuestContent: E.uF.RUNNING_ACTIVITY,
                       impressionId: C,
                   })
                 : d({
                       questId: t.id,
-                      questContent: x.uF.RUNNING_ACTIVITY,
-                      questContentCTA: j.Cy.LEARN_MORE,
-                      sourceQuestContent: x.uF.RUNNING_ACTIVITY,
+                      questContent: E.uF.RUNNING_ACTIVITY,
+                      questContentCTA: h.Cy.LEARN_MORE,
+                      sourceQuestContent: E.uF.RUNNING_ACTIVITY,
                   }),
-                (0, D.mA)({ fromContent: x.uF.RUNNING_ACTIVITY, questId: t.id }),
+                (0, D.mA)({ fromContent: E.uF.RUNNING_ACTIVITY, questId: t.id }),
                 o(),
                 u());
         }, [t.id, d, C, o, u]);
     return (0, n.jsxs)(y.l, {
-        className: z.kL,
+        className: L.kL,
         "aria-labelledby": c,
         children: [
             (0, n.jsxs)("div", {
-                className: z.wx,
+                className: L.wx,
                 children: [
                     (0, n.jsx)(r.E, {
                         id: c,
@@ -93,15 +94,15 @@ function L(e) {
                         children: R.intl.formatToPlainString(R.t.EAYZAr, { questName: t.config.messages.questName }),
                     }),
                     (0, n.jsx)(q.D, {
-                        className: z.b,
+                        className: L.b,
                         "aria-label": R.intl.string(R.t.cpT0Cq),
                         onClick: u,
-                        children: (0, n.jsx)(b.P, { size: "sm", color: "currentColor" }),
+                        children: (0, n.jsx)(S.P, { size: "sm", color: "currentColor" }),
                     }),
                 ],
             }),
             (0, n.jsxs)("div", {
-                className: z.rf,
+                className: L.rf,
                 children: [
                     (0, n.jsx)("div", {
                         children: (0, n.jsx)(G.A, {
@@ -110,8 +111,9 @@ function L(e) {
                             children: (0, n.jsx)(k.A, {
                                 fullWidth: !0,
                                 quest: t,
-                                questContent: x.uF.RUNNING_ACTIVITY,
-                                sourceQuestContent: x.uF.RUNNING_ACTIVITY,
+                                location: z.rE.QUEST_ACTIVITY_HEADER,
+                                questContent: E.uF.RUNNING_ACTIVITY,
+                                sourceQuestContent: E.uF.RUNNING_ACTIVITY,
                                 autoplay: !1,
                             }),
                         }),
@@ -125,40 +127,39 @@ function L(e) {
                 text: R.intl.string(R.t["th2+0j"]),
                 variant: "secondary",
                 size: "md",
-                onClick: m,
+                onClick: I,
             }),
         ],
     });
 }
-var M = s(262254),
-    P = s(73473),
-    w = s(190107),
-    O = s(49999),
-    H = s(165610),
+var P = s(262254),
+    w = s(73473),
+    H = s(49999),
+    O = s(165610),
     $ = s(391803);
 function K(e) {
     let { quest: t, ...s } = e,
-        o = (0, h.fc)(t),
-        u = (0, p.mU)({
+        o = (0, p.fc)(t),
+        u = (0, _.mU)({
             quest: t,
             taskDetails: o,
-            location: w.rE.QUEST_ACTIVITY_HEADER,
-            sourceQuestContent: x.uF.RUNNING_ACTIVITY,
+            location: z.rE.QUEST_ACTIVITY_HEADER,
+            sourceQuestContent: E.uF.RUNNING_ACTIVITY,
         }),
         [C, N] = i.useState(!1),
         A = i.useRef(null),
-        E = i.useRef(null),
-        [_, f] = (0, m.kn)([c.M.QUEST_ACTIVITY_HEADER_INTRO], void 0, !0),
-        { completedRatio: g, completedRatioDisplay: y, percentComplete: q } = (0, h.O9)(t, !0),
-        b = i.useCallback(() => {
-            "frame" === s.type && I.A.updateFrameLayoutMode({ frameId: s.frameId, layoutMode: H.y0.PIP });
+        x = i.useRef(null),
+        [j, f] = (0, I.kn)([c.M.QUEST_ACTIVITY_HEADER_INTRO], void 0, !0),
+        { completedRatio: g, completedRatioDisplay: y, percentComplete: q } = (0, p.O9)(t, !0),
+        S = i.useCallback(() => {
+            "frame" === s.type && m.A.updateFrameLayoutMode({ frameId: s.frameId, layoutMode: O.y0.PIP });
         }, [s]),
-        S = t.userStatus?.enrolledAt != null,
-        U = i.useCallback(() => {
+        U = t.userStatus?.enrolledAt != null,
+        b = i.useCallback(() => {
             (0, T.Oy)(t.id, {
-                questContent: x.uF.QUEST_ACTIVITY_HEADER,
-                questContentCTA: j.Cy.ACCEPT_QUEST,
-                sourceQuestContent: x.uF.RUNNING_ACTIVITY,
+                questContent: E.uF.QUEST_ACTIVITY_HEADER,
+                questContentCTA: h.Cy.ACCEPT_QUEST,
+                sourceQuestContent: E.uF.RUNNING_ACTIVITY,
             });
         }, [t.id]);
     return (0, n.jsxs)(n.Fragment, {
@@ -179,21 +180,22 @@ function K(e) {
                                 ref: A,
                                 children: (0, n.jsx)(k.A, {
                                     quest: t,
-                                    questContent: x.uF.QUEST_ACTIVITY_HEADER,
-                                    sourceQuestContent: x.uF.RUNNING_ACTIVITY,
+                                    location: z.rE.QUEST_ACTIVITY_HEADER,
+                                    questContent: E.uF.QUEST_ACTIVITY_HEADER,
+                                    sourceQuestContent: E.uF.RUNNING_ACTIVITY,
                                     className: $.Qf,
                                     autoplay: C,
                                 }),
                             }),
                             (0, n.jsx)(d.Y, {
-                                targetElementRef: E,
+                                targetElementRef: x,
                                 renderPopout: (e) => {
                                     let { closePopout: s } = e;
-                                    return (0, n.jsx)(L, {
+                                    return (0, n.jsx)(M, {
                                         quest: t,
                                         questDescription: u,
                                         completedRatio: g,
-                                        minimizeFrame: b,
+                                        minimizeFrame: S,
                                         onClose: s,
                                     });
                                 },
@@ -207,7 +209,7 @@ function K(e) {
                                         }),
                                         variant: "secondary",
                                         size: "sm",
-                                        buttonRef: E,
+                                        buttonRef: x,
                                         ...e,
                                     }),
                             }),
@@ -240,31 +242,31 @@ function K(e) {
                                     }),
                                 ],
                             }),
-                            S
-                                ? (0, n.jsx)(M.A, {
+                            U
+                                ? (0, n.jsx)(P.A, {
                                       quest: t,
-                                      questContent: x.uF.QUEST_ACTIVITY_HEADER,
-                                      sourceQuestContent: x.uF.RUNNING_ACTIVITY,
+                                      questContent: E.uF.QUEST_ACTIVITY_HEADER,
+                                      sourceQuestContent: E.uF.RUNNING_ACTIVITY,
                                       size: "sm",
                                   })
                                 : (0, n.jsx)(l.$, {
                                       variant: "primary",
                                       text: R.intl.string(R.t.l7E81v),
                                       size: "sm",
-                                      onClick: U,
+                                      onClick: b,
                                   }),
                         ],
                     }),
                 ],
             }),
-            null != _ &&
-                S &&
+            null != j &&
+                U &&
                 (0, n.jsx)(v, {
                     onDismiss: function () {
-                        return f(O.i.USER_DISMISS);
+                        return f(H.i.USER_DISMISS);
                     },
                     onCTAClick: function () {
-                        return f(O.i.TAKE_ACTION);
+                        return f(H.i.TAKE_ACTION);
                     },
                     targetElementRef: A,
                 }),
@@ -274,10 +276,10 @@ function K(e) {
 function Z(e) {
     let t = (0, u.bG)([A.A], () => A.A.quests),
         a = (0, u.bG)([N.A], () => N.A.theme),
-        l = i.useMemo(() => (0, _.jm)(t, e.applicationId, !0)[0], [t, e.applicationId]),
-        r = (0, u.bG)([E.A], () => E.A.getState().autoEnroll),
+        l = i.useMemo(() => (0, j.jm)(t, e.applicationId, !0)[0], [t, e.applicationId]),
+        r = (0, u.bG)([x.A], () => x.A.getState().autoEnroll),
         c = l?.id,
-        d = (0, u.bG)([E.A], () => E.A.isDismissed(c), [c]);
+        d = (0, u.bG)([x.A], () => x.A.isDismissed(c), [c]);
     return (i.useEffect(() => {
         null == l ||
             l.userStatus?.enrolledAt != null ||
@@ -298,10 +300,10 @@ function Z(e) {
               children: (t) =>
                   (0, n.jsx)("div", {
                       className: t,
-                      children: (0, n.jsx)(P.R, {
+                      children: (0, n.jsx)(w.R, {
                           questOrQuests: l,
-                          questContent: x.uF.QUEST_ACTIVITY_HEADER,
-                          sourceQuestContent: x.uF.RUNNING_ACTIVITY,
+                          questContent: E.uF.QUEST_ACTIVITY_HEADER,
+                          sourceQuestContent: E.uF.RUNNING_ACTIVITY,
                           overrideVisibility: !0,
                           children: () => (0, n.jsx)(K, { ...e, quest: l }),
                       }),
