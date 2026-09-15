@@ -50,7 +50,7 @@ function x(e, t) {
             return (0, l.jsxs)(
                 "div",
                 {
-                    className: p.h,
+                    className: s()(p.h, g.aV),
                     children: [(0, l.jsx)("div", { className: p.r }), (0, l.jsx)("blockquote", { children: i })],
                 },
                 t,
