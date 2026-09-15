@@ -107,7 +107,7 @@ function E(e) {
             v &&
                 (0, i.jsx)(r.Ok, {
                     containerRef: n,
-                    keyboardModeEnabled: !1,
+                    disableReturn: !0,
                     children: (0, i.jsx)("div", {
                         className: x.a,
                         children: (0, i.jsx)("div", {
