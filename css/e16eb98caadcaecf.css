@@ -753,7 +753,6 @@
 .badgeGraphic__6f97a {
     flex-shrink: 0;
     height: 120px;
-    margin-block-end: var(--space-16);
     max-width: 100%;
     -o-object-fit: contain;
     object-fit: contain;
@@ -762,7 +761,7 @@
 
 .badgeGraphicAnimated__6f97a {
     position: relative;
-    transform: scale(1.75);
+    transform: scale(1.5);
     z-index: 0
 }
 
@@ -923,4 +922,4 @@
     }
 }
 
-/*# sourceMappingURL=149ad77b0f20fac7.css.map*/
+/*# sourceMappingURL=e16eb98caadcaecf.css.map*/
