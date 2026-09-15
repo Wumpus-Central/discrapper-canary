@@ -21473,7 +21473,6 @@ function jW(e) {
                       theme: a,
                       className: jw.Ie,
                       children: [
-                          (0, p.jsx)(aF.G8, { darkSrc: n(223685), lightSrc: n(388547), width: 272, height: 212 }),
                           (0, p.jsx)(aF.SG, {
                               note: el.intl.string(el.t.ZhoSBI),
                               noteClassName: jw.BI,
