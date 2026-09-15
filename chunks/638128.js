@@ -3,8 +3,8 @@ var l = n(377941),
     r = n.n(l),
     i = n(17928),
     a = n(506774),
-    u = n(228366),
-    s = n(724066),
+    s = n(228366),
+    u = n(724066),
     o = n(900582);
 let c = "SpellcheckStore",
     d = !0,
@@ -16,7 +16,7 @@ class p extends i.Ay.Store {
     static displayName = "SpellcheckStore";
     initialize() {
         let e = a.w.get(c);
-        (null != e && ((d = e.enabled), (f = new Set(e.learnedWords)), (0, o.kv)(d), (0, o.d1)(f)), (0, s.I)(o.Av));
+        (null != e && ((d = e.enabled), (f = new Set(e.learnedWords)), (0, o.kv)(d), (0, o.d1)(f)), (0, u.I)(o.Av));
     }
     isEnabled() {
         return d;
@@ -31,7 +31,7 @@ class p extends i.Ay.Store {
         return null;
     }
 }
-let m = new p(u.h, {
+let m = new p(s.h, {
     SPELLCHECK_TOGGLE() {
         ((d = !d), (0, o.kv)(d), h());
     },

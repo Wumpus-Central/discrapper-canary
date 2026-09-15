@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => s, k3: () => a, vG: () => u });
+n.d(t, { Ay: () => u, k3: () => a, vG: () => s });
 var l = n(477900),
     r = n(582128),
     i = n(451988);
@@ -8,10 +8,10 @@ let a = r.createContext({
         onForceIdle: () => null,
         onActive: () => null,
     }),
-    u = r.createContext(!1);
-function s(e) {
+    s = r.createContext(!1);
+function u(e) {
     let { children: t, timeout: n } = e,
-        [s, o] = r.useState(!1),
+        [u, o] = r.useState(!1),
         c = r.useRef(new Set()),
         d = r.useRef(null);
     r.useEffect(
@@ -43,8 +43,8 @@ function s(e) {
             c.current.size > 0 || (d.current?.cancel(), o(!0));
         }, [d, o]),
         g = r.useMemo(() => ({ onAllowIdle: h, onPreventIdle: f, onActive: p, onForceIdle: m }), [h, f, p, m]);
-    return (0, l.jsx)(u.Provider, {
-        value: s,
-        children: (0, l.jsx)(a.Provider, { value: g, children: t({ idle: s, ...g }) }),
+    return (0, l.jsx)(s.Provider, {
+        value: u,
+        children: (0, l.jsx)(a.Provider, { value: g, children: t({ idle: u, ...g }) }),
     });
 }

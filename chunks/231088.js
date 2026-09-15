@@ -157,28 +157,28 @@ function v(e) {
             growWidth: T = !1,
             removeVerticalPadding: N = !1,
         } = e,
-        w = l.useRef(null),
-        R = l.useId(),
+        R = l.useRef(null),
+        w = l.useId(),
         L = l.useId(),
-        _ = null == n,
-        P = null != h,
-        O = null != I && !P,
-        D = P ? "error" : O ? "warning" : null,
-        M = P ? h : I,
-        G = null != D && null != M,
+        P = null == n,
+        _ = null != h,
+        O = null != I && !_,
+        D = _ ? "error" : O ? "warning" : null,
+        G = _ ? h : I,
+        M = null != D && null != G,
         [U] = l.useState(t),
-        [F, W] = l.useState(!1);
-    F || t === U || W(!0);
+        [W, F] = l.useState(!1);
+    W || t === U || F(!0);
     let H = [];
-    (_ && H.push(R), G && "compact" !== g && H.push(L));
+    (P && H.push(w), M && "compact" !== g && H.push(L));
     let V = H.length > 0 ? H.join(" ") : void 0;
     function B() {
-        let { activeElement: e } = w.current?.ownerDocument ?? document;
+        let { activeElement: e } = R.current?.ownerDocument ?? document;
         ((0, a.vq)(e, HTMLElement) && e.blur(), u());
     }
     let z = (0, i.jsxs)("div", {
-        ref: w,
-        className: r()(p.LL, { [p.JD]: P, [p.xe]: O, [p.r9]: y }),
+        ref: R,
+        className: r()(p.LL, { [p.JD]: _, [p.xe]: O, [p.r9]: y }),
         onMouseDown: y
             ? void 0
             : function (e) {
@@ -186,9 +186,9 @@ function v(e) {
               },
         onClick: y ? void 0 : B,
         children: [
-            _
+            P
                 ? (0, i.jsx)(m.E, {
-                      id: R,
+                      id: w,
                       variant: b ?? "text-sm/normal",
                       color: k ?? "text-muted",
                       className: p.qf,
@@ -204,7 +204,7 @@ function v(e) {
                     onClick: (e) => {
                         (e.stopPropagation(), B());
                     },
-                    focusProps: { ringTarget: w },
+                    focusProps: { ringTarget: R },
                 }),
             null != f && (0, i.jsx)("div", { className: p.lD, children: (0, i.jsx)(A, { ...f }) }),
         ],
@@ -221,13 +221,13 @@ function v(e) {
         children: (0, i.jsx)(
             "div",
             {
-                className: F ? p.qG : void 0,
+                className: W ? p.qG : void 0,
                 children: t
                     ? o
                     : (0, i.jsxs)(i.Fragment, {
                           children: [
                               (0, i.jsx)("div", { className: p.VH, children: z }),
-                              G && "compact" !== g && (0, i.jsx)(E, { id: L, message: M, type: D }),
+                              M && "compact" !== g && (0, i.jsx)(E, { id: L, message: G, type: D }),
                           ],
                       }),
             },

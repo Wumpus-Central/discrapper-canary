@@ -6,15 +6,15 @@ var n = a(17928),
     s = a(980707),
     r = a(477782),
     o = a(750943),
-    u = a(428610),
-    d = a(946274),
+    d = a(428610),
+    u = a(946274),
     c = a(363195),
     m = a(375708);
 function p(e) {
     let { lastEdit: t, cropAndUpload: a, onChangeImage: p, onClose: g } = e,
         h = (0, n.bG)([c.A], () => c.A.theme);
     function v() {
-        (0, d.AM)(t.unprocessedFile, (e, i) => a(e, i, t.transform));
+        (0, u.AM)(t.unprocessedFile, (e, i) => a(e, i, t.transform));
     }
     return (0, i.jsx)(l.N, {
         theme: h,
@@ -40,8 +40,8 @@ function p(e) {
                                 id: "reposition-image",
                                 label: m.intl.string(m.t.je0LTI),
                                 action: v,
-                                icon: u.K,
-                                leadingAccessory: { type: "icon", icon: u.K },
+                                icon: d.K,
+                                leadingAccessory: { type: "icon", icon: d.K },
                             }),
                         ],
                     }),

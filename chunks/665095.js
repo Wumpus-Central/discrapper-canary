@@ -24,18 +24,18 @@ var i = n(477900),
     I = n(297264),
     j = n(834730),
     b = n(700525),
-    N = n(975571),
-    y = n(652215),
+    y = n(975571),
+    N = n(652215),
     M = n(375708),
     R = n(690807);
-let w = N.A.getArticleURL(y.MVz.VERIFICATION_FAQ);
+let w = y.A.getArticleURL(N.MVz.VERIFICATION_FAQ);
 class k extends l.PureComponent {
-    static defaultProps = { types: [y.Fz7.CAPTCHA], onCaptchaVerify: y.tEg, onLogout: y.tEg };
+    static defaultProps = { types: [N.Fz7.CAPTCHA], onCaptchaVerify: N.tEg, onLogout: N.tEg };
     renderFields() {
         let { types: e, captchaKey: t, theme: n, onCaptchaVerify: l } = this.props;
         return (0, i.jsx)(i.Fragment, {
             children: e.map((e) =>
-                e === y.Fz7.CAPTCHA
+                e === N.Fz7.CAPTCHA
                     ? (0, i.jsx)(b.A, { onVerify: l, theme: n }, t)
                     : (0, i.jsx)(_.$, { onClick: () => this.handleClick(e), text: v.A.getButtonTitle(e) }, e),
             ),
@@ -112,7 +112,7 @@ class k extends l.PureComponent {
                                 (0, i.jsx)(j.E, {
                                     variant: "text-sm/semibold",
                                     className: R.qr,
-                                    children: M.intl.format(M.t.WL51ZR, { supportURL: N.A.getSubmitRequestURL() }),
+                                    children: M.intl.format(M.t.WL51ZR, { supportURL: y.A.getSubmitRequestURL() }),
                                 }),
                                 (0, i.jsx)("div", { className: C()(R.qr, R.mf), children: "\u2022" }),
                                 (0, i.jsx)(j.E, {
@@ -132,8 +132,8 @@ class k extends l.PureComponent {
         t?.(e);
     };
 }
-var O = n(87404),
-    P = n(53516);
+var P = n(87404),
+    O = n(53516);
 function L() {
     let { action: e, theme: t } = (0, s.cf)([x.A, A.A], () => ({ action: x.A.getAction(), theme: A.A.theme })),
         E = v.A.getVerificationTypes(e),
@@ -148,7 +148,7 @@ function L() {
                     );
                     return (t) => (0, i.jsx)(e, { ...t });
                 },
-                { modalKey: O.H1, Layer: f.Ay },
+                { modalKey: P.H1, Layer: f.Ay },
             ));
     }
     return (
@@ -171,8 +171,8 @@ function L() {
             [],
         ),
         l.useEffect(() => {
-            _?.[0] === y.Fz7.PHONE &&
-                E?.[0] === y.Fz7.EMAIL &&
+            _?.[0] === N.Fz7.PHONE &&
+                E?.[0] === N.Fz7.EMAIL &&
                 (0, o.openModalLazy)(
                     async () => {
                         let { default: e } = await Promise.all([n.e("844331"), n.e("410919")]).then(n.bind(n, 556506));
@@ -184,7 +184,7 @@ function L() {
                                 confirmText: M.intl.string(M.t["3oK4qw"]),
                             });
                     },
-                    { modalKey: O.Pr, Layer: f.Ay, onCloseCallback: S },
+                    { modalKey: P.Pr, Layer: f.Ay, onCloseCallback: S },
                 );
         }, [E, _]),
         (0, i.jsx)(k, {
@@ -192,7 +192,7 @@ function L() {
             captchaKey: C,
             onCaptchaVerify: function (e) {
                 r.Bo.post({
-                    url: y.Rsh.CAPTCHA,
+                    url: N.Rsh.CAPTCHA,
                     body: { captcha_key: e },
                     oldFormErrors: !0,
                     rejectWithError: !0,
@@ -202,7 +202,7 @@ function L() {
             },
             theme: t,
             onClick: (e) => {
-                e === y.Fz7.EMAIL_OR_PHONE || e === y.Fz7.EMAIL || e === y.Fz7.REVERIFY_EMAIL
+                e === N.Fz7.EMAIL_OR_PHONE || e === N.Fz7.EMAIL || e === N.Fz7.REVERIFY_EMAIL
                     ? S()
                     : (0, o.openModalLazy)(
                           async () => {
@@ -218,7 +218,7 @@ function L() {
                               return (t) =>
                                   (0, i.jsx)(e, { layerContext: f.OH, reason: g.d.USER_ACTION_REQUIRED, ...t });
                           },
-                          { modalKey: P.V, Layer: f.Ay },
+                          { modalKey: O.V, Layer: f.Ay },
                       );
             },
             onLogout: function () {

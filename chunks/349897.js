@@ -1,112 +1,112 @@
-n.d(t, { T: () => j });
-var r = n(477900),
+n.d(t, { T: () => _ });
+var i = n(477900),
     l = n(582128),
-    i = n(503698),
-    a = n.n(i),
-    s = n(479669),
-    u = n(505124),
-    o = n(866665),
+    a = n(503698),
+    s = n.n(a),
+    r = n(479669),
+    o = n(505124),
+    d = n(866665),
     c = n(43990),
-    d = n(717421),
-    m = n(713608),
-    f = n(918715),
-    g = n(661531),
-    h = n(271520),
-    p = n(762555),
-    x = n(268378),
-    v = n(375708),
-    S = n(328115);
-function A(e) {
+    u = n(717421),
+    h = n(713608),
+    m = n(918715),
+    p = n(661531),
+    f = n(271520),
+    g = n(762555),
+    A = n(268378),
+    x = n(375708),
+    v = n(328115);
+function E(e) {
     let {
         leftPx: t,
         rightPx: n,
         setHoveredIndex: l,
-        isAnimated: i,
-        index: d,
-        activated: m,
-        expansionSpring: f,
-        icon: h,
-        tooltip: p,
+        isAnimated: a,
+        index: u,
+        activated: h,
+        expansionSpring: m,
+        icon: f,
+        tooltip: g,
     } = e;
-    return (0, r.jsx)(o.m, {
+    return (0, i.jsx)(d.m, {
         delay: 300,
-        text: p,
-        children: (0, r.jsx)(c.N, {
-            theme: u.NJ.ONYX,
+        text: g,
+        children: (0, i.jsx)(c.N, {
+            theme: o.NJ.ONYX,
             children: (e) =>
-                (0, r.jsx)(s.animated.div, {
-                    className: a()(S.z, e),
-                    onMouseEnter: () => l(d),
+                (0, i.jsx)(r.animated.div, {
+                    className: s()(v.z, e),
+                    onMouseEnter: () => l(u),
                     onMouseLeave: () => l(null),
                     style: {
-                        left: i ? f.to((e) => t - e) : t,
+                        left: a ? m.to((e) => t - e) : t,
                         right: n,
-                        width: i ? f.to((e) => `${C + 2 * e}px`) : C,
-                        height: i ? f.to((e) => `${C + 2 * e}px`) : C,
+                        width: a ? m.to((e) => `${C + 2 * e}px`) : C,
+                        height: a ? m.to((e) => `${C + 2 * e}px`) : C,
                     },
-                    children: (0, r.jsx)(h, {
+                    children: (0, i.jsx)(f, {
                         size: "custom",
                         width: "100%",
                         height: "100%",
-                        color: m ? g.A.colors.INTERACTIVE_ICON_ACTIVE : g.A.colors.INTERACTIVE_ICON_DEFAULT,
+                        color: h ? p.A.colors.INTERACTIVE_ICON_ACTIVE : p.A.colors.INTERACTIVE_ICON_DEFAULT,
                     }),
                 }),
         }),
     });
 }
 let C = 12,
-    b = { tension: 500, friction: 30, clamp: !0 };
-function j(e) {
+    T = { tension: 500, friction: 30, clamp: !0 };
+function _(e) {
     let [t, n] = l.useState(null),
-        i = l.useRef(null),
-        [{ expansion: a }, s] = (0, d.z)(() => ({
+        a = l.useRef(null),
+        [{ expansion: s }, r] = (0, u.z)(() => ({
             expansion: 0,
-            config: b,
+            config: T,
             onRest: () => {
-                null == i.current && n(null);
+                null == a.current && n(null);
             },
         })),
-        u = l.useCallback(
+        o = l.useCallback(
             (e) => {
-                ((i.current = e), null != e ? (n(e), s({ expansion: 4 })) : s({ expansion: 0 }));
+                ((a.current = e), null != e ? (n(e), r({ expansion: 4 })) : r({ expansion: 0 }));
             },
-            [s],
+            [r],
         ),
-        o = h.A.useConfig({ location: "useClipTimelineIndicators" }).enableGameEventsOnPlayer,
-        c = l.useMemo(() => (o ? e.filter((e) => null != e.game) : []), [e, o]),
-        g = l.useMemo(() => c.map((e, t) => ({ index: t, timeSec: e.timestamp_ms / 1e3, widthPx: C, gapPx: 4 })), [c]),
-        S = l.useCallback(
+        d = f.A.useConfig({ location: "useClipTimelineIndicators" }).enableGameEventsOnPlayer,
+        c = l.useMemo(() => (d ? e.filter((e) => null != e.game) : []), [e, d]),
+        p = l.useMemo(() => c.map((e, t) => ({ index: t, timeSec: e.timestamp_ms / 1e3, widthPx: C, gapPx: 4 })), [c]),
+        v = l.useCallback(
             (e, n) => {
                 let l,
-                    i,
-                    s = t === e.index,
-                    o = c[e.index];
-                if (null == o) return null;
-                let d = n > e.leftPx;
-                switch (o.game.type) {
-                    case p.Q_.MULTIKILL:
-                        ((i = v.intl.string(x.default.PMLPER)), (l = m.q));
+                    a,
+                    r = t === e.index,
+                    d = c[e.index];
+                if (null == d) return null;
+                let u = n > e.leftPx;
+                switch (d.game.type) {
+                    case g.Q_.MULTIKILL:
+                        ((a = x.intl.string(A.default.PMLPER)), (l = h.q));
                         break;
-                    case p.Q_.KILL:
-                        ((l = m.q), (i = v.intl.string(x.default.fYdqnM)));
+                    case g.Q_.KILL:
+                        ((l = h.q), (a = x.intl.string(A.default.fYdqnM)));
                         break;
-                    case p.Q_.DEATH:
-                        ((l = f.V), (i = v.intl.string(x.default.MhIx41)));
+                    case g.Q_.DEATH:
+                        ((l = m.V), (a = x.intl.string(A.default.MhIx41)));
                 }
-                return null == l || null == i
+                return null == l || null == a
                     ? null
-                    : (0, r.jsx)(A, {
+                    : (0, i.jsx)(E, {
                           ...e,
-                          activated: d,
+                          activated: u,
                           gapPx: 4,
-                          tooltip: i,
-                          expansionSpring: a,
-                          setHoveredIndex: u,
-                          isAnimated: s,
+                          tooltip: a,
+                          expansionSpring: s,
+                          setHoveredIndex: o,
+                          isAnimated: r,
                           icon: l,
                       });
             },
-            [t, c, u, a],
+            [t, c, o, s],
         );
-    return { indicators: g, animatingIndex: t, expansionSpring: a, hoverExpansionPx: 4, renderIndicator: S };
+    return { indicators: p, animatingIndex: t, expansionSpring: s, hoverExpansionPx: 4, renderIndicator: v };
 }

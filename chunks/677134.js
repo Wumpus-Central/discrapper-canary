@@ -1,4 +1,4 @@
-n.d(t, { contextMenuCallbackNative: () => a, contextMenuCallbackWeb: () => u, u: () => i });
+n.d(t, { contextMenuCallbackNative: () => a, contextMenuCallbackWeb: () => s, u: () => i });
 var l = n(477900);
 n(582128);
 var r = n(442433);
@@ -30,14 +30,14 @@ function a(e) {
         if ("none" === window.getComputedStyle(a).getPropertyValue("-webkit-user-select"))
             return void e.preventDefault();
         let i,
-            u,
             s,
+            u,
             o = e.target;
         for (; null != o;)
-            ("src" in o && null != o.src && (u = o.src),
-                "href" in o && null != o.href && ((i = o.href), (s = o.textContent)),
+            ("src" in o && null != o.src && (s = o.src),
+                "href" in o && null != o.href && ((i = o.href), (u = o.textContent)),
                 (o = o?.parentNode));
-        if (null != u)
+        if (null != s)
             return (0, r.L3)(e, async () => {
                 let { default: e } = await Promise.all([
                     n.e("948804"),
@@ -50,7 +50,7 @@ function a(e) {
                     n.e("944801"),
                     n.e("947260"),
                 ]).then(n.bind(n, 177079));
-                return (t) => (0, l.jsx)(e, { ...t, src: u ?? "" });
+                return (t) => (0, l.jsx)(e, { ...t, src: s ?? "" });
             });
         if (null != i)
             return (0, r.L3)(e, async () => {
@@ -63,7 +63,7 @@ function a(e) {
                     n.e("944801"),
                     n.e("605905"),
                 ]).then(n.bind(n, 945896));
-                return (t) => (0, l.jsx)(e, { ...t, href: i, textContent: s });
+                return (t) => (0, l.jsx)(e, { ...t, href: i, textContent: u });
             });
         if (null != t && "" !== t)
             return (0, r.L3)(e, async () => {
@@ -73,7 +73,7 @@ function a(e) {
     }
     return (e.preventDefault(), null);
 }
-function u(e) {
+function s(e) {
     let t = !1,
         n = e.target;
     if (n?.tagName === "INPUT" || n?.tagName === "TEXTAREA") t = !0;

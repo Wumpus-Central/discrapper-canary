@@ -5,16 +5,16 @@ var i = a(477900),
     s = a.n(l),
     r = a(607470),
     o = a(590251),
-    u = a(375708),
-    d = a(869006);
+    d = a(375708),
+    u = a(869006);
 function c(e) {
     let { item: t, size: a } = e,
         n = "exporting" === t.status,
         l = "uploading" === t.status ? Math.round(100 * t.progress) : 25;
     return (0, i.jsx)("div", {
-        className: s()(d.ring, d[a], { [d.indeterminate]: n }),
+        className: s()(u.ring, u[a], { [u.indeterminate]: n }),
         role: "progressbar",
-        "aria-label": u.intl.string(u.t.RFRuwZ),
+        "aria-label": d.intl.string(d.t.RFRuwZ),
         "aria-valuenow": n ? void 0 : l,
         children: (0, i.jsx)(o.a, {
             percent: l,
@@ -25,10 +25,10 @@ function c(e) {
 }
 var m = a(579460);
 function p(e) {
-    let { item: t, ringSize: a, isPlaying: l = !1, isMuted: o = !0, fit: u = "cover", onEnded: d, className: p } = e,
+    let { item: t, ringSize: a, isPlaying: l = !1, isMuted: o = !0, fit: d = "cover", onEnded: u, className: p } = e,
         g = n.useRef(null),
         h = "exporting" === t.status || "uploading" === t.status,
-        v = s()(m.Gt, { [m.ob]: h, [m.k6]: "contain" === u });
+        v = s()(m.Gt, { [m.ob]: h, [m.k6]: "contain" === d });
     return (
         n.useEffect(() => {
             let e = g.current;
@@ -49,8 +49,8 @@ function p(e) {
                               poster: t.thumbnailURL,
                               preload: "none",
                               muted: !0,
-                              loop: null == d,
-                              onEnded: d,
+                              loop: null == u,
+                              onEnded: u,
                               className: v,
                           })
                         : null

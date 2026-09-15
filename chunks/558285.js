@@ -1,4 +1,4 @@
-a.d(t, { A: () => u });
+a.d(t, { A: () => d });
 var i = a(256905),
     n = a(625494),
     l = a(652215);
@@ -19,19 +19,19 @@ async function r(e) {
 }
 async function o(e, t) {
     let { videoURL: a, thumbnailURL: i, title: s } = e,
-        { width: o, height: u } = await r(i);
+        { width: o, height: d } = await r(i);
     return {
         type: "VIDEO",
         url: a,
         proxyUrl: a,
         poster: i,
         width: o,
-        height: u,
+        height: d,
         alt: s,
         onEnded: t ? () => n._.dispatch(l.jej.MODAL_CAROUSEL_NEXT) : void 0,
     };
 }
-async function u(e) {
+async function d(e) {
     let { clips: t, startingIndex: a } = e;
     if (0 === t.length) return;
     let n = t.length > 1,

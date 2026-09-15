@@ -3,8 +3,8 @@ var l = n(477900),
     r = n(582128),
     i = n(503698),
     a = n.n(i),
-    u = n(319354),
-    s = n(84571),
+    s = n(319354),
+    u = n(84571),
     o = n(862482),
     c = n(866665),
     d = n(939249),
@@ -38,8 +38,8 @@ function I(e) {
             isActive: C = !1,
             tooltipPosition: x = "top",
             shouldShowTooltip: I = !0,
-            forceTooltipOpen: R = !1,
-            buttonRef: w,
+            forceTooltipOpen: w = !1,
+            buttonRef: R,
             grow: T,
             "aria-label": N,
             look: L,
@@ -47,14 +47,14 @@ function I(e) {
             size: b,
             color: k,
         } = e,
-        j = (0, s.O)(t);
+        j = (0, u.O)(t);
     return (0, l.jsx)(m.A, {
         children: (0, l.jsx)(c.m, {
             position: x,
             __unsupportedReactNodeAsText: t,
             ariaHidden: !0,
             shouldShow: I,
-            forceOpen: R,
+            forceOpen: w,
             children: (0, l.jsxs)(o.$n, {
                 "data-migration-pending": !0,
                 look: L ?? o.$n.Looks.BLANK,
@@ -78,12 +78,12 @@ function I(e) {
                 innerClassName: a()(S.NL, { [S.eq]: null != _ }),
                 className: a()({ [S.vu]: C }, h),
                 wrapperClassName: p,
-                buttonRef: w,
+                buttonRef: R,
                 grow: T,
                 "aria-label": N ?? j,
                 children: [
                     (0, l.jsx)(E, {
-                        size: u.E.md,
+                        size: s.E.md,
                         className: a()(g, { [S.pd]: null == _, [S.IW]: v, [S.vu]: C }),
                         color: y,
                     }),
@@ -93,7 +93,7 @@ function I(e) {
         }),
     });
 }
-let R = {
+let w = {
         disconnect: S.Zf,
         join: S.fj,
         red: S.wv,
@@ -105,7 +105,7 @@ let R = {
         activeLight: S.H3,
         premiumGradient: S.ck,
     },
-    w = {
+    R = {
         disconnect: S.Zf,
         join: S.fj,
         red: S.Xr,
@@ -122,8 +122,8 @@ function T(e) {
         n,
         i,
         {
-            ref: u,
-            color: s,
+            ref: s,
+            color: u,
             caretColor: o,
             caretAriaLabel: c,
             isActive: T = !1,
@@ -140,8 +140,8 @@ function T(e) {
             ((t = (0, g.bG)([A.Ay], () => A.Ay.getVoiceChannelId())),
             (n = (0, g.bG)([v.A], () => (null != t ? v.A.getMode(t) : null))),
             (i = (0, E.Ay)()),
-            null != s
-                ? s
+            null != u
+                ? u
                 : n === C._Of.VOICE && (0, y.q)(i)
                   ? T
                       ? "activeLight"
@@ -163,13 +163,13 @@ function T(e) {
             grow: !1,
             onContextMenu: F,
             iconClassName: a()(L, S.LF, G && S.Ns),
-            className: a()(D || O ? N : null, T && S.vu, S.wh, w[W], G && S.Sy, j && null != _ && !D && S.hA),
+            className: a()(D || O ? N : null, T && S.vu, S.wh, R[W], G && S.Sy, j && null != _ && !D && S.hA),
         });
     return D
         ? V
         : (0, l.jsxs)("div", {
-              ref: u,
-              className: a()(S.re, b && S.q6, N, K && [S.TD, R[W]]),
+              ref: s,
+              className: a()(S.re, b && S.q6, N, K && [S.TD, w[W]]),
               children: [
                   V,
                   null != _
@@ -177,7 +177,7 @@ function T(e) {
                             children: (0, l.jsx)(d.D, {
                                 "aria-label": c ?? x.intl.string(x.t.PdRCRg),
                                 onClick: k ? void 0 : _,
-                                className: a()(S.cd, j && S.Ml, w[o ?? W], b && [S.q6, S.vu], k && S.r9),
+                                className: a()(S.cd, j && S.Ml, R[o ?? W], b && [S.q6, S.vu], k && S.r9),
                                 children: (0, l.jsx)(h.A, { className: a()(S.gG, b && S.ho, k && S.r9) }),
                             }),
                         })

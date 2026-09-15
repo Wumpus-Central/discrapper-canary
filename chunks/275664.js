@@ -155,8 +155,8 @@ function y(e) {
             indicatorConfig: F,
             scrubPreviewCues: _,
             onIndicatorSeek: U,
-            getCurrentTimeSec: K,
-            "data-testid": $,
+            getCurrentTimeSec: $,
+            "data-testid": K,
         } = e,
         {
             contRef: O,
@@ -329,24 +329,24 @@ function y(e) {
         em = l.useRef(null),
         ef = l.useRef(null);
     l.useEffect(() => {
-        if (!a || null == K || A <= 0 || eu <= 0) return;
-        ((em.current = ed.current ?? K()), (ef.current = performance.now()));
+        if (!a || null == $ || A <= 0 || eu <= 0) return;
+        ((em.current = ed.current ?? $()), (ef.current = performance.now()));
         let e = 0;
         return (
             (e = requestAnimationFrame(function t() {
-                if (null == K) return;
+                if (null == $) return;
                 let n = performance.now(),
                     r = ef.current;
                 ef.current = n;
                 let l = em.current;
                 if (null != l) {
                     l += null != r ? (n - r) / 1e3 : 0;
-                    let e = K();
+                    let e = $();
                     if (null != e && Number.isFinite(e)) {
                         let t = e - l;
                         l = Math.abs(t) > 0.5 ? e : l + 0.1 * t;
                     }
-                } else l = K() ?? null;
+                } else l = $() ?? null;
                 (null != l &&
                     Number.isFinite(l) &&
                     ((em.current = l),
@@ -358,18 +358,18 @@ function y(e) {
                 (cancelAnimationFrame(e), (em.current = null), (ef.current = null));
             }
         );
-    }, [a, K, A, eu, eo]);
-    let eh = a && null != K && A > 0;
+    }, [a, $, A, eu, eo]);
+    let eh = a && null != $ && A > 0;
     l.useEffect(() => {
         let e;
         if (!eh) {
-            if (null != K && A > 0 && eu > 0) {
-                let t = K();
+            if (null != $ && A > 0 && eu > 0) {
+                let t = $();
                 null != t && Number.isFinite(t) && ((ed.current = t), (e = Math.min(Math.max(0, (t / A) * eu), eu)));
             }
             (null == e && (e = null == ei || Number.isNaN(ei) ? 0 : ei), eo({ playbackPxSpring: e, immediate: !0 }));
         }
-    }, [ei, eh, eo, K, A, eu]);
+    }, [ei, eh, eo, $, A, eu]);
     let ep = A > 1,
         ev = F?.indicators,
         ex = l.useMemo(() => {
@@ -427,7 +427,7 @@ function y(e) {
     return (0, r.jsx)("div", {
         className: g.jD,
         ref: O,
-        "data-testid": $,
+        "data-testid": K,
         style: {
             "--custom-timeline-height": `${null != M && X ? M : R}px`,
             "--custom-initial-timeline-height": `${L}px`,

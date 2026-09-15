@@ -1,4 +1,4 @@
-n.d(t, { A: () => u, o: () => a });
+n.d(t, { A: () => s, o: () => a });
 var l = n(477900),
     r = n(582128),
     i = n(461782);
@@ -14,15 +14,15 @@ function a(e) {
         onActive: l,
     };
 }
-function u(e) {
+function s(e) {
     let { children: t, className: n } = e,
-        { preventIdle: i, allowIdle: u } = a("interact-hover"),
-        { preventIdle: s, allowIdle: o } = a("interact-focus");
+        { preventIdle: i, allowIdle: s } = a("interact-hover"),
+        { preventIdle: u, allowIdle: o } = a("interact-focus");
     r.useEffect(
         () => () => {
-            (u(), o());
+            (s(), o());
         },
-        [u, o],
+        [s, o],
     );
     let c = r.useCallback(
         (e) => {
@@ -31,5 +31,5 @@ function u(e) {
         },
         [o],
     );
-    return (0, l.jsx)("div", { className: n, onMouseEnter: i, onMouseLeave: u, onFocus: s, onBlur: c, children: t });
+    return (0, l.jsx)("div", { className: n, onMouseEnter: i, onMouseLeave: s, onFocus: u, onBlur: c, children: t });
 }

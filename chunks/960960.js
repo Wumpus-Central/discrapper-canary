@@ -1,12 +1,12 @@
-l.d(t, { A: () => c });
-var i = l(17928),
-    n = l(228366);
+l.d(t, { A: () => d });
+var n = l(17928),
+    i = l(228366);
 let a = {};
 function s(e) {
     let t = a[e];
     return (null == t && ((t = { fetchStatus: "idle" }), (a[e] = t)), t);
 }
-class r extends i.Ay.Store {
+class r extends n.Ay.Store {
     static displayName = "GuildSpaceCatalogStore";
     getWidgets(e) {
         return a[e]?.widgets;
@@ -18,15 +18,15 @@ class r extends i.Ay.Store {
         return a[e]?.fetchStatus ?? "idle";
     }
 }
-let c = new r(n.h, {
+let d = new r(i.h, {
     GUILD_SPACE_CATALOG_FETCH_START: function (e) {
         let { guildId: t } = e;
         s(t).fetchStatus = "loading";
     },
     GUILD_SPACE_CATALOG_FETCH_SUCCESS: function (e) {
         let { guildId: t, widgets: l } = e,
-            i = s(t);
-        ((i.widgets = l), (i.fetchStatus = "success"));
+            n = s(t);
+        ((n.widgets = l), (n.fetchStatus = "success"));
     },
     GUILD_SPACE_CATALOG_FETCH_FAILURE: function (e) {
         let { guildId: t } = e;

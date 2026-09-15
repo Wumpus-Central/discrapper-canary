@@ -1,10 +1,10 @@
 (n.d(t, {
     $x: () => T,
     AO: () => x,
-    MO: () => w,
+    MO: () => R,
     YB: () => C,
     oI: () => S,
-    p9: () => R,
+    p9: () => w,
     sl: () => I,
     uK: () => _,
     vr: () => b,
@@ -16,8 +16,8 @@ var l = n(435558),
     r = n.n(l),
     i = n(636537),
     a = n(228366),
-    u = n(157559),
-    s = n(268429),
+    s = n(157559),
+    u = n(268429),
     o = n(597643),
     c = n(773669),
     d = n(594061),
@@ -61,7 +61,7 @@ async function S(e, t) {
 async function I(e) {
     await i.Bo.del({ url: y.Rsh.GUILD_STICKER(e.guild_id, e.id), rejectWithError: (0, i.fT)() });
 }
-async function R(e) {
+async function w(e) {
     let { guildId: t } = e,
         n = await i.Bo.post({
             url: y.Rsh.GUILD_STICKER_PACKS(t),
@@ -78,7 +78,7 @@ async function R(e) {
                 "mobile" === e.platform
                     ? [{ name: "file", file: { uri: e.uri, name: e.name, type: e.mimeType } }]
                     : void 0,
-            headers: s.A.buildHeadersForMd5(e.originalMd5),
+            headers: u.A.buildHeadersForMd5(e.originalMd5),
             rejectWithError: (0, i.fT)(),
         });
     return (
@@ -90,7 +90,7 @@ async function R(e) {
         n.body
     );
 }
-async function w(e, t, n) {
+async function R(e, t, n) {
     return (await i.Bo.patch({ url: y.Rsh.GUILD_STICKER(e, t), body: n, rejectWithError: (0, i.fT)() })).body;
 }
 function T(e, t, n) {
@@ -107,7 +107,7 @@ function _(e) {
         "favoriteStickers",
         (t) =>
             ((t.stickerIds = L(t.stickerIds)), r().size(t.stickerIds) >= 250)
-                ? (u.A.show({
+                ? (s.A.show({
                       title: v.intl.string(v.t["+XYXtZ"]),
                       body: v.intl.formatToPlainString(v.t.JaIyFi, { count: 250 }),
                   }),
