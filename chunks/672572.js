@@ -13,5 +13,6 @@ _.exports = {
     gr: "oneColumnCoverArtStoreLinksSummaryContainer__8e830",
     E1: "oneColumnStoreLinksSummaryContainer__8e830",
     lM: "twoColumnLeftMediaSummaryContainer__8e830",
+    g5: "summaryText__8e830",
     oC: "twoColumnLeftSections__8e830",
 };

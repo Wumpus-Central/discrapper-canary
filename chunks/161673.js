@@ -2848,7 +2848,13 @@ function lP(e) {
     return (0, i.jsxs)("div", {
         className: r()(tv.fi, tv.mX),
         children: [
-            (0, i.jsx)(q.E, { ref: l, lineClamp: s ? void 0 : u, variant: "text-md/medium", children: t.description }),
+            (0, i.jsx)(q.E, {
+                ref: l,
+                className: tv.g5,
+                lineClamp: s ? void 0 : u,
+                variant: "text-md/medium",
+                children: t.description,
+            }),
             c && (0, i.jsx)(lG.Q, { onClick: o, text: m }),
         ],
     });
