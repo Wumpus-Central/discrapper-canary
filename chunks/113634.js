@@ -913,6 +913,9 @@ class eE extends S.A {
                             jitterBufferPreferred: n ?? i.lastJitterBufferTarget,
                             audioJitterBufferSamples: null != t ? [t] : [],
                             audioJitterTargetSamples: null != n ? [n] : [],
+                            totalProcessingDelay: e.totalProcessingDelay,
+                            totalSamplesReceived: e.totalSamplesReceived,
+                            totalSamplesDuration: e.totalSamplesDuration,
                         }));
                 } else if ("video" === e.kind) {
                     null == E[s] && (E[s] = []);
@@ -939,6 +942,7 @@ class eE extends S.A {
                         totalFramesDuration: 1e3 * (e.totalInterFrameDelay ?? 0),
                         sumOfSquaredFramesDurations: e.totalSquaredInterFrameDelay,
                         qpSum: e.qpSum,
+                        totalProcessingDelay: e.totalProcessingDelay,
                         decoderImplementationName: e.decoderImplementation ?? "WebRTC",
                         powerEfficientDecoder: e.powerEfficientDecoder,
                     });
