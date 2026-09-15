@@ -187,6 +187,7 @@ function H(e) {
                 !u.A.hasCompletedActionForChannel(n.id, i.id)),
         can_send_message: S.A.can(E.xBc.SEND_MESSAGES, r),
         is_app_dm: !1,
+        ...(r.type === E.rbe.GUILD_APP && null != r.application_id ? { application_id: r.application_id } : null),
     };
 }
 function j(e) {
