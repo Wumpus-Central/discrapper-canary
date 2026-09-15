@@ -17,7 +17,7 @@ function f(t, n) {
     let E = _ ? s.KX : s.SY;
     (0, l.openModalLazy)(
         async () => {
-            let { default: t } = await Promise.all([i.e("711562"), i.e("265480"), i.e("171202"), i.e("845210")]).then(
+            let { default: t } = await Promise.all([i.e("265480"), i.e("971508"), i.e("845210")]).then(
                 i.bind(i, 331617),
             );
             return (n) => (0, r.jsx)(t, { ...d, ...n });

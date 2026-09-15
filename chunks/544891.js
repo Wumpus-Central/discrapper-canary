@@ -1,10 +1,7 @@
-_.exports = {
-    iE: "wrapper__30359",
-    c8: "heroImage__30359",
-    b: "closeButton__30359",
-    R_: "heading__30359",
+e.exports = {
     md: "perks__30359",
-    qr: "footer__30359",
-    wx: "header__30359",
-    o4: "subtitleText__30359",
+    bK: "perkRow__30359",
+    kf: "perkIcon__30359",
+    uL: "perkText__30359",
+    Pg: "featurePreview__30359",
 };
