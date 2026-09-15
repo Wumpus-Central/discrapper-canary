@@ -51,6 +51,11 @@
     --background-gradient-lowest: var(--background-gradient-chat)
 }
 
+.notice_ea1c21 {
+    text-align: start;
+    width: 100%
+}
+
 .glowMask__16f18 {
     border-radius: var(--custom-vibegrations-glow-radius, var(--radius-sm));
     inset: 0;
@@ -476,4 +481,4 @@
     text-align: center
 }
 
-/*# sourceMappingURL=ebe70170fc6a325f.css.map*/
+/*# sourceMappingURL=21c1ddcd269568bd.css.map*/
