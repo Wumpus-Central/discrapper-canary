@@ -1180,6 +1180,7 @@ async function eF() {
                 minidump_exception_module_version: s?.exceptionModuleVersion ?? null,
                 minidump_exception_module_code_id: s?.exceptionModuleCodeId ?? null,
                 minidump_exception_thread_name: s?.exceptionThreadName ?? null,
+                minidump_exception_stacktrace: s?.exceptionStacktrace ?? null,
                 ...a,
             };
         })(s, l, a);
@@ -1463,7 +1464,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e2 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eV.A().log(
-    `[BUILD INFO] Release Channel: ${e2}, Build Number: 613427, Version Hash: de2a947f8ca15c1bdebd00747419ea3017da580f`,
+    `[BUILD INFO] Release Channel: ${e2}, Build Number: 613433, Version Hash: 88cf7f4c92e0a9e47801090850c9753b7a69dd7b`,
 ),
     D.A.setTags({ appContext: G.QCW }),
     eh.A.initBasic(),
@@ -21419,7 +21420,7 @@ let NP = "isHideDevBanner",
                     className: ta()(NM.Wz, NM.mr),
                     children: [
                         (0, O.jsx)(Nb, { className: NM.Kk }),
-                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "613427" }),
+                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "613433" }),
                         (0, O.jsx)(r, {}),
                     ],
                 })
