@@ -25,39 +25,39 @@ var s = n(477900),
     m = n(104886),
     Q = n(866157),
     R = n(291749),
-    p = n(18437),
-    v = n(590202),
-    P = n(971649),
-    h = n(901406),
-    D = n(792620),
-    j = n(73473),
-    U = n(130490),
-    q = n(818348),
-    M = n(375708),
+    P = n(18437),
+    D = n(590202),
+    p = n(971649),
+    v = n(901406),
+    h = n(792620),
+    U = n(73473),
+    j = n(130490),
+    M = n(818348),
+    q = n(375708),
     b = n(175276);
 function w(t) {
     let { quest: e, transitionState: n, onClose: o, sourceQuestContent: I, refreshOnOpen: T = !1 } = t,
         f = (0, g.O)((t) => t.getErrorHints(e.id)),
         O = (0, i.useRef)(!1),
-        j = (0, Q.UX)(),
-        w = (0, p.Ut)(),
-        W = (0, P.vU)()?.getId(),
-        z = (0, u.bG)([_.Ay], () => _.Ay.useReducedMotion),
-        V = (0, U.Xf)({ useReducedMotion: z, className: b.Zf }),
-        F = f.filter((t) => ["xbox", "playstation"].includes(t.connected_account_type)),
-        X = (0, D.YL)(e),
+        U = (0, Q.UX)(),
+        w = (0, P.Ut)(),
+        W = (0, p.vU)()?.getId(),
+        X = (0, u.bG)([_.Ay], () => _.Ay.useReducedMotion),
+        z = (0, j.Xf)({ useReducedMotion: X, className: b.Zf }),
+        V = f.filter((t) => ["xbox", "playstation"].includes(t.connected_account_type)),
+        F = (0, h.YL)(e),
         K = (0, u.bG)([N.A], () => N.A.getState().theme),
-        B = (0, c.M)(K) ? q.NJ.DARK : q.NJ.LIGHT,
+        B = (0, c.M)(K) ? M.NJ.DARK : M.NJ.LIGHT,
         { startConsoleQuest: Y, startingConsoleQuest: G } = (0, Q.Wj)({
             questId: e.id,
             beforeRequest: () => {
-                (V.startAnimation(),
+                (z.startAnimation(),
                     (0, m.E5)(m.kI.STEP_2_CLICKED_INTERNAL, "quest_console_connection_errors_modal")
                         ? (0, L.r)({
                               type: y.F.CLICK_INTERNAL,
                               adCreativeType: a.p.QUEST,
                               adCreativeId: e.id,
-                              questContentCTA: v.Cy.DEFIBRILLATOR,
+                              questContentCTA: D.Cy.DEFIBRILLATOR,
                               surfaceId: S.uF.CONNECTIONS_MODAL,
                               sourceQuestContent: I,
                               impressionId: W,
@@ -65,12 +65,12 @@ function w(t) {
                         : w({
                               questId: e.id,
                               questContent: S.uF.CONNECTIONS_MODAL,
-                              questContentCTA: v.Cy.DEFIBRILLATOR,
+                              questContentCTA: D.Cy.DEFIBRILLATOR,
                               sourceQuestContent: I,
                           }));
             },
             afterRequest: () => {
-                V.stopAnimation();
+                z.stopAnimation();
             },
         });
     return (
@@ -80,25 +80,25 @@ function w(t) {
         (0, s.jsx)(l.Modal, {
             transitionState: n,
             onClose: o,
-            title: M.intl.string(M.t.W5lmKt),
-            subtitle: j.message,
+            title: q.intl.string(q.t.W5lmKt),
+            subtitle: U.message,
             actions: [
                 {
                     variant: "secondary",
                     onClick: () =>
                         void (o(),
-                        (0, h.b6)(
+                        (0, v.b6)(
                             { quest: e },
                             {
                                 content: S.uF.CONNECTIONS_MODAL,
-                                ctaContent: v.Cy.VIEW_CONSOLE_CONNECTIONS_LINK,
+                                ctaContent: D.Cy.VIEW_CONSOLE_CONNECTIONS_LINK,
                                 impressionId: W,
                                 sourceQuestContent: I,
                             },
                         )),
-                    text: M.intl.string(M.t["qiS+xj"]),
+                    text: q.intl.string(q.t["qiS+xj"]),
                 },
-                { variant: "primary", onClick: () => o(), text: M.intl.string(M.t.cpT0Cq) },
+                { variant: "primary", onClick: () => o(), text: q.intl.string(q.t.cpT0Cq) },
             ],
             children: (0, s.jsxs)(s.Fragment, {
                 children: [
@@ -108,18 +108,18 @@ function w(t) {
                             (0, s.jsx)(d.E, {
                                 variant: "eyebrow",
                                 color: "text-default",
-                                children: M.intl.string(M.t["+/hZM/"]),
+                                children: q.intl.string(q.t["+/hZM/"]),
                             }),
                             (0, s.jsxs)(E.D, {
                                 className: r()(b.Tm, { [b.r9]: G }),
                                 onClick: Y,
                                 children: [
-                                    V.render(),
+                                    z.render(),
                                     (0, s.jsx)(d.E, {
                                         variant: "text-sm/medium",
                                         color: "currentColor",
                                         className: b.Zf,
-                                        children: M.intl.string(M.t.wzzjk9),
+                                        children: q.intl.string(q.t.wzzjk9),
                                     }),
                                 ],
                             }),
@@ -128,12 +128,12 @@ function w(t) {
                     (0, s.jsxs)("div", {
                         className: b.ei,
                         children: [
-                            (0, s.jsx)(k, { icon: (0, s.jsx)(x.k, { size: "sm" }), text: M.intl.string(M.t.br3uIi) }),
+                            (0, s.jsx)(k, { icon: (0, s.jsx)(x.k, { size: "sm" }), text: q.intl.string(q.t.br3uIi) }),
                             (0, s.jsx)(k, {
                                 icon: (0, s.jsx)(A.GameControllerIcon, { size: "sm" }),
-                                text: M.intl.string(M.t.XF4wuA),
-                                errors: X ? void 0 : F.map((t) => t.message),
-                                gameTile: X
+                                text: q.intl.string(q.t.XF4wuA),
+                                errors: F ? void 0 : V.map((t) => t.message),
+                                gameTile: F
                                     ? (0, s.jsx)(C.m, {
                                           "aria-label": e.config.messages.gameTitle,
                                           __unsupportedReactNodeAsText: (0, s.jsxs)("div", {
@@ -146,7 +146,7 @@ function w(t) {
                                                   (0, s.jsx)(d.E, {
                                                       variant: "text-xs/normal",
                                                       color: "text-muted",
-                                                      children: M.intl.string(M.t.STpNEC),
+                                                      children: q.intl.string(q.t.STpNEC),
                                                   }),
                                               ],
                                           }),
@@ -218,7 +218,7 @@ function W(t) {
     (0, O.openModalLazy)(async () => {
         let { default: e } = await Promise.resolve().then(n.bind(n, 988436));
         return function (n) {
-            return (0, s.jsx)(j.R, {
+            return (0, s.jsx)(U.R, {
                 overrideVisibility: !0,
                 questOrQuests: t.quest,
                 questContent: S.uF.CONNECTIONS_MODAL,

@@ -1,21 +1,21 @@
-l.d(t, { e: () => a });
-var n = l(477900);
+l.d(t, { e: () => i });
+var s = l(477900);
 l(582128);
-var r = l(834730),
-    s = l(202541),
-    i = l(375708);
-function a(e) {
+var n = l(834730),
+    a = l(202541),
+    r = l(375708);
+function i(e) {
     let t,
-        { premiumType: l, size: a, className: u, tag: c = "span", ...o } = e;
+        { premiumType: l, size: i, className: c, tag: d = "span", ...u } = e;
     switch (l) {
-        case s.PremiumTypes.TIER_0:
-            t = i.intl.string(i.t["t9uG/o"]);
+        case a.PremiumTypes.TIER_0:
+            t = r.intl.string(r.t["t9uG/o"]);
             break;
-        case s.PremiumTypes.TIER_1:
-            t = i.intl.string(i.t.FSOz78);
+        case a.PremiumTypes.TIER_1:
+            t = r.intl.string(r.t.FSOz78);
             break;
-        case s.PremiumTypes.TIER_2:
-            t = i.intl.string(i.t.lG6a5x);
+        case a.PremiumTypes.TIER_2:
+            t = r.intl.string(r.t.lG6a5x);
     }
-    return (0, n.jsx)(r.E, { tag: c, variant: `nitro-${a}`, className: u, ...o, children: t });
+    return (0, s.jsx)(n.E, { tag: d, variant: `nitro-${i}`, className: c, ...u, children: t });
 }

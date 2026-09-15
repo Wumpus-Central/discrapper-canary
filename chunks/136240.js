@@ -10,8 +10,8 @@ var l = n(477900),
     d = n(721836),
     m = n(132500),
     p = n(444927),
-    C = n(38405),
-    h = n(120700),
+    h = n(38405),
+    C = n(120700),
     f = n(17928),
     E = n(228366),
     S = n(277984),
@@ -59,9 +59,9 @@ let A = (e) => {
             setHasAddedPaymentSourceThisSession: e.setHasAddedPaymentSourceThisSession,
         })),
         p = i.useRef(!1),
-        C = i.useRef(!1),
-        h = i.useCallback(() => {
-            if (!p.current && !C.current) {
+        h = i.useRef(!1),
+        C = i.useCallback(() => {
+            if (!p.current && !h.current) {
                 if (I(o, { paymentSources: s, eligiblePaymentGateways: r })) {
                     (u(o), (p.current = !0));
                     return;
@@ -78,12 +78,12 @@ let A = (e) => {
             }
         }, [t, n, l, r, u, o]);
     i.useEffect(() => {
-        a ? h() : (0, S.$o)();
-    }, [a, h]);
+        a ? C() : (0, S.$o)();
+    }, [a, C]);
     let f = i.useCallback(
         (e) => {
             let { paymentSource: t } = e;
-            ((C.current = !0), m(), c(t.id), u(t.id));
+            ((h.current = !0), m(), c(t.id), u(t.id));
         },
         [u, c, m],
     );
@@ -130,16 +130,16 @@ function v(e) {
         null
     );
 }
-var _ = n(800342),
-    x = n(328968),
+var x = n(800342),
+    _ = n(328968),
     T = n(202541);
 function N() {
     let e = (0, d.t4)((e) => e.skuIds),
         t = i.useMemo(() => e.filter((e) => !T.oz.includes(e)), [e]),
-        n = (0, f.bG)([x.A], () => t.filter((e) => null == x.A.getForSKU(e) && !x.A.isFetchingForSKU(e)), [t]);
+        n = (0, f.bG)([_.A], () => t.filter((e) => null == _.A.getForSKU(e) && !_.A.isFetchingForSKU(e)), [t]);
     return (
         i.useEffect(() => {
-            for (let e of n) (0, _.QB)(e);
+            for (let e of n) (0, x.QB)(e);
         }, [n]),
         null
     );
@@ -164,7 +164,7 @@ function k() {
             priceOptions: c,
             selectedSkuId: m,
             paymentSourceId: p,
-            setPurchasePreviewError: C,
+            setPurchasePreviewError: h,
         } = (0, d.t4)((e) => ({
             purchaseState: e.purchaseState,
             applicationId: e.applicationId,
@@ -175,7 +175,7 @@ function k() {
             paymentSourceId: e.paymentSourceId,
             setPurchasePreviewError: e.setPurchasePreviewError,
         })),
-        h = u === b.h.PURCHASING || u === b.h.COMPLETED;
+        C = u === b.h.PURCHASING || u === b.h.COMPLETED;
     (0, j.c)({ applicationId: s, skuIDs: o });
     let [f, E] =
         ((e = i.useMemo(
@@ -185,9 +185,9 @@ function k() {
                 paymentSourceId: p,
                 isGift: a,
                 currency: c.loaded ? c.currency : void 0,
-                preventFetch: h,
+                preventFetch: C,
             }),
-            [s, m, p, a, c, h],
+            [s, m, p, a, c, C],
         )),
         (t = (0, i.useRef)(e)),
         (n = (0, i.useRef)(!1)),
@@ -214,8 +214,8 @@ function k() {
     return (
         (0, L.F)(f, E),
         i.useEffect(() => {
-            C(E);
-        }, [E, C]),
+            h(E);
+        }, [E, h]),
         null
     );
 }
@@ -573,7 +573,7 @@ function ed() {
 }
 var em = n(741923),
     ep = n(504275);
-function eC() {
+function eh() {
     return (
         !(function () {
             let e = (0, u.s2)(),
@@ -586,12 +586,12 @@ function eC() {
         null
     );
 }
-let eh = [
-    h.C.PREMIUM_CHECKOUT,
-    h.C.GUILD_ROLE_CHECKOUT,
-    h.C.PREMIUM_APPS_SUBSCRIPTION_CHECKOUT,
-    h.C.GUILD_BOOST_CHECKOUT,
-    h.C.GAME_SERVER_SUBSCRIPTION_CHECKOUT,
+let eC = [
+    C.C.PREMIUM_CHECKOUT,
+    C.C.GUILD_ROLE_CHECKOUT,
+    C.C.PREMIUM_APPS_SUBSCRIPTION_CHECKOUT,
+    C.C.GUILD_BOOST_CHECKOUT,
+    C.C.GAME_SERVER_SUBSCRIPTION_CHECKOUT,
 ];
 function ef(e) {
     var t, n;
@@ -600,15 +600,15 @@ function ef(e) {
         E = (0, p.A)(() => {
             let e = c?.id ?? a ?? (0, m.A)();
             return (
-                C.A.addBreadcrumb({ message: `Checkout session ID: ${e}` }),
+                h.A.addBreadcrumb({ message: `Checkout session ID: ${e}` }),
                 { loadId: e, discoverySessionId: s, startTime: Date.now() }
             );
         }),
         {
             initialCheckoutPaymentSourceId: S,
             defaultPaymentSourceId: P,
-            eligiblePaymentGateways: _,
-            hasFetchedPaymentSources: x,
+            eligiblePaymentGateways: x,
+            hasFetchedPaymentSources: _,
             paymentSources: T,
             hasPaymentSources: b,
         } = (function (e) {
@@ -656,7 +656,7 @@ function ef(e) {
                 startingPremiumSubscriptionPlanId: null != r.activeSubscription ? r.activeSubscription?.planId : null,
             };
             return (
-                x && (e.startedPaymentFlowWithPaymentSources = b),
+                _ && (e.startedPaymentFlowWithPaymentSources = b),
                 (0, d.y$)({
                     checkoutInitParameters: r,
                     startingValues: e,
@@ -679,16 +679,16 @@ function ef(e) {
         i.useEffect(() => {
             j.getState().setCheckoutInitParameters(r);
         }, [j, r]));
-    let M = ((t = r.purchaseType), null != (n = r.unifiedCheckoutFlow) && t === J.VVm.SUBSCRIPTION && eh.includes(n)),
-        O = r.unifiedCheckoutFlow === h.C.GUILD_ROLE_CHECKOUT,
-        L = r.purchaseType === J.VVm.ONE_TIME && r.unifiedCheckoutFlow !== h.C.ORB_CHECKOUT;
+    let M = ((t = r.purchaseType), null != (n = r.unifiedCheckoutFlow) && t === J.VVm.SUBSCRIPTION && eC.includes(n)),
+        O = r.unifiedCheckoutFlow === C.C.GUILD_ROLE_CHECKOUT,
+        L = r.purchaseType === J.VVm.ONE_TIME && r.unifiedCheckoutFlow !== C.C.ORB_CHECKOUT;
     return (0, l.jsxs)(d.Ni, {
         value: j,
         children: [
-            (0, l.jsx)(v, { hasFetchedPaymentSources: x, hasPaymentSources: b }),
-            (0, l.jsx)(eC, {}),
+            (0, l.jsx)(v, { hasFetchedPaymentSources: _, hasPaymentSources: b }),
+            (0, l.jsx)(eh, {}),
             (0, l.jsx)(ei, {}),
-            r.unifiedCheckoutFlow !== h.C.ORB_CHECKOUT && (0, l.jsx)(ed, {}),
+            r.unifiedCheckoutFlow !== C.C.ORB_CHECKOUT && (0, l.jsx)(ed, {}),
             (0, l.jsx)(X, {}),
             (0, l.jsx)(es, {}),
             (0, l.jsx)(K, {}),
@@ -697,8 +697,8 @@ function ef(e) {
                 isGift: r.isGift,
                 activeSubscription: r.activeSubscription,
                 defaultPaymentSourceId: P,
-                eligiblePaymentGateways: _,
-                hasFetchedPaymentSources: x,
+                eligiblePaymentGateways: x,
+                hasFetchedPaymentSources: _,
                 paymentSources: T,
                 initialPaymentSourceId: r.initialPaymentSourceId,
             }),
@@ -722,8 +722,8 @@ function eS(e) {
         } = e,
         m = JSON.stringify(d.skuIDs),
         p = i.useMemo(() => d.skuIDs, [m]),
-        C = (0, a.$w)(),
-        h = i.useMemo(
+        h = (0, a.$w)(),
+        C = i.useMemo(
             () => ({
                 skuIds: p,
                 isGift: d.isGift ?? !1,
@@ -734,7 +734,7 @@ function eS(e) {
                 purchaseType: o,
                 defaultPlanId: d.defaultPlanId,
                 referralCode: d.referralCode,
-                customCheckoutFlow: c ?? C,
+                customCheckoutFlow: c ?? h,
                 unifiedCheckoutFlow: d.unifiedCheckoutFlow,
                 paymentGateway: d.paymentGateway,
                 applicationId: d.applicationId ?? T.tv,
@@ -752,7 +752,7 @@ function eS(e) {
                 d.defaultPlanId,
                 d.referralCode,
                 c,
-                C,
+                h,
                 d.unifiedCheckoutFlow,
                 d.paymentGateway,
                 d.tenantParamsMap,
@@ -764,7 +764,7 @@ function eS(e) {
         children: (0, l.jsx)(ef, {
             loadId: r,
             discoverySessionId: s,
-            checkoutInitParameters: h,
+            checkoutInitParameters: C,
             children: (0, l.jsx)(ey, { ...d, skuIDs: p, purchaseType: o }),
         }),
     });
@@ -773,8 +773,8 @@ function ey(e) {
     let { errorHandlingBehavior: t = "close-and-alert", onErrorReported: n, skuIDs: a, children: m } = e,
         { paymentSources: p } = (0, o.j)(),
         {
-            contextMetadata: C,
-            unifiedCheckoutFlow: h,
+            contextMetadata: h,
+            unifiedCheckoutFlow: C,
             purchaseType: f,
             isGift: E,
             selectedSkuId: S,
@@ -793,24 +793,24 @@ function ey(e) {
         })),
         A = null != I && null != p[I] ? p[I]?.type : null,
         P = i.useMemo(
-            () => ({ payment_source_id: I, payment_gateway: g, payment_source_type: A, checkout_flow: h, is_gift: E }),
-            [I, g, A, h, E],
+            () => ({ payment_source_id: I, payment_gateway: g, payment_source_type: A, checkout_flow: C, is_gift: E }),
+            [I, g, A, C, E],
         ),
         v = (0, r.Db)(),
-        _ = (0, u.BQ)();
+        x = (0, u.BQ)();
     return (0, l.jsx)(c.yv, {
         children: (0, l.jsx)(eE.R, {
             children: (0, l.jsx)(s.j, {
                 errorHandlingBehavior: t,
                 locationStack: v,
                 onErrorReported: n,
-                loadId: C.loadId,
+                loadId: h.loadId,
                 selectedSkuId: S ?? null,
                 selectedPlanId: y ?? null,
                 isGift: E,
                 skuIds: a,
                 purchaseType: f,
-                checkoutStepsHistory: _,
+                checkoutStepsHistory: x,
                 additionalAnalyticsData: P,
                 children: m,
             }),

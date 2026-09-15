@@ -1,4 +1,4 @@
-n.d(t, { A: () => R, s: () => x });
+n.d(t, { A: () => b, s: () => h });
 var r = n(477900);
 n(582128);
 var i = n(503698),
@@ -7,29 +7,29 @@ var i = n(503698),
     a = n(866665),
     o = n(812993),
     u = n(926321),
-    c = n(318254),
-    d = n(287809),
-    f = n(158045),
-    I = n(590180),
+    d = n(318254),
+    c = n(287809),
+    I = n(158045),
+    f = n(590180),
     p = n(298072),
     g = n(993408),
     A = n(466459),
     v = n(623373),
-    C = n(561769),
-    m = n(57020),
-    _ = n(375708),
-    h = n(31005);
-function x(e) {
+    x = n(561769),
+    C = n(57020),
+    m = n(375708),
+    _ = n(31005);
+function h(e) {
     let { className: t } = e;
     return (0, r.jsx)(a.m, {
-        text: _.intl.string(_.t.dCou7i),
+        text: m.intl.string(m.t.dCou7i),
         children: (0, r.jsx)(o.Lp, {
             disableColor: !0,
-            className: s()(t, h.$, h.C),
+            className: s()(t, _.$, _.C),
             text: (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)(u.DiceIcon, { size: "xxs", color: "currentColor" }),
-                    _.intl.string(_.t["+drfVi"]),
+                    m.intl.string(m.t["+drfVi"]),
                 ],
             }),
         }),
@@ -38,62 +38,62 @@ function x(e) {
 function E(e) {
     let { product: t, badgeOverride: n, productBadgeOverride: i, className: a, prioritizedCurrency: u } = e,
         { isPurchased: p, isPartiallyOwnedBundle: E } = (0, A.h)(t),
-        R = (0, g.G0)(t),
-        k = (0, l.bG)([I.A], () => I.A.getCategoryForProduct(t.skuId)),
-        b = k?.unpublishedAt != null ? (0, g.WU)(k.unpublishedAt) : null,
-        y = (0, l.bG)([d.default], () => d.default.getCurrentUser()),
-        S = f.Ay.canUseShopDiscounts(y),
-        { isOrbExclusive: T } = (0, m.F)({ product: t, hasShopDiscount: S, prioritizedCurrency: u }),
+        b = (0, g.G0)(t),
+        R = (0, l.bG)([f.A], () => f.A.getCategoryForProduct(t.skuId)),
+        k = R?.unpublishedAt != null ? (0, g.WU)(R.unpublishedAt) : null,
+        y = (0, l.bG)([c.default], () => c.default.getCurrentUser()),
+        T = I.Ay.canUseShopDiscounts(y),
+        { isOrbExclusive: S } = (0, C.F)({ product: t, hasShopDiscount: T, prioritizedCurrency: u }),
         j = n;
     if (
         (null == j &&
             (null != i
-                ? (j = C.AW.BADGE_OVERRIDE)
+                ? (j = x.AW.BADGE_OVERRIDE)
                 : (0, v.JQ)(t)
-                  ? (j = C.AW.DYNAMIC)
-                  : (0, g.HF)(k?.unpublishedAt)
-                    ? (j = C.AW.LIMITED_TIME)
+                  ? (j = x.AW.DYNAMIC)
+                  : (0, g.HF)(R?.unpublishedAt)
+                    ? (j = x.AW.LIMITED_TIME)
                     : !E && !p && (0, g.aT)(t.skuId)
-                      ? (j = C.AW.NEW)
-                      : T
-                        ? (j = C.AW.ORBS_EXCLUSIVE)
-                        : R && (j = C.AW.NITRO_EXCLUSIVE)),
-        null == j || j === C.AW.NONE)
+                      ? (j = x.AW.NEW)
+                      : S
+                        ? (j = x.AW.ORBS_EXCLUSIVE)
+                        : b && (j = x.AW.NITRO_EXCLUSIVE)),
+        null == j || j === x.AW.NONE)
     )
         return null;
-    if (j === C.AW.DYNAMIC) return (0, r.jsx)(x, { className: a });
-    if (j === C.AW.ORBS_EXCLUSIVE)
+    if (j === x.AW.DYNAMIC) return (0, r.jsx)(h, { className: a });
+    if (j === x.AW.ORBS_EXCLUSIVE)
         return (0, r.jsx)(o.Lp, {
             disableColor: !0,
-            className: s()(a, h.$, h.C),
+            className: s()(a, _.$, _.C),
             text: (0, r.jsxs)(r.Fragment, {
-                children: [(0, r.jsx)(c.C, { size: "xxs", color: "currentColor" }), _.intl.string(_.t["0TmQRG"])],
+                children: [(0, r.jsx)(d.C, { size: "xxs", color: "currentColor" }), m.intl.string(m.t["0TmQRG"])],
             }),
         });
     let L = null;
     switch (j) {
-        case C.AW.LIMITED_TIME:
+        case x.AW.LIMITED_TIME:
             L =
-                null != b
-                    ? b > 1
-                        ? _.intl.formatToPlainString(_.t.Io7ozn, { days: b })
-                        : _.intl.string(_.t.Bc13HF)
-                    : _.intl.string(_.t["h/uBCR"]);
+                null != k
+                    ? k > 1
+                        ? m.intl.formatToPlainString(m.t.Io7ozn, { days: k })
+                        : m.intl.string(m.t.Bc13HF)
+                    : m.intl.string(m.t["h/uBCR"]);
             break;
-        case C.AW.NEW:
-            L = _.intl.string(_.t.y2b7CA);
+        case x.AW.NEW:
+            L = m.intl.string(m.t.y2b7CA);
             break;
-        case C.AW.NITRO_EXCLUSIVE:
-            L = _.intl.string(_.t.X3Ekj8);
+        case x.AW.NITRO_EXCLUSIVE:
+            L = m.intl.string(m.t.X3Ekj8);
             break;
-        case C.AW.BADGE_OVERRIDE:
+        case x.AW.BADGE_OVERRIDE:
             L = i;
     }
-    return (0, r.jsx)(o.Lp, { text: L, disableColor: !0, className: s()(a, h.$) });
+    return (0, r.jsx)(o.Lp, { text: L, disableColor: !0, className: s()(a, _.$) });
 }
-let R = function (e) {
+let b = function (e) {
     let { skuId: t, badgeOverride: n, className: i, prioritizedCurrency: s } = e,
-        l = (0, C.Vm)(t),
+        l = (0, x.Vm)(t),
         a = (0, p.Q)(l);
     if (null == l || l.hideBadge) return null;
     let o = (0, v.rb)(l, a);

@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => b, O7: () => x, gS: () => N });
+n.d(t, { Ay: () => b, O7: () => _, gS: () => N });
 var l = n(477900),
     i = n(582128),
     r = n(503698),
@@ -10,8 +10,8 @@ var l = n(477900),
     d = n(939249),
     m = n(150934),
     p = n(721836),
-    C = n(951305),
-    h = n(773669),
+    h = n(951305),
+    C = n(773669),
     f = n(97352),
     E = n(45938),
     S = n(252424),
@@ -21,8 +21,8 @@ var l = n(477900),
     A = n(186223),
     P = n(202541),
     v = n(375708),
-    _ = n(781248);
-function x(e, t) {
+    x = n(781248);
+function _(e, t) {
     let n = e.interval === P.WT.YEAR ? v.t.ECT4A5 : v.t.v9QeON;
     return v.intl.format(n, { price: (0, I.$g)(t.amount, t.currency) });
 }
@@ -70,7 +70,7 @@ function b(e) {
             isCurrentPlan: j,
             disabled: R,
         } = e,
-        M = (0, u.bG)([h.default], () => h.default.locale),
+        M = (0, u.bG)([C.default], () => C.default.locale),
         {
             discountInfo: O,
             setSelectedPlanId: L,
@@ -80,7 +80,7 @@ function b(e) {
             setSelectedPlanId: e.setSelectedPlanId,
             isGift: e.isGift,
         })),
-        { giftRecipient: w } = (0, C.Pv)(),
+        { giftRecipient: w } = (0, h.Pv)(),
         U = k && (0, E.Ik)(w),
         { discountOffer: D, discountAmountOff: G, applicablePlan: F } = O,
         B = (0, u.bG)([f.A], () => f.A.get(n));
@@ -102,14 +102,14 @@ function b(e) {
                 isEligibleForTrial: b,
             });
             return "string" == typeof e
-                ? (0, l.jsxs)("span", { className: _.IS, children: ["(", e, ")"] })
+                ? (0, l.jsxs)("span", { className: x.IS, children: ["(", e, ")"] })
                 : null != e
                   ? (e.type,
                     (0, l.jsx)(c.E, {
                         tag: "span",
                         variant: e.textBadgeVariant,
                         color: "text-overlay-light",
-                        className: _.kP,
+                        className: x.kP,
                         children: e.text,
                     }))
                   : null;
@@ -138,17 +138,17 @@ function b(e) {
         tabIndex: r ? 0 : -1,
         focusProps: { offset: { left: -4, right: -4, top: 0, bottom: 0 } },
         onClick: Q,
-        className: a()(_.G_, { [_.vW]: U && r, [_.Gb]: U }),
+        className: a()(x.G_, { [x.vW]: U && r, [x.Gb]: U }),
         children: [
             (0, l.jsxs)("div", {
-                className: a()(_.XM, { [_.PA]: R }),
+                className: a()(x.XM, { [x.PA]: R }),
                 children: [
                     (0, l.jsxs)("div", {
-                        className: _.l,
+                        className: x.l,
                         children: [
                             !U &&
                                 (0, l.jsx)("div", {
-                                    className: _.E2,
+                                    className: x.E2,
                                     children: (0, l.jsx)(m.S, {
                                         checked: r,
                                         value: r,
@@ -160,12 +160,12 @@ function b(e) {
                             (0, l.jsxs)("div", {
                                 children: [
                                     (0, l.jsxs)("div", {
-                                        className: a()(_.Gl, { [_.h4]: r || U, [_.ox]: A && (r || U) }),
+                                        className: a()(x.Gl, { [x.h4]: r || U, [x.ox]: A && (r || U) }),
                                         children: [q, U && Z()],
                                     }),
                                     U &&
                                         (0, l.jsx)("div", {
-                                            className: _._R,
+                                            className: x._R,
                                             children: v.intl.format(v.t.ori2Jm, {
                                                 currencyAmount: (0, I.$g)(V.amount, V.currency),
                                             }),
@@ -174,24 +174,24 @@ function b(e) {
                             }),
                             j &&
                                 (0, l.jsxs)("span", {
-                                    className: _.bq,
+                                    className: x.bq,
                                     children: ["(", v.intl.string(v.t.ymSxhy), ")"],
                                 }),
                             !U && Z(),
                         ],
                     }),
                     A
-                        ? (0, l.jsx)("div", { className: a()({ [_.kb]: r }), children: $ })
-                        : (0, l.jsx)("div", { className: a()({ [_.h4]: r || U }), children: $ }),
+                        ? (0, l.jsx)("div", { className: a()({ [x.kb]: r }), children: $ })
+                        : (0, l.jsx)("div", { className: a()({ [x.h4]: r || U }), children: $ }),
                 ],
             }),
             A &&
                 (0, l.jsx)("div", {
-                    className: _.hB,
+                    className: x.hB,
                     children: (0, l.jsx)(c.E, {
                         variant: "text-md/normal",
                         color: r ? "text-default" : "interactive-text-default",
-                        className: a()(_.Ub, { [_.sw]: T || b }),
+                        className: a()(x.Ub, { [x.sw]: T || b }),
                         children: (function (e, t) {
                             let {
                                 price: n,
@@ -214,7 +214,7 @@ function b(e) {
                                           regularPrice: (0, I.$g)(n.amount, n.currency),
                                       })
                                 : i
-                                  ? x(e, n)
+                                  ? _(e, n)
                                   : e.interval === P.WT.YEAR
                                     ? v.intl.formatToPlainString(v.t.rtLTJP, { percent: o ?? "" })
                                     : null;

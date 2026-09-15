@@ -1,6 +1,6 @@
 n.d(t, {
     vd: () => r.v,
-    Mw: () => C,
+    Mw: () => h,
     UnifiedCheckoutFlowManagerSingletons: () => i.UnifiedCheckoutFlowManagerSingletons,
     XZ: () => l.X,
     CL: () => l.C,
@@ -16,14 +16,14 @@ var l = n(75304),
     d = n(202475),
     m = n(375708),
     p = n(338039);
-function C(e) {
+function h(e) {
     let {
             paymentModalStepProps: { handleStepChange: t },
             layout: n,
             renderStepBody: i,
             renderLeftColumn: r,
-            renderRightColumn: C,
-            renderBottomContent: h,
+            renderRightColumn: h,
+            renderBottomContent: C,
             primaryCTAButtonProps: f,
             onBackClick: E,
         } = e,
@@ -35,9 +35,9 @@ function C(e) {
                 n === l.X.CUSTOM_STEP_BODY
                     ? i()
                     : (0, a.jsxs)(a.Fragment, {
-                          children: [(0, a.jsxs)("div", { className: p.D, children: [r(), C()] }), null != h && h()],
+                          children: [(0, a.jsxs)("div", { className: p.D, children: [r(), h()] }), null != C && C()],
                       }),
-            [n, i, r, C, h],
+            [n, i, r, h, C],
         ),
         A = s.useMemo(() => ({ ...f, onClick: I, text: m.intl.string(m.t.XiOHRX) }), [f, I]);
     return (0, a.jsxs)(a.Fragment, {

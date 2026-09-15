@@ -10,8 +10,8 @@ var l = n(477900),
     d = n(529427),
     m = n(883645),
     p = n(601194),
-    C = n(721836),
-    h = n(573359),
+    h = n(721836),
+    C = n(573359),
     f = n(166532),
     E = n(819252);
 function S(e) {
@@ -25,25 +25,25 @@ function S(e) {
         })(e),
         { step: s, stepConfigs: S } = (0, m.Ay)(),
         { setBodyNode: y, setFooterNode: I, setModalOverlayNode: g } = (0, p.Gm)(),
-        A = (0, u.bG)([h.A], () => h.A.isDisplayingWowMomentConfirmation),
-        { setReadySlideId: P, unifiedCheckoutFlow: v } = (0, C.t4)((e) => ({
+        A = (0, u.bG)([C.A], () => C.A.isDisplayingWowMomentConfirmation),
+        { setReadySlideId: P, unifiedCheckoutFlow: v } = (0, h.t4)((e) => ({
             setReadySlideId: e.setReadySlideId,
             unifiedCheckoutFlow: e.unifiedCheckoutFlow,
         })),
-        _ = S.find((e) => e.key === s);
+        x = S.find((e) => e.key === s);
     if (
         (i.useEffect(() => {
             g(null);
         }, [s, g]),
-        null == _)
+        null == x)
     )
         throw new d.vd({
             message: "Unknown step for current payment flow (PaymentModalStep)",
-            extraSentryInformation: { stepConfig: _, step: s, unifiedCheckoutFlow: v, stepConfigs: S },
+            extraSentryInformation: { stepConfig: x, step: s, unifiedCheckoutFlow: v, stepConfigs: S },
         });
-    let x = _?.options?.hideSlider ?? !1,
-        T = _?.options?.hideDefaultModalBody ?? !1,
-        N = _?.options?.sliderBodyClassName,
+    let _ = x?.options?.hideSlider ?? !1,
+        T = x?.options?.hideDefaultModalBody ?? !1,
+        N = x?.options?.sliderBodyClassName,
         b = s === f.pn.REVIEW,
         j = i.useCallback(
             (e, t) => {
@@ -53,9 +53,9 @@ function S(e) {
         );
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (_?.options?.renderHeader ?? !0) ? t : null,
-            _.renderStep(r),
-            null == s || x
+            (x?.options?.renderHeader ?? !0) ? t : null,
+            x.renderStep(r),
+            null == s || _
                 ? null
                 : (0, l.jsxs)(l.Fragment, {
                       children: [

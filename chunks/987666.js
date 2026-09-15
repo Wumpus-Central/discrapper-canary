@@ -15,8 +15,8 @@ function c(e) {
             discriminatedInvoicePreview: d,
             overrideRenewalDate: m,
             fractionalPremiumInfo: p,
-            isInvoiceBilledImmediately: C = !0,
-            unifiedLegalType: h,
+            isInvoiceBilledImmediately: h = !0,
+            unifiedLegalType: C,
             discountOffer: f,
             subscriptionTrial: E,
         } = e,
@@ -29,7 +29,7 @@ function c(e) {
         g = ("renewalInvoicePreview" in d ? d.renewalInvoicePreview : null) ?? I,
         A = (0, r.de)({
             overrideRenewalDate: m,
-            currentInvoice: C ? I : void 0,
+            currentInvoice: h ? I : void 0,
             renewalInvoice: g,
             isSubscriptionUpdate: null != c,
             fractionalPremiumInfo: p,
@@ -38,9 +38,9 @@ function c(e) {
             discountOffer: f,
             subscriptionTrial: E,
         }),
-        _ = {
+        x = {
             purchaseButtonText: y,
-            totalDue: C ? I.total : 0,
+            totalDue: h ? I.total : 0,
             renewalPrice: P,
             multiPeriodDiscountAttributes: v,
             currency: I.currency,
@@ -48,5 +48,5 @@ function c(e) {
             intervalCount: t.intervalCount,
             startDate: A,
         };
-    return (0, l.jsx)(o._P, { variant: { type: h, ..._ }, paymentSourceType: n, immediateDelivery: S });
+    return (0, l.jsx)(o._P, { variant: { type: C, ...x }, paymentSourceType: n, immediateDelivery: S });
 }

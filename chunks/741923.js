@@ -15,9 +15,9 @@ let d = (0, n(945810).mj)({
 });
 var m = n(211287),
     p = n(739508),
-    C = n(120700),
-    h = n(818348);
-let f = new Set([C.C.COLLECTIBLES_CHECKOUT, C.C.SLAYER_STOREFRONT_CHECKOUT]);
+    h = n(120700),
+    C = n(818348);
+let f = new Set([h.C.COLLECTIBLES_CHECKOUT, h.C.SLAYER_STOREFRONT_CHECKOUT]);
 var E = n(169797),
     S = n(375708);
 let y = i.createContext(null);
@@ -35,7 +35,7 @@ function A(e) {
             skuIDs: n,
             applicationId: r,
             paymentGateway: s,
-            checkoutFlow: C,
+            checkoutFlow: h,
             isGift: E,
             onOrderCreated: I,
             renderModalProps: A,
@@ -43,8 +43,8 @@ function A(e) {
         } = e,
         {
             order: v,
-            isCreateOrderLoading: _,
-            createOrderError: x,
+            isCreateOrderLoading: x,
+            createOrderError: _,
             shouldBlockOnOrderCreation: T,
         } = (function (e) {
             let t,
@@ -55,17 +55,17 @@ function A(e) {
                     checkoutFlow: a,
                     isGift: s,
                     loadId: o,
-                    onOrderCreated: C,
+                    onOrderCreated: h,
                 } = e,
                 E = m.A.useConfig({ location: "payment_modal" }).enabled,
                 S = d.useConfig({ location: "payment_modal" }).enabled,
-                y = r === h.kM.VIRTUAL_CURRENCY,
+                y = r === C.kM.VIRTUAL_CURRENCY,
                 I = null != a && f.has(a);
             t = y ? E : !!I && !0 !== s && S;
             let g = y && E,
                 A = null != n ? n[0] : void 0,
                 [P, v] = (0, i.useState)(null),
-                [_, x] = (0, i.useState)(null),
+                [x, _] = (0, i.useState)(null),
                 [T, N] = (0, i.useState)(g),
                 b = (0, i.useRef)(!1),
                 j = (0, i.useCallback)(
@@ -75,7 +75,7 @@ function A(e) {
                         try {
                             let e = null != l && (0, u.Fs)(l),
                                 n = await (0, c.fS)({ skuId: t, paymentGateway: r, loadId: o, testMode: e });
-                            (v(n), null != C && C(n));
+                            (v(n), null != h && h(n));
                         } catch (n) {
                             let e = n instanceof Error ? n : Error(String(n));
                             ((0, p.gr)(n) ||
@@ -83,31 +83,31 @@ function A(e) {
                                     tags: { source: "create_order" },
                                     extra: { skuId: t, paymentGateway: String(r), loadId: o },
                                 }),
-                                x(e));
+                                _(e));
                         } finally {
                             N(!1);
                         }
                     },
-                    [l, r, o, C],
+                    [l, r, o, h],
                 );
             return (
                 (0, i.useEffect)(() => {
-                    t && null != A && (null != P || null != _ || b.current || ((b.current = !0), j({ skuId: A })));
-                }, [A, t, P, j, _]),
-                { order: P, isCreateOrderLoading: T, createOrderError: _, shouldBlockOnOrderCreation: g }
+                    t && null != A && (null != P || null != x || b.current || ((b.current = !0), j({ skuId: A })));
+                }, [A, t, P, j, x]),
+                { order: P, isCreateOrderLoading: T, createOrderError: x, shouldBlockOnOrderCreation: g }
             );
         })({
             skuIDs: n,
             applicationId: r,
             paymentGateway: s,
-            checkoutFlow: C,
+            checkoutFlow: h,
             isGift: E,
             loadId: t,
             onOrderCreated: I,
         });
     if (T) {
-        if (_) return (0, l.jsx)(g, { renderModalProps: A, children: (0, l.jsx)(o.A, {}) });
-        else if (null != x)
+        if (x) return (0, l.jsx)(g, { renderModalProps: A, children: (0, l.jsx)(o.A, {}) });
+        else if (null != _)
             return (0, l.jsx)(g, {
                 renderModalProps: A,
                 children: (0, l.jsx)(a.E, { variant: "text-md/normal", children: S.intl.string(S.t.F8FvUy) }),

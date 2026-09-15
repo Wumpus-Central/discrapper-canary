@@ -1,21 +1,21 @@
-n.d(t, { z: () => d });
-var r = n(582128),
-    l = n(192308),
-    i = n(139033),
-    o = n(626584),
-    a = n(38405),
-    s = n(794400),
-    u = n(375708);
-let c = new o.A("RevenueErrorBoundary.tsx");
+t.d(n, { z: () => d });
+var r = t(582128),
+    l = t(192308),
+    i = t(139033),
+    s = t(626584),
+    o = t(38405),
+    a = t(794400),
+    u = t(375708);
+let c = new s.A("RevenueErrorBoundary.tsx");
 class d extends r.PureComponent {
     state = { error: null, info: null };
-    getSentryTags(e, t) {
-        return { app_context: this.getSentryAppContext(), ...(t ? { crashed: "true" } : {}) };
+    getSentryTags(e, n) {
+        return { app_context: this.getSentryAppContext(), ...(n ? { crashed: "true" } : {}) };
     }
     getSentryExtras(e) {
-        return e instanceof s.v && null != e.extraSentryInformation ? { ...e.extraSentryInformation } : {};
+        return e instanceof a.v && null != e.extraSentryInformation ? { ...e.extraSentryInformation } : {};
     }
-    onErrorCaught(e, t, n) {}
+    onErrorCaught(e, n, t) {}
     closeAndShowAlert() {
         ((0, l.closeAllModals)(),
             (0, i.A)({
@@ -25,32 +25,32 @@ class d extends r.PureComponent {
             }));
     }
     getErrorHandlingBehavior(e) {
-        return e instanceof s.v ? e.errorHandlingBehavior : this.props.errorHandlingBehavior;
+        return e instanceof a.v ? e.errorHandlingBehavior : this.props.errorHandlingBehavior;
     }
     getCrashedFlag(e) {
         return "rethrow" === this.getErrorHandlingBehavior(e);
     }
-    emitSentryException(e, t) {
-        let n,
+    emitSentryException(e, n) {
+        let t,
             { additionalAnalyticsData: r } = this.props,
             l = this.getCrashedFlag(e),
             i = this.getSentryExtras(e),
-            o = {
+            s = {
                 tags: this.getSentryTags(e, l),
-                extra: { ...i, ...(r ?? {}), ...(null != t ? { reactErrorInfo: t } : {}) },
+                extra: { ...i, ...(r ?? {}), ...(null != n ? { reactErrorInfo: n } : {}) },
             };
         return (
-            (e instanceof s.v && e.skipReportingToSentry) || (n = a.A.captureException(e, o)),
+            (e instanceof a.v && e.skipReportingToSentry) || (t = o.A.captureException(e, s)),
             c.error("Revenue error occurred:", { error: e, additionalErrorContext: i }),
-            { sentryErrorOptions: o, sentryEventId: n }
+            { sentryErrorOptions: s, sentryEventId: t }
         );
     }
-    componentDidCatch(e, t) {
-        let { sentryErrorOptions: n, sentryEventId: r } = this.emitSentryException(e, t);
+    componentDidCatch(e, n) {
+        let { sentryErrorOptions: t, sentryEventId: r } = this.emitSentryException(e, n);
         if (
-            (this.onErrorCaught(e, t, r),
-            this.setState({ error: e, info: t }),
-            null != this.props.onErrorReported && this.props.onErrorReported(e, t, n),
+            (this.onErrorCaught(e, n, r),
+            this.setState({ error: e, info: n }),
+            null != this.props.onErrorReported && this.props.onErrorReported(e, n, t),
             "rethrow" === this.getErrorHandlingBehavior(e))
         )
             throw e;

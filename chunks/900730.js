@@ -1,23 +1,23 @@
-l.d(t, { c: () => o });
-var n = l(477900);
+l.d(t, { c: () => u });
+var s = l(477900);
 l(582128);
-var r = l(683071),
-    s = l(423764),
-    i = l(46054),
-    a = l(649975),
-    u = l(375708),
-    c = l(135734);
-function o(e) {
-    let { relocationCountry: t, relocationCurrencyCode: l, willForfeitGiftCardBalance: o = !1 } = e,
-        d = (0, s.j7)(t),
-        m = o ? a.default["DE+C4G"] : a.default.vcs3zU,
-        x = u.intl.formatToMarkdownString(m, {
-            country: d,
+var n = l(683071),
+    a = l(423764),
+    r = l(46054),
+    i = l(649975),
+    c = l(375708),
+    d = l(135734);
+function u(e) {
+    let { relocationCountry: t, relocationCurrencyCode: l, willForfeitGiftCardBalance: u = !1 } = e,
+        o = (0, a.j7)(t),
+        m = u ? i.default["DE+C4G"] : i.default.vcs3zU,
+        x = c.intl.formatToMarkdownString(m, {
+            country: o,
             currency: l?.toUpperCase() ?? "",
-            willForfeitGiftCardBalance: o ? "true" : "false",
+            willForfeitGiftCardBalance: u ? "true" : "false",
         });
-    return (0, n.jsx)(r.w, {
+    return (0, s.jsx)(n.w, {
         type: "warning",
-        children: (0, n.jsx)("div", { className: c.Q, children: i.A.parse(x, !1, { allowList: !0 }) }),
+        children: (0, s.jsx)("div", { className: d.Q, children: r.A.parse(x, !1, { allowList: !0 }) }),
     });
 }

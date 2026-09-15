@@ -10,8 +10,8 @@ var l = n(477900),
     d = n(364840),
     m = n(821609),
     p = n(862482),
-    C = n(109802),
-    h = n(452027),
+    h = n(109802),
+    C = n(452027),
     f = n(778712),
     E = n(297264),
     S = n(289873),
@@ -21,8 +21,8 @@ var l = n(477900),
     A = n(966327),
     P = n(674658),
     v = n(769015),
-    _ = n(242874),
-    x = n(580194),
+    x = n(242874),
+    _ = n(580194),
     T = n(531536),
     N = n(219271),
     b = n(427358),
@@ -63,12 +63,12 @@ function ei(e) {
             privateGiftLink: d,
             rewardSkuIds: m,
             canShowGiftingBadgePostPurchase: p,
-            openGiftingBadgePostPurchaseModal: C,
-            onClose: h,
+            openGiftingBadgePostPurchaseModal: h,
+            onClose: C,
         } = e,
         [E, S] = i.useState([]),
         [P, v] = i.useState(!1),
-        { isLoading: x, potentialRecipients: T } = (function () {
+        { isLoading: _, potentialRecipients: T } = (function () {
             i.useEffect(() => {
                 (g.A.fetchRelationships(), (0, N.u)());
             }, []);
@@ -117,7 +117,7 @@ function ei(e) {
         try {
             if (w) {
                 let e = M[0];
-                (await (0, _.UN)(e, t), (i = { recipients: [e], failedRecipients: [] }));
+                (await (0, x.UN)(e, t), (i = { recipients: [e], failedRecipients: [] }));
             } else {
                 if (null == a) throw Error("Checkout session ID must be defined");
                 let e = await (0, Y.kW)(E, a),
@@ -130,7 +130,7 @@ function ei(e) {
         } finally {
             v(!1);
         }
-        (h(),
+        (C(),
             (0, I.bz)(),
             (e = {
                 recipients: i.recipients,
@@ -138,7 +138,7 @@ function ei(e) {
                 rewardSkuIds: m,
                 purchaseQuantity: r,
                 canShowGiftingBadgePostPurchase: p,
-                openGiftingBadgePostPurchaseModal: C,
+                openGiftingBadgePostPurchaseModal: h,
             }),
             (0, Q.openModalLazy)(async () => {
                 let { default: t } = await n.e("692318").then(n.bind(n, 150061));
@@ -188,7 +188,7 @@ function ei(e) {
                                               label: et.intl.string(en.default.ZolTTE),
                                               hideLabel: !0,
                                               placeholder: et.intl.string(en.default.xdDO7f),
-                                              loading: x || k,
+                                              loading: _ || k,
                                               disabled: k || P,
                                               value: E,
                                               onSelectionChange: ep,
@@ -200,7 +200,7 @@ function ei(e) {
                                       selectionMode: "single",
                                       label: et.intl.string(et.t.MJw05f),
                                       placeholder: et.intl.string(et.t.J019jZ),
-                                      loading: x || k,
+                                      loading: _ || k,
                                       disabled: k || P,
                                       value: E[0],
                                       onSelectionChange: (e) => ep(null != e ? [e] : []),
@@ -215,7 +215,7 @@ function ei(e) {
                         children: et.intl.format(en.default.ZvgWUV, {
                             giftCount: r,
                             onInventoryClick: function () {
-                                (h(), (0, I.bz)(), (0, J.openUserSettings)($.X.GIFT_PANEL, { analyticsLocations: j }));
+                                (C(), (0, I.bz)(), (0, J.openUserSettings)($.X.GIFT_PANEL, { analyticsLocations: j }));
                             },
                         }),
                     }),
@@ -230,7 +230,7 @@ function ei(e) {
                             text: et.intl.string(en.default["qTXpj/"]),
                             disabled: eu || P,
                             onClick: function () {
-                                (h(),
+                                (C(),
                                     (0, I.bz)(),
                                     null != ec
                                         ? (0, z.A)({
@@ -239,9 +239,9 @@ function ei(e) {
                                               shouldShowPromotionalExperience: !0,
                                               analyticsLocations: j,
                                               purchaseType: ee.gs.GIFT,
-                                              onCloseCallback: p ? C : void 0,
+                                              onCloseCallback: p ? h : void 0,
                                           })
-                                        : p && C());
+                                        : p && h());
                             },
                         },
                         {
@@ -281,13 +281,13 @@ function eu(e) {
             sku: y,
             subscriptionPlan: g,
             selectedGiftStyle: P,
-            onClose: _,
+            onClose: x,
             hasSentMessage: T,
             giftRecipient: N,
             giftMessageError: b,
             isSendingMessage: R,
         } = e,
-        [O, F] = i.useState(C.e.Modes.DEFAULT),
+        [O, F] = i.useState(h.e.Modes.DEFAULT),
         B = (0, c.bG)([M.A], () => M.A.enabled),
         H = T || (null != P && null != N),
         W = y?.productLine === ea.EZt.COLLECTIBLES,
@@ -296,7 +296,7 @@ function eu(e) {
             openGiftingBadgePostPurchaseModal: V,
             canShowGiftingBadgePostPurchase: K,
         } = (0, D.Pv)(),
-        Z = (0, x.Mq)(g) && Y.length > 0,
+        Z = (0, _.Mq)(g) && Y.length > 0,
         q = K && 0 === Y.length;
     function z() {
         return null != g ? g.skuId : null != y ? y.id : null;
@@ -315,18 +315,18 @@ function eu(e) {
         let e;
         if (null == t) return null;
         switch (O) {
-            case C.e.Modes.SUCCESS:
+            case h.e.Modes.SUCCESS:
                 e = et.intl.string(et.t.XVvPjU);
                 break;
-            case C.e.Modes.ERROR:
+            case h.e.Modes.ERROR:
                 e = et.intl.string(et.t.i4GM3L);
                 break;
             default:
                 e = et.intl.string(et.t.OpuAlK);
         }
-        return (0, l.jsx)(h.D, {
+        return (0, l.jsx)(C.D, {
             label: et.intl.string(et.t["/dG4NA"]),
-            children: (0, l.jsx)(C.e, {
+            children: (0, l.jsx)(h.e, {
                 hideMessage: B ? et.intl.string(et.t["0RLn47"]) : null,
                 value: (0, k.Zq)(t),
                 mode: O,
@@ -335,11 +335,11 @@ function eu(e) {
                     (null != y && (0, k.AK)(new j.A({ code: t, maxUses: 1 }), y),
                         (0, L.C)(
                             e,
-                            () => F(C.e.Modes.SUCCESS),
-                            () => F(C.e.Modes.ERROR),
+                            () => F(h.e.Modes.SUCCESS),
+                            () => F(h.e.Modes.ERROR),
                         ),
                         setTimeout(() => {
-                            F(C.e.Modes.DEFAULT);
+                            F(h.e.Modes.DEFAULT);
                         }, 1500));
                 },
                 supportsCopy: L.p5,
@@ -369,7 +369,7 @@ function eu(e) {
                 rewardSkuIds: Y,
                 canShowGiftingBadgePostPurchase: K,
                 openGiftingBadgePostPurchaseModal: V,
-                onClose: _,
+                onClose: x,
             })
           : (0, l.jsxs)(l.Fragment, {
                 children: [
@@ -417,7 +417,7 @@ function eu(e) {
                                               (0, l.jsx)(ed, {
                                                   giftCode: t,
                                                   onClose: () => {
-                                                      (_(), (0, I.bz)(), q && V());
+                                                      (x(), (0, I.bz)(), q && V());
                                                   },
                                               }),
                                           (0, l.jsx)("div", { className: eo.yF }),
@@ -446,7 +446,7 @@ function eu(e) {
                                         fullWidth: !0,
                                         text: et.intl.string(et.t.PDTjLN),
                                         onClick: () => {
-                                            (_(), V());
+                                            (x(), V());
                                         },
                                     }),
                                 }),
@@ -483,17 +483,17 @@ function ed(e) {
     let [r, a] = i.useState(),
         [s, u] = i.useState(!1),
         [d, p] = i.useState(!1),
-        { userAffinities: C, isLoading: h } = (0, c.cf)([b.A], () => ({
+        { userAffinities: h, isLoading: C } = (0, c.cf)([b.A], () => ({
             userAffinities: b.A.getUserAffinitiesMap(),
             isLoading: b.A.isFetching(),
         })),
-        E = Array.from(C.keys()).sort((e, t) => b.A.compare(e, t)),
+        E = Array.from(h.keys()).sort((e, t) => b.A.compare(e, t)),
         S = (0, c.bG)([R.A], () => R.A.getFriendIDs()),
         I = o().difference(S, E),
         P = [...E, ...I],
         v = (0, c.bG)([O.default], () => O.default.filter((e) => P.includes(e.id) && !e.bot), [P]);
     if (null == v || 0 === v.length) return null;
-    let x = o().sortBy(v, (e) => P.indexOf(e.id));
+    let _ = o().sortBy(v, (e) => P.indexOf(e.id));
     return (0, l.jsxs)("div", {
         className: eo.vt,
         children: [
@@ -504,12 +504,12 @@ function ed(e) {
                         selectionMode: "single",
                         label: et.intl.string(et.t.MJw05f),
                         placeholder: et.intl.string(et.t.J019jZ),
-                        loading: h,
+                        loading: C,
                         value: r,
                         onSelectionChange: (e) => {
                             (a(e), u(!1));
                         },
-                        options: x.map((e) => ({
+                        options: _.map((e) => ({
                             id: e.id,
                             value: e,
                             label: `${U.Ay.getUserTag(e)}`,
@@ -523,7 +523,7 @@ function ed(e) {
                             loading: d,
                             onClick: () => {
                                 (p(!0),
-                                    (0, _.UN)(r, t)
+                                    (0, x.UN)(r, t)
                                         .then(() => {
                                             n();
                                         })

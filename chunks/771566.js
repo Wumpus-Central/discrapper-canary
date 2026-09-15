@@ -10,8 +10,8 @@ var l,
     d = n(821609),
     m = n(830382),
     p = n(71804),
-    C = n(721836),
-    h = n(614662),
+    h = n(721836),
+    C = n(614662),
     f = n(951305),
     E = n(419212),
     S = n(97352),
@@ -21,8 +21,8 @@ var l,
     A = n(615396),
     P = n(573359),
     v = n(462887),
-    _ = n(659746);
-function x(e) {
+    x = n(659746);
+function _(e) {
     let { color: t = "white", className: n } = e;
     return (0, i.jsx)("svg", {
         className: n,
@@ -77,11 +77,11 @@ let j = function (e) {
             children: (function (e, t) {
                 let n = (0, v.M)(t) ? "white" : "black";
                 switch (e) {
-                    case _.Or.PREMIUM_UPDATED:
+                    case x.Or.PREMIUM_UPDATED:
                         return (0, i.jsx)(N, { color: n, className: b.gd });
-                    case _.Or.PREMIUM_ACTIVATED:
-                        return (0, i.jsx)(x, { color: n, className: b.gd });
-                    case _.Or.PREMIUM_PAYMENT_STARTED:
+                    case x.Or.PREMIUM_ACTIVATED:
+                        return (0, i.jsx)(_, { color: n, className: b.gd });
+                    case x.Or.PREMIUM_PAYMENT_STARTED:
                         return (0, i.jsx)(T, { color: n, className: b.gd });
                     default:
                         return null;
@@ -166,11 +166,11 @@ function H(e) {
             planId: l,
             startingPremiumSubscriptionPlanId: a,
             onClose: p,
-            followupSKUInfo: h,
+            followupSKUInfo: C,
             isDowngrade: f,
             hideClose: E,
             postSuccessGuild: v,
-            paymentSourceType: x,
+            paymentSourceType: _,
             startingFractionalPremiumEndsAt: T,
             customCTAType: N,
         } = e,
@@ -179,36 +179,36 @@ function H(e) {
             isPremiumGroupPurchase: B,
             customCheckoutFlow: H,
             startingIsInPastDueCheckout: W,
-        } = (0, C.t4)((e) => ({
+        } = (0, h.t4)((e) => ({
             isPremiumGroupPurchase: e.get("isPremiumGroupPurchase"),
             customCheckoutFlow: e.customCheckoutFlow,
             startingIsInPastDueCheckout: e.startingIsInPastDueCheckout,
         })),
         { theme: Y } = (0, c.wR)(),
-        V = (0, o.bG)([y.A], () => (null != h ? y.A.get(h.id) : null)),
+        V = (0, o.bG)([y.A], () => (null != C ? y.A.get(C.id) : null)),
         K = (0, A.b2)(T),
         Z = H === k.uH.META_QUEST_WEB_REDIRECT_CHECKOUT;
     function q(e) {
         return B
             ? U.intl.formatToPlainString(w.default.pDiwHe, { premiumGroupProductName: (0, O.DP)(), totalSeats: O.LM })
             : e.skuId === M.pe.TIER_0
-              ? L.NcF.has(x ?? L.hes.UNKNOWN)
+              ? L.NcF.has(_ ?? L.hes.UNKNOWN)
                   ? U.intl.format(U.t.o6hBiR, {})
                   : U.intl.string(U.t["AGf/ye"])
               : e.skuId === M.pe.TIER_1
-                ? L.NcF.has(x ?? L.hes.UNKNOWN)
+                ? L.NcF.has(_ ?? L.hes.UNKNOWN)
                     ? U.intl.format(U.t.o6hBiR, {})
                     : U.intl.string(U.t.knvOVz)
-                : L.NcF.has(x ?? L.hes.UNKNOWN)
+                : L.NcF.has(_ ?? L.hes.UNKNOWN)
                   ? U.intl.format(U.t.A4THYt, {})
                   : U.intl.string(U.t.aTUr3Z);
     }
     if (
         (r.useEffect(() => {
-            if (null == h || null != V) return;
-            let { applicationId: e, id: t } = h;
+            if (null == C || null != V) return;
+            let { applicationId: e, id: t } = C;
             (0, m.EX)(e, t).catch(L.FXj);
-        }, [h, V]),
+        }, [C, V]),
         W)
     )
         t = (0, i.jsx)(u.E, {
@@ -297,11 +297,11 @@ function H(e) {
             null != p && (p(), H === k.uH.MOBILE_WEB_REDIRECT_CHECKOUT && Q(!0));
         }, [p, H]);
     function J() {
-        return L.NcF.has(x ?? L.hes.UNKNOWN)
-            ? _.Ay.Types.PREMIUM_PAYMENT_STARTED
+        return L.NcF.has(_ ?? L.hes.UNKNOWN)
+            ? x.Ay.Types.PREMIUM_PAYMENT_STARTED
             : null != a
-              ? _.Ay.Types.PREMIUM_UPDATED
-              : _.Ay.Types.PREMIUM_ACTIVATED;
+              ? x.Ay.Types.PREMIUM_UPDATED
+              : x.Ay.Types.PREMIUM_ACTIVATED;
     }
     if (
         ((n = B
@@ -346,12 +346,12 @@ function W(e) {
         m = (0, o.bG)([S.A], () => S.A.get(t));
     s()(null != m, "Missing plan");
     let p = (0, o.bG)([E.A], () => E.A.getGiftCode(m.skuId)),
-        { quantity: y, checkoutSessionId: I } = (0, C.t4)((e) => ({
+        { quantity: y, checkoutSessionId: I } = (0, h.t4)((e) => ({
             quantity: e.quantity,
             checkoutSessionId: e.contextMetadata.loadId,
         })),
         g = (0, o.bG)([E.A], () => E.A.isGiftCodeDeliveryReady(I), [I]);
-    return (0, i.jsx)(h.A, {
+    return (0, i.jsx)(C.A, {
         giftCode: p,
         giftCount: y,
         checkoutSessionId: I,

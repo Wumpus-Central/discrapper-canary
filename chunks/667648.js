@@ -1,4 +1,4 @@
-n.d(t, { eR: () => b, Ky: () => x, wD: () => M, _i: () => j });
+n.d(t, { eR: () => b, Ky: () => _, wD: () => M, _i: () => j });
 var l = n(477900),
     i = n(582128),
     r = n(643909),
@@ -10,8 +10,8 @@ var l = n(477900),
     d = n(997101);
 let m = ["country", "city", "line1"],
     p = new Set([d.d.PR, d.d.AE, d.d.KY, d.d.NR, d.d.SG, d.d.MO, d.d.GI]),
-    C = new Set([d.d.ID, d.d.CO, d.d.HK, d.d.AG, d.d.SM, d.d.VG]);
-var h = n(648335),
+    h = new Set([d.d.ID, d.d.CO, d.d.HK, d.d.AG, d.d.SM, d.d.VG]);
+var C = n(648335),
     f = n(211528),
     E = n(721836),
     S = n(783327),
@@ -21,15 +21,15 @@ var h = n(648335),
     A = n(891640),
     P = n(818348),
     v = n(400400);
-let _ = [y.pn.PAYMENT_ELEMENT],
-    x = [
+let x = [y.pn.PAYMENT_ELEMENT],
+    _ = [
         y.pn.PAYPAL_INFORMATION,
         y.pn.VENMO_INFORMATION,
         y.pn.CASH_APP_INFORMATION,
         y.pn.EPS_INFORMATION,
         y.pn.PRZELEWY24_INFORMATION,
     ],
-    T = new Set([y.pn.PAYMENT_ELEMENT, ...x]);
+    T = new Set([y.pn.PAYMENT_ELEMENT, ..._]);
 function N(e) {
     let {
             step: t,
@@ -41,8 +41,8 @@ function N(e) {
             paymentElementSelectedType: d,
             paymentMethodOrder: m,
             addressElementKey: p,
-            analyticsContext: C,
-            paymentElementFooter: h,
+            analyticsContext: h,
+            paymentElementFooter: C,
         } = e,
         E = (0, r.useElements)();
     i.useEffect(() => {
@@ -54,9 +54,9 @@ function N(e) {
             excludeBodySpacing: g,
         } = i.useMemo(
             () => ({
-                shouldShowPaymentElement: _.includes(t),
+                shouldShowPaymentElement: x.includes(t),
                 shouldShowAddressElement: t === y.pn.ADDRESS,
-                excludeBodySpacing: x.includes(t),
+                excludeBodySpacing: _.includes(t),
             }),
             [t],
         ),
@@ -82,9 +82,9 @@ function N(e) {
                         paymentMethodOrder: m,
                         customPaymentMethodIdsToSourceTypes: a,
                         step: t,
-                        analyticsContext: C,
+                        analyticsContext: h,
                     }),
-                    S && h,
+                    S && C,
                 ],
             }),
             (0, l.jsx)("div", {
@@ -136,9 +136,9 @@ function M(e) {
         c = i.useRef(null),
         d = i.useRef(null),
         [S, A] = i.useState(!1),
-        [v, _] = i.useState(!1),
-        x = o === y.pn.CREDIT_CARD_INFORMATION || o === y.pn.PAYMENT_ELEMENT,
-        [N, b] = i.useState(x ? P.he.CARD : null),
+        [v, x] = i.useState(!1),
+        _ = o === y.pn.CREDIT_CARD_INFORMATION || o === y.pn.PAYMENT_ELEMENT,
+        [N, b] = i.useState(_ ? P.he.CARD : null),
         [j, M] = i.useState(!1),
         [O, L] = i.useState(void 0),
         k = (function (e) {
@@ -159,7 +159,7 @@ function M(e) {
                     (s && null != l && l.log("PaymentElements onChange event:", e), A(e.complete), b(t));
                 },
                 onReady: () => {
-                    _(!0);
+                    x(!0);
                 },
                 wallets: D,
             }),
@@ -200,7 +200,7 @@ function M(e) {
                         });
                     (!t ||
                         u ||
-                        C.has(n.country) ||
+                        h.has(n.country) ||
                         I.A.captureMessage(
                             "Unexpected AddressElement validity mismatch: Stripe complete but address was computed invalid",
                             {
@@ -239,7 +239,7 @@ function M(e) {
         H = i.useCallback(
             function (e) {
                 let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-                (void 0 !== e && b(e), n(y.pn.PAYMENT_ELEMENT, t), M(!1), null != N && (0, h.R8)(N) && B());
+                (void 0 !== e && b(e), n(y.pn.PAYMENT_ELEMENT, t), M(!1), null != N && (0, C.R8)(N) && B());
             },
             [n, B, N],
         );

@@ -1,33 +1,33 @@
-n.d(e, { $c: () => s, VA: () => a, vf: () => u });
-var c = n(477900),
-    o = n(582128),
-    r = n(758836);
-function s(t) {
-    return (0, r.EZ)(t);
+r.d(t, { $c: () => a, VA: () => u, vf: () => c });
+var n = r(477900),
+    o = r(582128),
+    s = r(758836);
+function a(e) {
+    return (0, s.EZ)(e);
 }
-let u = o.createContext(null);
-function l(t) {
-    let { clientX: e, clientY: n, currentTarget: c } = t;
-    c.style.pointerEvents = "none";
-    let o = document.elementFromPoint(e, n);
-    return ((c.style.pointerEvents = "auto"), { elementBelow: o, button: o?.closest("button") ?? null });
+let c = o.createContext(null);
+function l(e) {
+    let { clientX: t, clientY: r, currentTarget: n } = e;
+    n.style.pointerEvents = "none";
+    let o = document.elementFromPoint(t, r);
+    return ((n.style.pointerEvents = "auto"), { elementBelow: o, button: o?.closest("button") ?? null });
 }
-function a(t) {
-    let { isCustomCursorEnabled: e, className: n, riveEventTargetRef: o } = t,
-        r = (t) => {
-            let { button: n } = l(t),
-                c = t.currentTarget;
-            e
-                ? (c.style.cursor = null != n ? "var(--custom-cursor-pointer)" : "var(--custom-cursor)")
-                : (c.style.cursor = null != n ? "pointer" : "default");
+function u(e) {
+    let { isCustomCursorEnabled: t, className: r, riveEventTargetRef: o } = e,
+        s = (e) => {
+            let { button: r } = l(e),
+                n = e.currentTarget;
+            t
+                ? (n.style.cursor = null != r ? "var(--custom-cursor-pointer)" : "var(--custom-cursor)")
+                : (n.style.cursor = null != r ? "pointer" : "default");
         };
-    return (0, c.jsx)("div", {
+    return (0, n.jsx)("div", {
         ref: o,
-        className: n,
-        onMouseMove: r,
-        onMouseDown: (t) => {
-            let { button: e } = l(t);
-            null != e && e.click();
+        className: r,
+        onMouseMove: s,
+        onMouseDown: (e) => {
+            let { button: t } = l(e);
+            null != t && t.click();
         },
     });
 }

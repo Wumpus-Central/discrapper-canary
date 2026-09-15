@@ -1,63 +1,63 @@
-n.d(t, { A: () => y, j: () => S });
-var r = n(477900),
-    l = n(582128),
-    i = n(192308),
-    o = n(28863),
-    a = n(683071),
-    s = n(308528),
-    u = n(913122),
-    c = n(136857),
-    d = n(211083),
-    h = n(655857),
-    C = n(721836),
-    m = n(834981),
-    p = n(975571),
-    f = n(166532),
-    g = n(652215),
-    E = n(375708);
-function S(e) {
-    let { planError: t } = e,
-        { paymentError: n } = (0, d.o)(),
-        { dropdownCurrencies: a } = (0, h.Jn)(),
-        { purchaseError: S, purchasePreviewError: y } = (0, C.t4)((e) => ({
+t.d(n, { A: () => g, j: () => N });
+var r = t(477900),
+    l = t(582128),
+    i = t(192308),
+    s = t(28863),
+    o = t(683071),
+    a = t(308528),
+    u = t(913122),
+    c = t(136857),
+    d = t(211083),
+    h = t(655857),
+    E = t(721836),
+    m = t(834981),
+    C = t(975571),
+    f = t(166532),
+    A = t(652215),
+    x = t(375708);
+function N(e) {
+    let { planError: n } = e,
+        { paymentError: t } = (0, d.o)(),
+        { dropdownCurrencies: o } = (0, h.Jn)(),
+        { purchaseError: N, purchasePreviewError: g } = (0, E.t4)((e) => ({
             purchaseError: e.purchaseError,
             purchasePreviewError: e.purchasePreviewError,
         })),
-        x = null;
-    null != y ? (x = y) : null != n && null == (0, f.ou)(n) ? (x = n) : null != S ? (x = S) : null != t && (x = t);
-    let _ = (0, m.vx)(),
-        I = l.useCallback(() => {
-            ((0, i.closeAllModals)(), s.A.openPrivateChannel({ recipientIds: _ }));
-        }, [_]),
-        A = a.length > 1,
-        k = null != x ? x.message : "";
+        p = null;
+    null != g ? (p = g) : null != t && null == (0, f.ou)(t) ? (p = t) : null != N ? (p = N) : null != n && (p = n);
+    let j = (0, m.vx)(),
+        v = l.useCallback(() => {
+            ((0, i.closeAllModals)(), a.A.openPrivateChannel({ recipientIds: j }));
+        }, [j]),
+        I = o.length > 1,
+        _ = null != p ? p.message : "";
     if (
-        null != x &&
-        x instanceof u.Ey &&
-        (x.code === c.tG.CARD_DECLINED && A && (k += ` ${E.intl.string(E.t.iWvwQS)}`),
-        x.code === c.tG.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (k = E.intl.string(E.t.ypuSd8)),
-        x.code === g.t02.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (k = E.intl.string(E.t.mXMmWE)),
-        x.code === c.tG.INVALID_CURRENCY_FOR_PAYMENT_SOURCE && (k = E.intl.string(E.t.mC1Fjz)),
-        (x.code === c.tG.BILLING_SPENDING_LIMIT_REACHED || x.code === c.tG.BILLING_SPENDING_LIMIT_WILL_EXCEED) &&
-            (k = E.intl.format(E.t["mv/fF2"], {
-                guardianHook: (e, t) =>
-                    _.length > 0
-                        ? (0, r.jsx)(o.Anchor, { onClick: I, children: e }, t)
-                        : (0, r.jsx)(l.Fragment, { children: e }, t),
+        null != p &&
+        p instanceof u.Ey &&
+        (p.code === c.tG.CARD_DECLINED && I && (_ += ` ${x.intl.string(x.t.iWvwQS)}`),
+        p.code === c.tG.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (_ = x.intl.string(x.t.ypuSd8)),
+        p.code === A.t02.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (_ = x.intl.string(x.t.mXMmWE)),
+        p.code === c.tG.INVALID_CURRENCY_FOR_PAYMENT_SOURCE && (_ = x.intl.string(x.t.mC1Fjz)),
+        (p.code === c.tG.BILLING_SPENDING_LIMIT_REACHED || p.code === c.tG.BILLING_SPENDING_LIMIT_WILL_EXCEED) &&
+            (_ = x.intl.format(x.t["mv/fF2"], {
+                guardianHook: (e, n) =>
+                    j.length > 0
+                        ? (0, r.jsx)(s.Anchor, { onClick: v, children: e }, n)
+                        : (0, r.jsx)(l.Fragment, { children: e }, n),
             })),
-        x.code === c.tG.INVALID_BILLING_ADDRESS)
+        p.code === c.tG.INVALID_BILLING_ADDRESS)
     ) {
-        let e = E.intl.format(E.t.BPDKoA, {
-            helpdeskArticle: p.A.getArticleURL(g.MVz.BILLING).concat(g.bNI.INVALID_BILLING_ADDRESS),
+        let e = x.intl.format(x.t.BPDKoA, {
+            helpdeskArticle: C.A.getArticleURL(A.MVz.BILLING).concat(A.bNI.INVALID_BILLING_ADDRESS),
         });
-        k = (0, r.jsxs)(r.Fragment, { children: [E.intl.string(E.t["yVIm/G"]), " ", e] });
+        _ = (0, r.jsxs)(r.Fragment, { children: [x.intl.string(x.t["yVIm/G"]), " ", e] });
     }
-    return { error: x, errorMessage: k };
+    return { error: p, errorMessage: _ };
 }
-function y(e) {
-    let { planError: t, purchaseErrorBlockRef: n, className: l } = e,
-        { error: i, errorMessage: o } = S({ planError: t });
+function g(e) {
+    let { planError: n, purchaseErrorBlockRef: t, className: l } = e,
+        { error: i, errorMessage: s } = N({ planError: n });
     return null == i
         ? null
-        : (0, r.jsx)("div", { ref: n, className: l, children: (0, r.jsx)(a.w, { type: "critical", children: o }) });
+        : (0, r.jsx)("div", { ref: t, className: l, children: (0, r.jsx)(o.w, { type: "critical", children: s }) });
 }

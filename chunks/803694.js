@@ -118,8 +118,8 @@ class m {
     }
 }
 var p = n(375708),
-    C = n(693351);
-function h(e) {
+    h = n(693351);
+function C(e) {
     let { giftCardsEnabled: t, checkoutPaymentSources: n } = e,
         a = l.useMemo(() => (0, u.N)(n)?.id, [n]),
         { checkoutInvoicePreview: s, renewalInvoicePreview: c } = (0, r.t4)((e) => ({
@@ -132,18 +132,18 @@ function h(e) {
         }),
         m = E(s),
         p = E(c),
-        C = null != m && 0 === m && null != p,
-        h = 0 === m && d,
-        f = C ? p : m,
-        S = C ? (c?.total ?? null) : s?.total,
+        h = null != m && 0 === m && null != p,
+        C = 0 === m && d,
+        f = h ? p : m,
+        S = h ? (c?.total ?? null) : s?.total,
         y = (0, i.bG)([o.A], () => (t && null != a ? o.A.getBalance(a) : null), [t, a]);
     return t && null != y
         ? {
               walletCoversSubtotal: null != f && y.amount >= f,
               walletCoversTotal: null != S && y.amount >= S,
               walletId: a,
-              isWalletBalanceLoaded: null != f && !h,
-              isWalletCoverageLoading: h,
+              isWalletBalanceLoaded: null != f && !C,
+              isWalletCoverageLoading: C,
           }
         : {
               walletCoversSubtotal: !1,
@@ -160,7 +160,7 @@ function f(e) {
             walletCoversTotal: r,
             walletId: a,
             isWalletBalanceLoaded: o,
-        } = h({ giftCardsEnabled: i, checkoutPaymentSources: t });
+        } = C({ giftCardsEnabled: i, checkoutPaymentSources: t });
     return o && null != n && n === a && !r;
 }
 function E(e) {
@@ -193,12 +193,12 @@ function S(e) {
                 ? { dropdownPaymentSources: e, giftCardWallet: (0, u.N)(i) }
                 : { dropdownPaymentSources: e, giftCardWallet: null };
         }, [i, y]),
-        [_, x] = l.useState(null),
+        [x, _] = l.useState(null),
         T = null != v && a === v.id,
         N = l.useMemo(
             () =>
-                null != _ ? _ : d({ giftCardWallet: null, dropdownPaymentSources: P, subscriptionPaymentSourceId: S }),
-            [P, S, _],
+                null != x ? x : d({ giftCardWallet: null, dropdownPaymentSources: P, subscriptionPaymentSourceId: S }),
+            [P, S, x],
         ),
         b = l.useMemo(() => (T ? N : (a ?? null)), [N, T, a]),
         j = l.useMemo(
@@ -239,7 +239,7 @@ function S(e) {
         M = l.useCallback(
             (e) => {
                 if (e && null != v) {
-                    (a !== v.id && x(a ?? null), o(v.id));
+                    (a !== v.id && _(a ?? null), o(v.id));
                     return;
                 }
                 o(N);
@@ -251,7 +251,7 @@ function S(e) {
             walletCoversTotal: L,
             isWalletBalanceLoaded: k,
             isWalletCoverageLoading: w,
-        } = h({ giftCardsEnabled: y, checkoutPaymentSources: i }),
+        } = C({ giftCardsEnabled: y, checkoutPaymentSources: i }),
         U = null != S && null != v && S === v.id;
     l.useEffect(() => {
         !U && k && !O && T && o(N);
@@ -266,7 +266,7 @@ function S(e) {
                       onChange: M,
                       loading: w,
                       disabled: !w && !O,
-                      disabledTooltip: w || O ? void 0 : p.intl.string(C.default.ccWIdu),
+                      disabledTooltip: w || O ? void 0 : p.intl.string(h.default.ccWIdu),
                   },
         [v, T, M, O, w],
     );
@@ -296,8 +296,8 @@ function y(e) {
         { enabled: d } = (0, s.c)({ location: t }),
         m = l.useMemo(() => (d ? (0, u.N)(c) : null), [c, d]),
         p = null != o && null != m && o === m.id,
-        { walletCoversTotal: C, isWalletBalanceLoaded: f } = h({ giftCardsEnabled: d, checkoutPaymentSources: c });
+        { walletCoversTotal: h, isWalletBalanceLoaded: f } = C({ giftCardsEnabled: d, checkoutPaymentSources: c });
     return l.useMemo(() => {
-        if (p && f && !C) return { type: "warning", key: "wallet-insufficient-balance", message: n };
-    }, [p, f, C, n]);
+        if (p && f && !h) return { type: "warning", key: "wallet-insufficient-balance", message: n };
+    }, [p, f, h, n]);
 }

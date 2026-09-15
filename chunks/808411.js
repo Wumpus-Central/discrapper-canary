@@ -13,11 +13,11 @@ let p = function () {
         [l, p] = n.useState(4),
         [m, b] = n.useState(2),
         [h, x] = n.useState(d.fh.LIGHT),
-        [f, y] = n.useState(d.qP.BLUE),
-        [g, v] = n.useState("darkslategray"),
+        [f, g] = n.useState(d.qP.BLUE),
+        [y, v] = n.useState("darkslategray"),
         [E, S] = n.useState("blanchedalmond"),
-        [C, T] = n.useState("pink"),
-        [j, A] = n.useState(!0),
+        [C, j] = n.useState("pink"),
+        [T, A] = n.useState(!0),
         I = n.useMemo(
             () =>
                 Object.entries(d.fh).map((e) => {
@@ -42,8 +42,8 @@ let p = function () {
                 maximum: l,
                 weight: h,
                 variant: f,
-                override: { default: { background: g, gradientStart: E, gradientEnd: C } },
-                glowing: j,
+                override: { default: { background: y, gradientStart: E, gradientEnd: C } },
+                glowing: T,
             }),
             (0, a.jsx)(c.nB, {}),
             (0, a.jsx)(c.MG, {
@@ -82,7 +82,7 @@ let p = function () {
                     hideLabel: !0,
                     placeholder: "Variant",
                     onSelectionChange: (e) => {
-                        null !== e && y(e);
+                        null !== e && g(e);
                     },
                     value: f,
                     options: P,
@@ -105,7 +105,7 @@ let p = function () {
             (0, a.jsx)(c.MG, {
                 children: (0, a.jsx)(s.S, {
                     label: "Glowing",
-                    checked: j,
+                    checked: T,
                     onChange: (e) => {
                         A(e);
                     },
@@ -124,7 +124,7 @@ let p = function () {
             }),
             (0, a.jsx)(c.MG, {
                 children: (0, a.jsx)(r.k, {
-                    value: g,
+                    value: y,
                     onChange: (e) => {
                         v(e);
                     },
@@ -144,7 +144,7 @@ let p = function () {
                 children: (0, a.jsx)(r.k, {
                     value: C,
                     onChange: (e) => {
-                        T(e);
+                        j(e);
                     },
                     label: "Gradient End",
                 }),

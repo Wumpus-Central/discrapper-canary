@@ -10,8 +10,8 @@ var l = n(477900),
     d = n(786948),
     m = n(202475),
     p = n(883645),
-    C = n(721836),
-    h = n(26279);
+    h = n(721836),
+    C = n(26279);
 function f(e) {
     let {
             customFooterProps: t,
@@ -28,8 +28,8 @@ function f(e) {
         } = e,
         {
             paymentSourceId: v,
-            purchasePreviewError: _,
-            customCheckoutFlow: x,
+            purchasePreviewError: x,
+            customCheckoutFlow: _,
             contextMetadata: T,
             purchaseError: N,
             setCheckoutCurrency: b,
@@ -37,7 +37,7 @@ function f(e) {
             checkoutPaymentSources: R,
             hasCheckoutContextLoaded: M,
             invoicePreview: O,
-        } = (0, C.t4)((e) => ({
+        } = (0, h.t4)((e) => ({
             customCheckoutFlow: e.customCheckoutFlow,
             contextMetadata: e.contextMetadata,
             paymentSourceId: e.paymentSourceId,
@@ -62,7 +62,7 @@ function f(e) {
         }, [R, M, v]),
         G = (0, s.iB)({ checkoutPaymentSources: R, paymentSourceId: v, location: "CheckoutBaseReviewStep" }),
         { disablePurchase: F } = i.useMemo(() => {
-            let e = { disablePurchase: G || x === h.uH.DEV_STORYBOOK_CHECKOUT };
+            let e = { disablePurchase: G || _ === C.uH.DEV_STORYBOOK_CHECKOUT };
             return null != S
                 ? S(
                       { ...e },
@@ -71,11 +71,11 @@ function f(e) {
                           paymentSourceId: v,
                           isSelectedPaymentSourceDisabled: D,
                           invoicePreview: O,
-                          purchasePreviewError: _,
+                          purchasePreviewError: x,
                       },
                   )
                 : e;
-        }, [S, U, v, D, O, _, G, x]);
+        }, [S, U, v, D, O, x, G, _]);
     i.useEffect(() => {
         null != N && null != k.current && k.current.scrollIntoView({ behavior: "smooth" });
     }, [N]);

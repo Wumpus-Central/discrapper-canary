@@ -4,13 +4,13 @@
     XE: () => P,
     Yc: () => I,
     cY: () => p,
-    dB: () => C,
+    dB: () => h,
     dL: () => v,
     eb: () => E,
     et: () => S,
     hc: () => y,
     uP: () => f,
-    uk: () => h,
+    uk: () => C,
 }),
     n(321073));
 var l = n(582128),
@@ -43,10 +43,10 @@ function p(e) {
         [e, t, n],
     );
 }
-function C(e) {
+function h(e) {
     return (0, i.bG)([c.A], () => (null != e ? c.A.getSubscriptionListing(e) : null));
 }
-function h(e) {
+function C(e) {
     let t = (0, o.X)("useGroupListingsForGuild");
     return (0, i.bG)([c.A], () => (null != e && t ? c.A.getSubscriptionGroupListingsForGuild(e) : m));
 }
