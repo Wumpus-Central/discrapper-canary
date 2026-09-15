@@ -2087,7 +2087,7 @@ function sX() {
                       backgroundAssetUrl: sK,
                       blurTint: "#2E213D",
                       caption: "YouTube Premium",
-                      ctaText: eg.intl.string(eg.t.w7s5Qr),
+                      ctaText: eg.intl.string(sF.default.fcopjf),
                       onCtaClick: () =>
                           (0, sB.P)({
                               partnerIds: [sw.NC],
