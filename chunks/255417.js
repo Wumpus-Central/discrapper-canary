@@ -11,4 +11,5 @@ e.exports = {
     TE: "opencriticTopCriticContainer_ceab1a",
     ti: "opencriticTopCriticRating_ceab1a",
     nf: "link_ceab1a",
+    yX: "linkText_ceab1a",
 };

@@ -2122,6 +2122,7 @@ function nB(e) {
                                 (0, i.jsx)(q.E, {
                                     variant: "text-xs/medium",
                                     color: u,
+                                    className: nW.yX,
                                     children: (function (e) {
                                         switch (e) {
                                             case nw.vI.NO_USER_REVIEWS:

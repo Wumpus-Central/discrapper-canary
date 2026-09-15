@@ -446,4 +446,9 @@
     background-color: var(--background-surface-higher)
 }
 
-/*# sourceMappingURL=5f9534545852eb2f.css.map*/
+.linkText_ceab1a {
+    -webkit-text-decoration: var(--link-decoration);
+    text-decoration: var(--link-decoration)
+}
+
+/*# sourceMappingURL=96bfbed7f044d2b7.css.map*/
