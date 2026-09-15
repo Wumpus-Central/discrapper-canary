@@ -131,17 +131,23 @@
 }
 
 .icon_c2a763 {
+    background-color: var(--background-mod-strong);
+    border-radius: var(--radius-xs);
     height: 24px;
     position: relative;
     width: 24px
 }
 
-.icon_c2a763,
-.icon_c2a763 img {
-    border-radius: var(--radius-xs)
+.custom-user-profile-theme.theme-dark .icon_c2a763 {
+    background-color: var(--opacity-white-24)
+}
+
+.custom-user-profile-theme.theme-light .icon_c2a763 {
+    background-color: var(--opacity-black-32)
 }
 
 .icon_c2a763 img {
+    border-radius: var(--radius-xs);
     display: block;
     height: auto;
     max-height: 100%;
@@ -171,4 +177,4 @@
     color: var(--neutral-9)
 }
 
-/*# sourceMappingURL=899003.8c513b9dcb34d875.css.map*/
+/*# sourceMappingURL=899003.efddc51828b78b17.css.map*/
