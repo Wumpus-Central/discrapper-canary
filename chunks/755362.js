@@ -55,6 +55,12 @@ function Q(e) {
 var J = n(58703);
 let ee = [
     {
+        date: "2026-09-15",
+        platforms: ["mobile"],
+        summary:
+            "On phones, a project has the same menu as desktop: remix it, export or import it, get its coding tool link, browse version history and rewind its data from the chat menu, and copy its link or ID, open its settings or delete it from the landing.",
+    },
+    {
         date: "2026-09-14",
         platforms: ["mobile"],
         summary:
