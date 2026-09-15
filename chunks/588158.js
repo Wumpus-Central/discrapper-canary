@@ -1,4 +1,4 @@
-n.d(t, { A: () => eT });
+n.d(t, { A: () => ev });
 var l,
     i = n(477900),
     s = n(582128),
@@ -24,8 +24,8 @@ var l,
     y = n(597643),
     b = n(31717),
     N = n(49999);
-let T = I.M.SCHEDULED_MESSAGES_DRAFT_COACHMARK;
-var v = n(566908),
+let v = I.M.SCHEDULED_MESSAGES_DRAFT_COACHMARK;
+var T = n(566908),
     M = n(43105),
     R = n(375708),
     D = n(632946);
@@ -131,20 +131,19 @@ function ey(e) {
     function S() {
         (el.default.track(eS.HAw.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), Z.R(Y.s4.TEXT, p, void 0, t.id));
     }
-    function j() {
+    function I() {
         g();
     }
-    function y() {
-        ((0, _.Dr)(I.M.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: N.i.TAKE_ACTION }),
-            (0, c.openModalLazy)(
-                async () => {
-                    let { default: e } = await Promise.all([n.e("669706"), n.e("842322")]).then(n.bind(n, 143657));
-                    return (n) => (0, i.jsx)(e, { ...n, channel: t });
-                },
-                { modalKey: e_.sm },
-            ));
+    function _() {
+        (0, c.openModalLazy)(
+            async () => {
+                let { default: e } = await Promise.all([n.e("669706"), n.e("842322")]).then(n.bind(n, 143657));
+                return (n) => (0, i.jsx)(e, { ...n, channel: t });
+            },
+            { modalKey: e_.sm },
+        );
     }
-    function b() {
+    function j() {
         let e = h,
             n = "txt",
             l = "",
@@ -187,7 +186,7 @@ function ey(e) {
                                 label: e.display,
                                 iconLeft: e.icon,
                                 leadingAccessory: { type: "icon", icon: e.icon },
-                                action: b,
+                                action: j,
                             },
                             "upload-text-as-file",
                         );
@@ -200,7 +199,7 @@ function ey(e) {
                                 iconLeft: e.icon,
                                 leadingAccessory: { type: "icon", icon: e.icon },
                                 badge: null != e.badgeVal && e.badgeVal > 0 ? { text: e.badgeVal.toString() } : void 0,
-                                action: j,
+                                action: I,
                             },
                             "clips",
                         );
@@ -212,7 +211,7 @@ function ey(e) {
                                 label: e.display,
                                 iconLeft: e.icon,
                                 leadingAccessory: { type: "icon", icon: e.icon },
-                                action: y,
+                                action: _,
                             },
                             "poll",
                         );
@@ -385,7 +384,7 @@ function ey(e) {
 }
 var eb = n(696016),
     eN = n(657851);
-let eT = s.memo(function (e) {
+let ev = s.memo(function (e) {
     let {
             className: t,
             channel: l,
@@ -482,10 +481,10 @@ let eT = s.memo(function (e) {
         );
     });
     let ej = (0, k.n)(l),
-        eT = (0, k.Tb)(l),
-        ev = !P.D_.useSetting() && !(0, H.isAndroidWeb)() && null != window.ResizeObserver,
+        ev = (0, k.Tb)(l),
+        eT = !P.D_.useSetting() && !(0, H.isAndroidWeb)() && null != window.ResizeObserver,
         eM = (0, S.I7)(l ?? void 0),
-        eR = (0, v.vK)(l),
+        eR = (0, T.vK)(l),
         eD = (0, g.b)(),
         eL = (function (e) {
             let {
@@ -570,8 +569,8 @@ let eT = s.memo(function (e) {
             );
         })({
             canAttachFiles: eI,
-            canStartThreads: ej || eT,
-            useSlate: ev,
+            canStartThreads: ej || ev,
+            useSlate: eT,
             hasClips: ei,
             canUseApplicationCommands: !D,
             channel: l,
@@ -585,7 +584,7 @@ let eT = s.memo(function (e) {
         }),
         { isCoachmarkVisible: ek, dismissCoachmark: eP } = (function (e) {
             let { channel: t, draftText: n, isEligible: l } = e,
-                i = (0, _.HX)(T),
+                i = (0, _.HX)(v),
                 a = (0, o.bG)([b.A], () => null != b.A.getScheduledMessage(t.id)),
                 r = (0, o.bG)([y.A], () => y.A.isConnected()),
                 c = l && n.trim().length > 10 && !a && r,
@@ -600,11 +599,11 @@ let eT = s.memo(function (e) {
                 }, [c, i, d, n]),
                 !c && d && u(!1));
             let p = s.useCallback((e) => {
-                (u(!1), (0, _.Dr)(T, { dismissAction: e }));
+                (u(!1), (0, _.Dr)(v, { dismissAction: e }));
             }, []);
             return (
                 s.useEffect(() => {
-                    h && ((0, j.Wx)(T), (0, _.Dr)(T, { dismissAction: N.i.AUTO_DISMISS }));
+                    h && ((0, j.Wx)(v), (0, _.Dr)(v, { dismissAction: N.i.AUTO_DISMISS }));
                 }, [h]),
                 { isCoachmarkVisible: h, dismissCoachmark: p }
             );

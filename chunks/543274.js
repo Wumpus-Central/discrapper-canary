@@ -1,4 +1,4 @@
-(t.d(n, { K: () => S }), t(321073));
+t.d(n, { K: () => _ });
 var l = t(477900),
     i = t(582128),
     s = t(17928),
@@ -9,74 +9,70 @@ var l = t(477900),
     u = t(933958),
     d = t(404522),
     A = t(782091),
-    h = t(641703),
     m = t(807067),
-    C = t(521588),
-    E = t(688810),
+    h = t(521588),
+    C = t(688810),
     p = t(975412),
     g = t(384059),
-    f = t(379848),
-    I = t(267102),
+    E = t(379848),
+    f = t(267102),
     x = t(421773),
     v = t(168754),
-    T = t(376086),
-    _ = t(652215),
+    I = t(376086),
+    T = t(652215),
     j = t(49999),
     N = t(375708);
-function S(e) {
-    let { channel: n, idle: t, whichPopoutIsOpen: S, setWhichPopoutIsOpen: b } = e,
+function _(e) {
+    let { channel: n, idle: t, whichPopoutIsOpen: _, setWhichPopoutIsOpen: b } = e,
         O = (0, s.bG)([u.Ay], () => u.Ay.isLaunchingActivity()),
-        y = (0, A.et)(n.id),
-        R = (0, A.dL)(y),
-        M = y !== A.xy.CAN_LAUNCH || O,
-        { isHovered: L, setIsHovered: D, onMouseEnter: P, onMouseLeave: k } = (0, x.A)(200, 300),
-        G = (0, d.b)({ surface: c.YI.VOICE_LAUNCHER }),
-        V = (0, s.bG)(
+        S = (0, A.et)(n.id),
+        y = (0, A.dL)(S),
+        R = S !== A.xy.CAN_LAUNCH || O,
+        { isHovered: M, setIsHovered: L, onMouseEnter: D, onMouseLeave: P } = (0, x.A)(200, 300),
+        k = (0, d.b)({ surface: c.YI.VOICE_LAUNCHER }),
+        G = (0, s.bG)(
             [u.Ay],
             () => null != u.Ay.getSelfEmbeddedActivityForLocation(u.Ay.getConnectedActivityLocation()),
         ),
-        U = !M,
-        B = i.useCallback(
+        U = !R,
+        V = i.useCallback(
             (e) => {
-                "focus" !== e.type && P();
+                "focus" !== e.type && D();
             },
-            [P],
+            [D],
         ),
-        H = (0, I.Us)() === _.BRT.POPOUT,
-        { parentAnalyticsLocation: w, newestAnalyticsLocation: Y } = (0, E.Ay)(),
-        F = i.useCallback(() => {
-            ((0, g.X)(w, g.O.ACTIVITY),
+        B = (0, f.Us)() === T.BRT.POPOUT,
+        { parentAnalyticsLocation: H, newestAnalyticsLocation: w } = (0, C.Ay)(),
+        Y = i.useCallback(() => {
+            ((0, g.X)(H, g.O.ACTIVITY),
                 (0, p.A)({
                     context: null != n ? { type: "channel", channel: n } : { type: "contextless" },
-                    openInPopout: H,
-                    analyticsLocation: Y,
+                    openInPopout: B,
+                    analyticsLocation: w,
                 }));
-        }, [n, H, Y, w]),
-        K = [];
-    (M || K.push(a.M.ACTIVITIES_MINI_SHELF_SPARKLES),
-        (0, h.A)(n.id) && !M && K.push(a.M.ACTIVITY_GDM_ROCKET_SPARKLE),
-        M || K.push(a.M.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP));
-    let X = i.useRef(!1),
-        z = i.useRef(null);
-    return (0, l.jsx)(f.Ay, {
-        contentTypes: K,
+        }, [n, B, w, H]),
+        F = R ? [] : [a.M.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP],
+        K = i.useRef(!1),
+        X = i.useRef(null);
+    return (0, l.jsx)(E.Ay, {
+        contentTypes: F,
         children: (e) => {
             let { visibleContent: i, markAsDismissed: s } = e,
-                c = i === a.M.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP && !t && !L;
+                c = i === a.M.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP && !t && !M;
             return (
-                X.current && !c && s(j.i.AUTO_DISMISS),
-                X.current !== c && (X.current = c),
+                K.current && !c && s(j.i.AUTO_DISMISS),
+                K.current !== c && (K.current = c),
                 (0, l.jsx)(r.Y, {
-                    targetElementRef: z,
+                    targetElementRef: X,
                     fixed: !0,
-                    shouldShow: L && (S === T.P.ACTIVITY || null == S),
+                    shouldShow: M && (_ === I.P.ACTIVITY || null == _),
                     animation: r.Y.Animation.FADE,
                     animationPosition: "top",
                     position: "top",
                     align: "center",
                     spacing: 16,
                     onRequestClose: () => {
-                        (D(!1), b?.(void 0));
+                        (L(!1), b?.(void 0));
                     },
                     renderPopout: (e) => {
                         let { closePopout: t, setPopoutRef: i } = e;
@@ -87,17 +83,17 @@ function S(e) {
                                   },
                                   channel: n,
                                   closePopout: t,
-                                  onMouseEnter: P,
-                                  onMouseLeave: k,
-                                  isHovered: L,
+                                  onMouseEnter: D,
+                                  onMouseLeave: P,
+                                  isHovered: M,
                                   onClick: () => s(j.i.UNKNOWN),
                               })
                             : (0, l.jsx)(l.Fragment, {});
                     },
                     children: () =>
-                        (0, l.jsx)(f.GY, {
+                        (0, l.jsx)(E.GY, {
                             contentType: a.M.ACTIVITIES_VOICE_LAUNCHER_BADGE,
-                            latestVersion: G,
+                            latestVersion: k,
                             children: (e) => {
                                 let { visibleContent: n, markAsDismissed: t } = e;
                                 return (0, l.jsxs)(l.Fragment, {
@@ -107,36 +103,28 @@ function S(e) {
                                             forceOpen: !0,
                                             shouldShow: c,
                                             children: (0, l.jsx)("div", {
-                                                ref: z,
+                                                ref: X,
                                                 children: (0, l.jsx)(v.A, {
-                                                    disabled: M,
-                                                    "aria-label": R,
-                                                    label: U ? void 0 : R,
-                                                    isActivityActive: V,
+                                                    disabled: R,
+                                                    "aria-label": y,
+                                                    label: U ? void 0 : y,
+                                                    isActivityActive: G,
                                                     onClick: () => {
-                                                        (F(),
-                                                            (i === a.M.ACTIVITIES_MINI_SHELF_SPARKLES ||
-                                                                i === a.M.ACTIVITY_GDM_ROCKET_SPARKLE ||
-                                                                i ===
-                                                                    a.M
-                                                                        .ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES ||
-                                                                i ===
-                                                                    a.M
-                                                                        .ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES ||
-                                                                i ===
-                                                                    a.M
-                                                                        .VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP) &&
+                                                        (Y(),
+                                                            i ===
+                                                                a.M
+                                                                    .VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP &&
                                                                 s(j.i.TAKE_ACTION),
                                                             n === a.M.ACTIVITIES_VOICE_LAUNCHER_BADGE &&
                                                                 t(j.i.TAKE_ACTION));
                                                     },
-                                                    onMouseEnter: B,
-                                                    onMouseLeave: k,
+                                                    onMouseEnter: V,
+                                                    onMouseLeave: P,
                                                 }),
                                             }),
                                         }),
                                         n === a.M.ACTIVITIES_VOICE_LAUNCHER_BADGE
-                                            ? (0, l.jsx)(C.a, { top: 2, right: 2, size: 6 })
+                                            ? (0, l.jsx)(h.a, { top: 2, right: 2, size: 6 })
                                             : null,
                                     ],
                                 });

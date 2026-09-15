@@ -2606,8 +2606,7 @@ let n6 = c()(ed.bo, 200),
                     closePopout: c,
                 }),
                 tc = [];
-            (i === ex.EmojiIntention.REACTION && tc.push(m.M.SUPER_REACTIONS_NITRO_MARKETING),
-                v.Ay.hasFavoriteEmojis(ev) || tc.push(m.M.EMOJI_PICKER_FAVORITE_EMOJIS_TIP));
+            v.Ay.hasFavoriteEmojis(ev) || tc.push(m.M.EMOJI_PICKER_FAVORITE_EMOJIS_TIP);
             let td = (0, s.jsx)(x.A, {
                 ...eG,
                 children: (0, s.jsxs)(ta, {

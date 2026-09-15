@@ -187,7 +187,7 @@ function x(e, t) {
     let n = l.A.getGuildDismissedContentState(t);
     return null != n && null != n[e] && null != n[e].lastDismissedObjectId && "0" !== n[e].lastDismissedObjectId;
 }
-let k = new Set([r.M.ACCOUNT_LINK_INVITE_FRIENDS, r.M.ACCOUNT_LINK_PROMPT, r.M.AUTOCLIPPING_ACCOUNT_PANEL_COACHMARK]);
+let k = new Set([r.M.ACCOUNT_LINK_INVITE_FRIENDS, r.M.AUTOCLIPPING_ACCOUNT_PANEL_COACHMARK]);
 function F(e, t, n) {
     return t && !(null == n && k.has(e));
 }

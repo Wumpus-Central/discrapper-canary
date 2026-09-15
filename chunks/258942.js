@@ -11,18 +11,18 @@ var e = i(477900),
     u = i(837057),
     x = i(749314),
     p = i(174459),
-    A = i(310419),
+    h = i(310419),
     C = i(652215),
-    h = i(49999),
+    A = i(49999),
     N = i(488995),
     f = i(375708),
     j = i(935794);
 function D(t) {
-    let { guildId: s, transitionState: D, onClose: E, analyticsType: I = a.M.APP_DIRECTORY_UPSELL_MODAL } = t;
+    let { guildId: s, transitionState: D, onClose: E, analyticsType: b } = t;
     return (
         n.useEffect(() => {
-            p.default.track(C.HAw.DISMISSIBLE_CONTENT_SHOWN, { type: a.M[I], guild_id: s });
-        }, [s, I]),
+            p.default.track(C.HAw.DISMISSIBLE_CONTENT_SHOWN, { type: a.M[b], guild_id: s });
+        }, [s, b]),
         (0, e.jsx)(r.k, {
             title: f.intl.string(f.t["2tv5YG"]),
             subtitle: f.intl.string(f.t.pgwlD7),
@@ -35,7 +35,7 @@ function D(t) {
                     variant: "secondary",
                     text: f.intl.string(f.t.L5eIZ2),
                     onClick: function () {
-                        (E(), (0, m.Dr)(I, { forceTrack: !0, dismissAction: h.i.SECONDARY, guildId: s }));
+                        (E(), (0, m.Dr)(b, { forceTrack: !0, dismissAction: A.i.SECONDARY, guildId: s }));
                     },
                 },
                 {
@@ -43,12 +43,12 @@ function D(t) {
                     text: f.intl.string(f.t["5e8Mrp"]),
                     onClick: function () {
                         (E(),
-                            (0, m.Dr)(I, { forceTrack: !0, dismissAction: h.i.PRIMARY, guildId: s }),
+                            (0, m.Dr)(b, { forceTrack: !0, dismissAction: A.i.PRIMARY, guildId: s }),
                             (0, u.transitionToGlobalDiscovery)({
                                 tab: N.GlobalDiscoveryTab.APPS,
                                 newSessionState: {
                                     guildId: s,
-                                    entrypoint: { name: A.sW.APPLICATION_DIRECTORY_UPSELL_MODAL },
+                                    entrypoint: { name: h.sW.APPLICATION_DIRECTORY_UPSELL_MODAL },
                                 },
                             }));
                     },
