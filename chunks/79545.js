@@ -11,13 +11,14 @@ var l,
         (l[(l.CLAIMED = 4)] = "CLAIMED"),
         (l[(l.EXPIRED = 5)] = "EXPIRED"),
         (l[(l.EXPIRED_CLAIMABLE = 6)] = "EXPIRED_CLAIMABLE"),
+        (l[(l.EXPIRED_CLAIMED = 7)] = "EXPIRED_CLAIMED"),
         l);
 function o(e) {
     let t = e.userStatus?.enrolledAt != null,
         n = e.userStatus?.completedAt != null,
         l = e.userStatus?.claimedAt != null,
         i = (0, r.fc)(e).percentComplete > 0;
-    return (0, s.Ic)(e) ? ((0, s.if)(e) && n && !l ? 6 : 5) : l ? 4 : t && n ? 3 : t && i ? 2 : +!!t;
+    return (0, s.Ic)(e) ? (l ? 7 : (0, s.if)(e) && n ? 6 : 5) : l ? 4 : t && n ? 3 : t && i ? 2 : +!!t;
 }
 var u =
     (((i = {})[(i.QUEST_BAR_FOOTER = 1)] = "QUEST_BAR_FOOTER"),

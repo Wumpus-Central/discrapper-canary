@@ -32,6 +32,7 @@ let o = (0, s.mj)({
                 i.UA.COMPLETED,
                 i.UA.CLAIMED,
                 i.UA.EXPIRED,
+                i.UA.EXPIRED_CLAIMED,
             ]),
         },
         7: {
@@ -44,6 +45,7 @@ let o = (0, s.mj)({
                 i.UA.CLAIMED,
                 i.UA.EXPIRED,
                 i.UA.EXPIRED_CLAIMABLE,
+                i.UA.EXPIRED_CLAIMED,
             ]),
         },
     },

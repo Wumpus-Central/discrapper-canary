@@ -16,8 +16,8 @@ var l,
     g = s(821609),
     v = s(509434),
     j = s(331322),
-    S = s(683438),
-    C = s(944791),
+    C = s(683438),
+    S = s(944791),
     _ = s(775602),
     N = s(793574),
     p = s(139286),
@@ -25,8 +25,8 @@ var l,
     T = s(10088),
     O = s(839534),
     I = s(726249),
-    b = s(607470),
-    R = s(826673),
+    R = s(607470),
+    b = s(826673),
     M = s(840251),
     L = s(688151);
 let H = new M.E([], L.$G.QUEST_HOME_OPEN, { location: "open quest home" });
@@ -52,8 +52,8 @@ let K = (0, W.mj)({
 var z = s(860996),
     $ = s(866157),
     Y = s(557637),
-    J = s(834730),
-    X = s(289873),
+    X = s(834730),
+    J = s(289873),
     Z = s(274670),
     ee = s(144779),
     et = s(859703),
@@ -125,7 +125,7 @@ let ev = i.forwardRef(function (e, t) {
                                                     className: ex.DD,
                                                     children: l,
                                                 }),
-                                                (0, r.jsx)(J.E, {
+                                                (0, r.jsx)(X.E, {
                                                     color: "text-strong",
                                                     variant: "text-md/normal",
                                                     className: ex.VA,
@@ -146,9 +146,9 @@ let ev = i.forwardRef(function (e, t) {
 });
 var ej = s(339889);
 (s(134528), s(947204));
-var eS = s(749401),
-    eC = s(635377),
-    e_ = s.n(eC),
+var eC = s(749401),
+    eS = s(635377),
+    e_ = s.n(eS),
     eN = s(998304),
     ep = s(515718);
 let eA = new (e_())({ max: 50 });
@@ -178,8 +178,8 @@ async function eT(e) {
 }
 var eO = s(49491),
     eI = s(569926),
-    eb = s(418842),
-    eR = s(174459),
+    eR = s(418842),
+    eb = s(174459),
     eM = s(403362),
     eL = s(38405);
 let eH = (0, W.mj)({
@@ -230,8 +230,8 @@ function eK(e, t, s) {
 var ez = s(915850);
 let e$ = "data-scroll-target",
     eY = `[${e$}]`,
-    eJ = { anchors: [], windowSizes: [] },
-    eX = '[role="button"]:not([tabindex="-1"]):not([aria-disabled="true"])',
+    eX = { anchors: [], windowSizes: [] },
+    eJ = '[role="button"]:not([tabindex="-1"]):not([aria-disabled="true"])',
     eZ = { overflowX: "hidden" };
 function e0(e, t, s) {
     let n = t.length - 1,
@@ -262,18 +262,18 @@ let e1 = i.memo(function (e) {
             autoCycle: v = !1,
         } = e,
         j = i.useRef(null),
-        S = i.useCallback(
+        C = i.useCallback(
             (e) => {
                 ((j.current = e), null != m && (m.current = e));
             },
             [m],
         ),
-        C = i.useRef(null),
+        S = i.useRef(null),
         N = i.useRef(0),
         p = i.useRef(null),
         [A, T] = i.useState(!1),
         [O, I] = i.useState(!1),
-        [b, R] = i.useState(!0),
+        [R, b] = i.useState(!0),
         [M, L] = i.useState([]),
         [H, Q] = i.useState([]),
         y = (0, E.bG)([_.Ay], () => _.Ay.useReducedMotion) ? "auto" : "smooth",
@@ -294,9 +294,9 @@ let e1 = i.memo(function (e) {
                     } = e,
                     a = t.current?.getScrollerNode(),
                     o = s.current;
-                if (null == a || null == o || a.scrollWidth <= a.clientWidth) return eJ;
+                if (null == a || null == o || a.scrollWidth <= a.clientWidth) return eX;
                 let u = Array.from(a.querySelectorAll(n));
-                if (0 === u.length) return eJ;
+                if (0 === u.length) return eX;
                 let c = a.clientWidth - 2 * r * l;
                 function d(e) {
                     return e.offsetLeft + e.offsetWidth;
@@ -316,7 +316,7 @@ let e1 = i.memo(function (e) {
                     if (h === u.length - 1) break;
                     e > 0 && m.push((t + d(u[h])) / 2);
                 }
-                return E.length < 2 ? eJ : (i || m.push(a.scrollWidth), { anchors: m, windowSizes: E });
+                return E.length < 2 ? eX : (i || m.push(a.scrollWidth), { anchors: m, windowSizes: E });
             })({
                 scrollerRef: j,
                 containerRef: p,
@@ -328,8 +328,8 @@ let e1 = i.memo(function (e) {
             (Q(t), L((t) => (t.length === e.length && t.every((t, s) => t === e[s]) ? t : e)));
         }, [l, n, u, g, L]),
         F = i.useCallback(() => {
-            if (null == p.current || p.current?.clientWidth === 0) return R(!0);
-            R(p.current?.clientWidth >= 1260);
+            if (null == p.current || p.current?.clientWidth === 0) return b(!0);
+            b(p.current?.clientWidth >= 1260);
         }, [p]),
         q = i.useCallback(
             function (e) {
@@ -339,7 +339,7 @@ let e1 = i.memo(function (e) {
                 let { currentIndex: n, scrollLefts: l } = e0(s, M, g),
                     r = g ? t : (H[n] ?? 1),
                     i = Math.max(0, Math.min(M.length - 1, n + e * r));
-                return ((C.current = ea.pk.ARROW), s.scrollTo({ left: l[i], behavior: y }), !0);
+                return ((S.current = ea.pk.ARROW), s.scrollTo({ left: l[i], behavior: y }), !0);
             },
             [y, M, H, g, f],
         ),
@@ -390,7 +390,7 @@ let e1 = i.memo(function (e) {
                     i = n.left + l - r.left,
                     a = r.right - (n.right - l);
                 (i <= 0 && a <= 0) ||
-                    ((C.current = ea.pk.MANUAL),
+                    ((S.current = ea.pk.MANUAL),
                     i > 0
                         ? s.scrollTo({ left: s.scrollLeft - i, behavior: t })
                         : a > 0 && s.scrollTo({ left: s.scrollLeft + a, behavior: t }));
@@ -408,8 +408,8 @@ let e1 = i.memo(function (e) {
             let e = j.current?.getScrollerNode();
             if (null == e) return;
             let { currentIndex: t } = e0(e, M, g),
-                s = C.current ?? ea.pk.MANUAL;
-            C.current = null;
+                s = S.current ?? ea.pk.MANUAL;
+            S.current = null;
             let n = N.current;
             N.current = e.scrollLeft;
             let l = e.scrollLeft > n ? ea.VU.RIGHT : ea.VU.LEFT,
@@ -433,7 +433,7 @@ let e1 = i.memo(function (e) {
                     r = e.target.closest(n),
                     i = null == r ? -1 : l.indexOf(r),
                     a = l[i + t],
-                    o = null == a ? null : a.matches(eX) ? a : a.querySelector(eX);
+                    o = null == a ? null : a.matches(eJ) ? a : a.querySelector(eJ);
                 null != o && (o.focus({ preventScroll: !0 }), e.repeat && B(a, "instant"));
             },
             [n, B],
@@ -508,9 +508,9 @@ let e1 = i.memo(function (e) {
                     ],
                 }),
             (0, r.jsx)("div", {
-                className: o()({ [ez.sF]: A && b, [ez.RC]: O && b, [ez.Ni]: z && !A, [ez.GA]: z && !O }),
+                className: o()({ [ez.sF]: A && R, [ez.RC]: O && R, [ez.Ni]: z && !A, [ez.GA]: z && !O }),
                 children: (0, r.jsx)(eq.zC, {
-                    ref: S,
+                    ref: C,
                     orientation: "horizontal",
                     onScroll: U,
                     onScrollEnd: G,
@@ -577,8 +577,8 @@ var e4 = s(440703),
     tg = s(62405),
     tv = s(398025),
     tj = s(190107),
-    tS = s(818348),
-    tC = s(499621);
+    tC = s(818348),
+    tS = s(499621);
 function t_(e) {
     let [t, s] = i.useState(!1),
         n = i.useCallback(() => {
@@ -612,7 +612,7 @@ function tN(e) {
         );
     i.useEffect(() => {
         let e = l.current;
-        (0, e7.vq)(e, HTMLVideoElement) && (a ? ((e.currentTime = 0), e.play().catch(tS.tE)) : e.pause());
+        (0, e7.vq)(e, HTMLVideoElement) && (a ? ((e.currentTime = 0), e.play().catch(tC.tE)) : e.pause());
     }, [a]);
     let { hoverSpring: c } = (0, e6.z)({ hoverSpring: +!!a, config: e8.config.gentle }),
         d = i.useCallback(() => {
@@ -629,14 +629,14 @@ function tN(e) {
         }, [t.cta, t.id, s, n]);
     return (0, r.jsxs)(e5.D, {
         tag: "div",
-        className: o()(tC.FW, tC.Bm),
+        className: o()(tS.FW, tS.Bm),
         onClick: d,
         "aria-label": t.cta.buttonLabel,
         [e$]: !0,
         ...u,
         children: [
             (0, r.jsx)("div", {
-                className: tC.Ve,
+                className: tS.Ve,
                 children: (0, r.jsx)(eu.N, {
                     showVideo: !0,
                     assetRef: l,
@@ -645,7 +645,7 @@ function tN(e) {
                             ? {
                                   asset: { url: t.shelfImage, mimetype: null, isAnimated: !1 },
                                   assetId: "intro-image",
-                                  className: o()(tC.pv, tC.gI),
+                                  className: o()(tS.pv, tS.gI),
                               }
                             : void 0,
                     videoAsset:
@@ -653,13 +653,13 @@ function tN(e) {
                             ? {
                                   asset: { url: t.shelfVideo, mimetype: null, isAnimated: !0 },
                                   assetId: "intro-video",
-                                  className: o()(tC.pv, tC.Wq),
+                                  className: o()(tS.pv, tS.Wq),
                               }
                             : void 0,
                 }),
             }),
             (0, r.jsx)(e8.animated.div, {
-                className: tC.hn,
+                className: tS.hn,
                 style: { transform: c.to([0, 1], [100, 0]).to((e) => `translateY(${e}%)`) },
                 children: (0, r.jsx)(g.$, {
                     fullWidth: !0,
@@ -695,7 +695,7 @@ function tp(e) {
         );
     i.useEffect(() => {
         let e = u.current;
-        (0, e7.vq)(e, HTMLVideoElement) && (c ? ((e.currentTime = 0), e.play().catch(tS.tE)) : e.pause());
+        (0, e7.vq)(e, HTMLVideoElement) && (c ? ((e.currentTime = 0), e.play().catch(tC.tE)) : e.pause());
     }, [c]);
     let E = i.useCallback(() => {
             (0, eo._Q)(
@@ -721,12 +721,12 @@ function tp(e) {
     i.useLayoutEffect(() => {
         v();
     }, [v]);
-    let { topFade: j, bottomFade: S } = (0, e6.z)({
+    let { topFade: j, bottomFade: C } = (0, e6.z)({
             topFade: +!!f.top,
             bottomFade: +!!f.bottom,
             config: { ...e8.config.gentle, duration: 100 },
         }),
-        C = i.useMemo(() => {
+        S = i.useMemo(() => {
             let e = null != s.firstReleaseDate ? new Date(s.firstReleaseDate).getFullYear() : NaN,
                 t = isNaN(e) ? null : e,
                 n = s.genres.at(0);
@@ -736,17 +736,17 @@ function tp(e) {
                 s.getCompanyByRole(tr.wk.DEVELOPER).at(0)?.name ?? null,
             ].filter((e) => null != e);
         }, [s]),
-        _ = i.useMemo(() => C.length > 0, [C]);
+        _ = i.useMemo(() => S.length > 0, [S]);
     return (0, r.jsxs)(e5.D, {
         tag: "div",
-        className: o()(tC.FW, tC.n7),
+        className: o()(tS.FW, tS.n7),
         onClick: E,
         [e$]: !0,
         ...d,
         children: [
-            (0, r.jsx)("div", { className: tC.hu }),
+            (0, r.jsx)("div", { className: tS.hu }),
             (0, r.jsx)("div", {
-                className: tC.fQ,
+                className: tS.fQ,
                 children: (0, r.jsx)(eu.N, {
                     showVideo: !0,
                     assetRef: u,
@@ -755,7 +755,7 @@ function tp(e) {
                             ? {
                                   asset: { url: l, mimetype: null, isAnimated: !1 },
                                   assetId: "intro-image",
-                                  className: o()(tC.pv, tC.gI),
+                                  className: o()(tS.pv, tS.gI),
                               }
                             : void 0,
                     videoAsset:
@@ -763,16 +763,16 @@ function tp(e) {
                             ? {
                                   asset: { url: t.shelfVideo, mimetype: null, isAnimated: !0 },
                                   assetId: "intro-video",
-                                  className: o()(tC.pv, tC.Wq),
+                                  className: o()(tS.pv, tS.Wq),
                               }
                             : void 0,
                 }),
             }),
             (0, r.jsxs)("div", {
-                className: tC.iq,
+                className: tS.iq,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: tC.o7,
+                        className: tS.o7,
                         children: [
                             (0, r.jsx)(eE.D, {
                                 variant: "heading-xl/semibold",
@@ -781,19 +781,19 @@ function tp(e) {
                             }),
                             _ &&
                                 (0, r.jsx)("p", {
-                                    className: tC.c9,
-                                    children: C.map((e, t) =>
+                                    className: tS.c9,
+                                    children: S.map((e, t) =>
                                         (0, r.jsxs)(
                                             i.Fragment,
                                             {
                                                 children: [
-                                                    (0, r.jsx)(J.E, {
+                                                    (0, r.jsx)(X.E, {
                                                         variant: "text-sm/medium",
                                                         color: "text-muted",
                                                         tag: "span",
                                                         children: e,
                                                     }),
-                                                    t < C.length - 1 && (0, r.jsx)(ta.A, { width: 3, height: 3 }),
+                                                    t < S.length - 1 && (0, r.jsx)(ta.A, { width: 3, height: 3 }),
                                                 ],
                                             },
                                             t,
@@ -803,10 +803,10 @@ function tp(e) {
                         ],
                     }),
                     (0, r.jsx)(e8.animated.div, {
-                        className: tC.hX,
+                        className: tS.hX,
                         style: {
                             maskImage: (0, e8.to)(
-                                [j, S],
+                                [j, C],
                                 (e, t) =>
                                     `linear-gradient(to bottom, rgba(0,0,0,${1 - e}), #000 48px, #000 calc(100% - 48px), rgba(0,0,0,${1 - t}))`,
                             ),
@@ -814,13 +814,13 @@ function tp(e) {
                         children: (0, r.jsx)(e9.vN, {
                             children: (0, r.jsx)(eq.Ch, {
                                 ref: h,
-                                className: tC.hw,
+                                className: tS.hw,
                                 onScroll: v,
                                 fade: !c,
-                                children: (0, r.jsx)(J.E, {
+                                children: (0, r.jsx)(X.E, {
                                     variant: "text-md/normal",
                                     color: "text-muted",
-                                    className: tC.W1,
+                                    className: tS.W1,
                                     children: s.description,
                                 }),
                             }),
@@ -853,7 +853,7 @@ function tA(e) {
         ),
         x = (0, E.bG)([to.default], () => to.default.getCurrentUser()),
         v = i.useMemo(() => (0, th.mq)(s.config, x), [s.config, x]),
-        S = i.useMemo(
+        C = i.useMemo(
             () =>
                 (function (e, t) {
                     switch ((0, tE.xv)(e).type) {
@@ -869,7 +869,7 @@ function tA(e) {
                 })(s.config, x),
             [s.config, x],
         ),
-        { completedRatio: C, completedRatioDisplay: _ } = (0, $.O9)(s),
+        { completedRatio: S, completedRatioDisplay: _ } = (0, $.O9)(s),
         N = i.useMemo(() => (0, th.wo)(s.config, x), [s.config, x]),
         p = (0, ei.tG)(),
         A = (0, ei.WS)(),
@@ -893,8 +893,8 @@ function tA(e) {
                 [t, A, l, s.id],
             ),
         ),
-        { hoverSpring: b } = (0, e6.z)({ hoverSpring: +!!O, config: e8.config.gentle }),
-        R = i.useCallback(() => {
+        { hoverSpring: R } = (0, e6.z)({ hoverSpring: +!!O, config: e8.config.gentle }),
+        b = i.useCallback(() => {
             (n(s.id),
                 (0, en.E5)(en.kI.STEP_2_CLICKED_INTERNAL, "quest_home_hero_shelf_cards")
                     ? (0, Z.r)({
@@ -920,29 +920,29 @@ function tA(e) {
         }, [n, t, s.id, p, l, T]);
     return (0, r.jsxs)(e5.D, {
         tag: "div",
-        className: o()(tC.FW, tC.$R),
-        onClick: R,
+        className: o()(tS.FW, tS.$R),
+        onClick: b,
         "aria-label": ew.intl.string(ew.t["th2+0j"]),
         [e$]: !0,
         ...I,
         children: [
-            (0, r.jsx)("div", { className: tC.hu }),
+            (0, r.jsx)("div", { className: tS.hu }),
             (0, r.jsxs)(j.B, {
                 direction: "horizontal",
                 gap: 4,
                 children: [
-                    (0, r.jsx)(te.E, { type: { text: S } }),
+                    (0, r.jsx)(te.E, { type: { text: C } }),
                     (0, r.jsx)(e8.animated.div, {
-                        style: { opacity: (0, tv.a)(b.to([0, 1], [1, 0])) },
+                        style: { opacity: (0, tv.a)(R.to([0, 1], [1, 0])) },
                         children: (0, r.jsx)(te.E, { type: { text: f }, icon: tt.ClockIcon }),
                     }),
                 ],
             }),
             (0, r.jsx)(e8.animated.div, {
-                className: tC.Tr,
-                style: { transform: b.to([0, 1], [1, 1.1]).to((e) => `scale(${e})`) },
+                className: tS.Tr,
+                style: { transform: R.to([0, 1], [1, 1.1]).to((e) => `scale(${e})`) },
                 children: (0, r.jsx)(tx.A, {
-                    percentComplete: C,
+                    percentComplete: S,
                     overlayText: O && null != N ? `${N}` : void 0,
                     size: 120,
                     children: (0, r.jsx)(tg.A, {
@@ -956,19 +956,19 @@ function tA(e) {
                 }),
             }),
             (0, r.jsx)(e8.animated.div, {
-                className: tC.tw,
+                className: tS.tw,
                 style: {
-                    opacity: (0, tv.a)(b.to([0, 1], [1, 0])),
-                    transform: b.to([0, 1], [1, 0.9]).to((e) => `scale(${e})`),
+                    opacity: (0, tv.a)(R.to([0, 1], [1, 0])),
+                    transform: R.to([0, 1], [1, 0.9]).to((e) => `scale(${e})`),
                     transformOrigin: "bottom left",
                 },
                 children: (0, r.jsxs)(j.B, {
                     gap: 4,
                     children: [
-                        (0, r.jsx)(J.E, {
+                        (0, r.jsx)(X.E, {
                             variant: "text-md/semibold",
                             color: "text-strong",
-                            className: tC.Ht,
+                            className: tS.Ht,
                             children: v,
                         }),
                         (0, r.jsxs)(j.B, {
@@ -982,7 +982,7 @@ function tA(e) {
                                     fullWidth: !1,
                                     children: [
                                         (0, r.jsx)(ts.y, { size: "xs", color: ek.A.colors.ICON_MUTED.css }),
-                                        (0, r.jsx)(J.E, {
+                                        (0, r.jsx)(X.E, {
                                             variant: "text-sm/normal",
                                             color: "text-muted",
                                             children: s.config.messages.gamePublisher,
@@ -1000,7 +1000,7 @@ function tA(e) {
                                                   size: "xs",
                                                   color: ek.A.colors.ICON_MUTED.css,
                                               }),
-                                        (0, r.jsx)(J.E, {
+                                        (0, r.jsx)(X.E, {
                                             variant: "text-sm/normal",
                                             color: "text-muted",
                                             children: _,
@@ -1013,12 +1013,12 @@ function tA(e) {
                 }),
             }),
             (0, r.jsx)(e8.animated.div, {
-                className: tC.um,
-                style: { transform: b.to([0, 1], [100, 0]).to((e) => `translateY(${e}%)`) },
+                className: tS.um,
+                style: { transform: R.to([0, 1], [100, 0]).to((e) => `translateY(${e}%)`) },
                 children: (0, r.jsx)(g.$, {
                     fullWidth: !0,
                     onClick: (e) => {
-                        (e.stopPropagation(), R());
+                        (e.stopPropagation(), b());
                     },
                     text: ew.intl.string(ew.t["th2+0j"]),
                 }),
@@ -1030,7 +1030,7 @@ var tT = s(531525),
     tO = s(726356);
 function tI(e) {
     let { hero: t, shelfQuests: s, isBannerLoading: n, onQuestCtaClick: l } = e,
-        a = (0, eb.C)(),
+        a = (0, eR.C)(),
         { enabled: o } = eH.useConfig({ location: tj.rE.QUEST_HOME_DESKTOP }),
         u = i.useMemo(
             () =>
@@ -1049,7 +1049,7 @@ function tI(e) {
         o &&
             null != u &&
             null != E &&
-            (eR.default.track(ef.HAw.AD_ASSET_LOADING_FAILURE, {
+            (eb.default.track(ef.HAw.AD_ASSET_LOADING_FAILURE, {
                 source: tj.rE.QUEST_HOME_HERO_SHELF_DESKTOP,
                 ad_creative_id: t.id,
                 ad_creative_type: m.p.QUEST_HOME_HERO,
@@ -1084,8 +1084,8 @@ function tI(e) {
             i.useMemo(() => (null != x ? (0, el.UX)(x, { format: "webp", width: 400, height: 600 }) : null), [x]),
             8,
         ),
-        v = i.useMemo(() => (null == g ? null : (0, eS.Z)(g)), [g]),
-        S = i.useMemo(() => {
+        v = i.useMemo(() => (null == g ? null : (0, eC.Z)(g)), [g]),
+        C = i.useMemo(() => {
             if (null != v)
                 return {
                     "--custom-hero-shelf-scrim-gradient-start": v[0],
@@ -1093,7 +1093,7 @@ function tI(e) {
                 };
         }, [v]);
     return n || c
-        ? (0, r.jsx)(tb, { numShelfCards: s.length + 1 })
+        ? (0, r.jsx)(tR, { numShelfCards: s.length + 1 })
         : (0, r.jsx)(e1, {
               className: tO.vo,
               overflowAmount: 25,
@@ -1104,7 +1104,7 @@ function tI(e) {
                   direction: "horizontal",
                   fullWidth: !1,
                   gap: 20,
-                  style: S,
+                  style: C,
                   children: [
                       !o &&
                           (0, r.jsx)(ec.Z, {
@@ -1172,10 +1172,10 @@ function tI(e) {
               }),
           });
 }
-function tb(e) {
+function tR(e) {
     let { className: t, numShelfCards: s } = e,
         { enabled: n } = eH.useConfig({ location: tj.rE.QUEST_HOME_DESKTOP }),
-        l = (0, eb.C)(),
+        l = (0, eR.C)(),
         i = n ? Math.max(s, 3) : Math.max(s, 4);
     return (0, r.jsx)(e1, {
         className: o()(tO.vo, t),
@@ -1194,9 +1194,9 @@ function tb(e) {
         }),
     });
 }
-var tR = s(74498);
+var tb = s(74498);
 function tM() {
-    return (0, r.jsx)("div", { className: tR.Np });
+    return (0, r.jsx)("div", { className: tb.Np });
 }
 function tL(e) {
     let { heroImage: t, heroVideo: s } = e,
@@ -1212,13 +1212,13 @@ function tL(e) {
                 assetRef: n,
                 imageAsset: {
                     alt: "",
-                    className: tR.LY,
+                    className: tb.LY,
                     asset: { url: l, mimetype: (0, el.vm)(l), isAnimated: !1 },
                     assetId: l,
                 },
                 videoAsset: {
                     alt: "",
-                    className: tR.LY,
+                    className: tb.LY,
                     asset: { url: s, mimetype: (0, el.vm)(s), isAnimated: !0 },
                     assetId: s,
                 },
@@ -1229,31 +1229,31 @@ function tH(e) {
     let { heroImage: t, heroVideo: s } = e;
     return null == s
         ? (0, r.jsxs)("div", {
-              className: tR.Tv,
+              className: tb.Tv,
               children: [
                   (0, r.jsx)(tM, {}),
                   (0, r.jsx)("div", {
-                      className: tR.LO,
+                      className: tb.LO,
                       children: (0, r.jsx)(Y._M, {
                           id: "QuestHomeHeroBackground_heroImage",
-                          children: (e) => (0, r.jsx)("img", { ref: e, className: tR.LY, src: t, alt: "" }),
+                          children: (e) => (0, r.jsx)("img", { ref: e, className: tb.LY, src: t, alt: "" }),
                       }),
                   }),
                   (0, r.jsx)("div", {
-                      className: o()(tR.LO, tR.jx, tR.hw),
-                      children: (0, r.jsx)("img", { className: tR.LY, src: t, alt: "" }),
+                      className: o()(tb.LO, tb.jx, tb.hw),
+                      children: (0, r.jsx)("img", { className: tb.LY, src: t, alt: "" }),
                   }),
                   (0, r.jsx)("div", {
-                      className: o()(tR.LO, tR.jx, tR.Co),
-                      children: (0, r.jsx)("img", { className: tR.LY, src: t, alt: "" }),
+                      className: o()(tb.LO, tb.jx, tb.Co),
+                      children: (0, r.jsx)("img", { className: tb.LY, src: t, alt: "" }),
                   }),
               ],
           })
         : (0, r.jsxs)("div", {
-              className: tR.Tv,
+              className: tb.Tv,
               children: [
                   (0, r.jsx)(tM, {}),
-                  (0, r.jsx)("div", { className: tR.LO, children: (0, r.jsx)(tL, { heroImage: t, heroVideo: s }) }),
+                  (0, r.jsx)("div", { className: tb.LO, children: (0, r.jsx)(tL, { heroImage: t, heroVideo: s }) }),
               ],
           });
 }
@@ -1308,7 +1308,7 @@ function ty(e) {
                                     e.current = n ? null : t;
                                 },
                                 adContentId: t.id,
-                                className: o()({ [tR.lX]: n }),
+                                className: o()({ [tb.lX]: n }),
                                 topContent: (0, r.jsxs)(j.B, {
                                     direction: "horizontal",
                                     justify: "space-between",
@@ -1322,13 +1322,13 @@ function ty(e) {
                                                         ref: e,
                                                         src: t.sponsorImage,
                                                         alt: "",
-                                                        className: tR.wm,
+                                                        className: tb.wm,
                                                     }),
                                             }),
-                                        (0, r.jsx)(J.E, {
+                                        (0, r.jsx)(X.E, {
                                             color: "text-strong",
                                             variant: "text-sm/normal",
-                                            className: tR.yu,
+                                            className: tb.yu,
                                             children: ew.intl.string(ew.t.OJjFi5),
                                         }),
                                     ],
@@ -1395,7 +1395,7 @@ function ty(e) {
     });
 }
 function tU() {
-    return (0, r.jsx)("div", { className: o()(ex.iE, ex.FG, ex.B3), children: (0, r.jsx)(X.y, {}) });
+    return (0, r.jsx)("div", { className: o()(ex.iE, ex.FG, ex.B3), children: (0, r.jsx)(J.y, {}) });
 }
 var tD = s(130490),
     tF = s(228366),
@@ -1419,11 +1419,11 @@ var tK = s(602853),
     tz = s(817281),
     t$ = s(688810),
     tY = s(487245),
-    tJ = s(363195),
-    tX = s(912875);
+    tX = s(363195),
+    tJ = s(912875);
 let tZ = function () {
     let { analyticsLocations: e } = (0, t$.Ay)(),
-        t = (0, E.bG)([tJ.A], () => tJ.A.theme),
+        t = (0, E.bG)([tX.A], () => tX.A.theme),
         s = i.useRef(null);
     i.useEffect(() => {
         null == s.current && (s.current = t);
@@ -1450,25 +1450,25 @@ let tZ = function () {
             null != s.current && u(s.current);
         }, [u]);
     return (0, r.jsx)("div", {
-        className: tX.N,
+        className: tJ.N,
         children: (0, r.jsxs)("div", {
-            className: tX.t7,
+            className: tJ.t7,
             children: [
                 o.map((e) =>
                     (0, r.jsxs)(
                         e5.D,
                         {
                             tag: "div",
-                            className: tX.Du,
+                            className: tJ.Du,
                             onClick: () => u(e.theme),
                             "aria-label": ew.intl.string(e.label),
                             "aria-pressed": t === e.theme,
                             children: [
                                 (0, r.jsx)("div", {
-                                    className: `${tX.WT} ${t === e.theme ? tX.TA : ""}`,
+                                    className: `${tJ.WT} ${t === e.theme ? tJ.TA : ""}`,
                                     style: { backgroundColor: e.color },
                                 }),
-                                (0, r.jsx)("span", { className: tX.i, children: ew.intl.string(e.label) }),
+                                (0, r.jsx)("span", { className: tJ.i, children: ew.intl.string(e.label) }),
                             ],
                         },
                         e.theme,
@@ -1511,7 +1511,7 @@ let t1 = function (e) {
                 }
             }
         }, [t, o]),
-        S = i.useCallback(async () => {
+        C = i.useCallback(async () => {
             if (null != t) {
                 o(!0);
                 try {
@@ -1521,7 +1521,7 @@ let t1 = function (e) {
                 }
             }
         }, [t, o]),
-        C = i.useCallback(async () => {
+        S = i.useCallback(async () => {
             if (null != t) {
                 o(!0);
                 try {
@@ -1603,14 +1603,14 @@ let t1 = function (e) {
                                 text: ew.intl.string(ew.t.jQEfRT),
                             }),
                             (0, r.jsx)(g.$, {
-                                onClick: S,
+                                onClick: C,
                                 disabled: a,
                                 loading: a,
                                 variant: "secondary",
                                 text: ew.intl.string(ew.t.taqkwK),
                             }),
                             (0, r.jsx)(g.$, {
-                                onClick: C,
+                                onClick: S,
                                 disabled: a,
                                 loading: a,
                                 variant: "secondary",
@@ -1628,7 +1628,7 @@ let t1 = function (e) {
                                         children: (0, r.jsx)("div", {
                                             className: t0.sH,
                                             children: (0, r.jsx)(tV.A, {
-                                                value: tS.Sb.QUEST_PREVIEW_TOOL_2(t),
+                                                value: tC.Sb.QUEST_PREVIEW_TOOL_2(t),
                                                 text: ew.intl.string(ew.t.WqhZss),
                                                 autoFocus: !0,
                                             }),
@@ -1648,7 +1648,7 @@ let t1 = function (e) {
                     }),
                 }),
             null != h ? (0, r.jsx)(tW, { error: h }) : null,
-            f ? (0, r.jsx)(X.y, {}) : null,
+            f ? (0, r.jsx)(J.y, {}) : null,
         ],
     });
 };
@@ -1795,8 +1795,8 @@ var sm = s(612324),
     sg = s(914410),
     sv = s(426110),
     sj = s(339350),
-    sS = s(782134),
-    sC = s(271536),
+    sC = s(782134),
+    sS = s(271536),
     s_ = s(768622),
     sN = s(793934),
     sp = s(662940),
@@ -1804,7 +1804,7 @@ var sm = s(612324),
 let sT = 2 * tc.A.Millis.DAY,
     sO = 3 * tc.A.Millis.DAY,
     sI = new Map(eV.map((e) => [e.identifier, e])),
-    sb = {
+    sR = {
         [eB.DISCOVERED]: function (e, t) {
             let { discoveredAtByQuestId: s } = t;
             return e.slice().sort((e, t) => {
@@ -1813,7 +1813,7 @@ let sT = 2 * tc.A.Millis.DAY,
             });
         },
     };
-function sR(e) {
+function sb(e) {
     return e.features.includes(tj.Li.EXCLUDE_FROM_FEATURED);
 }
 function sM(e, t) {
@@ -1846,6 +1846,7 @@ function sH(e) {
                             case sf.UA.CLAIMED:
                             case sf.UA.EXPIRED:
                             case sf.UA.EXPIRED_CLAIMABLE:
+                            case sf.UA.EXPIRED_CLAIMED:
                                 return !1;
                         }
                     })(t) &&
@@ -1864,7 +1865,7 @@ function sH(e) {
                 className: sL.qS,
                 children: [
                     null != h &&
-                        (0, r.jsx)(J.E, {
+                        (0, r.jsx)(X.E, {
                             variant: "text-xs/semibold",
                             className: sL.SJ,
                             color: "text-overlay-light",
@@ -1872,7 +1873,7 @@ function sH(e) {
                         }),
                     null != h &&
                         null != d &&
-                        (0, r.jsx)(J.E, {
+                        (0, r.jsx)(X.E, {
                             variant: "text-xs/semibold",
                             color: "text-overlay-light",
                             className: sL.If,
@@ -1889,16 +1890,16 @@ function sH(e) {
                                         case sp.UK.PLAY:
                                             return (0, r.jsx)(tl.GameControllerIcon, { ...s });
                                         case sp.UK.WATCH:
-                                            return (0, r.jsx)(sS.PlayIcon, { ...s });
+                                            return (0, r.jsx)(sC.PlayIcon, { ...s });
                                         case sp.UK.ACTIVITY:
-                                            return (0, r.jsx)(sC.q, { ...s });
+                                            return (0, r.jsx)(sS.q, { ...s });
                                         case sp.UK.INSTANT_PLAY:
                                             return (0, r.jsx)(s_.g, { ...s });
                                         case sp.UK.ARENA:
                                             return (0, r.jsx)(sN.q, { ...s });
                                     }
                                 })(t, l),
-                                (0, r.jsx)(J.E, {
+                                (0, r.jsx)(X.E, {
                                     variant: "text-xs/semibold",
                                     tag: "span",
                                     color: "text-overlay-light",
@@ -1911,7 +1912,7 @@ function sH(e) {
             t.preview &&
                 (0, r.jsx)("div", {
                     className: o()(sL.qS, sL.WZ),
-                    children: (0, r.jsx)(J.E, {
+                    children: (0, r.jsx)(X.E, {
                         variant: "text-xs/bold",
                         color: "currentColor",
                         children: ew.intl.string(ew.t.SKNnqq),
@@ -1925,7 +1926,7 @@ var sQ = s(409626),
     sU = s(646917),
     sD = s(866665),
     sF = s(743368),
-    sq = s(657113),
+    sq = s(887899),
     sP = s(617986),
     sk = s(964051);
 function sw(e) {
@@ -1934,7 +1935,7 @@ function sw(e) {
         { ctaOnHover: a } = G.aD.useConfig({ location: tj.rE.QUEST_HOME_DESKTOP }),
         u = (0, E.bG)([et.A], () => i === sf.UA.UNENROLLED && null != et.A.questEnrollmentBlockedUntil, [i]),
         c = !(0, eQ.no)(t) || ![sf.UA.ENROLLED, sf.UA.UNENROLLED, sf.UA.INCOMPLETE].includes(i),
-        d = i === sf.UA.EXPIRED || (i === sf.UA.CLAIMED && (0, eQ.GL)(t)),
+        d = i === sf.UA.EXPIRED || i === sf.UA.EXPIRED_CLAIMED || (i === sf.UA.CLAIMED && (0, eQ.GL)(t)),
         m = (0, $.do)({ quest: t, content: s, ctaContent: ea.Cy.OPEN_GAME_LINK, sourceQuestContent: n });
     return (0, r.jsxs)("div", {
         className: o()(sk.lO, { [sk.Fq]: l || !a }),
@@ -2013,7 +2014,7 @@ function sW(e) {
             className: sG.k,
             children: [
                 (0, r.jsx)(sB.t, { size: "xs", color: "currentColor" }),
-                (0, r.jsx)(J.E, { variant: "text-sm/normal", color: "currentColor", className: sG.Q, children: a }),
+                (0, r.jsx)(X.E, { variant: "text-sm/normal", color: "currentColor", className: sG.Q, children: a }),
             ],
         }),
     });
@@ -2022,7 +2023,7 @@ var sK = s(947641),
     sz = s(194261),
     s$ = s(106799),
     sY = s(476334);
-function sJ(e) {
+function sX(e) {
     let { quest: t, questContent: s, sourceQuestContent: n, isHovering: l } = e,
         a = (0, E.bG)([to.default], () => to.default.getCurrentUser()),
         u = (0, th.mq)(t.config, a),
@@ -2031,11 +2032,10 @@ function sJ(e) {
         { completedRatio: m } = (0, $.O9)(t),
         h = (0, sf.Pd)(t),
         f = (0, $.Hv)(),
-        x = t.userStatus?.claimedAt != null,
-        g = h === sf.UA.COMPLETED || h === sf.UA.EXPIRED_CLAIMABLE || x,
-        v = x ? "completed" : h === sf.UA.EXPIRED ? "expired" : null,
-        j = (0, tD.ix)({ quest: t, questContent: s, sourceQuestContent: n }),
-        S = i.useCallback(
+        x = h === sf.UA.CLAIMED || h === sf.UA.EXPIRED_CLAIMED,
+        g = x || h === sf.UA.COMPLETED || h === sf.UA.EXPIRED_CLAIMABLE,
+        v = (0, tD.ix)({ quest: t, questContent: s, sourceQuestContent: n }),
+        j = i.useCallback(
             (e) => {
                 if ((e.stopPropagation(), f && !x)) {
                     ((0, er.Y5)({
@@ -2047,9 +2047,9 @@ function sJ(e) {
                         (0, sP.FS)());
                     return;
                 }
-                j();
+                v();
             },
-            [j, f, x, t.id, s, n],
+            [v, f, x, t.id, s, n],
         ),
         C = (0, r.jsxs)(r.Fragment, {
             children: [
@@ -2063,32 +2063,32 @@ function sJ(e) {
                     fullWidth: !0,
                     sourceQuestContent: n,
                 }),
-                "completed" === v &&
+                x &&
                     (0, r.jsx)("div", {
                         className: sY.EY,
                         children: (0, r.jsx)(sK.r, { className: sY.AM, size: "sm", color: "currentColor" }),
                     }),
-                "expired" === v &&
+                h === sf.UA.EXPIRED &&
                     (0, r.jsx)("div", {
                         className: sY.EY,
                         children: (0, r.jsx)(sz.LockIcon, { size: "sm", className: sY.Sz, color: "currentColor" }),
                     }),
             ],
         }),
-        _ = (0, r.jsx)("div", { className: h === sf.UA.UNENROLLED ? sY.fm : sY.n5, children: C }),
-        N = (0, r.jsx)(tx.A, { size: 66, percentComplete: m, useAltStyle: !0, children: _ }),
-        p = g
+        S = (0, r.jsx)("div", { className: h === sf.UA.UNENROLLED ? sY.fm : sY.n5, children: C }),
+        _ = (0, r.jsx)(tx.A, { size: 66, percentComplete: m, useAltStyle: !0, children: S }),
+        N = g
             ? (0, r.jsx)(e5.D, {
                   className: sY.q9,
-                  onClick: S,
+                  onClick: j,
                   "aria-label": x
                       ? (0, th.r7)(t.config)
                           ? ew.intl.string(ew.t.bAGFz3)
                           : ew.intl.string(ew.t.vTgCWx)
                       : ew.intl.string(ew.t.cfY4PE),
-                  children: N,
+                  children: _,
               })
-            : N;
+            : _;
     return (0, r.jsxs)("div", {
         className: o()(sY.CZ, { [sY.Pv]: l }),
         children: [
@@ -2098,13 +2098,13 @@ function sJ(e) {
                 children: (e) =>
                     (0, r.jsx)("div", {
                         className: o()(e, sY.tE, { [sY.cB]: l }),
-                        children: h === sf.UA.UNENROLLED ? _ : p,
+                        children: h === sf.UA.UNENROLLED ? S : N,
                     }),
             }),
             (0, r.jsxs)("div", {
                 className: o()(sY.FS, { [sY.IR]: l }),
                 children: [
-                    (0, r.jsx)(J.E, {
+                    (0, r.jsx)(X.E, {
                         variant: "text-sm/medium",
                         className: sY.$K,
                         children: t.config.cosponsorMetadata?.name ?? t.config.messages.gamePublisher,
@@ -2114,7 +2114,7 @@ function sJ(e) {
                         children: [
                             c && (0, r.jsx)(s$.A, { className: sY.Kq, customSize: 14 }),
                             (0, r.jsx)(
-                                J.E,
+                                X.E,
                                 {
                                     variant: "text-md/medium",
                                     className: sY.zN,
@@ -2132,7 +2132,7 @@ function sJ(e) {
         ],
     });
 }
-var sX = s(604970);
+var sJ = s(604970);
 function sZ(e) {
     let { quest: t, questContent: s, isHovering: n, sourceQuestContent: l } = e,
         a = i.useRef(null),
@@ -2141,41 +2141,41 @@ function sZ(e) {
         d = (0, $.SD)(t, c);
     return (0, r.jsxs)("div", {
         ref: a,
-        className: sX.qr,
+        className: sJ.qr,
         children: [
-            (0, r.jsx)(sJ, { quest: t, questContent: s, sourceQuestContent: l, isHovering: n }),
+            (0, r.jsx)(sX, { quest: t, questContent: s, sourceQuestContent: l, isHovering: n }),
             (0, r.jsxs)("div", {
-                className: sX.yM,
+                className: sJ.yM,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: sX.Wi,
+                        className: sJ.Wi,
                         children: [
-                            (0, r.jsx)(J.E, {
+                            (0, r.jsx)(X.E, {
                                 variant: "text-sm/normal",
-                                className: o()(sX.Wj, sX.h_, { [sX.C4]: n }),
+                                className: o()(sJ.Wj, sJ.h_, { [sJ.C4]: n }),
                                 children: u,
                             }),
-                            (0, r.jsx)(J.E, {
+                            (0, r.jsx)(X.E, {
                                 "aria-hidden": !0,
                                 variant: "text-sm/normal",
                                 lineClamp: 1,
-                                className: o()(sX.Wj, sX.XV, { [sX.Hz]: n }),
+                                className: o()(sJ.Wj, sJ.XV, { [sJ.Hz]: n }),
                                 children: u,
                             }),
                         ],
                     }),
                     (0, r.jsxs)("div", {
-                        className: sX.Gv,
+                        className: sJ.Gv,
                         children: [
-                            (0, r.jsx)(J.E, {
+                            (0, r.jsx)(X.E, {
                                 variant: "text-sm/normal",
-                                className: sX.I4,
+                                className: sJ.I4,
                                 children: ew.intl.string(ew.t.o6FLcF),
                             }),
                             d &&
                                 (0, r.jsxs)(r.Fragment, {
                                     children: [
-                                        (0, r.jsx)(J.E, {
+                                        (0, r.jsx)(X.E, {
                                             variant: "text-xs/normal",
                                             color: "text-muted",
                                             children: "\u2022",
@@ -2206,7 +2206,7 @@ function s8(e) {
         } = e,
         { completedRatio: d, completedRatioDisplay: m } = (0, $.O9)(t, !0),
         h = (0, el.tW)(t, el.fY.LOGO_TYPE, ef.NJ8.DARK).url,
-        f = (0, E.bG)([tJ.A], () => tJ.A.theme) === ef.NJ8.LIGHT,
+        f = (0, E.bG)([tX.A], () => tX.A.theme) === ef.NJ8.LIGHT,
         x = (0, E.bG)([to.default], () => to.default.getCurrentUser()),
         g = (0, sv.Q)(t.config, x),
         v = null != g ? s1[g] : void 0;
@@ -2262,7 +2262,7 @@ function s8(e) {
                     (0, r.jsxs)("div", {
                         className: s0.Cd,
                         children: [
-                            (0, r.jsx)(J.E, {
+                            (0, r.jsx)(X.E, {
                                 variant: "text-sm/semibold",
                                 color: "text-overlay-light",
                                 className: s0.ZV,
@@ -2313,8 +2313,8 @@ function s5(e) {
         v = i.useMemo(() => (0, el.tW)(s, el.fY.QUEST_BAR_HERO_VIDEO), [s]),
         {
             isActive: j,
-            shouldRender: S,
-            hoverHandlers: C,
+            shouldRender: C,
+            hoverHandlers: S,
             handleMenuOpen: _,
             handleMenuClose: N,
         } = (function () {
@@ -2364,7 +2364,7 @@ function s5(e) {
                 j = i.useCallback(() => {
                     (u.current && ((u.current = !1), c.current?.(!1)), g());
                 }, [g]),
-                S = i.useMemo(
+                C = i.useMemo(
                     () => ({
                         onMouseEnter: () => {
                             ((a.current = !0), f());
@@ -2388,46 +2388,47 @@ function s5(e) {
                     },
                     [],
                 ),
-                { isActive: s, shouldRender: l, deactivate: x, hoverHandlers: S, handleMenuOpen: v, handleMenuClose: j }
+                { isActive: s, shouldRender: l, deactivate: x, hoverHandlers: C, handleMenuOpen: v, handleMenuClose: j }
             );
         })({ onMenuOpenChange: f }),
         p = j || !0 === a,
         A = !0 === l,
         T = (0, s4.c)({ onMenuOpen: _, onMenuClose: N }),
         O = (0, sf.Pd)(s),
-        I = (0, tm.go)(),
+        I = O === sf.UA.EXPIRED || O === sf.UA.EXPIRED_CLAIMED,
+        R = (0, tm.go)(),
         b = (0, tf.E0)(s.config),
-        R = (0, E.bG)([tJ.A], () => tJ.A.theme),
-        M = R === ef.NJ8.ASH || R === ef.NJ8.DARK,
-        L = R === ef.NJ8.LIGHT,
-        H = i.useContext(eP.X),
-        { visibilityElementRef: Q, almostVisibleInViewport: y } = (0, s7.I)(
-            H?.current?.getScrollerNode() ?? null,
+        M = (0, E.bG)([tX.A], () => tX.A.theme),
+        L = M === ef.NJ8.ASH || M === ef.NJ8.DARK,
+        H = M === ef.NJ8.LIGHT,
+        Q = i.useContext(eP.X),
+        { visibilityElementRef: y, almostVisibleInViewport: U } = (0, s7.I)(
+            Q?.current?.getScrollerNode() ?? null,
             m ?? !1,
         ),
         {
-            handleHoverStart: U,
-            handleHoverEnd: D,
-            isEventWithinParent: F,
+            handleHoverStart: D,
+            handleHoverEnd: F,
+            isEventWithinParent: q,
         } = (0, s3.B)({ quest: s, questContent: n, contentPosition: c, rowIndex: d, sourceQuestContent: x }),
-        q = (0, tD.Lk)({
+        P = (0, tD.Lk)({
             isShareable: b,
             questId: s.id,
             trackingCtx: i.useMemo(
                 () => ({
                     content: n,
                     ctaContent: ea.Cy.CONTEXT_MENU_COPY_LINK,
-                    impressionId: I,
+                    impressionId: R,
                     sourceQuestContent: x,
                 }),
-                [n, x, I],
+                [n, x, R],
             ),
         }),
-        P = (0, sm.A)(h, Q),
-        k = ew.intl.formatToPlainString(ew.t.EAYZAr, { questName: s.config.messages.questName }),
-        w = o()(s6.kL, { [s6.Cn]: A, [s6.DM]: p }, u),
-        B = (0, r.jsx)(s2.A, {
-            showPlaceholder: !y,
+        k = (0, sm.A)(h, y),
+        w = ew.intl.formatToPlainString(ew.t.EAYZAr, { questName: s.config.messages.questName }),
+        B = o()(s6.kL, { [s6.Cn]: A, [s6.DM]: p }, u),
+        V = (0, r.jsx)(s2.A, {
+            showPlaceholder: !U,
             width: 800,
             height: 450,
             className: s6.Tv,
@@ -2445,13 +2446,13 @@ function s5(e) {
                           }
                         : void 0,
                 imageSize: { width: 800, height: 450 },
-                showVideo: S || !0 === a,
+                showVideo: C || !0 === a,
             }),
         }),
-        V = A
+        G = A
             ? (0, r.jsxs)(r.Fragment, {
                   children: [
-                      B,
+                      V,
                       (0, r.jsx)(s4.q.Provider, {
                           value: T,
                           children: (0, r.jsx)(s8, {
@@ -2460,7 +2461,7 @@ function s5(e) {
                               sourceQuestContent: x,
                               isHovering: p,
                               isShareable: b,
-                              onCopyShareLink: q,
+                              onCopyShareLink: P,
                               onMenuOpen: _,
                               onMenuClose: N,
                           }),
@@ -2469,15 +2470,15 @@ function s5(e) {
               })
             : (0, r.jsxs)(r.Fragment, {
                   children: [
-                      B,
-                      (0, r.jsx)("div", { className: o()(s6.sL, { [s6.Mq]: O === sf.UA.EXPIRED }) }),
-                      L
+                      V,
+                      (0, r.jsx)("div", { className: o()(s6.sL, { [s6.Mq]: I }) }),
+                      H
                           ? (0, r.jsx)(em.N, {
                                 theme: ef.NJ8.ONYX,
                                 disableAdaptiveTheme: !0,
                                 children: (e) => (0, r.jsx)("div", { className: o()(e, s6.f5) }),
                             })
-                          : (0, r.jsx)("div", { className: o()(s6.f5, { [s6.kg]: M }) }),
+                          : (0, r.jsx)("div", { className: o()(s6.f5, { [s6.kg]: L }) }),
                       (0, r.jsxs)("div", {
                           className: s6.qy,
                           children: [
@@ -2531,23 +2532,23 @@ function s5(e) {
         "data-quest-tile": A ? "featured-v2" : "standard",
         "data-quest-tile-hovered": p ? "" : void 0,
         onMouseEnter: () => {
-            (C.onMouseEnter(), U());
+            (S.onMouseEnter(), D());
         },
         onMouseLeave: () => {
-            (C.onMouseLeave(), D());
+            (S.onMouseLeave(), F());
         },
         onFocus: (e) => {
-            F(e) || (C.onFocus(), U());
+            q(e) || (S.onFocus(), D());
         },
         onBlur: (e) => {
-            F(e) || (C.onBlur(), D());
+            q(e) || (S.onBlur(), F());
         },
         children: (0, r.jsx)("article", {
-            ref: P,
-            "aria-label": k,
+            ref: k,
+            "aria-label": w,
             style: { "--custom-featured-tile-width": "291px" },
-            className: w,
-            children: V,
+            className: B,
+            children: G,
         }),
     });
 }
@@ -2675,12 +2676,12 @@ let na = function (e) {
                                             (0, r.jsxs)("div", {
                                                 className: ni.Fj,
                                                 children: [
-                                                    (0, r.jsx)(J.E, {
+                                                    (0, r.jsx)(X.E, {
                                                         variant: "text-md/semibold",
                                                         color: "text-strong",
                                                         children: u,
                                                     }),
-                                                    (0, r.jsx)(J.E, {
+                                                    (0, r.jsx)(X.E, {
                                                         variant: "text-sm/normal",
                                                         color: "text-muted",
                                                         children: ew.intl.string(ew.t.b9w3bO),
@@ -2825,7 +2826,7 @@ var nm = s(203879),
     ng = s(255604);
 function nv(e) {
     let { children: t, id: s } = e;
-    return (0, r.jsx)(J.E, { className: ng.g, color: "text-subtle", id: s, variant: "text-sm/semibold", children: t });
+    return (0, r.jsx)(X.E, { className: ng.g, color: "text-subtle", id: s, variant: "text-sm/semibold", children: t });
 }
 let nj = function (e) {
     let { children: t, renderPopout: s } = e,
@@ -2840,8 +2841,8 @@ let nj = function (e) {
         children: (e) => t(e, l),
     });
 };
-var nS = s(368884);
-let nC = function (e) {
+var nC = s(368884);
+let nS = function (e) {
     let { onChange: t, selectedFilters: s } = e,
         n = (0, $.Nb)(),
         l = i.useCallback(
@@ -2863,7 +2864,7 @@ let nC = function (e) {
                             i.Fragment,
                             {
                                 children: [
-                                    t > 0 && (0, r.jsx)("hr", { className: nS.B }),
+                                    t > 0 && (0, r.jsx)("hr", { className: nC.B }),
                                     (0, r.jsx)(nv, { id: a, children: e.heading }),
                                     (0, r.jsx)(nE.$, {
                                         "aria-labelledby": a,
@@ -2876,9 +2877,9 @@ let nC = function (e) {
                             t,
                         );
                     }),
-                    (0, r.jsx)("hr", { className: nS.B }),
+                    (0, r.jsx)("hr", { className: nC.B }),
                     (0, r.jsx)("div", {
-                        className: nS.W,
+                        className: nC.W,
                         children: (0, r.jsx)(g.$, {
                             fullWidth: !0,
                             onClick: () => {
@@ -2955,12 +2956,12 @@ function nI() {
         showToast: i.useCallback((t) => {
             e.current !== t &&
                 ((0, nA.P0)((0, nT.o)(ew.intl.string(ew.t["5ABf1w"]), nO.Ck.FAILURE)),
-                eR.default.track(ef.HAw.QUEST_HOME_MOBILE_DEEP_LINK_MISSING_QUEST, { quest_id: t }),
+                eb.default.track(ef.HAw.QUEST_HOME_MOBILE_DEEP_LINK_MISSING_QUEST, { quest_id: t }),
                 (e.current = t));
         }, []),
     };
 }
-function nb(e, t, s) {
+function nR(e, t, s) {
     let n = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 4,
         [l, r] = i.useState(null),
         a = i.useCallback(() => {
@@ -2969,15 +2970,15 @@ function nb(e, t, s) {
         }, [r, t, s, n, e]);
     return ((0, ey.g)(e, a, [t, s], { fireOnMount: !0 }), l);
 }
-var nR = s(768497),
+var nb = s(768497),
     nM = s(288613);
 let nL = 4 * tc.A.Millis.SECOND;
 function nH(e) {
     let { children: t, tileMinWidth: s, gridGap: n } = e,
         l = i.useRef(null),
-        a = nb(l, s, n);
+        a = nR(l, s, n);
     return (0, r.jsx)("div", {
-        className: nR.kL,
+        className: nb.kL,
         ref: l,
         style: { "--custom-min-quest-tile-width": `${s}px`, "--custom-quest-grid-gap": `${n}px` },
         children: null !== a && t(a),
@@ -2998,7 +2999,7 @@ let nQ = i.forwardRef(function (e, t) {
         [f, x] = i.useState(null),
         [g, v] = i.useState(0),
         { useNewTile: j } = G.aD.useConfig({ location: tj.rE.QUEST_HOME_DESKTOP }),
-        [{ highlightAnimationProgress: S }, C] = (0, e6.z)(() => ({
+        [{ highlightAnimationProgress: C }, S] = (0, e6.z)(() => ({
             highlightAnimationProgress: 1,
             config: { duration: nL },
         })),
@@ -3023,7 +3024,7 @@ let nQ = i.forwardRef(function (e, t) {
         let e = document.getElementById(`quest-tile-${f}`);
         null != e &&
             (e.scrollIntoView({ behavior: "smooth", block: "center" }),
-            C({
+            S({
                 from: { highlightAnimationProgress: 0 },
                 to: { highlightAnimationProgress: 1 },
                 reset: !0,
@@ -3031,18 +3032,18 @@ let nQ = i.forwardRef(function (e, t) {
                     e.cancelled || x(null);
                 },
             }));
-    }, [f, g, C]),
+    }, [f, g, S]),
     l && 0 === s.length)
-        ? (0, r.jsx)(X.y, { className: nR.u1 })
+        ? (0, r.jsx)(J.y, { className: nb.u1 })
         : 0 === s.length
           ? (0, r.jsxs)("div", {
-                className: nR.y7,
+                className: nb.y7,
                 children: [
                     (0, r.jsx)(eE.D, {
                         variant: "heading-xl/semibold",
                         children: ew.intl.string(c ? ew.t.PBfFnx : ew.t.NqFP6z),
                     }),
-                    (0, r.jsx)(J.E, {
+                    (0, r.jsx)(X.E, {
                         variant: "text-md/normal",
                         color: "text-subtle",
                         children: c ? ew.intl.format(ew.t.LdYS1H, { onClick: d }) : ew.intl.string(ew.t.LhD4yH),
@@ -3061,7 +3062,7 @@ let nQ = i.forwardRef(function (e, t) {
                             e8.animated.div,
                             {
                                 className: o()({ [nM.XB]: l, [sc.y]: j }),
-                                style: e2(l, i, S),
+                                style: e2(l, i, C),
                                 children: [
                                     l &&
                                         (0, r.jsx)("div", {
@@ -3075,7 +3076,7 @@ let nQ = i.forwardRef(function (e, t) {
                                               questContent: es.uF.QUEST_HOME_DESKTOP,
                                               contentPosition: s,
                                               rowIndex: n,
-                                              className: nR.d,
+                                              className: nb.d,
                                               sourceQuestContent: es.uF.QUEST_HOME_DESKTOP,
                                           })
                                         : (0, r.jsx)(su.Ay, {
@@ -3083,7 +3084,7 @@ let nQ = i.forwardRef(function (e, t) {
                                               questContent: es.uF.QUEST_HOME_DESKTOP,
                                               contentPosition: s,
                                               rowIndex: n,
-                                              className: nR.d,
+                                              className: nb.d,
                                               sourceQuestContent: es.uF.QUEST_HOME_DESKTOP,
                                           }),
                                 ],
@@ -3171,23 +3172,23 @@ let nD = [],
                 $.NC.ALL,
                 i.useMemo(() => ({ sortMethod: m, filters: E, removeExpiredQuests: !0 }), [m, E]),
             ),
-            S = i.useCallback(() => {
+            C = i.useCallback(() => {
                 f(nD);
             }, [f]),
-            C = i.useRef(null),
+            S = i.useRef(null),
             _ = i.useRef(null),
             N = (0, u.zy)(),
             p = (0, u.W6)();
         return (
             i.useEffect(() => {
                 "" !== N.hash &&
-                    null != C.current &&
+                    null != S.current &&
                     null != _.current &&
-                    (m !== C.current || E !== _.current) &&
+                    (m !== S.current || E !== _.current) &&
                     p.replace({ ...N, hash: void 0 });
             }, [m, E, N, p]),
             i.useEffect(() => {
-                C.current = m;
+                S.current = m;
             }, [m]),
             i.useEffect(() => {
                 _.current = E;
@@ -3197,14 +3198,14 @@ let nD = [],
                 t,
                 () => ({
                     scrollToQuest: (e) => {
-                        (S(),
+                        (C(),
                             h(tj.kL.SUGGESTED),
                             requestAnimationFrame(() => {
                                 o.current?.scrollToQuest(e);
                             }));
                     },
                 }),
-                [S, h],
+                [C, h],
             ),
             (0, r.jsxs)(r.Fragment, {
                 children: [
@@ -3216,7 +3217,7 @@ let nD = [],
                                 className: nU.Nf,
                                 children: [
                                     (0, r.jsx)(np, { onChange: h, optionClassName: nU.Uq, selectedSortMethod: m }),
-                                    (0, r.jsx)(nC, { onChange: f, selectedFilters: E }),
+                                    (0, r.jsx)(nS, { onChange: f, selectedFilters: E }),
                                 ],
                             }),
                         ],
@@ -3228,7 +3229,7 @@ let nD = [],
                         isFetching: v,
                         hasFetched: j,
                         hasFiltersApplied: E.length > 0,
-                        onClearFilters: S,
+                        onClearFilters: C,
                     }),
                 ],
             })
@@ -3257,8 +3258,8 @@ let nY = function (e) {
             : (0, r.jsx)("img", { className: nz.L, src: l, alt: n }),
     });
 };
-var nJ = s(57718),
-    nX = s(966354);
+var nX = s(57718),
+    nJ = s(966354);
 let nZ = (0, i.memo)(function (e) {
     let { quest: t } = e,
         [s, n] = (0, i.useState)(!1),
@@ -3271,21 +3272,21 @@ let nZ = (0, i.memo)(function (e) {
         { ref: x, height: g = 0 } = (0, nB.Ay)(),
         v = (0, nV.Ay)(),
         j = (0, $.S5)(t.userStatus?.claimedAt, { month: "numeric", day: "numeric" }),
-        S = t.userStatus?.claimedTier ?? 0,
-        C = t.config.rewards[S],
-        _ = C?.type === e4.l.FRACTIONAL_PREMIUM,
-        N = C?.type === e4.l.COLLECTIBLE,
-        p = C?.type === e4.l.VIRTUAL_CURRENCY,
-        A = C?.collectibleProduct?.items?.[0],
+        C = t.userStatus?.claimedTier ?? 0,
+        S = t.config.rewards[C],
+        _ = S?.type === e4.l.FRACTIONAL_PREMIUM,
+        N = S?.type === e4.l.COLLECTIBLE,
+        p = S?.type === e4.l.VIRTUAL_CURRENCY,
+        A = S?.collectibleProduct?.items?.[0],
         T = A?.type === nk.R.AVATAR_DECORATION ? A : null,
         O = i.useMemo(
             () =>
-                null == C
+                null == S
                     ? null
                     : !0 === p && t.userStatus?.orbQuantityClaimed != null
                       ? ew.intl.format(ew.t["nLXlh+"], { orbAmount: t.userStatus.orbQuantityClaimed })
-                      : C.name,
-            [C, p, t],
+                      : S.name,
+            [S, p, t],
         );
     (0, nB.i4)(d, (e) => {
         let { height: t } = e;
@@ -3296,20 +3297,20 @@ let nZ = (0, i.memo)(function (e) {
         a((n.top - s.top - l.height) / 2);
     });
     let I = (0, nw.M)(v),
-        R = i.useMemo(() => null != t.config.cosponsorMetadata, [t]),
+        b = i.useMemo(() => null != t.config.cosponsorMetadata, [t]),
         M = i.useMemo(() => (0, el.tW)(t, el.fY.REWARD), [t]),
         L = s ? g + 8 : 0,
         { content_position: H, row_index: Q, ...y } = (0, ea.fF)(es.uF.TROPHY_CASE_CARD);
     function U() {
-        (n(!0), eR.default.track(ef.HAw.QUEST_HOVER, { quest_id: t.id, ...y }));
+        (n(!0), eb.default.track(ef.HAw.QUEST_HOVER, { quest_id: t.id, ...y }));
     }
     function D() {
         n(!1);
     }
     function F(e) {
-        (c(!0), eR.default.track(ef.HAw.QUEST_ASSET_LOADING_FAILURE, { source: e, asset_id: e, quest_id: t.id }));
+        (c(!0), eb.default.track(ef.HAw.QUEST_ASSET_LOADING_FAILURE, { source: e, asset_id: e, quest_id: t.id }));
     }
-    return null == C || u
+    return null == S || u
         ? null
         : (0, r.jsx)(e9.vN, {
               children: (0, r.jsxs)("div", {
@@ -3319,14 +3320,14 @@ let nZ = (0, i.memo)(function (e) {
                   onBlur: D,
                   onMouseEnter: U,
                   onMouseLeave: D,
-                  className: o()(nX.kL, { [nX.yo]: s }),
+                  className: o()(nJ.kL, { [nJ.yo]: s }),
                   children: [
                       null != f &&
                           N &&
                           null != T &&
                           (0, r.jsx)("div", {
                               ref: h,
-                              className: nX.FX,
+                              className: nJ.FX,
                               style: { top: l },
                               children: (0, r.jsx)(nG.A, {
                                   avatarDecorationOverride: T,
@@ -3336,16 +3337,16 @@ let nZ = (0, i.memo)(function (e) {
                               }),
                           }),
                       _
-                          ? (0, r.jsx)(nW.A, { className: nX.Sl })
+                          ? (0, r.jsx)(nW.A, { className: nJ.Sl })
                           : p
                             ? (0, r.jsx)(nY, {
-                                  className: nX.Sl,
+                                  className: nJ.Sl,
                                   isAnimated: s,
                                   questName: t.config.messages.questName,
                               })
                             : M.isAnimated
-                              ? (0, r.jsx)(b.A, {
-                                    className: nX.JU,
+                              ? (0, r.jsx)(R.A, {
+                                    className: nJ.JU,
                                     autoPlay: !1,
                                     children: (0, r.jsx)("source", {
                                         src: M.url,
@@ -3354,33 +3355,33 @@ let nZ = (0, i.memo)(function (e) {
                                     }),
                                 })
                               : (0, r.jsx)("img", {
-                                    className: nX.Sl,
+                                    className: nJ.Sl,
                                     src: M.url,
                                     alt: t.config.messages.questName,
                                     onError: () => F(M.url),
                                 }),
-                      (0, r.jsx)("div", { className: o()(nX.Lw, { [nX.en]: I, [nX.So]: !I }) }),
+                      (0, r.jsx)("div", { className: o()(nJ.Lw, { [nJ.en]: I, [nJ.So]: !I }) }),
                       (0, r.jsx)("div", {
                           ref: m,
-                          className: nX.r$,
+                          className: nJ.r$,
                           style: { transform: `translateY(-${L}px)` },
-                          children: (0, r.jsx)(nJ.Ay, {
-                              logotypeClassName: o()(nX.wm, { [nX.A0]: R }),
+                          children: (0, r.jsx)(nX.Ay, {
+                              logotypeClassName: o()(nJ.wm, { [nJ.A0]: b }),
                               quest: t,
                               withGameTile: !1,
                           }),
                       }),
                       (0, r.jsxs)("div", {
                           ref: x,
-                          className: nX.zH,
+                          className: nJ.zH,
                           children: [
                               (0, r.jsx)(eE.D, {
-                                  className: nX.DD,
+                                  className: nJ.DD,
                                   variant: "heading-md/semibold",
                                   color: "text-overlay-light",
                                   children: ew.intl.format(ew.t.EAYZAr, { questName: t.config.messages.questName }),
                               }),
-                              (0, r.jsx)(J.E, {
+                              (0, r.jsx)(X.E, {
                                   variant: "text-sm/medium",
                                   color: I ? "text-muted" : "text-overlay-light",
                                   style: { opacity: I ? 1 : 0.75 },
@@ -3409,7 +3410,7 @@ function n2(e) {
     let { onSelectTab: t, className: s } = e,
         { claimedQuests: n, isFetchingClaimedQuests: l } = (0, $.Iq)();
     return l && 0 === n.length
-        ? (0, r.jsx)(X.y, { className: n8.u })
+        ? (0, r.jsx)(J.y, { className: n8.u })
         : 0 === n.length
           ? (0, r.jsx)(n1, { onClick: () => t($.NC.ALL) })
           : (0, r.jsx)("div", {
@@ -3459,7 +3460,7 @@ var n6 = s(333007),
 let le = i.forwardRef(function (e, t) {
     var s, n;
     let { containerWidth: l, questIds: a, sectionIdentifier: o } = e,
-        u = (0, eb.C)(),
+        u = (0, eR.C)(),
         { variant: c } = G.Mk.useConfig({ location: tj.rE.QUEST_HOME_DESKTOP }),
         d = c === G.d.LARGE_MASK_MARGIN,
         m = a.length >= 2,
@@ -3469,7 +3470,7 @@ let le = i.forwardRef(function (e, t) {
         x = (0, n4.useHasAnyModalOpen)(),
         { targetQuestId: g, targetSectionIdentifier: v } = i.useContext(n3),
         j = null != g && v === o,
-        [S, C] = i.useState(!1),
+        [C, S] = i.useState(!1),
         [_, N] = i.useState(!1),
         p = i.useCallback((e) => {
             N(e);
@@ -3568,18 +3569,18 @@ let le = i.forwardRef(function (e, t) {
                 { rotation: r, activeSlotIndex: t > 1 ? 2 + o : 0, scrollStart: v, hasFocusWithin: c }
             );
         })({ numQuests: a.length, ready: null != l && m, rootRef: E, scrollerRef: h }),
-        b = S || I || _,
-        R = null == l ? 0 : ((s = l + 50), (n = a.length) < 2 ? n : Math.ceil(s / 295) + 2 + 1),
+        R = C || I || _,
+        b = null == l ? 0 : ((s = l + 50), (n = a.length) < 2 ? n : Math.ceil(s / 295) + 2 + 1),
         M = i.useMemo(() => {
             let e = [],
                 t = new Set();
-            for (let s = 0; s < R; s++) {
+            for (let s = 0; s < b; s++) {
                 let n = A + s,
                     l = ((n % a.length) + a.length) % a.length;
                 (e.push({ questId: a[l], questIndex: l, key: `${a[l]}-${n}`, isDuplicate: t.has(a[l]) }), t.add(a[l]));
             }
             return e;
-        }, [a, A, R]),
+        }, [a, A, b]),
         L = i.useCallback(
             (e) => {
                 let t = M.findIndex((t) => t.questId === e);
@@ -3600,7 +3601,7 @@ let le = i.forwardRef(function (e, t) {
                     disableUserScroll: m,
                     groupedArrows: m,
                     onScrollStart: O,
-                    autoCycle: m && !(S || _ || I || x || j),
+                    autoCycle: m && !(C || _ || I || x || j),
                     singleStep: !0,
                     scrollerRef: h,
                     controlRef: f,
@@ -3608,8 +3609,8 @@ let le = i.forwardRef(function (e, t) {
                     children: (0, r.jsx)("div", {
                         className: n9.FO,
                         style: { "--custom-featured-tile-gap": "4px" },
-                        onPointerEnter: () => C(!0),
-                        onPointerLeave: () => C(!1),
+                        onPointerEnter: () => S(!0),
+                        onPointerLeave: () => S(!1),
                         children: M.map((e, t) =>
                             (0, r.jsx)(
                                 n7,
@@ -3619,7 +3620,7 @@ let le = i.forwardRef(function (e, t) {
                                     sectionIdentifier: o,
                                     children: (0, r.jsx)(s9, {
                                         isInFeaturedSection: !0,
-                                        isActive: t === T && !b,
+                                        isActive: t === T && !R,
                                         onMenuOpenChange: p,
                                         questId: e.questId,
                                         questContent: es.uF.QUEST_HOME_FEATURED_SECTION,
@@ -3662,7 +3663,7 @@ function ll(e) {
         { targetSectionIdentifier: a } = i.useContext(n3),
         { useNewTile: o } = G.aD.useConfig({ location: tj.rE.QUEST_HOME_DESKTOP }),
         { variant: u } = G.Mk.useConfig({ location: tj.rE.QUEST_HOME_DESKTOP }),
-        c = (0, eb.C)(),
+        c = (0, eR.C)(),
         d = a === l,
         m = i.useCallback(
             (e) => {
@@ -3854,7 +3855,7 @@ let ld = function () {
                                       null != o && null != o.enrolledAt && null == o.claimedAt)
                                   )
                                       return [...c, eB.IN_PROGRESS];
-                                  let m = !sR(t);
+                                  let m = !sb(t);
                                   return m && null != s && (0, tf.I0)(s, t.id) && sM(eB.FEATURED, l)
                                       ? [...c, eB.FEATURED]
                                       : new Date(t.expiresAt).valueOf() <= Date.now() + (a ? sO : sT)
@@ -3882,12 +3883,12 @@ let ld = function () {
                           return (
                               s?.questIds?.forEach((e) => {
                                   let t = et.A.getQuestConfig(e);
-                                  null == t || sR(t) || u(e);
+                                  null == t || sb(t) || u(e);
                               }),
                               t.forEach((e) => u(e)),
                               eV
                                   .map((e) => {
-                                      let t = sb?.[e.identifier];
+                                      let t = sR?.[e.identifier];
                                       if (null != e.shouldShowFn && !e.shouldShowFn(l, r))
                                           return { ...e, questIds: [] };
                                       let s =
@@ -3935,7 +3936,7 @@ let lE = {
             { showToast: f } = nI(),
             [x, g] = i.useState(null),
             [v, j] = i.useState(null),
-            [S, C] = i.useState(0),
+            [C, S] = i.useState(0),
             [_, N] = i.useState(null),
             p = i.useRef(null),
             A = i.useCallback(
@@ -3961,7 +3962,7 @@ let lE = {
                         null != r &&
                         (g(e),
                         j(l),
-                        C((e) => e + 1),
+                        S((e) => e + 1),
                         l === eB.FEATURED && a && u
                             ? h.current?.scrollToQuest(e)
                             : r.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" }),
@@ -3976,7 +3977,7 @@ let lE = {
                         !0)
                     );
                 },
-                [a, u, g, C, O, d, n, f, _, m],
+                [a, u, g, S, O, d, n, f, _, m],
             );
         (i.useImperativeHandle(t, () => ({ scrollToQuest: I }), [I]),
             i.useLayoutEffect(() => {
@@ -3986,12 +3987,12 @@ let lE = {
                 }
                 p.current !== s && I(s, !0) && (p.current = s);
             }, [s, I]));
-        let b = i.useMemo(
-            () => ({ targetQuestId: x, targetSectionIdentifier: v, highlightCount: S, highlightAnimationProgress: T }),
-            [x, v, S, T],
+        let R = i.useMemo(
+            () => ({ targetQuestId: x, targetSectionIdentifier: v, highlightCount: C, highlightAnimationProgress: T }),
+            [x, v, C, T],
         );
         return (0, r.jsx)(n3.Provider, {
-            value: b,
+            value: R,
             children: (0, r.jsx)("div", {
                 className: o()(lm.kL, l),
                 ref: E,
@@ -4036,7 +4037,7 @@ let lE = {
                                     variant: "heading-xl/semibold",
                                     children: ew.intl.string(ew.t.NqFP6z),
                                 }),
-                                (0, r.jsx)(J.E, {
+                                (0, r.jsx)(X.E, {
                                     variant: "text-md/normal",
                                     color: "text-subtle",
                                     children: ew.intl.string(ew.t.LhD4yH),
@@ -4056,7 +4057,7 @@ let lj = (0, lx.v)((e, t) => ({
     logger: null,
     registerAssetLoad: () => {
         let s = t().logger ?? (0, lv.L)({ location: tj.rE.QUEST_HOME_DESKTOP });
-        if (s.info === tS.tE || t().elapsed >= 6e4) return;
+        if (s.info === tC.tE || t().elapsed >= 6e4) return;
         let n = performance.now() - t().startTime;
         n > 6e4 && (n = 6e4);
         let l = { elapsed: n };
@@ -4066,30 +4067,30 @@ let lj = (0, lx.v)((e, t) => ({
             (0, lg.r)(() => e(l)));
     },
 }));
-var lS = s(516226),
-    lC = s(613956),
+var lC = s(516226),
+    lS = s(613956),
     l_ = s(604880),
     lN = s(318808);
 function lp(e) {
     let { adCreativeIds: t } = e,
         s = i.useCallback(() => (0, sP.zg)(t), [t]);
     return (0, r.jsxs)("div", {
-        className: lC.MY,
+        className: lS.MY,
         children: [
-            (0, r.jsx)("img", { className: lC.Bg, src: lN.Ay, alt: "" }),
-            (0, r.jsx)("div", { className: lC.r$, children: (0, r.jsx)("img", { src: l_, alt: "" }) }),
+            (0, r.jsx)("img", { className: lS.Bg, src: lN.Ay, alt: "" }),
+            (0, r.jsx)("div", { className: lS.r$, children: (0, r.jsx)("img", { src: l_, alt: "" }) }),
             (0, r.jsxs)("div", {
-                className: lC.Nr,
+                className: lS.Nr,
                 children: [
                     (0, r.jsx)(eE.D, {
                         variant: "heading-lg/semibold",
                         color: "text-default",
-                        className: lC.ky,
+                        className: lS.ky,
                         children: ew.intl.string(ew.t.GXmn57),
                     }),
-                    (0, r.jsx)(J.E, {
+                    (0, r.jsx)(X.E, {
                         variant: "text-md/normal",
-                        className: lC.G3,
+                        className: lS.G3,
                         children: ew.intl.string(ew.t.bWuKqh),
                     }),
                     (0, r.jsx)(g.$, {
@@ -4117,13 +4118,13 @@ function lA(e) {
 var lT = s(215130);
 let lO = function (e) {
     let { matchingQuestIds: t } = e,
-        s = (0, eb.C)(),
+        s = (0, eR.C)(),
         { useNewTile: n } = G.aD.useConfig({ location: tj.rE.QUEST_HOME_DESKTOP }),
         { variant: l } = G.Mk.useConfig({ location: tj.rE.QUEST_HOME_DESKTOP }),
         a = i.useRef(null),
         u = l === G.d.LARGE_MASK_MARGIN,
         c = n ? 12 : 20,
-        d = nb(a, eW(s, u), c, 3);
+        d = nR(a, eW(s, u), c, 3);
     return (0, r.jsxs)(j.B, {
         gap: 16,
         direction: "vertical",
@@ -4203,12 +4204,12 @@ let lO = function (e) {
     });
 };
 var lI = s(649852),
-    lb = s.n(lI),
-    lR = s(379078),
+    lR = s.n(lI),
+    lb = s(379078),
     lM = s(704554),
     lL = s(823784);
 let lH = {
-        searchType: lR.n.FUZZY,
+        searchType: lb.n.FUZZY,
         searchStringGenerator: function (e) {
             return [
                 e.messages.questName.toLowerCase(),
@@ -4216,7 +4217,7 @@ let lH = {
                 e.messages.gamePublisher.toLowerCase(),
             ].filter(eM.Vq);
         },
-        sortType: lR.r.JARO_WINKLER,
+        sortType: lb.r.JARO_WINKLER,
         throttleMs: 200,
     },
     lQ = function () {
@@ -4227,7 +4228,7 @@ let lH = {
             ),
             r = e.trim().toLowerCase(),
             a = "" !== r,
-            o = i.useMemo(() => lb()(er.gr, 1e3), []),
+            o = i.useMemo(() => lR()(er.gr, 1e3), []),
             u = i.useCallback(() => {
                 o.cancel();
                 let e = (0, lL.tv)();
@@ -4320,7 +4321,7 @@ function lw(e) {
         return (0, r.jsx)(Y._M, {
             id: "QuestHomeHeroBackground_bannerVideo",
             children: (n) =>
-                (0, r.jsx)(b.A, {
+                (0, r.jsx)(R.A, {
                     ref: (e) => {
                         ((c.current = e), (o.current = e), (n.current = e));
                     },
@@ -4479,7 +4480,7 @@ let lK = function (e) {
                 onSelectTab: c,
             };
         })({ withClaimedQuestsTab: !0 }),
-        { query: _, setQuery: b, matchingQuestIds: M, onSearchClose: L } = lQ(),
+        { query: _, setQuery: R, matchingQuestIds: M, onSearchClose: L } = lQ(),
         { onScroll: y } = (0, Q.G)(),
         U = V.A.getState().getUtmCurrentContext(),
         D = lj((e) => e.registerAssetLoad),
@@ -4506,9 +4507,9 @@ let lK = function (e) {
         { enabled: w } = G.Mk.useConfig({ location: tj.rE.QUEST_HOME_DESKTOP }),
         { useNewLayoutWithSearch: W } = G.aD.useConfig({ location: tj.rE.QUEST_HOME_DESKTOP }),
         K = w || W,
-        J = i.useRef(null),
-        X = i.useCallback((e) => {
-            J.current?.scrollToQuest(e);
+        X = i.useRef(null),
+        J = i.useCallback((e) => {
+            X.current?.scrollToQuest(e);
         }, []),
         Z = i.useMemo(() => ((0, B.uJ)(s.hash) ? null : s.hash.substring(1)), [s.hash]),
         { questHomeHero: ee, isLoading: et, confirmedEmpty: es } = (0, tD.lg)(l[0] ?? null),
@@ -4522,7 +4523,7 @@ let lK = function (e) {
                 (0, O.Cz)({ tab: lU.G2.ORBS, analyticsLocations: [], analyticsSource: N.A.ORBS_BALANCE_MENU }));
         }, []);
     (i.useEffect(() => {
-        (0, C.I)(ef.BVt.QUEST_HOME);
+        (0, S.I)(ef.BVt.QUEST_HOME);
     }, []),
         i.useEffect(() => {
             H.trigger();
@@ -4552,7 +4553,7 @@ let lK = function (e) {
             }
         }, [s.search, f, n.action, s.hash, t, a]),
         i.useEffect(() => {
-            t && (0, R.Dr)(h.M.QUEST_HOME_ENTRYPOINT_ONBOARDING);
+            t && (0, b.Dr)(h.M.QUEST_HOME_ENTRYPOINT_ONBOARDING);
         }, [t]));
     let er = i.useCallback(
             (e) => {
@@ -4566,7 +4567,7 @@ let lK = function (e) {
         eu = et && !en;
     return a
         ? (0, r.jsx)(lp, { adCreativeIds: l })
-        : (0, r.jsx)(lS.M.Provider, {
+        : (0, r.jsx)(lC.M.Provider, {
               value: ea,
               children: (0, r.jsx)(lq.Provider, {
                   value: eo,
@@ -4584,9 +4585,9 @@ let lK = function (e) {
                                   justify: "end",
                                   children: [
                                       K &&
-                                          (0, r.jsx)(S.I, {
+                                          (0, r.jsx)(C.I, {
                                               query: _,
-                                              onChange: b,
+                                              onChange: R,
                                               placeholder: ew.intl.string(ew.t.y10TI2),
                                               onClear: L,
                                               size: "sm",
@@ -4613,7 +4614,7 @@ let lK = function (e) {
                                           ? (0, r.jsx)(lG, { onAssetLoad: D, hasSearchResults: ei })
                                           : (0, r.jsx)(lW, {
                                                 onAssetLoad: D,
-                                                onQuestCtaClick: X,
+                                                onQuestCtaClick: J,
                                                 hasSearchResults: ei,
                                                 questHomeHero: ee,
                                                 isLoadingQuestHomeHero: et,
@@ -4630,11 +4631,11 @@ let lK = function (e) {
                                     : K
                                       ? (0, r.jsx)(lf, {
                                             className: ei ? lF.R : void 0,
-                                            ref: J,
+                                            ref: X,
                                             deepLinkedQuestId: Z,
                                             isLoadingQuestHomeHero: et,
                                         })
-                                      : (0, r.jsx)(nP, { ref: J }),
+                                      : (0, r.jsx)(nP, { ref: X }),
                           ],
                       }),
                   }),

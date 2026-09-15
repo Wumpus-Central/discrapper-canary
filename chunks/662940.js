@@ -66,6 +66,7 @@ function x(t, e, n) {
         case a.UA.CLAIMED:
             return u.intl.string(u.t.uOGFB6);
         case a.UA.EXPIRED:
+        case a.UA.EXPIRED_CLAIMED:
             return u.intl.string(u.t["zX/gnV"]);
         default:
             return null;
@@ -83,6 +84,7 @@ function A(t, e, n, s) {
         case a.UA.CLAIMED:
         case a.UA.EXPIRED:
         case a.UA.EXPIRED_CLAIMABLE:
+        case a.UA.EXPIRED_CLAIMED:
             return null;
     }
 }
