@@ -1,17 +1,17 @@
 (r.d(t, { ur: () => f, vX: () => h }), r(321073));
 var n = r(582128),
     a = r(196765),
-    l = r(121894),
-    i = r(562519),
+    i = r(121894),
+    l = r(562519),
     u = r(174459),
-    s = r(670812),
+    s = r(79455),
     o = r(652215);
-let c = new i.A("a11y_violations"),
+let c = new l.A("a11y_violations"),
     d = (0, a.v)(() => ({ check: null }));
 function f(e) {
     let t = (0, n.useCallback)((e) => {
         if (e.hash !== d.getState().check?.hash)
-            for (let [t, r] of ((0, l.r)(() => d.setState({ check: e })), e.violations.entries()))
+            for (let [t, r] of ((0, i.r)(() => d.setState({ check: e })), e.violations.entries()))
                 for (let e of r.instances.values())
                     for (let { trace: r, hash: n } of e) {
                         let e = JSON.stringify(n);
@@ -32,7 +32,7 @@ function h() {
     for (let { instances: r, rule: n } of e.values())
         for (let [e, a] of r.entries()) {
             let r = a.map((e) => e.element),
-                l = a[0].message;
+                i = a[0].message;
             t.push({
                 key: e,
                 title: n.metadata.description,
@@ -40,7 +40,7 @@ function h() {
                 id: n.id,
                 tags: n.tags,
                 elements: r,
-                message: l,
+                message: i,
             });
         }
     return t;
