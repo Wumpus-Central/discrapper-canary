@@ -1,0 +1,105 @@
+.container__949a0 {
+    flex-direction: row;
+    justify-content: space-between
+}
+
+.body__949a0,
+.container__949a0 {
+    align-items: center;
+    display: flex
+}
+
+.body__949a0 {
+    flex-direction: column
+}
+
+.description__949a0 {
+    margin-top: 8px;
+    text-align: center
+}
+
+.icon_d2b05e {
+    inset-inline-start: 8px;
+    margin: auto auto 25px;
+    top: 9px;
+    z-index: 1
+}
+
+.connectionInstructions_d2b05e {
+    margin-top: 8px;
+    text-align: center
+}
+
+.flexColumn__45055 {
+    display: flex;
+    flex-direction: column
+}
+
+.infoNotice__45055 {
+    margin-bottom: 16px
+}
+
+.paymentRequestButton__45055 {
+    display: flex;
+    flex: 1;
+    flex-direction: row
+}
+
+.paymentModalBreadcrumbs__45055:after {
+    padding: 0
+}
+
+.paymentModalError__45055 {
+    background-color: var(--modal-background);
+    margin-bottom: var(--space-16);
+    padding-top: 12px
+}
+
+.giftCardRedemptionLink__45055 {
+    margin-top: 16px
+}
+
+.bodyWrapper_e210ec {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    height: 100%;
+    min-height: 0;
+    position: relative
+}
+
+.errorBlockWrapper_e210ec {
+    padding-bottom: 16px
+}
+
+.errorBlockWrapperLegacy_e210ec {
+    padding: 16px
+}
+
+.paymentNote_e210ec {
+    padding: 0 16px
+}
+
+.loadingBlock_e210ec {
+    height: 192px
+}
+
+.sequencer_e210ec,
+.sequencerStatic_e210ec {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column
+}
+
+.sequencerStatic_e210ec {
+    flex: 1 1 auto
+}
+
+.sequencerAnimatedNode_e210ec {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    min-height: 0
+}
+
+/*# sourceMappingURL=307158.19d4bf84283d4cd1.css.map*/

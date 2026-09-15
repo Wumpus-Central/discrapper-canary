@@ -8,7 +8,7 @@ var l = n(284009),
     u = n(883645),
     c = n(601194),
     d = n(721836),
-    m = n(506536),
+    m = n(747340),
     p = n(174459),
     h = n(723702),
     C = n(951305),
@@ -44,7 +44,7 @@ function I(e) {
         { step: k } = (0, u.Ay)(),
         { isGift: w } = (0, C.Pv)(),
         U = {
-            ...(0, m._)(),
+            ...(0, m.p)(),
             paymentSources: A,
             paymentSourceId: _,
             setPaymentSourceId: T,
@@ -65,7 +65,7 @@ function I(e) {
     let G = (0, r.A)(() => Date.now(), [k]),
         F = f.pn.PAYMENT_ELEMENT;
     return (0, m.Y)({
-        paymentModalArgs: U,
+        addPaymentMethodStepState: U,
         initialStep: F,
         prependSteps: [f.pn.PROMOTION_INFO],
         appendSteps: [f.pn.REVIEW, f.pn.CONFIRM],

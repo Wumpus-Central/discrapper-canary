@@ -8,7 +8,7 @@ var l = n(284009),
     o = n(632088),
     u = n(136240),
     d = n(166532),
-    c = n(506536),
+    c = n(747340),
     g = n(375708),
     m = n(998973);
 function A(e) {
@@ -21,9 +21,9 @@ function A(e) {
             initialStep: E = d.pn.PAYMENT_ELEMENT,
             overwriteSubscriptionPaymentSource: h = !1,
         } = e,
-        S = (0, c._)(),
+        S = (0, c.p)(),
         T = (0, c.Y)({
-            paymentModalArgs: S,
+            addPaymentMethodStepState: S,
             initialStep: E,
             prependSteps: [],
             appendSteps: [],

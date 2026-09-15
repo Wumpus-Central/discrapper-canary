@@ -451,7 +451,7 @@ var et = n(444927),
     e_ = n(534479),
     eT = n(121005),
     eN = n(174459),
-    eb = n(506536),
+    eb = n(747340),
     ej = n(295405);
 let [eR, eM, eO] = (0, d.A)();
 function eL(e) {
@@ -485,13 +485,13 @@ function eL(e) {
     let g = (0, U.bG)([ef.A], () => ef.A.hasFetchedSubscriptions()),
         A = (0, U.bG)([ej.A], () => ej.A.defaultPaymentSourceId),
         P = null != E ? E.paymentSourceId : null,
-        v = (0, eb._)(null != P ? P : g ? A : null);
+        v = (0, eb.p)(null != P ? P : g ? A : null);
     return (0, r.jsx)(eR.Provider, {
         value: {
             disablePremiumUpsell: n,
             closeGuildPerksModal: l,
             guildId: a,
-            paymentModalArgs: v,
+            addPaymentMethodStepState: v,
             premiumSubscriptionPaymentSourceId: P,
             analyticsLocation: s,
             analyticsSourceLocation: o,
@@ -582,7 +582,7 @@ var eV = n(482132),
     eK = n(879100);
 function eZ(e) {
     let { handleClose: t } = e,
-        { guildId: n, paymentModalArgs: l, existingAvailableSlotCount: i } = eM(),
+        { guildId: n, addPaymentMethodStepState: l, existingAvailableSlotCount: i } = eM(),
         {
             activeSubscription: a,
             startingFractionalPremiumEndsAt: s,
@@ -1623,7 +1623,7 @@ function t3(e) {
             disablePremiumUpsell: a,
             setForceDisableSubmitButton: u,
             forceDisableSubmitButton: c,
-            paymentModalArgs: d,
+            addPaymentMethodStepState: d,
             premiumSubscriptionPaymentSourceId: m,
         } = eM(),
         {
@@ -1880,7 +1880,7 @@ function nu(e) {
 }
 function nc(e) {
     let { handleClose: t, handleStepChange: n, onSubscriptionConfirmation: l } = e,
-        { paymentModalArgs: i, analyticsLocation: a, analyticsSourceLocation: s } = eM(),
+        { addPaymentMethodStepState: i, analyticsLocation: a, analyticsSourceLocation: s } = eM(),
         { paymentSourceId: u, activeSubscription: d } = (0, S.t4)((e) => ({
             paymentSourceId: e.paymentSourceId,
             activeSubscription: e.activeSubscription,
@@ -1917,7 +1917,7 @@ async function np(e, t) {
     );
 }
 function nh() {
-    let { guildId: e, intent: t, onSubscribeComplete: n, paymentModalArgs: l } = eM(),
+    let { guildId: e, intent: t, onSubscribeComplete: n, addPaymentMethodStepState: l } = eM(),
         { setIsSubmittingCurrentStep: i } = l,
         { paymentAuthenticationState: r } = (0, er.o)(),
         { setPurchaseState: a, setPurchaseError: s } = (0, S.t4)((e) => ({
@@ -1959,7 +1959,7 @@ let nC = [
         CHECKOUT_STEPS: {
             [o.pn.REVIEW]: function (e) {
                 let { handleStepChange: t, handleClose: n, analyticsData: l } = e,
-                    { guildId: i, paymentModalArgs: a, premiumSubscriptionPaymentSourceId: u } = eM(),
+                    { guildId: i, addPaymentMethodStepState: a, premiumSubscriptionPaymentSourceId: u } = eM(),
                     {
                         activeSubscription: d,
                         paymentSourceId: m,
@@ -1981,7 +1981,7 @@ let nC = [
                         let { handleStepChange: t, handleClose: n, analyticsData: l } = e,
                             {
                                 guildId: i,
-                                paymentModalArgs: r,
+                                addPaymentMethodStepState: r,
                                 premiumSubscriptionPaymentSourceId: a,
                                 analyticsLocation: s,
                                 analyticsSourceLocation: u,
@@ -5235,7 +5235,7 @@ function rK(e) {
                 }),
             a || (0, nd.I8)());
     }, [t, a, u]);
-    let g = (0, eb._)(),
+    let g = (0, eb.p)(),
         { paymentSources: A, paymentSourceId: P, paymentAuthenticationState: v, setIsSubmittingCurrentStep: x } = g,
         _ = (0, ea.qv)(),
         T = (0, ea.s2)(),
@@ -5328,7 +5328,7 @@ function rK(e) {
                 hasFetchedMostRecentPremiumTypeSubscription: a,
                 recentSubscription: i,
                 premiumSubscription: s,
-                paymentModalArgs: g,
+                addPaymentMethodStepState: g,
                 priceOptions: B,
                 analyticsData: H,
                 handleClose: W,
@@ -5527,7 +5527,7 @@ function r0(e) {
             : null;
 }
 function r1(e) {
-    let { plan: t, isDirectFulfillment: n, paymentModalArgs: l, handleClose: i } = rV();
+    let { plan: t, isDirectFulfillment: n, addPaymentMethodStepState: l, handleClose: i } = rV();
     ez()(null != t, "Missing plan");
     let { paymentSources: a, paymentSourceId: s } = l,
         o = (0, O.g)(a, s);
@@ -5652,7 +5652,7 @@ let at = [...eG.oz],
                         trial: i,
                         promotion: a,
                         priceOptions: s,
-                        paymentModalArgs: u,
+                        addPaymentMethodStepState: u,
                         redeemPromotion: d,
                         confirmedUpgrade: m,
                         setConfirmedUpgrade: p,

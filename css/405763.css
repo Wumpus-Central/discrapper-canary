@@ -1,35 +1,3 @@
-.container__949a0 {
-    flex-direction: row;
-    justify-content: space-between
-}
-
-.body__949a0,
-.container__949a0 {
-    align-items: center;
-    display: flex
-}
-
-.body__949a0 {
-    flex-direction: column
-}
-
-.description__949a0 {
-    margin-top: 8px;
-    text-align: center
-}
-
-.icon_d2b05e {
-    inset-inline-start: 8px;
-    margin: auto auto 25px;
-    top: 9px;
-    z-index: 1
-}
-
-.connectionInstructions_d2b05e {
-    margin-top: 8px;
-    text-align: center
-}
-
 .container_ceece4 {
     --custom-payment-element-min-height: 430px
 }
@@ -197,4 +165,4 @@
     opacity: 1
 }
 
-/*# sourceMappingURL=482214.8de10ff547f647f9.css.map*/
+/*# sourceMappingURL=405763.a53ea2af175ce3b2.css.map*/
