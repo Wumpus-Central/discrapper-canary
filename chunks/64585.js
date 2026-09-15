@@ -1,4 +1,4 @@
-(n.d(t, { A: () => m }), n(321073));
+(n.d(t, { A: () => L }), n(321073));
 var i = n(228366),
     l = n(272355),
     r = n(400492),
@@ -32,7 +32,7 @@ function S() {
 function N() {
     (_.pop(), (C = !1), S());
 }
-class L extends l.A {
+class m extends l.A {
     _initialize() {
         (A.Ay.addChangeListener(this.startAudio),
             i.h.subscribe("RTC_CONNECTION_STATE", this.setVolume),
@@ -80,4 +80,4 @@ class L extends l.A {
             })("poggermode_achievement_unlock");
     }
 }
-let m = new L();
+let L = new m();

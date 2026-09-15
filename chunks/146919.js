@@ -1,8 +1,8 @@
 n.d(t, { jP: () => c, gB: () => i, yB: () => d });
 var o = n(582128),
     r = n(17928),
-    a = n(775602),
-    s = n(652525);
+    s = n(775602),
+    a = n(652525);
 let l = "custom-cursors-styles",
     c = "custom-cursors",
     u = `
@@ -77,7 +77,7 @@ function i() {
     }, [e]);
 }
 function d(e) {
-    let t = (0, s.t)(e),
-        n = (0, r.bG)([a.Ay], () => a.Ay.enableCustomCursor ?? !0);
+    let t = (0, a.t)(e),
+        n = (0, r.bG)([s.Ay], () => s.Ay.enableCustomCursor ?? !0);
     return t && n;
 }

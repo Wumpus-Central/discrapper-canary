@@ -19,12 +19,12 @@ var i = n(435558),
     p = n(309010),
     S = n(543465),
     N = n(403362),
-    L = n(935208),
-    m = n(297469),
+    m = n(935208),
+    L = n(297469),
     f = n(355097);
 let O = null,
     b = null,
-    R = new m.Ay();
+    R = new L.Ay();
 function v() {
     let e = p.Ay.getChannelId(),
         t = p.Ay.getVoiceChannelId();
@@ -266,7 +266,7 @@ let F = new B(s.h, {
             i = !1;
         return (
             null != n &&
-                L.default.keys(n).forEach((e) => {
+                m.default.keys(n).forEach((e) => {
                     null != n[e].guildRecentsDismissedAt && (i = R.updateRecentsCategory(e) || i);
                 }),
             i

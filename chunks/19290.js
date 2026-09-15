@@ -1,4 +1,4 @@
-(n.d(t, { A0: () => eP, NI: () => eR, Ay: () => eC, Tb: () => e_ }), n(321073));
+(n.d(t, { A0: () => eP, NI: () => eC, Ay: () => eR, Tb: () => e_ }), n(321073));
 var i,
     a,
     r,
@@ -9,8 +9,8 @@ var i,
     c = n(17928),
     u = n(192308),
     m = n(403581),
-    p = n(793574),
-    b = n(688810),
+    b = n(793574),
+    p = n(688810),
     f = n(793943),
     g = n(259065),
     h = n(741231),
@@ -18,8 +18,8 @@ var i,
     v = n(75678),
     _ = n(206835),
     P = n(192444),
-    R = n(216934),
-    C = n(591179),
+    C = n(216934),
+    R = n(591179),
     T = n(462463),
     A = n(780964),
     y = n(766075),
@@ -81,9 +81,9 @@ var q = n(88001),
 let eu = "/assets/035ad0fba4997f3f.svg",
     em =
         "https://cdn.discordapp.com/assets/content/a3d8a5ad88850f5dbfb86dcff1844ef525771e03d2e6bf64328980a361538f05.mov",
-    ep =
-        "https://cdn.discordapp.com/assets/content/1950d090a67ef578499d21526718bbbbc01d5799318f64435930ecef3e524241.webm",
     eb =
+        "https://cdn.discordapp.com/assets/content/1950d090a67ef578499d21526718bbbbc01d5799318f64435930ecef3e524241.webm",
+    ep =
         "https://cdn.discordapp.com/assets/content/de126b095fb3d2353650e750d46c54b7156297482f9205ca1645a45fb0082169.png",
     ef =
         "https://cdn.discordapp.com/assets/content/94614efcdbc454cb327b5744501edff7f4342aaf09cc67720a7b25a79262b08a.webp";
@@ -93,7 +93,7 @@ var eg = n(576765),
     ev = n(455482),
     e_ = (((i = {}).CONTAINED = "contained"), (i.OVERLAY = "overlay"), i),
     eP = (((a = {}).SMALL = "small"), (a.MEDIUM = "medium"), (a.LARGE = "large"), a),
-    eR =
+    eC =
         (((r = {}).REFERRAL_PROGRAM = "referralProgram"),
         (r.SERVER_PROFILES = "serverProfiles"),
         (r.SHOW_YOUR_STYLE = "showYourStyle"),
@@ -110,10 +110,10 @@ var eg = n(576765),
         (r.COMBINED_ORBS = "combinedOrbs"),
         (r.YOUTUBE = "youtube"),
         r);
-let eC = function () {
+let eR = function () {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-        { analyticsLocations: t } = (0, b.Ay)(p.A.PREMIUM_MARKETING_BENTO_BOX),
-        i = (0, C.X)("useBentoBoxes"),
+        { analyticsLocations: t } = (0, p.Ay)(b.A.PREMIUM_MARKETING_BENTO_BOX),
+        i = (0, R.X)("useBentoBoxes"),
         a = (0, T.A)({ analyticsLocations: t }),
         r = (0, l.useCallback)(() => {
             (0, h.A)(J.BVt.NITRO_HOME, { search: (0, o.stringify)({ perk: U.CALL_OF_DUTY_3PP_CARD_ID }) });
@@ -129,7 +129,7 @@ let eC = function () {
         }, [t]),
         V = (0, N.TM)(),
         e_ = j.A.getArticleURL(J.MVz.REFERRAL_PROGRAM),
-        { shouldShowBonusOrbsUX: eP, multiplier: eC } = (0, P.lk)(Z.rE.NITRO_HOME_MARKETING),
+        { shouldShowBonusOrbsUX: eP, multiplier: eR } = (0, P.lk)(Z.rE.NITRO_HOME_MARKETING),
         eT = l.useRef(null),
         eA = (0, x.b)("bento_box"),
         ey = (function () {
@@ -197,8 +197,8 @@ let eC = function () {
                     : "https://cdn.discordapp.com/assets/content/2951de28d84d4fcba8b5c4db54b094b98dca5bfb168d77d356e9896708768a5f.webm",
             },
             orbRewards: { thumbnail: ev.A, assetUrl: ex.A },
-            orbMultiplier: { thumbnail: eb, assetUrl: V ? em : ep },
-            combinedOrbs: { thumbnail: eb, assetUrl: V ? em : ep },
+            orbMultiplier: { thumbnail: ep, assetUrl: V ? em : eb },
+            combinedOrbs: { thumbnail: ep, assetUrl: V ? em : eb },
             callOfDuty: { thumbnail: ef, assetUrl: ef },
             threePPromotions: { thumbnail: eA ? (0, s.jsx)(H, { ref: eT }) : eu, assetUrl: eA ? void 0 : eu },
             youtube: { thumbnail: ef, assetUrl: ef },
@@ -383,9 +383,9 @@ let eC = function () {
             orbMultiplier: {
                 name: "orbMultiplier",
                 title: er.intl.string(er.t.Csf5Ol),
-                description: er.intl.format(er.t["G5k+lZ"], { bonusOrbMultiplier: eC }),
+                description: er.intl.format(er.t["G5k+lZ"], { bonusOrbMultiplier: eR }),
                 descriptionCta: er.intl.string(er.t.jVcuVY),
-                onClick: () => (0, R.m)({ fromContent: d.u.NITRO_HOME_PERK_CARD }),
+                onClick: () => (0, C.m)({ fromContent: d.u.NITRO_HOME_PERK_CARD }),
                 badgeVariant: "expressive",
                 previewImage: eE.orbMultiplier.thumbnail,
                 videoUrl: eE.orbMultiplier.assetUrl,
@@ -393,9 +393,9 @@ let eC = function () {
             combinedOrbs: {
                 name: "combinedOrbs",
                 title: er.intl.string(er.t.Tzhw6e),
-                description: er.intl.format(er.t.djzJx6, { bonusOrbMultiplier: eC }),
+                description: er.intl.format(er.t.djzJx6, { bonusOrbMultiplier: eR }),
                 descriptionCta: er.intl.string(er.t.RzWDqY),
-                onClick: () => (0, R.m)({ fromContent: d.u.NITRO_HOME_PERK_CARD }),
+                onClick: () => (0, C.m)({ fromContent: d.u.NITRO_HOME_PERK_CARD }),
                 badgeText: eA ? void 0 : er.intl.string(er.t.oW0eUd).toLocaleUpperCase(),
                 badgeVariant: "expressive",
                 previewImage: eE.combinedOrbs.thumbnail,
@@ -432,21 +432,21 @@ let eC = function () {
                 n = (0, D.YS)({ location: "bento_box" }).functionalityEnabled,
                 i = (0, X.mh)({ location: "bento_box" }),
                 { enabled: a } = k.A.useConfig({ location: "bento_box" }),
-                r = t ? eR.CALL_OF_DUTY : eR.THREE_P_PROMOTIONS,
+                r = t ? eC.CALL_OF_DUTY : eC.THREE_P_PROMOTIONS,
                 s = (0, W.O9)(),
                 l = (0, F.DK)(z.W.NITRO, "useBentoBoxes"),
                 o = l && e;
             return [
-                ...(i ? [eR.YOUTUBE] : []),
+                ...(i ? [eC.YOUTUBE] : []),
                 ...(t || n || a ? [r] : []),
-                ...(o ? [eR.COMBINED_ORBS] : []),
-                ...(!o && e ? [eR.ORB_MULTIPLIER] : []),
-                ...(s ? [eR.PREMIUM_GROUP] : []),
-                ...(!o && l ? [eR.ORB_REWARDS] : []),
-                eR.DISPLAY_NAME_STYLES,
-                eR.CUSTOM_THEMES,
-                eR.SERVER_PROFILES,
-                eR.REFERRAL_PROGRAM,
+                ...(o ? [eC.COMBINED_ORBS] : []),
+                ...(!o && e ? [eC.ORB_MULTIPLIER] : []),
+                ...(s ? [eC.PREMIUM_GROUP] : []),
+                ...(!o && l ? [eC.ORB_REWARDS] : []),
+                eC.DISPLAY_NAME_STYLES,
+                eC.CUSTOM_THEMES,
+                eC.SERVER_PROFILES,
+                eC.REFERRAL_PROGRAM,
             ];
         })(eP),
         eM = [],

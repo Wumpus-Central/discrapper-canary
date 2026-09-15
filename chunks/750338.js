@@ -9,8 +9,8 @@ var i = n(477900),
     c = n(821609),
     u = n(745396),
     m = n(85463),
-    p = n(297264),
-    b = n(825484),
+    b = n(297264),
+    p = n(825484),
     f = n(834730),
     g = n(315629),
     h = n(241524),
@@ -18,8 +18,8 @@ var i = n(477900),
     v = n(607470),
     _ = n(174459),
     P = n(676279),
-    R = n(406860),
-    C = n(19290),
+    C = n(406860),
+    R = n(19290),
     T = n(652215),
     A = n(693591),
     y = n(505051);
@@ -40,7 +40,7 @@ let E = (e) => {
             badgeVariant: w = "gradient",
             size: k,
             backgroundVideoUrl: D,
-            previewImageStyle: B = C.Tb.CONTAINED,
+            previewImageStyle: B = R.Tb.CONTAINED,
             actions: Y,
             mediaRef: G,
             boxArtContainerClassName: V,
@@ -50,11 +50,11 @@ let E = (e) => {
         F = (0, P.TM)(),
         K = a.useRef(null),
         W = a.useRef(0),
-        { sectionRef: X, handleVisibilityChange: $ } = (0, R.A)({ boxType: t }),
+        { sectionRef: X, handleVisibilityChange: $ } = (0, C.A)({ boxType: t }),
         q = (0, h.A)("(min-width: 1140px)"),
-        J = B === C.Tb.OVERLAY && (k !== C.A0.LARGE || !q),
-        Z = k === C.A0.LARGE && q && B === C.Tb.OVERLAY,
-        Q = null != D && q && k === C.A0.LARGE,
+        J = B === R.Tb.OVERLAY && (k !== R.A0.LARGE || !q),
+        Z = k === R.A0.LARGE && q && B === R.Tb.OVERLAY,
+        Q = null != D && q && k === R.A0.LARGE,
         ee = a.useMemo(
             () =>
                 (0, l.debounce)(() => {
@@ -68,7 +68,7 @@ let E = (e) => {
     function en() {
         (null == K.current || U || ((W.current = K.current.currentTime), K.current.pause()), U || G?.current?.pause());
     }
-    let ei = k === C.A0.LARGE ? "heading-xxl/bold" : "heading-xl/bold";
+    let ei = k === R.A0.LARGE ? "heading-xxl/bold" : "heading-xl/bold";
     function ea() {
         let e = null != E && null != S,
             t = null != Y && Y.length > 0;
@@ -76,7 +76,7 @@ let E = (e) => {
         let n = e ? [{ variant: "secondary", onClick: S, text: E }] : Y;
         return (0, i.jsx)("div", {
             className: y.bentoBoxButton,
-            children: (0, i.jsx)(b.e, {
+            children: (0, i.jsx)(p.e, {
                 children: n?.map((e, t) => {
                     let { onClick: n, ...a } = e;
                     return (0, i.jsx)(
@@ -106,7 +106,7 @@ let E = (e) => {
                                     className: y.badgeContainer,
                                     children: (0, i.jsx)("div", {
                                         className: y.badge,
-                                        children: (0, i.jsx)(p.D, {
+                                        children: (0, i.jsx)(b.D, {
                                             variant: z,
                                             color: "text-overlay-light",
                                             children: M,
@@ -117,7 +117,7 @@ let E = (e) => {
                                     className: y.badgeContainer,
                                     children: (0, i.jsx)(d.E, { type: { text: M }, variant: w }),
                                 }),
-                        (0, i.jsx)(p.D, { variant: ei, color: "text-strong", className: y.header, children: n }),
+                        (0, i.jsx)(b.D, { variant: ei, color: "text-strong", className: y.header, children: n }),
                     ],
                 }),
                 (0, i.jsx)(f.E, {

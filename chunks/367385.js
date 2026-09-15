@@ -19,11 +19,11 @@ var i,
     p = n(147036),
     S = n(957565),
     N = n(375708);
-let L = (0, E.throttle)(() => (0, C.P0)((0, _.o)(N.intl.string(N.t["+5kSoW"]), I.Ck.SUCCESS)), 3e3, {
+let m = (0, E.throttle)(() => (0, C.P0)((0, _.o)(N.intl.string(N.t["+5kSoW"]), I.Ck.SUCCESS)), 3e3, {
     leading: !0,
     trailing: !1,
 });
-var m = n(265422),
+var L = n(265422),
     f = n(625494),
     O = n(652215),
     b = n(272613),
@@ -149,8 +149,8 @@ let eE = {
                 let t = o.Ay.getChannelId(),
                     n = T.A.getChannel(t);
                 window.location.pathname.startsWith(O.BVt.CHANNEL(O.gNP)) && null != n
-                    ? (0, m.i)(n.guild_id, t)
-                    : (0, m.a)(O.BVt.CHANNEL(O.gNP, t ?? void 0));
+                    ? (0, L.i)(n.guild_id, t)
+                    : (0, L.a)(O.BVt.CHANNEL(O.gNP, t ?? void 0));
             })(),
             f._.dispatch(O.jej.TOGGLE_INBOX),
             !1),
@@ -201,7 +201,7 @@ let eE = {
     [O.IWg.CREATE_DM_GROUP]: {
         binds: ["mod+shift+t"],
         comboKeysBindGlobal: !0,
-        action: () => (null != d.A.getGuildId() && (0, m.i)(O.ME), f._.safeDispatch(O.jej.TOGGLE_DM_CREATE), !1),
+        action: () => (null != d.A.getGuildId() && (0, L.i)(O.ME), f._.safeDispatch(O.jej.TOGGLE_DM_CREATE), !1),
     },
     [O.IWg.OPEN_CHANNEL_TAB]: {
         binds: ["mod+t"],
@@ -271,7 +271,7 @@ let eE = {
             (e.preventDefault(), e.stopPropagation());
             let t = y.A.getGuildId(),
                 n = y.A.getChannelId();
-            return (null != n && (0, m.i)(t ?? O.ME, n), !1);
+            return (null != n && (0, L.i)(t ?? O.ME, n), !1);
         },
     },
     [O.IWg.ZOOM_IN]: ed.Ur,
@@ -326,7 +326,7 @@ let eE = {
             if (null == t) return !1;
             let n = T.A.getChannel(t.parent_id),
                 i = (0, p.af)(t, n);
-            return ((0, S.C)(i, L), !1);
+            return ((0, S.C)(i, m), !1);
         },
     },
 };

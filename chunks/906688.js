@@ -30,12 +30,12 @@ function g(e) {
         { color: p } = (0, u.ag)(T),
         S = (0, r.M)(g) ? h : E,
         N = (_.size - _.offset - 2 * _.stroke) * 0.8,
-        L = _.size - _.stroke,
-        m = { width: 0.4 * N, height: 0.4 * N },
-        f = { width: m.width + 1, height: m.height + 1, right: _.stroke + 1, bottom: _.stroke + 1, padding: 0 };
+        m = _.size - _.stroke,
+        L = { width: 0.4 * N, height: 0.4 * N },
+        f = { width: L.width + 1, height: L.height + 1, right: _.stroke + 1, bottom: _.stroke + 1, padding: 0 };
     return (0, i.jsxs)("div", {
         className: A.kL,
-        style: { width: L, height: L, padding: _.stroke },
+        style: { width: m, height: m, padding: _.stroke },
         "aria-label": `${I() ?? ""}`,
         children: [
             (0, i.jsx)("div", {
@@ -46,11 +46,11 @@ function g(e) {
                 (0, i.jsx)("div", {
                     className: A.dq,
                     style: f,
-                    children: (0, i.jsx)(o.LockIcon, { size: "custom", color: S.locked, ...m }),
+                    children: (0, i.jsx)(o.LockIcon, { size: "custom", color: S.locked, ...L }),
                 }),
             n &&
                 T === u.md.LEGENDARY &&
-                (0, i.jsx)("div", { className: A.dq, style: f, children: (0, i.jsx)(c.A, { className: A.ox, ...m }) }),
+                (0, i.jsx)("div", { className: A.dq, style: f, children: (0, i.jsx)(c.A, { className: A.ox, ...L }) }),
         ],
     });
 }

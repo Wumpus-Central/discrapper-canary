@@ -19,16 +19,16 @@ var i = n(582128),
     p = n(309010),
     S = n(543465),
     N = n(403362),
-    L = n(181079),
-    m = n(93055),
+    m = n(181079),
+    L = n(93055),
     f = n(774452),
     O = n(349828),
     b = n(281405),
     R = n(818348);
-let v = 221552 == n.j ? [a.Ay, L.A, o.A, d.Ay, u.A, A.A, g.A, C.A, I.A, T.Ay, p.Ay, S.Ay] : null;
+let v = 221552 == n.j ? [a.Ay, m.A, o.A, d.Ay, u.A, A.A, g.A, C.A, I.A, T.Ay, p.Ay, S.Ay] : null;
 function y(e) {
     let { limit: t, includeLoading: n } = e,
-        i = L.A.getFavoriteChannels(),
+        i = m.A.getFavoriteChannels(),
         l = [];
     for (let e in i) {
         if (l.length >= t) break;
@@ -47,7 +47,7 @@ function y(e) {
 }
 function U() {
     let { withSuggestionsNotice: e = !1 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-        { hasAccess: t } = (0, m.TW)("FavoritesGuildChannelList"),
+        { hasAccess: t } = (0, L.TW)("FavoritesGuildChannelList"),
         [n, l] = i.useState(() => D(void 0, { withSuggestionsNotice: e })),
         s = o.A.isConnected(),
         a = i.useMemo(() => D({}), []);
@@ -86,7 +86,7 @@ function U() {
 }
 function D(e) {
     let { withSuggestionsNotice: t = !1 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        n = e ?? L.A.getFavoriteChannels(),
+        n = e ?? m.A.getFavoriteChannels(),
         i = S.Ay.isGuildCollapsed(O.Vc),
         l = p.Ay.getChannelId(),
         a = C.A.getChannel(l),
@@ -119,7 +119,7 @@ function D(e) {
                     C = (0, c.wF)(e, g, a, o, i),
                     p = _.A.isCollapsed(e.id),
                     N = e.isThread() ? A.A.isMuted(e.id) : S.Ay.isChannelMuted(e.guild_id, e.id),
-                    L = {
+                    m = {
                         id: e.id,
                         record: e,
                         category: t,
@@ -132,11 +132,11 @@ function D(e) {
                         subtitle: (0, c.go)(e, p, !1),
                     };
                 return d || h || !r().isEmpty(g) || T.Ay.getMentionCount(e.id) > 0
-                    ? L
+                    ? m
                     : (i && N) ||
                         (l && (N || s || (0, E.gV)(e.type) || ((0, E.ig)(e.type) && !1 === T.Ay.hasUnread(e.id))))
                       ? null
-                      : L;
+                      : m;
             })
             .filter(N.Vq)
             .sortBy((e) => (e.record.isGuildVocal() ? e.position + 1e4 : e.position))
@@ -155,11 +155,11 @@ function D(e) {
                 return (null == y && (y = v(d, this)), y);
             },
         },
-        D = (0, m.m_)(n)
+        D = (0, L.m_)(n)
             .filter((e) => null != e.id)
             .map((e) => {
                 let { id: t } = e,
-                    i = L.A.getCategoryRecord(t);
+                    i = m.A.getCategoryRecord(t);
                 if (null == i) return null;
                 let l = h[t] ?? [],
                     r = S.Ay.isChannelMuted(O.Vc, t),

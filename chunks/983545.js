@@ -26,7 +26,7 @@ let u = {
                 return (0, o.dF)(e) || (t = e) === o.G2.COLLABS || t === o.G2.OFFER_ELIGIBLE ? o.G2.CATALOG : e;
             }, [e]),
             [S, m] = n.useState(E),
-            [A, C] = n.useState(o.Pf.VISIBLE);
+            [C, A] = n.useState(o.Pf.VISIBLE);
         (n.useEffect(() => {
             S !== o.G2.GAME_SERVERS && b(S);
         }, [S, b]),
@@ -40,8 +40,8 @@ let u = {
                 }
             }, [E, e, t, l, i, d]));
         let { clearError: p } = (0, r.S)(),
-            g = (0, a.W6)(),
-            f = n.useCallback(
+            O = (0, a.W6)(),
+            g = n.useCallback(
                 async (e, n) => {
                     if ((p(), e === o.G2.CATALOG)) d();
                     else if (e === o.G2.COLLABS) l();
@@ -53,15 +53,15 @@ let u = {
                     if (S !== e) {
                         if (n) {
                             var a;
-                            (C(o.Pf.OUT), await ((a = 1.1 * o.H1), new Promise((e) => setTimeout(e, a))));
+                            (A(o.Pf.OUT), await ((a = 1.1 * o.H1), new Promise((e) => setTimeout(e, a))));
                         }
                         (m(e === o.G2.HOME || e === o.G2.ORBS || e === o.G2.GAME_SERVERS ? e : o.G2.CATALOG),
-                            n && C(o.Pf.IN),
-                            g.push(c.BVt.COLLECTIBLES_SHOP_WITH_TAB(e), { shallow: !0 }),
-                            C(o.Pf.VISIBLE));
+                            n && A(o.Pf.IN),
+                            O.push(c.BVt.COLLECTIBLES_SHOP_WITH_TAB(e), { shallow: !0 }),
+                            A(o.Pf.VISIBLE));
                     }
                 },
-                [g, t, l, i, d, S, p],
+                [O, t, l, i, d, S, p],
             );
-        return { selectedTab: S, transitionState: A, transitionToTab: f };
+        return { selectedTab: S, transitionState: C, transitionToTab: g };
     };

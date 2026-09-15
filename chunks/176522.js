@@ -1,4 +1,4 @@
-(n.d(t, { M$: () => R, Fv: () => O, kF: () => m, Oc: () => f, GY: () => b }), n(667532));
+(n.d(t, { M$: () => R, Fv: () => O, kF: () => L, Oc: () => f, GY: () => b }), n(667532));
 var i = n(310953),
     l = n(473529),
     r = n(519059),
@@ -61,8 +61,8 @@ var T = n(963169),
     p = n(345942),
     S = n(309010),
     N = n(967198),
-    L = n(723702);
-let m = { binds: ["alt+down"], comboKeysBindGlobal: !0, action: () => (I(), !1) },
+    m = n(723702);
+let L = { binds: ["alt+down"], comboKeysBindGlobal: !0, action: () => (I(), !1) },
     f = { binds: ["alt+up"], comboKeysBindGlobal: !0, action: () => (I(-1), !1) },
     O = {
         binds: ["mod+alt+right"],
@@ -78,12 +78,12 @@ let m = { binds: ["alt+down"], comboKeysBindGlobal: !0, action: () => (I(), !1) 
         },
     },
     b = {
-        binds: (0, L.isMac)() || (0, L.isMacWeb)() ? ["mod+["] : ["alt+left"],
+        binds: (0, m.isMac)() || (0, m.isMacWeb)() ? ["mod+["] : ["alt+left"],
         comboKeysBindGlobal: !0,
         action: () => ((0, T.OE)("keybind"), !1),
     },
     R = {
-        binds: (0, L.isMac)() || (0, L.isMacWeb)() ? ["mod+]"] : ["alt+right"],
+        binds: (0, m.isMac)() || (0, m.isMacWeb)() ? ["mod+]"] : ["alt+right"],
         comboKeysBindGlobal: !0,
         action: () => ((0, T.Qb)("keybind"), !1),
     };

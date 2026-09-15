@@ -305,10 +305,10 @@ function ez(e) {
     function e9() {
         eu(!0);
     }
-    function e6() {
+    function e3() {
         eu(!1);
     }
-    function e3(e) {
+    function e6(e) {
         let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         (null != e && (e.preventDefault(), e.stopPropagation()), M.A.closePrivateChannel(t.id, l, n));
     }
@@ -444,7 +444,7 @@ function ez(e) {
             (l = ea.intl.format(ea.t.IK1Qvs, { name: e2 }))),
             (0, S.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([n.e("446215"), n.e("137803")]).then(n.bind(n, 148166));
-                return (t) => (0, i.jsx)(e, { title: r, body: l, onSubmit: e3, ...t });
+                return (t) => (0, i.jsx)(e, { title: r, body: l, onSubmit: e6, ...t });
             }));
     }
     let tr = (0, i.jsx)(ep.A, {
@@ -536,7 +536,7 @@ function ez(e) {
                 onMouseLeave: e4,
                 onMouseDown: e7,
                 onFocus: e9,
-                onBlur: e6,
+                onBlur: e3,
                 onContextMenu: tn,
                 "aria-setsize": G,
                 "aria-posinset": y,
@@ -663,7 +663,7 @@ function ez(e) {
                                               "aria-label": eH
                                                   ? ea.intl.string(ea.t["26C4oi"])
                                                   : ea.intl.string(ea.t.jsvgc3),
-                                              onClick: eH ? ti : e3,
+                                              onClick: eH ? ti : e6,
                                               onMouseDown: te,
                                               nameplate: E,
                                               reducedClickTarget: !0,

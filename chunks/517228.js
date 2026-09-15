@@ -1,4 +1,4 @@
-_.exports = {
+e.exports = {
     Vg: "grid__94629",
     HL: "widget__94629",
     b3: "widgetImageContainer__94629",

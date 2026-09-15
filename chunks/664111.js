@@ -134,8 +134,8 @@ let $ = { tension: 250, friction: 5, clamp: !0 },
             e0 = Q ?? Y,
             e1 = eI ?? k.u,
             { focused: e2, focusedChanged: e6 } = (0, D.A7)(),
-            { visible: e4, visibleChanged: e8, targetRef: e9 } = (0, D.O7)(),
-            [e3, e7] = l.useState(a ? c.Q6.PLAYING : c.Q6.PAUSED),
+            { visible: e4, visibleChanged: e8, targetRef: e3 } = (0, D.O7)(),
+            [e9, e7] = l.useState(a ? c.Q6.PLAYING : c.Q6.PAUSED),
             [e5, te] = l.useState(!1),
             [tt, tn] = l.useState(!1),
             [tr, tl] = l.useState(0),
@@ -200,7 +200,7 @@ let $ = { tension: 250, friction: 5, clamp: !0 },
             }),
             { isReady: t4 } = (0, w.A)({ videoRef: t0, hls: t6, contentMetadata: eW, isHls: t2 }),
             t8 = eJ && !t4 && !t2,
-            [t9, t3] = l.useState(null),
+            [t3, t9] = l.useState(null),
             [t7, t5] = l.useState(0),
             [ne, nt] = l.useState(!1),
             nn = ee ?? tG.current?.duration ?? 0,
@@ -237,11 +237,11 @@ let $ = { tension: 250, friction: 5, clamp: !0 },
             let e = null != n && (n === d.ip.HIDDEN || n === d.ip.EXITING || n === d.ip.EXITED),
                 t = null != n && e8 && !e4,
                 r = e6 && !e2;
-            if ((e || t || r) && null != tG.current && e3 === c.Q6.PLAYING) {
+            if ((e || t || r) && null != tG.current && e9 === c.Q6.PLAYING) {
                 let n = e || t ? c.KB.VISIBILITY : c.KB.FOCUS;
                 (tX(n), ns(c.Q6.PAUSED, n));
             }
-        }, [eF, n, e2, e6, e4, e8, e3, ns]),
+        }, [eF, n, e2, e6, e4, e8, e9, ns]),
             (0, B.A)({
                 videoRef: t0,
                 enabled: eF,
@@ -253,11 +253,11 @@ let $ = { tension: 250, friction: 5, clamp: !0 },
                 },
             }),
             l.useEffect(() => {
-                e6 && eg?.(e2, e3);
-            }, [e2, e6, e3, eg]),
+                e6 && eg?.(e2, e9);
+            }, [e2, e6, e9, eg]),
             l.useEffect(() => {
-                e8 && eE?.(e4, e3);
-            }, [e4, e8, e3, eE]));
+                e8 && eE?.(e4, e9);
+            }, [e4, e8, e9, eE]));
         let [no, nc] = l.useState(!1),
             nd = l.useRef(null),
             nm = l.useRef(0);
@@ -265,7 +265,7 @@ let $ = { tension: 250, friction: 5, clamp: !0 },
             nm.current = performance.now();
         }, []);
         let nf = l.useCallback(() => {
-                switch ((null != nd.current && clearTimeout(nd.current), e3)) {
+                switch ((null != nd.current && clearTimeout(nd.current), e9)) {
                     case c.Q6.PLAYING:
                         nd.current = setTimeout(
                             () => {
@@ -276,12 +276,12 @@ let $ = { tension: 250, friction: 5, clamp: !0 },
                     case c.Q6.PAUSED:
                     case c.Q6.ENDED:
                 }
-            }, [e3]),
+            }, [e9]),
             nh = l.useCallback(() => {
                 (nc(!1), (nm.current = performance.now()), nf());
             }, [nf]);
         (l.useEffect(() => {
-            if (e3 !== c.Q6.PLAYING) {
+            if (e9 !== c.Q6.PLAYING) {
                 (nc(!1), null != nd.current && clearTimeout(nd.current));
                 return;
             }
@@ -291,14 +291,14 @@ let $ = { tension: 250, friction: 5, clamp: !0 },
                     null != nd.current && clearTimeout(nd.current);
                 }
             );
-        }, [e3, nf]),
+        }, [e9, nf]),
             l.useEffect(
                 () => () => {
                     null != td.current && clearTimeout(td.current);
                 },
                 [],
             ));
-        let np = !no && (tt || e5 || e3 === c.Q6.ENDED),
+        let np = !no && (tt || e5 || e9 === c.Q6.ENDED),
             nv = l.useRef(ei);
         nv.current = ei;
         let nx = l.useCallback(() => {
@@ -308,12 +308,12 @@ let $ = { tension: 250, friction: 5, clamp: !0 },
         function ng() {
             null == tG.current ||
                 (nb(Math.max((tp.current ?? tG.current.currentTime) - 10, 0)),
-                e3 === c.Q6.ENDED && ns(c.Q6.PAUSED, c.KB.SEEK));
+                e9 === c.Q6.ENDED && ns(c.Q6.PAUSED, c.KB.SEEK));
         }
         function nE() {
             if (null == tG.current) return;
             let e = Math.min((tp.current ?? tG.current.currentTime) + 10, nn);
-            (nb(e), e3 !== c.Q6.ENDED && e >= tG.current.duration && ns(c.Q6.ENDED, c.KB.SEEK));
+            (nb(e), e9 !== c.Q6.ENDED && e >= tG.current.duration && ns(c.Q6.ENDED, c.KB.SEEK));
         }
         l.useEffect(() => {
             let e = tQ.current;
@@ -342,7 +342,7 @@ let $ = { tension: 250, friction: 5, clamp: !0 },
         );
         function nS() {
             if (null != tG.current)
-                switch (e3) {
+                switch (e9) {
                     case c.Q6.ENDED:
                         (nb(0), ns(c.Q6.PLAYING, c.KB.USER));
                         break;
@@ -365,11 +365,11 @@ let $ = { tension: 250, friction: 5, clamp: !0 },
                     (0, L.C)(n) &&
                         ((n.id = `cue-${t}`),
                         (n.onenter = () => {
-                            t3(n);
+                            t9(n);
                         }),
                         (n.onexit = () =>
                             (function (e) {
-                                t3((t) => (t?.id === e.id ? null : t));
+                                t9((t) => (t?.id === e.id ? null : t));
                             })(n)));
                 }
         }, []);
@@ -382,11 +382,11 @@ let $ = { tension: 250, friction: 5, clamp: !0 },
                     let e = null != tP.current ? performance.now() - tP.current : null;
                     eh?.(e);
                 }
-                (tf(c.h$.READY), e3 === c.Q6.PLAYING && (tb.current || ns(c.Q6.PLAYING, c.KB.BUFFERING_RECOVERY)));
+                (tf(c.h$.READY), e9 === c.Q6.PLAYING && (tb.current || ns(c.Q6.PLAYING, c.KB.BUFFERING_RECOVERY)));
             }
         }
         function nA(e) {
-            if ((nb(e), e3 === c.Q6.ENDED && !tS.current)) {
+            if ((nb(e), e9 === c.Q6.ENDED && !tS.current)) {
                 let t = tG.current?.duration;
                 (null == t || Number.isNaN(t) || e < t) && ns(c.Q6.PLAYING, c.KB.USER);
             }
@@ -415,12 +415,12 @@ let $ = { tension: 250, friction: 5, clamp: !0 },
             [{ captionHeightSpring: nT }, nM] = (0, m.z)(() => ({ from: { captionHeightSpring: 0 }, config: $ }));
         (l.useEffect(
             () => (
-                nM({ captionHeightSpring: tU && null != t9 ? (nR.current?.clientHeight ?? 0) : 0, immediate: tH }),
+                nM({ captionHeightSpring: tU && null != t3 ? (nR.current?.clientHeight ?? 0) : 0, immediate: tH }),
                 () => {
                     nT.stop();
                 }
             ),
-            [tU, nM, tH, t9, nT],
+            [tU, nM, tH, t3, nT],
         ),
             l.useEffect(
                 () => (
@@ -431,7 +431,7 @@ let $ = { tension: 250, friction: 5, clamp: !0 },
                 ),
                 [np, nP, tH, tg, nN],
             ));
-        let nL = e3 === c.Q6.ENDED && null != er,
+        let nL = e9 === c.Q6.ENDED && null != er,
             nj = l.useCallback(
                 function () {
                     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c.KB.USER;
@@ -466,9 +466,9 @@ let $ = { tension: 250, friction: 5, clamp: !0 },
                     (e) => {
                         tG.current = e;
                         let n = (0, j.c)(e);
-                        ((e9.current = n), "function" == typeof t ? t(n) : null != t && (t.current = n));
+                        ((e3.current = n), "function" == typeof t ? t(n) : null != t && (t.current = n));
                     },
-                    [t, e9],
+                    [t, e3],
                 ),
                 autoPlay: a,
                 alt: V,
@@ -608,7 +608,7 @@ let $ = { tension: 250, friction: 5, clamp: !0 },
                                 nL && er?.({ replay: nj }),
                                 el(nI),
                                 tm !== c.h$.READY &&
-                                    e3 === c.Q6.PLAYING &&
+                                    e9 === c.Q6.PLAYING &&
                                     null != e0 &&
                                     (0, r.jsx)("span", {
                                         className: i()(U.S, { [U.F]: "center" === eQ }),
@@ -616,7 +616,7 @@ let $ = { tension: 250, friction: 5, clamp: !0 },
                                         children: (0, r.jsx)(h.y, { type: h.y.Type.WANDERING_CUBES }),
                                     }),
                                 (0, r.jsx)(k.A, {
-                                    message: e1({ hasVideoAsset: null != e0, playerState: e3, pauseReason: tZ }),
+                                    message: e1({ hasVideoAsset: null != e0, playerState: e9, pauseReason: tZ }),
                                     showOverlay: null == e0,
                                 }),
                                 null != eS &&
@@ -637,13 +637,13 @@ let $ = { tension: 250, friction: 5, clamp: !0 },
                                         children: eS(),
                                     }),
                                 tF &&
-                                    e3 !== c.Q6.ENDED &&
+                                    e9 !== c.Q6.ENDED &&
                                     null != en &&
                                     (0, r.jsxs)(r.Fragment, {
                                         children: [
                                             (0, r.jsx)(f.D, {
                                                 onClick: () => {
-                                                    (e3 === c.Q6.PAUSED && ns(c.Q6.PLAYING, c.KB.USER), t_(!1));
+                                                    (e9 === c.Q6.PAUSED && ns(c.Q6.PLAYING, c.KB.USER), t_(!1));
                                                 },
                                                 tabIndex: -1,
                                                 children: (0, r.jsx)("div", { className: U.BG }),
@@ -680,19 +680,19 @@ let $ = { tension: 250, friction: 5, clamp: !0 },
                                     "div",
                                     {
                                         className: i()(U.yf, {
-                                            [U.ZH]: ty.current && e3 === c.Q6.PLAYING,
-                                            [U.v7]: ty.current && e3 === c.Q6.PAUSED,
+                                            [U.ZH]: ty.current && e9 === c.Q6.PLAYING,
+                                            [U.v7]: ty.current && e9 === c.Q6.PAUSED,
                                         }),
                                         style: { "--custom-play-pause-pop-ms": "1000ms" },
                                         children:
-                                            e3 === c.Q6.PLAYING
+                                            e9 === c.Q6.PLAYING
                                                 ? (0, r.jsx)(p.PlayIcon, { className: U.PK })
                                                 : (0, r.jsx)(v.PauseIcon, { className: U.PK }),
                                     },
-                                    e3,
+                                    e9,
                                 ),
                                 tU &&
-                                    null != t9 &&
+                                    null != t3 &&
                                     !nL &&
                                     (0, r.jsx)(u.animated.div, {
                                         className: U.o$,
@@ -708,7 +708,7 @@ let $ = { tension: 250, friction: 5, clamp: !0 },
                                             variant: "text-lg/semibold",
                                             color: "text-overlay-light",
                                             className: U.qh,
-                                            children: t9.text,
+                                            children: t3.text,
                                         }),
                                     }),
                                 tT &&
@@ -735,12 +735,12 @@ let $ = { tension: 250, friction: 5, clamp: !0 },
                                                         animate:
                                                             !0 !== tz.current &&
                                                             !to &&
-                                                            e3 === c.Q6.PLAYING &&
+                                                            e9 === c.Q6.PLAYING &&
                                                             ne &&
                                                             tm === c.h$.READY,
                                                         interactionEnabled: tw && nn > 0,
                                                         backgroundColor: np || e_ ? void 0 : "rgba(0, 0, 0, 0.0)",
-                                                        playerState: e3,
+                                                        playerState: e9,
                                                         preloadedBuffers: np ? tv : void 0,
                                                         durationSec: t7 > 0 ? t7 : +!ne,
                                                         isFullyVisible: np && tw,
@@ -752,8 +752,8 @@ let $ = { tension: 250, friction: 5, clamp: !0 },
                                                         onScrubForward: nE,
                                                         onDragStateChange: function (e) {
                                                             if (((tS.current = e), tE(e), e))
-                                                                ((tb.current = e3 === c.Q6.PLAYING),
-                                                                    (tC.current = e3 === c.Q6.ENDED),
+                                                                ((tb.current = e9 === c.Q6.PLAYING),
+                                                                    (tC.current = e9 === c.Q6.ENDED),
                                                                     tb.current
                                                                         ? tG.current?.pause()
                                                                         : tC.current && ns(c.Q6.PAUSED, c.KB.SEEK));
@@ -808,7 +808,7 @@ let $ = { tension: 250, friction: 5, clamp: !0 },
                                                     return tn(!1);
                                                 },
                                                 children: (0, r.jsx)(N.A, {
-                                                    playerState: e3,
+                                                    playerState: e9,
                                                     animSpring: nN,
                                                     visible: np,
                                                     seekForwardEnabled:
@@ -867,7 +867,7 @@ let $ = { tension: 250, friction: 5, clamp: !0 },
                                     (0, r.jsx)("div", {
                                         className: U.MU,
                                         children: eC({
-                                            playerState: e3,
+                                            playerState: e9,
                                             isControlBarExpanded: np,
                                             controlBarAnimationSpring: nN,
                                             videoRef: tG,

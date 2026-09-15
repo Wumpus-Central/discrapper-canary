@@ -1,4 +1,4 @@
-n.d(t, { m: () => L });
+n.d(t, { m: () => m });
 var i = n(477900);
 n(582128);
 var l = n(17928),
@@ -20,27 +20,27 @@ var l = n(17928),
     p = n(202541),
     S = n(375708),
     N = n(316632);
-function L(e) {
+function m(e) {
     var t;
-    let { onClose: n, markAsDismissed: L } = e,
-        m = (0, l.bG)([C.default], () => C.default.getCurrentUser()),
+    let { onClose: n, markAsDismissed: m } = e,
+        L = (0, l.bG)([C.default], () => C.default.getCurrentUser()),
         f =
-            (t = m?.premiumType) === p.PremiumTypes.TIER_2
+            (t = L?.premiumType) === p.PremiumTypes.TIER_2
                 ? S.intl.string(S.t.jqO5Qn)
                 : null == t
                   ? S.intl.string(S.t.f2qjw5)
                   : S.intl.string(S.t.SblICW),
-        O = _.Ay.canUseCustomCallSounds(m);
+        O = _.Ay.canUseCustomCallSounds(L);
     return (0, i.jsxs)(h.A, {
         isShown: !0,
         type: h.i.PREMIUM,
         className: N.ne,
         backgroundClassName: N.u4,
         children: [
-            null != L
+            null != m
                 ? (0, i.jsx)(a.D, {
                       className: N.VN,
-                      onClick: () => L?.(T.i.DISMISS),
+                      onClick: () => m?.(T.i.DISMISS),
                       "aria-label": S.intl.string(S.t.cpT0Cq),
                       children: (0, i.jsx)(o.P, { size: "xs", color: "currentColor", className: N.ut }),
                   })
@@ -56,7 +56,7 @@ function L(e) {
             O
                 ? (0, i.jsx)(u.$, {
                       onClick: function () {
-                          ((0, g.openUserSettings)(E.X.SOUNDBOARD_CATEGORY), n?.(), L?.(T.i.PRIMARY));
+                          ((0, g.openUserSettings)(E.X.SOUNDBOARD_CATEGORY), n?.(), m?.(T.i.PRIMARY));
                       },
                       text: S.intl.string(S.t.RzWDqY),
                       fullWidth: !0,
@@ -69,7 +69,7 @@ function L(e) {
                           object: I.ZSU.BUTTON_CTA,
                       },
                       color: s.$n.Colors.GREEN,
-                      onSubscribeModalClose: () => L?.(T.i.PRIMARY),
+                      onSubscribeModalClose: () => m?.(T.i.PRIMARY),
                   }),
         ],
     });
