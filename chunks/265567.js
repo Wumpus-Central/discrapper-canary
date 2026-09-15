@@ -1464,7 +1464,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e2 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eV.A().log(
-    `[BUILD INFO] Release Channel: ${e2}, Build Number: 613568, Version Hash: 72ee06b4e77ea2763e52228b827ec0a0855bc5c6`,
+    `[BUILD INFO] Release Channel: ${e2}, Build Number: 613571, Version Hash: 7a0e58872fa7aa1a470a530ae3c7184f14e68b41`,
 ),
     D.A.setTags({ appContext: G.QCW }),
     eh.A.initBasic(),
@@ -21465,7 +21465,7 @@ let NF = "isHideDevBanner",
                     className: ta()(Nk.Wz, Nk.mr),
                     children: [
                         (0, O.jsx)(Nx, { className: Nk.Kk }),
-                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "613568" }),
+                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "613571" }),
                         (0, O.jsx)(r, {}),
                     ],
                 })
@@ -25487,10 +25487,11 @@ let RR = (0, tB.Fe)({
             Promise.all([
                 n.e("65764"),
                 n.e("203112"),
-                n.e("520909"),
+                n.e("886896"),
+                n.e("606798"),
                 n.e("936875"),
-                n.e("412117"),
-                n.e("840808"),
+                n.e("274863"),
+                n.e("908868"),
                 n.e("470068"),
                 n.e("491793"),
                 n.e("229666"),
@@ -25501,8 +25502,8 @@ let RR = (0, tB.Fe)({
                 n.e("503853"),
                 n.e("263651"),
                 n.e("493756"),
-            ]).then(n.bind(n, 279575)),
-        webpackId: 279575,
+            ]).then(n.bind(n, 688260)),
+        webpackId: 688260,
         name: "GuildSpacePage",
     }),
     RU = (0, tB.Fe)({

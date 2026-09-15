@@ -1,8 +1,8 @@
 t.d(l, { gY: () => f, jV: () => m, mG: () => p });
 var n = t(477900),
-    i = t(582128),
-    r = t(503698),
-    a = t.n(r),
+    r = t(582128),
+    i = t(503698),
+    a = t.n(i),
     s = t(930235),
     o = t(651300),
     c = t(352944),
@@ -15,37 +15,41 @@ function f(e) {
             dragRef: l,
             dropRef: t,
             index: n,
-            listType: r,
+            listType: i,
             itemId: a,
             itemType: d,
             itemPreviewProps: u,
             onReorder: h,
-            onEnd: g,
-            disableDefaultPreview: f = !0,
-            canDrag: p = !0,
+            onHover: g,
+            onDrop: f,
+            onEnd: p,
+            disableDefaultPreview: m = !0,
+            canDrag: v = !0,
         } = e,
-        m = `${d}_${r}`,
-        x = i.useCallback(
+        x = `${d}_${i}`,
+        w = r.useCallback(
             (e, l) => {
                 h?.(e, l);
             },
             [h],
         ),
-        [{ isDragging: v }, w, b] = (0, s.i)({
-            type: m,
+        [{ isDragging: b }, j, D] = (0, s.i)({
+            type: x,
             item: { id: a, index: n, itemType: d, itemPreviewProps: u },
-            canDrag: p,
+            canDrag: v,
             collect: (e) => ({ isDragging: e.isDragging() }),
-            end: g,
+            end: p,
         });
-    i.useEffect(() => {
-        f && b((0, c.n)(), { captureDraggingState: !0 });
-    }, [b, f]);
-    let [{ dragSourcePosition: j }, D] = (0, o.H)({
-        accept: m,
-        drop: (e) => {
-            let l = e.index;
-            l !== n && (x(l, n), (e.index = n));
+    r.useEffect(() => {
+        m && D((0, c.n)(), { captureDraggingState: !0 });
+    }, [D, m]);
+    let [{ dragSourcePosition: k }, C] = (0, o.H)({
+        accept: x,
+        hover: g,
+        drop: (e, l) => {
+            if (f?.(e, l) === !0) return;
+            let t = e.index;
+            t !== n && (w(t, n), (e.index = n));
         },
         collect: (e) => {
             let l = e.getItem(),
@@ -54,39 +58,39 @@ function f(e) {
         },
     });
     return (
-        i.useLayoutEffect(
+        r.useLayoutEffect(
             () => (
-                w(l),
-                D(t),
+                j(l),
+                C(t),
                 () => {
-                    (D(null), w(null));
+                    (C(null), j(null));
                 }
             ),
-            [w, l, D, t],
+            [j, l, C, t],
         ),
-        { isDragging: v, dragSourcePosition: j }
+        { isDragging: b, dragSourcePosition: k }
     );
 }
-let p = i.memo(function (e) {
+let p = r.memo(function (e) {
     let {
             index: l,
             className: t,
-            draggingClassName: r,
+            draggingClassName: i,
             dropBeforeClassName: s,
             dropAfterClassName: o,
             "aria-label": c,
             children: d,
             ...u
         } = e,
-        h = i.useRef(null),
+        h = r.useRef(null),
         { isDragging: g, dragSourcePosition: p } = f({ dragRef: h, dropRef: h, index: l, ...u }),
         m = null != p,
-        x = m && l < p,
-        v = m && l > p;
-    return (0, n.jsx)("div", { ref: h, className: a()(t, g && r, x && s, v && o), "aria-label": c, children: d });
+        v = m && l < p,
+        x = m && l > p;
+    return (0, n.jsx)("div", { ref: h, className: a()(t, g && i, v && s, x && o), "aria-label": c, children: d });
 });
 function m(e) {
-    let { buttonRef: l, "aria-label": t, iconSize: i = "sm", ...r } = e;
+    let { buttonRef: l, "aria-label": t, iconSize: r = "sm", ...i } = e;
     return (0, n.jsx)(d.u, {
         body: g.intl.format(g.t["zvln/l"], { emphasizeHook: (e) => (0, n.jsx)("strong", { children: e }) }),
         ariaHidden: !0,
@@ -94,8 +98,8 @@ function m(e) {
             innerRef: l,
             "aria-label": t ?? g.intl.string(g.t.n9T3Hi),
             "aria-keyshortcuts": "Control+D, Meta+D",
-            ...r,
-            children: (0, n.jsx)(h.W, { size: i, color: "currentColor" }),
+            ...i,
+            children: (0, n.jsx)(h.W, { size: r, color: "currentColor" }),
         }),
     });
 }

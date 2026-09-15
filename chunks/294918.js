@@ -1,10 +1,16 @@
-_.exports = {
+e.exports = {
+    Z7: "dropSurface_fe7668",
     Vg: "grid_fe7668",
+    nl: "mouseDragging_fe7668",
     fi: "column_fe7668",
     NI: "slot_fe7668",
     cB: "dragging_fe7668",
+    qf: "placeholder_fe7668",
+    dk: "dragPreview_fe7668",
+    w4: "dragPreviewContent_fe7668",
     O3: "dropAfter_fe7668",
     ne: "dropBefore_fe7668",
     wr: "columnEnd_fe7668",
     SX: "columnEndOver_fe7668",
+    XP: "pointerColumnEnd_fe7668",
 };

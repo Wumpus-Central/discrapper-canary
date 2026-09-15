@@ -135,4 +135,36 @@
     padding: var(--space-24) var(--space-16)
 }
 
-/*# sourceMappingURL=13d664870a6978b7.css.map*/
+.grid_df0061 {
+    align-items: start;
+    display: grid;
+    gap: var(--space-16);
+    grid-template-columns: 1fr
+}
+
+@container guild-space-page (min-width: 800px) {
+    .grid_df0061 {
+        grid-template-columns: 2fr 1fr
+    }
+
+    .column_df0061:first-child {
+        grid-column: 1
+    }
+
+    .column_df0061:nth-child(2) {
+        grid-column: 2
+    }
+}
+
+.column_df0061 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16);
+    min-width: 0
+}
+
+.column_df0061:empty {
+    display: none
+}
+
+/*# sourceMappingURL=e7060f73bc68926b.css.map*/
