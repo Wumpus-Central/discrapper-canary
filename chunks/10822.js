@@ -3030,7 +3030,7 @@ class im {
     offsetHeightCache = 0;
     scrollHeightCache = 0;
     scrollTopCache = -1;
-    scrollHeightBeforeLoad = 0;
+    scrollHeightBeforeLoad = null;
     loadMorePausedUntilUserScroll = !1;
     _bottomAnchor = null;
     _automaticAnchorCallbacks = [];
@@ -3108,10 +3108,11 @@ class im {
             (this.loading = e.messages.loadingMore),
             t.channelId !== e.messages.channelId)
         )
-            this.loadMorePausedUntilUserScroll = !1;
+            ((this.loadMorePausedUntilUserScroll = !1), (this.scrollHeightBeforeLoad = null));
         else if (t.loadingMore && !e.messages.loadingMore) {
-            let e = Math.abs(i - this.scrollHeightBeforeLoad);
-            this.loadMorePausedUntilUserScroll = this.loadMorePausedUntilUserScroll || e < 100;
+            let e = null != this.scrollHeightBeforeLoad ? Math.abs(i - this.scrollHeightBeforeLoad) : null;
+            ((this.loadMorePausedUntilUserScroll = this.loadMorePausedUntilUserScroll || (null != e && e < 100)),
+                (this.scrollHeightBeforeLoad = null));
         }
         if (this.isInitialized() || this.isReady()) {
             if (!this.isInitialized()) return void this.restoreScroll();
@@ -3373,7 +3374,7 @@ class im {
                 prevScrollTop: i,
                 props: { placeholderHeight: s },
             } = this;
-        if (((this.prevScrollTop = t), null == i)) return;
+        if (((this.prevScrollTop = t), null == i || this.isPinned() || this.isScrolledToBottom(e))) return;
         let a = this.isInPlaceholderRegion(e),
             r = t - i;
         0 !== a &&
@@ -3393,6 +3394,7 @@ class im {
     fixScrollPosition(e, t) {
         ((this.offsetHeightCache = e),
             (this.scrollHeightCache = t),
+            (this.prevScrollTop = null),
             this.fixJumpTarget(),
             this.isPinned() && null == this.messageFetchAnchor && null == this.focusAnchor
                 ? this.scrollTo(Number.MAX_SAFE_INTEGER, !1, this.handleScroll)
