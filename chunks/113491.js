@@ -1,4 +1,4 @@
-n.d(t, { A: () => P });
+n.d(t, { A: () => R });
 var l = n(477900),
     a = n(582128),
     r = n(503698),
@@ -15,19 +15,18 @@ var l = n(477900),
     x = n(976713),
     p = n(313265);
 (n(321073), n(134528), n(947204));
-var v = n(504290),
-    b = n(947936);
-let j = 1e3 / 30,
-    y = [
+var v = n(947936);
+let b = 1e3 / 30,
+    j = [
         { hz: 0.285, stagger: 0.17, weight: 0.62, salt: 47 },
         { hz: 0.1245, stagger: -0.29, weight: 0.38, salt: 91 },
     ],
-    k = 2 * Math.PI;
-function w(e, t) {
+    y = 2 * Math.PI;
+function k(e, t) {
     let n = Math.imul(e, 0x165667b1) + Math.imul(t, 0x27d4eb2f);
     return (((n = Math.imul(n ^ (n >>> 13), 0x4bf19f61)) ^ (n >>> 16)) >>> 0) / 0xffffffff;
 }
-function N() {
+function w() {
     let e = a.useRef(null);
     return (
         a.useEffect(() => {
@@ -49,20 +48,20 @@ function N() {
                 g = 0,
                 x = 0,
                 p = performance.now();
-            function b() {
+            function v() {
                 if (null == n) return;
                 ((n.textAlign = "center"),
                     (n.textBaseline = "middle"),
                     (n.font = `${d}px 'AI Visual Identity Glyphs', monospace`));
                 let e = 0;
-                for (let t of v.QI + v.vd) {
+                for (let t of "123456789ABC") {
                     let l = n.measureText(t);
                     e = Math.max(e, l.actualBoundingBoxAscent + l.actualBoundingBoxDescent);
                 }
                 let t = e > 0 ? Math.max(4, (d * d) / e) : d;
                 n.font = `${t}px 'AI Visual Identity Glyphs', monospace`;
             }
-            function N() {
+            function w() {
                 if (null == t || null == n) return;
                 let e = t.clientWidth,
                     l = t.clientHeight;
@@ -74,60 +73,59 @@ function N() {
                     (s = null == r ? [] : Array.from(r, (e) => e.offsetLeft + e.offsetWidth / 2)));
                 let f = window.devicePixelRatio,
                     h = Number.isFinite(f) && f > 0 ? f : 1;
-                ((t.width = Math.round(o * h)), (t.height = Math.round(u * h)), n.setTransform(h, 0, 0, h, 0, 0), b());
+                ((t.width = Math.round(o * h)), (t.height = Math.round(u * h)), n.setTransform(h, 0, 0, h, 0, 0), v());
             }
-            (N(),
+            (w(),
                 (m = requestAnimationFrame(function e(a) {
-                    if (((m = requestAnimationFrame(e)), a - f < j)) return;
-                    let b = a - f;
+                    if (((m = requestAnimationFrame(e)), a - f < b)) return;
+                    let v = a - f;
                     if (((f = a), null == t || null == n || 0 === o || null == r)) return;
-                    let N = Number(r.dataset.effortCentre),
-                        A = r.hasAttribute("data-effort-live"),
-                        E = Number.isFinite(N) && Math.abs(N - i) > 16;
-                    if (!h && (!A || E)) return;
-                    g = Math.min(1, Math.max(0, g + ((A ? 1 : -1) * b) / 260));
-                    let S = t.getBoundingClientRect(),
-                        C = S.width > 0 ? S.width / o : 1,
-                        I = r.getBoundingClientRect(),
-                        M = (I.left - S.left) / C,
-                        T = (1 - Math.min(1, Math.abs(M + I.width / C / 2 - i) / 16)) * g;
-                    if (T < 0.01) {
+                    let w = Number(r.dataset.effortCentre),
+                        N = r.hasAttribute("data-effort-live"),
+                        A = Number.isFinite(w) && Math.abs(w - i) > 16;
+                    if (!h && (!N || A)) return;
+                    g = Math.min(1, Math.max(0, g + ((N ? 1 : -1) * v) / 260));
+                    let E = t.getBoundingClientRect(),
+                        S = E.width > 0 ? E.width / o : 1,
+                        C = r.getBoundingClientRect(),
+                        I = (C.left - E.left) / S,
+                        M = (1 - Math.min(1, Math.abs(I + C.width / S / 2 - i) / 16)) * g;
+                    if (M < 0.01) {
                         (h && n.clearRect(0, 0, o, u), (h = !1));
                         return;
                     }
                     (h || (x = a), (h = !0), n.clearRect(0, 0, o, u));
-                    let R = M - 1 - (1 - T) * 16,
-                        P = (a - p) / 1e3,
-                        _ = 0.1 + 0.9 * (1 - (1 - Math.min(1, Math.max(0, (a - x) / 1500))) ** 3),
-                        L = Math.ceil(R / c);
+                    let T = I - 1 - (1 - M) * 16,
+                        R = (a - p) / 1e3,
+                        P = 0.1 + 0.9 * (1 - (1 - Math.min(1, Math.max(0, (a - x) / 1500))) ** 3),
+                        _ = Math.ceil(T / c);
                     n.fillStyle = l;
                     for (let e = 0; e < 3; e++) {
-                        let t = 72 * (0.825 + 0.35 * w(e, 11)),
-                            l = 224 * (0.88 + 0.12 * (0.5 + 0.5 * Math.sin(P * k * 0.13 + w(e, 29) * k))) * _,
+                        let t = 72 * (0.825 + 0.35 * k(e, 11)),
+                            l = 224 * (0.88 + 0.12 * (0.5 + 0.5 * Math.sin(R * y * 0.13 + k(e, 29) * y))) * P,
                             a = 0;
-                        for (let t of y) {
-                            let n = (e * t.stagger + 0.07 * w(e, t.salt)) * k;
-                            a += t.weight * Math.sin(P * k * t.hz + n);
+                        for (let t of j) {
+                            let n = (e * t.stagger + 0.07 * k(e, t.salt)) * y;
+                            a += t.weight * Math.sin(R * y * t.hz + n);
                         }
                         let r = 0.30000000000000004 + 0.7 * (1 + a),
-                            i = Math.floor((P * t) / c),
+                            i = Math.floor((R * t) / c),
                             o = 1 + e * c + d / 2,
                             m = d / 2 + 3,
                             f = Math.abs(o - u / 2) < m;
-                        for (let t = 0; t < L; t++) {
+                        for (let t = 0; t < _; t++) {
                             let a,
-                                u = R - (t * c + d / 2);
+                                u = T - (t * c + d / 2);
                             if (u < 0) break;
-                            let h = (R - u) / l;
+                            let h = (T - u) / l;
                             if (h >= 1) break;
-                            let g = 1 - h ** r,
-                                x = Math.min(v.QI.length, Math.floor(g * (v.QI.length + 1)));
+                            let g = Math.min(6, Math.floor(7 * (1 - h ** r)));
                             ((a =
-                                0.07 > w(t - i, e + 613)
-                                    ? v.QI.charAt(0)
-                                    : x < v.QI.length
-                                      ? v.QI.charAt(x)
-                                      : v.vd.charAt(Math.floor(w(e, 977) * v.vd.length))),
+                                0.07 > k(t - i, e + 613)
+                                    ? "123456".charAt(0)
+                                    : g < 6
+                                      ? "123456".charAt(g)
+                                      : "789ABC".charAt(Math.floor(6 * k(e, 977)))),
                                 (f && s.some((e) => Math.abs(u - e) < m)) ||
                                     ((n.globalAlpha =
                                         0.5 *
@@ -135,27 +133,27 @@ function N() {
                                             let t = Math.min(1, Math.max(0, e));
                                             return t * t * (3 - 2 * t);
                                         })((1 - h) / 0.34) *
-                                        T),
+                                        M),
                                     n.fillText(a, u, o)));
                         }
                     }
                     n.globalAlpha = 1;
                 })));
-            let A = document.fonts;
-            null != A && A.load(`${d}px 'AI Visual Identity Glyphs'`, v.QI + v.vd).then(b, () => void 0);
-            let E = "u" < typeof ResizeObserver ? null : new ResizeObserver(N);
+            let N = document.fonts;
+            null != N && N.load(`${d}px 'AI Visual Identity Glyphs'`, "123456789ABC").then(v, () => void 0);
+            let A = "u" < typeof ResizeObserver ? null : new ResizeObserver(w);
             return (
-                E?.observe(t),
+                A?.observe(t),
                 () => {
-                    (cancelAnimationFrame(m), E?.disconnect());
+                    (cancelAnimationFrame(m), A?.disconnect());
                 }
             );
         }, []),
-        (0, l.jsx)("canvas", { ref: e, className: b.Z, "aria-hidden": "true" })
+        (0, l.jsx)("canvas", { ref: e, className: v.Z, "aria-hidden": "true" })
     );
 }
-var A = n(757713);
-function E(e) {
+var N = n(757713);
+function A(e) {
     let { activeIndex: t, stops: n, ariaLabel: r, disabled: s, onSelect: o, className: u } = e,
         d = a.useRef(null),
         c = a.useRef(null),
@@ -193,7 +191,7 @@ function E(e) {
             },
             [y],
         );
-    function w(e) {
+    function A(e) {
         if (s) return;
         let l = "ArrowRight" === e.key ? 1 : "ArrowLeft" === e.key ? -1 : 0;
         if (0 === l) return;
@@ -331,23 +329,23 @@ function E(e) {
             );
         }, [p, v, y]),
         (0, l.jsx)("div", {
-            className: i()(A.u4, u),
+            className: i()(N.u4, u),
             role: "group",
             "aria-label": r,
             children: (0, l.jsxs)("div", {
                 ref: d,
-                className: A.Gb,
+                className: N.Gb,
                 children: [
                     (0, l.jsx)("span", {
-                        className: A.Ek,
+                        className: N.Ek,
                         "aria-hidden": "true",
-                        children: (0, l.jsx)("span", { ref: m, className: i()(A.GS, { [A.eG]: t < 0 }) }),
+                        children: (0, l.jsx)("span", { ref: m, className: i()(N.GS, { [N.eG]: t < 0 }) }),
                     }),
                     (0, l.jsx)("span", {
                         ref: c,
                         "data-vibegrations-effort-handle": "",
                         "data-effort-live": t >= 0 ? "" : void 0,
-                        className: i()(A.p$, { [A.Jb]: b < 0, [A.jz]: j, [A.al]: t >= 0 && !s }),
+                        className: i()(N.p$, { [N.Jb]: b < 0, [N.jz]: j, [N.al]: t >= 0 && !s }),
                         "aria-hidden": "true",
                     }),
                     n.map((e, n) =>
@@ -359,29 +357,29 @@ function E(e) {
                                 "aria-pressed": n === t,
                                 "aria-label": e,
                                 disabled: s,
-                                className: A.ds,
-                                onKeyDown: w,
+                                className: N.ds,
+                                onKeyDown: A,
                                 onPointerEnter: () => h(n),
                                 onPointerLeave: () => h((e) => (e === n ? -1 : e)),
                                 onFocus: () => h(n),
                                 onBlur: () => h((e) => (e === n ? -1 : e)),
                                 onClick: () => o(n),
-                                children: (0, l.jsx)("span", { className: A.Om, "aria-hidden": "true" }),
+                                children: (0, l.jsx)("span", { className: N.Om, "aria-hidden": "true" }),
                             },
                             e,
                         ),
                     ),
-                    (0, l.jsx)("span", { className: A.jN, "aria-hidden": "true", children: (0, l.jsx)(N, {}) }),
+                    (0, l.jsx)("span", { className: N.jN, "aria-hidden": "true", children: (0, l.jsx)(w, {}) }),
                 ],
             }),
         })
     );
 }
-var S = n(856795),
-    C = n(759967),
-    I = n(375708),
-    M = n(752065);
-function T(e) {
+var E = n(856795),
+    S = n(759967),
+    C = n(375708),
+    I = n(752065);
+function M(e) {
     let [t, n] = a.useState(e),
         [l, r] = a.useState(!1),
         [i, s] = a.useState(e);
@@ -405,10 +403,10 @@ function T(e) {
         { mounted: t, entered: l }
     );
 }
-function R(e) {
+function T(e) {
     let { settings: t, choices: n, disabled: r, onChange: m, placement: f, open: h, entered: g } = e,
         [v, b] = a.useState(!1),
-        j = T(v),
+        j = M(v),
         y = (0, x.EF)(t, n.main),
         k = v ? s.t : o._,
         w = a.useMemo(
@@ -416,30 +414,30 @@ function R(e) {
             [n.main],
         ),
         N = a.useMemo(() => n.thinking.map((e) => ({ id: e, label: p.h[e] ?? e, value: e })), [n.thinking]);
-    function A(e) {
+    function T(e) {
         return n.main.find((t) => t.id === e)?.supports_fast === !0;
     }
     function R(e) {
         let { fast: t, ...n } = e;
-        m((0, x.ko)(!0 === t && A(e.model) ? { ...n, fast: !0 } : n));
+        m((0, x.ko)(!0 === t && T(e.model) ? { ...n, fast: !0 } : n));
     }
     let P = x.Q0.map((e) => e.summary()),
         _ = y >= 0 ? P[y] : (0, x.tg)(t, n.main),
-        { text: L, phase: F } = (0, S.Q)(_);
+        { text: L, phase: F } = (0, E.Q)(_);
     return (0, l.jsx)("div", {
-        className: M.qd,
+        className: I.qd,
         "data-placement": f ?? void 0,
         children: (0, l.jsxs)("div", {
-            className: i()(M.t$, { [M.Zr]: h && g, [M.GF]: !h }),
+            className: i()(I.t$, { [I.Zr]: h && g, [I.GF]: !h }),
             role: "dialog",
-            "aria-label": I.intl.string(C.default["2NWMqY"]),
+            "aria-label": C.intl.string(S.default["2NWMqY"]),
             children: [
                 j.mounted
                     ? (0, l.jsxs)("div", {
-                          className: i()(M.Nr, M.uO, { [M.Zr]: v && j.entered, [M.GF]: !v }),
+                          className: i()(I.Nr, I.uO, { [I.Zr]: v && j.entered, [I.GF]: !v }),
                           children: [
                               (0, l.jsx)(u.l, {
-                                  label: I.intl.string(C.default["9FRudW"]),
+                                  label: C.intl.string(S.default["9FRudW"]),
                                   options: w,
                                   value: t.main.model,
                                   onSelectionChange: (e) => R({ ...t.main, model: e }),
@@ -448,7 +446,7 @@ function R(e) {
                                   fullWidth: !0,
                               }),
                               (0, l.jsx)(u.l, {
-                                  label: I.intl.string(C.default["4AsQHS"]),
+                                  label: C.intl.string(S.default["4AsQHS"]),
                                   options: N,
                                   value: t.main.thinking,
                                   onSelectionChange: (e) => R({ ...t.main, thinking: e }),
@@ -456,10 +454,10 @@ function R(e) {
                                   disabled: r,
                                   fullWidth: !0,
                               }),
-                              A(t.main.model)
+                              T(t.main.model)
                                   ? (0, l.jsx)(d.d, {
-                                        label: I.intl.string(C.default.SYLSgx),
-                                        description: I.intl.string(C.default.HITWAI),
+                                        label: C.intl.string(S.default.SYLSgx),
+                                        description: C.intl.string(S.default.HITWAI),
                                         checked: !0 === t.main.fast,
                                         disabled: r,
                                         onChange: (e) => R({ ...t.main, fast: e }),
@@ -469,30 +467,30 @@ function R(e) {
                       })
                     : null,
                 (0, l.jsxs)("div", {
-                    className: `${M.Nr} ${M.rF}`,
+                    className: `${I.Nr} ${I.rF}`,
                     children: [
                         (0, l.jsxs)("div", {
-                            className: M.wx,
+                            className: I.wx,
                             children: [
                                 (0, l.jsxs)("button", {
                                     type: "button",
-                                    className: M.y6,
+                                    className: I.y6,
                                     "aria-expanded": v,
-                                    "aria-label": I.intl.string(C.default.IaLFoX),
+                                    "aria-label": C.intl.string(S.default.IaLFoX),
                                     onClick: () => b((e) => !e),
                                     children: [
                                         (0, l.jsx)(c.E, {
                                             tag: "span",
                                             variant: "text-md/medium",
                                             color: "none",
-                                            children: I.intl.string(C.default.GDs9Vq),
+                                            children: C.intl.string(S.default.GDs9Vq),
                                         }),
                                         (0, l.jsx)(k, {
                                             size: "custom",
                                             width: 16,
                                             height: 16,
                                             color: "currentColor",
-                                            className: M.vg,
+                                            className: I.vg,
                                         }),
                                     ],
                                 }),
@@ -500,35 +498,35 @@ function R(e) {
                                     tag: "span",
                                     variant: "text-sm/normal",
                                     color: "text-muted",
-                                    className: i()(M.Z, { [M.xQ]: "exit" === F, [M.lm]: "enter" === F }),
+                                    className: i()(I.Z, { [I.xQ]: "exit" === F, [I.lm]: "enter" === F }),
                                     children: L,
                                 }),
                             ],
                         }),
                         (0, l.jsxs)("div", {
-                            className: M.hs,
+                            className: I.hs,
                             children: [
                                 (0, l.jsxs)("div", {
-                                    className: M.Nb,
+                                    className: I.Nb,
                                     children: [
                                         (0, l.jsx)(c.E, {
                                             tag: "span",
                                             variant: "text-sm/medium",
                                             color: "text-subtle",
-                                            children: I.intl.string(C.default.c11EuO),
+                                            children: C.intl.string(S.default.c11EuO),
                                         }),
                                         (0, l.jsx)(c.E, {
                                             tag: "span",
                                             variant: "text-sm/medium",
                                             color: "text-subtle",
-                                            children: I.intl.string(C.default.OJIfkn),
+                                            children: C.intl.string(S.default.OJIfkn),
                                         }),
                                     ],
                                 }),
-                                (0, l.jsx)(E, {
+                                (0, l.jsx)(A, {
                                     activeIndex: y,
                                     stops: P,
-                                    ariaLabel: I.intl.string(C.default.GDs9Vq),
+                                    ariaLabel: C.intl.string(S.default.GDs9Vq),
                                     disabled: r,
                                     onSelect: function (e) {
                                         let t = x.Q0[e];
@@ -543,7 +541,7 @@ function R(e) {
         }),
     });
 }
-function P(e) {
+function R(e) {
     let { settings: t, choices: n, disabled: r, onChange: i, className: s, icon: o } = e,
         u = a.useRef(null),
         [d, c] = a.useState(null),
@@ -557,7 +555,7 @@ function P(e) {
             [i],
         ),
         [j, y] = a.useState(!1),
-        { mounted: k, entered: w } = T(j);
+        { mounted: k, entered: w } = M(j);
     return (0, l.jsx)(m.Y, {
         targetElementRef: u,
         position: "top",
@@ -567,7 +565,7 @@ function P(e) {
         animation: m.Y.Animation.NONE,
         renderPopout: (e) => {
             let { position: t } = e;
-            return (0, l.jsx)(R, {
+            return (0, l.jsx)(T, {
                 settings: v,
                 choices: n,
                 disabled: r,
@@ -580,13 +578,13 @@ function P(e) {
         children: (e, t) => {
             let { isShown: n } = t;
             return (0, l.jsx)(f.m, {
-                text: I.intl.string(C.default.GoSNDN),
+                text: C.intl.string(S.default.GoSNDN),
                 shouldShow: !n,
                 ariaHidden: !0,
                 children: (0, l.jsx)(h.D, {
                     innerRef: u,
-                    className: s ?? M.hZ,
-                    "aria-label": I.intl.string(C.default.GoSNDN),
+                    className: s ?? I.hZ,
+                    "aria-label": C.intl.string(S.default.GoSNDN),
                     ...e,
                     onClick: () => y((e) => !e),
                     "aria-expanded": j,

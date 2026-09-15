@@ -263,7 +263,7 @@ let p = [12, 16, 24, 32, 48, 64],
         ],
     };
 var f = l(331322),
-    y = l(678949),
+    y = l(864970),
     j = l(829888);
 let g = ["Ask about day one survival strategies", "Ask how to build your first mineshaft", "Ask about Minecraft"];
 function E(e) {
