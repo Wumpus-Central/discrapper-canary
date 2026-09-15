@@ -293,13 +293,13 @@ var ex = n(875317),
     e7 = n(498470),
     e5 = n(807098),
     e2 = n(637706),
-    e9 = n(788883),
-    e4 = n(7667);
+    e4 = n(788883),
+    e9 = n(7667);
 function te(e) {
     let { guildId: t, componentId: n, promotionId: i, coachmark: s, targetElementRef: a, markAsDismissed: o } = e,
         { analyticsLocations: d } = (0, N.Ay)(),
         c = (0, e5.T)(s.asset),
-        { terms: A } = (0, e4.A)(i),
+        { terms: A } = (0, e9.A)(i),
         E = r.useCallback(() => {
             o(eE.i.DISMISS);
         }, [o]),
@@ -320,7 +320,7 @@ function te(e) {
         _ = s.button?.copy ?? "";
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, l.jsx)(e9.A, {
+            (0, l.jsx)(e4.A, {
                 componentType: ec.C.GUILD_HEADER_COACHMARK,
                 componentId: n,
                 promotionId: i,
@@ -827,8 +827,8 @@ var t3 = n(503698),
     t7 = n(933832),
     t5 = n(782603),
     t2 = n(81466),
-    t9 = n(116085),
-    t4 = n(597601),
+    t4 = n(116085),
+    t9 = n(597601),
     ne = n(451394),
     nt = n(104171),
     nn = n(47167),
@@ -1027,7 +1027,7 @@ function nM(e) {
                     children: [
                         null != d
                             ? (0, l.jsx)(d, { size: "xs", color: "currentColor", className: nN.uE })
-                            : (0, l.jsx)(t9.B, {
+                            : (0, l.jsx)(t4.B, {
                                   size: "custom",
                                   color: "currentColor",
                                   width: 16,
@@ -1057,7 +1057,7 @@ function nf(e) {
               heading: tl.intl.string(tl.t["1+boPi"]),
               topic: t.name,
               location: (0, ng.y)(n, !0),
-              locationIcon: (0, l.jsx)(t9.B, {
+              locationIcon: (0, l.jsx)(t4.B, {
                   size: "custom",
                   color: "currentColor",
                   width: 16,
@@ -1113,7 +1113,7 @@ function nR(e) {
         heading: tl.intl.string(tl.t["X2K3/4"]),
         location: i,
         details: a,
-        detailsIcon: (0, l.jsx)(t4.L, {
+        detailsIcon: (0, l.jsx)(t9.L, {
             size: "custom",
             color: "currentColor",
             width: 14,
@@ -1499,8 +1499,8 @@ class n2 extends d.Ay.Store {
         return Date.now() - t >= H.D2K && O.A.can(H.xBc.MANAGE_GUILD, e);
     }
 }
-let n9 = new n2(m.h);
-var n4 = n(731667);
+let n4 = new n2(m.h);
+var n9 = n(731667);
 function ie() {
     return !0;
 }
@@ -1519,12 +1519,12 @@ let ii = new it(m.h),
         { type: H.n5X.CLAN_ADMIN_UPSELL, dismissibleContentType: u.M.CHANNEL_LIST_CLAN_ADMIN_UPSELL },
         {
             type: H.n5X.GUILD_BOOSTING,
-            store: n9,
+            store: n4,
             dismissibleContentType: u.M.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION,
         },
         { type: H.n5X.GUILD_BANNER, store: n5, dismissibleContentType: u.M.CHANNEL_NOTICE_GUILD_BANNER },
         { type: H.n5X.INVITE, store: ii, dismissibleContentType: u.M.CHANNEL_NOTICE_INVITE },
-        { type: H.n5X.HUB_LINK, store: n4.A, dismissibleContentType: u.M.CHANNEL_NOTICE_HUBLINK },
+        { type: H.n5X.HUB_LINK, store: n9.A, dismissibleContentType: u.M.CHANNEL_NOTICE_HUBLINK },
         { type: H.n5X.QUICKSWITCHER, store: n8.A, dismissibleContentType: u.M.CHANNEL_NOTICE_QUICKSWITCHER },
         { type: H.n5X.LINKED_ROLES_ADMIN, dismissibleContentType: u.M.LINKED_ROLE_ADMIN_GUILD },
         { type: H.n5X.GAME_CLAIM, dismissibleContentType: u.M.GAME_CLAIM_COACHMARK },
@@ -1761,21 +1761,19 @@ class iC extends r.PureComponent {
                     n.e("70866"),
                     n.e("311541"),
                     n.e("472847"),
-                    n.e("870088"),
-                    n.e("989649"),
-                    n.e("853458"),
+                    n.e("986735"),
                     n.e("586662"),
                     n.e("758053"),
                     n.e("247471"),
                     n.e("889002"),
                     n.e("709976"),
-                    n.e("807432"),
-                    n.e("873532"),
                     n.e("750955"),
                     n.e("953343"),
+                    n.e("807432"),
+                    n.e("873532"),
                     n.e("279774"),
-                    n.e("771593"),
-                    n.e("697284"),
+                    n.e("482214"),
+                    n.e("367781"),
                     n.e("410470"),
                     n.e("765208"),
                     n.e("711562"),
@@ -1977,27 +1975,29 @@ class iC extends r.PureComponent {
                     n.e("77473"),
                     n.e("863232"),
                     n.e("364827"),
-                    n.e("25279"),
+                    n.e("523276"),
                     n.e("907167"),
-                    n.e("517888"),
-                    n.e("910471"),
+                    n.e("830938"),
+                    n.e("948720"),
                     n.e("784569"),
-                    n.e("811133"),
-                    n.e("861060"),
+                    n.e("25279"),
+                    n.e("992789"),
                     n.e("174016"),
+                    n.e("910471"),
                     n.e("952372"),
-                    n.e("262156"),
                     n.e("960235"),
+                    n.e("811133"),
+                    n.e("425412"),
                     n.e("959880"),
                     n.e("77333"),
                     n.e("716460"),
                     n.e("264572"),
-                    n.e("797595"),
                     n.e("344057"),
-                    n.e("641248"),
+                    n.e("265607"),
                     n.e("128504"),
                     n.e("331988"),
-                    n.e("40291"),
+                    n.e("262156"),
+                    n.e("206028"),
                     n.e("402368"),
                     n.e("733115"),
                     n.e("397270"),
@@ -2046,13 +2046,13 @@ class iC extends r.PureComponent {
                     n.e("676418"),
                     n.e("875842"),
                     n.e("940258"),
-                    n.e("198329"),
                     n.e("292583"),
                     n.e("930233"),
                     n.e("586127"),
                     n.e("166495"),
                     n.e("591751"),
                     n.e("401518"),
+                    n.e("198329"),
                     n.e("9205"),
                     n.e("308555"),
                     n.e("25949"),
@@ -2092,9 +2092,7 @@ class iC extends r.PureComponent {
                     n.e("884601"),
                     n.e("782969"),
                     n.e("31267"),
-                    n.e("255580"),
                     n.e("480830"),
-                    n.e("451224"),
                     n.e("179745"),
                     n.e("448948"),
                     n.e("375767"),
@@ -2102,7 +2100,6 @@ class iC extends r.PureComponent {
                     n.e("280854"),
                     n.e("335395"),
                     n.e("981004"),
-                    n.e("608557"),
                     n.e("428967"),
                     n.e("154469"),
                     n.e("886246"),
@@ -2122,8 +2119,8 @@ class iC extends r.PureComponent {
                     n.e("868214"),
                     n.e("902564"),
                     n.e("371477"),
-                    n.e("631965"),
                     n.e("67878"),
+                    n.e("630175"),
                     n.e("758946"),
                     n.e("214285"),
                     n.e("248330"),
@@ -2138,7 +2135,7 @@ class iC extends r.PureComponent {
                     n.e("386317"),
                     n.e("737021"),
                     n.e("818465"),
-                    n.e("968359"),
+                    n.e("91124"),
                     n.e("971430"),
                     n.e("976516"),
                     n.e("400501"),
@@ -2688,9 +2685,9 @@ function iN(e) {
         }, []),
     });
     let e2 = (0, d.bG)([eJ.A], () => eJ.A.getChannelId()),
-        e9 = (0, d.bG)([e$.A], () => e$.A.desyncedVoiceStatesCount),
-        e4 = (0, ej.A)(f),
-        te = (0, es.ai)(f) ? null : e4,
+        e4 = (0, d.bG)([e$.A], () => e$.A.desyncedVoiceStatesCount),
+        e9 = (0, ej.A)(f),
+        te = (0, es.ai)(f) ? null : e9,
         tt =
             (function (e) {
                 let t = (0, ej.A)(e),
@@ -2788,7 +2785,7 @@ function iN(e) {
         selectedVoiceChannelId: j,
         voiceStates: y,
         rtcConnectedChannelId: e2,
-        rtcDesyncedVoiceStatesCount: e9,
+        rtcDesyncedVoiceStatesCount: e4,
         isUnavailable: w,
         user: k,
         hasChannelNotice: null != el || Z,

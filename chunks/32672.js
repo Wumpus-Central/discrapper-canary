@@ -24,7 +24,7 @@ function w(t, e) {
     return `${location.protocol}//${location.host}${v.BVt.COLLECTIBLES_SHOP}${i ? `?tab=${e}` : ""}#itemSkuId=${t}`;
 }
 var _ = i(623373),
-    I = i(14702),
+    I = i(456839),
     O = i(381941),
     P = i(375708),
     j = i(242232);

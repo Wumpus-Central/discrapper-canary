@@ -1,71 +1,71 @@
-l.d(t, { I: () => N, _: () => b });
+s.d(t, { I: () => g, _: () => E });
 var n,
-    r = l(477900);
-l(582128);
-var s = l(834730),
-    i = l(150934),
-    a = l(118982),
-    u = l(403362),
-    c = l(975571),
-    o = l(158045),
-    d = l(580630),
-    m = l(652215),
-    x = l(202541),
-    h = l(649975),
-    p = l(375708),
-    v = l(484742);
-function j(e) {
-    let { value: t, onChange: l } = e;
+    r = s(477900);
+s(582128);
+var a = s(834730),
+    i = s(150934),
+    l = s(331329),
+    c = s(403362),
+    u = s(975571),
+    o = s(158045),
+    d = s(580630),
+    m = s(652215),
+    p = s(202541),
+    x = s(649975),
+    f = s(375708),
+    C = s(484742);
+function h(e) {
+    let { value: t, onChange: s } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(s.E, {
+            (0, r.jsx)(a.E, {
                 variant: "text-xs/normal",
                 color: "text-muted",
-                children: p.intl.string(h.default["5dmUS+"]),
+                children: f.intl.string(x.default["5dmUS+"]),
             }),
-            (0, r.jsx)(i.S, { label: p.intl.string(h.default.XBtSMa), checked: t, onChange: l }),
+            (0, r.jsx)(i.S, { label: f.intl.string(x.default.XBtSMa), checked: t, onChange: s }),
         ],
     });
 }
-let f = { [x.WT.DAY]: h.default.iPorlt, [x.WT.MONTH]: h.default["8CYJ8Y"], [x.WT.YEAR]: h.default.gvaGGA };
-function g(e) {
+let L = { [p.WT.DAY]: x.default.iPorlt, [p.WT.MONTH]: x.default["8CYJ8Y"], [p.WT.YEAR]: x.default.gvaGGA };
+function v(e) {
     let {
             purchaseButtonText: t,
-            totalDue: l,
+            totalDue: s,
             renewalPrice: n,
             currency: r,
-            interval: s,
+            interval: a,
             intervalCount: i,
-            startDate: a,
-            multiPeriodDiscountAttributes: u,
+            startDate: l,
+            multiPeriodDiscountAttributes: c,
         } = e,
-        x = (0, d.$g)(l, r),
-        h = (0, d.$g)(n, r),
-        v = m.X7G.PAID_TERMS,
-        j = m.qF7.CONTACT_US,
-        g = c.A.getArticleURL(m.MVz.BILLING);
+        p = (0, d.$g)(s, r),
+        x = (0, d.$g)(n, r),
+        C = m.X7G.PAID_TERMS,
+        h = m.qF7.CONTACT_US,
+        v = u.A.getArticleURL(m.MVz.BILLING);
     return {
         purchaseButtonText: t,
-        totalDue: x,
-        renewalPrice: h,
-        interval: p.intl.formatToPlainString(f[s], { intervalCount: i }),
-        startDate: a,
+        totalDue: p,
+        renewalPrice: x,
+        interval: f.intl.formatToPlainString(L[a], { intervalCount: i }),
+        startDate: l,
         multiPeriodDiscountAttributes: (function (e) {
-            let { currency: t, multiPeriodDiscountAttributes: l } = e;
-            if (null != l)
+            let { currency: t, multiPeriodDiscountAttributes: s } = e;
+            if (null != s)
                 return {
-                    discountedRenewalPrice: (0, d.$g)(l.discountedRenewalPrice, t),
-                    discountEndDate: l.discountEndDate,
-                    priceWithoutDiscount: (0, d.$g)(l.priceWithoutDiscount, t),
-                    trialDuration: (0, o.re)({ intervalType: l.intervalType, intervalCount: l.intervalCount }),
+                    discountedRenewalPrice: (0, d.$g)(s.discountedRenewalPrice, t),
+                    discountEndDate: s.discountEndDate,
+                    priceWithoutDiscount: (0, d.$g)(s.priceWithoutDiscount, t),
+                    trialDuration: (0, o.re)({ intervalType: s.intervalType, intervalCount: s.intervalCount }),
                 };
-        })({ multiPeriodDiscountAttributes: u, currency: r }),
-        paidServicesTermsUrl: v,
-        contactUsUrl: j,
-        subscriptionsFaqUrl: g,
+        })({ multiPeriodDiscountAttributes: c, currency: r }),
+        paidServicesTermsUrl: C,
+        contactUsUrl: h,
+        subscriptionsFaqUrl: v,
     };
 }
-var N =
+var g =
     (((n = {})[(n.Subscription = 0)] = "Subscription"),
     (n[(n.SubscriptionTrial = 1)] = "SubscriptionTrial"),
     (n[(n.SubscriptionApplication = 2)] = "SubscriptionApplication"),
@@ -78,104 +78,104 @@ var N =
     (n[(n.GiftGameShop = 9)] = "GiftGameShop"),
     (n[(n.OrbsGameShop = 10)] = "OrbsGameShop"),
     n);
-function b(e) {
+function E(e) {
     return (0, r.jsxs)("div", {
-        className: v.k,
+        className: C.k,
         children: [
-            null != e.immediateDelivery && (0, r.jsx)(j, { ...e.immediateDelivery }),
-            (0, r.jsx)(s.E, {
+            null != e.immediateDelivery && (0, r.jsx)(h, { ...e.immediateDelivery }),
+            (0, r.jsx)(a.E, {
                 variant: "text-xs/normal",
                 color: "text-muted",
                 children: (function (e) {
                     let t = m.X7G.PAID_TERMS,
-                        l = m.X7G.PAID_TERMS_VIRTUAL_GOODS;
+                        s = m.X7G.PAID_TERMS_VIRTUAL_GOODS;
                     switch (e.type) {
                         case 0:
                         case 1:
-                            let n = g(e);
+                            let n = v(e);
                             if (null != n.multiPeriodDiscountAttributes) {
                                 let {
                                     discountEndDate: e,
                                     discountedRenewalPrice: t,
-                                    priceWithoutDiscount: l,
+                                    priceWithoutDiscount: s,
                                     trialDuration: r,
                                 } = n.multiPeriodDiscountAttributes;
-                                return p.intl.format(h.default["A+qfZ+"], {
+                                return f.intl.format(x.default["A+qfZ+"], {
                                     purchaseButtonText: n.purchaseButtonText,
                                     totalDue: n.totalDue,
                                     trialOrDiscountPrice: t,
                                     trialDuration: r,
                                     trialOrDiscountEndDate: e,
-                                    fullRenewalPrice: l,
+                                    fullRenewalPrice: s,
                                     interval: n.interval,
                                     subscriptionsFaqUrl: n.subscriptionsFaqUrl,
                                     paidServicesTermsUrl: n.paidServicesTermsUrl,
                                     contactUsUrl: n.contactUsUrl,
                                 });
                             }
-                            if (1 === e.type) return p.intl.format(h.default["2pNIbI"], n);
-                            return p.intl.format(h.default.OH1Evm, n);
+                            if (1 === e.type) return f.intl.format(x.default["2pNIbI"], n);
+                            return f.intl.format(x.default.OH1Evm, n);
                         case 2:
-                            return p.intl.format(h.default.bbgJdE, g(e));
+                            return f.intl.format(x.default.bbgJdE, v(e));
                         case 4:
-                            return p.intl.format(h.default.IP93kX, {
+                            return f.intl.format(x.default.IP93kX, {
                                 ...e,
                                 paidServicesTermsUrl: t,
-                                virtualGoodsTermsUrl: l,
+                                virtualGoodsTermsUrl: s,
                             });
                         case 5:
-                            return p.intl.format(h.default.ITY3j6, {
+                            return f.intl.format(x.default.ITY3j6, {
                                 ...e,
                                 paidServicesTermsUrl: t,
-                                virtualGoodsTermsUrl: l,
+                                virtualGoodsTermsUrl: s,
                             });
                         case 3:
-                            return p.intl.format(h.default.EOOWpo, { ...e, paidServicesTermsUrl: t });
+                            return f.intl.format(x.default.EOOWpo, { ...e, paidServicesTermsUrl: t });
                         case 6:
-                            return p.intl.format(h.default.G0nk6B, { ...e, paidServicesTermsUrl: t });
+                            return f.intl.format(x.default.G0nk6B, { ...e, paidServicesTermsUrl: t });
                         case 7:
-                            return p.intl.format(h.default.P5KfYx, { ...e, paidServicesTermsUrl: t });
+                            return f.intl.format(x.default.P5KfYx, { ...e, paidServicesTermsUrl: t });
                         case 8:
-                            return p.intl.format(h.default.BkYev7, {
+                            return f.intl.format(x.default.BkYev7, {
                                 ...e,
                                 paidServicesTermsUrl: t,
-                                virtualGoodsTermsUrl: l,
+                                virtualGoodsTermsUrl: s,
                             });
                         case 9:
                         case 10:
-                            let { applicationId: r, applicationName: s, shouldAppendDisclaimer: i } = e,
-                                c = s ?? "",
-                                o = (0, a.k3)(null != r ? { id: r, name: c } : void 0);
+                            let { applicationId: r, applicationName: a, shouldAppendDisclaimer: i } = e,
+                                u = a ?? "",
+                                o = (0, l.k3)(null != r ? { id: r, name: u } : void 0);
                             if (i)
-                                return p.intl.format(9 === e.type ? h.default["0Zl+Xt"] : h.default["5fbNBX"], {
+                                return f.intl.format(9 === e.type ? x.default["0Zl+Xt"] : x.default["5fbNBX"], {
                                     ...e,
-                                    applicationName: c,
+                                    applicationName: u,
                                     paidServicesTermsUrl: t,
                                     platformInfo: o,
                                     virtualGoodsTermsUrl: m.X7G.PAID_TERMS_VIRTUAL_GOODS,
                                 });
-                            return p.intl.format(9 === e.type ? h.default.OVhTE7 : h.default.cwuBkH, {
+                            return f.intl.format(9 === e.type ? x.default.OVhTE7 : x.default.cwuBkH, {
                                 ...e,
-                                applicationName: c,
+                                applicationName: u,
                                 paidServicesTermsUrl: t,
                                 virtualGoodsTermsUrl: m.X7G.PAID_TERMS_VIRTUAL_GOODS,
                             });
                         default:
-                            (0, u.xb)(e);
+                            (0, c.xb)(e);
                     }
                 })(e.variant),
             }),
             e.paymentSourceType === m.hes.PAYSAFE_CARD &&
-                (0, r.jsx)(s.E, {
+                (0, r.jsx)(a.E, {
                     variant: "text-xs/normal",
                     color: "text-muted",
-                    children: p.intl.string(p.t.kj9VLI),
+                    children: f.intl.string(f.t.kj9VLI),
                 }),
             e.paymentSourceType === m.hes.SOFORT &&
-                (0, r.jsx)(s.E, {
+                (0, r.jsx)(a.E, {
                     variant: "text-xs/normal",
                     color: "text-muted",
-                    children: p.intl.string(p.t["UYy1/h"]),
+                    children: f.intl.string(f.t["UYy1/h"]),
                 }),
         ],
     });

@@ -10,8 +10,8 @@ var l = n(477900),
     d = n(377058),
     m = n(38785),
     p = n(270537),
-    C = n(241989),
-    h = n(721836),
+    h = n(241989),
+    C = n(721836),
     f = n(993408),
     E = n(80151),
     S = n(629042),
@@ -21,8 +21,8 @@ var l = n(477900),
     A = n(812095),
     P = n(287809),
     v = n(486020),
-    _ = n(158045),
-    x = n(580630),
+    x = n(158045),
+    _ = n(580630),
     T = n(240248),
     N = n(951305),
     b = n(284009),
@@ -34,7 +34,7 @@ var l = n(477900),
     k = n(31823),
     w = n(427675),
     U = n(977445),
-    D = n(118982),
+    D = n(331329),
     G = n(566980),
     F = n(652215),
     B = n(375708),
@@ -67,9 +67,9 @@ function z(e) {
             giftRecipient: a,
             ...s
         } = e,
-        o = (0, l.jsx)(C.WH, { sku: t, product: n }),
+        o = (0, l.jsx)(h.WH, { sku: t, product: n }),
         u = K(t);
-    return (0, l.jsx)(C.f7, {
+    return (0, l.jsx)(h.f7, {
         description: r,
         price: i,
         graphic: o,
@@ -99,7 +99,7 @@ function J(e) {
             null != n
                 ? (function (e) {
                       let t = P.default.getCurrentUser(),
-                          n = _.Ay.canUseShopDiscounts(t),
+                          n = x.Ay.canUseShopDiscounts(t),
                           l = (0, f.xM)(t),
                           i = (0, f.WD)(e, { hasShopDiscount: n, discount: (0, f.fT)(e, n) });
                       if (null != i && !i.showDefaultPriceOnly && i.showDiscountPrice) {
@@ -136,7 +136,7 @@ function ee(e) {
             unifiedCheckoutFlow: n,
             checkoutInvoicePreview: r,
             paymentSourceType: a,
-        } = (0, h.t4)((e) => {
+        } = (0, C.t4)((e) => {
             let t = e.get("checkoutSelectedPaymentSource");
             return {
                 unifiedCheckoutFlow: e.unifiedCheckoutFlow,
@@ -144,14 +144,14 @@ function ee(e) {
                 paymentSourceType: null != t ? t.type : null,
             };
         }),
-        { isGift: s, giftRecipient: C } = (0, N.Pv)(),
+        { isGift: s, giftRecipient: h } = (0, N.Pv)(),
         {
             sku: f,
             application: y,
             eligiblePaymentGateways: P,
             disabled: v,
         } = (function () {
-            let { selectedSkuId: e, purchaseState: t } = (0, h.t4)((e) => ({
+            let { selectedSkuId: e, purchaseState: t } = (0, C.t4)((e) => ({
                     selectedSkuId: e.selectedSkuId,
                     purchaseState: e.purchaseState,
                 })),
@@ -171,7 +171,7 @@ function ee(e) {
                 }
             );
         })(),
-        _ = i.useMemo(
+        x = i.useMemo(
             () =>
                 (function (e, t) {
                     let { skuId: n, paymentSourceType: i, isGift: r } = t;
@@ -255,7 +255,7 @@ function ee(e) {
                                     currency: n.currency,
                                     defaultExpanded: null != e,
                                 },
-                                priceText: (0, x.$g)(i, n.currency),
+                                priceText: (0, _.$g)(i, n.currency),
                                 discount: e,
                             }
                         );
@@ -269,7 +269,7 @@ function ee(e) {
             var e, t;
             return (
                 (e = n),
-                (t = { priceText: en, sku: f, application: y, giftRecipient: C }),
+                (t = { priceText: en, sku: f, application: y, giftRecipient: h }),
                 e === c.C.SLAYER_STOREFRONT_CHECKOUT
                     ? (0, l.jsx)(Q, { ...t })
                     : e === c.C.GUILD_PRODUCT_CHECKOUT
@@ -278,8 +278,8 @@ function ee(e) {
                         ? (0, l.jsx)(J, { ...t })
                         : (0, l.jsx)(z, { ...t })
             );
-        }, [n, f, y, C, en]),
-        er = i.useMemo(() => (null != r ? (0, x.$g)(r.total, r.currency) : void 0), [r]),
+        }, [n, f, y, h, en]),
+        er = i.useMemo(() => (null != r ? (0, _.$g)(r.total, r.currency) : void 0), [r]),
         ea = (0, E.A)(),
         es = i.useMemo(
             () =>
@@ -325,7 +325,7 @@ function ee(e) {
                 purchaseItemContent: ei,
                 invoiceSummaryContent: el,
                 paymentMethodContent: q,
-                legalContent: _,
+                legalContent: x,
                 promotionalNoticeContent: es,
                 upperInlineNoticeProps: b,
                 footerInlineNoticeProps: V,
@@ -336,6 +336,6 @@ function ee(e) {
     });
 }
 function et(e) {
-    let { isCheckoutDataLoading: t } = (0, h.t4)((e) => ({ isCheckoutDataLoading: e.get("isCheckoutDataLoading") }));
+    let { isCheckoutDataLoading: t } = (0, C.t4)((e) => ({ isCheckoutDataLoading: e.get("isCheckoutDataLoading") }));
     return t ? (0, l.jsx)(m.Ed, { shouldShowUnifiedHeader: !0 }) : (0, l.jsx)(ee, { ...e });
 }
