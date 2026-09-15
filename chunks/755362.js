@@ -43,8 +43,8 @@ var a,
     H = n(976713),
     U = n(673724),
     X = n(208137),
-    K = n(964992),
-    q = n(683180),
+    q = n(964992),
+    K = n(683180),
     W = n(805332),
     Z = n(277977),
     $ = n(972786);
@@ -54,6 +54,12 @@ function Q(e) {
 }
 var J = n(58703);
 let ee = [
+    {
+        date: "2026-09-14",
+        platforms: ["mobile"],
+        summary:
+            "The box for answering a question in your own words no longer grabs the keyboard the moment a question appears, and it reads as an answer rather than a heading.",
+    },
     {
         date: "2026-09-14",
         platforms: ["mobile"],
@@ -854,8 +860,8 @@ function eX() {
           })
         : null;
 }
-var eK = n(321593),
-    eq = n(580954),
+var eq = n(321593),
+    eK = n(580954),
     eW = n(192308),
     eZ = n(189213),
     e$ = (((a = {}).NO_PREVIEW = "no-preview"), (a.PERMISSIONS = "permissions"), a);
@@ -963,7 +969,7 @@ function tn(e) {
     return (0, l.jsxs)("div", {
         className: e5.OY,
         children: [
-            (0, l.jsx)(eK.Ay, { projectId: r.id }),
+            (0, l.jsx)(eq.Ay, { projectId: r.id }),
             (0, l.jsxs)(f.D, {
                 className: e5.W6,
                 onClick: p,
@@ -1044,11 +1050,11 @@ function ta(e) {
             ),
             [],
         ));
-    let q = (0, c.bG)([$.Ay], () => (null == G ? null : $.Ay.getIntegrationStatus(G)), [G]),
+    let K = (0, c.bG)([$.Ay], () => (null == G ? null : $.Ay.getIntegrationStatus(G)), [G]),
         { data: Q, isLoading: J } = (0, P.YY)(t?.preview_application_id ?? void 0),
         ee = null != G && z !== G,
-        et = q?.preview_ready === !0,
-        en = q?.has_activity === !0,
+        et = K?.preview_ready === !0,
+        en = K?.has_activity === !0,
         {
             availability: ei,
             activeMode: es,
@@ -1059,13 +1065,13 @@ function ta(e) {
             previewApplicationId: t?.preview_application_id ?? null,
             declaredActivity: en,
             installScope: t?.install_scope ?? null,
-            ownerAuthorizationRevoked: q?.owner_authorization_revoked === !0,
+            ownerAuthorizationRevoked: K?.owner_authorization_revoked === !0,
         }),
         ed = (0, e3.Qg)({
             installScope: t?.install_scope ?? null,
             previewReady: et,
-            integrationInstalled: q?.integration_installed ?? null,
-            botPermissionsChanged: q?.bot_permissions_changed === !0,
+            integrationInstalled: K?.integration_installed ?? null,
+            botPermissionsChanged: K?.bot_permissions_changed === !0,
         }),
         ep = r || ee || J,
         eh = O.intl.string(F.default["5gU57O"]),
@@ -1132,7 +1138,7 @@ function ta(e) {
         }, [eR, eD]),
         eV = i.useCallback(() => {
             var e, n;
-            (null != t && ((e = t.id), (n = eR?.id), (0, Z.Bn)(e), (0, eq.A)().leaveFrame(n)), s());
+            (null != t && ((e = t.id), (n = eR?.id), (0, Z.Bn)(e), (0, eK.A)().leaveFrame(n)), s());
         }, [t, eR?.id, s]),
         ez = i.useCallback(() => {
             null != t && (m(!0), (0, Z.dv)(t.id, O.intl.string(F.default["2ejwtJ"])));
@@ -1187,7 +1193,7 @@ function ta(e) {
         ),
         [eY],
     );
-    let eH = q?.integration_installed === !0 && t?.guild_id != null ? t.guild_id : o,
+    let eH = K?.integration_installed === !0 && t?.guild_id != null ? t.guild_id : o,
         eU = i.useCallback(async () => {
             null == t ||
                 (t.guild_id === eH && t.preview_guild_id === eH) ||
@@ -1199,11 +1205,11 @@ function ta(e) {
             } catch {}
             await eY();
         }, [eY, eU]),
-        eK = i.useCallback(() => {
+        eq = i.useCallback(() => {
             let e = t?.preview_application_id;
             null != t &&
                 null != e &&
-                K.A.openVibegrationsAppInstallModal({
+                q.A.openVibegrationsAppInstallModal({
                     applicationId: e,
                     application: Q ?? null,
                     guildId: eH,
@@ -1213,8 +1219,8 @@ function ta(e) {
                 });
         }, [eX, eH, Q, t]),
         eZ = ed
-            ? { type: "permissions", onReviewPermissions: eK, loading: J || ee }
-            : ee && null == q
+            ? { type: "permissions", onReviewPermissions: eq, loading: J || ee }
+            : ee && null == K
               ? { type: "checking" }
               : void 0;
     i.useEffect(() => {
@@ -1461,7 +1467,7 @@ function tl(e) {
     let T = i.useMemo(
             () =>
                 t
-                    .filter((e) => (0, q.X0)(e, r))
+                    .filter((e) => (0, K.X0)(e, r))
                     .slice()
                     .sort((e, t) =>
                         null == e.updated_at ? 1 : null == t.updated_at ? -1 : t.updated_at.localeCompare(e.updated_at),
