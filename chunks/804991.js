@@ -18,91 +18,86 @@ var n = e(477900),
     v = e(759967),
     S = e(375708);
 function k(l) {
-    let { projectId: t, guildId: e, transitionState: k, onClose: C } = l,
-        j = (0, i.bG)([m.Ay], () => m.Ay.getProject(t), [t]),
-        E = (0, i.yK)([x.A], () => (null != e ? x.A.getSortedRoles(e) : []), [e]),
-        y = a.useMemo(
+    let t,
+        { projectId: e, guildId: k, transitionState: C, onClose: j } = l,
+        E = (0, i.bG)([m.Ay], () => m.Ay.getProject(e), [e]),
+        y = (0, i.yK)([x.A], () => (null != k ? x.A.getSortedRoles(k) : []), [k]),
+        A = a.useMemo(
             () =>
-                E.map((l) => ({
+                y.map((l) => ({
                     key: l.id,
                     id: l.id,
                     label: l.name,
                     value: l.id,
                     leading: () => (0, n.jsx)(s.R, { color: l.colorString ?? p.TpD, colors: l.colorStrings }),
                 })),
-            [E],
+            [y],
         ),
-        A = j?.collaborator_role_ids ?? [],
-        [P] = a.useState(j?.name ?? ""),
-        [_, T] = a.useState(P),
-        [w, B] = a.useState(j?.flags ?? 0),
-        [q, H] = a.useState(() => [...A]),
-        [I, L] = a.useState(!1),
-        [R, U] = a.useState(null),
-        [V, M] = a.useState(null),
-        [Q, W] = a.useState(null),
-        Z = a.useId(),
-        D = _.trim(),
-        F = null != j && (0, f.IU)(j),
-        K = null != j && null != e && (0, f.RX)(j),
-        { isPublic: z, isShared: G } = (0, b.oA)(w),
-        J = null != j && D !== P,
-        O = F && w !== (j?.flags ?? 0),
-        X =
-            K &&
-            !(function (l, t) {
-                if (l.length !== t.length) return !1;
-                let e = new Set(t);
-                return l.every((l) => e.has(l));
-            })(q, A),
-        Y = J || O || X,
-        N = a.useCallback((l) => {
-            (T(l), U(null), W(null));
+        P = E?.collaborator_role_ids ?? [],
+        [_] = a.useState(E?.name ?? ""),
+        [T, w] = a.useState(_),
+        [B, q] = a.useState(E?.flags ?? 0),
+        [H, I] = a.useState(() => [...P]),
+        [L, R] = a.useState(!1),
+        [U, V] = a.useState(null),
+        [M, Q] = a.useState(null),
+        [W, Z] = a.useState(null),
+        z = a.useId(),
+        D = T.trim(),
+        F = null != E && (0, f.IU)(E),
+        K = null != E && null != k && (0, f.RX)(E),
+        { isPublic: G, isShared: J } = (0, b.oA)(B),
+        O = null != E && D !== _,
+        X = F && B !== (E?.flags ?? 0),
+        Y = K && !((t = H instanceof Set ? H : new Set(H)).size === P.length && P.every((l) => t.has(l))),
+        N = O || X || Y,
+        $ = a.useCallback((l) => {
+            (w(l), V(null), Z(null));
         }, []),
-        $ = a.useCallback((l, t) => {
-            (B((e) => (t ? e | l : e & ~l)), M(null), W(null));
+        ll = a.useCallback((l, t) => {
+            (q((e) => (t ? e | l : e & ~l)), Q(null), Z(null));
         }, []),
-        ll = a.useCallback((l) => {
-            l.length > f.sq ? M(S.intl.formatToPlainString(v.default.VPUL05, { max: f.sq })) : (H(l), M(null), W(null));
+        lt = a.useCallback((l) => {
+            l.length > f.sq ? Q(S.intl.formatToPlainString(v.default.VPUL05, { max: f.sq })) : (I(l), Q(null), Z(null));
         }, []),
-        lt = a.useCallback(
+        le = a.useCallback(
             async (l) => {
-                if ((l.preventDefault(), null == j || !Y || I)) return;
-                if ("" === D) return void U(S.intl.string(v.default.I2hgEB));
-                let n = {};
-                (J && (n.name = D),
-                    O && (n.flags = w),
-                    X && (n.collaborator_role_ids = [...q].sort()),
-                    null == j.guild_id && null != e && (X || (O && z)) && (n.guild_id = e),
-                    L(!0),
-                    W(null));
+                if ((l.preventDefault(), null == E || !N || L)) return;
+                if ("" === D) return void V(S.intl.string(v.default.I2hgEB));
+                let t = {};
+                (O && (t.name = D),
+                    X && (t.flags = B),
+                    Y && (t.collaborator_role_ids = [...H].sort()),
+                    null == E.guild_id && null != k && (Y || (X && G)) && (t.guild_id = k),
+                    R(!0),
+                    Z(null));
                 try {
-                    if (!(await (0, h.CW)(t, n)).ok) return void W(S.intl.string(v.default.dxH2ZV));
-                    await C();
+                    if (!(await (0, h.CW)(e, t)).ok) return void Z(S.intl.string(v.default.dxH2ZV));
+                    await j();
                 } catch {
-                    W(S.intl.string(v.default.dxH2ZV));
+                    Z(S.intl.string(v.default.dxH2ZV));
                 } finally {
-                    L(!1);
+                    R(!1);
                 }
             },
-            [w, O, e, Y, z, J, C, j, t, X, I, q, D],
+            [B, X, k, N, G, O, j, E, e, Y, L, H, D],
         );
     return (0, n.jsx)("form", {
-        onSubmit: lt,
+        onSubmit: le,
         children: (0, n.jsx)(r.Modal, {
-            transitionState: k,
-            onClose: C,
+            transitionState: C,
+            onClose: j,
             title: S.intl.string(v.default["xhcY+n"]),
             size: "md",
             actions: [
-                { text: S.intl.string(S.t["ETE/oC"]), variant: "secondary", onClick: C, disabled: I },
+                { text: S.intl.string(S.t["ETE/oC"]), variant: "secondary", onClick: j, disabled: L },
                 {
                     text: S.intl.string(S.t["R3BPH+"]),
                     variant: "primary",
                     type: "submit",
-                    onClick: lt,
-                    loading: I,
-                    disabled: !Y || "" === D || I,
+                    onClick: le,
+                    loading: L,
+                    disabled: !N || "" === D || L,
                 },
             ],
             children: (0, n.jsxs)(u.B, {
@@ -110,11 +105,11 @@ function k(l) {
                 children: [
                     (0, n.jsx)(o.k, {
                         label: S.intl.string(v.default.u9UpIx),
-                        value: _,
-                        onChange: N,
-                        error: R,
+                        value: T,
+                        onChange: $,
+                        error: U,
                         maxLength: 128,
-                        disabled: I,
+                        disabled: L,
                         fullWidth: !0,
                         autoFocus: !0,
                     }),
@@ -122,18 +117,18 @@ function k(l) {
                         ? (0, n.jsx)(d.d, {
                               label: S.intl.string(v.default.EHMPvA),
                               description: S.intl.string(v.default.bQQ4uT),
-                              checked: G,
-                              disabled: I,
-                              onChange: (l) => $(f.A2.SHAREABLE, l),
+                              checked: J,
+                              disabled: L,
+                              onChange: (l) => ll(f.A2.SHAREABLE, l),
                           })
                         : null,
                     F
                         ? (0, n.jsx)(d.d, {
                               label: S.intl.string(v.default.fvxLKl),
                               description: S.intl.string(v.default.Eb3Pe3),
-                              checked: z,
-                              disabled: I,
-                              onChange: (l) => $(f.A2.PUBLIC, l),
+                              checked: G,
+                              disabled: L,
+                              onChange: (l) => ll(f.A2.PUBLIC, l),
                           })
                         : null,
                     K
@@ -149,48 +144,48 @@ function k(l) {
                                       selectionMode: "multiple",
                                       label: S.intl.string(v.default.fqvhf0),
                                       placeholder: S.intl.string(v.default.xEhUCx),
-                                      value: q,
-                                      options: y,
+                                      value: H,
+                                      options: A,
                                       maxOptionsVisible: 6,
                                       wrapTags: !0,
-                                      disabled: I || !z,
-                                      "aria-invalid": null != V,
-                                      "aria-errormessage": null != V ? Z : void 0,
-                                      onSelectionChange: ll,
+                                      disabled: L || !G,
+                                      "aria-invalid": null != M,
+                                      "aria-errormessage": null != M ? z : void 0,
+                                      onSelectionChange: lt,
                                   }),
                                   (0, n.jsx)(c.E, {
                                       variant: "text-xs/normal",
                                       color: "text-muted",
                                       children: S.intl.formatToPlainString(v.default.eaqbJt, {
-                                          count: q.length,
+                                          count: H.length,
                                           max: f.sq,
                                       }),
                                   }),
-                                  z
+                                  G
                                       ? null
                                       : (0, n.jsx)(c.E, {
                                             variant: "text-xs/normal",
                                             color: "text-muted",
                                             children: S.intl.string(v.default.FTvt33),
                                         }),
-                                  null != V
+                                  null != M
                                       ? (0, n.jsx)(c.E, {
-                                            id: Z,
+                                            id: z,
                                             variant: "text-xs/normal",
                                             color: "text-feedback-critical",
                                             role: "alert",
-                                            children: V,
+                                            children: M,
                                         })
                                       : null,
                               ],
                           })
                         : null,
-                    null != Q
+                    null != W
                         ? (0, n.jsx)(c.E, {
                               variant: "text-xs/normal",
                               color: "text-feedback-critical",
                               role: "alert",
-                              children: Q,
+                              children: W,
                           })
                         : null,
                 ],
