@@ -70,31 +70,32 @@ function R(t) {
             onClick: R,
             shouldShowTooltip: L,
             tooltipConfig: g = {},
+            tabIndex: k = 0,
         } = t,
-        k = y[p],
-        { reducedMotion: v } = n.useContext(u.C),
-        C = n.useRef(null),
-        [w, U] = n.useState(!1),
-        F = _ && !w,
-        O = F ? o.HeartIcon : d.y,
-        b = l()(m.normalIconColor, F && m.wishlistedOrAnimating);
+        v = y[p],
+        { reducedMotion: C } = n.useContext(u.C),
+        w = n.useRef(null),
+        [U, F] = n.useState(!1),
+        O = _ && !U,
+        b = O ? o.HeartIcon : d.y,
+        W = l()(m.normalIconColor, O && m.wishlistedOrAnimating);
     n.useEffect(() => {
-        U(!1);
+        F(!1);
     }, [e]);
-    let W = n.useCallback(
+    let H = n.useCallback(
             (t) => {
-                (t.stopPropagation(), a || (_ || v.enabled ? _ && w && U(!1) : U(!0), R()));
+                (t.stopPropagation(), a || (_ || C.enabled ? _ && U && F(!1) : F(!0), R()));
             },
-            [a, _, v.enabled, w, R],
+            [a, _, C.enabled, U, R],
         ),
-        H = !a && !_ && !w,
-        P = n.useCallback(
+        P = !a && !_ && !U,
+        D = n.useCallback(
             (t) => {
-                t.target === t.currentTarget && w && requestAnimationFrame(() => U(!1));
+                t.target === t.currentTarget && U && requestAnimationFrame(() => F(!1));
             },
-            [w],
+            [U],
         );
-    function D() {
+    function M() {
         let t = E.intl.formatToPlainString(E.t["7kFjeK"], { productName: r });
         return (0, i.jsx)(c.D, {
             className: l()(
@@ -109,25 +110,26 @@ function R(t) {
                 },
                 s,
             ),
-            innerRef: C,
-            onClick: W,
+            innerRef: w,
+            onClick: H,
+            tabIndex: k,
             "aria-label": t,
             "aria-pressed": _,
             "aria-busy": f,
             "aria-disabled": a,
-            children: v.enabled
-                ? (0, i.jsx)(O, { colorClass: void 0 ?? b, size: k })
+            children: C.enabled
+                ? (0, i.jsx)(b, { colorClass: void 0 ?? W, size: v })
                 : (0, i.jsxs)("div", {
-                      className: l()(m.iconContainer, H && m.canAnimate),
+                      className: l()(m.iconContainer, P && m.canAnimate),
                       children: [
                           (0, i.jsx)("span", {
-                              className: l()(m.iconWrapper, H && m.canHover),
-                              children: (0, i.jsx)(O, { colorClass: void 0 ?? b, size: k }),
+                              className: l()(m.iconWrapper, P && m.canHover),
+                              children: (0, i.jsx)(b, { colorClass: void 0 ?? W, size: v }),
                           }),
                           (0, i.jsx)("span", {
-                              className: l()(m.animationOverlay, w && m.clickAnimation),
-                              onAnimationEnd: P,
-                              children: (0, i.jsx)(o.HeartIcon, { size: k }),
+                              className: l()(m.animationOverlay, U && m.clickAnimation),
+                              onAnimationEnd: D,
+                              children: (0, i.jsx)(o.HeartIcon, { size: v }),
                           }),
                       ],
                   }),
@@ -136,12 +138,12 @@ function R(t) {
     if (A && !a) {
         let t = g.firstTimeTitle ?? E.intl.string(E.t["47Rhc3"]),
             e = g.firstTimeBody ?? E.intl.string(E.t.PXjA0b);
-        return (0, i.jsx)(S.u, { title: t, body: e, shouldShow: L, children: D() });
+        return (0, i.jsx)(S.u, { title: t, body: e, shouldShow: L, children: M() });
     }
-    let M = a
+    let x = a
         ? (g.disabled ?? E.intl.string(E.t["50TX9k"]))
         : _
           ? (g.remove ?? E.intl.string(E.t.yr9TTf))
           : (g.add ?? E.intl.string(E.t["8DkMEQ"]));
-    return (0, i.jsx)(I.m, { text: M, ariaHidden: !a, shouldShow: L, children: D() });
+    return (0, i.jsx)(I.m, { text: x, ariaHidden: !a, shouldShow: L, children: M() });
 }

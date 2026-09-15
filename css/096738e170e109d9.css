@@ -1,3 +1,17 @@
+.child_a226a5 {
+    align-items: center;
+    background: pink;
+    border-radius: 8px;
+    color: #000;
+    cursor: pointer;
+    display: flex;
+    font-size: 24px;
+    height: 100px;
+    justify-content: center;
+    padding: 12px;
+    width: 100px
+}
+
 .badgeRow__9b0aa {
     align-items: center;
     display: flex;
@@ -189,4 +203,4 @@
     --control-icon-only-icon-default: var(--text-strong)
 }
 
-/*# sourceMappingURL=540ae1a1d1602a82.css.map*/
+/*# sourceMappingURL=096738e170e109d9.css.map*/
