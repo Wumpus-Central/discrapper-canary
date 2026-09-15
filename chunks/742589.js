@@ -55,7 +55,7 @@ function C(e) {
         role: p,
         hideSearch: S,
         disableDoubleClick: N,
-        disableFocusRingScope: m,
+        disableFocusRingScope: L,
     } = e;
     return (0, i.jsx)(u.Ay, {
         className: n,
@@ -81,7 +81,7 @@ function C(e) {
         "aria-labelledby": I,
         role: p,
         scrollable: T,
-        disableFocusRingScope: m,
+        disableFocusRingScope: L,
         children: t,
     });
 }

@@ -37,8 +37,8 @@ var i = n(477900),
     G = n(332173),
     w = n(402860),
     H = n(734057),
-    B = n(317525),
-    F = n(71393),
+    F = n(317525),
+    B = n(71393),
     V = n(994500);
 n(827669);
 var z = n(375708),
@@ -65,7 +65,7 @@ let X = l.memo(function (e) {
             }, [])),
             D.D3({ channel: r, type: "channel" }, t),
             { onCopy: s, copyRef: n }),
-        g = (0, u.bG)([F.A], () => F.A.getGuild(r.guild_id), [r.guild_id]);
+        g = (0, u.bG)([B.A], () => B.A.getGuild(r.guild_id), [r.guild_id]);
     if (
         (l.useEffect(() => {
             (null == c || (c.type === A.kc.CHAT && void 0 === c.application_command)) && U.S7(r.id, o);
@@ -150,13 +150,13 @@ let X = l.memo(function (e) {
                             }
                             case A.n4.ROLE: {
                                 let e = s.value.toString(),
-                                    t = null != r ? B.A.getRole(r.id, e) : void 0;
+                                    t = null != r ? F.A.getRole(r.id, e) : void 0;
                                 null != t && (n = (0, i.jsxs)(G.A, { ...Y, children: ["@", t.name] }));
                                 break;
                             }
                             case A.n4.MENTIONABLE: {
                                 let e = s.value.toString(),
-                                    t = null != r ? B.A.getRole(r.id, e) : void 0;
+                                    t = null != r ? F.A.getRole(r.id, e) : void 0;
                                 if (null != t) n = (0, i.jsxs)(G.A, { children: ["@", t.name] });
                                 else {
                                     let t = S.default.getUser(e);
@@ -364,13 +364,13 @@ function ei(e) {
         G = (0, M.d8)(n.interaction?.user, s),
         w = (0, M.d8)(D, s),
         H = l.useMemo(() => (e.compact ? (0, Z.A)((0, R.i$)(d()(), "LT")) : null), [e.compact]),
-        B = (0, x.Gp)(s.id),
-        F = n.interaction;
-    if (null == F || null == G) return null;
+        F = (0, x.Gp)(s.id),
+        B = n.interaction;
+    if (null == B || null == G) return null;
     function V() {
-        if (null == F) return null;
-        let t = ee(e, F.user, 0, G, (e) => L(e, F.user, [E.A.AVATAR]), y),
-            n = et(e, F.user, 0, G, (e) => L(e, F.user));
+        if (null == B) return null;
+        let t = ee(e, B.user, 0, G, (e) => L(e, B.user, [E.A.AVATAR]), y),
+            n = et(e, B.user, 0, G, (e) => L(e, B.user));
         return (0, i.jsxs)(l.Fragment, { children: [t, n] }, "user");
     }
     if (n?.activityInstance === null || (0, N.V)(n))
@@ -468,7 +468,7 @@ function ei(e) {
             }),
                 (0, f.LV)({ guildId: s.guild_id }));
         }
-        t = B
+        t = F
             ? z.intl.format(z.t.kfV8WM, {
                   userHook: V,
                   activityHook: function () {

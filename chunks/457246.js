@@ -29,7 +29,7 @@ function d(e) {
             },
             [n],
         ),
-        h = i.useMemo(
+        m = i.useMemo(
             () =>
                 null == t || 0 === t.length
                     ? null
@@ -49,5 +49,5 @@ function d(e) {
                       }),
             [t, d, A],
         );
-    return (0, l.jsx)(a.Dr, { id: "region-select", label: u.intl.string(u.t.w8gMqh), subtext: d.name, children: h });
+    return (0, l.jsx)(a.Dr, { id: "region-select", label: u.intl.string(u.t.w8gMqh), subtext: d.name, children: m });
 }

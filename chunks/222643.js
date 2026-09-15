@@ -13,23 +13,23 @@ function d(e) {
             dismissed: t,
             onDismiss: d,
             renderComponent: A,
-            nudgeAlignIntoViewport: h = !1,
-            skipForceHide: m = !1,
+            nudgeAlignIntoViewport: m = !1,
+            skipForceHide: h = !1,
         } = e,
         C = i.useContext(c.vG),
-        [E, p] = i.useState(""),
-        [g, f] = i.useState(!1),
-        I = (0, s.bG)([o.Ay], () => o.Ay.callHeaderHeight),
-        x = i.useRef(null),
-        v = i.useRef(0);
+        [p, g] = i.useState(""),
+        [E, f] = i.useState(!1),
+        x = (0, s.bG)([o.Ay], () => o.Ay.callHeaderHeight),
+        v = i.useRef(null),
+        I = i.useRef(0);
     (i.useEffect(() => {
         let e = n.current;
         if (null != e) return (e.addEventListener("click", d), () => e.removeEventListener("click", d));
     }),
         i.useEffect(() => {
-            m || (p(String(v.current)), f(void 0 !== I && I < (x.current?.clientHeight ?? 300) + 24), (v.current += 1));
-        }, [I, x, m]));
-    let { preventIdle: T, allowIdle: _ } = (0, u.o)("popup");
+            h || (g(String(I.current)), f(void 0 !== x && x < (v.current?.clientHeight ?? 300) + 24), (I.current += 1));
+        }, [x, v, h]));
+    let { preventIdle: T, allowIdle: j } = (0, u.o)("popup");
     return n?.current == null
         ? null
         : (0, l.jsx)(r.Ay, {
@@ -38,16 +38,16 @@ function d(e) {
                   position: "top",
                   align: "center",
                   spacing: 0,
-                  positionKey: E,
-                  nudgeAlignIntoViewport: h,
+                  positionKey: p,
+                  nudgeAlignIntoViewport: m,
                   children: () =>
                       (0, l.jsx)("div", {
-                          ref: x,
+                          ref: v,
                           onMouseOver: T,
                           onFocus: T,
-                          onBlur: _,
-                          onMouseLeave: _,
-                          children: A({ hidden: g || C || t, onDismiss: d }),
+                          onBlur: j,
+                          onMouseLeave: j,
+                          children: A({ hidden: E || C || t, onDismiss: d }),
                       }),
               }),
           });

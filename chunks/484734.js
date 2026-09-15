@@ -29,22 +29,22 @@ var i = n(477900),
     p = n(47167),
     S = n(713654),
     N = n(503698),
-    m = n.n(N),
-    L = n(62986);
+    L = n.n(N),
+    m = n(62986);
 let f = function (e) {
     let { value: t = 0, text: n, className: l, lowImportance: r, ...s } = e;
     return null != n
-        ? (0, i.jsx)("div", { className: m()(L.i, l, r && L.H), ...s, children: n })
+        ? (0, i.jsx)("div", { className: L()(m.i, l, r && m.H), ...s, children: n })
         : t > 0
-          ? (0, i.jsx)("div", { className: m()(L.i, l, r && L.H), ...s, children: t })
+          ? (0, i.jsx)("div", { className: L()(m.i, l, r && m.H), ...s, children: t })
           : null;
 };
 var O = n(769015),
     b = n(106191),
     R = n(548118),
     v = n(376943),
-    y = n(636585),
-    U = n(71393),
+    U = n(636585),
+    y = n(71393),
     D = n(994500),
     G = n(287809),
     M = n(147036),
@@ -175,7 +175,7 @@ class H extends l.Component {
         let { voiceStates: e, channel: t } = this.props;
         return null == e
             ? null
-            : (0, i.jsx)(y.A, {
+            : (0, i.jsx)(U.A, {
                   className: w.x7,
                   guildId: t.guild_id,
                   users: e.map((e) => {
@@ -195,7 +195,7 @@ class H extends l.Component {
     }
     getAccessibilityLabel() {
         let { channel: e } = this.props,
-            t = U.A.getGuild(this.props.channel.guild_id)?.name,
+            t = y.A.getGuild(this.props.channel.guild_id)?.name,
             n = (0, p.m1)(e, G.default, D.A),
             i = (0, M.Jg)(e);
         return P.intl.formatToPlainString(P.t["Vw/da+"], { name: n, type: i, guild: t });

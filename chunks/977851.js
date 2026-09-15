@@ -1,4 +1,4 @@
-(t.d(n, { V: () => _ }), t(321073));
+(t.d(n, { V: () => j }), t(321073));
 var l = t(477900),
     i = t(582128),
     s = t(503698),
@@ -9,59 +9,59 @@ var l = t(477900),
     u = t(688810),
     d = t(198052),
     A = t(384059),
-    h = t(573163),
-    m = t(309010),
+    m = t(573163),
+    h = t(309010),
     C = t(741961),
-    E = t(234320),
-    p = t(20465),
-    g = t(108460),
+    p = t(234320),
+    g = t(20465),
+    E = t(108460),
     f = t(204651),
-    I = t(652215),
-    x = t(375708);
-function v(e) {
+    x = t(652215),
+    v = t(375708);
+function I(e) {
     let n = (0, o.bG)([C.A], () => !(0, r.isEmpty)(C.A.getTypingUsers(e)), [e]),
-        t = (0, o.bG)([m.Ay], () => m.Ay.getVoiceChannelId() === e, [e]),
+        t = (0, o.bG)([h.Ay], () => h.Ay.getVoiceChannelId() === e, [e]),
         { unreadCount: l, mentionCount: i } = (0, o.cf)(
-            [h.Ay],
-            () => ({ unreadCount: h.Ay.getUnreadCount(e), mentionCount: h.Ay.getMentionCount(e) }),
+            [m.Ay],
+            () => ({ unreadCount: m.Ay.getUnreadCount(e), mentionCount: m.Ay.getMentionCount(e) }),
             [e],
         );
     return { unreadCount: l, mentionCount: i, voiceChannelIsSelected: t, isTyping: n };
 }
 function T(e) {
     let { className: n, channelId: t } = e,
-        { unreadCount: i, mentionCount: s, isTyping: a, voiceChannelIsSelected: r } = v(t);
-    return (0, l.jsx)(g.A, { className: n, unreadCount: i, mentionCount: s, isTyping: a, canBadge: r });
+        { unreadCount: i, mentionCount: s, isTyping: a, voiceChannelIsSelected: r } = I(t);
+    return (0, l.jsx)(E.A, { className: n, unreadCount: i, mentionCount: s, isTyping: a, canBadge: r });
 }
-function _(e) {
+function j(e) {
     let n,
         {
             channelId: t,
             className: s,
             showingClassName: r,
-            onClick: h,
-            inPopout: m,
+            onClick: m,
+            inPopout: h,
             showRequestToSpeakSidebar: C,
-            toggleRequestToSpeakSidebar: g,
-            ..._
+            toggleRequestToSpeakSidebar: E,
+            ...j
         } = e,
-        { parentAnalyticsLocation: j } = (0, u.Ay)(),
-        { disabled: N } = _,
-        S = i.useRef(null),
-        b = (0, o.bG)([d.A], () => d.A.getChatOpen(t), [t]),
+        { parentAnalyticsLocation: N } = (0, u.Ay)(),
+        { disabled: _ } = j,
+        b = i.useRef(null),
+        O = (0, o.bG)([d.A], () => d.A.getChatOpen(t), [t]),
         {
-            isShowing: O,
+            isShowing: S,
             unreadCount: y,
             mentionCount: R,
         } = (function (e) {
-            let { unreadCount: n, mentionCount: t, isTyping: l } = v(e),
+            let { unreadCount: n, mentionCount: t, isTyping: l } = I(e),
                 [s, a] = i.useState(!1);
             return (
                 i.useEffect(() => {
                     a(n > 0);
                     let e = setTimeout(() => {
                         a(!1);
-                    }, p.R);
+                    }, g.R);
                     return () => {
                         (clearTimeout(e), a(!1));
                     };
@@ -70,8 +70,8 @@ function _(e) {
             );
         })(t),
         M = i.useCallback(() => {
-            ((0, A.X)(j, A.O.CHAT, !b), h?.(), !b && C && g?.(), c.A.updateChatOpen(t, !b));
-        }, [t, b, h, C, g, j]),
+            ((0, A.X)(N, A.O.CHAT, !O), m?.(), !O && C && E?.(), c.A.updateChatOpen(t, !O));
+        }, [t, O, m, C, E, N]),
         L = i.useCallback(
             (e) => {
                 let { className: n } = e;
@@ -80,14 +80,14 @@ function _(e) {
             [t],
         ),
         D = i.useCallback(() => {
-            S.current?.focus();
+            b.current?.focus();
         }, []);
-    (0, E.Vo)({ event: I.jej.FOCUS_CHAT_BUTTON, handler: N ? null : D });
+    (0, p.Vo)({ event: x.jej.FOCUS_CHAT_BUTTON, handler: _ ? null : D });
     let [P, k] = i.useState(!1),
         G = i.useCallback(() => {
-            m && k(!0);
-        }, [m]);
-    ((0, E.Vo)({ event: I.jej.SHOW_TEXT_IN_VOICE_POPOUT_COMING_SOON_TIP, handler: G }),
+            h && k(!0);
+        }, [h]);
+    ((0, p.Vo)({ event: x.jej.SHOW_TEXT_IN_VOICE_POPOUT_COMING_SOON_TIP, handler: G }),
         i.useEffect(() => {
             let e;
             return (
@@ -100,20 +100,20 @@ function _(e) {
                 }
             );
         }, [P]));
-    let V = [(n = m && N ? x.intl.string(x.t.DPgc5h) : b ? x.intl.string(x.t.nthdxB) : x.intl.string(x.t["5KxXrK"]))];
+    let U = [(n = h && _ ? v.intl.string(v.t.DPgc5h) : O ? v.intl.string(v.t.nthdxB) : v.intl.string(v.t["5KxXrK"]))];
     return (
-        R > 0 && V.push(x.intl.formatToPlainString(x.t["3l1GOx"], { mentionCount: R })),
-        y > 0 && V.push(x.intl.string(x.t.x5zAGZ)),
+        R > 0 && U.push(v.intl.formatToPlainString(v.t["3l1GOx"], { mentionCount: R })),
+        y > 0 && U.push(v.intl.string(v.t.x5zAGZ)),
         (0, l.jsx)(f.A, {
-            buttonRef: S,
+            buttonRef: b,
             onClick: M,
             label: n,
-            "aria-label": V.join(", "),
+            "aria-label": U.join(", "),
             iconComponent: L,
             tooltipPosition: "bottom",
-            wrapperClassName: a()(s, null != r && { [r]: O }),
+            wrapperClassName: a()(s, null != r && { [r]: S }),
             forceTooltipOpen: P,
-            ..._,
+            ...j,
         })
     );
 }

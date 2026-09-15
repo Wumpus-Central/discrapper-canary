@@ -1,4 +1,4 @@
-t.d(n, { A: () => h });
+t.d(n, { A: () => m });
 var l = t(477900),
     i = t(582128),
     s = t(7807),
@@ -9,10 +9,10 @@ var l = t(477900),
     u = t(49999),
     d = t(375708),
     A = t(401191);
-function h(e) {
-    let { targetElementRef: n, openSoundboardPicker: t, shouldShowSoundboardPicker: h } = e,
-        [m, C] = (0, o.kn)([a.M.SOUNDBOARD_DESKTOP_NUX]),
-        E = i.useMemo(
+function m(e) {
+    let { targetElementRef: n, openSoundboardPicker: t, shouldShowSoundboardPicker: m } = e,
+        [h, C] = (0, o.kn)([a.M.SOUNDBOARD_DESKTOP_NUX]),
+        p = i.useMemo(
             () => [
                 {
                     icon: s.J,
@@ -25,9 +25,9 @@ function h(e) {
             [C, t],
         );
     return (i.useEffect(() => {
-        h && m === a.M.SOUNDBOARD_DESKTOP_NUX && C(u.i.INDIRECT_ACTION);
-    }, [C, h, m]),
-    m !== a.M.SOUNDBOARD_DESKTOP_NUX)
+        m && h === a.M.SOUNDBOARD_DESKTOP_NUX && C(u.i.INDIRECT_ACTION);
+    }, [C, m, h]),
+    h !== a.M.SOUNDBOARD_DESKTOP_NUX)
         ? null
         : (0, l.jsx)(c.A, {
               children: (0, l.jsx)(r.A, {
@@ -37,7 +37,7 @@ function h(e) {
                   body: d.intl.string(d.t.lyhz2x),
                   position: "top",
                   gradientColor: "pink",
-                  actions: E,
+                  actions: p,
                   onRequestClose: () => C(u.i.DISMISS),
               }),
           });

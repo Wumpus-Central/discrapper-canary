@@ -123,8 +123,8 @@ var S = n(666176),
     G = n(554146),
     w = n(43105),
     H = n(414499),
-    B = n(116833),
-    F = n(735991);
+    F = n(116833),
+    B = n(735991);
 let V = (0, n(945810).mj)({
     name: "2025-12-game-invite-account-linking-entry-point",
     kind: "user",
@@ -345,7 +345,7 @@ function ef(e) {
             partyStatusElement: f,
             presenceActivity: I,
         } = e,
-        C = (0, F.Ag)(o),
+        C = (0, B.Ag)(o),
         { iconSrc: _, name: v } = (function (e, t) {
             let { bot: n } = t;
             return {
@@ -438,7 +438,7 @@ function ef(e) {
                         return (0, i.jsx)(w.A, {
                             graphic: {
                                 type: "dynamic",
-                                component: B.DynamicGraphicComponent.ACCOUNT_LINK_DISPLAY,
+                                component: F.DynamicGraphicComponent.ACCOUNT_LINK_DISPLAY,
                                 props: { application: o },
                             },
                             title: j.intl.formatToPlainString(j.t["lo6H6+"], { gameName: o.name }),

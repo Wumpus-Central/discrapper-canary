@@ -19,24 +19,24 @@ var i = n(435558),
     p = n(309010),
     S = n(543465),
     N = n(403362),
-    m = n(935208),
-    L = n(297469),
+    L = n(935208),
+    m = n(297469),
     f = n(355097);
 let O = null,
     b = null,
-    R = new L.Ay();
+    R = new m.Ay();
 function v() {
     let e = p.Ay.getChannelId(),
         t = p.Ay.getVoiceChannelId();
     return ((O = e), (b = t), R.clear());
 }
-function y(e) {
+function U(e) {
     let {
         guild: { id: t },
     } = e;
     return R.clearGuildId(t);
 }
-function U(e) {
+function y(e) {
     let {
         channel: { guild_id: t },
     } = e;
@@ -142,8 +142,8 @@ let F = new B(s.h, {
         let { channelId: t } = e;
         return R.clearGuildId(C.A.getChannel(t)?.guild_id);
     },
-    CHANNEL_CREATE: U,
-    CHANNEL_DELETE: U,
+    CHANNEL_CREATE: y,
+    CHANNEL_DELETE: y,
     CHANNEL_LOCAL_ACK: G,
     CHANNEL_MUTE_EXPIRED: D,
     CHANNEL_RTC_UPDATE_CHAT_OPEN: G,
@@ -192,8 +192,8 @@ let F = new B(s.h, {
     GAMES_DATABASE_FETCH: j,
     GAMES_DATABASE_UPDATE: j,
     GUILD_APPLICATIONS_FETCH_SUCCESS: j,
-    GUILD_CREATE: y,
-    GUILD_DELETE: y,
+    GUILD_CREATE: U,
+    GUILD_DELETE: U,
     GUILD_MEMBER_UPDATE: function (e) {
         let { guildId: t, user: n } = e;
         return E.default.getId() === n.id && R.clearGuildId(t);
@@ -208,7 +208,7 @@ let F = new B(s.h, {
     GUILD_SCHEDULED_EVENT_DELETE: H,
     GUILD_SCHEDULED_EVENT_UPDATE: H,
     GUILD_TOGGLE_COLLAPSE_MUTED: D,
-    GUILD_UPDATE: y,
+    GUILD_UPDATE: U,
     IMPERSONATE_STOP: D,
     IMPERSONATE_UPDATE: D,
     LOAD_CHANNELS: function (e) {
@@ -266,7 +266,7 @@ let F = new B(s.h, {
             i = !1;
         return (
             null != n &&
-                m.default.keys(n).forEach((e) => {
+                L.default.keys(n).forEach((e) => {
                     null != n[e].guildRecentsDismissedAt && (i = R.updateRecentsCategory(e) || i);
                 }),
             i

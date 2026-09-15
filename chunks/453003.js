@@ -38,8 +38,8 @@ n(938796);
 var G = n(665260),
     w = n(574381),
     H = n(134861),
-    B = n(528767),
-    F = n(182892),
+    F = n(528767),
+    B = n(182892),
     V = n(652215),
     z = n(55730),
     J = n(287613),
@@ -274,9 +274,9 @@ function el(e) {
                     if (null == e) return null;
                     let t = e.application_id;
                     if (null == t || !(0, G.Lt)(e.flags ?? 0, V.jUm.SUPPORTS_REMOTE_ACTIVITY_ACTION_JOIN)) return null;
-                    let n = B.A.getRemoteApplicationActivity(t);
+                    let n = F.A.getRemoteApplicationActivity(t);
                     return null == n ||
-                        (0, F.e)(n) ||
+                        (0, B.e)(n) ||
                         (null != n.application_id &&
                             (H.A.isConnected(n.application_id) ||
                                 (function (e) {

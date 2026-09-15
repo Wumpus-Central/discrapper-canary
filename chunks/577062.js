@@ -13,37 +13,37 @@ function A(e) {
             selfMute: n,
             serverMute: t,
             suppress: A,
-            centerButton: h = !1,
-            awaitingRemote: m,
+            centerButton: m = !1,
+            awaitingRemote: h,
             onMouseEnter: C,
-            onMouseLeave: E,
-            onClick: p,
-            ...g
+            onMouseLeave: p,
+            onClick: g,
+            ...E
         } = e,
         { parentAnalyticsLocation: f } = (0, r.Ay)(),
-        I = n || t || A,
-        x = h ? u.l : u.A,
-        v = (0, o.A)(n, t, A, m),
-        { events: T, play: _, Component: j } = (0, s.L)(I ? "unmute" : "mute"),
-        N = t || A ? a.O : j;
+        x = n || t || A,
+        v = m ? u.l : u.A,
+        I = (0, o.A)(n, t, A, h),
+        { events: T, play: j, Component: N } = (0, s.L)(x ? "unmute" : "mute"),
+        _ = t || A ? a.O : N;
     return (
-        i.useEffect(() => () => _(), [_, I]),
-        (0, l.jsx)(x, {
-            ...g,
-            iconComponent: N,
+        i.useEffect(() => () => j(), [j, x]),
+        (0, l.jsx)(v, {
+            ...E,
+            iconComponent: _,
             isTrayButton: !0,
-            caretColor: I ? "red" : "primaryDark",
+            caretColor: x ? "red" : "primaryDark",
             caretAriaLabel: d.intl.string(d.t["+ybWO4"]),
-            color: I ? "red" : void 0,
-            label: v,
+            color: x ? "red" : void 0,
+            label: I,
             onMouseEnter: (e) => {
                 (C?.(e), T.onMouseEnter());
             },
             onMouseLeave: (e) => {
-                (E?.(e), T.onMouseLeave());
+                (p?.(e), T.onMouseLeave());
             },
             onClick: (e) => {
-                (p?.(e), (0, c.X)(f, c.O.MIC, n));
+                (g?.(e), (0, c.X)(f, c.O.MIC, n));
             },
         })
     );

@@ -13,14 +13,14 @@ function c(e) {
             streamActive: u,
             isSelfStream: d,
             videoBlocked: A = !1,
-            centerButton: h,
-            onMouseEnter: m,
+            centerButton: m,
+            onMouseEnter: h,
             onMouseLeave: C,
-            renderNUXHighlight: E,
-            buttonRef: p,
-            ...g
+            renderNUXHighlight: p,
+            buttonRef: g,
+            ...E
         } = e,
-        f = h ? r.l : r.A;
+        f = m ? r.l : r.A;
     t = A
         ? o.intl.string(o.t.GFr0GR)
         : u
@@ -30,25 +30,25 @@ function c(e) {
           : c
             ? o.intl.string(o.t.fjBNo1)
             : o.intl.string(o.t.uQn9B8);
-    let { Component: I, events: x, play: v } = (0, s.c)(u ? "disable" : "enable"),
-        T = A ? a.i : I;
+    let { Component: x, events: v, play: I } = (0, s.c)(u ? "disable" : "enable"),
+        T = A ? a.i : x;
     return (
-        i.useEffect(() => () => v(), [u, v]),
+        i.useEffect(() => () => I(), [u, I]),
         (0, l.jsx)(f, {
-            buttonRef: p,
+            buttonRef: g,
             isTrayButton: !0,
             label: t,
             disabled: !c,
             iconComponent: T,
             isActive: u,
-            color: (E ? (n = "premiumGradient") : u && (n = "green"), n),
+            color: (p ? (n = "premiumGradient") : u && (n = "green"), n),
             onMouseEnter: (e) => {
-                (m?.(e), x.onMouseEnter());
+                (h?.(e), v.onMouseEnter());
             },
             onMouseLeave: (e) => {
-                (C?.(e), x.onMouseLeave());
+                (C?.(e), v.onMouseLeave());
             },
-            ...g,
+            ...E,
         })
     );
 }

@@ -1,4 +1,4 @@
-t.d(n, { A: () => I });
+t.d(n, { A: () => x });
 var l = t(477900),
     i = t(582128),
     s = t(17928),
@@ -9,31 +9,31 @@ var l = t(477900),
     u = t(267102),
     d = t(931991),
     A = t(246356),
-    h = t(404355),
-    m = t(734057),
+    m = t(404355),
+    h = t(734057),
     C = t(707592),
-    E = t(496092),
-    p = t(132860),
-    g = t(508654),
+    p = t(496092),
+    g = t(132860),
+    E = t(508654),
     f = t(375708);
-function I(e) {
+function x(e) {
     let { channelId: n, onClick: t } = e,
-        I = (0, u.Us)(),
-        x = (0, g.Qs)(n),
-        v = (0, s.bG)([m.A], () => m.A.getChannel(n), [n]),
-        { canManageGuildEvent: T } = (0, d.nr)(v),
-        _ = T(x),
-        j = i.useRef(null);
-    if (null == x) return null;
-    function N() {
-        null != v && (0, p.A)(v) ? (0, C.Py)(v, I) : t();
+        x = (0, u.Us)(),
+        v = (0, E.Qs)(n),
+        I = (0, s.bG)([h.A], () => h.A.getChannel(n), [n]),
+        { canManageGuildEvent: T } = (0, d.nr)(I),
+        j = T(v),
+        N = i.useRef(null);
+    if (null == v) return null;
+    function _() {
+        null != I && (0, g.A)(I) ? (0, C.Py)(I, x) : t();
     }
-    function S() {
-        null != x && E.default.endEvent(x.id, x.guild_id);
+    function b() {
+        null != v && p.default.endEvent(v.id, v.guild_id);
     }
-    return _
+    return j
         ? (0, l.jsx)(a.Y, {
-              targetElementRef: j,
+              targetElementRef: N,
               renderPopout: (e) => {
                   let { closePopout: n } = e;
                   return (0, l.jsx)(A.A, {
@@ -46,7 +46,7 @@ function I(e) {
                           children: (0, l.jsx)(o.Dr, {
                               id: "end-voice-event",
                               color: "danger",
-                              action: S,
+                              action: b,
                               label: f.intl.string(f.t.qaYzPA),
                               leadingAccessory: { type: "icon", icon: c.a },
                               icon: c.a,
@@ -59,13 +59,13 @@ function I(e) {
               animation: a.Y.Animation.FADE,
               children: (e) => {
                   let { onClick: n } = e;
-                  return (0, l.jsx)(h.A, {
-                      buttonRef: j,
+                  return (0, l.jsx)(m.A, {
+                      buttonRef: N,
                       label: f.intl.string(f.t["6vrfgt"]),
-                      onClick: N,
+                      onClick: _,
                       onPopoutClick: n,
                   });
               },
           })
-        : (0, l.jsx)(h.A, { label: f.intl.string(f.t["6vrfgt"]), onClick: t });
+        : (0, l.jsx)(m.A, { label: f.intl.string(f.t["6vrfgt"]), onClick: t });
 }

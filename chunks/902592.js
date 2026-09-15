@@ -19,8 +19,8 @@ var n = a(477900),
     b = a(265059),
     y = a(867041),
     E = a(284675),
-    _ = a(231643),
-    C = a(652215),
+    C = a(231643),
+    _ = a(652215),
     S = a(375708),
     N = a(256459),
     A = a(730441);
@@ -37,10 +37,10 @@ function k(e) {
 }
 function I() {
     (0, v.open)(
-        C.MLl.DEVTOOLS_POPOUT,
+        _.MLl.DEVTOOLS_POPOUT,
         () =>
             (0, n.jsx)(g.A, {
-                windowKey: C.MLl.DEVTOOLS_POPOUT,
+                windowKey: _.MLl.DEVTOOLS_POPOUT,
                 title: "DevTools",
                 withTitleBar: !0,
                 children: (0, n.jsx)(R, { mobile: !1, isPopout: !0 }),
@@ -55,7 +55,7 @@ function D(e) {
             TabBar: l,
             renderSelectedTab: i,
             selectedTabId: s,
-        } = (0, _.Ay)(
+        } = (0, C.Ay)(
             {
                 tabs: a,
                 initialSelectedTabId: b.A.lastOpenTabId ?? void 0,

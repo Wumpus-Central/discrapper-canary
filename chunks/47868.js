@@ -1,4 +1,4 @@
-t.d(n, { A: () => m });
+t.d(n, { A: () => h });
 var l = t(477900),
     i = t(582128),
     s = t(503698),
@@ -9,49 +9,49 @@ var l = t(477900),
     u = t(834730),
     d = t(320448),
     A = t(375708),
-    h = t(906212);
-function m(e) {
+    m = t(906212);
+function h(e) {
     let {
             className: n,
             iconContainerClassName: t,
             icon: s,
-            title: m,
+            title: h,
             description: C,
-            userCount: E,
-            onClick: p,
-            highlight: g,
+            userCount: p,
+            onClick: g,
+            highlight: E,
             onDismiss: f,
         } = e,
-        I = i.useCallback(
+        x = i.useCallback(
             (e) => {
                 (e.stopPropagation(), f?.());
             },
             [f],
         );
     return (0, l.jsxs)(o.D, {
-        className: a()(h.kL, n, null != g && { [h.U6]: g }),
-        onClick: p,
+        className: a()(m.kL, n, null != E && { [m.U6]: E }),
+        onClick: g,
         children: [
-            (0, l.jsx)("div", { className: a()(h.Kk, t), children: s }),
+            (0, l.jsx)("div", { className: a()(m.Kk, t), children: s }),
             (0, l.jsxs)("div", {
-                className: h.FS,
+                className: m.FS,
                 children: [
-                    (0, l.jsx)(c.D, { variant: "heading-md/semibold", color: "text-strong", children: m }),
-                    (0, l.jsx)(u.E, { variant: "text-xs/normal", color: "text-strong", className: h.mG, children: C }),
-                    null != E && E > 0
+                    (0, l.jsx)(c.D, { variant: "heading-md/semibold", color: "text-strong", children: h }),
+                    (0, l.jsx)(u.E, { variant: "text-xs/normal", color: "text-strong", className: m.mG, children: C }),
+                    null != p && p > 0
                         ? (0, l.jsxs)(l.Fragment, {
                               children: [
                                   (0, l.jsx)(u.E, {
                                       variant: "text-xs/normal",
                                       color: "text-strong",
-                                      className: h.Om,
+                                      className: m.Om,
                                       children: "\u2022",
                                   }),
                                   (0, l.jsx)(u.E, {
                                       variant: "text-xs/normal",
                                       color: "text-strong",
-                                      className: h.mG,
-                                      children: A.intl.format(A.t.NywdIj, { count: E }),
+                                      className: m.mG,
+                                      children: A.intl.format(A.t.NywdIj, { count: p }),
                                   }),
                               ],
                           })
@@ -59,8 +59,8 @@ function m(e) {
                 ],
             }),
             null != f
-                ? (0, l.jsx)("div", { className: h.r, children: (0, l.jsx)(r.J, { size: "xs", onClick: I }) })
-                : (0, l.jsx)(d._, { size: "xs", color: "currentColor", className: h.OW }),
+                ? (0, l.jsx)("div", { className: m.r, children: (0, l.jsx)(r.J, { size: "xs", onClick: x }) })
+                : (0, l.jsx)(d._, { size: "xs", color: "currentColor", className: m.OW }),
         ],
     });
 }

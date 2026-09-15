@@ -1,4 +1,4 @@
-a.d(t, { Ay: () => C, BW: () => y, fu: () => b });
+a.d(t, { Ay: () => _, BW: () => y, fu: () => b });
 var n,
     l = a(477900),
     i = a(582128),
@@ -61,13 +61,13 @@ let y = [
             children: s,
         });
     });
-function _(e) {
+function C(e) {
     let { tabs: t, selectedTabId: a, onSelectTab: n } = e,
         s = i.useRef(new Map()),
         [r, d] = i.useState(() => new Set()),
         { ref: b, width: y } = (0, h.Ay)(),
-        _ = i.useRef(null),
-        C = (0, j.N)(t, n),
+        C = i.useRef(null),
+        _ = (0, j.N)(t, n),
         S = (0, x.A)();
     i.useEffect(() => {
         if (null == y) return;
@@ -87,10 +87,10 @@ function _(e) {
                 onClose: t,
                 "aria-label": "Overflowed DevTools Tabs",
                 onSelect: t,
-                children: [C, null != S && (0, l.jsx)(u.rX, { "aria-label": "Playgrounds", children: S })],
+                children: [_, null != S && (0, l.jsx)(u.rX, { "aria-label": "Playgrounds", children: S })],
             });
         },
-        [C, S],
+        [_, S],
     );
     return (0, l.jsxs)("div", {
         className: f.Mv,
@@ -136,7 +136,7 @@ function _(e) {
                 children:
                     (r.size > 0 || null != S) &&
                     (0, l.jsx)(m.Y, {
-                        targetElementRef: _,
+                        targetElementRef: C,
                         layerContext: v.He,
                         renderPopout: N,
                         position: "bottom",
@@ -146,7 +146,7 @@ function _(e) {
                         children: (e) =>
                             (0, l.jsx)(o.$n, {
                                 ...e,
-                                buttonRef: _,
+                                buttonRef: C,
                                 className: f.Iq,
                                 size: o.$n.Sizes.ICON,
                                 look: o.$n.Looks.BLANK,
@@ -161,13 +161,13 @@ function _(e) {
         ],
     });
 }
-function C(e, t) {
+function _(e, t) {
     let { tabs: a, initialSelectedTabId: n, onChangeTab: s } = e,
         [r, o] = i.useState(n ?? a[0]?.id);
     return {
         TabBar: i.useCallback(
             () =>
-                (0, l.jsx)(_, {
+                (0, l.jsx)(C, {
                     tabs: a,
                     selectedTabId: r,
                     onSelectTab: (e) => {
