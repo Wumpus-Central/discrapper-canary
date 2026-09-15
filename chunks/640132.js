@@ -24,9 +24,9 @@ var l = t(477900),
 t(321073);
 var C = t(988794),
     S = t(530209),
-    b = t(974930),
-    k = t(691012),
-    p = t(428978),
+    p = t(974930),
+    b = t(691012),
+    k = t(428978),
     R = t(850183),
     T = t(761508),
     L = t(375708),
@@ -49,7 +49,7 @@ function G(e) {
                     (0, l.jsx)(T.V.Item, {
                         className: D.YU,
                         id: C.al.RSVP_LIST,
-                        clickableInnerRef: i,
+                        innerRef: i,
                         children: L.intl.formatToPlainString(L.t["ZrTT/N"], { userCount: r }),
                     }),
                 ],
@@ -222,7 +222,7 @@ function eh(e) {
         (N.A.getGuildEventUserCounts(t.id, n.id, null != o ? [o] : []), N.A.getGuildEventsForCurrentUser(t.id));
     }, [t.id, n.id, o]);
     let _ = (0, el.Sn)(n.recurrence_rule),
-        y = n?.scheduled_start_time != null ? (0, b.j)(A, g, new Date(n?.scheduled_start_time)) : null;
+        y = n?.scheduled_start_time != null ? (0, p.j)(A, g, new Date(n?.scheduled_start_time)) : null;
     return (0, l.jsxs)("div", {
         ref: c,
         children: [
@@ -349,7 +349,7 @@ function eS(e) {
         ],
     });
 }
-function eb(e) {
+function ep(e) {
     let { eventUser: n, guildId: t, onContextMenu: r } = e,
         i = s.useRef(null),
         u = (0, a.bG)([eN.default], () => eN.default.getUser(n.user_id)),
@@ -392,23 +392,23 @@ function eb(e) {
               },
           });
 }
-function ek(e) {
+function eb(e) {
     let { eventUsers: n, guildId: t, usersNotShownCount: s = 0, onContextMenu: r } = e;
     return (0, l.jsxs)(ex.Ip, {
         className: e_.DK,
         children: [
-            n.map((e) => (0, l.jsx)(eb, { guildId: t, eventUser: e, onContextMenu: r }, e.user_id)),
+            n.map((e) => (0, l.jsx)(ep, { guildId: t, eventUser: e, onContextMenu: r }, e.user_id)),
             s > 0 && (0, l.jsx)(eS, { count: s }),
         ],
     });
 }
-function ep(e) {
+function ek(e) {
     let { children: n, style: t } = e;
     return (0, l.jsx)("div", { className: e_.kL, style: null != t ? t : {}, children: n });
 }
 function eR(e) {
     let { children: n, height: t } = e;
-    return (0, l.jsx)(ep, { style: { height: t }, children: n });
+    return (0, l.jsx)(ek, { style: { height: t }, children: n });
 }
 function eT(e) {
     let { guildEvent: n, recurrenceId: s, eventUsers: r, loading: i, error: u, containerHeight: d } = e,
@@ -424,8 +424,8 @@ function eT(e) {
         r.length >= C.C1 && a > C.C1 && (c = Math.max(a - r.length, 0)),
         0 === r.length
             ? (0, l.jsx)(eR, { height: d, children: (0, l.jsx)(eE, {}) })
-            : (0, l.jsx)(ep, {
-                  children: (0, l.jsx)(ek, {
+            : (0, l.jsx)(ek, {
+                  children: (0, l.jsx)(eb, {
                       eventUsers: r,
                       guildId: n.guild_id,
                       onContextMenu: function (e, n) {
@@ -476,7 +476,7 @@ function eU(e) {
         g = (0, a.bG)([m.A], () => m.A.isLurking(t.id), [t.id]),
         j = (0, S.e)(s?.id, n.id),
         f = (0, eL.A)({ guild: t, channel: s, guildScheduledEvent: n, isActive: d, recurrenceId: u, onActionTaken: i }),
-        A = (0, p.Zq)({
+        A = (0, k.Zq)({
             isActive: d,
             isUserLurking: g,
             rsvped: h,
@@ -488,7 +488,7 @@ function eU(e) {
         }),
         I =
             null != f.onContextMenu
-                ? (0, l.jsx)("div", { className: eG.Zv, children: (0, l.jsx)(p.jD, { onClick: f.onContextMenu }) })
+                ? (0, l.jsx)("div", { className: eG.Zv, children: (0, l.jsx)(k.jD, { onClick: f.onContextMenu }) })
                 : void 0;
     return (0, l.jsx)(r.H, { leading: I, actions: A });
 }
@@ -496,7 +496,7 @@ let eM = function (e) {
     let n,
         r,
         { guildScheduledEventId: m, transitionState: v, initialRecurrenceId: y, onClose: S } = e,
-        { analyticsLocations: p } = (0, x.Ay)(h.A.GUILD_EVENT_MODAL),
+        { analyticsLocations: k } = (0, x.Ay)(h.A.GUILD_EVENT_MODAL),
         [T, L] = s.useState(y),
         D = (0, a.bG)([_.Ay], () => _.Ay.getGuildScheduledEvent(m), [m]),
         U = D?.id,
@@ -523,7 +523,7 @@ let eM = function (e) {
                 }
                 return (t.forEach(u), l.forEach(u), i);
             }, [n, r])),
-        H = null != D ? (0, k.A)(D) : null,
+        H = null != D ? (0, b.A)(D) : null,
         q = s.useCallback(
             (e) => {
                 null != H &&
@@ -567,9 +567,9 @@ let eM = function (e) {
     function es(e) {
         e !== z && (e === C.al.RSVP_LIST && Z(), F(e));
     }
-    let er = T ?? (0, b.G3)(D);
+    let er = T ?? (0, p.G3)(D);
     return (0, l.jsx)(x.f5, {
-        value: p,
+        value: k,
         children: (0, l.jsxs)(i.d, {
             transitionState: v,
             size: "lg",

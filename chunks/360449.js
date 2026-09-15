@@ -25940,7 +25940,13 @@ function AD(e) {
     let { activeType: t, onTypePicked: n, guild: i } = e,
         l = i.features.has(ei.GuildFeatures.COMMUNITY),
         s = (0, L.bG)([J.A], () => J.A.can(ei.xBc.ADMINISTRATOR, i)),
-        r = R.useMemo(() => {
+        r = R.useCallback(
+            (e) => {
+                null != e && n(e);
+            },
+            [n],
+        ),
+        a = R.useMemo(() => {
             let e = t === AL.J.DISCOVERABLE && !s,
                 n = l && (t === AL.J.DISCOVERABLE || s);
             return [
@@ -25990,26 +25996,27 @@ function AD(e) {
                 onItemSelect: n,
                 orientation: "horizontal",
                 className: AG.Hd,
-                children: r.map((e) => {
+                children: a.map((e) => {
                     let n = e.id === t,
                         i = `${e.title}, ${e.body}`;
                     return (
                         e.enabled || null == e.ineligibleText || (i += `, ${e.ineligibleText}`),
                         (0, p.jsx)(
-                            ix.V.Item,
+                            tV.m,
                             {
-                                id: e.id,
-                                selectedItem: t,
-                                disableItemStyles: !0,
-                                className: AG.dZ,
-                                disabled: !e.enabled,
-                                "aria-label": i,
-                                children: (0, p.jsx)(tV.m, {
-                                    text: e.ineligibleText,
-                                    position: "bottom",
-                                    shouldShow: !e.enabled,
-                                    spacing: 16,
-                                    hideOnClick: !1,
+                                text: e.enabled ? null : e.ineligibleText,
+                                position: "bottom",
+                                spacing: 16,
+                                hideOnClick: !1,
+                                ariaHidden: !0,
+                                children: (0, p.jsx)(ix.V.Item, {
+                                    id: e.id,
+                                    selectedItem: t,
+                                    onItemSelect: r,
+                                    disableItemStyles: !0,
+                                    className: AG.dZ,
+                                    disabled: !e.enabled,
+                                    "aria-label": i,
                                     children: (0, p.jsxs)("div", {
                                         className: k()(AG.jn, { [AG.vu]: n, [AG.A_]: !e.enabled }),
                                         children: [

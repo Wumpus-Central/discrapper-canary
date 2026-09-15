@@ -69,11 +69,13 @@ class m extends r.Component {
     handleMouseUp = () => {
         this.setState({ active: !1 });
     };
-    handleMouseOver = () => {
-        this.setState({ hover: !0 });
+    handleMouseOver = (e) => {
+        let { color: t, onMouseEnter: n } = this.props;
+        (null != t && this.setState({ hover: !0 }), n?.(e));
     };
-    handleMouseOut = () => {
-        this.setState({ hover: !1, active: !1 });
+    handleMouseOut = (e) => {
+        let { color: t, onMouseLeave: n } = this.props;
+        (null != t && this.setState({ hover: !1, active: !1 }), n?.(e));
     };
     getStyle() {
         let { color: e, id: t, selectedItem: n, itemType: i } = this.props,
@@ -100,36 +102,40 @@ class m extends r.Component {
                 disabled: o,
                 onContextMenu: d,
                 clickableRef: _,
-                clickableInnerRef: A,
+                innerRef: A,
                 look: h,
                 disableItemStyles: I,
                 role: f = "tab",
+                onFocus: T,
+                onBlur: m,
             } = this.props,
-            T = this.props["aria-label"],
-            m = r === n,
-            g = "button" === f;
+            g = this.props["aria-label"],
+            S = r === n,
+            N = "button" === f;
         return (0, i.jsx)(c.D, {
             className: s()(t, {
                 [E.AS]: !I,
                 [E.wk]: "brand" === h,
-                [E.wH]: null == a && m,
+                [E.wH]: null == a && S,
                 [E.Sp]: "grey" === h,
                 [E.r9]: null == a && o,
                 [E.RD]: "destructive" === l,
             }),
             style: this.getStyle(),
             role: f,
-            "aria-selected": g ? void 0 : m,
-            "aria-controls": g ? void 0 : m ? p(`${n}`) : void 0,
+            "aria-selected": N ? void 0 : S,
+            "aria-controls": N ? void 0 : S ? p(`${n}`) : void 0,
             "aria-disabled": o,
-            tabIndex: g ? (!0 === o ? -1 : 0) : m ? 0 : -1,
-            onMouseEnter: null != a ? this.handleMouseOver : void 0,
+            tabIndex: N ? (!0 === o ? -1 : 0) : S ? 0 : -1,
+            onMouseEnter: this.handleMouseOver,
             onClick: this.handleClick,
-            onMouseLeave: null != a ? this.handleMouseOut : void 0,
+            onMouseLeave: this.handleMouseOut,
             onMouseUp: null != a ? this.handleMouseUp : void 0,
             onMouseDown: this.handleMouseDown,
             onContextMenu: d,
-            "aria-label": T,
+            onFocus: T,
+            onBlur: m,
+            "aria-label": g,
             innerRef: A,
             ref: _,
             children: (0, i.jsx)(u.E, {
@@ -150,7 +156,7 @@ class g extends r.Component {
     focusManager = (0, l.C)({
         getFocusableElements: () => {
             let e = this.tabBarRef.current;
-            return null != e ? Array.from(e.querySelectorAll('[role="tab"][aria-disabled="false"]')) : [];
+            return null != e ? Array.from(e.querySelectorAll('[role="tab"]')) : [];
         },
         getActiveElement: () => this.tabBarRef.current?.ownerDocument.activeElement,
     });
