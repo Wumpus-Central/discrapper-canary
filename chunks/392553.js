@@ -1058,7 +1058,7 @@ class ey extends i.Component {
     insertGIF(e) {
         let { textValue: t } = this.props,
             n = this.ref.current;
-        null != e && null != n && (t.endsWith(" ") || n.insertText(" ", void 0, !1), n.insertText(e.url));
+        null != e && null != n && ("" === t || t.endsWith(" ") || n.insertText(" ", void 0, !1), n.insertText(e.url));
     }
     insertSound(e) {
         let { textValue: t } = this.props,

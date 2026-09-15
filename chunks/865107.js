@@ -1294,8 +1294,9 @@ function nm(e, t, s, r, a) {
 }
 function nf(e, t, n) {
     return i.useCallback(
-        (l) => {
-            if (t === e$.oU.CREATE_FORUM_POST || t === e$.oU.CREATE_ANNOUNCEMENT_POST) n.current?.insertGIF(l);
+        (l, i) => {
+            if (i?.shiftKey === !0 || t === e$.oU.CREATE_FORUM_POST || t === e$.oU.CREATE_ANNOUNCEMENT_POST)
+                n.current?.insertGIF(l);
             else {
                 let t = {
                     gif_provider: l.provider ?? eE.jQ,

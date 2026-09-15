@@ -114,9 +114,9 @@ class U extends s.PureComponent {
     handleCanPlay = () => {
         this._mounted && this.setState({ loaded: !0 });
     };
-    handleClick = () => {
-        let { onClick: e, item: t, index: r } = this.props;
-        null != e && e(t, r);
+    handleClick = (e) => {
+        let { onClick: t, item: r, index: n } = this.props;
+        null != t && t(r, n, { shiftKey: e.shiftKey });
     };
     handleContextMenu = (e) => {
         let { onContextMenu: t, item: r } = this.props;
@@ -200,28 +200,28 @@ class O extends s.PureComponent {
         null != r &&
             (t.scrollIntoViewRect({ start: r.top - 10, end: r.top + r.height + 10 }), this.setState({ focusedId: e }));
     };
-    selectItem(e, t) {
-        let { onSelectGIF: r, resultType: n, data: s, resultQuery: l } = this.props;
-        (null != r && r(e),
+    selectItem(e, t, r) {
+        let { onSelectGIF: n, resultType: s, data: l, resultQuery: i } = this.props;
+        (null != n && n(e, r),
             (0, _.g4)({
-                type: n,
+                type: s,
                 index: t,
                 offset: this.props.searchOffset,
                 limit: this.props.searchLimit,
-                results: s.length,
+                results: l.length,
                 totalResults: this.props.searchTotalResults,
-                query: l,
+                query: i,
                 gifId: e.id,
             }));
     }
-    handleSelect = (e) => {
-        let t,
-            { data: r } = this.props,
-            n = r.findIndex((t) => P(t) === e);
-        (-1 !== n && (t = r[n]), null != t && this.selectItem(t, n));
+    handleSelect = (e, t) => {
+        let r,
+            { data: n } = this.props,
+            s = n.findIndex((t) => P(t) === e);
+        (-1 !== s && (r = n[s]), null != r && this.selectItem(r, s, t));
     };
-    handleClickItem = (e, t) => {
-        this.selectItem(e, t);
+    handleClickItem = (e, t, r) => {
+        this.selectItem(e, t, r);
     };
     handleContextMenu = (e, t) => {
         w.p5 &&

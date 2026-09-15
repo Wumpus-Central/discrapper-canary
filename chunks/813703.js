@@ -278,9 +278,9 @@ class B extends s.PureComponent {
         let { current: e } = this.props.searchBarRef;
         ((0, g.Ri)(""), m.Se(), this.setState({ resultType: null }), null != e && e.focus());
     };
-    handleSelectGIF = (e) => {
-        let { onSelectGIF: t } = this.props;
-        null != t && t(e);
+    handleSelectGIF = (e, t) => {
+        let { onSelectGIF: r } = this.props;
+        null != r && r(e, t);
     };
     handleSelectItem = (e, t) => {
         switch (e) {

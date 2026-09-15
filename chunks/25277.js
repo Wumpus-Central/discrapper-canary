@@ -35,7 +35,7 @@ class l extends n.Component {
                 break;
             case s.dh.ENTER:
                 let r = this.calculateFocusedItem();
-                null != r && null != t && (e.preventDefault(), e.stopPropagation(), t(r));
+                null != r && null != t && (e.preventDefault(), e.stopPropagation(), t(r, { shiftKey: e.shiftKey }));
         }
     };
     focusNext(e) {
