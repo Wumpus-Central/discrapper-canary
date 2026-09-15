@@ -13,7 +13,7 @@ function u(e) {
     return {
         react(t, l, u) {
             if (e.enableBuildOverrides && (0, a.vS)(t.target))
-                return (0, r.jsx)(n.Fragment, { children: (0, r.jsx)(o.A, { url: t.target }, t.target) }, u.key);
+                return (0, r.jsx)(n.Fragment, { children: (0, r.jsx)(o.default, { url: t.target }, t.target) }, u.key);
             let h = l(t.content, u),
                 m = "string" == typeof t.title && 0 !== t.title.length ? t.title : (0, s.$)(t.content),
                 p = e?.mustConfirmExternalLink

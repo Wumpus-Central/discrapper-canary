@@ -1,4 +1,4 @@
-l.d(t, { A: () => $ });
+(l.r(t), l.d(t, { default: () => $ }));
 var r = l(477900),
     n = l(582128),
     s = l(17928),
@@ -64,10 +64,10 @@ var y = l(957565),
     N = l(723702),
     E = l(435558),
     L = l.n(E),
-    A = l(280450),
-    M = l(986238),
-    O = l(652215),
-    _ = l(375708),
+    M = l(280450),
+    O = l(986238),
+    _ = l(652215),
+    A = l(375708),
     I = l(100281);
 function B(e) {
     let { url: t } = e,
@@ -87,7 +87,7 @@ function B(e) {
                   onClick: a,
                   children: [
                       (0, r.jsx)(p.LinkIcon, { size: "md", color: "currentColor", className: I.n7 }),
-                      l ? _.intl.string(_.t.GmrIJY) : _.intl.string(_.t.iVzBOh),
+                      l ? A.intl.string(A.t.GmrIJY) : A.intl.string(A.t.iVzBOh),
                   ],
               })
             : null
@@ -136,12 +136,12 @@ let S = function (e) {
                         className: I.DD,
                         children:
                             null != s && null != s.releaseChannel
-                                ? _.intl.formatToPlainString(_.t.bFj63b, { releaseChannel: s.releaseChannel })
-                                : _.intl.string(_.t.Wj3LW4),
+                                ? A.intl.formatToPlainString(A.t.bFj63b, { releaseChannel: s.releaseChannel })
+                                : A.intl.string(A.t.Wj3LW4),
                     }),
                     (0, r.jsx)(v.Anchor, {
                         className: I.Pl,
-                        href: k.A.getArticleURL(O.MVz.BUILD_OVERRIDE_EMBED),
+                        href: k.A.getArticleURL(_.MVz.BUILD_OVERRIDE_EMBED),
                         target: "_blank",
                         children: (0, r.jsx)(j.CircleInformationIcon, {
                             size: "xs",
@@ -183,7 +183,7 @@ let S = function (e) {
                                   c = ["discord_web"];
                               N.isPlatformEmbedded || c.push("discord_marketing", "discord_developers");
                               let d = (function (e, t) {
-                                  if (null == e || null == t) return { valid: !1, reason: _.intl.string(_.t.d34xi4) };
+                                  if (null == e || null == t) return { valid: !1, reason: A.intl.string(A.t.d34xi4) };
                                   let {
                                           releaseChannel: l,
                                           expiresAt: r,
@@ -195,18 +195,18 @@ let S = function (e) {
                                   if (0 === L().intersection(a, t).length)
                                       return {
                                           valid: !1,
-                                          reason: _.intl.formatToPlainString(_.t.wySUzv, {
-                                              requestedTargets: a.map((e) => M.v_[e] ?? "unknown").join(", "),
+                                          reason: A.intl.formatToPlainString(A.t.wySUzv, {
+                                              requestedTargets: a.map((e) => O.v_[e] ?? "unknown").join(", "),
                                           }),
                                       };
                                   if (null != l && l !== window.GLOBAL_ENV.RELEASE_CHANNEL) {
                                       let e =
-                                          l === O.BIo.PTB
+                                          l === _.BIo.PTB
                                               ? l.toUpperCase()
                                               : `${l.charAt(0).toUpperCase()}${l.slice(1)}`;
                                       return {
                                           valid: !1,
-                                          reason: _.intl.formatToPlainString(_.t.GOEF0C, { releaseChannel: e }),
+                                          reason: A.intl.formatToPlainString(A.t.GOEF0C, { releaseChannel: e }),
                                       };
                                   }
                                   if (null != s) {
@@ -214,16 +214,16 @@ let S = function (e) {
                                       ((e = !1), !0);
                                       return {
                                           valid: !1,
-                                          reason: _.intl.formatToPlainString(_.t.GOEF0C, {
+                                          reason: A.intl.formatToPlainString(A.t.GOEF0C, {
                                               releaseChannel: s.join(", "),
                                           }),
                                       };
                                   }
                                   let o = null != r ? new Date(r).getTime() : null;
                                   return null != o && o < Date.now()
-                                      ? { valid: !1, reason: _.intl.string(_.t["8eRE6S"]) }
-                                      : n.length > 0 && !n.includes(A.default.getId())
-                                        ? { valid: !1, reason: _.intl.string(_.t.qZgV0a) }
+                                      ? { valid: !1, reason: A.intl.string(A.t["8eRE6S"]) }
+                                      : n.length > 0 && !n.includes(M.default.getId())
+                                        ? { valid: !1, reason: A.intl.string(A.t.qZgV0a) }
                                         : { valid: !0 };
                               })(s, c);
                               if (!d.valid) {
@@ -231,7 +231,7 @@ let S = function (e) {
                                   return (
                                       (u = d.reason),
                                       T({
-                                          subHead: _.intl.string(_.t.ODXApH),
+                                          subHead: A.intl.string(A.t.ODXApH),
                                           variant: "secondary",
                                           buttonText: "Invalid",
                                           buildDetails: u,
@@ -253,19 +253,19 @@ let S = function (e) {
                                   null == n || null == n.discord_web
                                       ? 1
                                       : g.id !== n.discord_web.id || g.type !== n.discord_web.type)
-                                      ? ((l = _.intl.string(_.t.nOunHC)), (t = i), (r = "primary"))
-                                      : ((l = _.intl.string(_.t.tX4xrt)), (t = a), (r = "critical-primary")),
+                                      ? ((l = A.intl.string(A.t.nOunHC)), (t = i), (r = "primary"))
+                                      : ((l = A.intl.string(A.t.tX4xrt)), (t = a), (r = "critical-primary")),
                                   T({
-                                      subHead: _.intl.string("branch" === g.type ? _.t.p9TwTG : _.t.RCYGot),
+                                      subHead: A.intl.string("branch" === g.type ? A.t.p9TwTG : A.t.RCYGot),
                                       buildDetails: g.id,
                                       buttonClick: function () {
                                           b.A.isConnected()
                                               ? x.A.show({
-                                                    title: _.intl.string(_.t.tiu1ly),
-                                                    body: _.intl.string(_.t["zK+lqW"]),
+                                                    title: A.intl.string(A.t.tiu1ly),
+                                                    body: A.intl.string(A.t["zK+lqW"]),
                                                     onConfirm: t,
-                                                    cancelText: _.intl.string(_.t["ETE/oC"]),
-                                                    confirmText: _.intl.string(_.t["QDX/qu"]),
+                                                    cancelText: A.intl.string(A.t["ETE/oC"]),
+                                                    confirmText: A.intl.string(A.t["QDX/qu"]),
                                                     confirmVariant: "critical-primary",
                                                 })
                                               : t();

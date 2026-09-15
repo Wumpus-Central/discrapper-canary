@@ -1,4 +1,4 @@
-n.d(t, { r3: () => eS, Ay: () => ek, xS: () => eO });
+n.d(t, { r3: () => es, Ay: () => eg, xS: () => em });
 var l = n(477900),
     i = n(582128),
     s = n(503698),
@@ -55,153 +55,44 @@ var z = n(380610),
     Y = n(721779),
     q = n(333421),
     J = n(100392),
-    $ = n(17928),
-    X = n(691540),
-    Q = n(97483),
-    ee = n(173936),
-    et = n(834730),
-    en = n(331322),
-    el = n(776078),
-    ei = n(821609),
-    es = n(280450),
-    er = n(287809),
-    ea = n(102609),
-    eo = n(271478),
-    eu = n(386976),
-    ec = n(257433),
-    ed = n(32523),
-    eh = n(688151),
-    em = n(263748);
-function ef(e) {
-    let { url: t } = e,
-        n = i.useCallback(() => {
-            (0, M.C)(t, () =>
-                (0, X.P0)({ id: "experiment-link-copied", message: "Copied experiment link", type: Q.Ck.SUCCESS }),
-            );
-        }, [t]);
-    return (0, l.jsx)(o.D, {
-        className: em.wp,
-        onClick: n,
-        children: (0, l.jsx)(ee.LinkIcon, { size: "sm", color: "currentColor" }),
-    });
-}
-function ep(e) {
-    let { url: t } = e,
-        n = (0, J.OL)(t),
-        s = (0, J.Kb)(t),
-        { experiments: r, overridesInfo: a } = (0, ed.hI)(),
-        { experiments: o, overridesInfo: u } = (0, eu.op)(),
-        c = i.useMemo(() => (null == n ? null : null != r[n] ? r[n] : o[n]), [r, o, n]),
-        d = i.useMemo(() => {
-            if (null == n);
-            else if (null != a[n]) return a[n];
-            else if (null != u[n]) return u[n];
-        }, [a, u, n]),
-        h = es.default.getId(),
-        m = (0, ec.Fm)(c, h),
-        f = i.useMemo(() => (0, J.GI)(c, m), [m, c]),
-        p = (0, $.bG)([er.default], () => {
-            let e = er.default.getCurrentUser();
-            return e?.isStaff() || e?.isStaffPersonal();
-        });
-    if (null == n || null == c) return null;
-    let g = (0, J.hp)(c).find((e) => e.value === s),
-        x = null != g ? eh.Ps.EXPERIMENT_TREATMENT : eh.Ps.EXPERIMENT,
-        A = null != d && null != g && d.variantId === g.value,
-        C = (0, l.jsx)(ef, { url: t }),
-        E = null;
-    return (x === eh.Ps.EXPERIMENT_TREATMENT && null != g
-        ? (E = (0, l.jsx)(et.E, { variant: "text-xs/normal", color: "text-muted", children: g.label }))
-        : null != m &&
-          (E = (0, l.jsxs)(et.E, { variant: "text-xs/normal", color: "text-muted", children: ["Server Config: ", f] })),
-    p)
-        ? (0, l.jsxs)("div", {
-              className: em.zr,
-              children: [
-                  (0, l.jsx)("div", {
-                      children: (0, l.jsx)("div", {
-                          className: em.wx,
-                          children: (0, l.jsxs)(en.B, {
-                              direction: "horizontal",
-                              justify: "space-between",
-                              children: [
-                                  (0, l.jsxs)(en.B, {
-                                      direction: "horizontal",
-                                      gap: 8,
-                                      children: [
-                                          (0, l.jsx)(el.g, { size: "lg" }),
-                                          (0, l.jsxs)(en.B, {
-                                              direction: "vertical",
-                                              gap: 0,
-                                              children: [
-                                                  (0, l.jsx)(et.E, { variant: "text-md/semibold", children: c.title }),
-                                                  E,
-                                              ],
-                                          }),
-                                      ],
-                                  }),
-                                  C,
-                              ],
-                          }),
-                      }),
-                  }),
-                  null != g
-                      ? (0, l.jsx)(ei.$, {
-                            fullWidth: !0,
-                            variant: A ? "critical-primary" : "primary",
-                            text: A ? `Clear Treatment ${g.value}` : `Apply Treatment ${g.value}`,
-                            onClick: function () {
-                                null == n ||
-                                    null == c ||
-                                    (null != g &&
-                                        (A ? (0, ea.t$)(c.system, n, null) : (0, ea.t$)(c.system, n, g.value)));
-                            },
-                        })
-                      : (0, l.jsx)("div", {
-                            className: em.uh,
-                            children: (0, l.jsx)(eo.g, { experiment: c, experimentId: n, overrideInfo: d }),
-                        }),
-              ],
-          })
-        : null;
-}
-var eg = n(836156);
-let ex = i.lazy(() =>
+    $ = n(950980),
+    X = n(836156);
+let Q = i.lazy(() =>
         Promise.all([n.e("503634"), n.e("761764"), n.e("218126"), n.e("467696")])
             .then(n.bind(n, 881267))
             .then((e) => ({ default: e.PlaygroundEmbed })),
     ),
-    eA = i.lazy(() =>
+    ee = i.lazy(() =>
         Promise.all([n.e("378100"), n.e("886456"), n.e("278078")])
             .then(n.bind(n, 909261))
             .then((e) => ({ default: e.DevToolsLinkEmbed })),
     ),
-    eC = RegExp("^" + Y.st.source, Y.st.flags);
-var eE = n(569926),
-    eI = n(266645);
-function ey(e) {
+    et = RegExp("^" + Y.st.source, Y.st.flags);
+var en = n(569926),
+    el = n(266645);
+function ei(e) {
     let { gameId: t, authorId: n } = e;
-    return ((0, eE.I)(t), (0, l.jsx)(eI.A, { gameId: t, authorId: n }));
+    return ((0, en.I)(t), (0, l.jsx)(el.A, { gameId: t, authorId: n }));
 }
-function eS() {
-    return { gameMention: { react: (e, t, n) => (0, l.jsx)(ey, { gameId: e.gameId, authorId: n.authorId }, n.key) } };
+function es() {
+    return { gameMention: { react: (e, t, n) => (0, l.jsx)(ei, { gameId: e.gameId, authorId: n.authorId }, n.key) } };
 }
-var ev = n(881140),
-    eN = n(746080),
-    e_ = n(279538),
-    ej = n(165648),
-    eb = n(969490);
-let eT = { display: "inline" };
-function eR(e) {
+var er = n(881140),
+    ea = n(746080),
+    eo = n(279538),
+    eu = n(165648),
+    ec = n(969490);
+let ed = { display: "inline" };
+function eh(e) {
     return e.stopPropagation();
 }
-function eO(e) {
+function em(e) {
     return {
         ...e,
-        react: (t, n, i) => (0, l.jsx)("span", { style: eT, onClick: eR, children: e.react(t, n, i) }, i.key),
+        react: (t, n, i) => (0, l.jsx)("span", { style: ed, onClick: eh, children: e.react(t, n, i) }, i.key),
     };
 }
-function eM(e) {
+function ef(e) {
     let { text: t } = e,
         [n, s] = i.useState(!1);
     return (0, l.jsx)(o.D, {
@@ -217,15 +108,15 @@ function eM(e) {
             : (0, l.jsx)(c.CopyIcon, { size: "xs", color: "currentColor" }),
     });
 }
-let eL = {
+let ep = {
     blockQuote: {
         react: (e, t, n) =>
             (0, l.jsxs)(
                 "div",
                 {
-                    className: ej.h,
+                    className: eu.h,
                     children: [
-                        (0, l.jsx)("div", { className: ej.r }),
+                        (0, l.jsx)("div", { className: eu.r }),
                         (0, l.jsx)("blockquote", { children: t(e.content, n) }),
                     ],
                 },
@@ -239,23 +130,23 @@ let eL = {
     codeBlock: {
         react(e, t, i) {
             function s() {
-                return (0, l.jsx)("code", { className: r()(eb.kw, "hljs"), children: (0, L.t)(e, t, i) });
+                return (0, l.jsx)("code", { className: r()(ec.kw, "hljs"), children: (0, L.t)(e, t, i) });
             }
             return (0, l.jsx)(
                 "pre",
                 {
                     children: (0, l.jsxs)("div", {
-                        className: ej.Hy,
+                        className: eu.Hy,
                         children: [
                             M.p5
-                                ? (0, l.jsx)("div", { className: ej.lB, children: (0, l.jsx)(eM, { text: e.content }) })
+                                ? (0, l.jsx)("div", { className: eu.lB, children: (0, l.jsx)(ef, { text: e.content }) })
                                 : null,
                             (0, l.jsx)(b.l, {
                                 location: "MarkupReactRules",
                                 code: e.content,
                                 lang: e.lang,
-                                className: r()(eb.kw, "hljs"),
-                                highlightedClassName: e_.H,
+                                className: r()(ec.kw, "hljs"),
+                                highlightedClassName: eo.H,
                                 children: (0, l.jsx)(f.c2, {
                                     createPromise: () =>
                                         Promise.all([n.e("818449"), n.e("175134")]).then(n.bind(n, 981776)),
@@ -268,7 +159,7 @@ let eL = {
                                             return null == n
                                                 ? s()
                                                 : (0, l.jsx)("code", {
-                                                      className: r()(eb.kw, "hljs", n.language),
+                                                      className: r()(ec.kw, "hljs", n.language),
                                                       dangerouslySetInnerHTML: { __html: n.value },
                                                   });
                                         }
@@ -326,13 +217,13 @@ let eL = {
                                       switch (t) {
                                           case "home":
                                           case "guide":
-                                              i(eN.VV.GUILD_HOME);
+                                              i(ea.VV.GUILD_HOME);
                                               break;
                                           case "browse":
-                                              i(eN.VV.CHANNEL_BROWSER);
+                                              i(ea.VV.CHANNEL_BROWSER);
                                               break;
                                           case "customize":
-                                              i(eN.VV.CUSTOMIZE_COMMUNITY);
+                                              i(ea.VV.CUSTOMIZE_COMMUNITY);
                                               break;
                                           case "linked-roles":
                                               if (null != n) {
@@ -382,7 +273,7 @@ let eL = {
                 s = null == e.start ? void 0 : (e.start + (e.items.length - 1)).toString().length;
             return (0, a.reactElement)(i, `${n.key}`, {
                 start: e.start,
-                className: n.formatInline ? ej.tZ : null,
+                className: n.formatInline ? eu.tZ : null,
                 style: { "--totalCharacters": s, "--olCounterStart": null == e.start ? void 0 : e.start - 1 },
                 children: e.items.map((e, i) => {
                     let s = (0, a.reactElement)("span", `${n.key}-${i}-innerSpan`, { children: t(e, n) });
@@ -398,7 +289,7 @@ let eL = {
             let i = (0, a.reactElement)("span", `${n.key}-innerSpan`, { children: t(e.content, n) });
             return (0, a.reactElement)("h" + e.level, n?.key != null ? `${n.key}` : null, {
                 children: [i, (0, l.jsx)(d.A, { children: "," }, "screen-reader-pause")],
-                className: n.formatInline ? ej.tZ : null,
+                className: n.formatInline ? eu.tZ : null,
             });
         },
     },
@@ -415,7 +306,7 @@ let eL = {
             let l = (0, a.reactElement)("span", `${n.key}-innerSpan`, { children: t(e.content, n) });
             return (0, a.reactElement)("small", n?.key != null ? `${n.key}` : null, {
                 children: l,
-                className: n.formatInline ? ej.tZ : null,
+                className: n.formatInline ? eu.tZ : null,
             });
         },
     },
@@ -426,38 +317,43 @@ let eL = {
                 : (0, l.jsx)("span", { children: t(e.content, n) }, n.key),
     },
 };
-function ek(e) {
+function eg(e) {
     let { shouldStopPropagation: t } = e;
     function s(e) {
-        return !0 === t ? eO(e) : e;
+        return !0 === t ? em(e) : e;
     }
     return {
-        ...eL,
-        link: (0, ev.A)(e),
+        ...ep,
+        link: (0, er.A)(e),
         devLink: {
-            match: (e, t) => (t.allowLinks && t.allowDevLinks ? eC.exec(e) : null),
+            match: (e, t) => (t.allowLinks && t.allowDevLinks ? et.exec(e) : null),
             parse: (e, t) => ({ target: e, type: "devLink" }),
             react: (e, t, n) => {
                 let s = e.target[0];
                 return (0, z.h4)(s)
                     ? (0, l.jsxs)(
                           i.Fragment,
-                          { children: [(0, l.jsx)("span", { children: s }), (0, l.jsx)(Z.A, { url: s }, s)] },
+                          { children: [(0, l.jsx)("span", { children: s }), (0, l.jsx)(Z.default, { url: s }, s)] },
                           n.key,
                       )
                     : (0, J.W0)(s)
                       ? (0, l.jsxs)(
                             i.Fragment,
-                            { children: [(0, l.jsx)("span", { children: s }), (0, l.jsx)(ep, { url: s })] },
+                            {
+                                children: [
+                                    (0, l.jsx)("span", { children: s }),
+                                    (0, l.jsx)($.ExperimentEmbed, { url: s }),
+                                ],
+                            },
                             n.key,
                         )
-                      : (0, eg.i)(s)
+                      : (0, X.i)(s)
                         ? (0, l.jsx)(
                               i.Fragment,
                               {
                                   children: (0, l.jsxs)(i.Suspense, {
                                       fallback: null,
-                                      children: [(0, l.jsx)("span", { children: s }), (0, l.jsx)(ex, { url: s })],
+                                      children: [(0, l.jsx)("span", { children: s }), (0, l.jsx)(Q, { url: s })],
                                   }),
                               },
                               n.key,
@@ -468,7 +364,7 @@ function ek(e) {
                                 {
                                     children: (0, l.jsxs)(i.Suspense, {
                                         fallback: null,
-                                        children: [(0, l.jsx)("span", { children: s }), (0, l.jsx)(eA, { url: s })],
+                                        children: [(0, l.jsx)("span", { children: s }), (0, l.jsx)(ee, { url: s })],
                                     }),
                                 },
                                 n.key,
@@ -564,11 +460,11 @@ function ek(e) {
                 );
             },
         },
-        soundboard: s(eL.soundboard),
+        soundboard: s(ep.soundboard),
         gameMention: {
             react(e, t, n) {
                 let { gameId: i } = e;
-                return (0, l.jsx)(eI.A, { gameId: i, authorId: n.authorId }, n.key);
+                return (0, l.jsx)(el.A, { gameId: i, authorId: n.authorId }, n.key);
             },
         },
     };
