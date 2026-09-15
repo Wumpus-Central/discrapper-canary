@@ -488,7 +488,7 @@ var ea = a(789645),
     ec = a(641886),
     eu = a(780898),
     em = a(652215),
-    eh = a(121686),
+    eh = a(343963),
     ex = a(427262);
 function ep(e) {
     let { nameplate: t } = e,
@@ -512,6 +512,7 @@ function ep(e) {
         speakingWhilePTTInactive: !1,
         occluded: !1,
         dismissibleContents: { avatar: [], settings: [] },
+        isOrbchievementsEnabled: !1,
         awaitingRemote: !1,
         nameplate: t,
         voiceChannel: null,
