@@ -1,4 +1,4 @@
-n.d(t, { M: () => c, t: () => u });
+n.d(t, { M: () => d, t: () => u });
 var r = n(477900);
 n(582128);
 var i = n(192308),
@@ -10,16 +10,16 @@ let o = "collectibles shop product details modal",
         let {
             product: t,
             category: u,
-            shouldCheckoutWithOrbs: c,
-            analyticsSource: d,
-            analyticsLocations: f,
-            returnRef: I,
+            shouldCheckoutWithOrbs: d,
+            analyticsSource: c,
+            analyticsLocations: I,
+            returnRef: f,
             tab: p,
             giftRecipient: g,
             giftingOrigin: A,
             cardId: v,
-            sessionId: C,
-            tilePosition: m,
+            sessionId: x,
+            tilePosition: C,
         } = e;
         if (t.isCategoryReward) {
             let { isPurchased: e } = (0, a.o)(l.A, t);
@@ -58,7 +58,8 @@ let o = "collectibles shop product details modal",
                     n.e("984"),
                     n.e("226229"),
                     n.e("981833"),
-                    n.e("931937"),
+                    n.e("614929"),
+                    n.e("570473"),
                     n.e("516497"),
                     n.e("24774"),
                     n.e("326794"),
@@ -404,15 +405,15 @@ let o = "collectibles shop product details modal",
                 ]).then(n.bind(n, 422065));
                 return (n) =>
                     (0, r.jsx)(s.R9, {
-                        newValue: { cardId: v, sessionId: C, tilePosition: m },
+                        newValue: { cardId: v, sessionId: x, tilePosition: C },
                         children: (0, r.jsx)(e, {
                             ...n,
                             product: t,
                             category: u,
-                            shouldCheckoutWithOrbs: c,
-                            analyticsSource: d,
-                            analyticsLocations: f,
-                            returnRef: I,
+                            shouldCheckoutWithOrbs: d,
+                            analyticsSource: c,
+                            analyticsLocations: I,
+                            returnRef: f,
                             tab: p,
                             giftRecipient: g,
                             giftingOrigin: A,
@@ -422,6 +423,6 @@ let o = "collectibles shop product details modal",
             { modalKey: o },
         );
     };
-function c() {
+function d() {
     (0, i.closeModal)(o);
 }

@@ -1,36 +1,36 @@
-e.d(t, { A: () => u });
+e.d(t, { A: () => h });
 var a = e(477900);
 e(582128);
-var s = e(980707),
-    n = e(477782),
+var n = e(980707),
+    s = e(477782),
     r = e(660273),
-    o = e(57907),
-    c = e(867455),
-    l = e(607508),
-    d = e(37411);
-function u(i) {
-    let { channel: t, closePopout: e, onSelect: u, navId: h, label: p } = i,
+    c = e(57907),
+    o = e(867455),
+    d = e(607508),
+    l = e(37411);
+function h(i) {
+    let { channel: t, closePopout: e, onSelect: h, navId: u, label: p } = i,
         f = (0, r.A)(t, "Notifications Bell"),
-        k = (0, o.A)(t),
-        b = (0, l.X)(t);
-    return (0, a.jsxs)(s.W, {
+        k = (0, c.A)(t),
+        b = (0, d.X)(t);
+    return (0, a.jsxs)(n.W, {
         "data-menu-migrated-auto": !0,
-        navId: h,
+        navId: u,
         onClose: e,
         "aria-label": p,
-        onSelect: u,
+        onSelect: h,
         children: [
-            (0, a.jsxs)(n.rX, { children: [t.isForumPost() ? f : null, k] }),
-            (0, a.jsx)(n.rX, {
-                children: (0, d.EU)().map((i) => {
-                    let { setting: e, label: s } = i;
+            (0, a.jsxs)(s.rX, { children: [f, k] }),
+            (0, a.jsx)(s.rX, {
+                children: (0, l.EU)().map((i) => {
+                    let { setting: e, label: n } = i;
                     return (0, a.jsx)(
-                        n.iD,
+                        s.iD,
                         {
                             group: "thread-notifications",
                             id: `${e}`,
-                            label: s,
-                            action: () => c.A.setNotificationSettings(t, { flags: e }),
+                            label: n,
+                            action: () => o.A.setNotificationSettings(t, { flags: e }),
                             checked: e === b,
                         },
                         e,
