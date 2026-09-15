@@ -1,7 +1,7 @@
 (r.r(t), r.d(t, { default: () => j }));
 var n = r(477900),
-    i = r(503698),
-    a = r.n(i),
+    a = r(503698),
+    i = r.n(a),
     s = r(284009),
     l = r.n(s),
     o = r(702841),
@@ -14,34 +14,34 @@ var n = r(477900),
     y = r(795816),
     f = r(933958),
     g = r(47294),
-    A = r(47167),
-    F = r(386467),
+    F = r(47167),
+    A = r(386467),
     b = r(979186),
     D = r(734057),
     v = r(31717),
     E = r(309010),
-    C = r(164617),
-    x = r(540462),
-    R = r(748337);
-let S = [c.L, m.T, p.w, h.z];
+    x = r(164617),
+    C = r(540462),
+    S = r(748337);
+let R = [c.L, m.T, p.w, h.z];
 function j(e) {
     let { windowKey: t, channelId: r } = e,
-        i = (0, o.bG)([D.A], () => D.A.getChannel(r));
-    l()(null != i, "channel cannot be null for popout");
-    let s = (0, A.Ay)(i);
+        a = (0, o.bG)([D.A], () => D.A.getChannel(r));
+    l()(null != a, "channel cannot be null for popout");
+    let s = (0, F.Ay)(a);
     return (0, n.jsx)(b.A, {
         withTitleBar: !0,
-        keybinds: S,
+        keybinds: R,
         windowKey: t,
         title: s ?? "",
-        channelId: i.id,
+        channelId: a.id,
         onBeforeUnload: function (e) {
             let { e: t, unmountWindow: r } = e;
-            if (null == i) return;
-            let n = f.Ay.getSelfEmbeddedActivityForChannel(i.id),
-                a = E.Ay.getVoiceChannelId() === i.id;
-            if (null != n && a) {
-                let e = (0, y.od)(n.applicationId, i.id);
+            if (null == a) return;
+            let n = f.Ay.getSelfEmbeddedActivityForChannel(a.id),
+                i = E.Ay.getVoiceChannelId() === a.id;
+            if (null != n && i) {
+                let e = (0, y.od)(n.applicationId, a.id);
                 (t.preventDefault(),
                     (0, g.A)({
                         onConfirm: async () => {
@@ -52,12 +52,12 @@ function j(e) {
             } else r();
         },
         children: (0, n.jsx)("div", {
-            className: a()("root", R.M),
-            children: (0, n.jsxs)(F.A.Provider, {
-                value: i.guild_id,
+            className: i()("root", S.M),
+            children: (0, n.jsxs)(A.A.Provider, {
+                value: a.guild_id,
                 children: [
-                    (0, n.jsx)(u.A, { channel: i, draftType: v.C.ChannelMessage }),
-                    (0, n.jsx)(x.default, { channel: i, popoutType: C.N.VOICE_UI }),
+                    (0, n.jsx)(u.A, { channel: a, draftType: v.C.ChannelMessage }),
+                    (0, n.jsx)(C.default, { channel: a, popoutType: x.N.VOICE_UI }),
                     (0, n.jsx)(d.A, { popoutWindowKey: t, popoutWindowHasTitleBar: !0 }),
                 ],
             }),

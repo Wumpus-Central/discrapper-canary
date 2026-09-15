@@ -28,8 +28,8 @@ function p(e) {
         N = a.useContext(x),
         w = a.useId(),
         S = a.useCallback(() => y((e) => !e), []),
-        { text: C, phase: A } = (0, c.Q)(l),
-        M = _ ? r.a : u._,
+        { text: M, phase: C } = (0, c.Q)(l),
+        A = _ ? r.a : u._,
         T = null != k,
         I = (0, n.jsxs)(n.Fragment, {
             children: [
@@ -38,10 +38,10 @@ function p(e) {
                     tag: "span",
                     variant: "text-md/normal",
                     color: "currentColor",
-                    className: i()(h.qo, { [h._q]: "exit" === A, [h.GD]: "enter" === A }),
-                    children: C,
+                    className: i()(h.qo, { [h._q]: "exit" === C, [h.GD]: "enter" === C }),
+                    children: M,
                 }),
-                T ? (0, n.jsx)(M, { size: "xs", color: "currentColor", className: h.nD }) : null,
+                T ? (0, n.jsx)(A, { size: "xs", color: "currentColor", className: h.nD }) : null,
             ],
         }),
         E = (0, n.jsxs)(n.Fragment, {
@@ -67,7 +67,7 @@ function p(e) {
                       className: i()(h.ep, h.EK),
                       "aria-expanded": _,
                       "aria-controls": w,
-                      "aria-label": f.intl.formatToPlainString(m.default.s1wx5H, { activity: C }),
+                      "aria-label": f.intl.formatToPlainString(m.default.s1wx5H, { activity: M }),
                       onClick: S,
                       children: E,
                   })

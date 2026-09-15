@@ -1,4 +1,4 @@
-n.d(t, { A: () => I, o: () => v });
+n.d(t, { A: () => R, o: () => v });
 var a = n(477900),
     l = n(582128),
     r = n(503698),
@@ -8,8 +8,8 @@ var a = n(477900),
     d = n(661531),
     c = n(602853),
     u = n(778712),
-    m = n(654107),
-    f = n(450373),
+    f = n(654107),
+    m = n(450373),
     g = n(885386),
     p = n(531685),
     E = n(486020),
@@ -26,34 +26,34 @@ function v(e) {
             guildId: r,
             pendingBanner: A,
             overlay: v,
-            className: I,
-            avatarSize: R,
+            className: R,
+            avatarSize: I,
             avatarOffsetX: j,
-            avatarOffsetY: T,
-            bannerWidth: y,
+            avatarOffsetY: y,
+            bannerWidth: T,
             bannerHeight: C,
             themePadding: S,
             pendingAccentColor: D,
-            animateOnHoverOrFocusOnly: M = !1,
+            animateOnHoverOrFocusOnly: P = !1,
         } = e,
-        [P, U] = l.useState(!1),
+        [M, U] = l.useState(!1),
         O = (0, o.bG)([p.A], () => p.A.isFocused()),
         B = g.kt.getSetting(),
         G = (0, b.Nx)(),
         { bannerSrc: w, status: k } = (0, h.A)({
             displayProfile: n,
             pendingBanner: A,
-            size: y,
-            canAnimate: M || !B ? P : O,
+            size: T,
+            canAnimate: P || !B ? M : O,
         }),
         L = G ? null : (w ?? null),
         H = (0, c.r)(d.A.unsafe_rawColors.PRIMARY_800).hex(),
-        V = t.getAvatarURL(r, (0, u.FT)(R)),
-        $ = (0, s.LX)((0, m.Ay)(V, H, !1)),
-        F = (0, f.A)(D ?? n?.primaryColor ?? $).hex,
-        z = { align: "start", insetStart: j - S, insetBottom: T + S, radius: (0, _.A)(R) };
+        V = t.getAvatarURL(r, (0, u.FT)(I)),
+        $ = (0, s.LX)((0, f.Ay)(V, H, !1)),
+        F = (0, m.A)(D ?? n?.primaryColor ?? $).hex,
+        z = { align: "start", insetStart: j - S, insetBottom: y + S, radius: (0, _.A)(I) };
     return (0, a.jsx)(x.A, {
-        fillClassName: i()(N.v, I),
+        fillClassName: i()(N.v, R),
         bannerSrc: L,
         backgroundColor: "COMPLETE" === k || G ? F : d.A.unsafe_rawColors.PRIMARY_800.css,
         showGifTag: !B && (0, E.o4)(L),
@@ -64,7 +64,7 @@ function v(e) {
         onInteractionEnd: () => U(!1),
     });
 }
-function I(e) {
+function R(e) {
     let {
             themeType: t,
             user: n,

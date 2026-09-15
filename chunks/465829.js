@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => T, Ce: () => R, c$: () => N, gU: () => A, n2: () => I });
+n.d(t, { Ay: () => y, Ce: () => I, c$: () => N, gU: () => A, n2: () => R });
 var a = n(477900);
 n(582128);
 var l = n(503698),
@@ -9,8 +9,8 @@ var l = n(503698),
     d = n(866665),
     c = n(297413),
     u = n(296948),
-    m = n(709066),
-    f = n(609425),
+    f = n(709066),
+    m = n(609425),
     g = n(922301),
     p = n(660184),
     E = n(534400),
@@ -30,15 +30,15 @@ function N(e) {
             displayNameTrailing: c,
             className: u,
         } = e,
-        m = (0, f.A)({ userId: t.id, guildId: n, pendingDisplayNameStyles: o }),
+        f = (0, m.A)({ userId: t.id, guildId: n, pendingDisplayNameStyles: o }),
         E = A[s];
-    return null != m
+    return null != f
         ? (0, a.jsx)(i.E, {
               variant: E,
               className: u,
               children: (0, a.jsx)(p.A, {
                   userName: l,
-                  displayNameStyles: m,
+                  displayNameStyles: f,
                   effectDisplayType: g.G.ANIMATED,
                   textClassName: _.QC,
                   shouldWrap: !0,
@@ -60,8 +60,8 @@ function v(e) {
             pendingDisplayNameStyles: d,
             onClickDisplayName: c,
         } = e,
-        f = (0, u.r)(t),
-        g = null != f ? (0, a.jsx)(m.A, { type: f, verified: t.isVerifiedBot(), className: _.AO }) : null,
+        m = (0, u.r)(t),
+        g = null != m ? (0, a.jsx)(f.A, { type: m, verified: t.isVerifiedBot(), className: _.AO }) : null,
         p = (0, a.jsx)(N, {
             user: t,
             guildId: n,
@@ -79,7 +79,7 @@ function v(e) {
         ],
     });
 }
-function I(e) {
+function R(e) {
     let { pronouns: t, className: n } = e;
     return (0, a.jsxs)(i.E, {
         className: r()(_.hI, n),
@@ -91,7 +91,7 @@ function I(e) {
         ],
     });
 }
-function R() {
+function I() {
     return (0, a.jsx)("div", { "aria-hidden": "true", className: _.SC });
 }
 function j(e) {
@@ -101,8 +101,8 @@ function j(e) {
             onClickUsername: l,
             pronouns: i,
             primaryGuild: o,
-            contextGuildId: m,
-            trailing: f,
+            contextGuildId: f,
+            trailing: m,
             onClose: g,
         } = e,
         p = (0, b.j)({ location: "UserProfileUserInfo" }),
@@ -126,28 +126,28 @@ function j(e) {
             A &&
                 (0, a.jsxs)(a.Fragment, {
                     children: [
-                        (0, a.jsx)(R, {}),
+                        (0, a.jsx)(I, {}),
                         (0, a.jsx)(d.m, {
                             text: x.intl.string(x.t.GI2A8C),
                             delay: h.In,
                             ariaHidden: !0,
-                            children: (0, a.jsx)("span", { className: _.Ez, children: (0, a.jsx)(I, { pronouns: i }) }),
+                            children: (0, a.jsx)("span", { className: _.Ez, children: (0, a.jsx)(R, { pronouns: i }) }),
                         }),
                     ],
                 }),
             (0, a.jsx)(E.Ay, {
                 primaryGuild: o,
                 userId: t.id,
-                contextGuildId: m,
+                contextGuildId: f,
                 onClose: g,
                 textVariant: p ? "text-xs/normal" : "text-xs/semibold",
                 className: p ? _.Bb : _.Mp,
             }),
-            f,
+            m,
         ],
     });
 }
-function T(e) {
+function y(e) {
     let {
         user: t,
         guildId: n,
@@ -159,8 +159,8 @@ function T(e) {
         displayNameTrailing: d,
         usernameIcon: c,
         pronouns: u,
-        primaryGuild: m,
-        contextGuildId: f,
+        primaryGuild: f,
+        contextGuildId: m,
         trailing: g,
         onClose: p,
     } = e;
@@ -180,8 +180,8 @@ function T(e) {
                 user: t,
                 usernameIcon: c,
                 pronouns: u,
-                primaryGuild: m,
-                contextGuildId: f,
+                primaryGuild: f,
+                contextGuildId: m,
                 onClickUsername: r,
                 onClose: p,
                 trailing: g,

@@ -14,8 +14,8 @@ function o(e) {
             width: d,
             cutout: c,
             onInteractionStart: u,
-            onInteractionEnd: m,
-            className: f,
+            onInteractionEnd: f,
+            className: m,
             fillClassName: g,
             overlay: p,
         } = e,
@@ -25,13 +25,13 @@ function o(e) {
             "--custom-cutout-y": `calc(100% - ${c.insetBottom}px)`,
         };
     return (0, a.jsx)("div", {
-        className: r()(s.vK, f),
+        className: r()(s.vK, m),
         style: { height: o, width: d ?? "100%" },
         children: (0, a.jsxs)("div", {
             className: r()(s.GS, g),
             style: { ...E, backgroundImage: null != t && "" !== t ? `url(${t})` : void 0, backgroundColor: n },
             onMouseMove: u,
-            onMouseLeave: m,
+            onMouseLeave: f,
             children: [l && (0, a.jsx)(i.A, { className: s.pH }), p],
         }),
     });

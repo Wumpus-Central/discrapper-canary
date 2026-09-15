@@ -8,8 +8,8 @@ var a = n(477900),
     d = n(661531),
     c = n(866665),
     u = n(140735),
-    m = n(707554),
-    f = n(297264),
+    f = n(707554),
+    m = n(297264),
     g = n(834730),
     p = n(915089),
     E = n(94343),
@@ -32,21 +32,21 @@ function A(e) {
             hideHeading: A = !1,
             introText: N,
             className: v,
-            scrollTargetId: I,
+            scrollTargetId: R,
         } = e,
-        R = (0, p.GV)(),
+        I = (0, p.GV)(),
         j = l.useRef(null),
-        T = (0, b.g)(),
-        y = null != I && T === I;
-    (0, E.A)(j, y);
+        y = (0, b.g)(),
+        T = null != R && y === R;
+    (0, E.A)(j, T);
     let C = "function" == typeof c ? { icon: c } : c;
     return (0, a.jsxs)("section", {
-        ref: y ? j : void 0,
+        ref: T ? j : void 0,
         className: i()(h.uW, v),
-        "aria-labelledby": R,
+        "aria-labelledby": I,
         children: [
             A
-                ? (0, a.jsx)(u.A, { children: (0, a.jsx)(m.H, { id: R, children: n }) })
+                ? (0, a.jsx)(u.A, { children: (0, a.jsx)(f.H, { id: I, children: n }) })
                 : (0, a.jsxs)("div", {
                       className: h.so,
                       children: [
@@ -54,11 +54,11 @@ function A(e) {
                               className: h.wx,
                               style: { color: d.A.colors[x[o]]?.css },
                               children: [
-                                  (0, a.jsx)(f.D, {
+                                  (0, a.jsx)(m.D, {
                                       variant: s,
                                       color: "currentColor",
                                       className: r,
-                                      id: R,
+                                      id: I,
                                       children: n,
                                   }),
                                   null != C && (0, a.jsx)(_, { ...C }),
@@ -67,7 +67,7 @@ function A(e) {
                           null != N && (0, a.jsx)(g.E, { variant: "text-xs/normal", children: N }),
                       ],
                   }),
-            (0, a.jsx)(m.F, { children: t }),
+            (0, a.jsx)(f.F, { children: t }),
         ],
     });
 }

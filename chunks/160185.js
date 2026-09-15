@@ -1,4 +1,4 @@
-s.d(t, { i: () => I });
+s.d(e, { i: () => S });
 var n = s(477900),
     i = s(582128),
     a = s(503698),
@@ -19,8 +19,8 @@ var n = s(477900),
     N = s(652215),
     v = s(375708),
     A = s(385872);
-function _(e) {
-    let { questId: t, questContent: s, fullWidth: i } = e;
+function _(t) {
+    let { questId: e, questContent: s, fullWidth: i } = t;
     return (0, n.jsx)("div", {
         className: A.UD,
         children: (0, n.jsx)(o.$, {
@@ -35,10 +35,10 @@ function _(e) {
                               surfaceId: s,
                               sourceQuestContent: s,
                               isTargeted: !1,
-                              relatedQuestId: t,
+                              relatedQuestId: e,
                           })
                         : x.default.track(N.HAw.QUEST_CONTENT_CLICKED, {
-                              quest_id: t,
+                              quest_id: e,
                               click_id: (0, r.A)(),
                               cta_name: C.Cy.VIEW_QUESTS,
                               is_targeted: !1,
@@ -49,23 +49,23 @@ function _(e) {
         }),
     });
 }
-function I(e) {
-    let { questId: t, fallbackReason: s, bodyText: a, questContent: r } = e,
+function S(t) {
+    let { questId: e, fallbackReason: s, bodyText: a, questContent: r } = t,
         { containerRef: o, size: d } = (function () {
-            let [e, t] = i.useState("lg"),
+            let [t, e] = i.useState("lg"),
                 [s, n] = i.useState(void 0),
-                a = (0, j.A)((e) => {
-                    let s = e.target,
-                        i = e.contentRect.width;
-                    return (n(s.scrollHeight), null == i || i > 460) ? t("lg") : i > 280 ? t("sm") : t("xs");
+                a = (0, j.A)((t) => {
+                    let s = t.target,
+                        i = t.contentRect.width;
+                    return (n(s.scrollHeight), null == i || i > 460) ? e("lg") : i > 280 ? e("sm") : e("xs");
                 });
-            return { containerRef: (0, g.w)(a), size: e, height: s };
+            return { containerRef: (0, g.w)(a), size: t, height: s };
         })();
     return (
-        (0, E.Ii)(s, t),
+        (0, E.Ii)(s, e),
         (0, n.jsxs)("div", {
-            ref: (e) => {
-                o.current = e;
+            ref: (t) => {
+                o.current = t;
             },
             className: l()(A.kL, { [A.U]: "lg" === d, [A.SP]: "lg" !== d }),
             children: [
@@ -83,7 +83,7 @@ function I(e) {
                             className: A.__invalid_mobileWebCopy,
                             children: a,
                         }),
-                        (0, n.jsx)(_, { questId: t, questContent: r, fullWidth: "lg" !== d }),
+                        (0, n.jsx)(_, { questId: e, questContent: r, fullWidth: "lg" !== d }),
                     ],
                 }),
                 (0, n.jsx)("div", {

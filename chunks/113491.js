@@ -83,13 +83,13 @@ function N() {
                     if (((f = a), null == t || null == n || 0 === o || null == r)) return;
                     let N = Number(r.dataset.effortCentre),
                         A = r.hasAttribute("data-effort-live"),
-                        S = Number.isFinite(N) && Math.abs(N - i) > 16;
-                    if (!h && (!A || S)) return;
+                        E = Number.isFinite(N) && Math.abs(N - i) > 16;
+                    if (!h && (!A || E)) return;
                     g = Math.min(1, Math.max(0, g + ((A ? 1 : -1) * b) / 260));
-                    let E = t.getBoundingClientRect(),
-                        C = E.width > 0 ? E.width / o : 1,
+                    let S = t.getBoundingClientRect(),
+                        C = S.width > 0 ? S.width / o : 1,
                         I = r.getBoundingClientRect(),
-                        M = (I.left - E.left) / C,
+                        M = (I.left - S.left) / C,
                         T = (1 - Math.min(1, Math.abs(M + I.width / C / 2 - i) / 16)) * g;
                     if (T < 0.01) {
                         (h && n.clearRect(0, 0, o, u), (h = !1));
@@ -143,11 +143,11 @@ function N() {
                 })));
             let A = document.fonts;
             null != A && A.load(`${d}px 'AI Visual Identity Glyphs'`, v.QI + v.vd).then(b, () => void 0);
-            let S = "u" < typeof ResizeObserver ? null : new ResizeObserver(N);
+            let E = "u" < typeof ResizeObserver ? null : new ResizeObserver(N);
             return (
-                S?.observe(t),
+                E?.observe(t),
                 () => {
-                    (cancelAnimationFrame(m), S?.disconnect());
+                    (cancelAnimationFrame(m), E?.disconnect());
                 }
             );
         }, []),
@@ -155,7 +155,7 @@ function N() {
     );
 }
 var A = n(757713);
-function S(e) {
+function E(e) {
     let { activeIndex: t, stops: n, ariaLabel: r, disabled: s, onSelect: o, className: u } = e,
         d = a.useRef(null),
         c = a.useRef(null),
@@ -377,7 +377,7 @@ function S(e) {
         })
     );
 }
-var E = n(856795),
+var S = n(856795),
     C = n(50617),
     I = n(375708),
     M = n(752065);
@@ -425,7 +425,7 @@ function R(e) {
     }
     let P = x.Q0.map((e) => e.summary()),
         _ = y >= 0 ? P[y] : (0, x.tg)(t, n.main),
-        { text: L, phase: F } = (0, E.Q)(_);
+        { text: L, phase: F } = (0, S.Q)(_);
     return (0, l.jsx)("div", {
         className: M.qd,
         "data-placement": f ?? void 0,
@@ -525,7 +525,7 @@ function R(e) {
                                         }),
                                     ],
                                 }),
-                                (0, l.jsx)(S, {
+                                (0, l.jsx)(E, {
                                     activeIndex: y,
                                     stops: P,
                                     ariaLabel: I.intl.string(C.default.GDs9Vq),

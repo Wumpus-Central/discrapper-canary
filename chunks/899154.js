@@ -31,10 +31,10 @@ function c(e) {
             }).hasAny,
         { data: w } = (0, s.YY)(n ?? void 0),
         N = null != n && w?.bot?.id != null,
-        { data: A, isLoading: S } = (0, s.YY)(t ?? void 0),
-        E = c || (0, o.x)(A),
-        C = null != t && S,
-        I = (0, d.Xm)({ installScope: m, hasFrame: E, hasProfileWidget: k, hasBotDm: N, ownerAuthorizationRevoked: f });
+        { data: A, isLoading: E } = (0, s.YY)(t ?? void 0),
+        S = c || (0, o.x)(A),
+        C = null != t && E,
+        I = (0, d.Xm)({ installScope: m, hasFrame: S, hasProfileWidget: k, hasBotDm: N, ownerAuthorizationRevoked: f });
     return {
         availability: I,
         isResolving: C,
