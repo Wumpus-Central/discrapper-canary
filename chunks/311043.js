@@ -98,6 +98,10 @@ let I = new h(r.h, {
         });
     },
     SEARCH_MESSAGES_SUCCESS: E,
+    INTELLIGENCE_SEARCH_FETCH_SUCCESS: function (e) {
+        let { messages: t } = e;
+        return t.reduce((e, t) => u(t) || e, !1);
+    },
     MOD_VIEW_SEARCH_MESSAGES_SUCCESS: E,
     LOAD_MESSAGES_SUCCESS: _,
     LOAD_MESSAGES_AROUND_SUCCESS: _,

@@ -149,6 +149,10 @@ let T = new p(r.h, {
         return !1;
     },
     SEARCH_MESSAGES_SUCCESS: f,
+    INTELLIGENCE_SEARCH_FETCH_SUCCESS: function (e) {
+        let { guildId: t, messages: n } = e;
+        return h(t, n);
+    },
     MOD_VIEW_SEARCH_MESSAGES_SUCCESS: f,
     LOCAL_MESSAGES_LOADED: I,
     LOAD_MESSAGES_SUCCESS: I,

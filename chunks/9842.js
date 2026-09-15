@@ -150,6 +150,10 @@ let D = new y(l.h, {
     LOAD_MESSAGES_SUCCESS: S,
     LOAD_MESSAGES_AROUND_SUCCESS: S,
     SEARCH_MESSAGES_SUCCESS: N,
+    INTELLIGENCE_SEARCH_FETCH_SUCCESS: function (e) {
+        let { messages: t } = e;
+        return g(t, (e) => m(e));
+    },
     MOD_VIEW_SEARCH_MESSAGES_SUCCESS: N,
     CONVERSATION_FETCH_SUCCESS: function (e) {
         let { messages: t, messageReferences: n } = e;

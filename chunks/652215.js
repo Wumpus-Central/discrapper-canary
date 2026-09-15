@@ -1313,6 +1313,7 @@ let nM = "",
             let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "png";
             return `/guilds/${e}/users/${t}/banners/${n}.${i}`;
         },
+        INTELLIGENCE_LAYER_SEARCH: (e) => `/guilds/${e}/intelligence-layer/search`,
         CHANNEL_CONVERSATIONS: (e) => `/channels/${e}/conversations`,
         CHANNEL_CONVERSATION_MESSAGES: (e, t) => `/channels/${e}/conversations/${t}/messages`,
         MESSAGES: (e) => `/channels/${e}/messages`,
