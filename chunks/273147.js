@@ -1,130 +1,132 @@
-n.d(t, { G: () => Q });
+n.d(t, { G: () => ee });
 var i = n(477900),
     l = n(17928),
     s = n(97808),
     a = n(778712),
-    r = n(287809),
-    o = n(562153),
-    c = n(19575),
-    d = n(999291),
-    u = n(732188),
-    m = n(402860),
-    h = n(718019),
-    g = n(365607),
-    p = n(791556),
-    A = n(465829),
-    x = n(983495),
-    f = n(582128),
-    E = n(317097),
-    I = n(661531),
-    C = n(602853),
-    _ = n(654107),
-    v = n(450373),
-    N = n(885386),
-    j = n(531685),
-    T = n(486020),
-    S = n(837529),
-    y = n(686189),
-    b = n(714719),
-    R = n(859161);
-function M(e) {
+    r = n(372320),
+    o = n(744808),
+    c = n(287809),
+    d = n(562153),
+    u = n(19575),
+    m = n(999291),
+    h = n(732188),
+    g = n(402860),
+    p = n(718019),
+    A = n(365607),
+    x = n(791556),
+    f = n(465829),
+    E = n(983495),
+    I = n(582128),
+    C = n(317097),
+    _ = n(661531),
+    v = n(602853),
+    N = n(654107),
+    j = n(450373),
+    T = n(885386),
+    S = n(531685),
+    y = n(486020),
+    b = n(837529),
+    R = n(686189),
+    M = n(714719),
+    k = n(859161);
+function L(e) {
     let { user: t, displayProfile: n, guildId: s, bannerHeight: r, avatarSize: o, avatarInsetStart: c } = e,
-        [d, u] = f.useState(!1),
-        m = (0, l.bG)([j.A], () => j.A.isFocused()),
-        h = N.kt.getSetting(),
-        g = (0, S.Nx)(),
-        { bannerSrc: p, status: A } = (0, y.A)({ displayProfile: n ?? null, size: 480, canAnimate: h ? m : d }),
+        [d, u] = I.useState(!1),
+        m = (0, l.bG)([S.A], () => S.A.isFocused()),
+        h = T.kt.getSetting(),
+        g = (0, b.Nx)(),
+        { bannerSrc: p, status: A } = (0, R.A)({ displayProfile: n ?? null, size: 480, canAnimate: h ? m : d }),
         x = g ? null : (p ?? null),
-        M = (0, C.r)(I.A.unsafe_rawColors.PRIMARY_800).hex(),
-        k = null != n ? n.guildId : s,
-        L = t.getAvatarURL(k ?? void 0, (0, a.FT)(o)),
-        O = (0, E.LX)((0, _.Ay)(L, M, !1)),
-        P = (0, v.A)(n?.primaryColor ?? O).hex,
+        f = (0, v.r)(_.A.unsafe_rawColors.PRIMARY_800).hex(),
+        E = null != n ? n.guildId : s,
+        L = t.getAvatarURL(E ?? void 0, (0, a.FT)(o)),
+        O = (0, C.LX)((0, N.Ay)(L, f, !1)),
+        P = (0, j.A)(n?.primaryColor ?? O).hex,
         { size: D, stroke: U } = (0, a.Kj)(o),
-        G = (0, R.A)(o);
-    return (0, i.jsx)(b.A, {
+        G = (0, k.A)(o);
+    return (0, i.jsx)(M.A, {
         bannerSrc: x,
-        backgroundColor: A === y.D.COMPLETE || g ? P : I.A.unsafe_rawColors.PRIMARY_800.css,
-        showGifTag: !h && (0, T.o4)(x),
+        backgroundColor: A === R.D.COMPLETE || g ? P : _.A.unsafe_rawColors.PRIMARY_800.css,
+        showGifTag: !h && (0, y.o4)(x),
         height: r,
         cutout: { align: "start", insetStart: c + D / 2 - G, insetBottom: U / 2, radius: G },
         onInteractionStart: () => u(!0),
         onInteractionEnd: () => u(!1),
     });
 }
-var k = n(280450),
-    L = n(984545),
-    O = n(35241),
-    P = n(587168),
-    D = n(193738),
-    U = n(133385),
-    G = n(996988);
-function w(e) {
+var O = n(280450),
+    P = n(984545),
+    D = n(35241),
+    U = n(587168),
+    G = n(193738),
+    w = n(133385),
+    H = n(996988);
+function F(e) {
     let { user: t, guildId: n } = e;
     return t.isNonUserBot()
-        ? (0, i.jsx)(O.A, { user: t })
+        ? (0, i.jsx)(D.A, { user: t })
         : t.bot
-          ? (0, i.jsx)(L.A, { user: t, guildId: n })
-          : (0, i.jsx)(U.yo, { user: t, guildId: n });
+          ? (0, i.jsx)(P.A, { user: t, guildId: n })
+          : (0, i.jsx)(w.yo, { user: t, guildId: n });
 }
-function H(e) {
+function B(e) {
     let { user: t, guildId: n } = e;
-    return (0, l.bG)([k.default], () => k.default.getId() === t.id)
+    return (0, l.bG)([O.default], () => O.default.getId() === t.id)
         ? null
-        : (0, i.jsxs)(P.A, {
+        : (0, i.jsxs)(U.A, {
               children: [
-                  !t.isNonUserBot() && (0, i.jsx)(D.A, { user: t, themeType: G.d.EMBED }),
-                  (0, i.jsx)(w, { user: t, guildId: n ?? void 0 }),
+                  !t.isNonUserBot() && (0, i.jsx)(G.A, { user: t, themeType: H.d.EMBED }),
+                  (0, i.jsx)(F, { user: t, guildId: n ?? void 0 }),
               ],
           });
 }
-var B = n(213994),
-    F = n(821609),
-    V = n(375708),
-    z = n(820555);
-function J(e) {
+var V = n(213994),
+    z = n(821609),
+    J = n(375708),
+    K = n(820555);
+function Y(e) {
     let { userId: t, guildId: n, channelId: l } = e;
     return (0, i.jsx)("div", {
-        className: z.k,
-        children: (0, i.jsx)(F.$, {
+        className: K.k,
+        children: (0, i.jsx)(z.$, {
             variant: "primary",
             size: "md",
             fullWidth: !0,
-            text: V.intl.string(V.t.iXAna6),
+            text: J.intl.string(J.t.iXAna6),
             onClick: function () {
-                (0, m.openUserProfileModal)({ userId: t, guildId: n, channelId: l, hideRestrictedProfile: !0 });
+                (0, g.openUserProfileModal)({ userId: t, guildId: n, channelId: l, hideRestrictedProfile: !0 });
             },
         }),
     });
 }
-var K = n(332757);
-let Y = c.Ay.getEnableHardwareAcceleration() ? s.Js : s.eu,
-    W = a._3.SIZE_96,
-    X = {
+var W = n(332757);
+let X = u.Ay.getEnableHardwareAcceleration() ? s.Js : s.eu,
+    Z = a._3.SIZE_96,
+    q = {
         "--custom-user-profile-banner-height": "120px",
-        "--custom-user-profile-avatar-size": `${(0, a.Kj)(W).size}px`,
-        "--custom-user-profile-avatar-stroke": `${(0, a.Kj)(W).stroke}px`,
+        "--custom-user-profile-avatar-size": `${(0, a.Kj)(Z).size}px`,
+        "--custom-user-profile-avatar-stroke": `${(0, a.Kj)(Z).stroke}px`,
         "--custom-user-profile-content-inset": "16px",
     };
-function Z(e) {
+function Q(e) {
     let { user: t, displayProfile: n, guildId: l, channelId: s } = e,
-        { avatarProps: a, eventHandlers: r } = (0, h.V)({
+        { avatarProps: a, eventHandlers: r } = (0, p.V)({
             user: t,
             displayProfile: n,
             guildId: l,
             channelId: s,
-            avatarSize: W,
+            avatarSize: Z,
         });
-    return (0, i.jsx)("div", { className: K.H, children: (0, i.jsx)(Y, { ...a, ...r }) });
+    return (0, i.jsx)("div", { className: W.H, children: (0, i.jsx)(X, { ...a, ...r }) });
 }
-function q(e) {
+function $(e) {
     let { user: t, guildId: n, channelId: l } = e;
-    return (0, u.A)(t)
-        ? (0, i.jsx)(p.A, {
+    return (0, h.A)(t)
+        ? (0, i.jsx)(x.A, {
               user: t,
-              className: K.I0,
+              className: W.I0,
               onOpenProfile: (e) =>
-                  (0, m.openUserProfileModal)({
+                  (0, g.openUserProfileModal)({
                       userId: t.id,
                       guildId: n,
                       channelId: l,
@@ -134,52 +136,54 @@ function q(e) {
           })
         : null;
 }
-function Q(e) {
+function ee(e) {
     let { userId: t, guildId: n, channelId: s, headingRef: a } = e,
-        c = (0, l.bG)([r.default], () => r.default.getUser(t)),
-        u = (0, d.Ay)(t, n),
-        m = null != u ? u.guildId : n,
-        h = o.Ay.useName(m, s, c);
-    return null == c
+        u = (0, l.bG)([c.default], () => c.default.getUser(t)),
+        h = (0, m.Ay)(t, n),
+        g = null != h ? h.guildId : n,
+        p = d.Ay.useName(g, s, u),
+        x = (0, r.A)(h?.profileFrame?.skuId);
+    return null == u
         ? null
-        : (0, i.jsxs)(B.A, {
-              user: c,
-              displayProfile: u,
+        : (0, i.jsxs)(V.A, {
+              user: u,
+              displayProfile: h,
               size: "sm",
-              style: X,
+              style: q,
               headingRef: a,
-              headingText: V.intl.formatToPlainString(V.t["8yRya1"], { name: h }),
+              headingText: J.intl.formatToPlainString(J.t["8yRya1"], { name: p }),
+              profileFrame: null != x ? (0, i.jsx)(o.A, { frame: x, fadeIn: !1 }) : null,
               children: [
-                  (0, i.jsx)(M, {
-                      user: c,
-                      displayProfile: u,
+                  (0, i.jsx)(L, {
+                      user: u,
+                      displayProfile: h,
                       guildId: n,
                       bannerHeight: 120,
-                      avatarSize: W,
+                      avatarSize: Z,
                       avatarInsetStart: 16,
                   }),
-                  (0, i.jsx)(H, { user: c, guildId: n }),
-                  (0, i.jsx)(Z, { user: c, displayProfile: u, guildId: n, channelId: s }),
-                  (0, i.jsx)(x.A, {
-                      user: c,
-                      guildId: m ?? void 0,
+                  (0, i.jsx)(B, { user: u, guildId: n }),
+                  (0, i.jsx)(Q, { user: u, displayProfile: h, guildId: n, channelId: s }),
+                  (0, i.jsx)(E.A, {
+                      user: u,
+                      guildId: g ?? void 0,
                       channelId: s ?? void 0,
-                      themeType: G.d.EMBED,
-                      className: K.WO,
-                      referenceClassName: K.RQ,
+                      themeType: H.d.EMBED,
+                      className: W.WO,
+                      referenceClassName: W.RQ,
                       disableToolbar: !0,
                   }),
-                  (0, i.jsx)(A.Ay, {
-                      user: c,
-                      guildId: m ?? void 0,
+                  (0, i.jsx)(f.Ay, {
+                      user: u,
+                      guildId: g ?? void 0,
                       contextGuildId: n ?? void 0,
-                      displayName: h,
-                      pronouns: u?.pronouns,
-                      className: K.eF,
-                      trailing: (0, i.jsx)(g.A, { displayProfile: u, themeType: G.d.EMBED }),
+                      displayName: p,
+                      pronouns: h?.pronouns,
+                      className: W.eF,
+                      trailing: (0, i.jsx)(A.A, { displayProfile: h, themeType: H.d.EMBED }),
                   }),
-                  (0, i.jsx)(q, { user: c, guildId: n, channelId: s }),
-                  (0, i.jsx)(J, { userId: t, guildId: n, channelId: s }),
+                  (0, i.jsx)($, { user: u, guildId: n, channelId: s }),
+                  (0, i.jsx)(Y, { userId: t, guildId: n, channelId: s }),
               ],
           });
 }

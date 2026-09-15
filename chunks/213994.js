@@ -10,21 +10,34 @@ var l = n(503698),
     d = n(996988),
     u = n(768590);
 function m(e) {
-    let { user: t, displayProfile: n, size: l, headingText: m, className: h, style: g, headingRef: p, children: A } = e,
-        x = (0, o.GV)();
-    return (0, i.jsx)(c.A, {
+    let {
+            user: t,
+            displayProfile: n,
+            size: l,
+            headingText: m,
+            className: h,
+            style: g,
+            headingRef: p,
+            profileFrame: A,
+            children: x,
+        } = e,
+        f = (0, o.GV)();
+    return (0, i.jsxs)(c.A, {
         user: t,
         displayProfile: n,
         themeType: d.d.EMBED,
         className: u[l],
         style: g,
-        children: (0, i.jsxs)("article", {
-            "aria-labelledby": x,
-            className: s()(u.article, h),
-            children: [
-                (0, i.jsx)(a.A, { children: (0, i.jsx)(r.H, { ref: p, tabIndex: -1, id: x, children: m }) }),
-                (0, i.jsx)(r.F, { children: A }),
-            ],
-        }),
+        children: [
+            (0, i.jsxs)("article", {
+                "aria-labelledby": f,
+                className: s()(u.article, h),
+                children: [
+                    (0, i.jsx)(a.A, { children: (0, i.jsx)(r.H, { ref: p, tabIndex: -1, id: f, children: m }) }),
+                    (0, i.jsx)(r.F, { children: x }),
+                ],
+            }),
+            A,
+        ],
     });
 }
