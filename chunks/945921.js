@@ -3,7 +3,7 @@ let n = r(474726),
     a = r(574253),
     i = r(798401),
     s = r(474726),
-    o = r(167385),
+    o = r(389766),
     u = RegExp(
         `((?:in)\\s*)?(${(0, i.matchAnyPattern)(n.MONTH_DICTIONARY)})\\s*(?:[,-]?\\s*(${s.YEAR_PATTERN})?)?(?=[^\\s\\w]|\\s+[^0-9]|\\s+$|$)`,
         "i",

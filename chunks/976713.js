@@ -1,6 +1,6 @@
 n.d(t, { Cl: () => o, EF: () => u, Q0: () => i, ko: () => d, lA: () => s, tg: () => c });
 var l = n(313265),
-    a = n(50617),
+    a = n(759967),
     r = n(375708);
 let i = [
     { model: "gpt-5.6-luna", thinking: "high", fast: !0, summary: () => r.intl.string(a.default.Mo0a1m) },

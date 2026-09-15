@@ -15,7 +15,7 @@ var n = e(477900),
     b = e(683180),
     m = e(972786),
     p = e(652215),
-    v = e(50617),
+    v = e(759967),
     S = e(375708);
 function k(l) {
     let { projectId: t, guildId: e, transitionState: k, onClose: C } = l,

@@ -584,7 +584,7 @@ function eh(e) {
         hasGameShops: n.length > 0,
     };
 }
-var eO = l(394107);
+var eO = l(344045);
 let eL = "useCollectiblesShopNavigationMenuOptions";
 l(801416);
 var ex = l(518477),

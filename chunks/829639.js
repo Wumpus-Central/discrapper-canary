@@ -325,8 +325,8 @@ function e7() {
     };
 }
 var e6 = s(212737),
-    e5 = s(162907);
-let e8 =
+    e8 = s(162907);
+let e5 =
         "https://cdn.discordapp.com/assets/content/7932c6a6c499ae3ae7d3c3bc398778b62517d38df2c179320dc872062c73d5e9.png",
     e9 =
         "https://cdn.discordapp.com/assets/content/23f043bae7978056c72b82e7a4af6618d2fdb874c40857f580b0978b3b48ab0b.png",
@@ -345,18 +345,18 @@ function tt(e) {
         { avatarSrc: s, eventHandlers: i } = (0, eJ.A)({ userId: t.id, size: eY._3.SIZE_24 });
     return (0, c.jsx)(
         eK.eu,
-        { className: e5.bj, src: s, "aria-label": (0, eQ.mG)(t), size: eY._3.SIZE_24, ...i },
+        { className: e8.bj, src: s, "aria-label": (0, eQ.mG)(t), size: eY._3.SIZE_24, ...i },
         t.id,
     );
 }
 function ts(e) {
     let { slotIndex: t } = e;
-    return (0, c.jsx)("div", { className: e5.p, children: t });
+    return (0, c.jsx)("div", { className: e8.p, children: t });
 }
 function ti(e) {
     let { referralSentUsers: t, className: s } = e;
     return (0, c.jsx)("div", {
-        className: u()(e5.L$, s),
+        className: u()(e8.L$, s),
         children: (function () {
             let e = [];
             for (let s = 0; s < e1.Z; s++)
@@ -395,8 +395,8 @@ function tr(e) {
                   }
                 : a === eq.xb.DISCOUNT
                   ? {
-                        src: e8,
-                        srcSet: `${e8} 1x, https://cdn.discordapp.com/assets/content/945caab9e3f5f20d5f81c3ee82c9e83ef6be4e2ca5690550a6a44582fa6aadc3.png 2x`,
+                        src: e5,
+                        srcSet: `${e5} 1x, https://cdn.discordapp.com/assets/content/945caab9e3f5f20d5f81c3ee82c9e83ef6be4e2ca5690550a6a44582fa6aadc3.png 2x`,
                         dimensions: ta,
                     }
                   : { src: e4, srcSet: void 0, dimensions: null }
@@ -406,10 +406,10 @@ function tr(e) {
     return (0, c.jsx)(eX.a, {
         percent: 33.3 * t,
         colorOverride: "#53ac66",
-        background: i ?? e5.cq,
+        background: i ?? e8.cq,
         strokeSize: 0.8,
-        ringColorOverrideClassName: n ?? e5.e0,
-        overlayClassName: t === e1.Z ? e5.ys : void 0,
+        ringColorOverrideClassName: n ?? e8.e0,
+        overlayClassName: t === e1.Z ? e8.ys : void 0,
         children:
             null != o
                 ? (0, c.jsx)("img", { src: l, srcSet: o, alt: "", role: "presentation", width: u, height: m })
@@ -420,15 +420,15 @@ function tl(e) {
     let { className: t } = e,
         { referralSentUsers: s, nReferralsSent: i, hasEligibleFriends: n, allSent: a, bodyText: r } = e7();
     return (0, c.jsxs)("div", {
-        className: u()(e5.kL, t),
+        className: u()(e8.kL, t),
         children: [
-            (0, c.jsx)("div", { className: e5.G3, children: (0, c.jsx)(tr, { nReferralsSent: i }) }),
+            (0, c.jsx)("div", { className: e8.G3, children: (0, c.jsx)(tr, { nReferralsSent: i }) }),
             (0, c.jsxs)("div", {
-                className: e5.IH,
+                className: e8.IH,
                 children: [
-                    (0, c.jsx)(ti, { referralSentUsers: s, className: e5.GV }),
+                    (0, c.jsx)(ti, { referralSentUsers: s, className: e8.GV }),
                     (0, c.jsxs)("div", {
-                        className: e5.n4,
+                        className: e8.n4,
                         children: [
                             (0, c.jsx)(el.D, {
                                 variant: "heading-lg/semibold",
@@ -1241,7 +1241,7 @@ let t7 = function () {
     });
 };
 var t6 = s(202541);
-function t5(e, t, i) {
+function t8(e, t, i) {
     (0, eI.openModalLazy)(async () => {
         let { PremiumBrandRefreshSubscriptionCancellationModal: n } = await Promise.all([
             s.e("489361"),
@@ -1271,8 +1271,8 @@ function t5(e, t, i) {
             s.e("907167"),
             s.e("861060"),
             s.e("952372"),
-            s.e("910486"),
-            s.e("56366"),
+            s.e("716460"),
+            s.e("264572"),
             s.e("797595"),
             s.e("641248"),
             s.e("544571"),
@@ -1291,7 +1291,7 @@ function t5(e, t, i) {
         return (s) => (0, c.jsx)(n, { ...s, analyticsLocations: e, initialStep: i, premiumSubscription: t });
     });
 }
-function t8(e) {
+function t5(e) {
     let { fpEndsAt: t, className: s, buttonVisibilityRef: i } = e,
         n = (0, U.Zb)(t);
     return (0, c.jsx)("div", {
@@ -1466,7 +1466,7 @@ function t4(e) {
                                     icon: ed.t,
                                     size: "md",
                                     text: eg.intl.string(eg.t.zrCzVB),
-                                    onClick: () => t5(r, a, tg.g.CONFIRM_DISCOUNT),
+                                    onClick: () => t8(r, a, tg.g.CONFIRM_DISCOUNT),
                                 }),
                                 (0, c.jsx)(eA.A, {
                                     variant: "secondary",
@@ -1525,7 +1525,7 @@ function se(e) {
     if (s)
         return p
             ? (0, c.jsx)(t9, { fpEndsAt: P.currentEntitlementEndsAt, className: t, buttonVisibilityRef: g })
-            : (0, c.jsx)(t8, { fpEndsAt: P.currentEntitlementEndsAt, className: t, buttonVisibilityRef: g });
+            : (0, c.jsx)(t5, { fpEndsAt: P.currentEntitlementEndsAt, className: t, buttonVisibilityRef: g });
     if (E) {
         let e = y
             ? (0, c.jsxs)("div", {
@@ -1629,7 +1629,7 @@ function se(e) {
                                       icon: ed.t,
                                       size: "md",
                                       text: eg.intl.string(eg.t.zrCzVB),
-                                      onClick: () => t5(h, o, tg.g.CONFIRM_DISCOUNT),
+                                      onClick: () => t8(h, o, tg.g.CONFIRM_DISCOUNT),
                                   }),
                               (0, c.jsx)(eA.A, {
                                   variant: y || l ? "secondary" : "expressive",
@@ -1746,7 +1746,7 @@ var su = s(325499),
     sj = s(375776),
     sb = s(727811),
     sC = s(222652),
-    sE = s(553875),
+    sE = s(428685),
     sT = s(934353);
 function sR(e) {
     let { openRewardModal: t } = e,
@@ -1942,9 +1942,9 @@ var sO = s(695366),
     sw = s(852218),
     sB = s(923650),
     sH = s(612413),
-    sF = s(310235),
-    sV = s(334551),
-    sz = s(762359);
+    sF = s(14429),
+    sV = s(810889),
+    sz = s(264865);
 let sW =
         "https://cdn.discordapp.com/assets/content/74dd725dde373bfdbced9606d5201ed2c555fc895f4da644a8de314de6906be3.webp",
     sY =
@@ -2219,8 +2219,8 @@ let s0 = function (e) {
                                 s.e("907167"),
                                 s.e("861060"),
                                 s.e("952372"),
-                                s.e("910486"),
-                                s.e("56366"),
+                                s.e("716460"),
+                                s.e("264572"),
                                 s.e("797595"),
                                 s.e("641248"),
                                 s.e("544571"),
@@ -2274,7 +2274,7 @@ function s6(e) {
         role: n ?? "img",
     });
 }
-function s5(e) {
+function s8(e) {
     let { alt: t, ariaLabel: s, ariaHidden: i, role: n, width: a = 288, height: r = 192 } = e;
     return (0, c.jsx)("img", {
         style: { width: a, height: r },
@@ -2285,12 +2285,12 @@ function s5(e) {
         role: n ?? "img",
     });
 }
-var s8 = s(345394);
+var s5 = s(345394);
 function s9(e) {
     let { alt: t, ariaLabel: s, ariaHidden: i, role: n, width: a = 288, height: r = 192 } = e;
     return (0, c.jsx)("img", {
         style: { width: a, height: r },
-        src: s8.A,
+        src: s5.A,
         alt: t,
         "aria-label": s,
         "aria-hidden": i,
@@ -2412,7 +2412,7 @@ var id = s(462887),
     iC = s(617986),
     iE = s(892227),
     iT = s(81466),
-    iR = s(1889),
+    iR = s(249755),
     iI = s(749012);
 let iv = function () {
     let { passesGeneralUIInvariant: e, programReward: t } = (0, Z.F)({ location: "NitroOrbsWhatsNewCardFooter" });
@@ -2516,7 +2516,7 @@ var iy = s(975807),
     iD = s(95035),
     iO = s(989790),
     iM = s(88001),
-    iL = s(148155),
+    iL = s(259589),
     ik = s(817577);
 function iU() {
     (0, iy.A)(iM.TE);
@@ -2573,7 +2573,7 @@ var iw = s(562819),
     iB = s(793943),
     iH = s(241988),
     iF = s(757036),
-    iV = s(235955),
+    iV = s(473933),
     iz = s(655752);
 let iW = (0, w.mj)({
     kind: "user",
@@ -2807,8 +2807,8 @@ let i6 = [
     { id: "upgrades", label: () => eg.intl.string(eg.t.KC5q8v) },
     { id: "vip", label: () => eg.intl.string(eg.t.DjEAcv) },
 ];
-var i5 = s(18290);
-function i8(e) {
+var i8 = s(18290);
+function i5(e) {
     e.stopPropagation();
 }
 function i9(e) {
@@ -2871,7 +2871,7 @@ function i9(e) {
                             id: sN.HD_VIDEO_CARD_ID,
                             title: eg.intl.string(eg.t["/mQ5gg"]),
                             description: eg.intl.string(eg.t["7WwAXh"]),
-                            primaryAsset: (0, c.jsx)(s5, { alt: "", ariaHidden: !0 }),
+                            primaryAsset: (0, c.jsx)(s8, { alt: "", ariaHidden: !0 }),
                             categories: ["bestof", "upgrades"],
                         },
                         {
@@ -3006,7 +3006,7 @@ function i9(e) {
         [n, a] = (0, o.useState)(i?.categories[0] ?? i7.BEST_OF_NITRO),
         r = (0, o.useMemo)(() => s.filter((e) => null != e && e.categories.includes(n)), [s, n]);
     return (0, c.jsxs)("div", {
-        className: i5.uW,
+        className: i8.uW,
         children: [
             (0, c.jsx)(el.D, { variant: "nitro-sm", children: eg.intl.string(eg.t["Uh3+CA"]) }),
             (0, c.jsx)(s1.V, {
@@ -3014,22 +3014,22 @@ function i9(e) {
                 look: "custom",
                 selectedItem: n,
                 onItemSelect: a,
-                className: i5.Lq,
+                className: i8.Lq,
                 "aria-label": eg.intl.string(eg.t["Uh3+CA"]),
                 children: i6.map((e) =>
-                    (0, c.jsx)(s1.V.Item, { id: e.id, className: i5.IC, children: e.label() }, e.id),
+                    (0, c.jsx)(s1.V.Item, { id: e.id, className: i8.IC, children: e.label() }, e.id),
                 ),
             }),
             (0, c.jsx)(
                 s2.A,
                 {
                     gap: 20,
-                    className: i5.jG,
+                    className: i8.jG,
                     children: r.map((e) => {
                         if (null != e)
                             return (0, c.jsx)(
                                 sv.S,
-                                { ...e, glowing: t === e.id, containerClassName: i5.Ui, onFocus: i8 },
+                                { ...e, glowing: t === e.id, containerClassName: i8.Ui, onFocus: i5 },
                                 e.id,
                             );
                     }),
@@ -4006,7 +4006,7 @@ var nq = s(704333),
     n3 = s(406860),
     n7 = s(870975),
     n6 = s(698834);
-function n5() {
+function n8() {
     let { sectionRef: e, handleVisibilityChange: t } = (0, n3.A)({ boxType: sj.$, thirdPartyPartner: "xbox" }),
         s = [
             { icon: nq.B, text: eg.intl.string(sE.default.MUypiB) },
@@ -4122,7 +4122,7 @@ function n5() {
         }),
     });
 }
-var n8 = s(750338),
+var n5 = s(750338),
     n9 = s(19290),
     n4 = s(505051);
 function ae(e) {
@@ -4162,7 +4162,7 @@ function ae(e) {
                     return (0, c.jsx)(c.Fragment, {
                         children: e.map((e) =>
                             (0, c.jsx)(
-                                n8.A,
+                                n5.A,
                                 { index: t + +!!r, ...e, size: s, shouldLoadVideo: n, isReducedMotion: a },
                                 e.name,
                             ),
@@ -4180,7 +4180,7 @@ let at = o.memo(function (e) {
             boxLayout: s,
             title: eg.intl.string(eg.t.LRmNAl),
             startLeftAligned: !0,
-            highlightBento: t ? (0, c.jsx)(n5, {}) : null,
+            highlightBento: t ? (0, c.jsx)(n8, {}) : null,
             ...e,
         });
     }),
@@ -4371,7 +4371,7 @@ var af = s(820081),
     aN = s(580630),
     aA = s(795269),
     aj = s(84483),
-    ab = s(701974),
+    ab = s(763052),
     aC = s(55647),
     aE = s(202600);
 function aT(e) {
@@ -5276,8 +5276,8 @@ let a7 = function (e) {
     });
 };
 var a6 = s(194509),
-    a5 = s(317587);
-let a8 = function (e) {
+    a8 = s(317587);
+let a5 = function (e) {
     let { isVisible: t, subscriptionTier: s, isApplicationHome: i, isEligibleForBogoPromotion: n } = e,
         a = (0, ea.z)({
             transform: t ? "translateY(-100%)" : "translateY(0%)",
@@ -5288,21 +5288,21 @@ let a8 = function (e) {
         l = (0, iu.Ay)(),
         o = (0, nB.M)(l);
     return (0, c.jsx)(ei.animated.div, {
-        className: u()(a5.iE, { [a5.H8]: i, [a5.q4]: !t }),
+        className: u()(a8.iE, { [a8.H8]: i, [a8.q4]: !t }),
         style: a,
         children: (0, c.jsxs)("div", {
-            className: i ? a5.zW : a5.iJ,
+            className: i ? a8.zW : a8.iJ,
             children: [
                 (0, c.jsx)(aw.A, {
                     color: o ? aL.XD.BRAND_INVERTED : void 0,
-                    className: u()(a5.x6, { [a5.Ph]: o }),
+                    className: u()(a8.x6, { [a8.Ph]: o }),
                     subscriptionTier: s,
                     premiumModalAnalyticsLocation: r,
                     isPersistentCTA: !0,
                     hasActivePromotion: n,
-                    shinyButtonClassName: o ? void 0 : a5.PJ,
+                    shinyButtonClassName: o ? void 0 : a8.PJ,
                 }),
-                (0, c.jsx)(a6.A, { className: a5.x6, premiumModalAnalyticsLocation: r }),
+                (0, c.jsx)(a6.A, { className: a8.x6, premiumModalAnalyticsLocation: r }),
             ],
         }),
     });
@@ -5535,7 +5535,7 @@ let rl = () => {
                 (0, c.jsx)(a7, { className: ra.B_ }),
                 (0, c.jsx)("div", { className: ra.aC, children: (0, c.jsx)(ri.A, { className: ra.JQ, hideCTAs: !0 }) }),
                 (0, c.jsx)("div", { className: ra.hz }),
-                (0, c.jsx)(a8, {
+                (0, c.jsx)(a5, {
                     isVisible: !a && !l && f,
                     subscriptionTier: C,
                     isApplicationHome: !1,

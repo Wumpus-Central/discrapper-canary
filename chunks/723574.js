@@ -42,11 +42,11 @@ function L(e) {
     }, [t?.entitlements]);
 }
 var P = l(375708),
-    k = l(25525),
+    k = l(356863),
     D = l(144977),
     O = l(628049),
     U = l(568065),
-    V = l(394107),
+    V = l(344045),
     B = l(929729),
     M = l(517826);
 function W(e) {
@@ -728,8 +728,8 @@ function e1(e) {
 }
 var e8 = l(826673),
     e6 = l(549996),
-    e5 = l(412260);
-function e9(e) {
+    e9 = l(412260);
+function e3(e) {
     let t = (function () {
             let e = (0, e6.c)(et.C.GUILD_BOOST_TAB_BANNER),
                 t =
@@ -752,7 +752,7 @@ function e9(e) {
                       markAsDismissed: s,
                   };
         })(),
-        l = (0, r.bG)([e5.A], () => e5.A.isFetchingActivePromotions),
+        l = (0, r.bG)([e9.A], () => e9.A.isFetchingActivePromotions),
         n = "admin" !== e || t.isBannerEligible || l ? [] : [$.M.GUILD_POWERUPS_OVERVIEW_SIDEBAR_VIDEO_CARD],
         [s, o] = (0, j.kn)(n),
         a = i.useCallback(() => {
@@ -773,16 +773,16 @@ function e9(e) {
     let d = l || t.isBannerEligible || u?.kind === "video";
     return { variant: e, content: u, isReserved: d };
 }
-var e2 = l(463080);
+var e5 = l(463080);
 function e7(e) {
     let { text: t } = e,
         l = (0, b.c)("Tier3OverrideNotice");
     return (0, n.jsx)("div", {
-        className: e2.ac,
+        className: e5.ac,
         children: (0, n.jsx)(I.E, { variant: l ? "text-sm/normal" : "text-sm/medium", children: t }),
     });
 }
-function e3(e) {
+function e2(e) {
     let { guildId: t } = e,
         l = (0, r.bG)([c.A], () => c.A.getGuild(t)?.features.has(ep.GuildFeatures.PREMIUM_TIER_3_OVERRIDE) === !0)
             ? { shouldShow: !0, text: P.intl.string(k.default.l9n4QZ) }
@@ -817,7 +817,7 @@ function e3(e) {
             let [n, i] = (0, j.ww)(l, e);
             return { shouldShow: null != t && n === t.dismissibleContent, notificationConfig: t, markAsDismissed: i };
         })(t),
-        a = e9("admin"),
+        a = e3("admin"),
         u = (function (e) {
             let t = [];
             e || t.push($.M.GUILD_POWERUPS_OVERVIEW_SIDEBAR_COACHMARK);
@@ -827,7 +827,7 @@ function e3(e) {
         d = (0, b.c)("GuildPowerupNotificationContainer");
     return l.shouldShow || s.shouldShow || o.shouldShow || u.shouldShow || null != a.content
         ? (0, n.jsxs)("div", {
-              className: e2.kL,
+              className: e5.kL,
               children: [
                   (0, n.jsx)(I.E, {
                       variant: d ? "experimental/heading-sm/semibold" : "eyebrow",
@@ -1262,7 +1262,7 @@ function tP(e) {
 var tk = l(726724);
 function tD(e) {
     let { guildId: t } = e,
-        l = e9("member");
+        l = e3("member");
     return (0, n.jsxs)("div", {
         className: tk.CG,
         children: [(0, n.jsx)(ex, { slot: l, guildId: t }), (0, n.jsx)(tb, { guildId: t })],
@@ -1541,7 +1541,7 @@ function tO(e) {
                               children: [
                                   V
                                       ? (0, n.jsxs)(n.Fragment, {
-                                            children: [(0, n.jsx)(to, { guildId: N }), (0, n.jsx)(e3, { guildId: N })],
+                                            children: [(0, n.jsx)(to, { guildId: N }), (0, n.jsx)(e2, { guildId: N })],
                                         })
                                       : (0, n.jsx)(tD, { guildId: N }),
                                   (0, n.jsx)(tP, { guildId: N }),

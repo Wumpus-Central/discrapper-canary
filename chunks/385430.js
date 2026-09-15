@@ -33,7 +33,7 @@ var t = i(477900),
     G = i(239093),
     O = i(652215),
     S = i(375708),
-    K = i(876891),
+    K = i(78637),
     R = i(52111);
 function F(n) {
     let { classificationTypeText: e, guildMetadata: i } = n,
