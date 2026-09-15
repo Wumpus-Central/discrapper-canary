@@ -1464,7 +1464,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e2 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eV.A().log(
-    `[BUILD INFO] Release Channel: ${e2}, Build Number: 613511, Version Hash: 235bf8b2d5a5ac948866b6b95391db7b915ad763`,
+    `[BUILD INFO] Release Channel: ${e2}, Build Number: 613515, Version Hash: c2879f719a59d77013b84bf666a14f7e1a9f926b`,
 ),
     D.A.setTags({ appContext: G.QCW }),
     eh.A.initBasic(),
@@ -20680,7 +20680,7 @@ function SZ(e) {
         { title: a, body: s } = (function (e) {
             let { referralRewardType: t } = e;
             if (t === Sz.xb.ORBS) {
-                let e = { numOrbs: 500, helpdeskArticle: ty.A.getArticleURL(G.MVz.REFERRAL_PROGRAM) };
+                let e = { numOrbs: 5e3, helpdeskArticle: ty.A.getArticleURL(G.MVz.REFERRAL_PROGRAM) };
                 return { title: tT.intl.string(tT.t.kO23jV), body: tT.intl.format(tT.t.Ka9J40, e) };
             }
             return {
@@ -21465,7 +21465,7 @@ let NF = "isHideDevBanner",
                     className: ta()(Nk.Wz, Nk.mr),
                     children: [
                         (0, O.jsx)(Nx, { className: Nk.Kk }),
-                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "613511" }),
+                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "613515" }),
                         (0, O.jsx)(r, {}),
                     ],
                 })
