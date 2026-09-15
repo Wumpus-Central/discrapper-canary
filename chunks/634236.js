@@ -5,4 +5,5 @@ _.exports = {
     Qq: "text__61a6b",
     N4: "note__61a6b",
     DD: "title__61a6b",
+    _$: "noBackground__61a6b",
 };
