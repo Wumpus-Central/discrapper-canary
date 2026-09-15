@@ -1,18 +1,19 @@
 (n.d(t, {
-    Lg: () => B,
+    FF: () => P,
+    Lg: () => V,
     Sc: () => v,
     UF: () => L,
-    US: () => P,
-    Vf: () => U,
-    Y8: () => V,
-    ZG: () => x,
-    _O: () => w,
+    US: () => U,
+    Vf: () => w,
+    Y8: () => H,
+    ZG: () => k,
+    _O: () => G,
     dx: () => C,
     kJ: () => M,
     q8: () => D,
     vK: () => b,
-    yp: () => G,
-    yz: () => k,
+    yp: () => x,
+    yz: () => F,
     zs: () => y,
 }),
     n(938796));
@@ -76,39 +77,53 @@ function M(e, t) {
     return !!R.getConfig({ location: t }).enabled && (!!e.isPrivate() || E.A.can(m.xBc.SEND_MESSAGES, e));
 }
 function P() {
+    let e = G(),
+        t = s()().startOf("day").set("hours", 9),
+        n = s()().startOf("day").set("hours", 13);
+    return [
+        t.isAfter(e)
+            ? { label: N.intl.string(N.t["qINKo/"]), value: t }
+            : { label: N.intl.string(N.t.tjIn9i), value: t.add(1, "day") },
+        n.isAfter(e)
+            ? { label: N.intl.string(N.t.qT6LjY), value: n }
+            : { label: N.intl.string(N.t.EMRZyS), value: n.add(1, "day") },
+        { label: N.intl.string(N.t["+P5MmK"]), value: s()().startOf("isoWeek").add(1, "week").set("hours", 9) },
+    ];
+}
+function U() {
     let e = s()().startOf("hour").add(1, "hour");
-    return e.isBefore(w()) ? e.add(1, "hour") : e;
+    return e.isBefore(G()) ? e.add(1, "hour") : e;
 }
-function U(e, t) {
-    return e.isBefore(w()) ? N.intl.string(N.t["w/fgvh"]) : e.isAfter(G(t)) ? N.intl.string(N.t.Nt0tz7) : null;
+function w(e, t) {
+    return e.isBefore(G()) ? N.intl.string(N.t["w/fgvh"]) : e.isAfter(x(t)) ? N.intl.string(N.t.Nt0tz7) : null;
 }
-function w() {
+function G() {
     return s()().add(600, "seconds");
 }
-function G(e) {
+function x(e) {
     let t = s()().add(691200, "seconds");
     if (null == e) return t;
     let n = s()(p.default.extractTimestamp(e));
     return s().min(t, n.add(S.a, "seconds"));
 }
-function x(e) {
-    let t = (0, f.ki)(A.default.getCurrentUser(), g.PremiumTypes.TIER_2);
-    return F(R.getConfig({ location: e }), t);
-}
 function k(e) {
-    return F(
+    let t = (0, f.ki)(A.default.getCurrentUser(), g.PremiumTypes.TIER_2);
+    return B(R.getConfig({ location: e }), t);
+}
+function F(e) {
+    return B(
         R.useConfig({ location: e }),
         (0, o.bG)([A.default], () => (0, f.ki)(A.default.getCurrentUser(), g.PremiumTypes.TIER_2)),
     );
 }
-function F(e, t) {
+function B(e, t) {
     return e.enabled
         ? t
             ? { limit: 25, isUpgradable: !1 }
             : { limit: e.limit, isUpgradable: !0 }
         : { limit: 0, isUpgradable: !1 };
 }
-function B(e) {
+function V(e) {
     var t;
     return {
         userId: e.user_id,
@@ -131,7 +146,7 @@ function B(e) {
         record: (0, u.rh)({ ...e.message_preview, timestamp: e.send_at_timestamp }),
     };
 }
-function V(e) {
+function H(e) {
     switch (e) {
         case T.A.SCHEDULED:
             return { isError: !1, stateMessage: N.intl.string(N.t.Fn6Odn) };
