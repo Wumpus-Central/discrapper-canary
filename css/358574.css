@@ -115,105 +115,6 @@
     gap: 4px
 }
 
-.container__354ec {
-    display: flex;
-    flex: 1;
-    height: 100%;
-    margin-inline-start: 44px;
-    position: relative
-}
-
-.measurements__354ec {
-    inset-inline: 0;
-    bottom: 0;
-    pointer-events: none;
-    position: absolute;
-    top: 60px;
-    visibility: hidden
-}
-
-.measurements__354ec,
-.tabs__354ec {
-    align-items: center;
-    display: flex;
-    gap: 32px
-}
-
-.tabs__354ec {
-    flex: 1;
-    flex-direction: row;
-    height: 100%
-}
-
-.container__354ec .tabs__354ec {
-    border-bottom: none
-}
-
-.tab__354ec {
-    align-items: center;
-    box-sizing: border-box;
-    cursor: pointer;
-    display: flex;
-    height: 100%;
-    white-space: nowrap
-}
-
-.tab__354ec:hover {
-    border-bottom: 2px solid var(--brand-500);
-    margin-bottom: -2px
-}
-
-.tab__354ec[aria-selected=true] {
-    border-bottom: 2px solid var(--icon-strong);
-    margin-bottom: -2px
-}
-
-.tabContent__354ec {
-    height: 100%
-}
-
-.tabContent__354ec,
-.tabWithChevron__354ec {
-    align-items: center;
-    display: flex
-}
-
-.tabWithChevron__354ec {
-    gap: 4px
-}
-
-.more__354ec {
-    cursor: pointer;
-    display: flex
-}
-
-.floatingSearchTabsMask__354ec {
-    -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 340px), transparent calc(100% - 240px));
-    mask-image: linear-gradient(90deg, #000 calc(100% - 340px), transparent calc(100% - 240px))
-}
-
-.tabWithIcon__354ec {
-    align-items: center;
-    display: flex;
-    gap: 4px
-}
-
-.newBadge__354ec {
-    margin-inline-start: 4px
-}
-
-.tabWithTrailingBadge__354ec {
-    align-items: center;
-    display: flex;
-    gap: var(--space-8);
-    height: 100%
-}
-
-.tabWithTrailingBadge__354ec .trailingBadge__354ec {
-    background-color: var(--badge-background-default);
-    color: var(--badge-text-default)
-}
-
 .nav__96f2d {
     display: block;
     flex: 1;
@@ -754,4 +655,4 @@
     position: relative
 }
 
-/*# sourceMappingURL=785456.d23b3fbe5a467783.css.map*/
+/*# sourceMappingURL=358574.b1140614b7c6c6a3.css.map*/
