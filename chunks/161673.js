@@ -632,7 +632,7 @@ function e8(e) {
           ? (0, i.jsx)(eq, { ...e })
           : (0, i.jsx)(e0, { ...e });
 }
-let e5 = a.memo(function (e) {
+let e4 = a.memo(function (e) {
     let { gameId: t, trackAction: n } = e,
         { analyticsLocations: l } = (0, I.Ay)(),
         { invite: s, hasDiscordWebsite: r, closeModal: c, getScrollOffset: o } = z(),
@@ -705,8 +705,8 @@ let e5 = a.memo(function (e) {
             })
           : null;
 });
-var e2 = n(37537),
-    e4 = n(541830),
+var e5 = n(37537),
+    e2 = n(541830),
     e3 = n(240248),
     e6 = n(505779),
     e7 = n(808380);
@@ -861,8 +861,8 @@ function tb() {
 }
 let tS = function (e) {
     let { game: t, trackAction: n } = e,
-        l = (0, e2.c)("GameProfileGameDetails"),
-        s = a.useMemo(() => t.genres.map(e4.du).join(", "), [t]),
+        l = (0, e5.c)("GameProfileGameDetails"),
+        s = a.useMemo(() => t.genres.map(e2.du).join(", "), [t]),
         r = t.getCompanyByRole(ea.wk.PUBLISHER),
         c = t.getCompanyByRole(ea.wk.DEVELOPER),
         o = r.map((e) => e.name).join(", "),
@@ -1089,7 +1089,7 @@ function tR(e) {
 }
 function tG(e) {
     let { trackAction: t } = e,
-        n = (0, e2.c)("GameProfileGuildInvite"),
+        n = (0, e5.c)("GameProfileGuildInvite"),
         { invite: l, hasDiscordWebsite: s, isCommunityInviteResolving: r, isMember: c, closeModal: o } = z(),
         d = a.useCallback(() => {
             null != l &&
@@ -1216,9 +1216,9 @@ var tP = n(369606),
     t0 = n(53788),
     t1 = n(831453),
     t8 = n(785866),
-    t5 = n(555704),
-    t2 = n(47675),
-    t4 = n(633075),
+    t4 = n(555704),
+    t5 = n(47675),
+    t2 = n(633075),
     t3 = n(289173),
     t6 = n(321191),
     t7 = n(958805),
@@ -1306,7 +1306,7 @@ function ni(e) {
                 c = (0, ne.A)(),
                 o = a.useMemo(() => {
                     if (null == e) return null;
-                    let t = new Set([...c, ...r].filter((e) => e instanceof t4.R).map((e) => e.applicationId));
+                    let t = new Set([...c, ...r].filter((e) => e instanceof t2.R).map((e) => e.applicationId));
                     return [e.id, e.getOfficialApplicationId()].filter(nn.Vq).find((e) => t.has(e)) ?? null;
                 }, [c, r, e]),
                 d = a.useCallback(
@@ -1335,7 +1335,7 @@ function ni(e) {
                         )
                             return;
                         let i = l;
-                        (0, t2.un)({
+                        (0, t5.un)({
                             action: n ? "GAME_ADDED" : "GAME_REMOVED",
                             ...i.getProfileEditAnalyticsOptions(),
                         });
@@ -1349,17 +1349,17 @@ function ni(e) {
                             null == o ||
                             (await nl((n) =>
                                 e
-                                    ? n.some((e) => e instanceof t4.R && e.applicationId === o)
+                                    ? n.some((e) => e instanceof t2.R && e.applicationId === o)
                                         ? n
-                                        : [(t = new t4.R({ applicationId: o })), ...n]
-                                    : ((t = n.find((e) => e instanceof t4.R && e.applicationId === o) ?? null),
-                                      n.filter((e) => !(e instanceof t4.R && e.applicationId === o))),
+                                        : [(t = new t2.R({ applicationId: o })), ...n]
+                                    : ((t = n.find((e) => e instanceof t2.R && e.applicationId === o) ?? null),
+                                      n.filter((e) => !(e instanceof t2.R && e.applicationId === o))),
                             ),
                             null == t)
                         )
                             return;
                         let n = t;
-                        (0, t2.un)({
+                        (0, t5.un)({
                             action: e ? "WIDGET_ADDED" : "WIDGET_REMOVED",
                             ...n.getProfileEditAnalyticsOptions(),
                         });
@@ -1370,7 +1370,7 @@ function ni(e) {
             let x = null != e && (0, t9.XX)(e),
                 h = [];
             if (null != o) {
-                let e = r.some((e) => e instanceof t4.R && e.applicationId === o);
+                let e = r.some((e) => e instanceof t2.R && e.applicationId === o);
                 h.push(
                     (0, i.jsx)(
                         tU.Dr,
@@ -1380,7 +1380,7 @@ function ni(e) {
                                 ? ex.intl.formatToPlainString(ex.t.Ktb1n8, { name: n })
                                 : ex.intl.formatToPlainString(ex.t.Xp6iZt, { name: n }),
                             action: () => m(!e),
-                            leadingAccessory: { type: "icon", icon: t5.U },
+                            leadingAccessory: { type: "icon", icon: t4.U },
                         },
                         e ? "remove-app-widget" : "add-app-widget",
                     ),
@@ -1558,29 +1558,28 @@ function nr(e) {
 }
 let nc = a.forwardRef(function (e, t) {
     let { game: n } = e,
-        [l] = a.useState(() => Math.random()),
-        s = a.useMemo(() => {
-            let e = n.getBannerURL(2048);
-            if (null != e) return e;
-            if (null != n.screenshotUrls && n.screenshotUrls.length > 0) {
-                let e = Math.floor(l * n.screenshotUrls.length);
-                return n.screenshotUrls[e];
-            }
-            return "";
-        }, [n, l]);
-    return (0, e3.uJ)(s)
+        l = (function (e) {
+            let [t] = a.useState(() => Math.random());
+            return a.useMemo(() => {
+                let n = e.getBannerURL(1400);
+                if (null != n) return n;
+                let l = e.screenshotUrls?.length ?? 0;
+                return 0 === l ? null : e.getScreenshotURL(Math.floor(t * l), 1400);
+            }, [1400, e, t]);
+        })(n);
+    return (0, e3.uJ)(l)
         ? null
         : (0, i.jsxs)("div", {
               ref: t,
               children: [
-                  (0, i.jsx)("div", { className: na.y1, style: { backgroundImage: `url("${s}")` } }),
+                  (0, i.jsx)("div", { className: na.y1, style: { backgroundImage: `url("${l}")` } }),
                   (0, i.jsx)("div", { className: na.N4 }),
               ],
           });
 });
 function no(e) {
     let { game: t } = e,
-        n = (t.genres ?? []).map(e4.du).join(", ");
+        n = (t.genres ?? []).map(e2.du).join(", ");
     return (0, e3.uJ)(n) ? null : (0, i.jsx)(q.E, { variant: "text-md/normal", color: "text-muted", children: n });
 }
 function nd(e) {
@@ -1627,7 +1626,6 @@ let nm = function (e) {
         className: r()(na.ap, l && na.Gh),
         children: [
             s &&
-                null != t &&
                 (0, i.jsx)("div", {
                     className: na.Tf,
                     children: (0, i.jsx)(tO.A, { game: t, className: na.w$, size: tO.w.LARGE }),
@@ -1673,7 +1671,7 @@ function nf() {
 }
 function nj(e) {
     let { trackAction: t, analyticsLocations: n } = e,
-        l = (0, e2.c)("GameProfileLinkAccount"),
+        l = (0, e5.c)("GameProfileLinkAccount"),
         {
             fetchedAuthorization: s,
             hasAlreadyLinked: r,
@@ -2291,7 +2289,7 @@ function nX(e) {
 }
 let nK = function (e) {
     let { game: t, trackAction: n } = e,
-        l = (0, e2.c)("GameProfileReviews"),
+        l = (0, e5.c)("GameProfileReviews"),
         a = (0, nF.I)(t.id),
         s = t.opencriticUrl,
         r = t.steamReleaseStatus !== d.Y.RETIRED_ABANDONED && null != a,
@@ -2370,9 +2368,9 @@ var nJ = n(839534),
     n0 = n(57020),
     n1 = n(682301);
 let n8 = [];
-var n5 = n(758836),
-    n2 = n(747828);
-let n4 = [0, 1, 2, 3, 4],
+var n4 = n(758836),
+    n5 = n(747828);
+let n2 = [0, 1, 2, 3, 4],
     n3 = a.createContext({ trackAction: () => {} });
 function n6(e) {
     let { product: t, aspectRatio: n } = e,
@@ -2400,7 +2398,7 @@ function n6(e) {
         children: (0, i.jsx)(nQ.A, {
             skuId: l,
             aspectRatio: n,
-            cardClassName: n2.N,
+            cardClassName: n5.N,
             onClickCard: o,
             hideWishlistButton: !0,
             hidePrice: !0,
@@ -2448,7 +2446,7 @@ function n9(e) {
                 (0, nJ.Cz)({
                     analyticsLocations: [N.A.GAME_PROFILE],
                     analyticsSource: N.A.GAME_PROFILE,
-                    tab: n5.G2.CATALOG,
+                    tab: n4.G2.CATALOG,
                 }));
         }, [n, l]),
         o = a.useMemo(() => ({ trackAction: n }), [n]);
@@ -2456,7 +2454,7 @@ function n9(e) {
         ? (0, i.jsx)(eY, {
               showViewAllSkeleton: !0,
               skeletonTitleWidth: 118,
-              children: (0, i.jsx)(eH, { children: n4.map((e) => (0, i.jsx)(n7, {}, e)) }),
+              children: (0, i.jsx)(eH, { children: n2.map((e) => (0, i.jsx)(n7, {}, e)) }),
           })
         : 0 === s.length
           ? null
@@ -2867,7 +2865,7 @@ let lO = a.memo(function (e) {
                         (0, i.jsx)(lP, { game: t, trackAction: n }),
                     ],
                 }),
-                (0, i.jsx)(e5, { gameId: t.id, trackAction: n }),
+                (0, i.jsx)(e4, { gameId: t.id, trackAction: n }),
                 (0, i.jsx)(lj, { trackAction: n }),
                 (0, i.jsx)(n9, { game: t, trackAction: n }),
                 (0, i.jsx)(lc, { gameId: t.id, trackAction: n }),
@@ -2896,7 +2894,7 @@ let lO = a.memo(function (e) {
                 }),
                 (0, i.jsx)(nj, { analyticsLocations: l, trackAction: n }),
                 (0, i.jsx)(tG, { trackAction: n }),
-                (0, i.jsx)(e5, { gameId: t.id, trackAction: n }),
+                (0, i.jsx)(e4, { gameId: t.id, trackAction: n }),
                 (0, i.jsx)(lj, { trackAction: n }),
                 (0, i.jsx)(n9, { game: t, trackAction: n }),
                 (0, i.jsx)(lc, { gameId: t.id, trackAction: n }),

@@ -104,8 +104,24 @@ class d extends r.A {
     getCoverURL(e) {
         return (0, o.A)(this.id, this.media?.cover, { keepAspectRatio: !0, format: s.QB ? "webp" : "png", size: e });
     }
-    getArtworkURLs() {
-        return (this.media?.artwork ?? []).map((e) => (0, o.A)(this.id, e, { keepAspectRatio: !0 })).filter(l.Vq);
+    getArtworkURLs(e) {
+        let t = s.QB ? "webp" : null;
+        return (this.media?.artwork ?? [])
+            .map((n) => (0, o.A)(this.id, n, { size: e, format: t, keepAspectRatio: !0 }))
+            .filter(l.Vq);
+    }
+    getScreenshotURL(e, t) {
+        let n = this.screenshotUrls?.[e];
+        return null == n
+            ? null
+            : (0, o.A)(
+                  this.id,
+                  { type: "url", value: n },
+                  { size: t, format: s.QB ? "webp" : null, keepAspectRatio: !0 },
+              );
+    }
+    getScreenshotURLs(e) {
+        return (this.screenshotUrls ?? []).map((t, n) => this.getScreenshotURL(n, e)).filter(l.Vq);
     }
     getCompanyByRole(e) {
         return this.companies?.filter((t) => t.roles.includes(e)) ?? [];

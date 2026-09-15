@@ -33,5 +33,12 @@ function d(e, t) {
             n.toString()
         );
     }
-    return a.A.isDiscordCdnUrl(e) ? (null != t.size && n.searchParams.set("size", l(t.size)), n.toString()) : e;
+    if (!a.A.isDiscordCdnUrl(e)) return e;
+    if (null != t.size) {
+        let i = l(t.size),
+            r = Number(n.searchParams.get("size"));
+        if (r > 0 && Number(i) > r) return e;
+        n.searchParams.set("size", i);
+    }
+    return n.toString();
 }
