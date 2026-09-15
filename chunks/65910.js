@@ -6730,19 +6730,18 @@ function rv(e) {
     a.useLayoutEffect(() => {
         let e = A.current;
         if (null == e || "u" < typeof ResizeObserver) return;
-        let t = new ResizeObserver(() => I({ width: e.offsetWidth, height: e.offsetHeight }));
+        let t = new ResizeObserver(() => I({ height: e.offsetHeight }));
         return (t.observe(e), () => t.disconnect());
     }, []);
-    let M = C?.width ?? 320,
-        T = C?.height ?? 44,
-        R = n.left + 8,
-        P = n.top + 8,
-        _ = Math.min(Math.max(t.x, R), Math.max(R, n.left + n.width - M - 8)),
-        L = Math.min(Math.max(t.y + 32 + 4, P), Math.max(P, n.top + n.height - T - 8));
+    let M = C?.height ?? 44,
+        T = n.left + 8,
+        R = n.top + 8,
+        P = Math.max(t.x, T),
+        _ = Math.min(Math.max(t.y + 32 + 4, R), Math.max(R, n.top + n.height - M - 8));
     return (0, l.jsxs)("div", {
         ref: A,
         className: i()(rp.M0, { [rp.ho]: w && !m, [rp.ET]: m }),
-        style: { left: _, top: L },
+        style: { left: P, top: _ },
         "data-testid": "vibegrations-design-compose-bar",
         children: [
             (0, l.jsx)("input", {
