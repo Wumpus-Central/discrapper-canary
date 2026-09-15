@@ -1,3 +1,3 @@
-d.d(s, { A: () => e });
-let e =
-    "https://cdn.discordapp.com/assets/content/12cedf27624847aabf4d4f81a5f02fe0f5f5980611ec140ed4132840868e6a2c.png";
+s.d(c, { A: () => p });
+let p =
+    "https://cdn.discordapp.com/assets/content/88fc1694d1f36c93bf35b9cdc7dda25f1064d8205bfa103d62fd6cbf7fe636f7.png";
