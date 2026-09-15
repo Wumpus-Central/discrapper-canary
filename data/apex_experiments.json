@@ -5718,6 +5718,22 @@
     }
   },
   {
+    "kind": "user",
+    "name": "2026-09-update-email-settings-copy-subtext",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
     "name": "2026-09-video-background-profile-fetch",
     "kind": "user",
     "defaultConfig": {
