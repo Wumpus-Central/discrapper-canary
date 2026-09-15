@@ -10,8 +10,8 @@ var s,
     d = n(7584),
     g = n(780964),
     p = n(466034),
-    x = n(766075),
-    h = n(723702),
+    h = n(766075),
+    x = n(723702),
     m = n(38405),
     C = n(19575),
     E = n(84948),
@@ -25,15 +25,15 @@ var s,
         (s.NAME = "NAME"),
         (s.SUCCESS = "SUCCESS"),
         s),
-    k = n(652215),
-    A = n(375708),
-    b = n(159986);
+    A = n(652215),
+    b = n(375708),
+    k = n(159986);
 function I(t) {
     let { name: e, onNameChange: n } = t,
         { goToNextStep: s } = (0, l.n)();
     return (0, a.jsx)(o.k, {
         value: e,
-        "aria-label": A.intl.string(A.t["Jzd+z/"]),
+        "aria-label": b.intl.string(b.t["Jzd+z/"]),
         onChange: n,
         onKeyDown: (t) => {
             "Enter" === t.key && e.length > 0 && (t.preventDefault(), s());
@@ -48,114 +48,108 @@ function P(t) {
             onClose: s,
             ticket: o,
             challenge: P,
-            showAccountSettingsButton: j = !1,
-            initialStep: B = y.INIT,
+            showAccountSettingsButton: B = !1,
+            initialStep: j = y.INIT,
         } = t,
-        [v, T] = i.useState(A.intl.string(A.t["I/sJtJ"])),
-        [f, M] = i.useState(B),
-        [z, w] = i.useState(""),
+        [v, T] = i.useState(b.intl.string(b.t["I/sJtJ"])),
+        [f, M] = i.useState(j),
+        [w, z] = i.useState(""),
         [L, U] = i.useState(null),
         [K, R] = i.useState(!1),
         D = i.useCallback(async () => {
             (U(null), R(!0));
             let t =
-                h.isPlatformEmbedded && C.Ay.supportsFeature(k.BYE.WEBAUTHN) ? C.Ay.webAuthnRegister(P) : (0, N.v)(P);
+                x.isPlatformEmbedded && C.Ay.supportsFeature(A.BYE.WEBAUTHN) ? C.Ay.webAuthnRegister(P) : (0, N.v)(P);
             try {
-                return (w(await t), !0);
+                return (z(await t), !0);
             } catch (t) {
-                return (m.A.captureException(t), U(A.intl.string(A.t.xSCvBf)), !1);
+                return (m.A.captureException(t), U(b.intl.string(b.t.xSCvBf)), !1);
             } finally {
                 R(!1);
             }
         }, [P]),
         F = i.useCallback(async () => {
             try {
-                if ((await S.AF(v, o, z), j)) return !0;
+                if ((await S.AF(v, o, w), B)) return !0;
                 return (await (0, p.sy)(!1), s(), !1);
             } catch (t) {
                 return (
-                    t instanceof r.oh && t.status >= 400 && t.status < 500 && E.A.signalUnknownCredential(z),
-                    U(A.intl.string(A.t.fEptJP)),
+                    t instanceof r.oh && t.status >= 400 && t.status < 500 && E.A.signalUnknownCredential(w),
+                    U(b.intl.string(b.t.fEptJP)),
                     M(y.INIT),
                     !1
                 );
             }
-        }, [v, o, z, j, s]),
+        }, [v, o, w, B, s]),
         J = [
             {
                 stepKey: y.INIT,
                 modalProps: {
-                    title: K ? A.intl.string(A.t.wePEBF) : A.intl.string(A.t.vrOCCk),
+                    title: K ? b.intl.string(b.t.wePEBF) : b.intl.string(b.t.vrOCCk),
                     notice: null != L ? { message: L, type: "critical" } : void 0,
                 },
-                body: (0, a.jsxs)(c.B, {
-                    direction: "horizontal",
-                    align: "center",
-                    gap: 16,
-                    className: b.PM,
-                    children: [
-                        (0, a.jsx)("img", { className: b.Kk, alt: "", src: n(142668) }),
-                        (0, a.jsx)(u.E, {
-                            variant: "text-md/normal",
-                            className: b.zH,
-                            children: K ? A.intl.string(A.t.aVMiX3) : A.intl.string(A.t.Lh5vTW),
-                        }),
-                    ],
+                body: (0, a.jsx)(c.B, {
+                    className: k.PM,
+                    children: (0, a.jsx)(u.E, {
+                        variant: "text-md/normal",
+                        className: k.zH,
+                        children: K ? b.intl.string(b.t.aVMiX3) : b.intl.string(b.t.Lh5vTW),
+                    }),
                 }),
-                nextButtonProps: { text: A.intl.string(A.t.oibaQa) },
+                nextButtonProps: { text: b.intl.string(b.t.oibaQa) },
                 onNext: D,
             },
             {
                 stepKey: y.NAME,
-                modalProps: { title: A.intl.string(A.t["cY/IOu"]) },
+                modalProps: { title: b.intl.string(b.t["cY/IOu"]) },
                 body: (0, a.jsxs)(c.B, {
                     direction: "horizontal",
                     align: "center",
                     gap: 16,
-                    className: b.PM,
+                    className: k.PM,
                     children: [
-                        (0, a.jsx)("img", { className: b.Kk, alt: "", src: n(179644) }),
+                        (0, a.jsx)("img", { className: k.Kk, alt: "", src: n(179644) }),
                         (0, a.jsxs)(c.B, {
                             gap: 8,
-                            className: b.zH,
+                            className: k.zH,
                             children: [
-                                (0, a.jsx)(u.E, { variant: "text-md/normal", children: A.intl.string(A.t["Jzd+z/"]) }),
+                                (0, a.jsx)(u.E, { variant: "text-md/normal", children: b.intl.string(b.t["Jzd+z/"]) }),
                                 (0, a.jsx)(I, { name: v, onNameChange: T }),
                             ],
                         }),
                     ],
                 }),
-                nextButtonProps: { text: A.intl.string(A.t["5dyZ1S"]) },
+                nextButtonProps: { text: b.intl.string(b.t["5dyZ1S"]) },
                 nextEnabled: v.length > 0,
                 onNext: F,
             },
         ];
-    j &&
+    B &&
         J.push({
             stepKey: y.SUCCESS,
             hideBackButton: !0,
             modalProps: {
-                title: A.intl.string(A.t.FXC7ZC).replace(/:([^\s:]+):/g, (t, e) => d.Ay.convertNameToSurrogate(e, t)),
+                title: b.intl.string(b.t.FXC7ZC).replace(/:([^\s:]+):/g, (t, e) => d.Ay.convertNameToSurrogate(e, t)),
             },
             body: (0, a.jsxs)(c.B, {
                 direction: "horizontal",
                 align: "center",
                 gap: 16,
-                className: b.PM,
+                className: k.PM,
                 children: [
-                    (0, a.jsx)("img", { className: b.Kk, alt: "", src: n(179644) }),
+                    (0, a.jsx)("img", { className: k.Kk, alt: "", src: n(179644) }),
                     (0, a.jsx)(u.E, {
                         variant: "text-md/normal",
-                        className: b.zH,
-                        children: A.intl.string(A.t.e1qv6i),
+                        className: k.zH,
+                        children: b.intl.string(b.t.e1qv6i),
                     }),
                 ],
             }),
-            secondaryActionButtonProps: { text: A.intl.string(A.t.i4jeWR), onClick: s },
+            secondaryActionButtonProps: { text: b.intl.string(b.t.i4jeWR), onClick: s },
             nextButtonProps: {
-                text: A.intl.string(A.t.MubYG8),
+                text: b.intl.string(b.t.MubYG8),
                 onClick: () => {
-                    (s(), (0, x.openUserSettings)(g.X.ACCOUNT_PANEL));
+                    (s(), (0, h.openUserSettings)(g.X.ACCOUNT_PANEL));
                 },
             },
         });
