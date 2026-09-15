@@ -8,7 +8,7 @@ var i = n(477900),
     d = n(17928),
     c = n(451988),
     u = n(305866),
-    _ = n(364522),
+    _ = n(689175),
     E = n(297264),
     A = n(866665),
     h = n(39623),
@@ -43,8 +43,9 @@ function M(e) {
     return (0, i.jsx)(u.l, {
         "aria-label": d,
         className: v.XM,
-        children: (0, i.jsxs)(_.Ip, {
+        children: (0, i.jsxs)(_.Ch, {
             className: v.XG,
+            disableFocusRingScope: !0,
             children: [
                 (0, i.jsx)(E.D, { variant: "heading-deprecated-12/semibold", className: v.o, children: d }),
                 (0, i.jsx)("div", {
