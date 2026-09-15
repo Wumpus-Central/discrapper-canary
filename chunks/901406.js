@@ -6,10 +6,10 @@
     W1: () => y,
     WU: () => P,
     _Q: () => D,
-    b6: () => U,
+    b6: () => q,
     bg: () => N,
-    pu: () => k,
-    se: () => q,
+    pu: () => M,
+    se: () => U,
     v0: () => b,
 }),
     n(321073),
@@ -115,18 +115,19 @@ function Q(e) {
     }
     return null;
 }
-function M(e) {
+function k(e) {
     let {
         link: t,
         directLink: n,
         inlineStoreParams: i,
         trackOverlayEvent: r,
-        getIosAttribution: s,
-        allowExternalOpen: o = !0,
+        trackOverlaySurfaceClick: s,
+        getIosAttribution: o,
+        allowExternalOpen: u = !0,
     } = e;
-    return (I.OO.getConfig({ location: "quest_open_game_link" }).enabled, o && (0, a.A)(t), Promise.resolve(!1));
+    return (I.OO.getConfig({ location: "quest_open_game_link" }).enabled, u && (0, a.A)(t), Promise.resolve(!1));
 }
-function k(e, t) {
+function M(e, t) {
     let n,
         i,
         o,
@@ -172,7 +173,7 @@ function k(e, t) {
     let { impressionId: f } = t,
         A = null != f ? (0, c.vV)(e.config.ctaConfig?.ios?.iosAppId != null, t.sourceQuestContent, e.id) : null;
     (E._.dispatch(S.jej.QUEST_GAME_LINK_OPENED),
-        M({
+        k({
             link: u,
             directLink: a,
             inlineStoreParams:
@@ -189,6 +190,7 @@ function k(e, t) {
                     timeSpentMs: s,
                     overlaySurface: o,
                 }),
+            trackOverlaySurfaceClick: (n) => (0, m.hR)({ questId: e.id, trackingCtx: t, overlaySurface: n }),
             getIosAttribution: null != A && null != f ? () => (0, C.FW)({ impressionId: f }) : void 0,
         }));
 }
@@ -227,7 +229,7 @@ function D(e, t) {
             h = null != p && null != A ? () => (0, C.FW)({ impressionId: A }) : void 0;
         o && null == h
             ? (0, a.A)(u)
-            : M({
+            : k({
                   link: u,
                   directLink: f,
                   inlineStoreParams: I,
@@ -242,11 +244,13 @@ function D(e, t) {
                           timeSpentMs: o,
                           overlaySurface: u,
                       }),
+                  trackOverlaySurfaceClick: (e) =>
+                      (0, m.jk)({ adContentId: i, adCreativeType: r, trackingCtx: t, overlaySurface: e }),
                   getIosAttribution: h,
               });
     })({ adContentId: n, adCreativeType: i, cta: r }, t, { preferExternalAppStore: !1 });
 }
-function U(e, t) {
+function q(e, t) {
     let { quest: i } = e;
     ((0, T.E5)(T.kI.STEP_2_CLICKED_INTERNAL, "open_console_connection_settings")
         ? (0, l.r)({
@@ -274,7 +278,7 @@ function U(e, t) {
             }
         })());
 }
-function q(e, t) {
+function U(e, t) {
     let { quest: n } = e;
     (0, T.E5)(T.kI.STEP_2_CLICKED_INTERNAL, "open_add_console_connection_modal")
         ? (0, l.r)({
