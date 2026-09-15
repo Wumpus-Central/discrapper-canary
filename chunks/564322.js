@@ -1,11 +1,11 @@
-n.d(t, { X: () => d });
+n.d(t, { X: () => c });
 var l = n(582128),
     s = n(59520),
     i = n(440938),
     r = n(790297),
     a = n(174459),
     o = n(652215);
-function c(e, t, n, l) {
+function d(e, t, n, l) {
     let { scrollTop: s = 0, scrollOffset: i = 0, scrollHeight: r = 0, scrollWidth: o = 0 } = l;
     if (r > 0) {
         let l = (s + i) / r;
@@ -19,11 +19,11 @@ function c(e, t, n, l) {
             });
     }
 }
-function d(e, t) {
+function c(e, t) {
     let { analyticsSource: n } = (0, r.lC)(t),
-        a = (0, s.I)(c, 5e3, [], { trailing: !0 }),
-        d = (0, i.uM)(),
-        u = d?.sessionId;
+        a = (0, s.I)(d, 5e3, [], { trailing: !0 }),
+        c = (0, i.uM)(),
+        u = c?.sessionId;
     return {
         handleScroll: l.useCallback(() => {
             if (null != e.current) {

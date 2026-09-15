@@ -1,12 +1,12 @@
-n.d(t, { A: () => b });
+n.d(t, { A: () => E });
 var l = n(477900),
     s = n(582128),
     i = n(503698),
     r = n.n(i),
     a = n(575593),
     o = n(770178),
-    c = n(590180),
-    d = n(395856),
+    d = n(590180),
+    c = n(395856),
     u = n(682301),
     m = n(929283),
     h = n(758836),
@@ -34,8 +34,8 @@ let x = [],
 function p(e) {
     let { config: t, baseLeft: n, transitioning: s, resolvedProduct: i } = e,
         r = window.innerHeight,
-        o = i ?? c.A.getProduct(t.skuId),
-        d = o?.items[0],
+        o = i ?? d.A.getProduct(t.skuId),
+        c = o?.items[0],
         u = o?.type,
         h = n + t.horizontalJitter;
     return (0, l.jsx)("div", {
@@ -49,12 +49,12 @@ function p(e) {
             transitionDelay: t.transitionDelay,
             transitionDuration: t.transitionDuration,
         },
-        children: null != d && u === a.R.AVATAR_DECORATION && (0, l.jsx)(m.i, { item: d }),
+        children: null != c && u === a.R.AVATAR_DECORATION && (0, l.jsx)(m.i, { item: c }),
     });
 }
-function E(e) {
+function b(e) {
     let { peaking: t, transitioning: n, parentWidth: i } = e,
-        [o, c] = s.useState(!1),
+        [o, d] = s.useState(!1),
         [m] = s.useState(() =>
             [...f]
                 .sort(() => Math.random() - 0.5)
@@ -68,17 +68,17 @@ function E(e) {
                     transitionDuration: `${h.H1 - 200 * Math.random()}ms`,
                 })),
         ),
-        E = (0, d.$)("shop_transition_jumble"),
-        b = s.useMemo(() => f, []),
-        v = (0, u.hv)(E ? b : x, { needsCategory: !1 }),
+        b = (0, c.$)("shop_transition_jumble"),
+        E = s.useMemo(() => f, []),
+        v = (0, u.hv)(b ? E : x, { needsCategory: !1 }),
         j = s.useMemo(() => {
-            if (!E) return m;
+            if (!b) return m;
             let e = m.filter((e) => {
                 let t = v[e.skuId]?.product;
                 return t?.items[0] != null && t.type === a.R.AVATAR_DECORATION;
             });
             return e.length > 0 ? e : m;
-        }, [E, m, v]),
+        }, [b, m, v]),
         S = s.useMemo(() => {
             if (null == i || i <= 0) return [];
             let e = Math.max(1, Math.floor(i / 130)),
@@ -87,7 +87,7 @@ function E(e) {
         }, [i, j]);
     return (
         s.useEffect(() => {
-            n && setTimeout(() => c(!0), h.H1);
+            n && setTimeout(() => d(!0), h.H1);
         }, [n]),
         (0, l.jsx)("div", {
             className: r()(g.rA, { [g.Kb]: t, [g.pp]: o }),
@@ -102,19 +102,19 @@ function E(e) {
         })
     );
 }
-let b = function (e) {
+let E = function (e) {
     let { peaking: t, transitioning: n } = e,
         i = s.useRef(null),
         [r, a] = s.useState(0),
-        c = s.useCallback(() => {
+        d = s.useCallback(() => {
             null != i.current && a(i.current.offsetWidth);
         }, []);
     return (
-        (0, o.g)(i, c),
+        (0, o.g)(i, d),
         (0, l.jsx)("div", {
             ref: i,
             className: g.eL,
-            children: (0, l.jsx)(E, { peaking: t, transitioning: n, parentWidth: r }),
+            children: (0, l.jsx)(b, { peaking: t, transitioning: n, parentWidth: r }),
         })
     );
 };

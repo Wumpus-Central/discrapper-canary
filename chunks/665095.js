@@ -28,8 +28,8 @@ var i = n(477900),
     N = n(652215),
     M = n(375708),
     R = n(690807);
-let w = y.A.getArticleURL(N.MVz.VERIFICATION_FAQ);
-class k extends l.PureComponent {
+let k = y.A.getArticleURL(N.MVz.VERIFICATION_FAQ);
+class w extends l.PureComponent {
     static defaultProps = { types: [N.Fz7.CAPTCHA], onCaptchaVerify: N.tEg, onLogout: N.tEg };
     renderFields() {
         let { types: e, captchaKey: t, theme: n, onCaptchaVerify: l } = this.props;
@@ -77,7 +77,7 @@ class k extends l.PureComponent {
                                         }),
                                         (0, i.jsx)(j.E, {
                                             variant: "text-md/normal",
-                                            children: M.intl.format(M.t["0rqMV5"], { helpCenterURL: w }),
+                                            children: M.intl.format(M.t["0rqMV5"], { helpCenterURL: k }),
                                         }),
                                     ],
                                 }),
@@ -132,8 +132,8 @@ class k extends l.PureComponent {
         t?.(e);
     };
 }
-var P = n(87404),
-    O = n(53516);
+var O = n(87404),
+    P = n(53516);
 function L() {
     let { action: e, theme: t } = (0, s.cf)([x.A, A.A], () => ({ action: x.A.getAction(), theme: A.A.theme })),
         E = v.A.getVerificationTypes(e),
@@ -148,7 +148,7 @@ function L() {
                     );
                     return (t) => (0, i.jsx)(e, { ...t });
                 },
-                { modalKey: P.H1, Layer: f.Ay },
+                { modalKey: O.H1, Layer: f.Ay },
             ));
     }
     return (
@@ -184,10 +184,10 @@ function L() {
                                 confirmText: M.intl.string(M.t["3oK4qw"]),
                             });
                     },
-                    { modalKey: P.Pr, Layer: f.Ay, onCloseCallback: S },
+                    { modalKey: O.Pr, Layer: f.Ay, onCloseCallback: S },
                 );
         }, [E, _]),
-        (0, i.jsx)(k, {
+        (0, i.jsx)(w, {
             types: E,
             captchaKey: C,
             onCaptchaVerify: function (e) {
@@ -218,7 +218,7 @@ function L() {
                               return (t) =>
                                   (0, i.jsx)(e, { layerContext: f.OH, reason: g.d.USER_ACTION_REQUIRED, ...t });
                           },
-                          { modalKey: O.V, Layer: f.Ay },
+                          { modalKey: P.V, Layer: f.Ay },
                       );
             },
             onLogout: function () {

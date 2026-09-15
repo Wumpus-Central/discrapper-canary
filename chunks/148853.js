@@ -1,8 +1,8 @@
-n.d(t, { kZ: () => s, uZ: () => r, z3: () => o });
-var l = n(759967),
-    a = n(375708);
+l.d(t, { kZ: () => s, uZ: () => r, z3: () => o });
+var n = l(759967),
+    a = l(375708);
 let r = ["frame", "widget", "bot"],
-    i = { frame: l.default.TI6dfu, widget: l.default.zshJSX, bot: l.default.bBkuBd };
+    i = { frame: n.default.TI6dfu, widget: n.default.zshJSX, bot: n.default.bBkuBd };
 function s(e) {
     return a.intl.string(i[e]);
 }

@@ -1,5 +1,5 @@
-(n.d(t, {
-    F6: () => l,
+(l.d(t, {
+    F6: () => n,
     LL: () => h,
     Mx: () => g,
     ec: () => a,
@@ -10,30 +10,30 @@
     ts: () => o,
     v_: () => f,
 }),
-    n(321073));
-let l = Object.freeze({ x: 0.5, y: 0.5 });
-function a(e, t, n) {
+    l(321073));
+let n = Object.freeze({ x: 0.5, y: 0.5 });
+function a(e, t, l) {
     let { x: a, y: r, width: i, height: s } = e.rect;
-    return i < 1 || s < 1 ? l : { x: Math.min(1, Math.max(0, (t - a) / i)), y: Math.min(1, Math.max(0, (n - r) / s)) };
+    return i < 1 || s < 1 ? n : { x: Math.min(1, Math.max(0, (t - a) / i)), y: Math.min(1, Math.max(0, (l - r) / s)) };
 }
 let r = 1e3;
 function i(e) {
     return "" !== e.trim();
 }
-function s(e, t, n) {
-    let l = null,
+function s(e, t, l) {
+    let n = null,
         a = 1 / 0;
     for (let r of e) {
         let { x: e, y: i, width: s, height: o } = r.rect;
-        if (s < 1 || o < 1 || t < e || n < i || t > e + s || n > i + o) continue;
+        if (s < 1 || o < 1 || t < e || l < i || t > e + s || l > i + o) continue;
         let u = s * o;
-        u < a && ((l = r), (a = u));
+        u < a && ((n = r), (a = u));
     }
-    return l;
+    return n;
 }
 function o(e) {
     let t = e.name.trim(),
-        n = (function (e) {
+        l = (function (e) {
             switch (e.role) {
                 case "button":
                     return "Button";
@@ -115,22 +115,22 @@ function o(e) {
             }
             return null;
         })(e);
-    return null == n
+    return null == l
         ? "" === t
             ? { kind: "" !== e.role ? e.role : e.tag, name: "" }
             : { kind: "", name: t }
-        : { kind: n, name: t };
+        : { kind: l, name: t };
 }
 function u(e) {
-    let { kind: t, name: n } = o(e);
-    return [t, n].filter((e) => "" !== e).join(" ");
+    let { kind: t, name: l } = o(e);
+    return [t, l].filter((e) => "" !== e).join(" ");
 }
 function d(e) {
     let t = [`<${e.tag}>`];
     "" !== e.role && t.push(`role=${e.role}`);
-    let n = e.name.trim();
+    let l = e.name.trim();
     return (
-        "" !== n && t.push(`name="${n}"`),
+        "" !== l && t.push(`name="${l}"`),
         null != e.value && "" !== e.value && t.push(`value="${e.value}"`),
         null != e.path && "" !== e.path && t.push(`path="${e.path}"`),
         t.push(`at x=${e.rect.x} y=${e.rect.y}`),
@@ -142,41 +142,41 @@ function d(e) {
 let c = "[vibegrations:selected] ",
     m = " \u2014 ";
 function f(e, t) {
-    let { kind: n, name: l } = o(e),
-        a = [n, l].filter((e) => "" !== e).join(": ");
+    let { kind: l, name: n } = o(e),
+        a = [l, n].filter((e) => "" !== e).join(": ");
     return `${c}${a}${m}${d(e)}
 ${t.trim()}`;
 }
 function h(e) {
     if (!e.startsWith(c)) return null;
     let t = e.indexOf("\n"),
-        n = -1 === t ? e : e.slice(0, t),
-        l = -1 === t ? "" : e.slice(t + 1),
-        a = n.slice(c.length),
+        l = -1 === t ? e : e.slice(0, t),
+        n = -1 === t ? "" : e.slice(t + 1),
+        a = l.slice(c.length),
         r = a.indexOf(m),
         i = (-1 === r ? a : a.slice(0, r)).trim();
-    return "" === i ? null : { label: i, body: l };
+    return "" === i ? null : { label: i, body: n };
 }
 function g(e) {
-    let { annotations: t, metaComment: n, context: l } = e,
+    let { annotations: t, metaComment: l, context: n } = e,
         a = t.filter((e) => i(e.comment)),
         s = [];
     if (
-        (s.push(`My design feedback: ${1 === a.length ? "1 comment" : `${a.length} comments`} on the app.`), null != l)
+        (s.push(`My design feedback: ${1 === a.length ? "1 comment" : `${a.length} comments`} on the app.`), null != n)
     ) {
-        let e = l.title.trim(),
-            t = "" !== e ? `${e} (${l.url})` : l.url;
-        (s.push(`Page: ${t}, viewport ${l.viewport.width}x${l.viewport.height}.`),
+        let e = n.title.trim(),
+            t = "" !== e ? `${e} (${n.url})` : n.url;
+        (s.push(`Page: ${t}, viewport ${n.viewport.width}x${n.viewport.height}.`),
             s.push(
                 "Element coordinates below are viewport coordinates in that frame. The refs come from one snapshot taken when this feedback was collected, so re-snapshot before acting on them.",
             ));
     }
     a.forEach((e, t) => {
-        let n;
+        let l;
         (s.push(""),
             s.push(`${t + 1}. ${d(e.target)}`),
-            s.push(`   Feedback: ${(n = e.comment.trim()).length <= r ? n : `${n.slice(0, r)}\u{2026}`}`));
+            s.push(`   Feedback: ${(l = e.comment.trim()).length <= r ? l : `${l.slice(0, r)}\u{2026}`}`));
     });
-    let o = n.trim();
+    let o = l.trim();
     return ("" !== o && (s.push(""), s.push(`Note for the whole batch: ${o}`)), s.join("\n"));
 }

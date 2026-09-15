@@ -1,4 +1,4 @@
-n.d(t, { A: () => eP });
+n.d(t, { A: () => eO });
 var i,
     l,
     a = n(477900),
@@ -67,10 +67,10 @@ let j = {
     S.intl.string(_.default.Z87TFb));
 var M = (((l = {}).Empty = "empty"), (l.VerificationCode = "verification_code"), l),
     R = n(627575),
-    w = n(17928),
-    k = n(155718),
-    P = n(379257),
-    O = n(287809),
+    k = n(17928),
+    w = n(155718),
+    O = n(379257),
+    P = n(287809),
     L = n(430993),
     D = n(503698),
     U = n.n(D),
@@ -133,7 +133,7 @@ function es() {
         className: ea.Q,
         children: S.intl.format(_.default.ifObbX, {
             handleAgeVerifyHook: () =>
-                P.A.showAgeVerificationGetStartedModal({ entryPoint: m.q1.PARENTAL_CONSENT_LOCKOUT }),
+                O.A.showAgeVerificationGetStartedModal({ entryPoint: m.q1.PARENTAL_CONSENT_LOCKOUT }),
         }),
     });
 }
@@ -167,13 +167,13 @@ function ex(e) {
             onAccept: u,
             onDecline: h,
         } = e,
-        m = (0, w.bG)([O.default], () => O.default.getUser(n.parent_id)),
+        m = (0, k.bG)([P.default], () => P.default.getUser(n.parent_id)),
         p = m?.globalName ?? m?.username ?? n.parent_username,
         f = m?.username ?? n.parent_username,
         g = f !== p,
         A = m?.avatar ?? n.parent_avatar,
         { isConnected: x, isResolved: v } = (function (e) {
-            let t = (0, w.bG)([Q.A], () => Q.A.getLinkedUsers()[e]?.link_status),
+            let t = (0, k.bG)([Q.A], () => Q.A.getLinkedUsers()[e]?.link_status),
                 [n, i] = s.useState(() =>
                     t === er.Ef.ACTIVE ? "connected" : null == t || t === er.Ef.PENDING ? null : "declined",
                 ),
@@ -400,7 +400,7 @@ let eI = {
         },
         age_verification: function (e) {
             let { onSubmit: t } = e,
-                n = (0, w.bG)([O.default], () => O.default.getCurrentUser());
+                n = (0, k.bG)([P.default], () => P.default.getCurrentUser());
             return (0, a.jsx)(W, {
                 title: "Lorem ipsum dolor",
                 actions: [
@@ -408,8 +408,8 @@ let eI = {
                         text: "Consectetur adipiscing",
                         variant: "primary",
                         onClick: function () {
-                            n?.ageVerificationStatus === k.Tk.UNVERIFIED
-                                ? P.A.showAgeVerificationGetStartedModal({
+                            n?.ageVerificationStatus === w.Tk.UNVERIFIED
+                                ? O.A.showAgeVerificationGetStartedModal({
                                       entryPoint: m.q1.SAFETY_FLOWS,
                                       onClose: () => t({ type: M.Empty }),
                                   })
@@ -452,19 +452,19 @@ let eI = {
                 }, [l]),
                 g = (0, ei.VT)(),
                 A = (0, ei.Du)(),
-                x = (0, w.bG)([Q.A], () => Q.A.getLinkedUsers()),
-                v = (0, w.bG)([Q.A], () => Q.A.getAreLinkedUsersProcessed()),
+                x = (0, k.bG)([Q.A], () => Q.A.getLinkedUsers()),
+                v = (0, k.bG)([Q.A], () => Q.A.getAreLinkedUsersProcessed()),
                 E =
                     ((t = f.pending_requests),
-                    (n = (0, w.bG)([Q.A], () => Q.A.getLinkedUsers())),
-                    (i = (0, w.bG)([O.default], () => O.default.getCurrentUser()?.id)),
+                    (n = (0, k.bG)([Q.A], () => Q.A.getLinkedUsers())),
+                    (i = (0, k.bG)([P.default], () => P.default.getCurrentUser()?.id)),
                     s.useMemo(() => {
                         if (!v) return t;
                         let e = new Map(t.map((e) => [e.parent_id, e])),
                             l = [];
                         for (let t of Object.values(n)) {
                             if (null == t || t.link_status !== er.Ef.PENDING || t.requestor_id === i) continue;
-                            let n = O.default.getUser(t.user_id),
+                            let n = P.default.getUser(t.user_id),
                                 a = e.get(t.user_id);
                             l.push({
                                 parent_id: t.user_id,
@@ -477,8 +477,8 @@ let eI = {
                     }, [v, n, i, t])),
                 C = v ? Object.values(x).some((e) => null != e) : f.pending_requests.length > 0,
                 T = v ? g : f.pending_requests.length,
-                I = (0, w.bG)([Q.A], () => Q.A.getLinkCode()),
-                j = (0, w.bG)([Q.A], () => Q.A.getLinkCodeExpiresAt()),
+                I = (0, k.bG)([Q.A], () => Q.A.getLinkCode()),
+                j = (0, k.bG)([Q.A], () => Q.A.getLinkCodeExpiresAt()),
                 b = I ?? f.link_code,
                 y = j ?? Date.parse(f.link_code_expires_at),
                 N = s.useCallback(async () => {
@@ -488,14 +488,14 @@ let eI = {
                         (0, Y.P0)((0, $.o)(S.intl.string(_.default["+QRSxc"]), X.Ck.FAILURE));
                     }
                 }, [r]),
-                [k, P] = s.useState(C);
-            C && !k && P(!0);
+                [w, O] = s.useState(C);
+            C && !w && O(!0);
             let [D, U] = s.useState(!1),
                 G = s.useCallback(() => {
                     (U(!1), p());
                 }, [p]);
             (0, en.A)(G);
-            let F = !k || D,
+            let F = !w || D,
                 V = F
                     ? S.intl.format(_.default["6GaRTu"], { link: e_ })
                     : S.intl.format(_.default["Ke+kz5"], { pendingCount: T, link: e_ });
@@ -536,7 +536,7 @@ let eI = {
                     (0, a.jsx)(q.H, {
                         actionsFullWidth: !0,
                         actions:
-                            k && !D
+                            w && !D
                                 ? [
                                       {
                                           text: S.intl.string(_.default["RD76/V"]),
@@ -691,8 +691,8 @@ let eN = {
         });
     };
 var eR = n(450165);
-let ew = n(843020);
-function ek(e) {
+let ek = n(843020);
+function ew(e) {
     let { task: t, handleSubmit: n, disabled: i, transitionState: l } = e,
         [r, o] = s.useState(t),
         d = s.useMemo(() => ({ task: r, setTask: o }), [r, o]);
@@ -705,13 +705,13 @@ function ek(e) {
         children: [!c && (0, a.jsx)(eM, {}), (0, a.jsx)(ej, { onSubmit: n, disabled: i, transitionState: l })],
     });
 }
-let eP = function (e) {
+let eO = function (e) {
     let { transitionState: t, onClose: n } = e,
         [i, l] = s.useState(null),
         [g, A] = s.useState(!0),
         [x, C] = s.useState(null),
         [T, N] = s.useState(!1),
-        w = s.useCallback(async () => {
+        k = s.useCallback(async () => {
             (A(!0), C(null));
             try {
                 let e = await v();
@@ -731,13 +731,13 @@ let eP = function (e) {
                 A(!1);
             }
         }, [n]),
-        k = s.useCallback(
+        w = s.useCallback(
             async (e) => {
                 if (null !== i) {
                     N(!0);
                     try {
                         let t = { task_id: i.task_id, flow_id: i.flow_context.flow_id, data: e };
-                        (await E(t), w());
+                        (await E(t), k());
                     } catch (e) {
                         if (y.has(i.task_type)) throw e;
                         C(S.intl.string(_.default["+QRSxc"]));
@@ -746,29 +746,29 @@ let eP = function (e) {
                     }
                 }
             },
-            [i, w],
+            [i, k],
         );
     (0, h.Ay)(() => {
-        w();
+        k();
     });
-    let P = s.useMemo(() => i?.task_type === I.AGE_VERIFICATION, [i]),
-        O = null != i && null === x && y.has(i.task_type);
+    let O = s.useMemo(() => i?.task_type === I.AGE_VERIFICATION, [i]),
+        P = null != i && null === x && y.has(i.task_type);
     return (0, a.jsxs)("div", {
         className: eR.Tp,
         children: [
-            (0, a.jsx)("img", { className: eR.xX, src: ew, alt: "" }),
-            P
+            (0, a.jsx)("img", { className: eR.xX, src: ek, alt: "" }),
+            O
                 ? (0, a.jsx)(p.default, {
                       transitionState: t ?? eE.ip.ENTERED,
                       entryPoint: m.q1.SAFETY_FLOWS,
                       onClose: eC.tE,
                       onComplete: async () => {
-                          await k({ type: M.Empty });
+                          await w({ type: M.Empty });
                       },
                       dismissable: !1,
                   })
-                : O && null != i
-                  ? (0, a.jsx)(ek, { task: i, handleSubmit: k, disabled: T, transitionState: t ?? eE.ip.ENTERED })
+                : P && null != i
+                  ? (0, a.jsx)(ew, { task: i, handleSubmit: w, disabled: T, transitionState: t ?? eE.ip.ENTERED })
                   : (0, a.jsx)("div", {
                         className: eR.nA,
                         children: g
@@ -820,7 +820,7 @@ let eP = function (e) {
                                                                   fullWidth: !0,
                                                                   text: S.intl.string(S.t["7NqTJn"]),
                                                                   onClick: () => {
-                                                                      w();
+                                                                      k();
                                                                   },
                                                               }),
                                                           ],
@@ -829,7 +829,7 @@ let eP = function (e) {
                                               }),
                                           null === x &&
                                               null != i &&
-                                              (0, a.jsx)(ek, { task: i, handleSubmit: k, disabled: T }),
+                                              (0, a.jsx)(ew, { task: i, handleSubmit: w, disabled: T }),
                                       ],
                                   }),
                               }),

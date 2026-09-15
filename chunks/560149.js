@@ -51,10 +51,10 @@ let y = (0, m.UT)(j.A, {
 var N = n(451909),
     M = n(118517),
     R = n(747926),
-    w = n(280450),
-    k = n(734057),
-    P = n(625494),
-    O = n(475815);
+    k = n(280450),
+    w = n(734057),
+    O = n(625494),
+    P = n(475815);
 let L = (0, n(945810).mj)({
     kind: "user",
     name: "2026-05-clips-media-comments",
@@ -85,8 +85,8 @@ function B(e) {
         z = null != S && S < 460,
         Z = B.slice(0, z ? 2 : 3),
         K = (0, m.bG)([j.A], () => j.A.getMessage(a, r), [a, r]),
-        q = (0, m.bG)([k.A], () => k.A.getChannel(a), [a]),
-        Y = (0, m.bG)([k.A], () => k.A.getChannel(I), [I]),
+        q = (0, m.bG)([w.A], () => w.A.getChannel(a), [a]),
+        Y = (0, m.bG)([w.A], () => w.A.getChannel(I), [I]),
         { enableMediaComments: $ } = L.useConfig({ location: "ClipEmbedMediaMentionBar" }),
         { activeLayer: X, videoRef: J } = (0, c.X$)(),
         Q = (0, h.Lt)(n.flags ?? 0, b.sbO.HAS_TIMELINE_COMMENTS),
@@ -104,7 +104,7 @@ function B(e) {
                             : "surrogates" in e && null != e.surrogates
                               ? e.surrogates
                               : e.name,
-                    n = K.author.id === w.default.getId();
+                    n = K.author.id === k.default.getId();
                 E.A.sendMessage(q.id, N.Ay.parse(q, t), !1, {
                     location: U.Hx.MEDIA_MENTION,
                     doNotScroll: !0,
@@ -195,8 +195,8 @@ function B(e) {
                     className: V.x6,
                     onClick: function (e) {
                         if ((e.stopPropagation(), null == q || null == K || null == J?.current?.currentTime)) return;
-                        O._U(J.current) && O.sP(J.current);
-                        let t = K.author.id === w.default.getId();
+                        P._U(J.current) && P.sP(J.current);
+                        let t = K.author.id === k.default.getId();
                         ((0, M.Yf)({
                             channel: q,
                             message: K,
@@ -204,7 +204,7 @@ function B(e) {
                             showMentionToggle: !q.isPrivate() && !t,
                             mediaMention: H(I, J),
                         }),
-                            P._.dispatch(b.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: q.id }));
+                            O._.dispatch(b.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: q.id }));
                     },
                     children: (0, i.jsx)(A.W, { size: "sm" }),
                 }),
@@ -218,7 +218,7 @@ function B(e) {
                             className: V.jC,
                             tag: "span",
                             onClick: function (e) {
-                                (e.stopPropagation(), null != Y && (O._U(J.current) && O.sP(J.current), (0, R.JA)(Y)));
+                                (e.stopPropagation(), null != Y && (P._U(J.current) && P.sP(J.current), (0, R.JA)(Y)));
                             },
                             "aria-label": el,
                             children: (0, i.jsx)(v.E, {
@@ -468,7 +468,7 @@ function ev(e) {
     let { attachment: t, channelId: n, messageId: a, isControlBarExpanded: r, isPlayerActive: o } = e,
         { enableDistributedClips: d } = eu.A.useConfig({ location: "DistributedClipShareCTA" }),
         c = (0, m.bG)(
-            [ec.Ay, w.default],
+            [ec.Ay, k.default],
             () =>
                 (function (e, t) {
                     let n,
@@ -487,17 +487,17 @@ function ev(e) {
                         null != i && i > o && ((o = i), (n = e));
                     }
                     return n;
-                })(t, w.default.getId(), ec.Ay),
+                })(t, k.default.getId(), ec.Ay),
             [t],
         ),
         { onShareClick: u } = (0, ep.A)(n),
-        h = (0, m.bG)([w.default, j.A], () => {
+        h = (0, m.bG)([k.default, j.A], () => {
             let e = j.A.getMessage(n, a);
             return (
                 null != e &&
-                e.author?.id !== w.default.getId() &&
+                e.author?.id !== k.default.getId() &&
                 (null == e.messageReference ||
-                    j.A.getMessage(n, e.messageReference.message_id)?.author?.id !== w.default.getId())
+                    j.A.getMessage(n, e.messageReference.message_id)?.author?.id !== k.default.getId())
             );
         }),
         p = (0, m.bG)([ec.Ay], () => ec.Ay.hasRepliedWithClip(a), [a]),

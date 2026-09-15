@@ -44,8 +44,8 @@ let S = l.memo(function (e) {
         N = a < n.startSec,
         M = Math.ceil(E(n, a)),
         R = (0, m.rB)(M),
-        w = n.owner?.name ?? n.label ?? T.intl.string(C.default["6XuC8e"]),
-        { ref: k, width: P } = (0, h.Ay)();
+        k = n.owner?.name ?? n.label ?? T.intl.string(C.default["6XuC8e"]),
+        { ref: w, width: O } = (0, h.Ay)();
     (l.useEffect(() => {
         let e = S.current;
         if (null != e) {
@@ -58,11 +58,11 @@ let S = l.memo(function (e) {
         }
     }, [b, y, r, o, I]),
         l.useEffect(() => (c?.(n.id, S.current), () => c?.(n.id, null)), [c, n.id]));
-    let O = d && !b && 0 !== M;
+    let P = d && !b && 0 !== M;
     return (
         d && b
-            ? (t = T.intl.formatToPlainString(C.default.zc1itm, { name: w }))
-            : d && (t = T.intl.formatToPlainString(N ? C.default.dUPcpR : C.default.q8TlkE, { name: w, time: R })),
+            ? (t = T.intl.formatToPlainString(C.default.zc1itm, { name: k }))
+            : d && (t = T.intl.formatToPlainString(N ? C.default.dUPcpR : C.default.q8TlkE, { name: k, time: R })),
         (0, i.jsxs)("div", {
             className: _.Vs,
             role: d ? "group" : void 0,
@@ -70,13 +70,13 @@ let S = l.memo(function (e) {
             "data-testid": "discord-web-multi-video-player-grid-tile",
             children: [
                 (0, i.jsxs)("div", {
-                    ref: k,
+                    ref: w,
                     className: s()(_.iH, { [_.om]: d }),
                     children: [
                         v ??
                             (0, i.jsx)(u.A, {
                                 ref: S,
-                                className: s()(_.cr, { [_.qb]: O }),
+                                className: s()(_.cr, { [_.qb]: P }),
                                 poster: n.poster,
                                 preload: "auto",
                                 playsInline: !0,
@@ -94,13 +94,13 @@ let S = l.memo(function (e) {
                                 className: _.cL,
                                 children: (0, i.jsx)(p.eu, {
                                     src: n.owner.avatarUrl,
-                                    size: (P ?? 0) > 300 ? f._3.SIZE_32 : f._3.SIZE_20,
+                                    size: (O ?? 0) > 300 ? f._3.SIZE_32 : f._3.SIZE_20,
                                     "aria-hidden": !0,
                                 }),
                             }),
                     ],
                 }),
-                O &&
+                P &&
                     (0, i.jsxs)("div", {
                         className: _.rm,
                         "aria-hidden": !0,
@@ -179,11 +179,11 @@ function N(e) {
             subSources: N,
             isGridView: M,
             setIsGridView: R,
-            suppressSourceSelection: w = !1,
-            ...k
+            suppressSourceSelection: k = !1,
+            ...w
         } = e,
-        P = l.useRef(null),
-        [O, L] = l.useState(j.durationSec ?? 0),
+        O = l.useRef(null),
+        [P, L] = l.useState(j.durationSec ?? 0),
         [D, U] = l.useState(j.id),
         [G, F] = l.useState(0),
         [V, H] = l.useState(!1),
@@ -250,8 +250,8 @@ function N(e) {
                     releaseFreezeFrame: o,
                 }
             );
-        })(P),
-        $ = l.useMemo(() => [{ ...j, startSec: 0, durationSec: O }, ...N], [j, N, O]),
+        })(O),
+        $ = l.useMemo(() => [{ ...j, startSec: 0, durationSec: P }, ...N], [j, N, P]),
         X = $.find((e) => e.id === D) ?? $[0],
         {
             registerFollowerElement: J,
@@ -351,7 +351,7 @@ function N(e) {
                     handleDriverPause: x,
                 }
             );
-        })({ elementRef: P, sources: $, activeSourceId: X.id, isGridView: M }),
+        })({ elementRef: O, sources: $, activeSourceId: X.id, isGridView: M }),
         el = l.useRef(null),
         ea = l.useRef(null),
         es = l.useRef(j.id),
@@ -360,7 +360,7 @@ function N(e) {
         ed = l.useRef(null);
     function ec() {
         null != ed.current &&
-            (clearTimeout(ed.current), (ed.current = null), P.current?.dispatchEvent(new Event("canplay")));
+            (clearTimeout(ed.current), (ed.current = null), O.current?.dispatchEvent(new Event("canplay")));
     }
     function eu() {
         let e = eo.current;
@@ -374,7 +374,7 @@ function N(e) {
             let e;
             ((eo.current = { sourceId: n.id, masterSec: t }),
                 null == ed.current &&
-                    null != (e = P.current) &&
+                    null != (e = O.current) &&
                     (e.dispatchEvent(new Event("waiting")),
                     (e.preload = "metadata"),
                     e.load(),
@@ -384,7 +384,7 @@ function N(e) {
             return;
         }
         let i = o()(t, 0, ep.current.masterDurationSec),
-            l = P.current;
+            l = O.current;
         if (n.id === ep.current.activeSource.id) {
             ((ea.current = null), null != l && (l.currentTime = i - n.startSec));
             return;
@@ -405,7 +405,7 @@ function N(e) {
     }
     let ep = l.useRef({
         activeSource: X,
-        masterDurationSec: O,
+        masterDurationSec: P,
         isScrubbing: m,
         revertToOriginal: em,
         applyDeferredSwitch: eu,
@@ -414,7 +414,7 @@ function N(e) {
         ep.current = {
             ...ep.current,
             activeSource: X,
-            masterDurationSec: O,
+            masterDurationSec: P,
             isScrubbing: m,
             revertToOriginal: em,
             applyDeferredSwitch: eu,
@@ -469,20 +469,20 @@ function N(e) {
                     },
                 );
             })({
-                getElement: () => P.current,
+                getElement: () => O.current,
                 getDurationSec: () => ep.current.masterDurationSec,
                 getActiveStartSec: () => ep.current.activeSource.startSec,
                 getCurrentTimeSec: () => {
                     let e = ea.current;
                     return null != e
                         ? e
-                        : Math.max(0, ep.current.activeSource.startSec + (P.current?.currentTime ?? 0));
+                        : Math.max(0, ep.current.activeSource.startSec + (O.current?.currentTime ?? 0));
                 },
                 seekTo: (e) => {
                     let t = o()(e, 0, ep.current.masterDurationSec);
                     if ((F(t), x(ep.current.activeSource, t))) {
                         ea.current = null;
-                        let e = P.current;
+                        let e = O.current;
                         (null != e && (e.currentTime = t - ep.current.activeSource.startSec),
                             ep.current.isScrubbing || ee(t));
                         return;
@@ -508,10 +508,10 @@ function N(e) {
         e.id !== X.id && eh(e.id, G);
     }
     function ex(e) {
-        Q() || k.onCanPlay?.(e);
+        Q() || w.onCanPlay?.(e);
     }
     (l.useEffect(() => {
-        eg.current !== D && ((eg.current = D), P.current?.load());
+        eg.current !== D && ((eg.current = D), O.current?.load());
     }, [D]),
         l.useEffect(() => {
             if (m) return;
@@ -522,7 +522,7 @@ function N(e) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)(d.D, {
-                onClick: k.onClick ?? void 0,
+                onClick: w.onClick ?? void 0,
                 className: s()(y.dw, { [y.x2]: M }),
                 children: [
                     (0, i.jsxs)(S, {
@@ -533,14 +533,14 @@ function N(e) {
                         isGridView: M,
                         children: [
                             (0, i.jsxs)(u.A, {
-                                ...k,
-                                ref: P,
+                                ...w,
+                                ref: O,
                                 className: s()(r, { [y._b]: ev, [y.l3]: M }),
                                 poster: X.poster ?? a,
                                 onCanPlay: ex,
                                 onCanPlayThrough: ex,
                                 onTimeUpdate: function (e) {
-                                    let t = P.current;
+                                    let t = O.current;
                                     if (null != t && null == el.current && null == ea.current) {
                                         W(t.playbackRate);
                                         let e = Math.max(0, X.startSec + t.currentTime);
@@ -552,7 +552,7 @@ function N(e) {
                                     X.id !== j.id ? em(X.startSec + X.durationSec) : f?.(e);
                                 },
                                 onLoadedMetadata: function (e) {
-                                    let t = P.current,
+                                    let t = O.current,
                                         n = el.current;
                                     if (
                                         (D === j.id &&
@@ -576,7 +576,7 @@ function N(e) {
                                     ((ea.current = null), Y());
                                 },
                                 onError: function (e) {
-                                    X.id !== j.id ? em(X.startSec + (P.current?.currentTime ?? 0)) : A?.(e);
+                                    X.id !== j.id ? em(X.startSec + (O.current?.currentTime ?? 0)) : A?.(e);
                                 },
                                 onPlay: function (e) {
                                     (H(!0), en(G), E?.(e));
@@ -613,7 +613,7 @@ function N(e) {
                 ],
             }),
             $.length > 1 &&
-                !w &&
+                !k &&
                 (0, i.jsxs)("div", {
                     className: y.c2,
                     "data-testid": "discord-web-multi-video-player-povs",

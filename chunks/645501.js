@@ -6,8 +6,8 @@ var s = n(297264),
     r = n(939249),
     a = n(885574),
     o = n(975807),
-    c = n(975571),
-    d = n(652215),
+    d = n(975571),
+    c = n(652215),
     u = n(375708),
     m = n(373599);
 let h = function (e) {
@@ -23,7 +23,7 @@ let h = function (e) {
                     position: "top",
                     "aria-label": u.intl.string(u.t["3taPdj"]),
                     children: (0, l.jsx)(r.D, {
-                        onClick: () => (0, o.A)(c.A.getArticleURL(d.MVz.DATA_USED_FOR_RECOMMENDED)),
+                        onClick: () => (0, o.A)(d.A.getArticleURL(c.MVz.DATA_USED_FOR_RECOMMENDED)),
                         className: m.s,
                         children: (0, l.jsx)(a.CircleInformationIcon, { size: "sm" }),
                     }),
