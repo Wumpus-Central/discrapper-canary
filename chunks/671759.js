@@ -1,8 +1,9 @@
-(n.d(t, { A: () => s }), n(938796));
+(n.d(t, { A: () => l }), n(938796));
 var i = n(536637),
     r = n.n(i),
-    a = n(315069);
-class s extends a.A {
+    a = n(315069),
+    s = n(889227);
+class l extends a.A {
     code;
     temporary;
     revoked;
@@ -30,7 +31,12 @@ class s extends a.A {
             (this.createdAt = e.createdAt || new Date()),
             (this.channel = e.channel),
             (this.guild = e.guild),
-            (this.inviter = e.inviter || null),
+            (this.inviter =
+                null != e.inviter
+                    ? (function (e) {
+                          return e instanceof s.A ? e : new s.A(e);
+                      })(e.inviter)
+                    : null),
             (this.targetType = e.targetType || null),
             (this.targetUser = e.targetUser || null),
             (this.targetApplication = e.targetApplication || null),
@@ -39,7 +45,7 @@ class s extends a.A {
             (this.roles = e.roles || []));
     }
     static createFromServer(e) {
-        return new s({
+        return new l({
             ...e,
             maxUses: e.max_uses,
             maxAge: e.max_age,

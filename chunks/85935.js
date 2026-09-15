@@ -191,7 +191,7 @@ function ed(e) {
 var eh = n(540168),
     em = n(375708),
     ef = n(810917);
-let ep = new Set(["markdown", "md", "mkd"]),
+let ep = new Set(["markdown", "md", "mkd", "mkdown"]),
     eg = (0, ei.Fe)({
         createPromise: () => Promise.all([n.e("759743"), n.e("915811"), n.e("636550")]).then(n.bind(n, 456262)),
         webpackId: 456262,
