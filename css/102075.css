@@ -13,4 +13,22 @@
     flex: 1
 }
 
-/*# sourceMappingURL=102075.898cf9742c9868ef.css.map*/
+.iconFallback_b789ab {
+    align-items: center;
+    background-color: var(--background-base-low);
+    box-sizing: border-box;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    overflow: hidden
+}
+
+.icon_b789ab {
+    aspect-ratio: 1/1;
+    border-radius: var(--radius-sm);
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%
+}
+
+/*# sourceMappingURL=102075.298351c96130ba2e.css.map*/

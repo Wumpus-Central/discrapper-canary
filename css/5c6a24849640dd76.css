@@ -155,6 +155,12 @@
     transform: translateY(-10px)
 }
 
+.heroCoverArt__8e688.heroCoverArtSquare__8e688 {
+    align-self: flex-start;
+    aspect-ratio: 1/1;
+    height: auto
+}
+
 .heroCoverArtImg__8e688 {
     border-radius: inherit;
     height: 100%;
@@ -195,6 +201,11 @@
     min-width: 117px
 }
 
+.oneColumnCoverArt__8e688.oneColumnCoverArtSquare__8e688 {
+    max-height: 117px;
+    min-height: 117px
+}
+
 .twoColumnCoverArt__8e688 {
     align-items: center;
     display: flex;
@@ -211,4 +222,4 @@
     width: 100%
 }
 
-/*# sourceMappingURL=610a77be6588e8b9.css.map*/
+/*# sourceMappingURL=5c6a24849640dd76.css.map*/

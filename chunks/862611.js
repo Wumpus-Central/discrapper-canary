@@ -3,8 +3,8 @@ var i,
     r = n(477900),
     l = n(582128),
     s = n(323889),
-    a = n(17928),
-    u = n(453903),
+    u = n(17928),
+    a = n(453903),
     o = n(462887),
     c = n(834730),
     d = n(939249),
@@ -29,8 +29,8 @@ var i,
     x = n(18437),
     P = n(590202),
     M = n(971649),
-    D = n(73473),
-    y = (((i = {}).FETCH_FAILED = "FETCH_FAILED"), (i.NO_GAMES_AVAILABLE = "NO_GAMES_AVAILABLE"), i),
+    y = n(73473),
+    D = (((i = {}).FETCH_FAILED = "FETCH_FAILED"), (i.NO_GAMES_AVAILABLE = "NO_GAMES_AVAILABLE"), i),
     k = n(190107),
     q = n(652215),
     w = n(375708),
@@ -40,8 +40,8 @@ function j(e) {
         n,
         i,
         { quest: l, onClose: s } = e,
-        u = (0, a.bG)([L.A], () => L.A.getState().theme),
-        m = (0, o.M)(u) ? q.NJ8.DARK : q.NJ8.LIGHT;
+        a = (0, u.bG)([L.A], () => L.A.getState().theme),
+        m = (0, o.M)(a) ? q.NJ8.DARK : q.NJ8.LIGHT;
     return (0, r.jsxs)("div", {
         className: U.N1,
         children: [
@@ -93,10 +93,10 @@ function j(e) {
     });
 }
 function Q(e) {
-    let { quest: t, game: i, sourceQuestContent: u, onGameProfileModalOpen: o, onGameProfileModalClose: c } = e,
+    let { quest: t, game: i, sourceQuestContent: a, onGameProfileModalOpen: o, onGameProfileModalClose: c } = e,
         f = (0, x.Ut)(),
         E = (0, M.go)(),
-        S = (0, a.bG)([A.Ay], () => A.Ay.useReducedMotion),
+        S = (0, u.bG)([A.Ay], () => A.Ay.useReducedMotion),
         I = l.useRef(null),
         h = null != i.gameRecord;
     function p() {
@@ -107,13 +107,13 @@ function Q(e) {
                   adCreativeId: t.id,
                   questContentCTA: P.Cy.GAME_STORE_OPEN_GAME_LINK,
                   surfaceId: v.uF.SPONSORED_QUEST_SHEET,
-                  sourceQuestContent: u,
+                  sourceQuestContent: a,
               })
             : f({
                   questId: t.id,
                   questContent: v.uF.SPONSORED_QUEST_SHEET,
                   questContentCTA: P.Cy.GAME_STORE_OPEN_GAME_LINK,
-                  sourceQuestContent: u,
+                  sourceQuestContent: a,
               });
     }
     async function L() {
@@ -125,14 +125,14 @@ function Q(e) {
                       adCreativeId: t.id,
                       questContentCTA: P.Cy.GAME_PROFILE_OPEN,
                       surfaceId: v.uF.SPONSORED_QUEST_SHEET,
-                      sourceQuestContent: u,
+                      sourceQuestContent: a,
                       impressionId: E,
                   })
                 : f({
                       questId: t.id,
                       questContent: v.uF.SPONSORED_QUEST_SHEET,
                       questContentCTA: P.Cy.GAME_PROFILE_OPEN,
-                      sourceQuestContent: u,
+                      sourceQuestContent: a,
                   }),
             await (0, m.openModalLazy)(
                 async () => {
@@ -695,7 +695,7 @@ function Q(e) {
                 className: U._M,
                 children:
                     null != i.gameRecord
-                        ? (0, r.jsx)(N.A, { game: i.gameRecord, className: U.xe, size: N.w.SMALL })
+                        ? (0, r.jsx)(N.Ay, { game: i.gameRecord, className: U.xe, size: N.wu.SMALL })
                         : null,
             }),
         }),
@@ -735,7 +735,7 @@ function F(e) {
         quest: t,
         applications: i,
         onClose: s,
-        sourceQuestContent: u,
+        sourceQuestContent: a,
         impressionRef: o,
         onGameProfileModalOpen: c,
         onGameProfileModalClose: d,
@@ -743,9 +743,9 @@ function F(e) {
     (0, S.A)(i);
     let f = l.useMemo(() => i, [i]);
     (0, p.x)(f);
-    let g = (0, a.bG)([h.A], () => f.some((e) => h.A.isFetching(e))),
-        E = (0, a.bG)([h.A], () => f.some((e) => h.A.didFetchingFail(e))),
-        A = (0, a.yK)([h.A], () =>
+    let g = (0, u.bG)([h.A], () => f.some((e) => h.A.isFetching(e))),
+        E = (0, u.bG)([h.A], () => f.some((e) => h.A.didFetchingFail(e))),
+        A = (0, u.yK)([h.A], () =>
             f
                 .map((e) => h.A.getGame(e))
                 .filter((e) => null != e)
@@ -762,7 +762,7 @@ function F(e) {
     if (
         (l.useEffect(() => {
             if (N) {
-                let e = E ? y.FETCH_FAILED : y.NO_GAMES_AVAILABLE;
+                let e = E ? D.FETCH_FAILED : D.NO_GAMES_AVAILABLE;
                 (R.default.track(q.HAw.QUEST_GAME_SHEET_ERROR, { quest_id: t.id, error_type: e }),
                     s(),
                     (0, m.openModalLazy)(async () => {
@@ -803,7 +803,7 @@ function F(e) {
                                   {
                                       quest: t,
                                       game: e,
-                                      sourceQuestContent: u,
+                                      sourceQuestContent: a,
                                       onGameProfileModalOpen: c,
                                       onGameProfileModalClose: d,
                                   },
@@ -821,7 +821,7 @@ function X(e) {
             targetElementRef: t,
             applications: n,
             children: i,
-            onGameSheetOpened: a,
+            onGameSheetOpened: u,
             onGameSheetClosed: o,
             quest: c,
             sourceQuestContent: d,
@@ -855,7 +855,7 @@ function X(e) {
             });
         },
         onRequestOpen: function () {
-            (a?.(),
+            (u?.(),
                 (0, G.E5)(G.kI.STEP_2_CLICKED_INTERNAL, "game_sheet_popout")
                     ? (0, C.r)({
                           type: _.F.CLICK_INTERNAL,
@@ -874,7 +874,7 @@ function X(e) {
                       }));
         },
         onRequestClose: function () {
-            if (m) return u.o;
+            if (m) return a.o;
             o?.();
         },
         position: I ? "right" : "top",
@@ -888,7 +888,7 @@ function X(e) {
 let V = function (e) {
     return null == e.quest || e.applications.length <= 1
         ? null
-        : (0, r.jsx)(D.R, {
+        : (0, r.jsx)(y.R, {
               questOrQuests: e.quest,
               questContent: v.uF.SPONSORED_QUEST_SHEET,
               sourceQuestContent: e.sourceQuestContent,

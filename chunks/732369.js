@@ -13,10 +13,12 @@ e.exports = {
     ap: "heroContent__8e688",
     Gh: "showCompactBar__8e688",
     Tf: "heroCoverArt__8e688",
+    wS: "heroCoverArtSquare__8e688",
     w$: "heroCoverArtImg__8e688",
     lu: "heroDetails__8e688",
     Qc: "gameRankPill__8e688",
     FS: "oneColumnCoverArt__8e688",
+    CD: "oneColumnCoverArtSquare__8e688",
     n8: "twoColumnCoverArt__8e688",
     xe: "coverArt__8e688",
 };
