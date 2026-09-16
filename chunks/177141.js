@@ -1,4 +1,4 @@
-n.d(t, { f7: () => e0, Re: () => eJ, Ay: () => ta, pe: () => e$, rV: () => ez });
+n.d(t, { f7: () => e0, Re: () => eJ, Ay: () => ta, pe: () => ez, rV: () => e$ });
 var i = n(536637),
     l = n.n(i),
     r = n(877624),
@@ -66,8 +66,8 @@ var w = n(220038),
     W = n(988903),
     Q = n(655116),
     Z = n(105530),
-    $ = n(935671),
-    z = n(742023),
+    z = n(935671),
+    $ = n(742023),
     J = n(617617),
     ee = n(912630),
     et = n(499156),
@@ -180,7 +180,7 @@ var eY = n(202541),
     eW = n(190107),
     eQ = n(818348),
     eZ = n(731854);
-let e$ = {
+let ez = {
         [eT.kqX.DOWNLOAD_NAG]: o.M.NAGBAR_NOTICE_DOWNLOAD,
         [eT.kqX.CONNECT_SPOTIFY]: o.M.NAGBAR_NOTICE_CONNECT_SPOTIFY,
         [eT.kqX.CONNECT_PLAYSTATION]: o.M.NAGBAR_NOTICE_CONNECT_PLAYSTATION,
@@ -197,7 +197,7 @@ let e$ = {
         [eT.kqX.BATTLENET_LINKED_ROLE_DEPRECATION]: o.M.BATTLENET_CONNECTION_DEPRECATION_LINKED_ROLES_DISABLE,
         [eT.kqX.COD_3PP_NAGBAR]: o.M.COD_3PP_NAGBAR_NOTICE,
     },
-    ez = { [eT.kqX.GIFTING_PROMOTION_REMINDER]: o.M.GIFTING_PROMOTION_REMINDER },
+    e$ = { [eT.kqX.GIFTING_PROMOTION_REMINDER]: o.M.GIFTING_PROMOTION_REMINDER },
     eJ = {
         [eT.kqX.PREMIUM_TIER_2_TRIAL_ENDING]: o.M.NAGBAR_NOTICE_OFFER_EXPIRING,
         [eT.kqX.PREMIUM_TIER_2_DISCOUNT_ENDING]: o.M.NAGBAR_NOTICE_OFFER_EXPIRING,
@@ -272,7 +272,7 @@ function tt(e) {
         let n = (0, R.D)(e);
         return (0, N.FZ)(t, n).isDismissed;
     }
-    let n = e$[e];
+    let n = ez[e];
     if (null != n) return (0, I.k8)(n);
     let i = e1[e];
     if (null != i) {
@@ -420,7 +420,7 @@ let ti = {
             eU.A.isConnected() &&
             ef.Ay.isHardwareMute() &&
             ef.Ay.isHardwareMuteNoticeEnabled() &&
-            !z.Ay.disableHardwareMuteSilenceAlert,
+            !$.Ay.disableHardwareMuteSilenceAlert,
         metadata: () => {
             let e = ef.Ay.getInputDeviceId(),
                 t = er.A.getVendor(e),
@@ -549,7 +549,7 @@ let ti = {
         predicate: () => {
             if (u.A?.process.platform === "darwin")
                 try {
-                    return 21 > parseInt(u.A?.os.release.split(".")[0]);
+                    return 22 > parseInt(u.A?.os.release.split(".")[0]);
                 } catch (e) {}
             return !1;
         },
@@ -790,7 +790,7 @@ let ti = {
             let { voiceChannelId: t } = e;
             if (
                 tt(eT.kqX.SYSTEM_SERVICE_WARNING) ||
-                !(0, $.yA)(D.Ay) ||
+                !(0, z.yA)(D.Ay) ||
                 null == t ||
                 ef.Ay.getMode() !== eT.TBI.PUSH_TO_TALK
             )
@@ -949,7 +949,7 @@ class ts extends s.Ay.Store {
                 eb.A,
                 eG.Ay,
                 eB.A,
-                z.Ay,
+                $.Ay,
                 eX.A,
                 ej.A,
                 J.A,
