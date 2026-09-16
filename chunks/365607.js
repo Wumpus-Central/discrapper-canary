@@ -114,8 +114,10 @@ function el(e) {
 }
 function er(e) {
     let { badge: t, index: r, onClose: i, onAction: s, controlRef: o, onUnhide: d } = e,
-        [c, u] = l.useState(!1);
-    function f(e) {
+        [c, u] = l.useState(!1),
+        f = l.useRef(null),
+        m = (0, E.A)(f, o);
+    function g(e) {
         (u(!0),
             (0, $.L3)(
                 e,
@@ -126,10 +128,10 @@ function er(e) {
                 { onClose: () => u(!1) },
             ));
     }
-    let m = t.hidden ?? !1;
+    let h = t.hidden ?? !1;
     return (0, a.jsxs)("div", {
         className: p()(en.fw, c && en.HV),
-        onContextMenu: m ? void 0 : f,
+        onContextMenu: h ? void 0 : g,
         children: [
             (0, a.jsx)("div", {
                 className: en.yk,
@@ -140,31 +142,41 @@ function er(e) {
                         alt: "",
                         "aria-hidden": !0,
                         draggable: !1,
-                        className: p()(en.pC, m && en.jx),
+                        className: p()(en.pC, h && en.jx),
                     }),
             }),
-            m
+            h
                 ? (0, a.jsx)(v.m, {
                       position: "top",
                       text: Z.intl.string(Z.t.RXOPc3),
+                      asContainer: !0,
+                      ariaHidden: !0,
+                      anchorRef: f,
+                      children: (0, a.jsx)(x.vN, {
+                          children: (0, a.jsx)("button", {
+                              ref: m,
+                              type: "button",
+                              className: en.KJ,
+                              "aria-label": Z.intl.formatToPlainString(Z.t.GhK5nf, {
+                                  badgeName: t.name,
+                                  position: r + 1,
+                              }),
+                              onClick: () => d?.(t),
+                              children: (0, a.jsx)(w.EyeSlashIcon, { size: "refresh_sm", color: "currentColor" }),
+                          }),
+                      }),
+                  })
+                : (0, a.jsx)(x.vN, {
                       children: (0, a.jsx)("button", {
                           ref: o,
                           type: "button",
-                          className: en.KJ,
-                          "aria-label": Z.intl.formatToPlainString(Z.t.GhK5nf, { badgeName: t.name, position: r + 1 }),
-                          onClick: () => d?.(t),
-                          children: (0, a.jsx)(w.EyeSlashIcon, { size: "refresh_sm", color: "currentColor" }),
+                          className: en.lv,
+                          "aria-haspopup": "menu",
+                          "aria-expanded": c,
+                          "aria-label": Z.intl.formatToPlainString(Z.t.Ci7gvp, { badgeName: t.name, position: r + 1 }),
+                          onClick: g,
+                          children: (0, a.jsx)(k.MoreHorizontalIcon, { size: "xs", color: "currentColor" }),
                       }),
-                  })
-                : (0, a.jsx)("button", {
-                      ref: o,
-                      type: "button",
-                      className: en.lv,
-                      "aria-haspopup": "menu",
-                      "aria-expanded": c,
-                      "aria-label": Z.intl.formatToPlainString(Z.t.Ci7gvp, { badgeName: t.name, position: r + 1 }),
-                      onClick: f,
-                      children: (0, a.jsx)(k.MoreHorizontalIcon, { size: "xs", color: "currentColor" }),
                   }),
         ],
     });

@@ -203,6 +203,7 @@
 .unhideButton_f18413 {
     background: none;
     border: none;
+    border-radius: var(--radius-round);
     height: 20px;
     inset-block-start: 4px;
     inset-inline-end: 4px;
@@ -228,4 +229,4 @@
     width: 20px
 }
 
-/*# sourceMappingURL=363189.29d58916d07696d4.css.map*/
+/*# sourceMappingURL=363189.49a2556da1e7ceff.css.map*/
