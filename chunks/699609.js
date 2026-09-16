@@ -1,4 +1,4 @@
-n.d(t, { w: () => $, A: () => Z });
+n.d(t, { w: () => z, A: () => Z });
 var i = n(477900),
     l = n(582128),
     r = n(503698),
@@ -257,7 +257,7 @@ function Z() {
         ],
     });
 }
-function $(e) {
+function z(e) {
     let { guildId: t } = e;
     return (0, a.bG)([f.A], () => f.A.isViewingRoles(t))
         ? (0, i.jsx)("div", {

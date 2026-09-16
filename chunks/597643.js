@@ -1989,8 +1989,8 @@ let eJ = new d.A("ConnectionStore"),
     e1 = null,
     e2 = !0,
     e3 = null,
-    e6 = null;
-async function e5(e) {
+    e5 = null;
+async function e6(e) {
     ((e0 = Date.now()), (e1 = e.sessionId), V.handleConnectionOpen());
     let t = {},
         n = T.Ay.getVoiceChannelId();
@@ -2008,7 +2008,7 @@ async function e5(e) {
             null != e && ((t = { guildId: e.getGuildId(), channelId: n }), (0, u.CX)(n));
         } else (f.A.setLastSessionVoiceChannelId(null != n ? n : null), o.default.selectVoiceChannel(null));
     }
-    (H.update(t, !0), (e2 = !1), (e6 = null));
+    (H.update(t, !0), (e2 = !1), (e5 = null));
 }
 function e4() {
     H.update();
@@ -2064,10 +2064,10 @@ let tt = new te(l.h, {
         return (e.resetSocket && (B.close(), B.dispatcher.clear(), B.connect()), !1);
     },
     CONNECTION_OPEN: (e) => {
-        e5(e);
+        e6(e);
     },
     CONNECTION_RESUMED: function () {
-        e6 = null;
+        e5 = null;
     },
     CONNECTION_CLOSED: function () {
         (eJ.verbose("connection closed dispatched"), (e0 = Date.now()));
@@ -2079,7 +2079,7 @@ let tt = new te(l.h, {
     VOICE_CHANNEL_SELECT: function (e) {
         return (
             H.update({ guildId: e.guildId, channelId: e.channelId }),
-            (e6 = e.lockVoiceStateForResume && null != e.channelId ? e.channelId : null),
+            (e5 = e.lockVoiceStateForResume && null != e.channelId ? e.channelId : null),
             (0, S.isIOS)() &&
                 e3 === x.g6G.BACKGROUND &&
                 (null == e.channelId ? B.close(!0) : B.isClosed() && (j.V(!1), B.connect())),
@@ -2091,8 +2091,8 @@ let tt = new te(l.h, {
         return t.reduce((e, t) => {
             if (E.default.getId() !== t.userId) return e;
             if (t.sessionId === e1) {
-                if (null != e6)
-                    return (eJ.verbose("Ignoring voice state for own session due to VSU lock on channel:", e6), e);
+                if (null != e5)
+                    return (eJ.verbose("Ignoring voice state for own session due to VSU lock on channel:", e5), e);
                 H.setState({ guildId: t.guildId, channelId: t.channelId });
             } else {
                 if (t.guildId !== H.guildId) return e;
@@ -2111,7 +2111,7 @@ let tt = new te(l.h, {
     CALL_DELETE: function (e) {
         let { channelId: t } = e;
         if (t === H.channelId) {
-            if (e6 === t) return !1;
+            if (e5 === t) return !1;
             H.setState({ guildId: null, channelId: null });
         }
     },

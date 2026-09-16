@@ -1,4 +1,4 @@
-n.d(t, { SE: () => P, bc: () => G, cO: () => k, ES: () => F, Ef: () => L, VI: () => w });
+n.d(t, { SE: () => k, bc: () => G, cO: () => j, ES: () => F, Ef: () => y, VI: () => V });
 var i = n(477900),
     l = n(582128),
     r = n(283973),
@@ -13,13 +13,13 @@ var i = n(477900),
     R = n(509302),
     p = n(460597),
     I = n(994500),
-    g = n(403362),
+    _ = n(403362),
     A = n(183555),
-    _ = n(652215),
+    g = n(652215),
     O = n(375708);
 function m(e) {
     let { user: t, analyticsLocation: n } = e,
-        i = (0, d.bG)([I.A], () => I.A.getRelationshipType(t.id) === _.eA$.PENDING_OUTGOING),
+        i = (0, d.bG)([I.A], () => I.A.getRelationshipType(t.id) === g.eA$.PENDING_OUTGOING),
         { trackUserProfileAction: r } = (0, A.NJ)(),
         o = (0, f.A)({
             user: t,
@@ -29,7 +29,7 @@ function m(e) {
         }),
         s = (0, R.A)({ user: t }),
         a = (0, p.A)({ user: t });
-    return l.useMemo(() => [i ? null : o, s, a].filter(g.Vq), [s, o, i, a]);
+    return l.useMemo(() => [i ? null : o, s, a].filter(_.Vq), [s, o, i, a]);
 }
 function h(e) {
     let { menuItems: t, children: n, targetElementRef: l } = e;
@@ -53,25 +53,25 @@ var b = n(682348),
     x = n(429913),
     N = n(834730),
     T = n(769015),
-    v = n(773544);
-function S(e) {
+    C = n(773544);
+function v(e) {
     let { applications: t } = e;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(N.E, {
                 variant: "text-xs/semibold",
                 color: "text-default",
-                className: v.wx,
+                className: C.wx,
                 children: O.intl.string(O.t["Uv/eTx"]),
             }),
             (0, i.jsx)("div", {
-                className: v.p_,
+                className: C.p_,
                 children: t.map((e) => {
                     if (null != e)
                         return (0, i.jsxs)(
                             "div",
                             {
-                                className: v.nM,
+                                className: C.nM,
                                 children: [
                                     (0, i.jsx)(T.A, { game: e, size: T.M.XXSMALL }),
                                     (0, i.jsx)(N.E, {
@@ -88,7 +88,7 @@ function S(e) {
         ],
     });
 }
-let C = [];
+let S = [];
 function M(e) {
     let { gameFriends: t, hasIncomingPendingGameFriends: n, hasOutgoingPendingGameFriends: r } = e,
         [o, a] = l.useState(!1),
@@ -100,15 +100,15 @@ function M(e) {
                           let { applicationId: t } = e;
                           return t;
                       })
-                    : C,
+                    : S,
             [o, t],
         ),
         c = (0, x.A)(d, o),
-        E = l.useMemo(() => c.filter(g.Vq), [c]),
+        E = l.useMemo(() => c.filter(_.Vq), [c]),
         { tooltipText: f, ariaLabel: R } = l.useMemo(() => {
             if (t.length > 0)
                 return {
-                    tooltipText: (0, i.jsx)(S, { applications: E }),
+                    tooltipText: (0, i.jsx)(v, { applications: E }),
                     ariaLabel:
                         (function (e) {
                             switch (e.length) {
@@ -156,20 +156,20 @@ function M(e) {
     };
 }
 var D = n(518477);
-function j(e) {
+function P(e) {
     let { userId: t, analyticsLocation: n } = e,
         i = l.useCallback(() => a.A.addRelationship({ userId: t, context: { location: n } }), [n, t]);
     return { action: D.pt.SEND_FRIEND_REQUEST, icon: r.R, text: O.intl.string(O.t.w5uwoI), onClick: i };
 }
-function k(e) {
+function j(e) {
     let { userId: t, analyticsLocation: n, ...l } = e,
-        r = j({ userId: t, analyticsLocation: n });
+        r = P({ userId: t, analyticsLocation: n });
     return (0, i.jsx)(u.FD, { ...r, ...l });
 }
-function P(e) {
+function k(e) {
     let { userId: t, analyticsLocation: n } = e,
         [r, o] = l.useState(!1),
-        { text: s, onClick: a, ...d } = j({ userId: t, analyticsLocation: n }),
+        { text: s, onClick: a, ...d } = P({ userId: t, analyticsLocation: n }),
         c = l.useCallback(async () => {
             o(!0);
             try {
@@ -180,16 +180,16 @@ function P(e) {
         }, [a]);
     return (0, i.jsx)(u.br, { tooltipText: s, ...d, onClick: c, loading: r });
 }
-let U = { [_.eA$.FRIEND]: o.V, [_.eA$.PENDING_OUTGOING]: s.l, [_.eA$.PENDING_INCOMING]: s.l },
-    y = {
-        [_.eA$.FRIEND]: () => O.intl.string(O.t.G7jMpU),
-        [_.eA$.PENDING_OUTGOING]: () => O.intl.string(O.t["s/+byI"]),
-        [_.eA$.PENDING_INCOMING]: () => O.intl.string(O.t["6QQCQ+"]),
+let U = { [g.eA$.FRIEND]: o.V, [g.eA$.PENDING_OUTGOING]: s.l, [g.eA$.PENDING_INCOMING]: s.l },
+    L = {
+        [g.eA$.FRIEND]: () => O.intl.string(O.t.G7jMpU),
+        [g.eA$.PENDING_OUTGOING]: () => O.intl.string(O.t["s/+byI"]),
+        [g.eA$.PENDING_INCOMING]: () => O.intl.string(O.t["6QQCQ+"]),
     };
-function L(e) {
+function y(e) {
     let { user: t, relationshipType: n, analyticsLocation: r, ...o } = e,
         s = U[n],
-        a = y[n](),
+        a = L[n](),
         d = m({ user: t, analyticsLocation: r }),
         c = l.useRef(null),
         E = { icon: s, tooltipText: a, ...o };
@@ -204,7 +204,7 @@ function L(e) {
 function G(e) {
     let { user: t, relationshipType: n, analyticsLocation: r, ...o } = e,
         s = U[n],
-        a = y[n](),
+        a = L[n](),
         d = m({ user: t, analyticsLocation: r }),
         c = l.useRef(null),
         E = { icon: s, tooltipText: a, ...o };
@@ -250,7 +250,7 @@ function F(e) {
                   }),
           });
 }
-function w(e) {
+function V(e) {
     let {
             user: t,
             gameFriends: n,

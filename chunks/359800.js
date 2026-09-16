@@ -3,8 +3,8 @@ var i = n(477900),
     r = n(582128),
     l = n(192308),
     s = n(691540),
-    a = n(97483),
-    u = n(475743),
+    u = n(97483),
+    a = n(475743),
     o = n(942370),
     c = n(538524),
     d = n(375708);
@@ -17,9 +17,9 @@ function m(e, t) {
             function () {
                 for (var t = arguments.length, r = Array(t), s = 0; s < t; s++) r[s] = arguments[s];
                 A(!0);
-                let a = e(...r);
+                let u = e(...r);
                 return (
-                    a === o._.RPC &&
+                    u === o._.RPC &&
                         m &&
                         (0, l.openModalLazy)(
                             async () => {
@@ -28,12 +28,12 @@ function m(e, t) {
                             },
                             { modalKey: f },
                         ),
-                    a
+                    u
                 );
             },
             [e, A, m],
         ),
-        _ = (0, u.Ay)(t);
+        _ = (0, a.Ay)(t);
     return (
         r.useEffect(() => {
             if (E && !1 === _ && !0 === t) {
@@ -41,7 +41,7 @@ function m(e, t) {
                     (0, s.P0)({
                         id: "account-linked-toast",
                         message: d.intl.string(c.default.uG6teD),
-                        type: a.Ck.SUCCESS,
+                        type: u.Ck.SUCCESS,
                     });
                 }
                 ((0, l.closeModal)(f),

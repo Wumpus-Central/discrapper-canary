@@ -1825,8 +1825,8 @@ class e3 {
     }
 }
 n(938796);
-var e6 = n(143236),
-    e5 = n(873985),
+var e5 = n(143236),
+    e6 = n(873985),
     e4 = n(935208),
     e7 =
         (((s = {})[(s.DISPATCH = 0)] = "DISPATCH"),
@@ -1862,7 +1862,7 @@ var e6 = n(143236),
         (s[(s.UPDATE_TIME_SPENT_SESSION_ID = 41)] = "UPDATE_TIME_SPENT_SESSION_ID"),
         (s[(s.REQUEST_CHANNEL_INFO = 43)] = "REQUEST_CHANNEL_INFO"),
         s);
-class e8 extends e6.EventEmitter {
+class e8 extends e5.EventEmitter {
     presenceUpdate(e, t, n, i) {
         this.send(e7.PRESENCE_UPDATE, { status: e, since: t, activities: n, afk: i });
     }
@@ -1879,7 +1879,7 @@ class e8 extends e6.EventEmitter {
                 flags: d = 0,
             } = e,
             c = { guild_id: t, channel_id: n, self_mute: i, self_deaf: r, self_video: a, flags: d };
-        (null != n && e5.A.shouldIncludePreferredRegion() && ((c.preferred_region = s), (c.preferred_regions = l)),
+        (null != n && e6.A.shouldIncludePreferredRegion() && ((c.preferred_region = s), (c.preferred_regions = l)),
             null != o && (c.tracks = o?.map((e) => ({ type: e.type, rid: e.rid, quality: e.quality }))),
             this.send(e7.VOICE_STATE_UPDATE, c));
     }

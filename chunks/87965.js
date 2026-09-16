@@ -459,7 +459,7 @@ class $ extends C.G {
             { no: 13, name: "user_id_range", kind: "message", oneof: "filter", T: () => eQ },
             { no: 14, name: "user_has_flag", kind: "message", oneof: "filter", T: () => e0 },
             { no: 15, name: "unit_id_in_range_by_hash", kind: "message", oneof: "filter", T: () => e2 },
-            { no: 16, name: "client_release_channel", kind: "message", oneof: "filter", T: () => e6 },
+            { no: 16, name: "client_release_channel", kind: "message", oneof: "filter", T: () => e5 },
             { no: 17, name: "always", kind: "message", oneof: "filter", T: () => e4 },
             { no: 18, name: "client_system_locale", kind: "message", oneof: "filter", T: () => es },
             { no: 19, name: "unit_id_in_experiment", kind: "message", oneof: "filter", T: () => e8 },
@@ -571,7 +571,7 @@ class $ extends C.G {
                 case 16:
                     r.filter = {
                         oneofKind: "clientReleaseChannel",
-                        clientReleaseChannel: e6.internalBinaryRead(e, e.uint32(), n, r.filter.clientReleaseChannel),
+                        clientReleaseChannel: e5.internalBinaryRead(e, e.uint32(), n, r.filter.clientReleaseChannel),
                     };
                     break;
                 case 17:
@@ -700,7 +700,7 @@ class $ extends C.G {
             "unitIdInRangeByHash" === e.filter.oneofKind &&
                 e2.internalBinaryWrite(e.filter.unitIdInRangeByHash, t.tag(15, g.O0.LengthDelimited).fork(), n).join(),
             "clientReleaseChannel" === e.filter.oneofKind &&
-                e6.internalBinaryWrite(e.filter.clientReleaseChannel, t.tag(16, g.O0.LengthDelimited).fork(), n).join(),
+                e5.internalBinaryWrite(e.filter.clientReleaseChannel, t.tag(16, g.O0.LengthDelimited).fork(), n).join(),
             "always" === e.filter.oneofKind &&
                 e4.internalBinaryWrite(e.filter.always, t.tag(17, g.O0.LengthDelimited).fork(), n).join(),
             "clientSystemLocale" === e.filter.oneofKind &&
@@ -2232,8 +2232,8 @@ class e3 extends C.G {
         return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let e6 = new e3();
-class e5 extends C.G {
+let e5 = new e3();
+class e6 extends C.G {
     constructor() {
         super("discord_protos.discord_experimentation.v1.Always", [{ no: 1, name: "value", kind: "scalar", T: 8 }], {
             "discord_protos.discord_experimentation.v1.filter_category": "FILTER_CATEGORY_UTILITY",
@@ -2269,7 +2269,7 @@ class e5 extends C.G {
         return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let e4 = new e5();
+let e4 = new e6();
 class e7 extends C.G {
     constructor() {
         super(

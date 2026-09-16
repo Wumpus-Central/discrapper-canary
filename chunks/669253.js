@@ -57,11 +57,11 @@ async function y(e) {
 }
 var T = n(234e3),
     N = n(159001),
-    R = n(933725),
-    w = n(287809),
+    w = n(933725),
+    R = n(287809),
     L = n(625494),
-    P = n(56348),
-    _ = n(207803),
+    _ = n(56348),
+    P = n(207803),
     O = n(183555),
     D = n(646976),
     G = n(289173),
@@ -106,7 +106,7 @@ function B(e) {
         B = x || b || S,
         z = !(x && !f) && (!p || A),
         Y = l.useCallback(() => {
-            (U.A.clearPendingWidgets(), p ? (0, _.XQ)() : S && (0, T.Jp)());
+            (U.A.clearPendingWidgets(), p ? (0, P.XQ)() : S && (0, T.Jp)());
         }, [p, S]),
         K = l.useCallback(async () => {
             if (p && !M.A.canSubmit()) return;
@@ -116,7 +116,7 @@ function B(e) {
                 let t = M.A.getPendingChanges(),
                     n = await y({ displayOrder: t.pendingBadgeDisplayOrder, hiddenBadges: t.pendingBadgeHiddenBadges });
                 if (n) {
-                    let e = w.default.getCurrentUser()?.id;
+                    let e = R.default.getCurrentUser()?.id;
                     (null != e && (await (0, E.fetchProfile)(e).catch(() => {})), await (0, C.RS)(), (0, T.Jp)());
                 }
                 e = n;
@@ -125,8 +125,8 @@ function B(e) {
                 try {
                     if (null == t) {
                         let t = M.A.getPendingChanges(),
-                            n = (0, P.Sk)(t),
-                            i = (0, P.yX)(t);
+                            n = (0, _.Sk)(t),
+                            i = (0, _.yX)(t);
                         if (Object.keys(n).length > 0) {
                             let i = await (0, v._L)(n);
                             ((e = e && (i?.ok ?? !1)),
@@ -141,13 +141,13 @@ function B(e) {
                         }
                         if (Object.keys(i).length > 0) {
                             let { bannerOriginalMd5: t, ...n } = i,
-                                l = await (0, _.gi)(n, void 0, t);
-                            ((e = e && (l?.ok ?? !1)), l?.ok && (0, _.RE)());
+                                l = await (0, P.gi)(n, void 0, t);
+                            ((e = e && (l?.ok ?? !1)), l?.ok && (0, P.RE)());
                         }
                     } else {
                         let n = M.A.getPendingChanges(t),
-                            i = (0, P.C5)(n),
-                            l = (0, P.yX)(n, t);
+                            i = (0, _.C5)(n),
+                            l = (0, _.yX)(n, t);
                         if (Object.keys(i).length > 0) {
                             let l = await (0, N.GL)(t, i);
                             ((e = e && (l?.ok ?? !1)),
@@ -163,15 +163,15 @@ function B(e) {
                         }
                         if (Object.keys(l).length > 0) {
                             let { bannerOriginalMd5: n, ...i } = l,
-                                s = await (0, _.gi)(i, t, n);
-                            ((e = e && (s?.ok ?? !1)), s?.ok && (0, _.RE)());
+                                s = await (0, P.gi)(i, t, n);
+                            ((e = e && (s?.ok ?? !1)), s?.ok && (0, P.RE)());
                         }
                     }
-                    let n = (0, P.yg)(M.A.getPendingChanges());
+                    let n = (0, _.yg)(M.A.getPendingChanges());
                     if (Object.keys(n).length > 0) {
                         let { primaryGuildId: t } = n;
                         if (void 0 !== t) {
-                            let n = await (0, R.m)(t, null !== t);
+                            let n = await (0, w.m)(t, null !== t);
                             ((e = e && (n?.ok ?? !1)), n?.ok && (0, v.fw)());
                         }
                     }

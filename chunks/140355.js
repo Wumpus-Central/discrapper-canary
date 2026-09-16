@@ -26,11 +26,11 @@ var i = n(477900),
     y = n(489379),
     T = n(402857),
     N = n(353394),
-    R = n(64622),
-    w = n(986712),
+    w = n(64622),
+    R = n(986712),
     L = n(435558),
-    P = n(297264),
-    _ = n(834730),
+    _ = n(297264),
+    P = n(834730),
     O = n(534890),
     D = n(366010),
     G = n(308528),
@@ -97,8 +97,8 @@ function Z(e) {
             (0, i.jsxs)("div", {
                 className: z.FS,
                 children: [
-                    (0, i.jsx)(P.D, { variant: "heading-md/medium", color: "text-strong", children: t }),
-                    (0, i.jsx)(_.E, { variant: "text-sm/normal", color: "text-default", children: n }),
+                    (0, i.jsx)(_.D, { variant: "heading-md/medium", color: "text-strong", children: t }),
+                    (0, i.jsx)(P.E, { variant: "text-sm/normal", color: "text-default", children: n }),
                 ],
             }),
             l,
@@ -183,9 +183,9 @@ function es(e) {
         h = o.length > 0 || null != c,
         p = l?.private !== !0 && null == c && null == g && null != u,
         L = !f && (h || p),
-        P = d.length > 0;
-    return L || P || !m
-        ? L || P || m
+        _ = d.length > 0;
+    return L || _ || !m
+        ? L || _ || m
             ? (0, i.jsxs)(t4, {
                   className: el.XG,
                   fade: !0,
@@ -198,7 +198,7 @@ function es(e) {
                                     children: [
                                         null != c &&
                                             (0, i.jsx)("li", {
-                                                children: (0, i.jsx)(R.A, {
+                                                children: (0, i.jsx)(w.A, {
                                                     user: t,
                                                     currentUser: n,
                                                     stream: c,
@@ -221,7 +221,7 @@ function es(e) {
                                         ),
                                         p &&
                                             (0, i.jsx)("li", {
-                                                children: (0, i.jsx)(w.A, {
+                                                children: (0, i.jsx)(R.A, {
                                                     user: t,
                                                     currentUser: n,
                                                     voiceChannel: u,
@@ -232,7 +232,7 @@ function es(e) {
                                 }),
                             })
                           : null,
-                      P
+                      _
                           ? (0, i.jsx)(en.A, {
                                 heading: B.intl.string(B.t.jzgEoL),
                                 introText: x
@@ -400,11 +400,11 @@ var eI = n(773033),
     ey = n(444927),
     eT = n(793574),
     eN = n(429913),
-    eR = n(839534),
-    ew = n(895360),
+    ew = n(839534),
+    eR = n(895360),
     eL = n(152472),
-    eP = n(267102),
-    e_ = n(285373);
+    e_ = n(267102),
+    eP = n(285373);
 n(321073);
 var eO = n(721932),
     eD = n(403362),
@@ -745,12 +745,12 @@ function tN(e) {
             return null;
     }
 }
-var tR = n(609965);
-function tw(e) {
+var tw = n(609965);
+function tR(e) {
     let { wishlist: t, guildId: n, handleOpenUserProfileModal: l, analyticsLocations: s, className: a, items: o } = e,
         d = (0, I.bG)([eB.default], () => eB.default.getUser(t?.userId));
     return (0, i.jsx)("ul", {
-        className: r()(tR.Vg, a),
+        className: r()(tw.Vg, a),
         children: o.map((e, r) => {
             let { sku: a, itemSource: o } = e;
             return (0, i.jsx)(
@@ -772,11 +772,11 @@ function tw(e) {
     });
 }
 var tL = n(554146),
-    tP = n(131607),
-    t_ = n(927813),
+    t_ = n(131607),
+    tP = n(927813),
     tO = n(49999);
-let tD = 90 * t_.A.Millis.DAY,
-    tG = 90 * t_.A.Millis.DAY;
+let tD = 90 * tP.A.Millis.DAY,
+    tG = 90 * tP.A.Millis.DAY;
 var tM = n(469364);
 function tU(e) {
     let {
@@ -802,7 +802,7 @@ function tU(e) {
                     () => (null != n ? new Date(eK.A.getWishlistSettings(t, n.id)?.updated_at ?? 0).valueOf() : 0),
                     [n, t],
                 ),
-                [d, c] = (0, tP.Wl)(
+                [d, c] = (0, t_.Wl)(
                     tL.M.USER_PROFILE_WISHLIST_RECOMMENDATIONS,
                     { showAfterTimestamp: o + tG, cooldownDurationMs: tD },
                     void 0,
@@ -874,7 +874,7 @@ function tW(e) {
                   (0, i.jsxs)("div", {
                       className: tM.wx,
                       children: [
-                          (0, i.jsx)(_.E, {
+                          (0, i.jsx)(P.E, {
                               variant: "text-xs/normal",
                               color: "text-subtle",
                               children: B.intl.string(B.t["+GB8Kt"]),
@@ -894,7 +894,7 @@ function tW(e) {
                           wishlistId: s?.id,
                           analyticsLocations: a,
                       },
-                      children: (0, i.jsx)(tw, {
+                      children: (0, i.jsx)(tR, {
                           items: g,
                           guildId: n,
                           wishlist: s,
@@ -1138,7 +1138,7 @@ function t7(e) {
             handleOpenGameShop: r,
             handleOpenGameShopMouseDown: a,
         } = e,
-        o = (0, eP.Us)() === j.BRT.OVERLAY,
+        o = (0, e_.Us)() === j.BRT.OVERLAY,
         d = (0, eN.A)(n),
         c = l.useMemo(() => {
             if (o || 0 === n.length) return null;
@@ -1162,12 +1162,12 @@ function t7(e) {
             (0, i.jsxs)("div", {
                 className: t0.q6,
                 children: [
-                    (0, i.jsx)(P.D, {
+                    (0, i.jsx)(_.D, {
                         variant: "heading-md/medium",
                         color: "text-strong",
                         children: B.intl.string(B.t.HGnLLT),
                     }),
-                    (0, i.jsx)(_.E, {
+                    (0, i.jsx)(P.E, {
                         variant: "text-sm/normal",
                         color: "text-default",
                         children: B.intl.string(B.t["/X1ny6"]),
@@ -1237,7 +1237,7 @@ function t3(e) {
                     className: t0.lm,
                     children: [
                         (0, i.jsx)(eb.EyeSlashIcon, { size: "custom", width: 16, height: 16 }),
-                        (0, i.jsx)(_.E, {
+                        (0, i.jsx)(P.E, {
                             variant: "text-xs/normal",
                             color: "text-subtle",
                             children: B.intl.string(B.t.RX7D9h),
@@ -1250,7 +1250,7 @@ function t3(e) {
                     className: t0.lm,
                     children: [
                         (0, i.jsx)(ek.CircleInformationIcon, { size: "custom", width: 16, height: 16 }),
-                        (0, i.jsx)(_.E, {
+                        (0, i.jsx)(P.E, {
                             variant: "text-xs/normal",
                             color: "text-subtle",
                             children: B.intl.string(B.t.d78ChW),
@@ -1261,7 +1261,7 @@ function t3(e) {
                 ref: A,
                 className: t0.U1,
                 children: [
-                    (0, i.jsx)(_.E, {
+                    (0, i.jsx)(P.E, {
                         variant: "text-xs/semibold",
                         color: "text-subtle",
                         children: B.intl.format(B.t.r6Y1Lg, { count: r.items.length }),
@@ -1327,7 +1327,7 @@ function t5(e) {
         })({ wishlist: g, profileOwner: t, currentUser: o }),
         A = (0, ey.A)(() => (0, ej.A)()),
         E = l.useCallback(() => {
-            (0, eR.Cz)({ analyticsLocations: d, analyticsSource: eT.A.USER_PROFILE_WISHLIST });
+            (0, ew.Cz)({ analyticsLocations: d, analyticsSource: eT.A.USER_PROFILE_WISHLIST });
         }, [d]),
         v = l.useCallback((e) => {
             (0, eU.G)({ applicationId: e });
@@ -1338,8 +1338,8 @@ function t5(e) {
         { handleToggle: S } = (0, eL.c)({
             userId: o?.id,
             skuId: tr.pe.TIER_2,
-            nuxGraphic: e_.g,
-            onNuxShow: ew.D,
+            nuxGraphic: eP.g,
+            onNuxShow: eR.D,
             location: eT.A.USER_PROFILE_WISHLIST,
         });
     if (null == o || null != f) return null;
