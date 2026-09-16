@@ -4893,6 +4893,22 @@
     }
   },
   {
+    "kind": "user",
+    "name": "2026-08-forward-age-restricted-destinations",
+    "defaultConfig": {
+      "disableAgeRestrictedDestinations": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "disableAgeRestrictedDestinations": true
+      }
+    }
+  },
+  {
     "name": "2026-08-game-profiles-vc",
     "kind": "user",
     "defaultConfig": null,

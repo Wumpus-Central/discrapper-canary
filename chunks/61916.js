@@ -1,8 +1,8 @@
-s.d(t, { N: () => R, s: () => U });
+s.d(t, { N: () => H, s: () => U });
 var n = s(477900),
     a = s(582128),
-    l = s(536637),
-    i = s.n(l),
+    i = s(536637),
+    l = s.n(i),
     r = s(17928),
     u = s(778712),
     o = s(56059),
@@ -12,40 +12,40 @@ var n = s(477900),
     b = s(658675),
     g = s(966327),
     A = s(115718),
-    h = s(47167),
+    f = s(47167),
     p = s(598104),
-    f = s(255266),
+    h = s(255266),
     E = s(72563),
-    x = s(446244),
-    L = s(734057),
-    C = s(71393),
+    C = s(446244),
+    x = s(734057),
+    L = s(71393),
     S = s(290863),
     _ = s(573163),
-    N = s(994500),
-    I = s(287809),
-    D = s(58703),
+    D = s(994500),
+    N = s(287809),
+    I = s(58703),
     P = s(403362),
     j = s(427262),
-    y = s(513480),
-    v = s(359378),
+    v = s(473511),
+    y = s(359378),
     G = s(790782),
     T = s(837695);
-function z(e, t) {
+function R(e, t) {
     if (null != e) return "string" == typeof t && "" !== t ? `${e}, ${t}` : e;
 }
-function M(e) {
+function z(e) {
     let { user: t, subLabel: s, ...a } = e,
-        l = j.Ay.useName(t),
-        i = j.Ay.useUserTag(t, { decoration: "never" }),
-        o = (0, r.bG)([N.A], () => N.A.getNickname(t.id)),
+        i = j.Ay.useName(t),
+        l = j.Ay.useUserTag(t, { decoration: "never" }),
+        o = (0, r.bG)([D.A], () => D.A.getNickname(t.id)),
         d = (0, r.bG)([S.A], () => S.A.getStatus(t.id)),
-        c = o ?? l,
-        m = a["aria-label"] ?? z(c, s ?? i);
-    return (0, n.jsx)(v.A, {
+        c = o ?? i,
+        m = a["aria-label"] ?? R(c, s ?? l);
+    return (0, n.jsx)(y.A, {
         listItemId: a.destination.id,
         icon: (0, n.jsx)(g.A, { "aria-hidden": !0, size: u._3.SIZE_32, user: t, status: d }),
         label: c,
-        subLabel: s ?? i,
+        subLabel: s ?? l,
         subLabelLineClamp: a.subLabelLineClamp,
         selected: a.selected,
         disabled: a.disabled,
@@ -57,17 +57,17 @@ function M(e) {
         className: a.className,
     });
 }
-function k(e) {
+function M(e) {
     let { channel: t, subLabel: s, ...a } = e,
-        l = (0, h.Ay)(t),
-        i = (0, E.i)(t),
-        r = l ?? void 0,
-        o = a["aria-label"] ?? z(r, s ?? i);
-    return (0, n.jsx)(v.A, {
+        i = (0, f.Ay)(t),
+        l = (0, E.i)(t),
+        r = i ?? void 0,
+        o = a["aria-label"] ?? R(r, s ?? l);
+    return (0, n.jsx)(y.A, {
         listItemId: a.destination.id,
         icon: (0, n.jsx)(p.A, { "aria-hidden": !0, size: u._3.SIZE_32, channel: t }),
-        label: l,
-        subLabel: s ?? i,
+        label: i,
+        subLabel: s ?? l,
         subLabelLineClamp: a.subLabelLineClamp,
         selected: a.selected,
         disabled: a.disabled,
@@ -79,17 +79,17 @@ function k(e) {
         className: a.className,
     });
 }
-function H(e) {
+function k(e) {
     let { channel: t, subLabel: s, ...a } = e,
-        l = (0, r.bG)([C.A], () => C.A.getGuild(t?.guild_id)),
-        u = (0, h.Ay)(t),
-        b = (0, r.bG)([L.A, I.default, N.A], () => {
-            let e = L.A.getChannel(t.parent_id);
-            return null == e ? null : (0, h.m1)(e, I.default, N.A, !1);
+        i = (0, r.bG)([L.A], () => L.A.getGuild(t?.guild_id)),
+        u = (0, f.Ay)(t),
+        b = (0, r.bG)([x.A, N.default, D.A], () => {
+            let e = x.A.getChannel(t.parent_id);
+            return null == e ? null : (0, f.m1)(e, N.default, D.A, !1);
         }),
         g = (0, r.bG)([_.Ay], () => _.Ay.lastMessageTimestamp(t.id, G.P.CHANNEL)),
-        A = l?.name,
-        p = l?.name;
+        A = i?.name,
+        p = i?.name;
     if (t.isThread() || t.isForumPost()) {
         let e = t.isForumPost() ? o.b : d.N;
         ((A = (0, n.jsxs)("div", {
@@ -109,7 +109,7 @@ function H(e) {
                               (0, n.jsx)(m.E, {
                                   variant: "text-xs/medium",
                                   color: "text-subtle",
-                                  children: (0, D.Fe)(i()(g)),
+                                  children: (0, I.Fe)(l()(g)),
                               }),
                           ],
                       })
@@ -119,10 +119,10 @@ function H(e) {
             (p = b));
     }
     let E = u ?? void 0,
-        x = a["aria-label"] ?? z(E, s ?? p);
-    return (0, n.jsx)(v.A, {
+        C = a["aria-label"] ?? R(E, s ?? p);
+    return (0, n.jsx)(y.A, {
         listItemId: a.destination.id,
-        icon: (0, n.jsx)(f.A, { size: f.q.SMALL_32, guild: l, channel: t }),
+        icon: (0, n.jsx)(h.A, { size: h.q.SMALL_32, guild: i, channel: t }),
         label: u,
         subLabel: s ?? A,
         subLabelLineClamp: a.subLabelLineClamp,
@@ -130,25 +130,25 @@ function H(e) {
         disabled: a.disabled,
         trailing: a.trailing,
         onPress: null != a.onPressDestination ? () => a.onPressDestination?.(a.destination, E) : void 0,
-        "aria-label": x,
+        "aria-label": C,
         "aria-setsize": a["aria-setsize"],
         "aria-posinset": a["aria-posinset"],
         className: a.className,
     });
 }
-function R(e) {
+function H(e) {
     let { result: t, ...s } = e,
-        { type: a, record: l } = t;
+        { type: a, record: i } = t;
     if (a === A.rD.HEADER) return null;
-    let i = (0, x.hY)(t);
+    let l = (0, C.hY)(t);
     switch (a) {
         case A.rD.USER:
-            return (0, n.jsx)(M, { user: l, destination: i, ...s });
+            return (0, n.jsx)(z, { user: i, destination: l, ...s });
         case A.rD.GROUP_DM:
-            return (0, n.jsx)(k, { channel: l, destination: i, ...s });
+            return (0, n.jsx)(M, { channel: i, destination: l, ...s });
         case A.rD.TEXT_CHANNEL:
         case A.rD.VOICE_CHANNEL:
-            return (0, n.jsx)(H, { channel: l, destination: i, ...s });
+            return (0, n.jsx)(k, { channel: i, destination: l, ...s });
         default:
             return (0, P.xb)(a);
     }
@@ -157,43 +157,43 @@ function U(e) {
     let {
             rowData: t,
             message: s,
-            originChannel: l,
-            selectedDestinations: i,
+            originChannel: i,
+            selectedDestinations: l,
             handleToggleDestination: r,
             disableSelection: u,
             rowClassName: o,
             validateDestination: d,
         } = e,
-        c = a.useMemo(() => i?.map(x.I) ?? [], [i]),
+        c = a.useMemo(() => l?.map(C.I) ?? [], [l]),
         m = a.useCallback(
             (e) => {
-                let { section: a, row: i } = e;
+                let { section: a, row: l } = e;
                 if (a > 0) return;
-                let m = t[i],
-                    { type: g, record: h } = m;
+                let m = t[l],
+                    { type: g, record: f } = m;
                 if (g === A.rD.HEADER) return;
-                let p = (0, x.I)((0, x.hY)(m)),
-                    f = (0, y.pE)(s, l, h, d),
+                let p = (0, C.I)((0, C.hY)(m)),
+                    h = (0, v.pE)(s, i, f, d),
                     E = c.includes(p),
-                    L = (u && !E) || null != f;
+                    x = (u && !E) || null != h;
                 return (0, n.jsx)(
-                    R,
+                    H,
                     {
                         result: m,
-                        subLabel: null != f ? f.label : void 0,
-                        subLabelLineClamp: f?.lineClamp,
-                        disabled: L,
+                        subLabel: null != h ? h.label : void 0,
+                        subLabelLineClamp: h?.lineClamp,
+                        disabled: x,
                         selected: E,
-                        trailing: (0, n.jsx)(b.P, { checked: E, disabled: L }),
+                        trailing: (0, n.jsx)(b.P, { checked: E, disabled: x }),
                         onPressDestination: r,
-                        "aria-posinset": i + 1,
+                        "aria-posinset": l + 1,
                         "aria-setsize": t.length,
                         className: o,
                     },
                     p,
                 );
             },
-            [u, r, s, l, t, c, o, d],
+            [u, r, s, i, t, c, o, d],
         );
     return { sections: [t.length], sectionHeight: 0, rowHeight: 48, renderRow: m };
 }

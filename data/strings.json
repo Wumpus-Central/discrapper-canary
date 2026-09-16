@@ -14540,6 +14540,7 @@
   "CDzOFd": "Edited {timeFormatted}",
   "ToyvLk": "Forwarded",
   "9ddYKt": "Forwarded a message",
+  "QHrFo6": "You can't forward messages to this age-restricted channel.",
   "KgPx1D": "Messages cannot be forwarded from age-restricted to unrestricted channels.",
   "/OPIaM": "Forward Failed",
   "cn9vFb": "The message could not be forwarded to the following {count, plural,one {location}other {locations}:",
