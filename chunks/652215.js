@@ -3776,6 +3776,7 @@ var rb =
         (ew.ANDROID_ART_PROFILE_SNAPSHOT = "android_art_profile_snapshot"),
         (ew.ANDROID_JANK_STATS = "android_jank_stats"),
         (ew.ANDROID_JANK_SESSION = "android_jank_session"),
+        (ew.ANDROID_JANK_SCREEN = "android_jank_screen"),
         (ew.IOS_JANK_STATS = "ios_jank_stats"),
         (ew.APP_JS_STALLED = "app_js_stalled"),
         (ew.LIBDISCORE_LOADED = "libdiscore_loaded"),
