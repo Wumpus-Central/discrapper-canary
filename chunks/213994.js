@@ -17,12 +17,15 @@ function m(e) {
             headingText: m,
             className: h,
             style: g,
-            headingRef: p,
-            profileFrame: A,
-            children: x,
+            containerRef: p,
+            headingRef: A,
+            profileEffect: x,
+            profileFrame: f,
+            children: E,
         } = e,
-        f = (0, o.GV)();
+        I = (0, o.GV)();
     return (0, i.jsxs)(c.A, {
+        ref: p,
         user: t,
         displayProfile: n,
         themeType: d.d.EMBED,
@@ -30,14 +33,15 @@ function m(e) {
         style: g,
         children: [
             (0, i.jsxs)("article", {
-                "aria-labelledby": f,
+                "aria-labelledby": I,
                 className: s()(u.article, h),
                 children: [
-                    (0, i.jsx)(a.A, { children: (0, i.jsx)(r.H, { ref: p, tabIndex: -1, id: f, children: m }) }),
-                    (0, i.jsx)(r.F, { children: x }),
+                    (0, i.jsx)(a.A, { children: (0, i.jsx)(r.H, { ref: A, tabIndex: -1, id: I, children: m }) }),
+                    (0, i.jsx)(r.F, { children: E }),
                 ],
             }),
-            A,
+            x,
+            f,
         ],
     });
 }

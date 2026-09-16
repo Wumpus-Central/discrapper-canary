@@ -8,6 +8,8 @@
     margin-top: calc((var(--custom-user-profile-avatar-size) + var(--custom-user-profile-avatar-stroke))/-2);
     padding-inline-start: var(--custom-user-profile-content-inset);
     position: relative;
+    width: -moz-fit-content;
+    width: fit-content;
     z-index: var(--custom-user-profile-bottom-layer-z-index)
 }
 
@@ -281,4 +283,4 @@
     padding: var(--space-4)
 }
 
-/*# sourceMappingURL=631323.2c58ce52601928f5.css.map*/
+/*# sourceMappingURL=631323.fda17ca93ab2f82d.css.map*/

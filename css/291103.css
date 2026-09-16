@@ -126,6 +126,7 @@
     z-index: var(--custom-user-profile-middle-layer-z-index, 2)
 }
 
+.custom-user-profile-theme.user-profile-embed .profileEffects__0dd08,
 .custom-user-profile-theme.user-profile-popout .profileEffects__0dd08,
 .custom-user-profile-theme.user-profile-sidebar.user-profile-sidebar-redesign .profileEffects__0dd08 {
     inset: var(--custom-user-profile-theme-padding)
@@ -165,4 +166,4 @@
     width: 100%
 }
 
-/*# sourceMappingURL=291103.740cf177126c9492.css.map*/
+/*# sourceMappingURL=291103.cd0ee685baf2844e.css.map*/
