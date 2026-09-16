@@ -1337,6 +1337,7 @@ function ni(e) {
                         let i = l;
                         (0, t5.un)({
                             action: n ? "GAME_ADDED" : "GAME_REMOVED",
+                            gameId: t,
                             ...i.getProfileEditAnalyticsOptions(),
                         });
                     },
