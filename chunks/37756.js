@@ -3054,8 +3054,8 @@ let lG = {
 var lF = n(809029),
     lB = n(354033),
     lH = n(554146),
-    lW = n(80151),
-    lY = n(841702),
+    lW = n(841702),
+    lY = n(758461),
     lV = n(367727),
     lK = n(332026),
     lZ = n(580194),
@@ -3152,7 +3152,7 @@ function l5(e) {
         W =
             (0, lK.Wh)({ location: "PremiumPaymentConfirmStep" }) &&
             (0, lq.M)({ isGift: N, giftRecipient: b, selectedPlanId: _?.id }),
-        { purchases: Y } = (0, lY.Wg)(!1),
+        { purchases: Y } = (0, lW.Wg)(!1),
         V = (0, U.bG)([l$.A], () => l$.A.getGiftPromotion()?.id),
         K = (0, U.bG)([l$.A], () => {
             let e = l$.A.getMarketingComponentByType(tP.C.GIFT_REMINDER_NAGBAR);
@@ -3179,7 +3179,7 @@ function l5(e) {
                 subscription_id: y?.id,
             });
     });
-    let X = (0, lW.A)();
+    let X = (0, lY.HH)();
     (c.useEffect(() => {
         function e() {
             if (g)

@@ -9,9 +9,9 @@ var a = l(477900),
     E = l(661531),
     u = l(770178),
     C = l(742589),
-    A = l(617986),
-    L = l(402860),
-    O = l(318346),
+    L = l(617986),
+    O = l(402860),
+    A = l(318346),
     S = l(70926),
     _ = l(287809),
     p = l(365491),
@@ -29,9 +29,9 @@ var a = l(477900),
 function k(e) {
     let { handleTransition: t, selectedTab: l, isNarrow: i, hasText: c } = e,
         { searchQuery: r, onSetSearchQuery: u } = (0, p.v)(),
-        [C, A] = n.useState(""),
-        L = (0, f.uM)(),
-        O = (0, s.bG)([g.default], () => g.default.locale),
+        [C, L] = n.useState(""),
+        O = (0, f.uM)(),
+        A = (0, s.bG)([g.default], () => g.default.locale),
         S = n.useRef(null),
         [_, d] = n.useState(!1);
     (n.useEffect(() => {
@@ -41,7 +41,7 @@ function k(e) {
         return () => clearTimeout(e);
     }, [C, u]),
         n.useEffect(() => {
-            A(r);
+            L(r);
         }, [r]),
         n.useEffect(() => {
             d(i && c);
@@ -55,16 +55,16 @@ function k(e) {
         F = n.useCallback(
             (e) => {
                 b.default.track(B.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                    collectibles_shop_session_id: L?.sessionId,
-                    page_section: L?.pageSection,
-                    page_category: L?.pageCategory,
-                    page_index: L?.pageIndex,
-                    page_size: L?.pageSize,
+                    collectibles_shop_session_id: O?.sessionId,
+                    page_section: O?.pageSection,
+                    page_category: O?.pageCategory,
+                    page_index: O?.pageIndex,
+                    page_size: O?.pageSize,
                     cta_name: e,
                     page_type: l,
                 });
             },
-            [l, L],
+            [l, O],
         ),
         N = n.useCallback(() => {
             (l !== R.G2.CATALOG && t(R.G2.CATALOG), F(R.uY.SEARCH_ICON), d(!0), setTimeout(() => S.current?.focus()));
@@ -73,13 +73,13 @@ function k(e) {
             (l !== R.G2.CATALOG && t(R.G2.CATALOG), F(R.uY.SEARCH_BAR));
         }, [l, t, F]),
         m = n.useCallback(() => {
-            (A(""), u(""), F(R.uY.SEARCH_BAR_CLEAR), i && d(!1));
+            (L(""), u(""), F(R.uY.SEARCH_BAR_CLEAR), i && d(!1));
         }, [u, F, i]),
-        x = n.useCallback(() => {
+        H = n.useCallback(() => {
             i && "" === C && d(!1);
         }, [i, C]),
-        P = i && !_,
-        H = (0, a.jsx)(o.D, {
+        x = i && !_,
+        P = (0, a.jsx)(o.D, {
             className: h.qc,
             onClick: N,
             children: (0, a.jsx)(T.MagnifyingGlassIcon, { size: "sm", color: E.A.colors.INTERACTIVE_ICON_DEFAULT }),
@@ -89,14 +89,14 @@ function k(e) {
             ref: S,
             onKeyDown: k,
             query: C,
-            onChange: A,
+            onChange: L,
             onClear: m,
-            onBlur: x,
-            placeholder: "en-US" === O ? y.intl.string(y.t.arz34K) : y.intl.string(y.t["hIt/Nm"]),
+            onBlur: H,
+            placeholder: "en-US" === A ? y.intl.string(y.t.arz34K) : y.intl.string(y.t["hIt/Nm"]),
         }),
         j = { "--custom-search-bar-width": `${R.rr}px`, "--custom-search-bar-icon-width": `${R.Dy}px` };
-    return P
-        ? (0, a.jsx)("div", { style: j, children: H })
+    return x
+        ? (0, a.jsx)("div", { style: j, children: P })
         : (0, a.jsx)("div", {
               className: G()(h.ON, { [h.Nz]: _ }),
               style: j,
@@ -108,18 +108,18 @@ l(321073);
 var N = l(278416),
     M = l(196736),
     m = l(976860);
-let x = (0, l(945810).mj)({
+let H = (0, l(945810).mj)({
     name: "2026-05-social-layer-storefront-game-shops-dropdown",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
 });
-var P = l(50920),
-    H = l(288106),
+var x = l(50920),
+    P = l(288106),
     v = l(223311),
     j = l(65238),
-    w = l(80151),
-    D = l(151115),
+    w = l(758461),
+    D = l(679116),
     V = l(812729),
     U = l.n(V),
     K = l(627363),
@@ -157,11 +157,11 @@ function et(e) {
     );
     let V = t === R.G2.ORBS ? B.liQ.SHOP_ORBS_TAB : B.liQ.COLLECTIBLES_SHOP,
         et = n.useCallback(() => {
-            ((0, O.Y)({ pageType: V, sectionType: B.JJy.ORBS_BALANCE_MENU, ctaObject: B.ZSU.CTA_TO_QUEST_HOME }),
-                (0, A.mA)({ fromContent: i.u.ORBS_BALANCE_MENU }));
+            ((0, A.Y)({ pageType: V, sectionType: B.JJy.ORBS_BALANCE_MENU, ctaObject: B.ZSU.CTA_TO_QUEST_HOME }),
+                (0, L.mA)({ fromContent: i.u.ORBS_BALANCE_MENU }));
         }, [V]),
         el = n.useCallback(() => {
-            G?.id != null && (0, L.openUserProfileModal)({ userId: G.id, tabSection: $.RP.WISHLIST });
+            G?.id != null && (0, O.openUserProfileModal)({ userId: G.id, tabSection: $.RP.WISHLIST });
         }, [G?.id]),
         ea = (function (e) {
             let t,
@@ -174,9 +174,9 @@ function et(e) {
                 E = (0, M.H)({ location: Q }),
                 u = (function (e) {
                     let { location: t } = e;
-                    return x.useConfig({ location: t }).enabled;
+                    return H.useConfig({ location: t }).enabled;
                 })({ location: Q }),
-                { gameShops: C, hasGameShops: A } = (function (e) {
+                { gameShops: C, hasGameShops: L } = (function (e) {
                     let { enabled: t } = e,
                         l = (0, f.uM)(),
                         a = (0, s.yK)(
@@ -254,8 +254,8 @@ function et(e) {
                         hasGameShops: a.length > 0,
                     };
                 })({ enabled: u }),
-                L = null != (0, w.A)(),
-                O = (0, P.a)(Q),
+                O = null != (0, w.HH)(),
+                A = (0, x.a)(Q),
                 S =
                     ((t = (0, v.A)(B.FYj)),
                     (l = (0, j.XF)(t)),
@@ -266,7 +266,7 @@ function et(e) {
                     (r = t?.rewardStatus),
                     n.useMemo(
                         () =>
-                            null == i || null == c || r === H.GM.CONSUMED
+                            null == i || null == c || r === P.GM.CONSUMED
                                 ? null
                                 : { title: i, icon: o, collectionId: c },
                         [i, o, c, r],
@@ -278,7 +278,7 @@ function et(e) {
                             let { tab: l } = e;
                             return l !== R.G2.OFFER_ELIGIBLE || !!t;
                         });
-                    })({ hasActivePromotion: L }).map((t) => {
+                    })({ hasActivePromotion: O }).map((t) => {
                         let { tab: l, labelKey: a } = t,
                             n = l === R.G2.OFFER_ELIGIBLE ? N.TagIcon : void 0;
                         return {
@@ -317,7 +317,7 @@ function et(e) {
                     ];
                 if (
                     (u &&
-                        A &&
+                        L &&
                         l.push({
                             type: "menu",
                             key: R.G2.GAME_SHOPS,
@@ -334,10 +334,10 @@ function et(e) {
                             onClick: () => e(R.G2.GAME_SERVERS),
                             badge: "beta",
                         }),
-                    null != S && O)
+                    null != S && A)
                 ) {
                     let e = B.BVt.COLLECTIBLES_SHOP_COLLECTION_DETAIL(S.collectionId),
-                        t = (0, D.sj)(S.icon);
+                        t = (0, D.s)(S.icon);
                     l.push({
                         type: "page",
                         key: R.G2.PROMOTION,
@@ -348,7 +348,7 @@ function et(e) {
                     });
                 }
                 return l;
-            }, [e, L, O, S, E, u, A, C]);
+            }, [e, O, A, S, E, u, L, C]);
         })(
             n.useCallback(
                 (e) => {

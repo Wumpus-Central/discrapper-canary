@@ -16,8 +16,8 @@ var n = l(477900),
     m = l(174459),
     x = l(975571),
     E = l(440938),
-    I = l(80151),
-    k = l(151115),
+    I = l(758461),
+    k = l(679116),
     L = l(758836),
     N = l(652215),
     T = l(375708),
@@ -34,26 +34,26 @@ function b(e) {
             ctaText: b,
             ctaIcon: S,
             onCtaClick: O,
-            hideCta: j,
-            onDismiss: y,
+            hideCta: y,
+            onDismiss: R,
         } = e,
-        { analyticsLocations: R } = (0, u.Ay)(_.A.COLLECTIBLES_SHOP_NAGBAR),
+        { analyticsLocations: j } = (0, u.Ay)(_.A.COLLECTIBLES_SHOP_NAGBAR),
         f = i.useMemo(() => (null == I ? null : x.A.getArticleURL(I)), [I]),
-        B = (0, k.sj)(a),
+        B = (0, k.s)(a),
         P = v[l] ?? g.Hk,
-        M = (0, E.uM)(),
-        G = i.useCallback(() => {
+        H = (0, E.uM)(),
+        M = i.useCallback(() => {
             m.default.track(N.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                collectibles_shop_session_id: M?.sessionId,
+                collectibles_shop_session_id: H?.sessionId,
                 page_type: t,
-                page_section: M?.pageSection,
-                page_category: M?.pageCategory,
+                page_section: H?.pageSection,
+                page_category: H?.pageCategory,
                 tile_type: "NAGBAR",
                 cta_name: "help center article link",
             });
-        }, [t, M]);
+        }, [t, H]);
     return (0, n.jsx)(u.f5, {
-        value: R,
+        value: j,
         children: (0, n.jsx)(o.N, {
             theme: N.NJ8.DARK,
             children: (e) =>
@@ -81,7 +81,7 @@ function b(e) {
                                                                 href: f,
                                                                 target: "_blank",
                                                                 className: g.nf,
-                                                                onClick: G,
+                                                                onClick: M,
                                                                 children: L ?? T.intl.string(T.t.WQdkbb),
                                                             }),
                                                         ],
@@ -93,7 +93,7 @@ function b(e) {
                                 (0, n.jsxs)("div", {
                                     className: g.uJ,
                                     children: [
-                                        !j &&
+                                        !y &&
                                             null != b &&
                                             (0, n.jsx)(p.$, {
                                                 variant: "overlay-primary",
@@ -102,9 +102,9 @@ function b(e) {
                                                 icon: S,
                                                 onClick: O,
                                             }),
-                                        null != y &&
+                                        null != R &&
                                             (0, n.jsx)(d.PM, {
-                                                onClick: y,
+                                                onClick: R,
                                                 noticeType: N.kqX.COLLECTIBLES_SHOP_NAGBAR,
                                                 className: g.r,
                                             }),
@@ -122,7 +122,7 @@ let S =
         ? function (e) {
               let { tab: t, handleTransition: l } = e,
                   a = (0, E.uM)(),
-                  s = (0, I.A)(),
+                  s = (0, I.HH)(),
                   o = (0, C.ml)(s)?.reward,
                   c = o?.storefront?.nagbar,
                   r = o?.flavor,

@@ -401,8 +401,8 @@ let o = "collectibles shop product details modal",
                     n.e("535874"),
                     n.e("355227"),
                     n.e("496086"),
-                    n.e("454954"),
-                ]).then(n.bind(n, 422065));
+                    n.e("423263"),
+                ]).then(n.bind(n, 891362));
                 return (n) =>
                     (0, r.jsx)(s.R9, {
                         newValue: { cardId: v, sessionId: x, tilePosition: C },

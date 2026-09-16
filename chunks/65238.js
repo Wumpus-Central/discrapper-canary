@@ -16,8 +16,7 @@ class a extends i.A {
     endsAt;
     tenantMetadata;
     static createFromServer(e) {
-        var t, n, i, s, l;
-        let c, u, _, E, A;
+        var t, n;
         return new a({
             id: e.id,
             applicationId: e.application_id,
@@ -57,116 +56,164 @@ class a extends i.A {
                     ? {
                           collectibles:
                               null != (n = e.tenant_metadata).collectibles
-                                  ? (i = n.collectibles).type === r.hE.COLLECT_AND_CLAIM && i.subtype === r.h5.TAKEOVER
-                                      ? ((s = i),
-                                        {
-                                            type: r.hE.COLLECT_AND_CLAIM,
-                                            subtype: r.h5.TAKEOVER,
-                                            collectionId: s.collection_id,
-                                            shopHome: {
-                                                title: s.shop_home.title,
-                                                description: s.shop_home.description,
-                                                rewardStates: o(s.shop_home.reward_states),
-                                                style:
-                                                    null != s.shop_home.style
-                                                        ? { contentTheme: s.shop_home.style.content_theme }
-                                                        : void 0,
-                                            },
-                                            indexPage: {
-                                                description: s.index_page.description,
-                                                rewardStates: o(s.index_page.reward_states),
-                                                style:
-                                                    null != s.index_page.style
-                                                        ? { contentTheme: s.index_page.style.content_theme }
-                                                        : void 0,
-                                            },
-                                            shared: (function (e) {
-                                                var t;
-                                                let { progress_indicator: n, navigation: i, help_center: r } = e;
-                                                return {
-                                                    progressIndicator: {
-                                                        title: n.title,
-                                                        description: n.description,
-                                                        rewardStates:
-                                                            null != n.indicator_reward_states
-                                                                ? {
-                                                                      inProgress:
-                                                                          null !=
-                                                                          (t = n.indicator_reward_states).in_progress
-                                                                              ? {
-                                                                                    progressSteps:
-                                                                                        t.in_progress.progress_steps.map(
-                                                                                            d,
-                                                                                        ),
-                                                                                }
-                                                                              : void 0,
-                                                                      earned: null != t.earned ? d(t.earned) : void 0,
-                                                                      consumed:
-                                                                          null != t.consumed ? d(t.consumed) : void 0,
-                                                                  }
-                                                                : void 0,
-                                                        assets: {
-                                                            backgroundUrl: n.assets.background_url,
-                                                            rewardPreview: {
-                                                                hiddenUrl: n.assets.reward_preview.hidden_url,
-                                                                revealedUrl: n.assets.reward_preview.revealed_url,
+                                  ? (function (e) {
+                                        var t, n;
+                                        switch (e.type) {
+                                            case r.hE.COLLECT_AND_CLAIM:
+                                                if (e.subtype === r.h5.TAKEOVER) {
+                                                    return (
+                                                        (t = e),
+                                                        {
+                                                            type: r.hE.COLLECT_AND_CLAIM,
+                                                            subtype: r.h5.TAKEOVER,
+                                                            collectionId: t.collection_id,
+                                                            shopHome: {
+                                                                title: t.shop_home.title,
+                                                                description: t.shop_home.description,
+                                                                rewardStates: o(t.shop_home.reward_states),
+                                                                style:
+                                                                    null != t.shop_home.style
+                                                                        ? {
+                                                                              contentTheme:
+                                                                                  t.shop_home.style.content_theme,
+                                                                          }
+                                                                        : void 0,
                                                             },
-                                                        },
-                                                        style:
-                                                            null != n.style
-                                                                ? {
-                                                                      contentTheme: n.style.content_theme,
-                                                                      progressColor: n.style.progress_color,
-                                                                  }
-                                                                : void 0,
-                                                    },
-                                                    navigation:
-                                                        i?.tab != null
-                                                            ? { tab: { title: i.tab.title, icon: i.tab.icon } }
-                                                            : void 0,
-                                                    helpCenter: null != r ? { text: r.text, id: r.id } : void 0,
-                                                };
-                                            })(s.shared),
-                                        })
-                                      : i.type === r.hE.TARGETED_OFFER
-                                        ? ((l = i.reward),
-                                          (c = l?.storefront?.nagbar),
-                                          (u = l?.checkout?.offer_notice),
-                                          (E = null == (_ = l?.collected?.override_title) || "" === _ ? void 0 : _),
-                                          (A = l?.flavor),
-                                          null == c && null == u && null == E && null == A
-                                              ? { type: r.hE.TARGETED_OFFER }
-                                              : {
-                                                    type: r.hE.TARGETED_OFFER,
-                                                    reward: {
-                                                        storefront:
-                                                            null != c
-                                                                ? {
-                                                                      nagbar: {
-                                                                          headerText: c.header_text ?? void 0,
-                                                                          cta:
-                                                                              null != c.cta
-                                                                                  ? { text: c.cta.text ?? void 0 }
-                                                                                  : void 0,
-                                                                          helpCenterId: c.help_center_id ?? void 0,
-                                                                          icon: c.icon ?? void 0,
-                                                                      },
-                                                                  }
-                                                                : void 0,
-                                                        checkout:
-                                                            null != u
-                                                                ? {
-                                                                      offerNotice: {
-                                                                          icon: u.icon ?? void 0,
-                                                                          text: u.text ?? void 0,
-                                                                      },
-                                                                  }
-                                                                : void 0,
-                                                        collected: null != E ? { overrideTitle: E } : void 0,
-                                                        flavor: A ?? void 0,
-                                                    },
-                                                })
-                                        : void 0
+                                                            indexPage: {
+                                                                description: t.index_page.description,
+                                                                rewardStates: o(t.index_page.reward_states),
+                                                                style:
+                                                                    null != t.index_page.style
+                                                                        ? {
+                                                                              contentTheme:
+                                                                                  t.index_page.style.content_theme,
+                                                                          }
+                                                                        : void 0,
+                                                            },
+                                                            shared: (function (e) {
+                                                                var t;
+                                                                let {
+                                                                    progress_indicator: n,
+                                                                    navigation: i,
+                                                                    help_center: r,
+                                                                } = e;
+                                                                return {
+                                                                    progressIndicator: {
+                                                                        title: n.title,
+                                                                        description: n.description,
+                                                                        rewardStates:
+                                                                            null != n.indicator_reward_states
+                                                                                ? {
+                                                                                      inProgress:
+                                                                                          null !=
+                                                                                          (t =
+                                                                                              n.indicator_reward_states)
+                                                                                              .in_progress
+                                                                                              ? {
+                                                                                                    progressSteps:
+                                                                                                        t.in_progress.progress_steps.map(
+                                                                                                            d,
+                                                                                                        ),
+                                                                                                }
+                                                                                              : void 0,
+                                                                                      earned:
+                                                                                          null != t.earned
+                                                                                              ? d(t.earned)
+                                                                                              : void 0,
+                                                                                      consumed:
+                                                                                          null != t.consumed
+                                                                                              ? d(t.consumed)
+                                                                                              : void 0,
+                                                                                  }
+                                                                                : void 0,
+                                                                        assets: {
+                                                                            backgroundUrl: n.assets.background_url,
+                                                                            rewardPreview: {
+                                                                                hiddenUrl:
+                                                                                    n.assets.reward_preview.hidden_url,
+                                                                                revealedUrl:
+                                                                                    n.assets.reward_preview
+                                                                                        .revealed_url,
+                                                                            },
+                                                                        },
+                                                                        style:
+                                                                            null != n.style
+                                                                                ? {
+                                                                                      contentTheme:
+                                                                                          n.style.content_theme,
+                                                                                      progressColor:
+                                                                                          n.style.progress_color,
+                                                                                  }
+                                                                                : void 0,
+                                                                    },
+                                                                    navigation:
+                                                                        i?.tab != null
+                                                                            ? {
+                                                                                  tab: {
+                                                                                      title: i.tab.title,
+                                                                                      icon: i.tab.icon,
+                                                                                  },
+                                                                              }
+                                                                            : void 0,
+                                                                    helpCenter:
+                                                                        null != r ? { text: r.text, id: r.id } : void 0,
+                                                                };
+                                                            })(t.shared),
+                                                        }
+                                                    );
+                                                }
+                                                break;
+                                            case r.hE.TARGETED_OFFER:
+                                                let i, a, s, l, c;
+                                                return (
+                                                    (n = e.reward),
+                                                    (i = n?.storefront?.nagbar),
+                                                    (a = n?.checkout?.offer_notice),
+                                                    (l =
+                                                        null == (s = n?.collected?.override_title) || "" === s
+                                                            ? void 0
+                                                            : s),
+                                                    (c = n?.flavor),
+                                                    null == i && null == a && null == l && null == c
+                                                        ? { type: r.hE.TARGETED_OFFER }
+                                                        : {
+                                                              type: r.hE.TARGETED_OFFER,
+                                                              reward: {
+                                                                  storefront:
+                                                                      null != i
+                                                                          ? {
+                                                                                nagbar: {
+                                                                                    headerText: i.header_text ?? void 0,
+                                                                                    cta:
+                                                                                        null != i.cta
+                                                                                            ? {
+                                                                                                  text:
+                                                                                                      i.cta.text ??
+                                                                                                      void 0,
+                                                                                              }
+                                                                                            : void 0,
+                                                                                    helpCenterId:
+                                                                                        i.help_center_id ?? void 0,
+                                                                                    icon: i.icon ?? void 0,
+                                                                                },
+                                                                            }
+                                                                          : void 0,
+                                                                  checkout:
+                                                                      null != a
+                                                                          ? {
+                                                                                offerNotice: {
+                                                                                    icon: a.icon ?? void 0,
+                                                                                    text: a.text ?? void 0,
+                                                                                },
+                                                                            }
+                                                                          : void 0,
+                                                                  collected: null != l ? { overrideTitle: l } : void 0,
+                                                                  flavor: c ?? void 0,
+                                                              },
+                                                          }
+                                                );
+                                        }
+                                    })(n.collectibles)
                                   : void 0,
                       }
                     : null,
