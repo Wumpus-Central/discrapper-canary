@@ -4,7 +4,7 @@
     background-color: linear-gradient(0deg, hsl(var(--black-hsl)/.2) 0, hsl(var(--black-hsl)/.2) 100%), var(--background-mod-normal);
     border: 1px solid var(--border-subtle);
     border-radius: 62px;
-    bottom: var(--space-6);
+    bottom: 14px;
     box-sizing: border-box;
     height: 36px;
     inset-inline-start: 50%;
@@ -62,7 +62,7 @@
 }
 
 .timeline__76ea6 {
-    bottom: 66px;
+    bottom: 72px;
     inset-inline-end: var(--space-20);
     inset-inline-start: var(--space-20);
     pointer-events: none;
@@ -117,4 +117,4 @@
     white-space: nowrap
 }
 
-/*# sourceMappingURL=848826.8ca31d71a2c14e84.css.map*/
+/*# sourceMappingURL=848826.f83c0f6f6633a80a.css.map*/

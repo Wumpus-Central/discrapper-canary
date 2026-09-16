@@ -157,7 +157,8 @@
     align-items: center;
     cursor: pointer;
     display: flex;
-    gap: var(--space-6)
+    gap: var(--space-6);
+    pointer-events: all
 }
 
 .gridViewReturn__0a5bd:hover {
@@ -607,4 +608,4 @@
     border-inline-start: 1px solid var(--border-subtle)
 }
 
-/*# sourceMappingURL=911680.5891395456f751eb.css.map*/
+/*# sourceMappingURL=911680.d12223dafe0860bd.css.map*/

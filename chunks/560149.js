@@ -123,7 +123,7 @@ function B(e) {
         style: {
             opacity: (0, u.to)(t.to({ range: [0, 1], output: [0, 1] }), (e) => (d ? 0 : `${e}`)),
             transform: (0, u.to)(
-                [t.to({ range: [0, 1], output: [42, 0] })],
+                [t.to({ range: [0, 1], output: [50, 0] })],
                 (e) => `translateY(${e}px) translateX(-50%)`,
             ),
         },
@@ -276,8 +276,8 @@ function en(e) {
                       className: ee.IO,
                       style: {
                           transform: g
-                              ? (0, u.to)([t.to({ range: [0, 1], output: [54, 0] })], (e) => `translateY(${e}px)`)
-                              : "translateY(54px)",
+                              ? (0, u.to)([t.to({ range: [0, 1], output: [60, 0] })], (e) => `translateY(${e}px)`)
+                              : "translateY(60px)",
                       },
                       children: v.map((e) => (0, i.jsx)(ei, { hidden: d, message: e, durationSeconds: a }, e.id)),
                   }),
