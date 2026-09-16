@@ -178,7 +178,7 @@
 }
 
 .section_a48d6b {
-    padding: var(--space-16) var(--space-16) var(--space-8)
+    padding: var(--space-16) var(--space-8) var(--space-8)
 }
 
 .body_a48d6b {
@@ -245,8 +245,34 @@
     margin-top: 22px
 }
 
-.classificationLetUsKnowTextCentered_a48d6b {
-    text-align: center
+.confirmMinimumAgeSection_a48d6b {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12)
+}
+
+.confirmMinimumAgeButton_a48d6b {
+    align-items: center;
+    background: var(--background-surface-highest);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    display: flex;
+    gap: var(--space-10);
+    justify-content: space-between;
+    padding: var(--space-12)
+}
+
+.confirmMinimumAgeButton_a48d6b:hover {
+    background: var(--interactive-background-hover)
+}
+
+.guidelinesFooter_a48d6b {
+    margin-top: var(--space-12)
+}
+
+.guidelinesFooter_a48d6b,
+.manualReviewFooter_a48d6b {
+    margin-bottom: var(--space-16)
 }
 
 .classificationPolicyCard_a48d6b {
@@ -312,4 +338,4 @@
     margin: 0 var(--space-40)
 }
 
-/*# sourceMappingURL=025ae8589f6adaff.css.map*/
+/*# sourceMappingURL=bb0809ac991c17af.css.map*/
