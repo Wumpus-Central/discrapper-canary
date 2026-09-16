@@ -1500,22 +1500,6 @@
     }
   },
   {
-    "name": "2026-03-boost-to-unlock-mobile-coachmark",
-    "kind": "user",
-    "defaultConfig": {
-      "showCoachmark": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "showCoachmark": true
-      }
-    }
-  },
-  {
     "kind": "user",
     "name": "2026-03-browser-inverted-wants",
     "defaultConfig": {

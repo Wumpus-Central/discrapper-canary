@@ -790,7 +790,7 @@ let r = {
             "GUILD_POWERUP_ENTITLEMENTS_DELETE",
             "GUILD_APPLIED_BOOSTS_UPDATE",
         ],
-        inlineRequire: () => n(384046).A,
+        inlineRequire: () => n(681637).A,
         neverLoadBeforeConnectionOpen: !0,
         hasStoreChangeListeners: !0,
     },
