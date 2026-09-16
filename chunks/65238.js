@@ -106,12 +106,10 @@ class a extends i.A {
                                                                   }
                                                                 : void 0,
                                                         assets: {
-                                                            backgroundAssetPath: n.assets.background_asset_path,
+                                                            backgroundUrl: n.assets.background_url,
                                                             rewardPreview: {
-                                                                hiddenAssetPath:
-                                                                    n.assets.reward_preview.hidden_asset_path,
-                                                                revealedAssetPath:
-                                                                    n.assets.reward_preview.revealed_asset_path,
+                                                                hiddenUrl: n.assets.reward_preview.hidden_url,
+                                                                revealedUrl: n.assets.reward_preview.revealed_url,
                                                             },
                                                         },
                                                         style:
@@ -201,9 +199,9 @@ function l(e) {
 }
 function o(e) {
     return {
-        inProgress: { progressSteps: e.in_progress.progress_steps.map((e) => ({ heroAssetPath: e.hero_asset_path })) },
-        earned: { heroAssetPath: e.earned.hero_asset_path },
-        consumed: { heroAssetPath: e.consumed.hero_asset_path },
+        inProgress: { progressSteps: e.in_progress.progress_steps.map((e) => ({ heroUrl: e.hero_url })) },
+        earned: { heroUrl: e.earned.hero_url },
+        consumed: { heroUrl: e.consumed.hero_url },
     };
 }
 function d(e) {
