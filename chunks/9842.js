@@ -1,23 +1,24 @@
-(n.d(t, { A: () => D, a: () => A }), n(321073));
+(n.d(t, { A: () => v, a: () => h }), n(321073));
 var i,
     r = n(635377),
     a = n.n(r),
     s = n(17928),
     l = n(228366),
-    o = n(619065),
-    d = n(390248),
-    c = n(320095),
-    u = n(734057),
-    _ = n(232835),
-    E = n(652215),
-    A =
+    o = n(987741),
+    d = n(958720),
+    c = n(390248),
+    u = n(320095),
+    _ = n(734057),
+    E = n(232835),
+    A = n(652215),
+    h =
         (((i = {})[(i.LOADED = 0)] = "LOADED"),
         (i[(i.NOT_LOADED = 1)] = "NOT_LOADED"),
         (i[(i.DELETED = 2)] = "DELETED"),
         i);
-let h = Object.freeze({ state: 1 }),
-    I = new Set();
-class f {
+let I = Object.freeze({ state: 1 }),
+    f = new Set();
+class p {
     _cachedMessages = new (a())({ max: 100, dispose: (e, t) => this.handleCacheDisposed(e, t) });
     _cachedMessageIds = new Set();
     handleCacheDisposed(e, t) {
@@ -39,7 +40,7 @@ class f {
         return this._cachedMessageIds;
     }
 }
-class p {
+class T {
     _channelCaches = new Map();
     has(e, t) {
         return this._channelCaches.get(e)?.has(t) ?? !1;
@@ -49,11 +50,11 @@ class p {
     }
     set(e, t, n) {
         let i = this._channelCaches.get(e);
-        (null == i && ((i = new f()), this._channelCaches.set(e, i)), i.set(t, n));
+        (null == i && ((i = new p()), this._channelCaches.set(e, i)), i.set(t, n));
     }
     updateExistingMessageIfCached(e) {
         let t = this._channelCaches.get(e.channel_id);
-        return null != t && !!t.has(e.id) && (t.set(e.id, { state: 0, message: (0, c.rh)(e) }), !0);
+        return null != t && !!t.has(e.id) && (t.set(e.id, { state: 0, message: (0, u.rh)(e) }), !0);
     }
     deleteChannelCache(e) {
         return this._channelCaches.delete(e);
@@ -72,10 +73,10 @@ class p {
         this._channelCaches.clear();
     }
 }
-let T = new p();
-function m(e) {
+let m = new T();
+function g(e) {
     let t = !1;
-    if ((T.updateExistingMessageIfCached(e) && (t = !0), E.sl8.has(e.type))) {
+    if ((m.updateExistingMessageIfCached(e) && (t = !0), A.sl8.has(e.type))) {
         let n = e.message_reference;
         if (null == n) return t;
         let i = n.message_id;
@@ -83,135 +84,135 @@ function m(e) {
         if ("referenced_message" in e) {
             let t = e.referenced_message;
             null != t
-                ? (T.set(t.channel_id, t.id, { state: 0, message: (0, c.rh)(t) }),
-                  e.type === E.lAJ.THREAD_STARTER_MESSAGE && m(t))
-                : T.set(e.channel_id, i, { state: 2 });
+                ? (m.set(t.channel_id, t.id, { state: 0, message: (0, u.rh)(t) }),
+                  e.type === A.lAJ.THREAD_STARTER_MESSAGE && g(t))
+                : m.set(e.channel_id, i, { state: 2 });
         } else {
-            let e = _.A.getMessage(n.channel_id, i) ?? o.A.getMessage(n.channel_id, i);
-            null != e ? T.set(n.channel_id, i, { state: 0, message: e }) : T.set(n.channel_id, i, h);
+            let e = E.A.getMessage(n.channel_id, i) ?? d.A.getMessage(n.channel_id, i) ?? o.A.getMessage(i);
+            null != e ? m.set(n.channel_id, i, { state: 0, message: e }) : m.set(n.channel_id, i, I);
         }
         t = !0;
     }
     return t;
 }
-function g(e, t) {
+function S(e, t) {
     let n = !1;
     for (let i of e) n = !1 !== t(i) || n;
     return n;
 }
-function S(e) {
-    let { messages: t } = e;
-    return g(t, (e) => m(e));
-}
 function N(e) {
-    let { data: t } = e;
-    return g(t, (e) => {
-        let { messages: t } = e;
-        return g(t, (e) => g(e, (e) => m(e)));
-    });
+    let { messages: t } = e;
+    return S(t, (e) => g(e));
 }
 function C(e) {
-    return T.deleteChannelCache(e.channel.id);
+    let { data: t } = e;
+    return S(t, (e) => {
+        let { messages: t } = e;
+        return S(t, (e) => S(e, (e) => g(e)));
+    });
 }
-function O(e, t) {
-    if (!T.has(e, t)) return !1;
-    T.set(e, t, { state: 2 });
+function O(e) {
+    return m.deleteChannelCache(e.channel.id);
 }
-function R() {
-    T.clear();
+function R(e, t) {
+    if (!m.has(e, t)) return !1;
+    m.set(e, t, { state: 2 });
 }
-function L(e) {
+function L() {
+    m.clear();
+}
+function y(e) {
     let { firstMessages: t } = e;
-    return null != t && g(t, (e) => m(e));
+    return null != t && S(t, (e) => g(e));
 }
-class y extends s.Ay.Store {
+class D extends s.Ay.Store {
     static displayName = "ReferencedMessageStore";
     initialize() {
-        this.waitFor(_.A, u.A, o.A);
+        this.waitFor(E.A, _.A, d.A, o.A);
     }
     getMessageByReference(e) {
         let t;
-        return (null != e && (t = T.get(e.channel_id, e.message_id)), t ?? h);
+        return (null != e && (t = m.get(e.channel_id, e.message_id)), t ?? I);
     }
     getMessage(e, t) {
-        return T.get(e, t) ?? h;
+        return m.get(e, t) ?? I;
     }
     getReplyIdsForChannel(e) {
         let t;
-        return (null != e && (t = T.getCachedMessageIdsForChannel(e)), t ?? I);
+        return (null != e && (t = m.getCachedMessageIdsForChannel(e)), t ?? f);
     }
 }
-let D = new y(l.h, {
+let v = new D(l.h, {
     CACHE_LOADED: function (e) {
         let { messages: t } = e;
-        return g(Object.values(t), (e) => g(Object.values(e), (e) => m(e)));
+        return S(Object.values(t), (e) => S(Object.values(e), (e) => g(e)));
     },
-    LOCAL_MESSAGES_LOADED: S,
-    LOAD_MESSAGES_SUCCESS: S,
-    LOAD_MESSAGES_AROUND_SUCCESS: S,
-    SEARCH_MESSAGES_SUCCESS: N,
+    LOCAL_MESSAGES_LOADED: N,
+    LOAD_MESSAGES_SUCCESS: N,
+    LOAD_MESSAGES_AROUND_SUCCESS: N,
+    SEARCH_MESSAGES_SUCCESS: C,
     INTELLIGENCE_SEARCH_FETCH_SUCCESS: function (e) {
         let { messages: t } = e;
-        return g(t, (e) => m(e));
+        return S(t, (e) => g(e));
     },
-    MOD_VIEW_SEARCH_MESSAGES_SUCCESS: N,
+    MOD_VIEW_SEARCH_MESSAGES_SUCCESS: C,
     CONVERSATION_FETCH_SUCCESS: function (e) {
         let { messages: t, messageReferences: n } = e;
-        return g(t.concat(n), (e) => m(e));
+        return S(t.concat(n), (e) => g(e));
     },
     CONVERSATIONS_FETCH_SUCCESS: function (e) {
         let { rawConversations: t } = e;
-        return g(t, (e) => {
+        return S(t, (e) => {
             let { messages: t } = e;
-            return g(t ?? [], (e) => m(e));
+            return S(t ?? [], (e) => g(e));
         });
     },
-    LOAD_THREADS_SUCCESS: L,
-    LOAD_ARCHIVED_THREADS_SUCCESS: L,
+    LOAD_THREADS_SUCCESS: y,
+    LOAD_ARCHIVED_THREADS_SUCCESS: y,
     MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: function (e) {
         let { messageId: t, channelId: n } = e;
-        if (!T.has(n, t)) return !1;
-        let i = T.get(n, t);
+        if (!m.has(n, t)) return !1;
+        let i = m.get(n, t);
         if (null == i || 0 !== i.state) return !1;
-        T.set(n, t, { state: 0, message: (0, d.Td)(i.message) });
+        m.set(n, t, { state: 0, message: (0, c.Td)(i.message) });
     },
     LOAD_FORUM_POSTS: function (e) {
         let { threads: t } = e;
-        return g(Object.values(t), (e) => {
+        return S(Object.values(t), (e) => {
             let { first_message: t } = e;
-            return null != t && m(t);
+            return null != t && g(t);
         });
     },
     MESSAGE_CREATE: function (e) {
         let { message: t } = e;
-        return !!_.A.getMessages(t.channel_id).ready && m(t);
+        return !!E.A.getMessages(t.channel_id).ready && g(t);
     },
     MESSAGE_UPDATE: function (e) {
         let { message: t } = e,
             n = t.id,
             i = t.channel_id;
-        if (!T.has(i, n)) return !1;
-        let r = T.get(i, n);
+        if (!m.has(i, n)) return !1;
+        let r = m.get(i, n);
         if (null == r || 0 !== r.state) return !1;
-        T.set(i, n, { state: 0, message: (0, c.IU)(r.message, t) });
+        m.set(i, n, { state: 0, message: (0, u.IU)(r.message, t) });
     },
     MESSAGE_DELETE: function (e) {
         let { id: t, channelId: n } = e;
-        return O(n, t);
+        return R(n, t);
     },
     MESSAGE_DELETE_BULK: function (e) {
         let { ids: t, channelId: n } = e;
-        return g(t, (e) => O(n, e));
+        return S(t, (e) => R(n, e));
     },
     CREATE_PENDING_REPLY: function (e) {
         let { message: t } = e;
-        T.set(t.channel_id, t.id, { state: 0, message: t });
+        m.set(t.channel_id, t.id, { state: 0, message: t });
     },
-    CHANNEL_DELETE: C,
-    THREAD_DELETE: C,
+    CHANNEL_DELETE: O,
+    THREAD_DELETE: O,
     GUILD_DELETE: function () {
-        if (0 === T.retainWhere((e) => null != u.A.getChannel(e))) return !1;
+        if (0 === m.retainWhere((e) => null != _.A.getChannel(e))) return !1;
     },
-    CONNECTION_OPEN: R,
-    LOGOUT: R,
+    CONNECTION_OPEN: L,
+    LOGOUT: L,
 });

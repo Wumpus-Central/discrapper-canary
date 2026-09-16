@@ -164,6 +164,7 @@
   "GUILD_MEMBER_BANNER": "/guilds/:param/users/:param/banners/:param./:param",
   "INTELLIGENCE_LAYER_SEARCH": "/guilds/:param/intelligence/search",
   "CHANNEL_CONVERSATIONS": "/channels/:param/conversations",
+  "CHANNEL_CONVERSATION": "/channels/:param/conversations/:param",
   "CHANNEL_CONVERSATION_MESSAGES": "/channels/:param/conversations/:param/messages",
   "MESSAGES": "/channels/:param/messages",
   "MESSAGES_GREET": "/channels/:param/greet",

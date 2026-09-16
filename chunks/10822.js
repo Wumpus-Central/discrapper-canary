@@ -105,7 +105,7 @@ var k = n(429913),
     P = n(47167),
     O = n(147248),
     G = n(828488),
-    U = n(619065),
+    U = n(958720),
     w = n(623562),
     F = n(727011),
     H = n(319365);
@@ -2861,9 +2861,9 @@ function lz(e) {
                     e !== i &&
                     F.X.trackPreviewImpression({ channelId: t.id, conversationId: e, isFocusMode: o }),
                     N(e),
-                    null != e && e !== i && (0, w.qC)(t.id, t.guild_id, e, { previewLimit: 4 }));
+                    null != e && e !== i && (0, w.qC)(t.id, e, { previewLimit: 4 }));
             },
-            [t.id, t.guild_id, o, i],
+            [t.id, o, i],
         ),
         M = r.useCallback(() => {
             (N(null), E());
