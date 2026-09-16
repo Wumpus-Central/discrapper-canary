@@ -1,19 +1,19 @@
-r.d(e, { A: () => s });
+r.d(e, { A: () => a });
 var i = r(477900);
 r(582128);
 var n = r(403581),
-    o = r(834730),
-    a = r(336089);
-function s(t) {
+    l = r(834730),
+    u = r(336089);
+function a(t) {
     let { discountedPrice: e, normalPrice: r } = t;
     return (0, i.jsxs)("div", {
-        className: a.k,
+        className: u.k,
         children: [
             (0, i.jsx)(n.t, { size: "xs", color: "currentColor" }),
-            (0, i.jsx)(o.E, { variant: "text-md/bold", color: "currentColor", lineClamp: 1, children: e }),
+            (0, i.jsx)(l.E, { variant: "text-md/bold", color: "currentColor", lineClamp: 1, children: e }),
             null != r &&
-                (0, i.jsx)(o.E, {
-                    className: a.o,
+                (0, i.jsx)(l.E, {
+                    className: u.o,
                     variant: "text-xs/medium",
                     color: "text-muted",
                     lineClamp: 1,

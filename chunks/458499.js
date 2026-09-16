@@ -1,42 +1,42 @@
-a.d(t, { A: () => p });
-var i = a(477900);
-a(582128);
-var n = a(17928),
-    l = a(43990),
-    s = a(980707),
-    r = a(477782),
-    o = a(750943),
-    d = a(428610),
-    u = a(946274),
-    c = a(363195),
-    m = a(375708);
-function p(e) {
-    let { lastEdit: t, cropAndUpload: a, onChangeImage: p, onClose: g } = e,
-        h = (0, n.bG)([c.A], () => c.A.theme);
+n.d(a, { A: () => h });
+var t = n(477900);
+n(582128);
+var i = n(17928),
+    l = n(43990),
+    s = n(980707),
+    r = n(477782),
+    c = n(750943),
+    d = n(428610),
+    o = n(946274),
+    u = n(363195),
+    m = n(375708);
+function h(e) {
+    let { lastEdit: a, cropAndUpload: n, onChangeImage: h, onClose: g } = e,
+        p = (0, i.bG)([u.A], () => u.A.theme);
     function v() {
-        (0, u.AM)(t.unprocessedFile, (e, i) => a(e, i, t.transform));
+        (0, o.AM)(a.unprocessedFile, (e, t) => n(e, t, a.transform));
     }
-    return (0, i.jsx)(l.N, {
-        theme: h,
+    return (0, t.jsx)(l.N, {
+        theme: p,
         children: (e) =>
-            (0, i.jsx)("div", {
+            (0, t.jsx)("div", {
                 className: e,
-                children: (0, i.jsx)(s.W, {
+                children: (0, t.jsx)(s.W, {
                     "data-menu-migrated": !0,
                     navId: "personal-widget-image-edit-menu",
                     onClose: g,
                     onSelect: void 0,
                     "aria-label": m.intl.string(m.t.RWkUzH),
-                    children: (0, i.jsxs)(r.rX, {
+                    children: (0, t.jsxs)(r.rX, {
                         children: [
-                            (0, i.jsx)(r.Dr, {
+                            (0, t.jsx)(r.Dr, {
                                 id: "change-image",
                                 label: m.intl.string(m.t.dh0LD5),
-                                action: p,
-                                icon: o.X,
-                                leadingAccessory: { type: "icon", icon: o.X },
+                                action: h,
+                                icon: c.X,
+                                leadingAccessory: { type: "icon", icon: c.X },
                             }),
-                            (0, i.jsx)(r.Dr, {
+                            (0, t.jsx)(r.Dr, {
                                 id: "reposition-image",
                                 label: m.intl.string(m.t.je0LTI),
                                 action: v,

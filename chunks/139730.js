@@ -1,58 +1,58 @@
-a.d(t, { A: () => g });
-var i = a(477900),
-    l = a(582128),
-    n = a(503698),
-    s = a.n(n),
-    r = a(794248),
-    c = a(598748),
-    o = a(331322),
-    d = a(834730),
-    u = a(890856),
-    m = a(619517),
-    x = a(183555),
-    f = a(946356),
-    p = a(981006);
+i.d(a, { A: () => g });
+var t = i(477900),
+    l = i(582128),
+    n = i(503698),
+    s = i.n(n),
+    r = i(794248),
+    c = i(598748),
+    o = i(331322),
+    d = i(834730),
+    u = i(890856),
+    m = i(619517),
+    x = i(183555),
+    f = i(946356),
+    p = i(981006);
 function h(e) {
-    let { applicationName: t, applicationIcon: a } = e;
-    return (0, i.jsxs)(o.B, {
+    let { applicationName: a, applicationIcon: i } = e;
+    return (0, t.jsxs)(o.B, {
         direction: "horizontal",
         gap: 4,
         children: [
-            null != a
-                ? (0, i.jsx)(m.Ay, { width: 16, height: 16, src: a, className: p.In })
-                : (0, i.jsx)("div", { className: p.Fi }),
-            (0, i.jsx)(d.E, { variant: "text-xs/medium", children: t }),
+            null != i
+                ? (0, t.jsx)(m.Ay, { width: 16, height: 16, src: i, className: p.In })
+                : (0, t.jsx)("div", { className: p.Fi }),
+            (0, t.jsx)(d.E, { variant: "text-xs/medium", children: a }),
         ],
     });
 }
 function g(e) {
-    let { application: t, rendererProps: a, className: n, onClick: o, renderText: d } = e,
+    let { application: a, rendererProps: i, className: n, onClick: o, renderText: d } = e,
         { trackUserProfileAction: m } = (0, x.NJ)(),
-        g = a.surfaceConfigs[c.m.MINI_PROFILE],
-        j = t.id;
+        g = i.surfaceConfigs[c.m.MINI_PROFILE],
+        j = a.id;
     return (!(function (e) {
-        let { trackUserProfileAction: t } = (0, x.NJ)(),
-            a = l.useRef(!1);
+        let { trackUserProfileAction: a } = (0, x.NJ)(),
+            i = l.useRef(!1);
         l.useEffect(() => {
-            a.current || (t({ action: "VIEW_APPLICATION_WIDGET_PREVIEW", applicationId: e }), (a.current = !0));
-        }, [t, e]);
+            i.current || (a({ action: "VIEW_APPLICATION_WIDGET_PREVIEW", applicationId: e }), (i.current = !0));
+        }, [a, e]);
     })(j),
     null == g)
         ? null
-        : (0, i.jsx)(u.s, {
+        : (0, t.jsx)(u.s, {
               onClick: (e) => {
                   e.target?.closest("a") == null &&
                       (m({ action: "PRESS_APPLICATION_WIDGET_PREVIEW", applicationId: j }), o?.());
               },
-              "aria-label": t.name,
-              children: (0, i.jsx)(f.A.Overlay, {
+              "aria-label": a.name,
+              children: (0, t.jsx)(f.A.Overlay, {
                   className: s()(p.kL, n),
-                  children: (0, i.jsx)(r.kH, {
-                      ...a,
+                  children: (0, t.jsx)(r.kH, {
+                      ...i,
                       renderText: d,
                       surface: c.m.MINI_PROFILE,
                       surfaceConfig: g,
-                      header: (0, i.jsx)(h, { applicationName: t.name, applicationIcon: t.getIconURL(16) }),
+                      header: (0, t.jsx)(h, { applicationName: a.name, applicationIcon: a.getIconURL(16) }),
                   }),
               }),
           });
