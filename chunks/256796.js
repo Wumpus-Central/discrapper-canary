@@ -20,38 +20,39 @@ let u = {
                 onFetchStart: E,
                 onFetchSuccess: A,
                 searchMode: h,
+                searchAnalyticsIds: I,
             } = e,
-            I = (0, o._o)(i),
-            f = (0, o.Zf)(I);
+            f = (0, o._o)(i),
+            p = (0, o.Zf)(f);
         !(function (e) {
             if (!Array.isArray(e.pinned)) return;
             let t = e.pinned.some((e) => !0 === e);
             e.pinned = t;
-        })(f);
-        let p = (0, o.nm)(h),
-            T = { ...f, ...p },
-            m = (0, o.mt)(t);
-        null != m && (0, o.L5)(T, m);
-        let g = c.A.create({
+        })(p);
+        let T = (0, o.nm)(h),
+            m = { ...p, ...T, ...I },
+            g = (0, o.mt)(t);
+        null != g && (0, o.L5)(m, g);
+        let S = c.A.create({
             id: (0, o.bS)(t),
             searchContext: t,
-            searchQuery: T,
+            searchQuery: m,
             searchTabs: n,
             getLimit: _,
             pagination: l,
             trackExactTotalHits: d,
         });
-        E?.({ searchContext: t, searchQueryString: i, searchQuery: T });
-        let S = n.map((e) => u(e));
+        E?.({ searchContext: t, searchQueryString: i, searchQuery: m });
+        let N = n.map((e) => u(e));
         return (
-            a.h.dispatch({ type: "SEARCH_MESSAGES_START", ids: S }),
-            g.fetch(
+            a.h.dispatch({ type: "SEARCH_MESSAGES_START", ids: N }),
+            S.fetch(
                 (e) => {
                     let { body: n } = e,
                         i = Object.entries(n.tabs);
                     (a.h.dispatch({
                         type: "SEARCH_MESSAGES_SUCCESS",
-                        guildId: m,
+                        guildId: g,
                         data: i.map((e) => {
                             let [t, i] = e,
                                 a = u(t),
@@ -73,10 +74,10 @@ let u = {
                         A?.({ searchContext: t, tabEntries: i }));
                 },
                 () => {
-                    a.h.dispatch({ type: "SEARCH_MESSAGES_INDEXING", ids: S });
+                    a.h.dispatch({ type: "SEARCH_MESSAGES_INDEXING", ids: N });
                 },
                 (e) => {
-                    a.h.dispatch({ type: "SEARCH_MESSAGES_FAILURE", ids: S, error: e });
+                    a.h.dispatch({ type: "SEARCH_MESSAGES_FAILURE", ids: N, error: e });
                 },
             ),
             !0
@@ -90,25 +91,26 @@ let u = {
                 searchMode: r,
                 searchEverywhere: l,
                 onFetchStart: c,
+                searchAnalyticsIds: u,
             } = e,
-            u = (0, o._o)(n),
-            _ = (0, o.Zf)(u),
-            E = (0, o.nm)(r),
-            A = { ..._, ...E, offset: i.offset },
-            h = (0, o.mt)(t);
-        (null != h && (0, o.L5)(A, h), l && (A.search_everywhere = !0));
-        let I = (0, o.bS)(t),
-            f = d.A.create({ id: I, searchType: t.type, searchQuery: A });
-        (c?.({ searchContext: t, searchQueryString: n, searchQuery: A }),
-            a.h.dispatch({ type: "SEARCH_MESSAGES_START", ids: [I] }),
-            f.fetch(
+            _ = (0, o._o)(n),
+            E = (0, o.Zf)(_),
+            A = (0, o.nm)(r),
+            h = { ...E, ...A, ...u, offset: i.offset },
+            I = (0, o.mt)(t);
+        (null != I && (0, o.L5)(h, I), l && (h.search_everywhere = !0));
+        let f = (0, o.bS)(t),
+            p = d.A.create({ id: f, searchType: t.type, searchQuery: h });
+        (c?.({ searchContext: t, searchQueryString: n, searchQuery: h }),
+            a.h.dispatch({ type: "SEARCH_MESSAGES_START", ids: [f] }),
+            p.fetch(
                 (e) => {
                     a.h.dispatch({
                         type: "SEARCH_MESSAGES_SUCCESS",
-                        guildId: h,
+                        guildId: I,
                         data: [
                             {
-                                id: I,
+                                id: f,
                                 analyticsId: e.body.analytics_id,
                                 totalResults: e.body.total_results,
                                 messages: e.body.messages,
@@ -123,10 +125,10 @@ let u = {
                     });
                 },
                 () => {
-                    a.h.dispatch({ type: "SEARCH_MESSAGES_INDEXING", ids: [I] });
+                    a.h.dispatch({ type: "SEARCH_MESSAGES_INDEXING", ids: [f] });
                 },
                 (e) => {
-                    a.h.dispatch({ type: "SEARCH_MESSAGES_FAILURE", ids: [I], error: e });
+                    a.h.dispatch({ type: "SEARCH_MESSAGES_FAILURE", ids: [f], error: e });
                 },
             ));
     },

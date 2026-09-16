@@ -48,5 +48,6 @@ var h =
     (a.SEARCH_POPOUT = "search_popout"),
     (a.SEARCH_FILTERS_MODAL = "search_filters_modal"),
     (a.SEARCH_XDM_SETTINGS = "search_xdm_settings"),
+    (a.SEARCH_RESULTS_HINT = "search_results_hint"),
     a);
 let I = new Set([l.Auw.IMAGE, l.Auw.VIDEO, l.Auw.GIFV]);

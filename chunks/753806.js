@@ -1,8 +1,8 @@
 s.d(t, { A: () => L });
 var r = s(477900),
     n = s(192308),
-    i = s(138298),
-    a = s(734057),
+    a = s(138298),
+    i = s(734057),
     _ = s(625494),
     c = s(256796),
     u = s(822382),
@@ -21,8 +21,8 @@ function g(e) {
 }
 function R(e) {
     let { searchContext: t, searchQueryString: s, searchQuery: r, offset: n } = e,
-        i = (0, u.bS)(t);
-    (c.A.clearSearchMessages(i),
+        a = (0, u.bS)(t);
+    (c.A.clearSearchMessages(a),
         d.A.setShowNoResultsAlt(t),
         d.A.setShowBlockedResults(t, !1),
         d.A.updateSearchResultsQuery(t, s, r, n),
@@ -30,16 +30,16 @@ function R(e) {
 }
 function T(e) {
     let { searchContext: t, searchQueryString: s, searchEverywhere: r, offset: n } = e,
-        i = (0, u.bS)(t),
-        a = S.A.getSearchMode(i) ?? y.z,
+        a = (0, u.bS)(t),
+        i = S.A.getSearchMode(a) ?? y.z,
         _ = { offset: n };
     t.type === p.I4_.DMS
         ? c.A.fetchTabMessages({
               searchContext: t,
               searchTabs: [E.$H.MESSAGES],
               searchQueryString: s,
-              searchMode: a,
-              getId: () => i,
+              searchMode: i,
+              getId: () => a,
               getLimit: () => p.T_y,
               pagination: _,
               trackExactTotalHits: !0,
@@ -52,8 +52,9 @@ function T(e) {
               searchContext: t,
               searchQueryString: s,
               pagination: _,
-              searchMode: a,
+              searchMode: i,
               searchEverywhere: r,
+              searchAnalyticsIds: (0, u.VI)(t, o.A),
               onFetchStart: (e) => {
                   let { searchQueryString: s, searchQuery: r } = e;
                   R({ searchContext: t, searchQueryString: s, searchQuery: r, offset: n });
@@ -76,39 +77,43 @@ let L = {
     setSearchInputText: I,
     appendToSearchInputText: function (e, t) {
         let s = f(e);
-        if (null == s) return;
-        let r = s.endsWith(" ") ? s + t : s + " " + t;
-        (I(e, r), T({ searchContext: e, searchQueryString: r, offset: 0 }));
+        null == s ||
+            H({
+                query: s.endsWith(" ") ? s + t : s + " " + t,
+                replace: !0,
+                performSearch: !0,
+                searchQuerySource: E.Q_.SEARCH_RESULTS_HINT,
+            });
     },
     getSearchInputText: f,
     setSearchQuery: function (e) {
-        let { query: t, performSearch: s, replace: r, resultsState: n, searchQuerySource: i } = e,
-            { mode: a, cursorScope: _ } = n,
+        let { query: t, performSearch: s, replace: r, resultsState: n, searchQuerySource: a } = e,
+            { mode: i, cursorScope: _ } = n,
             c = 0;
-        null != a.token ? (c = a.token.start) : _?.currentToken != null && (c = _.currentToken.end);
-        let u = null != a.token ? a.token.end : c;
-        H({ query: t, anchor: c, focus: u, performSearch: s, replace: r, searchQuerySource: i });
+        null != i.token ? (c = i.token.start) : _?.currentToken != null && (c = _.currentToken.end);
+        let u = null != i.token ? i.token.end : c;
+        H({ query: t, anchor: c, focus: u, performSearch: s, replace: r, searchQuerySource: a });
     },
     dispatchSetSearchQuery: H,
     transitionStateToSearchContext: function (e, t, s) {
         let r = (0, u.bS)(e),
             n = S.A.getQueryText(r);
         if (null == n) return;
-        let a = t.type === p.I4_.CHANNEL ? (0, u.EH)(n) : n;
-        I(t, (a = a.trim()));
+        let i = t.type === p.I4_.CHANNEL ? (0, u.EH)(n) : n;
+        I(t, (i = i.trim()));
         let _ = S.A.getSearchMode(r);
         (d.A.updateSearchMode(t, _ ?? y.z), o.A.transferSession(e, t));
-        let l = (0, u._o)(a),
+        let l = (0, u._o)(i),
             h = (0, u.Zf)(l);
         (o.A.refreshQueryId(t),
-            (0, A.fd)({ searchContext: t, query: h, queryString: a, searchQuerySource: E.Q_.SEARCH_XDM_SETTINGS }),
-            T({ searchContext: t, searchQueryString: a, offset: 0 }));
+            (0, A.fd)({ searchContext: t, query: h, queryString: i, searchQuerySource: E.Q_.SEARCH_XDM_SETTINGS }),
+            T({ searchContext: t, searchQueryString: i, offset: 0 }));
         let g = (0, u.bS)(t);
-        (i.A.setSelectedSearchContext(g), d.A.clearSearchQueryText(e), c.A.clearSearchMessages(r), s?.());
+        (a.A.setSelectedSearchContext(g), d.A.clearSearchQueryText(e), c.A.clearSearchMessages(r), s?.());
     },
     cleanUpPrivateChannelSearchState: function () {
         S.A.getSearchStateIds().forEach((e) => {
-            let t = a.A.getChannel(e);
+            let t = i.A.getChannel(e);
             null != t && t.isPrivate() && g({ type: p.I4_.CHANNEL, channelId: t.id });
         });
     },

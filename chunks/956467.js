@@ -6,16 +6,23 @@ var i = n(177068),
 class l extends r.c {
     createRequestPayload(e) {
         let { searchQuery: t, searchTabs: n, getLimit: i, pagination: r, trackExactTotalHits: s } = e,
-            { include_nsfw: l, channel_id: o, ...d } = t,
-            c = { include_nsfw: l, channel_ids: o, tabs: {}, track_exact_total_hits: s };
+            { include_nsfw: l, channel_id: o, search_session_id: d, search_query_id: c, ...u } = t,
+            _ = {
+                include_nsfw: l,
+                channel_ids: o,
+                tabs: {},
+                track_exact_total_hits: s,
+                search_session_id: d,
+                search_query_id: c,
+            };
         return (
             n.forEach((e) => {
                 let t = i(e),
                     n = a.B7[e],
                     s = null != n ? a.su[n] : {};
-                c.tabs[e] = { ...a.us, ...s, ...d, ...r, limit: t };
+                _.tabs[e] = { ...a.us, ...s, ...u, ...r, limit: t };
             }),
-            c
+            _
         );
     }
     createWithPayload(e) {
