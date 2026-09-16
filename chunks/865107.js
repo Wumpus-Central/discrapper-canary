@@ -516,8 +516,8 @@ var eM = n(931664),
     e3 = n(935063),
     e8 = n(73392),
     e6 = n(650019),
-    e7 = n(763754),
-    e5 = n(967144),
+    e5 = n(763754),
+    e7 = n(967144),
     e4 = n(118517),
     e9 = n(976860),
     te = n(747926),
@@ -586,8 +586,8 @@ function to(e) {
             colorRoleName: A,
             authorId: C,
             displayNameStyles: E,
-        } = (0, e7.Ay)(u),
-        I = (0, e5.gn)(f, C, x),
+        } = (0, e5.Ay)(u),
+        I = (0, e7.gn)(f, C, x),
         y = (0, e8.a)({ displayNameStyles: E }),
         S = (0, e6.A)(h, u.attachments),
         v =
@@ -1073,19 +1073,19 @@ var t0 = n(575293),
     t3 = n(31717),
     t8 = n(551640),
     t6 = n(970244),
-    t7 = n(29621);
-function t5(e) {
+    t5 = n(29621);
+function t7(e) {
     let { channel: t, scheduledMessageDraft: n } = e,
         { scheduledTimestamp: i } = n;
     return (0, l.jsx)("div", {
-        className: t7.e1,
+        className: t5.e1,
         children: (0, l.jsx)("div", {
-            className: t7.kL,
+            className: t5.kL,
             children: (0, l.jsxs)("div", {
-                className: t7.g3,
+                className: t5.g3,
                 children: [
                     (0, l.jsx)(Q.D, {
-                        className: t7.a3,
+                        className: t5.a3,
                         "aria-label": b.intl.string(b.t.SBcdAN),
                         onClick: function () {
                             (0, t6.e0)({
@@ -1097,13 +1097,13 @@ function t5(e) {
                         },
                         children: (0, l.jsx)(eQ.E, {
                             color: "text-default",
-                            className: t7.Qq,
+                            className: t5.Qq,
                             variant: "text-sm/normal",
                             children: b.intl.formatToPlainString(b.t["MQcRX/"], { timestamp: new Date(i).valueOf() }),
                         }),
                     }),
                     (0, l.jsx)("div", {
-                        className: t7.o1,
+                        className: t5.o1,
                         children: (0, l.jsx)(ti, {
                             onClick: function (e) {
                                 (e.stopPropagation(), x.A.clearDraft(t.id, t3.C.ScheduledMessage));
@@ -1543,17 +1543,17 @@ let nN = i.memo(
             e3 = !e2 || !T.commands?.enabled || !R || "/" !== a,
             e8 = (0, ey.A)(),
             { fontSize: e6 } = (0, m.cf)([C.Ay], () => ({ fontSize: C.Ay.fontSize })),
-            e7 = (0, m.bG)([eF.A], () => eF.A.isEnabled());
+            e5 = (0, m.bG)([eF.A], () => eF.A.isEnabled());
         nx(T, ez, b.id);
-        let { eventEmitter: e5, handleEditorSelectionChanged: e4 } = nA(eE, a, o),
+        let { eventEmitter: e7, handleEditorSelectionChanged: e4 } = nA(eE, a, o),
             e9 = i.useRef(a);
         e9.current = a;
         let te = i.useCallback(
                 (e, t, n) => {
-                    ("/" === t && "" === e9.current && T.commands?.enabled && e5.emit("command-sentinel-typed"),
+                    ("/" === t && "" === e9.current && T.commands?.enabled && e7.emit("command-sentinel-typed"),
                         U?.(e, t, n));
                 },
-                [U, T.commands?.enabled, e5],
+                [U, T.commands?.enabled, e7],
             ),
             { submitting: tt, submit: tn, handleSubmit: tl } = nm(B, T, eE, eS, b.id),
             { autocompleteRef: ti, handleMaybeShowAutocomplete: ts, handleHideAutocomplete: ta } = nC(),
@@ -1628,7 +1628,7 @@ let nN = i.memo(
                     ),
                     n
                 );
-            })(e5, eE),
+            })(e7, eE),
             { handleAutocompleteVisibilityChange: tL } = nv(T, b.id),
             tk = (function (e) {
                 let { type: t, channelId: n } = e;
@@ -1642,9 +1642,9 @@ let nN = i.memo(
                 );
             })({ type: T, channelId: b.id }),
             tw = i.useCallback(() => {
-                e5.emit("submit-failure");
-            }, [e5]);
-        (0, eJ.R)(e5, b.guild_id, b.id);
+                e7.emit("submit-failure");
+            }, [e7]);
+        (0, eJ.R)(e7, b.guild_id, b.id);
         let tP = null != D,
             tD = (ez && !((eH || eW) && e0)) || (tt && T.submit?.useDisabledStylesOnSubmit),
             tG = null;
@@ -1722,7 +1722,7 @@ let nN = i.memo(
                         null != c && e.push((0, l.jsx)(to, { reply: c, chatInputType: o })),
                         x && e.push((0, l.jsx)(tZ, {})),
                         null != A && e.push((0, l.jsx)(tU, { channel: a, activity: A })),
-                        null != d && e.push((0, l.jsx)(t5, { channel: a, scheduledMessageDraft: d })),
+                        null != d && e.push((0, l.jsx)(t7, { channel: a, scheduledMessageDraft: d })),
                         "timestampMentionInput" === h && t.push((0, l.jsx)(tq, { error: f ?? !1 })),
                         C && e.push((0, l.jsx)(tQ, { channelId: a.id })),
                         { stacked: e, floating: t }
@@ -1755,7 +1755,7 @@ let nN = i.memo(
                           showAllButtons: !ek && !eL,
                           expressionButtonsHidden: eL,
                       }),
-            t7 = tW
+            t5 = tW
                 ? (0, l.jsx)(nn.A, {
                       type: T,
                       textValue: a,
@@ -1769,7 +1769,7 @@ let nN = i.memo(
                 R && eZ._.dispatch(ea.jej.CHANNEL_TEXT_AREA_FOCUSED, { channelId: b.id });
             }, [R, b.id]),
             (0, l.jsx)(eg.Sv, {
-                value: e5,
+                value: e7,
                 children: (0, l.jsxs)(I.f5, {
                     value: eu,
                     children: [
@@ -1853,7 +1853,7 @@ let nN = i.memo(
                                                         onHideAutocomplete: ta,
                                                         promptToUpload: W,
                                                         fontSize: e6,
-                                                        spellcheckEnabled: e7,
+                                                        spellcheckEnabled: e5,
                                                         canOnlyUseTextCommands: tP,
                                                         className: r()(
                                                             {
@@ -1899,7 +1899,7 @@ let nN = i.memo(
                                     position: et,
                                 }),
                                 (0, l.jsx)(eO, { textValue: a, editorHeight: tE, channelId: b.id }),
-                                t7,
+                                t5,
                                 en,
                             ],
                         }),

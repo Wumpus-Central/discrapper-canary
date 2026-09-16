@@ -14,8 +14,8 @@ var l = n(503698),
     g = n(255434),
     p = n(710778),
     E = n(260981),
-    b = n(540418),
-    h = n(907085),
+    h = n(540418),
+    b = n(907085),
     x = n(179820),
     _ = n(375708),
     A = n(381134),
@@ -27,9 +27,9 @@ function v(e) {
                 case i.x.COMMON:
                     return { Icon: E.p, className: N["rarity-common"], label: _.intl.string(_.t.L0K5ci) };
                 case i.x.RARE:
-                    return { Icon: b.A, className: N["rarity-rare"], label: _.intl.string(_.t["sTx/5z"]) };
+                    return { Icon: h.A, className: N["rarity-rare"], label: _.intl.string(_.t["sTx/5z"]) };
                 case i.x.EPIC:
-                    return { Icon: h.b, className: N["rarity-epic"], label: _.intl.string(_.t.RD8RiN) };
+                    return { Icon: b.b, className: N["rarity-epic"], label: _.intl.string(_.t.RD8RiN) };
                 case i.x.MYTHIC:
                     return { Icon: x.O, className: N["rarity-mythic"], label: _.intl.string(_.t.vqc1ol) };
                 default:
@@ -54,8 +54,8 @@ function y(e) {
             title: n,
             eyebrow: l,
             body: E,
-            variant: b = "default",
-            badgeImage: h,
+            variant: h = "default",
+            badgeImage: b,
             badgeName: x,
             progressCircle: _,
             rarity: A,
@@ -67,8 +67,8 @@ function y(e) {
         } = e,
         D = N && null == _,
         {
-            tooltipId: P,
-            isVisible: M,
+            tooltipId: M,
+            isVisible: P,
             targetElementRef: U,
             trigger: O,
         } = (0, o.D)({ children: t, targetElementRef: y, delay: I.In, onTooltipShow: T, shouldShow: S }),
@@ -82,7 +82,7 @@ function y(e) {
                     className: r()(j.fA, { [j.qJ]: D }),
                     "aria-hidden": !0,
                     children: (0, a.jsx)(R.BadgeImageWithProgressCircle, {
-                        src: h,
+                        src: b,
                         alt: x,
                         progressCircleText: _?.text,
                         progressCirclePercent: _?.percent,
@@ -105,7 +105,7 @@ function y(e) {
                         (0, a.jsx)(u.D, {
                             variant: "display-sm",
                             color: "text-strong",
-                            className: r()(j.DD, { [j.x$]: "nitro" === b }),
+                            className: r()(j.DD, { [j.x$]: "nitro" === h }),
                             children: n,
                         }),
                         null != E &&
@@ -120,12 +120,12 @@ function y(e) {
             ],
         }),
         w = null != E ? `${x}. ${E}` : x,
-        k = (0, f.j)({ shouldShow: M })((e, t) =>
+        k = (0, f.j)({ shouldShow: P })((e, t) =>
             t
                 ? (0, a.jsx)(m.Bc, {
                       isRichTooltip: !0,
                       children: (0, a.jsx)(g.R, {
-                          isVisible: M,
+                          isVisible: P,
                           isRendered: !0,
                           targetElementRef: U,
                           content: G,
@@ -137,6 +137,6 @@ function y(e) {
                   })
                 : null,
         );
-    return (0, a.jsxs)(a.Fragment, { children: [O, (0, a.jsx)(s.A, { id: P, children: w }), k] });
+    return (0, a.jsxs)(a.Fragment, { children: [O, (0, a.jsx)(s.A, { id: M, children: w }), k] });
 }
 let T = y;

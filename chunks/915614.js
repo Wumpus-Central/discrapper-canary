@@ -13,8 +13,8 @@ var a = n(477900),
     g = n(885386),
     p = n(531685),
     E = n(486020),
-    b = n(837529),
-    h = n(686189),
+    h = n(837529),
+    b = n(686189),
     x = n(714719),
     _ = n(859161),
     A = n(207634),
@@ -34,17 +34,17 @@ function v(e) {
             bannerHeight: C,
             themePadding: S,
             pendingAccentColor: D,
-            animateOnHoverOrFocusOnly: P = !1,
+            animateOnHoverOrFocusOnly: M = !1,
         } = e,
-        [M, U] = l.useState(!1),
+        [P, U] = l.useState(!1),
         O = (0, o.bG)([p.A], () => p.A.isFocused()),
         B = g.kt.getSetting(),
-        G = (0, b.Nx)(),
-        { bannerSrc: w, status: k } = (0, h.A)({
+        G = (0, h.Nx)(),
+        { bannerSrc: w, status: k } = (0, b.A)({
             displayProfile: n,
             pendingBanner: A,
             size: T,
-            canAnimate: P || !B ? M : O,
+            canAnimate: M || !B ? P : O,
         }),
         L = G ? null : (w ?? null),
         H = (0, c.r)(d.A.unsafe_rawColors.PRIMARY_800).hex(),
@@ -75,6 +75,6 @@ function R(e) {
         } = e,
         o = A.T[t],
         d = null != i ? { ...o, ...i } : o,
-        c = !(0, b.Qq)() && (r || l?.canUsePremiumProfileCustomization || !1);
+        c = !(0, h.Qq)() && (r || l?.canUsePremiumProfileCustomization || !1);
     return (0, a.jsx)(v, { ...s, ...d, user: n, displayProfile: l, themePadding: c ? d.themePadding : 0 });
 }

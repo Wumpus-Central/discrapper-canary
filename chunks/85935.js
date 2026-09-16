@@ -822,7 +822,7 @@ var e0 = n(885386),
     e3 = n(775602),
     e8 = n(228366),
     e6 = n(713021);
-let e7 = s.forwardRef(function (e, t) {
+let e5 = s.forwardRef(function (e, t) {
     let n,
         l,
         { muted: r, volume: a, playing: o, playbackRate: u, ...c } = e,
@@ -855,7 +855,7 @@ let e7 = s.forwardRef(function (e, t) {
         (0, i.jsx)("audio", { ref: h, ...c })
     );
 });
-var e5 = n(20504),
+var e7 = n(20504),
     e4 = n(625494),
     e9 = n(927813),
     te = n(824744);
@@ -1345,7 +1345,7 @@ let tI = s.memo(function (e) {
                       playbackRate: y,
                   }),
               })
-            : (0, i.jsx)(e7, {
+            : (0, i.jsx)(e5, {
                   ref: E,
                   className: tA.Zn,
                   controls: !1,
@@ -1403,7 +1403,7 @@ let tI = s.memo(function (e) {
                 "aria-label": er,
                 children: (0, i.jsx)(h.E, { variant: "text-xs/semibold", className: tA.Sn, children: ea }),
             }),
-            (0, i.jsx)(e5.A, {
+            (0, i.jsx)(e7.A, {
                 className: tA.bk,
                 iconClassName: tA._j,
                 iconColor: "currentColor",

@@ -17,8 +17,8 @@ function c(e) {
             body: g,
             graphic: p,
             size: E = "md",
-            actions: b,
-            gradientColor: h,
+            actions: h,
+            gradientColor: b,
         } = e,
         x = l.useContext(r.C),
         [_, A] = l.useState("closed"),
@@ -27,7 +27,7 @@ function c(e) {
         R = "opening-mouse" === _ || "open-mouse" === _,
         I = "opening-keyboard" === _ || "open-keyboard" === _,
         j = "open-mouse" === _ || "open-keyboard" === _,
-        y = (x.keyboardModeEnabled || I) && null != b,
+        y = (x.keyboardModeEnabled || I) && null != h,
         [T, C] = l.useState(0),
         S = (function (e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 200,
@@ -50,19 +50,19 @@ function c(e) {
         D = l.useCallback(() => {
             null != N.current && (clearTimeout(N.current), (N.current = null));
         }, []),
-        P = l.useCallback(
+        M = l.useCallback(
             (e) => {
                 (e && (v.current = !0), D(), A("closing"));
             },
             [D],
         );
     l.useEffect(() => D, [D]);
-    let M = l.useCallback(() => {
+    let P = l.useCallback(() => {
             ("closed" === _ || "closing" === _) && (D(), A("opening-mouse"));
         }, [D, _]),
         U = l.useCallback(() => {
-            R && P(!1);
-        }, [P, R]),
+            R && M(!1);
+        }, [M, R]),
         O = l.useCallback(() => {
             if (v.current || !i.Ay.keyboardModeEnabled || ("closed" !== _ && "closing" !== _)) {
                 v.current = !1;
@@ -71,8 +71,8 @@ function c(e) {
             (D(), A("opening-keyboard"));
         }, [D, _]),
         B = l.useCallback(() => {
-            (y && "opening-keyboard" !== _) || P(!1);
-        }, [P, _, y]);
+            (y && "opening-keyboard" !== _) || M(!1);
+        }, [M, _, y]);
     (l.useEffect(() => {
         if ("opening-mouse" === _)
             return (
@@ -109,26 +109,26 @@ function c(e) {
                     }
                 );
             function e(e) {
-                e.key === d.dh.ESCAPE && (e.preventDefault(), e.stopPropagation(), P(!0));
+                e.key === d.dh.ESCAPE && (e.preventDefault(), e.stopPropagation(), M(!0));
             }
-        }, [j, P]));
+        }, [j, M]));
     let G = l.useMemo(
             () =>
-                null == b
-                    ? b
-                    : b.map((e) => ({
+                null == h
+                    ? h
+                    : h.map((e) => ({
                           ...e,
                           onClick: (t) => {
-                              (e.onClick?.(t), P(!1));
+                              (e.onClick?.(t), M(!1));
                           },
                       })),
-            [b, P],
+            [h, M],
         ),
         w = l.useCallback((e) => {
             C(e);
         }, []);
     return (0, a.jsxs)("div", {
-        onMouseEnter: M,
+        onMouseEnter: P,
         onMouseLeave: U,
         onFocus: O,
         onBlur: B,
@@ -144,7 +144,7 @@ function c(e) {
                 graphic: p,
                 size: E,
                 actions: G,
-                gradientColor: h,
+                gradientColor: b,
                 showCloseButton: y,
                 shouldTrapFocus: y,
                 returnRef: y ? n : void 0,
@@ -152,7 +152,7 @@ function c(e) {
                 caretConfig: { align: "custom", customOffset: T },
                 onNudgeChange: w,
                 onRequestClose: (e) => {
-                    P(null != e && (0, s.sg)(e));
+                    M(null != e && (0, s.sg)(e));
                 },
             }),
         ],

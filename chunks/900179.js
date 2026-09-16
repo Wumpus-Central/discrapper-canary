@@ -13,12 +13,12 @@ var a = n(477900),
     g = n(834730),
     p = n(915089),
     E = n(94343),
-    b = n(716804),
-    h = n(161185);
+    h = n(716804),
+    b = n(161185);
 let x = Object.fromEntries(Object.keys(d.A.colors).map((e) => [o()(e), e]));
 function _(e) {
     let { icon: t, size: n = "xxs", tooltip: l } = e,
-        r = (0, a.jsx)(t, { size: n, color: "currentColor", className: h.yK, "aria-hidden": !0 });
+        r = (0, a.jsx)(t, { size: n, color: "currentColor", className: b.yK, "aria-hidden": !0 });
     return null == l ? r : (0, a.jsx)(c.m, { text: l, asContainer: !0, children: r });
 }
 function A(e) {
@@ -36,22 +36,22 @@ function A(e) {
         } = e,
         I = (0, p.GV)(),
         j = l.useRef(null),
-        y = (0, b.g)(),
+        y = (0, h.g)(),
         T = null != R && y === R;
     (0, E.A)(j, T);
     let C = "function" == typeof c ? { icon: c } : c;
     return (0, a.jsxs)("section", {
         ref: T ? j : void 0,
-        className: i()(h.uW, v),
+        className: i()(b.uW, v),
         "aria-labelledby": I,
         children: [
             A
                 ? (0, a.jsx)(u.A, { children: (0, a.jsx)(f.H, { id: I, children: n }) })
                 : (0, a.jsxs)("div", {
-                      className: h.so,
+                      className: b.so,
                       children: [
                           (0, a.jsxs)("div", {
-                              className: h.wx,
+                              className: b.wx,
                               style: { color: d.A.colors[x[o]]?.css },
                               children: [
                                   (0, a.jsx)(m.D, {

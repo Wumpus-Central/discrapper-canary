@@ -24,8 +24,8 @@ var l = n(477900),
     y = n(775602),
     b = n(95561),
     N = n(211401),
-    v = n(989837),
-    T = n(500049),
+    T = n(989837),
+    v = n(500049),
     M = n(721768),
     R = n(459016),
     D = n(842209),
@@ -89,8 +89,8 @@ var ec = n(598071),
     ey = n(719442),
     eb = n(267102),
     eN = n(655098),
-    ev = n(323350),
-    eT = n(820066),
+    eT = n(323350),
+    ev = n(820066),
     eM = n(683167),
     eR = n(551483);
 let eD = {
@@ -133,9 +133,9 @@ function eL(e) {
                         (e.insertSoftBreak = () => {}),
                         (e.insertText = (n) => {
                             let l = n.replace(/\r\n|\r|\n/g, " ");
-                            (0, ev.WO)(eT.VW.richValue(e), { mode: "raw" }).length -
+                            (0, eT.WO)(ev.VW.richValue(e), { mode: "raw" }).length -
                                 (null != e.selection && ey.Q6.isExpanded(e.selection)
-                                    ? (0, ev.WO)(eT.VW.richValue(e), { mode: "raw", range: e.selection }).length
+                                    ? (0, eT.WO)(ev.VW.richValue(e), { mode: "raw", range: e.selection }).length
                                     : 0) +
                                 l.length <=
                                 eV && t(l);
@@ -156,8 +156,8 @@ function eL(e) {
         }, [g, o]));
     let p = i.useCallback(
             (e) => {
-                let t = (0, ev.WO)(e, { mode: "raw" }),
-                    n = (0, ev.WO)(e, { mode: "plain" }),
+                let t = (0, eT.WO)(e, { mode: "raw" }),
+                    n = (0, eT.WO)(e, { mode: "plain" }),
                     l = t !== m.current;
                 ((m.current = t), d(n), l && c(t));
             },
@@ -222,8 +222,8 @@ let eW = i.memo(
                 onFocus: j,
                 onKeyDown: b,
                 onSubmit: N,
-                promptToUpload: v,
-                canMentionRoles: T,
+                promptToUpload: T,
+                canMentionRoles: v,
                 canMentionChannels: M,
                 maxCharacterCount: R,
                 placeholder: D,
@@ -258,10 +258,10 @@ let eW = i.memo(
                 isPendingMember: ey,
                 disabled: eb,
                 canAttachFiles: eN,
-                canEveryoneSendMessages: ev,
+                canEveryoneSendMessages: eT,
             } = (0, eO.Sk)(f, C, eS, p),
-            eT = !ef.D_.useSetting() && !(0, eI.isAndroidWeb)() && null != window.ResizeObserver,
-            eM = !eT || !C.commands?.enabled || !x || "/" !== r,
+            ev = !ef.D_.useSetting() && !(0, eI.isAndroidWeb)() && null != window.ResizeObserver,
+            eM = !ev || !C.commands?.enabled || !x || "/" !== r,
             eR = (0, ep.A)(),
             { fontSize: eD } = (0, h.cf)([y.Ay], () => ({
                 fontSize: y.Ay.fontSize,
@@ -269,8 +269,8 @@ let eW = i.memo(
             })),
             eG = (0, h.bG)([ex.A], () => ex.A.isEnabled());
         i.useEffect(() => {
-            eT || (eg.current = Z);
-        }, [Z, eT]);
+            ev || (eg.current = Z);
+        }, [Z, ev]);
         let eF = i.useCallback((e) => eo(f.id, { title: e }), [f.id]),
             eW = i.useCallback((e) => {
                 eg.current = e;
@@ -450,7 +450,7 @@ let eW = i.memo(
                                                                   onImageUploaded: (e) => eo(f.id, { heroFile: e }),
                                                                   onFocus: () => th(!0),
                                                               }),
-                                                        eT
+                                                        ev
                                                             ? (0, l.jsx)(
                                                                   eL,
                                                                   {
@@ -484,14 +484,14 @@ let eW = i.memo(
                                                             ref: ed,
                                                             id: u,
                                                             focused: x,
-                                                            useSlate: eT,
+                                                            useSlate: ev,
                                                             textValue: r,
                                                             richValue: c,
                                                             disabled: eb,
                                                             placeholder: D,
                                                             required: g,
                                                             accessibilityLabel: A,
-                                                            isPreviewing: (e_ || ey) && ev,
+                                                            isPreviewing: (e_ || ey) && eT,
                                                             channel: f,
                                                             type: U.oU.CREATE_ANNOUNCEMENT_POST,
                                                             canPasteFiles: eN,
@@ -512,7 +512,7 @@ let eW = i.memo(
                                                             onSelectionChanged: e0,
                                                             onMaybeShowAutocomplete: e7,
                                                             onHideAutocomplete: e8,
-                                                            promptToUpload: v,
+                                                            promptToUpload: T,
                                                             fontSize: eD,
                                                             spellcheckEnabled: eG,
                                                             canOnlyUseTextCommands: !1,
@@ -616,9 +616,9 @@ let eW = i.memo(
                                 targetRef: et,
                                 ref: e4,
                                 channel: f,
-                                canMentionRoles: T,
+                                canMentionRoles: v,
                                 canMentionChannels: M,
-                                useNewSlashCommands: eT,
+                                useNewSlashCommands: ev,
                                 canOnlyUseTextCommands: !1,
                                 canSendStickers: !0,
                                 textValue: r,
@@ -941,8 +941,8 @@ var t_ = n(49999),
     ty = n(870136),
     tb = n(60270),
     tN = n(576470),
-    tv = n(496431),
-    tT = n(592713),
+    tT = n(496431),
+    tv = n(592713),
     tM = n(264388),
     tR = n(297264),
     tD = n(542290);
@@ -995,7 +995,7 @@ function tO(e) {
     return (
         !(function (e) {
             let { communicationDisabledUntil: t, userId: n, guildId: l } = e ?? {},
-                s = (0, tv.A)(null != t ? Date.parse(t) : Date.now()).seconds,
+                s = (0, tT.A)(null != t ? Date.parse(t) : Date.now()).seconds,
                 a = (0, i.useRef)(null);
             (0, i.useEffect)(
                 () =>
@@ -1004,7 +1004,7 @@ function tO(e) {
                         : (s <= 0 &&
                               null == a.current &&
                               (a.current = setTimeout(() => {
-                                  tT.A.clearGuildMemberTimeout(l, n);
+                                  tv.A.clearGuildMemberTimeout(l, n);
                               }, 1e3)),
                           () => {
                               null != a.current && (clearTimeout(a.current), (a.current = null));
@@ -1261,8 +1261,8 @@ var nf = n(631576),
     ny = n(147036),
     nb = n(234320),
     nN = n(625494),
-    nv = n(806150),
-    nT = n(382287),
+    nT = n(806150),
+    nv = n(382287),
     nM = n(137577),
     nR = n(47167),
     nD = n(480870),
@@ -1520,7 +1520,7 @@ class n1 extends i.PureComponent {
                 if (!e) return Promise.resolve({ shouldClear: !1, shouldRefocus: !0 });
             } else if (e === k.iw.APPLICATION_LAUNCHER || e === k.iw.IMAGE_RECS_MENU || e === k.iw.IMAGE_RECS_SUBMENU) {
                 let { location: t, sectionName: n } = (0, nL.bV)(i) ?? {},
-                    l = e === k.iw.APPLICATION_LAUNCHER ? v.A.lastShownEntrypoint() : T.s4.TEXT,
+                    l = e === k.iw.APPLICATION_LAUNCHER ? T.A.lastShownEntrypoint() : v.s4.TEXT,
                     { isAuthorized: s } = await (0, G.q)({
                         applicationId: i.applicationId,
                         channel: h,
@@ -1534,7 +1534,7 @@ class n1 extends i.PureComponent {
             if (i.inputType !== k.y$.BUILT_IN_TEXT) return Promise.resolve({ shouldClear: !0, shouldRefocus: !0 });
             null != n && ((t = null != n.content && "" !== n.content ? n.content : t), (p = !0 === n.tts));
         }
-        return (0, nv.i)({
+        return (0, nT.i)({
             openWarningPopout: (e) => this.setState({ contentWarningProps: e }),
             type: this.props.chatInputType,
             content: t,
@@ -1585,8 +1585,8 @@ class n1 extends i.PureComponent {
                         S.A.setUploads({ channelId: h.id, uploads: n, draftType: eC.C.ChannelMessage }));
             }
             if (null != n && n.length > 0) {
-                let e = (0, nT.LJ)(n);
-                if ((0, nT.fJ)(e, d?.id)) return ((0, e_.V)(h, e), { shouldClear: !1, shouldRefocus: !1 });
+                let e = (0, nv.LJ)(n);
+                if ((0, nv.fJ)(e, d?.id)) return ((0, e_.V)(h, e), { shouldClear: !1, shouldRefocus: !1 });
                 ((I.eagerDispatch = !1),
                     (I.attachmentsToUpload = n),
                     (I.onAttachmentUploadError = (e, t, n) => {
@@ -1776,7 +1776,7 @@ class n2 extends i.PureComponent {
     };
     handleOpenAppLauncher = (e) => {
         let { applicationId: t } = e;
-        return N.R(T.s4.TEXT, this.props.chatInputType, { applicationId: t }, this.props.channel.id);
+        return N.R(v.s4.TEXT, this.props.chatInputType, { applicationId: t }, this.props.channel.id);
     };
     handleChatInteract = () => {
         this.dispatchGroupRef.current?.bumpDispatchPriority();
@@ -1829,16 +1829,16 @@ class n2 extends i.PureComponent {
                 announcementComposerEnabled: y,
             } = this.props,
             { textAreaFocused: b, textAreaHighlighted: N } = this.state,
-            v = o === U.oU.SIDEBAR;
+            T = o === U.oU.SIDEBAR;
         e =
-            v && t.type === ew.rbe.GUILD_VOICE
+            T && t.type === ew.rbe.GUILD_VOICE
                 ? eH.t.pnnyFZ
-                : v && t.type === ew.rbe.GUILD_STAGE_VOICE
+                : T && t.type === ew.rbe.GUILD_STAGE_VOICE
                   ? eH.t.YInSkq
                   : d.k.THREADS.has(t.type)
                     ? eH.t["OkzL+Q"]
                     : eH.t.UbNmGc;
-        let T = (0, l.jsx)("div", { className: nZ.li, children: (0, l.jsx)(nO, {}) }),
+        let v = (0, l.jsx)("div", { className: nZ.li, children: (0, l.jsx)(nO, {}) }),
             M = (0, l.jsx)("div", {
                 className: nZ.li,
                 children: (0, l.jsx)(nC.A, {
@@ -1870,7 +1870,7 @@ class n2 extends i.PureComponent {
                     }),
                 }),
             }),
-            R = j ? T : M,
+            R = j ? v : M,
             D = (0, nR.m1)(t, n_.default, nS.A);
         return (0, l.jsx)(
             _.A,
@@ -1892,7 +1892,7 @@ class n2 extends i.PureComponent {
                                     handler: this.handleOpenAppLauncher,
                                 }),
                                 (0, l.jsxs)(nQ, {
-                                    isSidebar: v,
+                                    isSidebar: T,
                                     className: nZ.q2,
                                     "aria-label": eH.intl.formatToPlainString(e, { channelName: D }),
                                     onMouseDown: this.handleChatInteract,
@@ -1900,7 +1900,7 @@ class n2 extends i.PureComponent {
                                     onFocus: this.handleChatInteract,
                                     style: this.props.guildOfficialMessageStyle,
                                     children: [
-                                        (0, l.jsx)(nk.A, { channel: t, guild: n, narrow: v }),
+                                        (0, l.jsx)(nk.A, { channel: t, guild: n, narrow: T }),
                                         (0, l.jsxs)(p.F, {
                                             component: (0, l.jsx)(A.A, {
                                                 children: (0, l.jsx)(p.H, {
@@ -1990,11 +1990,11 @@ let n4 = i.memo(function (e) {
             )),
         b = (0, tG.A)(r.id),
         N = ((n = r.id), (0, h.bG)([eC.A], () => eC.A.getScheduledMessage(n))),
-        v = (0, h.bG)([t4.Ay, tt.default], () => t4.Ay.getUserCombo(tt.default.getId(), r.id)),
-        T = (0, I.rj)(r),
+        T = (0, h.bG)([t4.Ay, tt.default], () => t4.Ay.getUserCombo(tt.default.getId(), r.id)),
+        v = (0, I.rj)(r),
         M = (0, I.aW)(r),
         R = (0, e7.L)(r.id),
-        D = T.length > 0 || r.rateLimitPerUser > 0 || null != v || null != M || R,
+        D = v.length > 0 || r.rateLimitPerUser > 0 || null != T || null != M || R,
         { showLinkedLobbyApplicationLoadingIndicator: L } = (0, nM.A)(r.linkedLobby),
         k = e2.useConfig({ location: "ChannelChat" }).announcementComposer,
         P = (0, tY.A)((0, tW.GP)(o, "ChannelChat") ? (o?.officialMessageColor ?? nq.aj) : null);

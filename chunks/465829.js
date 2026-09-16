@@ -14,8 +14,8 @@ var l = n(503698),
     g = n(922301),
     p = n(660184),
     E = n(534400),
-    b = n(436921),
-    h = n(518477),
+    h = n(436921),
+    b = n(518477),
     x = n(375708),
     _ = n(956495);
 let A = { sm: "heading-lg/bold", lg: "heading-xl/semibold" };
@@ -105,7 +105,7 @@ function j(e) {
             trailing: m,
             onClose: g,
         } = e,
-        p = (0, b.j)({ location: "UserProfileUserInfo" }),
+        p = (0, h.j)({ location: "UserProfileUserInfo" }),
         A = null != i && i.length > 0,
         N = (0, u.r)(t),
         v = t.isProvisional
@@ -129,7 +129,7 @@ function j(e) {
                         (0, a.jsx)(I, {}),
                         (0, a.jsx)(d.m, {
                             text: x.intl.string(x.t.GI2A8C),
-                            delay: h.In,
+                            delay: b.In,
                             ariaHidden: !0,
                             children: (0, a.jsx)("span", { className: _.Ez, children: (0, a.jsx)(R, { pronouns: i }) }),
                         }),

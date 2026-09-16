@@ -33,8 +33,8 @@ function g() {
 }
 var p = n(311016),
     E = n(692051),
-    b = n(713804),
-    h = n(900179),
+    h = n(713804),
+    b = n(900179),
     x = n(165668),
     _ = n(165648);
 function A(e) {
@@ -49,7 +49,7 @@ function A(e) {
             userId: f,
         } = e,
         m = l.useMemo(
-            () => ((0, p.A)(f) ? (0, a.jsx)(g, {}) : null == t || "" === t ? null : (0, b.parseBioReact)(t)),
+            () => ((0, p.A)(f) ? (0, a.jsx)(g, {}) : null == t || "" === t ? null : (0, h.parseBioReact)(t)),
             [f, t],
         );
     return null == m
@@ -71,6 +71,6 @@ function A(e) {
 function N(e) {
     let { userBio: t, userId: n } = e;
     return (0, p.A)(n) || (null != t && "" !== t)
-        ? (0, a.jsx)(h.A, { heading: f.intl.string(f.t.ZzAR2Y), hideHeading: !0, children: (0, a.jsx)(A, { ...e }) })
+        ? (0, a.jsx)(b.A, { heading: f.intl.string(f.t.ZzAR2Y), hideHeading: !0, children: (0, a.jsx)(A, { ...e }) })
         : null;
 }

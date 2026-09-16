@@ -1,4 +1,4 @@
-n.d(t, { A: () => h, j: () => b });
+n.d(t, { A: () => b, j: () => h });
 var a = n(477900),
     l = n(582128),
     r = n(503698),
@@ -30,7 +30,7 @@ function E(e) {
         ],
     });
 }
-function b(e) {
+function h(e) {
     let {
             title: t,
             body: n,
@@ -38,8 +38,8 @@ function b(e) {
             size: u = "md",
             actions: f,
             gradientColor: g,
-            onRequestClose: b,
-            position: h,
+            onRequestClose: h,
+            position: b,
             caretConfig: x,
             scrollBehavior: _,
             showCloseButton: A = !0,
@@ -49,24 +49,24 @@ function b(e) {
             onNudgeChange: I,
             ...j
         } = e,
-        [y, T] = l.useState(h ?? "top");
+        [y, T] = l.useState(b ?? "top");
     l.useEffect(() => {
-        null != h && T(h);
-    }, [h]);
+        null != b && T(b);
+    }, [b]);
     let C = l.useMemo(() => ({ align: x?.align ?? "center", customOffset: x?.customOffset }), [x]),
         S = l.useCallback(() => {
-            b?.();
-        }, [b]),
+            h?.();
+        }, [h]),
         D = l.useCallback(
             (e) => {
-                b?.(e);
+                h?.(e);
             },
-            [b],
+            [h],
         ),
-        P = l.useCallback((e) => {
+        M = l.useCallback((e) => {
             T(e);
         }, []),
-        M = N ? p.caretHoverable : void 0,
+        P = N ? p.caretHoverable : void 0,
         U = {
             targetElementRef: j.targetElementRef,
             shouldShow: j.shouldShow,
@@ -75,7 +75,7 @@ function b(e) {
             caretConfig: C,
             onRequestClose: S,
             gradientColor: g,
-            onPositionChange: P,
+            onPositionChange: M,
             onNudgeChange: I,
             scrollBehavior: _,
             modal: v,
@@ -102,9 +102,9 @@ function b(e) {
                     }),
                 (0, a.jsx)(E, { title: t, body: n }),
                 null != f && f.length > 0 ? (0, a.jsx)(o.Z, { actions: f, className: p.actionBar }) : null,
-                null != C && (0, a.jsx)(d.F, { className: M }),
+                null != C && (0, a.jsx)(d.F, { className: P }),
             ],
         }),
     });
 }
-let h = b;
+let b = h;
