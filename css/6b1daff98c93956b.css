@@ -156,10 +156,6 @@
     margin: 20px auto 0
 }
 
-.guildAnalyticsDivider__540ed {
-    margin: 24px 0
-}
-
 .overviewData__540ed {
     display: flex;
     flex-direction: row;
@@ -179,129 +175,13 @@
     width: 282px
 }
 
+.description__540ed {
+    margin-block: 8px
+}
+
 .developerPortalCtaText__540ed {
     margin: 0 auto;
     max-width: 350px
-}
-
-.notEnoughMembersError__540ed {
-    padding-inline-end: 10px
-}
-
-.memberInsightsContainer__540ed {
-    background-color: var(--background-base-lower);
-    border-radius: var(--radius-xs);
-    margin-bottom: 16px;
-    padding: 16px
-}
-
-.insightsTitle__540ed {
-    align-items: center;
-    color: var(--text-strong);
-    display: flex;
-    font-weight: var(--font-weight-bold);
-    margin: 24px 0
-}
-
-.betaTag__540ed {
-    display: inline;
-    margin-inline-start: 8px
-}
-
-.insightsTooltip__540ed {
-    height: 16px;
-    margin-inline-start: 8px;
-    width: 16px
-}
-
-.insightsTooltipIcon__540ed {
-    color: var(--text-default)
-}
-
-.insightsHeader__540ed {
-    align-items: center;
-    display: flex
-}
-
-.insightsIcon__540ed {
-    height: 64px;
-    margin-inline-end: 8px;
-    width: 64px
-}
-
-.title__540ed {
-    color: var(--text-strong)
-}
-
-.ratingGood__540ed {
-    color: var(--yellow-300)
-}
-
-.ratingBad__540ed,
-.ratingNeutral__540ed {
-    color: var(--red-400)
-}
-
-.description__540ed {
-    align-items: center;
-    color: var(--text-default);
-    display: flex
-}
-
-.divider__540ed {
-    background-color: var(--border-subtle);
-    height: 1px;
-    margin: 16px 0
-}
-
-.tips__540ed {
-    color: var(--text-default)
-}
-
-.dividerInline__540ed {
-    background-color: var(--border-subtle);
-    height: 1px;
-    margin: 8px 16px 0
-}
-
-.insightsActions__540ed {
-    background-color: var(--background-mod-normal);
-    border-radius: var(--radius-xs);
-    margin-top: 16px;
-    overflow: hidden
-}
-
-.insightAction__540ed {
-    align-items: center;
-    display: flex;
-    margin: 8px 0;
-    padding: 8px 16px
-}
-
-.actionText__540ed {
-    color: var(--text-default);
-    margin-inline-start: 16px
-}
-
-.actionIcon__540ed {
-    height: 20px;
-    width: 20px
-}
-
-.theme-dark .ratingVeryGood__540ed {
-    color: var(--green-230)
-}
-
-.theme-dark .link__540ed {
-    color: var(--text-link)
-}
-
-.theme-light .ratingVeryGood__540ed {
-    color: var(--green-360)
-}
-
-.theme-light .link__540ed {
-    color: #0067e0
 }
 
 .streamerMode__540ed {
@@ -996,4 +876,4 @@
     background-image: url(/assets/b00e3f0a7090b61f.svg)
 }
 
-/*# sourceMappingURL=6e127dba421c7ca4.css.map*/
+/*# sourceMappingURL=6b1daff98c93956b.css.map*/

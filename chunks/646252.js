@@ -23,6 +23,8 @@ var i,
     v =
         (((i = {}).ROLE_SUBSCRIPTION = "role_subscription"),
         (i.ROLE_SUBSCRIPTION_SETTING = "role_subscription_setting"),
+        (i.GUILD_ANALYTICS_SETTING = "guild_analytics_setting"),
+        (i.GAME_CLAIM = "game_claim"),
         i);
 function I(e) {
     let t = decodeURIComponent(e),
