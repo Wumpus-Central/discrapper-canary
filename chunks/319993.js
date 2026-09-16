@@ -28,8 +28,8 @@ var l,
     T = n(624793),
     R = n(639245),
     O = n(85935),
-    M = n(796774),
-    L = n(807348),
+    L = n(796774),
+    M = n(807348),
     k = n(805945),
     w = n(71393),
     P = n(725807);
@@ -90,7 +90,7 @@ function W(e) {
     s.useEffect(() => {
         y ||
             (_(!0),
-            (0, M.nh)(a.soundId, a.guildId)
+            (0, L.nh)(a.soundId, a.guildId)
                 .then((e) => {
                     C(e);
                 })
@@ -162,7 +162,7 @@ function W(e) {
                               className: H.g4,
                               children: [
                                   (0, i.jsx)(k.Ay, {
-                                      buttonOverlay: L.If.NONE,
+                                      buttonOverlay: M.If.NONE,
                                       sound: a,
                                       channel: void 0,
                                       isSoundmoji: !0,

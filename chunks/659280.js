@@ -1,4 +1,4 @@
-n.d(t, { Sz: () => eh, Ay: () => eM, aI: () => ed });
+n.d(t, { Sz: () => eh, Ay: () => eL, aI: () => ed });
 var l = n(477900),
     i = n(582128),
     s = n(503698),
@@ -61,7 +61,7 @@ function T(e) {
 }
 var R = n(696451),
     O = n(807094);
-function M(e) {
+function L(e) {
     let { name: t, className: n, state: i, isInline: s, onClick: a } = e,
         o = null;
     i?.isActive && !s
@@ -77,12 +77,12 @@ function M(e) {
     });
     return null == a ? u : (0, l.jsx)(c.D, { className: O.vk, onClick: () => a(t), children: u });
 }
-var L = n(664929);
+var M = n(664929);
 n(827669);
 var k = n(375708),
     w = n(633331);
 function P(e, t, n) {
-    return (0, l.jsx)(M, { className: w.uK, name: e.displayName, state: t, onClick: n }, e.name);
+    return (0, l.jsx)(L, { className: w.uK, name: e.displayName, state: t, onClick: n }, e.name);
 }
 function D(e) {
     let { command: t, optionStates: n, onOptionClick: s } = e,
@@ -154,7 +154,7 @@ function U(e) {
         f = i.useMemo(() => n?.options?.find((e) => e.name === s), [s, n]),
         p = null != s ? c?.[s] : null;
     t = null != p && p.lastValidationResult?.success === !1 ? (p.lastValidationResult.error ?? "") : null;
-    let g = u && null != h ? (0, L.Rg)(h) : null,
+    let g = u && null != h ? (0, M.Rg)(h) : null,
         x = (0, E.bG)([R.Ay], () => {
             if (null != a.guild_id && h?.botId != null) return R.Ay.getMember(a.guild_id, h.botId)?.nick;
         });
@@ -598,4 +598,4 @@ class eO extends i.PureComponent {
             : null;
     }
 }
-let eM = eO;
+let eL = eO;

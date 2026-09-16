@@ -72,8 +72,8 @@ let g = i().once(() =>
     T = i().once(() => s.aV(g())),
     R = i().once(() => s.aV(x())),
     O = i().once(() => s.aV(A())),
-    M = i().once(() => s.aV(C())),
-    L = i().once(() => s.aV(E())),
+    L = i().once(() => s.aV(C())),
+    M = i().once(() => s.aV(E())),
     k = i().once(() => s.aV(I())),
     w = i().once(() => s.aV(y())),
     P = i().once(() => s.aV(S())),
@@ -116,11 +116,11 @@ let g = i().once(() =>
         },
         parseEmbedTitle: function () {
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-            return M()(...t);
+            return L()(...t);
         },
         parseEmbedTitleWithoutLinks: function () {
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-            return L()(...t);
+            return M()(...t);
         },
         parseInlineReply: function () {
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];

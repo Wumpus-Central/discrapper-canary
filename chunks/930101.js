@@ -97,8 +97,8 @@ let v = (e) => {
         [_, j] = i.useState(String(Date.now())),
         [b, T] = i.useState(!1),
         [R, O] = i.useState(!1),
-        M = i.useRef(null);
-    function L(e) {
+        L = i.useRef(null);
+    function M(e) {
         return (0, l.jsx)(d.A, {
             emojiName: t.name,
             size: e ?? (t.jumboable ? "jumbo" : "default"),
@@ -112,7 +112,7 @@ let v = (e) => {
     let k = (0, a.A)();
     function w(e) {
         return (0, l.jsx)(o.u, {
-            asset: L("jumbo"),
+            asset: M("jumbo"),
             title: t.name,
             body: s ? I.intl.string(I.t["515vjG"]) : "",
             ariaHidden: !0,
@@ -127,7 +127,7 @@ let v = (e) => {
             },
             children: (0, l.jsx)(u.D, {
                 ...e,
-                innerRef: M,
+                innerRef: L,
                 onMouseEnter: () => {
                     e?.onMouseEnter?.();
                 },
@@ -142,7 +142,7 @@ let v = (e) => {
                 tag: "span",
                 tabIndex: h ? 0 : -1,
                 className: r()(y.qq, { [y._Y]: s, [y.gp]: t.jumboable }),
-                children: L(),
+                children: M(),
             }),
         });
     }
@@ -161,7 +161,7 @@ let v = (e) => {
                   return (0, l.jsx)(p.iP, { ...e, node: t, refreshPositionKey: () => j(String(Date.now())), nonce: k });
               },
               positionKey: _,
-              targetElementRef: M,
+              targetElementRef: L,
               children: w,
           })
         : w();

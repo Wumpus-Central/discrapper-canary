@@ -1,11 +1,11 @@
-t.d(n, { b: () => E });
-var l = t(477900);
+t.d(n, { b: () => g });
+var i = t(477900);
 t(582128);
-var i = t(503698),
-    s = t.n(i),
-    a = t(562708),
-    r = t(862482),
-    o = t(789645),
+var l = t(503698),
+    a = t.n(l),
+    s = t(562708),
+    o = t(862482),
+    r = t(789645),
     c = t(834730),
     u = t(403581),
     d = t(139286),
@@ -14,46 +14,46 @@ var i = t(503698),
     h = t(652215),
     C = t(375708),
     p = t(693517);
-function g(e) {
+function x(e) {
     let { hidden: n, onDismiss: t } = e;
     return (
-        (0, d.A)({ type: a.ImpressionTypes.VIEW, name: a.ImpressionNames.HD_STREAMING_POPOUT }, { disableTrack: n }, [
+        (0, d.A)({ type: s.ImpressionTypes.VIEW, name: s.ImpressionNames.HD_STREAMING_POPOUT }, { disableTrack: n }, [
             n,
         ]),
-        (0, l.jsxs)("div", {
-            className: s()(p.jC, { [p.R]: n }),
+        (0, i.jsxs)("div", {
+            className: a()(p.jC, { [p.R]: n }),
             children: [
-                (0, l.jsx)("img", {
+                (0, i.jsx)("img", {
                     className: p.Sl,
                     src: "https://cdn.discordapp.com/assets/premium/roadblocks/hd_streaming.png",
                     alt: "HD Streaming Nitro Perk",
                 }),
-                (0, l.jsx)(r.$n, {
+                (0, i.jsx)(o.$n, {
                     "data-migration-pending": !0,
                     className: p.b,
                     "aria-label": C.intl.string(C.t.cpT0Cq),
-                    look: r.$n.Looks.BLANK,
-                    size: r.$n.Sizes.NONE,
+                    look: o.$n.Looks.BLANK,
+                    size: o.$n.Sizes.NONE,
                     onClick: () => {
                         (t(), A.default.track(h.HAw.HD_STREAMING_POPOUT_DISMISSED));
                     },
-                    children: (0, l.jsx)(o.P, { size: "xs", className: p.ut, color: "white" }),
+                    children: (0, i.jsx)(r.P, { size: "xs", className: p.ut, color: "white" }),
                 }),
-                (0, l.jsx)("div", {
+                (0, i.jsx)("div", {
                     className: p.Gm,
-                    children: (0, l.jsxs)("div", {
+                    children: (0, i.jsxs)("div", {
                         className: p.op,
                         children: [
-                            (0, l.jsx)(c.E, {
+                            (0, i.jsx)(c.E, {
                                 className: p.aV,
                                 variant: "text-sm/medium",
                                 children: C.intl.format(C.t.ruvD7i, {}),
                             }),
-                            (0, l.jsxs)("div", {
+                            (0, i.jsxs)("div", {
                                 className: p.vX,
                                 children: [
-                                    (0, l.jsx)(u.t, { size: "xs" }),
-                                    (0, l.jsx)(c.E, {
+                                    (0, i.jsx)(u.t, { size: "xs" }),
+                                    (0, i.jsx)(c.E, {
                                         className: p.aV,
                                         variant: "text-sm/medium",
                                         children: C.intl.string(C.t["BMw+7I"]),
@@ -67,7 +67,7 @@ function g(e) {
         })
     );
 }
-function E(e) {
+function g(e) {
     let { ...n } = e;
-    return (0, l.jsx)(m.x, { ...n, renderComponent: (e) => (0, l.jsx)(g, { ...e }) });
+    return (0, i.jsx)(m.x, { ...n, renderComponent: (e) => (0, i.jsx)(x, { ...e }) });
 }

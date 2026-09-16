@@ -1,10 +1,10 @@
 t.d(n, { A: () => A });
-var l = t(477900),
-    i = t(582128),
-    s = t(523875),
-    a = t(666654),
-    r = t(688810),
-    o = t(980923),
+var i = t(477900),
+    l = t(582128),
+    a = t(523875),
+    s = t(666654),
+    o = t(688810),
+    r = t(980923),
     c = t(384059),
     u = t(204651),
     d = t(375708);
@@ -17,25 +17,25 @@ function A(e) {
             awaitingRemote: h,
             onMouseEnter: C,
             onMouseLeave: p,
-            onClick: g,
-            ...E
+            onClick: x,
+            ...g
         } = e,
-        { parentAnalyticsLocation: f } = (0, r.Ay)(),
-        x = n || t || A,
-        v = m ? u.l : u.A,
-        I = (0, o.A)(n, t, A, h),
-        { events: T, play: j, Component: N } = (0, s.L)(x ? "unmute" : "mute"),
-        _ = t || A ? a.O : N;
+        { parentAnalyticsLocation: f } = (0, o.Ay)(),
+        E = n || t || A,
+        I = m ? u.l : u.A,
+        v = (0, r.A)(n, t, A, h),
+        { events: T, play: j, Component: N } = (0, a.L)(E ? "unmute" : "mute"),
+        _ = t || A ? s.O : N;
     return (
-        i.useEffect(() => () => j(), [j, x]),
-        (0, l.jsx)(v, {
-            ...E,
+        l.useEffect(() => () => j(), [j, E]),
+        (0, i.jsx)(I, {
+            ...g,
             iconComponent: _,
             isTrayButton: !0,
-            caretColor: x ? "red" : "primaryDark",
+            caretColor: E ? "red" : "primaryDark",
             caretAriaLabel: d.intl.string(d.t["+ybWO4"]),
-            color: x ? "red" : void 0,
-            label: I,
+            color: E ? "red" : void 0,
+            label: v,
             onMouseEnter: (e) => {
                 (C?.(e), T.onMouseEnter());
             },
@@ -43,7 +43,7 @@ function A(e) {
                 (p?.(e), T.onMouseLeave());
             },
             onClick: (e) => {
-                (g?.(e), (0, c.X)(f, c.O.MIC, n));
+                (x?.(e), (0, c.X)(f, c.O.MIC, n));
             },
         })
     );

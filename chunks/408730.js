@@ -1,8 +1,8 @@
 (s.d(t, { A: () => _ }), s(321073));
 var r = s(822382),
     n = s(145331),
-    i = s(554931);
-class a extends i.A {
+    a = s(554931);
+class i extends a.A {
     viewStates = new Map();
     pendingTimeouts = new Map();
     pendingEvents = new Map();
@@ -17,10 +17,10 @@ class a extends i.A {
     _transferSession(e, t) {
         let s = (0, r.bS)(e),
             n = (0, r.bS)(t),
-            i = this.getViewState(e);
-        (this.setViewState(t, i), this.viewStates.delete(s));
-        let a = this.pendingTimeouts.get(s);
-        null != a && (clearTimeout(a), this.pendingTimeouts.delete(s), this.schedule(t));
+            a = this.getViewState(e);
+        (this.setViewState(t, a), this.viewStates.delete(s));
+        let i = this.pendingTimeouts.get(s);
+        null != i && (clearTimeout(i), this.pendingTimeouts.delete(s), this.schedule(t));
         let _ = this.pendingEvents.get(s);
         null != _ && (this.pendingEvents.set(n, _), this.pendingEvents.delete(s));
     }
@@ -67,4 +67,4 @@ class a extends i.A {
         (null != s && s.forEach((e) => e()), this.pendingEvents.delete(t));
     }
 }
-let _ = new a();
+let _ = new i();

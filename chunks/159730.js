@@ -250,8 +250,8 @@ var y = n(462180),
     T = n(71393),
     R = n(287809),
     O = n(486020),
-    M = n(316386);
-function L() {
+    L = n(316386);
+function M() {
     let { guildId: e, channelId: t } = (0, j.A)((e) => {
             let { guildId: t, channelId: n } = e;
             return { guildId: t, channelId: n };
@@ -261,22 +261,22 @@ function L() {
         s = (0, c.bG)([R.default], () => R.default.getCurrentUser()),
         r = null != i ? (0, N.Y)(i) : null,
         a = null != s ? s.getAvatarURL(e, 80) : O.vI["0"],
-        o = (0, l.jsx)(S.eu, { src: a, "aria-hidden": !0, size: v._3.SIZE_80, className: M.HT }),
+        o = (0, l.jsx)(S.eu, { src: a, "aria-hidden": !0, size: v._3.SIZE_80, className: L.HT }),
         u = null;
     return (
         (u =
             null != n
                 ? (0, l.jsx)(_.Ay, { guild: n })
                 : null != r
-                  ? (0, l.jsx)(S.eu, { "aria-hidden": !0, src: r, size: v._3.SIZE_80, className: M.HT })
+                  ? (0, l.jsx)(S.eu, { "aria-hidden": !0, src: r, size: v._3.SIZE_80, className: L.HT })
                   : o),
         (0, l.jsxs)("div", {
-            className: M.kL,
+            className: L.kL,
             children: [
-                (0, l.jsx)("div", { className: M.$H, children: o }),
-                (0, l.jsx)("div", { className: M.XN, children: u }),
+                (0, l.jsx)("div", { className: L.$H, children: o }),
+                (0, l.jsx)("div", { className: L.XN, children: u }),
                 (0, l.jsx)("svg", {
-                    className: M.bm,
+                    className: L.bm,
                     xmlns: "http://www.w3.org/2000/svg",
                     width: "156",
                     height: "70",
@@ -367,7 +367,7 @@ let k = Object.freeze({
         highPriority: !0,
         textAlign: p.YL.CENTER,
         spacing: 10,
-        media: () => (0, l.jsx)(L, {}),
+        media: () => (0, l.jsx)(M, {}),
     },
     "direct-messages": { popoutPosition: "right" },
     "create-first-server": { popoutPosition: "right", highPriority: !0 },

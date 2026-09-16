@@ -56,8 +56,8 @@ let C = function (e) {
             itemIdPrefix: R,
         } = e,
         O = d.useStore((e) => e.activeCategoryIndex),
-        M = null != T && null != R,
-        { itemIdForIndex: L, parseIndex: k } = i.useMemo(() => g(R ?? "expression-category-"), [R]),
+        L = null != T && null != R,
+        { itemIdForIndex: M, parseIndex: k } = i.useMemo(() => g(R ?? "expression-category-"), [R]),
         w = (function (e) {
             let {
                     navId: t,
@@ -167,12 +167,12 @@ let C = function (e) {
         })({
             navId: T ?? "expression-picker-categories-disabled",
             categoryListRef: t,
-            itemIdForIndex: L,
+            itemIdForIndex: M,
             parseIndex: k,
             rowCount: y,
             activeIndex: O,
             getScrollOffsetForIndex: S,
-            enabled: M,
+            enabled: L,
         });
     !(function (e) {
         let { activeIndex: t, categoryListRef: n, getScrollOffsetForIndex: l } = e,
@@ -209,12 +209,12 @@ let C = function (e) {
             hideScrollbar: !0,
             rowCountBySection: j,
             renderSection: b,
-            role: M ? "none presentation" : void 0,
+            role: L ? "none presentation" : void 0,
         }),
         V = (0, l.jsxs)("div", {
             className: r()(A.i, E),
             children: [
-                M
+                L
                     ? (0, l.jsx)(a.PR, {
                           children: (e) => {
                               let { ref: t, ...n } = e;
@@ -225,5 +225,5 @@ let C = function (e) {
                 C?.(P),
             ],
         });
-    return M ? (0, l.jsx)(a.hD, { navigator: w, children: V }) : V;
+    return L ? (0, l.jsx)(a.hD, { navigator: w, children: V }) : V;
 };

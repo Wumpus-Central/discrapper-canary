@@ -28,8 +28,8 @@ var l = n(582128),
     T = n(309010),
     R = n(461213),
     O = n(287809),
-    M = n(689168),
-    L = n(723702),
+    L = n(689168),
+    M = n(723702),
     k = n(928550),
     w = n(652215),
     P = n(360469),
@@ -69,8 +69,8 @@ function U(e) {
             }),
         ),
         et = (0, i.bG)(
-            [M.A],
-            () => null != n && null != n.application_id && M.A.getState(n.application_id, w.xL.JOIN) === w.eAD.LOADING,
+            [L.A],
+            () => null != n && null != n.application_id && L.A.getState(n.application_id, w.xL.JOIN) === w.eAD.LOADING,
         ),
         en = (0, I.h)(Z),
         el = (0, S.x)(en),
@@ -108,7 +108,7 @@ function U(e) {
         ),
         ea = (0, o.p)();
     if (Y && null == U && (null == n || !(0, x.A)(n, w.jUm.CONTEXTLESS))) return null;
-    let eo = !L.isPlatformEmbedded;
+    let eo = !M.isPlatformEmbedded;
     if (!((0, x.A)(n, w.jUm.JOIN) || Y) || null == Z) return null;
     let eu = (!Y && es === p.o.JOINED) || (Y && er),
         ec = !J || Y,

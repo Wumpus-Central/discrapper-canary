@@ -54,13 +54,13 @@ function _(e) {
             return e?.isStaff() || e?.isStaffPersonal();
         });
     if (null == n || null == _) return null;
-    let M = (0, x.hp)(_).find((e) => e.value === r),
-        L = null != M ? S.Ps.EXPERIMENT_TREATMENT : S.Ps.EXPERIMENT,
-        k = null != j && null != M && j.variantId === M.value,
+    let L = (0, x.hp)(_).find((e) => e.value === r),
+        M = null != L ? S.Ps.EXPERIMENT_TREATMENT : S.Ps.EXPERIMENT,
+        k = null != j && null != L && j.variantId === L.value,
         w = (0, l.jsx)(N, { url: t }),
         P = null;
-    return (L === S.Ps.EXPERIMENT_TREATMENT && null != M
-        ? (P = (0, l.jsx)(c.E, { variant: "text-xs/normal", color: "text-muted", children: M.label }))
+    return (M === S.Ps.EXPERIMENT_TREATMENT && null != L
+        ? (P = (0, l.jsx)(c.E, { variant: "text-xs/normal", color: "text-muted", children: L.label }))
         : null != T &&
           (P = (0, l.jsxs)(c.E, { variant: "text-xs/normal", color: "text-muted", children: ["Server Config: ", R] })),
     O)
@@ -94,15 +94,15 @@ function _(e) {
                           }),
                       }),
                   }),
-                  null != M
+                  null != L
                       ? (0, l.jsx)(m.$, {
                             fullWidth: !0,
                             variant: k ? "critical-primary" : "primary",
-                            text: k ? `Clear Treatment ${M.value}` : `Apply Treatment ${M.value}`,
+                            text: k ? `Clear Treatment ${L.value}` : `Apply Treatment ${L.value}`,
                             onClick: function () {
                                 null == n ||
                                     null == _ ||
-                                    (null != M && (k ? (0, A.t$)(_.system, n, null) : (0, A.t$)(_.system, n, M.value)));
+                                    (null != L && (k ? (0, A.t$)(_.system, n, null) : (0, A.t$)(_.system, n, L.value)));
                             },
                         })
                       : (0, l.jsx)("div", {

@@ -134,10 +134,10 @@ let j = {
     T = (0, p.A)([S, j]),
     R = (0, p.A)([v, j]),
     O = c.X(T),
-    M = c.X(R),
-    L = { max: 1 / 0, maxAge: +g.A.Millis.MINUTE, updateAgeOnGet: !0 },
-    k = new (o())(L),
-    w = new (o())(L);
+    L = c.X(R),
+    M = { max: 1 / 0, maxAge: +g.A.Millis.MINUTE, updateAgeOnGet: !0 },
+    k = new (o())(M),
+    w = new (o())(M);
 function P(e, t, n, l, s) {
     let { content: r, type: a } = n,
         o = null == n.originalMatch && "text" === a && "string" == typeof r;
@@ -608,7 +608,7 @@ let Z = {
                                         a = {
                                             originalMatch: { index: 0, 0: "" },
                                             type: "paragraph",
-                                            content: (n ? M : O)(r, !0, {
+                                            content: (n ? L : O)(r, !0, {
                                                 returnMentionIds: !0,
                                                 disableAutoBlockNewlines: !0,
                                                 guildId: t,

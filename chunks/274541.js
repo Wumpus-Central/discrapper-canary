@@ -5,8 +5,8 @@ var t = l(477900),
     s = l(789645),
     r = l(442433),
     c = l(738876),
-    u = l(323073),
-    d = l(95561),
+    d = l(323073),
+    u = l(95561),
     o = l(973854),
     A = l(355622),
     h = l(225142),
@@ -38,7 +38,7 @@ function w(e) {
         O = (0, a.bG)([N.A], () => H?.id != null && N.A.isLurking(H.id), [H]),
         P = (0, m.A)(n),
         M = (0, a.bG)([g.h], () => g.h.getResourceForChannel(H?.id, n)?.title),
-        U = (0, u.vL)(F),
+        U = (0, d.vL)(F),
         q = (0, E.Uf)(F),
         z = i.useRef(!1);
     if (
@@ -46,7 +46,7 @@ function w(e) {
             null == F ||
                 z.current ||
                 ((z.current = !0),
-                (0, d.zV)(R.HAw.CHANNEL_OPENED, { ...(0, d.qL)(F.id), channel_view: B }),
+                (0, u.zV)(R.HAw.CHANNEL_OPENED, { ...(0, u.qL)(F.id), channel_view: B }),
                 (0, o.A)({ channelId: F.id }));
         }, [F, B]),
         null == F || null == H)

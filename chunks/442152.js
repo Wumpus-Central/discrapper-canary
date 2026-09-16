@@ -28,8 +28,8 @@ var l = n(477900),
     T = n(750385),
     R = n(649852),
     O = n.n(R),
-    M = n(462180),
-    L = n(319060),
+    L = n(462180),
+    M = n(319060),
     k = n(289873),
     w = n(212245),
     P = n(793574),
@@ -70,12 +70,12 @@ var X = n(361670),
     ep = n(698279),
     eg = n(375708),
     ex = n(161975);
-let eA = (0, z.xI)(L.A.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
-    eC = (0, z.xI)(L.A.STICKERS_CONSTANTS_STICKER_CATEGORY_ICON_SIZE),
-    eE = (0, z.xI)(L.A.STICKERS_CONSTANTS_STICKER_CATEGORY_ICON_MARGIN),
-    eI = (0, z.xI)(L.A.STICKERS_CONSTANTS_STICKER_CATEGORY_UNICODE_ICON_SIZE),
-    ey = (0, z.xI)(L.A.STICKERS_CONSTANTS_CATEGORY_SEPARATOR_SIZE),
-    eS = (0, z.xI)(L.A.STICKERS_CONSTANTS_CATEGORY_SEPARATOR_MARGIN_VERTICAL),
+let eA = (0, z.xI)(M.A.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
+    eC = (0, z.xI)(M.A.STICKERS_CONSTANTS_STICKER_CATEGORY_ICON_SIZE),
+    eE = (0, z.xI)(M.A.STICKERS_CONSTANTS_STICKER_CATEGORY_ICON_MARGIN),
+    eI = (0, z.xI)(M.A.STICKERS_CONSTANTS_STICKER_CATEGORY_UNICODE_ICON_SIZE),
+    ey = (0, z.xI)(M.A.STICKERS_CONSTANTS_CATEGORY_SEPARATOR_SIZE),
+    eS = (0, z.xI)(M.A.STICKERS_CONSTANTS_CATEGORY_SEPARATOR_MARGIN_VERTICAL),
     ev = [eA, eA, eA, eA],
     eN = (eC + eE) * 2 + eA,
     e_ = ey + 2 * eS;
@@ -309,8 +309,8 @@ let eb = (e) => {
 var eT = n(297264),
     eR = n(834730),
     eO = n(10392),
-    eM = n(82498),
-    eL = n(724651),
+    eL = n(82498),
+    eM = n(724651),
     ek = n(811611),
     ew = n(821609),
     eP = n(403581);
@@ -355,10 +355,10 @@ function eF(e) {
             source: { section: ef.JJy.EMPTY_STICKER_PICKER_UPSELL },
             location_stack: s,
         }),
-            (0, eO.sq)(ef.U7l.PREMIUM_UPSELL_VIEWED, s, () => (0, eM.uq)(eG.e.EMPTY_STICKER_PICKER_UPSELL)));
+            (0, eO.sq)(ef.U7l.PREMIUM_UPSELL_VIEWED, s, () => (0, eL.uq)(eG.e.EMPTY_STICKER_PICKER_UPSELL)));
     }, [s]);
     let o = (0, H.V)(),
-        u = (0, eL.O)(),
+        u = (0, eM.O)(),
         c = null != o || null != u;
     return (0, l.jsxs)("div", {
         className: r()(eV.p$, t, { [eV.Hz]: c }),
@@ -489,8 +489,8 @@ let e1 = function (e) {
 var e2 = n(307301),
     e3 = n(182922),
     e8 = n(683522);
-let e6 = (0, z.xI)(L.A.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_PRIMARY_DIMENSIONS),
-    e5 = (0, z.xI)(L.A.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_SECONDARY_DIMENSIONS),
+let e6 = (0, z.xI)(M.A.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_PRIMARY_DIMENSIONS),
+    e5 = (0, z.xI)(M.A.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_SECONDARY_DIMENSIONS),
     e7 = i.memo(function (e) {
         let { stickersGrid: t } = e,
             n = U.bM.useStore((e) => e.inspectedExpressionPosition),
@@ -586,7 +586,7 @@ let ts = i.memo(function (e) {
             [t, c, T],
         ),
         O = i.useMemo(() => ({ width: y, height: y, padding: I }), [I, y]),
-        [M, L] = (0, te.A)(null, 300);
+        [L, M] = (0, te.A)(null, 300);
     return (0, l.jsx)("div", {
         className: ti.nM,
         style: R,
@@ -662,7 +662,7 @@ let ts = i.memo(function (e) {
                         "div",
                         { ...k, key: e.sticker.id },
                         (0, l.jsxs)(f.D, {
-                            className: r()(ti.yI, C, { [ti.PV]: u, [ti.TV]: M === e.sticker.id }),
+                            className: r()(ti.yI, C, { [ti.PV]: u, [ti.TV]: L === e.sticker.id }),
                             innerRef: I,
                             tabIndex: T,
                             onFocus: R ?? E,
@@ -670,7 +670,7 @@ let ts = i.memo(function (e) {
                             onClick: function (t) {
                                 if (h?.current === !0 || p?.current === !0) return;
                                 let n = t.altKey;
-                                (n && e.type === ee.op.STICKER && !(0, eh.o1)(e.sticker.id) && L(e.sticker.id),
+                                (n && e.type === ee.op.STICKER && !(0, eh.o1)(e.sticker.id) && M(e.sticker.id),
                                     x?.(e, n));
                             },
                             onContextMenu: function (e) {
@@ -718,21 +718,21 @@ let ts = i.memo(function (e) {
     });
 });
 var tr = n(457231);
-let ta = (0, z.xI)(L.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
-    to = (0, z.xI)(L.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_MEDIUM),
-    tu = (0, z.xI)(L.A.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_TOP),
-    tc = (0, z.xI)(L.A.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_TOP_SEARCH_RESULTS),
-    td = (0, z.xI)(L.A.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_RIGHT),
-    th = (0, z.xI)(L.A.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_BOTTOM),
-    tm = (0, z.xI)(L.A.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_LEFT),
-    tf = (0, z.xI)(L.A.STICKERS_CONSTANTS_STICKERS_LIST_DIVIDER_HEIGHT),
-    tp = (0, z.xI)(L.A.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_LIST_SECTION_HEADING_HEIGHT),
-    tg = (0, z.xI)(L.A.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS),
-    tx = (0, z.xI)(L.A.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS_SMALL),
-    tA = (0, z.xI)(L.A.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN),
+let ta = (0, z.xI)(M.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
+    to = (0, z.xI)(M.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_MEDIUM),
+    tu = (0, z.xI)(M.A.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_TOP),
+    tc = (0, z.xI)(M.A.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_TOP_SEARCH_RESULTS),
+    td = (0, z.xI)(M.A.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_RIGHT),
+    th = (0, z.xI)(M.A.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_BOTTOM),
+    tm = (0, z.xI)(M.A.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_LEFT),
+    tf = (0, z.xI)(M.A.STICKERS_CONSTANTS_STICKERS_LIST_DIVIDER_HEIGHT),
+    tp = (0, z.xI)(M.A.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_LIST_SECTION_HEADING_HEIGHT),
+    tg = (0, z.xI)(M.A.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS),
+    tx = (0, z.xI)(M.A.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS_SMALL),
+    tA = (0, z.xI)(M.A.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN),
     tC = [tu, td, th, tm],
     tE = [tc, td, th, tm],
-    tI = (0, z.xI)(L.A.STICKERS_CONSTANTS_STICKERS_LIST_EMPTY_GUILD_UPSELL_HEIGHT),
+    tI = (0, z.xI)(M.A.STICKERS_CONSTANTS_STICKERS_LIST_EMPTY_GUILD_UPSELL_HEIGHT),
     ty = ["laugh", "wave", "yes", "dance", "sad", "no", "hi", "bye", "cry", "ok"];
 function tS(e) {
     let { onSuggestionClick: t } = e;
@@ -771,7 +771,7 @@ let tv = i.forwardRef(function (e, t) {
             C = tg + 2 * c,
             E = i.useRef(!1),
             I = i.useRef(null),
-            [y, S] = U.bM.useStore((e) => [e.activeCategoryIndex, e.inspectedExpressionPosition], M.x),
+            [y, S] = U.bM.useStore((e) => [e.activeCategoryIndex, e.inspectedExpressionPosition], L.x),
             { analyticsLocations: v } = (0, D.Ay)(P.A.STICKER_PICKER),
             N = (0, G.RQ)((e) => e.searchQuery),
             _ = (0, d.bG)([T.A], () => T.A.getPremiumPacks()),
@@ -780,7 +780,7 @@ let tv = i.forwardRef(function (e, t) {
                 renderSection: b,
                 renderSectionFooter: R,
                 sectionFooterHeight: O,
-                renderSectionHeader: L,
+                renderSectionHeader: M,
                 sectionHeaderHeight: k,
             } = (function (e) {
                 let {
@@ -1114,7 +1114,7 @@ let tv = i.forwardRef(function (e, t) {
                                   onScroll: F,
                                   renderRow: j,
                                   renderSection: null == r ? b : void 0,
-                                  renderSectionHeader: L,
+                                  renderSectionHeader: M,
                                   renderSectionFooter: R,
                                   rowCount: f,
                                   rowCountBySection: p,
@@ -1145,10 +1145,10 @@ let tT = i.forwardRef(function (e, t) {
         o = i.useRef(null),
         { searchQuery: u, isSearchSuggestion: c } = (0, G.RQ)(
             (e) => ({ searchQuery: e.searchQuery, isSearchSuggestion: e.isSearchSuggestion }),
-            M.x,
+            L.x,
         ),
         d = U.bM.useStore((e) => e.searchPlaceholder),
-        [h, m] = U.bM.useStore((e) => [e.inspectedExpressionPosition, e.hasInteracted], M.x),
+        [h, m] = U.bM.useStore((e) => [e.inspectedExpressionPosition, e.hasInteracted], L.x),
         f = i.useCallback(
             (e) => {
                 (U.bM.setActiveCategoryIndex("" === e ? 0 : -1),
@@ -1191,8 +1191,8 @@ let tT = i.forwardRef(function (e, t) {
 n(321073);
 var tR = n(802842),
     tO = n(789645),
-    tM = n(964486),
-    tL = n(158045),
+    tL = n(964486),
+    tM = n(158045),
     tk = n(420136),
     tw = n(939383);
 function tP() {
@@ -1207,14 +1207,14 @@ function tD(e) {
             type: eG.e.STICKER_PICKER_UPSELL,
             location_stack: n,
         }),
-            (0, eO.sq)(ef.U7l.PREMIUM_UPSELL_VIEWED, n, () => (0, eM.uq)(eG.e.STICKER_PICKER_UPSELL)));
+            (0, eO.sq)(ef.U7l.PREMIUM_UPSELL_VIEWED, n, () => (0, eL.uq)(eG.e.STICKER_PICKER_UPSELL)));
     }, [n]);
     let s = (0, i.useRef)(null);
-    (0, tM.Ay)(() => {
+    (0, tL.Ay)(() => {
         s.current?.focus();
     });
     let a = (0, H.V)(),
-        o = (0, eL.O)(),
+        o = (0, eM.O)(),
         u = a?.subscriptionTrial?.skuId === eG.pe.TIER_0,
         c = null != a || null != o;
     return (0, l.jsxs)("div", {
@@ -1232,7 +1232,7 @@ function tD(e) {
                       subscriptionTier: a?.subscriptionTrial?.skuId ?? eG.pe.TIER_2,
                       children: u
                           ? eg.intl.format(eg.t.MAGagw, {
-                                planName: (0, tL.RH)(eG.gD.PREMIUM_MONTH_TIER_0),
+                                planName: (0, tM.RH)(eG.gD.PREMIUM_MONTH_TIER_0),
                                 onClick: t,
                             })
                           : eg.intl.format(eg.t.jt7JX6, { onClick: t }),
@@ -1264,13 +1264,13 @@ function tD(e) {
     });
 }
 var tU = n(970099);
-let tG = (0, z.xI)(L.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
-    tV = (0, z.xI)(L.A.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_LEFT),
-    tF = (0, z.xI)(L.A.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_RIGHT),
-    tH = (0, z.xI)(L.A.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN),
-    tB = (0, z.xI)(L.A.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN_SMALL),
-    tW = (0, z.xI)(L.A.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS),
-    tK = (0, z.xI)(L.A.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS_SMALL),
+let tG = (0, z.xI)(M.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
+    tV = (0, z.xI)(M.A.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_LEFT),
+    tF = (0, z.xI)(M.A.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_RIGHT),
+    tH = (0, z.xI)(M.A.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN),
+    tB = (0, z.xI)(M.A.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN_SMALL),
+    tW = (0, z.xI)(M.A.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS),
+    tK = (0, z.xI)(M.A.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS_SMALL),
     tz = O()(Q.Qz, 200),
     tZ = O()(Q.HA, 200),
     tY = i.forwardRef(function (e, t) {
@@ -1283,7 +1283,7 @@ let tG = (0, z.xI)(L.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             g = i.useRef(null),
             x = i.useRef(null),
             A = J((e) => e.showPremiumUpsell),
-            [C, E] = (0, G.RQ)((e) => [e.searchQuery, e.isSearchSuggestion], M.x),
+            [C, E] = (0, G.RQ)((e) => [e.searchQuery, e.isSearchSuggestion], L.x),
             I = i.useRef("");
         i.useImperativeHandle(t, () => ({ onPickerOpen: ep }));
         let y = (0, b.pD)(r),
@@ -1320,7 +1320,7 @@ let tG = (0, z.xI)(L.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 [C, j, r],
             ),
             O = (0, b.Gc)(),
-            L = (0, b.UT)(),
+            M = (0, b.UT)(),
             k = (0, d.cf)([T.A], () => T.A.getAllGuildStickers()),
             { sendable: z = [], sendableWithPremium: Z = [] } = R ?? {},
             Y = z.length + Z.length,
@@ -1465,7 +1465,7 @@ let tG = (0, z.xI)(L.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 (0, Q.p4)({
                     containerWidth: s,
                     favoriteStickers: O,
-                    frequentlyUsedStickers: L,
+                    frequentlyUsedStickers: M,
                     guildStickers: t,
                     stickersTotal: n,
                 }));
@@ -1573,8 +1573,8 @@ let t3 = 498 + t0.as.MEDIUM,
                 onSelectSticker: f,
                 onSelectSound: R,
                 channel: O,
-                type: M,
-                position: L,
+                type: L,
+                position: M,
                 align: k,
                 positionLayerClassName: w,
                 closeOnModalOuterClick: P = !1,
@@ -1654,9 +1654,9 @@ let t3 = 498 + t0.as.MEDIUM,
             $ = (0, d.bG)([t$.A], () => t$.A.isOpen()),
             X = null != D,
             Q = (0, m.useIsModalAtTop)(D ?? ""),
-            ee = M.gifs?.allowSending && !u.Fr && null != s,
-            et = M.stickers?.allowSending && null != f,
-            en = !M.expressionPicker?.onlyEmojis && (ee || et),
+            ee = L.gifs?.allowSending && !u.Fr && null != s,
+            et = L.stickers?.allowSending && null != f,
+            en = !L.expressionPicker?.onlyEmojis && (ee || et),
             el = i.useCallback(
                 (e) => {
                     if ((!X && (0, m.hasAnyModalOpen)()) || (X && !(Q && P)) || $ || e.defaultPrevented) return;
@@ -1732,7 +1732,7 @@ let t3 = 498 + t0.as.MEDIUM,
             }));
         let eu = i.useCallback((e, t) => R?.(e, "emoji_picker", t), [R]),
             ec = i.useCallback((e, t) => R?.(e, "soundboard_picker", t), [R]),
-            ed = M.soundmoji?.allowSending === !0 && null != R,
+            ed = L.soundmoji?.allowSending === !0 && null != R,
             eh = "left" === k ? "right" : "left",
             em = null != w ? w : "left" === k ? t2.sj : t2.Jg,
             ex = ee
@@ -1769,7 +1769,7 @@ let t3 = 498 + t0.as.MEDIUM,
             children: (0, l.jsx)(v.nE, {
                 className: r()(t2.T8, em),
                 targetRef: t,
-                position: L,
+                position: M,
                 align: k,
                 spacing: 8,
                 autoInvert: !0,
@@ -1846,7 +1846,7 @@ let t3 = 498 + t0.as.MEDIUM,
                                                         persistSearch: !0,
                                                     })
                                                   : null,
-                                              K === ep.kx.EMOJI || M.expressionPicker?.onlyEmojis === !0
+                                              K === ep.kx.EMOJI || L.expressionPicker?.onlyEmojis === !0
                                                   ? (0, l.jsx)(y.A, {
                                                         hasTabWrapper: !0,
                                                         persistSearch: !0,
@@ -1854,7 +1854,7 @@ let t3 = 498 + t0.as.MEDIUM,
                                                         containerWidth: B,
                                                         emojiSize: null != B && B < t3 ? t0.as.MEDIUM : t0.as.LARGE,
                                                         pickerIntention:
-                                                            M.expressionPicker?.emojiIntention ??
+                                                            L.expressionPicker?.emojiIntention ??
                                                             t1.EmojiIntention.CHAT,
                                                         showAddEmojiButton: null == O || null != O.guild_id,
                                                         closePopout: ei,
@@ -1864,7 +1864,7 @@ let t3 = 498 + t0.as.MEDIUM,
                                                             F.current = e;
                                                         },
                                                         shouldShowSoundmojiInEmojiPicker:
-                                                            M.soundmoji?.allowSending === !0,
+                                                            L.soundmoji?.allowSending === !0,
                                                     })
                                                   : null,
                                               K === ep.kx.SOUNDBOARD

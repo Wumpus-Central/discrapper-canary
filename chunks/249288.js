@@ -1,27 +1,27 @@
-t.d(n, { A: () => o });
-var l = t(17928),
-    i = t(228366);
-let s = { toastsEnabledForChannel: {} },
-    a = s;
-class r extends l.Ay.PersistedStore {
+s.d(t, { A: () => i });
+var n = s(17928),
+    l = s(228366);
+let a = { toastsEnabledForChannel: {} },
+    r = a;
+class u extends n.Ay.PersistedStore {
     static displayName = "CallChatToastsStore";
     static persistKey = "CallChatToasts";
     initialize(e) {
-        a = e ?? s;
+        r = e ?? a;
     }
     getToastsEnabled(e) {
-        return a.toastsEnabledForChannel[e] ?? !0;
+        return r.toastsEnabledForChannel[e] ?? !0;
     }
     getState() {
-        return a;
+        return r;
     }
 }
-let o = new r(i.h, {
+let i = new u(l.h, {
     CALL_CHAT_TOASTS_SET_ENABLED: function (e) {
-        let { channelId: n, toastsEnabled: t } = e;
-        a.toastsEnabledForChannel[n] = t;
+        let { channelId: t, toastsEnabled: s } = e;
+        r.toastsEnabledForChannel[t] = s;
     },
     LOGOUT: function () {
-        a.toastsEnabledForChannel = {};
+        r.toastsEnabledForChannel = {};
     },
 });

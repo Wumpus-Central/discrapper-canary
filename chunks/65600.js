@@ -1,23 +1,23 @@
 s.d(t, { A: () => h });
 var r = s(17928),
     n = s(228366),
-    i = s(921242);
-let a = new Map(),
+    a = s(921242);
+let i = new Map(),
     _ = !1;
 function c(e) {
-    let t = a.get(e) ?? {
+    let t = i.get(e) ?? {
         queryText: null,
         showBlockedResults: !1,
         showNoResultsAlt: !1,
         searchResultsQueryString: null,
         searchResultsQuery: null,
         searchResultsOffset: null,
-        searchMode: i.z,
+        searchMode: a.z,
     };
-    return (a.set(e, t), t);
+    return (i.set(e, t), t);
 }
 function u(e, t) {
-    let s = a.get(e);
+    let s = i.get(e);
     return null == s ? null : t(s);
 }
 class l extends r.Ay.Store {
@@ -47,18 +47,18 @@ class l extends r.Ay.Store {
         return _;
     }
     getSearchStateIds() {
-        return Array.from(a.keys());
+        return Array.from(i.keys());
     }
 }
 let h = new l(n.h, {
     SEARCH_RESULTS_QUERY_UPDATE: function (e) {
         let { id: t, queryString: s, query: r, offset: n } = e,
-            i = c(t);
-        ((i.searchResultsQueryString = s), (i.searchResultsQuery = r), (i.searchResultsOffset = n ?? 0));
+            a = c(t);
+        ((a.searchResultsQueryString = s), (a.searchResultsQuery = r), (a.searchResultsOffset = n ?? 0));
     },
     SEARCH_QUERY_TEXT_CLEAR: function (e) {
         let { id: t } = e;
-        return a.delete(t);
+        return i.delete(t);
     },
     SEARCH_ENSURE_SEARCH_STATE: function (e) {
         let { id: t } = e;

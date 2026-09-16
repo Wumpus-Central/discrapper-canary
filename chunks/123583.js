@@ -69,8 +69,8 @@ let T = i.forwardRef(function (e, t) {
         return (0, l.jsx)(T, { type: t, channelId: n });
     });
 var O = n(931664),
-    M = n(951260),
-    L = n(522602),
+    L = n(951260),
+    M = n(522602),
     k = n(158045),
     w = n(462180),
     P = n(375499),
@@ -265,7 +265,7 @@ let ee = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
                 showAllButtons: y,
                 expressionButtonsHidden: S,
             } = e,
-            v = (0, M.n)("ChannelTextAreaButtons"),
+            v = (0, L.n)("ChannelTextAreaButtons"),
             N = (0, r.cf)([o.Ay], () => ({
                 isSubmitButtonEnabled: o.Ay.isSubmitButtonEnabled,
                 isAppsButtonEnabled: o.Ay.isAppsButtonEnabled,
@@ -282,10 +282,10 @@ let ee = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
                 ((t = C.id),
                 (n = x),
                 (i = I),
-                (0, r.bG)([O.A, L.A], () => {
+                (0, r.bG)([O.A, M.A], () => {
                     let e = O.A.getStickerPreview(t, n.drafts.type),
                         l = null != e && e.length > 0;
-                    return 0 === L.A.getUploads(t, n.drafts.type).length && i && !l;
+                    return 0 === M.A.getUploads(t, n.drafts.type).length && i && !l;
                 })),
             { activeCommand: D, activeCommandOption: U } = (0, r.cf)([u.A], () => ({
                 activeCommand: u.A.getActiveCommand(C.id),

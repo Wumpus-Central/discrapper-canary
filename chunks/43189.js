@@ -1,5 +1,5 @@
-t.d(n, { Ay: () => o, WD: () => a, qh: () => r });
-let { Layer: l, LayerContainer: i, LayerProvider: s } = (0, t(365912).Ay)("ChannelCallChat"),
-    a = i,
-    r = s,
-    o = l;
+t.d(n, { Ay: () => r, WD: () => s, qh: () => o });
+let { Layer: i, LayerContainer: l, LayerProvider: a } = (0, t(365912).Ay)("ChannelCallChat"),
+    s = l,
+    o = a,
+    r = i;

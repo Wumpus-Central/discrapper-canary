@@ -1,10 +1,10 @@
 t.d(n, { x: () => d });
-var l = t(477900),
-    i = t(582128),
-    s = t(17928),
-    a = t(623646),
-    r = t(43189),
-    o = t(742023),
+var i = t(477900),
+    l = t(582128),
+    a = t(17928),
+    s = t(623646),
+    o = t(43189),
+    r = t(742023),
     c = t(461782),
     u = t(447404);
 function d(e) {
@@ -16,24 +16,24 @@ function d(e) {
             nudgeAlignIntoViewport: m = !1,
             skipForceHide: h = !1,
         } = e,
-        C = i.useContext(c.vG),
-        [p, g] = i.useState(""),
-        [E, f] = i.useState(!1),
-        x = (0, s.bG)([o.Ay], () => o.Ay.callHeaderHeight),
-        v = i.useRef(null),
-        I = i.useRef(0);
-    (i.useEffect(() => {
+        C = l.useContext(c.vG),
+        [p, x] = l.useState(""),
+        [g, f] = l.useState(!1),
+        E = (0, a.bG)([r.Ay], () => r.Ay.callHeaderHeight),
+        I = l.useRef(null),
+        v = l.useRef(0);
+    (l.useEffect(() => {
         let e = n.current;
         if (null != e) return (e.addEventListener("click", d), () => e.removeEventListener("click", d));
     }),
-        i.useEffect(() => {
-            h || (g(String(I.current)), f(void 0 !== x && x < (v.current?.clientHeight ?? 300) + 24), (I.current += 1));
-        }, [x, v, h]));
+        l.useEffect(() => {
+            h || (x(String(v.current)), f(void 0 !== E && E < (I.current?.clientHeight ?? 300) + 24), (v.current += 1));
+        }, [E, I, h]));
     let { preventIdle: T, allowIdle: j } = (0, u.o)("popup");
     return n?.current == null
         ? null
-        : (0, l.jsx)(r.Ay, {
-              children: (0, l.jsx)(a.Q, {
+        : (0, i.jsx)(o.Ay, {
+              children: (0, i.jsx)(s.Q, {
                   targetRef: n,
                   position: "top",
                   align: "center",
@@ -41,13 +41,13 @@ function d(e) {
                   positionKey: p,
                   nudgeAlignIntoViewport: m,
                   children: () =>
-                      (0, l.jsx)("div", {
-                          ref: v,
+                      (0, i.jsx)("div", {
+                          ref: I,
                           onMouseOver: T,
                           onFocus: T,
                           onBlur: j,
                           onMouseLeave: j,
-                          children: A({ hidden: E || C || t, onDismiss: d }),
+                          children: A({ hidden: g || C || t, onDismiss: d }),
                       }),
               }),
           });

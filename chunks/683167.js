@@ -1,4 +1,4 @@
-n.d(t, { a: () => k, A: () => L });
+n.d(t, { a: () => k, A: () => M });
 var l = n(582128),
     i = n(143236),
     s = n(719442),
@@ -93,15 +93,15 @@ function b(e, t, n) {
 var T = n(694403),
     R = n(323350),
     O = n(235599),
-    M = n(551483);
-function L(e) {
+    L = n(551483);
+function M(e) {
     let t = l.useContext(o.Ay),
         n = c.SI.useSetting(),
         [i] = l.useState(() => {
             let l = (0, s.ie)();
             return (
                 (l.children = (0, d.x7)("")),
-                (l.selection = { anchor: M.K, focus: M.K }),
+                (l.selection = { anchor: L.K, focus: L.K }),
                 k({ ...e, editor: l, windowContext: t, previewMarkdown: n }),
                 l
             );
@@ -565,12 +565,12 @@ function k(e) {
                                     s = !1;
                                 for (
                                     ;
-                                    null != l && null != (t = p.VW.getParentVoid(e, l)) && !M.XR.includes(t[0].type);
+                                    null != l && null != (t = p.VW.getParentVoid(e, l)) && !L.XR.includes(t[0].type);
                                 )
                                     ((l = p.VW.before(e, l, { unit: "offset" })), (s = !0));
                                 for (
                                     ;
-                                    null != i && null != (n = p.VW.getParentVoid(e, i)) && !M.XR.includes(n[0].type);
+                                    null != i && null != (n = p.VW.getParentVoid(e, i)) && !L.XR.includes(n[0].type);
                                 )
                                     ((i = p.VW.after(e, i, { unit: "offset" })), (s = !0));
                                 s &&

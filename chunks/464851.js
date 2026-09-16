@@ -1,4 +1,4 @@
-f.exports = {
+e.exports = {
     nE: "debugToolsPanel_fc3ff7",
     Di: "resizeHandle_fc3ff7",
     wx: "header_fc3ff7",

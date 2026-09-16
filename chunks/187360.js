@@ -5,8 +5,8 @@ var t = l(477900),
     s = l(922016),
     r = l(780338),
     c = l(782603),
-    u = l(832712),
-    d = l(543465),
+    d = l(832712),
+    u = l(543465),
     o = l(625494),
     A = l(477427),
     h = l(58736),
@@ -17,13 +17,13 @@ function f(e) {
     let { channel: n } = e,
         l = i.useRef(null),
         [f, j] = (0, a.yK)(
-            [d.Ay],
-            () => [d.Ay.isChannelMuted(n.getGuildId(), n.id), d.Ay.resolvedMessageNotifications(n)],
+            [u.Ay],
+            () => [u.Ay.isChannelMuted(n.getGuildId(), n.id), u.Ay.resolvedMessageNotifications(n)],
             [n],
         ),
         [N, p] = i.useState(!1);
     function C(e) {
-        e.shiftKey ? u.A.updateChannelOverrideSettings(n.guild_id, n.id, { muted: !f }, A.G_.muted(!f)) : p((e) => !e);
+        e.shiftKey ? d.A.updateChannelOverrideSettings(n.guild_id, n.id, { muted: !f }, A.G_.muted(!f)) : p((e) => !e);
     }
     i.useEffect(() => {
         function e() {

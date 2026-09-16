@@ -1,19 +1,19 @@
 t.d(n, { f: () => d });
-var l = t(477900),
-    i = t(582128),
-    s = t(17928),
-    a = t(477782),
-    r = t(534963),
-    o = t(470710),
+var i = t(477900),
+    l = t(582128),
+    a = t(17928),
+    s = t(477782),
+    o = t(534963),
+    r = t(470710),
     c = t(717518),
     u = t(375708);
 function d(e) {
-    let n = (0, s.bG)([o.A], () => o.A.getCall(e), [e]),
-        t = (0, s.bG)([c.A], () => c.A.getRegions(null));
-    i.useEffect(() => {
-        null == t && r.A.fetchRegions(null);
+    let n = (0, a.bG)([r.A], () => r.A.getCall(e), [e]),
+        t = (0, a.bG)([c.A], () => c.A.getRegions(null));
+    l.useEffect(() => {
+        null == t && o.A.fetchRegions(null);
     }, [t]);
-    let d = i.useMemo(
+    let d = l.useMemo(
             () =>
                 null != n && n.regionUpdated && null != t && null != n.region
                     ? (t.find((e) => {
@@ -23,20 +23,20 @@ function d(e) {
                     : { id: "automatic", name: u.intl.string(u.t.JEmsap) },
             [n, t],
         ),
-        A = i.useCallback(
+        A = l.useCallback(
             (e) => {
-                null != n && r.A.changeCallRegion(n.channelId, e.id);
+                null != n && o.A.changeCallRegion(n.channelId, e.id);
             },
             [n],
         ),
-        m = i.useMemo(
+        m = l.useMemo(
             () =>
                 null == t || 0 === t.length
                     ? null
                     : t.map((e) => {
                           let { id: n, name: t } = e;
-                          return (0, l.jsx)(
-                              a.iD,
+                          return (0, i.jsx)(
+                              s.iD,
                               {
                                   id: `region-${n}`,
                                   group: "region-select",
@@ -49,5 +49,5 @@ function d(e) {
                       }),
             [t, d, A],
         );
-    return (0, l.jsx)(a.Dr, { id: "region-select", label: u.intl.string(u.t.w8gMqh), subtext: d.name, children: m });
+    return (0, i.jsx)(s.Dr, { id: "region-select", label: u.intl.string(u.t.w8gMqh), subtext: d.name, children: m });
 }

@@ -1,31 +1,31 @@
 t.d(n, { A: () => u });
-var l = t(477900);
+var i = t(477900);
 t(582128);
-var i = t(17928),
-    s = t(477782),
-    a = t(138134),
-    r = t(928658),
-    o = t(734057),
+var l = t(17928),
+    a = t(477782),
+    s = t(138134),
+    o = t(928658),
+    r = t(734057),
     c = t(375708);
 function u(e, n) {
-    let t = (0, i.bG)([o.A], () => o.A.getChannel(n)),
+    let t = (0, l.bG)([r.A], () => r.A.getChannel(n)),
         u = t?.getGuildId();
     return null == e
         ? null
-        : (0, l.jsx)(s.rX, {
-              children: (0, l.jsx)(s.Dr, {
+        : (0, i.jsx)(a.rX, {
+              children: (0, i.jsx)(a.Dr, {
                   id: "report-app",
                   color: "danger",
                   label: c.intl.string(c.t.NgA5vp),
                   action: () =>
-                      (0, r.r3)({
+                      (0, o.r3)({
                           application: e,
                           entrypoint: "activity_ui_channel_call",
                           contextualGuildId: u ?? void 0,
                           contextualChannelId: t?.id,
                       }),
-                  icon: a.FlagIcon,
-                  leadingAccessory: { type: "icon", icon: a.FlagIcon },
+                  icon: s.FlagIcon,
+                  leadingAccessory: { type: "icon", icon: s.FlagIcon },
               }),
           });
 }

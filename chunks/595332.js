@@ -1,33 +1,33 @@
-t.d(n, { A: () => r });
-var i = t(17928),
-    a = t(228366);
-let l = new Set();
-class s extends i.Ay.Store {
+n.d(t, { A: () => u });
+var i = n(17928),
+    a = n(228366);
+let s = new Set();
+class l extends i.Ay.Store {
     isChatOpen(e) {
-        return l.has(e);
+        return s.has(e);
     }
 }
-let r = new s(a.h, {
+let u = new l(a.h, {
     LOGOUT: function () {
-        if (0 === l.size) return !1;
-        l.clear();
+        if (0 === s.size) return !1;
+        s.clear();
     },
     CHANNEL_SELECT: function (e) {
-        let { channelId: n } = e,
-            t = null != n && l.has(n) ? n : null;
-        if (l.size === +(null != t)) return !1;
-        (l.clear(), null != t && l.add(t));
+        let { channelId: t } = e,
+            n = null != t && s.has(t) ? t : null;
+        if (s.size === +(null != n)) return !1;
+        (s.clear(), null != n && s.add(n));
     },
     CHANNEL_DELETE: function (e) {
         let {
-            channel: { id: n },
+            channel: { id: t },
         } = e;
-        if (!l.has(n)) return !1;
-        l.delete(n);
+        if (!s.has(t)) return !1;
+        s.delete(t);
     },
     VIBEGRATIONS_APP_CHANNEL_CHAT_SET: function (e) {
-        let { channelId: n, open: t } = e;
-        if (l.has(n) === t) return !1;
-        t ? l.add(n) : l.delete(n);
+        let { channelId: t, open: n } = e;
+        if (s.has(t) === n) return !1;
+        n ? s.add(t) : s.delete(t);
     },
 });

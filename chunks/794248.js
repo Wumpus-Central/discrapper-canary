@@ -155,7 +155,7 @@ function T(e) {
 }
 var R = n(506619),
     O = n(15555);
-function M(e) {
+function L(e) {
     let { surfaceConfig: t, resolveFieldValue: n } = en(),
         l = n(t.components.hero_image?.fields.image, [v.o.MEDIA]);
     return (0, i.jsx)(_, {
@@ -169,7 +169,7 @@ function M(e) {
         }),
     });
 }
-var L = n(123292),
+var M = n(123292),
     k = n(402233);
 function w(e) {
     let { image: t } = e,
@@ -190,7 +190,7 @@ function w(e) {
                                 lineClamp: 1,
                                 required: !0,
                             }),
-                            (0, i.jsx)(L.Q, {
+                            (0, i.jsx)(M.Q, {
                                 textVariant: "text-xs/normal",
                                 variant: "secondary",
                                 text: "View All Stats",
@@ -504,7 +504,7 @@ let el = {
     },
     [a.m.ACTIVITY_ACCESSORY]: { [o.ACTIVITY_ACCESSORY_STAT]: (e) => (0, i.jsx)(I, { ...e }) },
     [a.m.ADD_WIDGET_PREVIEW]: {
-        [o.ADD_WIDGET_PREVIEW_HERO]: (e) => (0, i.jsx)(M, { ...e }),
+        [o.ADD_WIDGET_PREVIEW_HERO]: (e) => (0, i.jsx)(L, { ...e }),
         [o.ADD_WIDGET_PREVIEW_CONTAINED]: (e) => (0, i.jsx)(b, { ...e }),
     },
 };
