@@ -5,13 +5,13 @@ var t = l(477900),
     s = l.n(a),
     r = l(17928),
     c = l(331322),
-    u = l(661531),
-    d = l(192308),
+    d = l(661531),
+    u = l(192308),
     o = l(834730),
     A = l(939249),
     h = l(689175),
     g = l(66834),
-    m = l(847599),
+    m = l(306537),
     x = l(47167),
     f = l(713654),
     j = l(46054),
@@ -43,7 +43,7 @@ function b(e) {
                           null != T &&
                               (0, t.jsx)("span", {
                                   className: E.P0,
-                                  children: (0, t.jsx)(T, { size: "md", color: u.A.colors.TEXT_DEFAULT }),
+                                  children: (0, t.jsx)(T, { size: "md", color: d.A.colors.TEXT_DEFAULT }),
                               }),
                           (0, t.jsx)("span", { className: E.HA, children: y }),
                       ],
@@ -55,7 +55,7 @@ function b(e) {
         k = i.useCallback(() => {
             null != s &&
                 null != n &&
-                (0, d.openModalLazy)(async () => {
+                (0, u.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([l.e("921903"), l.e("608939")]).then(l.bind(l, 181094));
                     return (l) => (0, t.jsx)(e, { ...l, channel: s, guild: n });
                 });
