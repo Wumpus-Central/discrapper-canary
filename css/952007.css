@@ -9411,19 +9411,19 @@
 }
 
 .theme-dark {
-    --guild-header-text-shadow: 0 1px 1px hsl(var(--black-hsl)/0.4);
-    --elevation-stroke: 0 0 0 1px hsl(var(--primary-900-hsl)/0.15);
-    --elevation-low: 0 1px 0 hsl(var(--primary-900-hsl)/0.2), 0 1.5px 0 hsl(var(--primary-860-hsl)/0.05), 0 2px 0 hsl(var(--primary-900-hsl)/0.05);
-    --elevation-medium: 0 4px 4px hsl(var(--black-hsl)/0.16);
-    --elevation-high: 0 8px 16px hsl(var(--black-hsl)/0.24)
+    --guild-header-text-shadow: 0 1px 1px var(--opacity-black-40);
+    --elevation-stroke: 0 0 0 1px var(--opacity-black-16);
+    --elevation-low: 0 1px 0 var(--opacity-black-20), 0 1.5px 0 var(--opacity-black-4), 0 2px 0 var(--opacity-black-4);
+    --elevation-medium: 0 4px 4px var(--opacity-black-16);
+    --elevation-high: 0 8px 16px var(--opacity-black-24)
 }
 
 .theme-light {
-    --guild-header-text-shadow: 0 1px 1px hsl(var(--white-hsl)/0.4);
-    --elevation-stroke: 0 0 0 1px hsl(var(--primary-860-hsl)/0.08);
-    --elevation-low: 0 1px 0 hsl(var(--primary-860-hsl)/0.1), 0 1.5px 0 hsl(var(--primary-900-hsl)/0.025), 0 2px 0 hsl(var(--primary-860-hsl)/0.025);
-    --elevation-medium: 0 4px 4px hsl(var(--black-hsl)/0.08);
-    --elevation-high: 0 8px 16px hsl(var(--black-hsl)/0.16)
+    --guild-header-text-shadow: 0 1px 1px var(--opacity-white-40);
+    --elevation-stroke: 0 0 0 1px var(--opacity-black-8);
+    --elevation-low: 0 1px 0 var(--opacity-black-12), 0 1.5px 0 var(--opacity-black-4), 0 2px 0 var(--opacity-black-4);
+    --elevation-medium: 0 4px 4px var(--opacity-black-8);
+    --elevation-high: 0 8px 16px var(--opacity-black-16)
 }
 
 @font-face {
@@ -10272,4 +10272,4 @@
     --motion-spring-subtle-duration: 598ms
 }
 
-/*# sourceMappingURL=952007.0621ec08f90c42e2.css.map*/
+/*# sourceMappingURL=952007.99057f78b73bed26.css.map*/
