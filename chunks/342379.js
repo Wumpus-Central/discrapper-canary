@@ -1,5 +1,6 @@
 e.exports = {
     af: "categoryItem_b9ee0c",
+    a$: "categoryPill_b9ee0c",
     ZG: "categoryItemGuildCategory_b9ee0c categoryItem_b9ee0c",
     Bj: "categoryItemDefaultCategory_b9ee0c categoryItem_b9ee0c",
     Yl: "categoryIcon_b9ee0c",

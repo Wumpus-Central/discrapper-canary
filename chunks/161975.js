@@ -1,6 +1,7 @@
 e.exports = {
     jv: "categoryList__3ad28",
     _0: "stickerCategory__3ad28",
+    a$: "categoryPill__3ad28",
     ND: "firstPartyCategory__3ad28",
     Ms: "firstPartyCategorySelected__3ad28",
     k1: "stickerCategoryGenericSelected__3ad28",

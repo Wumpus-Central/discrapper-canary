@@ -287,7 +287,15 @@
     cursor: pointer;
     height: var(--custom-stickers-constants-sticker-category-icon-size);
     margin-bottom: var(--custom-stickers-constants-sticker-category-icon-margin);
+    position: relative;
     width: var(--custom-stickers-constants-sticker-category-icon-size)
+}
+
+.categoryPill__3ad28 {
+    inset-block: 0;
+    inset-inline-start: calc(var(--space-8)*-1);
+    pointer-events: none;
+    position: absolute
 }
 
 .firstPartyCategory__3ad28:hover {
@@ -452,4 +460,4 @@
     margin: auto 2px
 }
 
-/*# sourceMappingURL=195719.ec936de5fd3b7911.css.map*/
+/*# sourceMappingURL=195719.67f93c3b94b536d4.css.map*/

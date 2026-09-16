@@ -5,4 +5,5 @@ _.exports = {
     RK: "visible__58105",
     yo: "hovered__58105",
     wH: "selected__58105",
+    EX: "small__58105",
 };

@@ -632,6 +632,7 @@ let e1 = (0, F.Fe)({
             n.e("196063"),
             n.e("392028"),
             n.e("124054"),
+            n.e("441674"),
             n.e("419656"),
             n.e("67702"),
             n.e("702154"),
@@ -686,7 +687,6 @@ let e1 = (0, F.Fe)({
             n.e("567999"),
             n.e("156032"),
             n.e("267526"),
-            n.e("441674"),
             n.e("554669"),
             n.e("281342"),
             n.e("400088"),
@@ -990,7 +990,7 @@ function e3(e) {
         children: (0, i.jsx)(W.A, { className: e0.dx, obscured: !0 === A, children: h }),
     });
 }
-function e6(e) {
+function e5(e) {
     let { clientId: t, platformType: n, platformName: a } = e,
         s = (0, I.bG)([U.A], () => U.A.getApplication(t), [t]),
         l = (0, I.bG)([$.default, X.default], () => (null != $.default.getId() ? X.default.getCurrentUser() : null)),
@@ -1057,7 +1057,7 @@ function e6(e) {
         })
     );
 }
-function e5(e) {
+function e6(e) {
     let { platformType: t, platformName: n, connectedAccount: r, applicationName: a } = e,
         s = (0, D.Ay)(),
         l = v.A.get(t),
@@ -1373,7 +1373,7 @@ function e7(e) {
         case null:
             return { label: en.intl.string(en.t.ZTNur7), body: (0, i.jsx)(e4, {}) };
         case "CONNECT_ACCOUNT":
-            ((t = (0, i.jsx)(e6, { clientId: A, platformType: e_, platformName: tc })),
+            ((t = (0, i.jsx)(e5, { clientId: A, platformType: e_, platformName: tc })),
                 (tE = !1),
                 (tA = !1),
                 (th = !1),
@@ -1405,7 +1405,7 @@ function e7(e) {
                 children: [
                     null != eG &&
                         ex &&
-                        (0, i.jsx)(e5, {
+                        (0, i.jsx)(e6, {
                             platformType: eG.type,
                             platformName: tc,
                             connectedAccount: eG,

@@ -47,8 +47,20 @@
     height: 40px
 }
 
+.small__58105 .item__58105 {
+    border-radius: 0 var(--radius-round) var(--radius-round) 0
+}
+
+.small__58105 .item__58105.hovered__58105 {
+    height: 10px
+}
+
+.small__58105 .item__58105.selected__58105 {
+    height: 24px
+}
+
 .enable-forced-colors .item__58105 {
     background-color: Highlight
 }
 
-/*# sourceMappingURL=441674.994194cf9cce2a81.css.map*/
+/*# sourceMappingURL=441674.932ffb36706e90f3.css.map*/

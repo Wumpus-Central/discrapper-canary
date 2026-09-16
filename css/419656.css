@@ -41,7 +41,15 @@
 }
 
 .categoryItem_b9ee0c {
-    cursor: pointer
+    cursor: pointer;
+    position: relative
+}
+
+.categoryPill_b9ee0c {
+    inset-block: 0;
+    inset-inline-start: calc(var(--space-8)*-1);
+    pointer-events: none;
+    position: absolute
 }
 
 .categoryItemGuildCategory_b9ee0c,
@@ -590,4 +598,4 @@
     fill: var(--interactive-text-default)
 }
 
-/*# sourceMappingURL=419656.b89ecc1d3fea8d13.css.map*/
+/*# sourceMappingURL=419656.f322a1a7af786201.css.map*/

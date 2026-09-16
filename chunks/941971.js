@@ -5,12 +5,20 @@ var i = n(503698),
     s = n.n(i),
     r = n(354001);
 function a(e) {
-    let { selected: t = !1, hovered: n = !1, unread: i = !1, disabled: a = !1, className: o, overlay: u = !1 } = e;
+    let {
+        selected: t = !1,
+        hovered: n = !1,
+        unread: i = !1,
+        disabled: a = !1,
+        className: o,
+        overlay: u = !1,
+        size: c = "medium",
+    } = e;
     ((t = !a && t), (n = !a && n), (i = !a && i));
-    let c = t || n || i;
+    let d = t || n || i;
     return (0, l.jsx)("div", {
-        className: s()(o, r.iE, { [r.Lw]: u }),
+        className: s()(o, r.iE, { [r.Lw]: u, [r.EX]: "small" === c }),
         "aria-hidden": !0,
-        children: (0, l.jsx)("span", { className: s()(r.AS, { [r.RK]: c, [r.yo]: n, [r.wH]: t }) }),
+        children: (0, l.jsx)("span", { className: s()(r.AS, { [r.RK]: d, [r.yo]: n, [r.wH]: t }) }),
     });
 }
