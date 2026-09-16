@@ -81,6 +81,11 @@
     transition: opacity .15s ease-out
 }
 
+.clickable__738c3 {
+    border-radius: var(--radius-xs);
+    cursor: pointer
+}
+
 .emptyState__91876 {
     display: flex;
     justify-content: center;
@@ -152,4 +157,4 @@
     transition: opacity .15s ease-out
 }
 
-/*# sourceMappingURL=d494018242ea4158.css.map*/
+/*# sourceMappingURL=b42699d033cc624a.css.map*/
