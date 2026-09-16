@@ -42,11 +42,11 @@ function g(e) {
             maxLength: y,
             error: T,
             warning: N,
-            trailing: R,
-            className: w,
+            trailing: w,
+            className: R,
             disabled: L = !1,
-            growWidth: P,
-            removeVerticalPadding: _,
+            growWidth: _,
+            removeVerticalPadding: P,
             textVariant: O,
             textColor: D,
             spellCheck: G,
@@ -58,7 +58,7 @@ function g(e) {
         H = t && l !== n,
         V = F ?? (H ? void 0 : T),
         B = "multiline" === S,
-        z = "default" === S ? { variant: "default", trailing: R } : { variant: S },
+        z = "default" === S ? { variant: "default", trailing: w } : { variant: S },
         Y = null != U && "" !== U,
         K = O ?? "text-sm/normal",
         X = {
@@ -75,18 +75,7 @@ function g(e) {
             disabled: L,
             spellCheck: G,
         },
-        q =
-            null != R
-                ? {
-                      icon: R.icon,
-                      "aria-label": R.label,
-                      "aria-haspopup": R.hasPopup,
-                      tooltip: R.tooltip,
-                      onClick: R.onClick,
-                      buttonRef: R.buttonRef,
-                      disabled: L || R.disabled,
-                  }
-                : void 0,
+        q = null != w ? { ...w, disabled: L || w.disabled } : void 0,
         Z = W
             ? (0, i.jsx)(o.A, {
                   inputRef: I,
@@ -109,10 +98,10 @@ function g(e) {
                   paddingInline: "compact" === S ? "sm" : "md",
                   placeholder: E,
                   preview: A,
-                  size: B || _ ? void 0 : "compact" === S ? "sm" : "md",
+                  size: B || P ? void 0 : "compact" === S ? "sm" : "md",
                   spellCheck: G,
                   textVariant: Y ? "inherit" : K,
-                  trailing: R,
+                  trailing: w,
                   value: n,
               })
             : B
@@ -126,9 +115,9 @@ function g(e) {
         editButtonRef: g,
         editButtonAriaLabel: v,
         onStartEditing: m,
-        className: w,
-        growWidth: P,
-        removeVerticalPadding: !W && _,
+        className: R,
+        growWidth: _,
+        removeVerticalPadding: !W && P,
         wrapperRef: f,
         onBlur: W ? void 0 : h,
         onKeyDown: W ? void 0 : p,

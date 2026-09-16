@@ -102,22 +102,15 @@ function j(e, t) {
     return null != t && e.length > t ? h.intl.formatToPlainString(h.t.ICT5S6, { maxLength: t }) : void 0;
 }
 function A(e) {
-    let { label: t, tooltip: n, hasPopup: l, ...s } = e;
+    let { tooltip: t, ...n } = e;
     return (0, i.jsx)("div", {
         className: p.L7,
         children: (0, i.jsx)(d.m, {
             asContainer: !0,
-            text: n ?? t,
+            text: t ?? n["aria-label"],
             ariaHidden: !0,
-            shouldShow: !s.disabled,
-            children: (0, i.jsx)(c.K, {
-                ...s,
-                type: "button",
-                size: "sm",
-                variant: "icon-only",
-                "aria-label": t,
-                "aria-haspopup": l,
-            }),
+            shouldShow: !n.disabled,
+            children: (0, i.jsx)(c.K, { ...n, type: "button", size: "sm", variant: "icon-only" }),
         }),
     });
 }
@@ -157,28 +150,28 @@ function v(e) {
             growWidth: T = !1,
             removeVerticalPadding: N = !1,
         } = e,
-        R = l.useRef(null),
-        w = l.useId(),
+        w = l.useRef(null),
+        R = l.useId(),
         L = l.useId(),
-        P = null == n,
-        _ = null != h,
-        O = null != I && !_,
-        D = _ ? "error" : O ? "warning" : null,
-        G = _ ? h : I,
+        _ = null == n,
+        P = null != h,
+        O = null != I && !P,
+        D = P ? "error" : O ? "warning" : null,
+        G = P ? h : I,
         M = null != D && null != G,
         [U] = l.useState(t),
         [W, F] = l.useState(!1);
     W || t === U || F(!0);
     let H = [];
-    (P && H.push(w), M && "compact" !== g && H.push(L));
+    (_ && H.push(R), M && "compact" !== g && H.push(L));
     let V = H.length > 0 ? H.join(" ") : void 0;
     function B() {
-        let { activeElement: e } = R.current?.ownerDocument ?? document;
+        let { activeElement: e } = w.current?.ownerDocument ?? document;
         ((0, a.vq)(e, HTMLElement) && e.blur(), u());
     }
     let z = (0, i.jsxs)("div", {
-        ref: R,
-        className: r()(p.LL, { [p.JD]: _, [p.xe]: O, [p.r9]: y }),
+        ref: w,
+        className: r()(p.LL, { [p.JD]: P, [p.xe]: O, [p.r9]: y }),
         onMouseDown: y
             ? void 0
             : function (e) {
@@ -186,9 +179,9 @@ function v(e) {
               },
         onClick: y ? void 0 : B,
         children: [
-            P
+            _
                 ? (0, i.jsx)(m.E, {
-                      id: w,
+                      id: R,
                       variant: b ?? "text-sm/normal",
                       color: k ?? "text-muted",
                       className: p.qf,
@@ -204,7 +197,7 @@ function v(e) {
                     onClick: (e) => {
                         (e.stopPropagation(), B());
                     },
-                    focusProps: { ringTarget: R },
+                    focusProps: { ringTarget: w },
                 }),
             null != f && (0, i.jsx)("div", { className: p.lD, children: (0, i.jsx)(A, { ...f }) }),
         ],

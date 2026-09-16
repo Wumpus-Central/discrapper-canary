@@ -3076,8 +3076,8 @@ function rj(e) {
         Y = {
             icon: nZ.V,
             tooltip: eR.intl.string(eR.t.lqKKI2),
-            label: eR.intl.string(eR.t["Wkg/CF"]),
-            hasPopup: "dialog",
+            "aria-label": eR.intl.string(eR.t["Wkg/CF"]),
+            "aria-haspopup": "dialog",
             onClick: K,
             buttonRef: q,
         },
