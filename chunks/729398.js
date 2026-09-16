@@ -102,7 +102,7 @@ var M = n(794782),
     en = n(404778),
     el = n(975807),
     ei = n(379257),
-    er = n(306537),
+    er = n(847599),
     es = n(36149),
     ea = n(975571),
     ed = n(418208),
@@ -815,9 +815,9 @@ var e0 = n(789645),
     e1 = n(81466),
     e7 = n(842241),
     e5 = n(279208),
-    e2 = n(747007),
+    e9 = n(747007),
     e4 = n(710358),
-    e9 = n(958590),
+    e2 = n(958590),
     e8 = n(174459),
     e3 = n(957565),
     e6 = n(673707);
@@ -829,10 +829,10 @@ function tn(e) {
         s = (0, a.bG)([b.A], () => b.A.getGuild(l), [l]),
         { channel_id: d, id: u } = n ?? {},
         c = (0, a.bG)(
-            [e9.A],
+            [e2.A],
             () => {
                 let e = d ?? r;
-                return null == e ? null : e9.A.getInvite(e);
+                return null == e ? null : e2.A.getInvite(e);
             },
             [d, r],
         );
@@ -879,7 +879,7 @@ function tn(e) {
             (0, i.jsxs)("div", {
                 className: e6.EZ,
                 children: [
-                    (0, i.jsx)(e2.I, {
+                    (0, i.jsx)(e9.I, {
                         value: m,
                         autoFocus: !1,
                         onCopy: function (e) {

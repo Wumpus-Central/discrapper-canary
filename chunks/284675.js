@@ -3664,7 +3664,7 @@ function nj() {
     return 0 === i.length ? null : (0, r.jsx)(tX, { className: tQ.nd, columns: c, rowClassName: ng.nM, data: s });
 }
 var nf = a(379257),
-    nb = a(306537),
+    nb = a(847599),
     ny = a(486866);
 function nE() {
     return (0, r.jsx)("div", {

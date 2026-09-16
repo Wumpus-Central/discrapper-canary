@@ -5,8 +5,8 @@ var t = l(477900),
     s = l.n(a),
     r = l(689175),
     c = l(66834),
-    d = l(379257),
-    u = l(306537),
+    u = l(379257),
+    d = l(847599),
     o = l(323073),
     A = l(506164),
     h = l(375708),
@@ -21,18 +21,12 @@ function m(e) {
             null != n && c.A.nsfwAgree(n.id);
         }, [n]),
         x = i.useCallback(() => {
-            d.A.showAgeVerificationGetStartedModal({ entryPoint: u.q1.NSFW_GUILD });
+            u.A.showAgeVerificationGetStartedModal({ entryPoint: d.q1.NSFW_GUILD });
         }, []),
-        f = {
-            ...r,
-            guildId: n?.id,
-            channelId: l,
-            disagreement: h.intl.string(h.t["/g10LC"]),
-            "data-testid": `age-gate-${a}`,
-        };
+        f = { ...r, guildId: n?.id, channelId: l, disagreement: h.intl.string(h.t["/g10LC"]) };
     switch (a) {
-        case u.A5.NSFW_CHANNEL_AGE_VERIFY:
-        case u.A5.GUILD_LARGE_SERVER:
+        case d.A5.NSFW_CHANNEL_AGE_VERIFY:
+        case d.A5.GUILD_LARGE_SERVER:
             return (0, t.jsx)(A.A, {
                 onAgree: x,
                 onDisagree: g,
