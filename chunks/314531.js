@@ -1,61 +1,61 @@
-a.d(t, { A: () => p });
-var i = a(477900),
-    n = a(582128),
-    l = a(503698),
-    s = a.n(l),
-    r = a(607470),
-    o = a(590251),
-    d = a(375708),
-    u = a(869006);
-function c(e) {
-    let { item: t, size: a } = e,
-        n = "exporting" === t.status,
-        l = "uploading" === t.status ? Math.round(100 * t.progress) : 25;
-    return (0, i.jsx)("div", {
-        className: s()(u.ring, u[a], { [u.indeterminate]: n }),
+n.d(a, { A: () => g });
+var t = n(477900),
+    i = n(582128),
+    l = n(503698),
+    s = n.n(l),
+    r = n(607470),
+    c = n(590251),
+    d = n(219222),
+    o = n(375708),
+    u = n(869006);
+function m(e) {
+    let { widgetClipId: a, size: n } = e,
+        i = Math.round(((0, d.Ib)(a) ?? 0) * 100);
+    return (0, t.jsx)("div", {
+        className: s()(u.ring, u[n]),
         role: "progressbar",
-        "aria-label": d.intl.string(d.t.RFRuwZ),
-        "aria-valuenow": n ? void 0 : l,
-        children: (0, i.jsx)(o.a, {
-            percent: l,
-            strokeSize: o.a.StrokeSizes.MEDIUM,
+        "aria-label": o.intl.string(o.t.RFRuwZ),
+        "aria-valuenow": i,
+        children: (0, t.jsx)(c.a, {
+            percent: i,
+            strokeSize: c.a.StrokeSizes.MEDIUM,
             colorOverride: "var(--icon-overlay-light)",
         }),
     });
 }
-var m = a(579460);
-function p(e) {
-    let { item: t, ringSize: a, isPlaying: l = !1, isMuted: o = !0, fit: d = "cover", onEnded: u, className: p } = e,
-        g = n.useRef(null),
-        h = "exporting" === t.status || "uploading" === t.status,
-        v = s()(m.Gt, { [m.ob]: h, [m.k6]: "contain" === d });
+var h = n(579460);
+function g(e) {
+    let { item: a, ringSize: n, isPlaying: l = !1, isMuted: c = !0, fit: d = "cover", onEnded: o, className: u } = e,
+        g = i.useRef(null),
+        p = "uploading" === a.status,
+        v = s()(h.Gt, { [h.ob]: p, [h.k6]: "contain" === d });
     return (
-        n.useEffect(() => {
+        i.useEffect(() => {
             let e = g.current;
-            null != e && (e.muted = o);
-        }, [o]),
-        n.useEffect(() => {
+            null != e && (e.muted = c);
+        }, [c]),
+        i.useEffect(() => {
             let e = g.current;
             null != e && (l ? e.play().catch(() => {}) : e.pause());
-        }, [l, t.key]),
-        (0, i.jsxs)("div", {
-            className: s()(m.$_, p),
+        }, [l, a.key]),
+        (0, t.jsxs)("div", {
+            className: s()(h.$_, u),
             children: [
-                "saved" === t.status
-                    ? null != t.videoURL
-                        ? (0, i.jsx)(r.A, {
+                "saved" === a.status
+                    ? null != a.videoURL
+                        ? (0, t.jsx)(r.A, {
                               ref: g,
-                              src: t.videoURL,
-                              poster: t.thumbnailURL,
+                              src: a.videoURL,
+                              poster: a.thumbnailURL,
                               preload: "none",
                               muted: !0,
-                              loop: null == u,
-                              onEnded: u,
+                              loop: null == o,
+                              onEnded: o,
                               className: v,
                           })
                         : null
-                    : (0, i.jsx)("img", { src: t.thumbnail, alt: "", className: v, loading: "lazy" }),
-                h && (0, i.jsx)(c, { item: t, size: a }),
+                    : (0, t.jsx)("img", { src: a.thumbnail, alt: "", className: v, loading: "lazy" }),
+                p && (0, t.jsx)(m, { widgetClipId: a.key, size: n }),
             ],
         })
     );

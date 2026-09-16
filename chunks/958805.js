@@ -58,7 +58,7 @@ let d = {
             await i.Bo.put({
                 url: r,
                 body: e,
-                headers: { "Content-Type": l.$ },
+                headers: { "Content-Type": l.$S },
                 onRequestProgress: (e) => {
                     "upload" === e.direction && e.total > 0 && t?.(e.loaded / e.total);
                 },

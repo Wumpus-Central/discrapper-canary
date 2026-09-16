@@ -15,22 +15,6 @@
     width: 16px
 }
 
-.indeterminate_ddf8f1 {
-    animation: spin_ddf8f1 1s linear infinite
-}
-
-@keyframes spin_ddf8f1 {
-    to {
-        rotate: 1turn
-    }
-}
-
-@media (prefers-reduced-motion:reduce) {
-    .indeterminate_ddf8f1 {
-        animation: none
-    }
-}
-
 .media__4e703 {
     background-color: var(--background-base-lowest);
     overflow: hidden;
@@ -59,4 +43,4 @@
     scale: 1.1
 }
 
-/*# sourceMappingURL=104864.66cb731940ead36e.css.map*/
+/*# sourceMappingURL=104864.c41481b52f05ea10.css.map*/

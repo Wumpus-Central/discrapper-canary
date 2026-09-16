@@ -1,64 +1,41 @@
-n.d(t, {
-    $Q: () => c,
-    Eo: () => d,
-    JC: () => E,
-    SG: () => h,
-    UE: () => u,
-    UQ: () => _,
-    nE: () => o,
-    ox: () => A,
-    vQ: () => I,
-});
+n.d(t, { Fj: () => o, Ib: () => c, _V: () => u, cG: () => d, vQ: () => _, yf: () => l });
 var i = n(196765),
     r = n(314116),
     a = n(375708);
-let s = (0, i.v)(() => ({ localClips: new Map() })),
-    l = new Map();
-function o(e, t) {
-    s.setState((n) => ({ localClips: new Map(n.localClips).set(e, t) }));
+let s = (0, i.v)(() => ({ attempts: new Map() }));
+function l(e, t) {
+    s.setState((n) => ({ attempts: new Map(n.attempts).set(e, { controller: t, progress: 0 }) }));
 }
-function d(e, t) {
+function o(e, t) {
     s.setState((n) => {
-        let i = n.localClips.get(e);
-        return i?.status !== "uploading" ? n : { localClips: new Map(n.localClips).set(e, { ...i, progress: t }) };
+        let i = n.attempts.get(e);
+        return null == i ? n : { attempts: new Map(n.attempts).set(e, { ...i, progress: t }) };
+    });
+}
+function d(e) {
+    s.setState((t) => {
+        if (!t.attempts.has(e)) return t;
+        let n = new Map(t.attempts);
+        return (n.delete(e), { attempts: n });
     });
 }
 function c(e) {
-    for (let t of s.getState().localClips.values()) if (t.clip.id === e) return !0;
-    return !1;
+    return s((t) => t.attempts.get(e)?.progress);
 }
 function u(e) {
-    s.setState((t) => {
-        let n = new Map(t.localClips);
-        return (n.delete(e), { localClips: n });
-    });
+    (s.getState().attempts.get(e)?.controller.abort(), d(e));
 }
-function _() {
-    return s((e) => e.localClips);
-}
-function E(e, t) {
-    l.set(e, t);
-}
-function A(e) {
-    l.delete(e);
-}
-function h(e) {
-    (l.get(e)?.abort(), l.delete(e), u(e));
-}
-function I(e) {
+function _(e) {
     return (
-        !!(function () {
-            for (let e of s.getState().localClips.values()) if ("uploaded" !== e.status) return !0;
-            return !1;
-        })() &&
+        s.getState().attempts.size > 0 &&
         ((0, r.A)({
             title: a.intl.string(a.t.PqpqTp),
             subtitle: a.intl.string(a.t.ByJmnc),
             confirmText: a.intl.string(a.t["ETE/oC"]),
             cancelText: a.intl.string(a.t["3ilveh"]),
             onConfirm: () => {
-                for (let [e, t] of s.getState().localClips) "uploaded" !== t.status && h(e);
-                (l.clear(), s.setState({ localClips: new Map() }), e());
+                for (let e of s.getState().attempts.values()) e.controller.abort();
+                (s.setState({ attempts: new Map() }), e());
             },
         }),
         !0)

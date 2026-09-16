@@ -518,7 +518,7 @@ function ed(e) {
                         l.push(
                             (0, t.jsx)(ei, { userId: a.id, widget: s, onClick: A, ...e }, s.id ?? "personal-widget"),
                         );
-                    else if (s instanceof E.k) {
+                    else if (s instanceof E.kM) {
                         if (!b) continue;
                         let a = s.clips
                             .flatMap((e) =>

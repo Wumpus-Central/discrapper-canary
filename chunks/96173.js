@@ -62,7 +62,7 @@ function E() {
                         return (0, _.g0)();
                     case l.x.CLIPS_GALLERY:
                         if (!D || i.has(a)) return [];
-                        return new b.k({ clips: [] });
+                        return new b.kM({ clips: [] });
                     default:
                         if ((0, h.hL)(a)) {
                             if (i.has(a)) return [];

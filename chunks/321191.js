@@ -66,7 +66,7 @@ function x(e) {
         case s.x.PERSONAL:
             return new S.Tu({ id: e.id, header: e.data.header ?? "", sections: (0, S.wv)(e.data.sections) });
         case s.x.CLIPS_GALLERY:
-            return new m.k({
+            return new m.kM({
                 id: e.id,
                 clips: e.data.clips
                     .map((e) =>
@@ -109,7 +109,7 @@ function k(e) {
         }
         case s.x.CLIPS_GALLERY: {
             let { id: t, clips: n } = e;
-            return new m.k({ id: t, clips: n });
+            return new m.kM({ id: t, clips: n });
         }
         default:
             e.type;
