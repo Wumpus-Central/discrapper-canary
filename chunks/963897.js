@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => e4, Sb: () => e5, TC: () => e2, Hy: () => e6 });
+n.d(t, { Ay: () => te, Sb: () => e9, TC: () => e5, Hy: () => e7 });
 var i = n(477900),
     l = n(582128),
     s = n(503698),
@@ -19,8 +19,8 @@ var i = n(477900),
     x = n(793574),
     f = n(688810),
     I = n(531260),
-    _ = n(235986),
-    N = n(769015),
+    N = n(235986),
+    _ = n(769015),
     C = n(75678),
     b = n(832946),
     y = n(287809),
@@ -397,7 +397,7 @@ function eS(e) {
         {
             title: f,
             description: I,
-            discountDescription: _,
+            discountDescription: N,
         } = (function () {
             switch (A) {
                 case ec.Dmq.CANCELED:
@@ -461,7 +461,7 @@ function eS(e) {
                     (0, i.jsx)(eA, {
                         title: f,
                         description: I,
-                        discountDescription: _,
+                        discountDescription: N,
                         button: (0, O.ki)(t)
                             ? (0, i.jsx)(w.$, {
                                   variant: "expressive",
@@ -533,20 +533,166 @@ function eS(e) {
         ],
     });
 }
-var eT = n(97352),
-    ep = n(403581),
-    ex = n(866665),
-    ef = n(392943),
-    eI = n(511484),
-    e_ = n(811611),
-    eN = n(473702),
-    eC = n(858432),
-    eb = n(398932);
-let ey = { page: ec.liQ.USER_SETTINGS, section: ec.JJy.SETTINGS_PREMIUM, object: ec.ZSU.CARD };
-function ev(e) {
+var eT = n(866665),
+    ep = n(392943),
+    ex = n(267023);
+let ef = { page: ec.liQ.USER_SETTINGS, section: ec.JJy.SETTINGS_PREMIUM, object: ec.ZSU.CARD };
+function eI(e) {
+    let { premiumSubscription: t, discountInfo: n } = e;
+    if (null == n.duration || null == n.percentage) return null;
+    let l = (0, O.y8)(eu.gD.PREMIUM_MONTH_TIER_2, !1, !1, { currency: t.currency, paymentSourceId: t.paymentSourceId }),
+        s = (0, B.$g)(l.amount, l.currency),
+        r = Math.round(l.amount * (1 - n.percentage / 100)),
+        a = (0, B.$g)(r, l.currency);
+    return (0, i.jsxs)(i.Fragment, {
+        children: [
+            (0, i.jsx)(m.D, {
+                variant: "heading-xl/medium",
+                color: "text-strong",
+                children: et.intl.string(et.t["53BCd6"]),
+            }),
+            (0, i.jsx)(g.E, {
+                variant: "text-sm/medium",
+                color: "text-default",
+                children: et.intl.format(et.t.N43FMx, {
+                    numMonths: n.duration,
+                    discountedPrice: a,
+                    billingPeriod: et.intl.string(et.t.FPybU7),
+                    fullPrice: s,
+                }),
+            }),
+        ],
+    });
+}
+let eN = function (e) {
+    var t;
+    let { subscription: l, invoicePreview: s, isLoading: r, discountInfo: a, analyticsLocation: o } = e,
+        { analyticsLocations: u } = (0, f.Ay)(x.A.REFERRAL_INCENTIVE_DISCOUNT_SUBSCRIPTION_HEADER),
+        d = O.Ay.getPlanIdFromInvoice(l, s);
+    if ((0, b.m1)(d)) return null;
+    let c = O.Ay.isSwitchingPlansDisabled(l),
+        m = O.Ay.getSwitchingPlansDisabledMessage(l),
+        A =
+            null == (t = l.metadata?.active_discount_expires_at)
+                ? null
+                : et.intl.formatToPlainString(et.t.u8bQ1q, { expiryDate: new Date(t) });
+    return (0, i.jsx)("div", {
+        className: ex.b8,
+        children: (0, i.jsx)(k.h, {
+            color: "nitro-pink",
+            className: ex.YL,
+            children: (0, i.jsxs)("div", {
+                className: ex.vK,
+                children: [
+                    (0, i.jsxs)("div", {
+                        className: ex.Gp,
+                        children: [
+                            (0, i.jsx)(ep.A, {
+                                color: "currentcolor",
+                                className: ex.Ss,
+                                "aria-label": et.intl.string(et.t.lpNrPu),
+                            }),
+                            (0, i.jsx)(g.E, {
+                                className: ex.Sd,
+                                variant: "text-sm/medium",
+                                color: "text-strong",
+                                children: A,
+                            }),
+                        ],
+                    }),
+                    (0, i.jsx)("div", { className: ex.yF }),
+                    (0, i.jsxs)("div", {
+                        className: ex.IH,
+                        children: [
+                            (0, i.jsxs)("div", {
+                                className: ex.Tm,
+                                children: [
+                                    (0, i.jsx)(eI, { premiumSubscription: l, discountInfo: a }),
+                                    (0, i.jsx)("div", {
+                                        className: ex.Xc,
+                                        children: (0, i.jsxs)("div", {
+                                            className: ex.qK,
+                                            children: [
+                                                (0, i.jsx)(eT.m, {
+                                                    text: m,
+                                                    shouldShow: c && null != m,
+                                                    asContainer: !0,
+                                                    children: (0, i.jsx)(w.$, {
+                                                        variant: "expressive",
+                                                        disabled: c,
+                                                        text: et.intl.string(et.t["dylp/7"]),
+                                                        size: "md",
+                                                        onClick: () => {
+                                                            (0, C.A)({
+                                                                analyticsLocations: u,
+                                                                analyticsLocation: o,
+                                                                analyticsObject: ef,
+                                                                subscription: l,
+                                                            });
+                                                        },
+                                                    }),
+                                                }),
+                                                (0, i.jsx)(w.$, {
+                                                    variant: "secondary",
+                                                    size: "md",
+                                                    text: et.intl.string(et.t["ETE/oC"]),
+                                                    loading: r,
+                                                    onClick: function () {
+                                                        l.status !== ec.Dmq.CANCELED &&
+                                                            (0, V.openModalLazy)(async () => {
+                                                                let {
+                                                                    PremiumBrandRefreshSubscriptionCancellationModal: e,
+                                                                } = await Promise.all([
+                                                                    n.e("489361"),
+                                                                    n.e("216806"),
+                                                                    n.e("310734"),
+                                                                    n.e("384820"),
+                                                                    n.e("594161"),
+                                                                    n.e("435432"),
+                                                                    n.e("80347"),
+                                                                    n.e("680166"),
+                                                                ]).then(n.bind(n, 293061));
+                                                                return (t) =>
+                                                                    (0, i.jsx)(e, {
+                                                                        ...t,
+                                                                        premiumSubscription: l,
+                                                                        analyticsLocation: o,
+                                                                        analyticsLocations: u,
+                                                                        initialStep: void 0,
+                                                                    });
+                                                            });
+                                                    },
+                                                }),
+                                            ],
+                                        }),
+                                    }),
+                                ],
+                            }),
+                            (0, i.jsx)("img", {
+                                className: ex._e,
+                                src: "https://cdn.discordapp.com/assets/content/a049ba02a320347da76cabc59784a03df55c86b8d1baf507fda1c4400c4d9282.svg",
+                                alt: "",
+                                draggable: !1,
+                            }),
+                        ],
+                    }),
+                ],
+            }),
+        }),
+    });
+};
+var e_ = n(97352),
+    eC = n(403581),
+    eb = n(511484),
+    ey = n(811611),
+    ev = n(473702),
+    ej = n(858432),
+    eO = n(398932);
+let eL = { page: ec.liQ.USER_SETTINGS, section: ec.JJy.SETTINGS_PREMIUM, object: ec.ZSU.CARD };
+function eR(e) {
     let { premiumSubscription: t, discountInfo: n, invoicePreview: l, isDiscountActive: s } = e,
         r = O.Ay.getPlanIdFromInvoice(t, l),
-        a = eT.A.get(r);
+        a = e_.A.get(r);
     if (null == a || null == l || null == n || null == n.duration || null == n.percentage) return null;
     let o = l.invoiceItems.find((e) => {
         let { subscriptionPlanId: t } = e;
@@ -578,9 +724,9 @@ function ev(e) {
         ],
     });
 }
-function ej(e) {
+function eD(e) {
     let { discountOffer: t, premiumSubscription: n } = e,
-        l = (0, eI.tQ)(n, eu.gD.PREMIUM_MONTH_TIER_2, t);
+        l = (0, eb.tQ)(n, eu.gD.PREMIUM_MONTH_TIER_2, t);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(m.D, {
@@ -600,7 +746,7 @@ function ej(e) {
         ],
     });
 }
-let eO = function (e) {
+let eP = function (e) {
     let {
             subscription: t,
             invoicePreview: l,
@@ -637,58 +783,58 @@ let eO = function (e) {
         });
     }
     let A = O.Ay.getPlanIdFromInvoice(t, l),
-        E = (0, e_.ux)(u?.expiresAt?.toISOString());
+        E = (0, ey.ux)(u?.expiresAt?.toISOString());
     return (0, b.m1)(A)
         ? null
         : (0, i.jsx)("div", {
-              className: eC.S6,
+              className: ej.S6,
               children: (0, i.jsx)(k.h, {
                   color: "nitro-pink",
-                  className: eC.YL,
+                  className: ej.YL,
                   children: (0, i.jsxs)("div", {
-                      className: eC.mK,
+                      className: ej.mK,
                       children: [
                           (0, i.jsxs)("div", {
-                              className: eC.Gp,
+                              className: ej.Gp,
                               children: [
-                                  (0, i.jsx)(ef.A, {
+                                  (0, i.jsx)(ep.A, {
                                       color: "currentcolor",
-                                      className: eC.fJ,
+                                      className: ej.fJ,
                                       "aria-label": et.intl.string(et.t.lpNrPu),
                                   }),
                                   (0, i.jsx)(g.E, {
-                                      className: eC.tD,
+                                      className: ej.tD,
                                       variant: "text-sm/medium",
                                       color: "text-strong",
                                       children: null != u && E,
                                   }),
                               ],
                           }),
-                          (0, i.jsx)("div", { className: eC.T }),
+                          (0, i.jsx)("div", { className: ej.T }),
                           (0, i.jsxs)("div", {
-                              className: eC.ly,
+                              className: ej.ly,
                               children: [
                                   (0, i.jsxs)("div", {
-                                      className: eC.Yc,
+                                      className: ej.Yc,
                                       children: [
                                           null != u
-                                              ? (0, i.jsx)(ej, { discountOffer: u, premiumSubscription: t })
-                                              : (0, i.jsx)(ev, {
+                                              ? (0, i.jsx)(eD, { discountOffer: u, premiumSubscription: t })
+                                              : (0, i.jsx)(eR, {
                                                     premiumSubscription: t,
                                                     discountInfo: a ?? o,
                                                     invoicePreview: l,
                                                     isDiscountActive: null != a,
                                                 }),
                                           (0, i.jsx)("div", {
-                                              className: eC.e_,
+                                              className: ej.e_,
                                               children: (function () {
                                                   let e = O.Ay.isSwitchingPlansDisabled(t),
                                                       n = O.Ay.getSwitchingPlansDisabledMessage(t);
                                                   if (!O.Ay.isBaseSubscriptionCanceled(t))
                                                       return (0, i.jsxs)("div", {
-                                                          className: eC.qK,
+                                                          className: ej.qK,
                                                           children: [
-                                                              (0, i.jsx)(ex.m, {
+                                                              (0, i.jsx)(eT.m, {
                                                                   text: n,
                                                                   shouldShow: e && null != n,
                                                                   asContainer: !0,
@@ -701,7 +847,7 @@ let eO = function (e) {
                                                                           (0, C.A)({
                                                                               analyticsLocations: d,
                                                                               analyticsLocation: r,
-                                                                              analyticsObject: ey,
+                                                                              analyticsObject: eL,
                                                                               subscription: t,
                                                                           });
                                                                       },
@@ -725,18 +871,18 @@ let eO = function (e) {
                                                               : et.intl.string(et.t.zrCzVB);
                                                       return (0, i.jsx)(w.$, {
                                                           variant: "expressive",
-                                                          icon: ep.t,
+                                                          icon: eC.t,
                                                           size: "md",
                                                           text: e,
                                                           loading: s,
-                                                          onClick: () => m(eN.g.CONFIRM_DISCOUNT),
+                                                          onClick: () => m(ev.g.CONFIRM_DISCOUNT),
                                                       });
                                                   }
                                               })(),
                                           }),
                                       ],
                                   }),
-                                  (0, i.jsx)("img", { className: eC.Hp, src: eb.A, alt: "", draggable: !1 }),
+                                  (0, i.jsx)("img", { className: ej.Hp, src: eO.A, alt: "", draggable: !1 }),
                               ],
                           }),
                       ],
@@ -744,32 +890,32 @@ let eO = function (e) {
               }),
           });
 };
-var eL = n(284009),
-    eR = n.n(eL),
-    eD = n(607399),
-    eP = n(189213),
-    eG = n(683071),
-    eU = n(701273),
-    eM = n(277984),
-    eV = n(780964),
-    ek = n(766075),
-    ew = n(327479),
-    eF = n(601107),
-    eB = n(583690);
-let ez = [ec.Dmq.PAST_DUE, ec.Dmq.ACCOUNT_HOLD, ec.Dmq.BILLING_RETRY],
-    eX = (e) => {
+var eG = n(284009),
+    eU = n.n(eG),
+    eM = n(607399),
+    eV = n(189213),
+    ek = n(683071),
+    ew = n(701273),
+    eF = n(277984),
+    eB = n(780964),
+    ez = n(766075),
+    eX = n(327479),
+    eY = n(601107),
+    eH = n(583690);
+let eK = [ec.Dmq.PAST_DUE, ec.Dmq.ACCOUNT_HOLD, ec.Dmq.BILLING_RETRY],
+    eW = (e) => {
         let { transitionState: t, onClose: n, subscription: s, analyticsLocations: r, analyticsLocation: a } = e,
             [o, u] = l.useState(!1),
             [d, c] = l.useState(!1);
         async function g() {
             (u(!0), c(!1));
             try {
-                (await (0, eM.M2)(s.id, r, a),
+                (await (0, eF.M2)(s.id, r, a),
                     v.default.track(ec.HAw.GUILD_BOOST_PAST_DUE_CANCELLATION_FLOW_COMPLETED, {
                         subscription_id: s.id,
                         location_stack: r,
                     }),
-                    (0, eM.hP)(),
+                    (0, eF.hP)(),
                     n());
             } catch (e) {
                 (c(!0), u(!1));
@@ -791,17 +937,17 @@ let ez = [ec.Dmq.PAST_DUE, ec.Dmq.ACCOUNT_HOLD, ec.Dmq.BILLING_RETRY],
                 loading: o,
             },
         ];
-        return (0, i.jsx)(eP.Modal, {
+        return (0, i.jsx)(eV.Modal, {
             size: "md",
             transitionState: t,
             title: et.intl.string(et.t.LZunzZ),
             subtitle: et.intl.string(et.t.FClXh9),
             actions: m,
             onClose: async () => n(),
-            children: d ? (0, i.jsx)(eG.w, { type: "critical", children: et.intl.string(et.t["5mlOCW"]) }) : null,
+            children: d ? (0, i.jsx)(ek.w, { type: "critical", children: et.intl.string(et.t["5mlOCW"]) }) : null,
         });
     };
-function eY(e) {
+function eZ(e) {
     let t,
         {
             subscription: n,
@@ -812,39 +958,39 @@ function eY(e) {
         } = e,
         d = (0, u.bG)([y.default], () => {
             let e = y.default.getCurrentUser();
-            return (eR()(null != e, "GuildBoostingHeader: currentUser cannot be undefined"), e);
+            return (eU()(null != e, "GuildBoostingHeader: currentUser cannot be undefined"), e);
         }),
         { analyticsLocations: c } = (0, f.Ay)(x.A.GUILD_BOOSTING_SUBSCRIPTION_HEADER);
     if (0 === (0, O.bx)(n.additionalPlans)) return null;
     let { status: m } = n,
         A = (0, O.$k)(n),
-        E = !A && n.isBoostOnly && ez.includes(n.status);
-    if (A) t = eB.v2;
+        E = !A && n.isBoostOnly && eK.includes(n.status);
+    if (A) t = eH.v2;
     else
         switch (m) {
             case ec.Dmq.PAST_DUE:
             case ec.Dmq.ACCOUNT_HOLD:
             case ec.Dmq.BILLING_RETRY:
-                t = eB.P7;
+                t = eH.P7;
                 break;
             case ec.Dmq.PAUSE_PENDING:
             case ec.Dmq.PAUSED:
-                t = n.pauseReason !== eF.qf.FRACTIONAL_PREMIUM ? eB.C7 : eB.wG;
+                t = n.pauseReason !== eY.qf.FRACTIONAL_PREMIUM ? eH.C7 : eH.wG;
                 break;
             default:
-                t = eB.wG;
+                t = eH.wG;
         }
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)("div", {
-                className: r()(t, eB.Qn),
+                className: r()(t, eH.Qn),
                 children: [
-                    (0, i.jsx)("div", { className: eB.Kq }),
-                    (0, i.jsx)("div", { className: eB.OL }),
+                    (0, i.jsx)("div", { className: eH.Kq }),
+                    (0, i.jsx)("div", { className: eH.OL }),
                     (0, i.jsxs)("div", {
-                        className: eB.eC,
+                        className: eH.eC,
                         children: [
-                            (0, i.jsx)("div", { className: r()(eB.Ab, { [eB.aD]: A }) }),
+                            (0, i.jsx)("div", { className: r()(eH.Ab, { [eH.aD]: A }) }),
                             (0, i.jsx)("div", {
                                 children: (0, O.Uf)({
                                     subscription: n,
@@ -857,18 +1003,18 @@ function eY(e) {
                     }),
                     a &&
                         (0, i.jsxs)("div", {
-                            className: eB.BQ,
+                            className: eH.BQ,
                             children: [
                                 E &&
                                     (0, i.jsx)("div", {
-                                        className: eB.x7,
+                                        className: eH.x7,
                                         children: (0, i.jsx)(Q.Q, {
                                             variant: "always-white",
                                             onClick: function () {
-                                                ez.includes(n.status) &&
+                                                eK.includes(n.status) &&
                                                     (0, V.openModalLazy)(
                                                         async () => (e) =>
-                                                            (0, i.jsx)(eX, {
+                                                            (0, i.jsx)(eW, {
                                                                 ...e,
                                                                 subscription: n,
                                                                 analyticsLocations: c,
@@ -880,8 +1026,8 @@ function eY(e) {
                                             text: et.intl.string(et.t["ETE/oC"]),
                                         }),
                                     }),
-                                (0, i.jsx)(ew.A, {
-                                    onClick: () => (0, ek.openUserSettings)(eV.X.PREMIUM_GUILD_SUBSCRIPTIONS_PANEL),
+                                (0, i.jsx)(eX.A, {
+                                    onClick: () => (0, ez.openUserSettings)(eB.X.PREMIUM_GUILD_SUBSCRIPTIONS_PANEL),
                                     text: et.intl.string(et.t["NQ5g/U"]),
                                 }),
                             ],
@@ -890,31 +1036,31 @@ function eY(e) {
             }),
             !a &&
                 (0, i.jsx)(g.E, {
-                    className: eB.yW,
+                    className: eH.yW,
                     variant: "text-sm/normal",
-                    children: et.intl.format(eD.Fr ? et.t.uxYBEa : et.t.k6haR9, {
-                        openAppHook: () => (0, eU.A)("app"),
+                    children: et.intl.format(eM.Fr ? et.t.uxYBEa : et.t.k6haR9, {
+                        openAppHook: () => (0, ew.A)("app"),
                     }),
                 }),
         ],
     });
 }
-var eH = n(983048),
-    eK = n(951555),
-    eW = n(28863),
-    eZ = n(109681);
-function eq(e) {
+var eq = n(983048),
+    eQ = n(951555),
+    eJ = n(28863),
+    e$ = n(109681);
+function e0(e) {
     let { subscription: t, renewalMutations: l, className: s, analyticsLocation: a } = e,
         o = (0, I.A)(),
         u = t.currentPeriodEnd;
     return (
         o.fractionalState === eu.xc.FP_SUB_PAUSED && (u = o.endsAt.toDate()),
         (0, i.jsxs)("div", {
-            className: r()(eZ.zr, s),
+            className: r()(e$.zr, s),
             children: [
-                (0, i.jsx)(c.E, { size: "custom", width: 20, height: 20, color: "currentColor", className: eZ.G }),
+                (0, i.jsx)(c.E, { size: "custom", width: 20, height: 20, color: "currentColor", className: e$.G }),
                 (0, i.jsx)("div", {
-                    className: eZ.Qq,
+                    className: e$.Qq,
                     children: et.intl.format(et.t.ar1cPl, {
                         planName: t.hasExternalPlanChange ? (0, O.OU)(l) : O.Ay.getDisplayName(l.planId),
                         date: u,
@@ -922,7 +1068,7 @@ function eq(e) {
                 }),
                 t.isPurchasedExternally
                     ? null
-                    : (0, i.jsx)(eW.Anchor, {
+                    : (0, i.jsx)(eJ.Anchor, {
                           onClick: (e) => {
                               (e.preventDefault(),
                                   (0, V.openModalLazy)(async () => {
@@ -936,51 +1082,51 @@ function eq(e) {
                                           });
                                   }));
                           },
-                          className: eZ.Lu,
+                          className: e$.Lu,
                           children: et.intl.string(et.t["ETE/oC"]),
                       }),
             ],
         })
     );
 }
-var eQ = n(72536);
-function eJ() {
+var e1 = n(72536);
+function e2() {
     return (
         l.useEffect(() => {
             v.default.track(ec.HAw.TOOLTIP_VIEWED, { type: "subscription_settings_missing_payment_method" });
         }, []),
         (0, i.jsxs)("div", {
-            className: eQ.Zz,
+            className: e1.Zz,
             children: [
                 (0, i.jsx)(c.E, {
                     size: "custom",
                     width: 20,
                     height: 20,
-                    className: eQ.Sh,
+                    className: e1.Sh,
                     color: d.A.unsafe_rawColors.YELLOW_260.css,
                 }),
-                (0, i.jsx)(g.E, { className: eQ.Cy, variant: "text-sm/normal", children: et.intl.string(et.t.xFHEMa) }),
+                (0, i.jsx)(g.E, { className: e1.Cy, variant: "text-sm/normal", children: et.intl.string(et.t.xFHEMa) }),
             ],
         })
     );
 }
-function e$() {
+function e3() {
     return (
         l.useEffect(() => {
             v.default.track(ec.HAw.TOOLTIP_VIEWED, { type: "subscription_settings_invalid_payment_method" });
         }, []),
         (0, i.jsxs)("div", {
-            className: eQ.Zz,
+            className: e1.Zz,
             children: [
                 (0, i.jsx)(c.E, {
                     size: "custom",
                     width: 20,
                     height: 20,
-                    className: eQ.Sh,
+                    className: e1.Sh,
                     color: d.A.unsafe_rawColors.RED_360.css,
                 }),
                 (0, i.jsx)(g.E, {
-                    className: eQ.Cy,
+                    className: e1.Cy,
                     variant: "text-sm/normal",
                     children: et.intl.string(et.t["j+nuQZ"]),
                 }),
@@ -988,7 +1134,7 @@ function e$() {
         })
     );
 }
-function e0(e) {
+function e6(e) {
     let { daysPastDue: t, subscription: n, openInvoiceId: s } = e,
         { analyticsLocations: r } = (0, f.Ay)(x.A.PAST_DUE_ONE_TIME_PAYMENT_METHOD_BANNER);
     return (
@@ -996,17 +1142,17 @@ function e0(e) {
             v.default.track(ec.HAw.TOOLTIP_VIEWED, { type: "subscription_settings_invalid_payment_method" });
         }, []),
         (0, i.jsxs)("div", {
-            className: eQ.Zz,
+            className: e1.Zz,
             children: [
                 (0, i.jsx)(c.E, {
                     size: "custom",
                     width: 20,
                     height: 20,
-                    className: eQ.Sh,
+                    className: e1.Sh,
                     color: d.A.unsafe_rawColors.YELLOW_260.css,
                 }),
                 (0, i.jsx)(g.E, {
-                    className: eQ.Cy,
+                    className: e1.Cy,
                     variant: "text-sm/normal",
                     children: et.intl.format(et.t["0nbf/G"], {
                         daysPastDue: t,
@@ -1019,40 +1165,40 @@ function e0(e) {
         })
     );
 }
-function e1(e) {
+function e4(e) {
     let { subscription: t, renewalInvoicePreview: n, openInvoice: l, className: s, fractionalPremiumInfo: a } = e;
     return (0, i.jsxs)("div", {
-        className: r()(eQ.KF, s),
+        className: r()(e1.KF, s),
         children: [
             (0, i.jsx)(m.D, {
                 variant: "heading-md/semibold",
-                className: eQ.QL,
+                className: e1.QL,
                 children: et.intl.string(et.t.KXQjfc),
             }),
             (0, i.jsx)("div", { children: O.Ay.getBillingInformationString(t, n, l, !1, a) }),
         ],
     });
 }
-function e2() {
+function e5() {
     let e = (0, u.bG)([y.default], () => y.default.getCurrentUser()),
         t = null != e && e.isPremiumGroupMember();
     return (0, i.jsxs)("div", {
         children: [
             (0, i.jsx)(m.D, {
                 variant: "heading-lg/semibold",
-                className: eQ.Gf,
+                className: e1.Gf,
                 children: et.intl.string(et.t["/gs+Pz"]),
             }),
-            (0, i.jsx)("p", { className: eQ.yV, children: et.intl.string(et.t.D8UpUo) }),
+            (0, i.jsx)("p", { className: e1.yV, children: et.intl.string(et.t.D8UpUo) }),
             !t &&
                 (0, i.jsx)(A.Z, {
-                    className: eQ.wb,
+                    className: e1.wb,
                     type: A.Z.Types.CUSTOM,
-                    children: (0, i.jsxs)(_.A, {
-                        align: _.A.Align.CENTER,
+                    children: (0, i.jsxs)(N.A, {
+                        align: N.A.Align.CENTER,
                         children: [
-                            (0, i.jsx)(N.A, { game: null, size: N.M.SMALL, className: eQ.pV }),
-                            (0, i.jsx)("span", { className: eQ.O, children: et.intl.string(et.t.xCRgr1) }),
+                            (0, i.jsx)(_.A, { game: null, size: _.M.SMALL, className: e1.pV }),
+                            (0, i.jsx)("span", { className: e1.O, children: et.intl.string(et.t.xCRgr1) }),
                         ],
                     }),
                 }),
@@ -1060,138 +1206,152 @@ function e2() {
         ],
     });
 }
-function e3(e) {
-    let {
-            subscription: t,
-            analyticsLocation: n,
-            paymentSource: l,
-            busy: s,
-            fromStandaloneBillingPage: a,
-            showInvalidPaymentMethod: o,
-            showNoPaymentMethod: u,
-            fetchedCurrentInvoicePreview: d,
-            fetchedRenewalInvoicePreview: c,
-            fetchedOpenInvoice: g,
-            isPremiumGroup: m,
+function e8(e) {
+    let t,
+        {
+            subscription: n,
+            analyticsLocation: l,
+            paymentSource: s,
+            busy: a,
+            fromStandaloneBillingPage: o,
+            showInvalidPaymentMethod: u,
+            showNoPaymentMethod: d,
+            fetchedCurrentInvoicePreview: c,
+            fetchedRenewalInvoicePreview: g,
+            fetchedOpenInvoice: m,
+            isPremiumGroup: A,
         } = e,
-        { analyticsLocations: A } = (0, f.Ay)(x.A.SUBSCRIPTION_DETAILS),
-        T = null != d ? {} : { subscriptionId: t.id, renewal: !0, analyticsLocations: A, analyticsLocation: n },
-        [p] = (0, R.YV)(T);
-    p = d ?? p;
+        { analyticsLocations: T } = (0, f.Ay)(x.A.SUBSCRIPTION_DETAILS),
+        p = null != c ? {} : { subscriptionId: n.id, renewal: !0, analyticsLocations: T, analyticsLocation: l },
+        [N] = (0, R.YV)(p);
+    N = c ?? N;
     let _ =
-            null != c
+            null != g
                 ? {}
                 : {
-                      subscriptionId: t.id,
+                      subscriptionId: n.id,
                       renewal: !0,
                       applyEntitlements: !0,
-                      analyticsLocations: A,
-                      analyticsLocation: n,
+                      analyticsLocations: T,
+                      analyticsLocation: l,
                   },
-        [N] = (0, R.YV)(_);
-    N = c ?? N;
-    let C = (0, I.A)(),
-        b = (0, G.p)(),
-        y = (0, D.nf)(),
-        v = O.Ay.isBaseSubscriptionCanceled(t),
-        j = (function (e, t) {
-            let n = eT.A.get(e.premiumPlanIdFromItems ?? "");
+        [C] = (0, R.YV)(_);
+    C = g ?? C;
+    let b = (0, I.A)(),
+        y = (0, G.p)(),
+        v = (0, D.nf)(),
+        j = O.Ay.isBaseSubscriptionCanceled(n),
+        P = (function (e, t) {
+            let n = e_.A.get(e.premiumPlanIdFromItems ?? "");
             if (null != n) {
                 let i = (0, L._w)(n, t?.id, !1),
                     l = i.length > 0 ? i[0] : e.currency;
                 if (1 === i.length && t?.id === e.paymentSourceId && (0, L.jJ)(n.id, l, t?.id)) return !0;
             }
             return !1;
-        })(t, l);
-    if (null == p || null == N) return (0, i.jsx)(E.y, {});
-    let P = j ? (0, D.Bv)(N) : null,
-        U = null != P || (null != y && (y.discountId === eu.q || y.discountId === eu.EG)),
-        M =
-            j && ((v && null != b) || (!v && U))
-                ? (0, i.jsx)(eO, {
-                      subscription: t,
-                      invoicePreview: N,
-                      paymentSource: l,
-                      discountOffer: b,
-                      renewalChurnDiscountInfo: P,
-                      discountInfo: y,
-                      isLoading: s,
-                      analyticsLocation: n,
+        })(n, s);
+    if (null == N || null == C) return (0, i.jsx)(E.y, {});
+    let U = P ? (0, D.Bv)(C) : null,
+        M = null != U || (null != v && (v.discountId === eu.q || v.discountId === eu.EG)),
+        V = !j && null != v && v.discountId === eu.sC,
+        k = P && ((j && null != y) || (!j && M));
+    return (
+        (t =
+            V && null != v
+                ? (0, i.jsx)(eN, {
+                      subscription: n,
+                      invoicePreview: C,
+                      paymentSource: s,
+                      discountInfo: v,
+                      isLoading: a,
+                      analyticsLocation: l,
                   })
-                : (0, i.jsx)(eH.A, {
-                      subscription: t,
-                      currentInvoicePreview: p,
-                      renewalInvoicePreview: N,
-                      paymentSource: l,
-                      busy: s,
-                      analyticsLocation: n,
-                  });
-    return (0, i.jsxs)(i.Fragment, {
-        children: [
-            (0, i.jsxs)("div", {
-                className: eQ.fj,
-                children: [
-                    !m && M,
-                    (0, i.jsx)(eY, {
-                        subscription: t,
-                        renewalInvoicePreview: p,
-                        fromStandaloneBillingPage: a,
-                        fractionalPremiumInfo: C,
-                        analyticsLocation: n,
-                    }),
-                ],
-            }),
-            (0, i.jsx)("div", {
-                children: (0, i.jsx)(h.n, {
-                    label: et.intl.string(et.t.Sb6wI1),
-                    children: (0, i.jsxs)("div", {
-                        className: eQ.zH,
-                        children: [
-                            (0, i.jsx)(e1, {
-                                subscription: t,
-                                renewalInvoicePreview: N,
-                                className: eQ.g4,
-                                fractionalPremiumInfo: C,
-                                openInvoice: g,
-                            }),
-                            (0, i.jsx)("div", {
-                                className: r()(eQ.g4, { [eQ.sE]: o }),
-                                children: (0, i.jsx)(S.D, {
-                                    label:
-                                        t.isPurchasedExternally && null != t.paymentGateway
-                                            ? et.intl.formatToPlainString(et.t["rTk9v/"], {
-                                                  paymentGatewayName: ec.qmC[t.paymentGateway],
-                                              })
-                                            : et.intl.string(et.t.iRzXKd),
-                                    children: (0, i.jsx)(eK.A, {
-                                        subscription: t,
-                                        onPaymentSourceAdded: L.c_,
-                                        highlightAddPaymentMethodButton: u || o,
-                                        analyticsLocation: n,
-                                        currentInvoicePreview: p,
-                                        openInvoice: g,
+                : k
+                  ? (0, i.jsx)(eP, {
+                        subscription: n,
+                        invoicePreview: C,
+                        paymentSource: s,
+                        discountOffer: y,
+                        renewalChurnDiscountInfo: U,
+                        discountInfo: v,
+                        isLoading: a,
+                        analyticsLocation: l,
+                    })
+                  : (0, i.jsx)(eq.A, {
+                        subscription: n,
+                        currentInvoicePreview: N,
+                        renewalInvoicePreview: C,
+                        paymentSource: s,
+                        busy: a,
+                        analyticsLocation: l,
+                    })),
+        (0, i.jsxs)(i.Fragment, {
+            children: [
+                (0, i.jsxs)("div", {
+                    className: e1.fj,
+                    children: [
+                        !A && t,
+                        (0, i.jsx)(eZ, {
+                            subscription: n,
+                            renewalInvoicePreview: N,
+                            fromStandaloneBillingPage: o,
+                            fractionalPremiumInfo: b,
+                            analyticsLocation: l,
+                        }),
+                    ],
+                }),
+                (0, i.jsx)("div", {
+                    children: (0, i.jsx)(h.n, {
+                        label: et.intl.string(et.t.Sb6wI1),
+                        children: (0, i.jsxs)("div", {
+                            className: e1.zH,
+                            children: [
+                                (0, i.jsx)(e4, {
+                                    subscription: n,
+                                    renewalInvoicePreview: C,
+                                    className: e1.g4,
+                                    fractionalPremiumInfo: b,
+                                    openInvoice: m,
+                                }),
+                                (0, i.jsx)("div", {
+                                    className: r()(e1.g4, { [e1.sE]: u }),
+                                    children: (0, i.jsx)(S.D, {
+                                        label:
+                                            n.isPurchasedExternally && null != n.paymentGateway
+                                                ? et.intl.formatToPlainString(et.t["rTk9v/"], {
+                                                      paymentGatewayName: ec.qmC[n.paymentGateway],
+                                                  })
+                                                : et.intl.string(et.t.iRzXKd),
+                                        children: (0, i.jsx)(eQ.A, {
+                                            subscription: n,
+                                            onPaymentSourceAdded: L.c_,
+                                            highlightAddPaymentMethodButton: d || u,
+                                            analyticsLocation: l,
+                                            currentInvoicePreview: N,
+                                            openInvoice: m,
+                                        }),
                                     }),
                                 }),
-                            }),
-                        ],
+                            ],
+                        }),
                     }),
                 }),
-            }),
-        ],
-    });
+            ],
+        })
+    );
 }
-let e6 = new Set([ec.Dmq.ACTIVE, ec.Dmq.PAST_DUE, ec.Dmq.CANCELED, ec.Dmq.PAUSE_PENDING, ec.Dmq.PAUSED]);
-function e5() {
+let e7 = new Set([ec.Dmq.ACTIVE, ec.Dmq.PAST_DUE, ec.Dmq.CANCELED, ec.Dmq.PAUSE_PENDING, ec.Dmq.PAUSED]);
+function e9() {
     return (
         l.useEffect(() => {
             v.default.track(ec.HAw.TOOLTIP_VIEWED, { type: "subscription_settings_duplicate_subscriptions" });
         }, []),
         (0, i.jsxs)("div", {
-            className: eQ.oU,
+            className: e1.oU,
             children: [
                 (0, i.jsx)(c.E, { size: "custom", width: 20, height: 20, color: d.A.unsafe_rawColors.RED_360.css }),
                 (0, i.jsx)(g.E, {
-                    className: eQ.dk,
+                    className: e1.dk,
                     variant: "text-sm/normal",
                     children: et.intl.format(et.t["6eXiiC"], { helpCenterLink: j.A.getArticleURL(ec.MVz.NITRO) }),
                 }),
@@ -1199,7 +1359,7 @@ function e5() {
         })
     );
 }
-function e4(e) {
+function te(e) {
     let t,
         {
             subscription: n,
@@ -1214,8 +1374,8 @@ function e4(e) {
     let A = (0, u.bG)([y.default], () => y.default.getCurrentUser()),
         { analyticsLocations: S } = (0, f.Ay)(x.A.SUBSCRIPTION_DETAILS),
         I = (0, G.p)(),
-        _ = null != s ? s.slice(1) : [],
-        [N, C] = l.useState(0);
+        N = null != s ? s.slice(1) : [],
+        [_, C] = l.useState(0);
     (l.useEffect(() => {
         if (g)
             return (
@@ -1244,7 +1404,7 @@ function e4(e) {
             renewal: !0,
             analyticsLocations: S,
             analyticsLocation: c,
-            fetchKey: N,
+            fetchKey: _,
         }),
         [j] = (0, R.YV)({
             subscriptionId: n.id,
@@ -1253,7 +1413,7 @@ function e4(e) {
             analyticsLocations: S,
             analyticsLocation: c,
             userDiscountOfferId: I?.id,
-            fetchKey: N,
+            fetchKey: _,
         }),
         O = r?.invalid,
         L = (0, u.bG)([y.default], () => y.default.getCurrentUser()?.hasFreePremium()),
@@ -1279,26 +1439,26 @@ function e4(e) {
         : (null != n.renewalMutations &&
               ((n.renewalMutations.planId !== n.planId && !(0, b.m1)(n.renewalMutations.planId)) ||
                   n.hasExternalPlanChange) &&
-              (t = (0, i.jsx)(eq, {
+              (t = (0, i.jsx)(e0, {
                   subscription: n,
                   renewalMutations: n.renewalMutations,
-                  className: eQ.Il,
+                  className: e1.Il,
                   analyticsLocation: c,
               })),
           (0, i.jsxs)(h.n, {
               label: et.intl.string(et.t["/gs+Pz"]),
               description: et.intl.string(et.t.D8UpUo),
               children: [
-                  V ? (0, i.jsx)(eJ, {}) : null,
-                  k ? (0, i.jsx)(e$, {}) : null,
-                  F && null != H ? (0, i.jsx)(e0, { daysPastDue: z, subscription: n, openInvoiceId: H.id }) : null,
+                  V ? (0, i.jsx)(e2, {}) : null,
+                  k ? (0, i.jsx)(e3, {}) : null,
+                  F && null != H ? (0, i.jsx)(e6, { daysPastDue: z, subscription: n, openInvoiceId: H.id }) : null,
                   X && Y && (0, i.jsx)(eS, { subscription: n, analyticsLocations: S }),
                   t,
                   (0, i.jsxs)("div", {
                       children: [
                           (0, i.jsx)("div", {
-                              className: _.length > 0 ? eQ.HZ : eQ.__invalid_singleSubscription,
-                              children: (0, i.jsx)(e3, {
+                              className: N.length > 0 ? e1.HZ : e1.__invalid_singleSubscription,
+                              children: (0, i.jsx)(e8, {
                                   subscription: n,
                                   analyticsLocation: c,
                                   paymentSource: r,
@@ -1312,18 +1472,18 @@ function e4(e) {
                                   isPremiumGroup: X,
                               }),
                           }),
-                          _.map((e, t) =>
+                          N.map((e, t) =>
                               (0, i.jsxs)(
                                   "div",
                                   {
-                                      className: eQ.HZ,
+                                      className: e1.HZ,
                                       children: [
                                           (0, i.jsx)(m.D, {
                                               variant: "heading-md/semibold",
-                                              className: eQ.dd,
+                                              className: e1.dd,
                                               children: "Duplicate Subscriptions",
                                           }),
-                                          (0, i.jsx)(e3, {
+                                          (0, i.jsx)(e8, {
                                               subscription: e,
                                               analyticsLocation: c,
                                               paymentSource: r,

@@ -7,6 +7,7 @@ e.exports = {
     L$: "progressContainer_ce5f0d",
     GV: "progressIndicatorSurface_ce5f0d",
     G3: "progressCircle_ce5f0d",
+    HF: "orbVideo_ce5f0d",
     cq: "progressCircleBackground_ce5f0d",
     e0: "progressCircleRing_ce5f0d",
     ys: "glow_ce5f0d",

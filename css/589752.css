@@ -147,6 +147,90 @@ html:not(.mana-type-consolidation) .logoHeader_f1578d {
     color: var(--text-strong)
 }
 
+.banner_f5099c {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 16px 24px 24px;
+    position: relative
+}
+
+.banner_f5099c,
+.bannerBackground_f5099c {
+    border-radius: var(--radius-md)
+}
+
+.bannerBackground_f5099c {
+    background-color: var(--background-base-lowest);
+    border: 1px solid var(--border-subtle)
+}
+
+.headerGradient_f5099c {
+    border-radius: var(--radius-md);
+    margin: -1px;
+    margin-top: calc(var(--custom-modal-padding-top)*-1 - 1px);
+    padding: 1px;
+    padding-top: calc(var(--custom-modal-padding-top) + 1px)
+}
+
+.headerLabel_f5099c {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 4px
+}
+
+.wordmark_f5099c {
+    color: var(--text-strong);
+    width: 67px
+}
+
+.expiryDate_f5099c {
+    justify-content: flex-end;
+    margin-inline-start: auto;
+    position: relative
+}
+
+.divider_f5099c {
+    background-color: var(--border-subtle);
+    height: 1px;
+    margin: 8px 0 16px
+}
+
+.bannerContent_f5099c {
+    display: flex;
+    flex-direction: row;
+    width: 100%
+}
+
+.bannerDetails_f5099c {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
+    max-width: 420px;
+    padding-inline-end: 12px
+}
+
+.bannerButton_f5099c {
+    margin-top: 12px;
+    position: relative
+}
+
+.activeSubButtons_f5099c {
+    display: flex;
+    gap: 8px
+}
+
+.bannerImage_f5099c {
+    align-self: center;
+    flex-shrink: 0;
+    margin-inline-end: 10px;
+    margin-inline-start: auto;
+    max-height: 125px;
+    max-width: 200px
+}
+
 .churnDiscountBanner__32fe3 {
     border-radius: var(--radius-md);
     box-sizing: border-box;
@@ -229,4 +313,4 @@ html:not(.mana-type-consolidation) .logoHeader_f1578d {
     width: 67px
 }
 
-/*# sourceMappingURL=300726.6fc5cb2904dc910d.css.map*/
+/*# sourceMappingURL=589752.57adfd8c5c66394c.css.map*/

@@ -85,6 +85,11 @@
     max-width: 150px
 }
 
+.orbVideo_ce5f0d {
+    -o-object-fit: contain;
+    object-fit: contain
+}
+
 .progressCircleBorder_ce5f0d {
     height: "100%";
     inset-inline-start: 0;
@@ -218,4 +223,4 @@ html:not(.mana-type-consolidation) .header__07389 {
     }
 }
 
-/*# sourceMappingURL=0ee04a7217a019a2.css.map*/
+/*# sourceMappingURL=804ef8a189ea4921.css.map*/
