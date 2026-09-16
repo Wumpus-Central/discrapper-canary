@@ -1,63 +1,74 @@
-n.d(t, { FY: () => l, Ub: () => d, Vw: () => _, j2: () => o });
+n.d(t, { FY: () => d, Ub: () => u, Vw: () => h, j2: () => c, r$: () => _ });
 var i = n(636537),
     r = n(136857),
-    a = n(626584);
-n(739508);
-var s = n(652215);
-new a.A("OrderActionCreators");
-class l extends r.Ay {
+    a = n(626584),
+    s = n(739508),
+    l = n(652215);
+let o = new a.A("OrderActionCreators");
+class d extends r.Ay {
     order;
     constructor(e) {
         (super("Order signing failed due to unsatisfied constraints"), (this.order = e));
     }
 }
-class o extends r.Ay {
+class c extends r.Ay {
     constructor() {
         super("Order signed but entitlements not yet visible after polling");
     }
 }
-async function d(e) {
+async function u(e) {
     let t,
         { orderId: n, expectedRevision: r, loadId: a } = e,
-        o = {};
-    null != r && (o.expected_revision = r);
+        s = {};
+    null != r && (s.expected_revision = r);
     try {
         t = await i.Bo.post({
-            url: s.Rsh.ORDER_SIGN(n),
-            body: o,
+            url: l.Rsh.ORDER_SIGN(n),
+            body: s,
             context: null != a && "" !== a ? { load_id: a } : void 0,
             rejectWithError: !0,
         });
     } catch (e) {
-        var d;
+        var o;
         if (
             e instanceof i.oh &&
             400 === e.status &&
-            null != (d = e.body) &&
-            "object" == typeof d &&
-            "id" in d &&
-            "status" in d
+            null != (o = e.body) &&
+            "object" == typeof o &&
+            "id" in o &&
+            "status" in o
         )
-            throw new l(e.body);
+            throw new d(e.body);
         throw e;
     }
     if (null == t.body) throw Error("Invalid sign order response");
     return t.body;
 }
-async function c(e) {
+async function _(e) {
     try {
-        let t = await i.Bo.get({ url: s.Rsh.ORDER_ENTITLEMENTS(e), rejectWithError: !1 });
+        return (await i.Bo.get({ url: l.Rsh.ORDER_GET(e), rejectWithError: !0 })).body || null;
+    } catch (t) {
+        return (
+            o.error("failed to fetch order", { error: t, orderId: e }),
+            (0, s.pM)(t, { tags: { source: "OrderActionCreators_getOrder" }, extra: { orderId: e } }),
+            null
+        );
+    }
+}
+async function E(e) {
+    try {
+        let t = await i.Bo.get({ url: l.Rsh.ORDER_ENTITLEMENTS(e), rejectWithError: !1 });
         return null != t.body ? t.body : [];
     } catch (e) {
         return [];
     }
 }
-let u = [250, 500, 1e3, 1500, 2500, 4250];
-async function _(e) {
-    let t = await c(e);
-    for (let n of u) {
+let A = [250, 500, 1e3, 1500, 2500, 4250];
+async function h(e) {
+    let t = await E(e);
+    for (let n of A) {
         if (t.length > 0) break;
-        (await new Promise((e) => setTimeout(e, n)), (t = await c(e)));
+        (await new Promise((e) => setTimeout(e, n)), (t = await E(e)));
     }
     return t;
 }

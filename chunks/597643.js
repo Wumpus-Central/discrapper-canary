@@ -1417,6 +1417,9 @@ function eq(e) {
     eV(["PAYMENT_UPDATE"], (e) => {
         eW({ type: "PAYMENT_UPDATE", payment: e });
     }),
+    eV(["ORDER_UPDATE"], (e) => {
+        eW({ type: "ORDER_UPDATE", orderId: e.order_id, revision: e.revision });
+    }),
     eV(["ENTITLEMENT_CREATE", "ENTITLEMENT_UPDATE", "ENTITLEMENT_DELETE"], (e, t) => {
         eW({ type: t, entitlement: e });
     }),

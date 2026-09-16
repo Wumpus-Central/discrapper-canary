@@ -9,7 +9,7 @@ var l = n(477900),
     c = n(295405),
     d = n(75304),
     m = n(558620),
-    p = n(721836),
+    p = n(263532),
     h = n(818348);
 function C(e) {
     let { returnStep: t = a.pn.REVIEW, returnStepIfNoPaymentSources: n, paymentModalStepProps: r } = e,

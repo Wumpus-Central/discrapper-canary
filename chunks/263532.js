@@ -1,4 +1,4 @@
-n.d(t, { y0: () => $, Ni: () => z, t4: () => q, Q9: () => X, y$: () => Z });
+n.d(t, { y0: () => z, Ni: () => X, t4: () => Z, Q9: () => q, y$: () => Q });
 var i = n(462180),
     r = n(882035),
     a = n(315069),
@@ -249,39 +249,40 @@ function L(e, t) {
 }
 var y = n(652215),
     D = n(504275),
-    v = n(219538),
-    b = n(228366),
-    M = n(158032),
-    P = n(830382),
-    U = n(136857),
-    w = n(739508),
-    G = n(71532),
-    x = n(375708);
-let k = [y.__0.COMPLETED, y.__0.FAILED, y.__0.CANCELED];
-async function F(e) {
+    v = n(219538);
+let b = { lastOrderUpdateRevision: 0 };
+var M = n(228366),
+    P = n(158032),
+    U = n(830382),
+    w = n(136857),
+    G = n(739508),
+    x = n(71532),
+    k = n(375708);
+let F = [y.__0.COMPLETED, y.__0.FAILED, y.__0.CANCELED];
+async function B(e) {
     if (null == e) return;
-    let { error: t } = await (0, G.ap)(e);
-    null != t && (0, w.pM)(Error(t), { extra: { authenticationError: t } });
+    let { error: t } = await (0, x.ap)(e);
+    null != t && (0, G.pM)(Error(t), { extra: { authenticationError: t } });
 }
-let B = {
+let V = {
     paymentAuthError: null,
     isAwaitingPaymentAuthentication: !1,
     awaitingPaymentId: null,
     paymentAuthWasCancelled: !1,
 };
-var V = n(811315),
-    H = n.n(V),
-    j = n(75304),
-    W = n(442467),
-    Y = n(403362),
-    K = n(427262);
-let $ = 1,
-    [z, X] = (0, m.A)();
-function q(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.x;
-    return X()(e, t);
-}
+var H = n(811315),
+    j = n.n(H),
+    W = n(75304),
+    Y = n(442467),
+    K = n(403362),
+    $ = n(427262);
+let z = 1,
+    [X, q] = (0, m.A)();
 function Z(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.x;
+    return q()(e, t);
+}
+function Q(e) {
     let {
         checkoutInitParameters: t,
         startingValues: n,
@@ -291,11 +292,12 @@ function Z(e) {
         initialCurrency: o,
     } = e;
     return (0, r.h)((e, i) => {
-        let r,
-            d,
+        var r;
+        let d,
             c,
-            u =
-                ((r = { checkoutContext: null, checkoutPaymentSources: [] }),
+            u,
+            _ =
+                ((d = { checkoutContext: null, checkoutPaymentSources: [] }),
                 {
                     isPremiumPurchase: () => R(i().selectedPlanId).isPremiumPurchase,
                     isPremiumGroupPurchase: () => R(i().selectedPlanId).isPremiumGroupPurchase,
@@ -327,13 +329,13 @@ function Z(e) {
                     checkoutSelectedCurrency: () => i().checkoutPriceOptions.currency ?? null,
                     checkoutPaymentSources: () => {
                         let e = i().get("checkoutContext");
-                        e !== r.checkoutContext &&
-                            ((r.checkoutContext = e),
-                            (r.checkoutPaymentSources =
+                        e !== d.checkoutContext &&
+                            ((d.checkoutContext = e),
+                            (d.checkoutPaymentSources =
                                 null == e || null == e.payment_sources
                                     ? []
                                     : e.payment_sources.map(S.A.createFromCheckoutContext)));
-                        return r.checkoutPaymentSources;
+                        return d.checkoutPaymentSources;
                     },
                     checkoutSelectedPaymentSource: () => {
                         let { get: e, paymentSourceId: t } = i();
@@ -403,12 +405,25 @@ function Z(e) {
                     e({ linkWalletEnabled: t });
                 },
             },
+            ...((r = () => i().order),
+            {
+                ...b,
+                handleOrderUpdate: (t) => {
+                    let { orderId: n, revision: i } = t,
+                        a = r();
+                    null != n &&
+                        null != i &&
+                        null != a &&
+                        a.id === n &&
+                        e((e) => (i > e.lastOrderUpdateRevision ? { lastOrderUpdateRevision: i } : e));
+                },
+            }),
             ...{
-                ...B,
+                ...V,
                 handlePaymentFailure: (t) => {
                     let { error: n } = t,
                         { code: r, paymentId: a } = n;
-                    if (r !== U.tG.CONFIRMATION_REQUIRED && r !== U.tG.AUTHENTICATION_REQUIRED) {
+                    if (r !== w.tG.CONFIRMATION_REQUIRED && r !== w.tG.AUTHENTICATION_REQUIRED) {
                         i().isAwaitingPaymentAuthentication && e({ isAwaitingPaymentAuthentication: !1 });
                         return;
                     }
@@ -418,24 +433,24 @@ function Z(e) {
                             awaitingPaymentId: a ?? null,
                             paymentAuthWasCancelled: !1,
                         }),
-                        r === U.tG.AUTHENTICATION_REQUIRED && F(a));
+                        r === w.tG.AUTHENTICATION_REQUIRED && B(a));
                 },
                 handlePaymentUpdate: (t) => {
                     let { payment: n } = t;
-                    if (i().isAwaitingPaymentAuthentication && n.id === i().awaitingPaymentId && k.includes(n.status)) {
+                    if (i().isAwaitingPaymentAuthentication && n.id === i().awaitingPaymentId && F.includes(n.status)) {
                         if (n.status === y.__0.FAILED) {
                             let t = n.metadata?.billing_error_code,
-                                i = t === U.tG.BILLING_INSUFFICIENT_FUNDS ? t : null;
+                                i = t === w.tG.BILLING_INSUFFICIENT_FUNDS ? t : null;
                             e({
                                 isAwaitingPaymentAuthentication: !1,
                                 awaitingPaymentId: null,
-                                paymentAuthError: new U.Ay(x.intl.string(x.t.khEaRI), i),
+                                paymentAuthError: new w.Ay(k.intl.string(k.t.khEaRI), i),
                             });
                             return;
                         }
                         (e({ isAwaitingPaymentAuthentication: !1, awaitingPaymentId: null, paymentAuthError: null }),
-                            b.h.wait(M.ET),
-                            b.h.wait(P.T3));
+                            M.h.wait(P.ET),
+                            M.h.wait(U.T3));
                     }
                 },
                 handlePaymentAuthenticationError: (t) => {
@@ -450,7 +465,7 @@ function Z(e) {
                         paymentAuthWasCancelled: !0,
                     });
                 },
-                resetPaymentAuthentication: () => e({ ...B }),
+                resetPaymentAuthentication: () => e({ ...V }),
             },
             ...{
                 expressCheckoutSubmitting: !1,
@@ -458,17 +473,17 @@ function Z(e) {
                 getShouldUseStripeExpressCheckout: () => {
                     let e = i().getSharedTenantParams();
                     return (
-                        !!((0, K.Gn)() || "staging" === window.GLOBAL_ENV.RELEASE_CHANNEL || (0, Y.m6)()) &&
+                        !!((0, $.Gn)() || "staging" === window.GLOBAL_ENV.RELEASE_CHANNEL || (0, K.m6)()) &&
                         null != e &&
                         !!e.shouldUseStripeExpressCheckout
                     );
                 },
             },
-            ...((d = []),
-            (c = { premiumPlanOptions: null }),
+            ...((c = []),
+            (u = { premiumPlanOptions: null }),
             {
                 getShouldDisallowPlanSelection: () => {
-                    let e = i().getTenantParams(j.C.PREMIUM_CHECKOUT);
+                    let e = i().getTenantParams(W.C.PREMIUM_CHECKOUT);
                     return null != e && (e.shouldDisallowPlanSelection ?? !1);
                 },
                 getIsInOneStepSubscriptionCheckout: (e) => {
@@ -509,39 +524,65 @@ function Z(e) {
                         if ((0, N.xq)(n)) return C.LE;
                         if ((0, N.z4)(n)) return C.DA;
                     }
-                    return d;
+                    return c;
                 },
                 getPremiumPlanOptionsOrNull: () => {
                     let { selectedSkuId: e, defaultPlanId: t, get: n } = i(),
                         r = n("isPremiumPurchase");
                     try {
                         let n = (0, N.Tm)({ skuId: e, isPremium: r, defaultPlanId: t });
-                        if (H()(n, c.premiumPlanOptions)) return c.premiumPlanOptions;
-                        return ((c.premiumPlanOptions = n), n);
+                        if (j()(n, u.premiumPlanOptions)) return u.premiumPlanOptions;
+                        return ((u.premiumPlanOptions = n), n);
                     } catch (e) {
                         return null;
                     }
                 },
             }),
-            ...(0, W.d)(e, i),
-            get: (e) => (null != u[e] ? u[e]() : null),
+            ...(0, Y.d)(e, i),
+            get: (e) => (null != _[e] ? _[e]() : null),
             contextMetadata: a,
             order: s,
             orderRecord: null != s ? f.createFromServer(s) : null,
-            setOrder: (t) => e({ order: t, orderRecord: f.createFromServer(t), pendingPaymentSourceId: null }),
+            setOrder: (t) =>
+                e((e) => {
+                    let n;
+                    return {
+                        order: t,
+                        orderRecord: (n = f.createFromServer(t)),
+                        pendingPaymentSourceId: null,
+                        ...(function (e, t) {
+                            let n = e.orderRecord,
+                                i = null != n && n.id === t.id;
+                            if (i && t.revision <= n.revision) return {};
+                            let r = i ? n.billingFacetRecord : null,
+                                a = null != r ? r.paymentSourceId : null,
+                                s = null != r ? r.fiatCurrency : null,
+                                l = t.billingFacetRecord,
+                                o = null != l ? l.paymentSourceId : null,
+                                d = null != l ? l.fiatCurrency : null,
+                                c = {};
+                            return (
+                                o !== a && (c.paymentSourceId = o),
+                                d !== s &&
+                                    (c.checkoutPriceOptions = { ...e.checkoutPriceOptions, currency: d ?? void 0 }),
+                                c
+                            );
+                        })(e, n),
+                    };
+                }),
             selectedSkuId: void 0,
             selectedPlanId: void 0,
             setSelectedSkuId: (t) =>
                 e((e) => {
                     let n = t ?? void 0;
-                    return n === e.selectedSkuId ? e : { selectedSkuId: n, quantity: $ };
+                    return n === e.selectedSkuId ? e : { selectedSkuId: n, quantity: z };
                 }),
             setSelectedPlanId: function (t) {
                 let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { shouldUpdateQuantity: !0 },
                     i = t ?? void 0;
-                return n.shouldUpdateQuantity ? e({ selectedPlanId: i, quantity: $ }) : e({ selectedPlanId: i });
+                return n.shouldUpdateQuantity ? e({ selectedPlanId: i, quantity: z }) : e({ selectedPlanId: i });
             },
-            quantity: $,
+            quantity: z,
             setQuantity: (t) => e({ quantity: t }),
             fetchCheckoutInvoicePreviewRequest: null,
             setFetchCheckoutInvoicePreviewRequest: (t) => e({ fetchCheckoutInvoicePreviewRequest: L(t, i) }),
