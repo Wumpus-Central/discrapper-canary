@@ -359,6 +359,15 @@
     transition: inset-inline-start .5s, opacity .25s
 }
 
+.checkboxContainer_abfd90 {
+    background-color: var(--control-overlay-primary-background-default);
+    border-radius: var(--radius-sm);
+    inset-inline-start: var(--space-12);
+    position: absolute;
+    top: var(--space-12);
+    z-index: 1
+}
+
 .cardButtonsContainer_abfd90 {
     color: var(--primary-100);
     display: flex;
@@ -462,4 +471,4 @@
     vertical-align: middle
 }
 
-/*# sourceMappingURL=937509.d70225ed2c24a26c.css.map*/
+/*# sourceMappingURL=937509.7be40a0fda723adc.css.map*/
