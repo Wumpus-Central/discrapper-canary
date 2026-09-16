@@ -1063,7 +1063,7 @@ function eP(e) {
                                         className: eM.ZU,
                                         "aria-hidden": !0,
                                     }),
-                                (0, l.jsx)(u.E, { id: d, variant: "text-xs/medium", children: m }),
+                                (0, l.jsx)(u.E, { id: d, variant: "text-sm/medium", children: m }),
                             ],
                         }),
                     ],

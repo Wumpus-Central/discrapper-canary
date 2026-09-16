@@ -151,8 +151,9 @@ class p {
         return this.subscriptions.find((i) => i.socket === e && i.evt === t && l().isEqual(i.args, n));
     }
     addSubscription(e, t, n) {
-        let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
-            r = this.dispatch.bind(this, e, null, h.e$_.DISPATCH, t);
+        let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+        if (!this.sockets.has(e)) return;
+        let r = this.dispatch.bind(this, e, null, h.e$_.DISPATCH, t);
         null == this.getSubscription(e, t, n) &&
             (this.subscriptions.push({
                 update: i,

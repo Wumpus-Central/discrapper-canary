@@ -1466,7 +1466,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e3 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eH.A().log(
-    `[BUILD INFO] Release Channel: ${e3}, Build Number: 614487, Version Hash: 4bad8a44b704f979164ca14d665d648bbf54d1ae`,
+    `[BUILD INFO] Release Channel: ${e3}, Build Number: 614489, Version Hash: 07e4a3d8a8494887a6580b330b8a3b584d87f21a`,
 ),
     v.A.setTags({ appContext: x.QCW }),
     eI.A.initBasic(),
@@ -21479,7 +21479,7 @@ let NP = "isHideDevBanner",
                     className: ts()(NM.Wz, NM.mr),
                     children: [
                         (0, R.jsx)(Nb, { className: NM.Kk }),
-                        tm.intl.format(tm.t.uyrfYF, { buildNumber: "614487" }),
+                        tm.intl.format(tm.t.uyrfYF, { buildNumber: "614489" }),
                         (0, R.jsx)(r, {}),
                     ],
                 })
@@ -38176,9 +38176,11 @@ let MH = {
             return (e) => {
                 let { prevState: n, dispatch: i } = e,
                     r = eX.A.getGuild(t);
-                if (null == r) return;
-                let a = { guild: { id: r.id, name: r.name, icon_url: (0, nn.Iv)(r, 128) ?? null }, online: 0 };
-                return (nP().isEqual(n, a) || i(a), a);
+                if (null != r)
+                    return null != n && n.name === r.name && n.icon === r.icon
+                        ? n
+                        : (i({ guild: { id: r.id, name: r.name, icon_url: (0, nn.Iv)(r, 128) ?? null }, online: 0 }),
+                          { name: r.name, icon: r.icon });
             };
         },
     },
