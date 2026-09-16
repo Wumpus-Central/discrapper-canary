@@ -51,9 +51,9 @@ var m = n(604121),
     T = n(402860),
     R = n(287809),
     O = n(427262),
-    M = n(652215),
-    L = n(49999),
-    k = n(95769),
+    L = n(652215),
+    M = n(49999),
+    k = n(556427),
     w = n(375708);
 function P(e) {
     let { currentTier: t, giftCount: n, onComplete: s, markAsDismissed: r, children: a } = e,
@@ -75,13 +75,13 @@ function P(e) {
                     {
                         text: w.intl.string(w.t.RzWDqY),
                         onClick: () => {
-                            (null != c && (0, T.openUserProfileModal)({ userId: c.id }), s?.(), r(L.i.TAKE_ACTION));
+                            (null != c && (0, T.openUserProfileModal)({ userId: c.id }), s?.(), r(M.i.TAKE_ACTION));
                         },
                     },
                 ],
                 caretConfig: { align: "center" },
                 onRequestClose: function () {
-                    (s?.(), r(L.i.USER_DISMISS));
+                    (s?.(), r(M.i.USER_DISMISS));
                 },
             }),
         ],
@@ -95,7 +95,7 @@ function D(e) {
         { openGiftModal: c } = (0, _.$)({
             giftRecipient: u,
             analyticsLocations: o,
-            analyticsObject: { object: M.ZSU.BUTTON_CTA, objectType: M.AnalyticsObjectTypes.GIFT },
+            analyticsObject: { object: L.ZSU.BUTTON_CTA, objectType: L.AnalyticsObjectTypes.GIFT },
             location: "NewBadgeCoachmark",
         });
     return (0, l.jsxs)(l.Fragment, {
@@ -116,13 +116,13 @@ function D(e) {
                         text: w.intl.string(k.default.DZnomS),
                         icon: f.GiftIcon,
                         onClick: () => {
-                            (c(), n?.(), s(L.i.TAKE_ACTION));
+                            (c(), n?.(), s(M.i.TAKE_ACTION));
                         },
                     },
                 ],
                 caretConfig: { align: "center" },
                 onRequestClose: function () {
-                    (n?.(), s(L.i.USER_DISMISS));
+                    (n?.(), s(M.i.USER_DISMISS));
                 },
             }),
         ],
@@ -258,17 +258,17 @@ let J = i.memo(function (e) {
             giftRecipient: p,
             analyticsLocations: s,
             analyticsObject: {
-                page: n.isPrivate() ? M.liQ.DM_CHANNEL : M.liQ.GUILD_CHANNEL,
-                section: M.JJy.CHANNEL_TEXT_AREA,
-                object: P ? M.ZSU.GIFTING_PROMOTION_BUTTON : M.ZSU.BUTTON_ICON,
-                objectType: M.AnalyticsObjectTypes.GIFT,
+                page: n.isPrivate() ? L.liQ.DM_CHANNEL : L.liQ.GUILD_CHANNEL,
+                section: L.JJy.CHANNEL_TEXT_AREA,
+                object: P ? L.ZSU.GIFTING_PROMOTION_BUTTON : L.ZSU.BUTTON_ICON,
+                objectType: L.AnalyticsObjectTypes.GIFT,
             },
             wishlistAnalyticsObject: P
                 ? {
-                      page: n.isPrivate() ? M.liQ.DM_CHANNEL : M.liQ.GUILD_CHANNEL,
-                      section: M.JJy.CHANNEL_TEXT_AREA,
-                      object: M.ZSU.BUTTON_ICON,
-                      objectType: M.AnalyticsObjectTypes.GIFT,
+                      page: n.isPrivate() ? L.liQ.DM_CHANNEL : L.liQ.GUILD_CHANNEL,
+                      section: L.JJy.CHANNEL_TEXT_AREA,
+                      object: L.ZSU.BUTTON_ICON,
+                      objectType: L.AnalyticsObjectTypes.GIFT,
                   }
                 : void 0,
             location: P ? "gift-promotion-button" : "gift-button",
@@ -279,7 +279,7 @@ let J = i.memo(function (e) {
         hovered: $,
         isGenericGift: Q || ee,
         onClick: function () {
-            (d(!1), K(L.i.TAKE_ACTION), J(L.i.TAKE_ACTION), X());
+            (d(!1), K(M.i.TAKE_ACTION), J(M.i.TAKE_ACTION), X());
         },
     });
     return (0, l.jsx)("div", {

@@ -600,11 +600,12 @@ let e_ = {
             parse(e, t, n) {
                 let [, i, r] = e,
                     a = (0, J.Q)(i),
-                    s = (0, J.f)(i, r, eu(n)?.id);
+                    s = (0, J.f)(_.A, i, r, eu(n)?.id);
                 function l(e) {
                     return null == e ? null : [{ type: "text", content: e }];
                 }
                 return {
+                    type: "staticRouteLink",
                     content: l(a + (null != s ? ` \u{203A} ${s}` : "")),
                     mainContent: l(a),
                     itemContent: l(s),

@@ -1,4 +1,4 @@
-(n.d(t, { A: () => L, J: () => M }), n(323874), n(14289), n(35956));
+(n.d(t, { A: () => M, J: () => L }), n(323874), n(14289), n(35956));
 var l = n(477900),
     i = n(582128),
     s = n(503698),
@@ -22,7 +22,7 @@ var l = n(477900),
     S = n(851023),
     v = n(215497),
     N = n(375708),
-    _ = n(704796),
+    _ = n(268378),
     j = n(429955);
 let b = ["image/jpeg", "image/png", "image/webp", "image/gif", "image/avif", "video/quicktime", "video/mp4"];
 function T(e) {
@@ -190,7 +190,7 @@ function O(e) {
         })
     );
 }
-function M(e) {
+function L(e) {
     let { upload: t, size: n = v.L.MEDIUM, onMouseEnter: s, clip: a, guildId: o } = e,
         [u, c] = i.useState(!1);
     return t.isImage && t.item.platform === g.xz.WEB
@@ -221,7 +221,7 @@ function M(e) {
                 }),
             });
 }
-function L(e) {
+function M(e) {
     let {
             channelId: t,
             draftType: s,
@@ -239,7 +239,7 @@ function L(e) {
     function O() {
         p.A.remove(t, o.id, s);
     }
-    function L(e) {
+    function M(e) {
         (e.stopPropagation(), b)
             ? (0, u.openModalLazy)(async () => {
                   let { default: e } = await Promise.all([
@@ -322,7 +322,7 @@ function L(e) {
                     ? (0, l.jsx)(S.A, {
                           className: r()({ [j.action]: T }),
                           tooltip: b ? N.intl.string(_.default.V8YlF7) : N.intl.string(N.t.Y8ujqr),
-                          onClick: L,
+                          onClick: M,
                           children: (0, l.jsx)(h.PencilIcon, {
                               size: "xs",
                               color: "currentColor",
@@ -346,12 +346,12 @@ function L(e) {
         draftType: s,
         id: o.id,
         channelId: t,
-        handleEditModal: L,
+        handleEditModal: M,
         keyboardModeEnabled: g,
         size: A,
         className: r()({ [j.attachmentItemSmall]: T }),
         children: [
-            (0, l.jsx)(M, { upload: o, size: A, clip: y, guildId: R }),
+            (0, l.jsx)(L, { upload: o, size: A, clip: y, guildId: R }),
             !E &&
                 (0, l.jsx)("div", {
                     className: j.filenameContainer,

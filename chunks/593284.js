@@ -28,8 +28,8 @@ var l = n(477900),
     T = n(696451),
     R = n(317525),
     O = n(71393),
-    M = n(287809),
-    L = n(427262),
+    L = n(287809),
+    M = n(427262),
     k = n(375708),
     w = n(165648),
     P = n(778724);
@@ -37,7 +37,7 @@ function D(e) {
     let { member: t, guildId: s, channelId: r, role: a } = e,
         u = i.useRef(null),
         c = (0, o.bG)([O.A], () => O.A.getGuild(s)?.ownerId, [s]),
-        d = (0, o.bG)([M.default], () => M.default.getUser(t.userId), [t.userId]),
+        d = (0, o.bG)([L.default], () => L.default.getUser(t.userId), [t.userId]),
         h = (0, o.bG)([b.A], () => b.A.getChannel(r), [r]);
     return null == d || null == h
         ? null
@@ -91,7 +91,7 @@ function D(e) {
                                           n.e("311802"),
                                           n.e("229787"),
                                           n.e("698965"),
-                                          n.e("869853"),
+                                          n.e("931319"),
                                           n.e("882073"),
                                           n.e("797558"),
                                           n.e("691994"),
@@ -170,13 +170,13 @@ function U(e) {
             [s],
         ),
         f = (0, o.yK)(
-            [T.Ay, M.default],
+            [T.Ay, L.default],
             () => {
                 let e = T.Ay.getMembers(s),
                     t = null == n || n === m ? e : e.filter((e) => e.roles.includes(n));
                 return r()(t)
-                    .filter((e) => null != M.default.getUser(e.userId))
-                    .sortBy((e) => e.nick ?? L.Ay.getName(M.default.getUser(e.userId)))
+                    .filter((e) => null != L.default.getUser(e.userId))
+                    .sortBy((e) => e.nick ?? M.Ay.getName(L.default.getUser(e.userId)))
                     .value();
             },
             [s, n, m],

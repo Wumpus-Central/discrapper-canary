@@ -680,7 +680,7 @@ var ek = n(269115),
     eL = n(758836),
     eO = n(49999),
     eM = n(818348),
-    eD = n(344045),
+    eD = n(394107),
     eP = n(196064);
 let eH = "GAME_SERVER_HOSTING_BANNER";
 function eB(e) {
@@ -896,8 +896,8 @@ var ez = n(449543),
     e2 = n(914410),
     e5 = n(839534),
     e4 = n(597783),
-    e3 = n(61750);
-function e9(e, t) {
+    e9 = n(61750);
+function e3(e, t) {
     let n = r.useMemo(() => e?.products.filter((e) => e.skuId !== t).map((e) => e.skuId) ?? [], [e?.products, t]),
         l = (0, X.bG)([eY.A], () => eY.A.getPurchases(n));
     return {
@@ -913,7 +913,7 @@ let e7 = r.memo(function (e) {
             { handleCardVisibilityChange: l } = (0, e4.Z)(n),
             s = r.useRef(null),
             { isHoveringOrFocusing: a } = (0, e1.A)(s),
-            { readyToClaim: d, collectibleProductSkuIds: c, collectedSkuIds: u } = e9(t, n),
+            { readyToClaim: d, collectibleProductSkuIds: c, collectedSkuIds: u } = e3(t, n),
             g = (0, X.bG)([eY.A], () => eY.A.isClaiming === n);
         return (0, i.jsx)(ek.L, {
             onChange: l,
@@ -1021,7 +1021,7 @@ let e7 = r.memo(function (e) {
                                                             .then(() => {
                                                                 let e = et.A.getProduct(n);
                                                                 null != e &&
-                                                                    (0, e3.A)({
+                                                                    (0, e9.A)({
                                                                         product: e,
                                                                         analyticsLocations: [],
                                                                         overrideGraphic: {
@@ -1097,7 +1097,7 @@ let e7 = r.memo(function (e) {
                 [s, a.rankedSkuIds, m.length],
             ),
             g = s || h,
-            { readyToClaim: x } = e9(c, a.rewardSkuId),
+            { readyToClaim: x } = e3(c, a.rewardSkuId),
             f = null == u && null != a.rewardSkuId && null != c;
         return (0, i.jsx)(ez.A, {
             gap: "xl",

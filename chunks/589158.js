@@ -60,8 +60,8 @@ class T extends s.Component {
 }
 var R = n(268218),
     O = n(193663),
-    M = n(490427),
-    L = n(609425),
+    L = n(490427),
+    M = n(609425),
     k = n(922301),
     w = n(660184),
     P = n(73392),
@@ -129,7 +129,7 @@ let en = (0, R.Fe)({
             n.e("285350"),
             n.e("424265"),
             n.e("297735"),
-            n.e("919885"),
+            n.e("806295"),
             n.e("655602"),
             n.e("867160"),
         ]).then(n.bind(n, 198525)),
@@ -200,7 +200,7 @@ let el = s.memo(function (e) {
                 guildId: o,
                 isHovering: u,
             } = e,
-            c = (0, L.A)({ userId: a?.id, guildId: o }),
+            c = (0, M.A)({ userId: a?.id, guildId: o }),
             d = (0, P.a)({ displayNameStyles: c }),
             h = null == o && null != c;
         return (0, i.jsxs)(i.Fragment, {
@@ -297,7 +297,7 @@ let el = s.memo(function (e) {
             ),
             f = s.useMemo(
                 () =>
-                    !(0, M.A)({
+                    !(0, L.A)({
                         activity: l?.find((e) => {
                             let { type: t } = e;
                             return t === X.$pd.CUSTOM_STATUS;
@@ -343,8 +343,8 @@ let el = s.memo(function (e) {
                 channel: j,
                 guildId: b,
                 className: R,
-                nameplate: M,
-                hideClanTag: L = !1,
+                nameplate: L,
+                hideClanTag: M = !1,
                 hideSubtext: k = !1,
                 hideTooltip: w = !1,
                 onMouseDown: P,
@@ -385,8 +385,8 @@ let el = s.memo(function (e) {
             eT = null != eb,
             eR = eT ? eb : ej,
             eO = (0, Y.Yl)(ej, E, ei),
-            eM = (eT || eO) && t && !eN,
-            eL = s.useCallback(() => {
+            eL = (eT || eO) && t && !eN,
+            eM = s.useCallback(() => {
                 em(!0);
             }, []),
             ek = s.useCallback(() => {
@@ -421,7 +421,7 @@ let el = s.memo(function (e) {
                   targetElementRef: ed,
                   renderPopout: eU,
                   position: "bottom",
-                  shouldShow: eM,
+                  shouldShow: eL,
                   nudgeAlignIntoViewport: !1,
                   useRawTargetDimensions: !0,
                   animation: A.Y.Animation.NONE,
@@ -430,13 +430,13 @@ let el = s.memo(function (e) {
                       (0, i.jsx)(O.A, {
                           ref: ed,
                           selected: t,
-                          className: a()(et.Dc, R, { [et.WK]: y === X.clD.OFFLINE && !t, [et.PJ]: eM }),
+                          className: a()(et.Dc, R, { [et.WK]: y === X.clD.OFFLINE && !t, [et.PJ]: eL }),
                           innerClassName: et.Hz,
                           onClick: U,
                           onKeyDown: D,
                           onMouseDown: P,
                           onContextMenu: G,
-                          onMouseEnter: eL,
+                          onMouseEnter: eM,
                           onMouseLeave: ek,
                           onBlur: eP,
                           hovered: eh,
@@ -449,7 +449,7 @@ let el = s.memo(function (e) {
                                             colorString: n ?? null,
                                             name: f ?? es,
                                             colorStrings: ev,
-                                            hideClanTag: L,
+                                            hideClanTag: M,
                                             user: p,
                                             guildId: b,
                                             isHovering: eh,
@@ -464,7 +464,7 @@ let el = s.memo(function (e) {
                                                 colorString: n ?? null,
                                                 name: f ?? es,
                                                 colorStrings: ev,
-                                                hideClanTag: L,
+                                                hideClanTag: M,
                                                 user: p,
                                                 guildId: b,
                                                 isHovering: eh,
@@ -486,7 +486,7 @@ let el = s.memo(function (e) {
                               typingRef: eg,
                               currentUser: g,
                           }),
-                          nameplate: M,
+                          nameplate: L,
                           subText: (0, i.jsx)(eu, {
                               hideSubtext: k,
                               activities: C,

@@ -27,9 +27,9 @@ var l = n(477900),
     b = n(792656),
     T = n(202541),
     R = n(652215),
-    O = n(259589),
-    M = n(375708),
-    L = n(237790),
+    O = n(148155),
+    L = n(375708),
+    M = n(237790),
     k = n(592551),
     w = n(644242),
     P = n(309427);
@@ -53,7 +53,7 @@ function D(e) {
             V?.());
     }, [V, U]);
     let B = (0, v.V)(),
-        W = i.useCallback(() => (0, I.LE)(B, T.pe.TIER_2) ?? M.intl.string(M.t.pj0XBN), [B]),
+        W = i.useCallback(() => (0, I.LE)(B, T.pe.TIER_2) ?? L.intl.string(L.t.pj0XBN), [B]),
         K = (0, N.A)(T.pe.TIER_2),
         z = (0, _.O9)();
     return (
@@ -69,17 +69,17 @@ function D(e) {
                 (0, l.jsx)(u.p, { onClick: G, isVisible: !0 }),
                 (0, l.jsx)(c.h, {
                     color: H ? "nitro-pink" : "green",
-                    className: L.kL,
+                    className: M.kL,
                     children: (0, l.jsxs)(d.l, {
                         "aria-label": n,
-                        className: L.r3,
+                        className: M.r3,
                         children: [
                             (0, l.jsxs)("div", {
-                                className: L.Qs,
+                                className: M.Qs,
                                 children: [
-                                    (0, l.jsx)(o.s_, { "data-migration-pending": !0, onClick: G, className: L.b }),
+                                    (0, l.jsx)(o.s_, { "data-migration-pending": !0, onClick: G, className: M.b }),
                                     (0, l.jsxs)("div", {
-                                        className: L.hQ,
+                                        className: M.hQ,
                                         children: [
                                             (0, l.jsx)("div", {
                                                 className: k.headerGraphic,
@@ -92,7 +92,7 @@ function D(e) {
                                             }),
                                             null != K && (0, l.jsx)(a.E, { type: { text: K }, variant: "brand" }),
                                             (0, l.jsx)(m.D, {
-                                                className: r()(L.DD, { [L.GU]: null != K }),
+                                                className: r()(M.DD, { [M.GU]: null != K }),
                                                 variant: "heading-xl/bold",
                                                 color: "text-strong",
                                                 children: n,
@@ -100,7 +100,7 @@ function D(e) {
                                             (0, l.jsx)(f.E, {
                                                 variant: "text-md/medium",
                                                 color: "text-subtle",
-                                                className: L.rf,
+                                                className: M.rf,
                                                 children: s,
                                             }),
                                         ],
@@ -108,15 +108,15 @@ function D(e) {
                                     H &&
                                         z &&
                                         (0, l.jsx)("div", {
-                                            className: L.Zr,
-                                            children: (0, l.jsx)(j.A, { subtitle: M.intl.string(O.default.BkJYQ5) }),
+                                            className: M.Zr,
+                                            children: (0, l.jsx)(j.A, { subtitle: L.intl.string(O.default.BkJYQ5) }),
                                         }),
                                 ],
                             }),
                             (0, l.jsx)("div", {
-                                className: L.qr,
+                                className: M.qr,
                                 children: (0, l.jsxs)("div", {
-                                    className: L.UD,
+                                    className: M.UD,
                                     children: [
                                         (0, l.jsx)(p.$, {
                                             variant: "secondary",
@@ -131,7 +131,7 @@ function D(e) {
                                                     (0, g.jH)(),
                                                     (0, A.pX)(R.BVt.APPLICATION_STORE));
                                             },
-                                            text: M.intl.string(M.t.ZnqyZ2),
+                                            text: L.intl.string(L.t.ZnqyZ2),
                                             fullWidth: !0,
                                         }),
                                         (0, l.jsx)(b.A, {

@@ -1835,7 +1835,7 @@ var tf = t(826673),
     t$ = t(267102),
     tZ = t(474397),
     tJ = t(486974),
-    t0 = t(256416);
+    t0 = t(39470);
 function t1(e) {
     let { channel: n } = e,
         t = s.useContext(en.AnalyticsContext),
@@ -2408,7 +2408,7 @@ function i0(e) {
 }
 var i1 = t(290136),
     i2 = t(975571),
-    i5 = t(670064);
+    i5 = t(490094);
 function i6() {
     let e = z.intl.string(i5.default.pdipXI);
     return (0, l.jsx)(ns.In, {
@@ -5066,7 +5066,7 @@ function dA() {
         t.e("592822"),
         t.e("309291"),
         t.e("829260"),
-        t.e("25212"),
+        t.e("327198"),
         t.e("504098"),
         t.e("176911"),
         t.e("36624"),
@@ -5097,7 +5097,7 @@ function dA() {
         t.e("736793"),
         t.e("530707"),
         t.e("932011"),
-        t.e("760971"),
+        t.e("112733"),
         t.e("792461"),
     ]).then(t.bind(t, 540462));
 }
@@ -5132,7 +5132,7 @@ function dg() {
         t.e("592822"),
         t.e("309291"),
         t.e("829260"),
-        t.e("25212"),
+        t.e("327198"),
         t.e("504098"),
         t.e("176911"),
         t.e("949013"),
@@ -5222,7 +5222,7 @@ let dx = (0, nU.Fe)({ createPromise: dg, webpackId: 67319, name: "StageChannelCa
         name: "GuildMemberModViewSidebar",
     }),
     dI = (0, nU.Fe)({
-        createPromise: () => Promise.all([t.e("846123"), t.e("799949"), t.e("995624")]).then(t.bind(t, 529051)),
+        createPromise: () => Promise.all([t.e("846123"), t.e("208927"), t.e("995624")]).then(t.bind(t, 529051)),
         webpackId: 529051,
         name: "FriendsSidebar",
     });

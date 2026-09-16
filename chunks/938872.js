@@ -11,7 +11,7 @@ var i = n(477900),
     f = n(277977),
     h = n(652215),
     p = n(746080),
-    g = n(759967),
+    g = n(50617),
     w = n(375708);
 function m(e) {
     let { transitionState: t, onClose: n } = e,

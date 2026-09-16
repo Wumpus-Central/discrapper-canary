@@ -393,7 +393,7 @@ var Q = n(775602),
     eu = n(976860),
     eh = n(746080),
     eA = n(49999),
-    eg = n(344045),
+    eg = n(394107),
     em = n(375708),
     ef = n(275833),
     ep = n(964306);
@@ -551,7 +551,7 @@ var eL = n(581007),
     eY = n(828162),
     eX = n(877624),
     eq = n(549996),
-    eZ = n(356863),
+    eZ = n(25525),
     eJ = n(247806);
 function e$(e) {
     let { indicator: t } = e;
@@ -670,28 +670,28 @@ var e1 = n(128954),
     e2 = n(717421),
     e9 = n(442433),
     e5 = n(230135),
-    e6 = n(228366);
-let e7 = {};
+    e7 = n(228366);
+let e6 = {};
 class e4 extends u.Ay.PersistedStore {
     static displayName = "GuildBoostingProgressBarPersistedStore";
     static persistKey = "PremiumGuildProgressBarPersistedStore";
     initialize(e) {
-        null != e && (e7 = e);
+        null != e && (e6 = e);
     }
     getState() {
-        return e7;
+        return e6;
     }
     getCountForGuild(e) {
-        return e7[e];
+        return e6[e];
     }
 }
-let e8 = new e4(e6.h, {
+let e8 = new e4(e7.h, {
     APPLIED_GUILD_BOOST_COUNT_UPDATE: function (e) {
         let { guildId: t, premiumCount: n } = e;
-        e7 = { ...e7, [t]: n };
+        e6 = { ...e6, [t]: n };
     },
     APPLIED_GUILD_BOOST_COUNT_RESET: function () {
-        e7 = {};
+        e6 = {};
     },
 });
 var te = n(147925),
@@ -876,13 +876,13 @@ var tH = n(871123),
     t0 = n(970853),
     t1 = n(93055),
     t3 = n(349828),
-    t2 = n(384539),
+    t2 = n(22277),
     t9 = n(551851),
     t5 = n(391507);
-function t6(e) {
+function t7(e) {
     e.stopPropagation();
 }
-function t7(e) {
+function t6(e) {
     let { label: t, onClick: n, tabIndex: l } = e;
     return (0, s.jsx)(ei.m, {
         text: t,
@@ -963,7 +963,7 @@ let t4 = $(
                                 n.e("460773"),
                                 n.e("208018"),
                                 n.e("120379"),
-                                n.e("898377"),
+                                n.e("824547"),
                                 n.e("819193"),
                                 n.e("507775"),
                                 n.e("662068"),
@@ -1046,11 +1046,11 @@ let t4 = $(
                                         ],
                                     }),
                                     (0, s.jsx)("div", {
-                                        onClick: t6,
+                                        onClick: t7,
                                         className: t5.Y_,
                                         children:
                                             null != S
-                                                ? (0, s.jsx)(t7, { label: S.label, onClick: S.perform, tabIndex: G })
+                                                ? (0, s.jsx)(t6, { label: S.label, onClick: S.perform, tabIndex: G })
                                                 : null,
                                     }),
                                 ],
@@ -1094,8 +1094,8 @@ let t4 = $(
             l = r.useCallback(() => {
                 var e, l;
                 n
-                    ? ((e = t.guild.id), e6.h.dispatch({ type: "VOICE_CATEGORY_EXPAND", guildId: e, expand: !0 }))
-                    : ((l = t.guild.id), e6.h.dispatch({ type: "VOICE_CATEGORY_COLLAPSE", guildId: l, expand: !1 }));
+                    ? ((e = t.guild.id), e7.h.dispatch({ type: "VOICE_CATEGORY_EXPAND", guildId: e, expand: !0 }))
+                    : ((l = t.guild.id), e7.h.dispatch({ type: "VOICE_CATEGORY_COLLAPSE", guildId: l, expand: !1 }));
             }, [t.guild.id, n]);
         return (0, s.jsx)("div", {
             className: t5.oA,
@@ -1778,8 +1778,8 @@ function n5(e) {
         },
     });
 }
-var n6 = n(297264),
-    n7 = n(5373),
+var n7 = n(297264),
+    n6 = n(5373),
     n4 = n(65995),
     n8 = n(195702);
 function le(e, t) {
@@ -1815,7 +1815,7 @@ let lt = r.memo(function (e) {
                     (0, s.jsxs)("div", {
                         className: n8.A1,
                         children: [
-                            (0, s.jsx)(n6.D, { variant: "heading-sm/bold", children: em.intl.string(em.t.SnrR3x) }),
+                            (0, s.jsx)(n7.D, { variant: "heading-sm/bold", children: em.intl.string(em.t.SnrR3x) }),
                             (0, s.jsxs)("div", {
                                 className: n8.Ib,
                                 children: [
@@ -1839,7 +1839,7 @@ let lt = r.memo(function (e) {
                             }),
                         ],
                     }),
-                    (0, s.jsx)(n7.i, {
+                    (0, s.jsx)(n6.i, {
                         className: n8.hr,
                         foregroundGradientColor: [
                             h.A.unsafe_rawColors.GREEN_300.css,
@@ -2354,8 +2354,8 @@ var lK = n(922016),
     l2 = n(834942),
     l9 = n(287809),
     l5 = n(53516),
-    l6 = n(648580),
-    l7 = (((l = {})[(l.VOICE = 0)] = "VOICE"), l);
+    l7 = n(648580),
+    l6 = (((l = {})[(l.VOICE = 0)] = "VOICE"), l);
 let l4 = function (e) {
     let { type: t, guildId: l, closePopout: i } = e,
         r = (0, en.GV)(),
@@ -2414,22 +2414,22 @@ let l4 = function (e) {
     return null == g || null == m
         ? null
         : (0, s.jsxs)(lJ.l, {
-              className: l6.kL,
+              className: l7.kL,
               "aria-labelledby": r,
               children: [
-                  (0, s.jsx)("img", { alt: "", className: l6.Sl, src: n(303528) }),
+                  (0, s.jsx)("img", { alt: "", className: l7.Sl, src: n(303528) }),
                   (0, s.jsxs)("div", {
-                      className: l6.Qs,
+                      className: l7.Qs,
                       children: [
-                          (0, s.jsx)(n6.D, { variant: "heading-md/semibold", id: r, children: g }),
+                          (0, s.jsx)(n7.D, { variant: "heading-md/semibold", id: r, children: g }),
                           (0, s.jsx)(e3.E, { color: "text-default", variant: "text-sm/normal", children: m }),
                           (0, s.jsxs)("div", {
-                              className: l6.UD,
+                              className: l7.UD,
                               children: [
                                   null != f
                                       ? (0, s.jsx)("div", {
                                             "data-button-hoisted-classname-wrapper": !0,
-                                            className: l6.FS,
+                                            className: l7.FS,
                                             children: (0, s.jsx)(tK.$, {
                                                 variant: "primary",
                                                 text: f,
@@ -2691,7 +2691,7 @@ class ib extends ny {
             { shouldShowGuildVerificationPopout: t } = this.state;
         if (t)
             return (0, s.jsx)(l4, {
-                type: l7.VOICE,
+                type: l6.VOICE,
                 guildId: e.guild_id,
                 closePopout: this.closeGuildVerificationPopout,
             });
@@ -3171,7 +3171,7 @@ function i9(e) {
                 (0, s.jsxs)("div", {
                     className: i1.X0,
                     children: [
-                        (0, s.jsx)(n6.D, {
+                        (0, s.jsx)(n7.D, {
                             variant: "heading-sm/semibold",
                             color: "text-strong",
                             className: i1.wx,
@@ -3227,7 +3227,7 @@ function i9(e) {
     });
 }
 var i5 = n(584960);
-function i6(e) {
+function i7(e) {
     let { channel: t, presenceActivity: n, embeddedApp: l, onAction: i } = e,
         r = Array.from(l.embeddedActivity.userIds),
         a = (0, u.bG)([l9.default], () => l9.default.getUser(r[0]));
@@ -3256,13 +3256,13 @@ function i6(e) {
               ],
           });
 }
-var i7 = n(713654),
+var i6 = n(713654),
     i4 = n(744399);
 function i8(e) {
     let { channel: t } = e,
         n = (0, u.bG)([O.A], () => O.A.getGuild(t.guild_id)),
         l = (0, t$.Ay)(t),
-        i = (0, i7.gU)(t, n);
+        i = (0, i6.gU)(t, n);
     return null == i
         ? null
         : (0, s.jsxs)("div", {
@@ -3292,7 +3292,7 @@ function st(e) {
                   (0, s.jsx)("div", { className: se.zN }),
                   i.map((e, l) =>
                       (0, s.jsx)(
-                          i6,
+                          i7,
                           { embeddedApp: e, presenceActivity: e.presenceActivity ?? void 0, channel: t, onAction: n },
                           l,
                       ),
@@ -3832,7 +3832,7 @@ class sb extends u.Ay.Store {
         return sA[e] ?? sh;
     }
 }
-let sG = new sb(e6.h, {
+let sG = new sb(e7.h, {
     UPDATE_CHANNEL_LIST_DIMENSIONS: function (e) {
         let { guildId: t, channelIds: n } = e,
             l = O.A.getGuild(t);
@@ -4097,7 +4097,7 @@ var sV = n(152367),
     sw = n(972786),
     sH = n(321593),
     sB = n(309010),
-    sk = n(759967);
+    sk = n(50617);
 function sF(e) {
     let { guild: t, selected: n } = e,
         l = (0, u.bG)([sw.Ay], () => sw.Ay.getSelectedProjectId(t.id), [t.id]),
@@ -4130,9 +4130,9 @@ var sK = n(845056),
     s1 = n(26741),
     s3 = n(493819),
     s2 = n(722884),
-    s9 = n(433083),
+    s9 = n(579129),
     s5 = n(176431);
-function s6(e) {
+function s7(e) {
     let { channel: t, imageUrl: l, animatedUrl: i, bannerHash: a, canModifyHangout: o } = e,
         d = (0, sQ.S)(l),
         c = (0, eU.je)(t),
@@ -4190,7 +4190,7 @@ function s6(e) {
         ],
     });
 }
-function s7(e) {
+function s6(e) {
     let { channel: t } = e,
         n = (0, s1.dX)({ guildId: t.guild_id, channelId: t.id }),
         l = r.useCallback(() => {
@@ -4227,7 +4227,7 @@ function s4(e) {
         }, [t.guild_id, d]);
     return l
         ? null != c
-            ? (0, s.jsx)(s6, {
+            ? (0, s.jsx)(s7, {
                   channel: t,
                   imageUrl: c.imageUrl,
                   animatedUrl: c.animatedUrl,
@@ -4235,7 +4235,7 @@ function s4(e) {
                   canModifyHangout: a,
               })
             : a
-              ? (0, s.jsx)(s7, { channel: t })
+              ? (0, s.jsx)(s6, { channel: t })
               : null
         : null;
 }
@@ -4424,7 +4424,7 @@ class ro extends ny {
         let { channel: e } = this.props,
             { shouldShowGuildVerificationPopout: t } = this.state;
         return t
-            ? (0, s.jsx)(l4, { type: l7.VOICE, guildId: e.guild_id, closePopout: this.closeGuildVerificationPopout })
+            ? (0, s.jsx)(l4, { type: l6.VOICE, guildId: e.guild_id, closePopout: this.closeGuildVerificationPopout })
             : null;
     };
     renderOpenChatButton = () => {

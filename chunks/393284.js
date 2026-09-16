@@ -28,8 +28,8 @@ var g = n(503698),
     x = n(793943),
     f = n(996254),
     I = n(830543),
-    _ = n(738419),
-    N = n(328157),
+    N = n(738419),
+    _ = n(72191),
     C = n(325600),
     b = n(114149);
 function y(e) {
@@ -40,7 +40,7 @@ function y(e) {
         type: A.ImpressionTypes.VIEW,
         properties: { location_stack: n },
     });
-    let i = (0, f.X)({ "en-US": N.default["f/cLEi"], "en-GB": N.default["f/cLEi"] }, N.default.CARxAC);
+    let i = (0, f.X)({ "en-US": _.default["f/cLEi"], "en-GB": _.default["f/cLEi"] }, _.default.CARxAC);
     return (0, c.jsxs)("div", {
         className: m()(C.kL, t),
         children: [
@@ -49,7 +49,7 @@ function y(e) {
                 className: C.P_,
                 children: [
                     (0, c.jsx)(h.D, { variant: "heading-lg/semibold", color: "text-strong", children: i }),
-                    (0, c.jsx)(S.E, { variant: "text-sm/normal", children: u.intl.string(N.default.nla4RG) }),
+                    (0, c.jsx)(S.E, { variant: "text-sm/normal", children: u.intl.string(_.default.nla4RG) }),
                 ],
             }),
             (0, c.jsx)("div", {
@@ -58,7 +58,7 @@ function y(e) {
                     variant: "primary",
                     text: u.intl.string(u.t.uw9zI7),
                     onClick: function () {
-                        ((0, _.b0)(_.G8.APPEARANCE_SETTINGS),
+                        ((0, N.b0)(N.G8.APPEARANCE_SETTINGS),
                             (0, x.nf)(x.HP.CUSTOM_THEME, { from: x.xv.SETTING }),
                             (0, I.default)());
                     },
