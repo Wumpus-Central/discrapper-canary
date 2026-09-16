@@ -1,2 +1,2 @@
 n.d(t, { A: () => a });
-let a = (0, n(196765).v)(() => ({ isOpen: !1 }));
+let a = (0, n(196765).v)(() => ({ isOpen: !1, hiddenOrder: [] }));
