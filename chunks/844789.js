@@ -2150,7 +2150,7 @@ function lp(e) {
                         case d.I5.FILE_UPLOAD:
                             return (0, i.jsx)(eK, { ...t }, n);
                         case d.I5.CHECKPOINT_CARD:
-                            if (t.checkpointData.version === lm.w.V2025) return (0, i.jsx)(tI, { ...t }, n);
+                            if (t.checkpointData.version === lm.wk.V2025) return (0, i.jsx)(tI, { ...t }, n);
                             return (0, i.jsx)(nn, {}, n);
                         case d.I5.RADIO_GROUP:
                             return (0, i.jsx)(e3, { ...t }, n);

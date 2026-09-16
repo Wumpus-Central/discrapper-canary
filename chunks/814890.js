@@ -396,7 +396,7 @@ function y(e) {
                         return (
                             (s = t),
                             (l = n),
-                            (o = s.checkpoint_data).version === A.w.V2025
+                            (o = s.checkpoint_data).version === A.wk.V2025
                                 ? {
                                       type: s.type,
                                       id: D(l),
