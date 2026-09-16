@@ -203,7 +203,7 @@ var eC = n(47167),
     eO = n(378570),
     eM = n(832163),
     eL = n(533562),
-    ek = n(479669),
+    ek = n(128954),
     ew = n(805901),
     eP = n(565645);
 n(915089);
@@ -270,8 +270,8 @@ var eH = n(636585),
     e3 = n(428249),
     e8 = n(327098),
     e6 = n(576757),
-    e7 = n(202195),
-    e5 = n(140651),
+    e5 = n(202195),
+    e7 = n(140651),
     e4 = n(43105),
     e9 = n(131607),
     te = n(49999),
@@ -623,7 +623,7 @@ function tA(e) {
 }
 function tC(e) {
     let { children: t, backgroundImgSrc: n, className: i, style: s = {} } = e,
-        { primaryColor: r, secondaryColor: a } = (0, e5.A)(n);
+        { primaryColor: r, secondaryColor: a } = (0, e7.A)(n);
     return (
         null != n && (s.background = `linear-gradient(45deg, ${r}, ${a})`),
         (0, l.jsx)(F.N, {
@@ -654,7 +654,7 @@ function tI(e) {
         [_, j] = i.useState(!1),
         { voiceBar: b, joinVoiceButton: T } = (function (e) {
             let { channel: t, entry: n, onVoiceChannelPreview: s } = e,
-                { streamPreviewUrl: r, channel: a } = (0, e7.A)(n),
+                { streamPreviewUrl: r, channel: a } = (0, e5.A)(n),
                 o = (0, eC.Ay)(a),
                 { needSubscriptionToAccess: c } = (0, eR.A)(t?.id),
                 h = (0, u.bG)([eW.A], () => (null != a ? eW.A.getGuild(a.guild_id) : void 0)),
@@ -1043,7 +1043,7 @@ function tS(e) {
         a = t?.guild_id,
         { displayParticipants: o, participant1: c, participant2: d, numOtherParticipants: h } = (0, e6.A)(i, 3),
         m = (0, u.bG)([g.default], () => g.default.getUser(i.author_id)),
-        { streamPreviewUrl: f } = (0, e7.A)(i),
+        { streamPreviewUrl: f } = (0, e5.A)(i),
         p = [c, d];
     return (0, l.jsxs)("div", {
         className: tp.MH,
@@ -1485,7 +1485,7 @@ let tY = [...tT.n, M.Yq],
                 trackRankingItemInteraction: o,
             } = e,
             { user: u, details: c, appName: d, activity: h, embeddedActivity: m } = (0, tj.u)(n),
-            { streamPreviewUrl: f, stream: p } = (0, e7.A)(n),
+            { streamPreviewUrl: f, stream: p } = (0, e5.A)(n),
             g = n.extra.platform,
             x = n.extra.application_id,
             A = null != g ? tq[g] : null,
@@ -1659,8 +1659,8 @@ var t1 = n(205327),
     t3 = n(835723),
     t8 = n(172710),
     t6 = n(655116),
-    t7 = n(763758),
-    t5 = n(286617),
+    t5 = n(763758),
+    t7 = n(286617),
     t4 = n(533207),
     t9 = n(280450),
     ne = n(121090),
@@ -1706,7 +1706,7 @@ function nr(e) {
         g = tz(em.fg2.SPOTIFY),
         x = (0, u.bG)(
             [t6.A, t9.default],
-            () => (d?.type === em.$pd.LISTENING && null != p ? (0, t5.A)(t6.A, t9.default, p, d) : void 0),
+            () => (d?.type === em.$pd.LISTENING && null != p ? (0, t7.A)(t6.A, t9.default, p, d) : void 0),
             [d, p],
             t2.A,
         );
@@ -1723,7 +1723,7 @@ function nr(e) {
         (t = () => {
             null != g ? g() : (0, t8.Mp)(d);
         }),
-        (A = (0, l.jsx)(t7.A, {
+        (A = (0, l.jsx)(t5.A, {
             artists: m,
             canOpen: null != d.sync_id,
             linkClassName: tp.zA,

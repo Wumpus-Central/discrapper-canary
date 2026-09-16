@@ -3,7 +3,7 @@ var s = t(477900),
     i = t(582128),
     a = t(503698),
     l = t.n(a),
-    r = t(479669),
+    r = t(128954),
     o = t(17928),
     c = t(661531),
     d = t(707554),
@@ -887,8 +887,8 @@ var eQ = t(435558),
     e3 = t(847374),
     e2 = t(912592),
     e4 = t(821609),
-    e6 = t(475825),
-    e8 = t(928039),
+    e8 = t(475825),
+    e6 = t(928039),
     e9 = t(625494);
 let e7 = { [eC.Ur.UNREAD]: !0, [eC.Ur.TODAY]: !0, [eC.Ur.YESTERDAY]: !1, [eC.Ur.OLDER]: !1 },
     e5 = { [eC.Ur.UNREAD]: !0, [eC.Ur.TODAY]: !1, [eC.Ur.YESTERDAY]: !1, [eC.Ur.OLDER]: !1 },
@@ -989,7 +989,7 @@ function nr(e) {
         x = (0, M.op)(),
         p = i.useRef(null),
         A = i.useRef(0),
-        I = (0, e8.A)(g, p),
+        I = (0, e6.A)(g, p),
         { entrypoint: N, notificationCenterVariant: f } = (0, U.X8)({ location: "NotificationsInboxSidebarList" }),
         {
             isLoading: j,
@@ -1154,7 +1154,7 @@ function nr(e) {
                         children: (0, s.jsx)(e1.PR, {
                             children: (e) => {
                                 let { ref: n, ...t } = e;
-                                return (0, s.jsx)(e6.OZ, {
+                                return (0, s.jsx)(e8.OZ, {
                                     ref: (e) => {
                                         ((p.current = e), (n.current = e?.getScrollerNode() ?? null));
                                     },
