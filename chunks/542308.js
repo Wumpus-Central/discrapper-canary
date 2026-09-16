@@ -2159,32 +2159,33 @@ let lk = r.memo(function (e) {
         let { thread: t, isSelectedChannel: l, isSelectedVoice: i, isLast: a, withGuildIcon: o } = e,
             c = (0, u.bG)([tc.Ay], () => tc.Ay.getVoiceStatesForChannel(t), [t]),
             h = (0, u.bG)([lI.A], () => lI.A.hasVideo(t.id)),
+            A = (0, t$.Ay)(t),
             {
-                unread: A,
-                mentionCount: g,
-                isMentionLowImportance: m,
+                unread: g,
+                mentionCount: m,
+                isMentionLowImportance: f,
             } = (0, u.cf)([n3.Ay], () => ({
                 unread: n3.Ay.hasUnread(t.id),
                 mentionCount: n3.Ay.getMentionCount(t.id),
                 isMentionLowImportance: n3.Ay.getIsMentionLowImportance(t.id),
             })),
-            f = (0, u.bG)([lR.A], () => lR.A.isMuted(t.id)),
-            p = r.useCallback(
+            p = (0, u.bG)([lR.A], () => lR.A.isMuted(t.id)),
+            C = r.useCallback(
                 (e) => {
                     (0, l_.JA)(t, !e.shiftKey, lb.H9.CHANNEL_LIST);
                 },
                 [t],
             ),
-            C = r.useCallback(() => {
+            E = r.useCallback(() => {
                 lp.A.preload(t.guild_id, t.id);
             }, [t.guild_id, t.id]),
-            E = r.useCallback(
+            x = r.useCallback(
                 (e) => {
                     (0, lv.A)(e, t);
                 },
                 [t],
             ),
-            x = r.useCallback(
+            N = r.useCallback(
                 (e) => {
                     let l = L.A.getChannel(t.id);
                     null != l &&
@@ -2213,17 +2214,17 @@ let lk = r.memo(function (e) {
                 },
                 [t.id],
             ),
-            N = null == c ? 0 : c.length,
-            { role: _, ...I } = (0, d.rm)(t.id),
-            S = r.useRef(null),
-            b =
-                g > 0
-                    ? em.intl.formatToPlainString(em.t["ZL7+I6"], { channelName: t.name, mentionCount: g })
-                    : A
-                      ? em.intl.formatToPlainString(em.t.YlVvmc, { channelName: t.name })
-                      : em.intl.formatToPlainString(em.t["0nZpiF"], { channelName: t.name });
+            _ = null == c ? 0 : c.length,
+            { role: I, ...S } = (0, d.rm)(t.id),
+            b = r.useRef(null),
+            G =
+                m > 0
+                    ? em.intl.formatToPlainString(em.t["ZL7+I6"], { channelName: A, mentionCount: m })
+                    : g
+                      ? em.intl.formatToPlainString(em.t.YlVvmc, { channelName: A })
+                      : em.intl.formatToPlainString(em.t["0nZpiF"], { channelName: A });
         return (0, s.jsxs)("li", {
-            role: _,
+            role: I,
             className: ew()(ep.fx, { [ep.wH]: l }),
             children: [
                 (0, s.jsx)(lB, { withGuildIcon: o }),
@@ -2235,39 +2236,36 @@ let lk = r.memo(function (e) {
                           style: { transform: "rotateX(180deg) translateY(-9px)" },
                       }),
                 (0, s.jsx)(tW.vN, {
-                    focusTarget: S,
-                    ringTarget: S,
+                    focusTarget: b,
+                    ringTarget: b,
                     offset: { top: 2, bottom: 2, right: 4 },
                     children: (0, s.jsxs)("div", {
                         className: ew()(ep.Ki, nX.iE, nX.ZS, {
                             [nX.J1]: l,
-                            [nX.F4]: !l && f,
-                            [nX.V2]: !f && !l && A,
+                            [nX.F4]: !l && p,
+                            [nX.V2]: !p && !l && g,
                             [nX.lY]: o,
                         }),
-                        onMouseDown: C,
-                        onContextMenu: x,
+                        onMouseDown: E,
+                        onContextMenu: N,
                         children: [
-                            !A || f || l ? null : (0, s.jsx)("div", { className: ew()(nX.gy, nX.WS) }),
+                            !g || p || l ? null : (0, s.jsx)("div", { className: ew()(nX.gy, nX.WS) }),
                             (0, s.jsx)(es.D, {
-                                ...I,
-                                innerRef: S,
+                                ...S,
+                                innerRef: b,
                                 className: nX.nf,
-                                onClick: p,
-                                onAuxClick: E,
-                                "aria-label": b,
+                                onClick: C,
+                                onAuxClick: x,
+                                "aria-label": G,
                                 focusProps: { enabled: !1 },
                                 children: (0, s.jsxs)("div", {
                                     className: ew()(nX.Y5, nX.__invalid_threadMainContent),
                                     children: [
-                                        (0, s.jsx)(tF.A, {
+                                        (0, s.jsx)(e3.E, {
+                                            variant: "text-sm/medium",
+                                            color: "none",
                                             className: nX.UU,
-                                            "aria-hidden": !0,
-                                            children: (0, s.jsx)(e3.E, {
-                                                variant: "text-sm/medium",
-                                                color: "none",
-                                                children: t.name,
-                                            }),
+                                            children: (0, s.jsx)(tF.A, { "aria-hidden": !0, children: A }),
                                         }),
                                         (0, s.jsxs)("div", {
                                             className: nX.Y_,
@@ -2276,12 +2274,12 @@ let lk = r.memo(function (e) {
                                             children: [
                                                 (0, s.jsx)(lH, {
                                                     thread: t,
-                                                    countInVoice: N,
+                                                    countInVoice: _,
                                                     hasVideo: h,
-                                                    mentionCount: g,
-                                                    isMentionLowImportance: m,
+                                                    mentionCount: m,
+                                                    isMentionLowImportance: f,
                                                 }),
-                                                (0, s.jsx)(lG, { thread: t, tabIndex: I.tabIndex }),
+                                                (0, s.jsx)(lG, { thread: t, tabIndex: S.tabIndex }),
                                             ],
                                         }),
                                     ],
