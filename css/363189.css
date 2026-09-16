@@ -79,17 +79,22 @@
 
 .dragHandle_f18413 {
     align-items: center;
+    border-radius: var(--radius-sm);
+    color: var(--white);
     display: flex;
     inset: 0;
-    justify-content: center;
+    justify-content: flex-start;
     opacity: 0;
+    padding-inline-start: var(--space-4);
     pointer-events: none;
     position: absolute;
     z-index: 1
 }
 
 .dragHandle_f18413:focus-visible {
-    opacity: 1
+    background: var(--opacity-black-72);
+    opacity: 1;
+    pointer-events: auto
 }
 
 .isDragging_f18413 {
@@ -223,4 +228,4 @@
     width: 20px
 }
 
-/*# sourceMappingURL=363189.23495d7370fb86ec.css.map*/
+/*# sourceMappingURL=363189.29d58916d07696d4.css.map*/
