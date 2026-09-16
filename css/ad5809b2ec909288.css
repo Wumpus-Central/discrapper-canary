@@ -181,6 +181,10 @@
     opacity: .5
 }
 
+.youtubeGradient__53b4c:before {
+    background: linear-gradient(180deg, var(--background-surface-high) 0, var(--background-base-lower) 100%)
+}
+
 .overlayTextBox__53b4c {
     inset-inline-start: var(--space-12);
     z-index: 1
@@ -280,4 +284,4 @@
     }
 }
 
-/*# sourceMappingURL=1910e5edf9266e73.css.map*/
+/*# sourceMappingURL=ad5809b2ec909288.css.map*/

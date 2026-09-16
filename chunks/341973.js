@@ -2,7 +2,6 @@ e.exports = {
     kL: "container_e99fef",
     G9: "progressBarContainer_e99fef",
     kT: "monthlyCodeCountdownLabel_e99fef",
-    kR: "cards_e99fef",
     lA: "promoCardContainer_e99fef",
     LV: "wrap_e99fef",
     JN: "promoCardContent_e99fef",

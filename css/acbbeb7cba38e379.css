@@ -57,24 +57,14 @@
     margin-bottom: 10px
 }
 
-.cards_e99fef {
-    gap: var(--space-12);
-    width: 100%
-}
-
-.cards_e99fef,
-.promoCardContainer_e99fef {
-    display: flex;
-    flex-direction: column
-}
-
 .promoCardContainer_e99fef {
     align-items: stretch;
     background-color: var(--background-surface-highest);
     border: 1px solid var(--border-muted);
     border-radius: var(--radius-lg);
+    display: flex;
+    flex-direction: column;
     gap: 14px;
-    margin-top: var(--space-12);
     padding: var(--space-16) 0
 }
 
@@ -203,4 +193,4 @@
     --control-icon-only-icon-default: var(--text-strong)
 }
 
-/*# sourceMappingURL=096738e170e109d9.css.map*/
+/*# sourceMappingURL=acbbeb7cba38e379.css.map*/

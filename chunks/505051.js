@@ -21,6 +21,7 @@ _.r(
         textBox: "textBox__53b4c",
         gradientBackground: "gradientBackground__53b4c",
         callOfDutyGradient: "callOfDutyGradient__53b4c",
+        youtubeGradient: "youtubeGradient__53b4c",
         overlayTextBox: "overlayTextBox__53b4c",
         backgroundVideoContainer: "backgroundVideoContainer__53b4c",
         backgroundVideo: "backgroundVideo__53b4c",
