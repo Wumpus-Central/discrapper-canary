@@ -471,7 +471,7 @@ function eU(e) {
         [ee, el] = n.useState(!0),
         et = (0, O.A)({ skuId: c }),
         es = (0, T.JL)({ sku: et }),
-        { state: en, isReady: ei } = (0, w.we)({ orbPriceAmount: es?.amount }),
+        { state: en, isReady: ei } = (0, w.we)({ orbPriceAmount: es?.amount, skuId: c }),
         er = (0, T.CD)({ sku: et }),
         [ea, eo] = n.useState(0),
         [ec, ed] = n.useMemo(

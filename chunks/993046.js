@@ -24,6 +24,7 @@ function p(e) {
             pricingResultId: e.pricing_result_id,
             storefrontPromotionIds: e.storefront_promotion_ids,
             rewardResultIds: e.reward_result_ids,
+            offerResultIds: e.offer_result_ids,
         })),
         pricingResultIdMap:
             ((t = e.pricing_result_id_map),
@@ -36,6 +37,12 @@ function p(e) {
         rewardResultIdMap:
             ((n = e.reward_result_id_map),
             a().mapValues(n, (e) => a().mapValues(e, (e) => ({ type: e.type, amount: e.amount })))),
+        offerResultIdMap: a().mapValues(e.offer_result_id_map, (e) => ({
+            promotionId: e.promotion_id,
+            type: e.type,
+            rewardStatus: e.reward_status,
+            rewardResultId: e.reward_result_id,
+        })),
     };
 }
 function T(e) {

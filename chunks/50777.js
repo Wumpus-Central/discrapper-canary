@@ -16,14 +16,14 @@ var t = n(477900),
     E = n(875444),
     h = n(429913),
     b = n(288106),
-    j = n(993046),
-    I = n(801228),
+    I = n(993046),
+    j = n(801228),
     T = n(652165),
     N = n(594832),
     _ = n(287809),
     f = n(67480),
-    g = n(871123),
-    k = n(733391),
+    k = n(871123),
+    g = n(733391),
     v = n(832163),
     R = n(69236),
     D = n(31969),
@@ -94,7 +94,7 @@ function H(l) {
 function w(l) {
     let { guildId: i, skuId: n, channel: a, applicationId: s, customNavigateToSocialLayerStorefront: b } = l,
         D = (0, o.bG)([f.A], () => f.A.isFetching(n)),
-        B = (0, I.A)({ skuId: n }),
+        B = (0, j.A)({ skuId: n }),
         H = (0, o.bG)([v.A], () => (null != i ? v.A.getApplicationIdFromGuildId(i) : void 0)),
         w = B?.applicationId ?? s ?? H,
         z = (0, o.bG)([C.A], () => null != w && C.A.isFetchingApplication(w)),
@@ -106,18 +106,18 @@ function w(l) {
             a.isDM() && null != a.recipients && 0 !== a.recipients.length ? _.default.getUser(a.recipients[0]) : null,
         ),
         J = (0, o.bG)([v.A], () => (null != n ? v.A.getNormalizedSKUEligibility(n) : void 0), [n]),
-        { primaryIconAsset: Q, primaryIconLabel: V } = e.useMemo(() => (0, g.Cv)(B, w), [B, w]),
-        { normalPrice: $, discountedPrice: X, discountPercent: Z, userPrice: ll } = (0, j.CD)({ sku: B }),
-        li = (0, j.JL)({ sku: B }),
+        { primaryIconAsset: Q, primaryIconLabel: V } = e.useMemo(() => (0, k.Cv)(B, w), [B, w]),
+        { normalPrice: $, discountedPrice: X, discountPercent: Z, userPrice: ll } = (0, I.CD)({ sku: B }),
+        li = (0, I.JL)({ sku: B }),
         ln = li?.amount,
-        lt = (0, R.oG)({ orbPriceAmount: ln });
+        lt = (0, R.oG)({ orbPriceAmount: ln, skuId: B?.id });
     e.useEffect(() => {
         null == w ||
             null == n ||
             null != f.A.get(n) ||
             f.A.isFetching(n) ||
             f.A.didFetchingSkuFail(n) ||
-            (0, k.Pp)(w, n);
+            (0, g.Pp)(w, n);
     }, [w, n]);
     let le = e.useCallback(
             (l) => {

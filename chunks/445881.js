@@ -227,7 +227,7 @@ function eb(e) {
         })(a, eI),
         eP = (0, w.JL)({ sku: eg }),
         eR = eP?.amount,
-        eD = (0, $.oG)({ orbPriceAmount: eR }),
+        eD = (0, $.oG)({ orbPriceAmount: eR, skuId: a }),
         ew = (0, T.h)(eg?.applicationId),
         {
             isSelectionActive: eH,

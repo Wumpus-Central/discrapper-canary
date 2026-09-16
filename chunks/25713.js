@@ -11,8 +11,8 @@ var a = l(34188),
     p = l.n(c),
     m = l(122817),
     b = l(136722),
-    g = l(17928),
-    f = l(228366),
+    f = l(17928),
+    g = l(228366),
     y = l(288106),
     h = l(95701),
     S = l(280450),
@@ -22,8 +22,8 @@ let v = "000000000000000100",
     x = "000000000000000200",
     A = "000000000000000300",
     C = "000000000000000400",
-    _ = "playground-nitro-promotion";
-function R(e, t, l) {
+    R = "playground-nitro-promotion";
+function _(e, t, l) {
     let {
             name: a,
             price: o,
@@ -36,7 +36,7 @@ function R(e, t, l) {
         } = t,
         c = `playground-pricing-result-${e}`,
         b = `playground-reward-result-${e}`,
-        g = null != d ? p()().add(d, "days").toISOString() : void 0,
+        f = null != d ? p()().add(d, "days").toISOString() : void 0,
         h = {
             id: e,
             type: E.Puh.DURABLE_PRIMARY,
@@ -65,11 +65,13 @@ function R(e, t, l) {
             bundled_sku_ids: [],
             orbs_reward: s ?? 0,
             eligible_offers: [],
-            tenant_metadata: { social_layer: { carousel_items: [], expires_at: g } },
+            tenant_metadata: { social_layer: { carousel_items: [], expires_at: f } },
         };
-    if ((f.h.dispatch({ type: "SKU_FETCH_SUCCESS", sku: h }), null != n && null != r)) {
+    if ((g.h.dispatch({ type: "SKU_FETCH_SUCCESS", sku: h }), null != n && null != r)) {
         let t = {
-            skuPriceMap: { [e]: { pricingResultId: c, storefrontPromotionIds: [_], rewardResultIds: [b] } },
+            skuPriceMap: {
+                [e]: { pricingResultId: c, storefrontPromotionIds: [R], rewardResultIds: [b], offerResultIds: [] },
+            },
             pricingResultIdMap: {
                 [c]: {
                     [y.QK.SELF_PURCHASE]: {
@@ -104,14 +106,17 @@ function R(e, t, l) {
                     [y.QK.GIFT]: { type: y.Ns.DISCOUNT, amount: Number(r) },
                 },
             },
+            offerResultIdMap: {},
         };
-        f.h.dispatch({ type: "SKUS_PRICING_FETCH_SUCCESS", priceId: { type: "skus", skuIds: [e] }, data: t });
+        g.h.dispatch({ type: "SKUS_PRICING_FETCH_SUCCESS", priceId: { type: "skus", skuIds: [e] }, data: t });
     } else
-        f.h.dispatch({
+        g.h.dispatch({
             type: "SKUS_PRICING_FETCH_SUCCESS",
             priceId: { type: "skus", skuIds: [e] },
             data: {
-                skuPriceMap: { [e]: { pricingResultId: c, storefrontPromotionIds: [], rewardResultIds: [] } },
+                skuPriceMap: {
+                    [e]: { pricingResultId: c, storefrontPromotionIds: [], rewardResultIds: [], offerResultIds: [] },
+                },
                 pricingResultIdMap: {
                     [c]: {
                         [y.QK.SELF_PURCHASE]: {
@@ -141,9 +146,10 @@ function R(e, t, l) {
                     },
                 },
                 rewardResultIdMap: {},
+                offerResultIdMap: {},
             },
         });
-    f.h.dispatch({
+    g.h.dispatch({
         type: "SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_RESPONSE",
         interactionId: "playground-interaction",
         applicationId: x,
@@ -153,7 +159,7 @@ function R(e, t, l) {
     });
 }
 function P(e) {
-    let t = (0, g.bG)([S.default], () => S.default.getId()),
+    let t = (0, f.bG)([S.default], () => S.default.getId()),
         {
             name: l,
             price: a,
@@ -165,7 +171,7 @@ function P(e) {
             isEligible: u,
         } = e;
     n.useEffect(() => {
-        R(v, e, t);
+        _(v, e, t);
     }, [l, a, o, r, i, s, d, u, t]);
 }
 let T = [
@@ -240,12 +246,12 @@ function D() {
             flags: b.pG(32, E.gfo.SOCIAL_LAYER_INTEGRATION),
             flags_new: E.gfo.SOCIAL_LAYER_INTEGRATION.toString(),
         };
-        f.h.dispatch({ type: "APPLICATION_FETCH_SUCCESS", application: e });
+        g.h.dispatch({ type: "APPLICATION_FETCH_SUCCESS", application: e });
     }, []);
 }
 function N() {
     n.useEffect(() => {
-        (f.h.dispatch({
+        (g.h.dispatch({
             type: "SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_SUCCESS",
             config: {
                 promotionalSkuIds: [],
@@ -265,7 +271,7 @@ function N() {
                 announcementModalConfig: null,
             },
         }),
-            f.h.dispatch({
+            g.h.dispatch({
                 type: "SOCIAL_LAYER_STOREFRONT_LOAD_SUCCESS",
                 guildOrApplicationId: { type: "guild", guildId: A },
                 storefront: {
@@ -304,11 +310,11 @@ let U = {
                 isEligible: m,
             } = e,
             b = r ? String(i) : null,
-            g = r ? Math.round(a * (1 - i / 100)) : null;
+            f = r ? Math.round(a * (1 - i / 100)) : null;
         (P({
             name: l,
             price: a,
-            salePrice: g,
+            salePrice: f,
             salePercentage: b,
             exclusive: s,
             orbsReward: d ? u : null,
@@ -316,7 +322,7 @@ let U = {
             isEligible: m,
         }),
             D());
-        let f = n.useCallback((e) => {
+        let g = n.useCallback((e) => {
             e.preventDefault();
         }, []);
         return t === L.s6.EMBEDDED
@@ -326,7 +332,7 @@ let U = {
               })
             : (0, o.jsx)("div", {
                   style: { maxWidth: t === L.s6.SMALL ? 220 : 300, padding: 16 },
-                  children: (0, o.jsx)(L.Ay, { skuId: v, variant: t, onClick: f }),
+                  children: (0, o.jsx)(L.Ay, { skuId: v, variant: t, onClick: g }),
               });
     },
     controls: {
@@ -352,9 +358,9 @@ let U = {
         isEligible: { label: "Purchase Eligible", type: "boolean", defaultValue: !0 },
     },
 };
-var k = l(439325);
+var M = l(439325);
 (l(323874), l(14289), l(35956));
-var M = l(366523);
+var k = l(366523);
 let B = new URL("https://cdn.discordapp.com/embed/avatars/0.png"),
     F = new URL("https://cdn.discordapp.com/embed/avatars/1.png");
 var G = l(263911),
@@ -450,8 +456,8 @@ let en = {
                                     hasOrbsReward: p,
                                     orbsRewardAmount: m,
                                     hasExpiry: b,
-                                    daysUntilExpiry: g,
-                                    isEligible: f,
+                                    daysUntilExpiry: f,
+                                    isEligible: g,
                                 } = e,
                                 y = a ? String(u) : null,
                                 h = a ? Math.round(l * (1 - u / 100)) : null,
@@ -464,12 +470,12 @@ let en = {
                                 salePercentage: y,
                                 exclusive: c,
                                 orbsReward: p ? m : null,
-                                daysUntilExpiry: b ? g : null,
-                                isEligible: f,
+                                daysUntilExpiry: b ? f : null,
+                                isEligible: g,
                             }),
                             N(),
                             S)
-                                ? (0, o.jsx)(k.default, {
+                                ? (0, o.jsx)(M.default, {
                                       transitionState: d.ip.ENTERED,
                                       returnRef: I,
                                       skuId: v,
@@ -540,13 +546,13 @@ let en = {
                                 feature1Subtitle: p,
                                 feature2Title: m,
                                 feature2Subtitle: b,
-                                buttonText: g,
+                                buttonText: f,
                             } = e;
                             N();
-                            let [f, y] = n.useState(!1),
+                            let [g, y] = n.useState(!1),
                                 h = n.useRef(null),
                                 S = [t, l].filter((e) => "" !== e);
-                            return f
+                            return g
                                 ? (0, o.jsx)(u.A, {
                                       version: 0,
                                       transitionState: d.ip.ENTERED,
@@ -561,7 +567,7 @@ let en = {
                                           { assetUrl: V, title: c, subtitle: p },
                                           { assetUrl: V, title: m, subtitle: b },
                                       ],
-                                      buttonText: g,
+                                      buttonText: f,
                                       onClose: () => Promise.resolve(y(!1)),
                                   })
                                 : (0, o.jsxs)(r.B, {
@@ -668,7 +674,7 @@ let en = {
                             let { shape: t, useBackgroundImage: l } = e;
                             return (0, o.jsx)("div", {
                                 style: { width: 220, height: 220 },
-                                children: (0, o.jsx)(M.A, {
+                                children: (0, o.jsx)(k.A, {
                                     cardImage: B,
                                     cardBackgroundImage: l ? F : null,
                                     altText: "Playground preview",
@@ -707,7 +713,7 @@ let en = {
                                     gradientPreset: m,
                                 } = e,
                                 b =
-                                    ((t = (0, g.bG)([S.default], () => S.default.getId())),
+                                    ((t = (0, f.bG)([S.default], () => S.default.getId())),
                                     (l = n.useMemo(
                                         () =>
                                             T.slice(0, p).map((e) => {
@@ -717,8 +723,8 @@ let en = {
                                         [p],
                                     )),
                                     n.useEffect(() => {
-                                        for (let { id: e, params: l } of T.slice(0, p)) R(e, l, t);
-                                        (f.h.dispatch({
+                                        for (let { id: e, params: l } of T.slice(0, p)) _(e, l, t);
+                                        (g.h.dispatch({
                                             type: "SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_SUCCESS",
                                             config: {
                                                 promotionalSkuIds: l,
@@ -738,7 +744,7 @@ let en = {
                                                 announcementModalConfig: null,
                                             },
                                         }),
-                                            f.h.dispatch({
+                                            g.h.dispatch({
                                                 type: "SOCIAL_LAYER_STOREFRONT_LOAD_SUCCESS",
                                                 guildOrApplicationId: { type: "guild", guildId: A },
                                                 storefront: {
@@ -857,7 +863,7 @@ let en = {
                                     [c, m, s],
                                 ),
                                 n.useEffect(() => {
-                                    (f.h.dispatch({
+                                    (g.h.dispatch({
                                         type: "SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_SUCCESS",
                                         config: {
                                             promotionalSkuIds: [],
@@ -877,7 +883,7 @@ let en = {
                                             announcementModalConfig: null,
                                         },
                                     }),
-                                        f.h.dispatch({
+                                        g.h.dispatch({
                                             type: "SOCIAL_LAYER_STOREFRONT_LOAD_SUCCESS",
                                             guildOrApplicationId: { type: "guild", guildId: A },
                                             storefront: {
@@ -1035,7 +1041,7 @@ let en = {
                             }),
                                 D(),
                                 n.useEffect(() => {
-                                    (f.h.dispatch({
+                                    (g.h.dispatch({
                                         type: "SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_SUCCESS",
                                         config: {
                                             promotionalSkuIds: [],
@@ -1055,7 +1061,7 @@ let en = {
                                             announcementModalConfig: null,
                                         },
                                     }),
-                                        f.h.dispatch({
+                                        g.h.dispatch({
                                             type: "SOCIAL_LAYER_STOREFRONT_LOAD_SUCCESS",
                                             guildOrApplicationId: { type: "guild", guildId: A },
                                             storefront: {
@@ -1070,8 +1076,8 @@ let en = {
                                                 ],
                                                 assets: {},
                                                 promotions: {
-                                                    [_]: {
-                                                        id: _,
+                                                    [R]: {
+                                                        id: R,
                                                         endsAt: null,
                                                         flavor: "nitro",
                                                         pdp: { label: "Free with Nitro", tooltip: null, icon: null },
