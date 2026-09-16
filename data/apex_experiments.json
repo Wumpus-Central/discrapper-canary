@@ -3688,22 +3688,6 @@
     }
   },
   {
-    "name": "2026-06-server-setup-boost-cta",
-    "kind": "user",
-    "defaultConfig": {
-      "enabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true
-      }
-    }
-  },
-  {
     "kind": "guild",
     "name": "2026-06-server-theme-apex-shadow",
     "defaultConfig": {
