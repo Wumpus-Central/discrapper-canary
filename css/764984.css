@@ -1,0 +1,83 @@
+.toastWrapper_d3c698 {
+    display: flex;
+    inset-inline-end: 0;
+    justify-content: flex-end;
+    pointer-events: all;
+    position: absolute;
+    width: 100%
+}
+
+.toast_d3c698 {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden
+}
+
+.header_d3c698 {
+    align-items: center;
+    display: flex
+}
+
+.avatar_d3c698 {
+    border-radius: 100%;
+    height: 32px;
+    margin-inline-start: 8px;
+    width: 32px
+}
+
+.avatar_d3c698,
+.messageContentWrapper_d3c698 {
+    box-shadow: var(--legacy-elevation-high)
+}
+
+.messageContentWrapper_d3c698 {
+    align-items: center;
+    background: var(--background-base-lowest);
+    border-radius: 16px;
+    box-sizing: border-box;
+    color: var(--text-default);
+    display: flex;
+    min-height: 32px;
+    overflow: hidden;
+    padding: 4px 12px;
+    position: relative
+}
+
+.toast_d3c698:hover .messageContentWrapper_d3c698 {
+    background: var(--background-base-lower)
+}
+
+.messageContentWrapper_d3c698.mentioned_d3c698:before {
+    background: hsl(var(--yellow-300-hsl)/.15);
+    border-radius: 16px;
+    box-shadow: inset 0 0 0 2px hsl(var(--yellow-300-hsl)/.3);
+    content: "";
+    height: 100%;
+    inset-inline-start: 0;
+    position: absolute;
+    width: 100%
+}
+
+.messageContentWrapper_d3c698 .sticker_d3c698,
+.messageContentWrapper_d3c698 .emoji.jumboable {
+    padding: 4px 0
+}
+
+.messageContent_d3c698 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.messageContentTrailingIcon_d3c698 {
+    flex-shrink: 0;
+    margin-inline-start: 4px
+}
+
+.messageContentLeadingIcon_d3c698 {
+    flex-shrink: 0;
+    margin-inline-end: 4px
+}
+
+/*# sourceMappingURL=764984.bc80c28b3c332d55.css.map*/
