@@ -47,7 +47,7 @@
 .container__62663:has(.field__62663:focus),
 .container__62663:not([data-disabled=true], [data-read-only=true]):hover {
     background-color: var(--custom-editable-text-feedback-background, var(--input-background-default));
-    outline: 1px solid var(--custom-editable-text-feedback-border, var(--input-border-hover));
+    outline: 1px solid var(--custom-editable-text-feedback-border, var(--border-strong));
     outline-offset: -1px
 }
 
@@ -222,4 +222,4 @@
     outline-color: GrayText
 }
 
-/*# sourceMappingURL=8f9f394707dfbeed.css.map*/
+/*# sourceMappingURL=ed95bd0cf7092abc.css.map*/
