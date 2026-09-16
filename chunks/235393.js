@@ -13,6 +13,10 @@ let o = [
         return null == n ? null : d({ guildId: n.guildId, channelId: n.channelId, messageId: n.messageId });
     },
     (e) => (a.A.isDiscoveryLink(e) ? "Discord Discovery Link" : null),
+    (e) => {
+        let t = r.A.safeParseWithQuery(e);
+        return null == t || null == (0, s.mi)(t.pathname) ? null : "Discord User Profile Link";
+    },
 ];
 function d(e) {
     return null != e.guildId && null != e.channelId && null != e.messageId

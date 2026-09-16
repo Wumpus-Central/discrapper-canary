@@ -1,4 +1,4 @@
-n.d(t, { En: () => I, FM: () => g, Ju: () => h, SK: () => p, nc: () => T, r9: () => m, vu: () => f });
+n.d(t, { En: () => f, FM: () => N, Ju: () => I, SK: () => T, mi: () => m, nc: () => g, r9: () => S, vu: () => p });
 var i = n(734057),
     r = n(71393),
     a = n(576705),
@@ -12,14 +12,15 @@ let o = Array.from(n(746080).qW)
     u = RegExp("^/channels/(\\d+)(?:/)(\\d+)(?:/threads/)(\\d+)(?:/)(\\d+)"),
     _ = RegExp(`^/channels/(\\d+|${l.ME})(?:/)(\\d+)/roll-dice(?:/(\\d+)d(\\d+))?$`),
     E = RegExp("^/guild-stages/(\\d+)(?:/)?(\\d+)?"),
-    A = RegExp("^/events/(\\d+)(?:/)(\\d+)?((?:/)(\\d+))?"),
-    h = RegExp(
+    A = /^\/users\/(\d+)\/?$/,
+    h = RegExp("^/events/(\\d+)(?:/)(\\d+)?((?:/)(\\d+))?"),
+    I = RegExp(
         `^https://(?:(?:canary\\.|ptb\\.)?discord(?:app)?.com|staging\\.discord\\.co)/channels/(\\d+|${l.ME})(?:/(\\d+|[a-zA-Z-]+))?(?:/(\\d+|[a-zA-Z-]+))?`,
     ),
-    I = RegExp(
+    f = RegExp(
         "^https://(?:(?:canary\\.|ptb\\.)?discord(?:app)?.com|staging\\.discord\\.co)/channels/(\\d+)(?:/)(\\d+)(?:/threads/)(\\d+)(?:/)(\\d+)",
     );
-function f(e) {
+function p(e) {
     if (null == e) return null;
     let t = e.match(c);
     if (null != t && t.length > 3) return { guildId: t[1], channelId: t[2], messageId: t[3] };
@@ -30,22 +31,25 @@ function f(e) {
     let r = e.match(E);
     return null != r && r.length > 1 ? { guildId: r[1] } : null;
 }
-function p(e) {
+function T(e) {
     if (null == e) return null;
-    let t = e.match(A);
+    let t = e.match(h);
     return null != t && t.length > 1 ? { guildId: t[1], guildEventId: t[2], recurrenceId: t[4] } : null;
 }
-function T(e) {
+function m(e) {
+    return null == e ? null : (e.match(A)?.[1] ?? null);
+}
+function g(e) {
     return !!e.isPrivate() || a.A.can(l.xBc.VIEW_CHANNEL, e);
 }
-function m(e) {
+function S(e) {
     let { guildId: t, channelId: n } = e;
     if (null == r.A.getGuild(t) && t !== l.ME) return !1;
     if (null == n) return !0;
     let a = i.A.getChannel(n);
-    return null != a && T(a);
+    return null != a && g(a);
 }
-function g(e) {
+function N(e) {
     if (null == e) return null;
     let t = e.match(_);
     return null != t && t.length > 2
