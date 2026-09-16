@@ -449,7 +449,7 @@ function eL(e) {
                               (0, x.openModalLazy)(async () => {
                                   let { default: e } = await Promise.all([
                                       n.e("377476"),
-                                      n.e("766811"),
+                                      n.e("403032"),
                                       n.e("746309"),
                                       n.e("778799"),
                                       n.e("470068"),
@@ -816,9 +816,9 @@ var e0 = n(789645),
     e7 = n(842241),
     e9 = n(279208),
     e5 = n(747007),
-    e8 = n(710358),
-    e2 = n(958590),
-    e4 = n(174459),
+    e2 = n(710358),
+    e4 = n(958590),
+    e8 = n(174459),
     e3 = n(957565),
     e6 = n(673707);
 let { INVITE_OPTIONS_7_DAYS: te, INVITE_OPTIONS_UNLIMITED: tt } = I.Ay;
@@ -829,10 +829,10 @@ function tn(e) {
         s = (0, a.bG)([b.A], () => b.A.getGuild(l), [l]),
         { channel_id: d, id: u } = n ?? {},
         c = (0, a.bG)(
-            [e2.A],
+            [e4.A],
             () => {
                 let e = d ?? r;
-                return null == e ? null : e2.A.getInvite(e);
+                return null == e ? null : e4.A.getInvite(e);
             },
             [d, r],
         );
@@ -852,7 +852,7 @@ function tn(e) {
                 "aria-label": ec.intl.string(ec.t.cpT0Cq),
                 children: (0, i.jsx)(e0.P, { size: "md", color: "currentColor" }),
             }),
-            (0, i.jsx)(e8.A, {
+            (0, i.jsx)(e2.A, {
                 children: (0, i.jsx)("div", {
                     className: e6.zc,
                     children: (0, i.jsx)(e1.CalendarIcon, {
@@ -886,7 +886,7 @@ function tn(e) {
                             if (null == n || h) return;
                             (0, e3.C)(e);
                             let t = (0, P.dy)(n.entity_type);
-                            e4.default.track(eu.HAw.COPY_INSTANT_INVITE, {
+                            e8.default.track(eu.HAw.COPY_INSTANT_INVITE, {
                                 server: n.guild_id,
                                 channel: d,
                                 channel_type: t,

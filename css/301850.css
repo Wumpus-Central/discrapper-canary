@@ -133,6 +133,17 @@
     color: var(--text-default)
 }
 
+.mainContainer_c5e6a1 .ruleApplicationIconContainer_c5e6a1 {
+    background-color: transparent;
+    height: 40px;
+    padding: 0;
+    width: 40px
+}
+
+.ruleApplicationIcon_c5e6a1 {
+    border-radius: var(--radius-round)
+}
+
 .menuIconButton_c5e6a1 {
     align-items: center;
     cursor: pointer;
@@ -324,4 +335,4 @@
     object-fit: contain
 }
 
-/*# sourceMappingURL=301850.aba680c06026770a.css.map*/
+/*# sourceMappingURL=301850.22d46ca66a39720e.css.map*/

@@ -1,4 +1,4 @@
-(n.d(t, { H2: () => s, J6: () => h, i$: () => S, kT: () => T, ub: () => _, ws: () => p, xG: () => f, yT: () => o }),
+(n.d(t, { H2: () => o, J6: () => _, i$: () => s, kT: () => f, ub: () => h, ws: () => T, xG: () => p, yT: () => S }),
     n(938796));
 var r,
     i,
@@ -7,8 +7,8 @@ var r,
     l = n(979816),
     E = n(243277),
     A = n(375708),
-    s = (((r = {}).NEW = "new"), (r.RECOMMENDED = "recommended"), (r.BETA = "beta"), (r.ALPHA = "alpha"), r);
-let S = {
+    o = (((r = {}).NEW = "new"), (r.RECOMMENDED = "recommended"), (r.BETA = "beta"), (r.ALPHA = "alpha"), r);
+let s = {
     [E.uh.SPAM_LINK]: {
         getDefaultRuleName: () => A.intl.string(A.t.ffR2cM),
         type: E.uh.SPAM_LINK,
@@ -73,62 +73,67 @@ let S = {
         defaultActionTypes: new Set(),
     },
     [E.uh.APPLICATION]: {
+        getDefaultRuleName: () => A.intl.string(A.t.VxE3o6),
         type: E.uh.APPLICATION,
-        perGuildMaxCount: 0,
+        eventType: E.Mc.MESSAGE_SEND,
+        perGuildMaxCount: E.Ix,
         availableActionTypes: new Set(),
         flags: new Set(),
         defaultActionTypes: new Set(),
     },
 };
-var o = (((i = {}).MEMBERS = "members"), (i.CONTENT = "content"), i);
+var S = (((i = {}).MEMBERS = "members"), (i.CONTENT = "content"), i);
 let c = {
-    members: [S[E.uh.USER_PROFILE]],
+    members: [s[E.uh.USER_PROFILE]],
     content: [
-        S[E.uh.SERVER_POLICY],
-        S[E.uh.MENTION_SPAM],
-        S[E.uh.ML_SPAM],
-        S[E.uh.DEFAULT_KEYWORD_LIST],
-        S[E.uh.KEYWORD],
+        s[E.uh.SERVER_POLICY],
+        s[E.uh.MENTION_SPAM],
+        s[E.uh.ML_SPAM],
+        s[E.uh.DEFAULT_KEYWORD_LIST],
+        s[E.uh.KEYWORD],
+        s[E.uh.APPLICATION],
     ],
 };
-function _(e, t) {
-    return S[e].flags.has(t);
+function h(e, t) {
+    return s[e].flags.has(t);
 }
-function h(e) {
-    return Array.from(S[e].availableActionTypes);
+function _(e) {
+    return Array.from(s[e].availableActionTypes);
 }
-function f(e, t) {
+function p(e, t) {
     let { id: n, eventType: r, triggerType: i, actions: u } = e,
-        a = S[i];
+        a = s[i];
     if (t.filter((e) => n !== e.id && e.triggerType === i).length > a.perGuildMaxCount)
         throw Error(`You have exceeded the maximum number of rules of type ${i}`);
     if (u.some((e) => !a.availableActionTypes.has(e.type)))
         throw Error("You have provided an action that is not available for this trigger type");
     if (r !== a.eventType) throw Error("You have provided an event type that is not available for this trigger type");
 }
-function p(e) {
-    let t = (0, l.XO)(e);
+function T(e) {
+    let t = (0, l.XO)(e),
+        n = (0, a.ZQ)(e);
     return u.useMemo(
         () =>
             Object.keys(c).reduce(
-                (e, n) => {
-                    let r = c[n]
+                (e, r) => {
+                    let i = c[r]
                         .filter(
                             (e) =>
                                 e.type !== E.uh.SERVER_POLICY &&
                                 (e.type !== E.uh.USER_PROFILE || !!t) &&
+                                (e.type !== E.uh.APPLICATION || !!n) &&
                                 e.perGuildMaxCount > 0,
                         )
                         .map((e) => e.type);
-                    return ((e[n] = r), e);
+                    return ((e[r] = i), e);
                 },
                 { members: [], content: [] },
             ),
-        [t],
+        [t, n],
     );
 }
-function T(e, t) {
-    let n = (0, a.p)(t);
+function f(e, t) {
+    let n = (0, a.pt)(t);
     switch (e) {
         case E.uh.DEFAULT_KEYWORD_LIST:
             return { allowList: [], presets: [] };
@@ -137,6 +142,8 @@ function T(e, t) {
             return { keywordFilter: [], regexPatterns: [], allowList: [] };
         case E.uh.MENTION_SPAM:
             return { mentionTotalLimit: E.Nu, mentionRaidProtectionEnabled: n };
+        case E.uh.APPLICATION:
+            return { applicationId: null };
         case E.uh.ML_SPAM:
         case E.uh.SERVER_POLICY:
         default:

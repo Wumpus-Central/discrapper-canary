@@ -414,7 +414,7 @@ function e2(e) {
     );
 }
 let e3 = (0, eQ.L_)((e, t, n) => ["null", ...t, ...e, e0, eS.sFm.E3_SERVER_DISCOVERY_BADGE, eJ]),
-    e6 = s.forwardRef(function (e, t) {
+    e5 = s.forwardRef(function (e, t) {
         let n = (0, A.yK)([eF.Ay, eK.A, J.default], () =>
                 e3(eF.Ay.getGuildFolders(), eK.A.getUnreadPrivateChannelIds(), J.default.getStoreChangeSentinel()),
             ),
@@ -433,7 +433,7 @@ let e3 = (0, eQ.L_)((e, t, n) => ["null", ...t, ...e, e0, eS.sFm.E3_SERVER_DISCO
         });
     });
 n(667532);
-var e5 = n(868285),
+var e6 = n(868285),
     e4 = n(763827),
     e7 = n(128954),
     e8 = n(778712),
@@ -837,7 +837,7 @@ function tT() {
             "aria-label": es.intl.string(es.t.YUU0RF),
             gap: "xs",
             hidden: r.length < 1,
-            children: (0, a.jsx)(e5.F, { component: s.Fragment, children: r }),
+            children: (0, a.jsx)(e6.F, { component: s.Fragment, children: r }),
         })
     );
 }
@@ -1178,8 +1178,8 @@ function t3(e) {
         }),
     });
 }
-var t6 = n(696292),
-    t5 = n(836480),
+var t5 = n(696292),
+    t6 = n(836480),
     t4 = n(533129),
     t7 = n(726845),
     t8 = n(837057),
@@ -1197,7 +1197,7 @@ let ni = s.forwardRef(function (e, t) {
                     return (0, t8.transitionToGlobalDiscovery)({
                         tab: ne.GlobalDiscoveryTab.QUESTS,
                         location: nn.rE.DISCOVERY_COMPASS,
-                        questContent: t6.u.DISCOVERY_COMPASS,
+                        questContent: t5.u.DISCOVERY_COMPASS,
                         questId: r,
                     });
                 case ne.GlobalDiscoveryTab.SERVERS:
@@ -1226,7 +1226,7 @@ let ni = s.forwardRef(function (e, t) {
         },
         selected: n,
         tooltip: es.intl.string(es.t["4nEZLk"]),
-        icon: t5.CompassIcon,
+        icon: t6.CompassIcon,
     });
 });
 var nr = n(506774),
@@ -1542,8 +1542,8 @@ function n1(e) {
 }
 var n2 = n(114329),
     n3 = n(937067);
-let n6 = (0, nW.xI)(nB.A.FOLDER_ITEM_ANIMATION_DURATION),
-    n5 = (0, e7.animated)(p.B),
+let n5 = (0, nW.xI)(nB.A.FOLDER_ITEM_ANIMATION_DURATION),
+    n6 = (0, e7.animated)(p.B),
     n4 = s.memo(function (e) {
         var t;
         let n,
@@ -1608,7 +1608,7 @@ let n6 = (0, nW.xI)(nB.A.FOLDER_ITEM_ANIMATION_DURATION),
                 from: { height: 0 },
                 enter: { height: 1 },
                 leave: { height: 0 },
-                config: { duration: n6 },
+                config: { duration: n5 },
             }),
             Z = s.useCallback((e) => d?.(b, e), [d, b]),
             Q = (0, a.jsxs)(F.c, {
@@ -1667,7 +1667,7 @@ let n6 = (0, nW.xI)(nB.A.FOLDER_ITEM_ANIMATION_DURATION),
                     return (
                         t &&
                         (0, a.jsx)(
-                            n5,
+                            n6,
                             {
                                 id: z,
                                 role: "group",
@@ -2335,9 +2335,8 @@ function iJ(e, t) {
             n.e("207322"),
             n.e("361922"),
             n.e("65764"),
-            n.e("186856"),
-            n.e("3942"),
-            n.e("766811"),
+            n.e("403032"),
+            n.e("684290"),
             n.e("295570"),
             n.e("301850"),
             n.e("936875"),
@@ -2921,7 +2920,7 @@ function iJ(e, t) {
             n.e("694529"),
             n.e("995210"),
             n.e("630313"),
-            n.e("477319"),
+            n.e("750231"),
             n.e("721300"),
             n.e("317699"),
             n.e("257032"),
@@ -3198,8 +3197,8 @@ let i2 = s.memo(function (e) {
     });
 });
 var i3 = n(922016),
-    i6 = n(297264),
-    i5 = n(821609),
+    i5 = n(297264),
+    i6 = n(821609),
     i4 = n(339350),
     i7 = n(475743),
     i8 = n(624458),
@@ -3267,7 +3266,7 @@ function ra(e) {
                                         (0, a.jsxs)("div", {
                                             className: rr.q3,
                                             children: [
-                                                (0, a.jsx)(i6.D, {
+                                                (0, a.jsx)(i5.D, {
                                                     variant: "heading-md/medium",
                                                     children: es.intl.string(es.t["0YV0YE"]),
                                                 }),
@@ -3278,7 +3277,7 @@ function ra(e) {
                                                 }),
                                             ],
                                         }),
-                                        (0, a.jsx)(i5.$, {
+                                        (0, a.jsx)(i6.$, {
                                             variant: "primary",
                                             size: "sm",
                                             text: es.intl.string(es.t["4r+amb"]),
@@ -3730,7 +3729,7 @@ function rh(e) {
                     className: o()(ro.iE, r, e, { [ro.R]: h }),
                     "aria-label": es.intl.string(es.t.PjnF2t),
                     children: [
-                        (0, a.jsx)(e6, {
+                        (0, a.jsx)(e5, {
                             ref: M,
                             isVisible: K.isItemVisible,
                             onJumpTo: K.handleJumpToGuild,
@@ -3772,7 +3771,7 @@ function rh(e) {
                                     }),
                             ],
                         }),
-                        (0, a.jsx)(e6, {
+                        (0, a.jsx)(e5, {
                             reverse: !0,
                             ref: P,
                             isVisible: K.isItemVisible,

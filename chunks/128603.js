@@ -3,6 +3,8 @@ e.exports = {
     Ji: "ruleIconContainer_c5e6a1",
     Wy: "actionRuleListContainer_c5e6a1",
     S3: "ruleIcon_c5e6a1",
+    vT: "ruleApplicationIconContainer_c5e6a1",
+    et: "ruleApplicationIcon_c5e6a1",
     p5: "menuIconButton_c5e6a1",
     ro: "menuIcon_c5e6a1",
     XG: "ruleTextContainer_c5e6a1",

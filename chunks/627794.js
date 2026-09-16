@@ -1,16 +1,17 @@
 n.d(t, {
-    AR: () => _,
-    JJ: () => h,
-    KU: () => S,
-    PZ: () => g,
-    X3: () => R,
+    AR: () => h,
+    JJ: () => _,
+    KU: () => s,
+    PZ: () => N,
+    X3: () => L,
     ZG: () => c,
-    _I: () => f,
-    nl: () => L,
-    r3: () => o,
-    uV: () => T,
+    _I: () => T,
+    n3: () => p,
+    nl: () => R,
+    r3: () => S,
+    uV: () => g,
     wC: () => M,
-    wk: () => p,
+    wk: () => f,
 });
 var r = n(168186),
     i = n(280450),
@@ -19,23 +20,26 @@ var r = n(168186),
     l = n(928348),
     E = n(53594),
     A = n(243277),
-    s = n(375708);
-function S(e) {
+    o = n(375708);
+function s(e) {
     return e?.triggerType === A.uh.KEYWORD;
 }
-function o(e) {
+function S(e) {
     return e?.triggerType === A.uh.ML_SPAM;
 }
 function c(e) {
     return e?.triggerType === A.uh.DEFAULT_KEYWORD_LIST;
 }
-function _(e) {
+function h(e) {
     return e?.triggerType === A.uh.MENTION_SPAM;
 }
-function h(e) {
+function _(e) {
     return e?.triggerType === A.uh.USER_PROFILE;
 }
-function f(e, t) {
+function p(e) {
+    return e?.triggerType === A.uh.APPLICATION;
+}
+function T(e, t) {
     let n = E.i$[t],
         r = (0, E.kT)(t, e),
         a = {
@@ -52,71 +56,77 @@ function f(e, t) {
             exemptChannels: new Set(),
             exemptRoles: new Set(),
         };
-    if (M(a)) throw Error(s.intl.string(s.t["A/nX8D"]));
+    if (M(a)) throw Error(o.intl.string(o.t["A/nX8D"]));
     let A = (0, l.p3)(e, t);
     return (A > 0 && (a.name += ` ${A + 1}`), a);
 }
-function p(e, t) {
-    if (e.length > t) throw Error(s.intl.formatToPlainString(s.t.mee4qd, { limit: t }));
+function f(e, t) {
+    if (e.length > t) throw Error(o.intl.formatToPlainString(o.t.mee4qd, { limit: t }));
     e.forEach((e) => {
         if (e.length > A.kS || e.length < A.Ku)
-            throw new a.lH(s.intl.formatToPlainString(s.t.rbRvGe, { keyword: e, max: A.kS, min: A.Ku }));
+            throw new a.lH(o.intl.formatToPlainString(o.t.rbRvGe, { keyword: e, max: A.kS, min: A.Ku }));
     });
 }
-function T(e) {
-    if (S(e)) {
+function g(e) {
+    if (s(e)) {
         let t = e.triggerMetadata.keywordFilter ?? [],
             n = e.triggerMetadata.regexPatterns ?? [];
-        if (0 === t.length && 0 === n.length) throw Error(s.intl.string(s.t.kz2Av3));
-        p(t, A.bV);
-        if (n.length > A.qm) throw Error(s.intl.formatToPlainString(s.t.tDjhF1, { limit: A.qm }));
+        if (0 === t.length && 0 === n.length) throw Error(o.intl.string(o.t.kz2Av3));
+        f(t, A.bV);
+        if (n.length > A.qm) throw Error(o.intl.formatToPlainString(o.t.tDjhF1, { limit: A.qm }));
         n.forEach((e) => {
             if (e.length > A.$5 || e.length < A.zs)
-                throw new a.Nr(s.intl.formatToPlainString(s.t.WR0m9w, { regex: e, max: A.$5, min: A.zs }));
+                throw new a.Nr(o.intl.formatToPlainString(o.t.WR0m9w, { regex: e, max: A.$5, min: A.zs }));
         });
     }
-    if (0 === e.actions.length) throw Error(s.intl.string(s.t["t+gj5V"]));
+    if (p(e)) {
+        if (null == e.triggerMetadata.applicationId) throw Error(o.intl.string(o.t["6NbEkN"]));
+        return;
+    }
+    if (0 === e.actions.length) throw Error(o.intl.string(o.t["t+gj5V"]));
 }
 function M(e) {
     return (0, r.hT)(e?.id ?? "INVALID_SNOWFLAKE");
 }
-function R(e) {
-    switch (e) {
-        case A.Mc.MESSAGE_SEND:
-            return s.intl.string(s.t.NlQW4P);
-        case A.Mc.GUILD_MEMBER_JOIN_OR_UPDATE:
-            return s.intl.string(s.t["Q+68IX"]);
-        default:
-            return s.intl.string(s.t.SP9BBx);
-    }
-}
-function g(e) {
-    switch (e) {
-        case A.AH.BLOCK_MESSAGE:
-            return s.intl.string(s.t.d1ab8n);
-        case A.AH.FLAG_TO_CHANNEL:
-            return s.intl.string(s.t["Y+VmvU"]);
-        case A.AH.USER_COMMUNICATION_DISABLED:
-            return s.intl.string(s.t["6WPxY2"]);
-        case A.AH.QUARANTINE_USER:
-            return s.intl.string(s.t.NPO8ee);
-        default:
-            return s.intl.string(s.t.SP9BBx);
-    }
-}
 function L(e) {
     switch (e) {
-        case A.uh.KEYWORD:
-            return s.intl.string(s.t.ffR2cM);
-        case A.uh.ML_SPAM:
-            return s.intl.string(s.t["puF/Os"]);
-        case A.uh.DEFAULT_KEYWORD_LIST:
-            return s.intl.string(s.t.LnGhZv);
-        case A.uh.MENTION_SPAM:
-            return s.intl.string(s.t.pX7i6n);
-        case A.uh.USER_PROFILE:
-            return s.intl.string(s.t.q1L2v8);
+        case A.Mc.MESSAGE_SEND:
+            return o.intl.string(o.t.NlQW4P);
+        case A.Mc.GUILD_MEMBER_JOIN_OR_UPDATE:
+            return o.intl.string(o.t["Q+68IX"]);
         default:
-            return s.intl.string(s.t.SP9BBx);
+            return o.intl.string(o.t.SP9BBx);
+    }
+}
+function N(e) {
+    switch (e) {
+        case A.AH.BLOCK_MESSAGE:
+            return o.intl.string(o.t.d1ab8n);
+        case A.AH.FLAG_TO_CHANNEL:
+            return o.intl.string(o.t["Y+VmvU"]);
+        case A.AH.USER_COMMUNICATION_DISABLED:
+            return o.intl.string(o.t["6WPxY2"]);
+        case A.AH.QUARANTINE_USER:
+            return o.intl.string(o.t.NPO8ee);
+        default:
+            return o.intl.string(o.t.SP9BBx);
+    }
+}
+function R(e) {
+    switch (e) {
+        case A.uh.KEYWORD:
+            return o.intl.string(o.t.ffR2cM);
+        case A.uh.ML_SPAM:
+            return o.intl.string(o.t["puF/Os"]);
+        case A.uh.DEFAULT_KEYWORD_LIST:
+            return o.intl.string(o.t.LnGhZv);
+        case A.uh.MENTION_SPAM:
+            return o.intl.string(o.t.pX7i6n);
+        case A.uh.USER_PROFILE:
+            return o.intl.string(o.t.q1L2v8);
+        case A.uh.APPLICATION:
+            return o.intl.string(o.t.VxE3o6);
+        default:
+            return o.intl.string(o.t.SP9BBx);
     }
 }
