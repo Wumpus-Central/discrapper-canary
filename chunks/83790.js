@@ -26,4 +26,5 @@ var i,
         (i.APP_ICONS = "appIcons"),
         (i.CHAT_WALLPAPERS = "chatWallpapers"),
         (i.QUEST_ORB_MULTIPLIER = "questOrbMultiplier"),
+        (i.SHOP_MEMBER_PRICING = "shopMemberPricing"),
         i);
