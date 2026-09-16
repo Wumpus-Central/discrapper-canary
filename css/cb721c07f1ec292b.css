@@ -1,0 +1,18 @@
+.body__73f2f {
+    flex-grow: 1;
+    gap: var(--space-16)
+}
+
+.body__73f2f,
+.footer__73f2f {
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-16)
+}
+
+.footer__73f2f {
+    border-top: 1px solid var(--border-normal);
+    gap: var(--space-8)
+}
+
+/*# sourceMappingURL=cb721c07f1ec292b.css.map*/
