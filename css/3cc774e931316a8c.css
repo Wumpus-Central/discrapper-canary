@@ -128,6 +128,77 @@
 }
 
 .column_fe7668,
+.widgetWithInsertSlot_fe7668 {
+    position: relative
+}
+
+.insertSlot_fe7668 {
+    align-items: center;
+    display: flex;
+    height: var(--space-16);
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    z-index: 2
+}
+
+.insertSlotBefore_fe7668 {
+    bottom: 100%
+}
+
+.insertSlotAfter_fe7668 {
+    top: 100%
+}
+
+.insertLine_fe7668 {
+    background-color: var(--background-brand);
+    border-radius: var(--radius-xs);
+    height: 2px;
+    inset-inline: 0;
+    position: absolute;
+    transform: scaleX(0)
+}
+
+.full-motion .insertLine_fe7668 {
+    transition: transform .14s cubic-bezier(.2, 0, 0, 1)
+}
+
+.insertButton_fe7668 {
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(.8);
+    z-index: 1
+}
+
+.full-motion .insertButton_fe7668 {
+    transition: opacity .12s cubic-bezier(.2, 0, 0, 1), transform .14s cubic-bezier(.2, 0, 0, 1)
+}
+
+.insertSlot_fe7668:focus-within .insertLine_fe7668,
+.insertSlot_fe7668:hover .insertLine_fe7668 {
+    transform: scaleX(1)
+}
+
+.insertSlot_fe7668:focus-within .insertButton_fe7668,
+.insertSlot_fe7668:hover .insertButton_fe7668 {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1)
+}
+
+.emptyColumn_fe7668 {
+    align-items: center;
+    border: 1px dashed var(--border-subtle);
+    border-radius: var(--radius-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12);
+    justify-content: center;
+    min-height: calc(var(--space-64) + var(--space-64) + var(--space-32));
+    padding: var(--space-24);
+    text-align: center
+}
+
 .slot_fe7668 {
     position: relative
 }
@@ -251,4 +322,4 @@
     min-height: max(var(--space-64), 40vh)
 }
 
-/*# sourceMappingURL=840767cf8e23c039.css.map*/
+/*# sourceMappingURL=3cc774e931316a8c.css.map*/

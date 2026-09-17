@@ -5502,6 +5502,25 @@
     }
   },
   {
+    "name": "2026-09-invite-silp-education",
+    "kind": "installation",
+    "defaultConfig": {
+      "variant": null
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "variant": "popover"
+      },
+      "2": {
+        "variant": "sidebar"
+      }
+    }
+  },
+  {
     "name": "2026-09-jxr-upload-conversion",
     "kind": "user",
     "defaultConfig": {
