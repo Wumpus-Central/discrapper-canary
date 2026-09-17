@@ -171,16 +171,11 @@ let p = [12, 16, 24, 32, 48, 64],
                                         color: "text-default",
                                         children: "Sizes",
                                     }),
-                                    (0, a.jsxs)(x.E, {
+                                    (0, a.jsx)(x.E, {
                                         variant: "text-xs/normal",
                                         color: "text-subtle",
-                                        children: [
-                                            "Glyphs should stay optically centered at every size, and the clip window should never reveal a neighbouring glyph. The dashed outline is the loader's own box: ",
-                                            "size",
-                                            " tall by 3.75 \xd7 ",
-                                            "size",
-                                            " wide.",
-                                        ],
+                                        children:
+                                            "Glyphs should stay optically centered at every size, and the clip window should never reveal a neighbouring glyph. The dashed outline is the loader's own box: size tall by 3.75 \xd7 size wide.",
                                     }),
                                     (0, a.jsx)("div", {
                                         className: h.nM,

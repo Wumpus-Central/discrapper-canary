@@ -1906,8 +1906,7 @@ let e9 = {
                           children: [
                               "This component is experimental and only available behind the ",
                               (0, t.jsx)("code", { children: "2025-10-mana-date-inputs" }),
-                              " ",
-                              "experiment. Do not use this in production yet.",
+                              " experiment. Do not use this in production yet.",
                           ],
                       });
             },
@@ -2211,8 +2210,7 @@ let li = {
                           children: [
                               "This component is experimental and only available behind the ",
                               (0, t.jsx)("code", { children: "2025-10-mana-date-inputs" }),
-                              " ",
-                              "experiment. Do not use this in production yet.",
+                              " experiment. Do not use this in production yet.",
                           ],
                       });
             },
@@ -2522,8 +2520,7 @@ let lw = {
                           children: [
                               "This component is experimental and only available behind the ",
                               (0, t.jsx)("code", { children: "2025-10-mana-date-inputs" }),
-                              " ",
-                              "experiment. Do not use this in production yet.",
+                              " experiment. Do not use this in production yet.",
                           ],
                       });
             },
@@ -4387,8 +4384,7 @@ let ah = {
                             children: [
                                 "This component is experimental and only available behind the ",
                                 (0, t.jsx)("code", { children: "2025-10-mana-date-inputs" }),
-                                " ",
-                                "experiment. Do not use this in production yet.",
+                                " experiment. Do not use this in production yet.",
                             ],
                         });
                     function b(e) {
