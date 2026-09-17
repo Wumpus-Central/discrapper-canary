@@ -168,6 +168,7 @@ var i,
         (i.WINDOW_GET_MEDIA_SOURCE_ID = "DISCORD_WINDOW_GET_MEDIA_SOURCE_ID"),
         (i.WINDOW_SET_FOCUSABLE = "DISCORD_WINDOW_SET_FOCUSABLE"),
         (i.WINDOW_SHOW_INACTIVE = "DISCORD_WINDOW_SHOW_INACTIVE"),
+        (i.WINDOW_SET_TRAFFIC_LIGHT_APPEARANCE = "DISCORD_WINDOW_SET_TRAFFIC_LIGHT_APPEARANCE"),
         (i.WINDOW_SET_TRAFFIC_LIGHT_POSITION = "DISCORD_WINDOW_SET_TRAFFIC_LIGHT_POSITION"),
         (i.WINDOW_SET_FRAME_RATE = "DISCORD_WINDOW_SET_FRAME_RATE"),
         (i.GET_MOUSE_COORDINATES = "DISCORD_GET_MOUSE_COORDINATES"),
@@ -708,6 +709,12 @@ let $ = {
                 try {
                     this.sendIPC(c.WINDOW_SET_TRAFFIC_LIGHT_POSITION, e);
                 } catch (e) {}
+        },
+        setTrafficLightAppearance(e, t) {
+            if (f.isPlatformEmbedded && "darwin" === (0, f.getPlatformName)())
+                try {
+                    this.sendIPC(c.WINDOW_SET_TRAFFIC_LIGHT_APPEARANCE, e, t);
+                } catch {}
         },
         purgeMemory() {
             f.isPlatformEmbedded && m.processUtils.purgeMemory();

@@ -1466,7 +1466,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e3 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eH.A().log(
-    `[BUILD INFO] Release Channel: ${e3}, Build Number: 615636, Version Hash: 383e97df1d5193f5ad6c43f1b1477fe258769bbe`,
+    `[BUILD INFO] Release Channel: ${e3}, Build Number: 615639, Version Hash: c58be90b155cf41ef0db5201855cff12bd48db8e`,
 ),
     v.A.setTags({ appContext: x.QCW }),
     eI.A.initBasic(),
@@ -4510,8 +4510,11 @@ let r0 = (0, nQ.Fe)({
             eu.useLayoutEffect(() => {
                 ew.Ay.setMinimumSize(800, 500);
             }, []));
-        let _ = (0, ep.NC)(),
-            E = (0, el.bG)([tL.A, rV.A], () => (0, rz._U)()),
+        let _ = (0, ep.NC)();
+        eu.useLayoutEffect(() => {
+            ew.Ay.setTrafficLightAppearance(_ === x.NJ8.ASH ? "dark" : "auto");
+        }, [_]);
+        let E = (0, el.bG)([tL.A, rV.A], () => (0, rz._U)()),
             A = (0, ic.xl)(),
             h = (function (e) {
                 let { showBackForwardButtons: t, showNotificationsInbox: n, showInbox: i } = e;
@@ -21542,7 +21545,7 @@ let NX = "isHideDevBanner",
                     className: ts()(Nz.Wz, Nz.mr),
                     children: [
                         (0, R.jsx)(N$, { className: Nz.Kk }),
-                        tg.intl.format(tg.t.uyrfYF, { buildNumber: "615636" }),
+                        tg.intl.format(tg.t.uyrfYF, { buildNumber: "615639" }),
                         (0, R.jsx)(r, {}),
                     ],
                 })
