@@ -2026,12 +2026,15 @@
     border-inline-start-color: var(--background-surface-highest)
 }
 
+&.topArrow__22234:before,
+.topArrow__22234:before {
+    border-bottom-color: var(--background-surface-highest)
+}
+
 &.contentNarrowMedia__22234.topArrow__22234:before,
 &.contentWideNoMedia__22234.topArrow__22234:before,
-&.topArrow__22234:before,
 .contentNarrowNoMedia__22234.topArrow__22234:before,
-.contentWideNoMedia__22234.topArrow__22234:before,
-.topArrow__22234:before {
+.contentWideNoMedia__22234.topArrow__22234:before {
     border-bottom-color: var(--background-surface-highest)
 }
 
@@ -2427,4 +2430,4 @@ strong {
     }
 }
 
-/*# sourceMappingURL=960175.24bd44eaf6eea07a.css.map*/
+/*# sourceMappingURL=960175.9908307d5925afcf.css.map*/

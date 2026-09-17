@@ -23,8 +23,14 @@
     width: unset
 }
 
-.button_e6e74f:active,
-.button_e6e74f:hover,
+.button_e6e74f:hover {
+    color: var(--interactive-text-active)
+}
+
+.button_e6e74f:active {
+    color: var(--interactive-text-active)
+}
+
 .buttonActive_e6e74f {
     color: var(--interactive-text-active)
 }
@@ -136,4 +142,4 @@
     }
 }
 
-/*# sourceMappingURL=459086.6e9754ae77e53589.css.map*/
+/*# sourceMappingURL=459086.3b36946715047314.css.map*/

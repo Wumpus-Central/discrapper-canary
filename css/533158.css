@@ -141,12 +141,12 @@
     width: var(--guildbar-avatar-size)
 }
 
-.circleIconButton__5bc7e.selected__5bc7e,
 .circleIconButton__5bc7e:hover:not(.disabled__5bc7e) {
     background-color: var(--background-brand)
 }
 
 .circleIconButton__5bc7e.selected__5bc7e {
+    background-color: var(--background-brand);
     color: var(--white)
 }
 
@@ -165,4 +165,4 @@
     color: ButtonText
 }
 
-/*# sourceMappingURL=533158.cd5384ae6fef1067.css.map*/
+/*# sourceMappingURL=533158.0def54b9858a5be7.css.map*/

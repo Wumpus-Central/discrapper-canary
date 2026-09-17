@@ -21,13 +21,13 @@
     transition: box-shadow .1s ease-in-out, transform .2s ease
 }
 
-.inlineButton__5cc6a:active,
 .inlineButton__5cc6a:hover {
     border: 1px solid hsla(0, 0%, 100%, .5)
 }
 
 .inlineButton__5cc6a:active {
     background: var(--card-primary-pressed-bg);
+    border: 1px solid hsla(0, 0%, 100%, .5);
     box-shadow: none
 }
 
@@ -79,4 +79,4 @@
     padding: 0
 }
 
-/*# sourceMappingURL=64769.a0b25dd15561abe2.css.map*/
+/*# sourceMappingURL=64769.3cbdc0578f8f3e6e.css.map*/

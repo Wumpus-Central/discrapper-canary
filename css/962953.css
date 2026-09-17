@@ -379,8 +379,12 @@
     border-bottom: 1px solid var(--border-subtle)
 }
 
-.floatingBars__74017:empty+.stackedBars__74017:nth-child(2),
 .stackedBars__74017:first-child {
+    border-start-end-radius: var(--radius-sm);
+    border-start-start-radius: var(--radius-sm)
+}
+
+.floatingBars__74017:empty+.stackedBars__74017:nth-child(2) {
     border-start-end-radius: var(--radius-sm);
     border-start-start-radius: var(--radius-sm)
 }
@@ -465,4 +469,4 @@
     max-height: calc(var(--custom-channel-textarea-text-area-max-height) + 80px)
 }
 
-/*# sourceMappingURL=962953.c502957d2815eba7.css.map*/
+/*# sourceMappingURL=962953.69892aacbc3b8e17.css.map*/

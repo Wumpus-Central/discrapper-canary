@@ -132,7 +132,10 @@
 }
 
 .colorable_f1ceac.green_f1ceac.active_f1ceac,
-.colorable_f1ceac.green_f1ceac:hover,
+.colorable_f1ceac.green_f1ceac:hover {
+    background: var(--green-360)
+}
+
 .colorable_f1ceac.join_f1ceac {
     background: var(--green-360)
 }
@@ -387,4 +390,4 @@
     width: 100%
 }
 
-/*# sourceMappingURL=491899.776c6ab30e1d9702.css.map*/
+/*# sourceMappingURL=491899.6ccea9320dff25ae.css.map*/

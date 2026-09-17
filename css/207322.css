@@ -563,12 +563,12 @@
 }
 
 .togglesGroup__6dc2e {
+    border-bottom: 1px solid var(--border-subtle);
     gap: 12px;
     padding: 16px 12px
 }
 
-.section__6dc2e:not(:last-child),
-.togglesGroup__6dc2e {
+.section__6dc2e:not(:last-child) {
     border-bottom: 1px solid var(--border-subtle)
 }
 
@@ -733,4 +733,4 @@
     color: var(--status-danger)
 }
 
-/*# sourceMappingURL=207322.b35cfcecb7ce1c3d.css.map*/
+/*# sourceMappingURL=207322.a24949f69dc75c30.css.map*/

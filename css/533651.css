@@ -410,9 +410,12 @@
     padding-inline-start: var(--space-24)
 }
 
-.hideActionBar_b7f6c8 footer,
+.hideActionBar_b7f6c8 footer {
+    display: none
+}
+
 .hideNextButton_b7f6c8 footer>div:last-child {
     display: none
 }
 
-/*# sourceMappingURL=533651.f5d28734c3e8af59.css.map*/
+/*# sourceMappingURL=533651.7e49b9f0ff0fd744.css.map*/

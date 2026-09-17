@@ -28,7 +28,10 @@
     opacity: .3
 }
 
-.mediaBarInteraction_b26b79:hover .bubble_b26b79,
+.mediaBarInteraction_b26b79:hover .bubble_b26b79 {
+    opacity: 1
+}
+
 .mediaBarInteractionDragging_b26b79 .bubble_b26b79 {
     opacity: 1
 }
@@ -89,6 +92,7 @@
 }
 
 .buffer_b26b79 {
+    background-color: var(--white);
     height: 100%;
     inset-inline-start: 0;
     opacity: .3;
@@ -96,19 +100,18 @@
     top: 0
 }
 
-.buffer_b26b79,
 .buffer_b26b79:after,
 .buffer_b26b79:before {
     background-color: var(--white)
 }
 
 .mediaBarWrapper_b26b79 {
+    background-color: hsl(var(--primary-300-hsl)/.3);
     flex: 1 1 auto;
     height: 6px;
     position: relative
 }
 
-.mediaBarWrapper_b26b79,
 .mediaBarWrapper_b26b79:after,
 .mediaBarWrapper_b26b79:before {
     background-color: hsl(var(--primary-300-hsl)/.3)
@@ -133,28 +136,28 @@
 .mediaBarProgress_b26b79 {}
 
 .mediaBarPreview_b26b79 {
+    background-color: var(--white);
     opacity: 0;
     z-index: 0
 }
 
-.mediaBarPreview_b26b79,
 .mediaBarPreview_b26b79:after,
 .mediaBarPreview_b26b79:before {
     background-color: var(--white)
 }
 
 .mediaBarProgress_b26b79 {
+    background-color: var(--brand-500);
     z-index: 3
 }
 
-.mediaBarGrabber_b26b79,
-.mediaBarProgress_b26b79,
 .mediaBarProgress_b26b79:after,
 .mediaBarProgress_b26b79:before {
     background-color: var(--brand-500)
 }
 
 .mediaBarGrabber_b26b79 {
+    background-color: var(--brand-500);
     border-radius: 5px;
     cursor: grab;
     height: 10px;
@@ -183,17 +186,13 @@
     line-height: 18px;
     opacity: 0;
     padding: 0 8px;
+    pointer-events: none;
+    position: absolute;
     text-align: center;
     top: -28px;
     transform: translateX(-50%);
     transition: opacity .2s ease-out;
     width: auto
-}
-
-.bubble_b26b79,
-.bubble_b26b79:before {
-    pointer-events: none;
-    position: absolute
 }
 
 .bubble_b26b79:before {
@@ -203,6 +202,8 @@
     height: 0;
     inset-inline-start: 50%;
     margin-inline-start: -5px;
+    pointer-events: none;
+    position: absolute;
     top: 100%;
     width: 0
 }
@@ -260,4 +261,4 @@
     opacity: 1
 }
 
-/*# sourceMappingURL=867721.94ae010827236068.css.map*/
+/*# sourceMappingURL=867721.42415d809a1124ac.css.map*/

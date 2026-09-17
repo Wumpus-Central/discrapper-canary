@@ -185,16 +185,14 @@ span.button__67645.enabled__67645.redGlow__67645:hover {
 }
 
 .plated__67645:hover {
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
     background-color: var(--custom-nameplate) !important
 }
 
-.plateMuted__67645,
-.plated__67645:hover {
-    -webkit-backdrop-filter: blur(4px);
-    backdrop-filter: blur(4px)
-}
-
 .plateMuted__67645 {
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
     background-color: var(--custom-nameplate-neutral) !important
 }
 
@@ -502,4 +500,4 @@ span.button__67645.enabled__67645.redGlow__67645:hover {
     color: currentColor
 }
 
-/*# sourceMappingURL=333008.90c27a476f8bce44.css.map*/
+/*# sourceMappingURL=333008.90c167df50b44f04.css.map*/

@@ -28,8 +28,11 @@
     grid-template-columns: min-content 1fr min-content
 }
 
-.deviceContainer__12eef.multiLine__12eef .deviceSubLabel__12eef:after,
 .deviceContainer__12eef.multiLine__12eef .deviceSubLabel__12eef:before {
+    content: ""
+}
+
+.deviceContainer__12eef.multiLine__12eef .deviceSubLabel__12eef:after {
     content: ""
 }
 
@@ -63,4 +66,4 @@
     grid-area: certifiedPill
 }
 
-/*# sourceMappingURL=932696.ffe1d6c49747138f.css.map*/
+/*# sourceMappingURL=932696.96137147521e5db7.css.map*/

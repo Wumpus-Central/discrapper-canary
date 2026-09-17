@@ -176,11 +176,11 @@
     border-radius: 4px;
     cursor: pointer;
     display: block;
+    outline: none;
     padding: var(--custom-emoji-picker-constants-emoji-container-padding-vertical) var(--custom-emoji-picker-constants-emoji-container-padding-horizontal);
     position: relative
 }
 
-.emojiItem_fc7141,
 .emojiItem_fc7141:focus {
     outline: none
 }
@@ -424,4 +424,4 @@
     flex: 1 1 auto
 }
 
-/*# sourceMappingURL=296956.2e8902ef4e20e58e.css.map*/
+/*# sourceMappingURL=296956.717f9bed519534ae.css.map*/

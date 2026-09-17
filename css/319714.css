@@ -40,17 +40,14 @@
 
 .button_f7ecac:active {
     background-color: var(--interactive-background-active);
+    color: var(--interactive-text-active);
     padding-bottom: 3px;
     padding-top: 5px
 }
 
-.button_f7ecac.selected_f7ecac,
-.button_f7ecac:active {
-    color: var(--interactive-text-active)
-}
-
 .button_f7ecac.selected_f7ecac {
-    background-color: var(--interactive-background-selected)
+    background-color: var(--interactive-background-selected);
+    color: var(--interactive-text-active)
 }
 
 .separator_f7ecac {
@@ -104,4 +101,4 @@
     color: Highlight
 }
 
-/*# sourceMappingURL=319714.4d6f017e278d5a1a.css.map*/
+/*# sourceMappingURL=319714.6b83daa2353b16f3.css.map*/

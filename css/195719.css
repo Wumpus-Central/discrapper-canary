@@ -60,7 +60,10 @@
     display: inline-block
 }
 
-.sectionHeader__61424:hover,
+.sectionHeader__61424:hover {
+    color: var(--interactive-text-active)
+}
+
 .sectionHeader__61424:hover .sectionTitle__61424 {
     color: var(--interactive-text-active)
 }
@@ -460,4 +463,4 @@
     margin: auto 2px
 }
 
-/*# sourceMappingURL=195719.67f93c3b94b536d4.css.map*/
+/*# sourceMappingURL=195719.3d25b1d26780391c.css.map*/

@@ -5322,7 +5322,11 @@ svg.radioIcon_c1e9c4 {
     cursor: pointer
 }
 
-.radioGroupOption__64e61[data-selected]:not([data-disabled]):hover .outerRadioBase__64e61,
+.radioGroupOption__64e61[data-selected]:not([data-disabled]):hover .outerRadioBase__64e61 {
+    fill: var(--radio-background-selected-hover);
+    stroke: var(--radio-border-selected-hover)
+}
+
 .radioGroupOption__64e61[data-selected]:not([data-disabled]):hover .outerRadioFill__64e61 {
     fill: var(--radio-background-selected-hover);
     stroke: var(--radio-border-selected-hover)
@@ -6133,4 +6137,4 @@ svg.radioIcon_c1e9c4 {
     color: var(--text-strong)
 }
 
-/*# sourceMappingURL=858942.230aa3c7deb28595.css.map*/
+/*# sourceMappingURL=858942.747139e4fb2f414e.css.map*/

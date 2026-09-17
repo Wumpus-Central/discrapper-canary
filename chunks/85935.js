@@ -193,7 +193,7 @@ var eh = n(540168),
     ef = n(810917);
 let ep = new Set(["markdown", "md", "mkd", "mkdown"]),
     eg = (0, ei.Fe)({
-        createPromise: () => Promise.all([n.e("759743"), n.e("915811"), n.e("636550")]).then(n.bind(n, 456262)),
+        createPromise: () => Promise.all([n.e("759743"), n.e("207596"), n.e("636550")]).then(n.bind(n, 456262)),
         webpackId: 456262,
         name: "PlaintextFileMarkdownPreview",
         renderLoader: () => (0, i.jsx)(g.y, { className: ef.u1 }),

@@ -78,7 +78,10 @@
     object-fit: contain
 }
 
-.selected__0f2e8,
+.selected__0f2e8 {
+    background-color: var(--interactive-background-selected)
+}
+
 .selected__0f2e8:hover {
     background-color: var(--interactive-background-selected)
 }
@@ -150,4 +153,4 @@ img.thumbnail__0f2e8 {
     width: 100%
 }
 
-/*# sourceMappingURL=677624.e5c348cfa155a7e8.css.map*/
+/*# sourceMappingURL=677624.6371499ac846a649.css.map*/

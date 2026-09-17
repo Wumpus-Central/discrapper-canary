@@ -2008,7 +2008,10 @@
     opacity: .3
 }
 
-.clickable__91a9d.container__91a9d:hover,
+.clickable__91a9d.container__91a9d:hover {
+    color: var(--interactive-text-hover)
+}
+
 .clickable__91a9d.container__91a9d:hover .muted__91a9d {
     color: var(--interactive-text-hover)
 }
@@ -2105,4 +2108,4 @@
     margin-inline-start: 8px
 }
 
-/*# sourceMappingURL=56606.d1b33b458a879fbe.css.map*/
+/*# sourceMappingURL=56606.2a187f4e77105586.css.map*/

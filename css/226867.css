@@ -2485,20 +2485,19 @@
 }
 
 .rangeTrackFill_b1a1c5 {
-    overflow: hidden
-}
-
-.rangeTrackFill_b1a1c5,
-.rangeTrackFill_b1a1c5:after {
     border-radius: inherit;
     inset: 0;
+    overflow: hidden;
     position: absolute
 }
 
 .rangeTrackFill_b1a1c5:after {
+    border-radius: inherit;
     box-shadow: inset 0 0 0 1px var(--border-subtle);
     content: "";
-    pointer-events: none
+    inset: 0;
+    pointer-events: none;
+    position: absolute
 }
 
 .rangeControl_b1a1c5 {
@@ -2842,4 +2841,4 @@
     }
 }
 
-/*# sourceMappingURL=226867.ec42dc5c29051248.css.map*/
+/*# sourceMappingURL=226867.4fd4027e477aad46.css.map*/

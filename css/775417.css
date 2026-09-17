@@ -271,12 +271,12 @@
     font-weight: var(--font-weight-medium)
 }
 
-.option_a16aea:hover,
 .option_a16aea[aria-selected=true]:hover {
     background-color: var(--background-mod-subtle)
 }
 
 .option_a16aea:hover {
+    background-color: var(--background-mod-subtle);
     color: var(--text-default)
 }
 
@@ -618,4 +618,4 @@
     width: 24px
 }
 
-/*# sourceMappingURL=775417.ec740af0b8938f6f.css.map*/
+/*# sourceMappingURL=775417.b73ff466a40423a8.css.map*/

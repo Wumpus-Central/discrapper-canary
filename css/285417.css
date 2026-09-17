@@ -2254,8 +2254,11 @@
     display: block
 }
 
-.channel__5dec7:hover,
 .underlineOnHover__5dec7:hover {
+    text-decoration: underline
+}
+
+.channel__5dec7:hover {
     text-decoration: underline
 }
 
@@ -2416,4 +2419,4 @@
     width: 16px
 }
 
-/*# sourceMappingURL=285417.c1812ac6787ccf7a.css.map*/
+/*# sourceMappingURL=285417.6be9f50dcfcaed63.css.map*/

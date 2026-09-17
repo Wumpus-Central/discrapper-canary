@@ -2207,8 +2207,11 @@ div.clanTagBadgeContainer__07f91 {
     width: 24px
 }
 
-.optionsActive__07f91,
 .optionsButton__07f91:hover {
+    background: var(--interactive-background-active)
+}
+
+.optionsActive__07f91 {
     background: var(--interactive-background-active)
 }
 
@@ -2294,4 +2297,4 @@ span.clanTag__07f91.isOverlay__07f91 {
     color: CanvasText
 }
 
-/*# sourceMappingURL=880186.021b6a65e843b545.css.map*/
+/*# sourceMappingURL=880186.09ea9d4d1231e374.css.map*/

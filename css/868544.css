@@ -26,7 +26,10 @@
     transition: opacity var(--connecting-container-fade-duration, .2s) ease-out
 }
 
-.container_a2f514[data-fade=true],
+.container_a2f514[data-fade=true] {
+    opacity: 0
+}
+
 .container_a2f514[data-fade=true] .text_a2f514 {
     opacity: 0
 }
@@ -176,4 +179,4 @@
     text-transform: none
 }
 
-/*# sourceMappingURL=868544.7894605fc02e9657.css.map*/
+/*# sourceMappingURL=868544.6a8646a97a00940c.css.map*/

@@ -32,19 +32,19 @@
 }
 
 .closeButton_c2b141:hover {
-    background-color: var(--interactive-background-hover)
+    background-color: var(--interactive-background-hover);
+    color: var(--interactive-text-hover)
 }
 
-.closeButton_c2b141:hover,
 .closeButton_c2b141:hover+.keybind_c2b141 {
     color: var(--interactive-text-hover)
 }
 
 .closeButton_c2b141:active {
-    background-color: var(--interactive-background-active)
+    background-color: var(--interactive-background-active);
+    color: var(--interactive-text-active)
 }
 
-.closeButton_c2b141:active,
 .closeButton_c2b141:active+.keybind_c2b141 {
     color: var(--interactive-text-active)
 }
@@ -76,4 +76,4 @@
     color: Highlight
 }
 
-/*# sourceMappingURL=551353.cdaee46180185fa2.css.map*/
+/*# sourceMappingURL=551353.2e0df466c9b4b858.css.map*/

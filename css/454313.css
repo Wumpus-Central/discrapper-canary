@@ -82,8 +82,11 @@
     width: 24px
 }
 
-.viewersIcon_d6b206.activeButton_d6b206,
 .viewersIcon_d6b206:hover {
+    color: var(--white)
+}
+
+.viewersIcon_d6b206.activeButton_d6b206 {
     color: var(--white)
 }
 
@@ -377,4 +380,4 @@
     opacity: 1
 }
 
-/*# sourceMappingURL=454313.2454399f80d3c9dd.css.map*/
+/*# sourceMappingURL=454313.3b974427c4048e5b.css.map*/

@@ -239,13 +239,13 @@
 }
 
 .clickableImage__39ec2,
-.clickableImage__39ec2:after,
 .image__39ec2 {
     border-radius: var(--radius-sm)
 }
 
 .clickableImage__39ec2:after {
     background-color: var(--black);
+    border-radius: var(--radius-sm);
     content: "";
     height: 100%;
     inset-inline-end: 0;
@@ -345,4 +345,4 @@
     margin-inline: calc(var(--custom-activity-card-padding)*-1)
 }
 
-/*# sourceMappingURL=433400.6cdb0d6397608c89.css.map*/
+/*# sourceMappingURL=433400.e739648430772ab3.css.map*/

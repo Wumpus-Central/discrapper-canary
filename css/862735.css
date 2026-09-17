@@ -2064,8 +2064,11 @@
     cursor: pointer
 }
 
-.clickable__13533[aria-selected=true]>.base__13533,
 .clickable__13533[role=option]>.base__13533:hover {
+    background-color: var(--interactive-background-hover)
+}
+
+.clickable__13533[aria-selected=true]>.base__13533 {
     background-color: var(--interactive-background-hover)
 }
 
@@ -2449,4 +2452,4 @@
     width: 16px
 }
 
-/*# sourceMappingURL=862735.ed906603e9565d00.css.map*/
+/*# sourceMappingURL=862735.30278509527ce174.css.map*/

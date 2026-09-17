@@ -165,7 +165,10 @@
     padding: 6px 8px
 }
 
-.experimentOverlayTitle__2f4f7.idle__2f4f7,
+.experimentOverlayTitle__2f4f7.idle__2f4f7 {
+    opacity: 0
+}
+
 .experimentOverlayTitle__2f4f7:empty {
     opacity: 0
 }
@@ -454,4 +457,4 @@
     box-shadow: inset 0 0 0 2px Highlight, inset 0 0 0 3px var(--black)
 }
 
-/*# sourceMappingURL=655282.ed2ce25ebc61fda6.css.map*/
+/*# sourceMappingURL=655282.7b25cb505483f3c7.css.map*/

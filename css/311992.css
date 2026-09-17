@@ -124,7 +124,10 @@
     width: 100%
 }
 
-.payment_e9cb00:hover,
+.payment_e9cb00:hover {
+    background-color: var(--background-mod-muted)
+}
+
 .payment_e9cb00[data-expanded=true] {
     background-color: var(--background-mod-muted)
 }
@@ -447,4 +450,4 @@
     width: 100%
 }
 
-/*# sourceMappingURL=311992.54361ac2e9c04088.css.map*/
+/*# sourceMappingURL=311992.80e310cf6618e171.css.map*/

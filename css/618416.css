@@ -709,7 +709,10 @@
     filter: drop-shadow(var(--elevation-medium))
 }
 
-.avatar_c19a55.clickable_c19a55:active,
+.avatar_c19a55.clickable_c19a55:active {
+    transform: translateY(1px)
+}
+
 .avatar_c19a55.clickable_c19a55:active+.avatarDecoration_c19a55 {
     transform: translateY(1px)
 }
@@ -3488,4 +3491,4 @@
     transition: padding-left .2s ease
 }
 
-/*# sourceMappingURL=618416.3b23ea17ae8a4fed.css.map*/
+/*# sourceMappingURL=618416.a8a67f0c89afda02.css.map*/
