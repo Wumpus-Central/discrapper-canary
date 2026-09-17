@@ -83,15 +83,14 @@ function m(e) {
 }
 function S(e) {
     let {
-            onClose: t,
-            entryPoint: r,
-            shouldShowExpressiveModal: s = !1,
-            webviewUrl: o,
-            verificationVendorName: d,
-            incodeParameters: c,
-            ...u
-        } = e,
-        _ = { modalKey: T.SW, onCloseCallback: t, backdropStyle: g(r), Layer: l.Ay };
+        onClose: t,
+        entryPoint: r,
+        shouldShowExpressiveModal: s = !1,
+        webviewUrl: o,
+        verificationVendorName: d,
+        incodeParameters: c,
+        ...u
+    } = e;
     if (d === T.XM.INCODE && h(r))
         return (
             !!(
@@ -103,26 +102,29 @@ function S(e) {
             (m({ entryPoint: r, onClose: t, onComplete: u.onComplete, onCancel: u.onCancel, incodeParameters: c }), !0)
         );
     if (null == o) return !1;
-    if (s || E(r)) {
-        let e = (0, f.d)(r);
-        (0, a.openModalLazy)(async () => {
-            let { default: t } = await Promise.all([n.e("387132"), n.e("918024"), n.e("324947")]).then(
-                n.bind(n, 662558),
-            );
-            return (n) => (0, i.jsx)(t, { webviewUrl: o, isExpressiveModalV2: e, entryPoint: r, ...u, ...n });
-        }, _);
-    } else
-        (0, a.openModalLazy)(async () => {
-            let { default: e } = await Promise.all([
-                n.e("722514"),
-                n.e("387132"),
-                n.e("188941"),
-                n.e("669464"),
-                n.e("123425"),
-            ]).then(n.bind(n, 745336));
-            return (t) => (0, i.jsx)(e, { webviewUrl: o, ...u, ...t });
-        }, _);
-    return !0;
+    let _ = s || E(r),
+        A = _ && (0, f.d)(r),
+        I = { modalKey: T.SW, onCloseCallback: t, backdropStyle: g(r), Layer: l.Ay, dismissable: !A };
+    return (
+        _
+            ? (0, a.openModalLazy)(async () => {
+                  let { default: e } = await Promise.all([n.e("387132"), n.e("918024"), n.e("324947")]).then(
+                      n.bind(n, 662558),
+                  );
+                  return (t) => (0, i.jsx)(e, { webviewUrl: o, isExpressiveModalV2: A, entryPoint: r, ...u, ...t });
+              }, I)
+            : (0, a.openModalLazy)(async () => {
+                  let { default: e } = await Promise.all([
+                      n.e("722514"),
+                      n.e("387132"),
+                      n.e("188941"),
+                      n.e("669464"),
+                      n.e("123425"),
+                  ]).then(n.bind(n, 745336));
+                  return (t) => (0, i.jsx)(e, { webviewUrl: o, ...u, ...t });
+              }, I),
+        !0
+    );
 }
 function N(e, t) {
     (0, a.openModalLazy)(
