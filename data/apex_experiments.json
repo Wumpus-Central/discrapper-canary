@@ -5475,7 +5475,8 @@
     "name": "2026-09-friends-sidebar",
     "kind": "user",
     "defaultConfig": {
-      "sidebarEnabled": false
+      "sidebarEnabled": false,
+      "appBarToggleEnabled": false
     },
     "variations": {
       "0": {
@@ -5483,7 +5484,12 @@
         "variant": 0
       },
       "1": {
-        "sidebarEnabled": true
+        "sidebarEnabled": true,
+        "appBarToggleEnabled": false
+      },
+      "2": {
+        "sidebarEnabled": true,
+        "appBarToggleEnabled": true
       }
     }
   },

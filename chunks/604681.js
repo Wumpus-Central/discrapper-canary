@@ -19,4 +19,7 @@ let l = {
     setFriendsSidebarCollapsed(e) {
         s.h.dispatch({ type: "FRIENDS_SIDEBAR_SET_COLLAPSED", collapsed: e });
     },
+    setFriendsSidebarAvailable(e) {
+        s.h.dispatch({ type: "FRIENDS_SIDEBAR_SET_AVAILABLE", available: e });
+    },
 };
