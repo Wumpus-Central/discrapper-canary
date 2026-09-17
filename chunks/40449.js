@@ -1,4 +1,14 @@
-n.d(t, { NC: () => h, SW: () => A, VF: () => f, XM: () => I, f6: () => _, uv: () => p, zS: () => E, zn: () => u });
+n.d(t, {
+    CH: () => A,
+    NC: () => I,
+    SW: () => h,
+    VF: () => p,
+    XM: () => f,
+    f6: () => _,
+    uv: () => T,
+    zS: () => E,
+    zn: () => u,
+});
 var i,
     r,
     a = n(975571),
@@ -24,16 +34,17 @@ function _(e) {
     ];
 }
 let E = "https://discord.com/safety/age-assurance-on-discord-vendors-methods-and-your-data",
-    A = "AGE_VERIFICATION_MODAL_KEY",
-    h = "AGE_VERIFICATION_GET_STARTED_MODAL_KEY";
-var I = (((i = {}).K_ID = "K_ID"), (i.GOOGLE_WALLET = "GOOGLE_WALLET"), (i.INCODE = "INCODE"), i),
-    f =
+    A = "13-17",
+    h = "AGE_VERIFICATION_MODAL_KEY",
+    I = "AGE_VERIFICATION_GET_STARTED_MODAL_KEY";
+var f = (((i = {}).K_ID = "K_ID"), (i.GOOGLE_WALLET = "GOOGLE_WALLET"), (i.INCODE = "INCODE"), i),
+    p =
         (((r = {})[(r.FACIAL_AGE_ESTIMATION = 1)] = "FACIAL_AGE_ESTIMATION"),
         (r[(r.ID_VERIFICATION = 2)] = "ID_VERIFICATION"),
         (r[(r.MODULAR = 3)] = "MODULAR"),
         (r[(r.GOOGLE_WALLET = 9)] = "GOOGLE_WALLET"),
         r);
-let p = {
+let T = {
     1: { title: d.default["2yLvkS"], description: d.default.eJmat5 },
     2: { title: d.default.dwkwo0, description: d.default.ZdmRwW },
     9: { title: d.default.Y9sLpR, description: d.default.dah4bF },

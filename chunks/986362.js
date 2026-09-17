@@ -1,21 +1,23 @@
-n.d(i, { default: () => c });
-var e = n(477900);
-n(582128);
-var s = n(189213),
-    a = n(28863),
-    l = n(975571),
-    r = n(876891),
-    o = n(375708);
-function c(t) {
-    let { transitionState: i, onClose: n } = t;
-    return (0, e.jsx)(s.Modal, {
-        transitionState: i,
-        onClose: n,
-        title: o.intl.string(r.default.AA3xYb),
-        subtitle: o.intl.format(r.default["2+f8w1"], {
-            contentAndSettingsHook: (t, i) =>
-                (0, e.jsx)(a.Anchor, { href: l.A.getArticleURL(o.intl.string(r.default.agiNYw)), children: t }, i),
+e.d(n, { default: () => d });
+var i = e(477900);
+e(582128);
+var a = e(189213),
+    s = e(28863),
+    l = e(975571),
+    r = e(40449),
+    o = e(876891),
+    c = e(375708);
+function d(t) {
+    let { transitionState: n, onClose: e, teenAgeRange: d } = t;
+    return (0, i.jsx)(a.Modal, {
+        transitionState: n,
+        onClose: e,
+        title: c.intl.string(o.default.AA3xYb),
+        subtitle: c.intl.format(o.default["2+f8w1"], {
+            teenAgeRange: d ?? r.CH,
+            contentAndSettingsHook: (t, n) =>
+                (0, i.jsx)(s.Anchor, { href: l.A.getArticleURL(c.intl.string(o.default.agiNYw)), children: t }, n),
         }),
-        actions: [{ text: o.intl.string(o.t["NX+WJN"]), onClick: n }],
+        actions: [{ text: c.intl.string(c.t["NX+WJN"]), onClick: e }],
     });
 }
