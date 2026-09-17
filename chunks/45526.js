@@ -23,7 +23,6 @@ e.exports = {
     kS: "bottomBorderRadius__7eea4",
     Wm: "mostPopularPill__7eea4",
     uC: "mostPopularText__7eea4",
-    QR: "bogoPillWithSparkles__7eea4",
     ls: "freeTrialPillWithSparkles__7eea4",
     vg: "premiumGroupCard__7eea4",
     dW: "textLogo__7eea4",

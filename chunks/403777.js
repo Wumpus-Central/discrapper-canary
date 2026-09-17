@@ -24,10 +24,10 @@ async function _(e) {
             onModalOpen: p,
             ...T
         } = e,
-        m = l.default.getUser(t);
-    if (null == m) return;
-    let g = l.default.getCurrentUser();
+        g = l.default.getUser(t);
     if (null == g) return;
+    let m = l.default.getCurrentUser();
+    if (null == m) return;
     let S = u(t, E);
     (c.add(
         await (0, r.openModalLazy)(
@@ -338,9 +338,8 @@ async function _(e) {
                         n.e("910486"),
                         n.e("56366"),
                         n.e("147662"),
-                        n.e("344057"),
                         n.e("265607"),
-                        n.e("128504"),
+                        n.e("317771"),
                         n.e("331988"),
                         n.e("262156"),
                         n.e("544571"),
@@ -531,8 +530,8 @@ async function _(e) {
                         n.e("859546"),
                         n.e("784041"),
                         n.e("843719"),
+                        n.e("30517"),
                         n.e("858514"),
-                        n.e("471955"),
                         n.e("608032"),
                         n.e("344265"),
                         n.e("477970"),
@@ -702,8 +701,8 @@ async function _(e) {
                 ).default;
                 return (t) =>
                     (0, i.jsx)(e, {
-                        user: m,
-                        currentUser: g,
+                        user: g,
+                        currentUser: m,
                         guildId: E,
                         originGuildId: A ?? E,
                         initialTabSection: a,
@@ -718,7 +717,7 @@ async function _(e) {
                 modalKey: S,
                 contextKey: (0, r.modalContextFromAppContext)(I ?? (0, s.zd)() ?? d.BRT.APP),
                 onCloseRequest: () => {
-                    (0, o.A)(t === g.id, () => {
+                    (0, o.A)(t === m.id, () => {
                         ((0, r.closeModal)(S), c.delete(S));
                     });
                 },

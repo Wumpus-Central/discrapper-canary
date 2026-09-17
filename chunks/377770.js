@@ -3,7 +3,6 @@ e.exports = {
     V1: "settingsContainer__11fc5",
     p7: "settingsHeroNoBackground__11fc5",
     Cv: "noTopPaddingOverride__11fc5",
-    AG: "settingsHeroBogoHeight__11fc5",
     dY: "premiumTierCardsContainerSettings__11fc5",
     w$: "giftPromoCard__11fc5",
     Ol: "billingSettingsBannerContainer__11fc5",

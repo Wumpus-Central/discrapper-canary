@@ -1,87 +1,73 @@
-(i.d(s, { A: () => k, e: () => G }), i(321073));
+i.d(s, { A: () => O, e: () => j });
 var l = i(477900),
     n = i(582128),
     o = i(503698),
-    d = i.n(o),
-    r = i(877624),
+    r = i.n(o),
+    d = i(877624),
     t = i(17928),
-    u = i(554146),
-    _ = i(661531),
-    a = i(403581),
+    a = i(554146),
+    u = i(661531),
+    p = i(403581),
     c = i(404374),
-    p = i(826673),
-    A = i(367727),
-    I = i(131607),
-    M = i(725018),
-    T = i(552736),
-    E = i(724651),
-    m = i(732280),
-    O = i(549996),
-    B = i(603488),
-    g = i(964661),
-    b = i(374403),
-    f = i(105390),
-    R = i(617617),
-    D = i(49999),
-    h = i(202541),
-    j = i(134986);
-function G() {
+    _ = i(826673),
+    M = i(367727),
+    m = i(724651),
+    I = i(732280),
+    A = i(549996),
+    E = i(964661),
+    T = i(374403),
+    b = i(105390),
+    f = i(617617),
+    g = i(49999),
+    R = i(202541),
+    h = i(134986);
+function j() {
     let e,
         s = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-        i = (0, m.V)(),
-        o = (0, E.O)(),
-        d = (0, M.cg)(),
-        _ = null != (0, T.A)(),
-        a = d || _,
-        c = i?.trialId === h.Dw,
-        j = (0, O.c)(r.C.PREMIUM_TAB),
-        G = j?.properties.properties.oneofKind === "premiumTab" ? j.properties.properties.premiumTab : null,
-        k = (0, b.Q)(),
-        x = j?.promotionId ?? "",
-        N = null != G && null != k,
-        S = (0, t.bG)([R.A], () => (0, p.u$)(u.M.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE, x).isDismissed),
-        w =
-            N && null != j && null != G
-                ? (0, l.jsx)(g.A, {
-                      componentId: j.id,
-                      promotionId: j.promotionId,
-                      badgeCopy: G.badgeLabel,
-                      acknowledgedBadgeCopy: G.acknowledgedBadgeLabel,
-                      isDismissed: S,
+        i = (0, I.V)(),
+        o = (0, m.O)(),
+        r = i?.trialId === R.Dw,
+        u = (0, A.c)(d.C.PREMIUM_TAB),
+        p = u?.properties.properties.oneofKind === "premiumTab" ? u.properties.properties.premiumTab : null,
+        c = (0, T.Q)(),
+        h = u?.promotionId ?? "",
+        j = null != p && null != c,
+        O = (0, t.bG)([f.A], () => (0, _.u$)(a.M.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE, h).isDismissed),
+        k =
+            j && null != u && null != p
+                ? (0, l.jsx)(E.A, {
+                      componentId: u.id,
+                      promotionId: u.promotionId,
+                      badgeCopy: p.badgeLabel,
+                      acknowledgedBadgeCopy: p.acknowledgedBadgeLabel,
+                      isDismissed: O,
                   })
-                : null,
-        C = [];
-    a && C.push(u.M.BOGO_2025_NITRO_TAB_BADGE);
-    let [U, v] = (0, I.kn)(C, void 0, !0);
+                : null;
     return (
         n.useEffect(() => {
-            !0 === s &&
-                (U === u.M.BOGO_2025_NITRO_TAB_BADGE && v(D.i.AUTO_DISMISS),
-                N &&
-                    !S &&
-                    (0, A.qr)(u.M.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE, x, { dismissAction: D.i.AUTO_DISMISS }));
-        }, [v, s, U, N, S, x]),
-        null != w
-            ? (e = w)
-            : a
-              ? (e = (0, l.jsx)(B.A, {}))
-              : null != o
-                ? (e = (0, l.jsx)(f.fY, { isTabSelected: s, userDiscount: o, includesAmountOff: !1 }))
-                : null == i || c || (e = (0, l.jsx)(f.Ag, { isTabSelected: s, trialOffer: i })),
+            s &&
+                j &&
+                !O &&
+                (0, M.qr)(a.M.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE, h, { dismissAction: g.i.AUTO_DISMISS });
+        }, [s, j, O, h]),
+        null != k
+            ? (e = k)
+            : null != o
+              ? (e = (0, l.jsx)(b.fY, { isTabSelected: s, userDiscount: o, includesAmountOff: !1 }))
+              : null == i || r || (e = (0, l.jsx)(b.Ag, { isTabSelected: s, trialOffer: i })),
         e
     );
 }
-function k(e) {
+function O(e) {
     let { decoration: s, label: i, isSelected: n } = e,
-        o = (0, M.cg)(),
-        r =
-            G(n) ??
+        o =
+            j(n) ??
             s ??
-            (0, l.jsx)(a.t, { size: "sm", color: n ? _.A.unsafe_rawColors.WHITE.css : c.k0.PREMIUM_TIER_2 });
+            (0, l.jsx)(p.t, { size: "sm", color: n ? u.A.unsafe_rawColors.WHITE.css : c.k0.PREMIUM_TIER_2 });
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, l.jsxs)("div", { className: d()(j.gj, { [j.wH]: n && !o }), children: [i, r] }),
-            (0, l.jsx)("div", { className: d()(j.Tp, { [j._I]: !o && n }) }),
+            (0, l.jsxs)("div", { className: r()(h.gj, { [h.wH]: n }), children: [i, o] }),
+            (0, l.jsx)("div", { className: r()(h.Tp, { [h._I]: n }) }),
         ],
     });
 }

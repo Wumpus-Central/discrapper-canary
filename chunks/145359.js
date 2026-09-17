@@ -19,7 +19,6 @@ e.exports = {
     Kk: "icon_b807c8",
     hi: "smallIcon_b807c8",
     QZ: "freeTrialPillInlineBlock_b807c8",
-    zu: "freeTrialPillInline_b807c8 freeTrialPillInlineBlock_b807c8",
     OC: "newTagItem_b807c8",
     LW: "topRimPill_b807c8",
     o4: "rimGlowTier0_b807c8",

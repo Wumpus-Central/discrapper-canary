@@ -1476,30 +1476,6 @@
     }
   },
   {
-    "name": "2026-03-bogo-promotion-gate-v2",
-    "kind": "user",
-    "defaultConfig": false,
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": true
-    }
-  },
-  {
-    "name": "2026-03-bogo-promotion-marketing-materials-v2",
-    "kind": "user",
-    "defaultConfig": false,
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": true
-    }
-  },
-  {
     "kind": "user",
     "name": "2026-03-browser-inverted-wants",
     "defaultConfig": {

@@ -1,16 +1,12 @@
-n.d(t, { A: () => A });
+n.d(t, { A: () => u });
 var i = n(439372),
     r = n(773669),
-    a = n(287809),
-    s = n(166403),
-    l = n(158045);
-n(725018);
-var o = n(962644),
-    d = n(412260),
-    c = n(202541),
-    u = n(652215),
-    _ = n(818348);
-class E extends i.A {
+    a = n(166403),
+    s = n(962644),
+    l = n(412260),
+    o = n(652215),
+    d = n(818348);
+class c extends i.A {
     actions = {
         POST_CONNECTION_OPEN: this.onPostConnectionOpen.bind(this),
         EXPERIMENTS_FETCH_SUCCESS: this.onPostConnectionOpen.bind(this),
@@ -23,31 +19,27 @@ class E extends i.A {
     };
     stores = new Map()
         .set(r.default, this.onLocaleChanged.bind(this))
-        .set(s.A, this.onSubscriptionStateChanged.bind(this))
-        .set(d.A, this.onPromotionsFetchSettled.bind(this));
+        .set(a.A, this.onSubscriptionStateChanged.bind(this))
+        .set(l.A, this.onPromotionsFetchSettled.bind(this));
     lastSubscriptionStateSignature = null;
     hasPendingSubscriptionRefetch = !1;
     _terminate() {
         ((this.hasPendingSubscriptionRefetch = !1), (this.lastSubscriptionStateSignature = null));
     }
     onLocaleChanged() {
-        null == d.A.lastFetchedActivePromotions ||
-            (d.A.lastFetchedActivePromotionsLocale !== r.default.locale && (0, o.BE)(!1));
+        null == l.A.lastFetchedActivePromotions ||
+            (l.A.lastFetchedActivePromotionsLocale !== r.default.locale && (0, s.BE)(!1));
     }
-    async onPostConnectionOpen() {
-        ((0, o.BE)(), await this.maybeFetchBogoPromotion());
+    onPostConnectionOpen() {
+        (0, s.BE)();
     }
-    maybeFetchBogoPromotion = async () => {
-        let e = a.default.getCurrentUser();
-        l.Ay.isPremiumExactly(e, c.PremiumTypes.TIER_2);
-    };
     onSubscriptionStateChanged() {
         let e,
             t =
-                null == (e = s.A.getSubscriptions(!1))
+                null == (e = a.A.getSubscriptions(!1))
                     ? ""
                     : Object.values(e)
-                          .filter((e) => e.type === _.rz.PREMIUM)
+                          .filter((e) => e.type === d.rz.PREMIUM)
                           .map((e) => {
                               let t = e.items
                                   .map((e) => e.planId)
@@ -59,27 +51,27 @@ class E extends i.A {
                           .join(","),
             n = null == this.lastSubscriptionStateSignature;
         if (t !== this.lastSubscriptionStateSignature && ((this.lastSubscriptionStateSignature = t), !n)) {
-            if (d.A.isFetchingActivePromotions) {
+            if (l.A.isFetchingActivePromotions) {
                 this.hasPendingSubscriptionRefetch = !0;
                 return;
             }
-            (0, o.BE)(!1);
+            (0, s.BE)(!1);
         }
     }
     onPromotionsFetchSettled() {
         !this.hasPendingSubscriptionRefetch ||
-            d.A.isFetchingActivePromotions ||
-            ((this.hasPendingSubscriptionRefetch = !1), (0, o.BE)(!1));
+            l.A.isFetchingActivePromotions ||
+            ((this.hasPendingSubscriptionRefetch = !1), (0, s.BE)(!1));
     }
     onMobilePurchaseSuccess() {
-        (0, o.BE)(!1);
+        (0, s.BE)(!1);
     }
     onOfferUpdated() {
-        (0, o.BE)(!1);
+        (0, s.BE)(!1);
     }
     onVCRedeemed(e) {
         let { entitlements: t } = e;
-        t.some((e) => e.type === u.zF_.FRACTIONAL_REDEMPTION) && (0, o.BE)(!1);
+        t.some((e) => e.type === o.zF_.FRACTIONAL_REDEMPTION) && (0, s.BE)(!1);
     }
 }
-let A = new E();
+let u = new c();

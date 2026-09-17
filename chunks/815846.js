@@ -1,4 +1,4 @@
-s.d(t, { c: () => eZ, A: () => eY });
+s.d(t, { c: () => eZ, A: () => eW });
 var l,
     n = s(477900),
     i = s(582128),
@@ -16,8 +16,8 @@ var l,
     _ = s(462887),
     g = s(862482),
     f = s(297264),
-    E = s(834730),
-    A = s(289873),
+    A = s(834730),
+    E = s(289873),
     C = s(228366),
     T = s(73825),
     N = s(736653),
@@ -25,8 +25,8 @@ var l,
     R = s(688810),
     v = s(277984),
     y = s(86379),
-    M = s(531260),
-    b = s(160946),
+    b = s(531260),
+    M = s(160946),
     L = s(545075),
     O = s(721668),
     P = s(976860),
@@ -42,8 +42,8 @@ var l,
     V = s(580630),
     Z = s(526292),
     z = s(881489),
-    W = s(753261),
-    Y = s(580194),
+    Y = s(753261),
+    W = s(580194),
     K = s(22118),
     $ = s(807098),
     q = s(412260),
@@ -524,7 +524,7 @@ function ef(e) {
         }),
     });
 }
-let eE = function (e) {
+let eA = function (e) {
     let {
             showAnimations: t = !0,
             iconClassName: s,
@@ -543,12 +543,12 @@ let eE = function (e) {
             circleColor: g,
             circleStroke: f,
         } = e,
-        E = (0, x.bG)([ec.Ay], () => ec.Ay.useReducedMotion),
-        A = t && !E;
+        A = (0, x.bG)([ec.Ay], () => ec.Ay.useReducedMotion),
+        E = t && !A;
     return (0, n.jsx)("div", {
         className: a()(e_.G3, s),
         children: (0, n.jsx)(ej, {
-            animationClassName: a()(e_._0, { [e_.uJ]: A, [_ ?? ""]: A }),
+            animationClassName: a()(e_._0, { [e_.uJ]: E, [_ ?? ""]: E }),
             progressCircleStroke: f,
             progressCircleStrokeSize: r,
             percentage: l ?? c,
@@ -558,7 +558,7 @@ let eE = function (e) {
                 switch (u) {
                     case 0:
                         return (0, n.jsx)(ex, {
-                            className: A ? e_.Ow : void 0,
+                            className: E ? e_.Ow : void 0,
                             backgroundColor: a()(e_.vH, i),
                             backgroundCircleSize: o,
                         });
@@ -579,7 +579,7 @@ let eE = function (e) {
         }),
     });
 };
-var eA = s(375708),
+var eE = s(375708),
     eC = s(652215),
     eT = s(14313);
 function eN(e) {
@@ -590,7 +590,7 @@ function eN(e) {
             ? (0, n.jsx)(ee.eu, { src: l, "aria-label": t.username, size: X._3.SIZE_32, ...i })
             : (0, n.jsx)(f.D, { variant: "heading-md/semibold", className: eT.n5, children: s });
     return (0, n.jsx)(et.m, {
-        text: eA.intl.string(eA.t.UnKHdo),
+        text: eE.intl.string(eE.t.UnKHdo),
         shouldShow: !r,
         children: (0, n.jsx)("div", { className: eT.Lg, children: a }),
     });
@@ -638,7 +638,7 @@ let ev = function () {
         p = (0, n.jsxs)("div", {
             className: eT.hE,
             children: [
-                (0, n.jsx)(eE, { percentage: m, progressCircleVariation: eg.NITRO_LOGO, iconClassName: eT.ER }),
+                (0, n.jsx)(eA, { percentage: m, progressCircleVariation: eg.NITRO_LOGO, iconClassName: eT.ER }),
                 (0, n.jsxs)("div", {
                     className: eT.Ns,
                     children: [
@@ -647,19 +647,19 @@ let ev = function () {
                             className: eT.R0,
                             children: (function (e) {
                                 let { hasSentAll: t } = e;
-                                return eA.intl.string(eA.t.USo4s7);
+                                return eE.intl.string(eE.t.USo4s7);
                             })({ hasSentAll: o }),
                         }),
                         (0, n.jsx)(eR, { userRecords: l }),
-                        (0, n.jsx)(E.E, {
+                        (0, n.jsx)(A.E, {
                             variant: "text-sm/normal",
                             children: (function (e) {
                                 let { helpdeskArticle: t, referralsStatuses: s } = e;
                                 return (function (e) {
                                     let { hasSentAll: t, hasSentAtLeastOne: s, helpdeskArticle: l } = e;
                                     return t
-                                        ? eA.intl.format(eA.t["TYu+MH"], { helpdeskArticle: l })
-                                        : eA.intl.format(eA.t["omMr+V"], { helpdeskArticle: l });
+                                        ? eE.intl.format(eE.t["TYu+MH"], { helpdeskArticle: l })
+                                        : eE.intl.format(eE.t["omMr+V"], { helpdeskArticle: l });
                                 })({ hasSentAll: s.sent >= eo.Z, hasSentAtLeastOne: s.sent >= 1, helpdeskArticle: t });
                             })({ helpdeskArticle: c, referralsStatuses: r }),
                         }),
@@ -695,7 +695,7 @@ let ev = function () {
                                             alt: "",
                                             className: eT.QH,
                                         }),
-                                        o ? eA.intl.string(eA.t.SY9tyI) : eA.intl.string(eA.t.Lm2nFc),
+                                        o ? eE.intl.string(eE.t.SY9tyI) : eE.intl.string(eE.t.Lm2nFc),
                                     ],
                                 }),
                             }),
@@ -714,11 +714,11 @@ let ev = function () {
     });
 };
 var ey = s(194509),
-    eM = s(65470),
-    eb = s(465794),
+    eb = s(65470),
+    eM = s(465794),
     eL = s(774774),
     eO = s(156601),
-    eP = s(860839),
+    eP = s(297346),
     eS = s(202541),
     ew = s(88001),
     eD = s(148155),
@@ -732,7 +732,7 @@ function eH(e) {
         r = t.hasActiveTrial,
         a = t.planIdFromItems === eS.gD.PREMIUM_YEAR_TIER_2,
         o = t.hasAnyPremiumGroup,
-        d = (0, M.A)(),
+        d = (0, b.A)(),
         u = null != t.trialEndsAt ? c()(t.trialEndsAt).diff(c()(), "d") : 0,
         x = eS.hd[t.planIdFromItems],
         m = H.Ay.getDefaultPrice(x.id),
@@ -742,11 +742,11 @@ function eH(e) {
         return (0, n.jsxs)(n.Fragment, {
             children: [
                 !r && (a || o)
-                    ? (0, n.jsx)(eL.e4, { text: eA.intl.string(eA.t.EyjDRE), className: eG.LW, colorOptions: e })
+                    ? (0, n.jsx)(eL.e4, { text: eE.intl.string(eE.t.EyjDRE), className: eG.LW, colorOptions: e })
                     : (0, n.jsxs)(n.Fragment, {
                           children: [
                               (0, n.jsx)(eL.HU, {
-                                  text: r ? eA.intl.string(eA.t.qYKftX) : eA.intl.string(eA.t.EyjDRE),
+                                  text: r ? eE.intl.string(eE.t.qYKftX) : eE.intl.string(eE.t.EyjDRE),
                                   className: eG.uS,
                                   colorOptions: e,
                               }),
@@ -758,22 +758,22 @@ function eH(e) {
                     color: "text-overlay-light",
                     className: eG.KB,
                     children: (function () {
-                        if (r) return eA.intl.format(eA.t["2CGBri"], { remainingTime: u, price: p });
+                        if (r) return eE.intl.format(eE.t["2CGBri"], { remainingTime: u, price: p });
                         if (o && null != l && t.metadata?.active_discount_expires_at != null) {
                             let e = (0, V.$g)(m.amount, m.currency);
-                            return eA.intl.format(eD.default.FwjZzr, {
+                            return eE.intl.format(eD.default.FwjZzr, {
                                 percent: l?.percentage ?? 0,
                                 discountEndDate: new Date(t.metadata.active_discount_expires_at),
                                 regularPrice: e,
                             });
                         }
                         return a
-                            ? eA.intl.format(eA.t.z2oQtA, {
+                            ? eE.intl.format(eE.t.z2oQtA, {
                                   percent: l?.percentage ?? eS.Cq,
                                   regularPrice: p,
                                   renewalDate: H.Ay.getExpectedRenewalDate(t, d),
                               })
-                            : eA.intl.formatToPlainString(eA.t["3ZiutU"], {
+                            : eE.intl.formatToPlainString(eE.t["3ZiutU"], {
                                   percent: l?.percentage ?? eS._$,
                                   regularPrice: p,
                                   numMonths: l?.duration ?? eS.OJ,
@@ -792,7 +792,7 @@ function eV() {
         l = (0, x.bG)([U.A], () => U.A.getPremiumTypeSubscription()),
         i = (0, x.bG)([G.default], () => G.default.getCurrentUser()),
         r = i?.isPremiumWithPremiumGroup(),
-        o = (0, M.A)(),
+        o = (0, b.A)(),
         c = (0, z.ds)(),
         d = null !== l && null !== l.planIdFromItems;
     if (!d && !o.isFractionalPremiumActive && !r) return null;
@@ -818,7 +818,7 @@ function eV() {
                           ? (0, n.jsxs)(n.Fragment, {
                                 children: [
                                     (0, n.jsx)(eL.e4, {
-                                        text: eA.intl.string(eA.t.uXF4c4),
+                                        text: eE.intl.string(eE.t.uXF4c4),
                                         className: eG.LW,
                                         colorOptions: eL.at.PREMIUM_TIER_2_OLD_GRADIENT_FILL,
                                     }),
@@ -826,7 +826,7 @@ function eV() {
                                         variant: "heading-md/normal",
                                         color: "text-overlay-light",
                                         className: eG.sQ,
-                                        children: eA.intl.format(eA.t.sK7fGl, {
+                                        children: eE.intl.format(eE.t.sK7fGl, {
                                             helpCenterLink: k.A.getArticleURL(eC.MVz.FRACTIONAL_PREMIUM_ABOUT),
                                         }),
                                     }),
@@ -843,7 +843,7 @@ function eV() {
                               ? (0, n.jsxs)(n.Fragment, {
                                     children: [
                                         (0, n.jsx)(eL.HU, {
-                                            text: eA.intl.string(eA.t.qYKftX),
+                                            text: eE.intl.string(eE.t.qYKftX),
                                             className: eG.uS,
                                             colorOptions: (0, _.M)(s)
                                                 ? eL.at.PREMIUM_TIER_2_WHITE_FILL
@@ -853,7 +853,7 @@ function eV() {
                                             variant: "heading-md/normal",
                                             color: "text-overlay-light",
                                             className: eG.KB,
-                                            children: eA.intl.format(eA.t["/SfHwl"], { weeks: 1 }),
+                                            children: eE.intl.format(eE.t["/SfHwl"], { weeks: 1 }),
                                         }),
                                     ],
                                 })
@@ -873,10 +873,10 @@ function eV() {
                               direction: "vertical",
                               padding: { top: 16 },
                               children: [
-                                  (0, n.jsx)(eb.A, {
+                                  (0, n.jsx)(eM.A, {
                                       defaultTextOverride: c
-                                          ? eA.intl.string(eA.t.YScQSF)
-                                          : eA.intl.string(eA.t["0b3YRn"]),
+                                          ? eE.intl.string(eE.t.YScQSF)
+                                          : eE.intl.string(eE.t["0b3YRn"]),
                                   }),
                                   (0, n.jsx)(h.$, {
                                       onClick: () => {
@@ -890,7 +890,7 @@ function eV() {
                                       variant: "overlay-secondary",
                                       fullWidth: !0,
                                       size: "md",
-                                      text: c ? eA.intl.string(eA.t.VR2iVB) : eA.intl.string(eA.t.T1aUAX),
+                                      text: c ? eE.intl.string(eE.t.VR2iVB) : eE.intl.string(eE.t.T1aUAX),
                                   }),
                               ],
                           })
@@ -910,7 +910,7 @@ function eV() {
                                               (0, w.default)(),
                                               (0, P.pX)(eC.BVt.APPLICATION_STORE));
                                       },
-                                      text: eA.intl.string(eA.t.VR2iVB),
+                                      text: eE.intl.string(eE.t.VR2iVB),
                                       size: "md",
                                   }),
                                   (0, n.jsx)(h.$, {
@@ -922,7 +922,7 @@ function eV() {
                                           }),
                                               (0, D.openUserSettings)(S.X.SUBSCRIPTIONS_PANEL));
                                       },
-                                      text: eA.intl.string(eA.t["9uDy6C"]),
+                                      text: eE.intl.string(eE.t["9uDy6C"]),
                                       fullWidth: !0,
                                       size: "md",
                                   }),
@@ -939,16 +939,16 @@ function eV() {
 }
 function eZ(e) {
     let { className: t, config: s } = e,
-        { enabled: l } = W.E.useConfig({ location: "GiftPromoCard" }),
+        { enabled: l } = Y.E.useConfig({ location: "GiftPromoCard" }),
         r = (0, $.T)(s.asset),
         o = (0, $.T)(s.backgroundAsset),
-        c = (0, Y.gc)(o),
+        c = (0, W.gc)(o),
         d = i.useMemo(() => {
             let e = s.gradient;
             if (null != e && null != e.colors && !(e.colors.length < 2))
-                return (0, Y.K5)({ gradient: e.colors, angle: e.angle }, { defaultAngle: 180 });
+                return (0, W.K5)({ gradient: e.colors, angle: e.angle }, { defaultAngle: 180 });
         }, [s.gradient]),
-        u = (0, Y.x)(c, d),
+        u = (0, W.x)(c, d),
         x = { color: null != s.textColor && "" !== s.textColor ? s.textColor : "var(--always-white)" };
     return l
         ? (0, n.jsx)(ez, { className: t, config: s, imageUrl: r })
@@ -966,15 +966,15 @@ function eZ(e) {
                               variant: "heading-lg/extrabold",
                               children: s.header,
                           }),
-                          (0, n.jsx)(E.E, { className: eG.Oi, style: x, variant: "text-xs/medium", children: s.body }),
+                          (0, n.jsx)(A.E, { className: eG.Oi, style: x, variant: "text-xs/medium", children: s.body }),
                           null != s.additionalTerms &&
-                              (0, n.jsx)(E.E, {
+                              (0, n.jsx)(A.E, {
                                   className: eG.KW,
                                   style: x,
                                   variant: "text-xxs/normal",
                                   children: s.additionalTerms,
                               }),
-                          (0, n.jsx)(eM.A, {
+                          (0, n.jsx)(eb.A, {
                               variant: "primary",
                               size: "md",
                               onClick: () => {
@@ -1003,17 +1003,17 @@ function ez(e) {
                                 color: "text-strong",
                                 children: s.header,
                             }),
-                            (0, n.jsx)(E.E, { variant: "text-sm/medium", color: "text-muted", children: s.body }),
+                            (0, n.jsx)(A.E, { variant: "text-sm/medium", color: "text-muted", children: s.body }),
                             null != s.additionalTerms &&
                                 "" !== s.additionalTerms &&
-                                (0, n.jsx)(E.E, {
+                                (0, n.jsx)(A.E, {
                                     variant: "text-sm/medium",
                                     color: "text-muted",
                                     children: s.additionalTerms,
                                 }),
                         ],
                     }),
-                    (0, n.jsx)(eM.A, {
+                    (0, n.jsx)(eb.A, {
                         variant: "primary",
                         size: "md",
                         onClick: () => {
@@ -1025,7 +1025,7 @@ function ez(e) {
         ],
     });
 }
-function eW() {
+function eY() {
     return (0, n.jsxs)("div", {
         className: eG.T1,
         children: [
@@ -1036,16 +1036,16 @@ function eW() {
                     (0, n.jsx)(f.D, {
                         className: eG.Vz,
                         variant: "heading-xl/extrabold",
-                        children: eA.intl.string(eA.t["3KomGa"]),
+                        children: eE.intl.string(eE.t["3KomGa"]),
                     }),
-                    (0, n.jsx)(E.E, {
+                    (0, n.jsx)(A.E, {
                         className: eG.Oi,
                         variant: "text-sm/normal",
-                        children: eA.intl.string(eA.t.yQ06u1),
+                        children: eE.intl.string(eE.t.yQ06u1),
                     }),
                     (0, n.jsx)(ey.A, {
                         className: a()(eG.Tp, eG._c),
-                        textOptions: { textOverride: eA.intl.string(eA.t.Ve9Ge6), textClassName: eG.VV },
+                        textOptions: { textOverride: eE.intl.string(eE.t.Ve9Ge6), textClassName: eG.VV },
                         color: g.$n.Colors.CUSTOM,
                         onClick: () => {
                             B.default.track(eC.HAw.PREMIUM_SETTINGS_INTERACTED, { cta_type: eB, target: ek });
@@ -1056,15 +1056,15 @@ function eW() {
         ],
     });
 }
-let eY = function () {
+let eW = function () {
     let e = (0, y.Hp)(),
         { analyticsLocations: t } = (0, R.Ay)(I.A.PREMIUM_SETTINGS),
         s = (0, x.bG)([G.default], () => G.default.getCurrentUser()),
         l = (0, x.bG)([U.A], () => U.A.getPremiumTypeSubscription()),
         r = (0, x.bG)([U.A], () => U.A.hasFetchedSubscriptions()),
-        a = (0, b.Y)(eS.T7),
+        a = (0, M.Y)(eS.T7),
         [o, c] = i.useState(!0),
-        p = (0, M.A)({ forceFetch: !0 }),
+        p = (0, b.A)({ forceFetch: !0 }),
         h = (0, x.bG)([q.A], () => {
             let e = q.A.getMarketingComponentByType(u.C.BILLING_SETTINGS_NITRO_GIFT_BANNER);
             return null == e || "billingSettingsNitroGiftBanner" !== e.properties.properties.oneofKind
@@ -1080,13 +1080,13 @@ let eY = function () {
             (e || (await Promise.all([v.hP(), v.$o(), (0, T.zS)(null, null, eC.tF5.DISCOVERY)])), c(!1));
         });
     }, [e]);
-    let [E, N] = i.useState(!1);
+    let [A, N] = i.useState(!1);
     if (e) return (0, n.jsx)(L.uK, {});
     let P = r && null !== l && a,
         S = p.fetched && p.isFractionalPremiumActive,
         w = s?.isPremiumWithPremiumGroup();
-    if (!P && !S && !o && !w) return (0, n.jsx)(O.A, { title: eA.intl.string(eA.t.dyq9TR), note: null });
-    if ((!P && !S && !w) || o) return (0, n.jsx)(A.y, {});
+    if (!P && !S && !o && !w) return (0, n.jsx)(O.A, { title: eE.intl.string(eE.t.dyq9TR), note: null });
+    if ((!P && !S && !w) || o) return (0, n.jsx)(E.y, {});
     let D = !!l?.hasActiveTrial;
     return (0, n.jsx)(R.f5, {
         value: t,
@@ -1099,10 +1099,10 @@ let eY = function () {
                         _ && (0, n.jsx)(eZ, { config: h }),
                         (0, n.jsx)(eV, {}),
                         f && (0, n.jsx)(ev, {}),
-                        !_ && (0, n.jsx)(eW, {}),
+                        !_ && (0, n.jsx)(eY, {}),
                         (0, n.jsx)(K.A, {
                             hideCTAs: !0,
-                            headingOverride: eA.intl.string(eA.t.dnVvQS),
+                            headingOverride: eE.intl.string(eE.t.dnVvQS),
                             hidePill: !D,
                             selectedPlanColumnClassName: eG.JG,
                             selectedPlanTier: eS.PremiumTypes.TIER_2,
@@ -1113,7 +1113,7 @@ let eY = function () {
                     innerRef: g,
                     onChange: (e) => {
                         e &&
-                            !E &&
+                            !A &&
                             (B.default.track(eC.HAw.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: t }),
                             N(!0));
                     },

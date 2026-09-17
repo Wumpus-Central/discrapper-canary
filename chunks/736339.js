@@ -17,7 +17,7 @@ var l = n(477900),
     S = n(252424),
     y = n(158045),
     I = n(580630),
-    g = n(725018),
+    g = n(35587),
     A = n(186223),
     P = n(202541),
     v = n(375708),
@@ -86,7 +86,7 @@ function b(e) {
         B = (0, u.bG)([f.A], () => f.A.get(n));
     o()(null != B, "Missing subscriptionPlan");
     let H = (0, y.m6)(B.id),
-        W = (0, g.cg)(),
+        W = (0, g.Sq)(),
         Y = (0, y.L_)({ planId: n, isGift: k, priceOptions: s, subscriptionPlan: B }),
         V = (0, y.y8)(n, !1, k, s),
         K = null != Y && !A,

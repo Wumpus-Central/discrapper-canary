@@ -30,12 +30,12 @@ var r,
     f = n(736056),
     p = n(952818);
 let T = [],
-    m = null;
-function g() {
+    g = null;
+function m() {
     0 !== T.length &&
         (l.h.dispatch({ type: "OVERLAY_ADD_LOGS_BATCH", logs: T }),
         (T = []),
-        null != m && (clearTimeout(m), (m = null)));
+        null != g && (clearTimeout(g), (g = null)));
 }
 var S = n(777334),
     N = n(211753),
@@ -537,7 +537,7 @@ function eT(e, t, n) {
             : (u.A.updateOverlayState(e, C.AR.OVERLAY_CRASHED, "onConnectComplete"),
               ed(e, "CONNECT_FAILED", "CONNECTING")));
 }
-function em() {
+function eg() {
     let e = M.default.getToken(),
         t = M.default.getId();
     null != e &&
@@ -548,7 +548,7 @@ function em() {
             payloads: [{ type: "UPDATE_TOKEN", token: e, userId: t }],
         });
 }
-function eg(e) {
+function em(e) {
     return (
         null != e &&
         (function (e, t) {
@@ -600,10 +600,10 @@ function eS(e) {
             ((i = e.payload),
                 T.push(i),
                 T.length >= 100
-                    ? g()
-                    : null == m &&
-                      (m = setTimeout(() => {
-                          g();
+                    ? m()
+                    : null == g &&
+                      (g = setTimeout(() => {
+                          m();
                       }, 1e3)));
     }
 }
@@ -633,8 +633,8 @@ class eL extends a.Ay.Store {
             __OVERLAY__ ||
             (this.waitFor(M.default, f.A, P.A, U.A, R.default, D.A, v.A, y.A, p.Ay),
             this.syncWith([f.A], eR),
-            h.Le(eS, eg),
-            M.default.addChangeListener(em),
+            h.Le(eS, em),
+            M.default.addChangeListener(eg),
             l.h.addInterceptor(J.queueDispatch));
     }
     isFocusedPidInputLocked() {
@@ -757,7 +757,7 @@ let ey = new eL(
                       let { port: t } = e;
                       q = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
                       let n = new URLSearchParams();
-                      (n.append("build_id", "356aa360c79ccda917ac0c2b0799f457bec4984d"),
+                      (n.append("build_id", "630565e36dfa9e0968f0e8232b38fddd7cc68a8f"),
                           n.append("rpc", String(t)),
                           n.append("rpc_auth_token", q),
                           (i = `${location.protocol}//${location.host}/overlay?${n.toString()}`));
