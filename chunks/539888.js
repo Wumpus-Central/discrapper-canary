@@ -29,7 +29,7 @@ function b(e) {
     let { width: t } = e;
     return (0, n.jsx)("div", { className: _.M0, style: { width: t } });
 }
-function y(e) {
+function C(e) {
     let { rank: t, row: l } = e;
     return (0, n.jsxs)("div", {
         className: _.nM,
@@ -62,8 +62,8 @@ function y(e) {
         ],
     });
 }
-function C() {
-    return (0, n.jsx)("div", { className: _.kL, children: S.map((e, t) => (0, n.jsx)(y, { rank: t + 1, row: e }, t)) });
+function y() {
+    return (0, n.jsx)("div", { className: _.kL, children: S.map((e, t) => (0, n.jsx)(C, { rank: t + 1, row: e }, t)) });
 }
 var N = l(189213),
     T = l(192308),
@@ -163,7 +163,7 @@ function R(e) {
                 align: "center",
                 gap: 12,
                 children: [
-                    null != a ? (0, n.jsx)(a, { alt: "", ariaHidden: !0 }) : (0, n.jsx)(C, {}),
+                    null != a ? (0, n.jsx)(a, { alt: "", ariaHidden: !0 }) : (0, n.jsx)(y, {}),
                     (0, n.jsxs)(h.B, {
                         align: "center",
                         gap: 4,

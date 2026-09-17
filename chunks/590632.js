@@ -37,17 +37,17 @@ function b() {
         ],
     });
 }
-var y = l(331322),
-    C = l(297264),
+var C = l(331322),
+    y = l(297264),
     N = l(823353);
 function T() {
-    return (0, n.jsxs)(y.B, {
+    return (0, n.jsxs)(C.B, {
         className: N.w,
         align: "center",
         justify: "center",
         gap: 6,
         children: [
-            (0, n.jsx)(C.D, { variant: "heading-md/semibold", color: "text-default", children: "Not enough data" }),
+            (0, n.jsx)(y.D, { variant: "heading-md/semibold", color: "text-default", children: "Not enough data" }),
             (0, n.jsx)(o.E, {
                 variant: "text-sm/medium",
                 color: "text-subtle",
@@ -236,7 +236,7 @@ async function eb(e) {
         renderInFramePool: !0,
     });
 }
-async function ey(e) {
+async function eC(e) {
     let { channel: t, selectedRoleIds: l } = e,
         n = [];
     if (l.length > 0)
@@ -246,7 +246,7 @@ async function ey(e) {
     let i = await (0, em.RT)(t.id, { permissionOverwrites: n });
     if (!i.ok) throw i;
 }
-let eC = [];
+let ey = [];
 var eN = l(344351),
     eT = l(256693),
     eD = l(812901),
@@ -276,7 +276,7 @@ let ek = {
                 [m, E] = i.useState(null),
                 v = (0, D.bG)([Z.A], () => Z.A.getGuildId()),
                 A = void 0 !== f ? f : null != r.image_hash && null != v ? en(v, t.id, r.image_hash) : null;
-            return (0, n.jsxs)(y.B, {
+            return (0, n.jsxs)(C.B, {
                 gap: 16,
                 children: [
                     (0, n.jsx)(q.k, {
@@ -290,14 +290,14 @@ let ek = {
                     }),
                     (0, n.jsx)(M.D, {
                         label: g.intl.string(g.t.X4IxWL),
-                        children: (0, n.jsxs)(y.B, {
+                        children: (0, n.jsxs)(C.B, {
                             gap: 16,
                             direction: "horizontal",
                             align: "center",
                             justify: "space-between",
                             className: ei.B,
                             children: [
-                                (0, n.jsxs)(y.B, {
+                                (0, n.jsxs)(C.B, {
                                     gap: 8,
                                     direction: "horizontal",
                                     children: [
@@ -514,7 +514,7 @@ let ek = {
                 s = (0, eo.n)(),
                 r = (0, D.bG)([er.A], () => (null != s ? er.A.getChannel(s) : void 0), [s]),
                 d = (0, D.bG)([ec.A], () => null != r && ec.A.can(el.xBc.MANAGE_ROLES, r), [r]),
-                c = (0, D.bG)([ed.A], () => (null == l ? eC : ed.A.getSortedRoles(l).filter((e) => e.id !== a)), [
+                c = (0, D.bG)([ed.A], () => (null == l ? ey : ed.A.getSortedRoles(l).filter((e) => e.id !== a)), [
                     l,
                     a,
                 ]),
@@ -541,7 +541,7 @@ let ek = {
                 if (null != r) {
                     (v(!1), m(!0));
                     try {
-                        (await ey({ channel: r, selectedRoleIds: A }), t());
+                        (await eC({ channel: r, selectedRoleIds: A }), t());
                     } catch {
                         (m(!1), v(!0));
                     }
@@ -549,7 +549,7 @@ let ek = {
             }
             return null == r
                 ? null
-                : (0, n.jsxs)(y.B, {
+                : (0, n.jsxs)(C.B, {
                       gap: 16,
                       children: [
                           (0, n.jsx)(es.Z, {

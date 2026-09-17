@@ -1,4 +1,4 @@
-t.r(
+r.r(
     (e.exports = {
         container: "container_a62383",
         purple: "purple_a62383",
