@@ -16,13 +16,13 @@ var r = n(17928),
 let f = { width: 232, height: 315 },
     p = { width: 400, height: 374 },
     T = new Set(),
-    m = [],
-    g = new Map(),
+    g = [],
+    m = new Map(),
     S = new Set(),
     N = !1;
 function C(e) {
-    if (null == e || null == g.get(e)) return !1;
-    (g.delete(e), (S = new Set(S)).delete(e));
+    if (null == e || null == m.get(e)) return !1;
+    (m.delete(e), (S = new Set(S)).delete(e));
 }
 function O(e) {
     let { channelId: t, ongoingRings: n } = e,
@@ -53,7 +53,7 @@ function O(e) {
                 null != i && i.x + s.width < e.width && i.y + s.height < e.height
                     ? i
                     : { x: e.width / 2 - s.width / 2, y: e.height / 2 - s.height / 2 });
-        return (g.set(t, { channel: d, senderId: n[a], x: E + u, y: I + u }), void (S = new Set(S)).add(t));
+        return (m.set(t, { channel: d, senderId: n[a], x: E + u, y: I + u }), void (S = new Set(S)).add(t));
     }
     return !!S.has(t) && !s && C(t);
 }
@@ -84,7 +84,7 @@ class D extends r.Ay.Store {
             this.syncWith([l.A], y));
     }
     getIncomingCalls() {
-        return N ? m : Array.from(g.values());
+        return N ? g : Array.from(m.values());
     }
     getIncomingCallChannelIds() {
         return N ? T : S;

@@ -17,15 +17,15 @@ function m(e) {
             headingText: m,
             className: h,
             style: g,
-            containerRef: p,
-            headingRef: A,
+            containerRef: A,
+            headingRef: p,
             profileEffect: x,
             profileFrame: f,
             children: E,
         } = e,
         I = (0, o.GV)();
     return (0, i.jsxs)(c.A, {
-        ref: p,
+        ref: A,
         user: t,
         displayProfile: n,
         themeType: d.d.EMBED,
@@ -36,7 +36,7 @@ function m(e) {
                 "aria-labelledby": I,
                 className: s()(u.article, h),
                 children: [
-                    (0, i.jsx)(a.A, { children: (0, i.jsx)(r.H, { ref: A, tabIndex: -1, id: I, children: m }) }),
+                    (0, i.jsx)(a.A, { children: (0, i.jsx)(r.H, { ref: p, tabIndex: -1, id: I, children: m }) }),
                     (0, i.jsx)(r.F, { children: E }),
                 ],
             }),

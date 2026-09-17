@@ -24,8 +24,8 @@ function f(e) {
 }
 var p = n(652215),
     T = n(758836);
-let m = /^\/([a-zA-Z0-9-]+)$/,
-    g = /^\/channels\/([0-9]+|@me)\/([0-9]+)$/,
+let g = /^\/([a-zA-Z0-9-]+)$/,
+    m = /^\/channels\/([0-9]+|@me)\/([0-9]+)$/,
     S = /^\/(invite|template)\/([a-zA-Z0-9-]+)\/?\.?$/,
     N = RegExp("^/events/(\\d+)(?:/)(\\d+)?((?:/)(\\d+))?"),
     C = /^\/(application-directory|discovery\/applications)\/([0-9-]+)\/?((about|images|privacy)\/?)?$/,
@@ -124,12 +124,12 @@ function Q(e) {
             function r(e, i) {
                 t.has(i) || (t.add(i), n.push({ type: e, code: i, url: c }));
             }
-            if (_?.match(m) != null && ("https:" === e.protocol || "http:" === e.protocol)) {
+            if (_?.match(g) != null && ("https:" === e.protocol || "http:" === e.protocol)) {
                 let t = (0, l.fB)(_.substring(1), e.search);
                 if ((d.A.getInvite(t), c.includes("\\"))) continue;
                 r(u.I.INVITE, t);
             }
-            E?.match(m) != null && r(u.I.TEMPLATE, E.substring(1));
+            E?.match(g) != null && r(u.I.TEMPLATE, E.substring(1));
             let I = A?.match(S);
             if (null != I) {
                 let t = I[1].toUpperCase();
@@ -139,7 +139,7 @@ function Q(e) {
                     r(u.I.INVITE, t);
                 } else r(t, I[2]);
             }
-            A?.match(g) != null && r(u.I.CHANNEL_LINK, A.replace("/channels/", ""));
+            A?.match(m) != null && r(u.I.CHANNEL_LINK, A.replace("/channels/", ""));
             let f = (function (e) {
                 if (null == e) return null;
                 let t = e.match(N);

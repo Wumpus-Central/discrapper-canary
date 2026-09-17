@@ -8,7 +8,7 @@ n.d(t, {
     Me: () => en,
     Mu: () => M,
     Ot: () => S,
-    P4: () => g,
+    P4: () => m,
     QK: () => ed,
     RC: () => J,
     SC: () => $,
@@ -37,7 +37,7 @@ n.d(t, {
     rb: () => eu,
     rv: () => W,
     s3: () => U,
-    sT: () => m,
+    sT: () => g,
     sc: () => D,
     sz: () => N,
     tS: () => er,
@@ -69,8 +69,8 @@ var i,
         (i[(i.MINUTES_2 = 2 * f.A.Millis.MINUTE)] = "MINUTES_2"),
         i),
     T = (((r = {}).DECOUPLED = "decoupled"), (r.STREAMER = "streamer"), (r.VOICE = "voice"), r);
-let m = "v3";
-var g = (((a = {})[(a.Error = 0)] = "Error"), (a[(a.Disabled = 1)] = "Disabled"), (a[(a.Enabled = 2)] = "Enabled"), a);
+let g = "v3";
+var m = (((a = {})[(a.Error = 0)] = "Error"), (a[(a.Disabled = 1)] = "Disabled"), (a[(a.Enabled = 2)] = "Enabled"), a);
 let S = "alt+c",
     N = "f12",
     C = 6 * f.A.Millis.SECOND,

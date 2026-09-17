@@ -1,4 +1,4 @@
-n.d(t, { c: () => x, O: () => A });
+n.d(t, { c: () => x, O: () => p });
 var i,
     l = n(477900),
     s = n(582128),
@@ -15,7 +15,7 @@ var i,
     m = n(834730),
     h = n(375708),
     g = n(311408);
-function p(e) {
+function A(e) {
     let { visibility: t, variant: n } = e,
         i = s.useMemo(
             () =>
@@ -53,7 +53,7 @@ function p(e) {
         ],
     });
 }
-function A(e) {
+function p(e) {
     let { applicationId: t, channel: n, variant: i, children: s } = e,
         { data: a } = (0, u.YY)(t);
     return null == a
@@ -77,7 +77,7 @@ function x(e) {
             return u;
         case d.BLOCK_UNDERAGE:
         case d.BLOCK_CHANNEL_RESTRICTION:
-            return (0, l.jsx)(p, { visibility: m, variant: s });
+            return (0, l.jsx)(A, { visibility: m, variant: s });
         default:
             return null;
     }

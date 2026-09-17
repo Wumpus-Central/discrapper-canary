@@ -6,14 +6,14 @@ n.d(t, {
     Mq: () => l,
     P_: () => d,
     _r: () => N,
-    aS: () => g,
+    aS: () => m,
     bF: () => p,
     cS: () => C,
     dK: () => S,
     hJ: () => h,
     i0: () => L,
     lo: () => f,
-    mD: () => m,
+    mD: () => g,
     oW: () => R,
     ot: () => T,
     pi: () => I,
@@ -76,11 +76,11 @@ function p(e) {
 function T(e, t) {
     return i.h.dispatch({ type: "OVERLAY_V3_NATIVE_REFRESH_HOST_WINDOW", refreshingPID: e, lastAssociatedPID: t });
 }
-function m(e, t, n) {
+function g(e, t, n) {
     let { crashType: r, isCrashedDisabled: a } = n;
     return i.h.dispatch({ type: "OVERLAY_CRASHED", pid: e, error: t, crashType: r, isCrashedDisabled: a });
 }
-function g(e) {
+function m(e) {
     let { pid: t, name: n, type: r, data: s, logType: l = a.QJ.Info } = e;
     return i.h.dispatch({
         type: "OVERLAY_ADD_DEBUG_BREADCRUMB",
@@ -88,10 +88,10 @@ function g(e) {
     });
 }
 function S(e, t, n, i) {
-    return g({ pid: e, name: t, type: a.ON.Flux, data: n, logType: i });
+    return m({ pid: e, name: t, type: a.ON.Flux, data: n, logType: i });
 }
 function N(e, t, n, i) {
-    return g({ pid: e, name: t, type: a.ON.OOPModule, data: n, logType: i });
+    return m({ pid: e, name: t, type: a.ON.OOPModule, data: n, logType: i });
 }
 function C(e, t, n) {
     return i.h.dispatch({ type: "OVERLAY_V3_NATIVE_FOCUS_GAINED", pid: e, windowHandle: t, windowClass: n });

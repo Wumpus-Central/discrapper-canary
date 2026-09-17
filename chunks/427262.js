@@ -4,8 +4,8 @@ n.d(t, {
     G2: () => f,
     Gn: () => S,
     MU: () => h,
-    QV: () => m,
-    R1: () => g,
+    QV: () => g,
+    R1: () => m,
     mG: () => _,
     mv: () => p,
     tx: () => E,
@@ -90,12 +90,12 @@ function T(e, t, n) {
     let r = i ? o(e.username) : e.username;
     return "never" !== t.decoration ? `@${r}` : r;
 }
-function m(e, t) {
+function g(e, t) {
     let n = { ...d, ...t },
         i = "auto" !== n.identifiable || r.A.hidePersonalInformation;
     return T(e, n, i);
 }
-function g(e) {
+function m(e) {
     return (0, i.bG)([a.default], () => {
         if (null != e) return e.isPrivate() && e.isDM() ? a.default.getUser(e.getRecipientId()) : null;
     });
@@ -110,7 +110,7 @@ let N = {
     isNameConcealed: function (e) {
         return 2 === e.length && e.endsWith("\u2026");
     },
-    getUserTag: m,
+    getUserTag: g,
     useUserTag: function (e, t) {
         return T(
             e,
@@ -123,10 +123,10 @@ let N = {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         if (null == e) return "???";
         let n = A(e),
-            i = t ? m(e) : (e.username ?? "???");
+            i = t ? g(e) : (e.username ?? "???");
         return n === i ? n : null != n ? `${n} (${i})` : i;
     },
     getGlobalName: A,
     humanizeStatus: h,
-    useDirectMessageRecipient: g,
+    useDirectMessageRecipient: m,
 };

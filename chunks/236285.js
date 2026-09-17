@@ -116,10 +116,10 @@ let f = new (n(626584).A)("GuildEmojis"),
             return void 0 !== t ? t().then((e) => e.default) : Promise.resolve({});
         }
     }),
-    m = function (e) {
+    g = function (e) {
         T.setParams(e);
     },
-    g = function (e) {
+    m = function (e) {
         let t = T.get();
         return void 0 !== t ? t[e] : [];
     };
@@ -460,7 +460,7 @@ class eu {
             let { names: n, name: i } = t,
                 r = null != n && o().some(n, e),
                 a = null != i && e(i),
-                s = null != i && o().some(g(i), e);
+                s = null != i && o().some(m(i), e);
             return r || a || s;
         });
     }
@@ -552,7 +552,7 @@ function eT(e) {
     let t = e.length > 0;
     return (t && 2 === en && e_.compute(), t);
 }
-function em(e) {
+function eg(e) {
     let {
             guildId: t,
             role: { id: n },
@@ -561,7 +561,7 @@ function em(e) {
     if (!(null != i && (0, N.U)(i))) return !1;
     (ef(t), eI());
 }
-class eg extends _.Ay.PersistedStore {
+class em extends _.Ay.PersistedStore {
     static displayName = "EmojiStore";
     static persistKey = "EmojiStoreV2";
     initialize(e) {
@@ -718,7 +718,7 @@ class eg extends _.Ay.PersistedStore {
         return null != t && t.favoriteEmojisWithoutFetchingLatest.length > 0;
     }
 }
-let eS = new eg(E.h, {
+let eS = new em(E.h, {
     LOGOUT: function () {
         ((q.pendingUsages = []), (q.emojiReactionPendingUsages = []));
     },
@@ -783,11 +783,11 @@ let eS = new eg(E.h, {
             settings: { type: t },
             wasSaved: n,
         } = e;
-        if ((m(D.default.locale), t !== z.oD.FRECENCY_AND_FAVORITES_SETTINGS || !n)) return !1;
+        if ((g(D.default.locale), t !== z.oD.FRECENCY_AND_FAVORITES_SETTINGS || !n)) return !1;
         ((q.pendingUsages = []), (q.emojiReactionPendingUsages = []));
     },
-    GUILD_ROLE_CREATE: em,
-    GUILD_ROLE_UPDATE: em,
+    GUILD_ROLE_CREATE: eg,
+    GUILD_ROLE_UPDATE: eg,
     TOP_EMOJIS_FETCH_SUCCESS: function (e) {
         let { guildId: t, topEmojisMetadata: n } = e;
         es.set(t, { emojiIds: n.map((e) => e.emojiId), topEmojisTTL: c()(c()()).add(1, "days").valueOf() });

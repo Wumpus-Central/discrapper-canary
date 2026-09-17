@@ -1,4 +1,4 @@
-n.d(t, { Vn: () => f, u1: () => T, sq: () => m, qz: () => p, _D: () => I });
+n.d(t, { Vn: () => f, u1: () => T, sq: () => g, qz: () => p, _D: () => I });
 var i = n(636537),
     r = n(554146),
     a = n(228366),
@@ -40,10 +40,10 @@ async function I(e) {
                     retries: null != c ? c.retries : void 0,
                 }),
                 T = p.body.user_trial_offer ?? null,
-                m = p.body.user_discount_offer ?? null;
-            if (null != t && null != m && m.discount_id !== t) {
+                g = p.body.user_discount_offer ?? null;
+            if (null != t && null != g && g.discount_id !== t) {
                 let e = Error("Returned user discount offer does not match offer ID request parameter");
-                throw (E.A.captureException(e, { extra: { offer_id: t, user_discount_offer: m }, ..._ }), e);
+                throw (E.A.captureException(e, { extra: { offer_id: t, user_discount_offer: g }, ..._ }), e);
             }
             return (
                 null == T &&
@@ -52,7 +52,7 @@ async function I(e) {
                 a.h.dispatch({
                     type: "BILLING_USER_OFFER_FETCH_SUCCESS",
                     userTrialOffer: null == T ? null : o.A.createFromServer(T),
-                    userDiscountOffer: null != m ? l.A.createFromServer(m) : null,
+                    userDiscountOffer: null != g ? l.A.createFromServer(g) : null,
                     shouldTriggerOffer: p.body.should_trigger_offer ?? null,
                 }),
                 !0
@@ -116,7 +116,7 @@ function T(e, t) {
                     });
             });
 }
-function m(e, t, n) {
+function g(e, t, n) {
     if (!c.A.canTriggerUserOffer(e)) return;
     a.h.dispatch({ type: "BILLING_USER_OFFER_TRIGGER_ATTEMPT", triggerType: e });
     let r = n?.(),

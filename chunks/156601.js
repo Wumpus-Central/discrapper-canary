@@ -28,7 +28,7 @@ let I = function (e) {
         j = (0, s.q)((0, d.Ay)());
     if (!P) return (0, r.jsx)(o.y, { type: o.y.Type.PULSING_ELLIPSIS, className: T.xB });
     let v = m.A.getForSkuAndInterval((0, g.mH)(t), n),
-        A = null != v ? (0, g.sS)(v, h, !1, I) : null;
+        R = null != v ? (0, g.sS)(v, h, !1, I) : null;
     if (E) {
         let e = n === x.WT.YEAR;
         return (0, r.jsxs)("div", {
@@ -37,7 +37,7 @@ let I = function (e) {
                     variant: e ? "heading-md/semibold" : "heading-xxl/extrabold",
                     color: e ? "text-muted" : j ? "text-strong" : "text-overlay-light",
                     tag: "span",
-                    children: (0, r.jsx)("span", { children: A }),
+                    children: (0, r.jsx)("span", { children: R }),
                 }),
                 (0, r.jsxs)(c.E, {
                     variant: "text-xs/medium",
@@ -53,7 +53,7 @@ let I = function (e) {
         variant: f ?? "heading-md/medium",
         className: i()(T.SW, l),
         children: (0, r.jsxs)(r.Fragment, {
-            children: [(0, r.jsx)("span", { className: p ? void 0 : T.q9, children: A }), " / ", (0, g.FJ)(n)],
+            children: [(0, r.jsx)("span", { className: p ? void 0 : T.q9, children: R }), " / ", (0, g.FJ)(n)],
         }),
     });
 };

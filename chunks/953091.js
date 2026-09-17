@@ -79,8 +79,8 @@ function p(e) {
             onRemove: h,
             children: p,
             selectedKeys: T,
-            onSelectionChange: m,
-            disallowEmptySelection: g,
+            onSelectionChange: g,
+            disallowEmptySelection: m,
         } = e,
         S = r.useContext(s._),
         N = r.useMemo(() => (l && "all" !== o ? new Set([...(o ?? []), ...A.map((e) => e.id)]) : o), [l, o, A]);
@@ -96,9 +96,9 @@ function p(e) {
         selectionMode: d,
         selectionBehavior: c,
         selectedKeys: T,
-        onSelectionChange: m,
+        onSelectionChange: g,
         disabledKeys: N,
-        disallowEmptySelection: g,
+        disallowEmptySelection: m,
         onRemove: h,
         children: [
             (0, i.jsx)(a.LY, {

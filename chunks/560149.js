@@ -51,9 +51,9 @@ let y = (0, m.UT)(j.A, {
 var N = n(451909),
     M = n(118517),
     R = n(747926),
-    k = n(280450),
-    w = n(734057),
-    O = n(625494),
+    O = n(280450),
+    k = n(734057),
+    w = n(625494),
     P = n(475815);
 let L = (0, n(945810).mj)({
     kind: "user",
@@ -63,8 +63,8 @@ let L = (0, n(945810).mj)({
 });
 var D = n(307731),
     U = n(381941),
-    G = n(268378),
-    F = n(375708),
+    F = n(268378),
+    G = n(375708),
     V = n(455871);
 function H(e, t) {
     let n = t?.current?.currentTime;
@@ -85,8 +85,8 @@ function B(e) {
         z = null != S && S < 460,
         Z = B.slice(0, z ? 2 : 3),
         K = (0, m.bG)([j.A], () => j.A.getMessage(a, r), [a, r]),
-        q = (0, m.bG)([w.A], () => w.A.getChannel(a), [a]),
-        Y = (0, m.bG)([w.A], () => w.A.getChannel(I), [I]),
+        q = (0, m.bG)([k.A], () => k.A.getChannel(a), [a]),
+        Y = (0, m.bG)([k.A], () => k.A.getChannel(I), [I]),
         { enableMediaComments: $ } = L.useConfig({ location: "ClipEmbedMediaMentionBar" }),
         { activeLayer: X, videoRef: J } = (0, c.X$)(),
         Q = (0, h.Lt)(n.flags ?? 0, b.sbO.HAS_TIMELINE_COMMENTS),
@@ -104,7 +104,7 @@ function B(e) {
                             : "surrogates" in e && null != e.surrogates
                               ? e.surrogates
                               : e.name,
-                    n = K.author.id === k.default.getId();
+                    n = K.author.id === O.default.getId();
                 E.A.sendMessage(q.id, N.Ay.parse(q, t), !1, {
                     location: U.Hx.MEDIA_MENTION,
                     doNotScroll: !0,
@@ -116,7 +116,7 @@ function B(e) {
     }
     let ei = ee?.length ?? 0;
     if (!$ || null == q || null == r) return null;
-    let el = F.intl.formatToPlainString(G.default.OYDyt2, { count: ei });
+    let el = G.intl.formatToPlainString(F.default.OYDyt2, { count: ei });
     return (0, i.jsxs)(u.animated.div, {
         className: s()(V.M0, { [V.pd]: d }),
         inert: d,
@@ -134,8 +134,8 @@ function B(e) {
                     (0, i.jsx)(
                         p.u,
                         {
-                            title: F.intl.formatToPlainString(G.default["CZCvn+"], { emoji: e.name }),
-                            body: F.intl.string(G.default.wQFVGI),
+                            title: G.intl.formatToPlainString(F.default["CZCvn+"], { emoji: e.name }),
+                            body: G.intl.string(F.default.wQFVGI),
                             children: (0, i.jsx)("button", {
                                 type: "button",
                                 className: V.x6,
@@ -175,8 +175,8 @@ function B(e) {
                 clickTrap: !0,
                 children: (e) =>
                     (0, i.jsx)(p.u, {
-                        title: F.intl.string(G.default["ZEs/pI"]),
-                        body: F.intl.string(G.default.K8Khlc),
+                        title: G.intl.string(F.default["ZEs/pI"]),
+                        body: G.intl.string(F.default.K8Khlc),
                         targetElementRef: et,
                         children: (0, i.jsx)("button", {
                             ...e,
@@ -188,15 +188,15 @@ function B(e) {
                     }),
             }),
             (0, i.jsx)(p.u, {
-                title: F.intl.string(G.default.y2TE38),
-                body: F.intl.string(G.default.c3OIMS),
+                title: G.intl.string(F.default.y2TE38),
+                body: G.intl.string(F.default.c3OIMS),
                 children: (0, i.jsx)("button", {
                     type: "button",
                     className: V.x6,
                     onClick: function (e) {
                         if ((e.stopPropagation(), null == q || null == K || null == J?.current?.currentTime)) return;
                         P._U(J.current) && P.sP(J.current);
-                        let t = K.author.id === k.default.getId();
+                        let t = K.author.id === O.default.getId();
                         ((0, M.Yf)({
                             channel: q,
                             message: K,
@@ -204,7 +204,7 @@ function B(e) {
                             showMentionToggle: !q.isPrivate() && !t,
                             mediaMention: H(I, J),
                         }),
-                            O._.dispatch(b.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: q.id }));
+                            w._.dispatch(b.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: q.id }));
                     },
                     children: (0, i.jsx)(A.W, { size: "sm" }),
                 }),
@@ -468,7 +468,7 @@ function ev(e) {
     let { attachment: t, channelId: n, messageId: a, isControlBarExpanded: r, isPlayerActive: o } = e,
         { enableDistributedClips: d } = eu.A.useConfig({ location: "DistributedClipShareCTA" }),
         c = (0, m.bG)(
-            [ec.Ay, k.default],
+            [ec.Ay, O.default],
             () =>
                 (function (e, t) {
                     let n,
@@ -487,17 +487,17 @@ function ev(e) {
                         null != i && i > o && ((o = i), (n = e));
                     }
                     return n;
-                })(t, k.default.getId(), ec.Ay),
+                })(t, O.default.getId(), ec.Ay),
             [t],
         ),
         { onShareClick: u } = (0, ep.A)(n),
-        h = (0, m.bG)([k.default, j.A], () => {
+        h = (0, m.bG)([O.default, j.A], () => {
             let e = j.A.getMessage(n, a);
             return (
                 null != e &&
-                e.author?.id !== k.default.getId() &&
+                e.author?.id !== O.default.getId() &&
                 (null == e.messageReference ||
-                    j.A.getMessage(n, e.messageReference.message_id)?.author?.id !== k.default.getId())
+                    j.A.getMessage(n, e.messageReference.message_id)?.author?.id !== O.default.getId())
             );
         }),
         p = (0, m.bG)([ec.Ay], () => ec.Ay.hasRepliedWithClip(a), [a]),
@@ -522,7 +522,7 @@ function ev(e) {
                   (0, i.jsx)(v.E, {
                       variant: "text-xs/semibold",
                       color: "text-overlay-light",
-                      children: F.intl.string(G.default.YKst58),
+                      children: G.intl.string(F.default.YKst58),
                   }),
               ],
           })

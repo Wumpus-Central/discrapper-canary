@@ -1,4 +1,4 @@
-(n.d(t, { iQ: () => h, FH: () => f, P4: () => E, pd: () => A, ML: () => d, pX: () => m, hw: () => T }), n(321073));
+(n.d(t, { iQ: () => h, FH: () => f, P4: () => E, pd: () => A, ML: () => d, pX: () => g, hw: () => T }), n(321073));
 var i = n(284009),
     r = n.n(i),
     a = n(306173),
@@ -146,7 +146,7 @@ let p = !1;
 function T() {
     return p;
 }
-function m() {
+function g() {
     (0, a.xd)() &&
         (o.info("Clearing libdiscore experiment cache and disabling sync"), (p = !0), (0, a.Ih)().clearCache());
 }

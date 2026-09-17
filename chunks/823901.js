@@ -1,19 +1,19 @@
-n.d(t, { y: () => I });
-var i = n(477900),
-    l = n(877624),
-    c = n(17928),
-    r = n(417098),
-    s = n(597770),
-    a = n(688810),
-    o = n(75678),
-    _ = n(412260),
-    T = n(49999),
-    A = n(652215),
-    E = n(375708),
-    u = n(971656);
+t.d(n, { y: () => I });
+var i = t(477900),
+    l = t(877624),
+    c = t(17928),
+    r = t(417098),
+    o = t(597770),
+    s = t(688810),
+    a = t(75678),
+    _ = t(412260),
+    A = t(49999),
+    T = t(652215),
+    u = t(375708),
+    E = t(971656);
 function I(e) {
-    let { markAsDismissed: t, className: n } = e,
-        { analyticsLocations: I } = (0, a.Ay)(),
+    let { markAsDismissed: n, className: t } = e,
+        { analyticsLocations: I } = (0, s.Ay)(),
         d = (0, c.bG)([_.A], () => {
             let e = _.A.getMarketingComponentByType(l.C.GIFT_REMINDER_NAGBAR);
             return null == e || "giftReminderNagbar" !== e.properties.properties.oneofKind
@@ -24,32 +24,32 @@ function I(e) {
         ? null
         : (0, i.jsxs)(r.$T, {
               color: r.Hv.PREMIUM_TIER_2,
-              className: n,
+              className: t,
               children: [
                   (0, i.jsx)(r.PM, {
-                      onClick: () => t(T.i.USER_DISMISS),
-                      noticeType: A.kqX.GIFTING_PROMOTION_REMINDER,
+                      onClick: () => n(A.i.USER_DISMISS),
+                      noticeType: T.kqX.GIFTING_PROMOTION_REMINDER,
                   }),
-                  (0, i.jsx)(s.GiftIcon, {
+                  (0, i.jsx)(o.GiftIcon, {
                       size: "custom",
                       width: 20,
                       height: 20,
                       color: "currentColor",
-                      className: u.ez,
+                      className: E.ez,
                   }),
                   d.body,
                   (0, i.jsx)(r.Z_, {
                       onClick: () => {
-                          (0, o.A)({
+                          (0, a.A)({
                               isGift: !0,
                               initialPlanId: null,
                               analyticsLocations: I,
-                              analyticsLocation: A.ThZ.SEASONAL_GIFTING_REMINDER_NAGBAR,
-                              analyticsObject: { page: A.liQ.PREMUIM_UPSELL_GIFTING_PROMOTION },
+                              analyticsLocation: T.ThZ.SEASONAL_GIFTING_REMINDER_NAGBAR,
+                              analyticsObject: { page: T.liQ.PREMUIM_UPSELL_GIFTING_PROMOTION },
                           });
                       },
-                      noticeType: A.kqX.GIFTING_PROMOTION_REMINDER,
-                      children: E.intl.string(E.t.RzWDqY),
+                      noticeType: T.kqX.GIFTING_PROMOTION_REMINDER,
+                      children: u.intl.string(u.t.RzWDqY),
                   }),
               ],
           });

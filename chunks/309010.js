@@ -10,8 +10,8 @@ var c = n(435558),
     f = n(95701),
     p = n(403362),
     T = n(280450),
-    m = n(734057),
-    g = n(808728),
+    g = n(734057),
+    m = n(808728),
     S = n(71393),
     N = n(544576),
     C = n(576705),
@@ -41,7 +41,7 @@ function U() {
                 .filter(p.Vq)
                 .uniq()
                 .filter((e) => {
-                    let t = m.A.getBasicChannel(e);
+                    let t = g.A.getBasicChannel(e);
                     return M.has(e) || (null != t && f.Le.has(t.type));
                 })
                 .value(),
@@ -49,19 +49,19 @@ function U() {
 }
 function w(e) {
     if (null != e) {
-        let t = g.Ay.getDefaultChannel(e);
+        let t = m.Ay.getDefaultChannel(e);
         if (null != t) return t.id;
     }
 }
 function G(e, t) {
     if (null == e || null == t || b[e] === t) return !1;
-    let n = m.A.getChannel(t),
+    let n = g.A.getChannel(t),
         i = null != n && (0, f.ke)(n.type),
         r = n?.getGuildId() === e;
     return !!i && !!r && ((b[e] = t), !0);
 }
 function x(e) {
-    let t = m.A.getMutableBasicGuildChannelsForGuild(e),
+    let t = g.A.getMutableBasicGuildChannelsForGuild(e),
         n = u().find(t, (e) => e.type === R.rbe.GUILD_VOICE);
     return n?.id;
 }
@@ -70,11 +70,11 @@ function k() {
         t = S.A.getGuildsArray();
     return (
         u().each(D, (t, n) => {
-            (null != t && (m.A.hasChannel(t) || t === a || M.has(t) || (0, L.mP)(t))) ||
+            (null != t && (g.A.hasChannel(t) || t === a || M.has(t) || (0, L.mP)(t))) ||
                 (delete D[n], delete v[n], (e = !0));
         }),
         u().each(b, (t, n) => {
-            (null != t && (m.A.hasChannel(t) || M.has(t))) || (delete b[n], (e = !0));
+            (null != t && (g.A.hasChannel(t) || M.has(t))) || (delete b[n], (e = !0));
         }),
         t.forEach((e) => {
             let t = D[e.id];
@@ -124,7 +124,7 @@ class V extends E.Ay.Store {
                 null != e.selectedChannelIds && (D = { ...e.selectedChannelIds, null: null }));
         }
         (this.mustEmitChanges((e) => "CONNECTION_OPEN" !== e.type && "VOICE_STATE_UPDATES" !== e.type),
-            this.waitFor(T.default, m.A, g.Ay, S.A, N.Ay, C.A, O.A));
+            this.waitFor(T.default, g.A, m.Ay, S.A, N.Ay, C.A, O.A));
     }
     getChannelId(e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
@@ -153,7 +153,7 @@ class V extends E.Ay.Store {
 let H = new V(h.h, {
     CONNECTION_OPEN: function (e) {
         if (((i = e.sessionId), null != l)) {
-            let e = m.A.getChannel(l);
+            let e = g.A.getChannel(l);
             (null != e && (e.isPrivate() || C.A.can(_.kg(R.xBc.VIEW_CHANNEL, R.xBc.CONNECT), e))) || (l = null);
         }
         k() && U();
@@ -218,7 +218,7 @@ let H = new V(h.h, {
     VOICE_CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;
         if (null == t) {
-            let e = m.A.getChannel(l),
+            let e = g.A.getChannel(l),
                 t = e?.guild_id;
             null != t && t !== O.A.getGuildId() && D[t] === l && (D[t] = w(t));
         }
@@ -229,7 +229,7 @@ let H = new V(h.h, {
         return t.reduce((e, t) => {
             if (t.sessionId === i) {
                 clearInterval(d);
-                let e = m.A.getChannel(l)?.getGuildId();
+                let e = g.A.getChannel(l)?.getGuildId();
                 ((t.guildId !== e && null == t.channelId) || (l = t.channelId),
                     (o = Date.now()),
                     null != l &&
@@ -240,8 +240,8 @@ let H = new V(h.h, {
             } else {
                 if (t.userId !== T.default.getId()) return e;
                 (clearInterval(d), (d = void 0), (o = 0));
-                let n = m.A.getChannel(l)?.getGuildId(),
-                    i = m.A.getChannel(t.channelId)?.getGuildId();
+                let n = g.A.getChannel(l)?.getGuildId(),
+                    i = g.A.getChannel(t.channelId)?.getGuildId();
                 (((null != n && i === n) || l === t.channelId) && (l = null), U());
             }
             return !0;

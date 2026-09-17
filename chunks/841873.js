@@ -12,11 +12,11 @@ function r(e) {
     EH: () => eB,
     FH: () => Q,
     FP: () => ef,
-    Fs: () => eg,
+    Fs: () => em,
     GQ: () => tE,
     GZ: () => x,
     Gu: () => tP,
-    HB: () => e6,
+    HB: () => e5,
     HS: () => ep,
     Hq: () => tC,
     Hz: () => eS,
@@ -28,7 +28,7 @@ function r(e) {
     N8: () => tk,
     ND: () => es,
     NG: () => e1,
-    NJ: () => e5,
+    NJ: () => e6,
     Ng: () => tf,
     Nh: () => e8,
     O$: () => ed,
@@ -39,7 +39,7 @@ function r(e) {
     Py: () => tG,
     QH: () => eu,
     QR: () => tb,
-    Qg: () => tm,
+    Qg: () => tg,
     Qn: () => tV,
     RG: () => ex,
     RK: () => eI,
@@ -71,12 +71,12 @@ function r(e) {
     cy: () => et,
     dS: () => eJ,
     dz: () => eh,
-    eF: () => tg,
+    eF: () => tm,
     eI: () => eL,
     eT: () => w,
     eW: () => eR,
     fb: () => td,
-    gG: () => em,
+    gG: () => eg,
     gM: () => z,
     gR: () => e_,
     hI: () => eF,
@@ -100,7 +100,7 @@ function r(e) {
     qg: () => tN,
     qv: () => tM,
     rR: () => tO,
-    rf: () => m,
+    rf: () => g,
     rk: () => tt,
     rl: () => tR,
     s5: () => eA,
@@ -235,10 +235,10 @@ function T(e, t, n, r) {
         };
     return ((s.original = a), p.register(s, a, a), s);
 }
-function m(e, t, n, r, a) {
+function g(e, t, n, r, a) {
     i.installLogCallback(e, t, n, r, a);
 }
-function g(e) {
+function m(e) {
     let t = i.__wbindgen_export_4.get(e);
     return (i.__externref_table_dealloc(e), t);
 }
@@ -296,14 +296,14 @@ class P {
             n = c(e, i.__wbindgen_malloc, i.__wbindgen_realloc),
             r = a,
             s = i.blockeddomainsstore_isBlockedDomain(n, r);
-        if (s[3]) throw g(s[2]);
+        if (s[3]) throw m(s[2]);
         return (0 !== s[0] && ((t = A(s[0], s[1]).slice()), i.__wbindgen_free(s[0], +s[1], 1)), t);
     }
     static startFetchingBlockedDomains(e) {
         let t = c(e, i.__wbindgen_malloc, i.__wbindgen_realloc),
             n = a,
             r = i.blockeddomainsstore_startFetchingBlockedDomains(t, n);
-        if (r[1]) throw g(r[0]);
+        if (r[1]) throw m(r[0]);
     }
 }
 let U =
@@ -323,18 +323,18 @@ class w {
         let t = c(e, i.__wbindgen_malloc, i.__wbindgen_realloc),
             n = a,
             r = i.experimentcacher_getConfig(t, n);
-        if (r[2]) throw g(r[1]);
+        if (r[2]) throw m(r[1]);
         return 0 === r[0] ? void 0 : Y.__wrap(r[0]);
     }
     static clearCache() {
         let e = i.experimentcacher_clearCache();
-        if (e[1]) throw g(e[0]);
+        if (e[1]) throw m(e[0]);
     }
     static flushToCache(e) {
         let t = c(e, i.__wbindgen_malloc, i.__wbindgen_realloc),
             n = a,
             r = i.experimentcacher_flushToCache(t, n);
-        if (r[1]) throw g(r[0]);
+        if (r[1]) throw m(r[0]);
     }
 }
 let G =
@@ -352,8 +352,8 @@ class x {
     }
     connectStore(e) {
         let t = i.fluxapi_connectStore(this.__wbg_ptr, e);
-        if (t[2]) throw g(t[1]);
-        return g(t[0]);
+        if (t[2]) throw m(t[1]);
+        return m(t[0]);
     }
     dispatchAction(e, t) {
         let n = c(e, i.__wbindgen_malloc, i.__wbindgen_realloc),
@@ -587,7 +587,7 @@ function ep() {
 function eT(e) {
     return e.headers;
 }
-function em(e) {
+function eg(e) {
     let t;
     try {
         t = e instanceof ArrayBuffer;
@@ -596,7 +596,7 @@ function em(e) {
     }
     return t;
 }
-function eg(e) {
+function em(e) {
     let t;
     try {
         t = e instanceof Cache;
@@ -764,10 +764,10 @@ function e2() {
 function e3(e, t, n) {
     e[t >>> 0] = n;
 }
-function e5(e, t, n) {
+function e6(e, t, n) {
     e[t] = n;
 }
-function e6(e, t, n) {
+function e5(e, t, n) {
     e.set(t, n >>> 0);
 }
 function e4(e, t, n) {
@@ -853,10 +853,10 @@ function tp(e, t) {
 function tT(e) {
     return e;
 }
-function tm(e) {
+function tg(e) {
     return BigInt.asUintN(64, e);
 }
-function tg(e) {
+function tm(e) {
     return "boolean" == typeof e ? +!!e : 2;
 }
 function tS(e) {

@@ -1,4 +1,4 @@
-n.d(t, { A: () => g });
+n.d(t, { A: () => m });
 var i = n(607399),
     r = n(820739),
     a = n(439372),
@@ -16,7 +16,7 @@ var i = n(607399),
     f = n(414133),
     p = n(363487),
     T = n(342220);
-class m extends a.A {
+class g extends a.A {
     handleSelectedGuildChange() {
         let e = u.A.getGuildId();
         if (null == e || (0, s.ai)(e)) return;
@@ -57,4 +57,4 @@ class m extends a.A {
         GUILD_APPLIED_BOOSTS_UPDATE: this.handleAppliedBoostUpdate.bind(this),
     };
 }
-let g = new m();
+let m = new g();

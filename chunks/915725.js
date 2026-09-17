@@ -1,4 +1,4 @@
-(n.d(t, { Ay: () => z, _c: () => g, he: () => m }), n(321073), n(938796));
+(n.d(t, { Ay: () => z, _c: () => m, he: () => g }), n(321073), n(938796));
 var i = n(284009),
     r = n.n(i),
     a = n(665260),
@@ -21,8 +21,8 @@ var A = n(458977),
     f = n(696016),
     p = n(652215),
     T = n(753070);
-let m = "default",
-    g = "Discord Clips",
+let g = "default",
+    m = "Discord Clips",
     S = {},
     N = {},
     C = {},
@@ -44,7 +44,7 @@ let m = "default",
     B = [],
     V = {
         clipsEnabled: !1,
-        storageLocation: m,
+        storageLocation: g,
         clipsQuality: { resolution: T.on.RESOLUTION_1080, frameRate: T.kn.FPS_30, bitratePercent: f.Y2 },
         clipsLength: f.LX.SECONDS_30,
         remindersEnabled: !0,
@@ -67,10 +67,10 @@ let m = "default",
     };
 async function j() {
     let e;
-    if (H.clipsSettings.storageLocation === m && null != o.A && null != o.A.app) {
+    if (H.clipsSettings.storageLocation === g && null != o.A && null != o.A.app) {
         try {
             let t = await o.A.app.getPath("videos");
-            e = (0, _.CN)(t, g);
+            e = (0, _.CN)(t, m);
         } catch (t) {
             (f.nx.error("Failed to resolve videos path for default storage migration", t),
                 (e = await o.A.app.getPath("documents")));

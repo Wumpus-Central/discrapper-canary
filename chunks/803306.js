@@ -3,9 +3,9 @@
         acceptAgreements: () => f,
         fetchCurrentUser: () => I,
         fetchMutualFriends: () => S,
-        fetchProfile: () => g,
+        fetchProfile: () => m,
         getUser: () => T,
-        insertStaticUser: () => m,
+        insertStaticUser: () => g,
         setFlag: () => p,
     }),
     n(938796));
@@ -69,10 +69,10 @@ function T(e) {
               (t) => (l.h.dispatch({ type: "USER_UPDATE", user: t.body }), u.default.getUser(e)),
           );
 }
-function m(e) {
+function g(e) {
     return (l.h.dispatch({ type: "USER_UPDATE", user: e }), u.default.getUser(e.id));
 }
-async function g(e) {
+async function m(e) {
     let {
             type: t,
             withMutualGuilds: n,

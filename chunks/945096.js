@@ -1,7 +1,7 @@
 n.d(t, {
     $0: () => c,
     UZ: () => I,
-    Xr: () => m,
+    Xr: () => g,
     as: () => d,
     cf: () => A,
     gN: () => p,
@@ -90,7 +90,7 @@ function T(e, t) {
         i = o.gz.includes(e.effectId) ? a.z.SOLID : e.effectId;
     return n === e.fontId && i === e.effectId ? e : { ...e, fontId: n, effectId: i };
 }
-function m(e) {
+function g(e) {
     if (null == e) return !1;
     let t = e.replace(/[^\p{L}]/gu, "");
     return /\P{Script=Latin}/u.test(t);

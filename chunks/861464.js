@@ -16,8 +16,8 @@ var i = n(385244),
     f = n(71393),
     p = n(994500),
     T = n(287809),
-    m = n(562153),
-    g = n(935208);
+    g = n(562153),
+    m = n(935208);
 let S = {
     "234395307759108106": "https://groovy.bot/commands",
     "365975655608745985": "https://www.pokecord.com/getting-started",
@@ -39,7 +39,7 @@ function N(e) {
             o.t["b/1SBX"],
             o.t.LhebZF,
         ],
-        n = g.default.extractTimestamp(e) % t.length;
+        n = m.default.extractTimestamp(e) % t.length;
     return t[n];
 }
 function C(e) {
@@ -57,8 +57,8 @@ let O = {
                         ? (T.default.getUser(t) ?? null)
                         : null;
             })(e),
-            g = e.channel_id,
-            S = m.Ay.getName(null, g, e.author);
+            m = e.channel_id,
+            S = g.Ay.getName(null, m, e.author);
         switch (e.type) {
             case l.lAJ.RECIPIENT_ADD:
                 if (null == n) return;
@@ -66,7 +66,7 @@ let O = {
                     o.intl.formatToParts(o.t["7/Xl0S"], {
                         username: S,
                         usernameOnClick: l.tEg,
-                        otherUsername: m.Ay.getName(null, g, n),
+                        otherUsername: g.Ay.getName(null, m, n),
                         otherUsernameOnClick: l.tEg,
                     }),
                 );
@@ -79,7 +79,7 @@ let O = {
                     o.intl.formatToParts(o.t.QtZ0RD, {
                         username: S,
                         usernameOnClick: l.tEg,
-                        otherUsername: m.Ay.getName(null, g, n),
+                        otherUsername: g.Ay.getName(null, m, n),
                         otherUsernameOnClick: l.tEg,
                     }),
                 );
@@ -108,7 +108,7 @@ let O = {
             case l.lAJ.GUILD_BOOST_TIER_2:
             case l.lAJ.GUILD_BOOST_TIER_3:
                 let L;
-                return null == (L = I.A.getChannel(g)) || null == f.A.getGuild(L.getGuildId())
+                return null == (L = I.A.getChannel(m)) || null == f.A.getGuild(L.getGuildId())
                     ? C(S)
                     : (0, a.$)(o.intl.formatToParts(o.t.ihxM9x, { username: S, usernameOnClick: l.tEg }));
             case l.lAJ.GUILD_INVITE_REMINDER:
@@ -155,7 +155,7 @@ let O = {
                         }),
                         n = t?.fields?.find((e) => "name" in e && e.name === i.E.NOTIFICATION_TYPE),
                         s = null != n && "value" in n ? n.value : void 0,
-                        d = I.A.getChannel(g);
+                        d = I.A.getChannel(m);
                     if (null == d) return null;
                     let c = f.A.getGuild(d.getGuildId());
                     if (null == c) return null;
@@ -171,7 +171,7 @@ let O = {
                 return e.content;
             case l.lAJ.GUILD_INCIDENT_ALERT_MODE_ENABLED:
                 var D = e.content;
-                let v = I.A.getChannel(g);
+                let v = I.A.getChannel(m);
                 if (null == v) return null;
                 let b = f.A.getGuild(v.getGuildId());
                 return null == b
@@ -190,7 +190,7 @@ let O = {
                           }),
                       );
             case l.lAJ.GUILD_INCIDENT_ALERT_MODE_DISABLED:
-                let M = I.A.getChannel(g);
+                let M = I.A.getChannel(m);
                 if (null == M) return null;
                 let P = f.A.getGuild(M.getGuildId());
                 return null == P
@@ -216,7 +216,7 @@ let O = {
                 o.t.Iw6d8w,
                 o.t["WecSZ/"],
             ],
-            n = g.default.extractTimestamp(e) % t.length;
+            n = m.default.extractTimestamp(e) % t.length;
         return t[n];
     },
     getSystemMessageUserJoinMobile: N,

@@ -16,8 +16,8 @@ var i = n(477900),
     p = n(99161),
     I = n(183555),
     j = n(402860),
-    A = n(827258),
-    E = n(384377),
+    E = n(827258),
+    A = n(384377),
     v = n(287809),
     C = n(661492),
     S = n(111085),
@@ -250,7 +250,7 @@ function $(e) {
                     S()));
         }, [S, s.sku, k, _, R]),
         G = l.useCallback(() => {
-            ((0, E.XA)(q.jM.SOMETHING_WENT_WRONG), o.O.announce(P.intl.string(P.t.F8FvUy)));
+            ((0, A.XA)(q.jM.SOMETHING_WENT_WRONG), o.O.announce(P.intl.string(P.t.F8FvUy)));
         }, []),
         M = null != m ? (0, i.jsx)("div", { ref: w, className: Z.BU, children: m }) : null,
         {
@@ -281,7 +281,7 @@ function $(e) {
                     (n = Y ? (0, C.T)(t) : P.intl.formatToPlainString(P.t.ZBB4Ty, { productName: (0, C.T)(t) })),
                     !0 === N ? P.intl.formatToPlainString(P.t.s9RZ1r, { label: n }) : n),
                 children: [
-                    !0 === N && (0, i.jsx)(A.A, { className: Z.Pf }),
+                    !0 === N && (0, i.jsx)(E.A, { className: Z.Pf }),
                     T,
                     H && (0, i.jsx)(B.A, { spec: Q, onClick: F, isHoveringOrFocusing: p, label: K, icon: X }),
                     y && (0, i.jsx)(V.gS, { isHoveringOrFocusing: p }),

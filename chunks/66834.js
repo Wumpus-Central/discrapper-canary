@@ -16,8 +16,8 @@ var i = n(562708),
     f = n(700241),
     p = n(658128),
     T = n(976860),
-    m = n(288254),
-    g = n(280450),
+    g = n(288254),
+    m = n(280450),
     S = n(383394),
     N = n(808728),
     C = n(71393),
@@ -60,7 +60,7 @@ let k = {
                     url: M.Rsh.GUILD_JOIN(e),
                     query: {
                         lurker: u,
-                        session_id: u ? g.default.getSessionId() : null,
+                        session_id: u ? m.default.getSessionId() : null,
                         recommendation_load_id: r,
                         location: u && null != l ? l : null,
                         from_directory: i === M.Q4z.DIRECTORY_ENTRY || null,
@@ -207,7 +207,7 @@ let k = {
         let { usePubSub: r } = _.A.getConfig({ location: "startBulkBan" });
         try {
             let a = await this.banMultipleUsers(e, t, n, i, r);
-            if (r && u.A.consumeCompletedBeforeStarted(e, g.default.getId())) return;
+            if (r && u.A.consumeCompletedBeforeStarted(e, m.default.getId())) return;
             if ((s.h.dispatch({ type: "GUILD_BULK_BAN_STARTED", guildId: e }), !r)) {
                 let { banned_users: n = [], failed_users: i = [] } = a.body ?? {};
                 s.h.dispatch({
@@ -349,7 +349,7 @@ let k = {
     nsfwReturnToSafety(e) {
         if (null == e) return void (0, T.pX)(M.BVt.FRIENDS, { navigationReplace: !1, openChannel: !0 });
         let t = N.Ay.getDefaultChannel(e);
-        null == t || (0, d.qR)(t) || (0, m.BV)(t)
+        null == t || (0, d.qR)(t) || (0, g.BV)(t)
             ? (0, T.pX)(M.BVt.FRIENDS, { navigationReplace: !1, openChannel: !0 })
             : (0, T.pX)(M.BVt.CHANNEL(e, t.id));
     },

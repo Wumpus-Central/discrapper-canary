@@ -11,8 +11,8 @@ if (221552 == n.j) var u = n(297264);
 var m = n(241524),
     h = n(289397),
     g = n(607470),
-    p = n(548118),
-    A = n(428558),
+    A = n(548118),
+    p = n(428558),
     x = n(885386),
     f = n(696451),
     E = n(287809),
@@ -41,7 +41,7 @@ function R(e) {
     let { coverImageAsset: t, isPreview: n = !1 } = e,
         l = x.kt.useSetting(),
         s = (0, _.j)() && l,
-        [a, r] = (0, A.A)(t, s),
+        [a, r] = (0, p.A)(t, s),
         o = s
             ? (0, i.jsx)(g.A, {
                   autoPlay: !0,
@@ -75,24 +75,24 @@ function M(e) {
             },
             [s],
         ),
-        { isTruncated: A, ExpandableTextContainer: x } = (0, v.e)(),
+        { isTruncated: p, ExpandableTextContainer: x } = (0, v.e)(),
         I = (n?.description?.trim().length ?? 0) > 0,
         [_, M] = l.useState(1),
-        k = (0, m.A)("(max-width: 1439px)"),
-        { selectedTab: L, isPhantomPreview: O } = (0, N.k)(),
-        P = L === j.B.GUILD_PRODUCTS_PREVIEW ? S.intl.string(S.t["LvXy/H"]) : S.intl.string(S.t.XyqKh8),
+        L = (0, m.A)("(max-width: 1439px)"),
+        { selectedTab: k, isPhantomPreview: O } = (0, N.k)(),
+        P = k === j.B.GUILD_PRODUCTS_PREVIEW ? S.intl.string(S.t["LvXy/H"]) : S.intl.string(S.t.XyqKh8),
         D = I
             ? (0, i.jsxs)(i.Fragment, {
                   children: [
                       (0, i.jsx)(x, {
-                          lineClamp: k || 2 === _ ? 2 : 3,
+                          lineClamp: L || 2 === _ ? 2 : 3,
                           children: (0, i.jsx)(c.E, {
                               variant: "text-sm/normal",
                               color: "text-default",
                               children: n?.description,
                           }),
                       }),
-                      A &&
+                      p &&
                           (0, i.jsxs)(i.Fragment, {
                               children: [
                                   (0, i.jsx)(d.h, { size: 4 }),
@@ -117,9 +117,9 @@ function M(e) {
                 className: y.op,
                 children: [
                     (0, i.jsx)("div", {
-                        children: (0, i.jsx)(p.Ay, {
+                        children: (0, i.jsx)(A.Ay, {
                             guild: t,
-                            size: p.Ay.Sizes.LARGER,
+                            size: A.Ay.Sizes.LARGER,
                             iconSrc:
                                 null == t.icon || O
                                     ? (0, h.n)("server_products/storefront/default-guild-icon.jpg")

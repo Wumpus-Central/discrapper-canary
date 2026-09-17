@@ -15,7 +15,7 @@
     n5: () => Z,
     nG: () => $,
     nY: () => q,
-    pV: () => g,
+    pV: () => m,
     rG: () => Y,
     sq: () => G,
     uV: () => K,
@@ -42,8 +42,8 @@ var i = n(435558),
     f = n(188275),
     p = n(652215),
     T = n(758836),
-    m = n(818348);
-let g = E.QB ? "webp" : "jpg";
+    g = n(818348);
+let m = E.QB ? "webp" : "jpg";
 function S(e) {
     return null != e.price || null != e.prices[p.lid.DEFAULT];
 }
@@ -57,8 +57,8 @@ function N(e, t) {
     return null != n ? n.prices[0] : null != e.price ? e.price : null;
 }
 function C(e) {
-    let t = N(e, p.lid.DEFAULT) ?? { amount: 0, currency: m.Yr.USD },
-        n = N(e, p.lid.GIFT) ?? { amount: 0, currency: m.Yr.USD };
+    let t = N(e, p.lid.DEFAULT) ?? { amount: 0, currency: g.Yr.USD },
+        n = N(e, p.lid.GIFT) ?? { amount: 0, currency: g.Yr.USD };
     return t.currency !== n.currency || t.amount !== n.amount;
 }
 function O(e) {
@@ -171,7 +171,7 @@ function F(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { size: n = 1024 } = t;
     if (e?.tenantMetadata?.socialLayer?.cardBackgroundImageAssetId != null && e?.applicationId != null)
-        return A.A.toURLSafe((0, E.YE)(e.applicationId, e.tenantMetadata.socialLayer.cardBackgroundImageAssetId, n, g));
+        return A.A.toURLSafe((0, E.YE)(e.applicationId, e.tenantMetadata.socialLayer.cardBackgroundImageAssetId, n, m));
 }
 function B(e, t, n, i) {
     let { tab: r, applicationId: s, skuId: l } = (0, a.parse)(t);

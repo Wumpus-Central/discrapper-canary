@@ -2,7 +2,7 @@ n.d(t, {
     Dp: () => b,
     Dy: () => I,
     EZ: () => P,
-    G2: () => g,
+    G2: () => m,
     H1: () => O,
     MS: () => x,
     P1: () => T,
@@ -21,7 +21,7 @@ n.d(t, {
     pQ: () => U,
     rr: () => f,
     sH: () => k,
-    tD: () => m,
+    tD: () => g,
     uY: () => p,
     x3: () => y,
 });
@@ -51,8 +51,8 @@ var p =
     (r.SEARCH_BAR_CLEAR = "search bar clear"),
     r);
 let T = "category",
-    m = "game_server_game_id";
-var g =
+    g = "game_server_game_id";
+var m =
     (((a = {}).HOME = "home"),
     (a.CATALOG = "catalog"),
     (a.ORBS = "orbs"),

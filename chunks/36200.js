@@ -88,21 +88,21 @@ function u(e) {
                     let t = null == l || a ? o.RE.NOT_ELIGIBLE : l.bucket;
                     return [c(e, t, u, l), t, null == l ? -1 : l.revision];
                 }),
-                m = (0, r.A)(t);
+                g = (0, r.A)(t);
             return (
                 (0, i.useEffect)(() => {
-                    !a && (s || A) && null == e.commonTriggerPoint && E(m, _, !1 === s);
-                }, [a, s, m, _, f, p, A]),
+                    !a && (s || A) && null == e.commonTriggerPoint && E(g, _, !1 === s);
+                }, [a, s, g, _, f, p, A]),
                 (0, i.useEffect)(
                     () =>
                         I(
-                            m,
+                            g,
                             (e, t, n) => {
                                 T((i) => (i[0] === e && i[1] === t && i[2] === n ? i : [e, t, n]));
                             },
                             { disable: a },
                         ),
-                    [a, m],
+                    [a, g],
                 ),
                 h
             );

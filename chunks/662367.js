@@ -17,8 +17,8 @@ var n = s(562708),
     _ = s(688810),
     g = s(139286),
     f = s(392943),
-    E = s(498470),
-    A = s(811611),
+    A = s(498470),
+    E = s(811611),
     C = s(807098),
     T = s(637706),
     N = s(412260),
@@ -28,8 +28,8 @@ var n = s(562708),
 function y(e) {
     let { component: t, endDate: s } = e,
         { analyticsLocations: y } = (0, _.Ay)(),
-        M = (0, h.p)(),
-        b = (0, a.M)((0, j.Ay)());
+        b = (0, h.p)(),
+        M = (0, a.M)((0, j.Ay)());
     (0, g.A)({
         type: n.ImpressionTypes.VIEW,
         name: n.ImpressionNames.PREMIUM_MARKETING_COMPONENT,
@@ -41,16 +41,16 @@ function y(e) {
         S = (0, T.a)(P?.body ?? ""),
         w = (0, C.T)(P?.asset);
     if (null == P) return null;
-    let D = (0, E.h)({
+    let D = (0, A.h)({
             buttonAction: P.button?.buttonAction,
             deeplinkSection: P.button?.deeplinkSection,
             applicationId: P.button?.navigableStorefrontApplicationId?.value,
             analyticsLocations: y,
-            analyticsLocation: M.location,
+            analyticsLocation: b.location,
         }),
         G = (0, T.C)(P.helpArticle, ""),
-        { icon: U, iconPosition: F } = (0, E.x)({ buttonAction: P.button?.buttonAction }),
-        B = (0, A.ux)((s ?? L)?.toISOString());
+        { icon: U, iconPosition: F } = (0, A.x)({ buttonAction: P.button?.buttonAction }),
+        B = (0, E.ux)((s ?? L)?.toISOString());
     return (0, l.jsx)(o.h, {
         color: "nitro-pink",
         className: v.kL,
@@ -74,7 +74,7 @@ function y(e) {
                         null != B &&
                             (0, l.jsx)(d.E, {
                                 variant: "text-sm/medium",
-                                color: b ? "text-subtle" : "text-default",
+                                color: M ? "text-subtle" : "text-default",
                                 children: B,
                             }),
                     ],

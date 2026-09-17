@@ -16,8 +16,8 @@ var i = n(284009),
     f = n(743738),
     p = n(963852),
     T = n(195880),
-    m = n(867455),
-    g = n(773669),
+    g = n(867455),
+    m = n(773669),
     S = n(71393),
     N = n(522602),
     C = n(287809),
@@ -51,7 +51,7 @@ async function k(e) {
         T = M.A.getCommandOrigin(i.channel.id) ?? c;
     (null == i.autocomplete &&
         a.h.dispatch({ type: "APPLICATION_COMMAND_USED", context: i, command: t, commandOrigin: T }),
-        await m.A.unarchiveThreadIfNecessary(i.channel.id));
+        await g.A.unarchiveThreadIfNecessary(i.channel.id));
     let S = [],
         C = [],
         O = (0, U.Qr)(T);
@@ -149,7 +149,7 @@ async function k(e) {
                                   null != i.autocomplete && a
                                       ? i.autocomplete.query
                                       : (0, D.lM)(i.channel.id, e.name, n)),
-                            null == t && (t = Number(v.normalizeNumericString(g.default.locale, n))));
+                            null == t && (t = Number(v.normalizeNumericString(m.default.locale, n))));
                     }
                     break;
                 case d.n4.NUMBER:
@@ -162,7 +162,7 @@ async function k(e) {
                                   null != i.autocomplete && a
                                       ? i.autocomplete.query
                                       : (0, D.lM)(i.channel.id, e.name, n)),
-                            null == t && (t = Number(v.normalizeNumericString(g.default.locale, n))));
+                            null == t && (t = Number(v.normalizeNumericString(m.default.locale, n))));
                     }
                     break;
                 default:

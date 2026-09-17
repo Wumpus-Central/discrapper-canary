@@ -1,6 +1,6 @@
 (n.d(t, {
     $J: () => w,
-    IG: () => R,
+    IG: () => b,
     Ps: () => G,
     UR: () => v,
     W1: () => y,
@@ -10,7 +10,7 @@
     bg: () => N,
     pu: () => M,
     se: () => U,
-    v0: () => b,
+    v0: () => R,
 }),
     n(321073),
     n(323874),
@@ -68,7 +68,7 @@ var P = (((i = {}).DESKTOP = "desktop"), (i.XBOX = "xbox"), (i.PLAYSTATION = "pl
 function w(e) {
     return "xbox" === e.connected_account_type ? S.fg2.XBOX : S.fg2.PLAYSTATION;
 }
-function b(e, t) {
+function R(e, t) {
     let { platformType: n, quest: i } = e;
     ((0, T.E5)(T.kI.STEP_2_CLICKED_INTERNAL, "open_authorization_connection_modal")
         ? (0, l.r)({
@@ -89,7 +89,7 @@ function b(e, t) {
           }),
         (0, f.A)({ platformType: n, location: t.ctaContent }));
 }
-function R(e) {
+function b(e) {
     return w(e) === S.fg2.XBOX ? O.t["mytEv+"] : O.t.iDiwby;
 }
 function L(e) {

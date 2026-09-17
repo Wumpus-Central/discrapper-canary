@@ -25,8 +25,8 @@ var I = n(231971),
     f = n(550642),
     p = n(742023),
     T = n(544180),
-    m = n(174459),
-    g = n(509929),
+    g = n(174459),
+    m = n(509929),
     S = n(927813),
     N = n(209489),
     C = n(38405),
@@ -466,7 +466,7 @@ class G extends R.Ay {
         b.log(`Starting compression/conversion for ${this.id}`);
         let e = await this.trackTime(
             "compressTimeMs",
-            async () => await (0, g.Si)(this, this.reactNativeFileIndex ?? 0),
+            async () => await (0, m.Si)(this, this.reactNativeFileIndex ?? 0),
         );
         if (null == e || null == e.file) return (b.error(`Failed to get compressed file for ${this.id}`), this);
         let t = e.uri,
@@ -695,7 +695,7 @@ class G extends R.Ay {
         this.uploadedFilename = e;
     }
     trackUploadStart() {
-        m.default.track(v.HAw.ATTACHMENT_UPLOAD_STARTED, {
+        g.default.track(v.HAw.ATTACHMENT_UPLOAD_STARTED, {
             file_size: this.currentSize,
             mime_type: this.mimeType ?? "unknown",
             video_upload_quality: p.Ay.videoUploadQuality,
@@ -709,7 +709,7 @@ class G extends R.Ay {
     }
     trackUploadFinished(e) {
         let t = null != this.startTime ? performance.now() - this.startTime : -1;
-        m.default.track(v.HAw.ATTACHMENT_UPLOAD_FINISHED, {
+        g.default.track(v.HAw.ATTACHMENT_UPLOAD_FINISHED, {
             duration_ms: t,
             file_size: this.currentSize,
             pre_compression_file_size: this.preCompressionSize,

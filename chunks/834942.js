@@ -1,4 +1,4 @@
-(n.d(t, { A: () => g }), n(938796), n(321073));
+(n.d(t, { A: () => m }), n(938796), n(321073));
 var i = n(665260),
     r = n(17928),
     a = n(228366),
@@ -31,9 +31,9 @@ function f(e) {
     if (null == r || null == l || (!A && !f) || (0, s.bM)(r, l)) return;
     let T = o.Ay.getMember(r.id, l.id);
     if (null != T && (0, i.Lt)(T.flags ?? 0, E.D.BYPASSES_VERIFICATION)) return;
-    let m = !1;
-    f && null != T && (m = !T.roles.includes(r.verificationRoleId)) && (t = d.A.getRole(r.id, r.verificationRoleId));
-    let g = !1,
+    let g = !1;
+    f && null != T && (g = !T.roles.includes(r.verificationRoleId)) && (t = d.A.getRole(r.id, r.verificationRoleId));
+    let m = !1,
         S = !1,
         N = !1,
         C = !1,
@@ -56,7 +56,7 @@ function f(e) {
         !e &&
             ((R = +l.createdAt + 6e4 * _.$8o.ACCOUNT_AGE - Date.now()),
             (L = +r.joinedAt + 6e4 * _.$8o.MEMBER_AGE - Date.now()),
-            (g = r.verificationLevel >= _.PvD.LOW && !l.isClaimed()),
+            (m = r.verificationLevel >= _.PvD.LOW && !l.isClaimed()),
             l.isStaff() ||
                 ((S = r.verificationLevel >= _.PvD.LOW && !l.verified),
                 (N = r.verificationLevel >= _.PvD.VERY_HIGH),
@@ -69,14 +69,14 @@ function f(e) {
         y.length > 0 &&
             (n = setTimeout(() => a.h.dispatch({ type: "GUILD_VERIFICATION_CHECK", guildId: e }), Math.max(...y))),
         (I[e] = {
-            notClaimed: g,
+            notClaimed: m,
             notEmailVerified: S,
             notPhoneVerified: N,
             newAccount: C,
             newMember: O,
-            missingVerificationRole: m,
+            missingVerificationRole: g,
             verificationRole: t,
-            canChat: !(g || S || N || C || O || m),
+            canChat: !(m || S || N || C || O || g),
             accountDeadline: new Date(Date.now() + R),
             memberDeadline: new Date(Date.now() + L),
             timeoutRef: n,
@@ -89,7 +89,7 @@ function p(e) {
 function T(e) {
     (h.delete(e.guild.id), f(e.guild.id));
 }
-class m extends r.Ay.Store {
+class g extends r.Ay.Store {
     static displayName = "GuildVerificationStore";
     initialize() {
         this.waitFor(o.Ay, d.A, c.A, u.default);
@@ -101,7 +101,7 @@ class m extends r.Ay.Store {
         return this.getCheck(e).canChat;
     }
 }
-let g = new m(a.h, {
+let m = new g(a.h, {
     CONNECTION_OPEN: function () {
         for (let e in (h.clear(), I)) p(e);
     },

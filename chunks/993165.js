@@ -21,10 +21,10 @@ function m(e) {
         j = l.useCallback(() => {
             m(c);
         }, []),
-        A = l.useCallback(() => p.current, []),
-        E = (0, s.bG)([a.default], () => o.Ay.canUsePremiumProfileCustomization(a.default.getCurrentUser())),
-        v = E ? c : n,
-        C = !E && x?.id === "premiumTryItOut",
+        E = l.useCallback(() => p.current, []),
+        A = (0, s.bG)([a.default], () => o.Ay.canUsePremiumProfileCustomization(a.default.getCurrentUser())),
+        v = A ? c : n,
+        C = !A && x?.id === "premiumTryItOut",
         S = l.useCallback(() => {
             f(v);
         }, [v]),
@@ -38,10 +38,10 @@ function m(e) {
                 handlePanelTransitionComplete: S,
                 navigate: I,
                 goBack: j,
-                getCurrentPreset: A,
+                getCurrentPreset: E,
                 cachePreset: b,
             }),
-            [v, x, S, I, j, A, b],
+            [v, x, S, I, j, E, b],
         );
     return (0, i.jsx)(g.Provider, { value: C, children: (0, i.jsx)(u.Provider, { value: k, children: t }) });
 }

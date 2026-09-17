@@ -21,7 +21,7 @@ function p(e, t, n, i) {
 function T(e, t) {
     return t === s.T.LATEST_ACTIVITY ? E.Ay.lastMessageId(e.id) : e.id;
 }
-function m(e) {
+function g(e) {
     let { channelId: t, sortOrder: n, tagFilter: i, tagSetting: s, hasMore: l } = e,
         o = !l,
         d = _.A.getChannel(e.threads[e.threads.length - 1]),
@@ -48,7 +48,7 @@ function m(e) {
         .reverse()
         .value();
 }
-let g = [];
+let m = [];
 class S extends l.Ay.Store {
     static displayName = "ArchivedThreadsStore";
     initialize() {
@@ -72,7 +72,7 @@ class S extends l.Ay.Store {
     }
     getThreads(e, t, n, i) {
         let r = f.get(p(e, t, n, i));
-        return r?.threads ?? g;
+        return r?.threads ?? m;
     }
 }
 let N = new S(o.h, {
@@ -154,7 +154,7 @@ let N = new S(o.h, {
                 filterTagIds: Array.from(e.tagFilter),
                 sortOrder: e.sortOrder,
             }),
-            m(i),
+            g(i),
             (i.hasMore = e.hasMore),
             (i.nextOffset = e.offset + I),
             (i.loading = !1),
@@ -169,7 +169,7 @@ let N = new S(o.h, {
     },
     RESORT_THREADS: function (e) {
         let t = !1;
-        for (let n of f.values()) (null == e.channelId || n.channelId === e.channelId) && (m(n), (t = !0));
+        for (let n of f.values()) (null == e.channelId || n.channelId === e.channelId) && (g(n), (t = !0));
         if (!t) return !1;
     },
 });

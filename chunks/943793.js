@@ -17,8 +17,8 @@ var a = n(297264),
     p = n(201438),
     I = n(562153),
     j = n(183555),
-    A = n(735321),
-    E = n(451395),
+    E = n(735321),
+    A = n(451395),
     v = n(761431),
     C = n(823016),
     S = n(788593),
@@ -35,17 +35,17 @@ function P(e) {
         c = n && !d,
         u = t?.filter((e) => null != (0, R.W3)(e)) ?? [],
         g = u.length > 0,
-        m = c && (0, A.mS)(s) && u.length < 20,
+        m = c && (0, E.mS)(s) && u.length < 20,
         { trackUserProfileAction: x, trackUserProfileEditAction: f } = (0, j.NJ)(),
         h = (0, l.useRef)(new Map()),
         p = (0, l.useRef)(null),
         I = (0, l.useRef)(null),
-        [E, v] = (0, l.useState)(0),
+        [A, v] = (0, l.useState)(0),
         [C, S] = (0, l.useState)(!1),
         b = G(p, I, u, h, v),
         k = (0, l.useCallback)(
             (e, t) => {
-                ((0, A.s1)(s, a, e),
+                ((0, E.s1)(s, a, e),
                     f({ action: "added" === t ? "TAG_ADDED" : "TAG_REMOVED", widgetEdited: s, gameId: a }));
             },
             [s, a, f],
@@ -67,7 +67,7 @@ function P(e) {
         !g && !m)
     )
         return null;
-    let P = C ? u : u.slice(0, u.length - E);
+    let P = C ? u : u.slice(0, u.length - A);
     return (0, i.jsxs)("div", {
         className: r()(L.I4, o),
         children: [
@@ -84,7 +84,7 @@ function P(e) {
                                         tag: e,
                                         onRemove: c
                                             ? () => {
-                                                  ((0, A.tg)(s, a, e),
+                                                  ((0, E.tg)(s, a, e),
                                                       f({ action: "TAG_REMOVED", widgetEdited: s, gameId: a }));
                                               }
                                             : void 0,
@@ -96,11 +96,11 @@ function P(e) {
                                 ),
                             ),
                         }),
-                        E > 0 &&
+                        A > 0 &&
                             (0, i.jsx)(D, {
                                 buttonRef: p,
                                 isExpanded: C,
-                                numberOfOverflowingTags: E,
+                                numberOfOverflowingTags: A,
                                 onExpandTags: () => {
                                     (S(!0), x({ action: "EXPAND_GAME_TAGS" }));
                                 },
@@ -183,14 +183,14 @@ var M = n(858808),
 function W(e) {
     let { index: t, widgetType: n, game: l, children: s, getWidth: r } = e,
         { manageFocusOnReorder: a } = (0, C.r)();
-    return (0, i.jsx)(E.mG, {
+    return (0, i.jsx)(A.mG, {
         index: t,
         itemId: l.gameId,
         listType: n,
         itemType: "GAME_DETAILS_CARD",
         itemPreviewProps: { game: l, widgetType: n, getWidth: r },
         "aria-label": w.intl.formatToPlainString(w.t["0dR3gw"], { positionNumber: t + 1 }),
-        onReorder: (e, t) => (0, A.Un)(n, e, t),
+        onReorder: (e, t) => (0, E.Un)(n, e, t),
         onEnd: () => a(l.gameId),
         className: F.vF,
         dropBeforeClassName: F.A,
@@ -245,13 +245,13 @@ function z(e) {
         I = l.useCallback(
             (e) => {
                 let t = e.trim();
-                ((0, A.oc)(o, d, "" !== t ? t : void 0),
+                ((0, E.oc)(o, d, "" !== t ? t : void 0),
                     t !== h.trim() && u({ action: "COMMENTARY_EDITED", widgetEdited: o, gameId: d }));
             },
             [o, d, h, u],
         ),
-        E = (0, v.T)({ value: h, onCommit: I }),
-        { handleStartEditing: C, isInlineSurface: S } = E,
+        A = (0, v.T)({ value: h, onCommit: I }),
+        { handleStartEditing: C, isInlineSurface: S } = A,
         b = l.useCallback(() => {
             (u({ action: "PRESS_ADD_COMMENTARY", widgetEdited: o }), C());
         }, [o, u, C]),
@@ -267,7 +267,7 @@ function z(e) {
         children: [
             (0, i.jsx)(V, { user: n, guildId: s, channelId: a, id: c }),
             (0, i.jsx)(v.y, {
-                ...E,
+                ...A,
                 handleStartEditing: b,
                 variant: "multiline",
                 rows: 3,
@@ -278,7 +278,7 @@ function z(e) {
                 maxLength: 200,
                 textVariant: "text-sm/normal",
                 removeVerticalPadding: !0,
-                className: r()(F.Im, { [F.kS]: E.isEditing }),
+                className: r()(F.Im, { [F.kS]: A.isEditing }),
             }),
         ],
     });
@@ -302,8 +302,8 @@ function K(e) {
         { coverImageUrl: k, gameName: y, isLoading: T } = (0, p.A)(I),
         N = { variant: "heading-sm/medium", color: "text-default" },
         R = c && !u,
-        w = 1 === (0, A.cv)(d),
-        L = R && (0, A.y9)(d),
+        w = 1 === (0, E.cv)(d),
+        L = R && (0, E.y9)(d),
         _ = R && !w,
         { registerDragHandleRef: O } = (0, C.r)();
     if (T) return (0, i.jsx)(b.E, {});
@@ -327,7 +327,7 @@ function K(e) {
                 _
                     ? (0, i.jsxs)("div", {
                           className: F.An,
-                          children: [D(), (0, i.jsx)(E.jV, { buttonRef: O(o.gameId), className: F.BU })],
+                          children: [D(), (0, i.jsx)(A.jV, { buttonRef: O(o.gameId), className: F.BU })],
                       })
                     : D(),
                 (0, i.jsxs)("div", {

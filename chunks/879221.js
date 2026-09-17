@@ -1,10 +1,10 @@
-n.d(t, { O: () => s });
-let r = (0, n(945810).mj)({
+r.d(t, { O: () => l });
+let n = (0, r(945810).mj)({
     name: "2026-09-new-hscroll",
     kind: "user",
     defaultConfig: { useNewHScroll: !1 },
     variations: { 0: { useNewHScroll: !1 }, 1: { useNewHScroll: !0 } },
 });
-function s(e) {
-    return r.useConfig({ location: e }).useNewHScroll;
+function l(e) {
+    return n.useConfig({ location: e }).useNewHScroll;
 }

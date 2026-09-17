@@ -33,7 +33,7 @@ function h() {
             f = new Map(),
             p = { allClips: 0, autoClips: 0, favorites: 0 },
             T = new Map(),
-            m = { allClips: 0, autoClips: 0, favorites: 0 };
+            g = { allClips: 0, autoClips: 0, favorites: 0 };
         for (let e of i) {
             if (
                 ((function (e, t) {
@@ -93,9 +93,9 @@ function h() {
                 "auto" === e.clipMethod && (p.autoClips += 1),
                 e.isFavorite && (p.favorites += 1),
                 s.has(e.id) &&
-                    ((m.allClips += 1),
-                    "auto" === e.clipMethod && (m.autoClips += 1),
-                    e.isFavorite && (m.favorites += 1),
+                    ((g.allClips += 1),
+                    "auto" === e.clipMethod && (g.autoClips += 1),
+                    e.isFavorite && (g.favorites += 1),
                     null != e.applicationId && T.set(e.applicationId, (T.get(e.applicationId) ?? 0) + 1)),
                 null != e.applicationId)
             ) {
@@ -109,8 +109,8 @@ function h() {
                 f.set(e, (f.get(e) ?? 0) + 1);
             }
         }
-        let g = A(l, r.sortOrder),
-            S = g.length,
+        let m = A(l, r.sortOrder),
+            S = m.length,
             N = null != r.gameFacet,
             C = null != r.clippedWithFacet,
             O = Array.from(o.entries())
@@ -152,7 +152,7 @@ function h() {
             y = !N && !C;
         return {
             allClips: i,
-            filteredClips: g,
+            filteredClips: m,
             gamesFacet: O,
             participantsFacet: R,
             distributedClipInitiatorsFacet: L,
@@ -161,7 +161,7 @@ function h() {
                 autoClips: y && r.activeMainLink === d.oH.AUTO_CLIPS ? S : p.autoClips,
                 favorites: y && r.activeMainLink === d.oH.FAVORITES ? S : p.favorites,
             },
-            mainLinkNewCounts: m,
+            mainLinkNewCounts: g,
         };
     }, [e, t, n, r, I, h]);
 }

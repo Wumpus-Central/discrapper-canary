@@ -30,10 +30,10 @@ let f = l()("2021-04-12T00:00:00"),
 function T(e, t) {
     return e.clone().hours(t.hour()).minutes(t.minutes()).seconds(0);
 }
-function m(e, t) {
+function g(e, t) {
     return e.value.unix() - t.value.unix();
 }
-class g {
+class m {
     intervalInMinutes;
     labelFormat;
     options = [];
@@ -71,7 +71,7 @@ class g {
         return (
             (this._index[t.unix()] = t),
             this.options.push({ id: t.toISOString(), label: n, value: t }),
-            this.options.sort(m),
+            this.options.sort(g),
             e
         );
     }
@@ -96,7 +96,7 @@ class g {
                 t.forEach((t) => {
                     null == this.lookupByValue(t) && e.push(this._createNewOption(t));
                 }),
-                e.sort(m),
+                e.sort(g),
                 e
             );
         }
@@ -108,7 +108,7 @@ class g {
 }
 function S(e) {
     let { value: t, onChange: n, hideValue: s, disabled: l = !1, ...o } = e,
-        d = r.useMemo(() => new g(), []),
+        d = r.useMemo(() => new m(), []),
         [c, u] = r.useState("");
     function _(e) {
         null != t && n(T(t, d.selectValue(e)));

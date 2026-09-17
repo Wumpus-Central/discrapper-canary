@@ -16,8 +16,8 @@ var i = n(607399),
     f = n(309010),
     p = n(967198),
     T = n(287809),
-    m = n(652215),
-    g = n(746080),
+    g = n(652215),
+    m = n(746080),
     S = n(818348);
 let N = "message_requests",
     C = !1,
@@ -32,9 +32,9 @@ let N = "message_requests",
     P = null;
 function U(e) {
     if (null == e) return null;
-    if ((0, g.jq)(e)) {
+    if ((0, m.jq)(e)) {
         let t = p.A.getGuildId();
-        return null == t ? null : (0, g.Gr)(e, t);
+        return null == t ? null : (0, m.Gr)(e, t);
     }
     return e;
 }
@@ -106,21 +106,21 @@ class B extends r.Ay.PersistedStore {
         };
     }
     getSection(e, t) {
-        if (M) return m.YvQ.SEARCH;
+        if (M) return g.YvQ.SEARCH;
         let n = U(e);
         return null != n && null != v[n]
-            ? m.YvQ.SIDEBAR_CHAT
+            ? g.YvQ.SIDEBAR_CHAT
             : y && G()
-              ? m.YvQ.FRIENDS
+              ? g.YvQ.FRIENDS
               : t && L
-                ? m.YvQ.PROFILE
+                ? g.YvQ.PROFILE
                 : O
-                  ? m.YvQ.SUMMARIES
+                  ? g.YvQ.SUMMARIES
                   : C && !t
-                    ? m.YvQ.MEMBERS
+                    ? g.YvQ.MEMBERS
                     : R
-                      ? m.YvQ.CONVERSATIONS
-                      : m.YvQ.NONE;
+                      ? g.YvQ.CONVERSATIONS
+                      : g.YvQ.NONE;
     }
     getSidebarState(e) {
         let t = U(e);
@@ -157,19 +157,19 @@ let V = new B(a.h, {
         return ((P = e.searchContextId), F());
     },
     CHANNEL_TOGGLE_MEMBERS_SECTION: function () {
-        (M && _._.dispatch(m.jej.SEARCH_RESULTS_CLOSE), O && (O = x(O)), R && (R = x(R)), (C = x(C, !0)));
+        (M && _._.dispatch(g.jej.SEARCH_RESULTS_CLOSE), O && (O = x(O)), R && (R = x(R)), (C = x(C, !0)));
     },
     USER_PROFILE_SIDEBAR_TOGGLE_SECTION: function () {
-        (L || _._.dispatch(m.jej.SEARCH_RESULTS_CLOSE), (L = x(L, !0)));
+        (L || _._.dispatch(g.jej.SEARCH_RESULTS_CLOSE), (L = x(L, !0)));
     },
     CHANNEL_TOGGLE_SUMMARIES_SECTION: function () {
         (C && (C = x(C)), R && (R = x(R)), (O = x(O, !0)));
     },
     CHANNEL_TOGGLE_CONVERSATIONS_SECTION: function () {
-        (M && _._.dispatch(m.jej.SEARCH_RESULTS_CLOSE), (C = !1), (O = !1), (R = x(R, !0)));
+        (M && _._.dispatch(g.jej.SEARCH_RESULTS_CLOSE), (C = !1), (O = !1), (R = x(R, !0)));
     },
     CHANNEL_OPEN_CONVERSATIONS_SECTION: function () {
-        return !R && (M && _._.dispatch(m.jej.SEARCH_RESULTS_CLOSE), (C = !1), (O = !1), (R = !0), (y = !1), !0);
+        return !R && (M && _._.dispatch(g.jej.SEARCH_RESULTS_CLOSE), (C = !1), (O = !1), (R = !0), (y = !1), !0);
     },
     SIDEBAR_VIEW_CHANNEL: function (e) {
         let { sidebarType: t, baseChannelId: n, channelId: i, details: r } = e;
@@ -204,7 +204,7 @@ let V = new B(a.h, {
         let { collapsed: t } = e;
         if (((y = !t), !t)) {
             let e = f.Ay.getChannelId();
-            (null != e && delete v[e], M && (_._.dispatch(m.jej.SEARCH_RESULTS_CLOSE), (M = !1)));
+            (null != e && delete v[e], M && (_._.dispatch(g.jej.SEARCH_RESULTS_CLOSE), (M = !1)));
         }
     },
     FRIENDS_SIDEBAR_SET_AVAILABLE: function (e) {

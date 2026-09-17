@@ -1,4 +1,4 @@
-n.d(a, { A: () => E, N: () => U });
+n.d(a, { A: () => E, N: () => y });
 var t = n(477900),
     i = n(582128),
     l = n(503698),
@@ -26,7 +26,7 @@ function N(e, a) {
 var A = n(458499),
     b = n(375708),
     w = n(842730);
-function y(e, a, n) {
+function I(e, a, n) {
     let t = f.kt.useSetting(),
         [l, s] = i.useState(!1),
         r = i.useCallback(() => s(!0), []),
@@ -47,9 +47,9 @@ function y(e, a, n) {
                 onMouseLeave: c,
             };
 }
-function U(e) {
+function y(e) {
     let { className: a, userId: n, image: i, canAnimate: l = !0 } = e,
-        { src: r, showGifTag: c, onMouseMove: d, onMouseLeave: o } = y(n, i, l);
+        { src: r, showGifTag: c, onMouseMove: d, onMouseLeave: o } = I(n, i, l);
     return "localDataUri" in i
         ? (0, t.jsx)("div", { className: a, children: (0, t.jsx)("img", { className: w.Sl, alt: "", src: r }) })
         : (0, t.jsxs)("div", {
@@ -62,7 +62,7 @@ function U(e) {
               ],
           });
 }
-function I(e) {
+function U(e) {
     let { canEdit: a, isHovering: n } = e;
     return (0, t.jsx)("div", {
         className: w.qf,
@@ -88,8 +88,8 @@ function k(e) {
             editVariant: j,
             lastEdit: N,
         } = e,
-        { src: U, showGifTag: k, onMouseMove: E, onMouseLeave: L, isHovering: R } = y(n, l, f),
-        S = c ?? U,
+        { src: y, showGifTag: k, onMouseMove: E, onMouseLeave: L, isHovering: R } = I(n, l, f),
+        S = c ?? y,
         M = i.useRef(null),
         D = r ?? M,
         C = i.useRef(null);
@@ -106,7 +106,7 @@ function k(e) {
             children: [
                 null != S
                     ? (0, t.jsx)("img", { alt: "", src: S, className: w.Sl })
-                    : (0, t.jsx)(I, { canEdit: !0, isHovering: "tooltip" === j && R }),
+                    : (0, t.jsx)(U, { canEdit: !0, isHovering: "tooltip" === j && R }),
                 null != c
                     ? (0, t.jsx)("div", {
                           className: w.ob,
@@ -181,6 +181,6 @@ function E(e) {
               lastEdit: u,
           })
         : null == l
-          ? (0, t.jsx)("div", { className: a, children: (0, t.jsx)(I, { canEdit: !1, isHovering: !1 }) })
-          : (0, t.jsx)(U, { className: a, userId: i, image: l, canAnimate: c });
+          ? (0, t.jsx)("div", { className: a, children: (0, t.jsx)(U, { canEdit: !1, isHovering: !1 }) })
+          : (0, t.jsx)(y, { className: a, userId: i, image: l, canAnimate: c });
 }

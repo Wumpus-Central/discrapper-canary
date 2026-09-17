@@ -626,8 +626,8 @@ var eq = n(554146),
     e3 = n(775602),
     e8 = n(826673),
     e6 = n(182922),
-    e5 = n(532624),
-    e7 = n(531685),
+    e7 = n(532624),
+    e5 = n(531685),
     e4 = n(723702),
     e9 = n(350535),
     te = n(115023);
@@ -637,8 +637,8 @@ function tt(e) {
         r = (0, h.bG)([p.A], () => null != t && p.A.isFavoriteSound(t.soundId)),
         a = (0, h.bG)([em.A], () => em.A.getGuild(t?.guildId)),
         o = (0, h.bG)([e3.Ay], () => e3.Ay.useReducedMotion, []),
-        u = (0, h.bG)([e7.A], () => e7.A.isFocused()),
-        c = (0, h.bG)([e5.Ay], () => e5.Ay.getKeybindForAction(eS.hCu.SOUNDBOARD_HOLD));
+        u = (0, h.bG)([e5.A], () => e5.A.isFocused()),
+        c = (0, h.bG)([e7.Ay], () => e7.Ay.getKeybindForAction(eS.hCu.SOUNDBOARD_HOLD));
     if (null != t && s.length > 0)
         return (0, l.jsx)(e6.A, {
             graphicPrimary:
@@ -1284,7 +1284,7 @@ function tA(e) {
             },
             [L],
         ),
-        e5 = i.useCallback(
+        e7 = i.useCallback(
             () =>
                 N
                     ? (0, l.jsx)(J.Gq, {
@@ -1303,7 +1303,7 @@ function tA(e) {
                       }),
             [N, e6],
         ),
-        e7 = i.useCallback(
+        e5 = i.useCallback(
             (e) =>
                 (0, l.jsx)(eY, {
                     soundboardListRef: e,
@@ -1390,8 +1390,8 @@ function tA(e) {
                     renderSectionHeader: e2,
                     renderSectionFooter: e3,
                     renderSection: e1,
-                    renderCategoryList: e7,
-                    renderHeaderAccessories: e5,
+                    renderCategoryList: e5,
+                    renderHeaderAccessories: e7,
                     rowHeight: 48,
                     sectionHeaderHeight: eQ,
                     sectionFooterHeight: e0,

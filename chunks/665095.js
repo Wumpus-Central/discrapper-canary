@@ -28,8 +28,8 @@ var i = n(477900),
     N = n(652215),
     M = n(375708),
     R = n(690807);
-let k = y.A.getArticleURL(N.MVz.VERIFICATION_FAQ);
-class w extends l.PureComponent {
+let O = y.A.getArticleURL(N.MVz.VERIFICATION_FAQ);
+class k extends l.PureComponent {
     static defaultProps = { types: [N.Fz7.CAPTCHA], onCaptchaVerify: N.tEg, onLogout: N.tEg };
     renderFields() {
         let { types: e, captchaKey: t, theme: n, onCaptchaVerify: l } = this.props;
@@ -77,7 +77,7 @@ class w extends l.PureComponent {
                                         }),
                                         (0, i.jsx)(j.E, {
                                             variant: "text-md/normal",
-                                            children: M.intl.format(M.t["0rqMV5"], { helpCenterURL: k }),
+                                            children: M.intl.format(M.t["0rqMV5"], { helpCenterURL: O }),
                                         }),
                                     ],
                                 }),
@@ -132,7 +132,7 @@ class w extends l.PureComponent {
         t?.(e);
     };
 }
-var O = n(87404),
+var w = n(87404),
     P = n(53516);
 function L() {
     let { action: e, theme: t } = (0, s.cf)([x.A, A.A], () => ({ action: x.A.getAction(), theme: A.A.theme })),
@@ -148,7 +148,7 @@ function L() {
                     );
                     return (t) => (0, i.jsx)(e, { ...t });
                 },
-                { modalKey: O.H1, Layer: f.Ay },
+                { modalKey: w.H1, Layer: f.Ay },
             ));
     }
     return (
@@ -184,10 +184,10 @@ function L() {
                                 confirmText: M.intl.string(M.t["3oK4qw"]),
                             });
                     },
-                    { modalKey: O.Pr, Layer: f.Ay, onCloseCallback: S },
+                    { modalKey: w.Pr, Layer: f.Ay, onCloseCallback: S },
                 );
         }, [E, _]),
-        (0, i.jsx)(w, {
+        (0, i.jsx)(k, {
             types: E,
             captchaKey: C,
             onCaptchaVerify: function (e) {

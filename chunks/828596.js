@@ -1,4 +1,4 @@
-n.d(t, { J_: () => N, N4: () => g, l9: () => m, rd: () => p, tx: () => f });
+n.d(t, { J_: () => N, N4: () => m, l9: () => g, rd: () => p, tx: () => f });
 var i = n(636537),
     r = n(228366),
     a = n(615405),
@@ -43,11 +43,11 @@ async function p(e) {
 function T(e) {
     return e?.type === "error" ? E : h;
 }
-async function m(e) {
+async function g(e) {
     let { applicationId: t } = e;
     await S({ type: "application", applicationId: t });
 }
-async function g(e) {
+async function m(e) {
     let { skuIds: t } = e;
     await S({ type: "skus", skuIds: t });
 }

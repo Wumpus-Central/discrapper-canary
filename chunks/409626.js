@@ -8,8 +8,8 @@
         getGuildIdAndVerifiedFromInvite: () => S,
         trackGameProfileAction: () => T,
         trackGameProfileClose: () => p,
-        trackGameProfileEmbedAction: () => g,
-        trackGameProfileFeedback: () => m,
+        trackGameProfileEmbedAction: () => m,
+        trackGameProfileFeedback: () => g,
         trackGameProfileOpen: () => f,
     }));
 var i,
@@ -164,7 +164,7 @@ function T(e) {
         source: u,
     });
 }
-function m(e) {
+function g(e) {
     let {
         viewId: t,
         applicationId: n,
@@ -182,7 +182,7 @@ function m(e) {
         submitted: s,
     });
 }
-function g(e) {
+function m(e) {
     let { gameName: t, gameId: n, action: i } = e;
     d.default.track(c.HAw.GAME_PROFILE_EMBED_ACTION, { game_name: t, application_id: n, action: i });
 }

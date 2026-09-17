@@ -37,8 +37,8 @@ let A = 365,
     f = [s.p3.MO.weekday, s.p3.TU.weekday, s.p3.WE.weekday, s.p3.TH.weekday, s.p3.FR.weekday],
     p = [s.p3.SU.weekday, s.p3.MO.weekday, s.p3.TU.weekday, s.p3.WE.weekday, s.p3.TH.weekday],
     T = [s.p3.TU.weekday, s.p3.WE.weekday, s.p3.TH.weekday, s.p3.FR.weekday, s.p3.SA.weekday],
-    m = [s.p3.SA.weekday, s.p3.SU.weekday],
-    g = [s.p3.FR.weekday, s.p3.SA.weekday],
+    g = [s.p3.SA.weekday, s.p3.SU.weekday],
+    m = [s.p3.FR.weekday, s.p3.SA.weekday],
     S = [s.p3.SU.weekday, s.p3.MO.weekday],
     N = [
         s.p3.SU.weekday,
@@ -198,7 +198,7 @@ function B(e) {
 function V(e) {
     let t = D(e.toDate().getDay()),
         n = D(e.toDate().getUTCDay());
-    return n.weekday - t.weekday > 0 ? S : n.weekday - t.weekday < 0 ? g : m;
+    return n.weekday - t.weekday > 0 ? S : n.weekday - t.weekday < 0 ? m : g;
 }
 function H(e, t) {
     let n = (function (e, t) {

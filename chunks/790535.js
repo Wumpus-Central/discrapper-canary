@@ -16,8 +16,8 @@ var i = n(66834),
     f = n(272355),
     p = n(280450),
     T = n(312006),
-    m = n(516607);
-class g extends f.A {
+    g = n(516607);
+class m extends f.A {
     _initialize() {
         I.h.subscribe("VOICE_STATE_UPDATES", this.handleVoiceStateUpdates);
     }
@@ -27,13 +27,13 @@ class g extends f.A {
     handleVoiceStateUpdates = (e) => {
         let { voiceStates: t } = e;
         t.forEach((e) => {
-            if (null == e.channelId || e.userId !== p.default.getId() || (this.terminate(), h.w.get(m.zh, !1))) return;
+            if (null == e.channelId || e.userId !== p.default.getId() || (this.terminate(), h.w.get(g.zh, !1))) return;
             let t = E.Ay.getVoiceChannelId();
-            null != t && e.channelId === t && T.Ay.isAudienceMember(e.userId, t) && (h.w.set(m.zh, !0), A.H2(t));
+            null != t && e.channelId === t && T.Ay.isAudienceMember(e.userId, t) && (h.w.set(g.zh, !0), A.H2(t));
         });
     };
 }
-let S = new g();
+let S = new m();
 var N = n(233993),
     C = n(967198),
     O = n(403362);

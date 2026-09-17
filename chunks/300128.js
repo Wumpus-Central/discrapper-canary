@@ -1,4 +1,4 @@
-n.d(t, { A: () => g });
+n.d(t, { A: () => m });
 var i = n(228366),
     r = n(439372),
     a = n(477900);
@@ -43,7 +43,7 @@ let f = new I(i.h, {
 });
 var p = n(652215),
     T = n(731854);
-class m extends r.A {
+class g extends r.A {
     actions = { RTC_CONNECTION_STATE: (e) => this.handleConnectionState(e) };
     handleConnectionState = (e) => {
         e.state !== p.S7L.RTC_CONNECTED ||
@@ -54,4 +54,4 @@ class m extends r.A {
             i.h.dispatch({ type: "VIDEO_GUARD_BANNER_SHOWN" }));
     };
 }
-let g = new m();
+let m = new g();

@@ -16,8 +16,8 @@ var i,
     f = n(485296),
     p = n(287809),
     T = n(803301),
-    m = n(977997),
-    g = n(562153),
+    g = n(977997),
+    m = n(562153),
     S = n(90575),
     N = n(806931),
     C = n(652215),
@@ -91,7 +91,7 @@ class v {
             ((this.call = A.A.getCall(this.channelId)), e.isPrivate() && (null == this.call || this.call.unavailable))
         )
             return !1;
-        let t = new Set(e.isGuildVocalOrThread() ? Object.keys(m.A.getVoiceStatesForChannel(e.id)) : e.recipients);
+        let t = new Set(e.isGuildVocalOrThread() ? Object.keys(g.A.getVoiceStatesForChannel(e.id)) : e.recipients);
         return (
             t.add(E.default.getId()),
             this.guildRingingUsers.size > 0 && (t = new Set([...t, ...this.guildRingingUsers])),
@@ -195,8 +195,8 @@ class v {
             i = [],
             r = p.default.getUser(e);
         if (null == r) return i;
-        let a = m.A.getVoiceStateForChannel(this.channelId, e),
-            l = m.A.getVoicePlatformForChannel(this.channelId, e),
+        let a = g.A.getVoiceStateForChannel(this.channelId, e),
+            l = g.A.getVoicePlatformForChannel(this.channelId, e),
             o = h.A.getChannel(this.channelId),
             c = o?.getGuildId(),
             A = (this.call?.ringing?.includes(e) || this.guildRingingUsers.has(e)) ?? !1;
@@ -212,7 +212,7 @@ class v {
                 lastSpoke: this.lastSpoke[e] ?? 0,
                 soundsharing: f.A.isSoundSharing(e),
                 ringing: A,
-                userNick: g.Ay.getName(c, this.channelId, r),
+                userNick: m.Ay.getName(c, this.channelId, r),
                 userAvatarDecoration: (0, d.U)(r, c),
                 localVideoDisabled: I.Ay.isLocalVideoDisabled(r.id),
                 isPoppedOut: this.poppedOutParticipants.has(r.id),
@@ -237,7 +237,7 @@ class v {
                 id: t,
                 userVideo: a?.selfVideo ?? !1,
                 user: r,
-                userNick: g.Ay.getName(c, this.channelId, r),
+                userNick: m.Ay.getName(c, this.channelId, r),
                 stream: S,
                 isPoppedOut: this.poppedOutParticipants.has(t),
             }),

@@ -19,8 +19,8 @@ var I = n(164956),
     f = n(931480),
     p = n(320095),
     T = n(697470),
-    m = (n(763754), n(491001)),
-    g = n(815807),
+    g = (n(763754), n(491001)),
+    m = n(815807),
     S = n(773669),
     N = n(935208),
     C = n(280450),
@@ -141,7 +141,7 @@ function $() {
 function z(e) {
     let { type: t, channelId: n, messageId: i, userId: r, emoji: a, reactionType: s } = e,
         l = d.A.get(n);
-    if (null == l || !(0, g.vp)(e)) return !1;
+    if (null == l || !(0, m.vp)(e)) return !1;
     let o = O.A.getBasicChannel(n)?.type === w.rbe.DM,
         c = C.default.getId() === r;
     ((l = l.update(i, (n) =>
@@ -368,7 +368,7 @@ let Z = new q(l.h, {
                 s = d.A.getOrCreate(t),
                 l = n(597643).A.isConnected();
             return a
-                ? (0, m.K)()
+                ? (0, g.K)()
                     ? (V(t, i, l), !1)
                     : (x.log("Inserting message tapped on from a push notification", i.id, i.channel_id),
                       void d.A.commit(s.receivePushNotification(i, l)))

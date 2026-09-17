@@ -16,8 +16,8 @@ var i = n(435558),
     f = n(763827),
     p = n(873985),
     T = n(309010),
-    m = n(461213),
-    g = n(116956),
+    g = n(461213),
+    m = n(116956),
     S = n(723702),
     N = n(175306),
     C = n(77729),
@@ -71,10 +71,10 @@ class P extends M {
         (super(!1), (this.socket = e));
     }
     getInitialState() {
-        return m.A.getLocalPresence();
+        return g.A.getLocalPresence();
     }
     getNextState() {
-        return m.A.getLocalPresence();
+        return g.A.getLocalPresence();
     }
     shouldCommit() {
         return this.socket.isSessionEstablished();
@@ -270,8 +270,8 @@ var ea = n(756377),
     ef = n(107351),
     ep = n(284009),
     eT = n.n(ep),
-    em = n(723176),
-    eg = n(766034),
+    eg = n(723176),
+    em = n(766034),
     eS = n(314732),
     eN = n(531743),
     eC = n(45773),
@@ -538,7 +538,7 @@ function eY(e, t, n) {
         f = e_.Ay.getMember(e, t.id),
         p = (0, $.t)(A),
         T = (0, X.mT)(h),
-        m = (0, Z.i)(I);
+        g = (0, Z.i)(I);
     (null != f &&
         f.nick === a &&
         f.avatar === s &&
@@ -552,7 +552,7 @@ function eY(e, t, n) {
         (f.unusualDMActivityUntil ?? null) === (E ?? null) &&
         r().isEqual(f.collectibles ?? null, p ?? null) &&
         r().isEqual(f.displayNameStyles ?? null, T ?? null) &&
-        r().isEqual(f.gamingLeaderboardData ?? null, m ?? null)) ||
+        r().isEqual(f.gamingLeaderboardData ?? null, g ?? null)) ||
         eW({
             type: "GUILD_MEMBER_ADD",
             guildId: e,
@@ -569,7 +569,7 @@ function eY(e, t, n) {
             flags: o,
             collectibles: p,
             displayNameStyles: T,
-            gamingLeaderboardData: m,
+            gamingLeaderboardData: g,
         });
 }
 function eK(e) {
@@ -721,8 +721,8 @@ function eq(e) {
             let t,
                 n,
                 i =
-                    ((t = em.A.database()),
-                    (n = (0, eO.O)() ? eg.A.getCommittedVersions() : Promise.resolve({})),
+                    ((t = eg.A.database()),
+                    (n = (0, eO.O)() ? em.A.getCommittedVersions() : Promise.resolve({})),
                     Promise.all([
                         n,
                         (0, eO.O)() ? eN.A.getGuildIds() : Promise.resolve(new Set()),
@@ -754,7 +754,7 @@ function eq(e) {
                           let t = (e = el.A.hydrateReady.measure(() =>
                                   (function (e, t, n) {
                                       let { users: i, private_channels: a, merged_members: s, guilds: l, ...o } = e;
-                                      (null != em.A.database() &&
+                                      (null != eg.A.database() &&
                                           !1 === n.databaseOk &&
                                           eC.A.replaceDisableAllDatabases("ReadyPayloadUtils: database was not ok"),
                                           (eL = r().keyBy(i, (e) => e.id)),
@@ -1992,8 +1992,8 @@ let eJ = new d.A("ConnectionStore"),
     e1 = null,
     e2 = !0,
     e3 = null,
-    e5 = null;
-async function e6(e) {
+    e6 = null;
+async function e5(e) {
     ((e0 = Date.now()), (e1 = e.sessionId), V.handleConnectionOpen());
     let t = {},
         n = T.Ay.getVoiceChannelId();
@@ -2011,7 +2011,7 @@ async function e6(e) {
             null != e && ((t = { guildId: e.getGuildId(), channelId: n }), (0, u.CX)(n));
         } else (f.A.setLastSessionVoiceChannelId(null != n ? n : null), o.default.selectVoiceChannel(null));
     }
-    (H.update(t, !0), (e2 = !1), (e5 = null));
+    (H.update(t, !0), (e2 = !1), (e6 = null));
 }
 function e4() {
     H.update();
@@ -2028,9 +2028,9 @@ function e9(e) {
 class te extends a.Ay.Store {
     static displayName = "GatewayConnectionStore";
     initialize() {
-        (this.waitFor(E.default, A.A, h.A, I.Ay, f.A, p.A, T.Ay, m.A, g.A, _.A),
+        (this.waitFor(E.default, A.A, h.A, I.Ay, f.A, p.A, T.Ay, g.A, m.A, _.A),
             this.syncWith([I.Ay], e7),
-            this.syncWith([m.A], e8));
+            this.syncWith([g.A], e8));
     }
     getSocket() {
         return B;
@@ -2067,10 +2067,10 @@ let tt = new te(l.h, {
         return (e.resetSocket && (B.close(), B.dispatcher.clear(), B.connect()), !1);
     },
     CONNECTION_OPEN: (e) => {
-        e6(e);
+        e5(e);
     },
     CONNECTION_RESUMED: function () {
-        e5 = null;
+        e6 = null;
     },
     CONNECTION_CLOSED: function () {
         (eJ.verbose("connection closed dispatched"), (e0 = Date.now()));
@@ -2082,7 +2082,7 @@ let tt = new te(l.h, {
     VOICE_CHANNEL_SELECT: function (e) {
         return (
             H.update({ guildId: e.guildId, channelId: e.channelId }),
-            (e5 = e.lockVoiceStateForResume && null != e.channelId ? e.channelId : null),
+            (e6 = e.lockVoiceStateForResume && null != e.channelId ? e.channelId : null),
             (0, S.isIOS)() &&
                 e3 === x.g6G.BACKGROUND &&
                 (null == e.channelId ? B.close(!0) : B.isClosed() && (j.V(!1), B.connect())),
@@ -2094,8 +2094,8 @@ let tt = new te(l.h, {
         return t.reduce((e, t) => {
             if (E.default.getId() !== t.userId) return e;
             if (t.sessionId === e1) {
-                if (null != e5)
-                    return (eJ.verbose("Ignoring voice state for own session due to VSU lock on channel:", e5), e);
+                if (null != e6)
+                    return (eJ.verbose("Ignoring voice state for own session due to VSU lock on channel:", e6), e);
                 H.setState({ guildId: t.guildId, channelId: t.channelId });
             } else {
                 if (t.guildId !== H.guildId) return e;
@@ -2114,7 +2114,7 @@ let tt = new te(l.h, {
     CALL_DELETE: function (e) {
         let { channelId: t } = e;
         if (t === H.channelId) {
-            if (e5 === t) return !1;
+            if (e6 === t) return !1;
             H.setState({ guildId: null, channelId: null });
         }
     },
@@ -2184,8 +2184,8 @@ let tt = new te(l.h, {
             if (n);
             else {
                 let e;
-                ((e = g.A.getAllActiveStreamKeys().find((e) => (0, c.Iy)(e).ownerId === E.default.getId())),
-                    g.A.getAllActiveStreamKeys()
+                ((e = m.A.getAllActiveStreamKeys().find((e) => (0, c.Iy)(e).ownerId === E.default.getId())),
+                    m.A.getAllActiveStreamKeys()
                         .filter((t) => t !== e)
                         .forEach((e) => e9(e)));
             }

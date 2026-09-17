@@ -16,8 +16,8 @@ let A = {},
     f = {},
     p = !1,
     T = !1,
-    m = !1,
-    g = new Set(),
+    g = !1,
+    m = new Set(),
     S = new Set(),
     N = {};
 function C(e) {
@@ -71,10 +71,10 @@ class y extends s.il {
         return T;
     }
     get fetchedEndedEntitlements() {
-        return m;
+        return g;
     }
     get applicationIdsFetching() {
-        return g;
+        return m;
     }
     get applicationIdsFetched() {
         return S;
@@ -138,11 +138,11 @@ class y extends s.il {
 let D = new y(l.h, {
     ENTITLEMENT_FETCH_APPLICATION_START: function (e) {
         let { applicationId: t } = e;
-        g.add(t);
+        m.add(t);
     },
     ENTITLEMENT_FETCH_APPLICATION_SUCCESS: function (e) {
         let { applicationId: t, entitlements: n } = e;
-        for (let e of (g.delete(t), S.add(t), n)) !0 !== e.consumed && C(e);
+        for (let e of (m.delete(t), S.add(t), n)) !0 !== e.consumed && C(e);
     },
     ENTITLEMENT_FETCH_APPLICATION_FAIL: function () {},
     ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: function (e) {
@@ -170,16 +170,16 @@ let D = new y(l.h, {
         })(e.entitlement);
     },
     LOGOUT: function () {
-        ((A = {}), (I = {}), (f = {}), (p = !1), (T = !1), (m = !1), (g = new Set()), (S = new Set()));
+        ((A = {}), (I = {}), (f = {}), (p = !1), (T = !1), (g = !1), (m = new Set()), (S = new Set()));
     },
     ENTITLEMENTS_FETCH_FOR_USER_START: function () {
         p = !0;
     },
     ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: function (e) {
         let { entitlements: t, excludeEnded: n } = e;
-        for (let e of ((T = !0), (p = !1), (m = !n), t)) C(e);
+        for (let e of ((T = !0), (p = !1), (g = !n), t)) C(e);
     },
     ENTITLEMENTS_FETCH_FOR_USER_FAIL: function () {
-        ((T = !1), (p = !1), (m = !1));
+        ((T = !1), (p = !1), (g = !1));
     },
 });

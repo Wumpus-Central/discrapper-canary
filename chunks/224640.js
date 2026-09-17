@@ -21,15 +21,15 @@ function h(e) {
             returnRef: f,
             role: p = "dialog",
             "aria-label": T,
-            dismissable: m = !0,
-            maxHeight: g = "default",
+            dismissable: g = !0,
+            maxHeight: m = "default",
             onClose: S,
             contentOutsideContainer: N,
             trackingProps: C,
             children: O,
         } = e,
         R = r.useId(),
-        L = r.useMemo(() => ({ id: R, headingId: `heading-${R}`, onClose: S, dismissable: m }), [m, R, S]),
+        L = r.useMemo(() => ({ id: R, headingId: `heading-${R}`, onClose: S, dismissable: g }), [g, R, S]),
         y = (0, _.kS)(t, n),
         D = r.useRef(null);
     return (0, i.jsx)(u.V.Provider, {
@@ -52,7 +52,7 @@ function h(e) {
                             ref: D,
                             "data-mana-component": "modal",
                             className: s()(A.container, A[`size-${a}`], A[`padding-size-${h}`], {
-                                [A.maxHeightViewport]: "viewport" === g,
+                                [A.maxHeightViewport]: "viewport" === m,
                                 [A.exiting]: t === E.i.EXITING || t === E.i.EXITED,
                             }),
                             style: y,

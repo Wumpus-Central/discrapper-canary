@@ -16,8 +16,8 @@ var i = n(477900),
     f = n(939249),
     p = n(789645),
     T = n(736653),
-    m = n(775602),
-    g = n(11029),
+    g = n(775602),
+    m = n(11029),
     S = n(976860),
     N = n(224016),
     C = n(217392),
@@ -189,7 +189,7 @@ function j(e) {
             trialOffer: A,
             discountOffer: N,
         } = e,
-        C = (0, u.bG)([m.Ay], () => m.Ay.useReducedMotion),
+        C = (0, u.bG)([g.Ay], () => g.Ay.useReducedMotion),
         L = (0, T.Ay)(),
         y = (0, O.EJ)(b.PremiumTypes.TIER_2, { useSpace: !1 });
     switch (d) {
@@ -369,7 +369,7 @@ function j(e) {
                     discountOffer: N,
                     children: P.intl.format(P.t["5KMAnK"], {
                         onClick: () => {
-                            ((0, S.pX)(M.BVt.APPLICATION_STORE), (0, g.D)());
+                            ((0, S.pX)(M.BVt.APPLICATION_STORE), (0, m.D)());
                         },
                     }),
                 })

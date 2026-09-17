@@ -16,8 +16,8 @@ var i = n(478437),
     f = n(616356),
     p = n(280450),
     T = n(734057),
-    m = n(71393),
-    g = n(576705),
+    g = n(71393),
+    m = n(576705),
     S = n(994500),
     N = n(309010),
     C = n(543465),
@@ -58,7 +58,7 @@ function k(e, t, n, r) {
         null != a &&
         a.type !== i.r.GUILD_STAGE_VOICE &&
         n !== a.id &&
-        !!g.A.canBasicChannel(y.hVb.VIEW_CHANNEL, a) &&
+        !!m.A.canBasicChannel(y.hVb.VIEW_CHANNEL, a) &&
         (!r || !C.Ay.isGuildOrCategoryOrChannelMuted(e, t))
     );
 }
@@ -70,8 +70,8 @@ function F(e) {
 class B extends r.Ay.Store {
     static displayName = "GuildMediaStateStore";
     initialize() {
-        (this.waitFor(_.A, f.A, p.default, T.A, o.Ay, E.Ay, m.A, g.A, S.A, N.Ay, h.A, C.Ay, O.A),
-            this.syncWith([_.A, f.A, T.A, o.Ay, E.Ay, m.A, g.A, S.A, N.Ay, h.A, C.Ay], w));
+        (this.waitFor(_.A, f.A, p.default, T.A, o.Ay, E.Ay, g.A, m.A, S.A, N.Ay, h.A, C.Ay, O.A),
+            this.syncWith([_.A, f.A, T.A, o.Ay, E.Ay, g.A, m.A, S.A, N.Ay, h.A, C.Ay], w));
     }
     getGuildMediaState(e) {
         let t = v.get(e);
@@ -123,7 +123,7 @@ class B extends r.Ay.Store {
                         0 === t.blockedOrIgnoredUserIds.size
                             ? r
                             : r.filter((e) => !(0, c.PH)([...e.userIds], t.blockedOrIgnoredUserIds)),
-                    s = m.A.getGuild(e)?.afkChannelId,
+                    s = g.A.getGuild(e)?.afkChannelId,
                     _ = O.A.getVoiceStates(e),
                     E = !1,
                     y = !1;
@@ -141,7 +141,7 @@ class B extends r.Ay.Store {
                     b = null != v && v.some((n) => !t.skipMutedVcs || !C.Ay.isGuildOrCategoryOrChannelMuted(e, n)),
                     w = R.default.keys(h.A.getStageInstancesByGuild(e)).some((e) => {
                         let t = T.A.getBasicChannel(e);
-                        return null != t && (0, u.A)(t, g.A);
+                        return null != t && (0, u.A)(t, m.A);
                     }),
                     G = (0, d.H)(a[0]?.location),
                     x = (0, l.pE)(T.A.getChannel(G))

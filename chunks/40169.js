@@ -45,20 +45,20 @@ var c = n(626584),
     f = n(597643);
 let p = new c.A("EntityVersionsManager");
 class T extends l.A {
-    actions = { GUILD_CREATE: S, DELETED_ENTITY_IDS: m };
+    actions = { GUILD_CREATE: S, DELETED_ENTITY_IDS: g };
     _initialize() {
-        s.h.subscribe("CONNECTION_OPEN", g);
+        s.h.subscribe("CONNECTION_OPEN", m);
     }
     _terminate() {
-        s.h.unsubscribe("CONNECTION_OPEN", g);
+        s.h.unsubscribe("CONNECTION_OPEN", m);
     }
 }
-function m(e) {
+function g(e) {
     let t = h.A.getGuild(e.guild_id)?.name;
     (p.fileOnly(`received deleted guild entities (id: ${e.guild_id}, name: ${t})`),
         a.Ay.Emitter.batched(() => {
             var t, n, i, r, a, l, o, d;
-            let c, h, f, T, m;
+            let c, h, f, T, g;
             (null != e.channels &&
                 ((t = e.guild_id),
                 (n = new Set(e.channels)),
@@ -82,11 +82,11 @@ function m(e) {
                 null != e.stickers &&
                     ((o = e.guild_id),
                     (d = new Set(e.stickers)),
-                    (m = (T = _.A.getStickersByGuildId(o) ?? []).filter((e) => d.has(e.id))),
-                    T.length !== m.length && s.h.dispatch({ type: "GUILD_STICKERS_UPDATE", guildId: o, stickers: m })));
+                    (g = (T = _.A.getStickersByGuildId(o) ?? []).filter((e) => d.has(e.id))),
+                    T.length !== g.length && s.h.dispatch({ type: "GUILD_STICKERS_UPDATE", guildId: o, stickers: g })));
         }));
 }
-function g() {
+function m() {
     d.getAll().then((e) => {
         e.forEach((e) => N(e));
     });

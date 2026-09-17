@@ -4,7 +4,7 @@
     IU: () => l,
     Is: () => I,
     RX: () => o,
-    S8: () => g,
+    S8: () => m,
     Wb: () => h,
     XE: () => a,
     ZJ: () => T,
@@ -69,7 +69,7 @@ function p(e, t) {
 function T(e) {
     return `${Math.round(e / 1048576)} MB`;
 }
-let m = [
+let g = [
         { id: "claude-fable-5-1", label: "Claude Fable 5.1", provider: "anthropic" },
         { id: "claude-opus-5", label: "Claude Opus 5", provider: "anthropic" },
         { id: "claude-sonnet-5", label: "Claude Sonnet 5", provider: "anthropic" },
@@ -79,7 +79,7 @@ let m = [
         { id: "gpt-5.6-luna", label: "GPT-5.6 Luna", provider: "openai", supports_fast: !0 },
         { id: "gpt-6-astra", label: "GPT-6 Astra", provider: "openai", supports_fast: !0 },
     ],
-    g = { main: m, subagent: m, thinking: ["low", "medium", "high", "xhigh", "max"] },
+    m = { main: g, subagent: g, thinking: ["low", "medium", "high", "xhigh", "max"] },
     S = [
         { id: "workers-ai/@cf/moonshotai/kimi-k2.6", label: "Kimi K2.6", provider: "workers-ai" },
         { id: "workers-ai/@cf/zai-org/glm-5.2", label: "GLM 5.2", provider: "workers-ai" },
@@ -88,4 +88,4 @@ let m = [
         { id: "xai/grok-4.6", label: "Grok 4.6", provider: "xai" },
         { id: "workers-ai/@cf/zai-org/glm-4.7-flash", label: "GLM 4.7 Flash", provider: "workers-ai" },
     ],
-    N = { main: S, subagent: S, thinking: g.thinking };
+    N = { main: S, subagent: S, thinking: m.thinking };

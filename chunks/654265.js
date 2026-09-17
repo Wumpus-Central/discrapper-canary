@@ -12,7 +12,7 @@ function m(e) {
     let [t, n] = i.useState(!1),
         [m, h] = i.useState(!1),
         g = r.default.cast(e),
-        { joinRequest: p, guild: A } = (0, l.cf)([c.A, d.A, s.A, a.A], () => {
+        { joinRequest: A, guild: p } = (0, l.cf)([c.A, d.A, s.A, a.A], () => {
             let e = c.A.getRequest(g);
             if (null == e) return { joinRequest: null, isModmin: !1, guild: null };
             let t = s.A.getGuild(e.guildId) ?? d.A.getJoinRequestGuild(e.guildId);
@@ -20,15 +20,15 @@ function m(e) {
         });
     return (
         i.useEffect(() => {
-            null != A || m || (h(!0), o.A.fetchRequestToJoinGuilds());
-        }, [A, m]),
+            null != p || m || (h(!0), o.A.fetchRequestToJoinGuilds());
+        }, [p, m]),
         i.useEffect(() => {
-            null == p &&
+            null == A &&
                 (n(!0),
                 o.A.fetchJoinRequestForInterview(g).finally(() => {
                     n(!1);
                 }));
-        }, [p, g]),
-        { loading: t, joinRequest: p, joinRequestGuild: A }
+        }, [A, g]),
+        { loading: t, joinRequest: A, joinRequestGuild: p }
     );
 }

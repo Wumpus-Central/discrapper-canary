@@ -21,8 +21,8 @@ var I = n(270962);
 let f = n(786661).E.applicationIds["0"];
 var p = n(876474),
     T = n(190443);
-let m = "Clip signal handler registration";
-function g(e) {
+let g = "Clip signal handler registration";
+function m(e) {
     return !!c.Ay.getEnableAutoclipping() && d.A.isGameAllowed(e ?? r.Ay.getVisibleGame()?.id);
 }
 class S extends i.A {
@@ -45,40 +45,40 @@ class S extends i.A {
                 {
                     type: "voiceChannel",
                     name: "ml-audio-classification",
-                    isEnabled: () => (0, u.$i)(m) && g(),
+                    isEnabled: () => (0, u.$i)(g) && m(),
                     importHandler: () => n.e("553725").then(n.bind(n, 691148)),
                 },
                 {
                     type: "voiceChannel",
                     name: "distributed-clipping",
-                    isEnabled: () => g() && E.A.getConfig({ location: m }).enableDistributedClips,
+                    isEnabled: () => m() && E.A.getConfig({ location: g }).enableDistributedClips,
                     importHandler: () => n.e("878045").then(n.bind(n, 359788)),
                 },
                 {
                     type: "application",
                     name: "steam-timeline",
-                    isEnabled: () => g() && I.A.getConfig({ location: m }).enableSteamTimeline,
+                    isEnabled: () => m() && I.A.getConfig({ location: g }).enableSteamTimeline,
                     importHandler: () => n.e("533196").then(n.bind(n, 551367)),
                 },
                 {
                     type: "application",
                     name: "league-of-legends",
                     applicationId: p.m,
-                    isEnabled: () => g(p.m) && A.A.getConfig({ location: m }).enableLeagueEvents,
+                    isEnabled: () => m(p.m) && A.A.getConfig({ location: g }).enableLeagueEvents,
                     importHandler: () => n.e("618549").then(n.bind(n, 877588)),
                 },
                 {
                     type: "application",
                     name: "cs2-gsi",
                     applicationId: f,
-                    isEnabled: () => g(f) && _.A.getConfig({ location: m }).enableCs2Gsi,
+                    isEnabled: () => m(f) && _.A.getConfig({ location: g }).enableCs2Gsi,
                     importHandler: () => Promise.all([n.e("556967"), n.e("860838")]).then(n.bind(n, 525509)),
                 },
                 {
                     type: "application",
                     name: "rocket-league",
                     applicationId: T.e,
-                    isEnabled: () => g(T.e) && h.getConfig({ location: m }).enableRocketLeagueEvents,
+                    isEnabled: () => m(T.e) && h.getConfig({ location: g }).enableRocketLeagueEvents,
                     importHandler: () => Promise.all([n.e("556967"), n.e("182150")]).then(n.bind(n, 446885)),
                 },
             ]))

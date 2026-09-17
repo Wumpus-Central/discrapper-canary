@@ -1,4 +1,4 @@
-n.d(t, { BB: () => A, Qi: () => h, az: () => p, bb: () => m, fZ: () => g });
+n.d(t, { BB: () => p, Qi: () => h, az: () => A, bb: () => m, fZ: () => g });
 var i = n(582128),
     l = n(17928);
 n(608461);
@@ -43,9 +43,9 @@ function g(e) {
         d.A.getGuildProductsForGuild(e, { publishedOnly: t ?? !a.A.isViewingServerShop(e) }),
     );
 }
-function p(e) {
+function A(e) {
     return (0, l.bG)([d.A], () => (null == e ? void 0 : d.A.getGuildProduct(e)));
 }
-function A(e) {
+function p(e) {
     return (0, l.bG)([r.A], () => null != e && r.A.can(u.xBc.ADMINISTRATOR, e));
 }

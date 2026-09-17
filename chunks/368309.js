@@ -16,11 +16,11 @@ var i = n(477900),
     f = n(652215),
     p = n(202541),
     T = n(375708),
-    m = n(644242),
-    g = n(309427);
+    g = n(644242),
+    m = n(309427);
 function S(e) {
     let { onClose: t, analyticsLocations: n, ...a } = e,
-        S = (0, h.TM)() ? m.A : g.A,
+        S = (0, h.TM)() ? g.A : m.A,
         { analyticsLocations: N } = (0, o.Ay)(n, l.A.PREMIUM_UPSELL);
     (0, s.Ay)(() => {
         (A.default.track(f.HAw.PREMIUM_UPSELL_VIEWED, {

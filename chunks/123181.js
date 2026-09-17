@@ -74,7 +74,7 @@ function f(e) {
         p = "filled" === f,
         I = (0, l.useRef)(null),
         j = (0, l.useMemo)(() => (null != t ? t : []), [t]),
-        A = (0, l.useCallback)(
+        E = (0, l.useCallback)(
             function (e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                     i = new Set(j),
@@ -91,7 +91,7 @@ function f(e) {
             },
             [j, n],
         ),
-        E = (0, l.useCallback)(
+        A = (0, l.useCallback)(
             (e) => {
                 let t = new Set(j);
                 (e.forEach((e) => {
@@ -109,7 +109,7 @@ function f(e) {
         onRequestClose: c,
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, i.jsx)(x, { currentTags: j, onTagSelect: A, onNoneSelect: E, onClose: t });
+            return (0, i.jsx)(x, { currentTags: j, onTagSelect: E, onNoneSelect: A, onClose: t });
         },
         children: (e) =>
             (0, i.jsx)("div", {

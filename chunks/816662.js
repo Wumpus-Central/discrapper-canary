@@ -1,4 +1,4 @@
-n.d(t, { AC: () => T, Hb: () => N, Ol: () => y, e4: () => C, hp: () => S, jA: () => O, xl: () => R, zk: () => m });
+n.d(t, { AC: () => T, Hb: () => N, Ol: () => y, e4: () => C, hp: () => S, jA: () => O, xl: () => R, zk: () => g });
 var i = n(435558),
     r = n(665260),
     a = n(873298),
@@ -33,7 +33,7 @@ function T(e, t, n, i) {
             location: i,
         }));
 }
-function m(e, t, n, i) {
+function g(e, t, n, i) {
     if (null == e) return;
     if (c.A.isFullServerPreview(e)) {
         ((0, d.$u)(e, n ? [t] : [], n ? [] : [t]), (0, d.Z$)(e, { optInEnabled: !0 }));
@@ -57,13 +57,13 @@ function m(e, t, n, i) {
             location: i,
         }));
 }
-async function g(e, t) {
+async function m(e, t) {
     null == e ||
         c.A.isFullServerPreview(e) ||
         (await u.A.saveUserGuildSettingsBulk({ [e]: { channel_overrides: t } }),
         s.h.dispatch({ type: "USER_GUILD_SETTINGS_REMOVE_PENDING_CHANNEL_UPDATES", guildId: e, updates: t }));
 }
-let S = (0, i.debounce)((e, t) => g(e, t), 1e3);
+let S = (0, i.debounce)((e, t) => m(e, t), 1e3);
 function N(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         i = arguments.length > 3 ? arguments[3] : void 0;

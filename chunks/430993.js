@@ -26,8 +26,8 @@ function f(e) {
         [h, I] = r.useState(!1),
         [f, p] = r.useState(null != a),
         T = r.useRef(null),
-        m = (0, d.A)(T, a?.ref, E),
-        g = r.useRef(null),
+        g = (0, d.A)(T, a?.ref, E),
+        m = r.useRef(null),
         S = r.useRef(void 0),
         N = null != t;
     r.useEffect(
@@ -50,12 +50,12 @@ function f(e) {
             let e = new ResizeObserver(() => {
                     if (O) return void p(!0);
                     let e = T?.current?.getScrollerNode() ?? null;
-                    if (null == e || g?.current == null) return;
+                    if (null == e || m?.current == null) return;
                     let t = e.getBoundingClientRect();
-                    p(g.current.getBoundingClientRect().height > t.height);
+                    p(m.current.getBoundingClientRect().height > t.height);
                 }),
                 t = T?.current?.getScrollerNode() ?? null;
-            return (null != t && e.observe(t), g?.current != null && e.observe(g.current), () => e.disconnect());
+            return (null != t && e.observe(t), m?.current != null && e.observe(m.current), () => e.disconnect());
         }, [O]),
         (0, i.jsxs)(c.F, {
             children: [
@@ -71,18 +71,18 @@ function f(e) {
                           className: A.bodyList,
                           innerAriaOrientation: a.innerAriaOrientation ?? "vertical",
                           innerRole: a.innerRole ?? "listbox",
-                          ref: m,
+                          ref: g,
                           onScroll: (e) => {
                               (C(), a.onScroll?.(e));
                           },
                       })
                     : (0, i.jsx)(_.Gt, {
-                          ref: m,
+                          ref: g,
                           className: A.body,
                           onScroll: C,
                           disableFocusRingScope: !0,
                           children: (0, i.jsx)("main", {
-                              ref: g,
+                              ref: m,
                               className: s()(A.bodyInner, { [A.bodyInnerShouldScroll]: f }),
                               children: n,
                           }),

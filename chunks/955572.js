@@ -1,7 +1,7 @@
 n.d(t, {
     AC: () => u,
     Bm: () => A,
-    D3: () => m,
+    D3: () => g,
     Dm: () => L,
     Er: () => I,
     FU: () => P,
@@ -11,7 +11,7 @@ n.d(t, {
     Jb: () => S,
     M1: () => D,
     Qp: () => _,
-    RI: () => g,
+    RI: () => m,
     RJ: () => f,
     XS: () => c,
     Xt: () => y,
@@ -73,10 +73,10 @@ function T(e) {
           })
         : t && !n && r.Ay.clearSettingsOverride("gifAutoPlay", "animateEmoji", "animateStickers");
 }
-function m(e) {
+function g(e) {
     i.h.dispatch({ type: "ACCESSIBILITY_SET_SYNC_FORCED_COLORS", syncForcedColors: e });
 }
-function g(e) {
+function m(e) {
     i.h.dispatch({ type: "ACCESSIBILITY_SYSTEM_COLOR_PREFERENCES_CHANGED", systemForcedColors: e });
 }
 function S(e) {

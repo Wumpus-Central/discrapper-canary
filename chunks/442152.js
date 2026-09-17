@@ -490,8 +490,8 @@ var e2 = n(307301),
     e3 = n(182922),
     e8 = n(683522);
 let e6 = (0, z.xI)(M.A.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_PRIMARY_DIMENSIONS),
-    e5 = (0, z.xI)(M.A.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_SECONDARY_DIMENSIONS),
-    e7 = i.memo(function (e) {
+    e7 = (0, z.xI)(M.A.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_SECONDARY_DIMENSIONS),
+    e5 = i.memo(function (e) {
         let { stickersGrid: t } = e,
             n = U.bM.useStore((e) => e.inspectedExpressionPosition),
             s = i.useMemo(() => {
@@ -519,7 +519,7 @@ let e6 = (0, z.xI)(M.A.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_B
                     let i = T.A.getStickerPack(e.pack_id);
                     null != i &&
                         ((t = eg.intl.format(eg.t.cZOkbs, { source: i.name })),
-                        (n = (0, l.jsx)(em.A, { size: e5, sticker: (0, eh.Id)(i), disableAnimation: !0 })));
+                        (n = (0, l.jsx)(em.A, { size: e7, sticker: (0, eh.Id)(i), disableAnimation: !0 })));
                 }
                 return { title: t, graphic: n };
             })(s),
@@ -1124,7 +1124,7 @@ let tv = i.forwardRef(function (e, t) {
                                   stickyHeaders: !0,
                                   ref: I,
                               }),
-                        (0, l.jsx)(e7, { stickersGrid: x }),
+                        (0, l.jsx)(e5, { stickersGrid: x }),
                     ],
                 }),
             })

@@ -1,4 +1,4 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => g });
 var i = n(17928),
     r = n(459838),
     a = n(228366),
@@ -43,7 +43,7 @@ class T extends i.Ay.Store {
         return I;
     }
 }
-let m = new T(a.h, {
+let g = new T(a.h, {
     VIDEO_FILTER_ASSETS_FETCH_SUCCESS: function (e) {
         let { assets: t } = e,
             n = {};

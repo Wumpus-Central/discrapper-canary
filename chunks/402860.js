@@ -41,8 +41,8 @@ async function f(e) {
             tabSection: f,
             scrollTarget: p,
             hideRestrictedProfile: T,
-            sourceAnalyticsLocations: m,
-            appContext: g,
+            sourceAnalyticsLocations: g,
+            appContext: m,
             customStatusPrompt: S = null,
             onModalOpen: N,
         } = e,
@@ -97,8 +97,8 @@ async function f(e) {
         tabSection: f,
         scrollTarget: p,
         hideRestrictedProfile: T,
-        sourceAnalyticsLocations: m,
-        appContext: g,
+        sourceAnalyticsLocations: g,
+        appContext: m,
         onModalOpen: N,
     });
 }

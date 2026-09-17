@@ -12,7 +12,7 @@ n.d(t, {
     D_: () => R,
     pK: () => tr,
     JI: () => eB,
-    HZ: () => e6,
+    HZ: () => e5,
     vf: () => ep,
     Vv: () => e7,
     BQ: () => v,
@@ -21,7 +21,7 @@ n.d(t, {
     _8: () => te,
     j7: () => e_,
     JG: () => eq,
-    XZ: () => em,
+    XZ: () => eg,
     Q_: () => ej,
     Yt: () => tl,
     he: () => eL,
@@ -39,7 +39,7 @@ n.d(t, {
     _Z: () => e0,
     NR: () => w,
     T3: () => k,
-    cU: () => eg,
+    cU: () => em,
     ML: () => y,
     WY: () => es,
     Zk: () => e3,
@@ -68,7 +68,7 @@ n.d(t, {
     tP: () => W,
     PZ: () => tn,
     H1: () => ef,
-    TA: () => e5,
+    TA: () => e6,
     Q$: () => ew,
     Pw: () => eZ,
     rs: () => ek,
@@ -114,7 +114,7 @@ function f(e, t, n, i) {
         l = () => n(h.A.settings[e]?.[t]);
     return {
         getSetting: l,
-        updateSetting: g(l, (n) =>
+        updateSetting: m(l, (n) =>
             A.wc.updateAsync(
                 e,
                 (e) => {
@@ -142,7 +142,7 @@ function p(e, t, n) {
                 }) ?? i
             );
         },
-        updateSetting: g(i, function (i) {
+        updateSetting: m(i, function (i) {
             return E.A.shouldSync(t)
                 ? e.updateSetting(i)
                 : (_.h.dispatch({
@@ -163,13 +163,13 @@ function T(e, t, n, i) {
             let t = e.useSetting();
             return i() ?? t;
         },
-        updateSetting: g(
+        updateSetting: m(
             r,
             (n) => (_.h.dispatch({ type: "USER_SETTINGS_OVERRIDE_CLEAR", settings: [t] }), e.updateSetting(n)),
         ),
     };
 }
-function m(e) {
+function g(e) {
     let {
         baseSetting: t,
         isEligible: n,
@@ -191,7 +191,7 @@ function m(e) {
         updateSetting: (e) => t.updateSetting(e),
     };
 }
-function g(e, t) {
+function m(e, t) {
     return function (n) {
         return "function" == typeof n ? t(n(e())) : t(n);
     };
@@ -527,7 +527,7 @@ let ec = f(
         (e) => l._t.create({ value: e }),
     ),
     eT = [],
-    em = f(
+    eg = f(
         "privacy",
         "adTopicOptOuts",
         (e) => e ?? eT,
@@ -539,7 +539,7 @@ f(
     (e) => e?.value ?? !0,
     (e) => l._t.create({ value: e }),
 );
-let eg = f(
+let em = f(
         "voiceAndVideo",
         "afkTimeout",
         (e) => e?.value ?? 60,
@@ -847,7 +847,7 @@ let ej = p(
         (e) => e ?? eQ,
         (e) => e,
     );
-m({
+g({
     baseSetting: f(
         "privacy",
         "defaultGuildsActivityRestricted",
@@ -859,7 +859,7 @@ m({
     ineligibleDefault: s.AN.OFF,
     eligibleDefault: () => s.AN.ON_FOR_LARGE_GUILDS,
 });
-let e0 = m({
+let e0 = g({
         baseSetting: f(
             "privacy",
             "defaultGuildsActivityRestrictedV2",
@@ -889,13 +889,13 @@ let e0 = m({
         (e) => e?.value ?? !0,
         (e) => l._t.create({ value: e }),
     ),
-    e5 = f(
+    e6 = f(
         "privacy",
         "slayerSdkReceiveDmsInGame",
         (e) => e ?? s.fL.SLAYER_SDK_RECEIVE_IN_GAME_DMS_UNSET,
         (e) => e,
     ),
-    e6 = f(
+    e5 = f(
         "ads",
         "alwaysDeliver",
         (e) => e ?? !1,

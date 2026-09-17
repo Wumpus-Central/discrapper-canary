@@ -26,7 +26,7 @@ function h(e) {
             d.A.getFavorites(),
             d.A.getFrequentlyUsedSoundIds(),
         ]),
-        { unlockedFavoritesAndFrequentlyUsedSounds: T, lockedSounds: m } = (function (e) {
+        { unlockedFavoritesAndFrequentlyUsedSounds: T, lockedSounds: g } = (function (e) {
             let {
                     channel: t,
                     canUseCrossGuildSounds: n,
@@ -123,8 +123,8 @@ function h(e) {
                 let d = o.slice(0, l);
                 return r ? [...d, e] : d;
             }, [i, a, t, n]);
-        })({ allSounds: I, currentGuildId: n, unlockedFavoritesAndFrequentlyUsedSounds: T, lockedSounds: m }),
-        hasLockedSound: m.length > 0,
+        })({ allSounds: I, currentGuildId: n, unlockedFavoritesAndFrequentlyUsedSounds: T, lockedSounds: g }),
+        hasLockedSound: g.length > 0,
         isFetching: h,
     };
 }

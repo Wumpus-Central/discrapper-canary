@@ -1,4 +1,4 @@
-n.d(t, { AE: () => N, LE: () => m, kr: () => S, mZ: () => _.A, yt: () => g });
+n.d(t, { AE: () => N, LE: () => g, kr: () => S, mZ: () => _.A, yt: () => m });
 var i = n(435558),
     r = n.n(i),
     a = n(635377),
@@ -27,11 +27,11 @@ function T(e, t, n) {
     }
     null != i && i.forEach((n) => n(e, t));
 }
-function m(e) {
+function g(e) {
     let t = p.get(e);
     return null != t && t.loaded;
 }
-function g(e, t) {
+function m(e, t) {
     let n = p.get(e);
     if (null != n && n.loaded)
         return (
@@ -99,12 +99,12 @@ function N(e) {
             format: f = null,
             quality: p = null,
             animated: T = !1,
-            srcIsAnimated: m = !1,
+            srcIsAnimated: g = !1,
         } = e,
-        g = i,
+        m = i,
         S = a;
-    (c < 1 && ((g = Math.round(i * c)), (S = Math.round(a * c))),
-        null != s && (g = Math.min(g, s)),
+    (c < 1 && ((m = Math.round(i * c)), (S = Math.round(a * c))),
+        null != s && (m = Math.min(m, s)),
         null != o && (S = Math.min(S, o)));
     let N = (0, _.A)();
     return (function (e) {
@@ -120,14 +120,14 @@ function N(e) {
             srcIsAnimated: T = !1,
         } = e;
         if (t.startsWith("data:image") || u.A.isDiscordCdnUrl(t)) return t;
-        let [m, g] = (function (e) {
+        let [g, m] = (function (e) {
             let [t, n] = e.split("?");
             return [t, l.parse(n)];
         })(t);
-        (null != c && (g.format = c),
-            null != f && (g.quality = f),
-            p && T && (h.test(t) || I.test(t)) && (g.animated = !0),
-            I.test(t) && (g.format = "webp"));
+        (null != c && (m.format = c),
+            null != f && (m.quality = f),
+            p && T && (h.test(t) || I.test(t)) && (m.animated = !0),
+            I.test(t) && (m.format = "webp"));
         let S = (0, d.Uj)({ width: s, height: o, maxWidth: A.uJv, maxHeight: A.uJv });
         if (((s = S.width), (o = S.height), s !== i || o !== a)) {
             let e = (function (e) {
@@ -148,18 +148,18 @@ function N(e) {
                     sourceHeight: a,
                     maxUpscale: (0, E.iE)(e, (0, _.A)()),
                 })),
-                (t.width !== i || t.height !== a) && ((g.width = 0 | t.width), (g.height = 0 | t.height)));
+                (t.width !== i || t.height !== a) && ((m.width = 0 | t.width), (m.height = 0 | t.height)));
         }
-        return (r().isEmpty(g) || (m += "?" + l.stringify(g)), m);
+        return (r().isEmpty(m) || (g += "?" + l.stringify(m)), g);
     })({
         src: t,
         sourceWidth: i,
         sourceHeight: a,
-        targetWidth: (g *= N),
+        targetWidth: (m *= N),
         targetHeight: (S *= N),
         format: f,
         quality: p,
         animated: T,
-        srcIsAnimated: m,
+        srcIsAnimated: g,
     });
 }

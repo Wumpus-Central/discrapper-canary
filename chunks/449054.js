@@ -1,9 +1,9 @@
 (n.d(t, {
-    Cf: () => m,
+    Cf: () => g,
     PU: () => A,
     Z2: () => _,
     br: () => f,
-    cf: () => g,
+    cf: () => m,
     fd: () => I,
     gp: () => h,
     jE: () => E,
@@ -121,7 +121,7 @@ function T(e) {
     let { categoryId: t } = e;
     c.default.track(u.HAw.GUILD_DISCOVERY_GET_FEATURED_GUILDS_FAILED, { category_id: t });
 }
-function m(e) {
+function g(e) {
     let { loadId: t, searchId: n, query: i, guildResults: r, analyticsContext: a, categoryId: s, isTagSearch: l } = e;
     c.default.track(u.HAw.SEARCH_RESULT_VIEWED, {
         search_type: l ? u.I4_.GUILD_DISCOVERY_TAG : u.I4_.GUILD_DISCOVERY,
@@ -134,7 +134,7 @@ function m(e) {
         category_id: s,
     });
 }
-function g(e) {
+function m(e) {
     let t = a.A.getLoadId(e);
     c.default.track(u.HAw.GUILD_DISCOVERY_GUILD_JOIN_CLICKED, {
         guild_id: e,

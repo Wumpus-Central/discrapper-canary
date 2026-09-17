@@ -16,11 +16,11 @@ let E = { ignoredDevices: {} },
     f = {},
     p = {},
     T = { id: null, justChanged: !1 },
-    m = { id: null, justChanged: !1 },
-    g = /\((.+)\)\s*$/;
+    g = { id: null, justChanged: !1 },
+    m = /\((.+)\)\s*$/;
 function S(e) {
     if ((0, c.getPlatform)() === c.PlatformTypes.WINDOWS) {
-        let t = e.name.match(g);
+        let t = e.name.match(m);
         if (null != t) return t[1];
     }
     return e.name;
@@ -58,7 +58,7 @@ class C extends a.Ay.DeviceSettingsStore {
         return f;
     }
     get lastOutputSystemDevice() {
-        return m;
+        return g;
     }
 }
 let O = new C(s.h, {
@@ -76,11 +76,11 @@ let O = new C(s.h, {
             }));
         let a = {};
         if (
-            ((m.justChanged = !1),
+            ((g.justChanged = !1),
             n.forEach((e) => {
                 if (e.id === _.dx) {
                     let t = e.originalId ?? e.originalName;
-                    (t !== m.id && (m.justChanged = !0), (m.id = t));
+                    (t !== g.id && (g.justChanged = !0), (g.id = t));
                     return;
                 }
                 a[S(e)] = e.id;
@@ -97,13 +97,13 @@ let O = new C(s.h, {
             c = r().difference(s, l),
             E = r().difference(o, d),
             A = r().difference(l, s),
-            g = r().difference(d, o);
+            m = r().difference(d, o);
         return (
             (c.length > 0 || E.length > 0) && (p = {}),
             A.forEach((e) => {
                 p[e] = N(p[e], e, u.E.INPUT);
             }),
-            g.forEach((e) => {
+            m.forEach((e) => {
                 p[e] = N(p[e], e, u.E.OUTPUT);
             }),
             !(r().isEqual(s, l) && r().isEqual(o, d)) && ((I = i), (f = a), !0)

@@ -18,18 +18,18 @@ var n = s(562708),
 function g(e) {
     let { componentId: t, promotionId: s, promotionBannerMarketingComponentFields: g } = e,
         { analyticsLocations: f } = (0, m.Ay)(),
-        E = (0, x.p)();
+        A = (0, x.p)();
     (0, p.A)({
         type: n.ImpressionTypes.VIEW,
         name: n.ImpressionNames.PREMIUM_MARKETING_COMPONENT,
         properties: { component_type: i.C.MARKETING_PAGE_BANNER, component_id: t, promotion_id: s },
     });
-    let A = (0, h.h)({
+    let E = (0, h.h)({
             buttonAction: g.button?.buttonAction ?? o.d.OPEN_TIER_2_PAYMENT_MODAL,
             deeplinkSection: g.button?.deeplinkSection,
             applicationId: g.button?.navigableStorefrontApplicationId?.value,
             analyticsLocations: f,
-            analyticsLocation: E.location,
+            analyticsLocation: A.location,
         }),
         C = (0, j.a)(g.body),
         T = (0, j.C)(g.helpArticle, g.helpArticleId),
@@ -68,7 +68,7 @@ function g(e) {
                     children: (0, l.jsx)(d.$, {
                         variant: g.buttonVariant === c.F.PRIMARY ? "primary" : "expressive",
                         size: "md",
-                        onClick: A,
+                        onClick: E,
                         text: g.button.copy,
                         icon: N,
                         iconPosition: I,

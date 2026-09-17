@@ -20,8 +20,8 @@ var r = n(477900),
     P = n(202541),
     j = n(375708);
 let v = P.o2.STANDARD_BOX,
-    A,
-    [R, _, M] = (0, h.A)();
+    R,
+    [A, _, M] = (0, h.A)();
 function N(e) {
     let {
             isGift: t = !1,
@@ -37,7 +37,7 @@ function N(e) {
         [U, b] = l.useState(),
         [G, k] = l.useState(!1),
         O = (0, p.Ik)(C),
-        w = A;
+        w = R;
     O && (w = null != _ ? _ : v);
     let [D, F] = l.useState(w),
         [H, Z] = l.useState([]),
@@ -46,7 +46,7 @@ function N(e) {
         [W, J] = l.useState(
             t && (0, p.lo)(C) === p.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && null == P ? j.intl.string(j.t.ZkOo1U) : P,
         ),
-        [z, Y] = l.useState(void 0),
+        [Y, z] = l.useState(void 0),
         [K, Q] = l.useState(void 0),
         { enabled: q } = c.J.useConfig({ location: "GiftContext" }),
         { openGiftingBadgePostPurchaseModal: X, canShowGiftingBadgePostPurchase: $ } = (function () {
@@ -117,7 +117,7 @@ function N(e) {
                 (f.default.track(E.HAw.GIFT_PROMOTION_REWARD_SELECTED, { user_id: t?.id, reward_sku_id: n }),
                     eo.current.add(n));
         }, [H, V]),
-        (0, r.jsx)(R.Provider, {
+        (0, r.jsx)(A.Provider, {
             value: {
                 isGift: t,
                 giftCode: ee,
@@ -128,8 +128,8 @@ function N(e) {
                 setGiftRecipientError: b,
                 validatingGiftRecipient: G,
                 setValidatingGiftRecipient: k,
-                soundEffect: z,
-                setSoundEffect: Y,
+                soundEffect: Y,
+                setSoundEffect: z,
                 emojiConfetti: K,
                 setEmojiConfetti: Q,
                 customGiftMessage: W,
@@ -172,5 +172,5 @@ let S = {
 };
 function y(e) {
     let { children: t } = e;
-    return (0, r.jsx)(R.Provider, { value: S, children: t });
+    return (0, r.jsx)(A.Provider, { value: S, children: t });
 }

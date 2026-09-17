@@ -51,8 +51,8 @@ class p {
     }
 }
 var T = n(439818),
-    m = n(341923),
-    g = n(572164),
+    g = n(341923),
+    m = n(572164),
     S = n(831518),
     N = n(614584),
     C = n(31048),
@@ -876,13 +876,13 @@ class e_ extends l.A {
         }
     }
     handleSpeaking(e) {
-        if (!(0, g.T)() || e.context !== a.x.DEFAULT) return;
+        if (!(0, m.T)() || e.context !== a.x.DEFAULT) return;
         let t = f.Ay.isVoiceRecordingAllowedForUser(e.userId);
         (e.userId === E.default.getId() || t) &&
             this.process({ type: Y.Gy.SPEAKING, speakingFlags: e.speakingFlags, userId: e.userId });
     }
     handleSoundboardPlayStart(e) {
-        if (!(0, g.T)()) return;
+        if (!(0, m.T)()) return;
         let t = _.A.getSoundById(e.soundId);
         if (null == t) return;
         let n = d.A.getGuildEmojis(t.guildId)?.[t.emojiId ?? ""];
@@ -898,7 +898,7 @@ class e_ extends l.A {
         });
     }
     handleSoundboardPlayEnd(e) {
-        if (!(0, g.T)()) return;
+        if (!(0, m.T)()) return;
         let t = _.A.getSoundById(e.soundId);
         if (null == t) return;
         let n = d.A.getGuildEmojis(t.guildId)?.[t.emojiId ?? ""];
@@ -1025,7 +1025,7 @@ class e_ extends l.A {
     }
     canScheduleClipCandidate(e) {
         let t = f.Ay.getCurrentClipsSession();
-        if (null == t || !(0, m.jJ)(t.gameId) || c.Ay.getVisibleGame()?.isLauncher === !0) return !1;
+        if (null == t || !(0, g.jJ)(t.gameId) || c.Ay.getVisibleGame()?.isLauncher === !0) return !1;
         if (null != A.Ay.getVoiceChannelId()) return !0;
         let n = h.default.getCurrentUser(),
             i = n?.isStaff() === !0 || n?.isStaffPersonal() === !0;

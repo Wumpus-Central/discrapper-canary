@@ -1,7 +1,7 @@
 n.d(t, {
     Aw: () => O,
-    GD: () => m,
-    Hb: () => g,
+    GD: () => g,
+    Hb: () => m,
     Iu: () => R,
     SH: () => C,
     TX: () => T,
@@ -48,16 +48,16 @@ let p = [
     { reName: /\.(?:mp3|ogg|opus|wav|aiff|flac)$/, klass: "audio" },
 ];
 function T(e) {
-    return m(e.name, e.type);
+    return g(e.name, e.type);
 }
-function m(e, t) {
+function g(e, t) {
     e = e?.toLowerCase() ?? "";
     let n = s().find(p, (n) =>
         null != n.reType && null != t ? n.reType.test(t) : null != n.reName && "" !== e && n.reName.test(e),
     );
     return null != n ? n.klass : "unknown";
 }
-function g(e) {
+function m(e) {
     return r().filesize(e);
 }
 let S = [

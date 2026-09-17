@@ -16,8 +16,8 @@ var i = n(477900),
     f = n(688810),
     p = n(139286),
     T = n(915089),
-    m = n(465794),
-    g = n(594061),
+    g = n(465794),
+    m = n(594061),
     S = n(763827),
     N = n(287809),
     C = n(977997),
@@ -45,7 +45,7 @@ function G(e) {
         className: w.Sp,
         children: [
             (0, i.jsx)(u.E, { variant: "text-sm/medium", color: "text-default", children: a }),
-            (0, i.jsx)(m.A, {
+            (0, i.jsx)(g.A, {
                 size: "sm",
                 subscriptionTier: P.pe.TIER_2,
                 buttonTextOverride: U.intl.string(U.t.pj0XBN),
@@ -100,7 +100,7 @@ function k(e) {
 function F(e) {
     let { channel: t, guildId: n, analyticsSource: a, openFullPicker: o } = e,
         { analyticsLocations: h } = (0, f.Ay)(I.A.SOUNDBOARD_QUICK_ACCESS_POPOUT),
-        { sounds: T, hasLockedSound: m, isFetching: N } = (0, y.Ay)({ channel: t, currentGuildId: n }),
+        { sounds: T, hasLockedSound: g, isFetching: N } = (0, y.Ay)({ channel: t, currentGuildId: n }),
         C = (0, c.bG)([S.A], () => S.A.getMediaSessionId()),
         O = (0, c.bG)([L.A], () => L.A.getFavorites().size);
     return (
@@ -116,14 +116,14 @@ function F(e) {
             },
         }),
         r.useEffect(() => {
-            (R.E7(), g.bW.loadIfNecessary());
+            (R.E7(), m.bW.loadIfNecessary());
         }, []),
         (0, i.jsx)(f.f5, {
             value: h,
             children: (0, i.jsxs)(d.lG, {
                 children: [
                     (0, i.jsxs)("div", {
-                        className: s()(w.kL, m && w.Dx),
+                        className: s()(w.kL, g && w.Dx),
                         children: [
                             (0, i.jsxs)("div", {
                                 className: w.N1,
@@ -153,7 +153,7 @@ function F(e) {
                                 : (0, i.jsx)(k, { sounds: T, channel: t, guildId: n, analyticsLocations: h }),
                         ],
                     }),
-                    m && (0, i.jsx)(G, { analyticsLocations: h }),
+                    g && (0, i.jsx)(G, { analyticsLocations: h }),
                 ],
             }),
         })

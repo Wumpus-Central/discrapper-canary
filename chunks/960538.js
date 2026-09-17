@@ -11,8 +11,8 @@ var i = n(477900),
     m = n(866665),
     h = n(939249),
     g = n(460905),
-    p = n(189551),
-    A = n(649963),
+    A = n(189551),
+    p = n(649963),
     x = n(815807),
     f = n(429433),
     E = n(652215),
@@ -26,7 +26,7 @@ class N extends l.Component {
     onAddReaction = (e, t) => {
         if (null == e) return;
         let { channel: n, message: i, isForumToolbar: l } = this.props;
-        (0, A.BB)(n.id, i.id, (0, x.jq)(e), l ? A.qN.FORUM_TOOLBAR : A.qN.MESSAGE_INLINE_BUTTON, { burst: t });
+        (0, p.BB)(n.id, i.id, (0, x.jq)(e), l ? p.qN.FORUM_TOOLBAR : p.qN.MESSAGE_INLINE_BUTTON, { burst: t });
     };
     handleReactionPickerToggle = () => {
         this.setState((e) => ({ isReactionPickerActive: !e.isReactionPickerActive }));
@@ -78,8 +78,8 @@ class N extends l.Component {
                         onClick: (e) => {
                             this.handleAddReactionClick(e);
                         },
-                        onMouseEnter: () => (0, p.K)(I.EmojiInteractionPoint.AddReactionPopoutMouseEntered),
-                        onFocus: () => (0, p.K)(I.EmojiInteractionPoint.AddReactionPopoutFocused),
+                        onMouseEnter: () => (0, A.K)(I.EmojiInteractionPoint.AddReactionPopoutMouseEntered),
+                        onFocus: () => (0, A.K)(I.EmojiInteractionPoint.AddReactionPopoutFocused),
                         className: a()(o.reactionBtn, { [o.active]: r }, t),
                         children: [(0, i.jsx)(g.n, { ...d }), n],
                     }),

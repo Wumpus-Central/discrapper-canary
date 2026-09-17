@@ -11,7 +11,7 @@ let I = 30 * A.A.Millis.SECOND,
     f = 10 * A.A.Millis.MINUTE,
     p = null,
     T = !1;
-function m() {
+function g() {
     ((i = new Map()),
         (r = 0),
         (a = new Map()),
@@ -21,10 +21,10 @@ function m() {
         (p = null),
         (T = !1));
 }
-function g(e, t) {
+function m(e, t) {
     (i = new Map(i)).set(e, t);
 }
-m();
+g();
 class S extends _.Ay.Store {
     static displayName = "AdDeliveryStore";
     get lastFetchedQuestToDeliver() {
@@ -58,11 +58,11 @@ class S extends _.Ay.Store {
 }
 let N = new S(E.h, {
     LOGOUT: function () {
-        m();
+        g();
     },
     QUESTS_FETCH_QUEST_TO_DELIVER_BEGIN: function (e) {
         let { placement: t } = e;
-        g(t, !0);
+        m(t, !0);
     },
     QUESTS_FETCH_QUEST_TO_DELIVER_SUCCESS: function (e) {
         let {
@@ -79,7 +79,7 @@ let N = new S(E.h, {
             fetchedAt: f,
         } = e;
         ((r = Date.now()),
-            g(d, !1),
+            m(d, !1),
             (s = new Map(s)),
             !0 === i && null == t && c?.decision_id != null
                 ? s.set(d, {
@@ -106,22 +106,22 @@ let N = new S(E.h, {
     },
     QUESTS_FETCH_QUEST_TO_DELIVER_FAILURE: function (e) {
         let { placement: t } = e;
-        ((s = new Map(s)).delete(t), (r = Date.now()), g(t, !1));
+        ((s = new Map(s)).delete(t), (r = Date.now()), m(t, !1));
         let n = l.get(t);
         (null == n && ((n = new d.A(I, f)), l.set(t, n)), o.set(t, Date.now() + n.fail()));
     },
     QUESTS_CLEAR_EXPIRED_QUEST_TO_DELIVER: function (e) {
         let { placement: t, responseTtlSeconds: n, fetchedAt: i } = e;
-        g(t, !1);
+        m(t, !1);
         let r = { creative: null, fetchedAt: i, ttlMillis: (0, h.Ce)(n) };
         (a = new Map(a)).set(t, r);
     },
     QUESTS_FETCH_QUEST_HOME_HERO_BEGIN: function (e) {
         let { placement: t } = e;
-        ((T = !0), g(t, !0));
+        ((T = !0), m(t, !0));
     },
     QUESTS_FETCH_QUEST_HOME_HERO_SUCCESS: function (e) {
-        ((T = !1), (p = Date.now()), g(e.placement, !1));
+        ((T = !1), (p = Date.now()), m(e.placement, !1));
         let t = {
             creative: null != e.questHomeHero ? { type: c.p.QUEST_HOME_HERO, questHomeHero: e.questHomeHero } : null,
             fetchedAt: e.fetchedAt,
@@ -136,6 +136,6 @@ let N = new S(E.h, {
     },
     QUESTS_FETCH_QUEST_HOME_HERO_FAILURE: function (e) {
         let { placement: t } = e;
-        ((T = !1), g(t, !1));
+        ((T = !1), m(t, !1));
     },
 });

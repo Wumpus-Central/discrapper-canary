@@ -1,4 +1,4 @@
-n.d(t, { A: () => g });
+n.d(t, { A: () => m });
 var i = n(574381),
     r = n(17928),
     a = n(228366),
@@ -44,7 +44,7 @@ function T(e) {
     }
     c = i;
 }
-class m extends r.Ay.PersistedStore {
+class g extends r.Ay.PersistedStore {
     static displayName = "ChannelTabsStore";
     static persistKey = "ChannelTabsStore";
     static migrations = [(e) => ({ tabs: [], activeTabId: null, enabled: e?.enabled ?? !1 })];
@@ -93,7 +93,7 @@ class m extends r.Ay.PersistedStore {
         return null != e && e.index < e.entries.length - 1;
     }
 }
-let g = new m(a.h, {
+let m = new g(a.h, {
     CHANNEL_TABS_OPEN: function (e) {
         if (c.length >= 25) return !1;
         if (0 === c.length) {

@@ -8,7 +8,7 @@ n.d(t, {
     ZV: () => C,
     J6: () => Y,
     zO: () => X,
-    rE: () => g,
+    rE: () => m,
     eA: () => k,
     tZ: () => N,
     Ls: () => z,
@@ -34,7 +34,7 @@ n.d(t, {
     GD: () => P,
     qh: () => D,
     kL: () => Z,
-    TY: () => m,
+    TY: () => g,
 });
 var i,
     r,
@@ -56,7 +56,7 @@ var i,
     f = n(636537),
     p = n(927813),
     T = n(738822);
-let m = {
+let g = {
     GIFT_INVENTORY_SETTINGS_BADGE: 1,
     QUEST_BAR: 2,
     QUEST_BAR_V2: 2,
@@ -64,7 +64,7 @@ let m = {
     ACTIVITY_PANEL: 4,
     QUEST_LIVE_STREAM: 8,
 };
-var g =
+var m =
     (((r = {}).ACTIVITY_PANEL = "quests_bar_activity_panel"),
     (r.QUESTS_MANAGER = "quests_manager"),
     (r.QUESTS_CONSOLE_OPTIMISTIC_UPDATES_MANAGER = "quests_console_optimistic_updates_manager"),

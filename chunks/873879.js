@@ -1,4 +1,4 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => g });
 var i = n(284009),
     r = n.n(i),
     a = n(478676),
@@ -16,7 +16,7 @@ let l = /\n{2,}$/,
     f = /^\n/,
     p = /\n *$/,
     T = /^[ \t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]+$/,
-    m = {
+    g = {
         ...s().defaultRules.list,
         requiredFirstCharacters: "\n *-0123456789".split(""),
         match: (e, t) => {
@@ -41,18 +41,18 @@ let l = /\n{2,}$/,
                 I = ` {${h},${h + 1}}`,
                 p = RegExp(_.replaceAll("%INDENT_CAPTURE_PATTERN%", I), "gm"),
                 T = RegExp("^ {1," + A + "}", "gm"),
-                m = d.match(p);
-            r()(null != m, "markup list items can not be parsed.");
-            let g = !1;
+                g = d.match(p);
+            r()(null != g, "markup list items can not be parsed.");
+            let m = !1;
             return {
                 ordered: a,
                 start: s,
-                items: m.map((e, i) => {
+                items: g.map((e, i) => {
                     let r,
                         a = e.replace(u, "").replace(T, ""),
-                        s = i === m.length - 1,
-                        l = -1 !== a.indexOf("\n\n") || (s && g);
-                    g = l;
+                        s = i === g.length - 1,
+                        l = -1 !== a.indexOf("\n\n") || (s && m);
+                    m = l;
                     let o = n.inline,
                         d = n._list,
                         c = n._listLevel;

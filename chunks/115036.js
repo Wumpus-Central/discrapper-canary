@@ -16,11 +16,11 @@ let I = "BrowserHandoffStore",
 function T() {
     null != i && null != r && (window.open(`${i}&key=${r}`), E.A.focus(null, !0));
 }
-function m() {
+function g() {
     ((r = null), p.stop(), (f = !1), o.w.set(I, f));
 }
-function g() {
-    m();
+function m() {
+    g();
 }
 class S extends l.Ay.Store {
     static displayName = "BrowserHandoffStore";
@@ -50,12 +50,12 @@ let N = new S(c.h, {
         if (null == t || null == n) return !1;
         ((f = !0), p.start(i, () => (0, u.mZ)()));
     },
-    BROWSER_HANDOFF_UNAVAILABLE: m,
+    BROWSER_HANDOFF_UNAVAILABLE: g,
     BROWSER_HANDOFF_SET_USER: function (e) {
         a = new _.A(e.user);
     },
-    LOGIN: g,
-    LOGIN_SUCCESS: g,
-    LOGOUT: g,
-    REGISTER: g,
+    LOGIN: m,
+    LOGIN_SUCCESS: m,
+    LOGOUT: m,
+    REGISTER: m,
 });

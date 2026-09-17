@@ -16,8 +16,8 @@ var r = n(132500),
     f = n(95701),
     p = n(280450),
     T = n(734057),
-    m = n(763827),
-    g = n(309010),
+    g = n(763827),
+    m = n(309010),
     S = n(287809),
     N = n(174459),
     C = n(625494),
@@ -235,11 +235,11 @@ function eu(e) {
         u = a.find((e) => e.userId === c),
         E = (0, X.H)(l),
         f = (0, X.D)(l),
-        g = T.A.getChannel(E);
-    if ((i && null != g && g.isPrivate() && n && null == u && o.A.selectParticipant(g.id, null), null == u)) return;
-    let C = m.A.getMediaSessionId(),
+        m = T.A.getChannel(E);
+    if ((i && null != m && m.isPrivate() && n && null == u && o.A.selectParticipant(m.id, null), null == u)) return;
+    let C = g.A.getMediaSessionId(),
         O = s.compositeInstanceId,
-        L = null == C && g?.isVocal() === !0 && g?.isPrivate() === !1;
+        L = null == C && m?.isVocal() === !0 && m?.isPrivate() === !1;
     if (null == O || L) return;
     let y = (0, r.A)(),
         D = "location" in s ? 2 : 1,
@@ -271,15 +271,15 @@ function eu(e) {
             location_stack: H?.locations,
             user_premium_tier: v.premiumType,
             raw_thermal_state: F,
-            n_participants: null != g ? A.A.getUserParticipantCount(g.id) : null,
+            n_participants: null != m ? A.A.getUserParticipantCount(m.id) : null,
             is_activity_start: i,
             release_phase: k,
             shelf_rank: G?.activity?.shelf_rank,
             shelf_sorted_rank: x > 0 ? x : null,
             activity_user_session_id: y,
-            channel_type: g?.type,
+            channel_type: m?.type,
             source: H?.source,
-            command_context_type: null != g ? (0, _.ud)(g, t) : null,
+            command_context_type: null != m ? (0, _.ud)(m, t) : null,
             invite_inviter_id: d,
             interaction_id: H?.interactionId,
             embedded_activity_location_kind: l.kind,
@@ -287,7 +287,7 @@ function eu(e) {
         N.default.track(et.HAw.ACTIVITY_IFRAME_MOUNT, {
             location_stack: H?.locations,
             channel_id: E,
-            channel_type: g?.type,
+            channel_type: m?.type,
             guild_id: f,
             application_id: t,
             instance_id: s.launchId,
@@ -330,9 +330,9 @@ function eE(e, t) {
         f = S.default.getCurrentUser();
     if (null == f) return;
     let p = null != l ? T.A.getChannel(l) : null,
-        g = n.guildId ?? p?.getGuildId() ?? null,
-        C = n.locationKind ?? (null == p ? void 0 : null != g ? a.T.GUILD_CHANNEL : a.T.PRIVATE_CHANNEL),
-        O = m.A.getMediaSessionId(),
+        m = n.guildId ?? p?.getGuildId() ?? null,
+        C = n.locationKind ?? (null == p ? void 0 : null != m ? a.T.GUILD_CHANNEL : a.T.PRIVATE_CHANNEL),
+        O = g.A.getMediaSessionId(),
         R = null != O ? [O] : [],
         L = (0, r.A)();
     en[e] = {
@@ -343,10 +343,10 @@ function eE(e, t) {
         activitiesInfraVersion: c,
         connectedSince: Date.now(),
         frameChannelId: l,
-        frameGuildId: g,
+        frameGuildId: m,
         frameLocationKind: C,
     };
-    let y = P.Ay.getShelfActivities(g),
+    let y = P.Ay.getShelfActivities(m),
         D = b.getState().shelfOrder,
         v = (0, U.A)({ applicationId: e, activityConfigs: y }),
         M = 1 + D.findIndex((t) => t === e),
@@ -354,7 +354,7 @@ function eE(e, t) {
         G = h.A.getRawThermalState();
     (N.default.track(et.HAw.ACTIVITY_SESSION_JOINED, {
         channel_id: l,
-        guild_id: g,
+        guild_id: m,
         media_session_id: R[0],
         activity_session_id: d,
         application_id: e,
@@ -378,7 +378,7 @@ function eE(e, t) {
             location_stack: u,
             channel_id: l,
             channel_type: p?.type,
-            guild_id: g,
+            guild_id: m,
             application_id: e,
             instance_id: o,
             initial_media_session_id: R[0],
@@ -458,7 +458,7 @@ function eI(e) {
 }
 class ef extends c.A {
     _initialize() {
-        (g.Ay.addChangeListener(this.handleSelectedChannelUpdate),
+        (m.Ay.addChangeListener(this.handleSelectedChannelUpdate),
             C._.subscribe(et.jej.RELEASE_ACTIVITY_WEB_VIEW, this.handleActivityWebViewRelease),
             C._.subscribe(et.jej.OPEN_EMBEDDED_ACTIVITY, eu),
             l.h.subscribe("EMBEDDED_ACTIVITY_LAUNCH_START", ed),
@@ -478,7 +478,7 @@ class ef extends c.A {
             l.h.subscribe("INTERACTION_FAILURE", this.handleInteractionFailure));
     }
     _terminate() {
-        (g.Ay.removeChangeListener(this.handleSelectedChannelUpdate),
+        (m.Ay.removeChangeListener(this.handleSelectedChannelUpdate),
             C._.unsubscribe(et.jej.RELEASE_ACTIVITY_WEB_VIEW, this.handleActivityWebViewRelease),
             C._.unsubscribe(et.jej.OPEN_EMBEDDED_ACTIVITY, eu),
             l.h.unsubscribe("EMBEDDED_ACTIVITY_LAUNCH_START", ed),
@@ -498,7 +498,7 @@ class ef extends c.A {
             l.h.unsubscribe("INTERACTION_FAILURE", this.handleInteractionFailure));
     }
     handleSelectedChannelUpdate = () => {
-        let e = g.Ay.getVoiceChannelId();
+        let e = m.Ay.getVoiceChannelId();
         for (let { location: t, applicationId: n } of P.Ay.getSelfEmbeddedActivities().values()) {
             let i = (0, X.H)(t);
             null != i && (0, Q.A)(i) && i !== e && this.leaveActivity({ location: t, applicationId: n });
@@ -568,7 +568,7 @@ class ef extends c.A {
     };
     handleCallDelete = (e) => {
         let { channelId: t } = e,
-            n = g.Ay.getVoiceChannelId();
+            n = m.Ay.getVoiceChannelId();
         null != n && n === t && this.handleCallEnded(t);
     };
     handleRTCConnectionState = (e) => {
@@ -583,7 +583,7 @@ class ef extends c.A {
     handleDeferredOpen = async (e) => {
         let { channelId: t, applicationId: n, analyticsLocations: i, commandOrigin: r, inviterUserId: a } = e,
             s = T.A.getChannel(t);
-        if (void 0 === s || (f.OU.has(s?.type) && g.Ay.getVoiceChannelId() !== t)) return;
+        if (void 0 === s || (f.OU.has(s?.type) && m.Ay.getVoiceChannelId() !== t)) return;
         let l = P.Ay.getSelfEmbeddedActivityForChannel(t);
         if (l?.applicationId === n) return;
         let o = await E.Ay.fetchApplication(n);

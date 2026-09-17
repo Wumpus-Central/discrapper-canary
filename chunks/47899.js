@@ -75,7 +75,7 @@ function T(e, t) {
     let n = [...e.candidates.keys()].filter((e) => e !== t?.content);
     return f(I(e, e.shownFatigableCandidate), t, n);
 }
-let m = new s.OC(
+let g = new s.OC(
     (e) =>
         Promise.resolve(e).then((e) => {
             let t = !1;
@@ -103,7 +103,7 @@ let m = new s.OC(
         }),
     { delay: 250, maxConcurrentInvocations: 1 },
 );
-function g(e, t) {
+function m(e, t) {
     var n;
     let i;
     if (0 === e.candidates.size) return { state: e, arbitration: { type: "settled" } };
@@ -114,7 +114,7 @@ function g(e, t) {
         null == e.shownFatigableCandidate &&
         !r
     )
-        return m.isInvoking()
+        return g.isInvoking()
             ? { state: e, arbitration: null != t ? { type: "request", candidates: [t] } : { type: "unchanged" } }
             : {
                   state: T(
@@ -124,7 +124,7 @@ function g(e, t) {
                   arbitration: { type: "settled" },
               };
     return null == e.shownFatigableCandidate || r
-        ? m.isPending()
+        ? g.isPending()
             ? { state: e, arbitration: null != t ? { type: "request", candidates: [t] } : { type: "unchanged" } }
             : ((n = e), (i = new Date().getTime()), null == n.shownFatigableCandidate && i - n.lastWinnerTime < 36e5)
               ? { state: e, arbitration: { type: "unchanged" } }
@@ -134,10 +134,10 @@ function g(e, t) {
 function S(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     (("settled" === e.arbitration.type || ("request" === e.arbitration.type && t)) && N(),
-        "request" === e.arbitration.type && m.queue(e.arbitration.candidates).catch(u.tEg));
+        "request" === e.arbitration.type && g.queue(e.arbitration.candidates).catch(u.tEg));
 }
 function N() {
-    m.reset();
+    g.reset();
 }
 function C(e) {
     let t = c.C.has(e.content),
@@ -145,7 +145,7 @@ function C(e) {
     ((0, r.r)(() => {
         E.setState((i) => {
             let r = h(i);
-            return A ? r : t ? f(r, e) : (n = g((r.candidates.set(e.content, e), r), e.content)).state;
+            return A ? r : t ? f(r, e) : (n = m((r.candidates.set(e.content, e), r), e.content)).state;
         });
     }),
         null != n && S(n));
@@ -157,7 +157,7 @@ function O(e, t) {
     ((0, r.r)(() => {
         E.setState((r) => {
             let s = h(r);
-            if (((i = s.shownFatigableCandidate?.content === e.content), t)) return (n = g(I(p(s, e), e), null)).state;
+            if (((i = s.shownFatigableCandidate?.content === e.content), t)) return (n = m(I(p(s, e), e), null)).state;
             {
                 let t = I(p(s, e), e);
                 return ((a = i || 0 === t.candidates.size), t);

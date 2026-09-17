@@ -1,4 +1,4 @@
-n.d(t, { A: () => g });
+n.d(t, { A: () => m });
 var i = n(691540),
     r = n(857250),
     a = n(97483),
@@ -71,8 +71,8 @@ class f extends c.A {
 }
 var p = n(375708);
 let T = !1,
-    m = !1,
-    g = new (class extends f {
+    g = !1,
+    m = new (class extends f {
         static displayName = "FramesWebManager";
         _initialize() {
             (super._initialize(),
@@ -86,15 +86,15 @@ let T = !1,
         }
         handlePopoutWindowOpen = (e) => {
             let { key: t } = e;
-            t === h.MLl.ACTIVITY_POPOUT && (m = !1);
+            t === h.MLl.ACTIVITY_POPOUT && (g = !1);
         };
         handlePopoutWindowUpdate = () => {
             let e = T,
                 t = o.A.getWindowOpen(h.MLl.ACTIVITY_POPOUT);
-            (!e || t || m || d.A.clearMainFrameSlot(), (T = t));
+            (!e || t || g || d.A.clearMainFrameSlot(), (T = t));
         };
         popInFrame = () => {
-            ((m = !0), l.close(h.MLl.ACTIVITY_POPOUT));
+            ((g = !0), l.close(h.MLl.ACTIVITY_POPOUT));
             let e = E.A.getMainFrame();
             null != e && (e.intent === A.sV.MAIN ? d.A.resetFrameLayoutModes(e.id) : d.A.clearMainFrameSlot());
         };

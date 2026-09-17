@@ -2,10 +2,10 @@ let i, r;
 (n.r(t),
     n.d(t, {
         encryptAndStoreTokens: () => v,
-        getAnalyticsToken: () => g,
+        getAnalyticsToken: () => m,
         getToken: () => S,
         hideToken: () => R,
-        init: () => m,
+        init: () => g,
         removeAnalyticsToken: () => D,
         removeToken: () => y,
         setAnalyticsToken: () => N,
@@ -47,7 +47,7 @@ function p(e) {
 function T(e) {
     return c?.isEncryptionAvailable() && !e.startsWith(l) ? `${l}${c.encryptString(e)}` : e;
 }
-function m() {
+function g() {
     if (I) return;
     ((r = a.w.get(s.il)), (A = a.w.get(s.zy) || {}));
     let { decryptedToken: e, wasEncrypted: t } = p(r);
@@ -67,11 +67,11 @@ function m() {
         )),
         (I = !0));
 }
-function g() {
+function m() {
     return S(o);
 }
 function S(e) {
-    return (m(), null != e) ? E[e] : i;
+    return (g(), null != e) ? E[e] : i;
 }
 function N(e) {
     null == e ? y(o) : O(e, o);

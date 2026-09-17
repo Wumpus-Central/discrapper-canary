@@ -16,7 +16,7 @@ var i = n(477900),
     p = n(570002),
     I = n(202541),
     j = n(375708);
-function A() {
+function E() {
     let e = (0, g.YW)(),
         { goBack: t } = (0, g.pA)(),
         n = (0, p.A)(j.intl.string(j.t.pj0XBN));
@@ -39,7 +39,7 @@ function A() {
         },
     });
 }
-var E = n(803306),
+var A = n(803306),
     v = n(631670),
     C = n(682618),
     S = n(636537),
@@ -95,7 +95,7 @@ function B(e) {
         p = (0, u.X)("UserProfileModalV2SaveBar"),
         {
             hasUnsavedProfileChanges: I,
-            canSubmitProfileChanges: A,
+            canSubmitProfileChanges: E,
             hasBadgeChangesToSave: S,
         } = (0, a.cf)([M.A], () => ({
             hasUnsavedProfileChanges: M.A.hasUnsavedChanges(),
@@ -104,7 +104,7 @@ function B(e) {
         })),
         b = p && I,
         B = x || b || S,
-        Y = !(x && !f) && (!p || A),
+        Y = !(x && !f) && (!p || E),
         z = l.useCallback(() => {
             (U.A.clearPendingWidgets(), p ? (0, _.XQ)() : S && (0, T.Jp)());
         }, [p, S]),
@@ -117,7 +117,7 @@ function B(e) {
                     n = await y({ displayOrder: t.pendingBadgeDisplayOrder, hiddenBadges: t.pendingBadgeHiddenBadges });
                 if (n) {
                     let e = w.default.getCurrentUser()?.id;
-                    (null != e && (await (0, E.fetchProfile)(e).catch(() => {})), await (0, C.RS)(), (0, T.Jp)());
+                    (null != e && (await (0, A.fetchProfile)(e).catch(() => {})), await (0, C.RS)(), (0, T.Jp)());
                 }
                 e = n;
             }
@@ -252,7 +252,7 @@ function q(e) {
                   "dnd" === g
                       ? (0, i.jsx)(d.S, { className: z.W })
                       : "premium-try-it-out" === g
-                        ? (0, i.jsx)(A, {})
+                        ? (0, i.jsx)(E, {})
                         : "save" === g
                           ? (0, i.jsx)(B, { guildId: n })
                           : null,

@@ -1,10 +1,10 @@
 (n.d(t, {
     Dg: () => f,
-    IO: () => g,
+    IO: () => m,
     Ij: () => O,
     Qq: () => L,
     WP: () => y,
-    YG: () => m,
+    YG: () => g,
     YS: () => p,
     Zu: () => T,
     _k: () => N,
@@ -34,7 +34,7 @@ function T(e) {
     let t = e.trim().split("\n")[0] ?? "";
     return (0, A.A)(t.slice(0, I.Ign), !0);
 }
-function m(e) {
+function g(e) {
     return (0, s.bG)(
         [h.A],
         () =>
@@ -44,9 +44,9 @@ function m(e) {
             (h.A.getChannel(e.parent_id)?.isGameInvitesChannel() ?? !1),
     );
 }
-function g(e) {
+function m(e) {
     let t = (0, u.kt)(e);
-    return !!m(e) && !t.some((e) => e.name === f);
+    return !!g(e) && !t.some((e) => e.name === f);
 }
 function S(e, t) {
     return (0, c.OA)(e, { enabled: t, allowArchived: !0 });

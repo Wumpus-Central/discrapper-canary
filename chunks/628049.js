@@ -5,13 +5,13 @@ n.d(t, {
     PH: () => A,
     ST: () => d,
     U$: () => c,
-    W5: () => g,
+    W5: () => m,
     XF: () => E,
     Yh: () => p,
     ZI: () => u,
     ZN: () => l,
     by: () => o,
-    eh: () => m,
+    eh: () => g,
     q4: () => h,
     qL: () => _,
     qb: () => T,
@@ -67,5 +67,5 @@ let T = {
                 ? "https://purple-prod.shockbyte.dev/support"
                 : "https://discord.shockbyte.com/support",
     },
-    m = { [r.X.SHOCKBYTE]: "https://shockbyte.com/legal/acceptable-use-policy" },
-    g = "0";
+    g = { [r.X.SHOCKBYTE]: "https://shockbyte.com/legal/acceptable-use-policy" },
+    m = "0";

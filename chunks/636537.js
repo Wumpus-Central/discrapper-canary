@@ -116,7 +116,7 @@ function I(e, t) {
 function f(e, t, n, i, s, l) {
     if (t.signal?.aborted) {
         let e = Object.assign(Error("Request aborted", { cause: l }), { code: "ABORTED" });
-        (m(t), i(e), null != s && s({ ok: !1, hasErr: !0, err: e }));
+        (g(t), i(e), null != s && s({ ok: !1, hasErr: !0, err: e }));
         return;
     }
     let o = r()[e](t.url);
@@ -178,7 +178,7 @@ function f(e, t, n, i, s, l) {
                     status: r.status,
                     retryAfter: I(r.headers, r.body),
                 };
-                m(t, a);
+                g(t, a);
                 let o = !1,
                     u = (r, a) => {
                         let d = { ...t, headers: { ...t.headers, ...r }, interceptResponse: a };
@@ -213,7 +213,7 @@ function f(e, t, n, i, s, l) {
             (e) => {
                 null != t.retries && t.retries-- > 0 && "ABORTED" !== e.code
                     ? c()
-                    : (m(t),
+                    : (g(t),
                       null != l && null == e.cause && (e.cause = l),
                       i(e),
                       null != s && s({ ok: !1, hasErr: !0, err: e }));
@@ -237,7 +237,7 @@ function T(e) {
     }
     (_.verbose("rateLimitExpirationHandler: moving to next record for ", e), n());
 }
-function m(e, t) {
+function g(e, t) {
     var n;
     let i = p.get(e.url);
     if (null != t && ((n = t.status), A.has(n))) {
@@ -263,7 +263,7 @@ function m(e, t) {
             i.retryAfterTimestamp < Date.now() &&
             (_.verbose("cleanupRequestEntry: rate limit for ", e.url, "expired"), T(e.url));
 }
-function g(e, t, n) {
+function m(e, t, n) {
     let i = Error(`HTTP ${e.toUpperCase()} initiated here`);
     return new Promise((r, a) => {
         "string" == typeof t && (t = { url: t, rejectWithError: !1 });
@@ -281,11 +281,11 @@ function g(e, t, n) {
             : f(e, t, r, a, n, i);
     });
 }
-let S = g.bind(null, "get"),
-    N = g.bind(null, "post"),
-    C = g.bind(null, "put"),
-    O = g.bind(null, "patch"),
-    R = g.bind(null, "del"),
+let S = m.bind(null, "get"),
+    N = m.bind(null, "post"),
+    C = m.bind(null, "put"),
+    O = m.bind(null, "patch"),
+    R = m.bind(null, "del"),
     L = { get: S, post: N, put: C, patch: O, del: R };
 if (n.g.isServerRendering) {
     let e = (e, t) => Promise.resolve({ ok: !0, status: 200, headers: {}, body: null, text: "" });

@@ -20,8 +20,8 @@ n(250953);
 var f = n(380335),
     p = n(451909),
     T = n(465856),
-    m = n(451919),
-    g = n(143413);
+    g = n(451919),
+    m = n(143413);
 n(622794);
 var S = n(152007),
     N = n(607508),
@@ -203,7 +203,7 @@ function z(e, t) {
         return (
             t !== Y.CP.NO_MESSAGES &&
             (t === Y.CP.ALL_MESSAGES ||
-                (0, m.bG)({ rawMessage: e, userId: o.id, suppressEveryone: !1, suppressRoles: !1 }))
+                (0, g.bG)({ rawMessage: e, userId: o.id, suppressEveryone: !1, suppressRoles: !1 }))
         );
     }
     {
@@ -211,7 +211,7 @@ function z(e, t) {
         if (U.Ay.allowAllMessages(l) && t) return !0;
         let n = U.Ay.isSuppressEveryoneEnabled(l.getGuildId()),
             i = U.Ay.isSuppressRolesEnabled(l.getGuildId());
-        return (0, m.bG)({ rawMessage: e, userId: o.id, suppressEveryone: n, suppressRoles: i });
+        return (0, g.bG)({ rawMessage: e, userId: o.id, suppressEveryone: n, suppressRoles: i });
     }
 }
 function X(e, t) {
@@ -305,7 +305,7 @@ function ee(e, t, n) {
             let o = y.A.getChannel(e.parent_id);
             t.type === W.lAJ.THREAD_STARTER_MESSAGE && null != o
                 ? (l = Q(l, o, y.A.getChannel(o.parent_id)))
-                : (0, g.A)(t)
+                : (0, m.A)(t)
                   ? null != v.A.getGuild(e.getGuildId()) && (l = Q(l, e, o))
                   : (l = Q(l, e, o));
             break;
@@ -313,7 +313,7 @@ function ee(e, t, n) {
             (e.isManaged() && n.bot && l === (0, E.m1)(e, w.default, M.A)) || (l = Q(l, e));
     }
     let d = t.content;
-    if ((0, g.A)(t) && null == (d = x.A.stringify(t, e)))
+    if ((0, m.A)(t) && null == (d = x.A.stringify(t, e)))
         throw (
             new A.A("NotificationTextUtils").warn("SystemMessageUtils.stringify(...) could not convert", {
                 message: t,

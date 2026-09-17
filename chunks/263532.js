@@ -224,8 +224,8 @@ class f extends a.A {
 }
 var p = n(566980),
     T = n(511484),
-    m = n(786300),
-    g = n(815545),
+    g = n(786300),
+    m = n(815545),
     S = n(826469),
     N = n(158045),
     C = n(202541);
@@ -277,7 +277,7 @@ var H = n(811315),
     K = n(403362),
     $ = n(427262);
 let z = 1,
-    [X, q] = (0, m.A)();
+    [X, q] = (0, g.A)();
 function Z(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.x;
     return q()(e, t);
@@ -310,7 +310,7 @@ function Q(e) {
                     isPremiumDiscountAppliedToCheckoutInvoice: () => {
                         let { discountOffer: e } = i().premiumDiscountInfo,
                             t = i().checkoutInvoicePreview;
-                        return null != e && null != e.discount && null != t && (0, g.Ro)(t, e.discount.id);
+                        return null != e && null != e.discount && null != t && (0, m.Ro)(t, e.discount.id);
                     },
                     isCheckoutInvoicePreviewLoading: () => {
                         let e = i().fetchCheckoutInvoicePreviewRequest,

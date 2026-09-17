@@ -28,8 +28,8 @@ var s = n(665260),
     f = n(280450),
     p = n(808728),
     T = n(498642),
-    m = n(317525),
-    g = n(544576),
+    g = n(317525),
+    m = n(544576),
     S = n(576705),
     N = n(290863),
     C = n(763827),
@@ -49,7 +49,7 @@ function x(e) {
     if (null == e) return null;
     let t = d.A.getGuild(e);
     if (null == t) return null;
-    let n = m.A.getNumRoles(t.id),
+    let n = g.A.getNumRoles(t.id),
         i = f.default.getId(),
         r = o.Ay.getMember(e, i),
         a = p.Ay.getChannels(e),
@@ -104,7 +104,7 @@ function B(e) {
     if (null == e) return null;
     let n = l.A.getChannel(e);
     if (null == n) return null;
-    let i = g.Ay.isVideoEnabled(),
+    let i = m.Ay.isVideoEnabled(),
         r = C.A.getMediaSessionId();
     return {
         channel_id: n.id,

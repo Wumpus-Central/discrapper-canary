@@ -11,8 +11,8 @@ var i = n(582128),
     m = n(967198),
     h = n(692848),
     g = n(204776),
-    p = n(354287),
-    A = n(652215),
+    A = n(354287),
+    p = n(652215),
     x = n(488995),
     f = n(375708);
 function E(e) {
@@ -23,18 +23,18 @@ function E(e) {
             [c.A, d.A, u.Ay],
             () => {
                 let e = c.A.getChannel(u.Ay.getChannelId());
-                return null != e && (e.isPrivate() || d.A.can(A.xBc.SEND_MESSAGES, e));
+                return null != e && (e.isPrivate() || d.A.can(p.xBc.SEND_MESSAGES, e));
             },
             [],
         ),
-        p = (0, s.V1)(e, o) && h;
+        A = (0, s.V1)(e, o) && h;
     return {
         isDiscoverable: t,
         customInstallUrl: n,
         installParams: i,
         integrationTypesConfig: a,
-        canViewApp: t || p,
-        canOpenAppLauncher: p,
+        canViewApp: t || A,
+        canOpenAppLauncher: A,
         isInstallable: r,
         selectedGuildId: o,
     };
@@ -85,7 +85,7 @@ function C(e) {
             t && null != l
                 ? {
                       label: f.intl.string(f.t.hvVgAZ),
-                      trackingArea: p.kY.VIEW,
+                      trackingArea: A.kY.VIEW,
                       onClick() {
                           l();
                       },
@@ -93,7 +93,7 @@ function C(e) {
                 : n && null != l
                   ? {
                         label: f.intl.string(f.t.NgXl3C),
-                        trackingArea: p.kY.ADD_APP,
+                        trackingArea: A.kY.ADD_APP,
                         onClick() {
                             l();
                         },

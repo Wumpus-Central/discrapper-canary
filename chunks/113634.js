@@ -45,8 +45,8 @@ var h = n(582128),
     f = n.n(I),
     p = n(972347),
     T = n(738239),
-    m = n.n(T),
-    g = n(941426),
+    g = n.n(T),
+    m = n(941426),
     S = n(904986),
     N = n(459838),
     C = n(70909),
@@ -164,7 +164,7 @@ class V {
     }
 }
 var H = n(818348);
-let j = new g.Vy("Output"),
+let j = new m.Vy("Output"),
     W = new B();
 class Y extends R.EventEmitter {
     stream;
@@ -548,7 +548,7 @@ class ee extends p.A {
         this.emit("video-permission", e);
     };
 }
-let et = new g.Vy("Output");
+let et = new m.Vy("Output");
 var en = (((a = {}).InteractionRequired = "interactionrequired"), (a.Speaking = "speaking"), (a.Video = "video"), a);
 class ei extends p.A {
     id;
@@ -1245,14 +1245,14 @@ var eA = n(800754),
     eI = n(226782),
     ef = n.n(eI),
     ep = n(316179);
-let eT = new g.Vy("SDP");
-var em =
+let eT = new m.Vy("SDP");
+var eg =
     (((o = {}).SENDRECV = "sendrecv"),
     (o.SENDONLY = "sendonly"),
     (o.RECVONLY = "recvonly"),
     (o.INACTIVE = "inactive"),
     o);
-let eg = "UDP/TLS/RTP/SAVPF";
+let em = "UDP/TLS/RTP/SAVPF";
 function eS(e) {
     switch (e) {
         case "recvonly":
@@ -1324,7 +1324,7 @@ function eO(e) {
             fmtp: [],
             payloads: l,
             port: 0,
-            protocol: eg,
+            protocol: em,
             rtp: [{ codec: "NULL", payload: l, rate: 0 }],
             mid: void 0,
             type: n,
@@ -1334,7 +1334,7 @@ function eO(e) {
     } = ep.parse(a);
     if (
         ((h.type = n),
-        (h.protocol = eg),
+        (h.protocol = em),
         (h.payloads = l),
         (h.setup = i),
         (h.mid = t),
@@ -1547,7 +1547,7 @@ class eb extends R.EventEmitter {
                 a = this.activeAudioSSRCs[n],
                 s = this.activeVideoSSRCs[n],
                 l = `${r}_inbound_${t}`;
-            return [i, n, r, a === i || s === i ? this.direction : em.INACTIVE, l];
+            return [i, n, r, a === i || s === i ? this.direction : eg.INACTIVE, l];
         });
         if ("Firefox" !== A().name) return this.connected ? t : [];
         let n = this.outboundStreams.map((e, t) => [0, "outbound", e.type, eS(e.direction), `${e.type}_outbound_${t}`]);
@@ -1683,7 +1683,7 @@ class eb extends R.EventEmitter {
         return (this.emit(e, l), Promise.resolve(l));
     }
 }
-let eM = new g.Vy("PeerConnection");
+let eM = new m.Vy("PeerConnection");
 class eP extends R.EventEmitter {
     bitrate;
     pc;
@@ -1867,7 +1867,7 @@ class eH extends p.A {
     lastSecureFramesStateUpdate = null;
     constructor(e, t, n) {
         (super(),
-            (this.logger = new g.Vy("DaveSessionManager")),
+            (this.logger = new m.Vy("DaveSessionManager")),
             (this.dave = e),
             (this.transientKeys = t),
             (this.userId = n),
@@ -1999,7 +1999,7 @@ class eH extends p.A {
             (this.lastSecureFramesStateUpdate = e));
     }
 }
-let ej = new g.Vy("LibDaveManager"),
+let ej = new m.Vy("LibDaveManager"),
     eW = null,
     eY = null,
     eK = null,
@@ -2039,7 +2039,7 @@ class eZ extends eE {
     daveSessionManager = null;
     logger;
     constructor(e) {
-        (super(e), (this.logger = new g.Vy(`UnifiedConnection(${e.context})`)));
+        (super(e), (this.logger = new m.Vy(`UnifiedConnection(${e.context})`)));
         let t = e.dave;
         (null == t ||
             ez() ||
@@ -2551,7 +2551,7 @@ class eJ extends eE {
     codecs = [];
     logger;
     constructor(e) {
-        (super(e), (this.logger = new g.Vy(`Connection(${e.context})`)));
+        (super(e), (this.logger = new m.Vy(`Connection(${e.context})`)));
         const t = new eb();
         (t.on("answer", (e) =>
             this.pc
@@ -2565,7 +2565,7 @@ class eJ extends eE {
                     .then((e) => this.fpc.setRemoteDescription(e))
                     .catch((e) => this.logger.error(`Failed to set remote description (offer): ${e}`));
             }),
-            (t.direction = null != this.input.stream ? em.SENDRECV : em.SENDONLY),
+            (t.direction = null != this.input.stream ? eg.SENDRECV : eg.SENDONLY),
             (this.fpc = t));
         const n = new eP(this.voiceBitrate);
         (n.on("addtrack", (e, t) => this.createOutput(eQ(e), t)),
@@ -2629,7 +2629,7 @@ class eJ extends eE {
             this.pc.negotiationNeeded());
     }
     setStream(e) {
-        ((this.fpc.direction = null != e ? em.SENDRECV : em.SENDONLY), this.pc.setStream(e ?? null));
+        ((this.fpc.direction = null != e ? eg.SENDRECV : eg.SENDONLY), this.pc.setStream(e ?? null));
     }
     createUser(e, t, n) {
         if (0 === t) return void this.logger.warn(`Attempting to create user ${e} with 0 audio SSRC`);
@@ -2794,7 +2794,7 @@ class e3 extends R.EventEmitter {
         );
     }
 }
-class e5 {
+class e6 {
     pool = {};
     async acquire(e, t) {
         let n = await e3.get(e, t, this);
@@ -2809,7 +2809,7 @@ class e5 {
         this.pool[e.id] = e;
     }
 }
-var e6 = n(935399),
+var e5 = n(935399),
     e4 = n(503698),
     e7 = n.n(e4);
 function e8(e) {
@@ -2883,7 +2883,7 @@ function e9(e) {
             ),
             [o, a],
         ),
-        (0, e6.l0)(() => {
+        (0, e5.l0)(() => {
             o.destroy();
         }),
         h.useEffect(() => {
@@ -2900,7 +2900,7 @@ function e9(e) {
             : (0, _.jsx)(e8, { streamId: s, style: { width: n, height: i } })
     );
 }
-let te = new g.Vy("MediaEngineWebRTC");
+let te = new m.Vy("MediaEngineWebRTC");
 class tt extends p.A {
     Video = e8;
     Camera = (e) => (0, _.jsx)(e9, { ...e, onDeviceChange: this.handleDeviceChange });
@@ -2914,7 +2914,7 @@ class tt extends p.A {
     interacted = !1;
     loopback = null;
     voiceActivityInput = null;
-    desktopInputPool = new e5();
+    desktopInputPool = new e6();
     enablePromise = null;
     dave = null;
     transientKeys = null;
@@ -2969,7 +2969,7 @@ class tt extends p.A {
             case D.O5.AUTOMATIC_GAIN_CONTROL:
                 return "Safari" !== A().name;
             case D.O5.NOISE_CANCELLATION:
-                return m()();
+                return g()();
             case D.O5.QOS:
             case D.O5.ATTENUATION:
             case D.O5.AUTOMATIC_VAD:
@@ -3010,7 +3010,7 @@ class tt extends p.A {
                     experiments: _,
                 }),
                 (r = `${null != A().name && "" !== A().name ? A().name : "unknown"} ${null != A().version && "" !== A().version ? A().version : "unknown"}`),
-                (a = new g.Vy(`Connection(${i.context})`)),
+                (a = new m.Vy(`Connection(${i.context})`)),
                 eu.PF ? (a.info(`Using Unified Plan (${r})`), new eZ(i)) : (a.info(`Using Plan B (${r})`), new eJ(i)));
         return (
             (E.streamUserId = c),

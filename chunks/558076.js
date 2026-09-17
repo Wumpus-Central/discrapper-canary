@@ -16,8 +16,8 @@ let d = new Map(),
     f = null,
     p = {},
     T = new Map(),
-    m = !1,
     g = !1,
+    m = !1,
     S = !1,
     N = {},
     C = {},
@@ -46,10 +46,10 @@ class D extends i.Ay.PersistedStore {
     initialize(e) {
         (this.waitFor(a.default, s.A, l.Ay),
             this.syncWith([l.Ay], y),
-            (m = (g = e?.rememberVideoOverlayVisibility ?? !1) && (e?.videoOverlayVisibility ?? !1)));
+            (g = (m = e?.rememberVideoOverlayVisibility ?? !1) && (e?.videoOverlayVisibility ?? !1)));
     }
     getState() {
-        return { videoOverlayVisibility: m, rememberVideoOverlayVisibility: g };
+        return { videoOverlayVisibility: g, rememberVideoOverlayVisibility: m };
     }
     getRoom(e) {
         return E[e] ?? c;
@@ -82,10 +82,10 @@ class D extends i.Ay.PersistedStore {
         return this.getRoomObjects(e).get(o.N.NOTE) ?? u;
     }
     getVideoOverlayVisibility() {
-        return m;
+        return g;
     }
     getRememberVideoOverlayVisibility() {
-        return g;
+        return m;
     }
 }
 let v = new D(r.h, {
@@ -112,7 +112,7 @@ let v = new D(r.h, {
         (i.delete(t),
             (A[n] = i),
             S && t === a.default.getId() && ((p[n] = !0), (S = !1)),
-            t === a.default.getId() && (delete N[n], delete C[n], g || (m = !1)));
+            t === a.default.getId() && (delete N[n], delete C[n], m || (g = !1)));
     },
     GUILD_ROOM_UPDATE: function (e) {
         let { room: t } = e,
@@ -202,10 +202,10 @@ let v = new D(r.h, {
     },
     GUILD_ROOM_SET_VIDEO_OVERLAY_VISIBILITY: function (e) {
         let { value: t } = e;
-        m = t;
+        g = t;
     },
     GUILD_ROOM_SET_REMEMBER_VIDEO_OVERLAY_VISIBILITY: function (e) {
         let { rememberVideoOverlayVisibility: t } = e;
-        g = t;
+        m = t;
     },
 });

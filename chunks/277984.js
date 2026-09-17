@@ -20,14 +20,14 @@ n.d(t, {
     tc: () => eS,
     ne: () => b,
     I8: () => ec,
-    uK: () => em,
+    uK: () => eg,
     TK: () => el,
     JQ: () => en,
     fE: () => eN,
     M2: () => eA,
     i0: () => O,
     u6: () => j,
-    ey: () => eg,
+    ey: () => em,
     CK: () => eo,
     r6: () => eT,
     hP: () => ed,
@@ -63,8 +63,8 @@ var i = n(536637),
     f = n(284009),
     p = n.n(f),
     T = n(626584),
-    m = n(71532);
-let g = [
+    g = n(71532);
+let m = [
     "api_connection_error",
     "api_error",
     "authentication_error",
@@ -107,7 +107,7 @@ function O(e) {
         i = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : N.intl.string(N.t.khEaRI),
         a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-    if (g.includes(e.type)) {
+    if (m.includes(e.type)) {
         let a = null != e.message ? `${r}: ${e.message}` : r,
             s = {
                 failure_message: a,
@@ -320,7 +320,7 @@ async function j(e, t, n, i) {
         throw O(e);
     }
     let a = await C(n),
-        l = m._Z(n),
+        l = g._Z(n),
         { setupIntent: o, error: d } = await e.confirmCardSetup(r, {
             payment_method: { card: { token: t }, billing_details: l },
         }),
@@ -386,7 +386,7 @@ async function $(e, t, n, i) {
 }
 async function z(e) {
     if (S.DYY.has(e.type)) return null;
-    let t = await m.Cv();
+    let t = await g.Cv();
     if (null == t) throw new l.Ey("Stripe not loaded", l.Ey.ErrorCodes.UNKNOWN);
     let { email: n, name: i, line1: r, line2: a, city: s, state: o, postalCode: d, country: c } = e.billingAddress,
         u = {
@@ -539,7 +539,7 @@ class J extends Q {
         else throw O("Invalid Payment Source Type - redirect or direct confirmation handlers not found.");
     }
     async getStripe() {
-        if ((null == this.stripe && (this.stripe = await m.Cv()), null == this.stripe))
+        if ((null == this.stripe && (this.stripe = await g.Cv()), null == this.stripe))
             throw O("Stripe cannot be null on a redirect.");
         return this.stripe;
     }
@@ -959,10 +959,10 @@ function ep(e, t, n, i, r, a) {
 function eT(e, t, n, i, r) {
     return eI(e, { currency: t }, { amount: 0, currency: t.toLowerCase() }, n, i, r);
 }
-function em(e, t, n, i, r) {
+function eg(e, t, n, i, r) {
     return eI(e, { paymentSource: t }, { amount: 0, currency: n.currency }, n, i, r);
 }
-function eg() {
+function em() {
     s.h.dispatch({ type: "BILLING_PAYMENT_SOURCE_UPDATE_CLEAR_ERROR" });
 }
 function eS() {

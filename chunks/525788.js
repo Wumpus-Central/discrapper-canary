@@ -16,8 +16,8 @@ var i = n(477900),
     f = n(778712),
     p = n(922016),
     T = n(442433),
-    m = n(820284),
-    g = n(942857),
+    g = n(820284),
+    m = n(942857),
     S = n(538451),
     N = n(616356),
     C = n(287809),
@@ -109,7 +109,7 @@ function w(e) {
             maxVisibleUsers: A = 3,
         } = e,
         h = r.useRef(null),
-        S = (0, g.A)(),
+        S = (0, m.A)(),
         [R, D] = r.useState(!1),
         b = r.useRef(new c.J_(150, () => D(!1))),
         w = (0, d.yK)(
@@ -205,7 +205,7 @@ function w(e) {
     return (
         w.length > A &&
             (F[F.length - 1] = (0, i.jsxs)("div", { className: v.ju, children: ["+", w.length - A + 1] }, "overflow")),
-        (0, i.jsx)(m.A, {
+        (0, i.jsx)(g.A, {
             section: y.JJy.STREAM_VIEWER_POPOUT,
             children: (0, i.jsx)("div", {
                 onMouseEnter: G,

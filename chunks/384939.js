@@ -281,7 +281,7 @@ class f extends s.G {
 }
 let p = new f();
 var T = n(414525);
-class m extends s.G {
+class g extends s.G {
     constructor() {
         super("discord_protos.premium_marketing.v1.AdminEditorTestComponent", [
             { no: 1, name: "deprecated_field", kind: "scalar", T: 9 },
@@ -370,7 +370,7 @@ class m extends s.G {
         return (!1 !== r && (!0 == r ? i.f$.onWrite : r)(this.typeName, e, t), t);
     }
 }
-let g = new m();
+let m = new g();
 var S = n(406935);
 class N extends s.G {
     constructor() {
@@ -1170,7 +1170,7 @@ class J extends s.G {
             { no: 19, name: "plan_select_card_banner", kind: "message", oneof: "properties", T: () => L },
             { no: 20, name: "billing_settings_banner", kind: "message", oneof: "properties", T: () => O.h },
             { no: 21, name: "shop_nagbar", kind: "message", oneof: "properties", T: () => C },
-            { no: 22, name: "admin_editor_test_component", kind: "message", oneof: "properties", T: () => g },
+            { no: 22, name: "admin_editor_test_component", kind: "message", oneof: "properties", T: () => m },
             { no: 23, name: "guild_header_coachmark", kind: "message", oneof: "properties", T: () => p },
             { no: 24, name: "guild_boost_checkout_banner", kind: "message", oneof: "properties", T: () => h },
             { no: 25, name: "guild_boost_marketing_page_banner", kind: "message", oneof: "properties", T: () => E },
@@ -1337,7 +1337,7 @@ class J extends s.G {
                 case 22:
                     a.properties = {
                         oneofKind: "adminEditorTestComponent",
-                        adminEditorTestComponent: g.internalBinaryRead(
+                        adminEditorTestComponent: m.internalBinaryRead(
                             e,
                             e.uint32(),
                             n,
@@ -1472,7 +1472,7 @@ class J extends s.G {
             "shopNagbar" === e.properties.oneofKind &&
                 C.internalBinaryWrite(e.properties.shopNagbar, t.tag(21, i.O0.LengthDelimited).fork(), n).join(),
             "adminEditorTestComponent" === e.properties.oneofKind &&
-                g
+                m
                     .internalBinaryWrite(
                         e.properties.adminEditorTestComponent,
                         t.tag(22, i.O0.LengthDelimited).fork(),

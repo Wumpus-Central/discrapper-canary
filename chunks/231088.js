@@ -26,15 +26,15 @@ function I(e) {
         p = l.useRef(!1),
         I = l.useRef(!0),
         j = l.useRef(!1),
-        A = l.useCallback(() => {
+        E = l.useCallback(() => {
             ((I.current = !1), c(t), r("editing"));
         }, [t]),
-        E = l.useRef(d);
+        A = l.useRef(d);
     l.useLayoutEffect(() => {
-        E.current = d;
+        A.current = d;
     });
     let v = l.useCallback(() => {
-            I.current || ((I.current = !0), n(E.current), r("done"));
+            I.current || ((I.current = !0), n(A.current), r("done"));
         }, [n]),
         C = l.useCallback(() => {
             I.current || ((I.current = !0), r("done"));
@@ -68,8 +68,8 @@ function I(e) {
             ((p.current = !0), C(), h.current?.blur());
         }, [C]),
         T = l.useCallback(() => {
-            u || ((j.current = !0), A());
-        }, [u, A]),
+            u || ((j.current = !0), E());
+        }, [u, E]),
         N = l.useCallback(
             (e) => {
                 "Enter" !== e.key || e.shiftKey
@@ -87,7 +87,7 @@ function I(e) {
         editButtonRef: m,
         wrapperRef: x,
         inputRef: h,
-        handleStartEditing: A,
+        handleStartEditing: E,
         handleCommit: v,
         handleCancel: C,
         handleInputCommit: k,
@@ -101,7 +101,7 @@ function I(e) {
 function j(e, t) {
     return null != t && e.length > t ? h.intl.formatToPlainString(h.t.ICT5S6, { maxLength: t }) : void 0;
 }
-function A(e) {
+function E(e) {
     let { tooltip: t, ...n } = e;
     return (0, i.jsx)("div", {
         className: p.L7,
@@ -114,7 +114,7 @@ function A(e) {
         }),
     });
 }
-function E(e) {
+function A(e) {
     let { id: t, message: n, type: l } = e,
         s = "error" === l,
         r = s ? u.E : g.WarningIcon;
@@ -199,7 +199,7 @@ function v(e) {
                     },
                     focusProps: { ringTarget: R },
                 }),
-            null != f && (0, i.jsx)("div", { className: p.lD, children: (0, i.jsx)(A, { ...f }) }),
+            null != f && (0, i.jsx)("div", { className: p.lD, children: (0, i.jsx)(E, { ...f }) }),
         ],
     });
     return (0, i.jsx)("div", {
@@ -220,7 +220,7 @@ function v(e) {
                     : (0, i.jsxs)(i.Fragment, {
                           children: [
                               (0, i.jsx)("div", { className: p.VH, children: Y }),
-                              M && "compact" !== g && (0, i.jsx)(E, { id: L, message: G, type: D }),
+                              M && "compact" !== g && (0, i.jsx)(A, { id: L, message: G, type: D }),
                           ],
                       }),
             },

@@ -1,4 +1,4 @@
-n.d(t, { A: () => g });
+n.d(t, { A: () => m });
 var i = n(17928),
     r = n(873298),
     a = n(228366),
@@ -34,7 +34,7 @@ function T() {
     }
     return t;
 }
-class m extends i.Ay.PersistedStore {
+class g extends i.Ay.PersistedStore {
     static displayName = "CategoryCollapseStore";
     static persistKey = "collapsedCategories";
     initialize(e) {
@@ -57,7 +57,7 @@ class m extends i.Ay.PersistedStore {
         return A;
     }
 }
-let g = new m(a.h, {
+let m = new g(a.h, {
     CONNECTION_OPEN: function (e) {
         for (let t of (e.userGuildSettings.partial || (E = {}), e.userGuildSettings.entries))
             if (null != t.channel_overrides)

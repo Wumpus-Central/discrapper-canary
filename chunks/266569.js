@@ -27,8 +27,8 @@ var i = n(477900),
     P = n(971649),
     w = n(823784);
 n(23766);
-var b = n(652215);
-let R = new Set();
+var R = n(652215);
+let b = new Set();
 class L {
     id;
     entity;
@@ -95,11 +95,11 @@ class L {
     }
     trackViewedPlacement = (e) => {
         let t = (0, S.HN)(this.questContent);
-        null != t && (0, S.xn)(this.questContent, this.entity.adCreativeType) && R.add(`${e}_${t}`);
+        null != t && (0, S.xn)(this.questContent, this.entity.adCreativeType) && b.add(`${e}_${t}`);
     };
     shouldExtendSession = (e) => {
         let t = (0, S.HN)(this.questContent);
-        return null != t && !R.has(`${e}_${t}`) && (0, S.xn)(this.questContent, this.entity.adCreativeType);
+        return null != t && !b.has(`${e}_${t}`) && (0, S.xn)(this.questContent, this.entity.adCreativeType);
     };
     maybeRegisterIosAttributionImpression = (e, t) => {
         if (this.iosAttributionRegistered || !(0, C.C$)()) return;
@@ -190,7 +190,7 @@ class L {
                         ...t,
                         shouldExtendSession: u,
                         questId: e,
-                        event: b.HAw.QUEST_CONTENT_VIEWED,
+                        event: R.HAw.QUEST_CONTENT_VIEWED,
                         properties: {
                             ...n,
                             ...this.commonProperties(),
@@ -211,7 +211,7 @@ class L {
                         adContentId: e,
                         relatedQuestId: this.entity.relatedQuestId,
                         adCreativeType: this.entity.adCreativeType,
-                        event: b.HAw.QUEST_CONTENT_VIEWED,
+                        event: R.HAw.QUEST_CONTENT_VIEWED,
                         properties: { ...n, ...this.commonProperties() },
                     }));
             }
@@ -244,7 +244,7 @@ class L {
                             (0, v.av)({
                                 ...i,
                                 questId: s,
-                                event: b.HAw.QUEST_CONTENT_VIEW_TIME,
+                                event: R.HAw.QUEST_CONTENT_VIEW_TIME,
                                 properties: { ...r, ...e.commonProperties() },
                             }));
                     } else {
@@ -258,7 +258,7 @@ class L {
                                 adContentId: s,
                                 relatedQuestId: e.entity.relatedQuestId,
                                 adCreativeType: e.entity.adCreativeType,
-                                event: b.HAw.QUEST_CONTENT_VIEW_TIME,
+                                event: R.HAw.QUEST_CONTENT_VIEW_TIME,
                                 properties: { ...r, ...e.commonProperties() },
                             }));
                     }
@@ -339,7 +339,7 @@ class L {
                     (0, v.av)({
                         ...e,
                         questId: n,
-                        event: b.HAw.QUEST_CONTENT_LOADED,
+                        event: R.HAw.QUEST_CONTENT_LOADED,
                         properties: {
                             ...t,
                             metadata_sealed: r ?? null,
@@ -357,7 +357,7 @@ class L {
                         adContentId: n,
                         relatedQuestId: this.entity.relatedQuestId,
                         adCreativeType: this.entity.adCreativeType,
-                        event: b.HAw.QUEST_CONTENT_LOADED,
+                        event: R.HAw.QUEST_CONTENT_LOADED,
                         properties: { ...t, ...this.commonProperties() },
                     }));
             }

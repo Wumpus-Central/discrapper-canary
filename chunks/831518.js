@@ -123,7 +123,7 @@ class p {
             i = (t - e) / 1e3 + 1;
         for (let t = 0; t < i; t++) {
             let i = e + 1e3 * t,
-                r = m(this.gameStateTimeline, i);
+                r = g(this.gameStateTimeline, i);
             n.push({ timestamp_ms: i, modifier: r.inMatch ? 1 : I });
         }
         return n;
@@ -135,18 +135,18 @@ class p {
         return null != e.eventName ? h._[e.eventName]?.scoreBoost : void 0;
     }
     isInGame(e) {
-        return m(this.gameStateTimeline, e).inMatch;
+        return g(this.gameStateTimeline, e).inMatch;
     }
     canAnchorReaction(e) {
         return null != e.eventName && f.has(e.eventName);
     }
 }
 let T = { applicationIds: [A.e], create: (e) => new p(e) };
-function m(e, t) {
+function g(e, t) {
     let n = e.findLast((e) => e.timestamp_ms <= t);
     return (r()(null != n, "bad timeline!"), n);
 }
-var g = n(45926),
+var m = n(45926),
     S = n(557329),
     N = n(781183),
     C = n(696016);
@@ -170,7 +170,7 @@ function D(e, t, n, i) {
     let s,
         l = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
         { requestedCount: o = 3, preTrimmedSignalsByFilepath: d, debug: c = !1 } = l,
-        u = { ...(0, g.A)(), ...l.config },
+        u = { ...(0, m.A)(), ...l.config },
         _ = [],
         E = Object.keys(t.audioModelDataPerUser).length,
         A = [...t.gameEventData].sort((e, t) => e.timestamp_ms - t.timestamp_ms),
@@ -189,7 +189,7 @@ function D(e, t, n, i) {
         let t = new Map(e.map((e) => [e.timestamp_ms, e.modifier]));
         return (e) => t.get(1e3 * Math.floor(e / 1e3)) ?? 1;
     })(s);
-    function m(e) {
+    function g(e) {
         return h?.eventScoreMultiplier?.(e) ?? 1;
     }
     function O(e) {
@@ -269,14 +269,14 @@ function D(e, t, n, i) {
             };
         }
         let { startMs: l, endMs: o } = y(i),
-            { userIds: A, pLaughter: h, pShouting: f, rms: p, gridStartMs: g, chunkCount: R } = L(l, o),
+            { userIds: A, pLaughter: h, pShouting: f, rms: p, gridStartMs: m, chunkCount: R } = L(l, o),
             D = A.indexOf(n),
             P = (0, a.p)(I, l, o),
             U = P.filter(O);
-        null != g &&
+        null != m &&
             R > 0 &&
             U.length > 0 &&
-            (e = U.map((e) => Math.max(0, Math.min(R - 1, Math.round((e.timestamp_ms - g) / 1e3)))));
+            (e = U.map((e) => Math.max(0, Math.min(R - 1, Math.round((e.timestamp_ms - m) / 1e3)))));
         let w = (function (e, t) {
                 let n,
                     { pLaughter: i, pShouting: r, rms: a, main: s, gameEventChunks: l } = e,
@@ -309,9 +309,9 @@ function D(e, t, n, i) {
                         anchors: p,
                         events: T,
                     } = (0, S.aT)({ laughter: _, shouting: E }, { laughter: h, shouting: I }, s, t),
-                    m = t.gameEventsAsReactionAnchors && null != l ? l.map((e) => ({ tStart: e, tEnd: e })) : [],
-                    g = (0, S.Mf)([...p, ...m], t.eventChainGapChunks),
-                    N = (0, S.tf)(g, h, I, s, t),
+                    g = t.gameEventsAsReactionAnchors && null != l ? l.map((e) => ({ tStart: e, tEnd: e })) : [],
+                    m = (0, S.Mf)([...p, ...g], t.eventChainGapChunks),
+                    N = (0, S.tf)(m, h, I, s, t),
                     { laughter: C, shouting: O } = (0, S.Lj)(d, c, a, t),
                     { coOccurrenceScore: R, coContribPerChunk: L } = (0, S.k0)(C, O, t),
                     y = f,
@@ -336,7 +336,7 @@ function D(e, t, n, i) {
                         intensityShouting: I,
                         rmsWeighted: A,
                         mainEvents: T,
-                        reactionAnchors: g,
+                        reactionAnchors: m,
                         coContribPerChunk: L,
                     },
                 };
@@ -349,7 +349,7 @@ function D(e, t, n, i) {
                     i += (r.score ?? 0) * e * a;
                 }
                 return i;
-            })(P, T, m),
+            })(P, T, g),
             x = (0.5 + (0, N.ry)(w.audioScore)) * (1 + Math.tanh(G / u.gameSquashScale)) - 0.5,
             k = L(s, i.decision.timestamp),
             F = k.gridStartMs,
@@ -381,7 +381,7 @@ function D(e, t, n, i) {
             };
         if (c) {
             V.components = { ...w.components, gameEventsScore: G };
-            let e = null != g ? (g - l) / 1e3 : 0;
+            let e = null != m ? (m - l) / 1e3 : 0;
             V.debug = {
                 ...w.debug,
                 userIds: A,

@@ -16,8 +16,8 @@ var i = n(812729),
     f = n(485296),
     p = n(287809),
     T = n(977997),
-    m = n(607567),
-    g = n(518769),
+    g = n(607567),
+    m = n(518769),
     S = n(312006),
     N = n(446600);
 let C = "NO_GUILD",
@@ -50,10 +50,10 @@ function v(e) {
 }
 function b(e) {
     let t = L[e];
-    return (null == t && ((t = new g.Ay(e)), (L[e] = t), t.rebuild()), t);
+    return (null == t && ((t = new m.Ay(e)), (L[e] = t), t.rebuild()), t);
 }
 function M(e) {
-    return null != e && e.isGuildStageVoice() && m.Ay.countVoiceStatesForChannel(e.id) > 0;
+    return null != e && e.isGuildStageVoice() && g.Ay.countVoiceStatesForChannel(e.id) > 0;
 }
 function P(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : y();
@@ -108,7 +108,7 @@ let H = [];
 class j extends l.Ay.Store {
     static displayName = "StageChannelParticipantStore";
     initialize() {
-        this.waitFor(_.default, p.default, E.A, f.A, T.A, h.A, m.Ay, A.A, S.Ay, I.A, N.A, u.A);
+        this.waitFor(_.default, p.default, E.A, f.A, T.A, h.A, g.Ay, A.A, S.Ay, I.A, N.A, u.A);
     }
     getParticipantsVersion(e) {
         return null == e ? -1 : (v(e)?.version ?? -1);

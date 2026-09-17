@@ -1,4 +1,4 @@
-n.d(t, { $u: () => S, IA: () => T, ID: () => N, Tk: () => p, Z$: () => C, rf: () => m });
+n.d(t, { $u: () => S, IA: () => T, ID: () => N, Tk: () => p, Z$: () => C, rf: () => g });
 var i = n(228366),
     r = n(95561),
     a = n(976860),
@@ -21,7 +21,7 @@ function p(e, t) {
         is_viewing_as_member: t.type === h._.NEW_MEMBER,
     }),
         i.h.dispatch({ type: "IMPERSONATE_UPDATE", guildId: e, data: t }),
-        g(e));
+        m(e));
 }
 function T(e, t) {
     let n = A.A.getData(e);
@@ -33,12 +33,12 @@ function T(e, t) {
             is_viewing_as_member: n.type === h._.NEW_MEMBER,
         }),
         i.h.dispatch({ type: "IMPERSONATE_UPDATE", guildId: e, data: { ...n, ...t } }),
-        g(e));
-}
-function m(e) {
-    i.h.dispatch({ type: "IMPERSONATE_STOP", guildId: e });
+        m(e));
 }
 function g(e) {
+    i.h.dispatch({ type: "IMPERSONATE_STOP", guildId: e });
+}
+function m(e) {
     let t = u.Ay.getChannelId(e),
         n = s.A.getChannel(t);
     if (!(null != t && (0, f.jq)(t)) && !c.A.can(I.xBc.VIEW_CHANNEL, n)) {

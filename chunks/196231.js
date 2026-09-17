@@ -1,107 +1,107 @@
-n.d(t, { S: () => I });
-var r = n(477900),
-    s = n(582128),
-    l = n(503698),
-    i = n.n(l),
-    a = n(269115),
-    o = n(939249),
-    u = n(812993),
-    c = n(297264),
-    d = n(821609),
-    _ = n(174459),
-    g = n(440938),
-    E = n(590180),
-    S = n(597783),
-    p = n(212407),
-    L = n(758836),
-    m = n(652215),
-    A = n(375708),
-    C = n(105499);
-function I(e) {
+r.d(t, { S: () => A });
+var n = r(477900),
+    l = r(582128),
+    s = r(503698),
+    a = r.n(s),
+    i = r(269115),
+    o = r(939249),
+    u = r(812993),
+    c = r(297264),
+    d = r(821609),
+    g = r(174459),
+    p = r(440938),
+    m = r(590180),
+    _ = r(597783),
+    h = r(212407),
+    E = r(758836),
+    S = r(652215),
+    C = r(375708),
+    L = r(105499);
+function A(e) {
     let {
             category: t,
-            subblock: n,
-            badgeText: l,
-            enablePreview: I,
-            pageType: y = L.G2.HOME,
-            className: O,
-            handleTransition: h,
-            listItemProps: v,
+            subblock: r,
+            badgeText: s,
+            enablePreview: A,
+            pageType: I = E.G2.HOME,
+            className: x,
+            handleTransition: v,
+            listItemProps: f,
         } = e,
-        k = n?.categorySkuId;
-    null == k && null != n && (k = E.A.getCategoryByStoreListingId(n?.categoryStoreListingId)?.skuId);
-    let f = k ?? t?.skuId ?? "",
-        { handleCardVisibilityChange: x } = (0, S.Z)(f, y, "marketing featured block"),
-        T = (0, p.s4)(t, n, I),
-        b = s.useRef(null),
-        B = n?.bodyText,
-        P = n?.name ?? t?.name,
-        R = null != P ? A.intl.formatToPlainString(A.t.frSHlf, { destination: P }) : void 0,
-        j = (0, g.uM)();
-    return (0, r.jsx)(a.L, {
-        innerRef: b,
-        onChange: x,
+        y = r?.categorySkuId;
+    null == y && null != r && (y = m.A.getCategoryByStoreListingId(r?.categoryStoreListingId)?.skuId);
+    let O = y ?? t?.skuId ?? "",
+        { handleCardVisibilityChange: k } = (0, _.Z)(O, I, "marketing featured block"),
+        P = (0, h.s4)(t, r, A),
+        T = l.useRef(null),
+        j = r?.bodyText,
+        b = r?.name ?? t?.name,
+        B = null != b ? C.intl.formatToPlainString(C.t.frSHlf, { destination: b }) : void 0,
+        N = (0, p.uM)();
+    return (0, n.jsx)(i.L, {
+        innerRef: T,
+        onChange: k,
         threshold: 0,
-        children: (0, r.jsxs)(o.D, {
-            className: i()(C.oT, O),
-            innerRef: b,
-            style: { ...(null != T && { backgroundImage: `url(${T})` }) },
-            ...v,
+        children: (0, n.jsxs)(o.D, {
+            className: a()(L.oT, x),
+            innerRef: T,
+            style: { ...(null != P && { backgroundImage: `url(${P})` }) },
+            ...f,
             onClick: () => {
-                (h({
+                (v({
                     sourceButton: "shop marketing tile",
-                    categorySkuId: f,
+                    categorySkuId: O,
                     isInternalShopDeeplink: !0,
                     isOrbsExclusive: t?.isOrbsExclusive,
                 }),
-                    _.default.track(m.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                        collectibles_shop_session_id: j?.sessionId,
-                        sku_id: f,
-                        page_type: y,
-                        page_section: j?.pageSection,
-                        page_category: j?.pageCategory,
+                    g.default.track(S.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                        collectibles_shop_session_id: N?.sessionId,
+                        sku_id: O,
+                        page_type: I,
+                        page_section: N?.pageSection,
+                        page_category: N?.pageCategory,
                         tile_type: "FEATURED_BLOCK",
-                        tile_position: String(j?.tilePosition),
+                        tile_position: String(N?.tilePosition),
                         cta_name: null,
                     }));
             },
             children: [
-                null != l && (0, r.jsx)(u.Lp, { disableColor: !0, text: l, className: C.pv }),
-                (0, r.jsx)("div", {
-                    className: C.Gh,
+                null != s && (0, n.jsx)(u.Lp, { disableColor: !0, text: s, className: L.pv }),
+                (0, n.jsx)("div", {
+                    className: L.Gh,
                     children:
-                        null != B &&
-                        (0, r.jsx)(c.D, {
+                        null != j &&
+                        (0, n.jsx)(c.D, {
                             lineClamp: 4,
-                            className: C.BN,
-                            style: { color: n?.bannerTextColor ?? "white" },
+                            className: L.BN,
+                            style: { color: r?.bannerTextColor ?? "white" },
                             variant: "heading-md/medium",
-                            children: B,
+                            children: j,
                         }),
                 }),
-                (0, r.jsx)("div", {
-                    className: C.b2,
-                    children: (0, r.jsx)(d.$, {
+                (0, n.jsx)("div", {
+                    className: L.b2,
+                    children: (0, n.jsx)(d.$, {
                         variant: "overlay-primary",
-                        text: A.intl.string(A.t.jVcuVY),
-                        "aria-label": R,
-                        tabIndex: v?.tabIndex,
+                        text: C.intl.string(C.t.jVcuVY),
+                        "aria-label": B,
+                        tabIndex: f?.tabIndex,
                         onClick: (e) => {
-                            (h({
+                            (v({
                                 sourceButton: "shop marketing take me there button",
-                                categorySkuId: f,
+                                categorySkuId: O,
                                 isInternalShopDeeplink: !0,
                                 isOrbsExclusive: t?.isOrbsExclusive,
                             }),
                                 e.stopPropagation(),
-                                _.default.track(m.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                                    collectibles_shop_session_id: j?.sessionId,
-                                    sku_id: f,
-                                    page_type: y,
-                                    page_section: j?.pageSection,
-                                    page_category: j?.pageCategory,
+                                g.default.track(S.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                                    collectibles_shop_session_id: N?.sessionId,
+                                    sku_id: O,
+                                    page_type: I,
+                                    page_section: N?.pageSection,
+                                    page_category: N?.pageCategory,
                                     tile_type: "FEATURED_BLOCK",
-                                    tile_position: String(j?.tilePosition),
+                                    tile_position: String(N?.tilePosition),
                                     cta_name: "Take me there button",
                                 }));
                         },

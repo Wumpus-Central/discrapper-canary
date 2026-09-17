@@ -1,6 +1,6 @@
 (n.d(t, {
     O9: () => eH,
-    Vn: () => eR,
+    Vn: () => eb,
     Wj: () => eU,
     mL: () => eu,
     Cv: () => ez,
@@ -21,7 +21,7 @@
     FA: () => ej,
     LS: () => eO,
     p5: () => eZ,
-    Ns: () => e6,
+    Ns: () => e7,
     Iq: () => e_,
     Qh: () => eh,
     t9: () => e4,
@@ -75,8 +75,8 @@ var g = n(27620),
     y = n(287809),
     P = n(174459),
     w = n(927813),
-    b = n(403362),
-    R = n(975571),
+    R = n(403362),
+    b = n(975571),
     L = n(252424),
     Q = n(723702),
     k = n(158045);
@@ -167,8 +167,8 @@ function ea(e, t, n, i) {
         d = e.userStatus?.enrolledAt != null,
         c = t.userStatus?.enrolledAt != null,
         C = 20 * w.A.Millis.MINUTE,
-        f = e7(e, C),
-        A = e7(t, C);
+        f = e6(e, C),
+        A = e6(t, C);
     if (u) {
         var E, p, I;
         let r,
@@ -479,20 +479,20 @@ function eP(e) {
         s = (0, X.wW)();
     return o.useCallback(() => {
         t.id === ei.Fw
-            ? window.open(R.A.getArticleURL(G.MVz.VIRTUAL_CURRENCY_LEARN_MORE))
+            ? window.open(b.A.getArticleURL(G.MVz.VIRTUAL_CURRENCY_LEARN_MORE))
             : (0, z.pu)(t, { content: n, ctaContent: i, impressionId: s(), sourceQuestContent: r });
     }, [t, n, i, s, r]);
 }
 function ew(e) {
     return (0, p.bG)([D.A], () => D.A.isProgressingOnDesktop(e.id));
 }
-function eb(e) {
+function eR(e) {
     return o.useMemo(() => (0, ee.YL)(e), [e]);
 }
-function eR(e) {
+function eb(e) {
     let t,
         n = ew(e),
-        i = eb(e),
+        i = eR(e),
         r =
             ((t = (0, p.bG)([D.A], () => D.A.getOptimisticProgress(e.id, C.n.WATCH_VIDEO))),
             o.useMemo(() => (0, en.J$)(e), [e, t]));
@@ -502,7 +502,7 @@ let eL = (e) => {
     let t = o.useCallback(() => (0, ee.Yh)(e), [e]),
         [n, i] = o.useState(t()),
         r = o.useCallback(() => i(t()), [t]),
-        s = eR(e);
+        s = eb(e);
     return (
         o.useEffect(() => {
             if (
@@ -604,7 +604,7 @@ function eU(e) {
 function eG(e) {
     let { quest: t } = e,
         { xboxAndPlaystationAccounts: n } = eq(),
-        i = eR(t),
+        i = eb(t),
         r = 0 === n.length;
     return (0, ee.g5)(t) && r && !i;
 }
@@ -612,8 +612,8 @@ function eB() {
     let { xboxAccounts: e, playstationAccounts: t } = eq(),
         n = e.length > 0,
         i = t.length > 0,
-        r = R.A.getArticleURL(G.MVz.QUEST_HOW_TO_PLAYSTATION),
-        s = R.A.getArticleURL(G.MVz.QUEST_HOW_TO_XBOX),
+        r = b.A.getArticleURL(G.MVz.QUEST_HOW_TO_PLAYSTATION),
+        s = b.A.getArticleURL(G.MVz.QUEST_HOW_TO_XBOX),
         o = es.intl.format(es.t.beN4DG, { psHelpdeskArticle: r, xboxHelpdeskArticle: s }),
         u = es.intl.format(es.t.HVS7nh, { helpdeskArticle: i ? r : s });
     return { message: (n && !i) || (!n && i) ? u : o, xboxURL: s, playstationURL: r };
@@ -651,7 +651,7 @@ function e$(e, t) {
         s = r.includes(ei.fO.DESKTOP),
         u = r.includes(ei.fO.CONSOLE),
         a = ew(e),
-        l = eb(e),
+        l = eR(e),
         c = o.useMemo(
             () =>
                 (0, d.YW)(t)
@@ -842,10 +842,10 @@ function e8(e) {
                 (s.current = e));
         }, [n, i]));
 }
-function e6(e) {
+function e7(e) {
     return o.useMemo(() => y.default.getCurrentUser()?.isStaff() === !0, []) || e.preview;
 }
-function e7(e, t) {
+function e6(e, t) {
     let n = e.userStatus?.completedAt != null;
     return e.userStatus?.enrolledAt != null && !n && Date.now() - new Date(e.userStatus?.enrolledAt).getTime() > t;
 }
@@ -856,7 +856,7 @@ function e4(e) {
         if (null == n) return { shelfQuests: [], isShelfEnabled: !1 };
         let e = n
             .map((e) => t.get(e))
-            .filter(b.Vq)
+            .filter(R.Vq)
             .filter((e) => !(0, U.Ic)(e));
         return e.length <= 1 ? { shelfQuests: [], isShelfEnabled: !1 } : { shelfQuests: e, isShelfEnabled: !0 };
     }, [t, n]);

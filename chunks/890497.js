@@ -17,10 +17,10 @@ function d(e) {
             onBlur: f,
             placeholder: p,
             closeOnSelect: T,
-            selectionMode: m,
+            selectionMode: g,
         } = c,
         {
-            isOpen: g,
+            isOpen: m,
             setIsOpen: S,
             refs: N,
             floatingStyles: C,
@@ -31,9 +31,9 @@ function d(e) {
     return (0, i.jsxs)(a.iS, {
         ...c,
         isCollapsible: !0,
-        isOpen: g,
+        isOpen: m,
         setIsOpen: S,
-        closeOnSelect: T ?? "single" === m,
+        closeOnSelect: T ?? "single" === g,
         children: [
             (0, i.jsx)(a.a3, {
                 hideTags: t,
@@ -50,7 +50,7 @@ function d(e) {
                 onQueryChange: A,
                 onFocus: I,
             }),
-            g &&
+            m &&
                 (0, i.jsx)("div", {
                     ref: N.setFloating,
                     className: o.S_,

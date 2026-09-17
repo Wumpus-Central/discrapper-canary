@@ -17,8 +17,8 @@ var r = n(503698),
     f = n(267102),
     p = n(574172),
     T = n(704877),
-    m = n(222692),
-    g = n(447404),
+    g = n(222692),
+    m = n(447404),
     S = n(271195),
     N = n(204651),
     C = n(383831),
@@ -79,7 +79,7 @@ function F(e) {
                     idle: d,
                     title: B?.name ?? V ?? "",
                     onJumpToChannel: o,
-                    preventIdleComponent: g.A,
+                    preventIdleComponent: m.A,
                 }),
             }),
             (0, i.jsxs)("div", {
@@ -98,11 +98,11 @@ function F(e) {
                                 hasPermission: H,
                                 onChange: W,
                                 onCameraUnavailable: function () {
-                                    F ? W(!0) : (0, m.A)();
+                                    F ? W(!0) : (0, g.A)();
                                 },
                             }),
                             null != t &&
-                                (0, i.jsx)(g.A, {
+                                (0, i.jsx)(m.A, {
                                     children: (0, i.jsx)(E.A, {
                                         channelId: t.id,
                                         guildId: t.getGuildId(),
@@ -171,7 +171,7 @@ function B(e) {
                     idle: c,
                     title: A?.name ?? I ?? "",
                     onJumpToChannel: d,
-                    preventIdleComponent: g.A,
+                    preventIdleComponent: m.A,
                 }),
             }),
             (0, i.jsxs)("div", {
@@ -226,7 +226,7 @@ function H(e) {
                                 idle: !s,
                                 title: f?.name ?? p ?? "",
                                 onJumpToChannel: c,
-                                preventIdleComponent: g.A,
+                                preventIdleComponent: m.A,
                             }),
                             (0, i.jsxs)("div", {
                                 className: G.QS,

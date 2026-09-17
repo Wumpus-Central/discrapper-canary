@@ -13,20 +13,20 @@ var i = n(284009),
 function g(e) {
     let { guildId: t, guildProductListingId: n, sourceAnalyticsLocations: i } = e,
         g = (0, s.bG)([o.A], () => o.A.getGuildProduct(n)),
-        p = (0, s.bG)([a.A], () => a.A.getGuild(t), [t]),
-        A = (0, m.A)({ guildId: t, productId: n });
-    return (l()(null != p, "guild cannot be null"), l()(null != g, "guildProductListing cannot be null"), (0, r.BB)(p))
+        A = (0, s.bG)([a.A], () => a.A.getGuild(t), [t]),
+        p = (0, m.A)({ guildId: t, productId: n });
+    return (l()(null != A, "guild cannot be null"), l()(null != g, "guildProductListing cannot be null"), (0, r.BB)(A))
         ? { variant: "primary", text: h.intl.string(h.t.xUi3BL), disabled: !0 }
         : g.has_entitlement
           ? null != g.attachments
-              ? A
+              ? p
               : { variant: "secondary", text: h.intl.string(h.t.RcTOGF), disabled: !0 }
           : {
                 variant: "primary",
                 text: h.intl.string(h.t.xUi3BL),
                 onClick: function () {
                     return (
-                        l()(null != p, "guild cannot be null"),
+                        l()(null != A, "guild cannot be null"),
                         l()(null != g, "guildProductListing cannot be null"),
                         (function (e) {
                             let { guildProductListing: t, guildId: n, sourceAnalyticsLocations: i } = e,
@@ -44,7 +44,7 @@ function g(e) {
                                         },
                                     },
                                 });
-                        })({ guildProductListing: g, guildId: p.id, sourceAnalyticsLocations: i })
+                        })({ guildProductListing: g, guildId: A.id, sourceAnalyticsLocations: i })
                     );
                 },
             };

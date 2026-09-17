@@ -37,8 +37,8 @@ var h = n(280450),
     f = n(927813),
     p = n(453771),
     T = n(513391),
-    m = n(292348),
-    g = n(280889),
+    g = n(292348),
+    m = n(280889),
     S = n(381941),
     N =
         (((i = {})[(i.SEND = 0)] = "SEND"),
@@ -229,8 +229,8 @@ class y extends T.A {
         null != c &&
             (f.data.attachments = c.map(
                 (e, t) => (
-                    a()(e.status === g.jP.COMPLETED, "Uploads must be staged before trying to send a message"),
-                    (0, m.OW)(e, t)
+                    a()(e.status === m.jP.COMPLETED, "Uploads must be staged before trying to send a message"),
+                    (0, g.OW)(e, t)
                 ),
             ));
         let T = new AbortController();

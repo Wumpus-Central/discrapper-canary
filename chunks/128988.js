@@ -99,25 +99,25 @@ function f(e) {
                       })(f, p),
             [f, p],
         ),
-        A = l.useRef(null),
-        E = l.useCallback(() => {
+        E = l.useRef(null),
+        A = l.useCallback(() => {
             if (null == t.current) return;
             let e = t.current.getBoundingClientRect();
-            A.current = { x: e.left, y: e.top };
+            E.current = { x: e.left, y: e.top };
         }, [t]);
     if (
         (l.useEffect(() => {
             if (!n) {
-                A.current = null;
+                E.current = null;
                 return;
             }
-            null == A.current && E();
-        }, [n, E]),
+            null == E.current && A();
+        }, [n, A]),
         !0 !== n || null == h || null == j)
     )
         return null;
-    null == A.current && E();
-    let { x: v, y: C } = A.current ?? { x: 0, y: 0 },
+    null == E.current && A();
+    let { x: v, y: C } = E.current ?? { x: 0, y: 0 },
         S = h.x - v - 60 * !!I,
         b = h.y - C;
     return (0, i.jsx)("div", { className: x.kL, style: { transform: `translate3d(${S}px, ${b}px, 0)` }, children: j });

@@ -1,6 +1,6 @@
 (n.d(t, {
     $Y: () => S,
-    A2: () => m,
+    A2: () => g,
     G4: () => D,
     H_: () => G,
     L1: () => N,
@@ -9,7 +9,7 @@
     VU: () => L,
     _N: () => O,
     a: () => U,
-    rs: () => g,
+    rs: () => m,
     sZ: () => y,
     tb: () => P,
     ui: () => b,
@@ -34,7 +34,7 @@ var i = n(665260),
     f = n(652215),
     p = n(340837);
 let T = new Date(16824888e5);
-function m(e) {
+function g(e) {
     return (0, r.bG)([c.A, u.A], () => {
         let t = c.A.getGuild(e),
             n = !!t?.features.has(f.GuildFeatures.COMMUNITY),
@@ -43,7 +43,7 @@ function m(e) {
         return n && i && r;
     });
 }
-function g(e) {
+function m(e) {
     let t = c.A.getGuild(e),
         n = !!t?.features.has(f.GuildFeatures.COMMUNITY),
         i = u.A.can(f.xBc.MANAGE_GUILD, t),

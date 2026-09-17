@@ -41,8 +41,8 @@ var E = n(207560),
     p = n(379257),
     T = n(306537);
 n(787301);
-var m = n(295972),
-    g = n(757319);
+var g = n(295972),
+    m = n(757319);
 n(96358);
 var S = n(40449),
     N = n(652215),
@@ -134,7 +134,7 @@ function j(e, t) {
     let i = n.embeds[0].fields.find((e) => "ctas" === e.rawName);
     return (
         i?.rawValue.split(",").includes("request_manual_review") === !0 &&
-        (0, g._)("isAgeVerificationMessageWithManualReviewCta")
+        (0, m._)("isAgeVerificationMessageWithManualReviewCta")
     );
 }
 function W(e, t) {
@@ -211,7 +211,7 @@ function z(e) {
     return {
         loading: s,
         initiateAgeVerification: a.useCallback(
-            (e, t) => l(() => (0, m.uf)({ method: e, classificationId: r ?? void 0, vendor: t })),
+            (e, t) => l(() => (0, g.uf)({ method: e, classificationId: r ?? void 0, vendor: t })),
             [l, r],
         ),
     };
@@ -226,7 +226,7 @@ function X(e) {
         });
     return {
         loading: r,
-        initiateAgeVerificationV2: a.useCallback((e) => s(() => (0, m.en)(e.method, e.vendor), e), [s]),
+        initiateAgeVerificationV2: a.useCallback((e) => s(() => (0, g.en)(e.method, e.vendor), e), [s]),
     };
 }
 function q(e) {

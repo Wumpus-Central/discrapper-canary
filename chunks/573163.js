@@ -17,8 +17,8 @@ var A = n(198052),
     f = n(626584),
     p = n(736056),
     T = n(698441),
-    m = n(250953),
-    g = n(380335),
+    g = n(250953),
+    m = n(380335),
     S = n(309199),
     N = n(157550),
     C = n(451919),
@@ -119,9 +119,9 @@ let eu = ei.hVb.VIEW_CHANNEL | ei.hVb.READ_MESSAGE_HISTORY,
             for (let [t, n] of j.default.entries(this.channelWindowIds)) e(t, n);
         }
     })(),
-    em = 30 * V.A.Millis.DAY;
-function eg() {
-    return j.default.fromTimestamp(Date.now() - em);
+    eg = 30 * V.A.Millis.DAY;
+function em() {
+    return j.default.fromTimestamp(Date.now() - eg);
 }
 let eS = 0,
     eN = 0,
@@ -335,8 +335,8 @@ class eP {
             oldestUnreadMessageIdStale: f,
             estimated: p,
             _mentionCount: T,
-            flags: m,
-            lastViewed: g,
+            flags: g,
+            lastViewed: m,
         } = this;
         if (e)
             return {
@@ -359,8 +359,8 @@ class eP {
                 oldestUnreadMessageIdStale: f,
                 estimated: p,
                 _mentionCount: T,
-                flags: m,
-                lastViewed: g,
+                flags: g,
+                lastViewed: m,
             };
         let S = {
             channelId: t,
@@ -374,10 +374,10 @@ class eP {
             ackPinTimestamp: E,
             lastPinTimestamp: h,
             _mentionCount: T,
-            flags: m,
+            flags: g,
         };
         return (
-            null != g && g > 0 && (S.lastViewed = g),
+            null != m && m > 0 && (S.lastViewed = m),
             r && ((S._isThread = r), (S._isActiveThread = a), (S._isJoinedThread = s)),
             S
         );
@@ -403,8 +403,8 @@ class eP {
             _oldestUnreadMessageId: f,
             oldestUnreadMessageIdStale: p,
             estimated: T,
-            _unreadCount: m,
-            _mentionCount: g,
+            _unreadCount: g,
+            _mentionCount: m,
             flags: S,
             lastViewed: N,
         } = e;
@@ -427,8 +427,8 @@ class eP {
             (this._oldestUnreadMessageId = f),
             (this.oldestUnreadMessageIdStale = p ?? !1),
             (this.estimated = T ?? !1),
-            (this._unreadCount = m ?? 0),
-            (this._mentionCount = g),
+            (this._unreadCount = g ?? 0),
+            (this._mentionCount = m),
             (this.flags = S),
             (this.lastViewed = N),
             eP._mentionChannels.delete(this.channelId),
@@ -571,7 +571,7 @@ class eP {
         return (
             !(
                 (this._isThread && !this._isJoinedThread) ||
-                (0, S.k_)(this.channelId, [g.A, N.A]) ||
+                (0, S.k_)(this.channelId, [m.A, N.A]) ||
                 (!this._isThread &&
                     (0, v.WW)(this._guildId) &&
                     (this._lastMessageTimestamp < eS ||
@@ -586,7 +586,7 @@ class eP {
             !(
                 0 === this.mentionCount ||
                 (this._isThread && !this._isJoinedThread) ||
-                (0, S.k_)(this.channelId, [g.A, N.A]) ||
+                (0, S.k_)(this.channelId, [m.A, N.A]) ||
                 ((0, v.WW)(this._guildId) && this._lastMessageTimestamp < eS)
             ) && this.canTrackUnreads()
         );
@@ -793,10 +793,10 @@ class eP {
             remote: e,
             persisted: this._persisted,
             channelMissing: null == t,
-            isOld: eF(this, eg()),
+            isOld: eF(this, em()),
             validType: null != t && F.A_.has(t.type),
             readableType: null != t && (0, F.Z_)(t.type),
-            oldThreadCutoff: eg(),
+            oldThreadCutoff: em(),
             mentionCount: this.mentionCount,
             channelId: this.channelId,
             ackMessageId: this._ackMessageId,
@@ -1119,7 +1119,7 @@ class e1 extends o.Ay.Store {
             ee.Ay,
             en.A,
             y.A,
-            g.A,
+            m.A,
             k.A,
             N.A,
             this.waitFor(
@@ -1363,7 +1363,7 @@ let e2 = new e1(_.h, {
                 (ep = setTimeout(
                     () =>
                         (function (e) {
-                            let t = eg();
+                            let t = em();
                             for (let n of e) {
                                 let e = n.read_state_type ?? el.P.CHANNEL,
                                     i = eP.get(n.id, e);
@@ -1403,7 +1403,7 @@ let e2 = new e1(_.h, {
         },
         GUILD_CREATE: function (e) {
             let { guild: t } = e,
-                n = eg();
+                n = em();
             (eP.forEach((e) => {
                 e.guildId === t.id && e.shouldDeleteReadState(n) && e.delete(!1);
             }),
@@ -1449,7 +1449,7 @@ let e2 = new e1(_.h, {
                 return (
                     null != l.outgoingAck && l.clearOutgoingAck(), eQ({ channelId: r, messageId: a.id, manual: !1 })
                 );
-            let _ = (0, m.Y)();
+            let _ = (0, g.Y)();
             if (_?.isReady() === !0) {
                 let e = _.getCurrentRoute();
                 A.A.getChatOpen(l.channelId)

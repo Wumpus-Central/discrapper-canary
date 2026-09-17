@@ -1,4 +1,4 @@
-(n.d(t, { CD: () => g, JL: () => N, Oj: () => p, j9: () => S, ou: () => m }), n(938796));
+(n.d(t, { CD: () => m, JL: () => N, Oj: () => p, j9: () => S, ou: () => g }), n(938796));
 var i = n(582128),
     r = n(435558),
     a = n.n(r);
@@ -73,7 +73,7 @@ function T(e) {
         };
     }, [t, a, n, r]);
 }
-function m(e) {
+function g(e) {
     let { sku: t, priceSetAssignmentPurchaseType: n = h.lid.DEFAULT } = e,
         {
             userPrice: r,
@@ -116,9 +116,9 @@ function m(e) {
         };
     }, [t, n, _?.premiumType, d, r, a, o, u]);
 }
-function g(e) {
+function m(e) {
     let { sku: t, priceSetAssignmentPurchaseType: n = h.lid.DEFAULT } = e;
-    return S(m({ sku: t, priceSetAssignmentPurchaseType: n }));
+    return S(g({ sku: t, priceSetAssignmentPurchaseType: n }));
 }
 function S(e) {
     let t = (0, s.bG)([o.default], () => o.default.locale);

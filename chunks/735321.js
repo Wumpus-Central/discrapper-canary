@@ -3,9 +3,9 @@ n.d(t, {
     $C: () => M,
     AD: () => B,
     BF: () => O,
-    FM: () => g,
+    FM: () => m,
     Fo: () => k,
-    L: () => m,
+    L: () => g,
     N5: () => G,
     R_: () => Y,
     Un: () => K,
@@ -45,10 +45,10 @@ var i = n(926675),
     p = n(49999);
 n(600253);
 var T = n(375708);
-function m(e) {
+function g(e) {
     return f.Ok[e.type](e);
 }
-function g(e, t) {
+function m(e, t) {
     let { showEditingControls: n } = t,
         r = e.games.length > 0;
     if (n && r)

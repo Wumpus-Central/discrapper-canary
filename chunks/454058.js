@@ -1,4 +1,4 @@
-n.d(t, { A: () => L });
+n.d(t, { A: () => R });
 var i = n(17928),
     s = n(228366),
     l = n(334738),
@@ -75,7 +75,7 @@ function N() {
         f[e] = new Set([...t].filter((t) => !C.Ay.isChannelOrParentOptedIn(e, t)));
     });
 }
-class R extends i.Ay.Store {
+class L extends i.Ay.Store {
     static displayName = "NewChannelsStore";
     initialize() {
         (this.waitFor(d.default, o.A, h.Ay, u.Ay, c.A, g.Ay, C.Ay, a.A), this.syncWith([C.Ay], N));
@@ -93,7 +93,7 @@ class R extends i.Ay.Store {
         );
     }
 }
-let L = new R(s.h, {
+let R = new L(s.h, {
     BULK_CLEAR_RECENTS: function (e) {
         let { guildId: t, channelIds: n } = e;
         if (null == f[t]) return !1;
