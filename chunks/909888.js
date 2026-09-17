@@ -1,1 +1,3 @@
-p.exports = JSON.parse('{"KEB4Rm":["Kh\xf4ng"],"yZQxdT":["\u1EE8ng d\u1EE5ng"]}');
+n.exports = JSON.parse(
+    '{"X2xOBn":["Kh\xf4ng th\u1EC3 t\u1EA3i \u1EE9ng d\u1EE5ng c\u1EE7a b\u1EA1n. Th\u1EED l\u1EA1i."],"KEB4Rm":["Kh\xf4ng c\xf3"],"4S6iHa":["Ch\u01B0a c\xf3 \u1EE9ng d\u1EE5ng n\xe0o tr\xean m\xe1y ch\u1EE7 n\xe0y"],"TQptZV":["Kh\xf4ng t\xecm th\u1EA5y \u1EE9ng d\u1EE5ng n\xe0y."],"2hwpCp":["Ch\u1ECDn \u1EE9ng d\u1EE5ng"],"yZQxdT":["\u1EE8ng d\u1EE5ng"],"13FYwI":["\u1EE8ng d\u1EE5ng n\xe0y kh\xf4ng th\u1EC3 ch\u1EA1y trong k\xeanh tho\u1EA1i."],"lcgR82":["Kh\xf4ng th\u1EC3 c\u1EADp nh\u1EADt \u1EE9ng d\u1EE5ng c\u1EE7a k\xeanh n\xe0y. H\xe3y th\u1EED l\u1EA1i."],"8FWvxm":["Xem \u1EE9ng d\u1EE5ng"]}',
+);

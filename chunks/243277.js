@@ -8,7 +8,7 @@ n.d(t, {
     bV: () => E,
     kS: () => O,
     NX: () => N,
-    oN: () => U,
+    oN: () => g,
     UW: () => A,
     Nu: () => S,
     Ix: () => u,
@@ -17,6 +17,7 @@ n.d(t, {
     qm: () => I,
     Ku: () => L,
     uh: () => s,
+    xv: () => U,
     Us: () => p,
 });
 var a,
@@ -64,4 +65,5 @@ let u = 5,
     y = 50,
     S = 20,
     R = 300,
-    U = "automod-profile-quarantine-alert";
+    U = "^b(a|@)d$\nw(o|0)rd(s|$)",
+    g = "automod-profile-quarantine-alert";

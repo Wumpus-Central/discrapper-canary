@@ -1,3 +1,3 @@
-h.exports = JSON.parse(
-    '{"au4mU4":["Th\xeam Ba\u0323n"],"JZCSRZ":["Thu g\u1ECDn danh s\xe1ch b\u1EA1n b\xe8"],"Dr/+ku":["M\u1EDF r\u1ED9ng danh s\xe1ch b\u1EA1n b\xe8"],"7kJd9e":["B\u1EA1n b\xe8"],"i+986w":["T\xf9y ch\u1ECDn danh s\xe1ch b\u1EA1n b\xe8"],"F3+Xei":["Ch\u1EC9nh k\xedch c\u1EE1 danh s\xe1ch b\u1EA1n b\xe8"],"60M8Ae":["T\xecm ki\u1EBFm b\u1EA1n b\xe8"]}',
+n.exports = JSON.parse(
+    '{"au4mU4":["Th\xeam Ba\u0323n"],"JZCSRZ":["Thu g\u1ECDn danh s\xe1ch b\u1EA1n b\xe8"],"Dr/+ku":["M\u1EDF r\u1ED9ng danh s\xe1ch b\u1EA1n b\xe8"],"7kJd9e":["B\u1EA1n b\xe8"],"i+986w":["T\xf9y ch\u1ECDn danh s\xe1ch b\u1EA1n b\xe8"],"F3+Xei":["Ch\u1EC9nh k\xedch c\u1EE1 danh s\xe1ch b\u1EA1n b\xe8"],"60M8Ae":["T\xecm ki\u1EBFm b\u1EA1n b\xe8"],"0usxBd":["B\u1EA1n c\xf3 th\u1EC3 ti\u0300m ki\xea\u0301m b\u1EA1n b\xe8 b\u1EB1ng t\xean hi\u1EC3n th\u1ECB ho\u1EB7c t\xean ng\u01B0\u1EDDi d\xf9ng c\u1EE7a h\u1ECD."],"VH2HXW":["Kh\xf4ng c\xf3 b\u1EA1n b\xe8 n\xe0o kh\u1EDBp v\u1EDBi ti\u0300m ki\xea\u0301m."]}',
 );
