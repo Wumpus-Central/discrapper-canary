@@ -51,6 +51,7 @@ var i,
         (i.APPLICATION_IDENTITIES_WRITE = "application_identities.write"),
         (i.MANAGED_PLATFORM_APPLICATION_IDENTITIES_WRITE = "managed_platform.application_identities.write"),
         (i.VIBEGRATIONS_PROJECTS = "vibegrations.projects"),
+        (i.ORBS_ARCADE_PLAY = "orbs_arcade.play"),
         i);
 let a = {
     PUBLIC: new Set([
@@ -96,6 +97,7 @@ let a = {
         "identify.premium",
         "lobbies.write",
         "managed_platform.application_identities.write",
+        "orbs_arcade.play",
         "payment_sources.country_code",
         "presences.read",
         "presences.write",
@@ -229,6 +231,7 @@ let a = {
         "managed_platform.application_identities.write",
         "messages.read",
         "openid",
+        "orbs_arcade.play",
         "payment_sources.country_code",
         "presences.read",
         "presences.write",
