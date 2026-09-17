@@ -280,7 +280,8 @@ class f extends s.G {
     }
 }
 let p = new f();
-class T extends s.G {
+var T = n(414525);
+class m extends s.G {
     constructor() {
         super("discord_protos.premium_marketing.v1.AdminEditorTestComponent", [
             { no: 1, name: "deprecated_field", kind: "scalar", T: 9 },
@@ -292,6 +293,7 @@ class T extends s.G {
             { no: 7, name: "themed_asset_field", kind: "message", T: () => d.i },
             { no: 8, name: "help_article_field", kind: "message", T: () => l.O },
             { no: 9, name: "cta_field", kind: "message", T: () => I.$ },
+            { no: 10, name: "gradient_field", kind: "message", T: () => T.H },
         ]);
     }
     create(e) {
@@ -335,6 +337,9 @@ class T extends s.G {
                 case 9:
                     a.ctaField = I.$.internalBinaryRead(e, e.uint32(), n, a.ctaField);
                     break;
+                case 10:
+                    a.gradientField = T.H.internalBinaryRead(e, e.uint32(), n, a.gradientField);
+                    break;
                 default:
                     let s = n.readUnknownField;
                     if ("throw" === s)
@@ -358,14 +363,16 @@ class T extends s.G {
                 d.i.internalBinaryWrite(e.themedAssetField, t.tag(7, i.O0.LengthDelimited).fork(), n).join(),
             e.helpArticleField &&
                 l.O.internalBinaryWrite(e.helpArticleField, t.tag(8, i.O0.LengthDelimited).fork(), n).join(),
-            e.ctaField && I.$.internalBinaryWrite(e.ctaField, t.tag(9, i.O0.LengthDelimited).fork(), n).join());
+            e.ctaField && I.$.internalBinaryWrite(e.ctaField, t.tag(9, i.O0.LengthDelimited).fork(), n).join(),
+            e.gradientField &&
+                T.H.internalBinaryWrite(e.gradientField, t.tag(10, i.O0.LengthDelimited).fork(), n).join());
         let r = n.writeUnknownFields;
         return (!1 !== r && (!0 == r ? i.f$.onWrite : r)(this.typeName, e, t), t);
     }
 }
-let m = new T();
-var g = n(406935);
-class S extends s.G {
+let g = new m();
+var S = n(406935);
+class N extends s.G {
     constructor() {
         super("discord_protos.premium_marketing.v1.ShopNagbar", [
             { no: 1, name: "body", kind: "scalar", T: 9 },
@@ -380,7 +387,7 @@ class S extends s.G {
             { no: 5, name: "help_article", kind: "message", T: () => l.O },
             { no: 6, name: "body_localized", kind: "message", T: () => o.X },
             { no: 7, name: "cta_label_localized", kind: "message", T: () => o.X },
-            { no: 8, name: "navigable_storefront_application_id", kind: "message", T: () => g.ol },
+            { no: 8, name: "navigable_storefront_application_id", kind: "message", T: () => S.ol },
         ]);
     }
     create(e) {
@@ -419,7 +426,7 @@ class S extends s.G {
                     a.ctaLabelLocalized = o.X.internalBinaryRead(e, e.uint32(), n, a.ctaLabelLocalized);
                     break;
                 case 8:
-                    a.navigableStorefrontApplicationId = g.ol.internalBinaryRead(
+                    a.navigableStorefrontApplicationId = S.ol.internalBinaryRead(
                         e,
                         e.uint32(),
                         n,
@@ -447,16 +454,16 @@ class S extends s.G {
             e.ctaLabelLocalized &&
                 o.X.internalBinaryWrite(e.ctaLabelLocalized, t.tag(7, i.O0.LengthDelimited).fork(), n).join(),
             e.navigableStorefrontApplicationId &&
-                g.ol
+                S.ol
                     .internalBinaryWrite(e.navigableStorefrontApplicationId, t.tag(8, i.O0.LengthDelimited).fork(), n)
                     .join());
         let r = n.writeUnknownFields;
         return (!1 !== r && (!0 == r ? i.f$.onWrite : r)(this.typeName, e, t), t);
     }
 }
-let N = new S();
-var C = n(520361);
-class O extends s.G {
+let C = new N();
+var O = n(520361);
+class R extends s.G {
     constructor() {
         super("discord_protos.premium_marketing.v1.PlanSelectCardBanner", [
             { no: 1, name: "asset", kind: "message", T: () => d.i },
@@ -511,8 +518,8 @@ class O extends s.G {
         return (!1 !== r && (!0 == r ? i.f$.onWrite : r)(this.typeName, e, t), t);
     }
 }
-let R = new O();
-class L extends s.G {
+let L = new R();
+class y extends s.G {
     constructor() {
         super("discord_protos.premium_marketing.v1.Nagbar", [
             { no: 1, name: "body", kind: "scalar", T: 9 },
@@ -527,7 +534,7 @@ class L extends s.G {
             { no: 5, name: "help_article", kind: "message", T: () => l.O },
             { no: 6, name: "body_localized", kind: "message", T: () => o.X },
             { no: 7, name: "cta_label_localized", kind: "message", T: () => o.X },
-            { no: 8, name: "navigable_storefront_application_id", kind: "message", T: () => g.ol },
+            { no: 8, name: "navigable_storefront_application_id", kind: "message", T: () => S.ol },
         ]);
     }
     create(e) {
@@ -566,7 +573,7 @@ class L extends s.G {
                     a.ctaLabelLocalized = o.X.internalBinaryRead(e, e.uint32(), n, a.ctaLabelLocalized);
                     break;
                 case 8:
-                    a.navigableStorefrontApplicationId = g.ol.internalBinaryRead(
+                    a.navigableStorefrontApplicationId = S.ol.internalBinaryRead(
                         e,
                         e.uint32(),
                         n,
@@ -594,15 +601,15 @@ class L extends s.G {
             e.ctaLabelLocalized &&
                 o.X.internalBinaryWrite(e.ctaLabelLocalized, t.tag(7, i.O0.LengthDelimited).fork(), n).join(),
             e.navigableStorefrontApplicationId &&
-                g.ol
+                S.ol
                     .internalBinaryWrite(e.navigableStorefrontApplicationId, t.tag(8, i.O0.LengthDelimited).fork(), n)
                     .join());
         let r = n.writeUnknownFields;
         return (!1 !== r && (!0 == r ? i.f$.onWrite : r)(this.typeName, e, t), t);
     }
 }
-let y = new L();
-class D extends s.G {
+let D = new y();
+class v extends s.G {
     constructor() {
         super("discord_protos.premium_marketing.v1.PremiumTabPopover", [
             { no: 1, name: "header", kind: "scalar", T: 9 },
@@ -678,8 +685,8 @@ class D extends s.G {
         return (!1 !== r && (!0 == r ? i.f$.onWrite : r)(this.typeName, e, t), t);
     }
 }
-let v = new D();
-class b extends s.G {
+let b = new v();
+class M extends s.G {
     constructor() {
         super("discord_protos.premium_marketing.v1.PremiumTabTooltip", [
             { no: 1, name: "header", kind: "scalar", T: 9 },
@@ -740,8 +747,8 @@ class b extends s.G {
         return (!1 !== r && (!0 == r ? i.f$.onWrite : r)(this.typeName, e, t), t);
     }
 }
-let M = new b();
-class P extends s.G {
+let P = new M();
+class U extends s.G {
     constructor() {
         super("discord_protos.premium_marketing.v1.GiftReminderCoachmark", [
             { no: 1, name: "header", kind: "scalar", T: 9 },
@@ -807,8 +814,8 @@ class P extends s.G {
         return (!1 !== r && (!0 == r ? i.f$.onWrite : r)(this.typeName, e, t), t);
     }
 }
-let U = new P();
-class w extends s.G {
+let w = new U();
+class G extends s.G {
     constructor() {
         super("discord_protos.premium_marketing.v1.GiftReminderNagbar", [
             { no: 1, name: "body", kind: "scalar", T: 9 },
@@ -853,19 +860,18 @@ class w extends s.G {
         return (!1 !== r && (!0 == r ? i.f$.onWrite : r)(this.typeName, e, t), t);
     }
 }
-let G = new w();
-var x = n(959129),
-    k = n(67948),
-    F = n(978656),
-    B = n(720119),
-    V = n(414525);
+let x = new G();
+var k = n(959129),
+    F = n(67948),
+    B = n(978656),
+    V = n(720119);
 class H extends s.G {
     constructor() {
         super("discord_protos.premium_marketing.v1.GiftIcon", [
             { no: 1, name: "box_animation_url", kind: "scalar", T: 9 },
             { no: 2, name: "trinket_animation_url", kind: "scalar", T: 9 },
             { no: 3, name: "trinket_glow_animation_url", kind: "scalar", T: 9 },
-            { no: 4, name: "gradient", kind: "message", T: () => V.H },
+            { no: 4, name: "gradient", kind: "message", T: () => T.H },
         ]);
     }
     create(e) {
@@ -892,7 +898,7 @@ class H extends s.G {
                     a.trinketGlowAnimationUrl = e.string();
                     break;
                 case 4:
-                    a.gradient = V.H.internalBinaryRead(e, e.uint32(), n, a.gradient);
+                    a.gradient = T.H.internalBinaryRead(e, e.uint32(), n, a.gradient);
                     break;
                 default:
                     let s = n.readUnknownField;
@@ -908,7 +914,7 @@ class H extends s.G {
         ("" !== e.boxAnimationUrl && t.tag(1, i.O0.LengthDelimited).string(e.boxAnimationUrl),
             "" !== e.trinketAnimationUrl && t.tag(2, i.O0.LengthDelimited).string(e.trinketAnimationUrl),
             "" !== e.trinketGlowAnimationUrl && t.tag(3, i.O0.LengthDelimited).string(e.trinketGlowAnimationUrl),
-            e.gradient && V.H.internalBinaryWrite(e.gradient, t.tag(4, i.O0.LengthDelimited).fork(), n).join());
+            e.gradient && T.H.internalBinaryWrite(e.gradient, t.tag(4, i.O0.LengthDelimited).fork(), n).join());
         let r = n.writeUnknownFields;
         return (!1 !== r && (!0 == r ? i.f$.onWrite : r)(this.typeName, e, t), t);
     }
@@ -1152,19 +1158,19 @@ class J extends s.G {
             { no: 6, name: "payment_modal_banner", kind: "message", oneof: "properties", T: () => z },
             { no: 7, name: "mobile_bottom_sheet", kind: "message", oneof: "properties", T: () => K },
             { no: 8, name: "gift_icon", kind: "message", oneof: "properties", T: () => j },
-            { no: 9, name: "gift_icon_coachmark", kind: "message", oneof: "properties", T: () => B.l },
-            { no: 10, name: "gift_plan_selection_card_banner", kind: "message", oneof: "properties", T: () => F.s },
-            { no: 11, name: "gift_customization_banner", kind: "message", oneof: "properties", T: () => k.E },
-            { no: 12, name: "billing_settings_nitro_gift_banner", kind: "message", oneof: "properties", T: () => x.v },
-            { no: 13, name: "gift_reminder_nagbar", kind: "message", oneof: "properties", T: () => G },
-            { no: 14, name: "gift_reminder_coachmark", kind: "message", oneof: "properties", T: () => U },
-            { no: 15, name: "premium_tab_tooltip", kind: "message", oneof: "properties", T: () => M },
-            { no: 16, name: "premium_tab_popover", kind: "message", oneof: "properties", T: () => v },
-            { no: 17, name: "nagbar", kind: "message", oneof: "properties", T: () => y },
-            { no: 19, name: "plan_select_card_banner", kind: "message", oneof: "properties", T: () => R },
-            { no: 20, name: "billing_settings_banner", kind: "message", oneof: "properties", T: () => C.h },
-            { no: 21, name: "shop_nagbar", kind: "message", oneof: "properties", T: () => N },
-            { no: 22, name: "admin_editor_test_component", kind: "message", oneof: "properties", T: () => m },
+            { no: 9, name: "gift_icon_coachmark", kind: "message", oneof: "properties", T: () => V.l },
+            { no: 10, name: "gift_plan_selection_card_banner", kind: "message", oneof: "properties", T: () => B.s },
+            { no: 11, name: "gift_customization_banner", kind: "message", oneof: "properties", T: () => F.E },
+            { no: 12, name: "billing_settings_nitro_gift_banner", kind: "message", oneof: "properties", T: () => k.v },
+            { no: 13, name: "gift_reminder_nagbar", kind: "message", oneof: "properties", T: () => x },
+            { no: 14, name: "gift_reminder_coachmark", kind: "message", oneof: "properties", T: () => w },
+            { no: 15, name: "premium_tab_tooltip", kind: "message", oneof: "properties", T: () => P },
+            { no: 16, name: "premium_tab_popover", kind: "message", oneof: "properties", T: () => b },
+            { no: 17, name: "nagbar", kind: "message", oneof: "properties", T: () => D },
+            { no: 19, name: "plan_select_card_banner", kind: "message", oneof: "properties", T: () => L },
+            { no: 20, name: "billing_settings_banner", kind: "message", oneof: "properties", T: () => O.h },
+            { no: 21, name: "shop_nagbar", kind: "message", oneof: "properties", T: () => C },
+            { no: 22, name: "admin_editor_test_component", kind: "message", oneof: "properties", T: () => g },
             { no: 23, name: "guild_header_coachmark", kind: "message", oneof: "properties", T: () => p },
             { no: 24, name: "guild_boost_checkout_banner", kind: "message", oneof: "properties", T: () => h },
             { no: 25, name: "guild_boost_marketing_page_banner", kind: "message", oneof: "properties", T: () => E },
@@ -1234,13 +1240,13 @@ class J extends s.G {
                 case 9:
                     a.properties = {
                         oneofKind: "giftIconCoachmark",
-                        giftIconCoachmark: B.l.internalBinaryRead(e, e.uint32(), n, a.properties.giftIconCoachmark),
+                        giftIconCoachmark: V.l.internalBinaryRead(e, e.uint32(), n, a.properties.giftIconCoachmark),
                     };
                     break;
                 case 10:
                     a.properties = {
                         oneofKind: "giftPlanSelectionCardBanner",
-                        giftPlanSelectionCardBanner: F.s.internalBinaryRead(
+                        giftPlanSelectionCardBanner: B.s.internalBinaryRead(
                             e,
                             e.uint32(),
                             n,
@@ -1251,7 +1257,7 @@ class J extends s.G {
                 case 11:
                     a.properties = {
                         oneofKind: "giftCustomizationBanner",
-                        giftCustomizationBanner: k.E.internalBinaryRead(
+                        giftCustomizationBanner: F.E.internalBinaryRead(
                             e,
                             e.uint32(),
                             n,
@@ -1262,7 +1268,7 @@ class J extends s.G {
                 case 12:
                     a.properties = {
                         oneofKind: "billingSettingsNitroGiftBanner",
-                        billingSettingsNitroGiftBanner: x.v.internalBinaryRead(
+                        billingSettingsNitroGiftBanner: k.v.internalBinaryRead(
                             e,
                             e.uint32(),
                             n,
@@ -1273,13 +1279,13 @@ class J extends s.G {
                 case 13:
                     a.properties = {
                         oneofKind: "giftReminderNagbar",
-                        giftReminderNagbar: G.internalBinaryRead(e, e.uint32(), n, a.properties.giftReminderNagbar),
+                        giftReminderNagbar: x.internalBinaryRead(e, e.uint32(), n, a.properties.giftReminderNagbar),
                     };
                     break;
                 case 14:
                     a.properties = {
                         oneofKind: "giftReminderCoachmark",
-                        giftReminderCoachmark: U.internalBinaryRead(
+                        giftReminderCoachmark: w.internalBinaryRead(
                             e,
                             e.uint32(),
                             n,
@@ -1290,31 +1296,31 @@ class J extends s.G {
                 case 15:
                     a.properties = {
                         oneofKind: "premiumTabTooltip",
-                        premiumTabTooltip: M.internalBinaryRead(e, e.uint32(), n, a.properties.premiumTabTooltip),
+                        premiumTabTooltip: P.internalBinaryRead(e, e.uint32(), n, a.properties.premiumTabTooltip),
                     };
                     break;
                 case 16:
                     a.properties = {
                         oneofKind: "premiumTabPopover",
-                        premiumTabPopover: v.internalBinaryRead(e, e.uint32(), n, a.properties.premiumTabPopover),
+                        premiumTabPopover: b.internalBinaryRead(e, e.uint32(), n, a.properties.premiumTabPopover),
                     };
                     break;
                 case 17:
                     a.properties = {
                         oneofKind: "nagbar",
-                        nagbar: y.internalBinaryRead(e, e.uint32(), n, a.properties.nagbar),
+                        nagbar: D.internalBinaryRead(e, e.uint32(), n, a.properties.nagbar),
                     };
                     break;
                 case 19:
                     a.properties = {
                         oneofKind: "planSelectCardBanner",
-                        planSelectCardBanner: R.internalBinaryRead(e, e.uint32(), n, a.properties.planSelectCardBanner),
+                        planSelectCardBanner: L.internalBinaryRead(e, e.uint32(), n, a.properties.planSelectCardBanner),
                     };
                     break;
                 case 20:
                     a.properties = {
                         oneofKind: "billingSettingsBanner",
-                        billingSettingsBanner: C.h.internalBinaryRead(
+                        billingSettingsBanner: O.h.internalBinaryRead(
                             e,
                             e.uint32(),
                             n,
@@ -1325,13 +1331,13 @@ class J extends s.G {
                 case 21:
                     a.properties = {
                         oneofKind: "shopNagbar",
-                        shopNagbar: N.internalBinaryRead(e, e.uint32(), n, a.properties.shopNagbar),
+                        shopNagbar: C.internalBinaryRead(e, e.uint32(), n, a.properties.shopNagbar),
                     };
                     break;
                 case 22:
                     a.properties = {
                         oneofKind: "adminEditorTestComponent",
-                        adminEditorTestComponent: m.internalBinaryRead(
+                        adminEditorTestComponent: g.internalBinaryRead(
                             e,
                             e.uint32(),
                             n,
@@ -1414,11 +1420,11 @@ class J extends s.G {
             "giftIcon" === e.properties.oneofKind &&
                 j.internalBinaryWrite(e.properties.giftIcon, t.tag(8, i.O0.LengthDelimited).fork(), n).join(),
             "giftIconCoachmark" === e.properties.oneofKind &&
-                B.l
+                V.l
                     .internalBinaryWrite(e.properties.giftIconCoachmark, t.tag(9, i.O0.LengthDelimited).fork(), n)
                     .join(),
             "giftPlanSelectionCardBanner" === e.properties.oneofKind &&
-                F.s
+                B.s
                     .internalBinaryWrite(
                         e.properties.giftPlanSelectionCardBanner,
                         t.tag(10, i.O0.LengthDelimited).fork(),
@@ -1426,13 +1432,13 @@ class J extends s.G {
                     )
                     .join(),
             "giftCustomizationBanner" === e.properties.oneofKind &&
-                k.E.internalBinaryWrite(
+                F.E.internalBinaryWrite(
                     e.properties.giftCustomizationBanner,
                     t.tag(11, i.O0.LengthDelimited).fork(),
                     n,
                 ).join(),
             "billingSettingsNitroGiftBanner" === e.properties.oneofKind &&
-                x.v
+                k.v
                     .internalBinaryWrite(
                         e.properties.billingSettingsNitroGiftBanner,
                         t.tag(12, i.O0.LengthDelimited).fork(),
@@ -1440,37 +1446,33 @@ class J extends s.G {
                     )
                     .join(),
             "giftReminderNagbar" === e.properties.oneofKind &&
-                G.internalBinaryWrite(
-                    e.properties.giftReminderNagbar,
-                    t.tag(13, i.O0.LengthDelimited).fork(),
-                    n,
-                ).join(),
+                x
+                    .internalBinaryWrite(e.properties.giftReminderNagbar, t.tag(13, i.O0.LengthDelimited).fork(), n)
+                    .join(),
             "giftReminderCoachmark" === e.properties.oneofKind &&
-                U.internalBinaryWrite(
-                    e.properties.giftReminderCoachmark,
-                    t.tag(14, i.O0.LengthDelimited).fork(),
-                    n,
-                ).join(),
+                w
+                    .internalBinaryWrite(e.properties.giftReminderCoachmark, t.tag(14, i.O0.LengthDelimited).fork(), n)
+                    .join(),
             "premiumTabTooltip" === e.properties.oneofKind &&
-                M.internalBinaryWrite(e.properties.premiumTabTooltip, t.tag(15, i.O0.LengthDelimited).fork(), n).join(),
+                P.internalBinaryWrite(e.properties.premiumTabTooltip, t.tag(15, i.O0.LengthDelimited).fork(), n).join(),
             "premiumTabPopover" === e.properties.oneofKind &&
-                v.internalBinaryWrite(e.properties.premiumTabPopover, t.tag(16, i.O0.LengthDelimited).fork(), n).join(),
+                b.internalBinaryWrite(e.properties.premiumTabPopover, t.tag(16, i.O0.LengthDelimited).fork(), n).join(),
             "nagbar" === e.properties.oneofKind &&
-                y.internalBinaryWrite(e.properties.nagbar, t.tag(17, i.O0.LengthDelimited).fork(), n).join(),
+                D.internalBinaryWrite(e.properties.nagbar, t.tag(17, i.O0.LengthDelimited).fork(), n).join(),
             "planSelectCardBanner" === e.properties.oneofKind &&
-                R.internalBinaryWrite(
+                L.internalBinaryWrite(
                     e.properties.planSelectCardBanner,
                     t.tag(19, i.O0.LengthDelimited).fork(),
                     n,
                 ).join(),
             "billingSettingsBanner" === e.properties.oneofKind &&
-                C.h
+                O.h
                     .internalBinaryWrite(e.properties.billingSettingsBanner, t.tag(20, i.O0.LengthDelimited).fork(), n)
                     .join(),
             "shopNagbar" === e.properties.oneofKind &&
-                N.internalBinaryWrite(e.properties.shopNagbar, t.tag(21, i.O0.LengthDelimited).fork(), n).join(),
+                C.internalBinaryWrite(e.properties.shopNagbar, t.tag(21, i.O0.LengthDelimited).fork(), n).join(),
             "adminEditorTestComponent" === e.properties.oneofKind &&
-                m
+                g
                     .internalBinaryWrite(
                         e.properties.adminEditorTestComponent,
                         t.tag(22, i.O0.LengthDelimited).fork(),
