@@ -5535,6 +5535,7 @@ let rw = Object.freeze({
     PARTNER: tk.jB(30),
     PARENT: tk.jB(33),
     DISABLE_RELATIONSHIPS_ACCESS: tk.jB(34),
+    QUEST: tk.jB(38),
 });
 var rG =
     (((ek = {}).MFA_WARNING = "MFA_WARNING"),
