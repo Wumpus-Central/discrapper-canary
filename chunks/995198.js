@@ -29,13 +29,16 @@ function C(i) {
                 className: T.P0,
                 children: (0, l.jsx)(A.p, { size: "md", color: p.A.colors.INTERACTIVE_TEXT_ACTIVE }),
             }),
-            (0, l.jsx)(v.D, {
-                variant: "heading-lg/semibold",
-                color: "text-strong",
-                children:
-                    null != n
-                        ? N.intl.formatToPlainString(N.t.f5Jaw7, { guildName: n.name })
-                        : N.intl.string(N.t["0sTyEb"]),
+            (0, l.jsx)("div", {
+                className: T.bc,
+                children: (0, l.jsx)(v.D, {
+                    variant: "heading-lg/semibold",
+                    color: "text-strong",
+                    children:
+                        null != n
+                            ? N.intl.formatToPlainString(N.t.f5Jaw7, { guildName: n.name })
+                            : N.intl.string(N.t["0sTyEb"]),
+                }),
             }),
             (0, l.jsxs)("div", {
                 className: T.rn,
