@@ -58,4 +58,6 @@ var i,
         (i.PRICE_DRIFT_IN_CHECKOUT = "price_drift_in_checkout"),
         (i.IOS_ATTRIBUTION_IMPRESSION = "ios_attribution_impression"),
         (i.IOS_ATTRIBUTION_CLICK = "ios_attribution_click"),
+        (i.FRAME_SESSION_JOIN = "frame_session_join"),
+        (i.FRAME_SESSION_JOIN_FAILED = "frame_session_join_failed"),
         i);
