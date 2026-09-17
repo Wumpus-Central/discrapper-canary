@@ -20,7 +20,12 @@ var r,
     c,
     u = n(582128),
     _ = (((r = {}).NICKNAME_UPDATE = "nickname_update"), (r.NICKNAME_RESET = "nickname_reset"), r),
-    E = (((a = {}).BLOCKED = "blocked"), (a.FLAGGED = "flagged"), a),
+    E =
+        (((a = {}).BLOCKED = "blocked"),
+        (a.FLAGGED = "flagged"),
+        (a.DELETED = "deleted"),
+        (a.NOT_BLOCKED = "not_blocked"),
+        a),
     A = (((s = {}).MODAL = "MODAL"), s),
     h =
         (((l = {}).RULE_NAME = "rule_name"),
