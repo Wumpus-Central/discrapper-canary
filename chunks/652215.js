@@ -4206,6 +4206,7 @@ var rb =
         (ew.QUEST_LINK_SHARED = "quest_link_shared_v2"),
         (ew.QUEST_CONTENT_LOADED = "quest_content_loaded"),
         (ew.QUEST_CONTENT_VIEWED = "quest_content_viewed"),
+        (ew.QUEST_CONTENT_ENGAGED_VIEWED = "quest_content_engaged_viewed"),
         (ew.QUEST_CONTENT_VIEW_TIME = "quest_content_view_time"),
         (ew.IOS_ATTRIBUTION_VIEW_RESOLVED = "ios_attribution_view_resolved"),
         (ew.IOS_ATTRIBUTION_CLICK_RESOLVED = "ios_attribution_click_resolved"),

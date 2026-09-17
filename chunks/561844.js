@@ -38,7 +38,7 @@ var i = n(132500),
     S = n(590202),
     N = n(823784),
     C = n(652215);
-let O = new Set([C.HAw.QUEST_CONTENT_VIEWED, C.HAw.QUEST_CONTENT_CLICKED]);
+let O = new Set([C.HAw.QUEST_CONTENT_VIEWED, C.HAw.QUEST_CONTENT_ENGAGED_VIEWED, C.HAw.QUEST_CONTENT_CLICKED]);
 function R(e, t) {
     return t ? e : ((0, d.Vc)()?.uuid ?? null);
 }
