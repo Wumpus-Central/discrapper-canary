@@ -16,27 +16,27 @@ var i = n(477900),
     p = n(477782),
     I = n(687966),
     j = n(404778),
-    E = n(793574),
-    A = n(688810),
+    A = n(793574),
+    E = n(688810),
     C = n(206828),
-    v = n(486610),
-    y = n(531913),
+    y = n(486610),
+    v = n(531913),
     b = n(417270),
     R = n(770818),
-    N = n(375708),
-    P = n(429913),
+    P = n(375708),
+    N = n(429913),
     D = n(409626),
     T = n(692969),
-    k = n(569926),
+    _ = n(569926),
     w = n(158390),
-    _ = n(71393),
+    k = n(71393),
     S = n(948230),
     W = n(683180),
-    L = n(972786);
-let G = new w.A(3e4, 3e5);
+    G = n(972786);
+let L = new w.A(3e4, 3e5);
 var O = n(280450),
     F = n(183555),
-    M = n(623280),
+    M = n(644346),
     U = n(58266);
 function z(e) {
     let {
@@ -65,21 +65,21 @@ function z(e) {
                                 (0, i.jsx)(u.E, {
                                     variant: "text-sm/medium",
                                     color: "text-subtle",
-                                    children: N.intl.string(N.t.z5K4Uv),
+                                    children: P.intl.string(P.t.z5K4Uv),
                                 }),
                             ],
                         }),
                   l
                       ? (0, i.jsx)(B, {
-                            heading: N.intl.string(N.t.UDPRLO),
-                            content: N.intl.string(N.t["OW/2al"]),
-                            buttons: (0, i.jsx)(h.$, { text: N.intl.string(N.t.S0W8Z5), onClick: s }),
+                            heading: P.intl.string(P.t.UDPRLO),
+                            content: P.intl.string(P.t["OW/2al"]),
+                            buttons: (0, i.jsx)(h.$, { text: P.intl.string(P.t.S0W8Z5), onClick: s }),
                         })
                       : a
                         ? (0, i.jsx)(B, {
-                              heading: N.intl.string(N.t["9WarGY"]),
-                              content: N.intl.string(N.t.qgxnKe),
-                              buttons: (0, i.jsx)(h.$, { text: N.intl.string(N.t.vD60Pv), onClick: s }),
+                              heading: P.intl.string(P.t["9WarGY"]),
+                              content: P.intl.string(P.t.qgxnKe),
+                              buttons: (0, i.jsx)(h.$, { text: P.intl.string(P.t.vD60Pv), onClick: s }),
                           })
                         : d,
               ],
@@ -100,7 +100,7 @@ function B(e) {
                         (0, i.jsx)(u.E, {
                             variant: "text-xs/medium",
                             color: "text-default",
-                            children: N.intl.string(N.t.zMUr6Z),
+                            children: P.intl.string(P.t.zMUr6Z),
                         }),
                     (0, i.jsx)(x.D, { variant: "heading-sm/medium", color: "text-default", children: e.heading }),
                     (0, i.jsx)(u.E, { variant: "text-xs/normal", color: "text-subtle", children: e.content }),
@@ -133,18 +133,18 @@ let H = Object.assign(
                 allowEditing: V,
                 disableInteraction: Y,
                 index: q,
-                trailingContent: Z,
-                interactiveLinks: J = !1,
+                trailingContent: J,
+                interactiveLinks: Z = !1,
             } = e,
             X = (function (e) {
                 let { trackUserProfileAction: t } = (0, F.NJ)(),
                     { user: n, widget: l, cta: s } = e,
                     o = (0, d.bG)([O.default], () => O.default.getId()) === n.id,
-                    f = (0, P.h)(l.applicationId),
+                    f = (0, N.h)(l.applicationId),
                     h = f?.getIconURL(16),
                     m = (function (e) {
                         let t = e?.getCanonicalGameId(),
-                            { data: n } = (0, k.I)(t);
+                            { data: n } = (0, _.I)(t);
                         return n;
                     })(f),
                     x = (0, T.A)({
@@ -158,10 +158,10 @@ let H = Object.assign(
                         fetched: p,
                         hasAlreadyLinked: I,
                         canStartAuthorization: j,
-                        startAuthorization: v,
-                        token: y,
+                        startAuthorization: y,
+                        token: v,
                     } = (0, C.RD)(f),
-                    { analyticsLocations: b } = (0, A.Ay)(E.A.USER_PROFILE_APPLICATION_WIDGET),
+                    { analyticsLocations: b } = (0, E.Ay)(A.A.USER_PROFILE_APPLICATION_WIDGET),
                     R = r.useCallback(() => {
                         j &&
                             (t({
@@ -170,19 +170,19 @@ let H = Object.assign(
                                     : "PRESS_APPLICATION_WIDGET_UNLINKED_CONNECT",
                                 applicationId: l.applicationId,
                             }),
-                            v({ analyticsLocations: b }));
-                    }, [j, I, v, t, l.applicationId, b]),
-                    N = null == s && p && !I && j,
+                            y({ analyticsLocations: b }));
+                    }, [j, I, y, t, l.applicationId, b]),
+                    P = null == s && p && !I && j,
                     w =
                         null == s &&
                         p &&
                         I &&
                         j &&
-                        null != y &&
-                        !Array.from(c._.APPLICATION_IDENTITIES_SCOPES).some((e) => y.scopes.includes(e)) &&
-                        !y.scopes.includes(c.F.SDK_SOCIAL_LAYER) &&
-                        !y.scopes.includes(c.F.SDK_SOCIAL_LAYER_PRESENCE),
-                    _ = (0, i.jsxs)(i.Fragment, {
+                        null != v &&
+                        !Array.from(c._.APPLICATION_IDENTITIES_SCOPES).some((e) => v.scopes.includes(e)) &&
+                        !v.scopes.includes(c.F.SDK_SOCIAL_LAYER) &&
+                        !v.scopes.includes(c.F.SDK_SOCIAL_LAYER_PRESENCE),
+                    k = (0, i.jsxs)(i.Fragment, {
                         children: [
                             null != h
                                 ? (0, i.jsx)("img", { className: U.Z2, src: h, width: 16, height: 16, alt: "" })
@@ -195,44 +195,44 @@ let H = Object.assign(
                     }),
                     S =
                         null == m
-                            ? (0, i.jsx)("div", { className: U.qd, children: _ })
-                            : (0, i.jsx)(g.D, { className: a()(U.qd, U.vk), onClick: x, children: _ });
+                            ? (0, i.jsx)("div", { className: U.qd, children: k })
+                            : (0, i.jsx)(g.D, { className: a()(U.qd, U.vk), onClick: x, children: k });
                 return {
                     isCurrentUser: o,
                     game: m,
                     openGameProfileModal: x,
                     handleConnect: R,
-                    showConnectCta: N,
+                    showConnectCta: P,
                     showReconnectCta: w,
                     headerTitle: S,
                 };
             })(e),
-            Q = (0, y.A)(h.id, m.applicationId),
+            Q = (0, v.A)(h.id, m.applicationId),
             $ =
                 ((t = m.applicationId),
                 (n = X.isCurrentUser),
                 (l = (0, d.bG)(
-                    [_.A],
+                    [k.A],
                     () =>
                         n &&
                         null != t &&
-                        (0, W.RZ)(_.A.getGuildsArray(), "useIsOwnedVibegrationsApplication").length > 0,
+                        (0, W.RZ)(k.A.getGuildsArray(), "useIsOwnedVibegrationsApplication").length > 0,
                     [n, t],
                 )),
-                (f = (0, d.bG)([L.Ay], () => L.Ay.getProjectsFetchState()?.type ?? null)),
+                (f = (0, d.bG)([G.Ay], () => G.Ay.getProjectsFetchState()?.type ?? null)),
                 r.useEffect(() => {
-                    if (("success" === f && G.succeed(), l)) {
+                    if (("success" === f && L.succeed(), l)) {
                         if (null == f) return void (0, S.hF)();
-                        "error" !== f || G.pending || G.fail(() => (0, S.hF)());
+                        "error" !== f || L.pending || L.fail(() => (0, S.hF)());
                     }
                 }, [l, f]),
                 (0, d.bG)(
-                    [L.Ay],
+                    [G.Ay],
                     () => {
                         if (!l || null == t) return !1;
-                        let e = L.Ay.findProjectByApplicationId(t);
+                        let e = G.Ay.findProjectByApplicationId(t);
                         return (
-                            !!(null != e && (0, L.PV)(e)) || (L.Ay.getProjectsFetchState()?.type !== "success" && null)
+                            !!(null != e && (0, G.PV)(e)) || (G.Ay.getProjectsFetchState()?.type !== "success" && null)
                         );
                     },
                     [l, t],
@@ -242,7 +242,7 @@ let H = Object.assign(
                 return t
                     ? (0, i.jsx)(p.Dr, {
                           id: "application-widget-refresh",
-                          label: N.intl.string(N.t.wzzjk9),
+                          label: P.intl.string(P.t.wzzjk9),
                           leadingAccessory: { type: "icon", icon: b.RetryIcon },
                           disabled: n,
                           action: r,
@@ -250,12 +250,12 @@ let H = Object.assign(
                     : null;
             })(m.applicationId, !0 === $ && !0 !== Y),
             et =
-                J ||
+                Z ||
                 (function (e) {
                     let { disableInteraction: t } = e;
                     return !0 !== t;
                 })(e)
-                    ? v.hO
+                    ? y.hO
                     : void 0,
             en = Q.surfaceConfigs[o.m.WIDGET_TOP],
             ei = Q.surfaceConfigs[o.m.WIDGET_BOTTOM];
@@ -267,7 +267,7 @@ let H = Object.assign(
                   allowEditing: V,
                   disableInteraction: Y,
                   index: q,
-                  trailingContent: Z,
+                  trailingContent: J,
                   className: a()(U.Y5, { [U.aK]: H, [U.F9]: K }),
                   headerClassName: U.JE,
                   additionalManageWidgetMenuItems: (0, i.jsxs)(i.Fragment, {
