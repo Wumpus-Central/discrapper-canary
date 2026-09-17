@@ -593,14 +593,16 @@
     opacity: 1
 }
 
-.gradient_e9ef78,
-.gradientBackground_e9ef78 {
+.gradient_e9ef78 {
     height: 100%;
+    position: relative;
     width: 100%
 }
 
 .gradientBackground_e9ef78 {
-    grid-area: layer
+    grid-area: layer;
+    height: 100%;
+    width: 100%
 }
 
 .container_c791b2 {
@@ -655,4 +657,4 @@
     position: relative
 }
 
-/*# sourceMappingURL=358574.b1140614b7c6c6a3.css.map*/
+/*# sourceMappingURL=358574.c04058ef4fb7a493.css.map*/

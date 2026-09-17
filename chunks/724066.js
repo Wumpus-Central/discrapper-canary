@@ -1,8 +1,8 @@
-let i;
 (n.d(t, { I: () => c, Av: () => u, hs: () => d, QO: () => h }), n(321073));
-var r = n(632296),
-    a = n(874373),
-    s = n(882035),
+var i = n(632296),
+    r = n(874373),
+    a = n(882035),
+    s = n(855522),
     l = n(375708);
 async function o() {
     return Promise.all([
@@ -71,12 +71,11 @@ async function o() {
         n.e("112733").then(n.bind(n, 389036)),
     ]);
 }
-i = n(855522).A;
-let d = (0, s.h)((e, t) => ({
+let d = (0, a.h)((e, t) => ({
     isLoading: !1,
     inProgressLocale: void 0,
     error: void 0,
-    localeData: a.default,
+    localeData: r.default,
     setLoadingStarted: (t) => e({ isLoading: !0, inProgressLocale: t }),
     setLoadingSucceeded: (n) => {
         let { inProgressLocale: i } = t();
@@ -98,37 +97,38 @@ function c(e) {
 async function u(e) {
     let t = d.getState();
     t.setLoadingStarted(e);
-    let a = [];
+    let r = [];
     (l.intl.setLocale(e),
-        a.push(),
-        a.push(
+        r.push(),
+        r.push(
             (async () => {
-                (await o(), await (0, r.loadAllMessagesInLocale)(e));
+                (await o(), await (0, i.loadAllMessagesInLocale)(e));
             })(),
         ),
-        null != i && (i.setLocale(e), a.push(i.loadPromise)),
-        a.push(_(e)),
-        a.push(E(e)),
-        a.push(A(e)),
-        a.push(
+        s.A.setLocale(e),
+        r.push(s.A.loadPromise),
+        r.push(_(e)),
+        r.push(E(e)),
+        r.push(A(e)),
+        r.push(
             (function (e) {
                 let { setTags: t } = n(38405).A;
                 return (t({ locale: e }), Promise.resolve());
             })(e),
         ),
-        await Promise.all(a).catch((n) => t.setLoadingFailed(n, e)),
+        await Promise.all(r).catch((n) => t.setLoadingFailed(n, e)),
         t.setLoadingSucceeded(e));
 }
 async function _(e) {
     let t = d.getState(),
         i = n(873382).v[e];
-    if (null == i) return void t.setLocaleData(a.default);
-    let r = await i();
+    if (null == i) return void t.setLocaleData(r.default);
+    let a = await i();
     {
         let { registerLocale: t } = n(7467);
-        t(e, r);
+        t(e, a);
     }
-    t.setLocaleData(r);
+    t.setLocaleData(a);
 }
 async function E(e) {}
 async function A(e) {
@@ -140,5 +140,5 @@ async function A(e) {
     (i.push("en-US"), n(536637).locale(i));
 }
 function h() {
-    return d((e) => e.localeData) ?? a.default;
+    return d((e) => e.localeData) ?? r.default;
 }
