@@ -14,9 +14,11 @@ class a extends i.A {
     includeBundles;
     startsAt;
     endsAt;
+    redemptionEndsAt;
+    progress;
     tenantMetadata;
     static createFromServer(e) {
-        var t, n;
+        var t, n, i;
         return new a({
             id: e.id,
             applicationId: e.application_id,
@@ -51,11 +53,14 @@ class a extends i.A {
             includeBundles: e.include_bundles,
             startsAt: null != e.starts_at ? new Date(e.starts_at) : null,
             endsAt: null != e.ends_at ? new Date(e.ends_at) : null,
+            redemptionEndsAt: null != e.redemption_ends_at ? new Date(e.redemption_ends_at) : null,
+            progress:
+                null != e.progress ? { current: (n = e.progress).current, target: n.target, label: n.label } : null,
             tenantMetadata:
                 null != e.tenant_metadata
                     ? {
                           collectibles:
-                              null != (n = e.tenant_metadata).collectibles
+                              null != (i = e.tenant_metadata).collectibles
                                   ? (function (e) {
                                         var t, n;
                                         switch (e.type) {
@@ -213,7 +218,7 @@ class a extends i.A {
                                                           }
                                                 );
                                         }
-                                    })(n.collectibles)
+                                    })(i.collectibles)
                                   : void 0,
                       }
                     : null,
@@ -233,6 +238,8 @@ class a extends i.A {
             (this.includeBundles = e.includeBundles),
             (this.startsAt = e.startsAt),
             (this.endsAt = e.endsAt),
+            (this.redemptionEndsAt = e.redemptionEndsAt),
+            (this.progress = e.progress),
             (this.tenantMetadata = e.tenantMetadata));
     }
 }

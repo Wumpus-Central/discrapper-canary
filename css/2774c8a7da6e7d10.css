@@ -1,0 +1,121 @@
+.pill__45408 {
+    align-items: center;
+    background-color: var(--background-mod-subtle);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-round);
+    color: var(--text-strong);
+    display: inline-flex;
+    gap: var(--space-6);
+    padding: 2px var(--space-8)
+}
+
+.wrapper_e7c354 {
+    align-items: center;
+    display: flex;
+    height: 120px;
+    justify-content: center;
+    position: relative;
+    width: 120px
+}
+
+.ring_e7c354 {
+    height: 100%;
+    inset: 0;
+    overflow: visible;
+    position: absolute;
+    width: 100%
+}
+
+.bar_e7c354,
+.track_e7c354 {
+    fill: transparent
+}
+
+.bar_e7c354 {
+    stroke-linecap: round;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%
+}
+
+.barAnimated_e7c354 {
+    transition: stroke-dashoffset .35s
+}
+
+.reward_e6c363 {
+    height: 100px;
+    -o-object-fit: contain;
+    object-fit: contain;
+    width: 100px
+}
+
+.reward_e6c363,
+.ringWrapper_e6c363 {
+    flex-shrink: 0
+}
+
+.card__956bc {
+    background-color: var(--background-base-low);
+    background-position: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: var(--radius-lg);
+    box-sizing: border-box;
+    min-height: 168px;
+    overflow: hidden
+}
+
+.condensed__956bc {
+    margin-bottom: 50px
+}
+
+.textColumn__956bc {
+    min-width: 0
+}
+
+.bannerVideoBackground_aff7d9 {
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: top center;
+    object-position: top center;
+    width: 100%
+}
+
+.bannerImage_aff7d9 {
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%
+}
+
+.responsive_aff7d9.bannerAsset_aff7d9 {
+    inset-inline-start: 50%;
+    position: absolute;
+    transform: translate(-50%)
+}
+
+.responsive_aff7d9.bannerImage_aff7d9 {
+    background-position: top;
+    background-size: contain
+}
+
+.responsive_aff7d9.bannerVideoBackground_aff7d9 {
+    -o-object-fit: contain;
+    object-fit: contain;
+    -o-object-position: center top;
+    object-position: center top
+}
+
+@media (max-width:1160px) {
+    .responsive_aff7d9.bannerImage_aff7d9 {
+        background-size: cover
+    }
+
+    .responsive_aff7d9.bannerVideoBackground_aff7d9 {
+        -o-object-fit: cover;
+        object-fit: cover
+    }
+}
+
+/*# sourceMappingURL=2774c8a7da6e7d10.css.map*/
