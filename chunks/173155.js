@@ -289,16 +289,16 @@ var ex = n(875317),
     e1 = n(885631),
     e6 = n(542308),
     e3 = n(960628),
-    e8 = n(338854),
+    e8 = n(206248),
     e7 = n(498470),
-    e5 = n(807098),
-    e2 = n(637706),
+    e2 = n(807098),
+    e5 = n(637706),
     e4 = n(788883),
     e9 = n(7667);
 function te(e) {
     let { guildId: t, componentId: n, promotionId: i, coachmark: s, targetElementRef: a, markAsDismissed: o } = e,
         { analyticsLocations: d } = (0, N.Ay)(),
-        c = (0, e5.T)(s.asset),
+        c = (0, e2.T)(s.asset),
         { terms: A } = (0, e9.A)(i),
         E = r.useCallback(() => {
             o(eE.i.DISMISS);
@@ -314,7 +314,7 @@ function te(e) {
             })(),
                 o(eE.i.TAKE_ACTION));
         }, [s.button, t, d, o]),
-        g = (0, e2.C)(s.helpArticle, ""),
+        g = (0, e5.C)(s.helpArticle, ""),
         m = [s.body, A].filter((e) => "" !== e).join(" "),
         { icon: I } = (0, e7.x)({ buttonAction: s.button?.buttonAction }),
         C = s.button?.copy ?? "";
@@ -825,8 +825,8 @@ let t6 = d.Ay.connectStores([k.A], (e) => {
 var t3 = n(503698),
     t8 = n.n(t3),
     t7 = n(933832),
-    t5 = n(782603),
-    t2 = n(81466),
+    t2 = n(782603),
+    t5 = n(81466),
     t4 = n(116085),
     t9 = n(597601),
     ne = n(451394),
@@ -949,7 +949,7 @@ function nT(e) {
                     eg.default.track(H.HAw.CHANNEL_NOTICE_CTA_CLICKED, { guild_id: t.guild_id, notice_type: n }));
             },
             text: tl.intl.string(tl.t.DlcqlU),
-            icon: s ? t7.CheckmarkLargeIcon : t5.BellIcon,
+            icon: s ? t7.CheckmarkLargeIcon : t2.BellIcon,
             variant: s ? "secondary" : "primary",
             size: "sm",
             fullWidth: !0,
@@ -1007,7 +1007,7 @@ function nM(e) {
                 (0, l.jsxs)("div", {
                     className: t8()(nN.fI, nN.pF),
                     children: [
-                        (0, l.jsx)(t2.CalendarIcon, {
+                        (0, l.jsx)(t5.CalendarIcon, {
                             size: "custom",
                             color: "currentColor",
                             className: nN.uE,
@@ -1489,8 +1489,8 @@ class n7 extends d.Ay.Store {
         return !e.features.has(H.GuildFeatures.BANNER) && Date.now() - t >= H.D2K;
     }
 }
-let n5 = new n7(I.h);
-class n2 extends d.Ay.Store {
+let n2 = new n7(I.h);
+class n5 extends d.Ay.Store {
     static displayName = "GuildBoostingNoticeStore";
     initialize() {
         (this.waitFor(R.A), this.syncWith([R.A], H.tEg));
@@ -1499,7 +1499,7 @@ class n2 extends d.Ay.Store {
         return Date.now() - t >= H.D2K && R.A.can(H.xBc.MANAGE_GUILD, e);
     }
 }
-let n4 = new n2(I.h);
+let n4 = new n5(I.h);
 var n9 = n(731667);
 function ie() {
     return !0;
@@ -1521,7 +1521,7 @@ let ii = new it(I.h),
             store: n4,
             dismissibleContentType: u.M.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION,
         },
-        { type: H.n5X.GUILD_BANNER, store: n5, dismissibleContentType: u.M.CHANNEL_NOTICE_GUILD_BANNER },
+        { type: H.n5X.GUILD_BANNER, store: n2, dismissibleContentType: u.M.CHANNEL_NOTICE_GUILD_BANNER },
         { type: H.n5X.INVITE, store: ii, dismissibleContentType: u.M.CHANNEL_NOTICE_INVITE },
         { type: H.n5X.HUB_LINK, store: n9.A, dismissibleContentType: u.M.CHANNEL_NOTICE_HUBLINK },
         { type: H.n5X.QUICKSWITCHER, store: n8.A, dismissibleContentType: u.M.CHANNEL_NOTICE_QUICKSWITCHER },
@@ -2683,9 +2683,9 @@ function iN(e) {
         }, []),
     });
     let e7 = (0, d.bG)([eJ.A], () => eJ.A.getChannelId()),
-        e5 = (0, d.bG)([e$.A], () => e$.A.desyncedVoiceStatesCount),
-        e2 = (0, ej.A)(f),
-        e4 = (0, es.ai)(f) ? null : e2,
+        e2 = (0, d.bG)([e$.A], () => e$.A.desyncedVoiceStatesCount),
+        e5 = (0, ej.A)(f),
+        e4 = (0, es.ai)(f) ? null : e5,
         e9 =
             (function (e) {
                 let t = (0, ej.A)(e),
@@ -2783,7 +2783,7 @@ function iN(e) {
         selectedVoiceChannelId: j,
         voiceStates: y,
         rtcConnectedChannelId: e7,
-        rtcDesyncedVoiceStatesCount: e5,
+        rtcDesyncedVoiceStatesCount: e2,
         isUnavailable: w,
         user: k,
         hasChannelNotice: null != et || Z,

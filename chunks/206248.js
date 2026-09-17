@@ -1,4 +1,4 @@
-n.d(t, { H: () => k });
+n.d(t, { H: () => I });
 var a = n(477900),
     r = n(582128),
     l = n(941861),
@@ -13,26 +13,17 @@ var a = n(477900),
     h = n(208756),
     _ = n(798618),
     g = n(627330),
-    f = n(113325),
-    E = n(815021),
-    x = n(375708),
-    v = n(594024);
-function b(e) {
-    let { onClick: t, "aria-label": n = x.intl.string(x.t.cpT0Cq) } = e,
-        { firstFocusableItemProps: l } = r.useContext(f.MV);
-    return (0, a.jsx)("div", {
-        className: v.b,
-        children: (0, a.jsx)(E.J, { size: "xs", "aria-label": n, onClick: t, variant: "overlay-secondary", ...l }),
-    });
-}
-var I = n(818348),
-    S = n(422411);
-function k(e) {
+    f = n(478542),
+    E = n(818348),
+    x = n(422411),
+    v = n(375708),
+    b = n(594024);
+function I(e) {
     let {
             title: t,
             body: n,
-            assetUrl: f,
-            previewUrl: E = f,
+            assetUrl: I,
+            previewUrl: S = I,
             disableMediaViewer: k = !1,
             action: C,
             caretConfig: y = { align: "center" },
@@ -48,14 +39,14 @@ function k(e) {
         P = (0, l.R)(),
         T = (0, s.G9)().isWindowFocused?.() ?? P,
         L = r.useRef(null),
-        V = (0, o.RJ)(E),
-        B = (0, o.gA)(E),
+        V = (0, o.RJ)(S),
+        B = (0, o.gA)(S),
         W = r.useCallback(
-            () => ({ type: "VIDEO", url: f, proxyUrl: f, alt: t, width: 1280, height: 720, className: v.$_ }),
-            [f, t],
+            () => ({ type: "VIDEO", url: I, proxyUrl: I, alt: t, width: 1280, height: 720, className: b.$_ }),
+            [I, t],
         );
     r.useEffect(() => {
-        null != L.current && (!D.enabled && T ? L.current?.play().catch(I.tE) : L.current?.pause());
+        null != L.current && (!D.enabled && T ? L.current?.play().catch(E.tE) : L.current?.pause());
     }, [T, D.enabled]);
     let H = r.useCallback(() => {
             (null !== L.current && L.current.pause(), w?.());
@@ -73,10 +64,10 @@ function k(e) {
         z = (0, a.jsxs)(a.Fragment, {
             children: [
                 V || B
-                    ? (0, a.jsx)(c.v, { type: "image", src: E })
+                    ? (0, a.jsx)(c.v, { type: "image", src: S })
                     : (0, a.jsx)(u.A, {
                           ref: L,
-                          src: E,
+                          src: S,
                           width: 232,
                           height: 131,
                           autoPlay: !D.enabled && T,
@@ -88,11 +79,11 @@ function k(e) {
                       }),
                 !k &&
                     (0, a.jsx)("div", {
-                        className: v.Rr,
+                        className: b.Rr,
                         children: (0, a.jsx)(d.D, {
                             playing: !1,
                             size: "sm",
-                            "aria-label": x.intl.string(S.default.YpT3kk),
+                            "aria-label": v.intl.string(x.default.YpT3kk),
                             onClick: G,
                         }),
                     }),
@@ -115,9 +106,9 @@ function k(e) {
         children: (0, a.jsxs)("div", {
             ref: O,
             children: [
-                (0, a.jsx)(b, { onClick: U }),
+                (0, a.jsx)(f.p, { onClick: U }),
                 (0, a.jsx)(_.F, {}),
-                (0, a.jsx)("div", { className: v.s, children: z }),
+                (0, a.jsx)("div", { className: b.s, children: z }),
                 (0, a.jsx)(g.D, { title: t, body: n, badge: M, textLink: A }),
                 null != C ? (0, a.jsx)(h.Z, { actions: [C] }) : null,
             ],
