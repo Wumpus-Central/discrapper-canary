@@ -33,7 +33,7 @@ function g(e) {
         }),
         C = (0, j.a)(g.body),
         T = (0, j.C)(g.helpArticle, g.helpArticleId),
-        { icon: N } = (0, h.x)({ buttonAction: g.button?.buttonAction });
+        { icon: N, iconPosition: I } = (0, h.x)({ buttonAction: g.button?.buttonAction });
     return (0, l.jsxs)("div", {
         className: _.kL,
         children: [
@@ -71,6 +71,7 @@ function g(e) {
                         onClick: A,
                         text: g.button.copy,
                         icon: N,
+                        iconPosition: I,
                     }),
                 }),
         ],

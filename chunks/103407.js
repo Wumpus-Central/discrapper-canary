@@ -488,8 +488,15 @@ function J(e) {
                                 y();
                             }
                         }
-                        let { icon: a } = (0, T.x)({ buttonAction: i.button?.buttonAction });
-                        return (0, r.jsx)(E.$, { variant: "expressive", size: "md", onClick: t, text: b, icon: a });
+                        let { icon: a, iconPosition: l } = (0, T.x)({ buttonAction: i.button?.buttonAction });
+                        return (0, r.jsx)(E.$, {
+                            variant: "expressive",
+                            size: "md",
+                            onClick: t,
+                            text: b,
+                            icon: a,
+                            iconPosition: l,
+                        });
                     },
                     disclaimer: i.disclaimer?.disclaimerText !== "" ? i.disclaimer?.disclaimerText : void 0,
                     disclaimerExtra: D,

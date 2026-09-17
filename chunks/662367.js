@@ -49,8 +49,8 @@ function y(e) {
             analyticsLocation: M.location,
         }),
         G = (0, T.C)(P.helpArticle, ""),
-        { icon: U } = (0, E.x)({ buttonAction: P.button?.buttonAction }),
-        F = (0, A.ux)((s ?? L)?.toISOString());
+        { icon: U, iconPosition: F } = (0, E.x)({ buttonAction: P.button?.buttonAction }),
+        B = (0, A.ux)((s ?? L)?.toISOString());
     return (0, l.jsx)(o.h, {
         color: "nitro-pink",
         className: v.kL,
@@ -71,11 +71,11 @@ function y(e) {
                             className: v.Ss,
                             "aria-label": R.intl.string(R.t.lpNrPu),
                         }),
-                        null != F &&
+                        null != B &&
                             (0, l.jsx)(d.E, {
                                 variant: "text-sm/medium",
                                 color: b ? "text-subtle" : "text-default",
-                                children: F,
+                                children: B,
                             }),
                     ],
                 }),
@@ -121,6 +121,7 @@ function y(e) {
                                             onClick: D,
                                             text: P.button.copy,
                                             icon: U,
+                                            iconPosition: F,
                                         }),
                                     }),
                             ],

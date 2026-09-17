@@ -30,11 +30,11 @@ function A(e) {
             promotionId: I,
             dismissibleContent: r.M.PREMIUM_MARKETING_MOMENT_REMINDER_UPSELL,
         }),
-        { icon: C } = (0, u.x)({ buttonAction: T.button?.buttonAction });
-    function S() {
+        { icon: C, iconPosition: S } = (0, u.x)({ buttonAction: T.button?.buttonAction });
+    function O() {
         return A(f.i.USER_DISMISS);
     }
-    let O =
+    let h =
             T.button?.copy != null
                 ? {
                       text: T.button.copy,
@@ -43,36 +43,37 @@ function A(e) {
                           buttonAction: T.button.buttonAction,
                           deeplinkSection: T.button.deeplinkSection,
                           applicationId: T.button.navigableStorefrontApplicationId?.value,
-                          onClose: S,
+                          onClose: O,
                       }),
                       icon: C,
+                      iconPosition: S,
                   }
                 : void 0,
-        h = (0, b.C)(T.helpArticle, T.helpArticleId),
-        v = null != h ? { text: h.linkText, link: h.url } : void 0,
-        R = {
+        v = (0, b.C)(T.helpArticle, T.helpArticleId),
+        R = null != v ? { text: v.linkText, link: v.url } : void 0,
+        P = {
             targetElementRef: n,
             title: T.header,
             body: T.body,
-            textLink: v,
+            textLink: R,
             position: "right",
             alignmentStrategy: "edge",
             align: "top",
             caretConfig: { align: "start" },
-            onRequestClose: S,
+            onRequestClose: O,
         };
     if (N) {
-        let e = { ...R, assetUrl: y ?? "", action: O, disableMediaViewer: !0 };
+        let e = { ...P, assetUrl: y ?? "", action: h, disableMediaViewer: !0 };
         return (0, o.jsxs)(o.Fragment, {
             children: [E, (0, o.jsx)("div", { children: t }), (0, o.jsx)(i.H, { ...e })],
         });
     }
-    let P = {
-        ...R,
+    let x = {
+        ...P,
         graphic: null != y ? { type: "image", src: y, aspectRatio: "16/9" } : void 0,
         size: "md",
-        actions: null != O ? [O] : void 0,
+        actions: null != h ? [h] : void 0,
         gradientColor: "nitro-pink",
     };
-    return (0, o.jsxs)(o.Fragment, { children: [E, (0, o.jsx)("div", { children: t }), (0, o.jsx)(d.A, { ...P })] });
+    return (0, o.jsxs)(o.Fragment, { children: [E, (0, o.jsx)("div", { children: t }), (0, o.jsx)(d.A, { ...x })] });
 }
