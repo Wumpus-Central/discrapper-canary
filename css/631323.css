@@ -4,9 +4,9 @@
 
 .avatarContainer_b4a4b2 {
     display: flex;
+    margin-inline-start: var(--custom-user-profile-content-inset);
     margin-bottom: var(--space-8);
     margin-top: calc((var(--custom-user-profile-avatar-size) + var(--custom-user-profile-avatar-stroke))/-2);
-    padding-inline-start: var(--custom-user-profile-content-inset);
     position: relative;
     width: -moz-fit-content;
     width: fit-content;
@@ -283,4 +283,4 @@
     padding: var(--space-4)
 }
 
-/*# sourceMappingURL=631323.fda17ca93ab2f82d.css.map*/
+/*# sourceMappingURL=631323.4dd3946511ed6c95.css.map*/
