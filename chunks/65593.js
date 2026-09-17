@@ -9,18 +9,18 @@ var s = r(477900),
     p = r(494921),
     c = r(375708),
     g = r(946027),
-    v = r(138267);
-let h = new o.A("UploadArea");
+    h = r(138267);
+let v = new o.A("UploadArea");
 function u() {
     return (0, s.jsxs)("div", {
         children: [
-            (0, s.jsx)("div", { className: i()(v.sG, g.sparkleOne) }),
-            (0, s.jsx)("div", { className: i()(v.sG, g.sparkleTwo) }),
-            (0, s.jsx)("div", { className: i()(v.GK, g.lightOne) }),
-            (0, s.jsx)("div", { className: i()(v.GK, g.lightTwo) }),
-            (0, s.jsx)("div", { className: i()(v.cp, g.crossOne) }),
-            (0, s.jsx)("div", { className: i()(v.cp, g.crossTwo) }),
-            (0, s.jsx)("div", { className: i()(v.Tp, g.popOne) }),
+            (0, s.jsx)("div", { className: i()(h.sG, g.sparkleOne) }),
+            (0, s.jsx)("div", { className: i()(h.sG, g.sparkleTwo) }),
+            (0, s.jsx)("div", { className: i()(h.GK, g.lightOne) }),
+            (0, s.jsx)("div", { className: i()(h.GK, g.lightTwo) }),
+            (0, s.jsx)("div", { className: i()(h.cp, g.crossOne) }),
+            (0, s.jsx)("div", { className: i()(h.cp, g.crossTwo) }),
+            (0, s.jsx)("div", { className: i()(h.Tp, g.popOne) }),
         ],
     });
 }
@@ -51,7 +51,7 @@ class D extends n.Component {
         for (let t = 0; t < e.length; t++)
             try {
                 let r = e[t].webkitGetAsEntry() ?? e[t].getAsEntry();
-                if (null == r) return (h.warn("Dropped item is null or undefined"), !1);
+                if (null == r) return (v.warn("Dropped item is null or undefined"), !1);
                 if (!r.isFile) return !1;
             } catch (e) {}
         return !0;
@@ -80,28 +80,28 @@ class D extends n.Component {
             );
         };
     })();
+    hasFiles = (e) => {
+        let t = this.elementDOMRef.current?.ownerDocument.defaultView;
+        return (
+            (null != t && e.types instanceof t.DOMStringList && e.types.contains("application/x-moz-file")) ||
+            -1 !== e.types.indexOf("Files")
+        );
+    };
     handleDragOver = (e) => {
-        if (!this.preventUnwantedDrop(e)) return !1;
+        if (!this.preventUnwantedDrop(e)) return;
         let t = e.dataTransfer;
-        if (null != t) {
-            if (
-                ("move" === t.effectAllowed ? (t.dropEffect = "move") : (t.dropEffect = "copy"),
-                (0, l.hasModalOpen)(p.D) && (0, l.closeModal)(p.D),
-                e.stopPropagation(),
-                e.preventDefault(),
-                this.props.onDragOver?.(e),
-                !this.state.isDragging)
-            ) {
-                let e = this.elementDOMRef.current?.ownerDocument.defaultView;
-                ((null != e && t.types instanceof e.DOMStringList && t.types.contains("application/x-moz-file")) ||
-                    -1 !== t.types.indexOf("Files")) &&
-                    this.setState((e) => (e.isDragging ? {} : { isDragging: !0 }));
-            }
-            (clearTimeout(this.dragOverTimeout),
-                (this.dragOverTimeout = setTimeout(() => {
-                    (this.setState({ isDragging: !1 }), this.props.onDragClear?.());
-                }, 1e3)));
-        }
+        null != t &&
+            this.hasFiles(t) &&
+            ("move" === t.effectAllowed ? (t.dropEffect = "move") : (t.dropEffect = "copy"),
+            (0, l.hasModalOpen)(p.D) && (0, l.closeModal)(p.D),
+            e.stopPropagation(),
+            e.preventDefault(),
+            this.props.onDragOver?.(e),
+            this.state.isDragging || this.setState((e) => (e.isDragging ? {} : { isDragging: !0 })),
+            clearTimeout(this.dragOverTimeout),
+            (this.dragOverTimeout = setTimeout(() => {
+                (this.setState({ isDragging: !1 }), this.props.onDragClear?.());
+            }, 1e3)));
     };
     handleDragOverZone = () => {
         this.setState({ isOverZone: !0 });
