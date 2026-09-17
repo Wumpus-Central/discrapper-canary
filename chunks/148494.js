@@ -1168,9 +1168,17 @@ ${a}`),
                                                             game_id: d,
                                                         });
                                                         break;
+                                                    case g.I.USER_PROFILE:
+                                                        _.Ay.trackWithMetadata(D.HAw.USER_PROFILE_LINK_EMBED_SENT, {
+                                                            linked_user_id: d,
+                                                            channel_id: n,
+                                                            message_id: i,
+                                                            location: a,
+                                                            is_own_profile: d === o,
+                                                        });
+                                                        break;
                                                     case g.I.COLLECTIBLES_SHOP:
                                                     case g.I.GAME_SERVER_SHARE:
-                                                    case g.I.USER_PROFILE:
                                                         break;
                                                     default:
                                                         throw Error(`Unknown coded link type: ${t}`);

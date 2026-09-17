@@ -5006,6 +5006,7 @@ var rb =
         (ew.DETECTABLE_GAME_SEARCHED_BATCHED = "detectable_game_searched_batched"),
         (ew.DM_PROFILE_TOGGLED = "dm_profile_toggled"),
         (ew.USER_PROFILE_WISHLIST_ACTION = "user_profile_wishlist_action"),
+        (ew.USER_PROFILE_LINK_EMBED_SENT = "user_profile_link_embed_sent"),
         (ew.WISHLIST_UPDATED = "wishlist_updated"),
         (ew.WISHLIST_ITEM_CLICKED = "wishlist_item_clicked"),
         (ew.WISHLIST_ITEM_HOVERED = "wishlist_item_hovered"),
