@@ -4102,9 +4102,7 @@ screen and (max-width:485px) {
 .bodyList__8a031 {
     --custom-list-scrollbar-top-padding: 12px;
     height: 100vh;
-    padding-left: var(--custom-modal-padding);
-    padding-right: var(--custom-modal-padding);
-    padding-top: var(--custom-list-scrollbar-top-padding)
+    padding: var(--custom-list-scrollbar-top-padding) var(--custom-modal-padding)
 }
 
 .has-webkit-scrollbar .bodyList__8a031 {
@@ -4130,8 +4128,38 @@ screen and (max-width:485px) {
     padding-bottom: var(--custom-modal-padding-sm)
 }
 
-.bodySpacerBottomBorder__8a031 {
+.bodyScrollingSpacerBottom__8a031 {
     border-top: 1px solid var(--border-subtle)
+}
+
+.container__8a031>.bodyScrollingSpacerBottom__8a031:last-child {
+    border: none;
+    padding: 0;
+    position: relative
+}
+
+.container__8a031>.bodyScrollingSpacerBottom__8a031:last-child:before {
+    background: linear-gradient(to top, var(--background-surface-high) 0, transparent 100%);
+    border-bottom-left-radius: var(--custom-border-radius);
+    bottom: 100%;
+    content: "";
+    display: block;
+    height: 60px;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    right: var(--space-16);
+    transition: opacity .2s ease-out 0s;
+    z-index: 1
+}
+
+.container__8a031>.bodyScrollingSpacerBottom__8a031:last-child.showFade__8a031:before {
+    opacity: 1
+}
+
+.container__8a031:has(>.bodyScrollingSpacerBottom__8a031:last-child) {
+    padding-bottom: 0
 }
 
 .bodyControls__8a031 {
@@ -4155,7 +4183,7 @@ screen and (max-width:485px) {
     z-index: 1
 }
 
-.bodyControlsWithFade__8a031:after {
+.bodyControls__8a031.showFade__8a031:after {
     opacity: 1;
     transition: opacity .2s ease-out 0s, visibility 0s ease-out 0s;
     visibility: visible
@@ -5105,94 +5133,4 @@ screen and (max-width:485px) {
     color: GrayText
 }
 
-.badge_c2b88c {
-    align-items: center;
-    align-self: center;
-    border-radius: var(--radius-round);
-    box-sizing: border-box;
-    display: inline-flex;
-    gap: var(--space-4);
-    max-width: 100%;
-    min-width: 0;
-    padding: 0 var(--space-8);
-    position: relative;
-    text-align: center;
-    text-transform: uppercase
-}
-
-.badge_c2b88c>:not(.label_c2b88c) {
-    flex-shrink: 0
-}
-
-.label_c2b88c {
-    min-width: 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap
-}
-
-.default_c2b88c {
-    background-color: var(--badge-background-default);
-    color: var(--badge-text-default)
-}
-
-.brand_c2b88c {
-    background-color: var(--badge-background-brand);
-    color: var(--badge-text-brand)
-}
-
-.expressive_c2b88c {
-    background-color: var(--badge-expressive-background-default);
-    color: var(--badge-expressive-text-default)
-}
-
-.rarity-common_c2b88c {
-    background: var(--badge-common-background);
-    border: 1px solid var(--badge-common-border);
-    color: var(--badge-common-text)
-}
-
-.rarity-epic_c2b88c,
-.rarity-mythic_c2b88c,
-.rarity-rare_c2b88c {
-    border: 1px solid transparent
-}
-
-.rarity-epic_c2b88c:before,
-.rarity-mythic_c2b88c:before,
-.rarity-rare_c2b88c:before {
-    background: linear-gradient(-78deg, var(--rarity-ring-start), var(--rarity-ring-end));
-    border-radius: inherit;
-    content: "";
-    inset: -1px;
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    padding: 1px;
-    pointer-events: none;
-    position: absolute
-}
-
-.rarity-rare_c2b88c {
-    --rarity-ring-start: var(--badge-rare-border-gradient-start);
-    --rarity-ring-end: var(--badge-rare-border-gradient-end);
-    background: var(--badge-rare-background);
-    color: var(--badge-rare-text)
-}
-
-.rarity-epic_c2b88c {
-    --rarity-ring-start: var(--badge-epic-border-gradient-start);
-    --rarity-ring-end: var(--badge-epic-border-gradient-end);
-    background: var(--badge-epic-background);
-    color: var(--badge-epic-text)
-}
-
-.rarity-mythic_c2b88c {
-    --rarity-ring-start: var(--badge-mythic-border-gradient-start);
-    --rarity-ring-end: var(--badge-mythic-border-gradient-end);
-    background: var(--badge-mythic-background);
-    color: var(--badge-mythic-text)
-}
-
-/*# sourceMappingURL=362698.a895a8c451d6b436.css.map*/
+/*# sourceMappingURL=603779.81cec5cda93816f6.css.map*/

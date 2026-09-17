@@ -1,3 +1,93 @@
+.badge_c2b88c {
+    align-items: center;
+    align-self: center;
+    border-radius: var(--radius-round);
+    box-sizing: border-box;
+    display: inline-flex;
+    gap: var(--space-4);
+    max-width: 100%;
+    min-width: 0;
+    padding: 0 var(--space-8);
+    position: relative;
+    text-align: center;
+    text-transform: uppercase
+}
+
+.badge_c2b88c>:not(.label_c2b88c) {
+    flex-shrink: 0
+}
+
+.label_c2b88c {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.default_c2b88c {
+    background-color: var(--badge-background-default);
+    color: var(--badge-text-default)
+}
+
+.brand_c2b88c {
+    background-color: var(--badge-background-brand);
+    color: var(--badge-text-brand)
+}
+
+.expressive_c2b88c {
+    background-color: var(--badge-expressive-background-default);
+    color: var(--badge-expressive-text-default)
+}
+
+.rarity-common_c2b88c {
+    background: var(--badge-common-background);
+    border: 1px solid var(--badge-common-border);
+    color: var(--badge-common-text)
+}
+
+.rarity-epic_c2b88c,
+.rarity-mythic_c2b88c,
+.rarity-rare_c2b88c {
+    border: 1px solid transparent
+}
+
+.rarity-epic_c2b88c:before,
+.rarity-mythic_c2b88c:before,
+.rarity-rare_c2b88c:before {
+    background: linear-gradient(-78deg, var(--rarity-ring-start), var(--rarity-ring-end));
+    border-radius: inherit;
+    content: "";
+    inset: -1px;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    padding: 1px;
+    pointer-events: none;
+    position: absolute
+}
+
+.rarity-rare_c2b88c {
+    --rarity-ring-start: var(--badge-rare-border-gradient-start);
+    --rarity-ring-end: var(--badge-rare-border-gradient-end);
+    background: var(--badge-rare-background);
+    color: var(--badge-rare-text)
+}
+
+.rarity-epic_c2b88c {
+    --rarity-ring-start: var(--badge-epic-border-gradient-start);
+    --rarity-ring-end: var(--badge-epic-border-gradient-end);
+    background: var(--badge-epic-background);
+    color: var(--badge-epic-text)
+}
+
+.rarity-mythic_c2b88c {
+    --rarity-ring-start: var(--badge-mythic-border-gradient-start);
+    --rarity-ring-end: var(--badge-mythic-border-gradient-end);
+    background: var(--badge-mythic-background);
+    color: var(--badge-mythic-text)
+}
+
 :where(.container_a62383) {
     --custom-gradient-color-start: var(--blurple-50);
     --custom-gradient-color-end: var(--blurple-50);
@@ -219,9 +309,11 @@
     font-weight: 500;
     grid-template-rows: 1fr;
     padding: 8px;
-    transition-duration: var(--expand-structural-duration);
-    transition-property: grid-template-rows, padding-bottom, padding-top, border-width;
+    transition-delay: 0s, 0s, 0s, 0s, 0s;
+    transition-duration: var(--expand-structural-duration), var(--expand-structural-duration), var(--expand-structural-duration), var(--expand-structural-duration), 0s;
+    transition-property: grid-template-rows, padding-bottom, padding-top, border-width, visibility;
     transition-timing-function: var(--expand-easing-function);
+    visibility: visible;
     width: 100%
 }
 
@@ -230,10 +322,11 @@
     grid-template-rows: 0fr;
     padding-bottom: 0;
     padding-top: 0;
-    transition-delay: var(--collapse-fade-duration);
-    transition-duration: var(--collapse-structural-duration);
-    transition-property: grid-template-rows, padding-bottom, padding-top, border-width;
-    transition-timing-function: var(--collapse-easing-function)
+    transition-delay: var(--collapse-fade-duration), var(--collapse-fade-duration), var(--collapse-fade-duration), var(--collapse-fade-duration), calc(var(--collapse-fade-duration) + var(--collapse-structural-duration));
+    transition-duration: var(--collapse-structural-duration), var(--collapse-structural-duration), var(--collapse-structural-duration), var(--collapse-structural-duration), 0s;
+    transition-property: grid-template-rows, padding-bottom, padding-top, border-width, visibility;
+    transition-timing-function: var(--collapse-easing-function);
+    visibility: hidden
 }
 
 .innerContainer__35859 {
@@ -446,4 +539,4 @@
     margin-inline-end: var(--space-12)
 }
 
-/*# sourceMappingURL=904530.244121c11bbcdfce.css.map*/
+/*# sourceMappingURL=794583.c38e34d1777a500b.css.map*/
