@@ -60,6 +60,7 @@ var p =
         (a.ACCOUNT_POPOUT = "ACCOUNT_POPOUT"),
         (a.ACTION_SHEET = "ACTION_SHEET"),
         (a.YOU_SCREEN = "YOU_SCREEN"),
+        (a.EMBED = "EMBED"),
         a),
     g =
         (((s = {})[(s.NICKNAME = 0)] = "NICKNAME"),
