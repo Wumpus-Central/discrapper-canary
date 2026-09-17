@@ -16,8 +16,8 @@ var i = n(477900),
     p = n(289173),
     I = n(210598),
     j = n(311043),
-    A = n(569926),
-    E = n(958805),
+    E = n(569926),
+    A = n(958805),
     v = n(61881),
     C = n(435558),
     S = n(196765),
@@ -86,7 +86,7 @@ function N(e) {
     !(function (e) {
         let { remove: t, peekedGameIds: n } = T(),
             i = l.useMemo(() => n[e] ?? [], [n, e]);
-        (0, A.x)(i);
+        (0, E.x)(i);
         let s = (0, a.yK)([j.A], () => i.map((e) => j.A.isFetching(e)));
         l.useEffect(() => {
             for (let n of i) {
@@ -323,8 +323,8 @@ var eh = n(691540),
     ep = n(857250),
     eI = n(97483),
     ej = n(192308),
-    eA = n(765548),
-    eE = n(860840),
+    eE = n(765548),
+    eA = n(860840),
     ev = n(229531),
     eC = n(515718),
     eS = n(741394),
@@ -334,7 +334,7 @@ function ek(e) {
         o = l.useRef(0),
         [d, c] = l.useState(null),
         [u, g] = l.useState(null),
-        m = (0, eA.A)(a),
+        m = (0, eE.A)(a),
         x = l.useCallback(() => {
             ((o.current = o.current + 1), c(null), g(null));
         }, []),
@@ -345,8 +345,8 @@ function ek(e) {
                 c(e);
                 try {
                     let [s, r] = await Promise.all([
-                        E.A.uploadWidgetAsset(t),
-                        eE.default.fromBlob(n).catch(() => void 0),
+                        A.A.uploadWidgetAsset(t),
+                        eA.default.fromBlob(n).catch(() => void 0),
                     ]);
                     if (o.current !== l) return;
                     (c(null),
@@ -483,10 +483,10 @@ function ew(e) {
             getCropAspectRatio: x,
             onUploadSuccess: (e) => u((t) => ({ ...t, image: e })),
         });
-    function A() {
+    function E() {
         (p(), u((e) => ({ ...e, image: void 0 })));
     }
-    function E() {
+    function A() {
         o.current?.activateUploadDialogue();
     }
     function v() {
@@ -532,14 +532,14 @@ function ew(e) {
                                             buttonRef: d,
                                             disabled: C,
                                             cropAndUpload: f,
-                                            onChangeImage: E,
+                                            onChangeImage: A,
                                         })
                                       : null,
                                   (0, i.jsx)(X.Y, {
                                       icon: K.TrashIcon,
                                       variant: "overlay-secondary",
                                       tooltipText: b ? V.intl.string(V.t.RyK5Ww) : V.intl.string(V.t.g2jVww),
-                                      onClick: b ? A : v,
+                                      onClick: b ? E : v,
                                   }),
                               ],
                           })
@@ -999,7 +999,7 @@ async function tp(e, t, n, i, l) {
         if (i.signal.aborted || !(0, F.iu)(t)) return;
         o = "uploading";
         let d = new File([l], "clip.mp4", { type: "video/mp4" }),
-            c = await E.A.uploadWidgetClip(d, { onProgress: (e) => (0, tf.Fj)(t, e), signal: i.signal });
+            c = await A.A.uploadWidgetClip(d, { onProgress: (e) => (0, tf.Fj)(t, e), signal: i.signal });
         if (!(0, F.WX)(t, c)) return;
         a({
             action: r === e8.IE.PICKER ? "CLIP_ADDED_FROM_PICKER" : "CLIP_ADDED_FROM_SUGGESTED",
@@ -1021,20 +1021,24 @@ async function tp(e, t, n, i, l) {
     }
 }
 function tI(e) {
-    let { widgetClipId: t, className: n } = e,
-        l = V.intl.string(V.t["4z6ldH"]);
+    let { widgetClipId: t, gameId: n, className: l } = e,
+        { trackUserProfileEditAction: s } = (0, eJ.NJ)(),
+        r = V.intl.string(V.t["4z6ldH"]);
     return (0, i.jsx)("div", {
-        className: n,
+        className: l,
         children: (0, i.jsx)(q.m, {
-            text: l,
+            text: r,
             ariaHidden: !0,
             children: (0, i.jsx)(tn.K, {
-                "aria-label": l,
+                "aria-label": r,
                 icon: tg.P,
                 size: "sm",
                 variant: "overlay-secondary",
                 onClick: function () {
-                    ((0, tf._V)(t), (0, F.mC)(t), tu.O.announce(V.intl.string(V.t.VCQXvr)));
+                    ((0, tf._V)(t),
+                        (0, F.mC)(t),
+                        tu.O.announce(V.intl.string(V.t.VCQXvr)),
+                        s({ action: "CLIP_UPLOAD_CANCELED", widgetEdited: b.x.CLIPS_GALLERY, gameId: n }));
                 },
             }),
         }),
@@ -1042,8 +1046,8 @@ function tI(e) {
 }
 var tj = n(314531);
 n(926675);
-var tA = n(305866),
-    tE = n(123181),
+var tE = n(305866),
+    tA = n(123181),
     tv = n(229087),
     tC = n(753437),
     tS = n(382701),
@@ -1060,10 +1064,10 @@ function tk(e) {
         h = l.useRef(null),
         p = l.useRef(null),
         I = l.useRef(null),
-        [j, A] = l.useState(c.length),
-        [E, v] = l.useState(!1),
+        [j, E] = l.useState(c.length),
+        [A, v] = l.useState(!1),
         [C, S] = l.useState(!1),
-        k = E || C;
+        k = A || C;
     (l.useEffect(() => {
         a(k);
     }, [k, a]),
@@ -1086,9 +1090,9 @@ function tk(e) {
             [t, m],
         ),
         w = l.useCallback(() => {
-            if (E) return;
+            if (A) return;
             let e = x.current?.getBoundingClientRect().width ?? 0;
-            if (0 === e || 0 === c.length) return void A(c.length);
+            if (0 === e || 0 === c.length) return void E(c.length);
             let t = I.current?.getBoundingClientRect().width ?? 0,
                 n = h.current?.getBoundingClientRect().width ?? 0,
                 i = e - (t > 0 ? t + 4 : 0),
@@ -1098,12 +1102,12 @@ function tk(e) {
                 for (let t = 0; t < e; t++) n += l[t] + 4 * (t > 0);
                 return n <= t;
             }
-            if (s(c.length, i)) return void A(c.length);
+            if (s(c.length, i)) return void E(c.length);
             let r = i - (n + 4),
                 a = 0;
             for (; a < c.length && s(a + 1, r);) a++;
-            A(a);
-        }, [c, E]);
+            E(a);
+        }, [c, A]);
     (0, et.g)(x, w);
     let L = c.length - j,
         P = L > 0,
@@ -1161,14 +1165,14 @@ function tk(e) {
                       (0, i.jsx)(ty, {
                           buttonRef: p,
                           numHidden: L,
-                          isOpen: E,
+                          isOpen: A,
                           onOpenChange: v,
                           disableInteraction: r,
                           children: c.map((e) =>
                               (0, i.jsx)(tv.A, { tag: e, className: tb.Hl, onRemove: o ? () => _(e) : void 0 }, e),
                           ),
                       }),
-                  g && (0, i.jsx)(tE.A, { tags: c, onTagsChange: y, onOpen: T, onClose: N, variant: "filled", ref: I }),
+                  g && (0, i.jsx)(tA.A, { tags: c, onTagsChange: y, onOpen: T, onClose: N, variant: "filled", ref: I }),
               ],
           })
         : null;
@@ -1190,7 +1194,7 @@ function ty(e) {
               onRequestOpen: () => s(!0),
               onRequestClose: () => s(!1),
               renderPopout: () =>
-                  (0, i.jsx)(tA.l, {
+                  (0, i.jsx)(tE.l, {
                       className: tb.Kt,
                       "aria-label": o,
                       returnRef: t,
@@ -1275,23 +1279,23 @@ var tP = n(663341),
     t_ = n(451395),
     tO = n(823016);
 function tD(e) {
-    let { widgetClipId: t, className: n } = e,
-        { trackUserProfileEditAction: l } = (0, eJ.NJ)(),
-        s = V.intl.string(V.t.ib6Mgx);
+    let { widgetClipId: t, gameId: n, className: l } = e,
+        { trackUserProfileEditAction: s } = (0, eJ.NJ)(),
+        r = V.intl.string(V.t.ib6Mgx);
     return (0, i.jsx)("div", {
-        className: n,
+        className: l,
         children: (0, i.jsx)(q.m, {
-            text: s,
+            text: r,
             ariaHidden: !0,
             children: (0, i.jsx)(tn.K, {
-                "aria-label": s,
+                "aria-label": r,
                 icon: K.TrashIcon,
                 size: "sm",
                 variant: "overlay-secondary",
                 onClick: function () {
                     ((0, F.mC)(t),
                         tu.O.announce(V.intl.string(V.t.zyPNb3)),
-                        l({ action: "CLIP_REMOVED", widgetEdited: b.x.CLIPS_GALLERY }));
+                        s({ action: "CLIP_REMOVED", widgetEdited: b.x.CLIPS_GALLERY, gameId: n }));
                 },
             }),
         }),
@@ -1324,10 +1328,10 @@ function tM(e) {
                     (0, i.jsxs)(i.Fragment, {
                         children: [
                             (0, i.jsx)(t_.jV, { buttonRef: d(t.key), className: tG.BU }),
-                            (0, i.jsx)(tD, { widgetClipId: t.key, className: tG.nM }),
+                            (0, i.jsx)(tD, { widgetClipId: t.key, gameId: t.gameId, className: tG.nM }),
                         ],
                     }),
-                f && (0, i.jsx)(tI, { widgetClipId: t.key, className: tG.nM }),
+                f && (0, i.jsx)(tI, { widgetClipId: t.key, gameId: t.gameId, className: tG.nM }),
             ],
         });
     return (0, i.jsx)("li", {
@@ -1563,7 +1567,7 @@ function nl(e) {
         [h, p] = l.useState(!0),
         I = (0, a.bG)([tl.Ay], () => tl.Ay.useReducedMotion),
         j = (0, tt.K)(f, 0.5),
-        [A, E] = l.useState(!1),
+        [E, A] = l.useState(!1),
         [v, C] = l.useState(!1),
         S = l.useRef(void 0),
         k = (0, t4.A)(r),
@@ -1620,7 +1624,7 @@ function nl(e) {
             null != e && N(e.key);
         }, [Z, J]),
         et = J >= 0 && !I && x,
-        en = (et || g) && !A && !v,
+        en = (et || g) && !E && !v,
         ei = l.useCallback(() => {
             J < 0 ||
                 et ||
@@ -1761,7 +1765,7 @@ function nl(e) {
                                       className: nt.VH,
                                   }),
                                   J >= 0 &&
-                                      !A &&
+                                      !E &&
                                       !v &&
                                       (0, i.jsx)(H.D, {
                                           className: nt.Hf,
@@ -1772,12 +1776,12 @@ function nl(e) {
                                       (0, i.jsx)(t5, { gameId: R.gameId, userId: o.id, className: nt.AT }),
                                   _ &&
                                       "uploading" === R.status &&
-                                      (0, i.jsx)(tI, { widgetClipId: R.key, className: nt.MY }),
+                                      (0, i.jsx)(tI, { widgetClipId: R.key, gameId: R.gameId, className: nt.MY }),
                                   _
                                       ? ("saved" === R.status || "pending" === R.status) &&
                                         (0, i.jsx)("div", {
                                             className: nt.nP,
-                                            children: (0, i.jsx)(tD, { widgetClipId: R.key }),
+                                            children: (0, i.jsx)(tD, { widgetClipId: R.key, gameId: R.gameId }),
                                         })
                                       : J >= 0 &&
                                         (0, i.jsx)("div", {
@@ -1793,7 +1797,7 @@ function nl(e) {
                                                       clipId: R.key,
                                                       title: R.title,
                                                       allowEditing: _,
-                                                      onEditingChange: E,
+                                                      onEditingChange: A,
                                                   }),
                                                   (0, i.jsx)(tk, {
                                                       clipId: R.key,
@@ -1945,7 +1949,7 @@ function nj(e) {
             },
             [t, d, s, h, p],
         ),
-        A = l.useMemo(() => {
+        E = l.useMemo(() => {
             let e = new Map(
                 m.map((e) => [
                     String(e.value),
@@ -1962,9 +1966,9 @@ function nj(e) {
                 n = new Set(t.map((e) => e.id));
             return [...t, ...[...e.values()].filter((e) => !n.has(e.id))];
         }, [m, o, I, f]),
-        E = l.useCallback((e) => e, []),
+        A = l.useCallback((e) => e, []),
         v = l.useMemo(() => ({ ...x, threshold: nx.Ht.rankings.CONTAINS, keys: ["label"] }), [x]),
-        C = l.useCallback((e) => (f || "" === e.trim() ? A.length : (0, nx.Ht)(A, e, v).length), [f, A, v]),
+        C = l.useCallback((e) => (f || "" === e.trim() ? E.length : (0, nx.Ht)(E, e, v).length), [f, E, v]),
         S = l.useCallback(
             (e) => {
                 let n = e.target.value;
@@ -1996,7 +2000,7 @@ function nj(e) {
         },
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, i.jsx)(tA.l, {
+            return (0, i.jsx)(tE.l, {
                 className: nI.C,
                 "aria-label": V.intl.string(V.t.uqw8wK),
                 children: (0, i.jsxs)(nf.iS, {
@@ -2005,9 +2009,9 @@ function nj(e) {
                     onSelectionChange: (e) => {
                         null != e && (j(e), t());
                     },
-                    options: A,
+                    options: E,
                     matchSorterOptions: v,
-                    customMatchSorter: f ? E : void 0,
+                    customMatchSorter: f ? A : void 0,
                     children: [
                         (0, i.jsx)(nf.a3, {
                             label: V.intl.string(V.t["5h0QOP"]),
@@ -2024,7 +2028,7 @@ function nj(e) {
         children: (e) => r(e),
     });
 }
-function nA(e) {
+function nE(e) {
     let { disabled: t, ...n } = e,
         s = l.useRef(null);
     return (0, i.jsx)(nj, {
@@ -2049,7 +2053,7 @@ function nA(e) {
             }),
     });
 }
-function nE(e) {
+function nA(e) {
     let t = l.useRef(null);
     return (0, i.jsx)(nj, {
         targetElementRef: t,
@@ -2095,7 +2099,7 @@ function nk(e) {
     return (0, i.jsxs)("div", {
         className: l ? nb.O : nb.k,
         children: [
-            l && (0, i.jsx)(nE, { widget: t, widgetType: t.type }),
+            l && (0, i.jsx)(nA, { widget: t, widgetType: t.type }),
             (0, i.jsx)(d.E, { variant: "text-xs/normal", color: "text-subtle", children: s }),
         ],
     });
@@ -2467,7 +2471,7 @@ function n1(e) {
             u && !h
                 ? [
                       (0, i.jsx)(
-                          nA,
+                          nE,
                           { disabled: f, widgetType: t.type, widget: t, onAddGame: () => o(!0) },
                           `${t.type}-browse-games-popout`,
                       ),
@@ -2727,7 +2731,7 @@ function id(e) {
         h = 0 === r.length && o,
         I = l.useMemo(() => r.filter(p.fu), [r]),
         j = l.useMemo(() => r.filter((e) => e instanceof f.R), [r]);
-    function A() {
+    function E() {
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 o &&
@@ -2753,7 +2757,7 @@ function id(e) {
             ]),
             { onLoad: o } = T();
         l.useEffect(() => {
-            !n && e && E.A.fetchSuggestedGames();
+            !n && e && A.A.fetchSuggestedGames();
         }, [n, e]);
         let d = n && !r;
         l.useEffect(() => {
@@ -2774,8 +2778,8 @@ function id(e) {
     h)
         ? (0, i.jsx)(is, { userId: t.id })
         : o
-          ? (0, i.jsx)(te.D, { children: A() })
-          : A();
+          ? (0, i.jsx)(te.D, { children: E() })
+          : E();
 }
 function ic(e) {
     let { user: t, ...n } = e,

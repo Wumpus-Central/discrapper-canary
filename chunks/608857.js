@@ -28,7 +28,7 @@ function l(e) {
                             tags: e.tags,
                         };
                     case "uploading":
-                        return { status: "uploading", key: e.id, thumbnail: e.thumbnail };
+                        return { status: "uploading", key: e.id, gameId: e.gameId, thumbnail: e.thumbnail };
                 }
             }),
         [e.clips],
