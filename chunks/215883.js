@@ -549,7 +549,7 @@ function tC(e) {
         (0, c.jsxs)(eu.B, {
             direction: "horizontal",
             align: "center",
-            gap: 4,
+            gap: 0,
             fullWidth: !1,
             className: s,
             children: [
