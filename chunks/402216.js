@@ -4,25 +4,25 @@ var C,
 t(582128);
 var s = t(503698),
     n = t.n(s),
-    a = t(661531),
-    i = t(812993),
+    i = t(661531),
+    a = t(812993),
     o = t(375708),
     d = t(874888),
     u = (((C = {}).RED = "RED"), (C.GRAY = "GRAY"), C);
 let c = { LARGE: d.Kp, SMALL: d.qx },
-    h = { [i.EG.ROUND]: d.qG, [i.EG.ROUND_LEFT]: d.HZ, [i.EG.ROUND_RIGHT]: d.q5, [i.EG.SQUARE]: "" };
+    h = { [a.EG.ROUND]: d.qG, [a.EG.ROUND_LEFT]: d.HZ, [a.EG.ROUND_RIGHT]: d.q5, [a.EG.SQUARE]: "" };
 function L(e) {
-    let { className: r, style: t, shape: C = i.EG.ROUND, look: s = "RED", size: u = c.LARGE, count: L } = e,
+    let { className: r, style: t, shape: C = a.EG.ROUND, look: s = "RED", size: u = c.LARGE, count: L } = e,
         v = null != L && L > 1 ? o.intl.format(o.t.hOnBrr, { count: L }) : o.intl.string(o.t.dI3q4h);
     return "RED" === s
-        ? (0, l.jsx)(i.Lp, {
+        ? (0, l.jsx)(a.Lp, {
               text: v,
               className: n()(r, d.VD, u),
-              color: a.A.unsafe_rawColors.RED_400.css,
+              color: i.A.colors.BADGE_NOTIFICATION_BACKGROUND.css,
               shape: h[C],
               style: t,
           })
-        : (0, l.jsx)(i.Lp, { text: v, className: n()(r, d.VD, u, d.Oh), disableColor: !0, shape: h[C], style: t });
+        : (0, l.jsx)(a.Lp, { text: v, className: n()(r, d.VD, u, d.Oh), disableColor: !0, shape: h[C], style: t });
 }
 ((L.Looks = u), (L.Sizes = c));
 let v = L;

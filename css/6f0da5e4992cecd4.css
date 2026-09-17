@@ -3442,7 +3442,7 @@
     --background-code-deletion: rgba(209, 46, 56, .12);
     --background-feedback-critical: rgba(209, 46, 56, .08);
     --background-feedback-info: rgba(0, 115, 227, .08);
-    --background-feedback-notification: #d93d45;
+    --background-feedback-notification: #d12e38;
     --background-feedback-positive: rgba(0, 133, 69, .08);
     --background-feedback-warning: rgba(247, 163, 0, .08);
     --background-mod-muted: hsla(240, 4%, 61%, .08);
@@ -3473,7 +3473,7 @@
     --badge-mythic-border-gradient-end: #ff6e0d;
     --badge-mythic-border-gradient-start: #ffe047;
     --badge-mythic-text: #ff9142;
-    --badge-notification-background: #d93d45;
+    --badge-notification-background: #d12e38;
     --badge-rare-background: rgba(89, 102, 242, .24);
     --badge-rare-border-gradient-end: #2e36ad;
     --badge-rare-border-gradient-start: #5966f2;
@@ -3771,7 +3771,7 @@
     --icon-default: #f2f2f5;
     --icon-feedback-critical: #ffa19c;
     --icon-feedback-info: #8fbffa;
-    --icon-feedback-notification: #d93d45;
+    --icon-feedback-notification: #d12e38;
     --icon-feedback-positive: #7dcc94;
     --icon-feedback-warning: #fcb529;
     --icon-invert: #2e3036;
@@ -4906,7 +4906,7 @@
     --background-code-deletion: rgba(209, 46, 56, .12);
     --background-feedback-critical: rgba(209, 46, 56, .08);
     --background-feedback-info: rgba(0, 115, 227, .08);
-    --background-feedback-notification: #d93d45;
+    --background-feedback-notification: #d12e38;
     --background-feedback-positive: rgba(0, 133, 69, .08);
     --background-feedback-warning: rgba(247, 163, 0, .08);
     --background-mod-muted: hsla(240, 4%, 61%, .08);
@@ -4937,7 +4937,7 @@
     --badge-mythic-border-gradient-end: #ff6e0d;
     --badge-mythic-border-gradient-start: #ffe047;
     --badge-mythic-text: #ff9142;
-    --badge-notification-background: #d93d45;
+    --badge-notification-background: #d12e38;
     --badge-rare-background: rgba(89, 102, 242, .24);
     --badge-rare-border-gradient-end: #2e36ad;
     --badge-rare-border-gradient-start: #5966f2;
@@ -5235,7 +5235,7 @@
     --icon-default: #d4d6d9;
     --icon-feedback-critical: #eb5e5e;
     --icon-feedback-info: #4591ed;
-    --icon-feedback-notification: #d93d45;
+    --icon-feedback-notification: #d12e38;
     --icon-feedback-positive: #40a163;
     --icon-feedback-warning: #cf8200;
     --icon-invert: #2e3036;
@@ -5638,7 +5638,7 @@
     --background-code-deletion: rgba(209, 46, 56, .12);
     --background-feedback-critical: rgba(209, 46, 56, .08);
     --background-feedback-info: rgba(0, 115, 227, .08);
-    --background-feedback-notification: #d93d45;
+    --background-feedback-notification: #d12e38;
     --background-feedback-positive: rgba(0, 133, 69, .08);
     --background-feedback-warning: rgba(247, 163, 0, .08);
     --background-mod-muted: hsla(240, 4%, 61%, .08);
@@ -5669,7 +5669,7 @@
     --badge-mythic-border-gradient-end: #ff6e0d;
     --badge-mythic-border-gradient-start: #ffe047;
     --badge-mythic-text: #ff9142;
-    --badge-notification-background: #d93d45;
+    --badge-notification-background: #d12e38;
     --badge-rare-background: rgba(89, 102, 242, .24);
     --badge-rare-border-gradient-end: #2e36ad;
     --badge-rare-border-gradient-start: #5966f2;
@@ -5967,7 +5967,7 @@
     --icon-default: #f0f0f2;
     --icon-feedback-critical: #f77d7a;
     --icon-feedback-info: #66a6f2;
-    --icon-feedback-notification: #d93d45;
+    --icon-feedback-notification: #d12e38;
     --icon-feedback-positive: #5eb578;
     --icon-feedback-warning: #eb9900;
     --icon-invert: #2e3036;
@@ -6335,4 +6335,4 @@
     --white: #fff
 }
 
-/*# sourceMappingURL=3002be8f0a15a97a.css.map*/
+/*# sourceMappingURL=6f0da5e4992cecd4.css.map*/
