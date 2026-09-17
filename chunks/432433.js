@@ -1,4 +1,4 @@
-t.d(n, { A: () => f });
+t.d(n, { A: () => b });
 var a = t(477900),
     s = t(582128);
 let d = (0, t(945810).mj)({
@@ -7,39 +7,39 @@ let d = (0, t(945810).mj)({
     defaultConfig: { enabled: !1 },
     variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
 });
-var r = t(174459),
-    i = t(903369),
-    l = t(521981),
+var l = t(174459),
+    r = t(903369),
+    i = t(521981),
     o = t(594808),
     u = t(78377),
     c = t(652215),
     h = t(375708),
-    p = t(910379);
-let m = s.lazy(() => Promise.all([t.e("902654"), t.e("927719"), t.e("147616"), t.e("86680")]).then(t.bind(t, 605387)));
-function f(e, n) {
+    m = t(910379);
+let p = s.lazy(() => Promise.all([t.e("902654"), t.e("927719"), t.e("147616"), t.e("778422")]).then(t.bind(t, 284565)));
+function b(e, n) {
     let {
-            hideSimpleEmbedContent: f,
-            formatInline: C = !1,
-            noStyleAndInteraction: b = !1,
-            allowHeading: g = !1,
-            allowList: A = !1,
-            allowLinks: k = !1,
-            allowDevLinks: v = !1,
-            previewLinkTarget: x = !1,
+            hideSimpleEmbedContent: b,
+            formatInline: f = !1,
+            noStyleAndInteraction: C = !1,
+            allowHeading: A = !1,
+            allowList: g = !1,
+            allowLinks: E = !1,
+            allowDevLinks: k = !1,
+            previewLinkTarget: v = !1,
             viewingChannelId: y,
-            postProcessor: E,
+            postProcessor: I,
         } = n,
-        j = (function (e) {
+        S = (function (e) {
             let { location: n } = e;
             return d.useConfig({ location: n });
         })({ location: "useMessageRenderedContent" }),
-        [I, S] = s.useState(!1),
-        _ = s.useCallback((e) => {
-            e && S(!0);
+        [_, j] = s.useState(!1),
+        x = s.useCallback((e) => {
+            e && j(!0);
         }, []);
     return (
         s.useEffect(() => {
-            S(!1);
+            j(!1);
         }, [e.content]),
         s.useMemo(() => {
             if (null != e.customRenderedContent) return e.customRenderedContent;
@@ -48,13 +48,13 @@ function f(e, n) {
                 return { content: (0, a.jsx)(o.Ay, { message: e }), hasSpoilerEmbeds: !1, hasBailedAst: !1 };
             if (e.type === c.lAJ.CHANGELOG) {
                 let { renderChangelogMessageMarkup: n } = t(550997);
-                return n(e, p, {
+                return n(e, m, {
                     track: (e, n) => {
-                        r.default.track(e, n);
+                        l.default.track(e, n);
                     },
                 });
             }
-            return j.enabled && null == E
+            return S.enabled && null == I
                 ? {
                       content: (0, a.jsx)(s.Suspense, {
                           children: (0, a.jsx)(u.O.Provider, {
@@ -62,28 +62,31 @@ function f(e, n) {
                                   messageId: e.id,
                                   channelId: e.channel_id,
                                   viewingChannelId: y,
-                                  guildId: (0, i.U)(e),
+                                  guildId: (0, r.U)(e),
                                   authorId: e.author?.id,
-                                  setHasSpoilerEmbeds: _,
+                                  setHasSpoilerEmbeds: x,
                               },
-                              children: (0, a.jsx)(m, { content: e.content }),
+                              children: (0, a.jsx)(p, {
+                                  content: e.content,
+                                  allowJumboEmoji: e.type !== c.lAJ.MEDIA_MENTION_MESSAGE,
+                              }),
                           }),
                       }),
-                      hasSpoilerEmbeds: I,
+                      hasSpoilerEmbeds: _,
                       hasBailedAst: !1,
                   }
-                : (0, l.Ay)(e, {
-                      hideSimpleEmbedContent: f,
-                      formatInline: C,
-                      noStyleAndInteraction: b,
-                      allowHeading: g,
-                      allowList: A,
-                      allowLinks: k,
-                      allowDevLinks: v,
-                      previewLinkTarget: x,
+                : (0, i.Ay)(e, {
+                      hideSimpleEmbedContent: b,
+                      formatInline: f,
+                      noStyleAndInteraction: C,
+                      allowHeading: A,
+                      allowList: g,
+                      allowLinks: E,
+                      allowDevLinks: k,
+                      previewLinkTarget: v,
                       viewingChannelId: y,
                       allowGameMentions: !0,
-                      postProcessor: E,
+                      postProcessor: I,
                   });
         }, [
             e.content,
@@ -92,18 +95,18 @@ function f(e, n) {
             e.interaction,
             e.state,
             e.type,
+            b,
             f,
             C,
-            b,
-            g,
             A,
-            k,
-            x,
-            v,
-            y,
+            g,
             E,
-            j.enabled,
+            v,
+            k,
+            y,
             I,
+            S.enabled,
+            _,
         ])
     );
 }

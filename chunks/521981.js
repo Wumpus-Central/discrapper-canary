@@ -1,14 +1,15 @@
-t.d(e, { ko: () => p, Ay: () => h, Le: () => y, Tz: () => f, jp: () => w });
+t.d(e, { ko: () => y, Ay: () => w, Le: () => h, Tz: () => f, jp: () => A });
 var o = t(46054);
 t(380610);
 var l = t(721779);
 t(100392);
 var i = t(659674),
     a = t(38405),
-    r = t(652215);
-let s = new Set([r.Auw.IMAGE, r.Auw.GIFV]),
-    u = new Set(["strong", "em", "u", "text", "inlineCode", "s", "spoiler"]);
-function d(n) {
+    r = t(652215),
+    s = t(307731);
+let u = new Set([r.Auw.IMAGE, r.Auw.GIFV]),
+    d = new Set(["strong", "em", "u", "text", "inlineCode", "s", "spoiler"]);
+function c(n) {
     if (
         n.some(
             (n) =>
@@ -22,32 +23,35 @@ function d(n) {
     let e = 0;
     return (
         n.forEach((n) => {
-            if ((("emoji" === n.type || "customEmoji" === n.type || "soundboard" === n.type) && (e += 1), e > 30))
+            if (
+                (("emoji" === n.type || "customEmoji" === n.type || "soundboard" === n.type) && (e += 1),
+                e > s.MAX_EMOJI_TO_BE_JUMBO)
+            )
                 return !1;
         }),
-        e > 30 ||
+        e > s.MAX_EMOJI_TO_BE_JUMBO ||
             n.forEach((n) => {
                 n.jumboable = !0;
             }),
         n
     );
 }
-function c(n, e) {
-    if (n instanceof Array) return n.some((n) => c(n, e));
+function m(n, e) {
+    if (n instanceof Array) return n.some((n) => m(n, e));
     let t = e(n);
     return null != t
         ? t
         : n.content instanceof Array
-          ? c(n.content, e)
-          : n.items instanceof Array && n.items.some((n) => c(n, e));
+          ? m(n.content, e)
+          : n.items instanceof Array && n.items.some((n) => m(n, e));
 }
-function m(n) {
-    return c(n, (n) =>
-        "spoiler" === n.type ? c(n, (n) => "link" === n.type || "attachmentLink" === n.type || null) : null,
+function p(n) {
+    return m(n, (n) =>
+        "spoiler" === n.type ? m(n, (n) => "link" === n.type || "attachmentLink" === n.type || null) : null,
     );
 }
-function p(n, e) {
-    let t = y({ channelId: n.channel_id, messageId: n.id, authorId: n.author?.id, renderOptions: e }),
+function y(n, e) {
+    let t = h({ channelId: n.channel_id, messageId: n.id, authorId: n.author?.id, renderOptions: e }),
         o = null != n.webhookId;
     return {
         ...t,
@@ -57,7 +61,7 @@ function p(n, e) {
         soundboardSounds: n.soundboardSounds ?? [],
     };
 }
-function y(n) {
+function h(n) {
     let { channelId: e, messageId: t, authorId: o, renderOptions: l } = n;
     return {
         channelId: e,
@@ -85,78 +89,78 @@ function y(n) {
         disablePressableChannelMention: !!l.disablePressableChannelMention,
     };
 }
-function h(n) {
+function w(n) {
     let e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
     return (function (n, e, t) {
         let {
                 toAST: o = !1,
-                hideSimpleEmbedContent: c = !0,
-                formatInline: y = !1,
+                hideSimpleEmbedContent: s = !0,
+                formatInline: m = !1,
                 postProcessor: h,
                 contentMessage: w,
             } = t,
-            f = !1,
             A = !1,
+            f = !1,
             k = (w ?? e).content,
-            g = n(k, !0, p(e, t), (n, t, p) => {
+            g = n(k, !0, y(e, t), (n, t, y) => {
                 let { ast: g, hasSpoilerEmbeds: b } = (function (n) {
                     var e, t, o;
-                    let c,
+                    let s,
                         {
-                            ast: p,
+                            ast: m,
                             inline: y,
                             hasBailedAst: h,
                             message: w,
-                            contentMessage: f,
-                            messageContent: A,
+                            contentMessage: A,
+                            messageContent: f,
                             hideSimpleEmbedContent: k,
                             formatInline: g,
                             toAST: b,
                         } = n,
-                        L = Array.isArray(p) ? p : [p],
-                        I = !1;
+                        I = Array.isArray(m) ? m : [m],
+                        L = !1;
                     return (
-                        h && (L = [{ type: "text", content: A, originalMatch: { index: 0, 0: A } }]),
+                        h && (I = [{ type: "text", content: f, originalMatch: { index: 0, 0: f } }]),
                         k &&
-                            (L = (function (n, e) {
+                            (I = (function (n, e) {
                                 if (1 !== n.length || 1 !== e.length) return n;
                                 let t = n[0],
                                     o = e[0];
                                 return ("link" === t.type || "attachmentLink" === t.type) &&
-                                    s.has(o.type) &&
+                                    u.has(o.type) &&
                                     (0, i.NV)(o)
                                     ? []
                                     : n;
-                            })(L, (f ?? w).embeds)),
+                            })(I, (A ?? w).embeds)),
                         g ||
                             w.type === r.lAJ.MEDIA_MENTION_MESSAGE ||
-                            ((e = L),
-                            (L = y
-                                ? d(e)
+                            ((e = I),
+                            (I = y
+                                ? c(e)
                                 : ("paragraph" === e[0].type &&
                                       e[0].content instanceof Array &&
-                                      (e[0].content = d(e[0].content)),
+                                      (e[0].content = c(e[0].content)),
                                   e))),
-                        (c = (t = L).some((n) => "link" !== n.type)),
-                        (L = (L = t.filter((n) => {
+                        (s = (t = I).some((n) => "link" !== n.type)),
+                        (I = (I = t.filter((n) => {
                             let e = "link" === n.type,
                                 t = null != n.target ? (0, l.ts)(n.target) : null;
-                            return !(e && null != t && !c);
+                            return !(e && null != t && !s);
                         })).filter((n) => {
                             let e = "link" === n.type,
                                 t = null != n.target && null != (0, l.$9)(n.target);
                             return !(e && t);
                         })),
-                        (f ?? w).embeds.length > 0 &&
-                            ((o = L),
-                            (I = y
-                                ? m(o)
-                                : "paragraph" === o[0].type && o[0].content instanceof Array && m(o[0].content))),
+                        (A ?? w).embeds.length > 0 &&
+                            ((o = I),
+                            (L = y
+                                ? p(o)
+                                : "paragraph" === o[0].type && o[0].content instanceof Array && p(o[0].content))),
                         g &&
-                            (L = (function n(e) {
+                            (I = (function n(e) {
                                 return (
                                     e.forEach((e) => {
-                                        u.has(e.type) &&
+                                        d.has(e.type) &&
                                             null != e.content &&
                                             (Array.isArray(e.content)
                                                 ? n(e.content)
@@ -168,28 +172,28 @@ function h(n) {
                                     }),
                                     e
                                 );
-                            })(L)),
-                        { ast: L, hasSpoilerEmbeds: I }
+                            })(I)),
+                        { ast: I, hasSpoilerEmbeds: L }
                     );
                 })({
                     ast: n,
                     inline: t,
-                    hasBailedAst: (A = p ?? !1),
+                    hasBailedAst: (f = y ?? !1),
                     message: e,
                     contentMessage: w,
                     messageContent: k,
-                    hideSimpleEmbedContent: c,
-                    formatInline: y,
+                    hideSimpleEmbedContent: s,
+                    formatInline: m,
                     toAST: o,
                 });
-                f = b;
-                let L = g;
-                return (null != h && (L = h(L, t)), L);
+                A = b;
+                let I = g;
+                return (null != h && (I = h(I, t)), I);
             });
-        return { hasSpoilerEmbeds: f, hasBailedAst: A, content: g };
+        return { hasSpoilerEmbeds: A, hasBailedAst: f, content: g };
     })(e.formatInline ? o.A.parseInlineReply : o.A.parse, n, e);
 }
-function w(n, e) {
+function A(n, e) {
     let t = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
     return (function (n, e) {
         let t = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
