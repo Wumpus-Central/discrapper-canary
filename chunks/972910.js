@@ -1,6 +1,7 @@
 e.exports = {
     oU: "text-md/medium_fcd769",
     kL: "container_fcd769",
+    zZ: "matchTargetWidth_fcd769",
     M6: "searchBox_fcd769",
     n1: "infoBlockText_fcd769",
     Xv: "results_fcd769",

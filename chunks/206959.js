@@ -2263,6 +2263,9 @@ class er extends d.A {
     setClipsV3MLEnabled(e) {
         (0, v.lE)().setClipsV3MLEnabled?.(e);
     }
+    setClipsAudioModelOverride(e) {
+        (0, v.lE)().setClipsAudioModelOverride?.(e);
+    }
     setClipsRecordingEnabled(e) {
         (0, v.lE)().setClipsRecordingEnabled?.(e);
     }
