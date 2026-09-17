@@ -1,6 +1,6 @@
 let r, i;
 t.d(n, { qg: () => T, Ts: () => W });
-let o = new URL(t(634138), t.b),
+let o = new URL(t(353813), t.b),
     _ = Array(128).fill(void 0);
 _.push(void 0, null, !0, !1);
 let u = 0,
@@ -359,7 +359,7 @@ async function I(e) {
             : console.warn(
                   "using deprecated parameters for the initialization function; pass a single object instead",
               )),
-        void 0 === e && (e = new URL(t(634138), t.b)));
+        void 0 === e && (e = new URL(t(353813), t.b)));
     let n = j();
     ("string" == typeof e ||
         ("function" == typeof Request && e instanceof Request) ||

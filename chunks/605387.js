@@ -2,7 +2,7 @@
 var l = t(477900),
     r = t(582128),
     i = t(244377),
-    s = t(913110),
+    s = t(609541),
     a = t(292442),
     c = t(834730),
     u = t(791606),
@@ -57,11 +57,11 @@ var S = t(236285),
     w = t(7584),
     N = t(930101),
     _ = t(78377),
-    M = t(690521);
-let $ = r.createContext([]);
+    $ = t(690521);
+let M = r.createContext([]);
 function P(e) {
     let { value: n, jumboable: t } = e,
-        r = M.Ay.getURL(n),
+        r = $.Ay.getURL(n),
         i = w.Ay.convertSurrogateToName(n),
         s = (0, _.p)();
     return (0, l.jsx)(N.H, {
@@ -286,32 +286,32 @@ function eN(e) {
     return (0, l.jsx)(ei.gn, { node: a, children: t });
 }
 var e_ = t(147190);
-function eM(e) {
-    let { domain: n, ephemeral: i, channelId: s, attachmentId: a, name: c } = e,
-        u = `https://${n}/${i ? "ephemeral-attachments" : "attachments"}/${s}/${a}/${c}`,
-        o = r.useCallback(async () => {
-            let e = await B.AN(u);
+function e$(e) {
+    let { domain: n, ephemeral: i, channelId: s, attachmentId: a, name: c, query: u } = e,
+        o = `https://${n}/${i ? "ephemeral-attachments" : "attachments"}/${s}/${a}/${c}${null != u ? `?${u}` : ""}`,
+        d = r.useCallback(async () => {
+            let e = await B.AN(o);
             (F.A.trackLinkClicked(e), (0, G.A)(e));
-        }, [u]),
-        d = r.useCallback(
+        }, [o]),
+        h = r.useCallback(
             (e) => {
                 (0, L.L3)(e, async () => {
                     let { default: e } = await t.e("762529").then(t.bind(t, 740024));
-                    return (n) => (0, l.jsx)(e, { ...n, attachmentUrl: u, attachmentName: c });
+                    return (n) => (0, l.jsx)(e, { ...n, attachmentUrl: o, attachmentName: c });
                 });
             },
-            [c, u],
+            [c, o],
         );
     return (0, l.jsxs)(q.A, {
         role: "link",
-        href: u,
-        onClick: o,
-        onContextMenu: d,
+        href: o,
+        onClick: d,
+        onContextMenu: h,
         className: "attachmentLink",
         children: [(0, l.jsx)(z.P, { size: "xs", className: e_.Kk, color: "currentColor" }), c],
     });
 }
-var e$ = t(611826),
+var eM = t(163651),
     eP = t(302031),
     eT = t(785562),
     ez = t(379418),
@@ -330,7 +330,7 @@ let eE = {
         },
         emoji: function (e) {
             let { value: n, type: t } = e,
-                i = r.useContext($),
+                i = r.useContext(M),
                 s =
                     1 === i.length &&
                     "paragraph" === i[0].type &&
@@ -370,14 +370,15 @@ let eE = {
                             });
                         case "attachment":
                             let {
-                                value: { domain: c, bucket: u, channel_id: o, attachment_id: d, name: h },
+                                value: { domain: c, bucket: u, channel_id: o, attachment_id: d, name: h, query: m },
                             } = t;
-                            return (0, l.jsx)(eM, {
+                            return (0, l.jsx)(e$, {
                                 domain: c,
                                 ephemeral: "ephemeral_attachments" === u,
                                 channelId: String(o),
                                 attachmentId: String(d),
                                 name: h,
+                                query: m,
                             });
                         default:
                             (0, U.xb)(t);
@@ -502,7 +503,7 @@ let eE = {
         },
         spoiler: function (e) {
             let { children: n, node: t } = e,
-                i = r.useMemo(() => Array.from((0, e$.t)([t])).some((e) => "link" === e.type), [t]),
+                i = r.useMemo(() => Array.from((0, eM.t)([t])).some((e) => "link" === e.type), [t]),
                 s = (0, _.p)();
             return (
                 r.useEffect(() => {
@@ -533,7 +534,7 @@ function eF(e) {
     ((eG ??= (0, s.Ts)()), r.use(eG));
     let t = (0, d.bG)([h.A], () => h.A.isDeveloper, []) ? x : m,
         a = r.useMemo(() => (0, s.qg)(n, t), [n, t]);
-    return (0, l.jsx)($.Provider, { value: a, children: (0, l.jsx)(i.$, { nodes: a, renderers: eE }) });
+    return (0, l.jsx)(M.Provider, { value: a, children: (0, l.jsx)(i.$, { nodes: a, renderers: eE }) });
 }
 function eq(e) {
     let { content: n, error: t } = e;
