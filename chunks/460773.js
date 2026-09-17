@@ -19005,13 +19005,13 @@ var Cr = n(22385),
     Ca = n(556534),
     Co = n(111159),
     Cu = n(152056),
-    Cd = n(978433);
-let Cc = { label: () => R.intl.string(R.t["32u1Dx"]), value: Cr.YG };
-var Cg = n(307863),
-    Cm = n(428031),
+    Cd = n(428031),
+    Cc = n(978433);
+let Cg = { label: () => R.intl.string(R.t["32u1Dx"]), value: Cr.YG };
+var Cm = n(307863),
     CA = n(954225);
 function CE() {
-    return (0, Cg.e)() ? R.intl.string(R.t.PMsfcH) : R.intl.string(R.t.RAQUSN);
+    return (0, Cm.e)() ? R.intl.string(R.t.PMsfcH) : R.intl.string(R.t.RAQUSN);
 }
 function Ch(e, t) {
     tt.default.track(S.HAw.GUILD_DEFAULT_DMS_UPDATED, { default_guilds_restricted: e, applied_to_existing_guilds: t });
@@ -19021,7 +19021,7 @@ let CS = (0, d.zD)(c.X.PERMISSIONS_DMS_SETTING, {
     useSubtitle: function () {
         let e = (0, Ca.Tx)(),
             t = (0, Ca.q9)(),
-            n = (0, Cg.e)();
+            n = (0, Cm.e)();
         return e === Cr.YG
             ? n
                 ? R.intl.string(R.t.XXGmuB)
@@ -19035,7 +19035,7 @@ let CS = (0, d.zD)(c.X.PERMISSIONS_DMS_SETTING, {
     useValue: function () {
         let e = (0, Ca.Tx)(),
             t = L.$s.useSetting().includes(e),
-            n = (0, Cm.K)();
+            n = (0, Cd.K)();
         return e === Cr.YG ? !n : !t;
     },
     useDisabled: function () {
@@ -19094,7 +19094,7 @@ let CI = (0, d.zD)(c.X.PERMISSIONS_MESSAGE_REQUESTS_SETTING, {
         },
         useValue: function () {
             let e = (0, Ca.Tx)(),
-                t = (0, Cm.K)(),
+                t = (0, Cd.K)(),
                 n = L.$s.useSetting().includes(e),
                 i = L.YX.useSetting(),
                 l = L.Zr.useSetting().includes(e);
@@ -19103,7 +19103,7 @@ let CI = (0, d.zD)(c.X.PERMISSIONS_MESSAGE_REQUESTS_SETTING, {
         useDisabled: function () {
             let e = (0, Ca.Tx)(),
                 t = (0, Nd.uM)(),
-                n = (0, Cm.K)(),
+                n = (0, Cd.K)(),
                 i = L.$s.useSetting().includes(e),
                 l = (0, CT.s)();
             return e === Cr.YG ? n || t || l : i || l;
@@ -19145,10 +19145,23 @@ let CI = (0, d.zD)(c.X.PERMISSIONS_MESSAGE_REQUESTS_SETTING, {
             return [CE(), Cf()];
         },
         Component: function () {
-            let { selectedGuildId: e, setSelectedGuildId: t } = (0, Cr.xk)(),
-                n = (0, h.bG)([dA.Ay], () => dA.Ay.getFlattenedGuildIds()),
-                i = (0, h.bG)([lh.A], () => lh.A.getGuilds()),
-                l = n[0];
+            let e,
+                t,
+                { selectedGuildId: n, setSelectedGuildId: i } = (0, Cr.xk)(),
+                l = (0, h.bG)([dA.Ay], () => dA.Ay.getFlattenedGuildIds()),
+                s = (0, h.bG)([lh.A], () => lh.A.getGuilds()),
+                r =
+                    ((e = L.$s.useSetting()),
+                    (t = (0, Cd.K)()),
+                    (0, h.bG)(
+                        [lh.A],
+                        () => {
+                            let n = new Set(e);
+                            return lh.A.getGuildIds().filter((e) => n.has(e) !== t).length;
+                        },
+                        [e, t],
+                    )),
+                a = l[0];
             E.useEffect(
                 () =>
                     Cu.A.subscribe(
@@ -19156,58 +19169,78 @@ let CI = (0, d.zD)(c.X.PERMISSIONS_MESSAGE_REQUESTS_SETTING, {
                             let { query: t } = e;
                             return t.trim();
                         },
-                        (e, n) => {
-                            let i = Cr.xk.getState().selectedGuildId;
-                            "" === n && "" !== e && i === Cr.YG && null != l
-                                ? t(l)
-                                : "" === e && i !== Cr.YG && t(Cr.YG);
+                        (e, t) => {
+                            let n = Cr.xk.getState().selectedGuildId;
+                            "" === t && "" !== e && n === Cr.YG && null != a
+                                ? i(a)
+                                : "" === e && n !== Cr.YG && i(Cr.YG);
                         },
                         { equalityFn: (e, t) => e === t },
                     ),
-                [l, t],
+                [a, i],
             );
-            let s = E.useMemo(() => {
-                let e = [];
-                return (
-                    e.push({
-                        ...Cc,
-                        id: Cc.value,
-                        label: Cc.label(),
-                        leading: (0, A.jsx)("div", {
-                            className: Cd.KP,
-                            children: (0, A.jsx)(Co.p, {
-                                size: "sm",
-                                color: "white",
-                                "aria-hidden": !0,
-                                className: Cd.cl,
+            let o = E.useMemo(() => {
+                    let e = [];
+                    return (
+                        e.push({
+                            ...Cg,
+                            id: Cg.value,
+                            label: Cg.label(),
+                            leading: (0, A.jsx)("div", {
+                                className: Cc.KP,
+                                children: (0, A.jsx)(Co.p, {
+                                    size: "sm",
+                                    color: "white",
+                                    "aria-hidden": !0,
+                                    className: Cc.cl,
+                                }),
                             }),
                         }),
+                        l.forEach((t) => {
+                            let n = s[t];
+                            null != n &&
+                                e.push({
+                                    id: n.id,
+                                    label: n.name,
+                                    value: n.id,
+                                    leading: (0, A.jsx)(db.Ay, {
+                                        className: Cc.cl,
+                                        guild: n,
+                                        size: db.Ay.Sizes.SMALLER,
+                                        active: !0,
+                                    }),
+                                });
+                        }),
+                        e
+                    );
+                }, [l, s]),
+                u = n === Cr.YG && r > 0;
+            return (0, A.jsxs)(A.Fragment, {
+                children: [
+                    (0, A.jsx)(SV.Z, {
+                        selectionMode: "single",
+                        onSelectionChange: function (e) {
+                            i(e);
+                        },
+                        value: n,
+                        options: o,
                     }),
-                    n.forEach((t) => {
-                        let n = i[t];
-                        null != n &&
-                            e.push({
-                                id: n.id,
-                                label: n.name,
-                                value: n.id,
-                                leading: (0, A.jsx)(db.Ay, {
-                                    className: Cd.cl,
-                                    guild: n,
-                                    size: db.Ay.Sizes.SMALLER,
-                                    active: !0,
-                                }),
-                            });
-                    }),
-                    e
-                );
-            }, [n, i]);
-            return (0, A.jsx)(SV.Z, {
-                selectionMode: "single",
-                onSelectionChange: function (e) {
-                    t(e);
-                },
-                value: e,
-                options: s,
+                    u &&
+                        (0, A.jsx)(H.E, {
+                            variant: "text-sm/normal",
+                            color: "text-subtle",
+                            className: Cc.h_,
+                            children: R.intl.format(R.t.uyBKps, {
+                                count: r,
+                                countHook: (e, t) =>
+                                    (0, A.jsx)(
+                                        H.E,
+                                        { tag: "span", variant: "text-sm/normal", color: "text-default", children: e },
+                                        t,
+                                    ),
+                            }),
+                        }),
+                ],
             });
         },
     }),
