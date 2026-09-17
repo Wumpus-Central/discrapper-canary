@@ -6249,6 +6249,7 @@ var au = (((e9 = {}).COMPLETE = "complete"), (e9.TRANSITION = "transition"), e9)
         (ts[(ts.QUEST_REWARD = 10)] = "QUEST_REWARD"),
         (ts[(ts.FRACTIONAL_REDEMPTION = 11)] = "FRACTIONAL_REDEMPTION"),
         (ts[(ts.VIRTUAL_CURRENCY_REDEMPTION = 12)] = "VIRTUAL_CURRENCY_REDEMPTION"),
+        (ts[(ts.PURCHASE_REWARD = 16)] = "PURCHASE_REWARD"),
         ts),
     aT =
         (((tl = {})[(tl.QUEST_REWARD = 1)] = "QUEST_REWARD"),

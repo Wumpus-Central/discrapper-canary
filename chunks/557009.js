@@ -26,6 +26,7 @@ class d extends r.A {
     deleted;
     sourceType;
     fulfillmentStatus;
+    orbsReward;
     static createFromServer(e) {
         return new d({
             id: e.id,
@@ -49,6 +50,7 @@ class d extends r.A {
             sku: null != e.sku ? a.A.createFromServer(e.sku) : null,
             sourceType: e.source_type ?? null,
             fulfillmentStatus: e.fulfillment_status ?? null,
+            orbsReward: e.metadata?.orbs_reward ?? null,
         });
     }
     get isGiftable() {
@@ -75,7 +77,8 @@ class d extends r.A {
             (this.guildId = e.guildId),
             (this.deleted = e.deleted),
             (this.sourceType = e.sourceType),
-            (this.fulfillmentStatus = e.fulfillmentStatus));
+            (this.fulfillmentStatus = e.fulfillmentStatus),
+            (this.orbsReward = e.orbsReward));
     }
     isValid(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
