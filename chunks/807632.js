@@ -1,16 +1,16 @@
 (n.d(t, {
-    Dg: () => f,
-    IO: () => m,
-    Ij: () => O,
-    Qq: () => L,
-    WP: () => y,
-    YG: () => g,
-    YS: () => p,
-    Zu: () => T,
-    _k: () => N,
-    n5: () => S,
-    t4: () => R,
-    yk: () => C,
+    Dg: () => p,
+    IO: () => S,
+    Ij: () => R,
+    Qq: () => y,
+    WP: () => D,
+    YG: () => m,
+    YS: () => T,
+    Zu: () => g,
+    _k: () => C,
+    n5: () => N,
+    t4: () => L,
+    yk: () => O,
 }),
     n(321073));
 var i = n(582128),
@@ -26,15 +26,16 @@ var i = n(582128),
     E = n(826767),
     A = n(474078),
     h = n(734057),
-    I = n(652215);
+    I = n(652215),
+    f = n(746080);
 n(253913);
-let f = "No Mic",
-    p = 120;
-function T(e) {
+let p = "No Mic",
+    T = 120;
+function g(e) {
     let t = e.trim().split("\n")[0] ?? "";
     return (0, A.A)(t.slice(0, I.Ign), !0);
 }
-function g(e) {
+function m(e) {
     return (0, s.bG)(
         [h.A],
         () =>
@@ -44,14 +45,14 @@ function g(e) {
             (h.A.getChannel(e.parent_id)?.isGameInvitesChannel() ?? !1),
     );
 }
-function m(e) {
+function S(e) {
     let t = (0, u.kt)(e);
-    return !!g(e) && !t.some((e) => e.name === f);
+    return !!m(e) && !t.some((e) => e.name === p);
 }
-function S(e, t) {
+function N(e, t) {
     return (0, c.OA)(e, { enabled: t, allowArchived: !0 });
 }
-function N(e) {
+function C(e) {
     let t = (function (e) {
             let t = (0, s.bG)([h.A], () => h.A.getChannel(e));
             a()(null == t || t.isGameInvitesChannel(), "requires a game invites channel");
@@ -64,7 +65,7 @@ function N(e) {
         return { application: e, ...t };
     }, [n]);
 }
-function C(e, t) {
+function O(e, t) {
     let n = e.isGameInvitesChannel(),
         r = (0, s.yK)(
             [h.A],
@@ -83,19 +84,19 @@ function C(e, t) {
         a = (0, i.useMemo)(() => (n ? { [e.guild_id]: r } : {}), [r, e.guild_id, n]);
     (0, l.Eq)(a, "GameInvitesChannelPostAuthors");
 }
-function O(e) {
+function R(e) {
     return e.type === I.$pd.PLAYING && (0, o.A)(e, I.jUm.JOIN);
 }
-function R(e) {
+function L(e) {
     return e.size >= 5;
 }
-function L(e, t) {
-    let n = (0, i.useMemo)(() => e?.find((e) => e.name === f), [e]),
+function y(e, t) {
+    let n = (0, i.useMemo)(() => e?.find((e) => e.name === p), [e]),
         r = null == n || !t.has(n.id),
-        a = null == n || (R(t) && !t.has(n.id));
+        a = null == n || (L(t) && !t.has(n.id));
     return { noMicTag: n, voiceChatEnabled: r, voiceToggleDisabled: a };
 }
-function y(e, t, n) {
+function D(e, t, n) {
     let r = e.isGameInvitesChannel();
     return (0, i.useMemo)(() => {
         if (!r) return { activeThreadIds: t, archivedThreadIds: n };
@@ -104,7 +105,7 @@ function y(e, t, n) {
             a = [];
         for (let n of t) {
             let t = h.A.getChannel(n);
-            null != t && (0, E.A)(t) <= e ? a.push(n) : i.push(n);
+            null != t && !t.hasFlag(f.lx.PINNED) && (0, E.A)(t) <= e ? a.push(n) : i.push(n);
         }
         return { activeThreadIds: i, archivedThreadIds: [...a, ...n] };
     }, [r, t, n]);
