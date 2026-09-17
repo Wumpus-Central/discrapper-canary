@@ -1636,6 +1636,7 @@ class eB extends b.G {
             },
             { no: 38, name: "custom_search_url", kind: "message", T: () => M.hU },
             { no: 39, name: "include_game_mentions_in_autocomplete", kind: "message", T: () => M._t },
+            { no: 40, name: "inline_emoji_suggestions_enabled", kind: "message", T: () => M._t },
         ]);
     }
     create(e) {
@@ -1792,6 +1793,14 @@ class eB extends b.G {
                         r.includeGameMentionsInAutocomplete,
                     );
                     break;
+                case 40:
+                    r.inlineEmojiSuggestionsEnabled = M._t.internalBinaryRead(
+                        e,
+                        e.uint32(),
+                        n,
+                        r.inlineEmojiSuggestionsEnabled,
+                    );
+                    break;
                 default:
                     let a = n.readUnknownField;
                     if ("throw" === a)
@@ -1882,6 +1891,10 @@ class eB extends b.G {
             e.includeGameMentionsInAutocomplete &&
                 M._t
                     .internalBinaryWrite(e.includeGameMentionsInAutocomplete, t.tag(39, y.O0.LengthDelimited).fork(), n)
+                    .join(),
+            e.inlineEmojiSuggestionsEnabled &&
+                M._t
+                    .internalBinaryWrite(e.inlineEmojiSuggestionsEnabled, t.tag(40, y.O0.LengthDelimited).fork(), n)
                     .join());
         let i = n.writeUnknownFields;
         return (!1 !== i && (!0 == i ? y.f$.onWrite : i)(this.typeName, e, t), t);

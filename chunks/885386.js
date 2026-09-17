@@ -229,8 +229,14 @@ let R = f(
         "includeGameMentionsInAutocomplete",
         (e) => e?.value ?? !0,
         (e) => l._t.create({ value: e }),
-    ),
-    b = f(
+    );
+f(
+    "textAndImages",
+    "inlineEmojiSuggestionsEnabled",
+    (e) => e?.value ?? !0,
+    (e) => l._t.create({ value: e }),
+);
+let b = f(
         "textAndImages",
         "renderSpoilers",
         (e) => e?.value ?? C.P6Q.ON_CLICK,
