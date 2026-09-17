@@ -29,8 +29,8 @@ var a,
     P = n(627363),
     R = n(625180),
     _ = n(672929),
-    D = n(742589),
-    T = n(976860),
+    T = n(742589),
+    D = n(976860),
     M = n(885386),
     L = n(696451),
     O = n(71393),
@@ -54,6 +54,12 @@ function Q(e) {
 }
 var J = n(58703);
 let ee = [
+    {
+        date: "2026-09-17",
+        platforms: ["desktop", "mobile"],
+        summary:
+            'The working status above the chat box now reads simply "Conjuring\u2026" or "Thinking\u2026", without repeating the name in front.',
+    },
     {
         date: "2026-09-17",
         platforms: ["mobile"],
@@ -581,8 +587,8 @@ var ek = n(663417),
     eP = n(957565),
     eR = n(557875),
     e_ = n(869369),
-    eD = n(123917);
-let eT = new Set();
+    eT = n(123917);
+let eD = new Set();
 n(321073);
 var eM = n(746080),
     eL = n(793712);
@@ -610,8 +616,8 @@ function eV(e) {
         I = i.useRef(null),
         { pending: N, refresh: E } = (0, eE.A)(C ?? null),
         { pending: S, connect: P } = (function (e) {
-            let [t, n] = i.useState(eT),
-                a = i.useRef(eT),
+            let [t, n] = i.useState(eD),
+                a = i.useRef(eD),
                 l = i.useCallback((e) => {
                     ((a.current = (0, eR.Q6)(a.current, e)), n(a.current));
                 }, []);
@@ -623,7 +629,7 @@ function eV(e) {
                         let i = (0, eR.K9)(a.current, t.type);
                         async function s() {
                             let n = await (0, Z.JI)(e, t.type);
-                            if ((l(t.type), "url" === n.type)) return void (0, eD.h)({ href: n.url, trusted: !1 });
+                            if ((l(t.type), "url" === n.type)) return void (0, eT.h)({ href: n.url, trusted: !1 });
                             let a =
                                 "setup" === (0, eR.rq)(n.error)
                                     ? F.intl.string(G.default.avu1u4)
@@ -672,7 +678,7 @@ function eV(e) {
             offers: i.useMemo(() => (0, eR.Xl)(R), [R]),
             connectPending: S,
         }),
-        T = i.useMemo(() => new Map(R.map((e) => [e.type, e])), [R]),
+        D = i.useMemo(() => new Map(R.map((e) => [e.type, e])), [R]),
         M = null != m && r,
         L = o && null != p,
         O = M || null != d || L || null != h || null != f || null != g,
@@ -730,7 +736,7 @@ function eV(e) {
                                                 dontCloseOnAction: !0,
                                                 action: () => {
                                                     if ("refresh" === e.kind) return void E();
-                                                    let t = null == e.connectionType ? null : T.get(e.connectionType);
+                                                    let t = null == e.connectionType ? null : D.get(e.connectionType);
                                                     null != t && P(t);
                                                 },
                                             },
@@ -856,7 +862,7 @@ function eV(e) {
                   return (0, l.jsx)("div", {
                       ref: I,
                       className: eL.h,
-                      children: (0, l.jsx)(D.A.Icon, {
+                      children: (0, l.jsx)(T.A.Icon, {
                           icon: eN.MoreHorizontalIcon,
                           tooltip: F.intl.string(F.t["UKOtz+"]),
                           "aria-label": F.intl.string(F.t["UKOtz+"]),
@@ -873,7 +879,7 @@ function eV(e) {
 var ez = n(769979);
 function eG(e) {
     let { title: t, actions: n, breadcrumb: a } = e;
-    return (0, l.jsx)(D.A, {
+    return (0, l.jsx)(T.A, {
         hideSearch: !0,
         toolbar: n,
         className: ez.wx,
@@ -891,12 +897,12 @@ function eG(e) {
                 null != a
                     ? (0, l.jsxs)(l.Fragment, {
                           children: [
-                              (0, l.jsx)(D.A.Title, { onClick: a.onClick, children: a.title }),
-                              (0, l.jsx)(D.A.Caret, {}),
+                              (0, l.jsx)(T.A.Title, { onClick: a.onClick, children: a.title }),
+                              (0, l.jsx)(T.A.Caret, {}),
                           ],
                       })
                     : null,
-                (0, l.jsx)(D.A.Title, { className: ez.Qw, wrapperClassName: ez.DD, children: t }),
+                (0, l.jsx)(T.A.Title, { className: ez.Qw, wrapperClassName: ez.DD, children: t }),
             ],
         }),
     });
@@ -938,8 +944,8 @@ function eZ() {
         t = i.useCallback(() => {
             null != e &&
                 ("channel" === e.kind
-                    ? (0, T.pX)(eq.BVt.CHANNEL(e.guildId, e.channelId))
-                    : (0, eD.h)({ href: e.url, trusted: !0 }));
+                    ? (0, D.pX)(eq.BVt.CHANNEL(e.guildId, e.channelId))
+                    : (0, eT.h)({ href: e.url, trusted: !0 }));
         }, [e]);
     return null == e
         ? null
@@ -1037,7 +1043,7 @@ function ti(e) {
                                       confirmText: F.intl.string(G.default.pgFuyr),
                                       variant: "critical",
                                       onConfirm: async () => {
-                                          (0, T.pX)(eq.BVt.CHANNEL(u, eM.VV.VIBEGRATIONS, t));
+                                          (0, D.pX)(eq.BVt.CHANNEL(u, eM.VV.VIBEGRATIONS, t));
                                           try {
                                               await eu(t, e, F.intl.string(G.default.C7GU2r));
                                           } catch {
@@ -1223,10 +1229,10 @@ function ts(e) {
         eS = F.intl.string(eE ? G.default["3uCc8U"] : G.default["+nzCxZ"]),
         eP = i.useCallback(() => (0, B.GG)(!eE), [eE]),
         eR = (0, _.A)(t?.preview_application_id ?? null, te.sd),
-        eD = (0, te.x1)(eR) && eR.data.proxyTicketRefreshing,
-        eT = i.useCallback(() => {
-            null == eR || eD || R.A.refreshProxyTicket(eR.id);
-        }, [eR, eD]),
+        eT = (0, te.x1)(eR) && eR.data.proxyTicketRefreshing,
+        eD = i.useCallback(() => {
+            null == eR || eT || R.A.refreshProxyTicket(eR.id);
+        }, [eR, eT]),
         eL = i.useCallback(() => {
             var e, n;
             (null != t && ((e = t.id), (n = eR?.id), (0, Z.Bn)(e), (0, eQ.A)().leaveFrame(n)), s());
@@ -1315,7 +1321,7 @@ function ts(e) {
               ? { type: "checking" }
               : void 0;
     i.useEffect(() => {
-        null == t && a && (0, T.pX)(eq.BVt.CHANNEL(o, eM.VV.VIBEGRATIONS));
+        null == t && a && (0, D.pX)(eq.BVt.CHANNEL(o, eM.VV.VIBEGRATIONS));
     }, [o, t, a]);
     let eZ = i.useCallback((e) => {
             d(!0);
@@ -1371,14 +1377,14 @@ function ts(e) {
                           className: tt.FO,
                           children: [
                               ei.showModeSwitch ? (0, l.jsx)(ew, { modes: ei.modes, mode: es, onChange: eo }) : null,
-                              (0, l.jsx)(D.A.Icon, {
+                              (0, l.jsx)(T.A.Icon, {
                                   icon: eE ? tl : ta,
                                   tooltip: eS,
                                   "aria-label": eS,
                                   selected: eE,
                                   onClick: eP,
                               }),
-                              (0, l.jsx)(D.A.Icon, {
+                              (0, l.jsx)(T.A.Icon, {
                                   ref: ej,
                                   icon: eF.A,
                                   tooltip: ek,
@@ -1390,7 +1396,7 @@ function ts(e) {
                               "frame" === es ? (0, l.jsx)(el.A, { frame: eR, controlProjectId: t.id }) : null,
                               (0, l.jsx)("div", { className: tt.YJ }),
                               E
-                                  ? (0, l.jsx)(D.A.Icon, {
+                                  ? (0, l.jsx)(T.A.Icon, {
                                         icon: v.BugIcon,
                                         tooltip: F.intl.string(G.default["8MLfBT"]),
                                         "aria-label": F.intl.string(G.default["8MLfBT"]),
@@ -1399,7 +1405,7 @@ function ts(e) {
                                     })
                                   : null,
                               (0, $.PV)(t)
-                                  ? (0, l.jsx)(D.A.Icon, {
+                                  ? (0, l.jsx)(T.A.Icon, {
                                         icon: w.SettingsIcon,
                                         tooltip: F.intl.string(G.default["xhcY+n"]),
                                         "aria-label": F.intl.string(G.default["xhcY+n"]),
@@ -1413,8 +1419,8 @@ function ts(e) {
                                   projectGuildId: t.guild_id,
                                   isOwner: (0, $.PV)(t),
                                   canRemix: (0, $.H_)(t),
-                                  onRefresh: (0, te.x1)(eR) ? eT : void 0,
-                                  isRefreshing: eD,
+                                  onRefresh: (0, te.x1)(eR) ? eD : void 0,
+                                  isRefreshing: eT,
                                   onClose: eL,
                                   onExport: eO,
                                   onImport: ez.open,
@@ -1450,7 +1456,7 @@ function ts(e) {
                               }),
                               ef
                                   ? null
-                                  : (0, l.jsx)(D.A.Icon, { icon: tn, tooltip: eg, "aria-label": eg, onClick: ey }),
+                                  : (0, l.jsx)(T.A.Icon, { icon: tn, tooltip: eg, "aria-label": eg, onClick: ey }),
                           ],
                       }),
         });
@@ -1551,11 +1557,11 @@ function to(e) {
                     ),
             [n],
         ),
-        D = i.useRef(null);
+        T = i.useRef(null);
     i.useEffect(() => {
-        null != h && D.current?.querySelector("button")?.focus();
+        null != h && T.current?.querySelector("button")?.focus();
     }, [h]);
-    let T = i.useMemo(
+    let D = i.useMemo(
             () =>
                 t
                     .filter((e) => (0, K.X0)(e, r))
@@ -1754,7 +1760,7 @@ function to(e) {
                                             children: [
                                                 (0, l.jsx)("div", {
                                                     className: tt.gH,
-                                                    ref: D,
+                                                    ref: T,
                                                     children: (0, l.jsx)(I.l, {
                                                         selectionMode: "single",
                                                         label: F.intl.string(G.default.MLg0S8),
@@ -1831,9 +1837,9 @@ function to(e) {
                             (0, l.jsxs)(C.Ip, {
                                 className: tt.xe,
                                 children: [
-                                    (null == a || "loading" === a.type) && 0 === T.length
+                                    (null == a || "loading" === a.type) && 0 === D.length
                                         ? (0, l.jsx)("div", { className: tt.E8, children: (0, l.jsx)(N.y, {}) })
-                                        : a?.type === "error" && 0 === T.length
+                                        : a?.type === "error" && 0 === D.length
                                           ? (0, l.jsxs)("div", {
                                                 className: tt.E8,
                                                 children: [
@@ -1851,7 +1857,7 @@ function to(e) {
                                                     }),
                                                 ],
                                             })
-                                          : 0 === T.length
+                                          : 0 === D.length
                                             ? (0, l.jsx)("div", {
                                                   className: tt.D1,
                                                   children: (0, l.jsxs)("div", {
@@ -1872,7 +1878,7 @@ function to(e) {
                                               })
                                             : (0, l.jsx)("div", {
                                                   className: tt.Dq,
-                                                  children: T.map((e) =>
+                                                  children: D.map((e) =>
                                                       (0, l.jsx)(
                                                           ti,
                                                           {
@@ -1974,7 +1980,7 @@ function tr(e) {
                         ((0, Z.Hc)(e),
                             (0, Z.r2)(e, I ?? H.Cl),
                             (0, Z.dv)(e, t),
-                            (0, T.pX)(eq.BVt.CHANNEL(n, eM.VV.VIBEGRATIONS, e)),
+                            (0, D.pX)(eq.BVt.CHANNEL(n, eM.VV.VIBEGRATIONS, e)),
                             m(""),
                             N(null));
                     } catch (e) {
@@ -1998,7 +2004,7 @@ function tr(e) {
                         (0, Z.Hc)(l),
                         (0, Z.r2)(l, I ?? H.Cl),
                         await eu(l, e, F.intl.string(G.default.KjEtrZ)),
-                        (0, T.pX)(eq.BVt.CHANNEL(n, eM.VV.VIBEGRATIONS, l)),
+                        (0, D.pX)(eq.BVt.CHANNEL(n, eM.VV.VIBEGRATIONS, l)),
                         N(null));
                 } catch {
                     (null != l && (await (0, B.xx)(l).catch(() => void 0)),
@@ -2009,14 +2015,14 @@ function tr(e) {
             },
             [n, I],
         ),
-        D = i.useCallback(
+        T = i.useCallback(
             (e) => {
-                (0, T.pX)(eq.BVt.CHANNEL(n, eM.VV.VIBEGRATIONS, e));
+                (0, D.pX)(eq.BVt.CHANNEL(n, eM.VV.VIBEGRATIONS, e));
             },
             [n],
         ),
         M = i.useCallback(() => {
-            (0, T.pX)(eq.BVt.CHANNEL(n, eM.VV.VIBEGRATIONS));
+            (0, D.pX)(eq.BVt.CHANNEL(n, eM.VV.VIBEGRATIONS));
         }, [n]),
         z = i.useCallback((e) => {
             (m(e), v(null));
@@ -2044,7 +2050,7 @@ function tr(e) {
               submitting: f,
               createError: j,
               createDisabled: "idea" === (t = Q({ idea: p, installScope: w, submitting: f })) || "submitting" === t,
-              onSelectProject: D,
+              onSelectProject: T,
               onIdeaChange: z,
               onCreate: S,
               onImportNewProject: _,

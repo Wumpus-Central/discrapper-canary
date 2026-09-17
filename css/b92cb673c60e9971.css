@@ -263,10 +263,6 @@
     display: inline-block
 }
 
-.thinkingActivity_b4a971>span>span:first-child>span:nth-child(-n+7) {
-    color: var(--text-default)
-}
-
 .hasReasoning_b4a971 {
     cursor: pointer
 }
@@ -1250,4 +1246,4 @@
     white-space: nowrap
 }
 
-/*# sourceMappingURL=cde549941ac2ea36.css.map*/
+/*# sourceMappingURL=b92cb673c60e9971.css.map*/
