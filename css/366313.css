@@ -1,3 +1,26 @@
+.errorMessage_a23fe0 {
+    align-items: center;
+    background-color: var(--background-mod-subtle);
+    border-radius: 4px;
+    display: flex;
+    padding: 8px
+}
+
+.wrapper__74bfa {
+    align-items: center;
+    display: flex;
+    margin-top: 4px
+}
+
+.icon__74bfa {
+    display: block;
+    margin-inline-end: 8px
+}
+
+.errorIcon__74bfa {
+    color: var(--icon-feedback-critical)
+}
+
 @value maxModalWidth from "./MarkdownModal.module.css";
 
 .video__1689b {
@@ -160,4 +183,4 @@ h3.improved__1689b:after {
     color: var(--primary-500)
 }
 
-/*# sourceMappingURL=227512.0cd8fb49abe2b568.css.map*/
+/*# sourceMappingURL=366313.c2656e9fd6f66418.css.map*/

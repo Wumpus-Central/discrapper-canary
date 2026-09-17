@@ -291,15 +291,15 @@ var ex = n(875317),
     e3 = n(960628),
     e8 = n(206248),
     e7 = n(498470),
-    e2 = n(807098),
-    e5 = n(637706),
-    e4 = n(788883),
-    e9 = n(7667);
+    e5 = n(807098),
+    e2 = n(637706),
+    e9 = n(788883),
+    e4 = n(7667);
 function te(e) {
     let { guildId: t, componentId: n, promotionId: i, coachmark: s, targetElementRef: a, markAsDismissed: o } = e,
         { analyticsLocations: d } = (0, N.Ay)(),
-        c = (0, e2.T)(s.asset),
-        { terms: A } = (0, e9.A)(i),
+        c = (0, e5.T)(s.asset),
+        { terms: A } = (0, e4.A)(i),
         E = r.useCallback(() => {
             o(eE.i.DISMISS);
         }, [o]),
@@ -314,13 +314,13 @@ function te(e) {
             })(),
                 o(eE.i.TAKE_ACTION));
         }, [s.button, t, d, o]),
-        g = (0, e5.C)(s.helpArticle, ""),
+        g = (0, e2.C)(s.helpArticle, ""),
         m = [s.body, A].filter((e) => "" !== e).join(" "),
         { icon: I } = (0, e7.x)({ buttonAction: s.button?.buttonAction }),
         C = s.button?.copy ?? "";
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, l.jsx)(e4.A, {
+            (0, l.jsx)(e9.A, {
                 componentType: ec.C.GUILD_HEADER_COACHMARK,
                 componentId: n,
                 promotionId: i,
@@ -825,10 +825,10 @@ let t6 = d.Ay.connectStores([k.A], (e) => {
 var t3 = n(503698),
     t8 = n.n(t3),
     t7 = n(933832),
-    t2 = n(782603),
-    t5 = n(81466),
-    t4 = n(116085),
-    t9 = n(597601),
+    t5 = n(782603),
+    t2 = n(81466),
+    t9 = n(116085),
+    t4 = n(597601),
     ne = n(451394),
     nt = n(104171),
     nn = n(47167),
@@ -949,7 +949,7 @@ function nT(e) {
                     eg.default.track(H.HAw.CHANNEL_NOTICE_CTA_CLICKED, { guild_id: t.guild_id, notice_type: n }));
             },
             text: tl.intl.string(tl.t.DlcqlU),
-            icon: s ? t7.CheckmarkLargeIcon : t2.BellIcon,
+            icon: s ? t7.CheckmarkLargeIcon : t5.BellIcon,
             variant: s ? "secondary" : "primary",
             size: "sm",
             fullWidth: !0,
@@ -1007,7 +1007,7 @@ function nM(e) {
                 (0, l.jsxs)("div", {
                     className: t8()(nN.fI, nN.pF),
                     children: [
-                        (0, l.jsx)(t5.CalendarIcon, {
+                        (0, l.jsx)(t2.CalendarIcon, {
                             size: "custom",
                             color: "currentColor",
                             className: nN.uE,
@@ -1027,7 +1027,7 @@ function nM(e) {
                     children: [
                         null != d
                             ? (0, l.jsx)(d, { size: "xs", color: "currentColor", className: nN.uE })
-                            : (0, l.jsx)(t4.B, {
+                            : (0, l.jsx)(t9.B, {
                                   size: "custom",
                                   color: "currentColor",
                                   width: 16,
@@ -1057,7 +1057,7 @@ function nf(e) {
               heading: tl.intl.string(tl.t["1+boPi"]),
               topic: t.name,
               location: (0, ng.y)(n, !0),
-              locationIcon: (0, l.jsx)(t4.B, {
+              locationIcon: (0, l.jsx)(t9.B, {
                   size: "custom",
                   color: "currentColor",
                   width: 16,
@@ -1113,7 +1113,7 @@ function nL(e) {
         heading: tl.intl.string(tl.t["X2K3/4"]),
         location: i,
         details: a,
-        detailsIcon: (0, l.jsx)(t9.L, {
+        detailsIcon: (0, l.jsx)(t4.L, {
             size: "custom",
             color: "currentColor",
             width: 14,
@@ -1489,8 +1489,8 @@ class n7 extends d.Ay.Store {
         return !e.features.has(H.GuildFeatures.BANNER) && Date.now() - t >= H.D2K;
     }
 }
-let n2 = new n7(I.h);
-class n5 extends d.Ay.Store {
+let n5 = new n7(I.h);
+class n2 extends d.Ay.Store {
     static displayName = "GuildBoostingNoticeStore";
     initialize() {
         (this.waitFor(R.A), this.syncWith([R.A], H.tEg));
@@ -1499,8 +1499,8 @@ class n5 extends d.Ay.Store {
         return Date.now() - t >= H.D2K && R.A.can(H.xBc.MANAGE_GUILD, e);
     }
 }
-let n4 = new n5(I.h);
-var n9 = n(731667);
+let n9 = new n2(I.h);
+var n4 = n(731667);
 function ie() {
     return !0;
 }
@@ -1518,12 +1518,12 @@ let ii = new it(I.h),
     il = [
         {
             type: H.n5X.GUILD_BOOSTING,
-            store: n4,
+            store: n9,
             dismissibleContentType: u.M.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION,
         },
-        { type: H.n5X.GUILD_BANNER, store: n2, dismissibleContentType: u.M.CHANNEL_NOTICE_GUILD_BANNER },
+        { type: H.n5X.GUILD_BANNER, store: n5, dismissibleContentType: u.M.CHANNEL_NOTICE_GUILD_BANNER },
         { type: H.n5X.INVITE, store: ii, dismissibleContentType: u.M.CHANNEL_NOTICE_INVITE },
-        { type: H.n5X.HUB_LINK, store: n9.A, dismissibleContentType: u.M.CHANNEL_NOTICE_HUBLINK },
+        { type: H.n5X.HUB_LINK, store: n4.A, dismissibleContentType: u.M.CHANNEL_NOTICE_HUBLINK },
         { type: H.n5X.QUICKSWITCHER, store: n8.A, dismissibleContentType: u.M.CHANNEL_NOTICE_QUICKSWITCHER },
         { type: H.n5X.LINKED_ROLES_ADMIN, dismissibleContentType: u.M.LINKED_ROLE_ADMIN_GUILD },
         { type: H.n5X.GAME_CLAIM, dismissibleContentType: u.M.GAME_CLAIM_COACHMARK },
@@ -1736,8 +1736,7 @@ class i_ extends r.PureComponent {
                     n.e("774550"),
                     n.e("923981"),
                     n.e("618416"),
-                    n.e("706073"),
-                    n.e("227512"),
+                    n.e("366313"),
                     n.e("262564"),
                     n.e("71866"),
                     n.e("891473"),
@@ -1963,6 +1962,7 @@ class i_ extends r.PureComponent {
                     n.e("348567"),
                     n.e("452075"),
                     n.e("900277"),
+                    n.e("450503"),
                     n.e("905581"),
                     n.e("249681"),
                     n.e("869047"),
@@ -2079,9 +2079,9 @@ class i_ extends r.PureComponent {
                     n.e("37977"),
                     n.e("720590"),
                     n.e("691671"),
+                    n.e("919129"),
                     n.e("298408"),
                     n.e("147626"),
-                    n.e("803434"),
                     n.e("613867"),
                     n.e("979483"),
                     n.e("553984"),
@@ -2683,10 +2683,10 @@ function iN(e) {
         }, []),
     });
     let e7 = (0, d.bG)([eJ.A], () => eJ.A.getChannelId()),
-        e2 = (0, d.bG)([e$.A], () => e$.A.desyncedVoiceStatesCount),
-        e5 = (0, ej.A)(f),
-        e4 = (0, es.ai)(f) ? null : e5,
-        e9 =
+        e5 = (0, d.bG)([e$.A], () => e$.A.desyncedVoiceStatesCount),
+        e2 = (0, ej.A)(f),
+        e9 = (0, es.ai)(f) ? null : e2,
+        e4 =
             (function (e) {
                 let t = (0, ej.A)(e),
                     n = (0, ew.DD)(e, "useShouldShowGuildThemeMemberCoachmark"),
@@ -2700,26 +2700,26 @@ function iN(e) {
     ih.A.useConfig({ guildId: f, location: "guild_sidebar" });
     let te = (0, ea.C$)(f, "GuildSidebar"),
         tt = (0, d.bG)([X.A], () => X.A.getGuild(f)?.features.has(H.GuildFeatures.GAME_SERVERS) ?? !1, [f]),
-        tn = te && !tt && !1 === e4,
+        tn = te && !tt && !1 === e9,
         ti = (0, ed.J)("GuildSidebar"),
         ts = (0, eo.S)(f, "GuildSidebar"),
-        tl = te && !tt && ts && !1 === e4,
+        tl = te && !tt && ts && !1 === e9,
         tr = (0, eB.A)(),
         ta = (0, eP.A)(f),
-        to = !1 === e4 && tr && null != ta,
+        to = !1 === e9 && tr && null != ta,
         td = (0, ev.A)(f),
-        tu = !1 === e4 && tr && null != td,
+        tu = !1 === e9 && tr && null != td,
         tc = [];
     (eL && tc.push(u.M.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP),
         eR && tc.push(u.M.GUILD_HEADER_ROLE_SUBSCRIPTION_UPSELL),
         eU && tc.push(u.M.GUILD_DISCOVERY_LANDING_PAGE_SETTINGS_UPSELL),
-        !1 === e4 && tc.push(u.M.GUILD_POWERUP_PERKS_COACHMARK),
-        e9 && tc.push(u.M.GUILD_THEME_MEMBER_COACHMARK),
+        !1 === e9 && tc.push(u.M.GUILD_POWERUP_PERKS_COACHMARK),
+        e4 && tc.push(u.M.GUILD_THEME_MEMBER_COACHMARK),
         tn && tc.push(u.M.GAME_SERVER_HOSTING_NEW_PERK_AVAILABLE_COACHMARK),
         tl && tc.push(u.M.GAME_SERVER_PRICING_CHANGE_COACHMARK),
         e8 && tc.push(u.M.SERVER_SUBSCRIPTION_TIER_TEMPLATE_UPSELL));
     let [tA, tE] = (0, en.kn)(tc, eE.m.GUILD_HEADER_TOOLTIPS),
-        [th, tg] = (0, eH.vB)(ti && te && !1 === e4 && !(0, es.ai)(f), eE.m.GUILD_HEADER_TOOLTIPS),
+        [th, tg] = (0, eH.vB)(ti && te && !1 === e9 && !(0, es.ai)(f), eE.m.GUILD_HEADER_TOOLTIPS),
         [tm, tI] = (0, en.D8)(
             to ? u.M.BOOST_TO_UNLOCK_COACHMARK : null,
             f,
@@ -2783,7 +2783,7 @@ function iN(e) {
         selectedVoiceChannelId: j,
         voiceStates: y,
         rtcConnectedChannelId: e7,
-        rtcDesyncedVoiceStatesCount: e2,
+        rtcDesyncedVoiceStatesCount: e5,
         isUnavailable: w,
         user: k,
         hasChannelNotice: null != et || Z,
