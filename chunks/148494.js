@@ -1414,15 +1414,15 @@ ${a}`),
                     rejectWithError: (0, s.fT)(),
                 });
         },
-        async patchMessageAttachments(e, t, n) {
-            (await eT.A.unarchiveThreadIfNecessary(e),
-                s.Bo.patch({
-                    url: D.Rsh.MESSAGE(e, t),
-                    body: { attachments: n },
-                    oldFormErrors: !0,
-                    rejectWithError: (0, s.fT)(),
-                }));
-        },
+        patchMessageAttachments: async (e, t, n) => (
+            await eT.A.unarchiveThreadIfNecessary(e),
+            s.Bo.patch({
+                url: D.Rsh.MESSAGE(e, t),
+                body: { attachments: n },
+                oldFormErrors: !0,
+                rejectWithError: (0, s.fT)(),
+            })
+        ),
         async deleteMessage(e, t) {
             let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
             function i() {
