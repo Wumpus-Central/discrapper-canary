@@ -1,55 +1,55 @@
-s.d(t, { A: () => N });
+s.d(t, { A: () => I });
 var i = s(477900),
-    r = s(582128),
-    l = s(607399),
-    n = s(17928),
+    l = s(582128),
+    n = s(607399),
+    r = s(17928),
     a = s(289873),
-    d = s(396478),
-    c = s(93055),
+    c = s(396478),
+    d = s(93055),
     h = s(499373),
-    o = s(331322),
-    u = s(144165),
+    u = s(331322),
+    o = s(144165),
     p = s(821609),
     x = s(793574),
     j = s(688810),
-    f = s(792656),
-    g = s(16236),
-    A = s(17839),
-    m = s(202541),
-    v = s(22277),
-    _ = s(375708),
-    b = s(630942),
-    y = s(988572);
-function k(e) {
+    A = s(792656),
+    f = s(16236),
+    m = s(17839),
+    _ = s(202541),
+    b = s(22277),
+    v = s(375708),
+    y = s(630942),
+    g = s(988572);
+function T(e) {
     let { theme: t } = e,
-        { hasAccess: s } = (0, c.TW)("favorites_empty_state"),
-        { analyticsLocations: l } = (0, j.Ay)(x.A.FAVORITES_GUILD_HOME),
-        n = r.useCallback(() => {
-            (0, A.A)({ source: "favorites_empty_state" });
+        { hasAccess: s } = (0, d.TW)("favorites_empty_state"),
+        { analyticsLocations: n } = (0, j.Ay)(x.A.FAVORITES_GUILD_HOME),
+        r = l.useCallback(() => {
+            (0, m.A)({ source: "favorites_empty_state" });
         }, []);
     return (0, i.jsx)(j.f5, {
-        value: l,
-        children: (0, i.jsx)(d.pp, {
+        value: n,
+        children: (0, i.jsx)(c.pp, {
             theme: t,
-            children: (0, i.jsxs)(o.B, {
+            children: (0, i.jsxs)(u.B, {
                 direction: "vertical",
                 align: "center",
                 gap: "md",
                 children: [
-                    (0, i.jsx)(u._, { zoomable: !1, src: y.A, width: 197, height: 107 }),
-                    (0, i.jsx)(d.SG, {
-                        className: b.Y,
-                        noteClassName: b.A3,
-                        note: _.intl.string(v.default["+SuGKb"]),
-                        children: _.intl.string(v.default["wh+Rz1"]),
+                    (0, i.jsx)(o._, { zoomable: !1, src: g.A, width: 197, height: 107 }),
+                    (0, i.jsx)(c.SG, {
+                        className: y.Y,
+                        noteClassName: y.A3,
+                        note: v.intl.string(b.default["+SuGKb"]),
+                        children: v.intl.string(b.default["wh+Rz1"]),
                     }),
                     s
-                        ? (0, i.jsx)(p.$, { text: _.intl.string(v.default["6kk0gM"]), onClick: n, icon: h.T })
-                        : (0, i.jsx)(f.A, {
-                              subscriptionTier: m.pe.TIER_2,
-                              defaultTextOverride: _.intl.string(v.default.yYVbdv),
+                        ? (0, i.jsx)(p.$, { text: v.intl.string(b.default["6kk0gM"]), onClick: r, icon: h.T })
+                        : (0, i.jsx)(A.A, {
+                              subscriptionTier: _.pe.TIER_2,
+                              defaultTextOverride: v.intl.string(b.default.yYVbdv),
                               onSubscribeModalClose: (e) => {
-                                  e && (0, g.tV)(!0, "favorites_empty_state");
+                                  e && (0, f.tV)(!0, "favorites_empty_state");
                               },
                           }),
                 ],
@@ -57,38 +57,29 @@ function k(e) {
         }),
     });
 }
-var T = s(58736),
+var k = s(58736),
     C = s(353202),
-    S = s(363195),
+    N = s(363195),
     G = s(326879);
-function N(e) {
+function I(e) {
     let t,
-        { channelId: h } = e;
-    r.useEffect(() => {
-        C.A.loadThread(h);
+        { channelId: s } = e;
+    l.useEffect(() => {
+        C.A.loadThread(s);
     });
-    let o = (0, c.DZ)(),
-        u = (0, n.bG)([S.A], () => S.A.theme);
-    return o
+    let h = (0, d.DZ)(),
+        u = (0, r.bG)([N.A], () => N.A.theme);
+    return h
         ? (0, i.jsxs)("div", {
               className: G.A,
-              children: [l.Fr && (0, i.jsx)(T.Ay, { children: null }), (0, i.jsx)(k, { theme: u })],
+              children: [n.Fr && (0, i.jsx)(k.Ay, { children: null }), (0, i.jsx)(T, { theme: u })],
           })
         : ((t =
-              null != h
+              null != s
                   ? (0, i.jsx)(a.y, { type: a.y.Type.SPINNING_CIRCLE })
-                  : (0, i.jsx)(d.SG, { note: _.intl.string(_.t["LTr+x9"]), children: _.intl.string(_.t.ai6Lbr) })),
+                  : (0, i.jsx)(c.SG, { note: v.intl.string(v.t["LTr+x9"]), children: v.intl.string(v.t.ai6Lbr) })),
           (0, i.jsxs)("div", {
               className: G.j,
-              children: [
-                  l.Fr && (0, i.jsx)(T.Ay, { children: null }),
-                  (0, i.jsxs)(d.pp, {
-                      theme: u,
-                      children: [
-                          (0, i.jsx)(d.G8, { darkSrc: s(355937), lightSrc: s(332327), width: 272, height: 222 }),
-                          t,
-                      ],
-                  }),
-              ],
+              children: [n.Fr && (0, i.jsx)(k.Ay, { children: null }), (0, i.jsx)(c.pp, { theme: u, children: t })],
           }));
 }

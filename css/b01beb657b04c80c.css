@@ -119,6 +119,10 @@
     color: var(--text-muted)
 }
 
+.illustration__04b88 {
+    margin-inline: auto
+}
+
 .icon__58921 {
     color: var(--text-default);
     margin-inline-end: 4px
@@ -274,4 +278,4 @@
     background-color: ButtonFace
 }
 
-/*# sourceMappingURL=f9b53058aff56785.css.map*/
+/*# sourceMappingURL=b01beb657b04c80c.css.map*/
