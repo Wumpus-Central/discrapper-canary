@@ -2,21 +2,21 @@ n.d(t, { A: () => f });
 var i = n(582128),
     r = n(691540),
     l = n(857250),
-    a = n(97483),
-    s = n(887725),
-    o = n(375708),
-    c = n(51906),
-    d = n(636537),
-    u = n(652215);
-let g = new c.Zy();
+    a = n(51906),
+    s = n(636537),
+    o = n(652215);
+let c = new a.Zy();
+var d = n(97483),
+    u = n(887725),
+    g = n(375708);
 function f(e) {
     let [t, n] = i.useState(!1),
-        c = i.useRef(!0);
+        a = i.useRef(!0);
     i.useEffect(
         () => (
-            (c.current = !0),
+            (a.current = !0),
             () => {
-                c.current = !1;
+                a.current = !1;
             }
         ),
         [],
@@ -25,12 +25,12 @@ function f(e) {
         !t &&
             null != e &&
             (n(!0),
-            g
+            c
                 .one(e, async () => {
                     try {
                         return (
-                            await d.Bo.post({
-                                url: u.Rsh.APPLICATION_WIDGET_REFRESH(e),
+                            await s.Bo.post({
+                                url: o.Rsh.APPLICATION_WIDGET_REFRESH(e),
                                 rejectWithError: !0,
                                 failImmediatelyWhenRateLimited: !0,
                             }),
@@ -39,7 +39,7 @@ function f(e) {
                     } catch (e) {
                         switch (
                             (function (e) {
-                                if (e instanceof d.oh) return e.status;
+                                if (e instanceof s.oh) return e.status;
                                 let t = e?.status;
                                 return "number" == typeof t ? t : void 0;
                             })(e)
@@ -59,25 +59,28 @@ function f(e) {
                 })
                 .then((e) => {
                     let t = (function (e) {
-                        switch (e) {
-                            case "dispatched":
-                                return { text: o.intl.string(s.default["um/5Kc"]), type: a.Ck.SUCCESS };
-                            case "rate_limited":
-                                return { text: o.intl.string(s.default.T1n7hc), type: a.Ck.FAILURE };
-                            case "unauthorized":
-                                return { text: o.intl.string(s.default["30UxZU"]), type: a.Ck.FAILURE };
-                            case "no_widget_config":
-                                return { text: o.intl.string(s.default["1UFWet"]), type: a.Ck.FAILURE };
-                            case "undeliverable":
-                                return { text: o.intl.string(s.default.ypKX9A), type: a.Ck.FAILURE };
-                            default:
-                                return { text: o.intl.string(s.default.BLKD4B), type: a.Ck.FAILURE };
-                        }
+                        let { text: t, ok: n } = (function (e) {
+                            switch (e) {
+                                case "dispatched":
+                                    return { text: g.intl.string(u.default["um/5Kc"]), ok: !0 };
+                                case "rate_limited":
+                                    return { text: g.intl.string(u.default.T1n7hc), ok: !1 };
+                                case "unauthorized":
+                                    return { text: g.intl.string(u.default["30UxZU"]), ok: !1 };
+                                case "no_widget_config":
+                                    return { text: g.intl.string(u.default["1UFWet"]), ok: !1 };
+                                case "undeliverable":
+                                    return { text: g.intl.string(u.default.ypKX9A), ok: !1 };
+                                default:
+                                    return { text: g.intl.string(u.default.BLKD4B), ok: !1 };
+                            }
+                        })(e);
+                        return { text: t, type: n ? d.Ck.SUCCESS : d.Ck.FAILURE };
                     })(e);
                     (0, r.P0)((0, l.o)(t.text, t.type));
                 })
                 .finally(() => {
-                    c.current && n(!1);
+                    a.current && n(!1);
                 }));
     }, [e, t]);
     return { pending: t, refresh: f };

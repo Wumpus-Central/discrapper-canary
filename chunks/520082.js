@@ -18,25 +18,25 @@ var i = n(477900),
     j = n(404778),
     A = n(793574),
     E = n(688810),
-    C = n(206828),
-    y = n(486610),
-    v = n(531913),
-    b = n(417270),
-    R = n(770818),
-    P = n(375708),
-    N = n(429913),
-    D = n(409626),
-    T = n(692969),
-    _ = n(569926),
-    w = n(158390),
-    k = n(71393),
+    v = n(206828),
+    C = n(486610),
+    b = n(531913),
+    y = n(417270),
+    P = n(410645),
+    N = n(375708),
+    R = n(429913),
+    k = n(409626),
+    D = n(692969),
+    T = n(569926),
+    _ = n(158390),
+    w = n(71393),
     S = n(948230),
     W = n(683180),
     G = n(972786);
-let L = new w.A(3e4, 3e5);
-var O = n(280450),
-    F = n(183555),
-    M = n(644346),
+let O = new _.A(3e4, 3e5);
+var L = n(280450),
+    M = n(183555),
+    F = n(644346),
     U = n(58266);
 function z(e) {
     let {
@@ -65,21 +65,21 @@ function z(e) {
                                 (0, i.jsx)(u.E, {
                                     variant: "text-sm/medium",
                                     color: "text-subtle",
-                                    children: P.intl.string(P.t.z5K4Uv),
+                                    children: N.intl.string(N.t.z5K4Uv),
                                 }),
                             ],
                         }),
                   l
                       ? (0, i.jsx)(B, {
-                            heading: P.intl.string(P.t.UDPRLO),
-                            content: P.intl.string(P.t["OW/2al"]),
-                            buttons: (0, i.jsx)(h.$, { text: P.intl.string(P.t.S0W8Z5), onClick: s }),
+                            heading: N.intl.string(N.t.UDPRLO),
+                            content: N.intl.string(N.t["OW/2al"]),
+                            buttons: (0, i.jsx)(h.$, { text: N.intl.string(N.t.S0W8Z5), onClick: s }),
                         })
                       : a
                         ? (0, i.jsx)(B, {
-                              heading: P.intl.string(P.t["9WarGY"]),
-                              content: P.intl.string(P.t.qgxnKe),
-                              buttons: (0, i.jsx)(h.$, { text: P.intl.string(P.t.vD60Pv), onClick: s }),
+                              heading: N.intl.string(N.t["9WarGY"]),
+                              content: N.intl.string(N.t.qgxnKe),
+                              buttons: (0, i.jsx)(h.$, { text: N.intl.string(N.t.vD60Pv), onClick: s }),
                           })
                         : d,
               ],
@@ -100,7 +100,7 @@ function B(e) {
                         (0, i.jsx)(u.E, {
                             variant: "text-xs/medium",
                             color: "text-default",
-                            children: P.intl.string(P.t.zMUr6Z),
+                            children: N.intl.string(N.t.zMUr6Z),
                         }),
                     (0, i.jsx)(x.D, { variant: "heading-sm/medium", color: "text-default", children: e.heading }),
                     (0, i.jsx)(u.E, { variant: "text-xs/normal", color: "text-subtle", children: e.content }),
@@ -126,7 +126,7 @@ let H = Object.assign(
                 user: h,
                 widget: m,
                 disableCTA: x,
-                disableCTAActions: w,
+                disableCTAActions: _,
                 cta: B,
                 subtle: H = !1,
                 embedded: K = !1,
@@ -137,20 +137,20 @@ let H = Object.assign(
                 interactiveLinks: Z = !1,
             } = e,
             X = (function (e) {
-                let { trackUserProfileAction: t } = (0, F.NJ)(),
+                let { trackUserProfileAction: t } = (0, M.NJ)(),
                     { user: n, widget: l, cta: s } = e,
-                    o = (0, d.bG)([O.default], () => O.default.getId()) === n.id,
-                    f = (0, N.h)(l.applicationId),
+                    o = (0, d.bG)([L.default], () => L.default.getId()) === n.id,
+                    f = (0, R.h)(l.applicationId),
                     h = f?.getIconURL(16),
                     m = (function (e) {
                         let t = e?.getCanonicalGameId(),
-                            { data: n } = (0, _.I)(t);
+                            { data: n } = (0, T.I)(t);
                         return n;
                     })(f),
-                    x = (0, T.A)({
+                    x = (0, D.A)({
                         location: "UserProfileApplicationWidget",
                         applicationId: m?.id,
-                        source: D.GameProfileSources.UserProfileApplicationWidget,
+                        source: k.GameProfileSources.UserProfileApplicationWidget,
                         sourceUserId: n.id,
                         trackEntryPointImpression: !0,
                     }),
@@ -158,11 +158,11 @@ let H = Object.assign(
                         fetched: p,
                         hasAlreadyLinked: I,
                         canStartAuthorization: j,
-                        startAuthorization: y,
-                        token: v,
-                    } = (0, C.RD)(f),
-                    { analyticsLocations: b } = (0, E.Ay)(A.A.USER_PROFILE_APPLICATION_WIDGET),
-                    R = r.useCallback(() => {
+                        startAuthorization: C,
+                        token: b,
+                    } = (0, v.RD)(f),
+                    { analyticsLocations: y } = (0, E.Ay)(A.A.USER_PROFILE_APPLICATION_WIDGET),
+                    P = r.useCallback(() => {
                         j &&
                             (t({
                                 action: I
@@ -170,19 +170,19 @@ let H = Object.assign(
                                     : "PRESS_APPLICATION_WIDGET_UNLINKED_CONNECT",
                                 applicationId: l.applicationId,
                             }),
-                            y({ analyticsLocations: b }));
-                    }, [j, I, y, t, l.applicationId, b]),
-                    P = null == s && p && !I && j,
-                    w =
+                            C({ analyticsLocations: y }));
+                    }, [j, I, C, t, l.applicationId, y]),
+                    N = null == s && p && !I && j,
+                    _ =
                         null == s &&
                         p &&
                         I &&
                         j &&
-                        null != v &&
-                        !Array.from(c._.APPLICATION_IDENTITIES_SCOPES).some((e) => v.scopes.includes(e)) &&
-                        !v.scopes.includes(c.F.SDK_SOCIAL_LAYER) &&
-                        !v.scopes.includes(c.F.SDK_SOCIAL_LAYER_PRESENCE),
-                    k = (0, i.jsxs)(i.Fragment, {
+                        null != b &&
+                        !Array.from(c._.APPLICATION_IDENTITIES_SCOPES).some((e) => b.scopes.includes(e)) &&
+                        !b.scopes.includes(c.F.SDK_SOCIAL_LAYER) &&
+                        !b.scopes.includes(c.F.SDK_SOCIAL_LAYER_PRESENCE),
+                    w = (0, i.jsxs)(i.Fragment, {
                         children: [
                             null != h
                                 ? (0, i.jsx)("img", { className: U.Z2, src: h, width: 16, height: 16, alt: "" })
@@ -195,35 +195,35 @@ let H = Object.assign(
                     }),
                     S =
                         null == m
-                            ? (0, i.jsx)("div", { className: U.qd, children: k })
-                            : (0, i.jsx)(g.D, { className: a()(U.qd, U.vk), onClick: x, children: k });
+                            ? (0, i.jsx)("div", { className: U.qd, children: w })
+                            : (0, i.jsx)(g.D, { className: a()(U.qd, U.vk), onClick: x, children: w });
                 return {
                     isCurrentUser: o,
                     game: m,
                     openGameProfileModal: x,
-                    handleConnect: R,
-                    showConnectCta: P,
-                    showReconnectCta: w,
+                    handleConnect: P,
+                    showConnectCta: N,
+                    showReconnectCta: _,
                     headerTitle: S,
                 };
             })(e),
-            Q = (0, v.A)(h.id, m.applicationId),
+            Q = (0, b.A)(h.id, m.applicationId),
             $ =
                 ((t = m.applicationId),
                 (n = X.isCurrentUser),
                 (l = (0, d.bG)(
-                    [k.A],
+                    [w.A],
                     () =>
                         n &&
                         null != t &&
-                        (0, W.RZ)(k.A.getGuildsArray(), "useIsOwnedVibegrationsApplication").length > 0,
+                        (0, W.RZ)(w.A.getGuildsArray(), "useIsOwnedVibegrationsApplication").length > 0,
                     [n, t],
                 )),
                 (f = (0, d.bG)([G.Ay], () => G.Ay.getProjectsFetchState()?.type ?? null)),
                 r.useEffect(() => {
-                    if (("success" === f && L.succeed(), l)) {
+                    if (("success" === f && O.succeed(), l)) {
                         if (null == f) return void (0, S.hF)();
-                        "error" !== f || L.pending || L.fail(() => (0, S.hF)());
+                        "error" !== f || O.pending || O.fail(() => (0, S.hF)());
                     }
                 }, [l, f]),
                 (0, d.bG)(
@@ -238,12 +238,12 @@ let H = Object.assign(
                     [l, t],
                 )),
             ee = (function (e, t) {
-                let { pending: n, refresh: r } = (0, R.A)(e);
+                let { pending: n, refresh: r } = (0, P.A)(e);
                 return t
                     ? (0, i.jsx)(p.Dr, {
                           id: "application-widget-refresh",
-                          label: P.intl.string(P.t.wzzjk9),
-                          leadingAccessory: { type: "icon", icon: b.RetryIcon },
+                          label: N.intl.string(N.t.wzzjk9),
+                          leadingAccessory: { type: "icon", icon: y.RetryIcon },
                           disabled: n,
                           action: r,
                       })
@@ -255,13 +255,13 @@ let H = Object.assign(
                     let { disableInteraction: t } = e;
                     return !0 !== t;
                 })(e)
-                    ? y.hO
+                    ? C.hO
                     : void 0,
             en = Q.surfaceConfigs[o.m.WIDGET_TOP],
             ei = Q.surfaceConfigs[o.m.WIDGET_BOTTOM];
         return null == en || null == ei
             ? null
-            : (0, i.jsxs)(M.A, {
+            : (0, i.jsxs)(F.A, {
                   userId: h.id,
                   widget: m,
                   allowEditing: V,
@@ -301,7 +301,7 @@ let H = Object.assign(
                           showReconnectCta: X.showReconnectCta,
                           handleConnect: X.handleConnect,
                           disableCTA: x,
-                          disableCTAActions: !0 === w || !1 !== $,
+                          disableCTAActions: !0 === _ || !1 !== $,
                           cta: B,
                       }),
                   ],

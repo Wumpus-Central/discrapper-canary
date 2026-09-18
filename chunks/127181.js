@@ -2,6 +2,30 @@ n.d(t, { B: () => s, MZ: () => o, TH: () => l, tn: () => i });
 let a = [
     {
         date: "2026-09-18",
+        platforms: ["mobile"],
+        summary:
+            "On phones, a project\u2019s menu now has Refresh App and Close for the running Frame, Refresh Profile Widget, and a Connect row for each account your app asks to link, as on desktop; the Frame also reloads onto the newest build after every deploy.",
+    },
+    {
+        date: "2026-09-18",
+        platforms: ["mobile"],
+        summary:
+            "On phones, tapping Publish before your app has a Frame opens a sheet saying what to do next, instead of a bare alert.",
+    },
+    {
+        date: "2026-09-18",
+        platforms: ["mobile"],
+        summary:
+            "On phones, rewinding data switches between Preview and Published with the control at the top of the sheet.",
+    },
+    {
+        date: "2026-09-18",
+        platforms: ["mobile"],
+        summary:
+            "On phones, while Conjure drives your Frame, the menus and dialogs the app asks Discord to show are answered for it and reported back, as on desktop, so the app never waits on a tap nobody can make.",
+    },
+    {
+        date: "2026-09-18",
         platforms: ["desktop", "mobile"],
         summary: "What\u2019s new keeps its three newest lines and adds View all, which opens the whole history.",
     },
