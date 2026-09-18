@@ -158,19 +158,19 @@ let et = [
         { Icon: K.F, getText: () => D.intl.string(D.t.W180bY) },
         { Icon: Q.c, getText: () => D.intl.string(D.t.CNIZfy) },
     ];
-var el = n(933832),
-    ei = n(252424);
+var el = n(118751),
+    ei = n(933832);
 let ea = [
-        { Icon: el.CheckmarkLargeIcon, getText: () => D.intl.string(D.t.kpMomJ) },
+        { Icon: ei.CheckmarkLargeIcon, getText: () => D.intl.string(D.t.kpMomJ) },
         {
-            Icon: el.CheckmarkLargeIcon,
+            Icon: ei.CheckmarkLargeIcon,
             getText: () =>
                 D.intl.formatToPlainString(D.t.p8QVLT, {
                     maxUploadPremium: (0, q.EJ)(X.PremiumTypes.TIER_2, { useSpace: !1 }),
                 }),
         },
-        { Icon: el.CheckmarkLargeIcon, getText: () => D.intl.string(D.t.W180bY) },
-        { Icon: el.CheckmarkLargeIcon, getText: () => D.intl.string(D.t.zTk8Ul) },
+        { Icon: ei.CheckmarkLargeIcon, getText: () => D.intl.string(D.t.W180bY) },
+        { Icon: ei.CheckmarkLargeIcon, getText: () => D.intl.string(D.t.zTk8Ul) },
     ],
     es = [
         {
@@ -179,7 +179,7 @@ let ea = [
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "en-US";
                 return D.intl.formatToPlainString(D.t["T9RTr/"], {
                     numBoosts: X.M4,
-                    percentageOff: (0, ei.l9)(e, X.oX / 100),
+                    percentageOff: (0, el.l9)(e, X.oX / 100),
                 });
             },
         },
@@ -222,15 +222,15 @@ let ea = [
         { Icon: Q.c, getText: () => D.intl.string(D.t.CNIZfy) },
     ],
     eu = [
-        { Icon: el.CheckmarkLargeIcon, getText: () => D.intl.string(D.t.KjrZ8Z) },
+        { Icon: ei.CheckmarkLargeIcon, getText: () => D.intl.string(D.t.KjrZ8Z) },
         {
-            Icon: el.CheckmarkLargeIcon,
+            Icon: ei.CheckmarkLargeIcon,
             getText: () =>
                 D.intl.formatToPlainString(D.t.p8QVLT, {
                     maxUploadPremium: (0, q.EJ)(X.PremiumTypes.TIER_0, { useSpace: !1 }),
                 }),
         },
-        { Icon: el.CheckmarkLargeIcon, getText: () => D.intl.string(D.t.Uukj4o) },
+        { Icon: ei.CheckmarkLargeIcon, getText: () => D.intl.string(D.t.Uukj4o) },
     ],
     ed = [
         {

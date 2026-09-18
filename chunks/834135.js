@@ -118,11 +118,11 @@ function F() {
         }),
     });
 }
-var H = s(604121),
-    U = s(775602),
-    W = s(773669),
-    K = s(287809),
-    z = s(252424),
+var H = s(118751),
+    U = s(604121),
+    W = s(775602),
+    K = s(773669),
+    z = s(287809),
     Y = s(801365),
     B = s(453384),
     X = s(62405),
@@ -135,16 +135,16 @@ async function ee() {
 function et() {
     let { quest: e, sourceQuestContent: t, onClose: s, maxProgressSec: l, targetSec: i } = a.useContext(O.a),
         [o, r] = a.useState(!1),
-        u = (0, c.bG)([U.Ay], () => U.Ay.useReducedMotion),
-        d = (0, c.bG)([W.default], () => W.default.locale),
-        m = (0, c.bG)([K.default], () => K.default.getCurrentUser()),
+        u = (0, c.bG)([W.Ay], () => W.Ay.useReducedMotion),
+        d = (0, c.bG)([K.default], () => K.default.locale),
+        m = (0, c.bG)([z.default], () => z.default.getCurrentUser()),
         x = a.useRef(e.userStatus?.completedAt),
         [h, p] = a.useState(!1),
         C = (0, Y.mq)(e.config, m),
         f = e.userStatus?.completedAt != null,
         j = i > 0 ? Math.min(l / i, 0.99) : 0,
         A = f ? 1 : j,
-        S = (0, z.l9)(d, A, { roundingMode: "floor" }),
+        S = (0, H.l9)(d, A, { roundingMode: "floor" }),
         v = e.userStatus?.claimedAt != null,
         N = R.intl.formatToPlainString(f && !v ? R.t.NRp4K4 : R.t["12IWP2"], { rewardName: C });
     a.useEffect(() => {
@@ -160,7 +160,7 @@ function et() {
     return (0, n.jsxs)("div", {
         className: Z.Tr,
         children: [
-            f && (0, n.jsx)(H.a, { importData: ee, className: Z.t_, loop: !1, autoplay: !1, shouldAnimate: h && !u }),
+            f && (0, n.jsx)(U.a, { importData: ee, className: Z.t_, loop: !1, autoplay: !1, shouldAnimate: h && !u }),
             (0, n.jsx)(b.m, {
                 position: "top",
                 text: N,
