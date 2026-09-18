@@ -34,7 +34,7 @@ function I(e) {
     };
 }
 function f() {
-    return { clip_runtime: E.sT, current_clip_session_id: _.Ay.getCurrentClipsSession()?.id };
+    return { clip_runtime: E.sT, current_clip_session_id: _.Ay.getActiveClipsSession()?.id };
 }
 function p(e) {
     let t = o.A.getCurrentUserActiveStream(),

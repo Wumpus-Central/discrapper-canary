@@ -1009,7 +1009,7 @@ class e_ extends l.A {
     }
     async clearAsync() {
         (Y.nx.info(
-            `decider: clear() called \u{2014} currentSessionGameKey=${this.currentSessionGameKey} currentSessionId=${f.Ay.getCurrentClipsSession()?.id} pendingSessionGameKey=${this.pendingSessionGameKey} candidates=${f.Ay.getClipCandidates().length}`,
+            `decider: clear() called \u{2014} currentSessionGameKey=${this.currentSessionGameKey} currentSessionId=${f.Ay.getActiveClipsSession()?.id} pendingSessionGameKey=${this.pendingSessionGameKey} candidates=${f.Ay.getClipCandidates().length}`,
         ),
             this.unscheduleClip(),
             this.sessionEndTimeout.stop(),
@@ -1024,7 +1024,7 @@ class e_ extends l.A {
         this.scheduledClips = [];
     }
     canScheduleClipCandidate(e) {
-        let t = f.Ay.getCurrentClipsSession();
+        let t = f.Ay.getActiveClipsSession();
         if (null == t || !(0, g.jJ)(t.gameId) || c.Ay.getVisibleGame()?.isLauncher === !0) return !1;
         if (null != A.Ay.getVoiceChannelId()) return !0;
         let n = h.default.getCurrentUser(),
@@ -1034,7 +1034,7 @@ class e_ extends l.A {
     scheduleClip(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
             i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-            r = f.Ay.getCurrentClipsSession()?.id;
+            r = f.Ay.getActiveClipsSession();
         if (n && !this.canScheduleClipCandidate(e)) return;
         let a = (0, C.l)(),
             l = t?.endMs != null ? t.endMs : a,
@@ -1060,7 +1060,7 @@ class e_ extends l.A {
                             timeline: [...this.timeline.read(t.startMs, t.endMs)],
                             decision: { signal: e, timestamp: (0, C.l)() },
                             isCandidate: n,
-                            gameSessionId: r ?? void 0,
+                            session: r,
                             decisionSignals: n ? this.decisionSignals : void 0,
                         }));
                 } finally {
@@ -1091,7 +1091,7 @@ class e_ extends l.A {
             t = null != e ? (0, c.Es)(e) : null;
         if (
             (Y.nx.info(
-                `decider: handleRunningGamesChange visibleGame=${e?.name ?? "null"} newPrimaryKey=${t} currentSessionGameKey=${this.currentSessionGameKey} currentSessionId=${f.Ay.getCurrentClipsSession()?.id} pendingSessionGameKey=${this.pendingSessionGameKey}`,
+                `decider: handleRunningGamesChange visibleGame=${e?.name ?? "null"} newPrimaryKey=${t} currentSessionGameKey=${this.currentSessionGameKey} currentSessionId=${f.Ay.getActiveClipsSession()?.id} pendingSessionGameKey=${this.pendingSessionGameKey}`,
             ),
             null === this.currentSessionGameKey)
         ) {
@@ -1241,9 +1241,9 @@ class e_ extends l.A {
             pending: !0,
         };
     }
-    startAutoMontageRender(e, t) {
-        let n = o.A.clips.renderMontageRecipe;
-        return null == n
+    startAutoMontageRender(e, t, n) {
+        let i = o.A.clips.renderMontageRecipe;
+        return null == i
             ? (Y.nx.warn(
                   "decider: auto-montage render unavailable (host is missing renderMontageRecipe) \u2014 skipping",
               ),
@@ -1254,17 +1254,17 @@ class e_ extends l.A {
               ),
               (async function () {
                   try {
-                      let i = await eu(e, ec);
-                      (await n(JSON.stringify(i), t.filepath, (0, N.h5)(t)),
+                      let r = await eu(e, ec);
+                      (await i(JSON.stringify(r), t.filepath, (0, N.h5)(t)),
                           Y.nx.info(`decider: auto-montage render succeeded \u{2014} ${t.filepath}`),
-                          await (0, N.EM)(t));
+                          await (0, N.EM)(t, n));
                   } catch (e) {
                       (Y.nx.error("decider: auto-montage failed", e), await (0, N.t9)(t));
                   }
               })());
     }
     async processClipCandidates() {
-        let e = f.Ay.getCurrentClipsSession(),
+        let e = f.Ay.getActiveClipsSession(),
             t = f.Ay.getClipCandidates(),
             n = null == e ? [] : t.filter((t) => t.gameSessionId === e.id),
             i = null == e ? t : t.filter((t) => t.gameSessionId !== e.id),
@@ -1329,9 +1329,9 @@ class e_ extends l.A {
         }
         let o = new Set(l.map((e) => e.clip.id));
         await Promise.all(
-            l.map(async (e) => {
+            l.map(async (t) => {
                 try {
-                    await (0, N.K7)(e.clip, e.score, e.audioEvents);
+                    await (0, N.K7)(t.clip, t.score, e, t.audioEvents);
                 } catch (e) {
                     Y.nx.error("decider: failed to promote clip candidate", e);
                 }
@@ -1341,7 +1341,7 @@ class e_ extends l.A {
         if (null != s)
             try {
                 let t = this.buildMontagePlaceholderClip(s, n, e);
-                d = this.startAutoMontageRender(s, t);
+                d = this.startAutoMontageRender(s, t, e);
             } catch (e) {
                 Y.nx.error("decider: failed to start the auto-montage render", e);
             }

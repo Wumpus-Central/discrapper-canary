@@ -230,16 +230,16 @@ class H extends M {
         let e = d.Ay.getVisibleGame();
         null == e ||
             (R.Ay.getLastClipsSession()
-                ?.newClipIds.map(R.Ay.getClipById)
+                ?.clipIds.map(R.Ay.getClipById)
                 .some((t) => t?.applicationId === e.id) &&
                 (F.MZ.getState().isOpen || (0, F.w9)()));
     }
     handleClipsReminder(e) {
         if (null == e || !R.Ay.canShowReminders()) return;
         let t = R.Ay.getLastClipsSession();
-        if (null == t || 0 === t.newClipIds.length) return;
+        if (null == t || !t.hasClips) return;
         let n = !R.Ay.getSettings().showPovClipsInGallery;
-        t.newClipIds.some((t) => {
+        t.clipIds.some((t) => {
             let i = R.Ay.getClipById(t);
             return null != i && i.applicationId === e && (!n || !(0, k.kD)(i));
         }) && (0, B.M8)(e);
