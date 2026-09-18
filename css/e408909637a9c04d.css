@@ -1,28 +1,25 @@
 .previewSection__4671c {
     background-color: var(--background-base-lower);
     box-sizing: border-box;
-    display: flex;
     flex: 1;
     flex-direction: column;
     height: 100%;
-    padding: var(--space-12);
+    padding: var(--space-12)
+}
+
+.previewCards__4671c,
+.previewSection__4671c {
+    display: flex;
     position: relative
 }
 
-.sectionHeader__4671c {
-    display: flex;
-    flex-direction: row-reverse;
-    padding: 0
-}
-
 .previewCards__4671c {
-    display: flex;
     flex-direction: column;
     flex-grow: 1;
     justify-content: center;
     margin: 0 auto;
+    margin-block-start: var(--space-32);
     padding-inline-start: var(--space-16);
-    position: relative;
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none
@@ -138,6 +135,7 @@
 }
 
 .modalRoot__39813 {
+    position: relative;
     width: 800px
 }
 
@@ -170,8 +168,15 @@
     padding: 0
 }
 
+.closeButton__39813 {
+    inset-block-start: var(--space-12);
+    inset-inline-end: var(--space-12);
+    position: absolute;
+    z-index: 1
+}
+
 .selectionSubSection__39813:not(:first-child) {
     margin-top: var(--space-24)
 }
 
-/*# sourceMappingURL=c9b49b4d0bcaa7f9.css.map*/
+/*# sourceMappingURL=e408909637a9c04d.css.map*/
