@@ -26,8 +26,8 @@ var l = n(477900),
     T = n(821609),
     I = n(194261),
     M = n(512950),
-    L = n(297264),
-    R = n(404778),
+    R = n(297264),
+    L = n(404778),
     w = n(663417),
     O = n(565787),
     _ = n(157559),
@@ -138,7 +138,7 @@ class eT extends i.PureComponent {
 }
 var eI = n(967144),
     eM = n(258776);
-function eL(e) {
+function eR(e) {
     let { role: t, guild: s } = e,
         [a, r] = i.useState(!1);
     return (0, ev.x)(s, t)
@@ -164,7 +164,7 @@ function eL(e) {
           })
         : null;
 }
-function eR(e) {
+function eL(e) {
     let {
             color: t,
             id: i,
@@ -212,7 +212,7 @@ function eR(e) {
                           return (0, l.jsx)(b.m, { text: g, children: (0, l.jsx)(eT, { className: eM.s2, src: e }) });
                       })(),
                       (0, l.jsx)("div", { className: eM.dD, children: r }),
-                      m && null != s ? (0, l.jsx)(eL, { guild: a, role: s }) : null,
+                      m && null != s ? (0, l.jsx)(eR, { guild: a, role: s }) : null,
                   ],
               }),
           });
@@ -308,7 +308,7 @@ function eK(e) {
                     body: eW.intl.format(eW.t.yslqFM, { name: a }),
                     cancelText: eW.intl.string(eW.t.psXQHP),
                     onCancel() {
-                        window.open(eB.A.getArticleURL(eZ.MVz.PERMISSIONS_LOCKOUT));
+                        window.open(eB.A.getArticleURL(eZ.MVz.PERMISSIONS_TUTORIAL));
                     },
                 }));
         }
@@ -566,7 +566,7 @@ function e1() {
                 return null == u
                     ? null
                     : (0, l.jsx)(
-                          eR,
+                          eL,
                           {
                               theme: x,
                               roleStyle: p,
@@ -587,7 +587,7 @@ function e1() {
                 if (null == u) return null;
                 let t = e.getAvatarURL(u.id, 24);
                 return (0, l.jsx)(
-                    eR,
+                    eL,
                     {
                         id: e.id,
                         guild: u,
@@ -691,7 +691,7 @@ function e4() {
     let e = (0, s.bG)([X.A], () => X.A.advancedMode);
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, l.jsx)(R.c, { className: e3.BQ }),
+            (0, l.jsx)(L.c, { className: e3.BQ }),
             (0, l.jsx)(ei.EN, {
                 isExpanded: e,
                 onExpandedChange: D.E,
@@ -1048,7 +1048,7 @@ function tc(e) {
                                     (0, l.jsxs)("div", {
                                         className: tr.MJ,
                                         children: [
-                                            (0, l.jsx)(L.D, {
+                                            (0, l.jsx)(R.D, {
                                                 variant: "heading-sm/semibold",
                                                 className: tr.DH,
                                                 children: g.formLabel,
@@ -1089,8 +1089,8 @@ function tu(e) {
     let { title: t } = e;
     return (0, l.jsxs)("div", {
         children: [
-            (0, l.jsx)(R.c, { className: tr.yF }),
-            (0, l.jsx)(L.D, { variant: "heading-sm/semibold", className: A()(tr.DH, tr.Gf), children: t }),
+            (0, l.jsx)(L.c, { className: tr.yF }),
+            (0, l.jsx)(R.D, { variant: "heading-sm/semibold", className: A()(tr.DH, tr.Gf), children: t }),
         ],
     });
 }
@@ -1148,7 +1148,7 @@ let th = s.Ay.connectStores([X.A, $.A, Q.Ay, K.A, q.A, V.A], () => {
         s.isCategory() && ((m.title = eW.intl.string(eW.t["/uELTj"])), (m.subtitle = eW.intl.string(eW.t["8iAg3Q"]))),
         (0, l.jsxs)(l.Fragment, {
             children: [
-                (0, l.jsx)(L.D, { variant: "heading-lg/semibold", children: m.title }),
+                (0, l.jsx)(R.D, { variant: "heading-lg/semibold", children: m.title }),
                 (0, l.jsx)(a.E, { variant: "text-sm/normal", children: m.subtitle }),
                 null != i && t
                     ? h
@@ -1260,8 +1260,8 @@ function tM() {
     return (0, l.jsx)(tT.A, { invites: a, loading: r, guild: n, channel: t, canCreateInvites: i, hide: e });
 }
 (n(938796), n(667532));
-var tL = n(371444),
-    tR = n(392421),
+var tR = n(371444),
+    tL = n(392421),
     tw = n(602137),
     tO = n(665260),
     t_ = n(452027),
@@ -1825,7 +1825,7 @@ let nS = {
             },
         };
     })(eg.A);
-function nL(e) {
+function nR(e) {
     let { onEmojiPicked: t, channel: n, guildId: s } = e,
         a = i.useRef(null),
         r = i.useCallback(
@@ -1859,7 +1859,7 @@ function nL(e) {
         },
     });
 }
-class nR extends i.PureComponent {
+class nL extends i.PureComponent {
     defaultReactionButtonRef = i.createRef();
     nameInputRef = i.createRef();
     cursorPosition = 0;
@@ -1975,7 +1975,7 @@ class nR extends i.PureComponent {
             j = e.isForumLikeChannel()
                 ? (0, l.jsxs)(l.Fragment, {
                       children: [
-                          (0, l.jsx)(R.c, {}),
+                          (0, l.jsx)(L.c, {}),
                           (0, l.jsx)(t_.D, {
                               label: eW.intl.string(eW.t["P/y+sj"]),
                               description: eW.intl.string(eW.t["/oQQ3y"]),
@@ -1994,7 +1994,7 @@ class nR extends i.PureComponent {
             b = e.isForumLikeChannel()
                 ? (0, l.jsxs)(l.Fragment, {
                       children: [
-                          (0, l.jsx)(R.c, {}),
+                          (0, l.jsx)(L.c, {}),
                           (0, l.jsx)(t_.D, {
                               label: eW.intl.string(eW.t["8ao1+E"]),
                               description: eW.intl.string(eW.t.SdbF0q),
@@ -2044,7 +2044,7 @@ class nR extends i.PureComponent {
                 e.isForumChannel() && !e.isGameInvitesChannel()
                     ? (0, l.jsxs)(l.Fragment, {
                           children: [
-                              (0, l.jsx)(R.c, {}),
+                              (0, l.jsx)(L.c, {}),
                               (0, l.jsxs)("div", {
                                   className: ny.OZ,
                                   children: [
@@ -2058,24 +2058,24 @@ class nR extends i.PureComponent {
                                                   {
                                                       id: "list",
                                                       label: eW.intl.string(eW.t["4HXEZG"]),
-                                                      value: tL.C.LIST,
+                                                      value: tR.C.LIST,
                                                   },
                                                   {
                                                       id: "grid",
                                                       label: eW.intl.string(eW.t["8RswJG"]),
-                                                      value: tL.C.GRID,
+                                                      value: tR.C.GRID,
                                                   },
                                               ],
-                                              value: e.defaultForumLayout ?? tL.C.LIST,
+                                              value: e.defaultForumLayout ?? tR.C.LIST,
                                               onSelectionChange: this.handleChangeDefaultForumLayout,
                                           }),
                                       }),
-                                      e.defaultForumLayout === tL.C.GRID
+                                      e.defaultForumLayout === tR.C.GRID
                                           ? (0, l.jsx)(nj, { className: ny.Kf })
                                           : (0, l.jsx)(nb, { className: ny.Kf }),
                                   ],
                               }),
-                              (0, l.jsx)(R.c, {}),
+                              (0, l.jsx)(L.c, {}),
                           ],
                       })
                     : null,
@@ -2099,8 +2099,8 @@ class nR extends i.PureComponent {
                       label: eW.intl.string(eW.t.Paxaug),
                       description: eW.intl.string(eW.t.DqOl8J),
                       options: [
-                          { id: "some", label: eW.intl.string(eW.t.rQ0ctQ), value: tR.n.MATCH_SOME },
-                          { id: "all", label: eW.intl.string(eW.t.FCXUu0), value: tR.n.MATCH_ALL },
+                          { id: "some", label: eW.intl.string(eW.t.rQ0ctQ), value: tL.n.MATCH_SOME },
+                          { id: "all", label: eW.intl.string(eW.t.FCXUu0), value: tL.n.MATCH_ALL },
                       ],
                       value: e.getDefaultTagSetting(),
                       onSelectionChange: this.handleChangeDefaultTagSetting,
@@ -2111,7 +2111,7 @@ class nR extends i.PureComponent {
                 ? m
                     ? (0, l.jsxs)(l.Fragment, {
                           children: [
-                              (0, l.jsx)(R.c, {}),
+                              (0, l.jsx)(L.c, {}),
                               (0, l.jsxs)(tV.n, {
                                   label: eW.intl.string(eW.t.tTHx98),
                                   children: [
@@ -2153,7 +2153,7 @@ class nR extends i.PureComponent {
                           }),
                       })
                     : null,
-            L =
+            R =
                 e.type === eZ.rbe.PRIVATE_THREAD && null != e.threadMetadata
                     ? (0, l.jsx)("div", {
                           children: (0, l.jsx)(e6.d, {
@@ -2308,7 +2308,7 @@ class nR extends i.PureComponent {
                     trailing: z
                         ? {
                               type: "emoji",
-                              button: (0, l.jsx)(nL, {
+                              button: (0, l.jsx)(nR, {
                                   onEmojiPicked: this.insertEmojiAtPosition,
                                   channel: e,
                                   guildId: e?.guild_id,
@@ -2326,7 +2326,7 @@ class nR extends i.PureComponent {
                 N,
                 v,
                 E,
-                L,
+                R,
                 D,
                 k,
                 U,
@@ -2460,9 +2460,9 @@ class nR extends i.PureComponent {
         return (0, l.jsxs)(tV.n, {
             "aria-labelledby": i,
             children: [
-                (0, l.jsx)(L.D, { id: i, variant: "text-lg/medium", children: eW.intl.string(eW.t["/dp6yY"]) }),
+                (0, l.jsx)(R.D, { id: i, variant: "text-lg/medium", children: eW.intl.string(eW.t["/dp6yY"]) }),
                 this.renderChannelInfo(e, t),
-                this.showVoiceSettings() ? (0, l.jsx)(R.c, { gap: 24 }) : null,
+                this.showVoiceSettings() ? (0, l.jsx)(L.c, { gap: 24 }) : null,
                 this.renderVoiceBitrate(e, n),
                 this.renderVideoQualityMode(e),
                 this.renderUserLimit(e),
@@ -2655,7 +2655,7 @@ function nw() {
             },
             [C, f],
         );
-    return (0, l.jsx)(nR, {
+    return (0, l.jsx)(nL, {
         errors: e,
         channel: t,
         parentChannel: r,
