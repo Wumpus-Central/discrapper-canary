@@ -1,4 +1,4 @@
-(i.d(t, { aW: () => ee, Ay: () => et, rj: () => $ }), i(321073));
+(i.d(t, { aW: () => K, Ay: () => Y, rj: () => J }), i(321073));
 var n = i(477900),
     s = i(582128),
     l = i(503698),
@@ -8,13 +8,13 @@ var n = i(477900),
     o = i(17928),
     u = i(661531),
     c = i(863610),
-    h = i(602853),
-    m = i(228366),
+    m = i(602853),
+    h = i(228366),
     p = i(174459),
     A = i(652215);
 let g = {
     dismissForApplicationId(e) {
-        (m.h.dispatch({ type: "ACTIVITY_INVITE_EDUCATION_DISMISS", key: e, value: !0 }),
+        (h.h.dispatch({ type: "ACTIVITY_INVITE_EDUCATION_DISMISS", key: e, value: !0 }),
             p.default.track(A.HAw.CLOSE_TUTORIAL, {
                 tutorial: "activity-invite-nux-inline",
                 application_id: e,
@@ -23,19 +23,17 @@ let g = {
     },
 };
 var I = i(770178),
-    E = i(968522),
-    x = i(874546),
-    f = i(20015),
-    v = i(55730),
-    S = i(587895),
-    C = i(834730),
-    _ = i(291747),
-    N = i(866665),
+    x = i(20015),
+    f = i(55730),
+    v = i(587895),
+    E = i(834730),
+    C = i(291747),
+    S = i(866665),
     j = i(101392),
     y = i(625494),
-    b = i(960850),
-    T = i(233531);
-function D(e) {
+    N = i(960850),
+    b = i(233531);
+function _(e) {
     let { isEnabled: t, rateLimitPerUser: i, isBypassSlowmode: l, slowmodeCooldownGuess: a } = e,
         [r, d] = s.useState(!1);
     if (
@@ -56,59 +54,58 @@ function D(e) {
         !t)
     )
         return null;
-    let o = (0, b.VI)(i),
-        u = (0, b.pS)(a, l),
-        c = (0, n.jsxs)(C.E, {
-            className: T.rk,
+    let o = (0, N.VI)(i),
+        u = (0, N.pS)(a, l),
+        c = (0, n.jsxs)(E.E, {
+            className: b.rk,
             variant: "text-xs/medium",
             color: r ? "text-feedback-critical" : "text-muted",
             tabularNumbers: !0,
-            children: [(0, n.jsx)(_.x, { size: "xxs", color: "currentColor", className: T.Eq }), u],
+            children: [(0, n.jsx)(C.x, { size: "xxs", color: "currentColor", className: b.Eq }), u],
         });
-    return (0, n.jsx)(N.m, { text: o, children: (0, n.jsx)("div", { className: T.ns, children: c }) });
+    return (0, n.jsx)(S.m, { text: o, children: (0, n.jsx)("div", { className: b.ns, children: c }) });
 }
-function O(e) {
+function T(e) {
     let { channel: t, isThreadCreation: i = !1 } = e,
         s = (0, o.bG)([j.A], () => j.A.getSlowmodeCooldownGuess(t.id, i ? j.R.CreateThread : j.R.SendMessage)),
-        l = (0, b._i)(t),
+        l = (0, N._i)(t),
         { rateLimitPerUser: a } = t;
-    return (0, n.jsx)(D, { isEnabled: a > 0, rateLimitPerUser: a, isBypassSlowmode: l, slowmodeCooldownGuess: s });
+    return (0, n.jsx)(_, { isEnabled: a > 0, rateLimitPerUser: a, isBypassSlowmode: l, slowmodeCooldownGuess: s });
 }
-var G = i(710195),
-    w = i(407278);
-let k = {};
-class R extends o.Ay.PersistedStore {
+var O = i(407278);
+let D = {};
+class G extends o.Ay.PersistedStore {
     static displayName = "ActivityInviteEducationStore";
     static persistKey = "ActivityInviteEducationExperimentStore";
     initialize(e) {
-        Object.assign(k, e);
+        Object.assign(D, e);
     }
     getState() {
-        return k;
+        return D;
     }
     shouldShowEducation(e) {
-        return !0 !== k[e];
+        return !0 !== D[e];
     }
 }
-let U = new R(m.h, {
+let k = new G(h.h, {
     ACTIVITY_INVITE_EDUCATION_DISMISS: function (e) {
-        return ((k[e.key] = e.value), !0);
+        return ((D[e.key] = e.value), !0);
     },
 });
-var L = i(629016),
-    M = i(576705),
-    P = i(994500),
-    B = i(461213),
-    V = i(741961),
-    F = i(287809),
-    W = i(531685),
-    H = i(403362),
-    q = i(562153),
-    Z = i(345870),
-    z = i(375708),
-    X = i(24504);
-let K = [];
-class Q extends s.PureComponent {
+var w = i(629016),
+    R = i(576705),
+    U = i(994500),
+    L = i(461213),
+    M = i(741961),
+    P = i(287809),
+    B = i(531685),
+    V = i(403362),
+    F = i(562153),
+    W = i(345870),
+    H = i(375708),
+    q = i(24504);
+let Z = [];
+class z extends s.PureComponent {
     state = { fadeIn: !1 };
     timeout = null;
     componentDidMount() {
@@ -122,9 +119,9 @@ class Q extends s.PureComponent {
     logShownEventIfNeeded() {
         let e = this.props.activity.application_id;
         null != e &&
-            -1 === K.indexOf(e) &&
+            -1 === Z.indexOf(e) &&
             (p.default.track(A.HAw.SHOW_TUTORIAL, { tutorial: "activity-invite-nux-inline", application_id: e }),
-            K.push(e));
+            Z.push(e));
     }
     componentWillUnmount() {
         null !== this.timeout && clearTimeout(this.timeout);
@@ -136,11 +133,11 @@ class Q extends s.PureComponent {
     render() {
         let { activity: e } = this.props;
         return (0, n.jsxs)("div", {
-            className: a()(X.F4, { [X.gV]: this.state.fadeIn }),
+            className: a()(q.F4, { [q.gV]: this.state.fadeIn }),
             children: [
-                (0, n.jsx)("div", { className: X.GZ }),
+                (0, n.jsx)("div", { className: q.GZ }),
                 (0, n.jsx)("span", {
-                    children: z.intl.format(z.t["i/MoCt"], {
+                    children: H.intl.format(H.t["i/MoCt"], {
                         game: e.name,
                         dismissOnClick: this.handleDismissInviteEducation,
                     }),
@@ -149,18 +146,18 @@ class Q extends s.PureComponent {
         });
     }
 }
-function Y() {
+function X() {
     return (0, n.jsxs)("div", {
-        className: X.r$,
+        className: q.r$,
         "aria-hidden": !0,
         children: [
-            (0, n.jsx)("span", { className: X.Om }),
-            (0, n.jsx)("span", { className: X.Om }),
-            (0, n.jsx)("span", { className: X.Om }),
+            (0, n.jsx)("span", { className: q.Om }),
+            (0, n.jsx)("span", { className: q.Om }),
+            (0, n.jsx)("span", { className: q.Om }),
         ],
     });
 }
-function J(e) {
+function Q(e) {
     let {
             activityInviteEducationActivity: t,
             isFocused: i,
@@ -169,153 +166,143 @@ function J(e) {
             channel: d,
             isThreadCreation: o,
             renderDots: u,
-            renderSlowmode: h,
-            isInTextChannel: m = !1,
+            renderSlowmode: m,
+            isInTextChannel: h = !1,
             shouldShowLegacyGameInviteCreationBanner: p = !1,
         } = e,
-        A = (0, Z.v)("TypingUsers"),
+        A = (0, W.v)("TypingUsers"),
         { rateLimitPerUser: g } = d,
-        E = s.useRef(null),
         x = s.useRef(null),
-        [f, v] = s.useState(!1),
-        S = s.useCallback(() => {
-            if (null == E.current || null == x.current) return;
-            let e = E.current.getBoundingClientRect();
-            x.current.scrollWidth + 48 > e.width ? v(!0) : v(!1);
+        f = s.useRef(null),
+        [v, E] = s.useState(!1),
+        C = s.useCallback(() => {
+            if (null == x.current || null == f.current) return;
+            let e = x.current.getBoundingClientRect();
+            f.current.scrollWidth + 48 > e.width ? E(!0) : E(!1);
         }, []);
-    ((0, I.g)(E, S, [], { enabled: m }), (0, I.g)(x, S, [], { enabled: m }));
-    let [C, _, N] = l,
-        j = "";
+    ((0, I.g)(x, C, [], { enabled: h }), (0, I.g)(f, C, [], { enabled: h }));
+    let [S, j, y] = l,
+        N = "";
     1 === l.length
-        ? (j = z.intl.format(z.t.lJ9sZX, { a: C }))
+        ? (N = H.intl.format(H.t.lJ9sZX, { a: S }))
         : 2 === l.length
-          ? (j = z.intl.format(z.t.rB0CUa, { a: C, b: _ }))
+          ? (N = H.intl.format(H.t.rB0CUa, { a: S, b: j }))
           : 3 === l.length
-            ? (j = z.intl.format(z.t.StKThj, { a: C, b: _, c: N }))
-            : l.length > 3 && (j = z.intl.format(z.t.Q8lUnE, {}));
-    let y = f && l.length > 0 && l.length <= 3 ? z.intl.format(z.t["qD/0qZ"], {}) : j,
-        b = l.length > 0 || g > 0 || p,
-        T = !b && null != t,
-        D = null;
+            ? (N = H.intl.format(H.t.StKThj, { a: S, b: j, c: y }))
+            : l.length > 3 && (N = H.intl.format(H.t.Q8lUnE, {}));
+    let b = v && l.length > 0 && l.length <= 3 ? H.intl.format(H.t["qD/0qZ"], {}) : N,
+        _ = l.length > 0 || g > 0 || p,
+        D = !_ && null != t,
+        G = null;
     return (
-        b
-            ? (D = (0, n.jsxs)("div", {
-                  className: a()(X.IW, { "stop-animation": !i, [X.Il]: m }, r),
+        _
+            ? (G = (0, n.jsxs)("div", {
+                  className: a()(q.IW, { "stop-animation": !i, [q.Il]: h }, r),
                   "data-mtctest-ignore": "true",
                   children: [
                       0 === l.length && p
-                          ? (0, n.jsx)(w.A, {})
+                          ? (0, n.jsx)(O.A, {})
                           : (0, n.jsxs)("div", {
-                                className: X.y5,
-                                ref: E,
+                                className: q.y5,
+                                ref: x,
                                 children: [
                                     l.length > 0 &&
                                         !1 !== u &&
                                         (A
-                                            ? (0, n.jsx)(Y, {})
-                                            : (0, n.jsx)(c.n, { className: X.gO, dotRadius: 3.5, themed: !0 })),
-                                    (0, n.jsx)("span", { className: X.Qq, "aria-hidden": !0, children: y }),
+                                            ? (0, n.jsx)(X, {})
+                                            : (0, n.jsx)(c.n, { className: q.gO, dotRadius: 3.5, themed: !0 })),
+                                    (0, n.jsx)("span", { className: q.Qq, "aria-hidden": !0, children: b }),
                                     (0, n.jsx)("span", {
-                                        className: X.Qq,
+                                        className: q.Qq,
                                         style: { position: "absolute", visibility: "hidden" },
                                         "aria-hidden": !0,
-                                        ref: x,
-                                        children: j,
+                                        ref: f,
+                                        children: N,
                                     }),
                                 ],
                             }),
-                      !1 !== h && (0, n.jsx)(O, { channel: d, isThreadCreation: o }),
+                      !1 !== m && (0, n.jsx)(T, { channel: d, isThreadCreation: o }),
                   ],
               }))
-            : T && null != t && (D = (0, n.jsx)(Q, { activity: t, isFocused: i })),
+            : D && null != t && (G = (0, n.jsx)(z, { activity: t, isFocused: i })),
         (0, n.jsxs)(n.Fragment, {
             children: [
-                D,
-                (0, n.jsx)("span", { className: X.y4, "aria-live": "polite", "aria-atomic": !0, children: j }),
+                G,
+                (0, n.jsx)("span", { className: q.y4, "aria-live": "polite", "aria-atomic": !0, children: N }),
             ],
         })
     );
 }
-function $(e) {
-    let t = (0, o.bG)([V.A], () => V.A.getTypingUsers(e.id)),
-        i = (0, o.bG)([F.default], () => F.default.getCurrentUser());
+function J(e) {
+    let t = (0, o.bG)([M.A], () => M.A.getTypingUsers(e.id)),
+        i = (0, o.bG)([P.default], () => P.default.getCurrentUser());
     return d()(t)
         .keys()
         .filter((e) => e !== i?.id)
-        .reject((e) => P.A.isBlockedOrIgnored(e))
-        .map((e) => F.default.getUser(e))
-        .filter(H.Vq)
-        .map((t) => q.Ay.getName(e.guild_id, e.id, t))
+        .reject((e) => U.A.isBlockedOrIgnored(e))
+        .map((e) => P.default.getUser(e))
+        .filter(V.Vq)
+        .map((t) => F.Ay.getName(e.guild_id, e.id, t))
         .value();
 }
-function ee(e) {
-    let t = (0, o.bG)([B.A], () => B.A.findActivity((e) => null != e.application_id));
-    return (0, o.bG)([U, S.A, P.A, L.A, M.A, G.A], () => {
-        let i = t?.application_id != null ? S.A.getApplication(t.application_id) : null;
-        return (
-            !(
-                (0, x._C)(t) &&
-                (e.isPrivate() || M.A.can(A.xBc.SEND_MESSAGES, e)) &&
-                null != i &&
-                !(0, f.n)(i, A.gfo.EMBEDDED) &&
-                E.sK.getConfig({ location: E.P8.TYPING_USERS }).showBanner
-            ) &&
-            (function (e) {
-                let {
-                        channel: t,
-                        activity: i,
-                        ActivityInviteEducationStore: n,
-                        ApplicationStore: s,
-                        RelationshipStore: l,
-                        GamePartyStore: a,
-                        PermissionStore: r,
-                    } = e,
-                    d = i?.application_id;
-                if (
-                    null == t ||
-                    null == i ||
-                    !(0, v.A)(i, A.jUm.JOIN) ||
-                    null == d ||
-                    (!t.isPrivate() && !r.can(A.xBc.SEND_MESSAGES, t))
-                )
-                    return !1;
-                let o = s.getApplication(d);
-                return (
-                    !(
-                        null == o ||
-                        (0, f.n)(o, A.gfo.EMBEDDED) ||
-                        (t.isPrivate() && l.isBlockedOrIgnored(t.getRecipientId())) ||
-                        (t.isDM() && a.getParty(i.party?.id)?.has(t.getRecipientId()) === !0)
-                    ) && n.shouldShowEducation(d)
-                );
-            })({
-                channel: e,
-                activity: t,
-                ActivityInviteEducationStore: U,
-                ApplicationStore: S.A,
-                RelationshipStore: P.A,
-                GamePartyStore: L.A,
-                PermissionStore: M.A,
-            })
-        );
-    })
+function K(e) {
+    let t = (0, o.bG)([L.A], () => L.A.findActivity((e) => null != e.application_id));
+    return (0, o.bG)([k, v.A, U.A, w.A, R.A], () =>
+        (function (e) {
+            let {
+                    channel: t,
+                    activity: i,
+                    ActivityInviteEducationStore: n,
+                    ApplicationStore: s,
+                    RelationshipStore: l,
+                    GamePartyStore: a,
+                    PermissionStore: r,
+                } = e,
+                d = i?.application_id;
+            if (
+                null == t ||
+                null == i ||
+                !(0, f.A)(i, A.jUm.JOIN) ||
+                null == d ||
+                (!t.isPrivate() && !r.can(A.xBc.SEND_MESSAGES, t))
+            )
+                return !1;
+            let o = s.getApplication(d);
+            return (
+                !(
+                    null == o ||
+                    (0, x.n)(o, A.gfo.EMBEDDED) ||
+                    (t.isPrivate() && l.isBlockedOrIgnored(t.getRecipientId())) ||
+                    (t.isDM() && a.getParty(i.party?.id)?.has(t.getRecipientId()) === !0)
+                ) && n.shouldShowEducation(d)
+            );
+        })({
+            channel: e,
+            activity: t,
+            ActivityInviteEducationStore: k,
+            ApplicationStore: v.A,
+            RelationshipStore: U.A,
+            GamePartyStore: w.A,
+            PermissionStore: R.A,
+        }),
+    )
         ? t
         : null;
 }
-function et(e) {
+function Y(e) {
     let { channel: t, isThreadCreation: i = !1, ...s } = e,
-        l = $(t),
-        a = (0, w.L)(t.id),
+        l = J(t),
+        a = (0, O.L)(t.id),
         r = {
             ...s,
-            baseTextColor: (0, h.r)(u.A.colors.INTERACTIVE_TEXT_DEFAULT).hex(),
-            activeTextColor: (0, h.r)(u.A.colors.INTERACTIVE_TEXT_DEFAULT).hex(),
-            activityInviteEducationActivity: ee(t),
+            baseTextColor: (0, m.r)(u.A.colors.INTERACTIVE_TEXT_DEFAULT).hex(),
+            activeTextColor: (0, m.r)(u.A.colors.INTERACTIVE_TEXT_DEFAULT).hex(),
+            activityInviteEducationActivity: K(t),
             typingUsers: i ? [] : l,
-            isFocused: (0, o.bG)([W.A], () => W.A.isFocused()),
+            isFocused: (0, o.bG)([B.A], () => B.A.isFocused()),
             guildId: t.guild_id,
             channel: t,
             isThreadCreation: i,
         };
-    return (0, n.jsx)(J, { ...r, shouldShowLegacyGameInviteCreationBanner: a });
+    return (0, n.jsx)(Q, { ...r, shouldShowLegacyGameInviteCreationBanner: a });
 }

@@ -5143,22 +5143,6 @@
   },
   {
     "kind": "user",
-    "name": "2026-08-rich-presence-invite-banner",
-    "defaultConfig": {
-      "showBanner": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "showBanner": true
-      }
-    }
-  },
-  {
-    "kind": "user",
     "name": "2026-08-rocketleague-events",
     "defaultConfig": {
       "enableRocketLeagueEvents": false

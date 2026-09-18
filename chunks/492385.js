@@ -217,7 +217,7 @@ let e2 = s.memo(function (e) {
                     }),
                     (0, i.jsx)(et.M, {
                         enabled: !M,
-                        children: (0, i.jsx)(e8, { channel: c, firstMessage: f, facepileRef: S }),
+                        children: (0, i.jsx)(e5, { channel: c, firstMessage: f, facepileRef: S }),
                     }),
                 ],
             }),
@@ -293,7 +293,7 @@ let e3 = s.memo(function (e) {
         ],
     });
 });
-function e8(e) {
+function e5(e) {
     let { channel: t, facepileRef: n, firstMessage: l } = e,
         { isNew: s } = (0, ev.X5)(t),
         a = (0, O.Ay)(t),
@@ -320,13 +320,13 @@ function e8(e) {
                 className: eZ.PQ,
                 children: [
                     o || null == l ? null : (0, i.jsx)(e7, { firstMessage: l, channel: t }),
-                    (0, i.jsx)(e5, { channel: t, iconSize: 14 }),
+                    (0, i.jsx)(e8, { channel: t, iconSize: 14 }),
                     (0, i.jsx)("span", { className: e0.xE, children: "\u2022" }),
                     r.length > 0
                         ? (0, i.jsxs)("div", {
                               className: e0.IW,
                               children: [
-                                  (0, i.jsx)(e9, { channel: t, userIds: r, facepileRef: n }),
+                                  (0, i.jsx)(e6, { channel: t, userIds: r, facepileRef: n }),
                                   (0, i.jsx)("div", {
                                       className: e0.r$,
                                       children: (0, i.jsx)(er.n, { themed: !0, dotRadius: 2 }),
@@ -334,13 +334,13 @@ function e8(e) {
                                   (0, i.jsx)(ed.Ay, { channel: t, className: e0.mD, renderDots: !1 }),
                               ],
                           })
-                        : (0, i.jsx)(e6, { channel: t }),
+                        : (0, i.jsx)(e9, { channel: t }),
                 ],
             }),
         ],
     });
 }
-function e5(e) {
+function e8(e) {
     let { channel: t, iconSize: n, showReadState: l = !1 } = e,
         { messageCountText: s, unreadCount: a } = (0, ev.k6)(t);
     return (0, i.jsxs)("div", {
@@ -389,7 +389,7 @@ function e7(e) {
               emojiSizeTooltip: "reaction",
           });
 }
-function e6(e) {
+function e9(e) {
     let { channel: t } = e,
         { sortOrder: n } = (0, ej.R)(t.parent_id),
         l = (0, ev.Mw)(t, n),
@@ -405,7 +405,7 @@ function e6(e) {
         }),
     });
 }
-function e9(e) {
+function e6(e) {
     let { channel: t, userIds: n, facepileRef: l } = e,
         s = (0, ev.$I)(t, n);
     return (0, i.jsx)("div", {
@@ -651,31 +651,31 @@ var tY = n(462887),
     t2 = n(71393),
     t4 = n(975571);
 let t3 = { mass: 1, tension: 250, friction: 18, clamp: !0 };
-var t8 = n(340990);
-function t5(e) {
+var t5 = n(340990);
+function t8(e) {
     let { handleHide: t } = e;
     return (0, i.jsx)(E.D, {
         onClick: t,
-        className: t8.b,
+        className: t5.b,
         "aria-label": eJ.intl.string(eJ.t.WAI6xu),
-        children: (0, i.jsx)(tE.P, { size: "md", color: "currentColor", className: t8.ut }),
+        children: (0, i.jsx)(tE.P, { size: "md", color: "currentColor", className: t5.ut }),
     });
 }
 function t7(e) {
     let { username: t, title: n, videoSrc: l, messageCount: s, reaction: a, reactionCount: o, classname: c } = e;
     return (0, i.jsxs)("div", {
-        className: r()(t8.IP, c),
+        className: r()(t5.IP, c),
         children: [
             (0, i.jsx)("div", {
-                className: t8.Y6,
+                className: t5.Y6,
                 children: (0, i.jsxs)("div", {
-                    className: t8.wO,
+                    className: t5.wO,
                     children: [
-                        (0, i.jsx)(b.E, { tag: "span", className: t8.cy, variant: "text-sm/semibold", children: t }),
+                        (0, i.jsx)(b.E, { tag: "span", className: t5.cy, variant: "text-sm/semibold", children: t }),
                         (0, i.jsx)(b.E, {
                             variant: "text-xs/normal",
                             color: "text-default",
-                            className: t8.SD,
+                            className: t5.SD,
                             children: eJ.intl.string(eJ.t.mA0IvI),
                         }),
                     ],
@@ -683,24 +683,24 @@ function t7(e) {
             }),
             (0, i.jsx)(j.D, {
                 variant: "heading-md/extrabold",
-                className: t8.DD,
+                className: t5.DD,
                 color: "text-strong",
                 "aria-hidden": !0,
                 children: n,
             }),
             (0, i.jsx)(tO.h, { size: 10 }),
-            (0, i.jsx)(tJ.A, { className: t8.Ki, src: l }),
+            (0, i.jsx)(tJ.A, { className: t5.Ki, src: l }),
             (0, i.jsx)(tO.h, { size: 10 }),
             (0, i.jsx)("div", {
-                className: t8.qr,
+                className: t5.qr,
                 children: (0, i.jsxs)("div", {
-                    className: t8.GD,
+                    className: t5.GD,
                     children: [
                         (0, i.jsxs)("div", {
-                            className: t8.Mv,
+                            className: t5.Mv,
                             children: [
                                 (0, i.jsx)("span", {
-                                    className: t8.SZ,
+                                    className: t5.SZ,
                                     children: (0, i.jsx)(eo.ChatIcon, { size: "xs", color: "currentColor" }),
                                 }),
                                 (0, i.jsx)(b.E, {
@@ -711,7 +711,7 @@ function t7(e) {
                             ],
                         }),
                         (0, i.jsxs)("div", {
-                            className: t8.vi,
+                            className: t5.vi,
                             children: [
                                 (0, i.jsx)("span", { role: "img", "aria-label": "", children: a }),
                                 (0, i.jsx)(b.E, {
@@ -727,7 +727,7 @@ function t7(e) {
         ],
     });
 }
-let t6 = (e) => {
+let t9 = (e) => {
     let { channel: t } = e,
         n = (0, tX.Ay)(),
         l = (0, tY.M)(n),
@@ -789,36 +789,36 @@ let t6 = (e) => {
             t
                 ? (0, i.jsxs)(tA.animated.div, {
                       style: e,
-                      className: t8.kL,
+                      className: t5.kL,
                       children: [
                           (0, i.jsxs)("div", {
-                              className: t8.U1,
+                              className: t5.U1,
                               children: [
                                   (0, i.jsxs)(b.E, {
                                       variant: "text-xs/normal",
-                                      className: t8.l2,
+                                      className: t5.l2,
                                       children: [
                                           (0, i.jsx)(tT.CircleInformationIcon, {
                                               size: "xxs",
                                               color: "currentColor",
-                                              className: t8.Kk,
+                                              className: t5.Kk,
                                           }),
                                           eJ.intl.string(eJ.t.znhX2R),
                                       ],
                                   }),
-                                  (0, i.jsx)(t5, { handleHide: m }),
+                                  (0, i.jsx)(t8, { handleHide: m }),
                               ],
                           }),
                           (0, i.jsxs)("div", {
-                              className: t8.hQ,
+                              className: t5.hQ,
                               children: [
                                   (0, i.jsxs)("div", {
-                                      className: r()(t8.CT, p && t8.en),
+                                      className: r()(t5.CT, p && t5.en),
                                       children: [
                                           (0, i.jsx)("div", {
-                                              className: t8.F2,
+                                              className: t5.F2,
                                               children: (0, i.jsxs)("div", {
-                                                  className: t8.IZ,
+                                                  className: t5.IZ,
                                                   children: [
                                                       (0, i.jsx)(t7, {
                                                           username: eJ.intl.string(eJ.t.AkORco),
@@ -828,7 +828,7 @@ let t6 = (e) => {
                                                           messageCount: "34",
                                                           reaction: "\u26A1\uFE0F",
                                                           reactionCount: "724",
-                                                          classname: t8.q6,
+                                                          classname: t5.q6,
                                                       }),
                                                       (0, i.jsx)(t7, {
                                                           username: eJ.intl.string(eJ.t.DPg3YM),
@@ -838,7 +838,7 @@ let t6 = (e) => {
                                                           messageCount: "34",
                                                           reactionCount: "84",
                                                           reaction: "\uD83D\uDC9E",
-                                                          classname: t8.q6,
+                                                          classname: t5.q6,
                                                       }),
                                                       (0, i.jsx)(t7, {
                                                           username: eJ.intl.string(eJ.t.KIelex),
@@ -848,13 +848,13 @@ let t6 = (e) => {
                                                           messageCount: "7,103",
                                                           reaction: "\u26A1\uFE0F",
                                                           reactionCount: "724",
-                                                          classname: t8.Ob,
+                                                          classname: t5.Ob,
                                                       }),
                                                   ],
                                               }),
                                           }),
                                           (0, i.jsxs)("article", {
-                                              className: t8.n$,
+                                              className: t5.n$,
                                               children: [
                                                   (0, i.jsx)(j.D, {
                                                       variant: "heading-lg/semibold",
@@ -871,7 +871,7 @@ let t6 = (e) => {
                                                   (0, i.jsxs)(E.D, {
                                                       onClick: () =>
                                                           open(t4.A.getCreatorSupportArticleURL(eQ.MVz.MEDIA_CHANNEL)),
-                                                      className: t8.zy,
+                                                      className: t5.zy,
                                                       children: [
                                                           (0, i.jsx)(b.E, {
                                                               variant: "text-sm/medium",
@@ -881,20 +881,20 @@ let t6 = (e) => {
                                                           (0, i.jsx)(tQ.t, {
                                                               size: "xs",
                                                               color: "currentColor",
-                                                              className: t8.QI,
+                                                              className: t5.QI,
                                                           }),
                                                       ],
                                                   }),
                                                   (0, i.jsx)(tO.h, { size: 16 }),
                                                   (0, i.jsx)("div", {
-                                                      className: t8.Qq,
+                                                      className: t5.Qq,
                                                       children: h.map((e) =>
                                                           (0, i.jsx)(
                                                               b.E,
                                                               {
                                                                   variant: "text-sm/medium",
                                                                   color: "text-default",
-                                                                  className: t8.U0,
+                                                                  className: t5.U0,
                                                                   children: e,
                                                               },
                                                               e,
@@ -907,36 +907,36 @@ let t6 = (e) => {
                                   }),
                                   p &&
                                       (0, i.jsxs)("div", {
-                                          className: r()(t8.CT, t8.Gw),
+                                          className: r()(t5.CT, t5.Gw),
                                           children: [
                                               (0, i.jsx)("div", {
-                                                  className: t8.F2,
+                                                  className: t5.F2,
                                                   children: (0, i.jsxs)("div", {
-                                                      className: t8.kQ,
+                                                      className: t5.kQ,
                                                       children: [
                                                           (0, i.jsx)("img", {
                                                               src: l
                                                                   ? "/assets/b58ce8ba4d6516a2.png"
                                                                   : "/assets/9ed42f4f17fd8793.png",
                                                               alt: "",
-                                                              className: t8.JM,
+                                                              className: t5.JM,
                                                           }),
                                                           (0, i.jsx)("img", {
                                                               src: l
                                                                   ? "/assets/d0f129a0c1627f7a.png"
                                                                   : "/assets/fddfcda2eca5c8d4.png",
                                                               alt: "",
-                                                              className: t8.JM,
+                                                              className: t5.JM,
                                                           }),
                                                       ],
                                                   }),
                                               }),
                                               (0, i.jsxs)("article", {
-                                                  className: t8.n$,
+                                                  className: t5.n$,
                                                   children: [
                                                       (0, i.jsxs)(b.E, {
                                                           variant: "text-xxs/bold",
-                                                          className: t8.X4,
+                                                          className: t5.X4,
                                                           children: [
                                                               eJ.intl.string(eJ.t.NChGwy),
                                                               " ",
@@ -961,14 +961,14 @@ let t6 = (e) => {
                                                       }),
                                                       (0, i.jsx)(tO.h, { size: 16 }),
                                                       (0, i.jsx)("div", {
-                                                          className: t8.Qq,
+                                                          className: t5.Qq,
                                                           children: x.map((e) =>
                                                               (0, i.jsx)(
                                                                   b.E,
                                                                   {
                                                                       variant: "text-sm/medium",
                                                                       color: "text-default",
-                                                                      className: t8.U0,
+                                                                      className: t5.U0,
                                                                       children: e,
                                                                   },
                                                                   e,
@@ -990,7 +990,7 @@ let t6 = (e) => {
         ),
     });
 };
-var t9 = n(331322),
+var t6 = n(331322),
     ne = n(111159),
     nt = n(517461),
     nn = n(350527),
@@ -1002,15 +1002,15 @@ let nr = { mass: 1, tension: 250, friction: 18, clamp: !0 };
 function no(e) {
     let { guild: t } = e,
         n = (0, g.bG)([eH.A], () => eH.A.can(eQ.xBc.MANAGE_GUILD, t));
-    return (0, i.jsxs)(t9.B, {
+    return (0, i.jsxs)(t6.B, {
         direction: "horizontal",
         gap: 8,
         children: [
-            (0, i.jsxs)(t9.B, {
+            (0, i.jsxs)(t6.B, {
                 direction: "vertical",
                 gap: 16,
                 children: [
-                    (0, i.jsx)(t9.B, {
+                    (0, i.jsx)(t6.B, {
                         direction: "vertical",
                         gap: 4,
                         children: (0, i.jsx)(b.E, {
@@ -1019,7 +1019,7 @@ function no(e) {
                             children: eJ.intl.string(ni.default.fP8DVx),
                         }),
                     }),
-                    (0, i.jsxs)(t9.B, {
+                    (0, i.jsxs)(t6.B, {
                         direction: "vertical",
                         gap: 8,
                         children: [
@@ -1109,7 +1109,7 @@ function no(e) {
                             }),
                         ],
                     }),
-                    (0, i.jsxs)(t9.B, {
+                    (0, i.jsxs)(t6.B, {
                         direction: "vertical",
                         gap: 8,
                         children: [
@@ -1143,7 +1143,7 @@ function no(e) {
                             }),
                         ],
                     }),
-                    (0, i.jsxs)(t9.B, {
+                    (0, i.jsxs)(t6.B, {
                         direction: "vertical",
                         gap: 8,
                         children: [
@@ -1346,7 +1346,7 @@ function nN(e) {
 }
 function nb() {
     let e = s.useRef(null);
-    return (0, i.jsxs)(t9.B, {
+    return (0, i.jsxs)(t6.B, {
         className: nA.kL,
         direction: "vertical",
         align: "center",
@@ -1355,7 +1355,7 @@ function nb() {
         ref: e,
         children: [
             (0, i.jsx)(nd._, { size: "custom", width: 48, height: 48 }),
-            (0, i.jsxs)(t9.B, {
+            (0, i.jsxs)(t6.B, {
                 direction: "vertical",
                 align: "center",
                 justify: "center",
@@ -1777,7 +1777,7 @@ let nH = (e) => {
             ? R
                 ? l
                     ? null
-                    : (0, i.jsx)(t6, { channel: o })
+                    : (0, i.jsx)(t9, { channel: o })
                 : (0, i.jsx)(i.Fragment, {
                       children: f((e, t) =>
                           t
@@ -2050,11 +2050,11 @@ var nY = n(621466),
     n2 = n(278416),
     n4 = n(465532),
     n3 = n(608299),
-    n8 = n(355622),
-    n5 = n(530134),
-    n7 = n(865107),
-    n6 = n(625928),
-    n9 = n(960850),
+    n5 = n(355622),
+    n8 = n(530134),
+    n7 = n(959070),
+    n9 = n(625928),
+    n6 = n(960850),
     le = n(702841),
     lt = n(364522),
     ln = n(215497),
@@ -2113,7 +2113,7 @@ function lj(e) {
         { reducedMotion: r } = s.useContext(la.C),
         o = (0, nB.z)({ from: r.enabled ? lu : ld, to: lm, config: lh }, "animate-always"),
         c = (0, g.bG)([D.Ay], () => D.Ay.keyboardModeEnabled),
-        d = (0, g.bG)([tu.A], () => tu.A.getUploads(t, n8.oU.CREATE_FORUM_POST.drafts.type)),
+        d = (0, g.bG)([tu.A], () => tu.A.getUploads(t, n5.oU.CREATE_FORUM_POST.drafts.type)),
         x = (0, m.Ay)({
             id: "forum-composer-attachments-popout",
             isEnabled: c,
@@ -2155,7 +2155,7 @@ function lj(e) {
                                             ll.A,
                                             {
                                                 channelId: t,
-                                                draftType: n8.oU.CREATE_FORUM_POST.drafts.type,
+                                                draftType: n5.oU.CREATE_FORUM_POST.drafts.type,
                                                 upload: e,
                                                 keyboardModeEnabled: c,
                                                 hideFileName: !0,
@@ -2195,7 +2195,7 @@ function lp(e) {
     let { channelId: t } = e,
         [n, l] = s.useState(!1),
         a = s.useRef(null),
-        r = (0, g.bG)([tu.A], () => tu.A.getUploads(t, n8.oU.CREATE_FORUM_POST.drafts.type)),
+        r = (0, g.bG)([tu.A], () => tu.A.getUploads(t, n5.oU.CREATE_FORUM_POST.drafts.type)),
         o = r.length,
         c = o > 0;
     function d() {
@@ -2262,7 +2262,7 @@ var lA = n(793654);
 function lC(e) {
     let { parentChannel: t } = e,
         n = (0, le.yK)([tu.A], () => {
-            let e = tu.A.getUploads(t.id, n8.oU.CREATE_FORUM_POST.drafts.type);
+            let e = tu.A.getUploads(t.id, n5.oU.CREATE_FORUM_POST.drafts.type);
             return e?.filter((e) => !0 !== e.isThumbnail);
         });
     return (0, i.jsxs)("div", {
@@ -2292,7 +2292,7 @@ function lC(e) {
                                     ll.A,
                                     {
                                         channelId: t.id,
-                                        draftType: n8.oU.CREATE_FORUM_POST.drafts.type,
+                                        draftType: n5.oU.CREATE_FORUM_POST.drafts.type,
                                         upload: e,
                                         keyboardModeEnabled: !0,
                                         hideFileName: !0,
@@ -2411,7 +2411,7 @@ function lH(e) {
             let { mediaAttachments: n, hasThumbnail: l } = (function (e) {
                     let [t, n] = s.useState(null),
                         l = (0, le.yK)([tu.A], () => {
-                            let t = tu.A.getUploads(e.id, n8.oU.CREATE_FORUM_POST.drafts.type),
+                            let t = tu.A.getUploads(e.id, n5.oU.CREATE_FORUM_POST.drafts.type),
                                 n = t.find((e) => e.isThumbnail);
                             return null != n ? [n] : t.filter((e) => e.isVideo || e.isImage);
                         }),
@@ -2528,8 +2528,8 @@ function lH(e) {
         }, [o]),
         h = s.useCallback(
             (e) => {
-                (null != c && n3.A.remove(t.id, c.id, n8.oU.CREATE_FORUM_POST.drafts.type),
-                    (0, lo.R)(e.currentTarget.files, t, n8.oU.CREATE_FORUM_POST.drafts.type, {
+                (null != c && n3.A.remove(t.id, c.id, n5.oU.CREATE_FORUM_POST.drafts.type),
+                    (0, lo.R)(e.currentTarget.files, t, n5.oU.CREATE_FORUM_POST.drafts.type, {
                         requireConfirm: !0,
                         isThumbnail: !0,
                         origin: "file_picker",
@@ -2551,7 +2551,7 @@ function lH(e) {
                             upload: e,
                             onSubmit: (n) => {
                                 let { name: l, description: i, spoiler: s } = n;
-                                n3.A.update(t.id, e.id, n8.oU.CREATE_FORUM_POST.drafts.type, {
+                                n3.A.update(t.id, e.id, n5.oU.CREATE_FORUM_POST.drafts.type, {
                                     filename: l,
                                     description: i,
                                     spoiler: s,
@@ -2623,13 +2623,13 @@ function lH(e) {
                               (0, i.jsx)(lb.A, {
                                   className: lF.XI,
                                   tooltip: eJ.intl.string(eJ.t.vN7REz),
-                                  onClick: () => n3.A.remove(t.id, c.id, n8.oU.CREATE_FORUM_POST.drafts.type),
+                                  onClick: () => n3.A.remove(t.id, c.id, n5.oU.CREATE_FORUM_POST.drafts.type),
                                   dangerous: !0,
                                   children: (0, i.jsx)(lN.TrashIcon, { size: "md", color: "currentColor" }),
                               }),
                           ],
                       }),
-                      draftType: n8.oU.CREATE_FORUM_POST.drafts.type,
+                      draftType: n5.oU.CREATE_FORUM_POST.drafts.type,
                       id: c.id,
                       channelId: t.id,
                       handleEditModal: x,
@@ -2667,16 +2667,16 @@ function l2(e, t) {
 }
 var l4 = n(774812),
     l3 = n(691060),
-    l8 = n(91871),
-    l5 = n.n(l8),
+    l5 = n(91871),
+    l8 = n.n(l5),
     l7 = n(190199),
-    l6 = n(914427),
-    l9 = n(236285),
+    l9 = n(914427),
+    l6 = n(236285),
     ie = n(287683);
 function it(e) {
     let { tag: t } = e,
         { id: n, name: l, emojiId: s, emojiName: a } = t,
-        r = (0, g.bG)([l9.Ay], () => (null != s ? l9.Ay.getUsableCustomEmojiById(s) : null)),
+        r = (0, g.bG)([l6.Ay], () => (null != s ? l6.Ay.getUsableCustomEmojiById(s) : null)),
         o = null != s || null != a;
     return (0, i.jsx)(
         l7.x4,
@@ -2709,7 +2709,7 @@ function it(e) {
 function il(e) {
     let { parentChannel: t, appliedTags: n, maxTagsApplied: l, onSelectTag: s, onClose: a } = e,
         r = (0, l3.OT)(t);
-    return (0, i.jsx)(l6.p, {
+    return (0, i.jsx)(l9.p, {
         value: n,
         onChange: function (e) {
             (!l || n.has(e)) && (s(e), a());
@@ -2717,7 +2717,7 @@ function il(e) {
         placeholder: eJ.intl.string(eJ.t.MbhGm7),
         "aria-label": eJ.intl.string(eJ.t.MbhGm7),
         children: (e) =>
-            r.filter((t) => l5()(e.toLowerCase(), t.name.toLowerCase())).map((e) => (0, i.jsx)(it, { tag: e }, e.id)),
+            r.filter((t) => l8()(e.toLowerCase(), t.name.toLowerCase())).map((e) => (0, i.jsx)(it, { tag: e }, e.id)),
     });
 }
 var ii = n(376310),
@@ -2725,8 +2725,8 @@ var ii = n(376310),
     ia = n(999703);
 let ir = function (e) {
     let { rateLimitPerUser: t, slowmodeCooldownGuess: n, isBypassSlowmode: l, leadingIcon: s = !1 } = e,
-        a = (0, n9.VI)(t, !0),
-        o = (0, n9.pS)(n, l),
+        a = (0, n6.VI)(t, !0),
+        o = (0, n6.pS)(n, l),
         c = (0, i.jsx)(b.E, { variant: "text-sm/normal", color: "text-muted", children: o }),
         d = (0, i.jsx)(is.x, { size: "xs", color: "currentColor", className: r()(ia.Eq, { [ia.iE]: s }) });
     return (0, i.jsx)(M.m, {
@@ -2748,7 +2748,7 @@ let id = function () {
 };
 var iu = n(746080),
     im = n(803181);
-let ih = n8.oU.CREATE_FORUM_POST;
+let ih = n5.oU.CREATE_FORUM_POST;
 function ix(e) {
     var t, n;
     let l,
@@ -3077,7 +3077,7 @@ let ig = s.memo(function (e) {
             children: [
                 c && x
                     ? (0, i.jsx)(j.D, { variant: "heading-md/semibold", className: im.DD, children: m })
-                    : (0, i.jsxs)(t9.B, {
+                    : (0, i.jsxs)(t6.B, {
                           gap: 4,
                           children: [
                               (0, i.jsx)(nQ.d, {
@@ -3154,7 +3154,7 @@ let ig = s.memo(function (e) {
                       }),
                 c
                     ? null
-                    : (0, i.jsxs)(t9.B, {
+                    : (0, i.jsxs)(t6.B, {
                           direction: "horizontal",
                           gap: 8,
                           justify: "end",
@@ -3340,7 +3340,7 @@ let iS = s.memo(function (e) {
         { rateLimitPerUser: o } = t,
         c = o > 0,
         u = (0, g.bG)([lX.A], () => lX.A.getSlowmodeCooldownGuess(t.id, lX.R.CreateThread)),
-        m = (0, n9._i)(t),
+        m = (0, n6._i)(t),
         h = ib(t),
         x = (0, eb.ST)(),
         f = s.useCallback(() => {
@@ -3365,7 +3365,7 @@ let iS = s.memo(function (e) {
                                 (0, i.jsxs)("div", {
                                     className: im.Kk,
                                     children: [
-                                        (0, i.jsx)(n6.A, { type: ih, textValue: a.textValue, className: im.Dq }),
+                                        (0, i.jsx)(n9.A, { type: ih, textValue: a.textValue, className: im.Dq }),
                                         c &&
                                             (0, i.jsx)(ir, {
                                                 rateLimitPerUser: o,
@@ -3385,7 +3385,7 @@ let iS = s.memo(function (e) {
                                 }),
                             ],
                         }),
-                        (0, i.jsx)(n5.A, { type: ih, className: im.n1, onClick: f, channel: t }, "expression"),
+                        (0, i.jsx)(n8.A, { type: ih, className: im.n1, onClick: f, channel: t }, "expression"),
                     ],
                 }),
                 h &&
@@ -3668,14 +3668,14 @@ function i2(e) {
 }
 var i4 = n(983851),
     i3 = n(607567),
-    i8 = n(930371);
-function i5(e) {
+    i5 = n(930371);
+function i8(e) {
     let { channel: t } = e,
         n = (0, g.bG)([i3.Ay], () => i3.Ay.getVoiceStatesForChannel(t).length, [t]);
     return 0 === n
         ? null
         : (0, i.jsxs)("div", {
-              className: i8.a,
+              className: i5.a,
               children: [
                   (0, i.jsx)(i4.H, { size: "xs", color: ea.A.colors.ICON_FEEDBACK_POSITIVE }),
                   (0, i.jsx)(b.E, { variant: "text-sm/medium", color: "text-feedback-positive", children: n }),
@@ -3683,14 +3683,14 @@ function i5(e) {
           });
 }
 var i7 = n(227483);
-function i6(e) {
+function i9(e) {
     let { message: t, channel: n, containerWidth: l } = e,
         s = sc({ message: t, channel: n, containerWidth: l - 32, hideTags: !0 }),
         { hasUnreads: a } = (0, ev.X5)(n),
         { content: r } = (0, ev.gk)({ firstMessage: t, formatInline: !1, noStyleAndInteraction: !0, hasUnreads: a });
     return null != s ? s : (0, i.jsx)(iK.Ay, { message: t, content: r, className: i7.BK, compact: !1 });
 }
-function i9(e) {
+function i6(e) {
     let {
             id: t,
             channel: n,
@@ -3752,7 +3752,7 @@ function i9(e) {
                             color: "text-muted",
                             children: eJ.intl.string(eJ.t.mE3KJN),
                         }),
-                    null != f ? (0, i.jsx)(i6, { message: f, channel: n, containerWidth: a.width }) : null,
+                    null != f ? (0, i.jsx)(i9, { message: f, channel: n, containerWidth: a.width }) : null,
                     I ? (0, i.jsx)(eE.Ay, { channel: n, className: i7.GA }) : null,
                     (0, i.jsx)("div", { className: i7.oO, children: (0, i.jsx)(i2, { channel: n, firstMessage: f }) }),
                 ],
@@ -3763,7 +3763,7 @@ function i9(e) {
                     channel: n,
                     firstMessage: f,
                     facepileRef: N,
-                    leftAccessory: (0, i.jsx)(i5, { channel: n }),
+                    leftAccessory: (0, i.jsx)(i8, { channel: n }),
                 }),
             }),
         ],
@@ -3804,7 +3804,7 @@ let sr = s.memo(function (e) {
     return null == u
         ? null
         : m
-          ? (0, i.jsx)(i9, {
+          ? (0, i.jsx)(i6, {
                 id: t,
                 channel: u,
                 goToThread: l,
