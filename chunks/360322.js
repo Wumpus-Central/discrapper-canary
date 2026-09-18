@@ -856,8 +856,8 @@ var eX = i(702841),
     e2 = i(43105),
     e8 = i(131607),
     e5 = i(518477),
-    e3 = i(49999);
-function e7() {
+    e7 = i(49999);
+function e3() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
         t = e$.A.useConfig({ location: "PersonalWidgetUpsellCoachmark" }).enabled,
         [i, n] = (0, e8.kn)(e && t ? [e1.M.USER_PROFILE_PERSONAL_WIDGET_COACHMARK] : []);
@@ -881,7 +881,7 @@ function e6(e) {
               gradientColor: "nitro-pink",
               title: V.intl.string(V.t.KKGxNt),
               body: V.intl.string(V.t["IS+QTV"]),
-              onRequestClose: () => l(e3.i.USER_DISMISS),
+              onRequestClose: () => l(e7.i.USER_DISMISS),
               actions: [
                   {
                       text: V.intl.string(V.t.RCy7Px),
@@ -902,7 +902,7 @@ function e9(e) {
     let { buttonRef: t, isCoachmarkVisible: i, markCoachmarkAsDismissed: s } = e,
         { trackUserProfileEditAction: a } = (0, eQ.NJ)(),
         r = l.useCallback(() => {
-            i && s(e3.i.TAKE_ACTION);
+            i && s(e7.i.TAKE_ACTION);
             let e = (0, p.g0)();
             ((0, F.Y5)(e),
                 a({ action: "WIDGET_ADDED", ...e.getProfileEditAnalyticsOptions() }),
@@ -922,7 +922,7 @@ function te(e) {
         { trackUserProfileEditAction: s } = (0, eQ.NJ)(),
         r = l.useRef(null),
         o = l.useRef(null),
-        [c, u] = e7(),
+        [c, u] = e3(),
         g = (function () {
             let e = (0, eX.bG)([M.default], () => M.default.getCurrentUser()?.id),
                 t = (0, w.A)(e),
@@ -934,7 +934,7 @@ function te(e) {
         })(),
         m = (0, eJ.c)("UserProfileWidgetEditingHeader"),
         x = l.useCallback(() => {
-            (c && u(e3.i.TAKE_ACTION),
+            (c && u(e7.i.TAKE_ACTION),
                 s({ action: "PRESS_ADD_WIDGET" }),
                 (0, ej.openModalLazy)(
                     async () => {
@@ -1494,13 +1494,13 @@ var t$ = i(769015),
     t2 = i(202163),
     t8 = i(207803),
     t5 = i(591179),
-    t3 = i(485745),
-    t7 = i(308766);
+    t7 = i(485745),
+    t3 = i(308766);
 function t6(e) {
     let { gameId: t, userId: i, className: s } = e,
         { gameRecord: r } = (0, t2.A)(t),
         o = !(0, t5.X)("WidgetClipGameIcon"),
-        d = (0, t3.A)(o),
+        d = (0, t7.A)(o),
         c = (0, t1.A)({
             location: "WidgetClipGameIcon",
             applicationId: t,
@@ -1531,7 +1531,7 @@ function t6(e) {
                       children: (0, n.jsx)("div", { className: s, children: m }),
                   })
                 : (0, n.jsx)(H.D, {
-                      className: a()(t7.v, s),
+                      className: a()(t3.v, s),
                       "aria-label": V.intl.formatToPlainString(V.t["8QLQB+"], { gameName: g }),
                       onClick: u,
                       children: m,
@@ -1680,7 +1680,7 @@ function ia(e) {
                             i.e("19385"),
                             i.e("722562"),
                             i.e("553829"),
-                            i.e("606859"),
+                            i.e("627154"),
                             i.e("865257"),
                             i.e("318196"),
                             i.e("323079"),
@@ -1866,7 +1866,7 @@ function im(e) {
                             icon: tm.P,
                             "aria-label": V.intl.string(V.t.WAI6xu),
                             onClick: () => {
-                                s(e3.i.USER_DISMISS);
+                                s(e7.i.USER_DISMISS);
                             },
                         }),
                     }),
@@ -1879,7 +1879,7 @@ function im(e) {
                             icon: ig.U,
                             "aria-label": V.intl.formatToPlainString(V.t.KfGahB, { applicationName: i.name }),
                             onClick: () => {
-                                (s(e3.i.TAKE_ACTION), o());
+                                (s(e7.i.TAKE_ACTION), o());
                             },
                         }),
                     }),
@@ -2484,11 +2484,11 @@ function i5(e) {
         ...r,
     });
 }
-function i3(e) {
+function i7(e) {
     let { widget: t, ...i } = e;
     return (0, n.jsx)(ik, { widgetType: t.type, children: (0, n.jsx)(i5, { widget: t, ...i }) });
 }
-var i7 = i(669253),
+var i3 = i(669253),
     i6 = i(140355);
 i(839272);
 let i4 = (0, i(945810).mj)({
@@ -2649,7 +2649,7 @@ function nr(e) {
         a = l.useRef(!1),
         o = l.useRef(null),
         c = (0, r.bG)([tc.A], () => tc.A.getUserProfile(t)?.fetchError != null, [t]),
-        [u, g] = e7(!c),
+        [u, g] = e3(!c),
         m = u || (0, p.t0)(),
         { enabled: x, maxWidgetOptions: f } = (function (e) {
             let { location: t } = e;
@@ -2703,7 +2703,7 @@ function nd(e) {
         : t instanceof p.Tu
           ? (0, n.jsx)(ez, { widget: t, ...i })
           : (0, I.fu)(t)
-            ? (0, n.jsx)(i3, { widget: t, ...i })
+            ? (0, n.jsx)(i7, { widget: t, ...i })
             : t instanceof h.kM
               ? (0, n.jsx)(ia, { widget: t, ...i })
               : null;
@@ -2788,7 +2788,7 @@ function ng(e) {
     let { user: t, ...i } = e,
         s = l.useRef(null);
     (0, R.i)({ containerRef: s });
-    let r = (0, i7.k)(t.id);
+    let r = (0, i3.k)(t.id);
     return (0, n.jsxs)(i6.K, {
         "data-scroller": !0,
         scrollerRef: s,

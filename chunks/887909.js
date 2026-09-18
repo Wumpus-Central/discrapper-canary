@@ -645,7 +645,7 @@ let e1 = (0, F.Fe)({
             n.e("531198"),
             n.e("650387"),
             n.e("195719"),
-            n.e("291847"),
+            n.e("587239"),
             n.e("678906"),
             n.e("415695"),
             n.e("529787"),
@@ -706,11 +706,11 @@ let e1 = (0, F.Fe)({
             n.e("349619"),
             n.e("599666"),
             n.e("543039"),
+            n.e("264236"),
             n.e("253729"),
             n.e("721690"),
             n.e("136022"),
             n.e("161379"),
-            n.e("264236"),
             n.e("776195"),
             n.e("234236"),
             n.e("832817"),
@@ -991,7 +991,7 @@ function e3(e) {
         children: (0, i.jsx)(W.A, { className: e0.dx, obscured: !0 === A, children: h }),
     });
 }
-function e6(e) {
+function e5(e) {
     let { clientId: t, platformType: n, platformName: a } = e,
         s = (0, I.bG)([U.A], () => U.A.getApplication(t), [t]),
         l = (0, I.bG)([$.default, X.default], () => (null != $.default.getId() ? X.default.getCurrentUser() : null)),
@@ -1058,7 +1058,7 @@ function e6(e) {
         })
     );
 }
-function e5(e) {
+function e6(e) {
     let { platformType: t, platformName: n, connectedAccount: r, applicationName: a } = e,
         s = (0, D.Ay)(),
         l = v.A.get(t),
@@ -1374,7 +1374,7 @@ function e7(e) {
         case null:
             return { label: en.intl.string(en.t.ZTNur7), body: (0, i.jsx)(e4, {}) };
         case "CONNECT_ACCOUNT":
-            ((t = (0, i.jsx)(e6, { clientId: A, platformType: e_, platformName: tc })),
+            ((t = (0, i.jsx)(e5, { clientId: A, platformType: e_, platformName: tc })),
                 (tE = !1),
                 (tA = !1),
                 (th = !1),
@@ -1406,7 +1406,7 @@ function e7(e) {
                 children: [
                     null != eG &&
                         ex &&
-                        (0, i.jsx)(e5, {
+                        (0, i.jsx)(e6, {
                             platformType: eG.type,
                             platformName: tc,
                             connectedAccount: eG,
