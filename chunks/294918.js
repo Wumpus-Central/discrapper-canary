@@ -14,6 +14,8 @@ e.exports = {
     cB: "dragging_fe7668",
     Ni: "settling_fe7668",
     _p: "widgetSettle_fe7668",
+    kC: "removing_fe7668",
+    JI: "widgetExit_fe7668",
     qf: "placeholder_fe7668",
     DS: "placeholderAppear_fe7668",
     dk: "dragPreview_fe7668",
