@@ -410,7 +410,8 @@ function eS(e) {
         className: a()(A, ef.kL),
         children: [
             (0, i.jsx)(y.Ip, {
-                className: ef.FS,
+                className: a()(ef.FS, { [ef.KQ]: !r && !v }),
+                style: { "--custom-plaintext-preview-collapsed-lines": 6 },
                 children:
                     null == s
                         ? (0, i.jsx)(g.y, { className: ef.u1 })
@@ -545,7 +546,7 @@ let eN = s.memo(
         let { url: t, fileName: n, fileSize: l, contentType: r, className: o, onClick: u, onContextMenu: c } = e,
             [d, h] = s.useState(!1),
             [m, f] = s.useState(n.split(".").slice(-1)[0]),
-            [p, g] = s.useState(!1),
+            [p, g] = s.useState(!0),
             [x, A] = s.useState(!0),
             {
                 fileContents: C,

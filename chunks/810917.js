@@ -3,6 +3,7 @@ d.exports = {
     kL: "container__4d95d",
     FS: "textContainer__4d95d",
     mr: "newMosaicStyle__4d95d",
+    KQ: "collapsedTextContainer__4d95d",
     Xb: "codeView__4d95d",
     Zw: "wordWrap__4d95d",
     qr: "footer__4d95d",

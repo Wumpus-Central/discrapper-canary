@@ -33,6 +33,10 @@
     border-radius: 8px 8px 0 0
 }
 
+.collapsedTextContainer__4d95d {
+    max-height: calc(max(var(--custom-plaintext-preview-collapsed-lines) * 16px, 100px) + 26px)
+}
+
 .codeView__4d95d {
     background-color: transparent;
     font-size: .875rem;
@@ -169,4 +173,4 @@
     overflow: scroll
 }
 
-/*# sourceMappingURL=267526.bec7d3206920b360.css.map*/
+/*# sourceMappingURL=267526.6884b329cfb545e0.css.map*/
