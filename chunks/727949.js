@@ -1,17 +1,17 @@
-n.d(t, { GQ: () => d, NF: () => N, QG: () => I, Tp: () => C, ZR: () => T, ne: () => R });
+n.d(t, { GQ: () => d, NF: () => N, QG: () => I, Tp: () => S, ZR: () => T, ne: () => R, sZ: () => C });
 var i = n(17928),
     l = n(554146),
     r = n(826673),
     s = n(367727),
-    a = n(927813),
-    o = n(935208),
-    E = n(851746),
-    c = n(894374),
+    a = n(617617),
+    o = n(927813),
+    E = n(935208),
+    c = n(851746),
     u = n(103411),
     _ = n(49999),
     A = n(375708);
 function d(e) {
-    let t = (e - Date.now()) / a.A.Millis.HOUR;
+    let t = (e - Date.now()) / o.A.Millis.HOUR;
     return t > 24
         ? A.intl.formatToPlainString(A.t["g9s+dA"], { numDays: Math.floor(t / 24) })
         : t >= 1
@@ -29,24 +29,20 @@ function N(e) {
     if (null == t) return !1;
     let n = t.isReferralTrial,
         i = !t.isRedeemed,
-        l = new Date(o.default.extractTimestamp(t.id)),
+        l = new Date(E.default.extractTimestamp(t.id)),
         r = new Date();
     return n && i && r >= l;
 }
 function R(e) {
-    null != e
-        ? (0, s.qr)(l.M.REFERRAL_PROGRAM_POPOVER_V2, e, { dismissAction: _.i.INDIRECT_ACTION })
-        : (0, r.Dr)(l.M.REFERRAL_PROGRAM_POPOVER);
+    null != e && (0, s.qr)(l.M.REFERRAL_PROGRAM_POPOVER_V2, e, { dismissAction: _.i.INDIRECT_ACTION });
 }
 function C() {
-    let e,
-        t = (0, u.m)(!1),
-        n = (0, i.bG)([E.A], () => E.A.getReferralsRemaining()),
-        s = (0, i.bG)([E.A], () => E.A.getReminderStateId());
-    return (
-        (e = (0, c.A)({ location: "ReferralProgramUtils" })
-            ? null != s && !(0, r.u$)(l.M.REFERRAL_PROGRAM_POPOVER_V2, s).isDismissed
-            : !(0, r.k8)(l.M.REFERRAL_PROGRAM_POPOVER)),
-        t && e && null != n && n > 0
-    );
+    (0, r.Dr)(l.M.REFERRAL_PROGRAM_INCENTIVE_POPOVER);
+}
+function S() {
+    let e = (0, u.m)(!1),
+        t = (0, i.bG)([c.A], () => c.A.getReferralsRemaining()),
+        n = (0, i.bG)([c.A], () => c.A.getReminderStateId()),
+        s = (0, i.bG)([a.A], () => null != n && (0, r.u$)(l.M.REFERRAL_PROGRAM_POPOVER_V2, n).isDismissed);
+    return null != n && e && !s && null != t && t > 0;
 }
