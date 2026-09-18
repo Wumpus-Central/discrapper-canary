@@ -287,8 +287,8 @@ var ex = n(875317),
     eJ = n(763827),
     e0 = n(158045),
     e1 = n(885631),
-    e6 = n(542308),
-    e3 = n(960628),
+    e3 = n(542308),
+    e6 = n(960628),
     e8 = n(206248),
     e7 = n(498470),
     e2 = n(807098),
@@ -818,12 +818,12 @@ class t1 extends r.PureComponent {
         });
     }
 }
-let t6 = d.Ay.connectStores([k.A], (e) => {
+let t3 = d.Ay.connectStores([k.A], (e) => {
     let { guild: t } = e;
     return { memberCount: k.A.getMemberCount(t.id) };
 })(t1);
-var t3 = n(503698),
-    t8 = n.n(t3),
+var t6 = n(503698),
+    t8 = n.n(t6),
     t7 = n(933832),
     t2 = n(782603),
     t5 = n(81466),
@@ -1474,11 +1474,11 @@ let n1 = function (e) {
         imageMarginX: 61,
     });
 };
-var n6 = n(475358),
-    n3 = n(675704),
+var n3 = n(475358),
+    n6 = n(675704),
     n8 = n(793322);
 let n7 = function (e) {
-    let t = (0, l.jsx)(n6.e, { shortcut: n3.R.binds["0"], keyClassName: tM.Eb });
+    let t = (0, l.jsx)(n3.e, { shortcut: n6.R.binds["0"], keyClassName: tM.Eb });
     return (0, l.jsx)(tO, {
         guild: e.guild,
         onDismissed: () => e.markAsDismissed(eE.i.UNKNOWN),
@@ -1600,7 +1600,7 @@ function iA(e) {
                 case u.M.CHANNEL_NOTICE_INVITE:
                     return (0, l.jsx)(n0, { guild: A, markAsDismissed: M });
                 case u.M.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION:
-                    return (0, l.jsx)(t6, { guild: A, markAsDismissed: M });
+                    return (0, l.jsx)(t3, { guild: A, markAsDismissed: M });
                 case u.M.CHANNEL_NOTICE_QUICKSWITCHER:
                     return (0, l.jsx)(n7, { guild: A, markAsDismissed: M });
                 case u.M.CHANNEL_NOTICE_GUILD_BANNER:
@@ -1803,7 +1803,7 @@ class iS extends r.PureComponent {
                     n.e("724086"),
                     n.e("358937"),
                     n.e("448738"),
-                    n.e("662167"),
+                    n.e("548938"),
                     n.e("258407"),
                     n.e("894292"),
                     n.e("153302"),
@@ -2427,7 +2427,7 @@ class iS extends r.PureComponent {
                       spacing: 4,
                       children: (i) => {
                           let { onClick: s, ...r } = i;
-                          return (0, l.jsx)(e3.Ay, {
+                          return (0, l.jsx)(e6.Ay, {
                               ref: this.guildHeaderRef,
                               guild: t,
                               controller: o,
@@ -2492,7 +2492,7 @@ class iS extends r.PureComponent {
                     className: iC.r0,
                     children: (0, l.jsx)(eU.A, { guild: t, channel: n ?? eq.Ay.getDefaultChannel(t.id) }),
                 });
-            let e = (0, es.ai)(t.id) ? el.A : e6.B;
+            let e = (0, es.ai)(t.id) ? el.A : e3.B;
             return (0, l.jsx)(e, {
                 guild: t,
                 ...s,
@@ -2605,8 +2605,8 @@ function ip(e) {
         eW = (0, d.bG)([O.A], () => O.A.getChannel(x)),
         { isPopoutOpen: eq } = (0, eu.S)(),
         e1 = b?.features.has(H.GuildFeatures.COMMUNITY) ?? !1,
-        e6 = e0.Ay.isNewUser(k),
-        e3 = W && !e6;
+        e3 = e0.Ay.isNewUser(k),
+        e6 = W && !e3;
     ((c = (0, eh.TZ)(b)),
         (A = V.dR.some((e) => !(0, es.ai)(b?.id) && eg.Ib(e, b))),
         (E = b?.defaultMessageNotifications === H.orn.ALL_MESSAGES),
@@ -2809,7 +2809,7 @@ function ip(e) {
         isGuildHeaderDismissibleTooltipShown: $,
         canShowCoachMarkAtBottom: W,
         headerAnalyticsLocations: q,
-        shouldRenderBurstCoachmark: e3,
+        shouldRenderBurstCoachmark: e6,
         guildHeaderContentDescriptor: tN,
         onFavoriteGuildContextMenu: G,
         hasFavoritesAccess: U,

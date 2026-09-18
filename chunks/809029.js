@@ -4,7 +4,7 @@ var l = n(477900),
     r = n(403581),
     a = n(951305),
     s = n(166532),
-    o = n(405549),
+    o = n(639574),
     u = n(580194),
     c = n(970904),
     d = n(158045),
@@ -107,12 +107,12 @@ function g(e) {
             verifiedTrialId: n.getVerifiedTrialId({ trialId: e.trialId }),
             effectivePlanGroup: n.getEffectivePlanGroup({ planGroup: e.planGroup }),
         })),
-        _ = (0, C.A)(),
-        x = null != e.openInvoiceId,
+        x = (0, C.A)(),
+        _ = null != e.openInvoiceId,
         T = null == e.initialPlanId && null == e.subscriptionTier,
         N = i.useMemo(() => !A && (g ? T && E : E), [g, T, E, A]),
         { claimableRewards: b } = (0, a.Pv)(),
-        j = (0, u.px)(_, S, b),
+        j = (0, u.px)(x, S, b),
         R = e.handleStepChange,
         M = i.useCallback(
             () =>
@@ -126,19 +126,19 @@ function g(e) {
             [R, g, j, n],
         ),
         O = (0, d.J$)(y.paymentSourceId),
-        L = (0, h.R)({ hasOpenInvoice: x ?? !1 }),
+        L = (0, h.R)({ hasOpenInvoice: _ ?? !1 }),
         k = i.useMemo(
             () =>
                 new I({
                     isTrial: t,
                     isGift: S,
-                    selectedPlan: _,
+                    selectedPlan: x,
                     premiumSubscription: m,
                     planGroup: v,
                     isPrepaidPaymentSource: O,
                     isInPastDueCheckout: L,
                 }),
-            [S, _, m, v, O, t, L],
+            [S, x, m, v, O, t, L],
         ),
         w = null != m && !S,
         U = i.useCallback(
@@ -148,7 +148,7 @@ function g(e) {
                     ? (0, l.jsx)(c.A, {
                           handlePaymentSourceAdd: n,
                           planGroup: v,
-                          hasOpenInvoice: x,
+                          hasOpenInvoice: _,
                           isInPastDueCheckout: L,
                       })
                     : (0, l.jsx)(o._, {
@@ -159,7 +159,7 @@ function g(e) {
                           reviewWarningMessage: e.reviewWarningMessage,
                       });
             },
-            [w, v, P, e.reviewWarningMessage, x, L, R],
+            [w, v, P, e.reviewWarningMessage, _, L, R],
         ),
         D = null != r ? r.id : void 0,
         G = i.useMemo(() => ({ user_trial_offer_id: D }), [D]),

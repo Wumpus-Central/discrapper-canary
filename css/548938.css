@@ -866,26 +866,4 @@
     transform: scale(.42)
 }
 
-.container__3f496 {
-    background: linear-gradient(90deg, rgba(253, 153, 233, .54), rgba(171, 127, 238, .54) 50%, rgba(88, 101, 242, .54));
-    border-radius: var(--radius-md);
-    padding: var(--space-8)
-}
-
-.theme-dark .container__3f496 {
-    background: linear-gradient(90deg, rgba(179, 38, 156, .24), rgba(100, 29, 180, .24) 50%, rgba(20, 20, 203, .24))
-}
-
-.tile__3f496>div:last-child {
-    gap: 0
-}
-
-.rewardImage__3f496 {
-    border-radius: var(--radius-xs);
-    height: 40px;
-    -o-object-fit: cover;
-    object-fit: cover;
-    width: 40px
-}
-
-/*# sourceMappingURL=662167.8d1da2690388cff5.css.map*/
+/*# sourceMappingURL=548938.36d9aa0b6387ad49.css.map*/
