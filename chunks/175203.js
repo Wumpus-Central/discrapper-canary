@@ -3,7 +3,7 @@ var t = s(477900),
     i = s(582128),
     n = s(503698),
     a = s.n(n),
-    o = s(128954),
+    o = s(892437),
     c = s(738678),
     d = s(12470),
     r = s(17928),
@@ -264,8 +264,8 @@ let e_ = [eO.lp.ACTIVITY],
         }
         let { ref: e1, width: e8, height: e7 } = (0, U.Ay)(),
             e6 = (0, r.bG)([ep.A], () => (u.type === eO.lp.USER ? ep.A.getVoiceVolume(u.id) : -1 / 0)),
-            e5 = (0, H.v)({ isSpeaking: eU, voiceDb: e6, spreadDirection: H.O.INSET_ONLY, maxInnerSpreadRadius: 4 }),
-            e2 = (0, eO.Ay)(u) ? p.k : eP ? m.VideoIcon : A.E,
+            e2 = (0, H.v)({ isSpeaking: eU, voiceDb: e6, spreadDirection: H.O.INSET_ONLY, maxInnerSpreadRadius: 4 }),
+            e5 = (0, eO.Ay)(u) ? p.k : eP ? m.VideoIcon : A.E,
             e4 = u.type === eO.lp.STREAM && k;
         return (0, t.jsx)(D.A, {
             section: eb.JJy.VOICE_CHANNEL_TILE,
@@ -325,7 +325,7 @@ let e_ = [eO.lp.ACTIVITY],
                                         O
                                             ? (0, t.jsx)("div", {
                                                   className: eM._Q,
-                                                  children: (0, t.jsx)(e2, {
+                                                  children: (0, t.jsx)(e5, {
                                                       size: "md",
                                                       color: "currentColor",
                                                       className: eM.Dt,
@@ -364,7 +364,7 @@ let e_ = [eO.lp.ACTIVITY],
                                         b && !R
                                             ? (0, t.jsx)("div", {
                                                   className: a()(eM.PQ, { [eM.pU]: !k && (ew || null != eW) }),
-                                                  style: k || ew ? void 0 : e5,
+                                                  style: k || ew ? void 0 : e2,
                                               })
                                             : null,
                                     ],

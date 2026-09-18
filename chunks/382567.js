@@ -182,7 +182,7 @@ let er = function (e) {
 };
 var el = n(284009),
     ea = n.n(el),
-    ec = n(128954),
+    ec = n(892437),
     eo = n(935399),
     eu = n(319354),
     ed = n(717421),
@@ -915,13 +915,13 @@ var ek = n(280450),
 function eJ() {
     let e = (0, eY.GV)(),
         t = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        n = "616507",
-        s = "0d815c09a864b3d99a4b9c311cb71cf2daa81011".substring(0, 7),
+        n = "616526",
+        s = "314894d3e14ba9c61380c02bc736fd50d52d25bf".substring(0, 7),
         r = eV.A?.app.getVersion(),
         l = eV.A?.app.getBuildNumber(),
         c = eV.A?.app.getAppArch(),
         o = eX.A.getCurrentBuildOverride().overrides?.discord_web,
-        u = null != o ? (0, eq.A)("1789760435021", !1) : null,
+        u = null != o ? (0, eq.A)("1789761314712", !1) : null,
         d = null != u ? ` (built ${u})` : "",
         m = (function () {
             let e = ez()?.os?.toString();

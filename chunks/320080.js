@@ -3,7 +3,7 @@ var s = t(477900),
     i = t(582128),
     a = t(503698),
     l = t.n(a),
-    r = t(128954),
+    r = t(892437),
     o = t(17928),
     c = t(661531),
     d = t(707554),
@@ -889,8 +889,8 @@ var eQ = t(435558),
     e8 = t(821609),
     e4 = t(475825),
     e6 = t(928039),
-    e9 = t(625494);
-let e7 = { [eC.Ur.UNREAD]: !0, [eC.Ur.TODAY]: !0, [eC.Ur.YESTERDAY]: !1, [eC.Ur.OLDER]: !1 },
+    e7 = t(625494);
+let e9 = { [eC.Ur.UNREAD]: !0, [eC.Ur.TODAY]: !0, [eC.Ur.YESTERDAY]: !1, [eC.Ur.OLDER]: !1 },
     e5 = { [eC.Ur.UNREAD]: !0, [eC.Ur.TODAY]: !1, [eC.Ur.YESTERDAY]: !1, [eC.Ur.OLDER]: !1 },
     ne = (0, L.v)((e, n) => ({
         messageCategoryOpenStates: e5,
@@ -907,7 +907,7 @@ let e7 = { [eC.Ur.UNREAD]: !0, [eC.Ur.TODAY]: !0, [eC.Ur.YESTERDAY]: !1, [eC.Ur.
             let s = n();
             s.hasUserToggledSection ||
                 (s.lastInitializedWithUnreads !== t &&
-                    e({ lastInitializedWithUnreads: t, messageCategoryOpenStates: t ? e5 : e7 }));
+                    e({ lastInitializedWithUnreads: t, messageCategoryOpenStates: t ? e5 : e9 }));
         },
     }));
 var nn = t(871423),
@@ -1023,10 +1023,10 @@ function nr(e) {
             p.current?.scrollPageDown({ animate: !0 });
         }
         return (
-            e9._.subscribe(eR.jej.SCROLL_PAGE_DOWN, n),
-            e9._.subscribe(eR.jej.SCROLL_PAGE_UP, e),
+            e7._.subscribe(eR.jej.SCROLL_PAGE_DOWN, n),
+            e7._.subscribe(eR.jej.SCROLL_PAGE_UP, e),
             () => {
-                (e9._.unsubscribe(eR.jej.SCROLL_PAGE_DOWN, n), e9._.unsubscribe(eR.jej.SCROLL_PAGE_UP, e));
+                (e7._.unsubscribe(eR.jej.SCROLL_PAGE_DOWN, n), e7._.unsubscribe(eR.jej.SCROLL_PAGE_UP, e));
             }
         );
     }, []);
