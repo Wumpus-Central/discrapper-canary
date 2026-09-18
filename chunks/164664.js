@@ -32,9 +32,10 @@ function d(e) {
         { message: n, onDeleteMessage: i, children: d } = e,
         u = n.interactionMetadata?.ephemerality_reason;
     function m() {
-        return i(n, !0);
+        return i?.(n, !0);
     }
-    if (null != u) {
+    if (null == i) t = r.intl.string(r.t.Nb1EQx);
+    else if (null != u) {
         let e = (function (e) {
             switch (e) {
                 case a.FEATURE_LIMITED:

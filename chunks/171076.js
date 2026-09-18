@@ -16,8 +16,8 @@ var i = n(684013),
     f = n(956753),
     p = n(296027),
     T = n(489277),
-    g = n(222506),
-    m = n(897720),
+    m = n(222506),
+    g = n(897720),
     S = n(145567),
     N = n(652215);
 function C(e) {
@@ -310,15 +310,15 @@ async function y() {
                 n.e("628752"),
                 n.e("165211"),
                 n.e("825486"),
-                n.e("267255"),
                 n.e("672877"),
+                n.e("267255"),
                 n.e("871467"),
-                n.e("699011"),
                 n.e("836150"),
+                n.e("699011"),
                 n.e("597069"),
                 n.e("592480"),
-                n.e("55266"),
                 n.e("660249"),
+                n.e("55266"),
                 n.e("186262"),
                 n.e("227752"),
                 n.e("231616"),
@@ -344,8 +344,8 @@ function D(e) {
 }
 async function v(e) {
     let t = await y();
-    if (!(null == t || g.A.isInputLocked(T.A.getTargetPID())))
-        for (let n of t.getNotificationsForChannel(e, m.zb.TEXT)) i.A.updateNotificationStatus(n.id, N.yFH.DISMISSED);
+    if (!(null == t || m.A.isInputLocked(T.A.getTargetPID())))
+        for (let n of t.getNotificationsForChannel(e, g.zb.TEXT)) i.A.updateNotificationStatus(n.id, N.yFH.DISMISSED);
 }
 function b() {
     !(function () {

@@ -1,31 +1,29 @@
 .orbWalletPrimaryCard__89f5f {
-    align-items: flex-start;
-    align-self: stretch;
     background: var(--background-mod-muted);
     border: 1px solid var(--border-muted);
     border-radius: var(--radius-lg);
+    padding: var(--space-16);
+    position: relative
+}
+
+.orbWalletPrimaryCardContent__89f5f {
+    align-items: flex-start;
+    align-self: stretch;
     -moz-column-gap: var(--space-16);
     column-gap: var(--space-16);
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    padding-bottom: var(--space-16);
-    padding-top: var(--space-16);
-    padding-inline: var(--space-16) var(--space-24);
-    position: relative
+    margin-bottom: var(--space-16)
 }
 
 .orbWalletPrimaryCardHeaderText__89f5f {
-    margin-bottom: var(--space-4)
-}
-
-.orbWalletPrimaryCardSubText__89f5f {
-    margin-bottom: var(--space-16)
+    margin-bottom: var(--space-4);
+    margin-inline-end: var(--space-12)
 }
 
 .orbWalletPrimaryCardGraphic__89f5f {
     align-items: center;
-    background: var(--background-base-low);
     border-radius: var(--radius-md);
     display: flex;
     flex-shrink: 0;
@@ -62,4 +60,4 @@
     cursor: pointer
 }
 
-/*# sourceMappingURL=285558.d3eefb3109a778f5.css.map*/
+/*# sourceMappingURL=285558.d5b373e376c6cec9.css.map*/

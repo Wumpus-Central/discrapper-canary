@@ -1,3 +1,45 @@
+.blockedEdit_b7ab2c,
+.blockedSend_b7ab2c {
+    color: var(--text-default)
+}
+
+.shieldIcon_b7ab2c {
+    color: var(--text-feedback-critical)
+}
+
+.blockedNoticeIcon_b7ab2c {
+    flex: 0
+}
+
+.blockedNotice_b7ab2c {
+    flex: 1
+}
+
+.blockedNoticeContainer_b7ab2c {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    gap: 4px;
+    margin-top: 8px
+}
+
+.blockedNoticeContainer_b7ab2c.compact_b7ab2c {
+    margin-inline-start: -8px
+}
+
+.ephemeralAccessories_b7ab2c {
+    margin-top: -4px
+}
+
+.ephemeralAccessories_b7ab2c.compact_b7ab2c {
+    margin-inline-start: -8px
+}
+
+.learnMore_b7ab2c {
+    margin-inline-start: 3px
+}
+
 @use postcss-pxtorem;
 
 .container__235ca {
@@ -311,4 +353,4 @@
     margin-top: 24px
 }
 
-/*# sourceMappingURL=40416.3cc28000cae1cde5.css.map*/
+/*# sourceMappingURL=903758.7225f5c023c3cc4f.css.map*/

@@ -20,8 +20,8 @@ var l = n(477900),
     S = n(608299),
     I = n(119031),
     _ = n(820284),
-    j = n(955572),
-    y = n(775602),
+    y = n(955572),
+    j = n(775602),
     b = n(95561),
     N = n(211401),
     T = n(989837),
@@ -85,8 +85,8 @@ var ec = n(598071),
     eS = n(515718),
     eI = n(723702),
     e_ = n(518960),
-    ej = n(486319),
-    ey = n(719442),
+    ey = n(486319),
+    ej = n(719442),
     eb = n(267102),
     eN = n(655098),
     eT = n(323350),
@@ -112,7 +112,7 @@ function eL(e) {
         h = i.useContext(eb.Ay),
         m = i.useRef(o),
         [g] = i.useState(() => {
-            let e = (0, ey.ie)();
+            let e = (0, ej.ie)();
             return (
                 (e.children = (0, w.x7)(o)),
                 (e.selection = { anchor: eR.K, focus: eR.K }),
@@ -134,7 +134,7 @@ function eL(e) {
                         (e.insertText = (n) => {
                             let l = n.replace(/\r\n|\r|\n/g, " ");
                             (0, eT.WO)(ev.VW.richValue(e), { mode: "raw" }).length -
-                                (null != e.selection && ey.Q6.isExpanded(e.selection)
+                                (null != e.selection && ej.Q6.isExpanded(e.selection)
                                     ? (0, eT.WO)(ev.VW.richValue(e), { mode: "raw", range: e.selection }).length
                                     : 0) +
                                 l.length <=
@@ -219,7 +219,7 @@ let eW = i.memo(
                 onChange: E,
                 onResize: I,
                 onBlur: _,
-                onFocus: j,
+                onFocus: y,
                 onKeyDown: b,
                 onSubmit: N,
                 promptToUpload: T,
@@ -255,7 +255,7 @@ let eW = i.memo(
             })),
             {
                 isLurking: e_,
-                isPendingMember: ey,
+                isPendingMember: ej,
                 disabled: eb,
                 canAttachFiles: eN,
                 canEveryoneSendMessages: eT,
@@ -263,9 +263,9 @@ let eW = i.memo(
             ev = !ef.D_.useSetting() && !(0, eI.isAndroidWeb)() && null != window.ResizeObserver,
             eM = !ev || !C.commands?.enabled || !x || "/" !== r,
             eR = (0, ep.A)(),
-            { fontSize: eD } = (0, h.cf)([y.Ay], () => ({
-                fontSize: y.Ay.fontSize,
-                isSubmitButtonEnabled: y.Ay.isSubmitButtonEnabled,
+            { fontSize: eD } = (0, h.cf)([j.Ay], () => ({
+                fontSize: j.Ay.fontSize,
+                isSubmitButtonEnabled: j.Ay.isSubmitButtonEnabled,
             })),
             eG = (0, h.bG)([ex.A], () => ex.A.isEnabled());
         i.useEffect(() => {
@@ -382,7 +382,7 @@ let eW = i.memo(
                 chatInputType: C,
                 submit: e1,
             });
-        (0, ej.R)(eQ, f.guild_id, f.id);
+        (0, ey.R)(eQ, f.guild_id, f.id);
         let [tu, th] = i.useState(!1),
             tm = i.useCallback(() => {
                 (ta(), th(!0));
@@ -491,7 +491,7 @@ let eW = i.memo(
                                                             placeholder: D,
                                                             required: g,
                                                             accessibilityLabel: A,
-                                                            isPreviewing: (e_ || ey) && eT,
+                                                            isPreviewing: (e_ || ej) && eT,
                                                             channel: f,
                                                             type: U.oU.CREATE_ANNOUNCEMENT_POST,
                                                             canPasteFiles: eN,
@@ -502,7 +502,7 @@ let eW = i.memo(
                                                             onChange: E,
                                                             onResize: e9,
                                                             onBlur: _,
-                                                            onFocus: j,
+                                                            onFocus: y,
                                                             onKeyDown: b,
                                                             onSubmit: e2,
                                                             onTab: te,
@@ -937,8 +937,8 @@ var td = n(554146),
 let tS = 90 * tC.A.Millis.DAY,
     tI = 14 * tC.A.Millis.DAY;
 var t_ = n(49999),
-    tj = n(316031),
-    ty = n(870136),
+    ty = n(316031),
+    tj = n(870136),
     tb = n(60270),
     tN = n(576470),
     tT = n(496431),
@@ -1050,7 +1050,7 @@ var tV = n(823099),
     t$ = n(751258),
     tq = n(451909),
     tJ = n(926262),
-    tZ = n(10822),
+    tZ = n(247933),
     tY = n(537174),
     tX = n(973196),
     tQ = n(671210),
@@ -1076,7 +1076,7 @@ function t9(e, t) {
 var ne = n(93219);
 let nt = i.memo(function (e) {
         let { channelId: t, width: n } = e,
-            s = (0, h.bG)([y.Ay], () => y.Ay.useReducedMotion),
+            s = (0, h.bG)([j.Ay], () => j.Ay.useReducedMotion),
             a = (0, h.bG)([t4.Ay], () => t4.Ay.getMostRecentMessageCombo(t), [t]),
             [r, o] = i.useState(!1);
         i.useEffect(() => {
@@ -1257,8 +1257,8 @@ var nf = n(631576),
     nS = n(994500),
     nI = n(309010),
     n_ = n(287809),
-    nj = n(174459),
-    ny = n(147036),
+    ny = n(174459),
+    nj = n(147036),
     nb = n(234320),
     nN = n(625494),
     nT = n(806150),
@@ -1381,7 +1381,7 @@ class n1 extends i.PureComponent {
             let e = eC.A.getDraft(n.id, eC.C.ChannelMessage);
             e !== l && this.setState((0, w.ur)(e));
         }
-        t.textValue.length < ew.uvi && l.length >= ew.uvi && nj.default.track(ew.HAw.MESSAGE_LENGTH_LIMIT_REACHED, {});
+        t.textValue.length < ew.uvi && l.length >= ew.uvi && ny.default.track(ew.HAw.MESSAGE_LENGTH_LIMIT_REACHED, {});
     }
     draftDidChange = (() => {
         var e = this;
@@ -1428,7 +1428,7 @@ class n1 extends i.PureComponent {
                 return;
             case nJ.dh.ESCAPE:
                 if (i || e.target !== e.currentTarget) return;
-                if ((e.preventDefault(), t)) return void (0, j.Bm)();
+                if ((e.preventDefault(), t)) return void (0, y.Bm)();
                 if (eE.A.getUploadCount(l.id, eC.C.ChannelMessage) > 0)
                     return void S.A.clearAll(l.id, eC.C.ChannelMessage);
         }
@@ -1485,7 +1485,7 @@ class n1 extends i.PureComponent {
         ((this.isFirstChange = !1),
             r && this.state.textValue.length < t.length && this.handleIncrementCombo(),
             r ? E.A.startTyping(s) : "" === t && E.A.stopTyping(s),
-            a && l && (0, j.Bm)(),
+            a && l && (0, y.Bm)(),
             this.setState({ textValue: t, richValue: n }));
     };
     handleSendMessage = async (e) => {
@@ -1797,7 +1797,7 @@ class n2 extends i.PureComponent {
                 ? (0, l.jsx)(nd, {})
                 : t.isModeratorReportChannel() && t.isArchivedThread()
                   ? (0, l.jsx)(nA, { channelId: t.id })
-                  : null != s && (0, tj.n)(s) && null != i && !tf.A.can(ew.xBc.ADMINISTRATOR, i)
+                  : null != s && (0, ty.n)(s) && null != i && !tf.A.can(ew.xBc.ADMINISTRATOR, i)
                     ? (0, l.jsx)(tO, { guild: i, disabledUntil: s })
                     : a
                       ? (0, l.jsx)(tc, { guild: i })
@@ -1825,8 +1825,8 @@ class n2 extends i.PureComponent {
                 showAutomodUserProfileChatBlocker: E,
                 scheduledMessageDraft: S,
                 messagesTypingGradient: I,
-                showLinkedLobbyApplicationLoadingIndicator: j,
-                announcementComposerEnabled: y,
+                showLinkedLobbyApplicationLoadingIndicator: y,
+                announcementComposerEnabled: j,
             } = this.props,
             { textAreaFocused: b, textAreaHighlighted: N } = this.state,
             T = o === U.oU.SIDEBAR;
@@ -1866,16 +1866,16 @@ class n2 extends i.PureComponent {
                         shakeIntensity: f,
                         poggermodeEnabled: C,
                         scheduledMessageDraft: S,
-                        announcementComposerEnabled: y,
+                        announcementComposerEnabled: j,
                     }),
                 }),
             }),
-            R = j ? v : M,
+            R = y ? v : M,
             D = (0, nR.m1)(t, n_.default, nS.A);
         return (0, l.jsx)(
             _.A,
             {
-                page: (0, ny.DJ)(this.props.channel),
+                page: (0, nj.DJ)(this.props.channel),
                 children: (0, l.jsx)(tw.di, {
                     children: (0, l.jsx)(tU.Xq, {
                         children: (0, l.jsxs)(nb.Ah, {
@@ -1930,7 +1930,7 @@ class n2 extends i.PureComponent {
                                                               (0, l.jsxs)("form", {
                                                                   ref: this.inputFormRef,
                                                                   onSubmit: nY,
-                                                                  className: a()(nZ.Zd, { [nZ.Mf]: !j }),
+                                                                  className: a()(nZ.Zd, { [nZ.Mf]: !y }),
                                                                   children: [
                                                                       C && (0, l.jsx)(nl, { channelId: t.id }),
                                                                       t.isPrivate()
@@ -1974,12 +1974,12 @@ let n4 = i.memo(function (e) {
         { placeholder: u, accessibilityLabel: m } = (0, nD.A)({ channel: r }),
         g = (0, tX.A)(),
         p = no(n_.default.getCurrentUser(), r),
-        [A] = (0, ty.c)(o?.id),
+        [A] = (0, tj.c)(o?.id),
         C = (0, e8.uZ)(o?.id),
         E = (0, h.bG)([n_.default], () => n_.default.getCurrentUser()),
         S = (0, h.bG)([tn.Ay], () => null != E && (tn.Ay.getMember(o?.id ?? ew.dJq, E?.id)?.isPending ?? !1)),
         _ = (0, h.bG)([t3.A], () => t3.A.isEnabled()),
-        j =
+        y =
             ((t = r.id),
             (s = (0, ni.A)(ns.uD.CHAT_INPUT)),
             (a = (0, h.bG)([t3.A], () => t3.A.isEnabled({ shakeLocation: ns.uD.CHAT_INPUT }))),
@@ -2058,7 +2058,7 @@ let n4 = i.memo(function (e) {
         isEditing: null != (0, h.bG)([nE.A], () => nE.A.getEditingMessageId(r.id)),
         hasModalOpen: (0, f.useModalsStore)(f.hasAnyModalOpenSelector),
         guild: o,
-        keyboardModeEnabled: (0, h.bG)([y.Ay], () => y.Ay.keyboardModeEnabled),
+        keyboardModeEnabled: (0, h.bG)([j.Ay], () => j.Ay.keyboardModeEnabled),
         pendingReply: (0, h.bG)([nh.A], () => nh.A.getPendingReply(r.id)),
         chatInputType: c,
         isOverlayTextEntryDisabled: g,
@@ -2067,7 +2067,7 @@ let n4 = i.memo(function (e) {
         filterAfterTimestamp: d,
         showQuarantinedUserBanner: p,
         communicationDisabledUntil: A,
-        shakeIntensity: j,
+        shakeIntensity: y,
         poggermodeEnabled: _,
         isSelectedResourceChannel: b,
         showAutomodUserProfileChatBlocker: C && !S,

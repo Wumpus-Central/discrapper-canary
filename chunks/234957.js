@@ -6,7 +6,7 @@ var i = n(477900),
     r = n(994500),
     o = n(521981),
     c = n(763754),
-    d = n(308334),
+    d = n(448368),
     u = n(652215);
 let m = l.memo(function (e) {
     let { baseMessage: t, channel: n, referencedMessage: u, compact: m = !1 } = e,

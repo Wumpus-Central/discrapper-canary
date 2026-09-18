@@ -1034,10 +1034,10 @@ let e0 = ["snail", "goat", "frog", "bunny", "cat", "caterpillar", "butterfly", "
 function e7(e) {
     return { ...e2[e], name: C.intl.string(e1[e]()) };
 }
-function e3(e) {
+function e6(e) {
     return e0.includes(e) ? e7(e) : void 0;
 }
-function e6(e) {
+function e3(e) {
     let t = new Map();
     for (let [l, n] of (function (e) {
         let t = 0,
@@ -1361,10 +1361,10 @@ function ts(e) {
 var to = l(229775),
     tu = l(165648);
 function td(e) {
-    let t = e6(e.map((e) => e.taskId));
+    let t = e3(e.map((e) => e.taskId));
     return e.flatMap((e) => {
         if ("running" !== e.task.status) return [];
-        let l = null != e.task.helperMark ? e3(e.task.helperMark) : void 0,
+        let l = null != e.task.helperMark ? e6(e.task.helperMark) : void 0,
             n = l ?? t.get(e.taskId);
         return null == n
             ? []
@@ -1422,7 +1422,7 @@ function tc(e) {
         b = null != v && v.length > 0;
     if (0 === x.steps.length && 0 === x.tasks.length && !b) return null;
     let j = x.tasks,
-        y = e6(j.map((e) => e.taskId)),
+        y = e3(j.map((e) => e.taskId)),
         k = !f && (r || j.some((e) => "running" === e.task.status)),
         w = td(j);
     return (0, n.jsx)(eJ.l.Provider, {
@@ -1441,7 +1441,7 @@ function tc(e) {
                     connectsDown: j.length > 0,
                 }),
                 j.map((e, l) => {
-                    let a = null != e.task.helperMark ? e3(e.task.helperMark) : void 0,
+                    let a = null != e.task.helperMark ? e6(e.task.helperMark) : void 0,
                         r = a ?? y.get(e.taskId);
                     return null == r
                         ? null
@@ -2254,9 +2254,9 @@ var tJ = l(320095),
     t1 = l(521981),
     t2 = l(763754),
     t7 = l(491182),
-    t3 = l(438729),
-    t6 = l(622868),
-    t5 = l(308334),
+    t6 = l(438729),
+    t3 = l(622868),
+    t5 = l(448368),
     t4 = l(837528),
     t8 = l(601280),
     t9 = l(715628),
@@ -2424,7 +2424,7 @@ function ly(e, t, l) {
     return "" === t
         ? null
         : null != l
-          ? (0, n.jsx)(t3.Ay, { className: l, message: e, content: r, compact: !1 })
+          ? (0, n.jsx)(t6.Ay, { className: l, message: e, content: r, compact: !1 })
           : (0, t9.A)(i, r);
 }
 function lk(e) {
@@ -2506,7 +2506,7 @@ function lw(e) {
 function lN(e) {
     let { message: t, author: l } = e,
         a = lk(t);
-    return (0, n.jsx)(t6.Ay, {
+    return (0, n.jsx)(t3.Ay, {
         message: t,
         channel: lp,
         author: l,
@@ -3369,7 +3369,7 @@ function l7(e) {
         ],
     });
 }
-function l3(e) {
+function l6(e) {
     let { question: t, draft: l, direction: a, disabled: r } = e,
         s = "" === l.trim() ? null : l;
     return (0, n.jsxs)("div", {
@@ -3399,7 +3399,7 @@ function l3(e) {
         ],
     });
 }
-function l6(e) {
+function l3(e) {
     let { clarification: t, onSubmit: l, onDismiss: r } = e,
         [o, u] = a.useState({}),
         [d, c] = a.useState({}),
@@ -3663,7 +3663,7 @@ function l6(e) {
                                 null == x
                                     ? null
                                     : (0, n.jsx)(
-                                          l3,
+                                          l6,
                                           { question: x.question, draft: x.draft, direction: x.direction, disabled: M },
                                           x.moves,
                                       ),
@@ -4209,7 +4209,7 @@ function nk(e) {
                         : (0, n.jsx)("div", {
                               className: nj.B5,
                               children: (0, n.jsx)(
-                                  l6,
+                                  l3,
                                   { clarification: B, onSubmit: $ ? T : void 0, onDismiss: G },
                                   B.id,
                               ),
@@ -4510,7 +4510,7 @@ function n7(e) {
                 : C.intl.string(S.default.WIAQes);
     }
 }
-function n3(e) {
+function n6(e) {
     return null == e.memory_p50_bytes && null == e.memory_p999_bytes
         ? null
         : C.intl.formatToPlainString(S.default.SBkDIZ, {
@@ -4518,7 +4518,7 @@ function n3(e) {
               p999: nK(e.memory_p999_bytes ?? e.memory_p50_bytes ?? 0),
           });
 }
-let n6 = {
+let n3 = {
     db: () => S.default.r6cciE,
     db_preview: () => S.default.JmIyL8,
     runtime: () => S.default.bzNyv8,
@@ -4637,7 +4637,7 @@ function at(e) {
             value: "\u2014",
             hint: C.intl.string(S.default.uAzxdh),
         });
-    let a = n3(l);
+    let a = n6(l);
     return (0, n.jsxs)(n.Fragment, {
         children: [
             (0, n.jsx)(n9, { label: C.intl.string(S.default.awAqRi), value: nY(l.cpu_ms) }),
@@ -4659,7 +4659,7 @@ function al(e) {
             let l;
             return {
                 object: e,
-                label: null != (l = "agent" !== (t = e.role) ? n6[t] : null) ? C.intl.string(l()) : null,
+                label: null != (l = "agent" !== (t = e.role) ? n3[t] : null) ? C.intl.string(l()) : null,
             };
         })
         .filter((e) => null != e.label);
@@ -4679,7 +4679,7 @@ function al(e) {
                           {
                               label: l,
                               value: C.intl.formatToPlainString(S.default.AnRynJ, { cpu: nY(t.cpu_ms) }),
-                              hint: n3(t) ?? void 0,
+                              hint: n6(t) ?? void 0,
                           },
                           t.role,
                       );
@@ -6258,8 +6258,8 @@ function a7(e) {
         ],
     });
 }
-let a3 = { model: aB.WI, subagent: aB.uM, context: aB.eH, tool: aB.pw, delegated: aB.C8 };
-function a6(e) {
+let a6 = { model: aB.WI, subagent: aB.uM, context: aB.eH, tool: aB.pw, delegated: aB.C8 };
+function a3(e) {
     let { entry: t, selected: l, tabbable: a, onSelect: r, onKeyDown: i, nested: s } = e,
         o = a$(t),
         u = "model" === t.kind ? t.model : t.tool,
@@ -6286,7 +6286,7 @@ function a6(e) {
                     (0, n.jsx)(v.E, {
                         variant: "text-xs/semibold",
                         color: "none",
-                        className: `${aB.PY} ${a3[o]}`,
+                        className: `${aB.PY} ${a6[o]}`,
                         children: aD(o),
                     }),
                     (0, n.jsx)(v.E, {
@@ -6523,7 +6523,7 @@ function a5(e) {
                                                                 className: aB.M5,
                                                                 children: e.entries.map((e) =>
                                                                     (0, n.jsx)(
-                                                                        a6,
+                                                                        a3,
                                                                         {
                                                                             entry: e,
                                                                             selected: e.id === o,

@@ -3943,6 +3943,25 @@
     border: 2px solid Canvas
 }
 
+.toast__6c160 {
+    gap: 8px;
+    padding: 10px 16px
+}
+
+.icon__6c160 {
+    color: var(--text-feedback-critical);
+    flex: 0 0 auto
+}
+
+.channel__6c160 {
+    cursor: pointer;
+    display: inline
+}
+
+.channel__6c160:hover {
+    text-decoration: underline
+}
+
 .wrapper__00943 {
     background-color: none;
     border: 1px solid var(--border-subtle);
@@ -4622,4 +4641,4 @@
     z-index: 2
 }
 
-/*# sourceMappingURL=784585.cef71fb86f53b27c.css.map*/
+/*# sourceMappingURL=9056.f16c4df7115ec7ad.css.map*/

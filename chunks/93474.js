@@ -83,6 +83,12 @@ let O = new S(l.h, {
     },
     MESSAGE_SEND_FAILED_AUTOMOD: R,
     MESSAGE_EDIT_FAILED_AUTOMOD: R,
+    AUTO_MODERATION_CONTENT_DELETED: function (e) {
+        let { message: t, notice: n } = e;
+        return (
+            null != t && ((A[t.id] = { id: t.id, messageData: void 0, isBlockedEdit: !1, errorMessage: n }), d++, !0)
+        );
+    },
     REMOVE_AUTOMOD_MESSAGE_NOTICE: function (e) {
         let { messageId: t } = e;
         return (N(t), !0);

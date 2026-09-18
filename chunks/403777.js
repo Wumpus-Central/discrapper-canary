@@ -24,10 +24,10 @@ async function _(e) {
             onModalOpen: p,
             ...T
         } = e,
-        g = l.default.getUser(t);
-    if (null == g) return;
-    let m = l.default.getCurrentUser();
+        m = l.default.getUser(t);
     if (null == m) return;
+    let g = l.default.getCurrentUser();
+    if (null == g) return;
     let S = u(t, E);
     (c.add(
         await (0, r.openModalLazy)(
@@ -449,7 +449,6 @@ async function _(e) {
                         n.e("643612"),
                         n.e("437065"),
                         n.e("809915"),
-                        n.e("229787"),
                         n.e("34472"),
                         n.e("652898"),
                         n.e("709640"),
@@ -477,6 +476,7 @@ async function _(e) {
                         n.e("592731"),
                         n.e("858821"),
                         n.e("346102"),
+                        n.e("229787"),
                         n.e("133902"),
                         n.e("511527"),
                         n.e("11412"),
@@ -584,7 +584,6 @@ async function _(e) {
                         n.e("509793"),
                         n.e("143549"),
                         n.e("509856"),
-                        n.e("93461"),
                         n.e("697526"),
                         n.e("710575"),
                         n.e("881379"),
@@ -596,14 +595,15 @@ async function _(e) {
                         n.e("761597"),
                         n.e("736926"),
                         n.e("459247"),
+                        n.e("93461"),
                         n.e("474907"),
-                        n.e("36877"),
                         n.e("214461"),
-                        n.e("203930"),
-                        n.e("903663"),
+                        n.e("36877"),
                         n.e("172883"),
                         n.e("820683"),
+                        n.e("203930"),
                         n.e("349644"),
+                        n.e("903663"),
                         n.e("442191"),
                         n.e("365826"),
                         n.e("649520"),
@@ -612,44 +612,44 @@ async function _(e) {
                         n.e("627323"),
                         n.e("604172"),
                         n.e("489523"),
+                        n.e("672877"),
                         n.e("829260"),
                         n.e("421060"),
-                        n.e("672877"),
+                        n.e("600607"),
+                        n.e("713708"),
                         n.e("327198"),
                         n.e("504098"),
                         n.e("176911"),
-                        n.e("600607"),
-                        n.e("713708"),
                         n.e("582486"),
-                        n.e("480436"),
                         n.e("655552"),
                         n.e("963333"),
                         n.e("420491"),
-                        n.e("838090"),
+                        n.e("480436"),
                         n.e("597069"),
                         n.e("592480"),
-                        n.e("280098"),
-                        n.e("908608"),
-                        n.e("203263"),
+                        n.e("838090"),
                         n.e("261939"),
                         n.e("138042"),
+                        n.e("280098"),
+                        n.e("908608"),
                         n.e("780262"),
+                        n.e("203263"),
+                        n.e("295841"),
+                        n.e("349545"),
+                        n.e("717460"),
                         n.e("704374"),
                         n.e("553683"),
                         n.e("55266"),
                         n.e("694138"),
                         n.e("723934"),
-                        n.e("295841"),
-                        n.e("349545"),
                         n.e("571294"),
-                        n.e("717460"),
                         n.e("186262"),
                         n.e("703168"),
+                        n.e("870272"),
                         n.e("227752"),
                         n.e("958262"),
                         n.e("967293"),
                         n.e("186546"),
-                        n.e("870272"),
                         n.e("247339"),
                         n.e("347430"),
                         n.e("342090"),
@@ -698,8 +698,8 @@ async function _(e) {
                 ).default;
                 return (t) =>
                     (0, i.jsx)(e, {
-                        user: g,
-                        currentUser: m,
+                        user: m,
+                        currentUser: g,
                         guildId: E,
                         originGuildId: A ?? E,
                         initialTabSection: a,
@@ -714,7 +714,7 @@ async function _(e) {
                 modalKey: S,
                 contextKey: (0, r.modalContextFromAppContext)(I ?? (0, s.zd)() ?? d.BRT.APP),
                 onCloseRequest: () => {
-                    (0, o.A)(t === m.id, () => {
+                    (0, o.A)(t === g.id, () => {
                         ((0, r.closeModal)(S), c.delete(S));
                     });
                 },

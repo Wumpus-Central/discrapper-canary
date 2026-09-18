@@ -1,4 +1,4 @@
-(n.d(t, { A: () => g }), n(321073));
+(n.d(t, { A: () => m }), n(321073));
 var i = n(636537),
     r = n(506774),
     a = n(228366),
@@ -114,7 +114,7 @@ class T extends s.A {
                 rejectWithError: !0,
             }).then(
                 (e) => {
-                    if (null == e.body || "dd97f6a5fe8e33fc5889b6427320f1c59f7bd367" === e.body.hash)
+                    if (null == e.body || "8777d69b831a4bf12b637e4ee1b9851abaa9bc2c" === e.body.hash)
                         return this._handleUpdateNotAvailable();
                     if (e.body.required || (0, l.kK)()) return this._handleUpdateDownloaded(!1);
                     let t = "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL ? A : h;
@@ -143,4 +143,4 @@ class T extends s.A {
             this._emitCallbacks());
     };
 }
-let g = new T();
+let m = new T();

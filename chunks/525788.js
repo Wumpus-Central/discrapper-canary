@@ -16,8 +16,8 @@ var i = n(477900),
     f = n(778712),
     p = n(922016),
     T = n(442433),
-    g = n(820284),
-    m = n(942857),
+    m = n(820284),
+    g = n(942857),
     S = n(538451),
     N = n(616356),
     C = n(287809),
@@ -109,7 +109,7 @@ function w(e) {
             maxVisibleUsers: A = 3,
         } = e,
         h = r.useRef(null),
-        S = (0, m.A)(),
+        S = (0, g.A)(),
         [R, D] = r.useState(!1),
         b = r.useRef(new c.J_(150, () => D(!1))),
         w = (0, d.yK)(
@@ -155,14 +155,14 @@ function w(e) {
                                 n.e("893190"),
                                 n.e("253729"),
                                 n.e("234236"),
-                                n.e("189673"),
                                 n.e("936320"),
                                 n.e("190889"),
-                                n.e("229787"),
+                                n.e("189673"),
                                 n.e("696443"),
+                                n.e("229787"),
+                                n.e("61129"),
                                 n.e("882073"),
                                 n.e("797558"),
-                                n.e("61129"),
                                 n.e("691994"),
                                 n.e("576665"),
                                 n.e("624198"),
@@ -171,8 +171,8 @@ function w(e) {
                                 n.e("172883"),
                                 n.e("349644"),
                                 n.e("442191"),
-                                n.e("825486"),
                                 n.e("242204"),
+                                n.e("825486"),
                                 n.e("532418"),
                             ]).then(n.bind(n, 668569));
                             return (n) => (0, i.jsx)(e, { ...n, user: t });
@@ -205,7 +205,7 @@ function w(e) {
     return (
         w.length > A &&
             (F[F.length - 1] = (0, i.jsxs)("div", { className: v.ju, children: ["+", w.length - A + 1] }, "overflow")),
-        (0, i.jsx)(g.A, {
+        (0, i.jsx)(m.A, {
             section: y.JJy.STREAM_VIEWER_POPOUT,
             children: (0, i.jsx)("div", {
                 onMouseEnter: G,
