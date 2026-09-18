@@ -204,6 +204,7 @@ function el(e) {
                         guildId: y ?? void 0,
                         contextGuildId: n ?? void 0,
                         displayName: b,
+                        onClickName: V,
                         pronouns: j?.pronouns,
                         className: ee.eF,
                         trailing: (0, i.jsx)(N.A, { displayProfile: j, themeType: K.d.EMBED }),
