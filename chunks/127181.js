@@ -4,6 +4,18 @@ let a = [
         date: "2026-09-18",
         platforms: ["mobile"],
         summary:
+            "On phones, a conjured card on your own profile has a refresh button, so a fresh build shows up without waiting.",
+    },
+    {
+        date: "2026-09-18",
+        platforms: ["mobile"],
+        summary:
+            "On phones, your own profile offers Custom card: describe a public source and Conjure builds a profile card from it.",
+    },
+    {
+        date: "2026-09-18",
+        platforms: ["mobile"],
+        summary:
             "On phones, Select to edit in the builder\u2019s header lets you tap a part of your app\u2019s Frame, see what you picked, and tell Conjure what should change there.",
     },
     {

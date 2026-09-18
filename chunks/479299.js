@@ -22,7 +22,7 @@ var i = n(477900),
     C = n(486610),
     b = n(531913),
     y = n(417270),
-    P = n(410645),
+    P = n(7437),
     N = n(375708),
     R = n(429913),
     k = n(409626),
@@ -31,8 +31,8 @@ var i = n(477900),
     _ = n(158390),
     w = n(71393),
     S = n(948230),
-    W = n(683180),
-    G = n(972786);
+    W = n(972786),
+    G = n(683180);
 let O = new _.A(3e4, 3e5);
 var L = n(280450),
     M = n(183555),
@@ -216,10 +216,10 @@ let H = Object.assign(
                     () =>
                         n &&
                         null != t &&
-                        (0, W.RZ)(w.A.getGuildsArray(), "useIsOwnedVibegrationsApplication").length > 0,
+                        (0, G.RZ)(w.A.getGuildsArray(), "useIsOwnedVibegrationsApplication").length > 0,
                     [n, t],
                 )),
-                (f = (0, d.bG)([G.Ay], () => G.Ay.getProjectsFetchState()?.type ?? null)),
+                (f = (0, d.bG)([W.Ay], () => W.Ay.getProjectsFetchState()?.type ?? null)),
                 r.useEffect(() => {
                     if (("success" === f && O.succeed(), l)) {
                         if (null == f) return void (0, S.hF)();
@@ -227,12 +227,12 @@ let H = Object.assign(
                     }
                 }, [l, f]),
                 (0, d.bG)(
-                    [G.Ay],
+                    [W.Ay],
                     () => {
                         if (!l || null == t) return !1;
-                        let e = G.Ay.findProjectByApplicationId(t);
+                        let e = W.Ay.findProjectByApplicationId(t);
                         return (
-                            !!(null != e && (0, G.PV)(e)) || (G.Ay.getProjectsFetchState()?.type !== "success" && null)
+                            !!(null != e && (0, W.PV)(e)) || (W.Ay.getProjectsFetchState()?.type !== "success" && null)
                         );
                     },
                     [l, t],
