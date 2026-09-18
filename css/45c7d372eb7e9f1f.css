@@ -22,14 +22,9 @@
     width: 24px
 }
 
-.eyebrow__72025 {
-    text-transform: uppercase
-}
-
 .mana-type-consolidation .eyebrow__72025 {
     font-size: 14px;
-    font-weight: var(--font-weight-medium);
-    text-transform: none
+    font-weight: var(--font-weight-medium)
 }
 
 .actions__72025 {
@@ -50,6 +45,10 @@
 
 .header__1de14 {
     padding-bottom: 40px
+}
+
+.subhead__1de14 {
+    margin-top: var(--space-8)
 }
 
 .actions__1de14 {
@@ -171,4 +170,4 @@
     margin-bottom: 20px
 }
 
-/*# sourceMappingURL=78524c21403a8993.css.map*/
+/*# sourceMappingURL=45c7d372eb7e9f1f.css.map*/
