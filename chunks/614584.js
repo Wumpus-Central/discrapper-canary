@@ -835,19 +835,18 @@ let eN = !1;
 async function eC(e) {
     if (!(0, m.isDesktop)() || a.A.clips?.loadClipsDirectory == null) return;
     let t = await eS(e);
-    if (y("auto")) {
-        let n = D(e);
-        t.push(...(await eS(n)));
-    }
     if (!eN) {
         eN = !0;
-        let e = t;
-        for (let n of ((t = []), e))
-            n.isCandidate
-                ? eM(n).catch((e) => {
-                      R.nx.error(`Failed to cleanup old clip candidate ${n.id}`, e);
-                  })
-                : t.push(n);
+        let t = [];
+        if (y("auto")) {
+            let n = D(e);
+            t = (await eS(n)).filter((e) => e.isCandidate);
+        }
+        t.forEach((e) =>
+            eM(e).catch((t) => {
+                R.nx.error(`Failed to cleanup old clip candidate ${e.id}`, t);
+            }),
+        );
     }
     r.h.dispatch({ type: "CLIPS_LOAD_DIRECTORY_SUCCESS", clips: t });
 }

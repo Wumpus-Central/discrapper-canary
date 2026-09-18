@@ -1013,7 +1013,7 @@ class e_ extends l.A {
         ),
             this.unscheduleClip(),
             this.sessionEndTimeout.stop(),
-            await this.processClipCandidates(),
+            await this.processClipCandidates(f.Ay.getActiveClipsSession()),
             (this.currentSessionGameKey = null),
             (this.pendingSessionGameKey = null),
             await (0, N.YV)(),
@@ -1023,8 +1023,7 @@ class e_ extends l.A {
         for (let e of this.scheduledClips) e.timeout.stop();
         this.scheduledClips = [];
     }
-    canScheduleClipCandidate(e) {
-        let t = f.Ay.getActiveClipsSession();
+    canScheduleClipCandidate(e, t) {
         if (null == t || !(0, g.jJ)(t.gameId) || c.Ay.getVisibleGame()?.isLauncher === !0) return !1;
         if (null != A.Ay.getVoiceChannelId()) return !0;
         let n = h.default.getCurrentUser(),
@@ -1035,7 +1034,7 @@ class e_ extends l.A {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
             i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
             r = f.Ay.getActiveClipsSession();
-        if (n && !this.canScheduleClipCandidate(e)) return;
+        if (n && !this.canScheduleClipCandidate(e, r)) return;
         let a = (0, C.l)(),
             l = t?.endMs != null ? t.endMs : a,
             o = t?.startMs != null ? t.startMs : l - Number(f.Ay.getSettings().clipsLength),
@@ -1115,7 +1114,7 @@ class e_ extends l.A {
             ),
                 this.sessionEndTimeout.stop(),
                 this.unscheduleClip(),
-                await this.processClipCandidates(),
+                await this.processClipCandidates(f.Ay.getActiveClipsSession()),
                 (this.currentSessionGameKey = null),
                 await (0, N.YV)(),
                 (this.pendingSessionGameKey = null));
@@ -1129,7 +1128,9 @@ class e_ extends l.A {
               (this.pendingSessionGameKey = t),
               this.sessionEndTimeout.start(3e4, () => {
                   this.enqueueSessionTransition("sessionEndTimeout", async () => {
-                      (this.unscheduleClip(), await this.processClipCandidates(), (this.currentSessionGameKey = t));
+                      (this.unscheduleClip(),
+                          await this.processClipCandidates(f.Ay.getActiveClipsSession()),
+                          (this.currentSessionGameKey = t));
                       let n = crypto.randomUUID();
                       ((0, N.Vp)(n, e?.id ?? null),
                           (this.pendingSessionGameKey = null),
@@ -1263,46 +1264,43 @@ class e_ extends l.A {
                   }
               })());
     }
-    async processClipCandidates() {
-        let e = f.Ay.getActiveClipsSession(),
-            t = f.Ay.getClipCandidates(),
-            n = null == e ? [] : t.filter((t) => t.gameSessionId === e.id),
-            i = null == e ? t : t.filter((t) => t.gameSessionId !== e.id),
-            r = this.decisionSignals;
+    async processClipCandidates(e) {
+        let t = e?.candidates ?? [],
+            n = this.decisionSignals;
         if (
             ((this.decisionSignals = (0, O.A)()),
             Y.nx.info(
-                `decider: processClipCandidates \u{2014} sessionId=${e?.id} candidates=${n.length} staleCandidates=${i.length} autoStashEnabled=${f.Ay.isAutoStashEnabled()}`,
+                `decider: processClipCandidates \u{2014} sessionId=${e?.id} candidates=${t.length} autoStashEnabled=${f.Ay.isAutoStashEnabled()}`,
             ),
             f.Ay.isAutoStashEnabled())
         )
             try {
-                let t, i, a;
+                let i, r, a;
                 await this.stashDeciderData(
+                    t,
                     n,
-                    r,
                     e,
-                    ((t = e?.id ?? "no-session"),
-                    (i = u.A.getGame(e?.gameId)?.name),
-                    (a = null != i ? (0, T.A)(i).slice(0, 40) : ""),
-                    "" !== a ? `${t}_${a}` : t),
+                    ((i = e?.id ?? "no-session"),
+                    (r = u.A.getGame(e?.gameId)?.name),
+                    (a = null != r ? (0, T.A)(r).slice(0, 40) : ""),
+                    "" !== a ? `${i}_${a}` : i),
                 );
             } catch (e) {
                 Y.nx.error("decider: auto-stash failed", e);
             }
-        let a = (0, S.Ly)(n, r, E.default.getId(), e?.gameId ?? void 0);
-        Y.nx.info("ranked clips:", a);
-        let s = null;
+        let i = (0, S.Ly)(t, n, E.default.getId(), e?.gameId ?? void 0);
+        Y.nx.info("ranked clips:", i);
+        let r = null;
         try {
-            s = this.createSessionAutoMontage(n, r, e);
+            r = this.createSessionAutoMontage(t, n, e);
         } catch (e) {
             Y.nx.error("decider: auto-montage creation failed", e);
         }
-        let l = a.selected;
-        if (null != s && l.length > 2) {
-            let e = s,
+        let a = i.selected;
+        if (null != r && a.length > 2) {
+            let e = r,
                 t = new Map(
-                    l.map((t) => [
+                    a.map((t) => [
                         t,
                         (function (e, t) {
                             let { startMs: n, endMs: i } = (0, S.tA)(e.clip),
@@ -1317,38 +1315,44 @@ class e_ extends l.A {
                         })(t, e),
                     ]),
                 ),
-                n = l.reduce((e, n) => ((t.get(n) ?? 0) > (t.get(e) ?? 0) ? n : e)),
+                n = a.reduce((e, n) => ((t.get(n) ?? 0) > (t.get(e) ?? 0) ? n : e)),
                 i = t.get(n) ?? 0,
-                r = i > 0 ? n : l.reduce((e, t) => (t.score < e.score ? t : e));
-            ((l = l.filter((e) => e !== r)),
+                s = i > 0 ? n : a.reduce((e, t) => (t.score < e.score ? t : e));
+            ((a = a.filter((e) => e !== s)),
                 Y.nx.info(
                     i > 0
-                        ? `decider: auto-montage replaces the selected clip it already covers most (id=${r.clip.id}, score=${r.score}, overlapMs=${i})`
-                        : `decider: auto-montage replaces worst selected clip (id=${r.clip.id}, score=${r.score})`,
+                        ? `decider: auto-montage replaces the selected clip it already covers most (id=${s.clip.id}, score=${s.score}, overlapMs=${i})`
+                        : `decider: auto-montage replaces worst selected clip (id=${s.clip.id}, score=${s.score})`,
                 ));
         }
-        let o = new Set(l.map((e) => e.clip.id));
+        let s = new Set(
+            a.map((e) => {
+                let { clip: t } = e;
+                return t.id;
+            }),
+        );
         await Promise.all(
-            l.map(async (t) => {
+            a.map(async (t) => {
+                let { clip: n, score: i, audioEvents: r } = t;
                 try {
-                    await (0, N.K7)(t.clip, t.score, e, t.audioEvents);
+                    await (0, N.K7)(n, i, e, r);
                 } catch (e) {
                     Y.nx.error("decider: failed to promote clip candidate", e);
                 }
             }),
         );
-        let d = Promise.resolve();
-        if (null != s)
+        let l = Promise.resolve();
+        if (null != r)
             try {
-                let t = this.buildMontagePlaceholderClip(s, n, e);
-                d = this.startAutoMontageRender(s, t, e);
+                let n = this.buildMontagePlaceholderClip(r, t, e);
+                l = this.startAutoMontageRender(r, n, e);
             } catch (e) {
                 Y.nx.error("decider: failed to start the auto-montage render", e);
             }
-        let c = [...n, ...i].filter((e) => !o.has(e.id));
-        async function _() {
+        let o = t.filter((e) => !s.has(e.id));
+        async function d() {
             await Promise.all(
-                c.map(async (e) => {
+                o.map(async (e) => {
                     try {
                         await (0, N.oH)(e, !1);
                     } catch (e) {
@@ -1357,7 +1361,7 @@ class e_ extends l.A {
                 }),
             );
         }
-        d.finally(_);
+        l.finally(d);
     }
     handleSettingsUpdate() {
         this.timeline.updateLength(Math.max(f.Ay.getSettings().clipsLength, 6e4));
