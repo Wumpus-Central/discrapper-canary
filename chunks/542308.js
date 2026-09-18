@@ -28,8 +28,8 @@ var l,
     R = n(5180),
     y = n(770376),
     M = n(395504),
-    T = n(924985),
-    L = n(734057),
+    L = n(924985),
+    T = n(734057),
     U = n(769765),
     D = n(808728),
     O = n(71393),
@@ -151,7 +151,7 @@ var X = n(488926);
 let q = "DRAGGABLE_GUILD_CHANNEL";
 function Z(e, t) {
     if (null == e || null == t) return null;
-    if (!(0, R.ai)(e)) return L.A.getChannel(t);
+    if (!(0, R.ai)(e)) return T.A.getChannel(t);
     let n = D.Ay.getChannels(e),
         l =
             n[D.I6].find((e) => e.channel.id === t) ??
@@ -161,7 +161,7 @@ function Z(e, t) {
 }
 function J(e, t) {
     if (null != e.parent_id) {
-        let t = L.A.getChannel(e.parent_id);
+        let t = T.A.getChannel(e.parent_id);
         if (null != t) return P.A.can(k.xBc.MANAGE_CHANNELS, t);
     }
     return P.A.can(k.xBc.MANAGE_CHANNELS, t);
@@ -248,9 +248,9 @@ function $(e) {
                     if (
                         ((c = c.filter((e) => {
                             let { id: t } = e,
-                                n = L.A.getChannel(t);
+                                n = T.A.getChannel(t);
                             if (null == n) return !1;
-                            let l = L.A.getChannel(n.parent_id);
+                            let l = T.A.getChannel(n.parent_id);
                             return n.type === k.rbe.GUILD_CATEGORY || null == l
                                 ? P.A.can(k.xBc.MANAGE_CHANNELS, d)
                                 : P.A.can(k.xBc.MANAGE_CHANNELS, l);
@@ -258,17 +258,17 @@ function $(e) {
                         a.parent_id !== r.parentId &&
                             c.find((e) => {
                                 if (e.id !== a.id) return !1;
-                                let t = L.A.getChannel(e.parent_id);
+                                let t = T.A.getChannel(e.parent_id);
                                 if (!(null != t && P.A.can(k.xBc.MANAGE_ROLES, a) && P.A.can(k.xBc.MANAGE_ROLES, t)))
                                     return !0;
                                 let l = (0, b.GY)(a),
                                     i = X.r(a, t, l),
-                                    s = X.r(a, L.A.getChannel(a.parent_id), l);
+                                    s = X.r(a, T.A.getChannel(a.parent_id), l);
                                 return (((null != a.parent_id || i) && (!s || i)) || (n = e), !0);
                             }),
                         null != n)
                     ) {
-                        let e = L.A.getChannel(n.parent_id);
+                        let e = T.A.getChannel(n.parent_id);
                         null != e &&
                             (0, I.openModal)((t) =>
                                 (0, s.jsx)(j.default, {
@@ -288,16 +288,16 @@ function $(e) {
             },
             canDrop(e, t) {
                 let n = t.getItem(),
-                    l = L.A.getChannel(n.id);
+                    l = T.A.getChannel(n.id);
                 if (null == l) return !1;
-                let i = Y(L.A.getChannel(n.id), n.position, e.channel, e.position, n.channelList);
+                let i = Y(T.A.getChannel(n.id), n.position, e.channel, e.position, n.channelList);
                 if (null == i) return !1;
                 if ((0, R.ai)(V.A.getGuildId())) return !0;
                 if (w.Ay.isFavorite(n.guildId, e.channel.id)) return !1;
                 let s = O.A.getGuild(n.guildId);
                 if (null == s) return !1;
-                let r = L.A.getChannel(i.parentId),
-                    a = L.A.getChannel(l.parent_id),
+                let r = T.A.getChannel(i.parentId),
+                    a = T.A.getChannel(l.parent_id),
                     o = P.A.can(k.xBc.MANAGE_CHANNELS, s),
                     d = null != a ? P.A.can(k.xBc.MANAGE_CHANNELS, a) : o,
                     c = null != r ? P.A.can(k.xBc.MANAGE_CHANNELS, r) : o;
@@ -368,7 +368,7 @@ function $(e) {
                             return t.type === k.rbe.GUILD_CATEGORY && null != a[t.id] && 0 === a[t.id].length
                                 ? !!(0, R.ai)(r) ||
                                       (P.A.can(k.xBc.MANAGE_CHANNELS, t) && P.A.can(k.xBc.VIEW_CHANNEL, t))
-                                : !T.A.isCollapsed(t.parent_id);
+                                : !L.A.isCollapsed(t.parent_id);
                         }),
                         guildId: l,
                     };
@@ -522,7 +522,7 @@ function ey(e) {
     });
 }
 var eM = n(632015);
-function eT(e) {
+function eL(e) {
     let { guild: t, selected: n } = e;
     return (0, s.jsx)(ec.G, {
         id: `guild-space-tab-${t.id}`,
@@ -534,7 +534,7 @@ function eT(e) {
         },
     });
 }
-var eL = n(581007),
+var eT = n(581007),
     eU = n(522435),
     eD = n(285406),
     eO = n(582904),
@@ -846,8 +846,8 @@ var tp = n(787541),
     tR = n(134413),
     ty = n(701785),
     tM = n(101611),
-    tT = n(473529),
-    tL = n(978165),
+    tL = n(473529),
+    tT = n(978165),
     tU = n(960253),
     tD = n(770666),
     tO = n(508654),
@@ -910,7 +910,7 @@ let t4 = $(
                     children: g,
                 } = e,
                 m = (0, u.bG)([w.Ay], () => w.Ay.isChannelMuted(l.getGuildId(), l.id)),
-                f = (0, u.bG)([T.A], () => T.A.isCollapsed(l.id)),
+                f = (0, u.bG)([L.A], () => L.A.isCollapsed(l.id)),
                 p = (0, u.bG)([P.A], () => P.A.can(k.xBc.MANAGE_CHANNELS, l)),
                 C = (0, t$.Ay)(l);
             t = null != h ? (c > h ? t5.mU : t5.TR) : t5.fx;
@@ -1455,8 +1455,8 @@ class ny extends r.PureComponent {
     }
 }
 var nM = n(166444),
-    nT = n(790782);
-let nL = $(function (e) {
+    nL = n(790782);
+let nT = $(function (e) {
     let {
             guild: t,
             selectedChannelId: l,
@@ -1469,11 +1469,11 @@ let nL = $(function (e) {
             connectChannelDropTarget: A,
             tabIndex: g,
         } = e,
-        m = (0, u.bG)([L.A, D.Ay], () => {
+        m = (0, u.bG)([T.A, D.Ay], () => {
             let e = D.Ay.getDirectoryChannelIds(t.id);
-            return 0 === e.length ? null : L.A.getChannel(e[0]);
+            return 0 === e.length ? null : T.A.getChannel(e[0]);
         }),
-        f = (0, u.bG)([L.A], () => L.A.getChannel(m?.parent_id)),
+        f = (0, u.bG)([T.A], () => T.A.getChannel(m?.parent_id)),
         p = l === m?.id,
         C = (0, t$.Ay)(m),
         E = (0, u.bG)([P.A], () =>
@@ -1507,7 +1507,7 @@ let nL = $(function (e) {
                 selected: p,
                 onContextMenu: x,
                 forceInteractable: !0,
-                resolvedUnreadSetting: nT.e.ONLY_MENTIONS,
+                resolvedUnreadSetting: nL.e.ONLY_MENTIONS,
                 children: [
                     (0, s.jsx)(nj, { channel: m, tabIndex: g }),
                     (0, s.jsx)(nG, { channel: m, disableManageChannels: a, tabIndex: g }),
@@ -1693,7 +1693,7 @@ let nZ = r.memo(function (e) {
                     return null;
             }
         }, [g]),
-        T = r.useCallback(
+        L = r.useCallback(
             () =>
                 S && null != M
                     ? (0, s.jsx)(nw.A, {
@@ -1707,7 +1707,7 @@ let nZ = r.memo(function (e) {
                     : null,
             [S, M, b, G, R, j],
         );
-    return (0, s.jsxs)(s.Fragment, { children: [(0, s.jsx)(nK, { ref: i, children: y }), !o && !d && !c && T()] });
+    return (0, s.jsxs)(s.Fragment, { children: [(0, s.jsx)(nK, { ref: i, children: y }), !o && !d && !c && L()] });
 });
 var nJ = n(740426),
     n$ = n(826673),
@@ -1722,11 +1722,11 @@ function n2(e) {
         o = (0, tS.yK)([n1.A], () =>
             Array.from(n1.A.getNewChannelIds(t.id)).filter((e) => n1.A.shouldIndicateNewChannel(t.id, e)),
         ),
-        d = (0, tS.bG)([n3.Ay], () => n3.Ay.hasUnread(t.id, nT.P.GUILD_ONBOARDING_QUESTION)),
+        d = (0, tS.bG)([n3.Ay], () => n3.Ay.hasUnread(t.id, nL.P.GUILD_ONBOARDING_QUESTION)),
         c = o.length > tN.rR,
         u = (0, tS.bG)([nQ.A, n3.Ay], () => {
             let e = nQ.A.lastFetchedAt(t.id),
-                n = n3.Ay.lastMessageId(t.id, nT.P.GUILD_ONBOARDING_QUESTION);
+                n = n3.Ay.lastMessageId(t.id, nL.P.GUILD_ONBOARDING_QUESTION);
             if (null == n) return !1;
             let l = tA.default.extractTimestamp(n);
             return null != e && e > l;
@@ -2025,20 +2025,20 @@ function ly(e) {
     return null != e && e > 0;
 }
 var lM = n(405018),
-    lT = n(428689),
-    lL = n(525093);
+    lL = n(428689),
+    lT = n(525093);
 function lU(e) {
     let { total: t, users: n, videoLimit: l } = e;
     return (0, s.jsxs)("div", {
-        className: lL.iE,
+        className: lT.iE,
         children: [
             (0, s.jsxs)(e3.E, {
                 tag: "span",
                 color: "text-subtle",
                 variant: "text-xs/medium",
-                className: ew()(lL.VV, { [lL.Ki]: l, [lL.$G]: n >= 100 }),
+                className: ew()(lT.VV, { [lT.Ki]: l, [lT.$G]: n >= 100 }),
                 children: [
-                    l ? (0, s.jsx)(lT.VideoIcon, { size: "md", color: "currentColor", className: lL.LB }) : null,
+                    l ? (0, s.jsx)(lL.VideoIcon, { size: "md", color: "currentColor", className: lT.LB }) : null,
                     n.toString().padStart(2, "0"),
                 ],
             }),
@@ -2046,7 +2046,7 @@ function lU(e) {
                 tag: "span",
                 color: "text-subtle",
                 variant: "text-xs/medium",
-                className: ew()(lL.X5, { [lL.$G]: t >= 100 }),
+                className: ew()(lT.X5, { [lT.$G]: t >= 100 }),
                 children: t.toString().padStart(2, "0"),
             }),
         ],
@@ -2187,7 +2187,7 @@ let lk = r.memo(function (e) {
             ),
             N = r.useCallback(
                 (e) => {
-                    let l = L.A.getChannel(t.id);
+                    let l = T.A.getChannel(t.id);
                     null != l &&
                         (0, e9.L3)(e, async () => {
                             let { default: e } = await Promise.all([
@@ -2302,7 +2302,7 @@ let lk = r.memo(function (e) {
         let { channel: t, selectedChannel: n, selectedVoiceChannelId: l, sortedThreadIds: i, withGuildIcon: r } = e,
             a = (0, t$.Ay)(t),
             { density: o } = (0, C.wR)(),
-            d = (0, u.yK)([L.A], () => i.map((e) => L.A.getChannel(e)).filter(tu.Vq), [i]),
+            d = (0, u.yK)([T.A], () => i.map((e) => T.A.getChannel(e)).filter(tu.Vq), [i]),
             c = (0, u.bG)([tc.Ay], () => {
                 let e = d[d.length - 1];
                 if (null == e) return 0;
@@ -2583,7 +2583,7 @@ function iI(e) {
     if (o) return (0, s.jsx)(im, { locked: d });
     if (c)
         return (0, s.jsx)(ea.Lp, { text: em.intl.string(em.t.y2b7CA), color: h.A.colors.BADGE_BACKGROUND_BRAND.css });
-    if (!A && g === nT.e.ALL_MESSAGES && t.isForumLikeChannel() && null != I && I > 0)
+    if (!A && g === nL.e.ALL_MESSAGES && t.isForumLikeChannel() && null != I && I > 0)
         return (0, s.jsx)(e3.E, {
             variant: "text-xs/semibold",
             color: "text-brand",
@@ -2627,11 +2627,21 @@ class ib extends ny {
         return ep.fx;
     }
     handleClick = () => {
-        let { channel: e, locked: t, connected: n, unverifiedAccount: l, isSuggestedSection: i } = this.props,
-            s = e.getGuildId();
-        (null != s && (0, lq.V)(s) && (0, lX.Ze)(s),
+        let {
+                channel: e,
+                locked: t,
+                connected: n,
+                unverifiedAccount: l,
+                isSuggestedSection: i,
+                openChatOnClick: s,
+            } = this.props,
+            r = e.getGuildId();
+        (null != r && (0, lq.V)(r) && (0, lX.Ze)(r),
             l && this.setState({ shouldShowGuildVerificationPopout: !0 }),
-            t || n || e.isRoleSubscriptionTemplatePreviewChannel() || (0, it.av)(e),
+            t ||
+                n ||
+                e.isRoleSubscriptionTemplatePreviewChannel() ||
+                (s ? lz.A.updateChatOpen(e.id, !0) : (0, it.av)(e)),
             __OVERLAY__ || (0, ie.iN)(e.id, i ? { source: l8.A.CHANNEL_LIST_SUGGESTED_SECTION } : void 0));
     };
     handleClickChat = () => {
@@ -2810,8 +2820,8 @@ function ij(e) {
         { guild: i, channel: r, disableSorting: a, isFavoriteCategory: o, collapsed: d, voiceStates: c } = e,
         h = (0, u.cf)([n3.Ay], () => ({ unread: n3.Ay.hasUnread(r.id), mentionCount: n3.Ay.getMentionCount(r.id) })),
         A = (0, u.bG)([w.Ay], () => w.Ay.resolveUnreadSetting(r)),
-        g = (0, u.cf)([L.A, l2.A, P.A], () => {
-            let e = L.A.getChannel(r.parent_id),
+        g = (0, u.cf)([T.A, l2.A, P.A], () => {
+            let e = T.A.getChannel(r.parent_id),
                 t = l2.A.getCheck(r.guild_id);
             return {
                 canManageChannel: null != i && P.A.can(k.xBc.MANAGE_CHANNELS, r),
@@ -2825,7 +2835,7 @@ function ij(e) {
                 unverifiedAccount: !t.canChat,
             };
         }),
-        m = (0, u.bG)([T.A], () => T.A.isCollapsed(r.parent_id)),
+        m = (0, u.bG)([L.A], () => L.A.isCollapsed(r.parent_id)),
         f =
             ((t = r.id),
             (n = (0, ia.A)(t)),
@@ -2855,7 +2865,8 @@ function ij(e) {
             needSubscriptionToAccess: x,
             enableConnectedUserLimit: _ || (r.userLimit > 0 && r.userLimit < k.RCc),
         }),
-        S = e.connected && null == I;
+        S = e.connected && null == I,
+        b = i.features.has(k.GuildFeatures.INTERNAL_EMPLOYEE_ONLY);
     return (0, s.jsx)(iG, {
         categoryCollapsed: m,
         connectAction: f,
@@ -2868,6 +2879,7 @@ function ij(e) {
         ...e,
         isFavoriteSuggestion: o && !N,
         forceShowButtons: S,
+        openChatOnClick: b,
         channelInfo: I,
         resolvedUnreadSetting: A,
     });
@@ -2932,7 +2944,7 @@ let iR = $(
                             onContextMenu: this.handleContextMenu,
                             connectDragPreview: r ? i : null,
                             "aria-label": (0, lY.Ay)({ channel: e }),
-                            resolvedUnreadSetting: nT.e.ONLY_MENTIONS,
+                            resolvedUnreadSetting: nL.e.ONLY_MENTIONS,
                             children: [this.renderInviteButton(), this.renderEditButton()],
                         }),
                     });
@@ -2942,8 +2954,8 @@ let iR = $(
     ),
     iy = r.memo(function (e) {
         let { channel: t, guild: n, disableSorting: l } = e,
-            i = (0, u.cf)([L.A, P.A], () => {
-                let e = L.A.getChannel(t.parent_id);
+            i = (0, u.cf)([T.A, P.A], () => {
+                let e = T.A.getChannel(t.parent_id);
                 return {
                     canManageChannel: P.A.can(k.xBc.MANAGE_CHANNELS, t),
                     canReorderChannel:
@@ -2953,8 +2965,8 @@ let iR = $(
         return (0, s.jsx)(iR, { ...i, ...e });
     });
 var iM = n(172218),
-    iT = n(811024),
-    iL = n(323073);
+    iL = n(811024),
+    iT = n(323073);
 function iU(e) {
     if (null == e) return null;
     switch (e.type) {
@@ -3633,8 +3645,8 @@ function sr(e) {
             isLowImportanceMention: n3.Ay.getIsMentionLowImportance(t.id),
         })),
         A = (0, u.bG)([w.Ay], () => w.Ay.resolveUnreadSetting(t)),
-        g = (0, u.cf)([L.A, P.A], () => {
-            let e = L.A.getChannel(t.parent_id);
+        g = (0, u.cf)([T.A, P.A], () => {
+            let e = T.A.getChannel(t.parent_id);
             return {
                 canManageChannel: P.A.can(k.xBc.MANAGE_CHANNELS, t),
                 canReorderChannel:
@@ -3646,8 +3658,8 @@ function sr(e) {
         m = (0, u.bG)([n1.A], () => n1.A.shouldIndicateNewChannel(n.id, t.id)),
         { needSubscriptionToAccess: f, isSubscriptionGated: p } = (0, lx.A)(t.id),
         C = (0, u.bG)([w.Ay], () => w.Ay.isFavorite(n.id, t.id)),
-        E = (0, iL.ni)(t),
-        x = (0, iT.Gp)(t.id),
+        E = (0, iT.ni)(t),
+        x = (0, iL.Gp)(t.id),
         N = iI({
             channel: t,
             isChannelCollapsed: !1,
@@ -3702,7 +3714,7 @@ let su = { mode: "hidden", mentionCount: 0, targetChannelId: null },
     sA = {},
     sg = {};
 function sm(e) {
-    let t = L.A.getChannel(e);
+    let t = T.A.getChannel(e);
     return (
         !(null == t || null == t.getGuildId() || t.isGuildVocal()) &&
         !(t.isThread() ? lR.A.isMuted(t.id) : w.Ay.isChannelMuted(t.getGuildId(), t.id)) &&
@@ -3710,7 +3722,7 @@ function sm(e) {
     );
 }
 function sf(e) {
-    let t = L.A.getChannel(e);
+    let t = T.A.getChannel(e);
     if (null == t) return !1;
     let n = t.getGuildId();
     if (null == n) return !1;
@@ -3796,21 +3808,21 @@ function sx(e) {
 }
 function sN(e) {
     let { id: t } = e,
-        n = L.A.getChannel(t);
+        n = T.A.getChannel(t);
     if (null == n) return !1;
     let l = O.A.getGuild(n.guild_id);
     return null != l && !!l.features.has(k.GuildFeatures.COMMUNITY) && sE(n.guild_id);
 }
 function s_(e) {
     let { channel: t } = e,
-        n = L.A.getChannel(t.id);
+        n = T.A.getChannel(t.id);
     if (null == n) return !1;
     let l = O.A.getGuild(t.guild_id);
     return null != l && !!l.features.has(k.GuildFeatures.COMMUNITY) && sE(n.guild_id);
 }
 function sI(e) {
     let { channelId: t } = e,
-        n = L.A.getChannel(t);
+        n = T.A.getChannel(t);
     if (null == n) return !1;
     let l = O.A.getGuild(n.guild_id);
     return (
@@ -3824,7 +3836,7 @@ function sS(e) {
 class sb extends u.Ay.Store {
     static displayName = "ChannelListUnreadsStore";
     initialize() {
-        this.waitFor(t_.A, L.A, O.A, lR.A, n3.Ay, V.A, tc.Ay, tg.A, w.Ay);
+        this.waitFor(t_.A, T.A, O.A, lR.A, n3.Ay, V.A, tc.Ay, tg.A, w.Ay);
     }
     getUnreadStateForGuildId(e) {
         return sA[e] ?? sh;
@@ -3849,7 +3861,7 @@ let sG = new sb(e7.h, {
             o()(t)
                 .map((e) => {
                     let { channelId: t } = e;
-                    return L.A.getChannel(t)?.guild_id;
+                    return T.A.getChannel(t)?.guild_id;
                 })
                 .filter(tu.Vq)
                 .uniq()
@@ -4010,9 +4022,9 @@ function sy(e) {
     });
 }
 var sM = n(310953),
-    sT = n(173860);
-function sL(e) {
-    let t = L.A.getChannel(e);
+    sL = n(173860);
+function sT(e) {
+    let t = T.A.getChannel(e);
     return (
         null != t &&
         null != t.getGuildId() &&
@@ -4021,7 +4033,7 @@ function sL(e) {
     );
 }
 function sU(e) {
-    let t = L.A.getChannel(e);
+    let t = T.A.getChannel(e);
     if (null == t) return !1;
     let n = t.getGuildId();
     if (null == n) return !1;
@@ -4033,7 +4045,7 @@ let sD = r.forwardRef(function (e, t) {
     let { guildId: n, guildChannels: l, guildChannelsVersion: i, ...r } = e,
         a = (0, sM.W)(n, l, i, { withVoiceChannels: !1 }, { ignoreRecents: !0 }),
         o = (0, u.bG)([sd.A], () => sd.A.isFocused());
-    return (0, s.jsx)(sT.A, { ref: t, ...r, isUnread: sL, isMentioned: sU, items: a, animate: o });
+    return (0, s.jsx)(sL.A, { ref: t, ...r, isUnread: sT, isMentioned: sU, items: a, animate: o });
 });
 var sO = n(81466);
 function sP(e) {
@@ -4041,8 +4053,8 @@ function sP(e) {
         { hasUnread: i, mentionCount: r } = (0, u.cf)(
             [n3.Ay],
             () => ({
-                hasUnread: n3.Ay.hasUnread(t.id, nT.P.GUILD_EVENT),
-                mentionCount: n3.Ay.getMentionCount(t.id, nT.P.GUILD_EVENT),
+                hasUnread: n3.Ay.hasUnread(t.id, nL.P.GUILD_EVENT),
+                mentionCount: n3.Ay.getMentionCount(t.id, nL.P.GUILD_EVENT),
             }),
             [t.id],
         ),
@@ -4213,7 +4225,7 @@ function s6(e) {
 }
 function s4(e) {
     let { channel: t, isConnected: n } = e,
-        { enableHangoutWindow: l } = (0, eL.Dm)({ guildId: t.guild_id, location: "HangoutWindow" }),
+        { enableHangoutWindow: l } = (0, eT.Dm)({ guildId: t.guild_id, location: "HangoutWindow" }),
         i = (0, eU.W6)(t),
         a = n && i,
         o = t.voiceHangout,
@@ -4248,7 +4260,7 @@ var s8 = n(290863),
 function ra(e) {
     let { channel: t, connected: n, hovered: l, subtitle: i, onClick: a } = e,
         o = (0, rl.G)((0, rn.l)(t)),
-        { enableHangoutWindow: d } = (0, eL.Dm)({ guildId: t.guild_id, location: "VoiceChannelStatus" }),
+        { enableHangoutWindow: d } = (0, eT.Dm)({ guildId: t.guild_id, location: "VoiceChannelStatus" }),
         c = d && (0, eU.lr)(t),
         u = null != o && o.length > 0,
         h = (0, rt.Ay)(t, !0),
@@ -4594,8 +4606,8 @@ function rc(e) {
         } = e,
         d = (0, u.cf)([n3.Ay], () => ({ unread: n3.Ay.hasUnread(n.id), mentionCount: n3.Ay.getMentionCount(n.id) })),
         c = (0, u.bG)([w.Ay], () => w.Ay.resolveUnreadSetting(n)),
-        h = (0, u.cf)([L.A, l2.A, P.A], () => {
-            let e = L.A.getChannel(n.parent_id),
+        h = (0, u.cf)([T.A, l2.A, P.A], () => {
+            let e = T.A.getChannel(n.parent_id),
                 i = l2.A.getCheck(n.guild_id);
             return {
                 canManageChannel: P.A.can(k.xBc.MANAGE_CHANNELS, n),
@@ -4646,7 +4658,7 @@ function rc(e) {
             enableConnectedUserLimit: !0,
             enableActivities: !0,
         }),
-        T = S && null == M;
+        L = S && null == M;
     return (0, s.jsx)(rd, {
         channelName: p,
         embeddedApps: m,
@@ -4661,7 +4673,7 @@ function rc(e) {
         ...e,
         connected: S,
         isFavoriteSuggestion: i && !I,
-        forceShowButtons: T,
+        forceShowButtons: L,
         channelInfo: M,
         resolvedUnreadSetting: c,
         hasChannelInfo: null != M,
@@ -4879,7 +4891,7 @@ class rh extends r.PureComponent {
                     return (
                         (function (e) {
                             let { category: t, voiceStates: n, selectedChannelId: l, selectedVoiceChannelId: i } = e;
-                            return !0 !== T.A.isCollapsed(t.record.id)
+                            return !0 !== L.A.isCollapsed(t.record.id)
                                 ? []
                                 : t.getChannelRecords().filter((e) => {
                                       if (!P.A.can(k.xBc.VIEW_CHANNEL, e)) return !1;
@@ -4941,7 +4953,7 @@ class rh extends r.PureComponent {
                     (a += t + h.A.space.SPACE_XS.resolve({ density: r })),
                     !d.isCollapsed && !c.isCollapsed)
                 ) {
-                    let { enableHangoutWindow: e } = (0, eL.kY)({
+                    let { enableHangoutWindow: e } = (0, eT.kY)({
                         guildId: d.record.guild_id,
                         location: "ChannelList",
                     });
@@ -5038,7 +5050,7 @@ class rh extends r.PureComponent {
                     let i = e.getRows();
                     return (0, s.jsx)(ta, { guild: l, withMargin: i.length > 1 }, tk.n.GUILD_PREMIUM_PROGRESS_BAR);
                 case tk.n.GUILD_SPACE:
-                    return (0, s.jsx)(eT, { guild: l, selected: a === eh.VV.GUILD_SPACE }, tk.n.GUILD_SPACE);
+                    return (0, s.jsx)(eL, { guild: l, selected: a === eh.VV.GUILD_SPACE }, tk.n.GUILD_SPACE);
                 case tk.n.GUILD_HOME:
                     return (0, s.jsx)(n5, { guild: l, selected: a === eh.VV.GUILD_HOME }, tk.n.GUILD_HOME);
                 case tk.n.GUILD_SCHEDULED_EVENTS:
@@ -5069,7 +5081,7 @@ class rh extends r.PureComponent {
                     );
                 case tk.n.GUILD_DIRECTORY:
                     return (0, s.jsx)(
-                        nL,
+                        nT,
                         { guild: l, selectedChannelId: a, disableManageChannels: h },
                         tk.n.GUILD_DIRECTORY,
                     );
@@ -5386,8 +5398,8 @@ let rA = (e) => {
     let { guildId: t, selectedChannelId: n, selectedVoiceChannelId: l } = e,
         i = (0, u.bG)([Q.Ay], () => Q.Ay.keyboardModeEnabled),
         { analyticsLocations: a } = (0, et.Ay)(ee.A.GUILD_CHANNEL_LIST),
-        o = (0, u.bG)([L.A], () => L.A.getChannel(n)),
-        h = (0, u.bG)([L.A], () => L.A.getChannel(l)),
+        o = (0, u.bG)([T.A], () => T.A.getChannel(n)),
+        h = (0, u.bG)([T.A], () => T.A.getChannel(l)),
         A = (0, u.bG)([V.A], () => V.A.getGuildId()),
         g = (0, M.jN)(t),
         m = r.useRef(null),
@@ -5432,14 +5444,14 @@ let rA = (e) => {
     }, [n, N]);
     let _ = (function (e) {
         let [t] = (0, u.bG)(
-            [tg.A, L.A, td.A],
+            [tg.A, T.A, td.A],
             () => {
                 let t;
                 return [
                     (t = (0, R.ai)(e)
                         ? tA.default
                               .keys(td.A.getFavoriteChannels())
-                              .map((e) => L.A.getChannel(e))
+                              .map((e) => T.A.getChannel(e))
                               .filter(tu.Vq)
                               .filter((e) => e.isGuildStageVoice())
                         : tg.A.getChannels(e)).reduce((e, t) => {
@@ -5503,10 +5515,10 @@ function rg(e) {
                 r = (0, tU.vz)(e.id),
                 a = (0, tb.r)(e),
                 o = (0, tH.jz)(e),
-                d = (0, tT.d)(e.id),
+                d = (0, tL.d)(e.id),
                 c = (0, tS.bG)([ty.h], () => ty.h.getNewMemberActions(e.id), [e.id]),
                 h = (0, tB.by)(e, "useGuildActionRows"),
-                A = (0, tL.A)(e.id),
+                A = (0, tT.A)(e.id),
                 g = (0, tM.jY)(e.id),
                 m = (0, tR.fw)(e.id),
                 f = (0, tP.Uq)(e.id, "useGuildActionRows"),
