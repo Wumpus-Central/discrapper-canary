@@ -4,6 +4,12 @@ let a = [
         date: "2026-09-18",
         platforms: ["mobile"],
         summary:
+            "On phones, Select to edit in the builder\u2019s header lets you tap a part of your app\u2019s Frame, see what you picked, and tell Conjure what should change there.",
+    },
+    {
+        date: "2026-09-18",
+        platforms: ["mobile"],
+        summary:
             "On phones, a project\u2019s menu now has Refresh App and Close for the running Frame, Refresh Profile Widget, and a Connect row for each account your app asks to link, as on desktop; the Frame also reloads onto the newest build after every deploy.",
     },
     {
