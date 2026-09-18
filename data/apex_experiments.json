@@ -5566,6 +5566,18 @@
     }
   },
   {
+    "kind": "user",
+    "name": "2026-09-referral-trial-cta",
+    "defaultConfig": false,
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": true
+    }
+  },
+  {
     "name": "2026-09-single-cpu-copy",
     "kind": "user",
     "defaultConfig": {
