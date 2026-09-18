@@ -1,15 +1,33 @@
 n.d(t, { B: () => s, MZ: () => o, TH: () => l, tn: () => i });
 let a = [
     {
-        date: "2026-09-17",
+        date: "2026-09-18",
         platforms: ["desktop", "mobile"],
         summary: "What\u2019s new keeps its three newest lines and adds View all, which opens the whole history.",
     },
     {
-        date: "2026-09-17",
+        date: "2026-09-18",
         platforms: ["desktop", "mobile"],
         summary:
             'The working status above the chat box now reads simply "Conjuring\u2026" or "Thinking\u2026", without repeating the name in front.',
+    },
+    {
+        date: "2026-09-18",
+        platforms: ["mobile"],
+        summary:
+            "On phones, Conjure can now drive and look at your app\u2019s Frame while it works; the strip says Controlling and the app holds your taps until it is done.",
+    },
+    {
+        date: "2026-09-17",
+        platforms: ["mobile"],
+        summary:
+            "On phones, install your app or review its new permissions right from the builder; publishing no longer stops at a notice you could only act on from desktop.",
+    },
+    {
+        date: "2026-09-17",
+        platforms: ["mobile"],
+        summary:
+            "On phones, switch between the chat and your app at the top of the builder; the app keeps running while you talk to Conjure, a bot app opens its DM right there, and a profile card shows as it will on your profile.",
     },
     {
         date: "2026-09-17",

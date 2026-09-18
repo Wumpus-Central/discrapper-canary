@@ -1,11 +1,10 @@
-n.d(t, { S: () => r });
-var i = n(940107);
-function r(e, t, n) {
-    let r;
-    return (0, i.W)(e, "control", n, {
+n.d(t, { S: () => l });
+var i = n(762399),
+    r = n(940107);
+function l(e, t, n) {
+    return (0, r.W)(e, "control", n, {
         id: t,
-        timeoutMs:
-            ("number" == typeof (r = n.timeoutMs) && isFinite(r) && r > 0 ? Math.min(Math.floor(r), 2e4) : 5e3) + 4e3,
+        timeoutMs: (0, i.d5)(n),
         retryMs: 400,
         sourceMatch: "origin",
         label: "control",
@@ -15,7 +14,7 @@ function r(e, t, n) {
                 ? { status: "completed", response: e }
                 : { status: "failed", message: "the preview frame returned a malformed control result" },
         (e) =>
-            e instanceof i.f
+            e instanceof i.fq
                 ? { status: "failed", message: "the preview frame did not answer the control batch" }
                 : { status: "unavailable" },
     );
