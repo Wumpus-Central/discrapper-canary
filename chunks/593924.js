@@ -1,20 +1,20 @@
 (o.r(e),
     o.d(e, {
-        CheckpointNumbersCenterAlignedRive: () => L,
-        UnlockRive: () => q.V,
-        ThemeAwareNitroWishlistingWumpusRive: () => z.u,
+        CheckpointNumbersCenterAlignedRive: () => P,
+        UnlockRive: () => Z.V,
+        ThemeAwareNitroWishlistingWumpusRive: () => K.u,
         CheckpointKnickKnacksRive: () => h,
         AnimatedNitroOrbRewardsRive: () => i.Z,
-        ServerHubPerkRive: () => J,
+        ServerHubPerkRive: () => Q.f,
         FistBumpRive: () => B.l,
         PerfTestRive: () => T.Q,
-        NitroRewardsMouseRive: () => x.C,
+        NitroRewardsMouseRive: () => G.C,
         BoostGemLevelTwoRive: () => b.J,
         GameServerHostingRive: () => N.E,
-        CheckpointFriendsRive: () => p,
+        CheckpointFriendsRive: () => k,
         BoostGemLevelOneRive: () => l.t,
-        TabHoverGradientRive: () => K.U,
-        WandAndSparklesRive: () => ro,
+        TabHoverGradientRive: () => H.U,
+        WandAndSparklesRive: () => rr,
         BoostThisServerRive: () => c.D,
         NitroQuestOrbsMultiplierRive: () => E.E,
         BoostGemLevelThreeRive: () => s.z,
@@ -26,13 +26,13 @@
         CheckpointCardRive: () => A,
         BadgesCoachmarkRive: () => n.U,
         CheckpointNumbersLeftAlignedRive: () => U,
-        PulseGradientRive: () => H.M,
-        VibingWumpusBackgroundRive: () => $.R,
+        PulseGradientRive: () => X.M,
+        VibingWumpusBackgroundRive: () => q.R,
         JetpackWumpusWithTrinketsRive: () => _.e,
         GlowButtonRive: () => O.s,
-        TeenScreenTimeRive: () => Z.w,
-        NitroWishlistingWumpusRive: () => D,
-        VibingWumpusRive: () => Y.Z,
+        TeenScreenTimeRive: () => J.w,
+        NitroWishlistingWumpusRive: () => j,
+        VibingWumpusRive: () => z.Z,
     }));
 var t = o(402386),
     i = o(567341),
@@ -391,7 +391,7 @@ let S =
             ConnectorColor: "color",
         },
     };
-function p(r) {
+function k(r) {
     let { artboard: e = "MAIN", stateMachine: o, ...t } = r,
         { status: i, buffer: a } = (0, v.CE)(S),
         n = (0, v.m2)(S);
@@ -406,8 +406,8 @@ function p(r) {
               ...t,
           });
 }
-p.riveSrc = S;
-let k =
+k.riveSrc = S;
+let p =
         "https://cdn.discordapp.com/assets/content/756c8e37a14fc267712502cc0892be86b2e98d9132fe075f9ba75fd9e9a0aa48.riv",
     C = {
         "Checkpoint Intro Desktop": {
@@ -440,8 +440,8 @@ let k =
     };
 function V(r) {
     let { artboard: e = "Checkpoint Intro Desktop", stateMachine: o, ...t } = r,
-        { status: i, buffer: a } = (0, v.CE)(k),
-        n = (0, v.m2)(k);
+        { status: i, buffer: a } = (0, v.CE)(p),
+        n = (0, v.m2)(p);
     return i === v.BW.Loading
         ? null
         : (0, d.jsx)(m.w, {
@@ -453,7 +453,7 @@ function V(r) {
               ...t,
           });
 }
-V.riveSrc = k;
+V.riveSrc = p;
 let M =
         "https://cdn.discordapp.com/assets/content/b938a7ed497f825ee131572ca37f34e5c674b47edec8a88661d2a7d380966f1c.riv",
     y = {
@@ -490,10 +490,10 @@ function h(r) {
 h.riveSrc = M;
 let w =
         "https://cdn.discordapp.com/assets/content/ce09db302fba4b6308baf379d0cbd02ee57cbf2503a998192e31df9637cc161e.riv",
-    P = {
+    L = {
         Artboard: { reducedMotion: "boolean", TextColor: "color", "Fire CountUp": "trigger", DisplayValue: "number" },
     };
-function L(r) {
+function P(r) {
     let { artboard: e = "Artboard", stateMachine: o, ...t } = r,
         { status: i, buffer: a } = (0, v.CE)(w),
         n = (0, v.m2)(w);
@@ -504,11 +504,11 @@ function L(r) {
               buffer: a,
               artboard: e,
               stateMachine: o,
-              artboardProperties: P,
+              artboardProperties: L,
               ...t,
           });
 }
-L.riveSrc = w;
+P.riveSrc = w;
 let I =
         "https://cdn.discordapp.com/assets/content/b5a7e4dd53b173c7d1f38ddbd65142267a79529a228987d184c858c16c21ddf6.riv",
     F = {
@@ -537,14 +537,14 @@ var R = o(908803),
     _ = o(970002),
     W = o(149282),
     E = o(122720),
-    x = o(907581);
-let G =
+    G = o(907581);
+let x =
         "https://cdn.discordapp.com/assets/content/7d79185ce3c3038667277ee16ba8cb835b1b012f20b92ef5428b9166c5347c59.riv",
-    j = { "Nitro Wishlist": { reducedMotion: "boolean" } };
-function D(r) {
+    D = { "Nitro Wishlist": { reducedMotion: "boolean" } };
+function j(r) {
     let { artboard: e = "Nitro Wishlist", stateMachine: o, ...t } = r,
-        { status: i, buffer: a } = (0, v.CE)(G),
-        n = (0, v.m2)(G);
+        { status: i, buffer: a } = (0, v.CE)(x),
+        n = (0, v.m2)(x);
     return i === v.BW.Loading
         ? null
         : (0, d.jsx)(m.w, {
@@ -552,45 +552,27 @@ function D(r) {
               buffer: a,
               artboard: e,
               stateMachine: o,
-              artboardProperties: j,
+              artboardProperties: D,
               ...t,
           });
 }
-D.riveSrc = G;
+j.riveSrc = x;
 var T = o(102079),
-    H = o(440166);
-let X =
-        "https://cdn.discordapp.com/assets/content/67d52916de05ae5374f3644778bee66c05ae690f07026521e7d55ff97dd80850.riv",
-    Q = { "Server Hub Perk": { on: "boolean", reducedMotion: "boolean" }, _Asset_Pencil: {} };
-function J(r) {
-    let { artboard: e = "Server Hub Perk", stateMachine: o, ...t } = r,
-        { status: i, buffer: a } = (0, v.CE)(X),
-        n = (0, v.m2)(X);
-    return i === v.BW.Loading
-        ? null
-        : (0, d.jsx)(m.w, {
-              ...(n ? { key: "override" } : {}),
-              buffer: a,
-              artboard: e,
-              stateMachine: o,
-              artboardProperties: Q,
-              ...t,
-          });
-}
-J.riveSrc = X;
-var K = o(549254),
-    Z = o(632679),
-    z = o(583094),
-    q = o(242644),
-    Y = o(773350),
-    $ = o(615429);
-let rr =
+    X = o(440166),
+    Q = o(93675),
+    H = o(549254),
+    J = o(632679),
+    K = o(583094),
+    Z = o(242644),
+    z = o(773350),
+    q = o(615429);
+let Y =
         "https://cdn.discordapp.com/assets/content/026e9c119f280f5edf3ba486ba20c26e21c5dac14dfedd0a238373298bf289f0.riv",
-    re = { "Surprise Me": { fill: "color" } };
-function ro(r) {
+    $ = { "Surprise Me": { fill: "color" } };
+function rr(r) {
     let { artboard: e = "Surprise Me", stateMachine: o, ...t } = r,
-        { status: i, buffer: a } = (0, v.CE)(rr),
-        n = (0, v.m2)(rr);
+        { status: i, buffer: a } = (0, v.CE)(Y),
+        n = (0, v.m2)(Y);
     return i === v.BW.Loading
         ? null
         : (0, d.jsx)(m.w, {
@@ -598,8 +580,8 @@ function ro(r) {
               buffer: a,
               artboard: e,
               stateMachine: o,
-              artboardProperties: re,
+              artboardProperties: $,
               ...t,
           });
 }
-ro.riveSrc = rr;
+rr.riveSrc = Y;
