@@ -10,7 +10,7 @@ function a(e) {
                 let t = window.GLOBAL_ENV.ACTIVITY_APPLICATION_HOST;
                 if (null == t) return null;
                 if (t.startsWith("//")) {
-                    let n = new URL(t, window.location.href);
+                    let n = new URL(t, `${window.location.protocol}//${window.location.host}`);
                     return ((n.hostname = `${e}.${n.hostname}`), n.origin);
                 }
                 return `https://${e}.${t}`;
