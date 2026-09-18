@@ -1,52 +1,74 @@
 n.d(t, {
-    CN: () => K,
-    Cx: () => ea,
-    Fv: () => T,
-    GU: () => w,
-    Gy: () => q,
-    LX: () => p,
-    Me: () => en,
-    Mu: () => M,
-    Ot: () => S,
-    P4: () => m,
-    QK: () => ed,
-    RC: () => J,
-    SC: () => $,
-    UY: () => el,
-    U_: () => z,
-    V0: () => L,
-    VP: () => k,
-    Vi: () => C,
-    Y2: () => Y,
-    YM: () => V,
-    _1: () => et,
-    _S: () => es,
-    cM: () => x,
-    dV: () => B,
-    gC: () => X,
-    iJ: () => H,
-    k9: () => Q,
-    kd: () => R,
-    l_: () => y,
-    mO: () => eo,
-    mY: () => ei,
-    nQ: () => ec,
-    nm: () => b,
-    nx: () => O,
-    pZ: () => Z,
-    rb: () => eu,
-    rv: () => W,
-    s3: () => U,
-    sT: () => g,
-    sc: () => D,
-    sz: () => N,
-    tS: () => er,
-    td: () => G,
-    ut: () => F,
-    vZ: () => P,
-    yz: () => ee,
-    zj: () => v,
-    zq: () => j,
+    CN: () => $,
+    Cx: () => el,
+    DX: () => eO,
+    EC: () => eD,
+    Ew: () => eu,
+    Fv: () => g,
+    G$: () => eS,
+    GU: () => G,
+    Gy: () => Z,
+    HA: () => ev,
+    Hz: () => ey,
+    L4: () => ef,
+    LX: () => T,
+    Me: () => er,
+    Mu: () => P,
+    Ot: () => N,
+    P4: () => S,
+    QK: () => eA,
+    QY: () => en,
+    Qw: () => eL,
+    RC: () => ee,
+    SC: () => z,
+    T7: () => eI,
+    UY: () => e_,
+    U_: () => X,
+    V0: () => y,
+    VP: () => F,
+    Vi: () => O,
+    Y2: () => K,
+    YK: () => eC,
+    YM: () => H,
+    _1: () => ei,
+    _9: () => eN,
+    _S: () => eo,
+    ad: () => ed,
+    cM: () => k,
+    dV: () => V,
+    gC: () => q,
+    iJ: () => j,
+    k9: () => J,
+    kd: () => L,
+    ku: () => em,
+    l_: () => D,
+    mO: () => eE,
+    mY: () => ea,
+    nQ: () => eP,
+    nS: () => eR,
+    nm: () => M,
+    nx: () => R,
+    p4: () => ec,
+    pZ: () => Q,
+    pk: () => eM,
+    rD: () => eT,
+    rb: () => eU,
+    rv: () => Y,
+    s3: () => w,
+    sL: () => ep,
+    sT: () => m,
+    sc: () => v,
+    sz: () => C,
+    tS: () => es,
+    td: () => x,
+    ut: () => B,
+    vZ: () => U,
+    w6: () => eg,
+    xy: () => eb,
+    yz: () => et,
+    z2: () => eh,
+    zj: () => b,
+    zq: () => W,
 });
 var i,
     r,
@@ -61,51 +83,52 @@ var i,
     E,
     A,
     h,
-    I = n(626584),
-    f = n(927813),
-    p =
-        (((i = {})[(i.SECONDS_30 = 30 * f.A.Millis.SECOND)] = "SECONDS_30"),
-        (i[(i.MINUTES_1 = f.A.Millis.MINUTE)] = "MINUTES_1"),
-        (i[(i.MINUTES_2 = 2 * f.A.Millis.MINUTE)] = "MINUTES_2"),
+    I,
+    f = n(626584),
+    p = n(927813),
+    T =
+        (((i = {})[(i.SECONDS_30 = 30 * p.A.Millis.SECOND)] = "SECONDS_30"),
+        (i[(i.MINUTES_1 = p.A.Millis.MINUTE)] = "MINUTES_1"),
+        (i[(i.MINUTES_2 = 2 * p.A.Millis.MINUTE)] = "MINUTES_2"),
         i),
-    T = (((r = {}).DECOUPLED = "decoupled"), (r.STREAMER = "streamer"), (r.VOICE = "voice"), r);
-let g = "v3";
-var m = (((a = {})[(a.Error = 0)] = "Error"), (a[(a.Disabled = 1)] = "Disabled"), (a[(a.Enabled = 2)] = "Enabled"), a);
-let S = "alt+c",
-    N = "f12",
-    C = 6 * f.A.Millis.SECOND,
-    O = new I.A("Clips"),
-    R = 6,
-    L = 2,
-    y = /(NVIDIA GeForce GTX (98|10|16).*|Radeon RX 5(500|600|).*|Radeon RX5.*)/,
-    D = /(NVIDIA GeForce (RTX (20|30|40|50).*))|(.*Radeon RX (57|58|59|6|7|9).*)/,
-    v = 0.1,
-    b = "clips-gallery",
-    M = "clips_player",
-    P = 640,
-    U = 360,
-    w = 100,
-    G = 1e3,
-    x = (e) => `Clip - ${new Date(e).toLocaleString()}`,
-    k = 15,
-    F = 60 * f.A.Millis.SECOND,
-    B = 3e4,
-    V = 30,
-    H = 10;
-f.A.Millis.DAY;
-let j = 10,
-    W = 100,
-    Y = 75,
-    K = 0x3c0000000,
-    $ = ".autoclip-cache",
-    z = 0;
-var X =
+    g = (((r = {}).DECOUPLED = "decoupled"), (r.STREAMER = "streamer"), (r.VOICE = "voice"), r);
+let m = "v3";
+var S = (((a = {})[(a.Error = 0)] = "Error"), (a[(a.Disabled = 1)] = "Disabled"), (a[(a.Enabled = 2)] = "Enabled"), a);
+let N = "alt+c",
+    C = "f12",
+    O = 6 * p.A.Millis.SECOND,
+    R = new f.A("Clips"),
+    L = 6,
+    y = 2,
+    D = /(NVIDIA GeForce GTX (98|10|16).*|Radeon RX 5(500|600|).*|Radeon RX5.*)/,
+    v = /(NVIDIA GeForce (RTX (20|30|40|50).*))|(.*Radeon RX (57|58|59|6|7|9).*)/,
+    b = 0.1,
+    M = "clips-gallery",
+    P = "clips_player",
+    U = 640,
+    w = 360,
+    G = 100,
+    x = 1e3,
+    k = (e) => `Clip - ${new Date(e).toLocaleString()}`,
+    F = 15,
+    B = 60 * p.A.Millis.SECOND,
+    V = 3e4,
+    H = 30,
+    j = 10;
+p.A.Millis.DAY;
+let W = 10,
+    Y = 100,
+    K = 75,
+    $ = 0x3c0000000,
+    z = ".autoclip-cache",
+    X = 0;
+var q =
         (((s = {}).ALL = ":all"),
         (s.APPLICATION = ":application"),
         (s.VOICE = ":voice"),
         (s.SOUNDBOARD = ":soundboard"),
         s),
-    q =
+    Z =
         (((l = {}).MANUAL = "manual"),
         (l.DISTRIBUTED = "distributed"),
         (l.SHOUTING = "shouting"),
@@ -114,18 +137,18 @@ var X =
         (l.SPEAKING = "speaking"),
         (l.SOUNDBOARD = "soundboard"),
         l),
-    Z =
+    Q =
         (((o = {})[(o.LAUGHTER = 1)] = "LAUGHTER"),
         (o[(o.SHOUTING = 2)] = "SHOUTING"),
         (o[(o.GAME_EVENTS = 4)] = "GAME_EVENTS"),
         o),
-    Q =
+    J =
         (((d = {}).UNKNOWN = "unknown"),
         (d.BELOW_MINIMUM = "below_minimum"),
         (d.MEETS_MINIMUM = "meets_minimum"),
         (d.MEETS_AUTO_ENABLE = "meets_auto_enable"),
         d),
-    J =
+    ee =
         (((c = {}).MAX_CONCURRENT_SAVES = "max_concurrent_saves"),
         (c.NO_ELIGIBLE_SOURCE = "no_eligible_source"),
         (c.MODULE_NOT_LOADED = "module_not_loaded"),
@@ -133,40 +156,67 @@ var X =
         (c.BRIDGE_SHUTDOWN = "bridge_shutdown"),
         (c.RECORDING_NOT_READY = "recording_not_ready"),
         c),
-    ee = (((u = {}).ORIGINAL = "original"), (u.PORTRAIT_9_16 = "9:16"), (u.LANDSCAPE_16_9 = "16:9"), u);
-function et(e) {
+    et = (((u = {}).ORIGINAL = "original"), (u.PORTRAIT_9_16 = "9:16"), (u.LANDSCAPE_16_9 = "16:9"), u);
+function en(e) {
+    switch (e) {
+        case "9:16":
+            return 9 / 16;
+        case "16:9":
+            return 16 / 9;
+        default:
+            return null;
+    }
+}
+function ei(e) {
     if (e?.bounds != null) return e.bounds;
-    let t = (function (e) {
-        switch (e) {
-            case "9:16":
-                return 9 / 16;
-            case "16:9":
-                return 16 / 9;
-            default:
-                return null;
-        }
-    })(e?.preset);
+    let t = en(e?.preset);
     return null != t ? { aspectRatio: t } : null;
 }
-var en = (((_ = {}).TEXT = "text"), _);
-let ei = { text: "#D53FAE" },
-    er = 5,
-    ea = 1,
-    es = { x: 0.5, y: 0.5 };
-var el = (((E = {}).NONE = "none"), (E.SMALL = "small"), (E.MEDIUM = "medium"), (E.LARGE = "large"), E);
-let eo = { none: 0, small: 1 / 16, medium: 1 / 8, large: 1 / 4 },
-    ed = { fontSize: 0.06, color: "#FFFFFF", strokeWidth: "none", strokeColor: "#000000" };
-var ec = (((A = {}).CLIP = "clip"), (A.SCREENSHOT = "screenshot"), (A.VOICE_CLIP = "voice_clip"), A),
-    eu =
-        (((h = {}).UNCLASSIFIED = "unclassified"),
-        (h.KILL = "kill"),
-        (h.MULTIKILL = "multikill"),
-        (h.DEATH = "death"),
-        (h.ASSIST = "assist"),
-        (h.ITEM = "item"),
-        (h.VICTORY = "victory"),
-        (h.DEFEAT = "defeat"),
-        (h.LEVEL_UP = "level_up"),
-        (h.TREASURE = "treasure"),
-        (h.OBJECTIVE_KILL = "objective_kill"),
-        h);
+var er = (((_ = {}).TEXT = "text"), (_.IMAGE = "image"), _);
+let ea = { text: "#D53FAE", image: "#3F7FD5" },
+    es = 5,
+    el = 1,
+    eo = { x: 0.5, y: 0.5 },
+    ed = 0,
+    ec = 15;
+function eu(e) {
+    let t = (((Math.round(e / ec) * ec) % 360) + 360) % 360;
+    return t > 180 ? t - 360 : t;
+}
+var e_ = (((E = {}).NONE = "none"), (E.SMALL = "small"), (E.MEDIUM = "medium"), (E.LARGE = "large"), E);
+let eE = { none: 0, small: 1 / 16, medium: 1 / 8, large: 1 / 4 },
+    eA = { fontSize: 0.06, color: "#FFFFFF", strokeWidth: "none", strokeColor: "#000000" },
+    eh = 0.015,
+    eI = 0.5,
+    ef = 2048,
+    ep = 0x2000000,
+    eT = 2097152,
+    eg = "image/webp",
+    em = 0.92,
+    eS = ["png", "jpg", "jpeg", "webp"],
+    eN = ["image/png", "image/jpeg", "image/webp"],
+    eC = 0.35,
+    eO = 0.02,
+    eR = 2;
+function eL(e, t) {
+    return Math.max(eO, Math.min(eC, (0.5 * e) / t));
+}
+var ey = (((A = {}).NONE = "none"), (A.SMALL = "small"), (A.MEDIUM = "medium"), (A.LARGE = "large"), A);
+let eD = { none: 0, small: 0.02, medium: 0.05, large: 0.1 },
+    ev = 0.4,
+    eb = "none",
+    eM = "#000000";
+var eP = (((h = {}).CLIP = "clip"), (h.SCREENSHOT = "screenshot"), (h.VOICE_CLIP = "voice_clip"), h),
+    eU =
+        (((I = {}).UNCLASSIFIED = "unclassified"),
+        (I.KILL = "kill"),
+        (I.MULTIKILL = "multikill"),
+        (I.DEATH = "death"),
+        (I.ASSIST = "assist"),
+        (I.ITEM = "item"),
+        (I.VICTORY = "victory"),
+        (I.DEFEAT = "defeat"),
+        (I.LEVEL_UP = "level_up"),
+        (I.TREASURE = "treasure"),
+        (I.OBJECTIVE_KILL = "objective_kill"),
+        I);

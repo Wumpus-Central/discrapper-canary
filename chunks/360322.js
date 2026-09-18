@@ -402,10 +402,10 @@ function eT(e) {
                             i.e("427032"),
                             i.e("571470"),
                             i.e("50342"),
+                            i.e("507406"),
                             i.e("463726"),
                             i.e("93513"),
                             i.e("779149"),
-                            i.e("507406"),
                             i.e("455524"),
                             i.e("90017"),
                             i.e("489908"),
@@ -853,21 +853,21 @@ var eX = i(702841),
     e$ = i(465318),
     e0 = i(384377),
     e1 = i(554146),
-    e8 = i(43105),
-    e2 = i(131607),
+    e2 = i(43105),
+    e8 = i(131607),
     e5 = i(518477),
     e3 = i(49999);
 function e7() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
         t = e$.A.useConfig({ location: "PersonalWidgetUpsellCoachmark" }).enabled,
-        [i, n] = (0, e2.kn)(e && t ? [e1.M.USER_PROFILE_PERSONAL_WIDGET_COACHMARK] : []);
+        [i, n] = (0, e8.kn)(e && t ? [e1.M.USER_PROFILE_PERSONAL_WIDGET_COACHMARK] : []);
     return [i === e1.M.USER_PROFILE_PERSONAL_WIDGET_COACHMARK, n];
 }
 function e6(e) {
     let { targetElementRef: t, isVisible: i, markAsDismissed: l } = e,
         { trackUserProfileEditAction: s } = (0, eQ.NJ)();
     return i
-        ? (0, n.jsx)(e8.A, {
+        ? (0, n.jsx)(e2.A, {
               targetElementRef: t,
               badge: "beta",
               graphic: {
@@ -1491,14 +1491,14 @@ function tQ(e) {
 var t$ = i(769015),
     t0 = i(409626),
     t1 = i(692969),
-    t8 = i(202163),
-    t2 = i(207803),
+    t2 = i(202163),
+    t8 = i(207803),
     t5 = i(591179),
     t3 = i(485745),
     t7 = i(308766);
 function t6(e) {
     let { gameId: t, userId: i, className: s } = e,
-        { gameRecord: r } = (0, t8.A)(t),
+        { gameRecord: r } = (0, t2.A)(t),
         o = !(0, t5.X)("WidgetClipGameIcon"),
         d = (0, t3.A)(o),
         c = (0, t1.A)({
@@ -1510,7 +1510,7 @@ function t6(e) {
         u = l.useCallback(
             (e) => {
                 if (d) {
-                    (e.preventDefault(), e.stopPropagation(), (0, t2.VQ)());
+                    (e.preventDefault(), e.stopPropagation(), (0, t8.VQ)());
                     return;
                 }
                 c?.(e);
@@ -1678,7 +1678,7 @@ function ia(e) {
                             i.e("821717"),
                             i.e("269714"),
                             i.e("19385"),
-                            i.e("398104"),
+                            i.e("722562"),
                             i.e("553829"),
                             i.e("606859"),
                             i.e("865257"),
@@ -1706,6 +1706,7 @@ function ia(e) {
                             i.e("127272"),
                             i.e("466147"),
                             i.e("838090"),
+                            i.e("507406"),
                             i.e("122266"),
                             i.e("501962"),
                             i.e("901922"),
@@ -1715,7 +1716,7 @@ function ia(e) {
                             i.e("280559"),
                             i.e("895008"),
                             i.e("352566"),
-                            i.e("489492"),
+                            i.e("964113"),
                             i.e("689160"),
                             i.e("231782"),
                             i.e("520342"),
@@ -2426,8 +2427,8 @@ function i1(e) {
         }),
     });
 }
-var i8 = i(870961);
-function i2(e) {
+var i2 = i(870961);
+function i8(e) {
     let { widget: t, ...i } = e;
     switch (t.type) {
         case b.x.FAVORITE_GAMES:
@@ -2462,7 +2463,7 @@ function i5(e) {
         x = (0, F.FM)(t, { showEditingControls: u }),
         f = (0, F.uA)(t),
         h = 1 === (0, F.cv)(t.type);
-    return (0, n.jsx)(i2, {
+    return (0, n.jsx)(i8, {
         widget: t,
         user: i,
         allowEditing: s,
@@ -2479,7 +2480,7 @@ function i5(e) {
                       ),
                   ]
                 : void 0,
-        trailingContent: g && (0, n.jsx)(i1, { userId: i.id, widgetType: t.type, onDismiss: c, className: i8.r }),
+        trailingContent: g && (0, n.jsx)(i1, { userId: i.id, widgetType: t.type, onDismiss: c, className: i2.r }),
         ...r,
     });
 }

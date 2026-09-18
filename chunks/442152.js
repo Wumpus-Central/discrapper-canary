@@ -1,4 +1,4 @@
-n.d(t, { A: () => t6 });
+n.d(t, { A: () => t8 });
 var l = n(477900),
     i = n(582128),
     s = n(503698),
@@ -488,8 +488,8 @@ let e1 = function (e) {
 };
 var e2 = n(307301),
     e3 = n(182922),
-    e8 = n(683522);
-let e6 = (0, z.xI)(M.A.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_PRIMARY_DIMENSIONS),
+    e6 = n(683522);
+let e8 = (0, z.xI)(M.A.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_PRIMARY_DIMENSIONS),
     e7 = (0, z.xI)(M.A.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_SECONDARY_DIMENSIONS),
     e5 = i.memo(function (e) {
         let { stickersGrid: t } = e,
@@ -525,10 +525,10 @@ let e6 = (0, z.xI)(M.A.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_B
             })(s),
             o =
                 (0, eh.FD)(s) || (0, eh.Xw)(s)
-                    ? (0, l.jsx)(em.A, { isInteracting: !0, size: e6, sticker: s, disableAnimation: !0 })
+                    ? (0, l.jsx)(em.A, { isInteracting: !0, size: e8, sticker: s, disableAnimation: !0 })
                     : (0, l.jsx)("div", {
-                          className: e8.P,
-                          children: (0, l.jsx)(e2.j, { size: "md", color: "currentColor", className: e8.K }),
+                          className: e6.P,
+                          children: (0, l.jsx)(e2.j, { size: "md", color: "currentColor", className: e6.K }),
                       });
         return (0, l.jsx)(e3.A, {
             graphicPrimary: o,
@@ -626,8 +626,8 @@ let ts = i.memo(function (e) {
                                                 n.e("268582"),
                                                 n.e("883952"),
                                                 n.e("66580"),
-                                                n.e("50342"),
                                                 n.e("480436"),
+                                                n.e("50342"),
                                                 n.e("420643"),
                                                 n.e("98913"),
                                                 n.e("429143"),
@@ -1431,8 +1431,8 @@ let tG = (0, z.xI)(M.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                             n.e("268582"),
                                             n.e("883952"),
                                             n.e("66580"),
-                                            n.e("50342"),
                                             n.e("480436"),
+                                            n.e("50342"),
                                             n.e("420643"),
                                             n.e("98913"),
                                             n.e("429143"),
@@ -1550,7 +1550,7 @@ var tJ = n(742023),
     t1 = n(307731),
     t2 = n(818625);
 let t3 = 498 + t0.as.MEDIUM,
-    t8 = i.memo(function (e) {
+    t6 = i.memo(function (e) {
         let { isActive: t, className: n, viewType: i, autoFocus: s = !1, "aria-controls": a, ...o } = e;
         return (0, l.jsx)(f.D, {
             role: "tab",
@@ -1564,7 +1564,7 @@ let t3 = 498 + t0.as.MEDIUM,
             className: r()(n, t2.oi, t2.pc, { [t2.Mv]: t }),
         });
     }),
-    t6 = i.memo(function (e) {
+    t8 = i.memo(function (e) {
         let {
                 positionTargetRef: t,
                 hideGifFavorites: n,
@@ -1736,7 +1736,7 @@ let t3 = 498 + t0.as.MEDIUM,
             eh = "left" === k ? "right" : "left",
             em = null != w ? w : "left" === k ? t2.sj : t2.Jg,
             ex = ee
-                ? (0, l.jsx)(t8, {
+                ? (0, l.jsx)(t6, {
                       id: t0.g9,
                       "aria-controls": t0.ni,
                       "aria-selected": K === ep.kx.GIF,
@@ -1746,7 +1746,7 @@ let t3 = 498 + t0.as.MEDIUM,
                   })
                 : null,
             eA = et
-                ? (0, l.jsx)(t8, {
+                ? (0, l.jsx)(t6, {
                       id: eU.LD,
                       "aria-controls": eU.GX,
                       "aria-selected": K === ep.kx.STICKER,
@@ -1756,7 +1756,7 @@ let t3 = 498 + t0.as.MEDIUM,
                       children: (0, l.jsx)("div", { className: t2.dG, children: eg.intl.string(eg.t.nf1s3u) }),
                   })
                 : null,
-            eC = (0, l.jsx)(t8, {
+            eC = (0, l.jsx)(t6, {
                 id: t0.k1,
                 "aria-controls": t0.Do,
                 "aria-selected": K === ep.kx.EMOJI,
@@ -1804,7 +1804,7 @@ let t3 = 498 + t0.as.MEDIUM,
                                                                 eC,
                                                                 J &&
                                                                     ed &&
-                                                                    (0, l.jsx)(t8, {
+                                                                    (0, l.jsx)(t6, {
                                                                         id: t0.N6,
                                                                         "aria-controls": t0.AA,
                                                                         "aria-selected": K === ep.kx.SOUNDBOARD,

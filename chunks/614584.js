@@ -108,7 +108,7 @@ let F = [
 async function V(e) {
     let t = (await n.e("734188").then(n.t.bind(n, 88137, 23))).default,
         i = (function (e) {
-            let t;
+            let t, n, i;
             return null != B
                 ? B
                 : (B = e
@@ -243,6 +243,10 @@ async function V(e) {
                               .items(
                                   ((t = e
                                       .object()
+                                      .keys({ x: e.number().required(), y: e.number().required() })
+                                      .required()),
+                                  (n = e
+                                      .object()
                                       .keys({
                                           id: e.string().required(),
                                           type: e.string().valid(R.Me.TEXT).required(),
@@ -264,15 +268,37 @@ async function V(e) {
                                                           strokeColor: e.string().required(),
                                                       })
                                                       .required(),
-                                                  position: e
-                                                      .object()
-                                                      .keys({ x: e.number().required(), y: e.number().required() })
-                                                      .required(),
+                                                  position: t,
+                                                  rotationDeg: e.number(),
                                               })
                                               .required(),
                                       })
                                       .unknown()),
-                                  e.alternatives().try(t)),
+                                  (i = e
+                                      .object()
+                                      .keys({
+                                          id: e.string().required(),
+                                          type: e.string().valid(R.Me.IMAGE).required(),
+                                          startSec: e.number().required(),
+                                          endSec: e.number().required(),
+                                          data: e
+                                              .object()
+                                              .keys({
+                                                  src: e.string().required(),
+                                                  mimeType: e.string().required(),
+                                                  fileName: e.string().required().allow(""),
+                                                  naturalWidth: e.number().required(),
+                                                  naturalHeight: e.number().required(),
+                                                  position: t,
+                                                  widthFraction: e.number().required(),
+                                                  rotationDeg: e.number().required(),
+                                                  shadow: e.string().valid(...Object.values(R.Hz)),
+                                                  shadowColor: e.string(),
+                                              })
+                                              .required(),
+                                      })
+                                      .unknown()),
+                                  e.alternatives().try(n, i)),
                               )
                               .when("version", {
                                   is: e.number().greater(5).required(),

@@ -1,3 +1,20 @@
+.previewThumbnail_e8abdf {
+    background: var(--background-mod-strong);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-xs);
+    flex-shrink: 0;
+    height: 40px;
+    -o-object-fit: contain;
+    object-fit: contain;
+    width: 40px
+}
+
+.shadowGrid_e8abdf {
+    display: grid;
+    gap: var(--space-8);
+    grid-template-columns: repeat(2, 1fr)
+}
+
 .sidebarTitleRow__3f4c5 {
     align-items: center;
     display: flex;
@@ -181,7 +198,7 @@
     min-height: 0
 }
 
-.textOverlay__7e373 {
+.overlayRoot_c00036 {
     inset: 0;
     overflow: hidden;
     pointer-events: none;
@@ -189,33 +206,119 @@
     z-index: 2
 }
 
-.textBox__7e373 {
+.box_c00036 {
+    --clip-track-scale: 0px;
     cursor: grab;
-    font-weight: 700;
     outline-offset: 4px;
     pointer-events: auto;
     position: absolute;
-    transform: translate(-50%, -50%);
+    transform-origin: center;
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
     white-space: nowrap
 }
 
-.textBox__7e373:active {
+.box_c00036:active {
     cursor: grabbing
 }
 
-.textBoxSelected__7e373 {
+.boxSelected_c00036 {
     outline: 2px dashed var(--white-500)
 }
 
+.scaleHandle_c00036 {
+    background: var(--white-500);
+    border: 2px solid var(--black-500);
+    border-radius: var(--radius-round);
+    box-shadow: var(--shadow-low);
+    height: 12px;
+    position: absolute;
+    width: 12px
+}
+
+.handleTopStart_c00036 {
+    cursor: nwse-resize;
+    inset-block-start: -10px;
+    inset-inline-start: -10px
+}
+
+.handleTopEnd_c00036 {
+    cursor: nesw-resize;
+    inset-block-start: -10px;
+    inset-inline-end: -10px
+}
+
+.handleBottomEnd_c00036 {
+    cursor: nwse-resize;
+    inset-block-end: -10px;
+    inset-inline-end: -10px
+}
+
+.handleBottomStart_c00036 {
+    cursor: nesw-resize;
+    inset-block-end: -10px;
+    inset-inline-start: -10px
+}
+
+:dir(rtl) .handleBottomEnd_c00036,
+:dir(rtl) .handleTopStart_c00036 {
+    cursor: nesw-resize
+}
+
+:dir(rtl) .handleBottomStart_c00036,
+:dir(rtl) .handleTopEnd_c00036 {
+    cursor: nwse-resize
+}
+
+.rotateStem_c00036 {
+    height: 24px;
+    width: 2px
+}
+
+.rotateHandle_c00036,
+.rotateStem_c00036 {
+    background: var(--white-500);
+    position: absolute;
+    top: -24px;
+    inset-inline: 0;
+    margin-inline: auto
+}
+
+.rotateHandle_c00036 {
+    align-items: center;
+    border: 2px solid var(--black-500);
+    border-radius: var(--radius-round);
+    color: var(--black-500);
+    cursor: grab;
+    display: flex;
+    height: 20px;
+    justify-content: center;
+    transform: translateY(-50%);
+    width: 20px
+}
+
+.rotateHandle_c00036:active {
+    cursor: grabbing
+}
+
+.image_a3575a {
+    display: block;
+    height: 100%;
+    -o-object-fit: fill;
+    object-fit: fill;
+    pointer-events: none;
+    width: 100%
+}
+
 .textStroke__7e373 {
+    font-weight: 700;
     inset: 0;
     position: absolute
 }
 
 .textFill__7e373 {
+    font-weight: 700;
     position: relative
 }
 
@@ -589,4 +692,4 @@
     width: 12px
 }
 
-/*# sourceMappingURL=6fb41dc1cee11414.css.map*/
+/*# sourceMappingURL=0c3940e10375a278.css.map*/

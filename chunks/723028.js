@@ -12,9 +12,9 @@ var i = s(477900),
     u = s(951592),
     C = s(309777),
     j = s(362081),
-    x = s(217482),
-    A = s(328461),
-    I = s(801835),
+    x = s(282207),
+    A = s(700907),
+    I = s(699269),
     m = s(933092);
 function f(n) {
     let { clipId: e, onEdit: s, channelId: f, transitionState: E, onClose: _ } = n;
@@ -22,7 +22,7 @@ function f(n) {
     let { analyticsLocations: k } = (0, r.Ay)(d.A.CLIPS_EDITOR),
         y = l.useRef(null),
         b = (0, o.bG)([p.Ay], () => p.Ay.getClipById(e)),
-        { enabled: g } = c._.useConfig({ location: "ClipsEditModal" });
+        { enabled: g } = c._t.useConfig({ location: "ClipsEditModal" });
     return null == b
         ? null
         : (0, i.jsx)(r.f5, {
