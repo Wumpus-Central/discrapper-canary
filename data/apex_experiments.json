@@ -2292,32 +2292,6 @@
     }
   },
   {
-    "name": "2026-04-kestrel",
-    "kind": "user",
-    "defaultConfig": {
-      "enabled": false,
-      "threshold": 0
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true,
-        "threshold": 15
-      },
-      "2": {
-        "enabled": true,
-        "threshold": 20
-      },
-      "3": {
-        "enabled": true,
-        "threshold": 25
-      }
-    }
-  },
-  {
     "name": "2026-04-mobile-boost-progress-bar",
     "kind": "user",
     "defaultConfig": {
@@ -4946,22 +4920,6 @@
       },
       "1": {
         "isHidden": true
-      }
-    }
-  },
-  {
-    "name": "2026-08-kestrel-ga",
-    "kind": "user",
-    "defaultConfig": {
-      "enabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true
       }
     }
   },

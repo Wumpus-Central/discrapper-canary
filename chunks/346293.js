@@ -10,7 +10,6 @@ function i(e) {
         postCompressionAggregateSize: o,
         attachmentMimeTypes: d,
         errorType: c,
-        kestrelVariant: u,
     } = e;
     return {
         ...(void 0 !== n ? { channel_id: n } : {}),
@@ -23,7 +22,6 @@ function i(e) {
         post_compression_aggregate_file_size: o,
         attachment_mimetypes: d,
         error_type: c,
-        kestrel_variant: u,
     };
 }
 n.d(t, { s: () => i });

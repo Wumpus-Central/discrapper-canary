@@ -1,4 +1,4 @@
-n.d(t, { m: () => u, B: () => _ });
+n.d(t, { m: () => _, B: () => E });
 var i,
     r = n(535736),
     a = n(292348),
@@ -23,9 +23,10 @@ class l {
         return !0;
     }
 }
-var o = n(734057),
-    d = n(453771);
-class c {
+var o = n(409481),
+    d = n(734057),
+    c = n(453771);
+class u {
     getCreateAttachmentURL(e) {
         return s.Rsh.MESSAGE_CREATE_ATTACHMENT_UPLOAD(e);
     }
@@ -33,8 +34,8 @@ class c {
         return s.Rsh.MESSAGE_DELETE_UPLOAD(e);
     }
     getMaxFileSize(e) {
-        let t = o.A.getBasicChannel(e);
-        return d.o2(t?.guild_id);
+        let t = d.A.getBasicChannel(e);
+        return (0, o.C)(c.o2(t?.guild_id));
     }
     getMaxAttachmentsCount() {
         return s.XgB;
@@ -46,18 +47,18 @@ class c {
         return !0;
     }
 }
-var u =
+var _ =
     (((i = {})[(i.MESSAGE_ATTACHMENT = 0)] = "MESSAGE_ATTACHMENT"),
     (i[(i.GUILD_PRODUCT_ATTACHMENT = 1)] = "GUILD_PRODUCT_ATTACHMENT"),
     (i[(i.GRAVITY_ATTACHMENT = 2)] = "GRAVITY_ATTACHMENT"),
     i);
-function _(e) {
+function E(e) {
     switch (e) {
         case 1:
             return new r.A();
         case 2:
             return new l();
         default:
-            return new c();
+            return new u();
     }
 }

@@ -1,17 +1,16 @@
-n.d(t, { A: () => f });
+n.d(t, { A: () => I });
 var i = n(280889),
     r = n(143236),
     a = n(435558),
     s = n.n(a),
     l = n(626584),
-    o = n(550642),
-    d = n(509929),
-    c = n(787458),
-    u = n(972711),
-    _ = n(652215),
-    E = n(381941);
-let A = new l.A("UploaderBase.tsx");
-class h extends r.EventEmitter {
+    o = n(509929),
+    d = n(787458),
+    c = n(972711),
+    u = n(652215),
+    _ = n(381941);
+let E = new l.A("UploaderBase.tsx");
+class A extends r.EventEmitter {
     id;
     _file;
     _aborted = !1;
@@ -42,24 +41,23 @@ class h extends r.EventEmitter {
         return this.files.reduce((e, t) => (e += t.currentSize ?? 0), 0);
     }
     async compressAndCheckFileSize() {
-        let e = (0, c.B)(this.files[0]?.item?.target);
+        let e = (0, d.B)(this.files[0]?.item?.target);
         return this.files.length > e.getMaxAttachmentsCount()
-            ? (A.log(`Too many attachments for ${this.id}`),
-              this._handleError({ code: _.t02.TOO_MANY_ATTACHMENTS }),
+            ? (E.log(`Too many attachments for ${this.id}`),
+              this._handleError({ code: u.t02.TOO_MANY_ATTACHMENTS }),
               !1)
-            : ((0, o.R8)({ location: "UploaderBase.compressAndCheckFileSize" }),
-              !(this._fileSize() > e.getMaxTotalAttachmentSize()) ||
+            : !(this._fileSize() > e.getMaxTotalAttachmentSize()) ||
                   (this._handleError({
-                      code: _.t02.ENTITY_TOO_LARGE,
-                      reason: { type: E.ty.POSTCOMPRESSION_SUM_TOO_LARGE },
+                      code: u.t02.ENTITY_TOO_LARGE,
+                      reason: { type: _.ty.POSTCOMPRESSION_SUM_TOO_LARGE },
                   }),
-                  !1));
+                  !1);
     }
     setUploadingTextForUI() {
         let e = this.files.some((e) => e.isImage),
             t = this.files.some((e) => e.isVideo),
             n = this._fileSize();
-        (A.log(`setUploadingTextForUI - total content: ${n} bytes and ${this.files.length} attachments for ${this.id}`),
+        (E.log(`setUploadingTextForUI - total content: ${n} bytes and ${this.files.length} attachments for ${this.id}`),
             (this._file = {
                 ...this._file,
                 totalPostCompressionSize: n,
@@ -83,7 +81,7 @@ class h extends r.EventEmitter {
         let e = {};
         return (
             this.files.forEach((t) => {
-                e[t.id] = (0, u.YL)(t.loaded, t.currentSize);
+                e[t.id] = (0, c.YL)(t.loaded, t.currentSize);
             }),
             e
         );
@@ -98,7 +96,7 @@ class h extends r.EventEmitter {
     };
     _handleProgress = (e, t, n) => {
         let i = Date.now(),
-            r = (0, u.YL)(e, t),
+            r = (0, c.YL)(e, t),
             a = Math.floor((e - this._loaded) / ((i - this._lastUpdate) / 1e3));
         (null != n &&
             this._file.items?.forEach((e) => {
@@ -110,7 +108,7 @@ class h extends r.EventEmitter {
             this.emit("progress", this._file));
     };
     _handleException = (e) => {
-        this._handleError({ reason: { type: E.ty.ERROR_SOURCE_UNKNOWN, msg: e.toString() } });
+        this._handleError({ reason: { type: _.ty.ERROR_SOURCE_UNKNOWN, msg: e.toString() } });
     };
     _handleAborted = () => {
         this.clearProcessingMessageInterval();
@@ -120,13 +118,13 @@ class h extends r.EventEmitter {
         (this.clearProcessingMessageInterval(),
             this._aborted ||
                 ((this._errored = !0),
-                A.log(`_handleError: ${t} (${JSON.stringify(n)}) for ${this.id}`),
+                E.log(`_handleError: ${t} (${JSON.stringify(n)}) for ${this.id}`),
                 this.emit("error", this._file, t, i, n),
                 this.removeAllListeners()));
     };
     _handleComplete = (e) => {
         (this.clearProcessingMessageInterval(),
-            A.log(`_handleComplete for ${this.id}`),
+            E.log(`_handleComplete for ${this.id}`),
             this.emit("complete", this._file, e),
             this.removeAllListeners());
     };
@@ -135,7 +133,7 @@ class h extends r.EventEmitter {
             (clearInterval(this.processingMessageChangeInterval), (this.processingMessageChangeInterval = void 0));
     }
     cancel() {
-        (A.log(`cancel() for ${this.id}`),
+        (E.log(`cancel() for ${this.id}`),
             this._aborted ||
                 ((this._aborted = !0),
                 this._cancel?.(),
@@ -143,13 +141,13 @@ class h extends r.EventEmitter {
                 this._handleComplete()));
     }
     async cancelItem(e) {
-        A.log(`Cancel called for ${this.id} for item ${e}`);
+        E.log(`Cancel called for ${this.id} for item ${e}`);
         let t = this.files.find((t) => t.id === e);
         if (null == t || t.isCancelled()) return;
         let n = this.files.indexOf(t);
         ((this.files = [...this.files.slice(0, n), ...this.files.slice(n + 1)]),
             (this._file = { ...this._file, items: this.files }),
-            await (0, d.sm)(t),
+            await (0, o.sm)(t),
             t.cancel(),
             this.emit("cancel-upload-item", this._file),
             0 === this.files.length && this.cancel());
@@ -172,8 +170,8 @@ class h extends r.EventEmitter {
             }));
     }
 }
-var I = n(358579);
-class f extends h {
+var h = n(358579);
+class I extends A {
     async uploadFiles(e) {
         super.upload(e);
         let t = new Promise((e, t) => {
@@ -191,12 +189,12 @@ class f extends h {
                 this._aborted || (this._handleStart(() => n.abort()), !(await this.compressAndCheckFileSize())))
             )
                 return t;
-            (this.setUploadingTextForUI(), await (0, I.A)(this.files, !0, this._recomputeProgress.bind(this)));
+            (this.setUploadingTextForUI(), await (0, h.A)(this.files, !0, this._recomputeProgress.bind(this)));
         } catch (a) {
             let e = this.files.find((e) => e.status === i.jP.ERROR),
                 t = e?.error,
                 n = a instanceof Error ? a.message : String(a),
-                r = { type: E.ty.ERROR_SOURCE_UNKNOWN, msg: n };
+                r = { type: _.ty.ERROR_SOURCE_UNKNOWN, msg: n };
             throw (this._handleError({ code: t, reason: r }), { file: this._file, code: t, reason: r });
         }
         return (this._handleComplete(), this.files);

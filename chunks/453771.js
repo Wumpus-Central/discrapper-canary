@@ -1,14 +1,4 @@
-n.d(t, {
-    Aw: () => O,
-    GD: () => g,
-    Hb: () => m,
-    Iu: () => R,
-    SH: () => C,
-    TX: () => T,
-    VE: () => f,
-    o2: () => N,
-    ww: () => I,
-});
+n.d(t, { Aw: () => C, GD: () => g, Hb: () => m, Iu: () => O, TX: () => T, VE: () => f, o2: () => N, ww: () => I });
 var i = n(796873),
     r = n.n(i),
     a = n(435558),
@@ -83,11 +73,7 @@ function N(e) {
         n,
     );
 }
-function C(e, t) {
-    let n = N(t);
-    return Array.from(e).some((e) => e.size > n);
-}
-function O(e) {
+function C(e) {
     return (
         (function (e) {
             let t = 0;
@@ -96,11 +82,9 @@ function O(e) {
         })(e) > (0, _.jS)({ location: "uploadSumTooLarge" })
     );
 }
-function R(e) {
-    let { guildId: t, onClick: n, maxSize: i, hideLearnMore: r } = e,
-        a = (0, c.Xq)((i ?? N(t)) / 1024, { useKibibytes: !0 }),
-        s = (0, u.EJ)(A.PremiumTypes.TIER_2, { useSpace: !1 });
-    return !0 === r
-        ? h.intl.format(h.t["+R2TzS"], { maxSize: a, premiumMaxSize: s })
-        : h.intl.format(h.t.tRuxk9, { maxSize: a, premiumMaxSize: s, onClick: n });
+function O(e) {
+    let { guildId: t, maxSize: n } = e,
+        i = (0, c.Xq)((n ?? N(t)) / 1024, { useKibibytes: !0 }),
+        r = (0, u.EJ)(A.PremiumTypes.TIER_2, { useSpace: !1 });
+    return h.intl.format(h.t["+R2TzS"], { maxSize: i, premiumMaxSize: r });
 }

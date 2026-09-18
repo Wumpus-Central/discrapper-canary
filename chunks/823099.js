@@ -3,8 +3,8 @@ var i = n(139033),
     r = n(95561),
     a = n(488004),
     s = n(453771),
-    l = n(346293),
-    o = n(550642),
+    l = n(409481),
+    o = n(346293),
     d = n(292348),
     c = n(652215),
     u = n(375708);
@@ -19,10 +19,9 @@ function A(e) {
         let e,
             d,
             A,
-            I = (0, o.R8)({ location: "web.handleUploadMessageAttachmentsErrors" }),
-            f = (0, s.o2)(n),
-            p = (0, o.Jy)(I, f),
-            T =
+            I = (0, s.o2)(n),
+            f = (0, l.C)(I),
+            p =
                 ((d = (e = t.items ?? []).map((e) => e.preCompressionSize)),
                 {
                     preCompressionFileSizes: d,
@@ -37,23 +36,22 @@ function A(e) {
         return (
             (0, r.zV)(
                 c.HAw.FILE_SIZE_LIMIT_EXCEEDED,
-                (0, l.s)({
+                (0, o.s)({
                     guildId: n,
                     channelId: t.items?.[0]?.channelId ?? null,
-                    userIndividualFileSizeLimit: f,
-                    numAttachments: T.numAttachments,
-                    preCompressionFileSizes: T.preCompressionFileSizes,
-                    preCompressionAggregateSize: T.preCompressionAggregateSize,
-                    postCompressionFileSizes: T.postCompressionFileSizes,
-                    postCompressionAggregateSize: T.postCompressionAggregateSize,
+                    userIndividualFileSizeLimit: I,
+                    numAttachments: p.numAttachments,
+                    preCompressionFileSizes: p.preCompressionFileSizes,
+                    preCompressionAggregateSize: p.preCompressionAggregateSize,
+                    postCompressionFileSizes: p.postCompressionFileSizes,
+                    postCompressionAggregateSize: p.postCompressionAggregateSize,
                     attachmentMimeTypes: null != t.items ? (0, a.p)(t.items) : [],
                     errorType: h?.type ?? E.ty.ERROR_SOURCE_UNKNOWN,
-                    kestrelVariant: (0, o.H6)(I),
                 }),
             ),
             (0, i.A)({
                 title: u.intl.string(u.t["/tGlcj"]),
-                subtitle: u.intl.formatToPlainString(u.t.fxEKdS, { maxSize: (0, s.Hb)(p) }),
+                subtitle: u.intl.formatToPlainString(u.t.fxEKdS, { maxSize: (0, s.Hb)(f) }),
             }),
             !0
         );
