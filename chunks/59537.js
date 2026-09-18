@@ -140,8 +140,8 @@ let D = [
     },
 ];
 var O = l(162097),
-    V = l(70926),
-    L = l(240248),
+    L = l(70926),
+    V = l(240248),
     w = l(375708),
     U = l(161528);
 let B = {
@@ -151,13 +151,13 @@ let B = {
         let { ctaText: t, linkText: l, showNotificationBadge: a, cardAlignment: n } = e;
         return (0, s.jsx)("div", {
             className: U.tH,
-            children: (0, s.jsx)(V.SS, {
+            children: (0, s.jsx)(L.SS, {
                 className: U.oz,
-                ctaText: (0, L.uJ)(t) ? w.intl.string(w.t["J+vlIR"]) : t,
+                ctaText: (0, V.uJ)(t) ? w.intl.string(w.t["J+vlIR"]) : t,
                 ctaOnClick: N.tEg,
                 showNotificationBadge: a,
                 cardAlignment: n,
-                linkText: (0, L.uJ)(l) ? w.intl.string(w.t.XRdyjz) : l,
+                linkText: (0, V.uJ)(l) ? w.intl.string(w.t.XRdyjz) : l,
             }),
         });
     },
@@ -168,10 +168,10 @@ let B = {
             label: "Card Alignment",
             type: "select",
             options: [
-                { label: "Start", value: V.cP.START },
-                { label: "End", value: V.cP.END },
+                { label: "Start", value: L.cP.START },
+                { label: "End", value: L.cP.END },
             ],
-            defaultValue: V.cP.START,
+            defaultValue: L.cP.START,
         },
         linkText: { label: "Link Text", type: "text", defaultValue: "" },
     },
@@ -385,7 +385,7 @@ function eO() {
         }),
     });
 }
-function eV(e) {
+function eL(e) {
     let { errorType: t = "mock-error", errorHandlingBehavior: l } = e;
     switch (t) {
         case "mock-error":
@@ -414,7 +414,7 @@ function eV(e) {
             return (0, s.jsx)("div", { children: "Unknown error type" });
     }
 }
-let eL = {
+let eV = {
     title: "Checkout",
     stories: [
         {
@@ -436,7 +436,7 @@ let eL = {
                     [I, P] = u.useState(N.dJq),
                     { balance: _, isFetching: k, error: R } = (0, eP.W)(),
                     { isSubmitting: M, responseMessage: D, redeemVirtualCurrency: O } = (0, eP.Q)(),
-                    [V, L] = u.useState(N.dJq),
+                    [L, V] = u.useState(N.dJq),
                     [w, B] = u.useState(""),
                     [$, W] = u.useState(N.dJq);
                 return (0, s.jsx)(p.f5, {
@@ -646,14 +646,14 @@ let eL = {
                                         (0, s.jsx)(er.k, {
                                             label: "SKU ID",
                                             placeholder: "SKU ID",
-                                            value: V,
-                                            onChange: (e) => L(e),
+                                            value: L,
+                                            onChange: (e) => V(e),
                                         }),
                                         (0, s.jsx)(G.$, {
                                             variant: "primary",
                                             text: "Redeem Virtual Currency for SKU",
                                             loading: M,
-                                            onClick: () => O(V, (0, d.A)()),
+                                            onClick: () => O(L, (0, d.A)()),
                                         }),
                                         null != D && (0, s.jsx)(f.E, { variant: "text-sm/normal", children: D }),
                                     ],
@@ -838,7 +838,7 @@ let eL = {
                                                         key: m.pn.REVIEW,
                                                         renderStep: () =>
                                                             (0, s.jsx)(eS.dZ, {
-                                                                children: (0, s.jsx)(eV, {
+                                                                children: (0, s.jsx)(eL, {
                                                                     errorType: a,
                                                                     errorHandlingBehavior: l,
                                                                 }),
@@ -1925,8 +1925,8 @@ var tM = l(691540),
     tN = l(857250),
     tD = l(97483),
     tO = l(750338),
-    tV = l(173038),
-    tL = l(576765),
+    tL = l(173038),
+    tV = l(576765),
     tw = l(88433);
 let tU = { none: void 0, nitroWheel: r.t },
     tB = {
@@ -1972,10 +1972,10 @@ let tU = { none: void 0, nitroWheel: r.t },
                           : {};
             return (0, s.jsx)("div", {
                 children: (0, s.jsx)(tO.A, {
-                    name: tV.NI.EMOJIS,
+                    name: tL.NI.EMOJIS,
                     title: t,
                     description: l,
-                    previewImage: tL.A,
+                    previewImage: tV.A,
                     videoUrl: tw.A,
                     shouldLoadVideo: !0,
                     index: p,
@@ -2053,11 +2053,11 @@ let tU = { none: void 0, nitroWheel: r.t },
             size: {
                 label: "Size",
                 type: "select",
-                defaultValue: tV.A0.LARGE,
+                defaultValue: tL.A0.LARGE,
                 options: [
-                    { label: "Small", value: tV.A0.SMALL },
-                    { label: "Medium", value: tV.A0.MEDIUM },
-                    { label: "Large", value: tV.A0.LARGE },
+                    { label: "Small", value: tL.A0.SMALL },
+                    { label: "Medium", value: tL.A0.MEDIUM },
+                    { label: "Large", value: tL.A0.LARGE },
                 ],
             },
             badgeText: { label: "Badge Text", type: "text", defaultValue: "" },
@@ -2074,10 +2074,10 @@ let tU = { none: void 0, nitroWheel: r.t },
             previewImageStyle: {
                 label: "Preview Image Style",
                 type: "select",
-                defaultValue: tV.Tb.CONTAINED,
+                defaultValue: tL.Tb.CONTAINED,
                 options: [
-                    { label: "Contained", value: tV.Tb.CONTAINED },
-                    { label: "Overlay", value: tV.Tb.OVERLAY },
+                    { label: "Contained", value: tL.Tb.CONTAINED },
+                    { label: "Overlay", value: tL.Tb.OVERLAY },
                 ],
             },
         },
@@ -2940,12 +2940,12 @@ var lT = l(503698),
     lN = l(667648),
     lD = l(624479),
     lO = l(408278),
-    lV = l(957565),
-    lL = l(247329);
+    lL = l(957565),
+    lV = l(247329);
 function lw(e) {
     let { label: t, value: l } = e;
     return (0, s.jsxs)("div", {
-        className: lL.I,
+        className: lV.I,
         children: [
             (0, s.jsxs)(f.E, { variant: "text-sm/medium", children: [t, ":"] }),
             (0, s.jsx)(f.E, { variant: "text-sm/normal", children: l }),
@@ -2954,7 +2954,7 @@ function lw(e) {
                 "aria-label": "Copy Link",
                 variant: "icon-only",
                 icon: lD.CopyIcon,
-                onClick: () => (0, lV.C)(l),
+                onClick: () => (0, lL.C)(l),
             }),
         ],
     });
@@ -3158,52 +3158,35 @@ let lX = {
                 let {
                         label: t,
                         placeholder: l,
-                        toolbarVariant: a,
-                        autosize: n,
-                        rows: i,
-                        minLength: r,
-                        maxLength: o,
-                        required: d,
-                        disabled: c,
-                        error: p,
-                        description: m,
-                        helperText: b,
+                        minLength: a,
+                        maxLength: n,
+                        required: i,
+                        disabled: r,
+                        error: o,
+                        description: d,
+                        helperText: c,
                     } = e,
-                    [h, x] = u.useState("");
+                    [p, m] = u.useState("");
                 return (0, s.jsx)("div", {
                     style: { maxWidth: 480, padding: 24 },
                     children: (0, s.jsx)(lJ.f, {
                         label: t,
                         placeholder: l,
-                        toolbarVariant: a,
-                        autosize: n,
-                        rows: i,
-                        minLength: r,
-                        maxLength: o,
-                        required: d,
-                        disabled: c,
-                        error: p,
-                        description: m,
-                        helperText: b,
-                        value: h,
-                        onChange: x,
+                        minLength: a,
+                        maxLength: n,
+                        required: i,
+                        disabled: r,
+                        error: o,
+                        description: d,
+                        helperText: c,
+                        value: p,
+                        onChange: m,
                     }),
                 });
             },
             controls: {
                 label: { label: "Label", type: "text", defaultValue: "About Me" },
                 placeholder: { label: "Placeholder", type: "text", defaultValue: "Tell us about yourself..." },
-                toolbarVariant: {
-                    label: "Toolbar Mode",
-                    type: "select",
-                    defaultValue: "floating",
-                    options: [
-                        { label: "Floating (selection)", value: "floating" },
-                        { label: "Static (always visible)", value: "static" },
-                    ],
-                },
-                autosize: { label: "Autosize", type: "boolean", defaultValue: !0 },
-                rows: { label: "Rows (min when autosize)", type: "number", defaultValue: 3, minValue: 1 },
                 minLength: { label: "Min Length", type: "number", defaultValue: void 0 },
                 maxLength: { label: "Max Length", type: "number", defaultValue: 200 },
                 required: { label: "Required", type: "boolean", defaultValue: !1 },
@@ -3805,7 +3788,7 @@ let ab = ["Revenue Storybook", "Revenue Playground"],
         id: "payments",
         name: "Payments",
         groups: [
-            eL,
+            eV,
             al,
             {
                 title: "Gift Card",
@@ -4055,9 +4038,9 @@ let ab = ["Revenue Storybook", "Revenue Playground"],
                         component: function (e) {
                             let { ctaText: t, linkText: l, linkPreText: a } = e;
                             return (0, s.jsx)(O.b, {
-                                ctaText: (0, L.uJ)(t) ? w.intl.string(w.t.H57f41) : t,
-                                linkText: (0, L.uJ)(l) ? w.intl.string(w.t["7f4H7D"]) : l,
-                                linkPreText: (0, L.uJ)(a) ? void 0 : a,
+                                ctaText: (0, V.uJ)(t) ? w.intl.string(w.t.H57f41) : t,
+                                linkText: (0, V.uJ)(l) ? w.intl.string(w.t["7f4H7D"]) : l,
+                                linkPreText: (0, V.uJ)(a) ? void 0 : a,
                                 ctaOnClick: N.tEg,
                             });
                         },

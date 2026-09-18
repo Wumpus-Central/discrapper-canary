@@ -1,14 +1,8 @@
-f.exports = {
+_.exports = {
     I6: "inputWrapper_f08f8d",
-    mq: "hasStaticToolbar_f08f8d",
-    mG: "inline_f08f8d",
     XG: "scroller_f08f8d",
-    Cn: "inlineScroller_f08f8d",
     RZ: "editorContainer_f08f8d",
     EN: "editor_f08f8d",
-    aL: "staticToolbar_f08f8d",
     S0: "emojiButtonContainer_f08f8d",
-    C7: "floatingEmojiButtonContainer_f08f8d",
-    y5: "inlineEmojiButton_f08f8d",
     Z8: "emojiButton_f08f8d",
 };

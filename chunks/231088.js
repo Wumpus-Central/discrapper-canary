@@ -1,133 +1,108 @@
-(n.d(t, { Ww: () => I, ZL: () => v, n4: () => j }), n(321073));
+(n.d(t, { Ww: () => h, ZL: () => j, n4: () => p }), n(321073));
 var i = n(477900),
     l = n(582128),
     s = n(503698),
     r = n.n(s),
     a = n(621466),
     o = n(17928),
-    d = n(866665),
-    c = n(408278),
-    u = n(695366),
-    g = n(738188),
-    m = n(834730),
-    x = n(939249),
-    f = n(775602),
-    h = n(375708),
-    p = n(404760);
-function I(e) {
+    d = n(695366),
+    c = n(738188),
+    u = n(834730),
+    g = n(939249),
+    m = n(775602),
+    x = n(375708),
+    f = n(404760);
+function h(e) {
     let { value: t, onCommit: n, disabled: i = !1 } = e,
         [s, r] = l.useState("idle"),
-        [d, c] = l.useState(t),
-        u = "editing" === s && !i,
-        g = (0, o.bG)([f.Ay], () => f.Ay.useReducedMotion),
-        m = l.useRef(null),
+        [a, d] = l.useState(t),
+        c = "editing" === s && !i,
+        u = (0, o.bG)([m.Ay], () => m.Ay.useReducedMotion),
+        g = l.useRef(null),
         x = l.useRef(null),
-        h = l.useRef(null),
-        p = l.useRef(!1),
-        I = l.useRef(!0),
-        j = l.useRef(!1),
-        E = l.useCallback(() => {
-            ((I.current = !1), c(t), r("editing"));
+        f = l.useRef(null),
+        h = l.useRef(!1),
+        p = l.useRef(!0),
+        I = l.useRef(!1),
+        j = l.useCallback(() => {
+            ((p.current = !1), d(t), r("editing"));
         }, [t]),
-        A = l.useRef(d);
+        E = l.useRef(a);
     l.useLayoutEffect(() => {
-        A.current = d;
+        E.current = a;
     });
-    let v = l.useCallback(() => {
-            I.current || ((I.current = !0), n(A.current), r("done"));
+    let A = l.useCallback(() => {
+            p.current || ((p.current = !0), n(E.current), r("done"));
         }, [n]),
-        C = l.useCallback(() => {
-            I.current || ((I.current = !0), r("done"));
+        v = l.useCallback(() => {
+            p.current || ((p.current = !0), r("done"));
         }, []);
     (l.useEffect(() => {
-        "done" === s && (p.current && m.current?.focus({ preventScroll: !0 }), (p.current = !1));
+        "done" === s && (h.current && g.current?.focus({ preventScroll: !0 }), (h.current = !1));
     }, [s]),
         l.useEffect(() => {
-            let e = j.current;
-            ((j.current = !1),
-                u &&
-                    (x.current?.scrollIntoView({ block: "nearest", behavior: g ? "auto" : "smooth" }),
-                    e || h.current?.focus({ preventScroll: !0 })));
-        }, [u, g]));
-    let S = l.useCallback(
+            let e = I.current;
+            ((I.current = !1),
+                c &&
+                    (x.current?.scrollIntoView({ block: "nearest", behavior: u ? "auto" : "smooth" }),
+                    e || f.current?.focus({ preventScroll: !0 })));
+        }, [c, u]));
+    let C = l.useCallback(
             (e) => {
-                !u || (null != x.current && (0, a.vq)(e.relatedTarget) && x.current.contains(e.relatedTarget)) || v();
+                c && "Escape" === e.key && (e.preventDefault(), e.stopPropagation(), (h.current = !0), v());
             },
-            [u, v],
+            [c, v],
         ),
-        b = l.useCallback(
-            (e) => {
-                u && "Escape" === e.key && (e.preventDefault(), e.stopPropagation(), (p.current = !0), C());
-            },
-            [u, C],
-        ),
-        k = l.useCallback(() => {
-            ((p.current = !0), v(), h.current?.blur());
+        S = l.useCallback(() => {
+            ((h.current = !0), A(), f.current?.blur());
+        }, [A]),
+        b = l.useCallback(() => {
+            ((h.current = !0), v(), f.current?.blur());
         }, [v]),
-        y = l.useCallback(() => {
-            ((p.current = !0), C(), h.current?.blur());
-        }, [C]),
-        T = l.useCallback(() => {
-            u || ((j.current = !0), E());
-        }, [u, E]),
-        N = l.useCallback(
+        k = l.useCallback(() => {
+            c || ((I.current = !0), j());
+        }, [c, j]);
+    return {
+        isEditing: c,
+        committedValue: t,
+        editedValue: a,
+        setEditedValue: d,
+        onCommit: n,
+        editButtonRef: g,
+        wrapperRef: x,
+        inputRef: f,
+        handleStartEditing: j,
+        handleCommit: A,
+        handleCancel: v,
+        onInputFocus: k,
+        onInputKeyDown: l.useCallback(
             (e) => {
                 "Enter" !== e.key || e.shiftKey
-                    ? "Escape" === e.key && (e.preventDefault(), e.stopPropagation(), y())
-                    : (e.preventDefault(), k());
+                    ? "Escape" === e.key && (e.preventDefault(), e.stopPropagation(), b())
+                    : (e.preventDefault(), S());
             },
-            [k, y],
-        );
-    return {
-        isEditing: u,
-        committedValue: t,
-        editedValue: d,
-        setEditedValue: c,
-        onCommit: n,
-        editButtonRef: m,
-        wrapperRef: x,
-        inputRef: h,
-        handleStartEditing: E,
-        handleCommit: v,
-        handleCancel: C,
-        handleInputCommit: k,
-        handleInputCancel: y,
-        onInputFocus: T,
-        onInputKeyDown: N,
-        onBlur: S,
-        onContainerKeyDown: b,
+            [S, b],
+        ),
+        onContainerKeyDown: C,
     };
 }
-function j(e, t) {
-    return null != t && e.length > t ? h.intl.formatToPlainString(h.t.ICT5S6, { maxLength: t }) : void 0;
+function p(e, t) {
+    return null != t && e.length > t ? x.intl.formatToPlainString(x.t.ICT5S6, { maxLength: t }) : void 0;
 }
-function E(e) {
-    let { tooltip: t, ...n } = e;
-    return (0, i.jsx)("div", {
-        className: p.L7,
-        children: (0, i.jsx)(d.m, {
-            asContainer: !0,
-            text: t ?? n["aria-label"],
-            ariaHidden: !0,
-            shouldShow: !n.disabled,
-            children: (0, i.jsx)(c.K, { ...n, type: "button", size: "sm", variant: "icon-only" }),
-        }),
-    });
-}
-function A(e) {
+function I(e) {
     let { id: t, message: n, type: l } = e,
         s = "error" === l,
-        r = s ? u.E : g.WarningIcon;
-    return (0, i.jsxs)(m.E, {
+        r = s ? d.E : c.WarningIcon;
+    return (0, i.jsxs)(u.E, {
         id: t,
         role: s ? "alert" : void 0,
         variant: "text-xs/normal",
         color: s ? "text-feedback-critical" : "text-feedback-warning",
-        className: p.VP,
-        children: [(0, i.jsx)(r, { size: "xs", color: "currentColor", className: s ? p.ik : p.QW }), n],
+        className: f.VP,
+        children: [(0, i.jsx)(r, { size: "xs", color: "currentColor", className: s ? f.ik : f.QW }), n],
     });
 }
-function v(e) {
+function j(e) {
     let {
             isEditing: t,
             preview: n,
@@ -135,92 +110,73 @@ function v(e) {
             input: o,
             editButtonRef: d,
             editButtonAriaLabel: c,
-            onStartEditing: u,
-            variant: g = "default",
-            trailing: f,
-            previewErrorMessage: h,
-            previewWarningMessage: I,
-            className: j,
-            wrapperRef: v,
-            onBlur: C,
-            onKeyDown: S,
-            textVariant: b,
-            textColor: k,
-            disabled: y = !1,
-            growWidth: T = !1,
-            removeVerticalPadding: N = !1,
+            onStartEditing: m,
+            previewErrorMessage: x,
+            previewWarningMessage: h,
+            className: p,
+            wrapperRef: j,
+            onBlur: E,
+            onKeyDown: A,
         } = e,
-        R = l.useRef(null),
-        w = l.useId(),
-        L = l.useId(),
-        P = null == n,
-        _ = null != h,
-        O = null != I && !_,
-        D = _ ? "error" : O ? "warning" : null,
-        G = _ ? h : I,
-        M = null != D && null != G,
-        [U] = l.useState(t),
-        [F, W] = l.useState(!1);
-    F || t === U || W(!0);
-    let H = [];
-    (P && H.push(w), M && "compact" !== g && H.push(L));
-    let V = H.length > 0 ? H.join(" ") : void 0;
-    function B() {
-        let { activeElement: e } = R.current?.ownerDocument ?? document;
-        ((0, a.vq)(e, HTMLElement) && e.blur(), u());
+        v = l.useRef(null),
+        C = l.useId(),
+        S = l.useId(),
+        b = null == n,
+        k = null != x,
+        y = null != h && !k,
+        T = k ? "error" : y ? "warning" : null,
+        N = k ? x : h,
+        R = null != T && null != N,
+        w = [];
+    (b && w.push(C), R && w.push(S));
+    let L = w.length > 0 ? w.join(" ") : void 0;
+    function P() {
+        let { activeElement: e } = v.current?.ownerDocument ?? document;
+        ((0, a.vq)(e, HTMLElement) && e.blur(), m());
     }
-    let Y = (0, i.jsxs)("div", {
-        ref: R,
-        className: r()(p.LL, { [p.JD]: _, [p.xe]: O, [p.r9]: y }),
-        onMouseDown: y
-            ? void 0
-            : function (e) {
-                  e.preventDefault();
-              },
-        onClick: y ? void 0 : B,
+    let _ = (0, i.jsxs)("div", {
+        ref: v,
+        className: r()(f.LL, { [f.JD]: k, [f.xe]: y }),
+        onMouseDown: function (e) {
+            e.preventDefault();
+        },
+        onClick: P,
         children: [
-            P
-                ? (0, i.jsx)(m.E, {
-                      id: w,
-                      variant: b ?? "text-sm/normal",
-                      color: k ?? "text-muted",
-                      className: p.qf,
+            b
+                ? (0, i.jsx)(u.E, {
+                      id: C,
+                      variant: "text-sm/normal",
+                      color: "text-muted",
+                      className: f.qf,
                       children: s,
                   })
                 : n,
-            !y &&
-                (0, i.jsx)(x.D, {
-                    innerRef: d,
-                    "aria-label": c,
-                    "aria-describedby": V,
-                    "aria-expanded": !1,
-                    onClick: (e) => {
-                        (e.stopPropagation(), B());
-                    },
-                    focusProps: { ringTarget: R },
-                }),
-            null != f && (0, i.jsx)("div", { className: p.lD, children: (0, i.jsx)(E, { ...f }) }),
+            (0, i.jsx)(g.D, {
+                innerRef: d,
+                "aria-label": c,
+                "aria-describedby": L,
+                "aria-expanded": !1,
+                onClick: (e) => {
+                    (e.stopPropagation(), P());
+                },
+                focusProps: { ringTarget: v },
+            }),
         ],
     });
     return (0, i.jsx)("div", {
-        ref: v,
-        className: r()(
-            p.kL,
-            { [p.oE]: "compact" === g, [p.c1]: "multiline" === g, [p.CP]: T, [p.WK]: N, [p.Dy]: t },
-            j,
-        ),
-        onBlur: C,
-        onKeyDown: S,
+        ref: j,
+        className: r()(f.kL, p),
+        onBlur: E,
+        onKeyDown: A,
         children: (0, i.jsx)(
             "div",
             {
-                className: F ? p.qG : void 0,
                 children: t
                     ? o
                     : (0, i.jsxs)(i.Fragment, {
                           children: [
-                              (0, i.jsx)("div", { className: p.VH, children: Y }),
-                              M && "compact" !== g && (0, i.jsx)(A, { id: L, message: G, type: D }),
+                              (0, i.jsx)("div", { className: f.VH, children: _ }),
+                              R && (0, i.jsx)(I, { id: S, message: N, type: T }),
                           ],
                       }),
             },

@@ -5753,22 +5753,6 @@
     }
   },
   {
-    "name": "2026-09-wysiwyg-user-profile-edit-polish",
-    "kind": "user",
-    "defaultConfig": {
-      "enabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true
-      }
-    }
-  },
-  {
     "kind": "user",
     "name": "2026-09-youtube-3p",
     "defaultConfig": {

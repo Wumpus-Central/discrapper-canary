@@ -1,6 +1,6 @@
-l.d(n, { f: () => K });
-var t = l(477900),
-    a = l(582128),
+l.d(n, { f: () => _ });
+var a = l(477900),
+    t = l(582128),
     r = l(503698),
     i = l.n(r),
     s = l(719442),
@@ -12,202 +12,163 @@ var t = l(477900),
     v = l(43990),
     f = l(922016),
     h = l(281595),
-    p = l(205086),
-    m = l(355622),
+    p = l(355622),
     b = l(408018),
-    A = l(186306),
-    I = l(655098),
-    C = l(323350),
-    x = l(135261),
+    m = l(186306),
+    A = l(655098),
+    I = l(323350),
+    C = l(135261),
     y = l(35277),
     k = l(820066),
-    N = l(702483),
-    j = l(490682),
-    E = l(683167),
+    x = l(702483),
+    N = l(490682),
+    j = l(683167),
     P = l(375499),
-    w = l(267889),
-    S = l(267102),
+    E = l(267889),
+    w = l(267102),
     R = l(363195),
-    D = l(885386),
-    M = l(95701),
-    L = l(652215),
-    G = l(551483),
-    T = l(307731),
-    V = l(569622),
-    O = l(465410),
-    z = l(736541);
-let B = (0, M.createChannelRecord)({ id: "1", type: L.rbe.DM });
-function H(e) {
-    let { editor: n, pickerIntention: l, containerClassName: r } = e,
-        s = (0, g.bG)([R.A], () => R.A.theme),
-        u = a.useRef(null),
-        o = a.useCallback(
+    S = l(885386),
+    D = l(95701),
+    M = l(652215),
+    T = l(551483),
+    G = l(307731),
+    L = l(569622),
+    V = l(465410),
+    O = l(736541);
+let z = (0, D.createChannelRecord)({ id: "1", type: M.rbe.DM });
+function B(e) {
+    let { editor: n, pickerIntention: l } = e,
+        r = (0, g.bG)([R.A], () => R.A.theme),
+        i = t.useRef(null),
+        s = t.useCallback(
             (e, l) => {
-                let { emoji: t, willClose: a } = e;
-                (null != t &&
+                let { emoji: a, willClose: t } = e;
+                (null != a &&
                     (!(function (e, n) {
                         let l = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-                            t = n.animated ? "a" : "",
-                            a = n.originalName ?? n.name ?? "",
+                            a = n.animated ? "a" : "",
+                            t = n.originalName ?? n.name ?? "",
                             r = `:${n.name}:`,
-                            i = null != n.id ? `<${t}:${a.replace(/:/g, "")}:${n.id}>` : null,
+                            i = null != n.id ? `<${a}:${t.replace(/:/g, "")}:${n.id}>` : null,
                             s = k.VW.areStylesDisabled(e) || null == i ? r : i;
-                        A.o.withSingleEntry(e, () => {
+                        m.o.withSingleEntry(e, () => {
                             y.b.insertText(e, s + (l ? " " : ""));
                         });
-                    })(n, t, a),
+                    })(n, a, t),
                     k.VW.focus(n)),
-                    a && l());
+                    t && l());
             },
             [n],
         ),
-        d = a.useCallback(
+        u = t.useCallback(
             (e) => {
                 let { closePopout: n } = e;
-                return (0, t.jsx)(v.N, {
-                    theme: s,
+                return (0, a.jsx)(v.N, {
+                    theme: r,
                     children: (e) =>
-                        (0, t.jsx)("div", {
+                        (0, a.jsx)("div", {
                             className: e,
-                            children: (0, t.jsx)(w.A, {
+                            children: (0, a.jsx)(E.A, {
                                 persistSearch: !0,
                                 closePopout: n,
                                 onSelectEmoji: (e) => {
-                                    let { emoji: l, willClose: t } = e;
-                                    return o({ emoji: l, willClose: t }, n);
+                                    let { emoji: l, willClose: a } = e;
+                                    return s({ emoji: l, willClose: a }, n);
                                 },
                                 pickerIntention: l,
                             }),
                         }),
                 });
             },
-            [o, l, s],
+            [s, l, r],
         );
-    return (0, t.jsx)("div", {
-        className: i()(V.S0, r),
+    return (0, a.jsx)("div", {
+        className: L.S0,
         onMouseDown: (e) => e.preventDefault(),
-        children: (0, t.jsx)(f.Y, {
-            targetElementRef: u,
-            renderPopout: d,
+        children: (0, a.jsx)(f.Y, {
+            targetElementRef: i,
+            renderPopout: u,
             position: "top",
             animation: f.Y.Animation.NONE,
             align: "right",
             children: (e, n) => {
                 let { isShown: l } = n;
-                return (0, t.jsx)(P.A, { ...e, ref: u, active: l, tabIndex: 0, className: V.Z8 });
+                return (0, a.jsx)(P.A, { ...e, ref: i, active: l, tabIndex: 0, className: L.Z8 });
             },
         }),
     });
 }
-function _(e) {
-    let { editor: n, pickerIntention: l } = e,
-        [, r] = a.useState(n.selection);
-    return (
-        a.useEffect(() => {
-            function e() {
-                return r(n.selection);
-            }
-            return (
-                n.events.addListener("onChange", e),
-                () => {
-                    n.events.removeListener("onChange", e);
-                }
-            );
-        }, [n]),
-        (0, t.jsxs)("div", {
-            className: V.aL,
-            onMouseDown: (e) => e.preventDefault(),
-            children: [(0, t.jsx)(x.P, { slateEditor: n }), (0, t.jsx)(H, { editor: n, pickerIntention: l })],
-        })
-    );
-}
-function F(e) {
+function H(e) {
     let {
             editor: n,
-            appearance: l,
-            toolbarVariant: r,
-            placeholder: s,
-            readOnly: c,
-            autoFocus: g,
-            required: v,
-            rows: f,
-            pickerIntention: h,
-            onChangeValue: p,
-            onKeyDown: m,
-            onFocus: b,
-            onBlur: A,
-            ariaLabelledByProp: C,
+            placeholder: l,
+            readOnly: r,
+            autoFocus: s,
+            required: c,
+            pickerIntention: g,
+            onChangeValue: v,
+            onKeyDown: f,
+            onFocus: h,
+            onBlur: p,
+            ariaLabelledByProp: b,
         } = e,
-        k = a.useContext(o._),
-        E = k?.errorMessageId != null,
-        P = "inline" === l,
-        w = a.useRef(null),
-        S = a.useRef(null),
-        R = a.useCallback(() => n, [n]),
-        D = a.useCallback((e) => [...(0, j.A)(n, e, void 0), ...(0, N.A)(n, e)], [n]);
+        m = t.useContext(o._),
+        I = m?.errorMessageId != null,
+        k = t.useRef(null),
+        j = t.useRef(null),
+        P = t.useCallback(() => n, [n]),
+        E = t.useCallback((e) => [...(0, N.A)(n, e, void 0), ...(0, x.A)(n, e)], [n]);
     return (
-        a.useEffect(() => {
-            if ("floating" !== r) return;
-            let e = S.current;
+        t.useEffect(() => {
+            let e = j.current;
             if (null != e)
                 return (
                     e.ownerDocument.addEventListener("scroll", n, { capture: !0 }),
                     () => e.ownerDocument.removeEventListener("scroll", n, { capture: !0 })
                 );
             function n(n) {
-                n.target.contains(e) && w.current?.hide();
+                n.target.contains(e) && k.current?.hide();
             }
-        }, [r]),
-        (0, t.jsxs)(t.Fragment, {
+        }, []),
+        (0, a.jsxs)(a.Fragment, {
             children: [
-                "floating" === r && (0, t.jsx)(x.A, { ref: w, getSlateEditor: R, containerRef: S }),
-                (0, t.jsx)(d.vN, {
-                    children: (0, t.jsxs)("div", {
-                        className: i()(V.I6, z[P ? "text-sm/normal" : "text-md/normal"], {
-                            [V.mG]: P,
-                            [V.mq]: "static" === r,
-                        }),
-                        "data-error": E || void 0,
-                        "data-disabled": c || void 0,
+                (0, a.jsx)(C.A, { ref: k, getSlateEditor: P, containerRef: j }),
+                (0, a.jsx)(d.vN, {
+                    children: (0, a.jsxs)("div", {
+                        className: i()(L.I6, O["text-sm/normal"]),
+                        "data-error": I || void 0,
+                        "data-disabled": r || void 0,
                         children: [
-                            "static" === r && !c && (0, t.jsx)(_, { editor: n, pickerIntention: h }),
-                            (0, t.jsx)("div", {
-                                ref: S,
-                                className: i()(V.XG, O.yL, { [V.Cn]: P }),
-                                style: { "--custom-rich-text-area-rows": f },
+                            (0, a.jsx)("div", {
+                                ref: j,
+                                className: i()(L.XG, V.yL),
                                 onMouseDown: (e) => {
                                     e.target === e.currentTarget &&
                                         (e.preventDefault(), y.b.resetSelectionToEditorEnd(n), u.rL.focus(n));
                                 },
-                                onScroll: () => w.current?.hide(),
-                                children: (0, t.jsx)(I.A, {
-                                    id: k?.controlId,
-                                    containerClassName: V.RZ,
-                                    className: V.EN,
+                                onScroll: () => k.current?.hide(),
+                                children: (0, a.jsx)(A.A, {
+                                    id: m?.controlId,
+                                    containerClassName: L.RZ,
+                                    className: L.EN,
                                     editor: n,
-                                    placeholder: s,
-                                    readOnly: c,
-                                    canFocus: !c,
-                                    autoFocus: g,
-                                    decorate: D,
-                                    onChange: p,
-                                    onKeyDown: m,
-                                    onFocus: b,
-                                    onBlur: A,
-                                    "aria-labelledby": C ?? k?.labelId,
-                                    "aria-describedby": k?.describedById,
-                                    "aria-errormessage": k?.errorMessageId,
-                                    "aria-invalid": E || void 0,
-                                    "aria-required": v || void 0,
+                                    placeholder: l,
+                                    readOnly: r,
+                                    canFocus: !r,
+                                    autoFocus: s,
+                                    decorate: E,
+                                    onChange: v,
+                                    onKeyDown: f,
+                                    onFocus: h,
+                                    onBlur: p,
+                                    "aria-labelledby": b ?? m?.labelId,
+                                    "aria-describedby": m?.describedById,
+                                    "aria-errormessage": m?.errorMessageId,
+                                    "aria-invalid": I || void 0,
+                                    "aria-required": c || void 0,
                                 }),
                             }),
-                            "floating" === r &&
-                                !c &&
-                                (0, t.jsx)(H, {
-                                    editor: n,
-                                    pickerIntention: h,
-                                    containerClassName: i()(V.C7, { [V.y5]: P }),
-                                }),
+                            !r && (0, a.jsx)(B, { editor: n, pickerIntention: g }),
                         ],
                     }),
                 }),
@@ -215,118 +176,105 @@ function F(e) {
         })
     );
 }
-function K(e) {
+function _(e) {
     let {
             value: n,
             placeholder: l,
             minLength: r,
             maxLength: i,
-            rows: o = 3,
-            autosize: d = !0,
-            autoFocus: g = !1,
-            error: v,
-            emojiPickerIntention: f = T.EmojiIntention.CHAT,
-            appearance: A = "boxed",
-            toolbarVariant: I = "floating",
-            editorRef: x,
-            onChange: k,
-            onKeyDown: N,
-            onFocus: j,
-            onBlur: P,
-            "aria-labelledby": w,
-            ...R
+            autoFocus: o = !1,
+            error: d,
+            emojiPickerIntention: g = G.EmojiIntention.CHAT,
+            editorRef: v,
+            onChange: f,
+            onKeyDown: m,
+            onFocus: A,
+            onBlur: C,
+            "aria-labelledby": k,
+            ...x
         } = e,
-        M = (function (e) {
-            let n = a.useContext(S.Ay),
-                l = D.SI.useSetting(),
-                [t] = a.useState(() => {
-                    let t = (0, s.ie)();
+        N = (function (e) {
+            let n = t.useContext(w.Ay),
+                l = S.SI.useSetting(),
+                [a] = t.useState(() => {
+                    let a = (0, s.ie)();
                     return (
-                        (t.children = (0, b.x7)(e)),
-                        (t.selection = { anchor: G.K, focus: G.K }),
-                        (0, E.a)({
-                            editor: t,
-                            chatInputType: m.oU.GENERIC_RICH_TEXTAREA,
-                            channel: B,
+                        (a.children = (0, b.x7)(e)),
+                        (a.selection = { anchor: T.K, focus: T.K }),
+                        (0, j.a)({
+                            editor: a,
+                            chatInputType: p.oU.GENERIC_RICH_TEXTAREA,
+                            channel: z,
                             windowContext: n,
                             previewMarkdown: l,
                             updateState: (e, n, l) => {
-                                let { value: t, selection: a } = l;
-                                (void 0 !== t && (e.children = t), null != a && (e.selection = a), e.onChange());
+                                let { value: a, selection: t } = l;
+                                (void 0 !== a && (e.children = a), null != t && (e.selection = t), e.onChange());
                             },
                         }),
-                        t
+                        a
                     );
                 });
             return (
-                a.useLayoutEffect(() => {
-                    t.onChange();
-                }, [t]),
-                a.useEffect(() => {
-                    t.previewMarkdown !== l && ((t.previewMarkdown = l), t.onChange());
-                }, [t, l]),
-                t
+                t.useLayoutEffect(() => {
+                    a.onChange();
+                }, [a]),
+                t.useEffect(() => {
+                    a.previewMarkdown !== l && ((a.previewMarkdown = l), a.onChange());
+                }, [a, l]),
+                a
             );
         })(n),
-        [L, V] = a.useState(n),
-        [O, z] = a.useState(() => M.children.length);
-    a.useImperativeHandle(
-        x,
+        [P, E] = t.useState(n);
+    t.useImperativeHandle(
+        v,
         () => ({
             focus(e) {
-                (y.b.resetSelectionToEditorEnd(M), u.rL.toDOMNode(M, M).focus(e));
+                (y.b.resetSelectionToEditorEnd(N), u.rL.toDOMNode(N, N).focus(e));
             },
             blur() {
-                u.rL.toDOMNode(M, M).blur();
+                u.rL.toDOMNode(N, N).blur();
             },
         }),
-        [M],
+        [N],
     );
-    let { fieldProps: H } = (0, c.n)(R),
-        { disabled: _, required: K } = H,
+    let { fieldProps: R } = (0, c.n)(x),
+        { disabled: D, required: M } = R,
         {
-            setShouldValidate: q,
-            errorMessage: X,
-            hasError: W,
-        } = (0, h.Y)({ validateOn: "change", error: v, value: L, minLength: r, maxLength: i }),
-        Y = a.useRef(L);
-    Y.current = L;
-    let U = a.useCallback(
+            setShouldValidate: L,
+            errorMessage: V,
+            hasError: O,
+        } = (0, h.Y)({ validateOn: "change", error: d, value: P, minLength: r, maxLength: i }),
+        B = t.useRef(P);
+    B.current = P;
+    let _ = t.useCallback(
         (e) => {
-            let n = (0, C.WO)(e, { mode: "raw" });
-            (n !== Y.current && (V(n), q(!0), k?.(n)), d && z(e.length));
+            let n = (0, I.WO)(e, { mode: "raw" });
+            n !== B.current && (E(n), L(!0), f?.(n));
         },
-        [d, k, q],
+        [f, L],
     );
-    a.useEffect(() => {
-        n !== Y.current &&
-            ((M.children = (0, b.x7)(n)),
-            (M.selection = { anchor: G.K, focus: G.K }),
-            M.onChange(),
-            V(n),
-            d && z(M.children.length));
-    }, [d, n, M]);
-    let $ = d ? Math.max(o, Math.min(O, 15)) : o,
-        Z = null != i && "boxed" === A ? (0, t.jsx)(p.n, { value: L, maxLength: i }) : null;
-    return (0, t.jsx)(c.D, {
-        ...H,
-        trailingAuxiliaryContent: Z,
-        errorMessage: W ? X : void 0,
-        children: (0, t.jsx)(F, {
-            editor: M,
-            appearance: A,
-            toolbarVariant: I,
-            placeholder: l,
-            readOnly: _,
-            autoFocus: g,
-            required: K,
-            rows: $,
-            pickerIntention: f,
-            onChangeValue: U,
-            onKeyDown: N,
-            onFocus: j,
-            onBlur: P,
-            ariaLabelledByProp: w,
-        }),
-    });
+    return (
+        t.useEffect(() => {
+            n !== B.current &&
+                ((N.children = (0, b.x7)(n)), (N.selection = { anchor: T.K, focus: T.K }), N.onChange(), E(n));
+        }, [n, N]),
+        (0, a.jsx)(c.D, {
+            ...R,
+            errorMessage: O ? V : void 0,
+            children: (0, a.jsx)(H, {
+                editor: N,
+                placeholder: l,
+                readOnly: D,
+                autoFocus: o,
+                required: M,
+                pickerIntention: g,
+                onChangeValue: _,
+                onKeyDown: m,
+                onFocus: A,
+                onBlur: C,
+                ariaLabelledByProp: k,
+            }),
+        })
+    );
 }
