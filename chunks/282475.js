@@ -1825,8 +1825,8 @@ class e3 {
     }
 }
 n(938796);
-var e6 = n(143236),
-    e5 = n(873985),
+var e5 = n(143236),
+    e6 = n(873985),
     e4 = n(935208),
     e7 =
         (((s = {})[(s.DISPATCH = 0)] = "DISPATCH"),
@@ -1862,7 +1862,7 @@ var e6 = n(143236),
         (s[(s.UPDATE_TIME_SPENT_SESSION_ID = 41)] = "UPDATE_TIME_SPENT_SESSION_ID"),
         (s[(s.REQUEST_CHANNEL_INFO = 43)] = "REQUEST_CHANNEL_INFO"),
         s);
-class e8 extends e6.EventEmitter {
+class e8 extends e5.EventEmitter {
     presenceUpdate(e, t, n, i) {
         this.send(e7.PRESENCE_UPDATE, { status: e, since: t, activities: n, afk: i });
     }
@@ -1879,7 +1879,7 @@ class e8 extends e6.EventEmitter {
                 flags: d = 0,
             } = e,
             c = { guild_id: t, channel_id: n, self_mute: i, self_deaf: r, self_video: a, flags: d };
-        (null != n && e5.A.shouldIncludePreferredRegion() && ((c.preferred_region = s), (c.preferred_regions = l)),
+        (null != n && e6.A.shouldIncludePreferredRegion() && ((c.preferred_region = s), (c.preferred_regions = l)),
             null != o && (c.tracks = o?.map((e) => ({ type: e.type, rid: e.rid, quality: e.quality }))),
             this.send(e7.VOICE_STATE_UPDATE, c));
     }
@@ -2051,10 +2051,14 @@ class to extends ta.G {
 let td = new to();
 class tc extends ta.G {
     constructor() {
-        super("discord_protos.qos_token.v1.DerivedQosData", [{ no: 1, name: "claims", kind: "scalar", T: 12 }]);
+        super("discord_protos.qos_token.v1.DerivedQosData", [
+            { no: 1, name: "claims", kind: "scalar", T: 12 },
+            { no: 2, name: "signature", kind: "scalar", T: 12 },
+            { no: 3, name: "key_id", kind: "scalar", T: 13 },
+        ]);
     }
     create(e) {
-        let t = { claims: new Uint8Array(0) };
+        let t = { claims: new Uint8Array(0), signature: new Uint8Array(0), keyId: 0 };
         return (
             globalThis.Object.defineProperty(t, tr.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, ti.x)(this, t, e),
@@ -2066,19 +2070,30 @@ class tc extends ta.G {
             a = e.pos + t;
         for (; e.pos < a;) {
             let [t, i] = e.tag();
-            if (1 === t) r.claims = e.bytes();
-            else {
-                let a = n.readUnknownField;
-                if ("throw" === a)
-                    throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
-                let s = e.skip(i);
-                !1 !== a && (!0 === a ? tn.f$.onRead : a)(this.typeName, r, t, i, s);
+            switch (t) {
+                case 1:
+                    r.claims = e.bytes();
+                    break;
+                case 2:
+                    r.signature = e.bytes();
+                    break;
+                case 3:
+                    r.keyId = e.uint32();
+                    break;
+                default:
+                    let a = n.readUnknownField;
+                    if ("throw" === a)
+                        throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
+                    let s = e.skip(i);
+                    !1 !== a && (!0 === a ? tn.f$.onRead : a)(this.typeName, r, t, i, s);
             }
         }
         return r;
     }
     internalBinaryWrite(e, t, n) {
-        e.claims.length && t.tag(1, tn.O0.LengthDelimited).bytes(e.claims);
+        (e.claims.length && t.tag(1, tn.O0.LengthDelimited).bytes(e.claims),
+            e.signature.length && t.tag(2, tn.O0.LengthDelimited).bytes(e.signature),
+            0 !== e.keyId && t.tag(3, tn.O0.Varint).uint32(e.keyId));
         let i = n.writeUnknownFields;
         return (!1 !== i && (!0 == i ? tn.f$.onWrite : i)(this.typeName, e, t), t);
     }
@@ -2090,10 +2105,12 @@ class t_ extends ta.G {
             { no: 1, name: "user_id", kind: "scalar", T: 6 },
             { no: 2, name: "issued_at", kind: "scalar", T: 6 },
             { no: 3, name: "is_staff", kind: "scalar", T: 8 },
+            { no: 4, name: "auth_token_hash", kind: "scalar", T: 12 },
+            { no: 5, name: "expires_at", kind: "scalar", T: 6 },
         ]);
     }
     create(e) {
-        let t = { userId: "0", issuedAt: "0", isStaff: !1 };
+        let t = { userId: "0", issuedAt: "0", isStaff: !1, authTokenHash: new Uint8Array(0), expiresAt: "0" };
         return (
             globalThis.Object.defineProperty(t, tr.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, ti.x)(this, t, e),
@@ -2115,6 +2132,12 @@ class t_ extends ta.G {
                 case 3:
                     r.isStaff = e.bool();
                     break;
+                case 4:
+                    r.authTokenHash = e.bytes();
+                    break;
+                case 5:
+                    r.expiresAt = e.fixed64().toString();
+                    break;
                 default:
                     let a = n.readUnknownField;
                     if ("throw" === a)
@@ -2128,7 +2151,9 @@ class t_ extends ta.G {
     internalBinaryWrite(e, t, n) {
         ("0" !== e.userId && t.tag(1, tn.O0.Bit64).fixed64(e.userId),
             "0" !== e.issuedAt && t.tag(2, tn.O0.Bit64).fixed64(e.issuedAt),
-            !1 !== e.isStaff && t.tag(3, tn.O0.Varint).bool(e.isStaff));
+            !1 !== e.isStaff && t.tag(3, tn.O0.Varint).bool(e.isStaff),
+            e.authTokenHash.length && t.tag(4, tn.O0.LengthDelimited).bytes(e.authTokenHash),
+            "0" !== e.expiresAt && t.tag(5, tn.O0.Bit64).fixed64(e.expiresAt));
         let i = n.writeUnknownFields;
         return (!1 !== i && (!0 == i ? tn.f$.onWrite : i)(this.typeName, e, t), t);
     }
