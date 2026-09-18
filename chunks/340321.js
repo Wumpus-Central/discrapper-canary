@@ -11,8 +11,8 @@ var n = l(477900),
     m = l(783791),
     x = l(707554),
     g = l(297264),
-    j = l(922016),
-    h = l(305866),
+    h = l(922016),
+    j = l(305866),
     f = l(228366),
     p = l(964486),
     v = l(948230),
@@ -26,12 +26,12 @@ var n = l(477900),
     k = l(821609),
     C = l(364522),
     G = l(627363),
-    T = l(145497),
-    _ = l(976860),
-    R = l(967198),
-    D = l(486020),
-    L = l(972786),
-    P = l(321593),
+    R = l(145497),
+    D = l(976860),
+    L = l(967198),
+    P = l(486020),
+    T = l(972786),
+    _ = l(321593),
     w = l(856795),
     O = l(13699),
     M = l(265498);
@@ -65,9 +65,9 @@ l(321073);
 var q = l(945810),
     H = l(71393),
     F = l(576705),
-    z = l(906786);
-let B = { building: 0, done: 1, idle: 2 };
-var Q = l(683180);
+    z = l(906786),
+    B = l(637708),
+    Q = l(683180);
 function $(e, t) {
     return (
         e.nextExpiry === t.nextExpiry &&
@@ -136,7 +136,7 @@ var J = l(652215),
     el = l(375708),
     en = l(654402);
 function ei(e, t) {
-    (0, _.pX)(null == t ? J.BVt.CHANNEL(e, ee.VV.VIBEGRATIONS) : J.BVt.CHANNEL(e, ee.VV.VIBEGRATIONS, t));
+    (0, D.pX)(null == t ? J.BVt.CHANNEL(e, ee.VV.VIBEGRATIONS) : J.BVt.CHANNEL(e, ee.VV.VIBEGRATIONS, t));
 }
 function ea(e) {
     let { projectId: t } = e,
@@ -163,7 +163,7 @@ function er(e) {
         s = t.guildId ?? l,
         r = t.project.preview_application_id ?? t.project.application_id,
         { data: d } = (0, G.YY)(r),
-        c = d?.icon == null ? null : D.Ay.getApplicationIconURL({ id: r, icon: d.icon, size: 44 }),
+        c = d?.icon == null ? null : P.Ay.getApplicationIconURL({ id: r, icon: d.icon, size: 44 }),
         u = t.guildName ?? el.intl.string(et.default["qqH+iN"]),
         m =
             null == t.guildName
@@ -172,7 +172,7 @@ function er(e) {
     return (0, n.jsxs)("li", {
         className: en.dc,
         children: [
-            (0, n.jsx)(P.Ay, { projectId: t.projectId }),
+            (0, n.jsx)(_.Ay, { projectId: t.projectId }),
             (0, n.jsxs)(o.D, {
                 className: en.nM,
                 "aria-label": m,
@@ -293,7 +293,7 @@ function eo(e) {
                                           (ei(e.id), l());
                                       },
                                       children: [
-                                          (0, n.jsx)(T.Ay, { guild: e, iconSize: 32, className: en.$f }),
+                                          (0, n.jsx)(R.Ay, { guild: e, iconSize: 32, className: en.$f }),
                                           (0, n.jsx)(I.E, {
                                               variant: "text-sm/medium",
                                               color: "text-strong",
@@ -315,7 +315,7 @@ function ec(e) {
         a = (function (e) {
             let [t, l] = i.useState(0),
                 { entries: n, nextExpiry: a } = (0, r.bG)(
-                    [L.Ay, m.Ay, H.A, q.Bt],
+                    [T.Ay, m.Ay, H.A, q.Bt],
                     () =>
                         (function (e) {
                             let t = Date.now(),
@@ -331,15 +331,12 @@ function ec(e) {
                                 s = null;
                             function r(e) {
                                 if (i.has(e.id)) return;
-                                let l = e.guild_id ?? e.preview_guild_id ?? null;
+                                let l = (0, B.HC)(e);
                                 if (null != l && !n(l)) return;
                                 i.add(e.id);
                                 let r = m.Ay.isThinking(e.id),
                                     d = m.Ay.getFinishedAt(e.id),
-                                    o = (function (e) {
-                                        let { thinking: t, finishedAt: l, now: n } = e;
-                                        return t ? "building" : null != l && n - l < 6e4 ? "done" : "idle";
-                                    })({ thinking: r, finishedAt: d, now: t });
+                                    o = (0, B.rs)({ thinking: r, finishedAt: d, now: t });
                                 if ("done" === o && null != d) {
                                     let e = d + 6e4;
                                     s = null == s ? e : Math.min(s, e);
@@ -361,20 +358,11 @@ function ec(e) {
                                     })(e, d),
                                 });
                             }
-                            for (let e of L.Ay.getOwnedProjects()) r(e);
+                            for (let e of T.Ay.getOwnedProjects()) r(e);
                             for (let e of Object.values(H.A.getGuilds()))
-                                if (L.Ay.hasFetchedGuildProjects(e.id) && n(e.id))
-                                    for (let t of L.Ay.getSharedProjects(e.id)) r(t);
-                            return {
-                                entries: [...a].sort((e, t) => {
-                                    let l = B[e.activity] - B[t.activity];
-                                    if (0 !== l) return l;
-                                    if (e.sortTime !== t.sortTime) return t.sortTime - e.sortTime;
-                                    let n = e.name.localeCompare(t.name);
-                                    return 0 !== n ? n : e.projectId.localeCompare(t.projectId);
-                                }),
-                                nextExpiry: s,
-                            };
+                                if (T.Ay.hasFetchedGuildProjects(e.id) && n(e.id))
+                                    for (let t of T.Ay.getSharedProjects(e.id)) r(t);
+                            return { entries: (0, B.io)(a), nextExpiry: s };
                         })(e),
                     [e, t],
                     $,
@@ -388,8 +376,8 @@ function ec(e) {
                 n
             );
         })("VibegrationsProjectList"),
-        s = (0, r.bG)([L.Ay], () => L.Ay.getProjectsFetchState()),
-        d = (0, r.bG)([R.A], () => R.A.getGuildId()),
+        s = (0, r.bG)([T.Ay], () => T.Ay.getProjectsFetchState()),
+        d = (0, r.bG)([L.A], () => L.A.getGuildId()),
         o = t.find((e) => e.id === d)?.id ?? t[0]?.id ?? null,
         c = a.filter((e) => "idle" !== e.activity),
         u = a.filter((e) => "idle" === e.activity);
@@ -450,7 +438,7 @@ function em(e) {
     let { guilds: t, onNavigate: l } = e,
         a = i.useRef(null),
         s = el.intl.string(et.default.qbAREO);
-    return (0, n.jsx)(j.Y, {
+    return (0, n.jsx)(h.Y, {
         targetElementRef: a,
         align: "right",
         position: "bottom",
@@ -514,7 +502,7 @@ function ex(e) {
     });
 }
 var eg = l(437170);
-function ej(e) {
+function eh(e) {
     var t;
     let { onNavigate: l } = e,
         i = el.intl.string(et.default.ZnvpQR),
@@ -558,7 +546,7 @@ function ej(e) {
         ],
     });
 }
-function eh(e) {
+function ej(e) {
     let { children: t, targetElementRef: l } = e,
         [a, s] = i.useState(!1),
         r = i.useCallback(() => s(!1), []),
@@ -569,18 +557,18 @@ function eh(e) {
         (0, p.Ay)(
             () => (f.h.subscribe("USER_SETTINGS_MODAL_OPEN", r), () => f.h.unsubscribe("USER_SETTINGS_MODAL_OPEN", r)),
         ),
-        (0, n.jsx)(j.Y, {
+        (0, n.jsx)(h.Y, {
             targetElementRef: l,
             shouldShow: a,
             position: "bottom",
             align: "right",
             spacing: 2,
-            animation: j.Y.Animation.NONE,
+            animation: h.Y.Animation.NONE,
             onRequestClose: r,
             renderPopout: () =>
-                (0, n.jsx)(h.l, {
+                (0, n.jsx)(j.l, {
                     "aria-label": el.intl.string(et.default.ZnvpQR),
-                    children: (0, n.jsx)(ej, { onNavigate: r }),
+                    children: (0, n.jsx)(eh, { onNavigate: r }),
                 }),
             children: (e, l) => {
                 let { isShown: n } = l;
@@ -595,7 +583,7 @@ function ep() {
         [t, l] = i.useState(!1),
         a = (0, r.bG)([m.Ay], () => m.Ay.isAnyThinking()),
         x = el.intl.string(et.default.ZnvpQR);
-    return (0, n.jsx)(eh, {
+    return (0, n.jsx)(ej, {
         targetElementRef: e,
         children: (i, r, m) =>
             (0, n.jsx)(d.m, {
