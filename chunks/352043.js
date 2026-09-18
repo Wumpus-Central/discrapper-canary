@@ -4194,6 +4194,7 @@ let l5 = Object.freeze({
             return (0, s.jsx)(iC, { message: t, channel: n, compact: i });
         },
         [D.lAJ.MEDIA_MENTION_MESSAGE]: void 0,
+        [D.lAJ.GUILD_SPACE_MESSAGE]: void 0,
     }),
     l6 = a.memo(function (e) {
         let { message: t, channel: n, compact: i, disableInteraction: l } = e,
