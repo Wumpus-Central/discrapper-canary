@@ -2,29 +2,29 @@
 var n = l(158390),
     i = l(17928),
     a = l(228366),
-    s = l(927813);
-let r = s.A.Millis.SECOND,
-    d = 10 * s.A.Millis.SECOND,
+    r = l(927813);
+let s = r.A.Millis.SECOND,
+    d = 10 * r.A.Millis.SECOND,
     c = { status: "idle" },
     u = { status: "loading" },
     o = { status: "error" },
     f = {};
-function h(e, t) {
+function m(e, t) {
     let l = e.entriesByWidgetId.get(t);
     return (null == l && ((l = { state: c, attempts: 0 }), e.entriesByWidgetId.set(t, l)), l);
 }
-function m(e, t, l, i) {
+function h(e, t, l, i) {
     if (0 === l.length) {
         e.backoff?.pending !== !0 && e.backoff?.succeed();
         return;
     }
-    let s = [];
+    let r = [];
     (l.forEach((t) => {
-        let l = h(e, t);
-        i && l.attempts < 3 ? s.push(t) : (l.state = o);
+        let l = m(e, t);
+        i && l.attempts < 3 ? r.push(t) : (l.state = o);
     }),
-        0 !== s.length &&
-            ((e.backoff ??= new n.A(r, d, !0)),
+        0 !== r.length &&
+            ((e.backoff ??= new n.A(s, d, !0)),
             e.backoff.pending ||
                 e.backoff.fail(() => a.h.dispatch({ type: "GUILD_SPACE_HYDRATE_BACKOFF_EXPIRED", guildId: t }))));
 }
@@ -50,7 +50,7 @@ let g = new x(a.h, {
         ((a.activeRequestId = n),
             (a.activeWidgetIds = i),
             i.forEach((e) => {
-                let t = h(a, e);
+                let t = m(a, e);
                 ((t.state = u), (t.attempts += 1));
             }));
     },
@@ -60,28 +60,28 @@ let g = new x(a.h, {
         if (i?.activeRequestId !== l) return !1;
         let a = i.activeWidgetIds ?? [];
         (delete i.activeRequestId, delete i.activeWidgetIds);
-        let s = new Map(
+        let r = new Map(
                 n.map((e) => {
                     let { id: t, data: l } = e;
                     return [t, l];
                 }),
             ),
-            r = [];
+            s = [];
         (a.forEach((e) => {
-            let t = s.get(e);
+            let t = r.get(e);
             if (null != t) {
-                let l = h(i, e);
+                let l = m(i, e);
                 ((l.state = { status: "success", data: t }), (l.attempts = 0));
-            } else r.push(e);
+            } else s.push(e);
         }),
-            m(i, t, r, !0));
+            h(i, t, s, !0));
     },
     GUILD_SPACE_HYDRATE_FAILURE: function (e) {
         let { guildId: t, requestId: l, retryable: n } = e,
             i = f[t];
         if (i?.activeRequestId !== l) return !1;
         let a = i.activeWidgetIds ?? [];
-        (delete i.activeRequestId, delete i.activeWidgetIds, m(i, t, a, n));
+        (delete i.activeRequestId, delete i.activeWidgetIds, h(i, t, a, n));
     },
     GUILD_SPACE_HYDRATE_BACKOFF_EXPIRED: function (e) {
         let { guildId: t } = e,

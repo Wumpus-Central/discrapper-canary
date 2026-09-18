@@ -1,4 +1,4 @@
-n.d(t, { A: () => v });
+n.d(t, { A: () => y });
 var r = n(477900),
     i = n(582128),
     s = n(562708),
@@ -26,18 +26,18 @@ function A(e) {
             align: f,
             impressionName: g,
             impressionProperties: A,
-            disableClickTrap: y = !1,
-            repositionOnContentChange: v = !1,
+            disableClickTrap: v = !1,
+            repositionOnContentChange: y = !1,
         } = e,
-        w = i.useRef(n);
+        x = i.useRef(n);
     i.useEffect(() => {
-        w.current = n;
+        x.current = n;
     });
-    let x = i.useRef(o);
+    let w = i.useRef(o);
     (i.useEffect(() => {
-        x.current = o;
+        w.current = o;
     }),
-        i.useEffect(() => () => x.current?.(), []),
+        i.useEffect(() => () => w.current?.(), []),
         (0, d.A)({ type: s.ImpressionTypes.MENU, name: g, properties: A }));
     let E = (0, u.aL)(),
         C = i.useCallback(() => {
@@ -54,13 +54,13 @@ function A(e) {
         open: !0,
         ownerDocument: N,
         onOpenChange: (e, t, n) => {
-            e ? C() : (b(), "outside-press" === n && setTimeout(m, 0), w.current());
+            e ? C() : (b(), "outside-press" === n && setTimeout(m, 0), x.current());
         },
         overrideTargetRect: c,
         placement: (0, l.Pv)(h ?? "right", f ?? "top"),
-        blockPointerEvents: !y,
+        blockPointerEvents: !v,
         crossAccessFlip: !1,
-        autoUpdate: v,
+        autoUpdate: y,
         renderLayer: (e) => {
             let { update: n } = e;
             return t({ position: h }, n);
@@ -68,7 +68,7 @@ function A(e) {
         children: () => null,
     });
 }
-class y extends i.PureComponent {
+class v extends i.PureComponent {
     state = { render: void 0 };
     componentDidMount() {
         let { renderLazy: e, renderWindow: t } = this.props;
@@ -140,7 +140,7 @@ class y extends i.PureComponent {
             : null;
     }
 }
-function v() {
+function y() {
     let {
             contextMenu: e,
             version: t,
@@ -148,5 +148,5 @@ function v() {
         } = (0, o.cf)([f.A], () => ({ contextMenu: f.A.getContextMenu(), version: f.A.version, isOpen: f.A.isOpen() })),
         s = (0, o.bG)([h.A], () => h.A.theme),
         { appContext: l, renderWindow: a } = i.useContext(u.Ay);
-    return (0, r.jsx)(y, { appContext: l, renderWindow: a, ...e, isOpen: n, theme: s, closeContextMenu: c.Z_ }, t);
+    return (0, r.jsx)(v, { appContext: l, renderWindow: a, ...e, isOpen: n, theme: s, closeContextMenu: c.Z_ }, t);
 }

@@ -24,18 +24,18 @@ let p = function (e) {
             animationSrc: S,
             secondaryButtonText: I,
             onSecondaryButtonClick: _,
-            children: j,
-            useReducedMotion: y = !1,
+            children: y,
+            useReducedMotion: j = !1,
             buttonVariant: b,
         } = e,
         N = (0, a.bG)([m.Ay], () => m.Ay.getState().isMembersOpen);
     if (s.Fr && N) return null;
-    if (null == t) return (0, l.jsx)(l.Fragment, { children: i.Children.only(j) });
+    if (null == t) return (0, l.jsx)(l.Fragment, { children: i.Children.only(y) });
     let T = null;
     return (
         null != E
             ? (T = (0, l.jsx)("img", { alt: "", src: E, className: g.Sl }))
-            : null != S && (T = (0, l.jsx)(r.a, { importData: S, shouldAnimate: !y, className: g.lY })),
+            : null != S && (T = (0, l.jsx)(r.a, { importData: S, shouldAnimate: !j, className: g.lY })),
         (0, l.jsxs)("div", {
             className: g.iE,
             children: [

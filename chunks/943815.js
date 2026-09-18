@@ -1,7 +1,7 @@
-i.d(t, { A: () => l });
-var n = i(318626);
-let a = { LATIN12: n.Xh, LATIN24: n.ID, ASIAN: n.KC },
-    s = /(AM|PM)$/;
-function l(e) {
-    return null != e.match(s) ? a.LATIN24 : e.length <= 5 ? a.LATIN12 : a.ASIAN;
+h.d(t, { A: () => s });
+var c = h(318626);
+let n = { LATIN12: c.Xh, LATIN24: c.ID, ASIAN: c.KC },
+    p = /(AM|PM)$/;
+function s(A) {
+    return null != A.match(p) ? n.LATIN24 : A.length <= 5 ? n.LATIN12 : n.ASIAN;
 }

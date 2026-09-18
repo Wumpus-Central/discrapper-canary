@@ -16,13 +16,13 @@ function s(e) {
             ...f
         } = e,
         h = (0, i.J)(t),
-        m = h?.width ?? n,
-        A = h?.height ?? s;
+        A = h?.width ?? n,
+        m = h?.height ?? s;
     return (0, l.jsxs)("svg", {
         ...(0, a.A)(f),
         xmlns: "http://www.w3.org/2000/svg",
-        width: m,
-        height: A,
+        width: A,
+        height: m,
         fill: "none",
         viewBox: "0 0 24 24",
         children: [

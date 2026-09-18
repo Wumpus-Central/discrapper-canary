@@ -21,8 +21,8 @@ function S(e) {
     var t, S;
     let I,
         _,
-        j,
         y,
+        j,
         b,
         N,
         T,
@@ -32,8 +32,8 @@ function S(e) {
     ((S = t = M.id),
         (I = (0, s.bG)([m.A], () => m.A.getLastMessage(S))),
         (_ = I?.changelogId),
-        (j = (0, s.bG)([c.default], () => c.default.locale)),
-        (y = (0, s.bG)([h.A], () => h.A.getChangelog(_ ?? "", j), [_, j])),
+        (y = (0, s.bG)([c.default], () => c.default.locale)),
+        (j = (0, s.bG)([h.A], () => h.A.getChangelog(_ ?? "", y), [_, y])),
         (b = (0, g.A)(t)),
         (N = i.useRef(b ? Date.now() : null)),
         (T = (0, s.bG)([d.Ay], () => d.Ay.getUnreadCount(t), [t])),
@@ -45,30 +45,30 @@ function S(e) {
             N.current = Date.now();
         }, [b]),
         i.useEffect(() => {
-            b && null != _ && o.A.fetchChangelog(_, j, !0);
-        }, [_, j, b]),
+            b && null != _ && o.A.fetchChangelog(_, y, !0);
+        }, [_, y, b]),
         i.useEffect(() => {
             b &&
-                null != y &&
+                null != j &&
                 u.default.track(p.HAw.CHANGE_LOG_OPENED, {
-                    change_log_id: `${y.date}:${y.revision}`,
+                    change_log_id: `${j.date}:${j.revision}`,
                     unread_count: v.current,
                 });
-        }, [b, y]),
+        }, [b, j]),
         i.useEffect(() => {
             let e = N.current;
             return () => {
                 b &&
-                    null != y &&
+                    null != j &&
                     null != e &&
                     (u.default.track(p.HAw.CHANGE_LOG_CLOSED, {
                         seconds_open: Math.round((Date.now() - e) / 1e3),
-                        change_log_id: `${y.date}:${y.revision}`,
+                        change_log_id: `${j.date}:${j.revision}`,
                         unread_count: v.current,
                     }),
                     (N.current = 0));
             };
-        }, [b, y]));
+        }, [b, j]));
     let L = (0, g.A)(M.id),
         k = M.isSystemDM(),
         P = D && !k && !M.isMultiUserDM(),

@@ -108,8 +108,8 @@ function w(e) {
     });
 }
 var H = n(519222),
-    F = n(356974),
-    B = n(988626);
+    B = n(356974),
+    F = n(988626);
 function V(e) {
     let { message: t, channel: n, useChatFontScaling: s, className: r } = e,
         c = (0, _.jv)("message_reactions"),
@@ -147,7 +147,7 @@ function V(e) {
         })(x);
     if ((!(0, h.bG)([b], () => b.hasRecentlyReacted(n.id, t.id)) && !u) || !c || t.author.id === f.default.getId() || m)
         return null;
-    let N = s ? B : F,
+    let N = s ? F : B,
         j = u ? g.BookmarkIcon : A.c;
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -198,7 +198,7 @@ let Q = l.memo(function (e) {
             E = x === u.v.BURST,
             I = (0, Z.IN)(c, d, x),
             C = (0, X.g)(E && null != h ? h : []),
-            _ = l ? B : F,
+            _ = l ? F : B,
             v = E ? m : o,
             N = (0, W.x)(v, q.$),
             j = {};
@@ -278,7 +278,7 @@ class et extends l.PureComponent {
                 visibleReactionsCount: I,
             } = this.props,
             { disableTransitionAppear: C } = this.state,
-            _ = p ? B : F;
+            _ = p ? F : B;
         return I > 0
             ? (0, i.jsxs)(r.F, {
                   component: "div",

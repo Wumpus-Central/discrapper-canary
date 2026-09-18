@@ -1,10 +1,10 @@
-a.d(t, { x: () => l });
-var n,
-    l =
-        (((n = {})[(n.NONE = 0)] = "NONE"),
-        (n[(n.IN_PROGRESS = 1)] = "IN_PROGRESS"),
-        (n[(n.COMPLETED = 2)] = "COMPLETED"),
-        (n[(n.CLAIMED = 3)] = "CLAIMED"),
-        (n[(n.INELIGIBLE = 4)] = "INELIGIBLE"),
-        (n[(n.ELIGIBLE = 5)] = "ELIGIBLE"),
-        n);
+a.d(t, { x: () => n });
+var l,
+    n =
+        (((l = {})[(l.NONE = 0)] = "NONE"),
+        (l[(l.IN_PROGRESS = 1)] = "IN_PROGRESS"),
+        (l[(l.COMPLETED = 2)] = "COMPLETED"),
+        (l[(l.CLAIMED = 3)] = "CLAIMED"),
+        (l[(l.INELIGIBLE = 4)] = "INELIGIBLE"),
+        (l[(l.ELIGIBLE = 5)] = "ELIGIBLE"),
+        l);

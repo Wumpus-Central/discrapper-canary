@@ -2,9 +2,9 @@ l.d(t, { A: () => o });
 var n = l(158390),
     i = l(17928),
     a = l(228366),
-    s = l(927813);
-let r = s.A.Millis.SECOND,
-    d = s.A.Millis.MINUTE,
+    r = l(927813);
+let s = r.A.Millis.SECOND,
+    d = r.A.Millis.MINUTE,
     c = {};
 class u extends i.Ay.Store {
     static displayName = "GuildSpaceStore";
@@ -33,14 +33,14 @@ let o = new u(a.h, {
     },
     GUILD_SPACE_FETCH_FAILURE: function (e) {
         let { guildId: t, requestId: l, retryable: i } = e,
-            s = c[t];
-        if (s?.activeFetchRequestId !== l) return !1;
-        (delete s.activeFetchRequestId,
-            (s.fetchStatus = "error"),
+            r = c[t];
+        if (r?.activeFetchRequestId !== l) return !1;
+        (delete r.activeFetchRequestId,
+            (r.fetchStatus = "error"),
             i &&
-                (null == s.backoff && (s.backoff = new n.A(r, d, !0)),
-                s.backoff.pending ||
-                    s.backoff.fail(() => a.h.dispatch({ type: "GUILD_SPACE_FETCH_BACKOFF_EXPIRED", guildId: t }))));
+                (null == r.backoff && (r.backoff = new n.A(s, d, !0)),
+                r.backoff.pending ||
+                    r.backoff.fail(() => a.h.dispatch({ type: "GUILD_SPACE_FETCH_BACKOFF_EXPIRED", guildId: t }))));
     },
     GUILD_SPACE_FETCH_BACKOFF_EXPIRED: function (e) {
         let { guildId: t } = e,

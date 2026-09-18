@@ -1,8 +1,8 @@
-i.d(t, { A: () => l });
-var n = i(477900);
+i.d(t, { A: () => r });
+var a = i(477900);
 i(582128);
-var a = i(438729);
-function l(e, t) {
-    let { message: i, compact: l } = e;
-    return (0, n.jsx)(a.Ay, { message: i, content: t, compact: l ?? !1 });
+var n = i(438729);
+function r(e, t) {
+    let { message: i, compact: r } = e;
+    return (0, a.jsx)(n.Ay, { message: i, content: t, compact: r ?? !1 });
 }

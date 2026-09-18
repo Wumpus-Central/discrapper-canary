@@ -14,10 +14,10 @@ var r = n(477900),
     p = n(462887),
     m = n(38021),
     A = n(192308),
-    y = n(231723),
-    v = n(259678),
-    w = n(638495),
-    x = n(965830),
+    v = n(231723),
+    y = n(259678),
+    x = n(638495),
+    w = n(965830),
     E = n(318009),
     C = n(92960),
     b = n(14214),
@@ -40,8 +40,8 @@ var r = n(477900),
     F = n(128954),
     B = n(258873),
     V = n(622242),
-    W = n(731738),
-    H = n(834730),
+    H = n(731738),
+    W = n(834730),
     Y = n(780907),
     z = n(684013),
     J = n(964486),
@@ -62,7 +62,7 @@ var r = n(477900),
 let ec = G().throttle(
         () => {
             X.A.increment(
-                { name: W.K.APP_CRASHED, tags: [`reason:${B.J.UNHANDLED_JS_ERROR}`, `level:${V.k.FATAL}`] },
+                { name: H.K.APP_CRASHED, tags: [`reason:${B.J.UNHANDLED_JS_ERROR}`, `level:${V.k.FATAL}`] },
                 !0,
             );
         },
@@ -90,7 +90,7 @@ function eu(e) {
         A = i.useCallback(() => {
             (a.set(0), null != c.current && clearTimeout(c.current), (c.current = null), n?.(), o?.());
         }, [a, n, o]),
-        y = i.useCallback(
+        v = i.useCallback(
             (e) => {
                 h ||
                     (f(!0),
@@ -105,23 +105,23 @@ function eu(e) {
             },
             [n, s, h],
         ),
-        v = i.useCallback(
+        y = i.useCallback(
             (e) => {
                 (e.stopPropagation(), e.shiftKey ? (u(!0), null != c.current && clearTimeout(c.current)) : u(!1));
             },
             [u],
         ),
-        w = i.useCallback(
+        x = i.useCallback(
             (e) => {
                 (e.stopPropagation(), n?.(), l?.());
             },
             [l, n],
         ),
-        x = (0, g.bG)([er.A], () => er.A.getFocusedRunningGame()),
+        w = (0, g.bG)([er.A], () => er.A.getFocusedRunningGame()),
         E = d
             ? (0, r.jsxs)("div", {
                   children: [
-                      (0, r.jsx)(H.E, {
+                      (0, r.jsx)(W.E, {
                           variant: "text-md/semibold",
                           color: "text-strong",
                           children: eo.intl.string(eo.t.mn4eXC),
@@ -129,8 +129,8 @@ function eu(e) {
                       (0, r.jsxs)("div", {
                           className: ea.Xh,
                           children: [
-                              (0, r.jsx)(H.E, { variant: "text-sm/normal", color: "text-subtle", children: t.message }),
-                              (0, r.jsx)(H.E, {
+                              (0, r.jsx)(W.E, { variant: "text-sm/normal", color: "text-subtle", children: t.message }),
+                              (0, r.jsx)(W.E, {
                                   variant: "text-xxs/normal",
                                   color: "text-subtle",
                                   children: (0, r.jsx)("code", {
@@ -149,11 +149,11 @@ function eu(e) {
         body: E,
         hint: m ? C : void 0,
         confirmText: eo.intl.string(eo.t.a3HlgJ),
-        cancelText: null != x ? eo.intl.string(eo.t.qIYnPo) : void 0,
+        cancelText: null != w ? eo.intl.string(eo.t.qIYnPo) : void 0,
         icon: (0, r.jsx)(q.A, { width: 40, height: 40, className: ea.Lo }),
-        onNotificationClick: v,
-        onConfirmClick: y,
-        onCancelClick: null != x ? w : void 0,
+        onNotificationClick: y,
+        onConfirmClick: v,
+        onCancelClick: null != w ? x : void 0,
         onDismissClick: n,
         expand: !0,
         locked: !0,
@@ -222,10 +222,10 @@ var ef = n(97469),
     ep = n(597619),
     em = n(892019),
     eA = n(723702),
-    ey = n(677134),
-    ev = n(19575),
-    ew = n(346142),
-    ex = n(869146),
+    ev = n(677134),
+    ey = n(19575),
+    ex = n(346142),
+    ew = n(869146),
     eE = n(392164),
     eC = n(577063);
 function eb(e) {
@@ -238,7 +238,7 @@ function eN(e) {
         s = n ?? r;
     return (
         i.useLayoutEffect(() => {
-            ev.Ay.setTrafficLightAppearance((0, p.M)(s) ? "dark" : "light", t);
+            ey.Ay.setTrafficLightAppearance((0, p.M)(s) ? "dark" : "light", t);
         }, [s, t]),
         null
     );
@@ -254,18 +254,18 @@ class eO extends i.Component {
         (null == t.querySelector("title") && null != t.head && t.head.appendChild(t.createElement("title")),
             this.updateTitle(),
             this.updateClientTheme(),
-            (0, ew.M)(e),
+            (0, ex.M)(e),
             e.addEventListener("blur", this.handleBlur),
             eA.isPlatformEmbedded
-                ? t.addEventListener("contextmenu", ey.contextMenuCallbackNative, !1)
-                : t.addEventListener("contextmenu", ey.contextMenuCallbackWeb, !1),
+                ? t.addEventListener("contextmenu", ev.contextMenuCallbackNative, !1)
+                : t.addEventListener("contextmenu", ev.contextMenuCallbackWeb, !1),
             e.addEventListener("beforeunload", this.beforeUnload),
             this.registerPopoutGlobalKeybinds());
     }
     beforeUnload = (e) => {
         let { onBeforeUnload: t } = this.props,
             n = () => {
-                (ex.A.unmountWindow(this.props.windowKey), eA.isPlatformEmbedded && ev.Ay.close(this.props.windowKey));
+                (ew.A.unmountWindow(this.props.windowKey), eA.isPlatformEmbedded && ey.Ay.close(this.props.windowKey));
             };
         null != t ? t({ e, unmountWindow: n }) : n();
     };
@@ -279,9 +279,9 @@ class eO extends i.Component {
         (this.unregisterPopoutGlobalKeybinds(),
             e.removeEventListener("blur", this.handleBlur),
             eA.isPlatformEmbedded
-                ? t.removeEventListener("contextmenu", ey.contextMenuCallbackNative)
-                : t.removeEventListener("contextmenu", ey.contextMenuCallbackWeb),
-            (0, d.r)(() => A.useModalsStore.setState((e) => ({ ...e, [y.KX]: [] }))),
+                ? t.removeEventListener("contextmenu", ev.contextMenuCallbackNative)
+                : t.removeEventListener("contextmenu", ev.contextMenuCallbackWeb),
+            (0, d.r)(() => A.useModalsStore.setState((e) => ({ ...e, [v.KX]: [] }))),
             e.removeEventListener("beforeunload", this.beforeUnload));
     }
     updateTitle() {
@@ -332,9 +332,9 @@ class eO extends i.Component {
                 hideModals: m = !1,
                 appContext: A,
             } = this.props,
-            y = eb({ withTitleBar: s, isFullScreen: i }),
-            x = n === eE.f,
-            C = x ? eh : P.A;
+            v = eb({ withTitleBar: s, isFullScreen: i }),
+            w = n === eE.f,
+            C = w ? eh : P.A;
         return (0, r.jsx)(c.Kd, {
             children: (0, r.jsxs)(
                 eg.e,
@@ -342,14 +342,14 @@ class eO extends i.Component {
                     windowKey: n,
                     themeOverride: g,
                     children: [
-                        y && (0, r.jsx)(eN, { windowKey: n, themeOverride: p }),
+                        v && (0, r.jsx)(eN, { windowKey: n, themeOverride: p }),
                         (0, r.jsx)(O.A, {
-                            children: (0, r.jsxs)(v.xp, {
+                            children: (0, r.jsxs)(y.xp, {
                                 containerRef: this.rootRef,
                                 children: [
                                     (0, r.jsx)(e_, {
                                         guestWindow: o,
-                                        className: l()(a, { overlay: x }),
+                                        className: l()(a, { overlay: w }),
                                         children: (0, r.jsxs)(C, {
                                             children: [
                                                 (0, r.jsx)(k.Al, {}),
@@ -362,7 +362,7 @@ class eO extends i.Component {
                                                                 (0, r.jsxs)("div", {
                                                                     className: eC.SW,
                                                                     children: [
-                                                                        y &&
+                                                                        v &&
                                                                             (0, r.jsx)(h.N, {
                                                                                 theme: p,
                                                                                 children: (e) =>
@@ -377,7 +377,7 @@ class eO extends i.Component {
                                                                         }),
                                                                     ],
                                                                 }),
-                                                                !m && (0, r.jsx)(w.b, {}),
+                                                                !m && (0, r.jsx)(x.b, {}),
                                                                 (0, r.jsx)(E.A, {}),
                                                                 (0, r.jsx)(u.P, {}),
                                                                 (0, r.jsx)(M.C8, {}),
@@ -421,9 +421,9 @@ let e_ = i.forwardRef(function (e, t) {
         );
     }),
     eD = i.forwardRef(function (e, t) {
-        let { guestWindow: n, isFullScreen: i } = (0, g.cf)([ex.A], () => ({
-            guestWindow: ex.A.getWindow(e.windowKey),
-            isFullScreen: ex.A.isWindowFullScreen(e.windowKey),
+        let { guestWindow: n, isFullScreen: i } = (0, g.cf)([ew.A], () => ({
+            guestWindow: ew.A.getWindow(e.windowKey),
+            isFullScreen: ew.A.isWindowFullScreen(e.windowKey),
         }));
         a()(null != n, "Missing guestWindow reference");
         let { forcedColors: s, connectedEmbeddedActivity: l } = (0, g.cf)([N.Ay, _.Ay], () => ({
@@ -437,7 +437,7 @@ let e_ = i.forwardRef(function (e, t) {
             h = e.themeOverride ?? u;
         return null == n
             ? null
-            : (0, r.jsx)(x.W, {
+            : (0, r.jsx)(w.W, {
                   children: (0, r.jsx)(I.f5, {
                       value: o,
                       children: (0, r.jsx)(eO, {

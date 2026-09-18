@@ -18,11 +18,11 @@ function C(e) {
     let { user: t, onAcceptSuccess: i, onRejectSuccess: C, onError: x } = e,
         E = (0, f.A)(),
         [S, I] = l.useState(!1),
-        [_, j] = l.useState(!1),
-        [y, b] = l.useState(!1),
+        [_, y] = l.useState(!1),
+        [j, b] = l.useState(!1),
         [N, T] = l.useState(!1),
         [v, M] = l.useState(!1),
-        R = S || _ || y,
+        R = S || _ || j,
         D = l.useCallback(
             async (e) => {
                 if (!R) {
@@ -42,14 +42,14 @@ function C(e) {
         L = l.useCallback(
             async (e) => {
                 if (!R) {
-                    j(!0);
+                    y(!0);
                     try {
                         (await (0, h.UK)(e), M(!0), C?.());
                     } catch (t) {
                         let e = new a.LG(t);
                         x?.(e);
                     } finally {
-                        j(!1);
+                        y(!1);
                     }
                 }
             },
@@ -58,7 +58,7 @@ function C(e) {
         k = l.useCallback(
             async (e) => {
                 if (R) return;
-                j(!0);
+                y(!0);
                 let t = s()(e, 50);
                 try {
                     for (let e of t) await (0, h.ST)(e);
@@ -67,7 +67,7 @@ function C(e) {
                     let e = new a.LG(t);
                     x?.(e);
                 } finally {
-                    j(!1);
+                    y(!1);
                 }
             },
             [R, C, x],
@@ -164,7 +164,7 @@ function C(e) {
         markAsNotSpam: O,
         isAcceptLoading: S,
         isRejectLoading: _,
-        isUserProfileLoading: y,
+        isUserProfileLoading: j,
         isOptimisticAccepted: N,
         isOptimisticRejected: v,
     };

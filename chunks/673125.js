@@ -1,6 +1,6 @@
 a.d(t, { Ay: () => E, EB: () => m, Y0: () => d });
-var n,
-    l,
+var l,
+    n,
     s = a(17928),
     i = a(228366),
     r = a(124861),
@@ -29,10 +29,10 @@ function u() {
 }
 var d =
         588245 != a.j
-            ? (((n = {}).NEW_ACHIEVEMENT = "new_achievement"), (n.UNCLAIMED_ACHIEVEMENT = "unclaimed_achievement"), n)
+            ? (((l = {}).NEW_ACHIEVEMENT = "new_achievement"), (l.UNCLAIMED_ACHIEVEMENT = "unclaimed_achievement"), l)
             : null,
-    m = (((l = {}).CLAIM_CHALLENGE = "claim_challenge"), (l.FETCH_CHALLENGES = "fetch_challenges"), l);
-class C extends s.Ay.Store {
+    m = (((n = {}).CLAIM_CHALLENGE = "claim_challenge"), (n.FETCH_CHALLENGES = "fetch_challenges"), n);
+class _ extends s.Ay.Store {
     static displayName = "OrbChallengesStore";
     state = u();
     constructor() {
@@ -148,4 +148,4 @@ class C extends s.Ay.Store {
         return this.state.fetchChallengesError;
     }
 }
-let E = new C();
+let E = new _();

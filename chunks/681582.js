@@ -14,17 +14,17 @@ function u(e) {
         g = i.useRef(void 0),
         p = i.useRef(new Set()),
         [m, A] = i.useState(!1),
-        y = (0, l.bG)([o.Ay], () => o.Ay.getCurrentlySelectedChannelId()),
-        v = i.useCallback((e) => {
+        v = (0, l.bG)([o.Ay], () => o.Ay.getCurrentlySelectedChannelId()),
+        y = i.useCallback((e) => {
             (p.current.delete(e), A(p.current.size > 0));
         }, []),
-        w = i.useCallback((e) => (p.current.add(e), A(!0), () => v(e)), [v]),
-        x = i.useCallback((e, t) => {
+        x = i.useCallback((e) => (p.current.add(e), A(!0), () => y(e)), [y]),
+        w = i.useCallback((e, t) => {
             for (let n of p.current) n(e, t);
         }, []);
     i.useEffect(() => {
         h?.clearConfetti();
-    }, [h, y]);
+    }, [h, v]);
     let E = i.useCallback((e) => {
             (window.clearTimeout(g.current),
                 (g.current = window.setTimeout(() => {
@@ -63,15 +63,15 @@ function u(e) {
                     confettiCanvas: h,
                     spriteCanvas: n,
                     baseConfig: c.Mw,
-                    addClickListener: w,
-                    removeClickListener: v,
+                    addClickListener: x,
+                    removeClickListener: y,
                     children: t,
                 }),
                 (0, r.jsx)(s.Fk, {
                     ref: f,
                     className: d.J,
                     environment: c.XA,
-                    onClick: m ? x : void 0,
+                    onClick: m ? w : void 0,
                     onBeforeRender: C,
                     onAfterRender: b,
                 }),

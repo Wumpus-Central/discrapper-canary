@@ -27,15 +27,15 @@ var A = n(832712),
     S = n(790782),
     I = n(355097),
     _ = n(375708),
-    j = n(113528);
-function y(e) {
+    y = n(113528);
+function j(e) {
     let { channel: t, clearUnreadsNotice: n } = e;
     return (0, l.jsxs)("div", {
-        className: j.l,
+        className: y.l,
         children: [
             (0, l.jsx)(p, { id: t.id }),
             (0, l.jsx)("div", {
-                className: j.p,
+                className: y.p,
                 children: (0, l.jsx)(d.E, { variant: "text-sm/medium", children: _.intl.format(_.t.P6Y2N1, {}) }),
             }),
             (0, l.jsx)(u.$, {
@@ -175,7 +175,7 @@ let U = i.memo(function (e) {
           : t.isLockedThread()
             ? (0, l.jsx)(O, { channel: t, narrow: n })
             : h
-              ? (0, l.jsx)(y, { channel: t, clearUnreadsNotice: m })
+              ? (0, l.jsx)(j, { channel: t, clearUnreadsNotice: m })
               : d && u.includes(G.i.OPT_IN_CHANNEL)
                 ? (0, l.jsx)(N.A, { channel: t, narrow: n })
                 : null;

@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     Xw: "text-md/medium__9a9f9",
     kL: "container__9a9f9",
     nP: "flexContainer__9a9f9",

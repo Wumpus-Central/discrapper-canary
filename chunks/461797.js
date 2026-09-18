@@ -1,4 +1,4 @@
-a.d(t, { B$: () => b, Wt: () => f, jB: () => o });
+a.d(t, { B$: () => p, Wt: () => f, jB: () => o });
 var d,
     c = a(508425),
     n = a(559949),
@@ -75,7 +75,7 @@ let o = {
 function f(e) {
     return o[e];
 }
-function b(e) {
+function p(e) {
     let t = Object.values(r),
         a = null == e ? t : t.filter((t) => t !== e);
     return a[Math.floor(Math.random() * a.length)];

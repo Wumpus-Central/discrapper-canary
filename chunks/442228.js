@@ -1,4 +1,4 @@
-n.d(t, { A: () => A });
+n.d(t, { A: () => m });
 var l = n(477900),
     r = n(582128),
     a = n(503698),
@@ -10,15 +10,15 @@ var l = n(477900),
     d = n(308244),
     f = n(900179),
     h = n(375708),
-    m = n(975316);
-let A = r.memo(function (e) {
+    A = n(975316);
+let m = r.memo(function (e) {
     let {
             userId: t,
             userBio: n,
             onClose: a,
-            animateOnHoverOrFocusOnly: A = !1,
-            isHoveringOrFocusing: T = !1,
-            hidePersonalInformation: S = !1,
+            animateOnHoverOrFocusOnly: m = !1,
+            isHoveringOrFocusing: S = !1,
+            hidePersonalInformation: T = !1,
             hideRestrictedProfile: g = !1,
             viewFullBioDisabled: x = !1,
         } = e,
@@ -27,7 +27,7 @@ let A = r.memo(function (e) {
         [R, y] = r.useState(!1),
         [v, C] = r.useState(!1),
         j = r.useRef(null);
-    return S || null == n || "" === n
+    return T || null == n || "" === n
         ? null
         : (0, l.jsxs)(f.A, {
               heading: h.intl.string(h.t.ZzAR2Y),
@@ -40,7 +40,7 @@ let A = r.memo(function (e) {
                                   (y(!v && e.scrollHeight - e.clientHeight > 1),
                                   e.getBoundingClientRect().height > 57.75 && C(!0)));
                       },
-                      className: i()(m.mA, v && m.Em),
+                      className: i()(A.mA, v && A.Em),
                       onBlur: function (e) {
                           null == j.current ||
                               j.current.contains(e.relatedTarget) ||
@@ -52,13 +52,13 @@ let A = r.memo(function (e) {
                           userBio: n,
                           setLineClamp: !1,
                           textColor: "text-strong",
-                          animateOnHoverOrFocusOnly: A,
-                          isHoveringOrFocusing: T,
+                          animateOnHoverOrFocusOnly: m,
+                          isHoveringOrFocusing: S,
                       }),
                   }),
                   (R || v) &&
                       (0, l.jsx)("div", {
-                          className: m.HV,
+                          className: A.HV,
                           children: (0, l.jsx)(s.Q, {
                               textVariant: "text-xs/normal",
                               size: "sm",

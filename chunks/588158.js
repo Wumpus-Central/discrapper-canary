@@ -20,8 +20,8 @@ var l,
     S = n(969632),
     I = n(554146),
     _ = n(826673),
-    j = n(367727),
-    y = n(597643),
+    y = n(367727),
+    j = n(597643),
     b = n(31717),
     N = n(49999);
 let T = I.M.SCHEDULED_MESSAGES_DRAFT_COACHMARK;
@@ -105,8 +105,8 @@ var ea = n(661531),
         (l.SUMMARIZE_THREAD = "SUMMARIZE_THREAD"),
         l),
     e_ = n(412136);
-let ej = /(.*)```(\w+)\n(.*)```(.*)/s;
-function ey(e) {
+let ey = /(.*)```(\w+)\n(.*)```(.*)/s;
+function ej(e) {
     let {
             channel: t,
             options: l,
@@ -143,11 +143,11 @@ function ey(e) {
             { modalKey: e_.sm },
         );
     }
-    function j() {
+    function y() {
         let e = h,
             n = "txt",
             l = "",
-            i = h.match(ej);
+            i = h.match(ey);
         (null != i && ((l = i[1]), (n = i[2]), (e = i[3]), (l += i[4])),
             (0, B.R)([(0, ei.VE)(new Blob([e], { type: "text/plain" }), `message.${n}`, "text/plain")], t, u),
             F._.dispatchToLastSubscribed(eS.jej.CLEAR_TEXT),
@@ -186,7 +186,7 @@ function ey(e) {
                                 label: e.display,
                                 iconLeft: e.icon,
                                 leadingAccessory: { type: "icon", icon: e.icon },
-                                action: j,
+                                action: y,
                             },
                             "upload-text-as-file",
                         );
@@ -481,7 +481,7 @@ let eT = s.memo(function (e) {
             }
         );
     });
-    let ej = (0, k.n)(l),
+    let ey = (0, k.n)(l),
         eT = (0, k.Tb)(l),
         ev = !P.D_.useSetting() && !(0, H.isAndroidWeb)() && null != window.ResizeObserver,
         eM = (0, S.I7)(l ?? void 0),
@@ -570,7 +570,7 @@ let eT = s.memo(function (e) {
             );
         })({
             canAttachFiles: eI,
-            canStartThreads: ej || eT,
+            canStartThreads: ey || eT,
             useSlate: ev,
             hasClips: ei,
             canUseApplicationCommands: !D,
@@ -587,7 +587,7 @@ let eT = s.memo(function (e) {
             let { channel: t, draftText: n, isEligible: l } = e,
                 i = (0, _.HX)(T),
                 a = (0, o.bG)([b.A], () => null != b.A.getScheduledMessage(t.id)),
-                r = (0, o.bG)([y.A], () => y.A.isConnected()),
+                r = (0, o.bG)([j.A], () => j.A.isConnected()),
                 c = l && n.trim().length > 10 && !a && r,
                 [d, u] = s.useState(!1),
                 h = d && c,
@@ -604,7 +604,7 @@ let eT = s.memo(function (e) {
             }, []);
             return (
                 s.useEffect(() => {
-                    h && ((0, j.Wx)(T), (0, _.Dr)(T, { dismissAction: N.i.AUTO_DISMISS }));
+                    h && ((0, y.Wx)(T), (0, _.Dr)(T, { dismissAction: N.i.AUTO_DISMISS }));
                 }, [h]),
                 { isCoachmarkVisible: h, dismissCoachmark: p }
             );
@@ -626,7 +626,7 @@ let eT = s.memo(function (e) {
             },
             renderPopout: (e) => {
                 if ("attachMenu" === en)
-                    return (0, i.jsx)(ey, {
+                    return (0, i.jsx)(ej, {
                         ...e,
                         onClose: () => el(null),
                         options: eL,

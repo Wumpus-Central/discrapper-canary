@@ -1,5 +1,5 @@
-i.d(a, { A: () => g });
-var t = i(477900),
+i.d(t, { A: () => g });
+var a = i(477900),
     l = i(582128),
     n = i(503698),
     s = i.n(n),
@@ -13,46 +13,46 @@ var t = i(477900),
     f = i(946356),
     p = i(981006);
 function h(e) {
-    let { applicationName: a, applicationIcon: i } = e;
-    return (0, t.jsxs)(o.B, {
+    let { applicationName: t, applicationIcon: i } = e;
+    return (0, a.jsxs)(o.B, {
         direction: "horizontal",
         gap: 4,
         children: [
             null != i
-                ? (0, t.jsx)(m.Ay, { width: 16, height: 16, src: i, className: p.In })
-                : (0, t.jsx)("div", { className: p.Fi }),
-            (0, t.jsx)(d.E, { variant: "text-xs/medium", children: a }),
+                ? (0, a.jsx)(m.Ay, { width: 16, height: 16, src: i, className: p.In })
+                : (0, a.jsx)("div", { className: p.Fi }),
+            (0, a.jsx)(d.E, { variant: "text-xs/medium", children: t }),
         ],
     });
 }
 function g(e) {
-    let { application: a, rendererProps: i, className: n, onClick: o, renderText: d } = e,
+    let { application: t, rendererProps: i, className: n, onClick: o, renderText: d } = e,
         { trackUserProfileAction: m } = (0, x.NJ)(),
         g = i.surfaceConfigs[c.m.MINI_PROFILE],
-        j = a.id;
+        j = t.id;
     return (!(function (e) {
-        let { trackUserProfileAction: a } = (0, x.NJ)(),
+        let { trackUserProfileAction: t } = (0, x.NJ)(),
             i = l.useRef(!1);
         l.useEffect(() => {
-            i.current || (a({ action: "VIEW_APPLICATION_WIDGET_PREVIEW", applicationId: e }), (i.current = !0));
-        }, [a, e]);
+            i.current || (t({ action: "VIEW_APPLICATION_WIDGET_PREVIEW", applicationId: e }), (i.current = !0));
+        }, [t, e]);
     })(j),
     null == g)
         ? null
-        : (0, t.jsx)(u.s, {
+        : (0, a.jsx)(u.s, {
               onClick: (e) => {
                   e.target?.closest("a") == null &&
                       (m({ action: "PRESS_APPLICATION_WIDGET_PREVIEW", applicationId: j }), o?.());
               },
-              "aria-label": a.name,
-              children: (0, t.jsx)(f.A.Overlay, {
+              "aria-label": t.name,
+              children: (0, a.jsx)(f.A.Overlay, {
                   className: s()(p.kL, n),
-                  children: (0, t.jsx)(r.kH, {
+                  children: (0, a.jsx)(r.kH, {
                       ...i,
                       renderText: d,
                       surface: c.m.MINI_PROFILE,
                       surfaceConfig: g,
-                      header: (0, t.jsx)(h, { applicationName: a.name, applicationIcon: a.getIconURL(16) }),
+                      header: (0, a.jsx)(h, { applicationName: t.name, applicationIcon: t.getIconURL(16) }),
                   }),
               }),
           });

@@ -1,4 +1,4 @@
-n.d(e, { w: () => z, A: () => F });
+n.d(l, { w: () => z, A: () => F });
 var a,
     s = n(477900),
     i = n(582128),
@@ -12,187 +12,187 @@ var a,
     h = n(545442),
     p = n(775602),
     A = n(793574),
-    x = n(688810),
-    g = n(922301),
+    g = n(688810),
+    x = n(922301),
     v = n(660184),
     N = n(73392),
     S = n(386467),
     j = n(534400),
-    G = n(176201),
-    I = n(676608),
-    y = n(342296),
+    y = n(176201),
+    G = n(676608),
+    I = n(342296),
     f = n(317525),
     C = n(486020),
     b = n(834730),
-    E = n(687966),
-    R = n(429913),
-    k = n(35601);
-let w = i.memo(function (l) {
-    let { message: e, channel: n } = l,
+    R = n(687966),
+    E = n(429913),
+    M = n(35601);
+let w = i.memo(function (e) {
+    let { message: l, channel: n } = e,
         a = n?.linkedLobby,
-        i = (0, R.h)(a?.application_id),
-        r = e.additionalName;
+        i = (0, E.h)(a?.application_id),
+        r = l.additionalName;
     if (null == a || null == r || "" === r) return null;
     let t = i?.icon != null ? C.Ay.getApplicationIconURL({ id: i.id, icon: i.icon, size: 16 }) : void 0;
     return (0, s.jsx)("span", {
-        className: k.kL,
+        className: M.kL,
         children: (0, s.jsxs)(b.E, {
             tag: "span",
             variant: "text-xs/semibold",
             color: "text-default",
             lineClamp: 1,
-            className: k.Qq,
+            className: M.Qq,
             children: [
                 null != t
-                    ? (0, s.jsx)("img", { src: t, alt: "", width: 16, height: 16, className: k.qS })
-                    : (0, s.jsx)(E.GameControllerIcon, { size: "custom", width: 16, height: 16, className: k.qS }),
-                (0, s.jsx)("span", { className: k.em, children: r }),
+                    ? (0, s.jsx)("img", { src: t, alt: "", width: 16, height: 16, className: M.qS })
+                    : (0, s.jsx)(R.GameControllerIcon, { size: "custom", width: 16, height: 16, className: M.qS }),
+                (0, s.jsx)("span", { className: M.em, children: r }),
             ],
         }),
     });
 });
 var _ = n(109054),
-    M = n(560936),
-    D = n(743981),
-    T = n(318626),
+    k = n(560936),
+    T = n(743981),
+    D = n(318626),
     z = (((a = {})[(a.SYSTEM_TAG = 0)] = "SYSTEM_TAG"), (a[(a.BADGES = 1)] = "BADGES"), a);
-function F(l) {
+function F(e) {
     let {
-            author: e,
+            author: l,
             message: n,
             channel: a,
             userOverride: r,
             compact: b = !1,
-            withMentionPrefix: E = !1,
-            showPopout: R = !1,
-            hideGuildTag: k = !1,
+            withMentionPrefix: R = !1,
+            showPopout: E = !1,
+            hideGuildTag: M = !1,
             disableGuildTagProfile: z = !1,
             hideSystemTag: F = !1,
             className: P,
             onClick: q,
             onContextMenu: L,
             onPopoutRequestClose: U,
-            renderPopout: B,
-            decorations: O,
-            previewGuildId: W,
-            subscribeToGroupId: Y,
-        } = l,
+            renderPopout: O,
+            decorations: Y,
+            previewGuildId: B,
+            subscribeToGroupId: W,
+        } = e,
         Z = i.useRef(null),
         H = i.useContext(S.A),
         Q = a?.guild_id ?? H,
-        { analyticsLocations: V } = (0, x.Ay)(A.A.USERNAME),
-        J = E ? "@" : "",
-        { nick: K, colorString: X, colorStrings: $, colorRoleName: ll, displayNameStyles: le } = e,
-        ln = (0, o.bG)([p.Ay], () => p.Ay.roleStyle),
-        la = "username" === ln,
-        ls = (0, N.a)({ displayNameStyles: le }),
-        li = (0, o.bG)([f.A], () =>
-            null == e.guildId || null == e.colorRoleId ? null : f.A.getRole(e.guildId, e.colorRoleId),
+        { analyticsLocations: V } = (0, g.Ay)(A.A.USERNAME),
+        J = R ? "@" : "",
+        { nick: K, colorString: X, colorStrings: $, colorRoleName: ee, displayNameStyles: el } = l,
+        en = (0, o.bG)([p.Ay], () => p.Ay.roleStyle),
+        ea = "username" === en,
+        es = (0, N.a)({ displayNameStyles: el }),
+        ei = (0, o.bG)([f.A], () =>
+            null == l.guildId || null == l.colorRoleId ? null : f.A.getRole(l.guildId, l.colorRoleId),
         ),
-        lr = (0, I.jV)(W ?? Q, li),
-        lt = (0, _.A)(n),
-        lu = i.useContext(d.C),
-        lo = lu?.animate || R,
-        ld = lr && (0, G.kz)(e),
-        lc = la && ld,
-        lm = a?.isPrivate() && null != le;
-    (0, M.A)({ shouldSubscribe: lm || lc, subscribeToGroupId: Y, authorId: n.author.id });
-    let { gradientStyle: lh, gradientClassname: lp } = (0, c.v5)({
+        er = (0, G.jV)(B ?? Q, ei),
+        et = (0, _.A)(n),
+        eu = i.useContext(d.C),
+        eo = eu?.animate || E,
+        ed = er && (0, y.kz)(l),
+        ec = ea && ed,
+        em = a?.isPrivate() && null != el;
+    (0, k.A)({ shouldSubscribe: em || ec, subscribeToGroupId: W, authorId: n.author.id });
+    let { gradientStyle: eh, gradientClassname: ep } = (0, c.v5)({
             colorStrings: $,
             roleStyle: "username",
             includeConvenienceGlow: !0,
-            animateGradient: lo,
+            animateGradient: eo,
         }),
-        lA = (0, c.CR)(J + K),
-        lx = {
-            className: t()(T.oF, ls, { [lp]: lc, [T.IW]: "username" === ln && null != X }),
+        eA = (0, c.CR)(J + K),
+        eg = {
+            className: t()(D.oF, es, { [ep]: ec, [D.IW]: "username" === en && null != X }),
             style: (function () {
-                if (la)
-                    return lc && null != $
-                        ? { ...lh, textDecorationColor: $?.primaryColor ?? void 0 }
+                if (ea)
+                    return ec && null != $
+                        ? { ...eh, textDecorationColor: $?.primaryColor ?? void 0 }
                         : null != X
                           ? { color: X }
                           : void 0;
             })(),
             onClick: q,
             onContextMenu: L,
-            children: lm
+            children: em
                 ? (0, s.jsx)(v.A, {
-                      userName: lA,
-                      displayNameStyles: le,
-                      effectDisplayType: lo ? g.G.ANIMATED : g.G.PLAIN,
+                      userName: eA,
+                      displayNameStyles: el,
+                      effectDisplayType: eo ? x.G.ANIMATED : x.G.PLAIN,
                       loop: !0,
                       shouldUnderlineOnHover: null != q,
-                      textClassName: T.Mu,
+                      textClassName: D.Mu,
                   })
-                : lA,
+                : eA,
             "data-text": J + K,
-            "data-username-has-gradient": !!ld || void 0,
+            "data-username-has-gradient": !!ed || void 0,
         },
-        lg = i.useMemo(
+        ex = i.useMemo(
             () =>
-                k
+                M
                     ? null
                     : (0, s.jsx)(j.Cw, {
-                          primaryGuild: e.primaryGuild,
+                          primaryGuild: l.primaryGuild,
                           userId: n.author.id,
                           contextGuildId: Q,
-                          className: T.s4,
-                          badgeSize: b ? D.Sl.SIZE_12 : void 0,
+                          className: D.s4,
+                          badgeSize: b ? T.Sl.SIZE_12 : void 0,
                           disableGuildProfile: z,
                       }),
-            [b, e.primaryGuild, Q, n.author.id, k, z],
+            [b, l.primaryGuild, Q, n.author.id, M, z],
         ),
-        lv = r ?? n.author,
-        lN =
-            null != B && null != R
-                ? (0, s.jsx)(y.A, {
+        ev = r ?? n.author,
+        eN =
+            null != O && null != E
+                ? (0, s.jsx)(I.A, {
                       targetElementRef: Z,
-                      user: lv,
+                      user: ev,
                       guildId: Q,
                       channelId: n.channel_id,
-                      renderPopout: B,
-                      shouldShow: R,
-                      shouldPreload: lt,
+                      renderPopout: O,
+                      shouldShow: E,
+                      shouldPreload: et,
                       position: u.Fr ? "window_center" : "right",
                       avatarUrl:
-                          null != e.guildMemberAvatar && null != Q
-                              ? (0, C.s7)({ guildId: Q, userId: lv.id, avatar: e.guildMemberAvatar, size: 80 })
+                          null != l.guildMemberAvatar && null != Q
+                              ? (0, C.s7)({ guildId: Q, userId: ev.id, avatar: l.guildMemberAvatar, size: 80 })
                               : void 0,
                       onRequestClose: U,
-                      clickTrap: R,
-                      children: (l) => {
-                          let { onClick: e, ...n } = l;
+                      clickTrap: E,
+                      children: (e) => {
+                          let { onClick: l, ...n } = e;
                           return (0, s.jsxs)(s.Fragment, {
                               children: [
                                   (0, s.jsx)(m.D, {
                                       tag: "span",
                                       innerRef: Z,
                                       ...n,
-                                      ...lx,
-                                      className: t()(lx.className, T.vk, P),
+                                      ...eg,
+                                      className: t()(eg.className, D.vk, P),
                                   }),
-                                  lg,
+                                  ex,
                               ],
                           });
                       },
                   })
                 : (0, s.jsxs)(s.Fragment, {
-                      children: [(0, s.jsx)(m.D, { ...lx, className: t()(lx.className, P) }), lg],
+                      children: [(0, s.jsx)(m.D, { ...eg, className: t()(eg.className, P) }), ex],
                   }),
-        lS = null != O ? O[0] : null,
-        lj = null != O ? O[1] : null;
-    return (0, s.jsxs)(x.f5, {
+        eS = null != Y ? Y[0] : null,
+        ej = null != Y ? Y[1] : null;
+    return (0, s.jsxs)(g.f5, {
         value: V,
         children: [
-            null != lS && !F && b ? (0, s.jsxs)(s.Fragment, { children: [" ", lS, " "] }) : null,
-            "dot" === ln
-                ? (0, s.jsx)(h.W, { color: X, colors: ld ? $ : null, name: ll, className: T.m4, hoverOverride: lo })
+            null != eS && !F && b ? (0, s.jsxs)(s.Fragment, { children: [" ", eS, " "] }) : null,
+            "dot" === en
+                ? (0, s.jsx)(h.W, { color: X, colors: ed ? $ : null, name: ee, className: D.m4, hoverOverride: eo })
                 : null,
-            lN,
+            eN,
             (0, s.jsx)(w, { message: n, channel: a }),
-            null != lj ? lj : null,
-            null == lS || F || b ? null : lS,
+            null != ej ? ej : null,
+            null == eS || F || b ? null : eS,
         ],
     });
 }

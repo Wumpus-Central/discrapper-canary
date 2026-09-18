@@ -10,9 +10,9 @@
     Yq: () => U,
     r4: () => w,
     Ck: () => J,
-    Am: () => F,
+    Am: () => B,
     Jo: () => P,
-    ri: () => B,
+    ri: () => F,
     m: () => R,
     Ge: () => D,
 }),
@@ -194,7 +194,7 @@ function H(e, t, n) {
         [e, t, n],
     );
 }
-function F(e, t) {
+function B(e, t) {
     return l.useCallback(
         (n) => {
             let i = I.default.getUser(e),
@@ -204,7 +204,7 @@ function F(e, t) {
         [e, t],
     );
 }
-function B(e, t) {
+function F(e, t) {
     let { id: n } = e,
         { id: i } = t;
     return l.useCallback(

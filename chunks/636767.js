@@ -1,4 +1,4 @@
-c.exports = {
+e.exports = {
     Dy: "blockedEdit_b7ab2c",
     bv: "blockedSend_b7ab2c",
     F_: "shieldIcon_b7ab2c",

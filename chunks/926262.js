@@ -19,10 +19,10 @@ function C(e) {
     i.useEffect(() => {
         m.default.track(g.HAw.OPEN_POPOUT, { type: S, ...(0, u.dI)(E) });
     }, [S, E]);
-    let j = i.useCallback(() => {
+    let y = i.useCallback(() => {
             (C?.(), t());
         }, [C, t]),
-        y = i.useCallback(() => {
+        j = i.useCallback(() => {
             (x?.(), t());
         }, [x, t]),
         b = i.useRef(null);
@@ -57,7 +57,7 @@ function C(e) {
             "aria-labelledby": "content-warning-popout-label",
             children: (0, l.jsxs)("form", {
                 className: A.$,
-                onSubmit: j,
+                onSubmit: y,
                 children: [
                     (0, l.jsxs)("div", {
                         className: A.rf,
@@ -83,7 +83,7 @@ function C(e) {
                                                         className: A.x6,
                                                         children: (0, l.jsx)(c.$, {
                                                             variant: "secondary",
-                                                            onClick: y,
+                                                            onClick: j,
                                                             text: p.intl.string(p.t.fsBWmS),
                                                         }),
                                                     }),
@@ -101,7 +101,7 @@ function C(e) {
                                                         className: A.x6,
                                                         children: (0, l.jsx)(c.$, {
                                                             variant: "primary",
-                                                            onClick: j,
+                                                            onClick: y,
                                                             text: p.intl.string(p.t.KJnHq3),
                                                             autoFocus: !0,
                                                         }),
