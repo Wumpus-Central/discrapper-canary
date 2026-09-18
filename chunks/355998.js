@@ -310,6 +310,7 @@ function eK(e) {
                     onCancel() {
                         window.open(eB.A.getArticleURL(eZ.MVz.PERMISSIONS_TUTORIAL));
                     },
+                    isDismissable: !1,
                 }));
         }
     }

@@ -71,6 +71,7 @@ async function C(e) {
                               currentApplicationName: t?.name ?? p.intl.string(p.t.G99XFs),
                               currentApplicationChannelName: (0, f.uJ)(r) ? p.intl.string(p.t.OGUjmt) : r,
                           }),
+                          isDismissable: !1,
                       }));
             }))) &&
         !0

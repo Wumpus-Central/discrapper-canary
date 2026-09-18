@@ -119,6 +119,7 @@ function U(e) {
                         body: N.intl.string(N.t.kuzKHK),
                         confirmText: N.intl.string(N.t["5911Lb"]),
                         onConfirm: () => E(),
+                        isDismissable: !1,
                     }),
                     e
                 );
