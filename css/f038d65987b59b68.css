@@ -447,11 +447,6 @@
     width: 100%
 }
 
-.tierTimelineDescriptionIcon_bf9073 {
-    color: var(--text-subtle);
-    flex-shrink: 0
-}
-
 .tierTimelineGrid_bf9073 {
     flex-wrap: wrap;
     justify-content: center
@@ -641,11 +636,6 @@
     display: flex;
     gap: var(--space-4);
     width: 100%
-}
-
-.tierTimelineDescriptionIcon__64bbc {
-    color: var(--text-subtle);
-    flex-shrink: 0
 }
 
 .tierTimelineGrid__64bbc {
@@ -922,4 +912,4 @@
     }
 }
 
-/*# sourceMappingURL=e16eb98caadcaecf.css.map*/
+/*# sourceMappingURL=f038d65987b59b68.css.map*/
