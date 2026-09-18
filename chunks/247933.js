@@ -4372,7 +4372,7 @@ function sk(e) {
     });
 }
 var sP = n(187495),
-    sO = n(157550),
+    sO = n(321404),
     sG = n(957283),
     sU = n(189213),
     sw = n(933958),
@@ -4729,9 +4729,9 @@ function ad(e) {
     let t,
         { channel: n, user: l, showingBanner: i } = e,
         { channelId: s } = (0, sG.N)(),
-        r = (0, h.bG)([sO.A], () => null != s && sO.A.isSpam(s), [s]),
-        o = (0, h.bG)([nR.A], () => nR.A.getRelationshipType(l.id), [l.id]),
-        c = n.id === s,
+        r = (0, h.bG)([nR.A], () => nR.A.getRelationshipType(l.id), [l.id]),
+        o = n.id === s,
+        c = (0, sO.c)(n.id),
         d = !0 === l.bot,
         u = l.isNonUserBot(),
         m = (0, e$.U)(),
@@ -4749,12 +4749,12 @@ function ad(e) {
                     compactPendingIncoming: !0,
                 })),
                 (g = ac.O))
-              : r || c
+              : o && c
                 ? (t = (0, a.jsx)(ao, { channel: n, user: l }))
                 : d
                   ? (t = (0, a.jsx)(sX, { channel: n, user: l }))
                   : ((t = (0, a.jsx)(ai, { channel: n, user: l, showingBanner: i })),
-                    o === eu.eA$.PENDING_INCOMING && (g = ac.O)),
+                    r === eu.eA$.PENDING_INCOMING && (g = ac.O)),
         (0, a.jsxs)("div", {
             className: g,
             children: [(0, a.jsx)(s4, { userId: l.id, channelId: n.id, showDivider: g !== ac.O, compact: m }), t],

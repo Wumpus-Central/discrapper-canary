@@ -1,30 +1,36 @@
-n.d(t, { p: () => d });
+n.d(t, { p: () => A });
 var l = n(308528),
     r = n(148494),
     a = n(355622),
     i = n(428249),
     s = n(451909),
-    o = n(734057),
-    u = n(806150),
-    c = n(381941);
-async function d(e) {
-    let { userId: t, content: n, location: d, openChannel: f = !0, whenReady: h = !1, entry: m, nonce: A } = e,
-        { valid: T, failureReason: S } = await (0, u.i)({ type: a.oU.NORMAL, content: n, channel: null });
-    if (!T) throw Error(S);
-    let g = f ? await l.A.openPrivateChannel({ recipientIds: t, location: d }) : await l.A.getOrEnsurePrivateChannel(t),
-        x = o.A.getChannel(g);
-    if (null == x) throw Error("Failed to open private channel");
-    if (null != m)
+    o = n(138298),
+    u = n(940382),
+    c = n(761640),
+    d = n(734057),
+    f = n(806150),
+    h = n(381941);
+async function A(e) {
+    let { userId: t, content: n, location: A, openChannel: m = !0, whenReady: S = !1, entry: T, nonce: g } = e,
+        { valid: x, failureReason: p } = await (0, f.i)({ type: a.oU.NORMAL, content: n, channel: null });
+    if (!x) throw Error(p);
+    let E = m ? await l.A.openPrivateChannel({ recipientIds: t, location: A }) : await l.A.getOrEnsurePrivateChannel(t),
+        R = d.A.getChannel(E);
+    if (null == R) throw Error("Failed to open private channel");
+    let y = c.Ay.getSidebarState(c.fe);
+    if (
+        (m && y?.type === u.PE.VIEW_MESSAGE_REQUEST && y.channelId === R.id && o.A.closeChannelSidebar(c.fe), null != T)
+    )
         (0, i.d)({
-            channel: x,
+            channel: R,
             content: n,
-            entry: m,
-            whenReady: h,
+            entry: T,
+            whenReady: S,
             doNotNotifyOnError: !1,
-            location: c.Hx.USER_PROFILE,
+            location: h.Hx.USER_PROFILE,
         });
     else {
-        let e = s.Ay.parse(x, n);
-        return r.A.sendMessage(x.id, e, h, { location: c.Hx.USER_PROFILE, nonce: A });
+        let e = s.Ay.parse(R, n);
+        return r.A.sendMessage(R.id, e, S, { location: h.Hx.USER_PROFILE, nonce: g });
     }
 }
