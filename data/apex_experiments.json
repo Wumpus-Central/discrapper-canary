@@ -4259,8 +4259,7 @@
     "name": "2026-07-orbchievements",
     "kind": "user",
     "defaultConfig": {
-      "enabled": false,
-      "forceEligible": false
+      "enabled": false
     },
     "variations": {
       "0": {
@@ -4268,12 +4267,7 @@
         "variant": 0
       },
       "1": {
-        "enabled": true,
-        "forceEligible": false
-      },
-      "2": {
-        "enabled": true,
-        "forceEligible": true
+        "enabled": true
       }
     }
   },
