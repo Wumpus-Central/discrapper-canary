@@ -17,12 +17,12 @@ var r,
     p = n(403362),
     A = n(488926),
     I = n(555337),
-    S = n(927573),
-    C = n(652215),
+    C = n(927573),
+    S = n(652215),
     _ = n(178758),
     v = (((r = {}).SOLID = "solid"), (r.GRADIENT = "gradient"), (r.HOLOGRAPHIC = "holographic"), r);
 let T = {
-        [S.T$.DISPLAY]: [
+        [C.T$.DISPLAY]: [
             "name",
             "hoist",
             "mentionable",
@@ -33,12 +33,12 @@ let T = {
             "icon",
             "unicodeEmoji",
         ],
-        [S.T$.PERMISSIONS]: ["permissions"],
-        [S.T$.MEMBERS]: [],
-        [S.T$.VERIFICATIONS]: [],
+        [C.T$.PERMISSIONS]: ["permissions"],
+        [C.T$.MEMBERS]: [],
+        [C.T$.VERIFICATIONS]: [],
     },
     b = new Set(),
-    y = C.XlH.CLOSED,
+    y = S.XlH.CLOSED,
     R = !1,
     L = !1,
     G = [],
@@ -67,7 +67,7 @@ function B() {
 }
 function H(e) {
     let { section: t } = e;
-    if (null != i || t !== C.BEX.ROLES) return !1;
+    if (null != i || t !== S.BEX.ROLES) return !1;
     V();
 }
 function V() {
@@ -78,7 +78,7 @@ function V() {
         (s = void 0),
         b.clear(),
         P.clear(),
-        (y = C.XlH.OPEN),
+        (y = S.XlH.OPEN),
         (D = [...(G = null != i ? [...f.A.getSortedRoles(i.id)] : [])]),
         z(i?.id, D),
         (O = !1),
@@ -98,7 +98,7 @@ function z(e, t) {
                 ? (n = "holographic")
                 : null != t.colors.secondary_color && (n = "gradient"));
         let l = {
-            solid: { primary_color: C.TGz, secondary_color: null, tertiary_color: null },
+            solid: { primary_color: S.TGz, secondary_color: null, tertiary_color: null },
             gradient: {
                 primary_color: _.lO.primary_color,
                 secondary_color: _.lO.secondary_color,
@@ -112,7 +112,7 @@ function z(e, t) {
         };
         (null != t.colors &&
             (l[n] = {
-                primary_color: t.colors.primary_color ?? C.TGz,
+                primary_color: t.colors.primary_color ?? S.TGz,
                 secondary_color: t.colors.secondary_color ?? null,
                 tertiary_color: t.colors.tertiary_color ?? null,
             }),
@@ -167,7 +167,7 @@ function J(e) {
 }
 function Q(e) {
     let { guildId: t } = e;
-    if (null == (i = I.A.getProps().guild) || t !== i.id || y === C.XlH.SUBMITTING) return !1;
+    if (null == (i = I.A.getProps().guild) || t !== i.id || y === S.XlH.SUBMITTING) return !1;
     let n = [...f.A.getSortedRoles(i.id)];
     b.forEach((e) => {
         let t = q(e),
@@ -202,7 +202,7 @@ class Z extends u.Ay.Store {
         return R || L || O;
     }
     hasSectionChanges(e, t) {
-        if (t === S.T$.VERIFICATIONS) return M.has(e);
+        if (t === C.T$.VERIFICATIONS) return M.has(e);
         let n = Y(e, t);
         return null != n && !(0, j.nk)(o().pick(n.role, n.fields), o().pick(n.original, n.fields));
     }
@@ -408,7 +408,7 @@ let $ = new Z(
                           (R = !1),
                           (L = !1),
                           (O = !1),
-                          (y = C.XlH.CLOSED));
+                          (y = S.XlH.CLOSED));
                   },
                   GUILD_ROLE_CREATE: Q,
                   GUILD_ROLE_UPDATE: Q,
@@ -416,11 +416,11 @@ let $ = new Z(
                       return (M.has(e.roleId) && (k.delete(e.roleId), U.delete(e.roleId), F(e.roleId)), Q(e));
                   },
                   GUILD_SETTINGS_ROLES_SUBMITTING: function () {
-                      y = C.XlH.SUBMITTING;
+                      y = S.XlH.SUBMITTING;
                   },
                   GUILD_SETTINGS_ROLES_SAVE_FAIL: function (e) {
                       let { message: t } = e;
-                      ((y = C.XlH.OPEN), (s = t));
+                      ((y = S.XlH.OPEN), (s = t));
                   },
                   GUILD_SETTINGS_ROLES_SAVE_SUCCESS: function () {
                       V(!1);
@@ -431,7 +431,7 @@ let $ = new Z(
                       i = (0, g.hZ)(
                           i,
                           "features",
-                          new Set([...i.features, C.GuildFeatures.PIN_PERMISSION_MIGRATION_COMPLETE]),
+                          new Set([...i.features, S.GuildFeatures.PIN_PERMISSION_MIGRATION_COMPLETE]),
                       );
                   },
                   GUILD_SETTINGS_SLOWMODE_PERMISSION_MIGRATED: function (e) {
@@ -440,7 +440,7 @@ let $ = new Z(
                       i = (0, g.hZ)(
                           i,
                           "features",
-                          new Set([...i.features, C.GuildFeatures.BYPASS_SLOWMODE_PERMISSION_MIGRATION_COMPLETE]),
+                          new Set([...i.features, S.GuildFeatures.BYPASS_SLOWMODE_PERMISSION_MIGRATION_COMPLETE]),
                       );
                   },
               },

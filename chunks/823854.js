@@ -1,4 +1,4 @@
-t.d(r, { A: () => a });
+t.d(r, { A: () => i });
 var C = t(17928),
     l = t(228366),
     s = t(280450);
@@ -23,4 +23,4 @@ class n extends C.Ay.Store {
         return null;
     }
 }
-let a = new n(l.h, {});
+let i = new n(l.h, {});

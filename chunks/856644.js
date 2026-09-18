@@ -1,4 +1,4 @@
-(n.d(t, { EF: () => A, K5: () => N, L9: () => I, SB: () => f, Vh: () => S, cG: () => p, gz: () => j, uc: () => E }),
+(n.d(t, { EF: () => A, K5: () => N, L9: () => I, SB: () => f, Vh: () => C, cG: () => p, gz: () => j, uc: () => E }),
     n(321073));
 var i = n(582128),
     l = n(91871),
@@ -96,6 +96,6 @@ function I(e) {
             (0, c.xb)(e);
     }
 }
-function S(e, t) {
+function C(e, t) {
     return "" === t || e.name.toLowerCase().includes(t.toLowerCase());
 }

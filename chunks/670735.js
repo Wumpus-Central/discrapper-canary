@@ -14,10 +14,10 @@ var r = n(477900),
     p = n(521502),
     m = n(380610),
     A = n(807393),
-    v = n(976860),
-    y = n(174459),
-    x = n(38405),
-    w = n(19575),
+    y = n(976860),
+    v = n(174459),
+    w = n(38405),
+    x = n(19575),
     E = n(721668),
     C = n(652215),
     b = n(375708),
@@ -61,11 +61,11 @@ class D extends i.PureComponent {
         this.triggerSoftCrash(e, t);
     }
     triggerSoftCrash(e, t) {
-        let n = (0, v.JK)().location;
+        let n = (0, y.JK)().location;
         this.setState({ error: e, info: t });
         let r = (0, d.b)(),
-            i = x.A.captureCrash(e, { extra: t });
-        (y.default.track(C.HAw.APP_CRASHED, {
+            i = w.A.captureCrash(e, { extra: t });
+        (v.default.track(C.HAw.APP_CRASHED, {
             path: n.pathname,
             extra: t,
             error_message: e.message,
@@ -75,7 +75,7 @@ class D extends i.PureComponent {
             error_level: "fatal",
         }),
             _(r),
-            w.Ay.cleanupDisplaySleep());
+            x.Ay.cleanupDisplaySleep());
     }
     _handleSubmitReport() {
         location.reload(!0);

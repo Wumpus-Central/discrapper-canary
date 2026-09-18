@@ -1,4 +1,4 @@
-n.d(t, { Ax: () => x, Lk: () => C, cu: () => w, hK: () => E });
+n.d(t, { Ax: () => w, Lk: () => C, cu: () => x, hK: () => E });
 var r = n(477900);
 n(582128);
 var i = n(228366),
@@ -28,9 +28,9 @@ let m = {
         titleBarStyle: null,
     },
     A = f.ed.padding,
-    v = m.width - A,
-    y = m.height - A;
-async function x(e) {
+    y = m.width - A,
+    v = m.height - A;
+async function w(e) {
     let t = c.A.getGuildId(),
         n = c.A.getChannelId(),
         i = a.A.getChannel(n);
@@ -43,21 +43,21 @@ async function x(e) {
                 windowKey: n,
                 withTitleBar: !1,
                 title: p.intl.string(p.t["IiA///"]),
-                onBlur: w,
+                onBlur: x,
                 children: (0, r.jsx)(h.A, {
                     guildId: t,
                     channel: i,
-                    width: v,
-                    height: y,
+                    width: y,
+                    height: v,
                     keepOpen: e,
-                    onClose: w,
+                    onClose: x,
                     analyticsSource: "global",
                 }),
             }),
         { ...m, left: s - m.width / 2, top: d - m.height / 2 },
     );
 }
-function w() {
+function x() {
     (0, o.close)(g.MLl.SOUNDBOARD);
 }
 function E(e, t) {
