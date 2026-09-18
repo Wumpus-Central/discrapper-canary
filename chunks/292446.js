@@ -1,4 +1,4 @@
-(n.d(t, { A: () => p }), n(775443), n(321073), n(667532));
+(n.d(t, { A: () => T }), n(775443), n(321073), n(667532));
 var i = n(435558),
     r = n.n(i),
     a = n(56562),
@@ -27,7 +27,10 @@ let _ = (0, n(945810).mj)({
 });
 var E = n(652215);
 let A = new l.A("ChannelMessages");
-function h(e, t) {
+function h(e) {
+    return e.state === E.cmJ.SENDING || e.state === E.cmJ.SEND_FAILED;
+}
+function I(e, t) {
     let n,
         i = e.get(t.id);
     return null == i ||
@@ -39,7 +42,7 @@ function h(e, t) {
         ? (0, o.rh)(t)
         : i;
 }
-class I {
+class f {
     _messages;
     _map;
     _wasAtEdge;
@@ -48,7 +51,7 @@ class I {
         ((this._messages = []), (this._map = {}), (this._wasAtEdge = !1), (this._isCacheBefore = e));
     }
     clone() {
-        let e = new I(this._isCacheBefore);
+        let e = new f(this._isCacheBefore);
         return ((e._map = { ...this._map }), (e._messages = [...this._messages]), (e._wasAtEdge = this._wasAtEdge), e);
     }
     get wasAtEdge() {
@@ -132,7 +135,7 @@ class I {
         return (t.forEach((e) => delete this._map[e.id]), t);
     }
 }
-class f {
+class p {
     channelId;
     ready = !1;
     cached = !1;
@@ -157,39 +160,39 @@ class f {
     error = !1;
     static _channelMessages = {};
     _array = [];
-    _before = new I(!0);
-    _after = new I(!1);
+    _before = new f(!0);
+    _after = new f(!1);
     _map = {};
     static forEach(e) {
-        r().forEach(f._channelMessages, e);
+        r().forEach(p._channelMessages, e);
     }
     static get(e) {
-        return f._channelMessages[e];
+        return p._channelMessages[e];
     }
     static hasPresent(e) {
-        let t = f.get(e);
+        let t = p.get(e);
         return null != t && t.hasPresent();
     }
     static getOrCreate(e) {
-        let t = f._channelMessages[e];
-        return (null == t && ((t = new f(e)), (f._channelMessages[e] = t)), t);
+        let t = p._channelMessages[e];
+        return (null == t && ((t = new p(e)), (p._channelMessages[e] = t)), t);
     }
     static clear(e) {
-        delete f._channelMessages[e];
+        delete p._channelMessages[e];
     }
     static clearCache(e) {
-        let t = f._channelMessages[e];
+        let t = p._channelMessages[e];
         null != t && (t._before.clear(), t._after.clear(), this.commit(t));
     }
     static commit(e) {
-        f._channelMessages[e.channelId] = e;
+        p._channelMessages[e.channelId] = e;
     }
     constructor(e) {
         this.channelId = e;
     }
     mutate(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            n = new f(this.channelId);
+            n = new p(this.channelId);
         return (
             (n._array = t ? [...this._array] : this._array),
             (n._map = t ? { ...this._map } : this._map),
@@ -545,7 +548,11 @@ class f {
                 i = (0, o.rh)(e),
                 r = this.last();
             return ((n =
-                null != r && 0 > c.default.compare(e.id, r.id) && _.getConfig({ location: "receiveMessage" }).enabled
+                null != r &&
+                0 > c.default.compare(e.id, r.id) &&
+                !h(i) &&
+                !this._array.some(h) &&
+                _.getConfig({ location: "receiveMessage" }).enabled
                     ? this.mutate((e) => {
                           let t = e._map[i.id];
                           ((e._map[i.id] = i),
@@ -565,12 +572,12 @@ class f {
     receivePushNotification(e, t) {
         if (null != (null == e.nonce ? null : this.get(e.nonce, !0)) || null != this.get(e.id, !0)) return this;
         let n = !(0, d.K)() || !t;
-        return this.mutate({ ready: !0, cached: n }).merge([h(this, e)]);
+        return this.mutate({ ready: !0, cached: n }).merge([I(this, e)]);
     }
     receiveReactionInAppNotification(e) {
         return null != (null == e.nonce ? null : this.get(e.nonce, !0))
             ? this
-            : this.mutate({ ready: !0, cached: !0 }).merge([h(this, e)]);
+            : this.mutate({ ready: !0, cached: !0 }).merge([I(this, e)]);
     }
     loadStart(e) {
         return this.mutate({
@@ -655,17 +662,17 @@ class f {
     }
     addCachedMessages(e, t) {
         (0, s.D)(e);
-        let n = e.map((e) => h(this, e)).reverse();
-        this._array
-            .filter((e) => !n.some((t) => t.id === e.id))
-            .forEach((e) => u(n, e, (e, t) => c.default.compare(e.id, t.id)));
-        let i = !t && this.cached;
+        let n = e.map((e) => I(this, e)).reverse(),
+            i = this._array.filter((e) => !n.some((t) => t.id === e.id));
+        (i.filter((e) => !h(e)).forEach((e) => u(n, e, (e, t) => c.default.compare(e.id, t.id))),
+            n.push(...i.filter(h)));
+        let r = !t && this.cached;
         return this.reset(n).mutate({
             ready: !0,
             cached: t,
             error: !1,
-            initialScrollSequenceId: i ? this.initialScrollSequenceId + 1 : this.initialScrollSequenceId,
+            initialScrollSequenceId: r ? this.initialScrollSequenceId + 1 : this.initialScrollSequenceId,
         });
     }
 }
-let p = f;
+let T = p;
