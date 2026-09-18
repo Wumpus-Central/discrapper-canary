@@ -4299,11 +4299,6 @@
     color: var(--text-link)
 }
 
-.refreshDiscountCalloutText__390b6 a {
-    text-decoration: none
-}
-
-.refreshDiscountCalloutText__390b6 a:hover,
 .refreshDiscountCalloutText__390b6 button:hover {
     text-decoration: underline
 }
@@ -4332,12 +4327,7 @@
 }
 
 .refreshLegalNote__390b6 a {
-    color: var(--text-link);
-    text-decoration: none
+    color: var(--text-link)
 }
 
-.refreshLegalNote__390b6 a:hover {
-    text-decoration: underline
-}
-
-/*# sourceMappingURL=765208.b360a421578626d6.css.map*/
+/*# sourceMappingURL=765208.ba849717d72706d1.css.map*/
