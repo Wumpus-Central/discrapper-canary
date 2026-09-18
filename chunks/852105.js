@@ -42,7 +42,7 @@ var h = n(289873),
     z = n(427262),
     W = n(871123),
     $ = n(453774),
-    B = n(31969),
+    B = n(831024),
     Y = n(44724),
     Z = n(310784),
     Q = n.n(Z),
@@ -501,7 +501,7 @@ function eP(e) {
 }
 function eF(e) {
     let { applicationId: t, surface: n } = e,
-        i = (0, B.F)(n, { applicationId: t });
+        i = (0, B.u)({ surface: n, applicationId: t });
     return null == i ? null : (0, l.jsx)(e_.O0, { Icon: i.Icon, text: i.text, endDatetime: i.endsAt });
 }
 function eH(e) {

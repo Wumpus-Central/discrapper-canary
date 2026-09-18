@@ -13,7 +13,7 @@ var e = t(477900),
     I = t(44120),
     k = t(75678),
     S = t(56815),
-    f = t(31969),
+    f = t(2157),
     L = t(317560),
     w = t(99161),
     h = t(174459),
@@ -30,11 +30,11 @@ var e = t(477900),
     M = t(479026),
     b = t(636374),
     v = t(699976),
-    x = t(202541),
-    D = t(375708),
+    D = t(202541),
+    x = t(375708),
     j = t(675444),
     P = t(880465);
-let G = x.vQ.DM_CHANNEL_WISHLIST,
+let G = D.vQ.DM_CHANNEL_WISHLIST,
     N = v.Z.SIZE_133;
 function W(i) {
     let { spec: s = N } = i;
@@ -58,7 +58,7 @@ function F(i) {
             skuPreviewHoverStyle: O,
             skuAssetHoverClassName: M,
             spec: v = N,
-            guildId: x,
+            guildId: D,
             channelId: P,
             numMoreItems: G,
             promotion: W,
@@ -166,14 +166,14 @@ function F(i) {
             skuAssetClassName: it ? M : void 0,
             onClick: Y ? Q : $,
             "aria-label": Y
-                ? D.intl.formatToPlainString(D.t["8uYD+I"], { username: k.username })
+                ? x.intl.formatToPlainString(x.t["8uYD+I"], { username: k.username })
                 : J
                   ? (0, C.T)(a)
-                  : D.intl.formatToPlainString(D.t.ZBB4Ty, { productName: (0, C.T)(a) }),
+                  : x.intl.formatToPlainString(x.t.ZBB4Ty, { productName: (0, C.T)(a) }),
             onHoverOrFocusChange: Z,
             children: [
                 L && f === E.uS.WISHLIST
-                    ? (0, e.jsx)(y.X, { spec: v, users: [k], guildId: x ?? void 0, channelId: P ?? void 0 })
+                    ? (0, e.jsx)(y.X, { spec: v, users: [k], guildId: D ?? void 0, channelId: P ?? void 0 })
                     : null,
                 !Y && z && (0, e.jsx)(H.A, { spec: v, onClick: q, label: ii, icon: is, isHoveringOrFocusing: F }),
                 Y && (0, e.jsx)(R.Yb, { count: G }),
@@ -194,7 +194,7 @@ function Z(i) {
             ...d
         } = i,
         I = (0, a.bG)([p.A], () => p.A.getApplication(s.applicationId)),
-        k = (0, f.F)("sku_gift_badge", { applicationId: s.applicationId, skuId: s.id }),
+        k = (0, f.D)({ surface: "sku_gift_badge", applicationId: s.applicationId, skuId: s.id }),
         S = n.useCallback(() => {
             (o?.(),
                 null != I &&

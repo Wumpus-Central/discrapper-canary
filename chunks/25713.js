@@ -981,7 +981,6 @@ let en = {
                                 tooltip: null,
                                 endsAt: r > 0 ? p()().add(r, "days").toDate() : null,
                                 flavor: t,
-                                reward: null,
                                 rewardRequirements: i
                                     ? [{ type: Z.X.SUBSCRIPTION, planIds: [et.gD.PREMIUM_YEAR_TIER_2], progress: null }]
                                     : [],
@@ -990,6 +989,7 @@ let en = {
                                 style: { maxWidth: 400, padding: 16 },
                                 children: (0, o.jsx)(ea.e, {
                                     promotion: b,
+                                    reward: null,
                                     applicationId: x,
                                     analyticsLocations: [],
                                     onUpsellClick: eo,

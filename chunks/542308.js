@@ -1519,7 +1519,7 @@ let nL = $(function (e) {
 var nU = n(34188),
     nD = n(733391),
     nO = n(832163),
-    nP = n(31969),
+    nP = n(831024),
     nV = n(44724),
     nw = n(849134),
     nH = n(770178),
@@ -1594,7 +1594,7 @@ let nZ = r.memo(function (e) {
         [m, f] = (0, ed.x_)(el.M.GAME_SHOP_NEW_BADGE, t.id, g?.id ?? "", void 0, !0),
         p = m === el.M.GAME_SHOP_NEW_BADGE && null != g,
         C = (0, tH.nY)(t.id),
-        E = (0, nP.F)("storefront_badge", { applicationId: C }),
+        E = (0, nP.u)({ surface: "storefront_badge", applicationId: C }),
         x = null;
     (p && (x = em.intl.string(em.t.y2b7CA)), null != E && (x = E.text));
     let [N, _] = (0, ed.x_)(el.M.GAME_SHOP_NEW_DROP_POPOVER, t.id, g?.id ?? ""),

@@ -12,29 +12,29 @@ var s = t(477900),
     x = t(202541),
     h = t(873417);
 function b(e) {
-    let { promotion: l, applicationId: t, analyticsLocations: b, onUpsellClick: p } = e,
-        j = (0, d.Pc)(l),
-        _ = null != l.reward ? null : i.t,
-        N = n.useCallback(() => {
-            (p(),
+    let { promotion: l, reward: t, applicationId: b, analyticsLocations: p, onUpsellClick: j } = e,
+        _ = (0, d.Pc)(l),
+        N = null != t ? null : i.t,
+        g = n.useCallback(() => {
+            (j(),
                 (0, o.A)({
                     subscriptionTier: x.pe.TIER_2,
-                    applicationId: t,
-                    analyticsLocations: b,
+                    applicationId: b,
+                    analyticsLocations: p,
                     ...(0, c.zl)(l.rewardRequirements),
                 }));
-        }, [p, t, b, l.rewardRequirements]);
+        }, [j, b, p, l.rewardRequirements]);
     return null != l.endsAt && null == (0, u.ZH)(l.endsAt)
         ? null
         : "nitro" !== l.flavor
           ? (0, s.jsx)(m.O0, { Icon: l.Icon, text: l.text, endDatetime: l.endsAt, tooltip: l.tooltip })
-          : (0, d.ad)(j)
+          : (0, d.ad)(_)
             ? (0, s.jsx)(r.D, {
                   className: h.U,
-                  onClick: N,
+                  onClick: g,
                   children: (0, s.jsx)(m.Ay, {
                       gradientColor: "nitro-pink",
-                      Icon: _,
+                      Icon: N,
                       text: l.text,
                       tooltip: l.tooltip,
                       trailing: (0, s.jsx)(a._, { size: "xs", color: "currentColor" }),
@@ -42,7 +42,7 @@ function b(e) {
               })
             : (0, s.jsx)(m.O0, {
                   gradientColor: "nitro-pink",
-                  Icon: _,
+                  Icon: N,
                   text: l.text,
                   endDatetime: l.endsAt,
                   tooltip: l.tooltip,

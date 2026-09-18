@@ -1,29 +1,27 @@
-r.d(e, { W8: () => s, oG: () => _, we: () => d });
+r.d(e, { W8: () => o, oG: () => s, we: () => _ });
 var i = r(17928),
-    n = r(561573),
-    l = r(288106),
-    u = r(309954),
-    a = r(287809),
-    o = r(760716);
-function s() {
-    let t = (0, o.i)((t) =>
+    n = r(288106),
+    l = r(309954),
+    u = r(287809),
+    a = r(760716);
+function o() {
+    let t = (0, a.i)((t) =>
             t.overrideNitroEligibilityForSocialLayerStorefront ? t.isNitroEligibleForSocialLayerStorefront : void 0,
         ),
-        e = (0, i.bG)([a.default], () => a.default.getCurrentUser()?.hasPaidTier2Subscription() ?? !1),
-        r = (0, i.bG)([a.default], () => a.default.getCurrentUser()?.isPremiumGroupMember() ?? !1);
+        e = (0, i.bG)([u.default], () => u.default.getCurrentUser()?.hasPaidTier2Subscription() ?? !1),
+        r = (0, i.bG)([u.default], () => u.default.getCurrentUser()?.isPremiumGroupMember() ?? !1);
     return null != t ? t : e || r;
 }
-function _(t) {
-    let { orbPriceAmount: e, skuId: r } = t;
-    return d({ orbPriceAmount: e, skuId: r }).state;
+function s(t) {
+    let { orbPriceAmount: e, spendOrbsOffer: r } = t;
+    return _({ orbPriceAmount: e, spendOrbsOffer: r }).state;
 }
-function d(t) {
-    let { orbPriceAmount: e, skuId: r } = t,
-        a = (0, i.bG)([n.A], () => n.A.getOffersForSkuId(r)?.find((t) => t.type === l.B8.ORB_REDEMPTION) ?? null, [r]),
-        o = a?.rewardStatus === l.GM.EARNED,
-        { balance: s, isFetching: _, error: d } = (0, u.W)({ disableFetch: !o || null == e });
-    if (null == a || null == e) return { state: "HIDDEN", isReady: !0 };
-    if (!o) return { state: "NEEDS_NITRO", isReady: !0 };
-    let T = !_ && (null != s || null != d);
-    return null == s || s < e ? { state: "NOT_ENOUGH_ORBS", isReady: T } : { state: "CAN_CHECKOUT", isReady: T };
+function _(t) {
+    let { orbPriceAmount: e, spendOrbsOffer: r } = t,
+        i = r?.rewardStatus === n.GM.EARNED,
+        { balance: u, isFetching: a, error: o } = (0, l.W)({ disableFetch: !i || null == e });
+    if (null == r || null == e) return { state: "HIDDEN", isReady: !0 };
+    if (!i) return { state: "NEEDS_NITRO", isReady: !0 };
+    let s = !a && (null != u || null != o);
+    return null == u || u < e ? { state: "NOT_ENOUGH_ORBS", isReady: s } : { state: "CAN_CHECKOUT", isReady: s };
 }

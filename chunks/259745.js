@@ -1,14 +1,14 @@
 n.d(e, { M: () => H });
 var r = n(477900),
-    l = n(582128),
-    s = n(403581),
+    s = n(582128),
+    l = n(403581),
     c = n(834730),
     o = n(821609),
     i = n(396583),
     a = n(812095),
     u = n(75678),
     d = n(871123),
-    m = n(31969),
+    m = n(831024),
     x = n(906383),
     h = n(421108),
     j = n(503698),
@@ -22,15 +22,15 @@ var r = n(477900),
     C = n(375708),
     A = n(395822);
 function y(t) {
-    let { className: e, color: n = "default", sticky: l = !1, children: s } = t,
-        c = l ? A.qf : void 0;
+    let { className: e, color: n = "default", sticky: s = !1, children: l } = t,
+        c = s ? A.qf : void 0;
     function o() {
         let {
             className: t,
             noticeColor: e,
             customStyle: n,
         } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        return (0, r.jsx)(g.$T, { className: t, color: e, style: n, children: s });
+        return (0, r.jsx)(g.$T, { className: t, color: e, style: n, children: l });
     }
     if ("nitro-pink" === n)
         return o({
@@ -62,8 +62,8 @@ function y(t) {
     });
 }
 function I(t) {
-    let { Icon: e, children: n, endDatetime: s, ...c } = t,
-        [o, a] = l.useState(() => (0, h.ZH)(s));
+    let { Icon: e, children: n, endDatetime: l, ...c } = t,
+        [o, a] = s.useState(() => (0, h.ZH)(l));
     function u() {
         return (0, r.jsxs)("div", {
             className: A.lt,
@@ -71,14 +71,14 @@ function I(t) {
         });
     }
     return ((0, i.A)(() => {
-        let t = (0, h.ZH)(s);
+        let t = (0, h.ZH)(l);
         a((e) => (null == t ? null : null != e && (0, p.A)(e, t) ? e : t));
     }, 1e3),
     null != o)
         ? o.days > 0
             ? (0, r.jsxs)(y, { ...c, children: [u(), (0, r.jsx)(S, { days: o.days })] })
             : (0, r.jsxs)(y, { ...c, children: [u(), (0, r.jsx)(z, { timeLeft: o })] })
-        : null != s
+        : null != l
           ? null
           : (0, r.jsx)(y, { ...c, children: u() });
 }
@@ -98,7 +98,7 @@ function S(t) {
 }
 function z(t) {
     let {
-        timeLeft: { days: e, hours: n, minutes: l, seconds: s },
+        timeLeft: { days: e, hours: n, minutes: s, seconds: l },
     } = t;
     function o(t) {
         let e = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
@@ -123,20 +123,20 @@ function z(t) {
     }
     return (0, r.jsxs)("div", {
         className: A.kz,
-        children: [e > 0 && o(e), e > 0 && i(), o(n), i(), o(l), i(), o(s, !0)],
+        children: [e > 0 && o(e), e > 0 && i(), o(n), i(), o(s), i(), o(l, !0)],
     });
 }
 var E = n(202541),
     R = n(279673);
 function H(t) {
     let { applicationId: e, analyticsLocations: n } = t,
-        j = (0, m.F)("storefront_banner", { applicationId: e }),
+        j = (0, m.u)({ surface: "storefront_banner", applicationId: e }),
         v = (0, x.Pc)(j),
         f = j?.endsAt ?? null,
-        [, k] = l.useReducer((t) => t + 1, 0);
+        [, k] = s.useReducer((t) => t + 1, 0);
     (0, i.A)(k, null != f ? 1e3 : null);
     let N = null != f && null == (0, h.ZH)(f),
-        p = l.useCallback(() => {
+        p = s.useCallback(() => {
             (0, u.A)({
                 subscriptionTier: E.pe.TIER_2,
                 analyticsLocations: n,
@@ -155,7 +155,7 @@ function H(t) {
                     (0, r.jsxs)("div", {
                         className: R.FS,
                         children: [
-                            (0, r.jsx)(s.t, { size: "xs", color: "currentColor", className: R.Kk }),
+                            (0, r.jsx)(l.t, { size: "xs", color: "currentColor", className: R.Kk }),
                             (0, r.jsx)(c.E, {
                                 variant: "text-sm/normal",
                                 color: "currentColor",
@@ -166,7 +166,7 @@ function H(t) {
                     (0, r.jsx)(o.$, {
                         variant: "expressive",
                         size: "sm",
-                        icon: s.t,
+                        icon: l.t,
                         text: C.intl.string(C.t.pj0XBN),
                         onClick: p,
                     }),
@@ -176,7 +176,7 @@ function H(t) {
     let g = "nitro" === j.flavor;
     return (0, r.jsx)(I, {
         sticky: !0,
-        Icon: g ? s.t : j.Icon,
+        Icon: g ? l.t : j.Icon,
         endDatetime: j.endsAt,
         color: g ? "nitro-pink" : void 0,
         children: (0, r.jsx)(c.E, { variant: "text-sm/normal", color: "currentColor", children: (0, a.U)(j.text) }),

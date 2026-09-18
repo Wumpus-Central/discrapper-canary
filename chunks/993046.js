@@ -41,6 +41,7 @@ function p(e) {
             promotionId: e.promotion_id,
             type: e.type,
             rewardStatus: e.reward_status,
+            purchaseTypes: e.purchase_types,
             rewardResultId: e.reward_result_id,
         })),
     };
@@ -98,6 +99,7 @@ function g(e) {
                         return !0;
                     case A.Ns.FIXED_PRICE:
                     case A.Ns.ACTION:
+                    case A.Ns.BENEFIT:
                         return !1;
                     default:
                         return (t.type, !1);
