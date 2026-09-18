@@ -1,49 +1,49 @@
-t.d(a, { R: () => p });
-var l = t(582128),
-    n = t(435558),
-    r = t.n(n),
-    i = t(929396),
-    u = t(471677),
-    s = t(321108),
-    d = t(735321),
-    o = t(403362),
-    c = t(282435);
-let m = [];
-function h(e) {
+a.d(t, { R: () => p });
+var n = a(582128),
+    l = a(435558),
+    r = a.n(l),
+    i = a(929396),
+    u = a(471677),
+    s = a(321108),
+    o = a(735321),
+    d = a(403362),
+    c = a(282435);
+let v = [];
+function m(e) {
     return c.jN.get(e) ?? 0;
 }
 function p() {
-    let { query: e, selectedGameIds: a } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-        t = l.useMemo(() => [...new Set([...c.sx, ...(a ?? m)])], [a]),
-        n = (0, s.A)(t),
-        p = l.useMemo(() => new Map(n.map((e) => [e.id, e])), [n]),
-        v = l.useMemo(
+    let { query: e, selectedGameIds: t } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+        a = n.useMemo(() => [...new Set([...c.sx, ...(t ?? v)])], [t]),
+        l = (0, s.A)(a),
+        p = n.useMemo(() => new Map(l.map((e) => [e.id, e])), [l]),
+        h = n.useMemo(
             () =>
                 r()(c.sx)
                     .map((e) => p.get(e))
-                    .filter(o.Vq)
-                    .filter((e) => (0, d.XX)(e))
+                    .filter(d.Vq)
+                    .filter((e) => (0, o.XX)(e))
                     .map((e) => ({ id: e.id, value: e.id, label: e.name }))
                     .sortBy((e) => {
-                        let { value: a } = e;
-                        return h(a);
+                        let { value: t } = e;
+                        return m(t);
                     })
                     .reverse()
                     .value(),
             [p],
         ),
-        b = l.useCallback((e, a) => h(a.item.value) - h(e.item.value), []),
-        f = l.useMemo(() => ({ baseSort: b, keys: ["label"] }), [b]),
+        f = n.useCallback((e, t) => m(t.item.value) - m(e.item.value), []),
+        b = n.useMemo(() => ({ baseSort: f, keys: ["label"] }), [f]),
         g = (e?.trim().length ?? 0) > 0,
         { results: x } = (0, u.J$)(e ?? null),
-        k = l.useMemo(() => new Set((x ?? []).filter((e) => (0, i.qS)(e)).map((e) => e.id)), [x]),
-        j = l.useMemo(
+        k = n.useMemo(() => new Set((x ?? []).filter((e) => (0, i.qS)(e)).map((e) => e.id)), [x]),
+        j = n.useMemo(
             () => [
                 ...(x ?? []).filter((e) => k.has(e.id)).map((e) => ({ id: e.id, value: e.id, label: e.name })),
-                ...(a ?? m).filter((e) => !k.has(e)).map((e) => ({ id: e, value: e, label: p.get(e)?.name ?? "" })),
+                ...(t ?? v).filter((e) => !k.has(e)).map((e) => ({ id: e, value: e, label: p.get(e)?.name ?? "" })),
             ],
-            [x, k, a, p],
+            [x, k, t, p],
         ),
-        y = l.useCallback((e) => e.filter((e) => k.has(e.value)), [k]);
-    return { options: g ? j : v, matchSorterOptions: f, customMatchSorter: g ? y : void 0 };
+        y = n.useCallback((e) => e.filter((e) => k.has(e.value)), [k]);
+    return { options: g ? j : h, matchSorterOptions: b, customMatchSorter: g ? y : void 0 };
 }

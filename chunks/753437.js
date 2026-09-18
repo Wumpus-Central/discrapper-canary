@@ -1,18 +1,18 @@
-n.d(t, { Pb: () => h, me: () => f, PT: () => m, W3: () => x });
-var i,
+i.d(t, { Pb: () => h, me: () => f, PT: () => m, W3: () => x });
+var n,
     l,
-    s = n(761915),
-    r = n(877784),
-    a = n(53788),
-    o = n(148795),
-    d = n(214947),
-    c = n(375708),
+    s = i(761915),
+    a = i(877784),
+    r = i(53788),
+    o = i(148795),
+    d = i(214947),
+    c = i(375708),
     u =
-        (((i = {}).RIBBON = "ribbon"),
-        (i.THUMBS_UP = "thumbsUp"),
-        (i.THUMBS_DOWN = "thumbsDown"),
-        (i.FRIENDS = "friends"),
-        i);
+        (((n = {}).RIBBON = "ribbon"),
+        (n.THUMBS_UP = "thumbsUp"),
+        (n.THUMBS_DOWN = "thumbsDown"),
+        (n.FRIENDS = "friends"),
+        n);
 let g = {
         [s.X.BETTER_THAN_YOU]: { getText: () => c.intl.string(c.t.jbIRBE), iconRole: "ribbon" },
         [s.X.CASUAL]: { getText: () => c.intl.string(c.t.xcFFv6), iconRole: "ribbon" },
@@ -31,12 +31,12 @@ let g = {
     },
     m = (function (e) {
         let t = {};
-        for (let n of Object.keys(g)) {
-            let i = g[n];
-            null != i && (t[n] = { getText: i.getText, icon: e[i.iconRole] });
+        for (let i of Object.keys(g)) {
+            let n = g[i];
+            null != n && (t[i] = { getText: n.getText, icon: e[n.iconRole] });
         }
         return t;
-    })({ [u.RIBBON]: r.q, [u.THUMBS_UP]: a.G, [u.THUMBS_DOWN]: o.d, [u.FRIENDS]: d.$ });
+    })({ [u.RIBBON]: a.q, [u.THUMBS_UP]: r.G, [u.THUMBS_DOWN]: o.d, [u.FRIENDS]: d.$ });
 function x(e) {
     let t = m[e];
     return null != t ? t : null;

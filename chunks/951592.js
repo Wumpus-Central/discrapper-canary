@@ -1,6 +1,6 @@
 l.d(t, { A: () => P });
-var n = l(477900),
-    a = l(582128),
+var a = l(477900),
+    n = l(582128),
     i = l(621466),
     s = l(231723),
     r = l(939249),
@@ -20,29 +20,29 @@ var m = l(503698),
     b = l(113494),
     C = l(898196),
     y = l(259678),
-    N = l(765671),
-    E = l(531685),
-    w = l(335494),
+    w = l(765671),
+    N = l(531685),
+    E = l(335494),
     k = l(362081),
     A = l(589049),
     L = l(696016),
     R = l(375708),
     I = l(711127),
-    T = l(665160);
-function M(e) {
+    M = l(665160);
+function T(e) {
     ((e = Math.round(100 * e) / 100) < 0 || 0.01 > Math.abs(e)) && (e = 0);
     let t = Math.floor(e / 60),
         l = Math.floor(e % 60),
-        n = Math.floor((e % 1) * 100);
-    return ((t = t < 10 ? "0" + t : t), (l = l < 10 ? "0" + l : l), (n = n < 10 ? "0" + n : n), `${t}:${l}.${n}`);
-}
-function S(e) {
-    let t = Math.floor(e / 60),
-        l = R.intl.formatToPlainString(R.t.iXLF9W, { minutes: t }),
-        n = R.intl.formatToPlainString(R.t.geSp4K, { seconds: e % 60 });
-    return `${l} ${n}`;
+        a = Math.floor((e % 1) * 100);
+    return ((t = t < 10 ? "0" + t : t), (l = l < 10 ? "0" + l : l), (a = a < 10 ? "0" + a : a), `${t}:${l}.${a}`);
 }
 function D(e) {
+    let t = Math.floor(e / 60),
+        l = R.intl.formatToPlainString(R.t.iXLF9W, { minutes: t }),
+        a = R.intl.formatToPlainString(R.t.geSp4K, { seconds: e % 60 });
+    return `${l} ${a}`;
+}
+function S(e) {
     let { voiceAudioTracks: t, transitionState: l } = e,
         {
             useCurrentTime: i,
@@ -52,50 +52,50 @@ function D(e) {
             cropEnd: c,
             cropDuration: u,
             setCropStart: m,
-            setCropEnd: D,
+            setCropEnd: S,
             play: O,
             pause: P,
-            subscribe: _,
-            seek: z,
-            clip: U,
-            generateThumbnails: $,
-            videoDimensions: B,
+            subscribe: z,
+            seek: _,
+            clip: $,
+            generateThumbnails: U,
+            videoDimensions: G,
         } = (0, k.T)(),
-        G = i(),
-        [H, V] = a.useState(null),
-        K = a.useRef(null),
-        F = a.useRef(null),
-        [W, X] = a.useState(!1),
-        [Z, Y] = a.useState(null);
-    a.useEffect(
+        H = i(),
+        [B, X] = n.useState(null),
+        F = n.useRef(null),
+        V = n.useRef(null),
+        [K, W] = n.useState(!1),
+        [Z, Y] = n.useState(null);
+    n.useEffect(
         () =>
-            _({
+            z({
                 onPlay: () => {
-                    (V(null), X(!1));
+                    (X(null), W(!1));
                 },
             }),
-        [_],
+        [z],
     );
-    let { ref: J, width: Q = 0, height: q = 0 } = (0, N.Ay)(),
-        ee = (0, x.bG)([E.A], () => E.A.windowSize());
-    a.useMemo(() => {
+    let { ref: J, width: Q = 0, height: q = 0 } = (0, w.Ay)(),
+        ee = (0, x.bG)([N.A], () => N.A.windowSize());
+    n.useMemo(() => {
         (ee.width, ee.height);
         let e = J.current;
         null != e && Y(e.getBoundingClientRect());
     }, [ee.width, ee.height, Q, J, l]);
-    let et = a.useCallback(
+    let et = n.useCallback(
             (e, t) => {
                 if (null == s) return;
                 if (null == Z) return null;
                 let l = (((0, f.clamp)(e, Z.left, Z.right) - Z.left) / Z.width) * s,
-                    n = (0, f.clamp)(l, 0, s),
-                    a = H;
-                (null == a && t && ((a = n <= o ? "start" : n >= c ? "end" : "playhead"), r && (P(), X(!0)), V(a)),
-                    "start" === a ? m(n) : "end" === a ? D(n) : "playhead" === a && z((0, f.clamp)(n, o, c)));
+                    a = (0, f.clamp)(l, 0, s),
+                    n = B;
+                (null == n && t && ((n = a <= o ? "start" : a >= c ? "end" : "playhead"), r && (P(), W(!0)), X(n)),
+                    "start" === n ? m(a) : "end" === n ? S(a) : "playhead" === n && _((0, f.clamp)(a, o, c)));
             },
-            [s, Z, H, o, c, r, P, m, D, z],
+            [s, Z, B, o, c, r, P, m, S, _],
         ),
-        el = a.useCallback(
+        el = n.useCallback(
             (e) => {
                 if (null == s) return;
                 let t = (0, d.A)(s, e.shiftKey),
@@ -111,38 +111,38 @@ function D(e) {
             },
             [s, m, o],
         ),
-        en = a.useCallback(
+        ea = n.useCallback(
             (e) => {
                 if (null == s) return;
                 let t = (0, d.A)(s, e.shiftKey),
                     l = !1;
                 switch (e.key) {
                     case "ArrowLeft":
-                        ((l = !0), D(c - t));
+                        ((l = !0), S(c - t));
                         break;
                     case "ArrowRight":
-                        ((l = !0), D(c + t));
+                        ((l = !0), S(c + t));
                 }
                 l && (e.stopPropagation(), e.preventDefault());
             },
-            [s, D, c],
+            [s, S, c],
         ),
-        ea = a.useCallback(
+        en = n.useCallback(
             (e) => {
                 et(e.clientX, !0);
             },
             [et],
         ),
-        ei = a.useCallback(
+        ei = n.useCallback(
             (e) => {
                 et(e.clientX, !1);
             },
             [et],
         ),
-        es = a.useCallback(() => {
-            (W && O(), X(!1), V(null));
-        }, [W, O]);
-    a.useEffect(
+        es = n.useCallback(() => {
+            (K && O(), W(!1), X(null));
+        }, [K, O]);
+    n.useEffect(
         () => (
             document.addEventListener("mousemove", ei),
             document.addEventListener("mouseup", es),
@@ -152,12 +152,12 @@ function D(e) {
         ),
         [ei, es],
     );
-    let { numberOfPreviews: er, timelinePreviewWidth: eo } = a.useMemo(() => {
-        if (null == B) return { numberOfPreviews: 0, timelinePreviewWidth: 0 };
-        let e = Math.ceil(q * (B.width / B.height));
+    let { numberOfPreviews: er, timelinePreviewWidth: eo } = n.useMemo(() => {
+        if (null == G) return { numberOfPreviews: 0, timelinePreviewWidth: 0 };
+        let e = Math.ceil(q * (G.width / G.height));
         return { numberOfPreviews: Math.ceil(Q / e), timelinePreviewWidth: e };
-    }, [q, Q, B]);
-    a.useEffect(() => {
+    }, [q, Q, G]);
+    n.useEffect(() => {
         if (0 === er || 0 === eo) return;
         let e = J.current;
         if (null == e) return;
@@ -167,18 +167,18 @@ function D(e) {
         ((t.fillStyle = "transparent"), t.fillRect(0, 0, Q, q));
         let l = [];
         for (let e = 0; e < er; e++) l.push((eo / Q) * s * e);
-        return $(l, eo, q, (e) => {
+        return U(l, eo, q, (e) => {
             for (let l = 0; l < e.length; l++) (t.drawImage(e[l], eo * l, 0, eo, q), e[l].close());
         });
-    }, [q, J, s, er, eo, $, Q]);
-    let ec = G - o,
-        eu = a.useCallback(() => {
-            z(Math.max(o, G - 10));
-        }, [o, G, z]),
-        ed = a.useCallback(() => {
-            z(Math.min(c, G + 10));
-        }, [c, G, z]),
-        em = a.useCallback(() => {
+    }, [q, J, s, er, eo, U, Q]);
+    let ec = H - o,
+        eu = n.useCallback(() => {
+            _(Math.max(o, H - 10));
+        }, [o, H, _]),
+        ed = n.useCallback(() => {
+            _(Math.min(c, H + 10));
+        }, [c, H, _]),
+        em = n.useCallback(() => {
             r ? P() : O();
         }, [r, O, P]),
         eh = (o / s) * 100,
@@ -186,44 +186,44 @@ function D(e) {
         ex = {
             background: `linear-gradient(to right, var(--black-500) ${eh}%, transparent ${eh}%, transparent ${ef}%, var(--black-500) ${ef}%)`,
         };
-    return (0, n.jsx)("div", {
-        className: T.f4,
-        children: (0, n.jsxs)("div", {
-            className: T.fL,
+    return (0, a.jsx)("div", {
+        className: M.f4,
+        children: (0, a.jsxs)("div", {
+            className: M.fL,
             children: [
-                (0, n.jsxs)("div", {
-                    className: T.lx,
+                (0, a.jsxs)("div", {
+                    className: M.lx,
                     children: [
-                        (0, n.jsx)("div", {
-                            className: T.k2,
-                            children: (0, n.jsx)("div", {
-                                ref: F,
-                                className: T.re,
-                                children: (0, n.jsxs)(v.E, {
+                        (0, a.jsx)("div", {
+                            className: M.k2,
+                            children: (0, a.jsx)("div", {
+                                ref: V,
+                                className: M.re,
+                                children: (0, a.jsxs)(v.E, {
                                     variant: "text-sm/normal",
-                                    className: T.g7,
+                                    className: M.g7,
                                     color: "text-muted",
-                                    children: [M(ec), (0, n.jsx)("span", { className: T.xW, children: " / " }), M(u)],
+                                    children: [T(ec), (0, a.jsx)("span", { className: M.xW, children: " / " }), T(u)],
                                 }),
                             }),
                         }),
-                        (0, n.jsxs)("div", {
-                            className: T.s2,
+                        (0, a.jsxs)("div", {
+                            className: M.s2,
                             children: [
-                                (0, n.jsx)(p.K, {
+                                (0, a.jsx)(p.K, {
                                     size: "md",
                                     variant: "secondary",
                                     icon: g.q,
                                     onClick: eu,
                                     "aria-label": R.intl.string(I.default["dRVF+Z"]),
                                 }),
-                                (0, n.jsx)(p.K, {
+                                (0, a.jsx)(p.K, {
                                     size: "md",
                                     icon: r ? b.PauseIcon : j.PlayIcon,
                                     onClick: em,
                                     "aria-label": R.intl.string(r ? R.t.ZcgDJX : R.t.RscU7I),
                                 }),
-                                (0, n.jsx)(p.K, {
+                                (0, a.jsx)(p.K, {
                                     size: "md",
                                     variant: "secondary",
                                     icon: C.i,
@@ -234,52 +234,52 @@ function D(e) {
                         }),
                     ],
                 }),
-                (0, n.jsx)(w.A, { onMouseDown: ea, voiceAudioTracks: t, clipId: U.id, className: T.ou }),
-                (0, n.jsx)(A.A, { onMouseDown: ea, videoLength: s, clip: U }),
-                (0, n.jsx)("div", {
-                    className: T.PH,
-                    children: (0, n.jsxs)("div", {
-                        className: h()(T.IO, { [T.Dg]: null != H }),
-                        onMouseDown: ea,
+                (0, a.jsx)(E.A, { onMouseDown: en, voiceAudioTracks: t, clipId: $.id, className: M.ou }),
+                (0, a.jsx)(A.A, { onMouseDown: en, videoLength: s, clip: $ }),
+                (0, a.jsx)("div", {
+                    className: M.PH,
+                    children: (0, a.jsxs)("div", {
+                        className: h()(M.IO, { [M.Dg]: null != B }),
+                        onMouseDown: en,
                         children: [
-                            (0, n.jsx)("canvas", { className: T.Ay, ref: J }),
-                            (0, n.jsx)(y.vN, { children: (0, n.jsx)("div", { tabIndex: 0, ref: K, className: T.lG }) }),
-                            (0, n.jsx)("div", { className: T.QT, style: ex }),
-                            (0, n.jsxs)("div", {
-                                className: T.Ws,
+                            (0, a.jsx)("canvas", { className: M.Ay, ref: J }),
+                            (0, a.jsx)(y.vN, { children: (0, a.jsx)("div", { tabIndex: 0, ref: F, className: M.lG }) }),
+                            (0, a.jsx)("div", { className: M.QT, style: ex }),
+                            (0, a.jsxs)("div", {
+                                className: M.Ws,
                                 style: {
                                     left: null != s ? `${(o / s) * 100}%` : "0",
                                     right: null != s ? `${((s - c) / s) * 100}%` : "0",
                                 },
                                 children: [
-                                    (0, n.jsx)(y.vN, {
-                                        children: (0, n.jsx)("button", {
-                                            className: h()(T.uI, { [T.cB]: "start" === H }),
-                                            onMouseDown: ea,
+                                    (0, a.jsx)(y.vN, {
+                                        children: (0, a.jsx)("button", {
+                                            className: h()(M.uI, { [M.cB]: "start" === B }),
+                                            onMouseDown: en,
                                             onKeyDown: el,
                                             role: "slider",
                                             tabIndex: 0,
                                             "aria-valuemin": 0,
                                             "aria-valuenow": o,
-                                            "aria-valuetext": S(o),
+                                            "aria-valuetext": D(o),
                                             "aria-valuemax": c - L.zj,
                                             "aria-label": R.intl.string(R.t["+BTvw8"]),
-                                            children: (0, n.jsx)("div", { className: T.FV }),
+                                            children: (0, a.jsx)("div", { className: M.FV }),
                                         }),
                                     }),
-                                    (0, n.jsx)(y.vN, {
-                                        children: (0, n.jsx)("button", {
-                                            className: h()(T.H1, { [T.cB]: "end" === H }),
-                                            onMouseDown: ea,
-                                            onKeyDown: en,
+                                    (0, a.jsx)(y.vN, {
+                                        children: (0, a.jsx)("button", {
+                                            className: h()(M.H1, { [M.cB]: "end" === B }),
+                                            onMouseDown: en,
+                                            onKeyDown: ea,
                                             role: "slider",
                                             tabIndex: 0,
                                             "aria-valuemin": o + L.zj,
                                             "aria-valuenow": c,
-                                            "aria-valuetext": S(c),
+                                            "aria-valuetext": D(c),
                                             "aria-valuemax": s,
                                             "aria-label": R.intl.string(R.t.bBgBYo),
-                                            children: (0, n.jsx)("div", { className: T.kn }),
+                                            children: (0, a.jsx)("div", { className: M.kn }),
                                         }),
                                     }),
                                 ],
@@ -296,31 +296,31 @@ function P(e) {
     let { transitionState: t } = e,
         { cropStart: l, cropEnd: m, videoPlayerRef: h, videoURL: f, audioTracks: x, clip: v } = (0, k.T)(),
         p = v.type === L.nQ.SCREENSHOT;
-    a.useEffect(() => {
+    n.useEffect(() => {
         if (!p) return (document.addEventListener("keydown", e), () => document.removeEventListener("keydown", e));
         function e(e) {
             if ((0, i.Cw)(document.activeElement)) return;
             let t = h.current;
             if (null == t) return;
-            let n = h.current?.videoElement;
-            if (null == n) return;
-            let a = (0, d.A)(n.duration, e.shiftKey),
+            let a = h.current?.videoElement;
+            if (null == a) return;
+            let n = (0, d.A)(a.duration, e.shiftKey),
                 s = !1;
             switch (e.key) {
                 case " ":
-                    ((s = !0), n.paused ? t.play() : t.pause());
+                    ((s = !0), a.paused ? t.play() : t.pause());
                     break;
                 case "ArrowLeft":
-                    ((s = !0), t.seek(Math.max(l, n.currentTime - a)));
+                    ((s = !0), t.seek(Math.max(l, a.currentTime - n)));
                     break;
                 case "ArrowRight":
-                    ((s = !0), t.seek(Math.min(m, n.currentTime + a)));
+                    ((s = !0), t.seek(Math.min(m, a.currentTime + n)));
             }
             s && (e.stopPropagation(), e.preventDefault());
         }
     }, [h, p, v.type, l, m]);
-    let g = a.useMemo(() => x.filter((e) => e.trackName.includes(":voice")), [x]),
-        j = a.useCallback(() => {
+    let g = n.useMemo(() => x.filter((e) => e.trackName.includes(":voice")), [x]),
+        j = n.useCallback(() => {
             (0, o.R)(
                 {
                     items: [{ type: "IMAGE", url: v.thumbnail, proxyUrl: v.thumbnail, alt: v.name ?? "" }],
@@ -331,32 +331,32 @@ function P(e) {
             );
         }, [v.thumbnail, v.name]);
     if (p)
-        return (0, n.jsx)("div", {
+        return (0, a.jsx)("div", {
             className: O.OJ,
             children:
                 t !== s.ip.ENTERED
-                    ? (0, n.jsx)(c.A, {})
-                    : (0, n.jsx)("div", {
+                    ? (0, a.jsx)(c.A, {})
+                    : (0, a.jsx)("div", {
                           className: O.zT,
-                          children: (0, n.jsx)(r.D, {
+                          children: (0, a.jsx)(r.D, {
                               className: O.xS,
                               onClick: j,
-                              children: (0, n.jsx)("img", { className: O.V_, src: v.thumbnail, alt: v.name ?? "" }),
+                              children: (0, a.jsx)("img", { className: O.V_, src: v.thumbnail, alt: v.name ?? "" }),
                           }),
                       }),
         });
     let b = null == f || t !== s.ip.ENTERED;
-    return (0, n.jsx)("div", {
+    return (0, a.jsx)("div", {
         className: O.OJ,
-        children: (0, n.jsx)("div", {
+        children: (0, a.jsx)("div", {
             className: O.zT,
             children: b
-                ? (0, n.jsx)(c.A, {})
-                : (0, n.jsxs)("div", {
+                ? (0, a.jsx)(c.A, {})
+                : (0, a.jsxs)("div", {
                       className: O.Xf,
                       children: [
-                          (0, n.jsx)(u.A, { ref: h }),
-                          (0, n.jsx)(D, { transitionState: t, voiceAudioTracks: g }),
+                          (0, a.jsx)(u.A, { ref: h }),
+                          (0, a.jsx)(S, { transitionState: t, voiceAudioTracks: g }),
                       ],
                   }),
         }),

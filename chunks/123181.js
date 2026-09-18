@@ -1,19 +1,19 @@
-n.d(t, { A: () => f });
-var i = n(477900),
-    l = n(582128),
-    s = n(922016),
-    r = n(939249),
-    a = n(307301),
-    o = n(834730);
-n(321073);
-var d = n(477782),
-    c = n(980707),
-    u = n(753437),
-    g = n(375708),
-    m = n(382701);
+i.d(t, { A: () => f });
+var n = i(477900),
+    l = i(582128),
+    s = i(922016),
+    a = i(939249),
+    r = i(307301),
+    o = i(834730);
+i(321073);
+var d = i(477782),
+    c = i(980707),
+    u = i(753437),
+    g = i(375708),
+    m = i(382701);
 let x = l.memo(function (e) {
-    let { currentTags: t, onTagSelect: n, onNoneSelect: l, onClose: s } = e;
-    return (0, i.jsx)(c.W, {
+    let { currentTags: t, onTagSelect: i, onNoneSelect: l, onClose: s } = e;
+    return (0, n.jsx)(c.W, {
         "data-menu-migrated-auto": !0,
         navId: "widget-game-tags",
         "aria-label": g.intl.string(g.t.r6EJOu),
@@ -22,113 +22,113 @@ let x = l.memo(function (e) {
         className: m.X2,
         children: Object.entries(u.Pb).map((e) => {
             let s,
-                [r, a] = e,
+                [a, r] = e,
                 o =
                     ((s = []),
-                    a.type === u.me.RADIO &&
+                    r.type === u.me.RADIO &&
                         s.push(
-                            (0, i.jsx)(
+                            (0, n.jsx)(
                                 d.iD,
                                 {
-                                    id: `${r}-none`,
-                                    group: r,
+                                    id: `${a}-none`,
+                                    group: a,
                                     label: g.intl.string(g.t.PoWNfe),
-                                    checked: !a.tags.some((e) => t.includes(e)),
-                                    action: () => l(a.tags),
+                                    checked: !r.tags.some((e) => t.includes(e)),
+                                    action: () => l(r.tags),
                                 },
                                 "none",
                             ),
                         ),
-                    a.tags.forEach((e) => {
+                    r.tags.forEach((e) => {
                         let l = u.PT[e];
                         null != l &&
-                            (a.type === u.me.RADIO
+                            (r.type === u.me.RADIO
                                 ? s.push(
-                                      (0, i.jsx)(
+                                      (0, n.jsx)(
                                           d.iD,
                                           {
                                               id: e,
-                                              group: r,
+                                              group: a,
                                               label: l.getText(),
                                               checked: t.includes(e),
-                                              action: () => n(e, !0),
+                                              action: () => i(e, !0),
                                           },
                                           e,
                                       ),
                                   )
                                 : s.push(
-                                      (0, i.jsx)(
+                                      (0, n.jsx)(
                                           d.sL,
-                                          { id: e, label: l.getText(), checked: t.includes(e), action: () => n(e, !1) },
+                                          { id: e, label: l.getText(), checked: t.includes(e), action: () => i(e, !1) },
                                           e,
                                       ),
                                   ));
                     }),
                     s);
-            return (0, i.jsx)(d.rX, { label: a.getLabel(), children: o }, r);
+            return (0, n.jsx)(d.rX, { label: r.getLabel(), children: o }, a);
         }),
     });
 });
 function f(e) {
-    let { tags: t, onTagsChange: n, onOpen: d, onClose: c, variant: f = "default", ref: h } = e,
-        p = "filled" === f,
-        I = (0, l.useRef)(null),
-        j = (0, l.useMemo)(() => (null != t ? t : []), [t]),
-        E = (0, l.useCallback)(
+    let { tags: t, onTagsChange: i, onOpen: d, onClose: c, variant: f = "default", ref: h } = e,
+        I = "filled" === f,
+        p = (0, l.useRef)(null),
+        A = (0, l.useMemo)(() => (null != t ? t : []), [t]),
+        j = (0, l.useCallback)(
             function (e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-                    i = new Set(j),
+                    n = new Set(A),
                     l = "added";
                 if (t) {
                     let t = Object.values(u.Pb).find((t) => t.tags.includes(e));
                     if (null == t) return;
                     (t.tags.forEach((e) => {
-                        i.delete(e);
+                        n.delete(e);
                     }),
-                        i.add(e));
-                } else i.has(e) ? (i.delete(e), (l = "removed")) : i.add(e);
-                n(Array.from(i), l);
+                        n.add(e));
+                } else n.has(e) ? (n.delete(e), (l = "removed")) : n.add(e);
+                i(Array.from(n), l);
             },
-            [j, n],
+            [A, i],
         ),
-        A = (0, l.useCallback)(
+        E = (0, l.useCallback)(
             (e) => {
-                let t = new Set(j);
+                let t = new Set(A);
                 (e.forEach((e) => {
                     t.delete(e);
                 }),
-                    n(Array.from(t), "removed"));
+                    i(Array.from(t), "removed"));
             },
-            [j, n],
+            [A, i],
         );
-    return (0, i.jsx)(s.Y, {
-        targetElementRef: I,
+    return (0, n.jsx)(s.Y, {
+        targetElementRef: p,
         position: "right",
         align: "top",
         onRequestOpen: d,
         onRequestClose: c,
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, i.jsx)(x, { currentTags: j, onTagSelect: E, onNoneSelect: A, onClose: t });
+            return (0, n.jsx)(x, { currentTags: A, onTagSelect: j, onNoneSelect: E, onClose: t });
         },
         children: (e) =>
-            (0, i.jsx)("div", {
+            (0, n.jsx)("div", {
                 ref: (e) => (
-                    null != e && ((I.current = e), (h.current = e)),
+                    null != e && ((p.current = e), (h.current = e)),
                     () => {
-                        ((I.current = null), (h.current = null));
+                        ((p.current = null), (h.current = null));
                     }
                 ),
-                children: (0, i.jsxs)(r.D, {
+                children: (0, n.jsxs)(a.D, {
                     ...e,
-                    className: p ? m._m : m.c9,
+                    className: I ? m._m : m.c9,
                     "aria-label": g.intl.string(g.t.r6EJOu),
                     children: [
-                        p && (0, i.jsx)(a.j, { size: "xxs", color: "currentColor" }),
-                        (0, i.jsx)(o.E, {
+                        I && (0, n.jsx)(r.j, { size: "xxs", color: "currentColor" }),
+                        (0, n.jsx)(o.E, {
                             variant: "text-xxs/medium",
                             color: "none",
-                            children: p ? g.intl.string(g.t.DccrfU) : g.intl.string(g.t.fZSejy),
+                            children: I ? g.intl.string(g.t.DccrfU) : g.intl.string(g.t.fZSejy),
                         }),
                     ],
                 }),

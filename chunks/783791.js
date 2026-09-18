@@ -1,4 +1,4 @@
-(n.d(t, { Ay: () => U, BL: () => b, bi: () => q }), n(667532), n(321073));
+(n.d(t, { Ay: () => U, BL: () => b, bi: () => G }), n(667532), n(321073));
 var i = n(17928),
     r = n(228366),
     l = n(695515),
@@ -14,15 +14,15 @@ var i = n(17928),
     g = n(746080),
     w = n(50617),
     m = n(375708);
-let _ = "bit_message1",
-    v = new Set(["reply", "plan_proposed", "terminal_error"]);
+let v = "bit_message1",
+    _ = new Set(["reply", "plan_proposed", "terminal_error"]);
 function b(e) {
     return (
         !0 === e.finished ||
         !0 === e.continued ||
         "" !== e.content ||
         null != e.proposal ||
-        e.steps.some((e) => v.has(e.kind))
+        e.steps.some((e) => _.has(e.kind))
     );
 }
 let A = new Map(),
@@ -139,7 +139,7 @@ function V(e) {
         (null != (t = B(e)) &&
         ("" !== t.content.trim() ||
             null != t.proposal ||
-            t.steps.some((e) => v.has(e.kind) && "terminal_error" !== e.kind))
+            t.steps.some((e) => _.has(e.kind) && "terminal_error" !== e.kind))
             ? I.set(e, Date.now())
             : I.delete(e),
             (function (e) {
@@ -167,7 +167,7 @@ function V(e) {
                 let n = !a.A.isSoundDisabled("message1"),
                     i = d.A.getGuildId(),
                     r = null != i && h.Ay.getSelectedProjectId(i) === e ? i : null,
-                    v = null != r && u.Ay.getChannelId() === g.VV.VIBEGRATIONS && f.A.isWindowFocused(),
+                    _ = null != r && u.Ay.getChannelId() === g.VV.VIBEGRATIONS && f.A.isWindowFocused(),
                     b = r ?? t.guild_id ?? t.preview_guild_id,
                     A = (function (e) {
                         let t = B(e);
@@ -190,8 +190,8 @@ function V(e) {
                         return null;
                     })(e);
                 if (null == A) return;
-                if (v) {
-                    n && (0, s.Ak)(_, 0.4);
+                if (_) {
+                    n && (0, s.Ak)(v, 0.4);
                     return;
                 }
                 let I = null == b ? null : p.BVt.CHANNEL(b, g.VV.VIBEGRATIONS, e);
@@ -201,7 +201,7 @@ function V(e) {
                     title: t.name,
                     body: A,
                     route: I,
-                    sound: n ? _ : void 0,
+                    sound: n ? v : void 0,
                     volume: 0.4,
                 });
             })(e));
@@ -209,7 +209,7 @@ function V(e) {
 }
 function H(e) {
     let t = A.delete(e);
-    G.delete(e);
+    q.delete(e);
     let n = I.delete(e),
         i = T.delete(e),
         r = S.delete(e),
@@ -234,7 +234,7 @@ class W extends i.Ay.Store {
         return L(e);
     }
     hasLoadedHistory(e) {
-        return G.has(e);
+        return q.has(e);
     }
     getFinishedAt(e) {
         return L(e) ? null : (I.get(e) ?? null);
@@ -259,9 +259,9 @@ class W extends i.Ay.Store {
         return !1;
     }
 }
-let G = new Map();
-function q(e) {
-    return G.get(e) ?? null;
+let q = new Map();
+function G(e) {
+    return q.get(e) ?? null;
 }
 function $() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
@@ -303,14 +303,14 @@ let U = new W(r.h, {
     },
     VIBEGRATIONS_CHAT_HISTORY_SET: function (e) {
         let { projectId: t, entries: n, cursor: i } = e;
-        (G.set(t, i ?? null), E.delete(t), M.delete(t));
+        (q.set(t, i ?? null), E.delete(t), M.delete(t));
         let r = new Set(),
             l = n.filter((e) => null == e.id || (!r.has(e.id) && (r.add(e.id), !0)));
         (A.set(t, l.map(R)), V(t));
     },
     VIBEGRATIONS_CHAT_HISTORY_PREPEND: function (e) {
         let { projectId: t, entries: n, cursor: i } = e;
-        if ((G.set(t, i), 0 === n.length)) return;
+        if ((q.set(t, i), 0 === n.length)) return;
         let r = A.get(t) ?? [],
             l = n.map(R),
             s = new Set(r.flatMap((e) => (null == e.id ? [] : [e.id]))),

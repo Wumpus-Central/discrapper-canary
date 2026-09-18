@@ -1,7 +1,7 @@
 l.d(t, { L: () => r });
-var n = l(477900);
+var a = l(477900);
 l(582128);
-var a = l(661531),
+var n = l(661531),
     i = l(996682),
     s = l(27989);
 function r(e) {
@@ -9,21 +9,21 @@ function r(e) {
             size: t = "md",
             width: l,
             height: r,
-            color: o = a.A.colors.INTERACTIVE_ICON_DEFAULT,
+            color: o = n.A.colors.INTERACTIVE_ICON_DEFAULT,
             colorClass: c = "",
             ...u
         } = e,
         d = (0, s.J)(t),
         m = d?.width ?? l,
         h = d?.height ?? r;
-    return (0, n.jsx)("svg", {
+    return (0, a.jsx)("svg", {
         ...(0, i.A)(u),
         xmlns: "http://www.w3.org/2000/svg",
         width: m,
         height: h,
         fill: "none",
         viewBox: "0 0 24 24",
-        children: (0, n.jsx)("path", {
+        children: (0, a.jsx)("path", {
             fill: "string" == typeof o ? o : o.css,
             d: "M7 2a1 1 0 0 0-1 1v18a1 1 0 1 0 2 0V3a1 1 0 0 0-1-1ZM11 6a1 1 0 1 1 2 0v12a1 1 0 1 1-2 0V6ZM1 8a1 1 0 0 1 2 0v8a1 1 0 1 1-2 0V8ZM16 5a1 1 0 1 1 2 0v14a1 1 0 1 1-2 0V5ZM22 8a1 1 0 0 0-1 1v6a1 1 0 1 0 2 0V9a1 1 0 0 0-1-1Z",
             className: c,

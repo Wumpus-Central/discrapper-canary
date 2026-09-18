@@ -15,15 +15,15 @@ var i = n(477900),
     w = n(375708);
 function m(e) {
     let { transitionState: t, onClose: n } = e,
-        [m, _] = r.useState(""),
-        [v, b] = r.useState(null),
+        [m, v] = r.useState(""),
+        [_, b] = r.useState(null),
         [A, I] = r.useState(!1),
         T = r.useMemo(() => (0, c.$X)("VibegrationsCustomWidgetModal"), []),
         y = r.useCallback(() => {
             n().catch(() => void 0);
         }, [n]),
         S = r.useCallback((e) => {
-            (_(e), b(null));
+            (v(e), b(null));
         }, []),
         E = r.useCallback(async () => {
             let e = m.trim();
@@ -92,7 +92,7 @@ function m(e) {
                   showCharacterCount: !0,
                   rows: 5,
                   autoFocus: !0,
-                  error: v,
+                  error: _,
                   disabled: A,
               }),
           });

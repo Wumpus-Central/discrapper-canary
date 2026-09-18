@@ -1,43 +1,43 @@
 l.d(n, { A: () => i });
-var t = l(582128),
-    a = l(435558),
-    r = l.n(a);
+var a = l(582128),
+    t = l(435558),
+    r = l.n(t);
 function i(e) {
-    let { enabled: n, isInteracting: l, items: a, preload: i } = e,
-        [s, u] = t.useState(null),
-        o = t.useRef(null),
-        d = t.useRef(i);
+    let { enabled: n, isInteracting: l, items: t, preload: i } = e,
+        [s, u] = a.useState(null),
+        o = a.useRef(null),
+        d = a.useRef(i);
     return (
-        t.useEffect(() => {
+        a.useEffect(() => {
             d.current = i;
         }, [i]),
-        t.useEffect(() => {
-            if (!n || 0 === a.length || null != o.current) return;
+        a.useEffect(() => {
+            if (!n || 0 === t.length || null != o.current) return;
             let e = (function (e) {
                 let { shuffle: n = r().shuffle, maxSize: l = 25 } =
                         arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-                    t = n(e).slice(0, l),
-                    a = 0;
+                    a = n(e).slice(0, l),
+                    t = 0;
                 return {
-                    current: () => (0 === t.length ? null : t[a % t.length]),
+                    current: () => (0 === a.length ? null : a[t % a.length]),
                     advance: () => {
-                        0 !== t.length && (a = (a + 1) % t.length);
+                        0 !== a.length && (t = (t + 1) % a.length);
                     },
                     get size() {
-                        return t.length;
+                        return a.length;
                     },
                 };
-            })(a);
+            })(t);
             o.current = e;
             let l = e.current();
             null != l && d.current?.(l);
-        }, [n, a]),
-        t.useEffect(() => {
+        }, [n, t]),
+        a.useEffect(() => {
             let e = o.current;
             if (!n || !l || null == e) return void u(null);
             (u(e.current()), e.advance());
-            let t = e.current();
-            null != t && d.current?.(t);
+            let a = e.current();
+            null != a && d.current?.(a);
         }, [l]),
         n && l ? s : null
     );

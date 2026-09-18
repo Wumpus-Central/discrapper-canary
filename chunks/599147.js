@@ -187,7 +187,7 @@ let P = () => {
                     ),
                 l !== d.g.PREVIEW && null !== j && P(null));
         }, [l, b, v, x, j]));
-    let V = n.useCallback(async () => {
+    let L = n.useCallback(async () => {
         (O(!0),
             await (0, i.openModalLazy)(
                 async () => (t) =>
@@ -234,8 +234,8 @@ let P = () => {
     }, [e, b, x, j, k, M, l, v]);
     return (
         (0, n.useEffect)(() => {
-            D && V();
-        }, [l, D, V]),
+            D && L();
+        }, [l, D, L]),
         (0, a.jsxs)(c.LB, {
             children: [
                 (0, a.jsx)(c.MG, {

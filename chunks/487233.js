@@ -1,6 +1,6 @@
 l.d(n, { A: () => f });
-var t = l(477900),
-    a = l(582128),
+var a = l(477900),
+    t = l(582128),
     r = l(17928),
     i = l(919395),
     s = l(252732),
@@ -12,14 +12,14 @@ var t = l(477900),
     v = l(375708);
 function f(e) {
     let { user: n, guildId: l, disabled: f, errorMessageId: h } = e,
-        p = a.useRef(null),
+        p = t.useRef(null),
         {
-            pendingAvatar: m,
-            accessibleValue: b,
+            pendingAvatar: b,
+            accessibleValue: m,
             currentProfileAvatarHash: A,
             hasMainProfileFallback: I,
         } = (function (e, n) {
-            let { pendingAvatar: l, currentProfileAvatarHash: t } = (0, r.cf)(
+            let { pendingAvatar: l, currentProfileAvatarHash: a } = (0, r.cf)(
                     [d.A, u.Ay],
                     () => ({
                         pendingAvatar: d.A.getPendingChanges(n ?? void 0).pendingAvatar,
@@ -27,16 +27,16 @@ function f(e) {
                     }),
                     [n, e],
                 ),
-                a = null != n,
+                t = null != n,
                 i = null != e.avatar;
             return {
                 pendingAvatar: l,
-                accessibleValue: (0, c.$)(l, t),
-                currentProfileAvatarHash: t,
-                hasMainProfileFallback: a && i,
+                accessibleValue: (0, c.$)(l, a),
+                currentProfileAvatarHash: a,
+                hasMainProfileFallback: t && i,
             };
         })(n, l),
-        C = (0, i.z5)(m, A)
+        C = (0, i.z5)(b, A)
             ? {
                   onClick: () => {
                       ((0, s.rM)(null, A, (e) => (0, o.p)({ guildId: l ?? void 0, avatar: e })),
@@ -46,16 +46,16 @@ function f(e) {
                   accessibleLabel: v.intl.string(I ? v.t.Y0mxy1 : v.t.twB3fz),
               }
             : void 0,
-        x = (0, g._)({ guildId: l, returnRef: p });
-    return (0, t.jsx)(c.A, {
+        y = (0, g._)({ guildId: l, returnRef: p });
+    return (0, a.jsx)(c.A, {
         buttonRef: p,
         userId: n.id,
         guildId: l,
-        avatarChange: m,
-        accessibleValue: b,
+        avatarChange: b,
+        accessibleValue: m,
         variant: "square",
         affordance: C,
-        onClick: x,
+        onClick: y,
         "aria-haspopup": "dialog",
         disabled: f,
         errorMessageId: h,

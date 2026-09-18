@@ -1,13 +1,13 @@
 l.d(n, { P: () => d, _: () => o });
-var t = l(582128),
-    a = l(688810),
+var a = l(582128),
+    t = l(688810),
     r = l(252732),
     i = l(339984);
 let s = [{ name: "gif, webp", extensions: ["gif", "webp"] }];
 function u(e) {
     let { uploadType: n, guildId: l, isPremiumTryItOut: i = !1, returnRef: s, filters: u } = e,
-        { newestAnalyticsLocation: o } = (0, a.Ay)();
-    return t.useCallback(
+        { newestAnalyticsLocation: o } = (0, t.Ay)();
+    return a.useCallback(
         () =>
             (0, r.XD)({
                 uploadType: n,

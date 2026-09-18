@@ -624,8 +624,8 @@ var eq = n(554146),
     e1 = n(789645),
     e2 = n(565645),
     e3 = n(775602),
-    e8 = n(826673),
-    e6 = n(182922),
+    e6 = n(826673),
+    e8 = n(182922),
     e7 = n(532624),
     e5 = n(531685),
     e4 = n(723702),
@@ -640,7 +640,7 @@ function tt(e) {
         u = (0, h.bG)([e5.A], () => e5.A.isFocused()),
         c = (0, h.bG)([e7.Ay], () => e7.Ay.getKeybindForAction(eS.hCu.SOUNDBOARD_HOLD));
     if (null != t && s.length > 0)
-        return (0, l.jsx)(e6.A, {
+        return (0, l.jsx)(e8.A, {
             graphicPrimary:
                 null != t.emojiId || null != t.emojiName
                     ? (0, l.jsx)(e2.A, { emojiId: t.emojiId, emojiName: t.emojiName, className: te.Zg })
@@ -662,7 +662,7 @@ function tt(e) {
                 return (t) => (0, l.jsx)(e, { ...t });
             }));
     }
-    let f = (0, e8.k8)(eq.M.SOUNDBOARD_KEYBIND_TIP),
+    let f = (0, e6.k8)(eq.M.SOUNDBOARD_KEYBIND_TIP),
         g =
             null != c && (0, e4.isWindows)() && !f
                 ? eG.intl.format(eG.t.udMTth, {
@@ -680,7 +680,7 @@ function tt(e) {
                   (0, l.jsx)(S.D, {
                       className: te.b,
                       onClick: function () {
-                          return (0, e8.Dr)(eq.M.SOUNDBOARD_KEYBIND_TIP);
+                          return (0, e6.Dr)(eq.M.SOUNDBOARD_KEYBIND_TIP);
                       },
                       children: (0, l.jsx)(e1.P, { size: "xs", color: "currentColor" }),
                   }),
@@ -1274,8 +1274,8 @@ function tA(e) {
             },
             [eP, eD, eV, ew.length],
         ),
-        e8 = i.useCallback((e) => eL((0, eu.lG)(e, X, V, s, L)), [s, V, X, L]),
-        e6 = i.useCallback(
+        e6 = i.useCallback((e) => eL((0, eu.lG)(e, X, V, s, L)), [s, V, X, L]),
+        e8 = i.useCallback(
             (e) => {
                 (0, j.L3)(e, async () => {
                     let { default: e } = await n.e("811562").then(n.bind(n, 666801));
@@ -1297,11 +1297,11 @@ function tA(e) {
                     : (0, l.jsx)(S.D, {
                           tabIndex: 0,
                           className: td.Jm,
-                          onClick: e6,
+                          onClick: e8,
                           "aria-label": eG.intl.string(eG.t.kbFsAD),
                           children: (0, l.jsx)(tx, { className: td.By }),
                       }),
-            [N, e6],
+            [N, e8],
         ),
         e5 = i.useCallback(
             (e) =>
@@ -1383,7 +1383,7 @@ function tA(e) {
                     containerWidth: a,
                     store: M.LW,
                     onSelectItem: eZ,
-                    onSearchExpressions: e8,
+                    onSearchExpressions: e6,
                     hasSearchResults: eI.length > 0,
                     defaultSearchPlaceholder: eG.intl.string(eG.t.sKt3xS),
                     renderRow: eq,

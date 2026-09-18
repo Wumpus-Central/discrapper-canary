@@ -1,6 +1,6 @@
 l.d(t, { A: () => x });
-var n = l(477900),
-    a = l(582128),
+var a = l(477900),
+    n = l(582128),
     i = l(503698),
     s = l.n(i),
     r = l(95477),
@@ -16,9 +16,9 @@ function x(e) {
     let { variant: t, className: l, containerClassName: i } = e,
         { clip: x, clipName: v, setClipName: p } = (0, m.T)(),
         g = (0, d.h)(x),
-        [j, b] = a.useState(!1);
+        [j, b] = n.useState(!1);
     if (j)
-        return (0, n.jsx)(r.k, {
+        return (0, a.jsx)(r.k, {
             autoFocus: !0,
             value: v,
             placeholder: g,
@@ -31,12 +31,12 @@ function x(e) {
             },
         });
     let C = null != v && "" !== v ? v : g;
-    return (0, n.jsxs)(o.D, {
+    return (0, a.jsxs)(o.D, {
         className: s()(f.x, i),
         onClick: () => b(!0),
         children: [
-            (0, n.jsx)(c.E, { variant: t, color: "text-default", className: l, children: C }),
-            (0, n.jsx)(u.PencilIcon, { className: f.I, size: "xs", color: "currentColor" }),
+            (0, a.jsx)(c.E, { variant: t, color: "text-default", className: l, children: C }),
+            (0, a.jsx)(u.PencilIcon, { className: f.I, size: "xs", color: "currentColor" }),
         ],
     });
 }

@@ -1,49 +1,49 @@
-n.d(t, { RQ: () => p, YW: () => f, pA: () => h, tM: () => m });
-var i = n(477900),
-    l = n(582128),
-    s = n(17928),
-    r = n(461797),
-    a = n(287809),
-    o = n(158045),
-    d = n(23722);
+i.d(t, { RQ: () => I, YW: () => f, pA: () => h, tM: () => m });
+var n = i(477900),
+    l = i(582128),
+    s = i(17928),
+    a = i(461797),
+    r = i(287809),
+    o = i(158045),
+    d = i(23722);
 let c = { id: "default" },
     u = l.createContext(null),
     g = l.createContext(null);
 function m(e) {
     let { children: t } = e,
-        [n, m] = l.useState(c),
+        [i, m] = l.useState(c),
         [x, f] = l.useState(null),
-        [h] = l.useState(r.B$),
-        p = l.useRef(h),
-        I = (0, d.A)((e) => {
+        [h] = l.useState(a.B$),
+        I = l.useRef(h),
+        p = (0, d.A)((e) => {
             m(e);
         }),
-        j = l.useCallback(() => {
+        A = l.useCallback(() => {
             m(c);
         }, []),
-        E = l.useCallback(() => p.current, []),
-        A = (0, s.bG)([a.default], () => o.Ay.canUsePremiumProfileCustomization(a.default.getCurrentUser())),
-        v = A ? c : n,
-        C = !A && x?.id === "premiumTryItOut",
+        j = l.useCallback(() => I.current, []),
+        E = (0, s.bG)([r.default], () => o.Ay.canUsePremiumProfileCustomization(r.default.getCurrentUser())),
+        v = E ? c : i,
+        C = !E && x?.id === "premiumTryItOut",
         S = l.useCallback(() => {
             f(v);
         }, [v]),
         b = l.useCallback((e) => {
-            p.current = e;
+            I.current = e;
         }, []),
         k = l.useMemo(
             () => ({
                 selectedPanel: v,
                 readyPanel: x,
                 handlePanelTransitionComplete: S,
-                navigate: I,
-                goBack: j,
-                getCurrentPreset: E,
+                navigate: p,
+                goBack: A,
+                getCurrentPreset: j,
                 cachePreset: b,
             }),
-            [v, x, S, I, j, E, b],
+            [v, x, S, p, A, j, b],
         );
-    return (0, i.jsx)(g.Provider, { value: C, children: (0, i.jsx)(u.Provider, { value: k, children: t }) });
+    return (0, n.jsx)(g.Provider, { value: C, children: (0, n.jsx)(u.Provider, { value: k, children: t }) });
 }
 function x() {
     let e = l.useContext(u);
@@ -60,24 +60,24 @@ function f() {
     return e;
 }
 function h() {
-    let { selectedPanel: e, readyPanel: t, handlePanelTransitionComplete: n, navigate: i, goBack: l } = x();
+    let { selectedPanel: e, readyPanel: t, handlePanelTransitionComplete: i, navigate: n, goBack: l } = x();
     return {
         selectedPanel: e,
         readyPanel: t,
         initialTarget: t?.initialTarget ?? null,
-        handlePanelTransitionComplete: n,
-        navigate: i,
+        handlePanelTransitionComplete: i,
+        navigate: n,
         goBack: l,
     };
 }
-function p() {
+function I() {
     let { getCurrentPreset: e, cachePreset: t } = x(),
-        [n, i] = l.useState(e);
+        [i, n] = l.useState(e);
     return {
-        preset: n,
+        preset: i,
         setPreset: l.useCallback(
             (e) => {
-                (t(e), i(e));
+                (t(e), n(e));
             },
             [t],
         ),
