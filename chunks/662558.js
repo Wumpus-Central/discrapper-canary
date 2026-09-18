@@ -1,4 +1,4 @@
-t.d(a, { default: () => E });
+t.d(a, { default: () => j });
 var i = t(477900),
     n = t(582128),
     s = t(503698),
@@ -18,21 +18,21 @@ var i = t(477900),
     x = t(375708),
     C = t(511002),
     b = t(679017);
-let E = function (e) {
-    let { onClose: a, onComplete: t, transitionState: s, webviewUrl: E, isExpressiveModalV2: j, entryPoint: w } = e,
+let j = function (e) {
+    let { onClose: a, onComplete: t, transitionState: s, webviewUrl: j, isExpressiveModalV2: E, entryPoint: w } = e,
         y = (0, h.W$)(),
-        [M, W] = n.useState(0),
+        [W, M] = n.useState(0),
         T = n.useCallback(() => {
             (t(), a());
         }, [t, a]),
         R = n.useCallback(() => {
-            (0, c.hasModalOpen)(k.SW) && !j && T();
-        }, [T, j]);
+            (0, c.hasModalOpen)(k.SW) && !E && T();
+        }, [T, E]);
     (0, g.dZ)(R);
-    let S = n.useCallback(
+    let I = n.useCallback(
             (e) => {
-                if ("" !== E) {
-                    if (!j) {
+                if ("" !== j) {
+                    if (!E) {
                         y && e?.data?.eventType === "Verification.Result" && T();
                         return;
                     }
@@ -41,21 +41,21 @@ let E = function (e) {
                         : e?.data?.eventType === "Widget.ExitReview" && a();
                 }
             },
-            [E, j, y, T, t, a],
+            [j, E, y, T, t, a],
         ),
-        _ = n.useCallback(() => {
-            W(M + 1);
-        }, [M]);
+        N = n.useCallback(() => {
+            M(W + 1);
+        }, [W]);
     n.useEffect(
         () => (
-            window.addEventListener("message", S),
+            window.addEventListener("message", I),
             () => {
-                window.removeEventListener("message", S);
+                window.removeEventListener("message", I);
             }
         ),
-        [S],
+        [I],
     );
-    let I = w === m.q1.SYSTEM_DM_MANUAL_REVIEW;
+    let V = w === m.q1.MANUAL_REVIEW;
     return (0, i.jsxs)(r.EO, {
         "data-migration-pending": !0,
         transitionState: s,
@@ -71,11 +71,11 @@ let E = function (e) {
                     "iframe",
                     {
                         id: "frame",
-                        src: E,
+                        src: j,
                         className: b.pU,
                         allow: "camera; microphone;publickey-credentials-get;publickey-credentials-create",
                     },
-                    M,
+                    W,
                 ),
             }),
             (0, i.jsx)(r.jl, {
@@ -86,8 +86,8 @@ let E = function (e) {
                         (0, i.jsx)(o.$, {
                             fullWidth: !0,
                             variant: "secondary",
-                            icon: I ? u.P : p.Z,
-                            text: x.intl.string(I ? x.t.cpT0Cq : v.default.b7Oqdu),
+                            icon: V ? u.P : p.Z,
+                            text: x.intl.string(V ? x.t.cpT0Cq : v.default.b7Oqdu),
                             onClick: a,
                         }),
                         (0, i.jsx)(o.$, {
@@ -95,7 +95,7 @@ let E = function (e) {
                             variant: "secondary",
                             icon: f.RefreshIcon,
                             text: x.intl.string(v.default["0vTx7j"]),
-                            onClick: _,
+                            onClick: N,
                         }),
                     ],
                 }),

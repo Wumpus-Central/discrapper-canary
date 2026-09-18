@@ -224,7 +224,8 @@ let C = {
         return S({
             webviewUrl: e,
             verificationVendorName: T.XM.K_ID,
-            entryPoint: c.q1.SYSTEM_DM_MANUAL_REVIEW,
+            entryPoint: c.q1.MANUAL_REVIEW,
+            shouldShowExpressiveModal: !0,
             onComplete: () => {},
         });
     },
