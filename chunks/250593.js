@@ -698,7 +698,7 @@ function eM(e) {
         }),
     });
 }
-var eB = n(590632);
+var eB = n(865830);
 function eO(e) {
     let { column: t, disabled: n, onInsert: r } = e,
         i = em.intl.formatToPlainString(1 === t ? eg.default.U0SqHk : eg.default["9Ctu9P"], { positionNumber: 1 });
@@ -1298,7 +1298,7 @@ var eK = n(529609),
     e8 = n(488428),
     e6 = n(776231),
     e5 = n(986898);
-function e9(e) {
+function e3(e) {
     let { guildId: t, header: n, canEdit: i, isEditing: a, isSaving: d } = e,
         c = (0, u.bG)([m.A], () => m.A.getGuild(t), [t]),
         o = (0, u.bG)([e1.A], () => e1.A.getOnlineCount(t), [t]),
@@ -1454,7 +1454,7 @@ function e9(e) {
               ],
           });
 }
-var e3 = n(312152);
+var e9 = n(312152);
 function e4(e) {
     let t,
         { guildId: n } = e,
@@ -1534,9 +1534,9 @@ function e4(e) {
     }, [n, p, O, F]),
     null == p || null == U)
         ? (0, l.jsx)("div", {
-              className: e3.MY,
+              className: e9.MY,
               children: (0, l.jsx)("div", {
-                  className: e3.F,
+                  className: e9.F,
                   children:
                       "error" !== _ || A
                           ? (0, l.jsx)(d.y, {
@@ -1552,15 +1552,15 @@ function e4(e) {
               }),
           })
         : (0, l.jsxs)("div", {
-              className: e3.MY,
+              className: e9.MY,
               children: [
                   (0, l.jsx)(c.Gt, {
-                      className: e3.XG,
+                      className: e9.XG,
                       children: (0, l.jsxs)("div", {
-                          className: a()(e3.Qs, { [e3.Dy]: N }),
+                          className: a()(e9.Qs, { [e9.Dy]: N }),
                           children: [
                               I && T ? (0, l.jsx)(Q.A, { onPublish: G }) : null,
-                              (0, l.jsx)(e9, {
+                              (0, l.jsx)(e3, {
                                   guildId: n,
                                   header: N ? w.header : p.header,
                                   isEditing: N,
