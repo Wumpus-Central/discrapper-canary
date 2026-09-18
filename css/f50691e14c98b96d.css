@@ -2261,21 +2261,21 @@
     z-index: 10
 }
 
-.card_e1364f:not(:has(.textAreaContainer_e1364f)):hover .removeGameButton_e1364f,
-.keyboard-mode .card_e1364f:not(:has(.textAreaContainer_e1364f)):focus-within .removeGameButton_e1364f {
+.card_e1364f:not(:has(.comment_e1364f textarea:focus)):hover .removeGameButton_e1364f,
+.keyboard-mode .card_e1364f:not(:has(.comment_e1364f textarea:focus)):focus-within .removeGameButton_e1364f {
     opacity: 1;
     transition: opacity .15s ease-out
 }
 
-.card_e1364f:has(.removeGameButton_e1364f):not(:has(.textAreaContainer_e1364f)):hover .details_e1364f,
-.keyboard-mode .card_e1364f:has(.removeGameButton_e1364f):not(:has(.textAreaContainer_e1364f)):focus-within .details_e1364f {
+.card_e1364f:has(.removeGameButton_e1364f):not(:has(.comment_e1364f textarea:focus)):hover .details_e1364f,
+.keyboard-mode .card_e1364f:has(.removeGameButton_e1364f):not(:has(.comment_e1364f textarea:focus)):focus-within .details_e1364f {
     -webkit-mask-image: radial-gradient(circle at top right, rgba(0, 0, 0, .05) 40px, rgba(0, 0, 0, .1) 45px, rgba(0, 0, 0, .25) 55px, rgba(0, 0, 0, .5) 65px, #000 75px);
     mask-image: radial-gradient(circle at top right, rgba(0, 0, 0, .05) 40px, rgba(0, 0, 0, .1) 45px, rgba(0, 0, 0, .25) 55px, rgba(0, 0, 0, .5) 65px, #000 75px)
 }
 
-.isDragging_e1364f .card_e1364f:not(:has(.textAreaContainer_e1364f)) .removeGameButton_e1364f,
-.isDragging_e1364f .card_e1364f:not(:has(.textAreaContainer_e1364f)):hover .removeGameButton_e1364f,
-.keyboard-mode .isDragging_e1364f .card_e1364f:not(:has(.textAreaContainer_e1364f)):focus-within .removeGameButton_e1364f {
+.isDragging_e1364f .card_e1364f:not(:has(.comment_e1364f textarea:focus)) .removeGameButton_e1364f,
+.isDragging_e1364f .card_e1364f:not(:has(.comment_e1364f textarea:focus)):hover .removeGameButton_e1364f,
+.keyboard-mode .isDragging_e1364f .card_e1364f:not(:has(.comment_e1364f textarea:focus)):focus-within .removeGameButton_e1364f {
     opacity: 0
 }
 
@@ -2603,4 +2603,4 @@
     margin-top: 4px
 }
 
-/*# sourceMappingURL=e0080a0e5493a8ef.css.map*/
+/*# sourceMappingURL=f50691e14c98b96d.css.map*/

@@ -1,169 +1,187 @@
-t.d(a, { A: () => f });
-var l = t(477900),
-    n = t(582128),
-    r = t(503698),
-    i = t.n(r),
-    u = t(612324),
-    s = t(281595),
-    d = t(452027),
-    o = t(259678),
-    c = t(866665),
-    m = t(408278),
-    h = t(650583),
-    p = t(523600),
-    v = t(969490),
-    b = t(736541);
-function f(e) {
+a.d(t, { A: () => g });
+var n = a(477900),
+    l = a(582128),
+    r = a(503698),
+    i = a.n(r),
+    u = a(612324),
+    s = a(844222),
+    o = a(281595),
+    d = a(452027),
+    c = a(259678),
+    v = a(866665),
+    m = a(408278),
+    p = a(650583),
+    h = a(523600),
+    f = a(969490),
+    b = a(736541);
+function g(e) {
     let {
-            inputRef: a,
-            id: t,
+            inputRef: t,
+            id: a,
             defaultDirty: r = !1,
-            description: f,
-            disabled: g = !1,
-            error: x,
-            fullWidth: k = !0,
-            helperText: j,
-            hideLabel: y = !1,
+            description: g,
+            disabled: x = !1,
+            error: k,
+            fullWidth: j = !0,
+            helperText: y,
+            hideLabel: C = !1,
             label: S,
             maxRows: w,
             minLength: M,
-            multiline: C = !1,
-            onBlur: N,
-            onChange: R,
-            onCommit: T,
-            onFocus: D,
+            multiline: N = !1,
+            onBlur: R,
+            onChange: D,
+            onCommit: E,
+            onFocus: T,
             onKeyDown: q,
             paddingBlock: A = "sm",
-            paddingInline: E = "md",
-            preview: P,
+            paddingInline: P = "md",
+            preview: V,
             readOnly: Y = !1,
             required: Z,
-            size: $,
-            textVariant: z = "text-sm/normal",
-            trailing: B,
-            value: F,
-            ...H
+            scrollIntoViewOnFocus: $ = !1,
+            size: z,
+            textVariant: B = "text-sm/normal",
+            trailing: F,
+            value: H,
+            ...J
         } = e,
-        { maxLength: J, placeholder: K } = H,
-        L = (0, u.A)(a),
-        O = n.useRef(null),
-        [V, X] = n.useState(F),
-        [_, G] = n.useState(!1),
-        [I, Q] = n.useState(F),
-        U = n.useRef(""),
-        W = n.useRef(!1),
-        ee = n.useRef(!1),
+        { maxLength: K, placeholder: L } = J,
+        O = (0, u.A)(t),
+        X = l.useRef(null),
+        _ = l.useRef(null),
+        [I, G] = l.useState(H),
+        [Q, U] = l.useState(!1),
+        [W, ee] = l.useState(H),
+        [et, ea] = l.useState(H ?? ""),
+        en = l.useRef(!1),
+        el = l.useRef(!1),
+        { reducedMotion: er } = l.useContext(s.C),
         {
-            hasError: ea,
-            errorMessage: et,
-            setShouldValidate: el,
-        } = (0, s.Y)({ defaultDirty: r, error: x, maxLength: J, minLength: M, validateOn: "change", value: V });
-    F !== I && (Q(F), X(F));
-    let en = "function" == typeof P ? P((_ ? V : F) ?? "", { focused: _ }) : _ ? null : P,
-        er = null != en,
-        ei = i()(p.hF, { [p.c1]: C }),
-        eu = {
-            ...H,
-            ref: L,
-            className: i()(ei, p.ZZ, { [v.qD]: C }),
-            disabled: g,
+            hasError: ei,
+            errorMessage: eu,
+            setShouldValidate: es,
+        } = (0, o.Y)({
+            defaultDirty: r,
+            error: Q && !x && I !== et ? void 0 : k,
+            maxLength: K,
+            minLength: M,
+            validateOn: "change",
+            value: I,
+        });
+    function eo() {
+        ((en.current = !1), G(et), es(r), D?.(et));
+    }
+    function ed() {
+        en.current &&
+            ((function (e, t, a) {
+                let { length: n } = e ?? "";
+                return (null == t || n >= t) && (null == a || n <= a);
+            })(I, M, K)
+                ? ((en.current = !1), ea(I ?? ""), E?.(I ?? ""))
+                : eo());
+    }
+    (l.useEffect(() => {
+        Q && !x && $ && X.current?.scrollIntoView({ block: "nearest", behavior: er.enabled ? "auto" : "smooth" });
+    }, [Q, x, $, er.enabled]),
+        H !== W && (ee(H), G(H), (I ?? "") === et && ea(H ?? "")));
+    let ec = "function" == typeof V ? V((Q ? I : H) ?? "", { focused: Q }) : Q ? null : V,
+        ev = null != ec,
+        em = i()(h.hF, { [h.c1]: N }),
+        ep = {
+            ...J,
+            ref: O,
+            className: i()(em, h.ZZ, { [f.qD]: N }),
+            disabled: x,
             minLength: M,
             onBlur: function (e) {
-                (G(!1),
-                    (ee.current = !1),
-                    Y ||
-                        (W.current ||
-                        !(function (e, a, t) {
-                            let { length: l } = e ?? "";
-                            return (null == a || l >= a) && (null == t || l <= t);
-                        })(V, M, J)
-                            ? ((W.current = !1), X(U.current), el(r), R?.(U.current))
-                            : T?.(V ?? "")),
-                    N?.(e));
+                (U(!1), (el.current = !1), Y || ed(), R?.(e));
             },
             onChange: function (e) {
-                (X(e.currentTarget.value), el(!0), R?.(e.currentTarget.value));
+                ((en.current = !0), G(e.currentTarget.value), es(!0), D?.(e.currentTarget.value));
             },
             onFocus: function (e) {
-                let a = e.currentTarget;
-                ((U.current = a.value),
-                    G(!0),
-                    ee.current || a.setSelectionRange(a.value.length, a.value.length),
-                    D?.(e));
+                let t = e.currentTarget;
+                (ea(t.value),
+                    (en.current = !0),
+                    U(!0),
+                    el.current || t.setSelectionRange(t.value.length, t.value.length),
+                    T?.(e));
             },
             onKeyDown: function (e) {
                 (q?.(e),
                     e.defaultPrevented ||
                         Y ||
-                        (C || e.key !== h.dh.ENTER
-                            ? e.key === h.dh.ESCAPE && (e.stopPropagation(), (W.current = !0), e.currentTarget.blur())
-                            : e.currentTarget.blur()));
+                        e.nativeEvent.isComposing ||
+                        (N || e.key !== p.dh.ENTER
+                            ? e.key === p.dh.ESCAPE && (e.preventDefault(), e.stopPropagation(), eo())
+                            : (e.preventDefault(), ed())));
             },
             onMouseDown: function () {
-                ee.current = !0;
+                el.current = !0;
             },
             readOnly: Y,
             required: Z,
-            value: V ?? "",
+            value: I ?? "",
         },
-        es = null == V || "" === V,
-        ed = (es ? K : V) ?? "",
-        eo = er ? en : `${ed}\u200b`,
-        ec = g || Y || B?.disabled,
-        em = (0, l.jsx)(d.D, {
-            id: t,
-            description: f,
-            disabled: g,
-            errorMessage: ea ? et : void 0,
-            helperText: ea ? void 0 : j,
-            hideLabel: y,
+        eh = null == I || "" === I,
+        ef = (eh ? L : I) ?? "",
+        eb = ev ? ec : `${ef}\u200b`,
+        eg = x || Y || F?.disabled,
+        ex = (0, n.jsx)(d.D, {
+            id: a,
+            description: g,
+            disabled: x,
+            errorMessage: ei ? eu : void 0,
+            helperText: ei ? void 0 : y,
+            hideLabel: C,
             label: S,
             required: Z,
             children: (e) => {
-                let { controlId: a, describedById: t, errorMessageId: n } = e,
-                    r = { ...eu, id: a, "aria-describedby": t, "aria-errormessage": n, "aria-invalid": ea };
-                return (0, l.jsxs)("div", {
-                    ref: O,
-                    className: i()(p.kL, "inherit" !== z && b[z], {
-                        [p.V4]: er,
-                        [p.JD]: ea,
-                        [p.j9]: null != w,
-                        [p.tY]: null != $,
-                        [p.$7]: "sm" === $,
-                        [p.pH]: null != B,
+                let { controlId: t, describedById: a, errorMessageId: l } = e,
+                    r = { ...ep, id: t, "aria-describedby": a, "aria-errormessage": l, "aria-invalid": ei };
+                return (0, n.jsxs)("div", {
+                    ref: _,
+                    className: i()(h.kL, "inherit" !== B && b[B], {
+                        [h.V4]: ev,
+                        [h.JD]: ei,
+                        [h.j9]: null != w,
+                        [h.tY]: null != z,
+                        [h.$7]: "sm" === z,
+                        [h.pH]: null != F,
                     }),
-                    "data-disabled": g,
+                    "data-disabled": x,
                     "data-padding-block": A,
-                    "data-padding-inline": E,
+                    "data-padding-inline": P,
                     "data-read-only": Y,
                     children: [
-                        (0, l.jsx)(o.vN, {
-                            ringTarget: O,
-                            children: C
-                                ? (0, l.jsx)("textarea", { ...r, rows: 1 })
-                                : (0, l.jsx)("input", { ...r, type: "text" }),
+                        (0, n.jsx)(c.vN, {
+                            ringTarget: _,
+                            children: N
+                                ? (0, n.jsx)("textarea", { ...r, rows: 1 })
+                                : (0, n.jsx)("input", { ...r, type: "text" }),
                         }),
-                        (0, l.jsx)("div", {
+                        (0, n.jsx)("div", {
                             "aria-hidden": "true",
-                            className: i()(ei, p.St, { [p.tb]: !er && es, [p.gO]: null != w }),
+                            className: i()(em, h.St, { [h.tb]: !ev && eh, [h.gO]: null != w }),
                             style: null != w ? { "--custom-editable-text-max-rows": w } : void 0,
-                            children: eo,
+                            children: eb,
                         }),
-                        null != B &&
-                            (0, l.jsx)("div", {
-                                className: p.ZY,
-                                children: (0, l.jsx)(c.m, {
+                        null != F &&
+                            (0, n.jsx)("div", {
+                                className: h.ZY,
+                                children: (0, n.jsx)(v.m, {
                                     asContainer: !0,
                                     ariaHidden: !0,
-                                    shouldShow: !ec,
-                                    text: B.tooltip ?? B["aria-label"],
-                                    children: (0, l.jsx)(m.K, {
-                                        buttonRef: B.buttonRef,
-                                        "aria-haspopup": B["aria-haspopup"],
-                                        "aria-label": B["aria-label"],
-                                        disabled: ec,
-                                        icon: B.icon,
-                                        onClick: B.onClick,
+                                    shouldShow: !eg,
+                                    text: F.tooltip ?? F["aria-label"],
+                                    children: (0, n.jsx)(m.K, {
+                                        buttonRef: F.buttonRef,
+                                        "aria-haspopup": F["aria-haspopup"],
+                                        "aria-label": F["aria-label"],
+                                        disabled: eg,
+                                        icon: F.icon,
+                                        onClick: F.onClick,
                                         size: "sm",
                                         type: "button",
                                         variant: "icon-only",
@@ -174,5 +192,5 @@ function f(e) {
                 });
             },
         });
-    return (0, l.jsx)("div", { className: i()(p.zr, { [p.N8]: !k }), children: em });
+    return (0, n.jsx)("div", { ref: X, className: i()(h.zr, { [h.N8]: !j }), children: ex });
 }

@@ -178,7 +178,7 @@
     min-width: 0
 }
 
-.editing_ccf340 {
+.field_ccf340:has(input:focus) {
     --input-background-default: var(--background-surface-highest)
 }
 
@@ -346,4 +346,4 @@
     transition: color .15s ease-out, border-color .15s ease-out
 }
 
-/*# sourceMappingURL=aba4db0bb1311a0e.css.map*/
+/*# sourceMappingURL=80dceef96e7d3968.css.map*/

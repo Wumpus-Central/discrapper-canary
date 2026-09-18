@@ -546,8 +546,8 @@ function e5(e) {
 }
 var e7 = s(186272),
     e1 = s(996988),
-    e2 = s(207634),
-    e9 = s(174217);
+    e9 = s(207634),
+    e2 = s(174217);
 function e6(e) {
     let {
             user: i,
@@ -607,7 +607,7 @@ function e6(e) {
                 children: (0, l.jsx)(u.EO, {
                     "data-migration-pending": !0,
                     transitionState: B,
-                    className: e9.zr,
+                    className: e2.zr,
                     hideShadow: !0,
                     "aria-labelledby": Q,
                     parentComponent: "BotUserProfileModal",
@@ -627,14 +627,14 @@ function e6(e) {
                                     children: [
                                         (0, l.jsx)(C.A, { user: i, displayProfile: Y, themeType: e1.d.MODAL }),
                                         (0, l.jsxs)("div", {
-                                            className: e9.El,
+                                            className: e2.El,
                                             children: [
                                                 (0, l.jsx)(y.A, {
                                                     user: i,
                                                     displayProfile: Y,
                                                     guildId: H,
                                                     channelId: r,
-                                                    avatarSize: e2.T[e1.d.MODAL].avatarSize,
+                                                    avatarSize: e9.T[e1.d.MODAL].avatarSize,
                                                     onOpenAvatar: J,
                                                 }),
                                                 (0, l.jsx)(M.A, {
@@ -647,10 +647,10 @@ function e6(e) {
                                                     disableToolbar: !0,
                                                 }),
                                                 (0, l.jsxs)("div", {
-                                                    className: e9.Pz,
+                                                    className: e2.Pz,
                                                     children: [
                                                         (0, l.jsx)("div", {
-                                                            className: e9.jS,
+                                                            className: e2.jS,
                                                             children: (0, l.jsx)(b.e, {
                                                                 variant: "secondary",
                                                                 userId: i.id,
@@ -658,7 +658,7 @@ function e6(e) {
                                                             }),
                                                         }),
                                                         (0, l.jsx)("div", {
-                                                            className: e9.pg,
+                                                            className: e2.pg,
                                                             children: (0, l.jsx)(b.l, {
                                                                 variant: "secondary",
                                                                 userId: i.id,
@@ -673,12 +673,12 @@ function e6(e) {
                                         }),
                                     ],
                                 }),
-                                (0, l.jsx)(T.A, { userId: i.id, className: e9.Fd }),
+                                (0, l.jsx)(T.A, { userId: i.id, className: e2.Fd }),
                                 (0, l.jsxs)("div", {
-                                    className: e9.rf,
+                                    className: e2.rf,
                                     children: [
                                         (0, l.jsx)(L.Ay, {
-                                            className: e9.eF,
+                                            className: e2.eF,
                                             user: i,
                                             guildId: H,
                                             displayName: W,
@@ -757,7 +757,7 @@ function ii(e) {
             children: (0, l.jsxs)(u.EO, {
                 "data-migration-pending": !0,
                 transitionState: c,
-                className: e9.zr,
+                className: e2.zr,
                 hideShadow: !0,
                 "aria-labelledby": U,
                 parentComponent: "NonUserBotProfileModal",
@@ -777,23 +777,23 @@ function ii(e) {
                                     children: [
                                         (0, l.jsx)(C.A, { user: i, displayProfile: O, themeType: e1.d.MODAL }),
                                         (0, l.jsx)("div", {
-                                            className: e9.El,
+                                            className: e2.El,
                                             children: (0, l.jsx)(y.A, {
                                                 user: i,
                                                 displayProfile: O,
                                                 guildId: E,
                                                 channelId: t,
-                                                avatarSize: e2.T[e1.d.MODAL].avatarSize,
+                                                avatarSize: e9.T[e1.d.MODAL].avatarSize,
                                                 onOpenAvatar: D,
                                             }),
                                         }),
                                     ],
                                 }),
                                 (0, l.jsxs)("div", {
-                                    className: e9.rf,
+                                    className: e2.rf,
                                     children: [
                                         (0, l.jsx)(L.Ay, {
-                                            className: e9.eF,
+                                            className: e2.eF,
                                             user: i,
                                             guildId: E,
                                             displayName: T,
@@ -992,7 +992,7 @@ function im(e) {
         }),
     });
 }
-var ip = s(252102);
+var ip = s(808261);
 function ig(e) {
     let { hideRestrictedProfile: i, ...s } = e,
         { user: u } = s,

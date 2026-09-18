@@ -27,4 +27,8 @@
     min-width: 0
 }
 
-/*# sourceMappingURL=244941.057a94c0e715afe0.css.map*/
+.field__9e7f3:has(:is(input, textarea):focus) {
+    flex-grow: 1
+}
+
+/*# sourceMappingURL=244941.f7e92aebdb7bc6c9.css.map*/
