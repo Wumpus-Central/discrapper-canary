@@ -34,9 +34,10 @@ async function p() {
             let e = h;
             if (
                 ((null == e || Date.now() - I >= u) && ((h = e = await ((0, a.qn)() ? E() : _())), (I = Date.now())),
-                "decided_teen" === e.status)
+                "submitted" === e.status)
             )
-                return void o.A.showManualReviewDecidedTeenModal(e.teen_age_range);
+                return void o.A.showManualReviewPendingModal();
+            if ("decided_teen" === e.status) return void o.A.showManualReviewDecidedTeenModal(e.teen_age_range);
             o.A.showManualReviewWebview(e.verification_webview_url);
         } catch {
             r.A.showFailedToast(c.OB.TIGGER_PAWTECT_ERROR);

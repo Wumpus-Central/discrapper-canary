@@ -230,10 +230,22 @@ let C = {
         });
     },
     showManualReviewDecidedTeenModal: function (e) {
-        (0, a.openModalLazy)(async () => {
-            let { default: t } = await Promise.all([n.e("164776"), n.e("272647")]).then(n.bind(n, 986362));
-            return (n) => (0, i.jsx)(t, { ...n, teenAgeRange: e });
-        });
+        (0, a.openModalLazy)(
+            async () => {
+                let { default: t } = await Promise.all([n.e("164776"), n.e("272647")]).then(n.bind(n, 986362));
+                return (n) => (0, i.jsx)(t, { ...n, teenAgeRange: e });
+            },
+            { modalKey: T.xO },
+        );
+    },
+    showManualReviewPendingModal: function () {
+        (0, a.openModalLazy)(
+            async () => {
+                let { default: e } = await Promise.all([n.e("164776"), n.e("492758")]).then(n.bind(n, 174453));
+                return (t) => (0, i.jsx)(e, { ...t });
+            },
+            { modalKey: T.v7 },
+        );
     },
     showManualReviewFallbackModal: N,
     openUrl: function (e) {
