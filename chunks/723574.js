@@ -16,15 +16,15 @@ var p = l(503698),
     f = l(104510),
     A = l(364522),
     h = l(297264),
-    I = l(834730),
-    E = l(942857),
+    E = l(834730),
+    I = l(942857),
     v = l(793574),
     b = l(37537),
     j = l(131607),
     _ = l(831617),
     S = l(289704),
-    w = l(821609),
-    y = l(612400),
+    y = l(821609),
+    w = l(612400),
     C = l(661531);
 function N(e) {
     return e
@@ -41,8 +41,8 @@ function L(e) {
         return 0 === e.length ? [] : (0, G.k)(e);
     }, [t?.entitlements]);
 }
-var P = l(375708),
-    k = l(25525),
+var k = l(375708),
+    P = l(25525),
     D = l(144977),
     O = l(628049),
     U = l(568065),
@@ -65,14 +65,14 @@ function W(e) {
                 if (0 !== Object.values(t ?? {}).length)
                     return l.length > 0
                         ? { type: "expiring", expiringAt: l[0].ends_at }
-                        : { type: "active", statusText: P.intl.string(k.default.FFLkmx) };
+                        : { type: "active", statusText: k.intl.string(P.default.FFLkmx) };
             }, [l, t])),
         { gameName: c, gameName2: m } = (0, R.A)(),
         { textColor: p } = N(d?.type === "active");
     return null == a
         ? null
-        : (0, n.jsxs)(y.NI, {
-              label: P.intl.string(V.default["B3OfL/"]),
+        : (0, n.jsxs)(w.NI, {
+              label: k.intl.string(V.default["B3OfL/"]),
               badge: U.ys[O.W5],
               isActive: d?.type === "active",
               isWarning: d?.type === "expiring",
@@ -88,25 +88,25 @@ function W(e) {
                           stateMachine: "SM_Main_Int",
                       }),
                   }),
-                  (0, n.jsx)(y.Ft, {
-                      title: P.intl.string(V.default["B3OfL/"]),
+                  (0, n.jsx)(w.Ft, {
+                      title: k.intl.string(V.default["B3OfL/"]),
                       textColor: p,
-                      footer: (0, n.jsx)(y.$L, { cost: u ?? 0, costDecorator: "+", status: d }),
-                      children: (0, n.jsx)(I.E, {
+                      footer: (0, n.jsx)(w.$L, { cost: u ?? 0, costDecorator: "+", status: d }),
+                      children: (0, n.jsx)(E.E, {
                           className: M.h_,
                           color: p,
                           variant: "text-sm/medium",
-                          children: P.intl.format(V.default["+UqyGU"], { gameName: c, gameName2: m }),
+                          children: k.intl.format(V.default["+UqyGU"], { gameName: c, gameName2: m }),
                       }),
                   }),
-                  (0, n.jsx)(y.kd, {
-                      children: (0, n.jsx)(w.$, {
+                  (0, n.jsx)(w.kd, {
+                      children: (0, n.jsx)(y.$, {
                           variant: "primary",
                           fullWidth: !0,
                           text:
                               Object.values(a.entitlements).length > 0
-                                  ? P.intl.string(V.default.PuvU5b)
-                                  : P.intl.string(V.default.b62EHM),
+                                  ? k.intl.string(V.default.PuvU5b)
+                                  : k.intl.string(V.default.b62EHM),
                           onClick: (e) => {
                               (e.stopPropagation(),
                                   (0, D.A)({ guildId: s, analyticsLocation: v.A.GUILD_POWERUPS_OVERVIEW }));
@@ -120,8 +120,8 @@ var F = l(742589),
     K = l(645619),
     z = l(512750),
     $ = l(554146),
-    X = l(545445),
-    J = l(939981),
+    X = l(939981),
+    J = l(456124),
     H = l(914732),
     Q = l(498480),
     Z = l(868652);
@@ -163,7 +163,7 @@ function ec(e) {
                 children: (0, n.jsx)(el.K, {
                     variant: "icon-only",
                     size: "md",
-                    "aria-label": P.intl.string(P.t.WAI6xu),
+                    "aria-label": k.intl.string(k.t.WAI6xu),
                     onClick: s,
                     icon: en.P,
                 }),
@@ -183,11 +183,11 @@ function ec(e) {
                                     color: "currentColor",
                                     className: ed.y,
                                 }),
-                                (0, n.jsx)(I.E, { variant: "text-xs/semibold", color: "text-default", children: o }),
+                                (0, n.jsx)(E.E, { variant: "text-xs/semibold", color: "text-default", children: o }),
                             ],
                         }),
-                    (0, n.jsx)(I.E, { variant: "text-md/semibold", color: "text-default", children: i.header }),
-                    (0, n.jsxs)(I.E, {
+                    (0, n.jsx)(E.E, { variant: "text-md/semibold", color: "text-default", children: i.header }),
+                    (0, n.jsxs)(E.E, {
                         variant: "text-sm/medium",
                         color: "text-muted",
                         children: [
@@ -233,22 +233,22 @@ function ex(e) {
 var ef = l(210273),
     eA = l(998418),
     eh = l(722523),
-    eI = l(172218),
-    eE = l(294384),
+    eE = l(172218),
+    eI = l(294384),
     ev = l(813847),
     eb = l(43105),
     ej = l(186111),
     e_ = l(621466),
     eS = l(49999);
-function ew(e) {
+function ey(e) {
     let { powerup: t, targetRef: l, isCardVisible: s } = e,
         o = (0, r.bG)([ej.A], () => ej.A.hasLayers()),
         a = (0, x.useHasAnyModalOpen)(),
         u =
             t.skuId === z.FB
                 ? {
-                      title: P.intl.string(k.default.YWo6VL),
-                      body: P.intl.string(k.default.gXVvKc),
+                      title: k.intl.string(P.default.YWo6VL),
+                      body: k.intl.string(P.default.gXVvKc),
                       dismissibleContentType: $.M.VANITY_URL_POWERUP_EDUCATIONAL_POPOVER,
                   }
                 : null,
@@ -303,14 +303,14 @@ function ew(e) {
               },
           });
 }
-var ey = l(224331);
+var ew = l(224331);
 function eC(e) {
     let { guildId: t, powerup: l, className: i } = e,
         s = (0, eA.Ay)(t, l),
         r = s.type !== U.b_.LEVEL_ACTIVATED,
-        o = (0, eE.A)(t, l, "GuildPowerupCardBodyFooter"),
+        o = (0, eI.Ay)(t, l, "GuildPowerupCardBodyFooter"),
         a = (0, ev.e)(l, s, o);
-    return (0, n.jsx)(y.$L, { status: a, cost: r ? l.cost : void 0, className: i });
+    return (0, n.jsx)(w.$L, { status: a, cost: r ? l.cost : void 0, className: i });
 }
 function eN(e) {
     let { guildId: t, powerup: l, badge: s, className: r, onHover: o, children: a } = e,
@@ -318,14 +318,14 @@ function eN(e) {
         d = (0, eA.Ay)(t, l),
         c = d.type !== U.b_.INACTIVE,
         p = d.sourceEntitlement?.ends_at != null,
-        g = (0, eE.A)(t, l, "GuildPowerupCard"),
+        g = (0, eI.Ay)(t, l, "GuildPowerupCard"),
         x = i.useRef(null),
-        f = (0, ey.A)(t, l),
+        f = (0, ew.A)(t, l),
         [A, h] = i.useState(!1),
-        I = (0, eI.K)(h, 1);
+        E = (0, eE.K)(h, 1);
     return (0, n.jsxs)(n.Fragment, {
         children: [
-            (0, n.jsx)(y.NI, {
+            (0, n.jsx)(w.NI, {
                 label: l.title,
                 isActive: c,
                 isWarning: p,
@@ -336,11 +336,11 @@ function eN(e) {
                 onMouseLeave: () => o?.(!1),
                 className: r,
                 ref: (e) => {
-                    ((x.current = e), (I.current = e));
+                    ((x.current = e), (E.current = e));
                 },
                 children: a,
             }),
-            !g && u && (0, n.jsx)(ew, { powerup: l, targetRef: x, isCardVisible: A }),
+            !g && u && (0, n.jsx)(ey, { powerup: l, targetRef: x, isCardVisible: A }),
         ],
     });
 }
@@ -364,7 +364,7 @@ function eL(e) {
         })
     );
 }
-function eP(e) {
+function ek(e) {
     let { isActive: t, index: l } = e,
         { textColor: s, iconColor: r } = N(t),
         o = (0, b.c)("GuildPowerupLevelBody"),
@@ -380,7 +380,7 @@ function eP(e) {
                         className: eG.perkRow,
                         children: [
                             (0, n.jsx)(i, { color: r, size: "sm" }),
-                            (0, n.jsx)(I.E, {
+                            (0, n.jsx)(E.E, {
                                 className: eG.perkText,
                                 color: s,
                                 variant: o ? "text-sm/normal" : "text-sm/medium",
@@ -398,16 +398,16 @@ function eP(e) {
             a,
             (0, n.jsx)("div", {
                 className: eG.perkRow,
-                children: (0, n.jsx)(I.E, {
+                children: (0, n.jsx)(E.E, {
                     color: s,
                     variant: o ? "text-sm/normal" : "text-sm/medium",
-                    children: P.intl.string(k.default.nIj3LZ),
+                    children: k.intl.string(P.default.nIj3LZ),
                 }),
             }),
         ],
     });
 }
-function ek(e) {
+function eP(e) {
     let t,
         { guildId: l, index: s, powerup: r, nextPowerup: o } = e,
         a = (0, eA.Ay)(l, r),
@@ -424,13 +424,13 @@ function ek(e) {
         className: eG.card,
         children: [
             (0, n.jsx)(eL, { position: t, active: d, nextActive: null != o ? c : void 0 }),
-            (0, n.jsx)(y.Ft, {
+            (0, n.jsx)(w.Ft, {
                 title: r.title,
                 textColor: x,
                 footer: !m && (0, n.jsx)(eC, { className: eG.footer, guildId: l, powerup: r }),
-                children: (0, n.jsx)(eP, { isActive: d, index: s }),
+                children: (0, n.jsx)(ek, { isActive: d, index: s }),
             }),
-            !m && (0, n.jsx)(y.kd, { children: (0, n.jsx)(eh.Ay, { guildId: l, powerup: r, onError: g }) }),
+            !m && (0, n.jsx)(w.kd, { children: (0, n.jsx)(eh.Ay, { guildId: l, powerup: r, onError: g }) }),
         ],
     });
 }
@@ -453,13 +453,13 @@ function eM(e, t) {
                 "guildTagsBadgePacks" === r
                     ? (function (e) {
                           let { guildId: t, canUseBoosts: i, allPowerups: s, hasServerTags: r } = e,
-                              o = P.intl.string(k.default.KC9HRW),
-                              a = P.intl.string(k.default.GJiSmP),
+                              o = k.intl.string(P.default.KC9HRW),
+                              a = k.intl.string(P.default.GJiSmP),
                               u = s?.[z.SL],
-                              d = P.intl.string(k.default["/egwJA"]),
-                              c = r ? void 0 : P.intl.string(k.default.W6Vwn3),
-                              m = r ? void 0 : P.intl.string(k.default.lvk1Gc),
-                              p = r ? P.intl.string(k.default["9CfkLO"]) : P.intl.string(P.t["+7XY31"]),
+                              d = k.intl.string(P.default["/egwJA"]),
+                              c = r ? void 0 : k.intl.string(P.default.W6Vwn3),
+                              m = r ? void 0 : k.intl.string(P.default.lvk1Gc),
+                              p = r ? k.intl.string(P.default["9CfkLO"]) : k.intl.string(k.t["+7XY31"]),
                               g = r ? "secondary" : "expressive",
                               A = i
                                   ? () => {
@@ -483,7 +483,7 @@ function eM(e, t) {
                                               (0, n.jsx)(s, {
                                                   guildId: t,
                                                   title: o,
-                                                  description: P.intl.string(k.default.BBRFRd),
+                                                  description: k.intl.string(P.default.BBRFRd),
                                                   powerups: e,
                                                   forceStaticImages: !0,
                                                   footerInfoText: m,
@@ -542,7 +542,7 @@ function eF(e) {
             );
             null != r
                 ? (t = { type: "expiring", expiringAt: r })
-                : s && (t = { type: "active", statusText: P.intl.string(k.default.FFLkmx) });
+                : s && (t = { type: "active", statusText: k.intl.string(P.default.FFLkmx) });
             let o = i.reduce((e, t) => {
                     let { type: l, powerup: n } = t;
                     return l === U.b_.POWERUP_ACTIVATED ? e + n.cost : e;
@@ -571,7 +571,7 @@ function eF(e) {
         g = (0, b.c)("GuildPowerupMultiPerkCard");
     if (null == m || null == d) return null;
     let { status: x, cost: f, costDecorator: A } = m;
-    return (0, n.jsxs)(y.NI, {
+    return (0, n.jsxs)(w.NI, {
         label: d.title,
         isActive: x?.type === "active",
         isWarning: x?.type === "expiring",
@@ -581,27 +581,27 @@ function eF(e) {
         onMouseLeave: () => a(!1),
         children: [
             (0, n.jsx)("img", { alt: "", src: c, className: eW.S }),
-            (0, n.jsx)(y.Ft, {
+            (0, n.jsx)(w.Ft, {
                 title: d.title,
                 textColor: p,
-                footer: (0, n.jsx)(y.$L, { status: x, cost: f, costDecorator: A }),
-                children: (0, n.jsx)(I.E, {
+                footer: (0, n.jsx)(w.$L, { status: x, cost: f, costDecorator: A }),
+                children: (0, n.jsx)(E.E, {
                     className: eW.h,
                     color: p,
                     variant: g ? "text-sm/normal" : "text-sm/medium",
                     children: d.description,
                 }),
             }),
-            (0, n.jsx)(y.kd, {
+            (0, n.jsx)(w.kd, {
                 children:
                     d?.viewCtaTooltip != null
                         ? (0, n.jsx)(eD.m, {
                               asContainer: !0,
                               text: d.viewCtaTooltip,
                               delay: 100,
-                              children: (0, n.jsx)(w.$, { text: d.viewCta, fullWidth: !0 }),
+                              children: (0, n.jsx)(y.$, { text: d.viewCta, fullWidth: !0 }),
                           })
-                        : (0, n.jsx)(w.$, { text: d.viewCta, fullWidth: !0 }),
+                        : (0, n.jsx)(y.$, { text: d.viewCta, fullWidth: !0 }),
             }),
         ],
     });
@@ -616,22 +616,22 @@ function eX(e) {
         className: e$.kL,
         children: [
             (0, n.jsx)("img", { alt: "", className: e$.Sl, src: "/assets/73b70c7aab95c776.svg" }),
-            (0, n.jsx)(I.E, {
+            (0, n.jsx)(E.E, {
                 color: "text-overlay-light",
                 variant: "text-md/semibold",
-                children: P.intl.string(k.default.diMhWc),
+                children: k.intl.string(P.default.diMhWc),
             }),
-            (0, n.jsx)(I.E, {
+            (0, n.jsx)(E.E, {
                 color: "text-overlay-light",
                 variant: l ? "text-sm/normal" : "text-sm/medium",
-                children: P.intl.string(k.default.pycxTr),
+                children: k.intl.string(P.default.pycxTr),
             }),
             (0, n.jsx)("div", {
                 className: e$.VN,
                 children: (0, n.jsx)(el.K, {
                     variant: "icon-only",
                     size: "md",
-                    "aria-label": P.intl.string(P.t.cpT0Cq),
+                    "aria-label": k.intl.string(k.t.cpT0Cq),
                     onClick: () => {
                         t(eS.i.USER_DISMISS);
                     },
@@ -655,7 +655,7 @@ function eZ(e) {
                 children: (0, n.jsx)(el.K, {
                     variant: "icon-only",
                     size: "md",
-                    "aria-label": P.intl.string(P.t.cpT0Cq),
+                    "aria-label": k.intl.string(k.t.cpT0Cq),
                     onClick: () => {
                         l(eS.i.USER_DISMISS);
                     },
@@ -663,8 +663,8 @@ function eZ(e) {
                 }),
             }),
             (0, n.jsx)(eH.E, { color: C.A.colors.TEXT_FEEDBACK_WARNING, className: eQ.Kk }),
-            (0, n.jsx)(I.E, { variant: "text-md/semibold", color: "text-feedback-warning", children: t.title }),
-            (0, n.jsx)(I.E, { variant: i ? "text-sm/normal" : "text-sm/medium", children: t.description }),
+            (0, n.jsx)(E.E, { variant: "text-md/semibold", color: "text-feedback-warning", children: t.title }),
+            (0, n.jsx)(E.E, { variant: i ? "text-sm/normal" : "text-sm/medium", children: t.description }),
         ],
     });
 }
@@ -687,8 +687,8 @@ function e1(e) {
                         ? { shouldShow: !1, title: "", description: "", requiredBoostCount: 0 }
                         : {
                               shouldShow: !0,
-                              title: P.intl.string(k.default.n5hQhc),
-                              description: P.intl.formatToPlainString(k.default.iAaAiG, {
+                              title: k.intl.string(P.default.n5hQhc),
+                              description: k.intl.formatToPlainString(P.default.iAaAiG, {
                                   boostCount: s,
                                   perksString: t.join(", "),
                               }),
@@ -703,14 +703,14 @@ function e1(e) {
               className: e0.kL,
               children: [
                   (0, n.jsx)(eH.E, { color: C.A.colors.TEXT_FEEDBACK_WARNING, className: e0.Kk }),
-                  (0, n.jsx)(I.E, { variant: "text-md/semibold", color: "text-feedback-warning", children: a }),
-                  (0, n.jsxs)(I.E, {
+                  (0, n.jsx)(E.E, { variant: "text-md/semibold", color: "text-feedback-warning", children: a }),
+                  (0, n.jsxs)(E.E, {
                       variant: d ? "text-sm/normal" : "text-sm/medium",
                       children: [
                           u,
                           s?.map((e, t) =>
                               (0, n.jsx)(
-                                  I.E,
+                                  E.E,
                                   {
                                       variant: d ? "text-sm/normal" : "text-sm/medium",
                                       color: "text-feedback-warning",
@@ -728,8 +728,8 @@ function e1(e) {
 }
 var e8 = l(826673),
     e6 = l(549996),
-    e5 = l(412260);
-function e9(e) {
+    e9 = l(412260);
+function e5(e) {
     let t = (function () {
             let e = (0, e6.c)(et.C.GUILD_BOOST_TAB_BANNER),
                 t =
@@ -752,7 +752,7 @@ function e9(e) {
                       markAsDismissed: s,
                   };
         })(),
-        l = (0, r.bG)([e5.A], () => e5.A.isFetchingActivePromotions),
+        l = (0, r.bG)([e9.A], () => e9.A.isFetchingActivePromotions),
         n = "admin" !== e || t.isBannerEligible || l ? [] : [$.M.GUILD_POWERUPS_OVERVIEW_SIDEBAR_VIDEO_CARD],
         [s, o] = (0, j.kn)(n),
         a = i.useCallback(() => {
@@ -779,13 +779,13 @@ function e7(e) {
         l = (0, b.c)("Tier3OverrideNotice");
     return (0, n.jsx)("div", {
         className: e2.ac,
-        children: (0, n.jsx)(I.E, { variant: l ? "text-sm/normal" : "text-sm/medium", children: t }),
+        children: (0, n.jsx)(E.E, { variant: l ? "text-sm/normal" : "text-sm/medium", children: t }),
     });
 }
 function e3(e) {
     let { guildId: t } = e,
         l = (0, r.bG)([c.A], () => c.A.getGuild(t)?.features.has(ep.GuildFeatures.PREMIUM_TIER_3_OVERRIDE) === !0)
-            ? { shouldShow: !0, text: P.intl.string(k.default.l9n4QZ) }
+            ? { shouldShow: !0, text: k.intl.string(P.default.l9n4QZ) }
             : { shouldShow: !1, text: "" },
         s = (function (e) {
             let t,
@@ -801,12 +801,12 @@ function e3(e) {
                 n = L(e),
                 s = l.length > 0 || n.length > 0;
             if (!s) return { shouldShow: !1, expiringPowerups: [], expiringPowerupNames: [], warnings: [] };
-            let o = n.length > 0 ? P.intl.string(V.default["B3OfL/"]) : void 0,
+            let o = n.length > 0 ? k.intl.string(V.default["B3OfL/"]) : void 0,
                 a = [...l.map((e) => e.title), ...(null != o ? [o] : [])],
                 u = [];
             return (
-                l.some((e) => e.skuId === z.FB) && u.push(P.intl.string(k.default.Sfr0Jw)),
-                n.length > 0 && u.push(P.intl.string(V.default.wiungr)),
+                l.some((e) => e.skuId === z.FB) && u.push(k.intl.string(P.default.Sfr0Jw)),
+                n.length > 0 && u.push(k.intl.string(V.default.wiungr)),
                 { shouldShow: s, expiringPowerups: l, expiringPowerupNames: a, warnings: u }
             );
         })(t),
@@ -817,7 +817,7 @@ function e3(e) {
             let [n, i] = (0, j.ww)(l, e);
             return { shouldShow: null != t && n === t.dismissibleContent, notificationConfig: t, markAsDismissed: i };
         })(t),
-        a = e9("admin"),
+        a = e5("admin"),
         u = (function (e) {
             let t = [];
             e || t.push($.M.GUILD_POWERUPS_OVERVIEW_SIDEBAR_COACHMARK);
@@ -829,10 +829,10 @@ function e3(e) {
         ? (0, n.jsxs)("div", {
               className: e2.kL,
               children: [
-                  (0, n.jsx)(I.E, {
+                  (0, n.jsx)(E.E, {
                       variant: d ? "experimental/heading-sm/semibold" : "eyebrow",
                       color: d ? "text-strong" : "text-subtle",
-                      children: P.intl.string(k.default["3FRirU"]),
+                      children: k.intl.string(P.default["3FRirU"]),
                   }),
                   l.shouldShow && (0, n.jsx)(e7, { text: l.text }),
                   s.shouldShow &&
@@ -861,18 +861,18 @@ function te(e) {
         badge: s,
         children: [
             (0, n.jsx)(e4.l, { className: M.Sl, powerup: l, isHovering: a }),
-            (0, n.jsx)(y.Ft, {
+            (0, n.jsx)(w.Ft, {
                 title: l.title,
                 textColor: d,
                 footer: (0, n.jsx)(eC, { guildId: t, powerup: l }),
-                children: (0, n.jsx)(I.E, {
+                children: (0, n.jsx)(E.E, {
                     className: M.h_,
                     color: d,
                     variant: c ? "text-sm/normal" : "text-sm/medium",
                     children: l.description,
                 }),
             }),
-            (0, n.jsx)(y.kd, { children: (0, n.jsx)(eh.Ay, { guildId: t, powerup: l, onError: o }) }),
+            (0, n.jsx)(w.kd, { children: (0, n.jsx)(eh.Ay, { guildId: t, powerup: l, onError: o }) }),
         ],
     });
 }
@@ -886,11 +886,11 @@ function ts(e) {
         s = (function (e, t) {
             switch (t) {
                 case U.yG.AVAILABLE:
-                    return P.intl.formatToPlainString(k.default.BdRXZA, { boostCount: e });
+                    return k.intl.formatToPlainString(P.default.BdRXZA, { boostCount: e });
                 case U.yG.SPENT:
-                    return P.intl.formatToPlainString(k.default.xvgIVG, { boostCount: e });
+                    return k.intl.formatToPlainString(P.default.xvgIVG, { boostCount: e });
                 case U.yG.TOTAL:
-                    return P.intl.string(k.default["/F7Z2y"]);
+                    return k.intl.string(P.default["/F7Z2y"]);
             }
         })(t, l);
     return (0, n.jsxs)("div", {
@@ -913,7 +913,7 @@ function ts(e) {
                     }),
                 ],
             }),
-            (0, n.jsx)(I.E, {
+            (0, n.jsx)(E.E, {
                 "aria-hidden": "true",
                 color: "text-muted",
                 variant: i ? "text-sm/normal" : "text-sm/medium",
@@ -935,15 +935,15 @@ function to(e) {
                 (0, n.jsxs)("div", {
                     className: tr.N1,
                     children: [
-                        (0, n.jsx)(I.E, {
+                        (0, n.jsx)(E.E, {
                             variant: a ? "experimental/heading-sm/semibold" : "eyebrow",
                             color: a ? "text-strong" : "text-subtle",
-                            children: P.intl.string(k.default.hjvcLO),
+                            children: k.intl.string(P.default.hjvcLO),
                         }),
-                        (0, n.jsx)(I.E, {
+                        (0, n.jsx)(E.E, {
                             className: tr.C2,
                             variant: a ? "experimental/body-sm/medium" : "text-xs/semibold",
-                            children: P.intl.format(k.default.fXE30d, {
+                            children: k.intl.format(P.default.fXE30d, {
                                 helpDeskArticle: tn.A.getArticleURL(ep.MVz.GUILD_BOOSTING_FAQ),
                             }),
                         }),
@@ -986,9 +986,9 @@ var ta = l(97808),
     tf = l(317525),
     tA = l(287809),
     th = l(562153),
-    tI = l(19575),
-    tE = l(985827);
-let tv = tI.Ay.getEnableHardwareAcceleration() ? ta.Js : tc.A;
+    tE = l(19575),
+    tI = l(985827);
+let tv = tE.Ay.getEnableHardwareAcceleration() ? ta.Js : tc.A;
 function tb(e) {
     let { guildId: t } = e,
         l = (0, r.bG)([c.A], () => c.A.getGuild(t)),
@@ -1007,19 +1007,19 @@ function tb(e) {
     return null == l || null == a || null == s
         ? null
         : (0, n.jsxs)("div", {
-              className: tE.ft,
+              className: tI.ft,
               children: [
                   (0, n.jsxs)("div", {
-                      className: tE.FS,
+                      className: tI.FS,
                       children: [
-                          (0, n.jsx)(I.E, {
+                          (0, n.jsx)(E.E, {
                               variant: "text-md/semibold",
                               color: A ? "text-strong" : void 0,
-                              children: P.intl.string(u ? k.default.KSWK1U : k.default.XXXX5l),
+                              children: k.intl.string(u ? P.default.KSWK1U : P.default.XXXX5l),
                           }),
-                          (0, n.jsx)(I.E, {
+                          (0, n.jsx)(E.E, {
                               variant: A ? "text-sm/normal" : "text-sm/medium",
-                              children: P.intl.format(u ? k.default["7fWTg4"] : k.default["7PXeeQ"], {
+                              children: k.intl.format(u ? P.default["7fWTg4"] : P.default["7PXeeQ"], {
                                   onClick: () => {
                                       (0, tm.K4)({
                                           guildId: t,
@@ -1051,16 +1051,16 @@ function tb(e) {
                               colorString: i.colorString,
                               colorStrings: i.colorStrings,
                           }),
-                          className: g()(tE.Qs, tE.cX),
-                          message: P.intl.string(P.t["6OSasb"]),
+                          className: g()(tI.Qs, tI.cX),
+                          message: k.intl.string(k.t["6OSasb"]),
                           decorations: (0, n.jsx)(f._, {
                               color: C.A.unsafe_rawColors.GUILD_BOOSTING_PINK,
-                              className: tE.$J,
+                              className: tI.$J,
                           }),
                       }),
                   (0, n.jsx)(tl.A, {
                       guild: l,
-                      className: tE.Qs,
+                      className: tI.Qs,
                       analyticsLocation: {
                           page: ep.liQ.GUILD_POWERUPS_OVERVIEW,
                           section: ep.JJy.GUILD_POWERUPS_OVERVIEW_SIDEBAR,
@@ -1076,8 +1076,8 @@ function tb(e) {
 var tj = l(820739),
     t_ = l(860071),
     tS = l(935208),
-    tw = l(492349),
-    ty = l(606049),
+    ty = l(492349),
+    tw = l(606049),
     tC = l(58703),
     tN = l(967144),
     tT = l(262001),
@@ -1101,7 +1101,7 @@ function tG(e) {
                         let t = tx.Ay.getMember(e.guildId, e.userId);
                         return {
                             username:
-                                tx.Ay.getNick(e.guildId, e.userId) ?? e.user?.username ?? P.intl.string(P.t["30mdIx"]),
+                                tx.Ay.getNick(e.guildId, e.userId) ?? e.user?.username ?? k.intl.string(k.t["30mdIx"]),
                             roleColor: t?.colorString ?? null,
                             roleColorStrings: t?.colorStrings ?? null,
                         };
@@ -1118,9 +1118,9 @@ function tG(e) {
                 case "gave":
                     return { Icon: f._, color: C.A.colors.ICON_MUTED };
                 case "expiring":
-                    return { Icon: tw.x, color: C.A.colors.ICON_FEEDBACK_WARNING };
+                    return { Icon: ty.x, color: C.A.colors.ICON_FEEDBACK_WARNING };
                 case "expired":
-                    return { Icon: tw.x, color: C.A.colors.ICON_FEEDBACK_CRITICAL };
+                    return { Icon: ty.x, color: C.A.colors.ICON_FEEDBACK_CRITICAL };
             }
         })(i);
     return (0, n.jsxs)("div", {
@@ -1130,7 +1130,7 @@ function tG(e) {
             (0, n.jsxs)("span", {
                 className: tT.x$,
                 children: [
-                    (0, n.jsx)(I.E, {
+                    (0, n.jsx)(E.E, {
                         tag: "span",
                         variant: "text-md/medium",
                         lineClamp: 1,
@@ -1148,7 +1148,7 @@ function tG(e) {
                             }),
                         }),
                     }),
-                    (0, n.jsx)(I.E, {
+                    (0, n.jsx)(E.E, {
                         tag: "span",
                         variant: "text-md/normal",
                         color: c ? void 0 : "text-muted",
@@ -1156,23 +1156,23 @@ function tG(e) {
                         children: (function (e) {
                             switch (e.phase) {
                                 case "gave":
-                                    return P.intl.string(k.default.plwH8d);
+                                    return k.intl.string(P.default.plwH8d);
                                 case "expiring":
-                                    return P.intl.formatToPlainString(k.default.vct4l8, { date: e.endsAt.valueOf() });
+                                    return k.intl.formatToPlainString(P.default.vct4l8, { date: e.endsAt.valueOf() });
                                 case "expired":
-                                    return P.intl.string(k.default.hSXjlI);
+                                    return k.intl.string(P.default.hSXjlI);
                             }
                         })(e),
                     }),
                 ],
             }),
-            (0, n.jsx)(ty.A, {
+            (0, n.jsx)(tw.A, {
                 timestamp: m,
                 timestampFormat:
                     0 === (t = (0, tC.m_)(m, new Date()))
-                        ? `[${P.intl.string(P.t.mbs4NX)}]`
+                        ? `[${k.intl.string(k.t.mbs4NX)}]`
                         : -1 === t
-                          ? `[${P.intl.string(P.t.ZdDLO0)}]`
+                          ? `[${k.intl.string(k.t.ZdDLO0)}]`
                           : "L",
                 className: g()(tR[c ? "text-xs/medium" : "text-xs/semibold"], tT.vE),
             }),
@@ -1180,7 +1180,7 @@ function tG(e) {
     });
 }
 var tL = l(834205);
-function tP(e) {
+function tk(e) {
     let { guildId: t } = e,
         l = (function (e) {
             let t = (0, r.yK)([eq.A], () => eq.A.getAppliedGuildBoostsForGuild(e) ?? [], [e]),
@@ -1249,7 +1249,7 @@ function tP(e) {
                       className: tL.w,
                       variant: s ? "experimental/heading-sm/semibold" : "eyebrow",
                       color: s ? "text-strong" : "text-subtle",
-                      children: P.intl.string(P.t.yM9Krm),
+                      children: k.intl.string(k.t.yM9Krm),
                   }),
                   (0, n.jsx)(A.Ip, {
                       className: tL.k,
@@ -1259,12 +1259,12 @@ function tP(e) {
               ],
           });
 }
-var tk = l(726724);
+var tP = l(726724);
 function tD(e) {
     let { guildId: t } = e,
-        l = e9("member");
+        l = e5("member");
     return (0, n.jsxs)("div", {
-        className: tk.CG,
+        className: tP.CG,
         children: [(0, n.jsx)(ex, { slot: l, guildId: t }), (0, n.jsx)(tb, { guildId: t })],
     });
 }
@@ -1276,60 +1276,65 @@ function tO(e) {
         u,
         p,
         S,
-        w,
         y,
-        C,
-        { guildId: N, powerupListingId: T } = e;
-    ((t = (0, _.C$)(N, "useLoadGuildPowerups")),
+        w,
+        { guildId: C, powerupListingId: N } = e;
+    ((t = (0, _.C$)(C, "useLoadGuildPowerups")),
         i.useEffect(() => {
-            t && (0, Q.z9)(N);
-        }, [N, t]),
+            t && (0, Q.z9)(C);
+        }, [C, t]),
         i.useEffect(() => {
-            ((0, Z.AK)(N), (0, Z.Xd)(N));
-        }, [N]));
-    let R = (0, _.C$)(N, "GuildPowerupsOverview"),
-        G = (0, b.c)("GuildPowerupsOverview");
-    (0, H.Pq)(N);
-    let L = (0, r.bG)([K.A], () => K.A.getStateForGuild(N)),
-        V = (0, m.A)(N),
-        B = i.useRef(!1),
-        { shouldShow: M, modalConfig: et } =
-            ((s = (0, r.bG)([c.A], () => c.A.getGuild(N))),
-            (o = (0, m.A)(N) ?? !1),
-            (a = (0, r.bG)([K.A], () => K.A.getStateForGuild(N))),
-            (u = a?.allPowerups?.[z.zY]),
-            (p = u?.storeRemovalDate),
-            (S = (0, X.p)(N, "GuildPowerupsOverview")),
-            (w = o && S && null != s),
-            (y = i.useMemo(() => {
-                if (!w || null == u || null == p) return null;
-                let e = (0, J.A)(p);
-                return {
-                    dismissibleContent: $.M.FILE_UPLOAD_POWERUP_ROLLBACK_MODAL,
-                    header: `${u.title} ${P.intl.formatToPlainString(k.default["6e2ry1"], { dateString: e })}`,
-                    bodies: [
-                        P.intl.formatToPlainString(k.default.jd8fki, {
-                            startDate: e,
-                            endDate: e,
-                            perkName: u.title,
-                            boostCount: u.cost,
-                        }),
-                    ],
-                    hasCancelButton: !1,
-                };
-            }, [w, u, p])),
-            { shouldShow: w, modalConfig: y }),
-        el = (0, E.A)(),
-        en = null == T && !el && null != et,
-        ei = [];
-    M && en && ei.push(et.dismissibleContent);
-    let [es, er] = (0, j.kn)(ei),
-        eo =
-            ((C = (0, r.bG)([K.A], () => K.A.getStateForGuild(N))),
+            ((0, Z.AK)(C), (0, Z.Xd)(C));
+        }, [C]));
+    let T = (0, _.C$)(C, "GuildPowerupsOverview"),
+        R = (0, b.c)("GuildPowerupsOverview");
+    (0, H.Pq)(C);
+    let G = (0, r.bG)([K.A], () => K.A.getStateForGuild(C)),
+        L = (0, m.A)(C),
+        V = i.useRef(!1),
+        { shouldShow: B, modalConfig: M } =
+            ((s = (0, r.bG)([c.A], () => c.A.getGuild(C))),
+            (o = (0, m.A)(C) ?? !1),
+            (a = (0, r.bG)([K.A], () => K.A.getStateForGuild(C))),
+            (u = a?.allPowerups?.[z.d0]),
+            (p = (0, J.E)(C, "GuildPowerupsOverview")),
+            (S = o && p && null != s),
+            (y = i.useMemo(
+                () =>
+                    S
+                        ? (function (e) {
+                              let t = e?.storeRemovalDate;
+                              if (null == e || null == t) return null;
+                              let l = (0, X.A)(t);
+                              return {
+                                  dismissibleContent: $.M.GUILD_THEME_POWERUP_ROLLBACK_MODAL,
+                                  header: `${e.title} ${k.intl.formatToPlainString(P.default["6e2ry1"], { dateString: l })}`,
+                                  bodies: [
+                                      k.intl.formatToPlainString(P.default.jd8fki, {
+                                          startDate: l,
+                                          endDate: l,
+                                          perkName: e.title,
+                                          boostCount: e.cost,
+                                      }),
+                                  ],
+                                  hasCancelButton: !1,
+                              };
+                          })(u)
+                        : null,
+                [S, u],
+            )),
+            { shouldShow: S, modalConfig: y }),
+        et = (0, I.A)(),
+        el = null == N && !et && null != M,
+        en = [];
+    B && el && en.push(M.dismissibleContent);
+    let [ei, es] = (0, j.kn)(en),
+        er =
+            ((w = (0, r.bG)([K.A], () => K.A.getStateForGuild(C))),
             i.useMemo(
                 () =>
                     ee.reduce((e, t) => {
-                        let l = C?.powerupCatalog[t];
+                        let l = w?.powerupCatalog[t];
                         if (null == l) return e;
                         let n = (function (e, t, l) {
                             let n = [],
@@ -1382,92 +1387,92 @@ function tO(e) {
                                     })(n),
                                 )
                             );
-                        })(t, l, R);
+                        })(t, l, T);
                         return (e.push({ type: t, listings: n }), e);
                     }, []),
-                [C?.powerupCatalog, R],
+                [w?.powerupCatalog, T],
             )),
-        ea = eM(
-            eo
+        eo = eM(
+            er
                 .flatMap((e) => e.listings)
                 .filter((e) => "multiPerk" === e.type)
                 .map((e) => e.group),
-            N,
+            C,
         );
     return (i.useEffect(() => {
-        if (null != T && !B.current)
-            for (let e of eo)
+        if (null != N && !V.current)
+            for (let e of er)
                 for (let t of e.listings) {
-                    if (("singleLevel" === t.type || "singlePerk" === t.type) && t.powerup.skuId === T) {
-                        ((0, eB.A)(N, t.powerup), (B.current = !0));
+                    if (("singleLevel" === t.type || "singlePerk" === t.type) && t.powerup.skuId === N) {
+                        ((0, eB.A)(C, t.powerup), (V.current = !0));
                         return;
                     }
-                    if ("multiPerk" === t.type && (t.group === T || t.powerups.some((e) => e.skuId === T))) {
-                        B.current = !0;
-                        let e = ea[t.group];
+                    if ("multiPerk" === t.type && (t.group === N || t.powerups.some((e) => e.skuId === N))) {
+                        V.current = !0;
+                        let e = eo[t.group];
                         if (null == e) return;
                         e.openModal(t.powerups, {
                             onModalClose: () => {
                                 let e = new URL(window.location.href);
                                 e.searchParams.delete(U.G0);
                                 let t = e.pathname + e.search + e.hash;
-                                ((0, d.bG)(t), (B.current = !1));
+                                ((0, d.bG)(t), (V.current = !1));
                             },
                         });
                         return;
                     }
-                    if ("gameServer" === t.type && T === O.W5) {
-                        ((0, D.A)({ guildId: N, analyticsLocation: v.A.GUILD_POWERUPS_OVERVIEW }), (B.current = !0));
+                    if ("gameServer" === t.type && N === O.W5) {
+                        ((0, D.A)({ guildId: C, analyticsLocation: v.A.GUILD_POWERUPS_OVERVIEW }), (V.current = !0));
                         return;
                     }
                 }
-    }, [N, T, eo, ea]),
+    }, [C, N, er, eo]),
     i.useEffect(() => {
-        if (null != es && null != et) {
+        if (null != ei && null != M) {
             let e = {
                 onCloseCallback: () => {
-                    er(eS.i.USER_DISMISS);
+                    es(eS.i.USER_DISMISS);
                 },
-                modalKey: `dismissible_content_${es}`,
+                modalKey: `dismissible_content_${ei}`,
             };
             (0, x.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([l.e("239592"), l.e("586618")]).then(l.bind(l, 442241));
-                return (t) => (0, n.jsx)(e, { modalConfig: et, markAsDismissed: er, ...t });
+                return (t) => (0, n.jsx)(e, { modalConfig: M, markAsDismissed: es, ...t });
             }, e);
         }
-    }, [N, es, er, et]),
-    L?.powerupCatalog == null)
+    }, [C, ei, es, M]),
+    G?.powerupCatalog == null)
         ? null
         : (0, n.jsxs)("div", {
-              className: tk.kL,
+              className: tP.kL,
               children: [
                   (0, n.jsxs)(F.A, {
-                      className: tk.KE,
+                      className: tP.KE,
                       hideSearch: !0,
                       toolbar: (0, n.jsx)("div", {}),
                       children: [
                           (0, n.jsx)(F.A.Icon, { icon: f._, "aria-label": "" }),
-                          (0, n.jsx)(F.A.Title, { children: P.intl.string(k.default.yv3DJJ) }),
+                          (0, n.jsx)(F.A.Title, { children: k.intl.string(P.default.yv3DJJ) }),
                       ],
                   }),
                   (0, n.jsxs)("div", {
-                      className: tk.hQ,
+                      className: tP.hQ,
                       children: [
                           (0, n.jsx)(A.Ip, {
-                              className: tk.DO,
-                              children: eo.map((e) => {
+                              className: tP.DO,
+                              children: er.map((e) => {
                                   let { type: t, listings: l } = e,
                                       { title: i, description: s } = (function (e) {
                                           switch (e) {
                                               case U.o9.LEVEL:
                                                   return {
-                                                      title: P.intl.string(k.default["TXY/b0"]),
-                                                      description: P.intl.string(k.default.aJv4PB),
+                                                      title: k.intl.string(P.default["TXY/b0"]),
+                                                      description: k.intl.string(P.default.aJv4PB),
                                                   };
                                               case U.o9.PERK:
                                                   return {
-                                                      title: P.intl.string(k.default.TV3Vm8),
-                                                      description: P.intl.string(k.default.STx9hp),
+                                                      title: k.intl.string(P.default.TV3Vm8),
+                                                      description: k.intl.string(P.default.STx9hp),
                                                   };
                                           }
                                       })(t),
@@ -1475,34 +1480,34 @@ function tO(e) {
                                   return (0, n.jsxs)(
                                       "div",
                                       {
-                                          className: tk.lt,
+                                          className: tP.lt,
                                           children: [
                                               (0, n.jsxs)("div", {
-                                                  className: tk.kn,
+                                                  className: tP.kn,
                                                   children: [
                                                       (0, n.jsx)(h.D, {
                                                           color: "text-strong",
                                                           variant: "heading-lg/semibold",
                                                           children: i,
                                                       }),
-                                                      (0, n.jsx)(I.E, {
-                                                          color: G ? void 0 : "text-muted",
-                                                          variant: G ? "text-sm/normal" : "text-sm/medium",
+                                                      (0, n.jsx)(E.E, {
+                                                          color: R ? void 0 : "text-muted",
+                                                          variant: R ? "text-sm/normal" : "text-sm/medium",
                                                           children: s,
                                                       }),
                                                   ],
                                               }),
                                               (0, n.jsx)(r, {
                                                   orientation: "horizontal",
-                                                  className: g()(tk.qJ, tk.kn, { [tk.dU]: t === U.o9.LEVEL }),
+                                                  className: g()(tP.qJ, tP.kn, { [tP.dU]: t === U.o9.LEVEL }),
                                                   fade: !0,
                                                   children: l.map((e, t) => {
                                                       switch (e.type) {
                                                           case "singleLevel":
                                                               return (0, n.jsx)(
-                                                                  ek,
+                                                                  eP,
                                                                   {
-                                                                      guildId: N,
+                                                                      guildId: C,
                                                                       index: t,
                                                                       powerup: e.powerup,
                                                                       nextPowerup: l[t + 1]?.powerup,
@@ -1512,19 +1517,19 @@ function tO(e) {
                                                           case "singlePerk":
                                                               return (0, n.jsx)(
                                                                   te,
-                                                                  { guildId: N, powerup: e.powerup, badge: e.badge },
+                                                                  { guildId: C, powerup: e.powerup, badge: e.badge },
                                                                   `powerup-${e.powerup.skuId}`,
                                                               );
                                                           case "multiPerk":
                                                               return (0, n.jsx)(
                                                                   eF,
-                                                                  { guildId: N, group: e.group, powerups: e.powerups },
+                                                                  { guildId: C, group: e.group, powerups: e.powerups },
                                                                   `powerup-group-${e.group}`,
                                                               );
                                                           case "gameServer":
                                                               return (0, n.jsx)(
                                                                   W,
-                                                                  { guildId: N },
+                                                                  { guildId: C },
                                                                   "powerup-game-server",
                                                               );
                                                       }
@@ -1537,14 +1542,14 @@ function tO(e) {
                               }),
                           }),
                           (0, n.jsxs)("div", {
-                              className: tk.so,
+                              className: tP.so,
                               children: [
-                                  V
+                                  L
                                       ? (0, n.jsxs)(n.Fragment, {
-                                            children: [(0, n.jsx)(to, { guildId: N }), (0, n.jsx)(e3, { guildId: N })],
+                                            children: [(0, n.jsx)(to, { guildId: C }), (0, n.jsx)(e3, { guildId: C })],
                                         })
-                                      : (0, n.jsx)(tD, { guildId: N }),
-                                  (0, n.jsx)(tP, { guildId: N }),
+                                      : (0, n.jsx)(tD, { guildId: C }),
+                                  (0, n.jsx)(tk, { guildId: C }),
                               ],
                           }),
                       ],

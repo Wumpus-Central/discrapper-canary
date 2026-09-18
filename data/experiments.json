@@ -627,7 +627,8 @@
     "defaultConfig": {
       "enabled": false,
       "inExperiment": false,
-      "gatesApex": false
+      "gatesApex": false,
+      "rollbackEnabled": false
     },
     "treatments": [
       {
@@ -636,7 +637,8 @@
         "config": {
           "enabled": false,
           "inExperiment": true,
-          "gatesApex": false
+          "gatesApex": false,
+          "rollbackEnabled": false
         }
       },
       {
@@ -645,7 +647,18 @@
         "config": {
           "enabled": true,
           "inExperiment": true,
-          "gatesApex": false
+          "gatesApex": false,
+          "rollbackEnabled": false
+        }
+      },
+      {
+        "id": 2,
+        "label": "Rollback UI for Server Theme",
+        "config": {
+          "enabled": true,
+          "inExperiment": true,
+          "gatesApex": false,
+          "rollbackEnabled": true
         }
       }
     ]

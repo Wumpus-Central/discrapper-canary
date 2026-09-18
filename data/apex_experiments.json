@@ -3615,7 +3615,8 @@
     "defaultConfig": {
       "enabled": false,
       "inExperiment": false,
-      "gatesApex": false
+      "gatesApex": false,
+      "rollbackEnabled": false
     },
     "variations": {
       "0": {
@@ -3625,17 +3626,26 @@
       "1": {
         "enabled": true,
         "inExperiment": true,
-        "gatesApex": false
+        "gatesApex": false,
+        "rollbackEnabled": false
       },
       "2": {
         "enabled": false,
         "inExperiment": true,
-        "gatesApex": true
+        "gatesApex": true,
+        "rollbackEnabled": false
       },
       "3": {
         "enabled": true,
         "inExperiment": true,
-        "gatesApex": true
+        "gatesApex": true,
+        "rollbackEnabled": false
+      },
+      "4": {
+        "enabled": true,
+        "inExperiment": true,
+        "gatesApex": true,
+        "rollbackEnabled": true
       }
     }
   },
