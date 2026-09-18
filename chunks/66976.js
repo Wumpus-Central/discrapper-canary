@@ -11,8 +11,8 @@ var i,
     A = n(43105),
     E = n(900797),
     h = n(847374),
-    g = n(922016),
-    m = n(192308),
+    m = n(922016),
+    g = n(192308),
     I = n(228366),
     C = n(442433),
     _ = n(793574),
@@ -222,8 +222,8 @@ var ee = n(47899),
     eA = n(549996),
     eE = n(49999),
     eh = n(15073),
-    eg = n(174459),
-    em = n(488926),
+    em = n(174459),
+    eg = n(488926),
     eI = n(45780),
     eC = n(567305),
     e_ = n(555325),
@@ -314,8 +314,8 @@ function te(e) {
             })(),
                 o(eE.i.TAKE_ACTION));
         }, [s.button, t, d, o]),
-        g = (0, e5.C)(s.helpArticle, ""),
-        m = [s.body, A].filter((e) => "" !== e).join(" "),
+        m = (0, e5.C)(s.helpArticle, ""),
+        g = [s.body, A].filter((e) => "" !== e).join(" "),
         { icon: I } = (0, e7.x)({ buttonAction: s.button?.buttonAction }),
         C = s.button?.copy ?? "";
     return (0, l.jsxs)(l.Fragment, {
@@ -329,11 +329,11 @@ function te(e) {
             (0, l.jsx)(e8.H, {
                 targetElementRef: a,
                 title: s.header,
-                body: m,
+                body: g,
                 assetUrl: c ?? "",
                 disableMediaViewer: !0,
                 action: "" !== C ? { text: C, variant: "primary", icon: I, iconPosition: "start", onClick: h } : void 0,
-                textLink: null != g ? { text: g.linkText, link: g.url } : void 0,
+                textLink: null != m ? { text: m.linkText, link: m.url } : void 0,
                 onRequestClose: E,
                 position: "bottom",
                 caretConfig: { align: "center" },
@@ -442,10 +442,10 @@ function th(e) {
         caretConfig: { align: "center" },
     });
 }
-function tg(e) {
+function tm(e) {
     let { renderPopout: t, renderGuildHeaderDropdownButton: n } = e,
         i = r.useRef(null);
-    return (0, l.jsx)(g.Y, {
+    return (0, l.jsx)(m.Y, {
         targetElementRef: i,
         renderPopout: () =>
             (0, l.jsx)("div", {
@@ -455,12 +455,12 @@ function tg(e) {
             }),
         position: "bottom",
         align: "center",
-        animation: g.Y.Animation.TRANSLATE,
+        animation: m.Y.Animation.TRANSLATE,
         shouldShow: !0,
         children: () => (0, l.jsx)("div", { ref: i, children: n() }),
     });
 }
-let tm = r.memo(function (e) {
+let tg = r.memo(function (e) {
     let { contentDescriptor: t, guild: n, renderGuildHeaderDropdownButton: i } = e,
         { contentType: s, data: r, markAsDismissed: a } = t,
         o = { position: "bottom", align: "center", caretConfig: { align: "center" } };
@@ -468,37 +468,37 @@ let tm = r.memo(function (e) {
         children: (function () {
             switch (s) {
                 case u.M.GUILD_POWERUP_PERKS_COACHMARK:
-                    return (0, l.jsx)(tg, {
+                    return (0, l.jsx)(tm, {
                         renderPopout: (e) =>
                             (0, l.jsx)(tE.UB, { guildId: n.id, markAsDismissed: a, channelRowRef: e, ...o }),
                         renderGuildHeaderDropdownButton: i,
                     });
                 case u.M.GAME_SERVER_NEW_GAMES_COACHMARK:
-                    return (0, l.jsx)(tg, {
+                    return (0, l.jsx)(tm, {
                         renderPopout: (e) =>
                             (0, l.jsx)(tE.YX, { guildId: n.id, markAsDismissed: a, channelRowRef: e, ...o }),
                         renderGuildHeaderDropdownButton: i,
                     });
                 case u.M.GAME_SERVER_PRICING_CHANGE_COACHMARK:
-                    return (0, l.jsx)(tg, {
+                    return (0, l.jsx)(tm, {
                         renderPopout: (e) =>
                             (0, l.jsx)(tE.Ns, { guildId: n.id, markAsDismissed: a, channelRowRef: e, ...o }),
                         renderGuildHeaderDropdownButton: i,
                     });
                 case u.M.GAME_SERVER_HOSTING_NEW_PERK_AVAILABLE_COACHMARK:
-                    return (0, l.jsx)(tg, {
+                    return (0, l.jsx)(tm, {
                         renderPopout: (e) => (0, l.jsx)(tE.K8, { guildId: n.id, markAsDismissed: a, channelRowRef: e }),
                         renderGuildHeaderDropdownButton: i,
                     });
                 case u.M.GUILD_THEME_MEMBER_COACHMARK:
-                    return (0, l.jsx)(tg, {
+                    return (0, l.jsx)(tm, {
                         renderPopout: (e) => (0, l.jsx)(tE.Gz, { guildId: n.id, markAsDismissed: a, channelRowRef: e }),
                         renderGuildHeaderDropdownButton: i,
                     });
                 case u.M.BOOST_TO_UNLOCK_COACHMARK: {
                     let e = r?.featuredPowerup;
                     if (null == e) return i();
-                    return (0, l.jsx)(tg, {
+                    return (0, l.jsx)(tm, {
                         renderPopout: (t) =>
                             (0, l.jsx)(tE.Gw, {
                                 type: ey.o.BOOST_TO_UNLOCK,
@@ -514,7 +514,7 @@ let tm = r.memo(function (e) {
                 case u.M.EXPIRING_POWERUP_COACHMARK: {
                     let e = r?.featuredExpiringPowerup;
                     if (null == e) return i();
-                    return (0, l.jsx)(tg, {
+                    return (0, l.jsx)(tm, {
                         renderPopout: (t) =>
                             (0, l.jsx)(tE.Mr, {
                                 type: ey.o.EXPIRING_PERK,
@@ -530,7 +530,7 @@ let tm = r.memo(function (e) {
                 case u.M.GUILD_HEADER_COACHMARK: {
                     let e = r?.marketingComponent;
                     if (null == e) return i();
-                    return (0, l.jsx)(tg, {
+                    return (0, l.jsx)(tm, {
                         renderPopout: (t) =>
                             (0, l.jsx)(te, {
                                 guildId: n.id,
@@ -544,22 +544,22 @@ let tm = r.memo(function (e) {
                     });
                 }
                 case u.M.GUILD_HEADER_ROLE_SUBSCRIPTION_UPSELL:
-                    return (0, l.jsx)(tg, {
+                    return (0, l.jsx)(tm, {
                         renderPopout: (e) => (0, l.jsx)(ta, { guildId: n.id, markAsDismissed: a, targetElementRef: e }),
                         renderGuildHeaderDropdownButton: i,
                     });
                 case u.M.GUILD_DISCOVERY_LANDING_PAGE_SETTINGS_UPSELL:
-                    return (0, l.jsx)(tg, {
+                    return (0, l.jsx)(tm, {
                         renderPopout: (e) => (0, l.jsx)(th, { guild: n, markAsDismissed: a, targetElementRef: e }),
                         renderGuildHeaderDropdownButton: i,
                     });
                 case u.M.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP:
-                    return (0, l.jsx)(tg, {
+                    return (0, l.jsx)(tm, {
                         renderPopout: (0, l.jsx)(tA, { markAsDismissed: a }),
                         renderGuildHeaderDropdownButton: i,
                     });
                 case u.M.SERVER_SUBSCRIPTION_TIER_TEMPLATE_UPSELL:
-                    return (0, l.jsx)(tg, {
+                    return (0, l.jsx)(tm, {
                         renderPopout: (e) => (0, l.jsx)(to, { guildId: n.id, markAsDismissed: a, targetElementRef: e }),
                         renderGuildHeaderDropdownButton: i,
                     });
@@ -592,22 +592,22 @@ let tf = tC().debounce(tT.Ay.trackWithMetadata, 500),
             onDismissed: A,
             onClick: E,
             cta: h,
-            ctaColor: g,
+            ctaColor: m,
         } = e;
         r.useEffect(() => {
             tf(H.HAw.CHANNEL_NOTICE_VIEWED, { notice_type: a, guild_id: t.id });
         }, [t.id, a]);
-        let m = null;
+        let g = null;
         "function" == typeof h
-            ? (m = h())
+            ? (g = h())
             : null != h &&
-              (m = (0, l.jsx)(t_.$n, {
+              (g = (0, l.jsx)(t_.$n, {
                   "data-migration-pending": !0,
                   className: tM.HM,
                   size: t_.$n.Sizes.SMALL,
                   onClick: function () {
                       (null != a &&
-                          eg.default.track(H.HAw.CHANNEL_NOTICE_CTA_CLICKED, {
+                          em.default.track(H.HAw.CHANNEL_NOTICE_CTA_CLICKED, {
                               source: u,
                               guild_id: t.id,
                               notice_type: a,
@@ -615,7 +615,7 @@ let tf = tC().debounce(tT.Ay.trackWithMetadata, 500),
                           E?.());
                   },
                   fullWidth: !0,
-                  color: g,
+                  color: m,
                   children: h,
               }));
         let I = null != o ? `${o}px` : "16px";
@@ -645,7 +645,7 @@ let tf = tC().debounce(tT.Ay.trackWithMetadata, 500),
                             ? (0, l.jsx)(tp.D, { variant: "heading-md/semibold", className: tM.DD, children: n })
                             : null,
                         (0, l.jsx)(td.E, { variant: "text-sm/normal", children: i }),
-                        m,
+                        g,
                     ],
                 }),
             ],
@@ -844,8 +844,8 @@ var t3 = n(503698),
     nA = n(698441),
     nE = n(935159),
     nh = n(11550),
-    ng = n(435328),
-    nm = n(563312),
+    nm = n(435328),
+    ng = n(563312),
     nI = n(9448),
     nC = n(974930),
     n_ = n(666394),
@@ -946,7 +946,7 @@ function nT(e) {
         (0, l.jsx)(tu.$, {
             onClick: function () {
                 ((0, n_.A)(t.id, null, t.guild_id, () => setTimeout(() => (0, nE.Lx)(t.id), 1e3)),
-                    eg.default.track(H.HAw.CHANNEL_NOTICE_CTA_CLICKED, { guild_id: t.guild_id, notice_type: n }));
+                    em.default.track(H.HAw.CHANNEL_NOTICE_CTA_CLICKED, { guild_id: t.guild_id, notice_type: n }));
             },
             text: tl.intl.string(tl.t.DlcqlU),
             icon: s ? t7.CheckmarkLargeIcon : t2.BellIcon,
@@ -959,20 +959,20 @@ function nT(e) {
 function nM(e) {
     let { guildEvent: t, noticeType: n } = e,
         i = (0, nI.oF)(t),
-        s = null != i ? (0, ng.y)(i, !0) : null,
+        s = null != i ? (0, nm.y)(i, !0) : null,
         a = (0, nI.WN)(t),
         o = (0, nn.Ay)(a),
         d = (0, ni.gU)(a),
-        { startTime: u, endTime: c } = (0, nm.Ay)(t),
+        { startTime: u, endTime: c } = (0, ng.Ay)(t),
         { startDateTimeString: A, upcomingEvent: E, diffMinutes: h } = (0, nC.CC)(u.toISOString(), c?.toISOString()),
-        g = E
+        m = E
             ? h > 0
                 ? tl.intl.formatToPlainString(tl.t.PQlCWk, { minutes: h })
                 : tl.intl.string(tl.t.WINqKV)
             : tl.intl.formatToPlainString(tl.t.DC6h3G, { date: A });
     return (
         r.useEffect(() => {
-            eg.default.track(H.HAw.CHANNEL_NOTICE_VIEWED, { notice_type: n, guild_id: t.guild_id });
+            em.default.track(H.HAw.CHANNEL_NOTICE_VIEWED, { notice_type: n, guild_id: t.guild_id });
         }, [t, n]),
         (0, l.jsxs)("div", {
             className: nN.kX,
@@ -992,7 +992,7 @@ function nM(e) {
                         }),
                         (0, l.jsx)(tN.D, {
                             onClick: () => {
-                                (eg.default.track(H.HAw.CHANNEL_NOTICE_CLOSED, {
+                                (em.default.track(H.HAw.CHANNEL_NOTICE_CLOSED, {
                                     notice_type: n,
                                     guild_id: t.guild_id,
                                 }),
@@ -1018,7 +1018,7 @@ function nM(e) {
                             color: "text-default",
                             variant: "text-xs/normal",
                             className: nN.Sv,
-                            children: g,
+                            children: m,
                         }),
                     ],
                 }),
@@ -1056,7 +1056,7 @@ function nf(e) {
               onClickCloseIcon: () => (0, nE.iF)({ eventId: t?.id }),
               heading: tl.intl.string(tl.t["1+boPi"]),
               topic: t.name,
-              location: (0, ng.y)(n, !0),
+              location: (0, nm.y)(n, !0),
               locationIcon: (0, l.jsx)(t9.B, {
                   size: "custom",
                   color: "currentColor",
@@ -1204,16 +1204,16 @@ let nG = r.memo(function (e) {
             [c, o],
         ),
         h = null,
-        g = null != c && null != a && !A;
+        m = null != c && null != a && !A;
     null == o || E
-        ? g && (h = (0, l.jsx)(nL, { stageInstance: c, channel: a }))
-        : o.entity_type === D.Ps.STAGE_INSTANCE && g
+        ? m && (h = (0, l.jsx)(nL, { stageInstance: c, channel: a }))
+        : o.entity_type === D.Ps.STAGE_INSTANCE && m
           ? (h = (0, l.jsx)(nL, { stageInstance: c, channel: a }))
           : o.entity_type === D.Ps.EXTERNAL
             ? (h = (0, l.jsx)(nf, { guildEvent: o }))
             : o.entity_type === D.Ps.VOICE && null != a && (h = (0, l.jsx)(np, { guildEvent: o, channel: a }));
-    let m = r.features.has(H.GuildFeatures.COMMUNITY);
-    if (null == h && null != u && !m) {
+    let g = r.features.has(H.GuildFeatures.COMMUNITY);
+    if (null == h && null != u && !g) {
         let { upcomingEvent: e, noticeType: t } = u;
         h = (0, l.jsx)(nM, { guildEvent: e, noticeType: t });
     }
@@ -1237,7 +1237,7 @@ function ny(e) {
         guild: t,
         onDismissed: () => i(eE.i.UNKNOWN),
         onClick: function () {
-            (0, m.openModalLazy)(async () => {
+            (0, g.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
                     n.e("722514"),
                     n.e("197804"),
@@ -1423,7 +1423,7 @@ var nJ = n(148494);
 class n0 extends r.PureComponent {
     handleInvite = () => {
         let { guild: e } = this.props;
-        (0, m.openModalLazy)(async () => {
+        (0, g.openModalLazy)(async () => {
             let { default: t } = await Promise.all([
                 n.e("683621"),
                 n.e("711162"),
@@ -1555,7 +1555,7 @@ function iA(e) {
         c,
         { guild: A } = e,
         [E, h] = r.useState(w.w.get(ir) ?? 0),
-        g =
+        m =
             ((n = t = A.id),
             (i = tB.useExperiment(
                 { guildId: n, location: "useCanShowGameClaimCoachmark" },
@@ -1571,8 +1571,8 @@ function iA(e) {
                 let e = [];
                 return (c && e.push(u.M.GAME_CLAIM_COACHMARK), e.length > 0 ? e : ic);
             }, [c])),
-        [m, I] = (0, en.ww)(g, A.id, eE.m.CHANNEL_NOTICES, !0),
-        C = null != m,
+        [g, I] = (0, en.ww)(m, A.id, eE.m.CHANNEL_NOTICES, !0),
+        C = null != g,
         _ = (0, d.yK)(
             io,
             () =>
@@ -1587,8 +1587,8 @@ function iA(e) {
             [A, E, C],
         ),
         [N, S] = (0, en.kn)(_, eE.m.CHANNEL_NOTICES),
-        p = m ?? N,
-        T = null != m ? I : S,
+        p = g ?? N,
+        T = null != g ? I : S,
         M = r.useCallback(() => {
             var e;
             ((e = Date.now()), w.w.set(ir, e), h(e), T(eE.i.UNKNOWN));
@@ -1636,7 +1636,7 @@ let iE = function (e) {
     return nQ.P.isDisallowPopupsSet() ? null : (0, l.jsx)(iA, { guild: e.guild });
 };
 var ih = n(883476);
-function ig(e) {
+function im(e) {
     let { guild: t, setHasSubheader: n } = e,
         i = r.useRef(null);
     return (
@@ -1647,7 +1647,7 @@ function ig(e) {
         (0, l.jsx)("div", { className: ih.k, ref: i, children: (0, l.jsx)(iE, { guild: t }) })
     );
 }
-var im = n(66933),
+var ig = n(66933),
     iI = n(846930),
     iC = n(168095);
 let i_ = "server-settings",
@@ -2337,7 +2337,7 @@ class iS extends r.PureComponent {
         let { guild: t, guildHeaderContentDescriptor: n } = this.props;
         return null == t || null == n
             ? this.renderGuildHeaderDropdownButton(e)
-            : (0, l.jsx)(tm, {
+            : (0, l.jsx)(tg, {
                   contentDescriptor: n,
                   guild: t,
                   renderGuildHeaderDropdownButton: () => this.renderGuildHeaderDropdownButton(e),
@@ -2415,12 +2415,12 @@ class iS extends r.PureComponent {
             ? null
             : (0, l.jsx)(N.f5, {
                   value: a,
-                  children: (0, l.jsx)(g.Q, {
+                  children: (0, l.jsx)(m.Q, {
                       targetElementRef: this.guildHeaderRef,
                       renderPopout: this.renderMenuPopout,
                       position: "bottom",
                       align: "center",
-                      animation: g.Y.Animation.SCALE,
+                      animation: m.Y.Animation.SCALE,
                       shouldShow: n,
                       onRequestClose: () => {
                           (0, eu.Z)(!1);
@@ -2514,7 +2514,7 @@ class iS extends r.PureComponent {
             children: [
                 null != e && this.renderGuildHeader(this.state.hasGuildSubheader),
                 null != e &&
-                    (0, l.jsx)(ig, { guild: e, setHasSubheader: (e) => this.setState({ hasGuildSubheader: e }) }),
+                    (0, l.jsx)(im, { guild: e, setHasSubheader: (e) => this.setState({ hasGuildSubheader: e }) }),
                 this.renderChannelList(),
             ],
         });
@@ -2529,7 +2529,7 @@ function ip(e) {
         A,
         E,
         h,
-        g,
+        m,
         I,
         C,
         S,
@@ -2560,7 +2560,7 @@ function ip(e) {
             o.x,
         ),
         et = J(b),
-        el = (0, m.useModalsStore)(m.hasAnyModalOpenSelector),
+        el = (0, g.useModalsStore)(g.hasAnyModalOpenSelector),
         eT = (0, d.bG)([eZ.A], () => eZ.A.hasLayers()),
         eM = (function (e) {
             let t = (0, eA.c)(ec.C.GUILD_HEADER_COACHMARK),
@@ -2609,18 +2609,18 @@ function ip(e) {
         e6 = e0.Ay.isNewUser(k),
         e3 = W && !e6;
     ((c = (0, eh.TZ)(b)),
-        (A = V.dR.some((e) => !(0, es.ai)(b?.id) && em.Ib(e, b))),
+        (A = V.dR.some((e) => !(0, es.ai)(b?.id) && eg.Ib(e, b))),
         (E = b?.defaultMessageNotifications === H.orn.ALL_MESSAGES),
         (h = (0, eI.G$)(u.V.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, b?.id ?? H.dJq)),
-        (g = c && (A || E) && !h),
+        (m = c && (A || E) && !h),
         (I = r.useCallback(() => {
             (0, eI._$)(u.V.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, b?.id ?? H.dJq, !0, eE.i.DISMISS);
         }, [b])),
         (C = r.useRef(!1)),
         r.useEffect(() => {
-            g &&
+            m &&
                 !C.current &&
-                ((0, m.openModalLazy)(
+                ((0, g.openModalLazy)(
                     async () => {
                         let { default: e } = await Promise.all([n.e("942068"), n.e("452823"), n.e("442446")]).then(
                             n.bind(n, 653981),
@@ -2635,12 +2635,12 @@ function ip(e) {
                     },
                     { onCloseCallback: I },
                 ),
-                eg.default.track(H.HAw.DISMISSIBLE_CONTENT_SHOWN, {
+                em.default.track(H.HAw.DISMISSIBLE_CONTENT_SHOWN, {
                     type: u.V[u.V.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE],
                     guild_id: b?.id ?? H.dJq,
                 }),
                 (C.current = !0));
-        }, [A, b, I, E, g]));
+        }, [A, b, I, E, m]));
     let e8 =
         ((S = (0, d.bG)([X.A], () => X.A.getGuild(f))),
         (p = (0, eC._Y)(f)),
@@ -2677,10 +2677,10 @@ function ip(e) {
                 return () => clearTimeout(t);
             }, [o, n, e, a, i]));
     })(f, {
-        isNuxOpen: (0, m.useHasModalOpen)(eG.u),
+        isNuxOpen: (0, g.useHasModalOpen)(eG.u),
         openNux: r.useCallback((e) => {
             let { guildId: t, markAsDismissed: i } = e;
-            return (0, m.openModalLazy)(
+            return (0, g.openModalLazy)(
                 async () => {
                     let e = await Promise.resolve().then(n.bind(n, 181880));
                     return (n) =>
@@ -2704,13 +2704,14 @@ function ip(e) {
                 let t = (0, ej.A)(e),
                     n = (0, ew.DD)(e, "useShouldShowGuildThemeMemberCoachmark"),
                     i = (0, ek.OS)("useShouldShowGuildThemeMemberCoachmark"),
-                    s = (0, eV.A)(e),
-                    { available: l, isLoading: r } = (0, eX.A)(e);
-                if (r) return !1;
-                let a = l < eK.fe;
-                return n && i && a && !s && !1 === t;
+                    s = (0, ew.lY)(e, "useShouldShowGuildThemeMemberCoachmark"),
+                    l = (0, eV.A)(e),
+                    { available: r, isLoading: a } = (0, eX.A)(e);
+                if (a) return !1;
+                let o = r < eK.fe;
+                return n && i && !s && o && !l && !1 === t;
             })(f) && !(0, es.ai)(f);
-    im.A.useConfig({ guildId: f, location: "guild_sidebar" });
+    ig.A.useConfig({ guildId: f, location: "guild_sidebar" });
     let te = (0, ea.C$)(f, "GuildSidebar"),
         tt = (0, d.bG)([X.A], () => X.A.getGuild(f)?.features.has(H.GuildFeatures.GAME_SERVERS) ?? !1, [f]),
         tn = te && !tt && !1 === e9,
@@ -2732,8 +2733,8 @@ function ip(e) {
         tl && tc.push(u.M.GAME_SERVER_PRICING_CHANGE_COACHMARK),
         e8 && tc.push(u.M.SERVER_SUBSCRIPTION_TIER_TEMPLATE_UPSELL));
     let [tA, tE] = (0, en.kn)(tc, eE.m.GUILD_HEADER_TOOLTIPS),
-        [th, tg] = (0, eH.vB)(ti && te && !1 === e9 && !(0, es.ai)(f), eE.m.GUILD_HEADER_TOOLTIPS),
-        [tm, tI] = (0, en.D8)(
+        [th, tm] = (0, eH.vB)(ti && te && !1 === e9 && !(0, es.ai)(f), eE.m.GUILD_HEADER_TOOLTIPS),
+        [tg, tI] = (0, en.D8)(
             to ? u.M.BOOST_TO_UNLOCK_COACHMARK : null,
             f,
             { cooldownDurationMs: ey.bW, numTimesToRecur: 5 },
@@ -2762,9 +2763,9 @@ function ip(e) {
                     : null != tA
                       ? { contentType: tA, data: null, markAsDismissed: tE }
                       : th === u.M.GAME_SERVER_NEW_GAMES_COACHMARK
-                        ? { contentType: th, data: null, markAsDismissed: tg }
-                        : tm === u.M.BOOST_TO_UNLOCK_COACHMARK && null != ta
-                          ? { contentType: tm, data: { featuredPowerup: ta }, markAsDismissed: tI }
+                        ? { contentType: th, data: null, markAsDismissed: tm }
+                        : tg === u.M.BOOST_TO_UNLOCK_COACHMARK && null != ta
+                          ? { contentType: tg, data: { featuredPowerup: ta }, markAsDismissed: tI }
                           : tC === u.M.EXPIRING_POWERUP_COACHMARK && null != td
                             ? { contentType: tC, data: { featuredExpiringPowerup: td }, markAsDismissed: t_ }
                             : null,
@@ -2776,12 +2777,12 @@ function ip(e) {
                 eM.markAsDismissed,
                 tA,
                 th,
-                tm,
+                tg,
                 tC,
                 ta,
                 td,
                 tE,
-                tg,
+                tm,
                 tI,
                 t_,
             ],

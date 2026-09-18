@@ -32,7 +32,12 @@ class g extends a.A {
                 !(0, p.G)(c.A, t))
             ) {
                 let t = (0, T.X)(),
-                    n = i.Fr && (0, I.Qs)(e, "GuildPowerupsManager") && (0, T.X)() && (0, f.ht)("GuildPowerupsManager"),
+                    n =
+                        i.Fr &&
+                        (0, I.Qs)(e, "GuildPowerupsManager") &&
+                        !(0, I.Ov)(e, "GuildPowerupsManager") &&
+                        (0, T.X)() &&
+                        (0, f.ht)("GuildPowerupsManager"),
                     r = i.Fr && (0, T.X)();
                 if (!(i.Fr ? n || r : t)) return;
             }
