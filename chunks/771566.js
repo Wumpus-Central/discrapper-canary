@@ -21,8 +21,8 @@ var l,
     A = n(615396),
     P = n(573359),
     v = n(462887),
-    x = n(659746);
-function _(e) {
+    _ = n(659746);
+function x(e) {
     let { color: t = "white", className: n } = e;
     return (0, i.jsx)("svg", {
         className: n,
@@ -77,11 +77,11 @@ let j = function (e) {
             children: (function (e, t) {
                 let n = (0, v.M)(t) ? "white" : "black";
                 switch (e) {
-                    case x.Or.PREMIUM_UPDATED:
+                    case _.Or.PREMIUM_UPDATED:
                         return (0, i.jsx)(N, { color: n, className: b.gd });
-                    case x.Or.PREMIUM_ACTIVATED:
-                        return (0, i.jsx)(_, { color: n, className: b.gd });
-                    case x.Or.PREMIUM_PAYMENT_STARTED:
+                    case _.Or.PREMIUM_ACTIVATED:
+                        return (0, i.jsx)(x, { color: n, className: b.gd });
+                    case _.Or.PREMIUM_PAYMENT_STARTED:
                         return (0, i.jsx)(T, { color: n, className: b.gd });
                     default:
                         return null;
@@ -170,7 +170,7 @@ function H(e) {
             isDowngrade: f,
             hideClose: E,
             postSuccessGuild: v,
-            paymentSourceType: _,
+            paymentSourceType: x,
             startingFractionalPremiumEndsAt: T,
             customCTAType: N,
         } = e,
@@ -185,30 +185,30 @@ function H(e) {
             startingIsInPastDueCheckout: e.startingIsInPastDueCheckout,
         })),
         { theme: Y } = (0, c.wR)(),
-        V = (0, o.bG)([y.A], () => (null != C ? y.A.get(C.id) : null)),
-        K = (0, A.b2)(T),
+        K = (0, o.bG)([y.A], () => (null != C ? y.A.get(C.id) : null)),
+        V = (0, A.b2)(T),
         Z = H === k.uH.META_QUEST_WEB_REDIRECT_CHECKOUT;
     function q(e) {
         return B
             ? U.intl.formatToPlainString(w.default.pDiwHe, { premiumGroupProductName: (0, O.DP)(), totalSeats: O.LM })
             : e.skuId === M.pe.TIER_0
-              ? L.NcF.has(_ ?? L.hes.UNKNOWN)
+              ? L.NcF.has(x ?? L.hes.UNKNOWN)
                   ? U.intl.format(U.t.o6hBiR, {})
                   : U.intl.string(U.t["AGf/ye"])
               : e.skuId === M.pe.TIER_1
-                ? L.NcF.has(_ ?? L.hes.UNKNOWN)
+                ? L.NcF.has(x ?? L.hes.UNKNOWN)
                     ? U.intl.format(U.t.o6hBiR, {})
                     : U.intl.string(U.t.knvOVz)
-                : L.NcF.has(_ ?? L.hes.UNKNOWN)
+                : L.NcF.has(x ?? L.hes.UNKNOWN)
                   ? U.intl.format(U.t.A4THYt, {})
                   : U.intl.string(U.t.aTUr3Z);
     }
     if (
         (r.useEffect(() => {
-            if (null == C || null != V) return;
+            if (null == C || null != K) return;
             let { applicationId: e, id: t } = C;
             (0, m.EX)(e, t).catch(L.FXj);
-        }, [C, V]),
+        }, [C, K]),
         W)
     )
         t = (0, i.jsx)(u.E, {
@@ -224,14 +224,14 @@ function H(e) {
             className: G.Qq,
             children: (0, i.jsxs)("p", { children: [U.intl.string(U.t.bIVRSQ), " ", U.intl.string(U.t["0UJqOy"])] }),
         });
-    else if (null != V)
+    else if (null != K)
         t = (0, i.jsx)(u.E, {
             variant: "text-md/medium",
             color: "interactive-text-default",
             className: G.Qq,
-            children: U.intl.format(U.t["tsQOs+"], { skuName: V.name }),
+            children: U.intl.format(U.t["tsQOs+"], { skuName: K.name }),
         });
-    else if (K && !f) {
+    else if (V && !f) {
         let e = S.A.get(l);
         (s()(null != e, "Missing plan"),
             e.skuId === M.pe.TIER_0
@@ -297,19 +297,19 @@ function H(e) {
             null != p && (p(), H === k.uH.MOBILE_WEB_REDIRECT_CHECKOUT && Q(!0));
         }, [p, H]);
     function J() {
-        return L.NcF.has(_ ?? L.hes.UNKNOWN)
-            ? x.Ay.Types.PREMIUM_PAYMENT_STARTED
+        return L.NcF.has(x ?? L.hes.UNKNOWN)
+            ? _.Ay.Types.PREMIUM_PAYMENT_STARTED
             : null != a
-              ? x.Ay.Types.PREMIUM_UPDATED
-              : x.Ay.Types.PREMIUM_ACTIVATED;
+              ? _.Ay.Types.PREMIUM_UPDATED
+              : _.Ay.Types.PREMIUM_ACTIVATED;
     }
     if (
         ((n = B
             ? U.intl.string(w.default.clIveA)
             : "deeplink_to_desktop_app" === N || H === k.uH.MOBILE_WEB_REDIRECT_CHECKOUT
               ? U.intl.string(U.t.sRApon)
-              : null != V
-                ? U.intl.formatToPlainString(U.t["1qGgm4"], { skuName: V.name })
+              : null != K
+                ? U.intl.formatToPlainString(U.t["1qGgm4"], { skuName: K.name })
                 : f
                   ? U.intl.string(U.t.QJ9EyM)
                   : null != v

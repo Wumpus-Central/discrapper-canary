@@ -21,8 +21,8 @@ var l = n(477900),
     A = n(45938),
     P = n(158045),
     v = n(517950),
-    x = n(683071),
-    _ = n(834730),
+    _ = n(683071),
+    x = n(834730),
     T = n(212739);
 n(216238);
 var N = n(202541),
@@ -42,8 +42,8 @@ var N = n(202541),
     H = n(674658),
     W = n(474012),
     Y = n(607123),
-    V = n(287809),
-    K = n(341535),
+    K = n(287809),
+    V = n(341535),
     Z = n(225529);
 function q(e) {
     let { Icon: t = G.t, iconSize: n, customGraphic: i, gradientColor: r = "nitro-pink", ...a } = e;
@@ -55,13 +55,13 @@ function q(e) {
 }
 function z(e) {
     let { skuIds: t, text: n, gradientColor: r = "nitro-pink" } = e,
-        a = (0, F.bG)([V.default], () => V.default.getCurrentUser()),
+        a = (0, F.bG)([K.default], () => K.default.getCurrentUser()),
         s = t[0] !== v.a.SUMMER_2026_GOGO_FAKE_SKU_ID ? t[0] : null,
         { product: o } = (0, H.q)(s),
         u = i.useMemo(
             () =>
                 null != o && t.length > 1
-                    ? j.intl.format(K.default.XoHiqS, { name: o.name, count: t.length - 1 })
+                    ? j.intl.format(V.default.XoHiqS, { name: o.name, count: t.length - 1 })
                     : o?.name,
             [o, t.length],
         ),
@@ -92,8 +92,8 @@ function z(e) {
               children: (0, l.jsxs)("div", {
                   className: Z.zN,
                   children: [
-                      (0, l.jsx)(_.E, { variant: "text-sm/medium", color: "currentColor", children: n }),
-                      null != u && (0, l.jsx)(_.E, { variant: "text-sm/medium", color: "currentColor", children: u }),
+                      (0, l.jsx)(x.E, { variant: "text-sm/medium", color: "currentColor", children: n }),
+                      null != u && (0, l.jsx)(x.E, { variant: "text-sm/medium", color: "currentColor", children: u }),
                   ],
               }),
           });
@@ -114,12 +114,12 @@ function X(e) {
                       alt: "",
                       src: "https://cdn.discordapp.com/assets/content/b6d1d954e5c9ccfd2356d7af86ca2a4a59717635cc6f558f731edb2e6046b25c.png",
                   }),
-                  title: (0, l.jsx)(_.E, {
+                  title: (0, l.jsx)(x.E, {
                       variant: "text-md/medium",
                       color: "text-strong",
                       children: j.intl.formatToPlainString(j.t.vXqqUc, { orbCount: 5e3 }),
                   }),
-                  body: (0, l.jsx)(_.E, {
+                  body: (0, l.jsx)(x.E, {
                       variant: "text-sm/medium",
                       color: "text-muted",
                       children: j.intl.string(j.t.Ev7DO6),
@@ -178,8 +178,8 @@ function eo(e) {
             checkoutInvoiceError: H,
             referralTrialOfferId: W,
             isGift: Y,
-            activeSubscription: V,
-            shouldDisallowPlanSelection: K,
+            activeSubscription: K,
+            shouldDisallowPlanSelection: V,
             expressCheckoutSubmitting: Z,
             shouldUseStripeExpressCheckout: Q,
             premiumPlanOptions: $,
@@ -247,8 +247,8 @@ function eo(e) {
                         } = (0, C.TP)({ selectedPlanId: t, priceOptions: n }),
                         {
                             universalInvoiceRequestParams: v,
-                            checkoutInvoiceRequestParams: x,
-                            renewalInvoiceRequestParams: _,
+                            checkoutInvoiceRequestParams: _,
+                            renewalInvoiceRequestParams: x,
                         } = (0, C.jq)({
                             items: A,
                             preventFetch: P,
@@ -263,10 +263,10 @@ function eo(e) {
                                           type: "premium_one_time_gift_purchase_invoice",
                                           params: { ...v, skuId: s, subscriptionPlanId: t, quantity: E },
                                       }
-                                    : { type: "subscription_checkout_invoice", params: x },
-                            [v, x, y, t, s, E],
+                                    : { type: "subscription_checkout_invoice", params: _ },
+                            [v, _, y, t, s, E],
                         ),
-                        N = i.useMemo(() => (y ? null : { type: "subscription_renewal_invoice", params: _ }), [_, y]);
+                        N = i.useMemo(() => (y ? null : { type: "subscription_renewal_invoice", params: x }), [x, y]);
                     (i.useEffect(() => {
                         o(T);
                     }, [T, o]),
@@ -310,13 +310,13 @@ function eo(e) {
         eS = ec ?? eu,
         { giftRecipient: ey } = (0, p.Pv)(),
         eI = Y && (0, A.Ik)(ey),
-        eg = (0, h.t4)((e) => e.getIsInOneStepSubscriptionCheckout({ isTrial: em })) && !ed && !K,
+        eg = (0, h.t4)((e) => e.getIsInOneStepSubscriptionCheckout({ isTrial: em })) && !ed && !V,
         eA = w?.guild_id ?? void 0,
         eP = (0, r.A)({ forceFetch: !1, excludeReverseTrial: !1, excludeReverseTrialFromCountdown: !0 }),
         { paymentSources: ev } = (0, u.j)(),
         {
-            hasEntitlements: ex,
-            paymentSourceType: e_,
+            hasEntitlements: e_,
+            paymentSourceType: ex,
             isPrepaid: eT,
             paymentSourceOptionalWarningCopy: eN,
         } = (function (e) {
@@ -352,7 +352,7 @@ function eo(e) {
             isTrial: em,
             hideCurrencySelect: ej,
             disabled: ef,
-            hasEntitlements: ex,
+            hasEntitlements: e_,
         }),
         eM = (0, y.V)(W),
         eO = Y && J.interval === N.WT.YEAR && (0, P.xq)(J.id),
@@ -418,9 +418,9 @@ function eo(e) {
                         () =>
                             n || t !== N.pe.TIER_2 || !1 === r
                                 ? null
-                                : (0, l.jsx)(x.w, {
+                                : (0, l.jsx)(_.w, {
                                       type: "info",
-                                      children: (0, l.jsx)(_.E, {
+                                      children: (0, l.jsx)(x.E, {
                                           variant: "text-sm/medium",
                                           children: j.intl.format(b.default.Urtyu9, { days: 7 }),
                                       }),
@@ -498,7 +498,7 @@ function eo(e) {
     if (null == ep || ep.type === c.u$.LOADING)
         return (0, l.jsx)(o.Ed, { shouldShowUnifiedHeader: !0, headerBadgeConfig: ew });
     let eY = null != eM ? eM.subscriptionTrial : void 0,
-        eV =
+        eK =
             ep.type === c.u$.PREMIUM_WITH_TRIAL
                 ? null
                 : (0, l.jsx)(s.k, {
@@ -508,7 +508,7 @@ function eo(e) {
                       subscriptionTrial: eY,
                       isCustomGift: eI,
                   }),
-        eK = null;
+        eV = null;
     if (
         !eT &&
         (c.ME.has(ep.type) || ep.type === c.u$.PREMIUM_WITH_TRIAL) &&
@@ -517,10 +517,10 @@ function eo(e) {
     ) {
         let e = (0, es.Gj)(ep.invoicePreview, ep.renewalInvoicePreview, eY, {
             discountOffer: eS,
-            isSubscriptionUpdate: null != V,
+            isSubscriptionUpdate: null != K,
             fractionalPremiumInfo: eP,
         });
-        eK = (0, l.jsx)(S._, { ...e, defaultExpanded: Q });
+        eV = (0, l.jsx)(S._, { ...e, defaultExpanded: Q });
     }
     let eZ = eg
             ? void 0
@@ -536,11 +536,11 @@ function eo(e) {
                   handleStepChange: G,
               }),
         eq = (0, l.jsx)(k.P, {
-            activeSubscription: V,
+            activeSubscription: K,
             isTrial: em,
             plan: J,
             isGift: Y,
-            paymentSourceType: e_,
+            paymentSourceType: ex,
             discriminatedInvoicePreview: ep,
             fractionalPremiumInfo: eP,
         }),
@@ -551,8 +551,8 @@ function eo(e) {
     return (0, l.jsx)(o.T_, {
         ...eW,
         purchaseItemContent: eZ,
-        subscriptionDetailsContent: eK,
-        invoiceSummaryContent: eV,
+        subscriptionDetailsContent: eV,
+        invoiceSummaryContent: eK,
         legalContent: eq,
         invoiceTotalDueValue: ez,
         invoiceTotalDueLabel: Y ? j.intl.string(ee.default.Zxav97) : j.intl.string(ee.default.R0cZsM),

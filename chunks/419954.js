@@ -3,9 +3,9 @@ n.d(t, {
     D1: () => m,
     E2: () => b,
     FW: () => S,
-    Hn: () => N,
+    Hn: () => _,
     Hr: () => r,
-    Qx: () => _,
+    Qx: () => N,
     Tf: () => x,
     WI: () => a,
     bd: () => g,
@@ -87,11 +87,11 @@ function f(e, t) {
 function I(e, t) {
     return T(e, i.Z6.SLIDER, t);
 }
-function N(e, t) {
+function _(e, t) {
     let n = t.selectionMode ?? "single";
     return { ...t, selectionMode: n, key: e, type: i.Z6.SELECT };
 }
-function _(e, t) {
+function N(e, t) {
     return T(e, i.Z6.RADIO, t);
 }
 function C(e, t) {

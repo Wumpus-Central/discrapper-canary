@@ -21,8 +21,8 @@ var l = n(477900),
     A = n(966327),
     P = n(674658),
     v = n(769015),
-    x = n(242874),
-    _ = n(580194),
+    _ = n(242874),
+    x = n(580194),
     T = n(531536),
     N = n(219271),
     b = n(427358),
@@ -41,8 +41,8 @@ var l = n(477900),
     H = n(683071),
     W = n(696208),
     Y = n(869038),
-    V = n(793574),
-    K = n(688810),
+    K = n(793574),
+    V = n(688810),
     Z = n(590180),
     q = n(450047),
     z = n(61750),
@@ -68,7 +68,7 @@ function ei(e) {
         } = e,
         [E, S] = i.useState([]),
         [P, v] = i.useState(!1),
-        { isLoading: _, potentialRecipients: T } = (function () {
+        { isLoading: x, potentialRecipients: T } = (function () {
             i.useEffect(() => {
                 (g.A.fetchRelationships(), (0, N.u)());
             }, []);
@@ -92,7 +92,7 @@ function ei(e) {
                 ),
             };
         })(),
-        { analyticsLocations: j } = (0, K.Ay)(V.A.PREMIUM_GIFT_SUCCESS_MODAL),
+        { analyticsLocations: j } = (0, V.Ay)(K.A.PREMIUM_GIFT_SUCCESS_MODAL),
         M = (0, c.yK)([O.default], () => E.map(O.default.getUser).filter(X.Vq), [E]),
         L = r > 1,
         k = L ? !s : null == t,
@@ -117,7 +117,7 @@ function ei(e) {
         try {
             if (w) {
                 let e = M[0];
-                (await (0, x.UN)(e, t), (i = { recipients: [e], failedRecipients: [] }));
+                (await (0, _.UN)(e, t), (i = { recipients: [e], failedRecipients: [] }));
             } else {
                 if (null == a) throw Error("Checkout session ID must be defined");
                 let e = await (0, Y.kW)(E, a),
@@ -188,7 +188,7 @@ function ei(e) {
                                               label: et.intl.string(en.default.ZolTTE),
                                               hideLabel: !0,
                                               placeholder: et.intl.string(en.default.xdDO7f),
-                                              loading: _ || k,
+                                              loading: x || k,
                                               disabled: k || P,
                                               value: E,
                                               onSelectionChange: ep,
@@ -200,7 +200,7 @@ function ei(e) {
                                       selectionMode: "single",
                                       label: et.intl.string(et.t.MJw05f),
                                       placeholder: et.intl.string(et.t.J019jZ),
-                                      loading: _ || k,
+                                      loading: x || k,
                                       disabled: k || P,
                                       value: E[0],
                                       onSelectionChange: (e) => ep(null != e ? [e] : []),
@@ -281,7 +281,7 @@ function eu(e) {
             sku: y,
             subscriptionPlan: g,
             selectedGiftStyle: P,
-            onClose: x,
+            onClose: _,
             hasSentMessage: T,
             giftRecipient: N,
             giftMessageError: b,
@@ -293,11 +293,11 @@ function eu(e) {
         W = y?.productLine === ea.EZt.COLLECTIBLES,
         {
             selectedGiftingPromotionRewards: Y,
-            openGiftingBadgePostPurchaseModal: V,
-            canShowGiftingBadgePostPurchase: K,
+            openGiftingBadgePostPurchaseModal: K,
+            canShowGiftingBadgePostPurchase: V,
         } = (0, D.Pv)(),
-        Z = (0, _.Mq)(g) && Y.length > 0,
-        q = K && 0 === Y.length;
+        Z = (0, x.Mq)(g) && Y.length > 0,
+        q = V && 0 === Y.length;
     function z() {
         return null != g ? g.skuId : null != y ? y.id : null;
     }
@@ -367,9 +367,9 @@ function eu(e) {
                 deliveryReady: s,
                 privateGiftLink: 1 === n ? $() : null,
                 rewardSkuIds: Y,
-                canShowGiftingBadgePostPurchase: K,
-                openGiftingBadgePostPurchaseModal: V,
-                onClose: x,
+                canShowGiftingBadgePostPurchase: V,
+                openGiftingBadgePostPurchaseModal: K,
+                onClose: _,
             })
           : (0, l.jsxs)(l.Fragment, {
                 children: [
@@ -417,7 +417,7 @@ function eu(e) {
                                               (0, l.jsx)(ed, {
                                                   giftCode: t,
                                                   onClose: () => {
-                                                      (x(), (0, I.bz)(), q && V());
+                                                      (_(), (0, I.bz)(), q && K());
                                                   },
                                               }),
                                           (0, l.jsx)("div", { className: eo.yF }),
@@ -446,7 +446,7 @@ function eu(e) {
                                         fullWidth: !0,
                                         text: et.intl.string(et.t.PDTjLN),
                                         onClick: () => {
-                                            (x(), V());
+                                            (_(), K());
                                         },
                                     }),
                                 }),
@@ -493,7 +493,7 @@ function ed(e) {
         P = [...E, ...I],
         v = (0, c.bG)([O.default], () => O.default.filter((e) => P.includes(e.id) && !e.bot), [P]);
     if (null == v || 0 === v.length) return null;
-    let _ = o().sortBy(v, (e) => P.indexOf(e.id));
+    let x = o().sortBy(v, (e) => P.indexOf(e.id));
     return (0, l.jsxs)("div", {
         className: eo.vt,
         children: [
@@ -509,7 +509,7 @@ function ed(e) {
                         onSelectionChange: (e) => {
                             (a(e), u(!1));
                         },
-                        options: _.map((e) => ({
+                        options: x.map((e) => ({
                             id: e.id,
                             value: e,
                             label: `${U.Ay.getUserTag(e)}`,
@@ -523,7 +523,7 @@ function ed(e) {
                             loading: d,
                             onClick: () => {
                                 (p(!0),
-                                    (0, x.UN)(r, t)
+                                    (0, _.UN)(r, t)
                                         .then(() => {
                                             n();
                                         })

@@ -53,16 +53,16 @@ function C(e) {
         "aria-labelledby": I,
         scrollable: T,
         role: p,
-        hideSearch: S,
-        disableDoubleClick: N,
-        disableFocusRingScope: L,
+        hideSearch: N,
+        disableDoubleClick: S,
+        disableFocusRingScope: f,
     } = e;
     return (0, i.jsx)(u.Ay, {
         className: n,
         innerClassName: a,
         toolbar: (function () {
             if (null == c) return null;
-            let e = null != r && !S;
+            let e = null != r && !N;
             return l.Fr
                 ? C
                 : (0, i.jsxs)(i.Fragment, {
@@ -76,12 +76,12 @@ function C(e) {
         })(),
         transparent: o,
         hidden: d,
-        onDoubleClick: () => g(N),
+        onDoubleClick: () => g(S),
         "aria-label": _,
         "aria-labelledby": I,
         role: p,
         scrollable: T,
-        disableFocusRingScope: L,
+        disableFocusRingScope: f,
         children: t,
     });
 }

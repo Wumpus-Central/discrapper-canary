@@ -23,16 +23,16 @@ function p() {
         t = u.A.comboSoundsEnabled;
     return !!e && !!t && null != d.Ay.getChannelId();
 }
-function S() {
+function N() {
     if (0 === _.length || !p() || C) return;
     C = !0;
     let [e, t] = _[_.length - 1];
-    ((0, r.Ak)(e, t), (I = setTimeout(N, 1e3)));
+    ((0, r.Ak)(e, t), (I = setTimeout(S, 1e3)));
 }
-function N() {
-    (_.pop(), (C = !1), S());
+function S() {
+    (_.pop(), (C = !1), N());
 }
-class L extends l.A {
+class f extends l.A {
     _initialize() {
         (A.Ay.addChangeListener(this.startAudio),
             i.h.subscribe("RTC_CONNECTION_STATE", this.setVolume),
@@ -76,8 +76,8 @@ class L extends l.A {
             (function (e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
                     n = o.A.isConnected();
-                (_.push([e, t * (n ? 0.1 : 1)]), S());
+                (_.push([e, t * (n ? 0.1 : 1)]), N());
             })("poggermode_achievement_unlock");
     }
 }
-let m = new L();
+let m = new f();

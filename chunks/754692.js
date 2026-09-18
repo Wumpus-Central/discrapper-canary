@@ -1,4 +1,4 @@
-n.d(t, { _: () => p, U: () => S });
+n.d(t, { _: () => p, U: () => N });
 var i = n(477900),
     l = n(582128),
     r = n(691540),
@@ -112,7 +112,7 @@ var T = n(375708);
 function p(e) {
     o.h.dispatch({ type: "POGGERMODE_ACHIEVEMENT_UNLOCK", achievementId: e });
 }
-function S(e, t) {
+function N(e, t) {
     let n = (0, d.vM)(e);
     null != n &&
         (0, r.P0)(

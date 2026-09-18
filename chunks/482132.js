@@ -30,20 +30,20 @@ function S(e) {
             setReadySlideId: e.setReadySlideId,
             unifiedCheckoutFlow: e.unifiedCheckoutFlow,
         })),
-        x = S.find((e) => e.key === s);
+        _ = S.find((e) => e.key === s);
     if (
         (i.useEffect(() => {
             g(null);
         }, [s, g]),
-        null == x)
+        null == _)
     )
         throw new d.vd({
             message: "Unknown step for current payment flow (PaymentModalStep)",
-            extraSentryInformation: { stepConfig: x, step: s, unifiedCheckoutFlow: v, stepConfigs: S },
+            extraSentryInformation: { stepConfig: _, step: s, unifiedCheckoutFlow: v, stepConfigs: S },
         });
-    let _ = x?.options?.hideSlider ?? !1,
-        T = x?.options?.hideDefaultModalBody ?? !1,
-        N = x?.options?.sliderBodyClassName,
+    let x = _?.options?.hideSlider ?? !1,
+        T = _?.options?.hideDefaultModalBody ?? !1,
+        N = _?.options?.sliderBodyClassName,
         b = s === f.pn.REVIEW,
         j = i.useCallback(
             (e, t) => {
@@ -53,9 +53,9 @@ function S(e) {
         );
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (x?.options?.renderHeader ?? !0) ? t : null,
-            x.renderStep(r),
-            null == s || _
+            (_?.options?.renderHeader ?? !0) ? t : null,
+            _.renderStep(r),
+            null == s || x
                 ? null
                 : (0, l.jsxs)(l.Fragment, {
                       children: [

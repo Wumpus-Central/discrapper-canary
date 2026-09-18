@@ -1,4 +1,4 @@
-i.d(t, { A: () => v, L: () => f });
+i.d(t, { A: () => E, L: () => v });
 var n = i(477900),
     s = i(196765),
     l = i(834730),
@@ -8,8 +8,8 @@ var n = i(477900),
     o = i(47167),
     u = i(976860),
     c = i(734057),
-    h = i(652215),
-    m = i(490094),
+    m = i(652215),
+    h = i(490094),
     p = i(375708),
     A = i(720722);
 let g = "legacyGameInviteChannelChatBannerDismissed",
@@ -20,26 +20,26 @@ let g = "legacyGameInviteChannelChatBannerDismissed",
         "1433122142479847514",
         "1433122166102163598",
     ]),
-    E = "1526555294518349946",
-    x = (0, s.v)(() => ({
+    x = "1526555294518349946",
+    f = (0, s.v)(() => ({
         dismissedChannelIds: d.w.get(g) ?? [],
         dismissChannel: (e) => {
-            x.setState((t) => {
+            f.setState((t) => {
                 let i = [...t.dismissedChannelIds, e];
                 return (d.w.set(g, i), { dismissedChannelIds: i });
             });
         },
     }));
-function f(e) {
-    let { dismissedChannelIds: t } = x(),
-        i = t?.includes(E);
-    return null != (0, r.bG)([c.A], () => c.A.getChannel(E)) && I.has(e) && !i;
+function v(e) {
+    let { dismissedChannelIds: t } = f(),
+        i = t?.includes(x);
+    return null != (0, r.bG)([c.A], () => c.A.getChannel(x)) && I.has(e) && !i;
 }
-function v() {
-    let e = (0, r.bG)([c.A], () => c.A.getChannel(E)),
+function E() {
+    let e = (0, r.bG)([c.A], () => c.A.getChannel(x)),
         t = (0, o.Ay)(e);
     function i() {
-        x.getState().dismissChannel(E);
+        f.getState().dismissChannel(x);
     }
     return null == e || null == t
         ? null
@@ -47,11 +47,11 @@ function v() {
               variant: "text-sm/medium",
               color: "text-muted",
               className: A.v,
-              children: p.intl.format(m.default["5jIPgz"], {
+              children: p.intl.format(h.default["5jIPgz"], {
                   channelIconHook: () => (0, n.jsx)(a.t, { size: "xs", color: "currentColor" }),
                   channelName: t,
                   onChannelClick: () => {
-                      ((0, u.pX)(h.BVt.CHANNEL(e.guild_id, e.id)), i());
+                      ((0, u.pX)(m.BVt.CHANNEL(e.guild_id, e.id)), i());
                   },
                   onDismissClick: () => i(),
               }),

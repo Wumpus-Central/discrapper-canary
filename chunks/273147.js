@@ -61,8 +61,8 @@ function w(e) {
     });
 }
 var H = n(280450),
-    B = n(984545),
-    F = n(35241),
+    F = n(984545),
+    B = n(35241),
     V = n(587168),
     z = n(193738),
     J = n(133385),
@@ -70,9 +70,9 @@ var H = n(280450),
 function Y(e) {
     let { user: t, guildId: n } = e;
     return t.isNonUserBot()
-        ? (0, i.jsx)(F.A, { user: t })
+        ? (0, i.jsx)(B.A, { user: t })
         : t.bot
-          ? (0, i.jsx)(B.A, { user: t, guildId: n })
+          ? (0, i.jsx)(F.A, { user: t, guildId: n })
           : (0, i.jsx)(J.yo, { user: t, guildId: n });
 }
 function W(e) {
@@ -142,8 +142,8 @@ function el(e) {
         { isHovering: U } = (0, g.A)(k),
         G = A.kt.useSetting(),
         H = (0, a.bG)([o.Ay], () => o.Ay.useReducedMotion),
-        B = j?.profileEffect?.skuId,
-        F = !G && !H;
+        F = j?.profileEffect?.skuId,
+        B = !G && !H;
     function V() {
         (0, _.openUserProfileModal)({
             userId: t.id,
@@ -169,7 +169,7 @@ function el(e) {
                 headingRef: I,
                 headingText: q.intl.formatToPlainString(q.t["8yRya1"], { name: b }),
                 profileEffect:
-                    null != B ? (0, i.jsx)(u.A, { skuId: B, autoPlay: G, isHovering: U, useOpacityOnHover: !F }) : null,
+                    null != F ? (0, i.jsx)(u.A, { skuId: F, autoPlay: G, isHovering: U, useOpacityOnHover: !B }) : null,
                 profileFrame: null != L ? (0, i.jsx)(h.A, { frame: L, fadeIn: !1 }) : null,
                 children: [
                     (0, i.jsx)(w, {

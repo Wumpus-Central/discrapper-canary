@@ -28,8 +28,8 @@ function f(e) {
         } = e,
         {
             paymentSourceId: v,
-            purchasePreviewError: x,
-            customCheckoutFlow: _,
+            purchasePreviewError: _,
+            customCheckoutFlow: x,
             contextMetadata: T,
             purchaseError: N,
             setCheckoutCurrency: b,
@@ -62,7 +62,7 @@ function f(e) {
         }, [R, M, v]),
         G = (0, s.iB)({ checkoutPaymentSources: R, paymentSourceId: v, location: "CheckoutBaseReviewStep" }),
         { disablePurchase: F } = i.useMemo(() => {
-            let e = { disablePurchase: G || _ === C.uH.DEV_STORYBOOK_CHECKOUT };
+            let e = { disablePurchase: G || x === C.uH.DEV_STORYBOOK_CHECKOUT };
             return null != S
                 ? S(
                       { ...e },
@@ -71,11 +71,11 @@ function f(e) {
                           paymentSourceId: v,
                           isSelectedPaymentSourceDisabled: D,
                           invoicePreview: O,
-                          purchasePreviewError: x,
+                          purchasePreviewError: _,
                       },
                   )
                 : e;
-        }, [S, U, v, D, O, x, G, _]);
+        }, [S, U, v, D, O, _, G, x]);
     i.useEffect(() => {
         null != N && null != k.current && k.current.scrollIntoView({ behavior: "smooth" });
     }, [N]);

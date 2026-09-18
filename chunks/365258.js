@@ -1,4 +1,4 @@
-n.d(t, { AB: () => N, AI: () => A, Xc: () => I, ae: () => p, g8: () => _, gF: () => L, gS: () => S, vz: () => T });
+n.d(t, { AB: () => S, AI: () => A, Xc: () => I, ae: () => p, g8: () => _, gF: () => f, gS: () => N, vz: () => T });
 var i,
     l = n(873298),
     r = n(885386),
@@ -97,7 +97,7 @@ function p(e, t) {
         toastContent: u.intl.string(e ? u.t.AdpgML : u.t["Q7E+QF"]),
     };
 }
-function S(e, t) {
+function N(e, t) {
     let n = C(t),
         i = r._Z.getSetting();
     if (i === n || E(C(e)) > E(n) != E(i) > E(n)) return null;
@@ -117,10 +117,10 @@ function S(e, t) {
     })(t);
     return { affectedGuildIds: s.affectedGuildIds, direction: s.direction, settingName: a, mappedActivityValue: n };
 }
-function N(e) {
+function S(e) {
     return [...e].sort((e, t) => s.A.getScoreWithoutFetchingLatest(t) - s.A.getScoreWithoutFetchingLatest(e));
 }
-function L(e, t) {
+function f(e, t) {
     let n = (0, c.Kk)(),
         i = new Set(t);
     if ("restricting" === e) {

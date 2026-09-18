@@ -27,29 +27,29 @@ var i = n(477900),
     I = n(329308),
     T = n(571694),
     p = n(47167),
-    S = n(713654),
-    N = n(503698),
-    L = n.n(N),
+    N = n(713654),
+    S = n(503698),
+    f = n.n(S),
     m = n(62986);
-let f = function (e) {
+let L = function (e) {
     let { value: t = 0, text: n, className: l, lowImportance: r, ...s } = e;
     return null != n
-        ? (0, i.jsx)("div", { className: L()(m.i, l, r && m.H), ...s, children: n })
+        ? (0, i.jsx)("div", { className: f()(m.i, l, r && m.H), ...s, children: n })
         : t > 0
-          ? (0, i.jsx)("div", { className: L()(m.i, l, r && m.H), ...s, children: t })
+          ? (0, i.jsx)("div", { className: f()(m.i, l, r && m.H), ...s, children: t })
           : null;
 };
 var O = n(769015),
     b = n(106191),
-    R = n(548118),
-    v = n(376943),
+    v = n(548118),
+    R = n(376943),
     U = n(636585),
-    y = n(71393),
-    D = n(994500),
+    D = n(71393),
+    y = n(994500),
     G = n(287809),
     M = n(147036),
-    x = n(427262),
-    P = n(375708),
+    P = n(427262),
+    x = n(375708),
     w = n(445388);
 class V extends l.PureComponent {
     node;
@@ -100,7 +100,7 @@ class j extends l.Component {
         let { guild: e } = this.props;
         return (0, i.jsx)("div", {
             className: w._C,
-            children: (0, i.jsx)(R.Ay, { tabIndex: -1, guild: e, size: R.Ay.Sizes.MINI, className: w.$f }),
+            children: (0, i.jsx)(v.Ay, { tabIndex: -1, guild: e, size: v.Ay.Sizes.MINI, className: w.$f }),
         });
     }
     renderName() {
@@ -122,7 +122,7 @@ class j extends l.Component {
     }
     getAccessibilityLabel() {
         let { guild: e } = this.props;
-        return P.intl.formatToPlainString(P.t.WVq3Lr, { name: e.name });
+        return x.intl.formatToPlainString(x.t.WVq3Lr, { name: e.name });
     }
     render() {
         let { onMouseEnter: e, onClick: t, onFocus: n, onContextMenu: l, focused: r, score: s, id: a } = this.props;
@@ -143,7 +143,7 @@ class H extends l.Component {
     static defaultProps = { unread: !1 };
     renderIcon() {
         let { channel: e } = this.props,
-            t = (0, S.gU)(e);
+            t = (0, N.gU)(e);
         if (null == t) return null;
         let n = (0, M.Jg)(e) ?? "";
         return (0, i.jsx)("div", {
@@ -158,12 +158,12 @@ class H extends l.Component {
             t,
             { mentions: n, category: l, channel: r, isMentionLowImportance: s } = this.props;
         return (
-            null != n && n > 0 && (e = (0, i.jsx)(f, { className: w.qS, value: n, lowImportance: s })),
-            null != l && (t = (0, i.jsx)("span", { className: w.N4, children: (0, p.m1)(l, G.default, D.A) })),
+            null != n && n > 0 && (e = (0, i.jsx)(L, { className: w.qS, value: n, lowImportance: s })),
+            null != l && (t = (0, i.jsx)("span", { className: w.N4, children: (0, p.m1)(l, G.default, y.A) })),
             (0, i.jsxs)("div", {
                 className: w.UU,
                 children: [
-                    (0, i.jsx)("span", { className: w.YW, children: (0, p.m1)(r, G.default, D.A) }),
+                    (0, i.jsx)("span", { className: w.YW, children: (0, p.m1)(r, G.default, y.A) }),
                     e,
                     this.renderVoiceStates(),
                     t,
@@ -195,10 +195,10 @@ class H extends l.Component {
     }
     getAccessibilityLabel() {
         let { channel: e } = this.props,
-            t = y.A.getGuild(this.props.channel.guild_id)?.name,
-            n = (0, p.m1)(e, G.default, D.A),
+            t = D.A.getGuild(this.props.channel.guild_id)?.name,
+            n = (0, p.m1)(e, G.default, y.A),
             i = (0, M.Jg)(e);
-        return P.intl.formatToPlainString(P.t["Vw/da+"], { name: n, type: i, guild: t });
+        return x.intl.formatToPlainString(x.t["Vw/da+"], { name: n, type: i, guild: t });
     }
     render() {
         let { onMouseEnter: e, onClick: t, onFocus: n, onContextMenu: l, focused: r, score: s, id: a } = this.props;
@@ -227,10 +227,10 @@ class B extends l.Component {
         let e,
             { mentions: t, channel: n } = this.props;
         return (
-            null != t && t > 0 && (e = (0, i.jsx)(f, { className: w.qS, value: t })),
+            null != t && t > 0 && (e = (0, i.jsx)(L, { className: w.qS, value: t })),
             (0, i.jsxs)("div", {
                 className: w.UU,
-                children: [(0, i.jsx)("span", { className: w.YW, children: (0, p.m1)(n, G.default, D.A) }), e],
+                children: [(0, i.jsx)("span", { className: w.YW, children: (0, p.m1)(n, G.default, y.A) }), e],
             })
         );
     }
@@ -243,10 +243,10 @@ class B extends l.Component {
     }
     getAccessibilityLabel() {
         let { channel: e, mentions: t } = this.props,
-            n = (0, p.m1)(e, G.default, D.A);
+            n = (0, p.m1)(e, G.default, y.A);
         return null != t && t > 0
-            ? P.intl.formatToPlainString(P.t.LYdVfN, { name: n, mentions: t })
-            : P.intl.formatToPlainString(P.t.lLSbno, { name: n });
+            ? x.intl.formatToPlainString(x.t.LYdVfN, { name: n, mentions: t })
+            : x.intl.formatToPlainString(x.t.lLSbno, { name: n });
     }
     render() {
         let { onMouseEnter: e, onClick: t, onFocus: n, onContextMenu: l, focused: r, score: s, id: a } = this.props;
@@ -280,10 +280,10 @@ class F extends l.Component {
     getDisplayNickname() {
         let e,
             { user: t, comparator: n } = this.props,
-            i = D.A.getNickname(t.id);
+            i = y.A.getNickname(t.id);
         return (
             ((e = n === t.tag || null == n || "" === n ? t.username : n) === t.username || e === t.id) &&
-                (e = i ?? x.Ay.getName(t)),
+                (e = i ?? P.Ay.getName(t)),
             e
         );
     }
@@ -292,13 +292,13 @@ class F extends l.Component {
             { user: t, mentions: n } = this.props,
             l = this.getDisplayNickname();
         return (
-            null != n && n > 0 && (e = (0, i.jsx)(f, { className: w.qS, value: n })),
+            null != n && n > 0 && (e = (0, i.jsx)(L, { className: w.qS, value: n })),
             (0, i.jsxs)("div", {
                 className: w.UU,
                 children: [
                     (0, i.jsx)("span", { className: w.YW, children: l }),
                     e,
-                    (0, i.jsx)("span", { className: w.Xh, children: x.Ay.getUserTag(t) }),
+                    (0, i.jsx)("span", { className: w.Xh, children: P.Ay.getUserTag(t) }),
                 ],
             })
         );
@@ -313,10 +313,10 @@ class F extends l.Component {
     getAccessibilityLabel() {
         let { mentions: e, user: t } = this.props,
             n = this.getDisplayNickname(),
-            i = x.Ay.getUserTag(t);
+            i = P.Ay.getUserTag(t);
         return null != e && e > 0
-            ? P.intl.formatToPlainString(P.t["6b9UrR"], { name: n, id: i, mentions: e })
-            : P.intl.formatToPlainString(P.t.GWYOAY, { name: n, id: i });
+            ? x.intl.formatToPlainString(x.t["6b9UrR"], { name: n, id: i, mentions: e })
+            : x.intl.formatToPlainString(x.t.GWYOAY, { name: n, id: i });
     }
     render() {
         let { onMouseEnter: e, onClick: t, onFocus: n, onContextMenu: l, focused: r, score: s, id: a } = this.props;
@@ -401,14 +401,14 @@ class Y extends l.Component {
             t,
             { link: n, children: l } = this.props;
         if (null != n.inviteCode)
-            ((e = P.intl.string(P.t.w6QG3F)), (t = (0, i.jsx)(o.f, { size: "xs", color: "currentColor" })));
+            ((e = x.intl.string(x.t.w6QG3F)), (t = (0, i.jsx)(o.f, { size: "xs", color: "currentColor" })));
         else {
-            let l = (0, v.vu)(n.path);
+            let l = (0, R.vu)(n.path);
             null == l || void 0 === l.messageId
-                ? ((e = P.intl.string(P.t.qbSCqj)), (t = (0, i.jsx)(d.LinkIcon, { size: "xs", color: "currentColor" })))
-                : (0, v.r9)(l)
-                  ? ((e = P.intl.string(P.t["6Fd/j1"])), (t = (0, i.jsx)(c.t, { size: "xs", color: "currentColor" })))
-                  : ((e = P.intl.string(P.t.jQRwp4)),
+                ? ((e = x.intl.string(x.t.qbSCqj)), (t = (0, i.jsx)(d.LinkIcon, { size: "xs", color: "currentColor" })))
+                : (0, R.r9)(l)
+                  ? ((e = x.intl.string(x.t["6Fd/j1"])), (t = (0, i.jsx)(c.t, { size: "xs", color: "currentColor" })))
+                  : ((e = x.intl.string(x.t.jQRwp4)),
                     (t = (0, i.jsx)(u.LockIcon, { size: "xs", color: "currentColor" })));
         }
         return (0, i.jsxs)("div", {
@@ -441,26 +441,26 @@ class Z extends l.Component {
             { navigationRecord: n, children: l } = this.props;
         switch (n.type) {
             case I.t1.SHOP:
-                ((e = P.intl.string(P.t.pWG4ze)), (t = (0, i.jsx)(A.U, { size: "xs", color: "currentColor" })));
+                ((e = x.intl.string(x.t.pWG4ze)), (t = (0, i.jsx)(A.U, { size: "xs", color: "currentColor" })));
                 break;
             case I.t1.SHOP_ORBS_TAB:
-                ((e = P.intl.string(P.t.EBYkzk)), (t = (0, i.jsx)(A.U, { size: "xs", color: "currentColor" })));
+                ((e = x.intl.string(x.t.EBYkzk)), (t = (0, i.jsx)(A.U, { size: "xs", color: "currentColor" })));
                 break;
             case I.t1.QUEST_ORBS:
-                ((e = `${P.intl.string(P.t.ElYQFS)} ${P.intl.string(P.t.JALI2K)}`),
+                ((e = `${x.intl.string(x.t.ElYQFS)} ${x.intl.string(x.t.JALI2K)}`),
                     (t = (0, i.jsx)(h.r, { size: "xs", color: "currentColor" })));
                 break;
             case I.t1.NITRO_HOME:
-                ((e = P.intl.string(P.t.Ipxkog)), (t = (0, i.jsx)(E.t, { size: "xs", color: "currentColor" })));
+                ((e = x.intl.string(x.t.Ipxkog)), (t = (0, i.jsx)(E.t, { size: "xs", color: "currentColor" })));
                 break;
             case I.t1.QUEST_HOME:
-                ((e = P.intl.string(P.t.JALI2K)), (t = (0, i.jsx)(h.r, { size: "xs", color: "currentColor" })));
+                ((e = x.intl.string(x.t.JALI2K)), (t = (0, i.jsx)(h.r, { size: "xs", color: "currentColor" })));
                 break;
             case I.t1.APPS_HOME:
-                ((e = P.intl.string(P.t.PHjkRE)), (t = (0, i.jsx)(g.k, { size: "xs", color: "currentColor" })));
+                ((e = x.intl.string(x.t.PHjkRE)), (t = (0, i.jsx)(g.k, { size: "xs", color: "currentColor" })));
                 break;
             case I.t1.SETTINGS:
-                ((e = n.label ?? P.intl.string(P.t["3D5yo/"])),
+                ((e = n.label ?? x.intl.string(x.t["3D5yo/"])),
                     (t = (0, i.jsx)(C.SettingsIcon, { size: "xs", color: "currentColor" })));
                 break;
             case I.t1.PLAYGROUND:

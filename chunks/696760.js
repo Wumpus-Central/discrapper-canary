@@ -17,25 +17,25 @@ var i,
     I = n(176522),
     T = n(435558),
     p = n.n(T),
-    S = n(691540),
-    N = n(857250),
-    L = n(97483),
+    N = n(691540),
+    S = n(857250),
+    f = n(97483),
     m = n(147036),
-    f = n(957565),
+    L = n(957565),
     O = n(375708);
-let b = (0, T.throttle)(() => (0, S.P0)((0, N.o)(O.intl.string(O.t["+5kSoW"]), L.Ck.SUCCESS)), 3e3, {
+let b = (0, T.throttle)(() => (0, N.P0)((0, S.o)(O.intl.string(O.t["+5kSoW"]), f.Ck.SUCCESS)), 3e3, {
     leading: !0,
     trailing: !1,
 });
-var R = n(265422),
-    v = n(625494),
+var v = n(265422),
+    R = n(625494),
     U = n(652215),
-    y = n(272613),
-    D = n(819638),
+    D = n(272613),
+    y = n(819638),
     G = n(723702),
     M = n(763827),
-    x = n(64460),
-    P = n(92960),
+    P = n(64460),
+    x = n(92960),
     w = n(739008),
     V = n(314519),
     j = n(837057),
@@ -60,8 +60,8 @@ let en = {
     comboKeysBindGlobal: !0,
     action: p().debounce(
         () => {
-            if (v._.hasSubscribers(U.jej.MARK_TOP_INBOX_CHANNEL_READ))
-                return (v._.dispatch(U.jej.MARK_TOP_INBOX_CHANNEL_READ), !1);
+            if (R._.hasSubscribers(U.jej.MARK_TOP_INBOX_CHANNEL_READ))
+                return (R._.dispatch(U.jej.MARK_TOP_INBOX_CHANNEL_READ), !1);
         },
         100,
         { leading: !0 },
@@ -132,15 +132,15 @@ let eI = {
     [U.IWg.MENTION_CHANNEL_NEXT]: ec.BD,
     [U.IWg.MENTION_CHANNEL_PREV]: ec.X8,
     [U.IWg.TOGGLE_PREVIOUS_GUILD]: I.Fv,
-    [U.IWg.JUMP_TO_GUILD]: x.J,
+    [U.IWg.JUMP_TO_GUILD]: P.J,
     [U.IWg.SUBMIT]: X.X,
     [U.IWg.TEXTAREA_FOCUS]: J.c,
-    [U.IWg.MARK_CHANNEL_READ]: P.Df,
+    [U.IWg.MARK_CHANNEL_READ]: x.Df,
     [U.IWg.MARK_SERVER_READ]: w.P,
     [U.IWg.TOGGLE_CHANNEL_PINS]: {
         binds: ["mod+p"],
         comboKeysBindGlobal: !0,
-        action: () => (v._.dispatch(U.jej.TOGGLE_CHANNEL_PINS), !1),
+        action: () => (R._.dispatch(U.jej.TOGGLE_CHANNEL_PINS), !1),
     },
     [U.IWg.TOGGLE_INBOX]: {
         binds: ["mod+i"],
@@ -153,10 +153,10 @@ let eI = {
                 let t = o.Ay.getChannelId(),
                     n = E.A.getChannel(t);
                 window.location.pathname.startsWith(U.BVt.CHANNEL(U.gNP)) && null != n
-                    ? (0, R.i)(n.guild_id, t)
-                    : (0, R.a)(U.BVt.CHANNEL(U.gNP, t ?? void 0));
+                    ? (0, v.i)(n.guild_id, t)
+                    : (0, v.a)(U.BVt.CHANNEL(U.gNP, t ?? void 0));
             })(),
-            v._.dispatch(U.jej.TOGGLE_INBOX),
+            R._.dispatch(U.jej.TOGGLE_INBOX),
             !1),
     },
     [U.IWg.MARK_TOP_INBOX_CHANNEL_READ]: en,
@@ -197,7 +197,7 @@ let eI = {
     [U.IWg.SEARCH_SOUNDBOARD]: {
         binds: ["mod+shift+b"],
         comboKeysBindGlobal: !0,
-        action: () => (v._.dispatch(U.jej.TOGGLE_SOUNDBOARD), !1),
+        action: () => (R._.dispatch(U.jej.TOGGLE_SOUNDBOARD), !1),
     },
     [U.IWg.SCROLL_UP]: W.U5,
     [U.IWg.SCROLL_DOWN]: W.fz,
@@ -205,7 +205,7 @@ let eI = {
     [U.IWg.CREATE_DM_GROUP]: {
         binds: ["mod+shift+t"],
         comboKeysBindGlobal: !0,
-        action: () => (null != d.A.getGuildId() && (0, R.i)(U.ME), v._.safeDispatch(U.jej.TOGGLE_DM_CREATE), !1),
+        action: () => (null != d.A.getGuildId() && (0, v.i)(U.ME), R._.safeDispatch(U.jej.TOGGLE_DM_CREATE), !1),
     },
     [U.IWg.CREATE_THREAD]: {
         binds: ["mod+shift+alt+n"],
@@ -256,9 +256,9 @@ let eI = {
         binds: ["mod+shift+n"],
         comboKeysBindGlobal: !0,
         action() {
-            (0, l.hasModalOpen)(D.fc)
-                ? y.A.updateCreateGuildModal({ slide: D.oS.JOIN_GUILD, location: "Keyboard Shortcut" })
-                : y.A.openCreateGuildModal({ location: "Keyboard Shortcut" });
+            (0, l.hasModalOpen)(y.fc)
+                ? D.A.updateCreateGuildModal({ slide: y.oS.JOIN_GUILD, location: "Keyboard Shortcut" })
+                : D.A.openCreateGuildModal({ location: "Keyboard Shortcut" });
         },
     },
     [U.IWg.UPLOAD_FILE]: {
@@ -266,7 +266,7 @@ let eI = {
         comboKeysBindGlobal: !0,
         action() {
             let e = E.A.getChannel(o.Ay.getChannelId());
-            return (null == e || e.isManaged() || v._.dispatch(U.jej.UPLOAD_FILE, { channelId: e.id }), !1);
+            return (null == e || e.isManaged() || R._.dispatch(U.jej.UPLOAD_FILE, { channelId: e.id }), !1);
         },
     },
     [U.IWg.RETURN_TO_AUDIO_CHANNEL]: k.u,
@@ -278,7 +278,7 @@ let eI = {
         action(e, t) {
             if (a.A.hasLayers() || (0, l.hasAnyModalOpen)()) return;
             let n = !t.includes("shift");
-            return (v._.dispatch(U.jej.FOCUS_SEARCH, { prefillCurrentChannel: n }), !1);
+            return (R._.dispatch(U.jej.FOCUS_SEARCH, { prefillCurrentChannel: n }), !1);
         },
     },
     [U.IWg.JUMP_TO_CURRENT_CALL]: {
@@ -288,7 +288,7 @@ let eI = {
             (e.preventDefault(), e.stopPropagation());
             let t = M.A.getGuildId(),
                 n = M.A.getChannelId();
-            return (null != n && (0, R.i)(t ?? U.ME, n), !1);
+            return (null != n && (0, v.i)(t ?? U.ME, n), !1);
         },
     },
     [U.IWg.ZOOM_IN]: eh.Ur,
@@ -343,7 +343,7 @@ let eI = {
             if (null == t) return !1;
             let n = E.A.getChannel(t.parent_id),
                 i = (0, m.af)(t, n);
-            return ((0, f.C)(i, b), !1);
+            return ((0, L.C)(i, b), !1);
         },
     },
 };

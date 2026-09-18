@@ -193,12 +193,12 @@ function S(e) {
                 ? { dropdownPaymentSources: e, giftCardWallet: (0, u.N)(i) }
                 : { dropdownPaymentSources: e, giftCardWallet: null };
         }, [i, y]),
-        [x, _] = l.useState(null),
+        [_, x] = l.useState(null),
         T = null != v && a === v.id,
         N = l.useMemo(
             () =>
-                null != x ? x : d({ giftCardWallet: null, dropdownPaymentSources: P, subscriptionPaymentSourceId: S }),
-            [P, S, x],
+                null != _ ? _ : d({ giftCardWallet: null, dropdownPaymentSources: P, subscriptionPaymentSourceId: S }),
+            [P, S, _],
         ),
         b = l.useMemo(() => (T ? N : (a ?? null)), [N, T, a]),
         j = l.useMemo(
@@ -239,7 +239,7 @@ function S(e) {
         M = l.useCallback(
             (e) => {
                 if (e && null != v) {
-                    (a !== v.id && _(a ?? null), o(v.id));
+                    (a !== v.id && x(a ?? null), o(v.id));
                     return;
                 }
                 o(N);

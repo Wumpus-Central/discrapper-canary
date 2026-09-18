@@ -1,4 +1,4 @@
-r.d(t, { N0: () => E, lC: () => _, uS: () => h });
+r.d(t, { N0: () => h, lC: () => _, uS: () => E });
 var n = r(582128),
     l = r(17928),
     s = r(793574),
@@ -46,7 +46,7 @@ function _(e) {
         { analyticsLocations: i, newestAnalyticsLocation: o } = (0, a.Ay)([...r, s.A.COLLECTIBLES_SHOP, n]);
     return { analyticsSource: t, analyticsLocations: i, newestAnalyticsLocation: o, currentTabLocation: n };
 }
-function h(e, t, r, l, s) {
+function E(e, t, r, l, s) {
     let { analyticsLocations: a, analyticsSource: i, currentTabLocation: o, newestAnalyticsLocation: c } = _(t);
     n.useEffect(() => {
         if (l !== g.Pf.VISIBLE || c !== o) return;
@@ -60,7 +60,7 @@ function h(e, t, r, l, s) {
         });
     }, [a, e, t, r, o, l, s, i, c]);
 }
-function E(e, t) {
+function h(e, t) {
     let { analyticsLocations: r } = _(e);
     n.useEffect(() => {
         null == t ||

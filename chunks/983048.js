@@ -20,11 +20,11 @@ var l = n(503698),
     x = n(75678),
     f = n(832946),
     I = n(97352),
-    N = n(953727);
-function _(e) {
+    _ = n(953727);
+function N(e) {
     let { width: t = 106, height: n = 43, color: l = "currentColor", foreground: s, ...r } = e;
     return (0, i.jsx)("svg", {
-        ...(0, N.A)(r),
+        ...(0, _.A)(r),
         width: t,
         height: n,
         viewBox: "0 0 106 43",
@@ -239,7 +239,7 @@ let ee = function (e) {
             currentInvoicePreview: l,
             renewalInvoicePreview: r,
             paymentSource: T,
-            busy: N,
+            busy: _,
             analyticsLocation: G,
         } = e,
         { analyticsLocations: U } = (0, h.Ay)(E.A.SUBSCRIPTION_HEADER),
@@ -394,7 +394,7 @@ let ee = function (e) {
             eh = (0, i.jsx)(J, {});
             break;
         case z.PremiumTypes.TIER_2:
-            eh = (0, i.jsx)(_, { className: H.V6, "aria-label": V.intl.string(V.t.lpNrPu) });
+            eh = (0, i.jsx)(N, { className: H.V6, "aria-label": V.intl.string(V.t.lpNrPu) });
     }
     let eS = Z.includes(t.status) && !$ ? Q : q;
     return (0, i.jsx)(eS, {
@@ -426,7 +426,7 @@ let ee = function (e) {
                     children: (0, i.jsx)(c.$, {
                         variant: "overlay-primary",
                         size: "sm",
-                        loading: N,
+                        loading: _,
                         text: V.intl.string(V.t.obRG6Y),
                     }),
                 });
@@ -459,7 +459,7 @@ let ee = function (e) {
                             children: (0, i.jsx)(m.Q, {
                                 variant: "always-white",
                                 onClick: es,
-                                disabled: N,
+                                disabled: _,
                                 size: "sm",
                                 text: V.intl.string(V.t["ETE/oC"]),
                             }),
@@ -476,7 +476,7 @@ let ee = function (e) {
                         variant: "overlay-primary",
                         size: "sm",
                         text: V.intl.string(V.t.iIvF2z),
-                        loading: N,
+                        loading: _,
                         onClick: eo,
                     }),
                 });
@@ -486,7 +486,7 @@ let ee = function (e) {
                         variant: "overlay-primary",
                         size: "sm",
                         onClick: er,
-                        loading: N,
+                        loading: _,
                         text: V.intl.string(V.t["ETE/oC"]),
                     });
                 case X.Dmq.PAUSE_PENDING:
@@ -497,7 +497,7 @@ let ee = function (e) {
                                 className: H.Nn,
                                 children: (0, i.jsx)(m.Q, {
                                     variant: "always-white",
-                                    disabled: N,
+                                    disabled: _,
                                     onClick: es,
                                     size: "sm",
                                     text: V.intl.string(V.t.cM1H0K),
@@ -510,7 +510,7 @@ let ee = function (e) {
                                     variant: "overlay-primary",
                                     size: "sm",
                                     text: V.intl.string(V.t.TgV5Qf),
-                                    loading: N,
+                                    loading: _,
                                     onClick: eu,
                                 }),
                             }),
@@ -529,14 +529,14 @@ let ee = function (e) {
                                         ? (0, i.jsx)(m.Q, {
                                               variant: "always-white",
                                               onClick: ed,
-                                              disabled: N,
+                                              disabled: _,
                                               size: "sm",
                                               text: V.intl.string(V.t.jNHWt6),
                                           })
                                         : (0, i.jsx)(m.Q, {
                                               variant: "always-white",
                                               onClick: ec,
-                                              disabled: N,
+                                              disabled: _,
                                               size: "sm",
                                               text: V.intl.string(V.t.cM1H0K),
                                           }),
@@ -548,7 +548,7 @@ let ee = function (e) {
                                     variant: "overlay-primary",
                                     size: "sm",
                                     text: V.intl.string(V.t.zpi5pg),
-                                    loading: N,
+                                    loading: _,
                                     onClick: eu,
                                 }),
                             }),

@@ -19,8 +19,8 @@ var i = n(477900),
     x = n(277984),
     f = n(531260),
     I = n(725836),
-    N = n(169797),
-    _ = n(235986),
+    _ = n(169797),
+    N = n(235986),
     C = n(543767),
     b = n(253390),
     y = n(489254),
@@ -166,7 +166,7 @@ function K(e) {
             onClose: f,
             "aria-label": z.intl.string(z.t.CRwE7n),
             children: [
-                (0, i.jsx)(I.e0, { children: (0, i.jsx)(N.s3, { title: z.intl.string(z.t.CRwE7n) }) }),
+                (0, i.jsx)(I.e0, { children: (0, i.jsx)(_.s3, { title: z.intl.string(z.t.CRwE7n) }) }),
                 (0, i.jsx)(d.c, { children: (0, i.jsx)("div", { className: X.Lq, children: (0, i.jsx)(A.y, {}) }) }),
             ],
         });
@@ -204,7 +204,7 @@ function K(e) {
               onClose: f,
               "aria-label": z.intl.string(z.t.CRwE7n),
               children: [
-                  (0, i.jsx)(I.e0, { children: (0, i.jsx)(N.s3, { title: z.intl.string(z.t.CRwE7n) }) }),
+                  (0, i.jsx)(I.e0, { children: (0, i.jsx)(_.s3, { title: z.intl.string(z.t.CRwE7n) }) }),
                   (0, i.jsx)(d.c, {
                       children: (0, i.jsxs)("div", {
                           className: X.rf,
@@ -291,8 +291,8 @@ function K(e) {
                   }),
                   (0, i.jsxs)(m.jl, {
                       "data-migration-pending": !0,
-                      align: _.A.Align.CENTER,
-                      justify: _.A.Justify.BETWEEN,
+                      align: N.A.Align.CENTER,
+                      justify: N.A.Justify.BETWEEN,
                       children: [
                           (0, i.jsx)(h.$, {
                               variant: "critical-primary",
@@ -341,17 +341,17 @@ function q(e) {
         [g, E] = l.useState(1),
         h = (0, v.D)("GuildBoostSlotCancellationModal"),
         S = (0, y.n)("GuildBoostSlotCancellationModal"),
-        _ = "control" !== h || S,
-        C = !_,
+        N = "control" !== h || S,
+        C = !N,
         { analyticsLocations: b } = (0, p.Ay)(T.A.GUILD_BOOST_CANCELLATION_MODAL);
     if (null == a)
-        t = _
+        t = N
             ? (0, i.jsxs)(u.d, {
                   transitionState: s,
                   onClose: r,
                   "aria-label": z.intl.string(z.t.CRwE7n),
                   children: [
-                      (0, i.jsx)(I.e0, { children: (0, i.jsx)(N.s3, { title: z.intl.string(z.t.CRwE7n) }) }),
+                      (0, i.jsx)(I.e0, { children: (0, i.jsx)(_.s3, { title: z.intl.string(z.t.CRwE7n) }) }),
                       (0, i.jsx)(d.c, {
                           children: (0, i.jsx)("div", { className: X.Lq, children: (0, i.jsx)(A.y, {}) }),
                       }),
@@ -372,7 +372,7 @@ function q(e) {
                 });
                 break;
             case 2:
-                t = _
+                t = N
                     ? (0, i.jsx)(K, {
                           premiumSubscription: a,
                           guildBoostSlotId: n.id,

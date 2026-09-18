@@ -28,29 +28,29 @@ function g(e) {
     let _ = (0, s.Kj)(l),
         { name: I, rarity: T } = C,
         { color: p } = (0, u.ag)(T),
-        S = (0, r.M)(g) ? h : E,
-        N = (_.size - _.offset - 2 * _.stroke) * 0.8,
-        L = _.size - _.stroke,
-        m = { width: 0.4 * N, height: 0.4 * N },
-        f = { width: m.width + 1, height: m.height + 1, right: _.stroke + 1, bottom: _.stroke + 1, padding: 0 };
+        N = (0, r.M)(g) ? h : E,
+        S = (_.size - _.offset - 2 * _.stroke) * 0.8,
+        f = _.size - _.stroke,
+        m = { width: 0.4 * S, height: 0.4 * S },
+        L = { width: m.width + 1, height: m.height + 1, right: _.stroke + 1, bottom: _.stroke + 1, padding: 0 };
     return (0, i.jsxs)("div", {
         className: A.kL,
-        style: { width: L, height: L, padding: _.stroke },
+        style: { width: f, height: f, padding: _.stroke },
         "aria-label": `${I() ?? ""}`,
         children: [
             (0, i.jsx)("div", {
                 className: A.r5,
-                children: (0, i.jsx)(a.TrophyIcon, { size: "custom", color: n ? p : S.trophy, width: N, height: N }),
+                children: (0, i.jsx)(a.TrophyIcon, { size: "custom", color: n ? p : N.trophy, width: S, height: S }),
             }),
             !n &&
                 (0, i.jsx)("div", {
                     className: A.dq,
-                    style: f,
-                    children: (0, i.jsx)(o.LockIcon, { size: "custom", color: S.locked, ...m }),
+                    style: L,
+                    children: (0, i.jsx)(o.LockIcon, { size: "custom", color: N.locked, ...m }),
                 }),
             n &&
                 T === u.md.LEGENDARY &&
-                (0, i.jsx)("div", { className: A.dq, style: f, children: (0, i.jsx)(c.A, { className: A.ox, ...m }) }),
+                (0, i.jsx)("div", { className: A.dq, style: L, children: (0, i.jsx)(c.A, { className: A.ox, ...m }) }),
         ],
     });
 }

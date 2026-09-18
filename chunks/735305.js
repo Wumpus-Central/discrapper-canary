@@ -22,8 +22,8 @@ function I(e) {
         {
             selectedSkuId: P,
             setPurchaseState: v,
-            contextMetadata: x,
-            paymentSourceId: _,
+            contextMetadata: _,
+            paymentSourceId: x,
             setPaymentSourceId: T,
             purchaseError: N,
             setPurchaseError: b,
@@ -46,7 +46,7 @@ function I(e) {
         U = {
             ...(0, m.p)(),
             paymentSources: A,
-            paymentSourceId: _,
+            paymentSourceId: x,
             setPaymentSourceId: T,
             purchaseError: N,
             setPurchaseError: b,
@@ -85,7 +85,7 @@ function I(e) {
                 from_step: n,
                 to_step: l,
                 step_duration_ms: i - G,
-                flow_duration_ms: i - x.startTime,
+                flow_duration_ms: i - _.startTime,
             });
         },
         isEligibleForTrial: L,

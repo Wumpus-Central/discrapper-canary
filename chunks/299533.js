@@ -1,4 +1,4 @@
-e.exports = {
+a.exports = {
     Q3: "defaultCursor_ca5fa9",
     L8: "rewardImage_ca5fa9",
     HZ: "unlockRewardBadge_ca5fa9",

@@ -21,7 +21,7 @@ function C(e) {
     let p = l.useCallback(() => {
             null != C && (C(), (0, A.N)(I, h.YX.DISMISS));
         }, [I, C]),
-        S = l.useCallback(() => {
+        N = l.useCallback(() => {
             (n(), (0, A.N)(I, h.YX.LEARN_MORE));
         }, [I, n]);
     return (0, i.jsxs)("div", {
@@ -34,10 +34,10 @@ function C(e) {
                 children:
                     null != r
                         ? E.intl.format(t, {
-                              hook: (e, t) => (0, i.jsx)(d.Anchor, { onClick: S, children: e }, t),
+                              hook: (e, t) => (0, i.jsx)(d.Anchor, { onClick: N, children: e }, t),
                               count: r,
                           })
-                        : E.intl.format(t, { hook: (e, t) => (0, i.jsx)(d.Anchor, { onClick: S, children: e }, t) }),
+                        : E.intl.format(t, { hook: (e, t) => (0, i.jsx)(d.Anchor, { onClick: N, children: e }, t) }),
             }),
             T && (0, i.jsx)(c.D, { className: g.b, onClick: p, children: (0, i.jsx)(u.P, {}) }),
         ],

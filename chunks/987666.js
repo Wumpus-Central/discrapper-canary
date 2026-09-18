@@ -38,7 +38,7 @@ function c(e) {
             discountOffer: f,
             subscriptionTrial: E,
         }),
-        x = {
+        _ = {
             purchaseButtonText: y,
             totalDue: h ? I.total : 0,
             renewalPrice: P,
@@ -48,5 +48,5 @@ function c(e) {
             intervalCount: t.intervalCount,
             startDate: A,
         };
-    return (0, l.jsx)(o._P, { variant: { type: C, ...x }, paymentSourceType: n, immediateDelivery: S });
+    return (0, l.jsx)(o._P, { variant: { type: C, ..._ }, paymentSourceType: n, immediateDelivery: S });
 }

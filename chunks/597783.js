@@ -14,8 +14,8 @@ function g(e, t) {
         p = (0, l.bG)([o.A], () => o.A.getProduct(e)),
         m = (0, c.i)(),
         _ = a.Ay.canUseShopDiscounts(m),
-        h = n.useRef(null),
-        E = n.useCallback(() => {
+        E = n.useRef(null),
+        h = n.useCallback(() => {
             let n = null != p ? (0, u.Br)(p, _, !1) : null,
                 l = null != p ? (0, u.c7)(p, _, !1) : void 0;
             s.default.track(d.HAw.COLLECTIBLES_TILE_IMPRESSION, {
@@ -35,18 +35,18 @@ function g(e, t) {
         S = n.useCallback(
             (e) => {
                 e
-                    ? null === h.current &&
-                      (h.current = setTimeout(() => {
-                          (E(), (h.current = null));
+                    ? null === E.current &&
+                      (E.current = setTimeout(() => {
+                          (h(), (E.current = null));
                       }, 1e3))
-                    : null !== h.current && (clearTimeout(h.current), (h.current = null));
+                    : null !== E.current && (clearTimeout(E.current), (E.current = null));
             },
-            [E],
+            [h],
         );
     return (
         n.useEffect(
             () => () => {
-                null !== h.current && (clearTimeout(h.current), (h.current = null));
+                null !== E.current && (clearTimeout(E.current), (E.current = null));
             },
             [e],
         ),

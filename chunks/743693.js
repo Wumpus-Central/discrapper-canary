@@ -11,7 +11,7 @@ function o(t) {
             isWishlisted: T,
             isBusy: c,
             isFirstTimeWishlister: b,
-            handleToggle: O,
+            handleToggle: N,
         } = (0, a.G)({ userId: d, sku: e, location: r, trackButtonClick: s });
     return (0, i.jsx)(l._, {
         skuId: e.id,
@@ -20,7 +20,7 @@ function o(t) {
         isBusy: c,
         isFirstTimeWishlister: b,
         isVisuallyHidden: !o && !T,
-        onClick: O,
+        onClick: N,
         ..._,
     });
 }

@@ -1,4 +1,4 @@
-n.d(t, { X: () => T, Y: () => _ });
+n.d(t, { X: () => T, Y: () => x });
 var l = n(477900);
 n(582128);
 var i = n(503698),
@@ -22,8 +22,8 @@ var i = n(503698),
     A = n(2242),
     P = n(375708),
     v = n(631907),
-    x = n(200791);
-function _(e) {
+    _ = n(200791);
+function x(e) {
     let { onClose: t, listing: n, step: i, guildId: a } = e,
         s = (0, S.Tq)(a),
         c = (0, p.A)(A.TQ),
@@ -40,7 +40,7 @@ function _(e) {
                   : (0, l.jsx)("img", { src: e, alt: "", className: v.F0 });
         })();
     return (0, l.jsxs)("div", {
-        className: r()(v.N1, { [x.G]: null != d, [v.TP]: c || null == d }),
+        className: r()(v.N1, { [_.G]: null != d, [v.TP]: c || null == d }),
         children: [
             d,
             (function () {

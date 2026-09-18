@@ -1,4 +1,4 @@
-n.d(t, { eR: () => b, Ky: () => _, wD: () => M, _i: () => j });
+n.d(t, { eR: () => b, Ky: () => x, wD: () => M, _i: () => j });
 var l = n(477900),
     i = n(582128),
     r = n(643909),
@@ -21,15 +21,15 @@ var C = n(648335),
     A = n(891640),
     P = n(818348),
     v = n(400400);
-let x = [y.pn.PAYMENT_ELEMENT],
-    _ = [
+let _ = [y.pn.PAYMENT_ELEMENT],
+    x = [
         y.pn.PAYPAL_INFORMATION,
         y.pn.VENMO_INFORMATION,
         y.pn.CASH_APP_INFORMATION,
         y.pn.EPS_INFORMATION,
         y.pn.PRZELEWY24_INFORMATION,
     ],
-    T = new Set([y.pn.PAYMENT_ELEMENT, ..._]);
+    T = new Set([y.pn.PAYMENT_ELEMENT, ...x]);
 function N(e) {
     let {
             step: t,
@@ -54,9 +54,9 @@ function N(e) {
             excludeBodySpacing: g,
         } = i.useMemo(
             () => ({
-                shouldShowPaymentElement: x.includes(t),
+                shouldShowPaymentElement: _.includes(t),
                 shouldShowAddressElement: t === y.pn.ADDRESS,
-                excludeBodySpacing: _.includes(t),
+                excludeBodySpacing: x.includes(t),
             }),
             [t],
         ),
@@ -136,9 +136,9 @@ function M(e) {
         c = i.useRef(null),
         d = i.useRef(null),
         [S, A] = i.useState(!1),
-        [v, x] = i.useState(!1),
-        _ = o === y.pn.CREDIT_CARD_INFORMATION || o === y.pn.PAYMENT_ELEMENT,
-        [N, b] = i.useState(_ ? P.he.CARD : null),
+        [v, _] = i.useState(!1),
+        x = o === y.pn.CREDIT_CARD_INFORMATION || o === y.pn.PAYMENT_ELEMENT,
+        [N, b] = i.useState(x ? P.he.CARD : null),
         [j, M] = i.useState(!1),
         [O, L] = i.useState(void 0),
         k = (function (e) {
@@ -159,7 +159,7 @@ function M(e) {
                     (s && null != l && l.log("PaymentElements onChange event:", e), A(e.complete), b(t));
                 },
                 onReady: () => {
-                    x(!0);
+                    _(!0);
                 },
                 wallets: D,
             }),
