@@ -18,7 +18,7 @@ let r = "social-layer-storefront-product-details-modal",
             async () => {
                 let { default: e } = await Promise.all([
                     n.e("903733"),
-                    n.e("937509"),
+                    n.e("196689"),
                     n.e("634225"),
                     n.e("198496"),
                     n.e("307389"),
