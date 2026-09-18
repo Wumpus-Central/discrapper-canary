@@ -1,8 +1,8 @@
-e.d(t, { A: () => s });
+e.d(t, { A: () => n });
 var r = e(582128),
-    n = e(915667);
-function s(u, t) {
+    d = e(915667);
+function n(u, t) {
     return r.useCallback(() => {
-        (0, n.A)(u, t);
+        (0, d.A)(u, t);
     }, [u, t]);
 }

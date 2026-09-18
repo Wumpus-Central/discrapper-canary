@@ -625,8 +625,8 @@ var eq = n(554146),
     e2 = n(565645),
     e3 = n(775602),
     e6 = n(826673),
-    e8 = n(182922),
-    e7 = n(532624),
+    e7 = n(182922),
+    e8 = n(532624),
     e5 = n(531685),
     e4 = n(723702),
     e9 = n(350535),
@@ -638,9 +638,9 @@ function tt(e) {
         a = (0, h.bG)([em.A], () => em.A.getGuild(t?.guildId)),
         o = (0, h.bG)([e3.Ay], () => e3.Ay.useReducedMotion, []),
         u = (0, h.bG)([e5.A], () => e5.A.isFocused()),
-        c = (0, h.bG)([e7.Ay], () => e7.Ay.getKeybindForAction(eS.hCu.SOUNDBOARD_HOLD));
+        c = (0, h.bG)([e8.Ay], () => e8.Ay.getKeybindForAction(eS.hCu.SOUNDBOARD_HOLD));
     if (null != t && s.length > 0)
-        return (0, l.jsx)(e8.A, {
+        return (0, l.jsx)(e7.A, {
             graphicPrimary:
                 null != t.emojiId || null != t.emojiName
                     ? (0, l.jsx)(e2.A, { emojiId: t.emojiId, emojiName: t.emojiName, className: te.Zg })
@@ -1275,7 +1275,7 @@ function tA(e) {
             [eP, eD, eV, ew.length],
         ),
         e6 = i.useCallback((e) => eL((0, eu.lG)(e, X, V, s, L)), [s, V, X, L]),
-        e8 = i.useCallback(
+        e7 = i.useCallback(
             (e) => {
                 (0, j.L3)(e, async () => {
                     let { default: e } = await n.e("811562").then(n.bind(n, 666801));
@@ -1284,7 +1284,7 @@ function tA(e) {
             },
             [L],
         ),
-        e7 = i.useCallback(
+        e8 = i.useCallback(
             () =>
                 N
                     ? (0, l.jsx)(J.Gq, {
@@ -1297,11 +1297,11 @@ function tA(e) {
                     : (0, l.jsx)(S.D, {
                           tabIndex: 0,
                           className: td.Jm,
-                          onClick: e8,
+                          onClick: e7,
                           "aria-label": eG.intl.string(eG.t.kbFsAD),
                           children: (0, l.jsx)(tx, { className: td.By }),
                       }),
-            [N, e8],
+            [N, e7],
         ),
         e5 = i.useCallback(
             (e) =>
@@ -1391,7 +1391,7 @@ function tA(e) {
                     renderSectionFooter: e3,
                     renderSection: e1,
                     renderCategoryList: e5,
-                    renderHeaderAccessories: e7,
+                    renderHeaderAccessories: e8,
                     rowHeight: 48,
                     sectionHeaderHeight: eQ,
                     sectionFooterHeight: e0,

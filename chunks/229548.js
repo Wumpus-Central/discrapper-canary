@@ -1,4 +1,4 @@
-n.d(t, { FC: () => s, W2: () => d, ru: () => E, ty: () => o, vB: () => A, vn: () => _, ww: () => a });
+n.d(t, { FC: () => s, W2: () => d, ru: () => _, ty: () => o, vB: () => A, vn: () => E, ww: () => a });
 var u = n(554146),
     l = n(131607),
     r = n(379229),
@@ -12,10 +12,10 @@ function s(e, t) {
 function A(e, t) {
     return (0, l.Cc)(e ? u.M.GAME_SERVER_NEW_GAMES_COACHMARK : null, i.Yh.FEATURED_PRODUCT_ID, t);
 }
-function _(e) {
+function E(e) {
     return (0, l.kn)(e ? [u.M.GAME_SERVER_PRICING_CHANGE_COACHMARK] : []);
 }
-function E(e) {
+function _(e) {
     return (0, l.Wl)(e ? u.M.GUILD_POWERUP_NOTIFICATION : null, { cooldownDurationMs: r.lE });
 }
 function a(e, t, n) {

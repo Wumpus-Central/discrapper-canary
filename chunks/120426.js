@@ -1,11 +1,11 @@
-n.d(t, { F: () => l, x: () => s });
+n.d(t, { F: () => l, x: () => o });
 var i = n(762399),
     r = n(940107);
 function l(e, t) {
     let n = e?.querySelector("iframe");
     return null != n ? n : null == t ? null : document.querySelector(`[data-frame-id="${CSS.escape(t)}"] iframe`);
 }
-function s(e, t, n, l) {
+function o(e, t, n, l) {
     return (0, r.W)(
         e,
         "capture-now",

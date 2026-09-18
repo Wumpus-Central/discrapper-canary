@@ -1,4 +1,4 @@
-(n.d(t, { EA: () => s, J8: () => l, ZW: () => o, mn: () => r }), n(321073));
+(n.d(t, { EA: () => o, J8: () => l, ZW: () => s, mn: () => r }), n(321073));
 let i = new Map();
 function r(e, t) {
     let n = i.get(e) ?? [];
@@ -25,21 +25,21 @@ function l(e) {
         }
     return null;
 }
-function s(e) {
+function o(e) {
     return i.has(e);
 }
-function o(e, t, n) {
+function s(e, t, n) {
     let i = l(e);
     return null != i
         ? Promise.resolve(i)
-        : s(e) && n?.aborted !== !0
+        : o(e) && n?.aborted !== !0
           ? (console.debug("[vibegrations] preview frame not ready, waiting", { projectId: e, timeoutMs: t }),
             new Promise((i) => {
                 let r = Date.now(),
-                    o = r + t;
-                function a(t) {
+                    s = r + t;
+                function u(t) {
                     (window.clearInterval(d),
-                        n?.removeEventListener("abort", u),
+                        n?.removeEventListener("abort", a),
                         console.debug("[vibegrations] preview frame wait finished", {
                             projectId: e,
                             found: null != t,
@@ -47,14 +47,14 @@ function o(e, t, n) {
                         }),
                         i(t));
                 }
-                function u() {
-                    a(null);
+                function a() {
+                    u(null);
                 }
                 let d = window.setInterval(() => {
                     let t = l(e);
-                    (null != t || Date.now() >= o || !s(e)) && a(t);
+                    (null != t || Date.now() >= s || !o(e)) && u(t);
                 }, 100);
-                n?.addEventListener("abort", u, { once: !0 });
+                n?.addEventListener("abort", a, { once: !0 });
             }))
           : Promise.resolve(null);
 }

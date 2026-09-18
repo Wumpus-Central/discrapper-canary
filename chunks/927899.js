@@ -1,10 +1,10 @@
-n.d(e, { Xv: () => d, Z0: () => p, qs: () => E, xA: () => a });
-var r = n(587895),
-    l = n(174459),
-    i = n(972786),
+n.d(t, { Xv: () => f, Z0: () => h, qs: () => p, xA: () => u });
+var i = n(587895),
+    r = n(174459),
+    l = n(972786),
     o = n(683180),
-    u = n(652215);
-let a = {
+    s = n(652215);
+let u = {
     BUILD_FAILED: "BUILD_FAILED",
     HEALTHCHECK_FAILED: "HEALTHCHECK_FAILED",
     AGENT_ERROR: "AGENT_ERROR",
@@ -14,32 +14,32 @@ let a = {
     RUNTIME_FRAME_ERROR: "RUNTIME_FRAME_ERROR",
     RUNTIME_WORKER_ERROR: "RUNTIME_WORKER_ERROR",
 };
-function s(t) {
-    return null == t || "" === t ? null : t.slice(0, 256);
+function a(e) {
+    return null == e || "" === e ? null : e.slice(0, 256);
 }
-function _(t) {
-    let e = i.Ay.getProject(t);
+function d(e) {
+    let t = l.Ay.getProject(e);
     return {
-        project_id: t,
-        project_name: s(e?.name),
-        application_id: e?.application_id ?? null,
-        preview_application_id: e?.preview_application_id ?? null,
+        project_id: e,
+        project_name: a(t?.name),
+        application_id: t?.application_id ?? null,
+        preview_application_id: t?.preview_application_id ?? null,
     };
 }
-function c(t, e) {
-    let n = i.Ay.getProject(t),
-        r = (e ? n?.preview_guild_id : n?.guild_id) ?? null,
-        l = (e ? n?.preview_application_id : n?.application_id) ?? null;
-    return { guild_id: r, channel_id: null != r && null != l ? (0, o.SH)(r, l) : null };
+function c(e, t) {
+    let n = l.Ay.getProject(e),
+        i = (t ? n?.preview_guild_id : n?.guild_id) ?? null,
+        r = (t ? n?.preview_application_id : n?.application_id) ?? null;
+    return { guild_id: i, channel_id: null != i && null != r ? (0, o.SH)(i, r) : null };
 }
-function d(t, e) {
+function f(e, t) {
     var n;
-    l.default.track(u.HAw.VIBEGRATION_TURN_RESULTED, {
-        ..._(t),
-        turn_result: e.result ?? null,
-        turn_summary: s(e.detail ?? e.summary),
-        turn_cost: e.cost_usd ?? null,
-        ...(null == (n = e.tokens)
+    r.default.track(s.HAw.VIBEGRATION_TURN_RESULTED, {
+        ...d(e),
+        turn_result: t.result ?? null,
+        turn_summary: a(t.detail ?? t.summary),
+        turn_cost: t.cost_usd ?? null,
+        ...(null == (n = t.tokens)
             ? {
                   turn_input_tokens: null,
                   turn_output_tokens: null,
@@ -57,27 +57,27 @@ function d(t, e) {
               }),
     });
 }
-function E(t, e) {
-    let { isPreview: n } = e,
-        i = _(t),
-        o = n ? i.preview_application_id : i.application_id,
-        a = null != o ? r.A.getApplication(o) : null;
-    l.default.track(u.HAw.VIBEGRATION_DEPLOYED, {
-        ...i,
-        project_summary: s(a?.description),
+function p(e, t) {
+    let { isPreview: n } = t,
+        l = d(e),
+        o = n ? l.preview_application_id : l.application_id,
+        u = null != o ? i.A.getApplication(o) : null;
+    r.default.track(s.HAw.VIBEGRATION_DEPLOYED, {
+        ...l,
+        project_summary: a(u?.description),
         is_preview: n,
-        ...c(t, n),
+        ...c(e, n),
     });
 }
-function p(t, e) {
-    let { location: n, code: r, message: i, details: o, isPreview: a = !0 } = e;
-    l.default.track(u.HAw.VIBEGRATION_ERRORED, {
-        ..._(t),
-        is_preview: a,
-        ...c(t, a),
+function h(e, t) {
+    let { location: n, code: i, message: l, details: o, isPreview: u = !0 } = t;
+    r.default.track(s.HAw.VIBEGRATION_ERRORED, {
+        ...d(e),
+        is_preview: u,
+        ...c(e, u),
         error_location: n,
-        error_code: r,
-        error_message: s(i),
-        error_details: s(o),
+        error_code: i,
+        error_message: a(l),
+        error_details: a(o),
     });
 }

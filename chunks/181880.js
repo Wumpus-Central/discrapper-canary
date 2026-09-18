@@ -11,9 +11,9 @@ var i = n(477900),
     A = n(626584),
     E = n(967198),
     h = n(594061),
-    g = n(617617);
-function m() {
-    return g.A.getDefaultGuildThemePreference() === c.tI.PERSONAL ? c.tI.PERSONAL : c.tI.GUILD;
+    m = n(617617);
+function g() {
+    return m.A.getDefaultGuildThemePreference() === c.tI.PERSONAL ? c.tI.PERSONAL : c.tI.GUILD;
 }
 async function I(e, t) {
     let n = t ? c.tI.PERSONAL : c.tI.GUILD;
@@ -27,10 +27,10 @@ let p = "GUILD_THEME_NUX_MODAL",
     T = new A.A("GuildThemeNuxModal");
 function M(e) {
     let { guildId: t, markAsDismissed: n, transitionState: A, onClose: h } = e,
-        [g, p] = s.useState(m),
+        [m, p] = s.useState(g),
         [M, f] = s.useState(null),
         [O, R] = s.useState("init"),
-        L = g === c.tI.PERSONAL,
+        L = m === c.tI.PERSONAL,
         D = (0, l.bG)([E.A], () => E.A.getGuildId()),
         x = (0, l.bG)(
             [C.A],
@@ -101,7 +101,7 @@ function M(e) {
                 (0, i.jsx)(d.l, {
                     selectionMode: "single",
                     options: H,
-                    value: g,
+                    value: m,
                     onSelectionChange: U,
                     fullWidth: !0,
                     label: N.intl.string(N.t.Q7mm4g),
