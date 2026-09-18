@@ -372,8 +372,8 @@ var eJ = n(734066),
     e3 = n(866665),
     e5 = n(408278),
     e7 = n(625903),
-    e8 = n(404778),
-    e6 = n(689175),
+    e6 = n(404778),
+    e8 = n(689175),
     e4 = n(821609),
     e9 = n(532624),
     te = n(927813),
@@ -563,9 +563,9 @@ function t_(e) {
                             }),
                     ],
                 }),
-                (0, i.jsx)(e8.c, {}),
+                (0, i.jsx)(e6.c, {}),
                 A.length > 0
-                    ? (0, i.jsxs)(e6.Ch, {
+                    ? (0, i.jsxs)(e8.Ch, {
                           className: tT.Vg,
                           fade: !0,
                           disableFocusRingScope: !0,
@@ -805,8 +805,8 @@ var tY = n(397562),
     t3 = n(915614),
     t5 = n(744753),
     t7 = n(559506),
-    t8 = n(646986),
-    t6 = n(657538),
+    t6 = n(646986),
+    t8 = n(657538),
     t4 = n(946356),
     t9 = n(465829),
     ne = n(624479),
@@ -1411,8 +1411,8 @@ function n5(e) {
         : V.intl.formatToPlainString(V.t["9OFjSe"], { dateString: n, timeString: i });
 }
 var n7 = n(996988),
-    n8 = n(207634),
-    n6 = n(47453);
+    n6 = n(207634),
+    n8 = n(47453);
 function n4(e) {
     let { currentUser: t, onClose: n, setPopoutRef: a, highlightBadge: r, openedAt: o, className: d } = e,
         h = __OVERLAY__,
@@ -1691,13 +1691,13 @@ function n4(e) {
                                 themeType: n7.d.POPOUT,
                                 children: [
                                     (0, i.jsxs)("div", {
-                                        className: n6.wx,
+                                        className: n8.wx,
                                         children: [
                                             (0, i.jsx)(t3.A, { user: t, displayProfile: f, themeType: n7.d.POPOUT }),
                                             (0, i.jsx)(t1.A, {
                                                 user: t,
                                                 displayProfile: f,
-                                                avatarSize: n8.T[n7.d.POPOUT].avatarSize,
+                                                avatarSize: n6.T[n7.d.POPOUT].avatarSize,
                                                 onOpenProfile: h ? void 0 : q,
                                             }),
                                             (0, i.jsx)(ns.A, {
@@ -1737,12 +1737,12 @@ function n4(e) {
                                                 onClose: n,
                                             }),
                                             Y &&
-                                                (0, i.jsx)(t6.A, {
+                                                (0, i.jsx)(t8.A, {
                                                     user: t,
                                                     widgets: f?.widgets,
                                                     onOpenUserProfileModal: q,
                                                 }),
-                                            (0, i.jsx)(t8.A, {
+                                            (0, i.jsx)(t6.A, {
                                                 user: t,
                                                 currentUser: t,
                                                 onOpenUserProfileModal: q,
@@ -2210,15 +2210,15 @@ function i7(e) {
         actions: m,
     });
 }
-var i8 = n(764014);
-function i6(e) {
+var i6 = n(764014);
+function i8(e) {
     let { targetElementRef: t } = e,
         n = (0, tP.A)((e) => e.isOpen),
         [l, a] = (0, tO.kn)(n ? [] : [u.M.ORB_WALLET_PROFILE_INTRODUCTION_COACHMARK], z.m.ACCOUNT_NAME_ZONE, !0);
     return l === u.M.ORB_WALLET_PROFILE_INTRODUCTION_COACHMARK
         ? (0, i.jsx)(G.A, {
               targetElementRef: t,
-              graphic: { type: "image", src: i8.A },
+              graphic: { type: "image", src: i6.A },
               position: "top",
               alignmentStrategy: "edge",
               align: "left",
@@ -2295,7 +2295,7 @@ function i4(e) {
               : (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(i5, { groupName: z.m.ACCOUNT_NAME_ZONE, targetElementRef: e.targetElementRef }),
-                        e.isOrbchievementsEnabled && (0, i.jsx)(i6, { targetElementRef: e.targetElementRef }),
+                        e.isOrbchievementsEnabled && (0, i.jsx)(i8, { targetElementRef: e.targetElementRef }),
                         (0, i.jsx)(ik.Ay, {
                             contentTypes: e.additionalDCs ?? [],
                             groupName: z.m.ACCOUNT_NAME_ZONE,
@@ -2724,7 +2724,7 @@ function lO(e) {
         (p(!1), s());
     }, [s]);
     if (null != a) {
-        let e = (0, lR.A)("1789756343008", !0);
+        let e = (0, lR.A)("1789756396630", !0);
         t =
             null != e
                 ? V.intl.formatToPlainString(V.t.wve4kg, { webBuildOverride: a.id, builtAt: e })
