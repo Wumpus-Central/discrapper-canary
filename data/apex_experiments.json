@@ -2927,28 +2927,6 @@
     }
   },
   {
-    "name": "2026-05-nitro-home-header",
-    "kind": "user",
-    "defaultConfig": {
-      "treatment": "control"
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "treatment": "treatment_a"
-      },
-      "2": {
-        "treatment": "treatment_b"
-      },
-      "3": {
-        "treatment": "treatment_c"
-      }
-    }
-  },
-  {
     "name": "2026-05-quest-home-tile-redesign",
     "kind": "user",
     "defaultConfig": {
@@ -4233,22 +4211,6 @@
       },
       "1": null,
       "2": null
-    }
-  },
-  {
-    "kind": "user",
-    "name": "2026-07-nitro-home-header-followup",
-    "defaultConfig": {
-      "enabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true
-      }
     }
   },
   {

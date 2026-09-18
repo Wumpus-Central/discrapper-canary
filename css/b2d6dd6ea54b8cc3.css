@@ -162,4 +162,112 @@
     }
 }
 
-/*# sourceMappingURL=6ec29e82aa5b033c.css.map*/
+.timerContainer_d0d75b {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative
+}
+
+.timeUnitsOuterContainer_d0d75b {
+    display: flex;
+    flex-direction: row;
+    justify-content: center
+}
+
+.timeUnitInnerContainer_d0d75b {
+    display: flex;
+    flex-direction: column;
+    gap: 6px
+}
+
+.time_d0d75b {
+    display: flex;
+    flex-direction: row;
+    gap: 2px
+}
+
+.timeBoxOutline_d0d75b {
+    align-content: center;
+    background-color: hsl(var(--opacity-24-hsl)/.23921568627450981);
+    border-radius: 6px;
+    height: 36px;
+    justify-content: center;
+    width: 24px
+}
+
+.largeDigits_d0d75b .timeBoxOutline_d0d75b {
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+.unitDivider_d0d75b {
+    margin: 0 6px;
+    position: relative;
+    top: 4px
+}
+
+.container_a4e9ae {
+    --custom-avatar-size: 56px;
+    flex-direction: row;
+    gap: var(--space-16);
+    width: 100%
+}
+
+.avatar_a4e9ae,
+.container_a4e9ae {
+    align-items: center;
+    display: flex
+}
+
+.avatar_a4e9ae {
+    flex-shrink: 0;
+    height: calc(var(--custom-avatar-size)*1.2);
+    width: calc(var(--custom-avatar-size)*1.2)
+}
+
+.displayName_a4e9ae {
+    color: var(--text-default);
+    font-size: 44px;
+    line-height: normal;
+    max-width: 380px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+@container premium-marketing-page-container (max-width: 720px) {
+    .displayName_a4e9ae {
+        font-size: 42px
+    }
+}
+
+@container premium-marketing-page-container (max-width: 540px) {
+    .displayName_a4e9ae {
+        font-size: 38px
+    }
+}
+
+html:not(.mana-type-consolidation) .header__07389 {
+    font-size: 50px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 100%
+}
+
+@container premium-marketing-page-container (max-width: 720px) {
+    html:not(.mana-type-consolidation) .header__07389.responsive__07389 {
+        font-size: 42px;
+        letter-spacing: -.84px
+    }
+}
+
+@container premium-marketing-page-container (max-width: 540px) {
+    html:not(.mana-type-consolidation) .header__07389.responsive__07389 {
+        font-size: 38px;
+        letter-spacing: -.76px
+    }
+}
+
+/*# sourceMappingURL=b2d6dd6ea54b8cc3.css.map*/
