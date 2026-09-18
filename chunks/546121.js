@@ -18,7 +18,11 @@ function u(e, t) {
         : o.intl.formatToPlainString(u ? o.t["spl/XS"] : o.t.rUfeQx, { count: a });
 }
 function a(e) {
-    if (e.percentComplete > 0) return o.intl.formatToPlainString(o.t["pF/deA"], { durationShort: u(e) });
     let { truncateMoreThanSeconds: t } = i.getConfig({ location: s.rE.QUESTS_CARD });
-    return o.intl.formatToPlainString(o.t.CHrvqg, { durationShort: u(e, { truncate: t }) });
+    return (function (e, t) {
+        let { truncateMoreThanSeconds: n } = t;
+        return e.percentComplete > 0
+            ? o.intl.formatToPlainString(o.t["pF/deA"], { durationShort: u(e) })
+            : o.intl.formatToPlainString(o.t.CHrvqg, { durationShort: u(e, { truncate: n }) });
+    })(e, { truncateMoreThanSeconds: t });
 }
