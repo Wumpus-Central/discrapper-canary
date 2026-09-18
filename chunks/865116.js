@@ -27,6 +27,10 @@ let l = {
         },
         explicit_media_redaction_ignore_pending_scan: { label: "Ignore pending scan on explicit media", category: 1 },
         analytics_debugger: { label: "Enable analytics debugger view", category: 1 },
+        navigation_tti_visualizer: {
+            label: "Show Navigation TTI included, excluded, and mixed regions with their measured times",
+            category: 1,
+        },
         idle_status_indicator: { label: "Enable idle status indicator", category: 1 },
         highlight_mana_text: {
             label: "Mana Text Migration Highlighter. Green: migrated Text/Heading. Dashed red: migrated but a caller style overrides the variant, so it will not move with the experiment. Solid red: unmigrated LegacyText. Yellow: TextStyleSheet read directly (experiment-reachable, not migrated); requires an app restart to take effect.",
