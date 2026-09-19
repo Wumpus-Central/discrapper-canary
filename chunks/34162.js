@@ -104,10 +104,16 @@ class B extends r.Ay.Store {
                         );
                     })(),
                     n = C.Ay.isMuted(e),
-                    i = t.selectedVoiceGuildId === e;
-                if (!i && n) return D;
-                let r = o.Ay.getEmbeddedActivitiesForGuild(e);
-                if (i) {
+                    r = t.selectedVoiceGuildId === e;
+                if (!r && n) return D;
+                let a = o.Ay.getEmbeddedActivitiesForGuild(e).filter((e) => {
+                    let n = T.A.getBasicChannel((0, d.H)(e.location));
+                    return (
+                        n?.type !== i.r.GUILD_SPACE &&
+                        (0 === t.blockedOrIgnoredUserIds.size || !(0, c.PH)([...e.userIds], t.blockedOrIgnoredUserIds))
+                    );
+                });
+                if (r) {
                     let n = t.isSelectedVoiceChannelStage;
                     return {
                         audio: !0,
@@ -115,15 +121,11 @@ class B extends r.Ay.Store {
                         screenshare: null != f.A.getActiveStreamForUser(t.currentUserId, e),
                         liveStage: n,
                         activeEvent: (0, A.wX)(e)?.channel_id === t.selectedVoiceChannelId,
-                        activity: r.length > 0,
+                        activity: a.length > 0,
                         isCurrentUserConnected: !0,
                     };
                 }
-                let a =
-                        0 === t.blockedOrIgnoredUserIds.size
-                            ? r
-                            : r.filter((e) => !(0, c.PH)([...e.userIds], t.blockedOrIgnoredUserIds)),
-                    s = g.A.getGuild(e)?.afkChannelId,
+                let s = g.A.getGuild(e)?.afkChannelId,
                     _ = O.A.getVoiceStates(e),
                     E = !1,
                     y = !1;
@@ -160,8 +162,8 @@ class B extends r.Ay.Store {
                     isCurrentUserConnected: !1,
                 };
             })(e),
-            i = null != t && (0, a.A)(t.value, n) ? t.value : n;
-        return (v.set(e, { value: i, version: b }), i);
+            r = null != t && (0, a.A)(t.value, n) ? t.value : n;
+        return (v.set(e, { value: r, version: b }), r);
     }
 }
 let V = new B(s.h, {
