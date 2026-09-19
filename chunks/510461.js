@@ -34,7 +34,7 @@ function L(e) {
 ${A.intl.formatToPlainString(I.default.bhoZhI, { channel: e })}`;
 }
 var w = l(683180),
-    G = l(681466),
+    G = l(512287),
     M = l(480007),
     _ = l(652215),
     R = l(381941),

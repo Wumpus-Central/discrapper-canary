@@ -3,6 +3,39 @@ let a = [
     {
         date: "2026-09-18",
         platforms: ["mobile"],
+        summary: "On phones, opening the chat in an app\u2019s channel now marks its messages read.",
+    },
+    {
+        date: "2026-09-18",
+        platforms: ["mobile"],
+        summary: "On phones, hold an app\u2019s channel to find Edit App, which opens it in Conjure.",
+    },
+    {
+        date: "2026-09-18",
+        platforms: ["mobile"],
+        summary: "On phones, an app\u2019s channel wears the app icon in the channel list, as it does on desktop.",
+    },
+    {
+        date: "2026-09-18",
+        platforms: ["mobile"],
+        summary:
+            "On phones, new messages in an app\u2019s channel float over the running app for a moment; tap one to open the chat.",
+    },
+    {
+        date: "2026-09-18",
+        platforms: ["mobile"],
+        summary:
+            "On phones, the chat button in an app\u2019s channel shows a dot when there are new messages, and the count when you were mentioned.",
+    },
+    {
+        date: "2026-09-18",
+        platforms: ["mobile"],
+        summary:
+            "On phones, an app\u2019s sign-in prompt now appears when it asks for one, in its channel and in the builder\u2019s Frame.",
+    },
+    {
+        date: "2026-09-18",
+        platforms: ["mobile"],
         summary:
             "On phones, a conjured card on your own profile has a refresh button, so a fresh build shows up without waiting.",
     },
