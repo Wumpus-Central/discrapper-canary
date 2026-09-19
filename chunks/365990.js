@@ -40,7 +40,7 @@ var m = n(604121),
     A = n(793574),
     C = n(688810),
     E = n(131607),
-    I = n(580194),
+    I = n(380619),
     y = n(70283),
     S = n(682618),
     v = n(982240),
@@ -51,8 +51,8 @@ var m = n(604121),
     T = n(402860),
     R = n(287809),
     O = n(427262),
-    L = n(652215),
-    M = n(49999),
+    M = n(652215),
+    L = n(49999),
     k = n(556427),
     w = n(375708);
 function P(e) {
@@ -75,13 +75,13 @@ function P(e) {
                     {
                         text: w.intl.string(w.t.RzWDqY),
                         onClick: () => {
-                            (null != c && (0, T.openUserProfileModal)({ userId: c.id }), s?.(), r(M.i.TAKE_ACTION));
+                            (null != c && (0, T.openUserProfileModal)({ userId: c.id }), s?.(), r(L.i.TAKE_ACTION));
                         },
                     },
                 ],
                 caretConfig: { align: "center" },
                 onRequestClose: function () {
-                    (s?.(), r(M.i.USER_DISMISS));
+                    (s?.(), r(L.i.USER_DISMISS));
                 },
             }),
         ],
@@ -95,7 +95,7 @@ function D(e) {
         { openGiftModal: c } = (0, _.$)({
             giftRecipient: u,
             analyticsLocations: o,
-            analyticsObject: { object: L.ZSU.BUTTON_CTA, objectType: L.AnalyticsObjectTypes.GIFT },
+            analyticsObject: { object: M.ZSU.BUTTON_CTA, objectType: M.AnalyticsObjectTypes.GIFT },
             location: "NewBadgeCoachmark",
         });
     return (0, l.jsxs)(l.Fragment, {
@@ -116,13 +116,13 @@ function D(e) {
                         text: w.intl.string(k.default.DZnomS),
                         icon: f.GiftIcon,
                         onClick: () => {
-                            (c(), n?.(), s(M.i.TAKE_ACTION));
+                            (c(), n?.(), s(L.i.TAKE_ACTION));
                         },
                     },
                 ],
                 caretConfig: { align: "center" },
                 onRequestClose: function () {
-                    (n?.(), s(M.i.USER_DISMISS));
+                    (n?.(), s(L.i.USER_DISMISS));
                 },
             }),
         ],
@@ -138,14 +138,14 @@ function U(e) {
         ? (0, l.jsx)(P, { currentTier: r, giftCount: a, onComplete: n, markAsDismissed: i, children: s })
         : (0, l.jsx)(D, { channel: t, onComplete: n, markAsDismissed: i, children: s });
 }
-var G = n(412260),
-    V = n(927813),
+var V = n(412260),
+    G = n(927813),
     F = n(935208),
     H = n(240248),
     B = n(767089),
     W = n(621255),
     K = n(495088);
-let z = V.A.Millis.DAYS_30;
+let z = G.A.Millis.DAYS_30;
 function Z(e) {
     let { boxAnimationUrl: t, hovered: n, onClick: s } = e,
         r = i.useCallback(() => Promise.resolve({ default: t }), [t]);
@@ -212,14 +212,14 @@ let J = i.memo(function (e) {
         m = (0, o.bG)([R.default], () => R.default.getCurrentUser()),
         f = null != m ? F.default.age(m.id) : 0,
         p = (0, O.R1)(n),
-        x = (0, o.bG)([G.A], () => {
-            let e = G.A.getMarketingComponentByType(a.C.GIFT_ICON);
+        x = (0, o.bG)([V.A], () => {
+            let e = V.A.getMarketingComponentByType(a.C.GIFT_ICON);
             return null == e || "giftIcon" !== e.properties.properties.oneofKind
                 ? null
                 : e.properties.properties.giftIcon;
         }),
-        b = (0, o.bG)([G.A], () => {
-            let e = G.A.getMarketingComponentByType(a.C.GIFT_ICON_COACHMARK);
+        b = (0, o.bG)([V.A], () => {
+            let e = V.A.getMarketingComponentByType(a.C.GIFT_ICON_COACHMARK);
             return null == e || "giftIconCoachmark" !== e.properties.properties.oneofKind
                 ? null
                 : e.properties.properties.giftIconCoachmark;
@@ -233,9 +233,9 @@ let J = i.memo(function (e) {
             if (k?.background != null) return { "--custom-promotion-gradient": k.background };
         }, [k]),
         P = !(0, H.uJ)(x?.boxAnimationUrl) || !(0, H.uJ)(x?.trinketAnimationUrl),
-        D = (0, o.bG)([G.A], () => G.A.getGiftPromotion()?.id),
-        V = null != b && !t && !h && f >= z && null != D,
-        [B, K] = (0, E.Cc)(V ? u.M.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK : null, D ?? ""),
+        D = (0, o.bG)([V.A], () => V.A.getGiftPromotion()?.id),
+        G = null != b && !t && !h && f >= z && null != D,
+        [B, K] = (0, E.Cc)(G ? u.M.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK : null, D ?? ""),
         Z = null != B,
         { showGiftingBadgeCoachmark: Y, markGiftingBadgeCoachmarkAsDismissed: J } = (function (e) {
             let { location: t, enabled: n } = e,
@@ -258,17 +258,17 @@ let J = i.memo(function (e) {
             giftRecipient: p,
             analyticsLocations: s,
             analyticsObject: {
-                page: n.isPrivate() ? L.liQ.DM_CHANNEL : L.liQ.GUILD_CHANNEL,
-                section: L.JJy.CHANNEL_TEXT_AREA,
-                object: P ? L.ZSU.GIFTING_PROMOTION_BUTTON : L.ZSU.BUTTON_ICON,
-                objectType: L.AnalyticsObjectTypes.GIFT,
+                page: n.isPrivate() ? M.liQ.DM_CHANNEL : M.liQ.GUILD_CHANNEL,
+                section: M.JJy.CHANNEL_TEXT_AREA,
+                object: P ? M.ZSU.GIFTING_PROMOTION_BUTTON : M.ZSU.BUTTON_ICON,
+                objectType: M.AnalyticsObjectTypes.GIFT,
             },
             wishlistAnalyticsObject: P
                 ? {
-                      page: n.isPrivate() ? L.liQ.DM_CHANNEL : L.liQ.GUILD_CHANNEL,
-                      section: L.JJy.CHANNEL_TEXT_AREA,
-                      object: L.ZSU.BUTTON_ICON,
-                      objectType: L.AnalyticsObjectTypes.GIFT,
+                      page: n.isPrivate() ? M.liQ.DM_CHANNEL : M.liQ.GUILD_CHANNEL,
+                      section: M.JJy.CHANNEL_TEXT_AREA,
+                      object: M.ZSU.BUTTON_ICON,
+                      objectType: M.AnalyticsObjectTypes.GIFT,
                   }
                 : void 0,
             location: P ? "gift-promotion-button" : "gift-button",
@@ -279,7 +279,7 @@ let J = i.memo(function (e) {
         hovered: $,
         isGenericGift: Q || ee,
         onClick: function () {
-            (d(!1), K(M.i.TAKE_ACTION), J(M.i.TAKE_ACTION), X());
+            (d(!1), K(L.i.TAKE_ACTION), J(L.i.TAKE_ACTION), X());
         },
     });
     return (0, l.jsx)("div", {
