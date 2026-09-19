@@ -871,6 +871,8 @@
   "BLDsiz": "Feature Showcase",
   "jK1PL5": "A tour of everything an app can do inside Discord: sign-in, sharing, menus, live voice and video, saved data.",
   "9D9L0S": "Can you import the {templateName} template",
+  "idRAwG": "Moderation Bot",
+  "oP90O/": "An AutoMod bot you describe in plain English, with a tester that shows what it would do to any message.",
   "ER1uQ4": "Start from the {name} template",
   "ieAgex": "Rust Sphere",
   "5yvj+f": "A spinning, lit 3D globe drawn by Rust running as WebAssembly, on WebGPU where available.",
