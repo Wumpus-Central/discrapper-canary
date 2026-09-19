@@ -134,10 +134,10 @@ let j = {
     T = (0, p.A)([S, j]),
     R = (0, p.A)([v, j]),
     O = c.X(T),
-    L = c.X(R),
-    M = { max: 1 / 0, maxAge: +g.A.Millis.MINUTE, updateAgeOnGet: !0 },
-    k = new (o())(M),
-    w = new (o())(M);
+    M = c.X(R),
+    L = { max: 1 / 0, maxAge: +g.A.Millis.MINUTE, updateAgeOnGet: !0 },
+    k = new (o())(L),
+    w = new (o())(L);
 function P(e, t, n, l, s) {
     let { content: r, type: a } = n,
         o = null == n.originalMatch && "text" === a && "string" == typeof r;
@@ -149,7 +149,7 @@ function P(e, t, n, l, s) {
         case "paragraph":
         case "text":
         case "emoticon":
-            return V(e, t, r || "", l, s);
+            return G(e, t, r || "", l, s);
         case "emoji":
         case "customEmoji":
             if ((t.startsWith(u[0], l) || (l = K(e, t, l, t.length)), t.startsWith(u[0], l)))
@@ -248,7 +248,7 @@ function P(e, t, n, l, s) {
             return (
                 (l = F({ result: e, sourceText: t, syntaxCharacters: n, pos: l, attributes: o })),
                 s.push(a),
-                (l = V(e, t, r ?? "", l, s)),
+                (l = G(e, t, r ?? "", l, s)),
                 s.pop(),
                 (l = F({ result: e, sourceText: t, syntaxCharacters: i, pos: l, attributes: c })),
                 B(t, l)
@@ -271,8 +271,8 @@ function D(e) {
                 for (let e = 0; e < l && null != i && "string" != typeof i; e++) {
                     let e = (function (e, t) {
                         if ("start" === t) {
-                            for (let t = 0; t < e.length; t++) if (!G(e[t])) return e[t];
-                        } else for (let t = e.length - 1; t >= 0; t--) if (!G(e[t])) return e[t];
+                            for (let t = 0; t < e.length; t++) if (!V(e[t])) return e[t];
+                        } else for (let t = e.length - 1; t >= 0; t--) if (!V(e[t])) return e[t];
                     })(i instanceof Array ? i : [i], t);
                     if (null == e) break;
                     if (U(e.type, t)) return !0;
@@ -288,10 +288,10 @@ function D(e) {
 function U(e, t) {
     return I.get(e)?.has(t) ?? !1;
 }
-function G(e) {
+function V(e) {
     return "text" === e.type && "string" == typeof e.content && "" === e.content.trim();
 }
-function V(e, t, n, l, i) {
+function G(e, t, n, l, i) {
     return (
         "string" == typeof n
             ? (l = H({ result: e, sourceText: t, text: n, originalStart: l, attributes: i, data: null }))
@@ -608,7 +608,7 @@ let Z = {
                                         a = {
                                             originalMatch: { index: 0, 0: "" },
                                             type: "paragraph",
-                                            content: (n ? L : O)(r, !0, {
+                                            content: (n ? M : O)(r, !0, {
                                                 returnMentionIds: !0,
                                                 disableAutoBlockNewlines: !0,
                                                 guildId: t,

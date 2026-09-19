@@ -28,8 +28,8 @@ var l = n(582128),
     T = n(309010),
     R = n(461213),
     O = n(287809),
-    L = n(689168),
-    M = n(723702),
+    M = n(689168),
+    L = n(723702),
     k = n(928550),
     w = n(652215),
     P = n(360469),
@@ -39,8 +39,8 @@ function U(e) {
         {
             activity: n,
             embeddedActivity: U,
-            user: G,
-            onGameJoin: V,
+            user: V,
+            onGameJoin: G,
             onClose: F,
             location: H,
             supportsAskToJoin: B = !0,
@@ -50,7 +50,7 @@ function U(e) {
         Z = U?.applicationId ?? n?.application_id,
         Y = null != U || (0, A.A)(n),
         q = (0, i.bG)([O.default], () => O.default.getCurrentUser()),
-        J = G.id === q?.id,
+        J = V.id === q?.id,
         $ = (function (e) {
             let { channelId: t, userId: n, activity: l } = e,
                 i = m.A.getChannel(t);
@@ -59,7 +59,7 @@ function U(e) {
                     ? t
                     : f.A.getVoiceStateForSession(n, l?.session_id)?.channelId) ?? void 0
             );
-        })({ channelId: (0, d.H)(U?.location), userId: G.id, activity: n }),
+        })({ channelId: (0, d.H)(U?.location), userId: V.id, activity: n }),
         X = (0, k.au)(Z),
         Q = Y || (0, x.A)(n, w.jUm.SUPPORTS_JOIN_URL) || null != X,
         ee = (0, i.bG)([u.Ay], () =>
@@ -69,19 +69,19 @@ function U(e) {
             }),
         ),
         et = (0, i.bG)(
-            [L.A],
-            () => null != n && null != n.application_id && L.A.getState(n.application_id, w.xL.JOIN) === w.eAD.LOADING,
+            [M.A],
+            () => null != n && null != n.application_id && M.A.getState(n.application_id, w.xL.JOIN) === w.eAD.LOADING,
         ),
         en = (0, I.h)(Z),
         el = (0, S.x)(en),
-        ei = (0, g.vG)({ userId: G.id, activity: n, channelId: $, application: en }),
+        ei = (0, g.vG)({ userId: V.id, activity: n, channelId: $, application: en }),
         es = (0, i.bG)([m.A, N.A, v.A, b.A, T.Ay, f.A, j.A, _.A, R.A, u.Ay], () =>
             null != U
                 ? ei === g.Gy.CAN_JOIN
                     ? p.o.CAN_JOIN
                     : p.o.CANNOT_JOIN
                 : (0, p.A)({
-                      user: G,
+                      user: V,
                       activity: n,
                       application: en,
                       channelId: $,
@@ -108,7 +108,7 @@ function U(e) {
         ),
         ea = (0, o.p)();
     if (Y && null == U && (null == n || !(0, x.A)(n, w.jUm.CONTEXTLESS))) return null;
-    let eo = !M.isPlatformEmbedded;
+    let eo = !L.isPlatformEmbedded;
     if (!((0, x.A)(n, w.jUm.JOIN) || Y) || null == Z) return null;
     let eu = (!Y && es === p.o.JOINED) || (Y && er),
         ec = !J || Y,
@@ -156,7 +156,7 @@ function U(e) {
                 null != n &&
                     (e = await s.A.sendActivityInviteUser({
                         type: w.xL.JOIN_REQUEST,
-                        userId: G.id,
+                        userId: V.id,
                         activity: n,
                         location: w.ThZ.USER_ACTIVITY_ACTIONS,
                     })),
@@ -177,7 +177,7 @@ function U(e) {
         }
         if (!e) {
             if (es === p.o.CAN_JOIN) {
-                (V?.(), em(G, n), F?.());
+                (G?.(), em(V, n), F?.());
                 return;
             }
             await t();

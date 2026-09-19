@@ -170,8 +170,8 @@ let y = [
     A = (0, h.Ld)(),
     P = (0, h.Ld)(),
     v = (0, h.Ld)(),
-    _ = (0, h.Ld)(),
     x = (0, h.Ld)(),
+    _ = (0, h.Ld)(),
     T = (0, h.Ld)(),
     N = (0, h.Ld)();
 var b =
@@ -273,7 +273,7 @@ let R = { US: c, CA: s },
     }),
     w = (e, t) => ({
         name: "line2",
-        id: _,
+        id: x,
         title: () => E.intl.string(E.t.i2Z0gI),
         placeholder: () => E.intl.string(E.t.fKLoNo),
         autoComplete: "address-line2",
@@ -293,7 +293,7 @@ let R = { US: c, CA: s },
     }),
     U = (e, t) => ({
         name: "city",
-        id: x,
+        id: _,
         title: () => E.intl.string(E.t.bUSWlw),
         autoComplete: "address-level2",
         placeholder: () => E.intl.string(E.t["5rRx31"]),

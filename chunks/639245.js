@@ -28,15 +28,15 @@ var l = n(477900),
     T = n(770335),
     R = n(624793),
     O = n(652215),
-    L = n(731383),
-    M = n(548118),
+    M = n(731383),
+    L = n(548118),
     k = n(714991),
     w = n(492494),
     P = n(384684),
     D = n(985242),
     U = n(87719),
-    G = n(725807),
-    V = n(976860),
+    V = n(725807),
+    G = n(976860),
     F = n(309010),
     H = n(967198),
     B = n(287809),
@@ -56,7 +56,7 @@ function et(e) {
     let i,
         s,
         { node: r } = e;
-    (0, L.i)({ emojiId: r.emojiId, currentGuildId: H.A.getGuildId() });
+    (0, M.i)({ emojiId: r.emojiId, currentGuildId: H.A.getGuildId() });
     let a =
             ((n = t = r.name),
             (i = (0, o.bG)([q.default], () => q.default.locale.startsWith("en-"))),
@@ -101,7 +101,7 @@ let en = (e) => {
         p = K.Ay.getGuildIconURL({ id: o, icon: u, size: 32, canAnimate: !0 }),
         g = (i = i ?? !0) || n.isDiscoverable();
     function x() {
-        n.isDiscoverable() ? (a(), (0, z.Z2)(o, {})) : i && (a(), (0, V.pX)(O.BVt.CHANNEL(o, F.Ay.getChannelId(o))));
+        n.isDiscoverable() ? (a(), (0, z.Z2)(o, {})) : i && (a(), (0, G.pX)(O.BVt.CHANNEL(o, F.Ay.getChannelId(o))));
     }
     let A = n.isDiscoverable() && null != n.presenceCount;
     return (0, l.jsxs)(S.A, {
@@ -119,7 +119,7 @@ let en = (e) => {
                               onClick: x,
                               children: [(0, l.jsx)("img", { src: p, alt: "", className: ee.$f }), " :"],
                           })
-                        : (0, l.jsx)(M.Ay, { size: M.Ay.Sizes.SMALL, className: ee.oi, guild: n }),
+                        : (0, l.jsx)(L.Ay, { size: L.Ay.Sizes.SMALL, className: ee.oi, guild: n }),
             }),
             (0, l.jsxs)(S.A, {
                 direction: S.A.Direction.VERTICAL,
@@ -278,12 +278,12 @@ function ei(e) {
             onToggleShowMoreEmojis: j,
             guildEmoji: b,
             demoMode: T = !1,
-            nonce: M,
+            nonce: L,
         } = e,
         k = (0, o.bG)([B.default], () => B.default.getCurrentUser()),
-        V = (0, o.bG)([H.A], () => H.A.getGuildId()),
+        G = (0, o.bG)([H.A], () => H.A.getGuildId()),
         F = Z.Ay.isPremium(k),
-        K = null != V && (V === x?.id || V === v?.id),
+        K = null != G && (G === x?.id || G === v?.id),
         z = null != v,
         q = x?.isDiscoverable() ?? !1;
     T && ((F = !0), (q = !0), (z = !1), (K = !1));
@@ -301,10 +301,10 @@ function ei(e) {
                     ? { isRoleSubscriptionEmoji: !1, isUnusableRoleSubscriptionEmoji: !1, userIsRoleSubscriber: !1 }
                     : {
                           isRoleSubscriptionEmoji: w.kT(b),
-                          isUnusableRoleSubscriptionEmoji: w.JN(b, V ?? void 0),
+                          isUnusableRoleSubscriptionEmoji: w.JN(b, G ?? void 0),
                           userIsRoleSubscriber: P.A.getUserSubscriptionRoles(b.guildId).size > 0,
                       },
-            [b, V],
+            [b, G],
         ),
         ea = !!ei && (0, N.tE)(b?.guildId),
         { analyticsLocations: eo } = (0, I.Ay)(E.A.GUILD_ROLE_SUBSCRIPTION_EMOJI_TEXT_POPOVER_UPSELL);
@@ -339,12 +339,12 @@ function ei(e) {
         }),
         ed = z && ei && !ea && ((F && el) || !F),
         eh = ec.emojiDescription,
-        em = (0, L.i)({
+        em = (0, M.i)({
             emojiId: s.emojiId,
             currentGuildId: eu,
             popoutData: ec,
             emojiSourceGuildId: x?.id,
-            nonce: M,
+            nonce: L,
             demoMode: T,
         }),
         ef = ec.type === Y.u.JOIN_GUILD,
@@ -391,7 +391,7 @@ function ei(e) {
                             ],
                         }),
                         ep
-                            ? (0, l.jsx)(G.A, {
+                            ? (0, l.jsx)(V.A, {
                                   className: ee.lI,
                                   subscriptionTier: Q.pe.TIER_2,
                                   size: d.$n.Sizes.SMALL,
@@ -535,7 +535,7 @@ function es(e) {
                 (u === Y.u.GET_PREMIUM
                     ? (0, l.jsxs)(l.Fragment, {
                           children: [
-                              (0, l.jsx)(G.A, {
+                              (0, l.jsx)(V.A, {
                                   subscriptionTier: Q.pe.TIER_2,
                                   textOptions: { textOverride: s.text },
                                   className: ee.lI,

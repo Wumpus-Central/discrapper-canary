@@ -1008,8 +1008,8 @@ var e1 = n(536637),
         (i[(i.FOURTEEN_DAYS = 14)] = "FOURTEEN_DAYS"),
         (i[(i.THIRTY_DAYS = 30)] = "THIRTY_DAYS"),
         i),
-    e6 = n(125744),
-    e4 = n(139033),
+    e4 = n(125744),
+    e6 = n(139033),
     e9 = n(408278),
     te = n(663417),
     tt = n(150934),
@@ -1044,15 +1044,15 @@ function tr(e) {
                             : Z.intl.string(Z.t.fQUQIJ);
                     (0, ew.A)({
                         title: Z.intl.string(Z.t.emx3lN),
-                        subtitle: i.type === e6.s.YOUTUBE ? Z.intl.string(Z.t.anKQWU) : Z.intl.string(Z.t["BW/xtn"]),
+                        subtitle: i.type === e4.s.YOUTUBE ? Z.intl.string(Z.t.anKQWU) : Z.intl.string(Z.t["BW/xtn"]),
                         confirmText: e,
                         onConfirm: () => m(i),
                         variant: "critical",
                     });
                 } else
-                    (0, e4.A)({
+                    (0, e6.A)({
                         title: Z.intl.string(Z.t.emx3lN),
-                        subtitle: i.type === e6.s.YOUTUBE ? Z.intl.string(Z.t.pDCiEf) : Z.intl.string(Z.t.sQqHFk),
+                        subtitle: i.type === e4.s.YOUTUBE ? Z.intl.string(Z.t.pDCiEf) : Z.intl.string(Z.t.sQqHFk),
                     });
         }, [i, m, b]),
         E = s.useCallback(() => {
@@ -1070,7 +1070,7 @@ function tr(e) {
         } = s.useMemo(() => {
             let e = e3.A.get(i.type)?.getPlatformUserUrl?.({ id: i.account.id, name: i.account.name }) ?? "";
             switch (i.type) {
-                case e6.s.YOUTUBE:
+                case e4.s.YOUTUBE:
                     return {
                         serviceName: Z.intl.string(Z.t.aS6cK4),
                         expireBehaviorLabel: Z.intl.string(Z.t.A5MiqO),
@@ -1080,7 +1080,7 @@ function tr(e) {
                         }),
                         channelURL: e,
                     };
-                case e6.s.TWITCH:
+                case e4.s.TWITCH:
                 default:
                     return {
                         serviceName: Z.intl.string(Z.t.q4pBG3),
@@ -1335,7 +1335,7 @@ function tr(e) {
                             variant: "text-sm/normal",
                             children: Z.intl.string(Z.t.mThMlB),
                         }),
-                    i.type === e6.s.TWITCH
+                    i.type === e4.s.TWITCH
                         ? (function (e) {
                               let { integration: t, emojis: n, onToggle: i } = e;
                               return (0, l.jsxs)(g.A, {

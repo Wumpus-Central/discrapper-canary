@@ -41,10 +41,10 @@ function T(e) {
         O = i.useCallback(() => {
             u(!0);
         }, []),
-        L = i.useCallback(() => {
+        M = i.useCallback(() => {
             u(!1);
         }, []),
-        M = i.useCallback(
+        L = i.useCallback(
             (e, l) => {
                 if (p.length > 0 && !T([e.name])) return R();
                 let i = { id: n.name, file: e, platform: y.xz.WEB, origin: l };
@@ -56,24 +56,24 @@ function T(e) {
             (e) => {
                 u(!1);
                 let t = e.dataTransfer?.files[0];
-                null != t && M(t, "drag_drop");
+                null != t && L(t, "drag_drop");
             },
-            [M],
+            [L],
         );
     return (i.useEffect(() => {
         let e = m.current;
         return (
             null == c &&
                 (e?.addEventListener("dragover", O, !1),
-                e?.addEventListener("dragleave", L, !1),
+                e?.addEventListener("dragleave", M, !1),
                 e?.addEventListener("drop", k, !1)),
             () => {
                 (e?.removeEventListener("dragover", O, !1),
-                    e?.removeEventListener("dragleave", L, !1),
+                    e?.removeEventListener("dragleave", M, !1),
                     e?.removeEventListener("drop", k, !1));
             }
         );
-    }, [c, O, L, k]),
+    }, [c, O, M, k]),
     null != c)
         ? (0, l.jsx)(N.A, {
               channelId: t,
@@ -122,7 +122,7 @@ function T(e) {
                                   ref: a,
                                   onChange: function (e) {
                                       let n = e.currentTarget?.files?.[0];
-                                      null != t && null != n && (M(n, "file_picker"), (e.currentTarget.value = ""));
+                                      null != t && null != n && (L(n, "file_picker"), (e.currentTarget.value = ""));
                                   },
                                   multiple: !1,
                                   filters: p.length > 0 ? [{ name: "", extensions: p }] : void 0,
@@ -138,8 +138,8 @@ function T(e) {
 }
 var R = n(652215),
     O = n(714731),
-    L = n(969490);
-let M = [];
+    M = n(969490);
+let L = [];
 function k(e) {
     let { channelId: t, type: n, ignoreFile: s, smallAttachments: C = !1 } = e,
         E = (0, u.bG)([m.Ay], () => m.Ay.keyboardModeEnabled),
@@ -151,7 +151,7 @@ function k(e) {
             commandOptionStates: _,
         } = (0, u.cf)([p.A], () => {
             let e = p.A.getActiveCommand(t);
-            if (null == e) return { isApplicationCommand: !1, commandOptions: M, commandOptionStates: null };
+            if (null == e) return { isApplicationCommand: !1, commandOptions: L, commandOptionStates: null };
             let n = p.A.getOptionStates(t);
             return { isApplicationCommand: !0, commandOptions: e.options, commandOptionStates: n };
         }),
@@ -199,7 +199,7 @@ function k(e) {
                       return (0, l.jsx)("ul", {
                           ref: i,
                           ...s,
-                          className: r()(O.I, L.KK),
+                          className: r()(O.I, M.KK),
                           children: S
                               ? j.map((e) => (0, l.jsx)(T, { channelId: t, keyboardModeEnabled: E, option: e }, e.name))
                               : U.map((e) =>

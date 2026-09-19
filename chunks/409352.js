@@ -53,12 +53,12 @@ var I = t(331322),
     f = t(408278),
     k = t(241326),
     w = t(396478),
-    R = t(376728),
-    D = t(414079),
-    M = t(297413),
-    S = t(966327),
-    _ = t(95561),
-    b = t(262295),
+    b = t(376728),
+    R = t(414079),
+    D = t(297413),
+    M = t(966327),
+    S = t(95561),
+    _ = t(262295),
     L = t(576470),
     P = t(235986),
     T = t(363195),
@@ -83,8 +83,8 @@ class q extends n.PureComponent {
                     align: P.A.Align.CENTER,
                     className: K.CE,
                     children: [
-                        (0, i.jsx)(S.A, { user: n, size: m._3.SIZE_24, className: K.my }),
-                        (0, i.jsx)(M.A, {
+                        (0, i.jsx)(M.A, { user: n, size: m._3.SIZE_24, className: K.my }),
+                        (0, i.jsx)(D.A, {
                             user: n,
                             hideDiscriminator: s,
                             usernameClass: K.Xh,
@@ -117,7 +117,7 @@ class q extends n.PureComponent {
                             variant: "text-sm/normal",
                             children: (0, i.jsx)(L.A, { deadline: e.getExpiresAt(), showDays: !1 }),
                         }),
-                        (0, i.jsx)(D.A, { className: K.eb, onClick: this.handleRevokeInvite }),
+                        (0, i.jsx)(R.A, { className: K.eb, onClick: this.handleRevokeInvite }),
                     ],
                 }),
             ],
@@ -139,7 +139,7 @@ class V extends n.PureComponent {
             this.setState({ loading: !1, invites: s });
         }),
             F.default.track(H.HAw.OPEN_MODAL, {
-                ...(0, _.dI)(X.A.getChannel(e)),
+                ...(0, S.dI)(X.A.getChannel(e)),
                 type: "Group DM Invites",
                 source: "Group DM Menu",
             }));
@@ -173,9 +173,9 @@ class V extends n.PureComponent {
                                 id: e.code,
                                 children: [
                                     (0, i.jsx)(A, {
-                                        children: (0, i.jsx)(b.A, {
-                                            avatar: (0, i.jsx)(S.A, { user: s, size: m._3.SIZE_24 }),
-                                            name: (0, i.jsx)(M.A, {
+                                        children: (0, i.jsx)(_.A, {
+                                            avatar: (0, i.jsx)(M.A, { user: s, size: m._3.SIZE_24 }),
+                                            name: (0, i.jsx)(D.A, {
                                                 user: s,
                                                 hideDiscriminator: t,
                                                 usernameClass: K.Xh,
@@ -262,7 +262,7 @@ class V extends n.PureComponent {
         });
     }
     handleRevoke = (e) => {
-        (R.Ay.revokeInvite(e), this.setState({ invites: this.state.invites.filter((s) => s !== e) }));
+        (b.Ay.revokeInvite(e), this.setState({ invites: this.state.invites.filter((s) => s !== e) }));
     };
     handleClose = () => {
         let { onClose: e } = this.props;

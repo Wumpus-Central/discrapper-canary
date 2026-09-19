@@ -21,8 +21,8 @@ var l = n(477900),
     A = n(518865),
     P = n(652215),
     v = n(812095),
-    _ = n(287809),
-    x = n(486020),
+    x = n(287809),
+    _ = n(486020),
     T = n(158045),
     N = n(580630),
     b = n(240248),
@@ -41,20 +41,20 @@ var l = n(477900),
     H = n(375708),
     W = n(319820),
     Y = n(52635),
-    K = n(583741),
-    V = n(181666);
+    V = n(583741),
+    K = n(181666);
 function Z(e) {
     return e.name;
 }
 let q = {
-    [r.R.BUNDLE]: () => H.intl.string(K.default["jM8/71"]),
-    [r.R.AVATAR_DECORATION]: () => H.intl.string(K.default.r29Oel),
-    [r.R.PROFILE_EFFECT]: () => H.intl.string(K.default.eTYAvF),
-    [r.R.NAMEPLATE]: () => H.intl.string(K.default.of9bom),
-    [r.R.PROFILE_FRAME]: () => H.intl.string(K.default.HzDn6w),
+    [r.R.BUNDLE]: () => H.intl.string(V.default["jM8/71"]),
+    [r.R.AVATAR_DECORATION]: () => H.intl.string(V.default.r29Oel),
+    [r.R.PROFILE_EFFECT]: () => H.intl.string(V.default.eTYAvF),
+    [r.R.NAMEPLATE]: () => H.intl.string(V.default.of9bom),
+    [r.R.PROFILE_FRAME]: () => H.intl.string(V.default.HzDn6w),
 };
 function z(e) {
-    let t = H.intl.string(K.default.iZe9Wy);
+    let t = H.intl.string(V.default.iZe9Wy);
     if (null == e);
     else if (e.type in q) return (0, q[e.type])();
     return t;
@@ -64,7 +64,7 @@ function Q(e) {
             sku: t,
             collectiblesProduct: n,
             priceText: i,
-            description: r = H.intl.string(K.default.iZe9Wy),
+            description: r = H.intl.string(V.default.iZe9Wy),
             giftRecipient: a,
             ...s
         } = e,
@@ -82,14 +82,14 @@ function Q(e) {
 function $(e) {
     let { application: t, sku: n } = e,
         { isSocialLayerGameItem: i } = (0, W.AO)({ sku: n }),
-        r = i ? H.intl.string(K.default.qwSlCO) : H.intl.string(K.default.iZe9Wy),
+        r = i ? H.intl.string(V.default.qwSlCO) : H.intl.string(V.default.iZe9Wy),
         a = i
-            ? { header: t.name, headerIconSrc: x.Ay.getApplicationIconURL({ id: t.id, icon: t.icon, size: 16 }) }
+            ? { header: t.name, headerIconSrc: _.Ay.getApplicationIconURL({ id: t.id, icon: t.icon, size: 16 }) }
             : {};
     return (0, l.jsx)(Q, { ...e, description: r, ...a });
 }
 function J(e) {
-    let t = H.intl.string(K.default.hewwdA);
+    let t = H.intl.string(V.default.hewwdA);
     return (0, l.jsx)(Q, { ...e, description: t });
 }
 function X(e) {
@@ -99,15 +99,15 @@ function X(e) {
         r =
             null != n
                 ? (function (e) {
-                      let t = _.default.getCurrentUser(),
+                      let t = x.default.getCurrentUser(),
                           n = T.Ay.canUseShopDiscounts(t),
                           l = (0, f.xM)(t),
                           i = (0, f.WD)(e, { hasShopDiscount: n, discount: (0, f.fT)(e, n) });
                       if (null != i && !i.showDefaultPriceOnly && i.showDiscountPrice) {
                           if (l === f.D0.NITRO)
-                              return { PriceIcon: a.t, priceTooltip: H.intl.string(K.default.YUNJJa) };
+                              return { PriceIcon: a.t, priceTooltip: H.intl.string(V.default.YUNJJa) };
                           if (l === f.D0.THIRDPARTY)
-                              return { PriceIcon: s.TagIcon, priceTooltip: H.intl.string(V.default.DePOcS) };
+                              return { PriceIcon: s.TagIcon, priceTooltip: H.intl.string(K.default.DePOcS) };
                       }
                       return {};
                   })(n)
@@ -152,7 +152,7 @@ function et(e) {
             sku: f,
             application: S,
             eligiblePaymentGateways: y,
-            disabled: _,
+            disabled: x,
         } = (function () {
             let { selectedSkuId: e, purchaseState: t } = (0, C.t4)((e) => ({
                     selectedSkuId: e.selectedSkuId,
@@ -174,7 +174,7 @@ function et(e) {
                 }
             );
         })(),
-        x = i.useMemo(
+        _ = i.useMemo(
             () =>
                 (function (e, t) {
                     let { skuId: n, paymentSourceType: i, isGift: r } = t;
@@ -226,13 +226,13 @@ function et(e) {
                 }, [d]),
             };
         })({ sku: f, application: S, isGift: s }),
-        V = i.useMemo(() => ({ paymentGatewayRestrictions: y, shouldUseUnifiedCheckoutUI: !0 }), [y]),
+        K = i.useMemo(() => ({ paymentGatewayRestrictions: y, shouldUseUnifiedCheckoutUI: !0 }), [y]),
         q = (0, l.jsx)(d.N, {
             label: H.intl.string(H.t["u+Cw58"]),
             location: "OneTimePurchaseReviewStepBody",
             onPaymentSourceAdd: t,
-            additionalPaymentSourceDropdownProps: V,
-            disabled: _,
+            additionalPaymentSourceDropdownProps: K,
+            disabled: x,
         }),
         { product: z } = (0, W.AO)({ sku: f }),
         { unifiedInvoiceSummaryProps: et, priceText: en } = i.useMemo(
@@ -254,7 +254,7 @@ function et(e) {
                             {
                                 unifiedInvoiceSummaryProps: {
                                     lineItems: l,
-                                    label: H.intl.string(K.default.eoXh7B),
+                                    label: H.intl.string(V.default.eoXh7B),
                                     currency: n.currency,
                                     defaultExpanded: null != e,
                                 },
@@ -317,7 +317,7 @@ function et(e) {
                 })(n, { invoicePreview: r, isGift: s, product: z, promotion: ea, productLine: f.productLine }),
             [n, r, s, z, ea, f.productLine],
         ),
-        eo = i.useMemo(() => (null != es ? { headerBadgeText: H.intl.string(K.default.Fjpyfj) } : {}), [es]);
+        eo = i.useMemo(() => (null != es ? { headerBadgeText: H.intl.string(V.default.Fjpyfj) } : {}), [es]);
     return (0, l.jsxs)(l.Fragment, {
         children: [
             n === c.C.COLLECTIBLES_CHECKOUT &&
@@ -328,11 +328,11 @@ function et(e) {
                 purchaseItemContent: ei,
                 invoiceSummaryContent: el,
                 paymentMethodContent: q,
-                legalContent: x,
+                legalContent: _,
                 promotionalNoticeContent: es,
                 upperInlineNoticeProps: T,
                 footerInlineNoticeProps: R,
-                invoiceTotalDueLabel: H.intl.string(K.default.Zxav97),
+                invoiceTotalDueLabel: H.intl.string(V.default.Zxav97),
                 invoiceTotalDueValue: er,
             }),
         ],

@@ -56,8 +56,8 @@ let C = function (e) {
             itemIdPrefix: R,
         } = e,
         O = d.useStore((e) => e.activeCategoryIndex),
-        L = null != T && null != R,
-        { itemIdForIndex: M, parseIndex: k } = i.useMemo(() => g(R ?? "expression-category-"), [R]),
+        M = null != T && null != R,
+        { itemIdForIndex: L, parseIndex: k } = i.useMemo(() => g(R ?? "expression-category-"), [R]),
         w = (function (e) {
             let {
                     navId: t,
@@ -167,12 +167,12 @@ let C = function (e) {
         })({
             navId: T ?? "expression-picker-categories-disabled",
             categoryListRef: t,
-            itemIdForIndex: M,
+            itemIdForIndex: L,
             parseIndex: k,
             rowCount: y,
             activeIndex: O,
             getScrollOffsetForIndex: S,
-            enabled: L,
+            enabled: M,
         });
     !(function (e) {
         let { activeIndex: t, categoryListRef: n, getScrollOffsetForIndex: l } = e,
@@ -199,7 +199,7 @@ let C = function (e) {
         ),
         D = i.useCallback((e) => _(s[e], e, () => P(e), O === e), [O, s, P, _]),
         U = i.useMemo(() => ("function" == typeof v ? (e) => v(s[e], e) : v), [s, v]),
-        G = (0, l.jsx)(o.A, {
+        V = (0, l.jsx)(o.A, {
             listPadding: I,
             onScroll: N,
             ref: t,
@@ -209,21 +209,21 @@ let C = function (e) {
             hideScrollbar: !0,
             rowCountBySection: j,
             renderSection: b,
-            role: L ? "none presentation" : void 0,
+            role: M ? "none presentation" : void 0,
         }),
-        V = (0, l.jsxs)("div", {
+        G = (0, l.jsxs)("div", {
             className: r()(A.i, E),
             children: [
-                L
+                M
                     ? (0, l.jsx)(a.PR, {
                           children: (e) => {
                               let { ref: t, ...n } = e;
-                              return (0, l.jsx)("div", { className: A.e, ...n, ref: t, children: G });
+                              return (0, l.jsx)("div", { className: A.e, ...n, ref: t, children: V });
                           },
                       })
-                    : G,
+                    : V,
                 C?.(P),
             ],
         });
-    return L ? (0, l.jsx)(a.hD, { navigator: w, children: V }) : V;
+    return M ? (0, l.jsx)(a.hD, { navigator: w, children: G }) : G;
 };

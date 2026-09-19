@@ -72,15 +72,15 @@ let g = i().once(() =>
     T = i().once(() => s.aV(g())),
     R = i().once(() => s.aV(x())),
     O = i().once(() => s.aV(A())),
-    L = i().once(() => s.aV(C())),
-    M = i().once(() => s.aV(E())),
+    M = i().once(() => s.aV(C())),
+    L = i().once(() => s.aV(E())),
     k = i().once(() => s.aV(I())),
     w = i().once(() => s.aV(y())),
     P = i().once(() => s.aV(S())),
     D = i().once(() => s.aV(N())),
     U = i().once(() => s.aV(f())),
-    G = i().once(() => s.X(m())),
-    V = i().once(() => s.X(g())),
+    V = i().once(() => s.X(m())),
+    G = i().once(() => s.X(g())),
     F = i().once(() => s.X(C())),
     H = i().once(() => s.X(E())),
     B = i().once(() => s.X(I())),
@@ -116,11 +116,11 @@ let g = i().once(() =>
         },
         parseEmbedTitle: function () {
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-            return L()(...t);
+            return M()(...t);
         },
         parseEmbedTitleWithoutLinks: function () {
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-            return M()(...t);
+            return L()(...t);
         },
         parseInlineReply: function () {
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
@@ -144,11 +144,11 @@ let g = i().once(() =>
         },
         parseToAST: function () {
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-            return G()(...t);
+            return V()(...t);
         },
         parseTopicToAST: function () {
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-            return V()(...t);
+            return G()(...t);
         },
         parseEmbedTitleToAST: function () {
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];

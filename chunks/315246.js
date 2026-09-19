@@ -26,7 +26,7 @@ function I(e) {
         T = "application_id" in y.extra ? y.extra.application_id : null,
         R = (0, h.A)({ id: T, label: A.intl.string(A.t["FfCL+6"]) }),
         O = (0, g.zD)(y),
-        L = (0, f.A)({
+        M = (0, f.A)({
             location: "ContentPopoutContextMenu",
             applicationId: O && !0 !== v ? y.extra?.application_id : void 0,
             source: m.GameProfileSources.ActivityCardContextMenu,
@@ -53,12 +53,12 @@ function I(e) {
                         (0, l.jsxs)(a.rX, {
                             children: [
                                 j,
-                                null != L &&
+                                null != M &&
                                     (0, l.jsx)(a.Dr, {
                                         id: "game-profile",
                                         label: A.intl.string(A.t.f7aVGn),
                                         action: (e) => {
-                                            (L(e), _?.());
+                                            (M(e), _?.());
                                         },
                                     }),
                             ],

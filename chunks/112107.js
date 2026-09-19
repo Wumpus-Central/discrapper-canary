@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => L, LF: () => R });
+n.d(t, { Ay: () => M, LF: () => R });
 var l = n(477900),
     i = n(582128),
     s = n(503698),
@@ -84,7 +84,7 @@ function O(e) {
           })
         : null;
 }
-let L = function (e) {
+let M = function (e) {
     let { channelId: t, messageId: n, soundId: s, messageSounds: r, jumbo: o = !1 } = e,
         u = C.hH.useSetting(),
         d = (0, a.bG)([S.A], () => S.A.getSoundById(s), [s]),

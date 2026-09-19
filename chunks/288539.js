@@ -209,13 +209,13 @@ function E(e) {
                             });
                   },
         O = A.Ay.useName(j),
-        L = (0, r.bG)([m.A, f.Ay, p.A], () => x.Ay.getNickname(T, E, j));
+        M = (0, r.bG)([m.A, f.Ay, p.A], () => x.Ay.getNickname(T, E, j));
     if (null == j) return (0, l.jsx)(C, { userId: I, className: t, children: y });
-    function M(e) {
-        return (0, l.jsx)(d.A, { ref: N, className: t, onContextMenu: R, ...e, children: `@${L ?? O}` });
+    function L(e) {
+        return (0, l.jsx)(d.A, { ref: N, className: t, onContextMenu: R, ...e, children: `@${M ?? O}` });
     }
     return S
-        ? (0, l.jsx)(u.f5, { value: _, children: M() })
+        ? (0, l.jsx)(u.f5, { value: _, children: L() })
         : (0, l.jsx)(u.f5, {
               value: _,
               children: (0, l.jsx)(h.A, {
@@ -225,7 +225,7 @@ function E(e) {
                   channelId: E,
                   position: s.Fr ? "top" : "right",
                   clickTrap: !0,
-                  children: (e) => M(e),
+                  children: (e) => L(e),
               }),
           });
 }

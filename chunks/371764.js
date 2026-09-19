@@ -24,16 +24,16 @@ function g(e) {
         name: n.ImpressionNames.PREMIUM_MARKETING_COMPONENT,
         properties: { component_type: i.C.MARKETING_PAGE_BANNER, component_id: t, promotion_id: s },
     });
-    let E = (0, h.h)({
+    let C = (0, h.h)({
             buttonAction: g.button?.buttonAction ?? o.d.OPEN_TIER_2_PAYMENT_MODAL,
             deeplinkSection: g.button?.deeplinkSection,
             applicationId: g.button?.navigableStorefrontApplicationId?.value,
             analyticsLocations: f,
             analyticsLocation: A.location,
         }),
-        C = (0, j.a)(g.body),
+        E = (0, j.a)(g.body),
         T = (0, j.C)(g.helpArticle, g.helpArticleId),
-        { icon: N, iconPosition: I } = (0, h.x)({ buttonAction: g.button?.buttonAction });
+        { icon: I, iconPosition: N } = (0, h.x)({ buttonAction: g.button?.buttonAction });
     return (0, l.jsxs)("div", {
         className: _.kL,
         children: [
@@ -50,7 +50,7 @@ function g(e) {
                         color: "text-subtle",
                         className: _.tb,
                         children: [
-                            C,
+                            E,
                             null != T &&
                                 (0, l.jsxs)(l.Fragment, {
                                     children: [
@@ -68,10 +68,10 @@ function g(e) {
                     children: (0, l.jsx)(d.$, {
                         variant: g.buttonVariant === c.F.PRIMARY ? "primary" : "expressive",
                         size: "md",
-                        onClick: E,
+                        onClick: C,
                         text: g.button.copy,
-                        icon: N,
-                        iconPosition: I,
+                        icon: I,
+                        iconPosition: N,
                     }),
                 }),
         ],

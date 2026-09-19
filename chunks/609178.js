@@ -28,8 +28,8 @@ var l = n(477900),
     T = n(202541),
     R = n(652215),
     O = n(148155),
-    L = n(375708),
-    M = n(237790),
+    M = n(375708),
+    L = n(237790),
     k = n(592551),
     w = n(644242),
     P = n(309427);
@@ -40,8 +40,8 @@ function D(e) {
             description: s,
             analyticsLocationSection: D,
             upsellViewedTrackingData: U,
-            onClose: G,
-            onDisplay: V,
+            onClose: V,
+            onDisplay: G,
             onUpsellClicked: F,
             isEmojiPickerOverlay: H = !1,
         } = e;
@@ -50,10 +50,10 @@ function D(e) {
             (0, y.sq)(R.U7l.PREMIUM_UPSELL_VIEWED, U.location_stack, () =>
                 (0, S.uq)(U.type, U.has_premium_stream_fps, U.has_premium_stream_resolution),
             ),
-            V?.());
-    }, [V, U]);
+            G?.());
+    }, [G, U]);
     let B = (0, v.V)(),
-        W = i.useCallback(() => (0, I.LE)(B, T.pe.TIER_2) ?? L.intl.string(L.t.pj0XBN), [B]),
+        W = i.useCallback(() => (0, I.LE)(B, T.pe.TIER_2) ?? M.intl.string(M.t.pj0XBN), [B]),
         K = (0, N.A)(T.pe.TIER_2),
         z = (0, _.O9)();
     return (
@@ -66,20 +66,20 @@ function D(e) {
               : P.A),
         (0, l.jsxs)(l.Fragment, {
             children: [
-                (0, l.jsx)(u.p, { onClick: G, isVisible: !0 }),
+                (0, l.jsx)(u.p, { onClick: V, isVisible: !0 }),
                 (0, l.jsx)(c.h, {
                     color: H ? "nitro-pink" : "green",
-                    className: M.kL,
+                    className: L.kL,
                     children: (0, l.jsxs)(d.l, {
                         "aria-label": n,
-                        className: M.r3,
+                        className: L.r3,
                         children: [
                             (0, l.jsxs)("div", {
-                                className: M.Qs,
+                                className: L.Qs,
                                 children: [
-                                    (0, l.jsx)(o.s_, { "data-migration-pending": !0, onClick: G, className: M.b }),
+                                    (0, l.jsx)(o.s_, { "data-migration-pending": !0, onClick: V, className: L.b }),
                                     (0, l.jsxs)("div", {
-                                        className: M.hQ,
+                                        className: L.hQ,
                                         children: [
                                             (0, l.jsx)("div", {
                                                 className: k.headerGraphic,
@@ -92,7 +92,7 @@ function D(e) {
                                             }),
                                             null != K && (0, l.jsx)(a.E, { type: { text: K }, variant: "brand" }),
                                             (0, l.jsx)(m.D, {
-                                                className: r()(M.DD, { [M.GU]: null != K }),
+                                                className: r()(L.DD, { [L.GU]: null != K }),
                                                 variant: "heading-xl/bold",
                                                 color: "text-strong",
                                                 children: n,
@@ -100,7 +100,7 @@ function D(e) {
                                             (0, l.jsx)(f.E, {
                                                 variant: "text-md/medium",
                                                 color: "text-subtle",
-                                                className: M.rf,
+                                                className: L.rf,
                                                 children: s,
                                             }),
                                         ],
@@ -108,15 +108,15 @@ function D(e) {
                                     H &&
                                         z &&
                                         (0, l.jsx)("div", {
-                                            className: M.Zr,
-                                            children: (0, l.jsx)(j.A, { subtitle: L.intl.string(O.default.BkJYQ5) }),
+                                            className: L.Zr,
+                                            children: (0, l.jsx)(j.A, { subtitle: M.intl.string(O.default.BkJYQ5) }),
                                         }),
                                 ],
                             }),
                             (0, l.jsx)("div", {
-                                className: M.qr,
+                                className: L.qr,
                                 children: (0, l.jsxs)("div", {
-                                    className: M.UD,
+                                    className: L.UD,
                                     children: [
                                         (0, l.jsx)(p.$, {
                                             variant: "secondary",
@@ -127,18 +127,18 @@ function D(e) {
                                                 }),
                                                     F?.(),
                                                     (0, x.A)(),
-                                                    G(),
+                                                    V(),
                                                     (0, g.jH)(),
                                                     (0, A.pX)(R.BVt.APPLICATION_STORE));
                                             },
-                                            text: L.intl.string(L.t.ZnqyZ2),
+                                            text: M.intl.string(M.t.ZnqyZ2),
                                             fullWidth: !0,
                                         }),
                                         (0, l.jsx)(b.A, {
                                             premiumModalAnalyticsLocation: { section: D, object: R.ZSU.BUTTON_CTA },
                                             subscriptionTier: T.pe.TIER_2,
                                             onClick: () => {
-                                                (G(), F?.());
+                                                (V(), F?.());
                                             },
                                             defaultTextOverride: W(),
                                             fullWidth: !0,

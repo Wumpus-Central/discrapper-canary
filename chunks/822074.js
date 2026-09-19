@@ -38,8 +38,8 @@ let N = {},
     T = {},
     R = { status: "ok", lastRequest: null, lastResponse: null },
     O = [],
-    L = [];
-function M() {
+    M = [];
+function L() {
     O = f.A.getProps()
         .results.filter((e) => e.type === h.rD.TEXT_CHANNEL && 0 === e.record.type)
         .map((e) => e.record.id);
@@ -52,7 +52,7 @@ class k extends u.Ay.PersistedStore {
     initialize(e) {
         ((l = e?.shouldShowTopicsBar ?? !0),
             this.waitFor(p.A, m.A, g.A, f.A, x.Ay, A.Ay, C.Ay, E.default),
-            this.syncWith([f.A], M));
+            this.syncWith([f.A], L));
     }
     allSummaries() {
         return N;
@@ -68,7 +68,7 @@ class k extends u.Ay.PersistedStore {
             .sort((e, t) => y.default.extractTimestamp(t.endId) - y.default.extractTimestamp(e.endId));
     }
     summaries(e) {
-        return N[e] ?? L;
+        return N[e] ?? M;
     }
     shouldShowTopicsBar() {
         return l;

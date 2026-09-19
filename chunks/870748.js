@@ -80,8 +80,8 @@ function R(e, t) {
         }));
     let D = null,
         U = null,
-        G = null,
         V = null,
+        G = null,
         F = null;
     return (
         (e.onChange = () => {
@@ -91,7 +91,7 @@ function R(e, t) {
                 if (
                     v.VW.richValue(e) !== D ||
                     !v.Ot.equals(e.selection, U) ||
-                    n.activeCommand !== G ||
+                    n.activeCommand !== V ||
                     null == F ||
                     a.some((e, t) => F[t] !== e)
                 ) {
@@ -213,13 +213,13 @@ function R(e, t) {
                                                       ? (S.b.selectCommandOption(e, f.optionName, !1),
                                                         (g = f.optionName))
                                                       : S.b.resetSelectionToEditorEnd(e),
-                                                null == f && L(e, s),
+                                                null == f && M(e, s),
                                                 g
                                             );
                                         })(t, a, n),
                                         l = E.SQ(t, A, a.id);
                                     return (
-                                        M({
+                                        L({
                                             guildId: a.guild_id,
                                             channelId: a.id,
                                             command: A,
@@ -301,7 +301,7 @@ function R(e, t) {
                                         }),
                                         !0)
                                     );
-                                })(t, A) && L(t, A);
+                                })(t, A) && M(t, A);
                                 let e = E.SQ(t, A, a.id),
                                     n = v.VW.above(t, {
                                         match: (e) => v.VW.isInline(t, e) && "applicationCommandOption" === e.type,
@@ -309,7 +309,7 @@ function R(e, t) {
                                     }),
                                     l = n?.[0].optionName ?? null;
                                 return (
-                                    M({
+                                    L({
                                         guildId: a.guild_id,
                                         channelId: a.id,
                                         command: A,
@@ -327,15 +327,15 @@ function R(e, t) {
                             editor: e,
                             storeCommandState: n,
                             channel: t,
-                            commandChanged: n.activeCommand?.id !== G?.id,
-                            previousOptionValues: V,
+                            commandChanged: n.activeCommand?.id !== V?.id,
+                            previousOptionValues: G,
                         }),
                     );
                     if (null != u) {
                         let t = I.o.currentEntry(e);
-                        (null != t && (t.commandId = u.commandId), (V = u.optionValues));
-                    } else V = null;
-                    ((D = v.VW.richValue(e)), (U = e.selection), (G = n.activeCommand), (F = a));
+                        (null != t && (t.commandId = u.commandId), (G = u.optionValues));
+                    } else G = null;
+                    ((D = v.VW.richValue(e)), (U = e.selection), (V = n.activeCommand), (F = a));
                 }
             }
             A();
@@ -353,7 +353,7 @@ function O(e, t, n, l) {
         v.PW.isAfter(t, a) && S.b.removeNodes(e, { at: t, voids: !0 });
     null != n && r.Gf({ channelId: t, command: null, section: null });
 }
-function L(e, t) {
+function M(e, t) {
     if (
         null == t.options ||
         1 !== t.options.length ||
@@ -384,7 +384,7 @@ function L(e, t) {
         !0)
     );
 }
-function M(e) {
+function L(e) {
     let {
         guildId: t,
         channelId: n,

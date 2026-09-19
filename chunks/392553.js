@@ -31,14 +31,14 @@ function T(e) {
 }
 var R = n(826745),
     O = n(442433),
-    L = n(721768),
-    M = n(555424),
+    M = n(721768),
+    L = n(555424),
     k = n(723702),
     w = n(677134),
     P = n(652215),
     D = n(650583);
 let U = /(\t|\s)/;
-class G extends i.PureComponent {
+class V extends i.PureComponent {
     _ref;
     state = { nextSelection: -1 };
     componentDidMount() {
@@ -47,7 +47,7 @@ class G extends i.PureComponent {
             this._ref?.setSelection(e.length, e.length);
         }),
             null != p.A.getActiveCommand(this.props.channel.id) &&
-                L.Gf({ channelId: this.props.channel.id, command: null, section: null }));
+                M.Gf({ channelId: this.props.channel.id, command: null, section: null }));
     }
     componentDidUpdate(e, t) {
         this.state.nextSelection !== t.nextSelection &&
@@ -64,7 +64,7 @@ class G extends i.PureComponent {
         for (; n > 0 && !U.test(t[n - 1]);) n--;
         let i = e.selectionEnd;
         for (; i < t.length && !U.test(t[i]);) i++;
-        let s = (0, M.h3)(t.slice(n, l), t.slice(n, i));
+        let s = (0, L.h3)(t.slice(n, l), t.slice(n, i));
         return { word: s.word, fullWord: s.fullWord, isAtStart: 0 === n && !s.didTrimPrefix };
     }
     focus = () => {
@@ -259,7 +259,7 @@ class G extends i.PureComponent {
         return this.props.value;
     }
 }
-var V = n(95561),
+var G = n(95561),
     F = n(625494),
     H = n(317681),
     B = n(186306),
@@ -416,11 +416,11 @@ let eC = i.forwardRef(function (e, t) {
             onFocus: T,
             onBlur: R,
             onKeyDown: O,
-            onKeyUp: L,
+            onKeyUp: M,
             onTab: k,
             onEnter: w,
             onSpace: U,
-            onSubmit: G,
+            onSubmit: V,
             onSubmitFailure: $,
             maybeShowAutocomplete: ea,
             hideAutocomplete: ed,
@@ -438,9 +438,9 @@ let eC = i.forwardRef(function (e, t) {
             "aria-invalid": eT,
             "aria-describedby": eR,
             "aria-labelledby": eO,
-            "aria-autocomplete": eL,
+            "aria-autocomplete": eM,
         } = e,
-        eM = i.useRef(null),
+        eL = i.useRef(null),
         ek = i.useRef(null),
         ew = i.useRef(!0),
         eP = i.useRef(!0),
@@ -491,13 +491,13 @@ let eC = i.forwardRef(function (e, t) {
             },
             [f.id, f.guild_id],
         ),
-        eG = i.useCallback(() => {
+        eV = i.useCallback(() => {
             ew.current = !1;
         }, []),
-        eV = i.useCallback(() => {
+        eG = i.useCallback(() => {
             ew.current = !0;
         }, []),
-        eF = (0, J.A)({ channel: f, chatInputType: h, onChangeStart: eG, onChangeEnd: eV, updateState: eU }),
+        eF = (0, J.A)({ channel: f, chatInputType: h, onChangeStart: eV, onChangeEnd: eG, updateState: eU }),
         eH = i.useCallback(
             (e, t) => {
                 let n = H.SQ(eF, e, f.id),
@@ -524,7 +524,7 @@ let eC = i.forwardRef(function (e, t) {
                     let e = n[0];
                     (z.b.selectCommandOption(eF, e.name),
                         (i = !0),
-                        (0, V.zV)(P.HAw.APPLICATION_COMMAND_VALIDATION_FAILED, {
+                        (0, G.zV)(P.HAw.APPLICATION_COMMAND_VALIDATION_FAILED, {
                             application_id: l?.applicationId,
                             command_id: l?.rootCommand?.id,
                             argument_type: m.n4[e?.type ?? 3],
@@ -539,8 +539,8 @@ let eC = i.forwardRef(function (e, t) {
                 (F._.dispatch(P.jej.SHAKE_APP, { duration: 200, intensity: 2 }), $?.());
                 return;
             }
-            G?.((0, K.WO)(Z.VW.richValue(eF), { mode: "raw", ignoreTrailingEmptyNodes: !0 }), l, e);
-        }, [f.id, eF, G, $, eH, eE]);
+            V?.((0, K.WO)(Z.VW.richValue(eF), { mode: "raw", ignoreTrailingEmptyNodes: !0 }), l, e);
+        }, [f.id, eF, V, $, eH, eE]);
     (i.useImperativeHandle(
         t,
         () => ({
@@ -589,7 +589,7 @@ let eC = i.forwardRef(function (e, t) {
                     if (en.ug.test(e)) break;
                     ((o += e), u++);
                 }
-                let d = (0, M.h3)(r, o);
+                let d = (0, L.h3)(r, o);
                 return {
                     word: d.word,
                     fullWord: d.fullWord,
@@ -707,15 +707,15 @@ let eC = i.forwardRef(function (e, t) {
             let e = s.current;
             if (null == e) return;
             let t = e.offsetHeight;
-            n.current !== t && (null != eM.current && (eM.current.style.height = `${t}px`), (n.current = t), b?.(t));
-        }, [eM, b])),
+            n.current !== t && (null != eL.current && (eL.current.style.height = `${t}px`), (n.current = t), b?.(t));
+        }, [eL, b])),
         (0, er.g)(s, o, [o, eF, b], eo),
         i.useLayoutEffect(() => {
             let e = Q.rL.findDocumentOrShadowRoot(eF).defaultView;
             if (e?.ResizeObserver == null) return;
             let t = eu(eF);
             null != t && ((n.current = t.offsetHeight), b?.(n.current));
-        }, [eM, eF, b]));
+        }, [eL, eF, b]));
     let { handleKeyDown: eW, handleKeyUp: eK } = (function (e) {
             let {
                 editor: t,
@@ -799,7 +799,7 @@ let eC = i.forwardRef(function (e, t) {
             channel: f,
             disableEnterToSubmit: ey,
             onKeyDown: O,
-            onKeyUp: L,
+            onKeyUp: M,
             onTab: k,
             onEnter: w,
             onSpace: U,
@@ -940,7 +940,7 @@ let eC = i.forwardRef(function (e, t) {
         children: [
             (0, l.jsx)(C.EG, { event: P.jej.GLOBAL_CLIPBOARD_PASTE, handler: eZ }),
             (0, l.jsx)("div", {
-                ref: eM,
+                ref: eL,
                 className: r()(g, eA.pC),
                 children: (0, l.jsx)(W.A, {
                     id: x,
@@ -971,7 +971,7 @@ let eC = i.forwardRef(function (e, t) {
                     "aria-labelledby": eO,
                     "aria-describedby": eR,
                     "aria-invalid": eT,
-                    "aria-autocomplete": eL,
+                    "aria-autocomplete": eM,
                     "aria-required": v,
                 }),
             }),
@@ -1218,7 +1218,7 @@ class ey extends i.Component {
                       canOnlyUseTextCommands: g,
                       onSubmitFailure: c,
                   })
-                : (0, l.jsx)(G, { ref: this.ref, ...R, value: n && !j ? "" : e });
+                : (0, l.jsx)(V, { ref: this.ref, ...R, value: n && !j ? "" : e });
         return (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsx)(C.EG, { event: P.jej.INSERT_TEXT, handler: this.handleInsertText }),

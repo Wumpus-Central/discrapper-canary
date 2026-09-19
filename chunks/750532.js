@@ -21,8 +21,8 @@ var l = n(477900),
     A = n(158045),
     P = n(951305),
     v = n(166532),
-    _ = n(652215),
-    x = n(202541),
+    x = n(652215),
+    _ = n(202541),
     T = n(375708),
     N = n(341535),
     b = n(894575),
@@ -47,10 +47,10 @@ function R(e) {
         { isGift: G, selectedGiftStyle: F, giftRecipient: B } = (0, P.Pv)(),
         H = (0, E.p)("PremiumUnifiedCheckoutCustomHeader"),
         W = (0, C.Wh)({ location: "PremiumUnifiedCheckoutCustomHeader" }),
-        Y = U?.productLine === _.EZt.COLLECTIBLES,
-        K = U?.productLine === _.EZt.SOCIAL_LAYER_GAME_ITEM,
-        V = D === v.pn.CONFIRM && W && (0, f.M)({ isGift: G, giftRecipient: B, selectedPlanId: d }),
-        Z = G && (0, g.Ik)(B) && D === v.pn.CONFIRM && null != F && !Y && !K,
+        Y = U?.productLine === x.EZt.COLLECTIBLES,
+        V = U?.productLine === x.EZt.SOCIAL_LAYER_GAME_ITEM,
+        K = D === v.pn.CONFIRM && W && (0, f.M)({ isGift: G, giftRecipient: B, selectedPlanId: d }),
+        Z = G && (0, g.Ik)(B) && D === v.pn.CONFIRM && null != F && !Y && !V,
         q = [v.pn.SKU_SELECT, v.pn.SELECT_FREE_SKU],
         z = null != D && !q.includes(D) && null != n,
         Q = i.useCallback(() => t(!1), [t]);
@@ -58,7 +58,7 @@ function R(e) {
         if (null == D) return;
         let e = null;
         return (
-            V
+            K
                 ? (e = (0, l.jsx)(s.rQ, {
                       alignCenter: !0,
                       gradientColor: "nitro-pink",
@@ -90,11 +90,11 @@ function R(e) {
                     ? (e = (0, l.jsx)(s.rQ, { gradientColor: "nitro-pink", title: T.intl.string(T.t["7YWj6+"]) }))
                     : z &&
                       (e =
-                          n in x.WN
+                          n in _.WN
                               ? (0, l.jsx)(I.A, {
                                     currentStep: D ?? void 0,
                                     purchaseState: S,
-                                    premiumType: x.WN[n],
+                                    premiumType: _.WN[n],
                                     onClose: Q,
                                     showTrialBadge: k,
                                     showDiscountBadge: w,
@@ -108,7 +108,7 @@ function R(e) {
                               : (0, l.jsx)(s.rQ, { title: T.intl.string(T.t.q9EGps) })),
             e
         );
-    }, [F, Q, S, n, D, k, w, R, d, V, Z, H, z, G, B, O, M, L]);
+    }, [F, Q, S, n, D, k, w, R, d, K, Z, H, z, G, B, O, M, L]);
 }
 function M(e) {
     let { premiumDiscountPercent: t, isPremiumDiscountAppliedToCheckoutInvoice: n } = (0, m.t4)((e) => ({

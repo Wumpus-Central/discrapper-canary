@@ -69,32 +69,32 @@ let T = i.forwardRef(function (e, t) {
         return (0, l.jsx)(T, { type: t, channelId: n });
     });
 var O = n(931664),
-    L = n(951260),
-    M = n(522602),
+    M = n(951260),
+    L = n(522602),
     k = n(158045),
     w = n(462180),
     P = n(375499),
     D = n(151271),
     U = n(355622),
-    G = n(698279),
-    V = n(495088);
+    V = n(698279),
+    G = n(495088);
 let F = i.memo(
     i.forwardRef(function (e, t) {
         let { disabled: n, type: s, channelId: r } = e,
             [a, o, u, c] = (0, D.RQ)((e) => [e.activeView, e.activeViewType, e.pickerId, e.activeChannelId], w.x),
             d = s === U.oU.NORMAL,
             h = i.useCallback(() => {
-                (0, D.r$)(G.kx.EMOJI, s, r);
+                (0, D.r$)(V.kx.EMOJI, s, r);
             }, [s, r]);
         return n
             ? null
             : (0, l.jsx)("div", {
-                  className: A()(G.VQ, V.UD),
+                  className: A()(V.VQ, G.UD),
                   ref: t,
                   children: (0, l.jsx)(P.A, {
-                      className: V.Z8,
+                      className: G.Z8,
                       onClick: h,
-                      active: a === G.kx.EMOJI && o === s && c === r,
+                      active: a === V.kx.EMOJI && o === s && c === r,
                       "aria-controls": u,
                       tabIndex: 0,
                       focusProps: { offset: { top: 4, bottom: 4, left: -4, right: -4 } },
@@ -128,20 +128,20 @@ let Y = i.memo(
             }, []);
         (0, z.Vo)({ event: p.jej.FAVORITE_GIF, handler: x });
         let C = i.useCallback(() => {
-                (0, D.r$)(G.kx.GIF, s, a.id);
+                (0, D.r$)(V.kx.GIF, s, a.id);
             }, [s, a.id]),
             { Component: E, events: I, play: y } = (0, B.V)();
         if (n) return null;
-        let S = d === G.kx.GIF && h === s && f === a.id;
+        let S = d === V.kx.GIF && h === s && f === a.id;
         return (0, l.jsx)(W.m, {
             text: j.intl.string(c ? j.t.mE2e8A : j.t.nffuyb),
             shouldShow: c,
             forceOpen: c,
             children: (0, l.jsx)("div", {
                 ref: t,
-                className: A()(G.VQ, V.UD),
+                className: A()(V.VQ, G.UD),
                 children: (0, l.jsx)(Z.A, {
-                    className: V.x6,
+                    className: G.x6,
                     onMouseEnter: I.onMouseEnter,
                     onMouseLeave: I.onMouseLeave,
                     onClick: () => {
@@ -197,9 +197,9 @@ let ee = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
                 u,
                 { disabled: c, type: d, channel: h } = e,
                 [m, f, p, g] = (0, D.RQ)((e) => [e.activeView, e.pickerId, e.activeChannelId, e.activeViewType], w.x),
-                x = m === G.kx.STICKER && g === d && p === h.id,
+                x = m === V.kx.STICKER && g === d && p === h.id,
                 C = i.useCallback(() => {
-                    (0, D.r$)(G.kx.STICKER, d, h.id);
+                    (0, D.r$)(V.kx.STICKER, d, h.id);
                 }, [d, h.id]),
                 {
                     Component: E,
@@ -235,10 +235,10 @@ let ee = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
             return c
                 ? null
                 : (0, l.jsx)("div", {
-                      className: A()(G.VQ, V.UD),
+                      className: A()(V.VQ, G.UD),
                       ref: t,
                       children: (0, l.jsx)(Z.A, {
-                          className: A()(V.x6, V.KE),
+                          className: A()(G.x6, G.KE),
                           ...I,
                           onClick: () => {
                               (C(), y());
@@ -265,7 +265,7 @@ let ee = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
                 showAllButtons: y,
                 expressionButtonsHidden: S,
             } = e,
-            v = (0, L.n)("ChannelTextAreaButtons"),
+            v = (0, M.n)("ChannelTextAreaButtons"),
             N = (0, r.cf)([o.Ay], () => ({
                 isSubmitButtonEnabled: o.Ay.isSubmitButtonEnabled,
                 isAppsButtonEnabled: o.Ay.isAppsButtonEnabled,
@@ -282,16 +282,16 @@ let ee = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
                 ((t = C.id),
                 (n = x),
                 (i = I),
-                (0, r.bG)([O.A, M.A], () => {
+                (0, r.bG)([O.A, L.A], () => {
                     let e = O.A.getStickerPreview(t, n.drafts.type),
                         l = null != e && e.length > 0;
-                    return 0 === M.A.getUploads(t, n.drafts.type).length && i && !l;
+                    return 0 === L.A.getUploads(t, n.drafts.type).length && i && !l;
                 })),
             { activeCommand: D, activeCommandOption: U } = (0, r.cf)([u.A], () => ({
                 activeCommand: u.A.getActiveCommand(C.id),
                 activeCommandOption: u.A.getActiveOption(C.id),
             })),
-            G = (0, g.dw)(),
+            V = (0, g.dw)(),
             B = [],
             W = !C.isDM() || void 0 === C.recipients || C.recipients.length > 1,
             K = (0, r.bG)([f.default], () => (W ? null : f.default.getUser(C.recipients[0]))),
@@ -327,7 +327,7 @@ let ee = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
         return (!s.Fr &&
             (x.gifts?.button != null &&
                 null == D &&
-                !G &&
+                !V &&
                 (null == K || k.Ay.isPremiumEligible(K)) &&
                 B.push((0, l.jsx)(q.A, { disabled: A, channel: C }, "gift")),
             x.gifs?.button != null &&
@@ -352,5 +352,5 @@ let ee = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
         Z && B.push((0, l.jsx)(X, { onClick: E, disabled: A || P }, "submit")),
         0 === B.length)
             ? null
-            : (0, l.jsx)("div", { className: V.Uo, children: B });
+            : (0, l.jsx)("div", { className: G.Uo, children: B });
     });

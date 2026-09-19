@@ -1,4 +1,4 @@
-n.d(t, { A: () => V });
+n.d(t, { A: () => G });
 var l = n(477900),
     i = n(582128),
     s = n(503698),
@@ -28,16 +28,16 @@ var l = n(477900),
     T = n(351906),
     R = n(287809),
     O = n(31498),
-    L = n(887129),
-    M = n(741918),
+    M = n(887129),
+    L = n(741918),
     k = n(267102),
     w = n(652215),
     P = n(307731);
 let D = new Map([["thread", new Set(["name"])]]);
 var U = n(5867),
-    G = n(940169);
-let V = i.forwardRef(function (e, t) {
-    let { channel: n, type: s, editorHeight: V, onVisibilityChange: F, editorScrollerRef: H, barsHeight: B } = e,
+    V = n(940169);
+let G = i.forwardRef(function (e, t) {
+    let { channel: n, type: s, editorHeight: G, onVisibilityChange: F, editorScrollerRef: H, barsHeight: B } = e,
         W = (0, g.GV)(),
         K = (0, o.bG)([C.A], () => C.A.getGuild(n.guild_id) ?? null, [n.guild_id]),
         z = i.useRef(null),
@@ -89,10 +89,10 @@ let V = i.forwardRef(function (e, t) {
                             (u.setFocus(e.toString()), s?.(e));
                         }
                     }
-                    let u = (0, L.Ay)({
+                    let u = (0, M.Ay)({
                             id: t,
                             isEnabled: l.isVisible,
-                            orientation: M.Gl.VERTICAL,
+                            orientation: L.Gl.VERTICAL,
                             useVirtualFocus: !0,
                             setFocus: function (e, t) {
                                 let l = r.document.querySelector(e);
@@ -180,7 +180,7 @@ let V = i.forwardRef(function (e, t) {
         J = s.autocomplete?.forceChatLayer ? A.Ay : x.Ay,
         $ = (0, f.aI)(Z.selectedIndex);
     (0, p.gf)(W, Z.isVisible, $);
-    let X = (0, I.l)({ editorHeight: V, type: s, state: Z }),
+    let X = (0, I.l)({ editorHeight: G, type: s, state: Z }),
         Q = (0, o.bG)(
             [h.Ay],
             () => {
@@ -214,16 +214,16 @@ let V = i.forwardRef(function (e, t) {
             onClick: (e) => Y.onResultClick(e),
         }) ?? null;
     if (null == et) return null;
-    let en = { [G.pK]: null == X, [G.YB]: null != X, [G.sQ]: null == X && "bottom" === e.position, [G.mO]: Q },
+    let en = { [V.pK]: null == X, [V.YB]: null != X, [V.sQ]: null == X && "bottom" === e.position, [V.mO]: Q },
         el = 490;
     null != X && (el = s.autocomplete?.small ? 200 : Z.query?.type === E.DB.EMOJIS_AND_STICKERS ? 490 : 245);
-    let ei = Math.max(V, H?.current?.clientHeight ?? 0),
+    let ei = Math.max(G, H?.current?.clientHeight ?? 0),
         es = Math.min(0.5 * window.innerHeight, ei);
     el = Math.min(window.innerHeight - 120 - es - (B ?? 0), el);
     let er = (0, l.jsx)(f.Ay, {
         id: W,
-        className: r()(G.nx, en),
-        innerClassName: G.Fv,
+        className: r()(V.nx, en),
+        innerClassName: V.Fv,
         onMouseDown: (e) => e.preventDefault(),
         children: (0, l.jsx)(a.hD, {
             navigator: q,
@@ -238,7 +238,7 @@ let V = i.forwardRef(function (e, t) {
                         orientation: "vertical",
                         overflow: "auto",
                         ...n,
-                        className: G.XG,
+                        className: V.XG,
                         style: { maxHeight: el },
                         role: "listbox",
                         "aria-labelledby": (0, f.Sz)(W),

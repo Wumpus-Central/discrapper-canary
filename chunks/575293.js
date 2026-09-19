@@ -28,7 +28,7 @@ var l = n(477900),
     T = n(375708),
     R = n(160639);
 let O = { compact: 58, cozy: 74, default: 64 };
-function L(e) {
+function M(e) {
     let { action: t } = e,
         n = (0, o.bG)([E.A], () => E.A.getChannel(t.channelId)),
         i = (0, x.Ay)(n, !0);
@@ -44,7 +44,7 @@ function L(e) {
               children: T.intl.format(T.t.MkzlDL, { channelName: i }),
           });
 }
-function M(e) {
+function L(e) {
     let { channelId: t, emojiId: n, emojiName: i } = e,
         s = (0, o.bG)([E.A], () => E.A.getChannel(t));
     if (null == s) return null;
@@ -92,7 +92,7 @@ function k(e) {
                                 className: r()(R.vK, R.vk, { [R.pJ]: n.isForumChannel() }),
                                 onClick: P,
                                 children: [
-                                    (0, l.jsx)(M, {
+                                    (0, l.jsx)(L, {
                                         channelId: A.channelId,
                                         emojiId: A.emoji?.id,
                                         emojiName: A?.emoji?.name,
@@ -105,7 +105,7 @@ function k(e) {
                                                 color: "text-strong",
                                                 children: T.intl.format(T.t["/beONw"], { step: A.title }),
                                             }),
-                                            (0, l.jsx)(L, { action: A }),
+                                            (0, l.jsx)(M, { action: A }),
                                         ],
                                     }),
                                     (0, l.jsx)("div", {
@@ -119,7 +119,7 @@ function k(e) {
                             className: r()(R.vK, { [R.pJ]: n.isForumChannel() }),
                             style: { marginBottom: k.interpolate({ inputRange: [0, 1], outputRange: [-_, 0] }) },
                             children: [
-                                (0, l.jsx)(M, {
+                                (0, l.jsx)(L, {
                                     channelId: c.channelId,
                                     emojiId: c.emoji?.id,
                                     emojiName: c?.emoji?.name,

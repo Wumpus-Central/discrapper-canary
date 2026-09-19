@@ -33,8 +33,8 @@ let R = [S.iq, S.Zc, S.Xy, S.$X, S.tR, S.K7, S.fg, S.sp, S.MK],
                 channel: n,
                 selected: i,
                 hovered: O,
-                isFirstApplicationOccurrence: L,
-                trackRankingItemInteraction: M,
+                isFirstApplicationOccurrence: M,
+                trackRankingItemInteraction: L,
             } = e,
             { largeImage: k } = (0, E.nO)({
                 entry: t,
@@ -42,10 +42,10 @@ let R = [S.iq, S.Zc, S.Xy, S.$X, S.tR, S.K7, S.fg, S.sp, S.MK],
                 trackingSource: "memberlist_gaming_content_row",
             }),
             { data: w } = (0, m.YY)(t.extra.application_id),
-            P = (0, h.JC)(w) && L,
+            P = (0, h.JC)(w) && M,
             D = P ? [r.M.CLOUD_PLAY_NEW_BADGE] : [],
             [U] = (0, f.kn)(D),
-            G = (0, g.A)(
+            V = (0, g.A)(
                 {
                     location: "Member List Activity Card",
                     applicationId: t.extra.application_id,
@@ -53,9 +53,9 @@ let R = [S.iq, S.Zc, S.Xy, S.$X, S.tR, S.K7, S.fg, S.sp, S.MK],
                     trackEntryPointImpression: !0,
                     sourceUserId: t.author_id,
                 },
-                { onOpened: () => M(N.PA.OPENED_GAME_PROFILE) },
+                { onOpened: () => L(N.PA.OPENED_GAME_PROFILE) },
             ),
-            V = j.intl.formatToPlainString(j.t["9sZWVp"], { gameName: t.extra.game_name }),
+            G = j.intl.formatToPlainString(j.t["9sZWVp"], { gameName: t.extra.game_name }),
             F = (0, l.jsx)(y.V, {
                 alt: k?.text ?? k?.alt,
                 src: k?.src,
@@ -78,15 +78,15 @@ let R = [S.iq, S.Zc, S.Xy, S.$X, S.tR, S.K7, S.fg, S.sp, S.MK],
                                 (0, l.jsxs)(v.UA, {
                                     children: [
                                         (0, l.jsx)(v.Hp, { entry: t, channelId: n.id, guildId: n.guild_id }),
-                                        null != G ? (0, l.jsx)(I.A, { className: b.N4, onClick: G, children: H }) : H,
+                                        null != V ? (0, l.jsx)(I.A, { className: b.N4, onClick: V, children: H }) : H,
                                         (0, l.jsx)(S.mG, {
                                             location: S.N5.CARD,
                                             children: R.map((e, n) => (0, l.jsx)(e, { entry: t, hovered: O }, n)),
                                         }),
                                     ],
                                 }),
-                                null != G
-                                    ? (0, l.jsx)(a.D, { className: b.vi, onClick: G, "aria-label": V, children: F })
+                                null != V
+                                    ? (0, l.jsx)(a.D, { className: b.vi, onClick: V, "aria-label": G, children: F })
                                     : F,
                             ],
                         }),
@@ -127,7 +127,7 @@ let R = [S.iq, S.Zc, S.Xy, S.$X, S.tR, S.K7, S.fg, S.sp, S.MK],
                         className: b.AB,
                         compactViewMore: !0,
                         onClickViewMore: () => {
-                            (M(N.PA.APPLICATION_WIDGET_PREVIEW_VIEW_MORE),
+                            (L(N.PA.APPLICATION_WIDGET_PREVIEW_VIEW_MORE),
                                 (0, A.openUserProfileModal)({ userId: t.author_id, tabSection: _.RP.WIDGETS }));
                         },
                     }),

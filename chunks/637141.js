@@ -21,8 +21,8 @@ var l = n(477900),
     A = n(583741),
     P = n(986485),
     v = n(632815);
-let _ = "***@***.***",
-    x = new C.YS({ id: m.a, brand: h.Ay.Types.UNKNOWN, type: y.hes.CARD });
+let x = "***@***.***",
+    _ = new C.YS({ id: m.a, brand: h.Ay.Types.UNKNOWN, type: y.hes.CARD });
 function T(e, t, n) {
     if (e instanceof C.YS)
         return e.id === m.a
@@ -38,10 +38,10 @@ function T(e, t, n) {
                     brand: t ? h.Ay.Types.UNKNOWN : e.brand,
                     label: g.intl.formatToPlainString(g.t.QvBAQk, { last4: t ? "****" : e.last4 }),
                 };
-    if (e instanceof C.SJ) return { brand: h.Ay.Types.PAYPAL, label: t ? _ : e.email };
-    if (e instanceof C.A0) return { brand: h.Ay.Types.SOFORT, label: t ? _ : e.email };
+    if (e instanceof C.SJ) return { brand: h.Ay.Types.PAYPAL, label: t ? x : e.email };
+    if (e instanceof C.A0) return { brand: h.Ay.Types.SOFORT, label: t ? x : e.email };
     if (e instanceof C.Qh) return { brand: h.Ay.Types.GIROPAY, label: g.intl.string(g.t["y+0MQZ"]) };
-    if (e instanceof C.Tu) return { brand: h.Ay.Types.PRZELEWY24, label: t ? _ : e.email };
+    if (e instanceof C.Tu) return { brand: h.Ay.Types.PRZELEWY24, label: t ? x : e.email };
     else if (e instanceof C.Ux) return { brand: h.Ay.Types.PAYSAFECARD, label: g.intl.string(g.t.e3APTT) };
     else if (e instanceof C.F_) return { brand: h.Ay.Types.GCASH, label: g.intl.string(g.t.PjehcF) };
     else if (e instanceof C.Xj) return { brand: h.Ay.Types.GRABPAY, label: g.intl.string(g.t.T5davE) };
@@ -90,7 +90,7 @@ function b(e) {
             onChange: h,
             onPaymentSourceAdd: S,
             isTrial: P = !1,
-            disabled: _ = !1,
+            disabled: x = !1,
             dropdownLoading: b,
             paymentGatewayRestrictions: j,
             newPaymentMethodOptionLabel: R,
@@ -130,7 +130,7 @@ function b(e) {
                 ),
                 y = 0 === n.length,
                 I = null != l ? [l] : [],
-                P = [...I, ...n, ...(h ? [x] : [])].map((e, t) => {
+                P = [...I, ...n, ...(h ? [_] : [])].map((e, t) => {
                     if (e instanceof p.A) {
                         let t,
                             { brand: n, label: l } = T(e.source, a, S);
@@ -148,7 +148,7 @@ function b(e) {
                         let t,
                             { brand: n, label: l } = T(e, a, S);
                         return (
-                            (t = e === x || null == u || !(u.length > 0) || u.includes(e.paymentGateway)),
+                            (t = e === _ || null == u || !(u.length > 0) || u.includes(e.paymentGateway)),
                             { value: e.id, label: l, brand: n, disabled: !t }
                         );
                     }
@@ -219,13 +219,13 @@ function b(e) {
         }, [D, L]),
         H = i.useMemo(() => (null != S ? S : () => {}), [S]);
     if (b) return (0, l.jsx)("div", { className: v.h, children: (0, l.jsx)(s.y, { type: s.y.Type.PULSING_ELLIPSIS }) });
-    if (k) return (0, l.jsx)(N, { onClick: S, disabled: _ });
+    if (k) return (0, l.jsx)(N, { onClick: S, disabled: x });
     let W = (0, l.jsx)(m.v, {
         value: G ?? null,
         options: B,
         onChange: w,
         onNew: H,
-        disabled: _,
+        disabled: x,
         newPaymentMethodOptionLabel: R,
         noticeMessage: F,
     });

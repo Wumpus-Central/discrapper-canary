@@ -28,8 +28,8 @@ var l,
     T = n(624793),
     R = n(639245),
     O = n(85935),
-    L = n(796774),
-    M = n(807348),
+    M = n(796774),
+    L = n(807348),
     k = n(805945),
     w = n(71393),
     P = n(725807);
@@ -37,12 +37,12 @@ n(801541);
 var D = n(889137);
 n(980504);
 var U = n(375708),
-    G =
+    V =
         (((l = {})[(l.JOIN_GUILD = 0)] = "JOIN_GUILD"),
         (l[(l.GET_NITRO = 1)] = "GET_NITRO"),
         (l[(l.NONE = 2)] = "NONE"),
         l),
-    V = n(202541),
+    G = n(202541),
     F = n(652215),
     H = n(653131);
 function B(e) {
@@ -53,18 +53,18 @@ function B(e) {
                     (await b.A.joinGuild(t), b.A.transitionToGuildSync(t));
                 } catch {}
         }, [n, t]);
-    return l === G.GET_NITRO
+    return l === V.GET_NITRO
         ? (0, i.jsx)(P.A, {
               fullWidth: !0,
               showGradient: !0,
               premiumModalAnalyticsLocation: { section: F.JJy.PREMIUM_SOUNDMOJI_GUILD_INFO_POPOUT },
-              subscriptionTier: V.pe.TIER_2,
+              subscriptionTier: G.pe.TIER_2,
               size: _.$n.Sizes.SMALL,
               color: _.$n.Colors.CUSTOM,
               onClick: n,
               textOptions: { textOverride: U.intl.string(U.t.pj0XBN) },
           })
-        : l === G.JOIN_GUILD
+        : l === V.JOIN_GUILD
           ? (0, i.jsx)(j.$, {
                 variant: "primary",
                 size: "sm",
@@ -90,7 +90,7 @@ function W(e) {
     s.useEffect(() => {
         y ||
             (_(!0),
-            (0, L.nh)(a.soundId, a.guildId)
+            (0, M.nh)(a.soundId, a.guildId)
                 .then((e) => {
                     C(e);
                 })
@@ -145,13 +145,13 @@ function W(e) {
                         .exhaustive();
                 }, [t, A, n, x, r, l]),
             }),
-        P = j === G.JOIN_GUILD,
-        V = !p && N,
+        P = j === V.JOIN_GUILD,
+        G = !p && N,
         F = s.useMemo(
             () => (x ? T.GO.createFromGuildRecord(g) : null != A ? T.GO.createFromDiscoverableGuild(A) : void 0),
             [g, x, A],
         );
-    return V
+    return G
         ? (0, i.jsx)(O.Y0, {})
         : (0, i.jsxs)("div", {
               className: H.op,
@@ -162,7 +162,7 @@ function W(e) {
                               className: H.g4,
                               children: [
                                   (0, i.jsx)(k.Ay, {
-                                      buttonOverlay: M.If.NONE,
+                                      buttonOverlay: L.If.NONE,
                                       sound: a,
                                       channel: void 0,
                                       isSoundmoji: !0,

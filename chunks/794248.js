@@ -155,7 +155,7 @@ function T(e) {
 }
 var R = n(506619),
     O = n(15555);
-function L(e) {
+function M(e) {
     let { surfaceConfig: t, resolveFieldValue: n } = en(),
         l = n(t.components.hero_image?.fields.image, [v.o.MEDIA]);
     return (0, i.jsx)(_, {
@@ -169,7 +169,7 @@ function L(e) {
         }),
     });
 }
-var M = n(123292),
+var L = n(123292),
     k = n(402233);
 function w(e) {
     let { image: t } = e,
@@ -190,7 +190,7 @@ function w(e) {
                                 lineClamp: 1,
                                 required: !0,
                             }),
-                            (0, i.jsx)(M.Q, {
+                            (0, i.jsx)(L.Q, {
                                 textVariant: "text-xs/normal",
                                 variant: "secondary",
                                 text: "View All Stats",
@@ -219,7 +219,7 @@ function D() {
     });
 }
 var U = n(853512);
-function G() {
+function V() {
     let { surfaceConfig: e, resolveFieldValue: t } = en(),
         n = t(e.components.hero_image?.fields.image, [v.o.MEDIA]);
     return (0, i.jsx)(w, {
@@ -232,20 +232,20 @@ function G() {
                 : (0, i.jsx)(S, { className: U.pm }),
     });
 }
-var V = n(193396);
+var G = n(193396);
 function F(e) {
     let { resolveFieldValue: t } = en(),
         n = t(e.componentConfig?.fields.image, [v.o.MEDIA]),
         l = t(e.componentConfig?.fields.name, [v.o.STRING]),
         s = t(e.componentConfig?.fields.description, [v.o.STRING]);
     return (0, i.jsxs)("div", {
-        className: V.E4,
+        className: G.E4,
         children: [
             null != n
-                ? (0, i.jsx)("img", { src: n.media.url, className: V.bA, alt: "" })
-                : (0, i.jsx)(S, { className: V.ET }),
+                ? (0, i.jsx)("img", { src: n.media.url, className: G.bA, alt: "" })
+                : (0, i.jsx)(S, { className: G.ET }),
             (0, i.jsxs)("div", {
-                className: V.Vx,
+                className: G.Vx,
                 children: [
                     null != l
                         ? (0, i.jsx)(h.E, { variant: "text-sm/medium", lineClamp: 2, children: l.value })
@@ -266,7 +266,7 @@ function F(e) {
 function H() {
     let { surfaceConfig: e } = en();
     return (0, i.jsxs)("div", {
-        className: V.zr,
+        className: G.zr,
         children: [
             (0, i.jsx)(F, { componentConfig: e.components.item_1 }),
             (0, i.jsx)(F, { componentConfig: e.components.item_2 }),
@@ -499,12 +499,12 @@ let el = {
         [o.WIDGET_BOTTOM_COLLECTION]: () => (0, i.jsx)(H, {}),
     },
     [a.m.MINI_PROFILE]: {
-        [o.MINI_PROFILE_HERO_STAT]: () => (0, i.jsx)(G, {}),
+        [o.MINI_PROFILE_HERO_STAT]: () => (0, i.jsx)(V, {}),
         [o.MINI_PROFILE_CONTAINED_STAT]: () => (0, i.jsx)(D, {}),
     },
     [a.m.ACTIVITY_ACCESSORY]: { [o.ACTIVITY_ACCESSORY_STAT]: (e) => (0, i.jsx)(I, { ...e }) },
     [a.m.ADD_WIDGET_PREVIEW]: {
-        [o.ADD_WIDGET_PREVIEW_HERO]: (e) => (0, i.jsx)(L, { ...e }),
+        [o.ADD_WIDGET_PREVIEW_HERO]: (e) => (0, i.jsx)(M, { ...e }),
         [o.ADD_WIDGET_PREVIEW_CONTAINED]: (e) => (0, i.jsx)(b, { ...e }),
     },
 };

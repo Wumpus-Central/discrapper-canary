@@ -1,4 +1,4 @@
-n.d(t, { X: () => _ });
+n.d(t, { X: () => x });
 var l = n(477900),
     i = n(582128),
     r = n(284009),
@@ -21,13 +21,13 @@ var l = n(477900),
     A = n(375708),
     P = n(583741),
     v = n(904541);
-function _(e) {
+function x(e) {
     let {
             selectedPlanId: t,
             priceOptions: n,
             planOptions: r,
-            subscriptionPeriodEnd: _,
-            showPlanStatusSubText: x,
+            subscriptionPeriodEnd: x,
+            showPlanStatusSubText: _,
             disabled: T = !1,
             isInPlanSelectStep: N,
             headingSubText: b,
@@ -48,8 +48,8 @@ function _(e) {
             premiumSubscriptionPlan: H,
             thePriceOptions: W,
             skuId: Y,
-        } = (0, C.RO)({ selectedPlanId: t, priceOptions: n, planOptions: r, subscriptionPeriodEnd: _, showTotal: N }),
-        { shouldShowPremiumSwitchPlanSelectText: K, premiumSwitchPlanSelectText: V } = i.useMemo(() => {
+        } = (0, C.RO)({ selectedPlanId: t, priceOptions: n, planOptions: r, subscriptionPeriodEnd: x, showTotal: N }),
+        { shouldShowPremiumSwitchPlanSelectText: V, premiumSwitchPlanSelectText: K } = i.useMemo(() => {
             let e = (0, C.U_)(H, { isEligibleForBOGOPromotion: B });
             return {
                 shouldShowPremiumSwitchPlanSelectText: e,
@@ -57,8 +57,8 @@ function _(e) {
             };
         }, [H, B, Y]),
         Z = i.useMemo(
-            () => (N && F ? (0, C.Ct)(D, { subscriptionPeriodEnd: _, trialPeriodCopy: G }) : b),
-            [N, F, D, _, G, b],
+            () => (N && F ? (0, C.Ct)(D, { subscriptionPeriodEnd: x, trialPeriodCopy: G }) : b),
+            [N, F, D, x, G, b],
         ),
         q = i.useMemo(() => (r.length > 0 ? g.hd[r[0]].premiumType : void 0), [r]),
         { setSelectedPlanId: z } = (0, m.t4)((e) => ({ setSelectedPlanId: e.setSelectedPlanId })),
@@ -76,8 +76,8 @@ function _(e) {
                     priceOptions: o,
                     isEligibleForTrial: d,
                     isEligibleForBOGOPromotion: v,
-                    showPlanStatusSubText: _,
-                    isInPlanSelectStep: x,
+                    showPlanStatusSubText: x,
+                    isInPlanSelectStep: _,
                 } = t,
                 {
                     currentPremiumSubscriptionForCheckout: T,
@@ -155,8 +155,8 @@ function _(e) {
                                       (u = A.intl.formatToPlainString(P.default.nsG1jw, {
                                           savingsText: (0, s.l9)(j, parseInt(R.discount.amount) / 100),
                                       })))),
-                            _ &&
-                                (x && d
+                            x &&
+                                (_ && d
                                     ? (t = (0, f.O7)(b, w))
                                     : m
                                       ? (t = A.intl.string(A.t.ymSxhy))
@@ -191,7 +191,7 @@ function _(e) {
                             isDisabled: E || n,
                         };
                     }),
-                [l, e, r, o, d, v, _, x, T, M, O, R, N, j, n],
+                [l, e, r, o, d, v, x, _, T, M, O, R, N, j, n],
             );
         })(r, {
             disabled: T,
@@ -200,15 +200,15 @@ function _(e) {
             priceOptions: W,
             isEligibleForTrial: F,
             isEligibleForBOGOPromotion: B,
-            showPlanStatusSubText: x,
+            showPlanStatusSubText: _,
             isInPlanSelectStep: N,
         });
     return null == q
         ? null
         : (0, l.jsxs)(l.Fragment, {
               children: [
-                  K &&
-                      (0, l.jsx)(o.E, { variant: "text-md/medium", color: "text-subtle", className: v.S, children: V }),
+                  V &&
+                      (0, l.jsx)(o.E, { variant: "text-md/medium", color: "text-subtle", className: v.S, children: K }),
                   (0, l.jsx)(d.me, {
                       headingComponent: (0, l.jsx)(d.ec, { size: "sm", color: "text-strong", premiumType: q }),
                       headingSubText: Z,

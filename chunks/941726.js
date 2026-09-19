@@ -41,8 +41,8 @@ function I(e) {
                         T,
                         R,
                         O,
-                        L,
                         M,
+                        L,
                         { appsWithConfigs: k, isLoadingConfigs: w } =
                             ((n = g.Q_.useSetting()),
                             i.useEffect(() => {
@@ -103,7 +103,7 @@ function I(e) {
                             [S, j],
                         )),
                         { widgetApps: j, userIdsWhoMightHaveWidgetData: b, isFetchingApplications: N }),
-                        { identitiesByUserId: G, isLoadingIdentities: V } =
+                        { identitiesByUserId: V, isLoadingIdentities: G } =
                             ((T = (0, a.cf)([h.A], () =>
                                 Object.fromEntries(D.map((e) => [e, h.A.getUserIdentities(e)]).filter(x.QE)),
                             )),
@@ -118,20 +118,20 @@ function I(e) {
                             ((O = (0, a.cf)([f.A], () =>
                                 Object.fromEntries(D.map((e) => [e, f.A.getUserProfile(e) ?? null]).filter(x.QE)),
                             )),
-                            (L = (0, a.yK)([f.A], () =>
+                            (M = (0, a.yK)([f.A], () =>
                                 D.filter((e) => null == f.A.getUserProfile(e) && !f.A.isFetchingProfile(e)),
                             )),
-                            (M = (0, a.bG)([f.A], () => D.some((e) => f.A.isFetchingProfile(e)))),
+                            (L = (0, a.bG)([f.A], () => D.some((e) => f.A.isFetchingProfile(e)))),
                             i.useEffect(() => {
-                                for (let e of L) (0, p.A)(e);
-                            }, [L]),
-                            { profilesByUserId: O, isLoadingProfiles: L.length > 0 || M }),
+                                for (let e of M) (0, p.A)(e);
+                            }, [M]),
+                            { profilesByUserId: O, isLoadingProfiles: M.length > 0 || L }),
                         B = (0, a.cf)(
                             [C.A],
                             () => Object.fromEntries([...k].map((e) => [e, C.A.getConfig(e)]).filter(x.QE)),
                             [k],
                         ),
-                        W = w || U || V || H,
+                        W = w || U || G || H,
                         K = i.useMemo(() => {
                             if (!W && void 0 !== e)
                                 return e.map((e) => {
@@ -140,7 +140,7 @@ function I(e) {
                                     if (null == t) return e;
                                     let n = B[t.id] ?? null;
                                     if (null == n || null == n.surfaces[s.m.ACTIVITY_ACCESSORY]) return e;
-                                    let l = G[e.author_id]?.find((e) => e.application_id === t.id) ?? null;
+                                    let l = V[e.author_id]?.find((e) => e.application_id === t.id) ?? null;
                                     if (l?.profile == null) return e;
                                     let i = F[e.author_id]?.widgets?.some((e) => (0, m.E)(e, t.id)) ?? !1;
                                     return {
@@ -148,7 +148,7 @@ function I(e) {
                                         applicationWidgetPreview: { widgetApplicationId: t.id, hasWidget: i },
                                     };
                                 });
-                        }, [W, e, P, B, G, F]),
+                        }, [W, e, P, B, V, F]),
                         [z, Z] = i.useState(K);
                     return (
                         i.useEffect(() => {

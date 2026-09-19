@@ -110,8 +110,8 @@ function R(e) {
     });
 }
 var O = n(3026),
-    L = n(208971);
-function M(e) {
+    M = n(208971);
+function L(e) {
     let t,
         {
             customStatusActivity: n,
@@ -123,7 +123,7 @@ function M(e) {
             hideEmoji: d = !1,
             hideTooltip: h = !1,
         } = e,
-        m = (0, L.G)(n?.state);
+        m = (0, M.G)(n?.state);
     if (null == n) return null;
     let f = n?.emoji,
         g = null != m && "" !== m,
@@ -183,7 +183,7 @@ function U(e) {
         hideText: a,
     });
 }
-function G(e) {
+function V(e) {
     let { textVariant: t, className: n, hasCustomStatusText: i, totalActivityCount: s } = e;
     return (0, l.jsxs)(o.E, {
         variant: t,
@@ -192,7 +192,7 @@ function G(e) {
         children: ["+", s - 1],
     });
 }
-function V(e) {
+function G(e) {
     let { textVariant: t, className: n } = e;
     return (0, l.jsx)(o.E, { variant: t, className: r()(A.Om, n), "aria-hidden": !0, children: "\u2022" });
 }
@@ -224,7 +224,7 @@ function F(e) {
         }, [n]),
         T = (0, f.Uk)("ActivityStatus"),
         O = i.useMemo(() => (null != b, null), [b, T]),
-        L = i.useMemo(
+        M = i.useMemo(
             () =>
                 (0, a.uniqWith)(
                     n?.filter((e) => {
@@ -245,7 +245,7 @@ function F(e) {
         H = b?.state != null,
         B = null != _,
         W = !B && null != o,
-        K = L.length + (B || W ? 1 : 0),
+        K = M.length + (B || W ? 1 : 0),
         z = K > 1,
         Z = b?.state != null && "xs" === x;
     if (F) return null;
@@ -263,7 +263,7 @@ function F(e) {
                 hideIcon: D,
                 hideTooltip: t,
             });
-        let n = L?.[0];
+        let n = M?.[0];
         return null != n
             ? (0, l.jsx)(k.A, {
                   activity: n,
@@ -286,7 +286,7 @@ function F(e) {
               : null;
     }
     function q() {
-        return (0, l.jsx)(G, {
+        return (0, l.jsx)(V, {
             textVariant: `text-${x}/medium`,
             className: p,
             hasCustomStatusText: H,
@@ -314,7 +314,7 @@ function F(e) {
                               e.push(
                                   (0, l.jsx)(R, { stream: _, game: n?.find(d.A), ...t, showChannelName: !0 }, "stream"),
                               ),
-                          L.forEach((n, i) => {
+                          M.forEach((n, i) => {
                               e.push((0, l.jsx)(k.A, { activity: n, ...t }, `activity-${i}`));
                           }),
                           W && e.push((0, l.jsx)(U, { channel: o, ...t, showChannelName: !0 }, "voice")),
@@ -342,7 +342,7 @@ function F(e) {
                             tooltipClassName: $,
                             userId: t?.id,
                         }),
-                  K > 0 && (0, l.jsx)(V, { textVariant: `text-${x}/normal`, className: p }),
+                  K > 0 && (0, l.jsx)(G, { textVariant: `text-${x}/normal`, className: p }),
                   J(),
                   y && (0, l.jsx)(S, {}),
               ],
@@ -351,10 +351,10 @@ function F(e) {
               className: $,
               children: [
                   J(),
-                  null != b && K > 0 && (0, l.jsx)(V, { textVariant: `text-${x}/normal`, className: p }),
+                  null != b && K > 0 && (0, l.jsx)(G, { textVariant: `text-${x}/normal`, className: p }),
                   null == b
                       ? null
-                      : (0, l.jsx)(M, {
+                      : (0, l.jsx)(L, {
                             customStatusActivity: b,
                             textSize: x,
                             animateEmoji: I,

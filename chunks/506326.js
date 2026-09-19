@@ -49,15 +49,15 @@ var l,
     T = n(369606),
     R = n(825860),
     O = n(605323),
-    L = n(748562),
-    M = n(306788),
+    M = n(748562),
+    L = n(306788),
     k = n(531913),
     w = n(47167),
     P = n(927813),
     D = n(403362),
     U = n(935208),
-    G = n(20805),
-    V = n(202195),
+    V = n(20805),
+    G = n(202195),
     F = n(583846),
     H = n(299846),
     B = n(693879);
@@ -116,7 +116,7 @@ function $(e) {
 }
 function X(e) {
     let { entry: t } = e,
-        { channel: n } = (0, V.A)(t),
+        { channel: n } = (0, G.A)(t),
         { location: l } = q(),
         s = (0, w.Ay)(n);
     return null == n || (0, D.S1)(l, [1, 2, 3, 4]) ? null : (0, i.jsx)($, { Icon: A.H, text: s });
@@ -126,8 +126,8 @@ function Q(e) {
         { defaultTextColor: l, defaultIconColor: s, location: r } = q(),
         a = (0, F.Hd)(t) && (0, D.S1)(r, [0, 4, 7, 9]),
         o = a ? C.A.colors.TEXT_FEEDBACK_POSITIVE : s,
-        { streamPreviewUrl: u } = (0, V.A)(t),
-        c = null != u ? E.F : (0, G.yl)(t) ? I.k : y.GameControllerIcon;
+        { streamPreviewUrl: u } = (0, G.A)(t),
+        c = null != u ? E.F : (0, V.yl)(t) ? I.k : y.GameControllerIcon;
     return (0, i.jsxs)(J, {
         children: [
             (0, i.jsx)(c, { size: "xxs", color: o }),
@@ -263,7 +263,7 @@ function ec(e) {
     return (0, i.jsxs)("div", {
         className: K.fC,
         children: [
-            (0, i.jsx)(L.U, { size: "xxs", color: o }),
+            (0, i.jsx)(M.U, { size: "xxs", color: o }),
             (0, i.jsx)(B.A, { entry: t, textColor: a ? "text-feedback-positive" : l, hovered: n }),
         ],
     });
@@ -273,7 +273,7 @@ function ed(e) {
         n = (0, F.kR)(t.extra.media_assets_large_text);
     if (null == n) return null;
     let l = (0, F.WC)(t.extra.media_assets_large_text);
-    return (0, i.jsx)($, { Icon: M.K, text: n, a11yText: l });
+    return (0, i.jsx)($, { Icon: L.K, text: n, a11yText: l });
 }
 function eh(e) {
     let { userId: t, widgetApplicationId: n } = e,

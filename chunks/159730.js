@@ -250,8 +250,8 @@ var y = n(462180),
     T = n(71393),
     R = n(287809),
     O = n(486020),
-    L = n(316386);
-function M() {
+    M = n(316386);
+function L() {
     let { guildId: e, channelId: t } = (0, j.A)((e) => {
             let { guildId: t, channelId: n } = e;
             return { guildId: t, channelId: n };
@@ -261,22 +261,22 @@ function M() {
         s = (0, c.bG)([R.default], () => R.default.getCurrentUser()),
         r = null != i ? (0, N.Y)(i) : null,
         a = null != s ? s.getAvatarURL(e, 80) : O.vI["0"],
-        o = (0, l.jsx)(S.eu, { src: a, "aria-hidden": !0, size: v._3.SIZE_80, className: L.HT }),
+        o = (0, l.jsx)(S.eu, { src: a, "aria-hidden": !0, size: v._3.SIZE_80, className: M.HT }),
         u = null;
     return (
         (u =
             null != n
                 ? (0, l.jsx)(_.Ay, { guild: n })
                 : null != r
-                  ? (0, l.jsx)(S.eu, { "aria-hidden": !0, src: r, size: v._3.SIZE_80, className: L.HT })
+                  ? (0, l.jsx)(S.eu, { "aria-hidden": !0, src: r, size: v._3.SIZE_80, className: M.HT })
                   : o),
         (0, l.jsxs)("div", {
-            className: L.kL,
+            className: M.kL,
             children: [
-                (0, l.jsx)("div", { className: L.$H, children: o }),
-                (0, l.jsx)("div", { className: L.XN, children: u }),
+                (0, l.jsx)("div", { className: M.$H, children: o }),
+                (0, l.jsx)("div", { className: M.XN, children: u }),
                 (0, l.jsx)("svg", {
-                    className: L.bm,
+                    className: M.bm,
                     xmlns: "http://www.w3.org/2000/svg",
                     width: "156",
                     height: "70",
@@ -367,7 +367,7 @@ let k = Object.freeze({
         highPriority: !0,
         textAlign: p.YL.CENTER,
         spacing: 10,
-        media: () => (0, l.jsx)(M, {}),
+        media: () => (0, l.jsx)(L, {}),
     },
     "direct-messages": { popoutPosition: "right" },
     "create-first-server": { popoutPosition: "right", highPriority: !0 },
@@ -387,7 +387,7 @@ var w = n(241541),
     P = n(967198),
     D = n(375708),
     U = n(851230);
-function G() {
+function V() {
     return (0, l.jsx)(l.Fragment, {
         children: D.intl.format(D.t.ymkBti, {
             shareIcon: D.intl.string(D.t.VINpSK),
@@ -395,7 +395,7 @@ function G() {
         }),
     });
 }
-function V() {
+function G() {
     let e = (0, c.bG)([T.A, P.A], () => T.A.getGuild(P.A.getGuildId()), []),
         t = e?.name;
     return (0, l.jsx)(l.Fragment, { children: D.intl.format(D.t.oQuG3K, { serverName: t }) });
@@ -465,14 +465,14 @@ class B extends i.PureComponent {
                     },
                     WRITING_MESSAGES: {
                         title: (0, l.jsx)("div", { className: U.nG, children: D.intl.string(D.t.nkP0ly) }),
-                        body: (0, l.jsx)(V, {}),
+                        body: (0, l.jsx)(G, {}),
                     },
                     ORGANIZE_BY_TOPIC: {
                         title: (0, l.jsx)("div", { className: U.vX, children: D.intl.string(D.t["j/5+IX"]) }),
                         body: D.intl.string(D.t.mufH2P),
                     },
                     WHOS_ONLINE: { title: D.intl.string(D.t.l2nSoI), body: D.intl.format(D.t.y6tbBB, {}) },
-                    INSTANT_INVITE: { title: D.intl.string(D.t.XcehY3), body: (0, l.jsx)(G, {}) },
+                    INSTANT_INVITE: { title: D.intl.string(D.t.XcehY3), body: (0, l.jsx)(V, {}) },
                     SERVER_SETTINGS: { title: D.intl.string(D.t.wc8wi5), body: D.intl.format(D.t.mIfDhc, {}) },
                     DIRECT_MESSAGES: { title: D.intl.string(D.t.V07x5y), body: D.intl.format(D.t.GEBBey, {}) },
                     CREATE_MORE_SERVERS: { title: D.intl.string(D.t["50FORo"]), body: D.intl.format(D.t.zVL4qa, {}) },

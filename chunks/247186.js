@@ -35,15 +35,15 @@ var S = n(112107),
     T = n(143145),
     R = n(392605),
     O = n(785562),
-    L = n(192308),
-    M = n(588975),
+    M = n(192308),
+    L = n(588975),
     k = n(442433),
     w = n(975807),
     P = n(235393),
     D = n(679164),
     U = n(652215),
-    G = n(24686),
-    V = n(147190),
+    V = n(24686),
+    G = n(147190),
     F = n(556300),
     H = n(990474);
 n(938796);
@@ -382,7 +382,7 @@ function eh(e) {
                               let l = await D.AN(t.attachmentUrl);
                               (e.shouldStopPropagation && n?.stopPropagation(),
                                   P.A.trackLinkClicked(l),
-                                  e.shouldCloseDefaultModals && (0, L.closeAllModals)(),
+                                  e.shouldCloseDefaultModals && (0, M.closeAllModals)(),
                                   (0, w.A)(l));
                           },
                     o = s.noStyleAndInteraction
@@ -407,7 +407,7 @@ function eh(e) {
                         onContextMenu: o,
                         className: "attachmentLink",
                         children: [
-                            (0, l.jsx)(M.P, { size: "xs", className: r()(V.Kk, G.K), color: "currentColor" }),
+                            (0, l.jsx)(L.P, { size: "xs", className: r()(G.Kk, V.K), color: "currentColor" }),
                             (0, T.t)(t, i, s),
                         ],
                     },

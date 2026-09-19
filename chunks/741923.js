@@ -43,8 +43,8 @@ function A(e) {
         } = e,
         {
             order: v,
-            isCreateOrderLoading: _,
-            createOrderError: x,
+            isCreateOrderLoading: x,
+            createOrderError: _,
             shouldBlockOnOrderCreation: T,
         } = (function (e) {
             let t,
@@ -65,7 +65,7 @@ function A(e) {
             let g = y && E,
                 A = null != n ? n[0] : void 0,
                 [P, v] = (0, i.useState)(null),
-                [_, x] = (0, i.useState)(null),
+                [x, _] = (0, i.useState)(null),
                 [T, N] = (0, i.useState)(g),
                 b = (0, i.useRef)(!1),
                 j = (0, i.useCallback)(
@@ -83,7 +83,7 @@ function A(e) {
                                     tags: { source: "create_order" },
                                     extra: { skuId: t, paymentGateway: String(r), loadId: o },
                                 }),
-                                x(e));
+                                _(e));
                         } finally {
                             N(!1);
                         }
@@ -92,9 +92,9 @@ function A(e) {
                 );
             return (
                 (0, i.useEffect)(() => {
-                    t && null != A && (null != P || null != _ || b.current || ((b.current = !0), j({ skuId: A })));
-                }, [A, t, P, j, _]),
-                { order: P, isCreateOrderLoading: T, createOrderError: _, shouldBlockOnOrderCreation: g }
+                    t && null != A && (null != P || null != x || b.current || ((b.current = !0), j({ skuId: A })));
+                }, [A, t, P, j, x]),
+                { order: P, isCreateOrderLoading: T, createOrderError: x, shouldBlockOnOrderCreation: g }
             );
         })({
             skuIDs: n,
@@ -106,8 +106,8 @@ function A(e) {
             onOrderCreated: I,
         });
     if (T) {
-        if (_) return (0, l.jsx)(g, { renderModalProps: A, children: (0, l.jsx)(o.A, {}) });
-        else if (null != x)
+        if (x) return (0, l.jsx)(g, { renderModalProps: A, children: (0, l.jsx)(o.A, {}) });
+        else if (null != _)
             return (0, l.jsx)(g, {
                 renderModalProps: A,
                 children: (0, l.jsx)(a.E, { variant: "text-md/normal", children: S.intl.string(S.t.F8FvUy) }),

@@ -47,12 +47,12 @@ function N(e) {
                 "--custom-emoji-sprite-col": e % 20,
             };
         })(j, A),
-        L = i.useCallback(() => {
+        M = i.useCallback(() => {
             if (T) return;
             let e = Math.floor(77 * Math.random());
             (_(!0), b(e), (0, x.K)(I.EmojiInteractionPoint.EmojiButtonMouseEntered));
         }, [T, _, b]),
-        M = i.useCallback(() => {
+        L = i.useCallback(() => {
             _(!1);
         }, [_]),
         k = i.useCallback(() => (0, x.K)(I.EmojiInteractionPoint.EmojiButtonFocused), []),
@@ -62,11 +62,11 @@ function N(e) {
         className: r()(R, t),
         "aria-expanded": s,
         onMouseEnter: () => {
-            (L(), u?.());
+            (M(), u?.());
         },
-        onMouseOver: L,
+        onMouseOver: M,
         onMouseLeave: () => {
-            (M(), h?.());
+            (L(), h?.());
         },
         onFocus: () => {
             (k(), f?.());
@@ -120,11 +120,11 @@ function _(e) {
         [b, T] = (0, g.kn)(j ? [u.M.TRIAL_NUX_EMOJI_BUTTON] : [], void 0, !0),
         R = I && b === u.M.TRIAL_NUX_EMOJI_BUTTON,
         O = !a && R,
-        L = i.useRef(null),
-        M = x ?? L;
+        M = i.useRef(null),
+        L = x ?? M;
     function k() {
         return (0, l.jsx)(N, {
-            ref: M,
+            ref: L,
             onMouseLeave: () => {
                 R && T(E.i.USER_DISMISS);
             },
@@ -142,7 +142,7 @@ function _(e) {
         ? k()
         : O
           ? (0, l.jsx)(h.u, {
-                targetElementRef: M,
+                targetElementRef: L,
                 body: y.intl.format(y.t["/7R4q4"], {}),
                 asset: (0, l.jsx)(m.a, {
                     className: r()(S.premiumUnlockAnimation, { [S.reducedMotion]: _ }),
@@ -155,5 +155,5 @@ function _(e) {
                 shouldShow: !0,
                 children: k(),
             })
-          : (0, l.jsx)(f.m, { targetElementRef: M, shouldShow: !0, text: s, keyboardShortcut: C, children: k() });
+          : (0, l.jsx)(f.m, { targetElementRef: L, shouldShow: !0, text: s, keyboardShortcut: C, children: k() });
 }

@@ -17,16 +17,16 @@ var l = s(477900),
     g = s(158045),
     f = s(89366),
     A = s(724651),
-    E = s(732280),
-    C = s(331322),
+    C = s(732280),
+    E = s(331322),
     T = s(508770),
-    N = s(834730),
-    I = s(441574),
+    I = s(834730),
+    N = s(441574),
     R = s(989790),
     v = s(427262),
     y = s(622017),
-    b = s(113090),
-    M = s(88001),
+    M = s(113090),
+    b = s(88001),
     L = s(148155),
     O = s(375708);
 let P = function (e, t) {
@@ -34,31 +34,31 @@ let P = function (e, t) {
         l = (function () {
             let { useCachedData: e = !0, fetch: t = !0 } =
                     arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-                { premiumGroupMembership: s } = (0, b.A)({ useCachedData: e, fetch: t }),
+                { premiumGroupMembership: s } = (0, M.A)({ useCachedData: e, fetch: t }),
                 { premiumGroupMembers: l } = (0, y.A)(s?.subscriptionId ?? null, { useCachedData: e, fetch: t });
             return l?.primary != null ? (0, v.$3)(l?.primary) : null;
-        })({ useCachedData: !0, fetch: e === I.qT.MEMBER }),
+        })({ useCachedData: !0, fetch: e === N.qT.MEMBER }),
         n = (0, a.bG)([_.A], () => _.A.getPremiumGroupSubscription());
-    return e === I.qT.UNSPECIFIED
+    return e === N.qT.UNSPECIFIED
         ? null
         : {
               subheaderString:
                   null ==
                   (s =
-                      e === I.qT.PRIMARY
+                      e === N.qT.PRIMARY
                           ? (0, R.bV)(n, { withIntervals: !0 })
                           : null == l
                             ? null
-                            : O.intl.format(L.default.Nu9LNm, { primaryName: l, premiumGroupProductName: (0, M.DP)() }))
+                            : O.intl.format(L.default.Nu9LNm, { primaryName: l, premiumGroupProductName: (0, b.DP)() }))
                       ? "..."
                       : s,
               bodyString:
-                  e === I.qT.PRIMARY
+                  e === N.qT.PRIMARY
                       ? O.intl.format(L.default["+R/K74"], {
-                            helpCenterLink: M.TE,
-                            premiumGroupProductName: (0, M.DP)(),
+                            helpCenterLink: b.TE,
+                            premiumGroupProductName: (0, b.DP)(),
                         })
-                      : O.intl.format(t ? L.default["xF+upx"] : L.default.qqfnOm, { helpCenterLink: M.TE }),
+                      : O.intl.format(t ? L.default["xF+upx"] : L.default.qqfnOm, { helpCenterLink: b.TE }),
           };
 };
 var S = s(139996);
@@ -70,18 +70,18 @@ function w(e) {
     return (0, l.jsxs)("div", {
         className: r()(S.kL, t),
         children: [
-            (0, l.jsxs)(C.B, {
+            (0, l.jsxs)(E.B, {
                 direction: "horizontal",
                 gap: 8,
                 align: "center",
                 className: S.wx,
                 children: [
-                    (0, l.jsx)(d.D, { variant: "nitro-sm", className: S.Ss, children: (0, M.DP)() }),
+                    (0, l.jsx)(d.D, { variant: "nitro-sm", className: S.Ss, children: (0, b.DP)() }),
                     (0, l.jsx)(T.E, { type: "beta", variant: "expressive" }),
                 ],
             }),
-            (0, l.jsx)(N.E, { variant: "text-md/medium", className: S.m_, color: "text-default", children: i }),
-            (0, l.jsx)(N.E, { variant: "text-md/medium", color: "text-default", children: a }),
+            (0, l.jsx)(I.E, { variant: "text-md/medium", className: S.m_, color: "text-default", children: i }),
+            (0, l.jsx)(I.E, { variant: "text-md/medium", color: "text-default", children: a }),
         ],
     });
 }
@@ -100,7 +100,7 @@ var D = s(194509),
     K = s(45526);
 function $(e) {
     let { text: t, badge: s, variant: n } = e;
-    return (0, l.jsxs)(N.E, {
+    return (0, l.jsxs)(I.E, {
         color: "text-default",
         variant: null != n ? n : "text-sm/normal",
         children: [t, " ", s],
@@ -108,7 +108,7 @@ function $(e) {
 }
 function q(e) {
     let { text: t, variant: s } = e;
-    return (0, l.jsx)(N.E, { color: "text-strong", variant: null != s ? s : "text-md/semibold", children: t });
+    return (0, l.jsx)(I.E, { color: "text-strong", variant: null != s ? s : "text-md/semibold", children: t });
 }
 function J(e) {
     let { includes: t } = e;
@@ -131,7 +131,7 @@ function J(e) {
               ],
           });
 }
-function Q() {
+function X() {
     return (0, l.jsx)("div", {
         className: K.Wm,
         children: (0, l.jsx)(d.D, {
@@ -141,7 +141,7 @@ function Q() {
         }),
     });
 }
-function X(e) {
+function Q(e) {
     let t,
         { premiumType: s, isPremiumGroup: n } = e,
         i = (0, u.Ay)();
@@ -195,24 +195,24 @@ let es = function (e) {
     var t;
     let s,
         i,
-        C,
+        E,
         {
             className: T,
-            hideCTAs: N = !1,
-            headingOverride: I,
+            hideCTAs: I = !1,
+            headingOverride: N,
             hidePill: R = !1,
             selectedPlanColumnClassName: v,
             selectedPlanTier: y = z.PremiumTypes.TIER_2,
         } = e,
-        { analyticsLocations: b } = (0, m.Ay)(x.A.PREMIUM_MARKETING_PLAN_COMPARISON),
-        M = (0, a.bG)([_.A], () => _.A.hasFetchedSubscriptions()),
+        { analyticsLocations: M } = (0, m.Ay)(x.A.PREMIUM_MARKETING_PLAN_COMPARISON),
+        b = (0, a.bG)([_.A], () => _.A.hasFetchedSubscriptions()),
         L = (0, h.Y)(z.T7),
         P = (0, u.Ay)(),
         S = (0, o.q)(P),
         B = (0, a.bG)([j.default], () => j.default.getCurrentUser()),
         k = null != B && B.isPremiumWithPremiumGroup(),
         H = (0, g.YE)(B, z.PremiumTypes.TIER_2),
-        es = (0, E.V)(),
+        es = (0, C.V)(),
         el = es?.subscriptionTrial?.skuId,
         en = (0, f.Us)(),
         ei = (0, A.O)(),
@@ -400,17 +400,17 @@ let es = function (e) {
                 s[23],
                 s[24],
             ]);
-    if (!M || !L) return null;
+    if (!b || !L) return null;
     let em = {
         label: (0, l.jsx)(d.D, {
             className: K.__invalid_textColor,
             variant: "heading-lg/extrabold",
             children: O.intl.string(O.t.ED4UVD),
         }),
-        column1: (0, l.jsx)(X, { premiumType: z.PremiumTypes.TIER_0, isPremiumGroup: k }),
-        column2: (0, l.jsx)(X, { premiumType: z.PremiumTypes.TIER_2, isPremiumGroup: k }),
+        column1: (0, l.jsx)(Q, { premiumType: z.PremiumTypes.TIER_0, isPremiumGroup: k }),
+        column2: (0, l.jsx)(Q, { premiumType: z.PremiumTypes.TIER_2, isPremiumGroup: k }),
     };
-    (N
+    (I
         ? ex.push({
               label: null,
               column1: null,
@@ -458,7 +458,7 @@ let es = function (e) {
               withBottomBorderRadius: !0,
               buttonsRow: null == el,
           }),
-        (C = R
+        (E = R
             ? null
             : null != el || null != en
               ? (0, l.jsx)(F.HU, {
@@ -475,10 +475,10 @@ let es = function (e) {
                                   : F.at.PREMIUM_TIER_2_NEW_GRADIENT_FILL
                               : F.at.PREMIUM_TIER_2_WHITE_FILL,
                 })
-              : (0, l.jsx)(Q, {})));
+              : (0, l.jsx)(X, {})));
     let ep = el === z.pe.TIER_0 || en === z.PremiumTypes.TIER_0 || y === z.PremiumTypes.TIER_0;
     return (0, l.jsx)(m.f5, {
-        value: b,
+        value: M,
         children: (0, l.jsxs)("div", {
             className: r()(K.zr, T),
             "data-testid": "v2-marketing-page-comparison-table",
@@ -486,13 +486,13 @@ let es = function (e) {
                 (0, l.jsx)(d.D, {
                     className: r()(K.Qw, K.__invalid_textColor),
                     variant: "heading-xxl/extrabold",
-                    children: I ?? O.intl.string(O.t.FIbMh9),
+                    children: N ?? O.intl.string(O.t.FIbMh9),
                 }),
                 k && (0, l.jsx)(w, { premiumGroupRole: B.premiumGroupRole, className: K.vg }),
                 (0, l.jsxs)("div", {
                     className: K.wY,
                     children: [
-                        (0, l.jsx)("div", { className: r()(v, { [K.A9]: ep, [K.ce]: !ep && !k }), children: !ep && C }),
+                        (0, l.jsx)("div", { className: r()(v, { [K.A9]: ep, [K.ce]: !ep && !k }), children: !ep && E }),
                         (0, l.jsxs)("table", {
                             className: K.tp,
                             children: [

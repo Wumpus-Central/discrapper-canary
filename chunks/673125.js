@@ -1,4 +1,4 @@
-a.d(t, { Ay: () => C, EB: () => m, Y0: () => d });
+a.d(t, { Ay: () => E, EB: () => m, Y0: () => d });
 var n,
     l,
     s = a(17928),
@@ -148,4 +148,4 @@ class _ extends s.Ay.Store {
         return this.state.fetchChallengesError;
     }
 }
-let C = new _();
+let E = new _();

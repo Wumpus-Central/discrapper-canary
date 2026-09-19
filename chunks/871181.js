@@ -28,8 +28,8 @@ function I(e) {
         } = e,
         [g, A] = i.useState(r ?? m),
         [P, v] = i.useState((0, c.x7)(g)),
-        _ = i.useRef(!1);
-    function x(e, t, l) {
+        x = i.useRef(!1);
+    function _(e, t, l) {
         t !== g && (A(t), v(l), n(t));
     }
     function T() {
@@ -39,7 +39,7 @@ function I(e) {
     }
     return (
         i.useEffect(() => {
-            _.current = !0;
+            x.current = !0;
         }, []),
         i.useEffect(() => {
             if (void 0 === r) {
@@ -60,18 +60,18 @@ function I(e) {
                                 innerClassName: a()(E.Tg, C),
                                 editorClassName: E.OT,
                                 maxCharacterCount: h.Jo,
-                                onChange: x,
+                                onChange: _,
                                 channel: S,
                                 textValue: g,
                                 richValue: P,
                                 type: u.oU.CUSTOM_GIFT,
                                 onBlur: () => {
-                                    _.current = !1;
+                                    x.current = !1;
                                 },
                                 onFocus: () => {
-                                    _.current = !0;
+                                    x.current = !0;
                                 },
-                                focused: _.current,
+                                focused: x.current,
                                 onSubmit: T,
                                 disableThemedBackground: I,
                             }),

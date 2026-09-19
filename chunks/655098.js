@@ -28,15 +28,15 @@ var l = n(477900),
     T = n(47167),
     R = n(442247),
     O = n(569926),
-    L = n(106191),
-    M = n(545868),
+    M = n(106191),
+    L = n(545868),
     k = n(376943),
     w = n(465365),
     P = n(78390),
     D = n(785562),
     U = n(332173),
-    G = n(37632),
-    V = n(593284),
+    V = n(37632),
+    G = n(593284),
     F = n(967144);
 n(209932);
 var H = n(734057),
@@ -127,9 +127,9 @@ function en(e) {
         : (0, l.jsx)(N.Y, {
               targetElementRef: u,
               preload: async () => {
-                  await (0, M.a)(n, t);
+                  await (0, L.a)(n, t);
               },
-              renderPopout: (e) => (0, l.jsx)(V.Y, { guildId: n, channelId: s, roleId: t, popoutProps: e }),
+              renderPopout: (e) => (0, l.jsx)(G.Y, { guildId: n, channelId: s, roleId: t, popoutProps: e }),
               position: "top",
               children: m,
           });
@@ -152,7 +152,7 @@ function ei(e) {
     let { id: t, itemId: n, guildId: i } = e,
         s = (0, P.Q)(t),
         r = (0, E.bG)([B.A], () => (0, P.f)(B.A, t, n, i), [t, n, i]);
-    return (0, l.jsxs)(U.A, { iconType: t, children: [s, null != r && (0, l.jsx)(G.A, {}), r] });
+    return (0, l.jsxs)(U.A, { iconType: t, children: [s, null != r && (0, l.jsx)(V.A, {}), r] });
 }
 function es(e) {
     let { text: t, id: n } = e;
@@ -168,7 +168,7 @@ function ea(e) {
         i = null != n;
     return ((0, O.I)(i ? void 0 : t), i)
         ? (0, l.jsxs)(U.A, {
-              children: [(0, l.jsx)(L.A, { game: { id: t, icon: n.gameIcon }, iconClassName: $.Kk }), n.gameName],
+              children: [(0, l.jsx)(M.A, { game: { id: t, icon: n.gameIcon }, iconClassName: $.Kk }), n.gameName],
           })
         : (0, l.jsxs)("span", { children: ["@", J.intl.string(J.t["11pdXZ"])] });
 }

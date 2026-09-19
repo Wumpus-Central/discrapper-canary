@@ -41,25 +41,25 @@ var N = n(174459),
     T = n(953584),
     R = n(122641),
     O = n(692051),
-    L = n(375708),
-    M = n(317714);
+    M = n(375708),
+    L = n(317714);
 function k(e) {
     let { onPlay: t, className: n, inactive: s } = e,
         a = i.useRef(null),
         o = (0, l.jsx)("div", {
-            className: M.P0,
+            className: L.P0,
             ref: a,
-            children: (0, l.jsx)(f.PlayIcon, { size: "xs", color: "currentColor", className: M.Kk }),
+            children: (0, l.jsx)(f.PlayIcon, { size: "xs", color: "currentColor", className: L.Kk }),
         });
     return (0, l.jsx)(O.Y.Consumer, {
         children: (e) =>
             s || null == t
-                ? (0, l.jsx)("div", { className: M.Iv, children: o })
+                ? (0, l.jsx)("div", { className: L.Iv, children: o })
                 : (0, l.jsx)(h.D, {
-                      className: r()(n, M.Iv, { [M.vu]: !e.disableInteractions }),
+                      className: r()(n, L.Iv, { [L.vu]: !e.disableInteractions }),
                       onClick: t,
                       tabIndex: 0,
-                      "aria-label": L.intl.string(L.t.RscU7I),
+                      "aria-label": M.intl.string(M.t.RscU7I),
                       focusProps: { ringTarget: a },
                       children: o,
                   }),
@@ -92,7 +92,7 @@ function U(e) {
             ? `${(e / 1e3).toFixed(1)} Kbps`
             : `${(e / 1e6).toFixed(2)} Mbps`;
 }
-async function G(e) {
+async function V(e) {
     try {
         let t;
         if ("u" < typeof fetch) return D;
@@ -252,7 +252,7 @@ async function G(e) {
         return D;
     }
 }
-class V {
+class G {
     videoElement;
     updateInterval = null;
     updateCallback = null;
@@ -273,7 +273,7 @@ class V {
         let e = "" !== this.videoElement.src ? this.videoElement.src : this.videoElement.currentSrc;
         if (null == e || "" === e || null != this.codecInfoPromise) return;
         let t = this.codecInfoFetchId;
-        this.codecInfoPromise = G(e);
+        this.codecInfoPromise = V(e);
         let n = await this.codecInfoPromise;
         this.codecInfoFetchId === t && (this.cachedCodecInfo = n);
     }
@@ -707,7 +707,7 @@ class eu extends i.Component {
                   className: et.CY,
                   onClick: i,
                   tabIndex: r ? -1 : 0,
-                  "aria-label": L.intl.string(L.t.ZcgDJX),
+                  "aria-label": M.intl.string(M.t.ZcgDJX),
                   children: (0, l.jsx)(m.PauseIcon, { size: "xs", color: "currentColor", className: et.pd }, "pause"),
               })
             : null != t && t === n
@@ -715,14 +715,14 @@ class eu extends i.Component {
                     className: et.CY,
                     onClick: s,
                     tabIndex: r ? -1 : 0,
-                    "aria-label": L.intl.string(L.t.hsvh0i),
+                    "aria-label": M.intl.string(M.t.hsvh0i),
                     children: (0, l.jsx)(v, { className: et.pd }, "replay"),
                 })
               : (0, l.jsx)(h.D, {
                     className: et.CY,
                     onClick: s,
                     tabIndex: r ? -1 : 0,
-                    "aria-label": L.intl.string(L.t.RscU7I),
+                    "aria-label": M.intl.string(M.t.RscU7I),
                     children: (0, l.jsx)(f.PlayIcon, { size: "xs", color: "currentColor", className: et.pd }, "play"),
                 });
     }
@@ -1361,7 +1361,7 @@ class ef extends i.PureComponent {
                 }));
         else if (null != t && (0, c.vq)(t, HTMLVideoElement))
             try {
-                (null == this._statsCollector && (this._statsCollector = new V(t, this.props.fileSizeBytes)),
+                (null == this._statsCollector && (this._statsCollector = new G(t, this.props.fileSizeBytes)),
                     this._statsCollector.startTracking(this.handleStatsUpdate),
                     (this._isUpdatingStats = !0),
                     this.setState({ showStats: !0, videoStats: this._statsCollector.getStats() }, () => {
@@ -1495,7 +1495,7 @@ class ef extends i.PureComponent {
                   children:
                       t === es.VIDEO && !1 !== this.props.allowFullScreen
                           ? (0, l.jsx)(I.A, {
-                                "aria-label": L.intl.string(L.t["2nM3Pk"]),
+                                "aria-label": M.intl.string(M.t["2nM3Pk"]),
                                 className: et.CY,
                                 iconClassName: et.pd,
                                 guestWindow: window,
