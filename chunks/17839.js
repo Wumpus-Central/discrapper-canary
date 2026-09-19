@@ -6,8 +6,7 @@ function r(e) {
     let { parentId: a, source: r } = e;
     (0, n.openModalLazy)(async () => {
         let { default: e } = await Promise.all([
-            t.e("721642"),
-            t.e("130891"),
+            t.e("842760"),
             t.e("267732"),
             t.e("850979"),
             t.e("844780"),

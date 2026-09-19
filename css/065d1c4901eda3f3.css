@@ -182,4 +182,118 @@
     width: 100%
 }
 
-/*# sourceMappingURL=644f7d499d1bb7db.css.map*/
+.destinationRow_ba7598 {
+    align-items: center;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 -8px;
+    min-height: 48px;
+    padding: 0 8px
+}
+
+.destinationRow_ba7598.pressable_ba7598 {
+    cursor: pointer
+}
+
+.destinationRow_ba7598.disabled_ba7598 {
+    cursor: not-allowed
+}
+
+.destinationRow_ba7598.pressable_ba7598:not(.disabled_ba7598):hover {
+    background-color: var(--interactive-background-hover)
+}
+
+.identity_ba7598 {
+    align-items: center;
+    flex-direction: row;
+    flex-shrink: 1;
+    gap: 12px
+}
+
+.identity_ba7598,
+.labels_ba7598 {
+    display: flex;
+    overflow: hidden
+}
+
+.labels_ba7598 {
+    flex-direction: column;
+    margin: 4px 0
+}
+
+.disabled_ba7598 .iconWrapper_ba7598 {
+    opacity: 50%
+}
+
+.trailing_ba7598 {
+    flex: 0;
+    margin-inline-start: 16px
+}
+
+.forwardPreview__0d4ce {
+    align-items: center;
+    display: flex;
+    gap: 12px;
+    height: 100%;
+    justify-content: space-between;
+    margin-inline-end: 16px;
+    padding-inline-start: 16px;
+    position: relative;
+    width: calc(100% - 16px)
+}
+
+.forwardPreview__0d4ce:before {
+    background-color: var(--border-subtle);
+    border-radius: 2px;
+    content: "";
+    flex-shrink: 0;
+    height: 100%;
+    inset-inline-start: 0;
+    position: absolute;
+    top: 0;
+    width: 4px
+}
+
+.linkContainer__0d4ce {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0
+}
+
+.linkIcon__0d4ce {
+    color: var(--text-muted)
+}
+
+.applicationInfo__0d4ce {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 4px
+}
+
+.previewImageStack__0d4ce {
+    display: flex;
+    flex-shrink: 0
+}
+
+.previewImageContainer__0d4ce {
+    box-shadow: 0 0 0 2px var(--background-surface-high);
+    max-width: 40px;
+    min-width: 40px;
+    width: 40px
+}
+
+.previewImageContainer__0d4ce:not(:first-child) {
+    margin-inline-start: -12px
+}
+
+.previewImageLayer__0d4ce {
+    max-width: 40px;
+    min-width: 40px;
+    width: 40px
+}
+
+/*# sourceMappingURL=065d1c4901eda3f3.css.map*/

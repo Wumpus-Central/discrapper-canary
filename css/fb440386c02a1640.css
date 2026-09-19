@@ -1,0 +1,137 @@
+.embedBuilder_acffbd {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8)
+}
+
+.active_acffbd {
+    flex-grow: 1;
+    min-height: 0
+}
+
+.header_acffbd {
+    align-items: center;
+    flex-direction: row
+}
+
+.content_acffbd,
+.header_acffbd {
+    display: flex;
+    gap: var(--space-8)
+}
+
+.content_acffbd {
+    flex-direction: column;
+    flex-grow: 1;
+    min-height: 0;
+    overflow-y: auto
+}
+
+.embedBuilder__22392 {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: var(--space-8);
+    justify-content: space-between;
+    padding: var(--space-16)
+}
+
+.active__22392 {
+    flex-grow: 1;
+    min-height: 0
+}
+
+.body__22392,
+.content__22392 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8)
+}
+
+.content__22392 {
+    flex-grow: 1;
+    min-height: 0;
+    overflow-y: auto
+}
+
+.actions__22392 {
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-8)
+}
+
+.selectedSkusContainer__22392 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+    margin-block-start: var(--space-16)
+}
+
+.selectedSkusList__22392 {
+    display: grid;
+    gap: var(--space-8);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 155px)
+}
+
+.skuListItem__22392 {
+    border-radius: var(--radius-sm);
+    overflow: clip;
+    position: relative
+}
+
+.doubleWidth__22392 {
+    grid-column: span 2
+}
+
+.cardBackgroundImage__22392 {
+    background-color: var(--background-base-low);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: scale(110%)
+}
+
+.full-motion .cardBackgroundImage__22392 {
+    transition: transform .5s
+}
+
+.cardImage__22392 {
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover
+}
+
+.full-motion .cardImage__22392 {
+    transition: transform .5s
+}
+
+.ticketIconContainer__22392 {
+    background: var(--brand-400);
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    bottom: 0
+}
+
+.ticketIcon__22392 {
+    height: 50%;
+    inset-inline-start: 50%;
+    -o-object-fit: contain;
+    object-fit: contain;
+    -o-object-position: center center;
+    object-position: center center;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%
+}
+
+.cardImageContainer__22392 {
+    bottom: 0;
+    top: 0;
+    inset-inline: 0;
+    z-index: 0
+}
+
+/*# sourceMappingURL=fb440386c02a1640.css.map*/

@@ -287,8 +287,8 @@ var ex = n(875317),
     eJ = n(763827),
     e0 = n(158045),
     e1 = n(885631),
-    e3 = n(542308),
-    e6 = n(960628),
+    e6 = n(542308),
+    e3 = n(960628),
     e8 = n(206248),
     e7 = n(498470),
     e2 = n(807098),
@@ -818,12 +818,12 @@ class t1 extends r.PureComponent {
         });
     }
 }
-let t3 = d.Ay.connectStores([k.A], (e) => {
+let t6 = d.Ay.connectStores([k.A], (e) => {
     let { guild: t } = e;
     return { memberCount: k.A.getMemberCount(t.id) };
 })(t1);
-var t6 = n(503698),
-    t8 = n.n(t6),
+var t3 = n(503698),
+    t8 = n.n(t3),
     t7 = n(933832),
     t2 = n(782603),
     t5 = n(81466),
@@ -1474,11 +1474,11 @@ let n1 = function (e) {
         imageMarginX: 61,
     });
 };
-var n3 = n(475358),
-    n6 = n(675704),
+var n6 = n(475358),
+    n3 = n(675704),
     n8 = n(793322);
 let n7 = function (e) {
-    let t = (0, l.jsx)(n3.e, { shortcut: n6.R.binds["0"], keyClassName: tM.Eb });
+    let t = (0, l.jsx)(n6.e, { shortcut: n3.R.binds["0"], keyClassName: tM.Eb });
     return (0, l.jsx)(tO, {
         guild: e.guild,
         onDismissed: () => e.markAsDismissed(eE.i.UNKNOWN),
@@ -1600,7 +1600,7 @@ function iA(e) {
                 case u.M.CHANNEL_NOTICE_INVITE:
                     return (0, l.jsx)(n0, { guild: A, markAsDismissed: M });
                 case u.M.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION:
-                    return (0, l.jsx)(t3, { guild: A, markAsDismissed: M });
+                    return (0, l.jsx)(t6, { guild: A, markAsDismissed: M });
                 case u.M.CHANNEL_NOTICE_QUICKSWITCHER:
                     return (0, l.jsx)(n7, { guild: A, markAsDismissed: M });
                 case u.M.CHANNEL_NOTICE_GUILD_BANNER:
@@ -1992,6 +1992,7 @@ class iS extends r.PureComponent {
                     n.e("784569"),
                     n.e("25279"),
                     n.e("992789"),
+                    n.e("959880"),
                     n.e("174016"),
                     n.e("910471"),
                     n.e("11301"),
@@ -1999,7 +2000,6 @@ class iS extends r.PureComponent {
                     n.e("960235"),
                     n.e("811133"),
                     n.e("425412"),
-                    n.e("959880"),
                     n.e("77333"),
                     n.e("910486"),
                     n.e("56366"),
@@ -2034,12 +2034,12 @@ class iS extends r.PureComponent {
                     n.e("708757"),
                     n.e("993103"),
                     n.e("585968"),
-                    n.e("393336"),
                     n.e("481647"),
+                    n.e("393336"),
                     n.e("776273"),
                     n.e("776602"),
-                    n.e("407170"),
                     n.e("140402"),
+                    n.e("407170"),
                     n.e("811310"),
                     n.e("21921"),
                     n.e("307575"),
@@ -2054,19 +2054,21 @@ class iS extends r.PureComponent {
                     n.e("139970"),
                     n.e("676418"),
                     n.e("875842"),
+                    n.e("675706"),
                     n.e("940258"),
-                    n.e("571210"),
-                    n.e("292583"),
-                    n.e("930233"),
-                    n.e("586127"),
-                    n.e("166495"),
                     n.e("844841"),
                     n.e("401518"),
+                    n.e("571210"),
+                    n.e("292583"),
+                    n.e("323354"),
+                    n.e("302969"),
+                    n.e("586127"),
+                    n.e("173764"),
+                    n.e("166495"),
                     n.e("198329"),
                     n.e("9205"),
-                    n.e("371042"),
                     n.e("308555"),
-                    n.e("323354"),
+                    n.e("25949"),
                     n.e("146070"),
                     n.e("88599"),
                     n.e("836863"),
@@ -2160,8 +2162,8 @@ class iS extends r.PureComponent {
                     n.e("709371"),
                     n.e("310235"),
                     n.e("480012"),
-                    n.e("474610"),
                     n.e("844780"),
+                    n.e("474610"),
                     n.e("939171"),
                     n.e("713567"),
                     n.e("242323"),
@@ -2427,7 +2429,7 @@ class iS extends r.PureComponent {
                       spacing: 4,
                       children: (i) => {
                           let { onClick: s, ...r } = i;
-                          return (0, l.jsx)(e6.Ay, {
+                          return (0, l.jsx)(e3.Ay, {
                               ref: this.guildHeaderRef,
                               guild: t,
                               controller: o,
@@ -2492,7 +2494,7 @@ class iS extends r.PureComponent {
                     className: iC.r0,
                     children: (0, l.jsx)(eU.A, { guild: t, channel: n ?? eq.Ay.getDefaultChannel(t.id) }),
                 });
-            let e = (0, es.ai)(t.id) ? el.A : e3.B;
+            let e = (0, es.ai)(t.id) ? el.A : e6.B;
             return (0, l.jsx)(e, {
                 guild: t,
                 ...s,
@@ -2605,8 +2607,8 @@ function ip(e) {
         eW = (0, d.bG)([O.A], () => O.A.getChannel(x)),
         { isPopoutOpen: eq } = (0, eu.S)(),
         e1 = b?.features.has(H.GuildFeatures.COMMUNITY) ?? !1,
-        e3 = e0.Ay.isNewUser(k),
-        e6 = W && !e3;
+        e6 = e0.Ay.isNewUser(k),
+        e3 = W && !e6;
     ((c = (0, eh.TZ)(b)),
         (A = V.dR.some((e) => !(0, es.ai)(b?.id) && eg.Ib(e, b))),
         (E = b?.defaultMessageNotifications === H.orn.ALL_MESSAGES),
@@ -2809,7 +2811,7 @@ function ip(e) {
         isGuildHeaderDismissibleTooltipShown: $,
         canShowCoachMarkAtBottom: W,
         headerAnalyticsLocations: q,
-        shouldRenderBurstCoachmark: e6,
+        shouldRenderBurstCoachmark: e3,
         guildHeaderContentDescriptor: tN,
         onFavoriteGuildContextMenu: G,
         hasFavoritesAccess: U,

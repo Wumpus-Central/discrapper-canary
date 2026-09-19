@@ -762,5 +762,22 @@
         }
       }
     ]
+  },
+  {
+    "kind": "user",
+    "id": "2026-09-multisku-embed-builder",
+    "label": "Multi-SKU Embed Builder",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "treatments": [
+      {
+        "id": 1,
+        "label": "Show the embed builder entry point in the Social Commerce dev tools tab",
+        "config": {
+          "enabled": true
+        }
+      }
+    ]
   }
 ]

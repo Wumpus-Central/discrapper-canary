@@ -1,3 +1,60 @@
+.listItemWrapper__91816:active {
+    transform: translateY(1px) translateZ(0)
+}
+
+.enable-forced-colors .listItemWrapper__91816 {
+    background-color: ButtonFace;
+    border: 1px solid CanvasText;
+    border-radius: 4px
+}
+
+.enable-forced-colors .listItemWrapper__91816:hover {
+    border-color: ButtonText
+}
+
+.enable-forced-colors .listItemWrapper__91816.selected__91816 {
+    background-color: HighlightText;
+    border-color: Highlight;
+    outline: 2px solid Highlight
+}
+
+.circleIconButton__5bc7e {
+    align-items: center;
+    background-color: var(--background-mod-subtle);
+    box-sizing: border-box;
+    color: var(--text-default);
+    cursor: pointer;
+    display: flex;
+    height: var(--guildbar-avatar-size);
+    justify-content: center;
+    transition: color .15s ease-out, background-color .15s ease-out;
+    width: var(--guildbar-avatar-size)
+}
+
+.circleIconButton__5bc7e:hover:not(.disabled__5bc7e) {
+    background-color: var(--background-brand)
+}
+
+.circleIconButton__5bc7e.selected__5bc7e {
+    background-color: var(--background-brand);
+    color: var(--white)
+}
+
+.circleIcon__5bc7e {
+    height: 20px;
+    width: 20px
+}
+
+.custom-theme-background .circleIconButton__5bc7e {
+    background-color: var(--background-mod-strong)
+}
+
+.enable-forced-colors .circleIconButton__5bc7e,
+.enable-forced-colors .circleIconButton__5bc7e.selected__5bc7e {
+    background-color: ButtonFace;
+    color: ButtonText
+}
+
 .heading-sm\/normal__22234 {
     font-family: var(--font-primary);
     font-size: 14px;
@@ -2430,4 +2487,100 @@ strong {
     }
 }
 
-/*# sourceMappingURL=960175.9908307d5925afcf.css.map*/
+.wrapper_d144f8 {
+    align-items: stretch;
+    bottom: -4px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: -16px;
+    inset-inline: 0;
+    pointer-events: none
+}
+
+.target_d144f8 {
+    flex: 1 0 50%
+}
+
+.target_d144f8.dragOver_d144f8:before {
+    background-color: var(--status-positive);
+    border-radius: 2px;
+    box-shadow: 0 0 3px var(--opacity-black-28);
+    content: "";
+    height: 4px;
+    position: absolute;
+    top: 10px;
+    inset-inline: 4px;
+    z-index: 1
+}
+
+.centerTarget_d144f8 {
+    flex: 1 0 50%
+}
+
+.centerTarget_d144f8.dragOver_d144f8:before {
+    background-color: var(--status-positive);
+    border-radius: 50%;
+    box-shadow: 0 0 3px var(--opacity-black-28);
+    content: "";
+    height: 16px;
+    inset-inline-start: 4px;
+    margin: auto;
+    position: absolute;
+    top: 28px;
+    width: 16px;
+    z-index: 1
+}
+
+.autoPointerEvents_d144f8 {
+    pointer-events: auto
+}
+
+.folderEndWrapper_d144f8 {
+    height: 0;
+    position: relative
+}
+
+.folderEndWrapper_d144f8.wrapperOver_d144f8 {
+    height: 24px
+}
+
+.folderTarget_d144f8 {
+    display: flex;
+    flex-direction: column;
+    height: 24px;
+    position: absolute;
+    top: -24px;
+    inset-inline: 0;
+    justify-content: space-between;
+    pointer-events: none
+}
+
+.folderTarget_d144f8 .dragOver_d144f8:before {
+    bottom: 0;
+    top: unset
+}
+
+.enable-forced-colors .centerTarget_d144f8.dragOver_d144f8:before,
+.enable-forced-colors .target_d144f8.dragOver_d144f8:before {
+    background-color: Highlight;
+    outline: 2px solid Canvas
+}
+
+.circleIconButton_a2be55 {
+    align-items: center;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    transition: color .15s ease-out, background-color .15s ease-out;
+    width: 40px
+}
+
+.geoRestrictedBadge_a2be55 {
+    background-color: var(--status-warning-background);
+    color: var(--status-warning-text)
+}
+
+/*# sourceMappingURL=657503.3ee020b4ac38dc6a.css.map*/

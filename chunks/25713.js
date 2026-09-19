@@ -290,7 +290,7 @@ function N() {
 }
 let V = "/assets/863cb535889630a2.svg";
 var w = l(50777),
-    L = l(445881);
+    L = l(467884);
 let U = {
     name: "Shop Card",
     id: "storefront-card",

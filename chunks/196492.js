@@ -47,7 +47,7 @@ class A extends d.A {
             : (0, s.openModalLazy)(
                   async () => {
                       let { default: e } = await Promise.all([
-                          n.e("721642"),
+                          n.e("842760"),
                           n.e("31331"),
                           n.e("692639"),
                           n.e("890480"),
