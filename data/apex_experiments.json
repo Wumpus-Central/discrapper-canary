@@ -1933,22 +1933,6 @@
     }
   },
   {
-    "kind": "user",
-    "name": "2026-03-stage-voice-panel",
-    "defaultConfig": {
-      "enabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true
-      }
-    }
-  },
-  {
     "name": "2026-03-steelseries-3p-recurring",
     "kind": "user",
     "defaultConfig": {
