@@ -4,6 +4,12 @@ let a = [
         date: "2026-09-20",
         platforms: ["desktop", "mobile"],
         summary:
+            "Apps that show people now get their real Discord avatars on the first build, and clicking one opens their profile card.",
+    },
+    {
+        date: "2026-09-20",
+        platforms: ["desktop", "mobile"],
+        summary:
             "Apps you build can now ask the AI quick yes/no, pick-one, and rating questions and get confidence-scored answers.",
     },
     {
