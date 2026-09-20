@@ -3,6 +3,12 @@ let a = [
     {
         date: "2026-09-20",
         platforms: ["desktop", "mobile"],
+        summary:
+            "Apps you build can now ask the AI quick yes/no, pick-one, and rating questions and get confidence-scored answers.",
+    },
+    {
+        date: "2026-09-20",
+        platforms: ["desktop", "mobile"],
         summary: "Messages sent mid-task route faster: questions, follow-ups, and interrupts respond right away.",
     },
     {
