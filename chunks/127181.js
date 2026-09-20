@@ -1,6 +1,16 @@
 n.d(t, { B: () => s, MZ: () => o, TH: () => l, tn: () => i });
 let a = [
     {
+        date: "2026-09-20",
+        platforms: ["desktop", "mobile"],
+        summary: "Messages sent mid-task route faster: questions, follow-ups, and interrupts respond right away.",
+    },
+    {
+        date: "2026-09-20",
+        platforms: ["desktop", "mobile"],
+        summary: "The rune usage panel now shows Deciding, the quick checks that keep an eye on your builds.",
+    },
+    {
         date: "2026-09-18",
         platforms: ["mobile"],
         summary: "On phones, opening the chat in an app\u2019s channel now marks its messages read.",

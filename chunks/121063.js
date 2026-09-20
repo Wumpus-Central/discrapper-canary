@@ -3133,7 +3133,7 @@ function lG(e) {
     return e.toLocaleString();
 }
 function lV(e) {
-    let { label: t, usage: l } = e;
+    let { label: t, usage: l, cached: a = !0 } = e;
     return (0, n.jsxs)("div", {
         className: lB.Q$,
         children: [
@@ -3156,11 +3156,10 @@ function lV(e) {
                     lG(l.input_tokens),
                     " in \xb7 ",
                     lG(l.output_tokens),
-                    " out \xb7 ",
-                    lG(l.cache_creation_input_tokens),
-                    " cache write \xb7 ",
-                    lG(l.cache_read_input_tokens),
-                    " cache read",
+                    " out",
+                    a
+                        ? ` \xb7 ${lG(l.cache_creation_input_tokens)} cache write \xb7 ${lG(l.cache_read_input_tokens)} cache read`
+                        : "",
                 ],
             }),
         ],
@@ -3169,8 +3168,9 @@ function lV(e) {
 function lW(e) {
     let { project: t } = e,
         l = (0, tO.wU)(t.compaction),
-        a = (0, tO.wV)(t.orchestrator, t.codegen),
-        r = (0, tO.wV)(a, l);
+        a = (0, tO.wU)(t.classifier),
+        r = (0, tO.wV)(t.orchestrator, t.codegen),
+        i = (0, tO.wV)(r, l);
     return (0, n.jsxs)("div", {
         className: lB.si,
         role: "dialog",
@@ -3194,8 +3194,9 @@ function lW(e) {
                     ],
                 }),
             }),
-            (0, n.jsx)(lV, { label: C.intl.string(S.default.R9aduM), usage: a }),
+            (0, n.jsx)(lV, { label: C.intl.string(S.default.R9aduM), usage: r }),
             (0, n.jsx)(lV, { label: C.intl.string(S.default.Tj6b30), usage: l }),
+            (0, n.jsx)(lV, { label: C.intl.string(S.default.vVUMwj), usage: a, cached: !1 }),
             (0, n.jsxs)("div", {
                 className: lB.mf,
                 children: [
@@ -3207,7 +3208,7 @@ function lW(e) {
                     (0, n.jsx)(v.E, {
                         variant: "text-sm/medium",
                         color: "text-default",
-                        children: 0 === (0, tO.sj)(r) ? "\u2014" : `${Math.round(100 * (0, tO.CA)(r))}%`,
+                        children: 0 === (0, tO.sj)(i) ? "\u2014" : `${Math.round(100 * (0, tO.CA)(i))}%`,
                     }),
                 ],
             }),
