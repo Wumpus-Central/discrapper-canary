@@ -1,6 +1,11 @@
 n.d(t, { B: () => s, MZ: () => o, TH: () => l, tn: () => i });
 let a = [
     {
+        date: "2026-09-21",
+        platforms: ["desktop", "mobile"],
+        summary: "The model picker now offers Grok 4.6 alongside Claude and GPT.",
+    },
+    {
         date: "2026-09-20",
         platforms: ["desktop", "mobile"],
         summary:

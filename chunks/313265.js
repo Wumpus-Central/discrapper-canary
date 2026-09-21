@@ -17,10 +17,4 @@ function s(e, t) {
     return null != n ? { title: e, body: a.intl.string(n) } : { body: e };
 }
 let i = { low: "Low", medium: "Medium", high: "High", xhigh: "Extra high", max: "Max" },
-    r = {
-        anthropic: "Anthropic",
-        openai: "OpenAI",
-        "workers-ai": "Workers AI (dev)",
-        xai: "xAI (dev)",
-        moonshotai: "Moonshot AI (dev)",
-    };
+    r = { anthropic: "Anthropic", openai: "OpenAI", deepseek: "DeepSeek", xai: "xAI", moonshotai: "Moonshot AI" };
