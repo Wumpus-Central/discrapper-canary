@@ -7,94 +7,94 @@ var i = n(121197),
     o = n(734057),
     d = n(376943),
     c = n(308528),
-    u = n(717125),
-    _ = n(41200),
-    E = n(831617),
-    A = n(496767),
-    h = n(134413),
-    I = n(713125),
-    f = n(473529),
-    p = n(960253),
-    T = n(469993),
-    g = n(836039),
-    m = n(555325),
-    S = n(287809),
-    N = n(470452),
-    C = n(521427),
-    O = n(56595),
-    R = n(871123),
-    L = n(353202),
-    y = n(683180),
-    D = n(317525),
-    v = n(71393),
-    b = n(403362),
+    u = n(41200),
+    _ = n(831617),
+    E = n(496767),
+    A = n(134413),
+    h = n(713125),
+    I = n(473529),
+    f = n(960253),
+    p = n(469993),
+    T = n(836039),
+    g = n(555325),
+    m = n(287809),
+    S = n(470452),
+    N = n(521427),
+    C = n(56595),
+    O = n(871123),
+    R = n(353202),
+    L = n(683180),
+    y = n(317525),
+    D = n(71393),
+    v = n(403362),
+    b = n(891897),
     M = n(652215),
     P = n(746080);
 async function U(e) {
     let { guildId: t, channelId: n } = e,
-        i = v.A.getGuild(t),
-        r = D.A.getUnsafeMutableRoles(t);
+        i = D.A.getGuild(t),
+        r = y.A.getUnsafeMutableRoles(t);
     if (null == i && t !== M.ME && n !== P.VV.GAME_SHOP) return !1;
     if (null == n) return !0;
     if ((0, P.jq)(n))
         switch (n) {
             case P.VV.VIBEGRATIONS:
-                return null != i && (0, y.G2)(i, "isAccessibleChannelOrThreadPath");
+                return null != i && (0, L.G2)(i, "isAccessibleChannelOrThreadPath");
             case P.VV.ROLE_SUBSCRIPTIONS:
-                return (0, p.l8)(t, r);
+                return (0, f.l8)(t, r);
             case P.VV.SERVER_MONETIZATION_ONBOARDING:
                 let a;
                 return (
                     null != i &&
-                    ((a = i.ownerId === S.default.getCurrentUser()?.id),
-                    (0, m.V9)({
+                    ((a = i.ownerId === m.default.getCurrentUser()?.id),
+                    (0, g.V9)({
                         guild: i,
                         isOwner: a,
-                        canManageGuildRoleSubscriptions: (0, m.X9)(i),
-                        isUserInCreatorMonetizationEligibleCountry: (0, T.Z1)(),
-                        shouldRestrictUpdatingRoleSubscriptionSettings: (0, g.mk)(i.id),
+                        canManageGuildRoleSubscriptions: (0, g.X9)(i),
+                        isUserInCreatorMonetizationEligibleCountry: (0, p.Z1)(),
+                        shouldRestrictUpdatingRoleSubscriptionSettings: (0, T.mk)(i.id),
                     }))
                 );
             case P.VV.GAME_SHOP:
-                return (0, R.jz)(i ?? { id: t, type: "id-only" });
+                return (0, O.jz)(i ?? { id: t, type: "id-only" });
             case P.VV.GUILD_SHOP:
-                return (0, _.K)(i, r);
+                return (0, u.K)(i, r);
             case P.VV.MEMBER_APPLICATIONS:
-                return (0, A.h)(t);
+                return (0, E.h)(t);
             case P.VV.GUILD_HOME:
-                return (0, f.K)(t);
+                return (0, I.K)(t);
             case P.VV.CHANNEL_BROWSER:
                 return null != i && i.features.has(M.GuildFeatures.COMMUNITY);
             case P.VV.GUILD_ONBOARDING:
-                return I.Ay.shouldShowOnboarding(t);
+                return h.Ay.shouldShowOnboarding(t);
             case P.VV.CUSTOMIZE_COMMUNITY:
                 return null != i && i.features.has(M.GuildFeatures.COMMUNITY);
             case P.VV.MEMBER_SAFETY:
-                return (0, h.Ml)(t);
+                return (0, A.Ml)(t);
             case P.VV.GUILD_BOOSTS:
                 return !0;
             case P.VV.REPORT_TO_MOD:
-                return null != i && (0, O.A)(i);
+                return null != i && (0, C.A)(i);
             case P.VV.GAME_SERVERS:
                 return (
-                    (0, E.TS)(t, "isAccessibleChannelOrThreadPath") &&
+                    (0, _.TS)(t, "isAccessibleChannelOrThreadPath") &&
                     null != i &&
                     i.features.has(M.GuildFeatures.GAME_SERVERS)
                 );
             case P.VV.GUILD_OFFICIAL_MESSAGES:
-                return (0, C.GP)(i, "isAccessibleChannelOrThreadPath");
+                return (0, N.GP)(i, "isAccessibleChannelOrThreadPath");
             case P.VV.GUILD_SPACE:
-                return (0, N.tT)(i, "isAccessibleChannelOrThreadPath");
+                return (0, S.tT)(i, "isAccessibleChannelOrThreadPath");
             default:
-                (0, b.xb)(n);
+                (0, v.xb)(n);
         }
     let s = o.A.getChannel(n);
     return (
         (null != s ||
-            (await L.A.loadThread(n),
+            (await R.A.loadThread(n),
             null == (s = o.A.getChannel(n)) && t === M.ME && (s = await c.A.openChannel(n)),
             null != s)) &&
-        ((0, d.nc)(s) || u.A.isChannelGatedAndVisible(t, n))
+        (0, b.A)(s)
     );
 }
 var w = n(9588);
