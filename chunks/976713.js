@@ -3,7 +3,7 @@ var n = l(313265),
     a = l(50617),
     r = l(375708);
 let i = [
-    { model: "gpt-5.6-luna", thinking: "high", fast: !0, summary: () => r.intl.string(a.default.Mo0a1m) },
+    { model: "gpt-5.6-luna", thinking: "xhigh", summary: () => r.intl.string(a.default.Mo0a1m) },
     { model: "gpt-5.6-sol", thinking: "high", summary: () => r.intl.string(a.default.dkt78K) },
     { model: "gpt-6-astra", thinking: "medium", summary: () => r.intl.string(a.default.Ly6zYL) },
 ];
