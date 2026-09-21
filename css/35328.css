@@ -26,9 +26,9 @@
     width: 148px
 }
 
-.soundButton__9be63.focused__9be63,
-.soundButton__9be63:active:not(:focus-within),
-.soundButton__9be63:hover {
+.soundButton__9be63.focused__9be63:not(.disableActiveStyles__9be63),
+.soundButton__9be63:active:not(:focus-within):not(.disableActiveStyles__9be63),
+.soundButton__9be63:hover:not(.disableActiveStyles__9be63) {
     border-color: var(--border-subtle)
 }
 
@@ -36,12 +36,12 @@
     border-color: var(--border-muted)
 }
 
-.animated__9be63:active:not(:focus-within) {
+.animated__9be63:not(.disableActiveStyles__9be63):active:not(:focus-within) {
     box-shadow: none;
     outline-width: 1px
 }
 
-.full-motion .animated__9be63:active:not(:focus-within) {
+.full-motion .animated__9be63:not(.disableActiveStyles__9be63):active:not(:focus-within) {
     transform: translateY(2px)
 }
 
@@ -61,25 +61,25 @@
     margin-inline-end: 4px
 }
 
-.hoverActiveBackground__9be63.focused__9be63,
-.hoverActiveBackground__9be63:focus-within {
+.hoverActiveBackground__9be63.focused__9be63:not(.disableActiveStyles__9be63),
+.hoverActiveBackground__9be63:focus-within:not(.disableActiveStyles__9be63) {
     background: var(--background-mod-normal)
 }
 
-.hoverActiveBackground__9be63:hover {
+.hoverActiveBackground__9be63:hover:not(.disableActiveStyles__9be63) {
     background: var(--background-mod-strong)
 }
 
-.soundButton__9be63.focused__9be63 .buttonOverlay__9be63,
-.soundButton__9be63:focus-within .buttonOverlay__9be63,
-.soundButton__9be63:hover .buttonOverlay__9be63 {
+.soundButton__9be63.focused__9be63:not(.disableActiveStyles__9be63) .buttonOverlay__9be63,
+.soundButton__9be63:focus-within:not(.disableActiveStyles__9be63) .buttonOverlay__9be63,
+.soundButton__9be63:hover:not(.disableActiveStyles__9be63) .buttonOverlay__9be63 {
     opacity: 1;
     visibility: visible
 }
 
-.soundButton__9be63.focused__9be63 .addButtonOverlay__9be63,
-.soundButton__9be63:focus-within .addButtonOverlay__9be63,
-.soundButton__9be63:hover .addButtonOverlay__9be63 {
+.soundButton__9be63.focused__9be63:not(.disableActiveStyles__9be63) .addButtonOverlay__9be63,
+.soundButton__9be63:focus-within:not(.disableActiveStyles__9be63) .addButtonOverlay__9be63,
+.soundButton__9be63:hover:not(.disableActiveStyles__9be63) .addButtonOverlay__9be63 {
     opacity: 1;
     visibility: visible
 }
@@ -226,4 +226,4 @@
     width: 100%
 }
 
-/*# sourceMappingURL=35328.1f7808b5d6019980.css.map*/
+/*# sourceMappingURL=35328.fe16f0dc49ff1361.css.map*/
