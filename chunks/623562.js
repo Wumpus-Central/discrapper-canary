@@ -76,14 +76,17 @@ async function f(e) {
 function p() {
     a.h.dispatch({ type: "CONVERSATIONS_TOGGLE_HIGHLIGHTING" });
 }
-function T(e, t, n) {
-    let i = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
-    (a.h.dispatch({ type: "SET_SELECTED_CONVERSATION", channelId: e, conversationId: n }),
-        S(e, n, { includeReactions: !0, includeMessageReferences: !0 }));
-    let r = u.A.getConversationMetadata(e, n);
-    i &&
-        r?.conversation.startMessageId != null &&
-        s.A.jumpToMessage({ channelId: e, messageId: r.conversation.startMessageId, flash: !1 });
+function T(e, t) {
+    let { shouldJump: n = !0 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+    if (
+        null == t ||
+        (a.h.dispatch({ type: "SET_SELECTED_CONVERSATION", channelId: e, conversationId: t }),
+        S(e, t, { includeReactions: !0, includeMessageReferences: !0 }),
+        !n)
+    )
+        return;
+    let i = u.A.getConversationMetadata(e, t)?.conversation.startMessageId;
+    null != i && s.A.jumpToMessage({ channelId: e, messageId: i, flash: !1 });
 }
 function g(e, t) {
     a.h.dispatch({ type: "CLEAR_CONVERSATION_SELECTION", channelId: e, conversationId: t });

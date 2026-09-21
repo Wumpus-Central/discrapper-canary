@@ -671,8 +671,7 @@ function tP(e) {
             ((eo = (0, tp.WU)(tQ.getGuildId(), "message_context_menu")),
             (eU = (0, x.bG)([th.A], () => th.A.getConversationForMessage(tQ.id, tY.id) ?? null, [tQ.id, tY.id])),
             (tw = a.useCallback(() => {
-                let e = tQ.getGuildId();
-                null != e && null != eU && (ty.A.openConversationsSection(), (0, tf.xI)(tQ.id, e, eU));
+                null != tQ.getGuildId() && null != eU && (ty.A.openConversationsSection(), (0, tf.xI)(tQ.id, eU));
             }, [tQ, eU])),
             eo && null != eU
                 ? (0, l.jsx)(s.Dr, {

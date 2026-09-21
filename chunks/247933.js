@@ -123,13 +123,13 @@ function K(e) {
                         let i = () => {
                             (n.removeScrollCompleteCallback(i), l());
                         };
-                        (n.addScrollCompleteCallback(i), (0, w.xI)(t.id, t.guild_id, e));
+                        (n.addScrollCompleteCallback(i), (0, w.xI)(t.id, e));
                     }),
                     s.current === e && (s.current = null),
                     e === U.A.getSelectedConversationId(t.id) &&
                         (c(!0), F.X.trackFocusModeImpression({ channelId: t.id, conversationId: e })));
             },
-            [t.id, t.guild_id, n, c, o],
+            [t.id, n, c, o],
         ),
         u = r.useMemo(
             () => ({ bannerMeasurementRef: i, conversationJumpInProgressRef: s, selectAndFocusConversation: d }),

@@ -304,7 +304,14 @@ let P = new M(s.h, {
     },
     CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;
-        return (null != t && T.has(t) && T.get(t), !1);
+        null != t && T.has(t) && T.get(t);
+        let n = !1;
+        for (let e of T.keys()) {
+            if (e === t) continue;
+            let i = T.peek(e);
+            i?.selectedConversationId != null && ((i.selectedConversationId = null), (n = !0));
+        }
+        return n;
     },
     CHANNEL_DELETE: function (e) {
         let { channel: t } = e;
