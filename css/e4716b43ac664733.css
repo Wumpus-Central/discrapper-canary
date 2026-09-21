@@ -204,6 +204,45 @@
     flex-basis: 50%
 }
 
+.flexRow__0982b {
+    flex-direction: row;
+    gap: var(--space-8)
+}
+
+.flexRow__0982b,
+.guildSpaceHeader__0982b {
+    align-items: center;
+    display: flex
+}
+
+.guildSpaceHeader__0982b {
+    cursor: pointer;
+    justify-content: space-between;
+    width: 100%
+}
+
+.chevronButton__0982b {
+    align-items: center;
+    background-color: var(--background-mod-subtle);
+    border-radius: var(--radius-sm);
+    display: flex;
+    height: var(--space-48);
+    justify-content: center;
+    width: var(--space-48)
+}
+
+.full-motion .chevron__0982b {
+    transition: transform .2s ease-out
+}
+
+.chevron__0982b {
+    transform: rotateX(0deg)
+}
+
+.chevronClosed__0982b {
+    transform: rotateX(180deg)
+}
+
 .subtitle__65a39 {
     margin-bottom: 8px;
     text-transform: uppercase
@@ -257,4 +296,4 @@
     height: 1px
 }
 
-/*# sourceMappingURL=18c24767dd98afa3.css.map*/
+/*# sourceMappingURL=e4716b43ac664733.css.map*/
