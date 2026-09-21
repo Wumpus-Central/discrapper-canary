@@ -25,8 +25,8 @@ let C = l.forwardRef(function (e, t) {
             markers: A,
             onBeforeDismount: _,
         } = e,
-        [L, g] = l.useState(null),
-        R = l.useRef(null),
+        [g, R] = l.useState(null),
+        L = l.useRef(null),
         T = l.useRef(null),
         w = l.useRef(null),
         b = "custom" === E ? { width: m, height: v } : (0, d.J)(E),
@@ -73,8 +73,8 @@ let C = l.forwardRef(function (e, t) {
             [P, k, A, I],
         ),
         l.useEffect(() => {
-            null == L && C().then((e) => g(e.default));
-        }, [L, C]),
+            null == g && C().then((e) => R(e.default));
+        }, [g, C]),
         l.useEffect(
             () => (
                 n
@@ -83,7 +83,7 @@ let C = l.forwardRef(function (e, t) {
                     .then((e) => {
                         let t,
                             { default: n } = e;
-                        if (null == R.current) return;
+                        if (null == L.current) return;
                         let r = 1 === Object.keys(A).length ? Object.values(A)[0].name : void 0,
                             l = T.current ?? D.current ?? r;
                         if (null != l && null != A[l]) {
@@ -91,11 +91,11 @@ let C = l.forwardRef(function (e, t) {
                             t = null != e ? [I ?? e.start, e.start + e.duration] : void 0;
                         }
                         w.current = n.loadAnimation({
-                            container: R.current,
+                            container: L.current,
                             renderer: "svg",
                             loop: !1,
                             autoplay: !1,
-                            animationData: s()(L),
+                            animationData: s()(g),
                             initialSegment: t,
                         });
                     }),
@@ -103,12 +103,12 @@ let C = l.forwardRef(function (e, t) {
                     w.current?.destroy();
                 }
             ),
-            [L, A, I],
+            [g, A, I],
         ),
         (0, r.jsx)("div", {
             style: { "--__lottieIconColor": null != u && "string" == typeof u ? u : u?.css, display: "flex", ...b },
             className: a()(p.f, i ? void 0 : p.P, S),
-            ref: R,
+            ref: L,
         })
     );
 });

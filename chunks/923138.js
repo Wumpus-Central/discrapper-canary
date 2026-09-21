@@ -1,16 +1,16 @@
-a.d(t, { I: () => c, z: () => r });
-var n = a(582128),
-    l = a(17928),
-    s = a(12510),
-    i = a(673125);
+l.d(t, { I: () => c, z: () => r });
+var a = l(582128),
+    n = l(17928),
+    s = l(12510),
+    i = l(673125);
 function r(e) {
-    let t = (0, n.useRef)(!1),
+    let t = (0, a.useRef)(!1),
         {
-            challengesForOrbWallet: a,
+            challengesForOrbWallet: l,
             hasFetchedChallenges: r,
             isFetchingChallenges: c,
             fetchChallengesError: o,
-        } = (0, l.cf)([i.Ay], () => ({
+        } = (0, n.cf)([i.Ay], () => ({
             challengesForOrbWallet: i.Ay.challengesForOrbWallet,
             hasFetchedChallenges: i.Ay.hasFetchedChallenges,
             isFetchingChallenges: i.Ay.isFetchingChallenges,
@@ -18,7 +18,7 @@ function r(e) {
         })),
         h = null != e && e.shouldFetch;
     return (
-        (0, n.useEffect)(() => {
+        (0, a.useEffect)(() => {
             !(h && !t.current) ||
                 r ||
                 c ||
@@ -27,16 +27,16 @@ function r(e) {
                     t.current = !0;
                 });
         }, [r, c, h, o]),
-        { challengesForOrbWallet: a, hasFetchedChallenges: r, isFetchingChallenges: c, refetch: s.Od }
+        { challengesForOrbWallet: l, hasFetchedChallenges: r, isFetchingChallenges: c, refetch: s.Od }
     );
 }
 function c(e) {
     let t = null == e || !1 !== e.enabled,
-        a = (0, n.useRef)(!1),
-        { hasUnreadUpdate: r } = (0, l.cf)([i.Ay], () => ({ hasUnreadUpdate: i.Ay.hasUnreadUpdate }));
+        l = (0, a.useRef)(!1),
+        { hasUnreadUpdate: r } = (0, n.cf)([i.Ay], () => ({ hasUnreadUpdate: i.Ay.hasUnreadUpdate }));
     return (
-        (0, n.useEffect)(() => {
-            !t || a.current || i.Ay.hasFetchedChallenges || ((a.current = !0), (0, s.pu)());
+        (0, a.useEffect)(() => {
+            !t || l.current || i.Ay.hasFetchedChallenges || ((l.current = !0), (0, s.pu)());
         }, [t]),
         { hasUnreadUpdate: r, ackUnread: s.eX }
     );

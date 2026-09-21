@@ -19,8 +19,8 @@ var i = n(477900),
     p = n(47167),
     A = n(713654),
     I = n(915089),
-    C = n(967144),
-    S = n(69282),
+    S = n(967144),
+    C = n(69282),
     _ = n(657048),
     v = n(963307),
     T = n(734057),
@@ -48,12 +48,12 @@ function P(e) {
 let w = l.memo(function (e) {
     let { row: t, guildId: n, className: l } = e,
         { id: s, name: a } = t.record,
-        o = (0, S.Xx)({ guildId: n, roleId: s, size: 16 }),
+        o = (0, C.Xx)({ guildId: n, roleId: s, size: 16 }),
         d = (0, c.bG)([b.A], () => b.A.getRole(n, s)),
         h = a.includes(v.QP) ? "" : "@",
         E = (0, u.r)(m.A.unsafe_rawColors.PRIMARY_300).hsl(),
         j = d?.colorString ?? E,
-        f = (0, C.X_)(n, d, d?.colorStrings);
+        f = (0, S.X_)(n, d, d?.colorStrings);
     return (0, i.jsxs)("div", {
         className: r()(G.xZ, G.ex, l),
         children: [
@@ -94,8 +94,8 @@ function H(e) {
             helperText: p,
             className: A,
         } = e,
-        C = (0, I.GV)(),
-        S = (0, c.bG)([b.A], () => b.A.getRolesSnapshot(t)),
+        S = (0, I.GV)(),
+        C = (0, c.bG)([b.A], () => b.A.getRolesSnapshot(t)),
         _ = l.useMemo(
             () =>
                 (function (e, t, n) {
@@ -111,8 +111,8 @@ function H(e) {
                         }),
                         i
                     );
-                })(a, u, S),
-            [a, u, S],
+                })(a, u, C),
+            [a, u, C],
         ),
         v = l.useMemo(() => Object.keys(_), [_]),
         [y, R] = l.useState(""),
@@ -227,7 +227,7 @@ function H(e) {
                         sections: [v.length],
                         inputProps: {
                             "aria-controls": D,
-                            "aria-describedby": null != p ? C : void 0,
+                            "aria-describedby": null != p ? S : void 0,
                             "aria-expanded": V,
                             onFocus: (e) => Z(!0, 2, e),
                             onBlur: (e) => Z(!1, 2, e),
@@ -291,7 +291,7 @@ function H(e) {
             }),
             null != p &&
                 (0, i.jsx)(x.E, {
-                    id: C,
+                    id: S,
                     variant: "text-xs/normal",
                     color: "text-muted",
                     className: G.cy,

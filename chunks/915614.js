@@ -29,8 +29,8 @@ function v(e) {
             className: R,
             avatarSize: I,
             avatarOffsetX: j,
-            avatarOffsetY: T,
-            bannerWidth: y,
+            avatarOffsetY: y,
+            bannerWidth: T,
             bannerHeight: C,
             themePadding: S,
             pendingAccentColor: D,
@@ -43,7 +43,7 @@ function v(e) {
         { bannerSrc: w, status: k } = (0, b.A)({
             displayProfile: n,
             pendingBanner: A,
-            size: y,
+            size: T,
             canAnimate: M || !B ? P : O,
         }),
         L = G ? null : (w ?? null),
@@ -51,7 +51,7 @@ function v(e) {
         V = t.getAvatarURL(r, (0, u.FT)(I)),
         $ = (0, s.LX)((0, f.Ay)(V, H, !1)),
         F = (0, m.A)(D ?? n?.primaryColor ?? $).hex,
-        z = { align: "start", insetStart: j - S, insetBottom: T + S, radius: (0, _.A)(I) };
+        z = { align: "start", insetStart: j - S, insetBottom: y + S, radius: (0, _.A)(I) };
     return (0, a.jsx)(x.A, {
         fillClassName: i()(N.v, R),
         bannerSrc: L,

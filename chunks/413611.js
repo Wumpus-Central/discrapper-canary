@@ -1,4 +1,4 @@
-n.d(t, { m: () => S, A: () => b });
+n.d(t, { m: () => C, A: () => b });
 var i = n(477900),
     l = n(582128),
     s = n(192308),
@@ -45,8 +45,8 @@ function I(e) {
             : null
     );
 }
-var C = n(98332);
-let S = "role_subscriptions_eligibility_modal";
+var S = n(98332);
+let C = "role_subscriptions_eligibility_modal";
 function _(e) {
     let { guild: t, eligibility: l, eligibilityLoading: o, eligibilityError: d, refreshEligibility: c } = e;
     return (0, i.jsx)(r.$, {
@@ -67,7 +67,7 @@ function _(e) {
                             guildId: t.id,
                         });
                 },
-                { modalKey: S },
+                { modalKey: C },
             );
         },
         size: "md",
@@ -166,11 +166,11 @@ function T(e) {
 function b(e) {
     let { guild: t, monetizationEligibility: n } = e;
     return (0, i.jsxs)("div", {
-        className: C.OQ,
+        className: S.OQ,
         children: [
-            (0, i.jsx)("img", { className: C.hV, src: "/assets/45b68ce4917d46f1.svg", alt: A.intl.string(A.t.Af4klP) }),
+            (0, i.jsx)("img", { className: S.hV, src: "/assets/45b68ce4917d46f1.svg", alt: A.intl.string(A.t.Af4klP) }),
             (0, i.jsxs)("div", {
-                className: C.mv,
+                className: S.mv,
                 children: [
                     (0, i.jsx)(u.D, {
                         variant: "heading-xl/semibold",

@@ -1,12 +1,12 @@
-r.d(t, { Ay: () => b, pL: () => R });
+r.d(t, { Ay: () => b, pL: () => T });
 var i = r(477900),
     n = r(582128),
     l = r(503698),
     s = r.n(l),
     a = r(575593),
     o = r(38021),
-    d = r(844222),
-    c = r(583094),
+    c = r(844222),
+    d = r(583094),
     u = r(17928),
     m = r(661531),
     x = r(775602),
@@ -20,21 +20,21 @@ var i = r(477900),
     v = r(403362),
     E = r(652215),
     C = r(778712),
-    T = r(880465);
-function R(e) {
+    R = r(880465);
+function T(e) {
     let {
         collectiblesItem: t,
         isFocused: r = !1,
         user: n,
         guildId: l,
         nameplatePreviewStyle: o,
-        nameplatePreviewRescalerStyle: d,
+        nameplatePreviewRescalerStyle: c,
     } = e;
     if (null == t) return null;
     if ("bundle" === t.type) {
         let e = t.previewAssets?.fgStatic != null;
         return (0, i.jsx)("div", {
-            className: e ? T.Nq : T.hT,
+            className: e ? R.Nq : R.hT,
             children: (0, i.jsx)(j.X, { product: t, isHighlighted: r, user: n }),
         });
     }
@@ -43,7 +43,7 @@ function R(e) {
             return (0, i.jsx)(g.i, { user: n, guildId: l, avatarSize: C._3.SIZE_80, item: t.item, isHighlighted: r });
         case a.R.PROFILE_EFFECT:
             return (0, i.jsx)("div", {
-                className: T.xC,
+                className: R.xC,
                 children: (0, i.jsx)(p.A, {
                     skuId: t.item.skuId,
                     isHighlighted: r,
@@ -53,9 +53,9 @@ function R(e) {
             });
         case a.R.NAMEPLATE:
             return (0, i.jsx)("div", {
-                className: s()(T.M4, o),
+                className: s()(R.M4, o),
                 children: (0, i.jsx)("div", {
-                    className: s()(T.N1, d),
+                    className: s()(R.N1, c),
                     children: (0, i.jsx)(A.A, {
                         user: n,
                         guildId: l,
@@ -67,7 +67,7 @@ function R(e) {
             });
         case a.R.PROFILE_FRAME:
             return (0, i.jsx)("div", {
-                className: T.pI,
+                className: R.pI,
                 children: (0, i.jsx)(h.A, { frame: t.item, transparentBackground: !0 }),
             });
         default:
@@ -77,15 +77,15 @@ function R(e) {
 function P(e) {
     let { sku: t, ...r } = e,
         l = n.useMemo(() => (0, f.T7)(t), [t]);
-    return null == l ? null : (0, i.jsx)(R, { collectiblesItem: l, ...r });
+    return null == l ? null : (0, i.jsx)(T, { collectiblesItem: l, ...r });
 }
 function y(e) {
     let { sku: t, isFocused: r } = e;
     return (0, i.jsx)(N.e, {
         shape: "custom",
-        containerClassName: s()(T.JS, r && T.P3),
-        backgroundImageClassName: T.m1,
-        foregroundImageClassName: T.aF,
+        containerClassName: s()(R.JS, r && R.P3),
+        backgroundImageClassName: R.m1,
+        foregroundImageClassName: R.aF,
         sku: t,
     });
 }
@@ -93,12 +93,12 @@ function I(e) {
     let { eventTargetRef: t, assetClassName: r, disableHover: l } = e,
         a = (0, u.bG)([x.Ay], () => x.Ay.useReducedMotion),
         { theme: p, saturation: h } = (0, o.wR)(),
-        { highContrastModeEnabled: f } = n.useContext(d.C),
+        { highContrastModeEnabled: f } = n.useContext(c.C),
         [g, j, A, N] = m.A.colors.TEXT_DEFAULT.resolve({ theme: p, saturation: h, highContrastModeEnabled: f }).rgba();
     return (0, i.jsx)("div", {
-        className: T.yv,
-        children: (0, i.jsx)(c.u, {
-            className: s()(T.MO, r),
+        className: R.yv,
+        children: (0, i.jsx)(d.u, {
+            className: s()(R.MO, r),
             dataBinding: { reducedMotion: l || a, logoColor: { r: g, g: j, b: A, a: N } },
             eventTargetRef: t,
             fit: "contain",

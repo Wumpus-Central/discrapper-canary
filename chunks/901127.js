@@ -1,1 +1,1 @@
-_.exports = { L: "voiceClipThumbnail__60cfd" };
+d.exports = { L: "voiceClipThumbnail__60cfd" };

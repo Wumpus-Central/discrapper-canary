@@ -55,20 +55,20 @@ let s = function (e) {
                     a = t(u);
                 (A(a), S.current || ((S.current = !0), c?.(a)), l(a, u));
             }
-            function L(n) {
+            function g(n) {
                 m(!1);
                 let r = e(n),
                     l = t(r);
                 (A(l), s(l, r), o?.(l), (S.current = !1));
             }
-            let g = h ? "pointerup" : "mouseup",
-                R = h ? "pointermove" : "mousemove",
+            let R = h ? "pointerup" : "mouseup",
+                L = h ? "pointermove" : "mousemove",
                 T = n.current.ownerDocument;
             return (
-                T.addEventListener(g, L),
-                T.addEventListener(R, _),
+                T.addEventListener(R, g),
+                T.addEventListener(L, _),
                 () => {
-                    (T.removeEventListener(g, L), T.removeEventListener(R, _), l.cancel());
+                    (T.removeEventListener(R, g), T.removeEventListener(L, _), l.cancel());
                 }
             );
         }, [E, s, a, r, f, n, d, o, h, p, c, C]),

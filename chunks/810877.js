@@ -22,16 +22,16 @@ function N(e, t, n, i) {
     );
 }
 async function p(e) {
-    let { data: t, file: n, guildId: p, uploadId: A, roles: I, image: C, hideErrorModal: S, analyticsLocation: _ } = e,
+    let { data: t, file: n, guildId: p, uploadId: A, roles: I, image: S, hideErrorModal: C, analyticsLocation: _ } = e,
         v = d.A.fromBlob(c.f.EMOJI, n),
         T = g.Ay.sanitizeEmojiName(n.name.split(".")[0]);
     if (g.Ay.isFileTooBig(n)) {
         if ("image/gif" === n.type || "image/webp" === n.type || "image/avif" === n.type)
             return N(n.name, n.size, p, A);
-        else if (null != C) {
+        else if (null != S) {
             var b, y;
             let e;
-            t = (0, i.h_)(C, 128, 128);
+            t = (0, i.h_)(S, 128, 128);
             try {
                 e = g.Ay.isDataTooBig(t);
             } catch (e) {
@@ -81,7 +81,7 @@ async function p(e) {
                         : (null != i.image || i.code === E.t02.INVALID_FILE_ASSET_SIZE_RESIZE_ANIMATED) &&
                           (n = u.o.RESIZE_ANIMATED)),
             429 === l && ((e = j.intl.string(j.t.Whhv4w)), (n = u.o.RATE_LIMIT)),
-            null == e || S || a.A.show({ title: j.intl.string(j.t.iufib1), body: e }),
+            null == e || C || a.A.show({ title: j.intl.string(j.t.iufib1), body: e }),
             n
         );
     }

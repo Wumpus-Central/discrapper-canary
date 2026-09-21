@@ -427,8 +427,8 @@ var eO = i(721932),
     e$ = i(111085),
     e0 = i(107563),
     e1 = i(840411),
-    e2 = i(666810);
-let e8 = (0, i(945810).mj)({
+    e8 = i(666810);
+let e2 = (0, i(945810).mj)({
     name: "2026-07-wishlist-show-owned-items-last",
     kind: "user",
     defaultConfig: { isEnabled: !1 },
@@ -514,7 +514,7 @@ function tt(e) {
         u = null != d && d.id !== s.id,
         g =
             ((t = u ? "UserProfileModalV2WishlistGrid" : "UserProfileModalV2WishlistGrid Own Profile Do Not Use"),
-            e8.useConfig({ location: t }).isEnabled && u),
+            e2.useConfig({ location: t }).isEnabled && u),
         m = (0, p.bG)(
             [e$.A],
             () => {
@@ -576,7 +576,7 @@ function tt(e) {
 function ti(e) {
     let t = eB.default.getCurrentUser()?.id,
         i = null != t && t !== e.profileOwner.id;
-    return (0, n.jsx)(e2.h, {
+    return (0, n.jsx)(e8.h, {
         isGifting: i,
         location: "UserProfileModalV2WishlistGrid",
         children: (0, n.jsx)(tt, { ...e }),
@@ -1080,7 +1080,7 @@ function t1(e) {
               onClick: i,
           });
 }
-function t2(e) {
+function t8(e) {
     let {
         showEditingControls: t,
         socialLayerStorefrontApplicationIds: i,
@@ -1113,7 +1113,7 @@ function t2(e) {
         ],
     });
 }
-function t8(e) {
+function t2(e) {
     let { application: t, handleOpenGameShop: i, handleOpenGameShopMouseDown: s } = e,
         a = l.useCallback(() => {
             i(t.id);
@@ -1147,7 +1147,7 @@ function t5(e) {
                 let t = e[i[0]];
                 return null == t
                     ? null
-                    : (0, n.jsx)(t8, { application: t, handleOpenGameShop: a, handleOpenGameShopMouseDown: r });
+                    : (0, n.jsx)(t2, { application: t, handleOpenGameShop: a, handleOpenGameShopMouseDown: r });
             }
             return (0, n.jsx)(tq, {
                 title: B.intl.string(B.t.FkjcWY),
@@ -1267,7 +1267,7 @@ function t7(e) {
                         children: B.intl.format(B.t.r6Y1Lg, { count: a.items.length }),
                     }),
                     t
-                        ? (0, n.jsx)(t2, {
+                        ? (0, n.jsx)(t8, {
                               showEditingControls: i,
                               socialLayerStorefrontApplicationIds: r,
                               isWishlistPublic: h,

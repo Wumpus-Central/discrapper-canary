@@ -1,4 +1,4 @@
-n.d(t, { J: () => E, default: () => p });
+n.d(t, { J: () => E, default: () => x });
 var l = n(477900),
     r = n(582128),
     i = n(17928),
@@ -13,28 +13,28 @@ var l = n(477900),
     m = n(968176),
     h = n(375708);
 let E = "GUILD_SPACE_NUX_MODAL";
-function p(e) {
-    let { guildId: t, markAsDismissed: n, transitionState: E, onClose: p } = e,
-        A = (0, i.bG)([o.A], () => o.A.getGuildId()),
-        x = r.useRef(A === t);
+function x(e) {
+    let { guildId: t, markAsDismissed: n, transitionState: E, onClose: x } = e,
+        p = (0, i.bG)([o.A], () => o.A.getGuildId()),
+        A = r.useRef(p === t);
     ((0, c.Ay)(() => {
-        x.current && n(g.i.AUTO_DISMISS);
+        A.current && n(g.i.AUTO_DISMISS);
     }),
         r.useEffect(() => {
-            A !== t && p();
-        }, [t, p, A]));
+            p !== t && x();
+        }, [t, x, p]));
     let _ = r.useCallback(async () => {
-            ((0, f.Wd)(t), await p());
-        }, [t, p]),
+            ((0, f.Wd)(t), await x());
+        }, [t, x]),
         C = r.useCallback(async () => {
-            await p();
-        }, [p]);
-    return A !== t
+            await x();
+        }, [x]);
+    return p !== t
         ? null
         : (0, l.jsx)(a.k, {
               size: "md",
               transitionState: E,
-              onClose: p,
+              onClose: x,
               gradientColor: "blue",
               graphic: {
                   type: "rive",

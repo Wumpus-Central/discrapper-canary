@@ -1,11 +1,11 @@
 (n.d(t, {
     $x: () => T,
     AO: () => A,
-    MO: () => R,
+    MO: () => L,
     YB: () => I,
     oI: () => _,
-    p9: () => g,
-    sl: () => L,
+    p9: () => R,
+    sl: () => g,
     uK: () => k,
     vr: () => N,
     x5: () => w,
@@ -58,10 +58,10 @@ async function _(e, t) {
         stickers: n.map((e) => (null != e.user ? { ...e, user_id: e.user.id, user: e.user } : e)),
     });
 }
-async function L(e) {
+async function g(e) {
     await u.Bo.del({ url: m.Rsh.GUILD_STICKER(e.guild_id, e.id), rejectWithError: (0, u.fT)() });
 }
-async function g(e) {
+async function R(e) {
     let { guildId: t } = e,
         n = await u.Bo.post({
             url: m.Rsh.GUILD_STICKER_PACKS(t),
@@ -90,7 +90,7 @@ async function g(e) {
         n.body
     );
 }
-async function R(e, t, n) {
+async function L(e, t, n) {
     return (await u.Bo.patch({ url: m.Rsh.GUILD_STICKER(e, t), body: n, rejectWithError: (0, u.fT)() })).body;
 }
 function T(e, t, n) {

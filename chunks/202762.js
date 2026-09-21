@@ -1,4 +1,4 @@
-n.d(t, { Fj: () => A, GP: () => h, Vk: () => E, Wd: () => o, iX: () => f, j0: () => m, lr: () => g, pC: () => p });
+n.d(t, { Fj: () => p, GP: () => h, Vk: () => E, Wd: () => o, iX: () => f, j0: () => m, lr: () => g, pC: () => x });
 var l = n(636537),
     r = n(228366),
     i = n(960960),
@@ -26,10 +26,10 @@ function h(e, t) {
 function E(e, t, n) {
     r.h.dispatch({ type: "GUILD_SPACE_EDIT_UPDATE_WIDGET_CONFIG", guildId: e, widgetId: t, config: n });
 }
-function p(e, t) {
+function x(e, t) {
     r.h.dispatch({ type: "GUILD_SPACE_EDIT_UPDATE_HEADER", guildId: e, customBanner: t });
 }
-async function A(e) {
+async function p(e) {
     let t = a.A.getDraft(e);
     if (null == t || "saving" === a.A.getSaveStatus(e)) return;
     let n = {};

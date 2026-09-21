@@ -1,10 +1,10 @@
-a.d(t, { Ay: () => E, EB: () => m, Y0: () => d });
-var n,
-    l,
-    s = a(17928),
-    i = a(228366),
-    r = a(124861),
-    c = a(12510);
+l.d(t, { Ay: () => E, EB: () => m, Y0: () => d });
+var a,
+    n,
+    s = l(17928),
+    i = l(228366),
+    r = l(124861),
+    c = l(12510);
 function o(e) {
     return {
         achievementIdentifier: e.achievement_identifier,
@@ -28,10 +28,10 @@ function u() {
     };
 }
 var d =
-        588245 != a.j
-            ? (((n = {}).NEW_ACHIEVEMENT = "new_achievement"), (n.UNCLAIMED_ACHIEVEMENT = "unclaimed_achievement"), n)
+        588245 != l.j
+            ? (((a = {}).NEW_ACHIEVEMENT = "new_achievement"), (a.UNCLAIMED_ACHIEVEMENT = "unclaimed_achievement"), a)
             : null,
-    m = (((l = {}).CLAIM_CHALLENGE = "claim_challenge"), (l.FETCH_CHALLENGES = "fetch_challenges"), l);
+    m = (((n = {}).CLAIM_CHALLENGE = "claim_challenge"), (n.FETCH_CHALLENGES = "fetch_challenges"), n);
 class _ extends s.Ay.Store {
     static displayName = "OrbChallengesStore";
     state = u();
@@ -85,14 +85,14 @@ class _ extends s.Ay.Store {
         ((this.state.isClaimingChallengeMap[t] = !0), (this.state.claimChallengeErrorMap[t] = null));
     }
     handleOrbChallengeClaimSuccess(e) {
-        let { achievementIdentifier: t, response: a } = e;
+        let { achievementIdentifier: t, response: l } = e;
         ((this.state.isClaimingChallengeMap[t] = !1),
             (this.state.claimChallengeErrorMap[t] = null),
-            (this.state.challenges = this.state.challenges.map((e) => (e.achievementIdentifier === t ? o(a) : e))));
+            (this.state.challenges = this.state.challenges.map((e) => (e.achievementIdentifier === t ? o(l) : e))));
     }
     handleOrbChallengeClaimFail(e) {
-        let { achievementIdentifier: t, error: a } = e;
-        ((this.state.isClaimingChallengeMap[t] = !1), (this.state.claimChallengeErrorMap[t] = a));
+        let { achievementIdentifier: t, error: l } = e;
+        ((this.state.isClaimingChallengeMap[t] = !1), (this.state.claimChallengeErrorMap[t] = l));
     }
     handleUserAchievementStateUpdate(e) {
         let { payload: t } = e;
@@ -102,9 +102,9 @@ class _ extends s.Ay.Store {
     }
     get orbChallengesDisplayError() {
         let { fetchChallengesError: e, claimChallengeErrorMap: t } = this.state,
-            a = Object.values(t).find((e) => null != e);
-        return null != a
-            ? { error: a, errorType: "claim_challenge" }
+            l = Object.values(t).find((e) => null != e);
+        return null != l
+            ? { error: l, errorType: "claim_challenge" }
             : null != e
               ? { error: e, errorType: "fetch_challenges" }
               : null;

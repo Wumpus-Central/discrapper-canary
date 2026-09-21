@@ -1,13 +1,13 @@
-n.d(a, { A: () => r });
-var t = n(477900);
-n(582128);
-var i = n(503698),
-    l = n.n(i),
-    s = n(457404);
+t.d(a, { A: () => r });
+var i = t(477900);
+t(582128);
+var n = t(503698),
+    l = t.n(n),
+    s = t(457404);
 function r(e) {
-    let { children: a, contentClassName: n } = e;
-    return (0, t.jsxs)("div", {
+    let { children: a, contentClassName: t } = e;
+    return (0, i.jsxs)("div", {
         className: s.Lw,
-        children: [(0, t.jsx)("div", { className: s.tB }), (0, t.jsx)("div", { className: l()(s.Qs, n), children: a })],
+        children: [(0, i.jsx)("div", { className: s.tB }), (0, i.jsx)("div", { className: l()(s.Qs, t), children: a })],
     });
 }

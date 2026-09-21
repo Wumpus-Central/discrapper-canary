@@ -6,7 +6,7 @@ t.d(r, {
     dR: () => d,
     e$: () => u,
     hs: () => E,
-    pj: () => c,
+    pj: () => S,
     wX: () => o,
 });
 var n,
@@ -35,7 +35,7 @@ let o = "publicSuccessModalSeen",
     u = i.kg(...d),
     _ = 1e3,
     I = "Enable Community Modal";
-var c =
+var S =
     (((n = {}).INTRO = "intro"),
     (n.SAFETY_CHECK = "safety_check"),
     (n.BASICS = "basics"),

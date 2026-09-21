@@ -72,10 +72,10 @@ function v(e, t) {
         y,
         b,
         m,
-        I,
         D,
+        I,
         S = (0, d.I)(e, t),
-        O =
+        k =
             ((r = (0, i.u)()),
             (0, u.useMemo)(
                 function () {
@@ -83,7 +83,7 @@ function v(e, t) {
                 },
                 [r],
             )),
-        k =
+        O =
             ((c = S.options),
             (v = (0, i.u)()),
             (p = (0, u.useMemo)(
@@ -109,9 +109,9 @@ function v(e, t) {
         (y = (0, i.u)()),
         (b = (0, u.useMemo)(
             function () {
-                return new s(S, O);
+                return new s(S, k);
             },
-            [O],
+            [k],
         )),
         (0, u.useEffect)(
             function () {
@@ -120,12 +120,12 @@ function v(e, t) {
             [S],
         ),
         (m = b),
-        (I = S.accept),
-        (D = (0, u.useMemo)(
+        (D = S.accept),
+        (I = (0, u.useMemo)(
             function () {
-                return ((0, a.V)(null != S.accept, "accept must be defined"), Array.isArray(I) ? I : [I]);
+                return ((0, a.V)(null != S.accept, "accept must be defined"), Array.isArray(D) ? D : [D]);
             },
-            [I],
+            [D],
         )),
         (0, o.E)(
             function () {
@@ -133,7 +133,7 @@ function v(e, t) {
                     t =
                         (function (e) {
                             if (Array.isArray(e)) return e;
-                        })((e = (0, n.l)(D, m, y))) ||
+                        })((e = (0, n.l)(I, m, y))) ||
                         (function (e) {
                             var t,
                                 r,
@@ -180,25 +180,25 @@ function v(e, t) {
                         })(),
                     r = t[0],
                     i = t[1];
-                return (O.receiveHandlerId(r), k.receiveHandlerId(r), i);
+                return (k.receiveHandlerId(r), O.receiveHandlerId(r), i);
             },
             [
                 y,
-                O,
-                m,
                 k,
-                D.map(function (e) {
+                m,
+                O,
+                I.map(function (e) {
                     return e.toString();
                 }).join("|"),
             ],
         ),
         [
-            (0, h.j)(S.collect, O, k),
+            (0, h.j)(S.collect, k, O),
             (0, u.useMemo)(
                 function () {
-                    return k.hooks.dropTarget();
+                    return O.hooks.dropTarget();
                 },
-                [k],
+                [O],
             ),
         ]
     );

@@ -49,9 +49,9 @@ function h(e) {
             onNudgeChange: I,
             ...j
         } = e,
-        [T, y] = l.useState(b ?? "top");
+        [y, T] = l.useState(b ?? "top");
     l.useEffect(() => {
-        null != b && y(b);
+        null != b && T(b);
     }, [b]);
     let C = l.useMemo(() => ({ align: x?.align ?? "center", customOffset: x?.customOffset }), [x]),
         S = l.useCallback(() => {
@@ -64,14 +64,14 @@ function h(e) {
             [h],
         ),
         M = l.useCallback((e) => {
-            y(e);
+            T(e);
         }, []),
         P = N ? p.caretHoverable : void 0,
         U = {
             targetElementRef: j.targetElementRef,
             shouldShow: j.shouldShow,
             hasVideo: j.hasVideo,
-            position: T,
+            position: y,
             caretConfig: C,
             onRequestClose: S,
             gradientColor: g,

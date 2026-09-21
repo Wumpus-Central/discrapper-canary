@@ -27,8 +27,8 @@ function c(e) {
         R = "opening-mouse" === _ || "open-mouse" === _,
         I = "opening-keyboard" === _ || "open-keyboard" === _,
         j = "open-mouse" === _ || "open-keyboard" === _,
-        T = (x.keyboardModeEnabled || I) && null != h,
-        [y, C] = l.useState(0),
+        y = (x.keyboardModeEnabled || I) && null != h,
+        [T, C] = l.useState(0),
         S = (function (e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 200,
                 n = arguments.length > 2 ? arguments[2] : void 0,
@@ -71,8 +71,8 @@ function c(e) {
             (D(), A("opening-keyboard"));
         }, [D, _]),
         B = l.useCallback(() => {
-            (T && "opening-keyboard" !== _) || M(!1);
-        }, [M, _, T]);
+            (y && "opening-keyboard" !== _) || M(!1);
+        }, [M, _, y]);
     (l.useEffect(() => {
         if ("opening-mouse" === _)
             return (
@@ -145,11 +145,11 @@ function c(e) {
                 size: E,
                 actions: G,
                 gradientColor: b,
-                showCloseButton: T,
-                shouldTrapFocus: T,
-                returnRef: T ? n : void 0,
+                showCloseButton: y,
+                shouldTrapFocus: y,
+                returnRef: y ? n : void 0,
                 isCaretHoverable: !0,
-                caretConfig: { align: "custom", customOffset: y },
+                caretConfig: { align: "custom", customOffset: T },
                 onNudgeChange: w,
                 onRequestClose: (e) => {
                     M(null != e && (0, s.sg)(e));

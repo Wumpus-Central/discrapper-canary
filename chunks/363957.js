@@ -5,13 +5,13 @@ var n = l(158390),
     r = l(927813);
 let s = r.A.Millis.SECOND,
     d = 10 * r.A.Millis.SECOND,
-    c = { status: "idle" },
+    o = { status: "idle" },
     u = { status: "loading" },
-    o = { status: "error" },
-    f = {};
-function m(e, t) {
+    c = { status: "error" },
+    m = {};
+function f(e, t) {
     let l = e.entriesByWidgetId.get(t);
-    return (null == l && ((l = { state: c, attempts: 0 }), e.entriesByWidgetId.set(t, l)), l);
+    return (null == l && ((l = { state: o, attempts: 0 }), e.entriesByWidgetId.set(t, l)), l);
 }
 function h(e, t, l, i) {
     if (0 === l.length) {
@@ -20,8 +20,8 @@ function h(e, t, l, i) {
     }
     let r = [];
     (l.forEach((t) => {
-        let l = m(e, t);
-        i && l.attempts < 3 ? r.push(t) : (l.state = o);
+        let l = f(e, t);
+        i && l.attempts < 3 ? r.push(t) : (l.state = c);
     }),
         0 !== r.length &&
             ((e.backoff ??= new n.A(s, d, !0)),
@@ -31,32 +31,32 @@ function h(e, t, l, i) {
 class x extends i.Ay.Store {
     static displayName = "GuildSpaceHydrationStore";
     getHydration(e, t) {
-        return f[e]?.entriesByWidgetId.get(t)?.state ?? c;
+        return m[e]?.entriesByWidgetId.get(t)?.state ?? o;
     }
     getWidgetIdsToHydrate(e, t) {
-        let l = f[e];
+        let l = m[e];
         return null == l
             ? [...t]
             : null != l.activeRequestId
               ? []
-              : t.filter((e) => "idle" === (l.entriesByWidgetId.get(e)?.state ?? c).status);
+              : t.filter((e) => "idle" === (l.entriesByWidgetId.get(e)?.state ?? o).status);
     }
 }
 let g = new x(a.h, {
     GUILD_SPACE_HYDRATE_START: function (e) {
         let t,
             { guildId: l, requestId: n, widgetIds: i } = e,
-            a = (null == (t = f[l]) && ((t = { entriesByWidgetId: new Map() }), (f[l] = t)), t);
+            a = (null == (t = m[l]) && ((t = { entriesByWidgetId: new Map() }), (m[l] = t)), t);
         ((a.activeRequestId = n),
             (a.activeWidgetIds = i),
             i.forEach((e) => {
-                let t = m(a, e);
+                let t = f(a, e);
                 ((t.state = u), (t.attempts += 1));
             }));
     },
     GUILD_SPACE_HYDRATE_SUCCESS: function (e) {
         let { guildId: t, requestId: l, widgets: n } = e,
-            i = f[t];
+            i = m[t];
         if (i?.activeRequestId !== l) return !1;
         let a = i.activeWidgetIds ?? [];
         (delete i.activeRequestId, delete i.activeWidgetIds);
@@ -70,7 +70,7 @@ let g = new x(a.h, {
         (a.forEach((e) => {
             let t = r.get(e);
             if (null != t) {
-                let l = m(i, e);
+                let l = f(i, e);
                 ((l.state = { status: "success", data: t }), (l.attempts = 0));
             } else s.push(e);
         }),
@@ -78,14 +78,14 @@ let g = new x(a.h, {
     },
     GUILD_SPACE_HYDRATE_FAILURE: function (e) {
         let { guildId: t, requestId: l, retryable: n } = e,
-            i = f[t];
+            i = m[t];
         if (i?.activeRequestId !== l) return !1;
         let a = i.activeWidgetIds ?? [];
         (delete i.activeRequestId, delete i.activeWidgetIds, h(i, t, a, n));
     },
     GUILD_SPACE_HYDRATE_BACKOFF_EXPIRED: function (e) {
         let { guildId: t } = e,
-            l = f[t];
+            l = m[t];
         if (null == l) return !1;
         l.backoff?.cancel();
         let n = new Set(l.activeWidgetIds ?? []),
@@ -100,12 +100,12 @@ let g = new x(a.h, {
                 });
         if (0 === i.length) return !1;
         i.forEach((e) => {
-            e.state = c;
+            e.state = o;
         });
     },
     GUILD_SPACE_HYDRATE_RESET_ERRORS: function (e) {
         let { guildId: t, widgetIds: l } = e,
-            n = f[t];
+            n = m[t];
         if (null == n) return !1;
         let i = l.filter((e) => n.entriesByWidgetId.get(e)?.state.status === "error");
         if (0 === i.length) return !1;
@@ -113,7 +113,7 @@ let g = new x(a.h, {
     },
     GUILD_SPACE_FETCH_SUCCESS: function (e) {
         let { guildId: t, space: l } = e,
-            n = f[t];
+            n = m[t];
         if (null == n) return !1;
         let i = new Set(
                 l.widgets.map((e) => {
@@ -127,7 +127,7 @@ let g = new x(a.h, {
     },
     GUILD_SPACE_UPDATE_SUCCESS: function (e) {
         let { guildId: t } = e,
-            l = f[t];
+            l = m[t];
         if (null == l || (0 === l.entriesByWidgetId.size && null == l.activeRequestId)) return !1;
         (l.entriesByWidgetId.clear(), delete l.activeRequestId, delete l.activeWidgetIds);
     },
@@ -136,9 +136,9 @@ let g = new x(a.h, {
             guild: { id: t, unavailable: l },
         } = e;
         if (l) return !1;
-        (f[t]?.backoff?.cancel(), delete f[t]);
+        (m[t]?.backoff?.cancel(), delete m[t]);
     },
     LOGOUT: function () {
-        (Object.values(f).forEach((e) => e?.backoff?.cancel()), (f = {}));
+        (Object.values(m).forEach((e) => e?.backoff?.cancel()), (m = {}));
     },
 });
