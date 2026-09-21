@@ -169,7 +169,7 @@ function Q(e) {
         }),
     });
 }
-var $ = i(236408),
+var $ = i(34011),
     ee = i(448766),
     et = i(770178);
 let ei = l.createContext({
@@ -246,7 +246,7 @@ function eo(e) {
                 : (0, n.jsx)(er, { interactive: !1, variant: s, color: r, value: t, maxLines: c, disableMarkdown: g });
     return (0, n.jsx)("div", {
         className: a()(es.kL, ea.ZZ, { [es.oE]: 1 === c, [es.CP]: u }),
-        children: (0, n.jsx)($.A, {
+        children: (0, n.jsx)($.w, {
             value: t,
             onCommit: m,
             autoComplete: "off",
@@ -1250,7 +1250,7 @@ function t_(e) {
         l.useEffect(() => (s(!1), () => s(!1)), [s]),
         (0, n.jsx)("div", {
             className: a()(es.kL, es.oE, tw.ZZ),
-            children: (0, n.jsx)($.A, {
+            children: (0, n.jsx)($.w, {
                 value: i,
                 onCommit: o,
                 onFocus: () => s(!0),

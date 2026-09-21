@@ -10,7 +10,7 @@ var r = i(297264),
     c = i(834730),
     u = i(216964),
     g = i(661531),
-    m = i(236408),
+    m = i(34011),
     x = i(915089),
     f = i(409626),
     h = i(692969),
@@ -260,7 +260,7 @@ function z(e) {
         "aria-labelledby": c,
         children: [
             (0, n.jsx)(V, { user: i, guildId: s, channelId: r, id: c }),
-            (0, n.jsx)(m.A, {
+            (0, n.jsx)(m.w, {
                 value: f,
                 onCommit: I,
                 onFocus: p,
