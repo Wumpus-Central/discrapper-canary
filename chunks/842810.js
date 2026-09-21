@@ -1,4 +1,4 @@
-n.d(e, { default: () => m });
+n.d(i, { default: () => m });
 var t = n(477900),
     a = n(582128),
     o = n(980707),
@@ -15,22 +15,22 @@ var t = n(477900),
     p = n(470739),
     x = n(577931),
     _ = n(375708);
-function m(i) {
-    let { badge: e, onClosePopout: n, onAction: m, onSelect: y } = i,
+function m(e) {
+    let { badge: i, onClosePopout: n, onAction: m, onSelect: y } = e,
         { reorderableBadges: C, hiddenBadges: I } = (0, x.A)(),
         { tenureBadgeHideable: j } = b.A.useConfig({ location: "BadgeCustomizationContextMenu" }),
         v = a.useMemo(() => (0, u.jg)({ tenureBadgeHideable: j }), [j]),
         A = (0, f.A)(),
-        B = v.has(e.badge_id),
+        B = v.has(i.badge_id),
         k = a.useMemo(
             () =>
-                C.map((i) => {
-                    let { badge_id: e } = i;
-                    return e;
+                C.map((e) => {
+                    let { badge_id: i } = e;
+                    return i;
                 }),
             [C],
         ),
-        w = k.indexOf(e.badge_id),
+        w = k.indexOf(i.badge_id),
         D = A && -1 !== w,
         L = 0 === w,
         S = w === k.length - 1;
@@ -40,15 +40,16 @@ function m(i) {
         "aria-label": _.intl.string(_.t["2ia+9V"]),
         onSelect: y,
         children: (0, t.jsxs)(d.rX, {
+            label: i.name,
             children: [
                 (0, t.jsx)(d.Dr, {
                     id: "view-badge-details",
                     iconLeft: c.CircleInformationIcon,
                     leadingAccessory: { type: "icon", icon: c.CircleInformationIcon },
                     label: _.intl.string(_.t["2ia+9V"]),
-                    subtext: B ? _.intl.string((0, u.hK)(e.badge_id)) : void 0,
+                    subtext: B ? _.intl.string((0, u.hK)(i.badge_id)) : void 0,
                     action: function () {
-                        (n(), (0, p._)({ initialBadgeId: e.badge_id, viewingCurrentUserBadges: !0 }));
+                        (n(), (0, p._)({ initialBadgeId: i.badge_id, viewingCurrentUserBadges: !0 }));
                     },
                 }),
                 D &&
@@ -80,14 +81,14 @@ function m(i) {
                         leadingAccessory: { type: "icon", icon: r.EyeSlashIcon },
                         label: _.intl.string(_.t.xSWJPo),
                         action: function () {
-                            (m(e.badge_id),
+                            (m(i.badge_id),
                                 (0, h.RC)({
-                                    badgeId: e.badge_id,
+                                    badgeId: i.badge_id,
                                     hidden: !0,
                                     reorderableBadgeIds: k,
-                                    hiddenBadgeIds: I.map((i) => {
-                                        let { badge_id: e } = i;
-                                        return e;
+                                    hiddenBadgeIds: I.map((e) => {
+                                        let { badge_id: i } = e;
+                                        return i;
                                     }),
                                     canReorder: A,
                                 }));
