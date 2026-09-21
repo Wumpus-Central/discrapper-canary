@@ -428,7 +428,7 @@ function Q(e) {
         trailingElement: null != d ? (0, l.jsx)(J, { decoration: d }) : null,
     });
 }
-var ee = t(243721),
+var ee = t(193249),
     en = t(512950);
 function et(e) {
     let { node: n } = e,
@@ -1043,8 +1043,8 @@ var eH = t(17928),
     e1 = t(707554),
     e6 = t(823092),
     e8 = t(397274),
-    e7 = t(525473);
-function e5(e) {
+    e5 = t(525473);
+function e7(e) {
     let { notice: n, children: t } = e,
         { showNotice: i, handleStoreUpdate: s } = (0, e6.L_)(),
         a = n?.stores;
@@ -1065,7 +1065,7 @@ function e5(e) {
     let o = r.useMemo(() => {
         if (null == n || !i) return null;
         let { element: e } = n;
-        return (0, l.jsx)(eQ.F, { className: e7.lm, children: (0, l.jsx)(e, {}) });
+        return (0, l.jsx)(eQ.F, { className: e5.lm, children: (0, l.jsx)(e, {}) });
     }, [n, i]);
     return (0, l.jsxs)(l.Fragment, { children: [t, (0, l.jsx)(eJ.F, { component: "div", children: o })] });
 }
@@ -1073,7 +1073,7 @@ function e9(e) {
     let { decoration: n } = e,
         t = n.component;
     return (0, l.jsx)("div", {
-        className: a()(e7.oK, { [e7.qf]: n.sticky }),
+        className: a()(e5.oK, { [e5.qf]: n.sticky }),
         "data-settings-panel-sticky-decoration": n.sticky || void 0,
         children: (0, l.jsx)(t, {}),
     });
@@ -1084,21 +1084,21 @@ function e2(e) {
         a = i?.();
     return null != a
         ? (0, l.jsx)(a, {})
-        : (0, l.jsx)(e5, {
+        : (0, l.jsx)(e7, {
               notice: n,
               children: (0, l.jsxs)(e0.Gt, {
-                  className: e7.XG,
+                  className: e5.XG,
                   scrollbarGutter: "both-edges",
                   ref: (e) => {
                       e8.A.setPanelScrollerRef(e);
                   },
                   children: [
                       (0, l.jsx)("div", {
-                          className: e7.nd,
+                          className: e5.nd,
                           ref: s,
                           children: (0, l.jsx)(ec.xp, { containerRef: s, children: t }),
                       }),
-                      (0, l.jsx)("div", { className: e7.iS, "data-panel-bottom": !0 }),
+                      (0, l.jsx)("div", { className: e5.iS, "data-panel-bottom": !0 }),
                   ],
               }),
           });
@@ -1106,7 +1106,7 @@ function e2(e) {
 function e3(e) {
     let { layout: n, decoration: t } = e;
     return (0, l.jsxs)("div", {
-        className: e7.LZ,
+        className: e5.LZ,
         children: [
             null != t && (0, l.jsx)(e9, { decoration: t }),
             (0, l.jsx)(e1.F, {
@@ -1117,7 +1117,7 @@ function e3(e) {
                         {
                             children: [
                                 (0, l.jsx)(ni, { node: e }),
-                                t !== n.length - 1 && (0, l.jsx)(eM.c, { className: e7.yF }),
+                                t !== n.length - 1 && (0, l.jsx)(eM.c, { className: e5.yF }),
                             ],
                         },
                         e.key,

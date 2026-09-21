@@ -1,0 +1,155 @@
+.previewThumbnail_e8abdf {
+    background: var(--background-mod-strong);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-xs);
+    flex-shrink: 0;
+    height: 40px;
+    -o-object-fit: contain;
+    object-fit: contain;
+    width: 40px
+}
+
+.shadowGrid_e8abdf {
+    display: grid;
+    gap: var(--space-8);
+    grid-template-columns: repeat(2, 1fr)
+}
+
+.sidebarTitleRow__3f4c5 {
+    align-items: center;
+    display: flex;
+    gap: var(--space-8)
+}
+
+.colorSection__3f4c5 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12)
+}
+
+.colorPicker__3f4c5 {
+    align-items: center;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: var(--space-8);
+    justify-content: space-between;
+    margin: 0
+}
+
+.colorPicker__3f4c5>div:last-child,
+.colorPicker__3f4c5>div:last-child>div {
+    display: contents
+}
+
+.colorPicker__3f4c5>div:last-child>div>* {
+    height: 36px;
+    margin: 0;
+    width: 36px
+}
+
+.colorSwatch__3f4c5 {
+    flex: 0 0 36px
+}
+
+.colorPicker__3f4c5>.colorSwatch__3f4c5 {
+    flex: 0 0 36px;
+    height: 36px;
+    margin: 0;
+    max-width: 36px;
+    min-width: 36px;
+    width: 36px
+}
+
+.colorPicker__3f4c5 .colorSwatch__3f4c5 button,
+.colorPicker__3f4c5>.colorSwatch__3f4c5>* {
+    height: 36px;
+    width: 36px
+}
+
+.root__0add0 {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-width: 0;
+    position: relative
+}
+
+.loading__0add0 {
+    animation: shimmer__0add0 1.5s ease-in-out infinite;
+    background: linear-gradient(90deg, var(--background-mod-subtle) 25%, var(--background-mod-muted) 50%, var(--background-mod-subtle) 75%);
+    background-size: 200% 100%;
+    border-radius: var(--radius-md)
+}
+
+@keyframes shimmer__0add0 {
+    0% {
+        background-position: 200% 0
+    }
+
+    to {
+        background-position: -200% 0
+    }
+}
+
+.player__0add0 {
+    aspect-ratio: 16/9;
+    margin-block: var(--space-16) var(--space-24);
+    max-width: 100%;
+    min-height: 0;
+    position: relative
+}
+
+.centeringWrapper__0add0,
+.player__0add0 {
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+.centeringWrapper__0add0 {
+    flex-direction: column;
+    margin-bottom: auto;
+    width: 100%
+}
+
+.timelineWrapper__0add0 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    width: 90%
+}
+
+.playBar__0add0 {
+    height: 40px
+}
+
+.playBar__0add0,
+.waveform__0add0 {
+    width: 100%
+}
+
+.waveform__0add0 {
+    height: 48px
+}
+
+.timelineContainer__0add0 {
+    align-self: center;
+    display: flex;
+    height: 80px;
+    width: 100%
+}
+
+.voiceClipThumbnail__60cfd {
+    align-items: center;
+    background: var(--background-mod-subtle);
+    border-radius: inherit;
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-4);
+    height: 100%;
+    justify-content: center;
+    width: 100%
+}
+
+/*# sourceMappingURL=7712e53ccdb747ed.css.map*/

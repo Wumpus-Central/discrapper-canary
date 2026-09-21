@@ -861,7 +861,7 @@ let tW = (0, d.zZ)(c.X.APPEARANCE_IN_APP_ICON_CATEGORY, {
     }),
     tq = (0, d.gN)(c.X.APPEARANCE_CHAT_RELATED_SETTINGS, { buildLayout: () => [tZ] });
 var tQ = n(452027),
-    tJ = n(243721),
+    tJ = n(193249),
     t$ = n(976860),
     t0 = n(16236),
     t1 = n(635233),

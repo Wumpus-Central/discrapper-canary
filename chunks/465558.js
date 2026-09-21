@@ -422,7 +422,7 @@ let e5 = function (e) {
           });
 };
 var e8 = n(326851);
-let e7 = function () {
+let e9 = function () {
     let e = (0, d.bG)([y.A], () => y.A.getTopUserActivities()),
         t = (0, d.bG)([y.A], () => y.A.getTopGuildActivities());
     return 0 === e.length && 0 === t.length
@@ -495,7 +495,7 @@ let e7 = function () {
               ],
           });
 };
-var e9 = n(700582),
+var e7 = n(700582),
     e6 = n(238304);
 function e4() {
     let e = i.useCallback(() => {
@@ -505,12 +505,12 @@ function e4() {
         });
     }, []);
     return (0, l.jsx)(M.D, {
-        className: e9.YL,
+        className: e7.YL,
         onClick: e,
         children: (0, l.jsx)(q.CircleInformationIcon, {
             size: "custom",
             color: "currentColor",
-            className: e9.Kk,
+            className: e7.Kk,
             width: 15,
             height: 15,
         }),
@@ -600,10 +600,10 @@ function te(e) {
             () =>
                 (0, l.jsxs)(l.Fragment, {
                     children: [
-                        (0, l.jsx)(G.E, { className: e9.bV, variant: "text-md/semibold", children: v }),
+                        (0, l.jsx)(G.E, { className: e7.bV, variant: "text-md/semibold", children: v }),
                         void 0 !== h.sectionDescription
                             ? (0, l.jsx)(G.E, {
-                                  className: e9.yV,
+                                  className: e7.yV,
                                   variant: "text-md/medium",
                                   color: "text-muted",
                                   children: h.sectionDescription(r ?? !1),
@@ -616,24 +616,24 @@ function te(e) {
     if (0 === a.length) return null;
     let p = a.slice(0, f);
     return (0, l.jsxs)("div", {
-        className: e9.A2,
+        className: e7.A2,
         children: [
             E(),
             (0, l.jsx)("div", {
-                className: e9.o1,
+                className: e7.o1,
                 style: { maxHeight: 65 * p.length },
                 children: p.map((e, t) => A({ row: t })),
             }),
             p.length < c
                 ? (0, l.jsx)(M.D, {
-                      className: s()(e9.FQ, { [e9.r9]: m }),
+                      className: s()(e7.FQ, { [e7.r9]: m }),
                       onClick: g,
                       role: "button",
                       "aria-disabled": m,
                       children: m
-                          ? (0, l.jsx)(u.y, { type: u.y.Type.PULSING_ELLIPSIS, className: e9.u1 })
+                          ? (0, l.jsx)(u.y, { type: u.y.Type.PULSING_ELLIPSIS, className: e7.u1 })
                           : (0, l.jsx)(G.E, {
-                                className: e9.UX,
+                                className: e7.UX,
                                 variant: "text-sm/bold",
                                 children: et.intl.format(ee.default["7dMmJY"], {
                                     pageSize: Math.max(1, Math.min(c - p.length, C.PH)),
@@ -657,7 +657,7 @@ function tt() {
         ? (0, l.jsx)(G.E, { variant: "eyebrow", children: r })
         : (0, l.jsxs)(l.Fragment, {
               children: [
-                  e ? null : (0, l.jsx)(X.EyeIcon, { size: "xs", color: "currentColor", className: e9.Kk }),
+                  e ? null : (0, l.jsx)(X.EyeIcon, { size: "xs", color: "currentColor", className: e7.Kk }),
                   (0, l.jsx)(G.E, { variant: "eyebrow", children: n }),
               ],
           });
@@ -668,11 +668,11 @@ let tn = i.memo((e) => {
     return void 0 === s
         ? null
         : (0, l.jsxs)("div", {
-              className: e9.iO,
+              className: e7.iO,
               children: [
                   (0, l.jsx)(eW.H, { user: s, avatarSize: i }),
                   (0, l.jsxs)("div", {
-                      className: e9.TK,
+                      className: e7.TK,
                       children: [
                           (0, l.jsx)(eJ.A, { user: s, hideUserTag: r }),
                           void 0 !== n
@@ -690,7 +690,7 @@ function tl() {
         r = e.map((e) => ({ label: e.id, value: e.id })),
         s = i.useCallback((e) => (0, l.jsx)(tn, { userId: e.value, avatarSize: P._3.SIZE_24 }), []);
     return (0, l.jsx)(D.Pw, {
-        className: e9.Lt,
+        className: e7.Lt,
         renderOptionLabel: s,
         renderOptionValue: (e) => {
             let [t] = e;
@@ -720,20 +720,20 @@ let tr = function () {
         n = (0, el.jp)(),
         i = (0, U.v4)(n);
     return (0, l.jsxs)("div", {
-        className: e9.kL,
+        className: e7.kL,
         children: [
-            (0, l.jsxs)("div", { className: e9.vF, children: [(0, l.jsx)(tt, {}), (0, l.jsx)(e4, {})] }),
+            (0, l.jsxs)("div", { className: e7.vF, children: [(0, l.jsx)(tt, {}), (0, l.jsx)(e4, {})] }),
             (0, l.jsxs)("div", {
                 className: e6.a,
                 children: [
-                    (0, l.jsx)("div", { className: e9.wx, children: (0, l.jsx)(ti, {}) }),
+                    (0, l.jsx)("div", { className: e7.wx, children: (0, l.jsx)(ti, {}) }),
                     (0, l.jsxs)(c.B, {
                         gap: 32,
                         padding: 32,
                         fullWidth: !1,
                         children: [
                             (0, l.jsx)("div", {
-                                className: e9.O2,
+                                className: e7.O2,
                                 children: e
                                     .filter((e) => {
                                         let [t] = e;
@@ -749,15 +749,15 @@ let tr = function () {
                                     }),
                             }),
                             (0, l.jsxs)("div", {
-                                className: e9.RJ,
+                                className: e7.RJ,
                                 children: [
-                                    (0, l.jsx)(e7, {}),
+                                    (0, l.jsx)(e9, {}),
                                     t
                                         ? e.map((e) => {
                                               let [t] = e;
                                               return (0, l.jsx)(te, { displayType: t }, `${t}-list`);
                                           })
-                                        : (0, l.jsx)(e1, { className: e9.RL, text: i ?? "" }),
+                                        : (0, l.jsx)(e1, { className: e7.RL, text: i ?? "" }),
                                 ],
                             }),
                         ],
@@ -1306,8 +1306,8 @@ let t8 = function (e) {
         ],
     });
 };
-var t7 = n(28863),
-    t9 = n(683071),
+var t9 = n(28863),
+    t7 = n(683071),
     t6 = n(987197),
     t4 = n(822585);
 function ne() {
@@ -1317,7 +1317,7 @@ function ne() {
     if (!e || null == t || t < 0) return null;
     function n(e, t) {
         return (0, l.jsx)(
-            t7.Anchor,
+            t9.Anchor,
             {
                 href: "https://support.discord.com/hc/articles/14155060633623",
                 target: "_blank",
@@ -1329,7 +1329,7 @@ function ne() {
     }
     return (0, l.jsx)("div", {
         "data-parental-consent-notice": !0,
-        children: (0, l.jsx)(t9.w, {
+        children: (0, l.jsx)(t7.w, {
             type: "warning",
             children:
                 0 === t
@@ -1374,7 +1374,7 @@ var nx = n(534654),
     nj = n(922016),
     ng = n(408278),
     nv = n(365199),
-    nA = n(243721),
+    nA = n(193249),
     nE = n(95396),
     np = n(585634);
 function nN(e) {
@@ -1680,7 +1680,7 @@ function nL() {
                                 variant: "text-md/medium",
                                 color: "text-muted",
                                 children: et.intl.format(ee.default.X9rW0j, {
-                                    openSettingsHook: (e, t) => (0, l.jsx)(t7.Anchor, { onClick: n, children: e }, t),
+                                    openSettingsHook: (e, t) => (0, l.jsx)(t9.Anchor, { onClick: n, children: e }, t),
                                 }),
                             }),
                         ],
@@ -1980,15 +1980,15 @@ let n5 = function (e) {
     });
 };
 var n8 = n(327337),
-    n7 = n(375980);
-let n9 = "/assets/922a2ee66ef62b5b.svg";
+    n9 = n(375980);
+let n7 = "/assets/922a2ee66ef62b5b.svg";
 function n6(e) {
     let { header: t, description: n, stepNumber: i } = e;
     return (0, l.jsxs)("div", {
-        className: n7.PM,
+        className: n9.PM,
         children: [
             (0, l.jsx)("div", {
-                className: n7.CD,
+                className: n9.CD,
                 children: (0, l.jsx)(V.D, {
                     variant: "heading-md/semibold",
                     color: "text-brand",
@@ -2006,10 +2006,10 @@ function n6(e) {
 }
 function n4() {
     return (0, l.jsxs)("div", {
-        className: s()(n7.aP, e6.a, n7.dO, n7.p2),
+        className: s()(n9.aP, e6.a, n9.dO, n9.p2),
         children: [
             (0, l.jsxs)("div", {
-                className: n7.Np,
+                className: n9.Np,
                 children: [
                     (0, l.jsxs)("div", {
                         children: [
@@ -2026,11 +2026,11 @@ function n4() {
                             }),
                         ],
                     }),
-                    (0, l.jsx)("img", { className: n7._u, src: n9, alt: et.intl.string(ee.default["r+PDmu"]) }),
+                    (0, l.jsx)("img", { className: n9._u, src: n7, alt: et.intl.string(ee.default["r+PDmu"]) }),
                 ],
             }),
             (0, l.jsxs)("div", {
-                className: n7.Ci,
+                className: n9.Ci,
                 children: [
                     (0, l.jsx)(n6, {
                         header: et.intl.string(ee.default["7xxAni"]),
@@ -2055,7 +2055,7 @@ function n4() {
 function le() {
     let e = (0, U.xr)();
     return (0, l.jsxs)("div", {
-        className: s()(n7.aP, e6.a, n7.dO),
+        className: s()(n9.aP, e6.a, n9.dO),
         children: [
             (0, l.jsxs)("div", {
                 children: [
@@ -2075,7 +2075,7 @@ function le() {
                     e ? null : (0, l.jsx)(tJ, {}),
                 ],
             }),
-            (0, l.jsx)("img", { className: n7._u, src: n9, alt: et.intl.string(ee.default["r+PDmu"]) }),
+            (0, l.jsx)("img", { className: n9._u, src: n7, alt: et.intl.string(ee.default["r+PDmu"]) }),
         ],
     });
 }
@@ -2165,7 +2165,7 @@ function ln() {
               children: [
                   (0, l.jsx)(G.E, { className: e0.QB, variant: "eyebrow", color: "text-default", children: r }),
                   (0, l.jsx)("div", {
-                      className: n7.aP,
+                      className: n9.aP,
                       children: (0, l.jsx)(e1, { text: et.intl.string(ee.default.C4ScLD) }),
                   }),
               ],
@@ -2180,7 +2180,7 @@ function ll() {
         );
     return e
         ? (0, l.jsx)("div", {
-              className: n7.rv,
+              className: n9.rv,
               children: (0, l.jsx)(G.E, { variant: "text-xxs/medium", color: "text-muted", children: n }),
           })
         : null;
@@ -2201,7 +2201,7 @@ function li() {
         : (0, l.jsxs)("div", {
               children: [
                   (0, l.jsx)(V.D, {
-                      className: n7.rH,
+                      className: n9.rH,
                       variant: "heading-sm/semibold",
                       children: (0, l.jsx)(ed.F, { children: et.intl.string(ee.default["7/tVhv"]) }),
                   }),
@@ -2220,7 +2220,7 @@ function lr() {
 let ls = function () {
     let e = (0, _.A)();
     return (0, l.jsxs)("div", {
-        className: n7.kL,
+        className: n9.kL,
         children: [
             (0, l.jsx)(ne, {}),
             e ? (0, l.jsx)(n4, {}) : (0, l.jsx)(le, {}),

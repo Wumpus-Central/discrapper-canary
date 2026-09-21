@@ -1,22 +1,27 @@
-l.d(t, { fn: () => C, As: () => y, JQ: () => j });
+l.d(t, { fn: () => b, As: () => y, JQ: () => j });
 var a = l(477900),
     n = l(582128),
     i = l(691540),
     s = l(857250),
-    r = l(97483),
-    o = l(553933);
+    r = l(97483);
+let o = (0, l(945810).mj)({
+    kind: "user",
+    name: "2026-09-clips-editor-image-track",
+    defaultConfig: { enabled: !1 },
+    variations: { 1: { enabled: !0 } },
+});
 l(508300);
 var c = l(77729),
     u = l(696016),
     d = l(268378),
     m = l(375708);
-class h extends Error {
+class f extends Error {
     userMessage;
     constructor(e) {
         (super(e), (this.userMessage = e), (this.name = "ClipImageError"));
     }
 }
-async function f(e, t) {
+async function h(e, t) {
     let l,
         a =
             e.length >= 8 && 137 === e[0] && 80 === e[1] && 78 === e[2] && 71 === e[3]
@@ -28,11 +33,11 @@ async function f(e, t) {
                       "WEBP" === String.fromCharCode(...e.subarray(8, 12))
                     ? "image/webp"
                     : null;
-    if (null == a || !u._9.includes(a)) throw new h(m.intl.string(d.default.j3AKJQ));
+    if (null == a || !u._9.includes(a)) throw new f(m.intl.string(d.default.j3AKJQ));
     try {
         l = await createImageBitmap(new Blob([e], { type: a }));
     } catch {
-        throw new h(m.intl.string(d.default.piRNeN));
+        throw new f(m.intl.string(d.default.piRNeN));
     }
     try {
         let n = Math.max(l.width, l.height),
@@ -55,7 +60,7 @@ async function f(e, t) {
                 let a = document.createElement("canvas");
                 ((a.width = t), (a.height = l));
                 let n = a.getContext("2d");
-                if (null == n) throw new h(m.intl.string(d.default.piRNeN));
+                if (null == n) throw new f(m.intl.string(d.default.piRNeN));
                 n.drawImage(e, 0, 0, e.width, e.height, 0, 0, t, l);
                 let i = a.toDataURL(u.w6, u.ku),
                     s = i.startsWith(`data:${u.w6}`) ? u.w6 : "image/png";
@@ -74,14 +79,14 @@ async function x() {
             u.sL,
         );
     } catch (e) {
-        if (null != e && "object" == typeof e && "ETOOLARGE" === e.code) throw new h(m.intl.string(d.default.ar2OUZ));
+        if (null != e && "object" == typeof e && "ETOOLARGE" === e.code) throw new f(m.intl.string(d.default.ar2OUZ));
         throw e;
     }
     let t = e[0];
     return null == t ? null : { bytes: t.data, fileName: t.filename };
 }
-var v = l(635793),
-    p = l(362081);
+var p = l(635793),
+    v = l(362081);
 let g = n.createContext(null);
 function j(e) {
     let { children: t, isCropEnabled: l = !0 } = e,
@@ -93,76 +98,75 @@ function j(e) {
             removeTrack: u,
             updateTrackRange: d,
             updateTextTrackData: m,
-            updateImageTrackData: h,
-        } = (0, p.T)(),
-        { enabled: f } = o.Od.useConfig({ location: "ClipsEditorContextProvider" }),
-        { enabled: x } = o.Wz.useConfig({ location: "ClipsEditorContextProvider" }),
-        [j, C] = n.useState(null),
-        y = n.useCallback(
+            updateImageTrackData: f,
+        } = (0, v.T)(),
+        { enabled: h } = o.useConfig({ location: "ClipsEditorContextProvider" }),
+        [x, j] = n.useState(null),
+        b = n.useCallback(
             (e) => {
-                (i(v.Y.NONE), C(e));
+                (i(p.Y.NONE), j(e));
             },
             [i],
         ),
-        w = n.useCallback(() => {
-            C(r());
+        y = n.useCallback(() => {
+            j(r());
         }, [r]),
-        N = n.useCallback(async () => {
-            let e = await b();
-            null != e && C(c(e));
+        w = n.useCallback(async () => {
+            let e = await C();
+            null != e && j(c(e));
         }, [c]),
-        E = n.useCallback(
+        N = n.useCallback(
             async (e) => {
-                let t = await b();
-                null != t && h(e, (e) => ({ ...e, ...t }));
+                let t = await C();
+                null != t && f(e, (e) => ({ ...e, ...t }));
             },
-            [h],
+            [f],
         ),
-        k = n.useCallback(
+        E = n.useCallback(
             (e) => {
-                (u(e), C((t) => (t === e ? null : t)));
+                (u(e), j((t) => (t === e ? null : t)));
             },
             [u],
         ),
-        A = n.useMemo(() => ({ isCropEnabled: l, isTextTrackEnabled: f, isImageTrackEnabled: x }), [l, f, x]),
-        L = n.useMemo(
+        k = n.useMemo(() => ({ isCropEnabled: l, isTextTrackEnabled: !0, isImageTrackEnabled: h }), [l, !0, h]),
+        A = n.useMemo(
             () => ({
                 tracks: s,
-                selectedTrackId: j,
-                setSelectedTrackId: y,
-                addTextTrack: w,
-                pickAndAddImageTrack: N,
-                pickAndReplaceImage: E,
-                removeTrack: k,
+                selectedTrackId: x,
+                setSelectedTrackId: b,
+                addTextTrack: y,
+                pickAndAddImageTrack: w,
+                pickAndReplaceImage: N,
+                removeTrack: E,
                 updateTrackRange: d,
                 updateTextTrackData: m,
-                updateImageTrackData: h,
-                editorFeatures: A,
+                updateImageTrackData: f,
+                editorFeatures: k,
             }),
-            [s, j, y, w, N, E, k, d, m, h, A],
+            [s, x, b, y, w, N, E, d, m, f, k],
         );
-    return (0, a.jsx)(g.Provider, { value: L, children: t });
+    return (0, a.jsx)(g.Provider, { value: A, children: t });
 }
-async function b() {
+async function C() {
     try {
         var e;
         let t = await x();
         if (null == t) return null;
-        let l = await f(t.bytes, t.fileName);
+        let l = await h(t.bytes, t.fileName);
         if (!(await (l.src, (e = l.mimeType), Promise.resolve({ allowed: !0, checked: !1 }))).allowed)
             return ((0, i.P0)((0, s.o)(m.intl.string(d.default.uF5VXk), r.Ck.FAILURE)), null);
         return l;
     } catch (t) {
         u.nx.warn("Failed to add clip image track", t);
-        let e = t instanceof h ? t.userMessage : m.intl.string(d.default["+20A3o"]);
+        let e = t instanceof f ? t.userMessage : m.intl.string(d.default["+20A3o"]);
         return ((0, i.P0)((0, s.o)(e, r.Ck.FAILURE)), null);
     }
 }
-function C() {
+function b() {
     let e = n.useContext(g);
     if (null == e) throw Error("useClipsEditorContext must be used within a ClipsEditorContextProvider");
     return e;
 }
 function y() {
-    return C().editorFeatures;
+    return b().editorFeatures;
 }

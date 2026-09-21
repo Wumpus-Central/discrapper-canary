@@ -1,4 +1,4 @@
-l.d(t, { A: () => eb });
+l.d(t, { A: () => eC });
 var a = l(477900),
     n = l(582128),
     i = l(17928),
@@ -9,15 +9,15 @@ var a = l(477900),
     u = l(192308),
     d = l(825484),
     m = l(866665),
-    h = l(27232),
-    f = l(505930),
+    f = l(27232),
+    h = l(505930),
     x = l(241326),
-    v = l(365199),
-    p = l(92446),
+    p = l(365199),
+    v = l(92446),
     g = l(972213),
     j = l(364522),
-    b = l(821609),
-    C = l(428610),
+    C = l(821609),
+    b = l(428610),
     y = l(48507),
     w = l(750943),
     N = l(342073),
@@ -26,26 +26,26 @@ var a = l(477900),
     A = l(663341),
     L = l(405433),
     R = l(442433),
-    I = l(793574),
-    M = l(688810),
+    M = l(793574),
+    I = l(688810),
     T = l(429913),
     D = l(769015),
     S = l(540999),
     O = l(915725),
     P = l(614584),
-    z = l(253799),
-    _ = l(105009),
-    $ = l(645655),
-    U = l(352527),
-    G = l(635793),
-    H = l(362081),
+    _ = l(253799),
+    z = l(105009),
+    U = l(645655),
+    $ = l(352527),
+    H = l(635793),
+    G = l(362081),
     B = l(503698),
-    X = l.n(B),
-    F = l(31300),
+    F = l.n(B),
+    X = l(31300),
     V = l(646270),
-    K = l(748562),
-    W = l(477155),
-    Z = l(939249),
+    W = l(748562),
+    Z = l(477155),
+    K = l(939249),
     Y = l(417270),
     J = l(696016),
     Q = l(268378),
@@ -53,24 +53,24 @@ var a = l(477900),
     ee = l(301187),
     et = l(367454);
 let el = [
-    { preset: J.yz.ORIGINAL, icon: F.k, label: Q.default.CujCES },
+    { preset: J.yz.ORIGINAL, icon: X.k, label: Q.default.CujCES },
     { preset: J.yz.PORTRAIT_9_16, icon: V.u, label: Q.default["34PW6m"] },
-    { preset: J.yz.LANDSCAPE_16_9, icon: K.U, label: Q.default.ywAdnD },
+    { preset: J.yz.LANDSCAPE_16_9, icon: W.U, label: Q.default.ywAdnD },
 ];
 function ea() {
-    let { cropPreset: e, setCropPreset: t, setActiveTool: l } = (0, H.T)();
+    let { cropPreset: e, setCropPreset: t, setActiveTool: l } = (0, G.T)();
     return (0, a.jsxs)("div", {
         className: ee.XV,
         children: [
             (0, a.jsx)("div", {
                 className: et.CD,
-                children: (0, a.jsx)(b.$, {
+                children: (0, a.jsx)(C.$, {
                     size: "sm",
                     variant: "secondary",
-                    icon: W.r,
+                    icon: Z.r,
                     iconPosition: "start",
                     text: q.intl.string(Q.default["7yBrfD"]),
-                    onClick: () => l(G.Y.NONE),
+                    onClick: () => l(H.Y.NONE),
                 }),
             }),
             (0, a.jsxs)(j.Ip, {
@@ -95,10 +95,10 @@ function ea() {
                                     let { preset: n, icon: i, label: r } = l,
                                         o = e === n;
                                     return (0, a.jsxs)(
-                                        Z.D,
+                                        K.D,
                                         {
                                             "aria-pressed": o,
-                                            className: X()(et.is, o && et.j5),
+                                            className: F()(et.is, o && et.j5),
                                             onClick: () => t(n),
                                             children: [
                                                 (0, a.jsx)(i, { size: "md" }),
@@ -118,7 +118,7 @@ function ea() {
             }),
             (0, a.jsx)("div", {
                 className: ee.G3,
-                children: (0, a.jsx)(b.$, {
+                children: (0, a.jsx)(C.$, {
                     fullWidth: !0,
                     variant: "secondary",
                     icon: Y.RetryIcon,
@@ -133,7 +133,7 @@ function ea() {
 var en = l(818433),
     ei = l(317097),
     es = l(48736),
-    er = l(699269),
+    er = l(245116),
     eo = l(393688),
     ec = l(839578);
 let eu = [
@@ -153,10 +153,10 @@ function em(e) {
         children: [
             (0, a.jsx)("div", {
                 className: et.CD,
-                children: (0, a.jsx)(b.$, {
+                children: (0, a.jsx)(C.$, {
                     size: "sm",
                     variant: "secondary",
-                    icon: W.r,
+                    icon: Z.r,
                     iconPosition: "start",
                     text: q.intl.string(Q.default["7yBrfD"]),
                     onClick: () => i(null),
@@ -188,7 +188,7 @@ function em(e) {
                                     }),
                                 ],
                             }),
-                            (0, a.jsx)(b.$, {
+                            (0, a.jsx)(C.$, {
                                 variant: "secondary",
                                 icon: w.X,
                                 iconPosition: "start",
@@ -212,10 +212,10 @@ function em(e) {
                                     let { value: n, label: i } = e,
                                         r = o === n;
                                     return (0, a.jsx)(
-                                        Z.D,
+                                        K.D,
                                         {
                                             "aria-pressed": r,
-                                            className: X()(et.is, r && et.j5),
+                                            className: F()(et.is, r && et.j5),
                                             onClick: () => l(t.id, (e) => ({ ...e, shadow: n })),
                                             children: (0, a.jsx)(s.E, {
                                                 variant: "text-sm/medium",
@@ -252,7 +252,7 @@ function em(e) {
             }),
             (0, a.jsx)("div", {
                 className: ee.G3,
-                children: (0, a.jsx)(b.$, {
+                children: (0, a.jsx)(C.$, {
                     size: "md",
                     variant: "secondary",
                     icon: x.TrashIcon,
@@ -265,8 +265,8 @@ function em(e) {
         ],
     });
 }
-var eh = l(95477);
-let ef = [
+var ef = l(95477);
+let eh = [
         { value: 0.04, label: Q.default.zYVcjp },
         { value: 0.06, label: Q.default.LGX80j },
         { value: 0.09, label: Q.default.sa6Q0q },
@@ -277,8 +277,8 @@ let ef = [
         { value: J.UY.MEDIUM, label: Q.default["Ujlm+F"] },
         { value: J.UY.LARGE, label: Q.default.lT4Cq2 },
     ],
-    ev = [0xfe6e0d, 0xffe047, 3534206, 5793266, 0xff4cd2];
-function ep(e) {
+    ep = [0xfe6e0d, 0xffe047, 3534206, 5793266, 0xff4cd2];
+function ev(e) {
     let { track: t } = e,
         { updateTextTrackData: l, setSelectedTrackId: n, removeTrack: i } = (0, er.fn)();
     return (0, a.jsxs)("div", {
@@ -286,10 +286,10 @@ function ep(e) {
         children: [
             (0, a.jsx)("div", {
                 className: et.CD,
-                children: (0, a.jsx)(b.$, {
+                children: (0, a.jsx)(C.$, {
                     size: "sm",
                     variant: "secondary",
-                    icon: W.r,
+                    icon: Z.r,
                     iconPosition: "start",
                     text: q.intl.string(Q.default["7yBrfD"]),
                     onClick: () => n(null),
@@ -314,7 +314,7 @@ function ep(e) {
                                 color: "text-subtle",
                                 children: q.intl.string(Q.default["R/JN4b"]),
                             }),
-                            (0, a.jsx)(eh.k, {
+                            (0, a.jsx)(ef.k, {
                                 value: t.data.text,
                                 onChange: (e) => l(t.id, (t) => ({ ...t, text: e })),
                             }),
@@ -330,14 +330,14 @@ function ep(e) {
                             }),
                             (0, a.jsx)("div", {
                                 className: et.si,
-                                children: ef.map((e) => {
+                                children: eh.map((e) => {
                                     let { value: n, label: i } = e,
                                         r = t.data.style.fontSize === n;
                                     return (0, a.jsx)(
-                                        Z.D,
+                                        K.D,
                                         {
                                             "aria-pressed": r,
-                                            className: X()(et.is, r && et.j5),
+                                            className: F()(et.is, r && et.j5),
                                             onClick: () =>
                                                 l(t.id, (e) => ({ ...e, style: { ...e.style, fontSize: n } })),
                                             children: (0, a.jsx)(s.E, {
@@ -361,7 +361,7 @@ function ep(e) {
                             }),
                             (0, a.jsx)(es.default, {
                                 defaultColor: 0xffffff,
-                                colors: ev,
+                                colors: ep,
                                 className: ec.Ei,
                                 colorContainerClassName: ec.oP,
                                 value: (0, ei.LX)(t.data.style.color),
@@ -385,10 +385,10 @@ function ep(e) {
                                     let { value: n, label: i } = e,
                                         r = t.data.style.strokeWidth === n;
                                     return (0, a.jsx)(
-                                        Z.D,
+                                        K.D,
                                         {
                                             "aria-pressed": r,
-                                            className: X()(et.is, r && et.j5),
+                                            className: F()(et.is, r && et.j5),
                                             onClick: () =>
                                                 l(t.id, (e) => ({ ...e, style: { ...e.style, strokeWidth: n } })),
                                             children: (0, a.jsx)(s.E, {
@@ -413,7 +413,7 @@ function ep(e) {
                                 }),
                                 (0, a.jsx)(es.default, {
                                     defaultColor: 0,
-                                    colors: ev,
+                                    colors: ep,
                                     className: ec.Ei,
                                     colorContainerClassName: ec.oP,
                                     value: (0, ei.LX)(t.data.style.strokeColor),
@@ -427,7 +427,7 @@ function ep(e) {
             }),
             (0, a.jsx)("div", {
                 className: ee.G3,
-                children: (0, a.jsx)(b.$, {
+                children: (0, a.jsx)(C.$, {
                     size: "md",
                     variant: "secondary",
                     icon: x.TrashIcon,
@@ -440,7 +440,7 @@ function ep(e) {
         ],
     });
 }
-let eg = z.I.difference(new Set([z.C.EXPORT_TO_SOUNDBOARD, z.C.FAVORITE, z.C.DELETE, z.C.SHARE, z.C.EDIT]));
+let eg = _.I.difference(new Set([_.C.EXPORT_TO_SOUNDBOARD, _.C.FAVORITE, _.C.DELETE, _.C.SHARE, _.C.EDIT]));
 function ej(e) {
     let { icon: t, label: l, count: n, enabled: i, disabled: u = !1, onToggle: d } = e;
     return (0, a.jsxs)("div", {
@@ -469,55 +469,55 @@ function ej(e) {
         ],
     });
 }
-function eb(e) {
-    let { activeTool: t } = (0, H.T)(),
+function eC(e) {
+    let { activeTool: t } = (0, G.T)(),
         { tracks: l, selectedTrackId: n } = (0, er.fn)(),
         i = l.find((e) => e.id === n);
     if (null != i)
         switch (i.type) {
             case J.Me.TEXT:
-                return (0, a.jsx)(ep, { track: i });
+                return (0, a.jsx)(ev, { track: i });
             case J.Me.IMAGE:
                 return (0, a.jsx)(em, { track: i });
         }
     switch (t) {
-        case G.Y.CROP:
+        case H.Y.CROP:
             return (0, a.jsx)(ea, {});
-        case G.Y.NONE:
+        case H.Y.NONE:
         default:
-            return (0, a.jsx)(eC, { ...e });
+            return (0, a.jsx)(eb, { ...e });
     }
 }
-function eC(e) {
+function eb(e) {
     let { channelId: t, onEdit: o, onClose: c } = e,
         {
-            getEditedClip: z,
+            getEditedClip: _,
             voiceAudioEnabled: B,
-            setVoiceAudioEnabled: X,
-            applicationAudioEnabled: F,
+            setVoiceAudioEnabled: F,
+            applicationAudioEnabled: X,
             setApplicationAudioEnabled: V,
-            soundboardAudioEnabled: K,
-            setSoundboardAudioEnabled: W,
-            pause: Z,
+            soundboardAudioEnabled: W,
+            setSoundboardAudioEnabled: Z,
+            pause: K,
             clip: Y,
             editOnly: el,
             setActiveTool: ea,
             audioTracks: ei,
-        } = (0, H.T)(),
-        { analyticsLocations: es } = (0, M.Ay)(I.A.CLIPS_EDITOR),
+        } = (0, G.T)(),
+        { analyticsLocations: es } = (0, I.Ay)(M.A.CLIPS_EDITOR),
         { addTextTrack: eo, pickAndAddImageTrack: ec, setSelectedTrackId: eu } = (0, er.fn)(),
-        { isCropEnabled: ed, isTextTrackEnabled: em, isImageTrackEnabled: eh } = (0, er.As)(),
-        ef = Y.type === J.nQ.SCREENSHOT,
+        { isCropEnabled: ed, isTextTrackEnabled: em, isImageTrackEnabled: ef } = (0, er.As)(),
+        eh = Y.type === J.nQ.SCREENSHOT,
         ex = Y.type === J.nQ.VOICE_CLIP,
-        ev = (0, T.h)(Y.applicationId),
-        ep = (0, i.bG)([O.Ay], () => O.Ay.isClipExporting(Y.id)),
-        { onShareClick: eb } = (0, U.A)(t),
-        eC = (0, i.bG)([S.A], () => S.A.isDeveloper),
+        ep = (0, T.h)(Y.applicationId),
+        ev = (0, i.bG)([O.Ay], () => O.Ay.isClipExporting(Y.id)),
+        { onShareClick: eC } = (0, $.A)(t),
+        eb = (0, i.bG)([S.A], () => S.A.isDeveloper),
         ey = n.useMemo(() => ei.filter((e) => e.trackName.includes(J.gC.VOICE)).length, [ei]),
         ew = n.useMemo(() => ei.filter((e) => e.trackName.includes(J.gC.SOUNDBOARD)).length, [ei]),
-        eN = ev?.name ?? Y.applicationName ?? q.intl.string(q.t.GnQui9);
+        eN = ep?.name ?? Y.applicationName ?? q.intl.string(q.t.GnQui9);
     async function eE() {
-        await (0, _.n)(z(), { channelId: t, analyticsLocations: es });
+        await (0, z.n)(_(), { channelId: t, analyticsLocations: es });
     }
     return (0, a.jsxs)("div", {
         className: ee.XV,
@@ -540,13 +540,13 @@ function eC(e) {
                                 "aria-label": Y.isFavorite
                                     ? q.intl.string(Q.default.IZsalP)
                                     : q.intl.string(Q.default.ihBfyA),
-                                icon: Y.isFavorite ? h.StarIcon : f.y,
+                                icon: Y.isFavorite ? f.StarIcon : h.y,
                             }),
                         }),
                         (0, a.jsx)(m.m, {
                             text: q.intl.string(q.t.oyYWHE),
                             children: (0, a.jsx)(r.K, {
-                                onClick: (e) => (0, $.A)(e, { clips: [Y], onAfterDelete: c }),
+                                onClick: (e) => (0, U.A)(e, { clips: [Y], onAfterDelete: c }),
                                 variant: "icon-only",
                                 "aria-label": q.intl.string(q.t.oyYWHE),
                                 icon: x.TrashIcon,
@@ -556,7 +556,7 @@ function eC(e) {
                             text: q.intl.string(q.t.PdRCRg),
                             children: (0, a.jsx)(r.K, {
                                 onClick: function (e) {
-                                    (Z(),
+                                    (K(),
                                         (0, R.L3)(e, async () => {
                                             let { default: e } = await Promise.all([
                                                 l.e("249169"),
@@ -578,7 +578,7 @@ function eC(e) {
                                             return (l) =>
                                                 (0, a.jsx)(e, {
                                                     ...l,
-                                                    clips: [z()],
+                                                    clips: [_()],
                                                     analyticsLocations: es,
                                                     channelId: t,
                                                     onAfterDelete: c,
@@ -588,23 +588,27 @@ function eC(e) {
                                 },
                                 variant: "icon-only",
                                 "aria-label": q.intl.string(q.t.PdRCRg),
-                                icon: v.MoreHorizontalIcon,
+                                icon: p.MoreHorizontalIcon,
                             }),
                         }),
-                        eC &&
+                        eb &&
                             (0, a.jsx)(m.m, {
                                 text: "Clip Debug",
                                 children: (0, a.jsx)(r.K, {
                                     onClick: function () {
                                         (0, u.openModalLazy)(
                                             async () => {
-                                                let { default: e } = await l.e("310000").then(l.bind(l, 224883));
+                                                let { default: e } = await Promise.all([
+                                                    l.e("860350"),
+                                                    l.e("883952"),
+                                                    l.e("310000"),
+                                                ]).then(l.bind(l, 224883));
                                                 return (t) => (0, a.jsx)(e, { ...t, clip: Y });
                                             },
                                             { stackingBehavior: "stack" },
                                         );
                                     },
-                                    icon: p.BugIcon,
+                                    icon: v.BugIcon,
                                     variant: "icon-only",
                                     "aria-label": "Clip Debug",
                                 }),
@@ -648,9 +652,9 @@ function eC(e) {
                             }),
                         ],
                     }),
-                    !ef &&
+                    !eh &&
                         !ex &&
-                        (ed || em || eh) &&
+                        (ed || em || ef) &&
                         (0, a.jsxs)("div", {
                             className: et.uW,
                             children: [
@@ -660,18 +664,18 @@ function eC(e) {
                                     children: q.intl.string(Q.default.FmXxW6),
                                 }),
                                 ed &&
-                                    (0, a.jsx)(b.$, {
+                                    (0, a.jsx)(C.$, {
                                         variant: "secondary",
-                                        icon: C.K,
+                                        icon: b.K,
                                         iconPosition: "start",
                                         fullWidth: !0,
                                         text: q.intl.string(Q.default.RiEyiS),
                                         onClick: () => {
-                                            (eu(null), ea(G.Y.CROP));
+                                            (eu(null), ea(H.Y.CROP));
                                         },
                                     }),
                                 em &&
-                                    (0, a.jsx)(b.$, {
+                                    (0, a.jsx)(C.$, {
                                         variant: "secondary",
                                         icon: y.x,
                                         iconPosition: "start",
@@ -679,8 +683,8 @@ function eC(e) {
                                         text: q.intl.string(Q.default.zSN9vp),
                                         onClick: eo,
                                     }),
-                                eh &&
-                                    (0, a.jsx)(b.$, {
+                                ef &&
+                                    (0, a.jsx)(C.$, {
                                         variant: "secondary",
                                         icon: w.X,
                                         iconPosition: "start",
@@ -690,7 +694,7 @@ function eC(e) {
                                     }),
                             ],
                         }),
-                    !ef &&
+                    !eh &&
                         (0, a.jsxs)("div", {
                             className: et.uW,
                             children: [
@@ -704,11 +708,11 @@ function eC(e) {
                                     children: [
                                         (0, a.jsx)(ej, {
                                             icon:
-                                                null != ev
-                                                    ? (0, a.jsx)(D.A, { game: ev, size: D.M.XXSMALL })
+                                                null != ep
+                                                    ? (0, a.jsx)(D.A, { game: ep, size: D.M.XXSMALL })
                                                     : (0, a.jsx)(N.L, { size: "sm", color: "currentColor" }),
                                             label: eN,
-                                            enabled: F,
+                                            enabled: X,
                                             onToggle: V,
                                         }),
                                         (0, a.jsx)(ej, {
@@ -717,14 +721,14 @@ function eC(e) {
                                             count: ey,
                                             enabled: B,
                                             disabled: 0 === ey,
-                                            onToggle: X,
+                                            onToggle: F,
                                         }),
                                         (0, a.jsx)(ej, {
                                             icon: (0, a.jsx)(k.J, { size: "sm", color: "currentColor" }),
                                             label: q.intl.string(Q.default["/VVQKJ"]),
-                                            enabled: K,
+                                            enabled: W,
                                             disabled: 0 === ew,
-                                            onToggle: W,
+                                            onToggle: Z,
                                         }),
                                     ],
                                 }),
@@ -738,13 +742,13 @@ function eC(e) {
                     direction: "vertical",
                     fullWidth: !0,
                     children: el
-                        ? (0, a.jsx)(b.$, {
-                              loading: ep,
-                              disabled: ep,
+                        ? (0, a.jsx)(C.$, {
+                              loading: ev,
+                              disabled: ev,
                               variant: "primary",
                               onClick: () =>
-                                  eb({
-                                      clips: [z()],
+                                  eC({
+                                      clips: [_()],
                                       onShareComplete: () => {
                                           (o?.(), c());
                                       },
@@ -753,22 +757,22 @@ function eC(e) {
                           })
                         : (0, a.jsxs)(a.Fragment, {
                               children: [
-                                  (0, a.jsx)(b.$, {
-                                      loading: ep,
-                                      disabled: ep,
+                                  (0, a.jsx)(C.$, {
+                                      loading: ev,
+                                      disabled: ev,
                                       variant: "secondary",
                                       icon: A.PlusLargeIcon,
                                       iconPosition: "start",
                                       onClick: eE,
                                       text: q.intl.string(Q.default.HH4Tjj),
                                   }),
-                                  (0, a.jsx)(b.$, {
-                                      loading: ep,
-                                      disabled: ep,
+                                  (0, a.jsx)(C.$, {
+                                      loading: ev,
+                                      disabled: ev,
                                       variant: "primary",
                                       icon: L.ShareIcon,
                                       iconPosition: "start",
-                                      onClick: () => eb({ clips: [z()] }),
+                                      onClick: () => eC({ clips: [_()] }),
                                       text: q.intl.string(q.t.RDE0Sc),
                                   }),
                               ],

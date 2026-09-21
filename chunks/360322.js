@@ -856,8 +856,8 @@ var eX = i(702841),
     e8 = i(43105),
     e2 = i(131607),
     e5 = i(518477),
-    e3 = i(49999);
-function e7() {
+    e7 = i(49999);
+function e3() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
         t = e$.A.useConfig({ location: "PersonalWidgetUpsellCoachmark" }).enabled,
         [i, n] = (0, e2.kn)(e && t ? [e1.M.USER_PROFILE_PERSONAL_WIDGET_COACHMARK] : []);
@@ -881,7 +881,7 @@ function e6(e) {
               gradientColor: "nitro-pink",
               title: V.intl.string(V.t.KKGxNt),
               body: V.intl.string(V.t["IS+QTV"]),
-              onRequestClose: () => l(e3.i.USER_DISMISS),
+              onRequestClose: () => l(e7.i.USER_DISMISS),
               actions: [
                   {
                       text: V.intl.string(V.t.RCy7Px),
@@ -902,7 +902,7 @@ function e9(e) {
     let { buttonRef: t, isCoachmarkVisible: i, markCoachmarkAsDismissed: s } = e,
         { trackUserProfileEditAction: a } = (0, eQ.NJ)(),
         r = l.useCallback(() => {
-            i && s(e3.i.TAKE_ACTION);
+            i && s(e7.i.TAKE_ACTION);
             let e = (0, p.g0)();
             ((0, F.Y5)(e),
                 a({ action: "WIDGET_ADDED", ...e.getProfileEditAnalyticsOptions() }),
@@ -922,7 +922,7 @@ function te(e) {
         { trackUserProfileEditAction: s } = (0, eQ.NJ)(),
         r = l.useRef(null),
         o = l.useRef(null),
-        [c, u] = e7(),
+        [c, u] = e3(),
         g = (function () {
             let e = (0, eX.bG)([M.default], () => M.default.getCurrentUser()?.id),
                 t = (0, w.A)(e),
@@ -934,7 +934,7 @@ function te(e) {
         })(),
         m = (0, eJ.c)("UserProfileWidgetEditingHeader"),
         x = l.useCallback(() => {
-            (c && u(e3.i.TAKE_ACTION),
+            (c && u(e7.i.TAKE_ACTION),
                 s({ action: "PRESS_ADD_WIDGET" }),
                 (0, ej.openModalLazy)(
                     async () => {
@@ -1007,10 +1007,15 @@ async function tA(e, t, i, n, l) {
             widgetEdited: b.x.CLIPS_GALLERY,
             gameId: i,
         });
-    } catch (e) {
+    } catch (l) {
         if (n.signal.aborted) return;
         ((0, F.mC)(t),
-            tp.nx.error("Failed to upload a clip for the clips gallery widget", e),
+            tp.nx.error("Failed to upload a clip for the clips gallery widget", l, {
+                stage: o,
+                clipType: e.type,
+                crop: e.editMetadata?.crop,
+                trackTypes: e.tracks?.map((e) => e.type),
+            }),
             (0, eI.P0)((0, ep.o)(V.intl.string(V.t.iufib1), eA.Ck.FAILURE)),
             r({
                 action: "exporting" === o ? "CLIP_EXPORT_FAILED" : "CLIP_UPLOAD_FAILED",
@@ -1494,14 +1499,14 @@ var t0 = i(769015),
     t8 = i(692969),
     t2 = i(202163),
     t5 = i(207803),
-    t3 = i(591179),
-    t7 = i(485745),
+    t7 = i(591179),
+    t3 = i(485745),
     t6 = i(308766);
 function t4(e) {
     let { gameId: t, userId: i, className: s } = e,
         { gameRecord: r } = (0, t2.A)(t),
-        o = !(0, t3.X)("WidgetClipGameIcon"),
-        d = (0, t7.A)(o),
+        o = !(0, t7.X)("WidgetClipGameIcon"),
+        d = (0, t3.A)(o),
         c = (0, t8.A)({
             location: "WidgetClipGameIcon",
             applicationId: t,
@@ -1676,13 +1681,11 @@ function ir(e) {
                     async () => {
                         let { default: e } = await Promise.all([
                             i.e("440065"),
-                            i.e("744171"),
-                            i.e("860350"),
-                            i.e("180644"),
                             i.e("821717"),
                             i.e("269714"),
                             i.e("19385"),
-                            i.e("722562"),
+                            i.e("718955"),
+                            i.e("323589"),
                             i.e("553829"),
                             i.e("627154"),
                             i.e("865257"),
@@ -1695,7 +1698,6 @@ function ir(e) {
                             i.e("586467"),
                             i.e("875842"),
                             i.e("858337"),
-                            i.e("883952"),
                             i.e("918024"),
                             i.e("324761"),
                             i.e("8563"),
@@ -1714,7 +1716,7 @@ function ir(e) {
                             i.e("280559"),
                             i.e("895008"),
                             i.e("352566"),
-                            i.e("964113"),
+                            i.e("731772"),
                             i.e("689160"),
                             i.e("231782"),
                             i.e("520342"),
@@ -1864,7 +1866,7 @@ function ix(e) {
                             icon: tx.P,
                             "aria-label": V.intl.string(V.t.WAI6xu),
                             onClick: () => {
-                                s(e3.i.USER_DISMISS);
+                                s(e7.i.USER_DISMISS);
                             },
                         }),
                     }),
@@ -1877,7 +1879,7 @@ function ix(e) {
                             icon: im.U,
                             "aria-label": V.intl.formatToPlainString(V.t.KfGahB, { applicationName: i.name }),
                             onClick: () => {
-                                (s(e3.i.TAKE_ACTION), o());
+                                (s(e7.i.TAKE_ACTION), o());
                             },
                         }),
                     }),
@@ -2441,7 +2443,7 @@ function i5(e) {
             return null;
     }
 }
-function i3(e) {
+function i7(e) {
     let { widget: t, user: i, allowEditing: s, disableInteraction: a, ...r } = e,
         { setExpanded: o } = iy(),
         { shouldShowSuggestions: d, handleDismissSuggestions: c } = (function (e) {
@@ -2482,9 +2484,9 @@ function i3(e) {
         ...r,
     });
 }
-function i7(e) {
+function i3(e) {
     let { widget: t, ...i } = e;
-    return (0, n.jsx)(iT, { widgetType: t.type, children: (0, n.jsx)(i3, { widget: t, ...i }) });
+    return (0, n.jsx)(iT, { widgetType: t.type, children: (0, n.jsx)(i7, { widget: t, ...i }) });
 }
 var i6 = i(669253),
     i4 = i(140355);
@@ -2647,7 +2649,7 @@ function no(e) {
         a = l.useRef(!1),
         o = l.useRef(null),
         c = (0, r.bG)([tu.A], () => tu.A.getUserProfile(t)?.fetchError != null, [t]),
-        [u, g] = e7(!c),
+        [u, g] = e3(!c),
         m = u || (0, p.t0)(),
         { enabled: x, maxWidgetOptions: f } = (function (e) {
             let { location: t } = e;
@@ -2701,7 +2703,7 @@ function nc(e) {
         : t instanceof p.Tu
           ? (0, n.jsx)(ez, { widget: t, ...i })
           : (0, I.fu)(t)
-            ? (0, n.jsx)(i7, { widget: t, ...i })
+            ? (0, n.jsx)(i3, { widget: t, ...i })
             : t instanceof h.kM
               ? (0, n.jsx)(ir, { widget: t, ...i })
               : null;

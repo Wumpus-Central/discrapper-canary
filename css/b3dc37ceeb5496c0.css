@@ -1,0 +1,23 @@
+.displayNameContent_b51b39 {
+    min-width: 80px
+}
+
+.placeholderDisplayName_b51b39 {
+    opacity: .7
+}
+
+.permissionLockIcon_b51b39 {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    margin-block-start: -2px;
+    margin-inline-start: var(--space-4);
+    vertical-align: middle
+}
+
+.container__54560 {
+    margin-block: -4px;
+    min-width: 0
+}
+
+/*# sourceMappingURL=b3dc37ceeb5496c0.css.map*/

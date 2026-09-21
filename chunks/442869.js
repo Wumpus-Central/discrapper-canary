@@ -1702,7 +1702,7 @@ function eX(e) {
     return (0, t.jsx)(eF.Kp, { id: l.id, className: eq.nd, "data-animation": a, children: l.panel() });
 }
 var eZ = a(144228),
-    eK = a(243721);
+    eK = a(193249);
 function eY() {
     return (0, t.jsxs)(E.B, {
         gap: 16,

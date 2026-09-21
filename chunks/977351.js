@@ -340,8 +340,7 @@ let K = "playground-announcement-modal",
                                     n.e("307389"),
                                     n.e("857783"),
                                     n.e("938177"),
-                                    n.e("848826"),
-                                    n.e("744171"),
+                                    n.e("913620"),
                                     n.e("526575"),
                                     n.e("463276"),
                                     n.e("507140"),
@@ -896,7 +895,7 @@ async function e8() {
         return { id: t, name: n, type: o, source: l, endDate: null != a ? new Date(a) : void 0 };
     });
 }
-async function e4(e) {
+async function e5(e) {
     let t = await e6.Bo.get({ url: `/premium-marketing/promotions/${e}/components`, rejectWithError: !0 }),
         n = new Map();
     for (let e of t.body) {
@@ -914,13 +913,13 @@ async function e4(e) {
     }
     return n;
 }
-let e5 = [
+let e4 = [
     { type: "marketing_moment", label: "Marketing Moments" },
     { type: "gift", label: "Gift Promotions" },
 ];
 function e9(e) {
     let t = [];
-    for (let n of e5) {
+    for (let n of e4) {
         let o = e.filter((e) => e.type === n.type);
         if (0 !== o.length)
             for (let e of (t.push({ id: `header-${n.type}`, value: `header-${n.type}`, label: n.label, disabled: !0 }),
@@ -1832,7 +1831,7 @@ let ta = {
                                   });
                               let n = t.find((t) => t.id === e);
                               null != n &&
-                                  e4(n.id)
+                                  e5(n.id)
                                       .then((e) => {
                                           o.current === n.id &&
                                               (function (e, t) {

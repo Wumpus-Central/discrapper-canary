@@ -1,4 +1,4 @@
-l.d(t, { n: () => h });
+l.d(t, { n: () => f });
 var a = l(477900),
     n = l(192308),
     i = l(793574),
@@ -9,20 +9,22 @@ var a = l(477900),
     u = l(287809),
     d = l(614584),
     m = l(696016);
-async function h(e, t) {
-    let { analyticsLocations: h, channelId: f } = t;
+async function f(e, t) {
+    let { analyticsLocations: f, channelId: h } = t;
     (0, d.H1)([e.id]);
-    let x = r.A.getChannel(f);
+    let x = r.A.getChannel(h);
     try {
-        let t = await (0, d.VO)(e, { analyticsLocations: [...h, i.A.CLIPS_EXPORT_TO_SOUNDBOARD], skipComposition: !0 });
+        let t = await (0, d.VO)(e, { analyticsLocations: [...f, i.A.CLIPS_EXPORT_TO_SOUNDBOARD], skipComposition: !0 });
         (0, n.openModalLazy)(
             async () => {
                 let { default: n } = await Promise.all([
+                        l.e("860350"),
                         l.e("207998"),
                         l.e("341659"),
                         l.e("775417"),
                         l.e("67491"),
                         l.e("308555"),
+                        l.e("883952"),
                         l.e("66580"),
                         l.e("808979"),
                         l.e("420643"),
@@ -33,13 +35,13 @@ async function h(e, t) {
                     i = x?.guild_id != null ? o.A.getGuild(x.guild_id) : null,
                     r = null != i && (0, s.ie)(i, c.A, u.default).canCreateExpressions,
                     d = null == e.name || "" === e.name ? (0, m.cM)(e.createdAt) : e.name,
-                    h = d.slice(0, 32);
+                    f = d.slice(0, 32);
                 return (e) =>
                     (0, a.jsx)(n, {
                         ...e,
                         showGuildPicker: !0,
                         guildId: r ? x?.guild_id : void 0,
-                        sourceFile: { file: new File([t], `${d}.mp4`, { type: "video/mp4" }), name: h },
+                        sourceFile: { file: new File([t], `${d}.mp4`, { type: "video/mp4" }), name: f },
                     });
             },
             { stackingBehavior: "stack" },
