@@ -114,7 +114,7 @@ class T extends s.A {
                 rejectWithError: !0,
             }).then(
                 (e) => {
-                    if (null == e.body || "217a054a2e010ec4ae4f8d6779f24bed9103fe23" === e.body.hash)
+                    if (null == e.body || "49329385c4ba4b3bf4a5b6eb9364f9f01f497f5f" === e.body.hash)
                         return this._handleUpdateNotAvailable();
                     if (e.body.required || (0, l.kK)()) return this._handleUpdateDownloaded(!1);
                     let t = "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL ? A : h;
