@@ -253,23 +253,23 @@ class b {
         var t, r, n, i;
         if (null == this.container) return {};
         let o = this.container.getBoundingClientRect(),
-            { scrollTop: a, scrollLeft: s } = this.container,
-            l = 0,
-            u = 0,
+            { scrollTop: a, scrollLeft: s, clientTop: l, clientLeft: u } = this.container,
             c = 0,
-            f = 0;
+            f = 0,
+            d = 0,
+            p = 0;
         return (
             "number" == typeof this.offset
-                ? ((l = this.offset), (u = this.offset), (c = this.offset), (f = this.offset))
-                : ((l = null != (t = this.offset.top) ? t : 0),
-                  (u = null != (r = this.offset.right) ? r : 0),
-                  (c = null != (n = this.offset.bottom) ? n : 0),
-                  (f = null != (i = this.offset.left) ? i : 0)),
+                ? ((c = this.offset), (f = this.offset), (d = this.offset), (p = this.offset))
+                : ((c = null != (t = this.offset.top) ? t : 0),
+                  (f = null != (r = this.offset.right) ? r : 0),
+                  (d = null != (n = this.offset.bottom) ? n : 0),
+                  (p = null != (i = this.offset.left) ? i : 0)),
             {
-                top: a + e.top - o.top + l,
-                width: e.width - (u + f),
-                height: e.height - (c + l),
-                left: s + e.left - o.left + f,
+                top: a + e.top - (o.top + l) + c,
+                width: e.width - (f + p),
+                height: e.height - (d + c),
+                left: s + e.left - (o.left + u) + p,
             }
         );
     }

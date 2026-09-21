@@ -7,7 +7,7 @@ var i = n(477900),
     o = n(612324),
     d = n(661531),
     c = n(603392),
-    u = n(259678),
+    u = n(559106),
     _ = n(452027),
     E = n(15626),
     A = n(540637),
@@ -16,8 +16,8 @@ var i = n(477900),
     f = n(866711),
     p = n(95477),
     T = n(991957),
-    g = n(44482);
-function m() {}
+    m = n(44482);
+function g() {}
 function S() {
     return r.useContext(N);
 }
@@ -28,17 +28,17 @@ let N = r.createContext({
     filteredOptions: [],
     groups: [],
     query: "",
-    setQuery: m,
+    setQuery: g,
     activeDescendantIndex: null,
-    setActiveDescendantIndex: m,
+    setActiveDescendantIndex: g,
     loading: !1,
     selectionMode: "single",
-    handleSelectionChange: m,
-    onSelectionChange: m,
+    handleSelectionChange: g,
+    onSelectionChange: g,
     isOpen: !1,
-    setIsOpen: m,
+    setIsOpen: g,
     isEditing: !1,
-    setIsEditing: m,
+    setIsEditing: g,
 });
 var C = n(601973),
     O = n(483084),
@@ -66,9 +66,9 @@ function v(e) {
             value: f,
             customMatchSorter: p,
             matchSorterOptions: T,
-            required: g,
+            required: m,
         } = c,
-        m = r.useId(),
+        g = r.useId(),
         S = r.useRef(null),
         [C, R] = r.useState(null),
         [L, y] = r.useState(!1),
@@ -120,7 +120,7 @@ function v(e) {
     let W = _ || E,
         Y = r.useCallback(
             (e) => {
-                if (W || (g && 0 === e.length)) return;
+                if (W || (m && 0 === e.length)) return;
                 let t = Array.from(e);
                 ("multiple" === u && t.length < 1
                     ? I([])
@@ -131,14 +131,14 @@ function v(e) {
                     A && s && o?.(!1),
                     y(!1));
             },
-            [W, u, I, A, s, o, g, k],
+            [W, u, I, A, s, o, m, k],
         ),
         K = j.length > 0;
     return (0, i.jsx)(N.Provider, {
         value: {
             activeDescendantIndex: C,
             setActiveDescendantIndex: R,
-            listBoxId: m,
+            listBoxId: g,
             inputFieldRef: S,
             isInert: W,
             isCollapsible: n,
@@ -185,7 +185,7 @@ function M(e) {
             showChevronButton: _ = !1,
             onQueryChange: A,
             onFocus: h,
-            onBlur: m,
+            onBlur: g,
             onKeyDown: N,
             wrapTags: O,
             ref: D,
@@ -242,9 +242,9 @@ function M(e) {
         }, [Q, K]),
         eE = r.useCallback(
             (e) => {
-                e.relatedTarget?.closest(`[data-list-id="${j}"]`) == null && (ea(!1), Q?.(!1), m?.(e));
+                e.relatedTarget?.closest(`[data-list-id="${j}"]`) == null && (ea(!1), Q?.(!1), g?.(e));
             },
-            [m, Q, j, ea],
+            [g, Q, j, ea],
         );
     r.useEffect(() => {
         es &&
@@ -342,7 +342,7 @@ function M(e) {
                 let e = Array.from(ee)[0];
                 return (0, i.jsx)("div", {
                     className: y.OS,
-                    children: (0, i.jsx)(g.c, { ...e, onClick: eh, "aria-hidden": !0, inInput: !0 }),
+                    children: (0, i.jsx)(m.c, { ...e, onClick: eh, "aria-hidden": !0, inInput: !0 }),
                 });
             }
             if (l) return null;
@@ -367,11 +367,11 @@ function M(e) {
                 onRemove: eI,
             });
         }, [x, k, eh, eI, er, ee, l, U]),
-        eg = (0, o.A)(W, D);
+        em = (0, o.A)(W, D);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(C.p, {
-                ref: eg,
+                ref: em,
                 disabled: k,
                 readOnly: F,
                 loading: B,
@@ -451,9 +451,9 @@ function P(e) {
             disabled: f,
             handleSelectionChange: p,
             query: T,
-            loading: g,
+            loading: m,
         } = S(),
-        { i18n: m } = r.useContext(I.VO);
+        { i18n: g } = r.useContext(I.VO);
     return (0, i.jsx)(A.q, {
         id: _,
         required: E,
@@ -470,9 +470,9 @@ function P(e) {
             n ??
             (() =>
                 (0, i.jsx)(h.o, {
-                    message: null == T || "" === T ? m.LISTBOX_EMPTY_STATE : m.LISTBOX_EMPTY_STATE_WITH_QUERY(T),
+                    message: null == T || "" === T ? g.LISTBOX_EMPTY_STATE : g.LISTBOX_EMPTY_STATE_WITH_QUERY(T),
                 })),
         maxVisibleItems: a,
-        loading: g,
+        loading: m,
     });
 }

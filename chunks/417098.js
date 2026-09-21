@@ -1,10 +1,10 @@
-n.d(t, { $T: () => g, Hv: () => h, PM: () => T, Z_: () => f, eC: () => p, zr: () => I });
+n.d(t, { $T: () => m, Hv: () => h, PM: () => T, Z_: () => f, eC: () => p, zr: () => I });
 var i = n(477900);
 n(582128);
 var r = n(503698),
     a = n.n(r),
     s = n(607399),
-    l = n(259678),
+    l = n(559106),
     o = n(28863),
     d = n(939249),
     c = n(789645),
@@ -68,7 +68,7 @@ function T(e) {
         children: (0, i.jsx)(c.P, { size: "sm", color: "currentColor", className: A.ut }),
     });
 }
-function g(e) {
+function m(e) {
     let { color: t = h.DEFAULT, className: n, style: r, ref: l, children: o } = e;
     return (0, i.jsx)("div", {
         ref: l,

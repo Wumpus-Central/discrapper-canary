@@ -5,7 +5,7 @@ var i = n(477900),
     s = n.n(a),
     l = n(154370),
     o = n(767958),
-    d = n(259678),
+    d = n(559106),
     c = n(820081),
     u = n(331322),
     _ = n(834730),
@@ -21,8 +21,8 @@ function A(e) {
             labeledBy: f,
             leadingIcon: p,
             value: T,
-            labelType: g = "primary",
-            usageVariant: m = "single",
+            labelType: m = "primary",
+            usageVariant: g = "single",
         } = e,
         S = (0, r.useRef)(null),
         N = (0, r.useRef)(null),
@@ -37,7 +37,7 @@ function A(e) {
         }
         R(t ? "animateIn" : "animateOut");
     }, [t]);
-    let D = s()(E.checkboxOption, "string" == typeof O && E[O], "indicator" !== m && E.spacing),
+    let D = s()(E.checkboxOption, "string" == typeof O && E[O], "indicator" !== g && E.spacing),
         v = (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)("div", {
@@ -81,7 +81,7 @@ function A(e) {
                                         }),
                                     (0, i.jsx)(_.E, {
                                         variant: "text-md/normal",
-                                        color: "primary" === g ? "text-strong" : "text-subtle",
+                                        color: "primary" === m ? "text-strong" : "text-subtle",
                                         children: I,
                                     }),
                                 ],
