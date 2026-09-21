@@ -78,7 +78,7 @@ let g = [
         { id: "gpt-5.6-terra", label: "GPT-5.6 Terra", provider: "openai", supports_fast: !0 },
         { id: "gpt-5.6-luna", label: "GPT-5.6 Luna", provider: "openai", supports_fast: !0 },
         { id: "gpt-6-astra", label: "GPT-6 Astra", provider: "openai", supports_fast: !0 },
-        { id: "xai/grok-4.6", label: "Grok 4.6", provider: "xai" },
+        { id: "xai/grok-4.7", label: "Grok 4.7", provider: "xai" },
     ],
     m = { main: g, subagent: g, thinking: ["low", "medium", "high", "xhigh", "max"] },
     S = [
