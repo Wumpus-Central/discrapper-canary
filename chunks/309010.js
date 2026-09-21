@@ -88,18 +88,19 @@ function B() {
 }
 function V(e, t, n) {
     let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-    if ((U.delete(e), null == t)) {
+    if ((arguments.length > 4 && void 0 !== arguments[4] && arguments[4], U.delete(e), null == t)) {
         let n = L.A.getGuildId();
         b[w(n)] === e && (t = n);
     }
     let r = null != C.A.getGuild(t) ? t : null,
         a = !1;
-    (l === e && ((l = null), (a = !0)),
-        b[w(r)] === e &&
-            ((b[w(r)] = i && null != n ? n : x(w(r))),
-            L.A.getGuildId() === r && (0, p.bG)(y.BVt.CHANNEL(t, b[w(r)])),
-            (a = !0)),
+    l === e && ((l = null), (a = !0));
+    let s = w(r),
+        o = i && null != n ? n : x(s),
+        d = b[s] === e;
+    (d && ((b[s] = o), (a = !0)),
         null != r && P[r] === e && (delete P[r], (a = !0)),
+        L.A.getGuildId() === r && d && (0, p.bG)(y.BVt.CHANNEL(t, o)),
         a && G());
 }
 function H(e) {
@@ -114,7 +115,7 @@ function W(e) {
     let t = T.Le.has(e.type),
         n = t ? S.A.getChannel(e.parent_id) : null,
         i = null == n || j(n) ? null : n.id;
-    return (V(e.id, e.guild_id, i, t), !0);
+    return (V(e.id, e.guild_id, i, t, !1), !0);
 }
 function Y(e) {
     let t = S.A.getChannel(b[w(e)]);

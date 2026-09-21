@@ -9,7 +9,7 @@ var r = n(17928),
 let o = function () {
     let e = (0, r.bG)([c.A], () => c.A.hasLayers()),
         t = (0, a.xr)((e) => e.fullScreenLayers.length > 0),
-        n = (0, i.LL)(),
+        n = (0, i.useIsModalOpen)(),
         o = (0, l.useModalsStore)(l.hasAnyModalOpen),
         d = (0, r.bG)([u.A], () => u.A.isConnected()),
         f = (0, r.bG)([s.A], () => s.A.isOpen());

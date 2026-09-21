@@ -23,7 +23,7 @@ let E = {
             i = arguments.length > 3 ? arguments[3] : void 0,
             r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : _.BRT.APP;
         return (
-            (0, d.GR)({
+            (0, d.pushModal)({
                 modal: (function (e, t, n) {
                     let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
                     return {
@@ -65,14 +65,14 @@ let E = {
         s.h.dispatch({ type: "MODAL_UPDATE", key: e, props: {}, partial: !0, animation: t });
     },
     pop() {
-        ((0, d.tu)(), s.h.dispatch({ type: "MODAL_POP" }));
+        ((0, d.popModal)(), s.h.dispatch({ type: "MODAL_POP" }));
     },
     popWithKey(e, t) {
-        ((0, d.tu)(e, t), s.h.dispatch({ type: "MODAL_POP", key: e, onExited: t }));
+        ((0, d.popModal)(e, t), s.h.dispatch({ type: "MODAL_POP", key: e, onExited: t }));
     },
-    popAboveKey: (e) => (0, d.WR)(e),
+    popAboveKey: (e) => (0, d.popModalsAboveKey)(e),
     popAll() {
-        ((0, d.f3)(),
+        ((0, d.popAllModals)(),
             s.h.dispatch({ type: "MODAL_POP_ALL" }),
             s.h.dispatch({ type: "EMAIL_VERIFICATION_MODAL_CLOSE" }),
             s.h.dispatch({ type: "GUILD_SETTINGS_CLOSE" }),
