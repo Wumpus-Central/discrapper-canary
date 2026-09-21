@@ -319,7 +319,7 @@
 
 .filterBar_ded0dc {
     flex-direction: column;
-    padding: var(--space-16) var(--space-16)
+    padding: var(--space-16) var(--space-24)
 }
 
 .filterBar_ded0dc,
@@ -340,24 +340,18 @@
 }
 
 .dropdowns_ded0dc {
-    align-items: center;
-    display: flex;
-    flex-wrap: nowrap;
-    gap: var(--space-8)
+    flex-wrap: nowrap
 }
 
-.sortContainer_ded0dc {
-    display: flex;
-    justify-content: flex-end;
-    margin-inline-start: auto;
-    min-width: 160px
-}
-
+.dropdowns_ded0dc,
 .pillRow_ded0dc {
     align-items: center;
     display: flex;
+    gap: var(--space-8)
+}
+
+.pillRow_ded0dc {
     flex-wrap: wrap;
-    gap: var(--space-8);
     margin-block-start: var(--space-4)
 }
 
@@ -367,4 +361,4 @@
     justify-content: center
 }
 
-/*# sourceMappingURL=7f5496761d86224c.css.map*/
+/*# sourceMappingURL=82cb2811a0004053.css.map*/

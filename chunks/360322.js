@@ -853,21 +853,21 @@ var eX = i(702841),
     e$ = i(465318),
     e0 = i(384377),
     e1 = i(554146),
-    e8 = i(43105),
-    e2 = i(131607),
+    e2 = i(43105),
+    e8 = i(131607),
     e5 = i(518477),
-    e7 = i(49999);
-function e3() {
+    e3 = i(49999);
+function e7() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
         t = e$.A.useConfig({ location: "PersonalWidgetUpsellCoachmark" }).enabled,
-        [i, n] = (0, e2.kn)(e && t ? [e1.M.USER_PROFILE_PERSONAL_WIDGET_COACHMARK] : []);
+        [i, n] = (0, e8.kn)(e && t ? [e1.M.USER_PROFILE_PERSONAL_WIDGET_COACHMARK] : []);
     return [i === e1.M.USER_PROFILE_PERSONAL_WIDGET_COACHMARK, n];
 }
-function e6(e) {
+function e4(e) {
     let { targetElementRef: t, isVisible: i, markAsDismissed: l } = e,
         { trackUserProfileEditAction: s } = (0, eQ.NJ)();
     return i
-        ? (0, n.jsx)(e8.A, {
+        ? (0, n.jsx)(e2.A, {
               targetElementRef: t,
               badge: "beta",
               graphic: {
@@ -881,7 +881,7 @@ function e6(e) {
               gradientColor: "nitro-pink",
               title: V.intl.string(V.t.KKGxNt),
               body: V.intl.string(V.t["IS+QTV"]),
-              onRequestClose: () => l(e7.i.USER_DISMISS),
+              onRequestClose: () => l(e3.i.USER_DISMISS),
               actions: [
                   {
                       text: V.intl.string(V.t.RCy7Px),
@@ -897,12 +897,12 @@ function e6(e) {
           })
         : null;
 }
-var e4 = i(410453);
+var e6 = i(410453);
 function e9(e) {
     let { buttonRef: t, isCoachmarkVisible: i, markCoachmarkAsDismissed: s } = e,
         { trackUserProfileEditAction: a } = (0, eQ.NJ)(),
         r = l.useCallback(() => {
-            i && s(e7.i.TAKE_ACTION);
+            i && s(e3.i.TAKE_ACTION);
             let e = (0, p.g0)();
             ((0, F.Y5)(e),
                 a({ action: "WIDGET_ADDED", ...e.getProfileEditAnalyticsOptions() }),
@@ -922,7 +922,7 @@ function te(e) {
         { trackUserProfileEditAction: s } = (0, eQ.NJ)(),
         r = l.useRef(null),
         o = l.useRef(null),
-        [c, u] = e3(),
+        [c, u] = e7(),
         g = (function () {
             let e = (0, eX.bG)([M.default], () => M.default.getCurrentUser()?.id),
                 t = (0, w.A)(e),
@@ -934,7 +934,7 @@ function te(e) {
         })(),
         m = (0, eJ.c)("UserProfileWidgetEditingHeader"),
         x = l.useCallback(() => {
-            (c && u(e7.i.TAKE_ACTION),
+            (c && u(e3.i.TAKE_ACTION),
                 s({ action: "PRESS_ADD_WIDGET" }),
                 (0, ej.openModalLazy)(
                     async () => {
@@ -947,10 +947,10 @@ function te(e) {
                 ));
         }, [s, c, u]);
     return (0, n.jsxs)("div", {
-        className: a()(e4.w, t),
+        className: a()(e6.w, t),
         children: [
             (0, n.jsx)(d.E, {
-                className: e4.D,
+                className: e6.D,
                 variant: m ? "text-sm/semibold" : "text-xs/semibold",
                 color: "text-subtle",
                 children: V.intl.string(V.t.OYlggR),
@@ -964,7 +964,7 @@ function te(e) {
                 onClick: x,
                 buttonRef: r,
             }),
-            (0, n.jsx)(e6, { targetElementRef: g ? o : r, isVisible: c, markAsDismissed: u }),
+            (0, n.jsx)(e4, { targetElementRef: g ? o : r, isVisible: c, markAsDismissed: u }),
         ],
     });
 }
@@ -1496,18 +1496,18 @@ function t$(e) {
 }
 var t0 = i(769015),
     t1 = i(409626),
-    t8 = i(692969),
-    t2 = i(202163),
+    t2 = i(692969),
+    t8 = i(202163),
     t5 = i(207803),
-    t7 = i(591179),
-    t3 = i(485745),
-    t6 = i(308766);
-function t4(e) {
+    t3 = i(591179),
+    t7 = i(485745),
+    t4 = i(308766);
+function t6(e) {
     let { gameId: t, userId: i, className: s } = e,
-        { gameRecord: r } = (0, t2.A)(t),
-        o = !(0, t7.X)("WidgetClipGameIcon"),
-        d = (0, t3.A)(o),
-        c = (0, t8.A)({
+        { gameRecord: r } = (0, t8.A)(t),
+        o = !(0, t3.X)("WidgetClipGameIcon"),
+        d = (0, t7.A)(o),
+        c = (0, t2.A)({
             location: "WidgetClipGameIcon",
             applicationId: t,
             source: t1.GameProfileSources.UserProfile,
@@ -1537,7 +1537,7 @@ function t4(e) {
                       children: (0, n.jsx)("div", { className: s, children: m }),
                   })
                 : (0, n.jsx)(H.D, {
-                      className: a()(t6.v, s),
+                      className: a()(t4.v, s),
                       "aria-label": V.intl.formatToPlainString(V.t["8QLQB+"], { gameName: g }),
                       onClick: u,
                       children: m,
@@ -1689,12 +1689,12 @@ function ir(e) {
                             i.e("553829"),
                             i.e("627154"),
                             i.e("865257"),
-                            i.e("318196"),
+                            i.e("287946"),
                             i.e("323079"),
                             i.e("437655"),
                             i.e("430877"),
                             i.e("48055"),
-                            i.e("808915"),
+                            i.e("914553"),
                             i.e("586467"),
                             i.e("875842"),
                             i.e("858337"),
@@ -1705,7 +1705,6 @@ function ir(e) {
                             i.e("903663"),
                             i.e("496268"),
                             i.e("466147"),
-                            i.e("122266"),
                             i.e("838090"),
                             i.e("507406"),
                             i.e("501962"),
@@ -1720,9 +1719,9 @@ function ir(e) {
                             i.e("689160"),
                             i.e("231782"),
                             i.e("520342"),
-                            i.e("771453"),
+                            i.e("432262"),
                             i.e("194676"),
-                        ]).then(i.bind(i, 671884));
+                        ]).then(i.bind(i, 25682));
                         return (t) =>
                             (0, n.jsx)(e, {
                                 ...t,
@@ -1779,7 +1778,7 @@ function ir(e) {
                                           onClick: Q,
                                       }),
                                   ("saved" === R.status || "pending" === R.status) &&
-                                      (0, n.jsx)(t4, { gameId: R.gameId, userId: o.id, className: il.AT }),
+                                      (0, n.jsx)(t6, { gameId: R.gameId, userId: o.id, className: il.AT }),
                                   P &&
                                       "uploading" === R.status &&
                                       (0, n.jsx)(tj, { widgetClipId: R.key, gameId: R.gameId, className: il.MY }),
@@ -1866,7 +1865,7 @@ function ix(e) {
                             icon: tx.P,
                             "aria-label": V.intl.string(V.t.WAI6xu),
                             onClick: () => {
-                                s(e7.i.USER_DISMISS);
+                                s(e3.i.USER_DISMISS);
                             },
                         }),
                     }),
@@ -1879,7 +1878,7 @@ function ix(e) {
                             icon: im.U,
                             "aria-label": V.intl.formatToPlainString(V.t.KfGahB, { applicationName: i.name }),
                             onClick: () => {
-                                (s(e7.i.TAKE_ACTION), o());
+                                (s(e3.i.TAKE_ACTION), o());
                             },
                         }),
                     }),
@@ -2402,7 +2401,7 @@ function i1(e) {
               }),
           });
 }
-function i8(e) {
+function i2(e) {
     let { userId: t, widgetType: i, ...s } = e,
         { games: a, onAddGame: r } = N(i),
         { setExpanded: o } = iy(),
@@ -2427,7 +2426,7 @@ function i8(e) {
         }),
     });
 }
-var i2 = i(870961);
+var i8 = i(870961);
 function i5(e) {
     let { widget: t, ...i } = e;
     switch (t.type) {
@@ -2443,7 +2442,7 @@ function i5(e) {
             return null;
     }
 }
-function i7(e) {
+function i3(e) {
     let { widget: t, user: i, allowEditing: s, disableInteraction: a, ...r } = e,
         { setExpanded: o } = iy(),
         { shouldShowSuggestions: d, handleDismissSuggestions: c } = (function (e) {
@@ -2480,16 +2479,16 @@ function i7(e) {
                       ),
                   ]
                 : void 0,
-        trailingContent: g && (0, n.jsx)(i8, { userId: i.id, widgetType: t.type, onDismiss: c, className: i2.r }),
+        trailingContent: g && (0, n.jsx)(i2, { userId: i.id, widgetType: t.type, onDismiss: c, className: i8.r }),
         ...r,
     });
 }
-function i3(e) {
+function i7(e) {
     let { widget: t, ...i } = e;
-    return (0, n.jsx)(iT, { widgetType: t.type, children: (0, n.jsx)(i7, { widget: t, ...i }) });
+    return (0, n.jsx)(iT, { widgetType: t.type, children: (0, n.jsx)(i3, { widget: t, ...i }) });
 }
-var i6 = i(669253),
-    i4 = i(140355);
+var i4 = i(669253),
+    i6 = i(140355);
 i(839272);
 let i9 = (0, i(945810).mj)({
     name: "2026-09-profile-widget-empty-state-suggestions",
@@ -2649,7 +2648,7 @@ function no(e) {
         a = l.useRef(!1),
         o = l.useRef(null),
         c = (0, r.bG)([tu.A], () => tu.A.getUserProfile(t)?.fetchError != null, [t]),
-        [u, g] = e3(!c),
+        [u, g] = e7(!c),
         m = u || (0, p.t0)(),
         { enabled: x, maxWidgetOptions: f } = (function (e) {
             let { location: t } = e;
@@ -2688,7 +2687,7 @@ function no(e) {
                                       trackUserProfileEditAction: s,
                                   })
                                 : (0, n.jsx)(na, { personalWidgetOptionRef: o, trackUserProfileEditAction: s }),
-                            (0, n.jsx)(e6, { targetElementRef: o, isVisible: u, markAsDismissed: g }),
+                            (0, n.jsx)(e4, { targetElementRef: o, isVisible: u, markAsDismissed: g }),
                         ],
                     }),
             ],
@@ -2703,7 +2702,7 @@ function nc(e) {
         : t instanceof p.Tu
           ? (0, n.jsx)(ez, { widget: t, ...i })
           : (0, I.fu)(t)
-            ? (0, n.jsx)(i3, { widget: t, ...i })
+            ? (0, n.jsx)(i7, { widget: t, ...i })
             : t instanceof h.kM
               ? (0, n.jsx)(ir, { widget: t, ...i })
               : null;
@@ -2788,8 +2787,8 @@ function nm(e) {
     let { user: t, ...i } = e,
         s = l.useRef(null);
     (0, R.i)({ containerRef: s });
-    let r = (0, i6.k)(t.id);
-    return (0, n.jsxs)(i4.K, {
+    let r = (0, i4.k)(t.id);
+    return (0, n.jsxs)(i6.K, {
         "data-scroller": !0,
         scrollerRef: s,
         className: a()(nd.XG, { [nd.az]: r }),

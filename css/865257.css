@@ -6,7 +6,6 @@
     inset-inline: 0;
     opacity: 0;
     padding: var(--space-8);
-    pointer-events: none;
     transition: opacity .1s ease
 }
 
@@ -14,4 +13,4 @@
     opacity: 1
 }
 
-/*# sourceMappingURL=865257.3042628a945c77e1.css.map*/
+/*# sourceMappingURL=865257.6dada6a94629a43e.css.map*/

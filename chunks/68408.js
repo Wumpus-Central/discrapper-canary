@@ -1,4 +1,4 @@
-a.exports = {
+e.exports = {
     dZ: "session_ae7a4b",
     tB: "backdrop_ae7a4b",
     rD: "backdropFallback_ae7a4b",
@@ -10,6 +10,7 @@ a.exports = {
     mO: "gameName_ae7a4b",
     mI: "meta_ae7a4b",
     TG: "metaDot_ae7a4b",
+    $s: "headerActions_ae7a4b",
     Vg: "grid_ae7a4b",
     UX: "clipsRow_ae7a4b",
     Vc: "viewMore_ae7a4b",

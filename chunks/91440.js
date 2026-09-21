@@ -3,5 +3,6 @@ e.exports = {
     yV: "sectionDescription__32534",
     dc: "spinnerContainer__32534",
     UT: "gridContainer__32534",
+    Vb: "gridScroller__32534",
     UX: "clipsRow__32534",
 };

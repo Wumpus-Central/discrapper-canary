@@ -5,4 +5,5 @@ let l = n(582128).createContext({
     clearSelection: () => {},
     isMultiSelectMode: !1,
     onSelectClip: void 0,
+    onShareSession: void 0,
 });
