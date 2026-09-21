@@ -3513,7 +3513,7 @@ function ig(e) {
             (0, r.jsx)(nO.rQ, {
                 titleTextVariant: "heading-lg/semibold",
                 title: H.intl.string(H.t.OEtqpm),
-                subtitle: H.intl.string(H.t.h2nMp0),
+                subtitle: H.intl.string(H.t.vPeaOS),
             }),
             (0, r.jsx)(eA.c, { children: (0, r.jsx)("div", { className: iI.Dq, children: x }) }),
             _,
@@ -3632,36 +3632,26 @@ function iM(e) {
                   size: le._3.SIZE_40,
                   imageScaling: 1.25,
               }),
-              header: H.intl.formatToPlainString(ij.default.sUvNeI, { count: i }),
-              body: l.length > 0 ? H.intl.formatToPlainString(H.t["2h5M+X"], { availableCount: l.length }) : void 0,
+              text: H.intl.formatToPlainString(ij.default.icF5bW, { count: i }),
               countdown: u,
           });
 }
 function iO(e) {
-    let { className: t, graphic: n, header: l, body: i, countdown: a } = e;
+    let { className: t, graphic: n, text: l, countdown: i } = e;
     return (0, r.jsxs)("div", {
         className: e3()(iR.KE, t),
         children: [
-            (0, r.jsxs)("div", {
-                className: iR.SV,
-                children: [
-                    n,
-                    (0, r.jsxs)("div", {
-                        className: iR.ST,
-                        children: [
-                            (0, r.jsx)(y.E, { variant: "text-md/medium", color: "text-default", children: l }),
-                            null != i &&
-                                (0, r.jsx)(y.E, { variant: "text-md/normal", color: "text-subtle", children: i }),
-                        ],
-                    }),
-                ],
+            n,
+            (0, r.jsx)("div", {
+                className: iR.ST,
+                children: (0, r.jsx)(y.E, { variant: "text-md/medium", color: "text-default", children: l }),
             }),
-            null != a &&
+            null != i &&
                 (0, r.jsxs)("div", {
-                    className: iR.gO,
+                    className: iR.O1,
                     children: [
                         (0, r.jsx)(tx.ClockIcon, { size: "xs", color: "currentColor" }),
-                        (0, r.jsx)(y.E, { variant: "text-md/medium", color: "text-default", children: a }),
+                        (0, r.jsx)(y.E, { variant: "text-md/medium", color: "text-default", children: i }),
                     ],
                 }),
         ],

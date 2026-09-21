@@ -6,8 +6,8 @@ var n = r(503698),
     s = r(575593),
     a = r(17928),
     o = r(834730),
-    d = r(474012),
-    c = r(607123),
+    c = r(474012),
+    d = r(607123),
     u = r(287809),
     m = r(137504);
 function x(e) {
@@ -26,7 +26,7 @@ function x(e) {
 function p(e) {
     let { className: t, product: r, title: n, subtitle: p, badge: h } = e,
         f = (0, a.bG)([u.default], () => u.default.getCurrentUser()),
-        g = (0, d.tP)(r);
+        g = (0, c.tP)(r);
     return null == g
         ? null
         : (0, i.jsx)(x, {
@@ -41,7 +41,7 @@ function p(e) {
                           [m.qF]: r?.type === s.R.NAMEPLATE,
                           [m.l2]: r?.type === s.R.BUNDLE,
                       }),
-                      children: (0, i.jsx)(c.pL, {
+                      children: (0, i.jsx)(d.pL, {
                           collectiblesItem: g,
                           user: f,
                           nameplatePreviewStyle: m.M4,
@@ -50,7 +50,7 @@ function p(e) {
                   }),
               }),
               badge: h,
-              title: null != n && (0, i.jsx)(o.E, { variant: "text-md/medium", color: "text-default", children: n }),
-              body: null != p && (0, i.jsx)(o.E, { variant: "text-sm/medium", color: "text-muted", children: p }),
+              title: null != n && (0, i.jsx)(o.E, { variant: "text-md/medium", color: "text-strong", children: n }),
+              body: null != p && (0, i.jsx)(o.E, { variant: "text-sm/medium", color: "text-subtle", children: p }),
           });
 }
