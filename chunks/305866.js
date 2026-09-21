@@ -12,13 +12,13 @@ let c = r.createContext({ inDialog: void 0 }),
             I = r.useRef(null),
             f = r.useRef(null),
             [p, T] = r.useState(!1),
-            m = p ? f : I;
-        ((0, s.tj)(m, { returnRef: A }),
+            g = p ? f : I;
+        ((0, s.tj)(g, { returnRef: A }),
             r.useContext(d.A)(
                 { type: u, name: _?.impressionName, properties: _?.impressionProperties },
                 { disableTrack: E },
             ));
-        let g = r.useCallback(
+        let m = r.useCallback(
                 (e) => {
                     ((I.current = e), "function" == typeof t ? t(e) : null != t && (t.current = e));
                 },
@@ -34,7 +34,7 @@ let c = r.createContext({ inDialog: void 0 }),
             value: { inDialog: !0, setFocusLockDisabled: S },
             children: (0, i.jsxs)("div", {
                 ...h,
-                ref: g,
+                ref: m,
                 role: "dialog",
                 tabIndex: -1,
                 "aria-modal": !0,

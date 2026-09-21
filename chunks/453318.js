@@ -16,8 +16,8 @@ var i = n(477900),
     f = n(866711),
     p = n(95477),
     T = n(991957),
-    m = n(44482);
-function g() {}
+    g = n(44482);
+function m() {}
 function S() {
     return r.useContext(N);
 }
@@ -28,17 +28,17 @@ let N = r.createContext({
     filteredOptions: [],
     groups: [],
     query: "",
-    setQuery: g,
+    setQuery: m,
     activeDescendantIndex: null,
-    setActiveDescendantIndex: g,
+    setActiveDescendantIndex: m,
     loading: !1,
     selectionMode: "single",
-    handleSelectionChange: g,
-    onSelectionChange: g,
+    handleSelectionChange: m,
+    onSelectionChange: m,
     isOpen: !1,
-    setIsOpen: g,
+    setIsOpen: m,
     isEditing: !1,
-    setIsEditing: g,
+    setIsEditing: m,
 });
 var C = n(601973),
     O = n(483084),
@@ -66,9 +66,9 @@ function v(e) {
             value: f,
             customMatchSorter: p,
             matchSorterOptions: T,
-            required: m,
+            required: g,
         } = c,
-        g = r.useId(),
+        m = r.useId(),
         S = r.useRef(null),
         [C, R] = r.useState(null),
         [L, y] = r.useState(!1),
@@ -120,7 +120,7 @@ function v(e) {
     let W = _ || E,
         Y = r.useCallback(
             (e) => {
-                if (W || (m && 0 === e.length)) return;
+                if (W || (g && 0 === e.length)) return;
                 let t = Array.from(e);
                 ("multiple" === u && t.length < 1
                     ? I([])
@@ -131,14 +131,14 @@ function v(e) {
                     A && s && o?.(!1),
                     y(!1));
             },
-            [W, u, I, A, s, o, m, k],
+            [W, u, I, A, s, o, g, k],
         ),
         K = j.length > 0;
     return (0, i.jsx)(N.Provider, {
         value: {
             activeDescendantIndex: C,
             setActiveDescendantIndex: R,
-            listBoxId: g,
+            listBoxId: m,
             inputFieldRef: S,
             isInert: W,
             isCollapsible: n,
@@ -185,7 +185,7 @@ function M(e) {
             showChevronButton: _ = !1,
             onQueryChange: A,
             onFocus: h,
-            onBlur: g,
+            onBlur: m,
             onKeyDown: N,
             wrapTags: O,
             ref: D,
@@ -242,9 +242,9 @@ function M(e) {
         }, [Q, K]),
         eE = r.useCallback(
             (e) => {
-                e.relatedTarget?.closest(`[data-list-id="${j}"]`) == null && (ea(!1), Q?.(!1), g?.(e));
+                e.relatedTarget?.closest(`[data-list-id="${j}"]`) == null && (ea(!1), Q?.(!1), m?.(e));
             },
-            [g, Q, j, ea],
+            [m, Q, j, ea],
         );
     r.useEffect(() => {
         es &&
@@ -342,7 +342,7 @@ function M(e) {
                 let e = Array.from(ee)[0];
                 return (0, i.jsx)("div", {
                     className: y.OS,
-                    children: (0, i.jsx)(m.c, { ...e, onClick: eh, "aria-hidden": !0, inInput: !0 }),
+                    children: (0, i.jsx)(g.c, { ...e, onClick: eh, "aria-hidden": !0, inInput: !0 }),
                 });
             }
             if (l) return null;
@@ -367,11 +367,11 @@ function M(e) {
                 onRemove: eI,
             });
         }, [x, k, eh, eI, er, ee, l, U]),
-        em = (0, o.A)(W, D);
+        eg = (0, o.A)(W, D);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(C.p, {
-                ref: em,
+                ref: eg,
                 disabled: k,
                 readOnly: F,
                 loading: B,
@@ -451,9 +451,9 @@ function P(e) {
             disabled: f,
             handleSelectionChange: p,
             query: T,
-            loading: m,
+            loading: g,
         } = S(),
-        { i18n: g } = r.useContext(I.VO);
+        { i18n: m } = r.useContext(I.VO);
     return (0, i.jsx)(A.q, {
         id: _,
         required: E,
@@ -470,9 +470,9 @@ function P(e) {
             n ??
             (() =>
                 (0, i.jsx)(h.o, {
-                    message: null == T || "" === T ? g.LISTBOX_EMPTY_STATE : g.LISTBOX_EMPTY_STATE_WITH_QUERY(T),
+                    message: null == T || "" === T ? m.LISTBOX_EMPTY_STATE : m.LISTBOX_EMPTY_STATE_WITH_QUERY(T),
                 })),
         maxVisibleItems: a,
-        loading: m,
+        loading: g,
     });
 }

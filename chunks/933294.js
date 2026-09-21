@@ -10,12 +10,12 @@ var i = n(485845),
     c = n(531685),
     f = n(479975);
 (n(323874), n(14289), n(35956));
-var p = n(141931),
-    h = n(941426),
+var h = n(141931),
+    p = n(941426),
     _ = n(475735),
     g = n(544576),
     w = n(731854);
-let m = new h.Vy("VibegrationsNativeCapture");
+let m = new p.Vy("VibegrationsNativeCapture");
 function E(e, t) {
     return (m.verbose(`native capture not used: ${e}`, t ?? {}), null);
 }
@@ -51,7 +51,7 @@ async function T(e) {
             if (null != t && "" !== t.url) return t.url;
         } catch {}
     let u = await t?.desktopCapture?.getDesktopCaptureSources({
-            types: [p.fS.WINDOW],
+            types: [h.fS.WINDOW],
             thumbnailSize: { width: l, height: o },
         }),
         a = u?.find((e) => e.id.split(":")[1] === i);
@@ -106,18 +106,18 @@ async function S(e, t, n) {
     if (a < 1 || d < 1) return E("crop resolved empty");
     let c = Math.min(1, 1568 / Math.max(a, d), Math.sqrt(115e4 / (a * d))),
         f = Math.max(1, Math.round(a * c)),
-        p = Math.max(1, Math.round(d * c)),
-        h = document.createElement("canvas");
-    ((h.width = f), (h.height = p));
-    let _ = h.getContext("2d");
+        h = Math.max(1, Math.round(d * c)),
+        p = document.createElement("canvas");
+    ((p.width = f), (p.height = h));
+    let _ = p.getContext("2d");
     if (null == _) return E("no 2d context");
-    _.drawImage(i, s, u, a, d, 0, 0, f, p);
-    let g = await new Promise((e) => h.toBlob(e, "image/webp", 0.92));
+    _.drawImage(i, s, u, a, d, 0, 0, f, h);
+    let g = await new Promise((e) => p.toBlob(e, "image/webp", 0.92));
     return null == g || "image/webp" !== g.type
         ? E("webp encode failed")
         : g.size > 5242880
           ? E("encoded capture too large", { bytes: g.size })
-          : { blob: g, scale: (f / t.width + p / t.height) / 2 };
+          : { blob: g, scale: (f / t.width + h / t.height) / 2 };
 }
 async function v(e, t) {
     try {
@@ -215,15 +215,15 @@ async function v(e, t) {
                 ...(null == t.build ? {} : { build: t.build }),
                 source: "native",
             },
-            p = {
+            h = {
                 "content-type": d.blob.type,
                 "x-vibegrations-capture-id": t.captureId,
                 "x-vibegrations-capture-meta": encodeURIComponent(JSON.stringify(f)),
             };
-        (null != t.build && (p["x-vibegrations-build"] = t.build),
-            null != t.uploadToken && (p["x-vibegrations-capture-token"] = t.uploadToken));
-        let h = await fetch(c, { method: "POST", headers: p, body: d.blob });
-        if (!h.ok) return E("upload refused", { status: h.status });
+        (null != t.build && (h["x-vibegrations-build"] = t.build),
+            null != t.uploadToken && (h["x-vibegrations-capture-token"] = t.uploadToken));
+        let p = await fetch(c, { method: "POST", headers: h, body: d.blob });
+        if (!p.ok) return E("upload refused", { status: p.status });
         return (
             m.verbose("native capture uploaded", { id: t.captureId, bytes: d.blob.size, scale: f.scale }),
             { status: "accepted" }
@@ -343,8 +343,8 @@ function x(e, t, n) {
     );
 }
 var H = n(948230),
-    U = n(805332),
-    F = n(796036);
+    F = n(805332),
+    U = n(796036);
 function W(e) {
     let t = (0, O.J8)(e);
     if (null == t) return null;
@@ -362,7 +362,7 @@ async function j(e, t) {
             code: "unavailable",
             message: "no preview frame is on screen for this project",
         };
-    if (null == U.A.getBuilderPreviewApplicationId() && !(0, F.h)(e))
+    if (null == F.A.getBuilderPreviewApplicationId() && !(0, U.h)(e))
         return {
             ok: !1,
             mode: t,

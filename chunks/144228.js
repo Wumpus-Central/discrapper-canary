@@ -51,15 +51,15 @@ function I(e) {
     let { desc: t, disabled: n, leadingIcon: a, name: c, value: A, isSelected: I } = e,
         f = (0, r.useRef)(null),
         p = (0, r.useRef)(null),
-        [T, m] = (0, r.useState)(void 0),
-        g = (0, r.useRef)(!1);
+        [T, g] = (0, r.useState)(void 0),
+        m = (0, r.useRef)(!1);
     return (
         (0, r.useEffect)(() => {
-            if (!g.current) {
-                g.current = !0;
+            if (!m.current) {
+                m.current = !0;
                 return;
             }
-            m(I ? "animateIn" : "animateOut");
+            g(I ? "animateIn" : "animateOut");
         }, [I]),
         (0, i.jsx)(d.vN, {
             focusTarget: f,

@@ -1,8 +1,8 @@
-l.d(t, { A: () => c });
-var n = l(477900);
-l(582128);
-var a = l(834730),
-    s = l(13699);
+n.d(t, { A: () => c });
+var l = n(477900);
+n(582128);
+var a = n(834730),
+    s = n(13699);
 let i = /^(.*?)\s*\(([^()]+)\)$/,
     r = /[[\]{}<>`\xab\xbb;$\\=]/,
     u = /'[^']*'|"[^"]*"/,
@@ -12,32 +12,32 @@ let i = /^(.*?)\s*\(([^()]+)\)$/,
         "text-md/normal": "text-md/semibold",
     };
 function o(e, t) {
-    let l = /^\S+/.exec(e);
-    return null == l
+    let n = /^\S+/.exec(e);
+    return null == n
         ? e
-        : (0, n.jsxs)(n.Fragment, {
+        : (0, l.jsxs)(l.Fragment, {
               children: [
-                  (0, n.jsx)(a.E, { tag: "span", variant: d[t], color: "none", children: l[0] }),
-                  e.slice(l[0].length),
+                  (0, l.jsx)(a.E, { tag: "span", variant: d[t], color: "none", children: n[0] }),
+                  e.slice(n[0].length),
               ],
           });
 }
 function c(e) {
-    let { text: t, variant: l, prose: a } = e;
+    let { text: t, variant: n, prose: a } = e;
     if (!0 === a) return t;
     let d = i.exec(t);
     return null == d || r.test(d[2]) || u.test(d[2])
-        ? o(t, l)
-        : (0, n.jsxs)(n.Fragment, {
+        ? o(t, n)
+        : (0, l.jsxs)(l.Fragment, {
               children: [
-                  o(d[1], l),
+                  o(d[1], n),
                   " ",
                   d[2].split(/(\s+)/).map((e, t) => {
-                      let l;
+                      let n;
                       return /^\s*$/.test(e)
                           ? e
-                          : ((l = e.startsWith("+") ? s.sI : e.startsWith("-") || e.startsWith("\u2212") ? s.eh : s.zH),
-                            (0, n.jsx)("span", { className: l, children: e }, t));
+                          : ((n = e.startsWith("+") ? s.sI : e.startsWith("-") || e.startsWith("\u2212") ? s.eh : s.zH),
+                            (0, l.jsx)("span", { className: n, children: e }, t));
                   }),
               ],
           });

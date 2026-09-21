@@ -16,8 +16,8 @@ var i = n(477900),
     f = n(65406),
     p = n(70074);
 let T = { xs: "text-xs/medium", sm: "text-sm/medium", md: "text-md/medium" },
-    m = { xs: "xxs", sm: "xs", md: "refresh_sm" },
-    g = { xs: "sm", sm: "sm", md: "md" };
+    g = { xs: "xxs", sm: "xs", md: "refresh_sm" },
+    m = { xs: "sm", sm: "sm", md: "md" };
 function S(e) {
     let {
             role: t = "button",
@@ -26,8 +26,8 @@ function S(e) {
             text: _,
             icon: A,
             iconPosition: h = "start",
-            iconOpticalOffsetMargin: m = 0,
-            fullWidth: g = !1,
+            iconOpticalOffsetMargin: g = 0,
+            fullWidth: m = !1,
             focusProps: S,
             loading: R,
             loadingStartedLabel: L,
@@ -51,11 +51,11 @@ function S(e) {
         } = e,
         Y = (0, c.C)(),
         K = Y?.size ?? a,
-        $ = Y?.fullWidth ?? g,
+        $ = Y?.fullWidth ?? m,
         z = null != _,
         X = r.useRef(null),
         q = j ?? X,
-        Z = (0, i.jsx)(O, { icon: A, iconOpticalOffsetMargin: m, iconPosition: h, size: K, ref: q, disabled: F }),
+        Z = (0, i.jsx)(O, { icon: A, iconOpticalOffsetMargin: g, iconPosition: h, size: K, ref: q, disabled: F }),
         Q = "expressive" === n,
         J = r.useContext(d.C),
         { theme: ee, i18n: et } = (0, E.G9)(),
@@ -249,7 +249,7 @@ function O(e) {
                 }
                 return {};
             })(),
-            size: m[s],
+            size: g[s],
             className: f.icon,
         });
     } else if (null != t)
@@ -259,13 +259,13 @@ function O(e) {
                 d = (0, i.jsx)(e, {
                     ...t.riveProps,
                     eventTargetRef: l,
-                    style: { width: _.E[m[s]], height: _.E[m[s]] },
+                    style: { width: _.E[g[s]], height: _.E[g[s]] },
                 });
                 break;
             }
             case "sticker": {
                 let e = t.component;
-                d = (0, i.jsx)(e, { size: _.E[g[s]], sticker: t.asset, isInteracting: c });
+                d = (0, i.jsx)(e, { size: _.E[m[s]], sticker: t.asset, isInteracting: c });
             }
         }
     return d;

@@ -1,4 +1,4 @@
-(n.d(t, { Ay: () => q, BL: () => I, bi: () => F }), n(667532), n(321073));
+(n.d(t, { Ay: () => q, BL: () => I, bi: () => U }), n(667532), n(321073));
 var i = n(17928),
     r = n(228366),
     l = n(695515),
@@ -9,8 +9,8 @@ var i = n(17928),
     d = n(967198),
     c = n(461213),
     f = n(933294),
-    p = n(972786),
-    h = n(652215),
+    h = n(972786),
+    p = n(652215),
     _ = n(746080),
     g = n(50617),
     w = n(375708);
@@ -155,18 +155,18 @@ function V(e) {
                     }
             })(e),
             (function (e) {
-                let t = p.Ay.getProject(e);
+                let t = h.Ay.getProject(e);
                 if (
                     null == t ||
                     f.A.areTurnNotificationsDisabled() ||
-                    c.A.getStatus() === h.clD.DND ||
+                    c.A.getStatus() === p.clD.DND ||
                     s.NO.getSetting() ||
                     l.A.isCurrentUserInRestrictedHours()
                 )
                     return;
                 let n = !u.A.isSoundDisabled("message1"),
                     i = d.A.getGuildId(),
-                    r = null != i && p.Ay.getSelectedProjectId(i) === e ? i : null,
+                    r = null != i && h.Ay.getSelectedProjectId(i) === e ? i : null,
                     E = null != r && a.Ay.getChannelId() === _.VV.VIBEGRATIONS && f.A.isWindowFocused(),
                     I = r ?? t.guild_id ?? t.preview_guild_id,
                     T = (function (e) {
@@ -194,7 +194,7 @@ function V(e) {
                     n && (0, o.Ak)(m, 0.4);
                     return;
                 }
-                let A = null == I ? null : h.BVt.CHANNEL(I, _.VV.VIBEGRATIONS, e);
+                let A = null == I ? null : p.BVt.CHANNEL(I, _.VV.VIBEGRATIONS, e);
                 f.A.presentTurnNotification({
                     projectId: e,
                     guildId: I ?? null,
@@ -209,7 +209,7 @@ function V(e) {
 }
 function x(e) {
     let t = T.delete(e);
-    U.delete(e);
+    F.delete(e);
     let n = A.delete(e),
         i = S.delete(e),
         r = y.delete(e),
@@ -220,7 +220,7 @@ function x(e) {
 }
 class H extends i.Ay.Store {
     initialize() {
-        this.waitFor(l.A, u.A, a.Ay, d.A, c.A, p.Ay);
+        this.waitFor(l.A, u.A, a.Ay, d.A, c.A, h.Ay);
     }
     getMessages(e) {
         return T.get(e) ?? k;
@@ -234,7 +234,7 @@ class H extends i.Ay.Store {
         return D(e);
     }
     hasLoadedHistory(e) {
-        return U.has(e);
+        return F.has(e);
     }
     getFinishedAt(e) {
         return D(e) ? null : (A.get(e) ?? null);
@@ -259,9 +259,9 @@ class H extends i.Ay.Store {
         return !1;
     }
 }
-let U = new Map();
-function F(e) {
-    return U.get(e) ?? null;
+let F = new Map();
+function U(e) {
+    return F.get(e) ?? null;
 }
 function W() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
@@ -303,14 +303,14 @@ let q = new H(r.h, {
     },
     VIBEGRATIONS_CHAT_HISTORY_SET: function (e) {
         let { projectId: t, entries: n, cursor: i } = e;
-        (U.set(t, i ?? null), R.delete(t), O.delete(t));
+        (F.set(t, i ?? null), R.delete(t), O.delete(t));
         let r = new Set(),
             l = n.filter((e) => null == e.id || (!r.has(e.id) && (r.add(e.id), !0)));
         (T.set(t, l.map(C)), V(t));
     },
     VIBEGRATIONS_CHAT_HISTORY_PREPEND: function (e) {
         let { projectId: t, entries: n, cursor: i } = e;
-        if ((U.set(t, i), 0 === n.length)) return;
+        if ((F.set(t, i), 0 === n.length)) return;
         let r = T.get(t) ?? [],
             l = n.map(C),
             o = new Set(r.flatMap((e) => (null == e.id ? [] : [e.id]))),
@@ -473,7 +473,7 @@ let q = new H(r.h, {
     VIBEGRATIONS_PROJECTS_FETCH_SUCCESS: function (e) {
         let t = new Set([...T.keys(), ...A.keys(), ...S.keys(), ...y.keys()]),
             n = !1;
-        for (let e of t) null == p.Ay.getProject(e) && x(e) && (n = !0);
+        for (let e of t) null == h.Ay.getProject(e) && x(e) && (n = !0);
         if (!n) return !1;
     },
 });

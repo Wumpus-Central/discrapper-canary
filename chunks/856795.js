@@ -1,19 +1,19 @@
-l.d(t, { Q: () => a });
-var n = l(582128);
+n.d(t, { Q: () => a });
+var l = n(582128);
 function a(e) {
-    let [t, l] = n.useState(e),
-        [a, s] = n.useState("idle"),
-        [i, r] = n.useState(e);
+    let [t, n] = l.useState(e),
+        [a, s] = l.useState("idle"),
+        [i, r] = l.useState(e);
     return (
         i !== e && (r(e), s(e === t ? "idle" : "exit")),
-        n.useEffect(() => {
+        l.useEffect(() => {
             if ("exit" !== a) return;
             let e = setTimeout(() => {
-                (l(i), s("enter"));
+                (n(i), s("enter"));
             }, 150);
             return () => clearTimeout(e);
         }, [a, i]),
-        n.useEffect(() => {
+        l.useEffect(() => {
             if ("enter" !== a) return;
             let e = 0,
                 t = requestAnimationFrame(() => {

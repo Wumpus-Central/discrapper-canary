@@ -498,11 +498,11 @@ var ej = n(769015),
     e1 = n(650338),
     e2 = n(753070),
     e3 = n(900795);
-function e6(e) {
+function e5(e) {
     let { className: t, color: n, ...i } = e;
     return (0, r.jsx)(k.E, { className: l()({ [e3.Q]: null == n }, t), color: n, ...i });
 }
-var e5 = n(95701),
+var e6 = n(95701),
     e4 = n(280450),
     e7 = n(734057),
     e8 = n(184989),
@@ -781,9 +781,9 @@ let t1 = a.memo(function (e) {
             a.useEffect(() => {
                 O && (en(!1), null != ee.current && (clearTimeout(ee.current), (ee.current = null)));
             }, [O]));
-        let ei = null == v || null == p ? null : (0, r.jsx)(t5, { applicationId: v.id }),
+        let ei = null == v || null == p ? null : (0, r.jsx)(t6, { applicationId: v.id }),
             er = B
-                ? (0, r.jsx)(t6, { gameName: q, runningGameId: u?.id, isGameServerHostingInShopEnabled: P, onClick: J })
+                ? (0, r.jsx)(t5, { gameName: q, runningGameId: u?.id, isGameServerHostingInShopEnabled: P, onClick: J })
                 : H
                   ? (0, r.jsx)(t3, {
                         tooltipText: X.intl.formatToPlainString(tB.default.YhnUVO, { gameName: q }),
@@ -850,7 +850,7 @@ let t1 = a.memo(function (e) {
                           : ((e = !0),
                             (t = null),
                             (n = th.F),
-                            null != o && (0, e5.gV)(o.type) && (a = X.intl.string(X.t.uQn9B8))),
+                            null != o && (0, e6.gV)(o.type) && (a = X.intl.string(X.t.uQn9B8))),
                     (0, r.jsx)("div", {
                         className: tJ.IF,
                         children: (0, r.jsx)(tL.A, { tooltipText: a, disabled: e, onClick: t, icon: n }),
@@ -965,7 +965,7 @@ function t3(e) {
         ],
     });
 }
-function t6(e) {
+function t5(e) {
     let { gameName: t, runningGameId: n, isGameServerHostingInShopEnabled: i, onClick: a } = e,
         s = (function (e) {
             let { location: t } = e;
@@ -992,7 +992,7 @@ function t6(e) {
         },
     });
 }
-function t5(e) {
+function t6(e) {
     let { applicationId: t } = e,
         n = a.useRef(null);
     a.useEffect(() => {
@@ -1445,12 +1445,12 @@ function nO(e) {
         (d()(null != a, "Channel cannot be null during navigation click"),
             m.A.channelListScrollTo(a.guild_id ?? x.ME, a.id),
             !E &&
-                ((0, e5.gV)(a.type) &&
+                ((0, e6.gV)(a.type) &&
                     g.A.selectParticipant(
                         a.id,
                         (0, eE.Qt)({ applicationId: i.applicationId, instanceId: i.compositeInstanceId }),
                     ),
-                (0, e5.pQ)(a.type) && (0, L.gk)(nu.Gd.PANEL)));
+                (0, e6.pQ)(a.type) && (0, L.gk)(nu.Gd.PANEL)));
     }
     null != l && null != a
         ? ((t = x.BVt.CHANNEL(l.id, a.id)), (h = `${h} / ${l.name}`))
@@ -1472,7 +1472,7 @@ function nO(e) {
                             },
                             children: (0, r.jsx)(tu.A, { className: nf._W, children: n.name }),
                         }),
-                        null != a && (0, e5.pQ)(a.type)
+                        null != a && (0, e6.pQ)(a.type)
                             ? (0, r.jsx)(eq.A, {
                                   href: t,
                                   onClick: I,
@@ -1531,7 +1531,7 @@ function nL(e) {
                             className: nf.qi,
                             children: [
                                 (0, r.jsx)(f.t, { size: "xxs", color: ev.k0.PREMIUM_TIER_2 }),
-                                (0, r.jsx)(e6, { className: nf.s, variant: "text-xxs/semibold", children: i }),
+                                (0, r.jsx)(e5, { className: nf.s, variant: "text-xxs/semibold", children: i }),
                             ],
                         }),
                 ],

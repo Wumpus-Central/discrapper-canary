@@ -4,7 +4,7 @@ n.d(t, {
     GG: () => C,
     HV: () => P,
     I$: () => k,
-    Is: () => p,
+    Is: () => h,
     M7: () => y,
     Ru: () => v,
     U1: () => E,
@@ -26,7 +26,7 @@ var i = n(636537),
     d = n(933294),
     c = n(972786),
     f = n(652215);
-function p(e, t, n) {
+function h(e, t, n) {
     (0, u.Z0)(e, {
         location: "publish",
         code: u.xA.PUBLISH_FAILED,
@@ -35,12 +35,12 @@ function p(e, t, n) {
         isPreview: n,
     });
 }
-function h(e) {
+function p(e) {
     d.A.reloadAppFrames(e);
 }
 function _(e) {
     let t = c.Ay.getProject(e);
-    null != t && (h(t.application_id), h(t.preview_application_id ?? null));
+    null != t && (p(t.application_id), p(t.preview_application_id ?? null));
 }
 let g = null,
     w = null;
@@ -133,7 +133,7 @@ async function b(e, t) {
     let { isPreview: n } = t,
         { bot_permissions_changed: i, integration_installed: r, project: s } = (await E(e)).body,
         a = n ? s.preview_application_id : s.application_id;
-    (null != a && (await (0, o.TA)(a), await (0, l.un)(a, { force: !0 }).catch(() => {}), (n && (!r || i)) || h(a)),
+    (null != a && (await (0, o.TA)(a), await (0, l.un)(a, { force: !0 }).catch(() => {}), (n && (!r || i)) || p(a)),
         (0, u.qs)(e, { isPreview: n }));
 }
 function k(e, t) {

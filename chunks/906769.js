@@ -1,4 +1,4 @@
-e.exports = {
+c.exports = {
     G3: "progressCircle__28edc",
     n1: "circle__28edc",
     cj: "circleBackgroundAlt__28edc",

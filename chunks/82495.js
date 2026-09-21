@@ -1,12 +1,12 @@
-n.d(t, { A: () => r });
-var l = n(582128);
-function r(e, t, n) {
-    let r = l.useRef(e);
+n.d(t, { A: () => l });
+var r = n(582128);
+function l(e, t, n) {
+    let l = r.useRef(e);
     return (
-        l.useEffect(() => {
+        r.useEffect(() => {
             function e(e) {
-                null == r.current ||
-                    r.current.contains(e.target) ||
+                null == l.current ||
+                    l.current.contains(e.target) ||
                     (n?.current != null && n.current.contains(e.target)) ||
                     t();
             }
@@ -16,7 +16,7 @@ function r(e, t, n) {
                     document.removeEventListener("mousedown", e);
                 }
             );
-        }, [r, t, n]),
-        r
+        }, [l, t, n]),
+        l
     );
 }
