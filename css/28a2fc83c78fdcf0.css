@@ -98,6 +98,7 @@
     flex-direction: column;
     height: 100%;
     min-width: 0;
+    overflow: hidden;
     position: relative
 }
 
@@ -128,4 +129,4 @@
     padding: var(--space-16)
 }
 
-/*# sourceMappingURL=c9b7455023d0df00.css.map*/
+/*# sourceMappingURL=28a2fc83c78fdcf0.css.map*/
