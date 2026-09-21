@@ -1466,7 +1466,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e3 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eH.A().log(
-    `[BUILD INFO] Release Channel: ${e3}, Build Number: 617632, Version Hash: 0d236c37d3f5fa8fb22e05053a8c90d3ac07a666`,
+    `[BUILD INFO] Release Channel: ${e3}, Build Number: 617633, Version Hash: ef1e3a6835647d02bd0feb7985170b33b0f0850a`,
 ),
     v.A.setTags({ appContext: x.QCW }),
     eI.A.initBasic(),
@@ -20053,7 +20053,7 @@ function SU(e) {
         l = (0, R.jsx)(ru.A, {
             targetElementRef: t,
             onRequestClose: () => n(ie.i.USER_DISMISS),
-            graphic: { type: "rive", rive: Sv.Z },
+            graphic: { type: "rive", rive: Sv.Z, props: { withReducedMotion: "halt" } },
             badge: { type: a ? "new" : "beta", variant: "expressive" },
             alignmentStrategy: "edge",
             align: "top",
@@ -21552,7 +21552,7 @@ let Nz = "isHideDevBanner",
                     className: ts()(N$.Wz, N$.mr),
                     children: [
                         (0, R.jsx)(NK, { className: N$.Kk }),
-                        tg.intl.format(tg.t.uyrfYF, { buildNumber: "617632" }),
+                        tg.intl.format(tg.t.uyrfYF, { buildNumber: "617633" }),
                         (0, R.jsx)(r, {}),
                     ],
                 })
