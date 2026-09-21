@@ -1,4 +1,4 @@
-(i.r(e), i.d(e, { default: () => d }));
-let d = JSON.parse(
-    '{"au4mU4":["Add Friend"],"JZCSRZ":["Collapse Friends List"],"Dr/+ku":["Expand Friends List"],"7kJd9e":["Friends"],"i+986w":["Friends List Options"],"F3+Xei":["Resize Friends List"],"60M8Ae":["Search Friends"],"ZsAL7q":["Hide Friends List"],"0usxBd":["You can search friends using their display name or username."],"VH2HXW":["No friends match that search."],"sgse8P":["Show Friends List"]}',
+(i.r(s), i.d(s, { default: () => r }));
+let r = JSON.parse(
+    '{"au4mU4":["Add Friend"],"JZCSRZ":["Collapse Friends List"],"OZj923":["Keep up with what they\'re up to and have fun together."],"4fvi9I":["Your friends, at a glance."],"Dr/+ku":["Expand Friends List"],"7kJd9e":["Friends"],"i+986w":["Friends List Options"],"F3+Xei":["Resize Friends List"],"60M8Ae":["Search Friends"],"ZsAL7q":["Hide Friends List"],"0usxBd":["You can search friends using their display name or username."],"VH2HXW":["No friends match that search."],"sgse8P":["Show Friends List"]}',
 );
