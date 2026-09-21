@@ -830,6 +830,7 @@ class tt extends a.Component {
             t = (0, s.jsxs)(s.Fragment, {
                 children: [
                     (0, s.jsx)(e7.A, {
+                        disabled: this.offerExpired,
                         subscriptionTier: e9.pe.TIER_2,
                         buttonTextOverride: y.intl.string(y.t.O0etsF),
                         size: "md",
