@@ -173,7 +173,9 @@ function y(t) {
         E = (0, v.s)(),
         I = c.YX.useSetting(),
         C = c.Zr.useSetting().includes(n),
-        G = l.useCallback(
+        G = !!E || (u ? !I : !s && !I),
+        x = !!E || (!d && !C),
+        p = l.useCallback(
             (t) => {
                 let i = (0, S.xo)();
                 (t ? i.delete(n) : i.add(n),
@@ -186,18 +188,18 @@ function y(t) {
             },
             [e, n],
         );
-    function x(t, e) {
+    function j(t, e) {
         a.default.track(f.HAw.GUILD_DEFAULT_MESSAGE_REQUEST_UPDATED, {
             default_guilds_restricted: t,
             applied_to_existing_guilds: e,
         });
     }
-    function p(t, e) {
+    function L(t, e) {
         var n;
         !t && (0, D.w)()
             ? b.A.showAgeVerificationGetStartedModal({ entryPoint: M.q1.MESSAGE_REQUESTS_SETTINGS })
             : e
-              ? G(t)
+              ? p(t)
               : ((n = !t),
                 (0, k.O)({
                     header: R.intl.string(R.t.yAfu1p),
@@ -206,10 +208,10 @@ function y(t) {
                     cancelText: R.intl.string(R.t.p89ACt),
                     confirmButtonColor: h.$n.Colors.BRAND,
                     onConfirm: function () {
-                        (c.YX.updateSetting(n), x(n, !1));
+                        (c.YX.updateSetting(n), j(n, !1));
                     },
                     onCancel: function () {
-                        (c.YX.updateSetting(n), c.Zr.updateSetting(n ? V.A.getGuildIds() : []), x(n, !0));
+                        (c.YX.updateSetting(n), c.Zr.updateSetting(n ? V.A.getGuildIds() : []), j(n, !0));
                     },
                 }));
     }
@@ -218,16 +220,16 @@ function y(t) {
             "0" === n
                 ? (0, i.jsx)(A.Ay, {
                       title: R.intl.string(R.t["3o2ojh"]),
-                      value: !s && !I,
-                      onChange: (t) => p(t, !1),
+                      value: G,
+                      onChange: (t) => L(t, !1),
                       disabled: s || u || E,
                       tooltipText: u ? R.intl.string(Y.default["6Af/cw"]) : void 0,
                       note: R.intl.format(R.t.wkm9a3, { helpdeskArticle: o.A.getArticleURL(f.MVz.MESSAGE_REQUESTS) }),
                   })
                 : (0, i.jsx)(A.Ay, {
                       title: R.intl.string(R.t["3o2ojh"]),
-                      value: !d && !C,
-                      onChange: (t) => p(t, !0),
+                      value: x,
+                      onChange: (t) => L(t, !0),
                       disabled: d || E,
                       note: r
                           ? R.intl.format(R.t.WpnWLc, { helpdeskArticle: o.A.getArticleURL(f.MVz.MESSAGE_REQUESTS) })

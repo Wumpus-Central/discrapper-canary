@@ -19111,9 +19111,11 @@ let CC = (0, d.zD)(c.X.PERMISSIONS_MESSAGE_REQUESTS_SETTING, {
             let e = (0, Cd.Tx)(),
                 t = (0, Cm.K)(),
                 n = L.$s.useSetting().includes(e),
-                i = L.YX.useSetting(),
-                l = L.Zr.useSetting().includes(e);
-            return e === Cu.YG ? !t && !i : !n && !l;
+                i = (0, Cf.s)(),
+                l = (0, _m.uM)(),
+                s = L.YX.useSetting(),
+                r = L.Zr.useSetting().includes(e);
+            return !!i || (e === Cu.YG && l ? !s : e === Cu.YG ? !t && !s : !n && !r);
         },
         useDisabled: function () {
             let e = (0, Cd.Tx)(),
