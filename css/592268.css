@@ -1,0 +1,259 @@
+.container__208a2 {
+    background: var(--background-base-low);
+    border-radius: var(--radius-lg);
+    box-sizing: border-box;
+    container-type: inline-size;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+    max-width: 512px;
+    overflow: hidden;
+    position: relative;
+    width: 100%
+}
+
+.loadingContainer__208a2 {
+    align-items: center;
+    justify-content: center;
+    min-height: 160px
+}
+
+.background__208a2 {
+    background: var(--background-base-lowest);
+    inset: 0;
+    -webkit-mask-image: linear-gradient(180deg, #000 0, transparent);
+    mask-image: linear-gradient(180deg, #000 0, transparent);
+    pointer-events: none;
+    position: absolute
+}
+
+.backgroundImage__208a2 {
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    inset: 0;
+    opacity: .5;
+    position: absolute
+}
+
+.header__208a2 {
+    position: relative
+}
+
+.headerContent__208a2 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--space-12);
+    padding: var(--space-16)
+}
+
+.logo__208a2 {
+    flex-shrink: 0;
+    height: 24px;
+    max-width: 128px;
+    -o-object-fit: contain;
+    object-fit: contain
+}
+
+.title__208a2 {
+    flex: 1 1 auto;
+    min-width: 0
+}
+
+.grid__208a2 {
+    display: grid;
+    gap: var(--space-8);
+    grid-auto-rows: 168px;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 var(--space-8) var(--space-8);
+    position: relative
+}
+
+.gridItem__208a2 {
+    border-radius: var(--radius-sm);
+    min-width: 0;
+    overflow: hidden
+}
+
+.gridItem__208a2>div {
+    height: 100%
+}
+
+.gridItemFullWidth__208a2 {
+    grid-column: 1/-1
+}
+
+.gridItem__208a2 .card__208a2 {
+    border: none;
+    height: 100%;
+    width: 100%
+}
+
+@container (max-width: 360px) {
+    .grid__208a2 {
+        grid-template-columns: 1fr
+    }
+}
+
+.container_e95ba0 {
+    display: flex;
+    flex-direction: column;
+    height: 380px;
+    max-width: 512px;
+    overflow: hidden;
+    width: 100%
+}
+
+.card_e95ba0,
+.container_e95ba0 {
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0
+}
+
+.spinner_e95ba0 {
+    align-self: center;
+    flex: 1;
+    justify-self: center
+}
+
+.details_e95ba0 {
+    background: var(--background-base-low);
+    border-bottom: 1px solid var(--border-subtle);
+    border-inline-end: 1px solid var(--border-subtle);
+    border-inline-start: 1px solid var(--border-subtle);
+    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+    gap: 16px;
+    padding: 16px
+}
+
+.details_e95ba0,
+.detailsTitleDescription_e95ba0 {
+    display: flex;
+    flex-direction: column
+}
+
+.detailsTitleDescription_e95ba0 {
+    gap: 8px
+}
+
+.detailsDescription_e95ba0 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 4px
+}
+
+.promotionsContainer_e95ba0 {
+    flex-wrap: wrap
+}
+
+.iconAsset_e95ba0 {
+    height: 20px;
+    -o-object-fit: contain;
+    object-fit: contain;
+    -o-object-position: center;
+    object-position: center;
+    width: 20px
+}
+
+.strikethrough_e95ba0 {
+    text-decoration: line-through
+}
+
+.orbsEarnedContainer_e95ba0 {
+    color: color-mix(in srgb, var(--white) 60%, transparent)
+}
+
+.orbsEarnedContainer_e95ba0>div {
+    align-items: center;
+    display: flex;
+    gap: var(--space-4)
+}
+
+.orbIconAligned_e95ba0 {
+    vertical-align: top
+}
+
+.popoutContent_dfa983 {
+    display: flex;
+    flex-direction: column;
+    padding: var(--custom-message-helpers-popout-padding-width)
+}
+
+.stickersList_dfa983 {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0
+}
+
+.stickerWrapper_dfa983 {
+    cursor: pointer
+}
+
+.packActions_dfa983 {
+    display: flex;
+    flex-direction: column;
+    gap: 8px
+}
+
+.premiumButtonNitroWheel_dfa983 {
+    margin-inline-end: 4px
+}
+
+.premiumButtonInner_dfa983 {
+    align-items: center;
+    display: flex
+}
+
+.theme-dark .countdownIcon_dfa983 {
+    color: var(--yellow-260)
+}
+
+.theme-light .popoutContent_dfa983,
+.theme-light .popoutLoader_dfa983 {
+    background-color: var(--background-surface-high);
+    box-shadow: var(--shadow-border), var(--shadow-high)
+}
+
+.theme-light .countdownIcon_dfa983 {
+    color: #ff8a00
+}
+
+.nonInteractingSticker_dfa983 {
+    opacity: .5
+}
+
+.clickableSticker_abd7a8 {
+    cursor: pointer
+}
+
+.stickerContainer_abd7a8 {
+    align-self: start;
+    justify-self: start
+}
+
+.stickerName_abd7a8 {
+    display: inline-flex;
+    grid-gap: 4px
+}
+
+.stickerIcon_abd7a8 {
+    height: 16px;
+    margin-inline-end: 2px;
+    width: 16px
+}
+
+.background-opacity-low .clickableSticker_abd7a8 {
+    opacity: .6
+}
+
+.background-opacity-medium .clickableSticker_abd7a8 {
+    opacity: .7
+}
+
+.background-opacity-high .clickableSticker_abd7a8 {
+    opacity: .8
+}
+
+/*# sourceMappingURL=592268.62bd7d0dcbca1b93.css.map*/

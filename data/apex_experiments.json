@@ -5384,6 +5384,22 @@
     }
   },
   {
+    "name": "2026-09-multisku-embed-builder",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
     "name": "2026-09-new-hscroll",
     "kind": "user",
     "defaultConfig": {

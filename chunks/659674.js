@@ -1,16 +1,16 @@
 (n.d(t, {
-    G8: () => U,
-    NV: () => D,
-    QY: () => y,
-    V: () => b,
-    Xk: () => M,
-    ax: () => x,
-    ds: () => w,
-    fK: () => R,
-    fS: () => G,
-    nL: () => P,
-    nh: () => L,
-    p6: () => v,
+    G8: () => w,
+    NV: () => v,
+    QY: () => D,
+    V: () => M,
+    Xk: () => P,
+    ax: () => k,
+    ds: () => G,
+    fK: () => L,
+    fS: () => x,
+    nL: () => U,
+    nh: () => y,
+    p6: () => b,
 }),
     n(938796),
     n(323874),
@@ -35,15 +35,16 @@ let E = /sketchfab/i,
     p = RegExp("^https://(?:(?:canary\\.|ptb\\.)?discord(?:app)?.com|staging\\.discord\\.co)/shop"),
     T = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/game-shop\/([0-9]+)\/([0-9]+)/,
     g = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/game-shop\/([0-9]+)\/([0-9]+)/,
-    m =
+    m = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/game-shop\/[0-9]+\/?\?(?=.*skuIds=)/,
+    S =
         /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/shop\?(?=.*tab=game-shops)(?=.*applicationId=[0-9]+)(?=.*skuId=[0-9]+)/,
-    S = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/games\/[0-9]+(?:\/[A-Za-z0-9-]*)?\/?$/,
-    N = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/users\/[0-9]+\/?$/;
-function C(e) {
+    N = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/games\/[0-9]+(?:\/[A-Za-z0-9-]*)?\/?$/,
+    C = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/users\/[0-9]+\/?$/;
+function O(e) {
     let { width: t, height: n } = e;
     return t > 0 && n > 0;
 }
-function O(e) {
+function R(e) {
     let {
         url: t,
         proxy_url: n,
@@ -68,7 +69,7 @@ function O(e) {
         contentType: c ?? void 0,
     };
 }
-function R(e, t, n) {
+function L(e, t, n) {
     var i, a;
     let o,
         I = {
@@ -95,22 +96,22 @@ function R(e, t, n) {
         null != n.provider && null != n.provider.name && (I.provider = { name: n.provider.name, url: n.provider.url }),
         null != n.timestamp && (I.timestamp = s()(new Date(n.timestamp))),
         null != n.color && (I.color = (0, l.$k)(n.color, !0)),
-        null != n.thumbnail && C(n.thumbnail))
+        null != n.thumbnail && O(n.thumbnail))
     )
         switch (I.type) {
             case u.Auw.ARTICLE:
             case u.Auw.IMAGE:
-                I.image = O(n.thumbnail);
+                I.image = R(n.thumbnail);
                 break;
             default:
-                I.thumbnail = O(n.thumbnail);
+                I.thumbnail = R(n.thumbnail);
         }
     if (
-        (null != n.image && C(n.image) && (I.image = O(n.image)),
+        (null != n.image && O(n.image) && (I.image = R(n.image)),
         null != n.video &&
             (null == I.thumbnail &&
                 null != n.video.proxy_url &&
-                C(n.video) &&
+                O(n.video) &&
                 (I.thumbnail = {
                     width: n.video.width,
                     height: n.video.height,
@@ -124,7 +125,7 @@ function R(e, t, n) {
                         o.toString()),
                 }),
             null != I.thumbnail &&
-                C(n.video) &&
+                O(n.video) &&
                 (function (e, t, n) {
                     if ((null != t && E.test(t.name)) || A.test(n.url)) return !1;
                     let i = null != n.proxy_url || /^https:/i.test(n.url);
@@ -135,7 +136,7 @@ function R(e, t, n) {
                         i
                     );
                 })(t, n.provider, n.video) &&
-                (I.video = O(n.video))),
+                (I.video = R(n.video))),
         _.p.has(I.type)
             ? (I.fields = (n.fields ?? []).map((e) => {
                   let { name: t, value: n, inline: i } = e;
@@ -149,7 +150,7 @@ function R(e, t, n) {
     }
     return I;
 }
-function L(e) {
+function y(e) {
     let t = new Map(),
         n = [];
     return (
@@ -167,7 +168,7 @@ function L(e) {
         n
     );
 }
-function y(e, t) {
+function D(e, t) {
     if ("YouTube" === e || "TikTok" === e) return e;
     if (null != t)
         try {
@@ -177,37 +178,39 @@ function y(e, t) {
         } catch {}
     return e;
 }
-function D(e) {
+function v(e) {
     let { image: t, video: n, type: i, author: r, rawTitle: a } = e;
     return (null != t || null != n) && (i === u.Auw.GIFV || (i !== u.Auw.RICH && null == r && null == a));
 }
-function v(e) {
+function b(e) {
     return e.type === u.Auw.ARTICLE && null != e.url && (f.test(e.url) || I.test(e.url));
 }
-function b(e) {
-    return e.type === u.Auw.ARTICLE && null != e.url && p.test(e.url);
-}
 function M(e) {
-    return e.type === u.Auw.ARTICLE && null != e.url && S.test(e.url);
+    return e.type === u.Auw.ARTICLE && null != e.url && p.test(e.url);
 }
 function P(e) {
     return e.type === u.Auw.ARTICLE && null != e.url && N.test(e.url);
 }
 function U(e) {
-    return e.type === u.Auw.ARTICLE && null != e.url && (g.test(e.url) || T.test(e.url) || m.test(e.url));
+    return e.type === u.Auw.ARTICLE && null != e.url && C.test(e.url);
 }
-function w(e, t, n) {
+function w(e) {
+    return (
+        e.type === u.Auw.ARTICLE && null != e.url && (g.test(e.url) || m.test(e.url) || T.test(e.url) || S.test(e.url))
+    );
+}
+function G(e, t, n) {
     return null != t && null != n
         ? { maxMediaWidth: t, maxMediaHeight: n }
         : e.provider?.name === "TikTok" ||
-            (null != e.video && e.video.height > e.video.width && "YouTube" === y(e.provider?.name, e.video.url))
+            (null != e.video && e.video.height > e.video.width && "YouTube" === D(e.provider?.name, e.video.url))
           ? { maxMediaWidth: 400, maxMediaHeight: 450 }
           : { maxMediaWidth: 400, maxMediaHeight: 300 };
 }
-function G(e, t) {
+function x(e, t) {
     return e.isPrivate() ? !e.isManaged() : t.can(u.xBc.EMBED_LINKS, e);
 }
-function x(e) {
+function k(e) {
     return (
         "" !== e.content || e.messageSnapshots.some((e) => "" !== e.message.content || e.message.attachments.length > 0)
     );
