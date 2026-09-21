@@ -2,6 +2,7 @@
     background: var(--background-mod-muted);
     border: 1px solid var(--border-muted);
     border-radius: var(--radius-lg);
+    margin-top: var(--space-16);
     padding: var(--space-16);
     position: relative
 }
@@ -60,4 +61,4 @@
     cursor: pointer
 }
 
-/*# sourceMappingURL=285558.d5b373e376c6cec9.css.map*/
+/*# sourceMappingURL=285558.7b51cbb195e9c060.css.map*/

@@ -3,6 +3,7 @@ e.exports = {
     or: "cursorPointer__84ece",
     Du: "orbChallengeCenterContent__84ece",
     of: "orbChallengeItem__84ece",
+    o4: "orbChallengeItemFirst__84ece",
     D8: "orbChallengeItemHovered__84ece",
     TK: "orbChallengeTile__84ece",
     AM: "orbChallengeTileWithProgressRing__84ece",

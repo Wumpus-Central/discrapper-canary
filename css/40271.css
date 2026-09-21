@@ -29,8 +29,14 @@
     justify-content: space-between;
     margin-inline-start: calc(var(--space-16)*-1);
     padding: 8px;
+    padding-bottom: var(--space-12);
+    padding-top: var(--space-12);
     padding-inline: var(--space-16);
     width: 100%
+}
+
+.orbChallengeItemFirst__84ece {
+    padding-top: 10px
 }
 
 .orbChallengeItemHovered__84ece {
@@ -93,9 +99,8 @@
 }
 
 .orbChallengeItemDivider__84ece {
-    margin-bottom: var(--space-4);
-    margin-top: var(--space-4);
     margin-inline-start: var(--space-48);
+    margin-bottom: -1px;
     width: calc(100% - var(--space-16)*2) !important
 }
 
@@ -123,8 +128,7 @@
     column-gap: var(--space-12);
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    margin-bottom: var(--space-16)
+    justify-content: flex-start
 }
 
 .orbWalletHeaderContent__81c60 {
@@ -182,7 +186,7 @@
     flex-direction: column;
     justify-content: flex-start;
     padding-bottom: var(--space-16);
-    padding-top: 18px
+    padding-top: var(--space-16)
 }
 
 .orbChallengesNoticeContainer__81c60 {
@@ -204,7 +208,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: var(--space-12)
+    margin-bottom: 2px
 }
 
 .orbChallengesCardEmptyContent__81c60 {
@@ -295,4 +299,4 @@
     width: 35%
 }
 
-/*# sourceMappingURL=40271.36f4fa075ced875a.css.map*/
+/*# sourceMappingURL=40271.169537cad7665c41.css.map*/
