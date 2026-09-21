@@ -1174,6 +1174,10 @@
     --text-voice-speaking: var(--green-new-40);
     --textbox-markdown-syntax: var(--primary-360);
     --thread-channel-spine: var(--primary-500);
+    --toast-critical-background: hsl(var(--opacity-red-20-hsl)/0.2);
+    --toast-critical-border: var(--red-new-42);
+    --toast-success-background: hsl(var(--opacity-green-20-hsl)/0.2);
+    --toast-success-border: var(--green-new-42);
     --togglebutton-background-selected: hsl(var(--opacity-blurple-16-hsl)/0.1607843137254902);
     --togglebutton-background-selected-active: hsl(var(--opacity-20-hsl)/0.2);
     --togglebutton-background-selected-hover: hsl(var(--opacity-blurple-24-hsl)/0.23921568627450981);
@@ -2142,6 +2146,10 @@
     --text-voice-speaking: var(--green-new-45);
     --textbox-markdown-syntax: var(--primary-530);
     --thread-channel-spine: var(--primary-300);
+    --toast-critical-background: hsl(var(--opacity-red-12-hsl)/0.12156862745098039);
+    --toast-critical-border: var(--red-new-42);
+    --toast-success-background: hsl(var(--opacity-green-12-hsl)/0.12156862745098039);
+    --toast-success-border: var(--green-new-42);
     --togglebutton-background-selected: hsl(var(--opacity-blurple-16-hsl)/0.1607843137254902);
     --togglebutton-background-selected-active: hsl(var(--opacity-24-hsl)/0.23921568627450981);
     --togglebutton-background-selected-hover: hsl(var(--opacity-blurple-24-hsl)/0.23921568627450981);
@@ -3110,6 +3118,10 @@
     --text-voice-speaking: var(--green-new-40);
     --textbox-markdown-syntax: var(--plum-9);
     --thread-channel-spine: var(--plum-13);
+    --toast-critical-background: hsl(var(--opacity-red-12-hsl)/0.12156862745098039);
+    --toast-critical-border: var(--red-new-42);
+    --toast-success-background: hsl(var(--opacity-green-12-hsl)/0.12156862745098039);
+    --toast-success-border: var(--green-new-42);
     --togglebutton-background-selected: hsl(var(--opacity-blurple-16-hsl)/0.1607843137254902);
     --togglebutton-background-selected-active: hsl(var(--opacity-24-hsl)/0.23921568627450981);
     --togglebutton-background-selected-hover: hsl(var(--opacity-blurple-24-hsl)/0.23921568627450981);
@@ -4078,6 +4090,10 @@
     --text-voice-speaking: var(--green-new-40);
     --textbox-markdown-syntax: var(--plum-9);
     --thread-channel-spine: var(--plum-13);
+    --toast-critical-background: hsl(var(--opacity-red-12-hsl)/0.12156862745098039);
+    --toast-critical-border: var(--red-new-42);
+    --toast-success-background: hsl(var(--opacity-green-12-hsl)/0.12156862745098039);
+    --toast-success-border: var(--green-new-42);
     --togglebutton-background-selected: hsl(var(--opacity-blurple-16-hsl)/0.1607843137254902);
     --togglebutton-background-selected-active: hsl(var(--opacity-20-hsl)/0.2);
     --togglebutton-background-selected-hover: hsl(var(--opacity-blurple-24-hsl)/0.23921568627450981);
@@ -10275,4 +10291,4 @@
     --motion-spring-subtle-duration: 598ms
 }
 
-/*# sourceMappingURL=952007.81adc80a0f44c2ad.css.map*/
+/*# sourceMappingURL=952007.5e15e70020b2ab1f.css.map*/

@@ -4096,6 +4096,10 @@
     --textbox-markdown-syntax: #949ca3;
     --theme-locked-blur-fallback: rgba(31, 31, 33, .96);
     --thread-channel-spine: #4f4f59;
+    --toast-critical-background: rgba(209, 46, 56, .2);
+    --toast-critical-border: #e34d4f;
+    --toast-success-background: rgba(0, 133, 69, .2);
+    --toast-success-border: #33995c;
     --togglebutton-background-selected: rgba(89, 102, 242, .16);
     --togglebutton-background-selected-active: hsla(240, 4%, 61%, .2);
     --togglebutton-background-selected-hover: rgba(89, 102, 242, .24);
@@ -4828,6 +4832,10 @@
     --textbox-markdown-syntax: #40424a;
     --theme-locked-blur-fallback: rgba(31, 31, 33, .96);
     --thread-channel-spine: #c4c9cf;
+    --toast-critical-background: rgba(209, 46, 56, .12);
+    --toast-critical-border: #e34d4f;
+    --toast-success-background: rgba(0, 133, 69, .12);
+    --toast-success-border: #33995c;
     --togglebutton-background-selected: rgba(89, 102, 242, .16);
     --togglebutton-background-selected-active: hsla(240, 4%, 61%, .24);
     --togglebutton-background-selected-hover: rgba(89, 102, 242, .24);
@@ -5560,6 +5568,10 @@
     --textbox-markdown-syntax: #9496a3;
     --theme-locked-blur-fallback: rgba(31, 31, 33, .96);
     --thread-channel-spine: #4d4f5c;
+    --toast-critical-background: rgba(209, 46, 56, .12);
+    --toast-critical-border: #e34d4f;
+    --toast-success-background: rgba(0, 133, 69, .12);
+    --toast-success-border: #33995c;
     --togglebutton-background-selected: rgba(89, 102, 242, .16);
     --togglebutton-background-selected-active: hsla(240, 4%, 61%, .24);
     --togglebutton-background-selected-hover: rgba(89, 102, 242, .24);
@@ -6292,6 +6304,10 @@
     --textbox-markdown-syntax: #9496a3;
     --theme-locked-blur-fallback: rgba(31, 31, 33, .96);
     --thread-channel-spine: #4d4f5c;
+    --toast-critical-background: rgba(209, 46, 56, .12);
+    --toast-critical-border: #e34d4f;
+    --toast-success-background: rgba(0, 133, 69, .12);
+    --toast-success-border: #33995c;
     --togglebutton-background-selected: rgba(89, 102, 242, .16);
     --togglebutton-background-selected-active: hsla(240, 4%, 61%, .2);
     --togglebutton-background-selected-hover: rgba(89, 102, 242, .24);
@@ -6335,4 +6351,4 @@
     --white: #fff
 }
 
-/*# sourceMappingURL=6f0da5e4992cecd4.css.map*/
+/*# sourceMappingURL=278cd02d85978600.css.map*/
