@@ -1,4 +1,4 @@
-t.d(l, { gY: () => f, jV: () => m, mG: () => p });
+t.d(l, { gY: () => g, jV: () => x, mG: () => v, w9: () => m });
 var n = t(477900),
     r = t(582128),
     i = t(503698),
@@ -6,11 +6,12 @@ var n = t(477900),
     s = t(930235),
     o = t(651300),
     c = t(352944),
-    d = t(683063),
-    u = t(939249),
-    h = t(772838),
-    g = t(375708);
-function f(e) {
+    d = t(425763),
+    u = t(683063),
+    h = t(939249),
+    p = t(772838),
+    f = t(375708);
+function g(e) {
     let {
             dragRef: l,
             dropRef: t,
@@ -20,9 +21,9 @@ function f(e) {
             itemType: d,
             itemPreviewProps: u,
             onReorder: h,
-            onHover: g,
+            onHover: p,
             onDrop: f,
-            onEnd: p,
+            onEnd: g,
             disableDefaultPreview: m = !0,
             canDrag: v = !0,
         } = e,
@@ -33,19 +34,19 @@ function f(e) {
             },
             [h],
         ),
-        [{ isDragging: b }, j, D] = (0, s.i)({
+        [{ isDragging: D }, b, j] = (0, s.i)({
             type: x,
             item: { id: a, index: n, itemType: d, itemPreviewProps: u },
             canDrag: v,
             collect: (e) => ({ isDragging: e.isDragging() }),
-            end: p,
+            end: g,
         });
     r.useEffect(() => {
-        m && D((0, c.n)(), { captureDraggingState: !0 });
-    }, [D, m]);
+        m && j((0, c.n)(), { captureDraggingState: !0 });
+    }, [j, m]);
     let [{ dragSourcePosition: k }, C] = (0, o.H)({
         accept: x,
-        hover: g,
+        hover: p,
         drop: (e, l) => {
             if (f?.(e, l) === !0) return;
             let t = e.index;
@@ -60,18 +61,29 @@ function f(e) {
     return (
         r.useLayoutEffect(
             () => (
-                j(l),
+                b(l),
                 C(t),
                 () => {
-                    (C(null), j(null));
+                    (C(null), b(null));
                 }
             ),
-            [j, l, C, t],
+            [b, l, C, t],
         ),
-        { isDragging: b, dragSourcePosition: k }
+        { isDragging: D, dragSourcePosition: k }
     );
 }
-let p = r.memo(function (e) {
+function m(e) {
+    let { listType: l, itemType: t, onFallbackDrop: n } = e,
+        [, r] = (0, o.H)({
+            accept: `${t}_${l}`,
+            canDrop: () => !(0, d.ny)(),
+            drop: (e, l) => {
+                l.didDrop() || n?.(e, l);
+            },
+        });
+    return r;
+}
+let v = r.memo(function (e) {
     let {
             index: l,
             className: t,
@@ -83,23 +95,23 @@ let p = r.memo(function (e) {
             ...u
         } = e,
         h = r.useRef(null),
-        { isDragging: g, dragSourcePosition: p } = f({ dragRef: h, dropRef: h, index: l, ...u }),
-        m = null != p,
-        v = m && l < p,
-        x = m && l > p;
-    return (0, n.jsx)("div", { ref: h, className: a()(t, g && i, v && s, x && o), "aria-label": c, children: d });
+        { isDragging: p, dragSourcePosition: f } = g({ dragRef: h, dropRef: h, index: l, ...u }),
+        m = null != f,
+        v = m && l < f,
+        x = m && l > f;
+    return (0, n.jsx)("div", { ref: h, className: a()(t, p && i, v && s, x && o), "aria-label": c, children: d });
 });
-function m(e) {
+function x(e) {
     let { buttonRef: l, "aria-label": t, iconSize: r = "sm", ...i } = e;
-    return (0, n.jsx)(d.u, {
-        body: g.intl.format(g.t["zvln/l"], { emphasizeHook: (e) => (0, n.jsx)("strong", { children: e }) }),
+    return (0, n.jsx)(u.u, {
+        body: f.intl.format(f.t["zvln/l"], { emphasizeHook: (e) => (0, n.jsx)("strong", { children: e }) }),
         ariaHidden: !0,
-        children: (0, n.jsx)(u.D, {
+        children: (0, n.jsx)(h.D, {
             innerRef: l,
-            "aria-label": t ?? g.intl.string(g.t.n9T3Hi),
+            "aria-label": t ?? f.intl.string(f.t.n9T3Hi),
             "aria-keyshortcuts": "Control+D, Meta+D",
             ...i,
-            children: (0, n.jsx)(h.W, { size: r, color: "currentColor" }),
+            children: (0, n.jsx)(p.W, { size: r, color: "currentColor" }),
         }),
     });
 }

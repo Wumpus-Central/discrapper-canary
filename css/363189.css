@@ -65,7 +65,15 @@
 .badgeGrid_f18413 {
     display: grid;
     gap: var(--space-xs);
-    grid-template-columns: repeat(6, calc(var(--custom-badge-tile-size)*1px))
+    grid-template-columns: repeat(6, calc(var(--custom-badge-tile-size)*1px));
+    isolation: isolate;
+    position: relative
+}
+
+.gridDropBackdrop_f18413 {
+    inset: 0;
+    position: absolute;
+    z-index: -2
 }
 
 .dragTarget_f18413 {
@@ -75,6 +83,13 @@
 
 .dragTarget_f18413:active {
     cursor: grabbing
+}
+
+.isPointerDragging_f18413 .dragTarget_f18413:before {
+    content: "";
+    inset: calc(var(--space-xs)/-2);
+    position: absolute;
+    z-index: -1
 }
 
 .dragHandle_f18413 {
@@ -116,18 +131,17 @@
 }
 
 .dropIndicatorAfter_f18413:after,
-.dropIndicatorBefore_f18413:before {
+.dropIndicatorBefore_f18413:after {
     background-color: var(--icon-strong);
     border-radius: 4px;
-    bottom: 0;
     content: "";
     display: block;
+    inset-block: 0;
     position: absolute;
-    top: 0;
     width: 2px
 }
 
-.dropIndicatorBefore_f18413:before {
+.dropIndicatorBefore_f18413:after {
     inset-inline-start: calc(var(--space-xs)/-2 - 1px)
 }
 
@@ -229,4 +243,4 @@
     width: 20px
 }
 
-/*# sourceMappingURL=363189.49a2556da1e7ceff.css.map*/
+/*# sourceMappingURL=363189.7d47aa131cc635db.css.map*/
