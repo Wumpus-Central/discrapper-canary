@@ -110,7 +110,7 @@ let _ = [
             {
                 user_id: "1",
                 name: "wumpus",
-                value: 4821,
+                value: 84e5,
                 rank: 1,
                 application_ids: ["1"],
                 application_count: 1,
@@ -119,7 +119,7 @@ let _ = [
             {
                 user_id: "2",
                 name: "clyde",
-                value: 3960,
+                value: 62e5,
                 rank: 2,
                 application_ids: ["1", "2"],
                 application_count: 2,
@@ -128,7 +128,7 @@ let _ = [
             {
                 user_id: "3",
                 name: "nelly",
-                value: 2715,
+                value: 41e5,
                 rank: 3,
                 application_ids: ["2"],
                 application_count: 1,
@@ -310,7 +310,7 @@ let N = {
                                     case p.R.GAMING_LEADERBOARD_STAT_UNIQUE_GAMES_PLAYED:
                                         return e.gameIndexes.length;
                                     default:
-                                        return e.totalSeconds / w.A.Seconds.HOUR;
+                                        return 1e3 * e.totalSeconds;
                                 }
                             })(e, s),
                             rank: l + 1,
