@@ -7477,10 +7477,10 @@ function aH(e) {
 }
 var aV = n(691223),
     az = n(132500),
-    aY = n(396478),
-    aW = n(157559),
-    aK = n(554375),
-    aX = n(236408),
+    aY = n(34011),
+    aW = n(396478),
+    aK = n(157559),
+    aX = n(554375),
     aq = n(824832),
     aJ = n(65593),
     aQ = n(698638);
@@ -7579,7 +7579,7 @@ var on = n(931991),
     oa = n(288224),
     oo = n(378243),
     od = n(252149);
-let oc = P().throttle(aK.dZ, 1e3);
+let oc = P().throttle(aX.dZ, 1e3);
 function ou(e) {
     let { guildId: t, emoji: n, onEdit: i, editingDisabled: l = !1, isNewlyAdded: s = !1 } = e,
         [r, a] = R.useState(n.name),
@@ -7613,7 +7613,7 @@ function ou(e) {
                 className: oo.fi,
                 children: (0, p.jsx)("div", {
                     className: oo.Yf,
-                    children: (0, p.jsx)(aX.A, {
+                    children: (0, p.jsx)(aY.w, {
                         textVariant: "text-md/normal",
                         size: "sm",
                         fullWidth: !1,
@@ -7628,7 +7628,7 @@ function ou(e) {
                         onCommit: function () {
                             if (r === n.name) return;
                             let e = ol.Ay.sanitizeEmojiName(r);
-                            (e !== n.name && (0, aK.Cp)({ guildId: t, emojiId: n.id, name: e }), a(e));
+                            (e !== n.name && (0, aX.Cp)({ guildId: t, emojiId: n.id, name: e }), a(e));
                         },
                         onChange: a,
                     }),
@@ -7670,10 +7670,10 @@ function ou(e) {
                                 variant: "critical-secondary",
                                 icon: _.TrashIcon,
                                 onClick: function () {
-                                    (0, aK.ak)(t, n.id).catch((e) => {
+                                    (0, aX.ak)(t, n.id).catch((e) => {
                                         let { status: t } = e;
                                         429 === t &&
-                                            aW.A.show({
+                                            aK.A.show({
                                                 title: el.intl.string(el.t.iufib1),
                                                 body: el.intl.string(el.t.Whhv4w),
                                             });
@@ -7692,12 +7692,12 @@ function om(e) {
     return t
         ? (0, p.jsx)(eO.y, { className: oo.u1, type: eO.y.Type.SPINNING_CIRCLE })
         : 0 === i.length && 0 === l.length
-          ? (0, p.jsxs)(aY.pp, {
+          ? (0, p.jsxs)(aW.pp, {
                 theme: s,
                 className: oo.Ie,
                 children: [
-                    (0, p.jsx)(aY.G8, { darkSrc: n(223685), lightSrc: n(388547), width: 272, height: 212 }),
-                    (0, p.jsx)(aY.SG, { note: el.intl.string(el.t.RBbtMy), children: el.intl.string(el.t.lxsmBd) }),
+                    (0, p.jsx)(aW.G8, { darkSrc: n(223685), lightSrc: n(388547), width: 272, height: 212 }),
+                    (0, p.jsx)(aW.SG, { note: el.intl.string(el.t.RBbtMy), children: el.intl.string(el.t.lxsmBd) }),
                 ],
             })
           : (0, p.jsxs)("div", {
@@ -7728,7 +7728,7 @@ function ox(e) {
         { canManageGuildExpression: a } = (0, on.ie)(n),
         o = (0, L.bG)([oi.A], () => oi.A.theme);
     return 0 === t.length
-        ? (0, p.jsx)(aY.pp, { theme: o, children: (0, p.jsx)(aY.SG, { children: el.intl.string(el.t.SpxYoT) }) })
+        ? (0, p.jsx)(aW.pp, { theme: o, children: (0, p.jsx)(aW.SG, { children: el.intl.string(el.t.SpxYoT) }) })
         : (0, p.jsxs)("div", {
               role: "table",
               "aria-label": el.intl.string(el.t.sMOuuS),
@@ -8031,10 +8031,10 @@ function of(e) {
                 i = (0, na.Ay)(t);
             return (
                 R.useEffect(() => {
-                    (0, aK.dZ)(e);
+                    (0, aX.dZ)(e);
                 }, [e]),
                 R.useEffect(() => {
-                    null != i && i < t && (0, aK.dZ)(e);
+                    null != i && i < t && (0, aX.dZ)(e);
                 }, [t, i, e]),
                 R.useMemo(() => (null == n ? oj : n.filter((t) => (0, a3.Eg)(t, e))), [n, e])
             );
@@ -9886,12 +9886,12 @@ class d2 extends R.PureComponent {
         if (0 === i.length) {
             let e = o ? el.intl.string(el.t.tzkaD7) : el.intl.string(el.t.lNuYhh),
                 t = o ? el.intl.string(el.t.Ww5Tjy) : el.intl.string(el.t["RHhk+P"]);
-            return (0, p.jsxs)(aY.pp, {
+            return (0, p.jsxs)(aW.pp, {
                 theme: l,
                 className: dZ.Ie,
                 children: [
-                    (0, p.jsx)(aY.G8, { darkSrc: n(673586), lightSrc: n(470954), width: 272, height: 130 }),
-                    (0, p.jsx)(aY.SG, { note: e, style: { maxWidth: 300 }, children: t }),
+                    (0, p.jsx)(aW.G8, { darkSrc: n(673586), lightSrc: n(470954), width: 272, height: 130 }),
+                    (0, p.jsx)(aW.SG, { note: e, style: { maxWidth: 300 }, children: t }),
                 ],
             });
         }
@@ -12911,7 +12911,7 @@ async function uY(e) {
         [i] = (0, iE.ui)(e.id, [...t]),
         l = (0, iE.G4)(e.id, t, uB.A.editedOnboardingPrompts, iE.VU);
     if (ih.A.getEnabled(e.id) && ((!n && i.length < uH.Kd) || (n && l.length < uH.Kd))) {
-        if ((aW.A.show({ title: el.intl.string(el.t.iLdiqY), body: el.intl.string(el.t.JOT74c) }), n))
+        if ((aK.A.show({ title: el.intl.string(el.t.iLdiqY), body: el.intl.string(el.t.JOT74c) }), n))
             throw Error("Chattable channels with questions requirement not met");
         return;
     }
@@ -12930,7 +12930,7 @@ async function uY(e) {
                     }));
         } catch (n) {
             let { fieldName: e, error: t } = new nC.LG(n).getAnyErrorMessageAndField() ?? {};
-            (aW.A.show({ title: el.intl.string(el.t.iLdiqY), body: [e, t].filter(N.Vq).join(": ") }),
+            (aK.A.show({ title: el.intl.string(el.t.iLdiqY), body: [e, t].filter(N.Vq).join(": ") }),
                 eh.h.dispatch({ type: "GUILD_SETTINGS_DEFAULT_CHANNELS_SAVE_FAILED" }));
         }
     }
@@ -13686,7 +13686,7 @@ function m_(e) {
         className: k()(mC.we, mC.f, { [mC.JS]: 0 === i.options.length, [mC.h7]: s }),
         onClick: function () {
             i.options.length + 1 === uH.Bu
-                ? aW.A.show({
+                ? aK.A.show({
                       title: el.intl.string(el.t.TggC7k),
                       body: el.intl.formatToPlainString(el.t.kPQKai, { thresholdCount: uH.Bu }),
                       confirmText: el.intl.string(el.t.BddRzS),
@@ -14063,7 +14063,7 @@ function mD(e) {
                 n = e.slice(0, t).map((e) => ({ ...e.data, inOnboarding: !0 })),
                 i = e.slice(t + 1).map((e) => ({ ...e.data, inOnboarding: !1, required: !1 }));
             n.length > uH.D1
-                ? aW.A.show({
+                ? aK.A.show({
                       title: el.intl.string(el.t.Cxtq5x),
                       body: el.intl.formatToPlainString(el.t["pkbZ+U"], { numQuestions: uH.D1 }),
                   })
@@ -20224,17 +20224,17 @@ function Eg() {
                           !E && (0, p.jsx)(Eu, { guild: e, bans: r, sortedBans: S, ref: c }),
                           !h &&
                               E &&
-                              (0, p.jsxs)(aY.pp, {
+                              (0, p.jsxs)(aW.pp, {
                                   theme: o,
                                   className: Ed.p$,
                                   children: [
-                                      (0, p.jsx)(aY.G8, {
+                                      (0, p.jsx)(aW.G8, {
                                           darkSrc: n(29093),
                                           lightSrc: n(993507),
                                           width: 256,
                                           height: 212,
                                       }),
-                                      (0, p.jsx)(aY.SG, {
+                                      (0, p.jsx)(aW.SG, {
                                           note: el.intl.string(el.t.zfCsAw),
                                           style: { maxWidth: 300 },
                                           children: el.intl.string(el.t.ZEiY1D),
@@ -21553,11 +21553,11 @@ function jq(e) {
                 ],
             }),
             u
-                ? (0, p.jsxs)(aY.pp, {
+                ? (0, p.jsxs)(aW.pp, {
                       theme: a,
                       className: jH.Ie,
                       children: [
-                          (0, p.jsx)(aY.SG, {
+                          (0, p.jsx)(aW.SG, {
                               note: el.intl.string(el.t.ZhoSBI),
                               noteClassName: jH.BI,
                               children: el.intl.string(el.t.I6P1p7),

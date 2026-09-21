@@ -169,7 +169,7 @@ function Q(e) {
         }),
     });
 }
-var $ = i(236408),
+var $ = i(34011),
     ee = i(448766),
     et = i(770178);
 let ei = l.createContext({
@@ -246,7 +246,7 @@ function eo(e) {
                 : (0, n.jsx)(er, { interactive: !1, variant: s, color: r, value: t, maxLines: c, disableMarkdown: g });
     return (0, n.jsx)("div", {
         className: a()(es.kL, ea.ZZ, { [es.oE]: 1 === c, [es.CP]: u }),
-        children: (0, n.jsx)($.A, {
+        children: (0, n.jsx)($.w, {
             value: t,
             onCommit: m,
             autoComplete: "off",
@@ -863,7 +863,7 @@ function e3() {
         [i, n] = (0, e8.kn)(e && t ? [e1.M.USER_PROFILE_PERSONAL_WIDGET_COACHMARK] : []);
     return [i === e1.M.USER_PROFILE_PERSONAL_WIDGET_COACHMARK, n];
 }
-function e6(e) {
+function e4(e) {
     let { targetElementRef: t, isVisible: i, markAsDismissed: l } = e,
         { trackUserProfileEditAction: s } = (0, eQ.NJ)();
     return i
@@ -897,7 +897,7 @@ function e6(e) {
           })
         : null;
 }
-var e4 = i(410453);
+var e6 = i(410453);
 function e9(e) {
     let { buttonRef: t, isCoachmarkVisible: i, markCoachmarkAsDismissed: s } = e,
         { trackUserProfileEditAction: a } = (0, eQ.NJ)(),
@@ -947,10 +947,10 @@ function te(e) {
                 ));
         }, [s, c, u]);
     return (0, n.jsxs)("div", {
-        className: a()(e4.w, t),
+        className: a()(e6.w, t),
         children: [
             (0, n.jsx)(d.E, {
-                className: e4.D,
+                className: e6.D,
                 variant: m ? "text-sm/semibold" : "text-xs/semibold",
                 color: "text-subtle",
                 children: V.intl.string(V.t.OYlggR),
@@ -964,7 +964,7 @@ function te(e) {
                 onClick: x,
                 buttonRef: r,
             }),
-            (0, n.jsx)(e6, { targetElementRef: g ? o : r, isVisible: c, markAsDismissed: u }),
+            (0, n.jsx)(e4, { targetElementRef: g ? o : r, isVisible: c, markAsDismissed: u }),
         ],
     });
 }
@@ -1244,7 +1244,7 @@ function tL(e) {
         l.useEffect(() => (s(!1), () => s(!1)), [s]),
         (0, n.jsx)("div", {
             className: a()(es.kL, es.oE, tR.ZZ),
-            children: (0, n.jsx)($.A, {
+            children: (0, n.jsx)($.w, {
                 value: i,
                 onCommit: o,
                 onFocus: () => s(!0),
@@ -1496,7 +1496,7 @@ var t$ = i(769015),
     t5 = i(591179),
     t7 = i(485745),
     t3 = i(308766);
-function t6(e) {
+function t4(e) {
     let { gameId: t, userId: i, className: s } = e,
         { gameRecord: r } = (0, t2.A)(t),
         o = !(0, t5.X)("WidgetClipGameIcon"),
@@ -1538,7 +1538,7 @@ function t6(e) {
                   }),
     });
 }
-var t4 = i(558285),
+var t6 = i(558285),
     t9 = i(608857),
     ie = i(915725),
     it = i(409067),
@@ -1617,7 +1617,7 @@ function ia(e) {
         Q = l.useCallback(() => {
             J < 0 ||
                 (L({ action: "PRESS_PLAY_CLIP", widgetType: b.x.CLIPS_GALLERY }),
-                (0, t4.A)({ clips: Z, startingIndex: J }));
+                (0, t6.A)({ clips: Z, startingIndex: J }));
         }, [Z, J, L]),
         $ = l.useCallback(() => {
             let e = !h;
@@ -1779,7 +1779,7 @@ function ia(e) {
                                           onClick: Q,
                                       }),
                                   ("saved" === R.status || "pending" === R.status) &&
-                                      (0, n.jsx)(t6, { gameId: R.gameId, userId: o.id, className: ii.AT }),
+                                      (0, n.jsx)(t4, { gameId: R.gameId, userId: o.id, className: ii.AT }),
                                   P &&
                                       "uploading" === R.status &&
                                       (0, n.jsx)(tA, { widgetClipId: R.key, gameId: R.gameId, className: ii.MY }),
@@ -2489,9 +2489,9 @@ function i7(e) {
     return (0, n.jsx)(ik, { widgetType: t.type, children: (0, n.jsx)(i5, { widget: t, ...i }) });
 }
 var i3 = i(669253),
-    i6 = i(140355);
+    i4 = i(140355);
 i(839272);
-let i4 = (0, i(945810).mj)({
+let i6 = (0, i(945810).mj)({
     name: "2026-09-profile-widget-empty-state-suggestions",
     kind: "user",
     defaultConfig: { enabled: !1, maxWidgetOptions: 0 },
@@ -2653,7 +2653,7 @@ function nr(e) {
         m = u || (0, p.t0)(),
         { enabled: x, maxWidgetOptions: f } = (function (e) {
             let { location: t } = e;
-            return i4.useConfig({ location: t });
+            return i6.useConfig({ location: t });
         })({ location: "UserProfileModalV2WidgetsEmptyState" });
     return (
         l.useEffect(() => {
@@ -2688,7 +2688,7 @@ function nr(e) {
                                       trackUserProfileEditAction: s,
                                   })
                                 : (0, n.jsx)(ns, { personalWidgetOptionRef: o, trackUserProfileEditAction: s }),
-                            (0, n.jsx)(e6, { targetElementRef: o, isVisible: u, markAsDismissed: g }),
+                            (0, n.jsx)(e4, { targetElementRef: o, isVisible: u, markAsDismissed: g }),
                         ],
                     }),
             ],
@@ -2789,7 +2789,7 @@ function ng(e) {
         s = l.useRef(null);
     (0, R.i)({ containerRef: s });
     let r = (0, i3.k)(t.id);
-    return (0, n.jsxs)(i6.K, {
+    return (0, n.jsxs)(i4.K, {
         "data-scroller": !0,
         scrollerRef: s,
         className: a()(no.XG, { [no.az]: r }),
