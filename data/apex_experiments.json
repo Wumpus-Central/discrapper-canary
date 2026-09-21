@@ -5585,6 +5585,28 @@
   },
   {
     "kind": "user",
+    "name": "2026-09-soundboard-favorites",
+    "defaultConfig": {
+      "sortOrder": "creation-date",
+      "allowReordering": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "sortOrder": "favorite-date",
+        "allowReordering": false
+      },
+      "2": {
+        "sortOrder": "favorite-date",
+        "allowReordering": true
+      }
+    }
+  },
+  {
+    "kind": "user",
     "name": "2026-09-soundboard-quick-action",
     "defaultConfig": {
       "enabled": false,

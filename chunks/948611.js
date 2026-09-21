@@ -1,5 +1,6 @@
 e.exports = {
     H: "soundButtonWrapper__9be63",
+    cB: "dragging__9be63",
     aG: "soundButton__9be63",
     in: "focused__9be63",
     CS: "animated__9be63",

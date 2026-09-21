@@ -1,4 +1,4 @@
-(n.d(t, { Ay: () => h, BE: () => E, p0: () => A }), n(321073));
+(n.d(t, { Ay: () => I, BE: () => A, p0: () => h }), n(321073));
 var i,
     r = n(582128),
     a = n(17928),
@@ -6,27 +6,28 @@ var i,
     l = n(287809),
     o = n(158045),
     d = n(209932),
-    c = n(805143),
-    u = n(194567),
-    _ = n(980504);
-let E = 6;
-var A =
+    c = n(699840),
+    u = n(805143),
+    _ = n(194567),
+    E = n(980504);
+let A = 6;
+var h =
     (((i = {}).FAVORITE = "favorite"),
     (i.FREQUENTLY_USED = "frequently_used"),
     (i.GUILD = "guild"),
     (i.DEFAULT = "default"),
     i);
-function h(e) {
+function I(e) {
     let { channel: t, currentGuildId: n } = e,
         i = (0, a.bG)([l.default], () => l.default.getCurrentUser()),
-        A = o.Ay.canUseSoundboardEverywhere(i),
-        [h, I, f, p] = (0, a.yK)([d.A], () => [
+        h = o.Ay.canUseSoundboardEverywhere(i),
+        [I, f, p, T] = (0, a.yK)([d.A], () => [
             d.A.isFetching(),
             d.A.getSounds(),
             d.A.getFavorites(),
             d.A.getFrequentlyUsedSoundIds(),
         ]),
-        { unlockedFavoritesAndFrequentlyUsedSounds: T, lockedSounds: g } = (function (e) {
+        { unlockedFavoritesAndFrequentlyUsedSounds: g, lockedSounds: m } = (function (e) {
             let {
                     channel: t,
                     canUseCrossGuildSounds: n,
@@ -35,8 +36,9 @@ function h(e) {
                     allFrequentlyUsedSoundIds: l,
                 } = e,
                 o = r.useMemo(() => l.filter((e) => !a.has(e)).slice(0, 3), [l, a]),
-                d = (0, c.Y)(t, !1),
-                { unlockedFavoritesAndFrequentlyUsedSounds: _, lockedSounds: A } = r.useMemo(() => {
+                d = (0, u.Y)(t, !1),
+                { sortOrder: E } = c.q.useConfig({ location: "useFavoriteAndFrequentlyUsedSounds" }),
+                { unlockedFavoritesAndFrequentlyUsedSounds: h, lockedSounds: I } = r.useMemo(() => {
                     let e = [...d, "0"],
                         r = new Set([...a, ...o]),
                         l = (function () {
@@ -56,48 +58,49 @@ function h(e) {
                         }
                         return t;
                     }
-                    function _(e) {
+                    function u(e) {
                         return e.guildId !== t?.guild_id && "0" !== e.guildId && !n;
                     }
-                    let A = (0, u.U)(c(a), !1),
-                        h = c(o),
-                        I = [],
-                        f = [];
-                    function p() {
-                        let e = n ? E : 5;
-                        return I.length >= e && (n || f.length > 0);
+                    let h = c(a),
+                        I = "favorite-date" === E ? (0, _.XP)(h, !1) : (0, _.U9)(h, !1),
+                        f = c(o),
+                        p = [],
+                        T = [];
+                    function g() {
+                        let e = n ? A : 5;
+                        return p.length >= e && (n || T.length > 0);
                     }
-                    for (let e of A) {
+                    for (let e of I) {
                         let t = { ...e, type: "favorite", analyticsLocationSection: s.A.SOUNDBOARD_FAVORITES_SECTION };
-                        if ((_(e) ? f.push(t) : I.push(t), p())) break;
+                        if ((u(e) ? T.push(t) : p.push(t), g())) break;
                     }
-                    if (!p())
-                        for (let e of h) {
+                    if (!g())
+                        for (let e of f) {
                             let t = {
                                 ...e,
                                 type: "frequently_used",
                                 analyticsLocationSection: s.A.SOUNDBOARD_FREQUENTLY_USED_SECTION,
                             };
-                            if ((_(e) ? f.push(t) : I.push(t), p())) break;
+                            if ((u(e) ? T.push(t) : p.push(t), g())) break;
                         }
-                    return { unlockedFavoritesAndFrequentlyUsedSounds: I, lockedSounds: f };
-                }, [d, i, a, o, t, n]);
-            return { unlockedFavoritesAndFrequentlyUsedSounds: _, lockedSounds: A };
-        })({ channel: t, canUseCrossGuildSounds: A, allSounds: I, favoriteSoundsIds: f, allFrequentlyUsedSoundIds: p });
+                    return { unlockedFavoritesAndFrequentlyUsedSounds: p, lockedSounds: T };
+                }, [d, i, a, o, t, n, E]);
+            return { unlockedFavoritesAndFrequentlyUsedSounds: h, lockedSounds: I };
+        })({ channel: t, canUseCrossGuildSounds: h, allSounds: f, favoriteSoundsIds: p, allFrequentlyUsedSoundIds: T });
     return {
         sounds: (function (e) {
             let { allSounds: t, currentGuildId: n, unlockedFavoritesAndFrequentlyUsedSounds: i, lockedSounds: a } = e;
             return r.useMemo(() => {
                 let e = a.length > 0 ? a[0] : null,
                     r = null != e,
-                    l = r ? 5 : E,
+                    l = r ? 5 : A,
                     o = [...i];
                 if (o.length < l) {
-                    let e = null != n ? t.get(n) : _.pD;
-                    for (let t of (0, u.U)(
+                    let e = null != n ? t.get(n) : E.pD;
+                    for (let t of (0, _.U9)(
                         null != e && e.length > 0
                             ? e?.filter((e) => e.available && !o.some((t) => t.soundId === e.soundId))
-                            : _.pD,
+                            : E.pD,
                         !1,
                     )) {
                         if (o.length >= l) break;
@@ -106,8 +109,8 @@ function h(e) {
                     }
                 }
                 if (o.length < l) {
-                    let e = t.get("0") ?? _.pD;
-                    for (let t of (0, u.U)(
+                    let e = t.get("0") ?? E.pD;
+                    for (let t of (0, _.U9)(
                         e.filter((e) => !o.some((t) => t.soundId === e.soundId)),
                         !1,
                     )) {
@@ -123,8 +126,8 @@ function h(e) {
                 let d = o.slice(0, l);
                 return r ? [...d, e] : d;
             }, [i, a, t, n]);
-        })({ allSounds: I, currentGuildId: n, unlockedFavoritesAndFrequentlyUsedSounds: T, lockedSounds: g }),
-        hasLockedSound: g.length > 0,
-        isFetching: h,
+        })({ allSounds: f, currentGuildId: n, unlockedFavoritesAndFrequentlyUsedSounds: g, lockedSounds: m }),
+        hasLockedSound: m.length > 0,
+        isFetching: I,
     };
 }
