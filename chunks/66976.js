@@ -291,14 +291,14 @@ var ex = n(875317),
     e3 = n(960628),
     e8 = n(206248),
     e7 = n(498470),
-    e5 = n(807098),
-    e2 = n(637706),
+    e2 = n(807098),
+    e5 = n(637706),
     e9 = n(788883),
     e4 = n(7667);
 function te(e) {
     let { guildId: t, componentId: n, promotionId: i, coachmark: s, targetElementRef: a, markAsDismissed: o } = e,
         { analyticsLocations: d } = (0, N.Ay)(),
-        c = (0, e5.T)(s.asset),
+        c = (0, e2.T)(s.asset),
         { terms: A } = (0, e4.A)(i),
         E = r.useCallback(() => {
             o(eE.i.DISMISS);
@@ -314,7 +314,7 @@ function te(e) {
             })(),
                 o(eE.i.TAKE_ACTION));
         }, [s.button, t, d, o]),
-        m = (0, e2.C)(s.helpArticle, ""),
+        m = (0, e5.C)(s.helpArticle, ""),
         g = [s.body, A].filter((e) => "" !== e).join(" "),
         { icon: I } = (0, e7.x)({ buttonAction: s.button?.buttonAction }),
         C = s.button?.copy ?? "";
@@ -825,8 +825,8 @@ let t6 = d.Ay.connectStores([k.A], (e) => {
 var t3 = n(503698),
     t8 = n.n(t3),
     t7 = n(933832),
-    t5 = n(782603),
-    t2 = n(81466),
+    t2 = n(782603),
+    t5 = n(81466),
     t9 = n(116085),
     t4 = n(597601),
     ne = n(451394),
@@ -949,7 +949,7 @@ function nT(e) {
                     em.default.track(H.HAw.CHANNEL_NOTICE_CTA_CLICKED, { guild_id: t.guild_id, notice_type: n }));
             },
             text: tl.intl.string(tl.t.DlcqlU),
-            icon: s ? t7.CheckmarkLargeIcon : t5.BellIcon,
+            icon: s ? t7.CheckmarkLargeIcon : t2.BellIcon,
             variant: s ? "secondary" : "primary",
             size: "sm",
             fullWidth: !0,
@@ -1007,7 +1007,7 @@ function nM(e) {
                 (0, l.jsxs)("div", {
                     className: t8()(nN.fI, nN.pF),
                     children: [
-                        (0, l.jsx)(t2.CalendarIcon, {
+                        (0, l.jsx)(t5.CalendarIcon, {
                             size: "custom",
                             color: "currentColor",
                             className: nN.uE,
@@ -1491,8 +1491,8 @@ let n7 = function (e) {
         imageMarginX: 50,
     });
 };
-var n5 = n(174768);
-class n2 extends d.Ay.Store {
+var n2 = n(174768);
+class n5 extends d.Ay.Store {
     static displayName = "GuildBoostingNoticeStore";
     initialize() {
         (this.waitFor(X.A), this.syncWith([X.A], H.tEg));
@@ -1501,7 +1501,7 @@ class n2 extends d.Ay.Store {
         return !e.features.has(H.GuildFeatures.BANNER) && Date.now() - t >= H.D2K;
     }
 }
-let n9 = new n2(I.h);
+let n9 = new n5(I.h);
 class n4 extends d.Ay.Store {
     static displayName = "GuildBoostingNoticeStore";
     initialize() {
@@ -1536,7 +1536,7 @@ let il = new is(I.h),
         { type: H.n5X.GUILD_BANNER, store: n9, dismissibleContentType: u.M.CHANNEL_NOTICE_GUILD_BANNER },
         { type: H.n5X.INVITE, store: il, dismissibleContentType: u.M.CHANNEL_NOTICE_INVITE },
         { type: H.n5X.HUB_LINK, store: it.A, dismissibleContentType: u.M.CHANNEL_NOTICE_HUBLINK },
-        { type: H.n5X.QUICKSWITCHER, store: n5.A, dismissibleContentType: u.M.CHANNEL_NOTICE_QUICKSWITCHER },
+        { type: H.n5X.QUICKSWITCHER, store: n2.A, dismissibleContentType: u.M.CHANNEL_NOTICE_QUICKSWITCHER },
         { type: H.n5X.LINKED_ROLES_ADMIN, dismissibleContentType: u.M.LINKED_ROLE_ADMIN_GUILD },
         { type: H.n5X.GAME_CLAIM, dismissibleContentType: u.M.GAME_CLAIM_COACHMARK },
     ],
@@ -2255,6 +2255,7 @@ class iS extends r.PureComponent {
                     n.e("514878"),
                     n.e("676376"),
                     n.e("426508"),
+                    n.e("8422"),
                     n.e("842935"),
                     n.e("73091"),
                     n.e("269178"),
@@ -2278,17 +2279,19 @@ class iS extends r.PureComponent {
                     n.e("712390"),
                     n.e("71167"),
                     n.e("113446"),
+                    n.e("37786"),
                     n.e("306410"),
                     n.e("161309"),
                     n.e("694529"),
                     n.e("995210"),
-                    n.e("360677"),
+                    n.e("482090"),
                     n.e("317699"),
                     n.e("257032"),
                     n.e("845322"),
                     n.e("94832"),
                     n.e("426386"),
                     n.e("865338"),
+                    n.e("842987"),
                     n.e("588860"),
                 ]).then(n.bind(n, 860417));
                 return (n) => (0, l.jsx)(e, { ...n, guild: t });
@@ -2696,9 +2699,9 @@ function ip(e) {
         }, []),
     });
     let e7 = (0, d.bG)([eJ.A], () => eJ.A.getChannelId()),
-        e5 = (0, d.bG)([e$.A], () => e$.A.desyncedVoiceStatesCount),
-        e2 = (0, ej.A)(f),
-        e9 = (0, es.ai)(f) ? null : e2,
+        e2 = (0, d.bG)([e$.A], () => e$.A.desyncedVoiceStatesCount),
+        e5 = (0, ej.A)(f),
+        e9 = (0, es.ai)(f) ? null : e5,
         e4 =
             (function (e) {
                 let t = (0, ej.A)(e),
@@ -2797,7 +2800,7 @@ function ip(e) {
         selectedVoiceChannelId: j,
         voiceStates: y,
         rtcConnectedChannelId: e7,
-        rtcDesyncedVoiceStatesCount: e5,
+        rtcDesyncedVoiceStatesCount: e2,
         isUnavailable: w,
         user: k,
         hasChannelNotice: null != et || Z,
