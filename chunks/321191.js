@@ -81,6 +81,8 @@ function x(e) {
                                   localClipId: e.local_clip_id ?? void 0,
                                   videoURL: e.video_url,
                                   thumbnailURL: e.thumbnail_url,
+                                  spritesheetImageURL: e.spritesheet_image_url,
+                                  spritesheetVttURL: e.spritesheet_vtt_url,
                               }
                             : null,
                     )

@@ -1,3 +1,22 @@
+.container__82fb2 {
+    cursor: pointer
+}
+
+.container__82fb2:hover {
+    background: var(--user-profile-overlay-background-hover)
+}
+
+.applicationIcon__82fb2,
+.applicationIconPlaceholder__82fb2 {
+    border-radius: 2px
+}
+
+.applicationIconPlaceholder__82fb2 {
+    background-color: var(--background-mod-subtle);
+    height: 16px;
+    width: 16px
+}
+
 .tile_c41dc3 {
     align-items: center;
     container-type: size;
@@ -75,4 +94,4 @@
     padding-top: var(--space-12)
 }
 
-/*# sourceMappingURL=12822.871f714ec7b1dcc2.css.map*/
+/*# sourceMappingURL=857783.b23e57c330092ee4.css.map*/

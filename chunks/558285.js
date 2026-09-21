@@ -1,40 +1,41 @@
-n.d(a, { A: () => d });
-var t = n(256905),
-    i = n(625494),
-    l = n(652215);
+t.d(a, { A: () => d });
+var i = t(256905),
+    n = t(625494),
+    l = t(652215);
 let s = { width: 1920, height: 1080 };
 async function r(e) {
     if (null == e) return s;
     try {
-        let { width: a, height: n } = await new Promise((a, n) => {
-            let t = new Image();
-            ((t.onload = () => a({ width: t.naturalWidth, height: t.naturalHeight })),
-                (t.onerror = () => n(Error("measureImage: the image failed to load"))),
-                (t.src = e));
+        let { width: a, height: t } = await new Promise((a, t) => {
+            let i = new Image();
+            ((i.onload = () => a({ width: i.naturalWidth, height: i.naturalHeight })),
+                (i.onerror = () => t(Error("measureImage: the image failed to load"))),
+                (i.src = e));
         });
-        return a > 0 && n > 0 ? { width: a, height: n } : s;
+        return a > 0 && t > 0 ? { width: a, height: t } : s;
     } catch {
         return s;
     }
 }
 async function c(e, a) {
-    let { videoURL: n, thumbnailURL: t, title: s } = e,
-        { width: c, height: d } = await r(t);
+    let { key: t, videoURL: i, thumbnailURL: s, title: c, spritesheetImageURL: d, spritesheetVttURL: o } = e,
+        { width: u, height: m } = await r(s);
     return {
         type: "VIDEO",
-        url: n,
-        proxyUrl: n,
-        poster: t,
-        width: c,
-        height: d,
-        alt: s,
-        onEnded: a ? () => i._.dispatch(l.jej.MODAL_CAROUSEL_NEXT) : void 0,
+        url: i,
+        proxyUrl: i,
+        poster: s,
+        width: u,
+        height: m,
+        alt: c,
+        clip: { id: t, url: i, width: u, height: m, title: c, spritesheet_image_url: d, spritesheet_vtt_url: o },
+        onEnded: a ? () => n._.dispatch(l.jej.MODAL_CAROUSEL_NEXT) : void 0,
     };
 }
 async function d(e) {
-    let { clips: a, startingIndex: n } = e;
+    let { clips: a, startingIndex: t } = e;
     if (0 === a.length) return;
-    let i = a.length > 1,
-        l = await Promise.all(a.map((e) => c(e, i)));
-    (0, t.R)({ location: "user_profile_widget_clip", items: l, startingIndex: n, shouldHideMediaOptions: !0 });
+    let n = a.length > 1,
+        l = await Promise.all(a.map((e) => c(e, n)));
+    (0, i.R)({ location: "user_profile_widget_clip", items: l, startingIndex: t, shouldHideMediaOptions: !0 });
 }

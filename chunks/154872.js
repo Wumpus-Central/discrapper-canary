@@ -102,29 +102,31 @@ let N = r.memo(function (e) {
     var t, n, r, s, x;
     let f,
         { media: y, obscured: A = !1, maxWidth: E, maxHeight: C, onContextMenu: N } = e,
-        { width: S, height: w, url: O, proxyUrl: _, alt: V, type: T, maxWidth: D, maxHeight: b, ...L } = y,
-        { zoomed: P } = (0, p.Q)(),
-        U = (function (e) {
-            if (e?.identifier?.type !== "attachment" || null == e.message) return null;
-            let t = e.identifier.attachmentId,
-                n = e.message.attachments.find((e) => e.id === t);
-            return null != n && (0, l.Lt)(n.flags ?? 0, j.sbO.IS_CLIP) ? n : null;
-        })(y.sourceMetadata),
-        R =
-            ((t = P),
+        { width: S, height: w, url: O, proxyUrl: _, alt: V, type: T, maxWidth: D, maxHeight: b, clip: L, ...P } = y,
+        { zoomed: U } = (0, p.Q)(),
+        R = (function (e) {
+            let { clip: t, sourceMetadata: n } = e;
+            if (null != t) return t;
+            if (n?.identifier?.type !== "attachment" || null == n.message) return null;
+            let i = n.identifier.attachmentId,
+                r = n.message.attachments.find((e) => e.id === i);
+            return null != r && (0, l.Lt)(r.flags ?? 0, j.sbO.IS_CLIP) ? r : null;
+        })(y),
+        k =
+            ((t = U),
             (n = O),
             (r = _),
             (s = y.contentType),
             (x = y.originalContentType),
             t && g.A.isDiscordAssetUrl(n, s, x) ? (0, d.XW)(n, s, x) : (0, c.E)({ proxyURL: r, url: n })),
-        k = null != S && 0 !== S && null != w && 0 !== w;
-    if ("VIDEO" === T && k && null != _) {
+        F = null != S && 0 !== S && null != w && 0 !== w;
+    if ("VIDEO" === T && F && null != _) {
         let e = y.poster ?? M(_);
         if (null == e) return null;
-        if (null != U)
+        if (null != R)
             return (0, i.jsx)(a.A, {
-                attachment: U,
-                src: R,
+                attachment: R,
+                src: k,
                 posterUrl: e,
                 channelId: y.sourceMetadata?.message?.channel_id,
                 maxWidth: E,
@@ -136,13 +138,14 @@ let N = r.memo(function (e) {
                 volume: (0, m.GD)(),
                 onContextMenu: N,
                 onPlay: y.onPlay ?? void 0,
+                onEnded: y.onEnded ?? void 0,
                 onVolumeChange: m.oc,
                 onMutedChange: m.y5,
             });
         let t = y.renderLinkComponent ?? h.bU;
         return (0, i.jsx)(u.A, {
-            ...L,
-            src: R,
+            ...P,
+            src: k,
             width: S,
             height: w,
             maxWidth: E,
@@ -163,10 +166,10 @@ let N = r.memo(function (e) {
     }
     return (
         "IMAGE" === T &&
-            (f = k
+            (f = F
                 ? (0, i.jsx)(o.Ay, {
-                      ...L,
-                      src: R,
+                      ...P,
+                      src: k,
                       width: S,
                       height: w,
                       maxWidth: E,
@@ -180,7 +183,7 @@ let N = r.memo(function (e) {
                       onContextMenu: N,
                   })
                 : (0, i.jsx)("img", {
-                      src: R,
+                      src: k,
                       alt: V,
                       onContextMenu: N,
                       className: v.xx,

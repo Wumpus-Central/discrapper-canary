@@ -1,10 +1,10 @@
-n.d(a, { A: () => l, K: () => i });
-var t = n(582128);
-function i(e) {
+t.d(a, { A: () => l, K: () => n });
+var i = t(582128);
+function n(e) {
     return "saved" === e.status && null != e.videoURL;
 }
 function l(e) {
-    return t.useMemo(
+    return i.useMemo(
         () =>
             e.clips.map((e) => {
                 switch (e.status) {
@@ -15,6 +15,8 @@ function l(e) {
                             gameId: e.gameId,
                             videoURL: e.videoURL,
                             thumbnailURL: e.thumbnailURL,
+                            spritesheetImageURL: e.spritesheetImageURL,
+                            spritesheetVttURL: e.spritesheetVttURL,
                             title: e.title,
                             tags: e.tags,
                         };
