@@ -13243,8 +13243,8 @@ let mt = R.memo(function () {
                                           n.e("242865"),
                                           n.e("272239"),
                                           n.e("248804"),
-                                          n.e("25173"),
-                                      ]).then(n.bind(n, 468916));
+                                          n.e("874366"),
+                                      ]).then(n.bind(n, 903181));
                                       return (t) => (0, p.jsx)(e, { ...t, channel: c, guild: m });
                                   });
                         },
