@@ -1035,10 +1035,10 @@ let e1 = ["snail", "goat", "frog", "bunny", "cat", "caterpillar", "butterfly", "
 function e6(e) {
     return { ...e7[e], name: C.intl.string(e2[e]()) };
 }
-function e4(e) {
+function e5(e) {
     return e1.includes(e) ? e6(e) : void 0;
 }
-function e5(e) {
+function e4(e) {
     let t = new Map();
     for (let [l, n] of (function (e) {
         let t = 0,
@@ -1362,10 +1362,10 @@ function to(e) {
 var tu = l(229775),
     td = l(165648);
 function tc(e) {
-    let t = e5(e.map((e) => e.taskId));
+    let t = e4(e.map((e) => e.taskId));
     return e.flatMap((e) => {
         if ("running" !== e.task.status) return [];
-        let l = null != e.task.helperMark ? e4(e.task.helperMark) : void 0,
+        let l = null != e.task.helperMark ? e5(e.task.helperMark) : void 0,
             n = l ?? t.get(e.taskId);
         return null == n
             ? []
@@ -1423,7 +1423,7 @@ function tm(e) {
         b = null != v && v.length > 0;
     if (0 === x.steps.length && 0 === x.tasks.length && !b) return null;
     let j = x.tasks,
-        y = e5(j.map((e) => e.taskId)),
+        y = e4(j.map((e) => e.taskId)),
         k = !f && (r || j.some((e) => "running" === e.task.status)),
         w = tc(j);
     return (0, n.jsx)(e0.l.Provider, {
@@ -1443,7 +1443,7 @@ function tm(e) {
                     tier: g.turn?.tier,
                 }),
                 j.map((e, l) => {
-                    let a = null != e.task.helperMark ? e4(e.task.helperMark) : void 0,
+                    let a = null != e.task.helperMark ? e5(e.task.helperMark) : void 0,
                         r = a ?? y.get(e.taskId);
                     return null == r
                         ? null
@@ -2256,8 +2256,8 @@ var t0 = l(320095),
     t2 = l(521981),
     t7 = l(763754),
     t6 = l(491182),
-    t4 = l(438729),
-    t5 = l(622868),
+    t5 = l(438729),
+    t4 = l(622868),
     t3 = l(448368),
     t9 = l(837528),
     t8 = l(601280),
@@ -2426,7 +2426,7 @@ function lk(e, t, l) {
     return "" === t
         ? null
         : null != l
-          ? (0, n.jsx)(t4.Ay, { className: l, message: e, content: r, compact: !1 })
+          ? (0, n.jsx)(t5.Ay, { className: l, message: e, content: r, compact: !1 })
           : (0, le.A)(i, r);
 }
 function lw(e) {
@@ -2508,7 +2508,7 @@ function lN(e) {
 function lA(e) {
     let { message: t, author: l } = e,
         a = lw(t);
-    return (0, n.jsx)(t5.Ay, {
+    return (0, n.jsx)(t4.Ay, {
         message: t,
         channel: lv,
         author: l,
@@ -3372,7 +3372,7 @@ function l6(e) {
         ],
     });
 }
-function l4(e) {
+function l5(e) {
     let { question: t, draft: l, direction: a, disabled: r } = e,
         s = "" === l.trim() ? null : l;
     return (0, n.jsxs)("div", {
@@ -3402,7 +3402,7 @@ function l4(e) {
         ],
     });
 }
-function l5(e) {
+function l4(e) {
     let { clarification: t, onSubmit: l, onDismiss: r } = e,
         [o, u] = a.useState({}),
         [d, c] = a.useState({}),
@@ -3666,7 +3666,7 @@ function l5(e) {
                                 null == x
                                     ? null
                                     : (0, n.jsx)(
-                                          l4,
+                                          l5,
                                           { question: x.question, draft: x.draft, direction: x.direction, disabled: M },
                                           x.moves,
                                       ),
@@ -3850,7 +3850,7 @@ var nt = l(366010),
     nr = l(291749),
     ni = l(590202),
     ns = l(792620),
-    no = l(130490),
+    no = l(201805),
     nu = l(617986),
     nd = l(363195),
     nc = l(971276),
@@ -4211,7 +4211,7 @@ function nk(e) {
                         : (0, n.jsx)("div", {
                               className: nj.B5,
                               children: (0, n.jsx)(
-                                  l5,
+                                  l4,
                                   { clarification: B, onSubmit: $ ? T : void 0, onDismiss: G },
                                   B.id,
                               ),
@@ -4520,7 +4520,7 @@ function n6(e) {
               p999: nK(e.memory_p999_bytes ?? e.memory_p50_bytes ?? 0),
           });
 }
-let n4 = {
+let n5 = {
     db: () => S.default.r6cciE,
     db_preview: () => S.default.JmIyL8,
     runtime: () => S.default.bzNyv8,
@@ -4528,14 +4528,14 @@ let n4 = {
     bot: () => S.default.jdpw3A,
     bot_preview: () => S.default["/g6wUz"],
 };
-var n5 = l(69985);
+var n4 = l(69985);
 function n3(e) {
     let { generatedAt: t, fetchState: l, onRefresh: a } = e;
     return (0, n.jsxs)("div", {
-        className: n5.KE,
+        className: n4.KE,
         children: [
             (0, n.jsx)("div", {
-                className: n5.IQ,
+                className: n4.IQ,
                 children:
                     "loading" === l
                         ? (0, n.jsx)(m.y, { type: m.t.PULSING_ELLIPSIS })
@@ -4561,10 +4561,10 @@ function n3(e) {
 function n9(e) {
     let { title: t, children: l } = e;
     return (0, n.jsxs)("section", {
-        className: n5.uW,
+        className: n4.uW,
         "aria-label": t,
         children: [
-            (0, n.jsx)(v.E, { variant: "text-xs/semibold", color: "text-muted", className: n5.Gf, children: t }),
+            (0, n.jsx)(v.E, { variant: "text-xs/semibold", color: "text-muted", className: n4.Gf, children: t }),
             l,
         ],
     });
@@ -4572,10 +4572,10 @@ function n9(e) {
 function n8(e) {
     let { label: t, value: l, hint: a, critical: r = !1 } = e;
     return (0, n.jsxs)("div", {
-        className: n5.N8,
+        className: n4.N8,
         children: [
             (0, n.jsxs)("div", {
-                className: n5.x7,
+                className: n4.x7,
                 children: [
                     (0, n.jsx)(v.E, { variant: "text-sm/normal", color: "text-muted", children: t }),
                     (0, n.jsx)(v.E, {
@@ -4594,10 +4594,10 @@ function ae(e) {
         i = a > 0 ? Math.min(1, Math.max(0, l / a)) : 0,
         s = i >= 0.9;
     return (0, n.jsxs)("div", {
-        className: n5.N8,
+        className: n4.N8,
         children: [
             (0, n.jsxs)("div", {
-                className: n5.x7,
+                className: n4.x7,
                 children: [
                     (0, n.jsx)(v.E, { variant: "text-sm/normal", color: "text-muted", children: t }),
                     (0, n.jsx)(v.E, {
@@ -4608,7 +4608,7 @@ function ae(e) {
                 ],
             }),
             (0, n.jsx)("div", {
-                className: n5.xA,
+                className: n4.xA,
                 role: "meter",
                 "aria-label": t,
                 "aria-valuemin": 0,
@@ -4616,7 +4616,7 @@ function ae(e) {
                 "aria-valuenow": Math.min(l, a),
                 "aria-valuetext": `${r(l)} of ${r(a)}`,
                 children: (0, n.jsx)("div", {
-                    className: s ? n5.aV : n5.jE,
+                    className: s ? n4.aV : n4.jE,
                     "data-testid": "debug-meter-fill",
                     style: { "--custom-vibegrations-debug-meter-fraction": String(i) },
                 }),
@@ -4661,7 +4661,7 @@ function al(e) {
             let l;
             return {
                 object: e,
-                label: null != (l = "agent" !== (t = e.role) ? n4[t] : null) ? C.intl.string(l()) : null,
+                label: null != (l = "agent" !== (t = e.role) ? n5[t] : null) ? C.intl.string(l()) : null,
             };
         })
         .filter((e) => null != e.label);
@@ -6261,7 +6261,7 @@ function a7(e) {
     });
 }
 let a6 = { model: aB.WI, subagent: aB.uM, context: aB.eH, tool: aB.pw, delegated: aB.C8 };
-function a4(e) {
+function a5(e) {
     let { entry: t, selected: l, tabbable: a, onSelect: r, onKeyDown: i, nested: s } = e,
         o = a$(t),
         u = "model" === t.kind ? t.model : t.tool,
@@ -6327,7 +6327,7 @@ function a4(e) {
         ],
     });
 }
-function a5(e) {
+function a4(e) {
     var t;
     let { projectId: l, query: r } = e,
         i = (0, D.yK)([nH.Ay], () => nH.Ay.getTrace(l), [l]),
@@ -6525,7 +6525,7 @@ function a5(e) {
                                                                 className: aB.M5,
                                                                 children: e.entries.map((e) =>
                                                                     (0, n.jsx)(
-                                                                        a4,
+                                                                        a5,
                                                                         {
                                                                             entry: e,
                                                                             selected: e.id === o,
@@ -6742,7 +6742,7 @@ function rt(e) {
                                           className: re.XH,
                                           children: (0, n.jsx)(a8, { projectId: t, query: o, onQueryChange: d }),
                                       }),
-                                      (0, n.jsx)(a5, { projectId: t, query: o }),
+                                      (0, n.jsx)(a4, { projectId: t, query: o }),
                                   ],
                               })
                             : (0, n.jsx)(as, { projectId: t, status: f, fetchState: h, onRefresh: g, traceVisible: m }),
