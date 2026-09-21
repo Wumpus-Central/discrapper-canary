@@ -10,32 +10,32 @@ var i,
         i),
     o = n(375708);
 n(321073);
-var d = n(627363),
-    p = n(17928),
-    c = n(927813),
-    A = n(403362),
-    E = n(587895),
-    g = n(652215);
-let h = (0, p.UT)(E.A, {
-    getQueryId: g.fic.GUILD_EMBEDDED_APPLICATIONS,
-    failureStaleAfter: c.A.Seconds.MINUTE,
+var d = n(991690),
+    p = n(627363),
+    c = n(17928),
+    A = n(927813),
+    E = n(403362),
+    g = n(587895),
+    h = n(652215);
+let T = (0, c.UT)(g.A, {
+    getQueryId: h.fic.GUILD_EMBEDDED_APPLICATIONS,
+    failureStaleAfter: A.A.Seconds.MINUTE,
     get: (t, e) => {
-        let n = E.A.getGuildEmbeddedApplications(e ?? void 0, t);
+        let n = g.A.getGuildEmbeddedApplications(e ?? void 0, t);
         return null == n
             ? null
             : n
                   .map((t) => {
                       let { applicationId: e, status: n } = t,
-                          i = E.A.getApplication(e);
+                          i = g.A.getApplication(e);
                       return null != i ? { application: i, status: n } : null;
                   })
-                  .filter(A.Vq);
+                  .filter(E.Vq);
     },
     load: async (t, e, n) => {
-        null != e && (await d.Ay.getEmbeddedApplicationsForGuild(e, t, n));
+        null != e && (await p.Ay.getEmbeddedApplicationsForGuild(e, t, n));
     },
 });
-var T = n(165610);
 function f(t, e) {
     return t.status.supported !== e.status.supported
         ? t.status.supported
@@ -44,15 +44,15 @@ function f(t, e) {
         : t.application.name.localeCompare(e.application.name);
 }
 function m(t) {
-    let { guildId: e, channelId: n, selectedApplicationId: i, onChange: p, disabled: c, helperText: A } = t,
+    let { guildId: e, channelId: n, selectedApplicationId: i, onChange: c, disabled: A, helperText: E } = t,
         {
-            options: E,
-            isLoading: g,
+            options: g,
+            isLoading: h,
             hasNoApplications: m,
         } = (function (t, e, n) {
             let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
                 { data: l, isLoading: a } = (function (t, e, n) {
-                    let i = h(t, e, n),
+                    let i = T(t, e, n),
                         { data: l, error: a, isLoading: s, refetch: u } = i,
                         o = r.useRef(!1);
                     return (
@@ -61,8 +61,8 @@ function m(t) {
                         }, [l, s, a, u]),
                         i
                     );
-                })(T.U4.APP_CHANNEL, i ? void 0 : t, e),
-                { data: s, isLoading: u } = (0, d.YY)(n, !0);
+                })(d.U.APP_CHANNEL, i ? void 0 : t, e),
+                { data: s, isLoading: u } = (0, p.YY)(n, !0);
             return {
                 options: r.useMemo(() => {
                     let t = [...(l ?? [])];
@@ -80,10 +80,10 @@ function m(t) {
                 isLoading: a || u,
                 hasNoApplications: null != l && 0 === l.length,
             };
-        })(e, n, i, c),
+        })(e, n, i, A),
         R = r.useMemo(
             () =>
-                E.map((t) => {
+                g.map((t) => {
                     let { application: e, status: n } = t,
                         i = s.Ay.getApplicationIconURL({ ...e, size: 24 });
                     return {
@@ -105,7 +105,7 @@ function m(t) {
                         leading: null != i ? { type: "image", src: i } : void 0,
                     };
                 }),
-            [E],
+            [g],
         );
     return (0, l.jsx)(a.Z, {
         selectionMode: "single",
@@ -113,7 +113,7 @@ function m(t) {
         options: R,
         placeholder: m ? o.intl.string(o.t.MlQm3T) : o.intl.string(o.t.F2FMFR),
         value: i,
-        onSelectionChange: p,
+        onSelectionChange: c,
         matchSorterOptions: {
             keys: ["label"],
             sorter: (t) =>
@@ -122,9 +122,9 @@ function m(t) {
                     return !e.item.disabled !== n ? (n ? -1 : 1) : e.rank - t.rank;
                 }),
         },
-        loading: g,
-        disabled: c || m,
-        helperText: A,
+        loading: h,
+        disabled: A || m,
+        helperText: E,
         fullWidth: !0,
     });
 }
