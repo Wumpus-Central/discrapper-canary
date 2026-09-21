@@ -2659,22 +2659,6 @@
     }
   },
   {
-    "kind": "user",
-    "name": "2026-05-clips-scrub-preview-frontend",
-    "defaultConfig": {
-      "enableScrubPreview": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enableScrubPreview": true
-      }
-    }
-  },
-  {
     "name": "2026-05-collectibles-collection-page",
     "kind": "user",
     "defaultConfig": {
