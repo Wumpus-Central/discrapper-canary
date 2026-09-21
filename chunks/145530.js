@@ -11,8 +11,8 @@ var i = n(477900),
     m = n(192308),
     h = n(687709),
     g = n(148494),
-    A = n(47167),
-    p = n(12351),
+    p = n(47167),
+    A = n(12351),
     x = n(386467),
     f = n(928658),
     E = n(226698),
@@ -55,7 +55,7 @@ class y extends l.PureComponent {
             { report: n, resolveFlag: l } = this.state,
             { channel: s, message: a, showContextMenuHint: c, moderatorReportData: m, ...h } = this.props,
             g = s.type === N.rbe.GUILD_ANNOUNCEMENT && (0, r.Lt)(a.flags, N.pr7.CROSSPOSTED);
-        (c && (e = (0, i.jsx)(p.A, { className: S.Vc, children: j.intl.format(j.t.IxY7E6, {}) })),
+        (c && (e = (0, i.jsx)(A.A, { className: S.Vc, children: j.intl.format(j.t.IxY7E6, {}) })),
             (0, _.AR)(a) &&
                 (t = (0, i.jsx)("div", {
                     className: S.Vc,
@@ -65,7 +65,7 @@ class y extends l.PureComponent {
                         onChange: this.handleToggleReport,
                     }),
                 })));
-        let A = g ? j.intl.string(j.t["2kHABX"]) : j.intl.string(j.t.AMvpS4),
+        let p = g ? j.intl.string(j.t["2kHABX"]) : j.intl.string(j.t.AMvpS4),
             f = (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsx)("div", {
@@ -82,7 +82,7 @@ class y extends l.PureComponent {
                 value: s.guild_id,
                 children: (0, i.jsx)(o.Modal, {
                     title: j.intl.string(j.t.MWMcg7),
-                    subtitle: A,
+                    subtitle: p,
                     actions: [
                         { variant: "critical-primary", text: j.intl.string(j.t.oyYWHE), onClick: this.handleDelete },
                     ],
@@ -102,7 +102,7 @@ class y extends l.PureComponent {
             value: s.guild_id,
             children: (0, i.jsx)(o.Modal, {
                 title: g ? j.intl.string(j.t.aIz1oV) : j.intl.string(j.t.MWMcg7),
-                subtitle: A,
+                subtitle: p,
                 actions: [
                     { text: j.intl.string(j.t["ETE/oC"]), onClick: h.onClose, variant: "secondary" },
                     { text: j.intl.string(j.t.oyYWHE), onClick: this.handleDeleteMana, variant: "critical-primary" },
@@ -117,7 +117,7 @@ class y extends l.PureComponent {
 let b = {
     confirmPin: function (e, t) {
         let n,
-            l = (0, A.m1)(e, C.default, I.A);
+            l = (0, p.m1)(e, C.default, I.A);
         ((n = e.isPrivate()
             ? j.intl.string(j.t.hMRngA)
             : j.intl.formatToPlainString(j.t["3IRluI"], { channelName: l })),
@@ -152,7 +152,7 @@ let b = {
                         className: a()(S.iU, S.YK),
                         children: (0, i.jsx)(v.A, { channel: e, message: t, disableInteraction: !0 }),
                     }),
-                    (0, i.jsx)(p.A, { children: j.intl.format(j.t.oCVB3Y, {}) }),
+                    (0, i.jsx)(A.A, { children: j.intl.format(j.t.oCVB3Y, {}) }),
                 ],
             }),
         });

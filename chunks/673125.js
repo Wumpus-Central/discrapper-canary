@@ -1,6 +1,6 @@
-l.d(t, { Ay: () => E, EB: () => m, Y0: () => d });
-var a,
-    n,
+l.d(t, { Ay: () => C, EB: () => m, Y0: () => d });
+var n,
+    a,
     s = l(17928),
     i = l(228366),
     r = l(124861),
@@ -29,9 +29,9 @@ function u() {
 }
 var d =
         588245 != l.j
-            ? (((a = {}).NEW_ACHIEVEMENT = "new_achievement"), (a.UNCLAIMED_ACHIEVEMENT = "unclaimed_achievement"), a)
+            ? (((n = {}).NEW_ACHIEVEMENT = "new_achievement"), (n.UNCLAIMED_ACHIEVEMENT = "unclaimed_achievement"), n)
             : null,
-    m = (((n = {}).CLAIM_CHALLENGE = "claim_challenge"), (n.FETCH_CHALLENGES = "fetch_challenges"), n);
+    m = (((a = {}).CLAIM_CHALLENGE = "claim_challenge"), (a.FETCH_CHALLENGES = "fetch_challenges"), a);
 class _ extends s.Ay.Store {
     static displayName = "OrbChallengesStore";
     state = u();
@@ -148,4 +148,4 @@ class _ extends s.Ay.Store {
         return this.state.fetchChallengesError;
     }
 }
-let E = new _();
+let C = new _();

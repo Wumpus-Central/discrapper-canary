@@ -11,8 +11,8 @@ var i = n(477900),
     m = n(922016),
     h = n(939249),
     g = n(323384),
-    A = n(320448),
-    p = n(155718),
+    p = n(320448),
+    A = n(155718),
     x = n(811024),
     f = n(795816),
     E = n(793574),
@@ -28,8 +28,8 @@ var i = n(477900),
     b = n(625494),
     R = n(58703),
     M = n(763754),
-    L = n(799162),
-    k = n(834730),
+    k = n(799162),
+    L = n(834730),
     O = n(289873),
     P = n(47167),
     D = n(842209),
@@ -46,7 +46,7 @@ var z = n(375708),
 let K = { tag: "span", variant: "text-md/normal", color: "text-default" },
     Y = { className: a()("mention", J.lE) };
 function W(e) {
-    return (0, i.jsx)(k.E, { ...K, color: "text-strong", children: e });
+    return (0, i.jsx)(L.E, { ...K, color: "text-strong", children: e });
 }
 let X = l.memo(function (e) {
     var t;
@@ -68,7 +68,7 @@ let X = l.memo(function (e) {
         g = (0, u.bG)([F.A], () => F.A.getGuild(r.guild_id), [r.guild_id]);
     if (
         (l.useEffect(() => {
-            (null == c || (c.type === p.kc.CHAT && void 0 === c.application_command)) && U.S7(r.id, o);
+            (null == c || (c.type === A.kc.CHAT && void 0 === c.application_command)) && U.S7(r.id, o);
         }, [r.id, o, c]),
         null == c)
     )
@@ -90,14 +90,14 @@ let X = l.memo(function (e) {
                             sourceAnalyticsLocations: u,
                         } = t,
                         m = null != c ? c + " " + s.name : s.name;
-                    if (s.type === p.n4.SUB_COMMAND || s.type === p.n4.SUB_COMMAND_GROUP) {
+                    if (s.type === A.n4.SUB_COMMAND || s.type === A.n4.SUB_COMMAND_GROUP) {
                         let t = [
                                 (0, i.jsxs)(
                                     l.Fragment,
                                     {
                                         children: [
                                             " ",
-                                            (0, i.jsx)(k.E, { ...K, children: d?.name_localized ?? s.name }),
+                                            (0, i.jsx)(L.E, { ...K, children: d?.name_localized ?? s.name }),
                                         ],
                                     },
                                     m,
@@ -121,7 +121,7 @@ let X = l.memo(function (e) {
                     let h = s.value;
                     if (null != s.value)
                         switch (s.type) {
-                            case p.n4.USER: {
+                            case A.n4.USER: {
                                 let e = s.value.toString(),
                                     t = S.default.getUser(e);
                                 if (null != t) {
@@ -141,20 +141,20 @@ let X = l.memo(function (e) {
                                 }
                                 break;
                             }
-                            case p.n4.CHANNEL: {
+                            case A.n4.CHANNEL: {
                                 let e = s.value.toString(),
                                     t = H.A.getChannel(e);
                                 null != t &&
                                     (n = (0, i.jsxs)(G.A, { ...Y, children: ["#", (0, P.m1)(t, S.default, V.A)] }));
                                 break;
                             }
-                            case p.n4.ROLE: {
+                            case A.n4.ROLE: {
                                 let e = s.value.toString(),
                                     t = null != r ? B.A.getRole(r.id, e) : void 0;
                                 null != t && (n = (0, i.jsxs)(G.A, { ...Y, children: ["@", t.name] }));
                                 break;
                             }
-                            case p.n4.MENTIONABLE: {
+                            case A.n4.MENTIONABLE: {
                                 let e = s.value.toString(),
                                     t = null != r ? B.A.getRole(r.id, e) : void 0;
                                 if (null != t) n = (0, i.jsxs)(G.A, { children: ["@", t.name] });
@@ -176,7 +176,7 @@ let X = l.memo(function (e) {
                                 }
                                 break;
                             }
-                            case p.n4.ATTACHMENT:
+                            case A.n4.ATTACHMENT:
                                 n = W(z.intl.string(z.t.nONJVc));
                                 break;
                             default: {
@@ -191,7 +191,7 @@ let X = l.memo(function (e) {
                                 l.Fragment,
                                 {
                                     children: [
-                                        (0, i.jsxs)(k.E, { ...K, children: [" ", d?.name_localized ?? s.name, ": "] }),
+                                        (0, i.jsxs)(L.E, { ...K, children: [" ", d?.name_localized ?? s.name, ": "] }),
                                         n,
                                     ],
                                 },
@@ -210,7 +210,7 @@ let X = l.memo(function (e) {
                 }),
             );
         a = (0, i.jsxs)(i.Fragment, {
-            children: [(0, i.jsxs)(k.E, { ...K, children: ["/", c.application_command?.name_localized ?? c.name] }), e],
+            children: [(0, i.jsxs)(L.E, { ...K, children: ["/", c.application_command?.name_localized ?? c.name] }), e],
         });
     }
     return (0, i.jsxs)("div", {
@@ -249,8 +249,8 @@ function ee(e, t, n, l, s, r) {
         isInteractionUserBlocked: u,
         isInteractionUserIgnored: h,
         showAvatarPopout: g,
-        showTargetAvatarPopout: A,
-        onClickAvatar: p,
+        showTargetAvatarPopout: p,
+        onClickAvatar: A,
         onUserContextMenu: x,
         onClickTargetAvatar: f,
         onTargetUserContextMenu: E,
@@ -281,12 +281,12 @@ function ee(e, t, n, l, s, r) {
             user: t,
             guildId: d.guild_id,
             guildAvatar: C,
-            onClick: 1 === n ? f : p,
+            onClick: 1 === n ? f : A,
             onContextMenu: 1 === n ? E : x,
             ref: r,
         });
     }
-    let v = 1 === n ? A : g;
+    let v = 1 === n ? p : g;
     return null != s && null != v && null != r
         ? (0, i.jsx)(m.Y, {
               targetElementRef: r,
@@ -310,7 +310,7 @@ function et(e, t, n, l, s) {
         onTargetUserContextMenu: h,
         onPopoutRequestClose: g,
     } = e;
-    return (0, i.jsx)(L.A, {
+    return (0, i.jsx)(k.A, {
         className: 1 === n ? Q.iu : "",
         compact: !0,
         author: l,
@@ -325,31 +325,31 @@ function et(e, t, n, l, s) {
     });
 }
 function en() {
-    return (0, i.jsx)(A._, { size: "xxs", color: "currentColor", className: Q.M5 });
+    return (0, i.jsx)(p._, { size: "xxs", color: "currentColor", className: Q.M5 });
 }
 function ei(e) {
     let t,
         { message: n, channel: s } = e,
         { analyticsLocations: r, newestAnalyticsLocation: c } = (0, I.Ay)(E.A.EXECUTED_COMMAND),
-        A = (0, u.bG)([S.default], () => S.default.getCurrentUser()),
+        p = (0, u.bG)([S.default], () => S.default.getCurrentUser()),
         y = l.useRef(null),
-        L = l.useRef(null),
-        k = l.useMemo(
+        k = l.useRef(null),
+        L = l.useMemo(
             () => (e, t, l) => (
                 o()(null != t, "ExecutedCommand: user cannot be undefined"),
-                o()(null != A, "ExecutedCommand: currentUser cannot be undefined"),
+                o()(null != p, "ExecutedCommand: currentUser cannot be undefined"),
                 o()(null != s, "ExecutedCommand: channel cannot be undefined"),
                 (0, i.jsx)(j.A, {
                     ...e,
                     user: t,
-                    currentUser: A,
+                    currentUser: p,
                     guildId: s.guild_id,
                     channelId: s.id,
                     messageId: n.id,
                     newAnalyticsLocations: l,
                 })
             ),
-            [A, s, n.id],
+            [p, s, n.id],
         ),
         O = l.useMemo(
             () => (e) => (
@@ -359,8 +359,8 @@ function ei(e) {
             [s, n.id, n.interactionData],
         ),
         P = (0, v.Am)(n),
-        D = P?.type === p.G4.APPLICATION_COMMAND && null != P.target_user ? new T.A(P.target_user) : null,
-        U = P?.type === p.G4.APPLICATION_COMMAND && null != n.messageReference && null != e.renderTargetMessage,
+        D = P?.type === A.G4.APPLICATION_COMMAND && null != P.target_user ? new T.A(P.target_user) : null,
+        U = P?.type === A.G4.APPLICATION_COMMAND && null != n.messageReference && null != e.renderTargetMessage,
         G = (0, M.d8)(n.interaction?.user, s),
         w = (0, M.d8)(D, s),
         H = l.useMemo(() => (e.compact ? (0, Z.A)((0, R.i$)(d()(), "LT")) : null), [e.compact]),
@@ -369,8 +369,8 @@ function ei(e) {
     if (null == F || null == G) return null;
     function V() {
         if (null == F) return null;
-        let t = ee(e, F.user, 0, G, (e) => k(e, F.user, [E.A.AVATAR]), y),
-            n = et(e, F.user, 0, G, (e) => k(e, F.user));
+        let t = ee(e, F.user, 0, G, (e) => L(e, F.user, [E.A.AVATAR]), y),
+            n = et(e, F.user, 0, G, (e) => L(e, F.user));
         return (0, i.jsxs)(l.Fragment, { children: [t, n] }, "user");
     }
     if (n?.activityInstance === null || (0, N.V)(n))
@@ -440,7 +440,7 @@ function ei(e) {
                             }
                         },
                     });
-                })(e, O, L);
+                })(e, O, k);
                 return (0, i.jsx)(l.Fragment, { children: t }, "command");
             },
         })),
@@ -453,8 +453,8 @@ function ei(e) {
                           (0, i.jsx)(en, {}),
                           (0, i.jsx)(function () {
                               if (null == D) return null;
-                              let t = ee(e, D, 1, w, (e) => k(e, D, [E.A.AVATAR]), y),
-                                  n = et(e, D, 1, w, (e) => k(e, D));
+                              let t = ee(e, D, 1, w, (e) => L(e, D, [E.A.AVATAR]), y),
+                                  n = et(e, D, 1, w, (e) => L(e, D));
                               return (0, i.jsxs)(l.Fragment, { children: [t, n] }, "target");
                           }, {}),
                       ],

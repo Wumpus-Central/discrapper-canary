@@ -1,4 +1,4 @@
-n.d(t, { A: () => O, i: () => k });
+n.d(t, { A: () => O, i: () => L });
 var i = n(477900),
     l = n(582128),
     s = n(503698),
@@ -11,8 +11,8 @@ var i = n(477900),
     m = n(922016),
     h = n(939249),
     g = n(530005),
-    A = n(890856),
-    p = n(297264),
+    p = n(890856),
+    A = n(297264),
     x = n(696986),
     f = n(834730),
     E = n(442433),
@@ -56,7 +56,7 @@ function b() {
 }
 var R = n(818348),
     M = n(402805);
-function L(e) {
+function k(e) {
     let {
         showEditProduct: t,
         showUnpublishProduct: n,
@@ -66,8 +66,8 @@ function L(e) {
         showReportProduct: m,
         onEditProduct: h,
         onUnpublishProduct: g,
-        onDeleteProduct: A,
-        onCopyLink: p,
+        onDeleteProduct: p,
+        onCopyLink: A,
         onTestDownload: x,
         onReportProduct: f,
         closePopout: E,
@@ -98,7 +98,7 @@ function L(e) {
                                 label: j.intl.string(j.t.XR26uj),
                                 icon: d.LinkIcon,
                                 leadingAccessory: { type: "icon", icon: d.LinkIcon },
-                                action: p,
+                                action: A,
                             }),
                         s &&
                             (0, i.jsx)(o.Dr, {
@@ -123,7 +123,7 @@ function L(e) {
                                 id: "guild-product-delete",
                                 label: j.intl.string(j.t.zWjqvB),
                                 color: "danger",
-                                action: A,
+                                action: p,
                             }),
                     ],
                 }),
@@ -141,7 +141,7 @@ function L(e) {
         }),
     });
 }
-function k(e) {
+function L(e) {
     let {
             product: t,
             guildId: n,
@@ -152,8 +152,8 @@ function k(e) {
             showDeleteProduct: c,
             showReportProduct: d,
             onEditProduct: u,
-            onUnpublishProduct: A,
-            onDeleteProduct: p,
+            onUnpublishProduct: p,
+            onDeleteProduct: A,
             onCopyProductLink: x,
             onTestDownload: f,
             onReportProduct: E,
@@ -170,7 +170,7 @@ function k(e) {
             spacing: -8,
             animation: m.Y.Animation.FADE,
             renderPopout: (e) =>
-                (0, i.jsx)(L, {
+                (0, i.jsx)(k, {
                     ...e,
                     guildId: n,
                     productId: t.id,
@@ -181,8 +181,8 @@ function k(e) {
                     showReportProduct: d,
                     showDeleteProduct: c,
                     onEditProduct: u,
-                    onUnpublishProduct: A,
-                    onDeleteProduct: p,
+                    onUnpublishProduct: p,
+                    onDeleteProduct: A,
                     onCopyLink: x,
                     onTestDownload: f,
                     onReportProduct: E,
@@ -221,14 +221,14 @@ function O(e) {
         u = (0, I.R)(t, 600),
         m = null !== t.price_tier ? (0, C.$g)(t.price_tier, R.Yr.USD) : void 0,
         h = (0, _.z)(t);
-    return (0, i.jsxs)(A.s, {
+    return (0, i.jsxs)(p.s, {
         tag: "article",
         className: a()(M.gc, M.Um, { [M.r9]: d }),
         onClick: d ? void 0 : l,
         onContextMenu: function (e) {
             (0, E.L3)(e, () =>
                 Promise.resolve((e) =>
-                    (0, i.jsx)(L, {
+                    (0, i.jsx)(k, {
                         ...e,
                         closePopout: E.Z_,
                         guildId: n,
@@ -258,7 +258,7 @@ function O(e) {
                     (0, i.jsxs)("div", {
                         className: M.jb,
                         children: [
-                            (0, i.jsx)(p.D, {
+                            (0, i.jsx)(A.D, {
                                 variant: "text-md/semibold",
                                 color: "text-strong",
                                 className: M.tZ,
@@ -288,7 +288,7 @@ function O(e) {
                         ],
                     }),
                     !d &&
-                        (0, i.jsx)(k, {
+                        (0, i.jsx)(L, {
                             product: t,
                             guildId: n,
                             showEditProduct: !0,

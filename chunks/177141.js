@@ -240,16 +240,16 @@ let ez = {
     e5 = {},
     e3 = {},
     e7 = Object.freeze({ id: null, message: null, buttonText: null, callback: void 0, metadata: null }),
-    e9 = null;
-function e8(e) {
+    e8 = null;
+function e9(e) {
     return e1[e] + "-untilAtLeast";
 }
 function e6(e, t, n) {
     if (null == e) return;
     let i = e1[e];
     (null == i || t || E.w.set(i, !0), e2.has(e) && (e5[e] = !0), null != n && null != i)
-        ? E.w.set(e8(e), n.format("YYYY-MM-DDTHH:mm:ss.SSSZ"))
-        : E.w.remove(e8(e));
+        ? E.w.set(e9(e), n.format("YYYY-MM-DDTHH:mm:ss.SSSZ"))
+        : E.w.remove(e9(e));
 }
 let e4 = null;
 function te() {
@@ -277,7 +277,7 @@ function tt(e) {
     let i = e1[e];
     if (null != i) {
         let t,
-            n = null != (t = E.w.get(e8(e))) ? l()(t) : null;
+            n = null != (t = E.w.get(e9(e))) ? l()(t) : null;
         if (null != n) return n?.isAfter(l()());
     }
     let r = e5[e];
@@ -865,7 +865,7 @@ let ti = {
 };
 function tl() {
     if (!m.A.isConnected()) return !1;
-    e9 = null;
+    e8 = null;
     let e = v.default.getCurrentUser();
     if (null == e) return !1;
     let t = eb.A.getPremiumSubscription(),
@@ -884,15 +884,15 @@ function tl() {
             })
         ) {
             let i = ti[r].metadata?.({ currentUser: e, premiumSubscription: t, selectedGuildId: n });
-            e9 = { ...e7, type: r, metadata: i };
+            e8 = { ...e7, type: r, metadata: i };
             break;
         }
-    if (null != e9) {
-        e9.metadata?.sampleRate != null &&
-            null == e3[e9.type] &&
-            (e3[e9.type] = Math.random() <= e9.metadata.sampleRate);
-        let e = !1 === e3[e9.type];
-        (tt(e9.type) || e) && (e9 = null);
+    if (null != e8) {
+        e8.metadata?.sampleRate != null &&
+            null == e3[e8.type] &&
+            (e3[e8.type] = Math.random() <= e8.metadata.sampleRate);
+        let e = !1 === e3[e8.type];
+        (tt(e8.type) || e) && (e8 = null);
     }
 }
 function tr() {
@@ -960,10 +960,10 @@ class ts extends s.Ay.Store {
             ));
     }
     hasNotice() {
-        return null != e9 && null != e9.type;
+        return null != e8 && null != e8.type;
     }
     getNotice() {
-        return null == ej.A.getAction() ? e9 : null;
+        return null == ej.A.getAction() ? e8 : null;
     }
     isNoticeDismissed(e) {
         return tt(e);
@@ -1016,7 +1016,7 @@ let ta = new ts(c.h, {
     VOICE_STATE_UPDATES: function (e) {
         let { voiceStates: t } = e;
         return (
-            (e9?.type === eT.kqX.INVITED_TO_SPEAK ||
+            (e8?.type === eT.kqX.INVITED_TO_SPEAK ||
                 t.some((e) => {
                     let { userId: t } = e;
                     return t !== el.default.getId();
@@ -1039,17 +1039,17 @@ let ta = new ts(c.h, {
         return tl();
     },
     NOTICE_SHOW: function (e) {
-        e9 = e.notice;
+        e8 = e.notice;
     },
     NOTICE_DISMISS: function (e) {
-        return null != e9 && (null == e.id || e.id === e9.id) && (e6(e9.type, e.isTemporary, e.untilAtLeast), tl());
+        return null != e8 && (null == e.id || e.id === e8.id) && (e6(e8.type, e.isTemporary, e.untilAtLeast), tl());
     },
     NOTICE_DISABLE: function (e) {
         let { noticeType: t } = e;
         return (e6(t), tl());
     },
     LOGOUT: function () {
-        ((e5 = {}), (e3 = {}), (e9 = null));
+        ((e5 = {}), (e3 = {}), (e8 = null));
     },
     SUBSCRIPTION_PLANS_FETCH_SUCCESS: tl,
     AUTO_MODERATION_MENTION_RAID_DETECTION: tl,

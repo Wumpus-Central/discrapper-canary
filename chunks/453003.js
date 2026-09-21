@@ -11,8 +11,8 @@ var i,
     m = n(646270),
     h = n(610509),
     g = n(22363),
-    A = n(802516),
-    p = n(31300),
+    p = n(802516),
+    A = n(31300),
     x = n(834730),
     f = n(687966),
     E = n(825860),
@@ -28,8 +28,8 @@ var i,
     b = n(205184),
     R = n(928550),
     M = n(689168),
-    L = n(403362),
-    k = n(456060),
+    k = n(403362),
+    L = n(456060),
     O = n(723702),
     P = n(850670),
     D = n(206589),
@@ -129,16 +129,16 @@ function en(e) {
                             case Z.PLAYSTATION:
                                 return (0, l.jsx)(g.X, { size: "xxs", color: "currentColor" }, e);
                             case Z.XBOX:
-                                return (0, l.jsx)(A.Y, { size: "xxs", color: "currentColor" }, e);
+                                return (0, l.jsx)(p.Y, { size: "xxs", color: "currentColor" }, e);
                             case Z.VR:
                                 return (0, l.jsx)(c.G, { size: "xxs", color: "currentColor" }, e);
                             case Z.DESKTOP:
-                                return (0, l.jsx)(p.k, { size: "xxs", color: "currentColor" }, e);
+                                return (0, l.jsx)(A.k, { size: "xxs", color: "currentColor" }, e);
                             default:
                                 return null;
                         }
                     })
-                    .filter(L.Vq),
+                    .filter(k.Vq),
             [a],
         );
     if (!(null != n || r.length > 0)) return null;
@@ -202,11 +202,11 @@ function el(e) {
             tryWithGdnAction: m,
             staticBannerSrc: h,
             onClickContent: g,
-            iconSrc: A,
-            onView: p,
+            iconSrc: p,
+            onView: A,
             presenceActivity: f,
             currentUserPresenceActivity: T,
-            hideParty: L,
+            hideParty: k,
             hideBanner: Z = !1,
             partyStatusElement: q,
             analyticsLocations: Q,
@@ -237,7 +237,7 @@ function el(e) {
                     className: et.dS,
                     color: "none",
                     lineClamp: 2,
-                    children: [ec ? (0, k.YC)(t, i, a, c, !1) : (0, l.jsx)(ei, { activity: f }), ec ? null : eu],
+                    children: [ec ? (0, L.YC)(t, i, a, c, !1) : (0, l.jsx)(ei, { activity: f }), ec ? null : eu],
                 }),
             [ec, t, i, a, c, f, eu],
         ),
@@ -248,11 +248,11 @@ function el(e) {
                 : (0, l.jsx)(x.E, { variant: "text-xs/normal", color: "none", lineClamp: 1, children: e });
         }, [f?.details]),
         eg = s.useMemo(
-            () => (0, l.jsxs)("div", { className: et.pq, children: [eh, em, L || ec ? null : q] }),
-            [em, L, ec, q, eh],
+            () => (0, l.jsxs)("div", { className: et.pq, children: [eh, em, k || ec ? null : q] }),
+            [em, k, ec, q, eh],
         ),
-        eA = !!(0, R.au)(n.id),
-        ep = (0, y.x)(n),
+        ep = !!(0, R.au)(n.id),
+        eA = (0, y.x)(n),
         { canJoin: ex, remoteJoinPlatform: ef } = (function (e) {
             let {
                 presenceActivity: t,
@@ -301,8 +301,8 @@ function el(e) {
             message: t,
             application: n,
             isEmbeddedApplication: d,
-            isFrameApplication: ep,
-            isGameLaunchable: eA,
+            isFrameApplication: eA,
+            isGameLaunchable: ep,
         }),
         eE = !(
             null == f ||
@@ -428,8 +428,8 @@ function el(e) {
         eT = eN.some((e) => e.trackingArea === j.kY.CLOUD_PLAY);
     (0, $.A)(eT, Q);
     let eS = s.useMemo(
-        () => (eC ? null : (0, l.jsx)(en, { presenceActivity: f, remoteJoinPlatform: ef, isGameLaunchable: eA })),
-        [eC, f, ef, eA],
+        () => (eC ? null : (0, l.jsx)(en, { presenceActivity: f, remoteJoinPlatform: ef, isGameLaunchable: ep })),
+        [eC, f, ef, ep],
     );
     return (0, l.jsxs)(l.Fragment, {
         children: [
@@ -440,7 +440,7 @@ function el(e) {
                 hideBanner: Z,
                 onClickBanner: g,
                 bannerAspectRatio: N.u.ACTIVITY,
-                iconSrc: A ?? void 0,
+                iconSrc: p ?? void 0,
                 info: eg,
                 actions: eN,
                 primaryActionFirst: !0,
@@ -448,7 +448,7 @@ function el(e) {
                 trackingConfig: {
                     id: n.id,
                     linkType: ee.J.RICH_PRESENCE_INVITE,
-                    onView: p,
+                    onView: A,
                     referrerId: t.author.id,
                     guildId: a.guild_id,
                     channelId: t.channel_id,

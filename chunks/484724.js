@@ -11,8 +11,8 @@ var i = n(477900),
     m = n(790535),
     h = n(734057),
     g = n(696451),
-    A = n(71393),
-    p = n(287809),
+    p = n(71393),
+    A = n(287809),
     x = n(285059),
     f = n(698441),
     E = n(496092),
@@ -30,16 +30,16 @@ function v(e) {
             channel: b,
             isMember: R,
         } = (0, s.cf)(
-            [f.Ay, A.A, h.A, g.Ay, p.default],
+            [f.Ay, p.A, h.A, g.Ay, A.default],
             () => {
                 let e = f.Ay.getGuildScheduledEvent(v) ?? void 0,
-                    t = A.A.getGuild(n),
+                    t = p.A.getGuild(n),
                     i = h.A.getChannel(e?.channel_id);
                 return {
                     guildScheduledEvent: e,
                     guild: t,
                     channel: i,
-                    isMember: g.Ay.isMember(n, p.default.getCurrentUser()?.id),
+                    isMember: g.Ay.isMember(n, A.default.getCurrentUser()?.id),
                 };
             },
             [n, v],

@@ -11,8 +11,8 @@ var i = n(477900),
     m = n(372320),
     h = n(744808),
     g = n(713517),
-    A = n(885386),
-    p = n(287809),
+    p = n(885386),
+    A = n(287809),
     x = n(562153),
     f = n(183555),
     E = n(999291),
@@ -28,8 +28,8 @@ var i = n(477900),
     b = n(661531),
     R = n(602853),
     M = n(654107),
-    L = n(450373),
-    k = n(531685),
+    k = n(450373),
+    L = n(531685),
     O = n(486020),
     P = n(837529),
     D = n(686189),
@@ -38,21 +38,21 @@ var i = n(477900),
 function w(e) {
     let { user: t, displayProfile: n, guildId: s, bannerHeight: o, avatarSize: c, avatarInsetStart: d } = e,
         [u, m] = l.useState(!1),
-        h = (0, a.bG)([k.A], () => k.A.isFocused()),
-        g = A.kt.getSetting(),
-        p = (0, P.Nx)(),
+        h = (0, a.bG)([L.A], () => L.A.isFocused()),
+        g = p.kt.getSetting(),
+        A = (0, P.Nx)(),
         { bannerSrc: x, status: f } = (0, D.A)({ displayProfile: n ?? null, size: 480, canAnimate: g ? h : u }),
-        E = p ? null : (x ?? null),
+        E = A ? null : (x ?? null),
         I = (0, R.r)(b.A.unsafe_rawColors.PRIMARY_800).hex(),
         C = null != n ? n.guildId : s,
         _ = t.getAvatarURL(C ?? void 0, (0, r.FT)(c)),
         v = (0, y.LX)((0, M.Ay)(_, I, !1)),
-        N = (0, L.A)(n?.primaryColor ?? v).hex,
+        N = (0, k.A)(n?.primaryColor ?? v).hex,
         { size: j, stroke: T } = (0, r.Kj)(c),
         S = (0, G.A)(c);
     return (0, i.jsx)(U.A, {
         bannerSrc: E,
-        backgroundColor: f === D.D.COMPLETE || p ? N : b.A.unsafe_rawColors.PRIMARY_800.css,
+        backgroundColor: f === D.D.COMPLETE || A ? N : b.A.unsafe_rawColors.PRIMARY_800.css,
         showGifTag: !g && (0, O.o4)(E),
         height: o,
         cutout: { align: "start", insetStart: d + j / 2 - S, insetBottom: T / 2, radius: S },
@@ -129,18 +129,18 @@ function ei(e) {
         : null;
 }
 function el(e) {
-    let { user: t, guildId: n, channelId: r, messageId: p, headingRef: I } = e,
+    let { user: t, guildId: n, channelId: r, messageId: A, headingRef: I } = e,
         j = (0, E.Ay)(t.id, n),
         y = null != j ? j.guildId : n,
         b = x.Ay.useName(y, r, t),
         { analyticsLocations: R } = (0, d.Ay)(c.A.USER_PROFILE_EMBED),
-        M = (0, f.pb)({ layout: "EMBED", userId: t.id, guildId: n, channelId: r, messageId: p }),
-        L = (0, m.A)(j?.profileFrame?.skuId),
-        k = (0, l.useRef)(null),
+        M = (0, f.pb)({ layout: "EMBED", userId: t.id, guildId: n, channelId: r, messageId: A }),
+        k = (0, m.A)(j?.profileFrame?.skuId),
+        L = (0, l.useRef)(null),
         [O, P] = (0, C.A)(),
-        D = (0, s.A)(k, P),
-        { isHovering: U } = (0, g.A)(k),
-        G = A.kt.useSetting(),
+        D = (0, s.A)(L, P),
+        { isHovering: U } = (0, g.A)(L),
+        G = p.kt.useSetting(),
         H = (0, a.bG)([o.Ay], () => o.Ay.useReducedMotion),
         B = j?.profileEffect?.skuId,
         F = !G && !H;
@@ -170,7 +170,7 @@ function el(e) {
                 headingText: q.intl.formatToPlainString(q.t["8yRya1"], { name: b }),
                 profileEffect:
                     null != B ? (0, i.jsx)(u.A, { skuId: B, autoPlay: G, isHovering: U, useOpacityOnHover: !F }) : null,
-                profileFrame: null != L ? (0, i.jsx)(h.A, { frame: L, fadeIn: !1 }) : null,
+                profileFrame: null != k ? (0, i.jsx)(h.A, { frame: k, fadeIn: !1 }) : null,
                 children: [
                     (0, i.jsx)(w, {
                         user: t,
@@ -218,6 +218,6 @@ function el(e) {
 }
 function es(e) {
     let { userId: t, guildId: n, channelId: l, messageId: s, headingRef: r } = e,
-        o = (0, a.bG)([p.default], () => p.default.getUser(t));
+        o = (0, a.bG)([A.default], () => A.default.getUser(t));
     return null == o ? null : (0, i.jsx)(el, { user: o, guildId: n, channelId: l, messageId: s, headingRef: r });
 }

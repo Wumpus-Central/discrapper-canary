@@ -12,8 +12,8 @@ var l = n(702841),
     m = n(250627),
     h = n(253141),
     g = n(579970),
-    A = n(500770),
-    p = n(571654),
+    p = n(500770),
+    A = n(571654),
     x = n(825596),
     f = n(703543),
     E = n(652215);
@@ -33,11 +33,11 @@ function I(e) {
         } = e,
         R = (0, l.bG)([d.A], () => d.A.getGuild(I), [I]),
         M = (0, l.bG)([c.A], () => c.A.getRole(I, t?.role_id ?? E.dJq)),
-        L = (0, a.R)(t, 600),
-        k = (0, p.z)(t),
+        k = (0, a.R)(t, 600),
+        L = (0, A.z)(t),
         O = (0, m.BB)(R),
         { shouldHideGuildPurchaseEntryPoints: P } = (0, o.MH)(I),
-        D = (0, p.X)(t),
+        D = (0, A.X)(t),
         U = (0, f.A)({ guildId: I, guildProductListingId: t.id, sourceAnalyticsLocations: C });
     if (null == R || P) return null;
     function G() {
@@ -87,15 +87,15 @@ function I(e) {
         onTestDownload: () => {},
     });
     return (0, i.jsx)(
-        A.A,
+        p.A,
         {
-            imageUrl: L,
+            imageUrl: k,
             name: t.name,
             description: t.description,
             formattedPrice: D,
             role: M,
             ctaComponent: (0, i.jsx)(s.$, { ...U }),
-            productType: k,
+            productType: L,
             shouldShowFullDescriptionButton: _,
             onShowFullDescription: G,
             onTapCard: G,

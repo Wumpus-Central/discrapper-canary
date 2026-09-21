@@ -12,8 +12,8 @@ var l = n(503698),
     m = n(696986),
     h = n(890856),
     g = n(915089),
-    A = n(839656),
-    p = n(724609),
+    p = n(839656),
+    A = n(724609),
     x = n(411342),
     f = n(375708),
     E = n(442182);
@@ -41,7 +41,7 @@ function I(e) {
                         }),
                     ],
                 }),
-            n && (0, i.jsx)("div", { className: E.vW, children: (0, i.jsx)(p.k, {}) }),
+            n && (0, i.jsx)("div", { className: E.vW, children: (0, i.jsx)(A.k, {}) }),
         ],
     });
 }
@@ -75,7 +75,7 @@ function _(e) {
             formattedPrice: a,
             role: o,
             ctaComponent: c,
-            shouldShowFullDescriptionButton: p = !0,
+            shouldShowFullDescriptionButton: A = !0,
             onShowFullDescription: _,
             productType: v,
             onTapCard: N,
@@ -86,14 +86,14 @@ function _(e) {
             cardWidth: b = 332,
             cardHeight: R,
             thumbnailHeight: M = 187,
-            descriptionTextVariant: L = "text-sm/normal",
-            isDraft: k = !1,
+            descriptionTextVariant: k = "text-sm/normal",
+            isDraft: L = !1,
         } = e,
         O = (0, g.Ld)(),
         P = (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(I, {
-                    showDraftBadge: k,
+                    showDraftBadge: L,
                     hidePurchaseToUnlockBadge: !0,
                     children: (0, i.jsx)("img", { alt: "", src: t, className: E.K_, style: { height: M } }),
                 }),
@@ -111,14 +111,14 @@ function _(e) {
                                     children: n,
                                 }),
                                 (0, i.jsx)(u.M, {
-                                    children: (0, i.jsx)(A.A, {
-                                        variant: L,
+                                    children: (0, i.jsx)(p.A, {
+                                        variant: k,
                                         color: "text-muted",
                                         lineClamp: y,
                                         text: l,
                                     }),
                                 }),
-                                p && (0, i.jsx)(C, { onShowFullDescription: _, variant: L }),
+                                A && (0, i.jsx)(C, { onShowFullDescription: _, variant: k }),
                                 S || null == o || "" === o.name
                                     ? null
                                     : (0, i.jsxs)(i.Fragment, {

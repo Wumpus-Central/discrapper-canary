@@ -11,8 +11,8 @@ var i,
     m = n(821609),
     h = n(17928),
     g = n(866665),
-    A = n(775602),
-    p = n(140651),
+    p = n(775602),
+    A = n(140651),
     x = n(354287),
     f = n(878369),
     E = n(838541),
@@ -42,9 +42,9 @@ function v(e) {
         onClickBanner: R,
     } = e;
     y = (0, f.Q)(y);
-    let { primaryColor: M, secondaryColor: L } = (0, p.A)(j ?? c),
-        k = `linear-gradient(45deg, ${M}, ${L})`,
-        O = (0, h.bG)([A.Ay], () => A.Ay.useReducedMotion),
+    let { primaryColor: M, secondaryColor: k } = (0, A.A)(j ?? c),
+        L = `linear-gradient(45deg, ${M}, ${k})`,
+        O = (0, h.bG)([p.Ay], () => p.Ay.useReducedMotion),
         P = (0, x.DC)(y),
         D = null != c && !v,
         U = null != C && !1 === O && !v,
@@ -89,7 +89,7 @@ function v(e) {
     return (0, l.jsxs)("div", {
         ref: P,
         className: I.E6,
-        style: { background: k },
+        style: { background: L },
         children: [
             G &&
                 (0, l.jsxs)(_, {
@@ -161,23 +161,23 @@ function v(e) {
                                                 submitting: o,
                                                 trackingArea: c,
                                                 isDeadEnd: h,
-                                                iconButton: A,
-                                                buttonRef: p,
+                                                iconButton: p,
+                                                buttonRef: A,
                                             } = e,
                                             f = 0 === t;
-                                        return A
+                                        return p
                                             ? (0, l.jsx)(
                                                   g.m,
                                                   {
                                                       text: n,
-                                                      targetElementRef: p,
+                                                      targetElementRef: A,
                                                       children: (0, l.jsx)(u.K, {
                                                           variant: f ? "overlay-primary" : "overlay-secondary",
                                                           disabled: a || null != r,
                                                           loading: o,
                                                           icon: i,
                                                           "aria-label": n,
-                                                          buttonRef: p,
+                                                          buttonRef: A,
                                                           onClick: (e) => {
                                                               (s(e),
                                                                   (0, x.gx)({
@@ -205,7 +205,7 @@ function v(e) {
                                                               loading: o,
                                                               icon: i,
                                                               text: n,
-                                                              buttonRef: p,
+                                                              buttonRef: A,
                                                               onClick: (e) => {
                                                                   (s(e),
                                                                       (0, x.gx)({

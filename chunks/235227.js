@@ -11,8 +11,8 @@ var i = n(477900),
     m = n(148494),
     h = n(228366),
     g = n(93474),
-    A = n(975571),
-    p = n(521981),
+    p = n(975571),
+    A = n(521981),
     x = n(164664),
     f = n(860227),
     E = n(438729),
@@ -38,7 +38,7 @@ let T = l.memo(function (e) {
                             children: (0, i.jsx)(u.E, {
                                 variant: "text-sm/normal",
                                 color: "interactive-text-default",
-                                children: (0, p.Tz)(n, void 0, t.channel_id),
+                                children: (0, A.Tz)(n, void 0, t.channel_id),
                             }),
                         }),
                     ],
@@ -54,7 +54,7 @@ let T = l.memo(function (e) {
                             tag: "span",
                             className: v.C2,
                             children: _.intl.format(_.t["Nd3Gh+"], {
-                                helpUrl: A.A.getArticleURL(C.MVz.GUILD_AUTOMOD_BLOCKED_MESSAGE),
+                                helpUrl: p.A.getArticleURL(C.MVz.GUILD_AUTOMOD_BLOCKED_MESSAGE),
                             }),
                         }),
                     }),
@@ -63,8 +63,8 @@ let T = l.memo(function (e) {
         });
     }),
     S = l.memo(function (e) {
-        let { className: t, compact: n, message: s, children: r, content: d, onUpdate: u, hideDismiss: A = !1 } = e,
-            p = s.editedTimestamp?.toString(),
+        let { className: t, compact: n, message: s, children: r, content: d, onUpdate: u, hideDismiss: p = !1 } = e,
+            A = s.editedTimestamp?.toString(),
             x = l.useRef(!1),
             C = (0, c.bG)([g.A], () => g.A.getMessage(s.id), [s.id]),
             S = l.useCallback(() => {
@@ -76,7 +76,7 @@ let T = l.memo(function (e) {
         return (
             l.useLayoutEffect(() => {
                 x.current ? null != u && u() : (x.current = !0);
-            }, [u, s.content, d, p, r]),
+            }, [u, s.content, d, A, r]),
             (0, i.jsxs)("div", {
                 id: (0, f.CJ)(s),
                 className: a()(t, j.PT, {
@@ -107,7 +107,7 @@ let T = l.memo(function (e) {
                         notice: C?.errorMessage ?? _.intl.string(_.t.zQ69pv),
                         message: s,
                         compact: n,
-                        onDismiss: A ? void 0 : S,
+                        onDismiss: p ? void 0 : S,
                     }),
                 ],
             })

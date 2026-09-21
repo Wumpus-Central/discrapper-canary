@@ -529,8 +529,8 @@ n(321073);
 var e5 = n(503698),
     e3 = n.n(e5);
 if (221552 == n.j) var e7 = n(806163);
-if (221552 == n.j) var e9 = n(314116);
-if (221552 == n.j) var e8 = n(821609);
+if (221552 == n.j) var e8 = n(314116);
+if (221552 == n.j) var e9 = n(821609);
 var e6 = n(334465),
     e4 = n(624458),
     te = n(513461),
@@ -558,7 +558,7 @@ let tr =
                           (E = es.intl.string(es.t.mqtdmQ)),
                           (u = function () {
                               null != t &&
-                                  (0, e9.A)({
+                                  (0, e8.A)({
                                       title: es.intl.string(es.t.aIz1oV),
                                       subtitle: es.intl.string(es.t["13tjTU"]),
                                       variant: "primary",
@@ -592,7 +592,7 @@ let tr =
                   className: e3()(...A),
                   children: [
                       (0, i.jsx)(_.E, { className: ti.wx, variant: "text-sm/normal", children: o }),
-                      (0, i.jsx)(e8.$, { variant: "overlay-primary", size: "sm", onClick: u, text: E }),
+                      (0, i.jsx)(e9.$, { variant: "overlay-primary", size: "sm", onClick: u, text: E }),
                   ],
               });
           }
@@ -605,7 +605,7 @@ function to(e) {
         className: ta.eR,
         children: [
             r && (0, i.jsx)(d.PM, { onClick: l, className: ta.b, noticeType: ei.kqX.BACK_TO_PREVIOUS_SCREEN }),
-            (0, i.jsx)(e8.$, { text: t, variant: "overlay-secondary", size: "sm", icon: ts.r, onClick: n }),
+            (0, i.jsx)(e9.$, { text: t, variant: "overlay-secondary", size: "sm", icon: ts.r, onClick: n }),
         ],
     });
 }
@@ -703,7 +703,7 @@ function tm(e) {
                             ? es.intl.format(tS.default.F0hdak, { count: t })
                             : es.intl.string(tS.default.LTzc00),
                 }),
-                (0, i.jsx)(e8.$, {
+                (0, i.jsx)(e9.$, {
                     variant: "secondary",
                     size: "sm",
                     text: es.intl.string(tS.default.xYJKEy),
@@ -825,12 +825,12 @@ function tV() {
                       size: "sm",
                       className: tw.GC,
                       children: [
-                          (0, i.jsx)(e8.$, {
+                          (0, i.jsx)(e9.$, {
                               variant: "overlay-primary",
                               text: es.intl.string(es.t.MpO0px),
                               onClick: () => tF(!1),
                           }),
-                          (0, i.jsx)(e8.$, {
+                          (0, i.jsx)(e9.$, {
                               variant: "secondary",
                               onClick: () => tF(!0),
                               text: es.intl.string(es.t["1YDv7a"]),
@@ -908,8 +908,8 @@ var t0 = n(544576),
     t5 = n(147964),
     t3 = n(177141),
     t7 = n(975571),
-    t9 = n(723702),
-    t8 = n(325278),
+    t8 = n(723702),
+    t9 = n(325278),
     t6 = n(831502),
     t4 = n(731854);
 let ne = new b.A("Notice");
@@ -976,7 +976,7 @@ function ni(e) {
     });
 }
 function nl(e) {
-    return (0, t9.isWindows)() && E().satisfies(y.A?.os.release, t8.PH)
+    return (0, t8.isWindows)() && E().satisfies(y.A?.os.release, t9.PH)
         ? `ms-settings:sound-properties?endpointId=${e}`
         : "ms-settings:sound";
 }
@@ -1144,7 +1144,7 @@ let na =
                           color: d.Hv.WARNING,
                           children: [
                               (0, i.jsx)(d.PM, { onClick: () => ns(Q), noticeType: r.type }),
-                              es.intl.format(t9.isPlatformEmbedded ? es.t.J232TI : es.t.vceuiL, {
+                              es.intl.format(t8.isPlatformEmbedded ? es.t.J232TI : es.t.vceuiL, {
                                   helpCenterLink: t7.A.getArticleURL(ei.MVz.END_TO_END_ENCRYPTION),
                               }),
                           ],
