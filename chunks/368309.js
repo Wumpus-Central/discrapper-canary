@@ -1,4 +1,4 @@
-n.d(t, { default: () => S, p: () => N });
+n.d(t, { default: () => N, p: () => C });
 var i = n(477900),
     r = n(582128),
     a = n(192308),
@@ -10,52 +10,54 @@ var i = n(477900),
     u = n(82498),
     _ = n(831318),
     E = n(976860),
-    A = n(174459),
-    h = n(676279),
-    I = n(158045),
-    f = n(652215),
-    p = n(202541),
-    T = n(375708),
-    g = n(644242),
-    m = n(309427);
-function S(e) {
+    A = n(763827),
+    h = n(174459),
+    I = n(676279),
+    f = n(158045),
+    p = n(652215),
+    T = n(202541),
+    g = n(375708),
+    m = n(644242),
+    S = n(309427);
+function N(e) {
     let { onClose: t, analyticsLocations: n, ...a } = e,
-        S = (0, h.TM)() ? g.A : m.A,
-        { analyticsLocations: N } = (0, o.Ay)(n, l.A.PREMIUM_UPSELL);
+        N = (0, I.TM)() ? m.A : S.A,
+        { analyticsLocations: C } = (0, o.Ay)(n, l.A.PREMIUM_UPSELL);
     (0, s.Ay)(() => {
-        (A.default.track(f.HAw.PREMIUM_UPSELL_VIEWED, {
-            type: p.e.SOUND_QUICK_ACCESS_PICKER_SOUND_CLICKED,
+        (h.default.track(p.HAw.PREMIUM_UPSELL_VIEWED, {
+            type: T.e.SOUND_QUICK_ACCESS_PICKER_SOUND_CLICKED,
             is_external: !0,
-            location_section: f.JJy.SOUNDBOARD_SOUND_PICKER_UPSELL,
-            location_stack: N,
-            sku_id: I.Ay.getSkuIdForPremiumType(p.PremiumTypes.TIER_2),
+            location_section: p.JJy.SOUNDBOARD_SOUND_PICKER_UPSELL,
+            location_stack: C,
+            sku_id: f.Ay.getSkuIdForPremiumType(T.PremiumTypes.TIER_2),
+            voice_guild_id: A.A.getGuildId() ?? null,
         }),
-            (0, c.sq)(f.U7l.PREMIUM_UPSELL_VIEWED, N, () => (0, u.uq)(p.e.SOUND_QUICK_ACCESS_PICKER_SOUND_CLICKED)));
+            (0, c.sq)(p.U7l.PREMIUM_UPSELL_VIEWED, C, () => (0, u.uq)(T.e.SOUND_QUICK_ACCESS_PICKER_SOUND_CLICKED)));
     });
-    let C = (0, r.useCallback)(() => {
-        (A.default.track(f.HAw.PREMIUM_PROMOTION_OPENED, {
-            location_section: f.JJy.SOUNDBOARD_SOUND_PICKER_UPSELL,
-            location_object: f.ZSU.NAVIGATION_LINK,
+    let O = (0, r.useCallback)(() => {
+        (h.default.track(p.HAw.PREMIUM_PROMOTION_OPENED, {
+            location_section: p.JJy.SOUNDBOARD_SOUND_PICKER_UPSELL,
+            location_object: p.ZSU.NAVIGATION_LINK,
         }),
             (0, d.A)(),
             t(),
-            (0, E.pX)(f.BVt.APPLICATION_STORE));
+            (0, E.pX)(p.BVt.APPLICATION_STORE));
     }, [t]);
     return (0, i.jsx)(o.f5, {
-        value: N,
+        value: C,
         children: (0, i.jsx)(_.A, {
-            title: T.intl.string(T.t.jGDYF0),
-            subtitle: T.intl.string(T.t["grL/hg"]),
-            graphic: { type: "video", src: S, loop: !0, loopAt: 5 },
+            title: g.intl.string(g.t.jGDYF0),
+            subtitle: g.intl.string(g.t["grL/hg"]),
+            graphic: { type: "video", src: N, loop: !0, loopAt: 5 },
             gradientColor: "nitro-green",
-            secondaryCTA: T.intl.string(T.t.ZnqyZ2),
-            onSecondaryClick: C,
+            secondaryCTA: g.intl.string(g.t.ZnqyZ2),
+            onSecondaryClick: O,
             onClose: t,
             ...a,
         }),
     });
 }
-function N(e) {
+function C(e) {
     (0, a.openModalLazy)(async () => {
         let { default: t } = await Promise.resolve().then(n.bind(n, 368309));
         return (n) => (0, i.jsx)(t, { ...n, analyticsLocations: e });

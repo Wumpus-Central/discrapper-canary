@@ -1,4 +1,4 @@
-s.d(e, { A: () => P });
+s.d(n, { A: () => D });
 var i = s(477900),
     l = s(582128),
     a = s(503698),
@@ -13,200 +13,202 @@ var i = s(477900),
     L = s(688810),
     _ = s(611371),
     p = s(944304),
-    x = s(174459),
-    h = s(158045),
-    A = s(10392),
-    g = s(82498),
-    N = s(286320),
-    f = s(724651),
-    j = s(732280),
-    M = s(725807),
-    T = s(511484),
-    k = s(811611),
-    I = s(579245),
-    S = s(778712),
+    x = s(763827),
+    A = s(174459),
+    g = s(158045),
+    h = s(10392),
+    N = s(82498),
+    f = s(286320),
+    j = s(724651),
+    M = s(732280),
+    T = s(725807),
+    k = s(511484),
+    I = s(811611),
+    S = s(579245),
+    v = s(778712),
     b = s(375708),
-    v = s(135916);
-function C(n) {
-    let { affinities: e, className: s } = n,
+    C = s(135916);
+function U(e) {
+    let { affinities: n, className: s } = e,
         a = l.useMemo(() => {
-            if (e.length > 1) {
-                var n;
+            if (n.length > 1) {
+                var e;
                 return b.intl.formatToPlainString(b.t.HaVk0X, {
-                    username: null != (n = e[0]).globalName ? n.globalName : n.username,
-                    numFriends: e.length - 1,
+                    username: null != (e = n[0]).globalName ? e.globalName : e.username,
+                    numFriends: n.length - 1,
                 });
             }
             return "";
-        }, [e]);
-    if (e.length <= 1) return null;
-    let r = e.map((n, s) => (0, i.jsx)(I.n, { affinity: n, applyMask: s !== e.length - 1, size: S._3.SIZE_20 }, n.id));
+        }, [n]);
+    if (n.length <= 1) return null;
+    let r = n.map((e, s) => (0, i.jsx)(S.n, { affinity: e, applyMask: s !== n.length - 1, size: v._3.SIZE_20 }, e.id));
     return (0, i.jsxs)("div", {
-        className: t()(v.kL, s),
+        className: t()(C.kL, s),
         children: [
-            (0, i.jsx)("div", { className: v.zc, children: r }),
+            (0, i.jsx)("div", { className: C.zc, children: r }),
             (0, i.jsx)("div", {
-                className: v.FS,
+                className: C.FS,
                 children: (0, i.jsx)(u.E, { variant: "text-sm/medium", children: a }),
             }),
         ],
     });
 }
-var U = s(202541),
-    O = s(652215),
-    R = s(777133);
-function P(n) {
+var O = s(202541),
+    R = s(652215),
+    P = s(777133);
+function D(e) {
     let {
-            title: e,
+            title: n,
             type: s,
             guildBoostProps: a,
-            analyticsSource: I,
-            analyticsLocation: S,
-            body: v,
-            context: P,
-            glowUp: D,
-            modalClassName: y,
-            modalContentClassName: $,
-            artContainerClassName: w,
-            artClassName: z,
-            headerClassName: V,
-            bodyClassName: F,
-            transitionState: H,
-            onClose: Q,
-            onSubscribeClick: G,
-            onSubscribeFinish: q,
-            onSecondaryClick: W,
-            secondaryCTA: X,
-            secondaryCTAClassName: B,
-            subscribeButtonText: J,
-            showNewBadge: Y = !1,
-            showBetaBadge: Z = !1,
-            enableArtBoxShadow: K = !0,
-            subscriptionTier: nn = U.pe.TIER_2,
-            isLoading: ne = !1,
-            hideBackButton: ns,
-            backButtonText: ni,
-            showEnhancedUpsell: nl,
-            useSubscribeButtonGradient: na,
-            subscribeButtonClassname: nt,
-            hidePremiumOfferUpsell: nr,
-            children: nc,
-            LeadingComponent: no,
-            backgroundElements: nd,
-            smallText: nu = !1,
-            footerClassName: nm,
-            ...nE
-        } = n,
-        nL = null != a,
-        n_ = (0, j.V)(),
-        np = (0, f.O)(),
-        nx = !nr && (n_?.subscriptionTrial?.skuId === nn || (0, T.U9)(np, nn)) && !nL,
-        { analyticsLocations: nh } = (0, L.Ay)(E.A.PREMIUM_UPSELL_MODAL),
-        nA = { analyticsLocation: S, analyticsLocations: nh, analyticsSource: I, guildBoostProps: a, type: s },
-        ng = l.useRef(nA);
+            analyticsSource: S,
+            analyticsLocation: v,
+            body: C,
+            context: D,
+            glowUp: y,
+            modalClassName: $,
+            modalContentClassName: w,
+            artContainerClassName: z,
+            artClassName: V,
+            headerClassName: F,
+            bodyClassName: H,
+            transitionState: Q,
+            onClose: G,
+            onSubscribeClick: q,
+            onSubscribeFinish: W,
+            onSecondaryClick: X,
+            secondaryCTA: B,
+            secondaryCTAClassName: J,
+            subscribeButtonText: Y,
+            showNewBadge: Z = !1,
+            showBetaBadge: K = !1,
+            enableArtBoxShadow: ee = !0,
+            subscriptionTier: en = O.pe.TIER_2,
+            isLoading: es = !1,
+            hideBackButton: ei,
+            backButtonText: el,
+            showEnhancedUpsell: ea,
+            useSubscribeButtonGradient: et,
+            subscribeButtonClassname: er,
+            hidePremiumOfferUpsell: ec,
+            children: eo,
+            LeadingComponent: ed,
+            backgroundElements: eu,
+            smallText: em = !1,
+            footerClassName: eE,
+            ...eL
+        } = e,
+        e_ = null != a,
+        ep = (0, M.V)(),
+        ex = (0, j.O)(),
+        eA = !ec && (ep?.subscriptionTrial?.skuId === en || (0, k.U9)(ex, en)) && !e_,
+        { analyticsLocations: eg } = (0, L.Ay)(E.A.PREMIUM_UPSELL_MODAL),
+        eh = { analyticsLocation: v, analyticsLocations: eg, analyticsSource: S, guildBoostProps: a, type: s },
+        eN = l.useRef(eh);
     (l.useEffect(() => {
-        ng.current = nA;
+        eN.current = eh;
     }),
         l.useEffect(() => {
-            if (ne) return;
+            if (es) return;
             let {
-                analyticsLocation: n,
-                analyticsLocations: e,
+                analyticsLocation: e,
+                analyticsLocations: n,
                 analyticsSource: s,
                 guildBoostProps: i,
                 type: l,
-            } = ng.current;
-            nL
-                ? x.default.track(O.HAw.PREMIUM_GUILD_UPSELL_VIEWED, {
+            } = eN.current;
+            e_
+                ? A.default.track(R.HAw.PREMIUM_GUILD_UPSELL_VIEWED, {
                       type: `${l} - Tier ${i?.boostedGuildTier}`,
                       guild_id: i?.guild.id,
                       channel_id: i?.channelId,
-                      location: n,
-                      location_stack: e,
+                      location: e,
+                      location_stack: n,
                   })
-                : (x.default.track(O.HAw.PREMIUM_UPSELL_VIEWED, {
+                : (A.default.track(R.HAw.PREMIUM_UPSELL_VIEWED, {
                       type: l,
                       source: s,
-                      location: n,
-                      location_stack: e,
-                      sku_id: (0, h.mH)(nn),
+                      location: e,
+                      location_stack: n,
+                      sku_id: (0, g.mH)(en),
+                      voice_guild_id: x.A.getGuildId() ?? null,
                   }),
-                  (0, A.sq)(O.U7l.PREMIUM_UPSELL_VIEWED, e, () => (0, g.uq)(l)));
-        }, [nL, nn, ne]));
-    let nN = (0, N.b)(),
-        nf =
-            nN.length > 1 &&
-            (function (n) {
-                switch (n) {
-                    case U.e.ANIMATED_AVATAR_MODAL_UPSELL:
-                    case U.e.ANIMATED_BANNER_MODAL_UPSELL:
-                    case U.e.PROFILE_EFFECT_MODAL_UPSELL:
-                    case U.e.AVATAR_DECORATION_MODAL_UPSELL:
-                    case U.e.FOR_LATER_MODAL_UPSELL:
+                  (0, h.sq)(R.U7l.PREMIUM_UPSELL_VIEWED, n, () => (0, N.uq)(l)));
+        }, [e_, en, es]));
+    let ef = (0, f.b)(),
+        ej =
+            ef.length > 1 &&
+            (function (e) {
+                switch (e) {
+                    case O.e.ANIMATED_AVATAR_MODAL_UPSELL:
+                    case O.e.ANIMATED_BANNER_MODAL_UPSELL:
+                    case O.e.PROFILE_EFFECT_MODAL_UPSELL:
+                    case O.e.AVATAR_DECORATION_MODAL_UPSELL:
+                    case O.e.FOR_LATER_MODAL_UPSELL:
                         return !0;
                     default:
                         return !1;
                 }
             })(s),
-        nj = K ? t()(R.JS, R.OV, w) : t()(R.JS, w),
-        nM = null;
+        eM = ee ? t()(P.JS, P.OV, z) : t()(P.JS, z),
+        eT = null;
     return (
-        null != nE.artURL
-            ? (nM = (0, i.jsx)("img", { className: t()(z, R.Qw), alt: "", src: nE.artURL }))
-            : null != nE.artElement && (nM = nE.artElement),
+        null != eL.artURL
+            ? (eT = (0, i.jsx)("img", { className: t()(V, P.Qw), alt: "", src: eL.artURL }))
+            : null != eL.artElement && (eT = eL.artElement),
         (0, i.jsxs)(c.EO, {
             "data-migration-pending": !0,
-            className: t()(R.zr, !nx && y),
-            "aria-label": e,
-            transitionState: H,
+            className: t()(P.zr, !eA && $),
+            "aria-label": n,
+            transitionState: Q,
             parentComponent: "PremiumUpsellModal",
             children: [
-                null != nM &&
+                null != eT &&
                     (0, i.jsxs)("div", {
-                        className: nj,
+                        className: eM,
                         children: [
-                            nM,
-                            Y
-                                ? (0, i.jsx)("img", { className: R.CI, alt: "", src: "/assets/4fa3a10f129d5e31.png" })
+                            eT,
+                            Z
+                                ? (0, i.jsx)("img", { className: P.CI, alt: "", src: "/assets/4fa3a10f129d5e31.png" })
                                 : null,
                         ],
                     }),
                 (0, i.jsx)(c.$m, {
                     "data-migration-pending": !0,
                     scrollbarType: "none",
-                    className: t()(nl ? R.es : R.Qs, !nx && $),
-                    children: ne
+                    className: t()(ea ? P.es : P.Qs, !eA && w),
+                    children: es
                         ? (0, i.jsx)(o.y, {})
-                        : nx
-                          ? (0, i.jsx)(k.Ay, {
-                                onClose: Q,
+                        : eA
+                          ? (0, i.jsx)(I.Ay, {
+                                onClose: G,
                                 type: s,
-                                subscriptionTier: n_?.subscriptionTrial?.skuId ?? U.pe.TIER_2,
-                                headingText: e,
-                                context: P,
-                                analyticsLocationObject: S,
-                                discountOffer: np,
-                                trialOffer: n_,
-                                children: D,
+                                subscriptionTier: ep?.subscriptionTrial?.skuId ?? O.pe.TIER_2,
+                                headingText: n,
+                                context: D,
+                                analyticsLocationObject: v,
+                                discountOffer: ex,
+                                trialOffer: ep,
+                                children: y,
                             })
                           : (0, i.jsxs)("div", {
-                                className: R.hQ,
+                                className: P.hQ,
                                 children: [
-                                    no,
+                                    ed,
                                     (0, i.jsxs)("div", {
-                                        className: R.kQ,
+                                        className: P.kQ,
                                         children: [
                                             (0, i.jsxs)(d.D, {
-                                                className: t()(R.wx, { [R.k]: nl }, V),
+                                                className: t()(P.wx, { [P.k]: ea }, F),
                                                 variant: "heading-xl/bold",
-                                                children: [e, Z ? (0, i.jsx)(_.A, { className: R.TN }) : null],
+                                                children: [n, K ? (0, i.jsx)(_.A, { className: P.TN }) : null],
                                             }),
-                                            nf ? (0, i.jsx)(C, { affinities: nN }) : void 0,
-                                            nc,
+                                            ej ? (0, i.jsx)(U, { affinities: ef }) : void 0,
+                                            eo,
                                             (0, i.jsx)(u.E, {
-                                                variant: nu ? "text-sm/normal" : "text-md/normal",
-                                                className: t()(F, R.uI),
-                                                children: v,
+                                                variant: em ? "text-sm/normal" : "text-md/normal",
+                                                className: t()(H, P.uI),
+                                                children: C,
                                             }),
                                         ],
                                     }),
@@ -215,66 +217,66 @@ function P(n) {
                 }),
                 (0, i.jsxs)(c.jl, {
                     "data-migration-pending": !0,
-                    className: t()(R.qr, nm, { [R.I$]: nl }),
+                    className: t()(P.qr, eE, { [P.I$]: ea }),
                     children: [
                         (0, i.jsxs)("div", {
-                            className: t()(R.E3, { [R.Q_]: nl }),
+                            className: t()(P.E3, { [P.Q_]: ea }),
                             children: [
-                                null != X
+                                null != B
                                     ? (0, i.jsx)(r.$n, {
                                           "data-migration-pending": !0,
-                                          className: t()(R.Dc, B, { [R.HZ]: nl }),
-                                          onClick: W,
+                                          className: t()(P.Dc, J, { [P.HZ]: ea }),
+                                          onClick: X,
                                           size: r.$n.Sizes.SMALL,
-                                          color: nl ? r.$n.Colors.CUSTOM : r.$n.Colors.PRIMARY,
+                                          color: ea ? r.$n.Colors.CUSTOM : r.$n.Colors.PRIMARY,
                                           look: r.$n.Looks.LINK,
-                                          children: X,
+                                          children: B,
                                       })
                                     : null,
                                 (function () {
-                                    if (nL)
-                                        return (0, i.jsx)(p.A, { analyticsLocation: S, guild: a.guild, onClose: Q });
-                                    let n = nl ? b.intl.string(b.t.pj0XBN) : void 0;
+                                    if (e_)
+                                        return (0, i.jsx)(p.A, { analyticsLocation: v, guild: a.guild, onClose: G });
+                                    let e = ea ? b.intl.string(b.t.pj0XBN) : void 0;
                                     return (
-                                        nx &&
-                                            (null != n_
-                                                ? (n = (0, h.FY)({
-                                                      intervalType: n_?.subscriptionTrial?.interval,
-                                                      intervalCount: n_?.subscriptionTrial?.intervalCount,
+                                        eA &&
+                                            (null != ep
+                                                ? (e = (0, g.FY)({
+                                                      intervalType: ep?.subscriptionTrial?.interval,
+                                                      intervalCount: ep?.subscriptionTrial?.intervalCount,
                                                   }))
-                                                : null != np &&
-                                                  (n = b.intl.formatToPlainString(b.t.bkQ4bH, {
-                                                      percent: np.discount.amount,
+                                                : null != ex &&
+                                                  (e = b.intl.formatToPlainString(b.t.bkQ4bH, {
+                                                      percent: ex.discount.amount,
                                                   }))),
-                                        (0, i.jsx)(M.A, {
-                                            className: nt,
-                                            showGradient: nl || na,
-                                            premiumModalAnalyticsLocation: S,
-                                            subscriptionTier: nn,
+                                        (0, i.jsx)(T.A, {
+                                            className: er,
+                                            showGradient: ea || et,
+                                            premiumModalAnalyticsLocation: v,
+                                            subscriptionTier: en,
                                             size: r.$n.Sizes.SMALL,
-                                            color: nl || na ? r.$n.Colors.CUSTOM : r.$n.Colors.GREEN,
+                                            color: ea || et ? r.$n.Colors.CUSTOM : r.$n.Colors.GREEN,
                                             onClick: () => {
-                                                (G?.(), Q());
+                                                (q?.(), G());
                                             },
-                                            onSubscribeModalClose: q,
-                                            textOptions: { textOverride: J ?? n },
+                                            onSubscribeModalClose: W,
+                                            textOptions: { textOverride: Y ?? e },
                                         })
                                     );
                                 })(),
                             ],
                         }),
-                        !ns &&
-                            !nl &&
+                        !ei &&
+                            !ea &&
                             (0, i.jsx)(m.$, {
                                 variant: "secondary",
                                 size: "sm",
-                                text: null != ni ? ni : b.intl.string(b.t["13/7kX"]),
-                                onClick: Q,
+                                text: null != el ? el : b.intl.string(b.t["13/7kX"]),
+                                onClick: G,
                             }),
                     ],
                 }),
-                nl ? (0, i.jsx)(c.s_, { "data-migration-pending": !0, onClick: Q, className: R.b }) : null,
-                nd,
+                ea ? (0, i.jsx)(c.s_, { "data-migration-pending": !0, onClick: G, className: P.b }) : null,
+                eu,
             ],
         })
     );
