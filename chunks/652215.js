@@ -3788,6 +3788,7 @@ var rb =
         (ew.QUEST_APP_STORE_OVERLAY_CLOSED = "quest_app_store_overlay_closed"),
         (ew.QUEST_APP_STORE_OVERLAY_RETURNED = "quest_app_store_overlay_returned"),
         (ew.QUEST_APP_STORE_OVERLAY_BACKGROUNDED = "quest_app_store_overlay_backgrounded"),
+        (ew.QUEST_APP_STORE_OVERLAY_CAROUSEL_SCROLL = "quest_app_store_overlay_carousel_scroll"),
         (ew.LIBDISCORE_SLOW_TIMERS = "libdiscore_slow_timers"),
         (ew.REGISTER_INPUT_FOCUS = "register_input_focus"),
         (ew.REGISTER_INPUT_BLUR = "register_input_blur"),

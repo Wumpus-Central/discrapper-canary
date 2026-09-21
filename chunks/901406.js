@@ -122,10 +122,11 @@ function k(e) {
         inlineStoreParams: i,
         trackOverlayEvent: r,
         trackOverlaySurfaceClick: s,
-        getIosAttribution: o,
-        allowExternalOpen: u = !0,
+        appStoreOverlayCarouselScrollContext: o,
+        getIosAttribution: u,
+        allowExternalOpen: l = !0,
     } = e;
-    return (I.OO.getConfig({ location: "quest_open_game_link" }).enabled, u && (0, a.A)(t), Promise.resolve(!1));
+    return (I.OO.getConfig({ location: "quest_open_game_link" }).enabled, l && (0, a.A)(t), Promise.resolve(!1));
 }
 function M(e, t) {
     let n,
@@ -191,6 +192,7 @@ function M(e, t) {
                     overlaySurface: o,
                 }),
             trackOverlaySurfaceClick: (n) => (0, m.hR)({ questId: e.id, trackingCtx: t, overlaySurface: n }),
+            appStoreOverlayCarouselScrollContext: { questId: e.id },
             getIosAttribution: null != A && null != f ? () => (0, C.FW)({ impressionId: f }) : void 0,
         }));
 }
@@ -246,6 +248,7 @@ function D(e, t) {
                       }),
                   trackOverlaySurfaceClick: (e) =>
                       (0, m.jk)({ adContentId: i, adCreativeType: r, trackingCtx: t, overlaySurface: e }),
+                  appStoreOverlayCarouselScrollContext: { adContentId: i },
                   getIosAttribution: h,
               });
     })({ adContentId: n, adCreativeType: i, cta: r }, t, { preferExternalAppStore: !1 });
