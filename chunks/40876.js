@@ -638,7 +638,7 @@ let r = {
             "VOICE_CHANNEL_SELECT",
             "RUNNING_GAMES_CHANGE",
         ],
-        inlineRequire: () => n(282098).A,
+        inlineRequire: () => n(423341).A,
     },
     ClipsSignalManager: {
         actions: [

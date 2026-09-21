@@ -23,11 +23,11 @@ var n,
     _ = a(544576),
     S = a(157257),
     N = a(507868),
-    A = a(218467),
-    k = a(915725),
-    I = a(341923),
-    D = a(614584),
-    T = a(282098),
+    A = a(915725),
+    k = a(341923),
+    I = a(614584),
+    D = a(423341),
+    T = a(574206),
     O = a(564973),
     R = a(227628),
     w = a(468550);
@@ -126,7 +126,7 @@ function W() {
         i = l?.id,
         s = (0, d.bG)([N.A], () => N.A.getCapabilities(i), [i]),
         o = (0, d.bG)([N.A], () => null != i && N.A.getGameCapabilities().has(i), [i]),
-        c = (0, I.GZ)(i);
+        c = (0, k.GZ)(i);
     return (0, r.jsxs)(u.n, {
         label: "Autoclipping Game Capabilities",
         children: [
@@ -135,7 +135,7 @@ function W() {
                 description:
                     "Staff normally get autoclipping for every game. Turn this on to be treated as a regular user, so autoclipping follows the server capabilities map. Resets to off each time Discord launches.",
                 checked: e,
-                onChange: D.jE,
+                onChange: I.jE,
             }),
             (0, r.jsxs)(p.E, {
                 variant: "text-md/normal",
@@ -185,7 +185,7 @@ function W() {
     });
 }
 function z(e, t) {
-    let a = new A.k(crypto.randomUUID(), e);
+    let a = new T.k(e);
     for (let e of t) a.recordSavedClip(e);
     return (a.end(), a);
 }
@@ -194,12 +194,12 @@ function H() {
         t = (0, w.sY)((e) => e.isOpen),
         [a, n] = o.useState(3),
         l = o.useCallback((e) => {
-            let t = Object.values(k.Ay.getClips()),
+            let t = Object.values(A.Ay.getClips()),
                 a = t.find((e) => null != e.applicationId);
             if (a?.applicationId == null) return;
             let n = a.applicationId,
                 l = t.filter((e) => e.applicationId === n).slice(0, e);
-            (k.Ay.devSetLastClipsSession(z(n, l)), (0, w.M8)(n));
+            (A.Ay.devSetLastClipsSession(z(n, l)), (0, w.M8)(n));
         }, []),
         i = o.useCallback(
             (e) => {
@@ -208,7 +208,7 @@ function H() {
             [l, a],
         ),
         s = o.useCallback(() => {
-            let e = Object.values(k.Ay.getClips()),
+            let e = Object.values(A.Ay.getClips()),
                 t = (0, C.A)(E.Ay, S.A),
                 a =
                     (t?.id != null ? e.find((e) => e.applicationId === t.id) : void 0) ??
@@ -216,7 +216,7 @@ function H() {
             if (a?.applicationId == null) return;
             let n = a.applicationId,
                 l = e.filter((e) => e.applicationId === n).slice(0, 10);
-            (k.Ay.devSetLastClipsSession(z(n, l)), (0, R.w9)());
+            (A.Ay.devSetLastClipsSession(z(n, l)), (0, R.w9)());
         }, []),
         _ = o.useCallback(
             (e) => {
@@ -230,11 +230,11 @@ function H() {
             },
             [l, t],
         ),
-        [A, I] = o.useState(B.rb.KILL),
+        [k, T] = o.useState(B.rb.KILL),
         [O, M] = o.useState(1),
         [L, P] = o.useState(""),
         [U, F] = o.useState(""),
-        V = (0, d.bG)([k.Ay], () => k.Ay.isAutoStashEnabled()),
+        V = (0, d.bG)([A.Ay], () => A.Ay.isAutoStashEnabled()),
         H = o.useCallback((e) => {
             e
                 ? (0, c.A)({
@@ -244,10 +244,10 @@ function H() {
                       confirmText: "Enable",
                       variant: "primary",
                       onConfirm: () => {
-                          D.mN(!0);
+                          I.mN(!0);
                       },
                   })
-                : D.mN(!1);
+                : I.mN(!1);
         }, []),
         [K, Y] = o.useState([]),
         [q, J] = o.useState(void 0),
@@ -271,8 +271,8 @@ function H() {
                 }
             );
     }, [Q]);
-    let Z = (0, d.bG)([k.Ay], () => k.Ay.getState().clipsSettings.enableAutoclipping),
-        ee = (0, d.bG)([k.Ay], () => k.Ay.getEnableAutoclipping());
+    let Z = (0, d.bG)([A.Ay], () => A.Ay.getState().clipsSettings.enableAutoclipping),
+        ee = (0, d.bG)([A.Ay], () => A.Ay.getEnableAutoclipping());
     return (0, r.jsx)(g.Ip, {
         children: (0, r.jsxs)(v.l, {
             children: [
@@ -280,11 +280,11 @@ function H() {
                     label: "Send Test Signals",
                     children: (0, r.jsxs)(h.M, {
                         children: [
-                            (0, r.jsx)(x.$, { text: "Manual", onClick: () => D.Ts({ type: B.Gy.MANUAL }) }),
+                            (0, r.jsx)(x.$, { text: "Manual", onClick: () => I.Ts({ type: B.Gy.MANUAL }) }),
                             (0, r.jsx)(x.$, {
                                 text: "Distributed",
                                 onClick: () =>
-                                    D.Ts({
+                                    I.Ts({
                                         type: B.Gy.DISTRIBUTED,
                                         remoteTriggerUserId: "123",
                                         remoteTriggerClipId: "456",
@@ -292,9 +292,9 @@ function H() {
                             }),
                             (0, r.jsx)(x.$, {
                                 text: "Shouting",
-                                onClick: () => D.Ts({ type: B.Gy.SHOUTING, userId: "123", confidence: 1 }),
+                                onClick: () => I.Ts({ type: B.Gy.SHOUTING, userId: "123", confidence: 1 }),
                             }),
-                            (0, r.jsx)(x.$, { text: "Laughter", onClick: () => T.A.debugCreateRankableLaughterClip() }),
+                            (0, r.jsx)(x.$, { text: "Laughter", onClick: () => D.A.debugCreateRankableLaughterClip() }),
                         ],
                     }),
                 }),
@@ -305,8 +305,8 @@ function H() {
                             children: [
                                 (0, r.jsx)(j.l, {
                                     label: "Event Type",
-                                    value: A,
-                                    onSelectionChange: (e) => I(e),
+                                    value: k,
+                                    onSelectionChange: (e) => T(e),
                                     options: [
                                         { id: "kill", label: "Kill", value: B.rb.KILL },
                                         { id: "multikill", label: "Multikill", value: B.rb.MULTIKILL },
@@ -351,7 +351,7 @@ function H() {
                         (0, r.jsx)(x.$, {
                             text: "Create Game Event",
                             onClick: () => {
-                                D.Ts({ type: B.Gy.GAME_EVENT, eventType: A, importance: O, title: L, description: U });
+                                I.Ts({ type: B.Gy.GAME_EVENT, eventType: k, importance: O, title: L, description: U });
                             },
                         }),
                         (0, r.jsx)(m.d, {
@@ -376,7 +376,7 @@ function H() {
                                 (0, r.jsx)(x.$, {
                                     text: "re-run ranking",
                                     onClick: () => {
-                                        T.i.debugRerunRanking(q).catch((e) => {
+                                        D.i.debugRerunRanking(q).catch((e) => {
                                             B.nx.error("re-run ranking failed", e);
                                         });
                                     },
@@ -384,7 +384,7 @@ function H() {
                                 (0, r.jsx)(x.$, {
                                     text: "run automontage",
                                     onClick: () => {
-                                        T.i.debugRunAutoMontage(q).catch((e) => {
+                                        D.i.debugRunAutoMontage(q).catch((e) => {
                                             B.nx.error("run automontage failed", e);
                                         });
                                     },
@@ -450,7 +450,7 @@ function H() {
                                 (0, r.jsx)(x.$, {
                                     text: "unset autoclipping default",
                                     onClick: () => {
-                                        D.uL(void 0, !1);
+                                        I.uL(void 0, !1);
                                     },
                                 }),
                             ],
