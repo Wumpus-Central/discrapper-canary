@@ -107,6 +107,7 @@ var B = (((i = {}).CTAS = "ctas"), (i.CONTENT_TYPE = "content_type"), i),
         (r.FAE_FAILED = "fae_failed"),
         (r.ID_FAILED = "id_failed"),
         (r.UNDERAGE = "underage"),
+        (r.MANUAL_REVIEW_SUBMITTED = "manual_review_submitted"),
         r);
 function H(e, t) {
     let n = I.A.getMessage(e, t);

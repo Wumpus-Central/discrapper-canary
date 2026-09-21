@@ -1,48 +1,54 @@
-n.d(t, { Vq: () => p, a6: () => f });
+n.d(t, { Vq: () => g, a6: () => p, xf: () => T });
 var i = n(636537),
-    r = n(381689),
-    a = n(393033),
-    s = n(280450),
-    l = n(927813),
-    o = n(379257),
-    d = n(652215),
-    c = n(835002);
-let u = l.A.Millis.MINUTE;
-async function _() {
-    return (await i.Bo.post({ url: d.Rsh.AGE_VERIFICATION_MANUAL_REVIEW, rejectWithError: !0 })).body;
-}
+    r = n(228366),
+    a = n(381689),
+    s = n(393033),
+    l = n(280450),
+    o = n(927813),
+    d = n(379257),
+    c = n(652215),
+    u = n(835002);
+let _ = o.A.Millis.MINUTE;
 async function E() {
-    let e = s.default.getSuspendedUserToken();
+    return (await i.Bo.post({ url: c.Rsh.AGE_VERIFICATION_MANUAL_REVIEW, rejectWithError: !0 })).body;
+}
+async function A() {
+    let e = l.default.getSuspendedUserToken();
     return (
         await i.Bo.post({
-            url: d.Rsh.AGE_VERIFICATION_SUSPENDED_MANUAL_REVIEW,
+            url: c.Rsh.AGE_VERIFICATION_SUSPENDED_MANUAL_REVIEW,
             body: { token: e },
             rejectWithError: !0,
         })
     ).body;
 }
-let A = !1,
-    h = null,
-    I = 0;
-function f() {
-    h = null;
+let h = !1,
+    I = null,
+    f = 0;
+function p() {
+    I = null;
 }
-async function p() {
-    if (!A) {
-        A = !0;
+function T() {
+    (p(), r.h.dispatch({ type: "AGE_VERIFICATION_METHODS_V2_INVALIDATE" }));
+}
+async function g() {
+    if (!h) {
+        h = !0;
         try {
-            let e = h;
+            let e = I;
             if (
-                ((null == e || Date.now() - I >= u) && ((h = e = await ((0, a.qn)() ? E() : _())), (I = Date.now())),
+                ((null == e || Date.now() - f >= _) && ((I = e = await ((0, s.qn)() ? A() : E())), (f = Date.now())),
                 "submitted" === e.status)
             )
-                return void o.A.showManualReviewPendingModal();
-            if ("decided_teen" === e.status) return void o.A.showManualReviewDecidedTeenModal(e.teen_age_range);
-            o.A.showManualReviewWebview(e.verification_webview_url);
+                return void d.A.showManualReviewPendingModal();
+            if ("decided_teen" === e.status) return void d.A.showManualReviewDecidedTeenModal(e.teen_age_range);
+            d.A.showManualReviewWebview(e.verification_webview_url, () => {
+                (0, s.qn)() && T();
+            });
         } catch {
-            r.A.showFailedToast(c.OB.TIGGER_PAWTECT_ERROR);
+            a.A.showFailedToast(u.OB.TIGGER_PAWTECT_ERROR);
         } finally {
-            A = !1;
+            h = !1;
         }
     }
 }

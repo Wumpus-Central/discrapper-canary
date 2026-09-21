@@ -75,6 +75,7 @@ let g = new T(a.h, {
         let { methods: t, footerMessage: n, outageBannerMessage: i } = e;
         ((o = t), (d = n), (c = i));
     },
+    AGE_VERIFICATION_METHODS_V2_INVALIDATE: f,
     INITIATE_AGE_VERIFICATION: f,
     CONNECTION_OPEN: function () {
         (!(function () {

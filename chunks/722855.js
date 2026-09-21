@@ -22,21 +22,21 @@ let S = new d.A("AgeVerificationManager");
 function N(e) {
     let { channelId: t, message: n } = e,
         i = A.A.getMessage(t, n.id);
-    if (i?.embeds?.[0]?.type === r.A.AGE_VERIFICATION_SYSTEM_NOTIFICATION) {
-        let e = i?.embeds?.[0]?.fields?.find((e) => e.rawName === p.uN.CONTENT_TYPE);
-        e?.rawValue === p.Wv.ERROR
+    if (i?.embeds?.[0]?.type !== r.A.AGE_VERIFICATION_SYSTEM_NOTIFICATION) return;
+    let a = i?.embeds?.[0]?.fields?.find((e) => e.rawName === p.uN.CONTENT_TYPE);
+    (a?.rawValue === p.Wv.MANUAL_REVIEW_SUBMITTED && (0, T.xf)(),
+        a?.rawValue === p.Wv.ERROR
             ? (_.A.showFailedToast(m.OB.TIGGER_PAWTECT_ERROR), (0, f.Vh)(f.oQ.ERROR))
-            : e?.rawValue === p.Wv.FAE_FAILED
+            : a?.rawValue === p.Wv.FAE_FAILED
               ? (_.A.showFailedToast(m.OB.AGE_VERIFICATION_FAE_FAILED), (0, f.Vh)(f.oQ.FAE_FAILED))
-              : e?.rawValue === p.Wv.ID_FAILED
+              : a?.rawValue === p.Wv.ID_FAILED
                 ? (_.A.showFailedToast(m.OB.AGE_VERIFICATION_ID_FAILED), (0, f.Vh)(f.oQ.ID_FAILED))
-                : e?.rawValue === p.Wv.UNDERAGE
+                : a?.rawValue === p.Wv.UNDERAGE
                   ? (_.A.showFailedToast(m.OB.AGE_VERIFICATION_UNDERAGE), (0, f.Vh)(f.oQ.UNDERAGE))
-                  : e?.rawValue === p.Wv.VERIFIED_ADULT
+                  : a?.rawValue === p.Wv.VERIFIED_ADULT
                     ? (_.A.showSuccessToast(m.OB.TIGGER_PAWTECT_VERIFIED), (0, f.Vh)(f.oQ.VERIFIED_ADULT))
-                    : e?.rawValue === p.Wv.VERIFIED_TEEN &&
-                      (_.A.showSuccessToast(m.OB.TIGGER_PAWTECT_VERIFIED), (0, f.Vh)(f.oQ.VERIFIED_TEEN));
-    }
+                    : a?.rawValue === p.Wv.VERIFIED_TEEN &&
+                      (_.A.showSuccessToast(m.OB.TIGGER_PAWTECT_VERIFIED), (0, f.Vh)(f.oQ.VERIFIED_TEEN)));
 }
 class C extends l.A {
     _previousAgeVerificationStatus = null;

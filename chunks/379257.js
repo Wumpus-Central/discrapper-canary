@@ -220,13 +220,14 @@ let C = {
                       { modalKey: T.NC, backdropStyle: g(r), Layer: l.Ay, onCloseCallback: t },
                   );
     },
-    showManualReviewWebview: function (e) {
+    showManualReviewWebview: function (e, t) {
         return S({
             webviewUrl: e,
             verificationVendorName: T.XM.K_ID,
             entryPoint: c.q1.MANUAL_REVIEW,
             shouldShowExpressiveModal: !0,
             onComplete: () => {},
+            onClose: t,
         });
     },
     showManualReviewDecidedTeenModal: function (e) {
