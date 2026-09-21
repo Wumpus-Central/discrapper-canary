@@ -1,5 +1,4 @@
 n.d(t, {
-    Jl: () => o,
     LP: () => E,
     NU: () => A,
     PS: () => _,
@@ -16,18 +15,14 @@ var i = n(508425),
 let a = [i.z.SOLID, i.z.GRADIENT, i.z.NEON, i.z.TOON, i.z.POP],
     s = [r.x.PLAYPEN_SANS, r.x.ORBITRON, r.x.NEW_ROCKER, r.x.KALAM],
     l = [i.z.GUMMY, i.z.PRISM],
-    o = [
-        1628845, 2417517, 1874155, 0xc32aff, 0xfc1965, 0xc6a615, 695675, 1027403, 747943, 0xa913e5, 0xda0149, 0xf93722,
-    ],
+    o = [2417517, 1874155, 0xc32aff, 0xda0149, 0xf93722, 0xc6a615],
     d = [
         [2797222, 16762e3],
-        [2535780, 9497343],
         [0xe45eff, 2522592],
-        [9452762, 2939534],
         [0xefb4aa, 0xe46ce2],
         [0xdf4232, 0xbd8fff],
+        [2535780, 9497343],
         [0xf5983c, 0xe55ae7],
-        [0xe4541e, 6674404],
     ].map((e) => ({ colors: e, name: "" })),
     c = [
         [0xe9a9d5, 0xa9ddf0, 0xb9a7ee, 0xb9eacb],
