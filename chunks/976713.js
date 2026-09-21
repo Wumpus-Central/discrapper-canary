@@ -27,6 +27,6 @@ function d(e) {
 function c(e, t) {
     let { model: l, thinking: i, fast: s } = e.main,
         o = t.find((e) => e.id === l)?.label ?? l,
-        u = `${o} \xb7 ${n.h[i] ?? i}`;
+        u = `${o} \xb7 ${n.hW[i] ?? i}`;
     return !0 === s ? `${u} \xb7 ${r.intl.string(a.default.qOoAsd)}` : u;
 }

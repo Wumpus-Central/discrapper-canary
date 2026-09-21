@@ -1440,6 +1440,7 @@ function tm(e) {
                     closed: f,
                     durationMs: p,
                     connectsDown: j.length > 0,
+                    tier: g.turn?.tier,
                 }),
                 j.map((e, l) => {
                     let a = null != e.task.helperMark ? e4(e.task.helperMark) : void 0,

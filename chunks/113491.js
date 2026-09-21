@@ -410,10 +410,10 @@ function T(e) {
         y = (0, x.EF)(t, l.main),
         k = v ? s.t : o._,
         w = a.useMemo(
-            () => l.main.map((e) => ({ id: e.id, label: e.label, value: e.id, description: p.o[e.provider] })),
+            () => l.main.map((e) => ({ id: e.id, label: e.label, value: e.id, description: p.oU[e.provider] })),
             [l.main],
         ),
-        N = a.useMemo(() => l.thinking.map((e) => ({ id: e, label: p.h[e] ?? e, value: e })), [l.thinking]);
+        N = a.useMemo(() => l.thinking.map((e) => ({ id: e, label: p.hW[e] ?? e, value: e })), [l.thinking]);
     function T(e) {
         return l.main.find((t) => t.id === e)?.supports_fast === !0;
     }
@@ -513,7 +513,7 @@ function T(e) {
                                             tag: "span",
                                             variant: "text-sm/medium",
                                             color: "text-subtle",
-                                            children: C.intl.string(S.default.c11EuO),
+                                            children: C.intl.string(S.default["5DOL2g"]),
                                         }),
                                         (0, n.jsx)(c.E, {
                                             tag: "span",

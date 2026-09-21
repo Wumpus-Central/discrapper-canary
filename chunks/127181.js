@@ -4,6 +4,12 @@ let a = [
         date: "2026-09-20",
         platforms: ["desktop", "mobile"],
         summary:
+            "Effort is now one three-tier dial that acts as a ceiling: pick Speedrun, Balanced, or Big Brain and everything your project runs stays at or under it.",
+    },
+    {
+        date: "2026-09-20",
+        platforms: ["desktop", "mobile"],
+        summary:
             "Apps that show people now get their real Discord avatars on the first build, and clicking one opens their profile card.",
     },
     {
