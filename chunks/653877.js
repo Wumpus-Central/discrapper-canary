@@ -23,4 +23,5 @@ e.exports = {
     hG: "skeletonText__81c60",
     Iz: "skeletonTitle__81c60",
     D_: "skeletonSubtext__81c60",
+    F4: "orbBalanceCounterText__81c60",
 };

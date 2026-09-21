@@ -34,9 +34,9 @@
 }
 
 .orbWalletPrimaryCardCloseButton__89f5f {
-    inset-inline-end: 0;
+    inset-inline-end: var(--space-4);
     position: absolute;
-    top: 0;
+    top: var(--space-4);
     --control-icon-only-background-hover: transparent;
     --control-icon-only-border-hover: transparent;
     --control-icon-only-icon-hover: var(--control-icon-only-icon-default)
@@ -61,4 +61,4 @@
     cursor: pointer
 }
 
-/*# sourceMappingURL=285558.7b51cbb195e9c060.css.map*/
+/*# sourceMappingURL=285558.4f8d18b8b9f54e9d.css.map*/
