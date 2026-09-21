@@ -46,7 +46,7 @@ function E(e) {
     let n = (0, s.bG)([A.A], () => A.A.getChannel(e), [e]);
     a()(null != n, "useNotificationSettingsItem: channel cannot be undefined");
     let t = (0, d.os)("StageChannelCallOverflowMenu"),
-        i = (0, c.Ay)(n),
+        i = (0, c.A)(n),
         l = (0, r.A)(n);
     return t ? i : l;
 }

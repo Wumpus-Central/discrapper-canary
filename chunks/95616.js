@@ -31,7 +31,7 @@ let k = (0, d.A)(
                 v = (0, h.A)(t),
                 M = (0, p.A)({ id: t.id, label: X.intl.string(X.t.gFHI3k) }),
                 O = (0, E.A)(t),
-                j = (0, u.Ay)(t),
+                j = (0, u.A)(t),
                 b = (0, C.os)("ReportToModChannelContextMenu");
             return (0, r.jsxs)(i.W, {
                 navId: "overlay-report-to-mod-channel-context",

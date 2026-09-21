@@ -1,4 +1,4 @@
-r.d(n, { default: () => y });
+r.d(n, { default: () => D });
 var i = r(477900);
 r(582128);
 var l = r(980707),
@@ -48,7 +48,7 @@ function V(e) {
         T = (0, M.A)(n),
         k = (0, o.A)({ id: n.id, label: b.intl.string(b.t.gFHI3k) }),
         v = (0, c.A)(n),
-        f = (0, U.Ay)(n),
+        f = (0, U.A)(n),
         Z = (0, C.os)("ChannelContextFavoritesMenu");
     return (0, i.jsxs)(l.W, {
         "data-menu-migrated-auto": !0,
@@ -87,15 +87,15 @@ function w(e) {
                 : null),
         V = (0, I.A)(r),
         w = (0, v.A)(r),
-        y = (0, f.A)(r, a),
-        D = (0, m.A)(r, a),
-        O = (0, T.A)(r, a),
-        W = (0, k.A)(r),
-        z = (0, o.A)({ id: r.id, label: b.intl.string(b.t.gFHI3k) }),
-        G = (0, c.A)(r),
-        q = (0, g.A)(r),
+        D = (0, f.A)(r, a),
+        O = (0, m.A)(r, a),
+        W = (0, T.A)(r, a),
+        z = (0, k.A)(r),
+        G = (0, o.A)({ id: r.id, label: b.intl.string(b.t.gFHI3k) }),
+        q = (0, c.A)(r),
+        y = (0, g.A)(r),
         B = (0, M.A)(r),
-        J = (0, U.Ay)(r),
+        J = (0, U.A)(r),
         K = (0, C.os)("ChannelContextMenuNormal");
     return (0, i.jsxs)(l.W, {
         "data-menu-migrated": !0,
@@ -106,17 +106,17 @@ function w(e) {
         children: [
             (0, i.jsx)(s.rX, { children: A }, "mark-as-read-or-favorite"),
             (0, i.jsx)(s.rX, { children: j }),
-            (0, i.jsxs)(s.rX, { children: [y, q, u, F, h] }, "channel-actions"),
+            (0, i.jsxs)(s.rX, { children: [D, y, u, F, h] }, "channel-actions"),
             (0, i.jsxs)(s.rX, { children: [V, K ? J : B] }, "notifications"),
             (0, i.jsx)(s.rX, { children: L }, "spoiler"),
-            (0, i.jsxs)(s.rX, { children: [w, D, O, W] }, "admin-actions"),
-            (0, i.jsx)(s.rX, { children: G }),
+            (0, i.jsxs)(s.rX, { children: [w, O, W, z] }, "admin-actions"),
+            (0, i.jsx)(s.rX, { children: q }),
             (0, i.jsx)(s.rX, { children: X }),
-            (0, i.jsx)(s.rX, { children: z }, "developer-actions"),
+            (0, i.jsx)(s.rX, { children: G }, "developer-actions"),
         ],
     });
 }
-let y = (0, d.A)(
+let D = (0, d.A)(
     (0, a.A)(
         function (e) {
             return (0, h.DZ)() ? (0, i.jsx)(V, { ...e }) : (0, i.jsx)(w, { ...e });

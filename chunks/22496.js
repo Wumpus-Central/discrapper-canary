@@ -42,13 +42,13 @@ let N = (0, a.A)(
             V = (0, A.C)(e),
             f = (0, j.A)(e),
             w = (0, b.A)(e, t),
-            y = (0, o.A)(e, t),
-            G = (0, C.A)(e, t, k.rbe.GUILD_TEXT),
-            H = (0, C.A)(e, t, k.rbe.GUILD_VOICE),
-            O = (0, X.A)(e),
+            G = (0, o.A)(e, t),
+            H = (0, C.A)(e, t, k.rbe.GUILD_TEXT),
+            O = (0, C.A)(e, t, k.rbe.GUILD_VOICE),
+            y = (0, X.A)(e),
             z = (0, d.A)({ id: e.id, label: x.intl.string(x.t.gFHI3k) }),
             F = (0, h.os)("ChannelTitleContextMenu"),
-            S = (0, E.Ay)(e);
+            S = (0, E.A)(e);
         return (0, r.jsxs)(i.W, {
             "data-menu-migrated-auto": !0,
             navId: "channel-context",
@@ -60,7 +60,7 @@ let N = (0, a.A)(
                 (0, r.jsx)(l.rX, { children: U }),
                 (0, r.jsx)(l.rX, { children: M }),
                 (0, r.jsxs)(l.rX, { children: [a ? D : F ? S : m, f] }),
-                (0, r.jsxs)(l.rX, { children: [w, v, y, G, H, O] }),
+                (0, r.jsxs)(l.rX, { children: [w, v, G, H, O, y] }),
                 (0, r.jsx)(l.rX, { children: V }),
                 (0, r.jsx)(l.rX, { children: z }),
             ],

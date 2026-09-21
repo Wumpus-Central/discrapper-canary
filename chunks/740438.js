@@ -108,7 +108,7 @@ function T(n) {
         O = (0, c.A)({ id: l.id, label: m.intl.string(m.t["2visC6"]) }),
         R = (0, k.A)(l),
         U = (0, g.os)("ChannelCategoryNormalMenu"),
-        Z = (0, N.Ay)(l);
+        Z = (0, N.A)(l);
     return (0, i.jsxs)(t.W, {
         "data-menu-migrated-auto": !0,
         navId: "channel-context",

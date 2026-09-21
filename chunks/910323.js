@@ -14,16 +14,22 @@ function A(i, t) {
               { message_notifications: o.orn.ALL_MESSAGES, flags: (0, S.md)(s, d.n3.UNREADS_ALL_MESSAGES) },
               N.fd.PresetAll,
           )
-        : t === a.N9.MENTIONS
+        : t === a.N9.HYBRID
           ? n.A.updateGuildNotificationSettings(
                 i,
-                { message_notifications: o.orn.ONLY_MENTIONS, flags: (0, S.md)(s, d.n3.UNREADS_ONLY_MENTIONS) },
-                N.fd.PresetMentions,
+                { message_notifications: o.orn.ONLY_MENTIONS, flags: (0, S.md)(s, d.n3.UNREADS_ALL_MESSAGES) },
+                N.fd.PresetHybrid,
             )
-          : t === a.N9.NOTHING &&
-            n.A.updateGuildNotificationSettings(
-                i,
-                { message_notifications: o.orn.NO_MESSAGES, flags: (0, S.md)(s, d.n3.UNREADS_ONLY_MENTIONS) },
-                N.fd.PresetNothing,
-            );
+          : t === a.N9.MENTIONS
+            ? n.A.updateGuildNotificationSettings(
+                  i,
+                  { message_notifications: o.orn.ONLY_MENTIONS, flags: (0, S.md)(s, d.n3.UNREADS_ONLY_MENTIONS) },
+                  N.fd.PresetMentions,
+              )
+            : t === a.N9.NOTHING &&
+              n.A.updateGuildNotificationSettings(
+                  i,
+                  { message_notifications: o.orn.NO_MESSAGES, flags: (0, S.md)(s, d.n3.UNREADS_ONLY_MENTIONS) },
+                  N.fd.PresetNothing,
+              );
 }

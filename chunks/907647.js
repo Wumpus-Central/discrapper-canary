@@ -31,7 +31,7 @@ let N = (0, l.A)(
                 k = (0, C.A)({ id: n.id, label: T.intl.string(T.t.gFHI3k) }),
                 M = (0, h.A)(n),
                 O = (0, u.A)(n),
-                b = (0, x.Ay)(n),
+                b = (0, x.A)(n),
                 f = (0, _.os)("ReportToModChannelContextMenu");
             return (0, t.jsxs)(i.W, {
                 "data-menu-migrated": !0,

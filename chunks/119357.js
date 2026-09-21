@@ -44,40 +44,40 @@ var T = e(475777),
     O = e(868548),
     Z = e(995102),
     M = e(288104),
-    y = e(661504),
-    H = e(969128),
-    Q = e(304694),
-    U = e(314116),
-    w = e(849736),
-    B = e(233993),
-    D = e(576705);
-function F(n, i) {
-    let e = (0, l.bG)([D.A], () => D.A.can(B.QY, n), [n]);
+    H = e(661504),
+    Q = e(969128),
+    U = e(304694),
+    w = e(314116),
+    B = e(849736),
+    D = e(233993),
+    F = e(576705);
+function R(n, i) {
+    let e = (0, l.bG)([F.A], () => F.A.can(D.QY, n), [n]);
     return null != i && e
         ? (0, t.jsx)(s.Dr, {
               id: "end-stage",
               label: I.intl.string(I.t.saZaRb),
               color: "danger",
               action: function () {
-                  (0, U.A)({
+                  (0, w.A)({
                       title: I.intl.string(I.t.gW9je1),
                       subtitle: I.intl.string(I.t.mT7jwN),
                       confirmText: I.intl.string(I.t.saZaRb),
-                      onConfirm: () => (0, w.OE)(n),
+                      onConfirm: () => (0, B.OE)(n),
                   });
               },
           })
         : null;
 }
 e(237984);
-var R = e(704543),
-    W = e(671483),
+var W = e(704543),
+    y = e(671483),
     z = e(217563),
     Y = e(367513),
     q = e(976860),
     J = e(652215);
 function K(n, i) {
-    return (0, l.bG)([D.A], () => D.A.can(J.xBc.CONNECT, n), [n]) && n.isGuildVocal()
+    return (0, l.bG)([F.A], () => F.A.can(J.xBc.CONNECT, n), [n]) && n.isGuildVocal()
         ? (0, t.jsx)(s.Dr, {
               id: "open-chat",
               label: I.intl.string(I.t.ZXxLQg),
@@ -95,20 +95,20 @@ function P(n) {
         X = (0, f.A)(i),
         p = (0, b.Qs)(i.id),
         v = (0, N.A)(p?.id, e, i),
-        E = F(i, o),
+        E = R(i, o),
         L = (0, x.C)(i),
         V = (0, C.A)(i),
         k = (0, j.A)(i),
         G = (0, g.A)(i),
         T = S(i),
-        H = (0, Z.A)(i),
-        U = (0, M.A)(i),
-        w = (0, y.Ay)(i),
-        B = (0, _.os)("ChannelListVoiceContextMenuFavorites"),
-        D = K(i, e),
-        R = (0, W.A)(i, e),
+        Q = (0, Z.A)(i),
+        w = (0, M.A)(i),
+        B = (0, H.A)(i),
+        D = (0, _.os)("ChannelListVoiceContextMenuFavorites"),
+        F = K(i, e),
+        W = (0, y.A)(i, e),
         z = (0, u.A)({ id: i.id, label: I.intl.string(I.t.gFHI3k) }),
-        Y = (0, Q.A)(i),
+        Y = (0, U.A)(i),
         q = (0, A.A)(i);
     return (0, t.jsxs)(r.W, {
         "data-menu-migrated": !0,
@@ -121,8 +121,8 @@ function P(n) {
             (0, t.jsx)(s.rX, { children: h }),
             (0, t.jsxs)(s.rX, { children: [k, G, V] }),
             (0, t.jsxs)(s.rX, { children: [q, X] }),
-            (0, t.jsxs)(s.rX, { children: [D, R, T, Y] }),
-            (0, t.jsxs)(s.rX, { children: [H, B ? w : U] }),
+            (0, t.jsxs)(s.rX, { children: [F, W, T, Y] }),
+            (0, t.jsxs)(s.rX, { children: [Q, D ? B : w] }),
             (0, t.jsx)(s.rX, { children: L }),
             (0, t.jsxs)(s.rX, { children: [z, null] }),
         ],
@@ -136,29 +136,29 @@ function $(n) {
         j = (0, f.A)(i),
         g = (0, b.Qs)(i.id),
         C = (0, N.A)(g?.id, e, i),
-        k = F(i, o),
+        k = R(i, o),
         G = (0, x.z)(i),
-        U = (0, x.C)(i),
-        w = S(i),
-        B = (0, M.A)(i),
-        D = (0, V.A)(i),
+        w = (0, x.C)(i),
+        B = S(i),
+        D = (0, M.A)(i),
+        F = (0, V.A)(i),
         Y = (0, T.A)(i, e, o),
         q = K(i, e),
-        J = (0, W.A)(i, e),
+        J = (0, y.A)(i, e),
         P = (0, z.A)(i, e.id),
         $ = (0, v.A)(i, e),
         nn = (0, E.A)(i, e),
         ni = (0, L.A)(i),
         ne = (0, u.A)({ id: i.id, label: I.intl.string(I.t.gFHI3k) }),
-        nt = (0, Q.A)(i),
+        nt = (0, U.A)(i),
         nl = (0, A.A)(i),
-        nr = (0, R.A)(i),
-        ns = (0, H.A)(i),
+        nr = (0, W.A)(i),
+        ns = (0, Q.A)(i),
         na = (0, p.A)(i),
         nd = (0, X.A)(i),
         nc = (0, Z.A)(i),
         nA = (0, _.os)("ChannelListVoiceContextMenuNormal"),
-        no = (0, y.Ay)(i);
+        no = (0, H.A)(i);
     return (0, t.jsxs)(r.W, {
         "data-menu-migrated": !0,
         navId: "channel-context",
@@ -170,10 +170,10 @@ function $(n) {
             (0, t.jsx)(s.rX, { children: h }, "mark-as-read-or-favorite"),
             (0, t.jsx)(s.rX, { children: G }),
             (0, t.jsxs)(s.rX, { children: [Y, nl, nr, ns, na, j] }, "channel-actions"),
-            (0, t.jsxs)(s.rX, { children: [P, q, J, w, nd, nt] }, "voice-actions"),
-            (0, t.jsxs)(s.rX, { children: [nc, nA ? no : B] }, "notifications"),
-            (0, t.jsxs)(s.rX, { children: [D, $, nn, ni] }, "admin-actions"),
-            (0, t.jsx)(s.rX, { children: U }),
+            (0, t.jsxs)(s.rX, { children: [P, q, J, B, nd, nt] }, "voice-actions"),
+            (0, t.jsxs)(s.rX, { children: [nc, nA ? no : D] }, "notifications"),
+            (0, t.jsxs)(s.rX, { children: [F, $, nn, ni] }, "admin-actions"),
+            (0, t.jsx)(s.rX, { children: w }),
             (0, t.jsxs)(s.rX, { children: [ne, null] }, "developer-actions"),
         ],
     });

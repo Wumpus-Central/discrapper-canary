@@ -20,7 +20,7 @@ var a = n(477900),
 function T(e) {
     let { channel: i, message: n, isUnread: T, onSelect: g } = e,
         m = (0, A.b)(i),
-        C = (0, p.A0)(i),
+        C = (0, p.h)(i),
         S = (0, b.A)(i),
         M = (0, h.A)(i),
         N = (0, _.A)(i),

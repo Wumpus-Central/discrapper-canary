@@ -1,4 +1,4 @@
-n.d(i, { default: () => L });
+n.d(i, { default: () => O });
 var t = n(477900);
 n(582128);
 var a = n(17928),
@@ -24,34 +24,34 @@ var a = n(17928),
     b = n(708653),
     j = n(297460),
     k = n(652215),
-    y = n(375708);
-let L = (0, c.A)(
+    L = n(375708);
+let O = (0, c.A)(
     (0, d.A)(
         function (e) {
             let { channel: i, guild: n, onSelect: d, widgetType: c } = e,
                 o = i.isGuildStageVoice(),
                 k = (0, a.bG)([I.A], () => (o ? I.A.getStageInstanceByChannel(i.id) : void 0), [o, i.id]),
-                L = (0, C.A)(i),
-                O = (0, A.A)(i),
-                { toggleFavoriteItem: V } = (0, b.Ay)(X.x.VOICE, i, c),
+                O = (0, C.A)(i),
+                V = (0, A.A)(i),
+                { toggleFavoriteItem: y } = (0, b.Ay)(X.x.VOICE, i, c),
                 S = (0, E.A)(i),
                 T = (0, N.A)(i),
                 H = (0, h.A)(i, n, k),
                 M = (0, j.A)({ kind: "CHANNEL", channel: i, guildId: n.id }, c),
-                U = (0, _.A)({ id: i.id, label: y.intl.string(y.t.gFHI3k) }),
+                U = (0, _.A)({ id: i.id, label: L.intl.string(L.t.gFHI3k) }),
                 f = (0, g.A)(i),
                 m = (0, p.A)(i, n),
                 w = (0, v.A)(i, n.id),
                 F = (0, x.os)("OverlayChannelListVoiceChannelContextMenu"),
-                G = (0, u.Ay)(i);
+                G = (0, u.A)(i);
             return (0, t.jsxs)(s.W, {
                 navId: "overlay-channel-context",
                 onClose: r.Z_,
-                "aria-label": y.intl.string(y.t.Xm41aV),
+                "aria-label": L.intl.string(L.t.Xm41aV),
                 onSelect: d,
                 children: [
-                    (0, t.jsxs)(l.rX, { children: [M, V, H, O] }, "primary-actions"),
-                    (0, t.jsxs)(l.rX, { children: [w, L, m, f] }, "voice-actions"),
+                    (0, t.jsxs)(l.rX, { children: [M, y, H, V] }, "primary-actions"),
+                    (0, t.jsxs)(l.rX, { children: [w, O, m, f] }, "voice-actions"),
                     (0, t.jsxs)(l.rX, { children: [S, F ? G : T] }, "notifications"),
                     (0, t.jsx)(l.rX, { children: U }, "developer-actions"),
                 ],
