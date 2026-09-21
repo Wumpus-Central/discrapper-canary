@@ -23,7 +23,7 @@ var l =
     o = n(375708);
 function d(e, t) {
     let n = t && null != e[s.lid.PREMIUM_TIER_2] ? e[s.lid.PREMIUM_TIER_2] : e[s.lid.DEFAULT];
-    return (n?.countryPrices?.prices?.slice(0, 2) ?? []).find((e) => e.currency === s.Yri.DISCORD_ORB) ?? null;
+    return (n?.countryPrices?.prices ?? []).find((e) => e.currency === s.Yri.DISCORD_ORB) ?? null;
 }
 function c(e, t) {
     if (null == e) return null;

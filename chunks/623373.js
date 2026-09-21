@@ -17,7 +17,7 @@ var i = n(575593),
 function s(e) {
     let { product: t, hasShopDiscount: n } = e;
     return (
-        (t.prices[n ? a.lid.PREMIUM_TIER_2 : a.lid.DEFAULT]?.countryPrices?.prices?.slice(0, 2) ?? []).find(
+        (t.prices[n ? a.lid.PREMIUM_TIER_2 : a.lid.DEFAULT]?.countryPrices?.prices ?? []).find(
             (e) => e.currency === a.Yri.DISCORD_ORB,
         ) ?? null
     );
@@ -25,7 +25,7 @@ function s(e) {
 function l(e) {
     let { product: t, hasShopDiscount: n } = e;
     return (
-        (t.prices[n ? a.lid.PREMIUM_TIER_2 : a.lid.DEFAULT]?.countryPrices?.prices?.slice(0, 2) ?? []).find(
+        (t.prices[n ? a.lid.PREMIUM_TIER_2 : a.lid.DEFAULT]?.countryPrices?.prices ?? []).find(
             (e) => e.currency !== a.Yri.DISCORD_ORB,
         ) ?? null
     );
