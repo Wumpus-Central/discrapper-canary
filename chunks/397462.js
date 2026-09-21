@@ -1,6 +1,5 @@
 _.exports = {
     kL: "container__535da",
-    Dy: "editing__535da",
     wx: "header__535da",
     kZ: "draggable__535da",
     T_: "dragRegion__535da",
@@ -12,4 +11,5 @@ _.exports = {
     BU: "dragHandle__535da",
     rf: "body__535da",
     xt: "locked__535da",
+    $x: "lockedPreview__535da",
 };

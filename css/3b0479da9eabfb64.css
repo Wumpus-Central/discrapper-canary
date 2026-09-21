@@ -18,6 +18,10 @@
     padding: var(--space-8)
 }
 
+.full-motion .widget__94629 {
+    transition: background-color .12s ease-out
+}
+
 .widget__94629:focus-visible,
 .widget__94629:hover {
     background-color: var(--background-mod-muted)
@@ -26,10 +30,11 @@
 .widgetImageContainer__94629 {
     background-color: var(--background-mod-muted);
     border: 1px solid var(--border-muted);
-    border-radius: var(--radius-md);
+    border-radius: var(--radius-sm);
     box-sizing: border-box;
     height: 120px;
     overflow: hidden;
+    padding: var(--space-16);
     position: relative;
     width: 100%
 }
@@ -42,23 +47,19 @@
     width: 100%
 }
 
-.lockedBadge__94629 {
-    align-items: center;
-    background-color: var(--background-base-low);
-    border-radius: var(--radius-round);
-    display: flex;
-    inset-inline-start: var(--space-8);
-    justify-content: center;
-    padding: var(--space-4);
-    position: absolute;
-    top: var(--space-8)
+.full-motion .widgetImage__94629 {
+    transition: transform var(--motion-spring-subtle-duration) var(--motion-spring-subtle)
 }
 
 .widgetOverlay__94629 {
     inset: 0;
+    opacity: 0;
     pointer-events: none;
-    position: absolute;
-    visibility: hidden
+    position: absolute
+}
+
+.full-motion .widgetOverlay__94629 {
+    transition: opacity .12s ease-out
 }
 
 .widgetOverlayBackground__94629 {
@@ -76,12 +77,27 @@
 
 .widgetOverlayContent__94629 {
     height: 100%;
-    position: relative
+    position: relative;
+    transform: scale(.8)
+}
+
+.full-motion .widgetOverlayContent__94629 {
+    transition: transform var(--motion-spring-subtle-duration) var(--motion-spring-subtle)
 }
 
 .widget__94629:focus-visible .widgetOverlay__94629,
 .widget__94629:hover .widgetOverlay__94629 {
-    visibility: visible
+    opacity: 1
+}
+
+.widget__94629:focus-visible .widgetOverlayContent__94629,
+.widget__94629:hover .widgetOverlayContent__94629 {
+    transform: scale(1)
+}
+
+.widget__94629:focus-visible .widgetImage__94629,
+.widget__94629:hover .widgetImage__94629 {
+    transform: scale(.9)
 }
 
 .actionBar__6cb92 {
@@ -134,6 +150,7 @@
 
 .insertSlot_fe7668 {
     align-items: center;
+    cursor: pointer;
     display: flex;
     height: var(--space-16);
     justify-content: center;
@@ -151,39 +168,56 @@
 }
 
 .insertLine_fe7668 {
-    background-color: var(--background-brand);
-    border-radius: var(--radius-xs);
+    background: linear-gradient(to right, transparent 0, var(--background-brand) 50%, transparent 100%);
     height: 2px;
-    inset-inline: 0;
     position: absolute;
-    transform: scaleX(0)
+    top: 50%;
+    inset-inline: 0;
+    margin-block-start: -1px;
+    opacity: 0;
+    transform: scaleX(0);
+    transform-origin: center
 }
 
 .full-motion .insertLine_fe7668 {
-    transition: transform .14s cubic-bezier(.2, 0, 0, 1)
+    transition: transform .13s cubic-bezier(.65, 0, .35, 1), opacity .13s cubic-bezier(.65, 0, .35, 1)
 }
 
 .insertButton_fe7668 {
+    align-items: center;
+    background-color: var(--brand-500);
+    border-radius: var(--radius-round);
+    color: var(--white-500);
+    display: flex;
+    height: 22px;
+    justify-content: center;
     opacity: 0;
-    pointer-events: none;
-    transform: scale(.8);
+    position: relative;
+    transform: scale(.4) rotate(-12deg);
+    transform-origin: center;
+    width: 22px;
     z-index: 1
 }
 
 .full-motion .insertButton_fe7668 {
-    transition: opacity .12s cubic-bezier(.2, 0, 0, 1), transform .14s cubic-bezier(.2, 0, 0, 1)
+    transition: transform .2s cubic-bezier(.34, 1.45, .5, 1), opacity .13s ease
 }
 
-.insertSlot_fe7668:focus-within .insertLine_fe7668,
+.insertSlot_fe7668:focus-visible .insertLine_fe7668,
 .insertSlot_fe7668:hover .insertLine_fe7668 {
+    opacity: 1;
     transform: scaleX(1)
 }
 
-.insertSlot_fe7668:focus-within .insertButton_fe7668,
+.full-motion .insertSlot_fe7668:focus-visible .insertLine_fe7668,
+.full-motion .insertSlot_fe7668:hover .insertLine_fe7668 {
+    transition: transform .18s cubic-bezier(.65, 0, .35, 1), opacity .18s cubic-bezier(.65, 0, .35, 1)
+}
+
+.insertSlot_fe7668:focus-visible .insertButton_fe7668,
 .insertSlot_fe7668:hover .insertButton_fe7668 {
     opacity: 1;
-    pointer-events: auto;
-    transform: scale(1)
+    transform: scale(1) rotate(0deg)
 }
 
 .emptyColumn_fe7668 {
@@ -342,4 +376,4 @@
     min-height: max(var(--space-64), 40vh)
 }
 
-/*# sourceMappingURL=4d437264e77f18eb.css.map*/
+/*# sourceMappingURL=3b0479da9eabfb64.css.map*/

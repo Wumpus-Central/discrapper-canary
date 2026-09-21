@@ -20,7 +20,7 @@
 
 .image__9c6c7 {
     background: var(--background-base-low);
-    border-radius: var(--radius-md);
+    border-radius: var(--radius-sm);
     max-height: 380px;
     -o-object-fit: cover;
     object-fit: cover;
@@ -38,6 +38,10 @@
         height: 100%;
         max-width: 40%
     }
+}
+
+.text__9c6c7 {
+    padding: var(--space-4)
 }
 
 .container__36d06 {
@@ -66,30 +70,26 @@
 .container__535da {
     background: var(--background-surface-high);
     border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-lg);
+    border-radius: var(--radius-md);
     container-type: inline-size;
     display: flex;
     flex-direction: column;
     overflow: hidden
 }
 
-.editing__535da {
-    border-color: var(--border-normal)
-}
-
 .header__535da {
     align-items: center;
     border-bottom: 1px solid var(--border-subtle);
+    box-sizing: border-box;
     display: flex;
     gap: var(--space-8);
     height: 50px;
-    padding: 0 var(--space-16)
+    padding: var(--space-8)
 }
 
 .draggable__535da {
     cursor: grab;
-    gap: 0;
-    padding: var(--space-8)
+    gap: 0
 }
 
 .full-motion .draggable__535da {
@@ -106,6 +106,7 @@
 
 .dragRegion__535da {
     align-self: stretch;
+    flex: 1;
     gap: var(--space-8)
 }
 
@@ -113,12 +114,14 @@
 .titleGroup__535da {
     align-items: center;
     display: flex;
-    flex: 1;
     min-width: 0
 }
 
 .titleGroup__535da {
-    gap: var(--space-6)
+    border-radius: var(--radius-sm);
+    flex: 0 1 auto;
+    gap: var(--space-6);
+    padding: var(--space-8)
 }
 
 .titleIcon__535da {
@@ -127,7 +130,6 @@
 }
 
 .title__535da {
-    flex: 0 1 auto;
     min-width: 0;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -148,7 +150,8 @@
     align-items: center;
     color: var(--text-muted);
     cursor: grab;
-    display: flex
+    display: flex;
+    margin-block-start: 1px
 }
 
 .body__535da {
@@ -160,6 +163,18 @@
 .locked__535da {
     min-height: calc(var(--space-96) + var(--space-96) + var(--space-96) + var(--space-64));
     padding: var(--space-24) var(--space-16)
+}
+
+.lockedPreview__535da {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    max-width: 100%
+}
+
+.lockedPreview__535da>* {
+    max-height: 100px;
+    max-width: 100%
 }
 
 @keyframes editActionsEnter__535da {
@@ -206,4 +221,4 @@
     display: none
 }
 
-/*# sourceMappingURL=ff315c5edb5d215b.css.map*/
+/*# sourceMappingURL=8db020d821815352.css.map*/

@@ -522,7 +522,7 @@ function ey(e) {
     });
 }
 var eM = n(43105),
-    eL = n(632015),
+    eL = n(332837),
     eT = n(508770),
     eU = n(93675),
     eD = n(942857),
@@ -544,7 +544,7 @@ function eP(e) {
             (0, s.jsx)(ec.G, {
                 ref: d,
                 id: `guild-space-tab-${t.id}`,
-                renderIcon: (e) => (0, s.jsx)(eL.f, { size: "md", color: "currentColor", className: e }),
+                renderIcon: (e) => (0, s.jsx)(eL.HomeIcon, { size: "md", color: "currentColor", className: e }),
                 text: em.intl.string(em.t["04IVMq"]),
                 selected: n,
                 onClick: c,

@@ -1,10 +1,11 @@
 .header__06fdb {
     align-items: flex-end;
-    background-color: var(--background-base-lowest);
+    background-color: var(--background-surface-high);
+    border: 1px solid var(--border-subtle);
     border-radius: var(--radius-lg);
     box-sizing: border-box;
     display: flex;
-    height: 180px;
+    height: 240px;
     justify-content: space-between;
     overflow: hidden;
     padding: var(--space-16);
@@ -25,7 +26,7 @@
 }
 
 .scrim__06fdb {
-    background: linear-gradient(to top, var(--opacity-black-72), transparent 60%)
+    background: linear-gradient(0deg, var(--opacity-black-40) 0, transparent 86.5%), linear-gradient(0deg, var(--primary-830) 0, transparent 50%)
 }
 
 .editControls__06fdb {
@@ -43,14 +44,17 @@
 }
 
 .identity__06fdb {
-    color: var(--white-500);
-    gap: var(--space-16);
+    color: var(--text-overlay-light);
+    gap: var(--space-10);
     min-width: 0;
     position: relative;
     width: 100%
 }
 
 .icon__06fdb {
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-high);
     flex: 0 0 auto
 }
 
@@ -73,6 +77,7 @@
 }
 
 .stat__06fdb {
+    color: var(--opacity-white-72);
     gap: var(--space-4)
 }
 
@@ -85,11 +90,11 @@
 }
 
 .onlineDot__06fdb {
-    background-color: var(--icon-feedback-positive)
+    background-color: var(--icon-status-online)
 }
 
 .memberDot__06fdb {
-    background-color: var(--white-500)
+    background-color: var(--opacity-white-72)
 }
 
 .page__7d655 {
@@ -113,11 +118,8 @@
     flex-direction: column;
     gap: var(--space-16);
     margin-inline: auto;
-    max-width: 1280px;
-    padding: var(--space-16)
-}
-
-.editing__7d655 {
+    max-width: 1400px;
+    padding: var(--space-16);
     padding-block-end: var(--space-96)
 }
 
@@ -129,4 +131,4 @@
     padding: var(--space-16)
 }
 
-/*# sourceMappingURL=28a2fc83c78fdcf0.css.map*/
+/*# sourceMappingURL=96ee22115e2fbd2d.css.map*/
