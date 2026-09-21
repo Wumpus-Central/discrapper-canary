@@ -1,17 +1,16 @@
-(n.d(t, { Jp: () => _, RC: () => u, Rr: () => h, S0: () => A, gz: () => E, hB: () => c, i1: () => f }), n(321073));
-var i = n(70283),
-    r = n(228366),
-    a = n(287809),
-    s = n(982240),
-    l = n(609782),
-    o = n(988341);
-function d() {
-    let e = a.default.getCurrentUser()?.id;
-    if (null == e || !s.Ay.hasCatalogFor(e)) return null;
+(n.d(t, { Jp: () => u, RC: () => c, Rr: () => A, S0: () => E, gz: () => _, hB: () => d, i1: () => I }), n(321073));
+var i = n(228366),
+    r = n(287809),
+    a = n(982240),
+    s = n(609782),
+    l = n(988341);
+function o() {
+    let e = r.default.getCurrentUser()?.id;
+    if (null == e || !a.Ay.hasCatalogFor(e)) return null;
     let t = [],
         n = new Set();
-    for (let i of s.Ay.getBadges(e))
-        if (!(0, o.A)(i.badge_id) && i.owned) {
+    for (let i of a.Ay.getBadges(e))
+        if (!(0, l.A)(i.badge_id) && i.owned) {
             if (i.hidden) {
                 n.add(i.badge_id);
                 continue;
@@ -20,78 +19,74 @@ function d() {
         }
     return { displayOrder: t, hiddenBadges: n };
 }
-function c(e) {
+function d(e) {
     var t;
-    let n = d(),
-        i = null != n && ((t = n.displayOrder), e.length === t.length && e.every((e, n) => e === t[n]));
-    r.h.dispatch({ type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES", pendingBadgeDisplayOrder: i ? void 0 : [...e] });
+    let n = o(),
+        r = null != n && ((t = n.displayOrder), e.length === t.length && e.every((e, n) => e === t[n]));
+    i.h.dispatch({ type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES", pendingBadgeDisplayOrder: r ? void 0 : [...e] });
 }
-function u(e) {
+function c(e) {
     var t, n;
-    let i,
+    let r,
         a,
-        { badgeId: s, hidden: l, reorderableBadgeIds: o, hiddenBadgeIds: u, canReorder: _ } = e;
-    (_ && c(l ? o.filter((e) => e !== s) : [...o, s]),
+        { badgeId: s, hidden: l, reorderableBadgeIds: c, hiddenBadgeIds: u, canReorder: _ } = e;
+    (_ && d(l ? c.filter((e) => e !== s) : [...c, s]),
         (t = l ? [...u, s] : u.filter((e) => e !== s)),
-        (a = null != (i = d()) && ((n = i.hiddenBadges), t.length === n.size && t.every((e) => n.has(e)))),
-        r.h.dispatch({
+        (a = null != (r = o()) && ((n = r.hiddenBadges), t.length === n.size && t.every((e) => n.has(e)))),
+        i.h.dispatch({
             type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES",
             pendingBadgeHiddenBadges: a ? void 0 : [...t],
         }));
 }
-function _() {
-    r.h.dispatch({
+function u() {
+    i.h.dispatch({
         type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES",
         pendingBadgeDisplayOrder: void 0,
         pendingBadgeHiddenBadges: void 0,
     });
 }
-function E(e) {
+function _(e) {
     let { pendingBadgeDisplayOrder: t, pendingBadgeHiddenBadges: n } = e;
     return void 0 !== t || void 0 !== n;
 }
-function A(e, t) {
+function E(e, t) {
     let { pendingBadgeDisplayOrder: n, pendingBadgeHiddenBadges: i } = t,
         r = null != i ? new Set(i) : null,
-        a = null == r ? [...e] : e.map((e) => ((0, o.A)(e.badge_id) ? e : { ...e, hidden: r.has(e.badge_id) }));
+        a = null == r ? [...e] : e.map((e) => ((0, l.A)(e.badge_id) ? e : { ...e, hidden: r.has(e.badge_id) }));
     if (null == n) return a;
     let s = [],
-        l = new Map();
-    for (let e of a) (0, o.A)(e.badge_id) ? s.push(e) : l.set(e.badge_id, e);
+        o = new Map();
+    for (let e of a) (0, l.A)(e.badge_id) ? s.push(e) : o.set(e.badge_id, e);
     let d = [];
     for (let e of n) {
-        let t = l.get(e);
-        null != t && (d.push(t), l.delete(e));
+        let t = o.get(e);
+        null != t && (d.push(t), o.delete(e));
     }
-    return [...s, ...d, ...l.values()];
+    return [...s, ...d, ...o.values()];
 }
-function h(e, t, n) {
-    let { pendingBadgeDisplayOrder: r, pendingBadgeHiddenBadges: a } = n;
-    if (null == a) return I(e, n);
-    let s = new Set(e.map((e) => (0, l.w0)(e.id))),
-        o = new Set(a),
-        d = new Set(r ?? []);
-    return I(
+function A(e, t, n) {
+    let { pendingBadgeDisplayOrder: i, pendingBadgeHiddenBadges: r } = n;
+    if (null == r) return h(e, n);
+    let a = new Set(e.map((e) => (0, s.w0)(e.id))),
+        l = new Set(r),
+        o = new Set(i ?? []);
+    return h(
         [
             ...e,
             ...t
                 .filter(
                     (e) =>
-                        e.owned &&
-                        e.badge_id !== i.$.LEGACY_USERNAME &&
-                        ((e.hidden ?? !1) || d.has(e.badge_id)) &&
-                        !o.has(e.badge_id) &&
-                        !s.has(e.badge_id),
+                        e.owned && ((e.hidden ?? !1) || o.has(e.badge_id)) && !l.has(e.badge_id) && !a.has(e.badge_id),
                 )
                 .map((e) => {
-                    let t = (0, l.I)(e.badge_id);
+                    let t = (0, s.I)(e.badge_id);
                     return { id: t, icon: t, iconSrc: e.simple_icon_raster_url, description: e.name };
                 }),
         ],
         n,
     );
 }
-function I(e, t) {
+function h(e, t) {
     let { pendingBadgeDisplayOrder: n, pendingBadgeHiddenBadges: i } = t;
     if (null == n && null == i) return [...e];
     let r = null != i ? new Set(i) : null,
@@ -99,24 +94,24 @@ function I(e, t) {
             null == r
                 ? [...e]
                 : e.filter((e) => {
-                      let t = (0, l.w0)(e.id);
-                      return null == t || (0, o.A)(t) || !r.has(t);
+                      let t = (0, s.w0)(e.id);
+                      return null == t || (0, l.A)(t) || !r.has(t);
                   });
     if (null == n) return a;
-    let s = [],
+    let o = [],
         d = new Map();
     for (let e of a) {
-        let t = (0, l.w0)(e.id);
-        null == t || (0, o.A)(t) || d.has(t) ? s.push(e) : d.set(t, e);
+        let t = (0, s.w0)(e.id);
+        null == t || (0, l.A)(t) || d.has(t) ? o.push(e) : d.set(t, e);
     }
     let c = [];
     for (let e of n) {
         let t = d.get(e);
         null != t && (c.push(t), d.delete(e));
     }
-    return [...s, ...c, ...d.values()];
+    return [...o, ...c, ...d.values()];
 }
-function f(e, t, n) {
+function I(e, t, n) {
     if (t === n || t < 0 || t >= e.length) return e;
     let i = [...e],
         [r] = i.splice(t, 1);
