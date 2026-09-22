@@ -169,7 +169,7 @@ function O(e) {
                                 [j.sizeXXSmall]: a === v.L.XXSMALL,
                             }),
                             onError: u,
-                            preload: "none",
+                            preload: "metadata",
                             "aria-hidden": !0,
                         }),
                 }),
