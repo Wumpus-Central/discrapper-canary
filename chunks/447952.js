@@ -17,8 +17,8 @@ var l = n(477900),
     S = n(240248),
     y = n(891640),
     I = n(818348),
-    A = n(400400);
-let g = [f.pn.PAYMENT_ELEMENT],
+    g = n(400400);
+let A = [f.pn.PAYMENT_ELEMENT],
     P = [
         f.pn.PAYPAL_INFORMATION,
         f.pn.VENMO_INFORMATION,
@@ -51,7 +51,7 @@ function _(e) {
             excludeBodySpacing: x,
         } = i.useMemo(
             () => ({
-                shouldShowPaymentElement: g.includes(t),
+                shouldShowPaymentElement: A.includes(t),
                 shouldShowAddressElement: t === f.pn.ADDRESS,
                 excludeBodySpacing: P.includes(t),
             }),
@@ -65,13 +65,13 @@ function _(e) {
             }
         }, [d]);
     return (0, l.jsxs)("div", {
-        className: s()(A.kL, { [A.rf]: !x }),
+        className: s()(g.kL, { [g.rf]: !x }),
         children: [
             (0, l.jsxs)("div", {
-                className: s()(v ? A.RK : [A.R, A.$u], {
-                    [A.df]: null == d,
-                    [A._m]: d === I.he.CARD,
-                    [A.JD]: d === I.he.PAYPAL,
+                className: s()(v ? g.RK : [g.R, g.$u], {
+                    [g.df]: null == d,
+                    [g._m]: d === I.he.CARD,
+                    [g.JD]: d === I.he.PAYPAL,
                 }),
                 children: [
                     (0, l.jsx)(p.Wf, {
@@ -85,7 +85,7 @@ function _(e) {
                 ],
             }),
             (0, l.jsx)("div", {
-                className: s()(A.K_, _ ? A.RK : [A.R, A.vg]),
+                className: s()(g.K_, _ ? g.RK : [g.R, g.vg]),
                 children: (0, l.jsx)(p.KS, {
                     ...u,
                     internalKey: C,
@@ -98,7 +98,7 @@ function _(e) {
 }
 function x() {
     return (0, l.jsx)("div", {
-        className: s()(A.kL, A.rf, A.g4),
+        className: s()(g.kL, g.rf, g.g4),
         children: (0, l.jsx)(o.y, { type: o.y.Type.PULSING_ELLIPSIS }),
     });
 }
@@ -132,8 +132,8 @@ function b(e) {
         } = e,
         c = i.useRef(null),
         h = i.useRef(null),
-        [y, A] = i.useState(!1),
-        [g, P] = i.useState(!1),
+        [y, g] = i.useState(!1),
+        [A, P] = i.useState(!1),
         _ = o === f.pn.CREDIT_CARD_INFORMATION || o === f.pn.PAYMENT_ELEMENT,
         [x, T] = i.useState(_ ? I.he.CARD : null),
         [b, j] = i.useState(!1),
@@ -153,7 +153,7 @@ function b(e) {
         U = i.useMemo(
             () => ({
                 onChange: (e, t) => {
-                    (s && null != l && l.log("PaymentElements onChange event:", e), A(e.complete), T(t));
+                    (s && null != l && l.log("PaymentElements onChange event:", e), g(e.complete), T(t));
                 },
                 onReady: () => {
                     P(!0);
@@ -257,7 +257,7 @@ function b(e) {
         stripeElementsRef: c,
         lastConfirmedSetupIntentRef: h,
         paymentElementReady: y,
-        paymentElementLoaded: g,
+        paymentElementLoaded: A,
         paymentElementSelectedType: x,
         setPaymentElementSelectedType: T,
         returnToPaymentElementStep: F,

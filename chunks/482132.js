@@ -24,8 +24,8 @@ function S(e) {
             return { header: t, disableDefaultSlideTransformStyling: n, stepProps: l };
         })(e),
         { step: s, stepConfigs: S } = (0, m.Ay)(),
-        { setBodyNode: y, setFooterNode: I, setModalOverlayNode: A } = (0, p.Gm)(),
-        g = (0, u.bG)([h.A], () => h.A.isDisplayingWowMomentConfirmation),
+        { setBodyNode: y, setFooterNode: I, setModalOverlayNode: g } = (0, p.Gm)(),
+        A = (0, u.bG)([h.A], () => h.A.isDisplayingWowMomentConfirmation),
         { setReadySlideId: P, unifiedCheckoutFlow: v } = (0, C.t4)((e) => ({
             setReadySlideId: e.setReadySlideId,
             unifiedCheckoutFlow: e.unifiedCheckoutFlow,
@@ -33,8 +33,8 @@ function S(e) {
         _ = S.find((e) => e.key === s);
     if (
         (i.useEffect(() => {
-            A(null);
-        }, [s, A]),
+            g(null);
+        }, [s, g]),
         null == _)
     )
         throw new d.vd({
@@ -69,7 +69,7 @@ function S(e) {
                                         onSlideReady: (e) => P(e),
                                         width: "100%",
                                         disableDefaultTransformStyling: b || n,
-                                        overflow: g ? "visible" : void 0,
+                                        overflow: A ? "visible" : void 0,
                                         children: S.filter((e) => null != e.key).map((e) =>
                                             (0, l.jsx)(
                                                 c.q,
@@ -89,7 +89,7 @@ function S(e) {
                           (0, l.jsx)("div", { ref: (e) => I(e) }),
                           (0, l.jsx)("div", {
                               ref: (e) => {
-                                  A(e);
+                                  g(e);
                               },
                           }),
                       ],

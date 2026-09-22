@@ -73,7 +73,7 @@ function I() {
                 .catch(() => d.h.dispatch({ type: "BRAINTREE_CREATE_PAYPAL_CLIENT_FAIL" }));
         });
 }
-function A() {
+function g() {
     let e = C.A.getPayPalClient();
     if (null == e) throw Error("braintree paypal client must be initialized before calling this");
     d.h.dispatch({ type: "BRAINTREE_TOKENIZE_PAYPAL_START" });
@@ -106,7 +106,7 @@ function A() {
                       h.pM(Error(`Braintree Paypal Error: ${t} ${n} ${l}`)));
             }));
 }
-function g() {
+function A() {
     let e = C.A.getVenmoClient();
     if (null == e) throw Error("Braintree Venmo client must be initialized before calling tokenize.");
     (d.h.dispatch({ type: "BRAINTREE_TOKENIZE_VENMO_START" }),
@@ -341,13 +341,13 @@ let eE = function (e) {
                     }
                 }
         }, [y, n]),
-        A = a.useCallback(
+        g = a.useCallback(
             (e) => {
                 (p || e.empty || C(!0), null != i && i(e.complete), null != e.error && m(!1));
             },
             [p, i],
         ),
-        g = a.useCallback(() => {
+        A = a.useCallback(() => {
             (m(!0), s?.());
         }, [s]),
         P = a.useCallback(() => {
@@ -366,9 +366,9 @@ let eE = function (e) {
                                     : null != e.error
                                       ? f(Y.intl.string(Y.t.x4pWtJ))
                                       : f(null),
-                                A(e));
+                                g(e));
                         }),
-                            e.on("focus", g),
+                            e.on("focus", A),
                             e.on("blur", P));
                         break;
                     }
@@ -376,9 +376,9 @@ let eE = function (e) {
                         let e = y.getElement(ed.CardExpiryElement);
                         if (null == e) return;
                         (e.on("change", (e) => {
-                            (null != e.error || (e.empty && p) ? f(Y.intl.string(Y.t["9/zZdl"])) : f(null), A(e));
+                            (null != e.error || (e.empty && p) ? f(Y.intl.string(Y.t["9/zZdl"])) : f(null), g(e));
                         }),
-                            e.on("focus", g),
+                            e.on("focus", A),
                             e.on("blur", P));
                         break;
                     }
@@ -386,13 +386,13 @@ let eE = function (e) {
                         let e = y.getElement(ed.CardCvcElement);
                         if (null == e) return;
                         (e.on("change", (e) => {
-                            (null != e.error || (e.empty && p) ? f(Y.intl.string(Y.t.ro4isZ)) : f(null), A(e));
+                            (null != e.error || (e.empty && p) ? f(Y.intl.string(Y.t.ro4isZ)) : f(null), g(e));
                         }),
-                            e.on("focus", g),
+                            e.on("focus", A),
                             e.on("blur", P));
                     }
                 }
-        }, [P, A, g, u, y, p, n]);
+        }, [P, g, A, u, y, p, n]);
     a.useEffect(
         () => (
             v(),
@@ -606,8 +606,8 @@ let eI = function (e) {
         })
     );
 };
-var eA = n(198970),
-    eg = n(116673),
+var eg = n(198970),
+    eA = n(116673),
     eP = n(773669),
     ev =
         (((l = {}).SELECT_PLAN = "select_plan"),
@@ -645,16 +645,16 @@ let eT = (e) => {
         case S.hes.KAKAOPAY:
         case S.hes.GOPAY_WALLET:
         case S.hes.BANCONTACT:
-            t = "en-US" === c ? eA.Ay.Layouts.MODAL_US_WITH_NAME : eA.Ay.Layouts.MODAL_INTL_WITH_NAME;
+            t = "en-US" === c ? eg.Ay.Layouts.MODAL_US_WITH_NAME : eg.Ay.Layouts.MODAL_INTL_WITH_NAME;
             break;
         case S.hes.VENMO:
         case S.hes.CASH_APP:
-            t = eA.Ay.Layouts.MODAL_US_WITH_NAME;
+            t = eg.Ay.Layouts.MODAL_US_WITH_NAME;
             break;
         default:
-            t = "en-US" === c ? eA.Ay.Layouts.MODAL_US : eA.Ay.Layouts.MODAL_INTL;
+            t = "en-US" === c ? eg.Ay.Layouts.MODAL_US : eg.Ay.Layouts.MODAL_INTL;
     }
-    let d = (0, eg.z)();
+    let d = (0, eA.z)();
     0 === n.country.length && null != d && d.length > 0 && (n.country = d[0]);
     let m = (0, s.bG)([eu.default], () => eu.default.getCurrentUser()?.storeCountry?.isLocked === !0)
         ? Y.intl.string(Y.t.Pg2hU0)
@@ -667,7 +667,7 @@ let eT = (e) => {
                       children: (0, r.jsx)(el.w, { type: "critical", children: Y.intl.string(Y.t.vZ8y7l) }),
                   })
                 : null,
-            (0, r.jsx)(eA.Ay, {
+            (0, r.jsx)(eg.Ay, {
                 className: ex.__invalid_formItem,
                 onBillingAddressChange: i,
                 error: l,
@@ -730,10 +730,10 @@ let eO = {
 var eL = n(685094);
 class ek extends a.PureComponent {
     componentDidMount() {
-        null != this.props.paypalClient && A();
+        null != this.props.paypalClient && g();
     }
     componentDidUpdate(e) {
-        null == e.paypalClient && null != this.props.paypalClient && A();
+        null == e.paypalClient && null != this.props.paypalClient && g();
     }
     componentWillUnmount() {
         P(C.A.getPayPalClient(), { type: "BRAINTREE_TEARDOWN_PAYPAL_CLIENT" }).then(() => {
@@ -760,10 +760,10 @@ var eU = n(297264),
     eG = n(351665);
 class eF extends a.PureComponent {
     componentDidMount() {
-        null != this.props.venmoClient && g();
+        null != this.props.venmoClient && A();
     }
     componentDidUpdate(e) {
-        null == e.venmoClient && null != this.props.venmoClient && g();
+        null == e.venmoClient && null != this.props.venmoClient && A();
     }
     componentWillUnmount() {
         P(C.A.getVenmoClient(), { type: "BRAINTREE_TEARDOWN_VENMO_CLIENT" }).then(() => {
@@ -1116,9 +1116,9 @@ function tp(e) {
             setIsSubmittingCurrentStep: S,
             hasRedirectURL: y,
             setHasRedirectURL: I,
-            isAuthenticating: A,
+            isAuthenticating: g,
         } = t;
-    async function g() {
+    async function A() {
         S(!0);
         let e = s ? c : i.methodType,
             n = m.current,
@@ -1172,8 +1172,8 @@ function tp(e) {
         primaryCTA: e$.Ay.CTAType.CONTINUE,
         primaryText: Y.intl.string(Y.t.PDTjLN),
         primarySubmitting: f,
-        primaryDisabled: !E.isValid || A,
-        onPrimary: g,
+        primaryDisabled: !E.isValid || g,
+        onPrimary: A,
     });
 }
 var tC = n(648335);
@@ -1242,7 +1242,7 @@ function tI(e) {
         i = (0, s.bG)([k.A], () => k.A.error);
     return (0, r.jsx)(ej, { billingError: i, onCardInfoChange: l });
 }
-function tA(e) {
+function tg(e) {
     let { setIsSubmittingCurrentStep: t, setTokenState: n, isSubmittingCurrentStep: l, creditCardState: i } = e,
         { handleStepChange: a, onReturn: s } = en(),
         o = (0, j.S)();
@@ -1273,7 +1273,7 @@ function tA(e) {
         },
     });
 }
-function tg() {
+function tA() {
     let { currentStep: e, redirectToCardInput: t, onComplete: n } = en();
     return (0, r.jsx)(tl, { step: e, onPurchaseComplete: () => n(e), onHandoffFailure: t });
 }
@@ -1341,7 +1341,7 @@ function tT(e) {
             return a
                 ? n()
                 : void (null == (e = C.A.getLastURL())
-                      ? A()
+                      ? g()
                       : (d.h.dispatch({ type: "BRAINTREE_TOKENIZE_PAYPAL_START" }), window.open(e)));
         },
     });
@@ -1354,24 +1354,24 @@ function tN(e) {
         onBack: () => i(eN.he.VENMO),
         primaryCTA: e$.Ay.CTAType.CONTINUE,
         primaryText: l ? Y.intl.string(Y.t.PDTjLN) : Y.intl.string(Y.t["4KoTLM"]),
-        onPrimary: () => (l ? a() : void g()),
+        onPrimary: () => (l ? a() : void A()),
     });
 }
 let tb = {
     [R.pn.CREDIT_CARD_INFORMATION]: {
         renderStepBody: (e) => (0, r.jsx)(tI, { ...e }),
-        renderStepFooter: (e) => (0, r.jsx)(tA, { ...e }),
+        renderStepFooter: (e) => (0, r.jsx)(tg, { ...e }),
     },
     [R.pn.AWAITING_BROWSER_CHECKOUT]: {
-        renderStepBody: () => (0, r.jsx)(tg, {}),
+        renderStepBody: () => (0, r.jsx)(tA, {}),
         renderStepFooter: () => (0, r.jsx)(tP, {}),
     },
     [R.pn.AWAITING_BROWSER_CHECKOUT_GOOGLE_PAY]: {
-        renderStepBody: () => (0, r.jsx)(tg, {}),
+        renderStepBody: () => (0, r.jsx)(tA, {}),
         renderStepFooter: () => (0, r.jsx)(tP, {}),
     },
     [R.pn.AWAITING_BROWSER_CHECKOUT_APPLE_PAY]: {
-        renderStepBody: () => (0, r.jsx)(tg, {}),
+        renderStepBody: () => (0, r.jsx)(tA, {}),
         renderStepFooter: () => (0, r.jsx)(tP, {}),
     },
     [R.pn.PAYMENT_ELEMENT]: {
@@ -1539,8 +1539,8 @@ function tD(e) {
             analyticsData: E,
             overwriteSubscriptionPaymentSource: y = !1,
             useCheckoutStep: I = !1,
-            isEligibleForTrial: A = !1,
-            allowDesktopRedirectPurchase: g = !1,
+            isEligibleForTrial: g = !1,
+            allowDesktopRedirectPurchase: A = !1,
             toastContent: P,
             continueSessionToInitialStep: v,
         } = e,
@@ -1551,8 +1551,8 @@ function tD(e) {
         }));
     (0, _.l0)(D);
     let G = a.useMemo(
-            () => (n === R.pn.PAYMENT_ELEMENT ? (g ? R.pn.AWAITING_BROWSER_CHECKOUT : R.pn.PAYMENT_ELEMENT) : n),
-            [n, g],
+            () => (n === R.pn.PAYMENT_ELEMENT ? (A ? R.pn.AWAITING_BROWSER_CHECKOUT : R.pn.PAYMENT_ELEMENT) : n),
+            [n, A],
         ),
         {
             CREDIT_CARD_STEPS: F,
@@ -1733,7 +1733,7 @@ function tD(e) {
     return I
         ? (0, r.jsxs)(r.Fragment, {
               children: [
-                  A && (0, r.jsx)(M.A, { className: tE.At, isEligibleForTrial: A }),
+                  g && (0, r.jsx)(M.A, { className: tE.At, isEligibleForTrial: g }),
                   (0, r.jsxs)(et, {
                       ...ec,
                       children: [
@@ -1808,7 +1808,7 @@ function tG(e) {
         c = (0, x.Ay)(t);
     t !== c && null != t && null == o && u(t);
     let [m, E] = a.useState(() => ({ info: tw, isValid: !1 })),
-        [A, g] = a.useState(() => ({ info: tU, isValid: !1 })),
+        [g, A] = a.useState(() => ({ info: tU, isValid: !1 })),
         [P, N] = a.useState(""),
         [j, R] = a.useState(""),
         [M, O] = a.useState(() => ({ token: null })),
@@ -1826,7 +1826,7 @@ function tG(e) {
     a.useEffect(() => {
         function e(e) {
             let { billingAddress: t } = e;
-            g({ info: t, isValid: t.country.length > 0 });
+            A({ info: t, isValid: t.country.length > 0 });
         }
         return (
             d.h.subscribe("BRAINTREE_TOKENIZE_PAYPAL_SUCCESS", e),
@@ -1861,8 +1861,8 @@ function tG(e) {
             setCreditCardState: E,
             tokenState: M,
             setTokenState: O,
-            billingAddressState: A,
-            setBillingAddressState: g,
+            billingAddressState: g,
+            setBillingAddressState: A,
             isSubmittingCurrentStep: V,
             setIsSubmittingCurrentStep: Z,
             hasRedirectURL: q,

@@ -1,4 +1,4 @@
-_.exports = {
+e.exports = {
     Nr: "card_a12047",
     OA: "guildInfo_a12047",
     $f: "guildIcon_a12047",

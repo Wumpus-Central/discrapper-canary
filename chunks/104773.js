@@ -1,4 +1,4 @@
-r.exports = {
+e.exports = {
     Ow: "nitroGemAnimation_ba269a",
     tU: "gemGlow_ba269a",
     vH: "gemBackgroundFill_ba269a",

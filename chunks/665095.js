@@ -22,21 +22,21 @@ var i = n(477900),
     _ = n(821609),
     S = n(331322),
     I = n(297264),
-    j = n(834730),
-    b = n(700525),
-    y = n(975571),
-    N = n(652215),
+    b = n(834730),
+    j = n(700525),
+    N = n(975571),
+    y = n(652215),
     M = n(375708),
     R = n(690807);
-let O = y.A.getArticleURL(N.MVz.VERIFICATION_FAQ);
+let O = N.A.getArticleURL(y.MVz.VERIFICATION_FAQ);
 class k extends l.PureComponent {
-    static defaultProps = { types: [N.Fz7.CAPTCHA], onCaptchaVerify: N.tEg, onLogout: N.tEg };
+    static defaultProps = { types: [y.Fz7.CAPTCHA], onCaptchaVerify: y.tEg, onLogout: y.tEg };
     renderFields() {
         let { types: e, captchaKey: t, theme: n, onCaptchaVerify: l } = this.props;
         return (0, i.jsx)(i.Fragment, {
             children: e.map((e) =>
-                e === N.Fz7.CAPTCHA
-                    ? (0, i.jsx)(b.A, { onVerify: l, theme: n }, t)
+                e === y.Fz7.CAPTCHA
+                    ? (0, i.jsx)(j.A, { onVerify: l, theme: n }, t)
                     : (0, i.jsx)(_.$, { onClick: () => this.handleClick(e), text: v.A.getButtonTitle(e) }, e),
             ),
         });
@@ -75,7 +75,7 @@ class k extends l.PureComponent {
                                             variant: "heading-xl/normal",
                                             children: M.intl.string(M.t.Iz0kDg),
                                         }),
-                                        (0, i.jsx)(j.E, {
+                                        (0, i.jsx)(b.E, {
                                             variant: "text-md/normal",
                                             children: M.intl.format(M.t["0rqMV5"], { helpCenterURL: O }),
                                         }),
@@ -98,7 +98,7 @@ class k extends l.PureComponent {
                     direction: "vertical",
                     justify: "center",
                     children: [
-                        (0, i.jsx)(j.E, {
+                        (0, i.jsx)(b.E, {
                             variant: "text-sm/normal",
                             className: R.qr,
                             children: M.intl.string(M.t.qqYun3),
@@ -109,13 +109,13 @@ class k extends l.PureComponent {
                             direction: "horizontal",
                             justify: "center",
                             children: [
-                                (0, i.jsx)(j.E, {
+                                (0, i.jsx)(b.E, {
                                     variant: "text-sm/semibold",
                                     className: R.qr,
-                                    children: M.intl.format(M.t.WL51ZR, { supportURL: y.A.getSubmitRequestURL() }),
+                                    children: M.intl.format(M.t.WL51ZR, { supportURL: N.A.getSubmitRequestURL() }),
                                 }),
                                 (0, i.jsx)("div", { className: C()(R.qr, R.mf), children: "\u2022" }),
-                                (0, i.jsx)(j.E, {
+                                (0, i.jsx)(b.E, {
                                     variant: "text-sm/semibold",
                                     className: R.qr,
                                     children: M.intl.format(M.t.Hv7ztc, { logoutOnClick: this.props.onLogout }),
@@ -171,8 +171,8 @@ function L() {
             [],
         ),
         l.useEffect(() => {
-            _?.[0] === N.Fz7.PHONE &&
-                E?.[0] === N.Fz7.EMAIL &&
+            _?.[0] === y.Fz7.PHONE &&
+                E?.[0] === y.Fz7.EMAIL &&
                 (0, o.openModalLazy)(
                     async () => {
                         let { default: e } = await Promise.all([n.e("844331"), n.e("410919")]).then(n.bind(n, 556506));
@@ -192,7 +192,7 @@ function L() {
             captchaKey: C,
             onCaptchaVerify: function (e) {
                 r.Bo.post({
-                    url: N.Rsh.CAPTCHA,
+                    url: y.Rsh.CAPTCHA,
                     body: { captcha_key: e },
                     oldFormErrors: !0,
                     rejectWithError: !0,
@@ -202,7 +202,7 @@ function L() {
             },
             theme: t,
             onClick: (e) => {
-                e === N.Fz7.EMAIL_OR_PHONE || e === N.Fz7.EMAIL || e === N.Fz7.REVERIFY_EMAIL
+                e === y.Fz7.EMAIL_OR_PHONE || e === y.Fz7.EMAIL || e === y.Fz7.REVERIFY_EMAIL
                     ? S()
                     : (0, o.openModalLazy)(
                           async () => {

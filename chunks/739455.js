@@ -1,4 +1,4 @@
-(i.d(t, { Fx: () => m, JH: () => T, SY: () => N, aV: () => O, fE: () => g, pF: () => A, zu: () => v }),
+(i.d(t, { Fx: () => m, JH: () => T, SY: () => N, aV: () => R, fE: () => g, pF: () => A, zu: () => v }),
     i(938796),
     i(321073));
 var l = i(582128),
@@ -144,6 +144,6 @@ function T(e, t) {
     }
     return { templateCategory: a.category, hasChangeFromTemplate: !1 };
 }
-function O(e) {
+function R(e) {
     return (0, p.X9)(e) && e.features.has(_.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED) && (0, o.TG)(e.id);
 }

@@ -1,4 +1,4 @@
-n.d(t, { M: () => eg });
+n.d(t, { M: () => eA });
 var l = n(477900),
     i = n(582128),
     r = n(688810),
@@ -20,7 +20,7 @@ function I(e, t) {
     let { paymentSources: n, eligiblePaymentGateways: l } = t;
     return !!(null != e && e in n && (null == l || 0 === l.length || l.includes(n[e].paymentGateway)));
 }
-function A(e) {
+function g(e) {
     let {
         isGift: t,
         activeSubscription: n,
@@ -39,7 +39,7 @@ function A(e) {
     }
     return l;
 }
-let g = (e) => {
+let A = (e) => {
     let {
             isGift: t,
             activeSubscription: n,
@@ -67,7 +67,7 @@ let g = (e) => {
                     return;
                 }
                 u(
-                    A({
+                    g({
                         isGift: t,
                         activeSubscription: n,
                         defaultPaymentSourceId: l,
@@ -678,7 +678,7 @@ function eI(e) {
                         e,
                     )
                         ? (e.initialPaymentSourceId ?? null)
-                        : (A(e) ?? null);
+                        : (g(e) ?? null);
                 }, [n, l, u, s, c, r]),
                 defaultPaymentSourceId: u,
                 eligiblePaymentGateways: s,
@@ -738,7 +738,7 @@ function eI(e) {
             (0, l.jsx)(et, {}),
             (0, l.jsx)(ei, {}),
             (0, l.jsx)(el, {}),
-            (0, l.jsx)(g, {
+            (0, l.jsx)(A, {
                 isGift: r.isGift,
                 activeSubscription: r.activeSubscription,
                 defaultPaymentSourceId: _,
@@ -755,8 +755,8 @@ function eI(e) {
         ],
     });
 }
-var eA = n(783327);
-function eg(e) {
+var eg = n(783327);
+function eA(e) {
     let {
             stepConfigs: t,
             breadcrumbs: n,
@@ -826,7 +826,7 @@ function eP(e) {
             selectedSkuId: S,
             selectedPlanId: y,
             paymentSourceId: I,
-            paymentGateway: A,
+            paymentGateway: g,
         } = (0, d.t4)((e) => ({
             contextMetadata: e.contextMetadata,
             unifiedCheckoutFlow: e.unifiedCheckoutFlow,
@@ -837,15 +837,15 @@ function eP(e) {
             paymentSourceId: e.paymentSourceId,
             paymentGateway: e.paymentGateway,
         })),
-        g = null != I && null != p[I] ? p[I]?.type : null,
+        A = null != I && null != p[I] ? p[I]?.type : null,
         P = i.useMemo(
-            () => ({ payment_source_id: I, payment_gateway: A, payment_source_type: g, checkout_flow: h, is_gift: E }),
-            [I, A, g, h, E],
+            () => ({ payment_source_id: I, payment_gateway: g, payment_source_type: A, checkout_flow: h, is_gift: E }),
+            [I, g, A, h, E],
         ),
         v = (0, r.Db)(),
         _ = (0, u.BQ)();
     return (0, l.jsx)(c.yv, {
-        children: (0, l.jsx)(eA.R, {
+        children: (0, l.jsx)(eg.R, {
             children: (0, l.jsx)(s.j, {
                 errorHandlingBehavior: t,
                 locationStack: v,

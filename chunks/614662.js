@@ -17,8 +17,8 @@ var l = n(477900),
     S = n(890497),
     y = n(398590),
     I = n(717398),
-    A = n(966327),
-    g = n(674658),
+    g = n(966327),
+    A = n(674658),
     P = n(769015),
     v = n(242874),
     _ = n(380619),
@@ -67,7 +67,7 @@ function ei(e) {
             onClose: C,
         } = e,
         [f, E] = i.useState([]),
-        [g, P] = i.useState(!1),
+        [A, P] = i.useState(!1),
         { isLoading: _, potentialRecipients: x } = (function () {
             i.useEffect(() => {
                 (I.A.fetchRelationships(), (0, N.u)());
@@ -101,12 +101,12 @@ function ei(e) {
         ea = 1 === f.length,
         es = ea ? null == t : !s,
         eo = f.length > 1 && null == a,
-        eu = g || 0 === f.length || f.length > r || k.length !== f.length || es || eo,
+        eu = A || 0 === f.length || f.length > r || k.length !== f.length || es || eo,
         ec = x.map((e) => ({
             id: e.id,
             value: e.id,
             label: U.Ay.getUserTag(e),
-            leading: (0, l.jsx)(A.A, { user: e, size: h._3.SIZE_20 }),
+            leading: (0, l.jsx)(g.A, { user: e, size: h._3.SIZE_20 }),
             disabled: w && f.length >= r && !f.includes(e.id),
         })),
         ed = (0, q.D)(d),
@@ -190,7 +190,7 @@ function ei(e) {
                                               hideLabel: !0,
                                               placeholder: et.intl.string(en.default.xdDO7f),
                                               loading: _ || ei,
-                                              disabled: ei || g,
+                                              disabled: ei || A,
                                               value: f,
                                               onSelectionChange: eh,
                                               options: ec,
@@ -202,7 +202,7 @@ function ei(e) {
                                       label: et.intl.string(et.t.MJw05f),
                                       placeholder: et.intl.string(et.t.J019jZ),
                                       loading: _ || ei,
-                                      disabled: ei || g,
+                                      disabled: ei || A,
                                       value: f[0],
                                       onSelectionChange: (e) => eh(null != e ? [e] : []),
                                       options: ec,
@@ -236,7 +236,7 @@ function ei(e) {
                         {
                             variant: "secondary",
                             text: et.intl.string(en.default["qTXpj/"]),
-                            disabled: ed || g,
+                            disabled: ed || A,
                             onClick: function () {
                                 (C(),
                                     (0, y.bz)(),
@@ -256,7 +256,7 @@ function ei(e) {
                             variant: "primary",
                             text: et.intl.string(et.t["+EgwQn"]),
                             disabled: eu,
-                            loading: ed || g,
+                            loading: ed || A,
                             onClick: eC,
                         },
                     ],
@@ -286,7 +286,7 @@ function eu(e) {
             shouldUsePostPurchaseRecipientDelivery: o = !1,
             application: S,
             sku: I,
-            subscriptionPlan: g,
+            subscriptionPlan: A,
             selectedGiftStyle: v,
             onClose: x,
             hasSentMessage: N,
@@ -305,20 +305,20 @@ function eu(e) {
             canShowGiftingBadgePostPurchase: q,
         } = (0, D.Pv)(),
         z = (0, u.yK)([T.A], () => T.A.getGiftPromotionRewardSkuIds()),
-        Q = (0, _.Mq)(g) && V.length > 0,
+        Q = (0, _.Mq)(A) && V.length > 0,
         $ = q && 0 === V.length;
     function J() {
-        return null != g ? g.skuId : null != I ? I.id : null;
+        return null != A ? A.skuId : null != I ? I.id : null;
     }
     function X() {
         let e;
         return null != R
             ? et.intl.string(et.t.qB8aya)
-            : null == g
+            : null == A
               ? null
               : ((e =
-                    g.interval === es.WT.MONTH ? (W ? et.t["4ZJ+7Z"] : et.t["P+z55d"]) : W ? et.t.p0pZXP : et.t.bXqk3o),
-                et.intl.format(e, { skuName: (0, w.RH)(g.id), intervalCount: g.intervalCount }));
+                    A.interval === es.WT.MONTH ? (W ? et.t["4ZJ+7Z"] : et.t["P+z55d"]) : W ? et.t.p0pZXP : et.t.bXqk3o),
+                et.intl.format(e, { skuName: (0, w.RH)(A.id), intervalCount: A.intervalCount }));
     }
     function ee() {
         let e;
@@ -409,7 +409,7 @@ function eu(e) {
                                           (0, l.jsxs)("div", {
                                               className: eo.jx,
                                               children: [
-                                                  (0, l.jsx)(A.A, { user: b, size: h._3.SIZE_24 }),
+                                                  (0, l.jsx)(g.A, { user: b, size: h._3.SIZE_24 }),
                                                   (0, l.jsx)(f.D, {
                                                       variant: "heading-lg/semibold",
                                                       children: U.Ay.getName(b),
@@ -466,7 +466,7 @@ function eu(e) {
 }
 function ec(e) {
     let { skuIds: t, claimableRewards: n, allRewards: i } = e,
-        { product: r } = (0, g.q)(t[0]);
+        { product: r } = (0, A.q)(t[0]);
     return null == r
         ? null
         : (0, l.jsx)(x.v, {
@@ -490,8 +490,8 @@ function ed(e) {
         })),
         E = Array.from(C.keys()).sort((e, t) => b.A.compare(e, t)),
         y = (0, u.bG)([R.A], () => R.A.getFriendIDs()),
-        g = o().difference(y, E),
-        P = [...E, ...g],
+        A = o().difference(y, E),
+        P = [...E, ...A],
         _ = (0, u.bG)([O.default], () => O.default.filter((e) => P.includes(e.id) && !e.bot), [P]);
     if (null == _ || 0 === _.length) return null;
     let x = o().sortBy(_, (e) => P.indexOf(e.id));
@@ -514,7 +514,7 @@ function ed(e) {
                             id: e.id,
                             value: e,
                             label: `${U.Ay.getUserTag(e)}`,
-                            leading: (0, l.jsx)(A.A, { user: e, size: h._3.SIZE_20 }),
+                            leading: (0, l.jsx)(g.A, { user: e, size: h._3.SIZE_20 }),
                         })),
                     }),
                     (0, l.jsx)("div", {

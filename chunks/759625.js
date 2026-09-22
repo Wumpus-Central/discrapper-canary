@@ -1,43 +1,43 @@
-r.d(n, { A: () => d });
-var t = r(477900);
-r(582128);
-var l = r(939249),
-    i = r(834730),
-    s = r(147925),
-    o = r(807973),
-    a = r(898612),
-    c = r(232492),
-    u = r(80595);
+n.d(t, { A: () => d });
+var r = n(477900);
+n(582128);
+var l = n(939249),
+    i = n(834730),
+    o = n(147925),
+    a = n(807973),
+    s = n(898612),
+    u = n(232492),
+    c = n(80595);
 function d(e) {
-    let { benefit: n, guildId: r, onClick: d } = e,
-        h = (0, c.A)(r, n.ref_id),
-        m = (0, t.jsx)(o.A, { guildId: r, emojiId: n.emoji_id, emojiName: n.emoji_name });
-    return (0, t.jsxs)(l.D, {
-        className: u.kL,
+    let { benefit: t, guildId: n, onClick: d } = e,
+        h = (0, u.A)(n, t.ref_id),
+        p = (0, r.jsx)(a.A, { guildId: n, emojiId: t.emoji_id, emojiName: t.emoji_name });
+    return (0, r.jsxs)(l.D, {
+        className: c.kL,
         onClick: function () {
             (h?.navigateToChannel(), d());
         },
         "aria-label": h?.ariaLabel,
         role: "link",
         children: [
-            (0, t.jsx)("div", { className: u.qq, children: m }),
-            (0, t.jsxs)("div", {
-                className: u.op,
+            (0, r.jsx)("div", { className: c.qq, children: p }),
+            (0, r.jsxs)("div", {
+                className: c.op,
                 children: [
-                    (0, t.jsx)(i.E, {
+                    (0, r.jsx)(i.E, {
                         variant: "text-md/medium",
                         color: "text-strong",
-                        className: u.UU,
-                        children: (0, a.A)(n),
+                        className: c.UU,
+                        children: (0, s.A)(t),
                     }),
-                    (0, t.jsx)(i.E, {
+                    (0, r.jsx)(i.E, {
                         color: "interactive-text-default",
                         variant: "text-sm/normal",
-                        children: n.description,
+                        children: t.description,
                     }),
                 ],
             }),
-            (0, t.jsx)(s.A, { direction: s.A.Directions.RIGHT, className: u.OW }),
+            (0, r.jsx)(o.A, { direction: o.A.Directions.RIGHT, className: c.OW }),
         ],
     });
 }

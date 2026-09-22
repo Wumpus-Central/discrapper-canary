@@ -17,8 +17,8 @@ var l = n(477900),
     S = n(67480),
     y = n(486020),
     I = n(158045),
-    A = n(580630),
-    g = n(166532),
+    g = n(580630),
+    A = n(166532),
     P = n(888751),
     v = n(652215),
     _ = n(202541),
@@ -53,7 +53,7 @@ function R(e) {
         })),
         Y = F && W,
         V = i.useMemo(() => {
-            if (Y && null != G) return () => G(g.pn.PLAN_SELECT);
+            if (Y && null != G) return () => G(A.pn.PLAN_SELECT);
         }, [Y, G]),
         K = (function (e) {
             let {
@@ -163,10 +163,10 @@ function R(e) {
                         d = O(t),
                         m = t === s.u$.PREMIUM_WITH_TRIAL,
                         f = (d ? c?.amount : c?.subscriptionPlanPrice) ?? 0,
-                        E = (0, A.$g)(f, l.currency),
-                        S = (0, A.CE)(E, n.interval, n.intervalCount),
+                        E = (0, g.$g)(f, l.currency),
+                        S = (0, g.CE)(E, n.interval, n.intervalCount),
                         y = null,
-                        g = null,
+                        A = null,
                         v = !1,
                         x = S,
                         b = o?.discountOffer;
@@ -176,24 +176,24 @@ function R(e) {
                     else if (d) {
                         if (((x = E), n.interval === _.WT.YEAR && (0, I.xq)(n.id))) {
                             let e = (0, I.VA)({ subscriptionPlan: n, isGift: d, priceOptions: i });
-                            ((y = null != e ? (0, A.$g)(e * u, l.currency) : null), (v = !0));
+                            ((y = null != e ? (0, g.$g)(e * u, l.currency) : null), (v = !0));
                         }
                     } else if (r) {
                         let e = (0, p.pg)(l, n.id);
                         if (null != a && a.discount.applicableSubscriptionInterval === n.interval && null != e) {
-                            let t = (0, A.$g)(f - e, l.currency);
+                            let t = (0, g.$g)(f - e, l.currency);
                             ((x = T.intl.format(N.default.U2CmMW, { priceAmount: t })),
                                 (y = T.intl.format(N.default.JsSin7, {
-                                    priceRate: (0, A.CE)(E, n.interval, n.intervalCount),
+                                    priceRate: (0, g.CE)(E, n.interval, n.intervalCount),
                                     intervalCount: a.discount.intervalCount,
                                 })));
                         }
                     } else if ((0, I.xq)(n.id) && null != b) {
                         let e = (0, p.pg)(l, n.id);
                         if ((0, C.Ro)(l, b.discount.id) && null != e) {
-                            let t = (0, A.$g)(f - e, l.currency);
+                            let t = (0, g.$g)(f - e, l.currency);
                             ((x = T.intl.format(T.t.hXcaLT, { price: t })),
-                                (g = E),
+                                (A = E),
                                 (y = (0, p.hm)(b)
                                     ? T.intl.format(T.t.VZ8Tvh, { regularPrice: E })
                                     : T.intl.format(N.default.JsSin7, {
@@ -202,7 +202,7 @@ function R(e) {
                                       })));
                         }
                     }
-                    return { price: x, priceStrikethroughText: g, priceSubText: y, priceSubTextHasStrikethrough: v };
+                    return { price: x, priceStrikethroughText: A, priceSubText: y, priceSubTextHasStrikethrough: v };
                 })({
                     invoiceSummaryType: t,
                     subscriptionPlan: c,

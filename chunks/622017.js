@@ -1,25 +1,25 @@
-s.d(t, { A: () => a });
-var l = s(582128),
+s.d(t, { A: () => r });
+var i = s(582128),
     n = s(17928),
-    i = s(228366),
-    r = s(233317);
-function a(e) {
+    a = s(228366),
+    l = s(233317);
+function r(e) {
     let { useCachedData: t = !1, fetch: s = !0 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         {
-            premiumGroupMembers: a,
-            isFetchingMembers: o,
-            isUpdatingMembers: c,
-        } = (0, n.cf)([r.A], () => ({
-            premiumGroupMembers: r.A.getMembers(),
-            isFetchingMembers: r.A.isFetchingMembers(),
-            isUpdatingMembers: r.A.isUpdatingMembers(),
+            premiumGroupMembers: r,
+            isFetchingMembers: c,
+            isUpdatingMembers: o,
+        } = (0, n.cf)([l.A], () => ({
+            premiumGroupMembers: l.A.getMembers(),
+            isFetchingMembers: l.A.isFetchingMembers(),
+            isUpdatingMembers: l.A.isUpdatingMembers(),
         }));
     return (
-        (0, l.useEffect)(() => {
+        (0, i.useEffect)(() => {
             !s ||
-                (t && r.A.hasFetchedMembers()) ||
-                (null != e && i.h.dispatch({ type: "PREMIUM_GROUP_MEMBERS_REQUEST", subscriptionId: e }));
+                (t && l.A.hasFetchedMembers()) ||
+                (null != e && a.h.dispatch({ type: "PREMIUM_GROUP_MEMBERS_REQUEST", subscriptionId: e }));
         }, [s, e, t]),
-        { premiumGroupMembers: a, isLoading: o || c }
+        { premiumGroupMembers: r, isLoading: c || o }
     );
 }

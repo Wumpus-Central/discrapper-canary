@@ -17,8 +17,8 @@ var l = n(477900),
     S = n(45938),
     y = n(158045),
     I = n(580630),
-    A = n(35587),
-    g = n(186223),
+    g = n(35587),
+    A = n(186223),
     P = n(202541),
     v = n(375708),
     _ = n(781248);
@@ -46,9 +46,9 @@ function N(e, t, n) {
     if (
         null != t &&
         !m &&
-        (0, g.sR)({ targetSubscriptionPlan: t, isGift: a, shouldShowSavingsPercent: r, isEligibleForTrial: d ?? !1 })
+        (0, A.sR)({ targetSubscriptionPlan: t, isGift: a, shouldShowSavingsPercent: r, isEligibleForTrial: d ?? !1 })
     ) {
-        let e = (0, g.vK)(t, a, c);
+        let e = (0, A.vK)(t, a, c);
         return null != e ? T(e) : null;
     }
     return null != t && t.interval === P.WT.YEAR && null != e
@@ -64,7 +64,7 @@ function b(e) {
             selected: r,
             priceOptions: s,
             isPrepaid: u,
-            shouldShowTrialOrDiscountLayout: g,
+            shouldShowTrialOrDiscountLayout: A,
             isEligibleForDiscount: T,
             isEligibleForTrial: b,
             isCurrentPlan: j,
@@ -86,10 +86,10 @@ function b(e) {
         B = (0, c.bG)([E.A], () => E.A.get(n));
     o()(null != B, "Missing subscriptionPlan");
     let H = (0, y.m6)(B.id),
-        W = (0, A.Sq)(),
+        W = (0, g.Sq)(),
         Y = (0, y.L_)({ planId: n, isGift: k, priceOptions: s, subscriptionPlan: B }),
         V = (0, y.y8)(n, !1, k, s),
-        K = null != Y && !g,
+        K = null != Y && !A,
         Z = i.useCallback(() => {
             let e = N(t, B, {
                 userLocale: M,
@@ -122,7 +122,7 @@ function b(e) {
     function Q() {
         R || r || L(n, { shouldUpdateQuantity: !1 });
     }
-    let $ = g
+    let $ = A
         ? v.intl.format(v.t.hXcaLT, {
               price:
                   T && null != G && z
@@ -160,7 +160,7 @@ function b(e) {
                             (0, l.jsxs)("div", {
                                 children: [
                                     (0, l.jsxs)("div", {
-                                        className: a()(_.Gl, { [_.h4]: r || U, [_.ox]: g && (r || U) }),
+                                        className: a()(_.Gl, { [_.h4]: r || U, [_.ox]: A && (r || U) }),
                                         children: [q, U && Z()],
                                     }),
                                     U &&
@@ -180,12 +180,12 @@ function b(e) {
                             !U && Z(),
                         ],
                     }),
-                    g
+                    A
                         ? (0, l.jsx)("div", { className: a()({ [_.kb]: r }), children: $ })
                         : (0, l.jsx)("div", { className: a()({ [_.h4]: r || U }), children: $ }),
                 ],
             }),
-            g &&
+            A &&
                 (0, l.jsx)("div", {
                     className: _.hB,
                     children: (0, l.jsx)(d.E, {

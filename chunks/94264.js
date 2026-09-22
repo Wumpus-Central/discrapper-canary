@@ -1,8 +1,8 @@
 l.d(t, { A: () => C });
-var a = l(477900);
+var n = l(477900);
 l(582128);
-var n = l(503698),
-    s = l.n(n),
+var a = l(503698),
+    s = l.n(a),
     i = l(892227),
     r = l(661531),
     c = l(403581),
@@ -17,24 +17,24 @@ let _ = {
     },
     C = function (e) {
         let { className: t } = e,
-            { passesProgressBarInvariant: l, programReward: n, totalDays: r } = (0, d.F)();
-        if (!l || null == n || null == r) return null;
-        let C = (0, i.default)(new Date(n.next_reward_date), new Date()),
-            E = n.program_current_state === u.L.PREMIUM_CHURNING,
+            { passesProgressBarInvariant: l, programReward: a, totalDays: r } = (0, d.F)();
+        if (!l || null == a || null == r) return null;
+        let C = (0, i.default)(new Date(a.next_reward_date), new Date()),
+            E = a.program_current_state === u.L.PREMIUM_CHURNING,
             A = E ? _.churning.start : _.active.start,
             g = E ? _.churning.end : _.active.end;
-        return (0, a.jsxs)("div", {
+        return (0, n.jsxs)("div", {
             className: s()(m.k, t),
             children: [
-                (0, a.jsx)(h.Ay, {
+                (0, n.jsx)(h.Ay, {
                     variant: h.qP.UNSET,
                     progress: r - C,
                     maximum: r,
                     override: { default: { gradientStart: A, gradientEnd: g } },
                 }),
                 E
-                    ? (0, a.jsx)(c.t, { size: "sm", color: "currentColor", className: m.K })
-                    : (0, a.jsx)(o.C, { size: "sm", color: "currentColor", className: m.K }),
+                    ? (0, n.jsx)(c.t, { size: "sm", color: "currentColor", className: m.K })
+                    : (0, n.jsx)(o.C, { size: "sm", color: "currentColor", className: m.K }),
             ],
         });
     };

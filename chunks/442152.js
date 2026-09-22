@@ -1,4 +1,4 @@
-n.d(t, { A: () => t5 });
+n.d(t, { A: () => t6 });
 var l = n(477900),
     i = n(582128),
     s = n(503698),
@@ -489,8 +489,8 @@ let e1 = function (e) {
 var e2 = n(307301),
     e3 = n(182922),
     e8 = n(683522);
-let e5 = (0, z.xI)(L.A.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_PRIMARY_DIMENSIONS),
-    e6 = (0, z.xI)(L.A.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_SECONDARY_DIMENSIONS),
+let e6 = (0, z.xI)(L.A.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_PRIMARY_DIMENSIONS),
+    e5 = (0, z.xI)(L.A.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_SECONDARY_DIMENSIONS),
     e7 = i.memo(function (e) {
         let { stickersGrid: t } = e,
             n = U.bM.useStore((e) => e.inspectedExpressionPosition),
@@ -519,13 +519,13 @@ let e5 = (0, z.xI)(L.A.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_B
                     let i = T.A.getStickerPack(e.pack_id);
                     null != i &&
                         ((t = eg.intl.format(eg.t.cZOkbs, { source: i.name })),
-                        (n = (0, l.jsx)(em.A, { size: e6, sticker: (0, eh.Id)(i), disableAnimation: !0 })));
+                        (n = (0, l.jsx)(em.A, { size: e5, sticker: (0, eh.Id)(i), disableAnimation: !0 })));
                 }
                 return { title: t, graphic: n };
             })(s),
             o =
                 (0, eh.FD)(s) || (0, eh.Xw)(s)
-                    ? (0, l.jsx)(em.A, { isInteracting: !0, size: e5, sticker: s, disableAnimation: !0 })
+                    ? (0, l.jsx)(em.A, { isInteracting: !0, size: e6, sticker: s, disableAnimation: !0 })
                     : (0, l.jsx)("div", {
                           className: e8.P,
                           children: (0, l.jsx)(e2.j, { size: "md", color: "currentColor", className: e8.K }),
@@ -1564,7 +1564,7 @@ let t3 = 498 + t0.as.MEDIUM,
             className: r()(n, t2.oi, t2.pc, { [t2.Mv]: t }),
         });
     }),
-    t5 = i.memo(function (e) {
+    t6 = i.memo(function (e) {
         let {
                 positionTargetRef: t,
                 hideGifFavorites: n,

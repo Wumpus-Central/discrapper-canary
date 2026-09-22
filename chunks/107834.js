@@ -10,15 +10,15 @@ var n = s(17928),
     d = s(742589),
     u = s(65470),
     m = s(285373),
-    g = s(280450),
-    x = s(652215),
-    f = s(375708),
-    p = s(906367);
+    x = s(280450),
+    g = s(652215),
+    p = s(375708),
+    f = s(906367);
 let h = function () {
-    let e = (0, n.bG)([g.default], () => g.default.isAuthenticated()),
+    let e = (0, n.bG)([x.default], () => x.default.isAuthenticated()),
         t = (0, c.Ay)();
     return (0, i.jsx)(r.A, {
-        section: x.JJy.NAVIGATION,
+        section: g.JJy.NAVIGATION,
         children: (0, i.jsx)(a.N, {
             theme: t,
             children: (t) =>
@@ -26,7 +26,7 @@ let h = function () {
                     isAuthenticated: e,
                     className: t,
                     toolbar: (0, i.jsxs)("div", {
-                        className: p.fI,
+                        className: f.fI,
                         children: [
                             (0, i.jsx)(m.l, {
                                 size: "sm",
@@ -39,7 +39,7 @@ let h = function () {
                     role: "navigation",
                     children: [
                         (0, i.jsx)(d.A.Icon, { icon: l.t, "aria-hidden": !0 }),
-                        (0, i.jsx)(d.A.Title, { children: f.intl.string(f.t.Ipxkog) }),
+                        (0, i.jsx)(d.A.Title, { children: p.intl.string(p.t.Ipxkog) }),
                     ],
                 }),
         }),

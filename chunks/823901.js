@@ -1,55 +1,55 @@
-t.d(n, { y: () => I });
+t.d(n, { y: () => u });
 var i = t(477900),
-    l = t(877624),
-    c = t(17928),
-    r = t(417098),
-    o = t(597770),
-    s = t(688810),
+    c = t(877624),
+    l = t(17928),
+    o = t(417098),
+    s = t(597770),
+    r = t(688810),
     a = t(75678),
     _ = t(412260),
-    A = t(49999),
-    T = t(652215),
-    u = t(375708),
-    E = t(971656);
-function I(e) {
+    T = t(49999),
+    A = t(652215),
+    E = t(375708),
+    I = t(971656);
+function u(e) {
     let { markAsDismissed: n, className: t } = e,
-        { analyticsLocations: I } = (0, s.Ay)(),
-        d = (0, c.bG)([_.A], () => {
-            let e = _.A.getMarketingComponentByType(l.C.GIFT_REMINDER_NAGBAR);
+        { analyticsLocations: u } = (0, r.Ay)(),
+        N = (0, l.bG)([_.A], () => {
+            let e = _.A.getMarketingComponentByType(c.C.GIFT_REMINDER_NAGBAR);
             return null == e || "giftReminderNagbar" !== e.properties.properties.oneofKind
                 ? null
                 : e.properties.properties.giftReminderNagbar;
         });
-    return null == d
+    return null == N
         ? null
-        : (0, i.jsxs)(r.$T, {
-              color: r.Hv.PREMIUM_TIER_2,
+        : (0, i.jsxs)(o.$T, {
+              color: o.Hv.PREMIUM_TIER_2,
               className: t,
               children: [
-                  (0, i.jsx)(r.PM, {
-                      onClick: () => n(A.i.USER_DISMISS),
-                      noticeType: T.kqX.GIFTING_PROMOTION_REMINDER,
+                  (0, i.jsx)(o.PM, {
+                      onClick: () => n(T.i.USER_DISMISS),
+                      noticeType: A.kqX.GIFTING_PROMOTION_REMINDER,
                   }),
-                  (0, i.jsx)(o.GiftIcon, {
+                  (0, i.jsx)(s.GiftIcon, {
                       size: "custom",
                       width: 20,
                       height: 20,
                       color: "currentColor",
-                      className: E.ez,
+                      className: I.ez,
                   }),
-                  d.body,
-                  (0, i.jsx)(r.Z_, {
+                  N.body,
+                  (0, i.jsx)(o.Z_, {
                       onClick: () => {
                           (0, a.A)({
                               isGift: !0,
                               initialPlanId: null,
-                              analyticsLocations: I,
-                              analyticsLocation: T.ThZ.SEASONAL_GIFTING_REMINDER_NAGBAR,
-                              analyticsObject: { page: T.liQ.PREMUIM_UPSELL_GIFTING_PROMOTION },
+                              analyticsLocations: u,
+                              analyticsLocation: A.ThZ.SEASONAL_GIFTING_REMINDER_NAGBAR,
+                              analyticsObject: { page: A.liQ.PREMUIM_UPSELL_GIFTING_PROMOTION },
                           });
                       },
-                      noticeType: T.kqX.GIFTING_PROMOTION_REMINDER,
-                      children: u.intl.string(u.t.RzWDqY),
+                      noticeType: A.kqX.GIFTING_PROMOTION_REMINDER,
+                      children: E.intl.string(E.t.RzWDqY),
                   }),
               ],
           });

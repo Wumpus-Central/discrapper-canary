@@ -1,16 +1,16 @@
-u.d(t, { A: () => r });
-var s = u(582128);
-let r = function (e, t) {
-    let [u, r] = s.useState(e);
+t.d(s, { A: () => l });
+var a = t(582128);
+let l = function (e, s) {
+    let [t, l] = a.useState(e);
     return (
-        s.useEffect(() => {
-            let u = setTimeout(() => {
-                r(e);
-            }, t);
+        a.useEffect(() => {
+            let t = setTimeout(() => {
+                l(e);
+            }, s);
             return () => {
-                clearTimeout(u);
+                clearTimeout(t);
             };
-        }, [e, t]),
-        u
+        }, [e, s]),
+        t
     );
 };

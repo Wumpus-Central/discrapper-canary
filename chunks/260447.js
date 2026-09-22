@@ -1,56 +1,56 @@
-r.d(n, { z: () => d });
-var t = r(582128),
-    l = r(192308),
-    i = r(139033),
-    s = r(626584),
-    o = r(38405),
-    a = r(794400),
-    c = r(375708);
-let u = new s.A("RevenueErrorBoundary.tsx");
-class d extends t.PureComponent {
+n.d(t, { z: () => d });
+var r = n(582128),
+    l = n(192308),
+    i = n(139033),
+    o = n(626584),
+    a = n(38405),
+    s = n(794400),
+    u = n(375708);
+let c = new o.A("RevenueErrorBoundary.tsx");
+class d extends r.PureComponent {
     state = { error: null, info: null };
-    getSentryTags(e, n) {
-        return { app_context: this.getSentryAppContext(), ...(n ? { crashed: "true" } : {}) };
+    getSentryTags(e, t) {
+        return { app_context: this.getSentryAppContext(), ...(t ? { crashed: "true" } : {}) };
     }
     getSentryExtras(e) {
-        return e instanceof a.v && null != e.extraSentryInformation ? { ...e.extraSentryInformation } : {};
+        return e instanceof s.v && null != e.extraSentryInformation ? { ...e.extraSentryInformation } : {};
     }
-    onErrorCaught(e, n, r) {}
+    onErrorCaught(e, t, n) {}
     closeAndShowAlert() {
         ((0, l.closeAllModals)(),
             (0, i.A)({
-                title: c.intl.string(c.t.iufib1),
-                subtitle: c.intl.string(c.t.ZUEGFn),
-                confirmText: c.intl.string(c.t.TyCVIq),
+                title: u.intl.string(u.t.iufib1),
+                subtitle: u.intl.string(u.t.ZUEGFn),
+                confirmText: u.intl.string(u.t.TyCVIq),
             }));
     }
     getErrorHandlingBehavior(e) {
-        return e instanceof a.v ? e.errorHandlingBehavior : this.props.errorHandlingBehavior;
+        return e instanceof s.v ? e.errorHandlingBehavior : this.props.errorHandlingBehavior;
     }
     getCrashedFlag(e) {
         return "rethrow" === this.getErrorHandlingBehavior(e);
     }
-    emitSentryException(e, n) {
-        let r,
-            { additionalAnalyticsData: t } = this.props,
+    emitSentryException(e, t) {
+        let n,
+            { additionalAnalyticsData: r } = this.props,
             l = this.getCrashedFlag(e),
             i = this.getSentryExtras(e),
-            s = {
+            o = {
                 tags: this.getSentryTags(e, l),
-                extra: { ...i, ...(t ?? {}), ...(null != n ? { reactErrorInfo: n } : {}) },
+                extra: { ...i, ...(r ?? {}), ...(null != t ? { reactErrorInfo: t } : {}) },
             };
         return (
-            (e instanceof a.v && e.skipReportingToSentry) || (r = o.A.captureException(e, s)),
-            u.error("Revenue error occurred:", { error: e, additionalErrorContext: i }),
-            { sentryErrorOptions: s, sentryEventId: r }
+            (e instanceof s.v && e.skipReportingToSentry) || (n = a.A.captureException(e, o)),
+            c.error("Revenue error occurred:", { error: e, additionalErrorContext: i }),
+            { sentryErrorOptions: o, sentryEventId: n }
         );
     }
-    componentDidCatch(e, n) {
-        let { sentryErrorOptions: r, sentryEventId: t } = this.emitSentryException(e, n);
+    componentDidCatch(e, t) {
+        let { sentryErrorOptions: n, sentryEventId: r } = this.emitSentryException(e, t);
         if (
-            (this.onErrorCaught(e, n, t),
-            this.setState({ error: e, info: n }),
-            null != this.props.onErrorReported && this.props.onErrorReported(e, n, r),
+            (this.onErrorCaught(e, t, r),
+            this.setState({ error: e, info: t }),
+            null != this.props.onErrorReported && this.props.onErrorReported(e, t, n),
             "rethrow" === this.getErrorHandlingBehavior(e))
         )
             throw e;

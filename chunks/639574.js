@@ -17,8 +17,8 @@ var l = n(477900),
     S = n(669510),
     y = n(732280),
     I = n(815545),
-    A = n(344159),
-    g = n(45938),
+    g = n(344159),
+    A = n(45938),
     P = n(158045),
     v = n(683071),
     _ = n(834730),
@@ -208,8 +208,8 @@ function en(e) {
                         { isGift: y } = (0, p.Pv)(),
                         {
                             subscriptionPlan: I,
-                            purchaseDisabled: A,
-                            newItems: g,
+                            purchaseDisabled: g,
+                            newItems: A,
                             preventInvoiceFetch: P,
                         } = (0, h.TP)({ selectedPlanId: t, priceOptions: n }),
                         {
@@ -217,7 +217,7 @@ function en(e) {
                             checkoutInvoiceRequestParams: _,
                             renewalInvoiceRequestParams: x,
                         } = (0, h.jq)({
-                            items: g,
+                            items: A,
                             preventFetch: P,
                             priceOptions: n,
                             trialId: l,
@@ -260,7 +260,7 @@ function en(e) {
                         discriminatedInvoicePreview: O,
                         proratedInvoicePreview: b,
                         renewalInvoicePreview: m,
-                        purchaseDisabled: A,
+                        purchaseDisabled: g,
                         invoiceError: R,
                         subscriptionPeriodEnd: L,
                     };
@@ -276,13 +276,13 @@ function en(e) {
         eC = (0, m.K)(),
         eh = es ?? ea,
         { giftRecipient: ef } = (0, p.Pv)(),
-        eE = H && (0, g.Ik)(ef),
+        eE = H && (0, A.Ik)(ef),
         eS = (0, C.t4)((e) => e.getIsInOneStepSubscriptionCheckout({ isTrial: eu })) && !eo && !Y,
         ey = L?.guild_id ?? void 0,
         eI = (0, r.A)({ forceFetch: !1, excludeReverseTrial: !1, excludeReverseTrialFromCountdown: !0 }),
-        { paymentSources: eA } = (0, u.j)(),
+        { paymentSources: eg } = (0, u.j)(),
         {
-            hasEntitlements: eg,
+            hasEntitlements: eA,
             paymentSourceType: eP,
             isPrepaid: ev,
             paymentSourceOptionalWarningCopy: e_,
@@ -295,7 +295,7 @@ function en(e) {
                 a = l.paymentSourceId,
                 s = (0, Q.g)(n, a),
                 o = (0, P.J$)(l.paymentSourceId),
-                { hasEntitlements: u, entitlements: c } = (0, A.X)(t.id, r),
+                { hasEntitlements: u, entitlements: c } = (0, g.X)(t.id, r),
                 d = i.useMemo(
                     () => (u && null == a ? b.intl.format(b.t["2wPRSF"], { months: c.length }) : null),
                     [u, a, c],
@@ -307,7 +307,7 @@ function en(e) {
                 paymentSourceOptionalWarningCopy: d,
                 hasEntitlements: u,
             };
-        })({ subscriptionPlan: el, paymentSources: eA }),
+        })({ subscriptionPlan: el, paymentSources: eg }),
         ex = em ?? D,
         eT = i.useMemo(
             () => null != eh && null != eh.discount && null != ex && (0, I.Ro)(ex, eh.discount.id),
@@ -319,7 +319,7 @@ function en(e) {
             isTrial: eu,
             hideCurrencySelect: eT,
             disabled: ep,
-            hasEntitlements: eg,
+            hasEntitlements: eA,
         }),
         eb = (0, y.V)(B),
         ej = H && el.interval === T.WT.YEAR && (0, P.xq)(el.id),
@@ -347,12 +347,12 @@ function en(e) {
                     isGift: e.isGift,
                     activeSubscription: e.activeSubscription,
                 })),
-                { selectedPlanFromFluxStore: I, selectedPlanId: A } = (0, E.D)(),
-                { selectedGiftingPromotionRewards: g } = (0, p.Pv)(),
+                { selectedPlanFromFluxStore: I, selectedPlanId: g } = (0, E.D)(),
+                { selectedGiftingPromotionRewards: A } = (0, p.Pv)(),
                 { copy: P, daysCount: L, userTrialOffer: k } = (0, j.O8)(),
                 w = (0, M.pt)({
                     fractionalPremiumInfo: f,
-                    selectedPlanId: A,
+                    selectedPlanId: g,
                     planGroup: t,
                     premiumSubscription: y,
                     isGift: S,
@@ -372,12 +372,12 @@ function en(e) {
                                 text: b.intl.format(q.default["tUzT/U"], { percentOff: e.amount }),
                             });
                     }
-                    return S && g.length > 0
-                        ? (0, l.jsx)(Z, { skuIds: g, text: b.intl.format(q.default["XWo+Bp"], { count: g.length }) })
+                    return S && A.length > 0
+                        ? (0, l.jsx)(Z, { skuIds: A, text: b.intl.format(q.default["XWo+Bp"], { count: A.length }) })
                         : r && null != n
                           ? (0, l.jsx)(K, { text: b.intl.format(q.default["7sYIBL"], { savingsPercent: n }) })
                           : null;
-                }, [k, u, d, L, s, n, r, S, g]),
+                }, [k, u, d, L, s, n, r, S, A]),
                 D = (function (e) {
                     let { skuId: t, isGift: n } = e,
                         r = (0, x.O)();
