@@ -236,12 +236,6 @@
     pointer-events: none
 }
 
-.container__6c21f {
-    border: 1px solid var(--status-warning);
-    border-radius: var(--radius-md);
-    padding: var(--space-16)
-}
-
 .clickable__4337d {
     cursor: pointer
 }
@@ -377,4 +371,4 @@
     background-color: var(--background-mod-subtle)
 }
 
-/*# sourceMappingURL=293612.774efa5eddc15470.css.map*/
+/*# sourceMappingURL=270076.b9c2d00fb5259aed.css.map*/

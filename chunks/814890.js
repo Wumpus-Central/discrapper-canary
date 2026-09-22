@@ -14,25 +14,25 @@ n.d(t, {
 var i = n(132500),
     r = n(317097),
     a = n(155718),
-    s = n(626584),
-    l = n(337591),
-    o = n(911929),
-    d = n(731068),
-    c = n(486020),
-    u = n(403362),
-    _ = n(935208),
+    s = n(114070),
+    l = n(626584),
+    o = n(337591),
+    d = n(911929),
+    c = n(731068),
+    u = n(486020),
+    _ = n(403362),
     E = n(489414),
     A = n(532294),
     h = n(375708);
-let I = new s.A("InteractionComponentUtils"),
+let I = new l.A("InteractionComponentUtils"),
     f = (e, t) => ({
         id: e.id,
         name: e.name,
         animated: e.animated,
-        src: t && null != e.id ? c.Ay.getEmojiURL({ id: e.id, animated: e.animated || !1, size: 48 }) : void 0,
+        src: t && null != e.id ? u.Ay.getEmojiURL({ id: e.id, animated: e.animated || !1, size: 48 }) : void 0,
     });
 function p(e, t, n) {
-    let i = e?.data.interactionType === a.G4.MESSAGE_COMPONENT && e?.state === l.m.FAILED ? e.data.componentId : null;
+    let i = e?.data.interactionType === a.G4.MESSAGE_COMPONENT && e?.state === o.m.FAILED ? e.data.componentId : null;
     if (
         null !=
         (null != i
@@ -54,7 +54,7 @@ function p(e, t, n) {
             (function (e) {
                 if (e?.errorCode === 429) return h.intl.string(h.t.fitPBS);
                 if (e?.reasonCode != null) {
-                    let t = (0, o.s)(e.reasonCode, e.data.applicationId);
+                    let t = (0, d.s)(e.reasonCode, e.data.applicationId);
                     if (null != t) return t;
                 }
                 return h.intl.string(h.t.VCsUJu);
@@ -97,10 +97,10 @@ function N(e) {
         if (t.type === a.I5.MEDIA_GALLERY) {
             let e = t.items[0];
             if (null == e) continue;
-            let n = (0, d.FE)(e.media);
+            let n = (0, c.FE)(e.media);
             if ("INVALID" !== n) return { ...e.media, type: n, alt: e.description };
         } else if (t.type === a.I5.THUMBNAIL) {
-            let e = (0, d.FE)(t.media);
+            let e = (0, c.FE)(t.media);
             if ("INVALID" !== e) return { ...t.media, type: e, alt: t.description };
         }
     return null;
@@ -216,7 +216,7 @@ function y(e) {
                 }
                 switch (t.type) {
                     case a.I5.ACTION_ROW: {
-                        let e = t.components.map((e, t) => i(e, t)).filter(u.Vq);
+                        let e = t.components.map((e, t) => i(e, t)).filter(_.Vq);
                         return { type: a.I5.ACTION_ROW, id: D(n), components: e };
                     }
                     case a.I5.BUTTON: {
@@ -316,7 +316,7 @@ function y(e) {
                             defaultValues: t.default_values,
                         };
                     case a.I5.SECTION: {
-                        let e = t.components.map((e, t) => i(e, t)).filter(u.Vq),
+                        let e = t.components.map((e, t) => i(e, t)).filter(_.Vq),
                             r = i(t.accessory, e.length);
                         if (0 === e.length || null == r) return null;
                         return { type: a.I5.SECTION, id: D(n), components: e, accessory: r };
@@ -327,7 +327,7 @@ function y(e) {
                         return {
                             type: a.I5.THUMBNAIL,
                             id: D(n),
-                            media: (0, d.Uv)(t.media),
+                            media: (0, c.Uv)(t.media),
                             description: t.description,
                             spoiler: t.spoiler,
                         };
@@ -336,7 +336,7 @@ function y(e) {
                             type: a.I5.MEDIA_GALLERY,
                             id: D(n),
                             items: t.items.map((e) => ({
-                                media: (0, d.Uv)(e.media),
+                                media: (0, c.Uv)(e.media),
                                 description: e.description,
                                 spoiler: e.spoiler,
                             })),
@@ -345,7 +345,7 @@ function y(e) {
                         return {
                             type: a.I5.FILE,
                             id: D(n),
-                            file: (0, d.Uv)(t.file),
+                            file: (0, c.Uv)(t.file),
                             name: t.name,
                             size: t.size,
                             spoiler: t.spoiler,
@@ -365,7 +365,7 @@ function y(e) {
                             contentInventoryEntry: t.content_inventory_entry,
                         };
                     case a.I5.CONTAINER: {
-                        let e = t.components.map((e, t) => i(e, t)).filter(u.Vq);
+                        let e = t.components.map((e, t) => i(e, t)).filter(_.Vq);
                         return {
                             type: a.I5.CONTAINER,
                             id: D(n),
@@ -391,54 +391,18 @@ function y(e) {
                             fileTypes: t.file_types,
                         };
                     case a.I5.CHECKPOINT_CARD:
-                        var s, l;
-                        let o;
-                        return (
-                            (s = t),
-                            (l = n),
-                            (o = s.checkpoint_data).version === A.wk.V2025
-                                ? {
-                                      type: s.type,
-                                      id: D(l),
-                                      checkpointData: {
-                                          version: o.version,
-                                          cardId: o.card_id,
-                                          powerLevel: o.power_level,
-                                          powerLevelPercentile: o.power_level_percentile,
-                                          numMessagesSent: o.num_messages_sent,
-                                          totalVoiceMinutes: o.total_voice_minutes,
-                                          numEmojisSent: o.num_emojis_sent,
-                                          topGuild:
-                                              null != o.top_guild
-                                                  ? {
-                                                        guildId: o.top_guild.guild_id,
-                                                        guildName: o.top_guild.guild_name,
-                                                        guildIcon: o.top_guild.guild_icon,
-                                                    }
-                                                  : void 0,
-                                          topEmoji:
-                                              null != o.top_emoji
-                                                  ? {
-                                                        emojiId: _.default.isProbablyAValidSnowflake(
-                                                            o.top_emoji.emoji_id,
-                                                        )
-                                                            ? o.top_emoji.emoji_id
-                                                            : void 0,
-                                                        emojiName: o.top_emoji?.emoji_name,
-                                                    }
-                                                  : void 0,
-                                          topGame:
-                                              null != o.top_game
-                                                  ? {
-                                                        applicationId: o.top_game.application_id,
-                                                        applicationName: o.top_game.application_name,
-                                                        applicationImageId: o.top_game.application_image_id,
-                                                    }
-                                                  : void 0,
-                                      },
-                                  }
-                                : null
-                        );
+                        var l = t,
+                            o = n;
+                        let d = l.checkpoint_data;
+                        switch (d.version) {
+                            case A.wk.V2025:
+                                return { type: l.type, id: D(o), checkpointData: (0, s.LG)(d) };
+                            case A.wk.V2026:
+                                let u = (0, s.q6)(d);
+                                if (null == u) break;
+                                return { type: l.type, id: D(o), checkpointData: u };
+                        }
+                        return null;
                     case a.I5.RADIO_GROUP:
                         return {
                             type: t.type,

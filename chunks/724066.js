@@ -41,7 +41,7 @@ async function o() {
         n.e("165697").then(n.bind(n, 969944)),
         n.e("552712").then(n.bind(n, 394107)),
         n.e("931319").then(n.bind(n, 905322)),
-        n.e("844841").then(n.bind(n, 922704)),
+        Promise.resolve().then(n.bind(n, 922704)),
         n.e("840723").then(n.bind(n, 763166)),
         Promise.resolve().then(n.bind(n, 841365)),
         Promise.resolve().then(n.bind(n, 680091)),

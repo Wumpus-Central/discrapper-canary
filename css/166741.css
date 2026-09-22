@@ -123,6 +123,12 @@
     gap: 2px
 }
 
+.container__6c21f {
+    border: 1px solid var(--status-warning);
+    border-radius: var(--radius-md);
+    padding: var(--space-16)
+}
+
 .inline__6c706 {
     opacity: 1
 }
@@ -303,4 +309,4 @@
     pointer-events: none
 }
 
-/*# sourceMappingURL=812793.3b09655f7e9153e7.css.map*/
+/*# sourceMappingURL=166741.b22b032865212023.css.map*/
