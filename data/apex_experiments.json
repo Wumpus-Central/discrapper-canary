@@ -2579,22 +2579,6 @@
     }
   },
   {
-    "name": "2026-05-block-user-feedback",
-    "kind": "user",
-    "defaultConfig": {
-      "enabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true
-      }
-    }
-  },
-  {
     "name": "2026-05-boosting-pre-checkout-modal-refresh-monthly-rate",
     "kind": "user",
     "defaultConfig": {
@@ -2792,28 +2776,6 @@
       },
       "1": {
         "enabled": true
-      }
-    }
-  },
-  {
-    "name": "2026-05-ignore-user-feedback",
-    "kind": "user",
-    "defaultConfig": {
-      "enabled": false,
-      "shouldGetShorterIgnoreDuration": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true,
-        "shouldGetShorterIgnoreDuration": false
-      },
-      "2": {
-        "enabled": true,
-        "shouldGetShorterIgnoreDuration": true
       }
     }
   },
