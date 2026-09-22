@@ -1182,7 +1182,6 @@ class j extends S.A {
                                   type: m,
                                   sourceId: S,
                                   useVideoHook: l,
-                                  useHookFramePacer: !1,
                                   useGraphicsCapture: c,
                                   useGraphicsCaptureApiLevel: o,
                                   useCaptureDeviceForEncode: d,
@@ -2171,7 +2170,6 @@ class er extends d.A {
             this.registerClipsRecordingEventHandler(),
             t.applyClipsSettings?.({
                 useVideoHook: l,
-                useHookFramePacer: !1,
                 useGraphicsCapture: o,
                 useQuartzCapturer: d,
                 allowScreenCaptureKit: c,
