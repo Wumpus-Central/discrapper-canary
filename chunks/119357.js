@@ -1,4 +1,4 @@
-e.d(i, { default: () => nn });
+e.d(i, { default: () => P });
 var t = e(477900);
 e(582128);
 var l = e(17928),
@@ -14,176 +14,170 @@ var l = e(17928),
     x = e(438653),
     j = e(6351),
     g = e(349807),
-    C = e(250737),
-    X = e(73883),
-    b = e(508654),
-    N = e(24661),
-    _ = e(769591),
-    m = e(446600),
-    p = e(687340),
-    v = e(533957),
-    f = e(886393),
-    E = e(477190),
-    L = e(307623),
-    V = e(317910),
-    k = e(686449),
-    G = e(945886),
-    I = e(375708);
-function S(n) {
-    let i = (0, l.bG)([G.A], () => G.A.isCollapsed(n.id), [n.id]);
+    X = e(250737),
+    b = e(73883),
+    C = e(508654),
+    _ = e(24661),
+    p = e(446600),
+    N = e(687340),
+    f = e(533957),
+    m = e(886393),
+    v = e(477190),
+    E = e(307623),
+    k = e(317910),
+    G = e(686449),
+    I = e(945886),
+    S = e(375708);
+function T(n) {
+    let i = (0, l.bG)([I.A], () => I.A.isCollapsed(n.id), [n.id]);
     return __OVERLAY__
         ? null
         : (0, t.jsx)(s.sL, {
               id: "hide-voice-names",
-              label: I.intl.string(I.t.LxzNiu),
-              action: () => k.A.update(n.id),
+              label: S.intl.string(S.t.LxzNiu),
+              action: () => G.A.update(n.id),
               checked: i,
           });
 }
-var T = e(475777),
+var L = e(475777),
     O = e(868548),
-    Z = e(995102),
-    M = e(288104),
-    H = e(661504),
-    Q = e(969128),
-    U = e(304694),
-    w = e(314116),
-    B = e(849736),
-    D = e(233993),
-    F = e(576705);
-function R(n, i) {
-    let e = (0, l.bG)([F.A], () => F.A.can(D.QY, n), [n]);
+    V = e(995102),
+    Z = e(288104),
+    H = e(969128),
+    Q = e(304694),
+    U = e(314116),
+    w = e(849736),
+    B = e(233993),
+    D = e(576705);
+function M(n, i) {
+    let e = (0, l.bG)([D.A], () => D.A.can(B.QY, n), [n]);
     return null != i && e
         ? (0, t.jsx)(s.Dr, {
               id: "end-stage",
-              label: I.intl.string(I.t.saZaRb),
+              label: S.intl.string(S.t.saZaRb),
               color: "danger",
               action: function () {
-                  (0, w.A)({
-                      title: I.intl.string(I.t.gW9je1),
-                      subtitle: I.intl.string(I.t.mT7jwN),
-                      confirmText: I.intl.string(I.t.saZaRb),
-                      onConfirm: () => (0, B.OE)(n),
+                  (0, U.A)({
+                      title: S.intl.string(S.t.gW9je1),
+                      subtitle: S.intl.string(S.t.mT7jwN),
+                      confirmText: S.intl.string(S.t.saZaRb),
+                      onConfirm: () => (0, w.OE)(n),
                   });
               },
           })
         : null;
 }
 e(237984);
-var W = e(704543),
-    y = e(671483),
-    z = e(217563),
-    Y = e(367513),
-    q = e(976860),
-    J = e(652215);
-function K(n, i) {
-    return (0, l.bG)([F.A], () => F.A.can(J.xBc.CONNECT, n), [n]) && n.isGuildVocal()
+var R = e(704543),
+    W = e(671483),
+    y = e(217563),
+    z = e(367513),
+    F = e(976860),
+    Y = e(652215);
+function q(n, i) {
+    return (0, l.bG)([D.A], () => D.A.can(Y.xBc.CONNECT, n), [n]) && n.isGuildVocal()
         ? (0, t.jsx)(s.Dr, {
               id: "open-chat",
-              label: I.intl.string(I.t.ZXxLQg),
+              label: S.intl.string(S.t.ZXxLQg),
               action: () => {
-                  (Y.A.updateChatOpen(n.id, !0), (0, q.uh)(i.id, n.id));
+                  (z.A.updateChatOpen(n.id, !0), (0, F.uh)(i.id, n.id));
               },
           })
         : null;
 }
-function P(n) {
+function J(n) {
     let { channel: i, guild: e, onSelect: d } = n,
         c = i.isGuildStageVoice(),
-        o = (0, l.bG)([m.A], () => (c ? m.A.getStageInstanceByChannel(i.id) : void 0), [c, i.id]),
+        o = (0, l.bG)([p.A], () => (c ? p.A.getStageInstanceByChannel(i.id) : void 0), [c, i.id]),
         h = (0, O.A)(i),
-        X = (0, f.A)(i),
-        p = (0, b.Qs)(i.id),
-        v = (0, N.A)(p?.id, e, i),
-        E = R(i, o),
-        L = (0, x.C)(i),
-        V = (0, C.A)(i),
-        k = (0, j.A)(i),
-        G = (0, g.A)(i),
-        T = S(i),
-        Q = (0, Z.A)(i),
-        w = (0, M.A)(i),
-        B = (0, H.A)(i),
-        D = (0, _.os)("ChannelListVoiceContextMenuFavorites"),
-        F = K(i, e),
-        W = (0, y.A)(i, e),
-        z = (0, u.A)({ id: i.id, label: I.intl.string(I.t.gFHI3k) }),
-        Y = (0, U.A)(i),
-        q = (0, A.A)(i);
+        b = (0, m.A)(i),
+        N = (0, C.Qs)(i.id),
+        f = (0, _.A)(N?.id, e, i),
+        v = M(i, o),
+        E = (0, x.C)(i),
+        k = (0, X.A)(i),
+        G = (0, j.A)(i),
+        I = (0, g.A)(i),
+        L = T(i),
+        H = (0, V.A)(i),
+        U = (0, Z.A)(i),
+        w = q(i, e),
+        B = (0, W.A)(i, e),
+        D = (0, u.A)({ id: i.id, label: S.intl.string(S.t.gFHI3k) }),
+        R = (0, Q.A)(i),
+        y = (0, A.A)(i);
     return (0, t.jsxs)(r.W, {
         "data-menu-migrated": !0,
         navId: "channel-context",
         onClose: a.Z_,
-        "aria-label": I.intl.string(I.t.Xm41aV),
+        "aria-label": S.intl.string(S.t.Xm41aV),
         onSelect: d,
         children: [
-            (0, t.jsx)(s.rX, { children: null != p ? v : E }),
+            (0, t.jsx)(s.rX, { children: null != N ? f : v }),
             (0, t.jsx)(s.rX, { children: h }),
-            (0, t.jsxs)(s.rX, { children: [k, G, V] }),
-            (0, t.jsxs)(s.rX, { children: [q, X] }),
-            (0, t.jsxs)(s.rX, { children: [F, W, T, Y] }),
-            (0, t.jsxs)(s.rX, { children: [Q, D ? B : w] }),
-            (0, t.jsx)(s.rX, { children: L }),
-            (0, t.jsxs)(s.rX, { children: [z, null] }),
+            (0, t.jsxs)(s.rX, { children: [G, I, k] }),
+            (0, t.jsxs)(s.rX, { children: [y, b] }),
+            (0, t.jsxs)(s.rX, { children: [w, B, L, R] }),
+            (0, t.jsxs)(s.rX, { children: [H, U] }),
+            (0, t.jsx)(s.rX, { children: E }),
+            (0, t.jsxs)(s.rX, { children: [D, null] }),
         ],
     });
 }
-function $(n) {
+function K(n) {
     let { channel: i, guild: e, onSelect: d } = n,
         c = i.isGuildStageVoice(),
-        o = (0, l.bG)([m.A], () => (c ? m.A.getStageInstanceByChannel(i.id) : void 0), [c, i.id]),
+        o = (0, l.bG)([p.A], () => (c ? p.A.getStageInstanceByChannel(i.id) : void 0), [c, i.id]),
         h = (0, O.A)(i),
-        j = (0, f.A)(i),
-        g = (0, b.Qs)(i.id),
-        C = (0, N.A)(g?.id, e, i),
-        k = R(i, o),
-        G = (0, x.z)(i),
-        w = (0, x.C)(i),
-        B = S(i),
-        D = (0, M.A)(i),
-        F = (0, V.A)(i),
-        Y = (0, T.A)(i, e, o),
-        q = K(i, e),
-        J = (0, y.A)(i, e),
-        P = (0, z.A)(i, e.id),
-        $ = (0, v.A)(i, e),
-        nn = (0, E.A)(i, e),
-        ni = (0, L.A)(i),
-        ne = (0, u.A)({ id: i.id, label: I.intl.string(I.t.gFHI3k) }),
-        nt = (0, U.A)(i),
-        nl = (0, A.A)(i),
-        nr = (0, W.A)(i),
-        ns = (0, Q.A)(i),
-        na = (0, p.A)(i),
-        nd = (0, X.A)(i),
-        nc = (0, Z.A)(i),
-        nA = (0, _.os)("ChannelListVoiceContextMenuNormal"),
-        no = (0, H.A)(i);
+        j = (0, m.A)(i),
+        g = (0, C.Qs)(i.id),
+        X = (0, _.A)(g?.id, e, i),
+        G = M(i, o),
+        I = (0, x.z)(i),
+        U = (0, x.C)(i),
+        w = T(i),
+        B = (0, k.A)(i),
+        D = (0, L.A)(i, e, o),
+        z = q(i, e),
+        F = (0, W.A)(i, e),
+        Y = (0, y.A)(i, e.id),
+        J = (0, f.A)(i, e),
+        K = (0, v.A)(i, e),
+        P = (0, E.A)(i),
+        $ = (0, u.A)({ id: i.id, label: S.intl.string(S.t.gFHI3k) }),
+        nn = (0, Q.A)(i),
+        ni = (0, A.A)(i),
+        ne = (0, R.A)(i),
+        nt = (0, H.A)(i),
+        nl = (0, N.A)(i),
+        nr = (0, b.A)(i),
+        ns = (0, V.A)(i),
+        na = (0, Z.A)(i);
     return (0, t.jsxs)(r.W, {
         "data-menu-migrated": !0,
         navId: "channel-context",
         onClose: a.Z_,
-        "aria-label": I.intl.string(I.t.Xm41aV),
+        "aria-label": S.intl.string(S.t.Xm41aV),
         onSelect: d,
         children: [
-            (0, t.jsx)(s.rX, { children: null != g ? C : k }),
+            (0, t.jsx)(s.rX, { children: null != g ? X : G }),
             (0, t.jsx)(s.rX, { children: h }, "mark-as-read-or-favorite"),
-            (0, t.jsx)(s.rX, { children: G }),
-            (0, t.jsxs)(s.rX, { children: [Y, nl, nr, ns, na, j] }, "channel-actions"),
-            (0, t.jsxs)(s.rX, { children: [P, q, J, B, nd, nt] }, "voice-actions"),
-            (0, t.jsxs)(s.rX, { children: [nc, nA ? no : D] }, "notifications"),
-            (0, t.jsxs)(s.rX, { children: [F, $, nn, ni] }, "admin-actions"),
-            (0, t.jsx)(s.rX, { children: w }),
-            (0, t.jsxs)(s.rX, { children: [ne, null] }, "developer-actions"),
+            (0, t.jsx)(s.rX, { children: I }),
+            (0, t.jsxs)(s.rX, { children: [D, ni, ne, nt, nl, j] }, "channel-actions"),
+            (0, t.jsxs)(s.rX, { children: [Y, z, F, w, nr, nn] }, "voice-actions"),
+            (0, t.jsxs)(s.rX, { children: [ns, na] }, "notifications"),
+            (0, t.jsxs)(s.rX, { children: [B, J, K, P] }, "admin-actions"),
+            (0, t.jsx)(s.rX, { children: U }),
+            (0, t.jsxs)(s.rX, { children: [$, null] }, "developer-actions"),
         ],
     });
 }
-let nn = (0, c.A)(
+let P = (0, c.A)(
     (0, d.A)(
         function (n) {
-            return (0, h.DZ)() ? (0, t.jsx)(P, { ...n }) : (0, t.jsx)($, { ...n });
+            return (0, h.DZ)() ? (0, t.jsx)(J, { ...n }) : (0, t.jsx)(K, { ...n });
         },
-        { object: J.ZSU.CONTEXT_MENU },
+        { object: Y.ZSU.CONTEXT_MENU },
     ),
     [o.A.CONTEXT_MENU, o.A.CHANNEL_LIST_VOICE_CHANNEL_MENU],
 );

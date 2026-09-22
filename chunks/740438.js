@@ -1,132 +1,128 @@
-l.d(e, { default: () => I });
-var i = l(477900);
-l(582128);
-var t = l(980707),
-    a = l(477782),
-    r = l(442433),
-    s = l(358367),
-    d = l(793574),
-    c = l(50268),
-    o = l(93055),
-    h = l(499373),
-    u = l(970853),
-    A = l(250737),
-    g = l(769591),
-    x = l(17928),
-    j = l(914430),
-    b = l(924985),
-    C = l(734057),
-    p = l(652215),
-    m = l(375708),
-    v = l(477190),
-    X = l(307623),
-    f = l(317910),
-    _ = l(868548),
-    y = l(995102),
-    G = l(288104),
-    N = l(661504),
-    k = l(969128),
-    E = l(192308),
-    M = l(16236);
-function D(n) {
+i.d(e, { default: () => M });
+var l = i(477900);
+i(582128);
+var t = i(980707),
+    a = i(477782),
+    r = i(442433),
+    s = i(358367),
+    d = i(793574),
+    c = i(50268),
+    o = i(93055),
+    h = i(499373),
+    u = i(970853),
+    A = i(250737),
+    x = i(17928),
+    g = i(914430),
+    j = i(924985),
+    b = i(734057),
+    p = i(652215),
+    C = i(375708),
+    v = i(477190),
+    X = i(307623),
+    f = i(317910),
+    m = i(868548),
+    _ = i(995102),
+    G = i(288104),
+    y = i(969128),
+    k = i(192308),
+    E = i(16236);
+function N(n) {
     let e,
         { channel: s, onSelect: d } = n,
-        o = (0, _.A)(s),
-        g = (0, A.A)(s),
-        x =
+        o = (0, m.A)(s),
+        x = (0, A.A)(s),
+        g =
             null == (e = (0, u.A)(s))
                 ? null
-                : (0, i.jsx)(a.Dr, {
+                : (0, l.jsx)(a.Dr, {
                       id: "add-channel-to-category",
                       trailingIndicator: { type: "icon", icon: h.T },
                       label: e.label,
                       action: e.perform,
                   }),
-        j = (0, i.jsx)(a.Dr, {
+        j = (0, l.jsx)(a.Dr, {
             id: "delete-channel",
-            label: m.intl.string(m.t.Jg0R7Q),
-            subtext: m.intl.string(m.t["+mNKM9"]),
+            label: C.intl.string(C.t.Jg0R7Q),
+            subtext: C.intl.string(C.t["+mNKM9"]),
             color: "danger",
             action: () =>
-                (0, E.openModalLazy)(async () => {
-                    let { default: n } = await l.e("992085").then(l.bind(l, 703476));
+                (0, k.openModalLazy)(async () => {
+                    let { default: n } = await i.e("992085").then(i.bind(i, 703476));
                     return (e) =>
-                        (0, i.jsx)(n, {
+                        (0, l.jsx)(n, {
                             ...e,
                             onConfirm: () => {
-                                (e.onClose(), (0, M.fv)(s.id));
+                                (e.onClose(), (0, E.fv)(s.id));
                             },
                             channel: s,
                         });
                 }),
         }),
-        b = (0, c.A)({ id: s.id, label: m.intl.string(m.t["2visC6"]) });
-    return (0, i.jsxs)(t.W, {
+        b = (0, c.A)({ id: s.id, label: C.intl.string(C.t["2visC6"]) });
+    return (0, l.jsxs)(t.W, {
         "data-menu-migrated": !0,
         navId: "channel-context",
         onClose: r.Z_,
-        "aria-label": m.intl.string(m.t.Xm41aV),
+        "aria-label": C.intl.string(C.t.Xm41aV),
         onSelect: d,
         children: [
-            (0, i.jsx)(a.rX, { children: o }),
-            (0, i.jsxs)(a.rX, { children: [x, g] }),
-            (0, i.jsx)(a.rX, { children: j }),
-            (0, i.jsx)(a.rX, { children: b }),
+            (0, l.jsx)(a.rX, { children: o }),
+            (0, l.jsxs)(a.rX, { children: [g, x] }),
+            (0, l.jsx)(a.rX, { children: j }),
+            (0, l.jsx)(a.rX, { children: b }),
         ],
     });
 }
-function T(n) {
+function D(n) {
     let e,
-        { channel: l, guild: s, onSelect: d } = n,
-        o = (0, _.A)(l),
-        h = (0, y.A)(l),
-        u = (0, G.A)(l),
-        E =
-            ((e = (0, x.bG)([b.A], () => b.A.isCollapsed(l.id), [l.id])),
-            (0, i.jsx)(a.sL, {
+        { channel: i, guild: s, onSelect: d } = n,
+        o = (0, m.A)(i),
+        h = (0, _.A)(i),
+        u =
+            ((e = (0, x.bG)([j.A], () => j.A.isCollapsed(i.id), [i.id])),
+            (0, l.jsx)(a.sL, {
                 id: "collapse-category",
-                label: m.intl.string(m.t.SvVRsj),
-                action: () => (e ? (0, j.fh)(l.id) : (0, j.Gv)(l.id)),
+                label: C.intl.string(C.t.SvVRsj),
+                action: () => (e ? (0, g.fh)(i.id) : (0, g.Gv)(i.id)),
                 checked: e,
             })),
-        M = (0, x.bG)([b.A, C.A], () => {
-            let n = Object.values(C.A.getMutableBasicGuildChannelsForGuild(l.guild_id)).filter(
+        k = (0, x.bG)([j.A, b.A], () => {
+            let n = Object.values(b.A.getMutableBasicGuildChannelsForGuild(i.guild_id)).filter(
                 (n) => n.type === p.rbe.GUILD_CATEGORY,
             );
-            return 0 === n.length || n.every((n) => b.A.isCollapsed(n.id));
+            return 0 === n.length || n.every((n) => j.A.isCollapsed(n.id));
         })
             ? null
-            : (0, i.jsx)(a.Dr, {
+            : (0, l.jsx)(a.Dr, {
                   id: "collapse-all-categories",
-                  label: m.intl.string(m.t["9dqzUr"]),
-                  action: () => (0, j.rZ)(l.guild_id),
+                  label: C.intl.string(C.t["9dqzUr"]),
+                  action: () => (0, g.rZ)(i.guild_id),
               }),
-        D = (0, f.A)(l),
-        T = (0, A.A)(l),
-        I = (0, v.A)(l, s),
-        L = (0, X.A)(l),
-        O = (0, c.A)({ id: l.id, label: m.intl.string(m.t["2visC6"]) }),
-        R = (0, k.A)(l),
-        U = (0, g.os)("ChannelCategoryNormalMenu"),
-        Z = (0, N.A)(l);
-    return (0, i.jsxs)(t.W, {
+        E = (0, f.A)(i),
+        N = (0, A.A)(i),
+        D = (0, v.A)(i, s),
+        M = (0, X.A)(i),
+        T = (0, c.A)({ id: i.id, label: C.intl.string(C.t["2visC6"]) }),
+        I = (0, y.A)(i),
+        L = (0, G.A)(i);
+    return (0, l.jsxs)(t.W, {
         "data-menu-migrated-auto": !0,
         navId: "channel-context",
         onClose: r.Z_,
-        "aria-label": m.intl.string(m.t.Xm41aV),
+        "aria-label": C.intl.string(C.t.Xm41aV),
         onSelect: d,
         children: [
-            (0, i.jsx)(a.rX, { children: o }, "mark-as-read"),
-            (0, i.jsxs)(a.rX, { children: [R, E, M] }, "channel-actions"),
-            (0, i.jsxs)(a.rX, { children: [h, U ? Z : u] }, "notifications"),
-            (0, i.jsxs)(a.rX, { children: [D, T, I, L] }, "admin-actions"),
-            (0, i.jsx)(a.rX, { children: O }, "developer-actions"),
+            (0, l.jsx)(a.rX, { children: o }, "mark-as-read"),
+            (0, l.jsxs)(a.rX, { children: [I, u, k] }, "channel-actions"),
+            (0, l.jsxs)(a.rX, { children: [h, L] }, "notifications"),
+            (0, l.jsxs)(a.rX, { children: [E, N, D, M] }, "admin-actions"),
+            (0, l.jsx)(a.rX, { children: T }, "developer-actions"),
         ],
     });
 }
-let I = (0, s.A)(
+let M = (0, s.A)(
     function (n) {
-        return (0, o.DZ)() ? (0, i.jsx)(D, { ...n }) : (0, i.jsx)(T, { ...n });
+        return (0, o.DZ)() ? (0, l.jsx)(N, { ...n }) : (0, l.jsx)(D, { ...n });
     },
     [d.A.CONTEXT_MENU, d.A.CHANNEL_CATEGORY_MENU],
 );

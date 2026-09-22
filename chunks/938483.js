@@ -1,4 +1,4 @@
-n.d(t, { U: () => g });
+n.d(t, { U: () => m });
 var i = n(477900),
     r = n(582128),
     a = n(17928),
@@ -408,7 +408,7 @@ let T = (0, c.Fe)({
             n.e("987478"),
             n.e("713567"),
             n.e("242323"),
-            n.e("121420"),
+            n.e("550033"),
             n.e("444567"),
             n.e("695170"),
             n.e("28676"),
@@ -460,14 +460,14 @@ let T = (0, c.Fe)({
     name: "InboxPopoutRenderer",
     renderLoader: u.hc,
 });
-function g(e) {
+function m(e) {
     let t,
         n,
         {
             onOpen: c,
             onClose: u,
-            children: g,
-            popoutPosition: m,
+            children: m,
+            popoutPosition: g,
             popoutAlign: S,
             targetElementRef: N,
             spacing: C,
@@ -536,7 +536,7 @@ function g(e) {
         children: (0, i.jsx)(l.Y, {
             targetElementRef: N,
             animation: l.Y.Animation.NONE,
-            position: m,
+            position: g,
             align: S,
             autoInvert: !1,
             shouldShow: L,
@@ -559,7 +559,7 @@ function g(e) {
             clickTrap: !0,
             children: (e, t) => {
                 let { isShown: n } = t;
-                return g(U, n, e, G);
+                return m(U, n, e, G);
             },
         }),
     });

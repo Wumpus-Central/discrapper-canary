@@ -1,52 +1,46 @@
-t.d(n, { RQ: () => f, dA: () => E });
+t.d(n, { RQ: () => x, dA: () => g });
 var i = t(477900);
 t(582128);
 var l = t(284009),
-    a = t.n(l),
-    s = t(17928),
+    s = t.n(l),
+    a = t(17928),
     o = t(477782);
 (t(198052), t(666328), t(422229), t(74329), t(956747));
 var r = t(288104),
-    c = t(661504),
-    u = t(267102),
-    d = t(769591),
-    A = t(734057),
-    m = t(576705),
-    h = t(993838),
-    C = t(233993),
-    p = t(446600),
-    x = t(418208);
+    c = t(267102),
+    u = t(734057),
+    d = t(576705),
+    A = t(993838),
+    m = t(233993),
+    h = t(446600),
+    C = t(418208);
 t(806931);
-var g = t(375708);
-function f(e) {
-    let n = (0, s.bG)([A.A], () => A.A.getChannel(e), [e]),
-        t = (0, s.bG)([m.A], () => m.A.can(C.QY, n)),
-        l = (0, x.zU)(),
-        a = (0, s.bG)([p.A], () => p.A.getStageInstanceByChannel(e), [e]),
-        r = (0, u.Us)();
+var p = t(375708);
+function x(e) {
+    let n = (0, a.bG)([u.A], () => u.A.getChannel(e), [e]),
+        t = (0, a.bG)([d.A], () => d.A.can(m.QY, n)),
+        l = (0, C.zU)(),
+        s = (0, a.bG)([h.A], () => h.A.getStageInstanceByChannel(e), [e]),
+        r = (0, c.Us)();
     return n?.isGuildStageVoice() && t && !l
-        ? null != a
+        ? null != s
             ? (0, i.jsx)(o.Dr, {
                   id: "edit-stage",
-                  label: g.intl.string(g.t["I+9bLx"]),
+                  label: p.intl.string(p.t["I+9bLx"]),
                   action: function () {
-                      null != n && (0, h.tQ)(n, r);
+                      null != n && (0, A.tQ)(n, r);
                   },
               })
             : (0, i.jsx)(o.Dr, {
                   id: "start-stage",
-                  label: g.intl.string(g.t.OYbHfv),
+                  label: p.intl.string(p.t.OYbHfv),
                   action: function () {
-                      null != n && (0, h.tQ)(n, r);
+                      null != n && (0, A.tQ)(n, r);
                   },
               })
         : null;
 }
-function E(e) {
-    let n = (0, s.bG)([A.A], () => A.A.getChannel(e), [e]);
-    a()(null != n, "useNotificationSettingsItem: channel cannot be undefined");
-    let t = (0, d.os)("StageChannelCallOverflowMenu"),
-        i = (0, c.A)(n),
-        l = (0, r.A)(n);
-    return t ? i : l;
+function g(e) {
+    let n = (0, a.bG)([u.A], () => u.A.getChannel(e), [e]);
+    return (s()(null != n, "useNotificationSettingsItem: channel cannot be undefined"), (0, r.A)(n));
 }
