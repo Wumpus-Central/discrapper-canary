@@ -1,0 +1,132 @@
+n.d(r, { default: () => O });
+var i = n(477900);
+n(582128);
+var l = n(980707),
+    s = n(477782),
+    t = n(442433),
+    a = n(847767),
+    d = n(358367),
+    c = n(468389),
+    A = n(793574),
+    o = n(50268),
+    h = n(93055),
+    x = n(438653),
+    j = n(6351),
+    X = n(349807),
+    u = n(250737),
+    p = n(769591),
+    C = n(687340),
+    g = n(17928),
+    _ = n(66834),
+    N = n(824492),
+    b = n(375708),
+    m = n(533957),
+    E = n(886393),
+    T = n(477190),
+    k = n(307623),
+    v = n(317910),
+    f = n(475777),
+    S = n(868548),
+    I = n(995102),
+    M = n(288104),
+    U = n(661504),
+    Z = n(969128),
+    H = n(342321),
+    F = n(704543),
+    L = n(57907),
+    V = n(652215);
+function w(e) {
+    let { channel: r, onSelect: n } = e,
+        a = (0, S.A)(r),
+        d = (0, E.A)(r),
+        A = (0, x.C)(r),
+        h = (0, u.A)(r),
+        C = (0, j.A)(r),
+        g = (0, X.A)(r),
+        _ = (0, I.A)(r),
+        N = (0, L.A)(r),
+        m = r.isThread() ? N : _,
+        T = (0, M.A)(r),
+        k = (0, o.A)({ id: r.id, label: b.intl.string(b.t.gFHI3k) }),
+        v = (0, c.A)(r),
+        f = (0, H.A)(r, H._),
+        Z = (0, U.A)(r),
+        F = (0, p.os)("ChannelContextFavoritesMenu");
+    return (0, i.jsxs)(l.W, {
+        "data-menu-migrated-auto": !0,
+        navId: "channel-context",
+        onClose: t.Z_,
+        "aria-label": b.intl.string(b.t.Xm41aV),
+        onSelect: n,
+        children: [
+            (0, i.jsx)(s.rX, { children: a }),
+            (0, i.jsxs)(s.rX, { children: [C, g, h] }),
+            (0, i.jsx)(s.rX, { children: d }),
+            (0, i.jsxs)(s.rX, { children: [m, F ? Z : T] }),
+            (0, i.jsx)(s.rX, { children: v }),
+            (0, i.jsx)(s.rX, { children: f }),
+            (0, i.jsx)(s.rX, { children: A }),
+            (0, i.jsx)(s.rX, { children: k }),
+        ],
+    });
+}
+function D(e) {
+    let r,
+        { channel: n, guild: a, onSelect: d } = e,
+        A = (0, S.A)(n),
+        h = (0, E.A)(n),
+        j = (0, x.z)(n),
+        X = (0, x.C)(n),
+        u = (0, F.A)(n),
+        L = (0, Z.A)(n),
+        V =
+            ((r = (0, g.bG)([N.A], () => N.A.didAgree(n.id))),
+            n.isSpoilerChannel() && r
+                ? (0, i.jsx)(s.Dr, {
+                      id: "clear-spoiler-agree",
+                      label: b.intl.string(b.t.ix2UVZ),
+                      action: () => _.A.clearSpoilerAgree(n.id),
+                  })
+                : null),
+        w = (0, I.A)(n),
+        D = (0, v.A)(n),
+        O = (0, f.A)(n, a),
+        W = (0, m.A)(n, a),
+        z = (0, T.A)(n, a),
+        G = (0, k.A)(n),
+        q = (0, o.A)({ id: n.id, label: b.intl.string(b.t.gFHI3k) }),
+        y = (0, c.A)(n),
+        B = (0, H.A)(n, H._),
+        J = (0, C.A)(n),
+        K = (0, M.A)(n),
+        P = (0, U.A)(n),
+        Q = (0, p.os)("ChannelContextMenuNormal");
+    return (0, i.jsxs)(l.W, {
+        "data-menu-migrated": !0,
+        navId: "channel-context",
+        onClose: t.Z_,
+        "aria-label": b.intl.string(b.t.Xm41aV),
+        onSelect: d,
+        children: [
+            (0, i.jsx)(s.rX, { children: A }, "mark-as-read-or-favorite"),
+            (0, i.jsx)(s.rX, { children: j }),
+            (0, i.jsxs)(s.rX, { children: [O, J, u, L, h] }, "channel-actions"),
+            (0, i.jsxs)(s.rX, { children: [w, Q ? P : K] }, "notifications"),
+            (0, i.jsx)(s.rX, { children: V }, "spoiler"),
+            (0, i.jsxs)(s.rX, { children: [D, W, z, G] }, "admin-actions"),
+            (0, i.jsx)(s.rX, { children: y }),
+            (0, i.jsx)(s.rX, { children: B }, "report-app"),
+            (0, i.jsx)(s.rX, { children: X }),
+            (0, i.jsx)(s.rX, { children: q }, "developer-actions"),
+        ],
+    });
+}
+let O = (0, d.A)(
+    (0, a.A)(
+        function (e) {
+            return (0, h.DZ)() ? (0, i.jsx)(w, { ...e }) : (0, i.jsx)(D, { ...e });
+        },
+        { object: V.ZSU.CONTEXT_MENU },
+    ),
+    [A.A.CONTEXT_MENU, A.A.CHANNEL_LIST_TEXT_CHANNEL_MENU],
+);

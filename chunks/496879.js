@@ -298,8 +298,9 @@ function O(e) {
                                 t.e("256372"),
                                 t.e("29542"),
                                 t.e("248804"),
-                                t.e("874366"),
-                            ]).then(t.bind(t, 903181));
+                                t.e("670954"),
+                                t.e("25173"),
+                            ]).then(t.bind(t, 468916));
                             return (t) => (0, a.jsx)(n, { ...t, channel: e.channel, guild: e.guild });
                         });
                         break;

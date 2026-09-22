@@ -371,8 +371,9 @@ let eI = i.memo(function () {
                                           t.e("256372"),
                                           t.e("29542"),
                                           t.e("248804"),
-                                          t.e("874366"),
-                                      ]).then(t.bind(t, 903181));
+                                          t.e("670954"),
+                                          t.e("25173"),
+                                      ]).then(t.bind(t, 468916));
                                       return (n) => (0, l.jsx)(e, { ...n, channel: d, guild: o });
                                   });
                         },

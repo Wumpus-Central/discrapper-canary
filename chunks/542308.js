@@ -3553,8 +3553,9 @@ class so extends nU {
                     n.e("256372"),
                     n.e("29542"),
                     n.e("248804"),
-                    n.e("874366"),
-                ]).then(n.bind(n, 903181));
+                    n.e("670954"),
+                    n.e("25173"),
+                ]).then(n.bind(n, 468916));
                 return (n) => (0, s.jsx)(e, { ...n, channel: t, guild: l });
             });
     };

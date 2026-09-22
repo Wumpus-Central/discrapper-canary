@@ -905,8 +905,9 @@ class et extends r.PureComponent {
                                 n.e("256372"),
                                 n.e("29542"),
                                 n.e("248804"),
-                                n.e("874366"),
-                            ]).then(n.bind(n, 903181));
+                                n.e("670954"),
+                                n.e("25173"),
+                            ]).then(n.bind(n, 468916));
                             return (t) => (0, i.jsx)(e, { ...t, channel: r, guild: a, onSelect: o.jD });
                         });
                     case V.rbe.GUILD_VOICE:
