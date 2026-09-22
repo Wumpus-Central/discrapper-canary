@@ -2289,12 +2289,11 @@ class iS extends r.PureComponent {
                     n.e("317699"),
                     n.e("257032"),
                     n.e("845322"),
-                    n.e("94832"),
                     n.e("426386"),
-                    n.e("865338"),
+                    n.e("584705"),
                     n.e("842987"),
                     n.e("588860"),
-                ]).then(n.bind(n, 860417));
+                ]).then(n.bind(n, 485272));
                 return (n) => (0, l.jsx)(e, { ...n, guild: t });
             });
         }

@@ -1466,7 +1466,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e3 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eH.A().log(
-    `[BUILD INFO] Release Channel: ${e3}, Build Number: 618482, Version Hash: 7c32852618288a41eb86c398ab232654a7cb0b29`,
+    `[BUILD INFO] Release Channel: ${e3}, Build Number: 618497, Version Hash: c3eefa1db17f5e28058a590868f7162b71aaa6eb`,
 ),
     v.A.setTags({ appContext: x.QCW }),
     eI.A.initBasic(),
@@ -7476,12 +7476,11 @@ let oF =
                             n.e("317699"),
                             n.e("257032"),
                             n.e("845322"),
-                            n.e("94832"),
                             n.e("426386"),
-                            n.e("865338"),
+                            n.e("584705"),
                             n.e("842987"),
                             n.e("588860"),
-                        ]).then(n.bind(n, 860417));
+                        ]).then(n.bind(n, 485272));
                         return (n) => (0, R.jsx)(e, { ...n, guild: t });
                     });
                 }
@@ -21571,7 +21570,7 @@ let Nz = "isHideDevBanner",
                     className: ts()(N$.Wz, N$.mr),
                     children: [
                         (0, R.jsx)(NK, { className: N$.Kk }),
-                        tg.intl.format(tg.t.uyrfYF, { buildNumber: "618482" }),
+                        tg.intl.format(tg.t.uyrfYF, { buildNumber: "618497" }),
                         (0, R.jsx)(r, {}),
                     ],
                 })
@@ -46136,10 +46135,9 @@ let kA = [
                             n.e("883952"),
                             n.e("66580"),
                             n.e("694529"),
-                            n.e("94832"),
                             n.e("956814"),
-                            n.e("16507"),
-                        ]).then(n.bind(n, 868918));
+                            n.e("774154"),
+                        ]).then(n.bind(n, 585617));
                         return (t) => (0, R.jsx)(e, { ...t, guildId: i });
                     });
                 }),
