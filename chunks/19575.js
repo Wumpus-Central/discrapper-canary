@@ -1,4 +1,4 @@
-(n.d(t, { kw: () => W, Ay: () => z, _0: () => B }), n(321073));
+(n.d(t, { kw: () => j, Ay: () => $, _0: () => F }), n(321073));
 var i,
     r,
     a,
@@ -191,8 +191,7 @@ let m = window.DiscordNative,
     R = null,
     L = null,
     y = {},
-    D = !1,
-    v = {};
+    D = {};
 null != m &&
     ((O = m.app
         .getVersion()
@@ -200,7 +199,7 @@ null != m &&
         .map((e) => parseInt(e))),
     (L = m.app.getModuleVersions()),
     (R = m.app.getBuildNumber()));
-let b = new Set([
+let v = new Set([
         "discord_erlpack",
         "discord_game_utils",
         "discord_rpc",
@@ -208,33 +207,33 @@ let b = new Set([
         "discord_utils",
         "discord_voice",
     ]),
-    M = !1,
-    P = null,
-    U = "lastImageSaveDirectory",
-    w = /[<>:"/\\|?*@]/g,
-    G = /(\.[a-zA-Z0-9]+):[^.]*$/,
-    x = /(\.[a-zA-Z0-9]+)%3A.+$/,
-    k = /[^a-zA-Z0-9]/g,
-    F = /\.[^.]*$/;
-var B = (((r = {}).SAVED = "saved"), (r.CANCELED = "canceled"), (r.ERRORED = "errored"), r);
-function V(e) {
+    b = !1,
+    M = null,
+    P = "lastImageSaveDirectory",
+    U = /[<>:"/\\|?*@]/g,
+    w = /(\.[a-zA-Z0-9]+):[^.]*$/,
+    G = /(\.[a-zA-Z0-9]+)%3A.+$/,
+    x = /[^a-zA-Z0-9]/g,
+    k = /\.[^.]*$/;
+var F = (((r = {}).SAVED = "saved"), (r.CANCELED = "canceled"), (r.ERRORED = "errored"), r);
+function B(e) {
     try {
         let t = decodeURIComponent(e);
-        return (t = (t = t.replace(G, "$1")).replace(/(.+)@([a-zA-Z0-9]+)$/, "$1.$2")).replace(w, "_");
+        return (t = (t = t.replace(w, "$1")).replace(/(.+)@([a-zA-Z0-9]+)$/, "$1.$2")).replace(U, "_");
     } catch {
         return e
-            .replace(x, "$1")
+            .replace(G, "$1")
             .replace(/(.+)%40([a-zA-Z0-9]+)$/, "$1.$2")
-            .replace(w, "_");
+            .replace(U, "_");
     }
 }
-async function H(e) {
+async function V(e) {
     let t = await fetch(new Request(e, { method: "GET", mode: "cors" }));
     l()(200 === t.status, "Data fetch unsuccessful");
     let n = await t.arrayBuffer();
     return (l()(null != n, "Data is null"), n);
 }
-async function j(e, t) {
+async function H(e, t) {
     let n = await createImageBitmap(new Blob([e], { type: t }));
     try {
         let e = new OffscreenCanvas(n.width, n.height),
@@ -246,14 +245,14 @@ async function j(e, t) {
         n.close();
     }
 }
-var W =
+var j =
     (((a = {})[(a.Camera = 0)] = "Camera"),
     (a[(a.Microphone = 1)] = "Microphone"),
     (a[(a.Photo = 2)] = "Photo"),
     (a[(a.InputMonitoring = 3)] = "InputMonitoring"),
     (a[(a.ScreenRecording = 4)] = "ScreenRecording"),
     a);
-function Y(e) {
+function W(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : y;
     return {
         id: t[e.id ?? ""],
@@ -279,21 +278,21 @@ function Y(e) {
         executableFingerprint: e.executableFingerprint,
     };
 }
-function K(e) {
+function Y(e) {
     if ((0, f.isDesktop)())
         try {
-            $.sendIPC(e);
+            K.sendIPC(e);
         } catch (e) {}
 }
-let $ = {
+let K = {
         requireModule(e) {
-            if (D && v.hasOwnProperty(e) && null != v[e]) return v[e];
+            if (D.hasOwnProperty(e) && null != D[e]) return D[e];
             let t = m.nativeModules.requireModule(e);
-            return (D && (v[e] = t), t);
+            return ((D[e] = t), t);
         },
         ensureModule: (e) =>
             f.isPlatformEmbedded
-                ? __OVERLAY__ && b.has(e)
+                ? __OVERLAY__ && v.has(e)
                     ? Promise.resolve()
                     : m.nativeModules.ensureModule(e)
                 : Promise.reject(Error("not embedded")),
@@ -349,7 +348,7 @@ let $ = {
                     }),
                     o = y;
                 function r(e) {
-                    return n(e.map((e) => Y(e, o)));
+                    return n(e.map((e) => W(e, o)));
                 }
                 (null != i && null != s.setProcessObserverUserId && s.setProcessObserverUserId(i),
                     t && null != s.setObservedGamesCallback2
@@ -369,8 +368,8 @@ let $ = {
         setGameDetectionCallback(e) {
             this.getDiscordUtils().setGameDetectionCallback?.((t, n) =>
                 e(
-                    t.map((e) => Y(e)),
-                    n.map((e) => Y(e)),
+                    t.map((e) => W(e)),
+                    n.map((e) => W(e)),
                 ),
             );
         },
@@ -385,7 +384,7 @@ let $ = {
         },
         setCandidateGamesCallback(e) {
             this.getDiscordUtils().setCandidateGamesCallback((t) => {
-                e(t.map((e) => Y(e)));
+                e(t.map((e) => W(e)));
             });
         },
         clearCandidateGamesCallback() {
@@ -407,16 +406,16 @@ let $ = {
             if (__OVERLAY__) throw Error("cannot require discord_voice in overlay");
             let e = this.requireModule("discord_voice");
             return (
-                M ||
+                b ||
                     (0, _.si)((t, n, i) => {
                         e.consoleLog(n, `[${t}] ${i}`);
                     }),
-                (M = !0),
+                (b = !0),
                 e
             );
         },
         getDiscordUtils() {
-            if (!M)
+            if (!b)
                 try {
                     this.getVoiceEngine();
                 } catch (e) {}
@@ -427,7 +426,7 @@ let $ = {
         },
         getDiscordIsElevated() {
             return (0, f.isWindows)() && null != this.getDiscordUtils().getDiscordIsElevated
-                ? (null === P && (P = this.getDiscordUtils().getDiscordIsElevated()), P)
+                ? (null === M && (M = this.getDiscordUtils().getDiscordIsElevated()), M)
                 : null;
         },
         getGameUtils() {
@@ -495,10 +494,10 @@ let $ = {
         async copyImage(e, t) {
             (l()(f.isPlatformEmbedded, "Copy image method called outside native app"),
                 l()("function" == typeof m.clipboard.copyImage, "Copy image not supported"));
-            let n = await H(e),
+            let n = await V(e),
                 i = (0, I.U)(e, t);
             if (null != i && N.has(i)) {
-                ((n = await j(n, t ?? `image/${i}`)), m.clipboard.copyImage(g.from(n), "image.png"));
+                ((n = await H(n, t ?? `image/${i}`)), m.clipboard.copyImage(g.from(n), "image.png"));
                 return;
             }
             let r = null != i && S.has(i) ? `image.${i}` : e;
@@ -519,21 +518,21 @@ let $ = {
             let a = p.A.toURLSafe(e);
             if (null == a) return "errored";
             let s = a.pathname.split("/").pop() ?? "unknown";
-            s = V(s);
+            s = B(s);
             let o = a.searchParams.get("format");
             if (null != o) {
-                let e = o.replace(k, "").toLowerCase();
+                let e = o.replace(x, "").toLowerCase();
                 if (e.length > 0) {
-                    let t = s.replace(F, "");
+                    let t = s.replace(k, "");
                     s = `${t}.${e}`;
                 }
             } else if (!s.includes(".")) {
                 let i = (0, I.U)(e, t) ?? n ?? "png";
                 s = `${s}.${i}`;
             }
-            let d = await H(e),
+            let d = await V(e),
                 c = g.from(d),
-                u = E.w.get(U);
+                u = E.w.get(P);
             if (("string" != typeof u && (u = void 0), "function" == typeof m.fileManager.saveWithDialog2)) {
                 if (null == (i = await m.fileManager.saveWithDialog2(c, s, u ?? void 0))) return "errored";
                 if (i.canceledByUser) return "canceled";
@@ -544,15 +543,15 @@ let $ = {
                 } catch (e) {
                     return "errored";
                 }
-            return null == r || "" === r ? "errored" : (E.w.set(U, r), "saved");
+            return null == r || "" === r ? "errored" : (E.w.set(P, r), "saved");
         },
         async saveFile(e, t) {
             l()(f.isPlatformEmbedded, "Save file method called outside native app");
             let n = p.A.toURLSafe(e);
             if (null == n) return null;
             let i = t ?? n.pathname.split("/").pop() ?? "unknown";
-            null == t && (i = V(i));
-            let r = await H(e),
+            null == t && (i = B(i));
+            let r = await V(e),
                 a = g.from(r),
                 s = await m.fileManager.saveWithDialog(a, i, void 0);
             return null == s ? null : s;
@@ -689,7 +688,7 @@ let $ = {
             m.window.close(e);
         },
         clearNavigationHistory() {
-            K(c.NAVIGATION_HISTORY_CLEAR);
+            Y(c.NAVIGATION_HISTORY_CLEAR);
         },
         setAlwaysOnTop(e, t) {
             "function" == typeof m.window.setAlwaysOnTop && m.window.setAlwaysOnTop(e, t);
@@ -1075,13 +1074,10 @@ let $ = {
                 this.sendIPC(c.APP_FIRST_RENDER_AFTER_READY_PAYLOAD, e));
         },
         appLoaded() {
-            K(c.APP_LOADED);
+            Y(c.APP_LOADED);
         },
         indexLoadedAsync() {
-            K(c.APP_ASYNC_INDEX_TSX_LOADED);
-        },
-        setUseRequireModuleCache(e) {
-            D = e;
+            Y(c.APP_ASYNC_INDEX_TSX_LOADED);
         },
         async GetSystemGpuStats(e) {
             if (!f.isPlatformEmbedded) return [];
@@ -1090,4 +1086,4 @@ let $ = {
             return t?.getGpuStats == null ? [] : t.getGpuStats(e).catch(() => []);
         },
     },
-    z = $;
+    $ = K;

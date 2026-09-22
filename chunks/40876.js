@@ -962,12 +962,6 @@ let r = {
         ],
         inlineRequire: () => n(650408).A,
     },
-    CacheRequireModuleExperimentManager: {
-        actions: [],
-        inlineRequire: () => n(964176).A,
-        hasStoreChangeListeners: !0,
-        loadRightBeforeConnectionOpen: !0,
-    },
     ConversationsFetchManager: {
         actions: [
             "CHANNEL_SELECT",
