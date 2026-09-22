@@ -2778,7 +2778,7 @@
   "h2qWpS": "Claim $[orbIcon](orbIconHook) {orbAmount} Orbs",
   "B8Fxns": "Earn $[orbIcon](orbIconHook) {orbAmount} Orbs",
   "OHLdjq": "{multiplier}x",
-  "04j3XV": "{orbAmount} Orbs in {days, plural,one {day}other {days}",
+  "04j3XV": "{orbAmount} Orbs in {days, plural,one {# day}other {# days}",
   "+kdkTi": "Orbs in {days} days",
   "XW2CuY": "Keep earning to unlock your next reward!",
   "xOP5OP": "You're all caught up",

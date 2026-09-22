@@ -107,7 +107,7 @@
 .orbWalletContainer__81c60 {
     background: var(--background-base-low);
     border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-lg);
+    border-radius: var(--radius-sm);
     box-shadow: var(--shadow-high)
 }
 
@@ -208,7 +208,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 2px
+    margin-bottom: var(--space-4)
 }
 
 .orbChallengesCardEmptyContent__81c60 {
@@ -308,4 +308,4 @@
     white-space: nowrap
 }
 
-/*# sourceMappingURL=40271.ca9e4b278ef60f8a.css.map*/
+/*# sourceMappingURL=40271.3e4d6ebef3157651.css.map*/
