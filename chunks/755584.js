@@ -2,8 +2,8 @@
 var i = r(562708),
     n = r(636537),
     a = r(933681),
-    o = r(228366),
-    l = r(568185),
+    l = r(228366),
+    o = r(568185),
     d = r(543465),
     p = r(477427),
     s = r(499785),
@@ -20,14 +20,14 @@ let A = {
             bitrate: m,
             userLimit: u,
             parentId: N,
-            skuId: y,
-            branchId: b,
+            skuId: b,
+            branchId: y,
             applicationId: C,
             flags: L,
             availableTags: T,
             gameId: I,
         } = e;
-        o.h.dispatch({ type: "CREATE_CHANNEL_MODAL_SUBMIT", guildId: t, channelType: r });
+        l.h.dispatch({ type: "CREATE_CHANNEL_MODAL_SUBMIT", guildId: t, channelType: r });
         let g = { type: r, name: A, permission_overwrites: E };
         if (
             (null != m && m !== c.gp3 && (g.bitrate = m),
@@ -45,8 +45,8 @@ let A = {
             null != I && (g.game_id = I),
             r === c.rbe.GUILD_STORE)
         ) {
-            if (null == y) throw Error("Unexpected missing SKU");
-            ((g.sku_id = y), (g.branch_id = b));
+            if (null == b) throw Error("Unexpected missing SKU");
+            ((g.sku_id = b), (g.branch_id = y));
         }
         if (r === c.rbe.GUILD_APP) {
             if (null == C) throw Error("Unexpected missing application");
@@ -65,19 +65,24 @@ let A = {
         }).then(
             (e) => (
                 d.Ay.isOptInEnabled(t) &&
-                    _.A.updateChannelOverrideSettings(t, e.body.id, { flags: h.vv.OPT_IN_ENABLED }, p.fd.OptedIn),
-                l.A.checkGuildTemplateDirty(t),
+                    _.A.updateChannelOverrideSettings({
+                        guildId: t,
+                        channelId: e.body.id,
+                        settings: { flags: h.vv.OPT_IN_ENABLED },
+                        label: p.fd.OptedIn,
+                    }),
+                o.A.checkGuildTemplateDirty(t),
                 e
             ),
             (e) => {
-                throw (o.h.dispatch({ type: "CREATE_CHANNEL_MODAL_SUBMIT_FAILURE", errors: e.body }), e);
+                throw (l.h.dispatch({ type: "CREATE_CHANNEL_MODAL_SUBMIT_FAILURE", errors: e.body }), e);
             },
         );
     },
-    createRoleSubscriptionTemplateChannel: (e, t, r, o) =>
+    createRoleSubscriptionTemplateChannel: (e, t, r, l) =>
         s.A.post({
             url: c.Rsh.GUILD_CHANNELS(e),
-            body: { name: t, type: r, topic: o },
+            body: { name: t, type: r, topic: l },
             oldFormErrors: !0,
             trackedActionData: {
                 event: i.NetworkActionNames.CHANNEL_CREATE,

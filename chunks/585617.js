@@ -71,7 +71,13 @@ class ee extends l.PureComponent {
     setMessageNotification(e, t, i) {
         let { channel: n } = this.props,
             l = n.getGuildId();
-        null != l && C.A.updateChannelOverrideSettings(l, n.id, { message_notifications: e, muted: t ?? !1 }, i);
+        null != l &&
+            C.A.updateChannelOverrideSettings({
+                guildId: l,
+                channelId: n.id,
+                settings: { message_notifications: e, muted: t ?? !1 },
+                label: i,
+            });
     }
     handleRadioChange(e) {
         this.setMessageNotification(e, void 0, V.G_.notifications(e));
@@ -351,10 +357,10 @@ let eu = l.forwardRef(function (e, t) {
                     if (null != a.find((t) => t.id === e)) return;
                     let t = D.A.getChannel(e);
                     null != t &&
-                        (C.A.updateChannelOverrideSettings(
-                            i,
-                            e,
-                            {
+                        (C.A.updateChannelOverrideSettings({
+                            guildId: i,
+                            channelId: e,
+                            settings: {
                                 muted: !1,
                                 message_notifications: Y.Ay.resolvedMessageNotifications(t),
                                 flags: (0, er.mD)(
@@ -362,8 +368,8 @@ let eu = l.forwardRef(function (e, t) {
                                     Y.Ay.resolveUnreadSetting(t),
                                 ),
                             },
-                            V.fd.OverrideCreated,
-                        ),
+                            label: V.fd.OverrideCreated,
+                        }),
                         r(e));
                 },
             }),

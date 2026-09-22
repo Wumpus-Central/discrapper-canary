@@ -1,26 +1,32 @@
 n.d(i, { default: () => c });
-var r = n(477900);
+var e = n(477900);
 n(582128);
-var e = n(189213),
-    l = n(17928),
+var l = n(189213),
+    r = n(17928),
     s = n(832712),
     a = n(543465),
-    u = n(477427),
-    d = n(375708);
+    d = n(477427),
+    u = n(375708);
 let c = function (t) {
     let { onClose: i, channelId: n, transitionState: c } = t,
-        o = (0, l.bG)([a.Ay], () => a.Ay.isChannelMuted(null, n));
-    return (0, r.jsx)(e.Modal, {
+        g = (0, r.bG)([a.Ay], () => a.Ay.isChannelMuted(null, n));
+    return (0, e.jsx)(l.Modal, {
         transitionState: c,
         onClose: i,
-        title: o ? d.intl.string(d.t["4rg7cA"]) : d.intl.string(d.t.uAmAiL),
-        subtitle: o ? d.intl.string(d.t["5vton6"]) : d.intl.string(d.t.mscFJU),
+        title: g ? u.intl.string(u.t["4rg7cA"]) : u.intl.string(u.t.uAmAiL),
+        subtitle: g ? u.intl.string(u.t["5vton6"]) : u.intl.string(u.t.mscFJU),
         actions: [
             {
-                variant: o ? "primary" : "critical-primary",
-                text: o ? d.intl.string(d.t.YqAjXy) : d.intl.string(d.t.w4m945),
+                variant: g ? "primary" : "critical-primary",
+                text: g ? u.intl.string(u.t.YqAjXy) : u.intl.string(u.t.w4m945),
                 onClick: () => {
-                    (s.A.updateChannelOverrideSettings(null, n, { muted: !o }, o ? u.fd.Unmuted : u.fd.Muted), i());
+                    (s.A.updateChannelOverrideSettings({
+                        guildId: null,
+                        channelId: n,
+                        settings: { muted: !g },
+                        label: g ? d.fd.Unmuted : d.fd.Muted,
+                    }),
+                        i());
                 },
             },
         ],

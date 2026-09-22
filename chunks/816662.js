@@ -1,4 +1,4 @@
-n.d(t, { AC: () => T, Hb: () => N, Ol: () => y, e4: () => C, hp: () => S, jA: () => O, xl: () => R, zk: () => g });
+n.d(t, { AC: () => g, Hb: () => C, Ol: () => D, e4: () => O, hp: () => N, jA: () => R, xl: () => L, zk: () => m });
 var i = n(435558),
     r = n(665260),
     a = n(873298),
@@ -14,8 +14,9 @@ var i = n(435558),
     h = n(174459),
     I = n(477427),
     f = n(652215),
-    p = n(355097);
-function T(e, t, n, i) {
+    p = n(355097),
+    T = n(375708);
+function g(e, t, n, i) {
     if (null == e) return;
     if (c.A.isFullServerPreview(e)) return void (0, d.$u)(e, n ? [t] : [], n ? [] : [t]);
     let a = A.Ay.getChannelIdFlags(e, t);
@@ -25,7 +26,7 @@ function T(e, t, n, i) {
     (u.A.saveUserGuildSettingsBulk({ [e]: { channel_overrides: { [t]: _ } } }),
         s.h.dispatch({ type: "USER_GUILD_SETTINGS_CHANNEL_UPDATE", guildId: e, channelId: t, settings: _ }),
         (0, I.ct)({ guildId: e, channelId: t, change: _, previous: l, label: I.G_.optedIn(n), location: i }),
-        L(e),
+        y(e),
         h.default.track(f.HAw.CHANNEL_LIST_UPDATED, {
             ...(0, o.H$)(e),
             ...(0, o.dI)(E.A.getChannel(t)),
@@ -33,7 +34,7 @@ function T(e, t, n, i) {
             location: i,
         }));
 }
-function g(e, t, n, i) {
+function m(e, t, n, i) {
     if (null == e) return;
     if (c.A.isFullServerPreview(e)) {
         ((0, d.$u)(e, n ? [t] : [], n ? [] : [t]), (0, d.Z$)(e, { optInEnabled: !0 }));
@@ -49,7 +50,7 @@ function g(e, t, n, i) {
     }
     (s.h.dispatch({ type: "USER_GUILD_SETTINGS_CHANNEL_UPDATE", guildId: e, channelId: t, settings: _ }),
         (0, I.ct)({ guildId: e, channelId: t, change: _, previous: l, label: I.G_.optedIn(n), location: i }),
-        L(e),
+        y(e),
         h.default.track(f.HAw.CHANNEL_LIST_UPDATED, {
             ...(0, o.H$)(e),
             ...(0, o.dI)(E.A.getChannel(t)),
@@ -57,14 +58,14 @@ function g(e, t, n, i) {
             location: i,
         }));
 }
-async function m(e, t) {
+async function S(e, t) {
     null == e ||
         c.A.isFullServerPreview(e) ||
         (await u.A.saveUserGuildSettingsBulk({ [e]: { channel_overrides: t } }),
         s.h.dispatch({ type: "USER_GUILD_SETTINGS_REMOVE_PENDING_CHANNEL_UPDATES", guildId: e, updates: t }));
 }
-let S = (0, i.debounce)((e, t) => m(e, t), 1e3);
-function N(e, t) {
+let N = (0, i.debounce)((e, t) => S(e, t), 1e3);
+function C(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         i = arguments.length > 3 ? arguments[3] : void 0;
     if (null == e) return;
@@ -91,7 +92,7 @@ function N(e, t) {
         (l.A.updateChannelOverrideSettingsBulk(e, a, I.fd.OptedIn),
             h.default.track(f.HAw.CHANNEL_LIST_UPDATED, { ...(0, o.H$)(e), action_type: "add_many", location: i }));
 }
-function C(e, t, n) {
+function O(e, t, n) {
     if (c.A.isFullServerPreview(e)) return void (0, d.Z$)(e, { optInEnabled: t });
     let i = A.Ay.getGuildFlags(e);
     (l.A.updateGuildNotificationSettings(e, { flags: (0, r.lA)(i, p.n3.OPT_IN_CHANNELS_ON, t) }, I.G_.optedIn(t)),
@@ -101,22 +102,41 @@ function C(e, t, n) {
             location: n,
         }));
 }
-function O(e, t, n, i) {
+function R(e, t, n, i) {
     if (null == e || c.A.isFullServerPreview(e)) return;
     let a = A.Ay.getChannelIdFlags(e, t);
-    (!(0, r.Lt)(a, p.vv.OPT_IN_ENABLED) && n && (a = (0, r.lA)(a, p.vv.OPT_IN_ENABLED, !0)),
-        l.A.updateChannelOverrideSettings(e, t, { flags: (0, r.lA)(a, p.vv.FAVORITED, n) }, I.G_.favorited(n)),
+    !(0, r.Lt)(a, p.vv.OPT_IN_ENABLED) && n && (a = (0, r.lA)(a, p.vv.OPT_IN_ENABLED, !0));
+    let s = E.A.getChannel(t)?.name,
+        d =
+            null != s && "" !== s
+                ? {
+                      message: T.intl.formatToPlainString(n ? T.t.CcNVYB : T.t.zSYTEX, { channelName: s }),
+                      assertiveness: "polite",
+                  }
+                : void 0;
+    (l.A.updateChannelOverrideSettings({
+        guildId: e,
+        channelId: t,
+        settings: { flags: (0, r.lA)(a, p.vv.FAVORITED, n) },
+        label: I.G_.favorited(n),
+        accessibilityAnnouncement: d,
+    }),
         h.default.track(f.HAw.CHANNEL_LIST_UPDATED, {
             ...(0, o.H$)(e),
             action_type: n ? "favorited" : "unfavorited",
             location: i,
         }));
 }
-function R(e, t) {
+function L(e, t) {
     let n = A.Ay.getChannelIdFlags(null, e);
-    l.A.updateChannelOverrideSettings(null, e, { flags: (0, r.lA)(n, p.vv.FAVORITED, t) }, I.G_.favorited(t));
+    l.A.updateChannelOverrideSettings({
+        guildId: null,
+        channelId: e,
+        settings: { flags: (0, r.lA)(n, p.vv.FAVORITED, t) },
+        label: I.G_.favorited(t),
+    });
 }
-function L(e) {
+function y(e) {
     (0, _.TG)(
         e,
         (e) =>
@@ -128,6 +148,6 @@ function L(e) {
         _.Sb.INFREQUENT_USER_ACTION,
     );
 }
-function y(e, t) {
+function D(e, t) {
     s.h.dispatch({ type: "DISMISS_FAVORITE_SUGGESTION", guildId: e, channelId: t });
 }

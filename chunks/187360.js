@@ -9,8 +9,8 @@ var t = l(477900),
     u = l(543465),
     o = l(625494),
     A = l(477427),
-    h = l(58736),
-    g = l(461678),
+    g = l(58736),
+    h = l(461678),
     m = l(652215),
     x = l(375708);
 function f(e) {
@@ -23,7 +23,14 @@ function f(e) {
         ),
         [N, p] = i.useState(!1);
     function C(e) {
-        e.shiftKey ? d.A.updateChannelOverrideSettings(n.guild_id, n.id, { muted: !f }, A.G_.muted(!f)) : p((e) => !e);
+        e.shiftKey
+            ? d.A.updateChannelOverrideSettings({
+                  guildId: n.guild_id,
+                  channelId: n.id,
+                  settings: { muted: !f },
+                  label: A.G_.muted(!f),
+              })
+            : p((e) => !e);
     }
     i.useEffect(() => {
         function e() {
@@ -46,11 +53,11 @@ function f(e) {
         autoInvert: !1,
         onRequestClose: () => p(!1),
         renderPopout: (e) =>
-            (0, t.jsx)(g.A, { ...e, channel: n, navId: "channel-context", label: x.intl.string(x.t.Xm41aV) }),
+            (0, t.jsx)(h.A, { ...e, channel: n, navId: "channel-context", label: x.intl.string(x.t.Xm41aV) }),
         clickTrap: !0,
         children: (e, n) => {
             let { isShown: i } = n;
-            return (0, t.jsx)(h.Ay.Icon, {
+            return (0, t.jsx)(g.Ay.Icon, {
                 ...e,
                 ref: l,
                 onClick: C,

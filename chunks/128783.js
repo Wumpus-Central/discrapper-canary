@@ -48,13 +48,13 @@ function j(e) {
                     ((e = t.guild_id),
                         (l = t.id),
                         (i = I.vv.UNREADS_ONLY_MENTIONS),
-                        A.A.updateChannelOverrideSettings(
-                            e,
-                            l,
-                            { flags: (0, x.mD)(f.Ay.getChannelIdFlags(e, l), i) },
-                            C.G_.unreads(i === I.vv.UNREADS_ALL_MESSAGES ? S.e.ALL_MESSAGES : S.e.ONLY_MENTIONS),
-                            { object: E.ZSU.NOTIFICATION_SETTING_UNREAD_NOTICE },
-                        ),
+                        A.A.updateChannelOverrideSettings({
+                            guildId: e,
+                            channelId: l,
+                            settings: { flags: (0, x.mD)(f.Ay.getChannelIdFlags(e, l), i) },
+                            label: C.G_.unreads(i === I.vv.UNREADS_ALL_MESSAGES ? S.e.ALL_MESSAGES : S.e.ONLY_MENTIONS),
+                            location: { object: E.ZSU.NOTIFICATION_SETTING_UNREAD_NOTICE },
+                        }),
                         n());
                 },
             }),

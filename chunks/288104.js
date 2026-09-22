@@ -8,34 +8,34 @@ var r = e(17928),
     o = e(393432),
     S = e(95701),
     d = e(543465),
-    u = e(477427),
-    g = e(652215),
+    g = e(477427),
+    u = e(652215),
     N = e(790782),
     L = e(355097),
     c = e(375708);
 function A(t, n) {
     switch (t.type) {
-        case g.rbe.GUILD_VOICE:
+        case u.rbe.GUILD_VOICE:
             return null;
-        case g.rbe.GUILD_STAGE_VOICE:
+        case u.rbe.GUILD_STAGE_VOICE:
             return [
                 {
-                    setting: g.orn.NULL,
+                    setting: u.orn.NULL,
                     label: null != t.parent_id ? c.intl.string(c.t.wlrV1c) : c.intl.string(c.t["1Wn2M4"]),
                 },
-                { setting: g.orn.ONLY_MENTIONS, label: c.intl.string(c.t["BENn/6"]) },
-                { setting: g.orn.NO_MESSAGES, label: c.intl.string(c.t.CtVGyQ) },
+                { setting: u.orn.ONLY_MENTIONS, label: c.intl.string(c.t["BENn/6"]) },
+                { setting: u.orn.NO_MESSAGES, label: c.intl.string(c.t.CtVGyQ) },
             ];
         default:
             return [
                 {
-                    setting: g.orn.NULL,
+                    setting: u.orn.NULL,
                     label: null != t.parent_id ? c.intl.string(c.t.wlrV1c) : c.intl.string(c.t["1Wn2M4"]),
                 },
-                { setting: g.orn.ALL_MESSAGES, label: c.intl.string(c.t["n/bTaY"]) },
-                ...(n ? [{ setting: g.orn.ONLY_MENTIONS, label: c.intl.string(c.t.JzbSEY), allUnreads: !0 }] : []),
-                { setting: g.orn.ONLY_MENTIONS, label: c.intl.format(c.t.L2hmYy, {}) },
-                { setting: g.orn.NO_MESSAGES, label: c.intl.string(c.t.CtVGyQ) },
+                { setting: u.orn.ALL_MESSAGES, label: c.intl.string(c.t["n/bTaY"]) },
+                ...(n ? [{ setting: u.orn.ONLY_MENTIONS, label: c.intl.string(c.t.JzbSEY), allUnreads: !0 }] : []),
+                { setting: u.orn.ONLY_MENTIONS, label: c.intl.format(c.t.L2hmYy, {}) },
+                { setting: u.orn.NO_MESSAGES, label: c.intl.string(c.t.CtVGyQ) },
             ];
     }
 }
@@ -46,16 +46,16 @@ function _(t) {
         E = (0, r.bG)(
             [d.Ay],
             () => {
-                let e = g.orn.NULL;
+                let e = u.orn.NULL;
                 return (
                     null != t.parent_id && (e = d.Ay.getChannelMessageNotifications(n, t.parent_id)),
-                    e !== g.orn.NULL ? e : d.Ay.getMessageNotifications(n)
+                    e !== u.orn.NULL ? e : d.Ay.getMessageNotifications(n)
                 );
             },
             [n, t.parent_id],
         ),
-        h = (0, r.bG)([d.Ay], () => d.Ay.getNewForumThreadsCreated(t)),
-        b = (0, r.bG)([d.Ay], () => d.Ay.getChannelOverrides(n)[e], [n, e]),
+        b = (0, r.bG)([d.Ay], () => d.Ay.getNewForumThreadsCreated(t)),
+        h = (0, r.bG)([d.Ay], () => d.Ay.getChannelOverrides(n)[e], [n, e]),
         f = (0, r.bG)([d.Ay], () => d.Ay.resolveUnreadSetting(t), [t]),
         G = (0, r.bG)(
             [d.Ay],
@@ -69,19 +69,19 @@ function _(t) {
             },
             [n, t.parent_id],
         ),
-        O = null == b ? g.orn.NULL : b.message_notifications,
+        O = null == h ? u.orn.NULL : h.message_notifications,
         y =
-            _ && E === g.orn.ONLY_MENTIONS && G === N.e.ALL_MESSAGES
+            _ && E === u.orn.ONLY_MENTIONS && G === N.e.ALL_MESSAGES
                 ? c.intl.string(c.t.JzbSEY)
                 : (function (t) {
                       switch (t) {
-                          case g.orn.ALL_MESSAGES:
+                          case u.orn.ALL_MESSAGES:
                               return c.intl.string(c.t["n/bTaY"]);
-                          case g.orn.ONLY_MENTIONS:
+                          case u.orn.ONLY_MENTIONS:
                               return c.intl.format(c.t.L2hmYy, {});
-                          case g.orn.NO_MESSAGES:
+                          case u.orn.NO_MESSAGES:
                               return c.intl.string(c.t.CtVGyQ);
-                          case g.orn.NULL:
+                          case u.orn.NULL:
                           default:
                               return;
                       }
@@ -97,8 +97,8 @@ function _(t) {
                                 (0, i.jsx)(l.sL, {
                                     id: "new-forum-threads-created",
                                     label: c.intl.string(c.t.Rkgjph),
-                                    checked: h,
-                                    action: () => s.A.setForumThreadsCreated(t, !h),
+                                    checked: b,
+                                    action: () => s.A.setForumThreadsCreated(t, !b),
                                 }),
                                 (0, i.jsx)(l.bX, {}),
                             ],
@@ -115,39 +115,39 @@ function _(t) {
                                   group: "channel-notifications",
                                   id: c,
                                   label: a,
-                                  subtext: r === g.orn.NULL ? y : void 0,
+                                  subtext: r === u.orn.NULL ? y : void 0,
                                   action: () =>
                                       (function (t, i) {
                                           let r;
                                           if (null == n) return;
                                           if (!_)
-                                              return void s.A.updateChannelOverrideSettings(
-                                                  n,
-                                                  e,
-                                                  { message_notifications: t },
-                                                  u.G_.notifications(t),
-                                              );
+                                              return void s.A.updateChannelOverrideSettings({
+                                                  guildId: n,
+                                                  channelId: e,
+                                                  settings: { message_notifications: t },
+                                                  label: g.G_.notifications(t),
+                                              });
                                           let l = d.Ay.getChannelIdFlags(n, e);
-                                          if (t === g.orn.NULL) r = (0, o.PW)(l);
+                                          if (t === u.orn.NULL) r = (0, o.PW)(l);
                                           else {
                                               let n =
-                                                  i || t === g.orn.ALL_MESSAGES
+                                                  i || t === u.orn.ALL_MESSAGES
                                                       ? L.vv.UNREADS_ALL_MESSAGES
                                                       : L.vv.UNREADS_ONLY_MENTIONS;
                                               r = (0, o.mD)(l, n);
                                           }
-                                          s.A.updateChannelOverrideSettings(
-                                              n,
-                                              e,
-                                              { message_notifications: t, flags: r },
-                                              u.G_.notifications(t),
-                                          );
+                                          s.A.updateChannelOverrideSettings({
+                                              guildId: n,
+                                              channelId: e,
+                                              settings: { message_notifications: t, flags: r },
+                                              label: g.G_.notifications(t),
+                                          });
                                       })(r, !0 === S),
                                   checked:
                                       !0 === t.allUnreads
-                                          ? O === g.orn.ONLY_MENTIONS && f === N.e.ALL_MESSAGES
-                                          : _ && t.setting === g.orn.ONLY_MENTIONS
-                                            ? O === g.orn.ONLY_MENTIONS && f !== N.e.ALL_MESSAGES
+                                          ? O === u.orn.ONLY_MENTIONS && f === N.e.ALL_MESSAGES
+                                          : _ && t.setting === u.orn.ONLY_MENTIONS
+                                            ? O === u.orn.ONLY_MENTIONS && f !== N.e.ALL_MESSAGES
                                             : t.setting === O,
                               },
                               c,
@@ -162,11 +162,11 @@ function E(t) {
         e = (0, a.os)("ChannelNotificationItems") && S.B4.has(t.type),
         s = (0, r.bG)([d.Ay], () => d.Ay.resolvedMessageNotifications(t), [t]),
         o = (0, r.bG)([d.Ay], () => d.Ay.resolveUnreadSetting(t), [t]),
-        u = (0, r.bG)([d.Ay], () => d.Ay.getChannelOverrides(t.guild_id)[t.id], [t.guild_id, t.id]),
-        L = null == u ? g.orn.NULL : u.message_notifications,
-        E = e && s === g.orn.ONLY_MENTIONS && o === N.e.ALL_MESSAGES,
-        h =
-            L === g.orn.NULL && t.isGuildStageVoice()
+        g = (0, r.bG)([d.Ay], () => d.Ay.getChannelOverrides(t.guild_id)[t.id], [t.guild_id, t.id]),
+        L = null == g ? u.orn.NULL : g.message_notifications,
+        E = e && s === u.orn.ONLY_MENTIONS && o === N.e.ALL_MESSAGES,
+        b =
+            L === u.orn.NULL && t.isGuildStageVoice()
                 ? c.intl.format(c.t.L2hmYy, {})
                 : E
                   ? c.intl.string(c.t.JzbSEY)
@@ -175,6 +175,6 @@ function E(t) {
                         return n === s;
                     })?.label;
     return null != n
-        ? (0, i.jsx)(l.Dr, { id: "channel-notifications", label: c.intl.string(c.t.h850Ss), subtext: h, children: n })
+        ? (0, i.jsx)(l.Dr, { id: "channel-notifications", label: c.intl.string(c.t.h850Ss), subtext: b, children: n })
         : null;
 }

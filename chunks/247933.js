@@ -3596,7 +3596,12 @@ function i_(e) {
             (0, ig.xi)(t, [l]);
         }, [t, l]);
     function c(e) {
-        (ic.A.updateChannelOverrideSettings(null, t, { muted: !0 }, iI.fd.Muted),
+        (ic.A.updateChannelOverrideSettings({
+            guildId: null,
+            channelId: t,
+            settings: { muted: !0 },
+            label: iI.fd.Muted,
+        }),
             iu.A.showMuteSuccessToast(i, t),
             (0, iA._$)({ channelId: t, warningId: l, senderId: i, warningType: ip._j.LIKELY_ATO, cta: e }),
             o());

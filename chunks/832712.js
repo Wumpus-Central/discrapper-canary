@@ -43,12 +43,13 @@ let h = {
                 });
             }));
     },
-    updateChannelOverrideSettings(e, t, n, i, r) {
-        let o = (0, d.ME)(e, t);
-        (l.A.saveUserGuildSettings(e, { channel_overrides: { [t]: n } }),
-            s.h.dispatch({ type: "USER_GUILD_SETTINGS_CHANNEL_UPDATE", guildId: e, channelId: t, settings: n }),
-            a.O.announce(A.intl.string(A.t.MlIsJ8)),
-            (0, d.ct)({ guildId: e, channelId: t, change: n, previous: o, label: i, location: r }));
+    updateChannelOverrideSettings(e) {
+        let { guildId: t, channelId: n, settings: i, label: r, location: o, accessibilityAnnouncement: c } = e,
+            u = (0, d.ME)(t, n);
+        (l.A.saveUserGuildSettings(t, { channel_overrides: { [n]: i } }),
+            s.h.dispatch({ type: "USER_GUILD_SETTINGS_CHANNEL_UPDATE", guildId: t, channelId: n, settings: i }),
+            a.O.announce(c?.message ?? A.intl.string(A.t.MlIsJ8), c?.assertiveness),
+            (0, d.ct)({ guildId: t, channelId: n, change: i, previous: u, label: r, location: o }));
     },
     updateChannelOverrideSettingsBulk(e, t, n, i) {
         let r = c.default.keys(t),
@@ -80,7 +81,12 @@ let h = {
         let n = t ? E.vv.NEW_FORUM_THREADS_ON : E.vv.NEW_FORUM_THREADS_OFF,
             i = t ? E.vv.NEW_FORUM_THREADS_OFF : E.vv.NEW_FORUM_THREADS_ON,
             r = o.Ay.getChannelFlags(e);
-        this.updateChannelOverrideSettings(e.guild_id, e.id, { flags: (r & ~i) | n }, d.G_.forumThreadsCreated(t));
+        this.updateChannelOverrideSettings({
+            guildId: e.guild_id,
+            channelId: e.id,
+            settings: { flags: (r & ~i) | n },
+            label: d.G_.forumThreadsCreated(t),
+        });
     },
     async setAccountFlag(e, t) {
         let n = o.Ay.accountNotificationSettings.flags,

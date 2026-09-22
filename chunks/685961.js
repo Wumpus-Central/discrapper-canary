@@ -1158,7 +1158,12 @@ let tC = (e) => {
             null != s &&
                 (m(!0),
                 u.Ay.trackWithMetadata(el.HAw.IAR_MUTE_USER_BUTTON_CLICKED, { other_user_id: t.id, report_id: a }),
-                tE.A.updateChannelOverrideSettings(null, s, { muted: !0 }, ty.fd.Muted),
+                tE.A.updateChannelOverrideSettings({
+                    guildId: null,
+                    channelId: s,
+                    settings: { muted: !0 },
+                    label: ty.fd.Muted,
+                }),
                 J.A.showMuteSuccessToast(t.id, l));
         }, [s, l, t, a]);
     return (0, n.jsx)(Z.PQ, {
