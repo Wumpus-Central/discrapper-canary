@@ -2178,23 +2178,38 @@
 }
 
 .managed__8061a {
+    border-radius: var(--radius-sm);
+    isolation: isolate;
+    padding: 1px 3px;
+    position: relative
+}
+
+.managed__8061a:before {
     background: var(--background-mod-subtle);
     border: 1px solid var(--border-muted);
     border-radius: var(--radius-sm);
-    padding: 1px 3px;
-    transition: background .1s ease-in-out
+    content: "";
+    inset: -1px;
+    position: absolute;
+    transition: background .1s ease-in-out, inset-inline-end .15s ease-in-out;
+    z-index: -1
 }
 
-.custom-user-profile-theme.theme-light .managed__8061a {
+.custom-user-profile-theme.theme-light .managed__8061a:before {
     background: var(--opacity-white-24)
 }
 
-.managed__8061a:hover {
+.managed__8061a:hover:before {
     background: var(--background-mod-strong)
 }
 
-.custom-user-profile-theme.theme-light .managed__8061a:hover {
+.custom-user-profile-theme.theme-light .managed__8061a:hover:before {
     background: var(--opacity-white-40)
+}
+
+.hasAppendedEditSlot__8061a:has(:focus-visible):before,
+.hasAppendedEditSlot__8061a:hover:before {
+    inset-inline-end: -14px
 }
 
 .customizable__8061a {
@@ -2242,34 +2257,38 @@
     display: flex;
     height: 20px;
     inset-block-start: 50%;
-    inset-inline-end: 3px;
     justify-content: center;
     opacity: 0;
     padding: 0;
     position: absolute;
     transform: translateY(-50%);
+    transition: opacity .1s ease-in-out;
     width: 20px
 }
 
-.customizable__8061a:has(:focus-visible):not(:has(:focus-visible .badgeCovered__8061a)) .editButton__8061a,
+.editButtonOverlay__8061a {
+    inset-inline-end: 3px;
+    transition: none
+}
+
+.editButtonAppended__8061a {
+    inset-inline-end: -14px
+}
+
+.customizable__8061a:has(:focus-visible) .editButton__8061a,
 .customizable__8061a:hover .editButton__8061a {
     opacity: 1
 }
 
+.badge__8061a,
 .editIcon__8061a {
     display: block
-}
-
-.customizable__8061a:has(:focus-visible):not(:has(:focus-visible .badgeCovered__8061a)) .badgeCovered__8061a,
-.customizable__8061a:hover .badgeCovered__8061a {
-    opacity: 0
 }
 
 .badge__8061a {
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: contain;
-    display: block;
     filter: saturate(var(--saturation-factor, 1));
     height: 20px;
     -o-object-fit: cover;
@@ -2297,4 +2316,4 @@
     object-fit: contain
 }
 
-/*# sourceMappingURL=641877.a0b91883a89701cf.css.map*/
+/*# sourceMappingURL=641877.1211b61efc1969e7.css.map*/

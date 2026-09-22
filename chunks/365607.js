@@ -789,7 +789,7 @@ function te(e) {
     }
     let ew = (0, e7.AP)(er?.id ?? null),
         eW = (0, m.A)(ew).some((e) => e.id === eK.A.ORB_PROFILE_BADGE),
-        eY = eT && 0 === u ? c.length - 1 : -1,
+        eY = eT && !eS && 0 === u,
         eq = null;
     u > 0 &&
         ((eq = (0, a.jsx)(b.E, {
@@ -803,7 +803,7 @@ function te(e) {
         (d = Q.intl.formatToPlainString(Q.t.eIHfGZ, { overflow_count: u })));
     let eZ = (0, a.jsxs)("div", {
         ref: W,
-        className: p()(e6.kL, eo && !0 !== F && e6.Yq, eT && e6.Tx, g),
+        className: p()(e6.kL, eo && !0 !== F && e6.Yq, eT && e6.Tx, eY && e6.gK, g),
         ...(eS ? null : { "aria-label": Q.intl.string(Q.t.VWV0y5), role: "group" }),
         ...(eT && !eS ? { onClick: () => eG(!eB) } : null),
         children: [
@@ -840,7 +840,7 @@ function te(e) {
                         alt: " ",
                         "aria-hidden": !0,
                         src: e.iconSrc ?? o ?? (0, eP.L7)(e.icon),
-                        className: p()(e6.qS, null != o && e6.Do, t === eY && e6.el, G),
+                        className: p()(e6.qS, null != o && e6.Do, G),
                     }),
                     c = null != L && L(e.id),
                     u = {
@@ -1051,7 +1051,7 @@ function te(e) {
                         children: (0, a.jsx)("button", {
                             ref: J,
                             type: "button",
-                            className: e6.r9,
+                            className: p()(e6.r9, u > 0 ? e6.v_ : e6.Y5),
                             "aria-label": Q.intl.string(Q.t.PXIyjF),
                             "aria-haspopup": "dialog",
                             "aria-expanded": eB,
