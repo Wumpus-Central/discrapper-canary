@@ -555,7 +555,7 @@ let $ = "playground-billing-settings-banner",
         },
     };
 var q = n(959129),
-    J = n(815846),
+    J = n(106512),
     Q =
         (((r = {}).SEASONAL_GIFTING_2024_BALLOONS_REWARD_SKU_ID = "1301993378484850769"),
         (r.SEASONAL_GIFTING_2024_CAT_EARS_REWARD_SKU_ID = "1301993378484850771"),
@@ -1321,7 +1321,7 @@ let ta = {
                                     : null;
                         return (0, p.jsx)("div", {
                             className: j.MT,
-                            children: (0, p.jsx)(J.c, {
+                            children: (0, p.jsx)(J.m, {
                                 config:
                                     ((t = {
                                         header: e.header,

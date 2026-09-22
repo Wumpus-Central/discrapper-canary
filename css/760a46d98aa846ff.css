@@ -1,0 +1,52 @@
+.giftCardPromotion_d1e69f {
+    align-items: center;
+    background: var(--background-mod-muted);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-40);
+    overflow: hidden;
+    padding: var(--space-32);
+    position: relative;
+    width: 100%
+}
+
+.giftImagePromotion_d1e69f {
+    border-radius: var(--radius-sm);
+    flex-shrink: 0;
+    height: 130px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 232px
+}
+
+.giftImageAnimatedPromotion_d1e69f {
+    padding-bottom: 20px
+}
+
+.giftInfoPromotion_d1e69f {
+    align-items: flex-start;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-width: 0
+}
+
+.giftInfoTitlePromotion_d1e69f {
+    margin-bottom: var(--space-8)
+}
+
+.giftText_d1e69f {
+    margin-bottom: var(--space-12)
+}
+
+.giftTextPromotion_d1e69f {
+    margin-bottom: var(--space-16)
+}
+
+.giftAdditionalTerm_d1e69f {
+    font-style: italic
+}
+
+/*# sourceMappingURL=760a46d98aa846ff.css.map*/
