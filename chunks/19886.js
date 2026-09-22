@@ -6,31 +6,35 @@ var n,
     a = t(287809),
     d = t(166403),
     s = t(474090);
-let o = (0, t(945810).mj)({
+let f = (0, t(945810).mj)({
     kind: "user",
     name: "2026-08-nitro-tenure-badge-withheld-state",
     defaultConfig: { showWithheldBadge: !1 },
     variations: { 0: { showWithheldBadge: !1 }, 1: { showWithheldBadge: !0 } },
 });
-function c(e) {
-    return (0, r.bG)([i.A], () => {
+function o(e) {
+    return (0, r.bG)([i.A, a.default], () => {
         let u,
             t = null != e ? i.A.getUserProfile(e) : null,
             n = t?.premiumSince;
-        return null == t || null == n
-            ? null
-            : (t?.badges?.forEach((e) => {
-                  let t = (0, l.cZ)(e.id);
-                  null != t && (u = t);
-              }),
-              u);
+        if (null == t || null == n) return null;
+        if (
+            (t?.badges?.forEach((e) => {
+                let t = (0, l.cZ)(e.id);
+                null != t && (u = t);
+            }),
+            null != u)
+        )
+            return u;
+        let r = a.default.getCurrentUser();
+        return e === r?.id && r?.hasPaidTier2Subscription() ? (0, l.UO)(n) : null;
     });
 }
-var f = t(202541),
+var c = t(202541),
     h = (((n = {}).UPCOMING = "upcoming"), (n.WITHHELD = "withheld"), (n.EARNED = "earned"), n);
 function m() {
     let e = (0, r.bG)([a.default], () => a.default.getCurrentUser());
-    return c(e?.id) ?? null;
+    return o(e?.id) ?? null;
 }
 function p(e) {
     return (0, r.bG)([i.A], () => {
@@ -41,7 +45,7 @@ function p(e) {
 }
 function g() {
     let e = (0, r.bG)([a.default], () => a.default.getCurrentUser()),
-        u = (0, s.YE)(e, f.PremiumTypes.TIER_2),
+        u = (0, s.YE)(e, c.PremiumTypes.TIER_2),
         t = (0, r.bG)(
             [d.A],
             () => {
@@ -56,7 +60,7 @@ function g() {
 function b() {
     let e = (0, r.bG)([a.default], () => a.default.getCurrentUser()),
         u = (0, r.bG)([d.A], () => d.A.getPremiumTypeSubscription());
-    return (0, s.YE)(e, f.PremiumTypes.TIER_2) ? (0, l.UO)(u?.premiumSince) : null;
+    return (0, s.YE)(e, c.PremiumTypes.TIER_2) ? (0, l.UO)(u?.premiumSince) : null;
 }
 function A() {
     let e,
@@ -72,12 +76,12 @@ function A() {
     if (null == s) return null;
     if (!t?.hasPaidTier2Subscription()) {
         let e = (0, l.UO)(s);
-        if (null != e && o.getConfig({ location: "useTieredTenureBadgeData" }).showWithheldBadge)
-            return { ...f.VD[e], earnedOnDate: (0, l.Xr)(e, s), status: "withheld" };
+        if (null != e && f.getConfig({ location: "useTieredTenureBadgeData" }).showWithheldBadge)
+            return { ...c.VD[e], earnedOnDate: (0, l.Xr)(e, s), status: "withheld" };
     }
-    return { ...Object.values(f.VD)[0], status: "upcoming" };
+    return { ...Object.values(c.VD)[0], status: "upcoming" };
 }
 function G(e) {
-    let u = c(e);
-    return null == u ? null : f.VD[u];
+    let u = o(e);
+    return null == u ? null : c.VD[u];
 }
