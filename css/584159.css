@@ -1597,7 +1597,9 @@
 }
 
 .avatar_f0960a[data-size=sm],
-.image_f0960a[data-size=sm] {
+.avatar_f0960a[data-size=xs],
+.image_f0960a[data-size=sm],
+.image_f0960a[data-size=xs] {
     height: 12px;
     width: 12px
 }
@@ -1622,7 +1624,8 @@
     width: 16px
 }
 
-.roleDot_f0960a[data-size=sm] {
+.roleDot_f0960a[data-size=sm],
+.roleDot_f0960a[data-size=xs] {
     height: 12px;
     width: 12px
 }
@@ -1726,6 +1729,25 @@
 }
 
 .tagGroup_cfee8f[data-size=sm] [slot=remove] {
+    height: 100%
+}
+
+.tagGroup_cfee8f[data-size=xs] .tag_cfee8f {
+    border-radius: var(--radius-xs);
+    gap: var(--space-4);
+    min-height: 24px;
+    padding: 0 var(--space-8)
+}
+
+.tagGroup_cfee8f[data-size=xs] .tag_cfee8f[data-variant=filter] {
+    border-radius: var(--radius-round)
+}
+
+.tagGroup_cfee8f[data-size=xs] .tag_cfee8f:has([slot=remove]) {
+    padding-right: var(--space-4)
+}
+
+.tagGroup_cfee8f[data-size=xs] [slot=remove] {
     height: 100%
 }
 
@@ -1837,4 +1859,4 @@
     margin: 0
 }
 
-/*# sourceMappingURL=584159.8b55c6d9ab0a575c.css.map*/
+/*# sourceMappingURL=584159.6bfc2dc4946b9712.css.map*/

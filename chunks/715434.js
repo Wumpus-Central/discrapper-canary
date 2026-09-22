@@ -8,6 +8,7 @@ _.r(
         danger: "danger_a2c9e8",
         success: "success_a2c9e8",
         warning: "warning_a2c9e8",
+        manaFilterTag: "manaFilterTag_a2c9e8",
         emoji: "emoji_a2c9e8",
         closeCircle: "closeCircle_a2c9e8 emoji_a2c9e8",
         close: "close_a2c9e8",

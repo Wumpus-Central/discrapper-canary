@@ -206,10 +206,10 @@ function z(e) {
                               className: P.GA,
                               children: u.map((e) =>
                                   (0, l.jsx)(
-                                      x.A,
+                                      x.Ay,
                                       {
                                           tag: e,
-                                          size: x.A.Sizes.SMALL,
+                                          size: x.Ay.Sizes.SMALL,
                                           selected: k.has(e.id),
                                           onClick: !F || k.has(e.id) ? () => K(e.id) : void 0,
                                           disabled: !k.has(e.id) && F,

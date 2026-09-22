@@ -1,4 +1,4 @@
-(a.r(l), a.d(l, { manaCollection: () => a1, playgroundConfig: () => a2 }));
+(a.r(l), a.d(l, { manaCollection: () => aJ, playgroundConfig: () => a0 }));
 var t = a(477900),
     o = a(582128),
     n = a(17928),
@@ -1827,10 +1827,10 @@ let e5 = (0, a(240921).Ay)({
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-function e9(e) {
+function e7(e) {
     return e5.useConfig({ location: e }).enabled;
 }
-let e7 = {
+let e9 = {
     title: "Calendar",
     stories: [
         {
@@ -1851,7 +1851,7 @@ let e7 = {
                     c = o.useCallback(() => {
                         s((0, e4._U)("2024-12-25"));
                     }, []);
-                return e9("CalendarStory")
+                return e7("CalendarStory")
                     ? (0, t.jsxs)(D.B, {
                           direction: "vertical",
                           gap: "md",
@@ -2159,7 +2159,7 @@ let li = {
                     m = o.useCallback(() => {
                         u((0, e4._U)("2024-12-25"));
                     }, []);
-                return e9("CalendarStory")
+                return e7("CalendarStory")
                     ? (0, t.jsxs)(D.B, {
                           direction: "vertical",
                           gap: "md",
@@ -2471,7 +2471,7 @@ let lw = {
                     m = (0, e2.Ec)((0, e2.Xj)()),
                     x = r ? m.subtract({ weeks: 1 }) : void 0,
                     y = r ? m.add({ weeks: 2 }) : void 0;
-                return e9("DateRangePickerStory")
+                return e7("DateRangePickerStory")
                     ? (0, t.jsxs)(D.B, {
                           direction: "vertical",
                           gap: "md",
@@ -3210,8 +3210,8 @@ var lK = a(102079),
     l6 = a(116833),
     l8 = a(521489),
     l5 = a(314116);
-let l9 = "/assets/f66ae7bb8510ab4f.svg";
-function l7() {
+let l7 = "/assets/f66ae7bb8510ab4f.svg";
+function l9() {
     return (0, t.jsx)(eH.E, {
         variant: "text-sm/normal",
         color: "text-subtle",
@@ -3291,7 +3291,7 @@ function aa(e) {
                     subtitle: "To verify your radness, we need to ask you a few deep and personal questions.",
                     notice: null != g ? { message: g.message, type: g.type } : void 0,
                 },
-                body: (0, t.jsx)(l7, {}),
+                body: (0, t.jsx)(l9, {}),
                 nextButtonProps: { text: "Verify" },
                 onNext: V,
             },
@@ -3530,7 +3530,7 @@ let at = {
                     r = o.useMemo(() => {
                         switch (l) {
                             case 0:
-                                return { type: "image", src: l9 };
+                                return { type: "image", src: l7 };
                             case 1:
                                 return {
                                     type: "lottie",
@@ -3543,7 +3543,7 @@ let at = {
                                 return {
                                     type: "video",
                                     src: "https://cdn.discordapp.com/assets/content/06fafa729efafb6235e0ee9df9482566fa9e74b96a792a9265dca70113c71ab7.webm",
-                                    fallbackImageSrc: l9,
+                                    fallbackImageSrc: l7,
                                     loop: !0,
                                     loopAt: 2.5,
                                 };
@@ -4497,7 +4497,7 @@ let ag = {
                         c = o.useCallback(() => {
                             s({ start: (0, e4._U)("2024-12-01"), end: (0, e4._U)("2024-12-31") });
                         }, []);
-                    if (!e9("RangeCalendarStory"))
+                    if (!e7("RangeCalendarStory"))
                         return (0, t.jsxs)(e8.w, {
                             type: "critical",
                             children: [
@@ -4909,24 +4909,19 @@ let aR = {
         },
     ],
 };
-var aP = a(953091);
-function aO(e) {
-    let { selectionMode: l = "multiple", size: a = "md", ...o } = e;
-    return (0, t.jsx)(aP.n, { ...o, size: a, selectionMode: l, variant: "filter" });
-}
-var aB = a(11779),
-    az = a(866711);
-let a$ = [
-        { id: "strength", label: "Strength", icon: aB.r },
+var aP = a(11779),
+    aO = a(669257);
+let aB = [
+        { id: "strength", label: "Strength", icon: aP.r },
         { id: "dexterity", label: "Dexterity" },
         { id: "wisdom", label: "Wisdom" },
         { id: "charisma", label: "Charisma" },
     ],
-    aG = [
+    az = [
         { id: "safety", label: "Safety Center", href: "https://discord.com/safety" },
         { id: "support", label: "Support", href: "https://support.discord.com" },
     ],
-    aF = {
+    a$ = {
         title: "TagGroup",
         stories: [
             {
@@ -4937,7 +4932,7 @@ let a$ = [
                         d = (0, n.bG)([i.default], () => i.default.getCurrentUser()),
                         u = o.useMemo(
                             () => [
-                                { id: "strength", label: "Strength", icon: aB.r },
+                                { id: "strength", label: "Strength", icon: aP.r },
                                 { id: "dexterity", label: "Dexterity", icon: { type: "role", color: "#ff44aa" } },
                                 {
                                     id: "wisdom",
@@ -4958,7 +4953,7 @@ let a$ = [
                         m = o.useCallback(() => {
                             b(u);
                         }, [u]),
-                        x = (0, t.jsx)(az.C, {
+                        x = (0, t.jsx)(aO.C, {
                             label: "Character attributes",
                             disabled: l,
                             layout: s,
@@ -4992,6 +4987,7 @@ let a$ = [
                         defaultValue: void 0,
                         options: [
                             { label: "Automatic", value: void 0 },
+                            { label: "Extra small", value: "xs" },
                             { label: "Small", value: "sm" },
                             { label: "Medium", value: "md" },
                         ],
@@ -5003,13 +4999,13 @@ let a$ = [
                 id: "tag-group-links",
                 component: function (e) {
                     let { disabled: l } = e;
-                    return (0, t.jsx)(az.C, { mode: "link", label: "Discord resources", disabled: l, items: aG });
+                    return (0, t.jsx)(aO.C, { mode: "link", label: "Discord resources", disabled: l, items: az });
                 },
                 controls: { disabled: { label: "Disabled", type: "boolean", defaultValue: !1 } },
             },
             {
-                name: "FilterTagGroup",
-                id: "filter-tag-group",
+                name: "TagGroup filter tags",
+                id: "tag-group-filter",
                 component: function (e) {
                     let { disabled: l, disallowEmptySelection: a, selectionMode: n, size: i } = e,
                         [s, r] = o.useState(() => new Set(["strength"])),
@@ -5019,10 +5015,11 @@ let a$ = [
                         }, []);
                     return (0, t.jsx)(D.B, {
                         gap: 24,
-                        children: (0, t.jsx)(aO, {
+                        children: (0, t.jsx)(aO.C, {
+                            variant: "filter",
                             label: "Character attributes",
                             disabled: l,
-                            items: a$,
+                            items: aB,
                             selectionMode: n,
                             selectedKeys: s,
                             onSelectionChange: u,
@@ -5040,6 +5037,7 @@ let a$ = [
                         type: "select",
                         defaultValue: "multiple",
                         options: [
+                            { label: "None (static)", value: "none" },
                             { label: "Single", value: "single" },
                             { label: "Multiple", value: "multiple" },
                         ],
@@ -5049,6 +5047,7 @@ let a$ = [
                         type: "select",
                         defaultValue: "md",
                         options: [
+                            { label: "Extra small", value: "xs" },
                             { label: "Small", value: "sm" },
                             { label: "Medium", value: "md" },
                         ],
@@ -5057,9 +5056,9 @@ let a$ = [
             },
         ],
     };
-var a_ = a(364522),
-    aH = a(404544);
-let aq = {
+var aG = a(364522),
+    aF = a(404544);
+let a_ = {
     name: "Text",
     id: "text",
     component: eH.E,
@@ -5091,16 +5090,16 @@ let aq = {
         children: { label: "Text", type: "text", defaultValue: "Hello, world!" },
     },
 };
-var aU = a(782641),
-    aW = a(381275);
-let aX = Object.assign(
+var aH = a(782641),
+    aq = a(381275);
+let aU = Object.assign(
     function (e) {
         let { children: l, "aria-label": a, "aria-labelledby": o } = e;
-        return (0, t.jsx)(aU.M, {
+        return (0, t.jsx)(aH.M, {
             "data-mana-component": "toolbar",
             "aria-label": a,
             "aria-labelledby": o,
-            className: aW.KE,
+            className: aq.KE,
             children: l,
         });
     },
@@ -5112,7 +5111,7 @@ let aX = Object.assign(
                 "data-mana-component": "toolbar-group",
                 "aria-label": a,
                 "aria-labelledby": o,
-                className: aW.Os,
+                className: aq.Os,
                 children: l,
             });
         },
@@ -5121,15 +5120,15 @@ let aX = Object.assign(
                 role: "separator",
                 "aria-orientation": "vertical",
                 "data-mana-component": "toolbar-separator",
-                className: aW.me,
+                className: aq.me,
             });
         },
     },
 );
-var aZ = a(866665),
-    aK = a(683063),
-    aY = a(557464);
-let aQ = {
+var aW = a(866665),
+    aX = a(683063),
+    aZ = a(557464);
+let aK = {
     title: "Tooltip",
     stories: [
         {
@@ -5152,7 +5151,7 @@ let aQ = {
                         if ("center" !== i && null != i)
                             return "custom" === i ? { align: i, customOffset: s } : { align: i };
                     }, [i, s]);
-                return (0, t.jsx)(aZ.m, {
+                return (0, t.jsx)(aW.m, {
                     text: l,
                     position: a,
                     align: n,
@@ -5231,8 +5230,8 @@ let aQ = {
                         if ("center" !== u && null != u)
                             return "custom" === u ? { align: u, customOffset: c } : { align: u };
                     }, [u, c]),
-                    v = o.useMemo(() => (n ? { type: "image", src: aY.A, aspectRatio: "1/1" } : void 0), [n]);
-                return (0, t.jsx)(aK.u, {
+                    v = o.useMemo(() => (n ? { type: "image", src: aZ.A, aspectRatio: "1/1" } : void 0), [n]);
+                return (0, t.jsx)(aX.u, {
                     title: l,
                     body: a,
                     position: r,
@@ -5316,27 +5315,27 @@ let aQ = {
         },
     ],
 };
-var aJ = a(508382),
-    a0 = a(393743);
-let a1 = {
+var aY = a(508382),
+    aQ = a(393743);
+let aJ = {
         id: "mana",
         name: "Mana",
         groups: [
             {
                 title: "Text",
                 stories: [
-                    aq,
+                    a_,
                     {
                         name: "Typography Scales",
                         id: "text-scales",
                         component: function (e) {
-                            return (0, t.jsx)(a_.Ar, {
-                                className: aH.H,
+                            return (0, t.jsx)(aG.Ar, {
+                                className: aF.H,
                                 children: Object.values(L).map((l) =>
                                     (0, t.jsxs)(
                                         y.Z,
                                         {
-                                            className: aH.N,
+                                            className: aF.N,
                                             children: [
                                                 (0, t.jsx)(eH.E, { ...e, variant: l, children: e.children }),
                                                 (0, t.jsx)(eH.E, {
@@ -5367,14 +5366,14 @@ let a1 = {
                             let [e, l] = o.useState(!1),
                                 [a, n] = o.useState(!1),
                                 i = e ? "Unmute microphone" : "Mute microphone";
-                            return (0, t.jsxs)(aX, {
+                            return (0, t.jsxs)(aU, {
                                 "aria-label": "Message actions",
                                 children: [
-                                    (0, t.jsxs)(aX.Group, {
+                                    (0, t.jsxs)(aU.Group, {
                                         "aria-label": "Response actions",
                                         children: [
                                             (0, t.jsx)(h.$, { variant: "secondary", text: "Reply" }),
-                                            (0, t.jsx)(aZ.m, {
+                                            (0, t.jsx)(aW.m, {
                                                 text: "More options",
                                                 children: (0, t.jsx)(eD.K, {
                                                     variant: "secondary",
@@ -5384,11 +5383,11 @@ let a1 = {
                                             }),
                                         ],
                                     }),
-                                    (0, t.jsx)(aX.Separator, {}),
-                                    (0, t.jsxs)(aX.Group, {
+                                    (0, t.jsx)(aU.Separator, {}),
+                                    (0, t.jsxs)(aU.Group, {
                                         "aria-label": "Message options",
                                         children: [
-                                            (0, t.jsx)(aZ.m, {
+                                            (0, t.jsx)(aW.m, {
                                                 text: i,
                                                 children: (0, t.jsx)(eL.k, {
                                                     icon: eN.MicrophoneIcon,
@@ -5408,7 +5407,7 @@ let a1 = {
                     },
                 ],
             },
-            e7,
+            e9,
             la,
             lo,
             li,
@@ -5439,9 +5438,9 @@ let a1 = {
             aL,
             ah,
             ag,
-            aQ,
+            aK,
             e1,
-            aF,
+            a$,
             lP,
             {
                 title: "FloatingLayer",
@@ -5460,7 +5459,7 @@ let a1 = {
                                     blockPointerEvents: d,
                                 } = e,
                                 [u, c] = o.useState(!1);
-                            return (0, t.jsx)(aJ.Ow, {
+                            return (0, t.jsx)(aY.Ow, {
                                 open: u,
                                 onOpenChange: c,
                                 placement: l,
@@ -5472,7 +5471,7 @@ let a1 = {
                                 blockPointerEvents: d,
                                 renderLayer: () =>
                                     (0, t.jsx)("div", {
-                                        className: a0.q,
+                                        className: aQ.q,
                                         children: (0, t.jsx)(eH.E, {
                                             variant: "text-sm/medium",
                                             children: "FloatingLayer Content",
@@ -5597,4 +5596,4 @@ let a1 = {
             },
         ],
     },
-    a2 = { collections: [a1, ef] };
+    a0 = { collections: [aJ, ef] };

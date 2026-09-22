@@ -77,6 +77,13 @@
     color: var(--text-feedback-warning)
 }
 
+.manaFilterTag_a2c9e8 {
+    border-color: var(--control-secondary-border-default);
+    border-radius: var(--radius-round);
+    min-height: 24px;
+    padding: 0 var(--space-8)
+}
+
 .theme-light .pill_a2c9e8.selected_a2c9e8 {
     background-color: var(--brand-160);
     border-color: var(--brand-500)
@@ -231,4 +238,4 @@
     gap: 4px
 }
 
-/*# sourceMappingURL=202342.15fd0ae1674f6c96.css.map*/
+/*# sourceMappingURL=202342.fbd090c6891c59b2.css.map*/

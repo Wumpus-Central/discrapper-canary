@@ -20,24 +20,24 @@ let g = ["Chill", "Experienced", "Beginner Friendly", "18+", "Women Only", "LGBT
 function f(e) {
     let { channelId: n, ...t } = e,
         [f, w] = (0, a.useState)(null),
-        [S, j] = (0, a.useState)(new Set()),
-        [v, k] = (0, a.useState)(new Set()),
-        y = v.size > 0,
+        [S, y] = (0, a.useState)(new Set()),
+        [j, v] = (0, a.useState)(new Set()),
+        k = j.size > 0,
         b = (0, r.bG)([m.A], () => m.A.getChannel(n)),
         A = new Set((b?.availableTags ?? []).map((e) => e.name));
     function z(e, n) {
-        j((t) => {
+        y((t) => {
             let i = new Set(t);
             return (n ? i.add(e) : i.delete(e), i);
         });
     }
     async function E() {
-        (w(null), k(new Set(S)));
+        (w(null), v(new Set(S)));
         try {
             for (let e of S) (await u.A.createForumTag({ name: e }, n), z(e, !1));
             t.onClose();
         } catch (e) {
-            (w(new o.LG(e)), k(new Set()));
+            (w(new o.LG(e)), v(new Set()));
         }
     }
     return (0, i.jsxs)(s.Modal, {
@@ -45,8 +45,8 @@ function f(e) {
         title: x.intl.string(p.default.JWRsCC),
         subtitle: x.intl.string(p.default["578719"]),
         actions: [
-            { text: x.intl.string(x.t["ETE/oC"]), variant: "secondary", onClick: t.onClose, disabled: y },
-            { text: x.intl.string(x.t["R3BPH+"]), variant: "primary", onClick: E, loading: y },
+            { text: x.intl.string(x.t["ETE/oC"]), variant: "secondary", onClick: t.onClose, disabled: k },
+            { text: x.intl.string(x.t["R3BPH+"]), variant: "primary", onClick: E, loading: k },
         ],
         ...t,
         children: [
@@ -65,13 +65,13 @@ function f(e) {
                             {
                                 text: A.has(e.id) ? x.intl.string(p.default["7aCPJG"]) : null,
                                 children: (0, i.jsx)("div", {
-                                    children: (0, i.jsx)(h.A, {
-                                        selected: S.has(e.id) || v.has(e.id) || A.has(e.id),
-                                        disabled: A.has(e.id) || v.has(e.id),
+                                    children: (0, i.jsx)(h.Ay, {
+                                        selected: S.has(e.id) || j.has(e.id) || A.has(e.id),
+                                        disabled: A.has(e.id) || j.has(e.id),
                                         tag: e,
-                                        size: h.A.Sizes.MEDIUM,
+                                        size: h.Ay.Sizes.MEDIUM,
                                         onClick:
-                                            A.has(e.id) || y
+                                            A.has(e.id) || k
                                                 ? void 0
                                                 : () => {
                                                       z(e.name, !S.has(e.name));
@@ -87,7 +87,7 @@ function f(e) {
                         children: (0, i.jsx)(d.Q, {
                             text: x.intl.string(p.default.F5YBmi),
                             onClick: function () {
-                                j(new Set(g.filter((e) => !A.has(e.name)).map((e) => e.name)));
+                                y(new Set(g.filter((e) => !A.has(e.name)).map((e) => e.name)));
                             },
                         }),
                     }),

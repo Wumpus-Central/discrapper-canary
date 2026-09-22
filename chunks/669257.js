@@ -1,4 +1,4 @@
-n.d(t, { n: () => p });
+n.d(t, { C: () => S });
 var i = n(477900),
     r = n(582128),
     a = n(877603),
@@ -10,7 +10,8 @@ var i = n(477900),
     u = n(789645),
     _ = n(834730),
     E = n(478576);
-function A(e) {
+let A = { xs: "xxs", sm: "xs", md: "sm" };
+function h(e) {
     let { graphic: t, size: n } = e;
     if ("type" in t)
         switch (t.type) {
@@ -26,45 +27,39 @@ function A(e) {
             default:
                 return null;
         }
-    let l = "sm" === n ? "xs" : "sm";
-    return (0, i.jsx)(t, { size: l, color: "currentColor" });
+    return (0, i.jsx)(t, { size: A[n], color: "currentColor" });
 }
-var h = n(70074),
-    I = n(132473);
-function f(e) {
-    let { label: t, size: n, variant: r = "default", isDisabled: s, icon: l, accessibilityHint: E, ...f } = e,
-        p = [t, E].filter(Boolean).join(", ");
+var I = n(70074),
+    f = n(132473);
+let p = { xs: "text-xs/normal", sm: "text-sm/normal", md: "text-md/normal" },
+    T = { xs: "xxs", sm: "xs", md: "sm" };
+function g(e) {
+    let { label: t, size: n, variant: r = "default", isDisabled: s, icon: l, accessibilityHint: E, ...A } = e,
+        g = [t, E].filter(Boolean).join(", ");
     return (0, i.jsx)(a.vw, {
-        ...f,
+        ...A,
         "data-mana-component": "tag",
-        className: o()(I.Tc, h.GA),
+        className: o()(f.Tc, I.GA),
         "data-variant": r,
-        textValue: p,
+        textValue: g,
         isDisabled: s,
         children: (e) => {
             let { allowsRemoving: r } = e;
             return (0, i.jsxs)(i.Fragment, {
                 children: [
-                    null != l && (0, i.jsx)(A, { graphic: l, size: n }),
-                    (0, i.jsx)(_.E, {
-                        color: "none",
-                        variant: "sm" === n ? "text-sm/normal" : "text-md/normal",
-                        children: t,
-                    }),
+                    null != l && (0, i.jsx)(h, { graphic: l, size: n }),
+                    (0, i.jsx)(_.E, { color: "none", variant: p[n], children: t }),
                     r &&
                         (0, i.jsx)(d.$, {
                             slot: "remove",
-                            children: (0, i.jsx)(u.P, {
-                                size: "sm" === n ? "xs" : "sm",
-                                color: c.A.colors.ICON_DEFAULT,
-                            }),
+                            children: (0, i.jsx)(u.P, { size: T[n], color: c.A.colors.ICON_DEFAULT }),
                         }),
                 ],
             });
         },
     });
 }
-function p(e) {
+function m(e) {
     let {
             listRef: t,
             label: n,
@@ -77,9 +72,9 @@ function p(e) {
             variant: E,
             items: A,
             onRemove: h,
-            children: p,
-            selectedKeys: T,
-            onSelectionChange: g,
+            children: I,
+            selectedKeys: p,
+            onSelectionChange: T,
             disallowEmptySelection: m,
         } = e,
         S = r.useContext(s._),
@@ -87,26 +82,30 @@ function p(e) {
     return (0, i.jsxs)(a.CR, {
         "aria-label": n,
         id: S?.controlId,
-        "data-mana-component": "filter" === E ? "filter-tag-group" : "tag-group",
+        "data-mana-component": "tag-group",
         "aria-describedby": S?.describedById,
         "data-layout": u,
         "data-size": _,
         "data-variant": E,
-        className: I.WD,
+        className: f.WD,
         selectionMode: d,
         selectionBehavior: c,
-        selectedKeys: T,
-        onSelectionChange: g,
+        selectedKeys: p,
+        onSelectionChange: T,
         disabledKeys: N,
         disallowEmptySelection: m,
         onRemove: h,
         children: [
             (0, i.jsx)(a.LY, {
                 ref: t,
-                className: I.Tw,
-                children: A.map((e) => (0, r.createElement)(f, { ...e, key: e.id, size: _, variant: E })),
+                className: f.Tw,
+                children: A.map((e) => (0, r.createElement)(g, { ...e, key: e.id, size: _, variant: E })),
             }),
-            p,
+            I,
         ],
     });
+}
+function S(e) {
+    let { mode: t, variant: n = "default", layout: r = "default", size: a = "inline" === r ? "sm" : "md", ...s } = e;
+    return (0, i.jsx)(m, { ...s, layout: r, size: a, variant: n });
 }

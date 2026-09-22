@@ -3877,7 +3877,7 @@ function iX(e) {
     return (0, a.jsx)("div", {
         className: c()(iY._, { [iY.L]: l }),
         children: Array.from(t).map((e) =>
-            (0, a.jsx)(iZ.A, { tag: e, onRemove: i, size: null == i ? iZ.A.Sizes.SMALL : iZ.A.Sizes.MEDIUM }, e.id),
+            (0, a.jsx)(iZ.Ay, { tag: e, onRemove: i, size: null == i ? iZ.Ay.Sizes.SMALL : iZ.Ay.Sizes.MEDIUM }, e.id),
         ),
     });
 }
@@ -5519,7 +5519,7 @@ function ry(e) {
                                     (0, a.jsx)("div", {
                                         className: r_.GA,
                                         children: s.map((e) =>
-                                            (0, a.jsx)(iZ.A, { tag: e, size: iZ.A.Sizes.SMALL }, e.id),
+                                            (0, a.jsx)(iZ.Ay, { tag: e, size: iZ.Ay.Sizes.SMALL }, e.id),
                                         ),
                                     }),
                                 t?.activity != null &&

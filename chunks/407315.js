@@ -166,13 +166,9 @@ function N(e, t) {
                                     if (null != d && d.length === n) return d;
                                     if (M.has(o)) return null;
                                     for (let t of e.split("\n")) if (t.length > 1e3) return null;
-                                    let m = e.endsWith("\n")
-                                        ? e
-                                        : `${e}
-`;
                                     try {
-                                        let e = a.highlightToHtml(m);
-                                        if (((i = e.html), null != l)) for (let t of e.missingInjections) l(t);
+                                        let t = a.highlightToHtml(e);
+                                        if (((i = t.html), null != l)) for (let e of t.missingInjections) l(e);
                                     } catch (e) {
                                         return (
                                             M.set(o, !0),
@@ -183,8 +179,10 @@ function N(e, t) {
                                             null
                                         );
                                     }
-                                    let f = i.endsWith("\n") ? i.slice(0, -1).split("\n") : i.split("\n");
-                                    if (f.length !== n) return null;
+                                    let m = i.split("\n"),
+                                        f = e.match(/\n*$/)?.[0].length ?? 0;
+                                    for (let e = 0; e < f; e++) m.push("");
+                                    if (m.length !== n) return null;
                                     let p = [];
                                     for (let e = 0; e < n; e++)
                                         p.push(
@@ -216,7 +214,7 @@ function N(e, t) {
                                                     r > 0 && a.length > 0 && n.push({ types: a, start: i, end: i + r }),
                                                     n
                                                 );
-                                            })(f[e]),
+                                            })(m[e]),
                                         );
                                     return (O.set(o, p), p);
                                 })(e, t, n.length, l);

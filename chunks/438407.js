@@ -673,8 +673,8 @@ function p(e) {
                                         );
                                     },
                                     oldColorHook: (e, t) => U(t, u.oldValue),
-                                    oldTagHook: (e, t) => (0, l.jsx)(T.A, { tag: s, size: T.A.Sizes.SMALL }, t),
-                                    newTagHook: (e, t) => (0, l.jsx)(T.A, { tag: E, size: T.A.Sizes.SMALL }, t),
+                                    oldTagHook: (e, t) => (0, l.jsx)(T.Ay, { tag: s, size: T.Ay.Sizes.SMALL }, t),
+                                    newTagHook: (e, t) => (0, l.jsx)(T.Ay, { tag: E, size: T.Ay.Sizes.SMALL }, t),
                                     oldEmojiHook: (e, t) => (0, l.jsx)(A.A, { emojiId: s }, t),
                                     newEmojiHook: (e, t) => (0, l.jsx)(A.A, { emojiId: E }, t),
                                     applicationHook: (e, t) =>
