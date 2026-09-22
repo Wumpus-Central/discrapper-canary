@@ -1013,20 +1013,6 @@
     }
   },
   {
-    "name": "2026-02-go-live-video-preset-resolution",
-    "kind": "user",
-    "defaultConfig": null,
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "videoPresetResolutionMax": null
-      }
-    }
-  },
-  {
     "name": "2026-02-gsh-game-detection-upsell",
     "kind": "user",
     "defaultConfig": {

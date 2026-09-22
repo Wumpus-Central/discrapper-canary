@@ -1639,7 +1639,7 @@ let tu = (e) => {
 };
 var tf = s(248174),
     th = s(375742),
-    tx = s(837859);
+    tx = s(476697);
 function tp(e) {
     let t = (0, u.bG)([O.default], () => O.default.getCurrentUser()),
         s = (0, u.bG)([tr.Ay, $.A], () => $.A.getChannel(tr.Ay.getVoiceChannelId())),

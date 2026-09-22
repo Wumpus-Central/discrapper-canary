@@ -13,14 +13,14 @@ var i = n(941426),
     A = n(927813),
     h = n(258585),
     I = n(652896),
-    f = n(837859),
+    f = n(476697),
     p = n(753070);
 let T = new i.Vy("AutoQualityStreamingManager"),
-    g = 0;
-class m extends s.A {
+    m = 0;
+class g extends s.A {
     actions = { MEDIA_ENGINE_CONNECTION_STATS: this.handleStats, POST_CONNECTION_OPEN: this.handlePostConnectionOpen };
     handleStats() {
-        if ((g += 1) % 10 != 0) return;
+        if ((m += 1) % 10 != 0) return;
         let e = d.A.getCurrentUserActiveStream();
         if (null == e) return;
         let t = _.A.getRTCConnection((0, I._z)(e)),
@@ -33,10 +33,10 @@ class m extends s.A {
         let s = l.A.getAccumulatedPerformanceStats(t.getMediaEngineConnectionId(), e.ownerId, "long"),
             h = (t.analyticsContext.getDuration() ?? 30) >= 30 * A.A.Millis.SECOND ? 30 : 15;
         if (null == s || s.numDatapoints < h) return;
-        let m = E.default.getCurrentUser(),
+        let g = E.default.getCurrentUser(),
             S = c.A.getGuild(e.guildId),
-            [N, C] = (0, f.Ay)(p.jQ.PRESET_DOCUMENTS, m, S?.premiumTier) ?? [p.on.RESOLUTION_SOURCE, p.kn.FPS_5],
-            [O, R] = (0, f.Ay)(p.jQ.PRESET_VIDEO, m, S?.premiumTier, e.guildId) ?? [p.on.RESOLUTION_720, p.kn.FPS_30],
+            [N, C] = (0, f.Ay)(p.jQ.PRESET_DOCUMENTS, g, S?.premiumTier) ?? [p.on.RESOLUTION_SOURCE, p.kn.FPS_5],
+            [O, R] = (0, f.Ay)(p.jQ.PRESET_VIDEO, g, S?.premiumTier, e.guildId) ?? [p.on.RESOLUTION_720, p.kn.FPS_30],
             L = null;
         if (
             (s.entropy < 10 && (i.resolution !== N || i.fps !== C)
@@ -71,4 +71,4 @@ class m extends s.A {
         (0, h.pn)();
     }
 }
-let S = new m();
+let S = new g();
