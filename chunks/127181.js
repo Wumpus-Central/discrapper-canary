@@ -2,6 +2,12 @@ n.d(t, { B: () => s, MZ: () => o, TH: () => l, tn: () => i });
 let a = [
     {
         date: "2026-09-22",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "The model lineup moved up: Claude Opus 5.5 replaces Opus 5 on the Balanced tier of Claude projects, and GPT-6 Sol and GPT-6 Luna replace the GPT-5.6 family in the picker, taking the Balanced and Speedrun tiers on GPT projects.",
+    },
+    {
+        date: "2026-09-22",
         platforms: ["desktop"],
         summary: "The template and starter cards light up under your cursor.",
     },

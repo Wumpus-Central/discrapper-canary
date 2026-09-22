@@ -71,13 +71,12 @@ function T(e) {
 }
 let g = [
         { id: "claude-fable-5-1", label: "Claude Fable 5.1", provider: "anthropic" },
-        { id: "claude-opus-5", label: "Claude Opus 5", provider: "anthropic" },
+        { id: "claude-opus-5-5", label: "Claude Opus 5.5", provider: "anthropic" },
         { id: "claude-sonnet-5", label: "Claude Sonnet 5", provider: "anthropic" },
         { id: "claude-haiku-4-5", label: "Claude Haiku 4.5", provider: "anthropic" },
-        { id: "gpt-5.6-sol", label: "GPT-5.6 Sol", provider: "openai", supports_fast: !0 },
-        { id: "gpt-5.6-terra", label: "GPT-5.6 Terra", provider: "openai", supports_fast: !0 },
-        { id: "gpt-5.6-luna", label: "GPT-5.6 Luna", provider: "openai", supports_fast: !0 },
         { id: "gpt-6-astra", label: "GPT-6 Astra", provider: "openai", supports_fast: !0 },
+        { id: "gpt-6-sol", label: "GPT-6 Sol", provider: "openai", supports_fast: !0 },
+        { id: "gpt-6-luna", label: "GPT-6 Luna", provider: "openai", supports_fast: !0 },
         { id: "xai/grok-4.7", label: "Grok 4.7", provider: "xai" },
     ],
     m = { main: g, subagent: g, thinking: ["low", "medium", "high", "xhigh", "max"] },
