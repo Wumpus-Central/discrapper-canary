@@ -18,7 +18,6 @@ function r(e) {
     Gu: () => tP,
     HB: () => e6,
     HS: () => ep,
-    Hq: () => tC,
     Hz: () => eS,
     Jp: () => J,
     LC: () => tS,
@@ -64,7 +63,9 @@ function r(e) {
     _i: () => q,
     _m: () => eq,
     aI: () => eP,
+    bI: () => tN,
     bL: () => tD,
+    c$: () => tC,
     c6: () => eb,
     cV: () => Y,
     ce: () => tT,
@@ -97,9 +98,8 @@ function r(e) {
     p8: () => e3,
     pD: () => eY,
     qN: () => tF,
-    qg: () => tN,
     qv: () => tM,
-    rR: () => tO,
+    rO: () => tO,
     rf: () => g,
     rk: () => tt,
     rl: () => tR,
@@ -107,7 +107,7 @@ function r(e) {
     sQ: () => eo,
     sW: () => tx,
     ss: () => ta,
-    t7: () => O,
+    t7: () => S,
     tZ: () => ez,
     uo: () => eO,
     uw: () => e9,
@@ -126,7 +126,7 @@ function r(e) {
     x0: () => tc,
     x6: () => ee,
     xV: () => tA,
-    xy: () => S,
+    xy: () => O,
     yc: () => tB,
     yq: () => ej,
     zE: () => ty,
@@ -242,7 +242,16 @@ function m(e) {
     let t = i.__wbindgen_export_4.get(e);
     return (i.__externref_table_dealloc(e), t);
 }
-function S(e) {
+function S(e, t) {
+    return i.rustMultiply(e, t);
+}
+function N() {
+    return i.initLibdiscore();
+}
+function C() {
+    i.crash();
+}
+function O(e) {
     let t, n;
     try {
         let r = i.generateLaunchSignature(e);
@@ -251,29 +260,20 @@ function S(e) {
         i.__wbindgen_free(t, n, 1);
     }
 }
-function N() {
-    return i.initLibdiscore();
-}
-function C() {
-    i.crash();
-}
-function O(e, t) {
-    return i.rustMultiply(e, t);
-}
 function R(e, t) {
-    i._dyn_core__ops__function__FnMut_____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h075cb6f1f85a8e52(
+    i._dyn_core_f73ed7932dd6acc___ops__function__FnMut_____Output______as_wasm_bindgen_9353bb4e5bfa4c18___closure__WasmClosure___describe__invoke______(
         e,
         t,
     );
 }
 function L(e, t) {
-    i._dyn_core__ops__function__FnMut_____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__hd39d17064ed9c408(
+    i._dyn_core_f73ed7932dd6acc___ops__function__FnMut_____Output______as_wasm_bindgen_9353bb4e5bfa4c18___closure__WasmClosure___describe__invoke______10(
         e,
         t,
     );
 }
 function y(e, t, n) {
-    i.closure738_externref_shim(e, t, n);
+    i.closure710_externref_shim(e, t, n);
 }
 let D = ["bytes"],
     v = ["omit", "same-origin", "include"],
@@ -660,7 +660,7 @@ function eb(e, t) {
             n.a = 0;
             try {
                 var a;
-                return ((a = n.b), void i.closure777_externref_shim(r, a, e, t));
+                return ((a = n.b), void i.closure749_externref_shim(r, a, e, t));
             } finally {
                 n.a = r;
             }
@@ -864,13 +864,13 @@ function tS(e) {
     return 1 == t.cnt-- && ((t.a = 0), !0);
 }
 function tN(e, t, n) {
-    return T(e, t, 555, R);
+    return T(e, t, 530, R);
 }
 function tC(e, t, n) {
-    return T(e, t, 595, L);
+    return T(e, t, 551, L);
 }
 function tO(e, t, n) {
-    return T(e, t, 739, y);
+    return T(e, t, 711, y);
 }
 function tR(e, t) {
     let n = c(
