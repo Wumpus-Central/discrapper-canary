@@ -1,0 +1,17 @@
+_.exports = {
+    pI: "podium_c6c010",
+    fs: "pillarColumn_c6c010",
+    HC: "columnFirst_c6c010",
+    th: "columnSecond_c6c010",
+    Ou: "columnThird_c6c010",
+    R3: "avatarWrapper_c6c010",
+    dR: "medalBadge_c6c010",
+    m$: "medalFirst_c6c010",
+    wd: "medalSecond_c6c010",
+    p0: "medalThird_c6c010",
+    DX: "pillar_c6c010",
+    P5: "pillarFirst_c6c010",
+    Vk: "pillarSecond_c6c010",
+    el: "pillarThird_c6c010",
+    IY: "pillarName_c6c010",
+};

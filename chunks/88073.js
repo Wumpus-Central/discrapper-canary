@@ -4,8 +4,8 @@ var s = a(477900),
     n = a(503698),
     o = a.n(n),
     r = a(834730),
-    d = a(872188),
-    i = a(450284);
+    i = a(872188),
+    d = a(450284);
 let c = {
     title: "Server Hub Publishing",
     stories: [
@@ -29,7 +29,7 @@ let c = {
                     }
                 }, [a]);
                 return (0, s.jsx)("div", {
-                    className: o()(i.frame, i[t]),
+                    className: o()(d.frame, d[t]),
                     children: n
                         ? (0, s.jsx)(r.E, {
                               variant: "text-sm/normal",
@@ -37,7 +37,7 @@ let c = {
                               children:
                                   "Published \u2014 the real notice unmounts here, and the tab appears for members.",
                           })
-                        : (0, s.jsx)(d.A, { onPublish: p }),
+                        : (0, s.jsx)(i.A, { onPublish: p }),
                 });
             },
             controls: {
@@ -81,8 +81,8 @@ function A(e, t, a, s) {
         locked: !1,
     };
 }
-var S = a(81253);
-let _ = [
+var _ = a(81253);
+let S = [
         A("left-2", m.a.LEADERBOARD, 0, 1, { heading: "Top chatters this week" }),
         A("right-1", m.a.LEADERBOARD, 1, 0, { heading: "Top boosters" }),
         A("left-1", m.a.IMAGE_TEXT, 0, 0, {
@@ -93,7 +93,7 @@ let _ = [
         }),
         A("right-2", m.a.IMAGE_TEXT, 1, 1, { title: "Events", body: "Game night every Friday." }),
     ],
-    b = _.filter((e) => {
+    b = S.filter((e) => {
         let { requires_hydration: t } = e;
         return t;
     }).map((e) => {
@@ -179,8 +179,8 @@ let _ = [
                             }, [t, n]),
                             t);
                     return (0, s.jsx)("div", {
-                        className: o()(S.frame, S[a]),
-                        children: (0, s.jsx)(g.A, { canEdit: !0, guildId: r, widgets: _ }),
+                        className: o()(_.frame, _[a]),
+                        children: (0, s.jsx)(g.A, { canEdit: !0, guildId: r, widgets: S }),
                     });
                 },
                 controls: {
@@ -211,6 +211,7 @@ let _ = [
             },
         ],
     };
+a(321073);
 var f = a(17928),
     E = a(994500),
     x = a(711014),
@@ -255,10 +256,11 @@ let N = {
     id: "guild-space-gaming-leaderboard",
     component: function (e) {
         let t,
-            { state: a, stat: n, currentUserPlacement: o } = e,
+            a,
+            { state: n, stat: o, currentUserPlacement: i } = e,
             d = (0, f.bG)([R.default], () => R.default.getCurrentUser()?.id),
-            i = (0, f.bG)([x.Ay], () => x.Ay.getFlattenedGuildIds()[0]),
-            c =
+            c = (0, f.bG)([x.Ay], () => x.Ay.getFlattenedGuildIds()[0]),
+            u =
                 ((t = (0, f.yK)([E.A], () => E.A.getFriendIDs())),
                 l.useMemo(
                     () =>
@@ -275,13 +277,13 @@ let N = {
                             }),
                     [t],
                 ));
-        if (null == i || 0 === c.length)
+        if (null == c || 0 === u.length)
             return (0, s.jsx)(r.E, {
                 variant: "text-sm/normal",
                 color: "text-muted",
                 children: "Waiting for the client to load a guild and your friends list\u2026",
             });
-        let u = (function (e) {
+        let m = (function (e) {
                 let {
                         memberIds: t,
                         gameIds: a = T,
@@ -320,31 +322,33 @@ let N = {
                         };
                     }),
                 };
-            })({ memberIds: c, stat: n, entryCount: "empty" === a ? 2 : 20, ended: "ended" === a }),
-            m = "on-podium" === o ? 2 : 12,
-            g = {
-                ...u,
-                entries:
-                    "absent" !== o && null != d
-                        ? u.entries.map((e) => (e.rank === m ? { ...e, user_id: d } : e))
-                        : u.entries,
-            },
-            h = (0, s.jsx)(I.P, {
-                guildId: i,
-                widget: O,
-                guildSpaceMode: "view",
-                hydration:
-                    "loading" === a
-                        ? { status: "loading" }
-                        : "error" === a
-                          ? { status: "error" }
-                          : { status: "success", data: g },
-            });
+            })({ memberIds: u, stat: o, entryCount: "empty" === n ? 2 : 20, ended: "ended" === n }),
+            g = "on-podium" === i ? 2 : 12,
+            h = "absent" !== i && "outside-list" !== i && null != d,
+            A = { ...m, entries: h ? m.entries.map((e) => (e.rank === g ? { ...e, user_id: d } : e)) : m.entries };
+        ("outside-list" === i &&
+            null != d &&
+            A.entries.push({
+                user_id: d,
+                name: "you",
+                value: m.entries[m.entries.length - 1].value,
+                rank: 25,
+                application_ids: m.entries[m.entries.length - 1].application_ids,
+                application_count: m.entries[m.entries.length - 1].application_count,
+                time_played_seconds: m.entries[m.entries.length - 1].time_played_seconds,
+            }),
+            (a =
+                "loading" === n
+                    ? { status: "loading" }
+                    : "error" === n
+                      ? { status: "error" }
+                      : { status: "success", data: A }));
+        let _ = (0, s.jsx)(I.P, { guildId: c, widget: O, guildSpaceMode: "view", hydration: a });
         return (0, s.jsxs)("div", {
             className: L.Zp,
             children: [
-                (0, s.jsx)(U, { label: "Narrow column (380px)", className: L.sc, children: h }),
-                (0, s.jsx)(U, { label: "Wide column (685px)", className: L.U, children: h }),
+                (0, s.jsx)(U, { label: "Narrow column (380px)", className: L.sc, children: _ }),
+                (0, s.jsx)(U, { label: "Wide column (685px)", className: L.U, children: _ }),
             ],
         });
     },
@@ -378,6 +382,7 @@ let N = {
             options: [
                 { label: "Outside the top three (rank 12)", value: "off-podium" },
                 { label: "Inside the top three (rank 2)", value: "on-podium" },
+                { label: "Outside the list (rank 25)", value: "outside-list" },
                 { label: "Not in the standings", value: "absent" },
             ],
         },
@@ -392,10 +397,10 @@ function H(e) {
 }
 function P(e) {
     let { mode: t, hydration: a, type: n, initialConfig: o, successData: r } = e,
-        [d, i] = l.useState(o),
+        [i, d] = l.useState(o),
         c = (0, s.jsx)(I.P, {
             guildId: "widget-slot-story-guild",
-            widget: { id: "1", type: n, config: d },
+            widget: { id: "1", type: n, config: i },
             guildSpaceMode: t,
             hydration: (function (e, t) {
                 switch (e) {
@@ -408,7 +413,7 @@ function P(e) {
                 }
             })(a, r),
             onRemove: () => {},
-            onCommitConfig: i,
+            onCommitConfig: d,
         });
     return (0, s.jsxs)("div", {
         className: L.Zp,

@@ -1,19 +1,21 @@
-(n.d(t, { Eq: () => d }), n(477900));
+(n.d(t, { Eq: () => u, k6: () => _ }), n(477900));
 var i = n(582128),
     r = n(435558),
     a = n.n(r);
 n(52133);
 var s = n(361610),
-    l = n(38405);
-let o = !1;
-function d(e, t) {
+    l = n(860071),
+    o = n(287809),
+    d = n(38405);
+let c = !1;
+function u(e, t) {
     i.useEffect(
         () => (
             a().forEach(e, (e, n) => {
-                (!o &&
+                (!c &&
                     e.length > 50 &&
-                    ((o = !0),
-                    l.A.captureMessage("SubscribeGuildMembers called with more than 50 userIds.", {
+                    ((c = !0),
+                    d.A.captureMessage("SubscribeGuildMembers called with more than 50 userIds.", {
                         extra: { count: e.length, guildId: n, reason: t },
                     })),
                     (0, s.un)(n, e));
@@ -24,4 +26,13 @@ function d(e, t) {
         ),
         [e, t],
     );
+}
+function _(e, t) {
+    let n = i.useMemo(() => (0 === t.length ? {} : { [e]: t }), [e, t]);
+    (i.useEffect(() => {
+        t.forEach((t) => {
+            null == o.default.getUser(t) && l.A.requestMember(e, t);
+        });
+    }, [e, t]),
+        u(n, "useEnsureHydratedGuildUsers"));
 }
