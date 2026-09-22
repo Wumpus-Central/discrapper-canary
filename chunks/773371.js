@@ -259,6 +259,11 @@ let J = new Q(),
         "UPLOAD_ATTACHMENT_ADD_FILES",
         "UPLOAD_ATTACHMENT_SET_FILE",
         "UPLOAD_ATTACHMENT_SET_UPLOADS",
+        "CLIPS_SESSION_START",
+        "CLIPS_SESSION_STOP",
+        "CLIPS_SAVE_CLIP",
+        "CLIPS_PROMOTE_CLIP_CANDIDATE",
+        "CLIPS_MONTAGE_RENDER_DONE",
     ]),
     et = new Set(),
     en = new I.A("OverlayBridgeStore"),
@@ -757,7 +762,7 @@ let ey = new eL(
                       let { port: t } = e;
                       q = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
                       let n = new URLSearchParams();
-                      (n.append("build_id", "78aadd85c98f13d5fb60a2670a9acf7f3604477a"),
+                      (n.append("build_id", "81879dc4f37f945ae1b332ae643e53c87c673275"),
                           n.append("rpc", String(t)),
                           n.append("rpc_auth_token", q),
                           (i = `${location.protocol}//${location.host}/overlay?${n.toString()}`));
