@@ -1,3 +1,3 @@
-s.exports = JSON.parse(
-    '{"Z61nkt":["Z61nkt"],"2+f8w1":["2+f8w1"],"AA3xYb":["AA3xYb"],"RFLH++":["RFLH++"],"+c5sxg":["+c5sxg"]}',
+e.exports = JSON.parse(
+    '{"Z61nkt":["Manu\xe1lis ellen\u0151rz\xe9s k\xe9r\xe9se"],"2+f8w1":["Manu\xe1lis ellen\u0151rz\xe9s\xfcnk alapj\xe1n m\xe1r meg\xe1llap\xedtottuk, hogy a tizen\xe9ves korcsoportba (13\u201317) tartozol, \xedgy a feln\u0151tteknek sz\xf3l\xf3 tartalmak \xe9s be\xe1ll\xedt\xe1sok nem \xe9rhet\u0151k el sz\xe1modra. Lehets\xe9ges, hogy k\xe9s\u0151bb meg tudod er\u0151s\xedteni a korcsoportodat."],"AA3xYb":["A korcsoportod meger\u0151s\xedt\xe9se jelenleg nem \xe9rhet\u0151 el"],"RFLH++":["M\xe1r megpr\xf3b\xe1ltad meger\u0151s\xedteni a korcsoportodat. Ha jelenleg nem l\xe1tsz erre m\xf3dot, lehets\xe9ges, hogy k\xe9s\u0151bb \xfajra el\xe9rhet\u0151v\xe9 v\xe1lik, vagy manu\xe1lis ellen\u0151rz\xe9st k\xe9rhetsz."],"+c5sxg":["V\xe1rj, miel\u0151tt \xfajrapr\xf3b\xe1lkozn\xe1l"]}',
 );

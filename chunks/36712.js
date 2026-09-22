@@ -1,3 +1,3 @@
-s.exports = JSON.parse(
-    '{"Z61nkt":["Z61nkt"],"2+f8w1":["2+f8w1"],"AA3xYb":["AA3xYb"],"RFLH++":["RFLH++"],"+c5sxg":["+c5sxg"]}',
+o.exports = JSON.parse(
+    '{"Z61nkt":["\u017D\xe1dost o\xa0ru\u010Dn\xed kontrolu"],"2+f8w1":["Na z\xe1klad\u011B ru\u010Dn\xed kontroly jsme ji\u017E zjistili, \u017Ee pat\u0159\xed\u0161 do v\u011Bkov\xe9 skupiny teenager\u016F (13\u201317\xa0let), tak\u017Ee obsah a\xa0nastaven\xed ur\u010Den\xe9 pro dosp\u011Bl\xe9 nem\xe1\u0161 k\xa0dispozici. Svou v\u011Bkovou skupinu m\u016F\u017Ee\u0161 znovu potvrdit pozd\u011Bji."],"AA3xYb":["Potvrzen\xed tv\xe9 v\u011Bkov\xe9 skupiny te\u010F nen\xed k\xa0dispozici"],"RFLH++":["Pokus o\xa0potvrzen\xed tv\xe9 v\u011Bkov\xe9 skupiny u\u017E m\xe1\u0161 za sebou. Pokud te\u010F \u017E\xe1dnou metodu nevid\xed\u0161, m\u016F\u017Ee b\xfdt znovu k\xa0dispozici pozd\u011Bji nebo m\u016F\u017Ee\u0161 po\u017E\xe1dat o\xa0ru\u010Dn\xed kontrolu."],"+c5sxg":["Po\u010Dkej, ne\u017E to zkus\xed\u0161 znovu"]}',
 );

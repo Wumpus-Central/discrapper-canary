@@ -1,3 +1,3 @@
-s.exports = JSON.parse(
-    '{"Z61nkt":["Z61nkt"],"2+f8w1":["2+f8w1"],"AA3xYb":["AA3xYb"],"RFLH++":["RFLH++"],"+c5sxg":["+c5sxg"]}',
+a.exports = JSON.parse(
+    '{"Z61nkt":["Pateikti pra\u0161ym\u0105 d\u0117l neautomatin\u0117s per\u017Ei\u016Bros"],"2+f8w1":["Atlik\u0119 neautomatin\u0119 per\u017Ei\u016Br\u0105 jau nustat\u0117me, kad priklausai paaugli\u0173 am\u017Eiaus grupei (13\u201317 m.), tod\u0117l tau nepasiekiamas suaugusiesiems skirtas turinys ir nustatymai. Galimai savo am\u017Eiaus grup\u0119 gal\u0117si patvirtinti v\u0117liau."],"AA3xYb":["Galimyb\u0117 patvirtinti savo am\u017Eiaus grup\u0119 \u0161iuo metu nepasiekiama"],"RFLH++":["Tu jau bandei patvirtinti savo am\u017Eiaus grup\u0119 Jei kurio nors b\u016Bdo nematai, jis gali b\u016Bti i\u0161 naujo pasiekiamas v\u0117liau. Arba gali papra\u0161yti neautomatin\u0117s per\u017Ei\u016Bros."],"+c5sxg":["Palauk prie\u0161 bandydamas (-a) dar kart\u0105"]}',
 );

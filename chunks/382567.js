@@ -27,15 +27,15 @@ var j = n(503698),
     C = n(477155),
     T = n(43990),
     P = n(331322),
-    w = n(668953),
-    R = n(972213),
-    k = n(97469),
-    M = n(963935),
+    R = n(668953),
+    w = n(972213),
+    M = n(97469),
+    k = n(963935),
     L = n(894858),
     _ = n(272053),
     D = n(377980),
-    B = n(939249),
-    O = n(215566),
+    O = n(939249),
+    B = n(215566),
     K = n(375708),
     G = n(764318);
 function F(e) {
@@ -54,7 +54,7 @@ function F(e) {
                     className: G.b,
                     children: s,
                 }),
-                n && null != r && (0, i.jsx)(O.A, { badge: r }),
+                n && null != r && (0, i.jsx)(B.A, { badge: r }),
                 !n &&
                     (0, i.jsx)(a.E, {
                         variant: "text-md/normal",
@@ -69,7 +69,7 @@ function F(e) {
         className: G.QF,
         children: n
             ? l
-            : (0, i.jsx)(B.D, {
+            : (0, i.jsx)(O.D, {
                   onClick: function () {
                       _.A.navigate(t.key);
                   },
@@ -98,13 +98,13 @@ function H(e) {
 }
 function z(e) {
     let { setting: t, onClose: n } = e,
-        s = (0, k.NC)(),
+        s = (0, M.NC)(),
         r =
             null != t
                 ? (function (e) {
                       let t = [e];
-                      for (let n = e.parent; null != n && n.type !== M.Z6.SIDEBAR_ITEM; n = n.parent)
-                          n.type === M.Z6.PANEL && t.unshift(n);
+                      for (let n = e.parent; null != n && n.type !== k.Z6.SIDEBAR_ITEM; n = n.parent)
+                          n.type === k.Z6.PANEL && t.unshift(n);
                       return t;
                   })(t)
                 : [],
@@ -124,7 +124,7 @@ function z(e) {
                         children: [
                             a &&
                                 (0, i.jsx)(H, {
-                                    icon: w.f,
+                                    icon: R.f,
                                     onClick: () => L.A.setState({ showNavigationMobile: !0 }),
                                     label: K.intl.string(K.t["13/7kX"]),
                                 }),
@@ -137,7 +137,7 @@ function z(e) {
                             null != t && (0, i.jsx)(U, { path: r }),
                         ],
                     }),
-                    (0, i.jsx)(H, { icon: R.XLargeIcon, onClick: n, label: K.intl.string(K.t.cpT0Cq) }),
+                    (0, i.jsx)(H, { icon: w.XLargeIcon, onClick: n, label: K.intl.string(K.t.cpT0Cq) }),
                 ],
             }),
     });
@@ -154,8 +154,8 @@ let V = s.memo(function (e) {
     });
 });
 n(321073);
-var X = n(837381),
-    Y = n(741918),
+var Y = n(837381),
+    X = n(741918),
     Z = n(689175),
     $ = n(928039),
     q = n(131607),
@@ -199,7 +199,7 @@ function eg(e) {
                         ? null
                         : (0, i.jsx)(er, { badge: l })
                     : null != d
-                      ? (0, i.jsx)(O.A, { badge: d })
+                      ? (0, i.jsx)(B.A, { badge: d })
                       : void 0,
             [r, l, d],
         ),
@@ -207,13 +207,13 @@ function eg(e) {
         g = c?.() ?? h;
     return (
         ea()(null != g, "[SettingsSubnavigationCategory] Category must have a title"),
-        (0, i.jsx)(X.tG, {
+        (0, i.jsx)(Y.tG, {
             id: o,
             children: (e) =>
                 (0, i.jsx)("div", {
                     role: "listitem",
                     children: (0, i.jsxs)(
-                        B.D,
+                        O.D,
                         {
                             onClick: n,
                             className: I()(eh.AS, { [eh.vu]: r }),
@@ -473,7 +473,7 @@ function ev(e) {
                         ? null
                         : (0, i.jsx)(er, { badge: l })
                     : null != v
-                      ? (0, i.jsx)(O.A, { badge: v })
+                      ? (0, i.jsx)(B.A, { badge: v })
                       : void 0,
             [n, l, v],
         );
@@ -481,7 +481,7 @@ function ev(e) {
         "data-settings-sidebar-item": c,
         className: ep.DB,
         children: [
-            (0, i.jsxs)(B.D, {
+            (0, i.jsxs)(O.D, {
                 ...o,
                 role: "link",
                 "aria-current": n ? "page" : void 0,
@@ -516,8 +516,8 @@ function eb(e) {
             return e?.parentSidebarItemKey === t.key;
         }, [c, t.key, o]),
         m = s.useMemo(() => {
-            if (null == a || !(0, M.zS)(a.layout)) return null;
-            let e = a.layout.filter(M.bJ);
+            if (null == a || !(0, k.zS)(a.layout)) return null;
+            let e = a.layout.filter(k.bJ);
             return e.length > 1 ? e : null;
         }, [a]),
         h =
@@ -552,7 +552,7 @@ function eb(e) {
               dismissibleBadge: f,
               children: x,
           })
-        : (0, i.jsx)(X.tG, {
+        : (0, i.jsx)(Y.tG, {
               id: a?.key ?? t.key,
               children: (e) =>
                   (0, i.jsx)(ev, {
@@ -581,7 +581,7 @@ function eS(e) {
                 (n = new Map()),
                 (i = new Map()),
                 !(function e(t, n) {
-                    if ((n(t), (0, M.nW)(t))) for (let i of t.layout) e(i, n);
+                    if ((n(t), (0, k.nW)(t))) for (let i of t.layout) e(i, n);
                 })(d, (s) => {
                     if (!("getDismissibleBadges" in s)) return;
                     let r = s.getDismissibleBadges?.();
@@ -591,7 +591,7 @@ function eS(e) {
                     let a = null;
                     if (null != l.parentCategoryKey) {
                         let e = m.get(l.parentCategoryKey);
-                        e?.type === M.Z6.CATEGORY && (0, M.bJ)(e) && (a = l.parentCategoryKey);
+                        e?.type === k.Z6.CATEGORY && (0, k.bJ)(e) && (a = l.parentCategoryKey);
                     }
                     let c = { sidebarItemKey: l.parentSidebarItemKey, categoryKey: a };
                     r.forEach((s) =>
@@ -628,8 +628,8 @@ function eS(e) {
                 [e, t]
             );
         }, [n.layout]),
-        p = (0, k.NC)(),
-        A = (0, $.A)("settings-sidebar", u, { orientation: Y.Gl.VERTICAL, defaultFocused: t }),
+        p = (0, M.NC)(),
+        A = (0, $.A)("settings-sidebar", u, { orientation: X.Gl.VERTICAL, defaultFocused: t }),
         [S, j] = s.useState(!1),
         C = s.useCallback(() => {
             let e = u.current?.getScrollerNode();
@@ -659,7 +659,7 @@ function eS(e) {
                                         (0, i.jsx)("div", {
                                             className: ey.hg,
                                             children: (0, i.jsx)(E.K, {
-                                                icon: R.XLargeIcon,
+                                                icon: w.XLargeIcon,
                                                 onClick: r,
                                                 variant: "icon-only",
                                                 size: "sm",
@@ -682,9 +682,9 @@ function eS(e) {
                             (0, i.jsx)("nav", {
                                 className: ey.C$,
                                 "aria-label": K.intl.string(K.t.MqTGqz),
-                                children: (0, i.jsx)(X.hD, {
+                                children: (0, i.jsx)(Y.hD, {
                                     navigator: A,
-                                    children: (0, i.jsx)(X.PR, {
+                                    children: (0, i.jsx)(Y.PR, {
                                         children: (e) => {
                                             let { ref: t, ...n } = e;
                                             return (0, i.jsxs)(Z.Ch, {
@@ -809,13 +809,13 @@ function eT(e) {
     let C = s.useMemo(() => ({ visibleDirectory: x, accessibleDirectory: f }), [x, f]),
         T = null != h ? x.get(h) : void 0,
         P = N ? void 0 : (T ?? A),
-        w = P?.useTitle() ?? K.intl.string(K.t["3D5yo/"]);
+        R = P?.useTitle() ?? K.intl.string(K.t["3D5yo/"]);
     return (0, i.jsx)(Q.x.Provider, {
         value: C,
         children: (0, i.jsxs)("div", {
             className: eC.k,
             children: [
-                (0, i.jsx)(v.A, { children: (0, i.jsx)(b.D, { variant: "text-sm/bold", children: w }) }),
+                (0, i.jsx)(v.A, { children: (0, i.jsx)(b.D, { variant: "text-sm/bold", children: R }) }),
                 (0, i.jsxs)(y.F, {
                     children: [
                         (0, i.jsx)(eS, {
@@ -836,8 +836,8 @@ function eT(e) {
 function eP(e) {
     return (0, i.jsx)(eN.ms, { children: (0, i.jsx)(eT, { ...e }) });
 }
-var ew = n(652215);
-function eR(e) {
+var eR = n(652215);
+function ew(e) {
     let {
             partialRoot: t,
             target: n,
@@ -864,9 +864,9 @@ function eR(e) {
                     (b(!0), S(t ?? 1.4), clearTimeout(j.current), (j.current = setTimeout(() => b(!1), n ?? 1e3)));
             }
             return (
-                A._.subscribe(ew.jej.SHAKE_SETTINGS_MODAL, e),
+                A._.subscribe(eR.jej.SHAKE_SETTINGS_MODAL, e),
                 () => {
-                    (A._.unsubscribe(ew.jej.SHAKE_SETTINGS_MODAL, e), clearTimeout(j.current));
+                    (A._.unsubscribe(eR.jej.SHAKE_SETTINGS_MODAL, e), clearTimeout(j.current));
                 }
             );
         }, [I, N]),
@@ -891,13 +891,13 @@ function eR(e) {
         })
     );
 }
-var ek = n(280450),
-    eM = n(287809),
+var eM = n(280450),
+    ek = n(287809),
     eL = n(152056),
     e_ = n(780964),
-    eD = n(883252),
-    eB = n(980707),
-    eO = n(477782),
+    eD = n(116058),
+    eO = n(980707),
+    eB = n(477782),
     eK = n(28863),
     eG = n(922016),
     eF = n(975807),
@@ -906,22 +906,22 @@ var ek = n(280450),
     eH = n(481613),
     ez = n.n(eH),
     eV = n(77729),
-    eX = n(521502),
-    eY = n(915089),
+    eY = n(521502),
+    eX = n(915089),
     eZ = n(206845),
     e$ = n(19575),
     eq = n(415443),
     eQ = n(592739);
 function eJ() {
-    let e = (0, eY.GV)(),
+    let e = (0, eX.GV)(),
         t = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        n = "618385",
-        s = "6f742b7612ec8e9ef7b580b734db8e844809aec9".substring(0, 7),
+        n = "618389",
+        s = "39a427d23965bbf9eebf9a64bbbeef5c3111703b".substring(0, 7),
         r = eV.A?.app.getVersion(),
         l = eV.A?.app.getBuildNumber(),
         c = eV.A?.app.getAppArch(),
-        o = eX.A.getCurrentBuildOverride().overrides?.discord_web,
-        u = null != o ? (0, eq.A)("1790098809523", !1) : null,
+        o = eY.A.getCurrentBuildOverride().overrides?.discord_web,
+        u = null != o ? (0, eq.A)("1790098942099", !1) : null,
         d = null != u ? ` (built ${u})` : "",
         m = (function () {
             let e = ez()?.os?.toString();
@@ -947,7 +947,7 @@ function eJ() {
                     "aria-label": !1,
                     dataMeticulousIgnore: "true",
                     children: (u) =>
-                        (0, i.jsxs)(B.D, {
+                        (0, i.jsxs)(O.D, {
                             ...u,
                             "aria-describedby": e,
                             className: I()(eQ.vk, eQ.oE),
@@ -1006,21 +1006,21 @@ function eJ() {
 var e0 = n(370658);
 function e1(e) {
     let { onClose: t } = e;
-    return (0, i.jsx)(eB.W, {
+    return (0, i.jsx)(eO.W, {
         "data-menu-migrated-auto": !0,
         navId: "settings-footer-more-menu",
         onClose: t,
         onSelect: () => {},
         "aria-label": "More options",
-        children: (0, i.jsxs)(eO.rX, {
+        children: (0, i.jsxs)(eB.rX, {
             children: [
-                (0, i.jsx)(eO.Dr, { id: "changelog", label: K.intl.string(K.t.LRmNAl), action: () => (0, eU.j)(!0) }),
-                (0, i.jsx)(eO.Dr, {
+                (0, i.jsx)(eB.Dr, { id: "changelog", label: K.intl.string(K.t.LRmNAl), action: () => (0, eU.j)(!0) }),
+                (0, i.jsx)(eB.Dr, {
                     id: "acknowledgements",
                     label: K.intl.string(K.t["0nUKy3"]),
-                    action: () => (0, eF.A)(ew.X7G.ACKNOWLEDGEMENTS),
+                    action: () => (0, eF.A)(eR.X7G.ACKNOWLEDGEMENTS),
                 }),
-                (0, i.jsx)(eO.Dr, {
+                (0, i.jsx)(eB.Dr, {
                     id: "support",
                     label: K.intl.string(K.t["Yl/Riu"]),
                     action: () => (0, eF.A)(eW.C),
@@ -1038,7 +1038,7 @@ function e2() {
                 className: e0.yJ,
                 children: [
                     (0, i.jsx)(eK.Anchor, {
-                        href: ew.X7G.PRIVACY,
+                        href: eR.X7G.PRIVACY,
                         children: (0, i.jsx)(a.E, {
                             tag: "span",
                             variant: "text-xxs/normal",
@@ -1048,7 +1048,7 @@ function e2() {
                     }),
                     (0, i.jsx)("span", { className: e0.xE, "aria-hidden": "true", children: "\u2022" }),
                     (0, i.jsx)(eK.Anchor, {
-                        href: ew.X7G.TERMS,
+                        href: eR.X7G.TERMS,
                         children: (0, i.jsx)(a.E, {
                             tag: "span",
                             variant: "text-xxs/normal",
@@ -1087,10 +1087,10 @@ function e2() {
     });
 }
 var e5 = n(402651),
-    e7 = n(669067),
-    e9 = n(830543),
-    e8 = n(953056);
-let e4 = new Set([e_.X.PROFILE_PANEL, e_.X.SUBSCRIPTIONS_PANEL, e_.X.FAMILY_CENTER_PANEL, e_.X.POGGERMODE_PANEL]),
+    e9 = n(669067),
+    e7 = n(830543),
+    e4 = n(953056);
+let e8 = new Set([e_.X.PROFILE_PANEL, e_.X.SUBSCRIPTIONS_PANEL, e_.X.FAMILY_CENTER_PANEL, e_.X.POGGERMODE_PANEL]),
     e3 = new Map([[e_.X.SESSIONS_PANEL, r.ImpressionNames.USER_SETTINGS_SESSIONS]]);
 function e6(e) {
     let { target: t, ...n } = e,
@@ -1101,24 +1101,24 @@ function e6(e) {
         [h, g] = s.useState(!1);
     return (s.useLayoutEffect(() => {
         function e() {
-            null == eM.default.getCurrentUser() && (g(!0), (0, e9.default)());
+            null == ek.default.getCurrentUser() && (g(!0), (0, e7.default)());
         }
         return (
-            ek.default.addChangeListener(e),
+            eM.default.addChangeListener(e),
             () => {
-                (ek.default.removeChangeListener(e), e5.A.resetState(), d.A.resetState(), c.A.close(), (0, u.ZQ)());
+                (eM.default.removeChangeListener(e), e5.A.resetState(), d.A.resetState(), c.A.close(), (0, u.ZQ)());
             }
         );
     }, []),
     h)
         ? null
-        : (0, i.jsx)(eR, {
+        : (0, i.jsx)(ew, {
               partialRoot: eD.D,
               searchBar: te,
               emptyState: tt,
               sidebarFooter: e2,
               onViewChange: function (e) {
-                  e4.has(e) || (0, e7._)(e);
+                  e8.has(e) || (0, e9._)(e);
                   let t = e3.get(e);
                   (null != t &&
                       (0, o.x)({
@@ -1157,14 +1157,14 @@ function te() {
             [],
         ),
         (0, i.jsx)("div", {
-            className: e8.P,
+            className: e4.P,
             children: (0, i.jsx)(l.I, { size: "md", query: e, onFocus: n, onBlur: r, onChange: t, onClear: a }),
         })
     );
 }
 function tt() {
     return (0, i.jsxs)("div", {
-        className: e8.t,
+        className: e4.t,
         children: [
             (0, i.jsx)(a.E, { variant: "text-sm/semibold", color: "text-strong", children: K.intl.string(K.t.zihbmv) }),
             (0, i.jsx)(a.E, { variant: "text-sm/normal", color: "text-subtle", children: K.intl.string(K.t.XclvsB) }),

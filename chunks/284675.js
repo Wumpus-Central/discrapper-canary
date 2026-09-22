@@ -19907,7 +19907,7 @@ function pC() {
     });
 }
 var p_ = a(963935),
-    pS = a(883252),
+    pS = a(116058),
     pN = a(555738);
 function pA(e) {
     let { title: t, initExpanded: a, highlightMode: n = "none", children: l } = e,

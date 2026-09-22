@@ -1,3 +1,3 @@
-s.exports = JSON.parse(
-    '{"Z61nkt":["Z61nkt"],"2+f8w1":["2+f8w1"],"AA3xYb":["AA3xYb"],"RFLH++":["RFLH++"],"+c5sxg":["+c5sxg"]}',
+i.exports = JSON.parse(
+    '{"Z61nkt":["Zatra\u017Ei ru\u010Dni pregled"],"2+f8w1":["Na\u0161im je ru\u010Dnim pregledom ve\u0107 utvr\u0111eno da si u tinejd\u017Eerskoj dobnoj skupini (13 \u2013 17), stoga sadr\u017Eaj i postavke namijenjeni odraslima nisu dostupni. Kasnije \u0107e\u0161 mo\u017Eda mo\u0107i ponovno potvrditi svoju dobnu skupinu."],"AA3xYb":["Potvrda tvoje dobne skupine trenuta\u010Dno nije mogu\u0107a"],"RFLH++":["Ve\u0107 si poku\u0161ao/la potvrditi svoju dobnu skupini. Ako trenuta\u010Dno ne vidi\u0161 neki na\u010Din, mo\u017Eda \u0107e kasnije ponovno postati dostupan ili mo\u017Ee\u0161 zatra\u017Eiti ru\u010Dni pregled."],"+c5sxg":["Pri\u010Dekaj prije nego ponovno poku\u0161a\u0161"]}',
 );

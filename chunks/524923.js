@@ -1,3 +1,3 @@
-s.exports = JSON.parse(
-    '{"Z61nkt":["Z61nkt"],"2+f8w1":["2+f8w1"],"AA3xYb":["AA3xYb"],"RFLH++":["RFLH++"],"+c5sxg":["+c5sxg"]}',
+t.exports = JSON.parse(
+    '{"Z61nkt":["Pyyd\xe4 manuaalista tarkistusta"],"2+f8w1":["Manuaalisessa tarkistuksessamme on jo todettu, ett\xe4 kuulut teinien ik\xe4ryhm\xe4\xe4n (13\u201317), joten aikuisille tarkoitettu sis\xe4lt\xf6 ja asetukset eiv\xe4t ole k\xe4ytett\xe4viss\xe4si. Voit ehk\xe4 tehd\xe4 ik\xe4ryhm\xe4vahvistuksen uudelleen my\xf6hemmin."],"AA3xYb":["Ik\xe4ryhm\xe4si vahvistaminen ei ole juuri nyt k\xe4ytett\xe4viss\xe4"],"RFLH++":["Olet jo yritt\xe4nyt vahvistaa ik\xe4ryhm\xe4si. Vaikka menetelm\xe4 ei juuri nyt olisi n\xe4kyviss\xe4, se voi olla my\xf6hemmin j\xe4lleen k\xe4ytett\xe4viss\xe4. Voit my\xf6s pyyt\xe4\xe4 manuaalista tarkistusta."],"+c5sxg":["Odota hetki ennen uutta yrityst\xe4"]}',
 );

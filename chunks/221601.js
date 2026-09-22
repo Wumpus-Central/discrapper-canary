@@ -1,3 +1,3 @@
-s.exports = JSON.parse(
-    '{"Z61nkt":["Z61nkt"],"2+f8w1":["2+f8w1"],"AA3xYb":["AA3xYb"],"RFLH++":["RFLH++"],"+c5sxg":["+c5sxg"],"CNm4w6":["CNm4w6"]}',
+a.exports = JSON.parse(
+    '{"Z61nkt":["Solicit\u0103 o reanalizare manual\u0103"],"2+f8w1":["Verificarea noastr\u0103 manual\u0103 a stabilit deja c\u0103 faci parte din grupa de v\xe2rst\u0103 a adolescen\u021Bilor (13-17), a\u0219a c\u0103 nu ai acces la con\u021Binutul \u0219i set\u0103rile destinate adul\u021Bilor. Este posibil s\u0103-\u021Bi po\u021Bi confirma din nou grupa de v\xe2rst\u0103 mai t\xe2rziu."],"AA3xYb":["Confirmarea grupei de v\xe2rst\u0103 nu este disponibil\u0103 chiar acum"],"RFLH++":["Ai \xeencercat deja s\u0103-\u021Bi confirmi grupa de v\xe2rst\u0103. Dac\u0103 nu vezi nicio metod\u0103 acum, s-ar putea s\u0103 devin\u0103 disponibil\u0103 din nou mai t\xe2rziu sau po\u021Bi solicita o reanalizare manual\u0103."],"+c5sxg":["Te rug\u0103m s\u0103 a\u0219tep\u021Bi \xeenainte de a \xeencerca din nou"],"CNm4w6":["Ai solicitat deja o reanalizare manual\u0103"]}',
 );
