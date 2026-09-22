@@ -2,7 +2,7 @@ r.d(e, { B: () => c });
 var s = r(477900),
     d = r(503698),
     l = r.n(d),
-    u = r(576052),
+    u = r(132198),
     a = r(121615);
 function c(n) {
     let { product: e, animationState: r, className: d } = n,

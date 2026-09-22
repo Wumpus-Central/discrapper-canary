@@ -5,7 +5,7 @@ var i = n(683071),
     r = n(75304),
     a = n(987666),
     s = n(463376),
-    o = n(557026),
+    o = n(93159),
     u = n(263532),
     c = n(881489),
     d = n(531506);
@@ -37,12 +37,12 @@ function p(e) {
                     ? o.I0.SubscriptionTrial
                     : o.I0.Subscription;
         })({ isGift: t, isTrial: n, unifiedCheckoutFlow: m }),
-        { discountOffer: h, premiumGroupDiscountOffer: C } = (0, s.i)();
+        { discountOffer: C, premiumGroupDiscountOffer: h } = (0, s.i)();
     return (0, l.jsx)(a.$, {
         ...d,
         isInvoiceBilledImmediately: i,
         subscriptionTrial: c,
-        discountOffer: C ?? h,
+        discountOffer: h ?? C,
         unifiedLegalType: p,
     });
 }

@@ -41,7 +41,7 @@ var w = n(212407),
     G = n(939249),
     U = n(834730),
     H = n(297264),
-    z = n(456839),
+    z = n(14702),
     V = n(223311),
     W = n(151115);
 function X(e) {
@@ -577,7 +577,7 @@ function e$() {
     });
 }
 var eq = n(17928),
-    eJ = n(576052),
+    eJ = n(132198),
     eQ = n(35929);
 function e0(e) {
     let { user: t } = e,
@@ -707,7 +707,7 @@ let e8 = {
     [eI.EXTERNAL_FRACTIONAL_NITRO]: { LeftPreview: ef, Info: eA, RightPreview: e2 },
     [eI.EXTERNAL_GENERIC]: { LeftPreview: ef, Info: eA, RightPreview: e2 },
 };
-function e5(e) {
+function e6(e) {
     var t;
     return e8[
         ((t = e),
@@ -722,7 +722,7 @@ function e5(e) {
               : "COLLECTIBLE")
     ];
 }
-var e6 = n(268959),
+var e5 = n(268959),
     e3 = n(866665),
     e9 = n(508770),
     e7 = n(278416);
@@ -761,8 +761,8 @@ function tt(e) {
             !n.hideBadge &&
             null == n.badgeOverride &&
             (0, L.JQ)({ skuId: c.skuId, type: c.type, items: [c] })
-                ? (0, s.jsx)(e6.s, {})
-                : (0, s.jsx)(e6.A, { skuId: n.skuId })),
+                ? (0, s.jsx)(e5.s, {})
+                : (0, s.jsx)(e5.A, { skuId: n.skuId })),
         (0, s.jsxs)("div", { className: te.N, children: [t, null != l && a && (0, s.jsx)(e4, { promotion: l })] })
     );
 }
@@ -1306,7 +1306,7 @@ function tY(e) {
             selectedBundleSlide: l,
             pendingProfile: a,
         } = e,
-        c = e5(t);
+        c = e6(t);
     return (0, s.jsxs)("div", {
         className: F()(tK.wd, { [tK.E7]: null != c.LeftPreview }),
         children: [
@@ -1339,8 +1339,8 @@ var t$ = n(529756),
     t1 = n(60465),
     t2 = n(976860),
     t8 = n(402860),
-    t5 = n(50920),
-    t6 = n(365491),
+    t6 = n(50920),
+    t5 = n(365491),
     t3 = n(668953),
     t9 = n(881636),
     t7 = n(807562);
@@ -1390,13 +1390,13 @@ function nt(e) {
             onClose: f,
             onTrackClick: E,
         } = e,
-        h = e5(i),
+        h = e6(i),
         v = (0, T.aw)(a),
         N = v ? a.items.length : 0,
         j = (function () {
-            let e = (0, t5.a)("CollectiblesPdpNavigateToCollection"),
+            let e = (0, t6.a)("CollectiblesPdpNavigateToCollection"),
                 { sessionId: t } = (0, C.uM)() ?? {},
-                n = (0, t6.v)((e) => e.reset);
+                n = (0, t5.v)((e) => e.reset);
             return r.useCallback(
                 (i, s) => {
                     if (

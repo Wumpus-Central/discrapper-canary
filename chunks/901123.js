@@ -124,6 +124,7 @@ let s = "@me",
         OPEN_APP_FROM_EMAIL: "/open-app-from-email",
         BILLING_MANAGE_SUBSCRIPTION: "/billing/premium/manage",
         BILLING_PAST_DUE_SUBSCRIPTION: "/billing/premium/past-due",
+        BILLING_PAST_DUE_PAYMENT: "/billing/past-due-payment",
         BILLING_MANAGE_SUBSCRIPTION_WITH_DEEP_LINK: (e, t) =>
             `/billing/premium/manage?deep_link_type=${e}${null != t ? `&load_id=${t}` : ""}`,
         BILLING_MANAGE_SUBSCRIPTION_WITH_FLOW_TYPE: (e, t) =>

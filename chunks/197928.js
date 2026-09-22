@@ -12,7 +12,7 @@ var A,
     C,
     D = E(214958),
     p = E.n(D);
-function g() {
+function P() {
     let e = window;
     return (
         null != e.jQuery ||
@@ -24,7 +24,7 @@ function g() {
         null != e.VencordNative
     );
 }
-function P() {
+function g() {
     return (
         ((Array.isArray(navigator.languages) ? navigator.languages[0] : null) ||
             navigator.language ||
@@ -47,7 +47,7 @@ if (null != U) {
         r = U.os.arch,
         _ = U.os.appArch,
         o = U.app.getReleaseChannel(),
-        I = P();
+        I = g();
     switch (E) {
         case "win32":
             e = "Windows";
@@ -71,7 +71,7 @@ if (null != U) {
             os_arch: r,
             app_arch: _,
             system_locale: I,
-            has_client_mods: g(),
+            has_client_mods: P(),
             client_launch_id: M,
         }),
         p().name?.toLocaleLowerCase() === "electron" &&
@@ -183,8 +183,8 @@ if (null == i)
                         if (/iPad/.test(e)) return "iPad";
                         else return "";
                     })()),
-                    (t.system_locale = P()),
-                    (t.has_client_mods = g()),
+                    (t.system_locale = g()),
+                    (t.has_client_mods = P()),
                     (e = t),
                     n.set(f, e));
             }
@@ -213,7 +213,7 @@ if (null == i)
     (l = window.GLOBAL_ENV.RELEASE_CHANNEL) &&
         (null == I.release_channel || "" === I.release_channel) &&
         (I.release_channel = l.split("-")[0]),
-    isNaN((s = parseInt("618234", 10))) || (I.client_build_number = s),
+    isNaN((s = parseInt("618236", 10))) || (I.client_build_number = s),
     null == (a = U?.app.getBuildNumber()) || isNaN(a) || (I.native_build_number = a),
     (I.client_event_source = (function () {
         try {
@@ -221,7 +221,7 @@ if (null == i)
         } catch (e) {}
         return null;
     })()),
-    (I.has_client_mods = g()),
+    (I.has_client_mods = P()),
     (I.client_launch_id = M),
     (function (e) {
         try {
@@ -330,8 +330,8 @@ b &&
     (BigInt.prototype.toJSON = function () {
         return this.toString();
     });
-let F = {},
-    Y = (
+let Y = {},
+    F = (
         b
             ? function (e) {
                   return BigInt(e);
@@ -339,18 +339,18 @@ let F = {},
             : function (e) {
                   return e instanceof y
                       ? e
-                      : ("number" == typeof e && (e = e.toString()), null != F[e] || (F[e] = y.fromString(e)), F[e]);
+                      : ("number" == typeof e && (e = e.toString()), null != Y[e] || (Y[e] = y.fromString(e)), Y[e]);
               }
     )(0),
     V = b
         ? function () {
-              let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Y,
-                  t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Y;
+              let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : F,
+                  t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : F;
               return e | t;
           }
         : function () {
-              let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Y,
-                  t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Y;
+              let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : F,
+                  t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : F;
               return e.or(t);
           },
     W = b
@@ -869,6 +869,7 @@ let eO = ["@me", "@favorites", "@guilds-empty-nux", "@inbox", "@guild-upsell-lis
             OPEN_APP_FROM_EMAIL: "/open-app-from-email",
             BILLING_MANAGE_SUBSCRIPTION: "/billing/premium/manage",
             BILLING_PAST_DUE_SUBSCRIPTION: "/billing/premium/past-due",
+            BILLING_PAST_DUE_PAYMENT: "/billing/past-due-payment",
             BILLING_MANAGE_SUBSCRIPTION_WITH_DEEP_LINK: (e, t) =>
                 `/billing/premium/manage?deep_link_type=${e}${null != t ? `&load_id=${t}` : ""}`,
             BILLING_MANAGE_SUBSCRIPTION_WITH_FLOW_TYPE: (e, t) =>

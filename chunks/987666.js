@@ -5,7 +5,7 @@ var i = n(888751),
     r = n(692440),
     a = n(400612),
     s = n(818824),
-    o = n(557026),
+    o = n(93159),
     u = n(263532);
 function c(e) {
     let {
@@ -15,8 +15,8 @@ function c(e) {
             discriminatedInvoicePreview: d,
             overrideRenewalDate: m,
             fractionalPremiumInfo: p,
-            isInvoiceBilledImmediately: h = !0,
-            unifiedLegalType: C,
+            isInvoiceBilledImmediately: C = !0,
+            unifiedLegalType: h,
             discountOffer: f,
             subscriptionTrial: E,
         } = e,
@@ -26,27 +26,27 @@ function c(e) {
         }));
     if (d.type === a.u$.LOADING) return null;
     let { invoicePreview: I } = d,
-        g = ("renewalInvoicePreview" in d ? d.renewalInvoicePreview : null) ?? I,
-        A = (0, r.de)({
+        A = ("renewalInvoicePreview" in d ? d.renewalInvoicePreview : null) ?? I,
+        g = (0, r.de)({
             overrideRenewalDate: m,
-            currentInvoice: h ? I : void 0,
-            renewalInvoice: g,
+            currentInvoice: C ? I : void 0,
+            renewalInvoice: A,
             isSubscriptionUpdate: null != c,
             fractionalPremiumInfo: p,
         }),
-        { renewalPrice: P, multiPeriodDiscountAttributes: v } = (0, i.QM)(g, t, {
+        { renewalPrice: P, multiPeriodDiscountAttributes: v } = (0, i.QM)(A, t, {
             discountOffer: f,
             subscriptionTrial: E,
         }),
-        x = {
+        _ = {
             purchaseButtonText: y,
-            totalDue: h ? I.total : 0,
+            totalDue: C ? I.total : 0,
             renewalPrice: P,
             multiPeriodDiscountAttributes: v,
             currency: I.currency,
             interval: t.interval,
             intervalCount: t.intervalCount,
-            startDate: A,
+            startDate: g,
         };
-    return (0, l.jsx)(o._P, { variant: { type: C, ...x }, paymentSourceType: n, immediateDelivery: S });
+    return (0, l.jsx)(o._P, { variant: { type: h, ..._ }, paymentSourceType: n, immediateDelivery: S });
 }

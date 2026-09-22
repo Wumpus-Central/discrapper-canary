@@ -20,6 +20,35 @@
     background-image: url(/assets/f7db12df7391974c.svg)
 }
 
+.page__06b92 {
+    align-items: safe center;
+    box-sizing: border-box;
+    display: flex;
+    height: 100%;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    justify-content: center;
+    overflow-y: auto;
+    position: absolute
+}
+
+.card__06b92,
+.page__06b92 {
+    padding: var(--space-24);
+    width: 100%
+}
+
+.card__06b92 {
+    max-width: 440px;
+    min-width: 0
+}
+
+.divider__06b92 {
+    background-color: var(--border-muted);
+    height: 1px;
+    width: 100%
+}
+
 .wrapper__9f45a {
     display: flex;
     flex-direction: column;
@@ -109,6 +138,7 @@ screen and (max-width:485px) {
     }
 }
 
+.pastDuePaymentWrapper__9f45a,
 .redeemWrapper__9f45a {
     height: 100vh;
     height: -moz-available;
@@ -116,6 +146,11 @@ screen and (max-width:485px) {
     height: fill-available;
     height: 100dvh;
     width: 100vw
+}
+
+.pastDuePaymentWrapper__9f45a {
+    overflow-y: auto;
+    position: relative
 }
 
 .redeemContent__9f45a {
@@ -127,4 +162,4 @@ screen and (max-width:485px) {
     width: 100%
 }
 
-/*# sourceMappingURL=928873.b6afad546afeb783.css.map*/
+/*# sourceMappingURL=709229.b258de253152f0d4.css.map*/

@@ -10,8 +10,8 @@ var l = n(192308),
     c = n(202541),
     u = n(652215);
 function _(e) {
-    let { processedCode: t, channelContext: _, customGiftMessage: A, giftInfo: d } = e,
-        T = !1,
+    let { processedCode: t, channelContext: _, customGiftMessage: A, giftInfo: T } = e,
+        d = !1,
         I = null,
         N = r.default.getCurrentUser(),
         R = (0, o.CC)(N?.premiumType, c.PremiumTypes.TIER_0);
@@ -26,13 +26,14 @@ function _(e) {
                 n.e("183910"),
                 n.e("76428"),
                 n.e("77473"),
-                n.e("523276"),
-                n.e("948720"),
                 n.e("25279"),
+                n.e("517888"),
                 n.e("910471"),
                 n.e("811133"),
                 n.e("262156"),
                 n.e("198329"),
+                n.e("523276"),
+                n.e("812042"),
                 n.e("307200"),
             ]).then(n.bind(n, 361845));
             return (n) =>
@@ -40,18 +41,18 @@ function _(e) {
                     code: t,
                     channelContext: _,
                     customGiftMessage: A,
-                    emojiName: d?.emoji?.name,
-                    soundId: d?.sound?.id,
+                    emojiName: T?.emoji?.name,
+                    soundId: T?.sound?.id,
                     onComplete: (e, t) => {
                         ((I = e),
-                            t && ((T = t), e.isSubscription && null == s.A.getPremiumSubscription(!1) && (0, E.o)(!0)));
+                            t && ((d = t), e.isSubscription && null == s.A.getPremiumSubscription(!1) && (0, E.o)(!0)));
                     },
                     ...n,
                 });
         },
         {
             onCloseCallback: () => {
-                T &&
+                d &&
                     null != I &&
                     !R &&
                     I.isSubscription &&
