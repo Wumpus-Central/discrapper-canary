@@ -3251,8 +3251,8 @@ class ii {
     }
     isInPlaceholderRegion(e) {
         let { scrollTop: t, offsetHeight: n, scrollHeight: l } = e,
-            { messages: i, placeholderHeight: s } = this.props;
-        return i.hasMoreBefore && t < s && l > n ? 1 : i.hasMoreAfter && t >= l - n - s ? 2 : 0;
+            { messages: i, topPlaceholderHeight: s, bottomPlaceholderHeight: a } = this.props;
+        return i.hasMoreBefore && t < s && l > n ? 1 : i.hasMoreAfter && t >= l - n - a ? 2 : 0;
     }
     isInScrollTriggerLoadingRegion(e) {
         let { scrollTop: t, offsetHeight: n, scrollHeight: l } = e,
@@ -3268,16 +3268,16 @@ class ii {
         let { scrollTop: t, offsetHeight: n, scrollHeight: l } = e,
             {
                 prevScrollTop: i,
-                props: { placeholderHeight: s },
+                props: { topPlaceholderHeight: s, bottomPlaceholderHeight: a },
             } = this;
         if (((this.prevScrollTop = t), null == i || this.isPinned() || this.isScrolledToBottom(e))) return;
-        let a = this.isInPlaceholderRegion(e),
-            r = t - i;
-        0 !== a &&
-            0 !== r &&
-            (1 === a && t + r <= 0
+        let r = this.isInPlaceholderRegion(e),
+            o = t - i;
+        0 !== r &&
+            0 !== o &&
+            (1 === r && t + o <= 0
                 ? (this.mergeTo(s - n), (this.prevScrollTop = s - n))
-                : 2 === a && t + r >= l - n && (this.mergeTo(l - s), (this.prevScrollTop = l - s)));
+                : 2 === r && t + o >= l - n && (this.mergeTo(l - a), (this.prevScrollTop = l - a)));
     }
     enableAutomaticAck() {
         this.isInitialized() &&
@@ -3348,7 +3348,7 @@ class ii {
                 this.props.channel.type !== eu.rbe.GUILD_STAGE_VOICE
               ? this.scrollToNewMessages()
               : null != e
-                ? this.scrollTo(e + this.props.placeholderHeight, !1, this.handleScroll)
+                ? this.scrollTo(e + this.props.topPlaceholderHeight, !1, this.handleScroll)
                 : this.setScrollToBottom();
     }
     loadMore = (() => {
@@ -3406,7 +3406,7 @@ class ii {
         let { channel: t } = this.props;
         if (this.isPinned()) l4.A.updateChannelDimensions(t.id, Date.now(), 1, 1, 0, e);
         else {
-            let { placeholderHeight: n } = this.props,
+            let { topPlaceholderHeight: n } = this.props,
                 { scrollTop: l, scrollHeight: i, offsetHeight: s } = this.getScrollerState();
             l4.A.updateChannelDimensions(t.id, Date.now(), l - n, i - n, s, e);
         }
@@ -3454,11 +3454,11 @@ class ii {
     }
     getOffsetToTriggerLoading(e, t) {
         let { scrollHeight: n, offsetHeight: l } = t,
-            { messages: i, hasUnreads: s, placeholderHeight: a } = this.props;
+            { messages: i, hasUnreads: s, topPlaceholderHeight: a, bottomPlaceholderHeight: r } = this.props;
         if ("top" === e)
             if (!i.hasMoreBefore) return 0;
             else return s ? a - nz.N0 - 2 : a + 500;
-        return i.hasMoreAfter ? n - l - a - 500 : n - l;
+        return i.hasMoreAfter ? n - l - r - 500 : n - l;
     }
     getOffsetToPreventLoading(e) {
         let { messages: t } = this.props,
@@ -6096,21 +6096,29 @@ function ot(e) {
                 })({ compact: f, messageGroups: z, groupRange: 4, attachments: W, fontSize: v, groupSpacing: o }),
             [f, z, W, v, o],
         ),
-        q = (function (e) {
+        q = (0, h.bG)([lH.A], () =>
+            th.A.can(eu.xBc.READ_MESSAGE_HISTORY, m) ? null : lH.A.getViewingRolesTimestamp(m.getGuildId()),
+        ),
+        J = R ?? q,
+        Z = g.hasMoreBefore && null == J,
+        Y = Z ? $.totalHeight : 0,
+        X = g.hasMoreAfter ? $.totalHeight : 0,
+        Q = (function (e) {
             let {
                     messages: t,
                     channel: n,
                     compact: l,
                     hasUnreads: i,
                     focusId: s,
-                    placeholderHeight: a,
-                    canLoadMore: o = !0,
-                    handleScrollToBottom: c,
-                    handleScrollFromBottom: d,
-                    additionalMessagePadding: u = 0,
+                    topPlaceholderHeight: a,
+                    bottomPlaceholderHeight: o,
+                    canLoadMore: c = !0,
+                    handleScrollToBottom: d,
+                    handleScrollFromBottom: u,
+                    additionalMessagePadding: h = 0,
                 } = e,
-                { windowId: h } = r.useContext(l8.Ay),
-                [m] = r.useState(
+                { windowId: m } = r.useContext(l8.Ay),
+                [g] = r.useState(
                     () =>
                         new ii({
                             messages: t,
@@ -6118,33 +6126,35 @@ function ot(e) {
                             compact: l,
                             hasUnreads: i,
                             focusId: s,
-                            placeholderHeight: a,
-                            canLoadMore: o,
-                            windowId: h,
-                            handleScrollToBottom: c,
-                            handleScrollFromBottom: d,
-                            additionalMessagePadding: u,
+                            topPlaceholderHeight: a,
+                            bottomPlaceholderHeight: o,
+                            canLoadMore: c,
+                            windowId: m,
+                            handleScrollToBottom: d,
+                            handleScrollFromBottom: u,
+                            additionalMessagePadding: h,
                         }),
                 );
             return (
-                m.getSnapshotBeforeUpdate(s),
+                g.getSnapshotBeforeUpdate(s),
                 r.useLayoutEffect(() =>
-                    m.mergePropsAndUpdate({
+                    g.mergePropsAndUpdate({
                         messages: t,
                         channel: n,
                         compact: l,
                         hasUnreads: i,
                         focusId: s,
-                        placeholderHeight: a,
-                        canLoadMore: o,
-                        windowId: h,
-                        handleScrollToBottom: c,
-                        handleScrollFromBottom: d,
-                        additionalMessagePadding: u,
+                        topPlaceholderHeight: a,
+                        bottomPlaceholderHeight: o,
+                        canLoadMore: c,
+                        windowId: m,
+                        handleScrollToBottom: d,
+                        handleScrollFromBottom: u,
+                        additionalMessagePadding: h,
                     }),
                 ),
-                r.useLayoutEffect(() => () => m.cleanup(), [m]),
-                m
+                r.useLayoutEffect(() => () => g.cleanup(), [g]),
+                g
             );
         })({
             messages: g,
@@ -6152,14 +6162,15 @@ function ot(e) {
             compact: f,
             hasUnreads: E,
             focusId: S,
-            placeholderHeight: $.totalHeight,
+            topPlaceholderHeight: Y,
+            bottomPlaceholderHeight: X,
             canLoadMore: null == R,
             handleScrollToBottom: r.useCallback(() => H(!0), [H]),
             handleScrollFromBottom: r.useCallback(() => H(!1), [H]),
             additionalMessagePadding: 48,
         }),
-        J = (0, G.sV)(m.guild_id, "message_stream"),
-        Z = (function (e) {
+        ee = (0, G.sV)(m.guild_id, "message_stream"),
+        ei = (function (e) {
             let { scrollerRef: t, ...n } = e,
                 l = (0, b.A)(() => {
                     let e = t.current;
@@ -6207,17 +6218,14 @@ function ot(e) {
                     [o],
                 );
             return ((0, lJ.Vo)({ event: eu.jej.FOCUS_MESSAGES, handler: c }), o);
-        })({ scrollerRef: q.ref, isEditing: null != S, keyboardModeEnabled: M, hasMoreAfter: g.hasMoreAfter }),
-        Y = (0, h.bG)([lH.A], () =>
-            th.A.can(eu.xBc.READ_MESSAGE_HISTORY, m) ? null : lH.A.getViewingRolesTimestamp(m.getGuildId()),
-        ),
+        })({ scrollerRef: Q.ref, isEditing: null != S, keyboardModeEnabled: M, hasMoreAfter: g.hasMoreAfter }),
         {
-            channelStreamMarkup: X,
-            newMessagesBar: Q,
-            jumpToPresentBar: ee,
-            forumPostActionBar: ei,
-            pinnedFirstMessage: es,
-            safetyWarningBanner: ea,
+            channelStreamMarkup: es,
+            newMessagesBar: ea,
+            jumpToPresentBar: er,
+            forumPostActionBar: eo,
+            pinnedFirstMessage: ec,
+            safetyWarningBanner: ed,
         } = (function (e) {
             let t,
                 n,
@@ -6235,24 +6243,25 @@ function ot(e) {
                     scrollManager: A,
                     specs: f,
                     filterAfterTimestamp: C,
-                    showingQuarantineBanner: x,
-                    hideSummaries: E,
-                    jumpBarClassName: S,
-                    isGameInvitesPost: I,
+                    hasTopPlaceholders: x,
+                    showingQuarantineBanner: E,
+                    hideSummaries: S,
+                    jumpBarClassName: I,
+                    isGameInvitesPost: _,
                 } = e,
-                _ = lq.default.getCurrentUser();
-            function b() {
+                b = lq.default.getCurrentUser();
+            function v() {
                 return A.isInitialized() || o.ready;
             }
-            let v = (0, rz.r)(s),
-                M = m.some((e) => e.type === eu.TZK.FORUM_POST_ACTION_BAR),
-                R = (0, j.cI)(s),
-                D = (0, h.bG)([lK.A], () => lK.A.shouldShowTopicsBar() && !E),
-                L = (0, rM.l)(s.id),
-                k = (0, rN.j)(s.id, rT.Rx),
-                P = (0, ia.E)(s.id),
-                O = (0, rV.A)(),
-                G = (function (e, t) {
+            let M = (0, rz.r)(s),
+                R = m.some((e) => e.type === eu.TZK.FORUM_POST_ACTION_BAR),
+                D = (0, j.cI)(s),
+                L = (0, h.bG)([lK.A], () => lK.A.shouldShowTopicsBar() && !S),
+                k = (0, rM.l)(s.id),
+                P = (0, rN.j)(s.id, rT.Rx),
+                O = (0, ia.E)(s.id),
+                G = (0, rV.A)(),
+                U = (function (e, t) {
                     if (e.isDM() && null != t)
                         if (t.type === ip._j.STRANGER_DANGER)
                             return (0, a.jsx)(rD, { channelId: e.id, warningId: t.id, senderId: e.getRecipientId() });
@@ -6260,24 +6269,24 @@ function ot(e) {
                             return (0, a.jsx)(i_, { channelId: e.id, warningId: t.id, senderId: e.getRecipientId() });
                         else return (0, a.jsx)(rv, { channelId: e.id, warningId: t.id, senderId: e.getRecipientId() });
                     return null;
-                })(s, L ?? k ?? P),
-                U = !s.isForumPost() || M || I ? null : (0, a.jsx)(ro, { postId: s.id }),
-                { firstMessage: w, loaded: F } = (0, lw.n5)(s, I),
-                H =
-                    I && F
+                })(s, k ?? P ?? O),
+                w = !s.isForumPost() || R || _ ? null : (0, a.jsx)(ro, { postId: s.id }),
+                { firstMessage: F, loaded: H } = (0, lw.n5)(s, _),
+                B =
+                    _ && H
                         ? (0, a.jsx)(
                               ry,
                               {
                                   compact: u,
                                   channel: s,
-                                  message: w,
-                                  id: null != w ? (0, e3.j)(s.id, w.id) : `deleted-${s.id}`,
+                                  message: F,
+                                  id: null != F ? (0, e3.j)(s.id, F.id) : `deleted-${s.id}`,
                               },
-                              w?.id ?? `deleted-${s.id}`,
+                              F?.id ?? `deleted-${s.id}`,
                           )
                         : null,
-                B = (0, iT.A)(s.id),
-                K = (0, az.W1)(s);
+                K = (0, iT.A)(s.id),
+                V = (0, az.W1)(s);
             ((t = eX.Sf.useSetting()),
                 (n = (0, aj.bG)([N.Ay], () => N.Ay.useReducedMotion)),
                 r.useEffect(() => {
@@ -6296,9 +6305,9 @@ function ot(e) {
                         }
                     );
                 }, [t, n]));
-            let V = null,
-                z = [],
-                W = m.map((e, t) => {
+            let z = null,
+                W = [],
+                $ = m.map((e, t) => {
                     if (e.type === eu.TZK.DIVIDER) {
                         let n = null != e.unreadId;
                         return null != C
@@ -6365,9 +6374,9 @@ function ot(e) {
                         );
                     }
                     if (null != C && C > e.content.timestamp.getTime() * rK.A.Millis.SECOND) return;
-                    e.type === eu.TZK.MESSAGE && null == V && (V = e);
-                    let n = e.groupId === V?.groupId ? V.content.id : e.groupId,
-                        l = K && e.content.isFirstMessageInForumPost(s),
+                    e.type === eu.TZK.MESSAGE && null == z && (z = e);
+                    let n = e.groupId === z?.groupId ? z.content.id : e.groupId,
+                        l = V && e.content.isFirstMessageInForumPost(s),
                         i = e.type === eu.TZK.THREAD_STARTER_MESSAGE ? nW : nq;
                     return (0, a.jsx)(
                         i,
@@ -6379,26 +6388,26 @@ function ot(e) {
                             flashKey: e.flashKey,
                             id: (0, e3.j)(s.id, e.content.id),
                             isLastItem: t >= m.length - 1,
-                            renderContentOnly: B || l,
+                            renderContentOnly: K || l,
                         },
                         e.content.id,
                     );
                 });
-            z.push(...W);
-            let $ = m[m.length - 1];
+            W.push(...$);
+            let q = m[m.length - 1];
             if (
-                (null != _ &&
+                (null != b &&
                     g.forEach((e, t) => {
-                        let n = 0 === t && (0, el.l)(s, $, new rH.Ay({ type: eu.lAJ.DEFAULT, author: _ }));
-                        z.push(
+                        let n = 0 === t && (0, el.l)(s, q, new rH.Ay({ type: eu.lAJ.DEFAULT, author: b }));
+                        W.push(
                             (0, a.jsx)(
                                 r5,
-                                { file: e, channel: s, user: _, isGroupStart: n, compact: u },
+                                { file: e, channel: s, user: b, isGroupStart: n, compact: u },
                                 `upload-${e.id}`,
                             ),
                         );
                     }),
-                o.hasMoreBefore && null == C)
+                x)
             ) {
                 o.length > 0 &&
                     (o.length > 1 &&
@@ -6413,7 +6422,7 @@ function ot(e) {
                                         : (n += 1));
                             return t > n;
                         })(m) &&
-                        z.unshift(
+                        W.unshift(
                             (0, a.jsx)(
                                 rq,
                                 {
@@ -6423,17 +6432,15 @@ function ot(e) {
                                 "load-more-before",
                             ),
                         ),
-                    z.unshift((0, a.jsx)("div", { style: { height: nz.N0, flex: "0 0 auto" } }, "buffer")));
+                    W.unshift((0, a.jsx)("div", { style: { height: nz.N0, flex: "0 0 auto" } }, "buffer")));
                 let { useReducedMotion: e } = N.Ay;
-                ((e && b()) || !e) && z.unshift((0, a.jsx)(lQ, { compact: u, ...f }, "has-more"));
+                ((e && v()) || !e) && W.unshift((0, a.jsx)(lQ, { compact: u, ...f }, "has-more"));
             }
             if (
-                ((o.hasMoreBefore && null == C) ||
-                    I ||
-                    z.unshift((0, a.jsx)(ap, { channel: s, showingBanner: x }, "empty-message")),
-                o.hasMoreAfter && z.push((0, a.jsx)(lQ, { compact: u, ...f }, "has-more-after")),
-                !x && v && b() && z.push((0, a.jsx)(r2, { channel: s })),
-                c > 0 && d && b())
+                (x || _ || W.unshift((0, a.jsx)(ap, { channel: s, showingBanner: E }, "empty-message")),
+                o.hasMoreAfter && W.push((0, a.jsx)(lQ, { compact: u, ...f }, "has-more-after")),
+                !E && M && v() && W.push((0, a.jsx)(r2, { channel: s })),
+                c > 0 && d && v())
             ) {
                 let e,
                     t,
@@ -6444,7 +6451,7 @@ function ot(e) {
                     (lW.Ay.isEstimated(s.id)
                         ? ((e = r ? eL.t.wvtbbG : eL.t.tHqbtg), (t = eL.t.vaPWFe))
                         : ((e = r ? eL.t["BctFH/"] : eL.t["3wXb9P"]), (t = eL.t["4H8ldG"])),
-                    R && (0, j.Kc)(s) && O.includes(r4.i.SUMMARIES))
+                    D && (0, j.Kc)(s) && G.includes(r4.i.SUMMARIES))
                 ) {
                     let n = lW.Ay.ackMessageId(s.id),
                         r = (function (e, t) {
@@ -6458,13 +6465,13 @@ function ot(e) {
                             num_unread_summaries: r,
                             num_unread_messages: c,
                             last_ack_message_id: n,
-                            summaries_enabled_by_user: D,
+                            summaries_enabled_by_user: L,
                             summaries_enabled_for_channel: (0, j.pk)(s),
                         }),
                         (0, j.pk)(s))
                     ) {
-                        let n = D ? eL.intl.format(t, { count: c }) : eL.intl.format(e, { count: c, timestamp: i });
-                        if (D) {
+                        let n = L ? eL.intl.format(t, { count: c }) : eL.intl.format(e, { count: c, timestamp: i });
+                        if (L) {
                             let e =
                                 r > 0
                                     ? (0, a.jsxs)(a.Fragment, {
@@ -6526,7 +6533,7 @@ function ot(e) {
                         }
                     }
                 } else
-                    O.includes(r4.i.NEW_MESSAGES) &&
+                    G.includes(r4.i.NEW_MESSAGES) &&
                         (l = (0, a.jsx)(rJ.GN, {
                             content: eL.intl.format(e, { count: c, timestamp: i }),
                             channelId: s.id,
@@ -6535,8 +6542,8 @@ function ot(e) {
             if (
                 (null == l &&
                     (0, j.pk)(s) &&
-                    D &&
-                    O.includes(r4.i.SUMMARIES) &&
+                    L &&
+                    G.includes(r4.i.SUMMARIES) &&
                     (l = (0, a.jsx)(rJ.UK, { channel: s, scrollManager: A })),
                 o.error)
             )
@@ -6553,20 +6560,20 @@ function ot(e) {
                             })
                         );
                     },
-                    className: S,
+                    className: I,
                 });
-            else if (o.hasMoreAfter && b()) {
+            else if (o.hasMoreAfter && v()) {
                 let { jumpReturnTargetId: e } = o;
                 i =
                     o.loadingMore && o.jumpedToPresent
-                        ? (0, a.jsx)(rJ.Ab, { className: S })
+                        ? (0, a.jsx)(rJ.Ab, { className: I })
                         : null != e
                           ? (0, a.jsx)(rJ.Ab, {
                                 type: rJ.ks.REPLY,
                                 onClick: () => {
                                     y.A.jumpToMessage({ channelId: s.id, messageId: e, flash: !0 });
                                 },
-                                className: S,
+                                className: I,
                             })
                           : (0, a.jsx)(rJ.Ab, {
                                 onClick: () => {
@@ -6577,16 +6584,16 @@ function ot(e) {
                                         void (s.id === e && (0, rb.iN)(s.id))
                                     );
                                 },
-                                className: S,
+                                className: I,
                             });
             }
             return {
-                channelStreamMarkup: z,
+                channelStreamMarkup: W,
                 newMessagesBar: l,
                 jumpToPresentBar: i,
-                forumPostActionBar: U,
-                pinnedFirstMessage: H,
-                safetyWarningBanner: G,
+                forumPostActionBar: w,
+                pinnedFirstMessage: B,
+                safetyWarningBanner: U,
             };
         })({
             channel: m,
@@ -6596,84 +6603,85 @@ function ot(e) {
             messageDisplayCompact: f,
             channelStream: C,
             uploads: x,
-            loadMore: q.loadMore,
-            scrollManager: q,
+            loadMore: Q.loadMore,
+            scrollManager: Q,
             specs: $,
-            filterAfterTimestamp: R ?? Y,
+            hasTopPlaceholders: Z,
+            filterAfterTimestamp: J,
             showingQuarantineBanner: D,
             hideSummaries: L,
             jumpToPresent: function () {
                 g.hasPresent()
-                    ? q.ref.current?.scrollToBottom({ animate: !N.Ay.useReducedMotion })
+                    ? Q.ref.current?.scrollToBottom({ animate: !N.Ay.useReducedMotion })
                     : y.A.jumpToPresent(m.id, V);
             },
             jumpBarClassName: k,
             isGameInvitesPost: w,
         });
-    ((t = q.ref),
+    ((t = Q.ref),
         (n = r.useCallback(() => t.current?.scrollToBottom(), [t])),
         (l = r.useCallback(() => {
-            (q.handleUserScrollGesture(), t.current?.scrollPageUp({ animate: !N.Ay.useReducedMotion }));
-        }, [q, t])),
+            (Q.handleUserScrollGesture(), t.current?.scrollPageUp({ animate: !N.Ay.useReducedMotion }));
+        }, [Q, t])),
         (i = r.useCallback(() => {
-            (q.handleUserScrollGesture(), t.current?.scrollPageDown({ animate: !N.Ay.useReducedMotion }));
-        }, [q, t])),
+            (Q.handleUserScrollGesture(), t.current?.scrollPageDown({ animate: !N.Ay.useReducedMotion }));
+        }, [Q, t])),
         (0, lJ.Vo)({ event: eu.jej.SCROLLTO_PRESENT, handler: n }),
         (0, lJ.Vo)({ event: eu.jej.SCROLL_PAGE_UP, handler: l }),
         (0, lJ.Vo)({ event: eu.jej.SCROLL_PAGE_DOWN, handler: i }));
-    let er = (0, I.R7)(),
-        { ref: eo, ...ec } = (0, u.LT)(Z),
-        ed = r.useRef(null),
-        eh = r.useMemo(() => ({ ref: ed, padding: r9 }), []),
-        em = (0, b.A)((e) => {
+    let eh = (0, I.R7)(),
+        { ref: em, ...eg } = (0, u.LT)(ei),
+        ep = r.useRef(null),
+        ef = r.useMemo(() => ({ ref: ep, padding: r9 }), []),
+        eC = (0, b.A)((e) => {
             let t = e?.getScrollerNode() ?? null;
-            ((q.ref.current = e), (eo.current = t), (ed.current = t));
+            ((Q.ref.current = e), (em.current = t), (ep.current = t));
         }),
-        eg = (0, h.bG)([O.A], () => O.A.gradientPreset),
-        ep = eX.eh.useSetting().customUserThemeSettings,
-        ef = (0, lV.V)(),
-        eC = (0, lF.Q)(),
-        ex = null != eg || (null != ep && !ef) || null != eC,
-        eE = r.useMemo(() => (U ? (F ? r6.gA : r6.ru) : r6.Zd), [U, F]),
-        eS = r.useMemo(() => (U ? (F ? r6.cz : r6.XF) : r6.U6), [U, F]);
+        ex = (0, h.bG)([O.A], () => O.A.gradientPreset),
+        eE = eX.eh.useSetting().customUserThemeSettings,
+        eS = (0, lV.V)(),
+        eI = (0, lF.Q)(),
+        e_ = null != ex || (null != eE && !eS) || null != eI,
+        ej = r.useMemo(() => (U ? (F ? r6.gA : r6.ru) : r6.Zd), [U, F]),
+        eb = r.useMemo(() => (U ? (F ? r6.cz : r6.XF) : r6.U6), [U, F]);
     return (0, a.jsxs)(u.hD, {
-        navigator: Z,
+        navigator: ei,
         children: [
-            es,
-            null != ea && ea,
+            ec,
+            null != ed && ed,
             (0, a.jsxs)("div", {
                 className: c()(r6.Og, s, `group-spacing-${o}`),
                 children: [
-                    null == ea && Q,
+                    null == ed && ea,
                     (0, a.jsxs)(K, {
                         channel: m,
-                        scrollManager: q,
+                        scrollManager: Q,
                         children: [
                             (0, a.jsx)(oe, {
-                                ref: em,
+                                ref: eC,
                                 customTheme: !0,
-                                className: c()(d, r6.XG, ex ? eS : void 0),
+                                className: c()(d, r6.XG, e_ ? eb : void 0),
                                 contentClassName: r6.gT,
-                                onResize: q.handleResize,
-                                onScroll: q.handleScroll,
-                                onMouseDown: q.handleMouseDown,
-                                onMouseUp: q.handleMouseUp,
-                                onWheel: q.handleUserScrollGesture,
-                                onTouchMove: q.handleUserScrollGesture,
-                                onKeyDown: q.handleKeyDown,
-                                ...er,
+                                onResize: Q.handleResize,
+                                onScroll: Q.handleScroll,
+                                onMouseDown: Q.handleMouseDown,
+                                onMouseUp: Q.handleMouseUp,
+                                onWheel: Q.handleUserScrollGesture,
+                                onTouchMove: Q.handleUserScrollGesture,
+                                onKeyDown: Q.handleKeyDown,
+                                ...eh,
                                 tabIndex: -1,
                                 role: "group",
                                 children: (0, a.jsxs)(_.W.Provider, {
-                                    value: eh,
+                                    value: ef,
                                     children: [
-                                        ei,
+                                        eo,
                                         (0, a.jsxs)("ol", {
                                             className: r6.bv,
                                             "aria-label": eL.intl.formatToPlainString(eL.t.XarRiL, {
                                                 channelName: B ?? "",
                                             }),
-                                            ...ec,
+                                            ...eg,
                                             children: [
                                                 (0, a.jsx)("span", {
                                                     className: r6.$4,
@@ -6681,7 +6689,7 @@ function ot(e) {
                                                     "aria-hidden": !0,
                                                     children: eL.intl.string(eL.t["Spb3s/"]),
                                                 }),
-                                                X,
+                                                es,
                                                 (0, a.jsx)("div", {
                                                     className: c()({
                                                         [r6.lB]: !D,
@@ -6698,9 +6706,9 @@ function ot(e) {
                                     ],
                                 }),
                             }),
-                            ex ? null : (0, a.jsx)("div", { className: eE }),
-                            ee,
-                            J && (0, a.jsx)(lG, { channel: m, scrollManager: q }),
+                            e_ ? null : (0, a.jsx)("div", { className: ej }),
+                            er,
+                            ee && (0, a.jsx)(lG, { channel: m, scrollManager: Q }),
                         ],
                     }),
                 ],
