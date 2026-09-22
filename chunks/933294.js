@@ -10,7 +10,7 @@ var i = n(264686),
 var d = n(141931),
     c = n(941426),
     f = n(475735),
-    p = n(544576),
+    p = n(25578),
     h = n(731854);
 let _ = new c.Vy("VibegrationsNativeCapture");
 function g(e, t) {

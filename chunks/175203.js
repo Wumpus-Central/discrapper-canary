@@ -60,7 +60,7 @@ var t = s(477900),
     eo = s(706787),
     ec = s(280450),
     ed = s(111162),
-    er = s(544576),
+    er = s(25578),
     eu = s(290863),
     ep = s(485296),
     em = s(977997),
@@ -263,15 +263,15 @@ let e_ = [eO.lp.ACTIVITY],
                 });
         }
         let { ref: e1, width: e8, height: e7 } = (0, U.Ay)(),
-            e6 = (0, r.bG)([ep.A], () => (u.type === eO.lp.USER ? ep.A.getVoiceVolume(u.id) : -1 / 0)),
-            e2 = (0, H.v)({ isSpeaking: eU, voiceDb: e6, spreadDirection: H.O.INSET_ONLY, maxInnerSpreadRadius: 4 }),
+            e2 = (0, r.bG)([ep.A], () => (u.type === eO.lp.USER ? ep.A.getVoiceVolume(u.id) : -1 / 0)),
+            e6 = (0, H.v)({ isSpeaking: eU, voiceDb: e2, spreadDirection: H.O.INSET_ONLY, maxInnerSpreadRadius: 4 }),
             e5 = (0, eO.Ay)(u) ? p.k : eP ? m.VideoIcon : A.E,
-            e4 = u.type === eO.lp.STREAM && k;
+            e9 = u.type === eO.lp.STREAM && k;
         return (0, t.jsx)(D.A, {
             section: eb.JJy.VOICE_CHANNEL_TILE,
             children: (0, t.jsx)(F.Ay, {
                 streamKey: u.id,
-                enableZoom: e4,
+                enableZoom: e9,
                 children: (0, t.jsx)("div", {
                     className: a()(eM.iE, { [eM.DF]: eL }, E),
                     style: N,
@@ -364,7 +364,7 @@ let e_ = [eO.lp.ACTIVITY],
                                         b && !R
                                             ? (0, t.jsx)("div", {
                                                   className: a()(eM.PQ, { [eM.pU]: !k && (ew || null != eW) }),
-                                                  style: k || ew ? void 0 : e2,
+                                                  style: k || ew ? void 0 : e6,
                                               })
                                             : null,
                                     ],

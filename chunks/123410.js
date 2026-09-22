@@ -1949,7 +1949,7 @@ function iJ() {
     return { runningGame: t ?? void 0, runningGameApplication: n ?? void 0 };
 }
 var i0 = n(769015),
-    i1 = n(544576),
+    i1 = n(25578),
     i2 = n(935671),
     i3 = n(435075);
 function i5(e) {

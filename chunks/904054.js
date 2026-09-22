@@ -1,6 +1,6 @@
 n.d(t, { A: () => s });
 var i = n(885386),
-    r = n(544576),
+    r = n(25578),
     a = n(824744);
 function s(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : (i.dG.getSetting()?.volume ?? 100);

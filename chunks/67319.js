@@ -434,7 +434,7 @@ var eF = n(661531),
     e2 = n(280056),
     e5 = n(204651),
     e4 = n(116108);
-function e6(e) {
+function e3(e) {
     let { width: t = 24, height: n = 24, isBadged: s = !1 } = e,
         [a] = l.useState(() => (0, e9.A)());
     return (0, i.jsxs)("svg", {
@@ -455,13 +455,13 @@ function e6(e) {
         ],
     });
 }
-function e3(e) {
+function e6(e) {
     let { className: t, numRequestToSpeak: n } = e,
         l = n > 0;
     return (0, i.jsxs)("div", {
         className: a()(e4.v, t),
         children: [
-            (0, i.jsx)(e6, { isBadged: l }),
+            (0, i.jsx)(e3, { isBadged: l }),
             l ? (0, i.jsx)(J.E, { className: e4.F, variant: "text-xs/semibold", children: n > 99 ? "99+" : n }) : null,
         ],
     });
@@ -482,7 +482,7 @@ function e7(e) {
         onClick: c,
         label: n ? eg.intl.string(eg.t.gKGz7A) : eg.intl.string(eg.t.ImQ4dW),
         className: s,
-        iconComponent: () => (0, i.jsx)(e3, { numRequestToSpeak: a, className: s }),
+        iconComponent: () => (0, i.jsx)(e6, { numRequestToSpeak: a, className: s }),
         ...o,
     });
 }
@@ -896,7 +896,7 @@ var tb = n(844222),
     tM = n(616356),
     tk = n(977997),
     tG = n(312006),
-    tD = n(544576),
+    tD = n(25578),
     tV = n(756872);
 function tz(e) {
     let { aspectRatio: t, className: n, children: l, width: s, ...a } = e,
@@ -1195,7 +1195,7 @@ var tJ = n(847374),
     t2 = n(636585),
     t5 = n(486020),
     t4 = n(799656);
-function t6(e) {
+function t3(e) {
     let { channel: t, speaker: s, className: r } = e,
         o = l.useRef(null),
         { newestAnalyticsLocation: c } = (0, f.Ay)(),
@@ -1278,14 +1278,14 @@ function t6(e) {
             }),
     });
 }
-function t3(e) {
+function t6(e) {
     let { speakers: t, channel: n } = e;
     return (0, i.jsx)(t2.A, {
         className: t4.z,
         guildId: n.guild_id,
         users: t,
         max: 10,
-        renderUser: (e, t, l) => (0, i.jsx)(t6, { channel: n, speaker: e, className: t }, l),
+        renderUser: (e, t, l) => (0, i.jsx)(t3, { channel: n, speaker: e, className: t }, l),
         renderMoreUsers: (e, t, n) => (0, i.jsx)("div", { className: a()(t4.$U, t), children: e }, n),
     });
 }
@@ -1325,7 +1325,7 @@ let t8 = l.memo(function (e) {
                 null != o &&
                 o.length > 0 &&
                 (0, i.jsxs)(i.Fragment, {
-                    children: [(0, i.jsx)(t3, { channel: c, speakers: o }), d && (0, i.jsx)(t0.Ay, {})],
+                    children: [(0, i.jsx)(t6, { channel: c, speakers: o }), d && (0, i.jsx)(t0.Ay, {})],
                 }),
             (0, i.jsx)(tJ.a, {
                 size: "custom",
@@ -2017,14 +2017,14 @@ function n5(e) {
     );
 }
 var n4 = n(104171),
-    n6 = n(81466),
-    n3 = n(823508);
+    n3 = n(81466),
+    n6 = n(823508);
 function n7(e) {
     let { className: t, guildId: l } = e,
-        s = (0, n3.A)();
+        s = (0, n6.A)();
     return (0, i.jsx)(nT.A, {
         className: t,
-        icon: (0, i.jsx)(n6.CalendarIcon, { size: "custom", color: "currentColor", height: 20, width: 20 }),
+        icon: (0, i.jsx)(n3.CalendarIcon, { size: "custom", color: "currentColor", height: 20, width: 20 }),
         color: eF.A.unsafe_rawColors.BRAND_500.css,
         title: eg.intl.string(eg.t["60lJ0C"]),
         description: eg.intl.string(eg.t["EYn7/y"]),
