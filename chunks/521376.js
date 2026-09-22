@@ -1466,7 +1466,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e3 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eH.A().log(
-    `[BUILD INFO] Release Channel: ${e3}, Build Number: 618439, Version Hash: 597cac984f2181a19e34983aaa58417bff89f175`,
+    `[BUILD INFO] Release Channel: ${e3}, Build Number: 618452, Version Hash: b914016f644c6c29aacf95fb4c9050a6e8294529`,
 ),
     v.A.setTags({ appContext: x.QCW }),
     eI.A.initBasic(),
@@ -19476,7 +19476,12 @@ function mi(e) {
             icon: t.entryPointIcon,
             onMouseEnter: d,
             onMouseLeave: c,
-            showHoverGradient: !0 === t.showHoverGradient,
+            ...(!0 === t.showHoverGradient && {
+                showHoverGradient: !0,
+                hoverGradientStart: iX.A.colors.COLLECTIBLES_TAB_GRADIENT_CENTER,
+                hoverGradientMiddle: iX.A.colors.COLLECTIBLES_TAB_GRADIENT_INNER,
+                hoverGradientEnd: iX.A.colors.COLLECTIBLES_TAB_GRADIENT_OUTER,
+            }),
             children: [
                 (0, R.jsx)(mn, { backgroundAsset: a, backgroundStyle: s, shouldApplyFade: l, buttonRef: o }),
                 (0, R.jsx)(g8, {
@@ -19503,7 +19508,12 @@ function mr(e) {
         ...n,
         onMouseEnter: d ? l : void 0,
         onMouseLeave: d ? o : void 0,
-        showHoverGradient: t?.showHoverGradient === !0,
+        ...(t?.showHoverGradient === !0 && {
+            showHoverGradient: !0,
+            hoverGradientStart: iX.A.colors.COLLECTIBLES_TAB_GRADIENT_CENTER,
+            hoverGradientMiddle: iX.A.colors.COLLECTIBLES_TAB_GRADIENT_INNER,
+            hoverGradientEnd: iX.A.colors.COLLECTIBLES_TAB_GRADIENT_OUTER,
+        }),
         children: [
             d && (0, R.jsx)(mn, { backgroundAsset: i, backgroundStyle: r, shouldApplyFade: a, buttonRef: s }),
             (0, R.jsx)(g8, {
@@ -19562,6 +19572,12 @@ function ms(e) {
                 listItemRef: c,
                 onMouseEnter: o,
                 onMouseLeave: d,
+                ...(!0 === t.showHoverGradient && {
+                    showHoverGradient: !0,
+                    hoverGradientStart: iX.A.colors.COLLECTIBLES_TAB_GRADIENT_CENTER,
+                    hoverGradientMiddle: iX.A.colors.COLLECTIBLES_TAB_GRADIENT_INNER,
+                    hoverGradientEnd: iX.A.colors.COLLECTIBLES_TAB_GRADIENT_OUTER,
+                }),
                 children: [
                     (0, R.jsx)(mn, { backgroundAsset: r, backgroundStyle: a, shouldApplyFade: l, buttonRef: s }),
                     (0, R.jsx)(g8, {
@@ -21555,7 +21571,7 @@ let Nz = "isHideDevBanner",
                     className: ts()(N$.Wz, N$.mr),
                     children: [
                         (0, R.jsx)(NK, { className: N$.Kk }),
-                        tg.intl.format(tg.t.uyrfYF, { buildNumber: "618439" }),
+                        tg.intl.format(tg.t.uyrfYF, { buildNumber: "618452" }),
                         (0, R.jsx)(r, {}),
                     ],
                 })

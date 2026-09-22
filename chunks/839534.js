@@ -120,6 +120,7 @@ class R {
     badgeText;
     badgeCountdownEndsAt;
     buttonLabel;
+    showHoverGradient;
     constructor(e) {
         ((this.type = N.G.COACHMARK),
             (this.title = e.title),
@@ -131,7 +132,8 @@ class R {
             (this.badgeIcon = e.badgeIcon),
             (this.badgeText = e.badgeText),
             (this.badgeCountdownEndsAt = e.badgeCountdownEndsAt),
-            (this.buttonLabel = e.buttonLabel));
+            (this.buttonLabel = e.buttonLabel),
+            (this.showHoverGradient = e.showHoverGradient));
     }
     static fromServer(e) {
         return new R({
@@ -143,6 +145,7 @@ class R {
             badgeText: e.badge_text,
             badgeCountdownEndsAt: null != e.badge_countdown_ends_at ? new Date(e.badge_countdown_ends_at) : void 0,
             buttonLabel: e.button_label,
+            showHoverGradient: e.show_hover_gradient,
         });
     }
 }

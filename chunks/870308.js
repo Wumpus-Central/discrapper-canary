@@ -45,6 +45,7 @@ let A = function () {
                               badgeIcon: t.badgeIcon,
                               badgeText: t.badgeText,
                               badgeCountdownEndsAt: t.badgeCountdownEndsAt,
+                              showHoverGradient: t.showHoverGradient,
                               version: t.version,
                               entrypointBackgroundStyle: e?.style,
                               entryPointBackgroundAssets: {
