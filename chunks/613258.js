@@ -1,16 +1,16 @@
-n.d(t, { A: () => E });
-var l = n(477900),
-    s = n(582128),
-    i = n(503698),
-    r = n.n(i),
-    a = n(575593),
-    o = n(770178),
-    d = n(590180),
-    c = n(395856),
-    u = n(682301),
-    m = n(929283),
-    h = n(758836),
-    g = n(171934);
+l.d(t, { A: () => E });
+var n = l(477900),
+    s = l(582128),
+    i = l(503698),
+    r = l.n(i),
+    a = l(575593),
+    o = l(770178),
+    c = l(590180),
+    d = l(395856),
+    u = l(682301),
+    m = l(929283),
+    h = l(758836),
+    g = l(171934);
 let x = [],
     f = [
         "1212569433839636530",
@@ -32,13 +32,13 @@ let x = [],
         "1404558257065824347",
     ];
 function p(e) {
-    let { config: t, baseLeft: n, transitioning: s, resolvedProduct: i } = e,
+    let { config: t, baseLeft: l, transitioning: s, resolvedProduct: i } = e,
         r = window.innerHeight,
-        o = i ?? d.A.getProduct(t.skuId),
-        c = o?.items[0],
+        o = i ?? c.A.getProduct(t.skuId),
+        d = o?.items[0],
         u = o?.type,
-        h = n + t.horizontalJitter;
-    return (0, l.jsx)("div", {
+        h = l + t.horizontalJitter;
+    return (0, n.jsx)("div", {
         className: g.LY,
         style: {
             top: s ? -r - 384 : t.top,
@@ -49,12 +49,12 @@ function p(e) {
             transitionDelay: t.transitionDelay,
             transitionDuration: t.transitionDuration,
         },
-        children: null != c && u === a.R.AVATAR_DECORATION && (0, l.jsx)(m.i, { item: c }),
+        children: null != d && u === a.R.AVATAR_DECORATION && (0, n.jsx)(m.i, { item: d }),
     });
 }
 function b(e) {
-    let { peaking: t, transitioning: n, parentWidth: i } = e,
-        [o, d] = s.useState(!1),
+    let { peaking: t, transitioning: l, parentWidth: i } = e,
+        [o, c] = s.useState(!1),
         [m] = s.useState(() =>
             [...f]
                 .sort(() => Math.random() - 0.5)
@@ -68,7 +68,7 @@ function b(e) {
                     transitionDuration: `${h.H1 - 200 * Math.random()}ms`,
                 })),
         ),
-        b = (0, c.$)("shop_transition_jumble"),
+        b = (0, d.$)("shop_transition_jumble"),
         E = s.useMemo(() => f, []),
         v = (0, u.hv)(b ? E : x, { needsCategory: !1 }),
         j = s.useMemo(() => {
@@ -83,19 +83,19 @@ function b(e) {
             if (null == i || i <= 0) return [];
             let e = Math.max(1, Math.floor(i / 130)),
                 t = i / e;
-            return Array.from({ length: e }, (e, n) => ({ config: j[n % j.length], baseLeft: n * t }));
+            return Array.from({ length: e }, (e, l) => ({ config: j[l % j.length], baseLeft: l * t }));
         }, [i, j]);
     return (
         s.useEffect(() => {
-            n && setTimeout(() => d(!0), h.H1);
-        }, [n]),
-        (0, l.jsx)("div", {
+            l && setTimeout(() => c(!0), h.H1);
+        }, [l]),
+        (0, n.jsx)("div", {
             className: r()(g.rA, { [g.Kb]: t, [g.pp]: o }),
             children: S.map((e, t) => {
                 let { config: s, baseLeft: i } = e;
-                return (0, l.jsx)(
+                return (0, n.jsx)(
                     p,
-                    { config: s, baseLeft: i, transitioning: n, resolvedProduct: v[s.skuId]?.product },
+                    { config: s, baseLeft: i, transitioning: l, resolvedProduct: v[s.skuId]?.product },
                     s.skuId + t,
                 );
             }),
@@ -103,18 +103,18 @@ function b(e) {
     );
 }
 let E = function (e) {
-    let { peaking: t, transitioning: n } = e,
+    let { peaking: t, transitioning: l } = e,
         i = s.useRef(null),
         [r, a] = s.useState(0),
-        d = s.useCallback(() => {
+        c = s.useCallback(() => {
             null != i.current && a(i.current.offsetWidth);
         }, []);
     return (
-        (0, o.g)(i, d),
-        (0, l.jsx)("div", {
+        (0, o.g)(i, c),
+        (0, n.jsx)("div", {
             ref: i,
             className: g.eL,
-            children: (0, l.jsx)(b, { peaking: t, transitioning: n, parentWidth: r }),
+            children: (0, n.jsx)(b, { peaking: t, transitioning: l, parentWidth: r }),
         })
     );
 };

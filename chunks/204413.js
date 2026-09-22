@@ -9,14 +9,14 @@ function a(r) {
             useShorterCTA: a = !1,
             isPersistentCTA: s = !1,
             buttonTextOverride: l,
-            ...o
+            ...c
         } = r,
-        { buttonText: c, marketingSubscriptionTierSkuId: p } = (0, e.s)({
+        { buttonText: o, marketingSubscriptionTierSkuId: p } = (0, e.s)({
             subscriptionTier: i,
             hasActivePromotion: t,
             useShorterCTA: a,
             isPersistentCTA: s,
         }),
-        { subscribeButtonProps: d } = (0, n.B)({ ...o, subscriptionTier: p, buttonTextOverride: l ?? c });
+        { subscribeButtonProps: d } = (0, n.B)({ ...c, subscriptionTier: p, buttonTextOverride: l ?? o });
     return { subscribeButtonProps: d, subscriptionTier: p === u.pe.NONE ? null : p };
 }

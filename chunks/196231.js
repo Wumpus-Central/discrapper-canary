@@ -1,4 +1,4 @@
-r.d(t, { S: () => I });
+r.d(t, { S: () => v });
 var n = r(477900),
     l = r(582128),
     s = r(503698),
@@ -11,83 +11,83 @@ var n = r(477900),
     g = r(174459),
     p = r(440938),
     m = r(590180),
-    _ = r(597783),
+    h = r(597783),
     E = r(212407),
-    h = r(758836),
+    _ = r(758836),
     S = r(652215),
-    L = r(375708),
-    A = r(105499);
-function I(e) {
+    x = r(375708),
+    I = r(105499);
+function v(e) {
     let {
             category: t,
             subblock: r,
             badgeText: s,
-            enablePreview: I,
-            pageType: C = h.G2.HOME,
-            className: x,
-            handleTransition: v,
+            enablePreview: v,
+            pageType: L = _.G2.HOME,
+            className: A,
+            handleTransition: C,
             listItemProps: y,
         } = e,
         f = r?.categorySkuId;
     null == f && null != r && (f = m.A.getCategoryByStoreListingId(r?.categoryStoreListingId)?.skuId);
     let O = f ?? t?.skuId ?? "",
-        { handleCardVisibilityChange: k } = (0, _.Z)(O, C, "marketing featured block"),
-        P = (0, E.s4)(t, r, I),
+        { handleCardVisibilityChange: k } = (0, h.Z)(O, L, "marketing featured block"),
+        j = (0, E.s4)(t, r, v),
         T = l.useRef(null),
-        j = r?.bodyText,
+        P = r?.bodyText,
         b = r?.name ?? t?.name,
-        B = null != b ? L.intl.formatToPlainString(L.t.frSHlf, { destination: b }) : void 0,
-        R = (0, p.uM)();
+        B = null != b ? x.intl.formatToPlainString(x.t.frSHlf, { destination: b }) : void 0,
+        N = (0, p.uM)();
     return (0, n.jsx)(i.L, {
         innerRef: T,
         onChange: k,
         threshold: 0,
         children: (0, n.jsxs)(o.D, {
-            className: a()(A.oT, x),
+            className: a()(I.oT, A),
             innerRef: T,
-            style: { ...(null != P && { backgroundImage: `url(${P})` }) },
+            style: { ...(null != j && { backgroundImage: `url(${j})` }) },
             ...y,
             onClick: () => {
-                (v({
+                (C({
                     sourceButton: "shop marketing tile",
                     categorySkuId: O,
                     isInternalShopDeeplink: !0,
                     isOrbsExclusive: t?.isOrbsExclusive,
                 }),
                     g.default.track(S.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                        collectibles_shop_session_id: R?.sessionId,
+                        collectibles_shop_session_id: N?.sessionId,
                         sku_id: O,
-                        page_type: C,
-                        page_section: R?.pageSection,
-                        page_category: R?.pageCategory,
+                        page_type: L,
+                        page_section: N?.pageSection,
+                        page_category: N?.pageCategory,
                         tile_type: "FEATURED_BLOCK",
-                        tile_position: String(R?.tilePosition),
+                        tile_position: String(N?.tilePosition),
                         cta_name: null,
                     }));
             },
             children: [
-                null != s && (0, n.jsx)(u.Lp, { disableColor: !0, text: s, className: A.pv }),
+                null != s && (0, n.jsx)(u.Lp, { disableColor: !0, text: s, className: I.pv }),
                 (0, n.jsx)("div", {
-                    className: A.Gh,
+                    className: I.Gh,
                     children:
-                        null != j &&
+                        null != P &&
                         (0, n.jsx)(c.D, {
                             lineClamp: 4,
-                            className: A.BN,
+                            className: I.BN,
                             style: { color: r?.bannerTextColor ?? "white" },
                             variant: "heading-md/medium",
-                            children: j,
+                            children: P,
                         }),
                 }),
                 (0, n.jsx)("div", {
-                    className: A.b2,
+                    className: I.b2,
                     children: (0, n.jsx)(d.$, {
                         variant: "overlay-primary",
-                        text: L.intl.string(L.t.jVcuVY),
+                        text: x.intl.string(x.t.jVcuVY),
                         "aria-label": B,
                         tabIndex: y?.tabIndex,
                         onClick: (e) => {
-                            (v({
+                            (C({
                                 sourceButton: "shop marketing take me there button",
                                 categorySkuId: O,
                                 isInternalShopDeeplink: !0,
@@ -95,13 +95,13 @@ function I(e) {
                             }),
                                 e.stopPropagation(),
                                 g.default.track(S.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                                    collectibles_shop_session_id: R?.sessionId,
+                                    collectibles_shop_session_id: N?.sessionId,
                                     sku_id: O,
-                                    page_type: C,
-                                    page_section: R?.pageSection,
-                                    page_category: R?.pageCategory,
+                                    page_type: L,
+                                    page_section: N?.pageSection,
+                                    page_category: N?.pageCategory,
                                     tile_type: "FEATURED_BLOCK",
-                                    tile_position: String(R?.tilePosition),
+                                    tile_position: String(N?.tilePosition),
                                     cta_name: "Take me there button",
                                 }));
                         },

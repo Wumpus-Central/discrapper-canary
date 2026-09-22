@@ -1,8 +1,8 @@
 t.d(n, { A: () => h });
 var i = t(477900),
     l = t(582128),
-    a = t(503698),
-    s = t.n(a),
+    s = t(503698),
+    a = t.n(s),
     o = t(815021),
     r = t(939249),
     c = t(297264),
@@ -14,7 +14,7 @@ function h(e) {
     let {
             className: n,
             iconContainerClassName: t,
-            icon: a,
+            icon: s,
             title: h,
             description: C,
             userCount: p,
@@ -29,10 +29,10 @@ function h(e) {
             [f],
         );
     return (0, i.jsxs)(r.D, {
-        className: s()(m.kL, n, null != g && { [m.U6]: g }),
+        className: a()(m.kL, n, null != g && { [m.U6]: g }),
         onClick: x,
         children: [
-            (0, i.jsx)("div", { className: s()(m.Kk, t), children: a }),
+            (0, i.jsx)("div", { className: a()(m.Kk, t), children: s }),
             (0, i.jsxs)("div", {
                 className: m.FS,
                 children: [

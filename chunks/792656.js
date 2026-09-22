@@ -9,8 +9,8 @@ function a(r) {
             useShorterCTA: a,
             isPersistentCTA: s,
             buttonTextOverride: l,
-            defaultTextOverride: o,
-            iconOverride: c,
+            defaultTextOverride: c,
+            iconOverride: o,
             variantOverride: p,
             ...d
         } = r,
@@ -20,8 +20,8 @@ function a(r) {
             useShorterCTA: a,
             isPersistentCTA: s,
             buttonTextOverride: l,
-            defaultTextOverride: o,
-            iconOverride: c,
+            defaultTextOverride: c,
+            iconOverride: o,
             variantOverride: p,
         });
     return (0, e.jsx)(n.A, { ...d, ...f, subscriptionTier: b });

@@ -1,4 +1,4 @@
-n.d(t, { m: () => w, A: () => R });
+n.d(t, { m: () => R, A: () => w });
 var i = n(477900),
     s = n(582128),
     r = n(17928);
@@ -90,7 +90,7 @@ function T(e) {
     });
 }
 var P = n(40025);
-function w(e) {
+function R(e) {
     let { disabled: t, size: n } = e,
         [s] = (0, r.yK)([m.A], () => [m.A.getCurrentDesktopIcon()]);
     return (0, i.jsx)(i.Fragment, {
@@ -118,7 +118,7 @@ function w(e) {
             ),
     });
 }
-function R(e) {
+function w(e) {
     let { className: t, disabled: n, isEditor: s, renderCTAButtons: r, iconSize: o } = e,
         m = (0, u.GV)(),
         { ref: h, ...g } = (0, l._u)({ orientation: "horizontal", labelledBy: m });
@@ -162,7 +162,7 @@ function R(e) {
                     wrap: !0,
                     gap: 8,
                     style: { marginTop: 16 },
-                    children: (0, i.jsx)(w, { disabled: n, size: o }),
+                    children: (0, i.jsx)(R, { disabled: n, size: o }),
                 }),
             ],
         }),

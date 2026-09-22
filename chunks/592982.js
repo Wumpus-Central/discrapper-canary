@@ -2,8 +2,8 @@ t.d(n, { A: () => N });
 var i = t(477900);
 t(582128);
 var l = t(17928),
-    a = t(980707),
-    s = t(477782),
+    s = t(980707),
+    a = t(477782),
     o = t(587895),
     r = t(73883),
     c = t(267102),
@@ -42,7 +42,7 @@ function N(e) {
         F = (0, p.A)(),
         X = (0, r.A)(N),
         K = (0, m.f)(y);
-    return (0, i.jsxs)(a.W, {
+    return (0, i.jsxs)(s.W, {
         "data-menu-migrated": !0,
         onClose: n,
         onSelect: t,
@@ -50,8 +50,8 @@ function N(e) {
         navId: "more-settings-context",
         "aria-label": j.intl.string(j.t.FTLzdR),
         children: [
-            (0, i.jsx)(s.rX, { children: S !== T.rbe.GUILD_STAGE_VOICE ? U : null }),
-            (0, i.jsxs)(s.rX, {
+            (0, i.jsx)(a.rX, { children: S !== T.rbe.GUILD_STAGE_VOICE ? U : null }),
+            (0, i.jsxs)(a.rX, {
                 children: [
                     S === T.rbe.GUILD_STAGE_VOICE ? B : null,
                     S === T.rbe.GUILD_STAGE_VOICE ? w : null,
@@ -61,9 +61,9 @@ function N(e) {
                     S === T.rbe.GUILD_STAGE_VOICE || S === T.rbe.GUILD_VOICE ? k : null,
                 ],
             }),
-            (0, i.jsx)(s.rX, { children: X }),
-            (0, i.jsxs)(s.rX, { children: [V, !N.isManaged() && N.isPrivate() ? K : null] }),
-            (0, i.jsxs)(s.rX, { children: [null != L ? H : null, null != M ? Y : null] }),
+            (0, i.jsx)(a.rX, { children: X }),
+            (0, i.jsxs)(a.rX, { children: [V, !N.isManaged() && N.isPrivate() ? K : null] }),
+            (0, i.jsxs)(a.rX, { children: [null != L ? H : null, null != M ? Y : null] }),
         ],
     });
 }

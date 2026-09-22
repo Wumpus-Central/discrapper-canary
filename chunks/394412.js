@@ -2,8 +2,8 @@ t.d(n, { A: () => f });
 var i = t(477900);
 t(582128);
 var l = t(17928),
-    a = t(661531),
-    s = t(192308),
+    s = t(661531),
+    a = t(192308),
     o = t(81466),
     r = t(931991),
     c = t(734057),
@@ -39,14 +39,14 @@ function f(e) {
                               height: 20,
                               width: 20,
                           }),
-                          color: a.A.unsafe_rawColors.GREEN_360.css,
+                          color: s.A.unsafe_rawColors.GREEN_360.css,
                           title: x.intl.formatToPlainString(T(e) ? x.t["1vGXqM"] : x.t.xMJyla, { eventName: e.name }),
                           description: x.intl.formatToPlainString(x.t.PTebCR, {
                               startTime: (0, C.CC)(e.scheduled_start_time).startDateTimeString,
                           }),
                           onClick: () => {
                               T(e)
-                                  ? (0, s.openModalLazy)(async () => {
+                                  ? (0, a.openModalLazy)(async () => {
                                         let { default: n } = await Promise.all([
                                             t.e("476227"),
                                             t.e("998835"),

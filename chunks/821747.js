@@ -2,8 +2,8 @@ t.d(n, { A: () => C });
 var i = t(477900);
 t(582128);
 var l = t(503698),
-    a = t.n(l),
-    s = t(17928),
+    s = t.n(l),
+    a = t(17928),
     o = t(827343),
     r = t(384059),
     c = t(20504),
@@ -22,14 +22,14 @@ function C(e) {
             currentWindow: x = window,
             location: g,
         } = e,
-        { currentVolume: f, muted: E } = (0, s.cf)([u.Ay], () => ({
+        { currentVolume: f, muted: E } = (0, a.cf)([u.Ay], () => ({
             currentVolume: u.Ay.getLocalVolume(C, p),
             muted: u.Ay.isLocalMute(C, p),
         }));
     return (0, i.jsx)(m.A, {
         children: (0, i.jsx)(c.A, {
             currentWindow: x,
-            iconClassName: a()(t, h.pd),
+            iconClassName: s()(t, h.pd),
             sliderClassName: l,
             className: n,
             value: (0, d.M)(f),

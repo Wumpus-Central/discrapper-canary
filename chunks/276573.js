@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     Nr: "card_a72ffc",
     wx: "header_a72ffc",
     Qq: "text_a72ffc",

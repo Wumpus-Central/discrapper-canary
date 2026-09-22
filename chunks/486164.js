@@ -1,6 +1,6 @@
 l.d(t, { A: () => s });
-var n = l(477900),
-    a = l(683063);
+var a = l(477900),
+    n = l(683063);
 let s = function (e) {
-    return (0, n.jsx)(a.u, { ...e, assetSize: 80, padding: "lg", position: "right" });
+    return (0, a.jsx)(n.u, { ...e, assetSize: 80, padding: "lg", position: "right" });
 };

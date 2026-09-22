@@ -12,8 +12,8 @@ var l = r(503698),
 let g = function (e) {
     let { bannerStatic: t, bannerAnimated: r, bannerRive: l, isResponsive: g = !1, eventTargetRef: p } = e,
         m = (0, a.bG)([o.Ay], () => o.Ay.useReducedMotion),
-        _ = (0, a.bG)([c.A], () => c.A.isFocused()),
-        E = null != r && !m && _;
+        h = (0, a.bG)([c.A], () => c.A.isFocused()),
+        E = null != r && !m && h;
     return null != l
         ? (0, n.jsx)(i._, { src: l, fit: "fit-width", eventTargetRef: p })
         : E

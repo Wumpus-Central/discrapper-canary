@@ -1,1 +1,1 @@
-e.exports = { d: "emptyContainer__88a04", x: "noGamesConnectedText__88a04" };
+_.exports = { d: "emptyContainer__88a04", x: "noGamesConnectedText__88a04" };

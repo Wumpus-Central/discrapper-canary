@@ -1,8 +1,8 @@
 t.d(n, { A: () => T });
 var i = t(477900),
     l = t(582128),
-    a = t(554146),
-    s = t(789645),
+    s = t(554146),
+    a = t(789645),
     o = t(534890),
     r = t(367513),
     c = t(738876),
@@ -23,12 +23,12 @@ let T = function (e) {
     let { channel: n, guild: t, maxWidth: T } = e,
         j = (0, u.Ay)(n);
     l.useEffect(() => {
-        (0, h.Dr)(a.M.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK, { dismissAction: E.i.AUTO });
+        (0, h.Dr)(s.M.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK, { dismissAction: E.i.AUTO });
     }, []);
     let N = l.useCallback(() => {
             (r.A.updateChatOpen(n.id, !1), x._.safeDispatch(f.jej.FOCUS_CHAT_BUTTON));
         }, [n.id]),
-        _ = (0, i.jsx)(C.Ay.Icon, { icon: s.P, tooltip: I.intl.string(I.t.cpT0Cq), onClick: N });
+        _ = (0, i.jsx)(C.Ay.Icon, { icon: a.P, tooltip: I.intl.string(I.t.cpT0Cq), onClick: N });
     return (0, i.jsxs)(A.A, {
         sidebarType: A.X.CallChatSidebar,
         maxWidth: T,

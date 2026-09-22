@@ -13,9 +13,9 @@
     l(976860),
     l(780964),
     l(766075));
-var n = l(975571);
+var a = l(975571);
 (l(872725), l(566119), l(94264));
-var a = l(652215);
+var n = l(652215);
 (l(758836),
     l(901123),
     l(1889),
@@ -23,6 +23,6 @@ var a = l(652215);
     l(46788),
     l(909340),
     l(455482),
-    n.A.getArticleURL(a.MVz.ORBS_REWARDS_FAQ),
+    a.A.getArticleURL(n.MVz.ORBS_REWARDS_FAQ),
     l(762493));
 let s = "orbs";

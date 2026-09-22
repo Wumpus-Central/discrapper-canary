@@ -1,8 +1,8 @@
 (t.d(n, { V: () => j }), t(321073));
 var i = t(477900),
     l = t(582128),
-    a = t(503698),
-    s = t.n(a),
+    s = t(503698),
+    a = t.n(s),
     o = t(435558),
     r = t(17928),
     c = t(367513),
@@ -30,14 +30,14 @@ function v(e) {
 }
 function T(e) {
     let { className: n, channelId: t } = e,
-        { unreadCount: l, mentionCount: a, isTyping: s, voiceChannelIsSelected: o } = v(t);
-    return (0, i.jsx)(g.A, { className: n, unreadCount: l, mentionCount: a, isTyping: s, canBadge: o });
+        { unreadCount: l, mentionCount: s, isTyping: a, voiceChannelIsSelected: o } = v(t);
+    return (0, i.jsx)(g.A, { className: n, unreadCount: l, mentionCount: s, isTyping: a, canBadge: o });
 }
 function j(e) {
     let n,
         {
             channelId: t,
-            className: a,
+            className: s,
             showingClassName: o,
             onClick: m,
             inPopout: h,
@@ -55,18 +55,18 @@ function j(e) {
             mentionCount: R,
         } = (function (e) {
             let { unreadCount: n, mentionCount: t, isTyping: i } = v(e),
-                [a, s] = l.useState(!1);
+                [s, a] = l.useState(!1);
             return (
                 l.useEffect(() => {
-                    s(n > 0);
+                    a(n > 0);
                     let e = setTimeout(() => {
-                        s(!1);
+                        a(!1);
                     }, x.R);
                     return () => {
-                        (clearTimeout(e), s(!1));
+                        (clearTimeout(e), a(!1));
                     };
                 }, [n]),
-                { isShowing: a || t > 0 || i, unreadCount: n, mentionCount: t }
+                { isShowing: s || t > 0 || i, unreadCount: n, mentionCount: t }
             );
         })(t),
         D = l.useCallback(() => {
@@ -111,7 +111,7 @@ function j(e) {
             "aria-label": G.join(", "),
             iconComponent: L,
             tooltipPosition: "bottom",
-            wrapperClassName: s()(a, null != o && { [o]: y }),
+            wrapperClassName: a()(s, null != o && { [o]: y }),
             forceTooltipOpen: P,
             ...j,
         })

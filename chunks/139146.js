@@ -13,8 +13,8 @@ var i = r(477900),
     h = r(661492),
     p = r(280450),
     _ = r(536572),
-    f = r(113265),
-    A = r(758836),
+    A = r(113265),
+    f = r(758836),
     E = r(375708),
     m = r(715838);
 let y = { xs: "xxs", sm: "xs", md: "refresh_sm" };
@@ -36,10 +36,10 @@ function T(t) {
             handleToggle: m,
             specificProductOrVariant: y,
             isPurchased: T,
-        } = (0, f.z)({ userId: c, product: e, selectedVariantIndex: r, location: s, onError: l }),
+        } = (0, A.z)({ userId: c, product: e, selectedVariantIndex: r, location: s, onError: l }),
         L = (0, _.s7)(y),
         g = n.useCallback(() => {
-            (o?.(S ? A.sH.REMOVE_FROM_WISHLIST : A.sH.ADD_TO_WISHLIST), m());
+            (o?.(S ? f.sH.REMOVE_FROM_WISHLIST : f.sH.ADD_TO_WISHLIST), m());
         }, [S, m, o]);
     return T
         ? null
@@ -64,8 +64,8 @@ function R(t) {
             variant: h = "default",
             size: p = "md",
             isWishlisted: _,
-            isBusy: f,
-            isFirstTimeWishlister: A,
+            isBusy: A,
+            isFirstTimeWishlister: f,
             isVisuallyHidden: T,
             onClick: R,
             shouldShowTooltip: L,
@@ -115,7 +115,7 @@ function R(t) {
             tabIndex: k,
             "aria-label": t,
             "aria-pressed": _,
-            "aria-busy": f,
+            "aria-busy": A,
             "aria-disabled": a,
             children: C.enabled
                 ? (0, i.jsx)(b, { colorClass: void 0 ?? W, size: v })
@@ -135,7 +135,7 @@ function R(t) {
                   }),
         });
     }
-    if (A && !a) {
+    if (f && !a) {
         let t = g.firstTimeTitle ?? E.intl.string(E.t["47Rhc3"]),
             e = g.firstTimeBody ?? E.intl.string(E.t.PXjA0b);
         return (0, i.jsx)(S.u, { title: t, body: e, shouldShow: L, children: M() });

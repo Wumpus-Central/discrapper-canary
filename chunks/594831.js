@@ -1,4 +1,4 @@
-(n.d(t, { Ay: () => J, Dz: () => z, MV: () => P, S4: () => Y, qZ: () => X }), n(321073));
+(n.d(t, { Ay: () => J, Dz: () => X, MV: () => P, S4: () => Y, qZ: () => z }), n(321073));
 var l = n(477900),
     i = n(582128),
     r = n(503698),
@@ -31,8 +31,8 @@ var l = n(477900),
     k = n(287809),
     M = n(977997),
     O = n(403362),
-    F = n(996439),
-    w = n(652215),
+    w = n(996439),
+    F = n(652215),
     G = n(375708),
     L = n(635613);
 let U = (e) => [
@@ -63,7 +63,7 @@ let U = (e) => [
     V = { searchType: T.n.FUZZY, sortType: T.r.JARO_WINKLER, searchStringGenerator: U, throttleMs: 100 },
     H = i.memo(function (e) {
         let { channel: t, query: n } = e,
-            [r] = (0, a.bG)([M.A], () => [M.A.getVoiceStatesForChannel(t.id), M.A.getVoiceStateVersion()], [t.id], F.D),
+            [r] = (0, a.bG)([M.A], () => [M.A.getVoiceStatesForChannel(t.id), M.A.getVoiceStateVersion()], [t.id], w.D),
             [s, u] = i.useState([]);
         (0, _.RT)(n, Object.values(r), u, V);
         let c = (0, a.yK)(
@@ -136,8 +136,8 @@ function Y() {
                                 let l = v.A.getChannel(n);
                                 return (
                                     null != l &&
-                                        b.A.can(w.xBc.VIEW_CHANNEL, l) &&
-                                        b.A.can(w.xBc.CONNECT, l) &&
+                                        b.A.can(F.xBc.VIEW_CHANNEL, l) &&
+                                        b.A.can(F.xBc.CONNECT, l) &&
                                         e.add(n),
                                     e
                                 );
@@ -156,8 +156,8 @@ function Y() {
                             let l = v.A.getChannel(t);
                             return (
                                 null != l &&
-                                    b.A.can(w.xBc.VIEW_CHANNEL, l) &&
-                                    b.A.can(w.xBc.CONNECT, l) &&
+                                    b.A.can(F.xBc.VIEW_CHANNEL, l) &&
+                                    b.A.can(F.xBc.CONNECT, l) &&
                                     !n.has(t) &&
                                     e.push(t),
                                 e
@@ -176,7 +176,7 @@ function K(e, t) {
         if (e[n].channel !== t[n].channel || !(0, u.v)(e[n].voiceStates ?? [], t[n].voiceStates ?? [])) return !1;
     return !0;
 }
-function X() {
+function z() {
     return (0, a.bG)(
         [D.A, R.Ay, M.A, j.A, b.A],
         () =>
@@ -186,7 +186,7 @@ function X() {
                         ...e,
                         ...R.Ay.getChannels(t.id)
                             [R.vM].filter(
-                                (e) => b.A.can(w.xBc.VIEW_CHANNEL, e.channel) && b.A.can(w.xBc.CONNECT, e.channel),
+                                (e) => b.A.can(F.xBc.VIEW_CHANNEL, e.channel) && b.A.can(F.xBc.CONNECT, e.channel),
                             )
                             .map((e) => {
                                 let { channel: t } = e;
@@ -205,7 +205,7 @@ function X() {
         K,
     );
 }
-function z() {
+function X() {
     return (0, a.bG)(
         [D.A, R.Ay, b.A],
         () =>
@@ -218,7 +218,7 @@ function z() {
                                 let { channel: t } = e;
                                 return t;
                             })
-                            .filter((e) => null != e && !!(0, C.pQ)(e.type) && b.A.can(w.xBc.VIEW_CHANNEL, e)),
+                            .filter((e) => null != e && !!(0, C.pQ)(e.type) && b.A.can(F.xBc.VIEW_CHANNEL, e)),
                     ],
                     [],
                 )
@@ -233,9 +233,9 @@ let B = i.memo(function (e) {
             i = (0, a.bG)([D.A], () => D.A.getGuild(n), [n]);
         if (null == i)
             switch (t.type) {
-                case w.rbe.DM:
+                case F.rbe.DM:
                     return (0, l.jsx)(p.Pk, { channel: t, size: d._3.SIZE_32 });
-                case w.rbe.GROUP_DM:
+                case F.rbe.GROUP_DM:
                     return (0, l.jsx)(p.IC, { channel: t, size: d._3.SIZE_32 });
                 default:
                     return null;

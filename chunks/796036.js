@@ -9,8 +9,8 @@ var i = n(91242),
     d = n(120426),
     c = n(171936),
     f = n(165610),
-    h = n(600732);
-let p = new Map(),
+    p = n(600732);
+let h = new Map(),
     _ = !1;
 function g() {
     _ ||
@@ -23,7 +23,7 @@ function g() {
         m());
 }
 function w(e) {
-    return p.has(e);
+    return h.has(e);
 }
 function m() {
     let e = new Map();
@@ -37,33 +37,33 @@ function m() {
         })(t);
         null != n && e.set(t, n);
     }
-    for (let [i, r] of [...p]) {
+    for (let [i, r] of [...h]) {
         var t, n;
         e.get(i) !== r.frameId &&
             ((t = i),
             (n = r),
-            p.delete(t),
+            h.delete(t),
             n.unregisterLookup(),
             l.A.removeFrameTarget(n.frameId, n.element),
             n.element.remove());
     }
     for (let [t, n] of e)
-        p.has(t) ||
+        h.has(t) ||
             (function (e, t) {
                 let n = document.createElement("div");
-                ((n.className = h.tF),
+                ((n.className = p.tF),
                     n.setAttribute("inert", ""),
                     n.setAttribute("aria-hidden", "true"),
                     E(n, s.A.isBuilderPreviewMobile()),
                     document.body.appendChild(n));
                 let i = { frameId: t, element: n, unregisterLookup: () => {} };
-                (p.set(e, i),
+                (h.set(e, i),
                     (i.unregisterLookup = (0, c.mn)(e, () => (0, d.F)(n, t))),
                     l.A.registerFrameTarget(t, n, r.A.Backstage));
             })(t, n);
     let _ = s.A.isBuilderPreviewMobile();
-    for (let e of p.values()) E(e.element, _);
+    for (let e of h.values()) E(e.element, _);
 }
 function E(e, t) {
-    (e.classList.toggle(h.lZ, t), e.classList.toggle(h.L_, !t));
+    (e.classList.toggle(p.lZ, t), e.classList.toggle(p.L_, !t));
 }

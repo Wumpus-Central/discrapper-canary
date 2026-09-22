@@ -1,40 +1,40 @@
-t.d(s, { A: () => y });
-var n = t(477900),
-    i = t(582128),
-    l = t(503698),
-    a = t.n(l),
-    r = t(17928),
-    u = t(778712),
-    d = t(97808),
-    c = t(939249),
-    o = t(935154),
-    f = t(442433),
-    A = t(297413),
-    h = t(714114),
-    m = t(394871),
-    v = t(178418),
-    E = t(87664),
-    I = t(449582),
-    p = t(88686),
-    g = t(214881),
-    x = t(290863),
-    M = t(19575),
-    _ = t(854627),
-    b = t(939496),
-    C = t(652215),
-    S = t(996988),
-    j = t(135650);
+n.d(s, { A: () => y });
+var t = n(477900),
+    i = n(582128),
+    l = n(503698),
+    a = n.n(l),
+    r = n(17928),
+    u = n(778712),
+    d = n(97808),
+    c = n(939249),
+    o = n(935154),
+    f = n(442433),
+    A = n(297413),
+    h = n(714114),
+    m = n(394871),
+    v = n(178418),
+    E = n(87664),
+    I = n(449582),
+    p = n(88686),
+    g = n(214881),
+    x = n(290863),
+    M = n(19575),
+    _ = n(854627),
+    b = n(939496),
+    C = n(652215),
+    S = n(996988),
+    j = n(135650);
 let k = u._3.SIZE_40,
     N = M.Ay.getEnableHardwareAcceleration();
 function y(e) {
     let { user: s, status: l, guildId: u, channelId: M, onSelect: y } = e,
         { theme: D, themeType: R } = (0, b.E)(),
         L = i.useMemo(() => s.isNonUserBot() || (0, v.c)(s, M), [s, M]),
-        { activities: F, isMobileOnline: T } = (0, r.cf)([x.A], () => ({
+        { activities: T, isMobileOnline: w } = (0, r.cf)([x.A], () => ({
             activities: x.A.getActivities(s.id),
             isMobileOnline: x.A.isMobileOnline(s.id),
         })),
-        w = (0, E.A)(s.id),
+        F = (0, E.A)(s.id),
         { voiceChannel: U } = (0, h.Ay)({ userId: s.id, guildId: u }),
         [O, P] = i.useState(!1),
         {
@@ -47,7 +47,7 @@ function y(e) {
         Z = (0, I.r)({ user: s, guildId: u }),
         G = i.useCallback(() => P(!0), []),
         B = i.useCallback(() => P(!1), []);
-    return (0, n.jsxs)(c.D, {
+    return (0, t.jsxs)(c.D, {
         onMouseEnter: G,
         onMouseLeave: B,
         focusProps: R === S.d.MODAL_V2 ? { offset: { top: 4, right: 4, left: 4 } } : { offset: { right: 8 } },
@@ -56,39 +56,39 @@ function y(e) {
         onContextMenu: function (e) {
             (0, f.L3)(e, async () => {
                 let { default: e } = await Promise.all([
-                    t.e("790484"),
-                    t.e("866038"),
-                    t.e("926132"),
-                    t.e("146652"),
-                    t.e("834552"),
-                    t.e("708757"),
-                    t.e("585968"),
-                    t.e("776273"),
-                    t.e("893190"),
-                    t.e("189673"),
-                    t.e("229787"),
-                    t.e("882073"),
-                    t.e("797558"),
-                    t.e("691994"),
-                    t.e("576665"),
-                    t.e("624198"),
-                    t.e("856753"),
-                    t.e("172883"),
-                    t.e("349644"),
-                    t.e("442191"),
-                    t.e("242204"),
-                    t.e("532418"),
-                ]).then(t.bind(t, 668569));
-                return (t) => (0, n.jsx)(e, { ...t, user: s });
+                    n.e("790484"),
+                    n.e("866038"),
+                    n.e("926132"),
+                    n.e("146652"),
+                    n.e("834552"),
+                    n.e("708757"),
+                    n.e("585968"),
+                    n.e("776273"),
+                    n.e("893190"),
+                    n.e("189673"),
+                    n.e("229787"),
+                    n.e("882073"),
+                    n.e("797558"),
+                    n.e("691994"),
+                    n.e("576665"),
+                    n.e("624198"),
+                    n.e("856753"),
+                    n.e("172883"),
+                    n.e("349644"),
+                    n.e("442191"),
+                    n.e("242204"),
+                    n.e("532418"),
+                ]).then(n.bind(n, 668569));
+                return (n) => (0, t.jsx)(e, { ...n, user: s });
             });
         },
         children: [
-            (0, n.jsx)(g.A, { nameplate: O ? Z : null, hovered: O, content: V, placement: p.u.MUTUAL_FRIENDS_LIST }),
-            (0, n.jsxs)("div", {
+            (0, t.jsx)(g.A, { nameplate: O ? Z : null, hovered: O, content: V, placement: p.u.MUTUAL_FRIENDS_LIST }),
+            (0, t.jsxs)("div", {
                 ref: V,
                 className: j.Qs,
                 children: [
-                    (0, n.jsx)(K, {
+                    (0, t.jsx)(K, {
                         ...H,
                         src: z,
                         avatarDecoration: W,
@@ -96,20 +96,20 @@ function y(e) {
                         size: k,
                         status: L ? C.clD.UNKNOWN : l,
                         statusBackdropColor: L ? void 0 : (0, o.C$)(D),
-                        isMobile: T,
+                        isMobile: w,
                         className: j.my,
                     }),
-                    (0, n.jsxs)("div", {
+                    (0, t.jsxs)("div", {
                         className: j.zH,
                         children: [
-                            (0, n.jsx)(A.A, {
+                            (0, t.jsx)(A.A, {
                                 user: s,
                                 className: j.Tc,
                                 usernameClass: j.QC,
                                 discriminatorClass: j.D2,
                                 showGuildTag: !0,
                             }),
-                            (0, n.jsx)(m.A, { user: s, activities: F, applicationStream: w, voiceChannel: U }),
+                            (0, t.jsx)(m.A, { user: s, activities: T, applicationStream: F, voiceChannel: U }),
                         ],
                     }),
                 ],

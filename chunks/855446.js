@@ -1,9 +1,9 @@
 t.d(n, { C: () => N });
 var i,
     l = t(477900),
-    a = t(582128),
-    s = t(503698),
-    o = t.n(s),
+    s = t(582128),
+    a = t(503698),
+    o = t.n(a),
     r = t(202091),
     c = t(696292),
     u = t(834730),
@@ -25,7 +25,7 @@ var j =
     (i[(i.SIXTEEN_BY_NINE = 1)] = "SIXTEEN_BY_NINE"),
     i);
 function N(e) {
-    let { context: n, activityItem: t, onClick: i, aspectRatio: s = 0, animatedDivClass: j, commandOrigin: N } = e,
+    let { context: n, activityItem: t, onClick: i, aspectRatio: a = 0, animatedDivClass: j, commandOrigin: N } = e,
         {
             onActivityItemSelected: _,
             imageBackground: O,
@@ -41,14 +41,14 @@ function N(e) {
             assetNames: v,
             commandOrigin: N,
         }),
-        [S, R] = a.useState(!1),
-        D = a.useCallback(() => {
+        [S, R] = s.useState(!1),
+        D = s.useCallback(() => {
             R(!0);
         }, [R]),
-        L = a.useCallback(() => {
+        L = s.useCallback(() => {
             R(!1);
         }, [R]),
-        M = a.useMemo(
+        M = s.useMemo(
             () =>
                 (0, l.jsx)("div", {
                     className: I.Gz,
@@ -56,7 +56,7 @@ function N(e) {
                 }),
             [y],
         ),
-        P = a.useMemo(() => {
+        P = s.useMemo(() => {
             switch (b) {
                 case C.o6.JOIN:
                     return (0, l.jsx)("div", {
@@ -109,7 +109,7 @@ function N(e) {
                             children: (i) =>
                                 (0, l.jsxs)(r.animated.div, {
                                     ref: i,
-                                    className: o()(e, I.LM, j, { [I.$g]: 0 === s, [I.J3]: 1 === s }),
+                                    className: o()(e, I.LM, j, { [I.$g]: 0 === a, [I.J3]: 1 === a }),
                                     style: { transform: n.to([0, 1], [1, 1.05]).to((e) => `scale(${e})`) },
                                     children: [
                                         (0, l.jsx)(p.A, {

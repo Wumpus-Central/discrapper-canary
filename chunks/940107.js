@@ -16,11 +16,11 @@ function r(e, t, n, r) {
         d = `${u}-ack`,
         c = r.sourceMatch ?? "window",
         f = r.id ?? `${t}-${++l}-${Date.now()}`;
-    return new Promise((l, h) => {
-        let p = 0,
+    return new Promise((l, p) => {
+        let h = 0,
             _ = o,
             g = window.setTimeout(() => {
-                (E(), h(new i.fq(t, r.timeoutMs)));
+                (E(), p(new i.fq(t, r.timeoutMs)));
             }, r.timeoutMs),
             w = null != r.retryMs ? window.setInterval(I, r.retryMs) : null;
         function m() {
@@ -30,11 +30,11 @@ function r(e, t, n, r) {
             (window.clearTimeout(g), m(), window.removeEventListener("message", T));
         }
         function I() {
-            (p += 1) > 1 &&
+            (h += 1) > 1 &&
                 console.debug("[vibegrations] re-offering call to the preview frame", {
                     call: r.label ?? t,
                     id: f,
-                    attempt: p,
+                    attempt: h,
                 });
             let i = { type: u, id: f, ...n };
             ((_ = e.contentWindow), e.contentWindow?.postMessage(i, s));

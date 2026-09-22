@@ -1,4 +1,4 @@
-r.d(t, { N0: () => h, lC: () => _, uS: () => E });
+r.d(t, { N0: () => _, lC: () => h, uS: () => E });
 var n = r(582128),
     l = r(17928),
     s = r(793574),
@@ -11,7 +11,7 @@ var n = r(582128),
     g = r(758836),
     p = r(652215),
     m = r(202541);
-function _(e) {
+function h(e) {
     let { analyticsSource: t, analyticsLocations: r } = (0, l.cf)([d.A], () => d.A.getAnalytics()),
         n = (function (e) {
             switch (e) {
@@ -47,7 +47,7 @@ function _(e) {
     return { analyticsSource: t, analyticsLocations: i, newestAnalyticsLocation: o, currentTabLocation: n };
 }
 function E(e, t, r, l, s) {
-    let { analyticsLocations: a, analyticsSource: i, currentTabLocation: o, newestAnalyticsLocation: c } = _(t);
+    let { analyticsLocations: a, analyticsSource: i, currentTabLocation: o, newestAnalyticsLocation: c } = h(t);
     n.useEffect(() => {
         if (l !== g.Pf.VISIBLE || c !== o) return;
         let n = t === g.G2.CATALOG ? s : i;
@@ -60,8 +60,8 @@ function E(e, t, r, l, s) {
         });
     }, [a, e, t, r, o, l, s, i, c]);
 }
-function h(e, t) {
-    let { analyticsLocations: r } = _(e);
+function _(e, t) {
+    let { analyticsLocations: r } = h(e);
     n.useEffect(() => {
         null == t ||
             c.Ay.canUseCollectibles(t) ||

@@ -1,8 +1,8 @@
 t.d(n, { K: () => _ });
 var i = t(477900),
     l = t(582128),
-    a = t(17928),
-    s = t(554146),
+    s = t(17928),
+    a = t(554146),
     o = t(922016),
     r = t(866665),
     c = t(155718),
@@ -24,13 +24,13 @@ var i = t(477900),
     N = t(375708);
 function _(e) {
     let { channel: n, idle: t, whichPopoutIsOpen: _, setWhichPopoutIsOpen: O } = e,
-        b = (0, a.bG)([u.Ay], () => u.Ay.isLaunchingActivity()),
+        b = (0, s.bG)([u.Ay], () => u.Ay.isLaunchingActivity()),
         y = (0, A.et)(n.id),
         S = (0, A.dL)(y),
         R = y !== A.xy.CAN_LAUNCH || b,
         { isHovered: D, setIsHovered: L, onMouseEnter: M, onMouseLeave: P } = (0, E.A)(200, 300),
         k = (0, d.b)({ surface: c.YI.VOICE_LAUNCHER }),
-        U = (0, a.bG)(
+        U = (0, s.bG)(
             [u.Ay],
             () => null != u.Ay.getSelfEmbeddedActivityForLocation(u.Ay.getConnectedActivityLocation()),
         ),
@@ -51,16 +51,16 @@ function _(e) {
                     analyticsLocation: H,
                 }));
         }, [n, B, H, w]),
-        F = R ? [] : [s.M.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP],
+        F = R ? [] : [a.M.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP],
         X = l.useRef(!1),
         K = l.useRef(null);
     return (0, i.jsx)(g.Ay, {
         contentTypes: F,
         children: (e) => {
-            let { visibleContent: l, markAsDismissed: a } = e,
-                c = l === s.M.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP && !t && !D;
+            let { visibleContent: l, markAsDismissed: s } = e,
+                c = l === a.M.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP && !t && !D;
             return (
-                X.current && !c && a(j.i.AUTO_DISMISS),
+                X.current && !c && s(j.i.AUTO_DISMISS),
                 X.current !== c && (X.current = c),
                 (0, i.jsx)(o.Y, {
                     targetElementRef: K,
@@ -86,13 +86,13 @@ function _(e) {
                                   onMouseEnter: M,
                                   onMouseLeave: P,
                                   isHovered: D,
-                                  onClick: () => a(j.i.UNKNOWN),
+                                  onClick: () => s(j.i.UNKNOWN),
                               })
                             : (0, i.jsx)(i.Fragment, {});
                     },
                     children: () =>
                         (0, i.jsx)(g.GY, {
-                            contentType: s.M.ACTIVITIES_VOICE_LAUNCHER_BADGE,
+                            contentType: a.M.ACTIVITIES_VOICE_LAUNCHER_BADGE,
                             latestVersion: k,
                             children: (e) => {
                                 let { visibleContent: n, markAsDismissed: t } = e;
@@ -112,10 +112,10 @@ function _(e) {
                                                     onClick: () => {
                                                         (Y(),
                                                             l ===
-                                                                s.M
+                                                                a.M
                                                                     .VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP &&
-                                                                a(j.i.TAKE_ACTION),
-                                                            n === s.M.ACTIVITIES_VOICE_LAUNCHER_BADGE &&
+                                                                s(j.i.TAKE_ACTION),
+                                                            n === a.M.ACTIVITIES_VOICE_LAUNCHER_BADGE &&
                                                                 t(j.i.TAKE_ACTION));
                                                     },
                                                     onMouseEnter: V,
@@ -123,7 +123,7 @@ function _(e) {
                                                 }),
                                             }),
                                         }),
-                                        n === s.M.ACTIVITIES_VOICE_LAUNCHER_BADGE
+                                        n === a.M.ACTIVITIES_VOICE_LAUNCHER_BADGE
                                             ? (0, i.jsx)(h.a, { top: 2, right: 2, size: 6 })
                                             : null,
                                     ],

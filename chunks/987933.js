@@ -1,8 +1,8 @@
 t.d(n, { A: () => m });
 var i = t(477900),
     l = t(582128),
-    a = t(7807),
-    s = t(554146),
+    s = t(7807),
+    a = t(554146),
     o = t(43105),
     r = t(131607),
     c = t(246356),
@@ -11,11 +11,11 @@ var i = t(477900),
     A = t(401191);
 function m(e) {
     let { targetElementRef: n, openSoundboardPicker: t, shouldShowSoundboardPicker: m } = e,
-        [h, C] = (0, r.kn)([s.M.SOUNDBOARD_DESKTOP_NUX]),
+        [h, C] = (0, r.kn)([a.M.SOUNDBOARD_DESKTOP_NUX]),
         p = l.useMemo(
             () => [
                 {
-                    icon: a.J,
+                    icon: s.J,
                     text: d.intl.string(d.t["6EJvHt"]),
                     onClick: () => {
                         (t(), C(u.i.TAKE_ACTION));
@@ -25,9 +25,9 @@ function m(e) {
             [C, t],
         );
     return (l.useEffect(() => {
-        m && h === s.M.SOUNDBOARD_DESKTOP_NUX && C(u.i.INDIRECT_ACTION);
+        m && h === a.M.SOUNDBOARD_DESKTOP_NUX && C(u.i.INDIRECT_ACTION);
     }, [C, m, h]),
-    h !== s.M.SOUNDBOARD_DESKTOP_NUX)
+    h !== a.M.SOUNDBOARD_DESKTOP_NUX)
         ? null
         : (0, i.jsx)(c.A, {
               children: (0, i.jsx)(o.A, {

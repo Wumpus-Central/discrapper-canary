@@ -1,10 +1,10 @@
 n.d(t, {
     CW: () => S,
     Eo: () => _,
-    GG: () => C,
-    HV: () => P,
+    GG: () => P,
+    HV: () => C,
     I$: () => k,
-    Is: () => h,
+    Is: () => p,
     M7: () => y,
     Ru: () => v,
     U1: () => E,
@@ -26,7 +26,7 @@ var i = n(636537),
     d = n(933294),
     c = n(972786),
     f = n(652215);
-function h(e, t, n) {
+function p(e, t, n) {
     (0, u.Z0)(e, {
         location: "publish",
         code: u.xA.PUBLISH_FAILED,
@@ -35,12 +35,12 @@ function h(e, t, n) {
         isPreview: n,
     });
 }
-function p(e) {
+function h(e) {
     d.A.reloadAppFrames(e);
 }
 function _(e) {
     let t = c.Ay.getProject(e);
-    null != t && (p(t.application_id), p(t.preview_application_id ?? null));
+    null != t && (h(t.application_id), h(t.preview_application_id ?? null));
 }
 let g = null,
     w = null;
@@ -133,7 +133,7 @@ async function b(e, t) {
     let { isPreview: n } = t,
         { bot_permissions_changed: i, integration_installed: r, project: s } = (await E(e)).body,
         a = n ? s.preview_application_id : s.application_id;
-    (null != a && (await (0, o.TA)(a), await (0, l.un)(a, { force: !0 }).catch(() => {}), (n && (!r || i)) || p(a)),
+    (null != a && (await (0, o.TA)(a), await (0, l.un)(a, { force: !0 }).catch(() => {}), (n && (!r || i)) || h(a)),
         (0, u.qs)(e, { isPreview: n }));
 }
 function k(e, t) {
@@ -142,9 +142,9 @@ function k(e, t) {
 function N(e) {
     r.h.dispatch({ type: "VIBEGRATIONS_CHAT_SIDEBAR_WIDTH_SET", width: e });
 }
-function P(e) {
+function C(e) {
     r.h.dispatch({ type: "VIBEGRATIONS_BUILDER_PREVIEW_APPLICATION_SET", applicationId: e });
 }
-function C(e) {
+function P(e) {
     r.h.dispatch({ type: "VIBEGRATIONS_BUILDER_PREVIEW_MOBILE_SET", enabled: e });
 }

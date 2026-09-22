@@ -17,8 +17,8 @@ function d(e) {
 }
 let c = new Map(),
     f = new Map(),
-    h = new Map(),
-    p = null,
+    p = new Map(),
+    h = null,
     _ = new Set(),
     g = new Map(),
     w = [],
@@ -51,7 +51,7 @@ function N(e, t, n) {
     let i = t.concat(n);
     S.set(e, i.length > 400 ? i.slice(-400) : i);
 }
-class P extends i.Ay.Store {
+class C extends i.Ay.Store {
     initialize() {
         this.waitFor(l.default);
     }
@@ -74,7 +74,7 @@ class P extends i.Ay.Store {
         return f.get(e) ?? null;
     }
     getSelectedProjectId(e) {
-        return h.get(e) ?? null;
+        return p.get(e) ?? null;
     }
     getLogs(e) {
         return m.get(e) ?? w;
@@ -94,7 +94,7 @@ class P extends i.Ay.Store {
         return b.get(e)?.get(t) ?? O;
     }
     getProjectsFetchState() {
-        return p;
+        return h;
     }
     hasFetchedGuildProjects(e) {
         return _.has(e);
@@ -106,7 +106,7 @@ class P extends i.Ay.Store {
         return null != e && null != this.findProjectByApplicationId(e);
     }
 }
-function C(e) {
+function P(e) {
     let { project: t } = e;
     c.set(t.id, t);
 }
@@ -124,23 +124,23 @@ function G(e, t, n, i) {
     let r = t.slice();
     ((r[n] = i), S.set(e, r));
 }
-let V = new P(r.h, {
+let V = new C(r.h, {
     LOGOUT: function () {
         if (
             0 === c.size &&
             0 === f.size &&
-            0 === h.size &&
+            0 === p.size &&
             0 === m.size &&
             0 === _.size &&
             0 === S.size &&
             0 === b.size &&
             0 === v.size &&
-            null == p
+            null == h
         )
             return !1;
         (c.clear(),
             f.clear(),
-            h.clear(),
+            p.clear(),
             m.clear(),
             _.clear(),
             g.clear(),
@@ -149,12 +149,12 @@ let V = new P(r.h, {
             S.clear(),
             b.clear(),
             v.clear(),
-            (p = null),
+            (h = null),
             M.clear());
     },
     VIBEGRATIONS_PROJECTS_FETCH_START: function (e) {
         let { guildId: t } = e;
-        (null != t && g.set(t, "loading"), (p = { type: "loading" }));
+        (null != t && g.set(t, "loading"), (h = { type: "loading" }));
     },
     VIBEGRATIONS_PROJECTS_FETCH_SUCCESS: function (e) {
         let { projects: t, guildId: n } = e,
@@ -162,15 +162,15 @@ let V = new P(r.h, {
         for (let [e, t] of c) !i.has(e) && (s(t) || (null != n && t.guild_id === n)) && c.delete(e);
         for (let e of t) c.set(e.id, e);
         for (let e of (null != n && (_.add(n), g.set(n, "success")), f.keys())) c.has(e) || f.delete(e);
-        for (let [e, t] of h) c.has(t) || h.delete(e);
-        p = { type: "success", fetchedAt: Date.now() };
+        for (let [e, t] of p) c.has(t) || p.delete(e);
+        h = { type: "success", fetchedAt: Date.now() };
     },
     VIBEGRATIONS_PROJECTS_FETCH_FAIL: function (e) {
         let { guildId: t } = e;
-        (null != t && g.set(t, "error"), (p = { type: "error", fetchedAt: Date.now() }));
+        (null != t && g.set(t, "error"), (h = { type: "error", fetchedAt: Date.now() }));
     },
-    VIBEGRATIONS_PROJECT_CREATE_SUCCESS: C,
-    VIBEGRATIONS_PROJECT_UPDATE_SUCCESS: C,
+    VIBEGRATIONS_PROJECT_CREATE_SUCCESS: P,
+    VIBEGRATIONS_PROJECT_UPDATE_SUCCESS: P,
     VIBEGRATIONS_PROJECT_INTEGRATION_STATUS_UPDATE: function (e) {
         let { projectId: t, integrationStatus: n } = e;
         f.set(t, n);
@@ -185,13 +185,13 @@ let V = new P(r.h, {
         S.delete(t),
         b.delete(t),
         v.delete(t),
-        h))
-            n === t && h.delete(e);
+        p))
+            n === t && p.delete(e);
     },
     VIBEGRATIONS_PROJECT_SELECT: function (e) {
         let { guildId: t, projectId: n } = e;
-        if ((h.get(t) ?? null) === n) return !1;
-        null == n ? h.delete(t) : h.set(t, n);
+        if ((p.get(t) ?? null) === n) return !1;
+        null == n ? p.delete(t) : p.set(t, n);
     },
     VIBEGRATIONS_TRACE_REPLAY_STARTING: function (e) {
         let { projectId: t } = e;

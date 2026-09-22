@@ -1,25 +1,25 @@
-n.d(t, { L: () => i, s: () => c });
-var r = n(278416),
-    l = n(403581),
-    a = n(604913),
-    u = n(306396),
-    o = n(518865);
-function i(e, t) {
-    switch (t?.tenantMetadata?.collectibles?.type) {
-        case a.hE.COLLECT_AND_CLAIM:
-            return (0, u.av)(e, t);
-        case a.hE.TARGETED_OFFER:
-            return (0, o.PY)(e, t);
+e.d(n, { L: () => i, s: () => c });
+var r = e(278416),
+    u = e(403581),
+    l = e(604913),
+    a = e(306396),
+    o = e(518865);
+function i(t, n) {
+    switch (n?.tenantMetadata?.collectibles?.type) {
+        case l.hE.COLLECT_AND_CLAIM:
+            return (0, a.av)(t, n);
+        case l.hE.TARGETED_OFFER:
+            return (0, o.PY)(t, n);
         default:
             return null;
     }
 }
-function c(e) {
-    switch (e) {
-        case a.cR.TAG:
+function c(t) {
+    switch (t) {
+        case l.cR.TAG:
             return r.TagIcon;
-        case a.cR.NITRO:
-            return l.t;
+        case l.cR.NITRO:
+            return u.t;
         default:
             return null;
     }

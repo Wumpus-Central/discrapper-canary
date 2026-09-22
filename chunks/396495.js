@@ -2,8 +2,8 @@ t.d(n, { b: () => g });
 var i = t(477900);
 t(582128);
 var l = t(503698),
-    a = t.n(l),
-    s = t(562708),
+    s = t.n(l),
+    a = t(562708),
     o = t(862482),
     r = t(789645),
     c = t(834730),
@@ -17,11 +17,11 @@ var l = t(503698),
 function x(e) {
     let { hidden: n, onDismiss: t } = e;
     return (
-        (0, d.A)({ type: s.ImpressionTypes.VIEW, name: s.ImpressionNames.HD_STREAMING_POPOUT }, { disableTrack: n }, [
+        (0, d.A)({ type: a.ImpressionTypes.VIEW, name: a.ImpressionNames.HD_STREAMING_POPOUT }, { disableTrack: n }, [
             n,
         ]),
         (0, i.jsxs)("div", {
-            className: a()(p.jC, { [p.R]: n }),
+            className: s()(p.jC, { [p.R]: n }),
             children: [
                 (0, i.jsx)("img", {
                     className: p.Sl,

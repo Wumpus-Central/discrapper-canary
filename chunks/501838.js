@@ -1,4 +1,4 @@
-(r.d(e, { mn: () => I, px: () => A, qx: () => _, rY: () => f, tR: () => h, w: () => p }), r(321073));
+(r.d(e, { mn: () => I, px: () => f, qx: () => _, rY: () => A, tR: () => h, w: () => p }), r(321073));
 var i = r(582128),
     n = r(17928),
     s = r(517164),
@@ -76,7 +76,7 @@ function _() {
         return t;
     });
 }
-function f() {
+function A() {
     return (0, n.yK)(
         [a.Ay, c.A],
         () => {
@@ -91,7 +91,7 @@ function f() {
         [],
     );
 }
-function A() {
+function f() {
     let t = (0, n.bG)([o.A], () => o.A.getGuildIds());
     return (0, n.yK)(
         [c.A],

@@ -13,7 +13,7 @@ function f(e, t) {
     let l = e.entriesByWidgetId.get(t);
     return (null == l && ((l = { state: o, attempts: 0 }), e.entriesByWidgetId.set(t, l)), l);
 }
-function h(e, t, l, i) {
+function x(e, t, l, i) {
     if (0 === l.length) {
         e.backoff?.pending !== !0 && e.backoff?.succeed();
         return;
@@ -28,7 +28,7 @@ function h(e, t, l, i) {
             e.backoff.pending ||
                 e.backoff.fail(() => a.h.dispatch({ type: "GUILD_SPACE_HYDRATE_BACKOFF_EXPIRED", guildId: t }))));
 }
-class x extends i.Ay.Store {
+class h extends i.Ay.Store {
     static displayName = "GuildSpaceHydrationStore";
     getHydration(e, t) {
         return m[e]?.entriesByWidgetId.get(t)?.state ?? o;
@@ -42,7 +42,7 @@ class x extends i.Ay.Store {
               : t.filter((e) => "idle" === (l.entriesByWidgetId.get(e)?.state ?? o).status);
     }
 }
-let g = new x(a.h, {
+let g = new h(a.h, {
     GUILD_SPACE_HYDRATE_START: function (e) {
         let t,
             { guildId: l, requestId: n, widgetIds: i } = e,
@@ -74,14 +74,14 @@ let g = new x(a.h, {
                 ((l.state = { status: "success", data: t }), (l.attempts = 0));
             } else s.push(e);
         }),
-            h(i, t, s, !0));
+            x(i, t, s, !0));
     },
     GUILD_SPACE_HYDRATE_FAILURE: function (e) {
         let { guildId: t, requestId: l, retryable: n } = e,
             i = m[t];
         if (i?.activeRequestId !== l) return !1;
         let a = i.activeWidgetIds ?? [];
-        (delete i.activeRequestId, delete i.activeWidgetIds, h(i, t, a, n));
+        (delete i.activeRequestId, delete i.activeWidgetIds, x(i, t, a, n));
     },
     GUILD_SPACE_HYDRATE_BACKOFF_EXPIRED: function (e) {
         let { guildId: t } = e,

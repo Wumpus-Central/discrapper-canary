@@ -1,8 +1,8 @@
 t.d(n, { A: () => A });
 var i = t(477900),
     l = t(582128),
-    a = t(523875),
-    s = t(666654),
+    s = t(523875),
+    a = t(666654),
     o = t(688810),
     r = t(980923),
     c = t(384059),
@@ -24,8 +24,8 @@ function A(e) {
         E = n || t || A,
         I = m ? u.l : u.A,
         v = (0, r.A)(n, t, A, h),
-        { events: T, play: j, Component: N } = (0, a.L)(E ? "unmute" : "mute"),
-        _ = t || A ? s.O : N;
+        { events: T, play: j, Component: N } = (0, s.L)(E ? "unmute" : "mute"),
+        _ = t || A ? a.O : N;
     return (
         l.useEffect(() => () => j(), [j, E]),
         (0, i.jsx)(I, {

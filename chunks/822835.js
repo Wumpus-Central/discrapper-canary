@@ -23,18 +23,18 @@ function c(e) {
         j = (0, r.bG)([u.default], () => u.default.getId()),
         { applicationWidgetConfig: y } = (0, i.A)(j, b ?? void 0),
         k = y?.surfaces,
-        w = (0, d.yZ)({
+        N = (0, d.yZ)({
             widgetTop: k?.[a.m.WIDGET_TOP] != null,
             widgetBottom: k?.[a.m.WIDGET_BOTTOM] != null,
             miniProfile: k?.[a.m.MINI_PROFILE] != null,
         }),
-        N = null != b && (h ? w.hasMainCard : w.hasAny),
+        w = null != b && (h ? N.hasMainCard : N.hasAny),
         { data: A } = (0, s.YY)(l ?? void 0),
         E = null != l && A?.bot?.id != null,
         { data: S, isLoading: C } = (0, s.YY)(t ?? void 0),
         I = c || (0, o.x)(S),
         M = null != t && C,
-        T = (0, d.Xm)({ installScope: m, hasFrame: I, hasProfileWidget: N, hasBotDm: E, ownerAuthorizationRevoked: f });
+        T = (0, d.Xm)({ installScope: m, hasFrame: I, hasProfileWidget: w, hasBotDm: E, ownerAuthorizationRevoked: f });
     return {
         availability: T,
         isResolving: M,

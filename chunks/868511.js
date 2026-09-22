@@ -26,8 +26,8 @@ function p(e) {
             authorizationError: A.A.error,
             authorizing: A.A.isFetchingAuthorization,
         })),
-        [I, _] = l.useState(p ?? ""),
-        [N, C] = l.useState("8080"),
+        [I, N] = l.useState(p ?? ""),
+        [_, C] = l.useState("8080"),
         [b, y] = l.useState("localhost"),
         v = T.test(I);
     async function j() {
@@ -40,32 +40,32 @@ function p(e) {
                 case "proxy":
                     return (0, g.Ay)(n);
             }
-        })(b, N, I);
+        })(b, _, I);
         null != (await c.q1(I, e)) && t();
     }
     l.useEffect(() => () => d.h.wait(() => c.SH()), []);
     let O = null != p && p === I,
         L = O
             ? function () {
-                  (c.cL(), _(""), y(null));
+                  (c.cL(), N(""), y(null));
               }
             : j,
-        R = l.useMemo(
+        D = l.useMemo(
             () => [
                 {
                     loading: f,
-                    disabled: !v || 0 === I.length || ("localhost" === b && 0 === N.length),
+                    disabled: !v || 0 === I.length || ("localhost" === b && 0 === _.length),
                     variant: O ? "critical-primary" : "active",
                     text: O ? E.intl.string(E.t.d6TR3I) : E.intl.string(E.t.qwuK5I),
                     onClick: L,
                 },
             ],
-            [I.length, f, O, v, N.length, L, b],
+            [I.length, f, O, v, _.length, L, b],
         );
     return (0, i.jsxs)(s.Modal, {
         title: E.intl.string(E.t.f8fzky),
         subtitle: E.intl.string(E.t.a6Vill),
-        actions: R,
+        actions: D,
         onClose: t,
         transitionState: n,
         children: [
@@ -85,7 +85,7 @@ function p(e) {
                             maxLength: 19,
                             error: v ? null : E.intl.string(E.t.gPNgKO),
                             onChange: function (e) {
-                                _(e);
+                                N(e);
                             },
                             disabled: f,
                         }),
@@ -114,7 +114,7 @@ function p(e) {
                               children: (0, i.jsx)(o.k, {
                                   required: !0,
                                   label: E.intl.string(E.t.fF4zxq),
-                                  value: N,
+                                  value: _,
                                   maxLength: 5,
                                   onChange: (e) => C(e),
                                   disabled: f,

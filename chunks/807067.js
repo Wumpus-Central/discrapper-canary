@@ -1,8 +1,8 @@
 (t.d(n, { f: () => V }), t(938796));
 var i = t(477900),
     l = t(582128),
-    a = t(132500),
-    s = t(724002),
+    s = t(132500),
+    a = t(724002),
     o = t(287174),
     r = t(487899),
     c = t(17928),
@@ -33,13 +33,13 @@ var i = t(477900),
     M = t(375708),
     P = t(472489);
 let k = o.K.APP_LAUNCHER_IN_VOICE_BANNER,
-    U = `vc-activities-${(0, a.A)()}`;
+    U = `vc-activities-${(0, s.A)()}`;
 function G(e) {
     let n,
         t,
-        { channel: a, openInPopout: o, onClick: d } = e,
+        { channel: s, openInPopout: o, onClick: d } = e,
         { fetchState: A, voiceBannerCollection: m } =
-            ((n = (0, c.bG)([b.default], () => b.default.onlyShowPreviewAppCollections) ? s.W.PREVIEW : s.W.ACTIVE),
+            ((n = (0, c.bG)([b.default], () => b.default.onlyShowPreviewAppCollections) ? a.W.PREVIEW : a.W.ACTIVE),
             l.useEffect(() => {
                 (0, T.An)({ surface: k, activeState: n });
             }, [n]),
@@ -71,7 +71,7 @@ function G(e) {
               onClick: () => {
                   (d(),
                       (0, I.A)({
-                          context: { type: "channel", channel: a },
+                          context: { type: "channel", channel: s },
                           openInPopout: o,
                           analyticsLocation: x.A.APP_LAUNCHER_IN_VOICE_BANNER,
                           initialState: { applicationId: C.application.id },
@@ -85,40 +85,40 @@ function G(e) {
 }
 let V = l.forwardRef(function (e, n) {
     var t;
-    let { channel: a, isHovered: s, closePopout: o, onMouseEnter: r, onMouseLeave: c, onClick: f, className: E } = e,
-        { id: T, guild_id: j } = a;
+    let { channel: s, isHovered: a, closePopout: o, onMouseEnter: r, onMouseLeave: c, onClick: f, className: E } = e,
+        { id: T, guild_id: j } = s;
     (l.useEffect(() => {
         y.default.track(L.HAw.ACTIVITIES_CENTER_CONTROL_TRAY_BUTTON_HOVERED, { channel_id: T, guild_id: j });
     }, [T, j]),
         l.useEffect(() => {
-            s || o();
-        }, [o, s]));
+            a || o();
+        }, [o, a]));
     let N = (0, _.Us)(),
         { analyticsLocations: b, newestAnalyticsLocation: k } = (0, g.Ay)(x.A.ACTIVITIES_MINI_SHELF),
         V = N === L.BRT.POPOUT,
-        B = ((t = a.getGuildId()), (0, R.A)({ guildId: t }).slice(0, 5));
+        B = ((t = s.getGuildId()), (0, R.A)({ guildId: t }).slice(0, 5));
     l.useEffect(() => {
         let e = setTimeout(() => S.LK(), 1e3);
         return () => clearTimeout(e);
     }, []);
     let w = l.useCallback(() => {
             ((0, I.A)({
-                context: null != a ? { type: "channel", channel: a } : { type: "contextless" },
+                context: null != s ? { type: "channel", channel: s } : { type: "contextless" },
                 openInPopout: V,
                 analyticsLocation: k,
             }),
                 c(),
                 f());
-        }, [a, k, f, c, V]),
+        }, [s, k, f, c, V]),
         H = l.useCallback(
             (e) => {
                 (r(),
                     y.default.track(L.HAw.ACTIVITIES_MINI_SHELF_HOVERED, {
-                        channel_id: a.id,
-                        guild_id: a.getGuildId(),
+                        channel_id: s.id,
+                        guild_id: s.getGuildId(),
                     }));
             },
-            [r, a],
+            [r, s],
         );
     return (0, i.jsx)(g.f5, {
         value: b,
@@ -177,7 +177,7 @@ let V = l.forwardRef(function (e, n) {
                             }),
                             (0, i.jsx)(G, {
                                 openInPopout: V,
-                                channel: a,
+                                channel: s,
                                 onClick: () => {
                                     (f(), o());
                                 },
@@ -188,7 +188,7 @@ let V = l.forwardRef(function (e, n) {
                                     (0, i.jsx)(
                                         D.C,
                                         {
-                                            context: { channel: a, type: "channel" },
+                                            context: { channel: s, type: "channel" },
                                             activityItem: e,
                                             onClick: () => {
                                                 (o(), f());
