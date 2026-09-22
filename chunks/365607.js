@@ -297,7 +297,7 @@ function ed(e) {
                             (0, a.jsxs)("div", {
                                 className: ea.$,
                                 children: [
-                                    (0, a.jsx)(z.A, { size: "xs", className: ea.oU }),
+                                    x && (0, a.jsx)(z.A, { size: "xs", className: ea.oU }),
                                     (0, a.jsx)(V.D, {
                                         id: d,
                                         variant: "heading-md/semibold",
