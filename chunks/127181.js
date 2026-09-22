@@ -3,6 +3,11 @@ let a = [
     {
         date: "2026-09-21",
         platforms: ["desktop", "mobile"],
+        summary: "Moderation Bot now starts with a short wizard, builds straight away, then tells you how to test it.",
+    },
+    {
+        date: "2026-09-21",
+        platforms: ["desktop", "mobile"],
         summary: "The model picker now offers Grok 4.7 alongside Claude and GPT.",
     },
     {

@@ -1106,6 +1106,17 @@
     min-width: 0
 }
 
+.chatLogDimmed_f35ad6 {
+    filter: blur(3px);
+    opacity: .5;
+    pointer-events: none;
+    transition: opacity .15s ease, filter .15s ease
+}
+
+.chatLogDimmed_f35ad6>* {
+    pointer-events: none
+}
+
 .sidebar_a6fe8a {
     background: var(--background-gradient-app-frame, var(--background-base-lowest));
     display: flex;
@@ -1250,4 +1261,4 @@
     white-space: nowrap
 }
 
-/*# sourceMappingURL=f1f1b884b6763244.css.map*/
+/*# sourceMappingURL=f080b0aa3d7a62f4.css.map*/

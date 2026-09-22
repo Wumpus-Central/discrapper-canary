@@ -1,0 +1,39 @@
+.body_eca272 {
+    flex-direction: column
+}
+
+.body_eca272,
+.pointCard_eca272 {
+    display: flex;
+    gap: var(--space-12)
+}
+
+.pointCard_eca272 {
+    align-items: flex-start;
+    background: var(--background-mod-subtle);
+    border: 1px solid var(--border-muted);
+    border-radius: var(--radius-md);
+    padding: var(--space-12)
+}
+
+.pointIcon_eca272 {
+    color: var(--icon-default);
+    flex-shrink: 0;
+    margin-top: calc(var(--space-4)/2)
+}
+
+.point_eca272 {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--space-4);
+    min-width: 0
+}
+
+.loading_eca272 {
+    display: flex;
+    justify-content: center;
+    padding: var(--space-24) 0
+}
+
+/*# sourceMappingURL=77069f8b744735e2.css.map*/

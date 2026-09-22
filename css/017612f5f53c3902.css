@@ -1,3 +1,20 @@
+.body__3efc7 {
+    text-align: start
+}
+
+.body__3efc7,
+.bullets__3efc7 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4)
+}
+
+.bullets__3efc7 {
+    list-style: disc;
+    margin: 0;
+    padding-inline-start: var(--space-16)
+}
+
 .field__574ce {
     display: none
 }
@@ -810,4 +827,4 @@
     color: var(--icon-default)
 }
 
-/*# sourceMappingURL=4f6d52e28e9e52bb.css.map*/
+/*# sourceMappingURL=017612f5f53c3902.css.map*/

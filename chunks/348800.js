@@ -7,4 +7,5 @@ e.exports = {
     B5: "clarificationSlot_f35ad6",
     Jx: "composerSlot_f35ad6",
     g0: "designFeedbackBanner_f35ad6",
+    J9: "chatLogDimmed_f35ad6",
 };
