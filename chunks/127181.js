@@ -4,6 +4,12 @@ let a = [
         date: "2026-09-22",
         platforms: ["desktop", "mobile"],
         summary:
+            "Paste your server rules into Moderation Bot and AI checks every message against them; your team can edit them any time in the app.",
+    },
+    {
+        date: "2026-09-22",
+        platforms: ["desktop", "mobile"],
+        summary:
             "The model lineup moved up: Claude Opus 5.5 replaces Opus 5 on the Balanced tier of Claude projects, and GPT-6 Sol and GPT-6 Luna replace the GPT-5.6 family in the picker, taking the Balanced and Speedrun tiers on GPT projects.",
     },
     {

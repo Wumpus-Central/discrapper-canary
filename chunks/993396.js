@@ -1,4 +1,5 @@
 (n.d(t, { Bp: () => d, I6: () => u, NE: () => r, _F: () => c, hU: () => p, pc: () => i, rL: () => o, v8: () => s }),
+    n(321073),
     n(683180));
 var a = n(50617),
     l = n(375708);
@@ -32,8 +33,18 @@ function u(e) {
     return e?.questions ?? [];
 }
 function c(e, t) {
-    return e.length > 0 && e.every((e, n) => "" !== (t[n] ?? "").trim());
+    return e.length > 0 && e.every((e, n) => !0 === e.optional || "" !== (t[n] ?? "").trim());
 }
 function p(e, t) {
-    return e.map((e, n) => `${n + 1}. ${e.title} \u{2192} ${(t[n] ?? "").trim()}`).join("\n");
+    let n = [];
+    return (
+        e.forEach((e, a) => {
+            let l = (t[a] ?? "").trim();
+            ("" !== l || !0 !== e.optional) &&
+                (l.includes("\n")
+                    ? n.push(`${a + 1}. ${e.title} \u{2192}`, '"""', l, '"""')
+                    : n.push(`${a + 1}. ${e.title} \u{2192} ${l}`));
+        }),
+        n.join("\n")
+    );
 }
