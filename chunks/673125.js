@@ -9,6 +9,7 @@ var n,
 function h(e) {
     return {
         achievementIdentifier: e.achievement_identifier,
+        achievementDefinitionId: String(e.achievement_definition_id),
         title: e.title,
         orbRewardAmount: e.reward_amount,
         achievementStatus: e.status,

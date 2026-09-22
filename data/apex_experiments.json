@@ -471,25 +471,6 @@
     }
   },
   {
-    "name": "2025-12-09-ptt-education",
-    "kind": "user",
-    "defaultConfig": null,
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "showPTTJoinTooltip": true,
-        "showPTTNoKeybindWarning": true,
-        "showPTTSpeakingIndicator": true
-      },
-      "2": {
-        "showPTTIconIndicator": true
-      }
-    }
-  },
-  {
     "name": "2025-12-game-invite-account-linking-entry-point",
     "kind": "user",
     "defaultConfig": {

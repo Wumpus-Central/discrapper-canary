@@ -16,9 +16,9 @@ var n = a(477900),
     A = a(821609),
     k = a(303136),
     v = a(366505),
-    R = a(976860),
-    g = a(309954),
-    C = a(287809),
+    C = a(976860),
+    R = a(309954),
+    g = a(287809),
     E = a(975571),
     N = a(474090),
     b = a(920050),
@@ -41,10 +41,10 @@ function U() {
     });
 }
 function F() {
-    ((0, L.RQ)(), (0, R.pX)(T.BV.NITRO_HOME, { search: (0, d.stringify)({ perk: b.NITRO_ORBS_REWARDS_CARD_ID }) }));
+    ((0, L.RQ)(), (0, C.pX)(T.BV.NITRO_HOME, { search: (0, d.stringify)({ perk: b.NITRO_ORBS_REWARDS_CARD_ID }) }));
 }
 function I() {
-    ((0, L.gP)(), (0, R.pX)(T.BV.NITRO_HOME, { search: (0, d.stringify)({ section: O.L }) }));
+    ((0, L.gP)(), (0, C.pX)(T.BV.NITRO_HOME, { search: (0, d.stringify)({ section: O.L }) }));
 }
 function W() {
     ((0, L.b)(), window.open(E.A.getArticleURL(y.MVz.ORBS_FAQ), "_blank"));
@@ -54,11 +54,11 @@ function z(e) {
         { passesGeneralUIInvariant: c, programReward: d } = (0, v.F)({
             location: "PremiumTenureRewardsOrbsBalancePopover",
         }),
-        R = (0, m.bG)([C.default], () => C.default.getCurrentUser()),
-        { balance: E } = (0, g.W)(),
-        b = !(0, N.ki)(R),
+        C = (0, m.bG)([g.default], () => g.default.getCurrentUser()),
+        { balance: E } = (0, R.W)(),
+        b = !(0, N.ki)(C),
         O = l.useMemo(() => {
-            let e = (0, N.YE)(R, _.PremiumTypes.TIER_2);
+            let e = (0, N.YE)(C, _.PremiumTypes.TIER_2);
             if (!c || b) return null;
             if (e && null != d) {
                 let e = (0, o.default)(new Date(d.next_reward_date), new Date());
@@ -77,7 +77,7 @@ function z(e) {
                 });
             }
             return null;
-        }, [R, b, d, c]),
+        }, [C, b, d, c]),
         L = (E ?? 0) >= 4100;
     return (0, n.jsx)(f.x, {
         targetElementRef: t,
@@ -192,11 +192,11 @@ function en(e) {
             cardAlignment: m = ea.START,
             className: f,
         } = e,
-        { balance: x } = (0, g.W)(),
+        { balance: x } = (0, R.W)(),
         h = (0, V.DK)(K.W.NITRO, "BalanceWidgetMenu"),
         [j, A] = l.useState(H.k.DEFAULT),
         [k, v] = l.useState(!1),
-        [R, C] = l.useState(!1),
+        [C, g] = l.useState(!1),
         E = l.useRef(null);
     (0, c.j)(!k);
     let N = (0, $.H)({ location: "BalanceWidgetMenu" }),
@@ -248,7 +248,13 @@ function en(e) {
             (e, t) =>
                 N
                     ? e
-                        ? (0, n.jsx)(ee.EA, { cardRef: O, targetElementRef: E, shouldShow: e, analyticsPage: o })
+                        ? (0, n.jsx)(ee.EA, {
+                              cardRef: O,
+                              targetElementRef: E,
+                              shouldShow: e,
+                              analyticsPage: o,
+                              onCloseWallet: b,
+                          })
                         : null
                     : h
                       ? (0, n.jsx)(z, {
@@ -269,6 +275,6 @@ function en(e) {
                         : null,
             [N, L, m, O, E, b, a, s, h, o],
         );
-    return (0, n.jsxs)("div", { className: r()(et.kL, f, { [et.R]: R, [et.RK]: !R }), children: [S, D(k, R)] });
+    return (0, n.jsxs)("div", { className: r()(et.kL, f, { [et.R]: C, [et.RK]: !C }), children: [S, D(k, C)] });
 }
 en.CardAlignment = ea;
