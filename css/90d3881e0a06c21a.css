@@ -295,6 +295,28 @@
     margin-top: 0
 }
 
+.promotionProgress__85064 {
+    align-items: center;
+    background-color: var(--background-feedback-positive);
+    border-radius: var(--radius-sm);
+    color: var(--text-feedback-positive);
+    display: flex;
+    gap: var(--space-8);
+    justify-content: space-between;
+    padding-block: var(--space-4);
+    padding-inline: var(--space-4) var(--space-8)
+}
+
+.promotionProgressLabel__85064 {
+    align-items: center;
+    display: flex;
+    gap: var(--space-6)
+}
+
+.promotionProgressIcon__85064 {
+    flex-shrink: 0
+}
+
 .premiumPriceTag__85064,
 .priceTagContainer__85064 {
     display: flex;
@@ -485,4 +507,4 @@
     padding: 0
 }
 
-/*# sourceMappingURL=f37c7326cd779ecf.css.map*/
+/*# sourceMappingURL=90d3881e0a06c21a.css.map*/
