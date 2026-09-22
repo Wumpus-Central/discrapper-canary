@@ -1607,7 +1607,7 @@ function nL(e) {
                             t.participants
                                 .filter((e) => null == ee.default.getUser(e))
                                 .forEach((e) => {
-                                    null == n.guild_id ? (0, nh.getUser)(e) : np.A.requestMember(n.guild_id, e);
+                                    null == n.guild_id ? (0, nh.wz)(e) : np.A.requestMember(n.guild_id, e);
                                 }));
                     }, [t, n.guild_id]),
                     {}

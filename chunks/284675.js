@@ -17358,7 +17358,7 @@ function hM() {
                 };
                 (t(!0),
                     await lQ.Bo.patch({ url: `/debug/subscriptions/${l.id}`, body: i, rejectWithError: (0, lQ.fT)() }),
-                    await (0, hk.fetchProfile)(a.id),
+                    await (0, hk.eO)(a.id),
                     await (0, dK.hP)(),
                     t(!1));
             },
@@ -17886,7 +17886,7 @@ function hY() {
         [s, c] = o.useState(!1),
         u = o.useCallback(async () => {
             try {
-                (c(!0), await (0, dK.hP)(), await (0, hk.fetchProfile)(t.id), i(await hH()));
+                (c(!0), await (0, dK.hP)(), await (0, hk.eO)(t.id), i(await hH()));
             } finally {
                 c(!1);
             }

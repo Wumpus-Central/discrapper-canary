@@ -246,7 +246,7 @@ function eN(e) {
                             }),
                             (0, i.jsx)(T.PM, {
                                 onClick: () => {
-                                    (r(el.i.UNKNOWN), (0, H.setFlag)(ei.nhx.PREMIUM_PROMO_DISMISSED, !0));
+                                    (r(el.i.UNKNOWN), (0, H.lA)(ei.nhx.PREMIUM_PROMO_DISMISSED, !0));
                                 },
                                 noticeType: l,
                             }),

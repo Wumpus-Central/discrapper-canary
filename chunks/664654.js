@@ -11,7 +11,7 @@ function u() {
     return (
         s.useEffect(() => {
             e.forEach((e) => {
-                (0, l.getUser)(e);
+                (0, l.wz)(e);
             });
         }, [e]),
         {

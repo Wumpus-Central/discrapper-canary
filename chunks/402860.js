@@ -50,7 +50,7 @@ async function f(e) {
         O = u.default.getUser(t);
     if ((I(t), null == O))
         try {
-            await (0, a.fetchProfile)(t, {
+            await (0, a.eO)(t, {
                 type: "modal",
                 guildId: n ?? void 0,
                 withMutualFriendsCount: !0,
@@ -67,7 +67,7 @@ async function f(e) {
                 })("UserProfileModalActionCreators"))
             )
                 try {
-                    await (0, a.getUser)(t);
+                    await (0, a.wz)(t);
                 } catch (e) {
                     h.log(`Failed to fetch user ${t}:`, e);
                 }

@@ -241,7 +241,7 @@ function H(t) {
                 let t = new Map();
                 for (let [e, i] of d) {
                     if (p.A.isBlockedOrIgnored(e)) continue;
-                    let s = await (0, A.getUser)(e);
+                    let s = await (0, A.wz)(e);
                     ((s.referralStatus = i), t.set(s.id, s));
                 }
                 g(t);

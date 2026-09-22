@@ -119,7 +119,7 @@ function Y(e) {
                     i = await y({ displayOrder: t.pendingBadgeDisplayOrder, hiddenBadges: t.pendingBadgeHiddenBadges });
                 if (i) {
                     let e = L.default.getCurrentUser()?.id;
-                    (null != e && (await (0, C.fetchProfile)(e).catch(() => {})), await (0, S.RS)(), (0, N.Jp)());
+                    (null != e && (await (0, C.eO)(e).catch(() => {})), await (0, S.RS)(), (0, N.Jp)());
                 }
                 e = i;
             }

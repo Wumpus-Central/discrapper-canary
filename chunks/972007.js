@@ -12,17 +12,17 @@ function c(e) {
         h = (0, i.bG)([f.A], () => f.A.getReferralsRemaining()),
         [o, d] = s.useState(0),
         [p, w] = s.useState([]),
-        [g, S] = s.useState(!1),
+        [S, g] = s.useState(!1),
         [R, b] = s.useState(!1),
         [v, y] = s.useState(new Map());
     async function A(e, s) {
-        if (!g && !R && null != e && 0 !== h)
+        if (!S && !R && null != e && 0 !== h)
             try {
-                S(!0);
+                g(!0);
                 let r = [...v.values()];
                 for (let [e, t] of c)
                     if (t === u.aK.PENDING && !v.has(e)) {
-                        let t = await (0, l.getUser)(e);
+                        let t = await (0, l.wz)(e);
                         r.push(t);
                     }
                 let n = await (0, u.P7)(e, t, s);
@@ -41,7 +41,7 @@ function c(e) {
             } catch (e) {
                 b(!0);
             } finally {
-                S(!1);
+                g(!1);
             }
     }
     n()(null != h, "Referrals remaining should not be null");
@@ -52,7 +52,7 @@ function c(e) {
                 let e = new Map();
                 for (let [t, a] of c)
                     if (a === u.aK.PENDING && !v.has(t)) {
-                        let a = await (0, l.getUser)(t);
+                        let a = await (0, l.wz)(t);
                         e.set(a.id, a);
                     }
                 (y(e), w(Array.from(e.values())));
@@ -67,6 +67,6 @@ function c(e) {
             let { getNextRows: e, limit: t, getLocalReferrals: a } = k.current;
             h > 0 ? e(0, t) : a();
         }, [t, h]),
-        { eligibleUsers: p, fetchUsers: () => A(o, r), hasError: R, isFetching: g, resendUsers: v }
+        { eligibleUsers: p, fetchUsers: () => A(o, r), hasError: R, isFetching: S, resendUsers: v }
     );
 }

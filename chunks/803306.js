@@ -1,14 +1,4 @@
-(n.r(t),
-    n.d(t, {
-        acceptAgreements: () => f,
-        fetchCurrentUser: () => I,
-        fetchMutualFriends: () => S,
-        fetchProfile: () => m,
-        getUser: () => T,
-        insertStaticUser: () => g,
-        setFlag: () => p,
-    }),
-    n(938796));
+(n.d(t, { Q9: () => f, eO: () => m, lA: () => p, nj: () => g, q0: () => S, rQ: () => I, wz: () => T }), n(938796));
 var i = n(284009),
     r = n.n(i),
     a = n(239947),

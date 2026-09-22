@@ -18001,7 +18001,7 @@ function xY(e) {
         let t = (0, xH.rh)({ ...(0, xV.Ay)({ channelId: "1337", content: e }), state: ei.cmJ.SENT, id: "31337" }),
             n = new dH.A({ id: "313337", username: el.intl.string(el.t.cqpybK), discriminator: "0000", bot: !1 });
         t.author = n;
-        let i = xB.insertStaticUser(n);
+        let i = xB.nj(n);
         return (null != i && ((t.author = i), (t.author.getAvatarURL = () => xz.A)), t);
     }, [e]);
 }
@@ -21616,7 +21616,7 @@ function jJ(e) {
     R.useEffect(() => {
         null == m && e();
         async function e() {
-            await (0, xB.getUser)(o);
+            await (0, xB.wz)(o);
         }
     }, [m, o]);
     let A = R.useCallback(() => {
@@ -26663,7 +26663,7 @@ function A5(e) {
                         bot: !1,
                     });
                 e.author = n;
-                let i = xB.insertStaticUser(n);
+                let i = xB.nj(n);
                 return (null != i && ((e.author = i), (e.author.getAvatarURL = () => xz.A)), e);
             }, [t])),
         s = {

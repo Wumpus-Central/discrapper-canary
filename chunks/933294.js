@@ -1,25 +1,22 @@
-n.d(t, { A: () => Q });
-var i = n(485845),
-    r = n(179771),
-    l = n(136722),
-    o = n(264686),
-    s = n(625180),
-    u = n(91242),
-    a = n(976860),
-    d = n(803224),
-    c = n(531685),
-    f = n(479975);
+n.d(t, { A: () => X });
+var i = n(264686),
+    r = n(625180),
+    l = n(91242),
+    o = n(976860),
+    s = n(803224),
+    u = n(531685),
+    a = n(479975);
 (n(323874), n(14289), n(35956));
-var h = n(141931),
-    p = n(941426),
-    _ = n(475735),
-    g = n(544576),
-    w = n(731854);
-let m = new p.Vy("VibegrationsNativeCapture");
-function E(e, t) {
-    return (m.verbose(`native capture not used: ${e}`, t ?? {}), null);
+var d = n(141931),
+    c = n(941426),
+    f = n(475735),
+    p = n(544576),
+    h = n(731854);
+let _ = new c.Vy("VibegrationsNativeCapture");
+function g(e, t) {
+    return (_.verbose(`native capture not used: ${e}`, t ?? {}), null);
 }
-function I(e) {
+function w(e) {
     let t = e.getBoundingClientRect();
     return t.width < 40 ||
         t.height < 40 ||
@@ -30,12 +27,12 @@ function I(e) {
         ? null
         : t;
 }
-async function T(e) {
+async function m(e) {
     let t = window.DiscordNative,
         n = await t?.window?.getMediaSourceId?.();
-    if (null == n) return E("no media source id for our own window");
+    if (null == n) return g("no media source id for our own window");
     let i = n.split(":")[1];
-    if (null == i || "" === i) return E("unrecognized media source id", { sourceId: n });
+    if (null == i || "" === i) return g("unrecognized media source id", { sourceId: n });
     let r = Math.min(
             window.devicePixelRatio,
             1568 / Math.max(e.width, e.height),
@@ -43,21 +40,21 @@ async function T(e) {
         ),
         l = Math.ceil(window.outerWidth * r),
         o = Math.ceil(window.outerHeight * r),
-        s = g.Ay.getMediaEngine();
-    if (s.supports(w.O5.WINDOW_PREVIEWS))
+        s = p.Ay.getMediaEngine();
+    if (s.supports(h.O5.WINDOW_PREVIEWS))
         try {
-            let e = _.O.getConfig({ location: "vibegrationsNativeCapture" }).enabled,
+            let e = f.O.getConfig({ location: "vibegrationsNativeCapture" }).enabled,
                 t = await s.getSingleWindowPreview(i, l, o, e);
             if (null != t && "" !== t.url) return t.url;
         } catch {}
     let u = await t?.desktopCapture?.getDesktopCaptureSources({
-            types: [h.fS.WINDOW],
+            types: [d.fS.WINDOW],
             thumbnailSize: { width: l, height: o },
         }),
         a = u?.find((e) => e.id.split(":")[1] === i);
-    return null == a || "" === a.url ? E("own window missing from capture sources") : a.url;
+    return null == a || "" === a.url ? g("own window missing from capture sources") : a.url;
 }
-async function A() {
+async function E() {
     let e = document.createElement("div");
     return (
         (e.style.cssText =
@@ -67,14 +64,14 @@ async function A() {
         () => e.remove()
     );
 }
-async function S(e, t, n) {
+async function I(e, t, n) {
     let i = new Image();
     if (((i.decoding = "async"), (i.src = e), await i.decode(), 0 === i.naturalWidth || 0 === i.naturalHeight))
-        return E("window still decoded empty");
+        return g("window still decoded empty");
     let r = i.naturalWidth / window.outerWidth,
         l = i.naturalHeight / window.outerHeight;
     if (r <= 0 || l <= 0 || Math.abs(r - l) > 0.03 * r)
-        return E("window still does not match the window geometry", {
+        return g("window still does not match the window geometry", {
             image: { width: i.naturalWidth, height: i.naturalHeight },
             window: { width: window.outerWidth, height: window.outerHeight },
         });
@@ -98,32 +95,32 @@ async function S(e, t, n) {
                     return { x: t, y: r };
         return null;
     })(i, n, r, l);
-    if (null == o) return E("document not found inside the window still", { inset: n });
+    if (null == o) return g("document not found inside the window still", { inset: n });
     let s = Math.max(0, Math.floor((o.x + t.left) * r)),
         u = Math.max(0, Math.floor((o.y + t.top) * l)),
         a = Math.min(i.naturalWidth - s, Math.round(t.width * r)),
         d = Math.min(i.naturalHeight - u, Math.round(t.height * l));
-    if (a < 1 || d < 1) return E("crop resolved empty");
+    if (a < 1 || d < 1) return g("crop resolved empty");
     let c = Math.min(1, 1568 / Math.max(a, d), Math.sqrt(115e4 / (a * d))),
         f = Math.max(1, Math.round(a * c)),
-        h = Math.max(1, Math.round(d * c)),
-        p = document.createElement("canvas");
-    ((p.width = f), (p.height = h));
-    let _ = p.getContext("2d");
-    if (null == _) return E("no 2d context");
-    _.drawImage(i, s, u, a, d, 0, 0, f, h);
-    let g = await new Promise((e) => p.toBlob(e, "image/webp", 0.92));
-    return null == g || "image/webp" !== g.type
-        ? E("webp encode failed")
-        : g.size > 5242880
-          ? E("encoded capture too large", { bytes: g.size })
-          : { blob: g, scale: (f / t.width + h / t.height) / 2 };
+        p = Math.max(1, Math.round(d * c)),
+        h = document.createElement("canvas");
+    ((h.width = f), (h.height = p));
+    let _ = h.getContext("2d");
+    if (null == _) return g("no 2d context");
+    _.drawImage(i, s, u, a, d, 0, 0, f, p);
+    let w = await new Promise((e) => h.toBlob(e, "image/webp", 0.92));
+    return null == w || "image/webp" !== w.type
+        ? g("webp encode failed")
+        : w.size > 5242880
+          ? g("encoded capture too large", { bytes: w.size })
+          : { blob: w, scale: (f / t.width + p / t.height) / 2 };
 }
-async function v(e, t) {
+async function T(e, t) {
     try {
         var n, i, r;
         let l;
-        if (null == window.DiscordNative) return E("not the desktop app");
+        if (null == window.DiscordNative) return g("not the desktop app");
         if (
             ((n = t.spec),
             null != n &&
@@ -138,10 +135,10 @@ async function v(e, t) {
                               ? "rect"
                               : "viewport")))
         )
-            return E("targeted capture needs the frame DOM", { spec: t.spec });
-        if ("visible" !== document.visibilityState) return E("window not visible");
-        let o = I(e);
-        if (null == o) return E("frame not fully on screen");
+            return g("targeted capture needs the frame DOM", { spec: t.spec });
+        if ("visible" !== document.visibilityState) return g("window not visible");
+        let o = w(e);
+        if (null == o) return g("frame not fully on screen");
         if (
             !(function (e, t) {
                 for (let [n, i] of [
@@ -168,19 +165,19 @@ async function v(e, t) {
                 return !0;
             })(e, o)
         )
-            return E("frame is covered");
+            return g("frame is covered");
         let s = {
                 x: Math.max(0, window.outerWidth - window.innerWidth),
                 y: Math.max(0, window.outerHeight - window.innerHeight),
             },
-            u = s.x > 2 || s.y > 2 ? await A() : null;
+            u = s.x > 2 || s.y > 2 ? await E() : null;
         try {
-            l = await T(o);
+            l = await m(o);
         } finally {
             u?.();
         }
         if (null == l) return null;
-        let a = I(e);
+        let a = w(e);
         if (
             null == a ||
             Math.abs(a.left - o.left) > 1 ||
@@ -188,8 +185,8 @@ async function v(e, t) {
             Math.abs(a.width - o.width) > 1 ||
             Math.abs(a.height - o.height) > 1
         )
-            return E("frame moved or resized during capture");
-        let d = await S(l, o, s);
+            return g("frame moved or resized during capture");
+        let d = await I(l, o, s);
         if (null == d) return null;
         let c = (function (e) {
             try {
@@ -204,7 +201,7 @@ async function v(e, t) {
                 return null;
             }
         })(e);
-        if (null == c) return E("frame has no resolvable upload url");
+        if (null == c) return g("frame has no resolvable upload url");
         let f = {
                 mode: "viewport",
                 bounds: { x: 0, y: 0, width: Math.round(o.width), height: Math.round(o.height) },
@@ -215,37 +212,38 @@ async function v(e, t) {
                 ...(null == t.build ? {} : { build: t.build }),
                 source: "native",
             },
-            h = {
+            p = {
                 "content-type": d.blob.type,
                 "x-vibegrations-capture-id": t.captureId,
                 "x-vibegrations-capture-meta": encodeURIComponent(JSON.stringify(f)),
             };
-        (null != t.build && (h["x-vibegrations-build"] = t.build),
-            null != t.uploadToken && (h["x-vibegrations-capture-token"] = t.uploadToken));
-        let p = await fetch(c, { method: "POST", headers: h, body: d.blob });
-        if (!p.ok) return E("upload refused", { status: p.status });
+        (null != t.build && (p["x-vibegrations-build"] = t.build),
+            null != t.uploadToken && (p["x-vibegrations-capture-token"] = t.uploadToken));
+        let h = await fetch(c, { method: "POST", headers: p, body: d.blob });
+        if (!h.ok) return g("upload refused", { status: h.status });
         return (
-            m.verbose("native capture uploaded", { id: t.captureId, bytes: d.blob.size, scale: f.scale }),
+            _.verbose("native capture uploaded", { id: t.captureId, bytes: d.blob.size, scale: f.scale }),
             { status: "accepted" }
         );
     } catch (e) {
-        return E("threw", { err: e });
+        return g("threw", { err: e });
     }
 }
-var y = n(120426),
-    R = n(320510),
-    O = n(171936),
-    b = n(809685),
-    k = n(777977),
-    N = n(484697);
+var A = n(120426),
+    S = n(320510),
+    v = n(227189),
+    y = n(171936),
+    R = n(809685),
+    O = n(777977),
+    b = n(484697);
 (n(321073), n(667532));
-var P = n(112420),
-    C = n(652215);
-function M(e) {
+var k = n(112420),
+    N = n(652215);
+function C(e) {
     return "string" == typeof e && "" !== e ? e : void 0;
 }
-let B = {
-    [C.e$_.OPEN_CONTEXT_MENU]: (e, t) => {
+let P = {
+    [N.e$_.OPEN_CONTEXT_MENU]: (e, t) => {
         let n = "custom" === e.args.type,
             i = n
                 ? (function e(t) {
@@ -254,7 +252,7 @@ let B = {
                       for (let i of t) {
                           if (n.length >= 40) break;
                           if (null == i || "object" != typeof i) continue;
-                          let t = M(i.id);
+                          let t = C(i.id);
                           (null != t && n.push(t), e(i.items, n));
                       }
                       return n;
@@ -273,41 +271,41 @@ let B = {
                     }
             : { result: { opened: !0 }, answered: "opened, no selection to make" };
     },
-    [C.e$_.SHOW_CONFIRM_MODAL]: (e, t) => {
+    [N.e$_.SHOW_CONFIRM_MODAL]: (e, t) => {
         let n = !0 === t.confirm,
-            i = M(e.args.title);
+            i = C(e.args.title);
         return {
             result: "confirm" === e.args.type ? { confirmed: n } : { acknowledged: n },
             answered: n ? "confirmed" : "dismissed",
             subject: i,
         };
     },
-    [C.e$_.OPEN_EXTERNAL_LINK]: (e) => ({
+    [N.e$_.OPEN_EXTERNAL_LINK]: (e) => ({
         result: { opened: !1 },
         answered: "cancelled \u2014 an agent may not open external links",
-        subject: M(e.args.url),
+        subject: C(e.args.url),
     }),
-    [C.e$_.SHARE_CONTENT]: (e) => ({
+    [N.e$_.SHARE_CONTENT]: (e) => ({
         result: { success: !1, didCopyLink: !1, didSendMessage: !1 },
         answered: "closed without sharing \u2014 an agent may not send a message for the user",
-        subject: M(e.args.preview_title) ?? M(e.args.content),
+        subject: C(e.args.preview_title) ?? C(e.args.content),
     }),
-    [C.e$_.OPEN_USER_PROFILE]: () => ({ result: { opened: !0 }, answered: "opened" }),
-    [C.e$_.OPEN_USER_POPOUT]: () => ({ result: { opened: !0 }, answered: "opened" }),
-    [C.e$_.SHOW_TOOLTIP]: () => ({ result: { shown: !0 }, answered: "shown" }),
-    [C.e$_.HIDE_TOOLTIP]: () => ({ result: { hidden: !0 }, answered: "hidden" }),
-    [C.e$_.OPEN_MEDIA_VIEWER]: () => ({ result: { opened: !0 }, answered: "opened" }),
-    [C.e$_.SHOW_TOAST]: () => ({ result: { shown: !0 }, answered: "shown" }),
-    [C.e$_.OPEN_INVITE_DIALOG]: () => ({ result: void 0, answered: "opened" }),
-    [C.e$_.OPEN_SHARE_MOMENT_DIALOG]: () => ({ result: void 0, answered: "opened" }),
+    [N.e$_.OPEN_USER_PROFILE]: () => ({ result: { opened: !0 }, answered: "opened" }),
+    [N.e$_.OPEN_USER_POPOUT]: () => ({ result: { opened: !0 }, answered: "opened" }),
+    [N.e$_.SHOW_TOOLTIP]: () => ({ result: { shown: !0 }, answered: "shown" }),
+    [N.e$_.HIDE_TOOLTIP]: () => ({ result: { hidden: !0 }, answered: "hidden" }),
+    [N.e$_.OPEN_MEDIA_VIEWER]: () => ({ result: { opened: !0 }, answered: "opened" }),
+    [N.e$_.SHOW_TOAST]: () => ({ result: { shown: !0 }, answered: "shown" }),
+    [N.e$_.OPEN_INVITE_DIALOG]: () => ({ result: void 0, answered: "opened" }),
+    [N.e$_.OPEN_SHARE_MOMENT_DIALOG]: () => ({ result: void 0, answered: "opened" }),
 };
-Object.keys(B);
-let L = { drain: () => [], end: () => {}, iframeId: null },
-    D = [];
-function G(e) {
-    let t = D.find((t) => t.iframeId === e.iframeId);
+Object.keys(P);
+let M = { drain: () => [], end: () => {}, iframeId: null },
+    B = [];
+function L(e) {
+    let t = B.find((t) => t.iframeId === e.iframeId);
     if (null == t) return null;
-    let n = B[e.cmd];
+    let n = P[e.cmd];
     if (null == n) return null;
     let { result: i, answered: r, options: l, subject: o } = n(e, t.answers);
     return (
@@ -321,38 +319,38 @@ function G(e) {
         { result: i }
     );
 }
-function V(e) {
+function D(e) {
     let t = e.contentWindow;
-    return null == t ? null : ((0, N.lw)(t) ?? null);
+    return null == t ? null : ((0, b.lw)(t) ?? null);
 }
-function x(e, t, n) {
-    var i = V(e);
-    if (null == i) return L;
+function G(e, t, n) {
+    var i = D(e);
+    if (null == i) return M;
     let r = { iframeId: i, answers: t ?? {}, recorded: [] };
     return (
-        n?.beneathBatches === !0 ? D.push(r) : D.unshift(r),
-        1 === D.length && (0, P.C)(G),
+        n?.beneathBatches === !0 ? B.push(r) : B.unshift(r),
+        1 === B.length && (0, k.C)(L),
         {
             iframeId: i,
             drain: () => r.recorded.splice(0, r.recorded.length),
             end: () => {
-                let e = D.indexOf(r);
-                -1 !== e && (D.splice(e, 1), 0 === D.length && (0, P.C)(null));
+                let e = B.indexOf(r);
+                -1 !== e && (B.splice(e, 1), 0 === B.length && (0, k.C)(null));
             },
         }
     );
 }
-var H = n(948230),
-    F = n(805332),
-    U = n(796036);
-function W(e) {
-    let t = (0, O.J8)(e);
+var V = n(948230),
+    x = n(805332),
+    H = n(796036);
+function F(e) {
+    let t = (0, y.J8)(e);
     if (null == t) return null;
     let n = t.getBoundingClientRect();
     return n.width < 1 || n.height < 1 ? null : { width: Math.round(n.width), height: Math.round(n.height) };
 }
-async function j(e, t) {
-    let n = W(e);
+async function U(e, t) {
+    let n = F(e);
     if (null == n)
         return {
             ok: !1,
@@ -362,7 +360,7 @@ async function j(e, t) {
             code: "unavailable",
             message: "no preview frame is on screen for this project",
         };
-    if (null == F.A.getBuilderPreviewApplicationId() && !(0, U.h)(e))
+    if (null == x.A.getBuilderPreviewApplicationId() && !(0, H.h)(e))
         return {
             ok: !1,
             mode: t,
@@ -371,11 +369,11 @@ async function j(e, t) {
             message:
                 "the phone/desktop lens is the Conjure builder header's, and this preview is not the builder screen's \u2014 open the app preview there to switch it",
         };
-    (0, H.GG)("phone" === t);
+    (0, V.GG)("phone" === t);
     let i = Date.now() + 2e3;
     for (;;) {
         var r;
-        let l = W(e);
+        let l = F(e);
         if (null != l && ((r = l.width), "phone" === t ? 60 >= Math.abs(r - 390) : r >= 520))
             return { ok: !0, mode: t, ...l };
         if (Date.now() >= i)
@@ -390,65 +388,47 @@ async function j(e, t) {
     }
 }
 n(762399);
-var q = n(559676);
-function $(e, t) {
+var W = n(559676);
+function j(e, t) {
     try {
         t();
     } catch (t) {
         console.error(`[vibegrations] preview native surfaces: ${e} failed`, t);
     }
 }
-var J = n(165610);
-let z = [r.F.BOT, r.F.APPLICATIONS_COMMANDS];
-async function Y(e) {
-    let { applicationId: t, application: r, guildId: o, onClose: s } = e,
-        u = r?.integrationTypesConfig?.[i.b.GUILD_INSTALL]?.oauth2InstallParams ?? r?.installParams,
-        [{ openOAuth2Modal: a }, { fetchProfile: d }] = await Promise.all([
-            Promise.resolve().then(n.bind(n, 887909)),
-            Promise.resolve().then(n.bind(n, 803306)),
-        ]);
-    a(
-        {
-            clientId: t,
-            guildId: o,
-            disableGuildSelect: !0,
-            integrationType: i.b.GUILD_INSTALL,
-            scopes: u?.scopes ?? z,
-            permissions: u?.permissions != null ? l.iu(u.permissions) : void 0,
-            callback: () => !0,
-        },
-        () => {
-            (s?.(), d(t, { withMutualGuilds: !0 }));
-        },
-    );
+var q = n(165610);
+async function $(e) {
+    let { onClose: t, ...i } = e,
+        { openOAuth2Modal: r } = await Promise.resolve().then(n.bind(n, 887909));
+    r((0, v.p)(i), t);
 }
-async function X(e, t, n) {
+async function J(e, t, n) {
     let { probe: i, spec: r, build: l, onAccepted: o } = n ?? {};
-    if (!0 === i) return { status: (0, O.EA)(e) ? "accepted" : "unavailable" };
-    let s = await (0, O.ZW)(e, 6e3);
+    if (!0 === i) return { status: (0, y.EA)(e) ? "accepted" : "unavailable" };
+    let s = await (0, y.ZW)(e, 6e3);
     if (null == s) return { status: "unavailable" };
     let u = null == o ? { uploadToken: void 0 } : await o();
     if (null == u) return { status: "unavailable" };
-    let a = await v(s, { captureId: t, spec: r, build: l, uploadToken: u.uploadToken });
-    return null != a ? a : await (0, y.x)(s, t, r, u.uploadToken);
+    let a = await T(s, { captureId: t, spec: r, build: l, uploadToken: u.uploadToken });
+    return null != a ? a : await (0, A.x)(s, t, r, u.uploadToken);
 }
-async function Z(e, t, n, i) {
-    if (!(0, O.EA)(e)) return { status: "unavailable" };
-    let r = (0, q.t_)(e);
+async function z(e, t, n, i) {
+    if (!(0, y.EA)(e)) return { status: "unavailable" };
+    let r = (0, W.t_)(e);
     try {
-        let r = await (0, O.ZW)(e, 6e3);
+        let r = await (0, y.ZW)(e, 6e3);
         if (null == r) return { status: "unavailable" };
         let l = await i?.();
         if (!1 === l) return { status: "unavailable" };
         if (null != n.viewport) {
-            let t = await j(e, n.viewport);
+            let t = await U(e, n.viewport);
             if (!t.ok) return { status: "failed", message: t.message ?? "the preview lens did not change" };
         }
-        let o = x(r, n.native);
+        let o = G(r, n.native);
         try {
-            let i = await (0, R.S)(r, t, n);
+            let i = await (0, S.S)(r, t, n);
             if ("completed" !== i.status) return i;
-            let l = [...K.drain(e), ...o.drain()];
+            let l = [...Y.drain(e), ...o.drain()];
             if (0 === l.length) return i;
             return { ...i, response: { ...i.response, native: l } };
         } finally {
@@ -458,27 +438,27 @@ async function Z(e, t, n, i) {
         r();
     }
 }
-let K = (function (e) {
+let Y = (function (e) {
         let t = new Map();
         function n(e) {
             let n = t.get(e);
-            (null != n && (t.delete(e), $("closing the operation session", () => n.end())), (0, q.Rh)(e));
+            (null != n && (t.delete(e), j("closing the operation session", () => n.end())), (0, W.Rh)(e));
         }
         return {
             begin: function (i) {
-                (0, q.BP)(i);
+                (0, W.BP)(i);
                 let r = e(i);
                 if (null == r) return;
                 let l = t.get(i);
                 if (null != l) {
                     if (null != l.iframeId && l.iframeId === r.identity) return;
-                    (t.delete(i), $("replacing a stale operation session", () => l.end()));
+                    (t.delete(i), j("replacing a stale operation session", () => l.end()));
                 }
-                ($("dismissing what was left standing", () => r.dismiss()),
-                    $("opening the operation session", () => {
+                (j("dismissing what was left standing", () => r.dismiss()),
+                    j("opening the operation session", () => {
                         let e = r.open(),
-                            l = (0, q.FQ)(() => {
-                                (0, q.RW)(i) || n(i);
+                            l = (0, W.FQ)(() => {
+                                (0, W.RW)(i) || n(i);
                             });
                         t.set(i, {
                             iframeId: e.iframeId,
@@ -493,63 +473,63 @@ let K = (function (e) {
             drain: (e) => t.get(e)?.drain() ?? [],
         };
     })((e) => {
-        let t = (0, O.J8)(e);
+        let t = (0, y.J8)(e);
         return null == t
             ? null
             : {
-                  identity: V(t),
+                  identity: D(t),
                   dismiss: () =>
                       (function (e) {
                           let t = e.contentWindow;
                           if (null == t) return;
-                          let n = (0, N.lw)(t);
-                          null != n && ((0, b.ir)(n), (0, k.OR)(n));
+                          let n = (0, b.lw)(t);
+                          null != n && ((0, R.ir)(n), (0, O.OR)(n));
                       })(t),
-                  open: () => x(t, void 0, { beneathBatches: !0 }),
+                  open: () => G(t, void 0, { beneathBatches: !0 }),
               };
     }),
-    Q = {
-        openVibegrationsAppInstallModal: Y,
+    X = {
+        openVibegrationsAppInstallModal: $,
         isWindowFocused: function () {
-            return c.A.isFocused();
+            return u.A.isFocused();
         },
         areTurnNotificationsDisabled: function () {
-            return d.A.getDesktopType() === C.nRU.NEVER;
+            return s.A.getDesktopType() === N.nRU.NEVER;
         },
         presentTurnNotification: function (e) {
-            let { projectId: t, title: i, body: r, route: l, sound: s, volume: u } = e;
-            o.default.showNotification(
+            let { projectId: t, title: r, body: l, route: s, sound: u, volume: d } = e;
+            i.default.showNotification(
                 n(608598),
-                i,
                 r,
+                l,
                 { notif_type: "VIBEGRATIONS_ASSISTANT_FINISHED" },
                 {
                     tag: `vibegrations-${t}`,
-                    sound: s,
-                    volume: u,
-                    fallbackDeepLink: null == l ? void 0 : (0, f.I)(l),
-                    onClick: null == l ? void 0 : () => (0, a.pX)(l),
+                    sound: u,
+                    volume: d,
+                    fallbackDeepLink: null == s ? void 0 : (0, a.I)(s),
+                    onClick: null == s ? void 0 : () => (0, o.pX)(s),
                     isUserAvatar: !1,
                 },
             );
         },
-        relayPreviewCapture: X,
-        relayPreviewControl: Z,
+        relayPreviewCapture: J,
+        relayPreviewControl: z,
         beginPreviewOperation: function (e) {
-            K.begin(e);
+            Y.begin(e);
         },
         endPreviewOperation: function (e) {
-            K.end(e);
+            Y.end(e);
         },
         releasePreviewControl: function (e) {
-            (0, q.xm)(e);
+            (0, W.xm)(e);
         },
         reloadAppFrames: function (e) {
             if (null != e)
-                for (let t of u.A.getAllFrames())
-                    (0, J.x1)(t) &&
+                for (let t of l.A.getAllFrames())
+                    (0, q.x1)(t) &&
                         t.applicationId === e &&
                         !t.data.proxyTicketRefreshing &&
-                        s.A.refreshProxyTicket(t.id);
+                        r.A.refreshProxyTicket(t.id);
         },
     };

@@ -1427,7 +1427,7 @@ function eq(e) {
         (0, eo.f)() && (n(277984).$o(), W.jv(eh.A.getFetchedSKUIDs()));
     }),
     eV(["USER_SUBSCRIPTIONS_UPDATE"], () => {
-        (Y.fetchCurrentUser(), (0, eo.f)() && n(277984).hP());
+        (Y.rQ(), (0, eo.f)() && n(277984).hP());
     }),
     eV(["WISHLIST_ITEM_PURCHASED"], (e) => {
         eW({ type: "WISHLIST_ITEM_PURCHASED", recipientId: e.recipient_id, skuId: e.sku_id });

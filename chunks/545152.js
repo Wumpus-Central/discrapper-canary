@@ -303,7 +303,7 @@ async function j(e, t, n) {
     let r = i.application?.bot;
     if (null == r && null != i.botId)
         try {
-            await o.getUser(i.botId);
+            await o.wz(i.botId);
         } catch {}
     let l = {
         ...(0, T.Ay)({

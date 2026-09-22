@@ -262,8 +262,8 @@ var L = i(793574),
     G = i(976860),
     P = i(329551),
     V = i(712711),
-    U = i(952572),
-    S = i(151476),
+    S = i(952572),
+    U = i(151476),
     F = i(704877),
     X = i(222692),
     z = i(404355),
@@ -427,8 +427,8 @@ function eT(e) {
         [w, G] = (0, d.yK)([K.Ay], () => [K.Ay.supports(eC.O5.VIDEO), Object.keys(K.Ay.getVideoDevices()).length]),
         P = (0, d.bG)([ee.A], () => ee.A.getVideoParticipants(a.id).length > 0),
         V = (0, d.bG)([J.default], () => J.default.getUser(c)),
-        U = (0, em.tx)(V),
-        S = P && w && G > 0,
+        S = (0, em.tx)(V),
+        U = P && w && G > 0,
         F = s.useCallback((e) => {
             null != e.top && null != e.left && E.move(e.left, e.top);
         }, []),
@@ -458,7 +458,7 @@ function eT(e) {
             [z],
         ),
         s.useEffect(() => {
-            null == V && (0, ea.getUser)(c);
+            null == V && (0, ea.wz)(c);
         }, [c, V]));
     let B = (0, eo.gU)(a);
     return (0, l.jsx)(k.f5, {
@@ -492,7 +492,7 @@ function eT(e) {
                                         className: o()(ek.gX, ek.DD),
                                         children:
                                             null != V
-                                                ? e_.intl.format(e_.t.M3F6cv, { username: U })
+                                                ? e_.intl.format(e_.t.M3F6cv, { username: S })
                                                 : e_.intl.string(e_.t["3rE1P8"]),
                                     }),
                                     (0, l.jsxs)("div", {
@@ -584,7 +584,7 @@ function eT(e) {
                                         variant: "secondary",
                                         onClick: X,
                                     }),
-                                    S
+                                    U
                                         ? (0, l.jsx)(h.Y, {
                                               targetElementRef: m,
                                               renderPopout: (e) => {
@@ -622,15 +622,15 @@ function eT(e) {
 var eG = i(329072),
     eP = i(480890),
     eV = i(806931),
-    eU = i(479464),
-    eS = i(890596);
+    eS = i(479464),
+    eU = i(890596);
 let eF = { width: 232, height: 315 },
     eX = { width: 232, height: 267 };
 function ez(e) {
     let { header: t } = e,
         i = K.Ay.getCameraComponent(),
         n = (0, d.bG)([K.Ay], () => K.Ay.getVideoDeviceId()),
-        a = (0, U.A)();
+        a = (0, S.A)();
     return (
         s.useEffect(() => {
             let e = J.default.getCurrentUser();
@@ -640,14 +640,14 @@ function ez(e) {
             }
         }, [a, n]),
         (0, l.jsxs)("div", {
-            className: eS.Tg,
+            className: eU.Tg,
             children: [
                 (0, l.jsx)(c.y, {}),
                 (0, l.jsx)("div", {
-                    className: eS.VH,
+                    className: eU.VH,
                     children: (0, l.jsx)(i, { disabled: !1, deviceId: n, width: 475, height: 267 }),
                 }),
-                (0, l.jsx)("div", { className: eS.dB, children: t }),
+                (0, l.jsx)("div", { className: eU.dB, children: t }),
             ],
         })
     );
@@ -655,17 +655,17 @@ function ez(e) {
 function eB(e) {
     let { canVideo: t, channel: i, numVideoDevices: n } = e,
         { parentAnalyticsLocation: a } = (0, k.Ay)(),
-        { cameraUnavailable: r, enabled: d } = (0, S.A)(),
+        { cameraUnavailable: r, enabled: d } = (0, U.A)(),
         c = (0, F.A)(i),
         m = s.useRef(null),
         g = n > 1;
     return (0, l.jsxs)("div", {
-        className: o()(eS.iE, eS.o1),
+        className: o()(eU.iE, eU.o1),
         children: [
             (0, l.jsx)(z.A, {
                 iconComponent: u.P,
                 label: e_.intl.string(e_.t.WAI6xu),
-                className: eS.hP,
+                className: eU.hP,
                 onClick: () => {
                     ((0, eE.X)(a, eE.O.DISCONNECT),
                         Z.default.track(C.HAw.RING_CALL_DECLINED, {
@@ -696,7 +696,7 @@ function eB(e) {
                             buttonRef: m,
                             join: !0,
                             enabled: d,
-                            className: o()(eS.hP, { [eS.$j]: g }),
+                            className: o()(eU.hP, { [eU.$j]: g }),
                             color: "green",
                             centerButton: !0,
                             hasPermission: c,
@@ -724,7 +724,7 @@ function eB(e) {
                 centerButton: !0,
                 onCallJoined: () =>
                     Z.default.track(C.HAw.RING_CALL_ACCEPTED, { location: a, guild_id: i.guild_id, ...(0, O.dI)(i) }),
-                className: eS.hP,
+                className: eU.hP,
             }),
         ],
     });
@@ -752,48 +752,48 @@ function eY(e) {
         return (window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e));
     }, [a]);
     let V = O === C._Of.VIDEO && b && y > 0,
-        { enabled: U } = H.A.useExperiment({ guildId: a?.guild_id, location: "IncomingCallModal" }),
-        S =
-            O === C._Of.VOICE || (U && a.type === C.rbe.GUILD_VOICE)
+        { enabled: S } = H.A.useExperiment({ guildId: a?.guild_id, location: "IncomingCallModal" }),
+        U =
+            O === C._Of.VOICE || (S && a.type === C.rbe.GUILD_VOICE)
                 ? e_.intl.string(e_.t.Js8cK3)
                 : e_.intl.string(e_.t.KcnWCO),
         F = (0, l.jsxs)(l.Fragment, {
             children: [
                 null != v && null == j
                     ? (0, l.jsx)("div", {
-                          className: o()(eS.Kk, eU.iE, eU.hs),
+                          className: o()(eU.Kk, eS.iE, eS.hs),
                           children: (0, l.jsx)(T.Ay, {
-                              className: eS.dK,
+                              className: eU.dK,
                               mask: T.hW.AVATAR_DEFAULT,
                               width: u ? 40 : 80,
                               height: u ? 40 : 80,
                               children: (0, l.jsx)("div", {
-                                  className: o()(eS.$f, eS.Gc),
-                                  children: (0, l.jsx)("div", { className: eS.Hj, children: (0, W.Rb)(v) }),
+                                  className: o()(eU.$f, eU.Gc),
+                                  children: (0, l.jsx)("div", { className: eU.Hj, children: (0, W.Rb)(v) }),
                               }),
                           }),
                       })
                     : (0, l.jsx)(et.Ay, {
-                          className: eS.Kk,
+                          className: eU.Kk,
                           ringing: w,
                           src: _ ?? "",
                           ringingType: et.Ay.RingingType.INCOMING,
                           size: u ? g._3.SIZE_40 : g._3.SIZE_80,
                       }),
                 (0, l.jsxs)("div", {
-                    className: eS.i8,
+                    className: eU.i8,
                     children: [
                         (0, l.jsx)(f.E, {
-                            className: eS.DD,
+                            className: eU.DD,
                             color: "text-strong",
                             variant: u ? "text-md/semibold" : "text-lg/semibold",
                             children: I,
                         }),
                         (0, l.jsx)(f.E, {
                             color: "text-default",
-                            className: eS.VA,
+                            className: eU.VA,
                             variant: u ? "text-sm/normal" : "text-md/normal",
-                            children: S,
+                            children: U,
                         }),
                     ],
                 }),
@@ -804,8 +804,8 @@ function eY(e) {
     return (0, l.jsx)(k.f5, {
         value: c,
         children: (0, l.jsx)(D, {
-            className: eS.iE,
-            selector: `.${eS.zr}`,
+            className: eU.iE,
+            selector: `.${eU.zr}`,
             initialPosition: { left: n, top: i },
             maxX: z.width,
             maxY: z.height,
@@ -815,7 +815,7 @@ function eY(e) {
                 theme: u ? C.NJ8.DARK : void 0,
                 children: (e) =>
                     (0, l.jsxs)(r.animated.div, {
-                        className: o()(eS.zr, eR.a8, { [eS.mY]: u }, e),
+                        className: o()(eU.zr, eR.a8, { [eU.mY]: u }, e),
                         style: {
                             ...t,
                             minWidth: P.value.interpolate([0, 1], [X.width, 475]),
@@ -823,12 +823,12 @@ function eY(e) {
                             translateX: P.value.interpolate([0, 1], [0, (-1 * Math.abs(475 - X.width)) / 2]),
                         },
                         children: [
-                            u ? (0, l.jsx)(ez, { header: F }) : (0, l.jsx)("div", { className: eS.Rh, children: F }),
+                            u ? (0, l.jsx)(ez, { header: F }) : (0, l.jsx)("div", { className: eU.Rh, children: F }),
                             (0, l.jsx)(eB, { canVideo: V, channel: a, numVideoDevices: y }),
                             V && !u
                                 ? (0, l.jsx)("div", {
                                       "data-button-hoisted-classname-wrapper": !0,
-                                      className: eS.jc,
+                                      className: eU.jc,
                                       children: (0, l.jsx)(x.$, {
                                           variant: "secondary",
                                           size: "sm",

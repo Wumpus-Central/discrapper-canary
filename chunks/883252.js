@@ -18237,7 +18237,7 @@ function Nt(e) {
         a = E.useCallback(() => (0, S6.openUserProfileModal)({ userId: t, sourceAnalyticsLocations: i }), [t, i]);
     return (
         E.useEffect(() => {
-            (0, _7.getUser)(t);
+            (0, _7.wz)(t);
         }, [t]),
         (0, A.jsxs)("div", {
             className: Ne.uW,

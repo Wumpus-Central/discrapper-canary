@@ -362,7 +362,7 @@ function eZ(e) {
     let { isReminder: t } = e,
         n = i.useMemo(() => {
             let e = new eT.A({ id: "313338", username: ea.intl.string(ea.t.cqpybK), discriminator: "0000", bot: !1 }),
-                t = eR.insertStaticUser(e);
+                t = eR.nj(e);
             return (
                 null != t && (t.getAvatarURL = () => eY.A),
                 [ea.intl.string(ea.t["h+KPxy"]), ea.intl.string(ea.t["63EVpI"]), ea.intl.string(ea.t["KT/TDX"])].map(

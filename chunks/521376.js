@@ -1466,7 +1466,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e3 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eH.A().log(
-    `[BUILD INFO] Release Channel: ${e3}, Build Number: 618253, Version Hash: ca38b2a78f3a63bc7c4f42c6c234e2a01144e1c2`,
+    `[BUILD INFO] Release Channel: ${e3}, Build Number: 618262, Version Hash: c6749b8bd831596fcbacff1ed1b1c4d7ecbc78f3`,
 ),
     v.A.setTags({ appContext: x.QCW }),
     eI.A.initBasic(),
@@ -3626,7 +3626,7 @@ let rq = (0, nQ.Fe)({
                 n.e("814431"),
                 n.e("759086"),
                 n.e("763214"),
-                n.e("867336"),
+                n.e("520641"),
                 n.e("148758"),
                 n.e("36026"),
                 n.e("294387"),
@@ -21555,7 +21555,7 @@ let Nz = "isHideDevBanner",
                     className: ts()(N$.Wz, N$.mr),
                     children: [
                         (0, R.jsx)(NK, { className: N$.Kk }),
-                        tg.intl.format(tg.t.uyrfYF, { buildNumber: "618253" }),
+                        tg.intl.format(tg.t.uyrfYF, { buildNumber: "618262" }),
                         (0, R.jsx)(r, {}),
                     ],
                 })
@@ -24755,7 +24755,7 @@ let RG = (0, tV.Fe)({
                 n.e("883221"),
                 n.e("384236"),
                 n.e("64640"),
-                n.e("867336"),
+                n.e("520641"),
                 n.e("456506"),
                 n.e("669952"),
                 n.e("90186"),
@@ -25062,7 +25062,7 @@ let RG = (0, tV.Fe)({
                 n.e("148620"),
                 n.e("785352"),
                 n.e("256769"),
-                n.e("925502"),
+                n.e("160406"),
                 n.e("833173"),
                 n.e("530615"),
             ]).then(n.bind(n, 975134)),
@@ -28858,7 +28858,7 @@ let RG = (0, tV.Fe)({
                 n.e("883221"),
                 n.e("384236"),
                 n.e("64640"),
-                n.e("867336"),
+                n.e("520641"),
                 n.e("456506"),
                 n.e("669952"),
                 n.e("90186"),
@@ -29169,7 +29169,7 @@ let RG = (0, tV.Fe)({
                 n.e("256769"),
                 n.e("407845"),
                 n.e("979513"),
-                n.e("925502"),
+                n.e("160406"),
                 n.e("173092"),
             ]).then(n.bind(n, 592121)),
         webpackId: 592121,
@@ -33507,7 +33507,7 @@ let vb = (0, nQ.Fe)({
                 n.e("113561"),
                 n.e("368991"),
                 n.e("223213"),
-                n.e("867336"),
+                n.e("520641"),
                 n.e("377109"),
                 n.e("656997"),
                 n.e("679157"),
@@ -34083,7 +34083,7 @@ let vb = (0, nQ.Fe)({
                 n.e("368991"),
                 n.e("280574"),
                 n.e("223213"),
-                n.e("867336"),
+                n.e("520641"),
                 n.e("377109"),
                 n.e("656997"),
                 n.e("679157"),
@@ -34468,7 +34468,7 @@ let vb = (0, nQ.Fe)({
                 n.e("368991"),
                 n.e("280574"),
                 n.e("223213"),
-                n.e("867336"),
+                n.e("520641"),
                 n.e("377109"),
                 n.e("656997"),
                 n.e("828849"),
@@ -34822,7 +34822,7 @@ let vb = (0, nQ.Fe)({
                 n.e("113561"),
                 n.e("368991"),
                 n.e("223213"),
-                n.e("867336"),
+                n.e("520641"),
                 n.e("377109"),
                 n.e("656997"),
                 n.e("679157"),
@@ -40920,7 +40920,7 @@ let P6 = {
                 );
             }
             let N = eP.default.getUser(o);
-            if ((null == N && (await P3.fetchProfile(o), (N = eP.default.getUser(o))), null == N))
+            if ((null == N && (await P3.eO(o), (N = eP.default.getUser(o))), null == N))
                 throw new bu.A({ errorCode: x.Lw6.INVALID_USER }, `Unknown user id: ${o}`);
             let C = null == h ? void 0 : rU.A.getChannel(h);
             if (null == C)
@@ -42238,7 +42238,7 @@ let UY = {
                     { iframeId: a } = bh(t);
                 if (null == (0, PN.fl)(a)) return { opened: !1 };
                 let s = eP.default.getUser(n);
-                if ((null == s && (await P3.fetchProfile(n), (s = eP.default.getUser(n))), null == s))
+                if ((null == s && (await P3.eO(n), (s = eP.default.getUser(n))), null == s))
                     throw new bu.A({ errorCode: x.Lw6.INVALID_USER }, `Unknown user id: ${n}`);
                 return ((0, UW.Ps)({ iframeId: a, userId: n, x: i, y: r }), { opened: !0 });
             },
@@ -47023,7 +47023,7 @@ let k$ = (0, tV.Fe)({
             n.e("759086"),
             n.e("763214"),
             n.e("105101"),
-            n.e("867336"),
+            n.e("520641"),
             n.e("148758"),
             n.e("36026"),
             n.e("294387"),

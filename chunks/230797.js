@@ -2683,7 +2683,7 @@ function ss(e) {
         [l, r] = a.useState(void 0);
     a.useEffect(() => {
         n?.moderatorReport?.reported_user_id != null &&
-            (0, lX.getUser)(n.moderatorReport.reported_user_id)
+            (0, lX.wz)(n.moderatorReport.reported_user_id)
                 .then((e) => {
                     r(e);
                 })
