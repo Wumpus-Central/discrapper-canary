@@ -60,6 +60,7 @@ var o =
     (r.ROLL_DICE = "roll-dice"),
     (r.GAME_PROFILE = "game-profile"),
     (r.MESSAGE_REQUESTS = "message-requests"),
+    (r.AGE_VERIFICATION_AGEKEY_RETURN = "agekey-return"),
     r);
 let d = "CacheStoreLazy",
     c = "CacheStoreChannelsLazy",
