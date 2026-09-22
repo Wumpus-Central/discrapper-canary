@@ -15,9 +15,9 @@ class u extends a.A {
                 t = await r.A.fetchChangelogConfig(),
                 n = t.body,
                 a =
-                    ((e = parseInt("618398")),
+                    ((e = parseInt("618405")),
                     Number.isNaN(e) &&
-                        (d.A.captureMessage("Trying to open a changelog for an invalid build number 618398"), (e = 0)),
+                        (d.A.captureMessage("Trying to open a changelog for an invalid build number 618405"), (e = 0)),
                     e),
                 u = (function (e, t) {
                     let n = 0,
