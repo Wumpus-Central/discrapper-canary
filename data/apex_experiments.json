@@ -5460,6 +5460,25 @@
     }
   },
   {
+    "name": "2026-09-silp-direct-to-discoverable",
+    "kind": "installation",
+    "defaultConfig": {
+      "placement": null
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "placement": "in_content"
+      },
+      "2": {
+        "placement": "below_content"
+      }
+    }
+  },
+  {
     "name": "2026-09-single-cpu-copy",
     "kind": "user",
     "defaultConfig": {
