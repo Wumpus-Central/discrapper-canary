@@ -7,6 +7,8 @@ let i = (0, l.createContext)({
     skuIDs: [],
     collectedModalOverrideTitle: void 0,
     setCollectedModalOverrideTitle: () => {},
+    collectedModalOverrideDescription: void 0,
+    setCollectedModalOverrideDescription: () => {},
     collectedModalGradientColor: void 0,
     setCollectedModalGradientColor: () => {},
 });
