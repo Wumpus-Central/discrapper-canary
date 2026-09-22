@@ -534,6 +534,7 @@ class j extends S.A {
     keyframeInterval = 0;
     videoQualityMeasurement = "";
     videoEncoderExperiments = "";
+    singleCpuCopy = !1;
     numFastUdpReconnects = 0;
     lastPreparedTransitionId = -1;
     lastExecutedTransitionId = -1;
@@ -1086,6 +1087,9 @@ class j extends S.A {
     setVideoEncoderExperiments(e) {
         ((this.videoEncoderExperiments = e),
             this.conn.setTransportOptions({ videoEncoderExperiments: this.videoEncoderExperiments }));
+    }
+    setSingleCpuCopy(e) {
+        ((this.singleCpuCopy = e), this.conn.setTransportOptions({ singleCpuCopy: this.singleCpuCopy }));
     }
     setAudioVideoOverridesTransport(e) {
         let t = null != e.overrideDeniedVideoCodecs && e.overrideDeniedVideoCodecs !== this.lastOverrideCodecDenylist,

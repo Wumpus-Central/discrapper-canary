@@ -3580,9 +3580,9 @@ class t_ extends p.A {
             u.setFakeGoLiveEncodePixelCount(e?.maxResolution === ti.on.RESOLUTION_1080 ? 921600 : null);
         }
         if (ee.Ay.supports(H.O5.IMAGE_QUALITY_MEASUREMENT)) {
-            let e = "imageQualityWebrtcPsnrDb:5000,imageQualityVmaf_v061:5000,hwdec";
-            (Y.getConfig({ location: "RTCConnection" }).enabled && (e += ",singleCopyExperiment"),
-                u.setVideoQualityMeasurement(e));
+            let { enabled: e } = Y.getConfig({ location: "RTCConnection" }),
+                t = "imageQualityWebrtcPsnrDb:5000,imageQualityVmaf_v061:5000,hwdec";
+            (e && (t += ",singleCpuCopy"), u.setVideoQualityMeasurement(t), u.setSingleCpuCopy(e));
         }
         (u.setVideoEncoderExperiments(ee.Ay.getVideoEncoderExperiments(this.context, this.getVoiceParticipantType())),
             u.on(T.yq.Speaking, (e, t, n) => {

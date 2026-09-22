@@ -1227,6 +1227,7 @@ class eE extends S.A {
     stopAllSamplesLocalPlayback() {}
     setVideoQualityMeasurement(e) {}
     setVideoEncoderExperiments(e) {}
+    setSingleCpuCopy(e) {}
     setAudioVideoOverridesTransport(e) {}
     setBandwidthEstimationExperiments(e) {}
     prepareSecureFramesTransition(e, t, n) {}
