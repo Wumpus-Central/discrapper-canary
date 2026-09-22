@@ -9,8 +9,8 @@ var t = l(477900),
     u = l(192308),
     o = l(834730),
     A = l(939249),
-    h = l(689175),
-    g = l(66834),
+    g = l(689175),
+    h = l(66834),
     m = l(306537),
     x = l(47167),
     f = l(713654),
@@ -23,12 +23,12 @@ var t = l(477900),
 function b(e) {
     let { guild: n, channelId: a } = e,
         s = (0, r.bG)([p.A], () => p.A.getChannel(a)),
-        [h, I] = i.useState(!1),
+        [g, I] = i.useState(!1),
         b = i.useCallback(() => {
-            g.A.nsfwReturnToSafety(n?.id);
+            h.A.nsfwReturnToSafety(n?.id);
         }, [n]),
         _ = i.useCallback(() => {
-            g.A.spoilerAgree(a);
+            h.A.spoilerAgree(a);
         }, [a]),
         y = (0, x.Ay)(s),
         T = null != s ? (0, f.gU)(s) : null,
@@ -72,7 +72,7 @@ function b(e) {
                               lineClamp: 3,
                               children: j.A.parseTruncatedTopic(s.topic, !0, { channelId: a }),
                           }),
-                          h &&
+                          g &&
                               (0, t.jsx)(A.D, {
                                   className: E.zT,
                                   onClick: k,
@@ -108,7 +108,7 @@ let _ = function (e) {
             let { current: e } = r;
             e?.scrollToBottom();
         }, []),
-        (0, t.jsx)(h.Ch, {
+        (0, t.jsx)(g.Ch, {
             ref: r,
             className: I.X,
             children: (0, t.jsx)("div", {

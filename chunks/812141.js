@@ -1,7 +1,7 @@
-n.d(e, { p: () => r });
+n.d(e, { p: () => a });
 var i = n(536637),
     l = n.n(i);
-function r(t) {
+function a(t) {
     let e = t > 0 ? l()().add(t, "second").toISOString() : null;
     return { muted: !0, mute_config: { selected_time_window: t, end_time: e } };
 }

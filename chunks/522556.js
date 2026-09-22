@@ -9,12 +9,12 @@ var t = l(477900),
     u = l(306537),
     o = l(323073),
     A = l(506164),
-    h = l(375708),
-    g = l(814316);
+    g = l(375708),
+    h = l(814316);
 function m(e) {
     let { guild: n, channelId: l } = e,
         { modalType: a, emphasiseDisagree: s, ...r } = (0, o.k$)(n),
-        g = i.useCallback(() => {
+        h = i.useCallback(() => {
             null != n && c.A.nsfwReturnToSafety(n.id);
         }, [n]),
         m = i.useCallback(() => {
@@ -27,7 +27,7 @@ function m(e) {
             ...r,
             guildId: n?.id,
             channelId: l,
-            disagreement: h.intl.string(h.t["/g10LC"]),
+            disagreement: g.intl.string(g.t["/g10LC"]),
             "data-testid": `age-gate-${a}`,
         };
     switch (a) {
@@ -35,14 +35,14 @@ function m(e) {
         case u.A5.GUILD_LARGE_SERVER:
             return (0, t.jsx)(A.A, {
                 onAgree: x,
-                onDisagree: g,
+                onDisagree: h,
                 modalType: a,
                 agreementButtonVariant: !0 === s ? "secondary" : "primary",
                 disagreementButtonVariant: !0 === s ? "primary" : "secondary",
                 ...f,
             });
         default:
-            return (0, t.jsx)(A.A, { onAgree: m, onDisagree: g, modalType: a, ...f });
+            return (0, t.jsx)(A.A, { onAgree: m, onDisagree: h, modalType: a, ...f });
     }
 }
 let x = function (e) {
@@ -55,9 +55,9 @@ let x = function (e) {
         }, []),
         (0, t.jsx)(r.Ch, {
             ref: c,
-            className: g.X,
+            className: h.X,
             children: (0, t.jsx)("div", {
-                className: s()(a, g.i),
+                className: s()(a, h.i),
                 children: (0, t.jsx)(m, { guild: n, channelId: l }),
             }),
         })

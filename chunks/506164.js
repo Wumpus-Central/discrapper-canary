@@ -13,8 +13,8 @@ let u = function (e) {
         description: u,
         agreement: o,
         agreementButtonVariant: A = "primary",
-        disagreement: h,
-        disagreementButtonVariant: g = "secondary",
+        disagreement: g,
+        disagreementButtonVariant: h = "secondary",
         onAgree: m,
         onDisagree: x,
         modalType: f,
@@ -32,7 +32,7 @@ let u = function (e) {
             ((0, c.mU)(c.IY.NSFW_CHANNEL_AGREE_CTA, f, j, N), m?.());
         }, [m, f, j, N]),
         I = null != o && null != m ? (0, t.jsx)(a.$, { variant: A, text: o, onClick: E }, "agree") : null,
-        b = null != h && null != x ? (0, t.jsx)(a.$, { variant: g, text: h, onClick: C }, "disagree") : null;
+        b = null != g && null != x ? (0, t.jsx)(a.$, { variant: h, text: g, onClick: C }, "disagree") : null;
     return (0, t.jsxs)(s.B, {
         justify: "center",
         align: "center",
@@ -64,7 +64,7 @@ let u = function (e) {
                 justify: "center",
                 align: "center",
                 gap: 16,
-                children: "primary" === g ? [I, b] : [b, I],
+                children: "primary" === h ? [I, b] : [b, I],
             }),
         ],
     });

@@ -9,8 +9,8 @@ var t = l(477900),
     u = l(95561),
     o = l(973854),
     A = l(355622),
-    h = l(225142),
-    g = l(701785),
+    g = l(225142),
+    h = l(701785),
     m = l(429933),
     x = l(58736),
     f = l(187360),
@@ -37,7 +37,7 @@ function w(e) {
         V = (0, v.Ay)(F),
         O = (0, a.bG)([N.A], () => H?.id != null && N.A.isLurking(H.id), [H]),
         P = (0, m.A)(n),
-        M = (0, a.bG)([g.h], () => g.h.getResourceForChannel(H?.id, n)?.title),
+        M = (0, a.bG)([h.h], () => h.h.getResourceForChannel(H?.id, n)?.title),
         U = (0, d.vL)(F),
         q = (0, E.Uf)(F),
         z = i.useRef(!1);
@@ -106,7 +106,7 @@ function w(e) {
                                       if (null == F) return;
                                       let e = S.A.getMessages(F.id);
                                       if (D) {
-                                          ((0, p.pX)(R.BVt.CHANNEL(F.guild_id, F.id)), (0, h.bN)(F.guild_id, null));
+                                          ((0, p.pX)(R.BVt.CHANNEL(F.guild_id, F.id)), (0, g.bN)(F.guild_id, null));
                                           return;
                                       }
                                       (0, p.uh)(F.guild_id, F.id, e.jumpTargetId);

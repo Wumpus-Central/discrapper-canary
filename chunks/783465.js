@@ -1,19 +1,19 @@
-_.d(r, { OW: () => e, _V: () => A, oO: () => N });
-var o = _(499979),
-    E = _(381849),
-    C = _(375708);
-let s = [o.pJ.HOURS, o.pJ.MINUTES];
-function N(a) {
-    let { unit: r, time: _ } = (0, o.$l)(a, s),
-        N = (0, E.i)();
-    if (null == _) return C.intl.formatToPlainString(N.minutes, { minutes: 0 });
-    let e = Math.round(_);
-    return r === o.pJ.HOURS
-        ? C.intl.formatToPlainString(N.hours, { hours: e })
-        : C.intl.formatToPlainString(N.minutes, { minutes: e });
+n.d(t, { OW: () => o, _V: () => d, oO: () => l });
+var i = n(499979),
+    r = n(381849),
+    a = n(375708);
+let s = [i.pJ.HOURS, i.pJ.MINUTES];
+function l(e) {
+    let { unit: t, time: n } = (0, i.$l)(e, s),
+        l = (0, r.i)();
+    if (null == n) return a.intl.formatToPlainString(l.minutes, { minutes: 0 });
+    let o = Math.round(n);
+    return t === i.pJ.HOURS
+        ? a.intl.formatToPlainString(l.hours, { hours: o })
+        : a.intl.formatToPlainString(l.minutes, { minutes: o });
 }
-function e(a) {
-    switch (a) {
+function o(e) {
+    switch (e) {
         case 0:
             return "https://cdn.discordapp.com/assets/content/97c629a74c9d42f45a5e3b5f38cad7c76415bafebb327ee641972ea0c346d9ed.png";
         case 1:
@@ -36,6 +36,6 @@ function e(a) {
             return "https://cdn.discordapp.com/assets/content/63e156d9534821fc67f772dace48c7add4186191274c63bebbd0895ee9a1d4d5.png";
     }
 }
-function A(a) {
-    return Math.min(Math.max(Math.round(a / 10), 1), 9);
+function d(e) {
+    return Math.min(Math.max(Math.round(e / 10), 1), 9);
 }
