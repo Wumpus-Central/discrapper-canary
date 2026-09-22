@@ -1605,7 +1605,7 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     min-width: var(--modal-width-large)
 }
 
-@media screen and (max-height:550px),
+@media screen and (max-height:550px) and (pointer:coarse),
 screen and (max-width:485px) {
     .root__49fc1 {
         max-width: 100%;
@@ -1708,7 +1708,7 @@ screen and (max-width:485px) {
     background-color: var(--black)
 }
 
-@media screen and (max-height:550px),
+@media screen and (max-height:550px) and (pointer:coarse),
 screen and (max-width:485px) {
     .hideOnFullscreen__49fc1 {
         display: none
@@ -3882,7 +3882,7 @@ screen and (max-width:485px) {
     }
 }
 
-@media (max-height:550px),
+@media (max-height:550px) and (pointer:coarse),
 (max-width:485px) {
     .fullScreenOnMobile__8a031 {
         height: 100dvh;
@@ -5133,4 +5133,4 @@ screen and (max-width:485px) {
     color: GrayText
 }
 
-/*# sourceMappingURL=603779.534a3b36bc3ad4af.css.map*/
+/*# sourceMappingURL=603779.863bc0c4e4c6ff49.css.map*/
