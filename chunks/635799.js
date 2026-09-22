@@ -1,5 +1,6 @@
 e.exports = {
     ij: "wishlistButton__61424",
+    YJ: "sectionDimmed__61424",
     hd: "sectionContainer__61424",
     Jb: "sectionContainerNitroLocked__61424",
     VD: "sectionContainerNitroLockedBackground__61424",
