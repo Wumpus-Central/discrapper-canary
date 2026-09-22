@@ -141,7 +141,7 @@ var R = n(652215),
     M = n(969490);
 let L = [];
 function k(e) {
-    let { channelId: t, type: n, ignoreFile: s, smallAttachments: C = !1 } = e,
+    let { channelId: t, type: n, ignoreUploadId: s, smallAttachments: C = !1 } = e,
         E = (0, u.bG)([m.Ay], () => m.Ay.keyboardModeEnabled),
         I = (0, f.A)("attachments", o.Gl.HORIZONTAL),
         y = (0, u.bG)([g.A], () => g.A.getUploads(t, n.drafts.type)),
@@ -188,7 +188,7 @@ function k(e) {
                     k(i));
             }
         }, [t, j.length, n]));
-    let U = y.filter((e) => e.filename !== s);
+    let U = y.filter((e) => e.id !== s);
     return (!S && 0 === U.length) || (S && 0 === j.length)
         ? null
         : (0, l.jsx)(a.hD, {
@@ -222,6 +222,6 @@ function k(e) {
           });
 }
 let w = i.memo(function (e) {
-    let { channelId: t, type: n, canAttachFiles: i, ignoreFile: s, smallAttachments: r = !1 } = e;
-    return i ? (0, l.jsx)(k, { channelId: t, type: n, ignoreFile: s, smallAttachments: r }) : null;
+    let { channelId: t, type: n, canAttachFiles: i, ignoreUploadId: s, smallAttachments: r = !1 } = e;
+    return i ? (0, l.jsx)(k, { channelId: t, type: n, ignoreUploadId: s, smallAttachments: r }) : null;
 });
