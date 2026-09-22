@@ -1,4 +1,4 @@
-n.d(t, { p: () => r, z: () => a });
+n.d(t, { h5: () => s, pd: () => r, zx: () => a });
 var i = n(652215);
 let r = new Set([
         i.Auw.AUTO_MODERATION_MESSAGE,
@@ -20,4 +20,5 @@ let r = new Set([
         i.Auw.SAFETY_SYSTEM_NOTIFICATION,
         i.Auw.VOICE_CHANNEL,
         i.Auw.POLL_RESULT,
-    ]);
+    ]),
+    s = new Set([i.Auw.IMAGE, i.Auw.GIFV]);

@@ -137,7 +137,7 @@ function L(e, t, n) {
                     );
                 })(t, n.provider, n.video) &&
                 (I.video = R(n.video))),
-        _.p.has(I.type)
+        _.pd.has(I.type)
             ? (I.fields = (n.fields ?? []).map((e) => {
                   let { name: t, value: n, inline: i } = e;
                   return { rawName: t, rawValue: n, inline: i };

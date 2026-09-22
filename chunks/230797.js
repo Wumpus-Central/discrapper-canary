@@ -1483,7 +1483,7 @@ var n4 = n(320448),
     n8 = n(384231),
     ie = n(959698),
     it = n(438729),
-    ii = n(601280),
+    ii = n(190457),
     il = n(886737),
     is = n(699352),
     ia = n(885386),
@@ -7606,7 +7606,7 @@ class c4 extends a.Component {
             : e.embeds.map((t, n) => {
                   let i;
                   if (
-                      c1.z.has(t.type) ||
+                      c1.zx.has(t.type) ||
                       (0, aW.p6)(t) ||
                       ((0, d.Lt)(t.flags ?? 0, W.iSj.IS_CONTENT_INVENTORY_ENTRY) &&
                           !(
