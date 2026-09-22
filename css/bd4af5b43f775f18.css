@@ -163,6 +163,10 @@
     width: 100%
 }
 
+.promotionTakeover__08415.banner__08415 {
+    filter: blur(25px)
+}
+
 .rivBanner__08415 {
     height: 24vw;
     inset-inline-start: 0;
@@ -264,6 +268,11 @@
     width: 100%
 }
 
+.heroBlockContent__08415.promotionIndex__08415 {
+    padding-top: 75px;
+    --custom-hero-content-inline-padding: 0
+}
+
 .rivBannerButtonContainer__08415 {
     align-items: center;
     display: flex;
@@ -306,6 +315,10 @@
     min-height: 130px;
     padding-inline: 0;
     width: 100%
+}
+
+.heroHeaderContainer__08415.promotionTakeover__08415 {
+    height: 400px
 }
 
 .heroHeaderBadgeLogoSummaryContainer__08415 {
@@ -405,6 +418,20 @@
 .orbsSubHeaderText__08415 {
     color: var(--text-subtle);
     white-space: pre-line
+}
+
+.promotionTakeoverSummary__08415 {
+    max-width: 400px
+}
+
+.promotionTakeoverDetails__08415 {
+    margin-top: 30px
+}
+
+.orbsSubHeaderText__08415 a,
+.subHeaderText__08415 a {
+    color: inherit;
+    text-decoration: underline
 }
 
 .heroHeaderButtonContainer__08415 {
@@ -801,4 +828,4 @@
     max-width: 393px
 }
 
-/*# sourceMappingURL=f074f9e2622e7c1e.css.map*/
+/*# sourceMappingURL=bd4af5b43f775f18.css.map*/

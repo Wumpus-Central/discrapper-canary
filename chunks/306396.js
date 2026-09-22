@@ -1,30 +1,41 @@
-n.d(t, { av: () => o, oO: () => i });
-var r = n(730202),
-    l = n(65238),
-    a = n(590180),
-    u = n(993408);
-function o(e, t) {
-    let n = (0, l.XF)(t);
-    return null == t.rewardStatus || null == n || 0 === i(e, n.collectionId) ? null : t;
+e.d(n, { Q7: () => s, av: () => i, oO: () => c });
+var r = e(730202),
+    u = e(65238),
+    l = e(590180),
+    a = e(993408),
+    o = e(758836);
+function i(t, n) {
+    let e = (0, u.XF)(n);
+    return null == n.rewardStatus || null == e || 0 === c(t, e.collectionId) ? null : n;
 }
-function i(e, t) {
-    if (!(0, u.aw)(e)) return +(e.categorySkuId === t);
-    let n = new Set(
-        r.A.getCollection(t)?.products.flatMap((e) => {
-            let { skuIds: t } = e;
-            return t;
+function c(t, n) {
+    if (!(0, a.aw)(t)) return +(t.categorySkuId === n);
+    let e = new Set(
+        r.A.getCollection(n)?.products.flatMap((t) => {
+            let { skuIds: n } = t;
+            return n;
         }) ?? [],
     );
     return (
-        !(0, u.aw)(e)
+        !(0, a.aw)(t)
             ? []
             : [
                   ...new Set(
-                      (e.bundledProducts ?? e.items).map((e) => {
-                          let { skuId: t } = e;
-                          return t;
+                      (t.bundledProducts ?? t.items).map((t) => {
+                          let { skuId: n } = t;
+                          return n;
                       }),
                   ),
               ]
-    ).filter((e) => a.A.getProduct(e)?.categorySkuId === t || n.has(e)).length;
+    ).filter((t) => l.A.getProduct(t)?.categorySkuId === n || e.has(t)).length;
+}
+function s(t, n) {
+    switch (n) {
+        case o.G2.HOME:
+            return t.shopHome;
+        case o.G2.COLLECTION_INDEX:
+            return t.indexPage;
+        default:
+            return;
+    }
 }
