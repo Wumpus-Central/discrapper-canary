@@ -101,13 +101,14 @@ function g(e, t) {
         m = e.discounts ?? [],
         S = m.find((e) => e.type === a.iS.PREMIUM_TRIAL),
         N = m.find((e) => e.type === a.iS.ENTITLEMENT),
-        C = m.reduce((e, t) => e + t.amount, 0);
+        C = m.reduce((e, t) => e + t.amount, 0),
+        O = h + (g?.amount ?? 0);
     return {
         label: A,
         value: T,
         originalAmount: e.subscriptionPlanPrice * e.quantity,
         amount: h,
-        amountWithoutDiscount: e.amount + C,
+        amountWithoutDiscount: O,
         discountAmountOff: C,
         formattedPrice: I,
         subscriptionPlan: _,
