@@ -1,33 +1,24 @@
-(n.r(t), n.d(t, { default: () => E }));
-var u = n(477900),
-    l = n(582128),
+(n.r(e), n.d(e, { default: () => h }));
+var s = n(477900),
+    u = n(582128),
     d = n(806163),
-    s = n(17928),
-    o = n(710195),
-    a = n(718446),
-    i = n(280450),
-    r = n(899847),
-    c = n(653166),
-    f = n(33666),
-    h = n(465558),
-    p = n(107766),
-    A = n(652215),
-    C = n(355097);
-function E() {
-    let e = (0, f.A)(),
-        { teenId: t, linkCode: n } = (0, d.g)(),
-        E = c.q.useConfig({ location: "FamilyCenterRouter" }).enabled,
-        b = (0, s.bG)([i.default], () => i.default.getId()),
-        g = (0, s.bG)([o.A], () => o.A.hasLoaded(b)),
-        k = "teen" !== e && null != t && null != n;
-    return (l.useEffect(() => {
-        k && E && null != t && null != n && (r.Ay.setPendingConnection(t, n), (0, p.Ew)(t, n));
-    }, [k, E, t, n]),
-    k)
-        ? g
-            ? (0, u.jsx)(d.rd, { to: A.BVt.FAMILY_CENTER })
-            : null
-        : "teen" === e
-          ? (0, u.jsx)(d.rd, { to: (0, a.settingsPathToRoute)(C.od.FAMILY_CENTER) })
-          : (0, u.jsx)(h.A, {});
+    l = n(718446),
+    o = n(899847),
+    i = n(33666),
+    r = n(465558),
+    c = n(107766),
+    a = n(652215),
+    p = n(355097);
+function h() {
+    let t = (0, i.A)(),
+        { teenId: e, linkCode: n } = (0, d.g)(),
+        h = "teen" !== t && null != e && null != n;
+    return (u.useEffect(() => {
+        h && null != e && null != n && (o.Ay.setPendingConnection(e, n), (0, c.Ew)(e, n));
+    }, [h, e, n]),
+    h)
+        ? (0, s.jsx)(d.rd, { to: a.BVt.FAMILY_CENTER })
+        : "teen" === t
+          ? (0, s.jsx)(d.rd, { to: (0, l.settingsPathToRoute)(p.od.FAMILY_CENTER) })
+          : (0, s.jsx)(r.A, {});
 }

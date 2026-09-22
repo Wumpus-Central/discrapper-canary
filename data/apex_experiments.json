@@ -3160,22 +3160,6 @@
     }
   },
   {
-    "name": "2026-06-family-center-connection-prereq",
-    "kind": "user",
-    "defaultConfig": {
-      "enabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true
-      }
-    }
-  },
-  {
     "kind": "guild",
     "name": "2026-06-game-invites-channel",
     "defaultConfig": {

@@ -10,22 +10,22 @@ var i = n(477900),
     d = n(696208),
     E = n(821609),
     f = n(331322),
-    C = n(289873),
-    m = n(97808),
+    m = n(289873),
+    C = n(97808),
     R = n(778712),
-    N = n(297264),
-    x = n(834730),
-    I = n(155718),
+    x = n(297264),
+    I = n(834730),
+    N = n(155718),
     g = n(475743),
-    S = n(765548),
-    j = n(379257),
+    j = n(765548),
+    S = n(379257),
     _ = n(306537),
     p = n(36149),
-    A = n(287809),
-    b = n(486020),
+    b = n(287809),
+    A = n(486020),
     y = n(899847),
     v = n(191627);
-let T = Object.freeze({
+let h = Object.freeze({
         PREREQ_LOADING: "PREREQ_LOADING",
         CONFIRM_AGE: "CONFIRM_AGE",
         VERIFYING: "VERIFYING",
@@ -34,26 +34,25 @@ let T = Object.freeze({
         ERROR: "ERROR",
         INVALID_CODE: "INVALID_CODE",
         MUST_BE_ADULT: "MUST_BE_ADULT",
-        TEEN_SCAN: "TEEN_SCAN",
     }),
-    h = { section: T.ERROR, params: { failureCode: v.vW.GENERIC_ERROR } };
-async function k(t, e) {
+    k = { section: h.ERROR, params: { failureCode: v.vW.GENERIC_ERROR } };
+async function T(t, e) {
     try {
         var n;
         return (
             (n = await y.Ay.getConnectionPrerequisites(t, e)),
             "ready" in n
-                ? { section: T.REQUEST, params: { teenIdentity: n.teen_identity } }
+                ? { section: h.REQUEST, params: { teenIdentity: n.teen_identity } }
                 : "invalid_link_code" in n
-                  ? { section: T.INVALID_CODE }
+                  ? { section: h.INVALID_CODE }
                   : "verified_teen_blocked" in n
-                    ? { section: T.MUST_BE_ADULT }
+                    ? { section: h.MUST_BE_ADULT }
                     : "requires_adult_verification" in n
-                      ? { section: T.CONFIRM_AGE, params: { teenIdentity: n.teen_identity } }
-                      : h
+                      ? { section: h.CONFIRM_AGE, params: { teenIdentity: n.teen_identity } }
+                      : k
         );
     } catch {
-        return h;
+        return k;
     }
 }
 var O = n(923531),
@@ -65,10 +64,10 @@ var O = n(923531),
     M = n(936223),
     P = n(31008);
 function V(t) {
-    let e = (0, s.bG)([A.default], () => A.default.getCurrentUser()?.ageVerificationStatus),
+    let e = (0, s.bG)([b.default], () => b.default.getCurrentUser()?.ageVerificationStatus),
         n = (0, g.Ay)(e);
     a.useEffect(() => {
-        null == n || n === e || (null != e && e !== I.Tk.UNVERIFIED && t());
+        null == n || n === e || (null != e && e !== N.Tk.UNVERIFIED && t());
     }, [e, n, t]);
 }
 function w(t) {
@@ -83,7 +82,7 @@ function w(t) {
                 justify: "center",
                 align: "center",
                 className: M.g4,
-                children: (0, i.jsx)(C.y, {}),
+                children: (0, i.jsx)(m.y, {}),
             }),
         }),
     });
@@ -106,7 +105,7 @@ function W(t) {
             let t = !1;
             return (
                 (async function () {
-                    let i = await k(e, n);
+                    let i = await T(e, n);
                     t || s(i);
                 })(),
                 () => {
@@ -121,7 +120,7 @@ function z(t) {
     let { transitionState: e, onPending: n, onClose: s, teenIdentity: r } = t;
     V(n);
     let l = a.useCallback(() => {
-        j.A.showAgeVerificationGetStartedModal({ entryPoint: _.q1.FAMILY_CENTER_CONNECTION });
+        S.A.showAgeVerificationGetStartedModal({ entryPoint: _.q1.FAMILY_CENTER_CONNECTION });
     }, []);
     return (0, i.jsx)(c.k, {
         transitionState: e,
@@ -146,7 +145,7 @@ function Y(t) {
     let { transitionState: e, onPending: n, onClose: s } = t;
     V(n);
     let r = a.useCallback(() => {
-        j.A.showAgeVerificationGetStartedModal({ entryPoint: _.q1.FAMILY_CENTER_CONNECTION });
+        S.A.showAgeVerificationGetStartedModal({ entryPoint: _.q1.FAMILY_CENTER_CONNECTION });
     }, []);
     return (0, i.jsx)(Q, {
         transitionState: e,
@@ -170,7 +169,7 @@ function q(t) {
 }
 function B(t) {
     let { transitionState: e, failureCode: n, onClose: a } = t,
-        r = (0, s.bG)([A.default], () => A.default.getCurrentUser()),
+        r = (0, s.bG)([b.default], () => b.default.getCurrentUser()),
         l = (0, G.A)(),
         o = v.H1[n],
         c = { isAdult: l, email: r?.email ?? void 0 };
@@ -185,7 +184,7 @@ function B(t) {
 }
 function H(t) {
     let { teenIdentity: e } = t,
-        n = (0, s.bG)([A.default], () => A.default.getCurrentUser()),
+        n = (0, s.bG)([b.default], () => b.default.getCurrentUser()),
         a = e.global_name ?? e.username;
     return (0, i.jsxs)("div", {
         className: M.Il,
@@ -193,8 +192,8 @@ function H(t) {
             (0, i.jsxs)("div", {
                 className: M.Y,
                 children: [
-                    (0, i.jsx)(m.eu, {
-                        src: null != n ? b.Ay.getUserAvatarURL(n) : void 0,
+                    (0, i.jsx)(C.eu, {
+                        src: null != n ? A.Ay.getUserAvatarURL(n) : void 0,
                         size: R._3.SIZE_48,
                         "aria-label": L.intl.formatToPlainString(F.default.kFj4h1, {
                             name: n?.globalName ?? n?.username ?? "",
@@ -208,20 +207,20 @@ function H(t) {
                             (0, i.jsx)("span", { className: M.pw }),
                         ],
                     }),
-                    (0, i.jsx)(m.eu, {
-                        src: b.Ay.getUserAvatarURL({ id: e.id, avatar: e.avatar, discriminator: "0" }),
+                    (0, i.jsx)(C.eu, {
+                        src: A.Ay.getUserAvatarURL({ id: e.id, avatar: e.avatar, discriminator: "0" }),
                         size: R._3.SIZE_48,
                         "aria-label": L.intl.formatToPlainString(F.default.kFj4h1, { name: a }),
                     }),
                 ],
             }),
-            (0, i.jsx)(N.D, {
+            (0, i.jsx)(x.D, {
                 variant: "heading-xl/semibold",
                 className: M.DD,
                 children: L.intl.string(F.default.sMmIbm),
             }),
-            (0, i.jsx)(N.D, { variant: "heading-xl/semibold", className: M._V, children: a }),
-            (0, i.jsx)(x.E, {
+            (0, i.jsx)(x.D, { variant: "heading-xl/semibold", className: M._V, children: a }),
+            (0, i.jsx)(I.E, {
                 variant: "text-sm/normal",
                 color: "text-muted",
                 className: M.vJ,
@@ -231,33 +230,33 @@ function H(t) {
     });
 }
 function J(t) {
-    let { transitionState: e, onClose: n, userId: s, linkCode: o, teenIdentity: c, onSent: f, onError: C } = t,
-        m = (0, S.A)(() => {
+    let { transitionState: e, onClose: n, userId: s, linkCode: o, teenIdentity: c, onSent: f, onError: m } = t,
+        C = (0, j.A)(() => {
             (y.Ay.clearPendingConnection(), f());
         }),
-        R = (0, S.A)((t) => {
-            C((0, O.Nv)(t));
+        R = (0, j.A)((t) => {
+            m((0, O.Nv)(t));
         }),
-        { requestLink: x, isRequestingLink: I } = (0, U.A)({ onSuccess: m, onError: R }),
+        { requestLink: I, isRequestingLink: N } = (0, U.A)({ onSuccess: C, onError: R }),
         g = a.useCallback(() => {
-            x(s, o);
-        }, [x, s, o]),
-        j = a.useCallback(async () => {
-            I || (await n());
-        }, [I, n]);
+            I(s, o);
+        }, [I, s, o]),
+        S = a.useCallback(async () => {
+            N || (await n());
+        }, [N, n]);
     return (0, i.jsxs)(r.d, {
         transitionState: e,
-        onClose: j,
+        onClose: S,
         "aria-label": L.intl.string(F.default.sMmIbm),
         size: "md",
         children: [
             (0, i.jsxs)("div", {
                 className: M.wx,
                 children: [
-                    (0, i.jsx)("div", { className: M.b, children: (0, i.jsx)(u.J, { onClick: j, disabled: I }) }),
+                    (0, i.jsx)("div", { className: M.b, children: (0, i.jsx)(u.J, { onClick: S, disabled: N }) }),
                     null != c
                         ? (0, i.jsx)(H, { teenIdentity: c })
-                        : (0, i.jsx)(N.D, {
+                        : (0, i.jsx)(x.D, {
                               variant: "heading-xl/semibold",
                               className: M.XW,
                               children: L.intl.string(F.default.GH11eI),
@@ -269,11 +268,11 @@ function J(t) {
                 leading: (0, i.jsx)(E.$, {
                     variant: "secondary",
                     text: L.intl.string(L.t["ETE/oC"]),
-                    onClick: j,
-                    disabled: I,
+                    onClick: S,
+                    disabled: N,
                 }),
                 actions: [
-                    { variant: "primary", text: L.intl.string(F.default.ISg34l), onClick: g, disabled: I, loading: I },
+                    { variant: "primary", text: L.intl.string(F.default.ISg34l), onClick: g, disabled: N, loading: N },
                 ],
             }),
         ],
@@ -281,7 +280,7 @@ function J(t) {
 }
 function X(t) {
     let { transitionState: e, onClose: n } = t,
-        a = (0, s.bG)([A.default], () => A.default.getCurrentUser());
+        a = (0, s.bG)([b.default], () => b.default.getCurrentUser());
     return (0, i.jsx)(c.k, {
         transitionState: e,
         onClose: n,
@@ -295,10 +294,10 @@ function X(t) {
 function Z(t) {
     let { transitionState: e, onVerified: n, onFailed: r, onClose: l } = t,
         o = (0, p.b8)(),
-        c = (0, s.bG)([A.default], () => A.default.getCurrentUser()?.ageVerificationStatus),
+        c = (0, s.bG)([b.default], () => b.default.getCurrentUser()?.ageVerificationStatus),
         u = a.useRef(!1),
-        d = (0, S.A)(n),
-        E = (0, S.A)(r);
+        d = (0, j.A)(n),
+        E = (0, j.A)(r);
     return (
         a.useEffect(() => {
             if (!u.current) {
@@ -306,7 +305,7 @@ function Z(t) {
                     ((u.current = !0), d());
                     return;
                 }
-                c === I.Tk.UNVERIFIED && ((u.current = !0), E());
+                c === N.Tk.UNVERIFIED && ((u.current = !0), E());
             }
         }, [o, c, d, E]),
         a.useEffect(() => {
@@ -320,59 +319,59 @@ function Z(t) {
 }
 function K(t) {
     let { userId: e, linkCode: n, transitionState: s, onClose: r } = t,
-        [l, o] = a.useState(T.PREREQ_LOADING),
+        [l, o] = a.useState(h.PREREQ_LOADING),
         [c, u] = a.useState(v.vW.GENERIC_ERROR),
         [d, E] = a.useState(void 0),
         f = a.useCallback(function () {
             let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : v.vW.GENERIC_ERROR;
-            (u(t), o(T.ERROR));
+            (u(t), o(h.ERROR));
         }, []),
-        C = a.useCallback(
+        m = a.useCallback(
             (t) => {
-                t.section === T.ERROR
+                t.section === h.ERROR
                     ? f(t.params.failureCode)
-                    : ((t.section === T.REQUEST || t.section === T.CONFIRM_AGE) && E(t.params.teenIdentity),
+                    : ((t.section === h.REQUEST || t.section === h.CONFIRM_AGE) && E(t.params.teenIdentity),
                       o(t.section));
             },
             [f],
         ),
-        m = a.useCallback(() => {
-            o(T.VERIFYING);
+        C = a.useCallback(() => {
+            o(h.VERIFYING);
         }, []),
         R = a.useCallback(() => {
-            o(T.PREREQ_LOADING);
+            o(h.PREREQ_LOADING);
         }, []),
-        N = a.useCallback(() => {
+        x = a.useCallback(() => {
             f();
         }, [f]),
-        x = a.useCallback(() => {
-            o(T.SENT);
+        I = a.useCallback(() => {
+            o(h.SENT);
         }, []);
     switch (l) {
-        case T.CONFIRM_AGE:
-            return (0, i.jsx)(z, { transitionState: s, onPending: m, onClose: r, teenIdentity: d });
-        case T.VERIFYING:
-            return (0, i.jsx)(Z, { transitionState: s, onVerified: R, onFailed: N, onClose: r });
-        case T.MUST_BE_ADULT:
-            return (0, i.jsx)(Y, { transitionState: s, onPending: m, onClose: r });
-        case T.INVALID_CODE:
+        case h.CONFIRM_AGE:
+            return (0, i.jsx)(z, { transitionState: s, onPending: C, onClose: r, teenIdentity: d });
+        case h.VERIFYING:
+            return (0, i.jsx)(Z, { transitionState: s, onVerified: R, onFailed: x, onClose: r });
+        case h.MUST_BE_ADULT:
+            return (0, i.jsx)(Y, { transitionState: s, onPending: C, onClose: r });
+        case h.INVALID_CODE:
             return (0, i.jsx)(q, { transitionState: s, onClose: r });
-        case T.REQUEST:
+        case h.REQUEST:
             return (0, i.jsx)(J, {
                 transitionState: s,
                 userId: e,
                 linkCode: n,
                 teenIdentity: d,
-                onSent: x,
+                onSent: I,
                 onError: f,
                 onClose: r,
             });
-        case T.SENT:
+        case h.SENT:
             return (0, i.jsx)(X, { transitionState: s, onClose: r });
-        case T.ERROR:
+        case h.ERROR:
             return (0, i.jsx)(B, { transitionState: s, failureCode: c, onClose: r });
-        case T.PREREQ_LOADING:
+        case h.PREREQ_LOADING:
         default:
-            return (0, i.jsx)(W, { userId: e, linkCode: n, onResolved: C, transitionState: s, onClose: r });
+            return (0, i.jsx)(W, { userId: e, linkCode: n, onResolved: m, transitionState: s, onClose: r });
     }
 }
