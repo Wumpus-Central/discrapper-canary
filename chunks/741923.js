@@ -20,7 +20,7 @@ var m = n(211287),
 let f = new Set([h.C.COLLECTIBLES_CHECKOUT, h.C.SLAYER_STOREFRONT_CHECKOUT]);
 var E = n(169797),
     S = n(375708);
-let y = i.createContext(null);
+let y = i.createContext({ order: null, isOrderCreationEnabled: !1 });
 function I() {
     return i.useContext(y);
 }
@@ -46,6 +46,7 @@ function A(e) {
             isCreateOrderLoading: x,
             createOrderError: _,
             shouldBlockOnOrderCreation: T,
+            isOrderCreationEnabled: N,
         } = (function (e) {
             let t,
                 {
@@ -94,7 +95,13 @@ function A(e) {
                 (0, i.useEffect)(() => {
                     t && null != A && (null != P || null != x || b.current || ((b.current = !0), j({ skuId: A })));
                 }, [A, t, P, j, x]),
-                { order: P, isCreateOrderLoading: T, createOrderError: x, shouldBlockOnOrderCreation: g }
+                {
+                    order: P,
+                    isCreateOrderLoading: T,
+                    createOrderError: x,
+                    shouldBlockOnOrderCreation: g,
+                    isOrderCreationEnabled: t,
+                }
             );
         })({
             skuIDs: n,
@@ -104,7 +111,8 @@ function A(e) {
             isGift: E,
             loadId: t,
             onOrderCreated: I,
-        });
+        }),
+        b = i.useMemo(() => ({ order: v, isOrderCreationEnabled: N }), [v, N]);
     if (T) {
         if (x) return (0, l.jsx)(g, { renderModalProps: A, children: (0, l.jsx)(o.A, {}) });
         else if (null != _)
@@ -113,5 +121,5 @@ function A(e) {
                 children: (0, l.jsx)(a.E, { variant: "text-md/normal", children: S.intl.string(S.t.F8FvUy) }),
             });
     }
-    return (0, l.jsx)(y.Provider, { value: v, children: P });
+    return (0, l.jsx)(y.Provider, { value: b, children: P });
 }

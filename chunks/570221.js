@@ -79,6 +79,47 @@ class s extends a {
             checkoutContext: e.checkout_context,
         });
     }
+    static createFromOrder(e) {
+        let t = e.billing_facet,
+            n = null != t ? t.invoice_preview : null;
+        if (null == n) return null;
+        let i = n.line_items
+                .map((t) => {
+                    let i = e.order_line_items.find((e) => e.id === t.ref_order_line_item_id);
+                    return null == i
+                        ? null
+                        : {
+                              id: t.ref_order_line_item_id,
+                              skuId: i.sku_id,
+                              subscriptionPlanId: i.subscription_plan_id ?? "",
+                              subscriptionPlanPrice: t.unit_price,
+                              amount: t.total,
+                              quantity: t.quantity,
+                              unitPrice: { amount: t.unit_price, currency: n.currency },
+                              discounts: t.discounts.map((e) => ({
+                                  type: e.type,
+                                  amount: e.amount,
+                                  description: "",
+                                  discount_id: e.discount_id ?? void 0,
+                              })),
+                          };
+                })
+                .filter((e) => null != e),
+            r = n.line_items.reduce((e, t) => e + (t.orbs_reward ?? 0), 0);
+        return new s({
+            id: "",
+            invoiceItems: i,
+            total: n.total,
+            subtotal: n.subtotal,
+            currency: n.currency,
+            tax: n.tax,
+            taxInclusive: n.tax_inclusive,
+            subscriptionPeriodStart: new Date(0),
+            subscriptionPeriodEnd: new Date(0),
+            orbsReward: r > 0 ? r : void 0,
+            checkoutContext: e.checkout_context ?? void 0,
+        });
+    }
     static createFromOTPPreview(e) {
         return new s({
             id: "",
