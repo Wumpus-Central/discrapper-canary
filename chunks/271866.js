@@ -1,4 +1,4 @@
-n.d(t, { SH: () => T, cL: () => d, q1: () => A });
+n.d(t, { SH: () => d, cL: () => T, q1: () => A });
 var i = n(228366),
     l = n(795816),
     r = n(627363),
@@ -32,11 +32,11 @@ async function A(e, t) {
         );
     }
 }
-function d() {
+function T() {
     (o.fy.getState().activePanel === o.HP.APPLICATION_TEST_MODE_DEBUG && (0, o.Jp)(),
         i.h.dispatch({ type: "DEVELOPER_TEST_MODE_RESET" }));
 }
-function T() {
+function d() {
     (o.fy.getState().activePanel === o.HP.APPLICATION_TEST_MODE_DEBUG && (0, o.Jp)(),
         i.h.dispatch({ type: "DEVELOPER_TEST_MODE_RESET_ERROR" }));
 }

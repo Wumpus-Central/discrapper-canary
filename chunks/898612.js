@@ -1,39 +1,39 @@
-n.d(t, { A: () => m });
-var r = n(477900);
-n(582128);
-var l = n(191023),
-    i = n(140735),
-    o = n(963027),
-    a = n(47167),
-    s = n(713654),
-    u = n(403362),
-    c = n(739455),
-    d = n(2242),
-    h = n(375708),
-    C = n(669748);
-function p(e) {
-    let { channelId: t } = e,
-        n = (0, c.fE)(t),
-        u = (0, a.Ay)(n);
-    if (null == n) return `[${h.intl.string(h.t.bz1PZX)}]`;
-    let d = n.isMediaChannel() ? l.ImageIcon : (0, s._U)(n.type);
-    return (0, r.jsxs)(r.Fragment, {
+r.d(n, { A: () => E });
+var t = r(477900);
+r(582128);
+var l = r(191023),
+    i = r(140735),
+    s = r(963027),
+    o = r(47167),
+    a = r(713654),
+    c = r(403362),
+    u = r(739455),
+    d = r(2242),
+    h = r(375708),
+    m = r(669748);
+function x(e) {
+    let { channelId: n } = e,
+        r = (0, u.fE)(n),
+        c = (0, o.Ay)(r);
+    if (null == r) return `[${h.intl.string(h.t.bz1PZX)}]`;
+    let d = r.isMediaChannel() ? l.ImageIcon : (0, a._U)(r.type);
+    return (0, t.jsxs)(t.Fragment, {
         children: [
-            (0, r.jsx)(i.A, { children: (0, o.Ay)({ channel: n }) }),
-            (0, r.jsxs)("div", {
+            (0, t.jsx)(i.A, { children: (0, s.Ay)({ channel: r }) }),
+            (0, t.jsxs)("div", {
                 "aria-hidden": !0,
-                children: [null != d && (0, r.jsx)(d, { className: C.K, "aria-hidden": !0 }), u],
+                children: [null != d && (0, t.jsx)(d, { className: m.K, "aria-hidden": !0 }), c],
             }),
         ],
     });
 }
-function m(e) {
+function E(e) {
     switch (e.ref_type) {
         case d.bN.CHANNEL:
-            return (0, r.jsx)(p, { channelId: e.ref_id });
+            return (0, t.jsx)(x, { channelId: e.ref_id });
         case d.bN.INTANGIBLE:
             return e.name;
         default:
-            (0, u.xb)(e);
+            (0, c.xb)(e);
     }
 }

@@ -162,13 +162,13 @@ function v(e) {
     function S(e) {
         (void 0 !== e.state || -1 !== navigator.userAgent.indexOf("CriOS")) && I(E(e.state));
     }
-    function L() {
+    function O() {
         I(E(b()));
     }
-    var O = !1;
+    var L = !1;
     function I(e) {
-        O
-            ? ((O = !1), P())
+        L
+            ? ((L = !1), P())
             : R.confirmTransitionTo(e, "POP", V, function (t) {
                   var n, r, i, a, s;
                   t
@@ -177,7 +177,7 @@ function v(e) {
                         (r = G.location),
                         -1 === (i = C.indexOf(r.key)) && (i = 0),
                         -1 === (a = C.indexOf(n.key)) && (a = 0),
-                        (s = i - a) && ((O = !0), D(s)));
+                        (s = i - a) && ((L = !0), D(s)));
               });
     }
     var M = E(b()),
@@ -191,8 +191,8 @@ function v(e) {
     var F = 0;
     function B(e) {
         1 === (F += e) && 1 === e
-            ? (window.addEventListener(g, S), a && window.addEventListener(y, L))
-            : 0 === F && (window.removeEventListener(g, S), a && window.removeEventListener(y, L));
+            ? (window.addEventListener(g, S), a && window.addEventListener(y, O))
+            : 0 === F && (window.removeEventListener(g, S), a && window.removeEventListener(y, O));
     }
     var j = !1,
         G = {
@@ -338,9 +338,9 @@ function E(e) {
                       }));
         }
     }
-    var L = x(),
-        O = y(L);
-    L !== O && k(O);
+    var O = x(),
+        L = y(O);
+    O !== L && k(L);
     var I = v(),
         M = [l(I)];
     function C(e) {

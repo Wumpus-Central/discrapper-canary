@@ -640,8 +640,8 @@ var e1 = n(191023),
     e2 = n(192308),
     e3 = n(28863),
     e8 = n(695366),
-    e5 = n(834730),
-    e6 = n(789645),
+    e6 = n(834730),
+    e5 = n(789645),
     e7 = n(565645),
     e4 = n(775602),
     e9 = n(826673),
@@ -696,13 +696,13 @@ function tr(e) {
               className: ts.g,
               children: [
                   (0, l.jsx)(e8.E, { size: "custom", width: 20, height: 20, color: "currentColor", className: ts.QW }),
-                  (0, l.jsx)(e5.E, { variant: "text-sm/medium", color: "text-default", className: ts.L5, children: g }),
+                  (0, l.jsx)(e6.E, { variant: "text-sm/medium", color: "text-default", className: ts.L5, children: g }),
                   (0, l.jsx)(S.D, {
                       className: ts.b,
                       onClick: function () {
                           return (0, e9.Dr)(eL.M.SOUNDBOARD_KEYBIND_TIP);
                       },
-                      children: (0, l.jsx)(e6.P, { size: "xs", color: "currentColor" }),
+                      children: (0, l.jsx)(e5.P, { size: "xs", color: "currentColor" }),
                   }),
               ],
           });
@@ -752,7 +752,7 @@ function tf(e) {
                 onClick: () => (null != i ? i() : td(t.id)),
                 children: [
                     (0, l.jsx)(tu.j, { size: "sm", color: "currentColor" }),
-                    (0, l.jsx)(e5.E, {
+                    (0, l.jsx)(e6.E, {
                         variant: "text-xs/semibold",
                         color: a ? "currentColor" : "text-muted",
                         children: eD.intl.string(eD.t["8Fu/S7"]),
@@ -1290,14 +1290,14 @@ function tS(e) {
             return eD.intl.format(eD.t["tw/SSq"], { nitroTierName: e, onClick: e2 });
         }, [e2]),
         e8 = i.useCallback((e) => (e1(e, t) ? tx : 32), [t, e1]),
-        e5 = i.useCallback(
+        e6 = i.useCallback(
             (e) => {
                 let t = e === eF.length - 1;
                 return eW && t ? 70 : eB && e === eH ? 20 : 0;
             },
             [eF.length, eB, eW, eH],
         ),
-        e6 = i.useCallback((e, t) => (0, l.jsx)("div", { children: t }, e), []),
+        e5 = i.useCallback((e, t) => (0, l.jsx)("div", { children: t }, e), []),
         e7 = i.useCallback(
             (e, n) => {
                 let i = `${e.key}`,
@@ -1456,12 +1456,12 @@ function tS(e) {
                     renderRow: eQ,
                     renderSectionHeader: e7,
                     renderSectionFooter: e4,
-                    renderSection: e6,
+                    renderSection: e5,
                     renderCategoryList: tn,
                     renderHeaderAccessories: tt,
                     rowHeight: 48,
                     sectionHeaderHeight: e8,
-                    sectionFooterHeight: e5,
+                    sectionFooterHeight: e6,
                     itemNodeWidth: 150,
                     gridNavigatorId: z,
                     renderEmptySearchState: tI,

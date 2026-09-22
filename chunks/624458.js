@@ -1,4 +1,4 @@
-n.d(t, { A: () => d });
+n.d(t, { A: () => T });
 var i = n(636537),
     l = n(228366),
     r = n(157559),
@@ -10,7 +10,7 @@ var i = n(636537),
     u = n(212455),
     _ = n(652215),
     A = n(375708);
-let d = {
+let T = {
     fetchGuildJoinRequests: async function e(e) {
         let { guildId: t, status: n = c.B5.SUBMITTED, before: r, after: s, limit: a = 25, force: o = !1 } = e,
             A = o || !E.A.hasFetched(t);

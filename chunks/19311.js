@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => y, CY: () => f, ti: () => C });
+n.d(t, { Ay: () => y, CY: () => f, ti: () => h });
 var l,
     i = n(477900);
 n(582128);
@@ -11,8 +11,8 @@ var r = n(503698),
     d = n(866665),
     m = n(999784),
     p = n(375708),
-    h = n(88045),
-    C =
+    C = n(88045),
+    h =
         (((l = {})[(l.CONTINUE = 0)] = "CONTINUE"),
         (l[(l.UPGRADE = 1)] = "UPGRADE"),
         (l[(l.PURCHASE = 2)] = "PURCHASE"),
@@ -34,7 +34,7 @@ function E(e) {
             type: l,
             disabled: a,
             onClick: u,
-            icon: null == t ? void 0 : () => (0, i.jsx)(t, { color: "currentColor", className: h.C4 }),
+            icon: null == t ? void 0 : () => (0, i.jsx)(t, { color: "currentColor", className: C.C4 }),
             loading: s,
             text: r,
         };
@@ -47,17 +47,17 @@ function S(e) {
             primaryIcon: l,
             primaryCTA: r,
             primaryType: o,
-            primaryText: C,
+            primaryText: h,
             primaryTooltip: f,
             primaryDisabled: S,
             primarySubmitting: y,
             onPrimary: I,
         } = e,
-        g =
+        A =
             null == t
                 ? null
                 : (0, i.jsx)(u.Q, { text: n ?? p.intl.string(p.t["13/7kX"]), onClick: t, variant: "secondary" }),
-        A = (0, i.jsxs)(s.B, {
+        g = (0, i.jsxs)(s.B, {
             direction: "horizontal",
             align: "center",
             gap: 0,
@@ -66,12 +66,12 @@ function S(e) {
             children: [
                 (0, i.jsx)(m.A, {}),
                 (function () {
-                    if (null == r || null == C) return null;
+                    if (null == r || null == h) return null;
                     let e = {
                         primaryIcon: l,
                         primaryCTA: r,
                         primaryType: o,
-                        primaryText: C,
+                        primaryText: h,
                         primaryDisabled: S,
                         primarySubmitting: y,
                         onPrimary: I,
@@ -83,8 +83,8 @@ function S(e) {
             ],
         });
     return (0, i.jsx)(c.j, {
-        children: (0, i.jsxs)("div", { className: a()(h.eT, { [h.T$]: null == g }), children: [g, A] }),
+        children: (0, i.jsxs)("div", { className: a()(C.eT, { [C.T$]: null == A }), children: [A, g] }),
     });
 }
-S.CTAType = C;
+S.CTAType = h;
 let y = S;

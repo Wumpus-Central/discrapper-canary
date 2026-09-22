@@ -1,12 +1,12 @@
-t.d(e, { YX: () => u, Ym: () => a, tu: () => i });
-var r = t(477900);
-t(582128);
-var l = t(192308);
+n.d(t, { YX: () => u, Ym: () => a, tu: () => o });
+var r = n(477900);
+n(582128);
+var l = n(192308);
 let a = "1529541762920615998",
     u = "Turbo Shop Drop";
-function i() {
+function o() {
     (0, l.openModalLazy)(async () => {
-        let { default: n } = await Promise.all([t.e("393137"), t.e("819443")]).then(t.bind(t, 55934));
-        return (e) => (0, r.jsx)(n, { ...e });
+        let { default: e } = await Promise.all([n.e("393137"), n.e("819443")]).then(n.bind(n, 55934));
+        return (t) => (0, r.jsx)(e, { ...t });
     });
 }

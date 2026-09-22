@@ -1,6 +1,6 @@
 n.d(t, {
     vd: () => r.v,
-    Mw: () => h,
+    Mw: () => C,
     UnifiedCheckoutFlowManagerSingletons: () => i.UnifiedCheckoutFlowManagerSingletons,
     XZ: () => l.X,
     CL: () => l.C,
@@ -16,34 +16,34 @@ var l = n(75304),
     d = n(202475),
     m = n(375708),
     p = n(338039);
-function h(e) {
+function C(e) {
     let {
             paymentModalStepProps: { handleStepChange: t },
             layout: n,
             renderStepBody: i,
             renderLeftColumn: r,
-            renderRightColumn: h,
-            renderBottomContent: C,
+            renderRightColumn: C,
+            renderBottomContent: h,
             primaryCTAButtonProps: f,
             onBackClick: E,
         } = e,
         { hasPaymentSources: S } = (0, d.j)(),
         y = S ? o.pn.REVIEW : o.pn.ADD_PAYMENT_STEPS,
         I = s.useCallback(() => t(y), [t, y]),
-        g = s.useMemo(
+        A = s.useMemo(
             () =>
                 n === l.X.CUSTOM_STEP_BODY
                     ? i()
                     : (0, a.jsxs)(a.Fragment, {
-                          children: [(0, a.jsxs)("div", { className: p.D, children: [r(), h()] }), null != C && C()],
+                          children: [(0, a.jsxs)("div", { className: p.D, children: [r(), C()] }), null != h && h()],
                       }),
-            [n, i, r, h, C],
+            [n, i, r, C, h],
         ),
-        A = s.useMemo(() => ({ ...f, onClick: I, text: m.intl.string(m.t.XiOHRX) }), [f, I]);
+        g = s.useMemo(() => ({ ...f, onClick: I, text: m.intl.string(m.t.XiOHRX) }), [f, I]);
     return (0, a.jsxs)(a.Fragment, {
         children: [
-            (0, a.jsx)(u.dZ, { children: g }),
-            (0, a.jsx)(u.UX, { children: (0, a.jsx)(c.cy, { onBackClick: E, primaryCTAButtonProps: A }) }),
+            (0, a.jsx)(u.dZ, { children: A }),
+            (0, a.jsx)(u.UX, { children: (0, a.jsx)(c.cy, { onBackClick: E, primaryCTAButtonProps: g }) }),
         ],
     });
 }

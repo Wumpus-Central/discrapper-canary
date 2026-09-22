@@ -10,14 +10,14 @@ var i = n(477900),
     u = n(922016),
     _ = n(866665),
     A = n(695366),
-    d = n(669953),
-    T = n(713125),
+    T = n(669953),
+    d = n(713125),
     I = n(608401),
     N = n(739455),
     R = n(468689),
     C = n(976860),
-    S = n(309010),
-    O = n(967198),
+    O = n(309010),
+    S = n(967198),
     D = n(792831),
     m = n(147925),
     P = n(723702),
@@ -36,8 +36,8 @@ var M = n(136722),
     j = n(287809),
     v = n(488926),
     q = n(935208),
-    b = n(209700),
-    X = n(652215),
+    X = n(209700),
+    b = n(652215),
     B = n(375708),
     w = n(588397);
 function F(e) {
@@ -50,10 +50,10 @@ function F(e) {
             impersonateType: f.A.getImpersonateType(t),
             viewingRoles: f.A.getViewingRoles(t),
         })),
-        u = E === b._.SERVER_SHOP,
+        u = E === X._.SERVER_SHOP,
         _ = (0, a.bG)([k.Ay], () => (null != n ? k.Ay.getTrueMember(t, n.id) : null)),
         A = null != r ? s[(0, L.af)(r)] : null,
-        [d, T] = l.useState(() => {
+        [T, d] = l.useState(() => {
             let e = null == c ? [] : q.default.keys(c);
             return (null != A && e.push(A.id), e);
         }),
@@ -62,13 +62,13 @@ function F(e) {
         let e = {},
             t = I.current;
         if (null != t && null != E) {
-            for (let t of d) {
+            for (let t of T) {
                 let n = s[t];
                 null != n && (e[t] = n);
             }
             (0, p.IA)(t.id, { type: E, roles: e });
         }
-    }, [d, E, s]);
+    }, [T, E, s]);
     let N = null != r && null != n && null != _ ? o.find((e) => _.roles.includes(e.id)) : void 0,
         R = l.useMemo(
             () =>
@@ -96,20 +96,20 @@ function F(e) {
             );
         }, [R, r, A]);
     if (null == n || null == r || null == _) return null;
-    let S = {};
+    let O = {};
     return (_.roles.forEach((e) => {
         let t = s[e];
-        null != t && (S[t.id] = t);
+        null != t && (O[t.id] = t);
     }),
-    M.zy(v.aH({ forceRoles: S, context: r }), M.kg(X.xBc.MANAGE_GUILD, X.xBc.MANAGE_ROLES)) || (0, L.bM)(r, n))
+    M.zy(v.aH({ forceRoles: O, context: r }), M.kg(b.xBc.MANAGE_GUILD, b.xBc.MANAGE_ROLES)) || (0, L.bM)(r, n))
         ? (0, i.jsx)("div", {
               className: w.kL,
               children: (0, i.jsxs)(U.iS, {
                   selectionMode: "multiple",
                   options: C,
-                  value: d,
+                  value: T,
                   onSelectionChange: (e) => {
-                      T(e);
+                      d(e);
                   },
                   children: [
                       (0, i.jsx)(U.a3, { hideTags: !0, autoFocus: !0, placeholder: B.intl.string(B.t.Sojqsr) }),
@@ -153,8 +153,8 @@ function Q(e) {
 }
 function Z() {
     let e = l.useRef(null),
-        t = (0, a.bG)([O.A], () => O.A.getGuildId()),
-        n = (0, a.bG)([S.Ay], () => S.Ay.getChannelId(t)),
+        t = (0, a.bG)([S.A], () => S.A.getGuildId()),
+        n = (0, a.bG)([O.Ay], () => O.Ay.getChannelId(t)),
         {
             viewingRoles: r,
             backNavigationSection: s,
@@ -169,26 +169,26 @@ function Z() {
     if (null == r || null == t) return null;
     let M = (function (e) {
             switch (e) {
-                case X.BEX.INTEGRATIONS:
+                case b.BEX.INTEGRATIONS:
                     return B.intl.string(B.t.k7LGdh);
-                case X.BEX.ROLE_SUBSCRIPTIONS:
+                case b.BEX.ROLE_SUBSCRIPTIONS:
                     return B.intl.string(B.t.bRqiqa);
-                case X.BEX.ONBOARDING:
+                case b.BEX.ONBOARDING:
                     return B.intl.string(B.t.qZpU3S);
                 default:
                     return B.intl.string(B.t.MTIXhi);
             }
         })(s),
-        g = s === X.BEX.ROLE_SUBSCRIPTIONS ? B.intl.string(B.t.hZUCzd) : B.intl.string(B.t["/djIh7"]),
+        g = s === b.BEX.ROLE_SUBSCRIPTIONS ? B.intl.string(B.t.hZUCzd) : B.intl.string(B.t["/djIh7"]),
         h = n === V.VV.GUILD_ONBOARDING;
     function U(e) {
         let { backToSettings: n } = e;
         null != t &&
-            (f.A.isFullServerPreview(t) && (0, C.pX)(X.BVt.CHANNEL(t)),
-            T.Ay.shouldShowOnboarding(t) && (d.A.finishOnboarding(t), (0, I.Jg)(t)),
+            (f.A.isFullServerPreview(t) && (0, C.pX)(b.BVt.CHANNEL(t)),
+            d.Ay.shouldShowOnboarding(t) && (T.A.finishOnboarding(t), (0, I.Jg)(t)),
             (0, p.rf)(t),
             n && R.A.open(t, s),
-            s === X.BEX.ROLE_SUBSCRIPTIONS && (0, N.Fx)(t));
+            s === b.BEX.ROLE_SUBSCRIPTIONS && (0, N.Fx)(t));
     }
     return (0, i.jsxs)(c.$T, {
         color: c.Hv.BRAND,
@@ -251,7 +251,7 @@ function Z() {
                               }),
                       ],
                   }),
-            E || s === X.BEX.ROLE_SUBSCRIPTIONS
+            E || s === b.BEX.ROLE_SUBSCRIPTIONS
                 ? null
                 : (0, i.jsx)(Q, { onClick: () => U({ backToSettings: !1 }), className: Y.ZY }),
         ],

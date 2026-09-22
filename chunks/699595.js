@@ -9,18 +9,18 @@ function o(e) {
         { priceOptions: n, trialId: o, metadata: u, discountInvoicePreview: c } = e,
         { isEligibleForDiscount: d, discountOffer: m } = (0, s.i)(),
         p = (0, r.YJ)(m),
-        h = !0 === n.loaded,
-        C = null != c,
+        C = !0 === n.loaded,
+        h = null != c,
         [f, E] = (0, i.YV)({
             items: null != p ? [{ planId: p, quantity: 1 }] : [],
             renewal: !1,
-            preventFetch: C || !d || null == p || !h,
+            preventFetch: h || !d || null == p || !C,
             trialId: o,
             paymentSourceId: n.paymentSourceId,
             currency: n.currency,
             metadata: u,
         }),
-        S = C ? c : f,
+        S = h ? c : f,
         y = l.useMemo(() => {
             let e = d ? (S ?? null) : null;
             return {

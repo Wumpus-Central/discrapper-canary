@@ -45,7 +45,7 @@ function A(e) {
     for (let n of e.SurveyFlow.Flow) ("Block" === n.Type || "Standard" === n.Type) && null != n.ID && t.push(n.ID);
     return t;
 }
-function d(e) {
+function T(e) {
     let t = [],
         n = [];
     for (let i of e.BlockElements)
@@ -55,13 +55,13 @@ function d(e) {
     return (n.length > 0 && t.push(n), t);
 }
 n(321073);
-var T = n(503698),
-    I = n.n(T),
+var d = n(503698),
+    I = n.n(d),
     N = n(939249),
     R = n(144228),
     C = n(658675),
-    S = n(95477),
-    O = n(94512);
+    O = n(95477),
+    S = n(94512);
 function D(e) {
     let {
             choiceId: t,
@@ -75,10 +75,10 @@ function D(e) {
         c = "true" === n.TextEntry,
         u = `choice-label-${t}`;
     return (0, i.jsxs)("div", {
-        className: O.NV,
+        className: S.NV,
         children: [
             (0, i.jsxs)(N.D, {
-                className: O.d,
+                className: S.d,
                 onClick: function () {
                     r(t);
                 },
@@ -87,7 +87,7 @@ function D(e) {
                 "aria-labelledby": u,
                 children: [
                     (0, i.jsx)("div", {
-                        className: O.jl,
+                        className: S.jl,
                         children:
                             "radio" === s
                                 ? (0, i.jsx)(R.T, { disabled: !1, checked: l })
@@ -103,8 +103,8 @@ function D(e) {
             }),
             c &&
                 (0, i.jsx)("div", {
-                    className: O.Vi,
-                    children: (0, i.jsx)(S.k, {
+                    className: S.Vi,
+                    children: (0, i.jsx)(O.k, {
                         value: a ?? "",
                         onChange: function (e) {
                             (l || r(t), E?.(t, e));
@@ -248,7 +248,7 @@ function U(e) {
         className: h.k,
         children: s
             ? (0, i.jsx)(g.f, { value: l, onChange: (e) => r(n, e), placeholder: "Enter your response...", rows: 4 })
-            : (0, i.jsx)(S.k, { value: l, onChange: (e) => r(n, e), placeholder: "Enter your response..." }),
+            : (0, i.jsx)(O.k, { value: l, onChange: (e) => r(n, e), placeholder: "Enter your response..." }),
     });
 }
 var L = n(134035),
@@ -285,17 +285,17 @@ var x = n(375708),
     G = n(424355);
 function j(e) {
     let { surveyId: t, survey: n, onClose: s, transitionState: u } = e,
-        { getSurveyResponses: T, setResponse: I, trackDisplayedQuestions: N } = (0, c.i)(),
-        R = T(t),
+        { getSurveyResponses: d, setResponse: I, trackDisplayedQuestions: N } = (0, c.i)(),
+        R = d(t),
         C = (function (e) {
             for (let t of A(e)) {
-                let n = d(e.Blocks[t]);
+                let n = T(e.Blocks[t]);
                 if (n.length > 0 && n[0].length > 0)
                     return { blockId: t, pageIndex: 0, questionIds: n[0], isComplete: !1 };
             }
             return { blockId: null, pageIndex: 0, questionIds: [], isComplete: !0 };
         })(n),
-        [S, O] = l.useState(C.blockId),
+        [O, S] = l.useState(C.blockId),
         [D, m] = l.useState(C.pageIndex),
         [P, p] = l.useState(!1);
     function f(e, n) {
@@ -331,13 +331,13 @@ function j(e) {
         ),
         g = l.useMemo(
             () =>
-                null == S
+                null == O
                     ? []
                     : (function (e, t) {
                           let { blockId: n, pageIndex: i, responses: l } = t,
                               r = e.Blocks[n];
                           if (null == r) return [];
-                          let s = d(r);
+                          let s = T(r);
                           return i >= s.length
                               ? []
                               : s[i].filter((t) =>
@@ -382,17 +382,17 @@ function j(e) {
                                         return !1;
                                     })(e.Questions[t], l),
                                 );
-                      })(n, { blockId: S, pageIndex: D, responses: R }),
-            [n, S, D, R],
+                      })(n, { blockId: O, pageIndex: D, responses: R }),
+            [n, O, D, R],
         ),
         h = l.useCallback(() => {
-            if (null == n || null == S) return;
+            if (null == n || null == O) return;
             let e = (function (e, t) {
                 let { blockId: n, pageIndex: i, responses: l } = t,
                     r = A(e),
                     s = e.Blocks[n];
                 if (null == s) return { blockId: null, pageIndex: 0, questionIds: [], isComplete: !0 };
-                let a = d(s),
+                let a = T(s),
                     o = a[i];
                 if (null != o && o.length > 0)
                     for (let t = o.length - 1; t >= 0; t--) {
@@ -457,7 +457,7 @@ function j(e) {
                                     return { blockId: null, pageIndex: 0, questionIds: [], isComplete: !0 };
                                 if (null != n)
                                     for (let t of r) {
-                                        let i = d(e.Blocks[t]);
+                                        let i = T(e.Blocks[t]);
                                         for (let e = 0; e < i.length; e++)
                                             if (i[e].includes(n))
                                                 return { blockId: t, pageIndex: e, questionIds: i[e], isComplete: !1 };
@@ -469,14 +469,14 @@ function j(e) {
                 let E = r.indexOf(n);
                 for (let t = E + 1; t < r.length; t++) {
                     let n = r[t],
-                        i = d(e.Blocks[n]);
+                        i = T(e.Blocks[n]);
                     if (i.length > 0 && i[0].length > 0)
                         return { blockId: n, pageIndex: 0, questionIds: i[0], isComplete: !1 };
                 }
                 return { blockId: null, pageIndex: 0, questionIds: [], isComplete: !0 };
-            })(n, { blockId: S, pageIndex: D, responses: R });
-            (N(t, g), e.isComplete && E.Ay.submitSurveyResponse(t, R), O(e.blockId), m(e.pageIndex), p(e.isComplete));
-        }, [n, S, D, R, t, g, N]);
+            })(n, { blockId: O, pageIndex: D, responses: R });
+            (N(t, g), e.isComplete && E.Ay.submitSurveyResponse(t, R), S(e.blockId), m(e.pageIndex), p(e.isComplete));
+        }, [n, O, D, R, t, g, N]);
     l.useEffect(() => {
         0 === g.length && h();
     }, [g, h]);

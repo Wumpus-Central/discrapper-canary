@@ -1,4 +1,4 @@
-i.d(t, { A: () => Z, k: () => q });
+i.d(t, { A: () => J, k: () => q });
 var n = i(477900),
     l = i(582128),
     s = i(503698),
@@ -41,8 +41,8 @@ function E() {
         },
     });
 }
-var v = i(803306),
-    C = i(631670),
+var C = i(803306),
+    v = i(631670),
     S = i(682618),
     b = i(636537),
     k = i(38405),
@@ -119,7 +119,7 @@ function Y(e) {
                     i = await y({ displayOrder: t.pendingBadgeDisplayOrder, hiddenBadges: t.pendingBadgeHiddenBadges });
                 if (i) {
                     let e = L.default.getCurrentUser()?.id;
-                    (null != e && (await (0, v.fetchProfile)(e).catch(() => {})), await (0, S.RS)(), (0, N.Jp)());
+                    (null != e && (await (0, C.fetchProfile)(e).catch(() => {})), await (0, S.RS)(), (0, N.Jp)());
                 }
                 e = i;
             }
@@ -130,7 +130,7 @@ function Y(e) {
                             i = (0, P.Sk)(t),
                             n = (0, P.yX)(t);
                         if (Object.keys(i).length > 0) {
-                            let n = await (0, C._L)(i);
+                            let n = await (0, v._L)(i);
                             ((e = e && (n?.ok ?? !1)),
                                 n?.ok &&
                                     (void 0 !== t.pendingAvatar &&
@@ -139,7 +139,7 @@ function Y(e) {
                                             avatarId: i.avatarId,
                                             avatarAssetOrigin: t.pendingAvatar?.assetOrigin,
                                         }),
-                                    (0, C.pZ)()));
+                                    (0, v.pZ)()));
                         }
                         if (Object.keys(n).length > 0) {
                             let { bannerOriginalMd5: t, ...i } = n,
@@ -161,7 +161,7 @@ function Y(e) {
                                             avatarId: n.avatarId,
                                             avatarAssetOrigin: i.pendingAvatar?.assetOrigin,
                                         }),
-                                    (0, C.pZ)()));
+                                    (0, v.pZ)()));
                         }
                         if (Object.keys(l).length > 0) {
                             let { bannerOriginalMd5: i, ...n } = l,
@@ -174,7 +174,7 @@ function Y(e) {
                         let { primaryGuildId: t } = i;
                         if (void 0 !== t) {
                             let i = await (0, w.m)(t, null !== t);
-                            ((e = e && (i?.ok ?? !1)), i?.ok && (0, C.fw)());
+                            ((e = e && (i?.ok ?? !1)), i?.ok && (0, v.fw)());
                         }
                     }
                 } catch {
@@ -197,7 +197,7 @@ function Y(e) {
                 } catch {
                     e = !1;
                 }
-            (e ? (0, C.x8)() : (0, V.XA)(B.jM.PROFILE_SAVE_GENERIC_FAILURE), d(!1));
+            (e ? (0, v.x8)() : (0, V.XA)(B.jM.PROFILE_SAVE_GENERIC_FAILURE), d(!1));
         }, [h, b, E, x, c, g, m, i, t]);
     return (
         l.useEffect(() => {
@@ -242,7 +242,7 @@ function q(e) {
         i = K();
     return t && null != i;
 }
-function Z(e) {
+function J(e) {
     let { userId: t, guildId: i, className: s } = e,
         o = (0, r.bG)([c.default], () => c.default.getId() === t),
         u = K(),

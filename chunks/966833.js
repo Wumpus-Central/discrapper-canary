@@ -10,8 +10,8 @@ var i,
     u = n(734057),
     _ = n(696451),
     A = n(71393),
-    d = n(232835),
-    T = n(994500),
+    T = n(232835),
+    d = n(994500),
     I = n(287809),
     N =
         (((i = {}).LOADING = "LOADING"),
@@ -24,25 +24,25 @@ function C(e) {
     let { channel: t } = e;
     delete R[t.id];
 }
-function S() {
+function O() {
     r().forEach(R, (e) => {
         (e.items.forEach((e) => {
             let { message: t } = e;
-            (t.set("blocked", T.A.isBlockedForMessage(t)), t.set("ignored", T.A.isIgnoredForMessage(t)));
+            (t.set("blocked", d.A.isBlockedForMessage(t)), t.set("ignored", d.A.isIgnoredForMessage(t)));
         }),
             (e.items = e.items.slice()));
     });
 }
-class O extends s.Ay.Store {
+class S extends s.Ay.Store {
     static displayName = "ChannelPinsStore";
     initialize() {
-        this.waitFor(u.A, _.Ay, A.A, c.default, d.A, T.A, I.default);
+        this.waitFor(u.A, _.Ay, A.A, c.default, T.A, d.A, I.default);
     }
     getPins(e) {
         return R[e];
     }
 }
-let D = new O(a.h, {
+let D = new S(a.h, {
     CONNECTION_OPEN: function () {
         R = {};
     },
@@ -141,9 +141,9 @@ let D = new O(a.h, {
         if (-1 === l) return !1;
         ((i.items = i.items.slice()), i.items.splice(l, 1));
     },
-    RELATIONSHIP_ADD: S,
-    RELATIONSHIP_REMOVE: S,
-    RELATIONSHIP_UPDATE: S,
+    RELATIONSHIP_ADD: O,
+    RELATIONSHIP_REMOVE: O,
+    RELATIONSHIP_UPDATE: O,
     MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: function (e) {
         let { messageId: t, channelId: n } = e,
             i = R[n];

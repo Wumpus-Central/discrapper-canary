@@ -21,8 +21,8 @@ function d(e) {
             checkoutStoreCountry: e.get("checkoutStoreCountry"),
         })),
         p = (0, s.S3)(),
-        h = (0, a.s2)(),
-        C = i.useMemo(() => {
+        C = (0, a.s2)(),
+        h = i.useMemo(() => {
             if (null == r) return null;
             let e = d.find((e) => e.id === r);
             return null == e ? null : (e.relocationCountry ?? null);
@@ -30,13 +30,13 @@ function d(e) {
         f = i.useMemo(
             () =>
                 (0, u.u)({
-                    step: h ?? void 0,
+                    step: C ?? void 0,
                     skuId: n ?? (null != p ? p.id : null),
                     storeCountryFromCheckoutContext: m,
-                    relocationCountry: C,
+                    relocationCountry: h,
                     ...t,
                 }),
-            [h, p, n, m, C, t],
+            [C, p, n, m, h, t],
         );
     return (0, l.jsx)(c.s3, { ...f });
 }

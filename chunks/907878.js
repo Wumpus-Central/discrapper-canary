@@ -1,14 +1,14 @@
 n.d(t, {
     Ai: () => I,
     ET: () => C,
-    Jh: () => T,
+    Jh: () => d,
     SX: () => _,
     ed: () => N,
     f7: () => R,
     ft: () => u,
-    gU: () => O,
-    oT: () => d,
-    pK: () => S,
+    gU: () => S,
+    oT: () => T,
+    pK: () => O,
     tR: () => A,
     wN: () => c,
 });
@@ -58,10 +58,10 @@ function A(e) {
             }));
     }, [e, t, n?.instances]);
 }
-function d(e, t, n, i) {
+function T(e, t, n, i) {
     a.default.track(E.HAw.GAME_SERVER_GAME_CLICKED, { guild_id: e, product_id: t, product_name: n, location: i });
 }
-function T(e) {
+function d(e) {
     let {
         guildId: t,
         productId: n,
@@ -101,11 +101,11 @@ function C(e) {
         button_variant: n,
     });
 }
-function S(e) {
+function O(e) {
     let { gameApplicationId: t, buttonVariant: n } = e;
     a.default.track(E.HAw.GAME_SERVER_ACTIVITY_BUTTON_CLICKED, { game_application_id: t ?? null, button_variant: n });
 }
-function O(e) {
+function S(e) {
     let { guildId: t, gameApplicationId: n } = e;
     a.default.track(E.HAw.GAME_SERVER_ACTIVITY_BUTTON_GUILD_SELECTED, { guild_id: t, game_application_id: n ?? null });
 }

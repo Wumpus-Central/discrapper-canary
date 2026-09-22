@@ -1,4 +1,4 @@
-n.d(t, { KS: () => A, Wf: () => y, ZB: () => g });
+n.d(t, { KS: () => g, Wf: () => y, ZB: () => A });
 var l = n(477900),
     i = n(582128),
     r = n(643909),
@@ -10,8 +10,8 @@ var l = n(477900),
     d = n(240248),
     m = n(71532),
     p = n(116673),
-    h = n(942340),
-    C = n(648335),
+    C = n(942340),
+    h = n(648335),
     f = n(652215),
     E = n(818348),
     S = n(400400);
@@ -23,7 +23,7 @@ let y = i.memo(function (e) {
             analyticsContext: d,
             options: m,
             onChange: p,
-            step: h,
+            step: C,
             ...S
         } = e,
         y = (0, a.bG)([u.default], () => {
@@ -34,13 +34,13 @@ let y = i.memo(function (e) {
             let e = u.default.getCurrentUser();
             return null != e ? e.globalName : null;
         }),
-        g = i.useCallback(
+        A = i.useCallback(
             (e) => {
-                if (h !== o.pn.PAYMENT_ELEMENT) return;
-                let t = (0, C.Wn)(e.value.type, s);
+                if (C !== o.pn.PAYMENT_ELEMENT) return;
+                let t = (0, h.Wn)(e.value.type, s);
                 if ((null != p && p(e, t), null != d)) {
                     let { contextMetadata: n, activitySessionId: l, analyticsData: i } = d,
-                        r = null != t && t !== E.he.PAYMENT_REQUEST ? C.mr[t] : e.value.type;
+                        r = null != t && t !== E.he.PAYMENT_REQUEST ? h.mr[t] : e.value.type;
                     c.default.track(f.HAw.PAYMENT_ELEMENT_CHANGED, {
                         load_id: n.loadId,
                         activity_session_id: l,
@@ -52,9 +52,9 @@ let y = i.memo(function (e) {
                     });
                 }
             },
-            [p, d, h, s],
+            [p, d, C, s],
         ),
-        A = i.useMemo(
+        g = i.useMemo(
             () => ({
                 applePay: n.includes("applePay") ? "auto" : "never",
                 googlePay: n.includes("googlePay") ? "auto" : "never",
@@ -69,18 +69,18 @@ let y = i.memo(function (e) {
         v = i.useMemo(
             () => ({
                 id: "stripe-payment-element",
-                options: { layout: { type: "tabs" }, wallets: A, defaultValues: P, paymentMethodOrder: t, ...m },
-                onChange: g,
+                options: { layout: { type: "tabs" }, wallets: g, defaultValues: P, paymentMethodOrder: t, ...m },
+                onChange: A,
                 ...S,
             }),
-            [A, P, m, S, g, t],
+            [g, P, m, S, A, t],
         );
     return (0, l.jsx)(r.PaymentElement, { ...v });
 });
 function I(e) {
     let { children: t } = e,
         n = (0, s.S)(),
-        { elementsAppearance: i } = (0, h.E)(),
+        { elementsAppearance: i } = (0, C.E)(),
         a = (0, m.PU)();
     return (0, l.jsx)(r.Elements, {
         stripe: n,
@@ -88,10 +88,10 @@ function I(e) {
         children: t,
     });
 }
-function g(e) {
+function A(e) {
     return null != e && null != e && (!(0, d.uJ)(e.line1) || !(0, d.uJ)(e.city));
 }
-let A = i.memo(function (e) {
+let g = i.memo(function (e) {
     let {
             options: t,
             renderAsStandaloneElement: n,
@@ -101,10 +101,10 @@ let A = i.memo(function (e) {
             ...u
         } = e,
         c = (0, p.z)(),
-        h = null != c && c.length > 0 ? c[0] : (0, d.uJ)(s.country) ? "" : s.country,
-        C = i.useMemo(() => {
-            let { name: e, address: t } = (0, m._Z)({ ...s, country: h });
-            return null != t && g(t)
+        C = null != c && c.length > 0 ? c[0] : (0, d.uJ)(s.country) ? "" : s.country,
+        h = i.useMemo(() => {
+            let { name: e, address: t } = (0, m._Z)({ ...s, country: C });
+            return null != t && A(t)
                 ? {
                       ...(null != e && "" !== e && { name: e }),
                       address: Object.fromEntries(
@@ -117,18 +117,18 @@ let A = i.memo(function (e) {
                 : null != e && "" !== e
                   ? { name: e }
                   : null != t && null != t.country && a
-                    ? { address: { country: h } }
+                    ? { address: { country: C } }
                     : void 0;
-        }, [s, a, h]),
+        }, [s, a, C]),
         f = i.useMemo(() => (null != c && c.length > 0 ? c : void 0), [c]),
         E = i.useMemo(
             () =>
                 (0, l.jsx)(
                     r.AddressElement,
-                    { options: { mode: "billing", defaultValues: C, allowedCountries: f, ...t }, ...u },
+                    { options: { mode: "billing", defaultValues: h, allowedCountries: f, ...t }, ...u },
                     o,
                 ),
-            [C, f, t, u, o],
+            [h, f, t, u, o],
         );
     return n
         ? (0, l.jsxs)(I, {

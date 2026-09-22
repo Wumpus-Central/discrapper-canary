@@ -10,15 +10,15 @@ let a = "",
     d = "",
     m = "",
     p = "",
-    h = "",
     C = "",
+    h = "",
     f = "",
     E = "",
     S = "",
     y = !1,
     I = null,
-    g = null,
     A = null,
+    g = null,
     P = null;
 function v() {
     ((a = ""),
@@ -29,21 +29,21 @@ function v() {
         (d = "US"),
         (m = ""),
         (p = ""),
-        (h = ""),
         (C = ""),
+        (h = ""),
         (f = ""),
         (E = ""),
         (S = ""),
         (y = !1),
         (I = null),
-        (g = null),
         (A = null),
+        (g = null),
         (P = null));
 }
-function x() {
+function _() {
     I = null;
 }
-function _(e) {
+function x(e) {
     let { error: t } = e;
     I = t;
 }
@@ -54,7 +54,7 @@ function T(e) {
 class N extends l.Ay.Store {
     static displayName = "NewPaymentSourceStore";
     get popupCallbackCalled() {
-        return A;
+        return g;
     }
     get braintreeEmail() {
         return a;
@@ -66,7 +66,7 @@ class N extends l.Ay.Store {
         return o;
     }
     get redirectedPaymentId() {
-        return g;
+        return A;
     }
     get adyenPaymentData() {
         return c;
@@ -84,7 +84,7 @@ class N extends l.Ay.Store {
         return u;
     }
     getBillingAddressInfo() {
-        return { name: m, email: p, country: d, line1: h, line2: C, city: f, postalCode: E, state: S };
+        return { name: m, email: p, country: d, line1: C, line2: h, city: f, postalCode: E, state: S };
     }
     get isBillingAddressInfoValid() {
         return y;
@@ -103,8 +103,8 @@ let b = new N(i.h, {
         (null != t.name && "" !== t.name && (m = t.name),
             (d = t.country),
             (m = t.name),
-            (h = t.line1),
-            (C = t.line2),
+            (C = t.line1),
+            (h = t.line2),
             (f = t.city),
             (E = t.postalCode),
             (S = t.state),
@@ -120,8 +120,8 @@ let b = new N(i.h, {
             (s = n),
             (m = l.name),
             (d = l.country),
-            (h = l.line1),
-            (C = l.line2),
+            (C = l.line1),
+            (h = l.line2),
             (f = l.city),
             (E = l.postalCode),
             (S = l.state),
@@ -141,20 +141,20 @@ let b = new N(i.h, {
         let { data: t } = e;
         c = t;
     },
-    BILLING_PAYMENT_SOURCE_CREATE_START: x,
-    MODAL_POP: x,
-    NEW_PAYMENT_SOURCE_CLEAR_ERROR: x,
-    BILLING_PAYMENT_SOURCE_CREATE_FAIL: _,
-    STRIPE_TOKEN_FAILURE: _,
+    BILLING_PAYMENT_SOURCE_CREATE_START: _,
+    MODAL_POP: _,
+    NEW_PAYMENT_SOURCE_CLEAR_ERROR: _,
+    BILLING_PAYMENT_SOURCE_CREATE_FAIL: x,
+    STRIPE_TOKEN_FAILURE: x,
     BILLING_PAYMENT_SOURCE_CREATE_SUCCESS: v,
     LOGOUT: v,
     BILLING_POPUP_BRIDGE_CALLBACK: function (e) {
         let { query: t } = e;
         t?.payment_id != null
-            ? ((A = !0), (g = t.payment_id))
-            : t?.payment_source_id != null && ((A = !0), (P = t.payment_source_id));
+            ? ((g = !0), (A = t.payment_id))
+            : t?.payment_source_id != null && ((g = !0), (P = t.payment_source_id));
     },
     RESET_PAYMENT_ID: function () {
-        ((A = !1), (g = null));
+        ((g = !1), (A = null));
     },
 });

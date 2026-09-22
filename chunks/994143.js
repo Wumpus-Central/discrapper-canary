@@ -10,19 +10,19 @@ var l = n(477900),
     d = n(377058),
     m = n(38785),
     p = n(270537),
-    h = n(241989),
-    C = n(263532),
+    C = n(241989),
+    h = n(263532),
     f = n(993408),
     E = n(758461),
     S = n(1076),
     y = n(223311),
     I = n(65238),
-    g = n(151115),
-    A = n(518865),
+    A = n(151115),
+    g = n(518865),
     P = n(652215),
     v = n(812095),
-    x = n(287809),
-    _ = n(486020),
+    _ = n(287809),
+    x = n(486020),
     T = n(158045),
     N = n(580630),
     b = n(240248),
@@ -68,9 +68,9 @@ function Q(e) {
             giftRecipient: a,
             ...s
         } = e,
-        o = (0, l.jsx)(h.WH, { sku: t, product: n }),
+        o = (0, l.jsx)(C.WH, { sku: t, product: n }),
         u = Z(t);
-    return (0, l.jsx)(h.f7, {
+    return (0, l.jsx)(C.f7, {
         description: r,
         price: i,
         graphic: o,
@@ -84,7 +84,7 @@ function $(e) {
         { isSocialLayerGameItem: i } = (0, W.AO)({ sku: n }),
         r = i ? H.intl.string(V.default.qwSlCO) : H.intl.string(V.default.iZe9Wy),
         a = i
-            ? { header: t.name, headerIconSrc: _.Ay.getApplicationIconURL({ id: t.id, icon: t.icon, size: 16 }) }
+            ? { header: t.name, headerIconSrc: x.Ay.getApplicationIconURL({ id: t.id, icon: t.icon, size: 16 }) }
             : {};
     return (0, l.jsx)(Q, { ...e, description: r, ...a });
 }
@@ -99,7 +99,7 @@ function X(e) {
         r =
             null != n
                 ? (function (e) {
-                      let t = x.default.getCurrentUser(),
+                      let t = _.default.getCurrentUser(),
                           n = T.Ay.canUseShopDiscounts(t),
                           l = (0, f.xM)(t),
                           i = (0, f.WD)(e, { hasShopDiscount: n, discount: (0, f.fT)(e, n) });
@@ -121,13 +121,13 @@ function ee(e) {
             let { invoicePreview: t, product: n } = e,
                 { setCollectedModalOverrideTitle: l, setCollectedModalGradientColor: r } = (0, S.z)(),
                 a = (0, y.A)(P.FYj),
-                s = null != n ? (0, g.L)(n, a) : null,
+                s = null != n ? (0, A.L)(n, a) : null,
                 o = (0, I.ml)(s)?.reward,
                 u = null != o ? s?.rewardConfig?.discount?.id : null,
                 c = null != u && t?.getDiscountIdIfExists() === String(u);
             (0, i.useEffect)(() => {
                 let e = c ? o : null;
-                (l(e?.collected?.overrideTitle), r(null != e ? (0, A.lG)(e.flavor) : void 0));
+                (l(e?.collected?.overrideTitle), r(null != e ? (0, g.lG)(e.flavor) : void 0));
             }, [c, o, l, r]);
         })({ invoicePreview: n, product: l }),
         null
@@ -139,7 +139,7 @@ function et(e) {
             unifiedCheckoutFlow: n,
             checkoutInvoicePreview: r,
             paymentSourceType: a,
-        } = (0, C.t4)((e) => {
+        } = (0, h.t4)((e) => {
             let t = e.get("checkoutSelectedPaymentSource");
             return {
                 unifiedCheckoutFlow: e.unifiedCheckoutFlow,
@@ -147,14 +147,14 @@ function et(e) {
                 paymentSourceType: null != t ? t.type : null,
             };
         }),
-        { isGift: s, giftRecipient: h } = (0, j.Pv)(),
+        { isGift: s, giftRecipient: C } = (0, j.Pv)(),
         {
             sku: f,
             application: S,
             eligiblePaymentGateways: y,
-            disabled: x,
+            disabled: _,
         } = (function () {
-            let { selectedSkuId: e, purchaseState: t } = (0, C.t4)((e) => ({
+            let { selectedSkuId: e, purchaseState: t } = (0, h.t4)((e) => ({
                     selectedSkuId: e.selectedSkuId,
                     purchaseState: e.purchaseState,
                 })),
@@ -174,7 +174,7 @@ function et(e) {
                 }
             );
         })(),
-        _ = i.useMemo(
+        x = i.useMemo(
             () =>
                 (function (e, t) {
                     let { skuId: n, paymentSourceType: i, isGift: r } = t;
@@ -232,7 +232,7 @@ function et(e) {
             location: "OneTimePurchaseReviewStepBody",
             onPaymentSourceAdd: t,
             additionalPaymentSourceDropdownProps: K,
-            disabled: x,
+            disabled: _,
         }),
         { product: z } = (0, W.AO)({ sku: f }),
         { unifiedInvoiceSummaryProps: et, priceText: en } = i.useMemo(
@@ -272,7 +272,7 @@ function et(e) {
             var e, t;
             return (
                 (e = n),
-                (t = { priceText: en, sku: f, application: S, giftRecipient: h }),
+                (t = { priceText: en, sku: f, application: S, giftRecipient: C }),
                 e === c.C.SLAYER_STOREFRONT_CHECKOUT
                     ? (0, l.jsx)($, { ...t })
                     : e === c.C.GUILD_PRODUCT_CHECKOUT
@@ -281,7 +281,7 @@ function et(e) {
                         ? (0, l.jsx)(X, { ...t })
                         : (0, l.jsx)(Q, { ...t })
             );
-        }, [n, f, S, h, en]),
+        }, [n, f, S, C, en]),
         er = i.useMemo(() => (null != r ? (0, N.$g)(r.total, r.currency) : void 0), [r]),
         ea = (0, E.HH)(),
         es = i.useMemo(
@@ -290,7 +290,7 @@ function et(e) {
                     let { invoicePreview: n, isGift: i, product: r, promotion: a, productLine: s } = t;
                     if (e === c.C.COLLECTIBLES_CHECKOUT) {
                         if (null == r) return null;
-                        let e = (0, A.PY)(r, a),
+                        let e = (0, g.PY)(r, a),
                             t = (0, I.ml)(e)?.reward,
                             n = t?.checkout?.offerNotice,
                             i = t?.flavor,
@@ -298,9 +298,9 @@ function et(e) {
                         return (0, b.uJ)(s)
                             ? null
                             : (0, l.jsx)(u.J, {
-                                  Icon: (0, g.s)(n?.icon),
+                                  Icon: (0, A.s)(n?.icon),
                                   text: (0, v.U)(s),
-                                  gradientColor: (0, A.aJ)(i),
+                                  gradientColor: (0, g.aJ)(i),
                               });
                     }
                     if (e === c.C.SLAYER_STOREFRONT_CHECKOUT) {
@@ -328,7 +328,7 @@ function et(e) {
                 purchaseItemContent: ei,
                 invoiceSummaryContent: el,
                 paymentMethodContent: q,
-                legalContent: _,
+                legalContent: x,
                 promotionalNoticeContent: es,
                 upperInlineNoticeProps: T,
                 footerInlineNoticeProps: R,
@@ -339,6 +339,6 @@ function et(e) {
     });
 }
 function en(e) {
-    let { isCheckoutDataLoading: t } = (0, C.t4)((e) => ({ isCheckoutDataLoading: e.get("isCheckoutDataLoading") }));
+    let { isCheckoutDataLoading: t } = (0, h.t4)((e) => ({ isCheckoutDataLoading: e.get("isCheckoutDataLoading") }));
     return t ? (0, l.jsx)(m.Ed, { shouldShowUnifiedHeader: !0 }) : (0, l.jsx)(et, { ...e });
 }

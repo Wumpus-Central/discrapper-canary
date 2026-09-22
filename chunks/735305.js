@@ -10,20 +10,20 @@ var l = n(284009),
     d = n(263532),
     m = n(747340),
     p = n(174459),
-    h = n(723702),
-    C = n(951305),
+    C = n(723702),
+    h = n(951305),
     f = n(166532),
     E = n(566980),
     S = n(652215),
     y = n(202541);
 function I(e) {
-    let { analyticsData: t, initialPlanId: n, handleStepChange: l, onReturn: I, continueSessionToInitialStep: g } = e,
-        { paymentSources: A } = (0, a.j)(),
+    let { analyticsData: t, initialPlanId: n, handleStepChange: l, onReturn: I, continueSessionToInitialStep: A } = e,
+        { paymentSources: g } = (0, a.j)(),
         {
             selectedSkuId: P,
             setPurchaseState: v,
-            contextMetadata: x,
-            paymentSourceId: _,
+            contextMetadata: _,
+            paymentSourceId: x,
             setPaymentSourceId: T,
             purchaseError: N,
             setPurchaseError: b,
@@ -42,11 +42,11 @@ function I(e) {
         { paymentAuthenticationState: M } = (0, s.o)(),
         { isPremiumGroupPurchase: O, isEligibleForTrial: L } = (0, o.i)(),
         { step: k } = (0, u.Ay)(),
-        { isGift: w } = (0, C.Pv)(),
+        { isGift: w } = (0, h.Pv)(),
         U = {
             ...(0, m.p)(),
-            paymentSources: A,
-            paymentSourceId: _,
+            paymentSources: g,
+            paymentSourceId: x,
             setPaymentSourceId: T,
             purchaseError: N,
             setPurchaseError: b,
@@ -57,7 +57,7 @@ function I(e) {
         D =
             I ??
             function () {
-                l(Object.values(A).length < 1 && null == n ? f.pn.PLAN_SELECT : f.pn.REVIEW, {
+                l(Object.values(g).length < 1 && null == n ? f.pn.PLAN_SELECT : f.pn.REVIEW, {
                     trackedFromStep: f.pn.PAYMENT_ELEMENT,
                 });
             };
@@ -85,12 +85,12 @@ function I(e) {
                 from_step: n,
                 to_step: l,
                 step_duration_ms: i - G,
-                flow_duration_ms: i - x.startTime,
+                flow_duration_ms: i - _.startTime,
             });
         },
         isEligibleForTrial: L,
         allowDesktopRedirectPurchase:
-            (0, h.isDesktop)() && null != P && [y.pe.TIER_0, y.pe.TIER_2].includes(P) && !w && null == j,
-        continueSessionToInitialStep: g,
+            (0, C.isDesktop)() && null != P && [y.pe.TIER_0, y.pe.TIER_2].includes(P) && !w && null == j,
+        continueSessionToInitialStep: A,
     });
 }

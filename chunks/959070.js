@@ -2,8 +2,8 @@ n.d(t, {
     C: () => t2,
     Sk: () => t4,
     Zx: () => tQ,
-    v7: () => t5,
-    L0: () => t6,
+    v7: () => t6,
+    L0: () => t5,
     N_: () => t3,
     MD: () => t9,
     Ay: () => nt,
@@ -515,8 +515,8 @@ var eM = n(931664),
     e2 = n(463930),
     e3 = n(935063),
     e8 = n(73392),
-    e5 = n(650019),
-    e6 = n(763754),
+    e6 = n(650019),
+    e5 = n(763754),
     e7 = n(967144),
     e4 = n(118517),
     e9 = n(976860),
@@ -586,10 +586,10 @@ function to(e) {
             colorRoleName: A,
             authorId: C,
             displayNameStyles: E,
-        } = (0, e6.Ay)(u),
+        } = (0, e5.Ay)(u),
         I = (0, e7.gn)(f, C, x),
         y = (0, e8.a)({ displayNameStyles: E }),
-        S = (0, e5.A)(h, u.attachments),
+        S = (0, e6.A)(h, u.attachments),
         v =
             ((t = o.id),
             (n = u.id),
@@ -1216,7 +1216,7 @@ function t8(e, t, n) {
         }
     );
 }
-function t5() {
+function t6() {
     let e = i.useRef(null),
         t = i.useCallback(() => {
             e.current?.onMaybeShowAutocomplete();
@@ -1226,7 +1226,7 @@ function t5() {
         }, []);
     return { autocompleteRef: e, handleMaybeShowAutocomplete: t, handleHideAutocomplete: n };
 }
-function t6(e) {
+function t5(e) {
     let t = i.useRef(null);
     if (null != e && "function" == typeof e) throw Error("Only Ref objects are supported");
     return null == e ? t : e;
@@ -1348,7 +1348,7 @@ let nt = i.memo(
             } = e;
         u()(null != T, "chat input type must be set");
         let { analyticsLocations: eu } = (0, I.Ay)(E.A.CHANNEL_TEXT_AREA),
-            ec = t6(t),
+            ec = t5(t),
             eh = i.useRef(null),
             eC = i.useRef(null),
             eE = i.useRef(null),
@@ -1388,20 +1388,20 @@ let nt = i.memo(
             e2 = !e1 || !T.commands?.enabled || !R || "/" !== a,
             e3 = (0, ey.A)(),
             { fontSize: e8 } = (0, m.cf)([C.Ay], () => ({ fontSize: C.Ay.fontSize })),
-            e5 = (0, m.bG)([eF.A], () => eF.A.isEnabled());
+            e6 = (0, m.bG)([eF.A], () => eF.A.isEnabled());
         t3(T, eW, b.id);
-        let { eventEmitter: e6, handleEditorSelectionChanged: e7 } = t8(eE, a, o),
+        let { eventEmitter: e5, handleEditorSelectionChanged: e7 } = t8(eE, a, o),
             e4 = i.useRef(a);
         e4.current = a;
         let e9 = i.useCallback(
                 (e, t, n) => {
-                    ("/" === t && "" === e4.current && T.commands?.enabled && e6.emit("command-sentinel-typed"),
+                    ("/" === t && "" === e4.current && T.commands?.enabled && e5.emit("command-sentinel-typed"),
                         U?.(e, t, n));
                 },
-                [U, T.commands?.enabled, e6],
+                [U, T.commands?.enabled, e5],
             ),
             { submitting: te, submit: tt, handleSubmit: tn } = tQ(B, T, eE, eS, b.id),
-            { autocompleteRef: tl, handleMaybeShowAutocomplete: ti, handleHideAutocomplete: ts } = t5(),
+            { autocompleteRef: tl, handleMaybeShowAutocomplete: ti, handleHideAutocomplete: ts } = t6(),
             ta = t0(tt, T, eE),
             tu = t1(eE),
             tc = t2({ editorRef: eE, disabled: eW, textValue: a, channelId: b.id, chatInputType: T, submit: B }),
@@ -1473,7 +1473,7 @@ let nt = i.memo(
                     ),
                     n
                 );
-            })(e6, eE),
+            })(e5, eE),
             { handleAutocompleteVisibilityChange: tL } = ne(T, b.id),
             tk = (function (e) {
                 let { type: t, channelId: n } = e;
@@ -1487,9 +1487,9 @@ let nt = i.memo(
                 );
             })({ type: T, channelId: b.id }),
             tw = i.useCallback(() => {
-                e6.emit("submit-failure");
-            }, [e6]);
-        (0, eJ.R)(e6, b.guild_id, b.id);
+                e5.emit("submit-failure");
+            }, [e5]);
+        (0, eJ.R)(e5, b.guild_id, b.id);
         let tP = null != D,
             tK = (eW && !((eG || eH) && eQ)) || (te && T.submit?.useDisabledStylesOnSubmit),
             tz = null;
@@ -1590,7 +1590,7 @@ let nt = i.memo(
                 R && eZ._.dispatch(ea.jej.CHANNEL_TEXT_AREA_FOCUSED, { channelId: b.id });
             }, [R, b.id]),
             (0, l.jsx)(eg.Sv, {
-                value: e6,
+                value: e5,
                 children: (0, l.jsxs)(I.f5, {
                     value: eu,
                     children: [
@@ -1674,7 +1674,7 @@ let nt = i.memo(
                                                         onHideAutocomplete: ts,
                                                         promptToUpload: W,
                                                         fontSize: e8,
-                                                        spellcheckEnabled: e5,
+                                                        spellcheckEnabled: e6,
                                                         canOnlyUseTextCommands: tP,
                                                         className: r()(
                                                             {

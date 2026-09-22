@@ -10,11 +10,11 @@ var l = n(477900),
     d = n(959070),
     m = n(915089),
     p = n(95701),
-    h = n(202541),
-    C = n(652215),
+    C = n(202541),
+    h = n(652215),
     f = n(375708),
     E = n(474055);
-let S = (0, p.createChannelRecord)({ id: "1", type: C.rbe.DM }),
+let S = (0, p.createChannelRecord)({ id: "1", type: h.rbe.DM }),
     y = (0, m.Ld)();
 function I(e) {
     let {
@@ -23,14 +23,14 @@ function I(e) {
             pendingText: r,
             currentText: m,
             className: p,
-            innerClassName: C,
+            innerClassName: h,
             disableThemedBackground: I = !1,
         } = e,
-        [g, A] = i.useState(r ?? m),
-        [P, v] = i.useState((0, c.x7)(g)),
-        x = i.useRef(!1);
-    function _(e, t, l) {
-        t !== g && (A(t), v(l), n(t));
+        [A, g] = i.useState(r ?? m),
+        [P, v] = i.useState((0, c.x7)(A)),
+        _ = i.useRef(!1);
+    function x(e, t, l) {
+        t !== A && (g(t), v(l), n(t));
     }
     function T() {
         return new Promise((e) => {
@@ -39,12 +39,12 @@ function I(e) {
     }
     return (
         i.useEffect(() => {
-            x.current = !0;
+            _.current = !0;
         }, []),
         i.useEffect(() => {
             if (void 0 === r) {
                 let e = (0, c.x7)(m);
-                (A(m), v(e));
+                (g(m), v(e));
             }
         }, [r, m]),
         (0, l.jsx)("div", {
@@ -57,25 +57,25 @@ function I(e) {
                             (0, l.jsx)(d.Ay, {
                                 "aria-describedby": `${e.describedById} ${y}`,
                                 "aria-labelledby": e.labelId,
-                                innerClassName: a()(E.Tg, C),
+                                innerClassName: a()(E.Tg, h),
                                 editorClassName: E.OT,
-                                maxCharacterCount: h.Jo,
-                                onChange: _,
+                                maxCharacterCount: C.Jo,
+                                onChange: x,
                                 channel: S,
-                                textValue: g,
+                                textValue: A,
                                 richValue: P,
                                 type: u.oU.CUSTOM_GIFT,
                                 onBlur: () => {
-                                    x.current = !1;
+                                    _.current = !1;
                                 },
                                 onFocus: () => {
-                                    x.current = !0;
+                                    _.current = !0;
                                 },
-                                focused: x.current,
+                                focused: _.current,
                                 onSubmit: T,
                                 disableThemedBackground: I,
                             }),
-                            (0, l.jsx)(o.A, { id: y, children: f.intl.format(f.t["+DFxLc"], { maxLength: h.Jo }) }),
+                            (0, l.jsx)(o.A, { id: y, children: f.intl.format(f.t["+DFxLc"], { maxLength: C.Jo }) }),
                         ],
                     }),
             }),

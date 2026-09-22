@@ -10,8 +10,8 @@ var l = n(477900),
     d = n(939249),
     m = n(7807),
     p = n(807348),
-    h = n(511558),
-    C = n(375708),
+    C = n(511558),
+    h = n(375708),
     f = n(649028);
 let E = [54, 8, 8, 8];
 function S(e) {
@@ -19,18 +19,18 @@ function S(e) {
         [r, S] = i.useState(!1),
         y = i.useRef(null),
         I = a()(f.Qq, f.Ow);
-    function g(e) {
+    function A(e) {
         (S(!1), t?.(e));
     }
-    function A(e) {
+    function g(e) {
         return (0, l.jsxs)("div", {
             className: f.Ry,
             children: [
                 (0, l.jsxs)("div", {
                     className: f.__invalid_customGiftHeaderText,
                     children: [
-                        (0, l.jsx)(o.E, { variant: "text-md/bold", children: C.intl.string(C.t.aThJz8) }),
-                        (0, l.jsx)(o.E, { variant: "text-sm/normal", children: C.intl.string(C.t.stGFA3) }),
+                        (0, l.jsx)(o.E, { variant: "text-md/bold", children: h.intl.string(h.t.aThJz8) }),
+                        (0, l.jsx)(o.E, { variant: "text-sm/normal", children: h.intl.string(h.t.stGFA3) }),
                     ],
                 }),
                 (0, l.jsx)("div", { className: f.$H, children: e }),
@@ -46,17 +46,17 @@ function S(e) {
         renderPopout: (e) => {
             let { closePopout: t } = e;
             return (0, l.jsx)(c.l, {
-                children: (0, l.jsx)(h.A, {
+                children: (0, l.jsx)(C.A, {
                     suppressPlaySound: !0,
                     shouldShowLockedSounds: !1,
                     guildId: null,
                     channel: null,
                     onClose: t,
-                    onSelect: g,
+                    onSelect: A,
                     analyticsSource: "gift soundboard",
                     soundButtonOverlay: p.If.ADD,
                     listPadding: E,
-                    renderHeader: A,
+                    renderHeader: g,
                     defaultSoundsOnly: !0,
                 }),
             });
@@ -82,7 +82,7 @@ function S(e) {
                                       className: I,
                                       variant: "text-sm/semibold",
                                       lineClamp: 1,
-                                      children: C.intl.string(C.t.aThJz8),
+                                      children: h.intl.string(h.t.aThJz8),
                                   }),
                               ],
                           })

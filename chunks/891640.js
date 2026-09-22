@@ -1,4 +1,4 @@
-n.d(t, { F: () => f, i: () => C });
+n.d(t, { F: () => f, i: () => h });
 var l = n(284009),
     i = n.n(l),
     r = n(277984),
@@ -47,11 +47,11 @@ async function p(e, t, n) {
         { redirectConfirmation: u, paymentSource: c } = await (0, r.$M)(i.info, t, s, l ?? void 0, o);
     return { hasRedirectURL: u, paymentSource: c };
 }
-async function h(e, t) {
+async function C(e, t) {
     let { billingAddressState: n, analyticsLocation: l } = e;
     return { paymentSource: await (0, r.A8)(n.info, t, l), responseType: "payment-source" };
 }
-function C(e) {
+function h(e) {
     return e in f;
 }
 let f = {
@@ -99,8 +99,8 @@ let f = {
     [u.he.BANCONTACT]: { submitAddressStep: async (e) => await d(e, u.he.BANCONTACT) },
     [u.he.PAYPAL]: { submitAddressStep: async (e) => await m(e) },
     [u.he.VENMO]: { submitAddressStep: async (e) => await m(e) },
-    [u.he.PAYSAFE_CARD]: { submitAddressStep: async (e) => await h(e, u.he.PAYSAFE_CARD) },
-    [u.he.GRABPAY_MY]: { submitAddressStep: async (e) => await h(e, u.he.GRABPAY_MY) },
+    [u.he.PAYSAFE_CARD]: { submitAddressStep: async (e) => await C(e, u.he.PAYSAFE_CARD) },
+    [u.he.GRABPAY_MY]: { submitAddressStep: async (e) => await C(e, u.he.GRABPAY_MY) },
     [u.he.CASH_APP]: {
         submitAddressStep: async (e) => {
             let { paymentSource: t } = await p(e, u.he.CASH_APP, {

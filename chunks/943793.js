@@ -19,8 +19,8 @@ var r = i(297264),
     A = i(183555),
     j = i(735321),
     E = i(451395),
-    v = i(823016),
-    C = i(788593),
+    C = i(823016),
+    v = i(788593),
     S = i(492280),
     b = i(866665),
     k = i(147925),
@@ -39,9 +39,9 @@ function L(e) {
         h = (0, l.useRef)(new Map()),
         I = (0, l.useRef)(null),
         p = (0, l.useRef)(null),
-        [E, v] = (0, l.useState)(0),
-        [C, S] = (0, l.useState)(!1),
-        b = D(I, p, u, h, v),
+        [E, C] = (0, l.useState)(0),
+        [v, S] = (0, l.useState)(!1),
+        b = D(I, p, u, h, C),
         k = (0, l.useCallback)(
             (e, t) => {
                 ((0, j.s1)(s, r, e),
@@ -66,7 +66,7 @@ function L(e) {
         !g && !m)
     )
         return null;
-    let _ = C ? u : u.slice(0, u.length - E);
+    let _ = v ? u : u.slice(0, u.length - E);
     return (0, n.jsxs)("div", {
         className: a()(w.I4, o),
         children: [
@@ -98,7 +98,7 @@ function L(e) {
                         E > 0 &&
                             (0, n.jsx)(O, {
                                 buttonRef: I,
-                                isExpanded: C,
+                                isExpanded: v,
                                 numberOfOverflowingTags: E,
                                 onExpandTags: () => {
                                     (S(!0), x({ action: "EXPAND_GAME_TAGS" }));
@@ -182,7 +182,7 @@ var G = i(858808),
     F = i(207730);
 function W(e) {
     let { index: t, widgetType: i, game: l, children: s, getWidth: a } = e,
-        { manageFocusOnReorder: r } = (0, v.r)();
+        { manageFocusOnReorder: r } = (0, C.r)();
     return (0, n.jsx)(E.mG, {
         index: t,
         itemId: l.gameId,
@@ -300,10 +300,10 @@ function X(e) {
         w = 1 === (0, j.cv)(d),
         _ = R && (0, j.y9)(d),
         P = R && !w,
-        { registerDragHandleRef: O } = (0, v.r)();
+        { registerDragHandleRef: O } = (0, C.r)();
     if (y) return (0, n.jsx)(S.E, {});
     function D() {
-        return (0, n.jsx)(C.A, {
+        return (0, n.jsx)(v.A, {
             coverRef: x,
             className: null == k || u ? void 0 : U.iL,
             imageSrc: k,

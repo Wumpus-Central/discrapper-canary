@@ -18,7 +18,7 @@ function d(e) {
             errorScene: u.V1.Scenes.ERROR,
             successScene: u.V1.Scenes.SUCCESS,
         }),
-        h = (0, i.bG)([a.Ay], () => a.Ay.useReducedMotion);
+        C = (0, i.bG)([a.Ay], () => a.Ay.useReducedMotion);
     return (0, l.jsxs)(r.rQ, {
         "data-migration-pending": !0,
         align: s.A.Align.START,
@@ -30,7 +30,7 @@ function d(e) {
                 nextScene: m,
                 onScenePlay: (e) => p(u.V1.getNextScene(e)),
                 pauseWhileUnfocused: !1,
-                pause: h,
+                pause: C,
             }),
             (0, l.jsx)("div", { className: c.qd }),
             (0, l.jsx)(r.s_, { "data-migration-pending": !0, onClick: d, className: c.b }),

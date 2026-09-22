@@ -27,25 +27,25 @@ function c() {
         d = !n && !o && null != e,
         m = !!(d && null != c && u.TP[c.trialId].skus.includes(e) && !n),
         p = (0, i.O)(),
-        h =
+        C =
             null != e &&
             null != p &&
             null != p.discount &&
             null != p.discount.planIds &&
             p.discount.planIds.some((t) => u.hd[t].skuId === e),
-        C = !!(d && null != p && h),
+        h = !!(d && null != p && C),
         f = (0, i.p)();
     return l.useMemo(
         () => ({
             isPremium: t,
             isPremiumGroupPurchase: n,
             isEligibleForTrial: m,
-            isEligibleForDiscount: C,
+            isEligibleForDiscount: h,
             userTrialOffer: c,
             discountOffer: p,
             premiumGroupDiscountOffer: n ? f : null,
         }),
-        [t, n, m, C, c, p, f],
+        [t, n, m, h, c, p, f],
     );
 }
 function d(e) {

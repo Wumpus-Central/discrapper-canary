@@ -10,14 +10,14 @@ var i = n(477900),
     u = n(980707),
     _ = n(743368),
     A = n(173936),
-    d = n(577473),
-    T = n(922016),
+    T = n(577473),
+    d = n(922016),
     I = n(442433),
     N = n(181658),
     R = n(274670),
     C = n(144779),
-    S = n(976860),
-    O = n(246356),
+    O = n(976860),
+    S = n(246356),
     D = n(957565),
     m = n(396813),
     P = n(859703),
@@ -35,13 +35,13 @@ var i = n(477900),
     j = n(617986),
     v = n(190107),
     q = n(652215),
-    b = n(818348),
-    X = n(375708);
+    X = n(818348),
+    b = n(375708);
 function B(e) {
     let t = (0, s.bG)([P.A], () => P.A.getQuestPreviewOverride(p.uF.QUEST_BAR_V2), []),
         n = (0, s.bG)([P.A], () => P.A.getQuestPreviewOverride(p.uF.ACTIVITY_PANEL), []),
-        T = (0, s.bG)([P.A], () => P.A.getQuestPreviewOverride(p.uF.QUEST_LIVE_STREAM), []),
-        O = (0, s.bG)([P.A], () => P.A.getQuestPreviewOverride(p.uF.MEMBERS_LIST), []),
+        d = (0, s.bG)([P.A], () => P.A.getQuestPreviewOverride(p.uF.QUEST_LIVE_STREAM), []),
+        S = (0, s.bG)([P.A], () => P.A.getQuestPreviewOverride(p.uF.MEMBERS_LIST), []),
         B = (0, y.vy)(e.questContent),
         w = [p.uF.QUEST_BAR_V2, p.uF.QUEST_BAR].includes(e.questContent),
         F = (0, g.Ut)(),
@@ -107,23 +107,23 @@ function B(e) {
                 (0, i.jsx)(c.sL, {
                     id: "channel-call-header",
                     label: "Show in Voice Channel Header",
-                    checked: T?.id === e.quest.id,
+                    checked: d?.id === e.quest.id,
                     action: () => z(p.uF.QUEST_LIVE_STREAM),
                 }),
-            [z, e.quest.id, T?.id],
+            [z, e.quest.id, d?.id],
         ),
         es = l.useMemo(
             () =>
                 (0, i.jsx)(c.sL, {
                     id: "members-list",
                     label: "Show in Members List",
-                    checked: O?.id === e.quest.id,
+                    checked: S?.id === e.quest.id,
                     action: () => z(p.uF.MEMBERS_LIST),
                 }),
-            [z, e.quest.id, O?.id],
+            [z, e.quest.id, S?.id],
         ),
         ea = l.useCallback(() => {
-            (0, S.pX)(q.BVt.QUEST_PREVIEW_TOOL_2(e.quest.id));
+            (0, O.pX)(q.BVt.QUEST_PREVIEW_TOOL_2(e.quest.id));
         }, [e.quest.id]),
         eo = e.shouldShowDisclosure && e.quest.id !== v.Fw;
     return (0, i.jsxs)(u.W, {
@@ -133,8 +133,8 @@ function B(e) {
             null != e.onSelect ? e.onSelect() : (0, I.Z_)();
         },
         navId: "quests-entry",
-        "aria-label": X.intl.string(X.t.ogxXGq),
-        onClose: e?.onClose ?? b.tE,
+        "aria-label": b.intl.string(b.t.ogxXGq),
+        onClose: e?.onClose ?? X.tE,
         children: [
             (0, i.jsxs)(
                 c.rX,
@@ -150,7 +150,7 @@ function B(e) {
                         K &&
                             (0, i.jsx)(c.Dr, {
                                 id: "share-link",
-                                label: X.intl.string(X.t.RDE0Sc),
+                                label: b.intl.string(b.t.RDE0Sc),
                                 action: J,
                                 icon: A.LinkIcon,
                                 leadingAccessory: { type: "icon", icon: A.LinkIcon },
@@ -170,7 +170,7 @@ function B(e) {
                         !e.hideLearnMore &&
                             (0, i.jsx)(c.Dr, {
                                 id: "learn-more",
-                                label: X.intl.string(X.t["Ws2Bl+"]),
+                                label: b.intl.string(b.t["Ws2Bl+"]),
                                 action: function () {
                                     ((0, f.E5)(f.kI.STEP_2_CLICKED_INTERNAL, "quest_entry_context_menu")
                                         ? (0, R.r)({
@@ -192,13 +192,13 @@ function B(e) {
                                           }),
                                         (0, j.mA)({ fromContent: e.questContent, questId: e.quest.id }));
                                 },
-                                icon: d.r,
-                                leadingAccessory: { type: "icon", icon: d.r },
+                                icon: T.r,
+                                leadingAccessory: { type: "icon", icon: T.r },
                             }),
                         eo &&
                             (0, i.jsx)(c.Dr, {
                                 id: "display-disclosure",
-                                label: X.intl.string(X.t.GcsZKJ),
+                                label: b.intl.string(b.t.GcsZKJ),
                                 action: function () {
                                     (0, j.Zc)(
                                         e.quest,
@@ -216,7 +216,7 @@ function B(e) {
                         B &&
                             (0, i.jsx)(c.Dr, {
                                 id: "hide-entrypoint",
-                                label: X.intl.string(X.t.NN79E9),
+                                label: b.intl.string(b.t.NN79E9),
                                 action: function () {
                                     ((0, f.E5)(f.kI.STEP_2_CLICKED_INTERNAL, "quest_entry_context_menu")
                                         ? (0, R.r)({
@@ -239,7 +239,7 @@ function B(e) {
                                         (0, y.vy)(e.questContent) &&
                                             ((0, m.g5)(e.quest.id, e.questContent), w && (0, j.z6)(e.quest)));
                                 },
-                                subtext: X.intl.string(X.t.RK9gxo),
+                                subtext: b.intl.string(b.t.RK9gxo),
                             }),
                     ],
                 },
@@ -249,24 +249,24 @@ function B(e) {
                 (0, i.jsxs)(
                     c.rX,
                     {
-                        label: X.intl.string(X.t["Ape+mm"]),
+                        label: b.intl.string(b.t["Ape+mm"]),
                         children: [
-                            (0, i.jsx)(c.Dr, { id: "dismiss", label: X.intl.string(X.t.JF6W66), action: Q }),
+                            (0, i.jsx)(c.Dr, { id: "dismiss", label: b.intl.string(b.t.JF6W66), action: Q }),
                             (0, i.jsx)(c.Dr, {
                                 id: "enrollment",
-                                label: X.intl.string(X.t.taqkwK),
+                                label: b.intl.string(b.t.taqkwK),
                                 action: function () {
                                     (Z(), et());
                                 },
                             }),
                             (0, i.jsx)(c.Dr, {
                                 id: "progress",
-                                label: X.intl.string(X.t.cKSLr4),
+                                label: b.intl.string(b.t.cKSLr4),
                                 action: function () {
                                     W(0.9 * Math.random() + 0.03);
                                 },
                             }),
-                            (0, i.jsx)(c.Dr, { id: "complete", label: X.intl.string(X.t.jQEfRT), action: Y }),
+                            (0, i.jsx)(c.Dr, { id: "complete", label: b.intl.string(b.t.jQEfRT), action: Y }),
                             (0, k.g5)(e.quest) &&
                                 (0, i.jsxs)(c.Dr, {
                                     id: "console",
@@ -289,12 +289,12 @@ function B(e) {
                                 }),
                             (0, i.jsx)(c.Dr, {
                                 id: "copy-quest-id",
-                                label: X.intl.string(X.t.oisrFi),
+                                label: b.intl.string(b.t.oisrFi),
                                 action: () => {
                                     (0, D.C)(e.quest.id);
                                 },
                             }),
-                            (0, i.jsx)(c.Dr, { id: "preview", label: X.intl.string(X.t.tx5Ax5), action: ea }),
+                            (0, i.jsx)(c.Dr, { id: "preview", label: b.intl.string(b.t.tx5Ax5), action: ea }),
                         ],
                     },
                     "preview-controls",
@@ -315,7 +315,7 @@ function w(e) {
             ..._
         } = e,
         A = (0, g.Ut)(),
-        d = (0, U.go)(),
+        T = (0, U.go)(),
         I = l.useRef(null),
         N = l.useCallback(() => {
             ((0, f.E5)(f.kI.STEP_2_CLICKED_INTERNAL, "quest_entry_context_menu_popout")
@@ -326,7 +326,7 @@ function w(e) {
                       questContentCTA: h.Cy.OPEN_CONTEXT_MENU,
                       surfaceId: E,
                       sourceQuestContent: u,
-                      impressionId: d,
+                      impressionId: T,
                       questContentPosition: c,
                   })
                 : A({
@@ -337,15 +337,15 @@ function w(e) {
                       sourceQuestContent: u,
                   }),
                 null != n && n());
-        }, [n, o.id, E, c, A, u, d]);
-    return (0, i.jsx)(T.Y, {
+        }, [n, o.id, E, c, A, u, T]);
+    return (0, i.jsx)(d.Y, {
         targetElementRef: I,
         onRequestOpen: N,
         onRequestClose: s,
         renderPopout: (e) => {
             let { closePopout: t } = e;
             return a
-                ? (0, i.jsx)(O.A, {
+                ? (0, i.jsx)(S.A, {
                       children: (0, i.jsx)(B, {
                           ..._,
                           quest: o,
@@ -364,7 +364,7 @@ function w(e) {
                       sourceQuestContent: u,
                   });
         },
-        animation: T.Y.Animation.NONE,
+        animation: d.Y.Animation.NONE,
         children: (e) => (0, i.jsx)("div", { ref: I, children: t(e) }),
     });
 }
