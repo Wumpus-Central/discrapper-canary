@@ -9,8 +9,8 @@ let a = (0, n(945810).mj)({
 });
 var s = n(235079),
     l = n(375708);
-let o = n.p + "da7493b26cd05d94.webm",
-    d = n.p + "d898b82bac8e5fef.webm";
+let o = n.p + "122274207f3e636d.webm",
+    d = n.p + "8ae88831d931e5a6.webm";
 var c = (((i = {})[(i.THROW_EMOJI = 0)] = "THROW_EMOJI"), (i[(i.SNOW = 1)] = "SNOW"), i);
 let u = {
     experiment: a,
@@ -22,8 +22,6 @@ let u = {
     soundpack: s.i.HALLOWEEN,
     soundpackLabel: l.t["+LasFV"],
     appSpinnerSources: { webmDark: o, webmLight: d },
-    coachmarkDismissibleContent: r.M.HOLIDAY_COACHMARK_WINTER_2025,
-    coachmarkBackgroundColor: "#1170ed",
     getLoadingTips: () => [
         l.intl.string(l.t.ydMZ2o),
         l.intl.string(l.t["AL/SoZ"]),
@@ -39,4 +37,5 @@ let u = {
         l.intl.string(l.t["7KOunu"]),
         l.intl.string(l.t["1XGw3F"]),
     ],
+    coachmarkDismissibleContent: r.M.HOLIDAY_COACHMARK_HALLOWEEN_2026,
 };
