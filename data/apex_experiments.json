@@ -1266,22 +1266,6 @@
     }
   },
   {
-    "name": "2026-02-pubsub-bulk-ban-users",
-    "kind": "user",
-    "defaultConfig": {
-      "usePubSub": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "usePubSub": true
-      }
-    }
-  },
-  {
     "name": "2026-02-silence-warning-aggression",
     "kind": "user",
     "defaultConfig": null,

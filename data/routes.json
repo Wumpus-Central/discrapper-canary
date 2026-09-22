@@ -791,7 +791,6 @@
   "FORCE_SEND_PROMPT": "/:param/force-send-prompt",
   "EXPLICIT_MEDIA_REPORT_FALSE_POSITIVE": "/attachments/report-false-positive",
   "EXPLICIT_MEDIA_SENDER_REPORT_FALSE_POSITIVE": "/attachments/sender-report-false-positive",
-  "BULK_GUILD_BAN": "/guilds/:param/bulk-ban",
   "BULK_GUILD_BAN_V2": "/guilds/:param/bulk-ban/v2",
   "EXPLICIT_MEDIA_SCAN_MESSAGES": "/channels/:param/explicit-media",
   "EXPLICIT_MEDIA_SCAN_MULTI_CHANNEL_MESSAGES": "/messages/explicit-media",
