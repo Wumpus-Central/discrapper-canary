@@ -195,10 +195,10 @@ var tQ = i(554146),
     t0 = i(429913),
     t1 = i(263577),
     t2 = i(826673),
-    t9 = i(544576),
-    t8 = i(308726),
+    t8 = i(544576),
+    t9 = i(308726),
     t5 = i(46282),
-    t7 = i(360469),
+    t7 = i(818023),
     t3 = i(731854),
     t4 = i(709946),
     t6 = i(302933);
@@ -584,7 +584,7 @@ let eS = new eN(s.h, {
         if (j.default.hasChangedRenderMode(n)) return;
         let l = (function (t, e) {
             if (P.A.isNotificationDisabled(H.KS.WelcomeNudge)) return null;
-            t9.Ay.supports(t3.O5.VIDEO) ||
+            t8.Ay.supports(t3.O5.VIDEO) ||
                 (e = e.filter((t) => t.type !== H.Jr.GO_LIVE_VOICE && t.type !== H.Jr.GO_LIVE_NON_VOICE));
             let { trackView: n, trackClick: l } = (0, Y.Y9)(H.KS.WelcomeNudge, {
                     notif_type: H.KS.WelcomeNudge,
@@ -634,7 +634,7 @@ let eS = new eN(s.h, {
                             });
                         }),
                             (a.renderFooter = () =>
-                                (0, z.jsx)(t8.ru, {
+                                (0, z.jsx)(t9.ru, {
                                     gamingId: t?.altId ?? t?.id,
                                     maxUserShowCount: 5,
                                     variant: "default",

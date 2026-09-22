@@ -623,7 +623,7 @@ var eF = l(485845),
     e$ = l(712440),
     eQ = l(733110),
     eZ = l(488926),
-    eJ = l(360469);
+    eJ = l(818023);
 async function e0(e) {
     null == X.A.getApplication(eJ.NW) && (await (0, eK.TA)(eJ.NW));
     let t = eV.Ay.getEmbeddedActivitiesForChannel(e).every((e) => e.applicationId !== eJ.NW);

@@ -15,7 +15,7 @@ var l = n(582128),
     g = n(20805),
     x = n(327098),
     A = n(652215),
-    C = n(360469),
+    C = n(818023),
     E = n(375708);
 function I(e) {
     let t = e?.getIconURL(C.iu.LARGE),

@@ -26,7 +26,7 @@ var i = n(665260),
     A = n(852218),
     h = n(202541),
     I = n(652215),
-    f = n(360469);
+    f = n(818023);
 function p(e, t) {
     let n = (0, s.M)(t) ? "logo-dark" : "logo-light",
         i = window.GLOBAL_ENV.CDN_HOST,

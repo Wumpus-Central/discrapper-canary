@@ -324,7 +324,7 @@ function eS(e) {
     });
 }
 var e_ = n(910200),
-    eN = n(360469),
+    eN = n(818023),
     eb = n(518477),
     ey = n(774240);
 let ek = `vc-gifting-${(0, a.A)()}`,

@@ -1582,7 +1582,7 @@ new ni(nt.h, {
         ((nl.lastUsedCommandId = t.id), (nl.lastUsedTimeMs = Date.now()));
     },
 });
-var ns = n(360469);
+var ns = n(818023);
 let na = { commandTypes: [M.kc.CHAT, M.kc.PRIMARY_ENTRY_POINT] },
     nr = { placeholderCount: 0, limit: ea.Hi, includeFrecency: !0 };
 var no = n(917012);
