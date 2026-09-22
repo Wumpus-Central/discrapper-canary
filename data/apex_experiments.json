@@ -1247,26 +1247,6 @@
     }
   },
   {
-    "name": "2026-02-silence-warning-aggression",
-    "kind": "user",
-    "defaultConfig": null,
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "resetSilenceWarningOnDeviceChange": true
-      },
-      "2": {
-        "resetSilenceWarningAfterNMinutes": 10
-      },
-      "3": {
-        "enableHardwareSilenceWarning": true
-      }
-    }
-  },
-  {
     "name": "2026-02-sticker-padding",
     "kind": "user",
     "defaultConfig": {
