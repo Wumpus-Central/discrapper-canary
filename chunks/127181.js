@@ -1,6 +1,12 @@
 n.d(t, { B: () => s, MZ: () => o, TH: () => l, tn: () => i });
 let a = [
     {
+        date: "2026-09-22",
+        platforms: ["desktop"],
+        summary: "The template and starter cards light up under your cursor.",
+    },
+    { date: "2026-09-22", platforms: ["desktop"], summary: "The create screen greets you with a little more magic." },
+    {
         date: "2026-09-21",
         platforms: ["desktop", "mobile"],
         summary: "Moderation Bot now starts with a short wizard, builds straight away, then tells you how to test it.",

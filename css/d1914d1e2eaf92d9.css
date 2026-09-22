@@ -1,3 +1,12 @@
+.row_caa98a {
+    position: relative;
+    width: 100%
+}
+
+.measure__8d84f {
+    width: 100%
+}
+
 .switcher__7b54f {
     flex: 0 0 auto
 }
@@ -238,8 +247,8 @@
 
 .promptCard_f8194a {
     align-items: center;
-    background-clip: padding-box;
-    background-image: radial-gradient(circle at 70% -100% in oklab, color-mix(in oklab, var(--brand-500) 45%, var(--background-mod-subtle)) 0, var(--background-mod-subtle) 85%);
+    background-color: var(--background-surface-high);
+    background-image: radial-gradient(circle at 70% -100% in oklab, var(--background-mod-strong) 0, transparent 85%);
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-sm);
     cursor: pointer;
@@ -251,12 +260,13 @@
     padding: var(--space-16);
     position: relative;
     text-align: start;
-    width: 100%
+    width: 100%;
+    z-index: 1
 }
 
 .promptCard_f8194a:focus-visible,
 .promptCard_f8194a:hover {
-    background-image: radial-gradient(circle at 70% -100% in oklab, color-mix(in oklab, var(--brand-500) 45%, var(--background-mod-normal)) 0, var(--background-mod-normal) 85%)
+    background-image: radial-gradient(circle at 70% -100% in oklab, var(--background-mod-strong) 0, var(--background-mod-muted) 85%)
 }
 
 .promptCardText_f8194a {
@@ -534,4 +544,4 @@
     text-align: center
 }
 
-/*# sourceMappingURL=6cec9b54051b2263.css.map*/
+/*# sourceMappingURL=d1914d1e2eaf92d9.css.map*/
