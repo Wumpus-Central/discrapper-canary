@@ -2340,8 +2340,8 @@ function lT(e) {
             }
         }, [s, m, t]),
         i.useEffect(() => {
-            h && (0, lv.yO)(lN.w_.FAMILY_CENTER);
-        }, [h]),
+            h && !y.A.isLoading() && (0, lv.yO)(lN.w_.FAMILY_CENTER);
+        }, [h, a]),
         { isLoading: a, selectedTab: u, handleTabChange: o, showAgeGateModal: h }
     );
 }

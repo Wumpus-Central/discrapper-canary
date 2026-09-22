@@ -18,9 +18,9 @@ var i = n(477900),
     b = n(174459),
     R = n(975571),
     h = n(955437),
-    y = n(612200),
-    C = n(323073),
-    w = n(201505),
+    w = n(612200),
+    y = n(323073),
+    C = n(201505),
     G = n(204925),
     T = n(652215),
     S = n(375708),
@@ -39,21 +39,21 @@ function I(t) {
         O = l.useRef(null),
         j = s === G.w_.DEEP_LINK_PROMPT,
         B = s === G.w_.FAMILY_CENTER,
-        W = (0, C.a9)() && !B && !j,
+        W = (0, y.a9)() && !B && !j,
         {
             verifyAgreementButtonText: Y,
             verifyDisagreementButtonText: z,
             verifyEmphasiseDisagree: K,
             verifyGateDescription: H,
             verifyTitle: Q,
-        } = (0, C.Gn)(s),
-        q = (0, C.vL)(N),
-        X = C.Bc.has(s),
+        } = (0, y.Gn)(s),
+        q = (0, y.vL)(N),
+        X = y.Bc.has(s),
         Z = null != M ? o()().diff(M, "years") : null;
     function J() {
-        if (s === G.w_.NSFW_SERVER_INVITE_EMBED) return ((0, y.IO)(s), Promise.resolve());
+        if (s === G.w_.NSFW_SERVER_INVITE_EMBED) return ((0, w.IO)(s), Promise.resolve());
         let t = N?.getGuildId();
-        return (A.A.nsfwReturnToSafety(t), (0, y.IO)(s), Promise.resolve());
+        return (A.A.nsfwReturnToSafety(t), (0, w.IO)(s), Promise.resolve());
     }
     async function $() {
         r()(null != M, "Cannot submit null birthday.");
@@ -62,7 +62,7 @@ function I(t) {
         } catch (t) {
             return (
                 null != t.body && null != t.body.date_of_birth
-                    ? (0, y.MP)(s, t.body.date_of_birth)
+                    ? (0, w.MP)(s, t.body.date_of_birth)
                     : (t?.body?.username != null ? F(S.intl.string(S.t["TGg/2k"])) : F(t?.body.message), v(!1)),
                 !1
             );
@@ -78,8 +78,8 @@ function I(t) {
         (await $()) || U(0);
     }
     (l.useEffect(() => {
-        I?.nsfwAllowed !== !0 || W || j || (0, y.Nk)(s);
-    }),
+        I?.nsfwAllowed !== !0 || W || j || (0, w.Nk)(s);
+    }, [I?.nsfwAllowed, W, j, s]),
         l.useEffect(() => {
             b.default.track(T.HAw.AGE_GATE_ACTION, { source: s, action: G.AM.AGE_GATE_OPEN });
         }, [s]));
@@ -156,7 +156,7 @@ function I(t) {
                         { text: S.intl.string(S.t.uBFuok), onClick: tt, loading: V, disabled: null == M },
                     ],
                     ...tr,
-                    children: (0, i.jsx)(w.A, {
+                    children: (0, i.jsx)(C.A, {
                         label: S.intl.string(S.t.rhBeKe),
                         name: "date_of_birth",
                         onChange: ti,
