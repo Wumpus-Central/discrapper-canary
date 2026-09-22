@@ -99,7 +99,8 @@ class s extends a {
                               discounts: t.discounts.map((e) => ({
                                   type: e.type,
                                   amount: e.amount,
-                                  description: "",
+                                  description: e.description ?? "",
+                                  percentage_amount: e.percentage_amount ?? void 0,
                                   discount_id: e.discount_id ?? void 0,
                               })),
                           };
