@@ -1466,7 +1466,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e3 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eH.A().log(
-    `[BUILD INFO] Release Channel: ${e3}, Build Number: 618412, Version Hash: 9ab16f14fb72ddd28daa29140169b1534a375579`,
+    `[BUILD INFO] Release Channel: ${e3}, Build Number: 618413, Version Hash: 2fd0fe2ae1f06c4e53ed6a887be1b2678a336e6b`,
 ),
     v.A.setTags({ appContext: x.QCW }),
     eI.A.initBasic(),
@@ -21555,7 +21555,7 @@ let Nz = "isHideDevBanner",
                     className: ts()(N$.Wz, N$.mr),
                     children: [
                         (0, R.jsx)(NK, { className: N$.Kk }),
-                        tg.intl.format(tg.t.uyrfYF, { buildNumber: "618412" }),
+                        tg.intl.format(tg.t.uyrfYF, { buildNumber: "618413" }),
                         (0, R.jsx)(r, {}),
                     ],
                 })
@@ -22023,7 +22023,10 @@ function CM() {
                     device_name: (0, CR.eq)(s.device, s.certifiedDeviceMetadata),
                 }));
         }, [s]),
-        u = eu.useRef(null);
+        u = eu.useCallback(() => {
+            CN.Bv(!0);
+        }, []),
+        _ = eu.useRef(null);
     return t
         ? (0, R.jsx)(Co, {
               shouldShow: n,
@@ -22054,8 +22057,8 @@ function CM() {
               },
               renderBody: () => {
                   if (null == s) return null;
-                  let { device: e } = s,
-                      t = (function (e) {
+                  let { device: e, mediaEngineDevice: t } = s,
+                      n = (function (e) {
                           switch (e.type) {
                               case CL.E.INPUT:
                                   return tg.intl.string(Cy.default.VLKyL8);
@@ -22091,18 +22094,19 @@ function CM() {
                                           variant: "primary",
                                           size: "sm",
                                           fullWidth: !0,
-                                          text: t,
+                                          text: n,
                                           onClick: () => o(CL.f[e.type]),
                                       }),
                                   }),
                                   (0, R.jsx)(i3.Y, {
-                                      renderPopout: (t) => {
-                                          let { closePopout: n } = t;
+                                      renderPopout: (n) => {
+                                          let { closePopout: i } = n,
+                                              r = t.deviceType === nO.oh.AUDIO_INPUT ? Il.z : hI.c;
                                           return (0, R.jsxs)(iJ.W, {
                                               navId: "device-detected-panel-more-actions",
                                               "aria-label": tg.intl.string(tg.t.DEoVWZ),
-                                              onClose: n,
-                                              onSelect: n,
+                                              onClose: i,
+                                              onSelect: i,
                                               children: [
                                                   e.type === CL.E.INPUT_AND_OUTPUT &&
                                                       (0, R.jsxs)(R.Fragment, {
@@ -22131,19 +22135,27 @@ function CM() {
                                                       id: "ignore",
                                                       label: tg.intl.format(tg.t.cwS3E6, { device: e.displayName }),
                                                       color: "danger",
-                                                      icon: _p.a,
-                                                      trailingIndicator: { type: "icon", icon: _p.a },
+                                                      icon: r,
+                                                      trailingIndicator: { type: "icon", icon: r },
                                                       action: c,
+                                                  }),
+                                                  (0, R.jsx)(i0.Dr, {
+                                                      id: "never-show",
+                                                      label: tg.intl.string(tg.t["5E9SB9"]),
+                                                      color: "danger",
+                                                      icon: ul.BellSlashIcon,
+                                                      trailingIndicator: { type: "icon", icon: ul.BellSlashIcon },
+                                                      action: u,
                                                   }),
                                               ],
                                           });
                                       },
                                       position: "top",
                                       align: "right",
-                                      targetElementRef: u,
+                                      targetElementRef: _,
                                       children: (e) =>
                                           (0, R.jsx)("div", {
-                                              ref: u,
+                                              ref: _,
                                               className: CD.hh,
                                               children: (0, R.jsx)(ig.m, {
                                                   text: tg.intl.string(tg.t.PdRCRg),
