@@ -126,7 +126,7 @@ let O = {
             y = R.trim();
         if (0 === O.trim().length || 0 === y.length) return u();
         let D = C(o().unescapeUrl(s));
-        if (null == D || (0, d.Ay)(l).length > 0) return u();
+        if (null == D || (0, d.F9)(l)) return u();
         let v = { ...n, allowEscape: !1, parseInlineCodeChildContent: !0 },
             b = n.allowEmojiLinks ? p : f,
             M = [...b, ...T],
