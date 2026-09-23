@@ -110,11 +110,9 @@
     color: var(--text-muted);
     cursor: pointer;
     display: flex;
-    font-size: 16px;
     gap: var(--space-sm);
     grid-column: 2;
-    justify-content: space-between;
-    line-height: 20px
+    justify-content: space-between
 }
 
 .subnav_e4d939 .item_e4d939:focus-visible,
@@ -312,4 +310,4 @@
     height: 100%
 }
 
-/*# sourceMappingURL=90d2b19f860294e7.css.map*/
+/*# sourceMappingURL=e3ef10f9463d121e.css.map*/

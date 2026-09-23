@@ -190,25 +190,25 @@ var el = n(284009),
     eh = n(480423);
 function eg(e) {
     let { category: t, onClick: n, active: r, dismissibleBadge: l } = e,
-        { useTitle: a, useSubnavLabel: c, key: o, usePersistentBadge: u } = t,
-        d = u?.(),
-        m = s.useMemo(
+        { useTitle: c, useSubnavLabel: o, key: u, usePersistentBadge: d } = t,
+        m = d?.(),
+        h = s.useMemo(
             () =>
                 null != l
                     ? r
                         ? null
                         : (0, i.jsx)(er, { badge: l })
-                    : null != d
-                      ? (0, i.jsx)(B.A, { badge: d })
+                    : null != m
+                      ? (0, i.jsx)(B.A, { badge: m })
                       : void 0,
-            [r, l, d],
+            [r, l, m],
         ),
-        h = a?.(),
-        g = c?.() ?? h;
+        g = c?.(),
+        x = o?.() ?? g;
     return (
-        ea()(null != g, "[SettingsSubnavigationCategory] Category must have a title"),
+        ea()(null != x, "[SettingsSubnavigationCategory] Category must have a title"),
         (0, i.jsx)(Y.tG, {
-            id: o,
+            id: u,
             children: (e) =>
                 (0, i.jsx)("div", {
                     role: "listitem",
@@ -220,9 +220,9 @@ function eg(e) {
                             ...e,
                             role: "link",
                             "aria-current": r ? "location" : void 0,
-                            children: [g, m],
+                            children: [(0, i.jsx)(a.E, { variant: "text-md/normal", color: "none", children: x }), h],
                         },
-                        o,
+                        u,
                     ),
                 }),
         })
@@ -915,13 +915,13 @@ var eM = n(280450),
 function eJ() {
     let e = (0, eX.GV)(),
         t = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        n = "619574",
-        s = "f4f3eb42865e84d017da946f1cb90e9924c4a646".substring(0, 7),
+        n = "619582",
+        s = "21d10380b04f62a78cc26c40065dfe6f9e39c720".substring(0, 7),
         r = eV.A?.app.getVersion(),
         l = eV.A?.app.getBuildNumber(),
         c = eV.A?.app.getAppArch(),
         o = eY.A.getCurrentBuildOverride().overrides?.discord_web,
-        u = null != o ? (0, eq.A)("1790195806901", !1) : null,
+        u = null != o ? (0, eq.A)("1790196016586", !1) : null,
         d = null != u ? ` (built ${u})` : "",
         m = (function () {
             let e = ez()?.os?.toString();
@@ -1087,8 +1087,8 @@ function e2() {
     });
 }
 var e5 = n(402651),
-    e9 = n(669067),
-    e7 = n(830543),
+    e7 = n(669067),
+    e9 = n(830543),
     e4 = n(953056);
 let e8 = new Set([e_.X.PROFILE_PANEL, e_.X.SUBSCRIPTIONS_PANEL, e_.X.FAMILY_CENTER_PANEL, e_.X.POGGERMODE_PANEL]),
     e6 = new Map([[e_.X.SESSIONS_PANEL, r.ImpressionNames.USER_SETTINGS_SESSIONS]]);
@@ -1101,7 +1101,7 @@ function e3(e) {
         [h, g] = s.useState(!1);
     return (s.useLayoutEffect(() => {
         function e() {
-            null == ek.default.getCurrentUser() && (g(!0), (0, e7.default)());
+            null == ek.default.getCurrentUser() && (g(!0), (0, e9.default)());
         }
         return (
             eM.default.addChangeListener(e),
@@ -1118,7 +1118,7 @@ function e3(e) {
               emptyState: tt,
               sidebarFooter: e2,
               onViewChange: function (e) {
-                  e8.has(e) || (0, e9._)(e);
+                  e8.has(e) || (0, e7._)(e);
                   let t = e6.get(e);
                   (null != t &&
                       (0, o.x)({
