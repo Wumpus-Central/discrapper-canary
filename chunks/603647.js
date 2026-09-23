@@ -1,80 +1,82 @@
 let i;
-n.d(t, { A: () => F });
+n.d(t, { A: () => x });
 var l = n(477900),
-    r = n(582128),
-    s = n(806163),
+    s = n(582128),
+    r = n(806163),
     a = n(607399),
-    o = n(17928),
-    d = n(707554),
+    d = n(17928),
+    o = n(707554),
     h = n(220839),
     u = n(897479),
     c = n(942156),
     E = n(574094),
     I = n(736056),
     B = n(976860),
-    _ = n(426660),
-    m = n(652215),
-    p = n(534373);
-let V = n(843020),
-    A = n(545044),
+    _ = n(540747),
+    m = n(426660),
+    p = n(652215),
+    A = n(534373);
+let L = n(843020),
+    V = n(545044),
     T = [
-        m.BVt.LOGIN,
-        m.BVt.LOGIN_HANDOFF,
-        m.BVt.LOGIN_ONE_TIME,
-        m.BVt.REGISTER,
-        m.BVt.INVITE(""),
-        m.BVt.GIFT_CODE(""),
-        m.BVt.GUILD_TEMPLATE_LOGIN(""),
-        m.BVt.GUILD_TEMPLATE(""),
-        m.BVt.DISABLE_EMAIL_NOTIFICATIONS,
-        m.BVt.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS,
-        m.BVt.BILLING_PREMIUM_SUBSCRIBE,
-        m.BVt.BILLING_PAYMENT_SOURCES_CREATE,
-        m.BVt.BILLING_PAYMENTS,
-        m.BVt.BILLING_PREMIUM_SWITCH_PLAN,
-        m.BVt.BILLING_GUILD_SUBSCRIPTIONS_PURCHASE,
-        m.BVt.GIFT_CARD_REDEEM,
-        m.BVt.VERIFY,
-        m.BVt.VERIFY_HUB_EMAIL,
-        m.BVt.REJECT_IP,
-        m.BVt.REJECT_MFA,
-        m.BVt.AUTHORIZE_IP,
-        m.BVt.AUTHORIZE_PAYMENT,
-        m.BVt.RESET,
-        m.BVt.HANDOFF,
-        m.BVt.REPORT,
-        m.BVt.REPORT_SECOND_LOOK,
-        m.BVt.ACCOUNT_REVERT(""),
+        p.BVt.LOGIN,
+        p.BVt.LOGIN_HANDOFF,
+        p.BVt.LOGIN_ONE_TIME,
+        p.BVt.REGISTER,
+        p.BVt.INVITE(""),
+        p.BVt.GIFT_CODE(""),
+        p.BVt.GUILD_TEMPLATE_LOGIN(""),
+        p.BVt.GUILD_TEMPLATE(""),
+        p.BVt.DISABLE_EMAIL_NOTIFICATIONS,
+        p.BVt.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS,
+        p.BVt.BILLING_PREMIUM_SUBSCRIBE,
+        p.BVt.BILLING_PAYMENT_SOURCES_CREATE,
+        p.BVt.BILLING_PAYMENTS,
+        p.BVt.BILLING_PREMIUM_SWITCH_PLAN,
+        p.BVt.BILLING_GUILD_SUBSCRIPTIONS_PURCHASE,
+        p.BVt.GIFT_CARD_REDEEM,
+        p.BVt.VERIFY,
+        p.BVt.VERIFY_HUB_EMAIL,
+        p.BVt.REJECT_IP,
+        p.BVt.REJECT_MFA,
+        p.BVt.AUTHORIZE_IP,
+        p.BVt.AUTHORIZE_PAYMENT,
+        p.BVt.RESET,
+        p.BVt.HANDOFF,
+        p.BVt.REPORT,
+        p.BVt.REPORT_SECOND_LOOK,
+        p.BVt.ACCOUNT_REVERT(""),
     ];
-function L(e) {
+function R(e) {
     return T.some((t) => e.startsWith(t));
 }
-let R = [m.BVt.VERIFY, m.BVt.VERIFY_HUB_EMAIL],
-    N = [m.BVt.GIFT_CARD_REDEEM];
-function f(e) {
+let N = [p.BVt.VERIFY, p.BVt.VERIFY_HUB_EMAIL],
+    f = [p.BVt.GIFT_CARD_REDEEM];
+function F(e) {
     let { children: t } = e,
         n = (function () {
-            let [e, t] = r.useState(!1),
-                [n, l] = r.useState(!0),
-                s = (0, o.bG)([I.A], () => I.A.hasLoadedExperiments);
+            let [e, t] = s.useState(!1),
+                [n, l] = s.useState(!0),
+                r = (0, d.bG)([I.A], () => I.A.hasLoadedExperiments);
             return ((0, h.A)(() => {}, 300), void 0 !== i)
                 ? i
-                : !n && s
+                : !n && r
                   ? (e || t(!0), (i = "default"), "default")
                   : n
                     ? ((i = "default"), "default")
                     : "loading";
         })(),
-        a = (0, s.zy)(),
-        d = N.includes(a.pathname),
-        u = R.includes(a.pathname);
-    if (d) return t;
+        a = (0, r.zy)(),
+        { hidden: o } = s.useContext(_.F),
+        u = f.includes(a.pathname),
+        c = N.includes(a.pathname);
+    if (u) return t;
     switch (n) {
         case "default":
             return (0, l.jsxs)(l.Fragment, {
                 children: [
-                    u ? (0, l.jsx)(_.A, {}) : (0, l.jsx)("img", { className: p.xX, src: V, alt: "" }),
-                    (0, l.jsx)("img", { className: p.F, src: A, alt: "" }),
+                    c ? (0, l.jsx)(m.A, {}) : (0, l.jsx)("img", { className: A.xX, src: L, alt: "" }),
+                    o ? null : (0, l.jsx)("img", { className: A.F, src: V, alt: "" }),
                     t,
                 ],
             });
@@ -83,12 +85,15 @@ function f(e) {
             return null;
     }
 }
-class w extends r.Component {
+class w extends s.Component {
     constructor(e) {
-        (super(e), (this.state = { isMobileWidth: window.innerWidth <= 485 }));
+        (super(e), (this.state = { isMobileWidth: window.innerWidth <= 485, authLogoHidden: !1 }));
     }
     handleResize = () => {
         this.setState({ isMobileWidth: window.innerWidth <= 485 });
+    };
+    setAuthLogoHidden = (e) => {
+        this.setState({ authLogoHidden: e });
     };
     componentDidMount() {
         window.addEventListener("resize", this.handleResize);
@@ -97,44 +102,48 @@ class w extends r.Component {
         window.removeEventListener("resize", this.handleResize);
     }
     mobileTransitionTo(e, t) {
-        if (L(e)) (0, B.pX)(e, t);
+        if (R(e)) (0, B.pX)(e, t);
         else {
             let n = null != t && null != t.search ? t.search : null;
             window.location = null == n ? e : `${e}?${n}`;
         }
     }
     mobileReplaceWith(e) {
-        L(e) ? (0, B.bG)(e) : (window.location = e);
+        R(e) ? (0, B.bG)(e) : (window.location = e);
     }
     renderDefault() {
         let { splash: e } = this.props,
-            t = (0, l.jsx)(u.A, {
-                component: r.Fragment,
-                children: r.Children.map(this.props.children, (e) =>
-                    r.cloneElement(e, { transitionTo: B.pX, replaceWith: B.bG }),
+            { authLogoHidden: t } = this.state,
+            n = (0, l.jsx)(u.A, {
+                component: s.Fragment,
+                children: s.Children.map(this.props.children, (e) =>
+                    s.cloneElement(e, { transitionTo: B.pX, replaceWith: B.bG }),
                 ),
             });
-        return (0, l.jsx)("div", {
-            className: p.WA,
-            children: (0, l.jsx)(d.F, {
-                forceLevel: 1,
-                children:
-                    null != e
-                        ? (0, l.jsxs)(l.Fragment, {
-                              children: [
-                                  (0, l.jsx)(c.A, { show: !0, className: p.wm }),
-                                  (0, l.jsx)(E.A, { splash: e, children: t }),
-                              ],
-                          })
-                        : (0, l.jsx)(f, { children: t }),
+        return (0, l.jsx)(_.F.Provider, {
+            value: { hidden: t, setHidden: this.setAuthLogoHidden },
+            children: (0, l.jsx)("div", {
+                className: A.WA,
+                children: (0, l.jsx)(o.F, {
+                    forceLevel: 1,
+                    children:
+                        null != e
+                            ? (0, l.jsxs)(l.Fragment, {
+                                  children: [
+                                      t ? null : (0, l.jsx)(c.A, { show: !0, className: A.wm }),
+                                      (0, l.jsx)(E.A, { splash: e, children: n }),
+                                  ],
+                              })
+                            : (0, l.jsx)(F, { children: n }),
+                }),
             }),
         });
     }
     renderMobile() {
         return (0, l.jsx)(u.A, {
-            component: r.Fragment,
-            children: r.Children.map(this.props.children, (e) =>
-                r.cloneElement(e, { transitionTo: this.mobileTransitionTo, replaceWith: this.mobileReplaceWith }),
+            component: s.Fragment,
+            children: s.Children.map(this.props.children, (e) =>
+                s.cloneElement(e, { transitionTo: this.mobileTransitionTo, replaceWith: this.mobileReplaceWith }),
             ),
         });
     }
@@ -144,4 +153,4 @@ class w extends r.Component {
         return e || a.Fr || a.v1 || t ? this.renderMobile() : this.renderDefault();
     }
 }
-let F = w;
+let x = w;
