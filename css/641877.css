@@ -2209,7 +2209,11 @@
 
 .hasAppendedEditSlot__8061a:has(:focus-visible):before,
 .hasAppendedEditSlot__8061a:hover:before {
-    inset-inline-end: -14px
+    inset-inline-end: calc(var(--space-16)*-1)
+}
+
+.container__8061a>:has(.editButton__8061a) {
+    margin-inline-start: -2px
 }
 
 .customizable__8061a {
@@ -2272,7 +2276,7 @@
 }
 
 .editButtonAppended__8061a {
-    inset-inline-end: -14px
+    inset-inline-end: calc(var(--space-16)*-1)
 }
 
 .customizable__8061a:has(:focus-visible) .editButton__8061a,
@@ -2316,4 +2320,4 @@
     object-fit: contain
 }
 
-/*# sourceMappingURL=641877.1211b61efc1969e7.css.map*/
+/*# sourceMappingURL=641877.c06a1f702de67b56.css.map*/
