@@ -1174,7 +1174,9 @@ function t2(e) {
     return i.useCallback(
         (e, i) => {
             n ||
-                (r === e$.oU.CREATE_ANNOUNCEMENT_POST || (0, ek.YS)(i, l, s, r.drafts.type)
+                (r === e$.oU.CREATE_ANNOUNCEMENT_POST ||
+                r === e$.oU.CREATE_FORUM_POST ||
+                (0, ek.YS)(i, l, s, r.drafts.type)
                     ? ((0, tm.fh)({
                           sticker: e,
                           stickerSelectLocation: i,

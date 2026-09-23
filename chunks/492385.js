@@ -2807,12 +2807,17 @@ function ij(e) {
                     return { formOpen: t };
                 }, d.x),
                 n = (0, eS.ST)(),
-                l = (0, lX.NV)({ parentChannel: e });
+                l = (0, lX.NV)({ parentChannel: e }),
+                i = iS(e),
+                { rateLimitPerUser: a } = e,
+                r = (0, g.bG)([lZ.A], () => lZ.A.getSlowmodeCooldownGuess(e.id, lZ.R.CreateThread)),
+                o = (0, lt._i)(e),
+                c = a > 0 && !o && r > 0;
             s.useEffect(() => {
                 let { setNameError: e, setMessageError: t } = n.getState();
                 (e(null), t(null));
             }, [t, n]);
-            let i = s.useCallback(
+            let u = s.useCallback(
                 (t, l, i) => {
                     let { name: s, textAreaState: a } = n.getState();
                     (null == t && (t = a.textValue), (t = t.trim()));
@@ -2841,50 +2846,50 @@ function ij(e) {
                     let {
                             setNameError: r,
                             setMessageError: o,
-                            setSubmitting: c,
-                            resetFormState: d,
-                            formOpen: u,
-                            setFormOpen: m,
-                            setPreviewing: h,
-                            setFormOpenFromUserAction: x,
-                            setGuidelinesOpen: g,
+                            setSubmitting: d,
+                            resetFormState: m,
+                            formOpen: h,
+                            setFormOpen: x,
+                            setPreviewing: g,
+                            setFormOpenFromUserAction: f,
+                            setGuidelinesOpen: j,
                         } = n.getState(),
-                        f = l8.A.hasSeen(e.id);
-                    if (!u)
+                        v = l8.A.hasSeen(e.id);
+                    if (!h)
                         return (
                             e.isGameInvitesChannel() ||
                                 ((0, tC.jr)({ guildId: e.guild_id, channelId: e.id }),
-                                f || n.getState().setGuidelinesOpen(!0),
-                                x()),
+                                v || n.getState().setGuidelinesOpen(!0),
+                                f()),
                             { shouldClear: !1, shouldRefocus: !1 }
                         );
-                    let { content: j, stickers: v, uploads: p, hasNameError: A, hasMessageError: C } = i(t, s, a);
+                    let { content: p, stickers: A, uploads: C, hasNameError: N, hasMessageError: b } = u(t, s, a);
                     if (
-                        (r(A ? l2(0, e0.intl.string(e0.t["71wuR0"])) : null),
-                        o(C ? l2(0, e0.intl.string(e0.t["w/BT3G"])) : null),
-                        A || C)
+                        (r(N ? l2(0, e0.intl.string(e0.t["71wuR0"])) : null),
+                        o(b ? l2(0, e0.intl.string(e0.t["w/BT3G"])) : null),
+                        N || b || i || c)
                     )
                         return { shouldClear: !1, shouldRefocus: !0 };
                     try {
-                        c(!0);
+                        d(!0);
                         let { valid: t } = await (0, l0.i)({
-                            content: j,
-                            hasStickers: null != v && v.length > 0,
-                            hasAttachments: null != p && p.length > 0,
+                            content: p,
+                            hasStickers: null != A && A.length > 0,
+                            hasAttachments: null != C && C.length > 0,
                             type: ig,
                             channel: e,
                         });
                         if (!t) return { shouldClear: !1, shouldRefocus: !0 };
-                        let n = await l(j, v, p);
+                        let n = await l(p, A, C);
                         return (
                             (0, tc.JA)(n),
                             tf.A.resort(e.id),
                             (0, lY.x5)(e.id, ig.drafts.type),
-                            d(),
-                            m(!1),
-                            h(!1),
-                            l8.A.markAsSeen(e.id),
+                            m(),
+                            x(!1),
                             g(!1),
+                            l8.A.markAsSeen(e.id),
+                            j(!1),
                             { shouldClear: !0, shouldRefocus: !1 }
                         );
                     } catch (t) {
@@ -2899,10 +2904,10 @@ function ij(e) {
                             { shouldClear: !1, shouldRefocus: !0 }
                         );
                     } finally {
-                        c(!1);
+                        d(!1);
                     }
                 },
-                [l, i, e, n],
+                [l, u, e, n, i, c],
             );
         })(o);
     return (
@@ -3301,8 +3306,12 @@ function iE(e) {
             let { textAreaState: t } = e;
             return { textAreaState: t };
         }, d.x),
-        n = (0, g.yK)([th.A], () => th.A.getUploads(e.id, td.C.FirstThreadMessage));
-    return s.useMemo(() => t.textValue.trim().length > 0 || n.length > 0, [t.textValue, n]);
+        n = (0, g.yK)([th.A], () => th.A.getUploads(e.id, td.C.FirstThreadMessage)),
+        l = (0, g.bG)([lK.A], () => lK.A.getStickerPreview(e.id, ig.drafts.type));
+    return s.useMemo(
+        () => t.textValue.trim().length > 0 || n.length > 0 || (null != l && l.length > 0),
+        [t.textValue, n, l],
+    );
 }
 function iS(e) {
     let t = iE(e),
