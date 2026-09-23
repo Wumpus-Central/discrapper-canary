@@ -55,10 +55,12 @@
     position: relative
 }
 
+.row__93d4a:focus-within .soundEditContainer__93d4a,
 .row__93d4a:hover .soundEditContainer__93d4a {
     opacity: 1
 }
 
+.row__93d4a:focus-within .soundPreviewIcon__93d4a,
 .row__93d4a:hover .soundPreviewIcon__93d4a {
     opacity: 1
 }
@@ -2805,4 +2807,4 @@
     width: 100%
 }
 
-/*# sourceMappingURL=919891cfaf2af415.css.map*/
+/*# sourceMappingURL=b8c2d8f6c85cbadd.css.map*/
