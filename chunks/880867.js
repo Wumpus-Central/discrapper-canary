@@ -11,9 +11,9 @@ var l = i(477900),
     m = i(451909),
     C = i(378570),
     h = i(446244),
-    x = i(734057),
-    k = i(957565),
-    p = i(403362),
+    k = i(734057),
+    p = i(957565),
+    x = i(403362),
     f = i(640794),
     v = i(97808),
     A = i(778712),
@@ -34,7 +34,7 @@ function I(e) {
     return (0, l.jsxs)("div", {
         className: j.V,
         children: [
-            (0, l.jsx)(P, { ...a, ...n }),
+            (0, l.jsx)(P, { ...a, ...n, statusBackdropColor: void 0 }),
             (0, l.jsxs)("div", {
                 className: j.D,
                 children: [
@@ -55,7 +55,7 @@ function N(e) {
                 let { withMessage: l, transitionToDestination: a, closeAfterSend: c } = t;
                 i(!0);
                 try {
-                    let t = (await Promise.all(e.map(h.pk))).filter(p.Vq);
+                    let t = (await Promise.all(e.map(h.pk))).filter(x.Vq);
                     if (0 === t.length) return void i(!1);
                     c && v();
                     let u =
@@ -65,7 +65,7 @@ function N(e) {
 ${l}`
                             : g;
                     for (let e of t) {
-                        let t = x.A.getChannel(e);
+                        let t = k.A.getChannel(e);
                         null != t &&
                             (await d.A.sendMessage(t.id, m.Ay.parse(t, u), !1, { location: _.Hx.USER_PROFILE }));
                     }
@@ -88,7 +88,7 @@ ${l}`
                     text: void 0,
                     "aria-label": M.intl.string(M.t.WqhZss),
                     onClick: () => {
-                        (0, k.C)(g, () => (0, n.P0)((0, s.o)(M.intl.string(M.t["L/PwZf"]), r.Ck.SUCCESS)));
+                        (0, p.C)(g, () => (0, n.P0)((0, s.o)(M.intl.string(M.t["L/PwZf"]), r.Ck.SUCCESS)));
                     },
                     icon: c.LinkIcon,
                 },
