@@ -10,7 +10,7 @@ function c(e, t) {
     let n = (0, r.bG)([l.A], () => l.A.getUserDiscountOffer(e)),
         [c, u] = i.useState(n?.hasExpired() ?? !1),
         _ = (0, r.bG)([s.default], () => (0, o.TW)(s.default.getCurrentUser())),
-        E = e === d.q || e === d.EG;
+        E = d.i_.includes(e);
     return (
         i.useEffect(() => {
             if (!n?.hasAcknowledged()) return;

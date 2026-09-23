@@ -10,7 +10,9 @@ function d() {
         t = r.A.isFetchingOffer(),
         n = r.A.hasFetchedOffer(),
         d = (0, a.A)(o.q),
-        c = (0, a.A)(o.EG),
-        u = d ?? c ?? null;
-    return e?.canceledAt == null ? null : null != u ? u : (t || n || (0, s.Vn)(), null);
+        c = (0, a.A)(o.W7),
+        u = (0, a.A)(o.Qo),
+        A = (0, a.A)(o.EG),
+        h = d ?? c ?? u ?? A ?? null;
+    return e?.canceledAt == null ? null : null != h ? h : (t || n || (0, s.Vn)(), null);
 }

@@ -1248,7 +1248,7 @@ function e8(e) {
         })(n, l);
     if (null == _ || null == C) return (0, i.jsx)(E.y, {});
     let M = P ? (0, D.Bv)(C) : null,
-        U = null != M || (null != v && (v.discountId === eu.q || v.discountId === eu.EG)),
+        U = null != M || (null != v && null != v.discountId && eu.i_.includes(v.discountId)),
         V = !j && null != v && v.discountId === eu.sC,
         k = P && ((j && null != y) || (!j && U));
     return (
