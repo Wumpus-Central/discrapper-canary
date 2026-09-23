@@ -14,13 +14,19 @@ let l = (0, r.mj)({
         name: "2026-06-topical-navigation-guild",
         defaultConfig: { enabled: !1 },
         variations: { 1: { enabled: !0 } },
-    }),
-    d = (0, r.mj)({
-        kind: "user",
-        name: "2026-04-topical-navigation-staff-control",
-        defaultConfig: { enabled: !1 },
-        variations: { 1: { enabled: !0 } },
     });
+(0, r.mj)({
+    kind: "user",
+    name: "2026-09-conversation-topic-header",
+    defaultConfig: { enabled: !1 },
+    variations: { 1: { enabled: !0 } },
+});
+let d = (0, r.mj)({
+    kind: "user",
+    name: "2026-04-topical-navigation-staff-control",
+    defaultConfig: { enabled: !1 },
+    variations: { 1: { enabled: !0 } },
+});
 function c(e, t) {
     return (0, i.bG)([a.A], () => null != e && (a.A.getGuild(e)?.features.has(t) ?? !1), [e, t]);
 }
