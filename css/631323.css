@@ -13,6 +13,11 @@
     z-index: var(--custom-user-profile-bottom-layer-z-index)
 }
 
+.fetchError_b4a4b2 {
+    margin-block-end: var(--space-12)
+}
+
+.fetchError_b4a4b2,
 .mutuals_b4a4b2,
 .userInfo_b4a4b2 {
     padding-inline: var(--custom-user-profile-content-inset)
@@ -294,4 +299,4 @@
     padding: var(--space-4)
 }
 
-/*# sourceMappingURL=631323.9cd7b268a69b6bac.css.map*/
+/*# sourceMappingURL=631323.2fa1fc51b03ab107.css.map*/

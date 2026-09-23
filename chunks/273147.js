@@ -1,4 +1,4 @@
-n.d(t, { G: () => ec });
+n.d(t, { G: () => ed });
 var i = n(477900),
     l = n(582128),
     s = n(612324),
@@ -21,107 +21,108 @@ var i = n(477900),
     _ = n(402860),
     v = n(718019),
     N = n(365607),
-    j = n(791556),
-    T = n(312381),
-    S = n(501193),
-    y = n(946356),
-    b = n(465829),
-    R = n(983495),
-    M = n(317097),
-    k = n(661531),
-    L = n(602853),
-    O = n(654107),
-    P = n(450373),
-    D = n(531685),
-    U = n(486020),
-    G = n(837529),
-    w = n(686189),
-    H = n(714719),
-    B = n(859161);
-function F(e) {
+    j = n(559506),
+    T = n(791556),
+    S = n(312381),
+    y = n(501193),
+    b = n(946356),
+    R = n(465829),
+    M = n(983495),
+    k = n(317097),
+    L = n(661531),
+    O = n(602853),
+    P = n(654107),
+    D = n(450373),
+    U = n(531685),
+    G = n(486020),
+    w = n(837529),
+    H = n(686189),
+    B = n(714719),
+    F = n(859161);
+function V(e) {
     let { user: t, displayProfile: n, guildId: s, bannerHeight: o, avatarSize: c, avatarInsetStart: d } = e,
         [u, m] = l.useState(!1),
-        h = (0, a.bG)([D.A], () => D.A.isFocused()),
+        h = (0, a.bG)([U.A], () => U.A.isFocused()),
         g = p.kt.getSetting(),
-        A = (0, G.Nx)(),
-        { bannerSrc: x, status: f } = (0, w.A)({ displayProfile: n ?? null, size: 480, canAnimate: g ? h : u }),
+        A = (0, w.Nx)(),
+        { bannerSrc: x, status: f } = (0, H.A)({ displayProfile: n ?? null, size: 480, canAnimate: g ? h : u }),
         E = A ? null : (x ?? null),
-        I = (0, L.r)(k.A.unsafe_rawColors.PRIMARY_800).hex(),
+        I = (0, O.r)(L.A.unsafe_rawColors.PRIMARY_800).hex(),
         C = null != n ? n.guildId : s,
         _ = t.getAvatarURL(C ?? void 0, (0, r.FT)(c)),
-        v = (0, M.LX)((0, O.Ay)(_, I, !1)),
-        N = (0, P.A)(n?.primaryColor ?? v).hex,
+        v = (0, k.LX)((0, P.Ay)(_, I, !1)),
+        N = (0, D.A)(n?.primaryColor ?? v).hex,
         { size: j, stroke: T } = (0, r.Kj)(c),
-        S = (0, B.A)(c);
-    return (0, i.jsx)(H.A, {
+        S = (0, F.A)(c);
+    return (0, i.jsx)(B.A, {
         bannerSrc: E,
-        backgroundColor: f === w.D.COMPLETE || A ? N : k.A.unsafe_rawColors.PRIMARY_800.css,
-        showGifTag: !g && (0, U.o4)(E),
+        backgroundColor: f === H.D.COMPLETE || A ? N : L.A.unsafe_rawColors.PRIMARY_800.css,
+        showGifTag: !g && (0, G.o4)(E),
         height: o,
         cutout: { align: "start", insetStart: d + j / 2 - S, insetBottom: T / 2, radius: S },
         onInteractionStart: () => m(!0),
         onInteractionEnd: () => m(!1),
     });
 }
-var V = n(280450),
-    z = n(984545),
-    J = n(35241),
-    K = n(587168),
-    Y = n(193738),
-    W = n(133385),
-    X = n(996988);
-function Z(e) {
-    let { user: t, guildId: n } = e;
-    return t.isNonUserBot()
-        ? (0, i.jsx)(J.A, { user: t })
-        : t.bot
-          ? (0, i.jsx)(z.A, { user: t, guildId: n })
-          : (0, i.jsx)(W.yo, { user: t, guildId: n });
-}
+var z = n(280450),
+    J = n(984545),
+    K = n(35241),
+    Y = n(587168),
+    W = n(193738),
+    X = n(133385),
+    Z = n(996988);
 function q(e) {
     let { user: t, guildId: n } = e;
-    return (0, a.bG)([V.default], () => V.default.getId() === t.id)
+    return t.isNonUserBot()
+        ? (0, i.jsx)(K.A, { user: t })
+        : t.bot
+          ? (0, i.jsx)(J.A, { user: t, guildId: n })
+          : (0, i.jsx)(X.yo, { user: t, guildId: n });
+}
+function Q(e) {
+    let { user: t, guildId: n } = e;
+    return (0, a.bG)([z.default], () => z.default.getId() === t.id)
         ? null
-        : (0, i.jsxs)(K.A, {
+        : (0, i.jsxs)(Y.A, {
               children: [
-                  !t.isNonUserBot() && (0, i.jsx)(Y.A, { user: t, themeType: X.d.EMBED }),
-                  (0, i.jsx)(Z, { user: t, guildId: n ?? void 0 }),
+                  !t.isNonUserBot() && (0, i.jsx)(W.A, { user: t, themeType: Z.d.EMBED }),
+                  (0, i.jsx)(q, { user: t, guildId: n ?? void 0 }),
               ],
           });
 }
-var Q = n(213994),
-    $ = n(821609),
-    ee = n(375708),
-    et = n(820555);
-function en(e) {
+var $ = n(213994),
+    ee = n(821609),
+    et = n(375708),
+    en = n(820555);
+function ei(e) {
     let { onOpenProfile: t } = e;
     return (0, i.jsx)("div", {
-        className: et.k,
-        children: (0, i.jsx)($.$, {
+        className: en.k,
+        children: (0, i.jsx)(ee.$, {
             variant: "primary",
             size: "md",
             fullWidth: !0,
-            text: ee.intl.string(ee.t.iXAna6),
+            text: et.intl.string(et.t.iXAna6),
             onClick: t,
         }),
     });
 }
-var ei = n(332757);
-let el = r._3.SIZE_96,
-    es = {
+var el = n(332757);
+let es = r._3.SIZE_96,
+    ea = {
         "--custom-user-profile-banner-height": "120px",
-        "--custom-user-profile-avatar-size": `${(0, r.Kj)(el).size}px`,
-        "--custom-user-profile-avatar-stroke": `${(0, r.Kj)(el).stroke}px`,
+        "--custom-user-profile-avatar-size": `${(0, r.Kj)(es).size}px`,
+        "--custom-user-profile-avatar-stroke": `${(0, r.Kj)(es).stroke}px`,
         "--custom-user-profile-content-inset": "16px",
         "--custom-user-profile-private-banner-height": "0px",
     },
-    ea = { ...es, "--custom-user-profile-private-banner-height": "32px" };
-function er(e) {
+    er = { ...ea, "--custom-user-profile-private-banner-height": "32px" };
+function eo(e) {
     let { user: t, guildId: n, channelId: l } = e;
     return (0, I.A)(t)
-        ? (0, i.jsx)(j.A, {
+        ? (0, i.jsx)(T.A, {
               user: t,
-              className: ei.I0,
+              className: el.I0,
               onOpenProfile: (e) =>
                   (0, _.openUserProfileModal)({
                       userId: t.id,
@@ -133,99 +134,100 @@ function er(e) {
           })
         : null;
 }
-function eo(e) {
+function ec(e) {
     let { user: t, guildId: n, channelId: r, messageId: A, headingRef: I } = e,
-        j = (0, E.Ay)(t.id, n),
-        M = null != j ? j.guildId : n,
-        k = x.Ay.useName(M, r, t),
-        { analyticsLocations: L } = (0, d.Ay)(c.A.USER_PROFILE_EMBED),
-        O = (0, f.pb)({ layout: "EMBED", userId: t.id, guildId: n, channelId: r, messageId: A }),
-        P = (0, m.A)(j?.profileFrame?.skuId),
-        D = j?.private === !0,
-        U = (0, l.useRef)(null),
-        [G, w] = (0, C.A)(),
-        H = (0, s.A)(U, w),
-        { isHovering: B } = (0, g.A)(U),
-        V = p.kt.useSetting(),
-        z = (0, a.bG)([o.Ay], () => o.Ay.useReducedMotion),
-        J = j?.profileEffect?.skuId,
-        K = !V && !z;
-    function Y() {
+        T = (0, E.Ay)(t.id, n),
+        k = null != T ? T.guildId : n,
+        L = x.Ay.useName(k, r, t),
+        { analyticsLocations: O } = (0, d.Ay)(c.A.USER_PROFILE_EMBED),
+        P = (0, f.pb)({ layout: "EMBED", userId: t.id, guildId: n, channelId: r, messageId: A }),
+        D = (0, m.A)(T?.profileFrame?.skuId),
+        U = T?.private === !0,
+        G = (0, l.useRef)(null),
+        [w, H] = (0, C.A)(),
+        B = (0, s.A)(G, H),
+        { isHovering: F } = (0, g.A)(G),
+        z = p.kt.useSetting(),
+        J = (0, a.bG)([o.Ay], () => o.Ay.useReducedMotion),
+        K = T?.profileEffect?.skuId,
+        Y = !z && !J;
+    function W() {
         (0, _.openUserProfileModal)({
             userId: t.id,
             guildId: n,
             channelId: r,
-            sourceAnalyticsLocations: L,
+            sourceAnalyticsLocations: O,
             hideRestrictedProfile: !0,
         });
     }
     return (0, i.jsx)(d.f5, {
-        value: L,
+        value: O,
         children: (0, i.jsx)(f.of, {
-            value: O,
-            fetchStartedAt: j?.fetchStartedAt,
-            fetchEndedAt: j?.fetchEndedAt,
-            isLoaded: j?.isLoaded === !0 && G,
-            children: (0, i.jsxs)(Q.A, {
+            value: P,
+            fetchStartedAt: T?.fetchStartedAt,
+            fetchEndedAt: T?.fetchEndedAt,
+            isLoaded: T?.isLoaded === !0 && w,
+            children: (0, i.jsxs)($.A, {
                 user: t,
-                displayProfile: j,
+                displayProfile: T,
                 size: "sm",
-                style: D ? ea : es,
-                containerRef: H,
+                style: U ? er : ea,
+                containerRef: B,
                 headingRef: I,
-                headingText: ee.intl.formatToPlainString(ee.t["8yRya1"], { name: k }),
+                headingText: et.intl.formatToPlainString(et.t["8yRya1"], { name: L }),
                 profileEffect:
-                    null != J ? (0, i.jsx)(u.A, { skuId: J, autoPlay: V, isHovering: B, useOpacityOnHover: !K }) : null,
-                profileFrame: null != P ? (0, i.jsx)(h.A, { frame: P, fadeIn: !1 }) : null,
+                    null != K ? (0, i.jsx)(u.A, { skuId: K, autoPlay: z, isHovering: F, useOpacityOnHover: !Y }) : null,
+                profileFrame: null != D ? (0, i.jsx)(h.A, { frame: D, fadeIn: !1 }) : null,
                 children: [
-                    D && (0, i.jsx)(T.A, { className: ei.i9 }),
-                    (0, i.jsx)(F, {
+                    U && (0, i.jsx)(S.A, { className: el.i9 }),
+                    (0, i.jsx)(V, {
                         user: t,
-                        displayProfile: j,
+                        displayProfile: T,
                         guildId: n,
                         bannerHeight: 120,
-                        avatarSize: el,
+                        avatarSize: es,
                         avatarInsetStart: 16,
                     }),
-                    (0, i.jsx)(q, { user: t, guildId: n }),
+                    (0, i.jsx)(Q, { user: t, guildId: n }),
                     (0, i.jsx)(v.A, {
                         user: t,
-                        displayProfile: j,
+                        displayProfile: T,
                         guildId: n,
                         channelId: r,
-                        avatarSize: el,
-                        className: ei.H,
-                        onOpenProfile: Y,
+                        avatarSize: es,
+                        className: el.H,
+                        onOpenProfile: W,
                     }),
-                    (0, i.jsx)(R.A, {
+                    (0, i.jsx)(M.A, {
                         user: t,
-                        guildId: M ?? void 0,
+                        guildId: k ?? void 0,
                         channelId: r ?? void 0,
-                        themeType: X.d.EMBED,
-                        className: ei.WO,
-                        referenceClassName: ei.RQ,
+                        themeType: Z.d.EMBED,
+                        className: el.WO,
+                        referenceClassName: el.RQ,
                         disableToolbar: !0,
                     }),
-                    (0, i.jsx)(b.Ay, {
+                    (0, i.jsx)(j.A, { userId: t.id, className: el.Fd }),
+                    (0, i.jsx)(R.Ay, {
                         user: t,
-                        guildId: M ?? void 0,
+                        guildId: k ?? void 0,
                         contextGuildId: n ?? void 0,
-                        displayName: k,
-                        onClickName: Y,
-                        pronouns: j?.pronouns,
-                        className: ei.eF,
-                        trailing: (0, i.jsx)(N.A, { displayProfile: j, themeType: X.d.EMBED }),
+                        displayName: L,
+                        onClickName: W,
+                        pronouns: T?.pronouns,
+                        className: el.eF,
+                        trailing: (0, i.jsx)(N.A, { displayProfile: T, themeType: Z.d.EMBED }),
                     }),
-                    (0, i.jsx)(er, { user: t, guildId: n, channelId: r }),
-                    D && (0, i.jsx)(y.A.Overlay, { className: ei.In, children: (0, i.jsx)(S.A, { username: k }) }),
-                    (0, i.jsx)(en, { onOpenProfile: Y }),
+                    (0, i.jsx)(eo, { user: t, guildId: n, channelId: r }),
+                    U && (0, i.jsx)(b.A.Overlay, { className: el.In, children: (0, i.jsx)(y.A, { username: L }) }),
+                    (0, i.jsx)(ei, { onOpenProfile: W }),
                 ],
             }),
         }),
     });
 }
-function ec(e) {
+function ed(e) {
     let { userId: t, guildId: n, channelId: l, messageId: s, headingRef: r } = e,
         o = (0, a.bG)([A.default], () => A.default.getUser(t));
-    return null == o ? null : (0, i.jsx)(eo, { user: o, guildId: n, channelId: l, messageId: s, headingRef: r });
+    return null == o ? null : (0, i.jsx)(ec, { user: o, guildId: n, channelId: l, messageId: s, headingRef: r });
 }
