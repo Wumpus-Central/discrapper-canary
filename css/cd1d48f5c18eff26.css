@@ -1034,6 +1034,12 @@
     min-width: 0
 }
 
+.settingsLoading_d385d3 {
+    display: flex;
+    justify-content: center;
+    padding-block: var(--space-16)
+}
+
 .settingsCard__750bc {
     box-sizing: border-box;
     display: flex;
@@ -1262,4 +1268,4 @@
     transition: stroke-dashoffset .35s cubic-bezier(.22, 1, .36, 1)
 }
 
-/*# sourceMappingURL=d15f27cf017db93f.css.map*/
+/*# sourceMappingURL=cd1d48f5c18eff26.css.map*/

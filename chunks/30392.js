@@ -4234,7 +4234,7 @@ function nP(e) {
             null != K &&
                 (t.keys ?? []).some((e) => {
                     let t = K.schema.find((t) => t.key === e);
-                    if (t?.required !== !0) return !1;
+                    if (null == t) return !1;
                     if ("secret" === t.type) return K.secrets.find((t) => t.name === e)?.set !== !0;
                     let l = K.values[e];
                     return null == l || "" === l;
