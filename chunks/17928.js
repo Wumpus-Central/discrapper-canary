@@ -117,7 +117,7 @@ class h {
             null == this._currentDispatchActionType,
             `Dispatch.dispatch(...): Cannot dispatch in the middle of a dispatch. Action: ${e.type} Already dispatching: ${this._currentDispatchActionType}`,
         ),
-            l()(e.type, "Dispatch.dispatch(...) called without an action type"),
+            l()(null != e.type && "" !== e.type, "Dispatch.dispatch(...) called without an action type"),
             E.has(e.type) && A.log(`Dispatching ${e.type}`),
             e.type,
             u.WQ(e.type));

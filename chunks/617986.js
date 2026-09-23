@@ -790,9 +790,9 @@ function ec(e) {
             e || (0, I.bG)({ pathname: Y.BVt.QUEST_HOME });
         }));
 }
-function ed(e, t) {
+function ed(e, t, o) {
     (0, r.openModalLazy)(async () => {
-        let { default: o } = await Promise.all([
+        let { default: a } = await Promise.all([
             n.e("10058"),
             n.e("951589"),
             n.e("454048"),
@@ -808,7 +808,7 @@ function ed(e, t) {
             n.e("899513"),
             n.e("862101"),
         ]).then(n.bind(n, 50292));
-        return (n) => (0, i.jsx)(o, { ...n, multiplier: e, orbMultiplierEligibility: t });
+        return (n) => (0, i.jsx)(a, { ...n, multiplier: e, orbMultiplierEligibility: t, ...o });
     });
 }
 function em(e) {

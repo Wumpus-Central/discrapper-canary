@@ -11,57 +11,56 @@ var n = l(477900),
     d = l(793574),
     m = l(688810),
     C = l(757036),
-    _ = l(576761),
-    E = l(369189),
-    g = l(366505),
-    A = l(166403),
-    f = l(174459),
-    L = l(124861),
-    p = l(318346),
-    x = l(362862),
-    O = l(761705),
-    v = l(923138),
-    T = l(12510),
+    _ = l(369189),
+    E = l(366505),
+    g = l(166403),
+    A = l(174459),
+    f = l(124861),
+    L = l(318346),
+    p = l(362862),
+    x = l(761705),
+    O = l(923138),
+    v = l(12510),
     b = l(673125),
-    R = l(821609),
-    S = l(661531),
-    N = l(403581),
-    y = l(834730),
-    j = l(683071),
-    I = l(577473),
-    U = l(34188),
-    M = l(475743),
-    B = l(303136),
-    F = l(626031),
-    D = l(320448),
-    H = l(404778),
-    P = l(318254),
-    W = l(742967),
-    G = l(570165),
-    k = l(375708),
+    T = l(821609),
+    R = l(661531),
+    S = l(403581),
+    N = l(834730),
+    y = l(683071),
+    j = l(577473),
+    I = l(34188),
+    U = l(475743),
+    M = l(303136),
+    B = l(626031),
+    F = l(320448),
+    D = l(404778),
+    H = l(318254),
+    P = l(742967),
+    W = l(570165),
+    G = l(375708),
     w = l(137484),
-    z = l(427483);
-function Y(e) {
+    k = l(427483);
+function z(e) {
     let { achievementStatus: t, animationState: l = "off" } = e,
-        a = t === L.x.COMPLETED || t === L.x.CLAIMED,
+        a = t === f.x.COMPLETED || t === f.x.CLAIMED,
         s = (0, n.jsx)("div", {
             className: i()(w.TK, { [w.AM]: a }),
-            children: (0, n.jsx)(W.x, {
+            children: (0, n.jsx)(P.x, {
                 className: w.t9,
                 staticAsset:
                     "https://cdn.discordapp.com/assets/content/c25ca35dc2175b9ce33ad5bd427fb4c458cbb6cc6e8b01e592e70dd7472bfa0d.png",
-                webmAsset: z.A,
+                webmAsset: k.A,
                 animationState: l,
                 assetAltText: "",
             }),
         });
     return a ? (0, n.jsx)("div", { className: w.Zs, children: s }) : s;
 }
-function V(e) {
+function Y(e) {
     let { className: t } = e;
-    return (0, n.jsx)(H.c, { className: i()(w.Fu, t) });
+    return (0, n.jsx)(D.c, { className: i()(w.Fu, t) });
 }
-function K(e) {
+function V(e) {
     let {
             achievementIdentifier: t,
             title: l,
@@ -77,28 +76,28 @@ function K(e) {
     async function g() {
         null != c && (E(!0), await c(t).finally(() => E(!1)));
     }
-    let A = null != o && r !== L.x.COMPLETED,
-        f = i()(w.of, { [w.o4]: d, [w.D8]: m, [w.or]: A }),
+    let A = null != o && r !== f.x.COMPLETED,
+        L = i()(w.of, { [w.o4]: d, [w.D8]: m, [w.or]: A }),
         p = (0, n.jsxs)(n.Fragment, {
             children: [
                 (0, n.jsxs)("div", {
                     className: w.Ub,
                     children: [
-                        (0, n.jsx)(Y, { achievementStatus: r, animationState: m ? "on" : "off" }),
+                        (0, n.jsx)(z, { achievementStatus: r, animationState: m ? "on" : "off" }),
                         (0, n.jsxs)("div", {
                             className: w.Du,
                             children: [
-                                (0, n.jsx)(y.E, { variant: "text-sm/medium", color: "text-default", children: l }),
-                                (0, n.jsx)(y.E, {
+                                (0, n.jsx)(N.E, { variant: "text-sm/medium", color: "text-default", children: l }),
+                                (0, n.jsx)(N.E, {
                                     variant: "text-sm/normal",
                                     color: "text-muted",
-                                    children: k.intl.format(r === L.x.COMPLETED ? G.default.h2qWpS : G.default.B8Fxns, {
+                                    children: G.intl.format(r === f.x.COMPLETED ? W.default.h2qWpS : W.default.B8Fxns, {
                                         orbAmount: s,
                                         orbIconHook: () =>
-                                            (0, n.jsx)(P.C, {
+                                            (0, n.jsx)(H.C, {
                                                 className: w.fN,
                                                 size: "xs",
-                                                color: S.A.colors.ICON_SUBTLE,
+                                                color: R.A.colors.ICON_SUBTLE,
                                             }),
                                     }),
                                 }),
@@ -108,14 +107,14 @@ function K(e) {
                 }),
                 (function (e, t) {
                     let { isHovered: l, isClaiming: a, handleClaim: s, hasDiscoveryClick: i } = t,
-                        r = (0, n.jsx)(R.$, {
+                        r = (0, n.jsx)(T.$, {
                             variant: l || a ? "expressive" : "secondary",
                             size: "sm",
-                            text: k.intl.string(G.default.WmfVjs),
+                            text: G.intl.string(W.default.WmfVjs),
                             loading: a,
                             onClick: s,
                         });
-                    return e === L.x.COMPLETED || a ? r : i ? (0, n.jsx)(D._, { size: "sm", "aria-hidden": !0 }) : null;
+                    return e === f.x.COMPLETED || a ? r : i ? (0, n.jsx)(F._, { size: "sm", "aria-hidden": !0 }) : null;
                 })(r, { isHovered: m, isClaiming: _, handleClaim: g, hasDiscoveryClick: A }),
             ],
         }),
@@ -123,37 +122,37 @@ function K(e) {
     return A
         ? (0, n.jsxs)(n.Fragment, {
               children: [
-                  (0, n.jsx)(h.D, { className: f, ...x, onClick: o, "aria-label": l, children: p }),
-                  !u && (0, n.jsx)(V, {}),
+                  (0, n.jsx)(h.D, { className: L, ...x, onClick: o, "aria-label": l, children: p }),
+                  !u && (0, n.jsx)(Y, {}),
               ],
           })
         : (0, n.jsxs)(n.Fragment, {
-              children: [(0, n.jsx)("div", { className: f, ...x, children: p }), !u && (0, n.jsx)(V, {})],
+              children: [(0, n.jsx)("div", { className: L, ...x, children: p }), !u && (0, n.jsx)(Y, {})],
           });
 }
-var q = l(652215),
+var K = l(652215),
     Q = l(653877),
     X = l(268920),
-    $ = l(633217);
-function Z() {
+    q = l(633217);
+function $() {
     return (0, n.jsx)("div", {
         className: Q.s,
-        children: (0, n.jsx)(B.A, { src: $.A, fallbackImage: X.A, className: Q.Cb }),
+        children: (0, n.jsx)(M.A, { src: q.A, fallbackImage: X.A, className: Q.Cb }),
     });
 }
-function J(e) {
-    let { nitroIconColor: t = S.A.colors.ICON_SUBTLE, text: l } = e;
+function Z(e) {
+    let { nitroIconColor: t = R.A.colors.ICON_SUBTLE, text: l } = e;
     return (0, n.jsxs)("div", {
         className: Q.SY,
         children: [
-            (0, n.jsx)(N.t, { size: "xs", color: t }),
-            (0, n.jsx)(y.E, { variant: "text-xs/medium", color: "text-subtle", children: l }),
+            (0, n.jsx)(S.t, { size: "xs", color: t }),
+            (0, n.jsx)(N.E, { variant: "text-xs/medium", color: "text-subtle", children: l }),
         ],
     });
 }
-function ee(e) {
+function J(e) {
     let { orbBalance: t, headerTagsContent: l } = e,
-        s = (0, M.Ay)(t),
+        s = (0, U.Ay)(t),
         i = a.useMemo(
             () => (null != t && !!(t.toString().length > 10)) || (null != s && !!(s.toString().length > 10)),
             [t, s],
@@ -161,15 +160,15 @@ function ee(e) {
     return (0, n.jsxs)("div", {
         className: Q.SZ,
         children: [
-            (0, n.jsx)(Z, {}),
+            (0, n.jsx)($, {}),
             (0, n.jsxs)("div", {
                 className: Q.ZX,
                 children: [
-                    (0, n.jsx)(F.t, {
+                    (0, n.jsx)(B.t, {
                         counterInnerClassName: i ? Q.F4 : void 0,
                         value: t,
-                        onValueChange: q.tEg,
-                        onValueReached: q.tEg,
+                        onValueChange: K.tEg,
+                        onValueReached: K.tEg,
                         targetTotalCounterTime: 1500,
                         textVariant: "display-md",
                         textColor: "text-strong",
@@ -182,19 +181,19 @@ function ee(e) {
         ],
     });
 }
-function et(e) {
+function ee(e) {
     let { text: t, onClick: l } = e,
         a = (0, n.jsxs)(n.Fragment, {
             children: [
-                (0, n.jsx)(N.t, { size: "xxs", color: "white" }),
-                (0, n.jsx)(y.E, { variant: "text-xs/semibold", color: "text-overlay-light", children: t }),
+                (0, n.jsx)(S.t, { size: "xxs", color: "white" }),
+                (0, n.jsx)(N.E, { variant: "text-xs/semibold", color: "text-overlay-light", children: t }),
             ],
         });
     return null == l
         ? (0, n.jsx)("div", { className: Q.lh, children: a })
         : (0, n.jsx)(h.D, { className: i()(Q.lh, Q.w9), onClick: l, children: a });
 }
-function el(e) {
+function et(e) {
     let { numRows: t = 3 } = e,
         l = a.useMemo(() => Array.from({ length: t }), [t]);
     return (0, n.jsx)("div", {
@@ -221,32 +220,32 @@ function el(e) {
         ),
     });
 }
-function en(e) {
+function el(e) {
     let { title: t, challenges: l, isLoading: s, onClaim: r, badgeText: c, onClickBadge: o, inlineNoticeProps: h } = e,
         u = l.length > 0,
         d = a.useMemo(
             () =>
                 s && null == h
-                    ? (0, n.jsx)(el, { numRows: 3 })
+                    ? (0, n.jsx)(et, { numRows: 3 })
                     : u
                       ? (0, n.jsxs)(n.Fragment, {
                             children: [
                                 (0, n.jsxs)("div", {
                                     className: Q.$b,
                                     children: [
-                                        (0, n.jsx)(y.E, {
+                                        (0, n.jsx)(N.E, {
                                             variant: "text-xs/medium",
                                             color: "text-subtle",
                                             children: t,
                                         }),
-                                        null != c && (0, n.jsx)(et, { text: c, onClick: o }),
+                                        null != c && (0, n.jsx)(ee, { text: c, onClick: o }),
                                     ],
                                 }),
                                 l.map((e, t) =>
                                     (0, n.jsx)(
                                         a.Fragment,
                                         {
-                                            children: (0, n.jsx)(K, {
+                                            children: (0, n.jsx)(V, {
                                                 ...e,
                                                 onClaim: r,
                                                 isLastItem: t === l.length - 1,
@@ -262,15 +261,15 @@ function en(e) {
                         : (0, n.jsxs)("div", {
                               className: i()(Q.GN, Q.AZ),
                               children: [
-                                  (0, n.jsx)(y.E, {
+                                  (0, n.jsx)(N.E, {
                                       variant: "text-sm/medium",
                                       color: "text-default",
-                                      children: k.intl.string(G.default.xOP5OP),
+                                      children: G.intl.string(W.default.xOP5OP),
                                   }),
-                                  (0, n.jsx)(y.E, {
+                                  (0, n.jsx)(N.E, {
                                       variant: "text-sm/normal",
                                       color: "text-muted",
-                                      children: k.intl.string(G.default.XW2CuY),
+                                      children: G.intl.string(W.default.XW2CuY),
                                   }),
                               ],
                           }),
@@ -282,39 +281,39 @@ function en(e) {
                     ? null
                     : (0, n.jsx)("div", {
                           className: i()(Q.re, { [Q.Oi]: u }),
-                          children: (0, n.jsx)(j.w, { ...h, children: h.message }),
+                          children: (0, n.jsx)(y.w, { ...h, children: h.message }),
                       }),
             [h, u],
         );
     return (0, n.jsxs)("div", { className: Q.E6, "aria-busy": s, children: [m, d] });
 }
-function ea(e) {
+function en(e) {
     let { onQuestsClick: t, onShopClick: l } = e;
     return (0, n.jsxs)("div", {
         className: Q.W,
         children: [
             null != t &&
-                (0, n.jsx)(R.$, {
+                (0, n.jsx)(T.$, {
                     text: "Quests",
                     variant: "secondary",
                     size: "md",
-                    icon: { asset: I.r, type: "icon" },
+                    icon: { asset: j.r, type: "icon" },
                     fullWidth: !0,
                     onClick: t,
                 }),
             null != l &&
-                (0, n.jsx)(R.$, {
+                (0, n.jsx)(T.$, {
                     text: "Shop",
                     variant: "secondary",
                     size: "md",
-                    icon: { asset: U.U, type: "icon" },
+                    icon: { asset: I.U, type: "icon" },
                     fullWidth: !0,
                     onClick: l,
                 }),
         ],
     });
 }
-function es(e) {
+function ea(e) {
     let {
             orbBalance: t,
             headerTagsContent: l,
@@ -328,34 +327,35 @@ function es(e) {
         className: i()(Q.ql, Q.Ut),
         ref: o,
         children: [
-            (0, n.jsx)(ee, { orbBalance: t, headerTagsContent: l }),
+            (0, n.jsx)(J, { orbBalance: t, headerTagsContent: l }),
             h ? null : s({ onClose: () => u(!0) }),
             r,
             c,
         ],
     });
 }
-var ei = l(554146),
-    er = l(408278),
-    ec = l(789645),
-    eo = l(131607),
-    eh = l(696292),
-    eu = l(839534),
-    ed = l(75678),
-    em = l(87719),
+var es = l(554146),
+    ei = l(408278),
+    er = l(789645),
+    ec = l(131607),
+    eo = l(696292),
+    eh = l(839534),
+    eu = l(75678),
+    ed = l(87719),
+    em = l(576761),
     eC = l(617986),
     e_ = l(758836),
     eE = l(202541);
 function eg(e) {
     let { analyticsLocations: t = [], shopTab: l = e_.G2.ORBS } = e;
-    (0, eu.Cz)({ tab: l, analyticsLocations: t, analyticsSource: d.A.ORBS_BALANCE_MENU });
+    (0, eh.Cz)({ tab: l, analyticsLocations: t, analyticsSource: d.A.ORBS_BALANCE_MENU });
 }
 function eA() {
-    (0, eC.mA)({ fromContent: eh.u.ORBS_BALANCE_MENU });
+    (0, eC.mA)({ fromContent: eo.u.ORBS_BALANCE_MENU });
 }
 function ef(e) {
     let { analyticsLocations: t = [] } = e;
-    (0, ed.A)({ subscriptionTier: eE.pe.TIER_2, analyticsLocations: t });
+    (0, eu.A)({ subscriptionTier: eE.pe.TIER_2, analyticsLocations: t });
 }
 let eL = {
     "1531422538125676707": (e) => {
@@ -392,9 +392,9 @@ function eO(e) {
             null != u
                 ? (0, n.jsx)("div", {
                       className: ex.Fx,
-                      children: (0, n.jsx)(er.K, {
-                          icon: ec.P,
-                          "aria-label": k.intl.string(k.t.cpT0Cq),
+                      children: (0, n.jsx)(ei.K, {
+                          icon: er.P,
+                          "aria-label": G.intl.string(G.t.cpT0Cq),
                           variant: "icon-only",
                           size: "sm",
                           onClick: u,
@@ -407,28 +407,28 @@ function eO(e) {
                     null != l && (0, n.jsx)("img", { alt: a, src: l, className: ex.db }),
                     (0, n.jsxs)("div", {
                         children: [
-                            (0, n.jsx)(y.E, {
+                            (0, n.jsx)(N.E, {
                                 variant: "text-md/bold",
                                 color: "text-default",
                                 className: ex.L8,
                                 children: t,
                             }),
                             null != s &&
-                                (0, n.jsx)(y.E, { variant: "text-xs/medium", color: "text-default", children: s }),
+                                (0, n.jsx)(N.E, { variant: "text-xs/medium", color: "text-default", children: s }),
                         ],
                     }),
                 ],
             }),
-            (0, n.jsx)(R.$, { text: r, size: "sm", icon: c, onClick: h, variant: o, fullWidth: !0 }),
+            (0, n.jsx)(T.$, { text: r, size: "sm", icon: c, onClick: h, variant: o, fullWidth: !0 }),
         ],
     });
 }
 function ev(e, t) {
     let { ctaClickHandler: l, dismissibleContent: n, ctaObject: s } = t,
         { analyticsPage: i = d.A.ORB_WALLET, forceVisible: r, onClose: c, onCloseWallet: o } = e,
-        [h, u] = (0, eo.kn)([n], ep.m.ORB_WALLET, !0),
+        [h, u] = (0, ec.kn)([n], ep.m.ORB_WALLET, !0),
         m = a.useCallback(() => {
-            ((0, p.Y)({ pageType: i, sectionType: d.A.ORB_WALLET_PRIMARY_CARD, ctaObject: s }),
+            ((0, L.Y)({ pageType: i, sectionType: d.A.ORB_WALLET_PRIMARY_CARD, ctaObject: s }),
                 l(),
                 r || u(ep.i.TAKE_ACTION),
                 o());
@@ -438,7 +438,7 @@ function ev(e, t) {
         }, [r, u, c]);
     return { onCtaClick: m, shouldHideCard: null == h && !r, onClose: C };
 }
-function eT(e) {
+function eb(e) {
     let { onClose: t, onCloseWallet: s, analyticsPage: i = d.A.ORB_WALLET, forceVisible: r = !1 } = e,
         { analyticsLocations: c } = (0, m.Ay)(d.A.ORB_WALLET_PRIMARY_CARD),
         {
@@ -451,24 +451,24 @@ function eT(e) {
                 ctaClickHandler: a.useCallback(() => {
                     eg({ analyticsLocations: c });
                 }, [c]),
-                dismissibleContent: ei.M.ORB_WALLET_SHOP_CTA_CARD,
+                dismissibleContent: es.M.ORB_WALLET_SHOP_CTA_CARD,
                 ctaObject: d.A.ORB_WALLET_SHOP_CTA,
             },
         );
     return o
         ? null
         : (0, n.jsx)(eO, {
-              title: k.intl.string(G.default.v8QrJf),
+              title: G.intl.string(W.default.v8QrJf),
               imageUrl: l(105644),
-              imageAlt: k.intl.string(G.default.qa1xyr),
-              subTextDescription: k.intl.string(G.default.HACucK),
-              buttonText: k.intl.string(G.default["7raRgL"]),
-              buttonIcon: { asset: U.U, type: "icon" },
+              imageAlt: G.intl.string(W.default.qa1xyr),
+              subTextDescription: G.intl.string(W.default.HACucK),
+              buttonText: G.intl.string(W.default["7raRgL"]),
+              buttonIcon: { asset: I.U, type: "icon" },
               onCtaClick: h,
               onClose: u,
           });
 }
-let eb = { asset: N.t, type: "icon" };
+let eT = { asset: S.t, type: "icon" };
 function eR(e) {
     let { onClose: t, onCloseWallet: s, analyticsPage: i = d.A.ORB_WALLET, forceVisible: r = !1 } = e,
         { analyticsLocations: c } = (0, m.Ay)(d.A.ORB_WALLET_PRIMARY_CARD),
@@ -482,23 +482,23 @@ function eR(e) {
                 ctaClickHandler: a.useCallback(() => {
                     ef({ analyticsLocations: c });
                 }, [c]),
-                dismissibleContent: ei.M.ORB_WALLET_NITRO_UPSELL_CTA_CARD,
+                dismissibleContent: es.M.ORB_WALLET_NITRO_UPSELL_CTA_CARD,
                 ctaObject: d.A.ORB_WALLET_PRIMARY_CARD_NITRO_UPSELL_CTA,
             },
         ),
         { nitroGatedOrbMultiplier: _ } = (0, o.cf)([b.Ay], () => ({
             nitroGatedOrbMultiplier: b.Ay.nitroGatedOrbMultiplier,
         })),
-        E = a.useMemo(() => k.intl.format(G.default["Ba/7wO"], { multiplier: _ }), [_]);
+        E = a.useMemo(() => G.intl.format(W.default["Ba/7wO"], { multiplier: _ }), [_]);
     return null == _ || h
         ? null
         : (0, n.jsx)(eO, {
-              title: k.intl.string(G.default.ZqCAos),
+              title: G.intl.string(W.default.ZqCAos),
               imageUrl: l(780361),
-              imageAlt: k.intl.string(G.default.FkfrRH),
+              imageAlt: G.intl.string(W.default.FkfrRH),
               subTextDescription: E,
-              buttonText: k.intl.string(G.default.U9UQJE),
-              buttonIcon: eb,
+              buttonText: G.intl.string(W.default.U9UQJE),
+              buttonIcon: eT,
               buttonVariant: "expressive",
               onCtaClick: u,
               onClose: C,
@@ -511,7 +511,7 @@ let eN = [
         achievementIdentifier: "challenge_1",
         title: "Challenge Task",
         description: "Challenge description",
-        achievementStatus: L.x.COMPLETED,
+        achievementStatus: f.x.COMPLETED,
         orbRewardAmount: 100,
         onDiscoveryClick: () => {
             console.log("Challenge 1 discovery clicked");
@@ -521,7 +521,7 @@ let eN = [
         achievementIdentifier: "challenge_2",
         title: "Challenge Task",
         description: "Challenge description",
-        achievementStatus: L.x.NONE,
+        achievementStatus: f.x.NONE,
         orbRewardAmount: 100,
         onDiscoveryClick: () => {
             console.log("Challenge 2 discovery clicked");
@@ -531,7 +531,7 @@ let eN = [
         achievementIdentifier: "challenge_3",
         title: "Challenge Task",
         description: "Challenge description",
-        achievementStatus: L.x.NONE,
+        achievementStatus: f.x.NONE,
         orbRewardAmount: 100,
     },
 ];
@@ -548,11 +548,11 @@ function eI(e) {
             orbBalance: a,
             analyticsPage: s,
             forceVisible: i = !1,
-            onCloseWallet: r = q.tEg,
+            onCloseWallet: r = K.tEg,
         } = e,
         c = ej(t, a);
     return "shop_orbs" === c
-        ? (0, n.jsx)(eT, { onClose: l, analyticsPage: s, forceVisible: i, onCloseWallet: r })
+        ? (0, n.jsx)(eb, { onClose: l, analyticsPage: s, forceVisible: i, onCloseWallet: r })
         : "nitro_upsell" === c
           ? (0, n.jsx)(eR, { onClose: l, analyticsPage: s, forceVisible: i, onCloseWallet: r })
           : null;
@@ -565,29 +565,29 @@ function eU(e) {
 }
 function eM(e) {
     let { userHasPremium: t, orbBalance: l, hasErrorMessage: a, isLoading: s, hasNoChallenges: i } = e;
-    return (0, n.jsx)(es, {
+    return (0, n.jsx)(ea, {
         orbBalance: l,
         headerTagsContent: t
-            ? (0, n.jsx)(J, { text: k.intl.format(G.default["04j3XV"], { orbAmount: 250, days: 16 }) })
+            ? (0, n.jsx)(Z, { text: G.intl.format(W.default["04j3XV"], { orbAmount: 250, days: 16 }) })
             : null,
         renderPrimaryCard: (e) => {
             let { onClose: n } = e;
             return eI({ userHasPremium: t, onClose: n, orbBalance: l, forceVisible: !0 });
         },
-        orbChallengesCard: (0, n.jsx)(en, {
+        orbChallengesCard: (0, n.jsx)(el, {
             isLoading: s,
             inlineNoticeProps: a
                 ? {
                       type: "warning",
-                      message: k.intl.format(G.default.ggLzeg, { underlineHook: (e) => (0, n.jsx)(eU, { text: e }) }),
+                      message: G.intl.format(W.default.ggLzeg, { underlineHook: (e) => (0, n.jsx)(eU, { text: e }) }),
                   }
                 : null,
-            title: k.intl.string(G.default.H6Ny8N),
-            badgeText: k.intl.format(t ? G.default.OHLdjq : G.default.WOMrJf, { multiplier: 1.2 }),
+            title: G.intl.string(W.default.H6Ny8N),
+            badgeText: G.intl.format(t ? W.default.OHLdjq : W.default.WOMrJf, { multiplier: 1.2 }),
             challenges: i ? [] : eN,
             onClaim: ey,
         }),
-        orbWalletFooter: (0, n.jsx)(ea, {
+        orbWalletFooter: (0, n.jsx)(en, {
             onQuestsClick: () => eA(),
             onShopClick: () => eg({ analyticsLocations: [] }),
         }),
@@ -597,49 +597,54 @@ function eB(e) {
     return (0, n.jsx)(eM, { ...e, hasNoChallenges: !0 });
 }
 function eF() {
-    let { passesGeneralUIInvariant: e, programReward: t } = (0, g.F)({ location: "OrbWallet" });
+    let { passesGeneralUIInvariant: e, programReward: t } = (0, E.F)({ location: "OrbWallet" });
     if (!e || null == t) return null;
     let l = Math.max(1, (0, r.default)(new Date(t.next_reward_date), new Date()));
-    return (0, n.jsx)(J, { text: k.intl.format(G.default["04j3XV"], { orbAmount: t.reward_amount, days: l }) });
+    return (0, n.jsx)(Z, { text: G.intl.format(W.default["04j3XV"], { orbAmount: t.reward_amount, days: l }) });
 }
 function eD() {
-    return null != (0, o.bG)([A.A], () => A.A.getPremiumTypeSubscription()) ? (0, n.jsx)(eF, {}) : null;
+    return null != (0, o.bG)([g.A], () => g.A.getPremiumTypeSubscription()) ? (0, n.jsx)(eF, {}) : null;
 }
 function eH(e) {
-    let { analyticsPage: t = d.A.ORB_WALLET, analyticsLocations: l = [], onCloseWallet: s = q.tEg } = e,
-        { challengesForOrbWallet: i, hasFetchedChallenges: r, refetch: c } = (0, v.z)({ shouldFetch: !0 }),
+    let { analyticsPage: t = d.A.ORB_WALLET, analyticsLocations: l = [], onCloseWallet: s = K.tEg } = e,
+        { challengesForOrbWallet: i, hasFetchedChallenges: r, refetch: c } = (0, O.z)({ shouldFetch: !0 }),
         h = (0, C.L)(eE.PremiumTypes.TIER_2),
         { nitroGatedOrbMultiplier: u, orbChallengesDisplayError: m } = (0, o.cf)([b.Ay], () => ({
             nitroGatedOrbMultiplier: b.Ay.nitroGatedOrbMultiplier,
             orbChallengesDisplayError: b.Ay.orbChallengesDisplayError,
         })),
-        E = a.useMemo(
+        _ = a.useMemo(
             () =>
                 null != m
                     ? {
                           type: "warning",
                           message:
                               m.errorType === b.EB.CLAIM_CHALLENGE
-                                  ? k.intl.string(G.default.FYb5rH)
-                                  : k.intl.format(G.default.ggLzeg, {
+                                  ? G.intl.string(W.default.FYb5rH)
+                                  : G.intl.format(W.default.ggLzeg, {
                                         underlineHook: (e) => (0, n.jsx)(eU, { text: e, onClick: c }),
                                     }),
                       }
                     : null,
             [m, c],
         ),
-        g = a.useCallback(
+        E = a.useCallback(
             () => (
-                (0, p.Y)({ pageType: t, sectionType: d.A.ORB_WALLET, ctaObject: d.A.ORB_WALLET_NITRO_BADGE_CLICK }),
+                (0, L.Y)({ pageType: t, sectionType: d.A.ORB_WALLET, ctaObject: d.A.ORB_WALLET_NITRO_BADGE_CLICK }),
                 s(),
                 (function (e) {
-                    let { nitroGatedOrbMultiplier: t, questOrbMultiplierEligibilityType: l } = e;
-                    null == t ? (0, em.x)() : (0, eC.gC)(t, l);
-                })({ nitroGatedOrbMultiplier: u, questOrbMultiplierEligibilityType: h ? _.MA.NITRO : _.MA.UPSELL })
+                    let { nitroGatedOrbMultiplier: t, userIsPremiumTier2: l } = e;
+                    if (null == t) return void (0, ed.x)();
+                    let n = l ? em.MA.NITRO : em.MA.UPSELL,
+                        a = l
+                            ? { customSubtitle: G.intl.format(W.default["wE4a/r"], { bonusOrbMultiplier: t }) }
+                            : void 0;
+                    (0, eC.gC)(t, n, a);
+                })({ nitroGatedOrbMultiplier: u, userIsPremiumTier2: h })
             ),
             [u, h, t, s],
         ),
-        A = a.useMemo(
+        g = a.useMemo(
             () =>
                 i.map((e) => {
                     let n = null != e.achievementDefinitionId ? eL[e.achievementDefinitionId] : null,
@@ -647,7 +652,7 @@ function eH(e) {
                         i =
                             null != n
                                 ? () => {
-                                      ((0, p.Y)({
+                                      ((0, L.Y)({
                                           pageType: t,
                                           sectionType: d.A.ORB_WALLET,
                                           ctaObject: d.A.ORB_CHALLENGE_DISCOVERY_CLICK,
@@ -660,36 +665,36 @@ function eH(e) {
                 }),
             [i, l, t, s],
         );
-    return (0, n.jsx)(en, {
-        title: k.intl.string(G.default.H6Ny8N),
+    return (0, n.jsx)(el, {
+        title: G.intl.string(W.default.H6Ny8N),
         isLoading: !r,
-        inlineNoticeProps: E,
-        challenges: A,
-        onClaim: T.Xz,
-        onClickBadge: g,
-        badgeText: k.intl.format(h ? G.default.OHLdjq : G.default.WOMrJf, { multiplier: u }),
+        inlineNoticeProps: _,
+        challenges: g,
+        onClaim: v.Xz,
+        onClickBadge: E,
+        badgeText: G.intl.format(h ? W.default.OHLdjq : W.default.WOMrJf, { multiplier: u }),
     });
 }
 function eP(e) {
-    let { cardRef: t, analyticsPage: l = d.A.ORB_WALLET, onCloseWallet: s = q.tEg, isProfilePopout: i } = e,
-        { balance: r } = (0, O.W)(),
-        h = (0, x.H)({ location: "StatefulOrbWallet" }),
+    let { cardRef: t, analyticsPage: l = d.A.ORB_WALLET, onCloseWallet: s = K.tEg, isProfilePopout: i } = e,
+        { balance: r } = (0, x.W)(),
+        h = (0, p.H)({ location: "StatefulOrbWallet" }),
         u = (0, C.L)(eE.PremiumTypes.TIER_2),
-        { analyticsLocations: _ } = (0, m.Ay)(d.A.ORB_WALLET);
+        { analyticsLocations: E } = (0, m.Ay)(d.A.ORB_WALLET);
     a.useEffect(() => {
-        h && (0, T.eX)();
+        h && (0, v.eX)();
     }, [h]);
     let g = a.useCallback(() => {
-            ((0, p.Y)({ pageType: l, sectionType: d.A.ORB_WALLET_FOOTER, ctaObject: d.A.ORB_WALLET_SHOP_CTA }),
-                eg({ analyticsLocations: _ }),
+            ((0, L.Y)({ pageType: l, sectionType: d.A.ORB_WALLET_FOOTER, ctaObject: d.A.ORB_WALLET_SHOP_CTA }),
+                eg({ analyticsLocations: E }),
                 s());
-        }, [_, l, s]),
-        A = a.useCallback(() => {
-            ((0, p.Y)({ pageType: l, sectionType: d.A.ORB_WALLET_FOOTER, ctaObject: d.A.ORB_WALLET_QUEST_HOME_CTA }),
+        }, [E, l, s]),
+        O = a.useCallback(() => {
+            ((0, L.Y)({ pageType: l, sectionType: d.A.ORB_WALLET_FOOTER, ctaObject: d.A.ORB_WALLET_QUEST_HOME_CTA }),
                 eA(),
                 s());
         }, [l, s]),
-        v = a.useMemo(() => ej(u, r), [u, r]),
+        T = a.useMemo(() => ej(u, r), [u, r]),
         { challengesForOrbWallet: R, hasFetchedChallenges: S } = (0, o.cf)([b.Ay], () => ({
             challengesForOrbWallet: b.Ay.challengesForOrbWallet,
             hasFetchedChallenges: b.Ay.hasFetchedChallenges,
@@ -698,28 +703,28 @@ function eP(e) {
     a.useEffect(() => {
         if (!S || N.current) return;
         let e = R.map((e) => e.achievementIdentifier),
-            t = R.filter((e) => e.achievementStatus === L.x.COMPLETED).map((e) => e.achievementIdentifier);
-        (f.default.track(q.HAw.ORB_WALLET_VIEWED, {
-            location_stack: _,
+            t = R.filter((e) => e.achievementStatus === f.x.COMPLETED).map((e) => e.achievementIdentifier);
+        (A.default.track(K.HAw.ORB_WALLET_VIEWED, {
+            location_stack: E,
             location_page: l,
             location_section: d.A.ORB_WALLET,
             location_object: d.A.ORB_WALLET,
-            wallet_primary_card_type: v,
+            wallet_primary_card_type: T,
             wallet_visible_achievements: e,
             wallet_visible_completed_achievements: t,
         }),
             (N.current = !0));
-    }, [S, R, v, _, l]);
+    }, [S, R, T, E, l]);
     let { pathname: y } = (0, c.zy)(),
-        j = y.startsWith(q.BVt.COLLECTIBLES_SHOP),
-        I = (0, E.p)(),
+        j = y.startsWith(K.BVt.COLLECTIBLES_SHOP),
+        I = (0, _.p)(),
         U = a.useMemo(
             () =>
-                i ? { onQuestsClick: A, onShopClick: g } : { onQuestsClick: I ? null : A, onShopClick: j ? null : g },
-            [I, j, A, g, i],
+                i ? { onQuestsClick: O, onShopClick: g } : { onQuestsClick: I ? null : O, onShopClick: j ? null : g },
+            [I, j, O, g, i],
         );
     return h
-        ? (0, n.jsx)(es, {
+        ? (0, n.jsx)(ea, {
               cardRef: t,
               orbBalance: r,
               headerTagsContent: (0, n.jsx)(eD, {}),
@@ -727,8 +732,8 @@ function eP(e) {
                   let { onClose: t } = e;
                   return eI({ userHasPremium: u, onClose: t, orbBalance: r, analyticsPage: l, onCloseWallet: s });
               },
-              orbChallengesCard: (0, n.jsx)(eH, { analyticsPage: l, analyticsLocations: _, onCloseWallet: s }),
-              orbWalletFooter: (0, n.jsx)(ea, { ...U }),
+              orbChallengesCard: (0, n.jsx)(eH, { analyticsPage: l, analyticsLocations: E, onCloseWallet: s }),
+              orbWalletFooter: (0, n.jsx)(en, { ...U }),
           })
         : null;
 }

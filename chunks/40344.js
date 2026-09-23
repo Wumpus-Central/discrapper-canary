@@ -231,7 +231,7 @@ let es = function (e) {
                     et,
                     {
                         style: d,
-                        onSelect: l,
+                        onSelect: () => l(),
                         children: [
                             (0, r.jsx)(U.U, {
                                 size: "custom",

@@ -212,7 +212,7 @@ let en = function (e) {
                         ee,
                         {
                             style: c,
-                            onSelect: a,
+                            onSelect: () => a(),
                             children: [
                                 (0, s.jsx)(G.U, {
                                     size: "custom",

@@ -203,7 +203,7 @@ let et = function (e) {
                         Q,
                         {
                             style: o,
-                            onSelect: a,
+                            onSelect: () => a(),
                             children: [
                                 (0, s.jsx)(D.U, {
                                     size: "custom",

@@ -163,7 +163,7 @@ let Z = function (e) {
                                     }),
                                     (0, l.jsxs)(H.D, {
                                         className: Q.H5,
-                                        onClick: a,
+                                        onClick: () => a(),
                                         children: [
                                             (0, l.jsx)(O.U, { size: "md", color: "currentColor" }),
                                             (0, l.jsx)(L.E, {
