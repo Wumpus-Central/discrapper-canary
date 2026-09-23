@@ -1,1 +1,1 @@
-e.exports = { I: "pill__45408" };
+e.exports = { I: "pill__45408", q: "indicator__45408" };

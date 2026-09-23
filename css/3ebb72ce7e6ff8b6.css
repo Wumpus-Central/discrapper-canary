@@ -9,6 +9,12 @@
     padding: 2px var(--space-8)
 }
 
+.indicator__45408 {
+    flex: 0 0 var(--space-8);
+    height: var(--space-8);
+    width: var(--space-8)
+}
+
 .wrapper_e7c354 {
     align-items: center;
     display: flex;
@@ -114,4 +120,4 @@
     }
 }
 
-/*# sourceMappingURL=2e2e4b157afb3ac5.css.map*/
+/*# sourceMappingURL=3ebb72ce7e6ff8b6.css.map*/

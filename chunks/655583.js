@@ -1,4 +1,4 @@
-r.d(t, { A: () => T });
+r.d(t, { A: () => P });
 var n = r(477900),
     l = r(503698),
     s = r.n(l),
@@ -15,34 +15,42 @@ var n = r(477900),
     E = r(288106);
 r(582128);
 var _ = r(727142);
-let S = function (e) {
-    let { text: t, icon: r } = e;
+let x = function (e) {
+    let { text: t, icon: r, indicatorColor: l } = e;
     return (0, n.jsxs)("span", {
         className: _.I,
         children: [
+            null != l &&
+                (0, n.jsx)("svg", {
+                    className: _.q,
+                    viewBox: "0 0 8 8",
+                    "aria-hidden": !0,
+                    children: (0, n.jsx)("circle", { cx: "4", cy: "4", r: "3.5", fill: l }),
+                }),
             null != r && (0, n.jsx)(r, { size: "xxs", color: "currentColor" }),
             (0, n.jsx)(o.E, { variant: "text-xs/medium", color: "none", children: t }),
         ],
     });
 };
-var x = r(435558),
-    I = r(775602),
-    v = r(577568);
+var S = r(435558),
+    v = r(775602),
+    I = r(577568);
 let L = 2 * Math.PI * 57,
-    A = function (e) {
-        let { current: t, target: r, progressColor: l = "var(--status-positive)", children: i } = e,
-            o = L * (1 - (r <= 0 ? 0.025 : (0, x.clamp)(t / r, 0.025, 1))),
-            u = (0, a.bG)([I.Ay], () => I.Ay.useReducedMotion);
+    A = "var(--status-positive)",
+    C = function (e) {
+        let { current: t, target: r, progressColor: l = A, children: i } = e,
+            o = L * (1 - (r <= 0 ? 0.025 : (0, S.clamp)(t / r, 0.025, 1))),
+            u = (0, a.bG)([v.Ay], () => v.Ay.useReducedMotion);
         return (0, n.jsxs)("div", {
-            className: v.iE,
+            className: I.iE,
             children: [
                 i,
                 (0, n.jsxs)("svg", {
-                    className: v.hN,
+                    className: I.hN,
                     viewBox: "0 0 120 120",
                     children: [
                         (0, n.jsx)("circle", {
-                            className: v.u4,
+                            className: I.u4,
                             cx: 60,
                             cy: 60,
                             r: 57,
@@ -50,7 +58,7 @@ let L = 2 * Math.PI * 57,
                             stroke: "var(--background-mod-strong)",
                         }),
                         (0, n.jsx)("circle", {
-                            className: s()(v.M0, { [v.Vr]: !u }),
+                            className: s()(I.M0, { [I.Vr]: !u }),
                             cx: 60,
                             cy: 60,
                             r: 57,
@@ -64,25 +72,25 @@ let L = 2 * Math.PI * 57,
             ],
         });
     };
-var C = r(295986);
-let y = function (e) {
+var y = r(295986);
+let f = function (e) {
     let { assetPath: t, progress: r, progressText: l, progressColor: s } = e,
-        a = (0, n.jsx)("img", { src: t, alt: "", className: C.C, width: 120, height: 120 });
+        a = (0, n.jsx)("img", { src: t, alt: "", className: y.C, width: 120, height: 120 });
     return null == r
         ? a
         : (0, n.jsx)("div", {
-              className: C.U,
+              className: y.U,
               role: "progressbar",
               "aria-valuenow": r.current,
               "aria-valuemin": 0,
               "aria-valuemax": r.target,
               "aria-valuetext": l ?? void 0,
-              children: (0, n.jsx)(A, { current: r.current, target: r.target, progressColor: s, children: a }),
+              children: (0, n.jsx)(C, { current: r.current, target: r.target, progressColor: s, children: a }),
           });
 };
-var f = r(119739);
-let O = { [d.RB.LIGHT]: "theme-light", [d.RB.DARK]: "theme-dark" };
-function k(e) {
+var O = r(119739);
+let k = { [d.RB.LIGHT]: "theme-light", [d.RB.DARK]: "theme-dark" };
+function j(e) {
     let {
             assetPath: t,
             progress: r,
@@ -99,22 +107,22 @@ function k(e) {
         align: "center",
         className: g,
         children: [
-            (0, n.jsx)(y, { assetPath: t, progress: r, progressText: a, progressColor: l }),
+            (0, n.jsx)(f, { assetPath: t, progress: r, progressText: a, progressColor: l }),
             (0, n.jsxs)(i.B, {
                 direction: "vertical",
                 gap: 4,
                 align: "start",
-                className: f._,
+                className: O._,
                 children: [
                     null != p &&
                         (0, n.jsx)(o.E, { variant: "text-md/bold", color: "text-strong", children: (0, c.U)(p) }),
-                    null != d && (0, n.jsx)(S, { icon: u.ClockIcon, text: d }),
+                    null != d && (0, n.jsx)(x, { icon: u.ClockIcon, text: d }),
                 ],
             }),
         ],
     });
 }
-function j(e) {
+function T(e) {
     let {
         assetPath: t,
         progress: r,
@@ -131,15 +139,15 @@ function j(e) {
         gap: 16,
         padding: 24,
         align: "center",
-        className: s()(f.N, h),
+        className: s()(O.N, h),
         style: { backgroundImage: `url(${a})` },
         children: [
-            (0, n.jsx)(y, { assetPath: t, progress: r, progressText: p, progressColor: l }),
+            (0, n.jsx)(f, { assetPath: t, progress: r, progressText: p, progressColor: l }),
             (0, n.jsxs)(i.B, {
                 direction: "vertical",
                 gap: 8,
                 align: "start",
-                className: f._,
+                className: O._,
                 children: [
                     (0, n.jsx)(o.E, { variant: "text-md/bold", color: "text-strong", children: (0, c.U)(d) }),
                     null != g &&
@@ -150,8 +158,8 @@ function j(e) {
                         align: "center",
                         wrap: !0,
                         children: [
-                            null != p && (0, n.jsx)(S, { text: p }),
-                            null != m && (0, n.jsx)(S, { icon: u.ClockIcon, text: m }),
+                            null != p && (0, n.jsx)(x, { text: p, indicatorColor: l ?? A }),
+                            null != m && (0, n.jsx)(x, { icon: u.ClockIcon, text: m }),
                         ],
                     }),
                 ],
@@ -159,7 +167,7 @@ function j(e) {
         ],
     });
 }
-let T = function (e) {
+let P = function (e) {
     let { variant: t, collectionId: r } = e,
         l = (0, m.S)(),
         s = (0, a.bG)([p.default], () => p.default.locale),
@@ -183,10 +191,10 @@ let T = function (e) {
         { progress: _ } = l;
     if (null == d || (d.showProgressRing && null == _)) return null;
     let {
-            title: S,
-            description: x,
-            progressText: I,
-            timeLeftText: v,
+            title: x,
+            description: S,
+            progressText: v,
+            timeLeftText: I,
         } = (0, h.MZ)({
             promotion: l,
             progressIndicator: o.progressIndicator,
@@ -199,11 +207,11 @@ let T = function (e) {
             progress: d.showProgressRing ? _ : null,
             progressColor: c?.progressColor,
             backgroundUrl: u.backgroundUrl,
-            title: S,
-            description: x,
-            progressText: I,
-            timeLeftText: v,
-            contentThemeClassName: c?.contentTheme != null ? O[c.contentTheme] : void 0,
+            title: x,
+            description: S,
+            progressText: v,
+            timeLeftText: I,
+            contentThemeClassName: c?.contentTheme != null ? k[c.contentTheme] : void 0,
         };
-    return "condensed" === t ? (0, n.jsx)(k, { ...L }) : (0, n.jsx)(j, { ...L });
+    return "condensed" === t ? (0, n.jsx)(j, { ...L }) : (0, n.jsx)(T, { ...L });
 };
