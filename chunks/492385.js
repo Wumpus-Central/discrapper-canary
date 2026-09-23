@@ -206,7 +206,7 @@ let e3 = s.memo(function (e) {
                         children: (0, i.jsxs)("div", {
                             className: e1.fx,
                             children: [
-                                (0, i.jsx)(e5, {
+                                (0, i.jsx)(e8, {
                                     channel: c,
                                     firstMessage: f,
                                     content: x,
@@ -226,7 +226,7 @@ let e3 = s.memo(function (e) {
         ],
     });
 });
-function e5(e) {
+function e8(e) {
     let { channel: t, firstMessage: n, content: l, hasMediaAttachment: s, originalAuthor: a } = e,
         { hasUnreads: o } = (0, eA.X5)(t);
     return (0, i.jsxs)("div", {
@@ -235,7 +235,7 @@ function e5(e) {
             (0, i.jsx)(ey.Ay, { channel: t }),
             (0, i.jsx)("div", {
                 className: (e2.iU, e1.iU),
-                children: (0, i.jsx)(e8, {
+                children: (0, i.jsx)(e5, {
                     channel: t,
                     message: n,
                     content: l,
@@ -247,7 +247,7 @@ function e5(e) {
         ],
     });
 }
-let e8 = s.memo(function (e) {
+let e5 = s.memo(function (e) {
     let { message: t, channel: n, content: l, hasMediaAttachment: s, hasUnreads: a, originalAuthor: o } = e,
         c = (0, g.bG)([eb.A], () => eb.A.isLoading(n.id)),
         d = (0, g.bG)([eV.A], () => eV.A.can(eJ.xBc.MANAGE_MESSAGES, n)),
@@ -321,8 +321,8 @@ function e7(e) {
             (0, i.jsxs)("div", {
                 className: e1.PQ,
                 children: [
-                    o || null == l ? null : (0, i.jsx)(e9, { firstMessage: l, channel: t }),
-                    (0, i.jsx)(e6, { channel: t, iconSize: 14 }),
+                    o || null == l ? null : (0, i.jsx)(e6, { firstMessage: l, channel: t }),
+                    (0, i.jsx)(e9, { channel: t, iconSize: 14 }),
                     (0, i.jsx)("span", { className: e2.xE, children: "\u2022" }),
                     r.length > 0
                         ? (0, i.jsxs)("div", {
@@ -342,7 +342,7 @@ function e7(e) {
         ],
     });
 }
-function e6(e) {
+function e9(e) {
     let { channel: t, iconSize: n, showReadState: l = !1 } = e,
         { messageCountText: s, unreadCount: a } = (0, eA.k6)(t);
     return (0, i.jsxs)("div", {
@@ -366,7 +366,7 @@ function e6(e) {
         ],
     });
 }
-function e9(e) {
+function e6(e) {
     let { firstMessage: t, channel: n } = e,
         l = (0, g.bG)([eH.A], () => eH.A.getChannel(n.parent_id)),
         s = (0, eA.Ck)(l),
@@ -525,7 +525,7 @@ let tA = function (e) {
 };
 var tC = n(853742);
 n(321073);
-var tN = n(498516),
+var tN = n(202091),
     tb = n(136722),
     tE = n(192308),
     tS = n(866323),
@@ -547,7 +547,7 @@ var tN = n(498516),
     tU = n(688810),
     tH = n(359800),
     tB = n(206828),
-    tV = n(670064),
+    tV = n(490094),
     tW = n(296853),
     t$ = n(922396);
 function tq(e) {
@@ -651,10 +651,10 @@ var tX = n(462887),
     t2 = n(29385),
     t4 = n(468689),
     t3 = n(71393),
-    t5 = n(975571);
-let t8 = { mass: 1, tension: 250, friction: 18, clamp: !0 };
+    t8 = n(975571);
+let t5 = { mass: 1, tension: 250, friction: 18, clamp: !0 };
 var t7 = n(340990);
-function t6(e) {
+function t9(e) {
     let { handleHide: t } = e;
     return (0, i.jsx)(E.D, {
         onClick: t,
@@ -663,7 +663,7 @@ function t6(e) {
         children: (0, i.jsx)(ty.P, { size: "md", color: "currentColor", className: t7.ut }),
     });
 }
-function t9(e) {
+function t6(e) {
     let { username: t, title: n, videoSrc: l, messageCount: s, reaction: a, reactionCount: o, classname: c } = e;
     return (0, i.jsxs)("div", {
         className: r()(t7.IP, c),
@@ -741,7 +741,7 @@ let ne = (e) => {
             return {
                 transitions: (0, tS.p)(e, {
                     keys: (e) => (e ? "shown" : "hidden"),
-                    config: t8,
+                    config: t5,
                     from: { opacity: 0 },
                     enter: { opacity: 1 },
                     leave: { opacity: 0 },
@@ -808,7 +808,7 @@ let ne = (e) => {
                                           e0.intl.string(e0.t.znhX2R),
                                       ],
                                   }),
-                                  (0, i.jsx)(t6, { handleHide: m }),
+                                  (0, i.jsx)(t9, { handleHide: m }),
                               ],
                           }),
                           (0, i.jsxs)("div", {
@@ -822,7 +822,7 @@ let ne = (e) => {
                                               children: (0, i.jsxs)("div", {
                                                   className: t7.IZ,
                                                   children: [
-                                                      (0, i.jsx)(t9, {
+                                                      (0, i.jsx)(t6, {
                                                           username: e0.intl.string(e0.t.AkORco),
                                                           videoSrc:
                                                               "https://cdn.discordapp.com/assets/media_channel/admin_edu_discord_birthday.mp4",
@@ -832,7 +832,7 @@ let ne = (e) => {
                                                           reactionCount: "724",
                                                           classname: t7.q6,
                                                       }),
-                                                      (0, i.jsx)(t9, {
+                                                      (0, i.jsx)(t6, {
                                                           username: e0.intl.string(e0.t.DPg3YM),
                                                           videoSrc:
                                                               "https://cdn.discordapp.com/assets/media_channel/admin_edu_wumpus_onboarding.mp4",
@@ -842,7 +842,7 @@ let ne = (e) => {
                                                           reaction: "\uD83D\uDC9E",
                                                           classname: t7.q6,
                                                       }),
-                                                      (0, i.jsx)(t9, {
+                                                      (0, i.jsx)(t6, {
                                                           username: e0.intl.string(e0.t.KIelex),
                                                           videoSrc:
                                                               "https://cdn.discordapp.com/assets/media_channel/admin_edu_scientist_wumpus.mp4",
@@ -872,7 +872,7 @@ let ne = (e) => {
                                                   (0, i.jsx)(tG.h, { size: 16 }),
                                                   (0, i.jsxs)(E.D, {
                                                       onClick: () =>
-                                                          open(t5.A.getCreatorSupportArticleURL(eJ.MVz.MEDIA_CHANNEL)),
+                                                          open(t8.A.getCreatorSupportArticleURL(eJ.MVz.MEDIA_CHANNEL)),
                                                       className: t7.zy,
                                                       children: [
                                                           (0, i.jsx)(b.E, {
@@ -997,7 +997,7 @@ var nt = n(331322),
     nl = n(517461),
     ni = n(350527),
     ns = n(95035),
-    na = n(256416),
+    na = n(39470),
     nr = n(587240),
     no = n(253898);
 let nc = { mass: 1, tension: 250, friction: 18, clamp: !0 };
@@ -1103,7 +1103,7 @@ function nd(e) {
                                             children: e0.intl.format(na.default["/g+PvX"], {
                                                 termsOfService: eJ.X7G.TERMS,
                                                 communityGuidelines: eJ.X7G.GUIDELINES,
-                                                helpArticle: t5.A.getArticleURL(eJ.MVz.FLAG_TO_MOD),
+                                                helpArticle: t8.A.getArticleURL(eJ.MVz.FLAG_TO_MOD),
                                             }),
                                         }),
                                     }),
@@ -2050,11 +2050,11 @@ var nX = n(621466),
     n2 = n(952270),
     n4 = n(39623),
     n3 = n(278416),
-    n5 = n(465532),
-    n8 = n(608299),
+    n8 = n(465532),
+    n5 = n(608299),
     n7 = n(355622),
-    n6 = n(530134),
-    n9 = n(959070),
+    n9 = n(530134),
+    n6 = n(959070),
     le = n(625928),
     lt = n(960850),
     ln = n(702841),
@@ -2530,7 +2530,7 @@ function lV(e) {
         }, [o]),
         h = s.useCallback(
             (e) => {
-                (null != c && n8.A.remove(t.id, c.id, n7.oU.CREATE_FORUM_POST.drafts.type),
+                (null != c && n5.A.remove(t.id, c.id, n7.oU.CREATE_FORUM_POST.drafts.type),
                     (0, ld.R)(e.currentTarget.files, t, n7.oU.CREATE_FORUM_POST.drafts.type, {
                         requireConfirm: !0,
                         isThumbnail: !0,
@@ -2553,7 +2553,7 @@ function lV(e) {
                             upload: e,
                             onSubmit: (n) => {
                                 let { name: l, description: i, spoiler: s } = n;
-                                n8.A.update(t.id, e.id, n7.oU.CREATE_FORUM_POST.drafts.type, {
+                                n5.A.update(t.id, e.id, n7.oU.CREATE_FORUM_POST.drafts.type, {
                                     filename: l,
                                     description: i,
                                     spoiler: s,
@@ -2625,7 +2625,7 @@ function lV(e) {
                               (0, i.jsx)(lS.A, {
                                   className: lz.XI,
                                   tooltip: e0.intl.string(e0.t.vN7REz),
-                                  onClick: () => n8.A.remove(t.id, c.id, n7.oU.CREATE_FORUM_POST.drafts.type),
+                                  onClick: () => n5.A.remove(t.id, c.id, n7.oU.CREATE_FORUM_POST.drafts.type),
                                   dangerous: !0,
                                   children: (0, i.jsx)(lE.TrashIcon, { size: "md", color: "currentColor" }),
                               }),
@@ -2667,11 +2667,11 @@ function l3(e, t) {
         ? null
         : (e.message ?? null);
 }
-var l5 = n(774812),
-    l8 = n(691060),
+var l8 = n(774812),
+    l5 = n(691060),
     l7 = n(91871),
-    l6 = n.n(l7),
-    l9 = n(190199),
+    l9 = n.n(l7),
+    l6 = n(190199),
     ie = n(914427),
     it = n(236285),
     il = n(287683);
@@ -2681,10 +2681,10 @@ function ii(e) {
         r = (0, g.bG)([it.Ay], () => (null != s ? it.Ay.getUsableCustomEmojiById(s) : null)),
         o = null != s || null != a;
     return (0, i.jsx)(
-        l9.x4,
+        l6.x4,
         {
             value: n,
-            children: (0, i.jsx)(l9.x4.Label, {
+            children: (0, i.jsx)(l6.x4.Label, {
                 children: (0, i.jsxs)("div", {
                     className: il.nM,
                     children: [
@@ -2710,7 +2710,7 @@ function ii(e) {
 }
 function is(e) {
     let { parentChannel: t, appliedTags: n, maxTagsApplied: l, onSelectTag: s, onClose: a } = e,
-        r = (0, l8.OT)(t);
+        r = (0, l5.OT)(t);
     return (0, i.jsx)(ie.p, {
         value: n,
         onChange: function (e) {
@@ -2719,7 +2719,7 @@ function is(e) {
         placeholder: e0.intl.string(e0.t.MbhGm7),
         "aria-label": e0.intl.string(e0.t.MbhGm7),
         children: (e) =>
-            r.filter((t) => l6()(e.toLowerCase(), t.name.toLowerCase())).map((e) => (0, i.jsx)(ii, { tag: e }, e.id)),
+            r.filter((t) => l9()(e.toLowerCase(), t.name.toLowerCase())).map((e) => (0, i.jsx)(ii, { tag: e }, e.id)),
     });
 }
 var ia = n(376310),
@@ -2849,7 +2849,7 @@ function ij(e) {
                             setFormOpenFromUserAction: x,
                             setGuidelinesOpen: g,
                         } = n.getState(),
-                        f = l5.A.hasSeen(e.id);
+                        f = l8.A.hasSeen(e.id);
                     if (!u)
                         return (
                             e.isGameInvitesChannel() ||
@@ -2883,7 +2883,7 @@ function ij(e) {
                             d(),
                             m(!1),
                             h(!1),
-                            l5.A.markAsSeen(e.id),
+                            l8.A.markAsSeen(e.id),
                             g(!1),
                             { shouldClear: !0, shouldRefocus: !1 }
                         );
@@ -2993,9 +2993,9 @@ let iv = s.memo(function (e) {
             h = (0, eA.Hv)(t),
             x = s.useCallback(() => {
                 (m.getState().resetFormState(),
-                    n5.A.clearDraft(t.id, td.C.ThreadSettings),
-                    n5.A.clearDraft(t.id, td.C.FirstThreadMessage),
-                    n8.A.clearAll(t.id, td.C.FirstThreadMessage),
+                    n8.A.clearDraft(t.id, td.C.ThreadSettings),
+                    n8.A.clearDraft(t.id, td.C.FirstThreadMessage),
+                    n5.A.clearAll(t.id, td.C.FirstThreadMessage),
                     m.getState().setFormOpen(!1),
                     m.getState().setBodyFocused(!1),
                     m.getState().setTitleFocused(!1),
@@ -3047,7 +3047,7 @@ let iv = s.memo(function (e) {
             }, d.x),
             f = (0, eS.ST)(),
             v = null != t.topic && 0 !== t.topic.length,
-            p = l5.A.hasSeen(t.id),
+            p = l8.A.hasSeen(t.id),
             A = (0, eA.Hv)(t),
             C = (0, g.bG)([e$.default], () => e$.default.getCurrentUser());
         (ee()(null != C, "current user cannot be null"),
@@ -3253,7 +3253,7 @@ let iC = s.memo(function (e) {
                         ? (0, i.jsx)(iC, { parentChannel: t, textValue: h.textValue })
                         : (0, i.jsx)("div", {
                               onClick: v,
-                              children: (0, i.jsx)(n9.Ay, {
+                              children: (0, i.jsx)(n6.Ay, {
                                   type: ig,
                                   setEditorRef: o,
                                   channel: t,
@@ -3387,7 +3387,7 @@ let iT = s.memo(function (e) {
                                 }),
                             ],
                         }),
-                        (0, i.jsx)(n6.A, { type: ig, className: ix.n1, onClick: f, channel: t }, "expression"),
+                        (0, i.jsx)(n9.A, { type: ig, className: ix.n1, onClick: f, channel: t }, "expression"),
                     ],
                 }),
                 h &&
@@ -3452,7 +3452,7 @@ function ik(e) {
         f = s.useRef(null),
         j = s.useRef(null),
         [v, p] = s.useState(!0),
-        A = (0, l8.OT)(t),
+        A = (0, l5.OT)(t),
         [C, N] = s.useState(0);
     return (s.useLayoutEffect(() => {
         let e = f.current,
@@ -3668,29 +3668,29 @@ function i3(e) {
         ],
     });
 }
-var i5 = n(983851),
-    i8 = n(607567),
+var i8 = n(983851),
+    i5 = n(607567),
     i7 = n(930371);
-function i6(e) {
+function i9(e) {
     let { channel: t } = e,
-        n = (0, g.bG)([i8.Ay], () => i8.Ay.getVoiceStatesForChannel(t).length, [t]);
+        n = (0, g.bG)([i5.Ay], () => i5.Ay.getVoiceStatesForChannel(t).length, [t]);
     return 0 === n
         ? null
         : (0, i.jsxs)("div", {
               className: i7.a,
               children: [
-                  (0, i.jsx)(i5.H, { size: "xs", color: eo.A.colors.ICON_FEEDBACK_POSITIVE }),
+                  (0, i.jsx)(i8.H, { size: "xs", color: eo.A.colors.ICON_FEEDBACK_POSITIVE }),
                   (0, i.jsx)(b.E, { variant: "text-sm/medium", color: "text-feedback-positive", children: n }),
               ],
           });
 }
-var i9 = n(227483);
+var i6 = n(227483);
 function se(e) {
     let { message: t, channel: n, containerWidth: l } = e,
         s = su({ message: t, channel: n, containerWidth: l - 32, hideTags: !0 }),
         { hasUnreads: a } = (0, eA.X5)(n),
         { content: r } = (0, eA.gk)({ firstMessage: t, formatInline: !1, noStyleAndInteraction: !0, hasUnreads: a });
-    return null != s ? s : (0, i.jsx)(iQ.Ay, { message: t, content: r, className: i9.BK, compact: !1 });
+    return null != s ? s : (0, i.jsx)(iQ.Ay, { message: t, content: r, className: i6.BK, compact: !1 });
 }
 function st(e) {
     let {
@@ -3726,26 +3726,26 @@ function st(e) {
         onClick: S,
         onFocus: _,
         onContextMenu: y,
-        className: r()(i9.kL, d, { [i9.nT]: x }),
+        className: r()(i6.kL, d, { [i6.nT]: x }),
         "aria-label": e0.intl.formatToPlainString(e0.t.pgYN6c, { title: A ?? "", count: C }),
         style: { ...a },
         ...k,
         children: [
             (0, i.jsxs)("div", {
-                className: i9.wx,
+                className: i6.wx,
                 children: [
-                    (0, i.jsx)(ei.eu, { src: R, size: es._3.SIZE_24, className: i9.my, "aria-label": M }),
+                    (0, i.jsx)(ei.eu, { src: R, size: es._3.SIZE_24, className: i6.my, "aria-label": M }),
                     (0, i.jsx)(b.E, {
                         variant: "text-md/semibold",
                         color: "text-strong",
-                        className: i9.fh,
+                        className: i6.fh,
                         children: M,
                     }),
-                    (0, i.jsx)(b.E, { variant: "text-xs/medium", color: "text-subtle", className: i9.vE, children: T }),
+                    (0, i.jsx)(b.E, { variant: "text-xs/medium", color: "text-subtle", className: i6.vE, children: T }),
                 ],
             }),
             (0, i.jsxs)(el.M, {
-                className: i9.rf,
+                className: i6.rf,
                 children: [
                     j &&
                         null == f &&
@@ -3755,17 +3755,17 @@ function st(e) {
                             children: e0.intl.string(e0.t.mE3KJN),
                         }),
                     null != f ? (0, i.jsx)(se, { message: f, channel: n, containerWidth: a.width }) : null,
-                    I ? (0, i.jsx)(ey.Ay, { channel: n, className: i9.GA }) : null,
-                    (0, i.jsx)("div", { className: i9.oO, children: (0, i.jsx)(i3, { channel: n, firstMessage: f }) }),
+                    I ? (0, i.jsx)(ey.Ay, { channel: n, className: i6.GA }) : null,
+                    (0, i.jsx)("div", { className: i6.oO, children: (0, i.jsx)(i3, { channel: n, firstMessage: f }) }),
                 ],
             }),
             (0, i.jsx)(el.M, {
-                className: i9.qr,
+                className: i6.qr,
                 children: (0, i.jsx)(sx, {
                     channel: n,
                     firstMessage: f,
                     facepileRef: N,
-                    leftAccessory: (0, i.jsx)(i6, { channel: n }),
+                    leftAccessory: (0, i.jsx)(i9, { channel: n }),
                 }),
             }),
         ],
@@ -4352,7 +4352,7 @@ function sI() {
 function s_(e) {
     let { channel: t, closePopout: n, setPopoutRef: l } = e,
         { enabled: a } = G.A.useConfig({ location: "forum-select-tags-popout" }),
-        r = (0, l8.OT)(t),
+        r = (0, l5.OT)(t),
         { tagFilter: o } = (0, ep.R)(t.id),
         c = (0, ep.p)(),
         d = (0, g.bG)([O.Ay], () => O.Ay.keyboardModeEnabled),

@@ -13,7 +13,7 @@ var i = n(503698),
     p = n(993408),
     C = n(818348),
     h = n(375708),
-    f = n(182732),
+    f = n(181666),
     E = n(967957);
 function S(e) {
     let {
@@ -25,7 +25,7 @@ function S(e) {
         variant: s = "text-md/semibold",
     } = e;
     return n === C.Yr.DISCORD_ORB
-        ? (0, l.jsx)(g, { orbAmount: t, className: r, discount: a, variant: s })
+        ? (0, l.jsx)(A, { orbAmount: t, className: r, discount: a, variant: s })
         : (0, l.jsx)(I, {
               priceAmount: t,
               priceCurrency: n,
@@ -101,7 +101,7 @@ function I(e) {
         ],
     });
 }
-function g(e) {
+function A(e) {
     let { orbAmount: t, className: n, discount: i = p.rr, variant: a = "text-md/semibold" } = e,
         s =
             i !== p.rr && i.discountPercentage >= p.es

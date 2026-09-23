@@ -53,7 +53,7 @@ var R = n(806163),
     J = n(75678),
     ee = n(202541),
     et = n(818348),
-    en = n(344045),
+    en = n(394107),
     es = n(375708),
     el = n(876564);
 function ea() {
@@ -441,8 +441,8 @@ function e2(e) {
         tooltip: es.intl.string(en.default["feUiM/"]),
     });
 }
-var e5 = n(652215),
-    e8 = n(628049),
+var e8 = n(652215),
+    e5 = n(628049),
     e6 = n(49999),
     e3 = n(684644);
 let e7 = [eP.M.STARTUP_FAILED, eP.M.MISSING_STOCK, eP.M.PROVIDER_ERRORED, eP.M.DELETED];
@@ -494,7 +494,7 @@ let tn = r.memo(function (e) {
                 month: "numeric",
                 day: "numeric",
             });
-            return t.status === e5.Dmq.CANCELED
+            return t.status === e8.Dmq.CANCELED
                 ? { text: es.intl.formatToPlainString(en.default["3aEgK6"], { date: n }), type: "cancellation" }
                 : null != t.renewalMutations
                   ? { text: es.intl.formatToPlainString(en.default.KFSA3M, { date: n }), type: "downgrade" }
@@ -562,7 +562,7 @@ let tn = r.memo(function (e) {
                 );
             })({ server: t, source: "game-server-shop" });
         }, [t]),
-        A = (0, eQ.A)(t.instance.providerType, t.instance.gameServerPanelUrl) ?? e8.qb[x],
+        A = (0, eQ.A)(t.instance.providerType, t.instance.gameServerPanelUrl) ?? e5.qb[x],
         b = null != t.instance.gameServerPanelUrl,
         I = null != t.instance.status && e7.includes(t.instance.status),
         N = r.useCallback(() => {
@@ -1258,7 +1258,7 @@ function tq(e) {
         d = (0, _.uM)(),
         u = r.useCallback(() => {
             var e;
-            (tA.default.track(e5.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+            (tA.default.track(e8.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                 collectibles_shop_session_id: d?.sessionId,
                 sku_id: t.skuId,
                 page_type: td.G2.CATALOG,
@@ -1271,7 +1271,7 @@ function tq(e) {
                 (e = t.skuId),
                 (t$ = e),
                 null != e && null != n && tW.set(e, n),
-                c.push(e5.BVt.COLLECTIBLES_SHOP_COLLECTION_DETAIL(t.skuId)));
+                c.push(e8.BVt.COLLECTIBLES_SHOP_COLLECTION_DETAIL(t.skuId)));
         }, [d?.pageIndex, d?.pageSection, d?.pageSize, d?.sessionId, t.name, t.skuId, n, c]);
     return (0, i.jsxs)("div", {
         className: tG.EF,
@@ -1294,7 +1294,7 @@ function tQ(e) {
             let { page: t, pageSize: n, includeUnpublished: s, noCache: l, enabled: a = !0 } = e,
                 i = r.useMemo(
                     () => ({
-                        applicationId: e5.FYj,
+                        applicationId: e8.FYj,
                         offset: (t - 1) * n,
                         limit: n,
                         useShopOrdering: !0,
@@ -1440,7 +1440,7 @@ var tX = n(177366),
     t1 = n(691885),
     t4 = n(146919),
     t2 = n(878278);
-let t5 = function () {
+let t8 = function () {
     let { sort: e, onSetSort: t, hasRelevanceFilters: n } = (0, T.v)(),
         s = (0, _.uM)(),
         l = (0, t4.yB)("CollectiblesSortSelect"),
@@ -1472,7 +1472,7 @@ let t5 = function () {
         m = r.useCallback(
             (e) => {
                 let n = d(u(e));
-                (tA.default.track(e5.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                (tA.default.track(e8.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                     collectibles_shop_session_id: s?.sessionId,
                     page_section: s?.pageSection,
                     page_category: s?.pageCategory,
@@ -1499,7 +1499,7 @@ let t5 = function () {
         }),
     });
 };
-var t8 =
+var t5 =
         (((l = {}).BLUE = "COLLECTIBLES_COLOR_BLUE"),
         (l.GREEN = "COLLECTIBLES_COLOR_GREEN"),
         (l.PINK = "COLLECTIBLES_COLOR_PINK"),
@@ -1560,7 +1560,7 @@ function nf() {
         h = (0, tN.HH)(),
         E = r.useCallback(
             (e) => {
-                tA.default.track(e5.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                tA.default.track(e8.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                     collectibles_shop_session_id: m?.sessionId,
                     page_section: m?.pageSection,
                     page_category: m?.pageCategory,
@@ -1655,21 +1655,21 @@ function np(e) {
     let { trackFilterAction: t } = e,
         n = r.useMemo(
             () => [
-                { color: "#9B59B6", label: es.intl.string(es.t.kqUD4P), enum: t8.PURPLE },
-                { color: "#3498DB", label: es.intl.string(es.t.qQTRae), enum: t8.BLUE },
-                { color: "#2ECC71", label: es.intl.string(es.t["f/Ylk6"]), enum: t8.GREEN },
-                { color: "#A0522D", label: es.intl.string(es.t["Sd/BMa"]), enum: t8.BROWN },
-                { color: "#F1C40F", label: es.intl.string(es.t["0fevYz"]), enum: t8.YELLOW },
+                { color: "#9B59B6", label: es.intl.string(es.t.kqUD4P), enum: t5.PURPLE },
+                { color: "#3498DB", label: es.intl.string(es.t.qQTRae), enum: t5.BLUE },
+                { color: "#2ECC71", label: es.intl.string(es.t["f/Ylk6"]), enum: t5.GREEN },
+                { color: "#A0522D", label: es.intl.string(es.t["Sd/BMa"]), enum: t5.BROWN },
+                { color: "#F1C40F", label: es.intl.string(es.t["0fevYz"]), enum: t5.YELLOW },
             ],
             [],
         ),
         s = r.useMemo(
             () => [
-                { color: "#E67E22", label: es.intl.string(es.t.ZE7weD), enum: t8.ORANGE },
-                { color: "#E74C3C", label: es.intl.string(es.t.hKJGOM), enum: t8.RED },
-                { color: "#EC407A", label: es.intl.string(es.t.HvLEGM), enum: t8.PINK },
-                { color: "#FFFFFF", label: es.intl.string(es.t["CB+lNO"]), enum: t8.WHITE },
-                { color: "#262626", label: es.intl.string(es.t["dMey+v"]), enum: t8.BLACK },
+                { color: "#E67E22", label: es.intl.string(es.t.ZE7weD), enum: t5.ORANGE },
+                { color: "#E74C3C", label: es.intl.string(es.t.hKJGOM), enum: t5.RED },
+                { color: "#EC407A", label: es.intl.string(es.t.HvLEGM), enum: t5.PINK },
+                { color: "#FFFFFF", label: es.intl.string(es.t["CB+lNO"]), enum: t5.WHITE },
+                { color: "#262626", label: es.intl.string(es.t["dMey+v"]), enum: t5.BLACK },
             ],
             [],
         );
@@ -1940,7 +1940,7 @@ function nT(e) {
     }, [O]);
     let B = r.useCallback(
         (e) => {
-            (tA.default.track(e5.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+            (tA.default.track(e8.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                 collectibles_shop_session_id: l?.sessionId,
                 page_section: l?.pageSection,
                 page_category: l?.pageCategory,
@@ -2023,7 +2023,7 @@ function nM(e) {
     let { tab: t, categories: n, initialCategoryId: s, showFilterInitially: l = !0, onUnmount: a } = e,
         c = (0, tS.A)("shop_include_unpublished");
     (!(function () {
-        let e = (0, k.bG)([tI.A], () => "success" === tI.A.getFetchState(e5.FYj)),
+        let e = (0, k.bG)([tI.A], () => "success" === tI.A.getFetchState(e8.FYj)),
             t = null != (0, tN.HH)(),
             { offerEligible: n, clearFilters: s } = (0, T.v)();
         r.useEffect(() => {
@@ -2068,7 +2068,7 @@ function nM(e) {
                                   className: nR.en,
                                   children: (0, i.jsx)("div", {
                                       className: nR.pf,
-                                      children: (0, i.jsx)(t_.Z_, { tenantId: e5.FYj, templateId: tb.b.BACK_CATALOG }),
+                                      children: (0, i.jsx)(t_.Z_, { tenantId: e8.FYj, templateId: tb.b.BACK_CATALOG }),
                                   }),
                               })
                             : (0, i.jsx)(nk, {
@@ -2117,7 +2117,7 @@ function nk(e) {
         })(a),
         f = r.useCallback(
             (e) => {
-                (tA.default.track(e5.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                (tA.default.track(e8.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                     collectibles_shop_session_id: h?.sessionId,
                     page_section: h?.pageSection,
                     page_category: h?.pageCategory,
@@ -2141,7 +2141,7 @@ function nk(e) {
                     null === C.current ||
                     m.current.contains(t) ||
                     C.current.contains(t) ||
-                    (tA.default.track(e5.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                    (tA.default.track(e8.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                         collectibles_shop_session_id: h?.sessionId,
                         page_section: h?.pageSection,
                         page_category: h?.pageCategory,
@@ -2172,7 +2172,7 @@ function nk(e) {
                                                 variant: "text-md/semibold",
                                                 children: es.intl.string(es.t.uaX705),
                                             }),
-                                            (0, i.jsx)(t5, {}),
+                                            (0, i.jsx)(t8, {}),
                                         ],
                                     }),
                                     (0, i.jsx)("div", {
@@ -2180,7 +2180,7 @@ function nk(e) {
                                         children: (0, i.jsx)(Q.$, {
                                             onClick: function () {
                                                 let e = !n;
-                                                (tA.default.track(e5.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                                                (tA.default.track(e8.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                                                     collectibles_shop_session_id: h?.sessionId,
                                                     page_section: h?.pageSection,
                                                     page_category: h?.pageCategory,
@@ -2280,12 +2280,12 @@ function n$(e) {
         return t !== M.HOME || d || s
             ? null
             : (0, i.jsx)(t_.Z_, {
-                  tenantId: e5.FYj,
+                  tenantId: e8.FYj,
                   templateId: tb.b.SHOP_HOME,
                   requestParams: o,
                   overrides: nH[tb.b.SHOP_HOME],
               });
-    let u = (0, i.jsx)(t_.Qs, { tenantId: e5.FYj, layoutId: n, overrides: nz[n] });
+    let u = (0, i.jsx)(t_.Qs, { tenantId: e8.FYj, layoutId: n, overrides: nz[n] });
     return (0, i.jsxs)(i.Fragment, {
         children: [
             t === M.ORBS && (0, i.jsx)(nU, {}),
@@ -2361,7 +2361,7 @@ let nZ = function (e) {
                                             text: es.intl.string(es.t.AfrvRD),
                                             onClick: () => {
                                                 (t({ sourceButton: "shop all button", shouldAnimate: !0 }),
-                                                    tA.default.track(e5.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                                                    tA.default.track(e8.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                                                         collectibles_shop_session_id: l?.sessionId,
                                                         page_type: n,
                                                         page_category: n === M.HOME ? void 0 : l?.pageCategory,
@@ -2467,7 +2467,7 @@ function nJ(e) {
                     isOrbsExclusive: r,
                 } = e;
                 if ((a(t, n), _ && null != n && i && !r))
-                    return void m.push(e5.BVt.COLLECTIBLES_SHOP_COLLECTION_DETAIL(n));
+                    return void m.push(e8.BVt.COLLECTIBLES_SHOP_COLLECTION_DETAIL(n));
                 let c = l && !u,
                     o = r ? td.G2.ORBS : td.G2.CATALOG;
                 (x(n), C(!i), s(o, c));
@@ -2488,7 +2488,7 @@ function nJ(e) {
                 : t === td.G2.GAME_SERVERS
                   ? d
                       ? (0, i.jsx)(tm, { isGameServerHostingInShopEnabled: d })
-                      : (0, i.jsx)(R.rd, { to: e5.BVt.COLLECTIBLES_SHOP_WITH_TAB(td.G2.HOME) })
+                      : (0, i.jsx)(R.rd, { to: e8.BVt.COLLECTIBLES_SHOP_WITH_TAB(td.G2.HOME) })
                   : (0, i.jsx)(nM, {
                         tab: t,
                         categories: v,
@@ -2503,15 +2503,15 @@ var n0 = n(626148),
     n1 = n(235939),
     n4 = n(976860),
     n2 = n(870308),
-    n5 = n(650583);
-function n8(e) {
+    n8 = n(650583);
+function n5(e) {
     let { children: t, shouldAddEventListener: n, onClose: s } = e,
         l = (0, m.useHasAnyModalOpen)();
     return (
         r.useEffect(() => {
             if (n && !l) return (window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e));
             function e(e) {
-                e.key === n5.N$.Escape && s();
+                e.key === n8.N$.Escape && s();
             }
         }, [n, l, s]),
         t
@@ -2535,7 +2535,7 @@ let n6 = function (e) {
                         ((0, n4.aX)(), (0, H.openUserSettings)());
                         return;
                     }
-                    (0, n4.EL)() ? (0, n4.aX)() : (0, n4.pX)(e5.BVt.APP);
+                    (0, n4.EL)() ? (0, n4.aX)() : (0, n4.pX)(e8.BVt.APP);
                 }, [s]),
                 source: s,
                 ...t,
@@ -2543,7 +2543,7 @@ let n6 = function (e) {
         })(),
         { currentTab: c, hasFilters: M } = (0, T.v)(),
         k = r.useMemo(() => (t === td.G2.HOME && null != c && M() ? c : t), [t, c, M]);
-    (0, v.A)(e5.FYj);
+    (0, v.A)(e8.FYj);
     let y = (0, I.$)("collectibles_shop"),
         { categories: P, refreshCategories: D } = (0, L.Ay)({ logPerf: !0, skipFetch: y }, { sessionId: n, tab: k }),
         B = r.useMemo(() => [...P.values()], [P]),
@@ -2561,7 +2561,7 @@ let n6 = function (e) {
         W();
     }, [W]),
         r.useEffect(() => {
-            (0, h.I)(e5.BVt.COLLECTIBLES_SHOP);
+            (0, h.I)(e8.BVt.COLLECTIBLES_SHOP);
         }, []));
     let Z = r.useRef(null),
         q = r.useRef(null);
@@ -2578,7 +2578,7 @@ let n6 = function (e) {
             newValue: { sessionId: n, pageCategory: F, pageSize: td.l5 },
             children: (0, i.jsx)(b.iM, {
                 tab: V,
-                children: (0, i.jsx)(n8, {
+                children: (0, i.jsx)(n5, {
                     onClose: a,
                     shouldAddEventListener: !1,
                     children: (0, i.jsxs)("div", {

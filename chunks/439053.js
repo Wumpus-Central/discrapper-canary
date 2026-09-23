@@ -1,10 +1,10 @@
-s.d(e, { A: () => f });
+s.d(e, { A: () => _ });
 var n = s(477900);
 s(582128);
-var i = s(503698),
-    a = s.n(i),
-    r = s(498516),
-    l = s(17928),
+var a = s(503698),
+    i = s.n(a),
+    l = s(202091),
+    r = s(17928),
     o = s(866323),
     c = s(857250),
     d = s(97483),
@@ -12,32 +12,32 @@ var i = s(503698),
     x = s(661531),
     u = s(834730),
     E = s(289873),
-    j = s(308528),
-    v = s(775602),
-    h = s(183555),
-    A = s(679492),
-    N = s(518477),
-    g = s(375708),
-    p = s(988199),
+    h = s(308528),
+    j = s(775602),
+    p = s(183555),
+    g = s(679492),
+    A = s(518477),
+    v = s(375708),
+    N = s(988199),
     C = s(655214);
 function y(t) {
-    let { message: e, userId: s, onClose: i } = t,
-        { trackUserProfileAction: r } = (0, h.NJ)();
+    let { message: e, userId: s, onClose: a } = t,
+        { trackUserProfileAction: l } = (0, p.NJ)();
     return (0, n.jsxs)("div", {
-        className: a()(C.oR, p.d6),
+        className: i()(C.oR, N.d6),
         children: [
-            (0, n.jsx)(m.CheckmarkLargeIcon, { size: "sm", className: p.RC, color: x.A.colors.STATUS_POSITIVE.css }),
+            (0, n.jsx)(m.CheckmarkLargeIcon, { size: "sm", className: N.RC, color: x.A.colors.STATUS_POSITIVE.css }),
             (0, n.jsxs)("div", {
-                className: p.Zx,
+                className: N.Zx,
                 children: [
                     (0, n.jsx)(u.E, { color: "text-strong", variant: "text-sm/semibold", children: e }),
                     (0, n.jsx)(u.E, {
                         variant: "text-sm/semibold",
-                        children: g.intl.format(g.t.QEW8Mq, {
+                        children: v.intl.format(v.t.QEW8Mq, {
                             onClick: () => {
-                                (r({ action: "PRESS_REACT_REPLY_TOAST" }),
-                                    i?.(),
-                                    j.A.openPrivateChannel({ recipientIds: s }));
+                                (l({ action: "PRESS_REACT_REPLY_TOAST" }),
+                                    a?.(),
+                                    h.A.openPrivateChannel({ recipientIds: s }));
                             },
                         }),
                     }),
@@ -48,19 +48,19 @@ function y(t) {
 }
 function I() {
     return (0, n.jsxs)("div", {
-        className: a()(C.oR, p.d6),
+        className: i()(C.oR, N.d6),
         children: [
-            (0, n.jsx)(E.y, { type: E.t.SPINNING_CIRCLE_SIMPLE, className: p.RC }),
-            (0, n.jsx)(u.E, { color: "text-strong", variant: "text-sm/semibold", children: g.intl.string(g.t.tcARX0) }),
+            (0, n.jsx)(E.y, { type: E.t.SPINNING_CIRCLE_SIMPLE, className: N.RC }),
+            (0, n.jsx)(u.E, { color: "text-strong", variant: "text-sm/semibold", children: v.intl.string(v.t.tcARX0) }),
         ],
     });
 }
-let f = (t) => {
-    let { userId: e, onClose: s, className: i } = t,
-        { interactionTypeSent: m, showInteractionToast: x } = (0, A.Pq)(),
-        u = m === N.AQ.REPLY ? g.intl.string(g.t.BPaiaa) : g.intl.string(g.t.Ry2EtG),
-        E = (0, l.bG)([v.Ay], () => v.Ay.useReducedMotion),
-        j = (0, o.p)(
+let _ = (t) => {
+    let { userId: e, onClose: s, className: a } = t,
+        { interactionTypeSent: m, showInteractionToast: x } = (0, g.Pq)(),
+        u = m === A.AQ.REPLY ? v.intl.string(v.t.BPaiaa) : v.intl.string(v.t.Ry2EtG),
+        E = (0, r.bG)([j.Ay], () => j.Ay.useReducedMotion),
+        h = (0, o.p)(
             x,
             {
                 from: { transform: E ? "translateY(0)" : "translateY(16px)", opacity: 0 },
@@ -72,11 +72,11 @@ let f = (t) => {
             "animate-always",
         );
     return (0, n.jsx)(n.Fragment, {
-        children: j(
-            (t, l) =>
-                l &&
-                (0, n.jsx)(r.animated.div, {
-                    className: a()(p.Jt, i),
+        children: h(
+            (t, r) =>
+                r &&
+                (0, n.jsx)(l.animated.div, {
+                    className: i()(N.Jt, a),
                     style: t,
                     children:
                         null != m

@@ -118,7 +118,7 @@ class m {
     }
 }
 var p = n(375708),
-    C = n(693351);
+    C = n(986485);
 function h(e) {
     let { giftCardsEnabled: t, checkoutPaymentSources: n } = e,
         a = l.useMemo(() => (0, u.N)(n)?.id, [n]),
@@ -180,8 +180,8 @@ function S(e) {
         { enabled: y } = (0, s.c)({ location: f }),
         {
             pendingPaymentSourceId: I,
-            hasInitialPaymentSourceSeed: g,
-            hasAddedPaymentSourceThisSession: A,
+            hasInitialPaymentSourceSeed: A,
+            hasAddedPaymentSourceThisSession: g,
         } = (0, r.t4)((e) => ({
             pendingPaymentSourceId: e.pendingPaymentSourceId,
             hasInitialPaymentSourceSeed: null != e.initialPaymentSourceId,
@@ -211,10 +211,10 @@ function S(e) {
                 pendingPaymentSourceId: I,
                 paymentSourceId: a,
                 giftCardsEnabled: y,
-                hasInitialPaymentSourceSeed: g,
-                hasAddedPaymentSourceThisSession: A,
+                hasInitialPaymentSourceSeed: A,
+                hasAddedPaymentSourceThisSession: g,
             }),
-            [i, P, S, v, E, I, a, y, g, A],
+            [i, P, S, v, E, I, a, y, A, g],
         );
     ((t = l.useRef(!1)),
         (n = l.useMemo(() => new m(j), [j])),

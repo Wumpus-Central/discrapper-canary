@@ -69,7 +69,7 @@ var b = n(716357),
     K = n(192308),
     $ = n(775602),
     q = n(855823),
-    V = n(104129),
+    V = n(61567),
     X = n(375708),
     Y = n(517228);
 function J(e) {
@@ -1047,7 +1047,7 @@ var eG = n(529609),
     eF = n(486020),
     eH = n(488428),
     ez = n(776231),
-    eK = n(784890),
+    eK = n(968176),
     e$ = n(986898);
 function eq(e) {
     let { guildId: t, header: n, canEdit: s, isEditing: u, isSaving: d } = e,

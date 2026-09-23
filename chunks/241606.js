@@ -14,9 +14,9 @@ var i = n(477900),
     A = n(291706),
     f = n(77666),
     x = n(637443),
-    g = n(4998),
+    g = n(389036),
     C = n(375708),
-    y = n(977241),
+    y = n(270103),
     j = n(783842);
 function I(e) {
     let { channel: t, returnsToRoom: n, className: a } = e,

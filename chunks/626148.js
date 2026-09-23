@@ -128,7 +128,7 @@ var x = l(50920),
     Y = l(832163),
     W = l(44724),
     J = l(486020),
-    X = l(344045);
+    X = l(394107);
 let Q = "useCollectiblesShopNavigationMenuOptions",
     Z = [
         { tab: R.G2.OFFER_ELIGIBLE, labelKey: y.t.hY8Ft1 },

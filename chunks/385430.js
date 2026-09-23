@@ -34,7 +34,7 @@ var t = e(477900),
     b = e(239093),
     w = e(652215),
     R = e(375708),
-    F = e(78637),
+    F = e(876891),
     K = e(52111);
 function H(n) {
     let { classificationTypeText: i, guildMetadata: e } = n,

@@ -17,8 +17,8 @@ var l = n(477900),
     S = n(1076),
     y = n(288106),
     I = n(604913),
-    g = n(223311),
-    A = n(306396),
+    A = n(223311),
+    g = n(306396),
     P = n(151115),
     v = n(518865),
     _ = n(536572),
@@ -41,12 +41,12 @@ var l = n(477900),
     H = n(31823),
     W = n(427675),
     Y = n(977445),
-    V = n(331329),
-    K = n(566980),
+    K = n(331329),
+    V = n(566980),
     Z = n(319820),
     q = n(52635),
-    z = n(649975),
-    Q = n(182732);
+    z = n(583741),
+    Q = n(181666);
 function $(e) {
     return e.name;
 }
@@ -128,7 +128,7 @@ function ei(e) {
                     setCollectedModalOverrideDescription: r,
                     setCollectedModalGradientColor: a,
                 } = (0, S.z)(),
-                s = (0, g.A)(x.FYj),
+                s = (0, A.A)(x.FYj),
                 o = null != n ? (0, P.L)(n, s) : null,
                 u = o?.tenantMetadata?.collectibles;
             (0, i.useEffect)(() => {
@@ -137,7 +137,7 @@ function ei(e) {
                         let e = o?.progress;
                         if (null == n || null == e) break;
                         if (o?.rewardStatus === y.GM.IN_PROGRESS) {
-                            let t = Math.min(e.current + (0, A.oO)(n, u.collectionId), e.target);
+                            let t = Math.min(e.current + (0, g.oO)(n, u.collectionId), e.target);
                             l(T.intl.formatToPlainString(T.t.G9koyR, { current: t, target: e.target }));
                         } else l(void 0);
                         (r(T.intl.formatToPlainString(T.t.LD7HFF, { collectibleTitle: (0, _.VG)(n) })), a(void 0));
@@ -174,8 +174,8 @@ function er(e) {
         { isGift: C, giftRecipient: f } = (0, k.Pv)(),
         {
             sku: S,
-            application: g,
-            eligiblePaymentGateways: A,
+            application: A,
+            eligiblePaymentGateways: g,
             disabled: _,
         } = (function () {
             let { selectedSkuId: e, purchaseState: t } = (0, h.t4)((e) => ({
@@ -194,7 +194,7 @@ function er(e) {
                     sku: i,
                     application: n,
                     eligiblePaymentGateways: r,
-                    disabled: t === K.h.PURCHASING || t === K.h.COMPLETED,
+                    disabled: t === V.h.PURCHASING || t === V.h.COMPLETED,
                 }
             );
         })(),
@@ -220,7 +220,7 @@ function er(e) {
                 o = (0, Y.uS)(n.id),
                 u = null != t && t.productLine === x.EZt.SOCIAL_LAYER_GAME_ITEM,
                 c = (0, B.n)(n, x.gfo.EMBEDDED) && r === G.$.ERROR,
-                d = u && a && !s && !l ? (0, V.k3)(n) : null;
+                d = u && a && !s && !l ? (0, K.k3)(n) : null;
             return {
                 upperInlineNoticeProps: i.useMemo(() => {
                     let e = [];
@@ -249,8 +249,8 @@ function er(e) {
                     );
                 }, [d]),
             };
-        })({ sku: S, application: g, isGift: C }),
-        w = i.useMemo(() => ({ paymentGatewayRestrictions: A, shouldUseUnifiedCheckoutUI: !0 }), [A]),
+        })({ sku: S, application: A, isGift: C }),
+        w = i.useMemo(() => ({ paymentGatewayRestrictions: g, shouldUseUnifiedCheckoutUI: !0 }), [g]),
         Q = (0, l.jsx)(d.N, {
             label: T.intl.string(T.t["u+Cw58"]),
             location: "OneTimePurchaseReviewStepBody",
@@ -296,7 +296,7 @@ function er(e) {
             var e, t;
             return (
                 (e = n),
-                (t = { priceText: er, sku: S, application: g, giftRecipient: f }),
+                (t = { priceText: er, sku: S, application: A, giftRecipient: f }),
                 e === c.C.SLAYER_STOREFRONT_CHECKOUT
                     ? (0, l.jsx)(et, { ...t })
                     : e === c.C.GUILD_PRODUCT_CHECKOUT
@@ -305,7 +305,7 @@ function er(e) {
                         ? (0, l.jsx)(el, { ...t })
                         : (0, l.jsx)(ee, { ...t })
             );
-        }, [n, S, g, f, er]),
+        }, [n, S, A, f, er]),
         eo = i.useMemo(() => (null != r ? (0, L.$g)(r.total, r.currency) : void 0), [r]),
         eu = (0, E.g)(J ?? null),
         ec = i.useMemo(

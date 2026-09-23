@@ -10,10 +10,10 @@ var u = n(901930),
     c = n(900730),
     d = n(263532),
     h = n(580133),
-    p = n(169797),
-    C = n(270537);
+    C = n(169797),
+    p = n(270537);
 n(652215);
-var m = n(649975),
+var m = n(583741),
     E = n(375708),
     A = n(66414);
 function f(e) {
@@ -21,7 +21,7 @@ function f(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             n ? (0, r.jsx)(s.UY, { children: (0, r.jsx)(h.f, { headerBadgeConfig: l }) }) : null,
-            (0, r.jsx)(p.DJ, { className: o()(A.g4, t) }),
+            (0, r.jsx)(C.DJ, { className: o()(A.g4, t) }),
         ],
     });
 }
@@ -137,7 +137,7 @@ function I(e) {
             paymentMethodContent: u,
             invoiceSummaryContent: c,
             promotionalNoticeContent: d,
-            legalContent: p,
+            legalContent: C,
             invoiceTotalDueLabel: y = E.intl.string(m.default.R0cZsM),
             invoiceTotalDueValue: g,
             shouldShowGlobalNotices: S,
@@ -172,9 +172,9 @@ function I(e) {
                   (0, r.jsxs)(s.bx, {
                       children: [
                           (0, r.jsx)("div", { ref: v }),
-                          null != y && null != g && (0, r.jsx)(C.Qf, { className: A.NR, label: y, value: g }),
+                          null != y && null != g && (0, r.jsx)(p.Qf, { className: A.NR, label: y, value: g }),
                           null != d ? (0, r.jsx)("div", { className: A.uh, children: d }) : null,
-                          p,
+                          C,
                           null != k ? (0, r.jsx)("div", { className: A.Uu, children: k }) : null,
                       ],
                   }),

@@ -17,14 +17,14 @@ var l = n(477900),
     S = n(35587),
     y = n(165191),
     I = n(237412),
-    g = n(45938),
-    A = n(158045),
+    A = n(45938),
+    g = n(158045),
     P = n(951305),
     v = n(166532),
     _ = n(652215),
     x = n(202541),
     T = n(375708),
-    N = n(805161),
+    N = n(341535),
     b = n(894575),
     j = n(711729);
 function R(e) {
@@ -48,9 +48,9 @@ function R(e) {
         H = (0, E.p)("PremiumUnifiedCheckoutCustomHeader"),
         W = (0, h.Wh)({ location: "PremiumUnifiedCheckoutCustomHeader" }),
         Y = U?.productLine === _.EZt.COLLECTIBLES,
-        V = U?.productLine === _.EZt.SOCIAL_LAYER_GAME_ITEM,
-        K = D === v.pn.CONFIRM && W && (0, f.M)({ isGift: G, giftRecipient: B, selectedPlanId: d }),
-        Z = G && (0, g.Ik)(B) && D === v.pn.CONFIRM && null != F && !Y && !V,
+        K = U?.productLine === _.EZt.SOCIAL_LAYER_GAME_ITEM,
+        V = D === v.pn.CONFIRM && W && (0, f.M)({ isGift: G, giftRecipient: B, selectedPlanId: d }),
+        Z = G && (0, A.Ik)(B) && D === v.pn.CONFIRM && null != F && !Y && !K,
         q = [v.pn.SKU_SELECT, v.pn.SELECT_FREE_SKU],
         z = null != D && !q.includes(D) && null != n,
         Q = i.useCallback(() => t(!1), [t]);
@@ -58,7 +58,7 @@ function R(e) {
         if (null == D) return;
         let e = null;
         return (
-            K
+            V
                 ? (e = (0, l.jsx)(s.rQ, {
                       alignCenter: !0,
                       gradientColor: "nitro-pink",
@@ -67,7 +67,7 @@ function R(e) {
                       titleTextVariant: "heading-xl/semibold",
                       subtitle: T.intl.format(N.default.geFoof, {
                           giftCount: R,
-                          skuName: null != d ? (0, A.RH)(d) : "",
+                          skuName: null != d ? (0, g.RH)(d) : "",
                       }),
                   }))
                 : Z
@@ -108,7 +108,7 @@ function R(e) {
                               : (0, l.jsx)(s.rQ, { title: T.intl.string(T.t.q9EGps) })),
             e
         );
-    }, [F, Q, S, n, D, k, w, R, d, K, Z, H, z, G, B, O, M, L]);
+    }, [F, Q, S, n, D, k, w, R, d, V, Z, H, z, G, B, O, M, L]);
 }
 function M(e) {
     let { premiumDiscountPercent: t, isPremiumDiscountAppliedToCheckoutInvoice: n } = (0, m.t4)((e) => ({

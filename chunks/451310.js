@@ -3,7 +3,7 @@ var n = i(477900);
 i(582128);
 var a = i(189213),
     s = i(349735),
-    r = i(759967),
+    r = i(50617),
     d = i(375708);
 function l(t) {
     let { projectId: e, scopeKeys: i, note: l, notifyAgent: o, isPreview: c, transitionState: u, onClose: p } = t;
