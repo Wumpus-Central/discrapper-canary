@@ -5391,6 +5391,28 @@
     }
   },
   {
+    "name": "2026-09-silp-cta-copy-tests",
+    "kind": "user",
+    "defaultConfig": {
+      "variant": null
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "variant": "clarity"
+      },
+      "2": {
+        "variant": "clarity_softer"
+      },
+      "3": {
+        "variant": "low_commitment"
+      }
+    }
+  },
+  {
     "name": "2026-09-silp-direct-to-discoverable",
     "kind": "installation",
     "defaultConfig": {
