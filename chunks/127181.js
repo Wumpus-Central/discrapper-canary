@@ -1,6 +1,12 @@
 n.d(t, { B: () => s, MZ: () => o, TH: () => l, tn: () => i });
 let a = [
     {
+        date: "2026-09-23",
+        platforms: ["desktop", "mobile"],
+        summary:
+            'When something breaks behind the scenes, people using your app now see a plain "Something went wrong" message instead of internal error text.',
+    },
+    {
         date: "2026-09-22",
         platforms: ["desktop"],
         summary:
