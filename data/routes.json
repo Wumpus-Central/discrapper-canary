@@ -814,6 +814,7 @@
   "QUESTS_REWARD_CODE": "/quests/:param/reward-code",
   "QUESTS_CLAIM_REWARD": "/quests/:param/claim-reward",
   "QUESTS_DISMISS_CONTENT": "/quests/:param/dismissible-content/:param/dismiss",
+  "DISMISSIBLE_CONTENT_ARBITRATE": "/dismissible-content/arbitrate",
   "QUESTS_PREVIEW_STATUS": "/quests/:param/preview/status",
   "QUESTS_PREVIEW_DISMISSIBILITY": "/quests/:param/preview/dismissibility",
   "QUESTS_PREVIEW_COMPLETE": "/quests/:param/preview/complete",
