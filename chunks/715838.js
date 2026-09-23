@@ -1,4 +1,4 @@
-_.r(
+n.r(
     (a.exports = {
         wishlistButton: "wishlistButton__979b1",
         disabled: "disabled__979b1",
@@ -15,6 +15,7 @@ _.r(
         iconContainer: "iconContainer__979b1",
         iconWrapper: "iconWrapper__979b1",
         animationOverlay: "animationOverlay__979b1",
+        halloweenAnimationOverlay: "halloweenAnimationOverlay__979b1",
         canAnimate: "canAnimate__979b1",
         holdScale: "holdScale__979b1",
         clickAnimation: "clickAnimation__979b1",

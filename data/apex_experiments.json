@@ -5223,6 +5223,22 @@
     }
   },
   {
+    "name": "2026-09-halloween-wishlisting-animation",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
     "name": "2026-09-invite-silp-education",
     "kind": "installation",
     "defaultConfig": {
@@ -5420,6 +5436,22 @@
         "variant": 0
       },
       "1": true
+    }
+  },
+  {
+    "kind": "installation",
+    "name": "2026-09-registration-email-opt-in-copy",
+    "defaultConfig": {
+      "trackingCopy": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "trackingCopy": true
+      }
     }
   },
   {
