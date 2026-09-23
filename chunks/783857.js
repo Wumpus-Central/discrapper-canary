@@ -7,8 +7,8 @@ let l = "custom-cursors-styles",
     c = "custom-cursors",
     u = `
   :root {
-    --custom-cursor: url(https://cdn.discordapp.com/assets/content/9f04e9b5b7689dbbecc8fbd15acc438f7f4af98592ee506716a71b2fcdc94e53.png) 8 4, auto;
-    --custom-cursor-pointer: url(https://cdn.discordapp.com/assets/content/56cf15abd8c5bb2692721be700d1e934d6626590a316b1c23fdce48d5be6c225.png) 4 4, pointer;
+    --custom-cursor: url(https://cdn.discordapp.com/assets/content/a5a35112cf47613450476b245c5ded25838b11a09c30494ad05dd153120f0e33.svg) 0 0, auto;
+    --custom-cursor-pointer: url(https://cdn.discordapp.com/assets/content/99d372f82ccdb87439920e8033c22642f7cd74ecb8520c0554003b4fb4c88e49.svg) 0 0, pointer;
   }
 
   .${c},
@@ -43,7 +43,6 @@ let l = "custom-cursors-styles",
   .${c} [class*='FeaturedChip'],
   .${c} [class*='FeaturedProduct'],
   .${c} [class*='productCardContainer'],
-  .${c} [class*='collectiblesShopHeaderBar'],
   .${c} [class*='wrapper'],
   .${c} [class*='menu'],
   .${c} [class*='menuItem'],

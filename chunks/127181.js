@@ -26,6 +26,11 @@ let a = [
     },
     {
         date: "2026-09-22",
+        platforms: ["desktop", "mobile"],
+        summary: "On bigger builds, your frame now updates at each milestone so you can watch the app take shape.",
+    },
+    {
+        date: "2026-09-22",
         platforms: ["desktop"],
         summary: "The template and starter cards light up under your cursor.",
     },

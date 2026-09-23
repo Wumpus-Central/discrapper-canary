@@ -15,14 +15,12 @@
     border: 1px solid var(--border-muted);
     border-radius: var(--radius-sm);
     box-sizing: border-box;
-    cursor: pointer;
     display: inline-flex;
     flex-shrink: 0;
     height: 32px;
     justify-content: flex-end;
     opacity: 1 !important;
     padding: 8px 12px;
-    pointer-events: all;
     position: relative
 }
 
@@ -34,6 +32,7 @@
 .orbsLottieContainer_a3e8db {
     height: 60px;
     overflow: visible;
+    pointer-events: none;
     position: relative;
     width: 20px
 }
@@ -94,4 +93,4 @@
     width: 8px
 }
 
-/*# sourceMappingURL=9cc4a81fa1ce029c.css.map*/
+/*# sourceMappingURL=6d7122ffacaba4d2.css.map*/
