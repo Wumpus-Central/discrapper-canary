@@ -1,1 +1,1 @@
-s.exports = JSON.parse('{"en2ls2":["en2ls2"]}');
+p.exports = JSON.parse('{"pjdMpI":["pjdMpI"],"en2ls2":["en2ls2"]}');
