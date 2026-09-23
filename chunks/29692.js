@@ -1,7 +1,7 @@
 (l.d(t, {
     F6: () => n,
     LL: () => h,
-    Mx: () => g,
+    Mx: () => x,
     ec: () => a,
     gq: () => r,
     iw: () => o,
@@ -157,7 +157,7 @@ function h(e) {
         i = (-1 === r ? a : a.slice(0, r)).trim();
     return "" === i ? null : { label: i, body: n };
 }
-function g(e) {
+function x(e) {
     let { annotations: t, metaComment: l, context: n } = e,
         a = t.filter((e) => i(e.comment)),
         s = [];

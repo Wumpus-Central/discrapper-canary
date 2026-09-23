@@ -1,4 +1,4 @@
-l.d(t, { A: () => x });
+l.d(t, { A: () => g });
 var n = l(477900);
 l(582128);
 var a = l(17928),
@@ -12,10 +12,10 @@ var a = l(17928),
     m = l(533140),
     f = l(652215),
     h = l(165610),
-    g = l(375708);
-function x(e) {
+    x = l(375708);
+function g(e) {
     let { frame: t, controlProjectId: l } = e,
-        x = (0, m.V0)(t?.id ?? null),
+        g = (0, m.V0)(t?.id ?? null),
         p = (0, c.o4)(l),
         v = (0, a.bG)(
             [o.A, s.A],
@@ -25,14 +25,14 @@ function x(e) {
     if (!(0, h.x1)(t) || v || p) return null;
     let b = (0, m.Uv)(t.id);
     if (null == b || !(0, d.Ub)(b)) return null;
-    let j = g.intl.string(x ? g.t.Z7MyNB : g.t.OIDkcp);
+    let j = x.intl.string(g ? x.t.Z7MyNB : x.t.OIDkcp);
     return (0, n.jsx)(u.A.Icon, {
         tooltip: j,
-        icon: x ? r.z : i.T,
+        icon: g ? r.z : i.T,
         "aria-label": j,
         role: "switch",
-        "aria-checked": x,
-        selected: x,
+        "aria-checked": g,
+        selected: g,
         onClick: () => (0, m.w4)(t.id),
     });
 }

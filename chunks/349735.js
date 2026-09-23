@@ -11,8 +11,8 @@ var n = l(477900),
     m = l(761508),
     f = l(890497),
     h = l(47167),
-    g = l(713654),
-    x = l(808728),
+    x = l(713654),
+    g = l(808728),
     p = l(994500),
     v = l(287809),
     b = l(948230),
@@ -25,7 +25,7 @@ var n = l(477900),
     E = l(472781);
 let S = { values: {}, secrets: {} };
 function C(e) {
-    let { projectId: t, scopeKeys: l, note: f, notifyAgent: h = !1, isPreview: g = !1, onSaved: x, children: p } = e,
+    let { projectId: t, scopeKeys: l, note: f, notifyAgent: h = !1, isPreview: x = !1, onSaved: g, children: p } = e,
         v = (0, r.bG)([k.Ay], () => k.Ay.getSettings(t)),
         [j, N] = a.useState(S),
         [C, M] = a.useState({}),
@@ -82,7 +82,7 @@ function C(e) {
                               : (0, b.Eo)(t),
                             N(S),
                             M({}),
-                            await x?.());
+                            await g?.());
                     } catch {
                         _(!0);
                     } finally {
@@ -90,7 +90,7 @@ function C(e) {
                     }
                 }
             },
-            [X, h, x, t, T, Q],
+            [X, h, g, t, T, Q],
         );
     function J(e) {
         let t = [
@@ -138,7 +138,7 @@ function C(e) {
                   I,
                   {
                       projectId: t,
-                      isPreview: g,
+                      isPreview: x,
                       def: e,
                       hint: l,
                       value: j.values[e.key] ?? $[e.key],
@@ -315,13 +315,13 @@ function C(e) {
 function I(e) {
     let { projectId: t, isPreview: l, def: a, hint: i, value: u, disabled: o, onChange: d, fallback: c } = e,
         m = (0, r.bG)([N.Ay], () => (0, j.t7)(N.Ay.getProject(t), l), [l, t]),
-        b = (0, r.bG)([x.Ay], () => (null == m ? null : x.Ay.getChannels(m)), [m]);
+        b = (0, r.bG)([g.Ay], () => (null == m ? null : g.Ay.getChannels(m)), [m]);
     if (null == b) return c;
     let y = (0, j.qx)(b, a.channel_filter).map((e) => ({
         id: e.id,
         value: e.id,
         label: (0, h.m1)(e, v.default, p.A),
-        leading: (0, g.gU)(e),
+        leading: (0, x.gU)(e),
     }));
     return (0, n.jsxs)("div", {
         className: E._6,
