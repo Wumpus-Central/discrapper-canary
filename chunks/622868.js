@@ -1,4 +1,4 @@
-(l.d(n, { ix: () => e9, Ay: () => nn, tO: () => e5 }), l(321073), l(938796));
+(l.d(n, { ix: () => e9, Ay: () => nn, tO: () => e4 }), l(321073), l(938796));
 var t = l(477900),
     i = l(582128),
     a = l(503698),
@@ -426,7 +426,7 @@ function eC(e) {
           })
         : null;
 }
-var ey = l(241387),
+var ey = l(218150),
     eE = l(9842),
     eM = l(657048),
     e_ = l(566908),
@@ -506,8 +506,8 @@ var eD = l(854627),
     eZ = l(98318),
     eQ = l(976860),
     e0 = l(746080),
-    e8 = l(829136);
-let e1 = function (e) {
+    e1 = l(829136);
+let e8 = function (e) {
     let { roleIcon: n, guild: l } = e,
         { name: i } = n;
     (0, ej.Ay)(() => {
@@ -533,26 +533,26 @@ let e1 = function (e) {
     return (0, t.jsx)(eq.l, {
         children: (0, t.jsx)(ep.Uq, {
             children: (0, t.jsxs)("div", {
-                className: e8.jC,
+                className: e1.jC,
                 children: [
                     (0, t.jsxs)("div", {
-                        className: e8.rb,
+                        className: e1.rb,
                         children: [
                             (0, t.jsx)("div", {
-                                className: e8.Xq,
+                                className: e1.Xq,
                                 children: (0, t.jsx)(eM.A, {
                                     ...o,
                                     enableTooltip: !1,
-                                    className: e8.__invalid_roleIcon,
+                                    className: e1.__invalid_roleIcon,
                                     enableHeight: !1,
                                 }),
                             }),
                             (0, t.jsxs)("div", {
-                                className: e8.bM,
+                                className: e1.bM,
                                 children: [
                                     (0, t.jsx)(ex.D, {
                                         variant: "heading-md/semibold",
-                                        className: e8.S3,
+                                        className: e1.S3,
                                         children: (0, t.jsx)(eK.A, { children: i }),
                                     }),
                                     (0, t.jsx)(_.E, { variant: "text-sm/normal", children: r }),
@@ -574,8 +574,8 @@ let e1 = function (e) {
         }),
     });
 };
-var e7 = l(812299),
-    e2 = l(109054),
+var e2 = l(812299),
+    e7 = l(109054),
     e6 = l(318626);
 function e3(e) {
     let {
@@ -611,7 +611,7 @@ function e3(e) {
         ],
     });
 }
-let e4 = i.memo(function (e) {
+let e5 = i.memo(function (e) {
     let {
             message: n,
             author: l,
@@ -632,7 +632,7 @@ let e4 = i.memo(function (e) {
         } = e,
         b = (0, ez.Ay)(n, l),
         C = i.useMemo(
-            () => (0, e7.y)({ message: n, channel: a, user: n?.author, compact: r, isRepliedMessage: !1 }),
+            () => (0, e2.y)({ message: n, channel: a, user: n?.author, compact: r, isRepliedMessage: !1 }),
             [n, a, r],
         ),
         y = i.useRef(null),
@@ -652,7 +652,7 @@ let e4 = i.memo(function (e) {
                                 autoInvert: !0,
                                 nudgeAlignIntoViewport: !0,
                                 position: "right",
-                                renderPopout: () => (0, t.jsx)(e1, { roleIcon: o, guild: E }),
+                                renderPopout: () => (0, t.jsx)(e8, { roleIcon: o, guild: E }),
                                 clickTrap: !0,
                                 children: (e) => {
                                     let { onClick: n } = e;
@@ -719,7 +719,7 @@ let e4 = i.memo(function (e) {
               ],
           });
 });
-function e5(e, n, l) {
+function e4(e, n, l) {
     let {
         message: i,
         channel: a,
@@ -852,7 +852,7 @@ let nn = i.memo(function (e) {
                 [I, b] = i.useState(!1),
                 { analyticsLocations: C } = (0, A.Ay)(x.A.AVATAR),
                 y = (0, c.bG)([eU.Ay], () => n.displayCompactAvatars ?? eU.Ay.displayCompactAvatars),
-                E = (0, e2.A)(d),
+                E = (0, e7.A)(d),
                 M = m ? 32 : 80,
                 {
                     avatarSrc: _,
@@ -965,7 +965,7 @@ let nn = i.memo(function (e) {
         })({ props: e, guildId: e.guildId, handleRenderPopout: y, showCommunicationDisabledStyles: _ }),
         R = (0, c.bG)([eU.Ay], () => e.displayCompactAvatars ?? eU.Ay.displayCompactAvatars),
         T = i.useMemo(
-            () => (0, e7.k)({ message: n, channel: I, user: n?.author, compact: a, isRepliedMessage: !1 }),
+            () => (0, e2.k)({ message: n, channel: I, user: n?.author, compact: a, isRepliedMessage: !1 }),
             [n, I, a],
         ),
         w = (0, c.bG)([eV.A], () => ne(a, R, j, eV.A.getGuild(e.guildId)), [a, R, j, e.guildId]),
@@ -1003,7 +1003,7 @@ let nn = i.memo(function (e) {
                             ],
                         }),
                     }),
-                (0, t.jsx)(e4, {
+                (0, t.jsx)(e5, {
                     ...e,
                     message: n,
                     channel: I,

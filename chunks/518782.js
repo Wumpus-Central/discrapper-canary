@@ -11,5 +11,7 @@ function a(e) {
     let t = e.winning_stat ?? null,
         n = e.winning_streak ?? null,
         i = e.winning_week ?? null;
-    return null == t && null == n && null == i ? null : { winningStat: t, winningStreak: n, winningWeek: i };
+    return null == t && null == n && null == i
+        ? null
+        : { winningStat: t, winningStreak: n, winningWeek: i, winningValue: e.winning_value ?? null };
 }

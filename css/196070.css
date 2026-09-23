@@ -1,72 +1,3 @@
-.iconWrapper__468db {
-    display: inline-flex;
-    position: relative
-}
-
-.toastAnchor__468db {
-    bottom: 4px;
-    height: 1px;
-    inset-inline: 0;
-    position: absolute;
-    transform: translateX(4px)
-}
-
-.pulse__468db {
-    display: inline-flex
-}
-
-.full-motion .pulsing__468db {
-    animation: inbox-pulse__468db .6s ease-out
-}
-
-@keyframes inbox-pulse__468db {
-    0% {
-        transform: scale(1)
-    }
-
-    35% {
-        transform: scale(1.35)
-    }
-
-    to {
-        transform: scale(1)
-    }
-}
-
-.title_edbb22 {
-    display: inline-flex;
-    gap: var(--space-8);
-    max-width: 50vw
-}
-
-.navigationTooltip_edbb22,
-.title_edbb22 {
-    align-items: center;
-    justify-content: center
-}
-
-.navigationTooltip_edbb22 {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-4);
-    text-align: center
-}
-
-.icon_edbb22 {
-    height: 16px;
-    width: 16px
-}
-
-.appIcon_edbb22 {
-    border-radius: 6px;
-    height: 20px;
-    width: 20px
-}
-
-.guildIcon_edbb22 {
-    border-radius: var(--radius-xs)
-}
-
 @supports (grid-template-columns:subgrid) and (white-space-collapse:collapse) {
     .bar_c38106 {
         grid-area: titleBar
@@ -212,4 +143,4 @@
     color: var(--control-critical-primary-icon-default)
 }
 
-/*# sourceMappingURL=995941.c783474b60e76a3d.css.map*/
+/*# sourceMappingURL=196070.1561a979026f7c0f.css.map*/
