@@ -7,7 +7,7 @@ var l = n(582128),
     o = n(296045),
     u = n(556766),
     c = n(459005),
-    d = n(206285),
+    d = n(621547),
     m = n(375708);
 function p(e) {
     let { surface: t, applicationId: n, skuId: o } = e,

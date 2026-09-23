@@ -32,7 +32,7 @@ let a = n(r(536295)),
     m = n(r(318833)),
     f = n(r(49336)),
     g = n(r(976246)),
-    h = n(r(777832)),
+    h = n(r(555451)),
     p = r(329454);
 Object.defineProperty(t, "Chrono", {
     enumerable: !0,

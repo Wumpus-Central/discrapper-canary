@@ -321,8 +321,8 @@ function e7(e) {
             (0, i.jsxs)("div", {
                 className: e1.PQ,
                 children: [
-                    o || null == l ? null : (0, i.jsx)(e6, { firstMessage: l, channel: t }),
-                    (0, i.jsx)(e9, { channel: t, iconSize: 14 }),
+                    o || null == l ? null : (0, i.jsx)(e9, { firstMessage: l, channel: t }),
+                    (0, i.jsx)(e6, { channel: t, iconSize: 14 }),
                     (0, i.jsx)("span", { className: e2.xE, children: "\u2022" }),
                     r.length > 0
                         ? (0, i.jsxs)("div", {
@@ -342,7 +342,7 @@ function e7(e) {
         ],
     });
 }
-function e9(e) {
+function e6(e) {
     let { channel: t, iconSize: n, showReadState: l = !1 } = e,
         { messageCountText: s, unreadCount: a } = (0, eA.k6)(t);
     return (0, i.jsxs)("div", {
@@ -366,7 +366,7 @@ function e9(e) {
         ],
     });
 }
-function e6(e) {
+function e9(e) {
     let { firstMessage: t, channel: n } = e,
         l = (0, g.bG)([eH.A], () => eH.A.getChannel(n.parent_id)),
         s = (0, eA.Ck)(l),
@@ -525,7 +525,7 @@ let tA = function (e) {
 };
 var tC = n(853742);
 n(321073);
-var tN = n(202091),
+var tN = n(498516),
     tb = n(136722),
     tE = n(192308),
     tS = n(866323),
@@ -547,7 +547,7 @@ var tN = n(202091),
     tU = n(688810),
     tH = n(359800),
     tB = n(206828),
-    tV = n(490094),
+    tV = n(670064),
     tW = n(296853),
     t$ = n(922396);
 function tq(e) {
@@ -654,7 +654,7 @@ var tX = n(462887),
     t5 = n(975571);
 let t8 = { mass: 1, tension: 250, friction: 18, clamp: !0 };
 var t7 = n(340990);
-function t9(e) {
+function t6(e) {
     let { handleHide: t } = e;
     return (0, i.jsx)(E.D, {
         onClick: t,
@@ -663,7 +663,7 @@ function t9(e) {
         children: (0, i.jsx)(ty.P, { size: "md", color: "currentColor", className: t7.ut }),
     });
 }
-function t6(e) {
+function t9(e) {
     let { username: t, title: n, videoSrc: l, messageCount: s, reaction: a, reactionCount: o, classname: c } = e;
     return (0, i.jsxs)("div", {
         className: r()(t7.IP, c),
@@ -808,7 +808,7 @@ let ne = (e) => {
                                           e0.intl.string(e0.t.znhX2R),
                                       ],
                                   }),
-                                  (0, i.jsx)(t9, { handleHide: m }),
+                                  (0, i.jsx)(t6, { handleHide: m }),
                               ],
                           }),
                           (0, i.jsxs)("div", {
@@ -822,7 +822,7 @@ let ne = (e) => {
                                               children: (0, i.jsxs)("div", {
                                                   className: t7.IZ,
                                                   children: [
-                                                      (0, i.jsx)(t6, {
+                                                      (0, i.jsx)(t9, {
                                                           username: e0.intl.string(e0.t.AkORco),
                                                           videoSrc:
                                                               "https://cdn.discordapp.com/assets/media_channel/admin_edu_discord_birthday.mp4",
@@ -832,7 +832,7 @@ let ne = (e) => {
                                                           reactionCount: "724",
                                                           classname: t7.q6,
                                                       }),
-                                                      (0, i.jsx)(t6, {
+                                                      (0, i.jsx)(t9, {
                                                           username: e0.intl.string(e0.t.DPg3YM),
                                                           videoSrc:
                                                               "https://cdn.discordapp.com/assets/media_channel/admin_edu_wumpus_onboarding.mp4",
@@ -842,7 +842,7 @@ let ne = (e) => {
                                                           reaction: "\uD83D\uDC9E",
                                                           classname: t7.q6,
                                                       }),
-                                                      (0, i.jsx)(t6, {
+                                                      (0, i.jsx)(t9, {
                                                           username: e0.intl.string(e0.t.KIelex),
                                                           videoSrc:
                                                               "https://cdn.discordapp.com/assets/media_channel/admin_edu_scientist_wumpus.mp4",
@@ -997,7 +997,7 @@ var nt = n(331322),
     nl = n(517461),
     ni = n(350527),
     ns = n(95035),
-    na = n(39470),
+    na = n(256416),
     nr = n(587240),
     no = n(253898);
 let nc = { mass: 1, tension: 250, friction: 18, clamp: !0 };
@@ -2053,8 +2053,8 @@ var nX = n(621466),
     n5 = n(465532),
     n8 = n(608299),
     n7 = n(355622),
-    n9 = n(530134),
-    n6 = n(959070),
+    n6 = n(530134),
+    n9 = n(959070),
     le = n(625928),
     lt = n(960850),
     ln = n(702841),
@@ -2644,7 +2644,7 @@ function lV(e) {
     });
 }
 var lW = n(451909),
-    l$ = n(190457),
+    l$ = n(439762),
     lq = n(91624),
     lK = n(931664),
     lY = n(631576),
@@ -2670,8 +2670,8 @@ function l3(e, t) {
 var l5 = n(774812),
     l8 = n(691060),
     l7 = n(91871),
-    l9 = n.n(l7),
-    l6 = n(190199),
+    l6 = n.n(l7),
+    l9 = n(190199),
     ie = n(914427),
     it = n(236285),
     il = n(287683);
@@ -2681,10 +2681,10 @@ function ii(e) {
         r = (0, g.bG)([it.Ay], () => (null != s ? it.Ay.getUsableCustomEmojiById(s) : null)),
         o = null != s || null != a;
     return (0, i.jsx)(
-        l6.x4,
+        l9.x4,
         {
             value: n,
-            children: (0, i.jsx)(l6.x4.Label, {
+            children: (0, i.jsx)(l9.x4.Label, {
                 children: (0, i.jsxs)("div", {
                     className: il.nM,
                     children: [
@@ -2719,7 +2719,7 @@ function is(e) {
         placeholder: e0.intl.string(e0.t.MbhGm7),
         "aria-label": e0.intl.string(e0.t.MbhGm7),
         children: (e) =>
-            r.filter((t) => l9()(e.toLowerCase(), t.name.toLowerCase())).map((e) => (0, i.jsx)(ii, { tag: e }, e.id)),
+            r.filter((t) => l6()(e.toLowerCase(), t.name.toLowerCase())).map((e) => (0, i.jsx)(ii, { tag: e }, e.id)),
     });
 }
 var ia = n(376310),
@@ -3253,7 +3253,7 @@ let iC = s.memo(function (e) {
                         ? (0, i.jsx)(iC, { parentChannel: t, textValue: h.textValue })
                         : (0, i.jsx)("div", {
                               onClick: v,
-                              children: (0, i.jsx)(n6.Ay, {
+                              children: (0, i.jsx)(n9.Ay, {
                                   type: ig,
                                   setEditorRef: o,
                                   channel: t,
@@ -3387,7 +3387,7 @@ let iT = s.memo(function (e) {
                                 }),
                             ],
                         }),
-                        (0, i.jsx)(n9.A, { type: ig, className: ix.n1, onClick: f, channel: t }, "expression"),
+                        (0, i.jsx)(n6.A, { type: ig, className: ix.n1, onClick: f, channel: t }, "expression"),
                     ],
                 }),
                 h &&
@@ -3671,7 +3671,7 @@ function i3(e) {
 var i5 = n(983851),
     i8 = n(607567),
     i7 = n(930371);
-function i9(e) {
+function i6(e) {
     let { channel: t } = e,
         n = (0, g.bG)([i8.Ay], () => i8.Ay.getVoiceStatesForChannel(t).length, [t]);
     return 0 === n
@@ -3684,13 +3684,13 @@ function i9(e) {
               ],
           });
 }
-var i6 = n(227483);
+var i9 = n(227483);
 function se(e) {
     let { message: t, channel: n, containerWidth: l } = e,
         s = su({ message: t, channel: n, containerWidth: l - 32, hideTags: !0 }),
         { hasUnreads: a } = (0, eA.X5)(n),
         { content: r } = (0, eA.gk)({ firstMessage: t, formatInline: !1, noStyleAndInteraction: !0, hasUnreads: a });
-    return null != s ? s : (0, i.jsx)(iQ.Ay, { message: t, content: r, className: i6.BK, compact: !1 });
+    return null != s ? s : (0, i.jsx)(iQ.Ay, { message: t, content: r, className: i9.BK, compact: !1 });
 }
 function st(e) {
     let {
@@ -3726,26 +3726,26 @@ function st(e) {
         onClick: S,
         onFocus: _,
         onContextMenu: y,
-        className: r()(i6.kL, d, { [i6.nT]: x }),
+        className: r()(i9.kL, d, { [i9.nT]: x }),
         "aria-label": e0.intl.formatToPlainString(e0.t.pgYN6c, { title: A ?? "", count: C }),
         style: { ...a },
         ...k,
         children: [
             (0, i.jsxs)("div", {
-                className: i6.wx,
+                className: i9.wx,
                 children: [
-                    (0, i.jsx)(ei.eu, { src: R, size: es._3.SIZE_24, className: i6.my, "aria-label": M }),
+                    (0, i.jsx)(ei.eu, { src: R, size: es._3.SIZE_24, className: i9.my, "aria-label": M }),
                     (0, i.jsx)(b.E, {
                         variant: "text-md/semibold",
                         color: "text-strong",
-                        className: i6.fh,
+                        className: i9.fh,
                         children: M,
                     }),
-                    (0, i.jsx)(b.E, { variant: "text-xs/medium", color: "text-subtle", className: i6.vE, children: T }),
+                    (0, i.jsx)(b.E, { variant: "text-xs/medium", color: "text-subtle", className: i9.vE, children: T }),
                 ],
             }),
             (0, i.jsxs)(el.M, {
-                className: i6.rf,
+                className: i9.rf,
                 children: [
                     j &&
                         null == f &&
@@ -3755,17 +3755,17 @@ function st(e) {
                             children: e0.intl.string(e0.t.mE3KJN),
                         }),
                     null != f ? (0, i.jsx)(se, { message: f, channel: n, containerWidth: a.width }) : null,
-                    I ? (0, i.jsx)(ey.Ay, { channel: n, className: i6.GA }) : null,
-                    (0, i.jsx)("div", { className: i6.oO, children: (0, i.jsx)(i3, { channel: n, firstMessage: f }) }),
+                    I ? (0, i.jsx)(ey.Ay, { channel: n, className: i9.GA }) : null,
+                    (0, i.jsx)("div", { className: i9.oO, children: (0, i.jsx)(i3, { channel: n, firstMessage: f }) }),
                 ],
             }),
             (0, i.jsx)(el.M, {
-                className: i6.qr,
+                className: i9.qr,
                 children: (0, i.jsx)(sx, {
                     channel: n,
                     firstMessage: f,
                     facepileRef: N,
-                    leftAccessory: (0, i.jsx)(i9, { channel: n }),
+                    leftAccessory: (0, i.jsx)(i6, { channel: n }),
                 }),
             }),
         ],

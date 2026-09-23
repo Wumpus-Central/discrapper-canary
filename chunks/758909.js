@@ -5,7 +5,7 @@ var n = a(477900),
     r = a(554146),
     l = a(826673),
     o = a(345942),
-    c = a(394107),
+    c = a(344045),
     u = a(375708);
 function d(t) {
     let { onClose: i, guildId: a, ...d } = t,

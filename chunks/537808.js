@@ -10,7 +10,7 @@ var i = t(477900),
     u = t(919577),
     h = t(376310),
     m = t(734057),
-    p = t(490094),
+    p = t(670064),
     x = t(375708),
     C = t(312448);
 let g = ["Chill", "Experienced", "Beginner Friendly", "18+", "Women Only", "LGBTQ+ Friendly"].map((e) => ({

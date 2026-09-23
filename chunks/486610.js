@@ -12,7 +12,7 @@ let c = {
     parse: (e) => ({ type: o.D.TEXT, content: e[0] }),
 };
 var d = n(247186),
-    u = n(29814);
+    u = n(999915);
 let g = (0, n(551965).A)([
         r().pick(u.Ay.RULES, ["text", "link"]),
         { image: c },

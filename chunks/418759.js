@@ -1,6 +1,6 @@
 Object.defineProperty(t, "__esModule", { value: !0 });
 let n = r(115004),
-    a = r(167385),
+    a = r(389766),
     i = r(767130);
 class s extends a.AbstractParserWithWordBoundaryChecking {
     innerPattern(e) {

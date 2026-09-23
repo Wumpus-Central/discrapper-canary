@@ -154,7 +154,7 @@ let ei = a.memo(function (e) {
     let { className: t } = e;
     return (0, s.jsx)("div", { className: Z()(t, er.En) });
 });
-var en = l(202091),
+var en = l(498516),
     ec = l(717421),
     eo = l(775602);
 let ed = { mass: 1, tension: 600, friction: 60, clamp: !0 },
@@ -769,8 +769,8 @@ function e4(e) {
               ],
           });
 }
-var e9 = l(468646),
-    e5 = l(842503);
+var e5 = l(468646),
+    e9 = l(842503);
 let e8 = function (e) {
     let { loadId: t } = e,
         l = x.A.useField("categoryId"),
@@ -787,10 +787,10 @@ let e8 = function (e) {
         c = l === F.Iq ? N.intl.string(N.t.Ivw1Is) : N.intl.formatToPlainString(N.t["+1WAFb"], { categoryName: r }),
         o = l === F.Iq ? N.intl.string(N.t.aXvEjd) : N.intl.format(N.t.XLioqn, { onClick: n });
     return (0, s.jsxs)("div", {
-        className: e9.kL,
+        className: e5.kL,
         children: [
-            (0, s.jsx)("img", { alt: "", src: e5, className: e9.Sl }),
-            (0, s.jsx)(g.D, { variant: "heading-xl/semibold", className: e9.wx, children: c }),
+            (0, s.jsx)("img", { alt: "", src: e9, className: e5.Sl }),
+            (0, s.jsx)(g.D, { variant: "heading-xl/semibold", className: e5.wx, children: c }),
             (0, s.jsx)($.E, { variant: "text-md/normal", color: "text-default", children: o }),
         ],
     });

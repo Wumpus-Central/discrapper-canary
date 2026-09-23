@@ -3,7 +3,7 @@ var t = s(477900),
     i = s(582128),
     n = s(503698),
     a = s.n(n),
-    o = s(202091),
+    o = s(498516),
     c = s(738678),
     d = s(12470),
     r = s(17928),
@@ -263,9 +263,9 @@ let e_ = [eO.lp.ACTIVITY],
                 });
         }
         let { ref: e1, width: e8, height: e7 } = (0, U.Ay)(),
-            e2 = (0, r.bG)([ep.A], () => (u.type === eO.lp.USER ? ep.A.getVoiceVolume(u.id) : -1 / 0)),
-            e6 = (0, H.v)({ isSpeaking: eU, voiceDb: e2, spreadDirection: H.O.INSET_ONLY, maxInnerSpreadRadius: 4 }),
-            e5 = (0, eO.Ay)(u) ? p.k : eP ? m.VideoIcon : A.E,
+            e6 = (0, r.bG)([ep.A], () => (u.type === eO.lp.USER ? ep.A.getVoiceVolume(u.id) : -1 / 0)),
+            e5 = (0, H.v)({ isSpeaking: eU, voiceDb: e6, spreadDirection: H.O.INSET_ONLY, maxInnerSpreadRadius: 4 }),
+            e2 = (0, eO.Ay)(u) ? p.k : eP ? m.VideoIcon : A.E,
             e9 = u.type === eO.lp.STREAM && k;
         return (0, t.jsx)(D.A, {
             section: eb.JJy.VOICE_CHANNEL_TILE,
@@ -325,7 +325,7 @@ let e_ = [eO.lp.ACTIVITY],
                                         O
                                             ? (0, t.jsx)("div", {
                                                   className: eM._Q,
-                                                  children: (0, t.jsx)(e5, {
+                                                  children: (0, t.jsx)(e2, {
                                                       size: "md",
                                                       color: "currentColor",
                                                       className: eM.Dt,
@@ -364,7 +364,7 @@ let e_ = [eO.lp.ACTIVITY],
                                         b && !R
                                             ? (0, t.jsx)("div", {
                                                   className: a()(eM.PQ, { [eM.pU]: !k && (ew || null != eW) }),
-                                                  style: k || ew ? void 0 : e6,
+                                                  style: k || ew ? void 0 : e5,
                                               })
                                             : null,
                                     ],

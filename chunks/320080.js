@@ -3,7 +3,7 @@ var s = t(477900),
     i = t(582128),
     a = t(503698),
     l = t.n(a),
-    r = t(202091),
+    r = t(498516),
     o = t(17928),
     c = t(661531),
     d = t(707554),
@@ -102,7 +102,7 @@ var X = t(806163),
     eo = t(606049),
     ec = t(812299),
     ed = t(943220),
-    eu = t(190457),
+    eu = t(439762),
     eh = t(995273),
     eg = t(854627),
     em = t(95701),
@@ -887,8 +887,8 @@ var eQ = t(435558),
     e3 = t(847374),
     e2 = t(912592),
     e4 = t(821609),
-    e8 = t(475825),
-    e6 = t(928039),
+    e6 = t(475825),
+    e8 = t(928039),
     e9 = t(625494);
 let e7 = { [eC.Ur.UNREAD]: !0, [eC.Ur.TODAY]: !0, [eC.Ur.YESTERDAY]: !1, [eC.Ur.OLDER]: !1 },
     e5 = { [eC.Ur.UNREAD]: !0, [eC.Ur.TODAY]: !1, [eC.Ur.YESTERDAY]: !1, [eC.Ur.OLDER]: !1 },
@@ -910,7 +910,7 @@ let e7 = { [eC.Ur.UNREAD]: !0, [eC.Ur.TODAY]: !0, [eC.Ur.YESTERDAY]: !1, [eC.Ur.
                     e({ lastInitializedWithUnreads: t, messageCategoryOpenStates: t ? e5 : e7 }));
         },
     }));
-var nn = t(871423),
+var nn = t(645617),
     nt = t(875436);
 function ns(e) {
     e.stopPropagation();
@@ -989,7 +989,7 @@ function nr(e) {
         x = (0, M.op)(),
         p = i.useRef(null),
         A = i.useRef(0),
-        I = (0, e6.A)(g, p),
+        I = (0, e8.A)(g, p),
         { entrypoint: N, notificationCenterVariant: f } = (0, U.X8)({ location: "NotificationsInboxSidebarList" }),
         {
             isLoading: j,
@@ -1154,7 +1154,7 @@ function nr(e) {
                         children: (0, s.jsx)(e1.PR, {
                             children: (e) => {
                                 let { ref: n, ...t } = e;
-                                return (0, s.jsx)(e8.OZ, {
+                                return (0, s.jsx)(e6.OZ, {
                                     ref: (e) => {
                                         ((p.current = e), (n.current = e?.getScrollerNode() ?? null));
                                     },
