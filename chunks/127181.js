@@ -1,5 +1,5 @@
-n.d(t, { B: () => s, MZ: () => o, TH: () => l, tn: () => i });
-let a = [
+a.d(t, { B: () => s, MZ: () => o, TH: () => l, tn: () => i });
+let n = [
     {
         date: "2026-09-23",
         platforms: ["mobile"],
@@ -15,6 +15,12 @@ let a = [
         platforms: ["desktop", "mobile"],
         summary:
             'When something breaks behind the scenes, people using your app now see a plain "Something went wrong" message instead of internal error text.',
+    },
+    {
+        date: "2026-09-23",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "Project, app, secrets, and model settings now live together in one Settings dialog, one tab each; the gear beside the chat is gone.",
     },
     {
         date: "2026-09-22",
@@ -508,10 +514,10 @@ let a = [
     },
 ];
 function l(e) {
-    return a.filter((t) => t.platforms.includes(e)).slice(0, 3);
+    return n.filter((t) => t.platforms.includes(e)).slice(0, 3);
 }
 function i(e) {
-    return a.filter((t) => t.platforms.includes(e));
+    return n.filter((t) => t.platforms.includes(e));
 }
 function s(e) {
     return i(e).length > 3;
