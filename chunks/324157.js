@@ -29,20 +29,19 @@ function d(e, t) {
 function u(e) {
     var t, a, l;
     let s,
-        { promotion: i, progressIndicator: c, helpCenterId: u, timeLeftDate: m, locale: p } = e,
-        h =
+        { promotion: i, promotionProgress: c, progressIndicator: u, helpCenterId: m, timeLeftDate: p, locale: h } = e,
+        g =
             ((t = i.rewardStatus),
-            (a = i.progress?.current ?? 0),
-            (s = (0, r.x)(c.rewardStates, t, a)),
-            { title: s?.title ?? c.title, description: s?.description ?? c.description }),
-        g = { locale: p, endsAt: i.endsAt, redemptionEndsAt: i.redemptionEndsAt, helpCenterId: u },
-        v = null != m ? (0, n.WU)(m) : null,
-        x = i.progress,
-        f = null != x ? o.intl.formatToPlainString(o.t.lyXyiY, { current: x.current, target: x.target }) : null,
-        b = null != v && v > 0 ? o.intl.formatToPlainString(o.t.w4GEvw, { days: v }) : null;
+            (a = c?.current ?? 0),
+            (s = (0, r.x)(u.rewardStates, t, a)),
+            { title: s?.title ?? u.title, description: s?.description ?? u.description }),
+        v = { locale: h, endsAt: i.endsAt, redemptionEndsAt: i.redemptionEndsAt, helpCenterId: m },
+        x = null != p ? (0, n.WU)(p) : null,
+        f = null != c ? o.intl.formatToPlainString(o.t.lyXyiY, { current: c.current, target: c.target }) : null,
+        b = null != x && x > 0 ? o.intl.formatToPlainString(o.t.w4GEvw, { days: x }) : null;
     return {
-        title: d(h.title, g),
-        description: ((l = h.description), null != l && "" !== l ? d(l, g) : null),
+        title: d(g.title, v),
+        description: ((l = g.description), null != l && "" !== l ? d(l, v) : null),
         progressText: f,
         timeLeftText: b,
     };

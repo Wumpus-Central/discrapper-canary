@@ -9,26 +9,26 @@ var n = r(477900),
     c = r(17928),
     d = r(812993),
     g = r(297264),
-    p = r(834730),
-    m = r(821609),
+    m = r(834730),
+    p = r(821609),
     h = r(793574),
     E = r(688810),
-    _ = r(617986),
+    S = r(617986),
     x = r(773669),
-    S = r(318346),
-    v = r(287809),
-    I = r(174459),
-    L = r(440938),
-    A = r(993408),
-    C = r(304210),
-    y = r(39196),
-    f = r(655583),
-    O = r(212407),
-    k = r(521e3),
+    v = r(318346),
+    C = r(287809),
+    _ = r(174459),
+    A = r(440938),
+    I = r(993408),
+    y = r(304210),
+    L = r(39196),
+    f = r(320089),
+    k = r(212407),
+    O = r(521e3),
     j = r(146919),
-    T = r(815280),
+    b = r(815280),
     P = r(60140),
-    b = r(758836),
+    T = r(758836),
     B = r(652215),
     N = r(375708),
     R = r(105499);
@@ -47,27 +47,27 @@ let G = {
                 handleTransition: r,
                 category: s,
                 heroBlock: H,
-                tab: D,
-                onVisibilityChange: M,
-                badge: U,
-                hideButton: w = !1,
+                tab: M,
+                onVisibilityChange: D,
+                badge: w,
+                hideButton: U = !1,
                 hideCards: F = !1,
             } = e,
             V = (0, i.K)(
                 (e) => {
-                    M?.(e);
+                    D?.(e);
                 },
                 0.1,
-                null != M,
+                null != D,
             ),
             K = l.useRef(null),
-            X = (0, j.yB)("HeroBlock"),
-            z = (0, c.bG)([v.default], () => v.default.getCurrentUser()),
-            W = (0, c.bG)([x.default], () => x.default.locale),
-            Y = (0, L.uM)(),
+            W = (0, j.yB)("HeroBlock"),
+            X = (0, c.bG)([C.default], () => C.default.getCurrentUser()),
+            z = (0, c.bG)([x.default], () => x.default.locale),
+            Y = (0, A.uM)(),
             { analyticsLocations: $ } = (0, E.Ay)(h.A.COLLECTIBLES_SHOP_HERO),
-            Z = (0, C.S)(),
-            q = l.useMemo(
+            q = (0, y.S)(),
+            Z = l.useMemo(
                 () =>
                     null != H
                         ? H
@@ -89,9 +89,9 @@ let G = {
                             },
                 [H, s],
             ),
-            J = l.useMemo(() => (0, y.HF)(Z, q), [Z, q]),
+            J = l.useMemo(() => (0, L.HF)(q, Z), [q, Z]),
             Q = null != J,
-            ee = l.useMemo(() => (null == Z ? q : (0, y.O8)(Z, q, D, W)), [Z, q, D, W]),
+            ee = l.useMemo(() => (null == q ? Z : (0, L.O8)(q, Z, M, z)), [q, Z, M, z]),
             {
                 bannerDisplayConfig: et,
                 logoDisplayConfig: er,
@@ -99,39 +99,39 @@ let G = {
                 heroBannerStatic: el,
                 heroBannerAnimated: es,
                 heroBannerRive: ea,
-            } = (0, O.Kk)(ee),
+            } = (0, k.Kk)(ee),
             ei = et?.responsive ?? !1,
             eo = et?.backgroundStyle,
             eu = null != ea && !Q,
-            ec = D === b.G2.ORBS,
+            ec = M === T.G2.ORBS,
             ed = null != s && s.isOrbsExclusive,
             eg = ec ? N.intl.string(N.t["1CdL8d"]) : N.intl.string(N.t.xYKa1T);
-        function ep() {
+        function em() {
             ec
-                ? ((0, S.Y)({
+                ? ((0, v.Y)({
                       pageType: B.liQ.SHOP_ORBS_TAB,
                       sectionType: B.JJy.ORBS_SHOP_HERO_BLOCK,
                       ctaObject: B.ZSU.CTA_TO_QUEST_HOME,
                   }),
-                  (0, _.mA)({ fromContent: o.u.ORBS_SHOP_HERO_CTA }))
+                  (0, S.mA)({ fromContent: o.u.ORBS_SHOP_HERO_CTA }))
                 : (r?.({
                       sourceButton: "shop latest category hero",
                       categorySkuId: ee.categorySkuId,
                       isInternalShopDeeplink: !0,
                       isOrbsExclusive: ed,
                   }),
-                  I.default.track(B.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                  _.default.track(B.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                       collectibles_shop_session_id: Y?.sessionId,
                       sku_id: ee.categorySkuId,
-                      page_type: D,
+                      page_type: M,
                       page_section: Y?.pageSection,
                       page_category: Y?.pageCategory,
                       cta_name: "shop latest category hero button",
                   }));
         }
-        if (null == z || (!t && ee === G)) return null;
-        function em() {
-            return t || w ? null : (0, n.jsx)(m.$, { variant: "overlay-primary", onClick: ep, text: eg });
+        if (null == X || (!t && ee === G)) return null;
+        function ep() {
+            return t || U ? null : (0, n.jsx)(p.$, { variant: "overlay-primary", onClick: em, text: eg });
         }
         return (0, n.jsx)(E.f5, {
             value: $,
@@ -139,13 +139,13 @@ let G = {
                 ref: V,
                 className: R.os,
                 children: [
-                    eu ? (0, k.VA)({ isCustomCursorEnabled: X, className: R.Xt, riveEventTargetRef: K }) : null,
+                    eu ? (0, O.VA)({ isCustomCursorEnabled: W, className: R.Xt, riveEventTargetRef: K }) : null,
                     (0, n.jsx)("div", {
                         className: a()(R.vK, { [R.cN]: eu, [R.no]: ei }),
                         style: null != eo ? { background: eo } : void 0,
                         children:
                             null != el &&
-                            (0, n.jsx)(T.A, {
+                            (0, n.jsx)(b.A, {
                                 bannerStatic: el,
                                 bannerAnimated: es,
                                 bannerRive: eu ? ea : void 0,
@@ -154,19 +154,19 @@ let G = {
                             }),
                     }),
                     (0, n.jsxs)("div", {
-                        className: a()(R.xX, { [R.ub]: Q && D === b.G2.COLLECTION_INDEX }),
+                        className: a()(R.xX, { [R.ub]: Q && M === T.G2.COLLECTION_INDEX }),
                         children: [
                             eu
-                                ? (0, n.jsx)("div", { className: R.fy, children: em() })
+                                ? (0, n.jsx)("div", { className: R.fy, children: ep() })
                                 : (0, n.jsxs)("div", {
-                                      className: a()(R.bC, { [R.no]: ei, [R.RD]: Q && D === b.G2.COLLECTION_INDEX }),
+                                      className: a()(R.bC, { [R.no]: ei, [R.RD]: Q && M === T.G2.COLLECTION_INDEX }),
                                       children: [
                                           t
                                               ? (0, n.jsx)("div", { className: R.Hw })
                                               : (0, n.jsxs)("div", {
                                                     className: R.Hw,
                                                     children: [
-                                                        (0, A.HF)(ee.unpublishedAt) &&
+                                                        (0, I.HF)(ee.unpublishedAt) &&
                                                             (0, n.jsx)(d.Lp, {
                                                                 disableColor: !0,
                                                                 text: N.intl.string(N.t["h/uBCR"]),
@@ -175,8 +175,8 @@ let G = {
                                                         (0, n.jsxs)("div", {
                                                             className: R.Wq,
                                                             children: [
-                                                                null != U &&
-                                                                    (0, n.jsx)("div", { className: R._I, children: U }),
+                                                                null != w &&
+                                                                    (0, n.jsx)("div", { className: R._I, children: w }),
                                                                 null != en &&
                                                                     (0, n.jsx)("img", {
                                                                         className: R.rm,
@@ -193,7 +193,7 @@ let G = {
                                                                     }),
                                                                 null != ee.summary &&
                                                                     "" !== ee.summary &&
-                                                                    (0, n.jsx)(p.E, {
+                                                                    (0, n.jsx)(m.E, {
                                                                         variant: "text-md/normal",
                                                                         className: a()(ec ? R.h4 : R.Tm, { [R.vd]: Q }),
                                                                         style: { color: ee.bannerTextColor ?? void 0 },
@@ -201,9 +201,9 @@ let G = {
                                                                     }),
                                                             ],
                                                         }),
-                                                        null != Z &&
+                                                        null != q &&
                                                             Q &&
-                                                            D === b.G2.COLLECTION_INDEX &&
+                                                            M === T.G2.COLLECTION_INDEX &&
                                                             (0, n.jsx)("div", {
                                                                 className: R.Zz,
                                                                 children: (0, n.jsx)(f.A, {
@@ -213,19 +213,19 @@ let G = {
                                                             }),
                                                     ],
                                                 }),
-                                          !w && !t && (0, n.jsx)("div", { className: R.IS, children: em() }),
+                                          !U && !t && (0, n.jsx)("div", { className: R.IS, children: ep() }),
                                       ],
                                   }),
                             !F &&
                                 (0, n.jsx)(P.A, {
                                     heroBlockRecord: ee,
-                                    tab: D,
+                                    tab: M,
                                     isBlockLoading: t,
-                                    layout: D === b.G2.HOME ? "hscroll" : "feed",
+                                    layout: M === T.G2.HOME ? "hscroll" : "feed",
                                 }),
                         ],
                     }),
-                    null != Z &&
+                    null != q &&
                         null != J &&
                         !Q &&
                         (0, n.jsx)(f.A, { collectionId: ee.categorySkuId, variant: "full" }),

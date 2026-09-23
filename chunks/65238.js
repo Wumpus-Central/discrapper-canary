@@ -41,6 +41,14 @@ class a extends i.A {
                                             orbsEnabled: t.discount.orbs_enabled,
                                         }
                                       : null,
+                              action:
+                                  null != t.action
+                                      ? {
+                                            actionType: t.action.action_type,
+                                            deliveryMode: t.action.delivery_mode,
+                                            skuIds: t.action.sku_ids ?? [],
+                                        }
+                                      : null,
                           }
                     : null,
             skuIds: (function (e) {

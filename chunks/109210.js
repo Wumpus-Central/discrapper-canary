@@ -27,8 +27,8 @@ var S = l(304210),
     _ = l(39196),
     k = l(100057),
     y = l(599062),
-    I = l(159439),
-    N = l(998694),
+    N = l(159439),
+    I = l(998694),
     A = l(498516),
     R = l(607399),
     T = l(946015),
@@ -268,8 +268,8 @@ var ep = l(435558),
     e_ = l(652215),
     ek = l(146919),
     ey = l(645501);
-let eI = [],
-    eN = function (e) {
+let eN = [],
+    eI = function (e) {
         let {
                 isLoading: t,
                 title: l,
@@ -353,8 +353,8 @@ let eI = [],
             })({ sortedSkuIds: n, hasShopDiscount: m, orbsSupportedOnly: d }),
             k = f === J.RANDOM,
             y = (0, ei.$)("feed_block"),
-            [I, N] = r.useState(0),
-            A = `${f}:${!0 === d}:${I}`,
+            [N, I] = r.useState(0),
+            A = `${f}:${!0 === d}:${N}`,
             [R, T] = r.useState({ key: A, extra: 0 }),
             L = R.key === A ? R.extra : 0;
         R.key !== A && T({ key: A, extra: 0 });
@@ -415,10 +415,10 @@ let eI = [],
                     return { skuIds: null, isLoading: !1, hasMore: !1 };
                 let h = null != u && u.sortIdentityKey === c ? u : null;
                 return { skuIds: h?.skuIds ?? null, isLoading: u?.key !== d, hasMore: h?.hasMore ?? !1 };
-            })({ sortType: f, orbsSupportedOnly: d, numVisibleItems: s + L, enabled: y, shuffleNonce: I }),
+            })({ sortType: f, orbsSupportedOnly: d, numVisibleItems: s + L, enabled: y, shuffleNonce: N }),
             w = D ?? j,
             F = r.useMemo(() => w.slice(0, s + L + (k ? 32 : 8)), [w, s, L, k]),
-            U = (0, ea.hv)(y ? F : eI, { needsCategory: !1 }),
+            U = (0, ea.hv)(y ? F : eN, { needsCategory: !1 }),
             W = (0, er.c)("feed_block"),
             K = r.useMemo(() => {
                 if (!y) return F;
@@ -452,7 +452,7 @@ let eI = [],
         }
         let eg = (0, Z.bG)([ee.Ay], () => ee.Ay.useReducedMotion),
             ep = (0, Z.bG)([el.A], () => el.A.isFocused()),
-            eN = !eg && ep,
+            eI = !eg && ep,
             {
                 animationPhase: eA,
                 startAnimation: eR,
@@ -548,9 +548,9 @@ let eI = [],
         if (null == u) return null;
         function eF(e, t) {
             let l;
-            return eN && eA === em.SHUFFLE_OUT
+            return eI && eA === em.SHUFFLE_OUT
                 ? (0, i.jsx)("div", { className: z.Z2, children: (0, i.jsx)(ed.A, {}) }, `${e}-${t}`)
-                : (eN &&
+                : (eI &&
                       (eA === em.SORT_OUT
                           ? (l = z.MW)
                           : eA === em.SHUFFLE_IN
@@ -621,7 +621,7 @@ let eI = [],
                                                     eR({
                                                         isShuffling: !0,
                                                         onOutroComplete: () => {
-                                                            (C(), N((e) => e + 1));
+                                                            (C(), I((e) => e + 1));
                                                         },
                                                         returnRef: eD,
                                                         holdIntroUntilReady: y,
@@ -649,7 +649,7 @@ let eI = [],
                                   children: [...Array(12)].map((e, t) => (0, i.jsx)(ed.A, {}, t + 1)),
                               })
                             : y
-                              ? eN && eA === em.SHUFFLE_OUT
+                              ? eI && eA === em.SHUFFLE_OUT
                                   ? [...Array(s)].map((e, t) =>
                                         (0, i.jsx)(
                                             "div",
@@ -825,7 +825,7 @@ function eU(e) {
 }
 var eG = l(227205),
     eV = l(773669),
-    e$ = l(655583),
+    e$ = l(320089),
     eW = l(442036),
     ez = l(212407),
     eK = l(815280),
@@ -876,6 +876,17 @@ let eJ = function (e) {
         } = (0, ez.Kk)(g),
         S = x?.responsive ?? !1,
         C = x?.backgroundStyle;
+    function k() {
+        (s?.({ sourceButton: "shop latest category hero", categorySkuId: g.categorySkuId, isInternalShopDeeplink: !0 }),
+            b.default.track(e_.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                collectibles_shop_session_id: u?.sessionId,
+                sku_id: g.categorySkuId,
+                page_type: a,
+                page_section: u?.pageSection,
+                page_category: u?.pageCategory,
+                cta_name: "shop latest category hero button",
+            }));
+    }
     return null == c || null == h
         ? null
         : (0, i.jsx)(V.f5, {
@@ -898,43 +909,31 @@ let eJ = function (e) {
                                       null != v &&
                                       (0, i.jsx)(eK.A, { bannerStatic: v, bannerAnimated: j, isResponsive: S }),
                               }),
-                              (0, i.jsxs)("div", {
-                                  className: eX.mz,
-                                  children: [
-                                      (0, i.jsx)("div", {
-                                          className: eX.bC,
-                                          children: (0, i.jsx)(eq, {
-                                              heroBlockRecord: g,
-                                              heroLogo: p,
-                                              logoDisplayConfig: f,
-                                              collectionId: l.categorySkuId,
-                                              isLoading: n,
-                                          }),
-                                      }),
-                                      (0, i.jsx)(eW.A, {
-                                          handleButtonClick: function () {
-                                              (s?.({
-                                                  sourceButton: "shop latest category hero",
-                                                  categorySkuId: g.categorySkuId,
-                                                  isInternalShopDeeplink: !0,
+                              (0, i.jsx)(eR.N, {
+                                  theme: e_.NJ8.DARK,
+                                  children: (e) =>
+                                      (0, i.jsxs)("div", {
+                                          className: o()(eX.mz, e),
+                                          children: [
+                                              (0, i.jsx)("div", {
+                                                  className: eX.bC,
+                                                  children: (0, i.jsx)(eq, {
+                                                      heroBlockRecord: g,
+                                                      heroLogo: p,
+                                                      logoDisplayConfig: f,
+                                                      collectionId: l.categorySkuId,
+                                                      isLoading: n,
+                                                  }),
                                               }),
-                                                  b.default.track(e_.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                                                      collectibles_shop_session_id: u?.sessionId,
-                                                      sku_id: g.categorySkuId,
-                                                      page_type: a,
-                                                      page_section: u?.pageSection,
-                                                      page_category: u?.pageCategory,
-                                                      cta_name: "shop latest category hero button",
-                                                  }));
-                                          },
+                                              (0, i.jsx)(eW.A, { handleButtonClick: k }),
+                                              (0, i.jsx)(eY.A, {
+                                                  heroBlockRecord: g,
+                                                  tab: a,
+                                                  isBlockLoading: n,
+                                                  layout: "hscroll",
+                                              }),
+                                          ],
                                       }),
-                                      (0, i.jsx)(eY.A, {
-                                          heroBlockRecord: g,
-                                          tab: a,
-                                          isBlockLoading: n,
-                                          layout: "hscroll",
-                                      }),
-                                  ],
                               }),
                           ],
                       }),
@@ -1500,8 +1499,8 @@ let tk = function (e) {
     });
 };
 var ty = l(613258),
-    tI = l(815021),
-    tN = l(939249),
+    tN = l(815021),
+    tI = l(939249),
     tA = l(975571);
 let tR = function (e) {
         let { wideBannerBlock: t, tab: l } = e,
@@ -1531,13 +1530,13 @@ let tR = function (e) {
             _ = null != t.ctaRoute && "" !== t.ctaRoute,
             k = !0 !== t.disableCta && ((null != t.ctaText && "" !== t.ctaText) || _),
             y = null != t.logoURL && "" !== t.logoURL,
-            I = r.useCallback(() => {
+            N = r.useCallback(() => {
                 if ((f(!0), t.isDismissible)) {
                     let e = t.dismissibleContentVersion ?? 0;
                     (0, x.$l)(d.M.COLLECTIBLES_SHOP_WIDE_BANNER, e, { dismissAction: eP.i.USER_DISMISS });
                 }
             }, [t.isDismissible, t.dismissibleContentVersion]),
-            N = r.useCallback(
+            I = r.useCallback(
                 (e) => {
                     b.default.track(e_.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                         collectibles_shop_session_id: j?.sessionId,
@@ -1555,7 +1554,7 @@ let tR = function (e) {
             A = r.useCallback(
                 function () {
                     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-                    if ((N(e), null != t.ctaRoute && "" !== t.ctaRoute)) {
+                    if ((I(e), null != t.ctaRoute && "" !== t.ctaRoute)) {
                         let e = t.ctaRoute;
                         if (e.includes("game-shop")) {
                             let t = e.match(/\/channels\/([0-9]+)\/game-shop\/([0-9]+)/);
@@ -1567,7 +1566,7 @@ let tR = function (e) {
                         } else (0, eM.pX)(e);
                     }
                 },
-                [t.ctaRoute, N],
+                [t.ctaRoute, I],
             );
         if (null == S || g) return null;
         let R = o()(z.nM, z.Tq, z.TS, z.YB, { [z._1]: C, [z.vb]: _ }),
@@ -1576,10 +1575,10 @@ let tR = function (e) {
                     t.isDismissible &&
                         (0, i.jsx)("div", {
                             className: z.Mh,
-                            children: (0, i.jsx)(tI.J, {
+                            children: (0, i.jsx)(tN.J, {
                                 size: "sm",
                                 onClick: (e) => {
-                                    (e.stopPropagation(), I());
+                                    (e.stopPropagation(), N());
                                 },
                                 "aria-label": P.intl.string(P.t.WAI6xu),
                             }),
@@ -1649,19 +1648,19 @@ let tR = function (e) {
                     onChange: v,
                     threshold: 0,
                     children: _
-                        ? (0, i.jsx)(tN.D, { innerRef: s, onClick: () => A(null), className: o()(e, R), children: T })
+                        ? (0, i.jsx)(tI.D, { innerRef: s, onClick: () => A(null), className: o()(e, R), children: T })
                         : (0, i.jsx)("div", { ref: s, className: o()(e, R), children: T }),
                 }),
         });
     },
     tT = (e) => {
         let { handleTransition: t, numVisibleItems: l, isFetchingCategories: n, tab: s } = e,
-            { noCache: a, includeUnpublished: u } = (0, N.A)(),
+            { noCache: a, includeUnpublished: u } = (0, I.A)(),
             [m, h] = r.useState(!1),
             g = (0, E.uM)(),
             b = g?.sessionId ?? "",
             v = (0, f.H)({ location: "collectibles_shop_feed" }),
-            I = (0, S.S)();
+            N = (0, S.S)();
         r.useEffect(() => {
             (0, k.z)({
                 sessionId: b,
@@ -1700,7 +1699,7 @@ let tR = function (e) {
                     children: [
                         (0, i.jsx)(eG.A, { isLoading: A, handleTransition: t, tab: s }),
                         (0, i.jsx)(X, { isLoading: A, handleTransition: t, categories: [] }),
-                        (0, i.jsx)(eN, {
+                        (0, i.jsx)(eI, {
                             isLoading: A,
                             title: s === eD.G2.ORBS ? P.intl.string(P.t.dFgeuZ) : P.intl.string(P.t.NSv5KV),
                             numVisibleItems: l,
@@ -1716,11 +1715,11 @@ let tR = function (e) {
                                 g = !1;
                             switch (e.type) {
                                 case c.g.HERO:
-                                    let f = (0, _.HF)(I, e);
-                                    if (null != I && f?.subtype === p.h5.TAKEOVER) {
+                                    let f = (0, _.HF)(N, e);
+                                    if (null != N && f?.subtype === p.h5.TAKEOVER) {
                                         u = (0, i.jsx)(
                                             eJ,
-                                            { promotion: I, isLoading: A, handleTransition: t, heroBlock: e, tab: s },
+                                            { promotion: N, isLoading: A, handleTransition: t, heroBlock: e, tab: s },
                                             a,
                                         );
                                         break;
@@ -1737,7 +1736,7 @@ let tR = function (e) {
                                 case c.g.FEED:
                                     let b = e.sortedSkuIds;
                                     u = (0, i.jsx)(
-                                        eN,
+                                        eI,
                                         {
                                             title:
                                                 s === eD.G2.ORBS
@@ -1833,7 +1832,7 @@ let tR = function (e) {
         let { handleTransition: t, tab: l, transitionState: n } = e,
             s = r.useRef(null),
             { handleScroll: a } = (0, g.X)(s, l),
-            o = (0, I.U)(),
+            o = (0, N.U)(),
             c = (0, E.uM)(),
             [d, x] = r.useState(eD.md),
             [f, p] = r.useState(!1);

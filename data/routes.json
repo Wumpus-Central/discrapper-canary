@@ -487,6 +487,7 @@
   "STOREFRONT_PRODUCTS_BY_SKU_IDS": "/storefront/products/skus",
   "STOREFRONT_PRODUCT_BY_SKU_ID": "/storefront/products/sku/:param",
   "STOREFRONT_PROMOTIONS": "/storefront/promotions",
+  "STOREFRONT_PROMOTION_CLAIM": "/storefront/promotions/:param/claim",
   "STOREFRONT_PRICES": "/storefront/pricing",
   "STORE_DIRECTORY_LAYOUT": "/store/directory-layouts/:param",
   "STORE_DIRECTORY": "/store/directory/:param",

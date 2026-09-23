@@ -59,6 +59,11 @@
     flex-shrink: 0
 }
 
+.ctaButton__05d6f {
+    min-width: 96px;
+    width: 150px
+}
+
 .card__956bc {
     background-color: var(--background-base-low);
     background-position: 0;
@@ -71,6 +76,7 @@
 }
 
 .textColumn__956bc {
+    flex: 1;
     min-width: 0
 }
 
@@ -120,4 +126,4 @@
     }
 }
 
-/*# sourceMappingURL=3ebb72ce7e6ff8b6.css.map*/
+/*# sourceMappingURL=31b4a807fd8e65e5.css.map*/
