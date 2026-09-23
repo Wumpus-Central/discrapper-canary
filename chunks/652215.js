@@ -4305,6 +4305,8 @@ var rb =
         (ew.PREMIUM_MARKETING_CAMPAIGN_ENTITLEMENT_CREATED_INGESTED =
             "premium_marketing_campaign_entitlement_created_ingested"),
         (ew.PREMIUM_MARKETING_CAMPAIGN_REDEMPTION_CARD_CLICKED = "premium_marketing_campaign_redemption_card_clicked"),
+        (ew.IMPRESSION_PREMIUM_ORBS_DELIVERED_MODAL = "impression_premium_orbs_delivered_modal"),
+        (ew.PREMIUM_ACTIVATED_SHEET_DISMISSED = "premium_activated_sheet_dismissed"),
         (ew.STORE_DIRECTORY_VIEWED = "store_directory_viewed"),
         (ew.STORE_DIRECTORY_BROWSE_VIEWED = "store_directory_browse_viewed"),
         (ew.STORE_DIRECTORY_FILTER_UPDATED = "store_directory_filter_updated"),
