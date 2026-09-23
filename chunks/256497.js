@@ -1,14 +1,15 @@
-n.d(t, { aA: () => r, fX: () => a });
-let i = (0, n(600975).C)({
+n.d(t, { aA: () => s, fX: () => l });
+var i = n(945810),
+    r = n(652215);
+let a = (0, i.mj)({
     kind: "guild",
-    id: "2026-06_guild_spaces",
-    label: "Guild Space",
+    name: "2026-09-guild-spaces",
     defaultConfig: { enabled: !1 },
-    treatments: [{ id: 1, label: "Enable Guild Space", config: { enabled: !0 } }],
+    variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
 });
-function r(e, t) {
-    return i.getCurrentConfig({ guildId: e, location: t }, { autoTrackExposure: !1 }).enabled;
+function s(e, t) {
+    return null != e && a.getConfig({ guildId: e, location: t }).enabled;
 }
-function a(e, t) {
-    return i.useExperiment({ guildId: e, location: t }, { autoTrackExposure: !1 }).enabled;
+function l(e, t) {
+    return a.useConfig({ guildId: e ?? r.dJq, location: t }).enabled;
 }
