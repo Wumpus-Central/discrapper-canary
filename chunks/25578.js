@@ -924,6 +924,8 @@ function ny(e, t) {
                 }
             })(t, e),
             windowsDeviceService: t.windowsDeviceService,
+            windowsDeviceDescription: t.windowsDeviceDescription,
+            windowsDeviceInterfaceFriendlyName: t.windowsDeviceInterfaceFriendlyName,
         }))
         .keyBy("id")
         .value();

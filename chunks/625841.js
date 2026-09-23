@@ -9,8 +9,8 @@ var i = n(477900),
     u = n(831544),
     d = n(597601),
     p = n(332461),
-    v = n(512950),
-    m = n(834730),
+    m = n(512950),
+    v = n(834730),
     g = n(827343),
     D = n(688810),
     x = n(363195),
@@ -66,7 +66,7 @@ function N(e) {
         U = j[u]?.deviceType ?? null,
         _ = (0, a.bG)([f.Ay], () => null == U || T(U).getCanSetDevice(f.Ay)),
         { showDeviceFormFactorIndicators: V } = b.A.useConfig({ location: "SingleSelectDevices" }),
-        y = null != U ? (0, i.jsx)(v.p, { messageType: v.Y.WARNING, children: T(U).getWarningMessage() }) : null,
+        y = null != U ? (0, i.jsx)(m.p, { messageType: m.Y.WARNING, children: T(U).getWarningMessage() }) : null,
         w = l.useCallback(
             (e) => {
                 if (!(d?.(e) ?? !0)) return;
@@ -78,45 +78,40 @@ function N(e) {
             [j, s, A, d],
         );
     function E(e) {
-        var t;
-        let l,
-            s,
-            { label: a, value: c } = e,
-            u = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            d = a,
-            v = (0, I.d)(a);
-        null != v && ((d = v.prefix), (l = v.subName));
-        let g = C.A.getCertifiedDeviceName(c, d);
-        if (C.A.isCertified(c)) {
+        let t,
+            l = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+            { prefix: s, subName: a } = (0, I.d)(e),
+            c = C.A.getCertifiedDeviceName(e.id, s);
+        if (C.A.isCertified(e.id)) {
             let e = (0, r.q)(N) ? n(961392) : n(848672);
-            s = (0, i.jsx)("img", { src: e, alt: O.intl.string(O.t.smSKsj) });
+            t = (0, i.jsx)("img", { src: e, alt: O.intl.string(O.t.smSKsj) });
         }
-        let D = ((t = j[c]), null == t ? null : V ? (0, I.d4)(t) : T(t.deviceType).IconComponent);
+        let u = null == e ? null : V ? (0, I.d4)(e) : T(e.deviceType).IconComponent;
         return (0, i.jsxs)("div", {
-            className: o()(S.Mg, { [S.S2]: u && null != l, [S.Sy]: !p }),
+            className: o()(S.Mg, { [S.S2]: l && null != a, [S.Sy]: !p }),
             children: [
                 !p &&
-                    null != D &&
+                    null != u &&
                     (0, i.jsx)("div", {
                         className: S.Kt,
-                        children: (0, i.jsx)(D, { size: "custom", width: 20, height: 20, color: "currentColor" }),
+                        children: (0, i.jsx)(u, { size: "custom", width: 20, height: 20, color: "currentColor" }),
                     }),
-                (0, i.jsx)(m.E, {
+                (0, i.jsx)(v.E, {
                     lineClamp: 2,
                     variant: "text-md/medium",
-                    color: u ? "text-subtle" : "text-default",
+                    color: l ? "text-subtle" : "text-default",
                     className: S.hV,
-                    children: g,
+                    children: c,
                 }),
-                null != l &&
-                    (0, i.jsx)(m.E, {
+                null != a &&
+                    (0, i.jsx)(v.E, {
                         lineClamp: 2,
-                        variant: u ? "text-xs/medium" : "text-md/medium",
+                        variant: l ? "text-xs/medium" : "text-md/medium",
                         color: "text-muted",
                         className: S.VT,
-                        children: l,
+                        children: a,
                     }),
-                null != s && (0, i.jsx)("div", { className: S.pN, children: s }),
+                null != t && (0, i.jsx)("div", { className: S.pN, children: t }),
             ],
         });
     }
@@ -132,10 +127,13 @@ function N(e) {
                 }),
                 isDisabled: !_,
                 popoutPosition: "bottom",
-                renderOptionLabel: (e) => E(e, !0),
+                renderOptionLabel: (e) => {
+                    let { value: t } = e;
+                    return E(j[t], !0);
+                },
                 renderOptionValue: (e) => {
-                    let [t] = e;
-                    return E(t);
+                    let [{ value: t }] = e;
+                    return E(j[t]);
                 },
                 optionClassName: S.OS,
                 ...h,

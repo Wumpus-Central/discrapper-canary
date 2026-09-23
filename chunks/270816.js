@@ -1,12 +1,12 @@
 t.d(i, { H: () => o });
 var s = t(477900),
     d = t(582128),
-    n = t(477782),
-    c = t(827343),
-    l = t(74848),
-    a = t(106713),
-    r = t(731854),
-    u = t(375708);
+    c = t(477782),
+    l = t(827343),
+    n = t(74848),
+    r = t(106713),
+    u = t(731854),
+    a = t(375708);
 function o(e) {
     let {
             deviceType: i,
@@ -19,41 +19,38 @@ function o(e) {
             computeMenuRadioItemOverrideProps: v,
         } = e,
         { setDevice: I, getLabel: g } = {
-            [r.oh.AUDIO_INPUT]: { setDevice: c.A.setInputDevice, getLabel: () => u.intl.string(u.t.ElbIXN) },
-            [r.oh.AUDIO_OUTPUT]: { setDevice: c.A.setOutputDevice, getLabel: () => u.intl.string(u.t["6Ww0iH"]) },
-            [r.oh.VIDEO_INPUT]: { setDevice: c.A.setVideoDevice, getLabel: () => u.intl.string(u.t.F122Gz) },
+            [u.oh.AUDIO_INPUT]: { setDevice: l.A.setInputDevice, getLabel: () => a.intl.string(a.t.ElbIXN) },
+            [u.oh.AUDIO_OUTPUT]: { setDevice: l.A.setOutputDevice, getLabel: () => a.intl.string(a.t["6Ww0iH"]) },
+            [u.oh.VIDEO_INPUT]: { setDevice: l.A.setVideoDevice, getLabel: () => a.intl.string(a.t.F122Gz) },
         }[i],
-        m = (0, l.tR)(i),
-        { id: x, name: A } = (0, l.x5)(i),
-        f = p ?? x,
+        x = (0, n.tR)(i),
+        f = (0, n.x5)(i),
+        A = p ?? f.id,
         U = d.useMemo(
             () =>
-                m.find((e) => {
+                x.find((e) => {
                     let { id: i } = e;
-                    return i === f;
+                    return i === A;
                 }),
-            [m, f],
+            [x, A],
         ),
-        { showDeviceFormFactorIndicators: $ } = a.A.useConfig({ location: "useDeviceMenuItems" }),
-        k = m.map((e) => {
-            let d,
-                c = e.name,
-                a = (0, l.d)(e.name);
-            null != a && ((c = a.prefix), (d = a.subName));
-            let r = {};
+        { showDeviceFormFactorIndicators: $ } = r.A.useConfig({ location: "useDeviceMenuItems" }),
+        k = x.map((e) => {
+            let { prefix: d, subName: l } = (0, n.d)(e),
+                r = {};
             if ($) {
-                let i = (0, l.d4)(e);
+                let i = (0, n.d4)(e);
                 r = { leadingAccessory: { type: "icon", icon: i }, leftIcon: i };
             }
             return (0, s.jsx)(
-                n.iD,
+                c.iD,
                 {
                     id: `${i}-${e.id}`,
                     group: `${i}-devices`,
                     disabled: e.disabled,
-                    label: c,
-                    subtext: d,
-                    checked: e.id === f,
+                    label: d,
+                    subtext: l,
+                    checked: e.id === A,
                     action: () => {
                         (b?.(e.id) ?? !0) && I(e.id, { analyticsLocations: t });
                     },
@@ -64,6 +61,6 @@ function o(e) {
             );
         });
     return o
-        ? (0, s.jsx)(n.Dr, { id: `${i}-devices`, label: g(), subtext: U?.name ?? A, ...h, children: k })
-        : (0, s.jsx)(n.rX, { label: g(), ...D, children: k });
+        ? (0, s.jsx)(c.Dr, { id: `${i}-devices`, label: g(), subtext: (0, n.d)(U ?? f).prefix, ...h, children: k })
+        : (0, s.jsx)(c.rX, { label: g(), ...D, children: k });
 }

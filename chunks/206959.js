@@ -1693,6 +1693,8 @@ function W(e, t) {
                 macosTransportType: E,
                 windowsEndpointFormFactor: A,
                 windowsDeviceService: h,
+                windowsDeviceDescription: I,
+                windowsDeviceInterfaceFriendlyName: f,
             } = t;
             return (
                 /^default/.test(s)
@@ -1713,6 +1715,8 @@ function W(e, t) {
                     macosTransportType: E,
                     windowsEndpointFormFactor: A,
                     windowsDeviceService: h,
+                    windowsDeviceDescription: I,
+                    windowsDeviceInterfaceFriendlyName: f,
                 }
             );
         });
