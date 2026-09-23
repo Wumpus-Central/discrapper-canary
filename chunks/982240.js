@@ -97,6 +97,17 @@ let p = new f(l.h, {
             i = h.peek(t) ?? I();
         (i.badges.set(n.badge_id, n), h.set(t, i));
     },
+    BADGE_SUMMARY_FETCH_SUCCESS: function (e) {
+        let { userId: t, badge: n } = e,
+            i = h.peek(t) ?? I(),
+            r = i.badges.get(n.badge_id);
+        (i.badges.set(n.badge_id, {
+            ...n,
+            progress: n.progress ?? r?.progress,
+            info_label: n.info_label ?? r?.info_label,
+        }),
+            h.set(t, i));
+    },
     USER_PROFILE_FETCH_SUCCESS: function (e) {
         let { userProfile: t } = e,
             n = t.user.id,

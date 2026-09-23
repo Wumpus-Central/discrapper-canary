@@ -84,8 +84,8 @@ let f = (0, n(945810).mj)({
 var p = n(53943);
 n(321073);
 var T = n(435558),
-    m = n.n(T),
-    g = n(61090),
+    g = n.n(T),
+    m = n(61090),
     S = n(707539);
 function N(e) {
     let t = null == e.tag ? e.label : `${e.label} ${e.tag}`;
@@ -181,7 +181,7 @@ ${s}`;
     ${(function (e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
             n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
-        return g.A.logGroups
+        return m.A.logGroups
             .map((i) => {
                 var r, a, s, l, o, d;
                 let c,
@@ -191,12 +191,12 @@ ${s}`;
                     A,
                     h,
                     I,
-                    { index: f, timestamp: p, logs: T, nativeLogs: g, serverTrace: C } = i,
-                    O = 0 === f ? (m().find(T, (e) => e.log.indexOf("Logger loaded") >= 0)?.timestamp ?? e) : p,
+                    { index: f, timestamp: p, logs: T, nativeLogs: m, serverTrace: C } = i,
+                    O = 0 === f ? (g().find(T, (e) => e.log.indexOf("Logger loaded") >= 0)?.timestamp ?? e) : p,
                     R =
                         ((o =
                             ((r = T),
-                            (a = g),
+                            (a = m),
                             (s = t),
                             (l = n),
                             (r = r.slice()),
@@ -269,11 +269,11 @@ ${s}`;
                             log: `${e.emoji.length > 0 ? `${e.emoji} ` : ""}${e.prefix}${e.log}
 `,
                         }))),
-                        (h = m().max(A.map((e) => e.totalTime.length)) ?? 0),
-                        (I = m().max(A.map((e) => e.deltaTime.length)) ?? 0),
+                        (h = g().max(A.map((e) => e.totalTime.length)) ?? 0),
+                        (I = g().max(A.map((e) => e.deltaTime.length)) ?? 0),
                         A.map((e) => {
                             let { totalTime: t, deltaTime: n, log: i } = e;
-                            return `${m().padStart(t, h)} ${m().padStart(n, I)} ${i}`;
+                            return `${g().padStart(t, h)} ${g().padStart(n, I)} ${i}`;
                         }).join("")),
                     L = `Trace #${f + 1} started ${(0, S.aK)(p)}
 ${R}`;
@@ -305,7 +305,7 @@ ${R}`;
     })()}
 
     Metadata:
-    ${JSON.stringify({ logsUploaded: new Date().toISOString(), releaseChannel: window.GLOBAL_ENV.RELEASE_CHANNEL, buildNumber: "619263", versionHash: "4fe9bcd80a9c3483b6946399cae3f755a2173b91" }, void 0, 2)}
+    ${JSON.stringify({ logsUploaded: new Date().toISOString(), releaseChannel: window.GLOBAL_ENV.RELEASE_CHANNEL, buildNumber: "619265", versionHash: "34a2309e6cb411eaf5fa96b40d72bfbb6a788870" }, void 0, 2)}
 
     ChannelStore:
     ${JSON.stringify(I.A.getDebugInfo(), void 0, 2)}
