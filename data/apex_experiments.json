@@ -1113,22 +1113,6 @@
     }
   },
   {
-    "name": "2026-02-mute-tutorial",
-    "kind": "user",
-    "defaultConfig": {
-      "muteTutorialEnabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "muteTutorialEnabled": true
-      }
-    }
-  },
-  {
     "name": "2026-02-non-dm-gifting-modal-redesign",
     "kind": "user",
     "defaultConfig": {

@@ -43,8 +43,8 @@ class T extends I.A {
                     n.e("137381"),
                     n.e("847004"),
                     n.e("313937"),
-                    n.e("431389"),
-                ]).then(n.bind(n, 492));
+                    n.e("64054"),
+                ]).then(n.bind(n, 47893));
                 return (n) => (0, i.jsx)(e, { ...n, analyticsData: t });
             });
         });
