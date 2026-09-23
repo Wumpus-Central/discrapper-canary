@@ -19,7 +19,12 @@ function u(e) {
         className: r()(
             o.jt,
             o.qw,
-            { [o.p3]: "nitro-pink" === n, [o.U1]: "green" === n, [o.Uq]: "collectibles" === n },
+            {
+                [o.p3]: "nitro-pink" === n,
+                [o.U1]: "green" === n,
+                [o.Uq]: "collectibles" === n,
+                [o.y7]: "promotion" === n,
+            },
             t,
         ),
         children: [
@@ -33,11 +38,20 @@ function u(e) {
     });
 }
 function c(e) {
-    let { text: t, gradientColor: n, Icon: i = a.TagIcon, iconSize: c, customGraphic: d, className: m } = e;
+    let {
+        text: t,
+        gradientColor: n,
+        Icon: i = a.TagIcon,
+        iconSize: c,
+        customGraphic: d,
+        className: m,
+        textVariant: p = "text-sm/medium",
+        textColor: C = "currentColor",
+    } = e;
     return (0, l.jsx)(u, {
         className: r()(o.Cu, m),
         gradientColor: n,
         ...(null != d ? { customGraphic: d } : { Icon: i, iconSize: c }),
-        children: (0, l.jsx)(s.E, { variant: "text-sm/medium", color: "currentColor", className: o.Ct, children: t }),
+        children: (0, l.jsx)(s.E, { variant: p, color: C, className: o.Ct, children: t }),
     });
 }

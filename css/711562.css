@@ -89,6 +89,11 @@
     color: var(--text-overlay-light)
 }
 
+.promotionGradient__3e43f {
+    background: linear-gradient(90deg, #064e3b, #059669);
+    color: var(--text-overlay-light)
+}
+
 .customGraphicContainer__3e43f {
     flex-shrink: 0
 }
@@ -110,4 +115,4 @@
     text-align: start
 }
 
-/*# sourceMappingURL=711562.7544de5067ffe47d.css.map*/
+/*# sourceMappingURL=711562.6b8e9645accc09d0.css.map*/

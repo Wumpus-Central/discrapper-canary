@@ -332,7 +332,9 @@ function er(e) {
                                                       target: t.target,
                                                       numDays: n,
                                                   }),
-                                                  gradientColor: "green",
+                                                  gradientColor: "promotion",
+                                                  textVariant: "text-sm/normal",
+                                                  textColor: "text-overlay-light",
                                               };
                                           })(e);
                                 case I.hE.TARGETED_OFFER: {
