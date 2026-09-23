@@ -2,8 +2,8 @@ r.d(t, { IO: () => p, Sq: () => f, T1: () => m, Wi: () => h, y7: () => x });
 var n = r(582128),
     i = r(17928),
     l = r(228366),
-    s = r(287809),
-    a = r(158045),
+    a = r(287809),
+    s = r(158045),
     o = r(264779),
     u = r(962644),
     c = r(412260),
@@ -27,9 +27,9 @@ function m() {
 }
 function x() {
     let e = (0, i.bG)([c.A], () => c.A.lastFetchedActivePromotions),
-        t = (0, i.bG)([s.default], () => s.default.getCurrentUser()),
-        r = a.Ay.isPremiumExactly(t, d.PremiumTypes.TIER_2),
-        x = !a.Ay.isPremium(t) || r,
+        t = (0, i.bG)([a.default], () => a.default.getCurrentUser()),
+        r = s.Ay.isPremiumExactly(t, d.PremiumTypes.TIER_2),
+        x = !s.Ay.isPremium(t) || r,
         p = (0, i.bG)([c.A], () => c.A.claimedOutboundPromotionCodes),
         h = (0, i.bG)([c.A], () => c.A.claimedOutboundPromotionCodesLoaded);
     (n.useEffect(() => {

@@ -1,4 +1,4 @@
-n.d(t, { A: () => u });
+n.d(t, { A: () => c });
 var i = n(17928),
     l = n(228366),
     s = n(652215);
@@ -13,7 +13,7 @@ class o extends i.Ay.Store {
         return r;
     }
 }
-let u = new o(l.h, {
+let c = new o(l.h, {
     NATIVE_APP_MODAL_OPENING: function (e) {
         let { code: t } = e;
         ((a[t] = s.fAW.OPENING), null === r && (r = s.fAW.OPENING));

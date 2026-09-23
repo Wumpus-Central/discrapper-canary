@@ -10,8 +10,8 @@ var l = n(191023),
     c = n(739455),
     d = n(2242),
     h = n(375708),
-    p = n(669748);
-function C(e) {
+    C = n(669748);
+function p(e) {
     let { channelId: t } = e,
         n = (0, c.fE)(t),
         u = (0, a.Ay)(n);
@@ -22,7 +22,7 @@ function C(e) {
             (0, r.jsx)(i.A, { children: (0, o.Ay)({ channel: n }) }),
             (0, r.jsxs)("div", {
                 "aria-hidden": !0,
-                children: [null != d && (0, r.jsx)(d, { className: p.K, "aria-hidden": !0 }), u],
+                children: [null != d && (0, r.jsx)(d, { className: C.K, "aria-hidden": !0 }), u],
             }),
         ],
     });
@@ -30,7 +30,7 @@ function C(e) {
 function m(e) {
     switch (e.ref_type) {
         case d.bN.CHANNEL:
-            return (0, r.jsx)(C, { channelId: e.ref_id });
+            return (0, r.jsx)(p, { channelId: e.ref_id });
         case d.bN.INTANGIBLE:
             return e.name;
         default:

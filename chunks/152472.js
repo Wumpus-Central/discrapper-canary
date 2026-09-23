@@ -13,8 +13,8 @@ var i = r(477900),
     h = r(321191),
     p = r(808247),
     _ = r(594832),
-    A = r(240248),
-    f = r(375708),
+    f = r(240248),
+    A = r(375708),
     E = r(49999);
 function m(t) {
     let { userId: e, skuId: a, nuxGraphic: u, onNuxShow: o, location: m, onAddSuccess: T, onError: R } = t,
@@ -31,7 +31,7 @@ function m(t) {
                     onError: a,
                     skipAddAnnouncement: u,
                 } = t,
-                { analyticsLocations: o } = (0, I.Ay)((0, A.uJ)(i) ? [] : [i]),
+                { analyticsLocations: o } = (0, I.Ay)((0, f.uJ)(i) ? [] : [i]),
                 c = (0, S.bG)([h.A], () => h.A.getFirstWishlistId(e)),
                 E = (0, _.rJ)(c, r),
                 [m, y] = n.useState(null),
@@ -45,7 +45,7 @@ function m(t) {
                     if ((R(!0), L && null != c)) {
                         y(!1);
                         try {
-                            (await p.A.removeSkuFromWishlist(c, r, o), d.O.announce(f.intl.string(f.t.DSXOiP)), l?.());
+                            (await p.A.removeSkuFromWishlist(c, r, o), d.O.announce(A.intl.string(A.t.DSXOiP)), l?.());
                         } catch (t) {
                             a?.(t);
                         } finally {
@@ -54,7 +54,7 @@ function m(t) {
                     } else {
                         y(!0);
                         try {
-                            (await p.A.addSkuToWishlist(r, o), u || d.O.announce(f.intl.string(f.t["3T2jbf"])), s?.());
+                            (await p.A.addSkuToWishlist(r, o), u || d.O.announce(A.intl.string(A.t["3T2jbf"])), s?.());
                         } catch (t) {
                             a?.(t);
                         } finally {
@@ -84,5 +84,5 @@ function m(t) {
     };
 }
 function y() {
-    ((0, a.P0)((0, u.o)(f.intl.string(f.t.F8FvUy), o.Ck.FAILURE)), d.O.announce(f.intl.string(f.t.F8FvUy)));
+    ((0, a.P0)((0, u.o)(A.intl.string(A.t.F8FvUy), o.Ck.FAILURE)), d.O.announce(A.intl.string(A.t.F8FvUy)));
 }

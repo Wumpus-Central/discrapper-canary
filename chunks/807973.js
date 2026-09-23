@@ -11,7 +11,7 @@ var l = n(503698),
     d = n(655756);
 function h(e) {
     let { guildId: t, emojiId: n, emojiName: l, className: h } = e,
-        p = (0, s.bG)(
+        C = (0, s.bG)(
             [u.Ay],
             () => {
                 if (null == n) return null;
@@ -20,11 +20,11 @@ function h(e) {
             },
             [t, n],
         );
-    return null != p || null != l
+    return null != C || null != l
         ? (0, r.jsx)(a.A, {
-              emojiId: p?.id,
-              emojiName: l ?? p?.name,
-              animated: p?.animated ?? !1,
+              emojiId: C?.id,
+              emojiName: l ?? C?.name,
+              animated: C?.animated ?? !1,
               className: i()(d.m, h),
           })
         : (0, r.jsx)(c.A, { className: i()(d.m, h), color: o.A.colors.CREATOR_REVENUE_LOCKED_CHANNEL_ICON.css });

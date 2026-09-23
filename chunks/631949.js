@@ -1,1 +1,1 @@
-t.exports = { M: "leaderboardWinnerBadge_ca15ae" };
+e.exports = { M: "leaderboardWinnerBadge_ca15ae" };

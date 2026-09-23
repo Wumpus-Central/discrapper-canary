@@ -21,8 +21,8 @@ var y =
         (l.ADD_NEW_PAYMENT_METHOD = "ADD_NEW_PAYMENT_METHOD"),
         l),
     I = n(333007),
-    A = n(289873),
-    g = n(793574),
+    g = n(289873),
+    A = n(793574),
     P = n(688810),
     v = n(482419),
     _ = n(666646),
@@ -39,7 +39,7 @@ function L(e) {
     return null == n ? null : I.createPortal(t, n);
 }
 function k() {
-    return (0, i.jsx)(A.y, { type: A.y.Type.PULSING_ELLIPSIS });
+    return (0, i.jsx)(g.y, { type: g.y.Type.PULSING_ELLIPSIS });
 }
 function w(e, t) {
     let { noticeCopy: n } = t;
@@ -123,7 +123,7 @@ function D(e) {
                         currency: l.currency,
                         preventFetch: i,
                         analyticsLocations: a,
-                        analyticsLocation: g.A.BILLING_SWITCH_PLAN_IMMEDIATE_PRORATED_INVOICE_PREVIEW,
+                        analyticsLocation: A.A.BILLING_SWITCH_PLAN_IMMEDIATE_PRORATED_INVOICE_PREVIEW,
                     }),
                     [t.id, n, l.paymentSourceId, l.currency, i, a],
                 ),
@@ -177,8 +177,8 @@ function D(e) {
                 : { overrideRenewalDate: e, planSwitchNoticeCopy: null };
         }, [f, E, s]);
     if ((w(d, { noticeCopy: y }), null != S)) return null;
-    let A = (0, N.U)(f, n);
-    if (null == f || null == E || A) return (0, i.jsx)(k, {});
+    let g = (0, N.U)(f, n);
+    if (null == f || null == E || g) return (0, i.jsx)(k, {});
     let _ = (0, j.J$)(a.paymentSourceId);
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -256,14 +256,14 @@ function G(e) {
     if ((w(u, { noticeCopy: y }), null != h)) return null;
     if (null == C) return (0, i.jsx)(k, {});
     let I = (0, j.J$)(s.paymentSourceId),
-        { lineItems: A } = (0, b.Ig)(C, {
+        { lineItems: g } = (0, b.Ig)(C, {
             includeTaxLineItem: !0,
             isPrepaidPaymentSource: I,
             excludeDiscountsAndAdjustments: !0,
         });
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(T.Vm, { label: S.intl.string(O.default.eoXh7B), lineItems: A, currency: C.currency }),
+            (0, i.jsx)(T.Vm, { label: S.intl.string(O.default.eoXh7B), lineItems: g, currency: C.currency }),
             (0, i.jsx)(L, {
                 containerNode: d.current,
                 children: (0, i.jsx)(R.Hc, {
@@ -300,7 +300,7 @@ function F(e) {
                         currency: n.currency,
                         preventFetch: l,
                         analyticsLocations: u,
-                        analyticsLocation: g.A.BILLING_PAUSED_SUBSCRIPTION_INVOICE_RESUME_PREVIEW,
+                        analyticsLocation: A.A.BILLING_PAUSED_SUBSCRIPTION_INVOICE_RESUME_PREVIEW,
                     },
                 },
                 fetchRenewalInvoicePreviewRequest: {
@@ -312,7 +312,7 @@ function F(e) {
                         currency: n.currency,
                         preventFetch: l,
                         analyticsLocations: u,
-                        analyticsLocation: g.A.BILLING_PAUSED_SUBSCRIPTION_INVOICE_RENEWAL_PREVIEW,
+                        analyticsLocation: A.A.BILLING_PAUSED_SUBSCRIPTION_INVOICE_RENEWAL_PREVIEW,
                     },
                 },
             }),
@@ -346,7 +346,7 @@ var B = n(38785),
     H = n(577381),
     W = n(845012),
     Y = n(134638);
-function K(e) {
+function V(e) {
     let {
             loading: t,
             disabled: n,
@@ -362,8 +362,8 @@ function K(e) {
             newPlan: E,
             planId: y,
             priceOptions: I,
-            premiumPlanOptions: A,
-            subscriptionDetailsContent: g,
+            premiumPlanOptions: g,
+            subscriptionDetailsContent: A,
             isInvoiceBilledImmediately: P,
             paymentMethodContent: v,
             legalContent: _,
@@ -414,7 +414,7 @@ function K(e) {
             ? (D = (0, i.jsx)(W.X, {
                   disabled: n,
                   headingSubText: G,
-                  planOptions: A,
+                  planOptions: g,
                   selectedPlanId: y,
                   showPlanStatusSubText: !0,
                   priceOptions: N,
@@ -435,7 +435,7 @@ function K(e) {
             showUpperNoticesAboveGlobalNotices: x,
             upperInlineNoticeProps: T,
             paymentMethodContent: v,
-            subscriptionDetailsContent: g,
+            subscriptionDetailsContent: A,
             purchaseItemContent: U,
             planSelectContent: D,
             invoiceSummaryContent: p,
@@ -446,11 +446,11 @@ function K(e) {
         })
     );
 }
-var V = n(510552);
+var K = n(510552);
 function Z(e) {
     let { handlePaymentSourceAdd: t, planGroup: n, hasOpenInvoice: l, isInPastDueCheckout: a } = e,
         { invoiceError: I } = (0, m.t4)((e) => ({ invoiceError: e.get("primaryInvoicesError") })),
-        { paymentSources: A, hasPaymentSources: g } = (0, u.j)(),
+        { paymentSources: g, hasPaymentSources: A } = (0, u.j)(),
         { selectedPlanFromFluxStore: P, selectedPlanId: v } = (0, d.D)(),
         {
             purchaseState: _,
@@ -478,7 +478,7 @@ function Z(e) {
             shouldDisallowPlanSelection: e.getShouldDisallowPlanSelection(),
         })),
         { isPremiumPurchase: B, isPremiumGroupPurchase: H } = (0, m.t4)((e) => e.get("selectedPlanAttributes")),
-        W = (0, f.g)(A, x),
+        W = (0, f.g)(g, x),
         { showFractionalPremiumBanner: Y, fractionalPremiumInfo: Z } = (0, C._V)({
             premiumSubscription: M,
             selectedPlanId: v,
@@ -567,7 +567,7 @@ function Z(e) {
                   )
                 : { content: null, isInvoiceBilledImmediately: !0 },
         ei = M?.eligiblePaymentGateways,
-        er = null != ei && ei.length > 0 && (null == x || null === W) && g ? y.SELECT_PAYMENT_METHOD : void 0,
+        er = null != ei && ei.length > 0 && (null == x || null === W) && A ? y.SELECT_PAYMENT_METHOD : void 0,
         ea = null != M ? M.paymentSourceId : null,
         es = r.useMemo(
             () => ({
@@ -575,7 +575,7 @@ function Z(e) {
                 resolvePaymentSourceOptions: a
                     ? (e) => e.map((e) => (e.id === ea ? { ...e, tooltipText: S.intl.string(O.default["hjsn+s"]) } : e))
                     : void 0,
-                className: s()({ [V.E]: B }),
+                className: s()({ [K.E]: B }),
             }),
             [M?.eligiblePaymentGateways, B, a, ea],
         ),
@@ -618,7 +618,7 @@ function Z(e) {
                       }),
             [Z, b, N, em, X, M, P, W, el],
         );
-    return (0, i.jsx)(K, {
+    return (0, i.jsx)(V, {
         loading: j,
         disabled: q,
         isInPastDueCheckout: a,

@@ -1,8 +1,8 @@
 t.d(n, { A: () => E });
 var l = t(477900),
     r = t(582128),
-    s = t(503698),
-    i = t.n(s),
+    i = t(503698),
+    s = t.n(i),
     a = t(467324),
     o = t(702841),
     u = t(653887),
@@ -20,15 +20,15 @@ var l = t(477900),
 let N = function (e) {
     let { category: n, daysRemainingText: t = x.t.Io7ozn, className: r } = e;
     if (!(0, _.HF)(n.unpublishedAt)) return null;
-    let s = (0, _.WU)(n.unpublishedAt),
-        a = s > 1 ? x.intl.formatToPlainString(t, { days: s }) : x.intl.string(x.t.Bc13HF);
-    return (0, l.jsx)(f.Lp, { disableColor: !0, text: a, className: i()(b.q, r) });
+    let i = (0, _.WU)(n.unpublishedAt),
+        a = i > 1 ? x.intl.formatToPlainString(t, { days: i }) : x.intl.string(x.t.Bc13HF);
+    return (0, l.jsx)(f.Lp, { disableColor: !0, text: a, className: s()(b.q, r) });
 };
 var v = t(212407),
     y = t(761977);
 function E(e) {
     let { category: n, onSelect: t } = e,
-        s = (0, o.bG)([h.Ay], () => h.Ay.useReducedMotion),
+        i = (0, o.bG)([h.Ay], () => h.Ay.useReducedMotion),
         _ = (0, o.bG)([A.A], () => A.A.isFocused()),
         { catalogBannerStatic: f, catalogBannerAnimated: b, catalogBannerRive: E } = (0, v.MV)(n),
         j = r.useRef(null),
@@ -47,7 +47,7 @@ function E(e) {
                 : {};
     return (0, l.jsxs)("div", {
         ref: j,
-        className: i()(y.sW, { [y.by]: C, [y.vk]: null != t }),
+        className: s()(y.sW, { [y.by]: C, [y.vk]: null != t }),
         ...I,
         children: [
             (0, l.jsx)(a.s, { children: (0, l.jsx)(c.D, { variant: "heading-lg/semibold", children: n.name }) }),
@@ -66,7 +66,7 @@ function E(e) {
                           children: [
                               (0, l.jsx)("img", { className: y.ze, src: f, alt: "" }),
                               null != b &&
-                                  !s &&
+                                  !i &&
                                   _ &&
                                   (0, l.jsx)(g.A, { src: b, className: y.tr, autoPlay: !0, loop: !0 }),
                           ],

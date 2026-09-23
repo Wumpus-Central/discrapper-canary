@@ -3,8 +3,8 @@ var n = r(477900);
 r(582128);
 var i = r(503698),
     l = r.n(i),
-    s = r(17928),
-    a = r(462887),
+    a = r(17928),
+    s = r(462887),
     o = r(289873),
     u = r(834730),
     c = r(297264),
@@ -24,8 +24,8 @@ let f = function (e) {
             isApplicationHome: j,
             enablePremiumBrandRefresh: E,
         } = e,
-        T = (0, s.bG)([m.A], () => m.A.isLoadedForSKUs([t])),
-        I = (0, a.q)((0, d.Ay)());
+        T = (0, a.bG)([m.A], () => m.A.isLoadedForSKUs([t])),
+        I = (0, s.q)((0, d.Ay)());
     if (!T) return (0, n.jsx)(o.y, { type: o.y.Type.PULSING_ELLIPSIS, className: h.xB });
     let v = m.A.getForSkuAndInterval((0, x.mH)(t), r),
         R = null != v ? (0, x.sS)(v, A, !1, f) : null;

@@ -9,8 +9,8 @@ var r = n(477900),
     c = n(136857),
     d = n(211083),
     h = n(655857),
-    p = n(263532),
-    C = n(834981),
+    C = n(263532),
+    p = n(834981),
     m = n(975571),
     E = n(166532),
     A = n(652215),
@@ -19,13 +19,13 @@ function y(e) {
     let { planError: t } = e,
         { paymentError: n } = (0, d.o)(),
         { dropdownCurrencies: a } = (0, h.Jn)(),
-        { purchaseError: y, purchasePreviewError: g } = (0, p.t4)((e) => ({
+        { purchaseError: y, purchasePreviewError: g } = (0, C.t4)((e) => ({
             purchaseError: e.purchaseError,
             purchasePreviewError: e.purchasePreviewError,
         })),
         S = null;
     null != g ? (S = g) : null != n && null == (0, E.ou)(n) ? (S = n) : null != y ? (S = y) : null != t && (S = t);
-    let _ = (0, C.vx)(),
+    let _ = (0, p.vx)(),
         P = l.useCallback(() => {
             ((0, i.closeAllModals)(), s.A.openPrivateChannel({ recipientIds: _ }));
         }, [_]),

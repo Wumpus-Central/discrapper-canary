@@ -1,4 +1,4 @@
-d.exports = {
+_.exports = {
     gH: "emojiSection_d5cd2d",
     Gl: "customEmojiLabel_d5cd2d",
     P$: "primaryEmoji_d5cd2d",

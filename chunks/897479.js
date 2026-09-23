@@ -1,25 +1,25 @@
-n.d(t, { A: () => o });
+n.d(t, { A: () => d });
 var i = n(477900),
     l = n(582128),
-    r = n(806163),
-    s = n(868285),
+    s = n(806163),
+    r = n(868285),
     a = n(334465);
-function o(e) {
+function d(e) {
     let { children: t, ...n } = e,
-        o = (0, r.zy)(),
-        d = (0, r.W6)(),
+        d = (0, s.zy)(),
+        o = (0, s.W6)(),
         h = null,
         u = null;
     return (
         l.Children.forEach(t, (e) => {
             if (null == h && l.isValidElement(e)) {
                 let { component: t, render: n, ...i } = e.props,
-                    r = null != i.path && "" !== i.path ? i.path : i.from;
-                if (null == (h = null != r ? (0, a.B)(o.pathname, { ...i, path: r }) : null)) return;
-                let s = { ...i, key: r, location: o, match: h, history: d };
-                null != t ? (u = l.createElement(t, s)) : null != n && (u = n(s));
+                    s = null != i.path && "" !== i.path ? i.path : i.from;
+                if (null == (h = null != s ? (0, a.B)(d.pathname, { ...i, path: s }) : null)) return;
+                let r = { ...i, key: s, location: d, match: h, history: o };
+                null != t ? (u = l.createElement(t, r)) : null != n && (u = n(r));
             }
         }),
-        (0, i.jsx)(s.F, { ...n, children: u })
+        (0, i.jsx)(r.F, { ...n, children: u })
     );
 }

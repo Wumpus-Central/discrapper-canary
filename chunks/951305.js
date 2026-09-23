@@ -2,8 +2,8 @@ r.d(t, { dX: () => M, Pv: () => P, Mq: () => C });
 var n = r(477900),
     i = r(582128),
     l = r(70283),
-    s = r(682618),
-    a = r(263532),
+    a = r(682618),
+    s = r(263532),
     o = r(242874),
     u = r(998370),
     c = r(380619),
@@ -32,7 +32,7 @@ function M(e) {
             children: M,
             additionalUserIds: y,
         } = e,
-        C = (0, a.t4)((e) => e.selectedSkuId),
+        C = (0, s.t4)((e) => e.selectedSkuId),
         [S, b] = i.useState(A),
         [O, G] = i.useState(),
         [L, U] = i.useState(!1),
@@ -46,13 +46,13 @@ function M(e) {
         [z, Y] = i.useState(
             t && (0, j.lo)(S) === j.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && null == T ? I.intl.string(I.t.ZkOo1U) : T,
         ),
-        [Z, K] = i.useState(void 0),
-        [q, J] = i.useState(void 0),
+        [Z, q] = i.useState(void 0),
+        [K, J] = i.useState(void 0),
         { enabled: $ } = u.J.useConfig({ location: "GiftContext" }),
         { openGiftingBadgePostPurchaseModal: X, canShowGiftingBadgePostPurchase: Q } = (function () {
             let { enabled: e } = u.J.useConfig({ location: "useOpenGiftingBadgePostPurchaseModal" }),
                 t = (0, d.bG)([x.Ay], () => x.Ay.getBadgeById(l.$.GIFTING)?.tiers),
-                { purchaseState: s, quantity: o } = (0, a.t4)((e) => ({
+                { purchaseState: a, quantity: o } = (0, s.t4)((e) => ({
                     purchaseState: e.purchaseState,
                     quantity: e.quantity,
                 })),
@@ -60,9 +60,9 @@ function M(e) {
             return (
                 i.useEffect(() => {
                     e &&
-                        s === p.h.PURCHASING &&
+                        a === p.h.PURCHASING &&
                         (c.current = x.Ay.getSingleRequirementProgress(l.$.GIFTING)?.current ?? null);
-                }, [e, s]),
+                }, [e, a]),
                 {
                     openGiftingBadgePostPurchaseModal: i.useCallback(() => {
                         if (e && null != c.current && null != (null != t ? (0, h.aZ)(t, c.current) : null)) {
@@ -84,13 +84,13 @@ function M(e) {
             );
         })();
     i.useEffect(() => {
-        t && $ && (0, s.o0)(l.$.GIFTING);
+        t && $ && (0, a.o0)(l.$.GIFTING);
     }, [t, $]);
     let ee = (0, j.Vt)(C, t),
         [et, er] = i.useState(!1),
         [en, ei] = i.useState(!1),
-        [el, es] = i.useState(),
-        ea = i.useCallback(
+        [el, ea] = i.useState(),
+        es = i.useCallback(
             (e) => {
                 let { onSubscriptionConfirmation: t } = e;
                 return (
@@ -100,11 +100,11 @@ function M(e) {
                             (ei(!1), t?.(), er(!0));
                         })
                         .catch((e) => {
-                            (ei(!1), es(e), er(!0));
+                            (ei(!1), ea(e), er(!0));
                         })
                 );
             },
-            [S, ee, ei, er, es],
+            [S, ee, ei, er, ea],
         ),
         eo = i.useRef(new Set());
     return (
@@ -129,14 +129,14 @@ function M(e) {
                 validatingGiftRecipient: L,
                 setValidatingGiftRecipient: U,
                 soundEffect: Z,
-                setSoundEffect: K,
-                emojiConfetti: q,
+                setSoundEffect: q,
+                emojiConfetti: K,
                 setEmojiConfetti: J,
                 customGiftMessage: z,
                 setCustomGiftMessage: Y,
                 selectedGiftStyle: k,
                 setSelectedGiftStyle: B,
-                sendGiftMessage: ea,
+                sendGiftMessage: es,
                 hasSentMessage: et,
                 isSendingMessage: en,
                 giftMessageError: el,

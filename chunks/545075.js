@@ -3,8 +3,8 @@ var n = r(477900);
 r(582128);
 var i = r(503698),
     l = r.n(i),
-    s = r(661531),
-    a = r(20742),
+    a = r(661531),
+    s = r(20742),
     o = r(462887),
     u = r(297264),
     c = r(834730),
@@ -47,7 +47,7 @@ function T() {
 }
 function I() {
     return (0, n.jsxs)(n.Fragment, {
-        children: [(0, n.jsx)(a.rQ, {}), (0, n.jsx)(d.c, { children: (0, n.jsx)(E, { className: j.yl }) })],
+        children: [(0, n.jsx)(s.rQ, {}), (0, n.jsx)(d.c, { children: (0, n.jsx)(E, { className: j.yl }) })],
     });
 }
 function v(e) {
@@ -62,7 +62,7 @@ function v(e) {
                       width: 20,
                       height: 20,
                       className: j.XJ,
-                      color: s.A.unsafe_rawColors.YELLOW_300.css,
+                      color: a.A.unsafe_rawColors.YELLOW_300.css,
                   }),
                   (0, n.jsx)(c.E, {
                       variant: "text-sm/normal",

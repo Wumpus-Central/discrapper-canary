@@ -180,8 +180,8 @@ function S(e) {
         { enabled: y } = (0, s.c)({ location: f }),
         {
             pendingPaymentSourceId: I,
-            hasInitialPaymentSourceSeed: A,
-            hasAddedPaymentSourceThisSession: g,
+            hasInitialPaymentSourceSeed: g,
+            hasAddedPaymentSourceThisSession: A,
         } = (0, r.t4)((e) => ({
             pendingPaymentSourceId: e.pendingPaymentSourceId,
             hasInitialPaymentSourceSeed: null != e.initialPaymentSourceId,
@@ -211,10 +211,10 @@ function S(e) {
                 pendingPaymentSourceId: I,
                 paymentSourceId: a,
                 giftCardsEnabled: y,
-                hasInitialPaymentSourceSeed: A,
-                hasAddedPaymentSourceThisSession: g,
+                hasInitialPaymentSourceSeed: g,
+                hasAddedPaymentSourceThisSession: A,
             }),
-            [i, P, S, v, E, I, a, y, A, g],
+            [i, P, S, v, E, I, a, y, g, A],
         );
     ((t = l.useRef(!1)),
         (n = l.useMemo(() => new m(j), [j])),

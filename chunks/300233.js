@@ -25,16 +25,16 @@ function d(e) {
             refetchOnMount: c,
             includeSoftDeleted: d,
             countryCode: h,
-            dontFetchWhileTrue: p,
+            dontFetchWhileTrue: C,
         } = e,
-        C = (0, i.bG)([o.A], () => o.A.isConnected()),
+        p = (0, i.bG)([o.A], () => o.A.isConnected()),
         m = (0, i.bG)([s.A], () => (null != t ? s.A.getSubscriptionGroupListingsForGuildFetchState(t) : s.e.FETCHED)),
         [E, A] = l.useState(!0 === c),
         f = l.useCallback(() => {
-            if (null == t || !C || !0 === p) return;
+            if (null == t || !p || !0 === C) return;
             let e = s.A.getSubscriptionGroupListingsForGuildFetchState(t);
             (E || e === s.e.NOT_FETCHED) && (A(!1), a.WA(t, { includeSoftDeleted: d, countryCode: h }));
-        }, [C, t, d, h, p, E]),
+        }, [p, t, d, h, C, E]),
         y = m === s.e.FETCHED && !E;
     return (0, r.jsx)(u.Provider, { value: { listingsLoaded: y, fetchGroupListingsForGuild: f }, children: n });
 }

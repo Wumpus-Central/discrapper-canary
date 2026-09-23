@@ -25,7 +25,7 @@ function S(e) {
         variant: s = "text-md/semibold",
     } = e;
     return n === C.Yr.DISCORD_ORB
-        ? (0, l.jsx)(A, { orbAmount: t, className: r, discount: a, variant: s })
+        ? (0, l.jsx)(g, { orbAmount: t, className: r, discount: a, variant: s })
         : (0, l.jsx)(I, {
               priceAmount: t,
               priceCurrency: n,
@@ -101,7 +101,7 @@ function I(e) {
         ],
     });
 }
-function A(e) {
+function g(e) {
     let { orbAmount: t, className: n, discount: i = p.rr, variant: a = "text-md/semibold" } = e,
         s =
             i !== p.rr && i.discountPercentage >= p.es

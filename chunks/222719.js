@@ -3,8 +3,8 @@ var n = r(477900);
 r(582128);
 var i = r(503698),
     l = r.n(i),
-    s = r(536637),
-    a = r.n(s),
+    a = r(536637),
+    s = r.n(a),
     o = r(17928),
     u = r(297264),
     c = r(531260),
@@ -24,7 +24,7 @@ function I(e) {
             isGift: t,
             premiumTier: r,
             offerTierMatchesCard: i,
-            offerType: s,
+            offerType: a,
             showYearlyPrice: I,
             priceOptions: v,
             textVariant: R,
@@ -49,10 +49,10 @@ function I(e) {
         H = null != k && (0, g.YJ)(k) === B,
         V = w?.subscriptionTrial;
     if (!P && !t && null != D && r === D && null != S && null != S.planIdFromItems) {
-        let e = null != S.trialEndsAt ? a()(S?.trialEndsAt).diff(a()(), "d") : 0,
+        let e = null != S.trialEndsAt ? s()(S?.trialEndsAt).diff(s()(), "d") : 0,
             t = j.hd[S.planIdFromItems],
             r = x.Ay.formatPriceString(x.Ay.getDefaultPrice(t.id), t.interval),
-            i = s === j.Vk.PREMIUM_TRIAL,
+            i = a === j.Vk.PREMIUM_TRIAL,
             o = S.planIdFromItems === j.gD.PREMIUM_YEAR_TIER_2;
         return (0, n.jsx)(u.D, {
             variant: y,
@@ -81,7 +81,7 @@ function I(e) {
             x.Ay.getDefaultPrice(r === j.PremiumTypes.TIER_0 ? j.gD.PREMIUM_MONTH_TIER_0 : j.gD.PREMIUM_MONTH_TIER_2),
             j.WT.MONTH,
         );
-        if (s === j.Vk.PREMIUM_TRIAL)
+        if (a === j.Vk.PREMIUM_TRIAL)
             return (0, n.jsx)(u.D, {
                 variant: y,
                 color: C,

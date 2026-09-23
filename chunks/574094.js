@@ -1,22 +1,22 @@
-n.d(t, { A: () => o });
+n.d(t, { A: () => d });
 var i = n(477900),
     l = n(582128),
-    r = n(4616),
-    s = n(528962);
+    s = n(4616),
+    r = n(528962);
 function a(e, t) {
     let { innerWidth: n, innerHeight: i } = window;
     if (0 === e || 0 === t) return null;
     let l = t / e,
-        r = n,
-        s = Math.round(n * l);
+        s = n,
+        r = Math.round(n * l);
     return (
-        s < i && ((s = i), (r = Math.round(i * (l = e / t)))),
-        { naturalWidth: e, naturalHeight: t, width: r, height: s }
+        r < i && ((r = i), (s = Math.round(i * (l = e / t)))),
+        { naturalWidth: e, naturalHeight: t, width: s, height: r }
     );
 }
-function o(e) {
+function d(e) {
     let { splash: t, children: n } = e,
-        [{ width: o, height: d }, h] = l.useState({ width: 0, height: 0, naturalHeight: 0, naturalWidth: 0 });
+        [{ width: d, height: o }, h] = l.useState({ width: 0, height: 0, naturalHeight: 0, naturalWidth: 0 });
     return (
         l.useEffect(() => {
             function e() {
@@ -29,8 +29,8 @@ function o(e) {
         }, []),
         (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(r.A, {
-                    className: s.T,
+                (0, i.jsx)(s.A, {
+                    className: r.T,
                     onLoad: function (e) {
                         let { currentTarget: t } = e,
                             { naturalWidth: n, naturalHeight: i } = t,
@@ -38,10 +38,10 @@ function o(e) {
                         null != l && h(l);
                     },
                     src: t,
-                    width: o,
-                    height: d,
+                    width: d,
+                    height: o,
                 }),
-                (0, i.jsx)("div", { className: s.Q, children: n }),
+                (0, i.jsx)("div", { className: r.Q, children: n }),
             ],
         })
     );

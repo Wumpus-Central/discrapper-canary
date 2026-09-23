@@ -1,11 +1,11 @@
-n.d(t, { Au: () => f, d5: () => _, j7: () => A, kS: () => p, l6: () => m });
+n.d(t, { Au: () => g, d5: () => _, j7: () => A, kS: () => p, l6: () => m });
 var o = n(684013),
     i = n(296027),
     r = n(489277),
     s = n(19575),
     l = n(350535),
-    c = n(636401),
-    a = n(90924),
+    a = n(636401),
+    c = n(90924),
     u = n(613057),
     d = n(652215);
 let h = ["207646673902501888"];
@@ -32,15 +32,15 @@ function _(e) {
             });
 }
 let A = async (e, t, n) => {
-        if (((0, a.sq)(e, t), (null == n || "" === n) && (0, a.IR)(t)))
+        if (((0, c.sq)(e, t), (null == n || "" === n) && (0, c.IR)(t)))
             return ((e.authorization.scopes = [u.LQ, u.kw]), Promise.resolve());
         if (null == n || "" === n)
-            return Promise.reject(new c.A({ closeCode: d.YI$.INVALID_CLIENTID }, "No Client ID Specified"));
+            return Promise.reject(new a.A({ closeCode: d.YI$.INVALID_CLIENTID }, "No Client ID Specified"));
         let o = s.Ay.releaseChannel !== d.BIo.CANARY && !h.includes(n) && e.transport !== u.z4.POST_MESSAGE;
-        return (await (0, a.e2)(n, o, e.abortController.signal), (0, a.uM)(e, n, t));
+        return (await (0, c.e2)(n, o, e.abortController.signal), (0, c.uM)(e, n, t));
     },
     m = () =>
-        (0, a.BB)((e) => {
+        (0, c.BB)((e) => {
             let t = [];
             return (
                 null != e.modeOptions.shortcut &&
@@ -53,8 +53,8 @@ let A = async (e, t, n) => {
                 t
             );
         }),
-    f = (e) =>
-        (0, a.Ub)(e, (e) => {
+    g = (e) =>
+        (0, c.Ub)(e, (e) => {
             let t = "";
             return (
                 null != e.modeOptions.shortcut &&

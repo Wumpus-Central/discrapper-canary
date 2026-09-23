@@ -5,8 +5,8 @@
     UR: () => v,
     W1: () => y,
     WU: () => P,
-    _Q: () => D,
-    b6: () => q,
+    _Q: () => q,
+    b6: () => D,
     bg: () => N,
     pu: () => M,
     se: () => U,
@@ -196,7 +196,7 @@ function M(e, t) {
             getIosAttribution: null != A && null != f ? () => (0, C.FW)({ impressionId: f }) : void 0,
         }));
 }
-function D(e, t) {
+function q(e, t) {
     let { adContentId: n, adCreativeType: i, cta: r } = e;
     !(function (e, t, n) {
         let { adContentId: i, adCreativeType: r, cta: s } = e,
@@ -253,7 +253,7 @@ function D(e, t) {
               });
     })({ adContentId: n, adCreativeType: i, cta: r }, t, { preferExternalAppStore: !1 });
 }
-function q(e, t) {
+function D(e, t) {
     let { quest: i } = e;
     ((0, T.E5)(T.kI.STEP_2_CLICKED_INTERNAL, "open_console_connection_settings")
         ? (0, l.r)({
