@@ -729,100 +729,100 @@ var t8 = n(983495),
     t4 = n(885386),
     t9 = n(362862),
     ne = n(621466),
-    nt = n(863610),
-    nn = n(508770),
-    ni = n(421773),
-    nl = n(318346),
-    na = n(923138),
-    ns = n(309954),
-    nr = n(673125),
-    no = n(106799),
+    nt = n(318254),
+    nn = n(863610),
+    ni = n(508770),
+    nl = n(421773),
+    na = n(318346),
+    ns = n(923138),
+    nr = n(309954),
+    no = n(673125),
     nd = n(276130),
     nc = n(769001);
 function nu(e) {
-    let { popoutContainerRef: t, forceOpen: n } = e;
-    (0, na.I)({ enabled: !0 });
-    let { balance: a } = (0, ns.W)(),
-        r = (0, d.bG)([nr.Ay], () => nr.Ay.clientUnreadNotificationType),
-        { isHovered: o, onMouseEnter: c, onMouseLeave: u, setIsHovered: m, cancelTimers: h } = (0, ni.A)(0, 500),
-        g = l.useCallback(() => {
-            (0, x.hasAnyModalOpen)() || u();
-        }, [u]),
-        A = l.useRef(null);
+    let { popoutContainerRef: t, forceOpen: n, onCloseAccountPopout: a } = e;
+    (0, ns.I)({ enabled: !0 });
+    let { balance: r } = (0, nr.W)(),
+        o = (0, d.bG)([no.Ay], () => no.Ay.clientUnreadNotificationType),
+        { isHovered: c, onMouseEnter: u, onMouseLeave: m, setIsHovered: h, cancelTimers: g } = (0, nl.A)(0, 500),
+        A = l.useCallback(() => {
+            (0, x.hasAnyModalOpen)() || m();
+        }, [m]),
+        v = l.useRef(null);
     l.useEffect(() => {
-        if (o) return (document.addEventListener("mouseover", e), () => document.removeEventListener("mouseover", e));
+        if (c) return (document.addEventListener("mouseover", e), () => document.removeEventListener("mouseover", e));
         function e(e) {
             if ((0, x.hasAnyModalOpen)()) return;
             let t = (0, ne.vq)(e.target, Element) ? e.target : null,
                 n = t?.closest(`.${ew.j$}`);
-            null != n && n !== A.current && (h(), m(!1));
+            null != n && n !== v.current && (g(), h(!1));
         }
-    }, [o, h, m]);
-    let v = l.useRef(!1);
+    }, [c, g, h]);
+    let E = l.useRef(!1);
     l.useEffect(() => {
-        o || (v.current = !1);
-    }, [o]);
-    let E = l.useCallback(() => {
-            (v.current ||
-                ((v.current = !0),
-                (0, nl.Y)({
+        c || (E.current = !1);
+    }, [c]);
+    let C = l.useCallback(() => {
+            (E.current ||
+                ((E.current = !0),
+                (0, na.Y)({
                     pageType: R.A.USER_PROFILE_ACCOUNT_POPOUT,
                     sectionType: R.A.ORB_WALLET,
                     ctaObject: R.A.ORB_WALLET_OPEN_FROM_PROFILE,
                 })),
-                c());
-        }, [c]),
-        C = (0, eO.rE)({ action: "PRESS_ORBS", onClick: E });
+                u());
+        }, [u]),
+        _ = (0, eO.rE)({ action: "PRESS_ORBS", onClick: C });
     l.useEffect(() => {
-        n && c();
-    }, [n, c]);
-    let _ = l.useMemo(
+        n && u();
+    }, [n, u]);
+    let I = l.useMemo(
             () =>
-                null != a
-                    ? G.intl.format(G.t["8xDISf"], { balance: String(a) })
-                    : (0, i.jsx)(nt.n, { dotRadius: 3.5, themed: !0, className: nc.K }),
-            [a],
-        ),
-        I = l.useMemo(
-            () =>
-                r === nr.Y0.NEW_ACHIEVEMENT
-                    ? (0, i.jsx)(nn.E, { type: "new", variant: "brand" })
-                    : r === nr.Y0.UNCLAIMED_ACHIEVEMENT
-                      ? (0, i.jsx)(nn.E, { type: { text: G.intl.string(G.t.O13yhz) }, variant: "brand" })
-                      : null,
+                null != r
+                    ? G.intl.format(G.t["8xDISf"], { balance: String(r) })
+                    : (0, i.jsx)(nn.n, { dotRadius: 3.5, themed: !0, className: nc.K }),
             [r],
         ),
-        S = l.useCallback(() => {
-            m(!1);
-        }, [m]);
+        S = l.useMemo(
+            () =>
+                o === no.Y0.NEW_ACHIEVEMENT
+                    ? (0, i.jsx)(ni.E, { type: "new", variant: "brand" })
+                    : o === no.Y0.UNCLAIMED_ACHIEVEMENT
+                      ? (0, i.jsx)(ni.E, { type: { text: G.intl.string(G.t.O13yhz) }, variant: "brand" })
+                      : null,
+            [o],
+        ),
+        j = l.useCallback(() => {
+            (h(!1), a());
+        }, [h, a]);
     return (0, i.jsx)("li", {
-        ref: A,
+        ref: v,
         className: ew.j$,
-        onMouseEnter: E,
-        onMouseLeave: g,
+        onMouseEnter: C,
+        onMouseLeave: A,
         children: (0, i.jsx)(f.Y, {
             targetElementRef: t,
             align: "center",
             spacing: 12,
             renderPopout: () =>
                 (0, i.jsx)("div", {
-                    onMouseEnter: c,
-                    onMouseLeave: g,
-                    children: (0, i.jsx)(nd.vG, { onCloseWallet: S }),
+                    onMouseEnter: u,
+                    onMouseLeave: A,
+                    children: (0, i.jsx)(nd.vG, { onCloseWallet: j, isProfilePopout: !0 }),
                 }),
-            shouldShow: o,
-            onRequestClose: g,
+            shouldShow: c,
+            onRequestClose: A,
             children: (e) =>
                 (0, i.jsx)("div", {
                     className: ew.jG,
                     children: (0, i.jsxs)(p.D, {
                         className: ew.ef,
                         ...e,
-                        onClick: C,
+                        onClick: _,
                         children: [
                             (0, i.jsx)("div", {
                                 className: ew.iA,
-                                children: (0, i.jsx)(no.A, { shouldUseThemeColor: !0, customSize: 18 }),
+                                children: (0, i.jsx)(nt.C, { color: "currentColor", size: "xs" }),
                             }),
                             (0, i.jsx)("div", {
                                 className: ew.$H,
@@ -831,13 +831,13 @@ function nu(e) {
                                         color: "currentColor",
                                         variant: "text-sm/medium",
                                         className: ew.W1,
-                                        children: _,
+                                        children: I,
                                     }),
                                 }),
                             }),
                             (0, i.jsxs)("div", {
                                 className: s()(ew.ap, nc._),
-                                children: [I, (0, i.jsx)(eM._, { size: "xs", color: "currentColor" })],
+                                children: [S, (0, i.jsx)(eM._, { size: "xs", color: "currentColor" })],
                             }),
                         ],
                     }),
@@ -1784,6 +1784,7 @@ function n0(e) {
                                                                     (0, i.jsx)(nu, {
                                                                         popoutContainerRef: E,
                                                                         forceOpen: et,
+                                                                        onCloseAccountPopout: n,
                                                                     }),
                                                             ],
                                                         }),
@@ -2660,7 +2661,7 @@ function lv(e) {
         }, [s]),
         g = eu.A.coachmarkDismissibleContent;
     if (null != a) {
-        let e = (0, lx.A)("1790180691782", !0);
+        let e = (0, lx.A)("1790181779942", !0);
         t =
             null != e
                 ? G.intl.formatToPlainString(G.t.wve4kg, { webBuildOverride: a.id, builtAt: e })
@@ -2988,6 +2989,7 @@ class lb extends l.PureComponent {
                     n.e("703728"),
                     n.e("519435"),
                     n.e("10985"),
+                    n.e("171206"),
                     n.e("102075"),
                     n.e("828178"),
                     n.e("45036"),
@@ -2999,7 +3001,7 @@ class lb extends l.PureComponent {
                     n.e("747973"),
                     n.e("314001"),
                     n.e("885251"),
-                    n.e("167275"),
+                    n.e("914175"),
                     n.e("529366"),
                     n.e("990185"),
                     n.e("444038"),
@@ -3256,6 +3258,7 @@ class lb extends l.PureComponent {
                     n.e("554241"),
                     n.e("724303"),
                     n.e("521930"),
+                    n.e("942724"),
                     n.e("913823"),
                     n.e("393766"),
                     n.e("53102"),
