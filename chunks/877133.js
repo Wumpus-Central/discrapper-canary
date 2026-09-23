@@ -67,8 +67,8 @@ var r,
         (c.GLOBAL_NAME = "display_name"),
         (c.CLAN_TAG = "clan_tag"),
         c),
-    g = n(17928),
-    m = n(47167),
+    m = n(17928),
+    g = n(47167),
     S = n(734057),
     N = n(576705),
     C = n(994500),
@@ -98,7 +98,7 @@ function P(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : y.FXj,
         i = arguments.length > 3 ? arguments[3] : void 0,
         r = arguments.length > 4 ? arguments[4] : void 0,
-        a = null != t ? (0, m.m1)(t, O.default, C.A) : D.intl.string(D.t.J90oLW),
+        a = null != t ? (0, g.m1)(t, O.default, C.A) : D.intl.string(D.t.J90oLW),
         s = (function (e) {
             let t = M(e, h.BLOCK_PROFILE_UPDATE_TYPE);
             if (null != t) return t;
@@ -155,7 +155,7 @@ function P(e, t) {
         if (null != e) return e;
     }
     let T = N.A.can(y.xBc.VIEW_CHANNEL, t),
-        g = null != t && T ? n : y.FXj,
+        m = null != t && T ? n : y.FXj,
         S = (function (e, t, n) {
             let i = M(e, h.VOICE_CHANNEL_STATUS_OUTCOME);
             if (null == i) return null;
@@ -184,18 +184,18 @@ function P(e, t) {
                 ? D.intl.format(D.t.AXQufN, {
                       applicationName: I,
                       channelName: a,
-                      channelHook: g,
+                      channelHook: m,
                       integrationOwnerHook: i,
                   })
                 : D.intl.format(D.t.s3tjMN, {
                       applicationName: I,
                       channelName: a,
-                      channelHook: g,
+                      channelHook: m,
                       integrationOwnerHook: i,
                   })
           : c !== E.BLOCKED
-            ? D.intl.format(D.t.IZg0VQ, { channelName: a, channelHook: g })
-            : D.intl.format(D.t.lOIOSK, { channelName: a, channelHook: g });
+            ? D.intl.format(D.t.IZg0VQ, { channelName: a, channelHook: m })
+            : D.intl.format(D.t.lOIOSK, { channelName: a, channelHook: m });
 }
 function U(e) {
     switch (e) {
@@ -259,7 +259,7 @@ function G(e) {
 }
 function x(e) {
     let t = u.useMemo(() => G(e), [e]),
-        n = (0, g.bG)([S.A], () => S.A.getChannel(t.embedChannelId), [t.embedChannelId]);
+        n = (0, m.bG)([S.A], () => S.A.getChannel(t.embedChannelId), [t.embedChannelId]);
     return { ...t, embedChannel: n };
 }
 function k(e) {

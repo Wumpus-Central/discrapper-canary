@@ -4,18 +4,18 @@ var i = n(496431),
     r = n(975571),
     s = n(158045),
     a = n(511484),
-    o = n(202541),
-    E = n(652215),
+    E = n(202541),
+    o = n(652215),
     c = n(375708);
 function u(e, t, n, i) {
     switch (e) {
-        case o.pe.TIER_0:
+        case E.pe.TIER_0:
             return t.days > 0
                 ? c.intl.formatToPlainString(c.t.sP5OqC, { days: t.days })
                 : t.hours > 0
                   ? c.intl.formatToPlainString(c.t["7Lhfu7"], { hours: t.hours })
                   : c.intl.formatToPlainString(c.t.coDiS0, { minutes: Math.max(t.minutes, 1) });
-        case o.pe.TIER_2:
+        case E.pe.TIER_2:
             return t.days > 0
                 ? c.intl.formatToPlainString(c.t.GPqVWT, { days: t.days, trialPeriod: n, termsUrl: i })
                 : t.hours > 0
@@ -42,7 +42,7 @@ function _(e) {
                   intervalType: e.subscriptionTrial?.interval,
                   intervalCount: e.subscriptionTrial?.intervalCount,
               }),
-              r.A.getArticleURL(e.trialId === o.yo ? E.MVz.NITRO_TRIAL_FOR_ALL : E.MVz.PREMIUM_TRIAL),
+              r.A.getArticleURL(e.trialId === E.yo ? o.MVz.NITRO_TRIAL_FOR_ALL : o.MVz.PREMIUM_TRIAL),
           );
 }
 function A(e, t, n) {

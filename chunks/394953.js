@@ -1,4 +1,4 @@
-n.d(t, { EJ: () => f, U4: () => m, i3: () => S, i7: () => p, lI: () => T, tZ: () => g, zo: () => N });
+n.d(t, { EJ: () => f, U4: () => g, i3: () => S, i7: () => p, lI: () => T, tZ: () => m, zo: () => N });
 var i = n(892227),
     r = n(806163),
     a = n(17928),
@@ -36,13 +36,13 @@ function T() {
     let { pathname: e } = (0, r.zy)();
     return e.startsWith(I.BVt.CHANNEL(I.gNP));
 }
-function g(e) {
+function m(e) {
     {
         let { openUserSettings: t } = n(766075);
         t(d.X.NOTIFICATIONS_PANEL, { analyticsLocations: e });
     }
 }
-function m() {
+function g() {
     let e = (0, a.yK)([A.A], () => A.A.getNotifyingChannelIds() ?? []),
         t = (0, a.yK)([_.Ay], () => e.filter((e) => _.Ay.hasUnread(e)), [e]),
         n = (0, a.yK)([s.Ay], () => s.Ay.getSettingsFilteredMentions() ?? []);

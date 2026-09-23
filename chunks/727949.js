@@ -4,14 +4,14 @@ var i = n(17928),
     r = n(826673),
     s = n(367727),
     a = n(617617),
-    o = n(927813),
-    E = n(935208),
+    E = n(927813),
+    o = n(935208),
     c = n(851746),
     u = n(103411),
     _ = n(49999),
     A = n(375708);
 function T(e) {
-    let t = (e - Date.now()) / o.A.Millis.HOUR;
+    let t = (e - Date.now()) / E.A.Millis.HOUR;
     return t > 24
         ? A.intl.formatToPlainString(A.t["g9s+dA"], { numDays: Math.floor(t / 24) })
         : t >= 1
@@ -29,7 +29,7 @@ function N(e) {
     if (null == t) return !1;
     let n = t.isReferralTrial,
         i = !t.isRedeemed,
-        l = new Date(E.default.extractTimestamp(t.id)),
+        l = new Date(o.default.extractTimestamp(t.id)),
         r = new Date();
     return n && i && r >= l;
 }

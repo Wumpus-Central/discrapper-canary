@@ -1,5 +1,5 @@
 n.d(t, {
-    FZ: () => m,
+    FZ: () => g,
     I9: () => I,
     Iq: () => c,
     J8: () => E,
@@ -13,7 +13,7 @@ n.d(t, {
     o: () => _,
     tO: () => N,
     v: () => d,
-    wz: () => g,
+    wz: () => m,
 });
 var i,
     r,
@@ -47,7 +47,7 @@ let A = new Set(["hubs"]),
     f = "c",
     p = "l",
     T = 10 * s.A.Millis.MINUTE;
-var g =
+var m =
     (((a = {})[(a.Clans = -3)] = "Clans"),
     (a[(a.Hub = u)] = "Hub"),
     (a[(a.Communities = c)] = "Communities"),
@@ -57,7 +57,7 @@ var g =
     (a[(a.Science = 5)] = "Science"),
     (a[(a.Education = 6)] = "Education"),
     a);
-let m = [1, 2, 3, 5, 6],
+let g = [1, 2, 3, 5, 6],
     S = ["en-GB"];
 function N() {
     return (0, l.getLanguages)()

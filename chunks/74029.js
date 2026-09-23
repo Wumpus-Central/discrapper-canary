@@ -1,4 +1,4 @@
-l.d(t, { PR: () => g, PS: () => d, Q_: () => p, _w: () => c, dy: () => h, fA: () => m, nI: () => u, zz: () => f });
+l.d(t, { PR: () => g, PS: () => d, Q_: () => p, _w: () => c, dy: () => h, fA: () => m, nI: () => o, zz: () => f });
 var n = l(582128);
 l(29692);
 let a = Object.freeze({ active: !1, annotations: Object.freeze([]), context: null }),
@@ -7,7 +7,7 @@ let a = Object.freeze({ active: !1, annotations: Object.freeze([]), context: nul
 function s(e) {
     return r.get(e) ?? a;
 }
-function o(e, t) {
+function u(e, t) {
     for (let l of (t.active || 0 !== t.annotations.length ? r.set(e, t) : r.delete(e), [...i]))
         try {
             l();
@@ -15,22 +15,22 @@ function o(e, t) {
             console.error("[vibegrations] design feedback subscriber threw", e);
         }
 }
-function u(e) {
+function o(e) {
     let t = s(e);
-    t.active || o(e, { ...t, active: !0 });
+    t.active || u(e, { ...t, active: !0 });
 }
 function d(e) {
-    r.has(e) && o(e, a);
+    r.has(e) && u(e, a);
 }
 function c(e, t) {
     let l = s(e);
-    l.active && o(e, { ...l, context: t });
+    l.active && u(e, { ...l, context: t });
 }
 function m(e, t) {
     let l = s(e);
     l.active &&
         0 !== t.size &&
-        o(e, {
+        u(e, {
             ...l,
             annotations: l.annotations.map((e) => {
                 let l = t.get(e.id);
@@ -46,12 +46,12 @@ function h(e, t, l, n) {
         r = a.annotations.find((e) => e.id === l);
     null != r &&
         f(r, t) &&
-        o(e, { ...a, annotations: a.annotations.map((e) => (e.id === l ? { ...e, comment: n } : e)) });
+        u(e, { ...a, annotations: a.annotations.map((e) => (e.id === l ? { ...e, comment: n } : e)) });
 }
 function g(e, t, l) {
     let n = s(e),
         a = n.annotations.find((e) => e.id === l);
-    null != a && f(a, t) && o(e, { ...n, annotations: n.annotations.filter((e) => e.id !== l) });
+    null != a && f(a, t) && u(e, { ...n, annotations: n.annotations.filter((e) => e.id !== l) });
 }
 function x(e) {
     return (

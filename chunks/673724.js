@@ -4,7 +4,7 @@
     IU: () => l,
     Is: () => I,
     RX: () => o,
-    S8: () => m,
+    S8: () => g,
     Wb: () => h,
     XE: () => a,
     ZJ: () => T,
@@ -69,7 +69,7 @@ function p(e, t) {
 function T(e) {
     return `${Math.round(e / 1048576)} MB`;
 }
-let g = [
+let m = [
         { id: "claude-fable-5-1", label: "Claude Fable 5.1", provider: "anthropic" },
         { id: "claude-opus-5-5", label: "Claude Opus 5.5", provider: "anthropic" },
         { id: "claude-sonnet-5", label: "Claude Sonnet 5", provider: "anthropic" },
@@ -79,9 +79,9 @@ let g = [
         { id: "gpt-6-luna", label: "GPT-6 Luna", provider: "openai", supports_fast: !0 },
         { id: "xai/grok-4.7", label: "Grok 4.7", provider: "xai" },
     ],
-    m = { main: g, subagent: g, thinking: ["low", "medium", "high", "xhigh", "max"] },
+    g = { main: m, subagent: m, thinking: ["low", "medium", "high", "xhigh", "max"] },
     S = [
         { id: "deepseek/deepseek-flash", label: "DeepSeek V4.1 Flash", provider: "deepseek" },
         { id: "moonshotai/kimi-k3", label: "Kimi K3", provider: "moonshotai" },
     ],
-    N = { main: S, subagent: S, thinking: m.thinking };
+    N = { main: S, subagent: S, thinking: g.thinking };

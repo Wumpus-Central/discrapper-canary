@@ -21,8 +21,8 @@ function A(e) {
             id: f,
             className: p,
             reference: T,
-            overrideTargetRect: g,
-            placement: m = "bottom",
+            overrideTargetRect: m,
+            placement: g = "bottom",
             spacing: S = 8,
             alignmentSpacing: N,
             autoFlip: C = !0,
@@ -75,7 +75,7 @@ function A(e) {
             context: K,
         } = (0, s.we)({
             nodeId: B,
-            placement: m,
+            placement: g,
             open: h,
             onOpenChange: I,
             strategy: L,
@@ -83,15 +83,15 @@ function A(e) {
             whileElementsMounted: x
                 ? (e, t, n) =>
                       (0, l.ll)(e, t, n, {
-                          ancestorScroll: null == g,
-                          ancestorResize: null == g,
-                          layoutShift: null == g,
+                          ancestorScroll: null == m,
+                          ancestorResize: null == m,
+                          layoutShift: null == m,
                       })
                 : void 0,
         });
     r.useLayoutEffect(() => {
-        null != g ? V.setPositionReference({ getBoundingClientRect: () => g }) : null != T && V.setReference(T);
-    }, [V, g, T]);
+        null != m ? V.setPositionReference({ getBoundingClientRect: () => m }) : null != T && V.setReference(T);
+    }, [V, m, T]);
     let $ = (0, s.s9)(K),
         z = (0, s.Mk)(K, { restMs: G, delay: { open: G, close: 0 }, enabled: "hover" === w, handleClose: (0, s.iB)() }),
         { getReferenceProps: X, getFloatingProps: q } = (0, s.bv)([$, z]),

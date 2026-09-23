@@ -21,9 +21,9 @@ let _ = r.forwardRef(function (e, t) {
             "aria-label": f,
             "aria-expanded": p,
             "aria-haspopup": T,
-            "data-jump-section": g,
+            "data-jump-section": m,
         } = e,
-        m = (0, i.jsx)(n, { size: "sm", color: A ?? "currentColor", colorClass: h });
+        g = (0, i.jsx)(n, { size: "sm", color: A ?? "currentColor", colorClass: h });
     return (0, i.jsx)(o.m, {
         position: "bottom",
         text: I,
@@ -37,7 +37,7 @@ let _ = r.forwardRef(function (e, t) {
             "aria-label": null != f ? f : I,
             "aria-haspopup": T,
             "aria-expanded": p,
-            "data-jump-section": g,
+            "data-jump-section": m,
             "aria-disabled": E,
             children: _
                 ? (0, i.jsxs)("div", {
@@ -47,12 +47,12 @@ let _ = r.forwardRef(function (e, t) {
                               mask: c.Ay.Masks.HEADER_BAR_BADGE_BOTTOM,
                               height: l.E.sm,
                               width: l.E.sm,
-                              children: m,
+                              children: g,
                           }),
                           (0, i.jsx)("span", { className: u.qS }),
                       ],
                   })
-                : m,
+                : g,
         }),
     });
 });

@@ -10,8 +10,8 @@ var c = n(435558),
     f = n(891897),
     p = n(976860),
     T = n(95701),
-    g = n(403362),
-    m = n(280450),
+    m = n(403362),
+    g = n(280450),
     S = n(734057),
     N = n(808728),
     C = n(71393),
@@ -40,7 +40,7 @@ function G() {
             knownThreadIds: u()(b)
                 .values()
                 .concat(u().values(P))
-                .filter(g.Vq)
+                .filter(m.Vq)
                 .uniq()
                 .filter((e) => {
                     let t = S.A.getBasicChannel(e);
@@ -145,7 +145,7 @@ class $ extends E.Ay.Store {
                 null != e.selectedChannelIds && (b = { ...e.selectedChannelIds, null: null }));
         }
         (this.mustEmitChanges((e) => "CONNECTION_OPEN" !== e.type && "VOICE_STATE_UPDATES" !== e.type),
-            this.waitFor(m.default, S.A, I.A, N.Ay, C.A, O.Ay, R.A, L.A));
+            this.waitFor(g.default, S.A, I.A, N.Ay, C.A, O.Ay, R.A, L.A));
     }
     getChannelId(e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
@@ -240,7 +240,7 @@ let z = new $(h.h, {
     GUILD_ROLE_DELETE: K,
     GUILD_MEMBER_UPDATE: function (e) {
         let { guildId: t, user: n } = e;
-        return n.id === m.default.getId() && Y(t);
+        return n.id === g.default.getId() && Y(t);
     },
     VOICE_CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;
@@ -265,7 +265,7 @@ let z = new $(h.h, {
                         }, 6e4)),
                     G());
             } else {
-                if (t.userId !== m.default.getId()) return e;
+                if (t.userId !== g.default.getId()) return e;
                 (clearInterval(d), (d = void 0), (o = 0));
                 let n = S.A.getChannel(l)?.getGuildId(),
                     i = S.A.getChannel(t.channelId)?.getGuildId();

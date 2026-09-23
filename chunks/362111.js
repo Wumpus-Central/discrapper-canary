@@ -1,8 +1,8 @@
 n.d(t, { default: () => E });
 var i = n(477900);
 n(582128);
-var l = n(284009),
-    s = n.n(l),
+var s = n(284009),
+    l = n.n(s),
     r = n(20742),
     a = n(224640),
     o = n(632088),
@@ -15,23 +15,23 @@ function A(e) {
     let {
             transitionState: t,
             analyticsLocation: n,
-            onClose: l,
+            onClose: s,
             onAddPaymentSource: u,
             toastContent: A,
             initialStep: E = d.pn.PAYMENT_ELEMENT,
             overwriteSubscriptionPaymentSource: h = !1,
         } = e,
         S = (0, c.p)(),
-        p = (0, c.Y)({
+        x = (0, c.Y)({
             addPaymentMethodStepState: S,
             initialStep: E,
             prependSteps: [],
             appendSteps: [],
             onReturn: () => {
-                l();
+                s();
             },
             onComplete: (e, t) => {
-                (s()(null != t, "paymentSource missing"), u?.(t), l());
+                (l()(null != t, "paymentSource missing"), u?.(t), s());
             },
             onStepChange: () => {},
             header: (0, i.jsx)(r.rQ, { title: g.intl.string(g.t.eQ2bLp) }),
@@ -41,7 +41,7 @@ function A(e) {
         });
     return (0, i.jsx)(a.d, {
         transitionState: t,
-        onClose: l,
+        onClose: s,
         size: "md",
         "aria-label": g.intl.string(g.t.eQ2bLp),
         contentOutsideContainer: (0, i.jsx)(o.A, {}),
@@ -50,7 +50,7 @@ function A(e) {
             onSubmit: function (e) {
                 e.preventDefault();
             },
-            children: p,
+            children: x,
         }),
     });
 }

@@ -23,8 +23,8 @@ var i = n(92077),
     f = n(235986),
     p = n(465797),
     T = n(174459),
-    g = n(652215),
-    m = n(375708),
+    m = n(652215),
+    g = n(375708),
     S = n(990587),
     N = n(221851);
 class C extends a.PureComponent {
@@ -42,11 +42,11 @@ class C extends a.PureComponent {
     })();
     handleChooseDownload = () => {
         let { cloudSyncState: e } = this.props;
-        e.type === g.VX0.CONFLICT && this.handlePlay(!0, e.remote.hash);
+        e.type === m.VX0.CONFLICT && this.handlePlay(!0, e.remote.hash);
     };
     handleChooseUpload = () => {
         let { cloudSyncState: e } = this.props;
-        e.type === g.VX0.CONFLICT && this.handlePlay(!0, e.next.hash);
+        e.type === m.VX0.CONFLICT && this.handlePlay(!0, e.next.hash);
     };
     renderConflictButton(e, t, n, i) {
         return (0, r.jsx)(c.D, {
@@ -61,7 +61,7 @@ class C extends a.PureComponent {
                         className: S.fn,
                         children: [
                             (0, r.jsx)("div", { className: S.Pc, children: e }),
-                            (0, r.jsx)("div", { children: m.intl.string(m.t.gflHO6) }),
+                            (0, r.jsx)("div", { children: g.intl.string(g.t.gflHO6) }),
                             (0, r.jsx)("div", { className: S.vE, children: l()(t).calendar() }),
                         ],
                     }),
@@ -81,7 +81,7 @@ class C extends a.PureComponent {
                         }),
                         (0, r.jsx)("div", {
                             className: S.h_,
-                            children: m.intl.format(m.t.RAaWyc, { applicationName: e.name }),
+                            children: g.intl.format(g.t.RAaWyc, { applicationName: e.name }),
                         }),
                     ],
                 }),
@@ -91,7 +91,7 @@ class C extends a.PureComponent {
                         children: [
                             (0, r.jsx)(u.$, {
                                 variant: "secondary",
-                                text: m.intl.string(m.t["ETE/oC"]),
+                                text: g.intl.string(g.t["ETE/oC"]),
                                 onClick: this.onClose,
                             }),
                             (0, r.jsxs)(f.A, {
@@ -103,13 +103,13 @@ class C extends a.PureComponent {
                                         className: S.ft,
                                         children: (0, r.jsx)(u.$, {
                                             variant: "secondary",
-                                            text: m.intl.string(m.t["5911Lb"]),
+                                            text: g.intl.string(g.t["5911Lb"]),
                                             onClick: () => this.handlePlay(),
                                         }),
                                     }),
                                     (0, r.jsx)(u.$, {
                                         variant: "primary",
-                                        text: m.intl.string(m.t["359Pbd"]),
+                                        text: g.intl.string(g.t["359Pbd"]),
                                         onClick: () => this.handlePlay(!1),
                                     }),
                                 ],
@@ -122,16 +122,16 @@ class C extends a.PureComponent {
     }
     renderConflict() {
         let { application: e, cloudSyncState: t } = this.props;
-        if (t.type !== g.VX0.CONFLICT) throw Error("Cannot render conflict for non conflict type");
+        if (t.type !== m.VX0.CONFLICT) throw Error("Cannot render conflict for non conflict type");
         return (0, r.jsxs)(d.$m, {
             className: N.SX,
             children: [
                 (0, r.jsx)("div", {
                     className: S.h_,
-                    children: m.intl.format(m.t.eyXUP6, { applicationName: e.name }),
+                    children: g.intl.format(g.t.eyXUP6, { applicationName: e.name }),
                 }),
                 this.renderConflictButton(
-                    m.intl.string(m.t.AQUmkr),
+                    g.intl.string(g.t.AQUmkr),
                     t.remote.timestamp,
                     S.Mp,
                     this.handleChooseDownload,
@@ -141,17 +141,17 @@ class C extends a.PureComponent {
                     align: f.A.Align.CENTER,
                     children: [
                         (0, r.jsx)("div", { className: S.cd }),
-                        (0, r.jsx)("div", { className: S.WW, children: m.intl.string(m.t.WUsA2D) }),
+                        (0, r.jsx)("div", { className: S.WW, children: g.intl.string(g.t.WUsA2D) }),
                         (0, r.jsx)("div", { className: S.cd }),
                     ],
                 }),
-                this.renderConflictButton(m.intl.string(m.t.AXVwsw), t.next.timestamp, S.Hs, this.handleChooseUpload),
+                this.renderConflictButton(g.intl.string(g.t.AXVwsw), t.next.timestamp, S.Hs, this.handleChooseUpload),
             ],
         });
     }
     render() {
         let { cloudSyncState: e, transitionState: t } = this.props,
-            n = e.type === g.VX0.CONFLICT ? m.intl.string(m.t.oNbO1f) : m.intl.string(m.t.as4Tgg);
+            n = e.type === m.VX0.CONFLICT ? g.intl.string(g.t.oNbO1f) : g.intl.string(g.t.as4Tgg);
         return (0, r.jsxs)(d.EO, {
             transitionState: t,
             className: S.yl,
@@ -165,7 +165,7 @@ class C extends a.PureComponent {
                         (0, r.jsx)(_.D, { variant: "heading-lg/semibold", className: N.Gf, children: n }),
                     ],
                 }),
-                e.type === g.VX0.CONFLICT ? this.renderConflict() : this.renderError(),
+                e.type === m.VX0.CONFLICT ? this.renderConflict() : this.renderError(),
             ],
         });
     }
@@ -188,10 +188,10 @@ async function R(e, t, n) {
         }
     }
     return (
-        T.default.track(g.HAw.APPLICATION_OPENED, {
+        T.default.track(m.HAw.APPLICATION_OPENED, {
             application_id: i.id,
             application_name: i.name,
-            type: g.UqL.LAUNCH,
+            type: m.UqL.LAUNCH,
             distributor: null != t ? t.getDistributor() : null,
             ...l,
         }),
@@ -246,11 +246,11 @@ function x(e, t) {
     let n = (0, y.F)(e, D.A, v.A),
         { analyticsParams: i } = t;
     switch (n) {
-        case g.Hf6.PLAY:
+        case m.Hf6.PLAY:
             return R(e.id, e, { analyticsParams: i });
-        case g.Hf6.INSTALL:
+        case m.Hf6.INSTALL:
             return U(e.id, e.branchId, i.source);
-        case g.Hf6.UPDATE:
+        case m.Hf6.UPDATE:
             return w(e.id, e.branchId);
     }
 }

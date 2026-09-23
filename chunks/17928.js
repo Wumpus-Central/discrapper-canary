@@ -246,9 +246,9 @@ function f(e, t) {
 }
 var p = n(64015),
     T = n.n(p),
-    g = n(506774);
+    m = n(506774);
 n(142703);
-class m {
+class g {
     listeners = new Set();
     conditionalListeners = new Set();
     add = (e) => {
@@ -289,8 +289,8 @@ let S = [],
         };
     });
 class O {
-    _changeCallbacks = new m();
-    _reactChangeCallbacks = new m();
+    _changeCallbacks = new g();
+    _reactChangeCallbacks = new g();
     _syncWiths = [];
     _dispatchToken;
     _dispatcher;
@@ -428,7 +428,7 @@ class y extends O {
                         () => {
                             (y.clearPersistQueue(e),
                                 y.allPersistKeys.forEach((t) => {
-                                    y.shouldClear(e, t) && g.w.remove(t);
+                                    y.shouldClear(e, t) && m.w.remove(t);
                                 }),
                                 O.getAll().forEach((t) => {
                                     t instanceof y &&
@@ -469,7 +469,7 @@ class y extends O {
             let e = {};
             return (
                 y.allPersistKeys.forEach((t) => {
-                    e[t] = (g.w.get(t) ?? R)._state;
+                    e[t] = (m.w.get(t) ?? R)._state;
                 }),
                 e
             );
@@ -525,8 +525,8 @@ class y extends O {
         }
     }
     static migrateAndReadStoreState(e, t) {
-        if (null != L && y.shouldClear(L, e)) return (g.w.remove(e), { state: void 0, requiresPersist: !1 });
-        let { _state: n, _version: i, ...r } = (null != y._clearAllPromise ? null : g.w.get(e)) ?? R,
+        if (null != L && y.shouldClear(L, e)) return (m.w.remove(e), { state: void 0, requiresPersist: !1 });
+        let { _state: n, _version: i, ...r } = (null != y._clearAllPromise ? null : m.w.get(e)) ?? R,
             a = null == t ? 0 : t.length;
         if (0 !== a && i !== a && null != t) {
             let e = i ?? 0,
@@ -559,11 +559,11 @@ class y extends O {
         let { persistKey: e } = this.getClass(),
             t = this.getState(),
             n = this._version;
-        g.w.set(e, { _state: t, _version: n });
+        m.w.set(e, { _state: t, _version: n });
     }
     clear() {
         let { persistKey: e } = this.getClass();
-        g.w.remove(e);
+        m.w.remove(e);
     }
 }
 class D extends y {

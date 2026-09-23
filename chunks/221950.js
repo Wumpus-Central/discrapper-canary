@@ -4,8 +4,8 @@ var i = n(228366),
     r = n(976860),
     s = n(71393),
     a = n(134413),
-    o = n(11541),
-    E = n(652215),
+    E = n(11541),
+    o = n(652215),
     c = n(746080);
 async function u(e) {
     await i.h.dispatch({ type: "INITIALIZE_MEMBER_SAFETY_STORE", guildId: e });
@@ -26,16 +26,16 @@ function d(e) {
     return (
         !!t &&
         null != n &&
-        (n.features.has(E.GuildFeatures.MEMBER_VERIFICATION_MANUAL_APPROVAL) ||
-        n.features.has(E.GuildFeatures.COMMUNITY) ||
-        n.features.has(E.GuildFeatures.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)
-            ? (0, r.pX)(E.BVt.CHANNEL(e, c.VV.MEMBER_SAFETY))
-            : l.A.open(n.id, E.BEX.MEMBERS),
+        (n.features.has(o.GuildFeatures.MEMBER_VERIFICATION_MANUAL_APPROVAL) ||
+        n.features.has(o.GuildFeatures.COMMUNITY) ||
+        n.features.has(o.GuildFeatures.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)
+            ? (0, r.pX)(o.BVt.CHANNEL(e, c.VV.MEMBER_SAFETY))
+            : l.A.open(n.id, o.BEX.MEMBERS),
         !0)
     );
 }
 async function I(e, t) {
-    let n = await (0, o.vk)(e, t);
+    let n = await (0, E.vk)(e, t);
     return 0 === n.length
         ? []
         : (await i.h.dispatch({ type: "FETCH_GUILD_MEMBER_SUPPLEMENTAL_SUCCESS", guildId: e, memberSupplementals: n }),

@@ -21,8 +21,8 @@ function I(e) {
 var f = n(624793),
     p = n(714991),
     T = n(260509),
-    g = n(531685),
-    m = n(515718),
+    m = n(531685),
+    g = n(515718),
     S = n(821589),
     N = n(779469);
 let C = {
@@ -90,8 +90,8 @@ class L extends r.PureComponent {
                 tabIndex: I,
                 iconSrc: f,
                 "aria-hidden": p,
-                lossless: g,
-                iconSize: m,
+                lossless: m,
+                iconSize: g,
                 ...C
             } = this.props,
             O = R[a],
@@ -130,15 +130,15 @@ class L extends r.PureComponent {
             : this.renderTooltip();
     }
 }
-let y = o.Ay.connectStores([g.A], (e) => {
+let y = o.Ay.connectStores([m.A], (e) => {
     let { guild: t, animate: n, iconSrc: i, style: r, size: a, iconSize: s, lossless: l } = e;
     return (
         null == i &&
             (i =
                 t instanceof f.GO
-                    ? t.getIconURL(s ?? O[a], n && g.A.isFocused())
-                    : (0, T.Iv)(t, s ?? O[a], n && g.A.isFocused(), l)),
-        { style: { ...r, backgroundImage: (0, m.wU)(i) } }
+                    ? t.getIconURL(s ?? O[a], n && m.A.isFocused())
+                    : (0, T.Iv)(t, s ?? O[a], n && m.A.isFocused(), l)),
+        { style: { ...r, backgroundImage: (0, g.wU)(i) } }
     );
 })(
     (function (e) {

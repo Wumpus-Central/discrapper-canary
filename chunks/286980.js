@@ -1,4 +1,4 @@
-n.d(t, { Bp: () => g, Hs: () => f, eq: () => m, t_: () => S });
+n.d(t, { Bp: () => m, Hs: () => f, eq: () => g, t_: () => S });
 var i = n(582128),
     r = n(435558),
     a = n.n(r),
@@ -72,10 +72,10 @@ function T() {
         .map(h)
         .filter((e) => null != e);
 }
-function g() {
+function m() {
     return (0, s.bG)([_.A, c.Ay, d.A], T, void 0, p);
 }
-function m(e, t) {
+function g(e, t) {
     return null != t ? `${t.vendor.name} ${t.model.name}` : e.displayName;
 }
 function S(e) {

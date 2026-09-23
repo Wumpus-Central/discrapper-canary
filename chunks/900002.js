@@ -22,8 +22,8 @@ var I = n(775602),
         (i.GREEN = "green"),
         (i.RED = "red"),
         i);
-let g = Object.freeze({}),
-    m = Object.freeze({
+let m = Object.freeze({}),
+    g = Object.freeze({
         top: p.dn,
         bottom: p.L_,
         left: p.Lf,
@@ -63,10 +63,10 @@ let N = (e) => {
                 disableTooltipPointerEvents: h = !1,
                 allowOverflow: I = !1,
                 tooltipPointerClassName: T,
-                positionKeyStemOverride: g,
+                positionKeyStemOverride: m,
                 dataMeticulousIgnore: N,
             } = e,
-            C = `${g ?? ("string" == typeof s ? s : "")}:${i}`;
+            C = `${m ?? ("string" == typeof s ? s : "")}:${i}`;
         return (0, r.jsx)(f.nE, {
             disablePointerEvents: h,
             targetRef: t,
@@ -80,7 +80,7 @@ let N = (e) => {
                 let { position: t, nudge: E } = e;
                 return (0, r.jsxs)(d.animated.div, {
                     onClick: o,
-                    className: l()(p.YL, m[null != t ? t : i], m[a], { [p.Cy]: h }, c),
+                    className: l()(p.YL, g[null != t ? t : i], g[a], { [p.Cy]: h }, c),
                     style: { ...A, ...u },
                     "data-mtctest-ignore": N,
                     children: [
@@ -156,7 +156,7 @@ class y extends a.Component {
     render() {
         let e,
             { children: t, text: n, "aria-label": i } = this.props;
-        if (null == n) return t(g);
+        if (null == n) return t(m);
         "string" == typeof i ? (e = i) : "string" == typeof n && !1 !== i && (e = n);
         let s = {
             onClick: this.handleClick,

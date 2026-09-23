@@ -16,8 +16,8 @@ var i = n(691540),
     f = n(459838),
     p = n(439372),
     T = n(967347),
-    g = n(885386),
-    m = n(763827),
+    m = n(885386),
+    g = n(763827),
     S = n(116956),
     N = n(174459),
     C = n(723702),
@@ -83,16 +83,16 @@ class M extends p.A {
         N.default.track(v.HAw.CLIPS_INIT_FAILURE, { application_name: t, error_message: n, clip_runtime: D.sT });
     }
     maybeShowClipsWarning(e) {
-        let t = m.A.getChannelId();
+        let t = g.A.getChannelId();
         null == t ||
             R.Ay.getClipsWarningShown(t) ||
             e === A.default.getId() ||
             !R.Ay.isClipsEnabledForUser(e) ||
-            (g.Q$.getSetting() &&
+            (m.Q$.getSetting() &&
                 (a.h.dispatch({ type: "CLIPS_SHOW_CALL_WARNING", channelId: t }), this.showClipsToast()));
     }
     handleClipsAllowVoiceRecordingUpdate() {
-        m.A.getUserIds()?.forEach((e) => this.maybeShowClipsWarning(e));
+        g.A.getUserIds()?.forEach((e) => this.maybeShowClipsWarning(e));
     }
     handlePostConnectionOpen() {
         !(0, L.A)(h.Ay) ||
@@ -161,7 +161,7 @@ class M extends p.A {
     }
     applyUserVoiceRecording(e) {
         if (!(0, L.A)(h.Ay)) return;
-        let t = m.A.getRTCConnection();
+        let t = g.A.getRTCConnection();
         if (null == t) return;
         if (e === A.default.getId()) return void t.setClipRecordUser(e, "audio", (0, y.T)());
         let n = R.Ay.isVoiceRecordingAllowedForUser(e);
@@ -169,7 +169,7 @@ class M extends p.A {
     }
     applyUserSoundboardRecording(e) {
         if (!(0, L.A)(h.Ay)) return;
-        let t = m.A.getRTCConnection();
+        let t = g.A.getRTCConnection();
         null != t && t.setClipRecordUser(e, "soundboard", (0, y.T)());
     }
     applyStreamRecording(e, t) {

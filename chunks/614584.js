@@ -5,7 +5,7 @@
     h$: () => el,
     YP: () => en,
     Uh: () => er,
-    Fb: () => em,
+    Fb: () => eg,
     VO: () => eb,
     uL: () => eG,
     GS: () => es,
@@ -48,14 +48,14 @@ var i = n(636537),
     f = n(25578),
     p = n(763827),
     T = n(174459),
-    g = n(723702),
-    m = n(38405),
+    m = n(723702),
+    g = n(38405),
     S = n(53677),
     N = n(915725),
     C = n(341923),
     O = n(696016);
 function R() {
-    return (0, g.isDesktop)() && a.A.features.supports("clips_storage_size");
+    return (0, m.isDesktop)() && a.A.features.supports("clips_storage_size");
 }
 function L(e) {
     return "auto" === e && R() && (0, C.s$)() && N.Ay.getEnableAutoclipping();
@@ -440,7 +440,7 @@ function er(e) {
 }
 function ea(e) {
     (r.h.dispatch({ type: "CLIPS_SETTINGS_UPDATE", settings: { storageLocation: e } }),
-        em(e).catch((e) => {
+        eg(e).catch((e) => {
             O.nx.error("Failed to load clips directory after storage location change", e);
         }));
 }
@@ -521,14 +521,14 @@ async function ec(e) {
         } = e,
         I = N.Ay.getSettings(),
         p = L(i),
-        g = p ? y(I.storageLocation) : I.storageLocation,
-        m = (0, Q.A)(i, O.nQ.CLIP, s, l, c);
-    m.isCandidate = o ?? !1;
-    let C = `${(0, b.A)(m.applicationName.substring(0, 20))}_${m.id}.mp4`,
-        R = a.A.fileManager.join(g, C),
+        m = p ? y(I.storageLocation) : I.storageLocation,
+        g = (0, Q.A)(i, O.nQ.CLIP, s, l, c);
+    g.isCandidate = o ?? !1;
+    let C = `${(0, b.A)(g.applicationName.substring(0, 20))}_${g.id}.mp4`,
+        R = a.A.fileManager.join(m, C),
         D = f.Ay.getMediaEngine(),
-        v = JSON.stringify(m),
-        M = S.TX(m),
+        v = JSON.stringify(g),
+        M = S.TX(g),
         P =
             ((t = f.Ay.getNoiseCancellation()),
             (n = f.Ay.getSystemMicrophoneMode()),
@@ -543,7 +543,7 @@ async function ec(e) {
         { startMs: U, endMs: w, trimStartMs: G, trimEndMs: x } = r;
     try {
         let e, t;
-        null != a.A.fileManager.createDirectoryIfNotExists && (await a.A.fileManager.createDirectoryIfNotExists(g, p));
+        null != a.A.fileManager.createDirectoryIfNotExists && (await a.A.fileManager.createDirectoryIfNotExists(m, p));
         let {
             duration: n,
             clipStats: i,
@@ -590,14 +590,14 @@ async function ec(e) {
                         shouting: c(d?.shoutingData),
                         rms: c(d?.rmsData),
                     };
-                })(m, r, _, P);
+                })(g, r, _, P);
             } catch (e) {
                 O.nx.warn("Failed to build candidate clip analytics; emitting clip_saved without them:", e);
             }
-        let c = S.u2(M, i, m, e);
+        let c = S.u2(M, i, g, e);
         if (null != l) t = JSON.parse(l);
         else {
-            if (((m.length = n), void 0 !== s)) m.thumbnail = s;
+            if (((g.length = n), void 0 !== s)) g.thumbnail = s;
             else {
                 let e = "";
                 try {
@@ -605,9 +605,9 @@ async function ec(e) {
                 } catch (e) {
                     O.nx.warn("Failed to generate clip thumbnail:", e);
                 }
-                ((m.thumbnail = e), await D.updateClipMetadata(R, JSON.stringify(m)));
+                ((g.thumbnail = e), await D.updateClipMetadata(R, JSON.stringify(g)));
             }
-            t = m;
+            t = g;
         }
         return (
             T.default.track(d.HAw.CLIP_SAVED, c),
@@ -674,13 +674,13 @@ async function e_(e) {
             r.h.dispatch({ type: "CLIPS_SAVE_CLIP_NO_OP", clipMethod: t, reason: O.RC.RECORDING_NOT_READY }));
         return;
     }
-    let g = (() => {
+    let m = (() => {
         if (null != u) return O.Fv.STREAMER;
         if (T) return O.Fv.DECOUPLED;
         throw Error("No clip type available");
     })();
-    r.h.dispatch({ type: "CLIPS_SAVE_CLIP_START", clipType: g, clipMethod: t, signal: a?.signal });
-    let m = "manual" === t ? (0, _.Ak)("clip_save", 0.5) : null,
+    r.h.dispatch({ type: "CLIPS_SAVE_CLIP_START", clipType: m, clipMethod: t, signal: a?.signal });
+    let g = "manual" === t ? (0, _.Ak)("clip_save", 0.5) : null,
         S = performance.now(),
         C = setTimeout(() => {
             (O.nx.warn(`Clip save still pending after ${O.ut}ms \u{2014} native callback may have stalled`),
@@ -711,10 +711,10 @@ async function e_(e) {
                       : null;
         null != i
             ? (O.nx.warn(`Clip save no-op (${i}): ${n ?? i}`),
-              m?.stop(),
+              g?.stop(),
               r.h.dispatch({ type: "CLIPS_SAVE_CLIP_NO_OP", clipMethod: t, reason: i }))
             : (O.nx.error("Clip Failed to Save", a),
-              m?.stop(),
+              g?.stop(),
               s || (0, _.Ak)("clip_error", 0.5),
               r.h.dispatch({ type: "CLIPS_SAVE_CLIP_ERROR", clipMethod: t, errorAt: e, errorMessage: n }));
     } finally {
@@ -804,12 +804,12 @@ async function eT(e) {
     }
     return n;
 }
-let eg = !1;
-async function em(e) {
-    if (!(0, g.isDesktop)() || a.A.clips?.loadClipsDirectory == null) return;
+let em = !1;
+async function eg(e) {
+    if (!(0, m.isDesktop)() || a.A.clips?.loadClipsDirectory == null) return;
     let t = await eT(e);
-    if (!eg) {
-        eg = !0;
+    if (!em) {
+        em = !0;
         let t = [];
         if (L("auto")) {
             let n = y(e);
@@ -883,12 +883,12 @@ async function ey(e, t) {
     r.h.dispatch({ type: "CLIPS_MONTAGE_RENDER_DONE", clip: n, session: t });
 }
 async function eD(e) {
-    if (!(0, g.isDesktop)() || a.A.clips?.deleteClip == null) return !1;
+    if (!(0, m.isDesktop)() || a.A.clips?.deleteClip == null) return !1;
     let { filepath: t, id: n } = e,
         i = (await a.A.clips.deleteClip(t)) ?? { ok: !0 };
     if (!i.ok) {
         let { reason: e, recoverable: t } = i;
-        if ((m.A.captureException(Error(`deleteClip failed (${e})`)), !t))
+        if ((g.A.captureException(Error(`deleteClip failed (${e})`)), !t))
             return (O.nx.warn(`deleteClip: dropping unrecoverable clip record ${n} (${e})`), !1);
         throw Error(`deleteClip failed for ${n} (${e})`);
     }
@@ -896,7 +896,7 @@ async function eD(e) {
 }
 async function ev(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    if (!(0, g.isDesktop)() || a.A.clips?.deleteClip == null) return;
+    if (!(0, m.isDesktop)() || a.A.clips?.deleteClip == null) return;
     let { filepath: n, id: i } = e;
     (await eD(e))
         ? (r.h.dispatch({ type: "CLIPS_DELETE_CLIP", id: i, filepath: n }),
@@ -953,7 +953,7 @@ async function eb(e, t) {
     }
 }
 async function eM(e) {
-    if ((0, g.isDesktop)())
+    if ((0, m.isDesktop)())
         try {
             await a.A.clips.deleteClip(e);
         } catch {}
@@ -973,7 +973,7 @@ function eG(e) {
         i = L("auto");
     if ((r.h.dispatch({ type: "CLIPS_SETTINGS_UPDATE", settings: { enableAutoclipping: e } }), !i && L("auto"))) {
         let { storageLocation: e } = N.Ay.getSettings();
-        em(e).catch((e) => {
+        eg(e).catch((e) => {
             O.nx.error("Failed to reload clips after enabling autoclipping", e);
         });
     }

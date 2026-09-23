@@ -16,8 +16,8 @@ var i = n(284009),
     f = n(743738),
     p = n(409481),
     T = n(963852),
-    g = n(195880),
-    m = n(867455),
+    m = n(195880),
+    g = n(867455),
     S = n(773669),
     N = n(71393),
     C = n(522602),
@@ -52,8 +52,8 @@ async function F(e) {
         T = P.A.getCommandOrigin(i.channel.id) ?? c;
     (null == i.autocomplete &&
         a.h.dispatch({ type: "APPLICATION_COMMAND_USED", context: i, command: t, commandOrigin: T }),
-        await m.A.unarchiveThreadIfNecessary(i.channel.id));
-    let g = [],
+        await g.A.unarchiveThreadIfNecessary(i.channel.id));
+    let m = [],
         N = [],
         O = (0, w.Qr)(T);
     if (null != t.options)
@@ -73,7 +73,7 @@ async function F(e) {
                 )
                     continue;
                 (r()(null != i.autocomplete || null != t, `Option "${e.name}" expects a value`),
-                    g.push({ type: e.type, name: e.name, value: t, focused: a }));
+                    m.push({ type: e.type, name: e.name, value: t, focused: a }));
                 continue;
             }
             if (e.type === d.n4.ATTACHMENT) {
@@ -81,7 +81,7 @@ async function F(e) {
                 let t = C.A.getUpload(i.channel.id, e.name, O);
                 if (null == t) continue;
                 let n = N.length;
-                (N.push(t), g.push({ type: e.type, name: e.name, value: n, focused: a }));
+                (N.push(t), m.push({ type: e.type, name: e.name, value: n, focused: a }));
                 continue;
             }
             let s = b.filterEmpty(n[e.name]);
@@ -171,12 +171,12 @@ async function F(e) {
             }
             ("" !== t || null == i.autocomplete || a) &&
                 (r()(null != i.autocomplete || null != t, `Unexpected value for option "${e.name}"`),
-                null != t && g.push({ type: e.type, name: e.name, value: t, focused: a }));
+                null != t && m.push({ type: e.type, name: e.name, value: t, focused: a }));
         }
     if (null != t.subCommandPath)
         for (let e = t.subCommandPath.length - 1; e >= 0; e -= 1) {
             let { name: n, type: i } = t.subCommandPath[e];
-            g = [{ type: i, name: n, options: g }];
+            m = [{ type: i, name: n, options: m }];
         }
     if (null != t.execute)
         return (
@@ -187,7 +187,7 @@ async function F(e) {
                 location: W(T),
                 source: p,
             }),
-            t.execute(g, i)
+            t.execute(m, i)
         );
     if (
         t.inputType === U.y$.BUILT_IN ||
@@ -201,7 +201,7 @@ async function F(e) {
         guild_id: t.guildId,
         name: t.rootCommand?.name ?? t.untranslatedName,
         type: t.type,
-        options: g,
+        options: m,
         application_command: t.rootCommand,
     };
     (null != s && (R.target_id = s),
@@ -271,7 +271,7 @@ function V(e) {
             channelId: A,
             guildId: h,
             data: n,
-            nonce: u.nonce ?? (0, g.m)(),
+            nonce: u.nonce ?? (0, m.m)(),
             attachments: r,
             maxSizeCallback: a,
             analytics_location: l,

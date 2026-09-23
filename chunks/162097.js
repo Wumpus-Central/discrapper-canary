@@ -1,4 +1,4 @@
-a.d(t, { b: () => R });
+a.d(t, { b: () => C });
 var n = a(477900),
     l = a(582128),
     s = a(503698),
@@ -21,7 +21,7 @@ function v() {
         children: (0, n.jsx)(o.A, { src: k.A, fallbackImage: A.A, className: h.Cb }),
     });
 }
-function R(e) {
+function C(e) {
     let {
             ctaText: t,
             ctaOnClick: a,

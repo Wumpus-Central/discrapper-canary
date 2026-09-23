@@ -1,4 +1,4 @@
-n.d(t, { Vq: () => g, a6: () => p, xf: () => T });
+n.d(t, { Vq: () => m, a6: () => p, xf: () => T });
 var i = n(636537),
     r = n(228366),
     a = n(381689),
@@ -31,7 +31,7 @@ function p() {
 function T() {
     (p(), r.h.dispatch({ type: "AGE_VERIFICATION_METHODS_V2_INVALIDATE" }));
 }
-async function g() {
+async function m() {
     if (!h) {
         h = !0;
         try {

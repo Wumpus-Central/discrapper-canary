@@ -1,4 +1,4 @@
-n.d(t, { A: () => L });
+n.d(t, { A: () => P });
 var i = n(477900),
     l = n(582128),
     a = n(562708),
@@ -8,36 +8,36 @@ var i = n(477900),
     d = n(830215),
     c = n(398590),
     u = n(631670),
-    h = n(475743),
-    m = n(775121),
-    p = n(139286),
-    f = n(80556),
+    m = n(475743),
+    h = n(775121),
+    f = n(139286),
+    p = n(80556),
     g = n(557722),
     A = n(363195),
     x = n(870570),
     v = n(446868),
     E = n(503698),
     C = n.n(E),
-    T = n(607399),
-    _ = n(821609),
+    _ = n(607399),
+    I = n(821609),
     S = n(331322),
-    I = n(297264),
+    j = n(297264),
     b = n(834730),
-    j = n(700525),
+    T = n(700525),
     N = n(975571),
     y = n(652215),
     M = n(375708),
     R = n(690807);
 let O = N.A.getArticleURL(y.MVz.VERIFICATION_FAQ);
-class k extends l.PureComponent {
+class w extends l.PureComponent {
     static defaultProps = { types: [y.Fz7.CAPTCHA], onCaptchaVerify: y.tEg, onLogout: y.tEg };
     renderFields() {
         let { types: e, captchaKey: t, theme: n, onCaptchaVerify: l } = this.props;
         return (0, i.jsx)(i.Fragment, {
             children: e.map((e) =>
                 e === y.Fz7.CAPTCHA
-                    ? (0, i.jsx)(j.A, { onVerify: l, theme: n }, t)
-                    : (0, i.jsx)(_.$, { onClick: () => this.handleClick(e), text: v.A.getButtonTitle(e) }, e),
+                    ? (0, i.jsx)(T.A, { onVerify: l, theme: n }, t)
+                    : (0, i.jsx)(I.$, { onClick: () => this.handleClick(e), text: v.A.getButtonTitle(e) }, e),
             ),
         });
     }
@@ -52,7 +52,7 @@ class k extends l.PureComponent {
                 (0, i.jsxs)(S.B, {
                     gap: 16,
                     fullWidth: !1,
-                    className: C()(R.kL, { [R.Fr]: T.Fr }),
+                    className: C()(R.kL, { [R.Fr]: _.Fr }),
                     align: "center",
                     direction: "vertical",
                     justify: "center",
@@ -71,7 +71,7 @@ class k extends l.PureComponent {
                                     direction: "vertical",
                                     justify: "center",
                                     children: [
-                                        (0, i.jsx)(I.D, {
+                                        (0, i.jsx)(j.D, {
                                             variant: "heading-xl/normal",
                                             children: M.intl.string(M.t.Iz0kDg),
                                         }),
@@ -132,13 +132,13 @@ class k extends l.PureComponent {
         t?.(e);
     };
 }
-var w = n(87404),
-    P = n(53516);
-function L() {
+var k = n(87404),
+    L = n(53516);
+function P() {
     let { action: e, theme: t } = (0, s.cf)([x.A, A.A], () => ({ action: x.A.getAction(), theme: A.A.theme })),
         E = v.A.getVerificationTypes(e),
-        [C, T] = l.useState(0),
-        _ = (0, h.Ay)(E);
+        [C, _] = l.useState(0),
+        I = (0, m.Ay)(E);
     function S() {
         ((0, u.Cw)(),
             (0, o.openModalLazy)(
@@ -148,11 +148,11 @@ function L() {
                     );
                     return (t) => (0, i.jsx)(e, { ...t });
                 },
-                { modalKey: w.H1, Layer: f.Ay },
+                { modalKey: k.H1, Layer: p.Ay },
             ));
     }
     return (
-        (0, p.A)(
+        (0, f.A)(
             {
                 type: a.ImpressionTypes.MODAL,
                 name: a.ImpressionNames.USER_ACTION_REQUIRED,
@@ -163,15 +163,15 @@ function L() {
         ),
         l.useEffect(
             () => (
-                m.A.disable(),
+                h.A.disable(),
                 () => {
-                    m.A.enable();
+                    h.A.enable();
                 }
             ),
             [],
         ),
         l.useEffect(() => {
-            _?.[0] === y.Fz7.PHONE &&
+            I?.[0] === y.Fz7.PHONE &&
                 E?.[0] === y.Fz7.EMAIL &&
                 (0, o.openModalLazy)(
                     async () => {
@@ -184,10 +184,10 @@ function L() {
                                 confirmText: M.intl.string(M.t["3oK4qw"]),
                             });
                     },
-                    { modalKey: w.Pr, Layer: f.Ay, onCloseCallback: S },
+                    { modalKey: k.Pr, Layer: p.Ay, onCloseCallback: S },
                 );
-        }, [E, _]),
-        (0, i.jsx)(k, {
+        }, [E, I]),
+        (0, i.jsx)(w, {
             types: E,
             captchaKey: C,
             onCaptchaVerify: function (e) {
@@ -197,7 +197,7 @@ function L() {
                     oldFormErrors: !0,
                     rejectWithError: !0,
                 }).then(c.jH, () => {
-                    T((e) => e + 1);
+                    _((e) => e + 1);
                 });
             },
             theme: t,
@@ -216,9 +216,9 @@ function L() {
                                   n.e("84704"),
                               ]).then(n.bind(n, 615715));
                               return (t) =>
-                                  (0, i.jsx)(e, { layerContext: f.OH, reason: g.d.USER_ACTION_REQUIRED, ...t });
+                                  (0, i.jsx)(e, { layerContext: p.OH, reason: g.d.USER_ACTION_REQUIRED, ...t });
                           },
-                          { modalKey: P.V, Layer: f.Ay },
+                          { modalKey: L.V, Layer: p.Ay },
                       );
             },
             onLogout: function () {
@@ -235,7 +235,7 @@ function L() {
                                 ...t,
                             });
                     },
-                    { Layer: f.Ay },
+                    { Layer: p.Ay },
                 );
             },
         })

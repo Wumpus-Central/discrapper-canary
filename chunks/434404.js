@@ -1,7 +1,7 @@
 n.d(t, { F: () => f });
 var i = n(419954),
-    l = n(780964),
-    s = n(477900),
+    s = n(780964),
+    l = n(477900),
     r = n(582128),
     a = n(17928),
     o = n(192308),
@@ -28,12 +28,12 @@ function h() {
                         id: e.value,
                         value: e.value,
                         label: e.name,
-                        leading: (0, s.jsx)("div", {
+                        leading: (0, l.jsx)("div", {
                             className: A.Jt,
                             "aria-hidden": !0,
-                            children: (0, s.jsx)("img", { alt: "", src: t, className: A.Eb }),
+                            children: (0, l.jsx)("img", { alt: "", src: t, className: A.Eb }),
                         }),
-                        trailing: (0, s.jsx)("span", { className: A.hI, children: m.intl.string(e.localizedName) }),
+                        trailing: (0, l.jsx)("span", { className: A.hI, children: m.intl.string(e.localizedName) }),
                     };
                 }),
             [],
@@ -43,10 +43,10 @@ function h() {
                 E.nextTick(() => {
                     (d.Ay.updateLocale(e),
                         (0, o.closeModal)(g.USER_SETTINGS_MODAL_KEY) &&
-                            (0, g.openUserSettings)(l.X.LANGUAGE_AND_TIME_PANEL));
+                            (0, g.openUserSettings)(s.X.LANGUAGE_AND_TIME_PANEL));
                 }));
         }, []);
-    return (0, s.jsx)(u.Z, {
+    return (0, l.jsx)(u.Z, {
         selectionMode: "single",
         label: m.intl.string(m.t["mx+sp7"]),
         description: m.intl.string(m.t.rTPlcq),
@@ -55,23 +55,23 @@ function h() {
         onSelectionChange: S,
     });
 }
-let S = (0, i.E2)(l.X.LANGUAGE_SELECT_SETTING, {
+let S = (0, i.E2)(s.X.LANGUAGE_SELECT_SETTING, {
     useSearchTerms: () => [m.intl.string(m.t.IHMsPn)],
-    Component: () => (0, s.jsx)(h, {}),
+    Component: () => (0, l.jsx)(h, {}),
 });
-var p = n(873298),
-    x = n(885386);
-let T = (0, i.Qx)(l.X.TIME_FORMAT_SETTING, {
+var x = n(873298),
+    p = n(885386);
+let T = (0, i.Qx)(s.X.TIME_FORMAT_SETTING, {
         useSearchTerms: () => [m.intl.string(m.t.dyamEI), m.intl.string(m.t.p8NOwi), m.intl.string(m.t["+o/sOo"])],
         useTitle: () => m.intl.string(m.t.dyamEI),
-        useValue: () => x.PZ.useSetting(),
-        setValue: (e) => x.PZ.updateSetting(e),
+        useValue: () => p.PZ.useSetting(),
+        setValue: (e) => p.PZ.updateSetting(e),
         useOptions: function () {
             return [
-                { name: m.intl.string(m.t.FMWYvb), value: p.PZ.AUTO },
-                { name: m.intl.string(m.t.p8NOwi), value: p.PZ.H12 },
-                { name: m.intl.string(m.t["+o/sOo"]), value: p.PZ.H23 },
+                { name: m.intl.string(m.t.FMWYvb), value: x.PZ.AUTO },
+                { name: m.intl.string(m.t.p8NOwi), value: x.PZ.H12 },
+                { name: m.intl.string(m.t["+o/sOo"]), value: x.PZ.H23 },
             ];
         },
     }),
-    f = (0, i.zZ)(l.X.LANGUAGE_AND_TIME_CATEGORY, { buildLayout: () => [S, T] });
+    f = (0, i.zZ)(s.X.LANGUAGE_AND_TIME_CATEGORY, { buildLayout: () => [S, T] });

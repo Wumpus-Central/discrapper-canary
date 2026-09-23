@@ -14,8 +14,8 @@ var s = n(435558),
     f = n(952818),
     p = n(280450),
     T = n(30370),
-    g = n(885576),
-    m = n(290863),
+    m = n(885576),
+    g = n(290863),
     S = n(485296),
     N = n(977997),
     C = n(174459),
@@ -66,7 +66,7 @@ function Q(e) {
     });
 }
 function J(e) {
-    return m.A.findActivity(e, (e) => null != e.party && null != e.party.id && (0, D.pH)(e.party.id));
+    return g.A.findActivity(e, (e) => null != e.party && null != e.party.id && (0, D.pH)(e.party.id));
 }
 let ee = new Set([WebSocket.CONNECTING, WebSocket.OPEN]);
 class et {
@@ -336,8 +336,8 @@ function eu(e, t) {
 class e_ extends d.Ay.Store {
     static displayName = "SpotifyStore";
     initialize() {
-        (this.waitFor(p.default, T.A, g.A, m.A, f.Ay, S.A, N.A),
-            this.syncWith([m.A], () =>
+        (this.waitFor(p.default, T.A, m.A, g.A, f.Ay, S.A, N.A),
+            this.syncWith([g.A], () =>
                 (function () {
                     if (null == r || null == Z()) return !1;
                     let { userId: e } = r,
@@ -394,7 +394,7 @@ class e_ extends d.Ay.Store {
         return z[e];
     }
     shouldShowActivity() {
-        return null != i && i.account.showActivity && !g.A.isIdle();
+        return null != i && i.account.showActivity && !m.A.isIdle();
     }
     getActivity() {
         let e, t, n;
@@ -427,7 +427,7 @@ class e_ extends d.Ay.Store {
                 type: u,
                 button_urls: [],
             },
-            g = {
+            m = {
                 name: b.name,
                 assets: h,
                 details: f,
@@ -435,7 +435,7 @@ class e_ extends d.Ay.Store {
                 timestamps: { start: _, end: _ + d },
                 party: { id: n },
             };
-        return (c || ((g.sync_id = o), (g.flags = v.jUm.PLAY | v.jUm.SYNC), (g.metadata = T)), g);
+        return (c || ((m.sync_id = o), (m.flags = v.jUm.PLAY | v.jUm.SYNC), (m.metadata = T)), m);
     }
 }
 let eE = new e_(_.h, {
@@ -471,17 +471,17 @@ let eE = new e_(_.h, {
                         er(s, A.id));
                 } else (($[s] = [A]), (f = !0));
             o ? q?.start(U, eo) : ((u = null), q?.stop());
-            let g = T.A.getAccount(s, v.fg2.SPOTIFY);
-            if (null == g) return f;
-            let m = z[s],
+            let m = T.A.getAccount(s, v.fg2.SPOTIFY);
+            if (null == m) return f;
+            let g = z[s],
                 S =
                     null != u
                         ? {
-                              account: g,
+                              account: m,
                               track: u,
                               startTime:
                                   ((t = Date.now()),
-                                  (n = null != m ? m.startTime : 0),
+                                  (n = null != g ? g.startTime : 0),
                                   Math.abs((a = t - E) - n) > x ? a : n),
                               context: I,
                               repeat: d,
@@ -495,18 +495,18 @@ let eE = new e_(_.h, {
                     .values(z)
                     .find((e) => null != e)),
                 ed(p.default.getId()),
-                null == u || N ? W.stop() : W.start(u.duration - E + G, () => Q(g.id)),
+                null == u || N ? W.stop() : W.start(u.duration - E + G, () => Q(m.id)),
                 null != r && ((!o && E > 0) || null == A || (null != S && r.trackId !== S.track.id))
                     ? (B.info(
                           `Listen along active but playback stopped or track changed. Stopping listen along in ${G}ms`,
                       ),
                       Y.start(G, () => {
-                          (B.info("Stopping listening along"), (0, h.A)(), Q(g.id));
+                          (B.info("Stopping listening along"), (0, h.A)(), Q(m.id));
                       }))
                     : Y.isStarted() && (B.info("Listen along stop cancelled as playback of track resumed"), Y.stop()),
                 O === i ||
-                    (null == m && null == S) ||
-                    (null != m && null != S && m.track.id === S.track.id && m.startTime === S.startTime))
+                    (null == g && null == S) ||
+                    (null != g && null != S && g.track.id === S.track.id && g.startTime === S.startTime))
             )
                 return f;
             null != u &&

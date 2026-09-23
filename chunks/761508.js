@@ -1,4 +1,4 @@
-n.d(t, { V: () => m });
+n.d(t, { V: () => g });
 var i = n(477900),
     r = n(582128),
     a = n(503698),
@@ -55,7 +55,7 @@ function T(e, t) {
         n
     );
 }
-class g extends r.Component {
+class m extends r.Component {
     static defaultProps = { disabled: !1, look: "grey", disableItemStyles: !1 };
     state = { hover: !1, active: !1 };
     handleClick = (e) => {
@@ -107,9 +107,9 @@ class g extends r.Component {
                 disableItemStyles: I,
                 role: f = "tab",
                 onFocus: T,
-                onBlur: g,
+                onBlur: m,
             } = this.props,
-            m = this.props["aria-label"],
+            g = this.props["aria-label"],
             S = r === n,
             N = "button" === f;
         return (0, i.jsx)(c.D, {
@@ -134,8 +134,8 @@ class g extends r.Component {
             onMouseDown: this.handleMouseDown,
             onContextMenu: d,
             onFocus: T,
-            onBlur: g,
-            "aria-label": m,
+            onBlur: m,
+            "aria-label": g,
             innerRef: A,
             ref: _,
             children: (0, i.jsx)(u.E, {
@@ -147,9 +147,9 @@ class g extends r.Component {
         });
     }
 }
-class m extends r.Component {
+class g extends r.Component {
     static Header = h;
-    static Item = g;
+    static Item = m;
     static Separator = I;
     static Panel = f;
     tabBarRef = r.createRef();
@@ -169,7 +169,7 @@ class m extends r.Component {
             return (
                 null != t ||
                     s ||
-                    e.type !== g ||
+                    e.type !== m ||
                     null == e.props.id ||
                     !0 === e.props.disabled ||
                     ((o = e.props.id), (s = !0)),

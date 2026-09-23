@@ -16,8 +16,8 @@ var i = n(477900),
     f = n(866665),
     p = n(28863),
     T = n(417098),
-    g = n(398590),
-    m = n(839214),
+    m = n(398590),
+    g = n(839214),
     S = n(58736),
     N = n(856488),
     C = n(269880),
@@ -292,7 +292,7 @@ function K(e) {
 var $ = n(97483),
     z = n(818348),
     X = n(375708);
-let q = (0, m.D)(() => ({
+let q = (0, g.D)(() => ({
     selectedCollection: null,
     selectedStory: null,
     controlsLayout: "right",
@@ -487,7 +487,7 @@ function en(e) {
             return { collection: e, group: t, story: i };
         }, [n, a, l]),
         h = u?.name ?? "Design System",
-        m = A?.name,
+        g = A?.name,
         N = null != A && null != _ ? (0, i.jsx)(K, { story: A, groupTitle: _.title, controlsLayout: s }, A.id) : null,
         C = u?.Provider;
     return (0, i.jsxs)("div", {
@@ -532,11 +532,11 @@ function en(e) {
                         className: B.wx,
                         children: [
                             null != h ? (0, i.jsx)(S.Ay.Title, { children: h }) : null,
-                            null != m
+                            null != g
                                 ? (0, i.jsxs)(i.Fragment, {
                                       children: [
                                           null != h ? (0, i.jsx)(S.Ay.Caret, { className: B.zN }) : null,
-                                          (0, i.jsx)(S.Ay.Title, { children: m }),
+                                          (0, i.jsx)(S.Ay.Title, { children: g }),
                                       ],
                                   })
                                 : null,
@@ -561,7 +561,7 @@ function en(e) {
                                         icon: o.P,
                                         "aria-label": X.intl.string(X.t.cpT0Cq),
                                         variant: "icon-only",
-                                        onClick: g.jH,
+                                        onClick: m.jH,
                                     }),
                                 ],
                             }),

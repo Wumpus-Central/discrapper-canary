@@ -4,8 +4,8 @@ var n = l(477900),
     r = l(503698),
     i = l.n(r),
     s = l(900797),
-    o = l(320448),
-    u = l(691885),
+    u = l(320448),
+    o = l(691885),
     d = l(193249),
     c = l(834730),
     m = l(922016),
@@ -38,8 +38,8 @@ function N() {
                 r = a?.querySelector("[data-vibegrations-effort-handle]") ?? null,
                 i = 0,
                 s = [],
-                o = 0,
                 u = 0,
+                o = 0,
                 d = 8,
                 c = 9,
                 m = 0,
@@ -65,36 +65,36 @@ function N() {
                 if (null == t || null == l) return;
                 let e = t.clientWidth,
                     n = t.clientHeight;
-                if (e === o && n === u) return;
-                ((o = e), (c = (d = ((u = n) - 2 - 2) / 3) + 1));
+                if (e === u && n === o) return;
+                ((u = e), (c = (d = ((o = n) - 2 - 2) / 3) + 1));
                 let r = a?.querySelectorAll("[data-stop]"),
                     m = r?.[r.length - 1];
                 (null != m && (i = m.offsetLeft + m.offsetWidth / 2),
                     (s = null == r ? [] : Array.from(r, (e) => e.offsetLeft + e.offsetWidth / 2)));
                 let f = window.devicePixelRatio,
                     h = Number.isFinite(f) && f > 0 ? f : 1;
-                ((t.width = Math.round(o * h)), (t.height = Math.round(u * h)), l.setTransform(h, 0, 0, h, 0, 0), v());
+                ((t.width = Math.round(u * h)), (t.height = Math.round(o * h)), l.setTransform(h, 0, 0, h, 0, 0), v());
             }
             (N(),
                 (m = requestAnimationFrame(function e(a) {
                     if (((m = requestAnimationFrame(e)), a - f < b)) return;
                     let v = a - f;
-                    if (((f = a), null == t || null == l || 0 === o || null == r)) return;
+                    if (((f = a), null == t || null == l || 0 === u || null == r)) return;
                     let N = Number(r.dataset.effortCentre),
                         w = r.hasAttribute("data-effort-live"),
                         A = Number.isFinite(N) && Math.abs(N - i) > 16;
                     if (!h && (!w || A)) return;
                     g = Math.min(1, Math.max(0, g + ((w ? 1 : -1) * v) / 260));
                     let E = t.getBoundingClientRect(),
-                        S = E.width > 0 ? E.width / o : 1,
+                        S = E.width > 0 ? E.width / u : 1,
                         C = r.getBoundingClientRect(),
                         I = (C.left - E.left) / S,
                         M = (1 - Math.min(1, Math.abs(I + C.width / S / 2 - i) / 16)) * g;
                     if (M < 0.01) {
-                        (h && l.clearRect(0, 0, o, u), (h = !1));
+                        (h && l.clearRect(0, 0, u, o), (h = !1));
                         return;
                     }
-                    (h || (x = a), (h = !0), l.clearRect(0, 0, o, u));
+                    (h || (x = a), (h = !0), l.clearRect(0, 0, u, o));
                     let T = I - 1 - (1 - M) * 16,
                         R = (a - p) / 1e3,
                         P = 0.1 + 0.9 * (1 - (1 - Math.min(1, Math.max(0, (a - x) / 1500))) ** 3),
@@ -110,14 +110,14 @@ function N() {
                         }
                         let r = 0.30000000000000004 + 0.7 * (1 + a),
                             i = Math.floor((R * t) / c),
-                            o = 1 + e * c + d / 2,
+                            u = 1 + e * c + d / 2,
                             m = d / 2 + 3,
-                            f = Math.abs(o - u / 2) < m;
+                            f = Math.abs(u - o / 2) < m;
                         for (let t = 0; t < _; t++) {
                             let a,
-                                u = T - (t * c + d / 2);
-                            if (u < 0) break;
-                            let h = (T - u) / n;
+                                o = T - (t * c + d / 2);
+                            if (o < 0) break;
+                            let h = (T - o) / n;
                             if (h >= 1) break;
                             let g = Math.min(6, Math.floor(7 * (1 - h ** r)));
                             ((a =
@@ -126,7 +126,7 @@ function N() {
                                     : g < 6
                                       ? "123456".charAt(g)
                                       : "789ABC".charAt(Math.floor(6 * k(e, 977)))),
-                                (f && s.some((e) => Math.abs(u - e) < m)) ||
+                                (f && s.some((e) => Math.abs(o - e) < m)) ||
                                     ((l.globalAlpha =
                                         0.5 *
                                         (function (e) {
@@ -134,7 +134,7 @@ function N() {
                                             return t * t * (3 - 2 * t);
                                         })((1 - h) / 0.34) *
                                         M),
-                                    l.fillText(a, u, o)));
+                                    l.fillText(a, o, u)));
                         }
                     }
                     l.globalAlpha = 1;
@@ -154,14 +154,14 @@ function N() {
 }
 var w = l(757713);
 function A(e) {
-    let { activeIndex: t, stops: l, ariaLabel: r, disabled: s, onSelect: o, className: u } = e,
+    let { activeIndex: t, stops: l, ariaLabel: r, disabled: s, onSelect: u, className: o } = e,
         d = a.useRef(null),
         c = a.useRef(null),
         m = a.useRef(null),
         [f, h] = a.useState(-1),
         g = a.useRef(!1),
         x = a.useRef(t),
-        p = a.useRef({ activeIndex: t, disabled: s, onSelect: o, stopCount: l.length }),
+        p = a.useRef({ activeIndex: t, disabled: s, onSelect: u, stopCount: l.length }),
         v = a.useRef(!1),
         b = t >= 0 ? t : f,
         j = t < 0 && f >= 0,
@@ -198,7 +198,7 @@ function A(e) {
         e.preventDefault();
         let a = t >= 0 ? t : n > 0 ? -1 : l.length,
             r = Math.min(l.length - 1, Math.max(0, a + n));
-        r !== t && (o(r), d.current?.querySelector(`[data-stop='${r}']`)?.focus());
+        r !== t && (u(r), d.current?.querySelector(`[data-stop='${r}']`)?.focus());
     }
     return (
         a.useLayoutEffect(() => {
@@ -206,9 +206,9 @@ function A(e) {
                 n = e && g.current;
             ((g.current = e),
                 (x.current = b),
-                (p.current = { activeIndex: t, disabled: s, onSelect: o, stopCount: l.length }),
+                (p.current = { activeIndex: t, disabled: s, onSelect: u, stopCount: l.length }),
                 v.current || k(b, n ? "animate" : "arrive"));
-        }, [b, t, s, o, l.length, p, k]),
+        }, [b, t, s, u, l.length, p, k]),
         a.useEffect(() => {
             let e = d.current;
             if (null == e || "u" < typeof ResizeObserver) return;
@@ -288,11 +288,11 @@ function A(e) {
             }
             function s(e) {
                 if (null != l) {
-                    if (0 === e.buttons) return void o(e.clientX);
+                    if (0 === e.buttons) return void u(e.clientX);
                     ((l.x = e.clientX), (l.at = e.timeStamp), 0 === l.frame && (l.frame = requestAnimationFrame(r)));
                 }
             }
-            function o(e) {
+            function u(e) {
                 let r = l;
                 if (((l = null), (v.current = !1), null == r)) return;
                 (0 !== r.frame && cancelAnimationFrame(r.frame),
@@ -302,34 +302,34 @@ function A(e) {
                     (y(i.left, r.metrics.handleWidth, r.metrics.rowWidth, "animate"),
                     i.index !== p.current.activeIndex && p.current.onSelect(i.index));
             }
-            function u(e) {
-                o(e.clientX);
+            function o(e) {
+                u(e.clientX);
             }
             function m() {
-                o(null);
+                u(null);
             }
             return (
                 t.addEventListener("pointerdown", i),
                 t.addEventListener("pointermove", s),
-                t.addEventListener("pointerup", u),
-                t.addEventListener("pointercancel", u),
+                t.addEventListener("pointerup", o),
+                t.addEventListener("pointercancel", o),
                 t.addEventListener("lostpointercapture", m),
-                window.addEventListener("pointerup", u),
+                window.addEventListener("pointerup", o),
                 window.addEventListener("blur", m),
                 () => {
                     (null != l && 0 !== l.frame && cancelAnimationFrame(l.frame),
                         t.removeEventListener("pointerdown", i),
                         t.removeEventListener("pointermove", s),
-                        t.removeEventListener("pointerup", u),
-                        t.removeEventListener("pointercancel", u),
+                        t.removeEventListener("pointerup", o),
+                        t.removeEventListener("pointercancel", o),
                         t.removeEventListener("lostpointercapture", m),
-                        window.removeEventListener("pointerup", u),
+                        window.removeEventListener("pointerup", o),
                         window.removeEventListener("blur", m));
                 }
             );
         }, [p, v, y]),
         (0, n.jsx)("div", {
-            className: i()(w.u4, u),
+            className: i()(w.u4, o),
             role: "group",
             "aria-label": r,
             children: (0, n.jsxs)("div", {
@@ -363,7 +363,7 @@ function A(e) {
                                 onPointerLeave: () => h((e) => (e === l ? -1 : e)),
                                 onFocus: () => h(l),
                                 onBlur: () => h((e) => (e === l ? -1 : e)),
-                                onClick: () => o(l),
+                                onClick: () => u(l),
                                 children: (0, n.jsx)("span", { className: w.Om, "aria-hidden": "true" }),
                             },
                             e,
@@ -408,7 +408,7 @@ function T(e) {
         [v, b] = a.useState(!1),
         j = M(v),
         y = (0, x.EF)(t, l.main),
-        k = v ? s.t : o._,
+        k = v ? s.t : u._,
         N = a.useMemo(
             () => l.main.map((e) => ({ id: e.id, label: e.label, value: e.id, description: p.oU[e.provider] })),
             [l.main],
@@ -436,7 +436,7 @@ function T(e) {
                     ? (0, n.jsxs)("div", {
                           className: i()(I.Nr, I.uO, { [I.Zr]: v && j.entered, [I.GF]: !v }),
                           children: [
-                              (0, n.jsx)(u.l, {
+                              (0, n.jsx)(o.l, {
                                   label: C.intl.string(S.default["9FRudW"]),
                                   options: N,
                                   value: t.main.model,
@@ -445,7 +445,7 @@ function T(e) {
                                   disabled: r,
                                   fullWidth: !0,
                               }),
-                              (0, n.jsx)(u.l, {
+                              (0, n.jsx)(o.l, {
                                   label: C.intl.string(S.default["4AsQHS"]),
                                   options: w,
                                   value: t.main.thinking,
@@ -542,8 +542,8 @@ function T(e) {
     });
 }
 function R(e) {
-    let { settings: t, choices: l, disabled: r, onChange: i, className: s, icon: o } = e,
-        u = a.useRef(null),
+    let { settings: t, choices: l, disabled: r, onChange: i, className: s, icon: u } = e,
+        o = a.useRef(null),
         [d, c] = a.useState(null),
         [x, p] = a.useState(t);
     t !== x && (p(t), c(null));
@@ -557,7 +557,7 @@ function R(e) {
         [j, y] = a.useState(!1),
         { mounted: k, entered: N } = M(j);
     return (0, n.jsx)(m.Y, {
-        targetElementRef: u,
+        targetElementRef: o,
         position: "top",
         align: "right",
         shouldShow: k,
@@ -582,13 +582,13 @@ function R(e) {
                 shouldShow: !l,
                 ariaHidden: !0,
                 children: (0, n.jsx)(h.D, {
-                    innerRef: u,
+                    innerRef: o,
                     className: s ?? I.hZ,
                     "aria-label": C.intl.string(S.default.GoSNDN),
                     ...e,
                     onClick: () => y((e) => !e),
                     "aria-expanded": j,
-                    children: o ?? (0, n.jsx)(g.R, { size: "xxs", color: "currentColor", "aria-hidden": !0 }),
+                    children: u ?? (0, n.jsx)(g.R, { size: "xxs", color: "currentColor", "aria-hidden": !0 }),
                 }),
             });
         },

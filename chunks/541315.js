@@ -4,13 +4,13 @@ var i = n(554146),
     r = n(994500),
     s = n(174459),
     a = n(927813),
-    o = n(17928),
-    E = n(228366);
+    E = n(17928),
+    o = n(228366);
 let c = u();
 function u() {
     return { ignoreTimestamps: {} };
 }
-class _ extends o.Ay.PersistedStore {
+class _ extends E.Ay.PersistedStore {
     static displayName = "IgnoreNoticeStore";
     static persistKey = "IgnoreNoticeStore";
     initialize(e) {
@@ -24,7 +24,7 @@ class _ extends o.Ay.PersistedStore {
         return c.ignoreTimestamps;
     }
 }
-let A = new _(E.h, {
+let A = new _(o.h, {
     RELATIONSHIP_IGNORE_USER_SUCCESS: function (e) {
         let { userId: t, timestamp: n } = e;
         c.ignoreTimestamps[t] = n;

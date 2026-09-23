@@ -1,6 +1,6 @@
 (n.d(t, {
-    E2: () => m,
-    EB: () => g,
+    E2: () => g,
+    EB: () => m,
     JF: () => O,
     Ql: () => h,
     U8: () => C,
@@ -107,13 +107,13 @@ function T(e) {
         });
     });
 }
-function g(e) {
+function m(e) {
     let { interactionType: t, ...n } = e;
     A(n.channelId, (e) => {
         r.Ay.trackWithMetadata(_.HAw.GUILD_ROOM_USER_INTERACTED, { ...E(n), interaction_type: t, ...e });
     });
 }
-function m(e) {
+function g(e) {
     A(e.channelId, (t) => {
         r.Ay.trackWithMetadata(_.HAw.GUILD_ROOM_USER_CONNECTED, { ...E(e), ...t });
     });

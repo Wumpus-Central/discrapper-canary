@@ -4,8 +4,8 @@ var i = n(17928),
     r = n(779185),
     s = n(320095),
     a = n(734057),
-    o = n(232835),
-    E = n(935208),
+    E = n(232835),
+    o = n(935208),
     c = n(753738),
     u = n(877133),
     _ = n(652215);
@@ -39,7 +39,7 @@ function C(e) {
                     let { type: t } = e;
                     return t === _.Auw.AUTO_MODERATION_NOTIFICATION;
                 })
-                    ? null == e || -1 === E.default.compare(e, t.id)
+                    ? null == e || -1 === o.default.compare(e, t.id)
                         ? t.id
                         : void 0
                     : e,
@@ -51,7 +51,7 @@ class O extends i.Ay.PersistedStore {
     static displayName = "GuildAutomodMessageStore";
     static persistKey = "GuildAutomodMessages";
     initialize(e) {
-        (this.waitFor(a.A, o.A), null != e && ((A = e.automodFailedMessages), (d = e.mentionRaidDetectionByGuild)));
+        (this.waitFor(a.A, E.A), null != e && ((A = e.automodFailedMessages), (d = e.mentionRaidDetectionByGuild)));
     }
     getState() {
         return { automodFailedMessages: A, mentionRaidDetectionByGuild: d, lastIncidentAlertMessage: I };

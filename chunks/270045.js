@@ -1,11 +1,11 @@
-n.d(t, { C: () => w });
+n.d(t, { C: () => F });
 var i = n(477900),
     l = n(582128),
     r = n(323889),
     s = n(17928),
     a = n(691540),
-    o = n(857250),
-    E = n(97483),
+    E = n(857250),
+    o = n(97483),
     c = n(477782),
     u = n(980707),
     _ = n(743368),
@@ -43,10 +43,10 @@ function B(e) {
         d = (0, s.bG)([P.A], () => P.A.getQuestPreviewOverride(p.uF.QUEST_LIVE_STREAM), []),
         S = (0, s.bG)([P.A], () => P.A.getQuestPreviewOverride(p.uF.MEMBERS_LIST), []),
         B = (0, y.vy)(e.questContent),
-        w = [p.uF.QUEST_BAR_V2, p.uF.QUEST_BAR].includes(e.questContent),
-        F = (0, g.Ut)(),
-        H = (0, U.go)(),
-        V = (0, L.wr)(e.quest),
+        F = [p.uF.QUEST_BAR_V2, p.uF.QUEST_BAR].includes(e.questContent),
+        w = (0, g.Ut)(),
+        V = (0, U.go)(),
+        H = (0, L.wr)(e.quest),
         K = !0 === e.showShareLink && (0, x.E0)(e.quest.config),
         {
             handleComplete: Y,
@@ -69,14 +69,14 @@ function B(e) {
                     content: e.questContent,
                     position: e.questContentPosition,
                     ctaContent: h.Cy.CONTEXT_MENU_COPY_LINK,
-                    impressionId: H,
+                    impressionId: V,
                     sourceQuestContent: e.sourceQuestContent,
                 }),
-                [e.questContent, e.questContentPosition, e.sourceQuestContent, H],
+                [e.questContent, e.questContentPosition, e.sourceQuestContent, V],
             ),
         });
     function ee(e) {
-        return (0, a.P0)((0, o.o)(new N.A(e, e.status).message, E.Ck.FAILURE));
+        return (0, a.P0)((0, E.o)(new N.A(e, e.status).message, o.Ck.FAILURE));
     }
     function et() {
         return (0, m.CV)(e.quest.id).catch(ee);
@@ -125,7 +125,7 @@ function B(e) {
         ea = l.useCallback(() => {
             (0, O.pX)(q.BVt.QUEST_PREVIEW_TOOL_2(e.quest.id));
         }, [e.quest.id]),
-        eo = e.shouldShowDisclosure && e.quest.id !== v.Fw;
+        eE = e.shouldShowDisclosure && e.quest.id !== v.Fw;
     return (0, i.jsxs)(u.W, {
         "data-menu-migrated": !0,
         variant: "fixed",
@@ -142,7 +142,7 @@ function B(e) {
                     children: [
                         (0, i.jsx)(c.Dr, {
                             id: "play-game",
-                            label: V,
+                            label: H,
                             action: $,
                             icon: _.W,
                             leadingAccessory: { type: "icon", icon: _.W },
@@ -180,10 +180,10 @@ function B(e) {
                                               questContentCTA: h.Cy.CONTEXT_MENU_LEARN_MORE,
                                               surfaceId: e.questContent,
                                               sourceQuestContent: e.sourceQuestContent,
-                                              impressionId: H,
+                                              impressionId: V,
                                               questContentPosition: e.questContentPosition,
                                           })
-                                        : F({
+                                        : w({
                                               questId: e.quest.id,
                                               questContent: e.questContent,
                                               questContentPosition: e.questContentPosition,
@@ -195,7 +195,7 @@ function B(e) {
                                 icon: T.r,
                                 leadingAccessory: { type: "icon", icon: T.r },
                             }),
-                        eo &&
+                        eE &&
                             (0, i.jsx)(c.Dr, {
                                 id: "display-disclosure",
                                 label: b.intl.string(b.t.GcsZKJ),
@@ -206,7 +206,7 @@ function B(e) {
                                             content: e.questContent,
                                             position: e.questContentPosition,
                                             ctaContent: h.Cy.CONTEXT_MENU_OPEN_DISCLOSURE,
-                                            impressionId: H,
+                                            impressionId: V,
                                             sourceQuestContent: e.sourceQuestContent,
                                         },
                                         e.returnRef,
@@ -226,10 +226,10 @@ function B(e) {
                                               questContentCTA: h.Cy.CONTEXT_MENU_HIDE_CONTENT,
                                               surfaceId: e.questContent,
                                               sourceQuestContent: e.sourceQuestContent,
-                                              impressionId: H,
+                                              impressionId: V,
                                               questContentPosition: e.questContentPosition,
                                           })
-                                        : F({
+                                        : w({
                                               questId: e.quest.id,
                                               questContent: e.questContent,
                                               questContentPosition: e.questContentPosition,
@@ -237,7 +237,7 @@ function B(e) {
                                               sourceQuestContent: e.sourceQuestContent,
                                           }),
                                         (0, y.vy)(e.questContent) &&
-                                            ((0, m.g5)(e.quest.id, e.questContent), w && (0, j.z6)(e.quest)));
+                                            ((0, m.g5)(e.quest.id, e.questContent), F && (0, j.z6)(e.quest)));
                                 },
                                 subtext: b.intl.string(b.t.RK9gxo),
                             }),
@@ -302,14 +302,14 @@ function B(e) {
         ],
     });
 }
-function w(e) {
+function F(e) {
     let {
             children: t,
             onOpen: n,
             onClose: s,
             preventIdle: a,
-            quest: o,
-            questContent: E,
+            quest: E,
+            questContent: o,
             questContentPosition: c,
             sourceQuestContent: u,
             ..._
@@ -322,22 +322,22 @@ function w(e) {
                 ? (0, R.r)({
                       type: C.F.CLICK_INTERNAL,
                       adCreativeType: r.p.QUEST,
-                      adCreativeId: o.id,
+                      adCreativeId: E.id,
                       questContentCTA: h.Cy.OPEN_CONTEXT_MENU,
-                      surfaceId: E,
+                      surfaceId: o,
                       sourceQuestContent: u,
                       impressionId: T,
                       questContentPosition: c,
                   })
                 : A({
-                      questId: o.id,
-                      questContent: E,
+                      questId: E.id,
+                      questContent: o,
                       questContentCTA: h.Cy.OPEN_CONTEXT_MENU,
                       questContentPosition: c,
                       sourceQuestContent: u,
                   }),
                 null != n && n());
-        }, [n, o.id, E, c, A, u, T]);
+        }, [n, E.id, o, c, A, u, T]);
     return (0, i.jsx)(d.Y, {
         targetElementRef: I,
         onRequestOpen: N,
@@ -348,8 +348,8 @@ function w(e) {
                 ? (0, i.jsx)(S.A, {
                       children: (0, i.jsx)(B, {
                           ..._,
-                          quest: o,
-                          questContent: E,
+                          quest: E,
+                          questContent: o,
                           questContentPosition: c,
                           onClose: t,
                           sourceQuestContent: u,
@@ -357,8 +357,8 @@ function w(e) {
                   })
                 : (0, i.jsx)(B, {
                       ..._,
-                      quest: o,
-                      questContent: E,
+                      quest: E,
+                      questContent: o,
                       questContentPosition: c,
                       onClose: t,
                       sourceQuestContent: u,

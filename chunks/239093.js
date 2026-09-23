@@ -4,8 +4,8 @@ n.d(t, {
     Eb: () => v,
     Iv: () => T,
     M8: () => S,
-    Qv: () => g,
-    V5: () => m,
+    Qv: () => m,
+    V5: () => g,
     XN: () => p,
     ZU: () => f,
     aC: () => L,
@@ -86,8 +86,8 @@ var T =
     (s[(s.DONT_AGREE_PENALTY = 2)] = "DONT_AGREE_PENALTY"),
     (s[(s.SOMETHING_ELSE = 3)] = "SOMETHING_ELSE"),
     s);
-let g = [0, 1, 2, 3],
-    m = 372,
+let m = [0, 1, 2, 3],
+    g = 372,
     S = 279,
     N = { impression_group: u.ImpressionGroups.APPEAL_INGESTION };
 var C =

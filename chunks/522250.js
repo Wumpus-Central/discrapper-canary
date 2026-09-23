@@ -4,8 +4,8 @@ var n = l(506774),
     r = l(174459),
     i = l(783791),
     s = l(972786),
-    o = l(652215),
-    u = l(670455),
+    u = l(652215),
+    o = l(670455),
     d = l(50617),
     c = l(375708);
 let m = "shownVibegrationsFeedbackProjectIds",
@@ -22,30 +22,30 @@ function x(e) {
 }
 function p() {
     return {
-        value: u.Eq.VIBEGRATIONS,
+        value: o.Eq.VIBEGRATIONS,
         label: "",
         problemsHeader: c.intl.string(d.default.kLHFxL),
         problemOptions: [
-            { value: u.qK.NOT_WHAT_I_WANTED, variant: u.UV.UNSPECIFIED, label: c.intl.string(d.default.UJLIUY) },
-            { value: u.qK.TOO_SLOW, variant: u.UV.UNSPECIFIED, label: c.intl.string(d.default.FVQz1w) },
-            { value: u.qK.APP_DIDNT_WORK, variant: u.UV.UNSPECIFIED, label: c.intl.string(d.default["4AdY23"]) },
+            { value: o.qK.NOT_WHAT_I_WANTED, variant: o.UV.UNSPECIFIED, label: c.intl.string(d.default.UJLIUY) },
+            { value: o.qK.TOO_SLOW, variant: o.UV.UNSPECIFIED, label: c.intl.string(d.default.FVQz1w) },
+            { value: o.qK.APP_DIDNT_WORK, variant: o.UV.UNSPECIFIED, label: c.intl.string(d.default["4AdY23"]) },
             {
-                value: u.qK.DIDNT_KNOW_WHAT_TO_ASK_FOR,
-                variant: u.UV.UNSPECIFIED,
+                value: o.qK.DIDNT_KNOW_WHAT_TO_ASK_FOR,
+                variant: o.UV.UNSPECIFIED,
                 label: c.intl.string(d.default["u/juX1"]),
             },
         ],
-        freeformConfig: { value: u.qK.FREEFORM, label: c.intl.string(d.default["8Ee6yW"]) },
+        freeformConfig: { value: o.qK.FREEFORM, label: c.intl.string(d.default["8Ee6yW"]) },
     };
 }
 function v() {
-    r.default.track(o.HAw.OPEN_MODAL, { type: "vibegrations", source: "Feedback Modal" });
+    r.default.track(u.HAw.OPEN_MODAL, { type: "vibegrations", source: "Feedback Modal" });
 }
 function b(e, t, l, n) {
     let { rating: i, reason: d, feedback: c, dontShowAgain: m } = l;
-    (!0 === m && (0, a.n3)({ feedbackType: u.MW.VIBEGRATIONS, location: n }),
+    (!0 === m && (0, a.n3)({ feedbackType: o.MW.VIBEGRATIONS, location: n }),
         null != i &&
-            r.default.track(o.HAw.VIBEGRATIONS_FEEDBACK, {
+            r.default.track(u.HAw.VIBEGRATIONS_FEEDBACK, {
                 project_id: e,
                 application_id: s.Ay.getProject(e)?.application_id ?? null,
                 rating: i,

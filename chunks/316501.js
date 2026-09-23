@@ -125,8 +125,8 @@ function p(e) {
 function T(e) {
     return { keyCode: e.keyCode, key: null != e.key ? A(e.key) : void 0, code: e.code };
 }
-let g = "keyboard-layout-map";
-class m {
+let m = "keyboard-layout-map";
+class g {
     keyCodeMap;
     keyMap;
     _internalKeyLayoutMap = null;
@@ -137,7 +137,7 @@ class m {
     _cachedAllEvents = [];
     constructor(e = {}) {
         this._defaultKeyMap = e;
-        const t = a.w.get(g) ?? null;
+        const t = a.w.get(m) ?? null;
         (null != t ? (this.keyMap = t) : (this.keyMap = p({ ...e })),
             this._initializeInternalLayoutMap(),
             (this.keyCodeMap = this._buildKeyCodeMapFromKeyMap()),
@@ -227,7 +227,7 @@ class m {
     }
     save() {
         var e;
-        ((e = this.keyMap), a.w.set(g, e));
+        ((e = this.keyMap), a.w.set(m, e));
     }
     getLayoutMap() {
         return null == this._internalKeyLayoutMap ? I : this._internalKeyLayoutMap;
@@ -248,7 +248,7 @@ class m {
         );
     }
 }
-class S extends m {
+class S extends g {
     getKeyString(e, t) {
         let n = this.getKeyCodeMapItem(e);
         return (

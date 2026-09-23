@@ -16,8 +16,8 @@ var i,
     f = n(775602),
     p = n(793574),
     T = n(688810),
-    g = n(793943),
-    m = n(915089),
+    m = n(793943),
+    g = n(915089),
     S = n(87719),
     N = n(732280),
     C = n(811611),
@@ -120,15 +120,15 @@ function q(e) {
                 { background: `var(--background-gradient), ${n}` }
             );
         }, [I, c, f]),
-        g = p ? G.A.unsafe_rawColors.WHITE.css : void 0,
-        m = a.useCallback(() => {
+        m = p ? G.A.unsafe_rawColors.WHITE.css : void 0,
+        g = a.useCallback(() => {
             (u && _(), i?.());
         }, [u, _, i]);
     return (0, r.jsxs)("div", {
         className: z.fC,
         children: [
             (0, r.jsxs)(H.S4, {
-                onSelect: n ? void 0 : m,
+                onSelect: n ? void 0 : g,
                 isSelected: !1,
                 showSelectionCircle: I,
                 size: s,
@@ -142,7 +142,7 @@ function q(e) {
                 children: [
                     !E && !p && (0, r.jsx)(X, {}),
                     (0, r.jsx)("div", { className: z.JU }),
-                    (0, r.jsx)(U.PaintPaletteIcon, { color: g, className: z.vL }),
+                    (0, r.jsx)(U.PaintPaletteIcon, { color: m, className: z.vL }),
                 ],
             }),
             u &&
@@ -253,7 +253,7 @@ function eu(e) {
         [N, C] = a.useState(-1),
         O = (0, d.bG)([f.Ay], () => f.Ay.useReducedMotion),
         L = "SETTINGS" === s,
-        y = (0, m.GV)(),
+        y = (0, g.GV)(),
         D = L && u ? y : void 0,
         b = L ? y : void 0;
     function U(e, t) {
@@ -262,7 +262,7 @@ function eu(e) {
             ((0, M.bc)(e.id),
             el({ isPersisted: !u, analyticsLocations: o, themeName: c.ju[e.id] }),
             u && "SETTINGS" === s
-                ? ((n = e), (0, R.GQ)(n.theme), (0, g.nf)(g.HP.CLIENT_THEMES), (0, v.default)())
+                ? ((n = e), (0, R.GQ)(n.theme), (0, m.nf)(m.HP.CLIENT_THEMES), (0, v.default)())
                 : u
                   ? (0, R.GQ)(e.theme)
                   : (0, I.u_)({ backgroundGradientPresetId: e.id, theme: e.theme }, l),
@@ -284,8 +284,8 @@ function eu(e) {
                     isDisabled: t,
                     ariaDescribedBy: b,
                     onSelect: () => {
-                        ((0, g.nf)(g.HP.CUSTOM_THEME, {
-                            from: "SETTINGS" === s ? g.xv.SETTING : g.xv.CLIENT_THEMES_EDITOR,
+                        ((0, m.nf)(m.HP.CUSTOM_THEME, {
+                            from: "SETTINGS" === s ? m.xv.SETTING : m.xv.CLIENT_THEMES_EDITOR,
                         }),
                             "SETTINGS" === s && (0, v.default)());
                     },
@@ -374,7 +374,7 @@ function e_(e) {
 }
 function eE(e) {
     let { type: t, children: n } = e,
-        i = (0, m.GV)(),
+        i = (0, g.GV)(),
         { ref: s, ...l } = (0, u._u)({ orientation: "horizontal", labelledBy: i }),
         o = a.useMemo(() => ({ type: t, delay: ea[t] }), [t]);
     return (0, r.jsx)(es.Provider, {

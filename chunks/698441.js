@@ -52,11 +52,11 @@ let _ = {
 function T(e) {
     (E.set(e.id, e), (A += 1));
 }
-function g(e) {
+function m(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     (E.delete(e), delete f[e], t && delete p[e], (A += 1));
 }
-function m(e) {
+function g(e) {
     var t;
     let n,
         i,
@@ -104,7 +104,7 @@ function N(e, t, n) {
     (null == p[e] && (p[e] = {}), (p[e][t ?? I] = n));
 }
 function C(e, t) {
-    E.values(_.GUILD_EVENT(e)).forEach((e) => g(e.id, t));
+    E.values(_.GUILD_EVENT(e)).forEach((e) => m(e.id, t));
 }
 function O(e) {
     let { guildScheduledEvent: t } = e;
@@ -212,7 +212,7 @@ let M = new b(l.h, {
         for (let e of (r()
             .difference(i, a)
             .forEach((e) => {
-                g(e);
+                m(e);
             }),
         n))
             T(e);
@@ -222,7 +222,7 @@ let M = new b(l.h, {
     GUILD_SCHEDULED_EVENT_UPDATE: O,
     GUILD_SCHEDULED_EVENT_DELETE: function (e) {
         let { guildScheduledEvent: t } = e;
-        return (g(t.id), !0);
+        return (m(t.id), !0);
     },
     GUILD_SCHEDULED_EVENT_USER_ADD: function (e) {
         let { userId: t, guildEventId: n, guildId: i, guildEventExceptionId: r, response: a } = e,
@@ -231,7 +231,7 @@ let M = new b(l.h, {
         null != l && S(l, !1);
         let o = d.Ay.getMember(i, t);
         return (
-            m({
+            g({
                 user_id: t,
                 guild_scheduled_event_id: n,
                 member: o ?? void 0,
@@ -247,11 +247,11 @@ let M = new b(l.h, {
     },
     GUILD_SCHEDULED_EVENT_RSVPS_FETCH_SUCESS: function (e) {
         let { guildScheduledEventUsers: t } = e;
-        return (t.forEach((e) => m(e, !1, !1)), (A += 1), !0);
+        return (t.forEach((e) => g(e, !1, !1)), (A += 1), !0);
     },
     GUILD_SCHEDULED_EVENT_USERS_FETCH_SUCCESS: function (e) {
         let { guildScheduledEventUsers: t } = e;
-        return (t.forEach((e) => m(e, !1, !1)), (A += 1), !0);
+        return (t.forEach((e) => g(e, !1, !1)), (A += 1), !0);
     },
     GUILD_SCHEDULED_EVENT_USER_COUNTS_FETCH_SUCCESS: function (e) {
         let { eventId: t, counts: n } = e;

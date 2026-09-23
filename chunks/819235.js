@@ -16,8 +16,8 @@ var i = n(435558),
     f = n(652215);
 let p = 2 * u.A.Millis.MINUTE,
     T = I.X1.GLOBAL_FEED,
-    g = 15 * u.A.Millis.MINUTE,
-    m = new Map(),
+    m = 15 * u.A.Millis.MINUTE,
+    g = new Map(),
     S = new Set(),
     N = new Map(),
     C = null,
@@ -40,14 +40,14 @@ function y(e) {
         )
             return !1;
         let t = d.A.getIdleSince();
-        if (null != t && Date.now() - t > g) return !1;
+        if (null != t && Date.now() - t > m) return !1;
     }
     return !0;
 }
 function D(e) {
     L(e, { loading: !1 });
-    let t = m.get(e);
-    void 0 !== t && (clearTimeout(t), m.delete(e));
+    let t = g.get(e);
+    void 0 !== t && (clearTimeout(t), g.delete(e));
 }
 function v() {
     let e = N.get(T) ?? 0;
@@ -57,7 +57,7 @@ function v() {
     let n = t?.expired_at == null ? 0 : new Date(t.expired_at).getTime() - Date.now(),
         i = Math.max(0, null == C ? 0 : new Date(C).getTime() - Date.now(), n) + (e > 0 ? R() : 0);
     (L(T, { loading: !1, nextFetchDate: new Date(Date.now() + i) }),
-        m.set(
+        g.set(
             T,
             setTimeout(() => b({ feedId: T, feature: r.M.INBOX }), i),
         ));
@@ -79,7 +79,7 @@ async function b(e) {
             if (e < 4) {
                 let r = u.A.Millis.MINUTE * Math.pow(2, e),
                     a = R(e);
-                (m.set(
+                (g.set(
                     t,
                     setTimeout(() => b({ feedId: t, feature: n, force: i }), r + a),
                 ),

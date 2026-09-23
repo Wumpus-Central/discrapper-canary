@@ -1,4 +1,4 @@
-n.d(t, { K: () => m, A: () => S });
+n.d(t, { K: () => g, A: () => S });
 var i = n(477900),
     r = n(582128),
     a = n(503698),
@@ -107,16 +107,16 @@ let T = function (e) {
         { status: a } = (0, I.CE)(e ? A.A : null);
     return { mediaUrls: t, isSuccess: n && a === I.BW.Loaded, isLoading: i || a === I.BW.Loading };
 };
-var g = n(794899);
-let m = 1e3,
+var m = n(794899);
+let g = 1e3,
     S = (e) => {
         let { children: t, isConfirmationStep: n, isEligibleForWowMoment: a, shouldPrefetchWowMoment: A } = e,
             h = (0, l.bG)([c.Ay], () => c.Ay.useReducedMotion),
             [I, f] = (0, r.useState)("entry"),
-            m = (0, r.useRef)(null),
+            g = (0, r.useRef)(null),
             S = (0, r.useRef)(null),
             N = (0, r.useCallback)(() => {
-                "entry" === I && (f("idle"), null != m.current && m.current?.play());
+                "entry" === I && (f("idle"), null != g.current && g.current?.play());
             }, [I]),
             C = (0, r.useCallback)(() => {
                 "exit" !== I && (f("exit"), null != S.current && S.current?.play());
@@ -178,38 +178,38 @@ let m = 1e3,
             ? (0, i.jsxs)("div", {
                   children: [
                       (0, i.jsxs)("div", {
-                          className: g.j,
+                          className: m.j,
                           children: [
                               (0, i.jsx)("div", {
-                                  className: g.ws,
+                                  className: m.ws,
                                   children: (0, i.jsx)(u.A, {
                                       playsInline: !0,
                                       muted: !0,
                                       autoPlay: !0,
                                       onEnded: N,
-                                      className: s()(g.Ki, "entry" === I ? g.RK : g.R),
+                                      className: s()(m.Ki, "entry" === I ? m.RK : m.R),
                                       children: (0, i.jsx)("source", { src: L.modalGlowEntry }),
                                   }),
                               }),
                               (0, i.jsx)(u.A, {
-                                  ref: m,
+                                  ref: g,
                                   playsInline: !0,
                                   muted: !0,
                                   loop: !0,
-                                  className: s()(g.Ki, "idle" === I ? g.RK : g.R),
+                                  className: s()(m.Ki, "idle" === I ? m.RK : m.R),
                                   children: (0, i.jsx)("source", { src: L.modalGlowIdle }),
                               }),
                               (0, i.jsx)(u.A, {
                                   ref: S,
                                   playsInline: !0,
                                   muted: !0,
-                                  className: s()(g.Ki, "exit" === I ? g.RK : g.R),
+                                  className: s()(m.Ki, "exit" === I ? m.RK : m.R),
                                   children: (0, i.jsx)("source", { src: L.modalGlowExit }),
                               }),
                           ],
                       }),
                       (0, i.jsx)("div", {
-                          className: g.Sh,
+                          className: m.Sh,
                           children: (0, i.jsx)(o.e, {
                               fit: "layout",
                               ref: D,
@@ -217,7 +217,7 @@ let m = 1e3,
                               listenOnDocumentBody: !0,
                           }),
                       }),
-                      (0, i.jsx)("div", { className: "exit" === I ? g.aO : g.ws, children: t }),
+                      (0, i.jsx)("div", { className: "exit" === I ? m.aO : m.ws, children: t }),
                   ],
               })
             : "static" === U
@@ -229,12 +229,12 @@ let m = 1e3,
                                     (0, i.jsx)("img", {
                                         src: "https://cdn.discordapp.com/assets/content/ada94a00ba3648b0d01f5bbf870b152b02ac6eb1bd1d245d8b46a54527416853.png",
                                         alt: "",
-                                        className: g.Uw,
+                                        className: m.Uw,
                                     }),
                                     (0, i.jsx)("img", {
                                         src: "https://cdn.discordapp.com/assets/content/096964379958760a2615df5128a9022ac6de873c8f7a6af0beadb1c958ce55ea.png",
                                         alt: "",
-                                        className: g.Gv,
+                                        className: m.Gv,
                                     }),
                                 ],
                             }),

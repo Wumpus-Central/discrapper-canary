@@ -2,13 +2,13 @@ n.d(t, {
     $0: () => u,
     Jq: () => d,
     UZ: () => f,
-    Xr: () => m,
+    Xr: () => g,
     as: () => c,
     cf: () => h,
     gN: () => T,
     mT: () => p,
     nO: () => I,
-    sx: () => g,
+    sx: () => m,
     xo: () => _,
 });
 var i = n(310784),
@@ -88,13 +88,13 @@ function T(e, t) {
         r = (0, o.ii)(n);
     return { fontId: i, effectId: n, colors: [...r[Math.floor(Math.random() * r.length)]] };
 }
-function g(e, t) {
+function m(e, t) {
     if (t || null == e) return e;
     let n = o._k.includes(e.fontId) ? s.x.DEFAULT : e.fontId,
         i = o.gz.includes(e.effectId) ? a.z.SOLID : e.effectId;
     return n === e.fontId && i === e.effectId ? e : { ...e, fontId: n, effectId: i };
 }
-function m(e) {
+function g(e) {
     if (null == e) return !1;
     let t = e.replace(/[^\p{L}]/gu, "");
     return /\P{Script=Latin}/u.test(t);

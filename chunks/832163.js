@@ -16,8 +16,8 @@ let o = {},
     f = {},
     p = {},
     T = new Set(),
-    g = { state: "idle" },
-    m = new Set(),
+    m = { state: "idle" },
+    g = new Set(),
     S = {},
     N = {},
     C = {},
@@ -77,7 +77,7 @@ class b extends r.Ay.Store {
         return I[e];
     }
     getConfig() {
-        return "success" === g.state ? g.config : null;
+        return "success" === m.state ? m.config : null;
     }
     getConfigForApplicationId(e) {
         return O[e];
@@ -95,13 +95,13 @@ class b extends r.Ay.Store {
         if (null != e) return S[e] ?? d[e]?.storefront?.applicationId;
     }
     getConfigFetchState() {
-        return g;
-    }
-    getStorefrontApplicationIds() {
         return m;
     }
+    getStorefrontApplicationIds() {
+        return g;
+    }
     hasStorefrontForApplicationId(e) {
-        return null != e && m.has(e);
+        return null != e && g.has(e);
     }
     getStorefrontGuildIds() {
         return R;
@@ -131,8 +131,8 @@ let M = new b(a.h, {
             (_ = {}),
             (E = {}),
             (T = new Set()),
-            (g = { state: "idle" }),
-            (m = new Set()),
+            (m = { state: "idle" }),
+            (g = new Set()),
             (S = {}),
             (N = {}),
             (C = {}),
@@ -223,12 +223,12 @@ let M = new b(a.h, {
         (I = { ...I })[t] = { state: "error" };
     },
     SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_START: function () {
-        g = { state: "loading" };
+        m = { state: "loading" };
     },
     SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_SUCCESS: function (e) {
         let { config: t } = e;
-        ((g = { state: "success", config: t, fetchedAt: Date.now() }),
-            (m = new Set(t.storefronts.map((e) => e.applicationId))),
+        ((m = { state: "success", config: t, fetchedAt: Date.now() }),
+            (g = new Set(t.storefronts.map((e) => e.applicationId))),
             (R = new Set(t.storefronts.filter((e) => null != e.guildId).map((e) => e.guildId))),
             (S = t.storefronts.reduce((e, t) => (null != t.guildId && (e[t.guildId] = t.applicationId), e), {})),
             (N = t.storefronts.reduce(
@@ -242,7 +242,7 @@ let M = new b(a.h, {
             (O = t.storefronts.reduce((e, t) => ((e[t.applicationId] = t), e), {})));
     },
     SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_FAILURE: function () {
-        g = { state: "error", fetchedAt: Date.now() };
+        m = { state: "error", fetchedAt: Date.now() };
     },
     SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_START: function (e) {
         let { skuId: t } = e;

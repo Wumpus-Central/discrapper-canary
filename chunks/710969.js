@@ -1,5 +1,5 @@
 n.d(t, {
-    GR: () => g,
+    GR: () => m,
     Gp: () => b,
     HN: () => N,
     Ic: () => f,
@@ -7,7 +7,7 @@ n.d(t, {
     L4: () => D,
     Oh: () => _,
     RF: () => P,
-    ZG: () => m,
+    ZG: () => g,
     gO: () => h,
     if: () => p,
     kd: () => I,
@@ -67,10 +67,10 @@ function T(e) {
     }
     return t;
 }
-function g(e) {
+function m(e) {
     return null != e && null != e.completedAt && null == e.claimedAt;
 }
-function m(e) {
+function g(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { dateStyle: "short" };
     return null == e ? "" : new Date(e).toLocaleDateString(s.default.locale, t);
 }

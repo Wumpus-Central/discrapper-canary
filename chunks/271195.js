@@ -59,8 +59,8 @@ function T(e) {
         screenMessage: A,
         hideControls: I = !1,
         className: T,
-        innerClassName: g,
-        videoControlsClassName: m,
+        innerClassName: m,
+        videoControlsClassName: g,
         ...S
     } = e;
     return (0, i.jsxs)("div", {
@@ -70,11 +70,11 @@ function T(e) {
         className: a()(f.Hu, { [f.N7]: n }, T),
         onDoubleClick: r,
         children: [
-            (0, i.jsx)(l.F, { children: (0, i.jsx)(_.o, { className: g, children: t }, s) }),
+            (0, i.jsx)(l.F, { children: (0, i.jsx)(_.o, { className: m, children: t }, s) }),
             null != A ? (0, i.jsx)(h.A, { size: "small", ...A }) : null,
             !I &&
                 (0, i.jsxs)("div", {
-                    className: a()(f._v, m, "theme-dark"),
+                    className: a()(f._v, g, "theme-dark"),
                     children: [
                         (0, i.jsx)("div", {
                             className: f.K1,

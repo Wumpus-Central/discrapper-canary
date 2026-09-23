@@ -16,8 +16,8 @@ var i = n(477900),
     f = n(652215),
     p = n(190460),
     T = n(778712),
-    g = n(375708),
-    m = n(185864);
+    m = n(375708),
+    g = n(185864);
 let S = { tension: 1200, friction: 70 };
 function N() {
     return document.hasFocus();
@@ -107,7 +107,7 @@ function y(e) {
                       let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
                           i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
                       return null != t
-                          ? g.intl.formatToPlainString(g.t["/6mw10"], {
+                          ? m.intl.formatToPlainString(m.t["/6mw10"], {
                                 label: e,
                                 status: (0, I.MU)(t, { isMobile: n, isVR: i }),
                             })
@@ -233,7 +233,7 @@ function y(e) {
             width: P + D,
             height: P,
             viewBox: `0 0 ${P + D} ${P}`,
-            className: m.DX,
+            className: g.DX,
             "aria-hidden": !0,
             children: (0, i.jsx)("foreignObject", {
                 x: 0,
@@ -241,12 +241,12 @@ function y(e) {
                 width: P,
                 height: P,
                 mask: null != U ? `url(#${U})` : void 0,
-                children: (0, i.jsx)("img", { className: m.M, src: y, alt: " ", "aria-hidden": !0 }),
+                children: (0, i.jsx)("img", { className: g.M, src: y, alt: " ", "aria-hidden": !0 }),
             }),
         });
     return null != r || null != a
         ? (0, i.jsxs)(o.D, {
-              className: s()(m.iE, m.Wn, _),
+              className: s()(g.iE, g.Wn, _),
               style: b,
               onClick: r,
               tabIndex: E,
@@ -260,7 +260,7 @@ function y(e) {
               children: [t, w],
           })
         : (0, i.jsxs)("div", {
-              className: s()(m.iE, _),
+              className: s()(g.iE, _),
               style: b,
               onContextMenu: d ?? void 0,
               onMouseEnter: c ?? void 0,
@@ -278,10 +278,10 @@ let D = r.forwardRef((e, t) => {
         "div",
         {
             ref: t,
-            className: s()(m.yA, a),
+            className: s()(g.yA, a),
             children: [
-                (0, i.jsx)("img", { src: n ?? void 0, alt: " ", className: m.my, "aria-hidden": !0 }),
-                r && (0, i.jsx)("div", { className: m.uh, style: d }),
+                (0, i.jsx)("img", { src: n ?? void 0, alt: " ", className: g.my, "aria-hidden": !0 }),
+                r && (0, i.jsx)("div", { className: g.uh, style: d }),
             ],
         },
         n,
@@ -298,7 +298,7 @@ function v(e) {
             isTyping: c = !1,
             typingIndicatorRef: E,
             avatarContentRef: p,
-            isSpeaking: g = !1,
+            isSpeaking: m = !1,
             voiceDb: S,
             speakingStylesConfig: N,
             statusTooltip: C = !1,
@@ -442,7 +442,7 @@ function v(e) {
                 width: k,
                 height: k,
                 viewBox: `0 0 ${k} ${k}`,
-                className: s()(m.dK, m.JW),
+                className: s()(g.dK, g.JW),
                 "aria-hidden": !0,
                 children: [
                     (0, i.jsx)("foreignObject", {
@@ -454,7 +454,7 @@ function v(e) {
                         children: (0, i.jsx)(D, {
                             ref: p,
                             src: t,
-                            isSpeaking: g,
+                            isSpeaking: m,
                             voiceDb: S,
                             speakingStylesConfig: N,
                             className: P,
@@ -474,7 +474,7 @@ function v(e) {
                                           ...O(G, w, { isMobile: l, isTyping: c, isVR: o }),
                                           fill: F,
                                           mask: `url(#${(0, _.p8)(w, { isMobile: l, isTyping: c, isVR: o })})`,
-                                          className: m.Hs,
+                                          className: g.Hs,
                                       }),
                                       c
                                           ? (0, i.jsx)(u.C, {
@@ -505,7 +505,7 @@ function b(e) {
             isSpeaking: h = !1,
             voiceDb: f,
             speakingStylesConfig: p,
-            size: g,
+            size: m,
             src: O,
             status: v,
             statusColor: b,
@@ -520,8 +520,8 @@ function b(e) {
         F = (0, _.S3)(v, b),
         B = r.useId(),
         V = r.useId(),
-        [H] = r.useState(() => ({ fill: a, ...L({ size: g, status: n, isMobile: t, isTyping: !1 }) })),
-        j = r.useMemo(() => ({ fill: F, ...L({ size: g, status: v, isMobile: o, isTyping: E }) }), [F, g, v, o, E]),
+        [H] = r.useState(() => ({ fill: a, ...L({ size: m, status: n, isMobile: t, isTyping: !1 }) })),
+        j = r.useMemo(() => ({ fill: F, ...L({ size: m, status: v, isMobile: o, isTyping: E }) }), [F, m, v, o, E]),
         {
             avatarCutoutX: W,
             avatarCutoutY: Y,
@@ -531,8 +531,8 @@ function b(e) {
             fill: X,
             ...q
         } = (0, c.z)({ config: S, from: H, to: j }, N() ? "animate-always" : "animate-never"),
-        Z = (0, T.FT)(g),
-        Q = (0, T.Kj)(g),
+        Z = (0, T.FT)(m),
+        Q = (0, T.Kj)(m),
         J = 2.5 * Q.status,
         ee = 1.5 * Q.status,
         et = null != v ? (2.5 * Q.status - Q.status) / 2 : 0,
@@ -556,7 +556,7 @@ function b(e) {
             width: en,
             height: en,
             viewBox: `0 0 ${en} ${en}`,
-            className: s()(m.dK, m.JW),
+            className: s()(g.dK, g.JW),
             "aria-hidden": !0,
             children: [
                 (0, i.jsxs)("mask", {
@@ -569,7 +569,7 @@ function b(e) {
                     ],
                 }),
                 (0, i.jsx)("foreignObject", {
-                    className: m.__invalid_foreignObject,
+                    className: g.__invalid_foreignObject,
                     x: 0,
                     y: 0,
                     width: Z,
@@ -603,7 +603,7 @@ function b(e) {
                                 width: J,
                                 height: ee,
                                 viewBox: `0 0 ${J} ${ee}`,
-                                className: M ? m.Oi : void 0,
+                                className: M ? g.Oi : void 0,
                                 children: [
                                     (0, _.pF)(q, Q.status, V),
                                     (0, i.jsx)(l.animated.rect, { fill: X, width: J, height: ee, mask: `url(#${V})` }),
@@ -617,7 +617,7 @@ function b(e) {
                                     }),
                                 ],
                             }),
-                            (0, i.jsx)(C, { size: g, isMobile: o, isTyping: E, className: m.Hs }),
+                            (0, i.jsx)(C, { size: m, isMobile: o, isTyping: E, className: g.Hs }),
                         ],
                     }),
                 }),

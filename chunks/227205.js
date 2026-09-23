@@ -14,10 +14,10 @@ var n = r(477900),
     h = r(793574),
     E = r(688810),
     _ = r(617986),
-    S = r(773669),
-    x = r(318346),
-    I = r(287809),
-    v = r(174459),
+    x = r(773669),
+    S = r(318346),
+    v = r(287809),
+    I = r(174459),
     L = r(440938),
     A = r(993408),
     C = r(304210),
@@ -62,12 +62,12 @@ let G = {
             ),
             K = l.useRef(null),
             X = (0, j.yB)("HeroBlock"),
-            z = (0, c.bG)([I.default], () => I.default.getCurrentUser()),
-            W = (0, c.bG)([S.default], () => S.default.locale),
+            z = (0, c.bG)([v.default], () => v.default.getCurrentUser()),
+            W = (0, c.bG)([x.default], () => x.default.locale),
             Y = (0, L.uM)(),
             { analyticsLocations: $ } = (0, E.Ay)(h.A.COLLECTIBLES_SHOP_HERO),
             Z = (0, C.S)(),
-            J = l.useMemo(
+            q = l.useMemo(
                 () =>
                     null != H
                         ? H
@@ -89,9 +89,9 @@ let G = {
                             },
                 [H, s],
             ),
-            q = l.useMemo(() => (0, y.HF)(Z, J), [Z, J]),
-            Q = null != q,
-            ee = l.useMemo(() => (null == Z ? J : (0, y.O8)(Z, J, D, W)), [Z, J, D, W]),
+            J = l.useMemo(() => (0, y.HF)(Z, q), [Z, q]),
+            Q = null != J,
+            ee = l.useMemo(() => (null == Z ? q : (0, y.O8)(Z, q, D, W)), [Z, q, D, W]),
             {
                 bannerDisplayConfig: et,
                 logoDisplayConfig: er,
@@ -108,7 +108,7 @@ let G = {
             eg = ec ? N.intl.string(N.t["1CdL8d"]) : N.intl.string(N.t.xYKa1T);
         function ep() {
             ec
-                ? ((0, x.Y)({
+                ? ((0, S.Y)({
                       pageType: B.liQ.SHOP_ORBS_TAB,
                       sectionType: B.JJy.ORBS_SHOP_HERO_BLOCK,
                       ctaObject: B.ZSU.CTA_TO_QUEST_HOME,
@@ -120,7 +120,7 @@ let G = {
                       isInternalShopDeeplink: !0,
                       isOrbsExclusive: ed,
                   }),
-                  v.default.track(B.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                  I.default.track(B.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                       collectibles_shop_session_id: Y?.sessionId,
                       sku_id: ee.categorySkuId,
                       page_type: D,
@@ -226,7 +226,7 @@ let G = {
                         ],
                     }),
                     null != Z &&
-                        null != q &&
+                        null != J &&
                         !Q &&
                         (0, n.jsx)(f.A, { collectionId: ee.categorySkuId, variant: "full" }),
                 ],

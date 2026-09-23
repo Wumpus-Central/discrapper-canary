@@ -1,8 +1,8 @@
-n.d(t, { _: () => s, x: () => l });
+n.d(t, { _: () => l, x: () => s });
 var i = n(582128);
-let l = i.createContext(void 0);
-function s() {
-    let e = i.useContext(l);
+let s = i.createContext(void 0);
+function l() {
+    let e = i.useContext(s);
     if (null == e) throw Error("useSettingsV2Context must be used within a SettingsV2Provider");
     return e;
 }

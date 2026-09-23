@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => O, In: () => g });
+n.d(t, { Ay: () => O, In: () => m });
 var i = n(477900),
     r = n(582128),
     a = n(503698),
@@ -16,7 +16,7 @@ var i = n(477900),
     f = n(573435),
     p = n(640708),
     T = n(114640);
-let g = r.forwardRef(function (e, t) {
+let m = r.forwardRef(function (e, t) {
     let {
             className: n,
             iconClassName: r,
@@ -31,7 +31,7 @@ let g = r.forwardRef(function (e, t) {
             iconSize: I = 24,
             onClick: f,
             onContextMenu: p,
-            tooltip: g = null,
+            tooltip: m = null,
             tooltipPosition: S = "bottom",
             tooltipAlign: N,
             tooltipDisabled: C,
@@ -61,9 +61,9 @@ let g = r.forwardRef(function (e, t) {
     }
     let w = L;
     return (
-        null == w && "string" == typeof g && (w = g),
+        null == w && "string" == typeof m && (w = m),
         (0, i.jsx)(_.m, {
-            __unsupportedReactNodeAsText: g,
+            __unsupportedReactNodeAsText: m,
             position: S,
             align: N,
             shouldShow: !C,
@@ -92,12 +92,12 @@ let g = r.forwardRef(function (e, t) {
                           "aria-expanded": v,
                           tabIndex: o || null == f ? -1 : 0,
                           "data-jump-section": M,
-                          children: [(0, i.jsx)(m, { iconSize: I, badge: d, children: U(void 0) }), a],
+                          children: [(0, i.jsx)(g, { iconSize: I, badge: d, children: U(void 0) }), a],
                       }),
         })
     );
 });
-function m(e) {
+function g(e) {
     let { badge: t } = e;
     return null == t ? e.children : (0, i.jsx)(S, { ...e, badge: t });
 }
@@ -132,7 +132,7 @@ function S(e) {
 }
 let N = r.forwardRef(function (e, t) {
     let { className: n, ...r } = e;
-    return (0, i.jsx)(g, { ...r, className: s()(T.p, n), ref: t });
+    return (0, i.jsx)(m, { ...r, className: s()(T.p, n), ref: t });
 });
 function C(e) {
     let {
@@ -147,8 +147,8 @@ function C(e) {
             "aria-labelledby": A,
             role: f,
             scrollable: p,
-            transparent: g = !1,
-            hidden: m = !1,
+            transparent: m = !1,
+            hidden: g = !1,
             disableFocusRingScope: S = !1,
         } = e,
         N = r.useRef(null),
@@ -170,7 +170,7 @@ function C(e) {
             ],
         });
     return (0, i.jsx)("section", {
-        className: s()(t, T.kL, { [T.Sp]: !g, [T.JO]: g, [T.GY]: o.Fr, [T.R]: m }),
+        className: s()(t, T.kL, { [T.Sp]: !m, [T.JO]: m, [T.GY]: o.Fr, [T.R]: g }),
         "aria-label": E,
         "aria-labelledby": A,
         role: f,
@@ -178,7 +178,7 @@ function C(e) {
         children: S ? O : (0, i.jsx)(h.xp, { containerRef: N, children: O }),
     });
 }
-((C.Icon = g),
+((C.Icon = m),
     (C.ChannelIcon = N),
     (C.Title = function (e) {
         let {
@@ -195,8 +195,8 @@ function C(e) {
                 id: I,
                 muted: f = !1,
                 level: p = 1,
-                ref: g,
-                role: m,
+                ref: m,
+                role: g,
                 tabIndex: S,
                 "aria-label": N,
                 "aria-selected": C,
@@ -215,7 +215,7 @@ function C(e) {
             });
         return null != l
             ? (0, i.jsx)(u.D, {
-                  innerRef: g,
+                  innerRef: m,
                   onClick: l,
                   onContextMenu: a,
                   onKeyDown: o,
@@ -224,7 +224,7 @@ function C(e) {
                   onFocus: A,
                   onBlur: h,
                   className: s()(n, T.oB),
-                  role: m,
+                  role: g,
                   tabIndex: S,
                   "aria-label": N,
                   "aria-selected": C,
@@ -233,7 +233,7 @@ function C(e) {
                   children: L,
               })
             : (0, i.jsx)("div", {
-                  ref: g,
+                  ref: m,
                   className: s()(n, T.oB),
                   onContextMenu: a,
                   onKeyDown: o,
@@ -241,7 +241,7 @@ function C(e) {
                   onMouseLeave: E,
                   onFocus: A,
                   onBlur: h,
-                  role: m,
+                  role: g,
                   "aria-label": N,
                   "aria-selected": C,
                   "aria-controls": O,

@@ -1,7 +1,7 @@
 n.d(t, { J3: () => y, sB: () => R });
 var i = n(477900),
-    l = n(582128),
-    s = n(17928),
+    s = n(582128),
+    l = n(17928),
     r = n(821609),
     a = n(331322),
     o = n(793574),
@@ -14,8 +14,8 @@ var i = n(477900),
     E = n(724651),
     h = n(732280),
     S = n(792656),
-    p = n(511484),
-    x = n(811611),
+    x = n(511484),
+    p = n(811611),
     T = n(174459),
     f = n(830543),
     I = n(652215),
@@ -28,7 +28,7 @@ function y() {
 }
 function v() {
     let e = (0, E.O)(),
-        t = (0, p.U9)(e, N.pe.TIER_2)
+        t = (0, x.U9)(e, N.pe.TIER_2)
             ? C.intl.formatToPlainString(C.t.bkQ4bH, { percent: e?.discount.amount })
             : C.intl.string(C.t.mr4K7D);
     return (0, i.jsx)(S.A, {
@@ -39,7 +39,7 @@ function v() {
     });
 }
 function j() {
-    let e = (0, s.bG)([d.A], () => d.A.isPreview),
+    let e = (0, l.bG)([d.A], () => d.A.isPreview),
         t = (0, h.V)()?.subscriptionTrial?.skuId === N.pe.TIER_2;
     return !e || t
         ? null
@@ -53,9 +53,9 @@ function j() {
 }
 function O(e) {
     let { children: t } = e,
-        n = (0, s.bG)([d.A], () => d.A.isPreview),
+        n = (0, l.bG)([d.A], () => d.A.isPreview),
         { analyticsLocations: r } = (0, u.Ay)(o.A.USER_SETTINGS);
-    return (l.useEffect(() => {
+    return (s.useEffect(() => {
         n &&
             (T.default.track(I.HAw.PREMIUM_UPSELL_VIEWED, {
                 type: N.e.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
@@ -68,7 +68,7 @@ function O(e) {
         : t;
 }
 function L() {
-    let e = (0, s.bG)([d.A], () => d.A.isPreview),
+    let e = (0, l.bG)([d.A], () => d.A.isPreview),
         t = (0, h.V)()?.subscriptionTrial?.skuId === N.pe.TIER_2;
     return e && t
         ? (0, i.jsxs)("div", {
@@ -83,7 +83,7 @@ function L() {
                       }),
                   }),
                   (0, i.jsx)("div", { className: b.BU }),
-                  (0, i.jsx)(x.Ay, { type: N.e.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL, subscriptionTier: N.pe.TIER_2 }),
+                  (0, i.jsx)(p.Ay, { type: N.e.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL, subscriptionTier: N.pe.TIER_2 }),
               ],
           })
         : null;

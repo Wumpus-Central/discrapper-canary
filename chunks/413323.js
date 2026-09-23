@@ -6,8 +6,8 @@ var a = n(143236),
     o = n(175259),
     d = n(478676),
     c = n.n(d);
-let { newline: u, paragraph: _, url: E, link: A, strong: h, u: I, br: f, em: p, image: T, text: g } = d.defaultRules,
-    m = {
+let { newline: u, paragraph: _, url: E, link: A, strong: h, u: I, br: f, em: p, image: T, text: m } = d.defaultRules,
+    g = {
         newline: u,
         paragraph: _,
         url: E,
@@ -24,7 +24,7 @@ let { newline: u, paragraph: _, url: E, link: A, strong: h, u: I, br: f, em: p, 
         em: p,
         image: T,
         hook: {
-            order: g.order,
+            order: m.order,
             match: (0, d.inlineRegex)(/^\$\[(.*?)\]\((\w+)\)/),
             parse(e, t, n) {
                 let { context: i } = n;
@@ -33,7 +33,7 @@ let { newline: u, paragraph: _, url: E, link: A, strong: h, u: I, br: f, em: p, 
             react: (e, t, n) => e.render(t(e.content, n), n.key),
         },
         noparse: {
-            order: g.order,
+            order: m.order,
             match: (0, d.inlineRegex)(/^!!(\d+?)!!/),
             parse(e, t, n) {
                 let { unsafeContext: i } = n,
@@ -42,7 +42,7 @@ let { newline: u, paragraph: _, url: E, link: A, strong: h, u: I, br: f, em: p, 
             },
             react: (e) => e.content,
         },
-        text: g,
+        text: m,
     },
     S = /\{.+?\}/,
     N = /[~*_]{2}.+?[~*_]{2}|\[.*?\]\(.+?\)|\n\n/,
@@ -81,13 +81,13 @@ class R {
 }
 function L(e) {
     let t, n, a;
-    ((t = c().parserFor(e(m))),
-        (n = c().reactFor(c().ruleOutput(m, "react"))),
+    ((t = c().parserFor(e(g))),
+        (n = c().reactFor(c().ruleOutput(g, "react"))),
         (i = (e, i, r) => {
             let a = !e.includes("\n\n");
             return (a || (e += "\n\n"), n(t(e, { inline: a, context: i, unsafeContext: r })));
         }),
-        (a = c().parserFor(m)),
+        (a = c().parserFor(g)),
         (r = (e, t, n) => a(e + "\n\n", { inline: !1, context: t, unsafeContext: n })));
 }
 function y(e, t) {

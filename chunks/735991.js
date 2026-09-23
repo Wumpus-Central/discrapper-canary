@@ -38,13 +38,13 @@ var i = n(487899),
     f = n(723702),
     p = n(989837),
     T = n(500049),
-    g = n(652215),
-    m = n(73510),
+    m = n(652215),
+    g = n(73510),
     S = n(381941),
     N = n(375708);
-let C = { id: m.Ik.BUILT_IN };
+let C = { id: g.Ik.BUILT_IN };
 function O(e) {
-    return e.id !== m.Ik.BUILT_IN;
+    return e.id !== g.Ik.BUILT_IN;
 }
 function R(e) {
     return O(e) ? e.name : N.intl.string(N.t.UB2gG2);
@@ -53,13 +53,13 @@ function L(e) {
     return O(e) ? e.description : N.intl.string(N.t.X9fusn);
 }
 function y(e) {
-    return O(e) && (0, _.n)(e, g.gfo.EMBEDDED);
+    return O(e) && (0, _.n)(e, m.gfo.EMBEDDED);
 }
 function D(e) {
-    return O(e) && (0, _.n)(e, g.gfo.PARTNER);
+    return O(e) && (0, _.n)(e, m.gfo.PARTNER);
 }
 function v(e) {
-    return O(e) && (0, _.n)(e, g.gfo.PROMOTED);
+    return O(e) && (0, _.n)(e, m.gfo.PROMOTED);
 }
 function b(e) {
     let t = P(e),

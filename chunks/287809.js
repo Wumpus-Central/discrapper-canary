@@ -26,8 +26,8 @@ var i = n(435558),
     f = n(403362),
     p = n(280450),
     T = n(536802),
-    g = n(652215),
-    m = n(202541);
+    m = n(652215),
+    g = n(202541);
 let S = {},
     N = 0,
     C = "47835198259242069";
@@ -71,10 +71,10 @@ function L(e) {
     void 0 !== p && ((e.globalName = p), delete e.global_name);
     let T = e.primary_guild;
     void 0 !== T && (e.primary_guild = (0, u.j)(T));
-    let g = e.display_name_styles;
-    void 0 !== g && ((e.displayNameStyles = (0, c.mT)(g)), delete e.display_name_styles);
-    let m = e.typing_indicator_style;
-    void 0 !== m && ((e.typingIndicatorStyle = (0, d.cE)(m)), delete e.typing_indicator_style);
+    let m = e.display_name_styles;
+    void 0 !== m && ((e.displayNameStyles = (0, c.mT)(m)), delete e.display_name_styles);
+    let g = e.typing_indicator_style;
+    void 0 !== g && ((e.typingIndicatorStyle = (0, d.cE)(g)), delete e.typing_indicator_style);
     let S = e.premium_state;
     void 0 !== S && ((e.premiumState = (0, A.f)(S)), delete e.premium_state);
     let N = e.restricted_schedule;
@@ -131,7 +131,7 @@ function v(e, t) {
     if (!e) return t;
     let n = E.A.getPremiumTypeOverride(),
         i = E.A.getPremiumTypeActual();
-    return n === m.$I ? i : n;
+    return n === g.$I ? i : n;
 }
 function b(e, t) {
     return e ? (null === E.A.getPremiumTypeOverride() ? null : E.A.getPerksActual()) : t;
@@ -272,7 +272,7 @@ function z(e) {
                 });
             }),
                 n.forEach((e) => {
-                    (e.type === g.rbe.DM || e.type === g.rbe.GROUP_DM) &&
+                    (e.type === m.rbe.DM || e.type === m.rbe.GROUP_DM) &&
                         (e.recipients?.forEach((e) => D(e)), null != e.recipient && D(e.recipient));
                 }));
         }),
@@ -323,11 +323,11 @@ function et(e) {
 }
 function en(e) {
     let { message: t } = e;
-    if ((P(t, !0), null != t.flags && r.Lt(t.flags, g.pr7.URGENT))) {
+    if ((P(t, !0), null != t.flags && r.Lt(t.flags, m.pr7.URGENT))) {
         let e = S[p.default.getId()];
         return (
             null != e &&
-            ((S[p.default.getId()] = e.set("flags", r.lA(e.flags, g.nhx.HAS_UNREAD_URGENT_MESSAGES, !0))), !0)
+            ((S[p.default.getId()] = e.set("flags", r.lA(e.flags, m.nhx.HAS_UNREAD_URGENT_MESSAGES, !0))), !0)
         );
     }
     return !1;
@@ -443,10 +443,10 @@ function ep(e) {
 function eT(e) {
     return D(e.relationship.user);
 }
-function eg(e) {
+function em(e) {
     return D(e.gameRelationship.user);
 }
-function em(e) {
+function eg(e) {
     let { relationships: t } = e;
     return t.reduce((e, t) => D(t.user) || e, !1);
 }
@@ -587,8 +587,8 @@ class eB extends T.A {
             CHANNEL_CREATE: ei,
             CHANNEL_UPDATES: er,
             RELATIONSHIP_ADD: eT,
-            GAME_RELATIONSHIP_ADD: eg,
-            LOAD_RELATIONSHIPS_SUCCESS: em,
+            GAME_RELATIONSHIP_ADD: em,
+            LOAD_RELATIONSHIPS_SUCCESS: eg,
             FRIEND_SUGGESTION_CREATE: eS,
             LOAD_FRIEND_SUGGESTIONS_SUCCESS: eN,
             AUDIT_LOG_FETCH_SUCCESS: eC,

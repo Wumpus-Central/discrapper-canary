@@ -16,18 +16,18 @@ var A = n(682763),
     f = n(296027),
     p = n(515183),
     T = n(614455),
-    g = n(652215);
-let m = {};
+    m = n(652215);
+let g = {};
 function S(e) {
     return f.default.getTrackedGameByPid(e)?.overlayMethod ?? null;
 }
 function N(e) {
-    return m[e] ?? {};
+    return g[e] ?? {};
 }
 function C(e, t) {
-    let n = m[e]?.error,
-        i = m[e]?.error_description;
-    ((m[e] = { ...m[e], ...t }), null != n && (m[e].error = n), null != i && (m[e].error_description = i));
+    let n = g[e]?.error,
+        i = g[e]?.error_description;
+    ((g[e] = { ...g[e], ...t }), null != n && (g[e].error = n), null != i && (g[e].error_description = i));
 }
 function O(e, t) {
     let n = l.Ay.getGameOrTransformedSubgameForPID(e);
@@ -71,7 +71,7 @@ let L = new R(
               },
               OVERLAY_V3_NATIVE_DESTROY_HOST_WINDOW: function (e) {
                   let { lastAssociatedPID: t } = e;
-                  if (t !== c.UNSET_PID) return (h.default.track(g.HAw.OVERLAY_HOOK_RESULT, N(t)), (m = {}), !0);
+                  if (t !== c.UNSET_PID) return (h.default.track(m.HAw.OVERLAY_HOOK_RESULT, N(t)), (g = {}), !0);
               },
               OVERLAY_SUCCESSFULLY_SHOWN: function (e) {
                   let t,
@@ -80,7 +80,7 @@ let L = new R(
                   return (
                       C(n, { total_mount_time_ms: null != i ? new Date().getTime() - i : void 0, success: !0 }),
                       (t = S(n)),
-                      (m[n] = { ...m[n], overlay_method: null != t ? _.Ue[t] : _.Ue[_.Ue.OutOfProcess] }),
+                      (g[n] = { ...g[n], overlay_method: null != t ? _.Ue[t] : _.Ue[_.Ue.OutOfProcess] }),
                       !0
                   );
               },
@@ -102,10 +102,10 @@ let L = new R(
                   let { pid: t } = e;
                   return (
                       !(function (e) {
-                          if (null != m[e]) return;
+                          if (null != g[e]) return;
                           let t = l.Ay.getGameOrTransformedSubgameForPID(e),
                               n = S(e);
-                          m[e] = {
+                          g[e] = {
                               overlay_method: null != n ? _.Ue[n] : _.Ue[_.Ue.OutOfProcess],
                               success: !1,
                               game_name: t?.name ?? null,
@@ -346,10 +346,10 @@ function eT(e, t) {
     }
     a.A.setFocusedPID(0 === e ? null : e, t, n);
 }
-function eg() {
+function em() {
     eT(null, null, !0);
 }
-function em(e) {
+function eg(e) {
     if (e_.allDone) {
         if (!J.has(e))
             return void a.A.updateOverlayState(e, _.AR.WAITING_FOR_SUCCESSFUL_SHOW, "maybeTrackSuccessfullyShown");
@@ -459,7 +459,7 @@ let eR = new eO(
                   OVERLAY_OOP_UI_INITIALIZED: function () {
                       ((e_ = { ...e_, allDone: !0 }),
                           Q.forEach((e) => {
-                              em(e);
+                              eg(e);
                           }));
                   },
                   OVERLAY_OOP_UI_SHOW_INACTIVE_SUCCESS: function () {
@@ -523,7 +523,7 @@ let eR = new eO(
                   },
                   OVERLAY_V3_NATIVE_DESTROY_HOST_WINDOW: function () {
                       var e;
-                      (eg(),
+                      (em(),
                           null != es && null != ec[(e = es)] && (ec[e] = new Set()),
                           (es = null),
                           (ei = null),
@@ -534,16 +534,16 @@ let eR = new eO(
                   OVERLAY_V3_NATIVE_FOCUS_GAINED: function (e) {
                       let { pid: t, windowHandle: n, windowClass: i } = e;
                       null != i && E.has(i)
-                          ? eg()
+                          ? em()
                           : (eT(t, null != n ? (0, M.Oy)(n) : null),
                             t !== et && Z.info("OverlayStore: Focused new PID", t));
                   },
                   OVERLAY_V3_NATIVE_FOCUS_LOST: function () {
-                      eg();
+                      em();
                   },
                   OVERLAY_V3_NATIVE_SUCCESSFULLY_SHOWN: function (e) {
                       let { pid: t } = e;
-                      (J.add(t), em(t));
+                      (J.add(t), eg(t));
                   },
                   OVERLAY_V3_NATIVE_WINDOW_HANDLE_INITIALIZED: function (e) {
                       let { initialized: t } = e;

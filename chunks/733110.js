@@ -1,4 +1,4 @@
-(n.r(t), n.d(t, { FetchState: () => c, default: () => g }));
+(n.r(t), n.d(t, { FetchState: () => c, default: () => m }));
 var i,
     r = n(17928),
     a = n(228366),
@@ -50,7 +50,7 @@ class T extends r.Ay.Store {
         return I;
     }
 }
-let g = new T(a.h, {
+let m = new T(a.h, {
     USER_AUTHORIZED_APPS_REQUEST: function (e) {
         "full" === e.request.type ? p("FETCHING") : p("FETCHING", e.request.applicationIds);
     },

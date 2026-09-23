@@ -16,8 +16,8 @@ var i = n(435558),
     f = n(763827),
     p = n(873985),
     T = n(309010),
-    g = n(461213),
-    m = n(116956),
+    m = n(461213),
+    g = n(116956),
     S = n(723702),
     N = n(175306),
     C = n(77729),
@@ -71,10 +71,10 @@ class P extends M {
         (super(!1), (this.socket = e));
     }
     getInitialState() {
-        return g.A.getLocalPresence();
+        return m.A.getLocalPresence();
     }
     getNextState() {
-        return g.A.getLocalPresence();
+        return m.A.getLocalPresence();
     }
     shouldCommit() {
         return this.socket.isSessionEstablished();
@@ -270,8 +270,8 @@ var ea = n(756377),
     ef = n(107351),
     ep = n(284009),
     eT = n.n(ep),
-    eg = n(723176),
-    em = n(766034),
+    em = n(723176),
+    eg = n(766034),
     eS = n(314732),
     eN = n(531743),
     eC = n(45773),
@@ -538,7 +538,7 @@ function eY(e, t, n) {
         f = e_.Ay.getMember(e, t.id),
         p = (0, $.t)(A),
         T = (0, X.mT)(h),
-        g = (0, Z.i)(I);
+        m = (0, Z.i)(I);
     (null != f &&
         f.nick === a &&
         f.avatar === s &&
@@ -552,7 +552,7 @@ function eY(e, t, n) {
         (f.unusualDMActivityUntil ?? null) === (E ?? null) &&
         r().isEqual(f.collectibles ?? null, p ?? null) &&
         r().isEqual(f.displayNameStyles ?? null, T ?? null) &&
-        r().isEqual(f.gamingLeaderboardData ?? null, g ?? null)) ||
+        r().isEqual(f.gamingLeaderboardData ?? null, m ?? null)) ||
         eW({
             type: "GUILD_MEMBER_ADD",
             guildId: e,
@@ -569,7 +569,7 @@ function eY(e, t, n) {
             flags: o,
             collectibles: p,
             displayNameStyles: T,
-            gamingLeaderboardData: g,
+            gamingLeaderboardData: m,
         });
 }
 function eK(e) {
@@ -721,8 +721,8 @@ function eq(e) {
             let t,
                 n,
                 i =
-                    ((t = eg.A.database()),
-                    (n = (0, eO.O)() ? em.A.getCommittedVersions() : Promise.resolve({})),
+                    ((t = em.A.database()),
+                    (n = (0, eO.O)() ? eg.A.getCommittedVersions() : Promise.resolve({})),
                     Promise.all([
                         n,
                         (0, eO.O)() ? eN.A.getGuildIds() : Promise.resolve(new Set()),
@@ -754,7 +754,7 @@ function eq(e) {
                           let t = (e = el.A.hydrateReady.measure(() =>
                                   (function (e, t, n) {
                                       let { users: i, private_channels: a, merged_members: s, guilds: l, ...o } = e;
-                                      (null != eg.A.database() &&
+                                      (null != em.A.database() &&
                                           !1 === n.databaseOk &&
                                           eC.A.replaceDisableAllDatabases("ReadyPayloadUtils: database was not ok"),
                                           (eL = r().keyBy(i, (e) => e.id)),
@@ -2038,9 +2038,9 @@ function e9(e) {
 class te extends a.Ay.Store {
     static displayName = "GatewayConnectionStore";
     initialize() {
-        (this.waitFor(E.default, A.A, h.A, I.Ay, f.A, p.A, T.Ay, g.A, m.A, _.A),
+        (this.waitFor(E.default, A.A, h.A, I.Ay, f.A, p.A, T.Ay, m.A, g.A, _.A),
             this.syncWith([I.Ay], e7),
-            this.syncWith([g.A], e8));
+            this.syncWith([m.A], e8));
     }
     getSocket() {
         return B;
@@ -2194,8 +2194,8 @@ let tt = new te(l.h, {
             if (n);
             else {
                 let e;
-                ((e = m.A.getAllActiveStreamKeys().find((e) => (0, c.Iy)(e).ownerId === E.default.getId())),
-                    m.A.getAllActiveStreamKeys()
+                ((e = g.A.getAllActiveStreamKeys().find((e) => (0, c.Iy)(e).ownerId === E.default.getId())),
+                    g.A.getAllActiveStreamKeys()
                         .filter((t) => t !== e)
                         .forEach((e) => e9(e)));
             }

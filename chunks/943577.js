@@ -16,8 +16,8 @@ var i = n(435558),
     f = n(597643),
     p = n(294857),
     T = n(475706),
-    g = n(427358),
-    m = n(57985),
+    m = n(427358),
+    g = n(57985),
     S = n(907459),
     N = n(666176),
     C = n(823441),
@@ -48,7 +48,7 @@ function $() {
     return new Set(
         y.A.hasConsented(x.YAq.PERSONALIZATION)
             ? [
-                  ...g.A.getUserAffinities()
+                  ...m.A.getUserAffinities()
                       .filter((e) => e.communicationRank <= 15)
                       .map((e) => e.otherUserId),
                   ...e,
@@ -91,7 +91,7 @@ function et(e, t, n) {
     var i;
     let a,
         s = U.default.getCurrentUser(),
-        c = g.A.getUserAffinitiesMap(),
+        c = m.A.getUserAffinitiesMap(),
         u = (0, S.L)(t, c, "NowPlayingViewStore - partiedMembers"),
         _ = u.map((e) => e.id),
         A = u.filter((t) => e.has(t.id)),
@@ -179,11 +179,11 @@ function et(e, t, n) {
             null == n && ((a = null), (F = !0));
         else {
             let e = w.A.getVoiceStatesForChannel(n.id),
-                l = (0, m.Y1)("NowPlayingViewStore - voiceMembers"),
+                l = (0, g.Y1)("NowPlayingViewStore - voiceMembers"),
                 o = ee;
             null != l &&
                 (o = (e) => {
-                    let t = g.A.getUserAffinity(e.id);
+                    let t = m.A.getUserAffinity(e.id);
                     return "vc_probability" === l ? (t?.vcProbability ?? 0) : (t?.communicationProbability ?? 0);
                 });
             let d = r()(e)
@@ -313,8 +313,8 @@ function ea() {
 class es extends a.Ay.Store {
     static displayName = "NowPlayingViewStore";
     initialize() {
-        (this.syncWith([U.default, h.A, M.A, D.A, w.A, R.A, P.A, y.A, g.A], ea),
-            this.waitFor(h.A, R.A, L.A, y.A, D.A, f.A, v.A, b.A, M.A, P.A, g.A, U.default, w.A));
+        (this.syncWith([U.default, h.A, M.A, D.A, w.A, R.A, P.A, y.A, m.A], ea),
+            this.waitFor(h.A, R.A, L.A, y.A, D.A, f.A, v.A, b.A, M.A, P.A, m.A, U.default, w.A));
     }
     get currentActivityParties() {
         return V;

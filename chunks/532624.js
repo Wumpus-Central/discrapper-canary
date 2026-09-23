@@ -16,9 +16,9 @@ var i = n(812729),
     f = n(350535),
     p = n(773371),
     T = n(652215),
-    g = n(696016);
+    m = n(696016);
 n(980504);
-var m = n(650583),
+var g = n(650583),
     S = n(72290);
 let N = new c.A("KeybindsStore");
 function C() {
@@ -47,7 +47,7 @@ function L(e, t, n, i) {
             keyCombo: t,
             combo: n,
             layoutMapBacktick: r,
-            env: m.g$[(0, f._$)()],
+            env: g.g$[(0, f._$)()],
             backtickEventShape: (0, I.Q_)("`"),
             backquoteKeyShape: (0, I.Q_)(r ?? "`"),
             nativeBackquoteKeyShape: (0, I.Q_)(a ?? "`"),
@@ -72,7 +72,7 @@ function y() {
             : null == i
               ? (L("Unable to get backtick code for overlay default keybind", e, t, { rawBacktickShape: n }), null)
               : (L("Default overlay keybind is unsupported", e, t, { rawBacktickCode: i }),
-                [...t, [m.zY.KEYBOARD_KEY, i, (0, f._$)()]]));
+                [...t, [g.zY.KEYBOARD_KEY, i, (0, f._$)()]]));
     if (null == a) return O([], !1);
     if (R(a)) return O(a, !0);
     let s = (0, f.Z0)("shift"),
@@ -294,10 +294,10 @@ let $ = [
         return K(T.hCu.SOUNDBOARD_HOLD, "ctrl+`", !1) || n;
     },
     function () {
-        return K(T.hCu.SAVE_CLIP, g.Ot);
+        return K(T.hCu.SAVE_CLIP, m.Ot);
     },
     function () {
-        return K(T.hCu.SAVE_SCREENSHOT, g.sz);
+        return K(T.hCu.SAVE_SCREENSHOT, m.sz);
     },
 ];
 function z() {

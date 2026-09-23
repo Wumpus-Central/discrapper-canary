@@ -5,8 +5,8 @@ var l = n(503698),
     r = n.n(l),
     s = n(284009),
     a = n.n(s),
-    o = n(17928);
-if (221552 == n.j) var E = n(417098);
+    E = n(17928);
+if (221552 == n.j) var o = n(417098);
 var c = n(736653),
     u = n(573648),
     _ = n(619006),
@@ -28,21 +28,21 @@ function M(e) {
     let { markAsDismissed: t, recurringDismiss: n, platformType: l, noticeType: s } = e,
         _ = C.A.getGuildId(),
         A = (0, c.DP)(),
-        T = (0, o.bG)([I.default], () => I.default.locale);
+        T = (0, E.bG)([I.default], () => I.default.locale);
     a()(null != _, "Guild Id must be defined");
     let N = u.A.get(l),
         R = N.migrationData?.deprecationDate?.toLocaleDateString(T, { month: "long", day: "numeric", year: "numeric" });
-    return (0, i.jsxs)(E.$T, {
-        color: E.Hv.WARNING,
+    return (0, i.jsxs)(o.$T, {
+        color: o.Hv.WARNING,
         children: [
-            (0, i.jsx)(E.PM, { onClick: () => n(m.i.USER_DISMISS), noticeType: s }),
+            (0, i.jsx)(o.PM, { onClick: () => n(m.i.USER_DISMISS), noticeType: s }),
             (0, i.jsx)("img", {
                 src: "light" === A ? N?.icon.blackSVG : N?.icon.whiteSVG,
                 alt: N?.name,
                 className: r()(f.tV, f.Y5),
             }),
             p.intl.format(P.default.iMCLA5, { connectionName: N?.name, date: R }),
-            (0, i.jsx)(E.Z_, {
+            (0, i.jsx)(o.Z_, {
                 onClick: () => {
                     (t(m.i.TAKE_ACTION), d.A.open(_, D.BEX.ROLES));
                 },
@@ -50,7 +50,7 @@ function M(e) {
                 className: f.NS,
                 children: p.intl.string(P.default.kxlybP),
             }),
-            (0, i.jsx)(E.zr, {
+            (0, i.jsx)(o.zr, {
                 onClick: () => {
                     n(m.i.USER_DISMISS);
                 },
@@ -64,18 +64,18 @@ function g(e) {
     var t;
     let n,
         { currentUser: i, selectedGuildId: l, platformTypes: r, dismissibleContent: s, noticeType: a } = e,
-        o = u.A.get(r[0]);
+        E = u.A.get(r[0]);
     if (
-        !o.migrationData?.getMigrationExperimentEnabled("guildRoleDeprecationNoticePredicate") ||
+        !E.migrationData?.getMigrationExperimentEnabled("guildRoleDeprecationNoticePredicate") ||
         O.Ay.isNoticeDismissed(a) ||
         (0, T.k8)(s)
     )
         return !1;
-    let E = null != l ? R.A.getGuild(l) : null;
+    let o = null != l ? R.A.getGuild(l) : null;
     return (
-        null != E &&
-        !!(0, S.$3)({ permission: D.xBc.ADMINISTRATOR, user: i, context: E }) &&
-        ((t = N.A.getSortedRoles(E.id).filter((e) => null === e.tags.guild_connections)),
+        null != o &&
+        !!(0, S.$3)({ permission: D.xBc.ADMINISTRATOR, user: i, context: o }) &&
+        ((t = N.A.getSortedRoles(o.id).filter((e) => null === e.tags.guild_connections)),
         t.forEach((e) => {
             null == A.A.getGuildRoleConnectionsConfiguration(e.id) && (0, _.os)(e.guildId, e.id);
         }),

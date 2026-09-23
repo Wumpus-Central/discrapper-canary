@@ -20,7 +20,7 @@ let f = Array.from(n(256964).p)
     T = RegExp(
         `^https://(?:[A-Za-z0-9-]+\\.)*(?:(?:media|images)${p}\\.discordapp\\.net|(?:cdn${p}\\.discordapp\\.com))/(?:${f})/\\d+/\\d+/([A-Za-z0-9._-]*[A-Za-z0-9_-])(?:[?][a-zA-Z0-9?&=_-]*)?`,
     ),
-    g = {
+    m = {
         order: s().defaultRules.url.order - 0.5,
         requiredFirstCharacters: ["h"],
         match: (e) => T.exec(e),
@@ -35,7 +35,7 @@ let f = Array.from(n(256964).p)
             };
         },
     };
-var m = n(717125),
+var g = n(717125),
     S = n(47167),
     N = n(499211),
     C = n(376943),
@@ -74,7 +74,7 @@ function x(e) {
 }
 function k(e, t) {
     let n = u.A.getChannel(e),
-        i = (0, N.p)(e, u.A, m.A, O.A).isSubscriptionGated,
+        i = (0, N.p)(e, u.A, g.A, O.A).isSubscriptionGated,
         r = (0, y.QG)(n) ?? "text";
     if (null != t) {
         let a = t.find((t) => t.id === e);
@@ -511,7 +511,7 @@ let e_ = {
         channelMention: j,
         channelOrMessageUrl: W,
         mediaPostLink: Y,
-        attachmentLink: g,
+        attachmentLink: m,
         commandMention: {
             order: s().defaultRules.text.order,
             requiredFirstCharacters: ["<"],
@@ -678,8 +678,8 @@ let e_ = {
         "newline",
         "soundboard",
     ]),
-    eg = r().omit(eE, ["codeBlock", "blockQuote", "br"]),
-    em = r().omit(eE, ["codeBlock", "br", "inlineCode"]);
+    em = r().omit(eE, ["codeBlock", "blockQuote", "br"]),
+    eg = r().omit(eE, ["codeBlock", "br", "inlineCode"]);
 function eS(e, t) {
     return 0 === e.length || 0 === t || "" === e.charAt(t - 1).trim();
 }
@@ -729,8 +729,8 @@ let eC = (0, et.A)([
         EMBED_TITLE_RULES: eI,
         INLINE_REPLY_RULES: ef,
         GUILD_VERIFICATION_FORM_RULES: ep,
-        GUILD_EVENT_RULES: eg,
+        GUILD_EVENT_RULES: em,
         PROFILE_BIO_RULES: eT,
         AUTO_MODERATION_SYSTEM_MESSAGE_RULES: eC,
-        NATIVE_SEARCH_RESULT_LINK_RULES: em,
+        NATIVE_SEARCH_RESULT_LINK_RULES: eg,
     };

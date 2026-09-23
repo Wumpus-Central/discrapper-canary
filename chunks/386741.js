@@ -16,8 +16,8 @@ var i = n(435558),
     f = n(386723),
     p = n(731854);
 let T = (e) => `AudioContextSettingsMigrated:${e}`,
-    g = (e) => (e === p.x.STREAM ? a.i.STREAM : a.i.USER);
-function m() {
+    m = (e) => (e === p.x.STREAM ? a.i.STREAM : a.i.USER);
+function g() {
     l.w.get(T(_.default.getId())) ||
         h.wc.updateAsync(
             "audioContextSettings",
@@ -30,7 +30,7 @@ function m() {
                         s = String(Date.now()),
                         l = {};
                     for (let [e, t] of Object.entries(i.localMutes))
-                        l[e] = { muted: t, volume: g(n), modifiedAt: s, soundboardMuted: !1 };
+                        l[e] = { muted: t, volume: m(n), modifiedAt: s, soundboardMuted: !1 };
                     for (let [e, t] of Object.entries(i.localVolumes))
                         l[e] = { muted: !1, modifiedAt: s, ...l[e], volume: (0, f.z)(t, n) };
                     let o = Object.keys(a).length;
@@ -61,10 +61,10 @@ function C() {
                         if (null == a) return !1;
                         let l = e[a];
                         return (
-                            (l[t] = l[t] ?? s.oP.create({ muted: !1, volume: g(n) })),
+                            (l[t] = l[t] ?? s.oP.create({ muted: !1, volume: m(n) })),
                             i(l[t]),
                             (l[t].modifiedAt = String(Date.now())),
-                            r && (l[t].volume !== g(n) || l[t].muted || l[t].soundboardMuted || delete l[t]),
+                            r && (l[t].volume !== m(n) || l[t].muted || l[t].soundboardMuted || delete l[t]),
                             !(function (e) {
                                 let t = A.default.entries(e),
                                     n = t.length;
@@ -125,7 +125,7 @@ function y(e) {
 }
 class D extends o.A {
     actions = {
-        POST_CONNECTION_OPEN: m,
+        POST_CONNECTION_OPEN: g,
         AUDIO_SET_LOCAL_VOLUME: O,
         AUDIO_TOGGLE_LOCAL_MUTE: R,
         AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE: L,

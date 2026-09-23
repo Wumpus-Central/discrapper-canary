@@ -4,8 +4,8 @@ var i,
     r = n.n(l),
     s = n(17928),
     a = n(228366),
-    o = n(390248),
-    E = n(320095),
+    E = n(390248),
+    o = n(320095),
     c = n(773669),
     u = n(734057),
     _ = n(696451),
@@ -61,7 +61,7 @@ let D = new S(a.h, {
         if (null == l) return !1;
         let r = n.map((e) => {
             let { pinned_at: t, message: n } = e;
-            return { pinnedAt: new Date(Date.parse(t)), message: (0, E.rh)(n) };
+            return { pinnedAt: new Date(Date.parse(t)), message: (0, o.rh)(n) };
         });
         ((l.items = [...l.items, ...r]), (l.state = i ? "LOADED_HAS_MORE" : "LOADING_FINISHED"));
     },
@@ -116,10 +116,10 @@ let D = new S(a.h, {
             });
             if (-1 === l) return;
             let { pinnedAt: s, message: a } = i.items[l],
-                o = (0, E.IU)(a, e.message);
-            if (o !== a) {
+                E = (0, o.IU)(a, e.message);
+            if (E !== a) {
                 let e = i.items.slice();
-                ((e[l] = { pinnedAt: s, message: o }), (R[n].items = e));
+                ((e[l] = { pinnedAt: s, message: E }), (R[n].items = e));
             }
             return;
         }
@@ -130,8 +130,8 @@ let D = new S(a.h, {
                 return n.id === t;
             });
             -1 === n
-                ? i.items.unshift({ message: (0, E.rh)(e.message), pinnedAt: new Date() })
-                : (i.items[n].message = (0, E.IU)(i.items[n].message, e.message));
+                ? i.items.unshift({ message: (0, o.rh)(e.message), pinnedAt: new Date() })
+                : (i.items[n].message = (0, o.IU)(i.items[n].message, e.message));
             return;
         }
         let l = r().findIndex(i.items, (e) => {
@@ -153,6 +153,6 @@ let D = new S(a.h, {
             return n.id === t;
         });
         if (-1 === l) return !1;
-        ((i.items = i.items.slice()), (i.items[l].message = (0, o.Td)(i.items[l].message)));
+        ((i.items = i.items.slice()), (i.items[l].message = (0, E.Td)(i.items[l].message)));
     },
 });

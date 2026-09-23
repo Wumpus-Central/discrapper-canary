@@ -16,8 +16,8 @@ var i = n(477900),
     f = n(699426),
     p = n(979186),
     T = n(869146),
-    g = n(363195),
-    m = n(742023),
+    m = n(363195),
+    g = n(742023),
     S = n(806911),
     N = n(734057),
     C = n(334463),
@@ -53,7 +53,7 @@ class G extends r.PureComponent {
             } = this.props,
             p = document.body.style.getPropertyValue("--custom-guild-sidebar-width"),
             T = "" !== p ? parseInt(p, 10) : y.MdR,
-            g = u.width - T - (A ? h : 0);
+            m = u.width - T - (A ? h : 0);
         return (0, i.jsxs)(f.ic, {
             children: [
                 (0, i.jsx)(I.A, {
@@ -72,7 +72,7 @@ class G extends r.PureComponent {
                     resizeConfig: U,
                     getDockedRectPositionY: c,
                 }),
-                (0, i.jsx)(f.Md, { className: !_ && null != E && A && g < 550 ? M.ah : void 0 }),
+                (0, i.jsx)(f.Md, { className: !_ && null != E && A && m < 550 ? M.ah : void 0 }),
             ],
         });
     }
@@ -83,7 +83,7 @@ class G extends r.PureComponent {
         s.EB(e, v.R8.VIDEO);
     };
 }
-let x = a.Ay.connectStores([T.A, l.Ay, R.A, g.A, N.A, O.Ay, C.A, _.A, m.Ay, A.A], (e) => {
+let x = a.Ay.connectStores([T.A, l.Ay, R.A, m.A, N.A, O.Ay, C.A, _.A, g.Ay, A.A], (e) => {
     let t,
         { popoutWindowKey: n, popoutWindowHasTitleBar: i = !1 } = e,
         r = T.A.getWindowOpen(y.MLl.CHANNEL_CALL_POPOUT),
@@ -117,7 +117,7 @@ let x = a.Ay.connectStores([T.A, l.Ay, R.A, g.A, N.A, O.Ay, C.A, _.A, m.Ay, A.A]
         H = B.find((e) => e.component === y.o1q.VIDEO),
         j = B.find((e) => e.component === y.o1q.ACTIVITY),
         W = [H, j, B.find((e) => e.component === y.o1q.FRAME)].filter(L.Vq),
-        Y = m.Ay.callChatSidebarWidth,
+        Y = g.Ay.callChatSidebarWidth,
         K = O.Ay.getVoiceChannelId(),
         $ = O.Ay.getChannelId() === K,
         z = null != K && _.A.getChatOpen(K),
@@ -130,7 +130,7 @@ let x = a.Ay.connectStores([T.A, l.Ay, R.A, g.A, N.A, O.Ay, C.A, _.A, m.Ay, A.A]
         pipWidth: V,
         maxX: k.width - (Z && z ? Y : 0),
         maxY: k.height,
-        theme: g.A.theme,
+        theme: m.A.theme,
         dockedRect: C.A.getDockedRect(t?.id ?? ""),
         getDockedRectPositionY: function (e) {
             return U && (0, p.q)({ withTitleBar: i, isFullScreen: x }) ? e - (0, E.LI)({ isPopoutWindow: U }) : e;

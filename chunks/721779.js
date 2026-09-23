@@ -24,8 +24,8 @@ function p(e) {
     return e.replace(f, "");
 }
 var T = n(652215),
-    g = n(758836);
-let m = /^\/([a-zA-Z0-9-]+)$/,
+    m = n(758836);
+let g = /^\/([a-zA-Z0-9-]+)$/,
     S = /^\/channels\/([0-9]+|@me)\/([0-9]+)$/,
     N = /^\/(invite|template)\/([a-zA-Z0-9-]+)\/?\.?$/,
     C = RegExp("^/events/(\\d+)(?:/)(\\d+)?((?:/)(\\d+))?"),
@@ -125,12 +125,12 @@ function J(e) {
             function r(e, i) {
                 t.has(i) || (t.add(i), n.push({ type: e, code: i, url: u }));
             }
-            if (E?.match(m) != null && ("https:" === e.protocol || "http:" === e.protocol)) {
+            if (E?.match(g) != null && ("https:" === e.protocol || "http:" === e.protocol)) {
                 let t = (0, l.fB)(E.substring(1), e.search);
                 if ((c.A.getInvite(t), u.includes("\\"))) continue;
                 r(_.I.INVITE, t);
             }
-            A?.match(m) != null && r(_.I.TEMPLATE, A.substring(1));
+            A?.match(g) != null && r(_.I.TEMPLATE, A.substring(1));
             let f = h?.match(N);
             if (null != f) {
                 let t = f[1].toUpperCase();
@@ -205,7 +205,7 @@ function J(e) {
                 let t = null != I ? (0, i.parse)(I) : null,
                     n = t?.tab,
                     a = t?.applicationId,
-                    s = n === g.G2.GAME_SHOPS && "string" == typeof a ? ee(t?.skuId, t) : [];
+                    s = n === m.G2.GAME_SHOPS && "string" == typeof a ? ee(t?.skuId, t) : [];
                 if ("string" == typeof a && s.length > 0) r(_.I.SOCIAL_LAYER_STOREFRONT_APP, (0, d.m5)(s, a));
                 else {
                     let t = e.hash?.match(G);

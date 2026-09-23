@@ -36,15 +36,15 @@ async function f(e) {
     if (null == r || !r.features.has(E.GuildFeatures.GUILD_ONBOARDING)) return Promise.resolve();
     let a = u.A.shouldFetchPrompts(e),
         s = u.A.getOnboardingPrompts(e);
-    if (!a && s.length > 0) return (s.every((e) => !e.inOnboarding) ? g(e) : n || p(e), Promise.resolve());
+    if (!a && s.length > 0) return (s.every((e) => !e.inOnboarding) ? m(e) : n || p(e), Promise.resolve());
     let c = await I(e);
-    return Array.isArray(c) && c.every((e) => !e.inOnboarding) ? (g(e), Promise.resolve()) : (n || p(e), c);
+    return Array.isArray(c) && c.every((e) => !e.inOnboarding) ? (m(e), Promise.resolve()) : (n || p(e), c);
 }
 function p(e) {
     a.h.dispatch({ type: "GUILD_ONBOARDING_START", guildId: e });
 }
 let T = -3;
-function g(e) {
+function m(e) {
     (c.default.track(E.HAw.GUILD_ONBOARDING_STEP_VIEWED, { ...(0, s.H$)(e), step: -2, required: !0 }),
         c.default.track(E.HAw.GUILD_ONBOARDING_STEP_COMPLETED, {
             ...(0, s.H$)(e),

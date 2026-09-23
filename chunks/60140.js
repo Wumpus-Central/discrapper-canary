@@ -14,13 +14,13 @@ var n = r(477900),
     h = r(484469),
     E = r(375708),
     _ = r(105499);
-function S(e) {
+function x(e) {
     return String(e);
 }
-function x(e) {
+function S(e) {
     return e.skuId;
 }
-function I(e) {
+function v(e) {
     let { isLoading: t, products: r, tab: l } = e,
         s = (0, m.Mk)(l);
     return t
@@ -36,7 +36,7 @@ function I(e) {
               }),
           });
 }
-function v(e) {
+function I(e) {
     let { isLoading: t, products: r, tab: l } = e,
         i = (0, m.Mk)(l),
         o = E.intl.string(E.t.HP8LNG);
@@ -47,7 +47,7 @@ function v(e) {
                 gap: "xl",
                 "aria-label": o,
                 items: e,
-                getItemKey: S,
+                getItemKey: x,
                 renderItem: (e) => (0, n.jsx)(h.A, {}, e),
             });
         }
@@ -57,7 +57,7 @@ function v(e) {
                 gap: "xl",
                 "aria-label": o,
                 items: r,
-                getItemKey: x,
+                getItemKey: S,
                 maintainFocusOnReorder: !0,
                 renderItem: (e, t, r) =>
                     (0, n.jsx)(L, { item: e, index: r, prioritizedCurrency: i, listItemProps: t }, e.skuId),
@@ -106,8 +106,8 @@ let A = function (e) {
         _ = l.useMemo(() => m.filter((e) => null != o.A.getCategoryForProduct(e.skuId)), [m]);
     switch (i) {
         case "feed":
-            return (0, n.jsx)(I, { isLoading: E, products: _, tab: u });
-        case "hscroll":
             return (0, n.jsx)(v, { isLoading: E, products: _, tab: u });
+        case "hscroll":
+            return (0, n.jsx)(I, { isLoading: E, products: _, tab: u });
     }
 };

@@ -16,8 +16,8 @@ var i = n(284009),
     f = n(734057),
     p = n(290863),
     T = n(309010),
-    g = n(485296),
-    m = n(287809),
+    m = n(485296),
+    g = n(287809),
     S = n(803301),
     N = n(977997),
     C = n(568598);
@@ -177,7 +177,7 @@ class es extends l.Ay.PersistedStore {
     static displayName = "ChannelRTCStore";
     static persistKey = "ChannelRTCStore";
     initialize(e) {
-        (this.waitFor(A.A, h.default, I.A, f.A, d.Ay, u.default, p.A, T.Ay, g.A, m.default, S.A, N.A),
+        (this.waitFor(A.A, h.default, I.A, f.A, d.Ay, u.default, p.A, T.Ay, m.A, g.default, S.A, N.A),
             this.syncWith([d.Ay], J),
             this.syncWith([u.default], Z),
             e?.voiceParticipantsHidden !== void 0 && Object.assign(k, e?.voiceParticipantsHidden));

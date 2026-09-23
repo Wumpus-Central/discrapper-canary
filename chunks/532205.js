@@ -4,9 +4,9 @@ var i = n(477900),
     r = n(536637),
     s = n.n(r),
     a = n(554146),
-    o = n(573648),
-    E = n(503698),
-    c = n.n(E),
+    E = n(573648),
+    o = n(503698),
+    c = n.n(o),
     u = n(17928);
 if (221552 == n.j) var _ = n(192308);
 if (221552 == n.j) var A = n(417098);
@@ -32,11 +32,11 @@ let g =
                       recurringDismiss: r,
                       platformTypes: s,
                       platformIconOverride: a,
-                      noticeType: E,
+                      noticeType: o,
                   } = e,
                   g = (0, u.bG)([O.A], () => O.A.getAccounts().find((e) => s.includes(e.type))?.type),
                   h = (0, I.Ay)(),
-                  U = null != g ? o.A.get(g) : null,
+                  U = null != g ? E.A.get(g) : null,
                   L = U?.migrationData?.replacedBy,
                   y = (0, C.h)(L),
                   k = y?.name,
@@ -68,7 +68,7 @@ let g =
                   color: A.Hv.WARNING,
                   children: [
                       (0, i.jsx)(A.PM, {
-                          noticeType: E,
+                          noticeType: o,
                           onClick: () => {
                               t(P.i.USER_DISMISS);
                           },
@@ -93,7 +93,7 @@ let g =
                               x({ analyticsLocations: q, onSuccess: b });
                           },
                           className: M.NS,
-                          noticeType: E,
+                          noticeType: o,
                           children: f.intl.string(p.default.ZeOhh9),
                       }),
                       (0, i.jsx)(A.zr, {
@@ -156,18 +156,18 @@ let b =
           }
         : null;
 var B = n(745299),
-    w = n(354670),
-    F = n(158045),
-    H = n(826673),
-    V = n(595529);
+    F = n(354670),
+    w = n(158045),
+    V = n(826673),
+    H = n(595529);
 function K(e) {
     switch (e) {
         case X.kqX.PREMIUM_TIER_2_TRIAL_ENDING:
-            let t = w.A.getAlmostExpiringTrialOffersForReminder([q.pe.TIER_2]);
-            return { cooldownDurationMs: (0, F.e1)(t[0]) };
+            let t = F.A.getAlmostExpiringTrialOffersForReminder([q.pe.TIER_2]);
+            return { cooldownDurationMs: (0, w.e1)(t[0]) };
         case X.kqX.PREMIUM_TIER_2_DISCOUNT_ENDING:
-            let n = w.A.getAlmostExpiringDiscountOffersForReminder([q.pe.TIER_2]);
-            return { cooldownDurationMs: (0, F.e1)(n[0]) };
+            let n = F.A.getAlmostExpiringDiscountOffersForReminder([q.pe.TIER_2]);
+            return { cooldownDurationMs: (0, w.e1)(n[0]) };
         case X.kqX.RIOT_MIGRATION:
         case X.kqX.RIOT_CONNECTION_DEPRECATION_ADMIN:
         case X.kqX.BATTLENET_MIGRATION:
@@ -180,22 +180,22 @@ function K(e) {
 function Y(e) {
     let { dismissibleContent: t, noticeType: n } = e,
         r = l.useMemo(() => K(n), [n]),
-        E = s()().add(5, "days").toDate(),
-        [c, u] = (0, V.Bo)(t, r, P.m.NOTICE_BAR);
+        o = s()().add(5, "days").toDate(),
+        [c, u] = (0, H.Bo)(t, r, P.m.NOTICE_BAR);
     if (null == c) return null;
     switch (c) {
         case a.M.NAGBAR_NOTICE_OFFER_EXPIRING:
             if (n === X.kqX.PREMIUM_TIER_2_TRIAL_ENDING)
                 return (0, i.jsx)(B.A, {
                     dismissCurrentNotice: () => {
-                        (u(P.i.USER_DISMISS), (0, U.w)(E));
+                        (u(P.i.USER_DISMISS), (0, U.w)(o));
                     },
                     subscriptionTier: q.pe.TIER_2,
                 });
             if (n === X.kqX.PREMIUM_TIER_2_DISCOUNT_ENDING)
                 return (0, i.jsx)(b, {
                     dismissCurrentNotice: () => {
-                        (u(P.i.USER_DISMISS), (0, U.w)(E));
+                        (u(P.i.USER_DISMISS), (0, U.w)(o));
                     },
                     subscriptionTier: q.pe.TIER_2,
                 });
@@ -204,19 +204,19 @@ function Y(e) {
             return (0, i.jsx)(g, {
                 noticeType: X.kqX.RIOT_MIGRATION,
                 markAsDismissed: (e) => {
-                    ((0, H.Dr)(a.M.RIOT_CONNECTION_DEPRECATION_DISABLE), u(e));
+                    ((0, V.Dr)(a.M.RIOT_CONNECTION_DEPRECATION_DISABLE), u(e));
                 },
                 recurringDismiss: (e) => {
                     u(e);
                 },
                 platformTypes: [X.fg2.LEAGUE_OF_LEGENDS, X.fg2.RIOT_GAMES],
-                platformIconOverride: o.A.get(X.fg2.RIOT_GAMES),
+                platformIconOverride: E.A.get(X.fg2.RIOT_GAMES),
             });
         case a.M.RIOT_CONNECTION_DEPRECATION_ADMIN:
             return (0, i.jsx)(h.Ay, {
                 noticeType: X.kqX.RIOT_CONNECTION_DEPRECATION_ADMIN,
                 markAsDismissed: (e) => {
-                    ((0, H.Dr)(a.M.RIOT_CONNECTION_DEPRECATION_ADMIN_DISABLE), u(e));
+                    ((0, V.Dr)(a.M.RIOT_CONNECTION_DEPRECATION_ADMIN_DISABLE), u(e));
                 },
                 recurringDismiss: (e) => {
                     u(e);
@@ -227,19 +227,19 @@ function Y(e) {
             return (0, i.jsx)(g, {
                 noticeType: X.kqX.BATTLENET_MIGRATION,
                 markAsDismissed: (e) => {
-                    ((0, H.Dr)(a.M.BATTLENET_CONNECTION_DEPRECATION_DISABLE), u(e));
+                    ((0, V.Dr)(a.M.BATTLENET_CONNECTION_DEPRECATION_DISABLE), u(e));
                 },
                 recurringDismiss: (e) => {
                     u(e);
                 },
                 platformTypes: [X.fg2.BATTLENET],
-                platformIconOverride: o.A.get(X.fg2.BATTLENET),
+                platformIconOverride: E.A.get(X.fg2.BATTLENET),
             });
         case a.M.BATTLENET_CONNECTION_DEPRECATION_LINKED_ROLES:
             return (0, i.jsx)(h.Ay, {
                 noticeType: X.kqX.BATTLENET_LINKED_ROLE_DEPRECATION,
                 markAsDismissed: (e) => {
-                    ((0, H.Dr)(a.M.BATTLENET_CONNECTION_DEPRECATION_LINKED_ROLES_DISABLE), u(e));
+                    ((0, V.Dr)(a.M.BATTLENET_CONNECTION_DEPRECATION_LINKED_ROLES_DISABLE), u(e));
                 },
                 recurringDismiss: (e) => {
                     u(e);

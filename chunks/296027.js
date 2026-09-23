@@ -16,9 +16,9 @@ var i = n(17928),
     f = n(9302),
     p = n(211753),
     T = n(206885),
-    g = n(41984),
-    m = n(181435);
-let S = new Set([g.AR.INITIALIZING, g.AR.WAITING_FOR_SCREEN_TYPE_RESOLUTION]);
+    m = n(41984),
+    g = n(181435);
+let S = new Set([m.AR.INITIALIZING, m.AR.WAITING_FOR_SCREEN_TYPE_RESOLUTION]);
 var N = n(515183),
     C = n(592598),
     O = n(682763),
@@ -26,7 +26,7 @@ var N = n(515183),
     L = n(394072),
     y = n(392164);
 let D = new d.A("OverlayRenderStore"),
-    v = g.V6.UNSET,
+    v = m.V6.UNSET,
     b = !1,
     M = !1,
     P = (0, I.isWindows)() && I.isPlatformEmbedded && !__OVERLAY__,
@@ -40,8 +40,8 @@ let D = new d.A("OverlayRenderStore"),
     V = !1,
     H = new o.A(1e4);
 function j(e, t, n) {
-    let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : m.QJ.Info;
-    (0, O.aS)({ pid: e, name: t, type: m.ON.Renderer, data: n, logType: i });
+    let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : g.QJ.Info;
+    (0, O.aS)({ pid: e, name: t, type: g.ON.Renderer, data: n, logType: i });
 }
 function W() {
     return R.A.isOverlayEnabled;
@@ -70,13 +70,13 @@ function q(e, t) {
     if (null == n) return;
     let i = n.timer;
     switch (t) {
-        case g.sf.SCREEN_TYPE_RESOLUTION:
+        case m.sf.SCREEN_TYPE_RESOLUTION:
             i.screenTypeResolutionTimestamp = Date.now();
             break;
-        case g.sf.MODULE_TRACKING:
+        case m.sf.MODULE_TRACKING:
             i.moduleTrackingTimestamp = Date.now();
             break;
-        case g.sf.OVERLAY_RENDERING:
+        case m.sf.OVERLAY_RENDERING:
             i.overlayRenderingTimestamp = Date.now();
     }
     (X(e, "timer", i, "timeOverlayEvent"), eh.emitChange());
@@ -99,7 +99,7 @@ async function Z(e) {
         legacyEnabled: a,
         gameId: l?.id ?? null,
         gameName: n.name ?? null,
-        state: g.AR.INITIALIZING,
+        state: m.AR.INITIALIZING,
         timer: { startTrackingTimestamp: Date.now() },
         fullscreenType: o,
         fullscreenHistory: { [d]: o },
@@ -115,75 +115,75 @@ async function Z(e) {
 }
 function Q(e, t) {
     switch (v) {
-        case g.V6.UNSET:
+        case m.V6.UNSET:
             break;
-        case g.V6.IN_PROCESS_V2:
+        case m.V6.IN_PROCESS_V2:
             return {
-                source: g.yp.DEV_OVERRIDE,
+                source: m.yp.DEV_OVERRIDE,
                 enabledOOP: !1,
                 enabledLegacy: !0,
-                overlayMethod: g.Ue.Hook,
+                overlayMethod: m.Ue.Hook,
                 reason: "Forced in-process overlay rendering",
             };
-        case g.V6.OUT_OF_PROCESS_V3:
+        case m.V6.OUT_OF_PROCESS_V3:
             return {
-                source: g.yp.DEV_OVERRIDE,
+                source: m.yp.DEV_OVERRIDE,
                 enabledOOP: !0,
                 enabledLegacy: !1,
-                overlayMethod: g.Ue.OutOfProcess,
+                overlayMethod: m.Ue.OutOfProcess,
                 reason: "Forced out-of-process overlay rendering",
             };
-        case g.V6.OUT_OF_PROCESS_V3_LIMITED_INTERACTION:
+        case m.V6.OUT_OF_PROCESS_V3_LIMITED_INTERACTION:
             return {
-                source: g.yp.DEV_OVERRIDE,
+                source: m.yp.DEV_OVERRIDE,
                 enabledOOP: !0,
                 enabledLegacy: !1,
-                overlayMethod: g.Ue.OutOfProcessLimitedInteraction,
+                overlayMethod: m.Ue.OutOfProcessLimitedInteraction,
                 reason: "Forced out-of-process limited interaction overlay rendering",
             };
     }
     if (!(W() || b))
         return {
-            source: g.yp.DEFAULT,
+            source: m.yp.DEFAULT,
             enabledOOP: !1,
             enabledLegacy: !1,
-            overlayMethod: g.Ue.Disabled,
+            overlayMethod: m.Ue.Disabled,
             reason: "Overlay globally disabled",
         };
     let n = u.Ay.getGameOrTransformedSubgameForPID(e.pid);
     if (null == n)
         return {
-            source: g.yp.DEFAULT,
+            source: m.yp.DEFAULT,
             enabledOOP: !1,
             enabledLegacy: !1,
-            overlayMethod: g.Ue.Disabled,
+            overlayMethod: m.Ue.Disabled,
             reason: "No running game found for tracked game",
         };
     let i = (0, u.hw)(n);
     if (!(i.enabledLegacy || i.enabledOOP))
-        return { source: i.source, enabledOOP: !1, enabledLegacy: !1, overlayMethod: g.Ue.Disabled, reason: i.reason };
+        return { source: i.source, enabledOOP: !1, enabledLegacy: !1, overlayMethod: m.Ue.Disabled, reason: i.reason };
     if (!(e.oopEnabled || e.legacyEnabled))
         return {
-            source: g.yp.USER_OVERRIDE,
+            source: m.yp.USER_OVERRIDE,
             enabledOOP: !1,
             enabledLegacy: !1,
-            overlayMethod: g.Ue.Disabled,
+            overlayMethod: m.Ue.Disabled,
             reason: "Overlay disabled for specific game",
         };
     if (!W() && b) {
         let e = (0, N.O4)(n);
         return {
             ...e,
-            overlayMethod: e.enabledLegacy ? e.overlayMethod : g.Ue.Disabled,
+            overlayMethod: e.enabledLegacy ? e.overlayMethod : m.Ue.Disabled,
             reason: "isOverlayV3Enabled failed",
         };
     }
     if (!(0, f.supportsOutOfProcess)())
-        return { ...(0, N.O4)(n), source: g.yp.NO_OUT_OF_PROCESS_SUPPORT, reason: "supportsOutOfProcess failed" };
+        return { ...(0, N.O4)(n), source: m.yp.NO_OUT_OF_PROCESS_SUPPORT, reason: "supportsOutOfProcess failed" };
     if (!i.enabledOOP && i.enabledLegacy)
         return b
-            ? { ...(0, N.O4)(n), source: g.yp.LEGACY_ENABLED, reason: "Legacy overlay enabled only" }
-            : { ...i, overlayMethod: g.Ue.Disabled, source: g.yp.LEGACY_ENABLED, reason: "Legacy overlay disabled" };
+            ? { ...(0, N.O4)(n), source: m.yp.LEGACY_ENABLED, reason: "Legacy overlay enabled only" }
+            : { ...i, overlayMethod: m.Ue.Disabled, source: m.yp.LEGACY_ENABLED, reason: "Legacy overlay disabled" };
     let r = h.A.findGame(n)?.id,
         a = (0, N.zi)(n) || C.A.isLimitedInteractionOverrideEnabled(n.id ?? r);
     switch (t) {
@@ -193,33 +193,33 @@ function Q(e, t) {
         case l.aI.BORDERLESS_FULLSCREEN: {
             let e = i.enabledOOP && W(),
                 r = i.enabledLegacy && b,
-                s = a ? g.Ue.OutOfProcessLimitedInteraction : g.Ue.OutOfProcess;
+                s = a ? m.Ue.OutOfProcessLimitedInteraction : m.Ue.OutOfProcess;
             return {
                 ...i,
-                overlayMethod: e ? s : r ? (0, N.O4)(n).overlayMethod : g.Ue.Disabled,
+                overlayMethod: e ? s : r ? (0, N.O4)(n).overlayMethod : m.Ue.Disabled,
                 reason: `Normal case - overlayOOPEnabled: ${e}, overlayLegacyEnabled: ${r}, runningGameFullscreenType: ${t}`,
             };
         }
         case l.aI.FULLSCREEN: {
             let e = (0, N.O4)(n),
                 t = e.enabledLegacy && b,
-                i = t ? e.overlayMethod : g.Ue.Disabled;
+                i = t ? e.overlayMethod : m.Ue.Disabled;
             return { ...e, overlayMethod: i, reason: `Fullscreen - legacyEnabled: ${t}, newOverlayMethod: ${i}` };
         }
         case l.aI.UNKNOWN:
             return {
-                source: g.yp.FULL_SCREEN_TYPE,
+                source: m.yp.FULL_SCREEN_TYPE,
                 enabledOOP: !1,
                 enabledLegacy: !1,
-                overlayMethod: g.Ue.Disabled,
+                overlayMethod: m.Ue.Disabled,
                 reason: "Unknown fullscreen type",
             };
         default:
             return {
-                source: g.yp.DEFAULT,
+                source: m.yp.DEFAULT,
                 enabledOOP: !1,
                 enabledLegacy: !1,
-                overlayMethod: g.Ue.Disabled,
+                overlayMethod: m.Ue.Disabled,
                 reason: `Missing runningFullscreenType case: ${t}`,
             };
     }
@@ -234,12 +234,12 @@ async function J(e) {
     let t = await Z(e);
     if (null == t) return void D.error(`Failed to track game ${e}`);
     (j(e, "game_tracking_starting", { game_name: t.gameName, fullscreen_type: t.fullscreenType }),
-        X(e, "state", g.AR.WAITING_FOR_SCREEN_TYPE_RESOLUTION, "maybeTrackGame - 1"),
+        X(e, "state", m.AR.WAITING_FOR_SCREEN_TYPE_RESOLUTION, "maybeTrackGame - 1"),
         eh.emitChange(),
         D.verbose(`Determining initial overlay method for pid ${e}`));
     let n = await en(e);
     (D.verbose(`Overlay method for pid ${e}: ${(0, N.gK)(n.overlayMethod)}`),
-        q(e, g.sf.SCREEN_TYPE_RESOLUTION),
+        q(e, m.sf.SCREEN_TYPE_RESOLUTION),
         await ei(e, n, "maybeTrackGame - 2"),
         (function e(t) {
             null == x &&
@@ -259,14 +259,14 @@ async function ee(e) {
     D.verbose(`Untracking game ${e}`);
     let t = Y(e),
         n = {
-            source: t?.source ?? g.yp.DEFAULT,
+            source: t?.source ?? m.yp.DEFAULT,
             enabledOOP: t?.oopEnabled ?? !1,
             enabledLegacy: t?.legacyEnabled ?? !1,
-            overlayMethod: g.Ue.Disabled,
+            overlayMethod: m.Ue.Disabled,
             reason: "Untracking game",
         };
     (await ei(e, n, "maybeUntrackGame", !0),
-        null != w[e] && ((G[e] = { ...w[e], state: g.AR.GAME_UNTRACKED }), delete w[e]),
+        null != w[e] && ((G[e] = { ...w[e], state: m.AR.GAME_UNTRACKED }), delete w[e]),
         eh.emitChange(),
         await s.A.updateTrackedGame(e, null));
 }
@@ -294,10 +294,10 @@ async function en(e) {
     return null == n
         ? (D.error(`Tried to determine initial overlay method for untracked pid ${e}`),
           {
-              source: g.yp.NO_TRACKED_GAME,
+              source: m.yp.NO_TRACKED_GAME,
               enabledOOP: !1,
               enabledLegacy: !1,
-              overlayMethod: g.Ue.Disabled,
+              overlayMethod: m.Ue.Disabled,
               reason: "No tracked game found",
           })
         : Q(n, t);
@@ -306,19 +306,19 @@ async function ei(e, t, n) {
     let i,
         r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         a =
-            t.overlayMethod !== g.Ue.Hook ||
+            t.overlayMethod !== m.Ue.Hook ||
             null == (i = u.Ay.getGameOrTransformedSubgameForPID(e)?.id) ||
             null != _.A.getGame(i) ||
             _.A.hasNoData(i) ||
             _.A.didFetchingFail(i)
                 ? t.overlayMethod
-                : g.Ue.Disabled,
+                : m.Ue.Disabled,
         l =
-            a === g.Ue.Disabled
+            a === m.Ue.Disabled
                 ? r
-                    ? g.AR.OVERLAY_TEARING_DOWN
-                    : g.AR.OVERLAY_DISABLED
-                : g.AR.WAITING_FOR_MODULE_TRACKING,
+                    ? m.AR.OVERLAY_TEARING_DOWN
+                    : m.AR.OVERLAY_DISABLED
+                : m.AR.WAITING_FOR_MODULE_TRACKING,
         o = `${n}: ${t.reason}`;
     (X(e, "state", l, o),
         X(e, "overlayMethod", a, o),
@@ -376,11 +376,11 @@ async function el(e) {
     let o = Q(s, l);
     if (
         (s.overlayMethod === o.overlayMethod && s.oopEnabled === o.enabledOOP && s.legacyEnabled === o.enabledLegacy) ||
-        ((U === f.UNSET_PID || null === U) && s.state === g.AR.OVERLAY_RENDERING)
+        ((U === f.UNSET_PID || null === U) && s.state === m.AR.OVERLAY_RENDERING)
     )
         return a;
-    let d = v === g.V6.OUT_OF_PROCESS_V3 || v === g.V6.OUT_OF_PROCESS_V3_LIMITED_INTERACTION,
-        c = v === g.V6.IN_PROCESS_V2,
+    let d = v === m.V6.OUT_OF_PROCESS_V3 || v === m.V6.OUT_OF_PROCESS_V3_LIMITED_INTERACTION,
+        c = v === m.V6.IN_PROCESS_V2,
         u = (0, N.e3)(l, W()),
         _ = (0, N.Zj)(s, l, W());
     function E() {
@@ -410,8 +410,8 @@ async function el(e) {
         }),
         o.overlayMethod)
     ) {
-        case g.Ue.OutOfProcess:
-        case g.Ue.OutOfProcessLimitedInteraction:
+        case m.Ue.OutOfProcess:
+        case m.Ue.OutOfProcessLimitedInteraction:
             ((u && !c) || d) &&
                 (E(),
                 await ((t = e),
@@ -424,20 +424,20 @@ async function el(e) {
                           ei(t, n, "enableOutOfProcess"))
                     : (D.verbose(`OOP requested for untracked pid ${t}`), Promise.resolve())));
             break;
-        case g.Ue.Hook:
+        case m.Ue.Hook:
             ((_ && !d) || c || b) &&
                 (E(),
                 await ((i = e),
                 (r = o),
                 z(i)
-                    ? Y(i)?.overlayMethod === g.Ue.Hook
+                    ? Y(i)?.overlayMethod === m.Ue.Hook
                         ? (D.verbose(`Hook requested for pid ${i} but already enabled`), Promise.resolve())
                         : (D.verbose(`Enabling hook for pid ${i}`),
                           X(i, "hasChangedRenderMode", !0, "enableHook"),
                           ei(i, r, "enableHook"))
                     : (D.verbose(`Hook requested for untracked pid ${i}`), Promise.resolve())));
             break;
-        case g.Ue.Disabled:
+        case m.Ue.Disabled:
             (E(), ei(e, o, "determineOverlayMethodSwap - disabled"));
     }
     return a;
@@ -504,11 +504,11 @@ class eA extends i.Ay.Store {
         return (0, L.LK)() ? E.A.getWindowOpen(y.f) : this.getOverlayRenderingTrackedGames().length > 0;
     }
     getOverlayMethod(e) {
-        return __OVERLAY__ ? g.Ue.Hook : (Y(e)?.overlayMethod ?? g.Ue.Disabled);
+        return __OVERLAY__ ? m.Ue.Hook : (Y(e)?.overlayMethod ?? m.Ue.Disabled);
     }
     isOverlayOOPEnabledForPid(e) {
         let t = this.getOverlayMethod(e);
-        return t === g.Ue.OutOfProcess || t === g.Ue.OutOfProcessLimitedInteraction;
+        return t === m.Ue.OutOfProcess || t === m.Ue.OutOfProcessLimitedInteraction;
     }
     hasChangedRenderMode(e) {
         return Y(e)?.hasChangedRenderMode ?? !1;
@@ -546,7 +546,7 @@ class eA extends i.Ay.Store {
         return k;
     }
     getOverlayRenderingTrackedGames() {
-        return Object.values(w).filter((e) => e.overlayMethod !== g.Ue.Disabled && e.state === g.AR.OVERLAY_RENDERING);
+        return Object.values(w).filter((e) => e.overlayMethod !== m.Ue.Disabled && e.state === m.AR.OVERLAY_RENDERING);
     }
 }
 let eh = new eA(
@@ -623,10 +623,10 @@ let eh = new eA(
                           return (
                               X(e.pid, "state", e.overlayState, e.reason),
                               D.verbose(`Updating overlay state for pid ${e.pid} to ${e.overlayState}`),
-                              e.overlayState === g.AR.WAITING_FOR_POPOUT_OPEN ||
-                              e.overlayState === g.AR.WAITING_FOR_OVERLAY_OPEN
-                                  ? q(e.pid, g.sf.MODULE_TRACKING)
-                                  : e.overlayState === g.AR.OVERLAY_RENDERING && q(e.pid, g.sf.OVERLAY_RENDERING),
+                              e.overlayState === m.AR.WAITING_FOR_POPOUT_OPEN ||
+                              e.overlayState === m.AR.WAITING_FOR_OVERLAY_OPEN
+                                  ? q(e.pid, m.sf.MODULE_TRACKING)
+                                  : e.overlayState === m.AR.OVERLAY_RENDERING && q(e.pid, m.sf.OVERLAY_RENDERING),
                               !0
                           );
                   },
@@ -636,7 +636,7 @@ let eh = new eA(
                   OVERLAY_CRASHED: function (e) {
                       return (
                           D.error(`Overlay crashed for pid ${e.pid}`),
-                          !!z(e.pid) && (X(e.pid, "state", g.AR.OVERLAY_CRASHED, "handleOverlayCrashed"), !0)
+                          !!z(e.pid) && (X(e.pid, "state", m.AR.OVERLAY_CRASHED, "handleOverlayCrashed"), !0)
                       );
                   },
                   OVERLAY_RELOAD: function (e) {
@@ -650,14 +650,14 @@ let eh = new eA(
                       return !(0, f.isValidGamePID)(e.pid) || ((0, f.setPID)(e.pid), !0);
                   },
                   OVERLAY_SUCCESSFULLY_SHOWN: function (e) {
-                      (s.A.updateOverlayState(e.pid, g.AR.OVERLAY_RENDERING, "handleOverlaySuccessfullyShown"),
+                      (s.A.updateOverlayState(e.pid, m.AR.OVERLAY_RENDERING, "handleOverlaySuccessfullyShown"),
                           z(e.pid) && X(e.pid, "successfullyShown", !0, "handleOverlaySuccessfullyShown"),
                           j(e.pid, "overlay_successfully_shown", { pid: e.pid }));
                       let t = Y(e.pid);
                       null != t && s.A.updateTrackedGame(e.pid, t);
                   },
                   OVERLAY_RENDER_DEBUG_MODE: function (e) {
-                      return (e.mode === g.x7.TrackFocusPIDs && (V = e.enabled), !0);
+                      return (e.mode === m.x7.TrackFocusPIDs && (V = e.enabled), !0);
                   },
                   OVERLAY_RENDER_DEBUG_CLEAR_TRACKED_PIDS: function () {
                       return ((H = new o.A(1e4)), !0);

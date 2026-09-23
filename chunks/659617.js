@@ -16,8 +16,8 @@ var i,
     f = n(853742),
     p = n(823099),
     T = n(451909),
-    g = n(195880),
-    m = n(677413),
+    m = n(195880),
+    g = n(677413),
     S = n(280450),
     N = n(734057),
     C = n(31717),
@@ -98,8 +98,8 @@ function H(e) {
                 f = "" !== e ? e : G.intl.string(G.t["7Xm5QI"]);
             }
             let p = (0, v.Gl)(t),
-                g = N.A.getChannel(y.default.castMessageIdAsChannelId(n)),
-                m = C.A.getDraft(t.id, C.C.FirstThreadMessage),
+                m = N.A.getChannel(y.default.castMessageIdAsChannelId(n)),
+                g = C.A.getDraft(t.id, C.C.FirstThreadMessage),
                 S = await Y(t, [], void 0, () => {
                     let e = null != n ? U.Rsh.CHANNEL_MESSAGE_THREADS(t.id, n) : U.Rsh.CHANNEL_THREADS(t.id);
                     return s.Bo.post({
@@ -117,12 +117,12 @@ function H(e) {
                         rejectWithError: (0, s.fT)(),
                     });
                 });
-            if (S !== g) {
+            if (S !== m) {
                 var O, R, L, D, b;
-                let n = m.trim();
+                let n = g.trim();
                 (c.A.clearDraft(t.id, C.C.ThreadSettings),
                     c.A.clearDraft(t.id, C.C.FirstThreadMessage),
-                    "" !== n && n !== e.trim() && c.A.saveDraft(S.id, m, C.C.ChannelMessage),
+                    "" !== n && n !== e.trim() && c.A.saveDraft(S.id, g, C.C.ChannelMessage),
                     o?.(S),
                     (h || e.length > 0 || (null != r && r.length > 0) || (null != A && A.length > 0)) &&
                         ((O = S),
@@ -164,11 +164,11 @@ function W(e) {
     return r.useCallback(
         async (e, r, I) => {
             var T;
-            let g,
+            let m,
                 N,
                 O,
                 R = 0,
-                [L, y] = (0, m.Ay)(e);
+                [L, y] = (0, g.Ay)(e);
             L && ((e = y), (R = (0, a.UI)(R, U.pr7.SUPPRESS_NOTIFICATIONS)));
             let b = (0, v.Gl)(t, null),
                 M = U.Rsh.CHANNEL_THREADS(t.id) + "?use_nested_fields=true",
@@ -180,7 +180,7 @@ function W(e) {
                 },
                 G =
                     null != u
-                        ? null == (N = null != (g = (T = u).activity.session_id) ? g : S.default.getSessionId())
+                        ? null == (N = null != (m = (T = u).activity.session_id) ? m : S.default.getSessionId())
                             ? null
                             : {
                                   type: T.type,
@@ -270,7 +270,7 @@ async function Y(e, t, i, r) {
         else if (P.F4.has(r.body?.code)) {
             if (null != i)
                 if (r.body?.code === U.t02.EXPLICIT_CONTENT) {
-                    let t = (0, g.m)();
+                    let t = (0, m.m)();
                     if (null != r.body.attachments && r.body.attachments.length > 0) {
                         var c;
                         (o.h.dispatch({

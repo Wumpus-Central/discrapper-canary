@@ -22,7 +22,7 @@ function u(e, t, r, l) {
         },
         E = m?.title != null && "" !== m.title ? (0, n.U)((0, s.wJ)(m.title, h)) : t.title,
         _ = m?.description != null && "" !== m.description ? (0, n.U)((0, s.wJ)(m.description, h)) : t.summary,
-        S =
+        x =
             null != m
                 ? ((u = m.rewardStates),
                   (c = e.rewardStatus),
@@ -33,7 +33,7 @@ function u(e, t, r, l) {
         ...t,
         title: E,
         summary: _,
-        heroBannerUrl: S ?? t.heroBannerUrl,
+        heroBannerUrl: x ?? t.heroBannerUrl,
         heroBannerAnimatedUrl: void 0,
         heroRiveUrl: void 0,
     };

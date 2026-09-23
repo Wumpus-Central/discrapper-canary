@@ -4,8 +4,8 @@ var i = n(136722),
     r = n(617617),
     s = n(71393),
     a = n(576705),
-    o = n(967198),
-    E = n(287809),
+    E = n(967198),
+    o = n(287809),
     c = n(488926),
     u = n(935208),
     _ = n(974103),
@@ -25,7 +25,7 @@ function I(e) {
 }
 function N() {
     let e = (function (e) {
-            let t = E.default.getCurrentUser(),
+            let t = o.default.getCurrentUser(),
                 n = T.A.getIncidentsByGuild();
             for (let l of u.default.keys(n).map((e) => s.A.getGuild(e))) {
                 if (null == l) continue;
@@ -37,7 +37,7 @@ function N() {
                     return l.id;
             }
             return null;
-        })(o.A.getGuildId()),
+        })(E.A.getGuildId()),
         t = r.A.getGuildsProto() ?? {},
         n = null != e ? t[e] : null,
         l = null != n && n.disableRaidAlertNag;

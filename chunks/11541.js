@@ -1,4 +1,4 @@
-(n.d(t, { CI: () => f, UP: () => I, eN: () => T, uY: () => h, v8: () => p, vk: () => m }), n(321073));
+(n.d(t, { CI: () => f, UP: () => I, eN: () => T, uY: () => h, v8: () => p, vk: () => g }), n(321073));
 var i,
     r = n(636537),
     a = n(462887),
@@ -77,7 +77,7 @@ function T(e) {
         ? `url('${(0, a.M)(n) ? t.icon.darkSVG : t.icon.lightSVG}')`
         : null;
 }
-function g(e) {
+function m(e) {
     return {
         userId: e.user_id,
         sourceInviteCode: e.source_invite_code,
@@ -86,7 +86,7 @@ function g(e) {
         integrationType: e.integration_type,
     };
 }
-async function m(e, t) {
+async function g(e, t) {
     let n = _(e, t),
         i = n.filter((e) => u[e] <= 1).map(E);
     if (0 === i.length) return [];
@@ -98,7 +98,7 @@ async function m(e, t) {
             rejectWithError: !0,
         });
         if (!Array.isArray(t.body)) return (A(n, 0), []);
-        let a = t.body.map(g),
+        let a = t.body.map(m),
             s = [];
         a.forEach((e) => {
             let { userId: t } = e;

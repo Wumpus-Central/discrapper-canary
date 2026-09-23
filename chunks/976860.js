@@ -1,6 +1,6 @@
 let i, r, a;
 (n.d(t, {
-    EL: () => g,
+    EL: () => m,
     JK: () => S,
     MX: () => L,
     PR: () => N,
@@ -8,7 +8,7 @@ let i, r, a;
     TX: () => h,
     UC: () => C,
     aX: () => y,
-    bG: () => m,
+    bG: () => g,
     m: () => O,
     pX: () => p,
     sY: () => D,
@@ -73,10 +73,10 @@ function T(e, t, n, i) {
     (u.log(`transitionToGuild - Transitioning to ${JSON.stringify({ guildId: e, channelId: t, messageId: n })}`),
         p(c.BVt.CHANNEL(e, t, n), i));
 }
-function g() {
+function m() {
     return null != r && d.n.has(r);
 }
-function m(e, t, n) {
+function g(e, t, n) {
     I(e, "replace") ||
         (u.log(`Replacing route with ${e}`), "string" == typeof e ? i.replace(e, t) : i.replace(e), (r = n));
 }

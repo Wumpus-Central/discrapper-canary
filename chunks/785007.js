@@ -1,4 +1,4 @@
-n.d(t, { $d: () => S, Gx: () => g, _u: () => T, r9: () => h });
+n.d(t, { $d: () => S, Gx: () => m, _u: () => T, r9: () => h });
 var i = n(477900),
     r = n(582128),
     a = n(503698),
@@ -55,9 +55,9 @@ function f(e) {
             hasSelection: f,
             radioPosition: p = "left",
             icon: T,
-            withTransparentBackground: g,
+            withTransparentBackground: m,
         } = e,
-        m = r.color ?? "",
+        g = r.color ?? "",
         S = n || !f,
         N = (0, i.jsx)(I, { checked: n, disabled: t, radioItemIconClassName: E, icon: T });
     return (0, i.jsx)(o.D, {
@@ -67,9 +67,9 @@ function f(e) {
         "aria-label": "string" == typeof r.name ? r.name : void 0,
         onClick: t ? void 0 : l,
         tabIndex: !t && S ? 0 : -1,
-        className: s()(A.AS, { [A.r9]: t, [A.EO]: !g }, _),
+        className: s()(A.AS, { [A.r9]: t, [A.EO]: !m }, _),
         children: (0, i.jsxs)("div", {
-            style: { "--radio-bar-accent-color": m, padding: a },
+            style: { "--radio-bar-accent-color": g, padding: a },
             className: s()(A.tG, { [A.go]: "left" === p, [A.Xe]: "right" === p }, h),
             children: [
                 "left" === p ? N : null,
@@ -169,11 +169,11 @@ function T() {
         "aria-disabled": t,
     };
 }
-function g(e) {
+function m(e) {
     let { isSelected: t, label: n } = e;
     return { role: "radio", tabIndex: t ? 0 : -1, "aria-label": n, "aria-checked": t };
 }
-function m(e) {
+function g(e) {
     let {
             itemInfoClassName: t,
             itemTitleClassName: n,
@@ -185,14 +185,14 @@ function m(e) {
             radioPosition: E = "left",
             onChange: I = _.tE,
             disabled: f = !1,
-            options: g = [],
-            "aria-labelledby": m,
+            options: m = [],
+            "aria-labelledby": g,
             orientation: S,
             withTransparentBackground: N,
         } = e,
         C = r.useContext(c._),
-        { ref: O, ...R } = T({ labelledBy: m ?? C?.labelId, orientation: S, isDisabled: f }),
-        L = g.some((e) => e.value === d);
+        { ref: O, ...R } = T({ labelledBy: g ?? C?.labelId, orientation: S, isDisabled: f }),
+        L = m.some((e) => e.value === d);
     return (0, i.jsx)("div", {
         ...R,
         ref: O,
@@ -201,7 +201,7 @@ function m(e) {
         "aria-describedby": C?.describedById,
         "aria-errormessage": C?.errorMessageId,
         "aria-invalid": C?.errorMessageId != null,
-        children: g.map((e) =>
+        children: m.map((e) =>
             (0, i.jsx)(
                 p,
                 {
@@ -232,6 +232,6 @@ function S(e) {
         description: n,
         required: r,
         errorMessage: a,
-        children: (0, i.jsx)(m, { ...s }),
+        children: (0, i.jsx)(g, { ...s }),
     });
 }

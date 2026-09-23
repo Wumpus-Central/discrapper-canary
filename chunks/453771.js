@@ -1,4 +1,4 @@
-n.d(t, { Aw: () => C, GD: () => g, Hb: () => m, Iu: () => O, TX: () => T, VE: () => f, o2: () => N, ww: () => I });
+n.d(t, { Aw: () => C, GD: () => m, Hb: () => g, Iu: () => O, TX: () => T, VE: () => f, o2: () => N, ww: () => I });
 var i = n(796873),
     r = n.n(i),
     a = n(435558),
@@ -38,16 +38,16 @@ let p = [
     { reName: /\.(?:mp3|ogg|opus|wav|aiff|flac)$/, klass: "audio" },
 ];
 function T(e) {
-    return g(e.name, e.type);
+    return m(e.name, e.type);
 }
-function g(e, t) {
+function m(e, t) {
     e = e?.toLowerCase() ?? "";
     let n = s().find(p, (n) =>
         null != n.reType && null != t ? n.reType.test(t) : null != n.reName && "" !== e && n.reName.test(e),
     );
     return null != n ? n.klass : "unknown";
 }
-function m(e) {
+function g(e) {
     return r().filesize(e);
 }
 let S = [

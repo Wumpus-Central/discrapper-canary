@@ -41,8 +41,8 @@ function I(e) {
 function f(e) {}
 function p(e) {}
 function T(e) {}
-function g(e) {}
 function m(e) {}
+function g(e) {}
 function S(e) {}
 function N(e) {}
 function C(e) {
@@ -64,12 +64,12 @@ function P(e) {}
 (n.r(t),
     n.d(t, {
         coerceChannelRoute: () => p,
-        coerceGuildsRoute: () => m,
+        coerceGuildsRoute: () => g,
         coerceICYMIRoute: () => S,
         coerceMainRoute: () => f,
         coerceModalRoute: () => N,
         coerceSidebarRoute: () => T,
-        coerceTabsRoute: () => g,
+        coerceTabsRoute: () => m,
         getCurrentNavigationRouteName: () => y,
         getCurrentRouteParents: () => v,
         getICYMIRouteIfActive: () => M,

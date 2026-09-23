@@ -78,8 +78,8 @@ let p = {
             },
         ],
     });
-var g = n(652215);
-function m() {
+var m = n(652215);
+function g() {
     return T.getCurrentConfig({ location: "NativeIntentsManager" }, { autoTrackExposure: !0, disable: !p.hasSearch() })
         .searchEnabled;
 }
@@ -106,7 +106,7 @@ function C(e, t) {
     }
     null != t && (_.push(t.name), o.push(t.name));
     let A = i + (o.length > 0 ? ` (${o.join(", ")})` : ""),
-        h = g.BVt.CHANNEL(t?.id ?? g.ME, e.id);
+        h = m.BVt.CHANNEL(t?.id ?? m.ME, e.id);
     return {
         id: h,
         relatedUniqueIdentifier: h,
@@ -114,7 +114,7 @@ function C(e, t) {
         title: A,
         displayName: A,
         thumbnailURL: N((0, r.Y)(e, 128, !1)),
-        rankingHint: e.type === g.rbe.DM ? 75 : 50,
+        rankingHint: e.type === m.rbe.DM ? 75 : 50,
         keywords: _,
         alternateNames: c,
         isUpdate: n,
@@ -126,7 +126,7 @@ function O(e) {
 function R(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = O(e),
-        i = g.BVt.CHANNEL(e.id),
+        i = m.BVt.CHANNEL(e.id),
         r = [
             {
                 id: i,
@@ -141,9 +141,9 @@ function R(e) {
         a = s.A.getMutableGuildChannelsForGuild(e.id);
     for (let n in a) {
         let i = a[n];
-        o.A.can(g.xBc.VIEW_CHANNEL, i) && r.push(C(i, e, t));
+        o.A.can(m.xBc.VIEW_CHANNEL, i) && r.push(C(i, e, t));
     }
-    for (let n of s.A.getAllThreadsForGuild(e.id)) o.A.can(g.xBc.VIEW_CHANNEL, n) && r.push(C(n, e, t));
+    for (let n of s.A.getAllThreadsForGuild(e.id)) o.A.can(m.xBc.VIEW_CHANNEL, n) && r.push(C(n, e, t));
     return { id: e.id, items: r, defaultThumbnailURL: n, isUpdate: t };
 }
 function L(e) {
@@ -167,7 +167,7 @@ function L(e) {
                     if (
                         ("" !== e.name && t.push(e.name),
                         null != e.nicks && t.push(...Object.values(e.nicks)),
-                        e.type === g.rbe.DM)
+                        e.type === m.rbe.DM)
                     ) {
                         let [n] = e.recipients.map(u.default.getUser).filter(E.Vq);
                         if (null != n) {
@@ -183,9 +183,9 @@ function L(e) {
                 })(t),
             ]),
         ],
-        c = g.BVt.CHANNEL(t.guild_id, t.id),
+        c = m.BVt.CHANNEL(t.guild_id, t.id),
         _ = {
-            webpageURL: `${g.qF7.BASE_URL}${c}`,
+            webpageURL: `${m.qF7.BASE_URL}${c}`,
             relatedUniqueIdentifier: c,
             eligibleForHandoff: !0,
             eligibleForSearch: !0,
@@ -201,14 +201,14 @@ function y(e) {
     null != t && D([t]);
 }
 function D(e) {
-    if (!m()) return;
+    if (!g()) return;
     let t = [],
         n = [],
         i = {};
     for (let r of e)
-        if (o.A.can(g.xBc.VIEW_CHANNEL, r)) {
+        if (o.A.can(m.xBc.VIEW_CHANNEL, r)) {
             let e = l.A.getGuild(r.guild_id),
-                n = e?.id ?? g.ME,
+                n = e?.id ?? m.ME,
                 a = C(r, e, !0),
                 s = i[n];
             if (null != s) s.push(a);
@@ -242,9 +242,9 @@ class v extends i.A {
     handleInit() {
         (L(c.Ay.getCurrentlySelectedChannelId()),
             S() && p.clearSearchIndex(),
-            m() &&
+            g() &&
                 (function () {
-                    if (!m()) return;
+                    if (!g()) return;
                     let e = l.A.getGuildsArray().map((e) => R(e)),
                         t = [],
                         n = s.A.getMutablePrivateChannels();
@@ -252,7 +252,7 @@ class v extends i.A {
                         let i = n[e];
                         t.push(C(i));
                     }
-                    (e.push({ id: g.ME, items: t }), p.indexDomains(e));
+                    (e.push({ id: m.ME, items: t }), p.indexDomains(e));
                 })());
     }
     handleLogout() {
@@ -264,15 +264,15 @@ class v extends i.A {
     }
     handleChannelCreate(e) {
         let { channel: t } = e;
-        if (!m() || !o.A.can(g.xBc.VIEW_CHANNEL, t)) return;
+        if (!g() || !o.A.can(m.xBc.VIEW_CHANNEL, t)) return;
         let n = l.A.getGuild(t.guild_id);
         if (null == n && null != t.guild_id) return;
         let i = O(n);
-        p.indexDomains([{ id: n?.id ?? g.ME, items: [C(t, n)], defaultThumbnailURL: i }]);
+        p.indexDomains([{ id: n?.id ?? m.ME, items: [C(t, n)], defaultThumbnailURL: i }]);
     }
     handleChannelDelete(e) {
         let { channel: t } = e;
-        m() && p.deleteSearchItems([t.id]);
+        g() && p.deleteSearchItems([t.id]);
     }
     handleChannelUpdates(e) {
         let { channels: t } = e;
@@ -280,14 +280,14 @@ class v extends i.A {
     }
     handleGuildCreateOrUpdate(e) {
         let { guild: t, type: n } = e;
-        if (m()) {
+        if (g()) {
             let e = l.A.getGuild(t.id);
             null != e ? p.indexDomains([R(e, "GUILD_UPDATE" === n)]) : p.deleteSearchDomains([t.id]);
         }
     }
     handleGuildDelete(e) {
         let { guild: t } = e;
-        m() && p.deleteSearchDomains([t.id]);
+        g() && p.deleteSearchDomains([t.id]);
     }
     handleThreadUpdate(e) {
         let { channel: t } = e;

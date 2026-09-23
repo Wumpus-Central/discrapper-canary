@@ -17,8 +17,8 @@ var r = n(189213),
     f = n(969151),
     p = n(315206),
     T = n(594007),
-    g = n(5867),
-    m = n(652215),
+    m = n(5867),
+    g = n(652215),
     S = n(375708);
 let N = !1,
     C = !1;
@@ -64,7 +64,7 @@ class O extends h.Ay {
         (d.h.wait(() => {
             (0, A._H)({ location: t, applicationId: n, showFeedback: i });
         }),
-            (0, E.f)() && r && (0, u.close)(m.MLl.ACTIVITY_POPOUT));
+            (0, E.f)() && r && (0, u.close)(g.MLl.ACTIVITY_POPOUT));
     }
     hidePIPEmbed(e) {
         let { location: t, applicationId: n } = e,
@@ -78,19 +78,19 @@ class O extends h.Ay {
     releaseWebView() {}
     handlePopoutWindowOpen = (e) => {
         let { key: t } = e;
-        t === m.MLl.ACTIVITY_POPOUT && (C = !1);
+        t === g.MLl.ACTIVITY_POPOUT && (C = !1);
     };
     popInActivity = () => {
-        ((C = !0), u.close(m.MLl.ACTIVITY_POPOUT));
+        ((C = !0), u.close(g.MLl.ACTIVITY_POPOUT));
         let e = I.Ay.getCurrentEmbeddedActivity();
         if (null != e) {
             let t = (0, f.H)(e.location);
-            (null != t && (0, _.iN)(t), (0, A.gk)(g.Gd.PANEL));
+            (null != t && (0, _.iN)(t), (0, A.gk)(m.Gd.PANEL));
         }
     };
     handlePopoutWindowUpdate = () => {
         let e = N,
-            t = c.A.getWindowOpen(m.MLl.ACTIVITY_POPOUT);
+            t = c.A.getWindowOpen(g.MLl.ACTIVITY_POPOUT);
         if (e && !t && !C) {
             let e = I.Ay.getCurrentEmbeddedActivity();
             null != e && this.leaveActivity({ location: e.location, applicationId: e.applicationId });

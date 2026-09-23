@@ -17,8 +17,8 @@ var E = n(404144),
     f = n(811315),
     p = n.n(f),
     T = n(119469),
-    g = n.n(T),
-    m = n(141697),
+    m = n.n(T),
+    g = n(141697),
     S = n(904986);
 n(618792);
 var N = n(466376),
@@ -809,7 +809,7 @@ class j extends S.A {
     getStats() {
         return this.connectionState === C.$I.DISCONNECTED
             ? Promise.resolve(null)
-            : (0, m.timeout)(
+            : (0, g.timeout)(
                   new Promise((e) => {
                       null != this.conn.getFilteredStats
                           ? this.conn.getFilteredStats(C.yt.ALL, (t) =>
@@ -846,7 +846,7 @@ class j extends S.A {
                   }),
                   1e3,
               ).catch((e) => {
-                  if (!(e instanceof m.TimeoutError)) throw e;
+                  if (!(e instanceof g.TimeoutError)) throw e;
               });
     }
     createUser(e, t, n) {
@@ -1166,20 +1166,20 @@ class j extends S.A {
                     useGraphicsCaptureDirtyRegions: f,
                     videoHookAllowDx12: p,
                     minCaptureWidth: T,
-                    minCaptureHeight: g,
+                    minCaptureHeight: m,
                 } = e.desktopDescription;
                 this.setSoundshareSource(a, s);
-                let [m, S] = null != r ? r.split(":") : ["", ""];
+                let [g, S] = null != r ? r.split(":") : ["", ""];
                 (null != r
                     ? this.logger.info(
-                          `capturing desktop (type: ${m}, handle: ${S}, use-video-hook: ${l.toString()}, use-graphics-capture: ${c?.toString()}, use-graphics-capture-api-level: ${o?.toString()}, use-capture-device-for-encode: ${d?.toString()}).`,
+                          `capturing desktop (type: ${g}, handle: ${S}, use-video-hook: ${l.toString()}, use-graphics-capture: ${c?.toString()}, use-graphics-capture-api-level: ${o?.toString()}, use-capture-device-for-encode: ${d?.toString()}).`,
                       )
                     : this.logger.info("capturing desktop (type: <stop>)."),
                     null != this.conn.setDesktopSourceWithOptions
                         ? null != r
                             ? (this.setDesktopEncodingOptions(i, t, n),
                               this.conn.setDesktopSourceWithOptions({
-                                  type: m,
+                                  type: g,
                                   sourceId: S,
                                   useVideoHook: l,
                                   useGraphicsCapture: c,
@@ -1194,10 +1194,10 @@ class j extends S.A {
                                   useGraphicsCaptureDirtyRegions: f,
                                   videoHookAllowDx12: p,
                                   minCaptureWidth: T,
-                                  minCaptureHeight: g,
+                                  minCaptureHeight: m,
                               }))
                             : this.conn.clearDesktopSource()
-                        : this.conn.setDesktopSource(`wumpus-${S}`, l, m));
+                        : this.conn.setDesktopSource(`wumpus-${S}`, l, g));
             } else if (null != e.cameraDescription) {
                 let { videoDeviceGuid: t, audioDeviceGuid: n } = e.cameraDescription;
                 this.conn.setGoLiveDevices({ videoInputDeviceId: t, audioInputDeviceId: n });
@@ -1569,12 +1569,12 @@ class j extends S.A {
         if (this.connectionState === C.$I.DISCONNECTED) return void this.off(u.yq.Stats, this.handleStats);
         if (null != e) {
             if (null != this.stats) {
-                let t = g()(
+                let t = m()(
                         e.rtp.outbound,
                         (e, t) => ((e.lost += t.packetsLost ?? 0), (e.sent += t.packetsSent ?? 0), e),
                         { lost: 0, sent: 0 },
                     ),
-                    n = g()(
+                    n = m()(
                         this.stats.rtp.outbound,
                         (e, t) => ((e.lost += t.packetsLost ?? 0), (e.sent += t.packetsSent ?? 0), e),
                         { lost: 0, sent: 0 },

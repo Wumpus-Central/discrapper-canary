@@ -32,7 +32,7 @@ function g(e, t) {
                 category_position: g?.categoryPosition,
             });
         }, [g?.sessionId, g?.categoryPosition, g?.pageCategory, g?.pageSection, g?.tilePosition, h, t, p, e, r]),
-        S = n.useCallback(
+        x = n.useCallback(
             (e) => {
                 e
                     ? null === E.current &&
@@ -50,6 +50,6 @@ function g(e, t) {
             },
             [e],
         ),
-        { handleCardVisibilityChange: S }
+        { handleCardVisibilityChange: x }
     );
 }

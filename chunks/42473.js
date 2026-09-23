@@ -1,4 +1,4 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => h });
 var i = n(477900);
 n(582128);
 var l = n(503698),
@@ -9,7 +9,7 @@ var l = n(503698),
     d = n(900002),
     c = n(573435),
     u = n(484555);
-function h(e) {
+function m(e) {
     let {
             children: t,
             onContextMenu: n,
@@ -17,32 +17,32 @@ function h(e) {
             onMouseDown: s,
             disabled: o,
             icon: d,
-            iconForeground: h,
-            innerClassName: m,
-            className: p,
-            redGlow: f,
+            iconForeground: m,
+            innerClassName: h,
+            className: f,
+            redGlow: p,
             onMouseEnter: g,
             onMouseLeave: A,
             "aria-label": x,
             "aria-checked": v,
             role: E,
             plated: C,
-            ref: T,
+            ref: _,
         } = e,
-        _ =
+        I =
             "function" == typeof d
-                ? (0, i.jsx)(d, { width: 20, height: 20, size: "custom", colorClass: h ?? "", color: "currentColor" })
+                ? (0, i.jsx)(d, { width: 20, height: 20, size: "custom", colorClass: m ?? "", color: "currentColor" })
                 : d;
     return (0, i.jsxs)(r.$n, {
         "data-migration-pending": !0,
         "aria-label": x,
-        buttonRef: T,
+        buttonRef: _,
         look: r.$n.Looks.BLANK,
         size: r.$n.Sizes.NONE,
         disabled: o,
-        innerClassName: m,
-        wrapperClassName: a()(u.x6, p),
-        className: a()(u.x6, p, { [u.Xr]: f, [u.r9]: o, [u.Sn]: !o, [u.ZQ]: C, [u.OH]: f && C }),
+        innerClassName: h,
+        wrapperClassName: a()(u.x6, f),
+        className: a()(u.x6, f, { [u.Xr]: p, [u.r9]: o, [u.Sn]: !o, [u.ZQ]: C, [u.OH]: p && C }),
         onClick: (e) => {
             null != l && l(e);
         },
@@ -54,12 +54,12 @@ function h(e) {
         "aria-checked": v,
         focusProps: { offset: { left: -1, top: -1, right: 1, bottom: 1 } },
         children: [
-            null != t ? (0, i.jsx)(c.Ay, { width: 20, height: 20, mask: c.Ay.Masks.PANEL_BUTTON, children: _ }) : _,
+            null != t ? (0, i.jsx)(c.Ay, { width: 20, height: 20, mask: c.Ay.Masks.PANEL_BUTTON, children: I }) : I,
             t,
         ],
     });
 }
-let m = function (e) {
+let h = function (e) {
     if (null == e.tooltipType) {
         let {
                 tooltipText: t,
@@ -77,7 +77,7 @@ let m = function (e) {
             shouldShow: l,
             positionKey: a,
             ariaHidden: u === c,
-            children: (0, i.jsx)(h, { ...d, "aria-label": u }),
+            children: (0, i.jsx)(m, { ...d, "aria-label": u }),
         });
     }
     {
@@ -90,16 +90,16 @@ let m = function (e) {
             onMouseEnter: r,
             onMouseLeave: o,
             onContextMenu: c,
-            onFocus: m,
-            onBlur: p,
-            "aria-label": f,
+            onFocus: h,
+            onBlur: f,
+            "aria-label": p,
             ...g
         } = e;
         return (0, i.jsx)(d.ST, {
             "data-migration-pending": !0,
             tooltipClassName: u.RF,
             tooltipContentClassName: u.In,
-            "aria-label": f,
+            "aria-label": p,
             forceOpen: n,
             shouldShow: l,
             color: d.oM.GREEN,
@@ -113,9 +113,9 @@ let m = function (e) {
                     onContextMenu: a,
                     onFocus: d,
                     onBlur: u,
-                    "aria-label": f,
+                    "aria-label": p,
                 } = e;
-                return (0, i.jsx)(h, {
+                return (0, i.jsx)(m, {
                     onClick: (e) => {
                         (t?.(), s?.(e));
                     },
@@ -129,12 +129,12 @@ let m = function (e) {
                         (a?.(), c?.(e));
                     },
                     onFocus: () => {
-                        (d?.(), m?.());
+                        (d?.(), h?.());
                     },
                     onBlur: () => {
-                        (u?.(), p?.());
+                        (u?.(), f?.());
                     },
-                    "aria-label": f,
+                    "aria-label": p,
                     ...g,
                 });
             },

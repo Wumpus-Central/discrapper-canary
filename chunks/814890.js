@@ -1,12 +1,12 @@
 n.d(t, {
-    Lr: () => g,
+    Lr: () => m,
     We: () => N,
     ZV: () => y,
     c7: () => T,
     fw: () => L,
     j2: () => R,
     kC: () => S,
-    p4: () => m,
+    p4: () => g,
     so: () => O,
     wT: () => C,
     zv: () => p,
@@ -64,11 +64,11 @@ function p(e, t, n) {
 function T(e) {
     return e.placeholder ?? h.intl.string(h.t.Otr6W2);
 }
-function g(e, t) {
+function m(e, t) {
     let { minValues: n, required: i } = e;
     return "modal" === t ? !i : 0 === n;
 }
-function m(e) {
+function g(e) {
     let t = new Map();
     for (let n of e)
         !(function e(t, n) {
@@ -86,14 +86,14 @@ function m(e) {
     return t;
 }
 function S(e) {
-    let t = Array.from(m(e).values())
+    let t = Array.from(g(e).values())
         .filter((e) => e.type === a.I5.TEXT_DISPLAY)
         .map((e) => e.content)
         .join("\n");
     return "" !== t ? t : null;
 }
 function N(e) {
-    for (let t of m(e).values())
+    for (let t of g(e).values())
         if (t.type === a.I5.MEDIA_GALLERY) {
             let e = t.items[0];
             if (null == e) continue;

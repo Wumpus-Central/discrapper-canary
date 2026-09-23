@@ -1,4 +1,4 @@
-n.d(t, { GH: () => p, Zi: () => A, c1: () => T, r6: () => g });
+n.d(t, { GH: () => p, Zi: () => A, c1: () => T, r6: () => m });
 var i = n(228366),
     r = n(386406),
     a = n(56562),
@@ -67,7 +67,7 @@ function T(e) {
         t.cancelAttachToProcess(e);
     });
 }
-function g() {
+function m() {
     return f()
         .then((e) => (null != e.findSteamProcess ? e.findSteamProcess() : null))
         .catch(() => null);

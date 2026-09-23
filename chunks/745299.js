@@ -5,8 +5,8 @@ var l = n(562708),
     r = n(496431),
     s = n(793574),
     a = n(688810),
-    o = n(139286),
-    E = n(75678),
+    E = n(139286),
+    o = n(75678),
     c = n(174459),
     u = n(975571),
     _ = n(158045),
@@ -40,7 +40,7 @@ let C =
                       null == O.expiresAt ||
                       Object.values(S).every((e) => 0 === e);
               if (
-                  ((0, o.A)(
+                  ((0, E.A)(
                       {
                           type: l.ImpressionTypes.VIEW,
                           name: l.ImpressionNames.TRIAL_NOTICE,
@@ -66,7 +66,7 @@ let C =
                       (0, i.jsx)(T.fY, {
                           onClick: function () {
                               null != O &&
-                                  ((0, E.A)({
+                                  ((0, o.A)({
                                       trialId: O.trialId,
                                       subscriptionTier: n,
                                       analyticsLocations: C,

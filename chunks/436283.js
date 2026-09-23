@@ -18,9 +18,9 @@ function T(e) {
     if (null == e) return !1;
     let t = h[e];
     if (null == t) return !1;
-    (t.onSuccess?.(), g(e));
+    (t.onSuccess?.(), m(e));
 }
-function g(e) {
+function m(e) {
     if (null != p[e]) return void delete p[e];
     let t = h[e];
     delete h[e];
@@ -29,7 +29,7 @@ function g(e) {
         delete f[e],
         (p[e] = { insertedAt: Date.now(), nonce: e, messageId: n, interaction: t }));
 }
-class m extends a.Ay.Store {
+class g extends a.Ay.Store {
     initialize() {
         this.waitFor(d.default, c.A);
     }
@@ -64,7 +64,7 @@ class m extends a.Ay.Store {
         if (null != n) return { interaction: n.interaction, messageId: n.messageId };
     }
 }
-let S = new m(s.h, {
+let S = new g(s.h, {
     LOGOUT: function () {
         ((h = {}),
             (I = {}),
@@ -98,7 +98,7 @@ let S = new m(s.h, {
         if (null == s) return !1;
         (s.onFailure?.(n, i, r, a),
             s.data.interactionType === o.G4.APPLICATION_COMMAND
-                ? g(t)
+                ? m(t)
                 : (h[t] = { ...s, state: _.m.FAILED, errorCode: n, errorMessage: i, reasonCode: a }));
     },
     MESSAGE_CREATE: function (e) {
@@ -107,13 +107,13 @@ let S = new m(s.h, {
         {
             let e = h[t.nonce];
             if (null == e) return !1;
-            (e.onSuccess?.(), g(t.nonce));
+            (e.onSuccess?.(), m(t.nonce));
         }
     },
     CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;
         if (null == c.A.getChannel(t)) return !1;
-        for (let [e, t] of Object.entries(h)) t.state === _.m.FAILED && g(e);
+        for (let [e, t] of Object.entries(h)) t.state === _.m.FAILED && m(e);
     },
     INTERACTION_IFRAME_MODAL_CREATE: function (e) {
         let { application: t, nonce: n } = e;
@@ -143,6 +143,6 @@ let S = new m(s.h, {
         (null == c ? ((t = f[o.nonce]), (n = h[o.nonce])) : ((t = c.messageId), (n = c.interaction)),
             null != n &&
                 null != t &&
-                (g(o.nonce), null != t && "channelId" in n.data && l.A.deleteMessage(n.data.channelId, t, !0)));
+                (m(o.nonce), null != t && "channelId" in n.data && l.A.deleteMessage(n.data.channelId, t, !0)));
     },
 });

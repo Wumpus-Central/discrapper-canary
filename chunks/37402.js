@@ -105,12 +105,12 @@ function v(e) {
         (0, n.jsx)(f, { ...j, size: "custom", className: h.E$, useLottieDefaultColors: !0 })
     );
 }
-let R = function (e) {
+let C = function (e) {
     let t = (0, x.Ay)();
     return (0, f.q)(t) ? (0, n.jsx)(v, { ...e }) : (0, n.jsx)(k, { ...e });
 };
-var g = a(375708);
-function C() {
+var R = a(375708);
+function g() {
     return (0, n.jsx)("div", { className: h.V8 });
 }
 let E = (0, l.forwardRef)(function (e, t) {
@@ -158,7 +158,7 @@ let E = (0, l.forwardRef)(function (e, t) {
         );
     return (0, n.jsx)(i.D, {
         onClick: T ? void 0 : m,
-        "aria-label": T ? g.intl.string(g.t.y0WGqP) : g.intl.formatToPlainString(g.t.zPaLL9, { balance: S ?? 0 }),
+        "aria-label": T ? R.intl.string(R.t.y0WGqP) : R.intl.formatToPlainString(R.t.zPaLL9, { balance: S ?? 0 }),
         "aria-busy": T,
         className: r()(h.vk, { [h.r9]: x }),
         id: a ?? "balance-widget-pill",
@@ -171,7 +171,7 @@ let E = (0, l.forwardRef)(function (e, t) {
             children: [
                 (0, n.jsx)("div", {
                     className: r()(h.hr, T ? h.nr : void 0),
-                    children: (0, n.jsx)(R, {
+                    children: (0, n.jsx)(C, {
                         currentAnimationType: M,
                         animationTypeRef: w,
                         onSetAnimationDurationMS: _,
@@ -184,7 +184,7 @@ let E = (0, l.forwardRef)(function (e, t) {
                     targetTotalCounterTime: L,
                     className: T ? h.F : void 0,
                 }),
-                d && (0, n.jsx)(C, {}),
+                d && (0, n.jsx)(g, {}),
             ],
         }),
     });

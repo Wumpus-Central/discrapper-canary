@@ -1,4 +1,4 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => g });
 var i = n(277057),
     r = n.n(i),
     a = n(192308),
@@ -16,12 +16,12 @@ var i = n(277057),
     f = n(811656),
     p = n(652215),
     T = n(758836),
-    g = n(202541);
-function m(e) {
+    m = n(202541);
+function g(e) {
     let {
             initialPlanId: t,
             followupSKUInfo: i,
-            onClose: m,
+            onClose: g,
             onComplete: S,
             onSubscriptionConfirmation: N,
             analyticsLocations: C,
@@ -49,7 +49,7 @@ function m(e) {
         } = e,
         K = r()("payment-modal"),
         $ = (0, I.mH)(P),
-        z = D || $ !== (0, I.mH)(g.pe.TIER_2) ? null : A.A.getMarketingMomentPromotion(),
+        z = D || $ !== (0, I.mH)(m.pe.TIER_2) ? null : A.A.getMarketingMomentPromotion(),
         X = z?.rewardSkuIds[0] ?? null,
         q = !1;
     function Z() {
@@ -560,7 +560,7 @@ function m(e) {
                     onSubscriptionConfirmation: N,
                     postSuccessGuild: w,
                     trialId: U,
-                    planGroup: g.LE,
+                    planGroup: m.LE,
                     openInvoiceId: G,
                     returnRef: B,
                     subscriptionTier: P,
@@ -595,7 +595,7 @@ function m(e) {
                         })(e, J),
                 },
                 unifiedCheckoutProviderProps: { analyticsSourceLocation: L, analyticsLocations: C },
-                checkoutHandlers: { onClose: m, onComplete: S },
+                checkoutHandlers: { onClose: g, onComplete: S },
                 giftContextProps: { isGift: D, giftMessage: v, giftStyle: b, giftingOrigin: M, giftRecipient: F },
                 tenantParams: {
                     confirmationFooter: y,
