@@ -37,8 +37,8 @@ var a,
     V = n(885386),
     z = n(696451),
     L = n(71393),
-    F = n(576705),
-    B = n(486020),
+    B = n(576705),
+    F = n(486020),
     H = n(50617),
     Y = n(375708),
     U = n(948230),
@@ -134,7 +134,7 @@ function em() {
         ],
     });
 }
-var eh = n(92598);
+var eh = n(30392);
 function ef(e) {
     let { className: t, ariaLabel: n, disabled: a, onClick: i, children: s } = e;
     return (0, l.jsx)(f.D, { "aria-disabled": a, "aria-label": n, className: t, onClick: a ? void 0 : i, children: s });
@@ -259,11 +259,11 @@ function eL(e) {
         }),
     };
 }
-var eF = n(950305),
-    eB = n(664121);
+var eB = n(950305),
+    eF = n(664121);
 let eH = [
-    { value: "user", icon: eF.UserIcon, nameMessage: H.default.iqXIRN },
-    { value: "guild", icon: eB.R, nameMessage: H.default.LdgKdI },
+    { value: "user", icon: eB.UserIcon, nameMessage: H.default.iqXIRN },
+    { value: "guild", icon: eF.R, nameMessage: H.default.LdgKdI },
 ];
 function eY(e) {
     let { importing: t, onImport: n } = e,
@@ -802,10 +802,10 @@ var tV = n(165610),
 function tL(e) {
     return (0, l.jsx)(p.ChatIcon, { ...e, size: "custom", width: 20, height: 20 });
 }
-function tF(e) {
+function tB(e) {
     return (0, l.jsx)(m.u, { ...e, size: "custom", width: 20, height: 20 });
 }
-function tB(e) {
+function tF(e) {
     return (0, l.jsx)(h.k, { ...e, size: "custom", width: 20, height: 20 });
 }
 function tH(e) {
@@ -872,7 +872,7 @@ function tH(e) {
             }),
         v = r.preview_application_id ?? r.application_id,
         { data: j } = (0, T.YY)(v),
-        C = j?.icon == null ? null : B.Ay.getApplicationIconURL({ id: v, icon: j.icon, size: 40 }),
+        C = j?.icon == null ? null : F.Ay.getApplicationIconURL({ id: v, icon: j.icon, size: 40 }),
         A =
             null == r.updated_at
                 ? null
@@ -976,12 +976,12 @@ function tY(e) {
         P = V.Q_.useSetting(),
         [_, R] = i.useState(null),
         [z, L] = i.useState(null),
-        F = s?.id ?? null,
-        B = i.useRef(F),
+        B = s?.id ?? null,
+        F = i.useRef(B),
         q = i.useRef(!0),
         X = i.useRef(!1),
         K = i.useRef(null);
-    ((B.current = F),
+    ((F.current = B),
         i.useEffect(
             () => (
                 (q.current = !0),
@@ -991,9 +991,9 @@ function tY(e) {
             ),
             [],
         ));
-    let $ = (0, u.bG)([es.Ay], () => (null == F ? null : es.Ay.getIntegrationStatus(F)), [F]),
+    let $ = (0, u.bG)([es.Ay], () => (null == B ? null : es.Ay.getIntegrationStatus(B)), [B]),
         { data: Z, isLoading: Q } = (0, T.YY)(s?.preview_application_id ?? void 0),
-        ee = null != F && z !== F,
+        ee = null != B && z !== B,
         eo = $?.preview_ready === !0,
         er = $?.has_activity === !0,
         {
@@ -1026,16 +1026,16 @@ function tY(e) {
             f((e) => !e);
         }, [S, g, N]),
         ev = i.useCallback(() => f(!1), []),
-        { active: ej } = (0, et.Q_)(F),
+        { active: ej } = (0, et.Q_)(B),
         eC = i.useRef(null),
-        eA = (0, en.o4)(F),
+        eA = (0, en.o4)(B),
         eN = Y.intl.string(eA ? H.default.bfQ4Ki : ej ? H.default.rfNEHn : H.default.lXcEa2),
         eI = i.useCallback(() => {
-            if (null != F) {
-                if (ej) return void (0, et.PS)(F);
-                (E(!1), A(!1), I(!1), f(!0), (0, et.nI)(F));
+            if (null != B) {
+                if (ej) return void (0, et.PS)(B);
+                (E(!1), A(!1), I(!1), f(!0), (0, et.nI)(B));
             }
-        }, [F, ej]),
+        }, [B, ej]),
         eS = i.useCallback(() => {
             E((e) => !e && (f(!0), A(!1), I(!1), !0));
         }, []),
@@ -1045,7 +1045,7 @@ function tY(e) {
                 if (null == s || X.current) return;
                 let t = s.id;
                 function n() {
-                    return q.current && B.current === t;
+                    return q.current && F.current === t;
                 }
                 ((X.current = !0),
                     A(!1),
@@ -1081,10 +1081,10 @@ function tY(e) {
             var e, t;
             (null != s && ((e = s.id), (t = eM?.id), (0, ei.Bn)(e), (0, tg.A)().leaveFrame(t)), r());
         }, [s, eM?.id, r]),
-        eF = i.useCallback(() => {
+        eB = i.useCallback(() => {
             null != s && (f(!0), (0, ei.dv)(s.id, Y.intl.string(H.default["2ejwtJ"])));
         }, [s]),
-        eB = eL(
+        eF = eL(
             i.useCallback(
                 (e) => {
                     if (null == s) return;
@@ -1114,17 +1114,17 @@ function tY(e) {
             null != s && (0, tj.A)(s, d);
         }, [s, d]),
         eY = i.useCallback(async () => {
-            if (null == F || B.current !== F) return;
+            if (null == B || F.current !== B) return;
             K.current?.abort();
             let e = new AbortController();
             ((K.current = e), L(null));
             try {
-                await (0, U.U1)(F, e.signal);
+                await (0, U.U1)(B, e.signal);
             } catch {
             } finally {
-                e.signal.aborted || K.current !== e || B.current !== F || L(F);
+                e.signal.aborted || K.current !== e || F.current !== B || L(B);
             }
-        }, [F]);
+        }, [B]);
     i.useEffect(
         () => (
             eY(),
@@ -1215,7 +1215,7 @@ function tY(e) {
                           children: [
                               ed.showModeSwitch ? (0, l.jsx)(eW, { modes: ed.modes, mode: ec, onChange: ep }) : null,
                               (0, l.jsx)(G.A.Icon, {
-                                  icon: e_ ? tB : tF,
+                                  icon: e_ ? tF : tB,
                                   tooltip: eR,
                                   "aria-label": eR,
                                   selected: e_,
@@ -1259,8 +1259,8 @@ function tY(e) {
                                   onRefresh: (0, tV.x1)(eM) ? eG : void 0,
                                   isRefreshing: eO,
                                   onClose: ez,
-                                  onExport: eF,
-                                  onImport: eB.open,
+                                  onExport: eB,
+                                  onImport: eF.open,
                                   onRemix: eH,
                                   onConnectTool: () => {
                                       var e;
@@ -1300,7 +1300,7 @@ function tY(e) {
     return (0, l.jsxs)("div", {
         className: tz.nj,
         children: [
-            eB.input,
+            eF.input,
             (0, l.jsx)("main", {
                 className: tz.JX,
                 children:
@@ -1387,11 +1387,11 @@ function tU(e) {
             onImportNewProject: V,
             importing: z,
         } = e,
-        [F, B] = i.useState(() => ({ guildId: s, filter: t_(s) })),
-        q = (F.guildId === s ? F.filter : t_(s)) ?? s,
+        [B, F] = i.useState(() => ({ guildId: s, filter: t_(s) })),
+        q = (B.guildId === s ? B.filter : t_(s)) ?? s,
         X = i.useCallback(
             (e) => {
-                (tP.set(s, e), B({ guildId: s, filter: e }));
+                (tP.set(s, e), F({ guildId: s, filter: e }));
             },
             [s],
         ),
@@ -1418,13 +1418,13 @@ function tU(e) {
                 {
                     id: "vibegrations-filter-user",
                     value: tS,
-                    leading: eF.UserIcon,
+                    leading: eB.UserIcon,
                     label: Y.intl.string(H.default.mtU4VZ),
                 },
                 {
                     id: "vibegrations-filter-no-server",
                     value: tE,
-                    leading: eB.R,
+                    leading: eF.R,
                     label: Y.intl.string(H.default["qqH+iN"]),
                 },
                 ...W.map((e) => ({
@@ -1468,7 +1468,7 @@ function tU(e) {
                             id: "conjure-target-user",
                             value: tN,
                             label: Y.intl.string(H.default.UXnPhI),
-                            leading: eF.UserIcon,
+                            leading: eB.UserIcon,
                         },
                         ...h.map((e) => ({
                             id: `conjure-target-${e.id}`,
@@ -1917,10 +1917,10 @@ function tq(e) {
         s = (0, u.yK)([es.Ay], () => es.Ay.getOwnedProjects()),
         o = (0, u.yK)([z.Ay], () => z.Ay.getSelfMember(n)?.roles ?? [], [n]),
         r = (0, u.bG)(
-            [L.A, F.A],
+            [L.A, B.A],
             () => {
                 let e = L.A.getGuild(n);
-                return null != e && F.A.can(tc.xBc.MANAGE_GUILD, e);
+                return null != e && B.A.can(tc.xBc.MANAGE_GUILD, e);
             },
             [n],
         ),
@@ -2020,7 +2020,7 @@ function tq(e) {
             },
             [n, I],
         ),
-        B = i.useCallback(
+        F = i.useCallback(
             (e) => {
                 (0, D.pX)(tc.BVt.CHANNEL(n, e5.VV.VIBEGRATIONS, e));
             },
@@ -2053,7 +2053,7 @@ function tq(e) {
               submitting: m,
               createError: f,
               createDisabled: "idea" === (t = eo({ idea: d, installScope: A, submitting: m })) || "submitting" === t,
-              onSelectProject: B,
+              onSelectProject: F,
               onIdeaChange: W,
               onCreate: P,
               onStartTemplate: _,

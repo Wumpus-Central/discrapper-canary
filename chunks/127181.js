@@ -2,6 +2,12 @@ n.d(t, { B: () => s, MZ: () => o, TH: () => l, tn: () => i });
 let a = [
     {
         date: "2026-09-22",
+        platforms: ["desktop"],
+        summary:
+            "When your app needs a setting before it can carry on, the form now appears right in the chat, so you fill it in without opening a dialog.",
+    },
+    {
+        date: "2026-09-22",
         platforms: ["desktop", "mobile"],
         summary:
             "Paste your server rules into Moderation Bot and AI checks every message against them; your team can edit them any time in the app.",

@@ -1089,6 +1089,22 @@
     pointer-events: auto
 }
 
+.settingsPanel_f35ad6 {
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    background: var(--background-mod-normal);
+    border: 1px solid var(--border-muted);
+    border-radius: var(--radius-sm);
+    box-sizing: border-box;
+    max-block-size: 100%;
+    min-block-size: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: var(--space-12);
+    scrollbar-color: var(--scrollbar-thin-thumb) var(--scrollbar-thin-track);
+    scrollbar-width: thin
+}
+
 .designFeedbackBanner_f35ad6 {
     align-items: center;
     background: var(--background-brand-subtle);
@@ -1261,4 +1277,4 @@
     white-space: nowrap
 }
 
-/*# sourceMappingURL=f080b0aa3d7a62f4.css.map*/
+/*# sourceMappingURL=60641495c84925c7.css.map*/
