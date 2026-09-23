@@ -22,8 +22,19 @@
     margin-block-start: var(--space-8)
 }
 
+.privateBanner_b4a4b2.privateBanner_b4a4b2 {
+    border-radius: 0;
+    box-sizing: border-box;
+    height: var(--custom-user-profile-private-banner-height)
+}
+
+.privateInfo_b4a4b2 {
+    margin-block-start: var(--space-8);
+    margin-inline: var(--custom-user-profile-content-inset)
+}
+
 .customStatus_b4a4b2 {
-    inset-block-start: calc(var(--custom-user-profile-banner-height) - var(--space-8));
+    inset-block-start: calc(var(--custom-user-profile-private-banner-height) + var(--custom-user-profile-banner-height) - var(--space-8));
     inset-inline-end: var(--custom-user-profile-content-inset);
     inset-inline-start: calc(var(--custom-user-profile-content-inset) + var(--custom-user-profile-avatar-size) + var(--custom-user-profile-avatar-stroke) + var(--space-4))
 }
@@ -283,4 +294,4 @@
     padding: var(--space-4)
 }
 
-/*# sourceMappingURL=631323.4dd3946511ed6c95.css.map*/
+/*# sourceMappingURL=631323.9cd7b268a69b6bac.css.map*/

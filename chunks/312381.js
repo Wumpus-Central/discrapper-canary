@@ -1,15 +1,18 @@
-s.d(e, { A: () => o });
-var n = s(477900),
-    i = s(194261),
-    a = s(834730),
-    r = s(375708),
-    l = s(169655);
-function o() {
-    return (0, n.jsxs)("div", {
-        className: l.v,
+n.d(t, { A: () => c });
+var i = n(477900),
+    l = n(503698),
+    r = n.n(l),
+    s = n(194261),
+    o = n(834730),
+    a = n(375708),
+    u = n(169655);
+function c(e) {
+    let { className: t } = e;
+    return (0, i.jsxs)("div", {
+        className: r()(u.v, t),
         children: [
-            (0, n.jsx)(i.LockIcon, { size: "xs", color: "currentColor" }),
-            (0, n.jsx)(a.E, { variant: "text-sm/semibold", className: l.Q, children: r.intl.string(r.t.KPnd2O) }),
+            (0, i.jsx)(s.LockIcon, { size: "xs", color: "currentColor" }),
+            (0, i.jsx)(o.E, { variant: "text-sm/semibold", className: u.Q, children: a.intl.string(a.t.KPnd2O) }),
         ],
     });
 }
