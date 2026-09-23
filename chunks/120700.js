@@ -12,4 +12,5 @@ var i,
         (i.GUILD_PRODUCT_CHECKOUT = "guild_product_checkout"),
         (i.GUILD_ROLE_CHECKOUT = "guild_role_checkout"),
         (i.GAME_SERVER_SUBSCRIPTION_CHECKOUT = "game_server_subscription_checkout"),
+        (i.PAST_DUE_MAGIC_LINK_CHECKOUT = "past_due_magic_link_checkout"),
         i);
