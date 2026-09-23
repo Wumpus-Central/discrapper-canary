@@ -5439,6 +5439,22 @@
     }
   },
   {
+    "kind": "installation",
+    "name": "2026-09-registration-email-opt-in-copy",
+    "defaultConfig": {
+      "trackingCopy": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "trackingCopy": true
+      }
+    }
+  },
+  {
     "name": "2026-09-silp-cta-copy-tests",
     "kind": "user",
     "defaultConfig": {
