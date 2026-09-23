@@ -85,7 +85,7 @@
 .decorationWrapper__6131a.sticky__6131a:before {
     background: var(--background-base-low);
     content: "";
-    inset: calc(var(--space-64)*-1) 0;
+    inset: calc(var(--space-64)*-1);
     -webkit-mask-image: linear-gradient(to bottom, #000 0, #000 calc(100% - var(--space-64)), transparent calc(100% - var(--space-12)));
     mask-image: linear-gradient(to bottom, #000 0, #000 calc(100% - var(--space-64)), transparent calc(100% - var(--space-12)));
     pointer-events: none;
@@ -119,4 +119,4 @@
     }
 }
 
-/*# sourceMappingURL=428ebd38b5e41b6c.css.map*/
+/*# sourceMappingURL=7a8e2b737ec62f1c.css.map*/
