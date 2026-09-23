@@ -120,3 +120,9 @@ let h = (0, u.mj)({
         4: { enabled: !0, variant: 4 },
     },
 });
+(0, u.mj)({
+    name: "2026-09-quest-mobile-bar-secondary-cta",
+    kind: "user",
+    defaultConfig: { enabled: !1 },
+    variations: { 1: { enabled: !0 } },
+});
