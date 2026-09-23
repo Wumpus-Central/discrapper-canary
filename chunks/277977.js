@@ -650,6 +650,8 @@ async function x(e, t) {
                                     type: "VIBEGRATIONS_MODEL_SETTINGS_SET",
                                     projectId: t,
                                     settings: r.settings,
+                                    tierSettings: r.tier_settings ?? null,
+                                    tiers: r.tiers ?? null,
                                     choices: r.choices,
                                 })
                               : "debug_status" === r.type
@@ -1225,8 +1227,8 @@ let eU = [],
             I.set(t, n);
         },
         VIBEGRATIONS_MODEL_SETTINGS_SET: function (e) {
-            let { projectId: t, settings: n, choices: r } = e;
-            N.set(t, { settings: n, choices: r });
+            let { projectId: t, settings: n, tierSettings: r, tiers: o, choices: s } = e;
+            N.set(t, { settings: n, tierSettings: r, tiers: o, choices: s });
         },
         VIBEGRATIONS_SETTINGS_SET: function (e) {
             let { projectId: t, settings: n } = e;

@@ -4,16 +4,19 @@
     IU: () => l,
     Is: () => I,
     RX: () => o,
-    S8: () => g,
+    S8: () => S,
     Wb: () => h,
     XE: () => a,
     ZJ: () => T,
     a7: () => d,
     aM: () => c,
+    ks: () => m,
+    qf: () => R,
     sj: () => u,
     sq: () => i,
     tr: () => s,
-    wF: () => N,
+    v0: () => O,
+    wF: () => C,
     wU: () => E,
     wV: () => A,
     x5: () => p,
@@ -69,7 +72,8 @@ function p(e, t) {
 function T(e) {
     return `${Math.round(e / 1048576)} MB`;
 }
-let m = [
+let m = ["simple", "balanced", "complex"],
+    g = [
         { id: "claude-fable-5-1", label: "Claude Fable 5.1", provider: "anthropic" },
         { id: "claude-opus-5-5", label: "Claude Opus 5.5", provider: "anthropic" },
         { id: "claude-sonnet-5", label: "Claude Sonnet 5", provider: "anthropic" },
@@ -79,9 +83,15 @@ let m = [
         { id: "gpt-6-luna", label: "GPT-6 Luna", provider: "openai", supports_fast: !0 },
         { id: "xai/grok-4.7", label: "Grok 4.7", provider: "xai" },
     ],
-    g = { main: m, subagent: m, thinking: ["low", "medium", "high", "xhigh", "max"] },
-    S = [
+    S = { main: g, subagent: g, thinking: ["low", "medium", "high", "xhigh", "max"] },
+    N = [
         { id: "deepseek/deepseek-flash", label: "DeepSeek V4.1 Flash", provider: "deepseek" },
         { id: "moonshotai/kimi-k3", label: "Kimi K3", provider: "moonshotai" },
     ],
-    N = { main: S, subagent: S, thinking: g.thinking };
+    C = { main: N, subagent: N, thinking: S.thinking },
+    O = { tier: "balanced", provider: "openai" },
+    R = {
+        simple: { model: "gpt-6-luna", thinking: "xhigh" },
+        balanced: { model: "gpt-6-sol", thinking: "high" },
+        complex: { model: "gpt-6-astra", thinking: "high" },
+    };
