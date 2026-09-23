@@ -21,6 +21,7 @@ class d extends r.A {
     linkedApplications;
     genres;
     platforms;
+    platformAvailability;
     websites;
     companies;
     screenshotHashes;
@@ -56,6 +57,7 @@ class d extends r.A {
             (this.linkedApplications = e.linked_applications),
             (this.genres = e.genres ?? []),
             (this.platforms = e.platforms ?? []),
+            (this.platformAvailability = e.platform_availability ?? []),
             (this.websites = e.websites ?? []),
             (this.companies = e.companies),
             (this.screenshotHashes = e.screenshot_hashes),
