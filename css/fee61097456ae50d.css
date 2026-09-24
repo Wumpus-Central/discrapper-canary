@@ -2067,99 +2067,39 @@
 }
 
 .cardsArea__250d5 {
-    display: flex;
-    flex-direction: column;
     gap: var(--space-8);
     isolation: isolate
 }
 
-.cardBody__250d5 {
-    pointer-events: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none
+.card__250d5,
+.cardsArea__250d5,
+.skeletonCard__250d5 {
+    display: flex;
+    flex-direction: column
 }
 
-.mainCard__250d5 {
+.card__250d5,
+.skeletonCard__250d5 {
     background: var(--background-surface-high);
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-md);
     box-sizing: border-box;
-    cursor: pointer;
-    display: flex;
-    flex-direction: row;
-    gap: var(--space-sm);
-    max-height: 228px;
-    overflow: hidden;
-    padding: var(--space-sm);
-    position: relative
-}
-
-.full-motion .mainCard__250d5 {
-    transition: border-color .2s
-}
-
-.mainCardTextOnly__250d5 {
-    flex-direction: column;
-    min-height: 148px
-}
-
-.full-motion .mainCard__250d5:hover,
-.full-motion .mainCardTextOnly__250d5:hover {
-    border-color: var(--border-subtle)
-}
-
-.full-motion .mainCard__250d5:hover .mainCardBody__250d5,
-.full-motion .mainCard__250d5:hover .mainCardImageContainer__250d5,
-.full-motion .mainCardTextOnly__250d5:hover .mainCardBody__250d5 {
-    transform: translateY(-4px)
-}
-
-.full-motion .mainCardBody__250d5,
-.full-motion .mainCardImageContainer__250d5 {
-    transition: transform .25s ease
-}
-
-.mainCardImageContainer__250d5 {
-    aspect-ratio: 16/9;
-    background: var(--background-base-lower);
-    border-radius: var(--radius-sm);
-    flex-shrink: 0;
-    height: auto;
-    overflow: hidden;
-    position: relative;
-    width: 364px
-}
-
-.mainCardBody__250d5 {
-    flex: 1;
-    flex-direction: column;
-    gap: var(--space-4);
-    padding-block: 0;
-    padding-inline-end: var(--space-sm);
-    padding-inline-start: 0
-}
-
-.mainCardBody__250d5,
-.skeletonCard__250d5,
-.smallCard__250d5 {
-    display: flex;
-    min-width: 0;
-    overflow: hidden
-}
-
-.skeletonCard__250d5,
-.smallCard__250d5 {
-    background: var(--background-surface-high);
-    border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-md);
-    box-sizing: border-box;
-    flex-direction: column;
-    flex-shrink: 0;
     gap: var(--space-xs);
     margin-block: var(--space-8);
-    padding: var(--space-sm);
+    min-width: 0;
+    overflow: hidden;
+    padding: var(--space-sm)
+}
+
+.announcementListItem__250d5,
+.card__250d5,
+.skeletonCard__250d5 {
+    flex-shrink: 0;
     width: calc(44% - var(--space-sm)/2)
+}
+
+.announcementListItem__250d5 .card__250d5 {
+    width: 100%
 }
 
 .skeletonCard__250d5 {
@@ -2175,8 +2115,8 @@
     --custom-announcement-skeleton-content-width: 92%
 }
 
-.skeletonCardImage__250d5,
-.smallCardImageContainer__250d5 {
+.cardImageContainer__250d5,
+.skeletonCardImage__250d5 {
     aspect-ratio: 16/9;
     border-radius: var(--radius-sm);
     flex-shrink: 0
@@ -2186,8 +2126,8 @@
     width: 100%
 }
 
-.skeletonCardBody__250d5,
-.smallCardBody__250d5 {
+.cardBody__250d5,
+.skeletonCardBody__250d5 {
     display: flex;
     flex: 1;
     flex-direction: column;
@@ -2215,54 +2155,50 @@
     width: 60%
 }
 
-.smallCard__250d5 {
+.card__250d5 {
     cursor: pointer;
     max-height: 328px;
     position: relative
 }
 
-.full-motion .smallCard__250d5 {
+.full-motion .card__250d5 {
     transition: border-color .2s
 }
 
-.full-motion .smallCard__250d5:hover {
+.full-motion .card__250d5:hover {
     border-color: var(--border-subtle)
 }
 
-.full-motion .smallCard__250d5:hover .smallCardBody__250d5,
-.full-motion .smallCard__250d5:hover .smallCardImageContainer__250d5 {
+.full-motion .card__250d5:hover .cardBody__250d5,
+.full-motion .card__250d5:hover .cardImageContainer__250d5 {
     transform: translateY(-4px)
 }
 
-.full-motion .smallCardBody__250d5,
-.full-motion .smallCardImageContainer__250d5 {
+.full-motion .cardBody__250d5,
+.full-motion .cardImageContainer__250d5 {
     transition: transform .25s ease
 }
 
-.smallCardImageContainer__250d5 {
+.cardImageContainer__250d5 {
     background: var(--background-base-lower);
     overflow: hidden;
     position: relative
 }
 
-.smallCardBody__250d5 {
-    overflow: hidden
+.cardBody__250d5 {
+    overflow: hidden;
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none
 }
 
-.mainTitle__250d5 {
-    -webkit-line-clamp: 2
-}
-
-.mainTitle__250d5,
-.smallTitle__250d5 {
+.title__250d5 {
     display: -webkit-box;
     overflow: hidden;
+    -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     flex-shrink: 0
-}
-
-.smallTitle__250d5 {
-    -webkit-line-clamp: 1
 }
 
 .description__250d5 {
@@ -2746,4 +2682,4 @@
     width: 55%
 }
 
-/*# sourceMappingURL=04ac22eeb5b0f5b2.css.map*/
+/*# sourceMappingURL=fee61097456ae50d.css.map*/
