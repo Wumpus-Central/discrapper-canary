@@ -1,14 +1,15 @@
 n.d(t, {
+    NN: () => T,
     n6: () => I,
     OO: () => c,
     Ig: () => A,
-    aD: () => T,
+    aD: () => m,
     Se: () => C,
     uK: () => d,
     lk: () => p,
-    Mk: () => h,
+    Mk: () => _,
     sy: () => f,
-    d: () => m,
+    d: () => h,
 });
 var i,
     r,
@@ -81,7 +82,7 @@ let I = (0, u.mj)({
     defaultConfig: { enabled: !1 },
     variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
 });
-let T = (0, u.mj)({
+let m = (0, u.mj)({
     name: "2026-05-quest-home-tile-redesign",
     kind: "user",
     defaultConfig: { useNewLayoutWithSearch: !1, useNewTile: !1, useNewFeaturedTiles: !1, ctaOnHover: !1 },
@@ -99,7 +100,13 @@ let T = (0, u.mj)({
     defaultConfig: { enabled: !1 },
     variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
 });
-var m =
+let T = (0, u.mj)({
+    name: "2026-09-mobile-quest-home-sort-priority",
+    kind: "user",
+    defaultConfig: { enabled: !1 },
+    variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
+});
+var h =
     588245 != n.j
         ? (((s = {})[(s.CONTROL = 0)] = "CONTROL"),
           (s[(s.NEW_LAYOUT_WITH_SEARCH = 1)] = "NEW_LAYOUT_WITH_SEARCH"),
@@ -108,7 +115,7 @@ var m =
           (s[(s.REPLACE_QUEST_NAME_WITH_GAME_PUBLISHER = 4)] = "REPLACE_QUEST_NAME_WITH_GAME_PUBLISHER"),
           s)
         : null;
-let h = (0, u.mj)({
+let _ = (0, u.mj)({
     name: "2026-06-quest-home-layout-visual-tweaks",
     kind: "user",
     defaultConfig: { enabled: !1, variant: 0 },
