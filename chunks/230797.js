@@ -2952,7 +2952,7 @@ function sL(e) {
         m = r ?? d?.applicationId,
         h = (0, u.yK)([ez.A], () => (null == m ? [] : i.filter((e) => ez.A.get(e)?.applicationId === m)), [i, m]),
         { analyticsLocations: g } = (0, E.Ay)(f.A.SLAYER_STOREFRONT_EMBED),
-        p = a.useMemo(() => ({ pageSection: "storefront_embed" }), []),
+        p = a.useMemo(() => ({ pageSection: "storefront_embed", placement: sS.Ye.MULTI_SKU_EMBED }), []),
         A = a.useCallback(() => {
             (0, s_.default)("guild" === n.type ? { guildId: n.guildId } : { applicationId: n.applicationId });
         }, [n]),
