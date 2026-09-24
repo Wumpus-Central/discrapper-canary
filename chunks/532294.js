@@ -1,16 +1,3 @@
-n.d(t, { c8: () => a, wk: () => s });
+n.d(t, { wk: () => r });
 var i,
-    r,
-    a =
-        (((i = {})[(i.ZERO = 0)] = "ZERO"),
-        (i[(i.ONE = 1)] = "ONE"),
-        (i[(i.TWO = 2)] = "TWO"),
-        (i[(i.THREE = 3)] = "THREE"),
-        (i[(i.FOUR = 4)] = "FOUR"),
-        (i[(i.FIVE = 5)] = "FIVE"),
-        (i[(i.SIX = 6)] = "SIX"),
-        (i[(i.SEVEN = 7)] = "SEVEN"),
-        (i[(i.EIGHT = 8)] = "EIGHT"),
-        (i[(i.NINE = 9)] = "NINE"),
-        i),
-    s = (((r = {})[(r.V2025 = 0)] = "V2025"), (r[(r.V2026 = 1)] = "V2026"), r);
+    r = (((i = {})[(i.V2025 = 0)] = "V2025"), (i[(i.V2026 = 1)] = "V2026"), i);

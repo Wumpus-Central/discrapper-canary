@@ -1,4 +1,4 @@
-(n.r(t), n.d(t, { default: () => n5 }));
+(n.r(t), n.d(t, { default: () => n2 }));
 var s,
     l,
     a,
@@ -415,7 +415,7 @@ var eK = n(933832),
     e0 = n(625903),
     e1 = n(445927),
     e4 = n(376205);
-function e2(e) {
+function e5(e) {
     let { server: t, onOpenSettings: n } = e,
         s = t.instance.subscriptionId,
         l = (0, k.bG)(
@@ -442,7 +442,7 @@ function e2(e) {
     });
 }
 var e8 = n(652215),
-    e5 = n(628049),
+    e2 = n(628049),
     e6 = n(49999),
     e7 = n(684644);
 let e3 = [eP.M.STARTUP_FAILED, eP.M.MISSING_STOCK, eP.M.PROVIDER_ERRORED, eP.M.DELETED];
@@ -542,7 +542,7 @@ let tn = r.memo(function (e) {
                             n.e("776602"),
                             n.e("140402"),
                             n.e("401518"),
-                            n.e("122722"),
+                            n.e("854461"),
                             n.e("368062"),
                             n.e("844780"),
                             n.e("713567"),
@@ -553,7 +553,7 @@ let tn = r.memo(function (e) {
                             n.e("440963"),
                             n.e("766031"),
                             n.e("394317"),
-                            n.e("234881"),
+                            n.e("84755"),
                             n.e("835868"),
                         ]).then(n.bind(n, 729751));
                         return (n) => (0, i.jsx)(e, { ...n, server: t, source: s });
@@ -562,7 +562,7 @@ let tn = r.memo(function (e) {
                 );
             })({ server: t, source: "game-server-shop" });
         }, [t]),
-        A = (0, eQ.A)(t.instance.providerType, t.instance.gameServerPanelUrl) ?? e5.qb[x],
+        A = (0, eQ.A)(t.instance.providerType, t.instance.gameServerPanelUrl) ?? e2.qb[x],
         b = null != t.instance.gameServerPanelUrl,
         I = null != t.instance.status && e3.includes(t.instance.status),
         N = r.useCallback(() => {
@@ -685,7 +685,7 @@ let tn = r.memo(function (e) {
                         onClick: _,
                         tooltip: es.intl.string(es.t.RDE0Sc),
                     }),
-                    (0, i.jsx)(e2, { server: t, onOpenSettings: a }),
+                    (0, i.jsx)(e5, { server: t, onOpenSettings: a }),
                 ],
             }),
             (0, i.jsxs)("div", {
@@ -1438,7 +1438,7 @@ var tQ = n(177366),
     t0 = n(691885),
     t1 = n(783857),
     t4 = n(878278);
-let t2 = function () {
+let t5 = function () {
     let { sort: e, onSetSort: t, hasRelevanceFilters: n } = (0, T.v)(),
         s = (0, _.uM)(),
         l = (0, t1.yB)("CollectiblesSortSelect"),
@@ -1509,7 +1509,7 @@ var t8 =
         (l.BLACK = "COLLECTIBLES_COLOR_BLACK"),
         (l.WHITE = "COLLECTIBLES_COLOR_WHITE"),
         l),
-    t5 =
+    t2 =
         (((a = {}).ANIME = "COLLECTIBLES_THEME_ANIME"),
         (a.GAMING = "COLLECTIBLES_THEME_GAMING"),
         (a.CUTE_COZY = "COLLECTIBLES_THEME_CUTE_COZY"),
@@ -1748,53 +1748,53 @@ function nS(e) {
             () => [
                 {
                     name: es.intl.string(es.t.aVBOKh),
-                    icon: (0, i.jsx)(nn.E, { size: "xs", color: c(t5.ANIME) }),
-                    enum: t5.ANIME,
+                    icon: (0, i.jsx)(nn.E, { size: "xs", color: c(t2.ANIME) }),
+                    enum: t2.ANIME,
                 },
                 {
                     name: es.intl.string(es.t["3WoZBc"]),
-                    icon: (0, i.jsx)(ns._, { size: "xs", color: c(t5.GAMING) }),
-                    enum: t5.GAMING,
+                    icon: (0, i.jsx)(ns._, { size: "xs", color: c(t2.GAMING) }),
+                    enum: t2.GAMING,
                 },
                 {
                     name: es.intl.string(es.t.yuEmLj),
-                    icon: (0, i.jsx)(nl.C, { size: "xs", color: c(t5.CUTE_COZY) }),
-                    enum: t5.CUTE_COZY,
+                    icon: (0, i.jsx)(nl.C, { size: "xs", color: c(t2.CUTE_COZY) }),
+                    enum: t2.CUTE_COZY,
                 },
                 {
                     name: es.intl.string(es.t.mMvCHo),
-                    icon: (0, i.jsx)(na.L, { size: "xs", color: c(t5.SCI_FI) }),
-                    enum: t5.SCI_FI,
+                    icon: (0, i.jsx)(na.L, { size: "xs", color: c(t2.SCI_FI) }),
+                    enum: t2.SCI_FI,
                 },
                 {
                     name: es.intl.string(es.t.TlhOQC),
-                    icon: (0, i.jsx)(ni.L, { size: "xs", color: c(t5.FOOD_DRINKS) }),
-                    enum: t5.FOOD_DRINKS,
+                    icon: (0, i.jsx)(ni.L, { size: "xs", color: c(t2.FOOD_DRINKS) }),
+                    enum: t2.FOOD_DRINKS,
                 },
                 {
                     name: es.intl.string(es.t["4IaUIM"]),
-                    icon: (0, i.jsx)(nr.f, { size: "xs", color: c(t5.FANTASY) }),
-                    enum: t5.FANTASY,
+                    icon: (0, i.jsx)(nr.f, { size: "xs", color: c(t2.FANTASY) }),
+                    enum: t2.FANTASY,
                 },
                 {
                     name: es.intl.string(es.t["w0nSG/"]),
-                    icon: (0, i.jsx)(nc.N, { size: "xs", color: c(t5.ANIMALS_PETS) }),
-                    enum: t5.ANIMALS_PETS,
+                    icon: (0, i.jsx)(nc.N, { size: "xs", color: c(t2.ANIMALS_PETS) }),
+                    enum: t2.ANIMALS_PETS,
                 },
                 {
                     name: es.intl.string(es.t.cJng7v),
-                    icon: (0, i.jsx)(no.p, { size: "xs", color: c(t5.NATURE) }),
-                    enum: t5.NATURE,
+                    icon: (0, i.jsx)(no.p, { size: "xs", color: c(t2.NATURE) }),
+                    enum: t2.NATURE,
                 },
                 {
                     name: es.intl.string(es.t["5mUvyM"]),
-                    icon: (0, i.jsx)(nd.T, { size: "xs", color: c(t5.MOVIES_TV_SHOWS) }),
-                    enum: t5.MOVIES_TV_SHOWS,
+                    icon: (0, i.jsx)(nd.T, { size: "xs", color: c(t2.MOVIES_TV_SHOWS) }),
+                    enum: t2.MOVIES_TV_SHOWS,
                 },
                 {
                     name: es.intl.string(es.t.MB9H5Z),
-                    icon: (0, i.jsx)(nu.e, { size: "xs", color: c(t5.DARK_MOODY) }),
-                    enum: t5.DARK_MOODY,
+                    icon: (0, i.jsx)(nu.e, { size: "xs", color: c(t2.DARK_MOODY) }),
+                    enum: t2.DARK_MOODY,
                 },
             ],
             [c],
@@ -1831,16 +1831,16 @@ function n_(e) {
         { themeFilters: n, onToggleTheme: s } = (0, T.v)(),
         l = r.useMemo(
             () => [
-                { name: es.intl.string(es.t.aVBOKh), icon: nn.E, enum: t5.ANIME },
-                { name: es.intl.string(es.t["3WoZBc"]), icon: ns._, enum: t5.GAMING },
-                { name: es.intl.string(es.t.yuEmLj), icon: nl.C, enum: t5.CUTE_COZY },
-                { name: es.intl.string(es.t.mMvCHo), icon: na.L, enum: t5.SCI_FI },
-                { name: es.intl.string(es.t.TlhOQC), icon: ni.L, enum: t5.FOOD_DRINKS },
-                { name: es.intl.string(es.t["4IaUIM"]), icon: nr.f, enum: t5.FANTASY },
-                { name: es.intl.string(es.t["w0nSG/"]), icon: nc.N, enum: t5.ANIMALS_PETS },
-                { name: es.intl.string(es.t.cJng7v), icon: no.p, enum: t5.NATURE },
-                { name: es.intl.string(es.t["5mUvyM"]), icon: nd.T, enum: t5.MOVIES_TV_SHOWS },
-                { name: es.intl.string(es.t.MB9H5Z), icon: nu.e, enum: t5.DARK_MOODY },
+                { name: es.intl.string(es.t.aVBOKh), icon: nn.E, enum: t2.ANIME },
+                { name: es.intl.string(es.t["3WoZBc"]), icon: ns._, enum: t2.GAMING },
+                { name: es.intl.string(es.t.yuEmLj), icon: nl.C, enum: t2.CUTE_COZY },
+                { name: es.intl.string(es.t.mMvCHo), icon: na.L, enum: t2.SCI_FI },
+                { name: es.intl.string(es.t.TlhOQC), icon: ni.L, enum: t2.FOOD_DRINKS },
+                { name: es.intl.string(es.t["4IaUIM"]), icon: nr.f, enum: t2.FANTASY },
+                { name: es.intl.string(es.t["w0nSG/"]), icon: nc.N, enum: t2.ANIMALS_PETS },
+                { name: es.intl.string(es.t.cJng7v), icon: no.p, enum: t2.NATURE },
+                { name: es.intl.string(es.t["5mUvyM"]), icon: nd.T, enum: t2.MOVIES_TV_SHOWS },
+                { name: es.intl.string(es.t.MB9H5Z), icon: nu.e, enum: t2.DARK_MOODY },
             ],
             [],
         ),
@@ -2167,7 +2167,7 @@ function nM(e) {
                                                 variant: "text-md/semibold",
                                                 children: es.intl.string(es.t.uaX705),
                                             }),
-                                            (0, i.jsx)(t2, {}),
+                                            (0, i.jsx)(t5, {}),
                                         ],
                                     }),
                                     (0, i.jsx)("div", {
@@ -2496,7 +2496,7 @@ var nJ = n(626148),
     n0 = n(235939),
     n1 = n(976860),
     n4 = n(870308),
-    n2 = n(650583);
+    n5 = n(650583);
 function n8(e) {
     let { children: t, shouldAddEventListener: n, onClose: s } = e,
         l = (0, m.useHasAnyModalOpen)();
@@ -2504,13 +2504,13 @@ function n8(e) {
         r.useEffect(() => {
             if (n && !l) return (window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e));
             function e(e) {
-                e.key === n2.N$.Escape && s();
+                e.key === n5.N$.Escape && s();
             }
         }, [n, l, s]),
         t
     );
 }
-let n5 = function (e) {
+let n2 = function (e) {
     let { tab: t = td.G2.HOME } = e;
     (0, C.P)(p.a);
     let n = (0, E.A)((0, d.A)()),
