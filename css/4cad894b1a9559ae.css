@@ -84,6 +84,7 @@
     display: flex;
     gap: var(--space-8);
     height: 50px;
+    justify-content: space-between;
     padding: var(--space-8)
 }
 
@@ -221,4 +222,4 @@
     display: none
 }
 
-/*# sourceMappingURL=8db020d821815352.css.map*/
+/*# sourceMappingURL=4cad894b1a9559ae.css.map*/
