@@ -55,8 +55,8 @@ var S = l(811315),
     w = l(658675),
     U = l(922016),
     T = l(71393),
-    k = l(576705),
-    O = l(70738),
+    O = l(576705),
+    k = l(70738),
     F = l(587426),
     G = l(134413),
     B = l(536637),
@@ -148,6 +148,7 @@ function en(e) {
                           (0, i.jsx)(Y.Dr, {
                               id: "back",
                               action: M,
+                              dontCloseOnAction: !0,
                               render: (e) =>
                                   (0, i.jsxs)("span", {
                                       ...e,
@@ -225,6 +226,7 @@ function en(e) {
                           (0, i.jsx)(Y.Dr, {
                               id: `guild-member-${o}-custom-option}`,
                               action: p,
+                              dontCloseOnAction: !0,
                               render: (e) =>
                                   (0, i.jsxs)("div", {
                                       className: a()(W.Dh, { [W.in]: e.isFocused }),
@@ -561,7 +563,7 @@ function eD(e) {
         d = C.useRef(null),
         c = C.useRef(null),
         u = (0, o.bG)([p.A], () => p.A.getSearchStateByGuildId(t), [t], N()),
-        m = (0, o.bG)([k.A, T.A], () => k.A.can(X.xBc.MANAGE_GUILD, T.A.getGuild(t)), [t]),
+        m = (0, o.bG)([O.A, T.A], () => O.A.can(X.xBc.MANAGE_GUILD, T.A.getGuild(t)), [t]),
         { selectedUserIds: H, addUsers: x, clearSelection: h } = (0, F.A)(t),
         g =
             u.requireUnusualDmActivity ||
@@ -570,9 +572,9 @@ function eD(e) {
             u.requireUsernameQuarantined,
         f = u.selectedRoleIds.size > 0,
         j = null != u.selectedJoinDateOption.afterDate,
-        v = u.selectedSort === O.mF.ORDER_BY_GUILD_JOINED_AT_ASC,
+        v = u.selectedSort === k.mF.ORDER_BY_GUILD_JOINED_AT_ASC,
         V = null != u.selectedAccountAgeOption.afterDate,
-        A = u.selectedSort === O.mF.ORDER_BY_USER_ID_ASC || u.selectedSort === O.mF.ORDER_BY_USER_ID_DESC,
+        A = u.selectedSort === k.mF.ORDER_BY_USER_ID_ASC || u.selectedSort === k.mF.ORDER_BY_USER_ID_DESC,
         M = null != u.selectedSourceInviteCode && "" !== u.selectedSourceInviteCode,
         L = null != u.selectedJoinSourceType,
         b = M || L,
@@ -610,7 +612,10 @@ function eD(e) {
                                   position: "bottom",
                                   spacing: 4,
                                   align: "left",
-                                  renderPopout: () => (0, i.jsx)(em, { guildId: t, onClose: X.tEg }),
+                                  renderPopout: (e) => {
+                                      let { closePopout: l } = e;
+                                      return (0, i.jsx)(em, { guildId: t, onClose: l });
+                                  },
                                   children: (e) => {
                                       let { onClick: t, ...l } = e;
                                       return (0, i.jsx)(eb, {
@@ -630,7 +635,10 @@ function eD(e) {
                                   position: "bottom",
                                   spacing: 4,
                                   align: "left",
-                                  renderPopout: () => (0, i.jsx)(ei, { guildId: t, onClose: X.tEg }),
+                                  renderPopout: (e) => {
+                                      let { closePopout: l } = e;
+                                      return (0, i.jsx)(ei, { guildId: t, onClose: l });
+                                  },
                                   children: (e) => {
                                       let { onClick: t, ...l } = e;
                                       return (0, i.jsx)(eb, {
@@ -659,7 +667,10 @@ function eD(e) {
                           position: "bottom",
                           spacing: 4,
                           align: "left",
-                          renderPopout: () => (0, i.jsx)(eH.default, { guildId: t, onClose: X.tEg }),
+                          renderPopout: (e) => {
+                              let { closePopout: l } = e;
+                              return (0, i.jsx)(eH.default, { guildId: t, onClose: l });
+                          },
                           children: (e) => {
                               let { onClick: t, ...l } = e;
                               return (0, i.jsx)(eb, {
@@ -747,8 +758,8 @@ var eR = l(435558),
     ew = l(229527),
     eU = l(316031),
     eT = l(901472),
-    ek = l(985925),
-    eO = l(534400),
+    eO = l(985925),
+    ek = l(534400),
     eF = l(694318),
     eG = l(967144),
     eB = l(761640),
@@ -850,7 +861,7 @@ let e7 = C.memo(function (e) {
             r = C.useMemo(() => new Intl.NumberFormat(D.intl.currentLocale).format(s), [s]),
             d = (0, L.Cy)(t),
             c = (0, L.Cy)(t, !0),
-            u = (0, o.bG)([k.A], () => k.A.can(X.xBc.MANAGE_ROLES, n), [n]);
+            u = (0, o.bG)([O.A], () => O.A.can(X.xBc.MANAGE_ROLES, n), [n]);
         return null == n
             ? null
             : (0, i.jsxs)("div", {
@@ -910,7 +921,7 @@ let e7 = C.memo(function (e) {
                                           colorStrings: n,
                                           className: eL.bc,
                                       }),
-                                      (0, i.jsx)(eO.Ay, {
+                                      (0, i.jsx)(ek.Ay, {
                                           primaryGuild: l?.primaryGuild,
                                           userId: l?.id,
                                           contextGuildId: t.guildId,
@@ -993,13 +1004,13 @@ let tl = C.memo(function (e) {
                 compact: c,
                 hasModViewPanelAccess: u,
             } = e,
-            m = (0, o.bG)([k.A, T.A], () => k.A.can(X.xBc.MANAGE_GUILD, T.A.getGuild(t.guildId)), [t.guildId]),
+            m = (0, o.bG)([O.A, T.A], () => O.A.can(X.xBc.MANAGE_GUILD, T.A.getGuild(t.guildId)), [t.guildId]),
             { selectedUserIds: H, addUsers: x, removeUser: h } = (0, F.A)(t.guildId),
             g = (0, G.vA)(t.guildId),
             f = (0, G.O6)(t.guildId, g, t.userId),
             j = (0, o.bG)(
                 [p.A],
-                () => p.A.getSearchStateByGuildId(t.guildId).selectedSort ?? O.mF.ORDER_BY_UNSPECIFIED,
+                () => p.A.getSearchStateByGuildId(t.guildId).selectedSort ?? k.mF.ORDER_BY_UNSPECIFIED,
                 [t.guildId],
                 N(),
             ),
@@ -1011,8 +1022,8 @@ let tl = C.memo(function (e) {
                 },
                 [x, f, t, h, H],
             ),
-            V = j === O.mF.ORDER_BY_GUILD_JOINED_AT_ASC,
-            A = j === O.mF.ORDER_BY_USER_ID_ASC || j === O.mF.ORDER_BY_USER_ID_DESC;
+            V = j === k.mF.ORDER_BY_GUILD_JOINED_AT_ASC,
+            A = j === k.mF.ORDER_BY_USER_ID_ASC || j === k.mF.ORDER_BY_USER_ID_DESC;
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 g &&
@@ -1108,7 +1119,7 @@ let tl = C.memo(function (e) {
             h = (0, o.bG)([p.A], () => p.A.getEnhancedMember(l, t), [l, t]),
             g = (0, L.YH)(h),
             f = (0, o.bG)([eP.default], () => eP.default.getUser(t), [t]),
-            j = (0, ek.q)(l),
+            j = (0, eO.q)(l),
             v = (0, L.UY)(h ?? void 0),
             V = C.useCallback(
                 (e) => {

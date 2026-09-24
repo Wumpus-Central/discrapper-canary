@@ -88,8 +88,8 @@ let T = (0, l(196765).v)((e) => ({
         e({ entries: {} });
     },
 }));
-var k = l(375708),
-    O = l(208005);
+var O = l(375708),
+    k = l(208005);
 function F(e) {
     var t;
     let l,
@@ -141,34 +141,34 @@ function F(e) {
             [C],
         );
     return (0, n.jsx)(b.Modal, {
-        title: `${k.intl.string(k.t.zbyz7p)}\u{2014}${null != C ? C.name : ""}`,
+        title: `${O.intl.string(O.t.zbyz7p)}\u{2014}${null != C ? C.name : ""}`,
         actions: [
-            { text: k.intl.string(k.t["ETE/oC"]), onClick: a, variant: "secondary" },
-            { text: k.intl.string(k.t["2mIlKQ"]), onClick: H },
+            { text: O.intl.string(O.t["ETE/oC"]), onClick: a, variant: "secondary" },
+            { text: O.intl.string(O.t["2mIlKQ"]), onClick: H },
         ],
         onClose: async () => {
             await a();
         },
         transitionState: s,
         children: (0, n.jsxs)("div", {
-            className: O.Q,
+            className: k.Q,
             children: [
                 (0, n.jsx)(D.z, {
-                    label: k.intl.string(k.t.YccTvK),
+                    label: O.intl.string(O.t.YccTvK),
                     value: String(r),
                     options: [
-                        { name: k.intl.formatToPlainString(k.t.FM1dHS, { days: 7 }), value: "7" },
-                        { name: k.intl.formatToPlainString(k.t.FM1dHS, { days: 30 }), value: "30" },
+                        { name: O.intl.formatToPlainString(O.t.FM1dHS, { days: 7 }), value: "7" },
+                        { name: O.intl.formatToPlainString(O.t.FM1dHS, { days: 30 }), value: "30" },
                     ],
                     onChange: function (e) {
                         d(Number(e));
                     },
                 }),
                 (0, n.jsx)(R.Ip, {
-                    className: O.X,
+                    className: k.X,
                     children: (0, n.jsx)(E.Z, {
                         selectionMode: "multiple",
-                        label: k.intl.string(k.t.buoe17),
+                        label: O.intl.string(O.t.buoe17),
                         maxOptionsVisible: 10,
                         value: o,
                         onSelectionChange: (e) => c(e),
@@ -179,8 +179,8 @@ function F(e) {
                     variant: "text-sm/normal",
                     children:
                         o.length > 0
-                            ? k.intl.format(m ? k.t.xSDcLk : k.t["5WxHHp"], { members: u ?? -1, days: r })
-                            : k.intl.format(m ? k.t["98cHOp"] : k.t.f13az9, { members: u ?? -1, days: r }),
+                            ? O.intl.format(m ? O.t.xSDcLk : O.t["5WxHHp"], { members: u ?? -1, days: r })
+                            : O.intl.format(m ? O.t["98cHOp"] : O.t.f13az9, { members: u ?? -1, days: r }),
                 }),
             ],
         }),
@@ -241,8 +241,8 @@ let q = i.forwardRef(function (e, t) {
                 (0, n.jsx)("div", {
                     className: P.wL,
                     children: a
-                        ? (0, n.jsx)(c.D, { variant: "heading-md/medium", children: k.intl.string(k.t.y12ALM) })
-                        : (0, n.jsx)(c.D, { variant: "heading-md/medium", children: k.intl.string(k.t.BUqwK8) }),
+                        ? (0, n.jsx)(c.D, { variant: "heading-md/medium", children: O.intl.string(O.t.y12ALM) })
+                        : (0, n.jsx)(c.D, { variant: "heading-md/medium", children: O.intl.string(O.t.BUqwK8) }),
                 }),
                 (0, n.jsx)("div", {
                     className: P.Rt,
@@ -251,7 +251,7 @@ let q = i.forwardRef(function (e, t) {
                         children: (0, n.jsx)(u.I, {
                             size: "sm",
                             query: D,
-                            placeholder: k.intl.string(k.t["NVoAM+"]),
+                            placeholder: O.intl.string(O.t["NVoAM+"]),
                             onChange: N,
                             onClear: Z,
                             autoComplete: "off",
@@ -266,13 +266,16 @@ let q = i.forwardRef(function (e, t) {
                         position: "bottom",
                         spacing: 4,
                         align: "left",
-                        renderPopout: () => (0, n.jsx)(B.default, { guildId: l.id, onClose: void 0 }),
+                        renderPopout: (e) => {
+                            let { closePopout: t } = e;
+                            return (0, n.jsx)(B.default, { guildId: l.id, onClose: t });
+                        },
                         children: (e) => {
                             let { onClick: t, ...l } = e;
                             return (0, n.jsx)(H.$, {
                                 ...l,
                                 buttonRef: C,
-                                text: k.intl.string(k.t.XvNMNk),
+                                text: O.intl.string(O.t.XvNMNk),
                                 onClick: t,
                                 size: "sm",
                                 variant: "secondary",
@@ -291,9 +294,9 @@ let q = i.forwardRef(function (e, t) {
                             children: (0, n.jsx)(H.$, {
                                 variant: "critical-secondary",
                                 size: "sm",
-                                text: k.intl.string(k.t["2mIlKQ"]),
+                                text: O.intl.string(O.t["2mIlKQ"]),
                                 onClick: M,
-                                "aria-label": k.intl.string(k.t.zbyz7p),
+                                "aria-label": O.intl.string(O.t.zbyz7p),
                             }),
                         }),
                 }),

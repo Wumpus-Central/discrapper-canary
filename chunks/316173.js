@@ -16,9 +16,9 @@ var i = o(477900),
     C = o(980707),
     N = o(477782),
     b = o(921853),
-    y = o(583650),
-    x = o(320448),
-    A = o(71393),
+    A = o(583650),
+    y = o(320448),
+    x = o(71393),
     E = o(351906),
     U = o(509402),
     g = o(151781),
@@ -125,7 +125,7 @@ function k(e) {
                 { invitesRaw: t, inviteCodes: c, invitesByCode: r, loading: i }
             );
         })(t),
-        d = (0, a.bG)([A.A], () => A.A.getGuild(t)),
+        d = (0, a.bG)([x.A], () => x.A.getGuild(t)),
         u = d?.vanityURLCode ?? null,
         [h, I] = n.useState(!1),
         { selectedSourceInviteCode: p, selectedJoinSourceType: m } = s,
@@ -162,7 +162,7 @@ function k(e) {
             },
             [t, m],
         ),
-        K = n.useCallback(
+        O = n.useCallback(
             (e) => {
                 ((0, v.Ld)(t, { selectedSourceInviteCode: e, selectedJoinSourceType: void 0 }), R(e));
             },
@@ -185,6 +185,7 @@ function k(e) {
                           leadingAccessory: { type: "icon", icon: b.n },
                           label: P.intl.string(P.t["Kz/cho"]),
                           action: () => I(!1),
+                          dontCloseOnAction: !0,
                       }),
                       w.map((e) =>
                           (0, i.jsx)(
@@ -210,10 +211,10 @@ function k(e) {
                           {
                               id: "members-table-invite-code-search",
                               control: (e, t) =>
-                                  (0, i.jsx)(y.V, {
+                                  (0, i.jsx)(A.V, {
                                       ...e,
                                       query: p ?? "",
-                                      onChange: K,
+                                      onChange: O,
                                       ref: t,
                                       placeholder: P.intl.string(P.t.YwJnGz),
                                   }),
@@ -254,9 +255,10 @@ function k(e) {
                               id: "other-join-methods",
                               label: P.intl.string(P.t["Kz/cho"]),
                               subtext: j ? (0, S.CI)(m, u, U) : void 0,
-                              icon: x._,
-                              trailingIndicator: { type: "icon", icon: x._ },
+                              icon: y._,
+                              trailingIndicator: { type: "icon", icon: y._ },
                               action: () => I(!0),
+                              dontCloseOnAction: !0,
                           },
                           "other-join-methods",
                       ),

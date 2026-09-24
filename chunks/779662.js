@@ -1,8 +1,8 @@
-_.d(e, { default: () => S });
+_.d(t, { default: () => S });
 var r = _(477900),
-    n = _(582128),
-    l = _(811315),
-    s = _.n(l),
+    l = _(582128),
+    n = _(811315),
+    s = _.n(n),
     a = _(702841),
     D = _(980707),
     i = _(477782),
@@ -17,28 +17,26 @@ let m = [
     E.mF.ORDER_BY_USER_ID_DESC,
     E.mF.ORDER_BY_USER_ID_ASC,
 ];
-function S(t) {
-    let { guildId: e, onClose: _ } = t,
-        l = (0, a.bG)([R.A], () => R.A.getSearchStateByGuildId(e), [e], s()),
-        S = n.useCallback(
-            (t) => {
-                (0, u.Ld)(e, { ...l, selectedSort: t });
+function S(e) {
+    let { guildId: t, onClose: _ } = e,
+        n = (0, a.bG)([R.A], () => R.A.getSearchStateByGuildId(t), [t], s()),
+        S = l.useCallback(
+            (e) => {
+                (0, u.Ld)(t, { ...n, selectedSort: e });
             },
-            [e, l],
+            [t, n],
         );
     return (0, r.jsx)(D.W, {
         "data-menu-migrated": !0,
         navId: "members-table-sort-menu",
-        onClose: function () {
-            _?.();
-        },
+        onClose: _,
         "aria-label": d.intl.string(d.t["u/7Rdc"]),
         onSelect: c.tEg,
         children: (0, r.jsx)(i.rX, {
-            children: m.map((t) => {
-                var e;
-                let _ = (function (t) {
-                    switch (t) {
+            children: m.map((e) => {
+                var t;
+                let _ = (function (e) {
+                    switch (e) {
                         case E.mF.ORDER_BY_GUILD_JOINED_AT_DESC:
                             return d.intl.string(d.t.V7zCwB);
                         case E.mF.ORDER_BY_GUILD_JOINED_AT_ASC:
@@ -50,23 +48,23 @@ function S(t) {
                         default:
                             return null;
                     }
-                })(t);
+                })(e);
                 return (
                     null != _ &&
                     (0, r.jsx)(
                         i.iD,
                         {
-                            id: `members-table-sort-${t}`,
+                            id: `members-table-sort-${e}`,
                             label: _,
                             checked:
-                                (e = l.selectedSort) === E.mF.ORDER_BY_UNSPECIFIED || null == e
-                                    ? t === E.mF.ORDER_BY_GUILD_JOINED_AT_DESC
-                                    : t === e,
+                                (t = n.selectedSort) === E.mF.ORDER_BY_UNSPECIFIED || null == t
+                                    ? e === E.mF.ORDER_BY_GUILD_JOINED_AT_DESC
+                                    : e === t,
                             disabled: !1,
-                            action: () => S(t),
+                            action: () => S(e),
                             group: "members-table-sort",
                         },
-                        `members-table-sort-${t}`,
+                        `members-table-sort-${e}`,
                     )
                 );
             }),
