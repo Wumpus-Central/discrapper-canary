@@ -12,9 +12,9 @@ var l = r(477900),
     h = r(59520),
     b = r(775602),
     m = r(152858),
-    v = r(375708),
-    x = r(619893);
-function E(e) {
+    E = r(375708),
+    v = r(619893);
+function x(e) {
     return `var(--space-${e})`;
 }
 let A = function (e) {
@@ -23,15 +23,15 @@ let A = function (e) {
             gap: r = 24,
             edgeFade: c = "xl",
             hideActionsWhenDisabled: A = !0,
-            className: p,
-            iconButtonSize: y,
-            scrollBehavior: L = m.Uf.PAGE,
+            className: y,
+            iconButtonSize: L,
+            scrollBehavior: p = m.Uf.PAGE,
             "aria-label": C,
-            gridContainerProps: M,
-            gridRowProps: k,
+            gridContainerProps: k,
+            gridRowProps: M,
         } = e,
         I = n.useId(),
-        g = null != M,
+        g = null != k,
         w = n.useRef(0),
         W = n.useRef(0),
         j = n.useRef(0),
@@ -118,7 +118,7 @@ let A = function (e) {
                 null != N.current && N.current >= e.childElementCount && (N.current = null));
         });
         function l() {
-            null != e && (L === m.Uf.ITEM && (j.current = e.scrollLeft), O());
+            null != e && (p === m.Uf.ITEM && (j.current = e.scrollLeft), O());
         }
         return (
             r.observe(e, { childList: !0 }),
@@ -127,7 +127,7 @@ let A = function (e) {
                 (t.disconnect(), r.disconnect(), e.removeEventListener("scrollend", l));
             }
         );
-    }, [O, L]);
+    }, [O, p]);
     let J = n.useCallback(
             (e) => {
                 let t = H.current;
@@ -144,7 +144,7 @@ let A = function (e) {
                         O());
                     return;
                 }
-                if (L === m.Uf.ITEM && null != t.firstElementChild) {
+                if (p === m.Uf.ITEM && null != t.firstElementChild) {
                     let n = S.current ?? F() ?? 0,
                         c = Math.max(0, Math.min(t.childElementCount - 1, n + ("right" === e ? 1 : -1))),
                         u = t.children[c];
@@ -176,7 +176,7 @@ let A = function (e) {
                 let u = F();
                 null != u && (N.current = u);
             },
-            [g, L, D, O, F],
+            [g, p, D, O, F],
         ),
         Q = n.useCallback(() => J("left"), [J]),
         Z = n.useCallback(() => J("right"), [J]),
@@ -189,54 +189,58 @@ let A = function (e) {
             return !1;
         }, []),
         er = n.useCallback(() => {
+            let e = H.current;
+            if (null != e) {
+                for (let t of (e.setAttribute("tabIndex", "0"), e.children)) t.setAttribute("tabIndex", "-1");
+                V();
+            }
+        }, [V]),
+        el = n.useCallback(() => {
             setTimeout(() => {
-                if (!et()) {
-                    let e = H.current;
-                    if (null != e) {
-                        for (let t of (e.setAttribute("tabIndex", "0"), e.children)) t.setAttribute("tabIndex", "-1");
-                        V();
-                    }
-                }
+                et() || er();
             }, 10);
-        }, [et, V]);
-    n.useEffect(() => {
-        V();
-    }, [G, V]);
-    let el = { "--custom-edge-fade-width": E(c) };
+        }, [et, er]);
+    (n.useLayoutEffect(() => {
+        g || et() || er();
+    }, [z, g, et, er]),
+        n.useEffect(() => {
+            V();
+        }, [G, V]));
+    let en = { "--custom-edge-fade-width": x(c) };
     return (0, l.jsxs)("div", {
         ref: X,
         role: null != C ? "region" : void 0,
         "aria-label": C,
-        style: el,
-        className: u()(x.kL, p),
+        style: en,
+        className: u()(v.kL, y),
         children: [
             U &&
                 (0, l.jsxs)("div", {
-                    className: x.o1,
+                    className: v.o1,
                     role: "group",
                     children: [
                         (0, l.jsx)("div", {
-                            className: u()(x.x6, { [x.r9]: !Y && A }),
+                            className: u()(v.x6, { [v.r9]: !Y && A }),
                             children: (0, l.jsx)(a.K, {
                                 icon: s.Z,
-                                size: y,
+                                size: L,
                                 variant: "overlay-secondary",
                                 onClick: q,
                                 disabled: !Y,
-                                "aria-label": v.intl.string(v.t.FQx1Ru),
+                                "aria-label": E.intl.string(E.t.FQx1Ru),
                                 "aria-hidden": !Y && A,
                                 "aria-controls": I,
                             }),
                         }),
                         (0, l.jsx)("div", {
-                            className: u()(x.x6, { [x.r9]: !B && A }),
+                            className: u()(v.x6, { [v.r9]: !B && A }),
                             children: (0, l.jsx)(a.K, {
                                 icon: o.K,
-                                size: y,
+                                size: L,
                                 variant: "overlay-secondary",
                                 onClick: ee,
                                 disabled: !B,
-                                "aria-label": v.intl.string(v.t.H4hwjn),
+                                "aria-label": E.intl.string(E.t.H4hwjn),
                                 "aria-hidden": !B && A,
                                 "aria-controls": I,
                             }),
@@ -250,13 +254,13 @@ let A = function (e) {
                       id: I,
                       "aria-label": C,
                       ref: H,
-                      className: u()(x.Y_, { [x.jL]: Y, [x.w6]: B, [x.XG]: Y && B, [x.DY]: G }),
-                      ...M,
+                      className: u()(v.Y_, { [v.jL]: Y, [v.w6]: B, [v.XG]: Y && B, [v.DY]: G }),
+                      ...k,
                       tabIndex: -1,
                       onScroll: (e) => {
                           R.current || ((j.current = e.target.scrollLeft), O());
                       },
-                      children: (0, l.jsx)("div", { ...k, className: x.lJ, style: { gap: E(r) }, children: t }),
+                      children: (0, l.jsx)("div", { ...M, className: v.lJ, style: { gap: x(r) }, children: t }),
                   })
                 : (0, l.jsx)(d.B, {
                       direction: "horizontal",
@@ -264,7 +268,7 @@ let A = function (e) {
                       id: I,
                       "aria-label": C,
                       ref: H,
-                      className: u()(x.Y_, { [x.jL]: Y, [x.w6]: B, [x.XG]: Y && B, [x.DY]: G }),
+                      className: u()(v.Y_, { [v.jL]: Y, [v.w6]: B, [v.XG]: Y && B, [v.DY]: G }),
                       tabIndex: 0,
                       onFocus: (e) => {
                           let t = H.current;
@@ -283,7 +287,7 @@ let A = function (e) {
                           }
                       },
                       onBlur: (e) => {
-                          (e.preventDefault(), er());
+                          (e.preventDefault(), el());
                       },
                       onKeyDown: (e) => {
                           let t = H.current;
