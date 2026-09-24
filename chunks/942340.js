@@ -15,31 +15,33 @@ function p() {
         e = (0, n.r)(r.A.colors.MODAL_BACKGROUND),
         t = (0, n.r)(r.A.colors.TEXT_STRONG),
         s = (0, n.r)(r.A.colors.INPUT_BACKGROUND_DEFAULT),
-        i = a.theme ?? "flat",
-        c = a.colorText ?? t.hex(),
-        o = a.colorBackground ?? e.hex(),
-        d = a.inputBackgroundColor ?? s.hex(),
-        h = a.tabBackgroundColor ?? s.hex(),
-        u = a.tabSelectedBackgroundColor ?? null;
+        i = (0, n.r)(r.A.colors.INPUT_BORDER_DEFAULT),
+        c = a.theme ?? "flat",
+        o = a.colorText ?? t.hex(),
+        d = a.colorBackground ?? e.hex(),
+        h = a.inputBackgroundColor ?? s.hex(),
+        u = i.hex(),
+        m = a.tabBackgroundColor ?? s.hex(),
+        p = a.tabSelectedBackgroundColor ?? null;
     return {
         elementsAppearance: l.useMemo(
             () => ({
-                theme: i,
-                variables: { colorText: c, colorBackground: o },
+                theme: c,
+                variables: { colorText: o, colorBackground: d },
                 rules: {
-                    ".Input": { backgroundColor: d },
-                    ".Tab": { backgroundColor: h },
-                    ...(null != u ? { ".Tab--selected": { backgroundColor: u } } : {}),
+                    ".Input": { backgroundColor: h, borderColor: u, borderWidth: "1px", borderStyle: "solid" },
+                    ".Tab": { backgroundColor: m },
+                    ...(null != p ? { ".Tab--selected": { backgroundColor: p } } : {}),
                 },
             }),
-            [i, c, o, d, h, u],
+            [c, o, d, h, u, m, p],
         ),
         elementsAppearanceOptions: {
-            theme: i,
-            colorText: c,
-            colorBackground: o,
-            inputBackgroundColor: d,
-            tabBackgroundColor: h,
+            theme: c,
+            colorText: o,
+            colorBackground: d,
+            inputBackgroundColor: h,
+            tabBackgroundColor: m,
         },
     };
 }
