@@ -8659,7 +8659,7 @@ function ic(e) {
             let l = new ResizeObserver(t);
             return (l.observe(e), () => l.disconnect());
         }, []),
-        a.useEffect(() => () => (0, c.Zq)(0), []));
+        a.useLayoutEffect(() => () => (0, c.Zq)(0), []));
     let $ = Math.max(360, F - 320),
         O = null != M ? M.open : x,
         q = x || m.type === s.U.MAIN;
