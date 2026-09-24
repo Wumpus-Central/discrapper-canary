@@ -2489,6 +2489,10 @@
     width: 100%
 }
 
+.scroller__8e830 {
+    scroll-padding-top: calc(var(--custom-compact-bar-height) + var(--space-4))
+}
+
 .twoColumnMainContent__8e830 {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -2742,4 +2746,4 @@
     width: 55%
 }
 
-/*# sourceMappingURL=f40d17fdb46f62df.css.map*/
+/*# sourceMappingURL=04ac22eeb5b0f5b2.css.map*/

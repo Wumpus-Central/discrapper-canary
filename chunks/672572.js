@@ -5,6 +5,7 @@ _.exports = {
     NC: "buttonsContainer__8e830",
     V0: "sections__8e830",
     kL: "container__8e830",
+    XG: "scroller__8e830",
     jC: "twoColumnMainContent__8e830",
     gF: "topColumnSideBarTopSpacingWithoutStoreLinks__8e830",
     sV: "topColumnSideBarTopSpacingWithStoreLinks__8e830",

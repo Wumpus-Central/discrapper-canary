@@ -3236,6 +3236,7 @@ function lX(e) {
                                   (0, i.jsx)(nc, { show: eN }),
                                   (0, i.jsxs)(j.Ch, {
                                       ref: ev,
+                                      className: tE.XG,
                                       onScroll: eC,
                                       children: [
                                           (0, i.jsx)(nx, {
