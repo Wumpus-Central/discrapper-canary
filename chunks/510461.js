@@ -14,32 +14,32 @@ var n = l(477900),
     x = l(148494),
     g = l(47167),
     C = l(713654),
-    N = l(355622),
-    b = l(408018),
-    S = l(959070),
-    p = l(451909),
+    p = l(355622),
+    N = l(408018),
+    b = l(959070),
+    S = l(451909),
     v = l(135621),
     k = l(976860),
     j = l(808728),
-    E = l(994500),
-    y = l(287809),
+    y = l(994500),
+    E = l(287809),
     P = l(506774),
-    I = l(50617),
-    A = l(375708);
+    A = l(50617),
+    I = l(375708);
 let T = `<#${"9".repeat(20)}>`,
-    V = "VibegrationsPatchNotesLastChannels";
+    V = "VibegrationsPatchNotesLastChannelsByApp";
 function L(e) {
     return `
 
-${A.intl.formatToPlainString(I.default.bhoZhI, { channel: e })}`;
+${I.intl.formatToPlainString(A.default.bhoZhI, { channel: e })}`;
 }
 var w = l(683180),
     G = l(512287),
     M = l(480007),
     _ = l(652215),
     R = l(381941),
-    O = l(286837);
-let B = () => Promise.resolve({ shouldClear: !1, shouldRefocus: !1 });
+    B = l(286837);
+let O = () => Promise.resolve({ shouldClear: !1, shouldRefocus: !1 });
 function H(e) {
     let {
             guildId: t,
@@ -67,10 +67,10 @@ function H(e) {
     K.current = Y;
     let [X, Z] = i.useState("publishing"),
         [z, W] = i.useState(() => {
-            let e = P.w.get(V)?.[t];
+            let e = P.w.get(V)?.[l];
             return null != e && F.some((t) => t.id === e) ? e : null;
         }),
-        [{ textValue: J, richValue: ee }, et] = i.useState(() => (0, b.N3)()),
+        [{ textValue: J, richValue: ee }, et] = i.useState(() => (0, N.N3)()),
         [el, en] = i.useState(!1),
         [ei, ea] = i.useState(!0),
         [es, er] = i.useState(!1),
@@ -108,7 +108,7 @@ function H(e) {
                                 : null == t.notes ||
                                   "" === t.notes ||
                                   eo.current ||
-                                  et((0, b.ur)(t.notes.slice(0, K.current))));
+                                  et((0, N.ur)(t.notes.slice(0, K.current))));
                     },
                     () => {
                         e || (ea(!1), er(!0));
@@ -127,7 +127,7 @@ function H(e) {
                 F.map((e) => ({
                     id: e.id,
                     value: e.id,
-                    label: (0, g.m1)(e, y.default, E.A),
+                    label: (0, g.m1)(e, E.default, y.A),
                     leading: (0, G.A)(e, "VibegrationsPublishNotesModal") ?? (0, C.gU)(e),
                 })),
             [F],
@@ -136,58 +136,58 @@ function H(e) {
         ex = ef ?? F[0] ?? null,
         eg = J.trim(),
         eC = null == U ? null : L(`<#${U}>`),
-        eN = i.useCallback(() => {
+        ep = i.useCallback(() => {
             ((0, k.pX)(null == U ? _.BVt.CHANNEL(t) : _.BVt.CHANNEL(t, U)), D());
         }, [U, t, D]),
-        eb = i.useCallback(async () => {
+        eN = i.useCallback(async () => {
             if (null != ef && "" !== eg) {
                 ed(!0);
                 try {
                     var e;
-                    let l = p.Ay.parse(ef, null == eC ? eg : `${eg}${eC}`),
-                        n = await x.A.sendMessage(ef.id, l, !1, { location: R.Hx.VIBEGRATIONS_PATCH_NOTES });
+                    let t = S.Ay.parse(ef, null == eC ? eg : `${eg}${eC}`),
+                        n = await x.A.sendMessage(ef.id, t, !1, { location: R.Hx.VIBEGRATIONS_PATCH_NOTES });
                     if (n?.ok === !1) throw Error("send failed");
-                    ((e = ef.id), P.w.set(V, { ...P.w.get(V), [t]: e }), D());
+                    ((e = ef.id), P.w.set(V, { ...P.w.get(V), [l]: e }), D());
                 } catch {
-                    ((0, r.P0)((0, u.o)(A.intl.string(I.default.P6SoGm), d.Ck.FAILURE)), ed(!1));
+                    ((0, r.P0)((0, u.o)(I.intl.string(A.default.P6SoGm), d.Ck.FAILURE)), ed(!1));
                 }
             }
-        }, [ef, eg, eC, t, D]);
+        }, [ef, eg, eC, l, D]);
     return (0, n.jsx)(s.Modal, {
         transitionState: q,
         onClose: D,
-        title: A.intl.formatToPlainString(I.default.gOv8LL, { projectName: H }),
+        title: I.intl.formatToPlainString(A.default.gOv8LL, { projectName: H }),
         size: "lg",
         actions: [
             {
-                text: "failed" === X ? A.intl.string(A.t.cpT0Cq) : A.intl.string(I.default.NmaE9T),
+                text: "failed" === X ? I.intl.string(I.t.cpT0Cq) : I.intl.string(A.default.NmaE9T),
                 variant: "secondary",
                 onClick: D,
             },
             {
-                text: A.intl.string(I.default.dx7eQG),
+                text: I.intl.string(A.default.dx7eQG),
                 variant: "primary",
-                onClick: eb,
+                onClick: eN,
                 disabled: "succeeded" !== X || "" === eg || eg.length > Y || null == ef || eu,
                 loading: eu,
             },
         ],
         children: (0, n.jsxs)("div", {
-            className: O.rf,
+            className: B.rf,
             children: [
                 (0, n.jsxs)("div", {
-                    className: O.w0,
+                    className: B.w0,
                     children: [
-                        (0, n.jsx)(o.D, { variant: "heading-md/semibold", children: A.intl.string(I.default.tqtMyS) }),
+                        (0, n.jsx)(o.D, { variant: "heading-md/semibold", children: I.intl.string(A.default.tqtMyS) }),
                         "publishing" === X
                             ? (0, n.jsxs)("div", {
-                                  className: O.G1,
+                                  className: B.G1,
                                   children: [
-                                      (0, n.jsx)(c.y, { type: c.t.SPINNING_CIRCLE_SIMPLE, className: O.n3 }),
+                                      (0, n.jsx)(c.y, { type: c.t.SPINNING_CIRCLE_SIMPLE, className: B.n3 }),
                                       (0, n.jsx)(h.E, {
                                           variant: "text-md/medium",
                                           color: "text-subtle",
-                                          children: A.intl.formatToPlainString(I.default.g5fncX, { projectName: H }),
+                                          children: I.intl.formatToPlainString(A.default.g5fncX, { projectName: H }),
                                       }),
                                   ],
                               })
@@ -198,79 +198,79 @@ function H(e) {
                                             tag: "span",
                                             variant: "text-md/medium",
                                             color: "text-feedback-positive",
-                                            children: A.intl.formatToPlainString(I.default.CC69wK, { projectName: H }),
+                                            children: I.intl.formatToPlainString(A.default.CC69wK, { projectName: H }),
                                         }),
                                         " ",
                                         (0, n.jsx)(m.Q, {
                                             variant: "primary",
                                             textVariant: "text-md/medium",
-                                            onClick: eN,
-                                            text: A.intl.string(A.t.jVcuVY),
+                                            onClick: ep,
+                                            text: I.intl.string(I.t.jVcuVY),
                                         }),
                                     ],
                                 })
                               : (0, n.jsx)(h.E, {
                                     variant: "text-md/medium",
                                     color: "text-feedback-critical",
-                                    children: A.intl.string(I.default.fNP6Cd),
+                                    children: I.intl.string(A.default.fNP6Cd),
                                 }),
                     ],
                 }),
                 null != ex
                     ? (0, n.jsxs)("div", {
-                          className: O.dY,
+                          className: B.dY,
                           children: [
                               (0, n.jsx)(o.D, {
                                   variant: "heading-md/semibold",
-                                  children: A.intl.string(I.default.oouynk),
+                                  children: I.intl.string(A.default.oouynk),
                               }),
                               (0, n.jsxs)("div", {
-                                  className: O.Q2,
+                                  className: B.Q2,
                                   children: [
-                                      (0, n.jsx)(S.Ay, {
-                                          type: N.oU.VIBEGRATIONS_PATCH_NOTES,
+                                      (0, n.jsx)(b.Ay, {
+                                          type: p.oU.VIBEGRATIONS_PATCH_NOTES,
                                           channel: ex,
-                                          accessibilityLabel: A.intl.string(I.default.oouynk),
-                                          placeholder: A.intl.string(ei ? I.default.VQhlkB : I.default.xkxDN1),
+                                          accessibilityLabel: I.intl.string(A.default.oouynk),
+                                          placeholder: I.intl.string(ei ? A.default.VQhlkB : A.default.xkxDN1),
                                           textValue: J,
                                           richValue: ee,
                                           focused: el,
                                           onChange: eh,
                                           onFocus: () => en(!0),
                                           onBlur: () => en(!1),
-                                          onSubmit: B,
+                                          onSubmit: O,
                                           parentModalKey: M.Y,
                                           autoCompletePosition: "bottom",
                                           emojiPickerCloseOnModalOuterClick: !0,
                                           disableThemedBackground: !0,
                                           maxCharacterCount: Y,
-                                          editorClassName: O.Tw,
+                                          editorClassName: B.Tw,
                                       }),
                                       ei
-                                          ? (0, n.jsx)(c.y, { type: c.t.SPINNING_CIRCLE_SIMPLE, className: O.n5 })
+                                          ? (0, n.jsx)(c.y, { type: c.t.SPINNING_CIRCLE_SIMPLE, className: B.n5 })
                                           : null,
                                       es
                                           ? (0, n.jsx)(h.E, {
                                                 variant: "text-sm/normal",
                                                 color: "text-muted",
-                                                children: A.intl.string(I.default.PCST1n),
+                                                children: I.intl.string(A.default.PCST1n),
                                             })
                                           : null,
                                       (0, n.jsxs)("div", {
-                                          className: O.Q6,
+                                          className: B.Q6,
                                           children: [
                                               (0, n.jsx)(h.E, {
                                                   variant: "text-sm/medium",
                                                   color: "text-subtle",
-                                                  children: A.intl.string(I.default.IcSdnu),
+                                                  children: I.intl.string(A.default.IcSdnu),
                                               }),
                                               (0, n.jsx)(f.Z, {
                                                   selectionMode: "single",
-                                                  label: A.intl.string(I.default.IcSdnu),
+                                                  label: I.intl.string(A.default.IcSdnu),
                                                   hideLabel: !0,
                                                   options: em,
                                                   value: z ?? void 0,
-                                                  placeholder: A.intl.string(I.default["8qO519"]),
+                                                  placeholder: I.intl.string(A.default["8qO519"]),
                                                   onSelectionChange: (e) => {
                                                       ((ec.current = !0), W(e));
                                                   },
