@@ -5645,6 +5645,18 @@
     }
   },
   {
+    "name": "2026-09-web-sticker-picker-upsell-restyle",
+    "kind": "user",
+    "defaultConfig": false,
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": true
+    }
+  },
+  {
     "kind": "user",
     "name": "2026-09-youtube-3p",
     "defaultConfig": {

@@ -198,6 +198,28 @@
     filter: grayscale(100%)
 }
 
+.stickerLocked_c6367b {
+    filter: brightness(.4)
+}
+
+.theme-light .stickerLocked_c6367b {
+    filter: none;
+    opacity: .4
+}
+
+.lockIconContainer_c6367b {
+    align-items: center;
+    display: flex;
+    inset: 0;
+    justify-content: center;
+    pointer-events: none;
+    position: absolute
+}
+
+.lockIcon_c6367b {
+    color: var(--icon-strong)
+}
+
 .keyboard-mode .stickerInspected_c6367b {
     position: relative
 }
@@ -603,4 +625,4 @@
     gap: var(--space-4)
 }
 
-/*# sourceMappingURL=678906.8d928f079d6635f0.css.map*/
+/*# sourceMappingURL=678906.824786c144f2dd9f.css.map*/

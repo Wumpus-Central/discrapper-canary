@@ -13,4 +13,7 @@ e.exports = {
     ot: "stickerNodeDimmed_c6367b",
     Q$: "stickerNodeHidden_c6367b",
     No: "stickerUnsendable_c6367b",
+    UK: "stickerLocked_c6367b",
+    MC: "lockIconContainer_c6367b",
+    hz: "lockIcon_c6367b",
 };

@@ -44,6 +44,8 @@ function D(e) {
             onDisplay: G,
             onUpsellClicked: F,
             isEmojiPickerOverlay: H = !1,
+            graphic: B,
+            useNitroGradient: W = !1,
         } = e;
     i.useEffect(() => {
         (C.default.track(R.HAw.PREMIUM_UPSELL_VIEWED, U),
@@ -52,104 +54,99 @@ function D(e) {
             ),
             G?.());
     }, [G, U]);
-    let B = (0, v.V)(),
-        W = i.useCallback(() => (0, I.LE)(B, T.pe.TIER_2) ?? M.intl.string(M.t.pj0XBN), [B]),
-        K = (0, N.A)(T.pe.TIER_2),
-        z = (0, _.O9)();
-    return (
-        (t = H
-            ? (0, E.TM)()
-                ? "https://cdn.discordapp.com/assets/content/c0f100da7d39f5e84ae361150c05077f9ca94ea62d0f7dd086ba1aa8fe17ae68.mov"
-                : "https://cdn.discordapp.com/assets/content/75e94ffcd07b3b84cdd4305c93b43b3c94bf3ae56ace551f59b8dba7f3616c1c.webm"
-            : (0, E.TM)()
-              ? w.A
-              : P.A),
-        (0, l.jsxs)(l.Fragment, {
-            children: [
-                (0, l.jsx)(u.p, { onClick: V, isVisible: !0 }),
-                (0, l.jsx)(c.h, {
-                    color: H ? "nitro-pink" : "green",
-                    className: L.kL,
-                    children: (0, l.jsxs)(d.l, {
-                        "aria-label": n,
-                        className: L.r3,
-                        children: [
-                            (0, l.jsxs)("div", {
-                                className: L.Qs,
-                                children: [
-                                    (0, l.jsx)(o.s_, { "data-migration-pending": !0, onClick: V, className: L.b }),
-                                    (0, l.jsxs)("div", {
-                                        className: L.hQ,
-                                        children: [
-                                            (0, l.jsx)("div", {
-                                                className: k.headerGraphic,
-                                                children: (0, l.jsx)(h.v, {
-                                                    type: "video",
-                                                    src: t,
-                                                    loop: !0,
-                                                    loopAt: 5,
-                                                }),
-                                            }),
-                                            null != K && (0, l.jsx)(a.E, { type: { text: K }, variant: "brand" }),
-                                            (0, l.jsx)(m.D, {
-                                                className: r()(L.DD, { [L.GU]: null != K }),
-                                                variant: "heading-xl/bold",
-                                                color: "text-strong",
-                                                children: n,
-                                            }),
-                                            (0, l.jsx)(f.E, {
-                                                variant: "text-md/medium",
-                                                color: "text-subtle",
-                                                className: L.rf,
-                                                children: s,
-                                            }),
-                                        ],
-                                    }),
-                                    H &&
-                                        z &&
-                                        (0, l.jsx)("div", {
-                                            className: L.Zr,
-                                            children: (0, l.jsx)(j.A, { subtitle: M.intl.string(O.default.BkJYQ5) }),
-                                        }),
-                                ],
-                            }),
-                            (0, l.jsx)("div", {
-                                className: L.qr,
-                                children: (0, l.jsxs)("div", {
-                                    className: L.UD,
+    let K = (0, v.V)(),
+        z = i.useCallback(() => (0, I.LE)(K, T.pe.TIER_2) ?? M.intl.string(M.t.pj0XBN), [K]),
+        Z = (0, N.A)(T.pe.TIER_2),
+        Y = (0, _.O9)();
+    t = H
+        ? (0, E.TM)()
+            ? "https://cdn.discordapp.com/assets/content/c0f100da7d39f5e84ae361150c05077f9ca94ea62d0f7dd086ba1aa8fe17ae68.mov"
+            : "https://cdn.discordapp.com/assets/content/75e94ffcd07b3b84cdd4305c93b43b3c94bf3ae56ace551f59b8dba7f3616c1c.webm"
+        : (0, E.TM)()
+          ? w.A
+          : P.A;
+    let q = H || W ? "nitro-pink" : "green";
+    return (0, l.jsxs)(l.Fragment, {
+        children: [
+            (0, l.jsx)(u.p, { onClick: V, isVisible: !0 }),
+            (0, l.jsx)(c.h, {
+                color: q,
+                className: L.kL,
+                children: (0, l.jsxs)(d.l, {
+                    "aria-label": n,
+                    className: L.r3,
+                    children: [
+                        (0, l.jsxs)("div", {
+                            className: L.Qs,
+                            children: [
+                                (0, l.jsx)(o.s_, { "data-migration-pending": !0, onClick: V, className: L.b }),
+                                (0, l.jsxs)("div", {
+                                    className: L.hQ,
                                     children: [
-                                        (0, l.jsx)(p.$, {
-                                            variant: "secondary",
-                                            onClick: function () {
-                                                (C.default.track(R.HAw.PREMIUM_PROMOTION_OPENED, {
-                                                    location_section: D,
-                                                    location_object: R.ZSU.NAVIGATION_LINK,
-                                                }),
-                                                    F?.(),
-                                                    (0, x.A)(),
-                                                    V(),
-                                                    (0, g.jH)(),
-                                                    (0, A.pX)(R.BVt.APPLICATION_STORE));
-                                            },
-                                            text: M.intl.string(M.t.ZnqyZ2),
-                                            fullWidth: !0,
+                                        (0, l.jsx)("div", {
+                                            className: k.headerGraphic,
+                                            children:
+                                                B ?? (0, l.jsx)(h.v, { type: "video", src: t, loop: !0, loopAt: 5 }),
                                         }),
-                                        (0, l.jsx)(b.A, {
-                                            premiumModalAnalyticsLocation: { section: D, object: R.ZSU.BUTTON_CTA },
-                                            subscriptionTier: T.pe.TIER_2,
-                                            onClick: () => {
-                                                (V(), F?.());
-                                            },
-                                            defaultTextOverride: W(),
-                                            fullWidth: !0,
+                                        null != Z && (0, l.jsx)(a.E, { type: { text: Z }, variant: "brand" }),
+                                        (0, l.jsx)(m.D, {
+                                            className: r()(L.DD, { [L.GU]: null != Z }),
+                                            variant: "heading-xl/bold",
+                                            color: "text-strong",
+                                            children: n,
+                                        }),
+                                        (0, l.jsx)(f.E, {
+                                            variant: "text-md/medium",
+                                            color: "text-subtle",
+                                            className: L.rf,
+                                            children: s,
                                         }),
                                     ],
                                 }),
+                                H &&
+                                    Y &&
+                                    (0, l.jsx)("div", {
+                                        className: L.Zr,
+                                        children: (0, l.jsx)(j.A, { subtitle: M.intl.string(O.default.BkJYQ5) }),
+                                    }),
+                            ],
+                        }),
+                        (0, l.jsx)("div", {
+                            className: L.qr,
+                            children: (0, l.jsxs)("div", {
+                                className: L.UD,
+                                children: [
+                                    (0, l.jsx)(p.$, {
+                                        variant: "secondary",
+                                        onClick: function () {
+                                            (C.default.track(R.HAw.PREMIUM_PROMOTION_OPENED, {
+                                                location_section: D,
+                                                location_object: R.ZSU.NAVIGATION_LINK,
+                                            }),
+                                                F?.(),
+                                                (0, x.A)(),
+                                                V(),
+                                                (0, g.jH)(),
+                                                (0, A.pX)(R.BVt.APPLICATION_STORE));
+                                        },
+                                        text: M.intl.string(M.t.ZnqyZ2),
+                                        fullWidth: !0,
+                                    }),
+                                    (0, l.jsx)(b.A, {
+                                        premiumModalAnalyticsLocation: { section: D, object: R.ZSU.BUTTON_CTA },
+                                        subscriptionTier: T.pe.TIER_2,
+                                        onClick: () => {
+                                            (V(), F?.());
+                                        },
+                                        defaultTextOverride: z(),
+                                        fullWidth: !0,
+                                    }),
+                                ],
                             }),
-                        ],
-                    }),
+                        }),
+                    ],
                 }),
-            ],
-        })
-    );
+            }),
+        ],
+    });
 }
