@@ -25701,7 +25701,7 @@ function Av(e) {
                     (0, p.jsx)("div", {
                         className: k()(A_.aO, { [A_.r9]: !t }),
                         children: (0, p.jsxs)("div", {
-                            inert: t ? void 0 : "",
+                            inert: !t,
                             children: [
                                 (0, p.jsx)(D.D, {
                                     variant: "text-xs/bold",

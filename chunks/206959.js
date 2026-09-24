@@ -1879,12 +1879,10 @@ class er extends d.A {
             e.setSystemMicrophoneModeChangeCallback?.(this.handleSystemMicrophoneModeChangeCallback),
             this.on("removeListener", this.handleRemoveListener),
             this.on("newListener", this.handleNewListener),
-            null != (0, v.lE)().getAudioSubsystem
-                ? (0, v.lE)().getAudioSubsystem((e, t) => {
-                      ((this.audioSubsystem = e), (this.audioLayer = t));
-                  })
-                : null != (0, v.lE)().getUseLegacyAudioDevice &&
-                  (this.audioSubsystem = (0, v.lE)().getUseLegacyAudioDevice() ? C.rB.LEGACY : C.rB.STANDARD),
+            null != (0, v.lE)().getAudioSubsystem &&
+                (0, v.lE)().getAudioSubsystem((e, t) => {
+                    ((this.audioSubsystem = e), (this.audioLayer = t));
+                }),
             null != e.pingVoiceThread && this.watchdogTick(),
             null != e.setActiveSinksChangeCallback && e.setActiveSinksChangeCallback(this.handleActiveSinksChange),
             e.setClipsV3Enabled?.(!0),
@@ -2409,9 +2407,7 @@ class er extends d.A {
         return null;
     }
     setAudioSubsystem(e) {
-        null != (0, v.lE)().setAudioSubsystem
-            ? (0, v.lE)().setAudioSubsystem(e)
-            : (0, v.lE)().setUseLegacyAudioDevice(e === C.rB.LEGACY);
+        null != (0, v.lE)().setAudioSubsystem && (0, v.lE)().setAudioSubsystem(e);
     }
     setOffloadAdmControls(e) {
         let t = (0, v.lE)();
