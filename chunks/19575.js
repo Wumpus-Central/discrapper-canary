@@ -129,6 +129,7 @@ var i,
         (i.SYSTEM_TRAY_SET_ICON = "DISCORD_SYSTEM_TRAY_SET_ICON"),
         (i.SYSTEM_TRAY_SET_APPLICATIONS = "DISCORD_SYSTEM_TRAY_SET_APPLICATIONS"),
         (i.SYSTEM_TRAY_SET_STATES = "DISCORD_SYSTEM_TRAY_SET_STATES"),
+        (i.SYSTEM_TRAY_SET_STRINGS = "DISCORD_SYSTEM_TRAY_SET_STRINGS"),
         (i.THUMBAR_BUTTONS_UPDATE = "DISCORD_THUMBAR_BUTTONS_UPDATE"),
         (i.THUMBAR_BUTTONS_CLICKED = "DISCORD_THUMBAR_BUTTONS_CLICKED"),
         (i.TRACING_CAPTURE_PERFORMANCE = "DISCORD_TRACING_CAPTURE_PERFORMANCE"),
@@ -458,6 +459,9 @@ let K = {
         setSystemTrayStates(e) {
             Y(c.SYSTEM_TRAY_SET_STATES, e);
         },
+        setSystemTrayStrings(e) {
+            Y(c.SYSTEM_TRAY_SET_STRINGS, e);
+        },
         setThumbarButtons(e) {
             f.isPlatformEmbedded && m.thumbar?.setThumbarButtons?.(e, this.isSystemDarkMode());
         },
@@ -479,6 +483,19 @@ let K = {
         get releaseChannel() {
             if (!f.isPlatformEmbedded) return "";
             return m.app.getReleaseChannel();
+        },
+        get friendlyReleaseName() {
+            switch (this.releaseChannel) {
+                case "development":
+                    return "Discord Development";
+                case "canary":
+                    return "Discord Canary";
+                case "ptb":
+                    return "Discord PTB";
+                case "stable":
+                case "":
+                    return "Discord";
+            }
         },
         get version() {
             return O;

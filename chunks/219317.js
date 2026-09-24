@@ -13366,12 +13366,7 @@ function md(e) {
             secondaryColor: ed.A.unsafe_rawColors.WHITE.css,
             className: mo.Kk,
         }),
-        E = (0, p.jsx)(lM.a, {
-            size: "sm",
-            className: mo.Kk,
-            color: ed.A.colors.WHITE.css,
-            secondaryColor: ed.A.colors.BACKGROUND_MOD_MUTED.css,
-        }),
+        E = (0, p.jsx)(lM.a, { size: "sm", className: mo.Kk, color: ed.A.colors.TEXT_MUTED.css }),
         j = [(Math.min(uH.Kd, m) / uH.Kd) * 100],
         f = g ? [ed.A.colors.TEXT_FEEDBACK_POSITIVE.css] : [ed.A.colors.TEXT_BRAND.css];
     return (0, p.jsxs)("div", {
@@ -13412,8 +13407,7 @@ function md(e) {
                             children: [
                                 (0, p.jsx)(lU.CircleInformationIcon, {
                                     size: "sm",
-                                    color: ed.A.colors.WHITE.css,
-                                    secondaryColor: ed.A.colors.BACKGROUND_MOD_MUTED.css,
+                                    color: ed.A.colors.TEXT_MUTED.css,
                                     className: mo.Kk,
                                 }),
                                 (0, p.jsx)(G.E, {
@@ -13428,8 +13422,7 @@ function md(e) {
                             children: [
                                 (0, p.jsx)(lU.CircleInformationIcon, {
                                     size: "sm",
-                                    color: ed.A.colors.WHITE.css,
-                                    secondaryColor: ed.A.colors.BACKGROUND_MOD_MUTED.css,
+                                    color: ed.A.colors.TEXT_MUTED.css,
                                     className: mo.Kk,
                                 }),
                                 (0, p.jsx)(G.E, {
