@@ -20,7 +20,7 @@ function x(e) {
 function C(e) {
     return e.skuId;
 }
-function v(e) {
+function A(e) {
     let { isLoading: t, products: r, tab: l } = e,
         s = (0, p.Mk)(l);
     return t
@@ -36,7 +36,7 @@ function v(e) {
               }),
           });
 }
-function A(e) {
+function v(e) {
     let { isLoading: t, products: r, tab: l } = e,
         i = (0, p.Mk)(l),
         o = E.intl.string(E.t.HP8LNG);
@@ -106,8 +106,8 @@ let I = function (e) {
         S = l.useMemo(() => p.filter((e) => null != o.A.getCategoryForProduct(e.skuId)), [p]);
     switch (i) {
         case "feed":
-            return (0, n.jsx)(v, { isLoading: E, products: S, tab: u });
-        case "hscroll":
             return (0, n.jsx)(A, { isLoading: E, products: S, tab: u });
+        case "hscroll":
+            return (0, n.jsx)(v, { isLoading: E, products: S, tab: u });
     }
 };

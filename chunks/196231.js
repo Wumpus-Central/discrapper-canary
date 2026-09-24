@@ -34,10 +34,10 @@ function v(e) {
         { handleCardVisibilityChange: O } = (0, h.Z)(k, _, "marketing featured block"),
         j = (0, E.s4)(t, r, v),
         b = l.useRef(null),
-        P = r?.bodyText,
-        B = r?.name ?? t?.name,
-        N = null != B ? C.intl.formatToPlainString(C.t.frSHlf, { destination: B }) : void 0,
-        R = (0, m.uM)();
+        N = r?.bodyText,
+        P = r?.name ?? t?.name,
+        B = null != P ? C.intl.formatToPlainString(C.t.frSHlf, { destination: P }) : void 0,
+        T = (0, m.uM)();
     return (0, n.jsx)(i.L, {
         innerRef: b,
         onChange: O,
@@ -55,13 +55,13 @@ function v(e) {
                     isOrbsExclusive: t?.isOrbsExclusive,
                 }),
                     g.default.track(x.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                        collectibles_shop_session_id: R?.sessionId,
+                        collectibles_shop_session_id: T?.sessionId,
                         sku_id: k,
                         page_type: _,
-                        page_section: R?.pageSection,
-                        page_category: R?.pageCategory,
+                        page_section: T?.pageSection,
+                        page_category: T?.pageCategory,
                         tile_type: "FEATURED_BLOCK",
-                        tile_position: String(R?.tilePosition),
+                        tile_position: String(T?.tilePosition),
                         cta_name: null,
                     }));
             },
@@ -70,13 +70,13 @@ function v(e) {
                 (0, n.jsx)("div", {
                     className: A.Gh,
                     children:
-                        null != P &&
+                        null != N &&
                         (0, n.jsx)(c.D, {
                             lineClamp: 4,
                             className: A.BN,
                             style: { color: r?.bannerTextColor ?? "white" },
                             variant: "heading-md/medium",
-                            children: P,
+                            children: N,
                         }),
                 }),
                 (0, n.jsx)("div", {
@@ -84,7 +84,7 @@ function v(e) {
                     children: (0, n.jsx)(d.$, {
                         variant: "overlay-primary",
                         text: C.intl.string(C.t.jVcuVY),
-                        "aria-label": N,
+                        "aria-label": B,
                         tabIndex: y?.tabIndex,
                         onClick: (e) => {
                             (L({
@@ -95,13 +95,13 @@ function v(e) {
                             }),
                                 e.stopPropagation(),
                                 g.default.track(x.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                                    collectibles_shop_session_id: R?.sessionId,
+                                    collectibles_shop_session_id: T?.sessionId,
                                     sku_id: k,
                                     page_type: _,
-                                    page_section: R?.pageSection,
-                                    page_category: R?.pageCategory,
+                                    page_section: T?.pageSection,
+                                    page_category: T?.pageCategory,
                                     tile_type: "FEATURED_BLOCK",
-                                    tile_position: String(R?.tilePosition),
+                                    tile_position: String(T?.tilePosition),
                                     cta_name: "Take me there button",
                                 }));
                         },
