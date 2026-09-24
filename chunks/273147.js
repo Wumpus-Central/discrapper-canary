@@ -119,8 +119,9 @@ let es = r._3.SIZE_96,
     er = { ...ea, "--custom-user-profile-private-banner-height": "32px" };
 function eo(e) {
     let { user: t, guildId: n, channelId: l } = e;
-    return (0, I.A)(t)
-        ? (0, i.jsx)(T.A, {
+    return !(0, I.A)(t) || t.isNonUserBot()
+        ? null
+        : (0, i.jsx)(T.A, {
               user: t,
               className: el.I0,
               onOpenProfile: (e) =>
@@ -131,8 +132,7 @@ function eo(e) {
                       tabSection: e,
                       hideRestrictedProfile: !0,
                   }),
-          })
-        : null;
+          });
 }
 function ec(e) {
     let { user: t, guildId: n, channelId: r, messageId: A, headingRef: I } = e,
