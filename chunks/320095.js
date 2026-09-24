@@ -111,6 +111,7 @@ function N(e) {
             giftInfo: null == C ? void 0 : C,
             giftingPrompt: O,
             boostingPrompt: e.boosting_prompt,
+            guildSpaceData: e.guild_space_data,
         })
     );
 }

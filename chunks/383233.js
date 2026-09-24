@@ -94,6 +94,7 @@ let E = class extends c {
     changelogId;
     mediaMention;
     additionalName;
+    guildSpaceData;
     colorString;
     nick;
     constructor(e) {
@@ -144,7 +145,8 @@ let E = class extends c {
             (this.isUnsupported = e.isUnsupported || !1),
             (this.changelogId = e.changelog_id ?? (e.changelogId || null)),
             (this.mediaMention = e.media_mention ?? e.mediaMention ?? null),
-            (this.additionalName = e.lobby_member?.additional_name ?? e.additionalName ?? null));
+            (this.additionalName = e.lobby_member?.additional_name ?? e.additionalName ?? null),
+            (this.guildSpaceData = e.guild_space_data ?? e.guildSpaceData ?? null));
     }
     isEdited() {
         return null != this.editedTimestamp;
