@@ -78,8 +78,8 @@ function k(e) {
         H = n.useCallback(() => {
             i && "" === L && d(!1);
         }, [i, L]),
-        P = i && !p,
-        x = (0, a.jsx)(c.D, {
+        x = i && !p,
+        P = (0, a.jsx)(c.D, {
             className: h.qc,
             onClick: N,
             children: (0, a.jsx)(T.MagnifyingGlassIcon, { size: "sm", color: C.A.colors.INTERACTIVE_ICON_DEFAULT }),
@@ -95,8 +95,8 @@ function k(e) {
             placeholder: "en-US" === S ? y.intl.string(y.t.arz34K) : y.intl.string(y.t["hIt/Nm"]),
         }),
         j = { "--custom-search-bar-width": `${R.rr}px`, "--custom-search-bar-icon-width": `${R.Dy}px` };
-    return P
-        ? (0, a.jsx)("div", { style: j, children: x })
+    return x
+        ? (0, a.jsx)("div", { style: j, children: P })
         : (0, a.jsx)("div", {
               className: s()(h.ON, { [h.Nz]: p }),
               style: j,
@@ -114,13 +114,13 @@ let H = (0, l(945810).mj)({
     defaultConfig: { enabled: !1 },
     variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
 });
-var P = l(288106),
-    x = l(223311),
+var x = l(288106),
+    P = l(223311),
     v = l(65238),
     j = l(758461),
-    w = l(151115),
-    D = l(812729),
-    V = l.n(D),
+    D = l(151115),
+    V = l(812729),
+    w = l.n(V),
     U = l(627363),
     K = l(587895),
     z = l(733391),
@@ -149,7 +149,7 @@ function et(e) {
         I = (0, Z.yB)("CollectiblesShopHeaderBar"),
         { searchQuery: g } = (0, G.v)(),
         h = n.useRef(null),
-        [D, et] = n.useState(!1);
+        [V, et] = n.useState(!1);
     (0, L.g)(
         h,
         n.useCallback((e) => {
@@ -238,7 +238,7 @@ function et(e) {
                                           ];
                                 }),
                             [a],
-                            V(),
+                            w(),
                         );
                     return {
                         gameShops: n.useMemo(
@@ -257,7 +257,7 @@ function et(e) {
                 })({ enabled: u }),
                 O = null != (0, j.HH)(),
                 A =
-                    ((t = (0, x.A)(B.FYj)),
+                    ((t = (0, P.A)(B.FYj)),
                     (l = (0, v.XF)(t)),
                     (a = l?.shared.navigation?.tab),
                     (i = a?.title),
@@ -266,7 +266,7 @@ function et(e) {
                     (c = t?.rewardStatus),
                     n.useMemo(
                         () =>
-                            null == i || null == o || c === P.GM.CONSUMED
+                            null == i || null == o || c === x.GM.CONSUMED
                                 ? null
                                 : { title: i, icon: s, collectionId: o },
                         [i, s, o, c],
@@ -286,7 +286,6 @@ function et(e) {
                             key: l,
                             text: y.intl.string(a),
                             onClick: () => e(l),
-                            badge: l === R.G2.PROFILE_FRAMES ? "new" : void 0,
                             trailingIndicator: null != n ? { type: "icon", icon: n } : void 0,
                         };
                     }),
@@ -337,7 +336,7 @@ function et(e) {
                     null != A)
                 ) {
                     let e = B.BVt.COLLECTIBLES_SHOP_COLLECTION_DETAIL(A.collectionId),
-                        t = (0, w.s)(A.icon);
+                        t = (0, D.s)(A.icon);
                     l.push({
                         type: "page",
                         key: R.G2.PROMOTION,
@@ -374,7 +373,7 @@ function et(e) {
             className: s()(ee.jr, { [Z.jP]: I }),
             toolbar: (0, a.jsxs)(a.Fragment, {
                 children: [
-                    (0, a.jsx)(k, { handleTransition: i, selectedTab: t, isNarrow: D, hasText: "" !== g }),
+                    (0, a.jsx)(k, { handleTransition: i, selectedTab: t, isNarrow: V, hasText: "" !== g }),
                     (0, a.jsx)(c.D, {
                         className: ee.ij,
                         onClick: en,

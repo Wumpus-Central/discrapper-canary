@@ -1636,18 +1636,15 @@ function nf(e) {
             [tN.q.PROFILE_FRAME]: es.intl.string(es.t.ecTJkR),
             [tN.q.BUNDLE]: es.intl.string(es.t.FYFpps),
         },
-        { itemTypeFilters: l, onToggleItemType: a } = (0, T.v)(),
-        r = (0, i.jsx)(t6.S, {
-            checked: l.has(t),
-            onChange: () => {
-                let e = s[t]?.toLowerCase() != null ? s[t].toLowerCase() : t;
-                (n(`filter item type ${e} ${!1 === l.has(t) ? "on" : "off"}`), a(t));
-            },
-            label: s[t] ?? "",
-        });
-    return t === tN.q.PROFILE_FRAME
-        ? (0, i.jsxs)("div", { className: nE.Ym, children: [r, (0, i.jsx)(t7.E, { type: "new" })] })
-        : r;
+        { itemTypeFilters: l, onToggleItemType: a } = (0, T.v)();
+    return (0, i.jsx)(t6.S, {
+        checked: l.has(t),
+        onChange: () => {
+            let e = s[t]?.toLowerCase() != null ? s[t].toLowerCase() : t;
+            (n(`filter item type ${e} ${!1 === l.has(t) ? "on" : "off"}`), a(t));
+        },
+        label: s[t] ?? "",
+    });
 }
 function np(e) {
     let { trackFilterAction: t } = e,
