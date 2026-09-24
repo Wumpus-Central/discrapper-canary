@@ -79,6 +79,59 @@ let h = [
     A.M.NITRO_FILE_UPLOAD_1GB_UPSELL,
     A.M.REFERRAL_PROGRAM_INCENTIVE_POPOVER,
     A.M.YOUTUBE_3P_POPOVER,
+    A.M.DISPLAY_NAME_STYLES_FLYWHEEL_MOBILE_COACHMARK,
+    A.M.DISPLAY_NAME_STYLES_FLYWHEEL_COACHMARK,
+    A.M.DISPLAY_NAME_STYLES_FLYWHEEL_MOBILE_PROFILE_COACHMARK,
+    A.M.DISPLAY_NAME_STYLES_MOBILE_PROFILE_TOOLTIP,
+    A.M.DISPLAY_NAME_STYLES_MOBILE_ANNOUNCEMENT_MODAL,
+    A.M.DISPLAY_NAME_STYLES_MOBILE_NEW_BADGE,
+    A.M.CUSTOM_THEME_COACHMARK,
+    A.M.CUSTOM_TYPING_INDICATOR_MOBILE_COACHMARK,
+    A.M.CUSTOM_TYPING_INDICATOR_MOBILE_PROFILE_COACHMARK,
+    A.M.BADGE_CUSTOMIZATION_WEB_COACHMARK,
+    A.M.BADGE_CUSTOMIZATION_COACHMARK,
+    A.M.NITRO_TENURE_BADGE_LEVEL_UP,
+    A.M.TIERED_TENURE_BADGE_COACHMARK,
+    A.M.CUSTOM_APP_ICONS_COACHMARK,
+    A.M.CLIENT_THEMES_COACHMARK,
+    A.M.CHURN_DISCOUNT_PREMIUM_TAB_COACHMARK,
+    A.M.DISPLAY_NAME_STYLES_COACHMARK,
+    A.M.DISPLAY_NAME_STYLES_NEW_BADGE,
+    A.M.DISPLAY_NAME_STYLES_NEW_BADGE_PROFILE_PAGE,
+    A.M.DISPLAY_NAME_STYLES_NITRO_HOME_TILE,
+    A.M.TRIAL_NUX_STREAM_COACH_MARK,
+    A.M.TRIAL_FOR_ALL_DESKTOP_MODAL,
+    A.M.NITRO_GDM_CAP_COACHMARK,
+    A.M.SEPTEMBER_MARKETING_MOMENT_ANNOUNCEMENT_MODAL,
+    A.M.L_3PP_NITRO_TOOLTIP,
+    A.M.L_3PP_NON_NITRO_POPOVER,
+    A.M.RECURRING_3P_PROMOTION_POPOVER,
+    A.M.MOBILE_REFERRAL_PROGRAM_BOTTOM_SHEET_ENTRYPOINT,
+    A.M.GAME_WIDGETS_USER_PROFILE_ACCOUNT_POPOUT_UPSELL,
+    A.M.WIDGETS_RTC_UPSELL_COACHMARK,
+    A.M.SHOP_THIS_LOOK_WEB_MARKETING,
+    A.M.COLLECTIBLES_PROFILE_FRAMES_ANNOUNCEMENT,
+    A.M.WISHLIST_MOBILE_YOU_SCREEN_COACHMARK,
+    A.M.WISHLIST_MOBILE_VIEWER_COACHMARK,
+    A.M.WISHLIST_SHOP_BUTTON_POPOVER,
+    A.M.WISHLIST_MOBILE_NUX_PRODUCT_CARD_COACHMARK,
+    A.M.GAME_SHOP_NEW_DROP_POPOVER,
+    A.M.GAME_SHOP_RTC_POPOVER,
+    A.M.COLLECTIBLES_MOBILE_SHOP_HALF_SHEET,
+    A.M.COLLECTIBLES_MOBILE_SHOP_MARKETING,
+    A.M.NEW_GIFTING_BADGES_COACHMARK,
+    A.M.QUEST_HOME_ENTRYPOINT_ONBOARDING,
+    A.M.QUEST_ACTIVITY_HEADER_INTRO,
+    A.M.PREMIUM_ORBS_REWARDS_DROP_POPOVER,
+    A.M.PREMIUM_ORBS_REWARDS_INTRO_POPOVER,
+    A.M.ORB_WALLET_PROFILE_INTRODUCTION_COACHMARK,
+    A.M.GUILD_POWERUP_NOTIFICATION,
+    A.M.GUILD_POWERUP_PERKS_COACHMARK,
+    A.M.GUILD_POWERUPS_OVERVIEW_SIDEBAR_COACHMARK,
+    A.M.BOOST_PROGRESS_BAR_MOBILE_COACHMARK,
+    A.M.GUILD_HEADER_COACHMARK,
+    A.M.GAME_SERVER_HOSTING_NEW_PERK_AVAILABLE_COACHMARK,
+    A.M.GAME_SERVER_HOSTING_BATCH_RELEASE_V2_COACHMARK,
     A.M.MOBILE_NITRO_HOME_SETTINGS_BADGE,
     A.M.GUILD_POWERUP_NEW_PERK_AVAILABLE_COACHMARK,
     A.M.GAME_SERVER_HOSTING_NEW_COACHMARK,
@@ -92,8 +145,8 @@ var I = n(652215);
 let f = new Set(h),
     p = new r.A(1e3, 6e4),
     T = {},
-    g = null;
-function m() {
+    m = null;
+function g() {
     return {
         candidates: new Map(),
         shownFatigableCandidate: null,
@@ -105,7 +158,7 @@ function m() {
         postConnectionOpen: !1,
     };
 }
-let S = (0, i.h)(m),
+let S = (0, i.h)(g),
     N = !1;
 function C(e) {
     return {
@@ -183,8 +236,8 @@ async function v(e, t) {
 }
 let b = new o.OC(
     async (e) => {
-        let t = g;
-        if (((g = null), null == t || t.epoch !== T)) return;
+        let t = m;
+        if (((m = null), null == t || t.epoch !== T)) return;
         if ("retry" === t.source && G()) return void p.succeed();
         let n = await v(e, t);
         if (n.context.epoch !== T) return;
@@ -265,10 +318,10 @@ function P(e) {
 }
 function U(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : T;
-    n === T && (b.isPending() || (g = { epoch: n, source: t }), b.queue(e).catch(I.tEg));
+    n === T && (b.isPending() || (m = { epoch: n, source: t }), b.queue(e).catch(I.tEg));
 }
 function w() {
-    ((T = {}), (g = null), p.succeed(), b.reset());
+    ((T = {}), (m = null), p.succeed(), b.reset());
 }
 function G() {
     return x(S.getState());
@@ -320,7 +373,7 @@ function j() {
 function W() {
     ((0, a.r)(() => {
         S.setState(() => {
-            let e = m();
+            let e = g();
             return ((e.postConnectionOpen = !0), e);
         });
     }),
