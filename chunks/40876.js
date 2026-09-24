@@ -497,7 +497,12 @@ let r = {
     },
     StaffMemberPreloaderManager: { actions: ["POST_CONNECTION_OPEN"], inlineRequire: () => n(714449).A },
     StorefrontPromotionManager: {
-        actions: ["SKU_PURCHASE_SUCCESS", "PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS", "BILLING_SUBSCRIPTION_UPDATE_SUCCESS"],
+        actions: [
+            "SKU_PURCHASE_SUCCESS",
+            "GIFT_CODE_REDEEM_SUCCESS",
+            "PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS",
+            "BILLING_SUBSCRIPTION_UPDATE_SUCCESS",
+        ],
         inlineRequire: () => n(117749).A,
     },
     SubscriptionManager: { actions: ["POST_CONNECTION_OPEN"], inlineRequire: () => n(344584).A },

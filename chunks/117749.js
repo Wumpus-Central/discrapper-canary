@@ -1,24 +1,33 @@
-n.d(t, { A: () => c });
+n.d(t, { A: () => u });
 var i = n(439372),
-    r = n(67480),
-    a = n(828596),
-    s = n(918467),
-    l = n(652215),
-    o = n(202541);
-class d extends i.A {
+    r = n(30793),
+    a = n(67480),
+    s = n(828596),
+    l = n(918467),
+    o = n(652215),
+    d = n(202541);
+class c extends i.A {
     actions = {
         SKU_PURCHASE_SUCCESS: this.onPurchaseSuccess.bind(this),
+        GIFT_CODE_REDEEM_SUCCESS: this.onGiftCodeRedeemSuccess.bind(this),
         PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS: this.onSubscriptionChange.bind(this),
         BILLING_SUBSCRIPTION_UPDATE_SUCCESS: this.onSubscriptionChange.bind(this),
     };
     onPurchaseSuccess(e) {
         let { skuId: t } = e;
-        if (r.A.get(t)?.productLine !== l.EZt.COLLECTIBLES) return;
-        let n = s.A.getPromotionsForApplication(l.FYj);
-        null != n && 0 !== n.length && (0, a.rd)([l.FYj]);
+        this.onCollectiblesAcquired(t);
+    }
+    onGiftCodeRedeemSuccess(e) {
+        let { code: t } = e;
+        this.onCollectiblesAcquired(r.A.get(t)?.skuId);
+    }
+    onCollectiblesAcquired(e) {
+        if (null == e || a.A.get(e)?.productLine !== o.EZt.COLLECTIBLES) return;
+        let t = l.A.getPromotionsForApplication(o.FYj);
+        null != t && 0 !== t.length && (0, s.rd)([o.FYj]);
     }
     onSubscriptionChange() {
-        (0, a.rd)([l.FYj, o.tv]);
+        (0, s.rd)([o.FYj, d.tv]);
     }
 }
-let c = new d();
+let u = new c();
