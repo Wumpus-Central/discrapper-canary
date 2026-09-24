@@ -2161,6 +2161,23 @@
     height: var(--custom-channel-header-height)
 }
 
+.button_b5f5a6 {
+    border-radius: var(--radius-sm);
+    color: var(--icon-muted);
+    cursor: pointer;
+    display: grid;
+    height: 32px;
+    place-items: center;
+    width: 32px
+}
+
+.button_b5f5a6:active,
+.button_b5f5a6:focus,
+.button_b5f5a6:hover {
+    background-color: var(--background-mod-subtle);
+    color: var(--icon-strong)
+}
+
 .modeSelectButton_b5f5a6 {
     border-radius: var(--radius-sm);
     cursor: pointer
@@ -2216,4 +2233,4 @@
     background-color: var(--background-mod-strong)
 }
 
-/*# sourceMappingURL=c14d7ca09b3cd587.css.map*/
+/*# sourceMappingURL=123e7eb01532f55c.css.map*/
