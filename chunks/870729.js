@@ -3618,7 +3618,9 @@ let le = i.forwardRef(function (e, t) {
         L = i.useCallback(
             (e) => {
                 let t = M.findIndex((t) => t.questId === e);
-                -1 !== t && f.current?.scrollBySteps(t - 2);
+                -1 !== t &&
+                    (E.current?.scrollIntoView({ block: "center", behavior: "smooth" }),
+                    f.current?.scrollBySteps(t - 2));
             },
             [M],
         );
