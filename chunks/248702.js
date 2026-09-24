@@ -181,20 +181,20 @@ function w(e) {
     a.useEffect(() => {
         q && null != w && ((G.current = !0), c(w), h().catch(() => void 0));
     }, [h, c, w, q]);
-    let D = (0, b.NE)(X),
-        R = (0, b.Bp)(X),
-        T = (0, b.I6)(X),
-        Y = (0, b.iZ)(T),
-        Z = Y[Math.min(m, Y.length - 1)],
-        B = Y.length,
-        K = m === B - 1,
-        O = "object" == typeof Z ? T[Z.index] : void 0,
-        P = "object" == typeof Z ? (M[Z.index] ?? "") : "",
+    let B = (0, b.NE)(X),
+        D = (0, b.Bp)(X),
+        R = (0, b.I6)(X),
+        T = (0, b.iZ)(R, (0, b.Bl)(l, s)),
+        Y = T[Math.min(m, T.length - 1)],
+        Z = T.length,
+        K = m === Z - 1,
+        O = "object" == typeof Y ? R[Y.index] : void 0,
+        P = "object" == typeof Y ? (M[Y.index] ?? "") : "",
         U = a.useCallback(async () => {
             (G.current || null == L.current || o(L.current), await h());
         }, [o, h]),
         W = a.useCallback(() => g((e) => Math.max(0, e - 1)), []),
-        $ = a.useCallback(() => g((e) => Math.min(B - 1, e + 1)), [B]),
+        $ = a.useCallback(() => g((e) => Math.min(Z - 1, e + 1)), [Z]),
         H = a.useCallback((e, t) => {
             (z((l) => {
                 let n = [...l];
@@ -203,15 +203,15 @@ function w(e) {
                 I(null));
         }, []),
         J = a.useCallback(async () => {
-            if (!A && null != w && null != y && (0, b._F)(T, M)) {
+            if (!A && null != w && null != y && (0, b._F)(R, M)) {
                 (_(!0), I(null));
                 try {
-                    (await d(w, y, (0, b.hU)(T, M)), (G.current = !0), await h());
+                    (await d(w, y, (0, b.hU)(R, M)), (G.current = !0), await h());
                 } catch (e) {
                     (I((0, f.Xd)(e)), _(!1));
                 }
             }
-        }, [M, h, d, y, w, T, A]),
+        }, [M, h, d, y, w, R, A]),
         Q = { text: p.intl.string(p.t["13/7kX"]), variant: "secondary", onClick: W, disabled: A },
         V = { text: p.intl.string(p.t["ETE/oC"]), variant: "secondary", onClick: U, disabled: A },
         ee = O?.optional === !0 && "" === P.trim(),
@@ -219,16 +219,16 @@ function w(e) {
             text: p.intl.string(ee ? p.t["5Wxrcd"] : p.t.PDTjLN),
             variant: "primary",
             onClick: $,
-            disabled: ("server" === Z && null == y) || ("object" == typeof Z && !(0, b.In)(O, P)),
+            disabled: ("server" === Y && null == y) || ("object" == typeof Y && !(0, b.In)(O, P)),
         },
         el = {
             text: p.intl.string(v.default.KD2m2Y),
             variant: "primary",
             onClick: J,
-            disabled: null == w || null == y || !(0, b._F)(T, M),
+            disabled: null == w || null == y || !(0, b._F)(R, M),
             loading: A,
         },
-        en = "about" === Z ? t.name : "server" === Z ? R.title : (O?.title ?? t.name);
+        en = "about" === Y ? t.name : "server" === Y ? D.title : (O?.title ?? t.name);
     return (0, n.jsxs)(r.Modal, {
         transitionState: x,
         onClose: U,
@@ -236,13 +236,13 @@ function w(e) {
         size: "md",
         actions: [0 === m ? V : Q, K ? el : et],
         children: [
-            "about" === Z ? (0, n.jsx)(k, { intro: D, error: F }) : null,
-            "server" === Z ? (0, n.jsx)(N, { guilds: s, value: y, hint: R.hint, disabled: A, onChange: C }) : null,
-            "object" == typeof Z
+            "about" === Y ? (0, n.jsx)(k, { intro: B, error: F }) : null,
+            "server" === Y ? (0, n.jsx)(N, { guilds: s, value: y, hint: D.hint, disabled: A, onChange: C }) : null,
+            "object" == typeof Y
                 ? (0, n.jsx)(
                       E,
-                      { question: O, answer: P, disabled: A, error: F, onChange: (e) => H(Z.index, e) },
-                      Z.index,
+                      { question: O, answer: P, disabled: A, error: F, onChange: (e) => H(Y.index, e) },
+                      Y.index,
                   )
                 : null,
         ],

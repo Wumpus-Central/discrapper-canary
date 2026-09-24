@@ -1,5 +1,11 @@
-n.d(t, { B: () => s, MZ: () => o, TH: () => l, tn: () => i });
-let a = [
+a.d(t, { B: () => s, MZ: () => o, TH: () => l, tn: () => i });
+let n = [
+    {
+        date: "2026-09-24",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "Starting Moderation Bot from a server it can be built in now skips the pick-a-server step; the bot is made for the server you are in.",
+    },
     {
         date: "2026-09-24",
         platforms: ["desktop", "mobile"],
@@ -525,10 +531,10 @@ let a = [
     },
 ];
 function l(e) {
-    return a.filter((t) => t.platforms.includes(e)).slice(0, 3);
+    return n.filter((t) => t.platforms.includes(e)).slice(0, 3);
 }
 function i(e) {
-    return a.filter((t) => t.platforms.includes(e));
+    return n.filter((t) => t.platforms.includes(e));
 }
 function s(e) {
     return i(e).length > 3;

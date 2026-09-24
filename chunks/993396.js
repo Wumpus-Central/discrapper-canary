@@ -1,39 +1,40 @@
-(n.d(t, {
-    Bp: () => u,
-    I6: () => c,
-    In: () => s,
-    NE: () => d,
-    _F: () => p,
-    hU: () => m,
-    iZ: () => i,
-    rL: () => r,
-    v8: () => o,
+(a.d(t, {
+    Bl: () => i,
+    Bp: () => c,
+    I6: () => p,
+    In: () => o,
+    NE: () => u,
+    _F: () => m,
+    hU: () => h,
+    iZ: () => s,
+    rL: () => d,
+    v8: () => r,
 }),
-    n(321073),
-    n(683180));
-var a = n(50617),
-    l = n(375708);
-function i(e) {
-    return [
-        "about",
-        "server",
-        ...Array.from({ length: Math.max(1, e.length) }, (e, t) => ({ kind: "question", index: t })),
-    ];
+    a(321073),
+    a(683180));
+var n = a(50617),
+    l = a(375708);
+function i(e, t) {
+    return !t.some((t) => t.id === e);
 }
 function s(e, t) {
+    let a = Array.from({ length: Math.max(1, e.length) }, (e, t) => ({ kind: "question", index: t }));
+    return t ? ["about", "server", ...a] : ["about", ...a];
+}
+function o(e, t) {
     return null != e && (!0 === e.optional || "" !== (t ?? "").trim());
 }
-function o(e) {
-    return l.intl.formatToPlainString(a.default["4lZNuo"], { templateName: e, locale: l.intl.currentLocale });
-}
 function r(e) {
+    return l.intl.formatToPlainString(n.default["4lZNuo"], { templateName: e, locale: l.intl.currentLocale });
+}
+function d(e) {
     for (let t = e.length - 1; t >= 0; t--) {
-        let n = e[t];
-        if ("assistant" === n.role && null != n.intake) return n.intake;
+        let a = e[t];
+        if ("assistant" === a.role && null != a.intake) return a.intake;
     }
     return null;
 }
-function d(e) {
+function u(e) {
     return null == e
         ? null
         : {
@@ -45,25 +46,25 @@ function d(e) {
               })),
           };
 }
-function u(e) {
-    return e?.server ?? { title: l.intl.string(a.default.WQCnSf), hint: l.intl.string(a.default.KLTQfQ) };
-}
 function c(e) {
+    return e?.server ?? { title: l.intl.string(n.default.WQCnSf), hint: l.intl.string(n.default.KLTQfQ) };
+}
+function p(e) {
     return e?.questions ?? [];
 }
-function p(e, t) {
-    return e.length > 0 && e.every((e, n) => !0 === e.optional || "" !== (t[n] ?? "").trim());
-}
 function m(e, t) {
-    let n = [];
+    return e.length > 0 && e.every((e, a) => !0 === e.optional || "" !== (t[a] ?? "").trim());
+}
+function h(e, t) {
+    let a = [];
     return (
-        e.forEach((e, a) => {
-            let l = (t[a] ?? "").trim();
+        e.forEach((e, n) => {
+            let l = (t[n] ?? "").trim();
             ("" !== l || !0 !== e.optional) &&
                 (l.includes("\n")
-                    ? n.push(`${a + 1}. ${e.title} \u{2192}`, '"""', l, '"""')
-                    : n.push(`${a + 1}. ${e.title} \u{2192} ${l}`));
+                    ? a.push(`${n + 1}. ${e.title} \u{2192}`, '"""', l, '"""')
+                    : a.push(`${n + 1}. ${e.title} \u{2192} ${l}`));
         }),
-        n.join("\n")
+        a.join("\n")
     );
 }
