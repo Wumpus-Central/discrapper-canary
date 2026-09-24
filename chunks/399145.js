@@ -1470,7 +1470,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e3 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eH.A().log(
-    `[BUILD INFO] Release Channel: ${e3}, Build Number: 620831, Version Hash: 90c18f9e689c9351434d9e51006ba58180f6098f`,
+    `[BUILD INFO] Release Channel: ${e3}, Build Number: 620832, Version Hash: 2917fcd599727efba2480956b839ab6c71f927c1`,
 ),
     v.A.setTags({ appContext: x.QCW }),
     eI.A.initBasic(),
@@ -21740,7 +21740,7 @@ let NQ = "isHideDevBanner",
                     className: ts()(NZ.Wz, NZ.mr),
                     children: [
                         (0, R.jsx)(Nq, { className: NZ.Kk }),
-                        tg.intl.format(tg.t.uyrfYF, { buildNumber: "620831" }),
+                        tg.intl.format(tg.t.uyrfYF, { buildNumber: "620832" }),
                         (0, R.jsx)(r, {}),
                     ],
                 })
@@ -32984,17 +32984,17 @@ function Dt() {
             let { muteStates: e, deafStates: t, connected: n, speaking: i, unread: r } = De;
             return (0, eU.isMac)() && !n
                 ? null
-                : (0, eU.isLinux)() || !n
-                  ? r
-                      ? ev.wB.UNREAD
-                      : ev.wB.DEFAULT
-                  : t.selfDeaf || t.serverDeaf
-                    ? ev.wB.DEAFENED
-                    : e.selfMute || e.serverMute || e.suppress
-                      ? ev.wB.MUTED
-                      : i
-                        ? ev.wB.SPEAKING
-                        : ev.wB.CONNECTED;
+                : n
+                  ? t.selfDeaf || t.serverDeaf
+                      ? ev.wB.DEAFENED
+                      : e.selfMute || e.serverMute || e.suppress
+                        ? ev.wB.MUTED
+                        : i
+                          ? ev.wB.SPEAKING
+                          : ev.wB.CONNECTED
+                  : r
+                    ? ev.wB.UNREAD
+                    : ev.wB.DEFAULT;
         })(),
     ),
         ew.Ay.setSystemTrayStates(De));
