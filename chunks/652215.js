@@ -3901,6 +3901,7 @@ var rb =
         (ew.VOICE_CHANNEL_TOPIC_SET = "voice_channel_topic_set"),
         (ew.VOICE_CHANNEL_TOPIC_VIEWED = "voice_channel_topic_viewed"),
         (ew.VOICE_QUALITY_PERIODIC_STATS = "voice_quality_periodic_stats"),
+        (ew.VOICE_STREAM_ENDED = "voice_stream_ended"),
         (ew.AUDIO_DEVICE_MODULE_ERROR = "audio_device_module_error"),
         (ew.SDP_ERROR = "sdp_error"),
         (ew.VOICE_QUEUE_METRICS = "voice_queue_metrics"),
