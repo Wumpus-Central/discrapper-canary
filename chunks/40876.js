@@ -33,11 +33,7 @@ let r = {
         inlineRequire: () => n(927815).A,
         neverLoadBeforeConnectionOpen: !0,
     },
-    ChannelCallManager: {
-        actions: ["GUILD_LOCAL_RING_START", "GUILD_RING_STOP"],
-        inlineRequire: () => n(413528).A,
-        hasStoreChangeListeners: !0,
-    },
+    ChannelCallManager: { inlineRequire: () => n(413528).A, hasStoreChangeListeners: !0 },
     ChannelSafetyWarningsManager: {
         actions: ["CHANNEL_SELECT", "CHANNEL_UPDATES"],
         inlineRequire: () => n(665440).A,

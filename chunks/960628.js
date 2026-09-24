@@ -247,13 +247,12 @@ function el(e) {
                           n.e("683621"),
                           n.e("711162"),
                           n.e("401425"),
+                          n.e("897073"),
                           n.e("159957"),
-                          n.e("119454"),
                           n.e("728136"),
                           n.e("216084"),
-                          n.e("36624"),
-                          n.e("22547"),
-                      ]).then(n.bind(n, 1310));
+                          n.e("284819"),
+                      ]).then(n.bind(n, 405342));
                       return (t) => (0, s.jsx)(e, { ...t, guild: a, source: M.PE1.GUILD_HEADER_INVITE_BUTTON });
                   })
                 : (0, j.openModalLazy)(async () => {

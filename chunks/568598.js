@@ -16,8 +16,8 @@ var i,
     f = n(485296),
     p = n(287809),
     T = n(803301),
-    g = n(977997),
-    m = n(562153),
+    m = n(977997),
+    g = n(562153),
     S = n(90575),
     N = n(806931),
     C = n(652215),
@@ -55,7 +55,6 @@ class v {
     call;
     participants = {};
     lastSpoke = {};
-    guildRingingUsers = new Set();
     poppedOutParticipants = new Set();
     participantByIndex = new a.J((e) => {
         let t = [];
@@ -91,10 +90,9 @@ class v {
             ((this.call = A.A.getCall(this.channelId)), e.isPrivate() && (null == this.call || this.call.unavailable))
         )
             return !1;
-        let t = new Set(e.isGuildVocalOrThread() ? Object.keys(g.A.getVoiceStatesForChannel(e.id)) : e.recipients);
+        let t = new Set(e.isGuildVocalOrThread() ? Object.keys(m.A.getVoiceStatesForChannel(e.id)) : e.recipients);
         return (
             t.add(E.default.getId()),
-            this.guildRingingUsers.size > 0 && (t = new Set([...t, ...this.guildRingingUsers])),
             _.A.getAllActiveStreamsForChannel(this.channelId).forEach((e) => {
                 let { ownerId: n } = e;
                 return t.add(n);
@@ -163,9 +161,6 @@ class v {
             ) ?? !1
         );
     }
-    updateGuildRingingUsers(e, t) {
-        t ? this.guildRingingUsers.add(e) : this.guildRingingUsers.delete(e);
-    }
     updateParticipantPoppedOut(e, t) {
         t ? this.poppedOutParticipants.add(e) : this.poppedOutParticipants.delete(e);
     }
@@ -195,11 +190,11 @@ class v {
             i = [],
             r = p.default.getUser(e);
         if (null == r) return i;
-        let a = g.A.getVoiceStateForChannel(this.channelId, e),
-            l = g.A.getVoicePlatformForChannel(this.channelId, e),
+        let a = m.A.getVoiceStateForChannel(this.channelId, e),
+            l = m.A.getVoicePlatformForChannel(this.channelId, e),
             o = h.A.getChannel(this.channelId),
             c = o?.getGuildId(),
-            A = (this.call?.ringing?.includes(e) || this.guildRingingUsers.has(e)) ?? !1;
+            A = this.call?.ringing?.includes(e) ?? !1;
         (null != a || A) &&
             ((t = {
                 type: N.lp.USER,
@@ -212,7 +207,7 @@ class v {
                 lastSpoke: this.lastSpoke[e] ?? 0,
                 soundsharing: f.A.isSoundSharing(e),
                 ringing: A,
-                userNick: m.Ay.getName(c, this.channelId, r),
+                userNick: g.Ay.getName(c, this.channelId, r),
                 userAvatarDecoration: (0, d.U)(r, c),
                 localVideoDisabled: I.Ay.isLocalVideoDisabled(r.id),
                 isPoppedOut: this.poppedOutParticipants.has(r.id),
@@ -237,7 +232,7 @@ class v {
                 id: t,
                 userVideo: a?.selfVideo ?? !1,
                 user: r,
-                userNick: m.Ay.getName(c, this.channelId, r),
+                userNick: g.Ay.getName(c, this.channelId, r),
                 stream: S,
                 isPoppedOut: this.poppedOutParticipants.has(t),
             }),

@@ -110,8 +110,8 @@ function V(e) {
                     n.e("159957"),
                     n.e("728136"),
                     n.e("216084"),
-                    n.e("22547"),
-                ]).then(n.bind(n, 1310));
+                    n.e("284819"),
+                ]).then(n.bind(n, 405342));
                 return (n) => (0, i.jsx)(e, { ...n, guild: a, channel: t, source: O.PE1.ACTIVITY_ENTRY_POINT_TILE });
             },
             { contextKey: r ? A.KX : A.SY },

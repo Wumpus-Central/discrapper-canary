@@ -253,24 +253,6 @@
     ]
   },
   {
-    "kind": "guild",
-    "id": "2024-12_guild_voice_channel_ringing",
-    "label": "Guild Voice Ringing",
-    "defaultConfig": {
-      "enabled": false
-    },
-    "commonTriggerPoint": null,
-    "treatments": [
-      {
-        "id": 1,
-        "label": "Allow users to ring each other in Guild Voice Channels",
-        "config": {
-          "enabled": true
-        }
-      }
-    ]
-  },
-  {
     "kind": "user",
     "id": "2025-06_native_intents",
     "label": "Native Intents",

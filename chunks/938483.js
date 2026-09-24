@@ -1,4 +1,4 @@
-n.d(t, { U: () => g });
+n.d(t, { U: () => m });
 var i = n(477900),
     r = n(582128),
     a = n(17928),
@@ -289,6 +289,7 @@ let T = (0, c.Fe)({
             n.e("393766"),
             n.e("53102"),
             n.e("187110"),
+            n.e("897073"),
             n.e("139970"),
             n.e("676418"),
             n.e("875842"),
@@ -373,7 +374,6 @@ let T = (0, c.Fe)({
             n.e("214285"),
             n.e("248330"),
             n.e("91450"),
-            n.e("795752"),
             n.e("588070"),
             n.e("803332"),
             n.e("938149"),
@@ -389,6 +389,7 @@ let T = (0, c.Fe)({
             n.e("818465"),
             n.e("656463"),
             n.e("971430"),
+            n.e("722460"),
             n.e("760083"),
             n.e("976516"),
             n.e("400501"),
@@ -418,7 +419,6 @@ let T = (0, c.Fe)({
             n.e("606949"),
             n.e("968763"),
             n.e("599976"),
-            n.e("119454"),
             n.e("434786"),
             n.e("294607"),
             n.e("982730"),
@@ -428,7 +428,6 @@ let T = (0, c.Fe)({
             n.e("824547"),
             n.e("618706"),
             n.e("800872"),
-            n.e("259797"),
             n.e("452531"),
             n.e("480945"),
             n.e("368530"),
@@ -464,14 +463,14 @@ let T = (0, c.Fe)({
     name: "InboxPopoutRenderer",
     renderLoader: u.hc,
 });
-function g(e) {
+function m(e) {
     let t,
         n,
         {
             onOpen: c,
             onClose: u,
-            children: g,
-            popoutPosition: m,
+            children: m,
+            popoutPosition: g,
             popoutAlign: S,
             targetElementRef: N,
             spacing: C,
@@ -540,7 +539,7 @@ function g(e) {
         children: (0, i.jsx)(l.Y, {
             targetElementRef: N,
             animation: l.Y.Animation.NONE,
-            position: m,
+            position: g,
             align: S,
             autoInvert: !1,
             shouldShow: L,
@@ -563,7 +562,7 @@ function g(e) {
             clickTrap: !0,
             children: (e, t) => {
                 let { isShown: n } = t;
-                return g(U, n, e, G);
+                return m(U, n, e, G);
             },
         }),
     });

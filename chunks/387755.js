@@ -41,21 +41,16 @@ let h = {
     ring(e, t, n) {
         let l = s.A.getChannel(e);
         if (null == l) return;
-        let o = (0, a.pW)(l),
+        let o = (0, a.p)(l),
             d = E.kvI.CALLABLE.has(l.type);
-        if (o) {
-            (i.Bo.post({
-                url: E.Rsh.CALL_RING(e),
-                body: { recipients: t, analytics_location: n },
-                oldFormErrors: !0,
-                rejectWithError: !0,
-            }),
-                l.type === E.rbe.GUILD_VOICE &&
-                    null != t &&
-                    r.h.dispatch({ type: "GUILD_LOCAL_RING_START", ringing: t, guildId: l.guild_id }));
-            return;
-        }
-        d && r.h.dispatch({ type: "CALL_ENQUEUE_RING", channelId: e, recipients: t });
+        o
+            ? i.Bo.post({
+                  url: E.Rsh.CALL_RING(e),
+                  body: { recipients: t, analytics_location: n },
+                  oldFormErrors: !0,
+                  rejectWithError: !0,
+              })
+            : d && r.h.dispatch({ type: "CALL_ENQUEUE_RING", channelId: e, recipients: t });
     },
     stopRinging: (e, t) =>
         i.Bo.post({ url: E.Rsh.CALL_STOP_RINGING(e), body: { recipients: t }, oldFormErrors: !0, rejectWithError: !0 }),

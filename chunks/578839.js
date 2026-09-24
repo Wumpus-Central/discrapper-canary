@@ -115,9 +115,8 @@ let B = i.memo(function (e) {
                                                         l.e("159957"),
                                                         l.e("728136"),
                                                         l.e("216084"),
-                                                        l.e("36624"),
-                                                        l.e("22547"),
-                                                    ]).then(l.bind(l, 1310));
+                                                        l.e("284819"),
+                                                    ]).then(l.bind(l, 405342));
                                                     return (n) =>
                                                         (0, s.jsx)(e, { ...n, guild: t, source: V.PE1.GUILD_HOME });
                                                 });

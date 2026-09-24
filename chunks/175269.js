@@ -1,202 +1,194 @@
-i.d(n, { default: () => V });
+i.d(n, { default: () => B });
 var r = i(477900),
     t = i(582128),
-    l = i(17928),
-    a = i(980707),
-    d = i(477782),
-    s = i(442433),
-    o = i(847767),
-    u = i(358367),
-    A = i(155718),
-    c = i(468389),
-    m = i(793574),
-    g = i(688810),
+    l = i(980707),
+    a = i(477782),
+    d = i(442433),
+    s = i(847767),
+    o = i(358367),
+    u = i(155718),
+    A = i(468389),
+    c = i(793574),
+    m = i(688810),
     T = i(50268),
-    h = i(346247),
-    x = i(844065),
-    E = i(164891),
-    b = i(734057),
-    U = i(309010),
-    C = i(803664),
-    M = i(29293),
-    j = i(509302),
-    p = i(497600),
-    N = i(646911),
-    S = i(239211),
-    _ = i(373397),
-    f = i(399476),
-    I = i(889460),
-    P = i(448290),
-    X = i(301541),
-    y = i(252726),
-    k = i(460597),
-    G = i(313998),
-    v = i(192308),
-    D = i(80682),
-    L = i(660273),
-    R = i(351001),
-    w = i(867455),
-    H = i(406704),
-    Z = i(71393),
-    q = i(576705),
-    J = i(287809),
-    O = i(375708),
-    W = i(243949),
-    z = i(180798),
-    B = i(77544),
-    F = i(652215);
-let V = (0, u.A)(
-    (0, o.A)(
+    g = i(346247),
+    h = i(844065),
+    x = i(803664),
+    E = i(29293),
+    b = i(509302),
+    U = i(497600),
+    j = i(646911),
+    M = i(239211),
+    C = i(373397),
+    N = i(399476),
+    S = i(889460),
+    f = i(448290),
+    p = i(301541),
+    _ = i(252726),
+    P = i(460597),
+    X = i(313998),
+    I = i(17928),
+    k = i(192308),
+    y = i(80682),
+    G = i(660273),
+    v = i(351001),
+    D = i(867455),
+    L = i(406704),
+    R = i(734057),
+    w = i(71393),
+    H = i(576705),
+    Z = i(287809),
+    q = i(375708),
+    J = i(243949),
+    O = i(180798),
+    W = i(77544),
+    z = i(652215);
+let B = (0, o.A)(
+    (0, s.A)(
         function (e) {
             let n,
+                s,
                 o,
-                u,
-                V,
+                B,
+                F,
                 K,
-                Q,
-                { user: Y, guildId: $, channel: ee, context: en, onSelect: ei, onHeightUpdate: er } = e,
-                et = ee.id,
-                el = (0, W.A)({ userId: Y.id, guildId: $, channelId: et }),
-                ea = (0, P.A)(Y, $, et, en),
-                ed = (0, X.A)(Y.id, en),
-                es = (0, B.A)(Y.id),
-                eo = (0, _.A)({ user: Y, context: en }),
-                eu = (0, l.bG)([U.Ay, b.A], () => {
-                    let e = U.Ay.getVoiceChannelId();
-                    return b.A.getChannel(e);
-                }),
-                { enabled: eA } = E.A.useExperiment({ guildId: eu?.guild_id, location: "ThreadUserContextMenu" }),
-                ec = eA ? eu?.id : null,
-                em = (0, G.A)(Y, ec),
-                eg = (0, p.A)({ user: Y, guildId: $, channelId: et, context: en }),
-                eT = (0, M.A)({ user: Y }),
-                { analyticsLocations: eh } = (0, g.Ay)(m.A.THREAD_USER_MENU),
-                ex = (0, h.A)({
-                    guildId: $,
-                    userId: Y.id,
+                { user: Q, guildId: V, channel: Y, context: $, onSelect: ee, onHeightUpdate: en } = e,
+                ei = Y.id,
+                er = (0, J.A)({ userId: Q.id, guildId: V, channelId: ei }),
+                et = (0, f.A)(Q, V, ei, $),
+                el = (0, p.A)(Q.id, $),
+                ea = (0, W.A)(Q.id),
+                ed = (0, C.A)({ user: Q, context: $ }),
+                es = (0, X.A)(Q, null),
+                eo = (0, U.A)({ user: Q, guildId: V, channelId: ei, context: $ }),
+                eu = (0, E.A)({ user: Q }),
+                { analyticsLocations: eA } = (0, m.Ay)(c.A.THREAD_USER_MENU),
+                ec = (0, g.A)({
+                    guildId: V,
+                    userId: Q.id,
                     analyticsLocation: {
-                        page: F.liQ.GUILD_CHANNEL,
-                        section: F.JJy.CHAT_USERNAME,
-                        object: F.ZSU.CONTEXT_MENU_ITEM,
+                        page: z.liQ.GUILD_CHANNEL,
+                        section: z.JJy.CHAT_USERNAME,
+                        object: z.ZSU.CONTEXT_MENU_ITEM,
                     },
-                    analyticsLocations: eh,
-                    context: en,
+                    analyticsLocations: eA,
+                    context: $,
                 }),
-                eE = (0, I.A)({ user: Y, guildId: $ }),
-                eb = (0, c.A)(null, Y),
-                eU = (0, C.A)({ user: Y }),
-                eC = (0, j.A)({ user: Y }),
-                eM = (0, k.A)({ user: Y }),
-                ej = (0, S.A)({ user: Y, guildId: $, channelId: et, location: "ThreadUserContextMenu" }),
-                ep = (0, f.A)({ user: Y, guildId: $, channelId: et, location: "ThreadUserContextMenu" }),
-                eN =
-                    ((n = t.useMemo(() => ({ [$]: [Y.id] }), [$, Y.id])),
-                    (0, D.Eq)(n, "useThreadAdminActionItems"),
-                    (0, l.bG)([q.A], () => q.A.getGuildVersion($), [$]),
-                    (o = (0, l.bG)([b.A], () => b.A.getChannel(et))),
-                    (u = (0, l.bG)([Z.A], () => Z.A.getGuild($), [$])),
-                    (V = (0, l.bG)([J.default], () => J.default.getCurrentUser())),
-                    (K = (0, L.A)(o, "Context Menu")),
-                    (Q = (0, H.qi)(o?.id)),
-                    o?.isMediaThread()
+                em = (0, S.A)({ user: Q, guildId: V }),
+                eT = (0, A.A)(null, Q),
+                eg = (0, x.A)({ user: Q }),
+                eh = (0, b.A)({ user: Q }),
+                ex = (0, P.A)({ user: Q }),
+                eE = (0, M.A)({ user: Q, guildId: V, channelId: ei, location: "ThreadUserContextMenu" }),
+                eb = (0, N.A)({ user: Q, guildId: V, channelId: ei, location: "ThreadUserContextMenu" }),
+                eU =
+                    ((n = t.useMemo(() => ({ [V]: [Q.id] }), [V, Q.id])),
+                    (0, y.Eq)(n, "useThreadAdminActionItems"),
+                    (0, I.bG)([H.A], () => H.A.getGuildVersion(V), [V]),
+                    (s = (0, I.bG)([R.A], () => R.A.getChannel(ei))),
+                    (o = (0, I.bG)([w.A], () => w.A.getGuild(V), [V])),
+                    (B = (0, I.bG)([Z.default], () => Z.default.getCurrentUser())),
+                    (F = (0, G.A)(s, "Context Menu")),
+                    (K = (0, L.qi)(s?.id)),
+                    s?.isMediaThread()
                         ? []
-                        : V?.id === Y.id
-                          ? [K]
-                          : null == u || null == o || null == V
+                        : B?.id === Q.id
+                          ? [F]
+                          : null == o || null == s || null == B
                             ? []
                             : [
-                                  Q
+                                  K
                                       ? (0, r.jsx)(
-                                            d.Dr,
+                                            a.Dr,
                                             {
                                                 id: "remove",
-                                                label: o.isForumPost()
-                                                    ? O.intl.formatToPlainString(O.t.v2KNNx, { user: Y.username })
-                                                    : O.intl.formatToPlainString(O.t["27xWaT"], { user: Y.username }),
+                                                label: s.isForumPost()
+                                                    ? q.intl.formatToPlainString(q.t.v2KNNx, { user: Q.username })
+                                                    : q.intl.formatToPlainString(q.t["27xWaT"], { user: Q.username }),
                                                 color: "danger",
-                                                action: () => w.A.removeMember(o.id, Y.id, "Context Menu"),
+                                                action: () => D.A.removeMember(s.id, Q.id, "Context Menu"),
                                             },
                                             "remove",
                                         )
                                       : null,
-                                  (0, R.L7)(Y, u)
+                                  (0, v.L7)(Q, o)
                                       ? (0, r.jsx)(
-                                            d.Dr,
+                                            a.Dr,
                                             {
                                                 id: "kick",
-                                                label: Q
-                                                    ? O.intl.formatToPlainString(O.t["1Ie87p"], { user: Y.username })
-                                                    : O.intl.formatToPlainString(O.t["9l/iTS"], { user: Y.username }),
+                                                label: K
+                                                    ? q.intl.formatToPlainString(q.t["1Ie87p"], { user: Q.username })
+                                                    : q.intl.formatToPlainString(q.t["9l/iTS"], { user: Q.username }),
                                                 color: "danger",
                                                 action: () =>
-                                                    (0, v.openModalLazy)(async () => {
+                                                    (0, k.openModalLazy)(async () => {
                                                         let { default: e } = await Promise.all([
                                                             i.e("253335"),
                                                             i.e("140243"),
                                                         ]).then(i.bind(i, 547166));
-                                                        return (n) => (0, r.jsx)(e, { ...n, guildId: u.id, user: Y });
+                                                        return (n) => (0, r.jsx)(e, { ...n, guildId: o.id, user: Q });
                                                     }),
                                             },
                                             "kick",
                                         )
                                       : null,
-                                  (0, R.EZ)(Y, u)
+                                  (0, v.EZ)(Q, o)
                                       ? (0, r.jsx)(
-                                            d.Dr,
+                                            a.Dr,
                                             {
                                                 id: "ban",
-                                                label: Q
-                                                    ? O.intl.formatToPlainString(O.t.i62APf, { user: Y.username })
-                                                    : O.intl.formatToPlainString(O.t.WnpUBi, { user: Y.username }),
+                                                label: K
+                                                    ? q.intl.formatToPlainString(q.t.i62APf, { user: Q.username })
+                                                    : q.intl.formatToPlainString(q.t.WnpUBi, { user: Q.username }),
                                                 color: "danger",
                                                 action: () =>
-                                                    (0, v.openModalLazy)(async () => {
+                                                    (0, k.openModalLazy)(async () => {
                                                         let { default: e } = await Promise.all([
                                                             i.e("420282"),
                                                             i.e("802504"),
                                                         ]).then(i.bind(i, 333179));
-                                                        return (n) => (0, r.jsx)(e, { ...n, guildId: u.id, user: Y });
+                                                        return (n) => (0, r.jsx)(e, { ...n, guildId: o.id, user: Q });
                                                     }),
                                             },
                                             "ban",
                                         )
                                       : null,
                               ]),
-                eS = (0, z.A)(Y.id, $),
-                e_ = (0, y.A)(Y, $),
-                ef = (0, T.A)({ id: Y.id, label: O.intl.string(O.t["/AXYnE"]) }),
-                eI = (0, x.A)(Y),
-                eP = (0, N.A)({
-                    commandType: A.kc.USER,
-                    commandTargetId: Y.id,
-                    channel: ee,
-                    guildId: $,
-                    onHeightUpdate: er,
+                ej = (0, O.A)(Q.id, V),
+                eM = (0, _.A)(Q, V),
+                eC = (0, T.A)({ id: Q.id, label: q.intl.string(q.t["/AXYnE"]) }),
+                eN = (0, h.A)(Q),
+                eS = (0, j.A)({
+                    commandType: u.kc.USER,
+                    commandTargetId: Q.id,
+                    channel: Y,
+                    guildId: V,
+                    onHeightUpdate: en,
                 }),
-                eX = Y.isNonUserBot();
-            return (0, r.jsxs)(a.W, {
+                ef = Q.isNonUserBot();
+            return (0, r.jsxs)(l.W, {
                 "data-menu-migrated": !0,
                 navId: "user-context",
-                onClose: s.Z_,
-                "aria-label": O.intl.string(O.t.liqwPJ),
-                onSelect: ei,
+                onClose: d.Z_,
+                "aria-label": q.intl.string(q.t.liqwPJ),
+                onSelect: ee,
                 children: [
-                    !eX &&
+                    !ef &&
                         (0, r.jsxs)(r.Fragment, {
                             children: [
-                                (0, r.jsx)(d.rX, { children: eI }),
-                                (0, r.jsxs)(d.rX, { children: [el, ea, ed, eo, em, eg, eT, es] }),
-                                (0, r.jsx)(d.rX, { children: eb }),
-                                (0, r.jsxs)(d.rX, { children: [ex, eP, eE, eU, eC, eM, ep, ej] }),
-                                (0, r.jsx)(d.rX, { children: eN }),
-                                (0, r.jsxs)(d.rX, { children: [eS, e_] }),
+                                (0, r.jsx)(a.rX, { children: eN }),
+                                (0, r.jsxs)(a.rX, { children: [er, et, el, ed, es, eo, eu, ea] }),
+                                (0, r.jsx)(a.rX, { children: eT }),
+                                (0, r.jsxs)(a.rX, { children: [ec, eS, em, eg, eh, ex, eb, eE] }),
+                                (0, r.jsx)(a.rX, { children: eU }),
+                                (0, r.jsxs)(a.rX, { children: [ej, eM] }),
                             ],
                         }),
-                    (0, r.jsx)(d.rX, { children: ef }),
+                    (0, r.jsx)(a.rX, { children: eC }),
                 ],
             });
         },
-        { object: F.ZSU.CONTEXT_MENU },
+        { object: z.ZSU.CONTEXT_MENU },
     ),
-    [m.A.CONTEXT_MENU, m.A.THREAD_USER_MENU],
+    [c.A.CONTEXT_MENU, c.A.THREAD_USER_MENU],
 );

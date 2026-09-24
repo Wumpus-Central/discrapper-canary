@@ -28,8 +28,8 @@ var i = n(477900),
     f = n(192308),
     p = n(821609),
     T = n(462887),
-    g = n(289873),
-    m = n(834730),
+    m = n(289873),
+    g = n(834730),
     S = n(297264),
     N = n(885574),
     C = n(933832),
@@ -108,9 +108,9 @@ function eT(e) {
         className: ep.B_,
         children: [
             null != t
-                ? (0, i.jsx)(eg, { icon: ec.LinkIcon, text: en.intl.format(en.t["5k5OKD"], { origin: t }) })
+                ? (0, i.jsx)(em, { icon: ec.LinkIcon, text: en.intl.format(en.t["5k5OKD"], { origin: t }) })
                 : null,
-            (0, i.jsx)(eg, {
+            (0, i.jsx)(em, {
                 icon: eu.LockIcon,
                 text: (function (e) {
                     let t = (0, G.t)(e);
@@ -143,15 +143,15 @@ function eT(e) {
                     return en.intl.format(n, { application: e.name, discordPrivacyPolicyURL: et.X7G.PRIVACY });
                 })(n),
             }),
-            null != d ? (0, i.jsx)(eg, { icon: e_.w, text: en.intl.string(en.t["8qui3M"]) }) : null,
-            (0, i.jsx)(eg, { icon: eE.ClockIcon, text: en.intl.formatToPlainString(en.t["+1bjc8"], { date: c }) }),
+            null != d ? (0, i.jsx)(em, { icon: e_.w, text: en.intl.string(en.t["8qui3M"]) }) : null,
+            (0, i.jsx)(em, { icon: eE.ClockIcon, text: en.intl.formatToPlainString(en.t["+1bjc8"], { date: c }) }),
             r.includes(_.F.BOT) && null != s
-                ? (0, i.jsx)(eg, {
+                ? (0, i.jsx)(em, {
                       icon: eA.RobotIcon,
                       text: en.intl.formatToPlainString(en.t.UHGHSP, { guildCount: s }),
                   })
                 : null,
-            (0, i.jsx)(eg, { icon: eh.ShieldIcon, text: u }),
+            (0, i.jsx)(em, { icon: eh.ShieldIcon, text: u }),
             null != o
                 ? o.map((e) => {
                       let t = (0, w.wI)(e),
@@ -165,23 +165,23 @@ function eT(e) {
                                       return null;
                               }
                           })(e);
-                      return null != n && null != t ? (0, i.jsx)(eg, { icon: n, text: t }, e) : null;
+                      return null != n && null != t ? (0, i.jsx)(em, { icon: n, text: t }, e) : null;
                   })
                 : null,
         ],
     });
 }
-function eg(e) {
+function em(e) {
     let { icon: t, text: n } = e;
     return (0, i.jsxs)("div", {
         className: ep.f_,
         children: [
             (0, i.jsx)(t, { className: ep.u7, color: "currentColor" }),
-            (0, i.jsx)(m.E, { variant: "text-xs/normal", className: ep.z9, children: n }),
+            (0, i.jsx)(g.E, { variant: "text-xs/normal", className: ep.z9, children: n }),
         ],
     });
 }
-var em = n(214947),
+var eg = n(214947),
     eS = n(845798),
     eN = n(687966),
     eC = n(625903),
@@ -201,7 +201,7 @@ function eL(e) {
               : en.intl.format(en.t.DfBeUq, { learnMoreURL: eO.A.getArticleURL(et.MVz.SOCIAL_LAYER_CONNECTIONS) })),
           a.push(
               {
-                  icon: em.$,
+                  icon: eg.$,
                   text: s
                       ? en.intl.formatToPlainString(en.t.z9peav, { maxFriends: et.$4X })
                       : en.intl.formatToPlainString(en.t.WNKzo9, { maxFriends: et.$4X }),
@@ -222,7 +222,7 @@ function eL(e) {
               : en.intl.format(en.t.DfBeUq, { learnMoreURL: eO.A.getArticleURL(et.MVz.SOCIAL_LAYER_CONNECTIONS) })),
           a.push(
               {
-                  icon: em.$,
+                  icon: eg.$,
                   text: s
                       ? en.intl.formatToPlainString(en.t.z9peav, { maxFriends: et.$4X })
                       : en.intl.formatToPlainString(en.t.WNKzo9, { maxFriends: et.$4X }),
@@ -252,7 +252,7 @@ function ey(e) {
         className: eR.f_,
         children: [
             (0, i.jsx)(t, { className: eR.u7, color: "currentColor" }),
-            (0, i.jsx)(m.E, { variant: "text-md/normal", className: eR.u0, children: n }),
+            (0, i.jsx)(g.E, { variant: "text-md/normal", className: eR.u0, children: n }),
         ],
     });
 }
@@ -286,13 +286,13 @@ function eP(e) {
                 className: eM.rv,
                 "aria-hidden": !0,
                 children: [
-                    (0, i.jsx)(m.E, {
+                    (0, i.jsx)(g.E, {
                         variant: "text-md/normal",
                         color: !0 === r ? "text-muted" : void 0,
                         children: t,
                     }),
                     null != n
-                        ? (0, i.jsx)(m.E, { variant: "text-xs/normal", color: "text-feedback-critical", children: n })
+                        ? (0, i.jsx)(g.E, { variant: "text-xs/normal", color: "text-feedback-critical", children: n })
                         : null,
                 ],
             }),
@@ -371,7 +371,7 @@ function ek(e) {
                                 className: ex.nW,
                                 children: (0, i.jsx)(eG.P, { size: "md", color: "currentColor", className: ex.Kk }),
                             }),
-                            (0, i.jsx)(m.E, { variant: "text-md/normal", children: t }),
+                            (0, i.jsx)(g.E, { variant: "text-md/normal", children: t }),
                         ],
                     },
                     String(e),
@@ -383,7 +383,7 @@ function ek(e) {
             c.length > 0
                 ? (0, i.jsxs)("div", {
                       children: [
-                          (0, i.jsx)(m.E, {
+                          (0, i.jsx)(g.E, {
                               variant: "text-sm/medium",
                               color: "text-default",
                               children: en.intl.format(en.t.sOaT2j, { applicationName: t.name, guildName: l.name }),
@@ -395,7 +395,7 @@ function ek(e) {
             u.length > 0
                 ? (0, i.jsxs)("div", {
                       children: [
-                          (0, i.jsx)(m.E, {
+                          (0, i.jsx)(g.E, {
                               variant: "text-sm/medium",
                               color: "text-default",
                               children: en.intl.format(en.t.fsOkF4, { applicationName: t.name }),
@@ -447,7 +447,7 @@ function eX(e) {
                 d.some((e) => (0, es.RM)(e))
                     ? (0, i.jsxs)(i.Fragment, {
                           children: [
-                              (0, i.jsx)(m.E, {
+                              (0, i.jsx)(g.E, {
                                   variant: "text-lg/normal",
                                   color: "text-default",
                                   children: en.intl.string(en.t.uT1CPa),
@@ -457,7 +457,7 @@ function eX(e) {
                       })
                     : (0, i.jsxs)(i.Fragment, {
                           children: [
-                              (0, i.jsxs)(m.E, {
+                              (0, i.jsxs)(g.E, {
                                   variant: "text-lg/bold",
                                   color: "text-strong",
                                   children: [
@@ -473,12 +473,12 @@ function eX(e) {
                                   ],
                               }),
                               s.length > 0
-                                  ? (0, i.jsx)(m.E, {
+                                  ? (0, i.jsx)(g.E, {
                                         variant: "text-md/normal",
                                         color: "text-default",
                                         children: en.intl.string(en.t.jFbDnJ),
                                     })
-                                  : (0, i.jsx)(m.E, {
+                                  : (0, i.jsx)(g.E, {
                                         variant: "text-md/normal",
                                         color: "text-default",
                                         children: en.intl.string(en.t["X+Fdpo"]),
@@ -510,21 +510,21 @@ function eX(e) {
             l
                 ? (0, i.jsx)("div", {
                       className: ez.Ny,
-                      children: (0, i.jsxs)(m.E, {
+                      children: (0, i.jsxs)(g.E, {
                           variant: "text-sm/normal",
                           color: "text-muted",
                           children: [
                               en.intl.format(en.t.qRvpYU, {
                                   userHook: () =>
                                       (0, i.jsxs)(
-                                          m.E,
+                                          g.E,
                                           {
                                               className: ez.ZD,
                                               variant: "text-sm/normal",
                                               children: [
                                                   t.username,
                                                   !t.hasUniqueUsername() &&
-                                                      (0, i.jsx)(m.E, {
+                                                      (0, i.jsx)(g.E, {
                                                           className: ez.Jb,
                                                           variant: "text-sm/normal",
                                                           children: `#${t.discriminator}`,
@@ -705,60 +705,55 @@ let e1 = (0, F.Fe)({
             n.e("397270"),
             n.e("188941"),
             n.e("300699"),
-            n.e("543039"),
             n.e("349619"),
             n.e("599666"),
-            n.e("253729"),
+            n.e("543039"),
             n.e("264236"),
+            n.e("253729"),
             n.e("721690"),
             n.e("136022"),
             n.e("161379"),
             n.e("740428"),
-            n.e("234236"),
             n.e("832817"),
             n.e("398125"),
             n.e("827708"),
             n.e("221825"),
             n.e("416143"),
             n.e("901555"),
-            n.e("948804"),
             n.e("593600"),
             n.e("276640"),
+            n.e("234236"),
             n.e("295366"),
             n.e("28154"),
             n.e("844695"),
+            n.e("948804"),
             n.e("988077"),
             n.e("431011"),
             n.e("561216"),
             n.e("50015"),
-            n.e("672727"),
             n.e("552712"),
             n.e("417286"),
             n.e("829177"),
             n.e("199999"),
             n.e("106943"),
             n.e("232551"),
-            n.e("482815"),
             n.e("631644"),
-            n.e("170653"),
             n.e("892340"),
             n.e("611523"),
             n.e("313681"),
+            n.e("672727"),
             n.e("343550"),
             n.e("556967"),
-            n.e("317225"),
             n.e("444376"),
-            n.e("652898"),
-            n.e("696123"),
+            n.e("482815"),
+            n.e("170653"),
             n.e("147786"),
             n.e("770697"),
             n.e("318546"),
             n.e("123216"),
-            n.e("731390"),
             n.e("183776"),
             n.e("936320"),
             n.e("190889"),
-            n.e("146248"),
             n.e("790244"),
             n.e("851130"),
             n.e("27773"),
@@ -766,26 +761,30 @@ let e1 = (0, F.Fe)({
             n.e("418943"),
             n.e("784103"),
             n.e("958428"),
+            n.e("317225"),
             n.e("643612"),
             n.e("809915"),
             n.e("34472"),
+            n.e("652898"),
             n.e("53374"),
             n.e("710638"),
+            n.e("696123"),
             n.e("236676"),
             n.e("631825"),
             n.e("696443"),
             n.e("361626"),
+            n.e("731390"),
             n.e("799657"),
             n.e("252574"),
             n.e("747017"),
+            n.e("146248"),
             n.e("715391"),
-            n.e("39760"),
+            n.e("445421"),
             n.e("126780"),
             n.e("588940"),
             n.e("401827"),
             n.e("499941"),
             n.e("776750"),
-            n.e("515572"),
             n.e("761935"),
             n.e("592731"),
             n.e("511527"),
@@ -799,7 +798,6 @@ let e1 = (0, F.Fe)({
             n.e("757598"),
             n.e("495442"),
             n.e("400954"),
-            n.e("787079"),
             n.e("466322"),
             n.e("165595"),
             n.e("61129"),
@@ -812,6 +810,7 @@ let e1 = (0, F.Fe)({
             n.e("599141"),
             n.e("278424"),
             n.e("434691"),
+            n.e("515572"),
             n.e("225990"),
             n.e("539620"),
             n.e("636126"),
@@ -940,7 +939,7 @@ function e2() {
                     : (0, i.jsxs)(i.Fragment, {
                           children: [
                               (0, i.jsx)(x.hE, { children: en.intl.string(en.t["Z+hCVU"]) }),
-                              (0, i.jsx)(g.y, {}),
+                              (0, i.jsx)(m.y, {}),
                           ],
                       })),
             (0, i.jsx)(eq.$, { removeChildWrapper: !0, children: (0, i.jsx)("div", { className: e0.ah, children: e }) })
@@ -1029,11 +1028,11 @@ function e5(e) {
                                 null != _ && (0, i.jsx)("img", { src: _, alt: "", className: e0.eh }),
                             ],
                         }),
-                        (0, i.jsx)(m.E, { variant: "text-lg/normal", children: en.intl.string(en.t.uT1CPa) }),
+                        (0, i.jsx)(g.E, { variant: "text-lg/normal", children: en.intl.string(en.t.uT1CPa) }),
                         (0, i.jsx)(S.D, { variant: "heading-xl/semibold", children: E }),
                     ],
                 }),
-                (0, i.jsx)(m.E, {
+                (0, i.jsx)(g.E, {
                     variant: "text-sm/normal",
                     children: en.intl.format(en.t["aJRE/Q"], { applicationName: E, platformName: a }),
                 }),
@@ -1041,7 +1040,7 @@ function e5(e) {
                     className: e0.eD,
                     children: [
                         null != c && (0, i.jsx)("img", { src: c, alt: "", className: e0.sw }),
-                        (0, i.jsx)(m.E, { variant: "text-md/medium", className: e0.PP, children: a }),
+                        (0, i.jsx)(g.E, { variant: "text-md/medium", className: e0.PP, children: a }),
                         (0, i.jsx)(p.$, {
                             variant: "primary",
                             size: "sm",
@@ -1056,7 +1055,7 @@ function e5(e) {
                     className: e0.sT,
                     children: [
                         (0, i.jsx)(N.CircleInformationIcon, { size: "sm", color: "currentColor", className: e0.Vi }),
-                        (0, i.jsx)(m.E, {
+                        (0, i.jsx)(g.E, {
                             variant: "text-sm/normal",
                             children: en.intl.format(en.t["8psEFX"], { platformName: a, applicationName: E }),
                         }),
@@ -1074,7 +1073,7 @@ function e6(e) {
     return (0, i.jsxs)("div", {
         className: e0.E4,
         children: [
-            (0, i.jsx)(m.E, {
+            (0, i.jsx)(g.E, {
                 variant: "text-sm/normal",
                 children: en.intl.format(en.t["+oaRw3"], { platformName: n }),
             }),
@@ -1085,8 +1084,8 @@ function e6(e) {
                     (0, i.jsxs)("div", {
                         className: e0.mG,
                         children: [
-                            (0, i.jsx)(m.E, { variant: "text-md/medium", children: r.name }),
-                            (0, i.jsx)(m.E, {
+                            (0, i.jsx)(g.E, { variant: "text-md/medium", children: r.name }),
+                            (0, i.jsx)(g.E, {
                                 variant: "text-xs/normal",
                                 children: en.intl.format(en.t.Dkd7sE, { platformName: n, connectedAccountId: r.id }),
                             }),
@@ -1095,7 +1094,7 @@ function e6(e) {
                     (0, i.jsx)(C.CheckmarkLargeIcon, { size: "sm", color: "status-positive" }),
                 ],
             }),
-            (0, i.jsx)(m.E, {
+            (0, i.jsx)(g.E, {
                 variant: "text-sm/normal",
                 children: en.intl.format(en.t.pyRNXJ, { applicationName: a }),
             }),
@@ -1104,7 +1103,7 @@ function e6(e) {
     });
 }
 function e4() {
-    return (0, i.jsx)("div", { className: e0.g4, children: (0, i.jsx)(g.y, { className: e0.u1 }) });
+    return (0, i.jsx)("div", { className: e0.g4, children: (0, i.jsx)(m.y, { className: e0.u1 }) });
 }
 function e7(e) {
     let t,
@@ -1118,7 +1117,7 @@ function e7(e) {
             redirectUri: f,
             codeChallenge: p,
             codeChallengeMethod: T,
-            state: g,
+            state: m,
             nonce: S,
             prompt: N,
             authorizations: C,
@@ -1147,7 +1146,7 @@ function e7(e) {
         $.default.isAuthenticated() && !eI && L.A.getExperiments();
     }, [eI]);
     let [ef, ep] = r.useState(null),
-        [eg, em] = r.useState(null),
+        [em, eg] = r.useState(null),
         [eS, eN] = r.useState(null),
         [eC, eO] = r.useState(!1),
         [eR, ey] = r.useState(!1),
@@ -1205,7 +1204,7 @@ function e7(e) {
                     e8.current = !1;
                 }
             }
-        }, [A, eh, ed, te, eN, tn, em]));
+        }, [A, eh, ed, te, eN, tn, eg]));
     let ti = ei(ef?.application.content_classification ?? ez?.contentClassification, eH),
         tr = r.useCallback(
             async function (e) {
@@ -1225,7 +1224,7 @@ function e7(e) {
                         redirectUri: f,
                         codeChallenge: p,
                         codeChallengeMethod: T,
-                        state: g,
+                        state: m,
                         nonce: S,
                         integrationType: eY,
                         connectedAccountProvider: eE,
@@ -1247,11 +1246,11 @@ function e7(e) {
                 } catch (t) {
                     let e = t.body;
                     (e?.message != null && "" !== e.message ? eN(Error(e.message)) : eN(e),
-                        em("AUTHORIZE_SCOPES"),
+                        eg("AUTHORIZE_SCOPES"),
                         eO(!1));
                 }
             },
-            [ee, q, ef?.application, eW, eo, A, e2, h, f, p, T, g, S, e7, ew, ev, eY, eE, eM, e9],
+            [ee, q, ef?.application, eW, eo, A, e2, h, f, p, T, m, S, e7, ew, ev, eY, eE, eM, e9],
         ),
         ta = r.useRef(!1),
         ts = r.useCallback(async () => {
@@ -1270,7 +1269,7 @@ function e7(e) {
                                       redirectUri: f,
                                       codeChallenge: p,
                                       codeChallengeMethod: T,
-                                      state: g,
+                                      state: m,
                                       nonce: S,
                                       integrationType: eY ?? void 0,
                                       connectedAccountProvider: eE,
@@ -1292,7 +1291,7 @@ function e7(e) {
                     ta.current = !1;
                 }
             }
-        }, [eh, eA, A, e2, h, f, p, T, g, S, eY, eE, N, tr, tt, eH]),
+        }, [eh, eA, A, e2, h, f, p, T, m, S, eY, eE, N, tr, tt, eH]),
         tl = r.useMemo(
             () =>
                 null != ez && e$
@@ -1310,32 +1309,32 @@ function e7(e) {
         ),
         to = r.useRef(null);
     (r.useEffect(() => {
-        eg !== to.current &&
-            ((to.current = eg),
+        em !== to.current &&
+            ((to.current = em),
             (0, b.zV)(et.HAw.OAUTH2_AUTHORIZE_STEP_VIEWED, {
-                step: eg,
+                step: em,
                 application_id: A,
                 integration_type: eY,
                 scopes: e2,
                 permissions: e7.toString(),
             }));
-    }, [A, eY, e7, e2, eg]),
+    }, [A, eY, e7, e2, em]),
         r.useEffect(() => {
-            null == eg &&
+            null == em &&
                 (!e$ || null != ez) &&
                 eI &&
                 (null == eE || eF
                     ? null != eA
-                        ? (eK(eA.integration_type ?? u.b.GUILD_INSTALL), em("AUTHORIZE_SCOPES"))
+                        ? (eK(eA.integration_type ?? u.b.GUILD_INSTALL), eg("AUTHORIZE_SCOPES"))
                         : tl.length > 1
-                          ? em("SELECT_INSTALL_TYPE")
+                          ? eg("SELECT_INSTALL_TYPE")
                           : (1 === tl.length ? eK(tl[0]) : null != k ? eK(k) : eK(u.b.GUILD_INSTALL),
-                            em("AUTHORIZE_SCOPES"))
-                    : em("CONNECT_ACCOUNT"));
-        }, [eA, tl, ez, e$, eE, eF, k, eg, eI]),
+                            eg("AUTHORIZE_SCOPES"))
+                    : eg("CONNECT_ACCOUNT"));
+        }, [eA, tl, ez, e$, eE, eF, k, em, eI]),
         r.useEffect(() => {
-            "CONNECT_ACCOUNT" === eg && eF && (eK(k ?? u.b.USER_INSTALL), em("AUTHORIZE_SCOPES"));
-        }, [eg, eF, k]),
+            "CONNECT_ACCOUNT" === em && eF && (eK(k ?? u.b.USER_INSTALL), eg("AUTHORIZE_SCOPES"));
+        }, [em, eF, k]),
         r.useEffect(() => {
             if (null == eY || null != ef || null != eS) return;
             eY === u.b.USER_INSTALL && (eb(null), eP(null));
@@ -1358,12 +1357,12 @@ function e7(e) {
             : eu
               ? {
                     label: en.intl.string(en.t.j2d6Km),
-                    header: (0, i.jsx)(m.E, {
+                    header: (0, i.jsx)(g.E, {
                         variant: "text-lg/bold",
                         color: "text-strong",
                         children: en.intl.string(en.t.j2d6Km),
                     }),
-                    body: (0, i.jsx)(m.E, { variant: "text-md/normal", color: "text-default", children: eS.message }),
+                    body: (0, i.jsx)(g.E, { variant: "text-md/normal", color: "text-default", children: eS.message }),
                     actions: [{ onClick: eo, text: en.intl.string(en.t.cpT0Cq) }],
                     noPadding: !0,
                 }
@@ -1379,7 +1378,7 @@ function e7(e) {
         th = !0,
         tI = !0,
         tf = !1;
-    switch (eg) {
+    switch (em) {
         case null:
             return { label: en.intl.string(en.t.ZTNur7), body: (0, i.jsx)(e4, {}) };
         case "CONNECT_ACCOUNT":
@@ -1394,7 +1393,7 @@ function e7(e) {
             ((t = (0, i.jsx)(e1, {
                 application: ez,
                 onSelect: function (e) {
-                    (eK(e), ep(null), em("AUTHORIZE_SCOPES"));
+                    (eK(e), ep(null), eg("AUTHORIZE_SCOPES"));
                 },
             })),
                 (tA = !1),
@@ -1407,9 +1406,9 @@ function e7(e) {
                 return { label: en.intl.string(en.t.ZTNur7), body: (0, i.jsx)(e4, {}) };
             let tp = null == eS || eS instanceof Error ? {} : eS,
                 tT = eD?.sort((e, t) => e.name.toLowerCase().localeCompare(t.name.toLowerCase())),
-                tg = eY === u.b.GUILD_INSTALL && e2.includes(_.F.WEBHOOK_INCOMING),
-                tm =
-                    tg ||
+                tm = eY === u.b.GUILD_INSTALL && e2.includes(_.F.WEBHOOK_INCOMING),
+                tg =
+                    tm ||
                     (eY === u.b.GUILD_INSTALL && (e2.includes(_.F.BOT) || e2.includes(_.F.APPLICATIONS_COMMANDS)));
             ((t = (0, i.jsxs)(i.Fragment, {
                 children: [
@@ -1431,7 +1430,7 @@ function e7(e) {
                         isTrustedName: H || ej,
                     }),
                     (0, i.jsx)("div", { className: e0.sL, ref: tc }),
-                    tm
+                    tg
                         ? (0, i.jsx)(eV, {
                               error: (tp[_.F.BOT] ?? tp[_.F.APPLICATIONS_COMMANDS] ?? [])[0],
                               selectedGuildId: ev,
@@ -1440,7 +1439,7 @@ function e7(e) {
                               disabled: "" !== ev && null != ev && !0 === F,
                           })
                         : null,
-                    tg
+                    tm
                         ? (0, i.jsx)(eQ, {
                               error: (tp[_.F.WEBHOOK_INCOMING] ?? [])[0],
                               selectedChannelId: eM,
@@ -1452,7 +1451,7 @@ function e7(e) {
             })),
                 e2.includes(_.F.BOT) && !E.aI(e7, Z.x3) && (a = "AUTHORIZE_BOT_PERMISSIONS"),
                 tl.length > 1 && (n = "SELECT_INSTALL_TYPE"),
-                (tE = (tm && null == eW) || (tg && null == eM)),
+                (tE = (tg && null == eW) || (tm && null == eM)),
                 (t_ = !0));
             break;
         case "AUTHORIZE_BOT_PERMISSIONS":
@@ -1502,19 +1501,19 @@ function e7(e) {
             })),
         tI &&
             (null != n
-                ? tS.push({ variant: "secondary", onClick: () => em(n), text: en.intl.string(en.t["13/7kX"]) })
+                ? tS.push({ variant: "secondary", onClick: () => eg(n), text: en.intl.string(en.t["13/7kX"]) })
                 : e_ ||
                   tS.push({ variant: "secondary", onClick: () => tr(!1, !0), text: en.intl.string(en.t["ETE/oC"]) }),
-            "SELECT_INSTALL_TYPE" !== eg))
+            "SELECT_INSTALL_TYPE" !== em))
     ) {
-        let e = "CONNECT_ACCOUNT" !== eg && !eR;
+        let e = "CONNECT_ACCOUNT" !== em && !eR;
         tS.push(
             e
                 ? { disabled: !0, loading: eC, text: en.intl.string(en.t.N22i9F), icon: O.M }
                 : {
-                      onClick: null != a ? () => em(a) : () => tr(!0),
+                      onClick: null != a ? () => eg(a) : () => tr(!0),
                       loading: eC,
-                      disabled: ("CONNECT_ACCOUNT" !== eg && null == s) || tE || ti,
+                      disabled: ("CONNECT_ACCOUNT" !== em && null == s) || tE || ti,
                       text: tE
                           ? en.intl.string(en.t.BwwiSM)
                           : null != a
@@ -1524,7 +1523,7 @@ function e7(e) {
         );
     }
     return {
-        label: "CONNECT_ACCOUNT" === eg ? en.intl.string(en.t.JGuDTr) : void 0,
+        label: "CONNECT_ACCOUNT" === em ? en.intl.string(en.t.JGuDTr) : void 0,
         header: c,
         body: t,
         actions: tS,
