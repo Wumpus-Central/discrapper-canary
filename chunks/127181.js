@@ -572,6 +572,13 @@ let n = [
             "When your app needs a setting before it can carry on, the form now appears right in the chat, so you fill it in without opening a dialog.",
     },
     {
+        date: "2026-09-24",
+        time: "00:02",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "While Conjure is using your Frame, it now says why your clicks are paused and offers to open your published app, which stays yours to play.",
+    },
+    {
         date: "2026-09-16",
         time: "00:01",
         platforms: ["mobile"],
