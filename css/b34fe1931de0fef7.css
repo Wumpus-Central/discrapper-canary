@@ -42,7 +42,7 @@
     z-index: 2
 }
 
-.clearButton__0651b:focus,
+.clearButton__0651b:focus-within,
 .clearButton__0651b:hover {
     opacity: 1
 }
@@ -84,4 +84,4 @@
     color: var(--interactive-text-default)
 }
 
-/*# sourceMappingURL=a4c070bb1b01faab.css.map*/
+/*# sourceMappingURL=b34fe1931de0fef7.css.map*/

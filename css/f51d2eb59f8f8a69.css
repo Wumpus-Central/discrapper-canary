@@ -42,7 +42,7 @@
     z-index: 2
 }
 
-.clearButton_f7c056:focus,
+.clearButton_f7c056:focus-within,
 .clearButton_f7c056:hover {
     opacity: 1
 }
@@ -262,4 +262,4 @@
     margin-bottom: 0
 }
 
-/*# sourceMappingURL=81eccb6921055b9c.css.map*/
+/*# sourceMappingURL=f51d2eb59f8f8a69.css.map*/
