@@ -123,8 +123,9 @@ let k = new V(u.h, {
                             guild: s,
                             is_nickname_changeable: a,
                             flags: A,
+                            expires_at: f,
                         } = e,
-                        f = {
+                        v = {
                             code: i,
                             state: l,
                             approximate_member_count: t,
@@ -135,13 +136,14 @@ let k = new V(u.h, {
                             type: r,
                             is_nickname_changeable: a,
                             flags: A,
+                            expires_at: f,
                         };
                     return (
-                        null != c && (f.channel = { ...c }),
-                        null != s && (f.guild = (0, S.DY)(s)),
-                        null != e.inviter && (f.inviter = { ...e.inviter }),
-                        null != e.roles && (f.roles = e.roles),
-                        f
+                        null != c && (v.channel = { ...c }),
+                        null != s && (v.guild = (0, S.DY)(s)),
+                        null != e.inviter && (v.inviter = { ...e.inviter }),
+                        null != e.roles && (v.roles = e.roles),
+                        v
                     );
                 })(t),
                 resolve: e.resolve,
