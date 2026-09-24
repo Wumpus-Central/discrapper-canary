@@ -1,4 +1,4 @@
-n.d(t, { A: () => g });
+n.d(t, { A: () => m });
 var i = n(17928),
     r = n(228366),
     a = n(212455),
@@ -50,7 +50,7 @@ class T extends i.Ay.PersistedStore {
         return E === e ? -1 : h[e];
     }
 }
-let g = new T(r.h, {
+let m = new T(r.h, {
     CONNECTION_OPEN: I,
     OVERLAY_INITIALIZE: function (e) {
         ((E = e.selectedGuildId), (A = void 0), I());

@@ -42,8 +42,8 @@ function p(e) {
             shouldRenderTagsRow: b,
         } = v({ channel: t, isNew: n }),
         { enabled: y } = u.A.useConfig({ location: "forum-post-tags" }),
-        { tagFilter: M } = (0, h.R)(t.id),
-        S = (0, g.cq)(x);
+        { tagFilter: S } = (0, h.R)(t.id),
+        M = (0, g.cq)(x);
     return b
         ? (0, s.jsxs)("div", {
               className: a()(j._A, m),
@@ -67,13 +67,13 @@ function p(e) {
                       ? (0, s.jsx)(d.C, {
                             variant: "filter",
                             label: A.intl.string(A.t["P/y+sj"]),
-                            items: S,
+                            items: M,
                             size: "xs",
                         })
                       : x.map((e) =>
                             (0, s.jsx)(
                                 g.Ay,
-                                { tag: e, size: g.Ay.Sizes.SMALL, className: a()(l, { [j.At]: M.has(e.id) }) },
+                                { tag: e, size: g.Ay.Sizes.SMALL, className: a()(l, { [j.At]: S.has(e.id) }) },
                                 e.id,
                             ),
                         ),

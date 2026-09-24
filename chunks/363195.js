@@ -22,8 +22,8 @@ function p(e) {
         } catch {}
 }
 var T = n(594061),
-    g = n(355097);
-let m = 0,
+    m = n(355097);
+let g = 0,
     S = A.qj,
     N = (0, s.A)(),
     C = S[N],
@@ -69,7 +69,7 @@ class D extends i.Ay.PersistedStore {
     ];
     initialize(e) {
         (e?.theme != null &&
-            ((m = 1),
+            ((g = 1),
             p((C = e.theme)),
             null != e.preferences && (S = e.preferences),
             null != e.syncedClientThemes && (R = e.syncedClientThemes),
@@ -78,7 +78,7 @@ class D extends i.Ay.PersistedStore {
             this.waitFor(u.Ay, c.A, _.A));
     }
     getState() {
-        return { theme: this.theme, preferences: S, syncedClientThemes: R, syncedThemesEnabled: L, status: m };
+        return { theme: this.theme, preferences: S, syncedClientThemes: R, syncedThemesEnabled: L, status: g };
     }
     get theme() {
         return C;
@@ -100,7 +100,7 @@ let v = new D(a.h, {
     CACHE_LOADED: y,
     CONNECTION_OPEN: function () {
         return (
-            0 === m && ((S = { ...S, [A.Fc.DARK]: E.NJ8.DARK }), (m = 1)),
+            0 === g && ((S = { ...S, [A.Fc.DARK]: E.NJ8.DARK }), (g = 1)),
             u.Ay.darkSidebar &&
                 (_.A.settings.appearance?.darkSidebar ||
                     T.wc.updateAsync(
@@ -108,7 +108,7 @@ let v = new D(a.h, {
                         (e) => {
                             e.darkSidebar = !0;
                         },
-                        g.Sb.INFREQUENT_USER_ACTION,
+                        m.Sb.INFREQUENT_USER_ACTION,
                     ),
                 a.h.wait(() => {
                     a.h.dispatch({ type: "UNSYNCED_USER_SETTINGS_UPDATE", settings: { darkSidebar: !1 } });

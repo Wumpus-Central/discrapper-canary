@@ -60,7 +60,7 @@ let f = {
         20: "font-size-20",
         24: "font-size-24",
     };
-function g() {
+function m() {
     switch (p.prefersReducedMotion) {
         case "no-preference":
             return !1;
@@ -70,7 +70,7 @@ function g() {
             return "reduce" === p.systemPrefersReducedMotion;
     }
 }
-function m() {
+function g() {
     let e;
     return (
         !p.officialMessageStyleExplicitlySet &&
@@ -85,7 +85,7 @@ function m() {
 }
 function S() {
     function e(e) {
-        return "animate-never" === e ? "animate-never" : g() ? "respect-motion-settings" : "animate-always";
+        return "animate-never" === e ? "animate-never" : m() ? "respect-motion-settings" : "animate-always";
     }
     p = {
         ...p,
@@ -169,7 +169,7 @@ class N extends a.Ay.DeviceSettingsStore {
             isNaN((p = { ...f, ...(e ?? null) }).fontSize) && (p.fontSize = E.hH7.FONT_SIZE_DEFAULT),
             0 > A.qh.indexOf(null != p.messageGroupSpacing ? p.messageGroupSpacing : -1) &&
                 (p.messageGroupSpacing = null),
-            this.syncWith([u.A, o.A], m));
+            this.syncWith([u.A, o.A], g));
     }
     get fontScale() {
         return (p.fontSize / E.hH7.FONT_SIZE_DEFAULT) * 100;
@@ -248,7 +248,7 @@ class N extends a.Ay.DeviceSettingsStore {
         return p.prefersReducedMotion;
     }
     get useReducedMotion() {
-        return g();
+        return m();
     }
     get systemForcedColors() {
         return p.systemForcedColors;

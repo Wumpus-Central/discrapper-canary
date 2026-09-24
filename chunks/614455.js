@@ -16,8 +16,8 @@ var i = n(17928),
     f = n(186427),
     p = n(489277),
     T = n(96175),
-    g = n(905555),
-    m = n(237984),
+    m = n(905555),
+    g = n(237984),
     S = n(392164);
 let N = new _.A("OverlayV3NativeModule");
 function C(e, t, n) {
@@ -117,7 +117,7 @@ class y {
             ((0, c._r)(e, "host_window_mounting_started", {
                 popoutInitializationStages: p.A.getPopoutInitializationStages(),
             }),
-                await (0, g.H)(),
+                await (0, m.H)(),
                 (t = await this.openOverlayPopout()),
                 await (0, c.hJ)(e),
                 (0, c._r)(e, "host_window_created", {
@@ -191,7 +191,7 @@ class y {
             (this.lastAssociatedPID = e));
     }
     async openOverlayPopout() {
-        return (await (0, m.o)(), await this.getWindowWithRetry());
+        return (await (0, g.o)(), await this.getWindowWithRetry());
     }
     async getWithRetry(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 500,

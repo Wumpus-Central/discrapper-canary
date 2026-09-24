@@ -26,10 +26,10 @@ var _ = n(194004),
     E = n(823894),
     A = n(652215);
 let { API_ENDPOINT: h, MEDIA_PROXY_ENDPOINT: I, PROJECT_ENV: f, ASSET_ENDPOINT: p, CDN_HOST: T } = window.GLOBAL_ENV,
-    g = Object.values(_.y3),
-    m = decodeURIComponent(A.Rsh.STICKER_ASSET("[\\d]+", `(${g.join("|")})`)),
-    S = RegExp(`(${location.protocol}${p}|${location.protocol}${I})(${m})`, "ig"),
-    N = RegExp(`${location.protocol}${h}(${m})`, "ig");
+    m = Object.values(_.y3),
+    g = decodeURIComponent(A.Rsh.STICKER_ASSET("[\\d]+", `(${m.join("|")})`)),
+    S = RegExp(`(${location.protocol}${p}|${location.protocol}${I})(${g})`, "ig"),
+    N = RegExp(`${location.protocol}${h}(${g})`, "ig");
 function C(e) {
     if (null != e.cover_sticker_id) {
         let t = e.stickers.find((t) => t.id === e.cover_sticker_id);

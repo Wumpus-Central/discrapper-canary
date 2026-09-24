@@ -16,8 +16,8 @@ var i = n(435558),
     f = n(258072),
     p = n(717125),
     T = n(47167),
-    g = n(499211),
-    m = n(376943),
+    m = n(499211),
+    g = n(376943),
     S = n(576705),
     N = n(994500),
     C = n(486020),
@@ -53,7 +53,7 @@ function U(e) {
 }
 function w(e, t) {
     let n = u.A.getChannel(e),
-        i = (0, g.p)(e, u.A, p.A, S.A).isSubscriptionGated,
+        i = (0, m.p)(e, u.A, p.A, S.A).isSubscriptionGated,
         r = (0, O.QG)(n) ?? "text";
     if (null != t) {
         let a = t.find((t) => t.id === e);
@@ -81,7 +81,7 @@ function w(e, t) {
               isDm: n.isPrivate(),
               isForumPost: n.isForumPost(),
               isMentionable: (0, L.Y)(n.type),
-              canViewChannel: (0, m.nc)(n),
+              canViewChannel: (0, g.nc)(n),
               roleSubscriptionGated: i,
               iconType: r,
               parentId: n.parent_id,
@@ -177,7 +177,7 @@ let B = {
         order: s().defaultRules.url.order - 0.5,
         requiredFirstCharacters: ["h"],
         match(e) {
-            let t = m.Ju.exec(e);
+            let t = g.Ju.exec(e);
             return null != t && ((null != t[2] && /\D/.test(t[2])) || (null != t[3] && /\D/.test(t[3]))) ? null : t;
         },
         parse(e, t, n) {
@@ -193,7 +193,7 @@ let B = {
     H = {
         order: s().defaultRules.url.order - 0.5,
         requiredFirstCharacters: ["h"],
-        match: (e) => m.En.exec(e),
+        match: (e) => g.En.exec(e),
         parse(e, t, n) {
             let i = e[0],
                 r = e[1],
@@ -662,11 +662,11 @@ let ed = {
 function eT(e, t) {
     return 0 === e.length || 0 === t || "" === e.charAt(t - 1).trim();
 }
-function eg(e, t, n) {
+function em(e, t, n) {
     let i = t + n;
     return i === e.length || "" === e.charAt(i).trim();
 }
-let em = (0, Q.A)([
+let eg = (0, Q.A)([
         {
             highlightWord: {
                 order: -1,
@@ -679,11 +679,11 @@ let em = (0, Q.A)([
                         return null;
                     let n = e.indexOf(t.highlightWord);
                     if (-1 === n) return null;
-                    let i = !eT(e, n) || !eg(e, n, t.highlightWord.length);
+                    let i = !eT(e, n) || !em(e, n, t.highlightWord.length);
                     if (i)
                         do
                             ((n = e.indexOf(t.highlightWord, n + 1)),
-                                (i = !eT(e, n) || !eg(e, n, t.highlightWord.length)));
+                                (i = !eT(e, n) || !em(e, n, t.highlightWord.length)));
                         while (i && -1 !== n);
                     if (-1 === n) return null;
                     let r = e.substring(0, n),
@@ -710,6 +710,6 @@ let em = (0, Q.A)([
         GUILD_VERIFICATION_FORM_RULES: eh,
         GUILD_EVENT_RULES: ef,
         PROFILE_BIO_RULES: eI,
-        AUTO_MODERATION_SYSTEM_MESSAGE_RULES: em,
+        AUTO_MODERATION_SYSTEM_MESSAGE_RULES: eg,
         NATIVE_SEARCH_RESULT_LINK_RULES: ep,
     };

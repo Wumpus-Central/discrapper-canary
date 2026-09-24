@@ -58,8 +58,8 @@ function A(e) {
             successMessage: f,
             role: p,
             layout: T = "vertical",
-            layoutConfig: g,
-            badge: m,
+            layoutConfig: m,
+            badge: g,
             icon: S = null,
             interactiveLabel: N = !1,
             auxiliaryContentPosition: C = "under-control",
@@ -80,14 +80,14 @@ function A(e) {
                 f = null != n && "" !== n,
                 p = null != l && "" !== l,
                 T = (null != a && "" !== a) || (null != s && "" !== s),
-                g = [];
-            (p && g.push(A), T && g.push(E), o && g.push(I));
-            let m = g.length > 0 ? g.join(" ") : void 0;
+                m = [];
+            (p && m.push(A), T && m.push(E), o && m.push(I));
+            let g = m.length > 0 ? m.join(" ") : void 0;
             return r.useMemo(
                 () => ({
                     labelId: f ? u : void 0,
                     controlId: t ?? _,
-                    describedById: m,
+                    describedById: g,
                     errorMessageId: null != i && "" !== i ? h : void 0,
                     helperTextId: T ? E : void 0,
                     descriptionId: p ? A : void 0,
@@ -95,11 +95,11 @@ function A(e) {
                     isLabelHovered: d,
                     setIsLabelHovered: c,
                 }),
-                [f, u, t, _, m, i, h, T, E, p, A, o, I, d, c],
+                [f, u, t, _, g, i, h, T, E, p, A, o, I, d, c],
             );
         })(e, { hasTrailingAuxiliaryContent: null != O }),
         { labelId: y, controlId: D, errorMessageId: v, describedById: b, helperTextId: M, descriptionId: P } = L,
-        U = g?.horizontalControlColumnWidth,
+        U = m?.horizontalControlColumnWidth,
         w = "group" === p || "radiogroup" === p,
         G = w ? "fieldset" : "div",
         x = w ? (0, i.jsx)("legend", { id: y, children: (0, i.jsx)(l.A, { children: t }) }) : null,
@@ -126,10 +126,10 @@ function A(e) {
                               className: _.mw,
                               children: "*",
                           }),
-                      null != m
+                      null != g
                           ? (0, i.jsx)("span", {
                                 className: _.fC,
-                                children: (0, i.jsx)(s.E, { type: m, variant: "brand" }),
+                                children: (0, i.jsx)(s.E, { type: g, variant: "brand" }),
                             })
                           : null,
                   ],

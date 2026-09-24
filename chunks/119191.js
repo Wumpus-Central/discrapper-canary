@@ -31,18 +31,18 @@ function y(t) {
             message: i,
             highlightAdminWarningIfElevated: p = !1,
             useFlexboxLayout: y = !1,
-            keybindClassName: g,
+            keybindClassName: m,
         } = t,
-        m = (0, l.bG)([r.Ay], () => {
+        g = (0, l.bG)([r.Ay], () => {
             let t = r.Ay.getVisibleGame();
             return null != t && t.elevated && r.Ay.canShowAdminWarning;
         }),
-        I = (0, o.NP)();
-    return m
+        E = (0, o.NP)();
+    return g
         ? (0, n.jsx)(a.E, {
               variant: "text-xxs/semibold",
               color: p ? "text-feedback-warning" : "text-muted",
-              children: I
+              children: E
                   ? A.intl.format(A.t.MVS9pV, {
                         onSettingsClick: (t) => {
                             (t.stopPropagation(), (0, s.A)(void 0, !0), (0, c.openUserSettings)(u.X.OVERLAY_PANEL));
@@ -55,7 +55,7 @@ function y(t) {
                 className: f.FH,
                 children: A.intl.format(i, {
                     keybind: e,
-                    keybindHook: (t) => (0, n.jsx)(d.G, { keybind: e, className: g }, e.join("+")),
+                    keybindHook: (t) => (0, n.jsx)(d.G, { keybind: e, className: m }, e.join("+")),
                 }),
             })
           : (0, n.jsx)(n.Fragment, {

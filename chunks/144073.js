@@ -16,8 +16,8 @@ var i,
     f = n(228366),
     p = n(636537),
     T = n(913122),
-    g = n(927813),
-    m = (((i = {})[(i.SUCCESSFUL_QUERY = 1)] = "SUCCESSFUL_QUERY"), (i[(i.ERROR = 2)] = "ERROR"), i),
+    m = n(927813),
+    g = (((i = {})[(i.SUCCESSFUL_QUERY = 1)] = "SUCCESSFUL_QUERY"), (i[(i.ERROR = 2)] = "ERROR"), i),
     S = n(652215);
 async function N(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
@@ -32,12 +32,12 @@ async function N(e, t) {
             if (!r) throw Error("Indexing response received but autoRetry is disabled");
             return (
                 await f.h.dispatch({ type: "MEMBER_SAFETY_GUILD_MEMBER_SEARCH_STILL_INDEXING", guildId: e }),
-                await new Promise((e) => setTimeout(e, l.body.retry_after * g.A.Millis.SECOND)),
+                await new Promise((e) => setTimeout(e, l.body.retry_after * m.A.Millis.SECOND)),
                 N(e, t, n, i + 1)
             );
         }
         return {
-            type: m.SUCCESSFUL_QUERY,
+            type: g.SUCCESSFUL_QUERY,
             body: {
                 guild_id: (s = l.body).guild_id,
                 members: s.members,
@@ -47,12 +47,12 @@ async function N(e, t) {
         };
     } catch (t) {
         let e = new T.LG(t);
-        return { type: m.ERROR, body: e };
+        return { type: g.ERROR, body: e };
     }
 }
 async function C(e, t, n) {
     let i = await N(e, t, n);
-    if (i.type === m.ERROR) throw i.body;
+    if (i.type === g.ERROR) throw i.body;
     let { body: r } = i;
     f.h.dispatch({
         type: "MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS",

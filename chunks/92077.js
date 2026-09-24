@@ -1,7 +1,7 @@
 n.d(t, {
     BK: () => D,
     BO: () => O,
-    K3: () => m,
+    K3: () => g,
     NQ: () => S,
     Ts: () => f,
     U: () => N,
@@ -9,7 +9,7 @@ n.d(t, {
     ZT: () => R,
     jU: () => y,
     oc: () => T,
-    qv: () => g,
+    qv: () => m,
     v7: () => C,
     zr: () => p,
 });
@@ -63,7 +63,7 @@ function T(e) {
             location: l,
         }));
 }
-function g(e, t, n) {
+function m(e, t, n) {
     ((0, A.n)(e.id, t).then(() => {
         r.h.dispatch({ type: "DISPATCH_APPLICATION_REPAIR", applicationId: e.id, branchId: t });
     }),
@@ -74,7 +74,7 @@ function g(e, t, n) {
             location: n,
         }));
 }
-function m(e, t, n, i) {
+function g(e, t, n, i) {
     let a = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
     (!(function (e, t, n, i) {
         if (s.Ay.getRunningDiscordApplicationIds().includes(e.id)) return;

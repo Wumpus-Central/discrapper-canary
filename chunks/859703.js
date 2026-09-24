@@ -1,4 +1,4 @@
-let i, r, a, s, l, o, d, c, u, _, E, A, h, I, f, p, T, g, m, S, N, C, O, R, L;
+let i, r, a, s, l, o, d, c, u, _, E, A, h, I, f, p, T, m, g, S, N, C, O, R, L;
 n.d(t, { A: () => ei });
 var y = n(435558),
     D = n(412703),
@@ -36,8 +36,8 @@ function K() {
         (H = new Map()),
         (p = new Map()),
         (T = new Map()),
-        (g = new Map()),
         (m = new Map()),
+        (g = new Map()),
         (S = new Map()),
         (f = new Set()),
         (N = new Map()),
@@ -76,7 +76,7 @@ function z(e, t) {
     (n.set(e, t), (p = n));
 }
 function X(e) {
-    null != g.get(e) && (g = new Map(g)).delete(e);
+    null != m.get(e) && (m = new Map(m)).delete(e);
 }
 function q(e) {
     let t = new Set(u);
@@ -121,7 +121,7 @@ class et extends b.Ay.Store {
         return c;
     }
     getQuestPreviewOverride(e) {
-        let t = m.get(e);
+        let t = g.get(e);
         return null == t ? void 0 : l.get(t);
     }
     get questEnrollmentBlockedUntil() {
@@ -158,7 +158,7 @@ class et extends b.Ay.Store {
         return T.get(e);
     }
     getStreamHeartbeatFailure(e) {
-        return g.get(e);
+        return m.get(e);
     }
     getQuest(e) {
         return l.get(e);
@@ -314,8 +314,8 @@ let en = new et(M.h, {
         QUESTS_SEND_HEARTBEAT_FAILURE: function (e) {
             let { questId: t, streamKey: n } = e;
             null != n &&
-                null == g.get(n) &&
-                (g = new Map(g)).set(n, { questId: t, streamKey: n, firstFailedAt: Date.now() });
+                null == m.get(n) &&
+                (m = new Map(m)).set(n, { questId: t, streamKey: n, firstFailedAt: Date.now() });
         },
         QUESTS_ENROLL_BEGIN: function (e) {
             let { questId: t } = e,
@@ -385,10 +385,10 @@ let en = new et(M.h, {
             let { questId: t } = e,
                 n = new Set(A);
             (n.add(t), (A = n));
-            let i = new Map(m),
+            let i = new Map(g),
                 r = !1;
             for (let [e, n] of i) n === t && (i.delete(e), (r = !0));
-            r && (m = i);
+            r && (g = i);
         },
         QUESTS_DISMISS_CONTENT_SUCCESS: function (e) {
             let { dismissedQuestUserStatus: t } = e;
@@ -453,8 +453,8 @@ let en = new et(M.h, {
         },
         QUESTS_PREVIEW_OVERRIDE: function (e) {
             let { placement: t, questId: n } = e,
-                i = new Map(m);
-            (i.get(t) === n ? i.delete(t) : i.set(t, n), (m = i));
+                i = new Map(g);
+            (i.get(t) === n ? i.delete(t) : i.set(t, n), (g = i));
         },
         QUESTS_SELECT_TASK_PLATFORM: function (e) {
             let { questId: t, platform: n } = e;

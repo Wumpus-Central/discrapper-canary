@@ -96,8 +96,8 @@ function f(e, t) {
 }
 var p = n(602034),
     T = n(508382),
-    g = n(315710),
-    m = n(364522),
+    m = n(315710),
+    g = n(364522),
     S = n(289873),
     N = n(955572),
     C = n(775602);
@@ -239,8 +239,8 @@ function Z(e) {
             disabled: f,
             isFocused: p,
             menuItemProps: T,
-            action: g,
-            onClose: m,
+            action: m,
+            onClose: g,
             onFocus: N,
             className: C,
             focusedClassName: O,
@@ -253,13 +253,13 @@ function Z(e) {
         W = R("MenuItem"),
         Y = a.useCallback(
             (e) => {
-                if ((U?.({ type: y.Q.DEFAULT }), null == g)) return !1;
-                ((e.shiftKey && L) || v || m(),
+                if ((U?.({ type: y.Q.DEFAULT }), null == m)) return !1;
+                ((e.shiftKey && L) || v || g(),
                     e.persist(),
                     P?.(),
-                    (e.nativeEvent.view ?? window).requestAnimationFrame(() => g(e)));
+                    (e.nativeEvent.view ?? window).requestAnimationFrame(() => m(e)));
             },
-            [g, m, P, L, v, U],
+            [m, g, P, L, v, U],
         );
     return (
         a.useEffect(() => {
@@ -397,7 +397,7 @@ function et(e) {
                 className: l()(D.submenu, n),
                 ..._,
                 ref: E,
-                children: (0, r.jsx)(m.Ip, { className: l()(D.scroller, D.scrollerWithScrollbar), children: d() }),
+                children: (0, r.jsx)(g.Ip, { className: l()(D.scroller, D.scrollerWithScrollbar), children: d() }),
             }),
         }),
         h = R("MenuSubmenuItem"),
@@ -478,24 +478,24 @@ function er(e) {
         } = e,
         { onInteraction: p } = a.useContext(y.x),
         T = R("MenuCheckboxItem"),
-        g = a.useRef(null);
+        m = a.useRef(null);
     a.useEffect(() => {
-        E && B(g);
+        E && B(m);
     }, [E]);
-    let m = a.useCallback(
+    let g = a.useCallback(
         (e) => {
             (h(e), p?.({ type: y.Q.CHECKBOX }));
         },
         [h, p],
     );
     return (0, r.jsxs)(w.D, {
-        innerRef: g,
+        innerRef: m,
         className: l()(D.item, D.checkboxContainer, D.labelContainer, q.nM, M[t], I, {
             [D.disabled]: _,
             [D.focused]: E,
             [f ?? ""]: E,
         }),
-        onClick: _ ? void 0 : m,
+        onClick: _ ? void 0 : g,
         ...A,
         "aria-checked": s,
         "aria-disabled": _,
@@ -679,7 +679,7 @@ function eu(e) {
         a.useEffect(() => {
             _ && (B(h), I.current?.focus());
         }, [_]));
-    let g = a.useCallback(
+    let m = a.useCallback(
         (e) => {
             (s(e), A?.({ type: y.Q.DEFAULT }));
         },
@@ -705,7 +705,7 @@ function eu(e) {
                     (0, r.jsx)(ed.k, {
                         inputRef: I,
                         value: i,
-                        onChange: g,
+                        onChange: m,
                         placeholder: o,
                         maxLength: d,
                         disabled: c,
@@ -931,13 +931,13 @@ function eA(e) {
             }, [n]);
             let { focusPath: h } = _,
                 [I, T] = a.useState(!1),
-                [g, m] = a.useState(o),
+                [m, g] = a.useState(o),
                 [{ onItemFocusMemoizer: S, onItemMouseEnterMemoizer: N }] = a.useState(() => ({
                     onItemFocusMemoizer: new p.Lp((e) => () => {
                         (T(!0), E({ type: u.SET_FOCUS_PATH, path: e.split("--") }));
                     }),
                     onItemMouseEnterMemoizer: new p.Lp((e) => () => {
-                        (m(!1), E({ type: u.SET_FOCUS_PATH, path: e.split("--") }));
+                        (g(!1), E({ type: u.SET_FOCUS_PATH, path: e.split("--") }));
                     }),
                 })),
                 C = a.useCallback(
@@ -974,11 +974,11 @@ function eA(e) {
                                     (a === c.X2.NAVIGATE_IN || a === c.X2.NAVIGATE_OUT)
                                 )
                                     return;
-                                (e.preventDefault(), e.stopPropagation(), m(!0), A({ type: a }));
+                                (e.preventDefault(), e.stopPropagation(), g(!0), A({ type: a }));
                                 return;
                             case c.X2.SELECT_FOCUSED_ITEM:
                                 if (e.repeat || e.target.tabIndex >= 0) return;
-                                if ((e.preventDefault(), e.stopPropagation(), m(!1), A({ type: a }), null != r))
+                                if ((e.preventDefault(), e.stopPropagation(), g(!1), A({ type: a }), null != r))
                                     return void r(h);
                                 let o = e.target.ownerDocument ?? document,
                                     u = ((i = null != h ? `${(0, p.M4)(t, h.join("--"))}` : t), o.getElementById(i));
@@ -1031,10 +1031,10 @@ function eA(e) {
                             tabIndex: -1,
                             "aria-activedescendant": y(n) ? (0, p.M4)(t, h.join("--")) : void 0,
                             focusIndex: _.focusIndex,
-                            isUsingKeyboardNavigation: g,
+                            isUsingKeyboardNavigation: m,
                         };
                     },
-                    [t, h, y, _.focusIndex, g],
+                    [t, h, y, _.focusIndex, m],
                 ),
                 b = a.useCallback(
                     (e) => {
@@ -1058,9 +1058,9 @@ function eA(e) {
                     getSubmenuProps: v,
                     getItemProps: b,
                     isFocused: y,
-                    isUsingKeyboardNavigation: g,
+                    isUsingKeyboardNavigation: m,
                 }),
-                [A, D, v, b, y, g],
+                [A, D, v, b, y, m],
             );
         })({
             navId: t,
@@ -1075,11 +1075,11 @@ function eA(e) {
     let P = a.useRef(null),
         w = a.useContext(T.jQ),
         G = "none" !== (w?.focus ?? "none");
-    ((0, g.tj)(P, { disable: G }),
+    ((0, m.tj)(P, { disable: G }),
         a.useEffect(() => {
             G && P.current?.focus();
         }, [G]));
-    let x = i ? m.d_ : m.Ip,
+    let x = i ? g.d_ : g.Ip,
         k = a.useMemo(() => ({ onSelect: E, onInteraction: A }), [E, A]);
     return (0, r.jsx)(y.x.Provider, {
         value: k,

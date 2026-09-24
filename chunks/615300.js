@@ -61,13 +61,13 @@ let A = {
                 ...p
             } = n,
             T = t._value,
-            g = E(n.duration, I, f),
-            m = E(n.toValue, a, s),
-            S = i[A](t, { ...p, toValue: m, tension: l, friction: o, duration: g }),
+            m = E(n.duration, I, f),
+            g = E(n.toValue, a, s),
+            S = i[A](t, { ...p, toValue: g, tension: l, friction: o, duration: m }),
             N = S;
         if (c || u) {
             let e = E(n.duration, I, f);
-            ((r = i[A](t, { ...p, toValue: c ? T : -m, tension: l, friction: o, duration: e })),
+            ((r = i[A](t, { ...p, toValue: c ? T : -g, tension: l, friction: o, duration: e })),
                 (N = i.sequence([S, r])));
         }
         d

@@ -1,5 +1,5 @@
 let i;
-n.d(t, { Ay: () => R, bK: () => m, cK: () => S });
+n.d(t, { Ay: () => R, bK: () => g, cK: () => S });
 var r = n(228366),
     a = n(31728),
     s = n(272355),
@@ -16,8 +16,8 @@ var r = n(228366),
     f = n(969151),
     p = n(594007),
     T = n(227042),
-    g = n(652215);
-function m(e) {
+    m = n(652215);
+function g(e) {
     let t = e ?? i;
     null != t && c.A.isOpen(t) && r.h.wait(() => a.jD(t));
 }
@@ -41,11 +41,11 @@ function N() {
             let e = i;
             r.h.wait(() => a.VN(e));
         }
-        return (r.h.wait(() => a.ho(e, g.o1q.ACTIVITY, { channel: s })), void (i = e));
+        return (r.h.wait(() => a.ho(e, m.o1q.ACTIVITY, { channel: s })), void (i = e));
     }
 }
 function C() {
-    return (0, T.A)({ LayerStore: d.A, PopoutWindowStore: l.A }) ? m() : S();
+    return (0, T.A)({ LayerStore: d.A, PopoutWindowStore: l.A }) ? g() : S();
 }
 class O extends s.A {
     _initialize() {

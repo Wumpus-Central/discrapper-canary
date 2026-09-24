@@ -21,8 +21,8 @@ function p() {
         p = arguments.length > 3 ? arguments[3] : void 0,
         T = arguments.length > 4 ? arguments[4] : void 0,
         {
-            sourceName: g,
-            sourceApplicationId: m,
+            sourceName: m,
+            sourceApplicationId: g,
             activity: S,
             isVoiceOnly: N,
         } = (function () {
@@ -84,8 +84,8 @@ function p() {
         createdAt: y,
         syncTimestamp: v,
         version: h.kd,
-        applicationName: g ?? f.intl.string(f.t.qtSJxb),
-        applicationId: m,
+        applicationName: m ?? f.intl.string(f.t.qtSJxb),
+        applicationId: g,
         activity: S,
         users: Array.from(R),
         clipMethod: e,

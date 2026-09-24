@@ -1,4 +1,4 @@
-n.d(t, { Fy: () => I, GP: () => f, Zv: () => m, bW: () => p, kn: () => g });
+n.d(t, { Fy: () => I, GP: () => f, Zv: () => g, bW: () => p, kn: () => m });
 var i = n(310784),
     r = n.n(i),
     a = n(317097),
@@ -43,7 +43,7 @@ function T(e) {
         e.type !== h.rbe.GUILD_STAGE_VOICE
     );
 }
-function g(e, t, n) {
+function m(e, t, n) {
     var i;
     let r, a;
     return (
@@ -53,6 +53,6 @@ function g(e, t, n) {
         !(!r || !a || (0, E.A)(e)) && (e.hasFlag(h.pr7.IS_GUILD_OFFICIAL) ? (0, o.jr)(t) : T(t))
     );
 }
-function m(e, t, n) {
+function g(e, t, n) {
     return f(e, n) && c.A.can(h.xBc.MANAGE_OFFICIAL_MESSAGES, t) && T(t);
 }

@@ -1,4 +1,4 @@
-n.d(t, { $n: () => f, C8: () => g, OQ: () => A, QQ: () => p, YV: () => T, sL: () => m });
+n.d(t, { $n: () => f, C8: () => m, OQ: () => A, QQ: () => p, YV: () => T, sL: () => g });
 var i = n(582128),
     r = n(284009),
     a = n.n(r),
@@ -225,7 +225,7 @@ function T(e, t) {
         }, [u, o, d, c]);
     return f(e, _, t);
 }
-function g(e, t) {
+function m(e, t) {
     let n = (0, i.useRef)(e);
     (0, i.useEffect)(() => {
         n.current = e;
@@ -237,7 +237,7 @@ function g(e, t) {
         t,
     );
 }
-function m(e) {
+function g(e) {
     let t = e.subscriptionPlanPrice;
     return (
         e.discounts.forEach((n) => {

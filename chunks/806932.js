@@ -16,8 +16,8 @@ var o = n(228366),
     p = n(866665),
     A = n(939249),
     v = n(194261),
-    y = n(653523),
-    b = n(350972),
+    b = n(653523),
+    y = n(350972),
     S = n(677056),
     j = n(174197),
     I = n(652215),
@@ -36,7 +36,7 @@ function C(e) {
             disabled: d = !1,
         } = e,
         [m, h] = s.useState((0, j.gG)(t).name),
-        x = t === b.Ic.PIRATE;
+        x = t === y.Ic.PIRATE;
     return (0, i.jsx)(p.m, {
         text: m,
         onTooltipShow: () =>
@@ -64,7 +64,7 @@ function C(e) {
                     onClick: a ? I.tEg : () => l?.(t),
                     children: o,
                 }),
-                a && (0, i.jsx)(y.H$, {}),
+                a && (0, i.jsx)(b.H$, {}),
                 u &&
                     (0, i.jsx)("div", {
                         className: E.RK,

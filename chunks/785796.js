@@ -1,10 +1,10 @@
-n.d(t, { A: () => E });
+n.d(t, { A: () => o });
 var i = n(636537),
     l = n(228366),
     r = n(652215);
 let s = `${r.Joy}/api/v2/scheduled-maintenances`,
     a = `${r.Joy}/api/v2/incidents/unresolved.json`,
-    E = {
+    o = {
         checkIncidents() {
             Promise.all([i.Bo.get({ url: `${s}/active.json`, rejectWithError: !0 }), i.Bo.get(a)]).then((e) => {
                 let [t, n] = e,

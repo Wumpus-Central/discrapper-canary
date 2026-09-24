@@ -16,11 +16,11 @@ var i = n(812729),
     f = n(189081),
     p = n(480595),
     T = n(290863),
-    g = n(528767),
-    m = n(652215);
+    m = n(528767),
+    g = n(652215);
 let S = !1,
-    N = m.clD.ONLINE,
-    C = m.clD.UNKNOWN,
+    N = g.clD.ONLINE,
+    C = g.clD.UNKNOWN,
     O = 0,
     R = [],
     L = [],
@@ -34,60 +34,60 @@ function U(e) {
     if (0 === e.length) return e;
     let t = [],
         n = [];
-    for (let i of e) i.type === m.$pd.PLAYING ? n.push(i) : t.push(i);
+    for (let i of e) i.type === g.$pd.PLAYING ? n.push(i) : t.push(i);
     return 0 === n.length || 1 === n.length ? e : [...t, [...n].sort(T.m)[0]].sort(T.m);
 }
 function w(e) {
     return (0, A.kv)(e, f.A);
 }
 function G(e) {
-    if ((0, l.Lt)(e.flags ?? 0, m.jUm.CONTEXTLESS)) return !0;
+    if ((0, l.Lt)(e.flags ?? 0, g.jUm.CONTEXTLESS)) return !0;
     switch (e.type) {
-        case m.$pd.LISTENING:
+        case g.$pd.LISTENING:
             if ((0, c.A)(e)) return u.A.shouldShowActivity();
             if (null != e.application_id) return w(e.application_id);
             return !1;
-        case m.$pd.PLAYING:
+        case g.$pd.PLAYING:
             var t;
             let n;
             return null != e.application_id
                 ? w(e.application_id)
                 : ((t = e.name), 1 === (n = h.A.searchGamesByName(t)).length ? w(n[0]) : _.tz.getSetting());
-        case m.$pd.STREAMING:
-        case m.$pd.WATCHING:
+        case g.$pd.STREAMING:
+        case g.$pd.WATCHING:
         default:
             return null == e.application_id || w(e.application_id);
     }
 }
 function x() {
     if (((O = I.A.getIdleSince() ?? 0), (y = I.A.isAFK()), D)) N = C;
-    else if (S) N = m.clD.INVISIBLE;
+    else if (S) N = g.clD.INVISIBLE;
     else {
         let e = _.jP.getSetting();
-        N = e !== m.clD.UNKNOWN ? e : m.clD.ONLINE;
+        N = e !== g.clD.UNKNOWN ? e : g.clD.ONLINE;
     }
-    N === m.clD.ONLINE && O > 0 && (N = m.clD.IDLE);
+    N === g.clD.ONLINE && O > 0 && (N = g.clD.IDLE);
     let e = !1,
-        t = D || N === m.clD.INVISIBLE ? [] : p.A.getActivities().filter(G);
+        t = D || N === g.clD.INVISIBLE ? [] : p.A.getActivities().filter(G);
     r()(R, t) || ((R = t), (L = U(t)), (e = !0));
-    let n = g.A.getRemoteActivities();
+    let n = m.A.getRemoteActivities();
     v !== n && ((v = n), (e = !0));
-    let i = g.A.getHiddenActivities();
+    let i = m.A.getHiddenActivities();
     (b !== i && (b = i),
         e &&
             (P = U(
-                (M = s()([...R, ...v.filter((e) => e.type !== m.$pd.CUSTOM_STATUS)].sort(T.m))
+                (M = s()([...R, ...v.filter((e) => e.type !== g.$pd.CUSTOM_STATUS)].sort(T.m))
                     .uniqBy((e) => `${e.type}:${e.application_id}:${e.name}`)
                     .value()),
             )));
 }
 function k() {
-    ((D = !1), (C = m.clD.UNKNOWN), x(), T.A.setCurrentUserOnConnectionOpen(N, M));
+    ((D = !1), (C = g.clD.UNKNOWN), x(), T.A.setCurrentUserOnConnectionOpen(N, M));
 }
 class F extends o.Ay.Store {
     static displayName = "SelfPresenceStore";
     initialize() {
-        (this.waitFor(h.A, I.A, f.A, p.A, T.A, g.A, u.A, E.A), this.syncWith([p.A], x));
+        (this.waitFor(h.A, I.A, f.A, p.A, T.A, m.A, u.A, E.A), this.syncWith([p.A], x));
     }
     getLocalPresence() {
         return { status: N, since: O, activities: L, afk: y };
@@ -150,7 +150,7 @@ let B = new F(d.h, {
         return ((S = !1), x());
     },
     APP_STATE_UPDATE: function (e) {
-        if (e.state !== m.g6G.ACTIVE || !S) return !1;
+        if (e.state !== g.g6G.ACTIVE || !S) return !1;
         ((S = !1), x());
     },
 });

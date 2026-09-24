@@ -3,7 +3,7 @@ n.d(t, {
     JX: () => v,
     Kh: () => P,
     Pp: () => S,
-    Rw: () => g,
+    Rw: () => m,
     SP: () => N,
     Xw: () => U,
     ZR: () => M,
@@ -67,11 +67,11 @@ function T(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
     return p({ type: "application", applicationId: e }, _.Rsh.SOCIAL_LAYER_STOREFRONT_BY_APPLICATION_ID(e), t);
 }
-function g(e) {
+function m(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
     return p({ type: "guild", guildId: e }, _.Rsh.SOCIAL_LAYER_APPLICATION_STOREFRONT(e), t);
 }
-async function m(e, t) {
+async function g(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         { withGoogleSkuIds: i = !1, countryCode: s, paymentGateway: o } = n;
     try {
@@ -101,7 +101,7 @@ async function m(e, t) {
 }
 function S(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-    return m(t, _.Rsh.SOCIAL_LAYER_APPLICATION_STOREFRONT_SKU_BY_APPLICATION_ID(e, t), n);
+    return g(t, _.Rsh.SOCIAL_LAYER_APPLICATION_STOREFRONT_SKU_BY_APPLICATION_ID(e, t), n);
 }
 function N(e, t, n) {
     a.h.dispatch({ type: "SET_SOCIAL_LAYER_STOREFRONT_STATE", applicationId: e, pageIndex: t, skuId: n });

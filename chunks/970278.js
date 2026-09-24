@@ -1,4 +1,4 @@
-n.d(t, { A: () => g });
+n.d(t, { A: () => m });
 var i = n(435558),
     r = n.n(i),
     a = n(17928),
@@ -66,7 +66,7 @@ class T extends a.Ay.Store {
         return u.has(e);
     }
 }
-let g = new T(s.h, {
+let m = new T(s.h, {
     CONNECTION_OPEN: function (e) {
         ((c = {}),
             u.clear(),

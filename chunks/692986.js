@@ -16,13 +16,13 @@ var i = n(811315),
     f = n(822382),
     p = n(5990),
     T = n(304578),
-    g = n(652215),
-    m = n(926140);
+    m = n(652215),
+    g = n(926140);
 let S = null,
     N = [],
     C = new Map(),
     O = new Map(),
-    R = new Set([g.LWr.FILTER_FROM, g.LWr.FILTER_IN, g.LWr.FILTER_MENTIONS]);
+    R = new Set([m.LWr.FILTER_FROM, m.LWr.FILTER_IN, m.LWr.FILTER_MENTIONS]);
 function L(e) {
     let t = (0, f.bS)(e),
         n = O.get(t) ?? { results: [], context: l.A.getUserSearchContext(b.bind(null, e)) };
@@ -33,11 +33,11 @@ function y(e) {
     return (L(t), { searchContext: t, query: n, mode: i, tokens: r, cursorScope: a, autocompletes: s });
 }
 function D(e) {
-    return null != e && (e === g.LWr.FILTER_FROM || e === g.LWr.FILTER_MENTIONS);
+    return null != e && (e === m.LWr.FILTER_FROM || e === m.LWr.FILTER_MENTIONS);
 }
 function v(e) {
-    let t = e.type === g.o$q.FILTER && D(e.filter);
-    return e.type === g.o$q.FILTER_ALL || t;
+    let t = e.type === m.o$q.FILTER && D(e.filter);
+    return e.type === m.o$q.FILTER_ALL || t;
 }
 function b(e, t) {
     let { results: n } = t,
@@ -56,7 +56,7 @@ function b(e, t) {
             null != r && n.push({ text: r, user: e });
         }
         return n;
-    })(n, a.mode.type === g.o$q.FILTER ? 10 : 3);
+    })(n, a.mode.type === m.o$q.FILTER ? 10 : 3);
     let { query: s, mode: l, tokens: o, cursorScope: d } = a,
         c = U(e, l, o),
         u = y({ searchContext: e, query: s, mode: l, tokens: o, cursorScope: d, autocompletes: c });
@@ -82,16 +82,16 @@ function P(e) {
             (s = s.filter((t) => {
                 let { user: n } = t;
                 return n?.id !== e.id;
-            })).unshift({ text: g.ME, user: e });
+            })).unshift({ text: m.ME, user: e });
     }
     return null == s || 0 === s.length ? null : { group: t, results: s };
 }
 function U(e, t, n) {
     switch (t.type) {
-        case g.o$q.FILTER:
+        case m.o$q.FILTER:
             let i = P({ filter: t.filter, currentToken: t.token, searchContext: e, maxResults: 10, tokens: n });
             return null != i ? [i] : N;
-        case g.o$q.FILTER_ALL:
+        case m.o$q.FILTER_ALL:
             let r = t.token,
                 a = r?.getFullMatch()?.trim();
             if (null == a || "" === a) return [];
@@ -106,7 +106,7 @@ function U(e, t, n) {
                     }),
                 s
             );
-        case g.o$q.EMPTY:
+        case m.o$q.EMPTY:
             return N;
     }
 }
@@ -132,7 +132,7 @@ class x extends a.Ay.Store {
             C.get(t) ?? {
                 searchContext: e,
                 query: "",
-                mode: { type: g.o$q.EMPTY, filter: null, token: null },
+                mode: { type: m.o$q.EMPTY, filter: null, token: null },
                 tokens: [],
                 cursorScope: null,
                 autocompletes: [],
@@ -169,7 +169,7 @@ let k = new x(s.h, {
                         e.context.setQuery({
                             query: a,
                             filters: { guild: i ?? void 0 },
-                            boosters: (0, A.X3)(m.rD.USER),
+                            boosters: (0, A.X3)(g.rD.USER),
                         }),
                         (t = o?.autocompletes ?? []),
                         (d = !1));

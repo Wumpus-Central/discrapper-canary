@@ -33,8 +33,8 @@ var i = n(132500),
     f = n(738822),
     p = n(104886),
     T = n(710969),
-    g = n(792620),
-    m = n(814793),
+    m = n(792620),
+    g = n(814793),
     S = n(590202),
     N = n(823784),
     C = n(652215);
@@ -81,8 +81,8 @@ function D(e) {
             {
                 ...{
                     quest_id: o.id,
-                    quest_type: (0, m.pv)(o.config),
-                    application_ids: (0, g._3)(o) ?? [],
+                    quest_type: (0, g.pv)(o.config),
+                    application_ids: (0, m._3)(o) ?? [],
                     quest_status: (0, S.NI)(o),
                     ...L(o.id, l, r.p.QUEST, s),
                 },

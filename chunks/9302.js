@@ -8,9 +8,9 @@ let i;
         OVERLAY_VERSION: () => c,
         UNSET_PID: () => h,
         getPID: () => f,
-        getRPCAuthToken: () => g,
+        getRPCAuthToken: () => m,
         isValidGamePID: () => T,
-        log: () => m,
+        log: () => g,
         setOutOfProcessSupport: () => N,
         setPID: () => p,
         supportsLegacy: () => O,
@@ -44,11 +44,11 @@ function p(e) {
 function T(e) {
     return null != e && 0 !== e && e !== h;
 }
-function g() {
+function m() {
     return new URLSearchParams(window.location.search).get("rpc_auth_token");
 }
-function m(e) {
-    (0, a.tN)({ type: d.kGV.LOG_MESSAGES, pid: f(), token: g(), payload: e });
+function g(e) {
+    (0, a.tN)({ type: d.kGV.LOG_MESSAGES, pid: f(), token: m(), payload: e });
 }
 function S(e) {
     return !l.isPlatformEmbedded || (e.width >= _.width && e.height >= _.height);

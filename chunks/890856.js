@@ -20,8 +20,8 @@ let l = (e) => {
             onMouseOver: f,
             onMouseDown: p,
             onMouseLeave: T,
-            buttonProps: g,
-            "aria-label": m,
+            buttonProps: m,
+            "aria-label": g,
             "aria-describedby": S,
             ref: N,
             buttonRef: C,
@@ -41,11 +41,11 @@ let l = (e) => {
         onContextMenu: E,
         children: [
             (0, i.jsx)(a.D, {
-                ...g,
+                ...m,
                 innerRef: C,
                 focusProps: { ringTarget: R, ...d },
                 className: s.K,
-                "aria-label": m,
+                "aria-label": g,
                 "aria-describedby": S,
                 onClick: (e) => {
                     (e.stopPropagation(), c?.(e));

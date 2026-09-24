@@ -71,8 +71,8 @@ class f extends u.A {
 }
 var p = n(165610),
     T = n(375708);
-let g = !1,
-    m = !1,
+let m = !1,
+    g = !1,
     S = new (class extends f {
         static displayName = "FramesWebManager";
         _initialize() {
@@ -87,15 +87,15 @@ let g = !1,
         }
         handlePopoutWindowOpen = (e) => {
             let { key: t } = e;
-            t === h.MLl.ACTIVITY_POPOUT && (m = !1);
+            t === h.MLl.ACTIVITY_POPOUT && (g = !1);
         };
         handlePopoutWindowUpdate = () => {
-            let e = g,
+            let e = m,
                 t = o.A.getWindowOpen(h.MLl.ACTIVITY_POPOUT);
-            (!e || t || m || d.A.clearMainFrameSlot(), (g = t));
+            (!e || t || g || d.A.clearMainFrameSlot(), (m = t));
         };
         popInFrame = () => {
-            ((m = !0), l.close(h.MLl.ACTIVITY_POPOUT));
+            ((g = !0), l.close(h.MLl.ACTIVITY_POPOUT));
             let e = A.A.getMainFrame();
             null != e && (e.intent === p.sV.MAIN ? d.A.resetFrameLayoutModes(e.id) : d.A.clearMainFrameSlot());
         };

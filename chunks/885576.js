@@ -16,10 +16,10 @@ let I = Date.now(),
     f = !1,
     p = !1,
     T = !1,
-    g = !1,
-    m = !1;
+    m = !1,
+    g = !1;
 function S() {
-    return T || g || ((0, _.isAndroid)() && m);
+    return T || m || ((0, _.isAndroid)() && g);
 }
 function N() {
     let e;
@@ -54,10 +54,10 @@ if (!__OVERLAY__) {
               ((T = !0), C(!0), o.default.disconnect());
           }),
           d.A.powerMonitor.on("lock-screen", () => {
-              ((g = !0), C(!0));
+              ((m = !0), C(!0));
           }),
           d.A.powerMonitor.on("unlock-screen", () => {
-              ((g = !1), C(!1));
+              ((m = !1), C(!1));
           }))
         : setInterval(N, 30 * u.A.Millis.SECOND);
     let e = a()(() => {
@@ -97,7 +97,7 @@ class R extends s.Ay.Store {
         return T;
     }
     getSystemLocked() {
-        return g;
+        return m;
     }
 }
 let L = new R(l.h, {
@@ -113,7 +113,7 @@ let L = new R(l.h, {
     },
     APP_STATE_UPDATE: function (e) {
         let { state: t } = e;
-        return ((m = t === A.g6G.BACKGROUND), (i = null), (I = Date.now()), N(), !1);
+        return ((g = t === A.g6G.BACKGROUND), (i = null), (I = Date.now()), N(), !1);
     },
     OVERLAY_SET_NOT_IDLE: O,
     CHANNEL_SELECT: O,

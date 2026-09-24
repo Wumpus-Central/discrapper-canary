@@ -4,9 +4,9 @@ var i = n(477900),
     r = n(503698),
     s = n.n(r),
     a = n(834730),
-    E = n(375708),
-    o = n(310421);
-let c = { BLOCK: o.om, INLINE: o.mG };
+    o = n(375708),
+    E = n(310421);
+let c = { BLOCK: E.om, INLINE: E.mG };
 class u extends l.PureComponent {
     static Types = c;
     render() {
@@ -19,10 +19,10 @@ class u extends l.PureComponent {
                     variant: "text-sm/bold",
                     tag: "div",
                     color: "text-feedback-positive",
-                    className: o.AD,
-                    children: [E.intl.string(E.t["8tvIiN"]), ":"],
+                    className: E.AD,
+                    children: [o.intl.string(o.t["8tvIiN"]), ":"],
                 }),
-                (0, i.jsx)(a.E, { className: s()(o.uN, n), variant: "text-sm/normal", children: e }),
+                (0, i.jsx)(a.E, { className: s()(E.uN, n), variant: "text-sm/normal", children: e }),
             ],
         });
     }

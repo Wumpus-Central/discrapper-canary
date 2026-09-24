@@ -7,7 +7,7 @@
     Yb: () => eE,
     IV: () => ev,
     Oq: () => ed,
-    r8: () => em,
+    r8: () => eg,
     lk: () => e_,
     qY: () => eO,
     jh: () => ec,
@@ -27,7 +27,7 @@
     HA: () => ep,
     Yf: () => eD,
     Ov: () => er,
-    QG: () => eg,
+    QG: () => em,
     Zb: () => eb,
     dQ: () => eL,
     Gt: () => eh,
@@ -52,8 +52,8 @@ var i,
     f = n(69114),
     p = n(633965),
     T = n(27620),
-    g = n(463347),
-    m = n(310829),
+    m = n(463347),
+    g = n(310829),
     S = n(383394),
     N = n(544180),
     C = n(711014),
@@ -410,7 +410,7 @@ async function eo(e, t) {
                   sourceQuestContent: t.sourceQuestContent,
               });
     }
-    if ((e === J.Fw && (0, m.u)(), H.A.isEnrolling(e))) return { type: "previous_in_flight_request" };
+    if ((e === J.Fw && (0, g.u)(), H.A.isEnrolling(e))) return { type: "previous_in_flight_request" };
     o.h.dispatch({ type: "QUESTS_ENROLL_BEGIN", questId: e });
     try {
         let n = (0, Z.L4)(t.questContent),
@@ -554,10 +554,10 @@ async function ep() {
 function eT(e, t, n) {
     o.h.dispatch({ type: "QUESTS_UPDATE_OPTIMISTIC_PROGRESS", questId: e, taskEventName: t, progress: n });
 }
-function eg(e) {
+function em(e) {
     o.h.dispatch({ type: "QUESTS_RESET_OPTIMISTIC_PROGRESS", questId: e });
 }
-async function em(e, t) {
+async function eg(e, t) {
     let n = Date.now();
     (F.recordQuestRequestAttempt("/quests/decision", t, e),
         o.h.dispatch({ type: "QUESTS_FETCH_QUEST_TO_DELIVER_BEGIN", placement: e }));
@@ -570,18 +570,18 @@ async function em(e, t) {
             _ = null != c ? c() : [],
             E = C.Ay.getGuildsTree(),
             I = _.filter((e) => {
-                if ((0, g.tZ)(e)) return !1;
+                if ((0, m.tZ)(e)) return !1;
                 let t = E.getNode(e);
                 return t?.parentId == null || S.A.isFolderExpanded(t.parentId);
             }).slice(0, 50),
             T = d.enabled ? I : void 0,
-            m = new URLSearchParams({ placement: String(e) });
-        (r?.uuid != null && m.append("client_heartbeat_session_id", r.uuid),
-            null != s.uuid && m.append("client_ad_session_id", s.uuid),
-            null != T && T.forEach((e) => m.append("visible_guild_ids", e)));
+            g = new URLSearchParams({ placement: String(e) });
+        (r?.uuid != null && g.append("client_heartbeat_session_id", r.uuid),
+            null != s.uuid && g.append("client_ad_session_id", s.uuid),
+            null != T && T.forEach((e) => g.append("visible_guild_ids", e)));
         let R = (
                 await l.Bo.get({
-                    url: `${b.Rsh.QUEST_FETCH_QUEST_TO_DELIVER}?${m.toString()}`,
+                    url: `${b.Rsh.QUEST_FETCH_QUEST_TO_DELIVER}?${g.toString()}`,
                     rejectWithError: !1,
                     context: { connection_type: N.A.getType() },
                 })

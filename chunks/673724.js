@@ -8,10 +8,10 @@
     S8: () => N,
     Wb: () => h,
     XE: () => a,
-    ZJ: () => g,
+    ZJ: () => m,
     a7: () => d,
     aM: () => c,
-    ks: () => m,
+    ks: () => g,
     qf: () => L,
     sj: () => u,
     sq: () => i,
@@ -71,10 +71,10 @@ function p(e) {
 function T(e, t) {
     return e <= p(t);
 }
-function g(e) {
+function m(e) {
     return `${Math.round(e / 1048576)} MB`;
 }
-let m = ["simple", "balanced", "complex"],
+let g = ["simple", "balanced", "complex"],
     S = [
         { id: "claude-fable-5-1", label: "Claude Fable 5.1", provider: "anthropic" },
         { id: "claude-opus-5-5", label: "Claude Opus 5.5", provider: "anthropic" },

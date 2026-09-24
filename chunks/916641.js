@@ -1,6 +1,6 @@
-t.d(i, { A: () => s });
-var n = t(544105),
-    l = t(375708);
+i.d(t, { A: () => s });
+var n = i(544105),
+    l = i(375708);
 function s(e) {
     switch (e) {
         case n.f$.XBOX:

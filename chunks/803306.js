@@ -1,4 +1,4 @@
-(n.d(t, { Q9: () => f, eO: () => m, lA: () => p, nj: () => g, q0: () => S, rQ: () => I, wz: () => T }), n(938796));
+(n.d(t, { Q9: () => f, eO: () => g, lA: () => p, nj: () => m, q0: () => S, rQ: () => I, wz: () => T }), n(938796));
 var i = n(284009),
     r = n.n(i),
     a = n(239947),
@@ -59,10 +59,10 @@ function T(e) {
               (t) => (l.h.dispatch({ type: "USER_UPDATE", user: t.body }), u.default.getUser(e)),
           );
 }
-function g(e) {
+function m(e) {
     return (l.h.dispatch({ type: "USER_UPDATE", user: e }), u.default.getUser(e.id));
 }
-async function m(e) {
+async function g(e) {
     let {
             type: t,
             withMutualGuilds: n,

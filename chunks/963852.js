@@ -24,8 +24,8 @@ function u(e) {
             poll: f,
             sharedCustomTheme: p,
             changelogId: T,
-            giftingPrompt: g,
-            boostingPrompt: m,
+            giftingPrompt: m,
+            boostingPrompt: g,
             state: S,
             mediaMention: N,
         } = e,
@@ -61,8 +61,8 @@ function u(e) {
             poll: f,
             shared_client_theme: p,
             changelog_id: T,
-            gifting_prompt: g,
-            boosting_prompt: m,
+            gifting_prompt: m,
+            boosting_prompt: g,
             media_mention: N,
         }
     );

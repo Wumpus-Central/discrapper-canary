@@ -1,4 +1,4 @@
-n.d(t, { A: () => g });
+n.d(t, { A: () => m });
 var i = n(17928),
     r = n(506774),
     a = n(228366),
@@ -60,7 +60,7 @@ class T extends i.Ay.Store {
         return !("passed" === _ || "suppress" === _ || p());
     }
 }
-let g = new T(a.h, {
+let m = new T(a.h, {
     AGE_VERIFICATION_METHODS_LOAD_START: function () {
         u = !0;
     },

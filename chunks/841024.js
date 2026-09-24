@@ -21,8 +21,8 @@ let I = (0, n(945810).mj)({
     f = n(786661).E.applicationIds["0"],
     p = "356875988589740042";
 var T = n(876474),
-    g = n(190443);
-let m = "Clip signal handler registration";
+    m = n(190443);
+let g = "Clip signal handler registration";
 function S(e) {
     return !!c.Ay.getEnableAutoclipping() && d.A.isGameAllowed(e ?? r.Ay.getVisibleGame()?.id);
 }
@@ -46,41 +46,41 @@ class N extends i.A {
                 {
                     type: "voiceChannel",
                     name: "ml-audio-classification",
-                    isEnabled: () => (0, u.$i)(m) && S(),
+                    isEnabled: () => (0, u.$i)(g) && S(),
                     importHandler: () => n.e("553725").then(n.bind(n, 691148)),
                 },
                 {
                     type: "voiceChannel",
                     name: "distributed-clipping",
-                    isEnabled: () => S() && E.A.getConfig({ location: m }).enableDistributedClips,
+                    isEnabled: () => S() && E.A.getConfig({ location: g }).enableDistributedClips,
                     importHandler: () => n.e("878045").then(n.bind(n, 359788)),
                 },
                 {
                     type: "application",
                     name: "league-of-legends",
                     applicationId: T.m,
-                    isEnabled: () => S(T.m) && h.A.getConfig({ location: m }).enableLeagueEvents,
+                    isEnabled: () => S(T.m) && h.A.getConfig({ location: g }).enableLeagueEvents,
                     importHandler: () => n.e("618549").then(n.bind(n, 877588)),
                 },
                 {
                     type: "application",
                     name: "cs2-gsi",
                     applicationId: f,
-                    isEnabled: () => S(f) && _.A.getConfig({ location: m }).enableCs2Gsi,
+                    isEnabled: () => S(f) && _.A.getConfig({ location: g }).enableCs2Gsi,
                     importHandler: () => Promise.all([n.e("556967"), n.e("860838")]).then(n.bind(n, 525509)),
                 },
                 {
                     type: "application",
                     name: "dota-gsi",
                     applicationId: p,
-                    isEnabled: () => S(p) && A.A.getConfig({ location: m }).enableDotaGsi,
+                    isEnabled: () => S(p) && A.A.getConfig({ location: g }).enableDotaGsi,
                     importHandler: () => Promise.all([n.e("556967"), n.e("677980")]).then(n.bind(n, 250263)),
                 },
                 {
                     type: "application",
                     name: "rocket-league",
-                    applicationId: g.e,
-                    isEnabled: () => S(g.e) && I.getConfig({ location: m }).enableRocketLeagueEvents,
+                    applicationId: m.e,
+                    isEnabled: () => S(m.e) && I.getConfig({ location: g }).enableRocketLeagueEvents,
                     importHandler: () => Promise.all([n.e("556967"), n.e("182150")]).then(n.bind(n, 446885)),
                 },
             ]))

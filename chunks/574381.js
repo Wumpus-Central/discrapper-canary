@@ -3,7 +3,7 @@ n.d(t, {
     Av: () => s,
     Ct: () => A,
     HZ: () => _,
-    Ls: () => g,
+    Ls: () => m,
     R0: () => C,
     Sn: () => h,
     cX: () => d,
@@ -17,7 +17,7 @@ n.d(t, {
     tn: () => T,
     uF: () => o,
     un: () => f,
-    uo: () => m,
+    uo: () => g,
     xl: () => u,
 });
 var i,
@@ -38,7 +38,7 @@ function u() {
     return o() || d() || c();
 }
 function _() {
-    return "WEB" === m();
+    return "WEB" === g();
 }
 function E() {
     return (
@@ -64,10 +64,10 @@ function p() {
 function T() {
     return p();
 }
-function g() {
+function m() {
     return u() || p() || s;
 }
-function m() {
+function g() {
     return o() ? "WINDOWS" : d() ? "OSX" : c() ? "LINUX" : "WEB";
 }
 function S() {

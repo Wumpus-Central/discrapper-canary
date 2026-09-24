@@ -16,8 +16,8 @@ let c = null,
     f = !1,
     p = !1,
     T = null,
-    g = !1,
-    m = null;
+    m = !1,
+    g = null;
 function S(e) {
     let { activeSubscriptions: t, record: n } = e,
         i = t.findIndex((e) => e.id === n.id);
@@ -37,8 +37,8 @@ function N() {
         (I = null),
         (f = !1),
         (p = !1),
-        (g = !1),
-        (m = null));
+        (m = !1),
+        (g = null));
 }
 function C(e) {
     return e.status !== d.Dmq.UNPAID;
@@ -109,10 +109,10 @@ class R extends i.Ay.Store {
         return p;
     }
     getIsFetchingMostRecentSubscription() {
-        return g;
+        return m;
     }
     getLastLazyPerkSync() {
-        return m;
+        return g;
     }
     getPremiumGroupSubscription() {
         return O(d.rzx.PREMIUM, (e) => e.hasAnyPremiumGroup && e.statusAllowsPerks, !0);
@@ -139,7 +139,7 @@ let L = new R(r.h, {
             (u = r),
             (E = a),
             (A = s),
-            (m = n));
+            (g = n));
     },
     BILLING_SUBSCRIPTION_UPDATE_SUCCESS: function (e) {
         let { subscription: t } = e;
@@ -151,11 +151,11 @@ let L = new R(r.h, {
             null != A && n.type === d.rzx.APPLICATION && (E = S({ activeSubscriptions: A, record: n })));
     },
     BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_START: function () {
-        g = !0;
+        m = !0;
     },
     BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_SUCCESS: function (e) {
         let { subscription: t } = e;
-        if (((h = !0), (g = !1), null != t)) {
+        if (((h = !0), (m = !1), null != t)) {
             if (t.user_id !== o.default.getId()) {
                 h = !1;
                 return;
@@ -164,7 +164,7 @@ let L = new R(r.h, {
         }
     },
     BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_FAIL: function () {
-        g = !1;
+        m = !1;
     },
     BILLING_PREVIOUS_PREMIUM_SUBSCRIPTION_FETCH_SUCCESS: function (e) {
         let { subscription: t } = e;

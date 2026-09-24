@@ -17,7 +17,7 @@ let h = new d.Vy("LegacyOverlayClient"),
     f = new _.A(1e3),
     p = null,
     T = null;
-function g() {
+function m() {
     null == T &&
         (T = setInterval(() => {
             if (null != p) {
@@ -27,10 +27,10 @@ function g() {
             }
         }, 1e4));
 }
-class m extends i.Ay.Store {
+class g extends i.Ay.Store {
     static displayName = "OverlayRPCLogStore";
     initialize() {
-        (this.waitFor(A.A), A.A.hasRenderDebugMode(E.x7.LegacyOverlayLogging) && g());
+        (this.waitFor(A.A), A.A.hasRenderDebugMode(E.x7.LegacyOverlayLogging) && m());
     }
     getAllLogs() {
         return f;
@@ -42,10 +42,10 @@ class m extends i.Ay.Store {
         return f.filter((e) => "error" === e.level || "crash" === e.level);
     }
 }
-new m(a.h, {
+new g(a.h, {
     OVERLAY_RENDER_DEBUG_MODE: function (e) {
         let { enabled: t, mode: n } = e;
-        return (n === E.x7.LegacyOverlayLogging && (t ? g() : null != T && (clearInterval(T), (T = null))), !1);
+        return (n === E.x7.LegacyOverlayLogging && (t ? m() : null != T && (clearInterval(T), (T = null))), !1);
     },
     OVERLAY_ADD_LOGS_BATCH: function (e) {
         let { logs: t } = e;

@@ -12,12 +12,12 @@ var n = i(477900),
     f = i(241541),
     p = i(559647),
     y = i(866665),
-    g = i(408278),
-    m = i(297152),
-    I = i(834730),
-    E = i(821609),
-    _ = i(308368),
-    N = i(298990),
+    m = i(408278),
+    g = i(297152),
+    E = i(834730),
+    I = i(821609),
+    N = i(308368),
+    _ = i(298990),
     S = i(308528),
     C = i(684013),
     h = i(730134),
@@ -88,22 +88,22 @@ function ts(t) {
     let e,
         { entry: i, currentUserActivity: a, idx: s, variant: o } = t,
         u = (0, c.bG)([q.default], () => q.default.getUser(i.author_id)),
-        [m, I] = l.useState("unsent"),
-        [E, N] = l.useState(!1);
+        [g, E] = l.useState("unsent"),
+        [I, _] = l.useState(!1);
     l.useEffect(() => {
-        if ("sent" === m) {
-            let t = setTimeout(() => N(!0), 2e3);
+        if ("sent" === g) {
+            let t = setTimeout(() => _(!0), 2e3);
             return () => clearTimeout(t);
         }
-    }, [m]);
+    }, [g]);
     let h = (0, ti.JH)(a?.application_id ?? i.extra.application_id),
         T = null != h;
     async function v(t) {
-        if (null != u && "unsent" === m) {
+        if (null != u && "unsent" === g) {
             t.stopPropagation();
             try {
-                if ((I("sending"), T && null != h))
-                    await _.A.sendActivityInviteUser({
+                if ((E("sending"), T && null != h))
+                    await N.A.sendActivityInviteUser({
                         type: tn.xL.JOIN,
                         userId: u.id,
                         activity: h,
@@ -138,9 +138,9 @@ function ts(t) {
                     target_index: s,
                 }),
                     (0, te.YX)(tn.uss.ACTIVITY, { type: te.Z5.INVITE, value: te.IP.INVITE_SENT, userId: u.id }),
-                    I("sent"));
+                    E("sent"));
             } catch (t) {
-                I("unsent");
+                E("unsent");
             }
         }
     }
@@ -155,15 +155,15 @@ function ts(t) {
     }
     let b = T ? ta.intl.string(ta.t["3fRySx"]) : ta.intl.string(ta.t.XHxDIV);
     return (
-        (e = "sent" === m ? (E ? d.ChatIcon : A.B) : T ? f.D : p.SendMessageIcon),
+        (e = "sent" === g ? (I ? d.ChatIcon : A.B) : T ? f.D : p.SendMessageIcon),
         (0, n.jsx)(y.m, {
             text: b,
             "aria-label": b,
-            children: (0, n.jsx)(g.K, {
+            children: (0, n.jsx)(m.K, {
                 icon: e,
                 "aria-label": b,
-                loading: "sending" === m,
-                onClick: E ? O : v,
+                loading: "sending" === g,
+                onClick: I ? O : v,
                 variant: "subtle" === o ? "icon-only" : "secondary",
                 size: "sm",
             }),
@@ -182,7 +182,7 @@ function to(t) {
             t.stopPropagation();
             try {
                 (d("sending"),
-                    await _.A.sendActivityInviteUser({
+                    await N.A.sendActivityInviteUser({
                         type: tn.xL.JOIN_REQUEST,
                         userId: r.id,
                         activity: o,
@@ -199,8 +199,8 @@ function to(t) {
     return (0, n.jsx)(y.m, {
         text: p,
         "aria-label": p,
-        children: (0, n.jsx)(g.K, {
-            icon: "sent" === u ? A.B : m.E,
+        children: (0, n.jsx)(m.K, {
+            icon: "sent" === u ? A.B : g.E,
             "aria-label": p,
             loading: "sending" === u,
             onClick: f,
@@ -241,7 +241,7 @@ function tu(t) {
                           (0, n.jsxs)("div", {
                               className: tr.Yn,
                               children: [
-                                  (0, n.jsx)(I.E, {
+                                  (0, n.jsx)(E.E, {
                                       className: tr.Xh,
                                       variant: "text-md/medium",
                                       color: "text-strong",
@@ -312,7 +312,7 @@ function td(t) {
                   !r &&
                       (0, n.jsx)("div", {
                           className: tr.v4,
-                          children: (0, n.jsx)(I.E, {
+                          children: (0, n.jsx)(E.E, {
                               variant: "text-xs/medium",
                               color: "subtle" === s ? "text-subtle" : "text-default",
                               tag: "div",
@@ -429,12 +429,12 @@ function tp(t) {
                   null != a && !s && l
                       ? (0, n.jsx)("div", {
                             className: tr.DJ,
-                            children: (0, n.jsx)(E.$, {
+                            children: (0, n.jsx)(I.$, {
                                 text: ta.intl.string(ta.t["6Qgrev"]),
                                 size: "sm",
                                 variant: "secondary",
                                 onClick: () => {
-                                    ((0, N.qf)(a, !1, tn.BRT.POPOUT),
+                                    ((0, _.qf)(a, !1, tn.BRT.POPOUT),
                                         (0, te.YX)(tn.uss.ACTIVITY, { type: te.Z5.INVITE, value: te.IP.PANEL_OPENED }));
                                 },
                             }),

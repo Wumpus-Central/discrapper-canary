@@ -41,18 +41,18 @@ function E() {
         },
     });
 }
-var C = i(803306),
-    v = i(631670),
+var v = i(803306),
+    C = i(631670),
     S = i(682618),
     b = i(636537),
     k = i(38405),
-    T = i(652215);
-async function y(e) {
+    y = i(652215);
+async function T(e) {
     let { displayOrder: t, hiddenBadges: i } = e,
         n = { ...(null != t ? { display_order: t } : {}), ...(null != i ? { hidden_badges: i } : {}) };
     if (0 === Object.keys(n).length) return !0;
     try {
-        return (await b.Bo.patch({ url: T.Rsh.USER_BADGE_SETTINGS, body: n, rejectWithError: !0 }), !0);
+        return (await b.Bo.patch({ url: y.Rsh.USER_BADGE_SETTINGS, body: n, rejectWithError: !0 }), !0);
     } catch (e) {
         return (k.A.captureException(e), !1);
     }
@@ -116,10 +116,10 @@ function Y(e) {
             let e = !0;
             if (E) {
                 let t = U.A.getPendingChanges(),
-                    i = await y({ displayOrder: t.pendingBadgeDisplayOrder, hiddenBadges: t.pendingBadgeHiddenBadges });
+                    i = await T({ displayOrder: t.pendingBadgeDisplayOrder, hiddenBadges: t.pendingBadgeHiddenBadges });
                 if (i) {
                     let e = L.default.getCurrentUser()?.id;
-                    (null != e && (await (0, C.eO)(e).catch(() => {})), await (0, S.RS)(), (0, N.Jp)());
+                    (null != e && (await (0, v.eO)(e).catch(() => {})), await (0, S.RS)(), (0, N.Jp)());
                 }
                 e = i;
             }
@@ -130,7 +130,7 @@ function Y(e) {
                             i = (0, P.Sk)(t),
                             n = (0, P.yX)(t);
                         if (Object.keys(i).length > 0) {
-                            let n = await (0, v._L)(i);
+                            let n = await (0, C._L)(i);
                             ((e = e && (n?.ok ?? !1)),
                                 n?.ok &&
                                     (void 0 !== t.pendingAvatar &&
@@ -139,7 +139,7 @@ function Y(e) {
                                             avatarId: i.avatarId,
                                             avatarAssetOrigin: t.pendingAvatar?.assetOrigin,
                                         }),
-                                    (0, v.pZ)()));
+                                    (0, C.pZ)()));
                         }
                         if (Object.keys(n).length > 0) {
                             let { bannerOriginalMd5: t, ...i } = n,
@@ -161,7 +161,7 @@ function Y(e) {
                                             avatarId: n.avatarId,
                                             avatarAssetOrigin: i.pendingAvatar?.assetOrigin,
                                         }),
-                                    (0, v.pZ)()));
+                                    (0, C.pZ)()));
                         }
                         if (Object.keys(l).length > 0) {
                             let { bannerOriginalMd5: i, ...n } = l,
@@ -174,7 +174,7 @@ function Y(e) {
                         let { primaryGuildId: t } = i;
                         if (void 0 !== t) {
                             let i = await (0, w.m)(t, null !== t);
-                            ((e = e && (i?.ok ?? !1)), i?.ok && (0, v.fw)());
+                            ((e = e && (i?.ok ?? !1)), i?.ok && (0, C.fw)());
                         }
                     }
                 } catch {
@@ -197,7 +197,7 @@ function Y(e) {
                 } catch {
                     e = !1;
                 }
-            (e ? (0, v.x8)() : (0, V.XA)(B.jM.PROFILE_SAVE_GENERIC_FAILURE), d(!1));
+            (e ? (0, C.x8)() : (0, V.XA)(B.jM.PROFILE_SAVE_GENERIC_FAILURE), d(!1));
         }, [h, b, E, x, c, g, m, i, t]);
     return (
         l.useEffect(() => {
@@ -210,9 +210,9 @@ function Y(e) {
                     }, 2500)));
             }
             return (
-                _._.subscribe(T.jej.EMPHASIZE_NOTICE, t),
+                _._.subscribe(y.jej.EMPHASIZE_NOTICE, t),
                 () => {
-                    (_._.unsubscribe(T.jej.EMPHASIZE_NOTICE, t), null != e && clearTimeout(e));
+                    (_._.unsubscribe(y.jej.EMPHASIZE_NOTICE, t), null != e && clearTimeout(e));
                 }
             );
         }, []),

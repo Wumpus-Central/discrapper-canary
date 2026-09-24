@@ -19,13 +19,13 @@ var r = i(297264),
     A = i(183555),
     j = i(735321),
     E = i(451395),
-    C = i(823016),
-    v = i(788593),
+    v = i(823016),
+    C = i(788593),
     S = i(492280),
     b = i(866665),
     k = i(147925),
-    T = i(123181),
-    y = i(229087),
+    y = i(123181),
+    T = i(229087),
     N = i(753437),
     R = i(375708),
     w = i(149253);
@@ -39,9 +39,9 @@ function L(e) {
         h = (0, l.useRef)(new Map()),
         I = (0, l.useRef)(null),
         p = (0, l.useRef)(null),
-        [E, C] = (0, l.useState)(0),
-        [v, S] = (0, l.useState)(!1),
-        b = D(I, p, u, h, C),
+        [E, v] = (0, l.useState)(0),
+        [C, S] = (0, l.useState)(!1),
+        b = D(I, p, u, h, v),
         k = (0, l.useCallback)(
             (e, t) => {
                 ((0, j.s1)(s, r, e),
@@ -66,7 +66,7 @@ function L(e) {
         !g && !m)
     )
         return null;
-    let _ = v ? u : u.slice(0, u.length - E);
+    let _ = C ? u : u.slice(0, u.length - E);
     return (0, n.jsxs)("div", {
         className: a()(w.I4, o),
         children: [
@@ -78,7 +78,7 @@ function L(e) {
                             "aria-label": R.intl.string(R.t.EfjTi4),
                             children: _.map((e) =>
                                 (0, n.jsx)(
-                                    y.A,
+                                    T.A,
                                     {
                                         tag: e,
                                         onRemove: c
@@ -98,7 +98,7 @@ function L(e) {
                         E > 0 &&
                             (0, n.jsx)(O, {
                                 buttonRef: I,
-                                isExpanded: v,
+                                isExpanded: C,
                                 numberOfOverflowingTags: E,
                                 onExpandTags: () => {
                                     (S(!0), x({ action: "EXPAND_GAME_TAGS" }));
@@ -110,7 +110,7 @@ function L(e) {
                             }),
                     ],
                 }),
-            m && (0, n.jsx)(T.A, { tags: t, onTagsChange: k, onOpen: L, ref: p }),
+            m && (0, n.jsx)(y.A, { tags: t, onTagsChange: k, onOpen: L, ref: p }),
         ],
     });
 }
@@ -182,7 +182,7 @@ var G = i(858808),
     F = i(207730);
 function W(e) {
     let { index: t, widgetType: i, game: l, children: s, getWidth: a } = e,
-        { manageFocusOnReorder: r } = (0, C.r)();
+        { manageFocusOnReorder: r } = (0, v.r)();
     return (0, n.jsx)(E.mG, {
         index: t,
         itemId: l.gameId,
@@ -294,20 +294,20 @@ function X(e) {
         } = e,
         h = l.useRef(null),
         { gameId: p, comment: A, tags: b } = o,
-        { coverImageUrl: k, gameName: T, isLoading: y } = (0, I.A)(p),
+        { coverImageUrl: k, gameName: y, isLoading: T } = (0, I.A)(p),
         N = { variant: "heading-sm/medium", color: "text-default" },
         R = c && !u,
         w = 1 === (0, j.cv)(d),
         _ = R && (0, j.y9)(d),
         P = R && !w,
-        { registerDragHandleRef: O } = (0, C.r)();
-    if (y) return (0, n.jsx)(S.E, {});
+        { registerDragHandleRef: O } = (0, v.r)();
+    if (T) return (0, n.jsx)(S.E, {});
     function D() {
-        return (0, n.jsx)(v.A, {
+        return (0, n.jsx)(C.A, {
             coverRef: x,
             className: null == k || u ? void 0 : U.iL,
             imageSrc: k,
-            gameName: T,
+            gameName: y,
             gameId: p,
             userId: t.id,
             disableInteraction: u,
@@ -329,8 +329,8 @@ function X(e) {
                     className: F.zH,
                     children: [
                         u
-                            ? (0, n.jsx)(r.D, { ...N, children: T })
-                            : (0, n.jsx)(H, { gameId: p, userId: t.id, gameName: T, ...N }),
+                            ? (0, n.jsx)(r.D, { ...N, children: y })
+                            : (0, n.jsx)(H, { gameId: p, userId: t.id, gameName: y, ...N }),
                         _
                             ? (0, n.jsx)(z, { text: A, user: t, guildId: i, channelId: s, widgetType: d, gameId: p })
                             : (0, n.jsx)(Y, { text: A, user: t, guildId: i, channelId: s }),

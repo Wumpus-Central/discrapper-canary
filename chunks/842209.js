@@ -1,4 +1,4 @@
-(n.d(t, { D3: () => C, EW: () => f, ZV: () => R, cu: () => S, eW: () => N, j8: () => m, s$: () => T, v7: () => g }),
+(n.d(t, { D3: () => C, EW: () => f, ZV: () => R, cu: () => S, eW: () => N, j8: () => g, s$: () => T, v7: () => m }),
     n(321073));
 var i = n(582128),
     r = n(17928),
@@ -47,11 +47,11 @@ function T(e, t, n) {
         s = i.result?.sections?.[n] ?? r.result?.sections?.[n] ?? a.result?.sections?.[n];
     return s?.descriptor;
 }
-function g(e, t, n) {
+function m(e, t, n) {
     let i = d.Ay.query(e, { commandTypes: [t], text: n }, { scoreMethod: c.M.COMMAND_OR_APPLICATION, allowFetch: !1 });
     return { commands: i.commands, sections: i.descriptors };
 }
-function m(e) {
+function g(e) {
     let t = d.Ay.getUserState(),
         n = d.Ay.getContextState(e);
     return [t?.result, n?.result];
@@ -62,7 +62,7 @@ function S(e) {
         u = (0, r.bG)([s.A], () => s.A.getGuild(c), [c]),
         { descriptors: _, commands: E, sectionedCommands: A, loading: f } = (0, d.XC)(t, u, n, { ...a, allowFetch: l }),
         [p, T] = i.useState(null),
-        g = i.useMemo(() => y(a.placeholderCount ?? 0, n.commandTypes[0]), [n.commandTypes, a.placeholderCount]);
+        m = i.useMemo(() => y(a.placeholderCount ?? 0, n.commandTypes[0]), [n.commandTypes, a.placeholderCount]);
     return i.useMemo(() => {
         let e = {
             loading: f,
@@ -71,7 +71,7 @@ function S(e) {
             commandsByActiveSection: A,
             filteredSectionId: p,
             hasMoreAfter: !1,
-            placeholders: f ? g : [],
+            placeholders: f ? m : [],
             sectionDescriptors: _,
             filterSection: (e) => {
                 T(e);
@@ -84,15 +84,15 @@ function S(e) {
         }
         if (f) {
             let t = A[0];
-            if (null != t) e.commandsByActiveSection = [{ section: t.section, data: [...t.data, ...g] }, ...A.slice(1)];
+            if (null != t) e.commandsByActiveSection = [{ section: t.section, data: [...t.data, ...m] }, ...A.slice(1)];
             else {
                 let t = o.gZ[h.Ik.BUILT_IN];
-                ((e.activeSections = [t]), (e.commandsByActiveSection = [{ section: t, data: g }]));
+                ((e.activeSections = [t]), (e.commandsByActiveSection = [{ section: t, data: m }]));
             }
-            e.commands = [...E, ...g];
+            e.commands = [...E, ...m];
         }
         return e;
-    }, [f, E, _, A, p, g]);
+    }, [f, E, _, A, p, m]);
 }
 function N(e, t, n) {
     let { descriptors: i, commands: r, loading: a } = d.Ay.query(e, t, n),

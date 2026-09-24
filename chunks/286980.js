@@ -1,4 +1,4 @@
-n.d(t, { Bp: () => m, Hs: () => p, eq: () => S, t_: () => N });
+n.d(t, { Bp: () => g, Hs: () => p, eq: () => S, t_: () => N });
 var i = n(582128),
     r = n(435558),
     a = n.n(r),
@@ -66,7 +66,7 @@ function p() {
 function T(e, t) {
     return e.length === t.length && e.every((e, n) => (0, l.A)(e, t[n]));
 }
-function g() {
+function m() {
     if (!f()) return [];
     let { ignoredDevices: e } = E.A.getState();
     return Object.values(E.A.lastDeviceConnected)
@@ -74,8 +74,8 @@ function g() {
         .map(I)
         .filter((e) => null != e);
 }
-function m() {
-    return (0, s.bG)([E.A, c.Ay, d.A, u.A], g, void 0, T);
+function g() {
+    return (0, s.bG)([E.A, c.Ay, d.A, u.A], m, void 0, T);
 }
 function S(e, t) {
     return null != t ? `${t.vendor.name} ${t.model.name}` : e.displayName;

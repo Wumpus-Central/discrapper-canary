@@ -16,8 +16,8 @@ let d = null,
     f = null,
     p = [],
     T = !1,
-    g = 0,
-    m = !1,
+    m = 0,
+    g = !1,
     S = !1,
     N = null,
     C = null;
@@ -64,10 +64,10 @@ class y extends r.Ay.Store {
         return T;
     }
     getNextIndexOfEligibleUsers() {
-        return g;
+        return m;
     }
     getIsEligibleToSendReferrals() {
-        return m;
+        return g;
     }
     getHasEligibleFriends() {
         return S;
@@ -103,11 +103,11 @@ let D = new y(a.h, {
             has_eligible_friends: a,
             reminder_state_id: s,
         } = e;
-        ((m = !0), (S = a), (_ = !1), (d = t), (c = new Set(n)), (N = i), (u = r), (C = s), (I = 0), (f = null));
+        ((g = !0), (S = a), (_ = !1), (d = t), (c = new Set(n)), (N = i), (u = r), (C = s), (I = 0), (f = null));
     },
     BILLING_REFERRALS_REMAINING_FETCH_FAIL: function (e) {
         let {} = e;
-        ((m = !1), (S = !1), (N = null), (_ = !1));
+        ((g = !1), (S = !1), (N = null), (_ = !1));
         let t = (I += 1) <= 3 ? 1e3 * Math.pow(2, I) : 8e3 * Math.pow(4, I - 3);
         f = Date.now() + Math.min(3e5, t);
     },
@@ -132,7 +132,7 @@ let D = new y(a.h, {
     },
     REFERRALS_FETCH_ELIGIBLE_USER_SUCCESS: function (e) {
         let { users: t, nextIndex: n } = e;
-        ((T = !1), (p = t), (g = n));
+        ((T = !1), (p = t), (m = n));
     },
     REFERRALS_FETCH_ELIGIBLE_USER_FAIL: function () {
         T = !1;
@@ -154,8 +154,8 @@ let D = new y(a.h, {
             (f = null),
             (p = []),
             (T = !1),
-            (g = 0),
-            (m = !1),
+            (m = 0),
+            (g = !1),
             (S = !1),
             (N = null),
             (u = new Map()),

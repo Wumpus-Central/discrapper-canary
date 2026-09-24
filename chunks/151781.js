@@ -16,8 +16,8 @@ var i = n(17928),
     f = n.n(I),
     p = n(229527),
     T = n(316031),
-    g = n(859126);
-function m() {
+    m = n(859126);
+function g() {
     return {
         query: "",
         requireUnusualDmActivity: !1,
@@ -32,7 +32,7 @@ function m() {
         selectedSort: void 0,
     };
 }
-let S = Object.freeze(m());
+let S = Object.freeze(g());
 function N(e, t) {
     return null != e && !!e.toLowerCase().includes(t.toLowerCase());
 }
@@ -41,13 +41,13 @@ class C {
     _searchState;
     hasDefaultQuery;
     constructor(e) {
-        ((this.guildId = e), (this._searchState = m()), (this.hasDefaultQuery = !0));
+        ((this.guildId = e), (this._searchState = g()), (this.hasDefaultQuery = !0));
     }
     get requiresUsernameMatch() {
         return this._searchState.query.trim().length > 0;
     }
     reset() {
-        ((this._searchState = m()), (this.hasDefaultQuery = !0));
+        ((this._searchState = g()), (this.hasDefaultQuery = !0));
     }
     updateSearchState(e) {
         return (
@@ -55,7 +55,7 @@ class C {
         );
     }
     resetSearchState() {
-        return !this.hasDefaultQuery && ((this._searchState = m()), (this.hasDefaultQuery = !0), !0);
+        return !this.hasDefaultQuery && ((this._searchState = g()), (this.hasDefaultQuery = !0), !0);
     }
     getSearchState() {
         return this._searchState;
@@ -78,7 +78,7 @@ class C {
                 (t.length > 0 &&
                     !(function (e, t) {
                         if ("" === t.trim()) return !1;
-                        let [n, i] = (0, g.H)(t);
+                        let [n, i] = (0, m.H)(t);
                         for (let t of i) if (e.userId === t) return !0;
                         for (let t of n) if (N(e.nick, t)) return !0;
                         if (null == e.user) return !1;
@@ -344,7 +344,7 @@ class L {
         return r ? (this.updatePaginationChunks(), this.updatePaginationState({ currentPage: 1 }), !0) : n;
     }
     getSearchState() {
-        return null != this._search && this._initialized ? this._search.getSearchState() : m();
+        return null != this._search && this._initialized ? this._search.getSearchState() : g();
     }
     hasDefaultSearchState() {
         return null == this._search || !this._initialized || this._search.hasDefaultQuery;

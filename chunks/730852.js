@@ -16,8 +16,8 @@ var i = n(228366),
     f = n(96566),
     p = n(712711),
     T = n(95561),
-    g = n(329551),
-    m = n(912630),
+    m = n(329551),
+    g = n(912630),
     S = n(965162),
     N = n(763827),
     C = n(309010),
@@ -138,11 +138,11 @@ let U = {
                                               duration_muted_ms: r?.duration_muted_ms ?? null,
                                               output_audio_route_type: R.A.getCurrentRouteType(),
                                           });
-                                  if ((e(), m.A.hasUsedBackgroundInCall)) {
+                                  if ((e(), g.A.hasUsedBackgroundInCall)) {
                                       let e,
                                           t = {
                                               ...s,
-                                              ...((e = (0, g.i)(O.default.getCurrentUser())),
+                                              ...((e = (0, m.i)(O.default.getCurrentUser())),
                                               {
                                                   video_device_name:
                                                       u.Ay.getVideoDevices()[u.Ay.getVideoDeviceId()]?.name,

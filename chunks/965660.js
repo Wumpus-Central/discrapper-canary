@@ -5,8 +5,8 @@ n.d(t, {
     Ot: () => E,
     UW: () => A,
     Ub: () => h,
-    Wl: () => g,
-    YP: () => m,
+    Wl: () => m,
+    YP: () => g,
     jR: () => u,
     kc: () => _,
     uk: () => p,
@@ -160,7 +160,7 @@ function T() {
         n = e.locale;
     return (t.find((e) => e.code === n) ?? t[0]).code;
 }
-async function g(e) {
+async function m(e) {
     let { loadId: t, guildId: n, index: i, categoryId: r, analyticsLocation: s, options: o } = e,
         c = { ...o, loadId: t };
     (await l.Z2(n, s, c),
@@ -172,6 +172,6 @@ async function g(e) {
             location: s,
         }));
 }
-function m() {
+function g() {
     return (0, i.A)().replace(/-/g, "");
 }

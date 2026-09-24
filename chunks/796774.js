@@ -32,7 +32,7 @@ var I = n(652215),
     f = n(355097),
     p = n(375708);
 let T = !1;
-async function g() {
+async function m() {
     try {
         let e = (await a.Bo.get({ url: I.Rsh.SOUNDBOARD_DEFAULT_SOUNDS, rejectWithError: (0, a.fT)() })).body.map((e) =>
             (0, A.N0)(e, "0"),
@@ -42,7 +42,7 @@ async function g() {
         (s.h.dispatch({ type: "SOUNDBOARD_FETCH_DEFAULT_SOUNDS_FAILURE" }), (0, d.o)(new o.A(e)));
     }
 }
-function m(e) {
+function g(e) {
     return new Promise((t) => {
         s.h.subscribe(e, function n() {
             (s.h.unsubscribe(e, n), setTimeout(t, 0));
@@ -59,13 +59,13 @@ async function S(e) {
         (function () {
             if (!E.A.shouldFetchDefaultSounds()) return Promise.resolve();
             s.h.dispatch({ type: "SOUNDBOARD_FETCH_DEFAULT_SOUNDS" });
-            let e = m("SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS");
-            return (g(), e);
+            let e = g("SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS");
+            return (m(), e);
         })(),
         (function () {
             let e = (0, h.I)();
             if (0 === e.length) return Promise.resolve();
-            let t = m("SOUNDBOARD_SOUNDS_RECEIVED");
+            let t = g("SOUNDBOARD_SOUNDS_RECEIVED");
             return (
                 s.h.dispatch({ type: "GUILD_SOUNDBOARD_FETCH" }),
                 s.h.dispatch({ type: "REQUEST_SOUNDBOARD_SOUNDS", guildIds: e }),

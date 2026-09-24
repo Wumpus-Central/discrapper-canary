@@ -21,7 +21,7 @@ class T extends I.Ay.Store {
         return p[e];
     }
 }
-let g = new T(o.h, {
+let m = new T(o.h, {
     AUTH_INVITE_UPDATE: function (e) {
         let { invite: t } = e,
             n = t.guild;
@@ -29,7 +29,7 @@ let g = new T(o.h, {
         p[n.id] = (0, f.DY)(n);
     },
 });
-var m = n(498642),
+var g = n(498642),
     S = n(71393),
     N = n(927813),
     C = n(935208);
@@ -71,28 +71,28 @@ let L = {
     [s().v3("guild_member_count_range")]: (e) => {
         let { min: t, max: n } = R(e);
         return (e) => {
-            let i = m.A.getMemberCount(e);
+            let i = g.A.getMemberCount(e);
             return null != i && O(i, t, n);
         };
     },
     [s().v3("guild_has_feature")]: (e) => {
         let [[, t]] = e;
         return (e) => {
-            let n = S.A.getGuild(e) ?? g.getGuild(e);
+            let n = S.A.getGuild(e) ?? m.getGuild(e);
             return null != n && t.some((e) => n.features.has(e));
         };
     },
     [s().v3("guild_hub_types")]: (e) => {
         let [[, t]] = e;
         return (e) => {
-            let n = S.A.getGuild(e) ?? g.getGuild(e);
+            let n = S.A.getGuild(e) ?? m.getGuild(e);
             return null != n && "number" == typeof n.hubType && t.some((e) => n.hubType === e);
         };
     },
     [s().v3("guild_has_vanity_url")]: (e) => {
         let [[, t]] = e;
         return (e) => {
-            let n = S.A.getGuild(e) ?? g.getGuild(e);
+            let n = S.A.getGuild(e) ?? m.getGuild(e);
             return null != n && t === (null != n.vanityURLCode);
         };
     },

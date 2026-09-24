@@ -1,5 +1,5 @@
-t.d(i, { A: () => n });
-let n = (0, t(600975).C)({
+i.d(t, { A: () => n });
+let n = (0, i(600975).C)({
     kind: "guild",
     id: "2026-04_voice_user_duration",
     label: "Voice User Duration",

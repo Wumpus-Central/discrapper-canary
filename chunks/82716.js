@@ -1,7 +1,7 @@
 n.d(t, { z: () => p });
-var l = n(477900),
-    r = n(582128),
-    a = n(408278),
+var a = n(477900),
+    l = n(582128),
+    r = n(408278),
     i = n(27232),
     s = n(505930),
     u = n(866665),
@@ -11,18 +11,18 @@ var l = n(477900),
     f = n(375708);
 function p() {
     let e = (0, c.Y_)(),
-        t = r.useCallback(
+        t = l.useCallback(
             (t) => {
                 (t.stopPropagation(), t.preventDefault(), (0, o.XK)(e));
             },
             [e],
         );
-    return (0, l.jsx)(
+    return (0, a.jsx)(
         u.m,
         {
             text: f.intl.string(e.isFavorite ? d.default.IZsalP : d.default.ihBfyA),
             position: "top",
-            children: (0, l.jsx)(a.K, {
+            children: (0, a.jsx)(r.K, {
                 onClick: t,
                 icon: e.isFavorite ? i.StarIcon : s.y,
                 "aria-label": f.intl.string(f.t.k8fFjp),

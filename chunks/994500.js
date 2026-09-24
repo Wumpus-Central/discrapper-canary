@@ -16,8 +16,8 @@ let o = new Map(),
     f = {},
     p = 0,
     T = 0,
-    g = 0,
-    m = { friends: void 0, blocked: void 0, ignored: void 0, blockedOrIgnored: void 0 },
+    m = 0,
+    g = { friends: void 0, blocked: void 0, ignored: void 0, blockedOrIgnored: void 0 },
     S = new Set();
 function N(e) {
     e === l.eA$.FRIEND
@@ -31,7 +31,7 @@ function O() {
     (S.add("friends"), S.add("blocked"), S.add("ignored"), S.add("blockedOrIgnored"));
 }
 function R() {
-    for (let e of S) m[e] = void 0;
+    for (let e of S) g[e] = void 0;
     S.clear();
 }
 function L(e) {
@@ -53,7 +53,7 @@ function b(e) {
     null != t && (o.delete(e), D.get(t)?.delete(e), N(t));
 }
 function M() {
-    ((T = _.size), (g = A.size), (p = Math.max((D.get(l.eA$.PENDING_INCOMING)?.size ?? 0) - T - g, 0)), I++);
+    ((T = _.size), (m = A.size), (p = Math.max((D.get(l.eA$.PENDING_INCOMING)?.size ?? 0) - T - m, 0)), I++);
 }
 class P extends i.Ay.Store {
     static displayName = "RelationshipStore";
@@ -99,7 +99,7 @@ class P extends i.Ay.Store {
         return T;
     }
     getPendingIgnoredCount() {
-        return g;
+        return m;
     }
     getOutgoingCount() {
         return D.get(l.eA$.PENDING_OUTGOING)?.size ?? 0;
@@ -136,22 +136,22 @@ class P extends i.Ay.Store {
         return u[e];
     }
     getFriendIDs() {
-        return (null == m.friends && (m.friends = Array.from(D.get(l.eA$.FRIEND) ?? [])), m.friends);
+        return (null == g.friends && (g.friends = Array.from(D.get(l.eA$.FRIEND) ?? [])), g.friends);
     }
     getBlockedIDs() {
-        return (null == m.blocked && (m.blocked = Array.from(D.get(l.eA$.BLOCKED) ?? [])), m.blocked);
+        return (null == g.blocked && (g.blocked = Array.from(D.get(l.eA$.BLOCKED) ?? [])), g.blocked);
     }
     getIgnoredIDs() {
-        return (null == m.ignored && (m.ignored = Array.from(E.values()).filter((e) => this.isIgnored(e))), m.ignored);
+        return (null == g.ignored && (g.ignored = Array.from(E.values()).filter((e) => this.isIgnored(e))), g.ignored);
     }
     getBlockedOrIgnoredIDs() {
-        if (null == m.blockedOrIgnored) {
+        if (null == g.blockedOrIgnored) {
             let e = new Set(E),
                 t = D.get(l.eA$.BLOCKED);
             if (null != t) for (let n of t) e.add(n);
-            m.blockedOrIgnored = e;
+            g.blockedOrIgnored = e;
         }
-        return m.blockedOrIgnored;
+        return g.blockedOrIgnored;
     }
     getOriginApplicationId(e) {
         return h[e];

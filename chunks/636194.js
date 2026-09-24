@@ -35,8 +35,8 @@ let A = new l.J(
     f = new Set(),
     p = {},
     T = {},
-    g = {},
     m = {},
+    g = {},
     S = new Map(),
     N = new Map();
 function C(e) {
@@ -88,10 +88,10 @@ class D extends s.Ay.Store {
         return T[e];
     }
     getMonetizationRestrictions(e) {
-        return g[e];
+        return m[e];
     }
     getMonetizationRestrictionsFetchState(e) {
-        return m[e] ?? 0;
+        return g[e] ?? 0;
     }
     getApplicationIdForGuild(e) {
         return S.get(e);
@@ -102,7 +102,7 @@ class D extends s.Ay.Store {
 }
 let v = new D(o.h, {
     CONNECTION_OPEN: function () {
-        (A.clear(), h.clear(), (I = {}), f.clear(), (p = {}), (T = {}), (g = {}), (m = {}), S.clear(), N.clear());
+        (A.clear(), h.clear(), (I = {}), f.clear(), (p = {}), (T = {}), (m = {}), (g = {}), S.clear(), N.clear());
     },
     GUILD_ROLE_SUBSCRIPTIONS_UPDATE_SUBSCRIPTIONS_SETTINGS: function (e) {
         let { settings: t } = e;
@@ -156,18 +156,18 @@ let v = new D(o.h, {
     },
     GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS: function (e) {
         let { guildId: t } = e;
-        m[t] = 1;
+        g[t] = 1;
     },
     GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_SUCCESS: function (e) {
         let { guildId: t, restrictions: n } = e;
-        ((g[t] = n), (m[t] = 2));
+        ((m[t] = n), (g[t] = 2));
     },
     GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_FAILURE: function (e) {
         let { guildId: t } = e;
-        ((m[t] = 2), (g[t] = d.o));
+        ((g[t] = 2), (m[t] = d.o));
     },
     GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_ABORTED: function (e) {
         let { guildId: t } = e;
-        m[t] = 0;
+        g[t] = 0;
     },
 });

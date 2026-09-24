@@ -387,10 +387,10 @@ class T {
     }
 }
 n(321073);
-var g = n(61090),
-    m = n(941426);
+var m = n(61090),
+    g = n(941426);
 let S = "1" === n(72290).env.KV_STORAGE_LOGGING,
-    N = new m.Vy("Runtime");
+    N = new g.Vy("Runtime");
 class C {
     static counter = 0;
     static pending = new Map();
@@ -541,12 +541,12 @@ class R {
                 C.executeAsync(t ?? e.type, (t) => {
                     this.raw.execute(t, { ...e, handle: 0 });
                 });
-        return null === t ? i() : g.A.timeAsync("\uD83D\uDCBE", `${t ?? e.type} ${n ?? ""}`, i);
+        return null === t ? i() : m.A.timeAsync("\uD83D\uDCBE", `${t ?? e.type} ${n ?? ""}`, i);
     }
     executeSync(e) {
         if (null == this.raw) throw Error(`database is no longer open (database: ${this}`);
         let t = "key" in e ? e.key[0] : e.table;
-        return g.A.time("\uD83D\uDCBE", `SYNC: ${e.type} ${t ?? ""}`, () =>
+        return m.A.time("\uD83D\uDCBE", `SYNC: ${e.type} ${t ?? ""}`, () =>
             this.raw.execute(null, { ...e, handle: 0 }, { synchronous: !0 }),
         );
     }

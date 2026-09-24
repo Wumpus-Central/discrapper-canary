@@ -15,8 +15,8 @@ let E = 0,
     f = new Map(),
     p = {},
     T = {},
-    g = {},
-    m = {};
+    m = {},
+    g = {};
 function S(e, t) {
     let n = e[t];
     return (null == n && ((n = {}), (e[t] = n)), n);
@@ -40,7 +40,7 @@ function O(e, t, n) {
         let n;
         (delete a[t],
             null != s.channelId && (delete S(p, s.channelId)[t], delete S(T, s.channelId)[t]),
-            null != s.sessionId && delete S(g, t)[s.sessionId],
+            null != s.sessionId && delete S(m, t)[s.sessionId],
             (i = e ?? u.ME),
             (n = C(i)).has(t) && ((n = new Set(n)).delete(t), 0 === n.size ? f.delete(i) : f.set(i, n)));
     }
@@ -49,7 +49,7 @@ function O(e, t, n) {
             let n;
             ((S(T, l.channelId)[t] = l), (r = e ?? u.ME), (n = C(r)).has(t) || ((n = new Set(n)).add(t), f.set(r, n)));
         }
-        null != l.sessionId && (S(g, t)[l.sessionId] = l);
+        null != l.sessionId && (S(m, t)[l.sessionId] = l);
     }
     return [!0, l, s];
 }
@@ -112,13 +112,13 @@ class y extends l.Ay.Store {
         return S(p, e)?.[t];
     }
     getVoiceStateForUser(e) {
-        return Object.values(S(g, e))[0];
+        return Object.values(S(m, e))[0];
     }
     getDiscoverableVoiceStateForUser(e) {
-        return Object.values(S(g, e)).find((e) => !1 !== e.discoverable);
+        return Object.values(S(m, e)).find((e) => !1 !== e.discoverable);
     }
     getVoiceStateForSession(e, t) {
-        return null != t ? S(g, e)?.[t] : null;
+        return null != t ? S(m, e)?.[t] : null;
     }
     getUserVoiceChannelId(e, t) {
         return this.getVoiceState(e, t)?.channelId;
@@ -131,7 +131,7 @@ class y extends l.Ay.Store {
         return f.get(e) ?? I;
     }
     isCurrentClientInVoiceChannel() {
-        return null != r && g[i]?.[r] != null;
+        return null != r && m[i]?.[r] != null;
     }
     isInChannel(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i;
@@ -143,8 +143,8 @@ class y extends l.Ay.Store {
         return Object.values(S(T, e)).length > 0;
     }
     getVoicePlatformForChannel(e, t) {
-        let n = null != r && g[i]?.[r]?.channelId;
-        return t === i && e === n ? ((0, d.IA)() ? _.J7.QUEST : _.J7.DESKTOP) : m[`${t}:${e}`];
+        let n = null != r && m[i]?.[r]?.channelId;
+        return t === i && e === n ? ((0, d.IA)() ? _.J7.QUEST : _.J7.DESKTOP) : g[`${t}:${e}`];
     }
     get userHasBeenMovedVersion() {
         return E;
@@ -154,14 +154,14 @@ let D = new y(o.h, {
     CONNECTION_OPEN: function (e) {
         let { user: t, sessionId: n } = e,
             a = null != i && i !== t.id;
-        return (a && ((h = {}), (p = {}), (g = {}), (T = {}), f.clear()), (i = t.id), (r = n), a);
+        return (a && ((h = {}), (p = {}), (m = {}), (T = {}), f.clear()), (i = t.id), (r = n), a);
     },
     CONNECTION_OPEN_SUPPLEMENTAL: function () {
-        ((h = {}), (p = {}), (g = {}), (T = {}), f.clear());
+        ((h = {}), (p = {}), (m = {}), (T = {}), f.clear());
     },
     OVERLAY_INITIALIZE: function (e) {
         let { voiceStates: t, user: n, sessionId: a } = e;
-        for (let [e, n] of ((h = {}), (p = {}), (g = {}), (T = {}), Object.entries(t)))
+        for (let [e, n] of ((h = {}), (p = {}), (m = {}), (T = {}), Object.entries(t)))
             for (let [t, i] of Object.entries(n)) O(e, t, () => new c.A(i));
         ((i = n.id), (r = a));
     },
@@ -200,6 +200,6 @@ let D = new y(o.h, {
     },
     RTC_CONNECTION_PLATFORM: function (e) {
         let { userId: t, channelId: n, platform: i } = e;
-        m[`${t}:${n}`] = i;
+        g[`${t}:${n}`] = i;
     },
 });

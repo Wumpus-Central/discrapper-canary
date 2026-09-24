@@ -16,8 +16,8 @@ var i = n(477900),
     f = n(198052),
     p = n(446243),
     T = n(558076),
-    g = n(360729),
-    m = n(976860),
+    m = n(360729),
+    g = n(976860),
     S = n(272812),
     N = n(461782),
     C = n(334463),
@@ -73,7 +73,7 @@ function j(e) {
         et = (0, M.A)(t?.id),
         en = t?.id,
         ei = t?.getGuildId(),
-        { enabled: er } = (0, g.mf)({ guildId: ei ?? void 0, location: "PictureInPictureEmbeddedActivity" }),
+        { enabled: er } = (0, m.mf)({ guildId: ei ?? void 0, location: "PictureInPictureEmbeddedActivity" }),
         ea = (0, l.bG)([T.A], () => null != en && T.A.isVisible(en), [en]),
         es = et && er && ea,
         el = et && Q?.type !== F.lp.ACTIVITY,
@@ -89,7 +89,7 @@ function j(e) {
                 ),
                 es && (0, p.UV)(!0, t.id));
             let e = t.getGuildId() ?? k.ME;
-            (u.A.channelListScrollTo(e, t.id), (0, m.uh)(e, t.id));
+            (u.A.channelListScrollTo(e, t.id), (0, g.uh)(e, t.id));
         }
         null == q && (0, _.bz)();
     }

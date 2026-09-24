@@ -4,17 +4,17 @@ var i = n(582128),
     r = n(531260),
     s = n(287809),
     a = n(474090),
-    E = n(526292),
-    o = n(89366),
+    o = n(526292),
+    E = n(89366),
     c = n(851746),
     u = n(202541);
 function _() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
         t = (0, l.bG)([s.default], () => s.default.getCurrentUser()),
-        n = (0, E.k5)(),
-        _ = (0, o.QQ)(),
+        n = (0, o.k5)(),
+        _ = (0, E.QQ)(),
         A = (0, r.A)(),
-        T =
+        d =
             t?.verified === !0 &&
             (0, a.YE)(t, u.PremiumTypes.TIER_2) &&
             A.fetched &&
@@ -22,6 +22,6 @@ function _() {
             !n &&
             !_;
     i.useEffect(() => {
-        T && !e && c.A.checkAndFetchReferralsRemaining();
-    }, [T, e]);
+        d && !e && c.A.checkAndFetchReferralsRemaining();
+    }, [d, e]);
 }

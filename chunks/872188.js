@@ -6,8 +6,8 @@ var n = l(477900),
     s = l(834730),
     d = l(821609),
     o = l(61567),
-    u = l(375708),
-    c = l(146108);
+    c = l(375708),
+    u = l(146108);
 function m(e) {
     let { onPublish: t } = e,
         [l, m] = i.useState(!1),
@@ -15,7 +15,7 @@ function m(e) {
         h = i.useCallback(async () => {
             (m(!0), x(!1));
             try {
-                (await t(), a.O.announce(u.intl.string(o.default.pDzipI)));
+                (await t(), a.O.announce(c.intl.string(o.default.pDzipI)));
             } catch {
                 x(!0);
             } finally {
@@ -23,27 +23,27 @@ function m(e) {
             }
         }, [t]);
     return (0, n.jsxs)("div", {
-        className: c.lm,
+        className: u.lm,
         children: [
-            (0, n.jsx)(r.CircleInformationIcon, { size: "sm", color: "currentColor", className: c.Kk }),
+            (0, n.jsx)(r.CircleInformationIcon, { size: "sm", color: "currentColor", className: u.Kk }),
             f
                 ? (0, n.jsx)(s.E, {
                       variant: "text-sm/medium",
                       color: "text-feedback-critical",
-                      className: c.iU,
+                      className: u.iU,
                       role: "alert",
-                      children: u.intl.string(u.t.F8FvUy),
+                      children: c.intl.string(c.t.F8FvUy),
                   })
                 : (0, n.jsx)(s.E, {
                       variant: "text-sm/medium",
                       color: "text-muted",
-                      className: c.iU,
-                      children: u.intl.string(o.default.Z2z85q),
+                      className: u.iU,
+                      children: c.intl.string(o.default.Z2z85q),
                   }),
             (0, n.jsx)(d.$, {
                 variant: "secondary",
                 size: "sm",
-                text: u.intl.string(o.default["yul+0g"]),
+                text: c.intl.string(o.default["yul+0g"]),
                 loading: l,
                 onClick: h,
             }),

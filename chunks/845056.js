@@ -1,10 +1,10 @@
-t.d(i, { N: () => u, m: () => o });
-var n = t(17928),
-    l = t(280450),
-    s = t(290863),
-    a = t(461213),
-    r = t(765379),
-    d = t(652215);
+i.d(t, { N: () => u, m: () => o });
+var n = i(17928),
+    l = i(280450),
+    s = i(290863),
+    a = i(461213),
+    r = i(765379),
+    d = i(652215);
 function u(e) {
     return (
         ([d.$pd.PLAYING, d.$pd.WATCHING].includes(e.type) &&
@@ -12,26 +12,26 @@ function u(e) {
         e.type === d.$pd.LISTENING
     );
 }
-function o(e, i) {
+function o(e, t) {
     return (0, n.yK)(
         [a.A, s.A, l.default],
         () => {
-            let t = e.id === l.default.getId() ? a.A.getActivities() : s.A.getActivities(e.id),
+            let i = e.id === l.default.getId() ? a.A.getActivities() : s.A.getActivities(e.id),
                 n = new Map();
-            for (let e of t) {
+            for (let e of i) {
                 if (
                     !u(e) ||
                     (0, r.A)(e) ||
-                    (null != i &&
-                        ((null != i.application_id && e.application_id === i.application_id) ||
-                            (null != i.name && e.name === i.name)))
+                    (null != t &&
+                        ((null != t.application_id && e.application_id === t.application_id) ||
+                            (null != t.name && e.name === t.name)))
                 )
                     continue;
-                let t = e.application_id ?? e.name;
-                null == t || n.has(t) || n.set(t, e);
+                let i = e.application_id ?? e.name;
+                null == i || n.has(i) || n.set(i, e);
             }
             return Array.from(n.values());
         },
-        [e.id, i],
+        [e.id, t],
     );
 }

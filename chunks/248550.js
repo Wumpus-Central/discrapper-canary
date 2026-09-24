@@ -18,14 +18,14 @@ var n = i(477900),
     A = i(402860),
     j = i(827258),
     E = i(384377),
-    C = i(287809),
-    v = i(661492),
+    v = i(287809),
+    C = i(661492),
     S = i(228366);
 let b = { sentGifts: {} };
 function k(e, t) {
     return `${e}:${t}`;
 }
-class T extends d.Ay.PersistedStore {
+class y extends d.Ay.PersistedStore {
     static displayName = "SentGiftsStore";
     static persistKey = "SentGiftsStore";
     initialize(e) {
@@ -49,7 +49,7 @@ class T extends d.Ay.PersistedStore {
         for (let [t, i] of Object.entries(b.sentGifts)) new Date(i.expiresAt) < e && delete b.sentGifts[t];
     }
 }
-let y = new T(S.h, {
+let T = new y(S.h, {
     WISHLIST_GIFT_SENT: function (e) {
         let t = k(e.skuId, e.recipientId),
             i = new Date(),
@@ -164,7 +164,7 @@ function V(e) {
             specificProductOrVariant: m,
             isPurchased: x,
         } = (0, L.z)({ userId: r, product: i, location: l, onError: s }),
-        f = (0, v.q)(m),
+        f = (0, C.q)(m),
         h = x && !o,
         I = !f || h,
         p = z(f && h ? G.intl.string(G.t.nKA6v8) : void 0);
@@ -241,12 +241,12 @@ function en(e) {
             skuAssetHoverClassName: h,
             isHoveringOrFocusing: I,
             setIsHoveringOrFocusing: A,
-            onDetailsClick: C,
+            onDetailsClick: v,
             onPurchaseClick: S,
             wishlistId: b,
             isItemOwned: k,
-            cardBackdrop: T,
-            isNew: y,
+            cardBackdrop: y,
+            isNew: T,
             onClick: R,
         } = e,
         w = l.useRef(null),
@@ -277,8 +277,8 @@ function en(e) {
                         skuId: s.sku.id,
                         productLines: new Set([s.sku.productLine]),
                     }),
-                    C()));
-        }, [C, s.sku, b, _, R]),
+                    v()));
+        }, [v, s.sku, b, _, R]),
         O = l.useCallback(() => {
             (R?.(),
                 null != b &&
@@ -319,11 +319,11 @@ function en(e) {
                 onClick: U,
                 "aria-label":
                     ((t = s.sku),
-                    (i = H ? (0, v.T)(t) : G.intl.formatToPlainString(G.t.ZBB4Ty, { productName: (0, v.T)(t) })),
-                    !0 === y ? G.intl.formatToPlainString(G.t.s9RZ1r, { label: i }) : i),
+                    (i = H ? (0, C.T)(t) : G.intl.formatToPlainString(G.t.ZBB4Ty, { productName: (0, C.T)(t) })),
+                    !0 === T ? G.intl.formatToPlainString(G.t.s9RZ1r, { label: i }) : i),
                 children: [
-                    !0 === y && (0, n.jsx)(j.A, { className: ee.Pf }),
-                    T,
+                    !0 === T && (0, n.jsx)(j.A, { className: ee.Pf }),
+                    y,
                     W && (0, n.jsx)(K.A, { spec: ei, onClick: F, isHoveringOrFocusing: I, label: V, icon: B }),
                     k && (0, n.jsx)(X.gS, { isHoveringOrFocusing: I }),
                     r.id === c.id &&
@@ -459,9 +459,9 @@ function er(e) {
             ...(a ?? []),
             t.sku?.productLine === D.EZt.SOCIAL_LAYER_GAME_ITEM ? c.A.SLAYER_STOREFRONT_WISHLIST_ITEM_CARD : [],
         ),
-        g = (0, d.bG)([C.default], () => C.default.getCurrentUser()),
+        g = (0, d.bG)([v.default], () => v.default.getCurrentUser()),
         [m, x] = l.useState(!1),
-        f = (0, d.bG)([y], () => y.hasSentGift(t.skuId, i.id), [i, t.skuId]),
+        f = (0, d.bG)([T], () => T.hasSentGift(t.skuId, i.id), [i, t.skuId]),
         h = l.useMemo(
             () => t.skuProductLine !== D.EZt.PREMIUM && (!0 === t.isOwned || f),
             [t.isOwned, t.skuProductLine, f],

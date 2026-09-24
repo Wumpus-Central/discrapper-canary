@@ -1,7 +1,7 @@
 (n.d(t, {
     $V: () => L,
     Fg: () => p,
-    KM: () => g,
+    KM: () => m,
     LE: () => D,
     M: () => C,
     O8: () => T,
@@ -34,7 +34,7 @@
     nx: () => U,
     qo: () => R,
     s9: () => N,
-    y5: () => m,
+    y5: () => g,
 }),
     n(938796),
     n(321073));
@@ -72,11 +72,11 @@ function T(e) {
         ? I.LO.NONE
         : D(t.map((t) => (P(t.getUserSettingsWithDefaults()[e]) ? t.harmType : null)).filter(E.Vq));
 }
-function g(e) {
+function m(e) {
     let t = p(e);
-    return m(e, t);
+    return g(e, t);
 }
-function m(e, t) {
+function g(e, t) {
     if (t === I.LO.NONE || null == e) return !1;
     if (
         e.attachments?.some((e) => O({ type: A.D.Attachment, media: e }, t).length > 0) ||
@@ -89,7 +89,7 @@ function m(e, t) {
         null == n || 0 === n.length)
     )
         return !1;
-    for (let e of n) if (m(e.message, t)) return !0;
+    for (let e of n) if (g(e.message, t)) return !0;
     return !1;
 }
 function S(e) {

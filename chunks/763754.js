@@ -25,10 +25,10 @@ function h(e) {
         f = r?.colorRoleId,
         p = (0, a.bG)([d.A], () => (null != i && null != f ? d.A.getRole(i, f) : void 0), [i, f]),
         T = (0, a.bG)([u.A], () => (null != n && t?.isPrivate() ? u.A.getNickname(n) : null)),
-        m = (0, s.A)({ userId: n, guildId: i });
+        g = (0, s.A)({ userId: n, guildId: i });
     return null == e
         ? null
-        : g({
+        : m({
               user: e.author,
               channel: t,
               guild: I,
@@ -36,7 +36,7 @@ function h(e) {
               userName: h,
               member: r,
               friendNickname: T,
-              displayNameStyles: m,
+              displayNameStyles: g,
           });
 }
 function I(e) {
@@ -56,7 +56,7 @@ function p(e, t) {
         A = (0, a.bG)([d.A], () => (null != i && null != _ ? d.A.getRole(i, _) : void 0), [i, _]),
         h = (0, a.bG)([u.A], () => (null != n && t?.isPrivate() ? u.A.getNickname(n) : null)),
         I = E.Ay.useName(e);
-    return g({
+    return m({
         user: e,
         channel: t,
         guild: l,
@@ -74,7 +74,7 @@ function T(e, t) {
         a = null == i || null == n ? null : o.Ay.getMember(i, n),
         s = null != i && a?.colorRoleId != null ? d.A.getRole(i, a.colorRoleId) : void 0,
         l = null != n && null != t && t.isPrivate() ? u.A.getNickname(n) : null;
-    return g({
+    return m({
         user: e,
         channel: t,
         guild: r,
@@ -84,7 +84,7 @@ function T(e, t) {
         displayNameStyles: e?.displayNameStyles,
     });
 }
-function g(e) {
+function m(e) {
     let {
             user: t,
             channel: n,

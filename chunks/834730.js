@@ -38,12 +38,12 @@ let _ = Object.fromEntries(Object.keys(d.A.colors).map((e) => [o()(e), e])),
                 default:
                     n = d.A.colors[_[A]]?.css;
             }
-        let g = { color: n, ...T, ...f.style };
+        let m = { color: n, ...T, ...f.style };
         return (0, i.jsx)(a, {
             ref: t,
             className: s()({ [c.fT]: void 0 === A, [c.rb]: l, [c.w9]: h, [u.fontScaling]: I }, p, u[r], o),
             ...f,
-            style: Object.values(g).filter(Boolean).length > 0 ? g : void 0,
+            style: Object.values(m).filter(Boolean).length > 0 ? m : void 0,
             "data-text-variant": r,
         });
     });

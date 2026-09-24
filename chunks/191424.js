@@ -1,15 +1,15 @@
-t.d(i, { A: () => o });
-var n = t(582128),
-    l = t(17928),
-    s = t(280450),
-    a = t(290863),
-    r = t(461213),
-    d = t(778383);
+i.d(t, { A: () => o });
+var n = i(582128),
+    l = i(17928),
+    s = i(280450),
+    a = i(290863),
+    r = i(461213),
+    d = i(778383);
 let u = [];
-function o(e, i) {
-    let t = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
+function o(e, t) {
+    let i = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
         o = (0, l.bG)([r.A, a.A, s.default], () =>
-            t ? (s.default.getId() === e ? r.A.getActivities() : a.A.getActivities(e, i)) : u,
+            i ? (s.default.getId() === e ? r.A.getActivities() : a.A.getActivities(e, t)) : u,
         );
     return n.useMemo(() => o.filter(d.A), [o]);
 }

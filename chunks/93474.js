@@ -4,17 +4,17 @@ var i = n(17928),
     r = n(779185),
     s = n(320095),
     a = n(734057),
-    E = n(232835),
-    o = n(935208),
+    o = n(232835),
+    E = n(935208),
     c = n(753738),
     u = n(877133),
     _ = n(652215);
 let A = {},
-    T = 0,
-    d = {},
+    d = 0,
+    T = {},
     I = {};
 function N(e) {
-    (null != A[e] && delete A[e], T++);
+    (null != A[e] && delete A[e], d++);
 }
 function R(e) {
     let t,
@@ -23,7 +23,7 @@ function R(e) {
     return (
         (n = { id: (t = (0, r.cR)(i)), isBlockedEdit: (0, r.Qn)(i), messageData: i, errorMessage: (0, c.PD)(i, l) }),
         (A[t] = n),
-        T++,
+        d++,
         !0
     );
 }
@@ -39,7 +39,7 @@ function C(e) {
                     let { type: t } = e;
                     return t === _.Auw.AUTO_MODERATION_NOTIFICATION;
                 })
-                    ? null == e || -1 === o.default.compare(e, t.id)
+                    ? null == e || -1 === E.default.compare(e, t.id)
                         ? t.id
                         : void 0
                     : e,
@@ -51,19 +51,19 @@ class O extends i.Ay.PersistedStore {
     static displayName = "GuildAutomodMessageStore";
     static persistKey = "GuildAutomodMessages";
     initialize(e) {
-        (this.waitFor(a.A, E.A), null != e && ((A = e.automodFailedMessages), (d = e.mentionRaidDetectionByGuild)));
+        (this.waitFor(a.A, o.A), null != e && ((A = e.automodFailedMessages), (T = e.mentionRaidDetectionByGuild)));
     }
     getState() {
-        return { automodFailedMessages: A, mentionRaidDetectionByGuild: d, lastIncidentAlertMessage: I };
+        return { automodFailedMessages: A, mentionRaidDetectionByGuild: T, lastIncidentAlertMessage: I };
     }
     getMessage(e) {
         return null == e ? null : (A[e] ?? null);
     }
     getMessagesVersion() {
-        return T;
+        return d;
     }
     getMentionRaidDetected(e) {
-        return d[e] ?? null;
+        return T[e] ?? null;
     }
     getLastIncidentAlertMessage(e) {
         return I[e] ?? null;
@@ -71,7 +71,7 @@ class O extends i.Ay.PersistedStore {
 }
 let S = new O(l.h, {
     CONNECTION_OPEN: function (e) {
-        return 0 !== Object.keys(A).length && ((A = {}), T++, !0);
+        return 0 !== Object.keys(A).length && ((A = {}), d++, !0);
     },
     LOAD_MESSAGES_SUCCESS: C,
     LOCAL_MESSAGES_LOADED: C,
@@ -86,7 +86,7 @@ let S = new O(l.h, {
     AUTO_MODERATION_CONTENT_DELETED: function (e) {
         let { message: t, notice: n } = e;
         return (
-            null != t && ((A[t.id] = { id: t.id, messageData: void 0, isBlockedEdit: !1, errorMessage: n }), T++, !0)
+            null != t && ((A[t.id] = { id: t.id, messageData: void 0, isBlockedEdit: !1, errorMessage: n }), d++, !0)
         );
     },
     REMOVE_AUTOMOD_MESSAGE_NOTICE: function (e) {
@@ -102,10 +102,10 @@ let S = new O(l.h, {
     },
     AUTO_MODERATION_MENTION_RAID_DETECTION: function (e) {
         let { guildId: t, decisionId: n, suspiciousMentionActivityUntil: i } = e;
-        return ((d[t] = { guildId: t, decisionId: n, suspiciousMentionActivityUntil: i }), !0);
+        return ((T[t] = { guildId: t, decisionId: n, suspiciousMentionActivityUntil: i }), !0);
     },
     AUTO_MODERATION_MENTION_RAID_NOTICE_DISMISS: function (e) {
         let { guildId: t } = e;
-        return (delete d[t], !0);
+        return (delete T[t], !0);
     },
 });

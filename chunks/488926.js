@@ -39,7 +39,7 @@ n.d(t, {
                 ((d = r.computeLurkerPermissionsAllowList() ?? d),
                     (a = null != a ? { ...r.permissionOverwrites, ...a } : r.permissionOverwrites));
                 let t = r.getGuildId();
-                n = null != t ? g.A.getGuild(t) : null;
+                n = null != t ? m.A.getGuild(t) : null;
             } else ((a = a ?? {}), (n = r));
             if (null == n) return O;
             let c = {
@@ -95,8 +95,8 @@ var i = n(435558),
     f = n(734057),
     p = n(696451),
     T = n(317525),
-    g = n(71393),
-    m = n(287809),
+    m = n(71393),
+    g = n(287809),
     S = n(7864),
     N = n(935208),
     C = n(652215);
@@ -169,7 +169,7 @@ function P(e, t, n) {
         i &&
             t.mfaLevel === C.EkJ.ELEVATED &&
             n === I.default.getId() &&
-            !m.default.getCurrentUser()?.mfaEnabled &&
+            !g.default.getCurrentUser()?.mfaEnabled &&
             (e = a.TF(e, C.Lti)),
         e
     );
@@ -230,7 +230,7 @@ function G(e) {
         if (E.Le.has(i.type)) {
             let e = f.A.getChannel(i.parent_id);
             if (null == e || e.isScheduledForDeletion()) return O;
-            let t = o === m.default.getCurrentUser()?.id && _.A.hasJoined(i.id);
+            let t = o === g.default.getCurrentUser()?.id && _.A.hasJoined(i.id);
             return x(
                 i,
                 G({ user: n, context: e, overwrites: r, roles: a, checkElevated: s, excludeGuildPermissions: l }),
@@ -241,10 +241,10 @@ function G(e) {
         ((d = i.computeLurkerPermissionsAllowList() ?? d),
             (r = null != r ? { ...i.permissionOverwrites, ...r } : i.permissionOverwrites));
         let e = i.getGuildId();
-        t = null != e ? g.A.getGuild(e) : null;
+        t = null != e ? m.A.getGuild(e) : null;
     } else ((r = r ?? {}), (t = i));
     if (null == t) return O;
-    if (!(o === m.default.getCurrentUser()?.id && c.A.isViewingRoles(t.id)) && (0, A.bM)(t, o)) return P(R, t, o, s);
+    if (!(o === g.default.getCurrentUser()?.id && c.A.isViewingRoles(t.id)) && (0, A.bM)(t, o)) return P(R, t, o, s);
     let u = p.Ay.getMember(t.id, o);
     return w({
         userId: o,
@@ -323,7 +323,7 @@ function K(e, t) {
             return !1;
         i = t.permissionOverwrites;
         let e = t.getGuildId();
-        n = null != e ? g.A.getGuild(e) : null;
+        n = null != e ? m.A.getGuild(e) : null;
     } else n = t;
     if (null == n) return !1;
     let r = T.A.getEveryoneRole(n).permissions,
@@ -338,7 +338,7 @@ function $(e, t) {
             return !1;
         i = t.permissionOverwrites;
         let e = t.getGuildId();
-        n = null != e ? g.A.getGuild(e) : null;
+        n = null != e ? m.A.getGuild(e) : null;
     } else n = t;
     if (null == n) return !1;
     let s = T.A.getEveryoneRole(n);

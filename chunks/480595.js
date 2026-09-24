@@ -31,8 +31,8 @@ class p extends o.Ay.Store {
     }
 }
 let T = new p(d.h);
-var g = n(155718),
-    m = n(871633),
+var m = n(155718),
+    g = n(871633),
     S = n(655116),
     N = n(885386),
     C = n(617617),
@@ -90,7 +90,7 @@ function F() {
                             n.linkedGames.find((e) => {
                                 var n;
                                 return (
-                                    e.type === g.Mh.LINKED &&
+                                    e.type === m.Mh.LINKED &&
                                     ((n = e.id), null != t.find((e) => e.application_id === n))
                                 );
                             })
@@ -104,7 +104,7 @@ function F() {
             name: o.name,
             application_id: o.id ?? t?.id,
             timestamps: { start: k ?? o.start },
-            ...(0, m.CO)(o),
+            ...(0, g.CO)(o),
         });
     }
     let u = S.A.getActivity();

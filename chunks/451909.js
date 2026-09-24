@@ -16,8 +16,8 @@ var i = n(435558),
     f = n(885386),
     p = n(734057),
     T = n(808728),
-    g = n(696451),
-    m = n(317525),
+    m = n(696451),
+    g = n(317525),
     S = n(71393),
     N = n(576705),
     C = n(994500),
@@ -217,7 +217,7 @@ let k = _.Ay.RULES,
                     let e = "";
                     if (a?.id != null) {
                         let t = o.toLowerCase();
-                        e = r().some(m.A.getUnsafeMutableRoles(a.id), (e) => t.startsWith(e.name.toLowerCase()))
+                        e = r().some(g.A.getUnsafeMutableRoles(a.id), (e) => t.startsWith(e.name.toLowerCase()))
                             ? `#${`${l.discriminator}`.padStart(4, "0")}`
                             : "";
                     }
@@ -230,7 +230,7 @@ let k = _.Ay.RULES,
             parse(e, t, n) {
                 let { guild: i } = n;
                 if (null != i) {
-                    let t = m.A.getRole(i.id, e[1]);
+                    let t = g.A.getRole(i.id, e[1]);
                     if (null != t) return { content: `@${t.name}` };
                 }
                 return { content: e[0] };
@@ -346,7 +346,7 @@ function Z(e, t) {
     } else
         n =
             null != i
-                ? g.Ay.getMembers(i).map((e) => {
+                ? m.Ay.getMembers(i).map((e) => {
                       let { userId: t, nick: n } = e;
                       return { userId: t, nick: n };
                   })
@@ -358,7 +358,7 @@ function Z(e, t) {
                 return (null == i || e.push({ id: n, text: i.tag }), e);
             }, []),
         ),
-        d = r()(null != a ? m.A.getSortedRoles(a.id) : [])
+        d = r()(null != a ? g.A.getSortedRoles(a.id) : [])
             .filter((e) => {
                 let { mentionable: t } = e;
                 return s || t;

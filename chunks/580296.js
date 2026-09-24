@@ -16,8 +16,8 @@ var i = n(477900),
     f = n(425116),
     p = n(652215),
     T = n(513687),
-    g = n(785613);
-function m(e) {
+    m = n(785613);
+function g(e) {
     let { onClose: t } = e,
         n = (0, c.bG)([A.default, I.A], f.$),
         a = (0, c.bG)([A.default], () => {
@@ -31,40 +31,40 @@ function m(e) {
                   }).format(e);
         }),
         s = (0, c.bG)([A.default], () => A.default.getCurrentUser()?.username ?? ""),
-        m = r.useRef(!1),
+        g = r.useRef(!1),
         S = r.useCallback(() => {
-            ((m.current = !0), (0, E.pX)(p.BVt.DEFAULT_LOGGED_OUT), _.A.logout("restricted_hours"));
+            ((g.current = !0), (0, E.pX)(p.BVt.DEFAULT_LOGGED_OUT), _.A.logout("restricted_hours"));
         }, []);
     r.useEffect(() => {
-        n || m.current || t();
+        n || g.current || t();
     }, [n, t]);
     let N = null != a ? h.intl.format(T.default.VfqJvY, { endTime: a }) : h.intl.string(T.default.abikhN);
     return (0, i.jsxs)("div", {
-        className: g.Tp,
+        className: m.Tp,
         children: [
-            (0, i.jsx)("div", { className: g.gh, "aria-hidden": !0 }),
-            (0, i.jsx)("div", { className: g.zX, "aria-hidden": !0, children: (0, i.jsx)("div", { className: g.cU }) }),
+            (0, i.jsx)("div", { className: m.gh, "aria-hidden": !0 }),
+            (0, i.jsx)("div", { className: m.zX, "aria-hidden": !0, children: (0, i.jsx)("div", { className: m.cU }) }),
             (0, i.jsxs)(o.B, {
                 direction: "vertical",
                 align: "center",
                 gap: 16,
-                className: `${g.kL} ${g.vx}`,
+                className: `${m.kL} ${m.vx}`,
                 children: [
                     (0, i.jsx)(l.w, {
                         artboard: "Teen Screen Time Illo",
                         stateMachine: "State Machine 1",
-                        className: g.jw,
+                        className: m.jw,
                     }),
                     (0, i.jsx)(d.E, {
                         variant: "text-lg/medium",
                         color: "text-overlay-light",
-                        className: g.h_,
+                        className: m.h_,
                         children: N,
                     }),
                 ],
             }),
             (0, i.jsx)("div", {
-                className: `${g.qr} ${g.vx}`,
+                className: `${m.qr} ${m.vx}`,
                 children: (0, i.jsx)(d.E, {
                     variant: "text-sm/medium",
                     color: "text-subtle",
@@ -80,7 +80,7 @@ function m(e) {
 var S = n(191627);
 let N = !1;
 function C() {
-    N || ((N = !0), (0, a.B8)(() => (0, i.jsx)(m, { onClose: () => O() }), { layerKey: S.Uy, Layer: s.Ay }));
+    N || ((N = !0), (0, a.B8)(() => (0, i.jsx)(g, { onClose: () => O() }), { layerKey: S.Uy, Layer: s.Ay }));
 }
 function O() {
     ((N = !1), (0, a.dF)(S.Uy));

@@ -36,13 +36,13 @@ var i = n(687123),
     f = n(612200),
     p = n(204925),
     T = n(652215),
-    g = n(375708);
-let m = new Date("06/16/2020"),
+    m = n(375708);
+let g = new Date("06/16/2020"),
     S = [T.ftr.AGE_RESTRICTED, T.ftr.EXPLICIT],
     N = new Set([p.w_.NSFW_SERVER, p.w_.NSFW_SERVER_INVITE, p.w_.NSFW_SERVER_INVITE_EMBED]);
 function C() {
     let e = A.default.getCurrentUser();
-    return null != e && I.default.extractTimestamp(e.id) > m.getTime() && null == e.nsfwAllowed;
+    return null != e && I.default.extractTimestamp(e.id) > g.getTime() && null == e.nsfwAllowed;
 }
 function O(e) {
     return S.includes(e.nsfwLevel);
@@ -68,30 +68,30 @@ function y(e) {
             return t || "" !== n ? (0, d.f)(t, n) : null;
         })(e),
         E = {
-            adult: g.intl.string(n ? g.t.ZtuRts : g.t.E4Cd5I),
-            teen: n ? g.intl.format(g.t["8tk6bB"], {}) : g.intl.format(g.t.XQZvwn, {}),
-            unverified: n ? g.intl.string(g.t.V6Gmu9) : g.intl.string(g.t["5rygLk"]),
+            adult: m.intl.string(n ? m.t.ZtuRts : m.t.E4Cd5I),
+            teen: n ? m.intl.format(m.t["8tk6bB"], {}) : m.intl.format(m.t.XQZvwn, {}),
+            unverified: n ? m.intl.string(m.t.V6Gmu9) : m.intl.string(m.t["5rygLk"]),
         },
-        I = g.intl.string(n ? g.t.xi46lg : g.t.ZmwvDc);
+        I = m.intl.string(n ? m.t.xi46lg : m.t.ZmwvDc);
     return u
         ? t
             ? {
                   title: I,
                   description: _?.teen ?? E.teen,
-                  agreement: g.intl.string(null != _ ? g.t.FDSSia : g.t.Zt4Mf4),
+                  agreement: m.intl.string(null != _ ? m.t.FDSSia : m.t.Zt4Mf4),
                   modalType: a.A5.NSFW_CHANNEL_AGE_VERIFY,
                   emphasiseDisagree: null != _,
               }
             : {
                   title: I,
                   description: _?.unverified ?? E.unverified,
-                  agreement: g.intl.string(g.t.FDSSia),
+                  agreement: m.intl.string(m.t.FDSSia),
                   modalType: a.A5.NSFW_CHANNEL_AGE_VERIFY,
               }
         : o
           ? {
-                title: g.intl.string(n ? g.t["H0SG/g"] : g.t.NEabBa),
-                description: g.intl.format(n ? g.t["6++3cX"] : g.t["2kHZes"], {
+                title: m.intl.string(n ? m.t["H0SG/g"] : m.t.NEabBa),
+                description: m.intl.format(n ? m.t["6++3cX"] : m.t["2kHZes"], {
                     helpURL: h.A.getArticleURL(T.MVz.NSFW_AGE_GATING),
                 }),
                 agreement: null,
@@ -100,7 +100,7 @@ function y(e) {
           : {
                 title: I,
                 description: _?.adult ?? E.adult,
-                agreement: g.intl.string(g.t.wVq7uo),
+                agreement: m.intl.string(m.t.wVq7uo),
                 modalType: a.A5.NSFW_CHANNEL_VERIFIED,
             };
 }
@@ -111,43 +111,43 @@ function D(e) {
         o = (0, r.bG)([A.default], () => A.default.getCurrentUser()?.nsfwAllowed === !1),
         c = (0, l.aX)(i.t.AGE_GATED_SPACES) && a ? (0, d.f)(!0, "") : null;
     if (e === p.w_.JOIN_LARGE_GUILD_UNDERAGE || e === p.w_.ACCESS_LARGE_GUILD_UNDERAGE) {
-        let n = e === p.w_.JOIN_LARGE_GUILD_UNDERAGE ? g.t["u/xsK9"] : g.t.MjQbfi,
+        let n = e === p.w_.JOIN_LARGE_GUILD_UNDERAGE ? m.t["u/xsK9"] : m.t.MjQbfi,
             i = {
-                description: t ? g.intl.string(g.t.SAoMVJ) : g.intl.string(g.t.SxY4IW),
-                agreement: t ? g.intl.string(g.t.Zt4Mf4) : g.intl.string(g.t.FDSSia),
+                description: t ? m.intl.string(m.t.SAoMVJ) : m.intl.string(m.t.SxY4IW),
+                agreement: t ? m.intl.string(m.t.Zt4Mf4) : m.intl.string(m.t.FDSSia),
             };
         return {
-            verifyTitle: g.intl.string(n),
+            verifyTitle: m.intl.string(n),
             verifyGateDescription: i.description,
             verifyAgreementButtonText: i.agreement,
         };
     }
     return t
         ? {
-              verifyAgreementButtonText: g.intl.string(null != c ? g.t.FDSSia : g.t.Zt4Mf4),
-              verifyGateDescription: c?.teen ?? (a ? g.intl.format(g.t["8tk6bB"], {}) : g.intl.format(g.t.XQZvwn, {})),
-              verifyTitle: a ? g.intl.string(g.t.xi46lg) : g.intl.string(g.t.ZmwvDc),
-              verifyDisagreementButtonText: g.intl.string(null != c ? g.t["/g10LC"] : g.t.f3Pet9),
+              verifyAgreementButtonText: m.intl.string(null != c ? m.t.FDSSia : m.t.Zt4Mf4),
+              verifyGateDescription: c?.teen ?? (a ? m.intl.format(m.t["8tk6bB"], {}) : m.intl.format(m.t.XQZvwn, {})),
+              verifyTitle: a ? m.intl.string(m.t.xi46lg) : m.intl.string(m.t.ZmwvDc),
+              verifyDisagreementButtonText: m.intl.string(null != c ? m.t["/g10LC"] : m.t.f3Pet9),
               verifyEmphasiseDisagree: null != c,
           }
         : e === p.w_.LARGE_GUILD
           ? {
-                verifyTitle: g.intl.string(g.t["7ymzsL"]),
-                verifyGateDescription: g.intl.string(g.t.SxY4IW),
-                verifyAgreementButtonText: g.intl.string(g.t.FDSSia),
+                verifyTitle: m.intl.string(m.t["7ymzsL"]),
+                verifyGateDescription: m.intl.string(m.t.SxY4IW),
+                verifyAgreementButtonText: m.intl.string(m.t.FDSSia),
             }
           : o && a && !n
             ? {
-                  verifyTitle: g.intl.string(g.t["H0SG/g"]),
-                  verifyGateDescription: g.intl.format(g.t["6++3cX"], { helpURL: h.A.getArticleURL(T.MVz.AGE_GATE) }),
+                  verifyTitle: m.intl.string(m.t["H0SG/g"]),
+                  verifyGateDescription: m.intl.format(m.t["6++3cX"], { helpURL: h.A.getArticleURL(T.MVz.AGE_GATE) }),
                   verifyAgreementButtonText: null,
               }
             : {
-                  verifyAgreementButtonText: g.intl.string(g.t.FDSSia),
+                  verifyAgreementButtonText: m.intl.string(m.t.FDSSia),
                   verifyGateDescription:
-                      c?.unverified ?? (a ? g.intl.string(g.t.V6Gmu9) : g.intl.string(g.t["5rygLk"])),
-                  verifyTitle: a ? g.intl.string(g.t.xi46lg) : g.intl.string(g.t.ZmwvDc),
-                  verifyDisagreementButtonText: g.intl.string(null != c ? g.t["/g10LC"] : g.t.f3Pet9),
+                      c?.unverified ?? (a ? m.intl.string(m.t.V6Gmu9) : m.intl.string(m.t["5rygLk"])),
+                  verifyTitle: a ? m.intl.string(m.t.xi46lg) : m.intl.string(m.t.ZmwvDc),
+                  verifyDisagreementButtonText: m.intl.string(null != c ? m.t["/g10LC"] : m.t.f3Pet9),
               };
 }
 function v() {

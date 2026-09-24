@@ -1,7 +1,7 @@
-t.d(i, { A: () => m });
-var n = t(17928),
-    l = t(228366),
-    s = t(763827);
+i.d(t, { A: () => A });
+var n = i(17928),
+    l = i(228366),
+    s = i(763827);
 let a = {},
     r = !1,
     d = null;
@@ -27,9 +27,9 @@ class c extends n.Ay.Store {
         return null != e && s.A.isConnected() && s.A.getChannelId() === e && !this.getIsPopoverDismissed(e);
     }
 }
-let m = new c(l.h, {
+let A = new c(l.h, {
     VOICE_INVITE_SUGGESTIONS_DISMISS_POPOVER: function (e) {
-        let { channelId: i } = e;
-        return !a[i] && ((a[i] = !0), !0);
+        let { channelId: t } = e;
+        return !a[t] && ((a[t] = !0), !0);
     },
 });

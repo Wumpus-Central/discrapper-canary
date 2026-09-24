@@ -5,7 +5,7 @@
         addExtraAnalyticsDecorator: () => O,
         stopRecordingAnalyticsEvents: () => x,
         isGameApplicationType: () => V,
-        AnalyticsContext: () => g,
+        AnalyticsContext: () => m,
         getNewAnalyticsLoadId: () => j,
         launchSignature: () => N,
         default: () => W,
@@ -50,8 +50,8 @@ var E = n(111162),
     f = n(53298),
     p = n(705751),
     T = n(375708);
-let g = r.createContext({ location: {} }),
-    m = {},
+let m = r.createContext({ location: {} }),
+    g = {},
     S = performance.now(),
     N = (0, o.xd)() ? (0, o.xy)((0, l.V)()) : null;
 s.extendSuperProperties({ launch_signature: N });
@@ -184,7 +184,7 @@ function D(e) {
 }
 let v = (0, s.trackMaker)({ addBreadcrumb: D, analyticEventConfigs: R, dispatcher: d.h, TRACK_ACTION_NAME: "TRACK" });
 function b(e) {
-    return (m = e);
+    return (g = e);
 }
 function M(e) {
     let t = e ?? {};
@@ -215,7 +215,7 @@ function M(e) {
         (t.uptime_app = Math.floor((performance.now() - S) / 1e3)));
     let n = A.A.getProcessUptime();
     null != n && (t.uptime_process_renderer = Math.floor(n));
-    let { utmSource: i, utmMedium: r, utmCampaign: a, utmContent: s } = m;
+    let { utmSource: i, utmMedium: r, utmCampaign: a, utmContent: s } = g;
     return (
         (t.utm_source = t.utm_source ?? i),
         (t.utm_medium = t.utm_medium ?? r),

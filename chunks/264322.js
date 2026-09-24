@@ -28,8 +28,8 @@ var i = n(582128),
     f = n(594061),
     p = n(280450),
     T = n(734057),
-    g = n(696451),
-    m = n(71393),
+    m = n(696451),
+    g = n(71393),
     S = n(287809),
     N = n(174459),
     C = n(917012),
@@ -196,7 +196,7 @@ class J extends d.Ay.Store {
     collator = new Intl.Collator(I.default.locale, H);
     initialize() {
         (this.waitFor(I.default),
-            this.waitFor(R.Ay, E.A, p.default, T.A, g.Ay, m.A, S.default),
+            this.waitFor(R.Ay, E.A, p.default, T.A, m.Ay, g.A, S.default),
             this.syncWith([I.default], () => {
                 let e;
                 (e = I.default.locale) !== ee.oldLocale &&
@@ -519,7 +519,7 @@ function eo(e) {
         I = a?.toLowerCase(),
         p = I?.split(" "),
         T = s === y.n.ONLY_TEXT,
-        g = s !== y.n.DENY ? (0, C.Ez)(h, !0, T) : [],
+        m = s !== y.n.DENY ? (0, C.Ez)(h, !0, T) : [],
         S = [],
         N = {
             permissionContext: t,
@@ -593,15 +593,15 @@ function eo(e) {
             }
             return eh(e.section.name, t.section.name);
         }),
-        g.length > 0 || !0 === c)
+        m.length > 0 || !0 === c)
     ) {
-        let e = ed(C.gZ[P.Ik.BUILT_IN], g, !0, !0, N);
+        let e = ed(C.gZ[P.Ik.BUILT_IN], m, !0, !0, N);
         null != e && S.push(e);
     }
     let b = S.flatMap((e) => e.data.map((t) => ({ ...t, section: e.section })));
     if (u === y.M.COMMAND_ONLY || u === y.M.COMMAND_OR_APPLICATION) {
         let e = t.context,
-            n = m.A.getGuild(t?.context?.guild_id),
+            n = g.A.getGuild(t?.context?.guild_id),
             i = S.some((e) => e.section.id !== P.Ik.BUILT_IN && e.data.length > 0);
         _.commands.useFrecency && i && f.bW.loadIfNecessary();
         let r = null != e ? { channel: e, guild: n } : void 0;

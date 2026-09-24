@@ -1,4 +1,4 @@
-n.d(t, { Aw: () => N, GD: () => T, Hb: () => g, Iu: () => C, TX: () => p, VE: () => I, o2: () => S, ww: () => h });
+n.d(t, { Aw: () => N, GD: () => T, Hb: () => m, Iu: () => C, TX: () => p, VE: () => I, o2: () => S, ww: () => h });
 var i = n(796873),
     r = n.n(i),
     a = n(435558),
@@ -46,10 +46,10 @@ function T(e, t) {
     );
     return null != n ? n.klass : "unknown";
 }
-function g(e) {
+function m(e) {
     return r().filesize(e);
 }
-let m = [
+let g = [
     [_.GuildFeatures.MAX_FILE_SIZE_100_MB, E.w6],
     [_.GuildFeatures.MAX_FILE_SIZE_50_MB, E.eZ],
 ];
@@ -60,7 +60,7 @@ function S(e) {
     let i = l.A.getGuild(e);
     return Math.max(
         null != i
-            ? m.reduce((e, t) => {
+            ? g.reduce((e, t) => {
                   let [n, r] = t;
                   return i.features.has(n) && r > e ? r : e;
               }, _.TbF)

@@ -3,12 +3,12 @@
         international: () => T,
         initialLocale: () => S,
         intl: () => N,
-        getSystemLocale: () => g,
+        getSystemLocale: () => m,
         useSyncMessages: () => C,
         t: () => E,
         getLanguages: () => h,
         getAvailableLocales: () => A,
-        systemLocale: () => m,
+        systemLocale: () => g,
     }));
 var i = n(477900),
     r = n(582128),
@@ -45,7 +45,7 @@ let { createLoader: I } = n(632296),
     f = I({ "en-US": () => n.e("386098").then(n.bind(n, 26185)) }, "en-US"),
     { makeMessagesProxy: p } = n(632296),
     T = p(f);
-function g(e) {
+function m(e) {
     return [
         Array.isArray(navigator.languages) ? navigator.languages[0] : null,
         navigator.language,
@@ -54,7 +54,7 @@ function g(e) {
         e,
     ].find((e) => null != e && "" !== e);
 }
-let m = g("en-US"),
+let g = m("en-US"),
     S = (function (e, t) {
         let n = h()
             .filter((e) => {
@@ -72,7 +72,7 @@ let m = g("en-US"),
             : "zh" === i[0] && i.length > 1 && "Hant" === i[1]
               ? (n.find((e) => "zh-TW" === e) ?? t)
               : (n.find((e) => e.split("-")[0] === i[0]) ?? t);
-    })(m, "en-US"),
+    })(g, "en-US"),
     N = new a.IntlManager({ initialLocale: S, defaultLocale: "en-US" }).withFormatters({
         format: (0, a.makeReactFormatter)({
             $i: (e, t) => (0, i.jsx)("em", { children: e }, t),

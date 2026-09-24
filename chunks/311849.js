@@ -16,8 +16,8 @@ var i = n(141931),
     f = n(652215);
 let p = 15 * _.A.Millis.MINUTE,
     T = 15 * _.A.Millis.MINUTE,
-    g = 15 * _.A.Millis.MINUTE,
-    m = 30 * _.A.Millis.MINUTE,
+    m = 15 * _.A.Millis.MINUTE,
+    g = 30 * _.A.Millis.MINUTE,
     S = 60 * _.A.Millis.MINUTE,
     N = "lastMemoryUsageRestart",
     C = +_.A.Millis.DAY,
@@ -70,7 +70,7 @@ class y extends a.A {
                 clearInterval(this._checkIntervalV8),
                 (this._checkIntervalV8 = setInterval(async () => {
                     await this.trackV8HeapAlloc();
-                }, g)),
+                }, m)),
                 clearTimeout(this._checkIntervalCPUProfiler),
                 (this._checkIntervalCPUProfiler = setTimeout(() => {
                     100 * Math.random() < 0.5 && this.trackCPUProfiling();
@@ -164,7 +164,7 @@ class y extends a.A {
         if (null != n && n.timestamp >= Date.now() - C) return;
         let a = o.A.getIdleSince();
         null == a ||
-            a > Date.now() - m ||
+            a > Date.now() - g ||
             null != c.A.getRTCConnection() ||
             (l.A.persist(),
             r.w.set(N, { timeSinceStartup: t, timestamp: Date.now() }),
