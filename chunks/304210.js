@@ -1,8 +1,17 @@
-r.d(t, { S: () => a });
-var n = r(223311),
-    l = r(65238),
-    s = r(652215);
-function a() {
-    let e = (0, n.A)(s.FYj);
-    return null == (0, l.XF)(e) || e?.rewardStatus == null ? null : e;
+r.d(t, { S: () => u, T: () => o });
+var n = r(17928),
+    l = r(918467),
+    s = r(223311),
+    a = r(65238),
+    i = r(652215);
+function o() {
+    let e = (0, s.A)(i.FYj),
+        t = (0, n.bG)([l.A], () => l.A.getFetchState(i.FYj)),
+        r = null == t || ("loading" === t && null == e);
+    return null == (0, a.XF)(e) || e?.rewardStatus == null
+        ? { promotion: null, isFetchingPromotion: r }
+        : { promotion: e, isFetchingPromotion: r };
+}
+function u() {
+    return o().promotion;
 }

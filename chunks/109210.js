@@ -1665,7 +1665,7 @@ let tR = function (e) {
             g = (0, E.uM)(),
             b = g?.sessionId ?? "",
             v = (0, f.H)({ location: "collectibles_shop_feed" }),
-            N = (0, S.S)();
+            { promotion: N, isFetchingPromotion: A } = (0, S.T)();
         r.useEffect(() => {
             (0, k.z)({
                 sessionId: b,
@@ -1676,18 +1676,18 @@ let tR = function (e) {
             });
         }, [s]);
         let {
-                isFetchingShopHome: A,
-                fetchShopHomeError: R,
-                shopBlocks: T,
-                refreshShopHome: L,
+                isFetchingShopHome: R,
+                fetchShopHomeError: T,
+                shopBlocks: L,
+                refreshShopHome: O,
             } = (0, C.y)(s, { noCache: a, includeUnpublished: u, logPerf: !0 }, { sessionId: b, tab: s }),
-            O = r.useCallback(() => {
-                L();
-            }, [L]);
+            M = r.useCallback(() => {
+                O();
+            }, [O]);
         return (r.useEffect(() => {
-            null != R ||
-                A ||
-                0 === T.length ||
+            null != T ||
+                R ||
+                0 === L.length ||
                 (0, k.z)({
                     sessionId: b,
                     checkpoint: k.t.SHOP_RENDERED,
@@ -1695,17 +1695,17 @@ let tR = function (e) {
                     unpublishedCategoriesShown: u,
                     cacheDisabled: a,
                 });
-        }, [R, A, T.length, u, a, b, s]),
-        null != R)
-            ? (0, i.jsx)(y.h, { onRetry: O, errorOrigin: y.A.SHOP_PAGE, errorMessage: R.message })
-            : A || 0 === T.length
+        }, [T, R, L.length, u, a, b, s]),
+        null != T)
+            ? (0, i.jsx)(y.h, { onRetry: M, errorOrigin: y.A.SHOP_PAGE, errorMessage: T.message })
+            : R || 0 === L.length
               ? (0, i.jsxs)("div", {
                     className: o()(z.g4, z.Of),
                     children: [
-                        (0, i.jsx)(eG.A, { isLoading: A, handleTransition: t, tab: s }),
-                        (0, i.jsx)(X, { isLoading: A, handleTransition: t, categories: [] }),
+                        (0, i.jsx)(eG.A, { isLoading: R || A, handleTransition: t, tab: s }),
+                        (0, i.jsx)(X, { isLoading: R, handleTransition: t, categories: [] }),
                         (0, i.jsx)(eI, {
-                            isLoading: A,
+                            isLoading: R,
                             title: s === eD.G2.ORBS ? P.intl.string(P.t.dFgeuZ) : P.intl.string(P.t.NSv5KV),
                             numVisibleItems: l,
                             tab: s,
@@ -1713,7 +1713,7 @@ let tR = function (e) {
                     ],
                 })
               : (0, i.jsx)(i.Fragment, {
-                    children: T.map((e, r) =>
+                    children: L.map((e, r) =>
                         (function (e, r, a) {
                             if (null == e) return null;
                             let u = null,
@@ -1736,7 +1736,11 @@ let tR = function (e) {
                                     );
                                     break;
                                 case c.g.FEATURED:
-                                    u = (0, i.jsx)(X, { isLoading: A, handleTransition: t, featuredBlockRecord: e }, a);
+                                    u = (0, i.jsx)(
+                                        X,
+                                        { isLoading: !1, handleTransition: t, featuredBlockRecord: e },
+                                        a,
+                                    );
                                     break;
                                 case c.g.FEED:
                                     let b = e.sortedSkuIds;
@@ -1779,7 +1783,7 @@ let tR = function (e) {
                                     );
                                     break;
                                 case c.g.REWARD_HERO:
-                                    u = (0, i.jsx)(tm, { isLoading: A, handleTransition: t, heroBlock: e, tab: s }, a);
+                                    u = (0, i.jsx)(tm, { isLoading: !1, handleTransition: t, heroBlock: e, tab: s }, a);
                                     break;
                                 case c.g.GAME_SERVER_HOSTING_BANNER:
                                     if (
@@ -1829,7 +1833,7 @@ let tR = function (e) {
                                 },
                                 a,
                             );
-                        })(e, r > 0 ? T[r - 1] : null, r),
+                        })(e, r > 0 ? L[r - 1] : null, r),
                     ),
                 });
     },
