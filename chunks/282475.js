@@ -16,8 +16,8 @@ var i,
     f = n(766034),
     p = n(314732),
     T = n(214771),
-    m = n(937724),
-    g = n(626584),
+    g = n(937724),
+    m = n(626584),
     S = n(807393),
     N = n(464578),
     C = n(111162),
@@ -173,7 +173,7 @@ class j {
                     n = this._pako,
                     i = this._inflate;
                 if (null == i)
-                    return void new g.A("GatewayCompressionHandler").error(
+                    return void new m.A("GatewayCompressionHandler").error(
                         "flush end happened on closed compression adapter",
                     );
                 if (e !== n.Z_OK) throw Error(`zlib error, ${e}, ${i.strm.msg}`);
@@ -1077,7 +1077,7 @@ let eI = new (class {
                             } catch (n) {
                                 throw (
                                     D.A.captureException(n, { tags: { app_context: "WetfParser" } }),
-                                    new g.A("GatewayEncodingErlpackEncoding").error("Error unpacking (wetf)", {
+                                    new m.A("GatewayEncodingErlpackEncoding").error("Error unpacking (wetf)", {
                                         erlpackUnpackError: n,
                                         erlpackDataPreview: null != t ? Array.from(e.slice(0, 32)) : null,
                                         erlpackDataLength: e.length,
@@ -1091,7 +1091,7 @@ let eI = new (class {
                             return e.unpack(t);
                         } catch (e) {
                             throw (
-                                new g.A("GatewayEncodingErlpackEncoding").error("Error unpacking", {
+                                new m.A("GatewayEncodingErlpackEncoding").error("Error unpacking", {
                                     erlpackUnpackError: e,
                                     erlpackDataPreview: null != t ? Array.from(t.slice(0, 32)) : null,
                                     erlpackDataLength: null != t ? t.length : null,
@@ -1125,9 +1125,9 @@ class eT {
         return !0;
     }
 }
-let em = void 0 !== ep ? ep : eT;
-G.P.isDiscordGatewayPlaintextSet() && (em = eT);
-let eg = em;
+let eg = void 0 !== ep ? ep : eT;
+G.P.isDiscordGatewayPlaintextSet() && (eg = eT);
+let em = eg;
 n(423034);
 var eS = n(287809),
     eN = n(652215);
@@ -1306,7 +1306,7 @@ class eH {
         };
     }
 }
-let ej = new g.A("DispatcherWorkScheduler");
+let ej = new m.A("DispatcherWorkScheduler");
 class eW {
     _flushTimeoutHandler = null;
     _flushIdleHandler = null;
@@ -1483,7 +1483,7 @@ let eX = (0, eE.mj)({
         defaultConfig: { enabled: !1 },
         variations: { 1: { enabled: !0 } },
     }),
-    eq = new g.A("GatewaySocket"),
+    eq = new m.A("GatewaySocket"),
     eZ = new Set(["INITIAL_GUILD", "READY"]),
     eQ = new Set(["READY", "INITIAL_GUILD"]),
     eJ = new Set(["VOICE_SERVER_UPDATE", "STREAM_SERVER_UPDATE"]),
@@ -1692,8 +1692,8 @@ class e3 {
                         f = [],
                         p = [],
                         T = [],
-                        m = [],
                         g = [],
+                        m = [],
                         S = [];
                     return (
                         n.forEach((e) => {
@@ -1705,8 +1705,8 @@ class e3 {
                                 f.push("partial" === e.data_mode ? e.partial_updates.emojis : e.emojis),
                                 p.push(i),
                                 T.push("partial" === e.data_mode ? e.partial_updates.stickers : e.stickers),
-                                m.push(t),
-                                g.push(r),
+                                g.push(t),
+                                m.push(r),
                                 S.push(a, n));
                         }),
                         {
@@ -1726,8 +1726,8 @@ class e3 {
                             guild_emojis_size: JSON.stringify(f).length,
                             guild_threads_size: JSON.stringify(p).length,
                             guild_stickers_size: JSON.stringify(T).length,
-                            guild_events_size: JSON.stringify(g).length,
-                            guild_features_size: JSON.stringify(m).length,
+                            guild_events_size: JSON.stringify(m).length,
+                            guild_features_size: JSON.stringify(g).length,
                             guild_remaining_data_size: JSON.stringify(S).length,
                             size_metrics_duration_ms: Date.now() - t,
                         }
@@ -2161,15 +2161,15 @@ class t_ extends ta.G {
 new t_();
 var tE = n(767589),
     tA = n(458244);
-let th = new g.A("QOS"),
-    tI = new g.A("GatewaySocket"),
-    tf = new eg(),
+let th = new m.A("QOS"),
+    tI = new m.A("GatewaySocket"),
+    tf = new em(),
     tp = null;
 function tT(e) {
     tp = e;
 }
-function tm() {}
-let tg = 30 * L.A.Millis.SECOND,
+function tg() {}
+let tm = 30 * L.A.Millis.SECOND,
     tS = 3 * L.A.Millis.MINUTE,
     tN = +L.A.Millis.MINUTE;
 function tC(e) {
@@ -2296,7 +2296,7 @@ class tR extends e8 {
                 let e = Date.now() - this.connectionStartTime;
                 (this._handleClose(!1, 0, `The connection timed out after ${e} ms - did not receive OP_HELLO in time.`),
                     this.setResumeUrl(null));
-            }, tg)));
+            }, tm)));
         let d = new URL(l);
         (d.searchParams.append("encoding", s),
             d.searchParams.append("v", o.toString()),
@@ -2644,7 +2644,7 @@ class tR extends e8 {
         (A.Ay.Emitter.resume(), this._stopHeartbeater(), this._clearHelloTimeout());
         let t = this.webSocket;
         ((this.webSocket = null),
-            null != t && ((t.onopen = tm), (t.onmessage = tm), (t.onerror = tm), (t.onclose = tm), e?.(t)),
+            null != t && ((t.onopen = tg), (t.onmessage = tg), (t.onerror = tg), (t.onclose = tg), e?.(t)),
             this.gatewayBackoff.cancel(),
             this.compressionHandler.close(),
             (this.compressionHandler = Y(tf)));
@@ -2663,9 +2663,9 @@ class tR extends e8 {
         let t = Date.now();
         this.identifyStartTime = t;
         let [n, i, r] = await Promise.all([
-                (0, m.O)() ? f.A.getCommittedVersions() : {},
-                (0, m.O)() ? T.A.getCommittedVersions() : {},
-                !!(0, m.O)() && p.A.canUseGuildVersions(),
+                (0, g.O)() ? f.A.getCommittedVersions() : {},
+                (0, g.O)() ? T.A.getCommittedVersions() : {},
+                !!(0, g.O)() && p.A.canUseGuildVersions(),
             ]),
             a = (function (e, t) {
                 let n;
@@ -2677,7 +2677,7 @@ class tR extends e8 {
                     } catch (e) {
                         th.warn(`Failed to decode derived QOS data: ${e}`);
                     }
-                return (0, tE.ob)(tl, tl.create({ clientProvided: r, derived: n }));
+                return (0, tE.ob)(tl, { clientProvided: r, derived: n });
             })(e.userId, this.getIsUserActive()),
             s = r
                 ? {
