@@ -1,4 +1,4 @@
-r.d(t, { A: () => H });
+r.d(t, { A: () => D });
 var n = r(477900),
     l = r(582128),
     s = r(503698),
@@ -15,21 +15,21 @@ var n = r(477900),
     E = r(688810),
     S = r(617986),
     x = r(773669),
-    v = r(318346),
-    C = r(287809),
+    C = r(318346),
+    v = r(287809),
     _ = r(174459),
     A = r(440938),
     I = r(993408),
-    y = r(304210),
-    L = r(39196),
+    L = r(304210),
+    y = r(39196),
     f = r(320089),
     k = r(212407),
     O = r(521e3),
     j = r(783857),
     b = r(815280),
     P = r(60140),
-    T = r(758836),
-    B = r(652215),
+    B = r(758836),
+    T = r(652215),
     N = r(375708),
     R = r(105499);
 let G = {
@@ -41,36 +41,36 @@ let G = {
         type: u.g.HERO,
         categoryStoreListingId: "",
     },
-    H = (e) => {
+    D = (e) => {
         let {
                 isLoading: t,
                 handleTransition: r,
                 category: s,
-                heroBlock: H,
-                tab: M,
-                onVisibilityChange: D,
+                heroBlock: D,
+                tab: H,
+                onVisibilityChange: M,
                 badge: w,
                 hideButton: U = !1,
                 hideCards: F = !1,
             } = e,
             V = (0, i.K)(
                 (e) => {
-                    D?.(e);
+                    M?.(e);
                 },
                 0.1,
-                null != D,
+                null != M,
             ),
             K = l.useRef(null),
             W = (0, j.yB)("HeroBlock"),
-            X = (0, c.bG)([C.default], () => C.default.getCurrentUser()),
-            z = (0, c.bG)([x.default], () => x.default.locale),
+            z = (0, c.bG)([v.default], () => v.default.getCurrentUser()),
+            X = (0, c.bG)([x.default], () => x.default.locale),
             Y = (0, A.uM)(),
             { analyticsLocations: $ } = (0, E.Ay)(h.A.COLLECTIBLES_SHOP_HERO),
-            q = (0, y.S)(),
+            q = (0, L.S)(),
             Z = l.useMemo(
                 () =>
-                    null != H
-                        ? H
+                    null != D
+                        ? D
                         : null == s
                           ? G
                           : {
@@ -87,11 +87,11 @@ let G = {
                                 heroBannerUrl: s.heroBannerUrl,
                                 heroBannerAnimatedUrl: s.heroBannerAnimatedUrl,
                             },
-                [H, s],
+                [D, s],
             ),
-            J = l.useMemo(() => (0, L.HF)(q, Z), [q, Z]),
+            J = l.useMemo(() => (0, y.HF)(q, Z), [q, Z]),
             Q = null != J,
-            ee = l.useMemo(() => (null == q ? Z : (0, L.O8)(q, Z, M, z)), [q, Z, M, z]),
+            ee = l.useMemo(() => (null == q ? Z : (0, y.O8)(q, Z, H, X)), [q, Z, H, X]),
             {
                 bannerDisplayConfig: et,
                 logoDisplayConfig: er,
@@ -103,15 +103,15 @@ let G = {
             ei = et?.responsive ?? !1,
             eo = et?.backgroundStyle,
             eu = null != ea && !Q,
-            ec = M === T.G2.ORBS,
+            ec = H === B.G2.ORBS,
             ed = null != s && s.isOrbsExclusive,
             eg = ec ? N.intl.string(N.t["1CdL8d"]) : N.intl.string(N.t.xYKa1T);
         function em() {
             ec
-                ? ((0, v.Y)({
-                      pageType: B.liQ.SHOP_ORBS_TAB,
-                      sectionType: B.JJy.ORBS_SHOP_HERO_BLOCK,
-                      ctaObject: B.ZSU.CTA_TO_QUEST_HOME,
+                ? ((0, C.Y)({
+                      pageType: T.liQ.SHOP_ORBS_TAB,
+                      sectionType: T.JJy.ORBS_SHOP_HERO_BLOCK,
+                      ctaObject: T.ZSU.CTA_TO_QUEST_HOME,
                   }),
                   (0, S.mA)({ fromContent: o.u.ORBS_SHOP_HERO_CTA }))
                 : (r?.({
@@ -120,16 +120,16 @@ let G = {
                       isInternalShopDeeplink: !0,
                       isOrbsExclusive: ed,
                   }),
-                  _.default.track(B.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                  _.default.track(T.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                       collectibles_shop_session_id: Y?.sessionId,
                       sku_id: ee.categorySkuId,
-                      page_type: M,
+                      page_type: H,
                       page_section: Y?.pageSection,
                       page_category: Y?.pageCategory,
                       cta_name: "shop latest category hero button",
                   }));
         }
-        if (null == X || (!t && ee === G)) return null;
+        if (null == z || (!t && ee === G)) return null;
         function ep() {
             return t || U ? null : (0, n.jsx)(p.$, { variant: "overlay-primary", onClick: em, text: eg });
         }
@@ -154,12 +154,12 @@ let G = {
                             }),
                     }),
                     (0, n.jsxs)("div", {
-                        className: a()(R.xX, { [R.ub]: Q && M === T.G2.COLLECTION_INDEX }),
+                        className: a()(R.xX, { [R.ub]: Q && H === B.G2.COLLECTION_INDEX }),
                         children: [
                             eu
                                 ? (0, n.jsx)("div", { className: R.fy, children: ep() })
                                 : (0, n.jsxs)("div", {
-                                      className: a()(R.bC, { [R.no]: ei, [R.RD]: Q && M === T.G2.COLLECTION_INDEX }),
+                                      className: a()(R.bC, { [R.no]: ei, [R.RD]: Q && H === B.G2.COLLECTION_INDEX }),
                                       children: [
                                           t
                                               ? (0, n.jsx)("div", { className: R.Hw })
@@ -194,7 +194,9 @@ let G = {
                                                                 null != ee.summary &&
                                                                     "" !== ee.summary &&
                                                                     (0, n.jsx)(m.E, {
-                                                                        variant: "text-md/normal",
+                                                                        variant: Q
+                                                                            ? "text-sm/normal"
+                                                                            : "text-md/normal",
                                                                         className: a()(ec ? R.h4 : R.Tm, { [R.vd]: Q }),
                                                                         style: { color: ee.bannerTextColor ?? void 0 },
                                                                         children: ee.summary,
@@ -203,7 +205,7 @@ let G = {
                                                         }),
                                                         null != q &&
                                                             Q &&
-                                                            M === T.G2.COLLECTION_INDEX &&
+                                                            H === B.G2.COLLECTION_INDEX &&
                                                             (0, n.jsx)("div", {
                                                                 className: R.Zz,
                                                                 children: (0, n.jsx)(f.A, {
@@ -219,9 +221,9 @@ let G = {
                             !F &&
                                 (0, n.jsx)(P.A, {
                                     heroBlockRecord: ee,
-                                    tab: M,
+                                    tab: H,
                                     isBlockLoading: t,
-                                    layout: M === T.G2.HOME ? "hscroll" : "feed",
+                                    layout: H === B.G2.HOME ? "hscroll" : "feed",
                                 }),
                         ],
                     }),

@@ -848,7 +848,7 @@ function eq(e) {
                           null != t.summary &&
                               "" !== t.summary &&
                               (0, i.jsx)(O.E, {
-                                  variant: "text-md/normal",
+                                  variant: "text-sm/normal",
                                   className: o()(eX.Tm, eX.vd),
                                   style: { color: null != t.bannerTextColor ? t.bannerTextColor : void 0 },
                                   children: t.summary,
@@ -909,31 +909,36 @@ let eJ = function (e) {
                                       null != v &&
                                       (0, i.jsx)(eK.A, { bannerStatic: v, bannerAnimated: j, isResponsive: S }),
                               }),
-                              (0, i.jsx)(eR.N, {
-                                  theme: e_.NJ8.DARK,
-                                  children: (e) =>
-                                      (0, i.jsxs)("div", {
-                                          className: o()(eX.mz, e),
-                                          children: [
-                                              (0, i.jsx)("div", {
-                                                  className: eX.bC,
-                                                  children: (0, i.jsx)(eq, {
-                                                      heroBlockRecord: g,
-                                                      heroLogo: p,
-                                                      logoDisplayConfig: f,
-                                                      collectionId: l.categorySkuId,
-                                                      isLoading: n,
-                                                  }),
+                              (0, i.jsxs)("div", {
+                                  className: eX.mz,
+                                  children: [
+                                      (0, i.jsx)(eR.N, {
+                                          theme: e_.NJ8.DARK,
+                                          children: (e) =>
+                                              (0, i.jsxs)("div", {
+                                                  className: e,
+                                                  children: [
+                                                      (0, i.jsx)("div", {
+                                                          className: eX.bC,
+                                                          children: (0, i.jsx)(eq, {
+                                                              heroBlockRecord: g,
+                                                              heroLogo: p,
+                                                              logoDisplayConfig: f,
+                                                              collectionId: l.categorySkuId,
+                                                              isLoading: n,
+                                                          }),
+                                                      }),
+                                                      (0, i.jsx)(eW.A, { onShopCollectionClick: k, className: eX.ti }),
+                                                  ],
                                               }),
-                                              (0, i.jsx)(eW.A, { handleButtonClick: k }),
-                                              (0, i.jsx)(eY.A, {
-                                                  heroBlockRecord: g,
-                                                  tab: a,
-                                                  isBlockLoading: n,
-                                                  layout: "hscroll",
-                                              }),
-                                          ],
                                       }),
+                                      (0, i.jsx)(eY.A, {
+                                          heroBlockRecord: g,
+                                          tab: a,
+                                          isBlockLoading: n,
+                                          layout: "hscroll",
+                                      }),
+                                  ],
                               }),
                           ],
                       }),

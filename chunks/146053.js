@@ -10,6 +10,7 @@ _.exports = {
     AW: "catalogFallback__0f179",
     $T: "catalogBannerWrapper__0f179",
     hd: "sectionContainer__0f179",
+    aQ: "promotionEligibleItemsHeader__0f179",
     fr: "productsGrid__0f179",
     I5: "cardTall__0f179",
     kP: "cardWide__0f179",

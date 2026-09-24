@@ -224,10 +224,11 @@
 .banner__908d6 {
     display: flex;
     filter: blur(25px);
-    height: 350px;
+    height: 530px;
     inset-inline: 0;
     -webkit-mask-image: linear-gradient(180deg, #000 40%, rgba(0, 0, 0, .8) 60%, rgba(0, 0, 0, .4) 80%, transparent);
     mask-image: linear-gradient(180deg, #000 40%, rgba(0, 0, 0, .8) 60%, rgba(0, 0, 0, .4) 80%, transparent);
+    opacity: .5;
     position: absolute
 }
 
@@ -246,7 +247,7 @@
     container-type: inline-size;
     margin-top: 24px;
     max-width: 1080px;
-    padding: 24px;
+    padding: 16px;
     position: relative;
     width: 100%
 }
@@ -272,14 +273,15 @@
     flex-direction: row;
     justify-content: space-between;
     min-height: var(--custom-hero-band-height);
-    padding-top: 3px
+    padding-top: 3px;
+    padding-inline: 20px
 }
 
 .heroHeaderBadgeLogoSummaryContainer__908d6 {
     display: flex;
     flex: 1;
     flex-direction: column;
-    gap: 16px;
+    gap: 20px;
     height: 100%;
     justify-content: center
 }
@@ -297,8 +299,8 @@
 .heroHeaderLogo__908d6 {
     align-self: flex-start;
     flex-shrink: 0;
-    margin-bottom: 12px;
-    max-height: 90px;
+    height: 60px;
+    margin-bottom: 20px;
     max-width: 540px
 }
 
@@ -313,7 +315,13 @@
 }
 
 .promotionTakeoverSummary__908d6 {
-    max-width: 400px
+    margin-top: 8px;
+    width: 320px
+}
+
+.eligibleItemsHeader__908d6 {
+    margin-bottom: 12px;
+    margin-top: 20px
 }
 
 .limitedTimeBadge__908d6 {
@@ -713,4 +721,4 @@
     text-decoration: var(--link-decoration)
 }
 
-/*# sourceMappingURL=fda5a407e7fc9786.css.map*/
+/*# sourceMappingURL=e6719b18ea0016fc.css.map*/

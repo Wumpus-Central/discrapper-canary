@@ -11,4 +11,5 @@ e.exports = {
     rm: "heroHeaderLogo__908d6",
     Tm: "subHeaderText__908d6",
     vd: "promotionTakeoverSummary__908d6",
+    ti: "eligibleItemsHeader__908d6",
 };

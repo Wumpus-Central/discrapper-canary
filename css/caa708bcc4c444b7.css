@@ -99,6 +99,10 @@
     width: 100%
 }
 
+.promotionEligibleItemsHeader__0f179 {
+    margin-bottom: 12px
+}
+
 .productsGrid__0f179 {
     display: grid;
     grid-gap: 24px;
@@ -228,4 +232,4 @@
     animation: skeletonPulse__0f179 2s ease-in-out infinite alternate
 }
 
-/*# sourceMappingURL=78e763fc50db66d7.css.map*/
+/*# sourceMappingURL=caa708bcc4c444b7.css.map*/

@@ -269,6 +269,7 @@
 }
 
 .heroBlockContent__08415.promotionIndex__08415 {
+    padding-bottom: 0;
     padding-top: 75px;
     --custom-hero-content-inline-padding: 0
 }
@@ -421,7 +422,7 @@
 }
 
 .promotionTakeoverSummary__08415 {
-    max-width: 400px
+    width: 320px
 }
 
 .promotionTakeoverDetails__08415 {
@@ -828,4 +829,4 @@
     max-width: 393px
 }
 
-/*# sourceMappingURL=bd4af5b43f775f18.css.map*/
+/*# sourceMappingURL=4d6e1e49814b46e0.css.map*/
