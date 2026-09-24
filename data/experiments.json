@@ -502,33 +502,6 @@
   },
   {
     "kind": "guild",
-    "id": "2026-03_file_upload_250_mb_powerup",
-    "label": "File Upload 250MB Powerup",
-    "defaultConfig": {
-      "enabled": false,
-      "rollbackEnabled": false
-    },
-    "treatments": [
-      {
-        "id": 1,
-        "label": "Enable File Upload 250MB Powerup",
-        "config": {
-          "enabled": true,
-          "rollbackEnabled": false
-        }
-      },
-      {
-        "id": 2,
-        "label": "Rollback UI for File Upload 250MB Powerup",
-        "config": {
-          "enabled": true,
-          "rollbackEnabled": true
-        }
-      }
-    ]
-  },
-  {
-    "kind": "guild",
     "id": "2026-03_game_server_pricing",
     "label": "Game Server Pricing",
     "defaultConfig": {

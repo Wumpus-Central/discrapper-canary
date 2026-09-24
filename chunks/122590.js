@@ -85,7 +85,6 @@ let h = [
     A.M.GAME_SHOP_ANNOUNCEMENT_MODAL,
     A.M.GAME_SERVER_PRICING_CHANGE_COACHMARK,
     A.M.CLIPS_PRIMARY_ENTRY_POINT_COACHMARK,
-    A.M.FILE_UPLOAD_POWERUP_ROLLBACK_MODAL,
     A.M.NITRO_FILE_UPLOAD_1GB_ANNOUNCEMENT,
     A.M.NITRO_FILE_UPLOAD_1GB_NEW_BADGE,
 ];
@@ -93,8 +92,8 @@ var I = n(652215);
 let f = new Set(h),
     p = new r.A(1e3, 6e4),
     T = {},
-    m = null;
-function g() {
+    g = null;
+function m() {
     return {
         candidates: new Map(),
         shownFatigableCandidate: null,
@@ -106,7 +105,7 @@ function g() {
         postConnectionOpen: !1,
     };
 }
-let S = (0, i.h)(g),
+let S = (0, i.h)(m),
     N = !1;
 function C(e) {
     return {
@@ -184,8 +183,8 @@ async function v(e, t) {
 }
 let b = new o.OC(
     async (e) => {
-        let t = m;
-        if (((m = null), null == t || t.epoch !== T)) return;
+        let t = g;
+        if (((g = null), null == t || t.epoch !== T)) return;
         if ("retry" === t.source && G()) return void p.succeed();
         let n = await v(e, t);
         if (n.context.epoch !== T) return;
@@ -266,10 +265,10 @@ function P(e) {
 }
 function U(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : T;
-    n === T && (b.isPending() || (m = { epoch: n, source: t }), b.queue(e).catch(I.tEg));
+    n === T && (b.isPending() || (g = { epoch: n, source: t }), b.queue(e).catch(I.tEg));
 }
 function w() {
-    ((T = {}), (m = null), p.succeed(), b.reset());
+    ((T = {}), (g = null), p.succeed(), b.reset());
 }
 function G() {
     return x(S.getState());
@@ -321,7 +320,7 @@ function j() {
 function W() {
     ((0, a.r)(() => {
         S.setState(() => {
-            let e = g();
+            let e = m();
             return ((e.postConnectionOpen = !0), e);
         });
     }),
