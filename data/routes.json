@@ -871,6 +871,8 @@
   "QUESTS_CREATIVE_PREVIEW": "/quests/preview",
   "QUESTS_CREATIVES_CLAIM_REWARD": "/quests/creatives/:param/claim-reward",
   "QUESTS_CREATIVES_DISMISS": "/quests/creatives/:param/dismiss",
+  "ADS_CREATIVES_PREVIEW_DELIVERY_STATE": "/ads/creatives/:param/preview/delivery-state",
+  "ADS_CREATIVES_PREVIEW_DELIVERY_STATE_LOOKBACK": "/ads/creatives/preview/delivery-state",
   "QUESTS_APP_STORE_METADATA": "/quests/appstore-metadata",
   "GAME_ANNOUNCEMENTS": "/games/:param/announcements",
   "GUILD_ROOM": "/guilds/:param/rooms/:param",

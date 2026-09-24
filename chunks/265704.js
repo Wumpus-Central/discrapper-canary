@@ -87,4 +87,22 @@ let h = new A(u.h, {
     AD_SESSION_RESET: function () {
         o = new Map();
     },
+    ADS_CREATIVE_PREVIEW_DELIVERY_STATE_RESET: function (e) {
+        let { adCreativeId: t } = e,
+            n = a.has(t),
+            i = o.has(t);
+        if (!n && !i) return !1;
+        if (n) {
+            let e = new Set(a);
+            (e.delete(t), (a = e));
+        }
+        if (i) {
+            let e = new Map(o);
+            (e.delete(t), (o = e));
+        }
+    },
+    ADS_PREVIEW_DELIVERY_STATE_LOOKBACK_RESET: function (e) {
+        if (0 === a.size && 0 === o.size) return !1;
+        ((a = new Set()), (o = new Map()));
+    },
 });
