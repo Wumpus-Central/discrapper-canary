@@ -14,7 +14,7 @@ function f(e) {
         { data: E } = (0, o.YY)(t),
         p = (0, r.bG)([d.Ay], () => d.Ay.getCurrentEmbeddedActivity()),
         I = (0, r.bG)([a.A], () => a.A.getMainFrame()),
-        T = (0, l.x)(E);
+        m = (0, l.x)(E);
     return i.useCallback(async () => {
         if (null == t || null == E) return;
         let e = null != p && p.applicationId === t;
@@ -27,7 +27,7 @@ function f(e) {
         }
         f?.();
         try {
-            T
+            m
                 ? await u.A.launchFrame({
                       applicationId: t,
                       surface: C.sd,
@@ -36,5 +36,5 @@ function f(e) {
                 : E?.bot?.id != null && (await (0, s.Q)({ appId: t, botId: E?.bot?.id, analyticsLocations: n ?? [] }));
         } catch (e) {}
         A?.();
-    }, [n, E, t, T, p, I, A, f]);
+    }, [n, E, t, m, p, I, A, f]);
 }

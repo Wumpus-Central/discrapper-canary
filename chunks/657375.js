@@ -1,4 +1,4 @@
-(n.d(t, { FW: () => _, bg: () => g, RH: () => T }), n(134528), n(947204));
+(n.d(t, { FW: () => _, bg: () => g, RH: () => m }), n(134528), n(947204));
 var i,
     r = (((i = {}).AD_ATTRIBUTION_KIT = "aak"), i),
     s = n(626584),
@@ -38,15 +38,15 @@ function p(e, t) {
 function I(e) {
     null != e && (0, u.bg)(e).catch(() => {});
 }
-function T(e) {
+function m(e) {
     let { impressionId: t, metadataSealed: n, framework: i } = e,
         r = { framework: i, token: null, signAbort: new AbortController(), registration: Promise.resolve() };
     (A.set(t, r),
-        (r.registration = m({ impressionId: t, metadataSealed: n, framework: i, impression: r }).catch(() => {
+        (r.registration = T({ impressionId: t, metadataSealed: n, framework: i, impression: r }).catch(() => {
             p(t, r);
         })));
 }
-async function m(e) {
+async function T(e) {
     let { impressionId: t, metadataSealed: n, framework: i, impression: r } = e,
         s = C[i]?.viewThroughSpec;
     if (null == s) {

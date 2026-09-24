@@ -17,10 +17,10 @@ var n = r(477900),
 function x(e) {
     return String(e);
 }
-function v(e) {
+function C(e) {
     return e.skuId;
 }
-function C(e) {
+function A(e) {
     let { isLoading: t, products: r, tab: l } = e,
         s = (0, p.Mk)(l);
     return t
@@ -32,11 +32,11 @@ function C(e) {
               className: S.hm,
               children: (0, n.jsx)(p.v3.Provider, {
                   value: { flattenProductVariants: !1 },
-                  children: r.map((e, t) => (0, n.jsx)(A, { item: e, index: t, prioritizedCurrency: s }, e.skuId)),
+                  children: r.map((e, t) => (0, n.jsx)(_, { item: e, index: t, prioritizedCurrency: s }, e.skuId)),
               }),
           });
 }
-function _(e) {
+function v(e) {
     let { isLoading: t, products: r, tab: l } = e,
         i = (0, p.Mk)(l),
         o = E.intl.string(E.t.HP8LNG);
@@ -57,10 +57,10 @@ function _(e) {
                 gap: "xl",
                 "aria-label": o,
                 items: r,
-                getItemKey: v,
+                getItemKey: C,
                 maintainFocusOnReorder: !0,
                 renderItem: (e, t, r) =>
-                    (0, n.jsx)(A, { item: e, index: r, prioritizedCurrency: i, listItemProps: t }, e.skuId),
+                    (0, n.jsx)(_, { item: e, index: r, prioritizedCurrency: i, listItemProps: t }, e.skuId),
             }),
         });
     }
@@ -73,11 +73,11 @@ function _(e) {
         children: (0, n.jsx)(s.A, {
             gap: "xl",
             "aria-label": o,
-            children: r.map((e, t) => (0, n.jsx)(A, { item: e, index: t, prioritizedCurrency: i }, e.skuId)),
+            children: r.map((e, t) => (0, n.jsx)(_, { item: e, index: t, prioritizedCurrency: i }, e.skuId)),
         }),
     });
 }
-function A(e) {
+function _(e) {
     let { item: t, index: r, prioritizedCurrency: l, listItemProps: s } = e;
     return (0, n.jsx)(i.R9, {
         newValue: { tilePosition: r, pageSection: "top 4", categoryPosition: 0 },
@@ -106,8 +106,8 @@ let I = function (e) {
         S = l.useMemo(() => p.filter((e) => null != o.A.getCategoryForProduct(e.skuId)), [p]);
     switch (i) {
         case "feed":
-            return (0, n.jsx)(C, { isLoading: E, products: S, tab: u });
+            return (0, n.jsx)(A, { isLoading: E, products: S, tab: u });
         case "hscroll":
-            return (0, n.jsx)(_, { isLoading: E, products: S, tab: u });
+            return (0, n.jsx)(v, { isLoading: E, products: S, tab: u });
     }
 };

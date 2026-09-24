@@ -1,4 +1,4 @@
-r.d(t, { S: () => _ });
+r.d(t, { S: () => v });
 var n = r(477900),
     l = r(582128),
     s = r(503698),
@@ -15,79 +15,79 @@ var n = r(477900),
     E = r(212407),
     S = r(758836),
     x = r(652215),
-    v = r(375708),
-    C = r(105499);
-function _(e) {
+    C = r(375708),
+    A = r(105499);
+function v(e) {
     let {
             category: t,
             subblock: r,
             badgeText: s,
-            enablePreview: _,
-            pageType: A = S.G2.HOME,
+            enablePreview: v,
+            pageType: _ = S.G2.HOME,
             className: I,
-            handleTransition: y,
-            listItemProps: L,
+            handleTransition: L,
+            listItemProps: y,
         } = e,
         f = r?.categorySkuId;
     null == f && null != r && (f = p.A.getCategoryByStoreListingId(r?.categoryStoreListingId)?.skuId);
     let k = f ?? t?.skuId ?? "",
-        { handleCardVisibilityChange: O } = (0, h.Z)(k, A, "marketing featured block"),
-        j = (0, E.s4)(t, r, _),
+        { handleCardVisibilityChange: O } = (0, h.Z)(k, _, "marketing featured block"),
+        j = (0, E.s4)(t, r, v),
         b = l.useRef(null),
         P = r?.bodyText,
-        T = r?.name ?? t?.name,
-        B = null != T ? v.intl.formatToPlainString(v.t.frSHlf, { destination: T }) : void 0,
-        N = (0, m.uM)();
+        B = r?.name ?? t?.name,
+        N = null != B ? C.intl.formatToPlainString(C.t.frSHlf, { destination: B }) : void 0,
+        R = (0, m.uM)();
     return (0, n.jsx)(i.L, {
         innerRef: b,
         onChange: O,
         threshold: 0,
         children: (0, n.jsxs)(o.D, {
-            className: a()(C.oT, I),
+            className: a()(A.oT, I),
             innerRef: b,
             style: { ...(null != j && { backgroundImage: `url(${j})` }) },
-            ...L,
+            ...y,
             onClick: () => {
-                (y({
+                (L({
                     sourceButton: "shop marketing tile",
                     categorySkuId: k,
                     isInternalShopDeeplink: !0,
                     isOrbsExclusive: t?.isOrbsExclusive,
                 }),
                     g.default.track(x.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                        collectibles_shop_session_id: N?.sessionId,
+                        collectibles_shop_session_id: R?.sessionId,
                         sku_id: k,
-                        page_type: A,
-                        page_section: N?.pageSection,
-                        page_category: N?.pageCategory,
+                        page_type: _,
+                        page_section: R?.pageSection,
+                        page_category: R?.pageCategory,
                         tile_type: "FEATURED_BLOCK",
-                        tile_position: String(N?.tilePosition),
+                        tile_position: String(R?.tilePosition),
                         cta_name: null,
                     }));
             },
             children: [
-                null != s && (0, n.jsx)(u.Lp, { disableColor: !0, text: s, className: C.pv }),
+                null != s && (0, n.jsx)(u.Lp, { disableColor: !0, text: s, className: A.pv }),
                 (0, n.jsx)("div", {
-                    className: C.Gh,
+                    className: A.Gh,
                     children:
                         null != P &&
                         (0, n.jsx)(c.D, {
                             lineClamp: 4,
-                            className: C.BN,
+                            className: A.BN,
                             style: { color: r?.bannerTextColor ?? "white" },
                             variant: "heading-md/medium",
                             children: P,
                         }),
                 }),
                 (0, n.jsx)("div", {
-                    className: C.b2,
+                    className: A.b2,
                     children: (0, n.jsx)(d.$, {
                         variant: "overlay-primary",
-                        text: v.intl.string(v.t.jVcuVY),
-                        "aria-label": B,
-                        tabIndex: L?.tabIndex,
+                        text: C.intl.string(C.t.jVcuVY),
+                        "aria-label": N,
+                        tabIndex: y?.tabIndex,
                         onClick: (e) => {
-                            (y({
+                            (L({
                                 sourceButton: "shop marketing take me there button",
                                 categorySkuId: k,
                                 isInternalShopDeeplink: !0,
@@ -95,13 +95,13 @@ function _(e) {
                             }),
                                 e.stopPropagation(),
                                 g.default.track(x.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                                    collectibles_shop_session_id: N?.sessionId,
+                                    collectibles_shop_session_id: R?.sessionId,
                                     sku_id: k,
-                                    page_type: A,
-                                    page_section: N?.pageSection,
-                                    page_category: N?.pageCategory,
+                                    page_type: _,
+                                    page_section: R?.pageSection,
+                                    page_category: R?.pageCategory,
                                     tile_type: "FEATURED_BLOCK",
-                                    tile_position: String(N?.tilePosition),
+                                    tile_position: String(R?.tilePosition),
                                     cta_name: "Take me there button",
                                 }));
                         },

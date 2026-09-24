@@ -1,6 +1,6 @@
 (n.d(t, {
     $J: () => w,
-    IG: () => b,
+    IG: () => R,
     Ps: () => G,
     UR: () => v,
     W1: () => y,
@@ -10,7 +10,7 @@
     bg: () => N,
     pu: () => M,
     se: () => U,
-    v0: () => R,
+    v0: () => b,
 }),
     n(321073),
     n(323874),
@@ -33,8 +33,8 @@ var i,
     E = n(625494),
     p = n(723702),
     I = n(192444),
-    T = n(104886),
-    m = n(561844),
+    m = n(104886),
+    T = n(561844),
     h = n(651892),
     _ = n(792620),
     g = n(190107),
@@ -68,9 +68,9 @@ var P = (((i = {}).DESKTOP = "desktop"), (i.XBOX = "xbox"), (i.PLAYSTATION = "pl
 function w(e) {
     return "xbox" === e.connected_account_type ? S.fg2.XBOX : S.fg2.PLAYSTATION;
 }
-function R(e, t) {
+function b(e, t) {
     let { platformType: n, quest: i } = e;
-    ((0, T.E5)(T.kI.STEP_2_CLICKED_INTERNAL, "open_authorization_connection_modal")
+    ((0, m.E5)(m.kI.STEP_2_CLICKED_INTERNAL, "open_authorization_connection_modal")
         ? (0, l.r)({
               type: d.F.CLICK_INTERNAL,
               adCreativeType: s.p.QUEST,
@@ -80,7 +80,7 @@ function R(e, t) {
               sourceQuestContent: t.sourceQuestContent,
               impressionId: t.impressionId,
           })
-        : (0, m.Y5)({
+        : (0, T.Y5)({
               questId: i.id,
               questContent: t.content,
               sourceQuestContent: t.sourceQuestContent,
@@ -89,7 +89,7 @@ function R(e, t) {
           }),
         (0, f.A)({ platformType: n, location: t.ctaContent }));
 }
-function b(e) {
+function R(e) {
     return w(e) === S.fg2.XBOX ? O.t["mytEv+"] : O.t.iDiwby;
 }
 function L(e) {
@@ -150,7 +150,7 @@ function M(e, t) {
                     return e;
                 }
             })(u, (o = (0, r.A)()))),
-        (0, T.E5)(T.kI.STEP_3_CLICKED_EXTERNAL, "open_game_link_directly")
+        (0, m.E5)(m.kI.STEP_3_CLICKED_EXTERNAL, "open_game_link_directly")
             ? (0, l.r)({
                   type: d.F.CLICK_EXTERNAL_ADVERTISER_CTA,
                   adCreativeType: s.p.QUEST,
@@ -162,7 +162,7 @@ function M(e, t) {
                   impressionId: t.impressionId,
                   clickId: o,
               })
-            : (0, m.Y5)({
+            : (0, T.Y5)({
                   questId: e.id,
                   questContent: t.content,
                   questContentCTA: t.ctaContent,
@@ -182,7 +182,7 @@ function M(e, t) {
                     ? null
                     : Q({ url: (0, h.Jx)(e.config), android: i.android, ios: i.ios }),
             trackOverlayEvent: (n, i, r, s, o) =>
-                (0, m.eA)({
+                (0, T.eA)({
                     quest: e,
                     trackingCtx: t,
                     inlineStoreAppId: i,
@@ -191,7 +191,7 @@ function M(e, t) {
                     timeSpentMs: s,
                     overlaySurface: o,
                 }),
-            trackOverlaySurfaceClick: (n) => (0, m.hR)({ questId: e.id, trackingCtx: t, overlaySurface: n }),
+            trackOverlaySurfaceClick: (n) => (0, T.hR)({ questId: e.id, trackingCtx: t, overlaySurface: n }),
             appStoreOverlayCarouselScrollContext: { questId: e.id },
             getIosAttribution: null != A && null != f ? () => (0, C.FW)({ impressionId: f }) : void 0,
         }));
@@ -204,7 +204,7 @@ function q(e, t) {
             u = s.url,
             f = L(s);
         (null != f && (u = f),
-            (0, T.E5)(T.kI.STEP_3_CLICKED_EXTERNAL, "open_ad_game_link_directly")
+            (0, m.E5)(m.kI.STEP_3_CLICKED_EXTERNAL, "open_ad_game_link_directly")
                 ? (0, l.r)({
                       type: d.F.CLICK_EXTERNAL_ADVERTISER_CTA,
                       adCreativeType: r,
@@ -215,7 +215,7 @@ function q(e, t) {
                       questContentPosition: t.position,
                       impressionId: t.impressionId,
                   })
-                : (0, m.vK)({
+                : (0, T.vK)({
                       adContentId: i,
                       adCreativeType: r,
                       questContent: t.content,
@@ -236,7 +236,7 @@ function q(e, t) {
                   directLink: f,
                   inlineStoreParams: I,
                   trackOverlayEvent: (e, n, s, o, u) =>
-                      (0, m.YE)({
+                      (0, T.YE)({
                           adContentId: i,
                           adCreativeType: r,
                           trackingCtx: t,
@@ -247,7 +247,7 @@ function q(e, t) {
                           overlaySurface: u,
                       }),
                   trackOverlaySurfaceClick: (e) =>
-                      (0, m.jk)({ adContentId: i, adCreativeType: r, trackingCtx: t, overlaySurface: e }),
+                      (0, T.jk)({ adContentId: i, adCreativeType: r, trackingCtx: t, overlaySurface: e }),
                   appStoreOverlayCarouselScrollContext: { adContentId: i },
                   getIosAttribution: h,
               });
@@ -255,7 +255,7 @@ function q(e, t) {
 }
 function D(e, t) {
     let { quest: i } = e;
-    ((0, T.E5)(T.kI.STEP_2_CLICKED_INTERNAL, "open_console_connection_settings")
+    ((0, m.E5)(m.kI.STEP_2_CLICKED_INTERNAL, "open_console_connection_settings")
         ? (0, l.r)({
               type: d.F.CLICK_INTERNAL,
               adCreativeType: s.p.QUEST,
@@ -266,7 +266,7 @@ function D(e, t) {
               impressionId: t.impressionId,
               questContentPosition: t.position,
           })
-        : (0, m.Y5)({
+        : (0, T.Y5)({
               questId: i.id,
               questContent: t.content,
               questContentPosition: t.position,
@@ -283,7 +283,7 @@ function D(e, t) {
 }
 function U(e, t) {
     let { quest: n } = e;
-    (0, T.E5)(T.kI.STEP_2_CLICKED_INTERNAL, "open_add_console_connection_modal")
+    (0, m.E5)(m.kI.STEP_2_CLICKED_INTERNAL, "open_add_console_connection_modal")
         ? (0, l.r)({
               type: d.F.CLICK_INTERNAL,
               adCreativeType: s.p.QUEST,
@@ -295,7 +295,7 @@ function U(e, t) {
               questContentPosition: t.position,
               questContentRowIndex: t.rowIndex,
           })
-        : (0, m.Y5)({
+        : (0, T.Y5)({
               questId: n.id,
               questContent: t.content,
               questContentPosition: t.position,
@@ -316,7 +316,7 @@ function U(e, t) {
 function G(e, t, n) {
     let { quest: i } = e;
     return (
-        (0, T.E5)(T.kI.STEP_2_CLICKED_INTERNAL, "open_single_console_connection_modal")
+        (0, m.E5)(m.kI.STEP_2_CLICKED_INTERNAL, "open_single_console_connection_modal")
             ? (0, l.r)({
                   type: d.F.CLICK_INTERNAL,
                   adCreativeType: s.p.QUEST,
@@ -328,7 +328,7 @@ function G(e, t, n) {
                   questContentPosition: t.position,
                   questContentRowIndex: t.rowIndex,
               })
-            : (0, m.Y5)({
+            : (0, T.Y5)({
                   questId: i.id,
                   questContent: t.content,
                   questContentPosition: t.position,

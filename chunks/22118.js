@@ -12,8 +12,8 @@ var i = s(477900),
     x = s(688810),
     g = s(531260),
     p = s(160946),
-    f = s(287809),
-    h = s(166403),
+    h = s(287809),
+    f = s(166403),
     N = s(158045),
     A = s(89366),
     j = s(724651),
@@ -38,7 +38,7 @@ let M = function (e, t) {
                 { premiumGroupMembers: i } = (0, v.A)(s?.subscriptionId ?? null, { useCachedData: e, fetch: t });
             return i?.primary != null ? (0, _.$3)(i?.primary) : null;
         })({ useCachedData: !0, fetch: e === C.qT.MEMBER }),
-        n = (0, r.bG)([h.A], () => h.A.getPremiumGroupSubscription());
+        n = (0, r.bG)([f.A], () => f.A.getPremiumGroupSubscription());
     return e === C.qT.UNSPECIFIED
         ? null
         : {
@@ -205,11 +205,11 @@ let es = function (e) {
             selectedPlanTier: v = W.PremiumTypes.TIER_2,
         } = e,
         { analyticsLocations: P } = (0, x.Ay)(m.A.PREMIUM_MARKETING_PLAN_COMPARISON),
-        S = (0, r.bG)([h.A], () => h.A.hasFetchedSubscriptions()),
+        S = (0, r.bG)([f.A], () => f.A.hasFetchedSubscriptions()),
         y = (0, p.Y)(W.T7),
         M = (0, u.Ay)(),
         O = (0, c.q)(M),
-        B = (0, r.bG)([f.default], () => f.default.getCurrentUser()),
+        B = (0, r.bG)([h.default], () => h.default.getCurrentUser()),
         H = null != B && B.isPremiumWithPremiumGroup(),
         F = (0, N.YE)(B, W.PremiumTypes.TIER_2),
         es = (0, E.V)(),
