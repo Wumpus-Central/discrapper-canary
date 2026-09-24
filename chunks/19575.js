@@ -1065,6 +1065,14 @@ let K = {
             (0, f.isWindows)() ? (g.cs2Gsi?.deleteCs2GsiConfig(e) ?? Promise.resolve(!1)) : Promise.resolve(!1),
         debugLogCs2GsiPayload: (e) =>
             (0, f.isWindows)() ? (g.cs2Gsi?.debugLogCs2GsiPayload(e) ?? Promise.resolve()) : Promise.resolve(),
+        readDotaGsiToken: (e) =>
+            (0, f.isWindows)() ? (g.dotaGsi?.readDotaGsiToken(e) ?? Promise.resolve(null)) : Promise.resolve(null),
+        writeDotaGsiConfig: (e, t, n) =>
+            (0, f.isWindows)() ? (g.dotaGsi?.writeDotaGsiConfig(e, t, n) ?? Promise.resolve(!1)) : Promise.resolve(!1),
+        deleteDotaGsiConfig: (e) =>
+            (0, f.isWindows)() ? (g.dotaGsi?.deleteDotaGsiConfig(e) ?? Promise.resolve(!1)) : Promise.resolve(!1),
+        debugLogDotaGsiPayload: (e) =>
+            (0, f.isWindows)() ? (g.dotaGsi?.debugLogDotaGsiPayload(e) ?? Promise.resolve()) : Promise.resolve(),
         appViewed() {
             (0, f.isDesktop)() && (performance.mark("app_viewed"), this.sendIPC(c.APP_VIEWED));
         },

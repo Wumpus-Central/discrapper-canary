@@ -1,4 +1,4 @@
-n.d(t, { GH: () => p, Zi: () => A, c1: () => T, r6: () => m });
+n.d(t, { GH: () => I, Zi: () => A, c1: () => f });
 var i = n(228366),
     r = n(386406),
     a = n(56562),
@@ -13,8 +13,7 @@ let E = { development: [0, 0, 0, 0], canary: [1, 0, 30, 10], ptb: [1, 0, 1005, 2
 function A() {
     return !u.Ay?.isModuleVersionAtLeast?.("discord_hook", E);
 }
-let h = null;
-async function I() {
+async function h() {
     if (!(0, c.isWindows)()) return Promise.reject(Error("Hook is only available on Windows"));
     if (A()) return Promise.reject(Error("Hook module is too old"));
     await u.Ay.ensureModule("discord_hook");
@@ -29,11 +28,8 @@ async function I() {
         e
     );
 }
-async function f() {
-    return null != h ? h : (h = await I());
-}
-function p(e, t) {
-    return I().then((n) => {
+function I(e, t) {
+    return h().then((n) => {
         let o = s.Ay.getGameForPID(e),
             c = o?.name,
             u = null != o ? l.A.findGame(o) : null,
@@ -62,13 +58,8 @@ function p(e, t) {
         });
     });
 }
-function T(e) {
-    return I().then((t) => {
+function f(e) {
+    return h().then((t) => {
         t.cancelAttachToProcess(e);
     });
-}
-function m() {
-    return f()
-        .then((e) => (null != e.findSteamProcess ? e.findSteamProcess() : null))
-        .catch(() => null);
 }

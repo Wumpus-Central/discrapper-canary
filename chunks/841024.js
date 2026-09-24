@@ -1,4 +1,4 @@
-n.d(t, { A: () => N });
+n.d(t, { A: () => C });
 var i = n(439372),
     r = n(952818),
     a = n(287809),
@@ -10,22 +10,23 @@ var i = n(439372),
     u = n(974293),
     _ = n(240899),
     E = n(458977),
-    A = n(526233);
-let h = (0, n(945810).mj)({
-    kind: "user",
-    name: "2026-08-rocketleague-events",
-    defaultConfig: { enableRocketLeagueEvents: !1 },
-    variations: { 1: { enableRocketLeagueEvents: !0 } },
-});
-var I = n(270962);
-let f = n(786661).E.applicationIds["0"];
-var p = n(876474),
-    T = n(190443);
-let m = "Clip signal handler registration";
-function g(e) {
+    A = n(399091),
+    h = n(526233);
+let I = (0, n(945810).mj)({
+        kind: "user",
+        name: "2026-08-rocketleague-events",
+        defaultConfig: { enableRocketLeagueEvents: !1 },
+        variations: { 1: { enableRocketLeagueEvents: !0 } },
+    }),
+    f = n(786661).E.applicationIds["0"],
+    p = "356875988589740042";
+var T = n(876474),
+    m = n(190443);
+let g = "Clip signal handler registration";
+function S(e) {
     return !!c.Ay.getEnableAutoclipping() && d.A.isGameAllowed(e ?? r.Ay.getVisibleGame()?.id);
 }
-class S extends i.A {
+class N extends i.A {
     registrations = new Map();
     activeHandlers = new Map();
     initialized = !1;
@@ -45,40 +46,41 @@ class S extends i.A {
                 {
                     type: "voiceChannel",
                     name: "ml-audio-classification",
-                    isEnabled: () => (0, u.$i)(m) && g(),
+                    isEnabled: () => (0, u.$i)(g) && S(),
                     importHandler: () => n.e("553725").then(n.bind(n, 691148)),
                 },
                 {
                     type: "voiceChannel",
                     name: "distributed-clipping",
-                    isEnabled: () => g() && E.A.getConfig({ location: m }).enableDistributedClips,
+                    isEnabled: () => S() && E.A.getConfig({ location: g }).enableDistributedClips,
                     importHandler: () => n.e("878045").then(n.bind(n, 359788)),
                 },
                 {
                     type: "application",
-                    name: "steam-timeline",
-                    isEnabled: () => g() && I.A.getConfig({ location: m }).enableSteamTimeline,
-                    importHandler: () => n.e("533196").then(n.bind(n, 551367)),
-                },
-                {
-                    type: "application",
                     name: "league-of-legends",
-                    applicationId: p.m,
-                    isEnabled: () => g(p.m) && A.A.getConfig({ location: m }).enableLeagueEvents,
+                    applicationId: T.m,
+                    isEnabled: () => S(T.m) && h.A.getConfig({ location: g }).enableLeagueEvents,
                     importHandler: () => n.e("618549").then(n.bind(n, 877588)),
                 },
                 {
                     type: "application",
                     name: "cs2-gsi",
                     applicationId: f,
-                    isEnabled: () => g(f) && _.A.getConfig({ location: m }).enableCs2Gsi,
+                    isEnabled: () => S(f) && _.A.getConfig({ location: g }).enableCs2Gsi,
                     importHandler: () => Promise.all([n.e("556967"), n.e("860838")]).then(n.bind(n, 525509)),
                 },
                 {
                     type: "application",
+                    name: "dota-gsi",
+                    applicationId: p,
+                    isEnabled: () => S(p) && A.A.getConfig({ location: g }).enableDotaGsi,
+                    importHandler: () => Promise.all([n.e("556967"), n.e("677980")]).then(n.bind(n, 250263)),
+                },
+                {
+                    type: "application",
                     name: "rocket-league",
-                    applicationId: T.e,
-                    isEnabled: () => g(T.e) && h.getConfig({ location: m }).enableRocketLeagueEvents,
+                    applicationId: m.e,
+                    isEnabled: () => S(m.e) && I.getConfig({ location: g }).enableRocketLeagueEvents,
                     importHandler: () => Promise.all([n.e("556967"), n.e("182150")]).then(n.bind(n, 446885)),
                 },
             ]))
@@ -152,4 +154,4 @@ class S extends i.A {
         (this.terminatedCount++, this.stopAllHandlers());
     }
 }
-let N = new S();
+let C = new N();

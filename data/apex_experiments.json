@@ -3158,22 +3158,6 @@
     }
   },
   {
-    "kind": "user",
-    "name": "2026-06-magic-scoring",
-    "defaultConfig": {
-      "enableSteamTimeline": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enableSteamTimeline": true
-      }
-    }
-  },
-  {
     "name": "2026-06-mobile-server-tag",
     "kind": "user",
     "defaultConfig": {
@@ -5171,6 +5155,22 @@
       },
       "1": {
         "enabled": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-09-gsimagic2",
+    "defaultConfig": {
+      "enableDotaGsi": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enableDotaGsi": true
       }
     }
   },

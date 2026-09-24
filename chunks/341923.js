@@ -4,22 +4,22 @@ var i = n(17928),
     a = n(974293),
     s = n(240899),
     l = n(458977),
-    o = n(526233),
-    d = n(270962);
+    o = n(399091),
+    d = n(526233);
 function c() {
     let e = (0, a.$i)("isAutoClipsAvailable"),
         t = l.A.getConfig({ location: "isAutoClipsAvailable" }).enableDistributedClips,
-        n = d.A.getConfig({ location: "isAutoClipsAvailable" }).enableSteamTimeline,
-        i = o.A.getConfig({ location: "isAutoClipsAvailable" }).enableLeagueEvents,
-        r = s.A.getConfig({ location: "isAutoClipsAvailable" }).enableCs2Gsi;
+        n = d.A.getConfig({ location: "isAutoClipsAvailable" }).enableLeagueEvents,
+        i = s.A.getConfig({ location: "isAutoClipsAvailable" }).enableCs2Gsi,
+        r = o.A.getConfig({ location: "isAutoClipsAvailable" }).enableDotaGsi;
     return e || t || n || i || r;
 }
 function u() {
     let e = (0, a.aJ)("useIsAutoClipsAvailable"),
         t = l.A.useConfig({ location: "isAutoClipsAvailable" }).enableDistributedClips,
-        n = d.A.useConfig({ location: "isAutoClipsAvailable" }).enableSteamTimeline,
-        i = o.A.useConfig({ location: "isAutoClipsAvailable" }).enableLeagueEvents,
-        r = s.A.useConfig({ location: "isAutoClipsAvailable" }).enableCs2Gsi;
+        n = d.A.useConfig({ location: "isAutoClipsAvailable" }).enableLeagueEvents,
+        i = s.A.useConfig({ location: "isAutoClipsAvailable" }).enableCs2Gsi,
+        r = o.A.useConfig({ location: "isAutoClipsAvailable" }).enableDotaGsi;
     return e || t || n || i || r;
 }
 function _(e) {
