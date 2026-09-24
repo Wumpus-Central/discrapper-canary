@@ -522,14 +522,16 @@ async function ec(e) {
         I = N.Ay.getSettings(),
         p = L(i),
         m = p ? y(I.storageLocation) : I.storageLocation,
-        g = (0, Q.A)(i, O.nQ.CLIP, s, l, c);
+        g = (0, Q.A)(i, O.nQ.CLIP, s, l, c),
+        C = null != g.syncTimestamp ? g.syncTimestamp - g.createdAt : void 0,
+        R = (0, H.p)(C);
     g.isCandidate = o ?? !1;
-    let C = `${(0, b.A)(g.applicationName.substring(0, 20))}_${g.id}.mp4`,
-        R = a.A.fileManager.join(m, C),
-        D = f.Ay.getMediaEngine(),
-        v = JSON.stringify(g),
-        M = S.TX(g),
-        P =
+    let D = `${(0, b.A)(g.applicationName.substring(0, 20))}_${g.id}.mp4`,
+        v = a.A.fileManager.join(m, D),
+        M = f.Ay.getMediaEngine(),
+        P = JSON.stringify(g),
+        U = S.TX(g),
+        w =
             ((t = f.Ay.getNoiseCancellation()),
             (n = f.Ay.getSystemMicrophoneMode()),
             {
@@ -540,7 +542,7 @@ async function ec(e) {
                 system_microphone_mode: n ?? null,
                 audio_bitrate: h.A.bitrate,
             }),
-        { startMs: U, endMs: w, trimStartMs: G, trimEndMs: x } = r;
+        { startMs: G, endMs: x, trimStartMs: k, trimEndMs: F } = r;
     try {
         let e, t;
         null != a.A.fileManager.createDirectoryIfNotExists && (await a.A.fileManager.createDirectoryIfNotExists(m, p));
@@ -549,21 +551,20 @@ async function ec(e) {
             clipStats: i,
             thumbnail: s,
             metadata: l,
-        } = await D.saveClipEx({
-            filepath: R,
-            metadata: v,
-            thumbnailMs: G,
-            startMs: U,
-            endMs: w,
-            trimStartMs: G,
-            trimEndMs: x,
+        } = await M.saveClipEx({
+            filepath: v,
+            metadata: P,
+            thumbnailMs: k,
+            startMs: G,
+            endMs: x,
+            trimStartMs: k,
+            trimEndMs: F,
             userId: null != E.A.getCurrentUserActiveStream() ? A.default.getId() : void 0,
         });
         if (o && null != _ && N.Ay.getEnableAutoclipping())
             try {
-                e = (function (e, t, n, i) {
-                    let r = e.applicationId,
-                        a = (0, H.p)(),
+                e = (function (e, t, n, i, r) {
+                    let a = e.applicationId,
                         s = Math.floor(t.startMs / V.pn) * V.pn,
                         l = Math.floor((t.endMs - s) / V.pn) + 1,
                         o = s + (l - 1) * V.pn,
@@ -572,17 +573,17 @@ async function ec(e) {
                         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
                         return (0, V.lq)((0, V.Tv)(e, s, o), s, l).map((e) => e.value);
                     }
-                    let u = (0, V.Q4)(r, n.gameEventData),
+                    let u = (0, V.Q4)(a, n.gameEventData),
                         _ = (0, j.p)(n.gameEventData, s, o);
                     return {
-                        game_events_supported: (0, V.GC)(r),
+                        game_events_supported: (0, V.GC)(a),
                         created_at_ms: e.createdAt,
-                        window_start_ms: s + a,
-                        window_end_ms: o + a,
-                        trim_start_ms: t.trimStartMs + a,
-                        trim_end_ms: t.trimEndMs + a,
+                        window_start_ms: s + r,
+                        window_end_ms: o + r,
+                        trim_start_ms: t.trimStartMs + r,
+                        trim_end_ms: t.trimEndMs + r,
                         in_game: u?.getInGameState?.(s, o) ?? [],
-                        game_event_ts_ms: _.map((e) => e.timestamp_ms + a),
+                        game_event_ts_ms: _.map((e) => e.timestamp_ms + r),
                         game_event_weight: _.map((e) => e.score ?? 0),
                         game_event_name: _.map((e) => e.eventName ?? ""),
                         ...i,
@@ -590,34 +591,34 @@ async function ec(e) {
                         shouting: c(d?.shoutingData),
                         rms: c(d?.rmsData),
                     };
-                })(g, r, _, P);
+                })(g, r, _, w, R);
             } catch (e) {
                 O.nx.warn("Failed to build candidate clip analytics; emitting clip_saved without them:", e);
             }
-        let c = S.u2(M, i, g, e);
+        let c = S.u2(U, i, g, e);
         if (null != l) t = JSON.parse(l);
         else {
             if (((g.length = n), void 0 !== s)) g.thumbnail = s;
             else {
                 let e = "";
                 try {
-                    e = await (0, Z.m)(a.A.clips.getClipProtocolURLFromPath(R), 0);
+                    e = await (0, Z.m)(a.A.clips.getClipProtocolURLFromPath(v), 0);
                 } catch (e) {
                     O.nx.warn("Failed to generate clip thumbnail:", e);
                 }
-                ((g.thumbnail = e), await D.updateClipMetadata(R, JSON.stringify(g)));
+                ((g.thumbnail = e), await M.updateClipMetadata(v, JSON.stringify(g)));
             }
             t = g;
         }
         return (
             T.default.track(d.HAw.CLIP_SAVED, c),
             O.nx.info(`Clip save succeeded with ${n}ms and thumbnail ${t.thumbnail.length} bytes thumbnail.`),
-            { ...t, filepath: R, sizeBytes: i.clipSizeBytes }
+            { ...t, filepath: v, sizeBytes: i.clipSizeBytes }
         );
     } catch (e) {
-        if (!("errorMessage" in e)) throw (T.default.track(d.HAw.CLIP_SAVE_FAILURE, { ...S.lc(), ...M }), e);
+        if (!("errorMessage" in e)) throw (T.default.track(d.HAw.CLIP_SAVE_FAILURE, { ...S.lc(), ...U }), e);
         if (e.errorAt !== O.RC.BUFFER_WARMING_UP && e.errorAt !== O.RC.BRIDGE_SHUTDOWN) {
-            let t = S.WR(M, e);
+            let t = S.WR(U, e);
             T.default.track(d.HAw.CLIP_SAVE_FAILURE, t);
         }
         throw e;
