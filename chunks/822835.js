@@ -30,15 +30,15 @@ function c(e) {
         }),
         w = null != b && (h ? N.hasMainCard : N.hasAny),
         { data: A } = (0, s.YY)(l ?? void 0),
-        E = null != l && A?.bot?.id != null,
-        { data: S, isLoading: C } = (0, s.YY)(t ?? void 0),
-        I = c || (0, u.x)(S),
-        M = null != t && C,
-        T = (0, d.Xm)({ installScope: m, hasFrame: I, hasProfileWidget: w, hasBotDm: E, ownerAuthorizationRevoked: f });
+        S = null != l && A?.bot?.id != null,
+        { data: E, isLoading: C } = (0, s.YY)(t ?? void 0),
+        I = c || (0, u.x)(E),
+        T = null != t && C,
+        M = (0, d.Xm)({ installScope: m, hasFrame: I, hasProfileWidget: w, hasBotDm: S, ownerAuthorizationRevoked: f });
     return {
-        availability: T,
-        isResolving: M,
-        activeMode: M ? null : (0, d.Qs)(x, T),
+        availability: M,
+        isResolving: T,
+        activeMode: T ? null : (0, d.Qs)(x, M),
         setMode: g,
         widgetApplicationId: b,
     };

@@ -1,14 +1,14 @@
-(n.d(t, { H2: () => s, J6: () => f, i$: () => o, kT: () => T, ub: () => h, ws: () => p, xG: () => _, yT: () => S }),
+(n.d(t, { H2: () => o, J6: () => f, i$: () => s, kT: () => T, ub: () => h, ws: () => p, xG: () => _, yT: () => S }),
     n(938796));
 var r,
-    u,
-    i = n(582128),
+    i,
+    u = n(582128),
     a = n(318729),
     l = n(979816),
     E = n(243277),
     A = n(375708),
-    s = (((r = {}).NEW = "new"), (r.RECOMMENDED = "recommended"), (r.BETA = "beta"), (r.ALPHA = "alpha"), r);
-let o = {
+    o = (((r = {}).NEW = "new"), (r.RECOMMENDED = "recommended"), (r.BETA = "beta"), (r.ALPHA = "alpha"), r);
+let s = {
     [E.uh.SPAM_LINK]: {
         getDefaultRuleName: () => A.intl.string(A.t.ffR2cM),
         type: E.uh.SPAM_LINK,
@@ -82,41 +82,41 @@ let o = {
         defaultActionTypes: new Set(),
     },
 };
-var S = (((u = {}).MEMBERS = "members"), (u.CONTENT = "content"), u);
+var S = (((i = {}).MEMBERS = "members"), (i.CONTENT = "content"), i);
 let c = {
-    members: [o[E.uh.USER_PROFILE]],
+    members: [s[E.uh.USER_PROFILE]],
     content: [
-        o[E.uh.SERVER_POLICY],
-        o[E.uh.MENTION_SPAM],
-        o[E.uh.ML_SPAM],
-        o[E.uh.DEFAULT_KEYWORD_LIST],
-        o[E.uh.KEYWORD],
-        o[E.uh.APPLICATION],
+        s[E.uh.SERVER_POLICY],
+        s[E.uh.MENTION_SPAM],
+        s[E.uh.ML_SPAM],
+        s[E.uh.DEFAULT_KEYWORD_LIST],
+        s[E.uh.KEYWORD],
+        s[E.uh.APPLICATION],
     ],
 };
 function h(e, t) {
-    return o[e].flags.has(t);
+    return s[e].flags.has(t);
 }
 function f(e) {
-    return Array.from(o[e].availableActionTypes);
+    return Array.from(s[e].availableActionTypes);
 }
 function _(e, t) {
-    let { id: n, eventType: r, triggerType: u, actions: i } = e,
-        a = o[u];
-    if (t.filter((e) => n !== e.id && e.triggerType === u).length > a.perGuildMaxCount)
-        throw Error(`You have exceeded the maximum number of rules of type ${u}`);
-    if (i.some((e) => !a.availableActionTypes.has(e.type)))
+    let { id: n, eventType: r, triggerType: i, actions: u } = e,
+        a = s[i];
+    if (t.filter((e) => n !== e.id && e.triggerType === i).length > a.perGuildMaxCount)
+        throw Error(`You have exceeded the maximum number of rules of type ${i}`);
+    if (u.some((e) => !a.availableActionTypes.has(e.type)))
         throw Error("You have provided an action that is not available for this trigger type");
     if (r !== a.eventType) throw Error("You have provided an event type that is not available for this trigger type");
 }
 function p(e) {
     let t = (0, l.XO)(e),
         n = (0, a.ZQ)(e);
-    return i.useMemo(
+    return u.useMemo(
         () =>
             Object.keys(c).reduce(
                 (e, r) => {
-                    let u = c[r]
+                    let i = c[r]
                         .filter(
                             (e) =>
                                 e.type !== E.uh.SERVER_POLICY &&
@@ -125,7 +125,7 @@ function p(e) {
                                 e.perGuildMaxCount > 0,
                         )
                         .map((e) => e.type);
-                    return ((e[r] = u), e);
+                    return ((e[r] = i), e);
                 },
                 { members: [], content: [] },
             ),

@@ -5,8 +5,8 @@ var i = n(477900),
     a = n.n(s),
     r = n(877413),
     o = n.n(r),
-    c = n(17928),
-    d = n(231483),
+    d = n(17928),
+    c = n(231483),
     u = n(834730),
     m = n(148494),
     h = n(228366),
@@ -31,7 +31,7 @@ let T = l.memo(function (e) {
                     children: [
                         (0, i.jsx)("div", {
                             className: v.Oz,
-                            children: (0, i.jsx)(d.ShieldIcon, { size: "xs", color: "currentColor", className: v.F_ }),
+                            children: (0, i.jsx)(c.ShieldIcon, { size: "xs", color: "currentColor", className: v.F_ }),
                         }),
                         (0, i.jsx)("div", {
                             className: v.jC,
@@ -63,10 +63,10 @@ let T = l.memo(function (e) {
         });
     }),
     S = l.memo(function (e) {
-        let { className: t, compact: n, message: s, children: r, content: d, onUpdate: u, hideDismiss: p = !1 } = e,
+        let { className: t, compact: n, message: s, children: r, content: c, onUpdate: u, hideDismiss: p = !1 } = e,
             A = s.editedTimestamp?.toString(),
             x = l.useRef(!1),
-            C = (0, c.bG)([g.A], () => g.A.getMessage(s.id), [s.id]),
+            C = (0, d.bG)([g.A], () => g.A.getMessage(s.id), [s.id]),
             S = l.useCallback(() => {
                 if (C?.isBlockedEdit) {
                     var e;
@@ -76,7 +76,7 @@ let T = l.memo(function (e) {
         return (
             l.useLayoutEffect(() => {
                 x.current ? null != u && u() : (x.current = !0);
-            }, [u, s.content, d, A, r]),
+            }, [u, s.content, c, A, r]),
             (0, i.jsxs)("div", {
                 id: (0, f.CJ)(s),
                 className: a()(t, j.PT, {
@@ -86,7 +86,7 @@ let T = l.memo(function (e) {
                     [v.bv]: !C?.isBlockedEdit,
                 }),
                 children: [
-                    r ?? (0, E._A)(s, d),
+                    r ?? (0, E._A)(s, c),
                     C?.isBlockedEdit &&
                         null != s.timestamp &&
                         (0, i.jsxs)(i.Fragment, {

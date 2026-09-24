@@ -1,4 +1,4 @@
-l.d(t, { A: () => S });
+l.d(t, { A: () => E });
 var n = l(477900),
     a = l(582128),
     r = l(17928),
@@ -22,14 +22,14 @@ var n = l(477900),
     N = l(50617),
     w = l(375708),
     A = l(472781);
-let E = { values: {}, secrets: {} };
-function S(e) {
+let S = { values: {}, secrets: {} };
+function E(e) {
     let { projectId: t, scopeKeys: l, note: m, notifyAgent: f = !1, isPreview: h = !1, children: x } = e,
         g = (0, r.bG)([y.Ay], () => y.Ay.getSettings(t)),
-        [p, b] = a.useState(E),
-        [k, S] = a.useState({}),
-        [I, M] = a.useState(!1),
-        [T, R] = a.useState(!1),
+        [p, b] = a.useState(S),
+        [k, E] = a.useState({}),
+        [I, T] = a.useState(!1),
+        [M, R] = a.useState(!1),
         P = a.useCallback((e, t) => {
             (R(!1), b((l) => ({ ...l, values: { ...l.values, [e]: t } })));
         }, []),
@@ -66,7 +66,7 @@ function S(e) {
         B = null != G.values || null != G.secrets,
         V = a.useCallback(async () => {
             if (!B || I) return !0;
-            (M(!0), R(!1));
+            (T(!0), R(!1));
             try {
                 let { rebuildRequired: e } = await (0, y.nU)(t, G);
                 return (
@@ -75,14 +75,14 @@ function S(e) {
                         : e
                           ? (0, y.ss)(t)
                           : (0, v.Eo)(t),
-                    b(E),
-                    S({}),
+                    b(S),
+                    E({}),
                     !0
                 );
             } catch {
                 return (R(!0), !1);
             } finally {
-                M(!1);
+                T(!1);
             }
         }, [B, f, t, I, G]);
     function W(e) {
@@ -192,7 +192,7 @@ function S(e) {
                               text: w.intl.string(N.default.j6itec),
                               "aria-label": w.intl.formatToPlainString(N.default.cTofe2, { label: t }),
                               disabled: I,
-                              onClick: () => S((t) => ({ ...t, [e.name]: !0 })),
+                              onClick: () => E((t) => ({ ...t, [e.name]: !0 })),
                           }),
                       ],
                   },
@@ -218,7 +218,7 @@ function S(e) {
                   e.name,
               );
     }
-    let Q = T
+    let Q = M
             ? (0, n.jsx)(s.E, {
                   variant: "text-xs/normal",
                   color: "text-feedback-critical",

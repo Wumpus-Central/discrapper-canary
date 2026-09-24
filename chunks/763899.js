@@ -5,17 +5,17 @@ var i = n(477900),
     a = n(688810),
     r = n(627363),
     o = n(401374),
-    c = n(395671),
-    d = n(666176),
+    d = n(395671),
+    c = n(666176),
     u = n(272984);
 let m = function (e) {
     let { channel: t, message: n, hideParty: m, hideInviteEmbedBanner: h } = e,
         { analyticsLocations: g } = (0, a.Ay)(s.A.INVITE_EMBED),
         p =
             null != n.application
-                ? c.Ay.createFromServer(n.application)
+                ? d.Ay.createFromServer(n.application)
                 : null != n.activity && null != n.activity.party_id && (0, u.pH)(n.activity.party_id)
-                  ? d.HT
+                  ? c.HT
                   : void 0,
         { data: A } = (0, r.YY)(n.application?.id),
         x = A ?? p;

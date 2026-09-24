@@ -341,8 +341,8 @@ function G(e, t, n) {
     );
 }
 var V = n(948230),
-    x = n(805332),
-    H = n(796036);
+    H = n(805332),
+    x = n(796036);
 function F(e) {
     let t = (0, y.J8)(e);
     if (null == t) return null;
@@ -360,7 +360,7 @@ async function U(e, t) {
             code: "unavailable",
             message: "no preview frame is on screen for this project",
         };
-    if (null == x.A.getBuilderPreviewApplicationId() && !(0, H.h)(e))
+    if (null == H.A.getBuilderPreviewApplicationId() && !(0, x.h)(e))
         return {
             ok: !1,
             mode: t,

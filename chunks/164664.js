@@ -1,4 +1,4 @@
-n.d(t, { A: () => d });
+n.d(t, { A: () => c });
 var i,
     l = n(477900);
 n(582128);
@@ -26,10 +26,10 @@ var s = n(39623),
         i),
     r = n(375708),
     o = n(652215),
-    c = n(453763);
-function d(e) {
+    d = n(453763);
+function c(e) {
     let t,
-        { message: n, onDeleteMessage: i, children: d } = e,
+        { message: n, onDeleteMessage: i, children: c } = e,
         u = n.interactionMetadata?.ephemerality_reason;
     function m() {
         return i?.(n, !0);
@@ -78,15 +78,15 @@ function d(e) {
                     return r.intl.string(r.t["v/OAcs"]);
             }
         })(u);
-        t = (0, l.jsx)("div", { className: c.rd, children: r.intl.format(r.t.wx1tLQ, { handleDelete: m, reason: e }) });
+        t = (0, l.jsx)("div", { className: d.rd, children: r.intl.format(r.t.wx1tLQ, { handleDelete: m, reason: e }) });
     } else
         t =
             n.type === o.lAJ.STAGE_RAISE_HAND
                 ? r.intl.format(r.t["qDAX++"], { handleDelete: m })
                 : r.intl.format(r.t.uX3ecL, { count: 1, countMessages: 1, handleDelete: m });
     return (0, l.jsxs)("div", {
-        className: c.XO,
+        className: d.XO,
         onClick: (e) => e.stopPropagation(),
-        children: [(0, l.jsx)(s.EyeIcon, { size: "xs", color: "currentColor", className: c.Kk }), t, d],
+        children: [(0, l.jsx)(s.EyeIcon, { size: "xs", color: "currentColor", className: d.Kk }), t, c],
     });
 }

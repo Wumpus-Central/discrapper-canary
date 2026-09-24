@@ -5,8 +5,8 @@ var i = n(477900),
     a = n.n(s),
     r = n(665260),
     o = n(189213),
-    c = n(314116),
-    d = n(193249),
+    d = n(314116),
+    c = n(193249),
     u = n(150934),
     m = n(192308),
     h = n(687709),
@@ -53,13 +53,13 @@ class y extends l.PureComponent {
         let e,
             t,
             { report: n, resolveFlag: l } = this.state,
-            { channel: s, message: a, showContextMenuHint: c, moderatorReportData: m, ...h } = this.props,
+            { channel: s, message: a, showContextMenuHint: d, moderatorReportData: m, ...h } = this.props,
             g = s.type === N.rbe.GUILD_ANNOUNCEMENT && (0, r.Lt)(a.flags, N.pr7.CROSSPOSTED);
-        (c && (e = (0, i.jsx)(A.A, { className: S.Vc, children: j.intl.format(j.t.IxY7E6, {}) })),
+        (d && (e = (0, i.jsx)(A.A, { className: S.Vc, children: j.intl.format(j.t.IxY7E6, {}) })),
             (0, _.AR)(a) &&
                 (t = (0, i.jsx)("div", {
                     className: S.Vc,
-                    children: (0, i.jsx)(d.d, {
+                    children: (0, i.jsx)(c.d, {
                         label: j.intl.string(j.t.x0jzo9),
                         checked: n,
                         onChange: this.handleToggleReport,
@@ -121,7 +121,7 @@ let b = {
         ((n = e.isPrivate()
             ? j.intl.string(j.t.hMRngA)
             : j.intl.formatToPlainString(j.t["3IRluI"], { channelName: l })),
-            (0, c.A)({
+            (0, d.A)({
                 title: j.intl.string(j.t.bKMaZX),
                 subtitle: n,
                 confirmText: j.intl.string(j.t.rOQ5BX),
@@ -137,7 +137,7 @@ let b = {
             }));
     },
     confirmUnpin: function (e, t) {
-        (0, c.A)({
+        (0, d.A)({
             title: j.intl.string(j.t.CFF2vL),
             subtitle: j.intl.string(j.t.NjEPp7),
             confirmText: j.intl.string(j.t.lAU5jB),
@@ -165,7 +165,7 @@ let b = {
         );
     },
     confirmEdit: function (e, t, n) {
-        (0, c.A)({
+        (0, d.A)({
             title: j.intl.string(j.t.aIz1oV),
             subtitle: j.intl.string(j.t.grBcM8),
             confirmText: j.intl.string(j.t["cY+Oob"]),

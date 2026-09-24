@@ -9,13 +9,13 @@
     SN: () => G,
     Ub: () => X,
     Yj: () => j,
-    e2: () => J,
+    e2: () => W,
     hk: () => M,
     lG: () => Z,
     px: () => F,
     qG: () => q,
     sq: () => Q,
-    uM: () => W,
+    uM: () => J,
 }),
     n(321073),
     n(938796),
@@ -38,8 +38,8 @@ var o = n(567243),
     f = n(232835),
     I = n(290863),
     E = n(287809),
-    C = n(977997),
-    v = n(927813),
+    v = n(977997),
+    C = n(927813),
     y = n(562153),
     O = n(257120),
     S = n(998218),
@@ -56,7 +56,7 @@ let b = S.A.toURLSafe(window.GLOBAL_ENV.API_ENDPOINT)?.host ?? "localhost",
         return /^\d+$/.test(n) ? e : t.slice(-2).join(".");
     })(),
     R = RegExp(`^${O.A.escape("https://")}(?:[a-z]+\\.)?(${O.A.escape(L)}|discordapp.com|discord.com)$`),
-    D = +v.A.Millis.MINUTE,
+    D = +C.A.Millis.MINUTE,
     P = {};
 function $(e) {
     return (
@@ -88,7 +88,7 @@ function G(e, t) {
                     (!e.isNSFW() || E.default.getCurrentUser()?.nsfwAllowed === !0) && t
                         ? f.A.getMessages(e.id).toArray().map(j)
                         : [],
-                i = Object.values(C.A.getVoiceStatesForChannel(e.id)).map((t) => q(o, e.id, t));
+                i = Object.values(v.A.getVoiceStatesForChannel(e.id)).map((t) => q(o, e.id, t));
             return {
                 id: e.id,
                 name: e.name,
@@ -194,7 +194,7 @@ function H(e) {
         },
     );
 }
-async function W(e, t, n) {
+async function J(e, t, n) {
     let o = c.A.getApplication(t);
     if ("string" == typeof n)
         if (e.transport === k.z4.POST_MESSAGE) {
@@ -209,7 +209,7 @@ async function W(e, t, n) {
     let { id: i, name: r, icon: s, coverImage: l, flags: u, parentId: d } = o;
     e.application = { id: i, parentId: d, name: r, icon: s, coverImage: l, flags: u };
 }
-async function J(e, t, n) {
+async function W(e, t, n) {
     let o = P[e];
     null == o && ((o = new s.A(t ? 2 : 60, D)), (P[e] = o));
     try {

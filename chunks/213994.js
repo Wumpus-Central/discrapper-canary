@@ -6,8 +6,8 @@ var l = n(503698),
     a = n(140735),
     r = n(707554),
     o = n(915089),
-    c = n(946356),
-    d = n(996988),
+    d = n(946356),
+    c = n(996988),
     u = n(768590);
 function m(e) {
     let {
@@ -24,11 +24,11 @@ function m(e) {
             children: E,
         } = e,
         I = (0, o.GV)();
-    return (0, i.jsxs)(c.A, {
+    return (0, i.jsxs)(d.A, {
         ref: p,
         user: t,
         displayProfile: n,
-        themeType: d.d.EMBED,
+        themeType: c.d.EMBED,
         className: u[l],
         style: g,
         children: [

@@ -5,12 +5,12 @@ var i = n(477900),
     a = n.n(s),
     r = n(707554),
     o = n(834730),
-    c = n(435558),
-    d = n.n(c),
+    d = n(435558),
+    c = n.n(d),
     u = n(223637),
     m = n(999915),
     h = n(46054);
-let g = d().omit(m.Ay.RULES, ["codeBlock", "heading"]),
+let g = c().omit(m.Ay.RULES, ["codeBlock", "heading"]),
     p = {
         ...u.A,
         parse: function (e, t, n) {
@@ -24,18 +24,18 @@ let g = d().omit(m.Ay.RULES, ["codeBlock", "heading"]),
 var f = n(199014),
     E = n(165648);
 function I(e) {
-    let { color: t, className: n, variant: s, text: c, lineClamp: d } = e,
+    let { color: t, className: n, variant: s, text: d, lineClamp: c } = e,
         u = (0, r.$)(),
         m = l.useMemo(
             () =>
-                null == c ? null : x(c, !0, { allowHeading: null == d, allowList: null == d, initialHeaderLevel: u }),
-            [c, d, u],
+                null == d ? null : x(d, !0, { allowHeading: null == c, allowList: null == c, initialHeaderLevel: u }),
+            [d, c, u],
         );
     return (0, i.jsx)(o.E, {
-        className: a()(n, E.PT, { [f.E]: null != d && d > 1, [f.D]: 1 === d }),
+        className: a()(n, E.PT, { [f.E]: null != c && c > 1, [f.D]: 1 === c }),
         color: t,
         variant: s,
-        lineClamp: d,
+        lineClamp: c,
         children: m,
     });
 }

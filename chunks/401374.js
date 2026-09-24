@@ -5,8 +5,8 @@ var i,
     a = n(822963),
     r = n(381438),
     o = n(17928),
-    c = n(287809),
-    d =
+    d = n(287809),
+    c =
         (((i = {}).DISPLAY = "display"),
         (i.BLOCK_UNDERAGE = "block_underage"),
         (i.BLOCK_CHANNEL_RESTRICTION = "block_channel_restriction"),
@@ -36,9 +36,9 @@ function p(e) {
                 (function (e, t) {
                     switch (e) {
                         case "game_invite":
-                            return t === d.BLOCK_UNDERAGE ? h.intl.string(h.t.GhU4yl) : h.intl.string(h.t.B99UMJ);
+                            return t === c.BLOCK_UNDERAGE ? h.intl.string(h.t.GhU4yl) : h.intl.string(h.t.B99UMJ);
                         case "app_embed":
-                            return t === d.BLOCK_UNDERAGE ? h.intl.string(h.t.LPOzxB) : h.intl.string(h.t.NIZyKq);
+                            return t === c.BLOCK_UNDERAGE ? h.intl.string(h.t.LPOzxB) : h.intl.string(h.t.NIZyKq);
                         default:
                             return "";
                     }
@@ -64,7 +64,7 @@ function x(e) {
     let t,
         { contentClassification: n, channel: i, variant: s, children: u } = e,
         m =
-            ((t = (0, o.bG)([c.default], () => c.default.getCurrentUser()?.nsfwAllowed)),
+            ((t = (0, o.bG)([d.default], () => d.default.getCurrentUser()?.nsfwAllowed)),
             null == n || (0, a.U1)({ type: a.fS.MINIMAL, data: n }) !== r.Y.ADULT
                 ? "display"
                 : !0 !== t
@@ -73,10 +73,10 @@ function x(e) {
                     ? "display"
                     : "block_channel_restriction");
     switch (m) {
-        case d.DISPLAY:
+        case c.DISPLAY:
             return u;
-        case d.BLOCK_UNDERAGE:
-        case d.BLOCK_CHANNEL_RESTRICTION:
+        case c.BLOCK_UNDERAGE:
+        case c.BLOCK_CHANNEL_RESTRICTION:
             return (0, l.jsx)(p, { visibility: m, variant: s });
         default:
             return null;

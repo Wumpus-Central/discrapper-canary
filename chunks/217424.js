@@ -5,8 +5,8 @@ var i = n(477900),
     a = n.n(s),
     r = n(284009),
     o = n.n(r),
-    c = n(536637),
-    d = n.n(c),
+    d = n(536637),
+    c = n.n(d),
     u = n(17928),
     m = n(922016),
     h = n(939249),
@@ -53,10 +53,10 @@ let X = l.memo(function (e) {
     let n,
         s,
         a,
-        { channel: r, messageId: o, interactionData: c } = e,
-        { analyticsLocations: d } = (0, I.Ay)(),
+        { channel: r, messageId: o, interactionData: d } = e,
+        { analyticsLocations: c } = (0, I.Ay)(),
         { onCopy: m, copyRef: h } =
-            ((t = c?.application_command?.id),
+            ((t = d?.application_command?.id),
             (n = l.useRef(null)),
             (s = l.useCallback((e, t) => {
                 (e.preventDefault(),
@@ -68,15 +68,15 @@ let X = l.memo(function (e) {
         g = (0, u.bG)([F.A], () => F.A.getGuild(r.guild_id), [r.guild_id]);
     if (
         (l.useEffect(() => {
-            (null == c || (c.type === A.kc.CHAT && void 0 === c.application_command)) && U.S7(r.id, o);
-        }, [r.id, o, c]),
-        null == c)
+            (null == d || (d.type === A.kc.CHAT && void 0 === d.application_command)) && U.S7(r.id, o);
+        }, [r.id, o, d]),
+        null == d)
     )
         a = (0, i.jsx)(O.y, { type: O.y.Type.SPINNING_CIRCLE, className: J.u1 });
     else {
         let e = [],
-            t = Object.fromEntries((c.application_command?.options ?? []).map((e) => [e.name, e]));
-        for (let n of c.options ?? [])
+            t = Object.fromEntries((d.application_command?.options ?? []).map((e) => [e.name, e]));
+        for (let n of d.options ?? [])
             e = e.concat(
                 (function e(t) {
                     let n,
@@ -85,11 +85,11 @@ let X = l.memo(function (e) {
                             channel: a,
                             guild: r,
                             messageId: o,
-                            parentOptionKey: c,
-                            commandOptionSpec: d,
+                            parentOptionKey: d,
+                            commandOptionSpec: c,
                             sourceAnalyticsLocations: u,
                         } = t,
-                        m = null != c ? c + " " + s.name : s.name;
+                        m = null != d ? d + " " + s.name : s.name;
                     if (s.type === A.n4.SUB_COMMAND || s.type === A.n4.SUB_COMMAND_GROUP) {
                         let t = [
                                 (0, i.jsxs)(
@@ -97,13 +97,13 @@ let X = l.memo(function (e) {
                                     {
                                         children: [
                                             " ",
-                                            (0, i.jsx)(L.E, { ...K, children: d?.name_localized ?? s.name }),
+                                            (0, i.jsx)(L.E, { ...K, children: c?.name_localized ?? s.name }),
                                         ],
                                     },
                                     m,
                                 ),
                             ],
-                            n = Object.fromEntries((d?.options ?? [])?.map((e) => [e.name, e]));
+                            n = Object.fromEntries((c?.options ?? [])?.map((e) => [e.name, e]));
                         for (let i of s.options ?? [])
                             t = t.concat(
                                 e({
@@ -180,7 +180,7 @@ let X = l.memo(function (e) {
                                 n = W(z.intl.string(z.t.nONJVc));
                                 break;
                             default: {
-                                let e = d?.choices?.find((e) => e.value === s.value);
+                                let e = c?.choices?.find((e) => e.value === s.value);
                                 null != e && (h = e.name_localized ?? e.name);
                             }
                         }
@@ -191,7 +191,7 @@ let X = l.memo(function (e) {
                                 l.Fragment,
                                 {
                                     children: [
-                                        (0, i.jsxs)(L.E, { ...K, children: [" ", d?.name_localized ?? s.name, ": "] }),
+                                        (0, i.jsxs)(L.E, { ...K, children: [" ", c?.name_localized ?? s.name, ": "] }),
                                         n,
                                     ],
                                 },
@@ -206,18 +206,18 @@ let X = l.memo(function (e) {
                     messageId: o,
                     parentOptionKey: null,
                     commandOptionSpec: t[n.name],
-                    sourceAnalyticsLocations: d,
+                    sourceAnalyticsLocations: c,
                 }),
             );
         a = (0, i.jsxs)(i.Fragment, {
-            children: [(0, i.jsxs)(L.E, { ...K, children: ["/", c.application_command?.name_localized ?? c.name] }), e],
+            children: [(0, i.jsxs)(L.E, { ...K, children: ["/", d.application_command?.name_localized ?? d.name] }), e],
         });
     }
     return (0, i.jsxs)("div", {
         className: J.kL,
         onCopy: function (e) {
             let t = window?.getSelection()?.toString() ?? "";
-            t.startsWith("/") && t.endsWith("\n") && m(e, c);
+            t.startsWith("/") && t.endsWith("\n") && m(e, d);
         },
         children: [(0, i.jsx)("div", { className: J.YL, ref: h, children: a }), (0, i.jsx)("div", { className: J.xQ })],
     });
@@ -244,8 +244,8 @@ function $(e) {
 function ee(e, t, n, l, s, r) {
     let {
         message: o,
-        compact: c,
-        channel: d,
+        compact: d,
+        channel: c,
         isInteractionUserBlocked: u,
         isInteractionUserIgnored: h,
         showAvatarPopout: g,
@@ -256,18 +256,18 @@ function ee(e, t, n, l, s, r) {
         onTargetUserContextMenu: E,
         onPopoutRequestClose: I,
     } = e;
-    if (c && 1 === n) return null;
-    if ((c && null == o.activityInstance) || u || h)
+    if (d && 1 === n) return null;
+    if ((d && null == o.activityInstance) || u || h)
         return (0, i.jsx)("div", { className: Q.Cz, children: (0, i.jsx)($, { className: Q.Jx }) });
     let C =
         y.Ay.getGuildMemberAvatarURL({
             avatar: l.guildMemberAvatar ?? void 0,
             userId: t.id,
-            guildId: d?.guild_id ?? "",
+            guildId: c?.guild_id ?? "",
         }) ?? void 0;
     function _() {
         return (function (e) {
-            let { user: t, guildId: n, guildAvatar: l, onClick: s, onContextMenu: r, onMouseDown: o, ref: c } = e;
+            let { user: t, guildId: n, guildAvatar: l, onClick: s, onContextMenu: r, onMouseDown: o, ref: d } = e;
             return (0, i.jsx)("img", {
                 alt: "",
                 src: l ?? t.getAvatarURL(n, 16),
@@ -275,11 +275,11 @@ function ee(e, t, n, l, s, r) {
                 onContextMenu: r,
                 onMouseDown: o,
                 className: a()({ [Q.WU]: !0, [Q.vk]: null != s }),
-                ref: c,
+                ref: d,
             });
         })({
             user: t,
-            guildId: d.guild_id,
+            guildId: c.guild_id,
             guildAvatar: C,
             onClick: 1 === n ? f : A,
             onContextMenu: 1 === n ? E : x,
@@ -303,8 +303,8 @@ function et(e, t, n, l, s) {
         message: a,
         channel: r,
         showUsernamePopout: o,
-        showTargetUsernamePopout: c,
-        onClickUsername: d,
+        showTargetUsernamePopout: d,
+        onClickUsername: c,
         onUserContextMenu: u,
         onClickTargetUsername: m,
         onTargetUserContextMenu: h,
@@ -317,9 +317,9 @@ function et(e, t, n, l, s) {
         message: a,
         channel: r,
         userOverride: t,
-        showPopout: 1 === n ? c : o,
+        showPopout: 1 === n ? d : o,
         renderPopout: s,
-        onClick: 1 === n ? m : d,
+        onClick: 1 === n ? m : c,
         onContextMenu: 1 === n ? h : u,
         onPopoutRequestClose: g,
     });
@@ -330,7 +330,7 @@ function en() {
 function ei(e) {
     let t,
         { message: n, channel: s } = e,
-        { analyticsLocations: r, newestAnalyticsLocation: c } = (0, I.Ay)(E.A.EXECUTED_COMMAND),
+        { analyticsLocations: r, newestAnalyticsLocation: d } = (0, I.Ay)(E.A.EXECUTED_COMMAND),
         p = (0, u.bG)([S.default], () => S.default.getCurrentUser()),
         y = l.useRef(null),
         k = l.useRef(null),
@@ -363,7 +363,7 @@ function ei(e) {
         U = P?.type === A.G4.APPLICATION_COMMAND && null != n.messageReference && null != e.renderTargetMessage,
         G = (0, M.d8)(n.interaction?.user, s),
         w = (0, M.d8)(D, s),
-        H = l.useMemo(() => (e.compact ? (0, Z.A)((0, R.i$)(d()(), "LT")) : null), [e.compact]),
+        H = l.useMemo(() => (e.compact ? (0, Z.A)((0, R.i$)(c()(), "LT")) : null), [e.compact]),
         B = (0, x.Gp)(s.id),
         F = n.interaction;
     if (null == F || null == G) return null;
@@ -379,7 +379,7 @@ function ei(e) {
             commandHook: function () {
                 let t = (function (e, t, n) {
                     let { showDataPopout: l, message: s, onClickCommand: r, onPopoutRequestClose: o } = e,
-                        c = s.interaction.displayName;
+                        d = s.interaction.displayName;
                     return (0, i.jsx)(m.Y, {
                         targetElementRef: n,
                         renderPopout: t,
@@ -407,13 +407,13 @@ function ei(e) {
                                                 width: 10,
                                                 className: Q.am,
                                             }),
-                                            c,
+                                            d,
                                         ],
                                     }),
                                 });
-                            if (!(0, N.V)(s)) return (0, i.jsx)("div", { className: Q.p6, ref: n, children: c });
+                            if (!(0, N.V)(s)) return (0, i.jsx)("div", { className: Q.p6, ref: n, children: d });
                             {
-                                let e = (0, C.kF)(c);
+                                let e = (0, C.kF)(d);
                                 return (0, i.jsx)(h.D, {
                                     ...l,
                                     tag: "span",
@@ -464,7 +464,7 @@ function ei(e) {
             ((0, _.A)({
                 context: null != s ? { type: "channel", channel: s } : { type: "contextless" },
                 openInPopout: !1,
-                analyticsLocation: c,
+                analyticsLocation: d,
             }),
                 (0, f.LV)({ guildId: s.guild_id }));
         }

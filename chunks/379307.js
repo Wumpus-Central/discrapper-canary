@@ -45,12 +45,12 @@ function k(e) {
 function N(e) {
     let { settings: t, tiers: l, choices: r, disabled: d, onChange: c, placement: m, open: f, entered: N } = e,
         [w, A] = a.useState(!1),
-        E = k(w),
-        S = h.ks.indexOf(t.tier),
+        S = k(w),
+        E = h.ks.indexOf(t.tier),
         C = w ? s.t : u._,
         I = h.ks.map(x.eQ),
-        M = (0, x.is)(t.tier),
-        { text: T, phase: R } = (0, v.Q)(M);
+        T = (0, x.is)(t.tier),
+        { text: M, phase: R } = (0, v.Q)(T);
     return (0, n.jsx)("div", {
         className: y.qd,
         "data-placement": m ?? void 0,
@@ -59,9 +59,9 @@ function N(e) {
             role: "dialog",
             "aria-label": j.intl.string(b.default["2NWMqY"]),
             children: [
-                E.mounted
+                S.mounted
                     ? (0, n.jsx)("div", {
-                          className: i()(y.Nr, y.uO, { [y.Zr]: w && E.entered, [y.GF]: !w }),
+                          className: i()(y.Nr, y.uO, { [y.Zr]: w && S.entered, [y.GF]: !w }),
                           children: (0, n.jsx)(p.u1, { settings: t, tiers: l, choices: r, disabled: d, onChange: c }),
                       })
                     : null,
@@ -98,7 +98,7 @@ function N(e) {
                                     variant: "text-sm/normal",
                                     color: "text-muted",
                                     className: i()(y.Z, { [y.xQ]: "exit" === R, [y.lm]: "enter" === R }),
-                                    children: T,
+                                    children: M,
                                 }),
                             ],
                         }),
@@ -123,7 +123,7 @@ function N(e) {
                                     ],
                                 }),
                                 (0, n.jsx)(g.A, {
-                                    activeIndex: S,
+                                    activeIndex: E,
                                     stops: I,
                                     ariaLabel: j.intl.string(b.default.GDs9Vq),
                                     disabled: d,
@@ -145,7 +145,7 @@ function w(e) {
         h = a.useRef(null),
         [x, g] = (0, p.kn)(t, s),
         [v, w] = a.useState(!1),
-        { mounted: A, entered: E } = k(v);
+        { mounted: A, entered: S } = k(v);
     return (0, n.jsx)(d.Y, {
         targetElementRef: h,
         position: "top",
@@ -163,7 +163,7 @@ function w(e) {
                 onChange: g,
                 placement: t,
                 open: v,
-                entered: E,
+                entered: S,
             });
         },
         children: (e, t) => {

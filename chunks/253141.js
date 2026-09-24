@@ -1,4 +1,4 @@
-n.d(t, { EY: () => c, KW: () => d, a: () => a, ig: () => o, kt: () => r });
+n.d(t, { EY: () => d, KW: () => c, a: () => a, ig: () => o, kt: () => r });
 var i = n(913122);
 n(576705);
 var l = n(652215),
@@ -30,7 +30,7 @@ function o(e) {
         );
     }
 }
-function c(e) {
+function d(e) {
     let {
             guildProductListing: t,
             name: n,
@@ -40,25 +40,25 @@ function c(e) {
             imageName: a,
             isImageChanged: r,
             newRoleParams: o,
-            hasUnsavedAttachmentChanges: c,
+            hasUnsavedAttachmentChanges: d,
         } = e,
-        d = {};
-    (t?.name !== n && "" !== n.trim() && (d.name = n),
-        (t?.description ?? "") !== l && (d.description = l),
-        t?.price_tier !== i && null != i && (d.priceTier = i),
-        null != o && "" !== o.name.trim() ? (d.createNewRole = !0) : null === o && (d.unlinkRole = !0),
+        c = {};
+    (t?.name !== n && "" !== n.trim() && (c.name = n),
+        (t?.description ?? "") !== l && (c.description = l),
+        t?.price_tier !== i && null != i && (c.priceTier = i),
+        null != o && "" !== o.name.trim() ? (c.createNewRole = !0) : null === o && (c.unlinkRole = !0),
         s.startsWith("data:") &&
-            (r || (null == t && (Object.keys(d).length > 0 || c))) &&
-            ((d.image = s), (d.imageName = a)));
-    let u = Object.keys(d).length > 0 || c;
+            (r || (null == t && (Object.keys(c).length > 0 || d))) &&
+            ((c.image = s), (c.imageName = a)));
+    let u = Object.keys(c).length > 0 || d;
     return {
-        changes: d,
+        changes: c,
         hasUnsavedChanges: u,
         canSaveForDraft: u,
         canSaveForPublished: u,
         canPublishOrUnpublish: !(null == t || u),
     };
 }
-function d(e, t) {
+function c(e, t) {
     return `${location.protocol}//${location.host}${l.BVt.GUILD_PRODUCT(e, t)}`;
 }

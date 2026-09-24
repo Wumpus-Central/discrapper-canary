@@ -7,18 +7,18 @@ function a(e) {
 }
 function r(e, t) {
     let [n, r] = i.useState(t),
-        [o, c] = i.useState(a(n)),
-        d = i.useRef(o),
+        [o, d] = i.useState(a(n)),
+        c = i.useRef(o),
         u = i.useRef(null),
         m = i.useCallback((e) => {
             r((t) => {
                 let n = { ...t, ...e },
                     i = a(n);
                 return (
-                    i !== d.current &&
-                        ((d.current = i),
+                    i !== c.current &&
+                        ((c.current = i),
                         null != u.current && (cancelAnimationFrame(u.current), (u.current = null)),
-                        i ? c(!0) : (u.current = requestAnimationFrame(() => c(!1)))),
+                        i ? d(!0) : (u.current = requestAnimationFrame(() => d(!1)))),
                     n
                 );
             });

@@ -5,8 +5,8 @@ var i = n(477900),
     a = n.n(s),
     r = n(868285),
     o = n(939249),
-    c = n(834730),
-    d = n(191226),
+    d = n(834730),
+    c = n(191226),
     u = n(505527),
     m = n(960538),
     h = n(17928),
@@ -112,10 +112,10 @@ var H = n(519222),
     F = n(988626);
 function V(e) {
     let { message: t, channel: n, useChatFontScaling: s, className: r } = e,
-        c = (0, _.jv)("message_reactions"),
-        d = (0, h.bG)([v.A], () => v.A.getSavedMessage(n.id, t.id)),
-        u = null != d && null == d.saveData.dueAt,
-        m = null != d && null != d.saveData.dueAt,
+        d = (0, _.jv)("message_reactions"),
+        c = (0, h.bG)([v.A], () => v.A.getSavedMessage(n.id, t.id)),
+        u = null != c && null == c.saveData.dueAt,
+        m = null != c && null != c.saveData.dueAt,
         x = (0, h.bG)([b], () => b.isNudging(n.id, t.id)),
         E = l.useRef(null),
         { isCoachmarkVisible: I, dismissCoachmark: C } = (function (e) {
@@ -125,27 +125,27 @@ function V(e) {
                 [s, a] = l.useState(!1);
             i && !s ? a(!0) : !e && s && a(!1);
             let [r, o] = l.useState(!1),
-                c = e && !r && (i || s),
-                d = l.useCallback((e) => {
+                d = e && !r && (i || s),
+                c = l.useCallback((e) => {
                     (0, L.Dr)(G, { dismissAction: e });
                 }, []),
                 u = l.useCallback(
                     (e) => {
-                        (o(!0), d(e));
+                        (o(!0), c(e));
                     },
-                    [d],
+                    [c],
                 );
             return (
                 l.useEffect(() => {
-                    n && !t && d(P.i.INDIRECT_ACTION);
-                }, [n, t, d]),
+                    n && !t && c(P.i.INDIRECT_ACTION);
+                }, [n, t, c]),
                 l.useEffect(() => {
-                    c && ((0, O.Wx)(G), d(P.i.AUTO_DISMISS));
-                }, [c, d]),
-                { isCoachmarkVisible: c, dismissCoachmark: u }
+                    d && ((0, O.Wx)(G), c(P.i.AUTO_DISMISS));
+                }, [d, c]),
+                { isCoachmarkVisible: d, dismissCoachmark: u }
             );
         })(x);
-    if ((!(0, h.bG)([b], () => b.hasRecentlyReacted(n.id, t.id)) && !u) || !c || t.author.id === f.default.getId() || m)
+    if ((!(0, h.bG)([b], () => b.hasRecentlyReacted(n.id, t.id)) && !u) || !d || t.author.id === f.default.getId() || m)
         return null;
     let N = s ? F : B,
         j = u ? g.BookmarkIcon : p.c;
@@ -185,8 +185,8 @@ let Q = l.memo(function (e) {
                 emoji: s,
                 className: r,
                 count: o,
-                me: c,
-                me_burst: d,
+                me: d,
+                me_burst: c,
                 burst_count: m,
                 burst_colors: h,
                 readOnly: g,
@@ -196,7 +196,7 @@ let Q = l.memo(function (e) {
                 emojiSize: f,
             } = e,
             E = x === u.v.BURST,
-            I = (0, Z.IN)(c, d, x),
+            I = (0, Z.IN)(d, c, x),
             C = (0, X.g)(E && null != h ? h : []),
             _ = l ? F : B,
             v = E ? m : o,
@@ -220,19 +220,19 @@ let Q = l.memo(function (e) {
     $ = l.memo(function (e) {
         let { showImmediate: t, reactions: n, ...s } = e,
             [a, r] = l.useState(!1),
-            [o, c] = l.useTransition(),
-            d = l.useCallback(
+            [o, d] = l.useTransition(),
+            c = l.useCallback(
                 (e) => {
                     !e ||
                         a ||
                         o ||
-                        c(() => {
+                        d(() => {
                             r(!0);
                         });
                 },
                 [a, o],
             ),
-            m = (0, J.K)(d),
+            m = (0, J.K)(c),
             h = (a && !o) || t ? q.q : Q;
         return (0, i.jsxs)(i.Fragment, {
             children: [
@@ -301,11 +301,11 @@ class et extends l.PureComponent {
                       f > 0 &&
                           (0, i.jsx)(o.D, {
                               onClick: (t) => {
-                                  (t.stopPropagation(), (0, d.$)(e));
+                                  (t.stopPropagation(), (0, c.$)(e));
                               },
                               className: a()(_.reaction, p, _.remainingReactions),
                               "aria-label": D.intl.string(D.t.lfIHs4),
-                              children: (0, i.jsxs)(c.E, {
+                              children: (0, i.jsxs)(d.E, {
                                   className: _.reactionInner,
                                   variant: "text-sm/normal",
                                   children: ["+", f],

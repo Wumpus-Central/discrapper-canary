@@ -1,71 +1,71 @@
-r.d(t, { dX: () => M, Pv: () => P, Mq: () => C });
-var n = r(477900),
-    i = r(582128),
-    l = r(70283),
-    a = r(682618),
-    s = r(263532),
-    o = r(242874),
-    u = r(998370),
+r.d(t, { dX: () => S, Pv: () => T, Mq: () => M });
+var i = r(477900),
+    n = r(582128),
+    s = r(70283),
+    l = r(682618),
+    a = r(263532),
+    u = r(242874),
+    o = r(998370),
     c = r(380619),
     d = r(17928),
     m = r(192308),
-    x = r(982240),
-    p = r(566980),
-    h = r(315693),
-    f = r(287809),
+    h = r(982240),
+    f = r(566980),
+    x = r(315693),
+    p = r(287809),
     g = r(174459),
     A = r(786300),
     j = r(45938),
     E = r(652215),
-    T = r(202541),
-    I = r(375708);
-let v = T.o2.STANDARD_BOX,
-    R,
-    [N, P, _] = (0, A.A)();
-function M(e) {
+    v = r(202541),
+    N = r(375708);
+let R = v.o2.STANDARD_BOX,
+    C,
+    [P, T, I] = (0, A.A)();
+function S(e) {
     let {
             isGift: t = !1,
             giftRecipient: A,
-            giftMessage: T,
-            giftStyle: P,
-            giftingOrigin: _,
-            children: M,
+            giftMessage: v,
+            giftStyle: T,
+            giftingOrigin: I,
+            children: S,
             additionalUserIds: y,
         } = e,
-        C = (0, s.t4)((e) => e.selectedSkuId),
-        [S, b] = i.useState(A),
-        [O, G] = i.useState(),
-        [L, U] = i.useState(!1),
-        D = (0, j.Ik)(S),
-        w = R;
-    D && (w = null != P ? P : v);
-    let [k, B] = i.useState(w),
-        [F, H] = i.useState([]),
-        V = (0, c.JW)(),
-        W = null != V && V.length > 0,
-        [z, Y] = i.useState(
-            t && (0, j.lo)(S) === j.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && null == T ? I.intl.string(I.t.ZkOo1U) : T,
+        M = (0, a.t4)((e) => e.selectedSkuId),
+        [_, b] = n.useState(A),
+        [G, O] = n.useState(),
+        [w, k] = n.useState(!1),
+        L = (0, j.Ik)(_),
+        D = C;
+    L && (D = null != T ? T : R);
+    let [B, U] = n.useState(D),
+        [F, H] = n.useState([]),
+        z = (0, c.JW)(),
+        Z = null != z && z.length > 0,
+        [V, Y] = n.useState(
+            t && (0, j.lo)(_) === j.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && null == v ? N.intl.string(N.t.ZkOo1U) : v,
         ),
-        [Z, q] = i.useState(void 0),
-        [K, J] = i.useState(void 0),
-        { enabled: $ } = u.J.useConfig({ location: "GiftContext" }),
-        { openGiftingBadgePostPurchaseModal: X, canShowGiftingBadgePostPurchase: Q } = (function () {
-            let { enabled: e } = u.J.useConfig({ location: "useOpenGiftingBadgePostPurchaseModal" }),
-                t = (0, d.bG)([x.Ay], () => x.Ay.getBadgeById(l.$.GIFTING)?.tiers),
-                { purchaseState: a, quantity: o } = (0, s.t4)((e) => ({
+        [q, W] = n.useState(void 0),
+        [K, X] = n.useState(void 0),
+        { enabled: $ } = o.J.useConfig({ location: "GiftContext" }),
+        { openGiftingBadgePostPurchaseModal: J, canShowGiftingBadgePostPurchase: Q } = (function () {
+            let { enabled: e } = o.J.useConfig({ location: "useOpenGiftingBadgePostPurchaseModal" }),
+                t = (0, d.bG)([h.Ay], () => h.Ay.getBadgeById(s.$.GIFTING)?.tiers),
+                { purchaseState: l, quantity: u } = (0, a.t4)((e) => ({
                     purchaseState: e.purchaseState,
                     quantity: e.quantity,
                 })),
-                c = i.useRef(null);
+                c = n.useRef(null);
             return (
-                i.useEffect(() => {
+                n.useEffect(() => {
                     e &&
-                        a === p.h.PURCHASING &&
-                        (c.current = x.Ay.getSingleRequirementProgress(l.$.GIFTING)?.current ?? null);
-                }, [e, a]),
+                        l === f.h.PURCHASING &&
+                        (c.current = h.Ay.getSingleRequirementProgress(s.$.GIFTING)?.current ?? null);
+                }, [e, l]),
                 {
-                    openGiftingBadgePostPurchaseModal: i.useCallback(() => {
-                        if (e && null != c.current && null != (null != t ? (0, h.aZ)(t, c.current) : null)) {
+                    openGiftingBadgePostPurchaseModal: n.useCallback(() => {
+                        if (e && null != c.current && null != (null != t ? (0, x.aZ)(t, c.current) : null)) {
                             let e = c.current;
                             (0, m.openModalLazy)(async () => {
                                 let { default: t } = await Promise.all([
@@ -74,81 +74,81 @@ function M(e) {
                                     r.e("707319"),
                                     r.e("83703"),
                                 ]).then(r.bind(r, 855210));
-                                return (r) => (0, n.jsx)(t, { ...r, currentProgress: e, quantity: o });
+                                return (r) => (0, i.jsx)(t, { ...r, currentProgress: e, quantity: u });
                             });
                         }
-                    }, [e, t, o]),
+                    }, [e, t, u]),
                     canShowGiftingBadgePostPurchase:
-                        e && null != c.current && null != t && null != (0, h.aZ)(t, c.current),
+                        e && null != c.current && null != t && null != (0, x.aZ)(t, c.current),
                 }
             );
         })();
-    i.useEffect(() => {
-        t && $ && (0, a.o0)(l.$.GIFTING);
+    n.useEffect(() => {
+        t && $ && (0, l.o0)(s.$.GIFTING);
     }, [t, $]);
-    let ee = (0, j.Vt)(C, t),
-        [et, er] = i.useState(!1),
-        [en, ei] = i.useState(!1),
-        [el, ea] = i.useState(),
-        es = i.useCallback(
+    let ee = (0, j.Vt)(M, t),
+        [et, er] = n.useState(!1),
+        [ei, en] = n.useState(!1),
+        [es, el] = n.useState(),
+        ea = n.useCallback(
             (e) => {
                 let { onSubscriptionConfirmation: t } = e;
                 return (
-                    ei(!0),
-                    (0, o.UN)(S, ee)
+                    en(!0),
+                    (0, u.UN)(_, ee)
                         .then(() => {
-                            (ei(!1), t?.(), er(!0));
+                            (en(!1), t?.(), er(!0));
                         })
                         .catch((e) => {
-                            (ei(!1), ea(e), er(!0));
+                            (en(!1), el(e), er(!0));
                         })
                 );
             },
-            [S, ee, ei, er, ea],
+            [_, ee, en, er, el],
         ),
-        eo = i.useRef(new Set());
+        eu = n.useRef(new Set());
     return (
-        i.useEffect(() => {
-            if (!W) return;
-            let e = F.filter((e) => !eo.current.has(e));
+        n.useEffect(() => {
+            if (!Z) return;
+            let e = F.filter((e) => !eu.current.has(e));
             if (0 === e.length) return;
-            let t = f.default.getCurrentUser();
+            let t = p.default.getCurrentUser();
             for (let r of e)
                 (g.default.track(E.HAw.GIFT_PROMOTION_REWARD_SELECTED, { user_id: t?.id, reward_sku_id: r }),
-                    eo.current.add(r));
-        }, [F, W]),
-        (0, n.jsx)(N.Provider, {
+                    eu.current.add(r));
+        }, [F, Z]),
+        (0, i.jsx)(P.Provider, {
             value: {
                 isGift: t,
                 giftCode: ee,
-                giftMessage: T,
-                giftRecipient: S,
+                giftMessage: v,
+                giftRecipient: _,
                 setGiftRecipient: b,
-                giftRecipientError: O,
-                setGiftRecipientError: G,
-                validatingGiftRecipient: L,
-                setValidatingGiftRecipient: U,
-                soundEffect: Z,
-                setSoundEffect: q,
+                giftRecipientError: G,
+                setGiftRecipientError: O,
+                validatingGiftRecipient: w,
+                setValidatingGiftRecipient: k,
+                soundEffect: q,
+                setSoundEffect: W,
                 emojiConfetti: K,
-                setEmojiConfetti: J,
-                customGiftMessage: z,
+                setEmojiConfetti: X,
+                customGiftMessage: V,
                 setCustomGiftMessage: Y,
-                selectedGiftStyle: k,
-                setSelectedGiftStyle: B,
-                sendGiftMessage: es,
+                selectedGiftStyle: B,
+                setSelectedGiftStyle: U,
+                sendGiftMessage: ea,
                 hasSentMessage: et,
-                isSendingMessage: en,
-                giftMessageError: el,
-                giftingOrigin: _,
-                claimableRewards: V,
+                isSendingMessage: ei,
+                giftMessageError: es,
+                giftingOrigin: I,
+                claimableRewards: z,
                 selectedGiftingPromotionRewards: F,
                 setSelectedGiftingPromotionRewards: H,
                 additionalUserIds: y,
-                openGiftingBadgePostPurchaseModal: X,
+                openGiftingBadgePostPurchaseModal: J,
                 canShowGiftingBadgePostPurchase: Q,
             },
-            children: M,
+            children: S,
         })
     );
 }
@@ -170,7 +170,7 @@ let y = {
     openGiftingBadgePostPurchaseModal: E.tEg,
     canShowGiftingBadgePostPurchase: !1,
 };
-function C(e) {
+function M(e) {
     let { children: t } = e;
-    return (0, n.jsx)(N.Provider, { value: y, children: t });
+    return (0, i.jsx)(P.Provider, { value: y, children: t });
 }

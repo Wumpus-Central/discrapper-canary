@@ -5,8 +5,8 @@ var i = n(284009),
     a = n(71393),
     r = n(250627),
     o = n(871109),
-    c = n(391048),
-    d = n(120700),
+    d = n(391048),
+    c = n(120700),
     u = n(529427),
     m = n(179499),
     h = n(375708);
@@ -31,7 +31,7 @@ function g(e) {
                         (function (e) {
                             let { guildProductListing: t, guildId: n, sourceAnalyticsLocations: i } = e,
                                 l = t.id;
-                            return u.UnifiedCheckoutFlowManagerSingletons[d.C.GUILD_PRODUCT_CHECKOUT]
+                            return u.UnifiedCheckoutFlowManagerSingletons[c.C.GUILD_PRODUCT_CHECKOUT]
                                 .get()
                                 .openCheckoutModal({
                                     checkoutConfiguration: { skuId: l, applicationId: t.application_id },
@@ -40,7 +40,7 @@ function g(e) {
                                     modalAPIOptions: {
                                         modalKey: "guild-product-purchase-modal",
                                         onCloseCallback() {
-                                            (0, c.ET)();
+                                            (0, d.ET)();
                                         },
                                     },
                                 });

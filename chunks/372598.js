@@ -1,13 +1,13 @@
 n.d(t, { XO: () => A, b_: () => E, dL: () => a, zR: () => l });
 var r = n(403362),
-    u = n(53594),
-    i = n(243277);
+    i = n(53594),
+    u = n(243277);
 function a(e) {
     let t = A();
     return Array.from(e.defaultActionTypes).map((e) => t[e]);
 }
 function l(e) {
-    return (0, u.J6)(e.triggerType)
+    return (0, i.J6)(e.triggerType)
         .map((t) =>
             e.actions.find((e) => {
                 let { type: n } = e;
@@ -22,12 +22,12 @@ function E(e, t, n) {
 }
 function A() {
     return {
-        [i.AH.BLOCK_MESSAGE]: { type: i.AH.BLOCK_MESSAGE, metadata: { customMessage: void 0 } },
-        [i.AH.FLAG_TO_CHANNEL]: { type: i.AH.FLAG_TO_CHANNEL, metadata: { channelId: void 0 } },
-        [i.AH.USER_COMMUNICATION_DISABLED]: {
-            type: i.AH.USER_COMMUNICATION_DISABLED,
+        [u.AH.BLOCK_MESSAGE]: { type: u.AH.BLOCK_MESSAGE, metadata: { customMessage: void 0 } },
+        [u.AH.FLAG_TO_CHANNEL]: { type: u.AH.FLAG_TO_CHANNEL, metadata: { channelId: void 0 } },
+        [u.AH.USER_COMMUNICATION_DISABLED]: {
+            type: u.AH.USER_COMMUNICATION_DISABLED,
             metadata: { durationSeconds: 60 },
         },
-        [i.AH.QUARANTINE_USER]: { type: i.AH.QUARANTINE_USER, metadata: {} },
+        [u.AH.QUARANTINE_USER]: { type: u.AH.QUARANTINE_USER, metadata: {} },
     };
 }

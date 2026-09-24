@@ -1,4 +1,4 @@
-n.d(t, { L4: () => c, O0: () => o, sF: () => r });
+n.d(t, { L4: () => d, O0: () => o, sF: () => r });
 var i = n(636537),
     l = n(228366),
     s = n(913122),
@@ -15,7 +15,7 @@ async function o(e) {
         l.h.dispatch({ type: "MEDIA_POST_EMBED_FETCH_FAILURE", threadId: e });
     }
 }
-async function c(e) {
+async function d(e) {
     try {
         return (await i.Bo.post({ url: a.Rsh.UNFURL_EMBED_URLS, body: { urls: e }, rejectWithError: !1 })).body;
     } catch (e) {

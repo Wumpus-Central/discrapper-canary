@@ -6,8 +6,8 @@ var l = n(503698),
     a = n(194261),
     r = n(834730),
     o = n(935286),
-    c = n(939249),
-    d = n(297264),
+    d = n(939249),
+    c = n(297264),
     u = n(346055),
     m = n(696986),
     h = n(890856),
@@ -59,7 +59,7 @@ function C(e) {
         });
     return null == t
         ? (0, i.jsx)("div", { className: E.dO, children: l })
-        : (0, i.jsx)(c.D, {
+        : (0, i.jsx)(d.D, {
               className: s()(E.dO, E.hY),
               onClick: function (e) {
                   (e.stopPropagation(), null != t && t());
@@ -74,7 +74,7 @@ function _(e) {
             description: l,
             formattedPrice: a,
             role: o,
-            ctaComponent: c,
+            ctaComponent: d,
             shouldShowFullDescriptionButton: A = !0,
             onShowFullDescription: _,
             productType: v,
@@ -103,7 +103,7 @@ function _(e) {
                         (0, i.jsxs)("div", {
                             className: E.Ag,
                             children: [
-                                (0, i.jsx)(d.D, {
+                                (0, i.jsx)(c.D, {
                                     variant: "text-md/medium",
                                     color: "text-strong",
                                     className: E.tZ,
@@ -149,7 +149,7 @@ function _(e) {
                             onClick: function (e) {
                                 e.stopPropagation();
                             },
-                            children: c,
+                            children: d,
                         }),
                     ],
                 }),

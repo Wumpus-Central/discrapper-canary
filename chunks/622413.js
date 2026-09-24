@@ -6,11 +6,11 @@ var l = n(503698),
     a = n(707554),
     r = n(274279);
 let o = function (e) {
-    let { renderTitle: t, renderTagline: n, renderActions: l, renderMedia: o, className: c, isHorizontal: d = !1 } = e;
+    let { renderTitle: t, renderTagline: n, renderActions: l, renderMedia: o, className: d, isHorizontal: c = !1 } = e;
     return (0, i.jsxs)("div", {
-        className: s()(r.Vs, { [r.ZQ]: d }, c),
+        className: s()(r.Vs, { [r.ZQ]: c }, d),
         children: [
-            null != o && (0, i.jsx)("div", { className: s()(r.$_, { [r.rO]: d }), children: o?.() }),
+            null != o && (0, i.jsx)("div", { className: s()(r.$_, { [r.rO]: c }), children: o?.() }),
             (0, i.jsxs)("div", {
                 className: r.h_,
                 children: [

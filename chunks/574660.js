@@ -5,8 +5,8 @@ var i = n(582128),
     a = n(482030),
     r = n(837057),
     o = n(310419),
-    c = n(734057),
-    d = n(576705),
+    d = n(734057),
+    c = n(576705),
     u = n(309010),
     m = n(967198),
     h = n(692848),
@@ -20,10 +20,10 @@ function E(e) {
         r = (0, g.Ie)({ customInstallUrl: n, installParams: i, integrationTypesConfig: a }),
         o = (0, l.bG)([m.A], () => m.A.getGuildId() ?? void 0),
         h = (0, l.bG)(
-            [c.A, d.A, u.Ay],
+            [d.A, c.A, u.Ay],
             () => {
-                let e = c.A.getChannel(u.Ay.getChannelId());
-                return null != e && (e.isPrivate() || d.A.can(A.xBc.SEND_MESSAGES, e));
+                let e = d.A.getChannel(u.Ay.getChannelId());
+                return null != e && (e.isPrivate() || c.A.can(A.xBc.SEND_MESSAGES, e));
             },
             [],
         ),
@@ -44,8 +44,8 @@ function I(e, t) {
         canViewApp: n,
         canOpenAppLauncher: l,
         isInstallable: s,
-        customInstallUrl: c,
-        installParams: d,
+        customInstallUrl: d,
+        installParams: c,
         integrationTypesConfig: u,
         selectedGuildId: m,
     } = E(e);
@@ -66,15 +66,15 @@ function I(e, t) {
                         (t?.(),
                             (0, h.o)({
                                 applicationId: e.id,
-                                customInstallUrl: c,
-                                installParams: d,
+                                customInstallUrl: d,
+                                installParams: c,
                                 integrationTypesConfig: u,
                                 guildId: m,
                                 source: "app_message_embed",
                             }));
                     }
                   : void 0,
-        [e.id, l, n, c, d, u, s, t, m],
+        [e.id, l, n, d, c, u, s, t, m],
     );
 }
 function C(e) {

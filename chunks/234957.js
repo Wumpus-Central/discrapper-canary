@@ -5,8 +5,8 @@ var i = n(477900),
     a = n(9842),
     r = n(994500),
     o = n(521981),
-    c = n(763754),
-    d = n(448368),
+    d = n(763754),
+    c = n(448368),
     u = n(652215);
 let m = l.memo(function (e) {
     let { baseMessage: t, channel: n, referencedMessage: u, compact: m = !1 } = e,
@@ -26,9 +26,9 @@ let m = l.memo(function (e) {
             }),
             [h],
         ),
-        x = (0, c.X4)(h),
-        f = (0, c.X4)(t);
-    return (0, i.jsx)(d.A, {
+        x = (0, d.X4)(h),
+        f = (0, d.X4)(t);
+    return (0, i.jsx)(c.A, {
         repliedAuthor: x,
         baseAuthor: f,
         baseMessage: t,

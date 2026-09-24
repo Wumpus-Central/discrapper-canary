@@ -1,68 +1,68 @@
 (n.d(t, { H6: () => f, p3: () => h, qv: () => _, wP: () => p }), n(321073));
 var r = n(582128),
-    u = n(462180),
-    i = n(882035),
+    i = n(462180),
+    u = n(882035),
     a = n(121894),
     l = n(913122),
     E = n(995786),
     A = n(904813),
-    s = n(243277),
-    o = n(652215);
+    o = n(243277),
+    s = n(652215);
 let S = {},
-    c = (0, i.h)((e, t) => ({
+    c = (0, u.h)((e, t) => ({
         rules: {},
         fetching: !1,
         error: null,
         updateRule: (n) => {
-            let { guildId: r, id: u, triggerType: i } = n,
+            let { guildId: r, id: i, triggerType: u } = n,
                 { rules: l } = t(),
                 E = l[r] ?? {},
-                s = E[i] ?? [],
-                o = s.some((e) => e.id === u),
-                S = s.filter((e) => !(0, A.R)(e.id) || e.triggerType !== i),
-                c = o ? S.map((e) => (e.id === u ? n : e)) : [...S, n];
+                o = E[u] ?? [],
+                s = o.some((e) => e.id === i),
+                S = o.filter((e) => !(0, A.R)(e.id) || e.triggerType !== u),
+                c = s ? S.map((e) => (e.id === i ? n : e)) : [...S, n];
             (0, a.r)(() => {
-                e({ rules: { ...l, [r]: { ...E, [i]: c } }, error: null });
+                e({ rules: { ...l, [r]: { ...E, [u]: c } }, error: null });
             });
         },
         removeRule: (n, r) => {
-            let { rules: u } = t(),
-                i = u[r],
-                l = Object.keys(i).reduce((e, t) => {
+            let { rules: i } = t(),
+                u = i[r],
+                l = Object.keys(u).reduce((e, t) => {
                     let r = Number(t),
-                        u = i[r] ?? [];
-                    return ((e[r] = u.filter((e) => e.id !== n)), e);
+                        i = u[r] ?? [];
+                    return ((e[r] = i.filter((e) => e.id !== n)), e);
                 }, {});
             (0, a.r)(() => {
-                e({ rules: { ...u, [r]: l }, error: null });
+                e({ rules: { ...i, [r]: l }, error: null });
             });
         },
         syncRules: async (n) => {
             var r;
-            let u;
-            if (((u = Date.now()), u - (S[n] ?? 0) > 2e4)) {
+            let i;
+            if (((i = Date.now()), i - (S[n] ?? 0) > 2e4)) {
                 S[n] = Date.now();
                 try {
-                    let u,
-                        i =
+                    let i,
+                        u =
                             ((r = await (0, E.H0)(n)),
-                            (u = {
-                                [s.uh.KEYWORD]: [],
-                                [s.uh.ML_SPAM]: [],
-                                [s.uh.DEFAULT_KEYWORD_LIST]: [],
-                                [s.uh.MENTION_SPAM]: [],
-                                [s.uh.USER_PROFILE]: [],
-                                [s.uh.SERVER_POLICY]: [],
-                                [s.uh.APPLICATION]: [],
+                            (i = {
+                                [o.uh.KEYWORD]: [],
+                                [o.uh.ML_SPAM]: [],
+                                [o.uh.DEFAULT_KEYWORD_LIST]: [],
+                                [o.uh.MENTION_SPAM]: [],
+                                [o.uh.USER_PROFILE]: [],
+                                [o.uh.SERVER_POLICY]: [],
+                                [o.uh.APPLICATION]: [],
                             }),
                             r.forEach((e) => {
                                 let { triggerType: t } = e;
-                                u[t]?.push(e);
+                                i[t]?.push(e);
                             }),
-                            u),
+                            i),
                         l = t().rules;
                     (0, a.r)(() => {
-                        e({ rules: { ...l, [n]: i }, error: null });
+                        e({ rules: { ...l, [n]: u }, error: null });
                     });
                 } catch (n) {
                     let t = new l.LG(n);
@@ -79,17 +79,17 @@ function h(e, t) {
 }
 function f(e) {
     let [t, n] = r.useState(!1),
-        [i, a] = c((e) => [e.syncRules, e.fetching], u.x);
+        [u, a] = c((e) => [e.syncRules, e.fetching], i.x);
     return [
         t,
         r.useCallback(async () => {
             if (!a && null != e)
                 try {
-                    (n(!0), await i(e));
+                    (n(!0), await u(e));
                 } finally {
                     n(!1);
                 }
-        }, [e, a, i]),
+        }, [e, a, u]),
     ];
 }
 function _(e) {
@@ -105,7 +105,7 @@ function _(e) {
 }
 function p(e) {
     return c(
-        (t) => ({ rulesByTriggerType: t.rules[e ?? o.dJq] ?? {}, updateRule: t.updateRule, removeRule: t.removeRule }),
-        u.x,
+        (t) => ({ rulesByTriggerType: t.rules[e ?? s.dJq] ?? {}, updateRule: t.updateRule, removeRule: t.removeRule }),
+        i.x,
     );
 }

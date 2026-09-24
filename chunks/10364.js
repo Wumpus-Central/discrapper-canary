@@ -6,8 +6,8 @@ var l = n(284009),
     a = n(109026),
     r = n(455207),
     o = n(866665),
-    c = n(297264),
-    d = n(834730),
+    d = n(297264),
+    c = n(834730),
     u = n(235986),
     m = n(375708),
     h = n(475973);
@@ -28,20 +28,20 @@ let g = function () {
                         text: m.intl.string(m.t.oMx98L),
                         children: (0, i.jsx)("div", { className: h.io }),
                     }),
-                    (0, i.jsx)(c.D, {
+                    (0, i.jsx)(d.D, {
                         className: h.wx,
                         variant: "heading-md/semibold",
                         children: m.intl.string(m.t.xfAlNx),
                     }),
                 ],
             }),
-            (0, i.jsx)(d.E, {
+            (0, i.jsx)(c.E, {
                 className: h.h_,
                 color: "text-default",
                 variant: "text-sm/normal",
                 children: m.intl.string(m.t.BUZ0sl),
             }),
-            (0, i.jsx)(d.E, {
+            (0, i.jsx)(c.E, {
                 className: h.h_,
                 color: "text-default",
                 variant: "text-sm/normal",

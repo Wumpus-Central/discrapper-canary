@@ -1,4 +1,4 @@
-n.d(t, { G: () => c, _: () => o });
+n.d(t, { G: () => d, _: () => o });
 var i = n(582128),
     l = n(17928),
     s = n(599941),
@@ -14,7 +14,7 @@ function o(e, t) {
         { loading: s === r.e.FETCHING, priceTiers: n }
     );
 }
-function c(e) {
+function d(e) {
     let { fetchSubscriptionsSettings: t, loading: n, error: l } = (0, s.XE)();
     i.useEffect(() => {
         t(e);

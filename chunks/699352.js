@@ -8,8 +8,8 @@ function a(e) {
         channelMessageProps: { message: t, channel: n, compact: a = !1 },
         hasSpoilerEmbeds: r,
         hasBailedAst: o,
-        handleContextMenu: c,
-        isInteracting: d,
+        handleContextMenu: d,
+        isInteracting: c,
         isAutomodBlockedMessage: u,
         isMessageSnapshot: m,
         renderThreadAccessory: h,
@@ -26,14 +26,14 @@ function a(e) {
               message: t,
               children: (0, i.jsx)(s.Ay, {
                   className: E,
-                  isInteracting: d,
+                  isInteracting: c,
                   message: t,
                   channel: n,
                   compact: a,
                   hasSpoilerEmbeds: r,
                   hasBailedAst: o,
                   isMessageSnapshot: m,
-                  onMediaItemContextMenu: c,
+                  onMediaItemContextMenu: d,
                   renderThreadAccessory: h,
                   disableComponentInteractivity: f,
                   renderSuppressEmbeds: g,
@@ -49,8 +49,8 @@ function r(e, t, n) {
         channel: a,
         compact: r = !1,
         renderThreadAccessory: o,
-        disableReactionCreates: c,
-        disableReactionUpdates: d,
+        disableReactionCreates: d,
+        disableReactionUpdates: c,
     } = e;
     return (0, i.jsx)(s.OC, {
         message: l,
@@ -59,7 +59,7 @@ function r(e, t, n) {
         hasSpoilerEmbeds: t,
         hasBailedAst: n,
         renderThreadAccessory: o,
-        disableReactionCreates: c,
-        disableReactionUpdates: d,
+        disableReactionCreates: d,
+        disableReactionUpdates: c,
     });
 }

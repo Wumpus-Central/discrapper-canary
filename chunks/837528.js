@@ -23,8 +23,8 @@ var i = n(477900),
     a = n(665260),
     r = n(442433),
     o = n(148494),
-    c = n(414798),
-    d = n(267102),
+    d = n(414798),
+    c = n(267102),
     u = n(609969),
     m = n(95561),
     h = n(387408),
@@ -55,7 +55,7 @@ function b(e, t, n) {
             if ((i.preventDefault(), i.stopPropagation(), !i.shiftKey)) return void n();
             let s = `@${N.Ay.getUserTag(l, { decoration: "never" })}`,
                 a = `<@${e}>`;
-            (_._.dispatchToLastSubscribed(p.jej.INSERT_TEXT, { plainText: s, rawText: a }), c.A.startTyping(t));
+            (_._.dispatchToLastSubscribed(p.jej.INSERT_TEXT, { plainText: s, rawText: a }), d.A.startTyping(t));
         },
         [e, t, n],
     );
@@ -94,10 +94,10 @@ function U(e, t) {
     return O(y("interactionAvatarProfile", e, t));
 }
 function G(e, t, s, o) {
-    let { id: c } = t,
+    let { id: d } = t,
         { id: u, flags: m } = e,
         h = (0, a.Lt)(m, p.pr7.EPHEMERAL),
-        g = (0, d.Us)();
+        g = (0, c.Us)();
     return l.useCallback(
         (e, t) => {
             if (h) return;
@@ -108,15 +108,15 @@ function G(e, t, s, o) {
                 if (null != n && !n.isCollapsed && (n.focusNode === e.target || t.contains(n.focusNode))) return;
             }
             if (null != e.currentTarget.contains && !e.currentTarget.contains(e.target)) return;
-            let l = x.A.getChannel(c),
-                a = E.A.getMessage(c, u),
-                d = f.A.isEditing(c, u);
+            let l = x.A.getChannel(d),
+                a = E.A.getMessage(d, u),
+                c = f.A.isEditing(d, u);
             null == l ||
                 null == a ||
-                d ||
+                c ||
                 (C.default.track(p.HAw.MESSAGE_POPOUT_MENU_OPENED_DESKTOP, {
                     message_id: u,
-                    channel: c,
+                    channel: d,
                     location: "right_click",
                 }),
                 s({ contextMenu: !0 }),
@@ -169,7 +169,7 @@ function G(e, t, s, o) {
                     { onClose: () => s({ contextMenu: !1 }), context: g },
                 ));
         },
-        [h, c, u, s, g, o],
+        [h, d, u, s, g, o],
     );
 }
 function w(e, t) {
@@ -219,15 +219,15 @@ function V(e) {
         s = n.author.id,
         a = `${t}:${s}`,
         r = l.useRef(i),
-        [o, c] = l.useState(i);
+        [o, d] = l.useState(i);
     r.current = o || r.current;
-    let d = l.useCallback(() => {
-            ((0, A.cE)(), o || (_._.dispatchKeyed(p.zOV.ANIMATE_CHAT_AVATAR, a, !0), c(!0)));
+    let c = l.useCallback(() => {
+            ((0, A.cE)(), o || (_._.dispatchKeyed(p.zOV.ANIMATE_CHAT_AVATAR, a, !0), d(!0)));
         }, [o, a]),
         u = l.useCallback(() => {
-            (_._.dispatchKeyed(p.zOV.ANIMATE_CHAT_AVATAR, a, !1), c(!1));
+            (_._.dispatchKeyed(p.zOV.ANIMATE_CHAT_AVATAR, a, !1), d(!1));
         }, [a]);
-    return { hasHovered: r.current, isHovered: o, handleMouseEnter: d, handleMouseLeave: u };
+    return { hasHovered: r.current, isHovered: o, handleMouseEnter: c, handleMouseLeave: u };
 }
 function z(e, t) {
     let [n, i] = l.useState(!1),
@@ -274,12 +274,12 @@ function J(e, t, n) {
         }
         let a = e.messageReference?.message_id,
             r = null,
-            c = null;
+            d = null;
         if (t.state === g.a.LOADED) {
             let e = (0, h.A)(t.message);
             ((r =
                 e.attachments.length > 0 || e.embeds.length > 0 || e.stickerItems.length > 0 || e.stickers.length > 0),
-                (c = e.content?.length ?? 0));
+                (d = e.content?.length ?? 0));
         }
         ((0, m.zV)(p.HAw.REPLIED_MESSAGE_CLICKED, {
             guild_id: n.guild_id ?? void 0,
@@ -288,7 +288,7 @@ function J(e, t, n) {
             replied_message_id: a,
             replied_message_is_loaded: t.state === g.a.LOADED,
             replied_message_has_media: r,
-            replied_message_length: c,
+            replied_message_length: d,
         }),
             (null == l || (0, S.A)(l, s)) && s());
     }, [t, e, n]);

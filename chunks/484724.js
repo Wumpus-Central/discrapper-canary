@@ -5,8 +5,8 @@ var i = n(477900),
     a = n(66834),
     r = n(688810),
     o = n(202384),
-    c = n(51758),
-    d = n(79190),
+    d = n(51758),
+    c = n(79190),
     u = n(9588),
     m = n(790535),
     h = n(734057),
@@ -58,18 +58,18 @@ function v(e) {
               isMember: R,
               onAcceptInstantInvite: function () {
                   function e() {
-                      (0, c.V)(n)
+                      (0, d.V)(n)
                           ? (0, o.Ze)(n)
                           : a.A.joinGuild(n, { source: C.Q4z.GUILD_EVENT_EMBED }).catch((e) => {
                                 e.body?.code === C.t02.UNKNOWN_GUILD &&
                                     (0, u.showInaccessibleLinkModal)({ kind: "channel" });
                             });
                   }
-                  (0, d.g0)({ guildId: n, guild: y, isMember: R, analyticsLocations: T, onGateConfirm: e }) ===
-                      d.Wx.PROCEED && e();
+                  (0, c.g0)({ guildId: n, guild: y, isMember: R, analyticsLocations: T, onGateConfirm: e }) ===
+                      c.Wx.PROCEED && e();
               },
               onTransitionToInviteChannel: function () {
-                  (0, c.V)(n)
+                  (0, d.V)(n)
                       ? (0, o.Ze)(n)
                       : b?.isGuildStageVoice()
                         ? (0, m.av)(b)

@@ -5,8 +5,8 @@ var i,
     a = n(503698),
     r = n.n(a),
     o = n(379834),
-    c = n(738678),
-    d = n(27989),
+    d = n(738678),
+    c = n(27989),
     u = n(17928),
     m = n(646270),
     h = n(610509),
@@ -123,7 +123,7 @@ function en(e) {
                             case Z.MOBILE:
                                 return (0, l.jsx)(m.u, { size: "xxs", color: "currentColor" }, e);
                             case Z.ANDROID:
-                                return (0, l.jsx)(Q, { width: d.E.xxs, height: d.E.xxs, color: "currentColor" }, e);
+                                return (0, l.jsx)(Q, { width: c.E.xxs, height: c.E.xxs, color: "currentColor" }, e);
                             case Z.IOS:
                                 return (0, l.jsx)(h.z, { size: "xxs", color: "currentColor" }, e);
                             case Z.PLAYSTATION:
@@ -131,7 +131,7 @@ function en(e) {
                             case Z.XBOX:
                                 return (0, l.jsx)(p.Y, { size: "xxs", color: "currentColor" }, e);
                             case Z.VR:
-                                return (0, l.jsx)(c.G, { size: "xxs", color: "currentColor" }, e);
+                                return (0, l.jsx)(d.G, { size: "xxs", color: "currentColor" }, e);
                             case Z.DESKTOP:
                                 return (0, l.jsx)(A.k, { size: "xxs", color: "currentColor" }, e);
                             default:
@@ -197,8 +197,8 @@ function el(e) {
             applicationName: i,
             channel: a,
             header: r,
-            currentUserId: c,
-            isEmbeddedApplication: d,
+            currentUserId: d,
+            isEmbeddedApplication: c,
             tryWithGdnAction: m,
             staticBannerSrc: h,
             onClickContent: g,
@@ -216,11 +216,11 @@ function el(e) {
             accountLinkButtonRef: er,
             renderAccountLinkUpsell: eo,
         } = e,
-        ec = (0, P.v)(t),
-        ed = (0, b.s)(n.id),
+        ed = (0, P.v)(t),
+        ec = (0, b.s)(n.id),
         eu = s.useMemo(
             () =>
-                ed.some((e) => (0, S.CZ)(e) === o.m.GLOBAL)
+                ec.some((e) => (0, S.CZ)(e) === o.m.GLOBAL)
                     ? (0, l.jsxs)(l.Fragment, {
                           children: [
                               (0, l.jsx)(E.FireIcon, { size: "xxs", color: "currentColor" }),
@@ -228,7 +228,7 @@ function el(e) {
                           ],
                       })
                     : null,
-            [ed],
+            [ec],
         ),
         em = s.useMemo(
             () =>
@@ -237,9 +237,9 @@ function el(e) {
                     className: et.dS,
                     color: "none",
                     lineClamp: 2,
-                    children: [ec ? (0, L.YC)(t, i, a, c, !1) : (0, l.jsx)(ei, { activity: f }), ec ? null : eu],
+                    children: [ed ? (0, L.YC)(t, i, a, d, !1) : (0, l.jsx)(ei, { activity: f }), ed ? null : eu],
                 }),
-            [ec, t, i, a, c, f, eu],
+            [ed, t, i, a, d, f, eu],
         ),
         eh = s.useMemo(() => {
             let e = f?.details;
@@ -248,8 +248,8 @@ function el(e) {
                 : (0, l.jsx)(x.E, { variant: "text-xs/normal", color: "none", lineClamp: 1, children: e });
         }, [f?.details]),
         eg = s.useMemo(
-            () => (0, l.jsxs)("div", { className: et.pq, children: [eh, em, k || ec ? null : q] }),
-            [em, k, ec, q, eh],
+            () => (0, l.jsxs)("div", { className: et.pq, children: [eh, em, k || ed ? null : q] }),
+            [em, k, ed, q, eh],
         ),
         ep = !!(0, R.au)(n.id),
         eA = (0, y.x)(n),
@@ -265,8 +265,8 @@ function el(e) {
                 isGameLaunchable: o,
             } = e;
             if (l.author.id === i || !(0, K.A)(t, l, s.id)) return { canJoin: !1, remoteJoinPlatform: null };
-            let c = (0, U._)(t);
-            if (!(0, J.A)(c) || (0, Y.U)(c) || (0, D.w)(n, t) || (0, P.v)(l))
+            let d = (0, U._)(t);
+            if (!(0, J.A)(d) || (0, Y.U)(d) || (0, D.w)(n, t) || (0, P.v)(l))
                 return { canJoin: !1, remoteJoinPlatform: null };
             if (a && r) return { canJoin: !0, remoteJoinPlatform: null };
             if (l.activity?.type === V.xL.JOIN && null != t) {
@@ -297,10 +297,10 @@ function el(e) {
         })({
             presenceActivity: f,
             currentUserPresenceActivity: T,
-            currentUserId: c,
+            currentUserId: d,
             message: t,
             application: n,
-            isEmbeddedApplication: d,
+            isEmbeddedApplication: c,
             isFrameApplication: eA,
             isGameLaunchable: ep,
         }),
@@ -321,7 +321,7 @@ function el(e) {
                 return !1;
             let l = (0, U._)(e);
             return !(!(0, J.A)(l) || (0, Y.U)(l));
-        })(f, t, n, c),
+        })(f, t, n, d),
         eC = (0, D.w)(T, f),
         e_ = null != f && (0, z.A)(f, V.jUm.SUPPORTS_REMOTE_ACTIVITY_ACTION_JOIN),
         ev = (0, u.bG)(
@@ -394,8 +394,8 @@ function el(e) {
                                         location: V.ThZ.MESSAGE_EMBED,
                                     });
                             },
-                            disabled: t.author.id === c,
-                            disabledReason: t.author.id === c ? W.intl.string(W.t.IBl8ID) : void 0,
+                            disabled: t.author.id === d,
+                            disabledReason: t.author.id === d ? W.intl.string(W.t.IBl8ID) : void 0,
                         })
                       : eC
                         ? (e = {
@@ -424,7 +424,7 @@ function el(e) {
                         (i = !0))),
                 { actions: l, hasAccountLinkButton: i }
             );
-        }, [ex, eE, eI, eC, m, t.author.id, t.id, f, a.id, a.guild_id, Q, ef, c, ev, el, ea, er, es, e_]),
+        }, [ex, eE, eI, eC, m, t.author.id, t.id, f, a.id, a.guild_id, Q, ef, d, ev, el, ea, er, es, e_]),
         eT = eN.some((e) => e.trackingArea === j.kY.CLOUD_PLAY);
     (0, $.A)(eT, Q);
     let eS = s.useMemo(

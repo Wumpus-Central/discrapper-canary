@@ -8,11 +8,11 @@ function a(e, t, n) {
         null != t.interactionData && null != a.applicationId && (0, l.x)(t, e, a);
         return;
     }
-    let { content: r, tts: o, messageReference: c, flags: d, nonce: u } = t;
+    let { content: r, tts: o, messageReference: d, flags: c, nonce: u } = t;
     i.A.sendMessage(e.id, { content: r, tts: o, invalidEmojis: [], validNonShortcutEmojis: [] }, void 0, {
         nonce: u,
-        flags: d,
-        messageReference: c ?? void 0,
+        flags: c,
+        messageReference: d ?? void 0,
         ...a,
         location: s.Hx.RETRY,
     });

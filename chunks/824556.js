@@ -1,30 +1,30 @@
-n.d(t, { A: () => d });
+n.d(t, { A: () => c });
 var i = n(582128),
     l = n(172218),
     s = n(478437),
     a = n(17928),
     r = n(71393),
     o = n(732071),
-    c = n(652215);
-function d(e) {
-    let { message: t, channel: n, announcementEnabled: d = !0, officialMessagesEnabled: u = !1 } = e,
+    d = n(652215);
+function c(e) {
+    let { message: t, channel: n, announcementEnabled: c = !0, officialMessagesEnabled: u = !1 } = e,
         m = (0, a.bG)(
             [r.A],
             () => {
-                if (!d) return !1;
+                if (!c) return !1;
                 let e = r.A.getGuild(n.guild_id);
-                return e?.features.has(c.GuildFeatures.COMMUNITY) ?? !1;
+                return e?.features.has(d.GuildFeatures.COMMUNITY) ?? !1;
             },
-            [d, n.guild_id],
+            [c, n.guild_id],
         ),
         h =
             t.messageReference?.guild_id != null &&
             null != t.webhookId &&
-            t.hasFlag(c.pr7.IS_CROSSPOST) &&
+            t.hasFlag(d.pr7.IS_CROSSPOST) &&
             null != n.guild_id,
         g = n.type === s.r.GUILD_ANNOUNCEMENT && m,
-        p = d && !t.hasFlag(c.pr7.EPHEMERAL) && (h || g),
-        A = u && !t.hasFlag(c.pr7.EPHEMERAL) && t.hasFlag(c.pr7.IS_GUILD_OFFICIAL),
+        p = c && !t.hasFlag(d.pr7.EPHEMERAL) && (h || g),
+        A = u && !t.hasFlag(d.pr7.EPHEMERAL) && t.hasFlag(d.pr7.IS_GUILD_OFFICIAL),
         x = h && null != t.messageReference ? t.messageReference.message_id : t.id,
         f = h && null != t.messageReference ? t.messageReference.channel_id : n.id,
         E = h && t.messageReference?.guild_id != null ? t.messageReference.guild_id : n.guild_id,

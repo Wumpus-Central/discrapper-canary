@@ -1,12 +1,12 @@
-n.d(t, { G: () => ed });
+n.d(t, { G: () => ec });
 var i = n(477900),
     l = n(582128),
     s = n(612324),
     a = n(17928),
     r = n(778712),
     o = n(775602),
-    c = n(793574),
-    d = n(688810),
+    d = n(793574),
+    c = n(688810),
     u = n(480335),
     m = n(372320),
     h = n(744808),
@@ -40,7 +40,7 @@ var i = n(477900),
     B = n(714719),
     F = n(859161);
 function V(e) {
-    let { user: t, displayProfile: n, guildId: s, bannerHeight: o, avatarSize: c, avatarInsetStart: d } = e,
+    let { user: t, displayProfile: n, guildId: s, bannerHeight: o, avatarSize: d, avatarInsetStart: c } = e,
         [u, m] = l.useState(!1),
         h = (0, a.bG)([U.A], () => U.A.isFocused()),
         g = p.kt.getSetting(),
@@ -49,17 +49,17 @@ function V(e) {
         E = A ? null : (x ?? null),
         I = (0, O.r)(L.A.unsafe_rawColors.PRIMARY_800).hex(),
         C = null != n ? n.guildId : s,
-        _ = t.getAvatarURL(C ?? void 0, (0, r.FT)(c)),
+        _ = t.getAvatarURL(C ?? void 0, (0, r.FT)(d)),
         v = (0, k.LX)((0, P.Ay)(_, I, !1)),
         N = (0, D.A)(n?.primaryColor ?? v).hex,
-        { size: j, stroke: T } = (0, r.Kj)(c),
-        S = (0, F.A)(c);
+        { size: j, stroke: T } = (0, r.Kj)(d),
+        S = (0, F.A)(d);
     return (0, i.jsx)(B.A, {
         bannerSrc: E,
         backgroundColor: f === H.D.COMPLETE || A ? N : L.A.unsafe_rawColors.PRIMARY_800.css,
         showGifTag: !g && (0, G.o4)(E),
         height: o,
-        cutout: { align: "start", insetStart: d + j / 2 - S, insetBottom: T / 2, radius: S },
+        cutout: { align: "start", insetStart: c + j / 2 - S, insetBottom: T / 2, radius: S },
         onInteractionStart: () => m(!0),
         onInteractionEnd: () => m(!1),
     });
@@ -134,12 +134,12 @@ function eo(e) {
                   }),
           });
 }
-function ec(e) {
+function ed(e) {
     let { user: t, guildId: n, channelId: r, messageId: A, headingRef: I } = e,
         T = (0, E.Ay)(t.id, n),
         k = null != T ? T.guildId : n,
         L = x.Ay.useName(k, r, t),
-        { analyticsLocations: O } = (0, d.Ay)(c.A.USER_PROFILE_EMBED),
+        { analyticsLocations: O } = (0, c.Ay)(d.A.USER_PROFILE_EMBED),
         P = (0, f.pb)({ layout: "EMBED", userId: t.id, guildId: n, channelId: r, messageId: A }),
         D = (0, m.A)(T?.profileFrame?.skuId),
         U = T?.private === !0,
@@ -160,7 +160,7 @@ function ec(e) {
             hideRestrictedProfile: !0,
         });
     }
-    return (0, i.jsx)(d.f5, {
+    return (0, i.jsx)(c.f5, {
         value: O,
         children: (0, i.jsx)(f.of, {
             value: P,
@@ -226,8 +226,8 @@ function ec(e) {
         }),
     });
 }
-function ed(e) {
+function ec(e) {
     let { userId: t, guildId: n, channelId: l, messageId: s, headingRef: r } = e,
         o = (0, a.bG)([A.default], () => A.default.getUser(t));
-    return null == o ? null : (0, i.jsx)(ec, { user: o, guildId: n, channelId: l, messageId: s, headingRef: r });
+    return null == o ? null : (0, i.jsx)(ed, { user: o, guildId: n, channelId: l, messageId: s, headingRef: r });
 }

@@ -1,4 +1,4 @@
-n.d(t, { BE: () => u, SJ: () => m, Wf: () => c, YC: () => d, n$: () => o });
+n.d(t, { BE: () => u, SJ: () => m, Wf: () => d, YC: () => c, n$: () => o });
 var i = n(287809),
     l = n(562153),
     s = n(652215),
@@ -19,12 +19,12 @@ function o(e, t, n) {
             return a.intl.string(a.t.Ckxb6j);
     }
 }
-function c(e, t, n) {
+function d(e, t, n) {
     return e.author.id === n
         ? a.intl.string(r.default["8B3U5O"])
         : a.intl.formatToPlainString(r.default["d/qbC0"], { username: (0, l.mG)(t.guild_id, t.id, e.author) });
 }
-function d(e, t, n, l, s) {
+function c(e, t, n, l, s) {
     if (e.author.id === l) {
         if (n.isPrivate()) {
             let e = i.default.getUser(n.getRecipientId());
@@ -48,10 +48,10 @@ function u(e, t, n, i, l) {
         case s.xL.JOIN:
             return a.intl.string(l ? a.t.x1UXGR : a.t["Ek+51n"]);
         case s.xL.STREAM_REQUEST:
-            return c(e, n, i);
+            return d(e, n, i);
         case s.xL.JOIN_REQUEST:
         default:
-            return d(e, t, n, i, !0);
+            return c(e, t, n, i, !0);
     }
 }
 function m(e) {

@@ -5,8 +5,8 @@ var i = n(477900),
     a = n(408278),
     r = n(427209),
     o = n(174459),
-    c = n(192308),
-    d = n(294454),
+    d = n(192308),
+    c = n(294454),
     u = n(758836),
     m = n(652215),
     h = n(375708);
@@ -17,7 +17,7 @@ function g(e) {
             g?.(u.sH.SHARE_LINK),
             ((e) => {
                 let { skuId: t, product: l, productName: s, tab: a, source: r } = e;
-                (0, c.openModalLazy)(
+                (0, d.openModalLazy)(
                     async () => {
                         let { default: e } = await Promise.all([
                             n.e("267732"),
@@ -39,7 +39,7 @@ function g(e) {
                         ]).then(n.bind(n, 32672));
                         return (n) => (0, i.jsx)(e, { ...n, skuId: t, product: l, productName: s, tab: a, source: r });
                     },
-                    { stackingBehavior: "stack", modalKey: d.aU },
+                    { stackingBehavior: "stack", modalKey: c.aU },
                 );
             })({ skuId: t, product: s, productName: a, tab: r, source: h }));
     }, [t, s, a, r, h, g]);

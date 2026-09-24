@@ -1,4 +1,4 @@
-n.d(t, { A: () => d });
+n.d(t, { A: () => c });
 var i = n(477900);
 n(582128);
 var l = n(503698),
@@ -6,14 +6,14 @@ var l = n(503698),
     a = n(28863),
     r = n(606049),
     o = n(224929);
-function c(e) {
+function d(e) {
     let {
         icon: t,
         iconNode: n,
         timestamp: l,
         timestampFormat: a,
-        className: c,
-        children: d,
+        className: d,
+        children: c,
         contentClassName: u,
         iconClassName: m,
         iconContainerClassName: h,
@@ -22,7 +22,7 @@ function c(e) {
         additionalContent: A,
     } = e;
     return (0, i.jsxs)("div", {
-        className: s()(c, { [o.kL]: !0, [o.oE]: p, [o.E]: !p }),
+        className: s()(d, { [o.kL]: !0, [o.oE]: p, [o.E]: !p }),
         children: [
             null != n && (0, i.jsx)("div", { className: s()(o.zc, h), children: n }),
             null != t &&
@@ -38,7 +38,7 @@ function c(e) {
                 className: s()(u, o.Qs),
                 children: [
                     (0, i.jsxs)("div", {
-                        children: [d, null != l && (0, i.jsx)(r.A, { timestamp: l, timestampFormat: a, className: g })],
+                        children: [c, null != l && (0, i.jsx)(r.A, { timestamp: l, timestampFormat: a, className: g })],
                     }),
                     A,
                 ],
@@ -46,11 +46,11 @@ function c(e) {
         ],
     });
 }
-c.Action = function (e) {
+d.Action = function (e) {
     let { onClick: t, children: n } = e;
     return (0, i.jsxs)("span", {
         className: o.XI,
         children: ["\u2014", (0, i.jsx)(a.Anchor, { onClick: t, className: o.si, children: n })],
     });
 };
-let d = c;
+let c = d;
