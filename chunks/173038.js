@@ -26,17 +26,17 @@ var i,
     E = n(166403),
     N = n(676279),
     j = n(975571),
-    O = n(158045),
-    I = n(789861),
+    I = n(158045),
+    O = n(789861),
     L = n(769623),
     U = n(920050),
     S = n(707922),
     M = n(852218),
-    w = n(951780),
-    k = n(398523),
-    B = n(881373),
-    D = n(503698),
-    Y = n.n(D),
+    w = n(239016),
+    D = n(398523),
+    k = n(881373),
+    B = n(503698),
+    Y = n.n(B),
     G = n(907581),
     V = n(830370);
 let H = l.forwardRef((e, t) => {
@@ -57,9 +57,9 @@ let H = l.forwardRef((e, t) => {
 });
 H.displayName = "PremiumRewardsBentoBoxAsset";
 var z = n(440005),
-    K = n(26508),
-    W = n(592909),
-    F = n(989790),
+    F = n(26508),
+    K = n(592909),
+    W = n(989790),
     X = n(612413),
     $ = n(202541);
 n(92737);
@@ -120,7 +120,7 @@ let eR = function () {
         r = (0, l.useCallback)(() => {
             (0, h.A)(J.BVt.NITRO_HOME, { search: (0, o.stringify)({ perk: U.CALL_OF_DUTY_3PP_CARD_ID }) });
         }, []),
-        D = (0, _.A)({ scrollPosition: Q._F.TRY_IT_OUT, analyticsLocations: t }),
+        B = (0, _.A)({ scrollPosition: Q._F.TRY_IT_OUT, analyticsLocations: t }),
         Y = (0, l.useCallback)(() => {
             (0, y.openUserSettings)(A.X.PROFILE_PANEL, { analyticsLocations: t }, () =>
                 (0, g.L)({ analyticsLocations: t }),
@@ -135,8 +135,8 @@ let eR = function () {
         eA = l.useRef(null),
         ey = (0, x.b)("bento_box"),
         eE = (function () {
-            let { enabled: e } = k.A.useConfig({ location: "useRecurring3PModalEligiblePartnerIds" }),
-                t = (0, B.YS)({ location: "useRecurring3PModalEligiblePartnerIds" }).functionalityEnabled;
+            let { enabled: e } = D.A.useConfig({ location: "useRecurring3PModalEligiblePartnerIds" }),
+                t = (0, k.YS)({ location: "useRecurring3PModalEligiblePartnerIds" }).functionalityEnabled;
             return l.useMemo(() => {
                 let n = { [M.XY]: t, [M.KS]: e };
                 return M.mY.filter((e) => n[e]);
@@ -206,16 +206,16 @@ let eR = function () {
             youtube: { thumbnail: eg, assetUrl: eg },
         },
         ej = (0, L.Y)({ location: "bento_box" }),
-        eO = (0, S.A)(!ej),
-        eI = (0, c.bG)([E.A], () => E.A.getPremiumTypeSubscription()),
-        eL = null != eI && (0, O.Nc)(eI),
+        eI = (0, S.A)(!ej),
+        eO = (0, c.bG)([E.A], () => E.A.getPremiumTypeSubscription()),
+        eL = null != eO && (0, I.Nc)(eO),
         eU = {
             serverProfiles: {
                 name: "serverProfiles",
                 title: er.intl.string(er.t.I9TYMg),
                 description: er.intl.string(er.t.HMSHeH),
                 descriptionCta: er.intl.string(er.t.jVcuVY),
-                onClick: i ? a : D,
+                onClick: i ? a : B,
                 previewImage: eN.serverProfiles.thumbnail,
                 videoUrl: eN.serverProfiles.assetUrl,
             },
@@ -250,8 +250,8 @@ let eR = function () {
                 name: "premiumGroup",
                 title: er.intl.formatToPlainString(en.default.VFEDDB, { premiumGroupProductName: (0, q.DP)() }),
                 description:
-                    ej && null != eO
-                        ? er.intl.formatToPlainString(en.default.vmvhN5, { pricePerPerson: eO, totalMember: q.LM })
+                    ej && null != eI
+                        ? er.intl.formatToPlainString(en.default.vmvhN5, { pricePerPerson: eI, totalMember: q.LM })
                         : er.intl.formatToPlainString(en.default.WudmR3, {
                               totalSeats: q.aw,
                               premiumGroupProductName: (0, q.DP)(),
@@ -291,7 +291,7 @@ let eR = function () {
                 description: er.intl.string(er.t.UsOUxY),
                 descriptionCta: er.intl.string(er.t.jVcuVY),
                 previewImage: eN.showYourStyle.thumbnail,
-                onClick: i ? a : D,
+                onClick: i ? a : B,
                 videoUrl: eN.showYourStyle.assetUrl,
             },
             yourSpace: {
@@ -325,7 +325,7 @@ let eR = function () {
             callOfDuty: {
                 name: "callOfDuty",
                 title: er.intl.string(ee.default.sB5V0c),
-                description: er.intl.formatToPlainString(ee.default["RuZS+B"], { validDates: (0, I.a1)() }),
+                description: er.intl.formatToPlainString(ee.default["RuZS+B"], { validDates: (0, O.a1)() }),
                 previewImage: eN.callOfDuty.thumbnail,
                 videoUrl: eN.callOfDuty.assetUrl,
                 containerClassName: ed.callOfDutyGradient,
@@ -431,13 +431,13 @@ let eR = function () {
         return t;
     }
     let eM = (function (e) {
-            let t = (0, W.A0)({ location: "bento_box" }),
-                n = (0, B.YS)({ location: "bento_box" }).functionalityEnabled,
+            let t = (0, K.A0)({ location: "bento_box" }),
+                n = (0, k.YS)({ location: "bento_box" }).functionalityEnabled,
                 i = (0, X.mh)({ location: "bento_box" }),
-                { enabled: a } = k.A.useConfig({ location: "bento_box" }),
+                { enabled: a } = D.A.useConfig({ location: "bento_box" }),
                 r = t ? eT.CALL_OF_DUTY : eT.THREE_P_PROMOTIONS,
-                s = (0, F.O9)(),
-                l = (0, K.DK)(z.W.NITRO, "useBentoBoxes"),
+                s = (0, W.O9)(),
+                l = (0, F.DK)(z.W.NITRO, "useBentoBoxes"),
                 o = l && e;
             return [
                 ...(i ? [eT.YOUTUBE] : []),
@@ -453,11 +453,11 @@ let eR = function () {
             ];
         })(eP),
         ew = [],
-        ek = e ? null : eM[0],
-        eB = eM.slice(+!e, e ? 2 : 3);
+        eD = e ? null : eM[0],
+        ek = eM.slice(+!e, e ? 2 : 3);
     return (
-        null != ek && ew.push([eS(ek)]),
-        1 === eB.length ? ew.push([eS(eB[0])]) : 2 === eB.length && ew.push([eS(eB[0]), eS(eB[1])]),
+        null != eD && ew.push([eS(eD)]),
+        1 === ek.length ? ew.push([eS(ek[0])]) : 2 === ek.length && ew.push([eS(ek[0]), eS(ek[1])]),
         {
             whatsNewBoxes: [...ew],
             bestOfBoxes: [[eS("showYourStyle")], [eS("yourSpace")], [eS("emojis"), eS("noLimits")]],

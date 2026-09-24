@@ -20,6 +20,7 @@
         PROFILES_CARD_ID: () => d,
         QUEST_ORB_MULTIPLIER_CARD_ID: () => P,
         RECURRING_3P_PROMOTIONS_CARD_ID: () => I,
+        RIOT_CREDIT_CAMPAIGN_PERK_CARD_ID: () => y,
         SERVER_BOOSTS_CARD_ID: () => N,
         SPECIAL_MEMBER_PRICING_CARD_ID: () => R,
         SPECIAL_STICKERS_CARD_ID: () => C,
@@ -58,4 +59,5 @@ let i = "badge",
     g = "callOfDuty3PP",
     h = "callOfDuty3PPExpired",
     U = "youtube3PP",
-    L = "nitroFileUpload1gb";
+    L = "nitroFileUpload1gb",
+    y = "riotCreditCampaign";

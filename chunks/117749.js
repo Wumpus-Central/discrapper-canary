@@ -1,10 +1,11 @@
-n.d(t, { A: () => d });
+n.d(t, { A: () => c });
 var i = n(439372),
     r = n(67480),
     a = n(828596),
     s = n(918467),
-    l = n(652215);
-class o extends i.A {
+    l = n(652215),
+    o = n(202541);
+class d extends i.A {
     actions = {
         SKU_PURCHASE_SUCCESS: this.onPurchaseSuccess.bind(this),
         PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS: this.onSubscriptionChange.bind(this),
@@ -17,7 +18,7 @@ class o extends i.A {
         null != n && 0 !== n.length && (0, a.rd)([l.FYj]);
     }
     onSubscriptionChange() {
-        (0, a.rd)([l.FYj]);
+        (0, a.rd)([l.FYj, o.tv]);
     }
 }
-let d = new o();
+let c = new d();

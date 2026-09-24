@@ -24,10 +24,10 @@ async function _(e) {
             onModalOpen: p,
             ...T
         } = e,
-        m = l.default.getUser(t);
-    if (null == m) return;
-    let g = l.default.getCurrentUser();
+        g = l.default.getUser(t);
     if (null == g) return;
+    let m = l.default.getCurrentUser();
+    if (null == m) return;
     let S = u(t, E);
     (c.add(
         await (0, r.openModalLazy)(
@@ -354,11 +354,12 @@ async function _(e) {
                         n.e("217951"),
                         n.e("221856"),
                         n.e("293159"),
+                        n.e("186212"),
                         n.e("755936"),
                         n.e("172503"),
                         n.e("760586"),
                         n.e("833703"),
-                        n.e("256274"),
+                        n.e("55252"),
                         n.e("362931"),
                         n.e("745959"),
                         n.e("858529"),
@@ -727,8 +728,8 @@ async function _(e) {
                 ).default;
                 return (t) =>
                     (0, i.jsx)(e, {
-                        user: m,
-                        currentUser: g,
+                        user: g,
+                        currentUser: m,
                         guildId: E,
                         originGuildId: A ?? E,
                         initialTabSection: a,
@@ -743,7 +744,7 @@ async function _(e) {
                 modalKey: S,
                 contextKey: (0, r.modalContextFromAppContext)(I ?? (0, s.zd)() ?? d.BRT.APP),
                 onCloseRequest: () => {
-                    (0, o.A)(t === g.id, () => {
+                    (0, o.A)(t === m.id, () => {
                         ((0, r.closeModal)(S), c.delete(S));
                     });
                 },
