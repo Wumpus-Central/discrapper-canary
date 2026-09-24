@@ -17,4 +17,5 @@ var i,
         (i[(i.ORBITRON = 14)] = "ORBITRON"),
         (i[(i.NEW_ROCKER = 15)] = "NEW_ROCKER"),
         (i[(i.KALAM = 16)] = "KALAM"),
+        (i[(i.HEXAGON = 17)] = "HEXAGON"),
         i);

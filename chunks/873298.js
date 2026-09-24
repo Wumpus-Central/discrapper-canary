@@ -199,6 +199,7 @@ var i,
         (g[(g.STRAWBERRY_LEMONADE = 20)] = "STRAWBERRY_LEMONADE"),
         (g[(g.AURORA = 21)] = "AURORA"),
         (g[(g.BLURPLE_TWILIGHT = 22)] = "BLURPLE_TWILIGHT"),
+        (g[(g.HEXAGON = 23)] = "HEXAGON"),
         g),
     J = (((m = {})[(m.AUTO = 0)] = "AUTO"), (m[(m.H12 = 1)] = "H12"), (m[(m.H23 = 2)] = "H23"), m),
     ee =

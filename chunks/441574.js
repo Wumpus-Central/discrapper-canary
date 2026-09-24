@@ -1422,6 +1422,7 @@ var j =
         (l[(l.ORBITRON = 14)] = "ORBITRON"),
         (l[(l.NEW_ROCKER = 15)] = "NEW_ROCKER"),
         (l[(l.KALAM = 16)] = "KALAM"),
+        (l[(l.HEXAGON = 17)] = "HEXAGON"),
         l),
     Y =
         (((o = {})[(o.UNSPECIFIED = 0)] = "UNSPECIFIED"),
