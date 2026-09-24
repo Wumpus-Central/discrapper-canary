@@ -356,7 +356,7 @@
     --custom-clarification-distance: 16px;
     -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
-    background: var(--background-mod-normal);
+    background: color-mix(in oklab, var(--background-base-low) 92%, transparent);
     border: 1px solid var(--border-muted);
     border-radius: var(--radius-sm);
     display: flex;
@@ -779,20 +779,27 @@
 }
 
 .banner_a7b103 {
+    max-width: 504px;
+    width: calc(100% - var(--space-32)*2)
+}
+
+.layer_a7b103 {
+    --custom-vibegrations-floating-ground: color-mix(in oklab, var(--background-base-low) 92%, transparent)
+}
+
+.banner_a7b103 {
     align-items: center;
     -webkit-backdrop-filter: blur(28px);
     backdrop-filter: blur(28px);
-    background: var(--background-mod-subtle);
+    background: var(--custom-vibegrations-floating-ground);
     border: 1px solid var(--border-muted);
     border-radius: 100px;
     box-shadow: var(--shadow-medium);
     display: flex;
     gap: var(--space-8);
-    max-width: 504px;
     min-height: 56px;
     padding-block: var(--space-8);
-    padding-inline: 18px var(--space-12);
-    width: calc(100% - var(--space-32)*2)
+    padding-inline: 18px var(--space-12)
 }
 
 .bannerJump_a7b103 {
@@ -824,14 +831,17 @@
 .tasks_a7b103 {
     -webkit-backdrop-filter: blur(28px);
     backdrop-filter: blur(28px);
-    background: var(--background-mod-subtle);
+    background: var(--custom-vibegrations-floating-ground);
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-medium)
 }
 
-.tasks_a7b103 [data-vibegrations-todo-card],
+.tasks_a7b103 [data-vibegrations-todo-card] {
+    background: transparent
+}
+
 .tasks_a7b103 [data-vibegrations-todo-card]>header {
-    background: var(--background-mod-subtle)
+    background: var(--background-mod-muted)
 }
 
 .tasksButton_a7b103 {
@@ -1092,7 +1102,7 @@
 .settingsPanel_f35ad6 {
     -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
-    background: var(--background-mod-normal);
+    background: color-mix(in oklab, var(--background-base-low) 92%, transparent);
     border: 1px solid var(--border-muted);
     border-radius: var(--radius-sm);
     box-sizing: border-box;
@@ -1277,4 +1287,4 @@
     white-space: nowrap
 }
 
-/*# sourceMappingURL=60641495c84925c7.css.map*/
+/*# sourceMappingURL=7a00a1c28107cfad.css.map*/

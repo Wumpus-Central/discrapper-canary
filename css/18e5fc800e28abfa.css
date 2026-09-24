@@ -1117,10 +1117,6 @@
     background-size: 100% 2px
 }
 
-.itemCompleted__97796 .textCell__97796 {
-    opacity: .5
-}
-
 .marker__97796 {
     background: transparent;
     border: 1px solid var(--border-muted);
@@ -1268,4 +1264,4 @@
     transition: stroke-dashoffset .35s cubic-bezier(.22, 1, .36, 1)
 }
 
-/*# sourceMappingURL=cd1d48f5c18eff26.css.map*/
+/*# sourceMappingURL=18e5fc800e28abfa.css.map*/

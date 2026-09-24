@@ -1358,7 +1358,7 @@ function th(e) {
                             (0, n.jsx)(tm, { status: e.status }),
                             (0, n.jsx)(v.E, {
                                 variant: "experimental/body-sm/medium",
-                                color: "completed" === e.status ? "text-muted" : "text-default",
+                                color: "completed" === e.status ? "text-subtle" : "text-default",
                                 tag: "span",
                                 className: td.iV,
                                 selectable: !0,
@@ -1399,7 +1399,7 @@ function tx(e) {
               title: C.intl.string(S.default.qCRC6c),
               trailing: (0, n.jsx)(v.E, {
                   variant: "text-sm/medium",
-                  color: "text-muted",
+                  color: "text-subtle",
                   tag: "span",
                   children: C.intl.formatToPlainString(S.default.bQvqly, { completed: i, total: s }),
               }),
