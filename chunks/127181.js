@@ -19,6 +19,12 @@ let n = [
     },
     {
         date: "2026-09-23",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "Files you attach in the chat stay put while you hop to another server, view, or app, until you send or remove them.",
+    },
+    {
+        date: "2026-09-23",
         platforms: ["mobile"],
         summary: "Apps you build can now use the phone's tilt and motion sensors, so gyroscope-driven play works.",
     },

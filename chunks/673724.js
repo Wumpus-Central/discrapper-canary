@@ -1,26 +1,27 @@
 (n.d(t, {
+    $f: () => f,
     A2: () => r,
     CA: () => _,
     IU: () => l,
     Is: () => I,
     RX: () => o,
-    S8: () => S,
+    S8: () => N,
     Wb: () => h,
     XE: () => a,
-    ZJ: () => T,
+    ZJ: () => g,
     a7: () => d,
     aM: () => c,
     ks: () => m,
-    qf: () => R,
+    qf: () => L,
     sj: () => u,
     sq: () => i,
     tr: () => s,
-    v0: () => O,
-    wF: () => C,
+    v0: () => R,
+    wF: () => O,
     wU: () => E,
     wV: () => A,
-    x5: () => p,
-    yr: () => f,
+    x5: () => T,
+    yr: () => p,
 }),
     n(938796));
 let i = 25,
@@ -62,18 +63,19 @@ function A(e, t) {
     };
 }
 let h = new Set(["image/png", "image/jpeg", "image/gif", "image/webp"]),
-    I = 10;
-function f(e) {
+    I = 10,
+    f = 36e5;
+function p(e) {
     return h.has(e) ? 5242880 : 0x3200000;
 }
-function p(e, t) {
-    return e <= f(t);
+function T(e, t) {
+    return e <= p(t);
 }
-function T(e) {
+function g(e) {
     return `${Math.round(e / 1048576)} MB`;
 }
 let m = ["simple", "balanced", "complex"],
-    g = [
+    S = [
         { id: "claude-fable-5-1", label: "Claude Fable 5.1", provider: "anthropic" },
         { id: "claude-opus-5-5", label: "Claude Opus 5.5", provider: "anthropic" },
         { id: "claude-sonnet-5", label: "Claude Sonnet 5", provider: "anthropic" },
@@ -83,14 +85,14 @@ let m = ["simple", "balanced", "complex"],
         { id: "gpt-6-luna", label: "GPT-6 Luna", provider: "openai", supports_fast: !0 },
         { id: "xai/grok-4.7", label: "Grok 4.7", provider: "xai" },
     ],
-    S = { main: g, subagent: g, thinking: ["low", "medium", "high", "xhigh", "max"] },
-    N = [
+    N = { main: S, subagent: S, thinking: ["low", "medium", "high", "xhigh", "max"] },
+    C = [
         { id: "deepseek/deepseek-flash", label: "DeepSeek V4.1 Flash", provider: "deepseek" },
         { id: "moonshotai/kimi-k3", label: "Kimi K3", provider: "moonshotai" },
     ],
-    C = { main: N, subagent: N, thinking: S.thinking },
-    O = { tier: "balanced", provider: "openai" },
-    R = {
+    O = { main: C, subagent: C, thinking: N.thinking },
+    R = { tier: "balanced", provider: "openai" },
+    L = {
         simple: { model: "gpt-6-luna", thinking: "xhigh" },
         balanced: { model: "gpt-6-sol", thinking: "high" },
         complex: { model: "gpt-6-astra", thinking: "high" },
