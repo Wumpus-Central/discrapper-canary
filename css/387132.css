@@ -50,6 +50,18 @@
     width: 700px
 }
 
+@media (max-height:550px) and (pointer:coarse),
+(max-width:485px) and (pointer:coarse) {
+    .root_f4fc8f:has(.iframe_f4fc8f) {
+        min-width: 100%
+    }
+
+    .iframe_f4fc8f {
+        height: 100%;
+        max-width: 100%
+    }
+}
+
 .incodeContainer__8dc44,
 .incodeContainer__8dc44[data-incode-theme=dark],
 .incodeContainer__8dc44[data-incode-theme=light] {
@@ -258,4 +270,4 @@
     background-image: url(/assets/49e200b52c0a66ab.svg)
 }
 
-/*# sourceMappingURL=387132.1ca5da92c54f3049.css.map*/
+/*# sourceMappingURL=387132.874ab73a6e42a67e.css.map*/

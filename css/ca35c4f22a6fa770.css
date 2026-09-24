@@ -97,4 +97,24 @@
     width: var(--space-24)
 }
 
-/*# sourceMappingURL=fdd1e94ac585eb0f.css.map*/
+@media (max-height:550px) and (pointer:coarse),
+(max-width:485px) and (pointer:coarse) {
+    [data-mana-component=modal]:has([data-expressive-v2-graphic]) {
+        max-height: none
+    }
+
+    [data-mana-component=modal]:has([data-expressive-v2-graphic]) main {
+        padding-inline: var(--custom-modal-padding)
+    }
+
+    .methodRow_bbc786 {
+        width: 100%
+    }
+
+    .text_bbc786 {
+        flex: 1;
+        min-width: 0
+    }
+}
+
+/*# sourceMappingURL=ca35c4f22a6fa770.css.map*/
