@@ -17,8 +17,8 @@ var E = n(404144),
     f = n(811315),
     p = n.n(f),
     T = n(119469),
-    m = n.n(T),
-    g = n(141697),
+    g = n.n(T),
+    m = n(141697),
     S = n(904986);
 n(618792);
 var N = n(466376),
@@ -197,7 +197,6 @@ function G(e, t, n, i) {
         jitterBuffer: e.jitterBuffer,
         currentDelay: e.currentDelay,
         targetDelay: e.targetDelay,
-        totalProcessingDelay: e.totalProcessingDelay,
         minPlayoutDelay: e.minPlayoutDelay,
         renderDelay: e.renderDelay,
         averageDecodeTime: e.decode,
@@ -337,9 +336,6 @@ function x(e, t, n, i) {
                         opPreemptiveExpand: a.opPreemptiveExpand,
                         opCNG: a.opCNG,
                         delayEstimate: a.delayEstimate,
-                        totalProcessingDelay: a.totalProcessingDelay,
-                        totalSamplesReceived: a.totalSamplesReceived,
-                        totalSamplesDuration: a.totalSamplesDuration,
                         passthroughCount: a.passthroughCount,
                         decryptSuccessCount: a.decryptSuccessCount,
                         decryptFailureCount: a.decryptFailureCount,
@@ -809,7 +805,7 @@ class j extends S.A {
     getStats() {
         return this.connectionState === C.$I.DISCONNECTED
             ? Promise.resolve(null)
-            : (0, g.timeout)(
+            : (0, m.timeout)(
                   new Promise((e) => {
                       null != this.conn.getFilteredStats
                           ? this.conn.getFilteredStats(C.yt.ALL, (t) =>
@@ -846,7 +842,7 @@ class j extends S.A {
                   }),
                   1e3,
               ).catch((e) => {
-                  if (!(e instanceof g.TimeoutError)) throw e;
+                  if (!(e instanceof m.TimeoutError)) throw e;
               });
     }
     createUser(e, t, n) {
@@ -1166,20 +1162,20 @@ class j extends S.A {
                     useGraphicsCaptureDirtyRegions: f,
                     videoHookAllowDx12: p,
                     minCaptureWidth: T,
-                    minCaptureHeight: m,
+                    minCaptureHeight: g,
                 } = e.desktopDescription;
                 this.setSoundshareSource(a, s);
-                let [g, S] = null != r ? r.split(":") : ["", ""];
+                let [m, S] = null != r ? r.split(":") : ["", ""];
                 (null != r
                     ? this.logger.info(
-                          `capturing desktop (type: ${g}, handle: ${S}, use-video-hook: ${l.toString()}, use-graphics-capture: ${c?.toString()}, use-graphics-capture-api-level: ${o?.toString()}, use-capture-device-for-encode: ${d?.toString()}).`,
+                          `capturing desktop (type: ${m}, handle: ${S}, use-video-hook: ${l.toString()}, use-graphics-capture: ${c?.toString()}, use-graphics-capture-api-level: ${o?.toString()}, use-capture-device-for-encode: ${d?.toString()}).`,
                       )
                     : this.logger.info("capturing desktop (type: <stop>)."),
                     null != this.conn.setDesktopSourceWithOptions
                         ? null != r
                             ? (this.setDesktopEncodingOptions(i, t, n),
                               this.conn.setDesktopSourceWithOptions({
-                                  type: g,
+                                  type: m,
                                   sourceId: S,
                                   useVideoHook: l,
                                   useGraphicsCapture: c,
@@ -1194,10 +1190,10 @@ class j extends S.A {
                                   useGraphicsCaptureDirtyRegions: f,
                                   videoHookAllowDx12: p,
                                   minCaptureWidth: T,
-                                  minCaptureHeight: m,
+                                  minCaptureHeight: g,
                               }))
                             : this.conn.clearDesktopSource()
-                        : this.conn.setDesktopSource(`wumpus-${S}`, l, g));
+                        : this.conn.setDesktopSource(`wumpus-${S}`, l, m));
             } else if (null != e.cameraDescription) {
                 let { videoDeviceGuid: t, audioDeviceGuid: n } = e.cameraDescription;
                 this.conn.setGoLiveDevices({ videoInputDeviceId: t, audioInputDeviceId: n });
@@ -1569,12 +1565,12 @@ class j extends S.A {
         if (this.connectionState === C.$I.DISCONNECTED) return void this.off(u.yq.Stats, this.handleStats);
         if (null != e) {
             if (null != this.stats) {
-                let t = m()(
+                let t = g()(
                         e.rtp.outbound,
                         (e, t) => ((e.lost += t.packetsLost ?? 0), (e.sent += t.packetsSent ?? 0), e),
                         { lost: 0, sent: 0 },
                     ),
-                    n = m()(
+                    n = g()(
                         this.stats.rtp.outbound,
                         (e, t) => ((e.lost += t.packetsLost ?? 0), (e.sent += t.packetsSent ?? 0), e),
                         { lost: 0, sent: 0 },

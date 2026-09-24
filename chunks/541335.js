@@ -16,8 +16,8 @@ var i,
     f = n(665260),
     p = n(972347),
     T = n(459838),
-    m = n(499979),
-    g = n(228366),
+    g = n(499979),
+    m = n(228366),
     S = n(157559),
     N = n(233545),
     C = n(894539),
@@ -305,11 +305,11 @@ class eT {
         ((this.current = null), (this.history = []), null != e && this.update(e));
     }
     update(e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : (0, m.tB)();
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : (0, g.tB)();
         this.current !== e && ((this.current = e), this.history.push({ state: e, startTime: t }));
     }
     getVoiceConnectionSuccessStats() {
-        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, m.tB)(),
+        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, g.tB)(),
             t = this.getStateDurations(e);
         function n(e) {
             return eA().sumBy(t, (t) => (t.state === e ? t.durationMs : 0));
@@ -345,8 +345,8 @@ class eT {
     }
 }
 (n(393431), n(532706), n(42231), n(232424), n(949626), n(767709), n(65162), n(938796));
-var em = n(284009),
-    eg = n.n(em);
+var eg = n(284009),
+    em = n.n(eg);
 let eS = (0, w.mj)({
     name: "2026-04-voice-gateway-protocol-version",
     kind: "user",
@@ -512,9 +512,9 @@ class eU extends p.A {
             null !== this.webSocket &&
                 (this.logger.error("Connect called with already existing websocket"),
                 this.cleanupWebSocket((e) => e.close(4e3))),
-            (this.connectionStartTime = (0, m.tB)()),
+            (this.connectionStartTime = (0, g.tB)()),
             (this.helloTimeout = setTimeout(() => {
-                let e = (0, m.tB)() - this.connectionStartTime;
+                let e = (0, g.tB)() - this.connectionStartTime;
                 this.handleClose(!1, 0, `The connection timed out after ${e} ms - did not receive OP_HELLO in time.`);
             }, eL)));
         let e = (function (e) {
@@ -528,7 +528,7 @@ class eU extends p.A {
                     ? this.emit("connect")
                     : 5 === this.connectionState && this.doResumeOrClose(),
                     (this.connectionState = 4));
-                let e = (0, m.tB)() - this.connectionStartTime;
+                let e = (0, g.tB)() - this.connectionStartTime;
                 (this.logger.info(`[CONNECTED] ${this.url} in ${e} ms`), this.emit("ping", Math.round(e / 2)));
             }),
             (t.onmessage = (e) => {
@@ -666,7 +666,7 @@ class eU extends p.A {
         } catch (e) {}
     }
     doResumeOrClose() {
-        let e = (0, m.tB)();
+        let e = (0, g.tB)();
         null !== this.serverId &&
         null !== this.channelId &&
         null !== this.token &&
@@ -698,7 +698,7 @@ class eU extends p.A {
         } else
             ((this.heartbeatInterval = e.heartbeat_interval * this.heartbeatIntervalModifier),
                 eo.isPlatformEmbedded || (this.heartbeatInterval = Math.min(eD, this.heartbeatInterval ?? NaN)));
-        let t = (0, m.tB)() - this.connectionStartTime;
+        let t = (0, g.tB)() - this.connectionStartTime;
         (this.logger.info(
             `[HELLO] heartbeat interval: ${this.heartbeatInterval ?? "??"}, version: ${this.serverVersion}, took ${t} ms`,
         ),
@@ -706,7 +706,7 @@ class eU extends p.A {
     }
     handleReady(e) {
         this.backoff.succeed();
-        let t = (0, m.tB)() - this.connectionStartTime;
+        let t = (0, g.tB)() - this.connectionStartTime;
         (this.logger.info(`[READY] took ${t} ms`),
             this.serverVersion >= 6 && this.send(16, {}),
             this.emit("ready", e.ip, e.port, e.modes, e.ssrc, eM(e.streams), e.experiments));
@@ -779,8 +779,8 @@ class eU extends p.A {
         this.logger.info("Heartbeat ACK received");
         let t = null;
         ((t = this.serverVersion >= 8 ? e.t : e),
-            this.emit("ping", (0, m.tB)() - t),
-            (this.lastHeartbeatAckTime = (0, m.tB)()),
+            this.emit("ping", (0, g.tB)() - t),
+            (this.lastHeartbeatAckTime = (0, g.tB)()),
             (this.heartbeatAck = !0),
             null !== this.expeditedHeartbeatTimeout &&
                 (clearTimeout(this.expeditedHeartbeatTimeout),
@@ -793,7 +793,7 @@ class eU extends p.A {
         this.logger.warn(`[HEARTBEAT ACK TIMEOUT] reconnecting in ${(e / 1e3).toFixed(2)} seconds.`);
     }
     startHeartbeater() {
-        (eg()(null != this.heartbeatInterval, "RTCControlSocket: Heartbeat interval should never null here."),
+        (em()(null != this.heartbeatInterval, "RTCControlSocket: Heartbeat interval should never null here."),
             this.logger.info(`Starting heartbeat with interval: ${this.heartbeatInterval}`),
             null !== this.heartbeater && clearInterval(this.heartbeater),
             (this.heartbeatAck = !0),
@@ -807,8 +807,8 @@ class eU extends p.A {
         if (this.serverVersion >= 8) {
             let e = this.lastRecvSeqNum ?? -1;
             (this.logger.info(`Sending heartbeat with last received sequence number: ${e}`),
-                this.send(3, { t: (0, m.tB)(), seq_ack: e }));
-        } else (this.logger.info("Sending heartbeat"), this.send(3, (0, m.tB)()));
+                this.send(3, { t: (0, g.tB)(), seq_ack: e }));
+        } else (this.logger.info("Sending heartbeat"), this.send(3, (0, g.tB)()));
     }
     stopHeartbeater() {
         (null !== this.heartbeater && (clearInterval(this.heartbeater), (this.heartbeater = null)),
@@ -1272,7 +1272,7 @@ class e1 {
     _networkStats;
     _lastSampleTimestamp;
     constructor() {
-        ((this._networkStats = this._initStats()), (this._lastSampleTimestamp = (0, m.tB)()));
+        ((this._networkStats = this._initStats()), (this._lastSampleTimestamp = (0, g.tB)()));
     }
     _initStats() {
         let e = { effectiveConnectionSpeedBuckets: {}, connectionTypeBuckets: {} };
@@ -1355,28 +1355,28 @@ class e6 extends p.A {
     bandwidthLimitedResolution;
     videoEntropy;
     statCollectionPausedUsers = new Set();
-    constructor(e, t = m.TF) {
+    constructor(e, t = g.TF) {
         (super(),
             (this.connection = e),
             (this.timestampProducer = t),
-            (this.paused = new m.w6(!1, t)),
-            (this.zeroReceivers = new m.w6(!1, t)),
-            (this.videoStopped = new m.w6(!1, t)),
-            (this.videoEffectDuration = new m.w6(!1, t)),
-            (this.hqSimulcastStreamEncoded = new m.w6(!1, t)),
-            (this.lqSimulcastStreamEncoded = new m.w6(!1, t)),
-            (this.bothSimulcastStreamsEncoded = new m.w6(!1, t)),
-            (this.hqSimulcastStreamWatched = new m.w6(!1, t)),
-            (this.lqSimulcastStreamWatched = new m.w6(!1, t)),
-            (this.hqSimulcastStreamEligible = new m.w6(!1, t)),
-            (this.lqSimulcastStreamEligible = new m.w6(!1, t)),
-            (this.windowOccluded = new m.w6(!1, t)),
-            (this.videoStoppedForOcclusion = new m.w6(!1, t)),
-            (this.bandwidthLimitedFramerate = new m.w6(!1, t)),
-            (this.bandwidthLimitedResolution = new m.w6(!1, t)),
-            (this.cameraDuration = new m.w6(!1, t)),
-            (this.cameraOpportunityDuration = new m.w6(!1, t)),
-            (this.cameraSendDuration = new m.w6(!1, t)),
+            (this.paused = new g.w6(!1, t)),
+            (this.zeroReceivers = new g.w6(!1, t)),
+            (this.videoStopped = new g.w6(!1, t)),
+            (this.videoEffectDuration = new g.w6(!1, t)),
+            (this.hqSimulcastStreamEncoded = new g.w6(!1, t)),
+            (this.lqSimulcastStreamEncoded = new g.w6(!1, t)),
+            (this.bothSimulcastStreamsEncoded = new g.w6(!1, t)),
+            (this.hqSimulcastStreamWatched = new g.w6(!1, t)),
+            (this.lqSimulcastStreamWatched = new g.w6(!1, t)),
+            (this.hqSimulcastStreamEligible = new g.w6(!1, t)),
+            (this.lqSimulcastStreamEligible = new g.w6(!1, t)),
+            (this.windowOccluded = new g.w6(!1, t)),
+            (this.videoStoppedForOcclusion = new g.w6(!1, t)),
+            (this.bandwidthLimitedFramerate = new g.w6(!1, t)),
+            (this.bandwidthLimitedResolution = new g.w6(!1, t)),
+            (this.cameraDuration = new g.w6(!1, t)),
+            (this.cameraOpportunityDuration = new g.w6(!1, t)),
+            (this.cameraSendDuration = new g.w6(!1, t)),
             (this.videoEntropy = new eX.d()));
     }
     addUserToStatsCollectionPausedSet(e) {
@@ -1754,8 +1754,8 @@ class e6 extends p.A {
                 framesNetwork: f,
                 packets: p,
                 packetsLost: T,
-                nackCount: m,
-                pliCount: g,
+                nackCount: g,
+                pliCount: m,
                 qpSum: S,
                 pauseCount: N,
                 freezeCount: C,
@@ -1803,8 +1803,8 @@ class e6 extends p.A {
                 num_frames_codec_error: h,
                 time_to_first_frame_ms: e.timeToFirstFrame,
                 num_frames_dropped: E + A,
-                num_nacks: m,
-                num_plis: g,
+                num_nacks: g,
+                num_plis: m,
                 qp_sum: S,
                 num_keyframes: D,
                 cryptor_passthrough_count: v,
@@ -1992,18 +1992,18 @@ class e9 {
     speakingMinimumChunks = new Map();
     speakingMinimumChunkCounts = new Map();
     speechEventCount = 0;
-    constructor(e, t, n = m.TF) {
+    constructor(e, t, n = g.TF) {
         ((this.userId = e),
             (this.connection = t),
             (this.timestampProducer = n),
-            (this.listening = new m.W0(this.timestampProducer)),
-            (this.speaking = new m.W0(this.timestampProducer)),
-            (this.participation = new m.W0(this.timestampProducer)),
-            (this.connected = new m.W0(this.timestampProducer)),
-            (this.muted = new m.W0(this.timestampProducer)),
-            (this.deafened = new m.W0(this.timestampProducer)),
-            (this.noiseCancellation = new m.w6(t.getNoiseCancellation(), this.timestampProducer)),
-            (this.spatialAudio = new m.w6(t.getSpatialAudioEnabled(), this.timestampProducer)));
+            (this.listening = new g.W0(this.timestampProducer)),
+            (this.speaking = new g.W0(this.timestampProducer)),
+            (this.participation = new g.W0(this.timestampProducer)),
+            (this.connected = new g.W0(this.timestampProducer)),
+            (this.muted = new g.W0(this.timestampProducer)),
+            (this.deafened = new g.W0(this.timestampProducer)),
+            (this.noiseCancellation = new g.w6(t.getNoiseCancellation(), this.timestampProducer)),
+            (this.spatialAudio = new g.w6(t.getSpatialAudioEnabled(), this.timestampProducer)));
     }
     start() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
@@ -2099,6 +2099,14 @@ class e9 {
             (this.spatialAudio.value = !1),
             this.computeSpeakingDurationMilestones(e, t, n));
     }
+    getDeprecatedDurationStats() {
+        return {
+            duration_listening: Math.round(this.listening.elapsed().asSeconds()),
+            duration_speaking: Math.round(this.speaking.elapsed().asSeconds()),
+            duration_participation: Math.round(this.participation.elapsed().asSeconds()),
+            duration_connected: Math.round(this.connected.elapsed().asSeconds()),
+        };
+    }
     getDurationStats() {
         let e = this.speaking.lastStartTime,
             t = this.timestampProducer.now(),
@@ -2151,7 +2159,6 @@ class tt extends p.A {
     outboundStats;
     networkQuality;
     systemResources;
-    duration;
     decryptionFailures;
     routingFailures;
     periodicInboundStats;
@@ -2180,7 +2187,6 @@ class tt extends p.A {
                 aggregationDurationMs: 0,
                 speakingAudioLevel: new eX.d(),
             }),
-            (this.duration = { listening: 0, speaking: 0, participation: 0, connected: 0 }),
             (this.periodicInboundStats = {}),
             (this.inputDeviceStats = {}),
             (this.outputDeviceStats = {}));
@@ -2190,24 +2196,6 @@ class tt extends p.A {
     }
     stop() {
         this.connection.off(T.yq.Stats, this.sampleStats);
-    }
-    getMosStats() {
-        let e = eA().reduce(
-            this.inboundStats,
-            (e, t) => {
-                ((e.mosSum += t.mosSum), (e.mosCount += t.mosCount));
-                for (var n = 0; n < 5; n++) e.mosBuckets[n] += t.mosBuckets[n];
-                return e;
-            },
-            { mosSum: 0, mosCount: 0, mosBuckets: [0, 0, 0, 0, 0] },
-        );
-        return {
-            mos_mean: e.mosCount > 0 ? e.mosSum / e.mosCount : 0,
-            mos_1: e.mosBuckets[1],
-            mos_2: e.mosBuckets[2],
-            mos_3: e.mosBuckets[3],
-            mos_4: e.mosBuckets[4],
-        };
     }
     getPacketStats() {
         let e = eA().reduce(
@@ -2340,14 +2328,6 @@ class tt extends p.A {
             frame_op_accelerated: e.accelerated,
             frame_op_preemptive_expanded: e.preemptiveExpanded,
             frame_op_cng: e.cng,
-        };
-    }
-    getDurationStats() {
-        return {
-            duration_listening: this.duration.listening,
-            duration_speaking: this.duration.speaking,
-            duration_participation: this.duration.participation,
-            duration_connected: this.duration.connected,
         };
     }
     getTransportStats() {
@@ -2489,17 +2469,11 @@ class tt extends p.A {
     };
     sampleStats = (e) => {
         if (null == e) return;
-        (this.networkQuality.incrementNetworkStats((0, m.tB)()),
-            this.systemResources.takeSample(),
-            this.duration.connected++);
-        let t = this.outboundStats.packetsSent,
-            n = eA().reduce(this.inboundStats, (e, t) => ((e.packetsReceived += t.packetsReceived), e), {
-                packetsReceived: 0,
-            }),
-            i = 0;
+        (this.networkQuality.incrementNetworkStats((0, g.tB)()), this.systemResources.takeSample());
+        let t = 0;
         (eA().forEach(e.rtp.outbound, (e) => {
             "audio" === e.type &&
-                ((i = e.bitrateTarget ?? 0),
+                ((t = e.bitrateTarget ?? 0),
                 (this.outboundStats = {
                     ...this.outboundStats,
                     packetsSent: e.packetsSent,
@@ -2519,117 +2493,100 @@ class tt extends p.A {
         }),
             (this.decryptionFailures = e.transport.decryptionFailures),
             (this.routingFailures = e.transport.routingFailures),
-            this.appendTargetRates(this.outboundStats, e.transport.availableOutgoingBitrate, i),
-            eA().forEach(e.rtp.inbound, (t, n) => {
-                eA().forEach(t, (t) => {
-                    if ("audio" === t.type) {
-                        let i = this.inboundStats[n],
-                            r = e.transport.ping ?? 0,
-                            a = t.packetsReceived,
-                            s = t.packetsLost,
-                            l = t.bytesReceived,
-                            o = t.nackCount,
-                            d = t.fecPacketsReceived ?? 0,
-                            c = t.fecPacketsDiscarded ?? 0,
-                            u = t.jitterBuffer ?? 0,
-                            _ = {
-                                audioJitterBuffer: t.audioJitterBuffer,
-                                audioJitterBufferHistogram: i?.bufferStats.audioJitterBufferHistogram ?? new eX.d(),
-                                audioJitterTarget: t.audioJitterTarget,
-                                audioJitterTargetHistogram: i?.bufferStats.audioJitterTargetHistogram ?? new eX.d(),
-                                audioJitterDelay: t.audioJitterDelay,
-                                audioJitterDelayHistogram: i?.bufferStats.audioJitterDelayHistogram ?? new eX.d(),
-                                relativeReceptionDelay: t.relativeReceptionDelay,
-                                relativePlayoutDelay: t.relativePlayoutDelay,
+            this.appendTargetRates(this.outboundStats, e.transport.availableOutgoingBitrate, t),
+            eA().forEach(e.rtp.inbound, (e, t) => {
+                eA().forEach(e, (e) => {
+                    if ("audio" === e.type) {
+                        let n = this.inboundStats[t],
+                            i = e.packetsReceived,
+                            r = e.packetsLost,
+                            a = e.bytesReceived,
+                            s = e.nackCount,
+                            l = e.fecPacketsReceived ?? 0,
+                            o = e.fecPacketsDiscarded ?? 0,
+                            d = {
+                                audioJitterBuffer: e.audioJitterBuffer,
+                                audioJitterBufferHistogram: n?.bufferStats.audioJitterBufferHistogram ?? new eX.d(),
+                                audioJitterTarget: e.audioJitterTarget,
+                                audioJitterTargetHistogram: n?.bufferStats.audioJitterTargetHistogram ?? new eX.d(),
+                                audioJitterDelay: e.audioJitterDelay,
+                                audioJitterDelayHistogram: n?.bufferStats.audioJitterDelayHistogram ?? new eX.d(),
+                                relativeReceptionDelay: e.relativeReceptionDelay,
+                                relativePlayoutDelay: e.relativePlayoutDelay,
                             };
-                        (_.audioJitterBufferHistogram.addSamples(t.audioJitterBufferSamples ?? []),
-                            _.audioJitterDelayHistogram.addSamples(t.audioJitterDelaySamples ?? []),
-                            _.audioJitterTargetHistogram.addSamples(t.audioJitterTargetSamples ?? []));
-                        let E = {
-                                silent: t.opSilence,
-                                normal: t.opNormal,
-                                merged: t.opMerge,
-                                expanded: t.opExpand,
-                                accelerated: t.opAccelerate,
-                                preemptiveExpanded: t.opPreemptiveExpand,
-                                cng: t.opCNG,
+                        (d.audioJitterBufferHistogram.addSamples(e.audioJitterBufferSamples ?? []),
+                            d.audioJitterDelayHistogram.addSamples(e.audioJitterDelaySamples ?? []),
+                            d.audioJitterTargetHistogram.addSamples(e.audioJitterTargetSamples ?? []));
+                        let c = {
+                                silent: e.opSilence,
+                                normal: e.opNormal,
+                                merged: e.opMerge,
+                                expanded: e.opExpand,
+                                accelerated: e.opAccelerate,
+                                preemptiveExpanded: e.opPreemptiveExpand,
+                                cng: e.opCNG,
                             },
-                            A = {
-                                passthroughCount: t.passthroughCount ?? 0,
-                                decryptSuccessCount: t.decryptSuccessCount ?? 0,
-                                decryptFailureCount: t.decryptFailureCount ?? 0,
-                                decryptDuration: t.decryptDuration ?? 0,
-                                decryptAttempts: t.decryptAttempts ?? 0,
-                                decryptMissingKeyCount: t.decryptMissingKeyCount ?? 0,
-                                decryptInvalidNonceCount: t.decryptInvalidNonceCount ?? 0,
+                            u = {
+                                passthroughCount: e.passthroughCount ?? 0,
+                                decryptSuccessCount: e.decryptSuccessCount ?? 0,
+                                decryptFailureCount: e.decryptFailureCount ?? 0,
+                                decryptDuration: e.decryptDuration ?? 0,
+                                decryptAttempts: e.decryptAttempts ?? 0,
+                                decryptMissingKeyCount: e.decryptMissingKeyCount ?? 0,
+                                decryptInvalidNonceCount: e.decryptInvalidNonceCount ?? 0,
                             };
-                        if (null != i) {
-                            let e = a - i.packetsReceived,
-                                h = s - i.packetsLost,
-                                I = 0,
-                                f = i.mosBuckets,
-                                p =
-                                    i.decryptFailureBeforeSuccessCount ??
-                                    (A.decryptSuccessCount > 0 ? A.decryptFailureCount : void 0);
-                            (e > 0 &&
-                                h >= 0 &&
-                                ((I = this.calculateMos(r + u, eA().clamp(h / (e + h), 0, 1))), f[Math.floor(I)]++),
-                                (this.inboundStats[n] = {
-                                    packetsReceived: a,
-                                    bytesReceived: l,
-                                    packetsLost: s,
-                                    nackCount: o ?? 0,
-                                    fecPacketsReceived: d,
-                                    fecPacketsDiscarded: c,
-                                    mos: I,
-                                    mosSum: i.mosSum + I,
-                                    mosCount: i.mosCount + +(I > 0),
-                                    mosBuckets: f,
-                                    bufferStats: _,
-                                    frameOpStats: E,
-                                    decryptFailureBeforeSuccessCount: p,
-                                    ...A,
-                                }),
-                                (this.periodicInboundStats[n] = {
-                                    previousTimestampMs: this.periodicInboundStats[n].previousTimestampMs,
-                                    previous: this.periodicInboundStats[n].previous,
+                        if (null != n) {
+                            let _ =
+                                n.decryptFailureBeforeSuccessCount ??
+                                (u.decryptSuccessCount > 0 ? u.decryptFailureCount : void 0);
+                            ((this.inboundStats[t] = {
+                                packetsReceived: i,
+                                bytesReceived: a,
+                                packetsLost: r,
+                                nackCount: s ?? 0,
+                                fecPacketsReceived: l,
+                                fecPacketsDiscarded: o,
+                                bufferStats: d,
+                                frameOpStats: c,
+                                decryptFailureBeforeSuccessCount: _,
+                                ...u,
+                            }),
+                                (this.periodicInboundStats[t] = {
+                                    previousTimestampMs: this.periodicInboundStats[t].previousTimestampMs,
+                                    previous: this.periodicInboundStats[t].previous,
                                     currentTimestampMs: performance.now(),
-                                    current: E,
+                                    current: c,
                                     accelerateRateSum:
-                                        this.periodicInboundStats[n].accelerateRateSum + (t.accelerateRate ?? 0),
-                                    expandRateSum: this.periodicInboundStats[n].expandRateSum + (t.expandRate ?? 0),
+                                        this.periodicInboundStats[t].accelerateRateSum + (e.accelerateRate ?? 0),
+                                    expandRateSum: this.periodicInboundStats[t].expandRateSum + (e.expandRate ?? 0),
                                     preemptiveExpandRateSum:
-                                        this.periodicInboundStats[n].preemptiveExpandRateSum +
-                                        (t.preemptiveExpandRate ?? 0),
+                                        this.periodicInboundStats[t].preemptiveExpandRateSum +
+                                        (e.preemptiveExpandRate ?? 0),
                                     speechExpandRateSum:
-                                        this.periodicInboundStats[n].speechExpandRateSum + (t.speechExpandRate ?? 0),
-                                    numRateSamples: this.periodicInboundStats[n].numRateSamples + 1,
+                                        this.periodicInboundStats[t].speechExpandRateSum + (e.speechExpandRate ?? 0),
+                                    numRateSamples: this.periodicInboundStats[t].numRateSamples + 1,
                                 }));
                         } else
-                            ((this.inboundStats[n] = {
-                                packetsReceived: a,
-                                bytesReceived: l,
-                                packetsLost: s,
-                                nackCount: o ?? 0,
-                                fecPacketsReceived: d,
-                                fecPacketsDiscarded: c,
-                                mos: 0,
-                                mosSum: 0,
-                                mosCount: 0,
-                                mosBuckets: [0, 0, 0, 0, 0],
-                                bufferStats: _,
-                                frameOpStats: E,
-                                ...A,
+                            ((this.inboundStats[t] = {
+                                packetsReceived: i,
+                                bytesReceived: a,
+                                packetsLost: r,
+                                nackCount: s ?? 0,
+                                fecPacketsReceived: l,
+                                fecPacketsDiscarded: o,
+                                bufferStats: d,
+                                frameOpStats: c,
+                                ...u,
                             }),
-                                (this.periodicInboundStats[n] = {
+                                (this.periodicInboundStats[t] = {
                                     previousTimestampMs: performance.now(),
-                                    previous: E,
+                                    previous: c,
                                     currentTimestampMs: performance.now(),
-                                    current: E,
-                                    accelerateRateSum: t.accelerateRate ?? 0,
-                                    expandRateSum: t.expandRate ?? 0,
-                                    preemptiveExpandRateSum: t.preemptiveExpandRate ?? 0,
-                                    speechExpandRateSum: t.speechExpandRate ?? 0,
+                                    current: c,
+                                    accelerateRateSum: e.accelerateRate ?? 0,
+                                    expandRateSum: e.expandRate ?? 0,
+                                    preemptiveExpandRateSum: e.preemptiveExpandRate ?? 0,
+                                    speechExpandRateSum: e.speechExpandRate ?? 0,
                                     numRateSamples: 1,
                                 }));
                     }
@@ -2638,21 +2595,7 @@ class tt extends p.A {
             void 0 !== e.audioDevice &&
                 (this.sampleAudioDevice(e.audioDevice.input, this.inputDeviceStats),
                 this.sampleAudioDevice(e.audioDevice.output, this.outputDeviceStats)));
-        let r = !1,
-            a = !1;
-        (this.outboundStats.packetsSent > t && ((r = !0), this.duration.speaking++),
-            eA().reduce(this.inboundStats, (e, t) => ((e.packetsReceived += t.packetsReceived), e), {
-                packetsReceived: 0,
-            }).packetsReceived > n.packetsReceived && ((a = !0), this.duration.listening++),
-            (r || a) && this.duration.participation++);
     };
-    calculateMos(e, t) {
-        let n = this.calculateR(e, t);
-        return n < 0 ? 1 : n > 100 ? 4.5 : 1 + 0.035 * n + 71e-7 * n * (n - 60) * (100 - n);
-    }
-    calculateR(e, t) {
-        return 93.4 - (0.024 * e + (e > 177.3 ? 0.11 * (e - 177.3) : 0)) - (10 + (122 * t) / (t + 10));
-    }
 }
 function tn(e, t) {
     let { accumulated: n, lastValue: i } = t ?? { accumulated: 0, lastValue: 0 };
@@ -2678,7 +2621,7 @@ let td = 0,
     tc = [];
 function tu() {
     let e = [],
-        t = (0, m.tB)();
+        t = (0, g.tB)();
     for (let n of tc) e.push({ ...n, t: t - n.t });
     return JSON.stringify(e);
 }
@@ -2808,7 +2751,7 @@ class t_ extends p.A {
             (this.protocol = null),
             (this.voiceVersion = null),
             (this.rtcWorkerVersion = null),
-            (this._createdTime = d ?? (0, m.tB)()),
+            (this._createdTime = d ?? (0, g.tB)()),
             (this.state = ep.S7L.AWAITING_ENDPOINT),
             (this.stateHistory = new eT(this.state, this._createdTime)),
             (this._socket = null),
@@ -2901,7 +2844,7 @@ class t_ extends p.A {
             }));
     }
     recordEvent(e) {
-        for (tc.push({ ...e, t: (0, m.tB)(), n: this._connectionSerial }); tc.length > 50;) tc.shift();
+        for (tc.push({ ...e, t: (0, g.tB)(), n: this._connectionSerial }); tc.length > 50;) tc.shift();
     }
     get quality() {
         let e = this.getLastPing();
@@ -2939,7 +2882,7 @@ class t_ extends p.A {
                 (this._mediaSessionId = null),
                 null != n &&
                     ((this._rtcConnectionId = (0, h.A)()),
-                    g.h.dispatch({ type: "RTC_CONNECTION_UPDATE_ID", connection: this }))),
+                    m.h.dispatch({ type: "RTC_CONNECTION_UPDATE_ID", connection: this }))),
             null == this.endpoint)
         )
             return void this.setState(ep.S7L.AWAITING_ENDPOINT);
@@ -2982,7 +2925,7 @@ class t_ extends p.A {
             r.on(eP.MLSWelcome, this._handleMLSWelcome.bind(this)),
             r.on(eP.ReceiveMessage, this._recordMessageEvent.bind(this, 4)),
             r.on(eP.SendMessage, this._recordMessageEvent.bind(this, 5)),
-            (this._connectStartTime = (0, m.tB)()),
+            (this._connectStartTime = (0, g.tB)()),
             this._connectCount++,
             (this._connecting = !0),
             (this._voiceConnectionSuccessTracked = !1),
@@ -3006,7 +2949,7 @@ class t_ extends p.A {
         this.recordEvent({ c: 7 });
         let e = this._socket;
         null != e &&
-            (this._hasEverConnected && (this._connectStartTime = (0, m.tB)()),
+            (this._hasEverConnected && (this._connectStartTime = (0, g.tB)()),
             this._connecting ||
                 (this._trackVoiceConnectionConnecting(),
                 (this._connecting = !0),
@@ -3102,7 +3045,7 @@ class t_ extends p.A {
         return this.rtcWorkerVersion;
     }
     getDuration() {
-        let e = this._connectCompletedTime > 0 ? (0, m.tB)() - this._connectCompletedTime : 0;
+        let e = this._connectCompletedTime > 0 ? (0, g.tB)() - this._connectCompletedTime : 0;
         return e > 0 ? e : 0;
     }
     getDurationSeconds() {
@@ -3390,19 +3333,18 @@ class t_ extends p.A {
                     reason: i,
                     duration: this.getDuration(),
                     ...et.A.getUserVoiceSettingsStats(this.context),
-                    ...this._voiceQuality?.getMosStats(),
                     ...this._voiceQuality?.getPacketStats(),
                     ...this._voiceQuality?.getBytesStats(),
                     ...this._voiceQuality?.getBufferStats(),
                     ...this._voiceQuality?.getNetworkStats(),
                     ...this._voiceQuality?.getSystemResourceStats(),
                     ...this._voiceQuality?.getFrameOpStats(),
-                    ...this._voiceQuality?.getDurationStats(),
                     ...this._voiceQuality?.getTransportStats(),
                     ...this._voiceQuality?.getE2EEStats(),
                     ...this._voiceQuality?.getAudioDeviceStats(),
                     ...this._voiceQuality?.getAudioLevelStats(),
                     ...this._voiceDuration?.getDurationStats(),
+                    ...this._voiceDuration?.getDeprecatedDurationStats(),
                     ...B.A.getUsageStats(),
                     ...this.getAudioDeviceStates(),
                     ...this._systemResponsiveness?.getPttQueueLatencyStats(),
@@ -3536,7 +3478,7 @@ class t_ extends p.A {
             l = ee.Ay.getMediaEngine(),
             o = $.A.getPersistentCodesEnabled(),
             d = z.default.getStaticAuthSessionId() ?? void 0,
-            c = (0, m.tB)(),
+            c = (0, g.tB)(),
             u = l.connect(this.context, this.userId, {
                 ssrc: i,
                 address: e.address,
@@ -3551,7 +3493,7 @@ class t_ extends p.A {
                 threadPriorityConfiguration: s,
                 ...this.getExtraConnectionOptions(),
             });
-        ((this._mediaEngineConnectDuration = (0, m.tB)() - c),
+        ((this._mediaEngineConnectDuration = (0, g.tB)() - c),
             (0, eo.isWeb)() && !tr.PF && ec.A.captureMessage("Browser does not support Unified Plan"),
             u.setUseElectronVideo(l.supports(H.O5.ELECTRON_VIDEO)));
         let _ = null != this.guildId ? J.A.getGuild(this.guildId) : null,
@@ -3635,7 +3577,7 @@ class t_ extends p.A {
                     ((this._voiceQuality = new tt(u)),
                     this._voiceQuality.start(),
                     this._voiceQuality.on(te.InputDeviceSampleRateChanged, (e) => {
-                        g.h.dispatch({ type: "AUDIO_INPUT_DEVICE_SAMPLE_RATE_CHANGED", sampleRate: e });
+                        m.h.dispatch({ type: "AUDIO_INPUT_DEVICE_SAMPLE_RATE_CHANGED", sampleRate: e });
                     }),
                     (this._voiceQualityPeriodicStatsSequenceId = 0),
                     (this._voiceQualityPeriodicStatsInterval = setInterval(
@@ -3767,7 +3709,7 @@ class t_ extends p.A {
                     this.state === ep.S7L.RTC_CONNECTED
                         ? (this._localMediaSinkWantsManager?.setConnection(u),
                           this._goLiveQualityManager?.update(),
-                          (this._connectCompletedTime = (0, m.tB)()),
+                          (this._connectCompletedTime = (0, g.tB)()),
                           (this._hasEverConnected = !0),
                           (this._connecting = !1),
                           (this._encountered_socket_failure = !1),
@@ -3901,7 +3843,7 @@ class t_ extends p.A {
         }
     }
     _handleRemoteStreamsReady(e) {
-        let t = (0, m.tB)() - this._connectStartTime;
+        let t = (0, g.tB)() - this._connectStartTime;
         ea.default.track(ep.HAw.VOICE_CONNECTION_REMOTE_STREAMS_CREATED, {
             ...this._getAnalyticsProperties(),
             number_of_users: e,
@@ -4018,7 +3960,7 @@ class t_ extends p.A {
             this.emit(ef.q.ClientDisconnect, e),
             this._localMediaSinkWantsManager?.updateCallUserIds(this._userIds),
             this._videoQuality?.updateCallUserIdsCount(this._userIds.size),
-            1 === this._userIds.size && (this._secureFramesLastBecameAloneTime = (0, m.tB)()));
+            1 === this._userIds.size && (this._secureFramesLastBecameAloneTime = (0, g.tB)()));
     }
     _handleCodecs(e, t) {
         let n = this._connection;
@@ -4048,7 +3990,7 @@ class t_ extends p.A {
             protocol: this.protocol,
             address_family: a,
             cloudflare_best_region: t,
-            connect_time: (0, m.tB)() - (n ? this._createdTime : this._connectStartTime),
+            connect_time: (0, g.tB)() - (n ? this._createdTime : this._connectStartTime),
             connect_count: this._connectCount,
             audio_subsystem: ee.Ay.getMediaEngine().getAudioSubsystem(),
             audio_layer: ee.Ay.getMediaEngine().getAudioLayer(),
@@ -4096,7 +4038,7 @@ class t_ extends p.A {
             parent_media_session_id: this.parentMediaSessionId,
             raw_thermal_state: t,
         }),
-            g.h.dispatch({
+            m.h.dispatch({
                 type: "MEDIA_SESSION_JOINED",
                 mediaSessionId: this.getMediaSessionId(),
                 context: this.context,
@@ -4106,7 +4048,7 @@ class t_ extends p.A {
         let t = this._connection;
         (this.logger.info(`Remote media sink wants: ${JSON.stringify(e)}`),
             (this._remoteVideoSinkWants = e),
-            g.h.dispatch({
+            m.h.dispatch({
                 type: "RTC_CONNECTION_REMOTE_VIDEO_SINK_WANTS",
                 context: this.context,
                 wants: e,
@@ -4167,7 +4109,7 @@ class t_ extends p.A {
                 execute_error: t.executeError,
                 incomplete: t.incomplete,
                 active_transition_count: n,
-                time_since_creation: (0, m.tB)() - t.creationTime,
+                time_since_creation: (0, g.tB)() - t.creationTime,
                 users_added_count: t.usersAdded,
                 users_removed_count: t.usersRemoved,
                 roster_size_after: t.rosterSizeAfter,
@@ -4183,7 +4125,7 @@ class t_ extends p.A {
     _storeSecureFrameNextTransitionData(e) {
         return (
             null == this._secureFramesNextTransitionState &&
-                (this._secureFramesNextTransitionState = { creationTime: (0, m.tB)() }),
+                (this._secureFramesNextTransitionState = { creationTime: (0, g.tB)() }),
             (this._secureFramesNextTransitionState = { ...this._secureFramesNextTransitionState, ...e })
         );
     }
@@ -4198,7 +4140,7 @@ class t_ extends p.A {
             )));
     }
     _handleSecureFramesInit(e) {
-        let t = (0, m.tB)();
+        let t = (0, g.tB)();
         (this.recordEvent({ c: 11, v: e }),
             this._maybeRefuseDaveDowngrade("init", e) ||
                 (e > 0
@@ -4208,7 +4150,7 @@ class t_ extends p.A {
                       this._sendMLSKeyPackage(),
                       this._storeSecureFrameNextTransitionData({
                           initReceivedTime: t,
-                          initFinishedTime: (0, m.tB)(),
+                          initFinishedTime: (0, g.tB)(),
                           protocolVersion: e,
                       }),
                       this.recordEvent({ c: 10 }))
@@ -4221,7 +4163,7 @@ class t_ extends p.A {
                           }
                           (this._storeSecureFrameTransitionData(0, {
                               initReceivedTime: t,
-                              initFinishedTime: (0, m.tB)(),
+                              initFinishedTime: (0, g.tB)(),
                               protocolVersion: e,
                               executeError: n,
                           }),
@@ -4277,14 +4219,14 @@ class t_ extends p.A {
     _handleSecureFramesPrepareTransition(e, t) {
         (this.logger.info(`Preparing DAVE protocol transition: ${e}, protocol version: ${t}`),
             this._secureFramesTransitionPrepareCount++);
-        let n = (0, m.tB)();
+        let n = (0, g.tB)();
         this._maybeRefuseDaveDowngrade("transition", t, e) ||
             this._connection?.prepareSecureFramesTransition(e, t, () => {
                 (this._maybeSendSecureFramesTransitionReady(e),
                     this._storeSecureFrameTransitionData(e, {
                         protocolVersion: t,
                         prepareReceivedTime: n,
-                        prepareFinishedTime: (0, m.tB)(),
+                        prepareFinishedTime: (0, g.tB)(),
                     }));
             });
     }
@@ -4294,7 +4236,7 @@ class t_ extends p.A {
         this._maybeRefuseDaveDowngrade("epoch", t) ||
             (this._connection?.prepareSecureFramesEpoch(n, t, this.trueChannelId),
             "1" === n &&
-                ((this._mlsInitReceivedTime = (0, m.tB)()), this._sendMLSKeyPackage(), this.recordEvent({ c: 10 })));
+                ((this._mlsInitReceivedTime = (0, g.tB)()), this._sendMLSKeyPackage(), this.recordEvent({ c: 10 })));
     }
     _sendMLSKeyPackage() {
         this._connection?.getMLSKeyPackage((e) => {
@@ -4305,11 +4247,11 @@ class t_ extends p.A {
         0 !== e &&
             (this.logger.info(`Sending DAVE protocol ready for transition ID ${e}`),
             this._socket?.secureFramesReadyForTransition(e),
-            this._storeSecureFrameTransitionData(e, { readyTime: (0, m.tB)() }));
+            this._storeSecureFrameTransitionData(e, { readyTime: (0, g.tB)() }));
     }
     _handleSecureFramesExecuteTransition(e) {
         (this.logger.info(`Executing DAVE protocol transition: ${e}`), this._secureFramesTransitionExecuteCount++);
-        let t = (0, m.tB)(),
+        let t = (0, g.tB)(),
             n = !1;
         try {
             this._connection?.executeSecureFramesTransition(e);
@@ -4318,7 +4260,7 @@ class t_ extends p.A {
         }
         (this._storeSecureFrameTransitionData(e, {
             executeReceivedTime: t,
-            executeFinishedTime: (0, m.tB)(),
+            executeFinishedTime: (0, g.tB)(),
             executeError: n,
         }),
             this._trackSecureFrameTransition(e));
@@ -4327,10 +4269,10 @@ class t_ extends p.A {
         (this.logger.info("Received MLS external sender package"), this._connection?.updateMLSExternalSender(e));
     }
     _handleMLSProposals(e, t) {
-        let n = (0, m.tB)();
+        let n = (0, g.tB)();
         (this.logger.info("Received MLS proposals"),
             this._connection?.processMLSProposals(t, (i) => {
-                let r = (0, m.tB)();
+                let r = (0, g.tB)();
                 (this.logger.info("Sending MLS commit welcome message"), e.sendMLSCommitWelcome(i));
                 let a =
                     this._secureFramesNextTransitionState ??
@@ -4346,14 +4288,14 @@ class t_ extends p.A {
     }
     _handleMLSPrepareCommitTransition(e, t) {
         this.logger.info(`Received MLS commit for transition ID ${e}`);
-        let n = (0, m.tB)(),
+        let n = (0, g.tB)(),
             i = this._connection;
         i?.prepareMLSCommitTransition(e, t, (r, a, s) => {
             i === this._connection &&
                 (this._storeSecureFrameTransitionData(e, {
                     protocolVersion: a,
                     commitReceivedTime: n,
-                    commitFinishedTime: (0, m.tB)(),
+                    commitFinishedTime: (0, g.tB)(),
                     commitSize: t.byteLength,
                     commitError: !r,
                 }),
@@ -4362,20 +4304,20 @@ class t_ extends p.A {
                       this._handleSecureFramesRosterChange(s, e),
                       this._maybeSendSecureFramesTransitionReady(e))
                     : (this.logger.warn(`Failed to process MLS commit for transition ID ${e}`),
-                      (this._mlsSessionResetStartTime = (0, m.tB)()),
+                      (this._mlsSessionResetStartTime = (0, g.tB)()),
                       this._flagMLSInvalidCommitWelcome(e) && this._handleSecureFramesInit(a)));
         });
     }
     _handleMLSWelcome(e, t) {
         this.logger.info(`Received MLS welcome for transition ID ${e}`);
-        let n = (0, m.tB)(),
+        let n = (0, g.tB)(),
             i = this._connection;
         i?.processMLSWelcome(e, t, (r, a, s) => {
             i === this._connection &&
                 (this._storeSecureFrameTransitionData(e, {
                     protocolVersion: a,
                     welcomeReceivedTime: n,
-                    welcomeFinishedTime: (0, m.tB)(),
+                    welcomeFinishedTime: (0, g.tB)(),
                     welcomeSize: t.byteLength,
                     welcomeError: !r,
                 }),
@@ -4383,7 +4325,7 @@ class t_ extends p.A {
                     ? (this._handleMLSSuccess(),
                       this._handleSecureFramesRosterChange(s, e),
                       this._maybeSendSecureFramesTransitionReady(e))
-                    : ((this._mlsSessionResetStartTime = (0, m.tB)()),
+                    : ((this._mlsSessionResetStartTime = (0, g.tB)()),
                       this._flagMLSInvalidCommitWelcome(e) && this._sendMLSKeyPackage()));
         });
     }
@@ -4413,7 +4355,7 @@ class t_ extends p.A {
         );
     }
     _handleMLSFailure(e, t) {
-        let n = (0, m.tB)(),
+        let n = (0, g.tB)(),
             i = this._nextFailureId++;
         (this.recordEvent({ c: 3, i: i }),
             this._mlsFailures.push({
@@ -4432,7 +4374,7 @@ class t_ extends p.A {
     }
     _trackMLSFailures(e) {
         let { recovered: t, downgraded: n } = e,
-            i = (0, m.tB)(),
+            i = (0, g.tB)(),
             r = this.getMediaSessionId(),
             a = null != this._mlsSessionResetStartTime ? i - this._mlsSessionResetStartTime : void 0;
         for (let {
