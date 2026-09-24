@@ -11,24 +11,24 @@ var i = n(435558),
     A = n(152007),
     h = n(617617),
     E = n(280450),
-    g = n(924985),
-    C = n(734057),
+    C = n(924985),
+    g = n(734057),
     _ = n(945886),
-    I = n(576705),
-    T = n(573163),
+    T = n(576705),
+    I = n(573163),
     p = n(309010),
     N = n(543465),
     S = n(403362),
     f = n(935208),
     m = n(297469),
-    L = n(355097);
-let O = null,
+    O = n(355097);
+let L = null,
     b = null,
     v = new m.Ay();
 function R() {
     let e = p.Ay.getChannelId(),
         t = p.Ay.getVoiceChannelId();
-    return ((O = e), (b = t), v.clear());
+    return ((L = e), (b = t), v.clear());
 }
 function U(e) {
     let {
@@ -61,22 +61,22 @@ function P(e) {
 function x() {
     let e = p.Ay.getChannelId(),
         t = p.Ay.getVoiceChannelId(),
-        n = O !== e || b !== t;
+        n = L !== e || b !== t;
     return (
         !!n &&
-        (l()([O, b, e, t])
+        (l()([L, b, e, t])
             .uniq()
             .forEach((e) => {
                 null != e && v.nonPositionalChannelIdUpdate(e) && (n = !0);
             }),
-        (O = e),
+        (L = e),
         (b = t),
         !0)
     );
 }
 function w(e) {
     let { id: t } = e,
-        n = C.A.getChannel(t);
+        n = g.A.getChannel(t);
     return null == n ? v.clearGuildId(t) : v.clearGuildId(n.guild_id);
 }
 function V(e) {
@@ -93,7 +93,7 @@ function H(e) {
 class B extends r.Ay.Store {
     static displayName = "ChannelListStore";
     initialize() {
-        this.waitFor(u.A, E.default, g.A, C.A, _.A, a.Ay, d.A, c.Ay, A.A, I.A, T.Ay, p.Ay, N.Ay, h.A);
+        this.waitFor(u.A, E.default, C.A, g.A, _.A, a.Ay, d.A, c.Ay, A.A, T.A, I.Ay, p.Ay, N.Ay, h.A);
     }
     getGuild(e, t) {
         let n = v.getGuild(e, t?.guildActionRows ?? [], t?.channelNoticeRows ?? []);
@@ -122,7 +122,7 @@ let F = new B(s.h, {
             n = !1;
         return (
             l()(t)
-                .map((e) => C.A.getChannel(e.channelId)?.guild_id)
+                .map((e) => g.A.getChannel(e.channelId)?.guild_id)
                 .filter(S.Vq)
                 .uniq()
                 .forEach((e) => {
@@ -140,7 +140,7 @@ let F = new B(s.h, {
     CHANNEL_ACK: G,
     CHANNEL_COLLAPSE: function (e) {
         let { channelId: t } = e;
-        return v.clearGuildId(C.A.getChannel(t)?.guild_id);
+        return v.clearGuildId(g.A.getChannel(t)?.guild_id);
     },
     CHANNEL_CREATE: D,
     CHANNEL_DELETE: D,
@@ -261,7 +261,7 @@ let F = new B(s.h, {
     USER_GUILD_SETTINGS_GUILD_UPDATE: y,
     USER_SETTINGS_PROTO_UPDATE: function (e) {
         let { settings: t } = e;
-        if (t.type !== L.oD.PRELOADED_USER_SETTINGS) return !1;
+        if (t.type !== O.oD.PRELOADED_USER_SETTINGS) return !1;
         let n = t.proto.guilds?.guilds,
             i = !1;
         return (
@@ -288,6 +288,6 @@ let F = new B(s.h, {
         return n;
     },
     WINDOW_FOCUS: function () {
-        return null != O && v.nonPositionalChannelIdUpdate(O);
+        return null != L && v.nonPositionalChannelIdUpdate(L);
     },
 });

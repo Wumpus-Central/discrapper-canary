@@ -1,4 +1,4 @@
-n.d(t, { A: () => g });
+n.d(t, { A: () => C });
 var i = n(477900);
 n(582128);
 var l = n(661531),
@@ -20,23 +20,23 @@ let h = {
         locked: l.A.unsafe_rawColors.PRIMARY_400.css,
         unlocked: l.A.unsafe_rawColors.GREEN_330.css,
     };
-function g(e) {
+function C(e) {
     let { achievementId: t, unlocked: n, size: l = s._3.SIZE_40 } = e,
-        g = (0, d.Ay)(),
-        C = (0, u.vM)(t);
-    if (null == C) return null;
+        C = (0, d.Ay)(),
+        g = (0, u.vM)(t);
+    if (null == g) return null;
     let _ = (0, s.Kj)(l),
-        { name: I, rarity: T } = C,
-        { color: p } = (0, u.ag)(T),
-        N = (0, r.M)(g) ? h : E,
+        { name: T, rarity: I } = g,
+        { color: p } = (0, u.ag)(I),
+        N = (0, r.M)(C) ? h : E,
         S = (_.size - _.offset - 2 * _.stroke) * 0.8,
         f = _.size - _.stroke,
         m = { width: 0.4 * S, height: 0.4 * S },
-        L = { width: m.width + 1, height: m.height + 1, right: _.stroke + 1, bottom: _.stroke + 1, padding: 0 };
+        O = { width: m.width + 1, height: m.height + 1, right: _.stroke + 1, bottom: _.stroke + 1, padding: 0 };
     return (0, i.jsxs)("div", {
         className: A.kL,
         style: { width: f, height: f, padding: _.stroke },
-        "aria-label": `${I() ?? ""}`,
+        "aria-label": `${T() ?? ""}`,
         children: [
             (0, i.jsx)("div", {
                 className: A.r5,
@@ -45,13 +45,13 @@ function g(e) {
             !n &&
                 (0, i.jsx)("div", {
                     className: A.dq,
-                    style: L,
+                    style: O,
                     children: (0, i.jsx)(o.LockIcon, { size: "custom", color: N.locked, ...m }),
                 }),
             n &&
-                T === u.md.LEGENDARY &&
-                (0, i.jsx)("div", { className: A.dq, style: L, children: (0, i.jsx)(c.A, { className: A.ox, ...m }) }),
+                I === u.md.LEGENDARY &&
+                (0, i.jsx)("div", { className: A.dq, style: O, children: (0, i.jsx)(c.A, { className: A.ox, ...m }) }),
         ],
     });
 }
-g.Sizes = s._3;
+C.Sizes = s._3;

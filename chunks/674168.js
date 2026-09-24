@@ -12,25 +12,25 @@ var l = n(17928),
     A = n(725807),
     h = n(212168),
     E = n(780964),
-    g = n(766075),
-    C = n(287809),
+    C = n(766075),
+    g = n(287809),
     _ = n(158045),
-    I = n(652215),
-    T = n(49999),
+    T = n(652215),
+    I = n(49999),
     p = n(202541),
     N = n(375708),
     S = n(316632);
 function f(e) {
     var t;
     let { onClose: n, markAsDismissed: f } = e,
-        m = (0, l.bG)([C.default], () => C.default.getCurrentUser()),
-        L =
+        m = (0, l.bG)([g.default], () => g.default.getCurrentUser()),
+        O =
             (t = m?.premiumType) === p.PremiumTypes.TIER_2
                 ? N.intl.string(N.t.jqO5Qn)
                 : null == t
                   ? N.intl.string(N.t.f2qjw5)
                   : N.intl.string(N.t.SblICW),
-        O = _.Ay.canUseCustomCallSounds(m);
+        L = _.Ay.canUseCustomCallSounds(m);
     return (0, i.jsxs)(h.A, {
         isShown: !0,
         type: h.i.PREMIUM,
@@ -40,7 +40,7 @@ function f(e) {
             null != f
                 ? (0, i.jsx)(a.D, {
                       className: S.VN,
-                      onClick: () => f?.(T.i.DISMISS),
+                      onClick: () => f?.(I.i.DISMISS),
                       "aria-label": N.intl.string(N.t.cpT0Cq),
                       children: (0, i.jsx)(o.P, { size: "xs", color: "currentColor", className: S.ut }),
                   })
@@ -52,11 +52,11 @@ function f(e) {
                     (0, i.jsx)(c.D, { variant: "heading-sm/bold", children: N.intl.string(N.t.dTbAxx) }),
                 ],
             }),
-            (0, i.jsx)(r.E, { variant: "text-sm/normal", children: L }),
-            O
+            (0, i.jsx)(r.E, { variant: "text-sm/normal", children: O }),
+            L
                 ? (0, i.jsx)(u.$, {
                       onClick: function () {
-                          ((0, g.openUserSettings)(E.X.SOUNDBOARD_CATEGORY), n?.(), f?.(T.i.PRIMARY));
+                          ((0, C.openUserSettings)(E.X.SOUNDBOARD_CATEGORY), n?.(), f?.(I.i.PRIMARY));
                       },
                       text: N.intl.string(N.t.RzWDqY),
                       fullWidth: !0,
@@ -65,11 +65,11 @@ function f(e) {
                       textOptions: { textOverride: N.intl.string(N.t.pj0XBN) },
                       subscriptionTier: p.pe.TIER_2,
                       premiumModalAnalyticsLocation: {
-                          section: I.JJy.SOUNDBOARD_SOUND_PICKER,
-                          object: I.ZSU.BUTTON_CTA,
+                          section: T.JJy.SOUNDBOARD_SOUND_PICKER,
+                          object: T.ZSU.BUTTON_CTA,
                       },
                       color: s.$n.Colors.GREEN,
-                      onSubscribeModalClose: () => f?.(T.i.PRIMARY),
+                      onSubscribeModalClose: () => f?.(I.i.PRIMARY),
                   }),
         ],
     });

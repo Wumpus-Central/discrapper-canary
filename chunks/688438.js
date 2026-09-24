@@ -364,7 +364,7 @@ let eW = i.memo(
                 [N, Z, Y, f.id, ed, et, e2],
             ),
             { submit: e8, handleSubmit: e5 } = (0, eO.Zx)(e7, C, eS, ej, f.id),
-            { autocompleteRef: e6, handleMaybeShowAutocomplete: e9, handleHideAutocomplete: te } = (0, eO.v7)(),
+            { autocompleteRef: e9, handleMaybeShowAutocomplete: e6, handleHideAutocomplete: te } = (0, eO.v7)(),
             tt = i.useCallback(() => ej?.current?.hide(), []),
             { editorHeight: tn, handleResize: tl } = (0, eO.ck)(I),
             {
@@ -373,19 +373,19 @@ let eW = i.memo(
                 handleSpace: ta,
                 handleMoveSelection: tr,
             } = ((n = i.useCallback(
-                () => !!(!eF && eg.current?.onTabOrEnter(!1)) || e6.current?.onTabOrEnter(!1) || !1,
+                () => !!(!eF && eg.current?.onTabOrEnter(!1)) || e9.current?.onTabOrEnter(!1) || !1,
                 [eF],
             )),
             (s = i.useCallback(
-                () => !!(!eF && eg.current?.onTabOrEnter(!0)) || e6.current?.onTabOrEnter(!1) || !1,
+                () => !!(!eF && eg.current?.onTabOrEnter(!0)) || e9.current?.onTabOrEnter(!1) || !1,
                 [eF],
             )),
             {
                 handleTab: n,
                 handleEnter: s,
-                handleSpace: i.useCallback(() => e6.current?.onSpace() || !1, [e6]),
+                handleSpace: i.useCallback(() => e9.current?.onSpace() || !1, [e9]),
                 handleMoveSelection: i.useCallback(
-                    (e) => !!(!eF && eg.current?.onMoveSelection(e)) || e6.current?.onMoveSelection(e) || !1,
+                    (e) => !!(!eF && eg.current?.onMoveSelection(e)) || e9.current?.onMoveSelection(e) || !1,
                     [eF],
                 ),
             }),
@@ -530,7 +530,7 @@ let eW = i.memo(
                                                             onSpace: ta,
                                                             onMoveSelection: tr,
                                                             onSelectionChanged: e4,
-                                                            onMaybeShowAutocomplete: e9,
+                                                            onMaybeShowAutocomplete: e6,
                                                             onHideAutocomplete: te,
                                                             promptToUpload: T,
                                                             fontSize: eY,
@@ -634,7 +634,7 @@ let eW = i.memo(
                             }),
                             (0, l.jsx)(ea.A, {
                                 targetRef: em,
-                                ref: e6,
+                                ref: e9,
                                 channel: f,
                                 canMentionRoles: v,
                                 canMentionChannels: M,
@@ -846,8 +846,8 @@ var e3 = n(319365),
     e7 = n(407278),
     e8 = n(81400),
     e5 = n(353182),
-    e6 = n(727875);
-function e9(e) {
+    e9 = n(727875);
+function e6(e) {
     let {
         bannerIcon: t,
         bannerHeader: n,
@@ -858,22 +858,22 @@ function e9(e) {
         children: c,
     } = e;
     return (0, l.jsxs)("div", {
-        className: a()(e6.Ew, o),
+        className: a()(e9.Ew, o),
         children: [
             (0, l.jsxs)("div", {
-                className: a()(e6.lt, s),
+                className: a()(e9.lt, s),
                 children: [
-                    null != t && ("string" == typeof t ? (0, l.jsx)("img", { src: t, alt: "", className: e6.q3 }) : t),
+                    null != t && ("string" == typeof t ? (0, l.jsx)("img", { src: t, alt: "", className: e9.q3 }) : t),
                     (0, l.jsxs)("div", {
-                        className: e6._M,
+                        className: e9._M,
                         children: [
-                            (0, l.jsx)("div", { className: a()(e6.U_, r), children: n }),
-                            null != i && (0, l.jsx)("div", { className: e6.mi, children: i }),
+                            (0, l.jsx)("div", { className: a()(e9.U_, r), children: n }),
+                            null != i && (0, l.jsx)("div", { className: e9.mi, children: i }),
                         ],
                     }),
                 ],
             }),
-            (0, l.jsx)("div", { className: e6.uu, children: c }),
+            (0, l.jsx)("div", { className: e9.uu, children: c }),
         ],
     });
 }
@@ -888,7 +888,7 @@ function tr(e) {
     let { guild: t } = e,
         n = (0, te.A)({ scrollPosition: ts._F.GUILD_TAG });
     return (0, l.jsx)("div", {
-        children: (0, l.jsx)(e9, {
+        children: (0, l.jsx)(e6, {
             bannerIcon: (0, l.jsx)(e5._, { size: "lg", color: "currentColor", className: ta.q3 }),
             bannerHeader: eH.intl.format(eH.t.GgMwjk, { guildName: t?.name ?? "" }),
             bannerSubtext: eH.intl.string(eH.t.ONjwD5),
@@ -910,7 +910,7 @@ function to(e) {
         a = s ? eH.intl.string(eH.t["9ph2v7"]) : eH.intl.string(eH.t.ldh9Cg),
         r = s ? eH.intl.string(eH.t["/PGQf0"]) : eH.intl.string(eH.t.WikgZ1);
     return (0, l.jsx)("div", {
-        children: (0, l.jsx)(e9, {
+        children: (0, l.jsx)(e6, {
             bannerIcon: (0, l.jsx)(e5._, { size: "lg", color: "currentColor", className: ta.q3 }),
             bannerHeader: eH.intl.format(eH.t.kcYdTq, { guildName: t?.name ?? "" }),
             bannerSubtext: a,
@@ -1036,7 +1036,7 @@ function tO(e) {
         (0, l.jsxs)("div", {
             children: [
                 s ? (0, l.jsx)(tL, { onClose: () => a(t.id), guildName: t.name }) : null,
-                (0, l.jsx)(e9, {
+                (0, l.jsx)(e6, {
                     bannerIcon: (0, l.jsx)(tb.g, { size: "md", color: "currentColor", className: tP.q3 }),
                     bannerHeader: eH.intl.string(eH.t["9UoK6Y"]),
                     bannerSubtext: eH.intl.format(eH.t["4ZwD5G"], { link: tk.MO }),
@@ -1058,7 +1058,7 @@ var tG = n(429933),
     tH = n(268378),
     tB = n(273692);
 function tK() {
-    return (0, l.jsx)(e9, {
+    return (0, l.jsx)(e6, {
         textStyles: tB.U,
         bannerIcon: (0, l.jsx)(tF.x, { size: "lg" }),
         bannerHeader: eH.intl.string(tH.default.unC18Z),
@@ -1077,7 +1077,7 @@ var tV = n(823099),
     tQ = n(671210),
     t0 = n(308718);
 function t1() {
-    return (0, l.jsx)(e9, {
+    return (0, l.jsx)(e6, {
         containerStyles: t0.k,
         bannerHeader: eH.intl.string(tQ.default.e7ydX0),
         bannerSubtext: eH.intl.string(tQ.default.POfugg),
@@ -1090,8 +1090,8 @@ n(142703);
 var t7 = n(765671),
     t8 = n(741961),
     t5 = n(459793),
-    t6 = n(103640);
-function t9(e, t) {
+    t9 = n(103640);
+function t6(e, t) {
     return e === t || (e?.channelId === t?.channelId && e?.value === t?.value && e?.multiplier === t?.multiplier);
 }
 var ne = n(93219);
@@ -1104,7 +1104,7 @@ let nt = i.memo(function (e) {
             if (a?.displayed) return;
             (o(!1),
                 setImmediate(() => {
-                    o((null != a ? (0, t6.RL)(a.combo) : 0) > 0);
+                    o((null != a ? (0, t9.RL)(a.combo) : 0) > 0);
                 }));
             let e = setTimeout(() => {
                 (o(!1), null != a && (0, t2.Nu)(a));
@@ -1127,13 +1127,13 @@ let nt = i.memo(function (e) {
             (0, l.jsx)(F.animated.div, {
                 className: ne.Gi,
                 style: d,
-                children: (0, l.jsx)(W.E, { className: ne.fX, variant: "text-sm/bold", children: (0, t6.RL)(a.combo) }),
+                children: (0, l.jsx)(W.E, { className: ne.fX, variant: "text-sm/bold", children: (0, t9.RL)(a.combo) }),
             })
         );
     }),
     nn = i.memo(function (e) {
         let { value: t, multiplier: n } = e,
-            { color: s, square: r, flair: o } = i.useMemo(() => (0, t6.HN)(n), [n]);
+            { color: s, square: r, flair: o } = i.useMemo(() => (0, t9.HN)(n), [n]);
         return (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsx)(W.E, { className: ne.iR, variant: "text-sm/bold", children: t }),
@@ -1193,7 +1193,7 @@ let nt = i.memo(function (e) {
                     [t4.Ay, tt.default],
                     () => (t ? t4.Ay.getUserCombo(tt.default.getId(), n) : void 0),
                     [n, t],
-                    t9,
+                    t6,
                 )),
             p = r && o && a;
         i.useEffect(() => {
@@ -1239,7 +1239,7 @@ let no = function (e, t) {
 };
 var nc = n(831502);
 let nd = function () {
-    return (0, l.jsx)(e9, {
+    return (0, l.jsx)(e6, {
         bannerIcon: (0, l.jsx)(na.M, { alt: "", width: 80, height: 40 }),
         bannerHeader: eH.intl.string(eH.t.EouHwv),
         bannerSubtext: eH.intl.format(eH.t.PThBel, { appealLink: nc.q }),
@@ -1255,7 +1255,7 @@ let nA = function (e) {
         n = i.useCallback(() => {
             nm.A.reopenModReport(t);
         }, [t]);
-    return (0, l.jsx)(e9, {
+    return (0, l.jsx)(e6, {
         bannerHeader: (0, l.jsx)(W.E, {
             variant: "text-md/medium",
             color: "text-muted",

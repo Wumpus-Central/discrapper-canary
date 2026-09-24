@@ -1,4 +1,4 @@
-n.d(t, { A: () => T, I: () => g });
+n.d(t, { A: () => I, I: () => C });
 var i = n(477900);
 n(582128);
 var l = n(607399),
@@ -32,13 +32,13 @@ let E = (0, a.Fe)({
     name: "Search",
     renderLoader: o.O7,
 });
-async function g(e) {
+async function C(e) {
     if (!e && (0, d.isMac)() && d.isPlatformEmbedded) {
         let e = await window.DiscordNative.app.getDefaultDoubleClickAction();
         "Minimize" === e ? c.Ay.minimize() : "Maximize" === e && c.Ay.maximize();
     }
 }
-function C(e) {
+function g(e) {
     let {
         children: t,
         className: n,
@@ -48,10 +48,10 @@ function C(e) {
         transparent: o = !1,
         hidden: d = !1,
         toolbar: c,
-        mobileToolbar: C,
+        mobileToolbar: g,
         "aria-label": _,
-        "aria-labelledby": I,
-        scrollable: T,
+        "aria-labelledby": T,
+        scrollable: I,
         role: p,
         hideSearch: N,
         disableDoubleClick: S,
@@ -64,7 +64,7 @@ function C(e) {
             if (null == c) return null;
             let e = null != r && !N;
             return l.Fr
-                ? C
+                ? g
                 : (0, i.jsxs)(i.Fragment, {
                       children: [
                           c,
@@ -76,11 +76,11 @@ function C(e) {
         })(),
         transparent: o,
         hidden: d,
-        onDoubleClick: () => g(S),
+        onDoubleClick: () => C(S),
         "aria-label": _,
-        "aria-labelledby": I,
+        "aria-labelledby": T,
         role: p,
-        scrollable: T,
+        scrollable: I,
         disableFocusRingScope: f,
         children: t,
     });
@@ -97,7 +97,7 @@ function _(e) {
     } = e;
     return (0, i.jsx)(u.Ay, {
         className: n,
-        onDoubleClick: () => g(a),
+        onDoubleClick: () => C(a),
         "aria-label": l,
         "aria-labelledby": r,
         role: s,
@@ -105,17 +105,17 @@ function _(e) {
         children: t,
     });
 }
-function I(e) {
+function T(e) {
     let { isAuthenticated: t = !0, ...n } = e,
         { analyticsLocations: l } = (0, s.Ay)(r.A.HEADER_BAR);
     return (0, i.jsx)(s.f5, {
         value: l,
-        children: t ? (0, i.jsx)(C, { ...n, className: n.className }) : (0, i.jsx)(_, { ...n, className: n.className }),
+        children: t ? (0, i.jsx)(g, { ...n, className: n.className }) : (0, i.jsx)(_, { ...n, className: n.className }),
     });
 }
-((I.Title = u.Ay.Title),
-    (I.Icon = u.Ay.Icon),
-    (I.ChannelIcon = u.Ay.ChannelIcon),
-    (I.Divider = u.Ay.Divider),
-    (I.Caret = u.Ay.Caret));
-let T = I;
+((T.Title = u.Ay.Title),
+    (T.Icon = u.Ay.Icon),
+    (T.ChannelIcon = u.Ay.ChannelIcon),
+    (T.Divider = u.Ay.Divider),
+    (T.Caret = u.Ay.Caret));
+let I = T;

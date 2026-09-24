@@ -1,4 +1,4 @@
-n.d(t, { AB: () => S, AI: () => A, Xc: () => I, ae: () => p, g8: () => _, gF: () => f, gS: () => N, vz: () => T });
+n.d(t, { AB: () => S, AI: () => A, Xc: () => T, ae: () => p, g8: () => _, gF: () => f, gS: () => N, vz: () => I });
 var i,
     l = n(873298),
     r = n(885386),
@@ -22,13 +22,13 @@ function E(e) {
             return -1;
     }
 }
-let g = new Map([
+let C = new Map([
     [l.KP.FRIENDS_AND_ALL_GUILDS, h.ACTIVITY_STATUS_OFF],
     [l.KP.FRIENDS_AND_SMALL_GUILDS, h.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS],
     [l.KP.FRIENDS_ONLY, h.ACTIVITY_STATUS_ON],
 ]);
-function C(e) {
-    return g.get(e) ?? h.ACTIVITY_STATUS_OFF;
+function g(e) {
+    return C.get(e) ?? h.ACTIVITY_STATUS_OFF;
 }
 function _(e, t) {
     if (e === t) return null;
@@ -69,7 +69,7 @@ function _(e, t) {
           }),
           { affectedGuildIds: A, direction: l });
 }
-function I(e) {
+function T(e) {
     switch (e) {
         case h.ACTIVITY_STATUS_OFF:
             return u.intl.string(u.t.FzgQna).toLowerCase();
@@ -81,7 +81,7 @@ function I(e) {
             return "";
     }
 }
-function T(e, t) {
+function I(e, t) {
     return {
         title: u.intl.string(e ? u.t.eYDA7D : u.t["9jYwjo"]),
         subtitle: u.intl.format(e ? u.t["c5/jDc"] : u.t.ajzh8S, { settingName: t }),
@@ -98,9 +98,9 @@ function p(e, t) {
     };
 }
 function N(e, t) {
-    let n = C(t),
+    let n = g(t),
         i = r._Z.getSetting();
-    if (i === n || E(C(e)) > E(n) != E(i) > E(n)) return null;
+    if (i === n || E(g(e)) > E(n) != E(i) > E(n)) return null;
     let s = _(i, n);
     if (null == s) return null;
     let a = (function (e) {

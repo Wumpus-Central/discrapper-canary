@@ -1,4 +1,4 @@
-n.d(t, { c: () => C });
+n.d(t, { c: () => g });
 var i = n(621466),
     l = n(557361),
     r = n(775602),
@@ -53,7 +53,7 @@ let A = new Set(["PageDown", "PageUp", "Home", "End", "ArrowUp", "ArrowDown", "A
         "ZoomIn",
         "ZoomOut",
     ]),
-    g = new Set([
+    C = new Set([
         "ChannelDown",
         "ChannelUp",
         "MediaFastForward",
@@ -84,14 +84,14 @@ let A = new Set(["PageDown", "PageUp", "Home", "End", "ArrowUp", "ArrowDown", "A
         "VolumeDown",
         "VolumeMute",
     ]),
-    C = {
+    g = {
         binds: ["any-character"],
         keydown(e, t) {
             let n = (0, i.BF)(e)?.activeElement;
-            if ((0, i.Cw)(n) || l.rx.isActive() || h.has(t) || E.has(t) || g.has(t)) return !1;
-            let C = null != n && "BODY" === n.tagName;
+            if ((0, i.Cw)(n) || l.rx.isActive() || h.has(t) || E.has(t) || C.has(t)) return !1;
+            let g = null != n && "BODY" === n.tagName;
             if (
-                (r.Ay.keyboardModeEnabled && !C && !/^[a-zA-Z0-9]$/.test(t)) ||
+                (r.Ay.keyboardModeEnabled && !g && !/^[a-zA-Z0-9]$/.test(t)) ||
                 d._.hasSubscribers(u.jej.MODAL_CLOSE) ||
                 s.A.hasLayers()
             )

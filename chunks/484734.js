@@ -21,17 +21,17 @@ var i = n(477900),
     A = n(34188),
     h = n(577473),
     E = n(403581),
-    g = n(323384),
-    C = n(625903),
+    C = n(323384),
+    g = n(625903),
     _ = n(659421),
-    I = n(329308),
-    T = n(571694),
+    T = n(329308),
+    I = n(571694),
     p = n(47167),
     N = n(713654),
     S = n(503698),
     f = n.n(S),
     m = n(62986);
-let L = function (e) {
+let O = function (e) {
     let { value: t = 0, text: n, className: l, lowImportance: r, ...s } = e;
     return null != n
         ? (0, i.jsx)("div", { className: f()(m.i, l, r && m.H), ...s, children: n })
@@ -39,7 +39,7 @@ let L = function (e) {
           ? (0, i.jsx)("div", { className: f()(m.i, l, r && m.H), ...s, children: t })
           : null;
 };
-var O = n(769015),
+var L = n(769015),
     b = n(106191),
     v = n(548118),
     R = n(376943),
@@ -158,7 +158,7 @@ class H extends l.Component {
             t,
             { mentions: n, category: l, channel: r, isMentionLowImportance: s } = this.props;
         return (
-            null != n && n > 0 && (e = (0, i.jsx)(L, { className: w.qS, value: n, lowImportance: s })),
+            null != n && n > 0 && (e = (0, i.jsx)(O, { className: w.qS, value: n, lowImportance: s })),
             null != l && (t = (0, i.jsx)("span", { className: w.N4, children: (0, p.m1)(l, G.default, y.A) })),
             (0, i.jsxs)("div", {
                 className: w.UU,
@@ -220,14 +220,14 @@ class B extends l.Component {
         let { channel: e, status: t } = this.props;
         return (0, i.jsx)("div", {
             className: w.IU,
-            children: (0, i.jsx)(s.eu, { src: (0, T.Y)(e), size: a._3.SIZE_20, "aria-hidden": !0, status: t }),
+            children: (0, i.jsx)(s.eu, { src: (0, I.Y)(e), size: a._3.SIZE_20, "aria-hidden": !0, status: t }),
         });
     }
     renderName() {
         let e,
             { mentions: t, channel: n } = this.props;
         return (
-            null != t && t > 0 && (e = (0, i.jsx)(L, { className: w.qS, value: t })),
+            null != t && t > 0 && (e = (0, i.jsx)(O, { className: w.qS, value: t })),
             (0, i.jsxs)("div", {
                 className: w.UU,
                 children: [(0, i.jsx)("span", { className: w.YW, children: (0, p.m1)(n, G.default, y.A) }), e],
@@ -292,7 +292,7 @@ class F extends l.Component {
             { user: t, mentions: n } = this.props,
             l = this.getDisplayNickname();
         return (
-            null != n && n > 0 && (e = (0, i.jsx)(L, { className: w.qS, value: n })),
+            null != n && n > 0 && (e = (0, i.jsx)(O, { className: w.qS, value: n })),
             (0, i.jsxs)("div", {
                 className: w.UU,
                 children: [
@@ -341,7 +341,7 @@ class k extends l.Component {
             children: [
                 (0, i.jsx)("div", {
                     className: w.zc,
-                    children: (0, i.jsx)(O.A, { tabIndex: -1, className: w.Gt, game: t, size: w.D0 }),
+                    children: (0, i.jsx)(L.A, { tabIndex: -1, className: w.Gt, game: t, size: w.D0 }),
                 }),
                 t.name,
                 (0, i.jsx)("div", { className: w.Lr, children: e }),
@@ -440,30 +440,30 @@ class Z extends l.Component {
             t,
             { navigationRecord: n, children: l } = this.props;
         switch (n.type) {
-            case I.t1.SHOP:
+            case T.t1.SHOP:
                 ((e = x.intl.string(x.t.pWG4ze)), (t = (0, i.jsx)(A.U, { size: "xs", color: "currentColor" })));
                 break;
-            case I.t1.SHOP_ORBS_TAB:
+            case T.t1.SHOP_ORBS_TAB:
                 ((e = x.intl.string(x.t.EBYkzk)), (t = (0, i.jsx)(A.U, { size: "xs", color: "currentColor" })));
                 break;
-            case I.t1.QUEST_ORBS:
+            case T.t1.QUEST_ORBS:
                 ((e = `${x.intl.string(x.t.ElYQFS)} ${x.intl.string(x.t.JALI2K)}`),
                     (t = (0, i.jsx)(h.r, { size: "xs", color: "currentColor" })));
                 break;
-            case I.t1.NITRO_HOME:
+            case T.t1.NITRO_HOME:
                 ((e = x.intl.string(x.t.Ipxkog)), (t = (0, i.jsx)(E.t, { size: "xs", color: "currentColor" })));
                 break;
-            case I.t1.QUEST_HOME:
+            case T.t1.QUEST_HOME:
                 ((e = x.intl.string(x.t.JALI2K)), (t = (0, i.jsx)(h.r, { size: "xs", color: "currentColor" })));
                 break;
-            case I.t1.APPS_HOME:
-                ((e = x.intl.string(x.t.PHjkRE)), (t = (0, i.jsx)(g.k, { size: "xs", color: "currentColor" })));
+            case T.t1.APPS_HOME:
+                ((e = x.intl.string(x.t.PHjkRE)), (t = (0, i.jsx)(C.k, { size: "xs", color: "currentColor" })));
                 break;
-            case I.t1.SETTINGS:
+            case T.t1.SETTINGS:
                 ((e = n.label ?? x.intl.string(x.t["3D5yo/"])),
-                    (t = (0, i.jsx)(C.SettingsIcon, { size: "xs", color: "currentColor" })));
+                    (t = (0, i.jsx)(g.SettingsIcon, { size: "xs", color: "currentColor" })));
                 break;
-            case I.t1.PLAYGROUND:
+            case T.t1.PLAYGROUND:
                 if (((e = n.label ?? `${n.collectionId} Playground`), null != n.IconComponent)) {
                     let e = n.IconComponent;
                     t = (0, i.jsx)(e, { size: "xs", color: "currentColor" });

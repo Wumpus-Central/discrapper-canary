@@ -427,8 +427,8 @@ var eO = i(721932),
     e$ = i(107563),
     e0 = i(840411),
     e1 = i(666810),
-    e2 = i(248550),
-    e8 = i(419731),
+    e8 = i(248550),
+    e2 = i(419731),
     e5 = i(451395),
     e3 = i(823016),
     e7 = i(100741);
@@ -481,7 +481,7 @@ let e4 = l.memo(function (e) {
         ),
         h = l.useMemo(
             () =>
-                (0, n.jsx)(e2.A, {
+                (0, n.jsx)(e8.A, {
                     item: t,
                     wishlistOwner: s,
                     guildId: a,
@@ -534,7 +534,7 @@ function e9(e) {
                     wishlistId: d,
                     isDragging: c,
                     onReorder: x,
-                    isNew: (0, e8.f3)(e.addedAt, r) && !u.includes(e.skuId),
+                    isNew: (0, e2.f3)(e.addedAt, r) && !u.includes(e.skuId),
                     onClick: m,
                 },
                 e.skuId,
@@ -1100,7 +1100,7 @@ function t1(e) {
         onMouseDown: r,
     });
 }
-function t2(e) {
+function t8(e) {
     let {
             showEditingControls: t,
             socialLayerStorefrontApplicationIds: i,
@@ -1162,7 +1162,7 @@ function t2(e) {
         ],
     });
 }
-function t8(e) {
+function t2(e) {
     let {
             isOwner: t,
             showEditingControls: i,
@@ -1320,7 +1320,7 @@ function t5(e) {
         fade: !0,
         children: [
             b
-                ? (0, n.jsx)(t2, {
+                ? (0, n.jsx)(t8, {
                       showEditingControls: u,
                       socialLayerStorefrontApplicationIds: A,
                       handleOpenShop: E,
@@ -1330,7 +1330,7 @@ function t5(e) {
                 : (0, n.jsxs)(n.Fragment, {
                       children: [
                           (0, n.jsx)(eZ.A, { scrollerRef: s }),
-                          (0, n.jsx)(t8, {
+                          (0, n.jsx)(t2, {
                               isOwner: o?.id === t.id,
                               showEditingControls: u,
                               profileOwner: t,

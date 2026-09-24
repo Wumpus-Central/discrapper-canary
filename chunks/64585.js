@@ -11,12 +11,12 @@ var i = n(228366),
     A = n(559908),
     h = n(652215);
 let E = (0, r.aN)("poggermode_applause", s.A.getSoundpack()),
-    g = !1,
     C = !1,
+    g = !1,
     _ = [],
-    I = null;
-function T() {
-    (E.stop(), (g = !1));
+    T = null;
+function I() {
+    (E.stop(), (C = !1));
 }
 function p() {
     let e = u.A.isEnabled(),
@@ -24,13 +24,13 @@ function p() {
     return !!e && !!t && null != d.Ay.getChannelId();
 }
 function N() {
-    if (0 === _.length || !p() || C) return;
-    C = !0;
+    if (0 === _.length || !p() || g) return;
+    g = !0;
     let [e, t] = _[_.length - 1];
-    ((0, r.Ak)(e, t), (I = setTimeout(S, 1e3)));
+    ((0, r.Ak)(e, t), (T = setTimeout(S, 1e3)));
 }
 function S() {
-    (_.pop(), (C = !1), N());
+    (_.pop(), (g = !1), N());
 }
 class f extends l.A {
     _initialize() {
@@ -48,7 +48,7 @@ class f extends l.A {
             i.h.unsubscribe("TYPING_STOP_LOCAL", this.stopAudio),
             i.h.unsubscribe("CHANNEL_SELECT", this.stopAudio),
             i.h.unsubscribe("POGGERMODE_SETTINGS_UPDATE", this.stopAudio),
-            clearTimeout(I));
+            clearTimeout(T));
     }
     setVolume(e) {
         let { state: t } = e;
@@ -56,10 +56,10 @@ class f extends l.A {
     }
     handleTypingStop(e) {
         let { userId: t } = e;
-        a.default.getId() === t && T();
+        a.default.getId() === t && I();
     }
     stopAudio() {
-        T();
+        I();
     }
     startAudio() {
         if (!p()) return;
@@ -69,7 +69,7 @@ class f extends l.A {
             n = c.A.isTyping(e, t),
             i = A.Ay.getUserCombo(t, e),
             l = i?.multiplier ?? 1;
-        n && l >= 7 ? g || (E.loop(), (g = !0)) : T();
+        n && l >= 7 ? C || (E.loop(), (C = !0)) : I();
     }
     playAchievementUnlockSound() {
         p() &&
