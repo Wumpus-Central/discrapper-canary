@@ -128,6 +128,7 @@ var i,
         (i.SPELLCHECK_SET_LEARNED_WORDS = "DISCORD_SPELLCHECK_SET_LEARNED_WORDS"),
         (i.SYSTEM_TRAY_SET_ICON = "DISCORD_SYSTEM_TRAY_SET_ICON"),
         (i.SYSTEM_TRAY_SET_APPLICATIONS = "DISCORD_SYSTEM_TRAY_SET_APPLICATIONS"),
+        (i.SYSTEM_TRAY_SET_STATES = "DISCORD_SYSTEM_TRAY_SET_STATES"),
         (i.THUMBAR_BUTTONS_UPDATE = "DISCORD_THUMBAR_BUTTONS_UPDATE"),
         (i.THUMBAR_BUTTONS_CLICKED = "DISCORD_THUMBAR_BUTTONS_CLICKED"),
         (i.TRACING_CAPTURE_PERFORMANCE = "DISCORD_TRACING_CAPTURE_PERFORMANCE"),
@@ -451,6 +452,12 @@ let K = {
         setSystemTrayIcon(e) {
             f.isPlatformEmbedded && this.sendIPC(c.SYSTEM_TRAY_SET_ICON, e);
         },
+        setSystemTrayApplications(e) {
+            f.isPlatformEmbedded && this.sendIPC(c.SYSTEM_TRAY_SET_APPLICATIONS, e);
+        },
+        setSystemTrayStates(e) {
+            Y(c.SYSTEM_TRAY_SET_STATES, e);
+        },
         setThumbarButtons(e) {
             f.isPlatformEmbedded && m.thumbar?.setThumbarButtons?.(e, this.isSystemDarkMode());
         },
@@ -465,9 +472,6 @@ let K = {
                     };
                 }
             }
-        },
-        setSystemTrayApplications(e) {
-            f.isPlatformEmbedded && this.sendIPC(c.SYSTEM_TRAY_SET_APPLICATIONS, e);
         },
         get architecture() {
             return f.isPlatformEmbedded ? m.process.arch : "";
