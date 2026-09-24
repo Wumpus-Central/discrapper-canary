@@ -75,8 +75,8 @@ var R = s(575593),
     w = s(174459),
     X = s(161918),
     W = s(993408),
-    $ = s(879221),
-    Y = s(511265),
+    Y = s(275161),
+    $ = s(511265),
     z = s(304210),
     K = s(652215),
     q = s(828515),
@@ -111,7 +111,7 @@ function eo(e) {
         s,
         { category: n } = e,
         a = (0, o.bG)([V.default], () => V.default.getCurrentUser()),
-        i = (0, Y.p)(),
+        i = (0, $.p)(),
         r =
             ((l = (0, z.S)()),
             (s = (0, H.XF)(l)),
@@ -151,7 +151,7 @@ function eo(e) {
 function ed(e) {
     let { currentCategorySkuId: l, handleTransition: s } = e,
         a = (0, A.$)("collection_index_related_drops"),
-        i = (0, $.O)("related_drops"),
+        i = (0, Y.Y)("related_drops"),
         { categories: r } = (function (e) {
             let { anchorCollectionId: l, limit: s, enabled: t = !0 } = e,
                 a = n.useMemo(() => ({ applicationId: K.FYj, anchorCollectionId: l ?? "", limit: s }), [l, s]),

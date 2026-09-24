@@ -1470,7 +1470,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e3 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eH.A().log(
-    `[BUILD INFO] Release Channel: ${e3}, Build Number: 620756, Version Hash: 56e07c756539ec87fd06464b0b00e9a4565116a2`,
+    `[BUILD INFO] Release Channel: ${e3}, Build Number: 620758, Version Hash: 80ea0ee0d8919c1533f2d0c5d7283f7269174fdf`,
 ),
     v.A.setTags({ appContext: x.QCW }),
     eI.A.initBasic(),
@@ -2535,7 +2535,6 @@ let ia = (0, nQ.Fe)({
                 n.e("864926"),
                 n.e("775951"),
                 n.e("805197"),
-                n.e("550422"),
                 n.e("307120"),
                 n.e("709204"),
                 n.e("739848"),
@@ -2762,7 +2761,6 @@ let ia = (0, nQ.Fe)({
                 n.e("864926"),
                 n.e("775951"),
                 n.e("805197"),
-                n.e("550422"),
                 n.e("307120"),
                 n.e("649351"),
                 n.e("709204"),
@@ -21742,7 +21740,7 @@ let NQ = "isHideDevBanner",
                     className: ts()(NZ.Wz, NZ.mr),
                     children: [
                         (0, R.jsx)(Nq, { className: NZ.Kk }),
-                        tg.intl.format(tg.t.uyrfYF, { buildNumber: "620756" }),
+                        tg.intl.format(tg.t.uyrfYF, { buildNumber: "620758" }),
                         (0, R.jsx)(r, {}),
                     ],
                 })
@@ -31746,7 +31744,6 @@ let yT = (0, nQ.Fe)({
                 n.e("864926"),
                 n.e("775951"),
                 n.e("805197"),
-                n.e("550422"),
                 n.e("307120"),
                 n.e("649351"),
                 n.e("709204"),
@@ -46738,10 +46735,9 @@ let kN = [
                             n.e("248836"),
                             n.e("501962"),
                             n.e("893767"),
-                            n.e("550422"),
                             n.e("238672"),
-                            n.e("944434"),
-                        ]).then(n.bind(n, 161673));
+                            n.e("586426"),
+                        ]).then(n.bind(n, 291841));
                         return (t) => (0, R.jsx)(e, { gameId: i, source: lT.GameProfileSources.Deeplink, ...t });
                     });
                 }),

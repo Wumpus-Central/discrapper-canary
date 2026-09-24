@@ -1009,8 +1009,8 @@ let e1 = function (e) {
 var e2 = l(449543),
     e5 = l(4227),
     e4 = l(189213),
-    e9 = l(290136),
-    e3 = l(478016),
+    e3 = l(290136),
+    e9 = l(478016),
     e6 = l(825484),
     e8 = l(192308),
     e7 = l(812993),
@@ -1089,7 +1089,7 @@ let tc = r.memo(function (e) {
                                                     position: "top",
                                                     children: (0, i.jsx)("span", {
                                                         className: to.ZB,
-                                                        children: (0, i.jsx)(e9.CircleQuestionIcon, { size: "xs" }),
+                                                        children: (0, i.jsx)(e3.CircleQuestionIcon, { size: "xs" }),
                                                     }),
                                                 }),
                                             ],
@@ -1109,7 +1109,7 @@ let tc = r.memo(function (e) {
                                                         className: o()(to.__, { [to.gF]: c }),
                                                         children: [
                                                             c
-                                                                ? (0, i.jsx)(e3.U, {
+                                                                ? (0, i.jsx)(e9.U, {
                                                                       size: "xs",
                                                                       color: "currentColor",
                                                                   })
@@ -1351,7 +1351,7 @@ let tu = {
             : null;
     };
 var th = l(197935),
-    tg = l(879221),
+    tg = l(275161),
     tx = l(554661);
 function tf(e) {
     return e.skuId;
@@ -1372,7 +1372,7 @@ let tb = function (e) {
         u = r.useMemo(() => d(t.rankedSkuIds), [t.rankedSkuIds, d]),
         g = (0, eS.X)(u),
         { analyticsLocations: x } = (0, V.Ay)(G.A.COLLECTIBLES_SHOP_SHELF),
-        f = (0, tg.O)("shelf_block"),
+        f = (0, tg.Y)("shelf_block"),
         p = r.useMemo(() => g.filter((e) => null != es.A.getCategoryForProduct(e.skuId)), [g]),
         b = r.useCallback(() => {
             l({

@@ -5,7 +5,7 @@ var n = r(477900),
     a = r(197935),
     i = r(440938),
     o = r(590180),
-    u = r(879221),
+    u = r(275161),
     c = r(511265),
     d = r(313276),
     g = r(206077),
@@ -20,7 +20,7 @@ function x(e) {
 function C(e) {
     return e.skuId;
 }
-function A(e) {
+function v(e) {
     let { isLoading: t, products: r, tab: l } = e,
         s = (0, p.Mk)(l);
     return t
@@ -36,11 +36,11 @@ function A(e) {
               }),
           });
 }
-function v(e) {
+function A(e) {
     let { isLoading: t, products: r, tab: l } = e,
         i = (0, p.Mk)(l),
         o = E.intl.string(E.t.HP8LNG);
-    if ((0, u.O)("hero_block_cards")) {
+    if ((0, u.Y)("hero_block_cards")) {
         if (t) {
             let e = [void 0, void 0, void 0, void 0].map((e, t) => t);
             return (0, n.jsx)(a.A, {
@@ -106,8 +106,8 @@ let I = function (e) {
         S = l.useMemo(() => p.filter((e) => null != o.A.getCategoryForProduct(e.skuId)), [p]);
     switch (i) {
         case "feed":
-            return (0, n.jsx)(A, { isLoading: E, products: S, tab: u });
-        case "hscroll":
             return (0, n.jsx)(v, { isLoading: E, products: S, tab: u });
+        case "hscroll":
+            return (0, n.jsx)(A, { isLoading: E, products: S, tab: u });
     }
 };

@@ -68,7 +68,6 @@
 }
 
 .titleEditor__36c1b {
-    color: inherit;
     font-family: inherit;
     font-size: inherit;
     font-weight: inherit;
@@ -79,6 +78,10 @@
     width: -moz-max-content;
     width: max-content;
     word-break: normal
+}
+
+.titleEditor__36c1b[contenteditable] {
+    color: inherit
 }
 
 .attachmentsContainer__36c1b {
@@ -599,4 +602,4 @@
     border-radius: 0 0 5px 5px
 }
 
-/*# sourceMappingURL=873943.08f0fd3e2913cf37.css.map*/
+/*# sourceMappingURL=873943.519f8694e05f20f0.css.map*/
