@@ -8,6 +8,7 @@ a.exports = {
     wm: "logo__208a2",
     DD: "title__208a2",
     Vg: "grid__208a2",
+    Me: "gridOdd__208a2",
     ux: "gridItem__208a2",
     Xv: "gridItemFullWidth__208a2",
     Nr: "card__208a2",

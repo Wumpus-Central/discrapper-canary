@@ -3018,7 +3018,7 @@ function sL(e) {
                             renderHeader: C,
                             getSocialLayerStorefrontLink: I,
                             children: (0, s.jsx)("div", {
-                                className: sk.Vg,
+                                className: o()(sk.Vg, { [sk.Me]: h.length % 2 == 1 }),
                                 children: h.map((e, t) =>
                                     (0, s.jsx)(
                                         "div",

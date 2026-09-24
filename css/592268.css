@@ -6,7 +6,7 @@
     display: flex;
     flex-direction: column;
     gap: var(--space-8);
-    max-width: 512px;
+    max-width: 600px;
     overflow: hidden;
     position: relative;
     width: 100%
@@ -67,8 +67,12 @@
     gap: var(--space-8);
     grid-auto-rows: 168px;
     grid-template-columns: repeat(2, 1fr);
-    padding: 0 var(--space-8) var(--space-8);
+    padding: 0 var(--space-16) var(--space-16);
     position: relative
+}
+
+.gridOdd__208a2 {
+    grid-template-rows: 280px
 }
 
 .gridItem__208a2 {
@@ -256,4 +260,4 @@
     opacity: .8
 }
 
-/*# sourceMappingURL=592268.62bd7d0dcbca1b93.css.map*/
+/*# sourceMappingURL=592268.3429143ef00a109d.css.map*/
