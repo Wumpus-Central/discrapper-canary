@@ -1,7 +1,7 @@
 l.d(t, { C: () => n, I: () => i });
 var a,
     n =
-        (((a = {}).SHARE = "share"),
+        (((a = {}).MAIN_ACTION = "main_action"),
         (a.EDIT = "edit"),
         (a.FAVORITE = "favorite"),
         (a.EXPORT_TO_SOUNDBOARD = "export_to_soundboard"),
@@ -13,7 +13,7 @@ var a,
         (a.CLIP_FEEDBACK = "clip_feedback"),
         a);
 let i = new Set([
-    "share",
+    "main_action",
     "edit",
     "favorite",
     "export_to_soundboard",

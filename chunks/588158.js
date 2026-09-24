@@ -452,15 +452,16 @@ let eT = s.memo(function (e) {
                     n.e("689160"),
                     n.e("231782"),
                     n.e("520342"),
+                    n.e("306270"),
                     n.e("432262"),
-                    n.e("194676"),
+                    n.e("717278"),
                 ]).then(n.bind(n, 25682));
                 return (t) =>
                     (0, i.jsx)(e, {
                         ...t,
                         channelId: l.id,
                         initialMainLink: C.oH.ALL_CLIPS,
-                        onClipClick: (e) => ee({ clips: [e] }),
+                        picker: { onPick: (e) => ee({ clips: [e] }), action: C.qh.SHARE, allowMultiSelect: !0 },
                     });
             },
             { modalKey: eb.nm },

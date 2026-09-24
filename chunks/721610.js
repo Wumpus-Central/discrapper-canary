@@ -1,9 +1,9 @@
-n.d(t, { $: () => l });
-let l = n(582128).createContext({
+t.d(i, { $: () => c });
+let c = t(582128).createContext({
     selectedClipIds: new Set(),
     toggleClipSelection: () => {},
     clearSelection: () => {},
     isMultiSelectMode: !1,
-    onSelectClip: void 0,
+    picker: void 0,
     onShareSession: void 0,
 });

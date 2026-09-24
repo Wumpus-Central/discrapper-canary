@@ -9,7 +9,7 @@ var n = i(477900),
     c = i(788593),
     u = i(943793),
     g = i(314531),
-    m = i(360322),
+    m = i(763432),
     x = i(998556);
 function f(e) {
     let { scrollerRef: t } = e,
@@ -117,8 +117,8 @@ function f(e) {
     )
         return null;
     null == j.current && E();
-    let { x: C, y: v } = j.current ?? { x: 0, y: 0 },
-        S = h.x - C - 60 * !!p,
-        b = h.y - v;
+    let { x: v, y: C } = j.current ?? { x: 0, y: 0 },
+        S = h.x - v - 60 * !!p,
+        b = h.y - C;
     return (0, n.jsx)("div", { className: x.kL, style: { transform: `translate3d(${S}px, ${b}px, 0)` }, children: A });
 }
