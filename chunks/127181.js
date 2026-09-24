@@ -1,5 +1,10 @@
-a.d(t, { B: () => s, MZ: () => o, TH: () => i, tn: () => l });
-let n = [
+n.d(t, { B: () => s, MZ: () => o, TH: () => l, tn: () => i });
+let a = [
+    {
+        date: "2026-09-24",
+        platforms: ["desktop", "mobile"],
+        summary: "Remix is now called Clone: same button, same copy of the app to make your own.",
+    },
     {
         date: "2026-09-23",
         platforms: ["desktop", "mobile"],
@@ -249,7 +254,7 @@ let n = [
         date: "2026-09-15",
         platforms: ["mobile"],
         summary:
-            "On phones, a project has the same menu as desktop: remix it, export or import it, get its coding tool link, browse version history and rewind its data from the chat menu, and copy its link or ID, open its settings or delete it from the landing.",
+            "On phones, a project has the same menu as desktop: clone it, export or import it, get its coding tool link, browse version history and rewind its data from the chat menu, and copy its link or ID, open its settings or delete it from the landing.",
     },
     {
         date: "2026-09-14",
@@ -296,13 +301,13 @@ let n = [
         date: "2026-09-12",
         platforms: ["desktop", "mobile"],
         summary:
-            "Plans for an app you imported or remixed no longer invent a wireframe sketch: the sketch is reserved for brand-new apps that have no screens yet.",
+            "Plans for an app you imported or cloned no longer invent a wireframe sketch: the sketch is reserved for brand-new apps that have no screens yet.",
     },
     {
         date: "2026-09-11",
         platforms: ["desktop", "mobile"],
         summary:
-            "A new Rust Sphere template: a spinning, lit 3D globe drawn by Rust running as WebAssembly, ready to remix into your own renderer.",
+            "A new Rust Sphere template: a spinning, lit 3D globe drawn by Rust running as WebAssembly, ready to clone into your own renderer.",
     },
     {
         date: "2026-09-10",
@@ -385,13 +390,13 @@ let n = [
         date: "2026-09-06",
         platforms: ["desktop"],
         summary:
-            "Collaborators on an app shared with their server can now remix it into a copy of their own, with no need for the owner to turn sharing on first.",
+            "Collaborators on an app shared with their server can now clone it for themselves, with no need for the owner to turn sharing on first.",
     },
     {
         date: "2026-09-06",
         platforms: ["desktop", "mobile"],
         summary:
-            "Remixed an app? When the original improves, Conjure offers to update your copy while keeping every change you made, only checking with you on the rare spot it cannot keep both. You can also ask it to inherit updates from another app by its project id, even for a project you imported rather than remixed.",
+            "Cloned an app? When the original improves, Conjure offers to update your copy while keeping every change you made, only checking with you on the rare spot it cannot keep both. You can also ask it to inherit updates from another app by its project id, even for a project you imported rather than cloned.",
     },
     {
         date: "2026-09-05",
@@ -419,7 +424,7 @@ let n = [
     {
         date: "2026-09-03",
         platforms: ["desktop"],
-        summary: "Remix an app and Conjure builds your copy first, so the ideas it suggests are ones you can try.",
+        summary: "Clone an app and Conjure builds your copy first, so the ideas it suggests are ones you can try.",
     },
     {
         date: "2026-09-03",
@@ -519,14 +524,14 @@ let n = [
         summary: "Conjuring has its own doorway in the desktop title bar, so it is one click away from anywhere.",
     },
 ];
-function i(e) {
-    return n.filter((t) => t.platforms.includes(e)).slice(0, 3);
-}
 function l(e) {
-    return n.filter((t) => t.platforms.includes(e));
+    return a.filter((t) => t.platforms.includes(e)).slice(0, 3);
+}
+function i(e) {
+    return a.filter((t) => t.platforms.includes(e));
 }
 function s(e) {
-    return l(e).length > 3;
+    return i(e).length > 3;
 }
 function o(e) {
     return 1 === e.platforms.length;
