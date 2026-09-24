@@ -264,7 +264,7 @@ function o(e) {
         { modalKey: `gift-option-select-modal-${t.id}`, onCloseCallback: l },
     );
 }
-var u = n(38423),
+var u = n(859492),
     c = n(945810);
 let d = (0, c.mj)({
     name: "2026-02-gifting-modal-redesign",

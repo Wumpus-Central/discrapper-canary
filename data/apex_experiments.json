@@ -5127,6 +5127,22 @@
     }
   },
   {
+    "name": "2026-09-gifting-badge-coachmark-audience",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
     "name": "2026-09-gifting-badge-complex-art",
     "kind": "user",
     "defaultConfig": {
