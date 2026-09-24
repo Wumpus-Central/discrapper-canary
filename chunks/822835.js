@@ -12,8 +12,8 @@ function c(e) {
             applicationId: t,
             previewApplicationId: l,
             declaredActivity: c,
-            installScope: m,
-            ownerAuthorizationRevoked: f,
+            installScope: f,
+            ownerAuthorizationRevoked: m,
             mainCardOnly: h = !1,
         } = e,
         [x, g] = n.useState(null),
@@ -34,7 +34,7 @@ function c(e) {
         { data: E, isLoading: C } = (0, s.YY)(t ?? void 0),
         I = c || (0, u.x)(E),
         T = null != t && C,
-        M = (0, d.Xm)({ installScope: m, hasFrame: I, hasProfileWidget: w, hasBotDm: S, ownerAuthorizationRevoked: f });
+        M = (0, d.Xm)({ installScope: f, hasFrame: I, hasProfileWidget: w, hasBotDm: S, ownerAuthorizationRevoked: m });
     return {
         availability: M,
         isResolving: T,

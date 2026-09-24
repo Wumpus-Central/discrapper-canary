@@ -1,4 +1,4 @@
-n.d(t, { $: () => T, f: () => m });
+n.d(t, { $: () => T, f: () => g });
 var i = n(477900),
     r = n(582128),
     a = n(503698),
@@ -29,7 +29,7 @@ function T(e) {
             }),
     });
 }
-function m(e) {
+function g(e) {
     let { hideHeader: t, "aria-label": n, ...a } = e,
         s = (0, i.jsx)(r.Fragment, {}, "controls");
     return (0, i.jsxs)(l.d, {

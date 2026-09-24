@@ -1,4 +1,4 @@
-l.d(t, { AH: () => x, Hp: () => b, W8: () => p, Xi: () => h, hl: () => g, hq: () => v, qu: () => f });
+l.d(t, { AH: () => x, Hp: () => b, W8: () => p, Xi: () => h, hl: () => g, hq: () => v, qu: () => m });
 var n = l(506774),
     a = l(930932),
     r = l(174459),
@@ -8,14 +8,14 @@ var n = l(506774),
     o = l(670455),
     d = l(50617),
     c = l(375708);
-let m = "shownVibegrationsFeedbackProjectIds",
-    f = 3;
+let f = "shownVibegrationsFeedbackProjectIds",
+    m = 3;
 function h(e) {
-    return (n.w.get(m) ?? []).includes(e);
+    return (n.w.get(f) ?? []).includes(e);
 }
 function x(e) {
-    let t = n.w.get(m) ?? [];
-    t.includes(e) || n.w.set(m, [...t, e]);
+    let t = n.w.get(f) ?? [];
+    t.includes(e) || n.w.set(f, [...t, e]);
 }
 function g(e) {
     return i.Ay.getMessages(e).filter((e) => "assistant" === e.role && "side_reply" !== e.kind && (0, i.BL)(e)).length;
@@ -42,8 +42,8 @@ function v() {
     r.default.track(u.HAw.OPEN_MODAL, { type: "vibegrations", source: "Feedback Modal" });
 }
 function b(e, t, l, n) {
-    let { rating: i, reason: d, feedback: c, dontShowAgain: m } = l;
-    (!0 === m && (0, a.n3)({ feedbackType: o.MW.VIBEGRATIONS, location: n }),
+    let { rating: i, reason: d, feedback: c, dontShowAgain: f } = l;
+    (!0 === f && (0, a.n3)({ feedbackType: o.MW.VIBEGRATIONS, location: n }),
         null != i &&
             r.default.track(u.HAw.VIBEGRATIONS_FEEDBACK, {
                 project_id: e,

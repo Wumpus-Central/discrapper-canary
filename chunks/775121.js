@@ -37,10 +37,10 @@ function T(e) {
     for (let n of Object.values(e)) null != n && t.push(...n.binds);
     return t.map((e) => e.replace("mod", c.Mu));
 }
-function m(e, t) {
+function g(e, t) {
     return (n, i) => (o.default.track(u.HAw.KEYBOARD_SHORTCUT_USED, { shortcut_name: e, shortcut_combo: i }), t(n, i));
 }
-function g(e) {
+function m(e) {
     for (let [t, n] of Object.entries(e)) {
         if (null == n) continue;
         let e = f();
@@ -49,8 +49,8 @@ function g(e) {
         if (0 === i.length) continue;
         let r = n.comboKeysBindGlobal ? h.bindGlobal : h.bind;
         if (
-            (null != n.action && r.call(h, i, m(t, n.action)),
-            null != n.keyup && r.call(h, i, m(t, n.keyup), "keyup"),
+            (null != n.action && r.call(h, i, g(t, n.action)),
+            null != n.keyup && r.call(h, i, g(t, n.keyup), "keyup"),
             null != n.keydown)
         ) {
             let e = i.indexOf("any-character");
@@ -62,9 +62,9 @@ function g(e) {
                     (document.addEventListener(e, n), p.push(() => document.removeEventListener(e, n)));
                 })("keydown", n.keydown),
                 i.splice(e, 1)),
-                i.length > 0 && r.call(h, i, m(t, n.keydown), "keydown"));
+                i.length > 0 && r.call(h, i, g(t, n.keydown), "keydown"));
         }
-        null != n.keypress && r.call(h, i, m(t, n.keypress), "keypress");
+        null != n.keypress && r.call(h, i, g(t, n.keypress), "keypress");
     }
 }
 (0, d.isDesktop)() && new (r())(document.documentElement).bind("backspace", (e) => e.preventDefault());
@@ -86,10 +86,10 @@ let S = {
         _ = e;
     },
     enable() {
-        A || ((A = !0), this.checkDupes(_), g(_));
+        A || ((A = !0), this.checkDupes(_), m(_));
     },
     enableTemp(e) {
-        (E.push(_), (_ = e), g(e), (A = !0));
+        (E.push(_), (_ = e), m(e), (A = !0));
     },
     disableTemp() {
         let e = E.pop();

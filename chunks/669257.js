@@ -33,15 +33,15 @@ var I = n(70074),
     f = n(132473);
 let p = { xs: "text-xs/normal", sm: "text-sm/normal", md: "text-md/normal" },
     T = { xs: "xxs", sm: "xs", md: "sm" };
-function m(e) {
+function g(e) {
     let { label: t, size: n, variant: r = "default", isDisabled: s, icon: l, accessibilityHint: E, ...A } = e,
-        m = [t, E].filter(Boolean).join(", ");
+        g = [t, E].filter(Boolean).join(", ");
     return (0, i.jsx)(a.vw, {
         ...A,
         "data-mana-component": "tag",
         className: o()(f.Tc, I.GA),
         "data-variant": r,
-        textValue: m,
+        textValue: g,
         isDisabled: s,
         children: (e) => {
             let { allowsRemoving: r } = e;
@@ -59,7 +59,7 @@ function m(e) {
         },
     });
 }
-function g(e) {
+function m(e) {
     let {
             listRef: t,
             label: n,
@@ -75,7 +75,7 @@ function g(e) {
             children: I,
             selectedKeys: p,
             onSelectionChange: T,
-            disallowEmptySelection: g,
+            disallowEmptySelection: m,
         } = e,
         S = r.useContext(s._),
         N = r.useMemo(() => (l && "all" !== o ? new Set([...(o ?? []), ...A.map((e) => e.id)]) : o), [l, o, A]);
@@ -93,13 +93,13 @@ function g(e) {
         selectedKeys: p,
         onSelectionChange: T,
         disabledKeys: N,
-        disallowEmptySelection: g,
+        disallowEmptySelection: m,
         onRemove: h,
         children: [
             (0, i.jsx)(a.LY, {
                 ref: t,
                 className: f.Tw,
-                children: A.map((e) => (0, r.createElement)(m, { ...e, key: e.id, size: _, variant: E })),
+                children: A.map((e) => (0, r.createElement)(g, { ...e, key: e.id, size: _, variant: E })),
             }),
             I,
         ],
@@ -107,5 +107,5 @@ function g(e) {
 }
 function S(e) {
     let { mode: t, variant: n = "default", layout: r = "default", size: a = "inline" === r ? "sm" : "md", ...s } = e;
-    return (0, i.jsx)(g, { ...s, layout: r, size: a, variant: n });
+    return (0, i.jsx)(m, { ...s, layout: r, size: a, variant: n });
 }

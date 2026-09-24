@@ -55,11 +55,11 @@ function T(e) {
     let a = { ...r };
     return ((a.message = null), c.set(i, a), !0);
 }
-function m() {
+function g() {
     if (0 === A.size || u) return !1;
     u = !0;
 }
-class g extends i.Ay.Store {
+class m extends i.Ay.Store {
     static displayName = "SavedMessagesStore";
     initialize() {
         this.waitFor(l.default);
@@ -110,7 +110,7 @@ class g extends i.Ay.Store {
         return null != n && null != n.saveData.dueAt;
     }
 }
-let S = new g(a.h, {
+let S = new m(a.h, {
     POST_CONNECTION_OPEN: function () {
         u = !0;
     },
@@ -151,9 +151,9 @@ let S = new g(a.h, {
         let r = { ...i };
         ((r.message = (0, s.IU)(i.message, t)), c.set(n, r));
     },
-    GUILD_CREATE: m,
-    GUILD_UPDATE: m,
-    GUILD_DELETE: m,
+    GUILD_CREATE: g,
+    GUILD_UPDATE: g,
+    GUILD_DELETE: g,
     CHANNEL_CREATE: function (e) {
         let { channel: t } = e;
         if (0 === A.size || u || !I(t.id)) return !1;
@@ -176,9 +176,9 @@ let S = new g(a.h, {
         if (0 === A.size || u || t.id !== l.default.getCurrentUser()?.id) return !1;
         u = !0;
     },
-    GUILD_ROLE_CREATE: m,
-    GUILD_ROLE_UPDATE: m,
-    GUILD_ROLE_DELETE: m,
+    GUILD_ROLE_CREATE: g,
+    GUILD_ROLE_UPDATE: g,
+    GUILD_ROLE_DELETE: g,
     MESSAGE_REMINDER_DUE: function (e) {
         let { savedMessage: t } = e;
         E.add(t.saveData.messageId);

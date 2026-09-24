@@ -1,4 +1,4 @@
-n.d(t, { A: () => g });
+n.d(t, { A: () => m });
 var i = n(17928),
     r = n(506774),
     a = n(228366),
@@ -18,7 +18,7 @@ let c = {},
 function T() {
     I = l.pK.getSetting();
 }
-class m extends i.Ay.Store {
+class g extends i.Ay.Store {
     static displayName = "ChangelogStore";
     initialize() {
         (this.waitFor(s.default, o.A), this.syncWith([s.default], () => !0), this.syncWith([o.A], T));
@@ -61,7 +61,7 @@ class m extends i.Ay.Store {
         return p.size > 0;
     }
 }
-let g = new m(a.h, {
+let m = new g(a.h, {
     CHANGE_LOG_LOCK: function (e) {
         let { key: t } = e;
         if (p.has(t)) return !1;

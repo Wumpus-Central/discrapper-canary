@@ -1,4 +1,4 @@
-(n.d(t, { A: () => g }), n(321073), n(938796));
+(n.d(t, { A: () => m }), n(321073), n(938796));
 var i = n(665260),
     r = n(17928),
     a = n(228366),
@@ -59,7 +59,7 @@ function T() {
     if (!t) return !1;
     E = e;
 }
-class m extends r.Ay.Store {
+class g extends r.Ay.Store {
     static displayName = "GuildOfficialMessagesStore";
     initialize() {
         this.waitFor(s.A, l.Ay, o.A, d.A, c.default);
@@ -84,7 +84,7 @@ class m extends r.Ay.Store {
         return E[e]?.hasMore ?? !1;
     }
 }
-let g = new m(a.h, {
+let m = new g(a.h, {
     CONNECTION_OPEN: function () {
         E = {};
     },

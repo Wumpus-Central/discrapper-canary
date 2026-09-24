@@ -25,8 +25,8 @@ var I = n(231971),
     f = n(742023),
     p = n(544180),
     T = n(174459),
-    m = n(509929),
-    g = n(927813),
+    g = n(509929),
+    m = n(927813),
     S = n(209489),
     N = n(38405),
     C = n(292348),
@@ -185,17 +185,17 @@ class w extends O.Ay {
     retryOpts() {
         return this.item.platform === O.xz.REACT_NATIVE
             ? {
-                  timeout: +g.A.Millis.HOUR,
-                  backoff: new l.A(0.5 * g.A.Millis.SECOND, 30 * g.A.Millis.MINUTE),
+                  timeout: +m.A.Millis.HOUR,
+                  backoff: new l.A(0.5 * m.A.Millis.SECOND, 30 * m.A.Millis.MINUTE),
                   retries: 12,
               }
-            : { timeout: +g.A.Millis.HOUR, retries: 12, backoff: new l.A() };
+            : { timeout: +m.A.Millis.HOUR, retries: 12, backoff: new l.A() };
     }
     createAttachmentUrlRetryOpts() {
         return this.item.platform === O.xz.REACT_NATIVE
             ? {
-                  timeout: { response: 30 * g.A.Millis.SECOND, deadline: 30 * g.A.Millis.MINUTE },
-                  backoff: new l.A(0.5 * g.A.Millis.SECOND, 60 * g.A.Millis.SECOND),
+                  timeout: { response: 30 * m.A.Millis.SECOND, deadline: 30 * m.A.Millis.MINUTE },
+                  backoff: new l.A(0.5 * m.A.Millis.SECOND, 60 * m.A.Millis.SECOND),
                   retries: 8,
               }
             : this.retryOpts();
@@ -236,7 +236,7 @@ class w extends O.Ay {
             headers: { "Content-Range": "bytes */*" },
             rejectWithError: !0,
             retries: 0,
-            timeout: { deadline: 30 * g.A.Millis.SECOND },
+            timeout: { deadline: 30 * m.A.Millis.SECOND },
             signal: this._abortController.signal,
         };
         return await this._uploadHttpClient
@@ -464,7 +464,7 @@ class w extends O.Ay {
         v.log(`Starting compression/conversion for ${this.id}`);
         let e = await this.trackTime(
             "compressTimeMs",
-            async () => await (0, m.Si)(this, this.reactNativeFileIndex ?? 0),
+            async () => await (0, g.Si)(this, this.reactNativeFileIndex ?? 0),
         );
         if (null == e || null == e.file) return (v.error(`Failed to get compressed file for ${this.id}`), this);
         let t = e.uri,
@@ -659,7 +659,7 @@ class w extends O.Ay {
     }
     static isResponseUrlStale(e) {
         if (null == e) return !0;
-        let t = 12 * g.A.Millis.HOUR;
+        let t = 12 * m.A.Millis.HOUR;
         return Date.now() - e > t;
     }
     async ensureFreshResponseUrl() {

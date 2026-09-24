@@ -14,7 +14,7 @@ function c(e, t) {
     let l = Math.imul(e, 0x165667b1) + Math.imul(t, 0x27d4eb2f);
     return (((l = Math.imul(l ^ (l >>> 13), 0x4bf19f61)) ^ (l >>> 16)) >>> 0) / 0xffffffff;
 }
-function m() {
+function f() {
     let e = a.useRef(null);
     return (
         a.useEffect(() => {
@@ -26,8 +26,8 @@ function m() {
                 r = a?.querySelector("[data-vibegrations-effort-handle]") ?? null,
                 i = 0,
                 s = [],
-                m = 0,
                 f = 0,
+                m = 0,
                 h = 8,
                 x = 9,
                 g = 0,
@@ -53,36 +53,36 @@ function m() {
                 if (null == t || null == l) return;
                 let e = t.clientWidth,
                     n = t.clientHeight;
-                if (e === m && n === f) return;
-                ((m = e), (x = (h = ((f = n) - 2 - 2) / 3) + 1));
+                if (e === f && n === m) return;
+                ((f = e), (x = (h = ((m = n) - 2 - 2) / 3) + 1));
                 let r = a?.querySelectorAll("[data-stop]"),
                     u = r?.[r.length - 1];
                 (null != u && (i = u.offsetLeft + u.offsetWidth / 2),
                     (s = null == r ? [] : Array.from(r, (e) => e.offsetLeft + e.offsetWidth / 2)));
                 let o = window.devicePixelRatio,
                     d = Number.isFinite(o) && o > 0 ? o : 1;
-                ((t.width = Math.round(m * d)), (t.height = Math.round(f * d)), l.setTransform(d, 0, 0, d, 0, 0), k());
+                ((t.width = Math.round(f * d)), (t.height = Math.round(m * d)), l.setTransform(d, 0, 0, d, 0, 0), k());
             }
             (N(),
                 (g = requestAnimationFrame(function e(a) {
                     if (((g = requestAnimationFrame(e)), a - p < u)) return;
                     let k = a - p;
-                    if (((p = a), null == t || null == l || 0 === m || null == r)) return;
+                    if (((p = a), null == t || null == l || 0 === f || null == r)) return;
                     let N = Number(r.dataset.effortCentre),
                         w = r.hasAttribute("data-effort-live"),
                         A = Number.isFinite(N) && Math.abs(N - i) > 16;
                     if (!v && (!w || A)) return;
                     b = Math.min(1, Math.max(0, b + ((w ? 1 : -1) * k) / 260));
                     let S = t.getBoundingClientRect(),
-                        E = S.width > 0 ? S.width / m : 1,
+                        E = S.width > 0 ? S.width / f : 1,
                         C = r.getBoundingClientRect(),
                         I = (C.left - S.left) / E,
                         T = (1 - Math.min(1, Math.abs(I + C.width / E / 2 - i) / 16)) * b;
                     if (T < 0.01) {
-                        (v && l.clearRect(0, 0, m, f), (v = !1));
+                        (v && l.clearRect(0, 0, f, m), (v = !1));
                         return;
                     }
-                    (v || (j = a), (v = !0), l.clearRect(0, 0, m, f));
+                    (v || (j = a), (v = !0), l.clearRect(0, 0, f, m));
                     let M = I - 1 - (1 - T) * 16,
                         R = (a - y) / 1e3,
                         P = 0.1 + 0.9 * (1 - (1 - Math.min(1, Math.max(0, (a - j) / 1500))) ** 3),
@@ -99,22 +99,22 @@ function m() {
                         let r = 0.30000000000000004 + 0.7 * (1 + a),
                             i = Math.floor((R * t) / x),
                             u = 1 + e * x + h / 2,
-                            m = h / 2 + 3,
-                            g = Math.abs(u - f / 2) < m;
+                            f = h / 2 + 3,
+                            g = Math.abs(u - m / 2) < f;
                         for (let t = 0; t < _; t++) {
                             let a,
                                 o = M - (t * x + h / 2);
                             if (o < 0) break;
                             let d = (M - o) / n;
                             if (d >= 1) break;
-                            let f = Math.min(6, Math.floor(7 * (1 - d ** r)));
+                            let m = Math.min(6, Math.floor(7 * (1 - d ** r)));
                             ((a =
                                 0.07 > c(t - i, e + 613)
                                     ? "123456".charAt(0)
-                                    : f < 6
-                                      ? "123456".charAt(f)
+                                    : m < 6
+                                      ? "123456".charAt(m)
                                       : "789ABC".charAt(Math.floor(6 * c(e, 977)))),
-                                (g && s.some((e) => Math.abs(o - e) < m)) ||
+                                (g && s.some((e) => Math.abs(o - e) < f)) ||
                                     ((l.globalAlpha =
                                         0.5 *
                                         (function (e) {
@@ -140,7 +140,7 @@ function m() {
         (0, n.jsx)("canvas", { ref: e, className: s.Z, "aria-hidden": "true" })
     );
 }
-var f = l(757713);
+var m = l(757713);
 function h(e) {
     let { activeIndex: t, stops: l, ariaLabel: r, disabled: s, onSelect: u, className: o } = e,
         d = a.useRef(null),
@@ -293,7 +293,7 @@ function h(e) {
             function o(e) {
                 u(e.clientX);
             }
-            function m() {
+            function f() {
                 u(null);
             }
             return (
@@ -301,39 +301,39 @@ function h(e) {
                 t.addEventListener("pointermove", s),
                 t.addEventListener("pointerup", o),
                 t.addEventListener("pointercancel", o),
-                t.addEventListener("lostpointercapture", m),
+                t.addEventListener("lostpointercapture", f),
                 window.addEventListener("pointerup", o),
-                window.addEventListener("blur", m),
+                window.addEventListener("blur", f),
                 () => {
                     (null != l && 0 !== l.frame && cancelAnimationFrame(l.frame),
                         t.removeEventListener("pointerdown", i),
                         t.removeEventListener("pointermove", s),
                         t.removeEventListener("pointerup", o),
                         t.removeEventListener("pointercancel", o),
-                        t.removeEventListener("lostpointercapture", m),
+                        t.removeEventListener("lostpointercapture", f),
                         window.removeEventListener("pointerup", o),
-                        window.removeEventListener("blur", m));
+                        window.removeEventListener("blur", f));
                 }
             );
         }, [b, j, N]),
         (0, n.jsx)("div", {
-            className: i()(f.u4, o),
+            className: i()(m.u4, o),
             role: "group",
             "aria-label": r,
             children: (0, n.jsxs)("div", {
                 ref: d,
-                className: f.Gb,
+                className: m.Gb,
                 children: [
                     (0, n.jsx)("span", {
-                        className: f.Ek,
+                        className: m.Ek,
                         "aria-hidden": "true",
-                        children: (0, n.jsx)("span", { ref: h, className: i()(f.GS, { [f.eG]: t < 0 }) }),
+                        children: (0, n.jsx)("span", { ref: h, className: i()(m.GS, { [m.eG]: t < 0 }) }),
                     }),
                     (0, n.jsx)("span", {
                         ref: c,
                         "data-vibegrations-effort-handle": "",
                         "data-effort-live": t >= 0 ? "" : void 0,
-                        className: i()(f.p$, { [f.Jb]: y < 0, [f.jz]: k, [f.al]: t >= 0 && !s }),
+                        className: i()(m.p$, { [m.Jb]: y < 0, [m.jz]: k, [m.al]: t >= 0 && !s }),
                         "aria-hidden": "true",
                     }),
                     l.map((e, l) =>
@@ -345,19 +345,19 @@ function h(e) {
                                 "aria-pressed": l === t,
                                 "aria-label": e,
                                 disabled: s,
-                                className: f.ds,
+                                className: m.ds,
                                 onKeyDown: A,
                                 onPointerEnter: () => g(l),
                                 onPointerLeave: () => g((e) => (e === l ? -1 : e)),
                                 onFocus: () => g(l),
                                 onBlur: () => g((e) => (e === l ? -1 : e)),
                                 onClick: () => u(l),
-                                children: (0, n.jsx)("span", { className: f.Om, "aria-hidden": "true" }),
+                                children: (0, n.jsx)("span", { className: m.Om, "aria-hidden": "true" }),
                             },
                             e,
                         ),
                     ),
-                    (0, n.jsx)("span", { className: f.jN, "aria-hidden": "true", children: (0, n.jsx)(m, {}) }),
+                    (0, n.jsx)("span", { className: m.jN, "aria-hidden": "true", children: (0, n.jsx)(f, {}) }),
                 ],
             }),
         })

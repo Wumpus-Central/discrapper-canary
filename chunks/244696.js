@@ -31,12 +31,12 @@ function p(e) {
 function T() {
     return p(d.A.getGuildId());
 }
-function m(e) {
+function g(e) {
     if (_?.guildId !== e) return !1;
     let t = d.A.getGuildId();
     return t !== e && p(t);
 }
-function g(e) {
+function m(e) {
     let { guildId: t, guildTheme: n } = e;
     return t === d.A.getGuildId() && f(t, (0, c.yX)(n), A(t));
 }
@@ -59,11 +59,11 @@ let N = new S(s.h, {
     CONNECTION_OPEN: T,
     GUILD_DELETE: function (e) {
         let { guild: t } = e;
-        return m(t.id);
+        return g(t.id);
     },
     GUILD_MEMBER_REMOVE: function (e) {
         let { guildId: t } = e;
-        return m(t);
+        return g(t);
     },
     GUILD_UPDATE: function (e) {
         let { guild: t } = e,
@@ -95,8 +95,8 @@ let N = new S(s.h, {
         let { guildId: t, entitlements: n } = e;
         return !!n.some((e) => e.sku_id === r.d0) && t === _?.guildId && E !== t && ((E = t), !0);
     },
-    GUILD_SETTINGS_GUILD_THEME_SAVE_SUCCESS: g,
-    GUILD_THEME_PREVIEW_SAVE_SUCCESS: g,
+    GUILD_SETTINGS_GUILD_THEME_SAVE_SUCCESS: m,
+    GUILD_THEME_PREVIEW_SAVE_SUCCESS: m,
     OVERLAY_INITIALIZE: T,
     LOGOUT: function () {
         let e = null != E;

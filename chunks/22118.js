@@ -12,14 +12,14 @@ var i = s(477900),
     x = s(688810),
     g = s(531260),
     p = s(160946),
-    h = s(287809),
-    f = s(166403),
+    f = s(287809),
+    h = s(166403),
     N = s(158045),
     A = s(89366),
     j = s(724651),
     E = s(732280),
-    b = s(331322),
-    T = s(508770),
+    T = s(331322),
+    b = s(508770),
     R = s(834730),
     C = s(441574),
     I = s(989790),
@@ -38,7 +38,7 @@ let M = function (e, t) {
                 { premiumGroupMembers: i } = (0, v.A)(s?.subscriptionId ?? null, { useCachedData: e, fetch: t });
             return i?.primary != null ? (0, _.$3)(i?.primary) : null;
         })({ useCachedData: !0, fetch: e === C.qT.MEMBER }),
-        n = (0, r.bG)([f.A], () => f.A.getPremiumGroupSubscription());
+        n = (0, r.bG)([h.A], () => h.A.getPremiumGroupSubscription());
     return e === C.qT.UNSPECIFIED
         ? null
         : {
@@ -70,14 +70,14 @@ function L(e) {
     return (0, i.jsxs)("div", {
         className: l()(O.kL, t),
         children: [
-            (0, i.jsxs)(b.B, {
+            (0, i.jsxs)(T.B, {
                 direction: "horizontal",
                 gap: 8,
                 align: "center",
                 className: O.wx,
                 children: [
                     (0, i.jsx)(d.D, { variant: "nitro-sm", className: O.Ss, children: (0, S.DP)() }),
-                    (0, i.jsx)(T.E, { type: "beta", variant: "expressive" }),
+                    (0, i.jsx)(b.E, { type: "beta", variant: "expressive" }),
                 ],
             }),
             (0, i.jsx)(R.E, { variant: "text-md/medium", className: O.m_, color: "text-default", children: a }),
@@ -85,8 +85,8 @@ function L(e) {
         ],
     });
 }
-var k = s(194509),
-    U = s(396375),
+var U = s(194509),
+    k = s(396375),
     G = s(511484),
     w = s(774774),
     B = s(933832),
@@ -96,8 +96,8 @@ var k = s(194509),
     z = s(580630),
     W = s(202541),
     Y = s(652215),
-    X = s(701974),
-    K = s(45526);
+    K = s(701974),
+    X = s(45526);
 function J(e) {
     let { text: t, badge: s, variant: n } = e;
     return (0, i.jsxs)(R.E, {
@@ -118,7 +118,7 @@ function q(e) {
                   (0, i.jsx)(B.CheckmarkLargeIcon, {
                       size: "md",
                       color: "currentColor",
-                      className: K.$8,
+                      className: X.$8,
                       "aria-hidden": !0,
                   }),
                   (0, i.jsx)(H.A, { children: D.intl.string(D.t["tq+6t/"]) }),
@@ -126,16 +126,16 @@ function q(e) {
           })
         : (0, i.jsxs)(i.Fragment, {
               children: [
-                  (0, i.jsx)(F.P, { size: "md", color: "currentColor", className: K.ut, "aria-hidden": !0 }),
+                  (0, i.jsx)(F.P, { size: "md", color: "currentColor", className: X.ut, "aria-hidden": !0 }),
                   (0, i.jsx)(H.A, { children: D.intl.string(D.t.l4qZrp) }),
               ],
           });
 }
 function Q() {
     return (0, i.jsx)("div", {
-        className: K.Wm,
+        className: X.Wm,
         children: (0, i.jsx)(d.D, {
-            className: K.uC,
+            className: X.uC,
             variant: "heading-deprecated-12/extrabold",
             children: D.intl.string(D.t["o/oRJB"]),
         }),
@@ -147,8 +147,8 @@ function $(e) {
         a = (0, u.Ay)();
     if (n)
         if (s === W.PremiumTypes.TIER_0)
-            return (0, i.jsx)(d.D, { variant: "nitro-md", className: K.dW, children: D.intl.string(D.t.tUbSDK) });
-        else return (0, i.jsx)(d.D, { variant: "nitro-md", className: K.dW, children: D.intl.string(D.t.Ipxkog) });
+            return (0, i.jsx)(d.D, { variant: "nitro-md", className: X.dW, children: D.intl.string(D.t.tUbSDK) });
+        else return (0, i.jsx)(d.D, { variant: "nitro-md", className: X.dW, children: D.intl.string(D.t.Ipxkog) });
     t =
         s === W.PremiumTypes.TIER_0
             ? (0, c.M)(a)
@@ -158,16 +158,16 @@ function $(e) {
               ? "/assets/3638711ae67443ff.png"
               : "/assets/a6bb84f7256073af.png";
     let l = (0, N.Dd)(s);
-    return (0, i.jsx)("img", { src: t, className: K.wm, alt: l });
+    return (0, i.jsx)("img", { src: t, className: X.wm, alt: l });
 }
 function ee(e) {
     let { label: t, column1: s, column2: n } = e;
     return (0, i.jsxs)("tr", {
-        className: l()(K.U1, K.YI, K.Y9),
+        className: l()(X.U1, X.YI, X.Y9),
         children: [
-            (0, i.jsx)("th", { scope: "col", className: K.Cr, children: t }),
-            (0, i.jsx)("th", { scope: "col", className: K.e4, children: s }),
-            (0, i.jsx)("th", { scope: "col", className: l()(K.e4, K.Y9), children: n }),
+            (0, i.jsx)("th", { scope: "col", className: X.Cr, children: t }),
+            (0, i.jsx)("th", { scope: "col", className: X.e4, children: s }),
+            (0, i.jsx)("th", { scope: "col", className: l()(X.e4, X.Y9), children: n }),
         ],
     });
 }
@@ -183,11 +183,11 @@ function et(e) {
         shortRow: d = !1,
     } = e;
     return (0, i.jsxs)("tr", {
-        className: l()(K.nM, { [K.EE]: o, [K.Y9]: r, [K.kS]: c, [K.YI]: a, [K.vs]: d }),
+        className: l()(X.nM, { [X.EE]: o, [X.Y9]: r, [X.kS]: c, [X.YI]: a, [X.vs]: d }),
         children: [
-            (0, i.jsx)("th", { scope: "row", className: K.nx, children: t }),
-            (0, i.jsx)("td", { className: l()(K.Hn, { [K.SD]: o }), children: s }),
-            (0, i.jsx)("td", { className: l()(K.Hn, { [K.Y9]: r, [K.kS]: c, [K.SD]: o }), children: n }),
+            (0, i.jsx)("th", { scope: "row", className: X.nx, children: t }),
+            (0, i.jsx)("td", { className: l()(X.Hn, { [X.SD]: o }), children: s }),
+            (0, i.jsx)("td", { className: l()(X.Hn, { [X.Y9]: r, [X.kS]: c, [X.SD]: o }), children: n }),
         ],
     });
 }
@@ -195,9 +195,9 @@ let es = function (e) {
     var t;
     let s,
         a,
-        b,
+        T,
         {
-            className: T,
+            className: b,
             hideCTAs: R = !1,
             headingOverride: C,
             hidePill: I = !1,
@@ -205,11 +205,11 @@ let es = function (e) {
             selectedPlanTier: v = W.PremiumTypes.TIER_2,
         } = e,
         { analyticsLocations: P } = (0, x.Ay)(m.A.PREMIUM_MARKETING_PLAN_COMPARISON),
-        S = (0, r.bG)([f.A], () => f.A.hasFetchedSubscriptions()),
+        S = (0, r.bG)([h.A], () => h.A.hasFetchedSubscriptions()),
         y = (0, p.Y)(W.T7),
         M = (0, u.Ay)(),
         O = (0, c.q)(M),
-        B = (0, r.bG)([h.default], () => h.default.getCurrentUser()),
+        B = (0, r.bG)([f.default], () => f.default.getCurrentUser()),
         H = null != B && B.isPremiumWithPremiumGroup(),
         F = (0, N.YE)(B, W.PremiumTypes.TIER_2),
         es = (0, E.V)(),
@@ -277,7 +277,7 @@ let es = function (e) {
                     column2: (0, i.jsx)(q, { includes: !0 }),
                 },
                 9: {
-                    label: (0, i.jsx)(J, { text: D.intl.string(X.default["86GtGH"]) }),
+                    label: (0, i.jsx)(J, { text: D.intl.string(K.default["86GtGH"]) }),
                     column1: (0, i.jsx)(q, { includes: !1 }),
                     column2: (0, i.jsx)(q, { includes: !0 }),
                 },
@@ -335,7 +335,7 @@ let es = function (e) {
                 },
                 19: {
                     label: (0, i.jsx)(d.D, {
-                        className: K.__invalid_textColor,
+                        className: X.__invalid_textColor,
                         variant: "display-sm",
                         children: "Make Discord Yours",
                     }),
@@ -345,7 +345,7 @@ let es = function (e) {
                 },
                 20: {
                     label: (0, i.jsx)(d.D, {
-                        className: K.__invalid_textColor,
+                        className: X.__invalid_textColor,
                         variant: "display-sm",
                         children: "Enjoy an Upgraded Discord",
                     }),
@@ -355,7 +355,7 @@ let es = function (e) {
                 },
                 21: {
                     label: (0, i.jsx)(d.D, {
-                        className: K.__invalid_textColor,
+                        className: X.__invalid_textColor,
                         variant: "display-sm",
                         children: "Show Up the Way You Want",
                     }),
@@ -403,7 +403,7 @@ let es = function (e) {
     if (!S || !y) return null;
     let ex = {
         label: (0, i.jsx)(d.D, {
-            className: K.__invalid_textColor,
+            className: X.__invalid_textColor,
             variant: "heading-lg/extrabold",
             children: D.intl.string(D.t.ED4UVD),
         }),
@@ -425,45 +425,45 @@ let es = function (e) {
               column1: (0, i.jsxs)(i.Fragment, {
                   children: [
                       ei === W.pe.TIER_2
-                          ? (0, i.jsx)(U.A, {
-                                className: K.x6,
+                          ? (0, i.jsx)(k.A, {
+                                className: X.x6,
                                 subscriptionTier: W.pe.TIER_0,
                                 showIcon: !1,
                                 look: o.pR.OUTLINED,
                                 color: O ? o.XD.BRAND : o.XD.WHITE,
                             })
-                          : (0, i.jsx)(U.A, { className: K.x6, subscriptionTier: W.pe.TIER_0, showIcon: !1 }),
+                          : (0, i.jsx)(k.A, { className: X.x6, subscriptionTier: W.pe.TIER_0, showIcon: !1 }),
                       en === W.PremiumTypes.TIER_2 || null != ei
                           ? null
-                          : (0, i.jsx)(k.A, { className: K.x6, subscriptionTier: W.pe.TIER_0 }),
+                          : (0, i.jsx)(U.A, { className: X.x6, subscriptionTier: W.pe.TIER_0 }),
                   ],
               }),
               column2: (0, i.jsxs)(i.Fragment, {
                   children: [
                       ei === W.pe.TIER_0
-                          ? (0, i.jsx)(U.A, {
-                                className: K.x6,
+                          ? (0, i.jsx)(k.A, {
+                                className: X.x6,
                                 subscriptionTier: W.pe.TIER_2,
                                 showIcon: !1,
                                 look: o.pR.OUTLINED,
                                 color: O ? o.XD.BRAND : o.XD.WHITE,
                             })
-                          : (0, i.jsx)(U.A, { className: K.x6, subscriptionTier: W.pe.TIER_2, showIcon: !1 }),
+                          : (0, i.jsx)(k.A, { className: X.x6, subscriptionTier: W.pe.TIER_2, showIcon: !1 }),
                       en === W.PremiumTypes.TIER_0 || null != ei
                           ? null
-                          : (0, i.jsx)(k.A, { className: K.x6, subscriptionTier: W.pe.TIER_2 }),
+                          : (0, i.jsx)(U.A, { className: X.x6, subscriptionTier: W.pe.TIER_2 }),
                   ],
               }),
               withBottomBorder: !1,
               withBottomBorderRadius: !0,
               buttonsRow: null == ei,
           }),
-        (b = I
+        (T = I
             ? null
             : null != ei || null != en
               ? (0, i.jsx)(w.HU, {
                     text: null != ei ? D.intl.string(D.t.IBYG5U) : D.intl.string(D.t.ce1v3V),
-                    className: K.ls,
+                    className: X.ls,
                     colorOptions:
                         ei === W.pe.TIER_0
                             ? O
@@ -480,21 +480,21 @@ let es = function (e) {
     return (0, i.jsx)(x.f5, {
         value: P,
         children: (0, i.jsxs)("div", {
-            className: l()(K.zr, T),
+            className: l()(X.zr, b),
             "data-testid": "v2-marketing-page-comparison-table",
             children: [
                 (0, i.jsx)(d.D, {
-                    className: l()(K.Qw, K.__invalid_textColor),
+                    className: l()(X.Qw, X.__invalid_textColor),
                     variant: "heading-xxl/extrabold",
                     children: C ?? D.intl.string(D.t.FIbMh9),
                 }),
-                H && (0, i.jsx)(L, { premiumGroupRole: B.premiumGroupRole, className: K.vg }),
+                H && (0, i.jsx)(L, { premiumGroupRole: B.premiumGroupRole, className: X.vg }),
                 (0, i.jsxs)("div", {
-                    className: K.wY,
+                    className: X.wY,
                     children: [
-                        (0, i.jsx)("div", { className: l()(_, { [K.A9]: eg, [K.ce]: !eg && !H }), children: !eg && b }),
+                        (0, i.jsx)("div", { className: l()(_, { [X.A9]: eg, [X.ce]: !eg && !H }), children: !eg && T }),
                         (0, i.jsxs)("table", {
-                            className: K.tp,
+                            className: X.tp,
                             children: [
                                 (0, i.jsx)("thead", { children: (0, i.jsx)(ee, { ...ex }) }),
                                 (0, i.jsx)("tbody", {

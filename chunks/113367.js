@@ -1,4 +1,4 @@
-n.d(t, { $n: () => m, Dc: () => g, KC: () => S, Vc: () => N });
+n.d(t, { $n: () => g, Dc: () => m, KC: () => S, Vc: () => N });
 var i = n(477900),
     r = n(582128),
     a = n(196765),
@@ -16,14 +16,14 @@ var i = n(477900),
     f = n(375708);
 let p = "InboxLastOpenedAt",
     T = (0, a.v)(() => ({ toast: null, isVisible: !1, isPulsing: !1, inboxLastOpenedAt: o.w.get(p, 0) ?? 0 }));
-function m(e) {
+function g(e) {
     let { anchorRef: t } = e,
         n = T((e) => e.toast),
         a = T((e) => e.isVisible),
         o = T((e) => e.inboxLastOpenedAt),
         A = (0, l.bG)([h.A], () => h.A.getOverdueMessageReminderCount()),
         p = (0, l.bG)([h.A], () => h.A.getMostRecentOverdueDueAt()),
-        m = A > 0 && p > o;
+        g = A > 0 && p > o;
     (r.useEffect(() => {
         if (null == n) return;
         let e = setTimeout(() => T.setState({ isPulsing: !1 }), 600),
@@ -34,7 +34,7 @@ function m(e) {
     }, [n]),
         (0, s.l0)(() => T.setState({ toast: null, isVisible: !1, isPulsing: !1 })),
         r.useEffect(() => {
-            if (m)
+            if (g)
                 return (
                     document.addEventListener("keydown", e),
                     () => {
@@ -44,26 +44,26 @@ function m(e) {
             function e(e) {
                 e.key === I.dh.ESCAPE && N();
             }
-        }, [m]));
-    let g = null != n && (a || !m) ? n : null,
-        S = null != g ? g.message : f.intl.formatToPlainString(f.t.yBmFPA, { count: A }),
-        C = null != g ? (g.icon === d.Ck.CLOCK ? c.ClockIcon : u.BookmarkIcon) : c.ClockIcon;
+        }, [g]));
+    let m = null != n && (a || !g) ? n : null,
+        S = null != m ? m.message : f.intl.formatToPlainString(f.t.yBmFPA, { count: A }),
+        C = null != m ? (m.icon === d.Ck.CLOCK ? c.ClockIcon : u.BookmarkIcon) : c.ClockIcon;
     return (0, i.jsx)(_.u, {
         anchorRef: t,
         asContainer: !0,
-        forceOpen: (null != n && a) || m,
+        forceOpen: (null != n && a) || g,
         hideOnClick: !1,
         position: "bottom",
         align: "right",
         caretConfig: { align: "end" },
-        asset: (0, i.jsx)(C, { size: "sm", color: null != g ? E.A.colors.STATUS_POSITIVE : E.A.colors.TEXT_STRONG }),
+        asset: (0, i.jsx)(C, { size: "sm", color: null != m ? E.A.colors.STATUS_POSITIVE : E.A.colors.TEXT_STRONG }),
         assetSize: 20,
         body: S,
         ariaHidden: !0,
         children: null,
     });
 }
-function g(e) {
+function m(e) {
     (T.setState({ toast: { ...e }, isVisible: !0, isPulsing: !0 }), A.O.announce(e.message, "polite"));
 }
 function S() {

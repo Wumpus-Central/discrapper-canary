@@ -17,8 +17,8 @@ var A = n(198052),
     f = n(626584),
     p = n(736056),
     T = n(698441),
-    m = n(250953),
-    g = n(380335),
+    g = n(250953),
+    m = n(380335),
     S = n(309199),
     N = n(157550),
     C = n(451919),
@@ -85,7 +85,7 @@ let eu = ei.hVb.VIEW_CHANNEL | ei.hVb.READ_MESSAGE_HISTORY,
     ef = [],
     ep = !1,
     eT = null,
-    em = new (class {
+    eg = new (class {
         channelWindowIds = {};
         addWindowId(e, t) {
             (null == this.channelWindowIds[e] && (this.channelWindowIds[e] = new Set()),
@@ -120,9 +120,9 @@ let eu = ei.hVb.VIEW_CHANNEL | ei.hVb.READ_MESSAGE_HISTORY,
             for (let [t, n] of j.default.entries(this.channelWindowIds)) e(t, n);
         }
     })(),
-    eg = 30 * V.A.Millis.DAY;
+    em = 30 * V.A.Millis.DAY;
 function eS() {
-    return j.default.fromTimestamp(Date.now() - eg);
+    return j.default.fromTimestamp(Date.now() - em);
 }
 let eN = 0,
     eC = 0,
@@ -192,7 +192,7 @@ function eP(e, t) {
         return (eM(e, "In activity"), !1);
     if (X.A.isIdle()) return (eM(e, "Is idle"), !1);
     if (!e.canTrackUnreads()) return (eM(e, "Cannot track unreads"), !1);
-    if (n?.isForumLikeChannel() !== !0 && !em.isAnyWindowFocused(e.channelId) && !eb(!0, e.channelId)) return !1;
+    if (n?.isForumLikeChannel() !== !0 && !eg.isAnyWindowFocused(e.channelId) && !eb(!0, e.channelId)) return !1;
     if (i && !e._persisted) return (eM(e, "unpersisted forum post"), !0);
     if (!e.hasUnreadOrMentions()) return (eM(e, "No unread or mentions"), !1);
     if (n?.isForumLikeChannel() === !0) return (eM(e, "Forum-like channel"), !1);
@@ -200,7 +200,7 @@ function eP(e, t) {
     let r = A.A.getLayout(e.channelId);
     if (!A.A.getChatOpen(e.channelId) && (r === ei.DUB.NO_CHAT || r === ei.DUB.FULL_SCREEN))
         return (eM(e, "Fullscreen video"), !1);
-    if (!em.isChannelAckable(e.channelId)) return (eM(e, "Not ackable"), !1);
+    if (!eg.isChannelAckable(e.channelId)) return (eM(e, "Not ackable"), !1);
     let a = q.A.getMessages(e.channelId);
     return null == a || !a.ready || a.loadingMore
         ? (eM(e, "Still loading messages"), !1)
@@ -334,7 +334,7 @@ class eU {
             estimated: f,
             _mentionCount: p,
             flags: T,
-            lastViewed: m,
+            lastViewed: g,
         } = this;
         if (e)
             return {
@@ -357,9 +357,9 @@ class eU {
                 estimated: f,
                 _mentionCount: p,
                 flags: T,
-                lastViewed: m,
+                lastViewed: g,
             };
-        let g = {
+        let m = {
             channelId: t,
             type: n,
             _guildId: i,
@@ -374,9 +374,9 @@ class eU {
             flags: T,
         };
         return (
-            null != m && m > 0 && (g.lastViewed = m),
-            r && ((g._isThread = r), (g._isActiveThread = a), (g._isJoinedThread = s)),
-            g
+            null != g && g > 0 && (m.lastViewed = g),
+            r && ((m._isThread = r), (m._isActiveThread = a), (m._isJoinedThread = s)),
+            m
         );
     }
     deserializeForOverlay(e) {
@@ -400,8 +400,8 @@ class eU {
             oldestUnreadMessageIdStale: f,
             estimated: p,
             _unreadCount: T,
-            _mentionCount: m,
-            flags: g,
+            _mentionCount: g,
+            flags: m,
             lastViewed: S,
         } = e;
         ((this.channelId = t),
@@ -423,8 +423,8 @@ class eU {
             (this.oldestUnreadMessageIdStale = f ?? !1),
             (this.estimated = p ?? !1),
             (this._unreadCount = T ?? 0),
-            (this._mentionCount = m),
-            (this.flags = g),
+            (this._mentionCount = g),
+            (this.flags = m),
             (this.lastViewed = S),
             eU._mentionChannels.delete(this.channelId),
             this._mentionCount > 0 && this.canHaveMentions() && eU._mentionChannels.add(this.channelId));
@@ -565,7 +565,7 @@ class eU {
         return (
             !(
                 (this._isThread && !this._isJoinedThread) ||
-                (0, S.k_)(this.channelId, [g.A, N.A]) ||
+                (0, S.k_)(this.channelId, [m.A, N.A]) ||
                 (!this._isThread &&
                     (0, v.WW)(this._guildId) &&
                     (this._lastMessageTimestamp < eN ||
@@ -580,7 +580,7 @@ class eU {
             !(
                 0 === this.mentionCount ||
                 (this._isThread && !this._isJoinedThread) ||
-                (0, S.k_)(this.channelId, [g.A, N.A]) ||
+                (0, S.k_)(this.channelId, [m.A, N.A]) ||
                 ((0, v.WW)(this._guildId) && this._lastMessageTimestamp < eN)
             ) && this.canTrackUnreads()
         );
@@ -1114,7 +1114,7 @@ class e2 extends o.Ay.Store {
             ee.Ay,
             en.A,
             y.A,
-            g.A,
+            m.A,
             k.A,
             N.A,
             this.waitFor(
@@ -1287,7 +1287,7 @@ class e2 extends o.Ay.Store {
         return null == n.snapshot || Date.now() - n.snapshot.takenAt > t ? n.takeSnapshot() : n.snapshot;
     }
     getChannelIdsForWindowId(e) {
-        return em.getAllChannelIdsForWindowId(e);
+        return eg.getAllChannelIdsForWindowId(e);
     }
 }
 let e3 = new e2(_.h, {
@@ -1444,7 +1444,7 @@ let e3 = new e2(_.h, {
                 return (
                     null != l.outgoingAck && l.clearOutgoingAck(), eJ({ channelId: r, messageId: a.id, manual: !1 })
                 );
-            let _ = (0, m.Y)();
+            let _ = (0, g.Y)();
             if (_?.isReady() === !0) {
                 let e = _.getCurrentRoute();
                 A.A.getChatOpen(l.channelId)
@@ -1697,7 +1697,7 @@ let e3 = new e2(_.h, {
         WINDOW_FOCUS: function (e) {
             let t = !1;
             return (
-                em.forEachChannel((n, i) => {
+                eg.forEachChannel((n, i) => {
                     i.has(e.windowId) &&
                         (t =
                             (function (e, t) {
@@ -1766,8 +1766,8 @@ let e3 = new e2(_.h, {
         ENABLE_AUTOMATIC_ACK: function (e) {
             let { channelId: t, windowId: n } = e;
             return (
-                !em.hasWindowId(t, n) &&
-                (em.addWindowId(t, n),
+                !eg.hasWindowId(t, n) &&
+                (eg.addWindowId(t, n),
                 eV(
                     {
                         section: ei.JJy.CHANNEL,
@@ -1780,7 +1780,7 @@ let e3 = new e2(_.h, {
         },
         DISABLE_AUTOMATIC_ACK: function (e) {
             let { channelId: t, windowId: n } = e;
-            return (em.removeWindowId(t, n), !1);
+            return (eg.removeWindowId(t, n), !1);
         },
         REGISTER_VISIBLE_INLINE_CHANNEL: function (e) {
             let t,

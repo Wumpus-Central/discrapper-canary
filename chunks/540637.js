@@ -16,8 +16,8 @@ var i = n(477900),
     f = n(801461),
     p = n(869431),
     T = n(594615);
-let m = c.A.modules.select.OPTION_HEIGHT.resolve(),
-    g = m + 4,
+let g = c.A.modules.select.OPTION_HEIGHT.resolve(),
+    m = g + 4,
     S = [];
 function N(e) {
     return null != e.description && "" !== e.description;
@@ -82,7 +82,7 @@ function C(e) {
             t?.focus();
         }
     }, [X, H, k, B, a]);
-    let Z = r.useCallback((e, t) => (N(H[(0, f.rp)(C, e, t)]) ? g : m), [H, C]),
+    let Z = r.useCallback((e, t) => (N(H[(0, f.rp)(C, e, t)]) ? m : g), [H, C]),
         Q = r.useCallback(
             (e) => {
                 if (!0 === c && 1 === K.length && K.includes(e)) return;
@@ -125,7 +125,7 @@ function C(e) {
                 height:
                     null != U
                         ? `${
-                              H.slice(0, U).reduce((e, t) => e + (N(t) ? g : m), 0) +
+                              H.slice(0, U).reduce((e, t) => e + (N(t) ? m : g), 0) +
                               26 *
                                   (function (e, t) {
                                       let n = 0,

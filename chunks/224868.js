@@ -1,4 +1,4 @@
-n.d(t, { f: () => S, p: () => g });
+n.d(t, { f: () => S, p: () => m });
 var i = n(47167),
     r = n(236285),
     a = n(7584),
@@ -16,9 +16,9 @@ var i = n(47167),
     f = n(935208),
     p = n(408018),
     T = n(652215),
-    m = n(307731);
-function g(e, t, n, p) {
-    let { allowUsers: g = !0, allowRoles: S = !0 } = p ?? {};
+    g = n(307731);
+function m(e, t, n, p) {
+    let { allowUsers: m = !0, allowRoles: S = !0 } = p ?? {};
     switch (e[0]) {
         case "@":
             return (function (e, t, n, i, r) {
@@ -48,7 +48,7 @@ function g(e, t, n, p) {
                     }
                 }
                 return null;
-            })(e, t, n, g, S);
+            })(e, t, n, m, S);
         case ":":
             var C = e,
                 O = t,
@@ -58,7 +58,7 @@ function g(e, t, n, p) {
             let y = L[1],
                 D = r.Ay.getDisambiguatedEmojiContext(O).getCustomEmoji().get(y),
                 v = null != R ? l.A.getChannel(R) : null;
-            return null == D || I.Ay.isEmojiFiltered({ emoji: D, channel: v, intention: m.EmojiIntention.CHAT })
+            return null == D || I.Ay.isEmojiFiltered({ emoji: D, channel: v, intention: g.EmojiIntention.CHAT })
                 ? null
                 : {
                       type: "customEmoji",
@@ -102,7 +102,7 @@ function g(e, t, n, p) {
     return null;
 }
 function S(e, t, n, i) {
-    let r = g(e, t, n, i);
+    let r = m(e, t, n, i);
     return null == r ? null : (0, p.QR)(r);
 }
 function N(e, t, n) {

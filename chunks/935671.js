@@ -1,4 +1,4 @@
-n.d(t, { sL: () => L, NP: () => T, XQ: () => p, Tn: () => N, yA: () => m, TC: () => f, AV: () => C, z8: () => y });
+n.d(t, { sL: () => L, NP: () => T, XQ: () => p, Tn: () => N, yA: () => g, TC: () => f, AV: () => C, z8: () => y });
 var i = n(17928),
     r = n(691540),
     a = n(857250),
@@ -24,7 +24,7 @@ function T() {
         t = p();
     return !!u.isPlatformEmbedded && e && !f() && t;
 }
-function m(e) {
+function g(e) {
     return (
         !!u.isPlatformEmbedded &&
         e.canShowAdminWarning &&
@@ -33,7 +33,7 @@ function m(e) {
         !0 === E.Ay.CanSystemServiceBeInstalled()
     );
 }
-function g(e, t, n) {
+function m(e, t, n) {
     (d.Ay.getSystemServiceStatus(e).state !== t.state &&
         l.h.dispatch({ type: "SYSTEM_SERVICE_INITIALIZE", status: t, modules: [e] }),
         "running" === t.state
@@ -46,11 +46,11 @@ function g(e, t, n) {
 function S(e) {
     u.isPlatformEmbedded &&
         (E.Ay.InputEventServiceSetStatusCallback((t) => {
-            g("input-service", t, e);
+            m("input-service", t, e);
         }),
         E.Ay.InputEventServiceSetAllowed(!0),
         E.Ay.ToolServiceSetStatusCallback((t) => {
-            g("tool-service", t, e);
+            m("tool-service", t, e);
         }),
         E.Ay.ToolServiceSetAllowed(!0));
 }

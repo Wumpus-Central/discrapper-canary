@@ -2,7 +2,7 @@ n.d(t, {
     E1: () => f,
     O4: () => N,
     T$: () => u,
-    Zj: () => g,
+    Zj: () => m,
     e3: () => S,
     gK: () => A,
     ph: () => _,
@@ -98,15 +98,15 @@ function T(e) {
     let t = a.Ay.getGameOrTransformedSubgameForPID(e);
     return null != t && null != t.name && p(t);
 }
-let m = new Set([i.aI.UNKNOWN, i.aI.FULLSCREEN]);
-function g(e, t, n) {
+let g = new Set([i.aI.UNKNOWN, i.aI.FULLSCREEN]);
+function m(e, t, n) {
     if (e.overlayMethod !== d.Ue.OutOfProcess && e.overlayMethod !== d.Ue.OutOfProcessLimitedInteraction) return !1;
     if (!n) return !0;
     switch (t) {
         case i.aI.UNKNOWN:
             var r;
             let a;
-            return m.has(
+            return g.has(
                 0 ===
                     (a = Object.keys((r = e.fullscreenHistory))
                         .map(Number)

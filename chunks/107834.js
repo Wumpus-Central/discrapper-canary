@@ -1,4 +1,4 @@
-s.d(t, { A: () => f });
+s.d(t, { A: () => h });
 var i = s(477900);
 s(582128);
 var n = s(17928),
@@ -13,8 +13,8 @@ var n = s(17928),
     x = s(280450),
     g = s(652215),
     p = s(375708),
-    h = s(906367);
-let f = function () {
+    f = s(906367);
+let h = function () {
     let e = (0, n.bG)([x.default], () => x.default.isAuthenticated()),
         t = (0, c.Ay)();
     return (0, i.jsx)(r.A, {
@@ -26,7 +26,7 @@ let f = function () {
                     isAuthenticated: e,
                     className: t,
                     toolbar: (0, i.jsxs)("div", {
-                        className: h.fI,
+                        className: f.fI,
                         children: [
                             (0, i.jsx)(m.l, {
                                 size: "sm",

@@ -18,8 +18,8 @@ var i = n(477900),
     f = n(976860),
     p = n(345942),
     T = n(734057),
-    m = n(576705),
-    g = n(309010),
+    g = n(576705),
+    m = n(309010),
     S = n(174459),
     N = n(486020),
     C = n(625494),
@@ -80,8 +80,8 @@ function M(e) {
                         S.default.track(L.HAw.OAUTH2_AUTHORIZE_SUCCESS_OPEN_APP_CLICKED, { application_id: n.id }));
                 }));
         }, [n?.id, s, o]),
-        E = (0, c.bG)([g.Ay, T.A], () => T.A.getChannel(g.Ay.getChannelId())),
-        A = (0, c.bG)([m.A], () => m.A.can(L.xBc.SEND_MESSAGES, E)),
+        E = (0, c.bG)([m.Ay, T.A], () => T.A.getChannel(m.Ay.getChannelId())),
+        A = (0, c.bG)([g.A], () => g.A.can(L.xBc.SEND_MESSAGES, E)),
         h = null != t,
         N = null == t && A && (!u || null != o),
         O = [];

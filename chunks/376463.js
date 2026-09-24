@@ -29,10 +29,10 @@ function T(e) {
         switch_origin: A,
     };
 }
-function m() {
+function g() {
     return h && !1;
 }
-class g extends r.Ay.Store {
+class m extends r.Ay.Store {
     static displayName = "MultiAccountSwitchStore";
     initialize() {
         this.waitFor(o.A);
@@ -47,7 +47,7 @@ class g extends r.Ay.Store {
         return E;
     }
 }
-let S = new g(a.h, {
+let S = new m(a.h, {
     MULTI_ACCOUNT_SWITCH_START: function (e) {
         ((E = e.targetUserId), (A = e.location));
     },
@@ -83,7 +83,7 @@ let S = new g(a.h, {
         let { user: t } = e;
         if (h) {
             !(function (e) {
-                if (!m()) return;
+                if (!g()) return;
                 let t = i.getToken(e),
                     n = i.getToken(),
                     r = null != E && e !== E,
@@ -104,12 +104,12 @@ let S = new g(a.h, {
                 let e;
                 ((e = T(t.id)),
                     l.default.track(d.HAw.MULTI_ACCOUNT_SWITCH_SUCCESS, e),
-                    m() && c.log("Account switch success", e));
+                    g() && c.log("Account switch success", e));
             } else {
                 let e;
                 ((e = T(t.id)),
                     l.default.track(d.HAw.MULTI_ACCOUNT_SWITCH_FAILURE, e),
-                    m() && c.log("Account switch failure", e));
+                    g() && c.log("Account switch failure", e));
             }
             p = { success: e, navigateHome: f };
         } else p = null;
@@ -117,7 +117,7 @@ let S = new g(a.h, {
         (null != n &&
             "" !== n &&
             (!(function (e, t) {
-                if (!m()) return;
+                if (!g()) return;
                 let n = o.A.getUsers()
                     .map((e) => {
                         let { id: t } = e;
@@ -133,7 +133,7 @@ let S = new g(a.h, {
             })(t.id, n),
             i.setToken(n, t.id)),
             (function (e) {
-                if (!m()) return;
+                if (!g()) return;
                 let t = new Map();
                 (o.A.getUsers().forEach((e) => {
                     let { id: n } = e,

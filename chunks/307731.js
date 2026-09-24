@@ -12,7 +12,7 @@
         EmojiInteractionPoint: () => T,
         EmojiSprites: () => h,
         MAX_EMOJI_TO_BE_JUMBO: () => c,
-        isExternalEmojiAllowedForIntention: () => m,
+        isExternalEmojiAllowedForIntention: () => g,
     }));
 let i = 50,
     r = 200,
@@ -76,6 +76,6 @@ var T =
     (A.TrackOpenPopoutUsed = "TRACK_OPEN_POPOUT_USED"),
     (A.CustomEmojiTooltipShown = "CUSTOM_EMOJI_TOOLTIP_SHOWN"),
     A);
-function m(e) {
+function g(e) {
     return !p.has(e);
 }

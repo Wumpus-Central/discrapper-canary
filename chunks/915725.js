@@ -21,8 +21,8 @@ let I = "default",
     f = "Discord Clips",
     p = {},
     T = {},
-    m = [],
-    g = 0,
+    g = [],
+    m = 0,
     S = null,
     N = null,
     C = null,
@@ -220,7 +220,7 @@ class V extends r.Ay.DeviceSettingsStore {
         return x().flatMap((e) => e.candidates);
     }
     getPendingMontageClips() {
-        return m;
+        return g;
     }
     getUserAgnosticState() {
         return w;
@@ -256,7 +256,7 @@ class V extends r.Ay.DeviceSettingsStore {
         return w.hardwareClassificationVersion;
     }
     getIsAtMaxSaveClipOperations() {
-        return g >= E.VP;
+        return m >= E.VP;
     }
     getLastClipsError() {
         return R;
@@ -302,7 +302,7 @@ let H = new V(a.h, {
         },
         CLIPS_SAVE_CLIP: function (e) {
             let { clip: t, session: n } = e;
-            ((g = Math.max(g - 1, 0)),
+            ((m = Math.max(m - 1, 0)),
                 k(n, (e) => e.recordSavedClip(t)),
                 t.isCandidate ||
                     ((w = { ...w, newClipIds: [...(w.newClipIds ?? []), t.id] }),
@@ -319,14 +319,14 @@ let H = new V(a.h, {
         },
         CLIPS_SAVE_CLIP_START: function (e) {
             let { clipType: t } = e;
-            ((g += 1), (w.hasTakenDecoupledClip = w.hasTakenDecoupledClip || t === E.Fv.DECOUPLED));
+            ((m += 1), (w.hasTakenDecoupledClip = w.hasTakenDecoupledClip || t === E.Fv.DECOUPLED));
         },
         CLIPS_SAVE_CLIP_ERROR: function () {
-            g = Math.max(g - 1, 0);
+            m = Math.max(m - 1, 0);
         },
         CLIPS_SAVE_CLIP_NO_OP: function (e) {
             let { reason: t } = e;
-            (t === E.RC.BUFFER_WARMING_UP || t === E.RC.BRIDGE_SHUTDOWN) && (g = Math.max(g - 1, 0));
+            (t === E.RC.BUFFER_WARMING_UP || t === E.RC.BRIDGE_SHUTDOWN) && (m = Math.max(m - 1, 0));
         },
         CLIPS_CLEAR_LAST_CLIPS_SESSION: function () {
             if (null == C) return !1;
@@ -420,9 +420,9 @@ let H = new V(a.h, {
         },
         CLIPS_MONTAGE_RENDER_START: function (e) {
             let { clip: t } = e;
-            m = [
+            g = [
                 t,
-                ...m.filter((e) => {
+                ...g.filter((e) => {
                     let { id: n } = e;
                     return n !== t.id;
                 }),
@@ -430,7 +430,7 @@ let H = new V(a.h, {
         },
         CLIPS_MONTAGE_RENDER_DONE: function (e) {
             let { clip: t, session: n } = e;
-            ((m = m.filter((e) => {
+            ((g = g.filter((e) => {
                 let { id: n } = e;
                 return n !== t.id;
             })),
@@ -440,7 +440,7 @@ let H = new V(a.h, {
         },
         CLIPS_MONTAGE_RENDER_ERROR: function (e) {
             let { clipId: t } = e;
-            m = m.filter((e) => {
+            g = g.filter((e) => {
                 let { id: n } = e;
                 return n !== t;
             });

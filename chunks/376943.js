@@ -1,4 +1,4 @@
-n.d(t, { En: () => f, FM: () => N, Ju: () => I, SK: () => T, mi: () => m, nc: () => g, r9: () => S, vu: () => p });
+n.d(t, { En: () => f, FM: () => N, Ju: () => I, SK: () => T, mi: () => g, nc: () => m, r9: () => S, vu: () => p });
 var i = n(734057),
     r = n(71393),
     a = n(576705),
@@ -36,10 +36,10 @@ function T(e) {
     let t = e.match(h);
     return null != t && t.length > 1 ? { guildId: t[1], guildEventId: t[2], recurrenceId: t[4] } : null;
 }
-function m(e) {
+function g(e) {
     return null == e ? null : (e.match(A)?.[1] ?? null);
 }
-function g(e) {
+function m(e) {
     return !!e.isPrivate() || a.A.can(l.xBc.VIEW_CHANNEL, e);
 }
 function S(e) {
@@ -47,7 +47,7 @@ function S(e) {
     if (null == r.A.getGuild(t) && t !== l.ME) return !1;
     if (null == n) return !0;
     let a = i.A.getChannel(n);
-    return null != a && g(a);
+    return null != a && m(a);
 }
 function N(e) {
     if (null == e) return null;

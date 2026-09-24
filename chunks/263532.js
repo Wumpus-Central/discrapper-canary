@@ -224,8 +224,8 @@ class p extends s.A {
     }
 }
 var T = n(566980),
-    m = n(511484),
-    g = n(786300),
+    g = n(511484),
+    m = n(786300),
     S = n(815545),
     N = n(826469),
     C = n(158045),
@@ -278,7 +278,7 @@ var j = n(811315),
     $ = n(403362),
     z = n(427262);
 let X = 1,
-    [q, Z] = (0, g.A)();
+    [q, Z] = (0, m.A)();
 function Q(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.x;
     return Z()(e, t);
@@ -606,7 +606,7 @@ function J(e) {
             renewalInvoicePreview: null,
             renewalInvoiceError: null,
             setRenewalInvoicePreview: (t, n) => e({ renewalInvoicePreview: t ?? null, renewalInvoiceError: n ?? null }),
-            premiumDiscountInfo: m.TI,
+            premiumDiscountInfo: g.TI,
             setPremiumDiscountInfo: (t) => e({ premiumDiscountInfo: t }),
             entitlementsGranted: [],
             setEntitlementsGranted: (t) => e({ entitlementsGranted: t }),

@@ -6,10 +6,10 @@ n.d(t, {
     K5: () => D,
     Mu: () => I,
     NewMemberActionTypes: () => p,
-    RR: () => m,
+    RR: () => g,
     Rc: () => y,
     SM: () => A,
-    Xu: () => g,
+    Xu: () => m,
     Y4: () => S,
     Yt: () => L,
     _7: () => E,
@@ -47,7 +47,7 @@ function T(e) {
         icon: e.icon ?? null,
     };
 }
-function m(e) {
+function g(e) {
     return {
         channelId: e.channel_id,
         title: e.title,
@@ -56,14 +56,14 @@ function m(e) {
         icon: e.icon ?? null,
     };
 }
-function g(e) {
+function m(e) {
     if (null == e) return null;
     let { welcome_message: t, new_member_actions: n, resource_channels: i, enabled: r } = e,
         l = { authorIds: t.author_ids, message: t.message };
     return {
         welcomeMessage: l,
         newMemberActions: n.filter((e) => (0, s.Vq)(a.A.getChannel(e.channel_id))).map(T),
-        resourceChannels: i.filter((e) => (0, s.Vq)(a.A.getChannel(e.channel_id))).map(m),
+        resourceChannels: i.filter((e) => (0, s.Vq)(a.A.getChannel(e.channel_id))).map(g),
         enabled: r,
     };
 }

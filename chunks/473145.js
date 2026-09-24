@@ -7,7 +7,7 @@ n.d(t, {
     P7: () => b,
     Qu: () => y,
     Ry: () => R,
-    TP: () => m,
+    TP: () => g,
     Ys: () => D,
     aG: () => C,
     ax: () => N,
@@ -44,7 +44,7 @@ var A = n(652215),
     p = n(375708),
     T = n(148155);
 Object.freeze({ 1: 1, 2: 2, 3: 3, 4: 6, 5: 9, 6: 12, 7: 15, 8: 18, 9: 24 });
-var m =
+var g =
     (((i = {})[(i.EMOJI = 1)] = "EMOJI"),
     (i[(i.AUDIO = 2)] = "AUDIO"),
     (i[(i.ANIMATED = 3)] = "ANIMATED"),
@@ -57,8 +57,8 @@ var m =
     (i[(i.STAGE_VIDEO = 12)] = "STAGE_VIDEO"),
     (i[(i.SOUNDBOARD = 13)] = "SOUNDBOARD"),
     i);
-let g = [A.TVA.NONE, A.TVA.TIER_1, A.TVA.TIER_2, A.TVA.TIER_3],
-    S = g.slice().reverse();
+let m = [A.TVA.NONE, A.TVA.TIER_1, A.TVA.TIER_2, A.TVA.TIER_3],
+    S = m.slice().reverse();
 function N(e) {
     return e === A.TVA.NONE ? A.TVA.TIER_1 : G.find((t) => t.tier === e)?.nextTier;
 }
@@ -72,7 +72,7 @@ function O(e) {
 }
 function R(e) {
     if (e === A.TVA.NONE) return I.y7[e];
-    let t = g[g.indexOf(e) - 1];
+    let t = m[m.indexOf(e) - 1];
     return I.y7[e] - I.y7[t];
 }
 function L(e) {
@@ -172,15 +172,15 @@ let G = [
 ];
 function x(e, t) {
     let n = O(t),
-        i = g.indexOf(t);
+        i = m.indexOf(t);
     if (-1 === i) return 0;
-    let r = g[i - 1],
+    let r = m[i - 1],
         a = null != r ? C(r) : 0,
         s = C(t);
     return Math.max(0, n - e.slice(a, s).length);
 }
 function k(e, t, n) {
-    return -1 === g.indexOf(n) ? 0 : Math.max(0, F(e) - t.length);
+    return -1 === m.indexOf(n) ? 0 : Math.max(0, F(e) - t.length);
 }
 function F(e) {
     let t = I.OW + (e.premiumFeatures?.additionalSoundSlots ?? 0);

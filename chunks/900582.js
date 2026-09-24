@@ -348,7 +348,7 @@ let T = s().debounce((e, t) => {
                 : void 0;
     null != i && e.detectLanguage(i);
 }, 250);
-async function m() {
+async function g() {
     let e = new p((await I.getAvailableDictionaries()) ?? []);
     return (
         e.usesMultilang ||
@@ -356,7 +356,7 @@ async function m() {
         e
     );
 }
-var g = n(507263),
+var m = n(507263),
     S = n(723702);
 function N() {
     return i.A?.spellCheck != null;
@@ -366,7 +366,7 @@ function C() {
 }
 let O = C()
         ? new Promise((e) => {
-              Promise.resolve().then(() => (0, g.B)(() => e(m())));
+              Promise.resolve().then(() => (0, m.B)(() => e(g())));
           })
         : null,
     R = null;

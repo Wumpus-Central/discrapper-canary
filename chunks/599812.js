@@ -16,8 +16,8 @@ var i = n(132500),
     f = n(927813),
     p = n(973522),
     T = n(605404),
-    m = n(19575);
-class g {
+    g = n(19575);
+class m {
     pids = new Set();
     enabled = !1;
     enable() {
@@ -25,7 +25,7 @@ class g {
     }
     disable() {
         if (this.enabled) {
-            for (let e of ((this.enabled = !1), this.pids)) m.Ay.SetSystemServicePerformanceMonitorEnabled(e, !1);
+            for (let e of ((this.enabled = !1), this.pids)) g.Ay.SetSystemServicePerformanceMonitorEnabled(e, !1);
             this.pids.clear();
         }
     }
@@ -33,19 +33,19 @@ class g {
         this.enabled = !1;
     }
     startMonitoringPid(e) {
-        (this.pids.add(e), this.enabled && m.Ay.SetSystemServicePerformanceMonitorEnabled(e, !0));
+        (this.pids.add(e), this.enabled && g.Ay.SetSystemServicePerformanceMonitorEnabled(e, !0));
     }
     stopMonitoringPid(e) {
         this.pids.has(e) &&
-            (this.pids.delete(e), this.enabled && m.Ay.SetSystemServicePerformanceMonitorEnabled(e, !1));
+            (this.pids.delete(e), this.enabled && g.Ay.SetSystemServicePerformanceMonitorEnabled(e, !1));
     }
     getSnapshot(e) {
         return this.enabled && this.pids.has(e)
-            ? m.Ay.GetSystemServicePerformanceMonitorSnapshot(e)
+            ? g.Ay.GetSystemServicePerformanceMonitorSnapshot(e)
             : Promise.resolve(null);
     }
 }
-let S = new g();
+let S = new m();
 var N = n(952818),
     C = n(687658),
     O = n(321034);

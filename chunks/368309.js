@@ -16,12 +16,12 @@ var i = n(477900),
     f = n(158045),
     p = n(652215),
     T = n(202541),
-    m = n(375708),
-    g = n(644242),
+    g = n(375708),
+    m = n(644242),
     S = n(309427);
 function N(e) {
     let { onClose: t, analyticsLocations: n, ...a } = e,
-        N = (0, I.TM)() ? g.A : S.A,
+        N = (0, I.TM)() ? m.A : S.A,
         { analyticsLocations: C } = (0, o.Ay)(n, l.A.PREMIUM_UPSELL);
     (0, s.Ay)(() => {
         (h.default.track(p.HAw.PREMIUM_UPSELL_VIEWED, {
@@ -46,11 +46,11 @@ function N(e) {
     return (0, i.jsx)(o.f5, {
         value: C,
         children: (0, i.jsx)(_.A, {
-            title: m.intl.string(m.t.jGDYF0),
-            subtitle: m.intl.string(m.t["grL/hg"]),
+            title: g.intl.string(g.t.jGDYF0),
+            subtitle: g.intl.string(g.t["grL/hg"]),
             graphic: { type: "video", src: N, loop: !0, loopAt: 5 },
             gradientColor: "nitro-green",
-            secondaryCTA: m.intl.string(m.t.ZnqyZ2),
+            secondaryCTA: g.intl.string(g.t.ZnqyZ2),
             onSecondaryClick: O,
             onClose: t,
             ...a,

@@ -11,7 +11,7 @@ n.d(t, {
     f5: () => D,
     lj: () => C,
     qu: () => N,
-    ug: () => m,
+    ug: () => g,
 });
 var i,
     r = n(228366),
@@ -65,8 +65,8 @@ function p() {
 function T(e, t) {
     0 !== u.A.getTabs().length && r.h.dispatch({ type: "CHANNEL_TABS_NAVIGATE_ROUTE", routePath: e, routeLabel: t });
 }
-var m = (((i = {}).Passthrough = "passthrough"), (i.Noop = "noop"), (i.Navigated = "navigated"), i);
-function g(e) {
+var g = (((i = {}).Passthrough = "passthrough"), (i.Noop = "noop"), (i.Navigated = "navigated"), i);
+function m(e) {
     if (!u.A.isEnabled()) return "passthrough";
     let t = u.A.getActiveTab();
     if (null == t || ("channel" === t.kind && d.Ay.getCurrentlySelectedChannelId() !== t.channelId))
@@ -89,10 +89,10 @@ function g(e) {
             "navigated");
 }
 function S() {
-    return g(-1);
+    return m(-1);
 }
 function N() {
-    return g(1);
+    return m(1);
 }
 function C(e) {
     r.h.dispatch({ type: "CHANNEL_TABS_SET_ENABLED", enabled: e });

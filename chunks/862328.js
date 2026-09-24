@@ -51,7 +51,7 @@ function _(e) {
             rounded: p = !1,
             "aria-hidden": T,
         } = e,
-        [m, g] = r.useState(!1),
+        [g, m] = r.useState(!1),
         S = null != I,
         N = null != f,
         C = r.useId(),
@@ -97,10 +97,10 @@ function _(e) {
             className: s()(a, c.iE),
             style: o,
             onFocus: function () {
-                g(!0);
+                m(!0);
             },
             onBlur: function () {
-                g(!1);
+                m(!1);
             },
             "aria-hidden": T,
             children: [
@@ -172,7 +172,7 @@ function _(e) {
                                       ],
                                   })
                                 : null,
-                            m
+                            g
                                 ? (0, i.jsxs)(i.Fragment, {
                                       children: [
                                           (0, i.jsx)("g", {

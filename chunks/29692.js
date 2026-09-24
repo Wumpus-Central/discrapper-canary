@@ -8,7 +8,7 @@
     jo: () => s,
     to: () => i,
     ts: () => u,
-    v_: () => f,
+    v_: () => m,
 }),
     l(321073));
 let n = Object.freeze({ x: 0.5, y: 0.5 });
@@ -140,11 +140,11 @@ function d(e) {
     );
 }
 let c = "[vibegrations:selected] ",
-    m = " \u2014 ";
-function f(e, t) {
+    f = " \u2014 ";
+function m(e, t) {
     let { kind: l, name: n } = u(e),
         a = [l, n].filter((e) => "" !== e).join(": ");
-    return `${c}${a}${m}${d(e)}
+    return `${c}${a}${f}${d(e)}
 ${t.trim()}`;
 }
 function h(e) {
@@ -153,7 +153,7 @@ function h(e) {
         l = -1 === t ? e : e.slice(0, t),
         n = -1 === t ? "" : e.slice(t + 1),
         a = l.slice(c.length),
-        r = a.indexOf(m),
+        r = a.indexOf(f),
         i = (-1 === r ? a : a.slice(0, r)).trim();
     return "" === i ? null : { label: i, body: n };
 }

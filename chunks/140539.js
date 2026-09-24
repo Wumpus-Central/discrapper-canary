@@ -20,8 +20,8 @@ var n = r(477900),
     D = r(734057),
     v = r(31717),
     E = r(309010),
-    x = r(164617),
-    C = r(540462),
+    C = r(164617),
+    x = r(540462),
     S = r(748337);
 let R = [c.L, m.T, p.w, h.z];
 function j(e) {
@@ -57,7 +57,7 @@ function j(e) {
                 value: a.guild_id,
                 children: [
                     (0, n.jsx)(u.A, { channel: a, draftType: v.C.ChannelMessage }),
-                    (0, n.jsx)(C.default, { channel: a, popoutType: x.N.VOICE_UI }),
+                    (0, n.jsx)(x.default, { channel: a, popoutType: C.N.VOICE_UI }),
                     (0, n.jsx)(d.A, { popoutWindowKey: t, popoutWindowHasTitleBar: !0 }),
                 ],
             }),

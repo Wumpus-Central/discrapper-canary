@@ -3,7 +3,7 @@ n.d(t, {
     H7: () => f,
     J1: () => T,
     J4: () => h,
-    K0: () => g,
+    K0: () => m,
     LJ: () => N,
     W5: () => _,
     WA: () => A,
@@ -74,12 +74,12 @@ async function T(e, t, n) {
     let i = await c.D7(e, t, n);
     r.h.dispatch({ type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_SUBSCRIPTION_TRIAL", subscriptionTrial: i });
 }
-async function m(e, t) {
+async function g(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         i = await c.WV(e, t, n);
     return (r.h.dispatch({ type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_GROUP_LISTING", listing: i }), i);
 }
-async function g(e) {
+async function m(e) {
     let { guildId: t, groupListingId: n, data: i, analyticsContext: a, onBeforeDispatchNewListing: l } = e,
         d = await c.DQ(t, n, i);
     return (
@@ -90,7 +90,7 @@ async function g(e) {
             has_change_from_template: a.hasChangeFromTemplate,
             ...(0, s.H$)(t),
         }),
-        await m(t, n, { includeArchivedListings: !0 }),
+        await g(t, n, { includeArchivedListings: !0 }),
         l?.(d),
         r.h.dispatch({ type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_LISTING", listing: d }),
         d
@@ -101,7 +101,7 @@ async function S(e) {
         s = await c.qt(t, i, n, a);
     return (
         r.h.dispatch({ type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_LISTING", listing: s }),
-        await m(t, i, { includeArchivedListings: !0 }),
+        await g(t, i, { includeArchivedListings: !0 }),
         s
     );
 }

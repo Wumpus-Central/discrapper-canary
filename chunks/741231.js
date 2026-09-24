@@ -16,8 +16,8 @@ var i = n(121197),
     f = n(960253),
     p = n(469993),
     T = n(836039),
-    m = n(555325),
-    g = n(287809),
+    g = n(555325),
+    m = n(287809),
     S = n(313627),
     N = n(521427),
     C = n(56595),
@@ -46,11 +46,11 @@ async function U(e) {
                 let a;
                 return (
                     null != i &&
-                    ((a = i.ownerId === g.default.getCurrentUser()?.id),
-                    (0, m.V9)({
+                    ((a = i.ownerId === m.default.getCurrentUser()?.id),
+                    (0, g.V9)({
                         guild: i,
                         isOwner: a,
-                        canManageGuildRoleSubscriptions: (0, m.X9)(i),
+                        canManageGuildRoleSubscriptions: (0, g.X9)(i),
                         isUserInCreatorMonetizationEligibleCountry: (0, p.Z1)(),
                         shouldRestrictUpdatingRoleSubscriptionSettings: (0, T.mk)(i.id),
                     }))

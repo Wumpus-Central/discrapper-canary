@@ -89,8 +89,8 @@ function f() {
             saturation: f,
             useReducedMotion: p,
             roleStyle: T,
-            highContrastMode: m,
-            switchIconsEnabled: g,
+            highContrastMode: g,
+            switchIconsEnabled: m,
         } = (0, r.cf)([o.Ay], () => ({
             saturation: o.Ay.saturation,
             useReducedMotion: o.Ay.useReducedMotion,
@@ -129,8 +129,8 @@ function f() {
                     children: (0, i.jsx)(a.sL, {
                         id: "high-contrast",
                         label: A.intl.string(A.t.aZlePv),
-                        checked: m,
-                        action: () => (0, l.uh)(m ? o._1.DEFAULT : o._1.HIGH),
+                        checked: g,
+                        action: () => (0, l.uh)(g ? o._1.DEFAULT : o._1.HIGH),
                     }),
                 },
                 "high-contrast",
@@ -225,8 +225,8 @@ function f() {
                     children: (0, i.jsx)(a.sL, {
                         id: "switch-icons",
                         label: A.intl.string(A.t["S3z+pV"]),
-                        checked: g,
-                        action: () => (0, l.Gm)(!g),
+                        checked: m,
+                        action: () => (0, l.Gm)(!m),
                     }),
                 },
                 "switch-icons",

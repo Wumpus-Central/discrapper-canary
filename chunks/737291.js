@@ -1,4 +1,5 @@
 !(function (e) {
+    "use strict";
     var r,
         i = {
             precision: 20,

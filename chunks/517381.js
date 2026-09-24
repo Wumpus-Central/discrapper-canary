@@ -1,4 +1,4 @@
-(n.d(t, { A: () => g }), n(321073));
+(n.d(t, { A: () => m }), n(321073));
 var i = n(17928),
     r = n(228366),
     a = n(913122),
@@ -89,7 +89,7 @@ function T(e) {
             : n.removeReaction(r, s, i);
     });
 }
-class m extends i.Ay.Store {
+class g extends i.Ay.Store {
     static displayName = "SearchMessageStore";
     initialize() {
         this.waitFor(o.default, d.A, c.A);
@@ -131,7 +131,7 @@ class m extends i.Ay.Store {
         return E.has(e);
     }
 }
-let g = new m(r.h, {
+let m = new g(r.h, {
     SEARCH_MESSAGES_START: function (e) {
         e.ids.forEach((e) => {
             f(e).handleSearchStart();

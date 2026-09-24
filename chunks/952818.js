@@ -16,8 +16,8 @@ var r = n(435558),
     f = n(108822),
     p = n(311043),
     T = n(830012),
-    m = n(810412),
-    g = n(211753),
+    g = n(810412),
+    m = n(211753),
     S = n(206885),
     N = n(41984),
     C = n(439372),
@@ -124,8 +124,8 @@ let H = new h.A("RunningGameStore"),
     ef = new Set(),
     ep = null,
     eT = null,
-    em = null,
-    eg = new Map(),
+    eg = null,
+    em = new Map(),
     eS = new Map();
 function eN(e, t, n) {
     let i = e[t];
@@ -141,9 +141,9 @@ function eR(e) {
     let t = eS.get(e.name?.toLowerCase() ?? "");
     if (null != t) return t;
     let n = null != e.exeName && "" !== e.exeName ? e.exeName : (e.exePath.split("/").pop()?.split("\\").pop() ?? ""),
-        i = eg.get(n.toLowerCase());
+        i = em.get(n.toLowerCase());
     if (null != i) return i;
-    for (let [t, n] of eg) {
+    for (let [t, n] of em) {
         let i = e.exePath.toLowerCase(),
             r = t.toLowerCase();
         if (i.endsWith(r)) {
@@ -182,7 +182,7 @@ function ev(e) {
 K.forEach((e) => {
     (eS.set(e.name.toLowerCase(), e),
         (e.executables ?? []).forEach((t) => {
-            eg.set(t.name.toLowerCase(), e);
+            em.set(t.name.toLowerCase(), e);
         }));
 });
 let eb = new Set(["1314395942253756416"]);
@@ -248,7 +248,7 @@ function eG(e) {
     }
     let l = (0, k.supportsOutOfProcess)() && !n,
         o = eM("id" in (t = s ?? e) ? (t.id ?? null) : (D.A.findGame(t)?.id ?? null)),
-        d = g.x.legacyEnabled,
+        d = m.x.legacyEnabled,
         c = l && !o,
         u = eo.enableOverlay[ev(e)],
         _ = eo.enableOverlayV3[ev(e)];
@@ -418,7 +418,7 @@ if (W) {
             });
         }),
             [
-                ...[...n, ...r].filter((e) => !(e.executables ?? []).some((e) => eg.has(e.name.toLowerCase()))),
+                ...[...n, ...r].filter((e) => !(e.executables ?? []).some((e) => em.has(e.name.toLowerCase()))),
                 ...K,
             ].forEach((n) => {
                 let i = null != n.executables ? n.executables : [],
@@ -505,7 +505,7 @@ if (W) {
                         }
                         (o.push(i), s.push({ game: i, outcome: { kind: "passed" } }));
                     }
-                    ((em = { timestamp: Date.now(), totalFromNative: l, entries: s }), (e = o));
+                    ((eg = { timestamp: Date.now(), totalFromNative: l, entries: s }), (e = o));
                     let d = n.filter(eL).length;
                     for (let t of (d !== eu &&
                         ((eu = d), u.h.dispatch({ type: "RUNNING_STREAMER_TOOLS_CHANGE", count: eu })),
@@ -637,7 +637,7 @@ class eK extends d.Ay.Store {
         return ee;
     }
     getDetectionDebug() {
-        return em;
+        return eg;
     }
     getRunningNonGames() {
         return et;
@@ -793,8 +793,8 @@ let e$ = new eK(u.h, {
                 eF(),
                 !__OVERLAY__ &&
                     null != (null != t.id ? D.A.getDetectableGame(t.id) : null) &&
-                    (r && (0, m.Q3)(n, m.OverlayToggledClientSettingType.LEGACY_GAME, t.id ?? null),
-                    a && null != i && (0, m.Q3)(i, m.OverlayToggledClientSettingType.OOP_GAME, t.id ?? null)));
+                    (r && (0, g.Q3)(n, g.OverlayToggledClientSettingType.LEGACY_GAME, t.id ?? null),
+                    a && null != i && (0, g.Q3)(i, g.OverlayToggledClientSettingType.OOP_GAME, t.id ?? null)));
         },
         RUNNING_GAME_TOGGLE_DETECTION: function (e) {
             let { game: t } = e,

@@ -47,8 +47,8 @@ var i = n(435558),
     f = n(79871),
     p = n(188275),
     T = n(652215),
-    m = n(758836),
-    g = n(818348);
+    g = n(758836),
+    m = n(818348);
 let S = A.QB ? "webp" : "jpg";
 function N(e) {
     return null != e.price || null != e.prices[T.lid.DEFAULT];
@@ -63,8 +63,8 @@ function C(e, t) {
     return null != n ? n.prices[0] : null != e.price ? e.price : null;
 }
 function O(e) {
-    let t = C(e, T.lid.DEFAULT) ?? { amount: 0, currency: g.Yr.USD },
-        n = C(e, T.lid.GIFT) ?? { amount: 0, currency: g.Yr.USD };
+    let t = C(e, T.lid.DEFAULT) ?? { amount: 0, currency: m.Yr.USD },
+        n = C(e, T.lid.GIFT) ?? { amount: 0, currency: m.Yr.USD };
     return t.currency !== n.currency || t.amount !== n.amount;
 }
 function R(e) {
@@ -181,7 +181,7 @@ function B(e) {
 }
 function V(e, t, n, i) {
     let { tab: r, applicationId: s, skuId: l } = (0, a.parse)(t);
-    return e.indexOf(T.BVt.COLLECTIBLES_SHOP) >= 0 && r === m.G2.GAME_SHOPS && s === n && (null == i || l === i);
+    return e.indexOf(T.BVt.COLLECTIBLES_SHOP) >= 0 && r === g.G2.GAME_SHOPS && s === n && (null == i || l === i);
 }
 function H(e, t) {
     return null == e || V(location.pathname, location.search, t.applicationId)

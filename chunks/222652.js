@@ -17,9 +17,9 @@ function p() {
         t = (0, u.$)(),
         { status: s, requestInProgress: i, redirect: g } = (0, d.L)(),
         p = (0, o.A)(g),
-        h = (0, r.M)("xbox");
+        f = (0, r.M)("xbox");
     if (t === u.C.NO_ACCESS) return { kind: "subscribe", text: x.intl.string(x.t.sEAnVH) };
-    let f = (function (e) {
+    let h = (function (e) {
         switch (e) {
             case c.P.NOT_CLAIMED:
             case c.P.CLAIM_IN_PROGRESS:
@@ -35,11 +35,11 @@ function p() {
             kind: "default",
             claimStatus: s,
             requestInProgress: i,
-            text: f.text,
+            text: h.text,
             disabled: !0,
             loading: !0,
-            icon: f.icon,
-            iconPosition: f.iconPosition,
+            icon: h.icon,
+            iconPosition: h.iconPosition,
         };
     if (s === c.P.NOT_CLAIMED || s === c.P.CLAIM_IN_PROGRESS)
         e = () => {
@@ -48,18 +48,18 @@ function p() {
     else if (s === c.P.CLAIMED) {
         let t = (0, l.isWindows)() ? "msxbox://" : "https://xbox.com/play";
         e = () => {
-            ((0, a.A)(t), h(r.H.PARTNER_PAGE_REDIRECT, t));
+            ((0, a.A)(t), f(r.H.PARTNER_PAGE_REDIRECT, t));
         };
     }
     return {
         kind: "default",
         claimStatus: s,
         requestInProgress: i,
-        text: f.text,
-        disabled: (f.disabled ?? !1) || i,
+        text: h.text,
+        disabled: (h.disabled ?? !1) || i,
         loading: i,
-        icon: f.icon,
-        iconPosition: f.iconPosition,
+        icon: h.icon,
+        iconPosition: h.iconPosition,
         onClick: e,
     };
 }

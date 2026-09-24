@@ -1,4 +1,4 @@
-n.d(t, { A: () => g });
+n.d(t, { A: () => m });
 var i = n(477900),
     r = n(582128),
     a = n(189213),
@@ -25,8 +25,8 @@ var I = n(544105),
     f = n(652215),
     p = n(375708);
 let T = "game_console_alert_modal",
-    m = "game_console_ptt_alert_modal",
-    g = {
+    g = "game_console_ptt_alert_modal",
+    m = {
         maybeShowPTTAlert(e) {
             if (c.Ay.getMode() !== f.TBI.PUSH_TO_TALK || (0, d.k8)(s.M.CONSOLE_PTT_DISABLE_ALERT))
                 return Promise.resolve();
@@ -49,9 +49,9 @@ let T = "game_console_alert_modal",
                               actions: [{ text: p.intl.string(p.t.BddRzS), onClick: n }],
                           });
                       }
-                      (0, l.hasModalOpen)(m)
-                          ? (0, l.updateModal)(m, (e) => r(e))
-                          : (0, l.openModalLazy)(async () => (e) => r(e), { modalKey: m });
+                      (0, l.hasModalOpen)(g)
+                          ? (0, l.updateModal)(g, (e) => r(e))
+                          : (0, l.openModalLazy)(async () => (e) => r(e), { modalKey: g });
                   });
         },
         showSelfDismissableAlert(e) {

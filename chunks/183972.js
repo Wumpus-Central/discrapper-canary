@@ -1,4 +1,4 @@
-s.d(t, { RB: () => h, aB: () => g, x6: () => p });
+s.d(t, { RB: () => f, aB: () => g, x6: () => p });
 var i = s(636537),
     n = s(691540),
     a = s(857250),
@@ -38,7 +38,7 @@ async function p(e) {
         }
     }
 }
-async function h(e) {
+async function f(e) {
     if (!x()) {
         r.h.dispatch({ type: "PARTNER_CANCELLATION_START" });
         try {

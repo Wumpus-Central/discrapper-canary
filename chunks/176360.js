@@ -15,8 +15,8 @@ var a = n(435558),
 let f = new Set(),
     p = h.XlH.CLOSED,
     T = !1,
-    m = null,
     g = null,
+    m = null,
     S = null,
     N = null,
     C = null,
@@ -30,8 +30,8 @@ function L(e) {
 function y() {
     if (((S = E.A.getChannel()), (N = E.A.getCategory()), null == S)) return !1;
     let e = S.getGuildId();
-    ((g = m = L(S)),
-        null == m[C] && (C = e),
+    ((m = g = L(S)),
+        null == g[C] && (C = e),
         (r = null != N),
         (i = _.r(S, N, (0, c.GY)(S))),
         (O = null),
@@ -51,13 +51,13 @@ class D extends l.Ay.Store {
         return this.hasChanges();
     }
     getPermissionOverwrite(e) {
-        return m?.[e];
+        return g?.[e];
     }
     get editedPermissionIds() {
         return Array.from(f);
     }
     get permissionOverwrites() {
-        return m;
+        return g;
     }
     get selectedOverwriteId() {
         return C;
@@ -90,18 +90,18 @@ let v = new D(d.h, {
     CHANNEL_SETTINGS_PERMISSIONS_INIT: y,
     CHANNEL_SETTINGS_PERMISSIONS_UPDATE_PERMISSION: function (e) {
         let { id: t, allow: n, deny: r } = e,
-            a = m?.[t];
+            a = g?.[t];
         if (null == a || null == S) return !1;
         ((a = { ...a, allow: n, deny: r }),
-            (m = { ...m, [t]: a }),
+            (g = { ...g, [t]: a }),
             f.add(t),
             (p = h.XlH.OPEN),
-            (T = !s().isEqual(m, g)),
+            (T = !s().isEqual(g, m)),
             (i = _.r(S, N, (0, c.GY)(S))));
     },
     CHANNEL_SETTINGS_PERMISSIONS_SELECT_PERMISSION: function (e) {
         let { id: t } = e;
-        if (null != m && null != m[t]) C = t;
+        if (null != g && null != g[t]) C = t;
         else {
             if (null == S) return !1;
             O = t;
@@ -112,8 +112,8 @@ let v = new D(d.h, {
     },
     CHANNEL_SETTINGS_CLOSE: function () {
         ((p = h.XlH.CLOSED),
-            (m = null),
             (g = null),
+            (m = null),
             (S = null),
             (N = null),
             (T = !1),
@@ -132,16 +132,16 @@ let v = new D(d.h, {
                     N = E.A.getCategory();
                     let t = S.getGuildId();
                     if (null == t) return !1;
-                    g = L(S);
+                    m = L(S);
                     let n = {};
                     return (
                         f.forEach((e) => {
-                            null != m && (n[e] = m[e]);
+                            null != g && (n[e] = g[e]);
                         }),
                         null == n[t] && null == S.permissionOverwrites[t] && (n[t] = _.xT(t)),
-                        null == (m = { ...S.permissionOverwrites, ...n })[C]
+                        null == (g = { ...S.permissionOverwrites, ...n })[C]
                             ? (C = t)
-                            : null != O && null != m[O] && ((C = O), (O = null)),
+                            : null != O && null != g[O] && ((C = O), (O = null)),
                         (i = _.r(S, N, (0, c.GY)(S))),
                         !0
                     );

@@ -16,8 +16,8 @@ var i = n(562708),
     f = n(658128),
     p = n(976860),
     T = n(288254),
-    m = n(280450),
-    g = n(383394),
+    g = n(280450),
+    m = n(383394),
     S = n(808728),
     N = n(71393),
     C = n(309010),
@@ -59,7 +59,7 @@ let x = {
                     url: b.Rsh.GUILD_JOIN(e),
                     query: {
                         lurker: u,
-                        session_id: u ? m.default.getSessionId() : null,
+                        session_id: u ? g.default.getSessionId() : null,
                         recommendation_load_id: r,
                         location: u && null != l ? l : null,
                         from_directory: i === b.Q4z.DIRECTORY_ENTRY || null,
@@ -202,7 +202,7 @@ let x = {
         }),
     async startBulkBan(e, t, n, i) {
         try {
-            if ((await this.banMultipleUsers(e, t, n, i), u.A.consumeCompletedBeforeStarted(e, m.default.getId())))
+            if ((await this.banMultipleUsers(e, t, n, i), u.A.consumeCompletedBeforeStarted(e, g.default.getId())))
                 return;
             s.h.dispatch({ type: "GUILD_BULK_BAN_STARTED", guildId: e });
         } catch (t) {
@@ -322,7 +322,7 @@ let x = {
         s.h.dispatch({ type: "GUILD_FOLDER_DELETE_LOCAL", targetId: e });
     },
     toggleGuildFolderExpand(e) {
-        let t = g.A.isFolderExpanded(e);
+        let t = m.A.isFolderExpanded(e);
         (L.default.track(b.HAw.GUILD_FOLDER_CLICKED, { source: "sidebar", action: t ? "collapsed" : "expanded" }),
             s.h.dispatch({ type: "TOGGLE_GUILD_FOLDER_EXPAND", folderId: e }));
     },

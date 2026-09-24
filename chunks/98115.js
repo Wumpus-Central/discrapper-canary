@@ -8,8 +8,8 @@ var n = l(477900),
     o = l(107698),
     d = l(313265),
     c = l(704855),
-    m = l(50617),
-    f = l(375708),
+    f = l(50617),
+    m = l(375708),
     h = l(425721);
 function x(e, t) {
     let [l, n] = a.useState(null),
@@ -42,7 +42,7 @@ function g(e) {
         children: [
             null != p
                 ? (0, n.jsx)(r.l, {
-                      label: f.intl.string(m.default["9FRudW"]),
+                      label: m.intl.string(f.default["9FRudW"]),
                       options: h,
                       value: p,
                       onSelectionChange: (e) => g((0, o.gh)(t, t.tier, e)),
@@ -52,7 +52,7 @@ function g(e) {
                   })
                 : null,
             (0, n.jsx)(r.l, {
-                label: f.intl.string(m.default["4AsQHS"]),
+                label: m.intl.string(f.default["4AsQHS"]),
                 options: x,
                 value: t.thinking ?? l?.[t.tier]?.thinking ?? "",
                 onSelectionChange: (e) => g({ ...t, thinking: e }),
@@ -62,8 +62,8 @@ function g(e) {
             }),
             (0, o.$C)(t, l, s.main)
                 ? (0, n.jsx)(i.d, {
-                      label: f.intl.string(m.default.SYLSgx),
-                      description: f.intl.string(m.default.HITWAI),
+                      label: m.intl.string(f.default.SYLSgx),
+                      description: m.intl.string(f.default.HITWAI),
                       checked: !0 === t.fast,
                       disabled: u,
                       onChange: (e) => g({ ...t, fast: e }),
@@ -88,7 +88,7 @@ function p(e) {
                                 tag: "span",
                                 variant: "text-md/medium",
                                 color: "text-default",
-                                children: f.intl.string(m.default.GDs9Vq),
+                                children: m.intl.string(f.default.GDs9Vq),
                             }),
                             (0, n.jsx)(s.E, {
                                 tag: "span",
@@ -105,20 +105,20 @@ function p(e) {
                                 tag: "span",
                                 variant: "text-sm/medium",
                                 color: "text-subtle",
-                                children: f.intl.string(m.default["5DOL2g"]),
+                                children: m.intl.string(f.default["5DOL2g"]),
                             }),
                             (0, n.jsx)(s.E, {
                                 tag: "span",
                                 variant: "text-sm/medium",
                                 color: "text-subtle",
-                                children: f.intl.string(m.default.OJIfkn),
+                                children: m.intl.string(f.default.OJIfkn),
                             }),
                         ],
                     }),
                     (0, n.jsx)(c.A, {
                         activeIndex: d,
                         stops: u.ks.map(o.eQ),
-                        ariaLabel: f.intl.string(m.default.GDs9Vq),
+                        ariaLabel: m.intl.string(f.default.GDs9Vq),
                         disabled: r,
                         onSelect: function (e) {
                             let n = u.ks[e];

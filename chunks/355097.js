@@ -7,12 +7,12 @@ n.d(t, {
     Xx: () => A,
     YP: () => I,
     _A: () => h,
-    _F: () => m,
+    _F: () => g,
     bf: () => S,
     ko: () => R,
     n3: () => y,
     nR: () => f,
-    oD: () => g,
+    oD: () => m,
     od: () => O,
     vv: () => L,
 });
@@ -40,8 +40,8 @@ var i,
 let f = "ROLE_SUBSCRIPTIONS",
     p = "APPLICATION_SUBSCRIPTION_SUBSECTION";
 var T = (((s = {}).USER_PROFILE = "user_profile"), (s.GUILD = "guild"), s),
-    m = (((l = {}).TRY_IT_OUT = "try_it_out"), (l.GUILD_TAG = "guild_tag"), l),
-    g =
+    g = (((l = {}).TRY_IT_OUT = "try_it_out"), (l.GUILD_TAG = "guild_tag"), l),
+    m =
         (((o = {})[(o.PRELOADED_USER_SETTINGS = 1)] = "PRELOADED_USER_SETTINGS"),
         (o[(o.FRECENCY_AND_FAVORITES_SETTINGS = 2)] = "FRECENCY_AND_FAVORITES_SETTINGS"),
         (o[(o.TEST_SETTINGS = 3)] = "TEST_SETTINGS"),

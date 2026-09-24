@@ -96,12 +96,12 @@ function p(e) {
 }
 async function T() {
     try {
-        for (; A.hasNext();) await m(A.next());
+        for (; A.hasNext();) await g(A.next());
     } finally {
         h = null;
     }
 }
-async function m(e) {
+async function g(e) {
     let t = A.getNextBatch(e, 10);
     try {
         if (0 === t.length) return;

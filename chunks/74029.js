@@ -1,4 +1,4 @@
-l.d(t, { PR: () => x, PS: () => d, Q_: () => p, _w: () => c, dy: () => h, fA: () => m, nI: () => o, zz: () => f });
+l.d(t, { PR: () => x, PS: () => d, Q_: () => p, _w: () => c, dy: () => h, fA: () => f, nI: () => o, zz: () => m });
 var n = l(582128);
 l(29692);
 let a = Object.freeze({ active: !1, annotations: Object.freeze([]), context: null }),
@@ -26,7 +26,7 @@ function c(e, t) {
     let l = s(e);
     l.active && u(e, { ...l, context: t });
 }
-function m(e, t) {
+function f(e, t) {
     let l = s(e);
     l.active &&
         0 !== t.size &&
@@ -38,20 +38,20 @@ function m(e, t) {
             }),
         });
 }
-function f(e, t) {
+function m(e, t) {
     return null != t && e.authorId === t;
 }
 function h(e, t, l, n) {
     let a = s(e),
         r = a.annotations.find((e) => e.id === l);
     null != r &&
-        f(r, t) &&
+        m(r, t) &&
         u(e, { ...a, annotations: a.annotations.map((e) => (e.id === l ? { ...e, comment: n } : e)) });
 }
 function x(e, t, l) {
     let n = s(e),
         a = n.annotations.find((e) => e.id === l);
-    null != a && f(a, t) && u(e, { ...n, annotations: n.annotations.filter((e) => e.id !== l) });
+    null != a && m(a, t) && u(e, { ...n, annotations: n.annotations.filter((e) => e.id !== l) });
 }
 function g(e) {
     return (

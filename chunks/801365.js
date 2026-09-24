@@ -3,7 +3,7 @@ n.d(t, {
     r7: () => L,
     wo: () => w,
     ks: () => N,
-    $5: () => m,
+    $5: () => g,
     sn: () => M,
     mH: () => k,
     cg: () => F,
@@ -13,7 +13,7 @@ n.d(t, {
     KK: () => C,
     JX: () => v,
     tU: () => O,
-    k5: () => g,
+    k5: () => m,
     nj: () => T,
     $s: () => V,
     _Z: () => D,
@@ -47,11 +47,11 @@ function T(e) {
     let t = e.rewardsConfig.rewards.find((e) => e.type === o.l.COLLECTIBLE);
     return t?.type === o.l.COLLECTIBLE ? t : null;
 }
-function m(e) {
+function g(e) {
     let t = T(e);
     return null != t && "expiresAtPremium" in t && null != t.expiresAtPremium ? (0, I.ZG)(t.expiresAtPremium) : null;
 }
-function g(e) {
+function m(e) {
     let t = T(e);
     if (null == t || !("expiresAt" in t) || null == t.expiresAt) return null;
     let n = new Date(e.expiresAt),

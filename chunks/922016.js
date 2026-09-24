@@ -44,10 +44,10 @@ function p(e) {
 }
 p.Types = h;
 var T = n(38568),
-    m = (((r = m || {}).NONE = "1"), (r.TRANSLATE = "2"), (r.SCALE = "3"), (r.FADE = "4"), r);
-let g = Object.freeze({ 2: p.Types.TRANSLATE, 3: p.Types.SCALE, 4: p.Types.FADE });
+    g = (((r = g || {}).NONE = "1"), (r.TRANSLATE = "2"), (r.SCALE = "3"), (r.FADE = "4"), r);
+let m = Object.freeze({ 2: p.Types.TRANSLATE, 3: p.Types.SCALE, 4: p.Types.FADE });
 class S extends s.Component {
-    static Animation = m;
+    static Animation = g;
     ref = s.createRef();
     render() {
         let {
@@ -69,8 +69,8 @@ class S extends s.Component {
             useMouseEnter: f,
             renderPopout: p,
             layerContext: T,
-            position: m = "right",
-            autoInvert: g = !0,
+            position: g = "right",
+            autoInvert: m = !0,
             nudgeAlignIntoViewport: S = !0,
             avoidancePadding: N,
             spacing: C = 8,
@@ -81,7 +81,7 @@ class S extends s.Component {
             targetElementRef: this.props.targetElementRef,
             preload: _,
             loadingComponent: E,
-            position: m,
+            position: g,
             align:
                 null != r
                     ? r
@@ -98,8 +98,8 @@ class S extends s.Component {
                                   return "center";
                           }
                           throw Error(`Unexpected position: ${e}`);
-                      })(m),
-            autoInvert: g,
+                      })(g),
+            autoInvert: m,
             fixed: s,
             nudgeAlignIntoViewport: S,
             avoidancePadding: N,
@@ -127,7 +127,7 @@ class S extends s.Component {
             case "2":
             case "3":
             case "4":
-                return (0, a.jsx)(p, { position: e.position, type: g[n], children: t(e) });
+                return (0, a.jsx)(p, { position: e.position, type: m[n], children: t(e) });
             case "1":
                 return t(e);
         }
@@ -180,4 +180,4 @@ function N(e) {
         (0, a.jsx)(S, { ref: i, ...n, renderPopout: A })
     );
 }
-N.Animation = m;
+N.Animation = g;

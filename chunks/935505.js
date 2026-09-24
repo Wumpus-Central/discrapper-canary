@@ -27,17 +27,17 @@ let p = new (class {
     }
 })();
 var T = n(652215),
-    m = n(746080),
-    g = n(37411);
+    g = n(746080),
+    m = n(37411);
 function S(e) {
     return p.getForumChannelSessionId(e);
 }
 function N(e) {
     switch (e) {
         case i.T.CREATION_DATE:
-            return g.az.CREATION_DATE;
+            return m.az.CREATION_DATE;
         case i.T.LATEST_ACTIVITY:
-            return g.az.LATEST_ACTIVITY;
+            return m.az.LATEST_ACTIVITY;
         default:
             throw Error(`Unexpected sort order ${e}`);
     }
@@ -71,7 +71,7 @@ function y(e) {
               forum_channel_default_emoji_reaction_id: i.defaultReactionEmoji?.emojiId,
               forum_channel_default_emoji_reaction_name: i.defaultReactionEmoji?.emojiName,
               forum_channel_available_tag_ids: i.availableTags?.map((e) => e.id) ?? [],
-              forum_channel_tag_required: i.hasFlag(m.lx.REQUIRE_TAG),
+              forum_channel_tag_required: i.hasFlag(g.lx.REQUIRE_TAG),
               forum_channel_can_create_post: c.A.can(T.xBc.SEND_MESSAGES, i),
               forum_channel_filter_tag_ids: A.A.getFilterTagIdsAnalytics(),
               forum_channel_sort_order: A.A.getSortOrderAnalytics(i.id),
@@ -114,7 +114,7 @@ function D(e) {
                   let r = new Set(i.map((e) => e.id));
                   return t.appliedTags?.filter((e) => r.has(e)) ?? [];
               })(c.id),
-              forum_post_is_pinned: c.hasFlag(m.lx.PINNED),
+              forum_post_is_pinned: c.hasFlag(g.lx.PINNED),
               forum_post_is_new: h.A.getReadStateSnapshotAnalytics(c.id)?.isNew,
               forum_post_is_unread: h.A.getReadStateSnapshotAnalytics(c.id)?.hasUnreads,
               forum_post_is_following: a.A.hasJoined(c.id),

@@ -24,10 +24,10 @@ function p(e) {
 function T(e) {
     return A.Ay.maximize(e);
 }
-function m(e) {
+function g(e) {
     e.stopPropagation();
 }
-function g(e) {
+function m(e) {
     let { windowKey: t, showDivider: n } = e,
         r = (0, i.jsx)(l.D, {
             className: s()(I.R6, I.d1),
@@ -63,12 +63,12 @@ function S(e) {
         onDoubleClick: u,
         "data-window-chrome": "true",
         children: [
-            (0, i.jsx)("div", { className: s()(I.R4, { [I.MY]: d }), onDoubleClick: m, children: t }),
+            (0, i.jsx)("div", { className: s()(I.R4, { [I.MY]: d }), onDoubleClick: g, children: t }),
             (0, i.jsx)("div", { className: I.DD, children: n }),
             (0, i.jsxs)("div", {
                 className: I.ZY,
-                onDoubleClick: m,
-                children: [a, _ && (0, i.jsx)(g, { windowKey: l, showDivider: null != a })],
+                onDoubleClick: g,
+                children: [a, _ && (0, i.jsx)(m, { windowKey: l, showDivider: null != a })],
             }),
         ],
     });
@@ -91,6 +91,6 @@ function N(e) {
         onClick: u,
         onDoubleClick: _,
         children:
-            h && (0, i.jsx)("div", { className: I.ZY, onDoubleClick: m, children: (0, i.jsx)(g, { windowKey: a }) }),
+            h && (0, i.jsx)("div", { className: I.ZY, onDoubleClick: g, children: (0, i.jsx)(m, { windowKey: a }) }),
     });
 }

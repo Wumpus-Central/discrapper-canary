@@ -27,8 +27,8 @@ function T(e) {
         commandOrigin: s,
     });
 }
-var m = n(612200),
-    g = n(323073),
+var g = n(612200),
+    m = n(323073),
     S = n(392054),
     N = n(197111),
     C = n(507263),
@@ -108,7 +108,7 @@ function e_(e, t) {
             null == a ||
             (!(
                 (r.nsfw && !a.nsfwAllowed) ||
-                (r.isGuildVocalOrThread() && (0, g.Tv)(e)) ||
+                (r.isGuildVocalOrThread() && (0, m.Tv)(e)) ||
                 (r.isGuildVocalOrThread() && 0)
             ) &&
                 (t?.guildScheduledEvent != null
@@ -151,9 +151,9 @@ function e_(e, t) {
                                       : (V.Ay.getDefaultChannel(e, !0, ei.xBc.CREATE_INSTANT_INVITE)?.id ?? t.id);
                               })(t, i, r),
                               f = A === ei.rbe.GUILD_STAGE_VOICE,
-                              m = r?.targetChannelId != null && I === r.targetChannelId,
-                              g = m ? r?.targetMessageId : void 0,
-                              N = ei.BVt.CHANNEL(t, I, g);
+                              g = r?.targetChannelId != null && I === r.targetChannelId,
+                              m = g ? r?.targetMessageId : void 0,
+                              N = ei.BVt.CHANNEL(t, I, m);
                           (I === i.id && (0, k.QE)(A) && r?.autoJoin !== !1
                               ? (0, C.B)(() => {
                                     Promise.resolve()
@@ -221,7 +221,7 @@ function e_(e, t) {
                               })(
                                   i,
                                   r,
-                                  m,
+                                  g,
                               )(N));
                       })({ guildId: r.getGuildId() ?? ei.ME, channel: r, options: t, analyticsLocations: i }),
                 !1))
@@ -397,14 +397,14 @@ let eI = {
             let e = (0, M.y$)(d);
             ((s = e.guildScheduledEventId), (r = e.targetChannelId), (a = e.targetMessageId));
         }
-        let g = ((t = s), { ...c, invite_guild_scheduled_event_id: t }),
+        let m = ((t = s), { ...c, invite_guild_scheduled_event_id: t }),
             S = X.default.getCurrentUser();
         return S?.hasFlag(ei.nhx.QUARANTINED)
             ? ((0, U.default)(), new Promise((e, t) => t(Error())))
             : (h.h.dispatch({ type: "INVITE_ACCEPT", code: d }),
               _.Bo.post({
                   url: ei.Rsh.INVITE(A),
-                  context: g,
+                  context: m,
                   oldFormErrors: !0,
                   body: { session_id: I, invite_instance_id: c.invite_instance_id, received_installation_id: p },
                   rejectWithError: (0, _.fT)(),
@@ -430,7 +430,7 @@ let eI = {
                   (e) => {
                       throw (
                           e.body?.code === ei.t02.USER_GUILD_JOIN_LARGE_GUILD_UNDERAGE_DISALLOWED &&
-                              (0, m.yO)(er.w_.JOIN_LARGE_GUILD_UNDERAGE),
+                              (0, g.yO)(er.w_.JOIN_LARGE_GUILD_UNDERAGE),
                           h.h.dispatch({
                               type: "INVITE_ACCEPT_FAILURE",
                               code: d,

@@ -16,8 +16,8 @@ var i = n(691540),
     f = n(741394),
     p = n(459838),
     T = n(439372),
-    m = n(967347),
-    g = n(885386),
+    g = n(967347),
+    m = n(885386),
     S = n(763827),
     N = n(116956),
     C = n(174459),
@@ -89,7 +89,7 @@ class P extends T.A {
             L.Ay.getClipsWarningShown(t) ||
             e === h.default.getId() ||
             !L.Ay.isClipsEnabledForUser(e) ||
-            (g.Q$.getSetting() &&
+            (m.Q$.getSetting() &&
                 (a.h.dispatch({ type: "CLIPS_SHOW_CALL_WARNING", channelId: t }), this.showClipsToast()));
     }
     handleClipsAllowVoiceRecordingUpdate() {
@@ -120,7 +120,7 @@ class P extends T.A {
     async classifyHardwareAndTrack() {
         try {
             let { gpuModels: e, classification: t } = await (async () => {
-                let e = await (0, m.w)();
+                let e = await (0, g.w)();
                 if (e?.gpus != null) {
                     let t = e.gpus.map((e) => e.brand).filter((e) => null != e && "" !== e),
                         n = this.classifyHardware(t);

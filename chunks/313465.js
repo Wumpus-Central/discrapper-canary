@@ -64,8 +64,8 @@ let f = new Map([
     ]),
     p = { beforeMs: 3e3, afterMs: 2e3 },
     T = { beforeMs: 2e3, afterMs: 4e3 },
-    m = 2 * c.U;
-function g(e, t) {
+    g = 2 * c.U;
+function m(e, t) {
     if (e.eventName !== t) return null;
     let n = e.additionalData?.round;
     return "number" == typeof n ? n : null;
@@ -172,12 +172,12 @@ function b(e) {
                                         (n.clear(), (r = null));
                                         continue;
                                     }
-                                    let e = g(a, i.C.RoundStart);
+                                    let e = m(a, i.C.RoundStart);
                                     if (null != e) {
                                         (null != r && e <= r && n.clear(), n.set(e, a.timestamp_ms), (r = e));
                                         continue;
                                     }
-                                    let s = g(a, i.C.RoundEnd);
+                                    let s = m(a, i.C.RoundEnd);
                                     if (null == s) continue;
                                     let l = n.get(s);
                                     null != l &&
@@ -226,10 +226,10 @@ function b(e) {
                                     })
                                     .sort((e, t) => t.score - e.score)),
                             c = d[0];
-                        if (c.score <= m)
+                        if (c.score <= g)
                             return (
                                 I.nx.info(
-                                    `automontage: best CS2 round ${c.round.number} scored ${c.score.toFixed(3)}, not above the ${m} minimum - skipping round summary`,
+                                    `automontage: best CS2 round ${c.round.number} scored ${c.score.toFixed(3)}, not above the ${g} minimum - skipping round summary`,
                                 ),
                                 null
                             );
@@ -298,7 +298,7 @@ function b(e) {
                                 if (null == t) throw Error(`Unrecognized automontage preset: ${e}`);
                                 return t;
                             })(e),
-                            m = (function (e, t, n, i) {
+                            g = (function (e, t, n, i) {
                                 let { localUserId: d, gameId: c, ...u } = n,
                                     h = [],
                                     I = _(e ?? []),
@@ -316,12 +316,12 @@ function b(e) {
                                         a = e.timestamp_ms;
                                     T(r, a) && h.push({ startMs: r, endMs: a, kind: "game", padding: n });
                                 }
-                                let m = new Map();
+                                let g = new Map();
                                 for (let e of l) {
                                     let t = i[`audio:${e}`];
-                                    null != t && m.set(e, t);
+                                    null != t && g.set(e, t);
                                 }
-                                if (m.size > 0)
+                                if (g.size > 0)
                                     for (let e of (function (e, t, n, i) {
                                         let { includeOtherUsers: l, laughterThreshold: d, shoutingThreshold: c } = n;
                                         if (0 === i.length) return [];
@@ -360,7 +360,7 @@ function b(e) {
                                             },
                                             p = u.map((t) => h(e[t].rmsData)),
                                             T = (0, s.kV)(p, I),
-                                            m = [];
+                                            g = [];
                                         for (let t of i) {
                                             let n = u.map((n) => h(e[n][o[t]])),
                                                 i = (0, s.br)(n, I, f[t]),
@@ -379,7 +379,7 @@ function b(e) {
                                                     return t;
                                                 })(a[n]))
                                                     i.endChunk - i.startChunk + 1 < I.minConsecutiveChunks ||
-                                                        m.push({
+                                                        g.push({
                                                             kind: t,
                                                             userId: e,
                                                             startMs: _ + i.startChunk * r.pn,
@@ -387,9 +387,9 @@ function b(e) {
                                                         });
                                             });
                                         }
-                                        return (m.sort((e, t) => e.startMs - t.startMs), m);
-                                    })(t, d, u, Array.from(m.keys()))) {
-                                        let t = m.get(e.kind);
+                                        return (g.sort((e, t) => e.startMs - t.startMs), g);
+                                    })(t, d, u, Array.from(g.keys()))) {
+                                        let t = g.get(e.kind);
                                         null != t &&
                                             T(e.startMs, e.endMs) &&
                                             h.push({ startMs: e.startMs, endMs: e.endMs, kind: "audio", padding: t });
@@ -407,14 +407,14 @@ function b(e) {
                                 },
                                 T.events,
                             );
-                        if (0 === m.length)
+                        if (0 === g.length)
                             return (
                                 I.nx.info(
                                     `automontage: preset ${e} matched no events in this session - skipping montage`,
                                 ),
                                 null
                             );
-                        let g =
+                        let m =
                                 T.startOnSilence || T.endOnSilence
                                     ? ((i = (function (e) {
                                           let t = new Set(),
@@ -529,7 +529,7 @@ function b(e) {
                                     f = [];
                                 for (let e of E) e.srcEndMs - e.srcStartMs < h.rx ? A.push(e) : f.push(e);
                                 let { resolved: p, skipped: T } = (0, h.z2)(f, n),
-                                    { kept: m, removed: g } = (function (e, t, n, i) {
+                                    { kept: g, removed: m } = (function (e, t, n, i) {
                                         let r = [...e],
                                             a = e
                                                 .map((e, t) => {
@@ -553,17 +553,17 @@ function b(e) {
                                         );
                                     })(p, i.blendMs, o, c);
                                 return {
-                                    durationMs: (0, h.s_)(m, i.blendMs),
-                                    resolved: m,
-                                    skipped: [...A, ...T, ...g.map(L)],
+                                    durationMs: (0, h.s_)(g, i.blendMs),
+                                    resolved: g,
+                                    skipped: [...A, ...T, ...m.map(L)],
                                     requestedSectionCount: E.length,
-                                    trimmedSectionCount: g.length,
+                                    trimmedSectionCount: m.length,
                                 };
                             })({
-                                selected: m,
+                                selected: g,
                                 clipCandidates: n,
                                 config: S,
-                                speakingSpans: g,
+                                speakingSpans: m,
                                 startOnSilence: T.startOnSilence,
                                 endOnSilence: T.endOnSilence,
                                 requireVoiceGamePair: T.requireVoiceGamePair,

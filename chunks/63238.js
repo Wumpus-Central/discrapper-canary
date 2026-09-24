@@ -109,10 +109,10 @@ class p {
     }
 }
 var T = n(652215);
-function m(e) {
+function g(e) {
     return null != e && "null" !== e && e !== T.ME && "undefined" !== e && !(0, d.ai)(e);
 }
-class g {
+class m {
     _members = new h((e, t) => this._enqueue(e, { members: t }));
     _channels = new c.Ay((e, t) => this._enqueue(e, { channels: t }));
     _threadMemberLists = new p((e, t) => this._enqueue(e, { thread_member_lists: t }));
@@ -186,27 +186,27 @@ class g {
             (this._pending = {}));
     }
     subscribeUser(e, t) {
-        m(e) && this._members.subscribe(e, t);
+        g(e) && this._members.subscribe(e, t);
     }
     unsubscribeUser(e, t) {
-        m(e) && this._members.unsubscribe(e, t);
+        g(e) && this._members.unsubscribe(e, t);
     }
     subscribeChannel(e, t, n) {
-        return !!m(e) && this._channels.subscribe(e, t, n);
+        return !!g(e) && this._channels.subscribe(e, t, n);
     }
     subscribeToMemberUpdates(e) {
-        if (!m(e)) return !1;
+        if (!g(e)) return !1;
         (this._enqueue(e, { member_updates: !0 }), this._memberUpdates.add(e));
     }
     unsubscribeFromMemberUpdates(e) {
-        if (!m(e)) return !1;
+        if (!g(e)) return !1;
         this._enqueue(e, { member_updates: !1 });
     }
     subscribeThreadMemberList(e, t, n) {
-        return !!m(e) && this._threadMemberLists.subscribe(e, t, n);
+        return !!g(e) && this._threadMemberLists.subscribe(e, t, n);
     }
     unsubscribeThreadMemberList(e, t) {
-        return !!m(e) && this._threadMemberLists.unsubscribe(e, t);
+        return !!g(e) && this._threadMemberLists.unsubscribe(e, t);
     }
     subscribeToGuild(e) {
         (this._subscribeToFeature(e, this._typing, { typing: !0 }),
@@ -214,7 +214,7 @@ class g {
             this._subscribeToFeature(e, this._threads, { threads: !0 }));
     }
     _subscribeToFeature(e, t, n) {
-        !m(e) || t.has(e) || (t.add(e), this._enqueue(e, n));
+        !g(e) || t.has(e) || (t.add(e), this._enqueue(e, n));
     }
 }
 var S = n(736056),
@@ -231,7 +231,7 @@ var S = n(736056),
     P = n(994500),
     U = n(309010),
     w = n(967198);
-let G = new g((e) => {
+let G = new m((e) => {
     for (let t in e) null != b.A.getGuild(t) || D.A.isUnavailable(t) || delete e[t];
     l.h.dispatch({ type: "GUILD_SUBSCRIPTIONS_FLUSH", subscriptions: e });
 });

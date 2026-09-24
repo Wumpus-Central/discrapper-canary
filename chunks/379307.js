@@ -8,8 +8,8 @@ var n = l(477900),
     o = l(834730),
     d = l(922016),
     c = l(866665),
-    m = l(939249),
-    f = l(783977),
+    f = l(939249),
+    m = l(783977),
     h = l(673724),
     x = l(107698),
     g = l(704855),
@@ -43,7 +43,7 @@ function k(e) {
     );
 }
 function N(e) {
-    let { settings: t, tiers: l, choices: r, disabled: d, onChange: c, placement: m, open: f, entered: N } = e,
+    let { settings: t, tiers: l, choices: r, disabled: d, onChange: c, placement: f, open: m, entered: N } = e,
         [w, A] = a.useState(!1),
         S = k(w),
         E = h.ks.indexOf(t.tier),
@@ -53,9 +53,9 @@ function N(e) {
         { text: M, phase: R } = (0, v.Q)(T);
     return (0, n.jsx)("div", {
         className: y.qd,
-        "data-placement": m ?? void 0,
+        "data-placement": f ?? void 0,
         children: (0, n.jsxs)("div", {
-            className: i()(y.t$, { [y.Zr]: f && N, [y.GF]: !f }),
+            className: i()(y.t$, { [y.Zr]: m && N, [y.GF]: !m }),
             role: "dialog",
             "aria-label": j.intl.string(b.default["2NWMqY"]),
             children: [
@@ -172,14 +172,14 @@ function w(e) {
                 text: j.intl.string(b.default.GoSNDN),
                 shouldShow: !l,
                 ariaHidden: !0,
-                children: (0, n.jsx)(m.D, {
+                children: (0, n.jsx)(f.D, {
                     innerRef: h,
                     className: u ?? y.hZ,
                     "aria-label": j.intl.string(b.default.GoSNDN),
                     ...e,
                     onClick: () => w((e) => !e),
                     "aria-expanded": v,
-                    children: o ?? (0, n.jsx)(f.R, { size: "xxs", color: "currentColor", "aria-hidden": !0 }),
+                    children: o ?? (0, n.jsx)(m.R, { size: "xxs", color: "currentColor", "aria-hidden": !0 }),
                 }),
             });
         },

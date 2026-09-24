@@ -5,8 +5,8 @@ n.d(t, {
     Vh: () => O,
     mU: () => N,
     Bf: () => S,
-    UT: () => g,
-    St: () => m,
+    UT: () => m,
+    St: () => g,
     Bs: () => T,
     _7: () => I,
     Im: () => f,
@@ -86,10 +86,10 @@ var i,
 function T(e, t, n) {
     u.default.track(E.HAw.AGE_VERIFICATION_MODAL_VIEWED, { modal_session_id: e, modal_version: t, entry_point: n });
 }
-function m(e, t, n, i) {
+function g(e, t, n, i) {
     u.default.track(E.HAw.AGE_VERIFICATION_MODAL_CLICKED, { modal_session_id: e, modal_version: t, cta: n, method: i });
 }
-function g(e, t) {
+function m(e, t) {
     u.default.track(E.HAw.AGE_VERIFICATION_DM_CLICKED, { cta: e, channel_id: t });
 }
 function S(e, t, n) {

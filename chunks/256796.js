@@ -30,19 +30,19 @@ let u = {
             e.pinned = t;
         })(p);
         let T = (0, o.nm)(h),
-            m = { ...p, ...T, ...I },
-            g = (0, o.mt)(t);
-        null != g && (0, o.L5)(m, g);
+            g = { ...p, ...T, ...I },
+            m = (0, o.mt)(t);
+        null != m && (0, o.L5)(g, m);
         let S = c.A.create({
             id: (0, o.bS)(t),
             searchContext: t,
-            searchQuery: m,
+            searchQuery: g,
             searchTabs: n,
             getLimit: _,
             pagination: l,
             trackExactTotalHits: d,
         });
-        E?.({ searchContext: t, searchQueryString: i, searchQuery: m });
+        E?.({ searchContext: t, searchQueryString: i, searchQuery: g });
         let N = n.map((e) => u(e));
         return (
             a.h.dispatch({ type: "SEARCH_MESSAGES_START", ids: N }),
@@ -52,7 +52,7 @@ let u = {
                         i = Object.entries(n.tabs);
                     (a.h.dispatch({
                         type: "SEARCH_MESSAGES_SUCCESS",
-                        guildId: g,
+                        guildId: m,
                         data: i.map((e) => {
                             let [t, i] = e,
                                 a = u(t),

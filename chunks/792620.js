@@ -2,7 +2,7 @@ n.d(t, {
     Cr: () => C,
     F9: () => _,
     GL: () => D,
-    I6: () => m,
+    I6: () => g,
     IO: () => R,
     JC: () => H,
     K$: () => b,
@@ -23,7 +23,7 @@ n.d(t, {
     t: () => f,
     uD: () => O,
     vS: () => E,
-    vl: () => g,
+    vl: () => m,
     vv: () => y,
     xZ: () => S,
     xc: () => A,
@@ -84,10 +84,10 @@ function p(e) {
 function T(e) {
     return null != e.config.taskConfigV2.tasks[r.n.ACHIEVEMENT_IN_ACTIVITY];
 }
-function m(e) {
+function g(e) {
     return null != e.config.taskConfigV2.tasks[r.n.ACHIEVEMENT_IN_GAME];
 }
-function g(e) {
+function m(e) {
     return null != e.config.taskConfigV2.tasks[r.n.PLAY_ACTIVITY];
 }
 function S(e) {
@@ -238,7 +238,7 @@ function V(e, t) {
                 ? F({ quest: n, taskType: B(n.config)?.type })
                 : S(n)
                   ? F({ quest: n, taskType: r.n.PLAY_ON_DESKTOP })
-                  : g(n)
+                  : m(n)
                     ? F({ quest: n, taskType: r.n.PLAY_ACTIVITY })
                     : F({ quest: n, taskType: r.n.STREAM_ON_DESKTOP }));
     if (null != a) return a;

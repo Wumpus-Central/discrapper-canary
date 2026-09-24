@@ -1,4 +1,4 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => g });
 var i = n(17928),
     r = n(228366),
     a = n(77468),
@@ -86,7 +86,7 @@ class T extends i.Ay.Store {
         return h.has(e);
     }
 }
-let m = new T(r.h, {
+let g = new T(r.h, {
     CONNECTION_OPEN: function (e) {
         p(e.connectedAccounts.map((e) => new o(e)));
     },

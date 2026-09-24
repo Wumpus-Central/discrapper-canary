@@ -44,33 +44,33 @@ function _(e) {
             I = c.intl.string(c.t["9RNkeF"]);
     }
     let T = n === d.nu.ORIGINAL_POSTER,
-        m = null;
+        g = null;
     _ &&
-        (m = (0, i.jsx)(s.m, {
+        (g = (0, i.jsx)(s.m, {
             text: f,
             align: "center",
             position: "top",
             children: (0, i.jsx)(l.B, { className: u.go, color: o.A.colors.WHITE }),
         }));
-    let g = null;
-    if (_) g = f;
+    let m = null;
+    if (_) m = f;
     else if ("string" == typeof I)
         switch (n) {
             case d.nu.BOT:
-                g = c.intl.string(c.t.qwJHjo);
+                m = c.intl.string(c.t.qwJHjo);
                 break;
             case d.nu.SERVER:
-                g = c.intl.string(c.t["39trQT"]);
+                m = c.intl.string(c.t["39trQT"]);
                 break;
             default:
-                g = I;
+                m = I;
         }
     function S() {
         return (0, i.jsxs)("span", {
             role: "img",
-            "aria-label": g ?? void 0,
+            "aria-label": m ?? void 0,
             className: a()(r, p, A ? u.D0 : u.px, { [u.rV]: T }),
-            children: [E ? null : m, h, (0, i.jsx)("span", { className: u.lc, children: I })],
+            children: [E ? null : g, h, (0, i.jsx)("span", { className: u.lc, children: I })],
         });
     }
     return n === d.nu.ORIGINAL_POSTER

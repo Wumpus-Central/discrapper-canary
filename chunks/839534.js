@@ -45,14 +45,14 @@ function I(e) {
 var f = n(4227),
     p = n(870216),
     T = n(993408),
-    m = n(442007),
-    g = n(510801);
+    g = n(442007),
+    m = n(510801);
 class S {
     categories;
     collections;
     constructor(e) {
-        ((this.categories = e.categories.map((e) => g.A.fromServer(e))),
-            (this.collections = e.collections.map((e) => m.A.fromServer(e))));
+        ((this.categories = e.categories.map((e) => m.A.fromServer(e))),
+            (this.collections = e.collections.map((e) => g.A.fromServer(e))));
     }
     static fromServer(e) {
         return new S(e);
@@ -608,7 +608,7 @@ class X {
                 }
             })
             .filter((e) => void 0 !== e)),
-            (this.categories = e.categories.map((e) => g.A.fromServer(e))));
+            (this.categories = e.categories.map((e) => m.A.fromServer(e))));
     }
     static fromServer(e) {
         return new X(e);

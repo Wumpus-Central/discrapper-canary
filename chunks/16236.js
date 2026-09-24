@@ -31,8 +31,8 @@ var i = n(435558),
     f = n(935208),
     p = n(181079),
     T = n(676168),
-    m = n(93055),
-    g = n(5180),
+    g = n(93055),
+    m = n(5180),
     S = n(635233),
     N = n(771959),
     C = n(928424),
@@ -86,7 +86,7 @@ function w(e) {
 }
 function G(e, t) {
     if ((P(e), r().size(e) >= D.lj)) return { limit: D.lj, canUpsell: !1 };
-    let { favoriteLimit: n, canUpsellFavoriteLimit: i } = (0, m.ad)();
+    let { favoriteLimit: n, canUpsellFavoriteLimit: i } = (0, g.ad)();
     return n <= 0 || t === a.Ip.CATEGORY || w(e) < n ? null : { limit: n, canUpsell: i };
 }
 function x(e) {
@@ -178,7 +178,7 @@ function W(e) {
         }),
         (t = e),
         (n = I.A.getGuildId()),
-        (0, g.ai)(n) && h.Ay.getChannelId() === t && (0, c.pX)(v.BVt.CHANNEL(n)));
+        (0, m.ai)(n) && h.Ay.getChannelId() === t && (0, c.pX)(v.BVt.CHANNEL(n)));
 }
 function Y(e, t) {
     p.A.isFavorite(e) &&
@@ -189,7 +189,7 @@ function Y(e, t) {
         });
 }
 async function K(e) {
-    if (!(0, g.QN)(e)) return null;
+    if (!(0, m.QN)(e)) return null;
     let t = e.trim(),
         n = f.default.fromTimestamp(Date.now());
     return (
@@ -216,7 +216,7 @@ async function X(e) {
     null != t &&
         t.isThread() &&
         (t.isPrivate() || A.A.can(b.xB.VIEW_CHANNEL, t)) &&
-        (0, m.ad)().hasAccess &&
+        (0, g.ad)().hasAccess &&
         (await H([e], { categoryName: D.A }, "auto_thread_join", { silent: !0 }));
 }
 function q(e) {
@@ -295,5 +295,5 @@ function et(e) {
     });
 }
 function en(e) {
-    (et(e, "settings_page"), !e && (0, g.ai)(I.A.getGuildId()) && (0, c.pX)(v.BVt.ME));
+    (et(e, "settings_page"), !e && (0, m.ai)(I.A.getGuildId()) && (0, c.pX)(v.BVt.ME));
 }

@@ -1,4 +1,4 @@
-n.d(t, { oq: () => g, qC: () => S, xI: () => T, WF: () => f, Eg: () => p, p7: () => N, P7: () => m });
+n.d(t, { oq: () => m, qC: () => S, xI: () => T, WF: () => f, Eg: () => p, p7: () => N, P7: () => g });
 var i = n(517846),
     r = n(636537),
     a = n(228366),
@@ -88,10 +88,10 @@ function T(e, t) {
     let i = u.A.getConversationMetadata(e, t)?.conversation.startMessageId;
     null != i && s.A.jumpToMessage({ channelId: e, messageId: i, flash: !1 });
 }
-function m(e, t) {
+function g(e, t) {
     a.h.dispatch({ type: "CLEAR_CONVERSATION_SELECTION", channelId: e, conversationId: t });
 }
-function g(e, t, n) {
+function m(e, t, n) {
     a.h.dispatch({ type: "SET_CONVERSATION_FEEDBACK_RATING", channelId: e, conversationId: t, rating: n });
 }
 async function S(e, t, n) {

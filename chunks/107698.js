@@ -1,4 +1,4 @@
-l.d(t, { $C: () => m, $G: () => o, eQ: () => i, gc: () => d, gh: () => c, is: () => u, zy: () => f });
+l.d(t, { $C: () => f, $G: () => o, eQ: () => i, gc: () => d, gh: () => c, is: () => u, zy: () => m });
 var n = l(313265),
     a = l(50617),
     r = l(375708);
@@ -21,11 +21,11 @@ function d(e, t) {
 function c(e, t, l) {
     return { ...e, models: { ...e.models, [t]: l } };
 }
-function m(e, t, l) {
+function f(e, t, l) {
     let n = o(e, t, e.tier);
     return null != n && l.find((e) => e.id === n)?.supports_fast === !0;
 }
-function f(e, t, l) {
+function m(e, t, l) {
     let { fast: n, ...a } = e;
-    return !0 === n && m(e, t, l) ? { ...a, fast: !0 } : a;
+    return !0 === n && f(e, t, l) ? { ...a, fast: !0 } : a;
 }

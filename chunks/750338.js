@@ -31,30 +31,30 @@ let E = (e) => {
             descriptionCta: E,
             previewImage: N,
             videoUrl: j,
-            shouldLoadVideo: O,
-            index: I,
+            shouldLoadVideo: I,
+            index: O,
             customVideoStyle: L,
             isReducedMotion: U,
             onClick: S,
             badgeText: M,
             badgeVariant: w = "gradient",
-            size: k,
-            backgroundVideoUrl: B,
-            previewImageStyle: D = T.Tb.CONTAINED,
+            size: D,
+            backgroundVideoUrl: k,
+            previewImageStyle: B = T.Tb.CONTAINED,
             actions: Y,
             mediaRef: G,
             boxArtContainerClassName: V,
             containerClassName: H,
         } = e,
         z = (0, m.N)(),
-        K = (0, C.TM)(),
-        W = a.useRef(null),
-        F = a.useRef(0),
+        F = (0, C.TM)(),
+        K = a.useRef(null),
+        W = a.useRef(0),
         { sectionRef: X, handleVisibilityChange: $ } = (0, P.A)({ boxType: t }),
         q = (0, h.A)("(min-width: 1140px)"),
-        J = D === T.Tb.OVERLAY && (k !== T.A0.LARGE || !q),
-        Z = k === T.A0.LARGE && q && D === T.Tb.OVERLAY,
-        Q = null != B && q && k === T.A0.LARGE,
+        J = B === T.Tb.OVERLAY && (D !== T.A0.LARGE || !q),
+        Z = D === T.A0.LARGE && q && B === T.Tb.OVERLAY,
+        Q = null != k && q && D === T.A0.LARGE,
         ee = a.useMemo(
             () =>
                 (0, l.debounce)(() => {
@@ -63,12 +63,12 @@ let E = (e) => {
             [t],
         );
     function et() {
-        (null == W.current || U || ((W.current.currentTime = F.current), W.current.play()), U || G?.current?.play());
+        (null == K.current || U || ((K.current.currentTime = W.current), K.current.play()), U || G?.current?.play());
     }
     function en() {
-        (null == W.current || U || ((F.current = W.current.currentTime), W.current.pause()), U || G?.current?.pause());
+        (null == K.current || U || ((W.current = K.current.currentTime), K.current.pause()), U || G?.current?.pause());
     }
-    let ei = k === T.A0.LARGE ? "heading-xxl/bold" : "heading-xl/bold";
+    let ei = D === T.A0.LARGE ? "heading-xxl/bold" : "heading-xl/bold";
     function ea() {
         let e = null != E && null != S,
             t = null != Y && Y.length > 0;
@@ -95,7 +95,7 @@ let E = (e) => {
     }
     function er() {
         return (0, i.jsxs)("div", {
-            className: s()(y.textBox, y[`${k}`], Z && y.overlayTextBox),
+            className: s()(y.textBox, y[`${D}`], Z && y.overlayTextBox),
             children: [
                 (0, i.jsxs)("div", {
                     children: [
@@ -132,7 +132,7 @@ let E = (e) => {
     }
     function es() {
         return (0, i.jsx)("div", {
-            className: s()(y.boxArtContainer, y[`${k}`], V),
+            className: s()(y.boxArtContainer, y[`${D}`], V),
             children:
                 null == j && (0, u.O)(N) && "string" != typeof N
                     ? N
@@ -140,19 +140,19 @@ let E = (e) => {
                           v.A,
                           {
                               playsInline: !0,
-                              preload: O ? "auto" : "none",
+                              preload: I ? "auto" : "none",
                               muted: !0,
                               poster: N,
                               loop: !0,
                               className: s()(Z ? y.overlayImage : y.boxVideo, { [L]: null != L }),
-                              ref: W,
-                              children: (0, i.jsx)("source", { src: j, type: K ? A.a.MP4 : A.a.WEBM }),
+                              ref: K,
+                              children: (0, i.jsx)("source", { src: j, type: F ? A.a.MP4 : A.a.WEBM }),
                           },
                           j,
                       ),
         });
     }
-    let el = I % 2 != 0;
+    let el = O % 2 != 0;
     return (0, i.jsx)(o.L, {
         innerRef: X,
         onChange: $,
@@ -163,7 +163,7 @@ let E = (e) => {
             className: s()(
                 y.backgroundColor,
                 y.boxContainer,
-                y[`${k}`],
+                y[`${D}`],
                 y.gradientBackground,
                 H,
                 J && y.overlayImageMode,
@@ -179,9 +179,9 @@ let E = (e) => {
                     (0, i.jsx)("div", {
                         className: y.backgroundVideoContainer,
                         children: (0, i.jsx)(x.A, {
-                            preload: O ? "auto" : "none",
+                            preload: I ? "auto" : "none",
                             className: y.backgroundVideo,
-                            src: B,
+                            src: k,
                         }),
                     }),
                 (0, i.jsx)(function () {

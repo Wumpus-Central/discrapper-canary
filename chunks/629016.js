@@ -1,4 +1,4 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => g });
 var i = n(435558),
     r = n.n(i),
     a = n(17928),
@@ -81,7 +81,7 @@ class T extends a.Ay.Store {
         return _;
     }
 }
-let m = new T(s.h, {
+let g = new T(s.h, {
     CONNECTION_OPEN_SUPPLEMENTAL: function (e) {
         let { guilds: t, presences: n } = e,
             i = !1;

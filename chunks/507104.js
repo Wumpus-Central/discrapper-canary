@@ -1,4 +1,4 @@
-(n.d(t, { Ay: () => F, ZD: () => g, hb: () => S }), n(321073));
+(n.d(t, { Ay: () => F, ZD: () => m, hb: () => S }), n(321073));
 var i = n(435558),
     r = n.n(i),
     a = n(17928),
@@ -25,8 +25,8 @@ function T(e, t, n) {
     }
     return i;
 }
-var m = n(652215);
-let g = 5,
+var g = n(652215);
+let m = 5,
     S = 6048e5;
 function N() {
     return {
@@ -71,7 +71,7 @@ function P() {
 }
 function U() {
     if (null != D) return void x(D);
-    if ((w(), !_.A.hasConsented(m.YAq.PERSONALIZATION) || !c.oz.getSetting())) return;
+    if ((w(), !_.A.hasConsented(g.YAq.PERSONALIZATION) || !c.oz.getSetting())) return;
     for (let e of E.A.getFriendIDs()) {
         let t = E.A.getSince(e),
             n = d.A.getUserAffinity(e);

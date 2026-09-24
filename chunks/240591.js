@@ -26,7 +26,7 @@ function p(e, t) {
             computedPermissions: p,
             hasBaseAccessPermissions: T,
             hasSendMessagesPermission: S,
-        } = g(n, e instanceof d.YB && e.isThread());
+        } = m(n, e instanceof d.YB && e.isThread());
     return {
         context: n,
         userId: a,
@@ -36,7 +36,7 @@ function p(e, t) {
         computedPermissions: p,
         hasBaseAccessPermissions: T,
         hasSendMessagesPermission: S,
-        allowNsfw: m(n, s, r, (0, c.wh)(A.A.getGuild(i))),
+        allowNsfw: g(n, s, r, (0, c.wh)(A.A.getGuild(i))),
     };
 }
 function T(e, t) {
@@ -47,7 +47,7 @@ function T(e, t) {
         f = (0, a.bG)([I.default], () => I.default.getCurrentUser()?.nsfwAllowed ?? !1),
         p = (0, a.yK)([E.Ay], () => (null != r ? (E.Ay.getMember(r, h)?.roles ?? []) : [])),
         T = (0, a.bG)([l.A], () => l.A.isViewingRoles(r)),
-        S = m(
+        S = g(
             n,
             f,
             s,
@@ -58,7 +58,7 @@ function T(e, t) {
             computedPermissions: i,
             hasBaseAccessPermissions: r,
             hasSendMessagesPermission: a,
-        } = g(n, e instanceof d.YB && e.isThread());
+        } = m(n, e instanceof d.YB && e.isThread());
         return {
             context: n,
             userId: h,
@@ -72,10 +72,10 @@ function T(e, t) {
         };
     }, [t, n, T, p, h, S, e]);
 }
-function m(e, t, n, i) {
+function g(e, t, n, i) {
     return !!t && (!(e instanceof d.YB) || (null != e.guild_id ? e.isNSFW() || i : n));
 }
-function g(e, t) {
+function m(e, t) {
     let n, i;
     if ((e instanceof d.YB && e.isPrivate()) || null == e)
         return { computedPermissions: r.iu(0), hasBaseAccessPermissions: !0, hasSendMessagesPermission: !0 };

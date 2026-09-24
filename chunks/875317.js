@@ -1,4 +1,4 @@
-n.d(t, { Kb: () => p, Om: () => h, Q: () => m, fX: () => T, gM: () => g });
+n.d(t, { Kb: () => p, Om: () => h, Q: () => g, fX: () => T, gM: () => m });
 var i = n(582128),
     r = n(17928),
     a = n(56562),
@@ -61,7 +61,7 @@ function T() {
         return I(void 0 !== i ? i : n.guildTheme);
     })(d.A.getGuildId(), "getActiveGuildTheme");
 }
-function m() {
+function g() {
     return (function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "useActiveGuildThemeForGuildId",
             n = (0, s.OS)(t),
@@ -84,6 +84,6 @@ function m() {
         "useActiveGuildTheme",
     );
 }
-function g() {
+function m() {
     return (0, r.bG)([u.Ay], () => u.Ay.isActive);
 }

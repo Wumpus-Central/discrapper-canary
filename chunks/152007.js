@@ -1,4 +1,4 @@
-(n.d(t, { A: () => g }), n(938796));
+(n.d(t, { A: () => m }), n(938796));
 var i = n(435558),
     r = n.n(i),
     a = n(17928),
@@ -37,7 +37,7 @@ function I(e) {
         !0 === t.muted
             ? ((_ = new Set(_)).add(e),
               u.setTimer(e, t.muteConfig, () => {
-                  ((c[e].muted = !1), (_ = new Set(_)).delete(e), m.emitChange());
+                  ((c[e].muted = !1), (_ = new Set(_)).delete(e), g.emitChange());
               }) && ((c[e].muted = !1), (_ = new Set(_)).delete(e)))
             : (_ = new Set(_)).delete(e));
 }
@@ -102,7 +102,7 @@ class T extends a.Ay.Store {
         return _.has(e);
     }
 }
-let m = new T(s.h, {
+let g = new T(s.h, {
         CONNECTION_OPEN: function (e) {
             (u.reset(),
                 (_ = new Set()),
@@ -189,4 +189,4 @@ let m = new T(s.h, {
             );
         },
     }),
-    g = m;
+    m = g;

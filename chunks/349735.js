@@ -8,8 +8,8 @@ var n = l(477900),
     o = l(95477),
     d = l(821609),
     c = l(289873),
-    m = l(890497),
-    f = l(47167),
+    f = l(890497),
+    m = l(47167),
     h = l(713654),
     x = l(808728),
     g = l(994500),
@@ -24,7 +24,7 @@ var n = l(477900),
     A = l(472781);
 let S = { values: {}, secrets: {} };
 function E(e) {
-    let { projectId: t, scopeKeys: l, note: m, notifyAgent: f = !1, isPreview: h = !1, children: x } = e,
+    let { projectId: t, scopeKeys: l, note: f, notifyAgent: m = !1, isPreview: h = !1, children: x } = e,
         g = (0, r.bG)([y.Ay], () => y.Ay.getSettings(t)),
         [p, b] = a.useState(S),
         [k, E] = a.useState({}),
@@ -48,7 +48,7 @@ function E(e) {
         q = (l ?? []).filter((e) => $.some((t) => t.key === e) || O.has(e)),
         z = q.length > 0,
         U = q.some((e) => O.has(e)),
-        G = a.useMemo(() => {
+        B = a.useMemo(() => {
             let e = {};
             for (let [t, l] of Object.entries(p.values)) {
                 let n = L.find((e) => e.key === t);
@@ -63,14 +63,14 @@ function E(e) {
                 ...(Object.keys(t).length > 0 ? { secrets: t } : {}),
             };
         }, [p, L, F]),
-        B = null != G.values || null != G.secrets,
+        G = null != B.values || null != B.secrets,
         V = a.useCallback(async () => {
-            if (!B || I) return !0;
+            if (!G || I) return !0;
             (T(!0), R(!1));
             try {
-                let { rebuildRequired: e } = await (0, y.nU)(t, G);
+                let { rebuildRequired: e } = await (0, y.nU)(t, B);
                 return (
-                    f || j.Ay.hasPendingSettingsRequest(t)
+                    m || j.Ay.hasPendingSettingsRequest(t)
                         ? (0, y.dv)(t, w.intl.string(N.default.gqJFu0))
                         : e
                           ? (0, y.ss)(t)
@@ -84,7 +84,7 @@ function E(e) {
             } finally {
                 T(!1);
             }
-        }, [B, f, t, I, G]);
+        }, [G, m, t, I, B]);
     function W(e) {
         let t = [
             e?.hint != null && "" !== e.hint ? e.hint : void 0,
@@ -229,8 +229,8 @@ function E(e) {
         X = (0, n.jsxs)("div", {
             className: A.Ek,
             children: [
-                null != m && "" !== m
-                    ? (0, n.jsx)(s.E, { variant: "text-sm/normal", color: "text-default", selectable: !0, children: m })
+                null != f && "" !== f
+                    ? (0, n.jsx)(s.E, { variant: "text-sm/normal", color: "text-default", selectable: !0, children: f })
                     : null,
                 null == g
                     ? (0, n.jsx)("div", { className: A.kZ, children: (0, n.jsx)(c.y, {}) })
@@ -286,7 +286,7 @@ function E(e) {
             loaded: null != g,
             valueCount: $.length,
             secretCount: D.length,
-            canSave: B,
+            canSave: G,
             saving: I,
             isScoped: z,
             submit: V,
@@ -301,13 +301,13 @@ function C(e) {
     let y = (0, b.qx)(j, a.channel_filter).map((e) => ({
         id: e.id,
         value: e.id,
-        label: (0, f.m1)(e, p.default, g.A),
+        label: (0, m.m1)(e, p.default, g.A),
         leading: (0, h.gU)(e),
     }));
     return (0, n.jsxs)("div", {
         className: A._6,
         children: [
-            (0, n.jsx)(m.Z, {
+            (0, n.jsx)(f.Z, {
                 selectionMode: "single",
                 clearable: !0,
                 label: a.label,

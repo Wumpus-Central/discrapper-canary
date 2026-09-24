@@ -21,8 +21,8 @@ function A(e) {
             labeledBy: f,
             leadingIcon: p,
             value: T,
-            labelType: m = "primary",
-            usageVariant: g = "single",
+            labelType: g = "primary",
+            usageVariant: m = "single",
         } = e,
         S = (0, r.useRef)(null),
         N = (0, r.useRef)(null),
@@ -37,7 +37,7 @@ function A(e) {
         }
         R(t ? "animateIn" : "animateOut");
     }, [t]);
-    let D = s()(E.checkboxOption, "string" == typeof O && E[O], "indicator" !== g && E.spacing),
+    let D = s()(E.checkboxOption, "string" == typeof O && E[O], "indicator" !== m && E.spacing),
         v = (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)("div", {
@@ -81,7 +81,7 @@ function A(e) {
                                         }),
                                     (0, i.jsx)(_.E, {
                                         variant: "text-md/normal",
-                                        color: "primary" === m ? "text-strong" : "text-subtle",
+                                        color: "primary" === g ? "text-strong" : "text-subtle",
                                         children: I,
                                     }),
                                 ],

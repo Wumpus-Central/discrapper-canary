@@ -1,4 +1,4 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => g });
 var i = n(477900);
 n(582128);
 var r = n(192308),
@@ -184,4 +184,4 @@ class T extends I.A {
         });
     };
 }
-let m = new T();
+let g = new T();

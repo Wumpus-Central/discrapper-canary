@@ -1,4 +1,4 @@
-(n.d(t, { Af: () => f, DZ: () => T, TW: () => A, ad: () => h, e4: () => m, ft: () => I, m_: () => p }),
+(n.d(t, { Af: () => f, DZ: () => T, TW: () => A, ad: () => h, e4: () => g, ft: () => I, m_: () => p }),
     n(321073),
     n(97378));
 var i = n(17928),
@@ -60,7 +60,7 @@ function T() {
     let e = (0, i.bG)([a.A], () => a.A.getGuildId());
     return (0, c.ai)(e);
 }
-function m(e, t) {
+function g(e, t) {
     let n = T(),
         { hasAccess: r } = A(t),
         a = (0, i.bG)([o.A], () => null != e && o.A.isChannelOrParentFavorited(e), [e]);

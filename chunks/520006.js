@@ -1,4 +1,4 @@
-n.d(t, { A: () => S, X: () => g });
+n.d(t, { A: () => S, X: () => m });
 var i = n(477900);
 n(582128);
 var r = n(284009),
@@ -17,8 +17,8 @@ var r = n(284009),
     f = n(576705),
     p = n(204651),
     T = n(652215),
-    m = n(375708);
-function g(e) {
+    g = n(375708);
+function m(e) {
     let {
         guild: t,
         channel: r,
@@ -83,9 +83,9 @@ function S(e) {
         w = (0, s.bG)([h.A], () => (null != U ? h.A.getGuild(U) : null), [U]),
         G = (0, s.bG)([I.A], () => (null != t ? I.A.getApplicationActivity(t) : void 0)),
         x = null == t || C ? c.D : d.d,
-        k = m.intl.string(m.t["6F9ivu"]);
-    return (null != t && (k = m.intl.string(m.t["OzOM/q"])),
-    null != n && (k = m.intl.string(m.t["6VQaqd"])),
+        k = g.intl.string(g.t["6F9ivu"]);
+    return (null != t && (k = g.intl.string(g.t["OzOM/q"])),
+    null != n && (k = g.intl.string(g.t["6VQaqd"])),
     null != G && O)
         ? (0, i.jsx)(p.A, {
               onClick: function () {
@@ -105,7 +105,7 @@ function S(e) {
                     (a()(null != w, "guild cannot be null"),
                         a()(null != r, "channel cannot be null"),
                         null != P && (0, E.X)(P, E.O.INVITE),
-                        g({
+                        m({
                             guild: w,
                             channel: r,
                             streamUserId: n?.ownerId,

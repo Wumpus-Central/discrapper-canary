@@ -1,4 +1,4 @@
-n.d(t, { aW: () => f, ag: () => I, bN: () => p, eC: () => m, qo: () => T });
+n.d(t, { aW: () => f, ag: () => I, bN: () => p, eC: () => g, qo: () => T });
 var i = n(636537),
     r = n(228366),
     a = n(148494),
@@ -72,7 +72,7 @@ function T(e, t) {
         }),
         (0, o.iN)(t));
 }
-function m(e, t) {
+function g(e, t) {
     if ((r.h.dispatch({ type: "COMPLETE_NEW_MEMBER_ACTION", guildId: e, channelId: t }), l.A.isFullServerPreview(e)))
         return;
     let n = d.A.getChannel(t),
