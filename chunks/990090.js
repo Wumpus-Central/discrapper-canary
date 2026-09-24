@@ -1,3 +1,3 @@
-a.exports = JSON.parse(
-    '{"au4mU4":["Dodaj znajomego"],"JZCSRZ":["Zwi\u0144 list\u0119 znajomych"],"Dr/+ku":["Rozwi\u0144 list\u0119 znajomych"],"7kJd9e":["Znajomi"],"i+986w":["Opcje listy znajomych"],"F3+Xei":["Zmie\u0144 rozmiar listy znajomych"],"60M8Ae":["Szukaj znajomych"],"0usxBd":["Mo\u017Cesz wyszukiwa\u0107 znajomych po ich wy\u015Bwietlanej nazwie lub nazwie u\u017Cytkownika."],"VH2HXW":["\u017Baden znajomy nie pasuje do wyszukiwania."]}',
+i.exports = JSON.parse(
+    '{"au4mU4":["Dodaj znajomego"],"JZCSRZ":["Zwi\u0144 list\u0119 znajomych"],"OZj923":["B\u0105d\u017A na bie\u017C\u0105co z tym, co robi\u0105, i baw si\u0119 razem z nimi."],"4fvi9I":["Twoi znajomi w pigu\u0142ce."],"Dr/+ku":["Rozwi\u0144 list\u0119 znajomych"],"7kJd9e":["Znajomi"],"i+986w":["Opcje listy znajomych"],"F3+Xei":["Zmie\u0144 rozmiar listy znajomych"],"60M8Ae":["Szukaj znajomych"],"ZsAL7q":["Ukryj list\u0119 znajomych"],"0usxBd":["Mo\u017Cesz wyszukiwa\u0107 znajomych po ich wy\u015Bwietlanej nazwie lub nazwie u\u017Cytkownika."],"VH2HXW":["\u017Baden znajomy nie pasuje do wyszukiwania."],"sgse8P":["Poka\u017C list\u0119 znajomych"]}',
 );
