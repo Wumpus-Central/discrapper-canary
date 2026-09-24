@@ -1,5 +1,8 @@
 _.exports = {
     Nr: "card__97796",
+    RG: "headerCollapsed__97796",
+    ZY: "trailing__97796",
+    L$: "toggle__97796",
     rf: "body__97796",
     p_: "list__97796",
     AS: "item__97796",
@@ -11,6 +14,7 @@ _.exports = {
     xB: "markerSpinnerPath__97796",
     Vb: "markerInProgress__97796",
     cT: "markerCompleted__97796",
+    GZ: "markerUnfinished__97796",
     L5: "markerCheck__97796",
     Gr: "markerCheckPath__97796",
     X6: "agents__97796",

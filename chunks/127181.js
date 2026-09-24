@@ -1,5 +1,11 @@
-a.d(t, { B: () => s, MZ: () => o, TH: () => l, tn: () => i });
+a.d(t, { B: () => s, MZ: () => o, TH: () => i, tn: () => l });
 let n = [
+    {
+        date: "2026-09-23",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "Task lists stop spinning once Conjure finishes or you press Stop, and an earlier list folds away with its unfinished tasks marked when a new one starts.",
+    },
     {
         date: "2026-09-23",
         platforms: ["mobile"],
@@ -513,14 +519,14 @@ let n = [
         summary: "Conjuring has its own doorway in the desktop title bar, so it is one click away from anywhere.",
     },
 ];
-function l(e) {
+function i(e) {
     return n.filter((t) => t.platforms.includes(e)).slice(0, 3);
 }
-function i(e) {
+function l(e) {
     return n.filter((t) => t.platforms.includes(e));
 }
 function s(e) {
-    return i(e).length > 3;
+    return l(e).length > 3;
 }
 function o(e) {
     return 1 === e.platforms.length;

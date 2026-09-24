@@ -1072,6 +1072,31 @@
     margin-inline-end: 0
 }
 
+.card__97796 .headerCollapsed__97796 {
+    border-bottom: none;
+    border-radius: var(--radius-md)
+}
+
+.trailing__97796 {
+    gap: var(--space-4)
+}
+
+.toggle__97796,
+.trailing__97796 {
+    align-items: center;
+    display: flex
+}
+
+.toggle__97796 {
+    border-radius: var(--radius-xs);
+    color: var(--icon-muted);
+    justify-content: center
+}
+
+.toggle__97796:hover {
+    color: var(--icon-strong)
+}
+
 .body__97796 {
     max-width: 100%;
     min-width: 0;
@@ -1157,6 +1182,11 @@
 .marker__97796.markerCompleted__97796 {
     background: var(--checkbox-background-selected-default);
     border-color: var(--checkbox-border-selected-default)
+}
+
+.marker__97796.markerUnfinished__97796 {
+    border-color: var(--border-strong);
+    border-style: dashed
 }
 
 .markerCheck__97796 {
@@ -1264,4 +1294,4 @@
     transition: stroke-dashoffset .35s cubic-bezier(.22, 1, .36, 1)
 }
 
-/*# sourceMappingURL=18e5fc800e28abfa.css.map*/
+/*# sourceMappingURL=e796a7f5c0077d0c.css.map*/

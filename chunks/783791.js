@@ -1,4 +1,4 @@
-(n.d(t, { Ay: () => q, BL: () => I, bi: () => U }), n(667532), n(321073));
+(n.d(t, { Ay: () => $, BL: () => I, bi: () => U }), n(667532), n(321073));
 var i = n(17928),
     r = n(228366),
     l = n(695515),
@@ -208,7 +208,7 @@ function V(e) {
             })(e));
     }
 }
-function x(e) {
+function H(e) {
     let t = T.delete(e);
     F.delete(e);
     let n = A.delete(e),
@@ -219,7 +219,7 @@ function x(e) {
         s = v.indexOf(e);
     return (-1 !== s && v.splice(s, 1), t || n || i || r || l || o || -1 !== s);
 }
-class H extends i.Ay.Store {
+class x extends i.Ay.Store {
     initialize() {
         this.waitFor(l.A, u.A, a.Ay, d.A, c.A, p.Ay);
     }
@@ -287,7 +287,10 @@ function j(e, t) {
         (e.steps[e.todosAt] = t),
         null != t.turn_seq && e.seenSeq.add(t.turn_seq));
 }
-let q = new H(r.h, {
+function q(e) {
+    return "assistant" === e.role && "side_reply" !== e.kind && !I(e) && !0 !== e.stopRequested;
+}
+let $ = new x(r.h, {
     LOGOUT: function () {
         if (
             0 === T.size &&
@@ -398,6 +401,15 @@ let q = new H(r.h, {
         let i = C("assistant", "");
         ((i.finished = !0), (i.finished_at = Date.now()), (i.interrupted = !0), T.set(t, [...n, i]));
     },
+    VIBEGRATIONS_CHAT_STOP_REQUESTED: function (e) {
+        let { projectId: t } = e,
+            n = T.get(t);
+        if (null == n || !n.some(q)) return !1;
+        T.set(
+            t,
+            n.map((e) => (q(e) ? { ...e, stopRequested: !0 } : e)),
+        );
+    },
     VIBEGRATIONS_CHAT_PROVISIONAL_TODO: function (e) {
         let { projectId: t, turnId: n, text: i } = e;
         if (
@@ -469,12 +481,12 @@ let q = new H(r.h, {
     },
     VIBEGRATIONS_PROJECT_DELETE_SUCCESS: function (e) {
         let { projectId: t } = e;
-        if (!x(t)) return !1;
+        if (!H(t)) return !1;
     },
     VIBEGRATIONS_PROJECTS_FETCH_SUCCESS: function (e) {
         let t = new Set([...T.keys(), ...A.keys(), ...S.keys(), ...y.keys()]),
             n = !1;
-        for (let e of t) null == p.Ay.getProject(e) && x(e) && (n = !0);
+        for (let e of t) null == p.Ay.getProject(e) && H(e) && (n = !0);
         if (!n) return !1;
     },
 });
