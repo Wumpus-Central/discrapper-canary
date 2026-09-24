@@ -2,11 +2,11 @@ s.d(t, { A: () => y });
 var r = s(477900),
     n = s(582128),
     i = s(503698),
-    l = s.n(i),
-    a = s(435558),
-    d = s.n(a),
-    u = s(192308),
-    c = s(95477),
+    a = s.n(i),
+    l = s(435558),
+    d = s.n(l),
+    c = s(192308),
+    u = s(95477),
     o = s(404778),
     m = s(452027),
     h = s(834730),
@@ -61,8 +61,8 @@ var R = s(174459),
 function y(e) {
     let t,
         s = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        [i, l] = n.useState(""),
-        [a, d] = n.useState(null),
+        [i, a] = n.useState(""),
+        [l, d] = n.useState(null),
         [h, E] = n.useState(null),
         A = (0, O.A)(e.code);
     (n.useEffect(() => {
@@ -72,9 +72,9 @@ function y(e) {
                 try {
                     e = await (0, p.rQ)();
                 } catch (e) {
-                    g.A.verifySSOToken("accept_guild_template", null);
+                    g.A.verifySSOToken("accept_guild_template", null).catch(() => {});
                 }
-            null != e && l(M.intl.formatToPlainString(A.defaultName, { username: e.username }));
+            null != e && a(M.intl.formatToPlainString(A.defaultName, { username: e.username }));
         })();
     }, [A.defaultName]),
         (t = n.useRef([])),
@@ -93,14 +93,14 @@ function y(e) {
     let N = (0, r.jsxs)(r.Fragment, {
             children: [
                 s ? (0, r.jsx)(Z.A, { guildTemplate: e }) : null,
-                (0, r.jsx)("div", { className: B.Kk, children: (0, r.jsx)(f.A, { icon: a, onChange: d }) }),
-                (0, r.jsx)(c.k, {
+                (0, r.jsx)("div", { className: B.Kk, children: (0, r.jsx)(f.A, { icon: l, onChange: d }) }),
+                (0, r.jsx)(u.k, {
                     label: A.nameLabel,
                     helperText: M.intl.format(A.terms, { guidelinesURL: T.X7G.GUIDELINES }),
                     type: "text",
                     value: i,
                     maxLength: 100,
-                    onChange: l,
+                    onChange: a,
                     error: h?.name,
                 }),
             ],
@@ -125,9 +125,9 @@ function y(e) {
             ],
         }),
         handleSubmit: function () {
-            U(e.code, i, a)
+            U(e.code, i, l)
                 .then(() => {
-                    ((0, u.closeAllModals)(), (0, x.bz)());
+                    ((0, c.closeAllModals)(), (0, x.bz)());
                 })
                 .catch((e) => E(e));
         },
@@ -143,7 +143,7 @@ function F(e) {
                 return (0, r.jsxs)(
                     "div",
                     {
-                        className: l()(B.Ix, { [B.L1]: e.type === T.rbe.GUILD_CATEGORY }),
+                        className: a()(B.Ix, { [B.L1]: e.type === T.rbe.GUILD_CATEGORY }),
                         children: [
                             null != s ? (0, r.jsx)(s, { className: B.p }) : null,
                             (0, r.jsx)(h.E, { className: B.be, variant: "text-sm/normal", children: e.name }),
