@@ -58,35 +58,36 @@ function N(e) {
             onSelectDevice: d,
             hideDeviceTypeIcon: p = !1,
             label: g,
-            ...h
+            textVariant: h,
+            ...A
         } = e,
-        { analyticsLocations: A } = (0, D.Ay)(),
-        N = (0, a.bG)([x.A], () => x.A.theme),
-        j = l.useMemo(() => t.reduce((e, t) => ({ ...e, [t.id]: t }), {}), [t]),
-        U = j[u]?.deviceType ?? null,
-        _ = (0, a.bG)([f.Ay], () => null == U || T(U).getCanSetDevice(f.Ay)),
-        { showDeviceFormFactorIndicators: V } = b.A.useConfig({ location: "SingleSelectDevices" }),
-        y = null != U ? (0, i.jsx)(m.p, { messageType: m.Y.WARNING, children: T(U).getWarningMessage() }) : null,
-        w = l.useCallback(
+        { analyticsLocations: N } = (0, D.Ay)(),
+        j = (0, a.bG)([x.A], () => x.A.theme),
+        U = l.useMemo(() => t.reduce((e, t) => ({ ...e, [t.id]: t }), {}), [t]),
+        _ = U[u]?.deviceType ?? null,
+        V = (0, a.bG)([f.Ay], () => null == _ || T(_).getCanSetDevice(f.Ay)),
+        { showDeviceFormFactorIndicators: y } = b.A.useConfig({ location: "SingleSelectDevices" }),
+        w = null != _ ? (0, i.jsx)(m.p, { messageType: m.Y.WARNING, children: T(_).getWarningMessage() }) : null,
+        E = l.useCallback(
             (e) => {
                 if (!(d?.(e) ?? !0)) return;
-                let t = j[e]?.deviceType;
+                let t = U[e]?.deviceType;
                 if (null == t) return;
                 let { setDevice: n, getLocation: i } = T(t);
-                n(e, { location: i(s), analyticsLocations: A });
+                n(e, { location: i(s), analyticsLocations: N });
             },
-            [j, s, A, d],
+            [U, s, N, d],
         );
-    function E(e) {
+    function M(e) {
         let t,
             l = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             { prefix: s, subName: a } = (0, I.d)(e),
             c = C.A.getCertifiedDeviceName(e.id, s);
         if (C.A.isCertified(e.id)) {
-            let e = (0, r.q)(N) ? n(961392) : n(848672);
+            let e = (0, r.q)(j) ? n(961392) : n(848672);
             t = (0, i.jsx)("img", { src: e, alt: O.intl.string(O.t.smSKsj) });
         }
-        let u = null == e ? null : V ? (0, I.d4)(e) : T(e.deviceType).IconComponent;
+        let u = null == e ? null : y ? (0, I.d4)(e) : T(e.deviceType).IconComponent;
         return (0, i.jsxs)("div", {
             className: o()(S.Mg, { [S.S2]: l && null != a, [S.Sy]: !p }),
             children: [
@@ -98,7 +99,7 @@ function N(e) {
                     }),
                 (0, i.jsx)(v.E, {
                     lineClamp: 2,
-                    variant: "text-md/medium",
+                    variant: h ?? "text-md/medium",
                     color: l ? "text-subtle" : "text-default",
                     className: S.hV,
                     children: c,
@@ -106,7 +107,7 @@ function N(e) {
                 null != a &&
                     (0, i.jsx)(v.E, {
                         lineClamp: 2,
-                        variant: l ? "text-xs/medium" : "text-md/medium",
+                        variant: h ?? (l ? "text-xs/medium" : "text-md/medium"),
                         color: "text-muted",
                         className: S.VT,
                         children: a,
@@ -120,26 +121,26 @@ function N(e) {
             (0, i.jsx)(c.Te, {
                 label: g,
                 value: u,
-                onChange: w,
+                onChange: E,
                 options: t.map((e) => {
                     let { id: t, name: n } = e;
                     return { value: t, label: n };
                 }),
-                isDisabled: !_,
+                isDisabled: !V,
                 popoutPosition: "bottom",
                 renderOptionLabel: (e) => {
                     let { value: t } = e;
-                    return E(j[t], !0);
+                    return M(U[t], !0);
                 },
                 renderOptionValue: (e) => {
                     let [{ value: t }] = e;
-                    return E(j[t]);
+                    return M(U[t]);
                 },
                 optionClassName: S.OS,
-                ...h,
+                ...A,
                 "data-migration-pending": !0,
             }),
-            !_ && y,
+            !V && w,
         ],
     });
 }

@@ -853,21 +853,21 @@ var eX = i(702841),
     e$ = i(465318),
     e0 = i(384377),
     e1 = i(554146),
-    e2 = i(43105),
-    e8 = i(131607),
+    e8 = i(43105),
+    e2 = i(131607),
     e5 = i(518477),
     e3 = i(49999);
 function e7() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
         t = e$.A.useConfig({ location: "PersonalWidgetUpsellCoachmark" }).enabled,
-        [i, n] = (0, e8.kn)(e && t ? [e1.M.USER_PROFILE_PERSONAL_WIDGET_COACHMARK] : []);
+        [i, n] = (0, e2.kn)(e && t ? [e1.M.USER_PROFILE_PERSONAL_WIDGET_COACHMARK] : []);
     return [i === e1.M.USER_PROFILE_PERSONAL_WIDGET_COACHMARK, n];
 }
 function e6(e) {
     let { targetElementRef: t, isVisible: i, markAsDismissed: l } = e,
         { trackUserProfileEditAction: s } = (0, eQ.NJ)();
     return i
-        ? (0, n.jsx)(e2.A, {
+        ? (0, n.jsx)(e8.A, {
               targetElementRef: t,
               badge: "beta",
               graphic: {
@@ -1496,18 +1496,18 @@ function t$(e) {
 }
 var t0 = i(769015),
     t1 = i(409626),
-    t2 = i(692969),
-    t8 = i(202163),
+    t8 = i(692969),
+    t2 = i(202163),
     t5 = i(207803),
     t3 = i(591179),
     t7 = i(485745),
     t6 = i(308766);
 function t4(e) {
     let { gameId: t, userId: i, className: s } = e,
-        { gameRecord: r } = (0, t8.A)(t),
+        { gameRecord: r } = (0, t2.A)(t),
         o = !(0, t3.X)("WidgetClipGameIcon"),
         d = (0, t7.A)(o),
-        c = (0, t2.A)({
+        c = (0, t8.A)({
             location: "WidgetClipGameIcon",
             applicationId: t,
             source: t1.GameProfileSources.UserProfile,
@@ -1687,7 +1687,7 @@ function ir(e) {
                             i.e("718955"),
                             i.e("323589"),
                             i.e("553829"),
-                            i.e("627154"),
+                            i.e("895840"),
                             i.e("865257"),
                             i.e("287946"),
                             i.e("323079"),
@@ -2401,7 +2401,7 @@ function i1(e) {
               }),
           });
 }
-function i2(e) {
+function i8(e) {
     let { userId: t, widgetType: i, ...s } = e,
         { games: a, onAddGame: r } = N(i),
         { setExpanded: o } = iy(),
@@ -2426,7 +2426,7 @@ function i2(e) {
         }),
     });
 }
-var i8 = i(870961);
+var i2 = i(870961);
 function i5(e) {
     let { widget: t, ...i } = e;
     switch (t.type) {
@@ -2479,7 +2479,7 @@ function i3(e) {
                       ),
                   ]
                 : void 0,
-        trailingContent: g && (0, n.jsx)(i2, { userId: i.id, widgetType: t.type, onDismiss: c, className: i8.r }),
+        trailingContent: g && (0, n.jsx)(i8, { userId: i.id, widgetType: t.type, onDismiss: c, className: i2.r }),
         ...r,
     });
 }

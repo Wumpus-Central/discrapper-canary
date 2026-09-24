@@ -1,0 +1,32 @@
+.countdownRing__261d1 {
+    height: 16px;
+    transform: rotate(-90deg);
+    width: 16px
+}
+
+.countdownTrack__261d1 {
+    fill: none;
+    stroke: color-mix(in srgb, var(--text-default) 20%, transparent)
+}
+
+.countdownProgress__261d1 {
+    fill: none;
+    stroke: var(--text-default);
+    stroke-linecap: round;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-name: countdown-ring__261d1;
+    animation-timing-function: linear
+}
+
+@keyframes countdown-ring__261d1 {
+    0% {
+        stroke-dashoffset: 0
+    }
+
+    to {
+        stroke-dashoffset: var(--custom-final-offset, 100)
+    }
+}
+
+/*# sourceMappingURL=53ea5c0df98d1941.css.map*/

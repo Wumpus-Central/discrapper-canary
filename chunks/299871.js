@@ -1,17 +1,24 @@
-n.d(e, { r: () => o });
+n.d(e, { r: () => u });
 var i = n(477900);
 n(582128);
-var t = n(765671),
-    l = n(835517),
-    s = n(100853);
-function o(a) {
-    let { durationMs: e, isPaused: n = !1 } = a,
-        { ref: o, width: r } = (0, t.Ay)(),
-        u = null != r ? Math.ceil(r * (0, l.A)()) : null,
-        d = {
+var t = n(503698),
+    l = n.n(t),
+    s = n(765671),
+    o = n(835517),
+    r = n(100853);
+function u(a) {
+    let { durationMs: e, isPaused: n = !1, className: t } = a,
+        { ref: u, width: d } = (0, s.Ay)(),
+        c = null != d ? Math.ceil(d * (0, o.A)()) : null,
+        m = {
             animationDuration: `${e}ms`,
-            animationTimingFunction: null != u ? `steps(${u})` : void 0,
+            animationTimingFunction: null != c ? `steps(${c})` : void 0,
             animationPlayState: n ? "paused" : "running",
         };
-    return (0, i.jsx)("div", { ref: o, className: s.p, style: d, "aria-hidden": "true" });
+    return (0, i.jsx)("div", {
+        ref: u,
+        className: l()(r.p4, t),
+        "aria-hidden": "true",
+        children: (0, i.jsx)("div", { className: r.q3, style: m }),
+    });
 }
