@@ -16748,7 +16748,6 @@ function g1(e) {
                 style: { backgroundColor: j },
                 children: (0, p.jsxs)("div", {
                     className: g$.nP,
-                    ref: u,
                     children: [
                         d
                             ? (0, p.jsxs)("div", {
@@ -16762,10 +16761,11 @@ function g1(e) {
                                   ],
                               })
                             : null,
-                        (0, p.jsx)(sP.xp, {
-                            containerRef: u,
-                            children: (0, p.jsxs)("div", {
-                                className: g$.o1,
+                        (0, p.jsx)("div", {
+                            className: g$.o1,
+                            ref: u,
+                            children: (0, p.jsxs)(sP.xp, {
+                                containerRef: u,
                                 children: [
                                     C,
                                     (0, p.jsxs)("div", {
