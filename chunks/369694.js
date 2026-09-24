@@ -1260,18 +1260,20 @@ function e0(e) {
         ej = h ? c : (g ?? c);
     return (0, n.jsx)(R.F, {
         forceLevel: 2,
-        children: (0, n.jsx)("div", {
+        children: (0, n.jsxs)("div", {
             id: eo,
             role: "tabpanel",
             "aria-labelledby": eh(c.badge_id),
             className: eq.SV,
-            children: (0, n.jsxs)(k.d_, {
-                className: eq.C9,
-                children: [
-                    (0, n.jsxs)("div", {
-                        className: eq.Rm,
-                        children: [
-                            (0, N.HW)(c.badge_id) &&
+            children: [
+                (0, n.jsx)("div", { className: eq.Gw, children: (0, n.jsx)(d.J, { onClick: x, size: "sm" }) }),
+                (0, n.jsxs)(k.d_, {
+                    className: eq.C9,
+                    children: [
+                        (0, n.jsx)("div", {
+                            className: eq.Rm,
+                            children:
+                                (0, N.HW)(c.badge_id) &&
                                 (0, n.jsx)(T.m, {
                                     text: er.intl.string(er.t.goKu4e),
                                     children: (0, n.jsx)("span", {
@@ -1279,134 +1281,132 @@ function e0(e) {
                                         children: (0, n.jsx)(S.E, { type: "beta" }),
                                     }),
                                 }),
-                            (0, n.jsx)("div", {
-                                className: eq.Gw,
-                                children: (0, n.jsx)(d.J, { onClick: x, size: "sm" }),
-                            }),
-                        ],
-                    }),
-                    null != z &&
-                        (0, n.jsx)("img", {
-                            className: E()(eq.y2, null != C && z === C && eq.hu),
-                            src: z,
-                            alt: "",
-                            "aria-hidden": !0,
-                            draggable: !1,
                         }),
-                    (0, n.jsxs)("div", {
-                        className: eq.OU,
-                        children: [
-                            (0, n.jsx)("div", {
-                                className: eq.cQ,
-                                children: (0, n.jsxs)("div", {
-                                    className: eq.nj,
+                        null != z &&
+                            (0, n.jsx)("img", {
+                                className: E()(eq.y2, null != C && z === C && eq.hu),
+                                src: z,
+                                alt: "",
+                                "aria-hidden": !0,
+                                draggable: !1,
+                            }),
+                        (0, n.jsxs)("div", {
+                            className: eq.OU,
+                            children: [
+                                (0, n.jsx)("div", {
+                                    className: eq.cQ,
+                                    children: (0, n.jsxs)("div", {
+                                        className: eq.nj,
+                                        children: [
+                                            (0, n.jsxs)(o.D, {
+                                                variant: Y ? "nitro-sm" : "display-sm",
+                                                color: "text-strong",
+                                                className: E()(eq._r, Y && eq.ve),
+                                                children: [
+                                                    null != t &&
+                                                        (0, n.jsx)(u.E, {
+                                                            tag: "span",
+                                                            variant: "text-sm/medium",
+                                                            color: "text-subtle",
+                                                            className: eq.$g,
+                                                            children: t,
+                                                        }),
+                                                    i,
+                                                ],
+                                            }),
+                                            (0, n.jsx)(eX, { segments: en }),
+                                        ],
+                                    }),
+                                }),
+                                (0, n.jsxs)("div", {
+                                    className: eq.oA,
                                     children: [
-                                        (0, n.jsxs)(o.D, {
-                                            variant: Y ? "nitro-sm" : "display-sm",
-                                            color: "text-strong",
-                                            className: E()(eq._r, Y && eq.ve),
-                                            children: [
-                                                null != t &&
-                                                    (0, n.jsx)(u.E, {
-                                                        tag: "span",
-                                                        variant: "text-sm/medium",
-                                                        color: "text-subtle",
-                                                        className: eq.$g,
-                                                        children: t,
-                                                    }),
-                                                i,
-                                            ],
-                                        }),
-                                        (0, n.jsx)(eX, { segments: en }),
+                                        eg &&
+                                            (0, n.jsx)(U.w, {
+                                                type: "info",
+                                                children: er.intl.format(er.t.Zh44ni, {
+                                                    onGoToSettings: () =>
+                                                        (0, P.openUserSettings)(G.X.DATA_USAGE_PERSONALIZATION_SETTING),
+                                                }),
+                                            }),
+                                        eb &&
+                                            (0, n.jsxs)("div", {
+                                                className: eq.d9,
+                                                children: [
+                                                    ex &&
+                                                        (0, n.jsxs)(n.Fragment, {
+                                                            children: [
+                                                                (0, n.jsx)(eZ, {
+                                                                    badge: c,
+                                                                    viewerBadge: g,
+                                                                    isViewingOtherUser: h,
+                                                                }),
+                                                                (0, n.jsx)(F.c, {}),
+                                                            ],
+                                                        }),
+                                                    e_ &&
+                                                        (0, n.jsxs)("div", {
+                                                            className: E()(eq.E4, !Q && eq.H),
+                                                            children: [
+                                                                (0, n.jsxs)("div", {
+                                                                    className: eq.jv,
+                                                                    children: [
+                                                                        W &&
+                                                                            (0, n.jsx)(u.E, {
+                                                                                variant: "text-xs/medium",
+                                                                                color: "text-subtle",
+                                                                                className: eq.c$,
+                                                                                children: er.intl.string(
+                                                                                    er.t["/Gmn3f"],
+                                                                                ),
+                                                                            }),
+                                                                        (0, n.jsx)(u.E, {
+                                                                            variant: "text-sm/medium",
+                                                                            color: "text-default",
+                                                                            className: eq.ij,
+                                                                            children: r,
+                                                                        }),
+                                                                    ],
+                                                                }),
+                                                                null != J &&
+                                                                    (0, n.jsx)(m.$, {
+                                                                        variant: ea
+                                                                            ? "expressive"
+                                                                            : p
+                                                                              ? "secondary"
+                                                                              : Y
+                                                                                ? "expressive"
+                                                                                : "primary",
+                                                                        size: "sm",
+                                                                        onClick: ed,
+                                                                        text: J.ctaLabel({
+                                                                            owned: p,
+                                                                            isViewerOnUpgradeableNitro: ea,
+                                                                        }),
+                                                                    }),
+                                                            ],
+                                                        }),
+                                                    Q &&
+                                                        (0, n.jsx)("div", {
+                                                            className: eq.cJ,
+                                                            children: (0, n.jsx)(eY, {
+                                                                badge: ej,
+                                                                isViewingOtherUser: h,
+                                                                targetUsername: b,
+                                                                isViewerOnUpgradeableNitro: ea,
+                                                            }),
+                                                        }),
+                                                    null != eu && (0, n.jsx)("div", { className: eq.Z6, children: eu }),
+                                                ],
+                                            }),
+                                        !eb && eu,
                                     ],
                                 }),
-                            }),
-                            (0, n.jsxs)("div", {
-                                className: eq.oA,
-                                children: [
-                                    eg &&
-                                        (0, n.jsx)(U.w, {
-                                            type: "info",
-                                            children: er.intl.format(er.t.Zh44ni, {
-                                                onGoToSettings: () =>
-                                                    (0, P.openUserSettings)(G.X.DATA_USAGE_PERSONALIZATION_SETTING),
-                                            }),
-                                        }),
-                                    eb &&
-                                        (0, n.jsxs)("div", {
-                                            className: eq.d9,
-                                            children: [
-                                                ex &&
-                                                    (0, n.jsxs)(n.Fragment, {
-                                                        children: [
-                                                            (0, n.jsx)(eZ, {
-                                                                badge: c,
-                                                                viewerBadge: g,
-                                                                isViewingOtherUser: h,
-                                                            }),
-                                                            (0, n.jsx)(F.c, {}),
-                                                        ],
-                                                    }),
-                                                e_ &&
-                                                    (0, n.jsxs)("div", {
-                                                        className: E()(eq.E4, !Q && eq.H),
-                                                        children: [
-                                                            (0, n.jsxs)("div", {
-                                                                className: eq.jv,
-                                                                children: [
-                                                                    W &&
-                                                                        (0, n.jsx)(u.E, {
-                                                                            variant: "text-xs/medium",
-                                                                            color: "text-subtle",
-                                                                            className: eq.c$,
-                                                                            children: er.intl.string(er.t["/Gmn3f"]),
-                                                                        }),
-                                                                    (0, n.jsx)(u.E, {
-                                                                        variant: "text-sm/medium",
-                                                                        color: "text-default",
-                                                                        className: eq.ij,
-                                                                        children: r,
-                                                                    }),
-                                                                ],
-                                                            }),
-                                                            null != J &&
-                                                                (0, n.jsx)(m.$, {
-                                                                    variant: ea
-                                                                        ? "expressive"
-                                                                        : p
-                                                                          ? "secondary"
-                                                                          : Y
-                                                                            ? "expressive"
-                                                                            : "primary",
-                                                                    size: "sm",
-                                                                    onClick: ed,
-                                                                    text: J.ctaLabel({
-                                                                        owned: p,
-                                                                        isViewerOnUpgradeableNitro: ea,
-                                                                    }),
-                                                                }),
-                                                        ],
-                                                    }),
-                                                Q &&
-                                                    (0, n.jsx)("div", {
-                                                        className: eq.cJ,
-                                                        children: (0, n.jsx)(eY, {
-                                                            badge: ej,
-                                                            isViewingOtherUser: h,
-                                                            targetUsername: b,
-                                                            isViewerOnUpgradeableNitro: ea,
-                                                        }),
-                                                    }),
-                                                null != eu && (0, n.jsx)("div", { className: eq.Z6, children: eu }),
-                                            ],
-                                        }),
-                                    !eb && eu,
-                                ],
-                            }),
-                        ],
-                    }),
-                ],
-            }),
+                            ],
+                        }),
+                    ],
+                }),
+            ],
         }),
     });
 }

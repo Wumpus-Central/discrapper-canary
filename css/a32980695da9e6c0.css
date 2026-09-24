@@ -732,8 +732,10 @@
 }
 
 .detailCloseButton__6f97a {
-    margin-inline-end: calc(var(--space-8)*-1);
-    margin-inline-start: auto
+    inset-block-start: var(--space-16);
+    inset-inline-end: var(--space-16);
+    position: absolute;
+    z-index: 2
 }
 
 .betaPill__6f97a {
@@ -912,4 +914,4 @@
     }
 }
 
-/*# sourceMappingURL=f038d65987b59b68.css.map*/
+/*# sourceMappingURL=a32980695da9e6c0.css.map*/
