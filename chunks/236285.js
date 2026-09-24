@@ -639,7 +639,7 @@ class eg extends _.Ay.PersistedStore {
                             let o = n.toLowerCase(),
                                 d = 1 + 4 * (o === r) + (s(o) || s(n) ? 2 : 0) + +!!l(n),
                                 c = i === K.EmojiIntention.REACTION ? eE.getScore(a) : e_.getScore(a);
-                            return (null != c && (d *= c / 100), d);
+                            return (null != c && (d *= Math.max(1, c / 100)), d);
                         })(e),
                     (e) => (null != e.names ? e.names[0] : e.name),
                 ],
