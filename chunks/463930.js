@@ -26,13 +26,13 @@ function f(l) {
             displayNameStylesFont: y = "",
             displayInline: C = !1,
         } = l,
-        _ = r.useContext(c.C),
-        [x, E] = r.useState(!1),
+        E = r.useContext(c.C),
+        [_, x] = r.useState(!1),
         w = r.useCallback(() => {
-            E(!0);
+            x(!0);
         }, []),
         N = r.useCallback(() => {
-            E(!1);
+            x(!1);
         }, []),
         R = "username" === e,
         j = null != u && null != u.primaryColor && null != u.secondaryColor,
@@ -41,7 +41,7 @@ function f(l) {
             gradientStyle: I,
             gradientClassname: S,
             gradientGlowClassname: T,
-        } = (0, h.v5)({ colorStrings: u, roleStyle: "username", animateGradient: g || x || _?.animate }),
+        } = (0, h.v5)({ colorStrings: u, roleStyle: "username", animateGradient: g || _ || E?.animate }),
         G = (0, h.CR)(n),
         H = { className: o()(m.UU, v, y, { [m.Xh]: R, [S]: D }), children: G },
         L = { className: o()(m.lD, T, y), children: n },
@@ -52,7 +52,7 @@ function f(l) {
                       colors: j ? u : null,
                       name: i,
                       className: "left" === d ? m.Hf : m.WN,
-                      hoverOverride: g || x || _?.animate,
+                      hoverOverride: g || _ || E?.animate,
                   })
                 : null;
     return (0, t.jsxs)("span", {

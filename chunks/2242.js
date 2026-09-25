@@ -1,4 +1,4 @@
-i.d(t, {
+l.d(t, {
     M_: () => p,
     P7: () => C,
     TQ: () => d,
@@ -10,15 +10,15 @@ i.d(t, {
     nd: () => S,
     p$: () => f,
 });
-var l,
+var i,
     a,
     n,
-    s = i(202541),
-    r = i(818348);
+    s = l(202541),
+    r = l(818348);
 let c = 3,
     h = "(max-width: 485px)",
     d = "(max-height: 450px)";
-var o = (((l = {})[(l.CHANNEL = 1)] = "CHANNEL"), (l[(l.INTANGIBLE = 2)] = "INTANGIBLE"), l),
+var o = (((i = {})[(i.CHANNEL = 1)] = "CHANNEL"), (i[(i.INTANGIBLE = 2)] = "INTANGIBLE"), i),
     u = (((a = {})[(a.SOME_CHANNELS = 0)] = "SOME_CHANNELS"), (a[(a.ALL_CHANNELS = 1)] = "ALL_CHANNELS"), a);
 let f = [
     { interval: s.WT.DAY, interval_count: 1 },

@@ -25,8 +25,8 @@ function v(e) {
             enablePreview: v,
             pageType: _ = S.G2.HOME,
             className: I,
-            handleTransition: L,
-            listItemProps: y,
+            handleTransition: y,
+            listItemProps: L,
         } = e,
         f = r?.categorySkuId;
     null == f && null != r && (f = p.A.getCategoryByStoreListingId(r?.categoryStoreListingId)?.skuId);
@@ -34,9 +34,9 @@ function v(e) {
         { handleCardVisibilityChange: O } = (0, h.Z)(k, _, "marketing featured block"),
         j = (0, E.s4)(t, r, v),
         b = l.useRef(null),
-        N = r?.bodyText,
-        P = r?.name ?? t?.name,
-        B = null != P ? C.intl.formatToPlainString(C.t.frSHlf, { destination: P }) : void 0,
+        P = r?.bodyText,
+        N = r?.name ?? t?.name,
+        B = null != N ? C.intl.formatToPlainString(C.t.frSHlf, { destination: N }) : void 0,
         T = (0, m.uM)();
     return (0, n.jsx)(i.L, {
         innerRef: b,
@@ -46,9 +46,9 @@ function v(e) {
             className: a()(A.oT, I),
             innerRef: b,
             style: { ...(null != j && { backgroundImage: `url(${j})` }) },
-            ...y,
+            ...L,
             onClick: () => {
-                (L({
+                (y({
                     sourceButton: "shop marketing tile",
                     categorySkuId: k,
                     isInternalShopDeeplink: !0,
@@ -70,13 +70,13 @@ function v(e) {
                 (0, n.jsx)("div", {
                     className: A.Gh,
                     children:
-                        null != N &&
+                        null != P &&
                         (0, n.jsx)(c.D, {
                             lineClamp: 4,
                             className: A.BN,
                             style: { color: r?.bannerTextColor ?? "white" },
                             variant: "heading-md/medium",
-                            children: N,
+                            children: P,
                         }),
                 }),
                 (0, n.jsx)("div", {
@@ -85,9 +85,9 @@ function v(e) {
                         variant: "overlay-primary",
                         text: C.intl.string(C.t.jVcuVY),
                         "aria-label": B,
-                        tabIndex: y?.tabIndex,
+                        tabIndex: L?.tabIndex,
                         onClick: (e) => {
-                            (L({
+                            (y({
                                 sourceButton: "shop marketing take me there button",
                                 categorySkuId: k,
                                 isInternalShopDeeplink: !0,

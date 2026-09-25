@@ -1,11 +1,11 @@
-i.d(t, { A: () => _ });
-var l = i(435558),
-    a = i.n(l),
-    n = i(17928),
-    s = i(228366),
-    r = i(889227),
-    c = i(287809),
-    h = i(38910);
+l.d(t, { A: () => _ });
+var i = l(435558),
+    a = l.n(i),
+    n = l(17928),
+    s = l(228366),
+    r = l(889227),
+    c = l(287809),
+    h = l(38910);
 let d = {},
     o = 0,
     u = !1,
@@ -30,8 +30,8 @@ class S extends n.Ay.Store {
     }
     getSuggestions() {
         return Object.entries(d).map((e) => {
-            let [t, i] = e;
-            return i;
+            let [t, l] = e;
+            return l;
         });
     }
     getSuggestion(e) {
