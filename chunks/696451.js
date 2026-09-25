@@ -225,7 +225,7 @@ function X(e, t) {
                   unusualDMActivityUntil: t.unusual_dm_activity_until ?? r?.unusualDMActivityUntil,
                   collectibles: (0, u.t)(t.collectibles),
                   displayNameStyles: (0, E.mT)(t.display_name_styles),
-                  gamingLeaderboardData: (0, I.i)(t.member_gaming_leaderboard_data),
+                  gamingLeaderboardData: (0, I.Rt)(t.member_gaming_leaderboard_data),
               })),
                   k(e, n[t.user.id]));
           }),
@@ -269,7 +269,7 @@ function J(e) {
                 unusualDMActivityUntil: r.unusual_dm_activity_until ?? s?.unusualDMActivityUntil,
                 collectibles: (0, u.t)(r.collectibles),
                 displayNameStyles: (0, E.mT)(r.display_name_styles),
-                gamingLeaderboardData: (0, I.i)(r.member_gaming_leaderboard_data),
+                gamingLeaderboardData: (0, I.Rt)(r.member_gaming_leaderboard_data),
             });
         ((i[a] = l), k(t, l));
     }
@@ -649,7 +649,7 @@ let ed = new eo(l.h, {
             fullProfileLoadedTimestamp: Date.now(),
             collectibles: (0, u.t)(t.collectibles),
             displayNameStyles: (0, E.mT)(t.display_name_styles),
-            gamingLeaderboardData: (0, I.i)(t.member_gaming_leaderboard_data),
+            gamingLeaderboardData: (0, I.Rt)(t.member_gaming_leaderboard_data),
         })),
             k(n, i[t.user.id]));
     },

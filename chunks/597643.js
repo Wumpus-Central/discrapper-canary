@@ -538,7 +538,7 @@ function eY(e, t, n) {
         f = e_.Ay.getMember(e, t.id),
         p = (0, $.t)(A),
         T = (0, X.mT)(h),
-        m = (0, Z.i)(I);
+        m = (0, Z.Rt)(I);
     (null != f &&
         f.nick === a &&
         f.avatar === s &&
@@ -1150,7 +1150,7 @@ function eq(e) {
                 flags: e.flags,
                 collectibles: (0, $.t)(e.collectibles),
                 displayNameStyles: (0, X.mT)(e.display_name_styles),
-                gamingLeaderboardData: (0, Z.i)(e.member_gaming_leaderboard_data),
+                gamingLeaderboardData: (0, Z.Rt)(e.member_gaming_leaderboard_data),
             });
         },
     ),

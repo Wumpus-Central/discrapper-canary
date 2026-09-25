@@ -84,17 +84,17 @@ function O(e) {
 }
 function z(e, t) {
     switch (t) {
-        case W.R.GAMING_LEADERBOARD_STAT_DAYS_PLAYED:
+        case W.RE.GAMING_LEADERBOARD_STAT_DAYS_PLAYED:
             return {
                 primary: x.intl.formatToPlainString(x.t["k2UNz+"], { days: e.value }),
                 secondary: O(e.time_played_seconds),
             };
-        case W.R.GAMING_LEADERBOARD_STAT_UNIQUE_GAMES_PLAYED:
+        case W.RE.GAMING_LEADERBOARD_STAT_UNIQUE_GAMES_PLAYED:
             return {
                 primary: x.intl.formatToPlainString(w.default.rgpc8E, { count: e.value }),
                 secondary: O(e.time_played_seconds),
             };
-        case W.R.GAMING_LEADERBOARD_STAT_HOURS_PLAYED:
+        case W.RE.GAMING_LEADERBOARD_STAT_HOURS_PLAYED:
             let l, n, i;
             return {
                 primary:
@@ -289,11 +289,11 @@ function em(e) {
 function ef(e) {
     let { stat: t } = e;
     switch (t) {
-        case W.R.GAMING_LEADERBOARD_STAT_DAYS_PLAYED:
+        case W.RE.GAMING_LEADERBOARD_STAT_DAYS_PLAYED:
             return (0, n.jsx)(H.CalendarIcon, { size: "xxs", color: r.A.colors.ICON_SUBTLE, "aria-hidden": !0 });
-        case W.R.GAMING_LEADERBOARD_STAT_HOURS_PLAYED:
+        case W.RE.GAMING_LEADERBOARD_STAT_HOURS_PLAYED:
             return (0, n.jsx)(Y.ClockIcon, { size: "xxs", color: r.A.colors.ICON_SUBTLE, "aria-hidden": !0 });
-        case W.R.GAMING_LEADERBOARD_STAT_UNIQUE_GAMES_PLAYED:
+        case W.RE.GAMING_LEADERBOARD_STAT_UNIQUE_GAMES_PLAYED:
             return (0, n.jsx)(X.GameControllerIcon, { size: "xxs", color: r.A.colors.ICON_SUBTLE, "aria-hidden": !0 });
         default:
             return null;

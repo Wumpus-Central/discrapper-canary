@@ -113,16 +113,16 @@ function M(e) {
             let t = e.winningValue;
             if (null == t || !Number.isFinite(t) || t < 0) return null;
             switch (e.winningStat) {
-                case m.R.GAMING_LEADERBOARD_STAT_HOURS_PLAYED: {
+                case m.RE.GAMING_LEADERBOARD_STAT_HOURS_PLAYED: {
                     let e = Math.floor(t / d.A.Millis.MINUTE);
                     return _.intl.formatToPlainString(N.default.GC7N5H, {
                         hours: Math.floor(e / d.A.Minutes.HOUR),
                         minutes: e % d.A.Minutes.HOUR,
                     });
                 }
-                case m.R.GAMING_LEADERBOARD_STAT_DAYS_PLAYED:
+                case m.RE.GAMING_LEADERBOARD_STAT_DAYS_PLAYED:
                     return _.intl.formatToPlainString(N.default.IXdbVJ, { days: t });
-                case m.R.GAMING_LEADERBOARD_STAT_UNIQUE_GAMES_PLAYED:
+                case m.RE.GAMING_LEADERBOARD_STAT_UNIQUE_GAMES_PLAYED:
                     return _.intl.formatToPlainString(N.default["/VAMco"], { count: t });
                 default:
                     return null;

@@ -101,9 +101,9 @@ let S = [
         return t;
     }),
     y = {
-        stat: p.R.GAMING_LEADERBOARD_STAT_HOURS_PLAYED,
+        stat: p.RE.GAMING_LEADERBOARD_STAT_HOURS_PLAYED,
         week_start_ts: 1756512e3,
-        next_stat: p.R.GAMING_LEADERBOARD_STAT_DAYS_PLAYED,
+        next_stat: p.RE.GAMING_LEADERBOARD_STAT_DAYS_PLAYED,
         previous_winner: "2",
         streak_count: 3,
         entries: [
@@ -212,8 +212,8 @@ let S = [
         ],
     };
 a(321073);
-var f = a(17928),
-    E = a(994500),
+var E = a(17928),
+    f = a(994500),
     x = a(711014),
     R = a(287809),
     D = a(427262),
@@ -258,10 +258,10 @@ let N = {
         let t,
             a,
             { state: n, stat: o, currentUserPlacement: i } = e,
-            d = (0, f.bG)([R.default], () => R.default.getCurrentUser()?.id),
-            c = (0, f.bG)([x.Ay], () => x.Ay.getFlattenedGuildIds()[0]),
+            d = (0, E.bG)([R.default], () => R.default.getCurrentUser()?.id),
+            c = (0, E.bG)([x.Ay], () => x.Ay.getFlattenedGuildIds()[0]),
             u =
-                ((t = (0, f.yK)([E.A], () => E.A.getFriendIDs())),
+                ((t = (0, E.yK)([f.A], () => f.A.getFriendIDs())),
                 l.useMemo(
                     () =>
                         t
@@ -287,7 +287,7 @@ let N = {
                 let {
                         memberIds: t,
                         gameIds: a = T,
-                        stat: s = p.R.GAMING_LEADERBOARD_STAT_DAYS_PLAYED,
+                        stat: s = p.RE.GAMING_LEADERBOARD_STAT_DAYS_PLAYED,
                         entryCount: l = G.length,
                         ended: n = !1,
                     } = e,
@@ -296,7 +296,7 @@ let N = {
                 return {
                     stat: s,
                     week_start_ts: r - (n ? 8 : 3) * w.A.Seconds.DAY,
-                    next_stat: p.R.GAMING_LEADERBOARD_STAT_HOURS_PLAYED,
+                    next_stat: p.RE.GAMING_LEADERBOARD_STAT_HOURS_PLAYED,
                     previous_winner: t[0],
                     streak_count: 3,
                     computed_at: new Date((r - w.A.Seconds.DAY) * 1e3).toISOString(),
@@ -307,9 +307,9 @@ let N = {
                             name: n,
                             value: (function (e, t) {
                                 switch (t) {
-                                    case p.R.GAMING_LEADERBOARD_STAT_DAYS_PLAYED:
+                                    case p.RE.GAMING_LEADERBOARD_STAT_DAYS_PLAYED:
                                         return e.days;
-                                    case p.R.GAMING_LEADERBOARD_STAT_UNIQUE_GAMES_PLAYED:
+                                    case p.RE.GAMING_LEADERBOARD_STAT_UNIQUE_GAMES_PLAYED:
                                         return e.gameIndexes.length;
                                     default:
                                         return 1e3 * e.totalSeconds;
@@ -368,11 +368,11 @@ let N = {
         stat: {
             label: "Stat",
             type: "select",
-            defaultValue: p.R.GAMING_LEADERBOARD_STAT_DAYS_PLAYED,
+            defaultValue: p.RE.GAMING_LEADERBOARD_STAT_DAYS_PLAYED,
             options: [
-                { label: "Most Game Days", value: p.R.GAMING_LEADERBOARD_STAT_DAYS_PLAYED },
-                { label: "Most Game Time", value: p.R.GAMING_LEADERBOARD_STAT_HOURS_PLAYED },
-                { label: "Most Unique Games", value: p.R.GAMING_LEADERBOARD_STAT_UNIQUE_GAMES_PLAYED },
+                { label: "Most Game Days", value: p.RE.GAMING_LEADERBOARD_STAT_DAYS_PLAYED },
+                { label: "Most Game Time", value: p.RE.GAMING_LEADERBOARD_STAT_HOURS_PLAYED },
+                { label: "Most Unique Games", value: p.RE.GAMING_LEADERBOARD_STAT_UNIQUE_GAMES_PLAYED },
             ],
         },
         currentUserPlacement: {
