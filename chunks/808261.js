@@ -1270,33 +1270,35 @@ function l5(e) {
 }
 function l7(e) {
     let { user: n, guildId: l, disabled: r, variant: a = "full-height-bar" } = e,
-        { analyticsLocations: o } = (0, I.Ay)(),
-        d = null != l,
-        u = (0, s.bG)([G.A], () => (null != l ? G.A.getGuild(l) : null)),
-        c = (0, eg.N2)({ user: n }),
-        g = (0, eg.N2)({ user: n, guildId: l ?? void 0 }),
-        { pendingProfileEffect: m } = (0, eg.nZ)(l ?? void 0),
-        f = void 0 !== m,
-        p = null === m || (!f && null == g),
-        x = d && null != c,
-        h = (0, eg.lw)({ pendingValue: m, userValue: c, guildValue: g, guildId: l ?? void 0 }),
-        { product: v } = (0, lW.q)(h?.skuId),
-        A = f ? null != m : null != g,
-        b =
-            null != h && A
+        o = i.useRef(null),
+        { analyticsLocations: d } = (0, I.Ay)(),
+        u = null != l,
+        c = (0, s.bG)([G.A], () => (null != l ? G.A.getGuild(l) : null)),
+        g = (0, eg.N2)({ user: n }),
+        m = (0, eg.N2)({ user: n, guildId: l ?? void 0 }),
+        { pendingProfileEffect: f } = (0, eg.nZ)(l ?? void 0),
+        p = void 0 !== f,
+        x = null === f || (!p && null == m),
+        h = u && null != g,
+        v = (0, eg.lw)({ pendingValue: f, userValue: g, guildValue: m, guildId: l ?? void 0 }),
+        { product: A } = (0, lW.q)(v?.skuId),
+        b = p ? null != f : null != m,
+        j =
+            null != v && b
                 ? {
                       onClick: () => (0, nr.p)({ guildId: l ?? void 0, profileEffect: null }),
-                      type: x ? "reset" : "remove",
-                      accessibleLabel: e_.intl.string(x ? e_.t["SQy/Po"] : e_.t.uMuafO),
+                      type: h ? "reset" : "remove",
+                      accessibleLabel: e_.intl.string(h ? e_.t["SQy/Po"] : e_.t.uMuafO),
                   }
                 : void 0,
-        j = i.useCallback(() => {
-            (0, lH.W)({ analyticsLocations: o, guild: u ?? void 0, stackingBehavior: "stack" });
-        }, [o, u]);
+        C = i.useCallback(() => {
+            (0, lH.W)({ analyticsLocations: d, guild: c ?? void 0, stackingBehavior: "stack", returnRef: o });
+        }, [d, c]);
     return (0, t.jsx)(lf.A, {
-        affordance: p && !x ? "add" : b,
+        buttonRef: o,
+        affordance: x && !h ? "add" : j,
         variant: a,
-        onClick: j,
+        onClick: C,
         accessibleLabel: e_.intl.string(e_.t.wR5wOo),
         accessibleValue: (function (e) {
             let { profileEffectPreview: n, productName: l, hasPendingSelection: t } = e;
@@ -1305,11 +1307,11 @@ function l7(e) {
                 : null != l && "" !== l
                   ? l
                   : e_.intl.string(t ? e_.t["1M4m8w"] : e_.t["+Du7ua"]);
-        })({ profileEffectPreview: h, productName: (0, lq.VG)(v), hasPendingSelection: null != m }),
+        })({ profileEffectPreview: v, productName: (0, lq.VG)(A), hasPendingSelection: null != f }),
         "aria-haspopup": "dialog",
         disabled: r,
         renderPreview: (e) =>
-            (0, t.jsx)(l5, { effect: h, shouldAnimate: e, isEmpty: p, hasMainProfileFallback: x, disabled: r }),
+            (0, t.jsx)(l5, { effect: v, shouldAnimate: e, isEmpty: x, hasMainProfileFallback: h, disabled: r }),
     });
 }
 var l8 = l(515727),
@@ -1363,33 +1365,35 @@ function tl(e) {
 }
 function tt(e) {
     let { user: n, guildId: l, disabled: r } = e,
-        { analyticsLocations: a } = (0, I.Ay)(),
-        o = null != l,
-        d = (0, s.bG)([G.A], () => (null != l ? G.A.getGuild(l) : null)),
-        u = (0, eg.Xf)({ user: n }),
-        c = (0, eg.Xf)({ user: n, guildId: l ?? void 0 }),
-        { pendingProfileFrame: g } = (0, eg.Tu)(l ?? void 0),
-        m = void 0 !== g,
-        f = null === g || (!m && null == c),
-        p = o && null != u,
-        x = (0, eg.lw)({ pendingValue: g, userValue: u, guildValue: c, guildId: l ?? void 0 }),
-        { product: h } = (0, lW.q)(x?.skuId),
-        v = m ? null != g : null != c,
-        A =
-            null != x && v
+        a = i.useRef(null),
+        { analyticsLocations: o } = (0, I.Ay)(),
+        d = null != l,
+        u = (0, s.bG)([G.A], () => (null != l ? G.A.getGuild(l) : null)),
+        c = (0, eg.Xf)({ user: n }),
+        g = (0, eg.Xf)({ user: n, guildId: l ?? void 0 }),
+        { pendingProfileFrame: m } = (0, eg.Tu)(l ?? void 0),
+        f = void 0 !== m,
+        p = null === m || (!f && null == g),
+        x = d && null != c,
+        h = (0, eg.lw)({ pendingValue: m, userValue: c, guildValue: g, guildId: l ?? void 0 }),
+        { product: v } = (0, lW.q)(h?.skuId),
+        A = f ? null != m : null != g,
+        b =
+            null != h && A
                 ? {
                       onClick: () => (0, nr.p)({ guildId: l ?? void 0, profileFrame: null }),
-                      type: p ? "reset" : "remove",
-                      accessibleLabel: e_.intl.string(p ? e_.t.j6hZyM : e_.t.nQBruk),
+                      type: x ? "reset" : "remove",
+                      accessibleLabel: e_.intl.string(x ? e_.t.j6hZyM : e_.t.nQBruk),
                   }
                 : void 0,
-        b = i.useCallback(() => {
-            (0, l8.w)({ analyticsLocations: a, guild: d ?? void 0, stackingBehavior: "stack" });
-        }, [a, d]);
+        j = i.useCallback(() => {
+            (0, l8.w)({ analyticsLocations: o, guild: u ?? void 0, stackingBehavior: "stack", returnRef: a });
+        }, [o, u]);
     return (0, t.jsx)(lf.A, {
-        affordance: f && !p ? "add" : A,
+        buttonRef: a,
+        affordance: p && !x ? "add" : b,
         variant: "square",
-        onClick: b,
+        onClick: j,
         accessibleLabel: e_.intl.string(e_.t.GWrZOd),
         accessibleValue: (function (e) {
             let { profileFramePreview: n, productName: l, hasPendingSelection: t } = e;
@@ -1398,14 +1402,14 @@ function tt(e) {
                 : null != l && "" !== l
                   ? l
                   : e_.intl.string(t ? e_.t.yFeGB5 : e_.t["2kAxKM"]);
-        })({ profileFramePreview: x, productName: (0, lq.VG)(h), hasPendingSelection: null != g }),
+        })({ profileFramePreview: h, productName: (0, lq.VG)(v), hasPendingSelection: null != m }),
         "aria-haspopup": "dialog",
         disabled: r,
         renderPreview: (e) =>
             (0, t.jsx)(tl, {
-                profileFramePreview: x,
-                isEmpty: f,
-                hasMainProfileFallback: p,
+                profileFramePreview: h,
+                isEmpty: p,
+                hasMainProfileFallback: x,
                 isInteracting: e,
                 disabled: r,
             }),

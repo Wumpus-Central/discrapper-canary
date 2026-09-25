@@ -3,7 +3,7 @@ var i = t(477900);
 t(582128);
 var n = t(192308);
 function s(e) {
-    let { analyticsLocations: a, guildId: s, initialSelectedNameplate: d, stackingBehavior: l } = e;
+    let { analyticsLocations: a, guildId: s, initialSelectedNameplate: d, stackingBehavior: l, returnRef: c } = e;
     (0, n.openModalLazy)(
         async () => {
             let { default: e } = await Promise.all([
@@ -44,7 +44,8 @@ function s(e) {
                 t.e("228545"),
                 t.e("940668"),
             ]).then(t.bind(t, 818743));
-            return (t) => (0, i.jsx)(e, { ...t, guildId: s, analyticsLocations: a, initialSelectedNameplate: d });
+            return (t) =>
+                (0, i.jsx)(e, { ...t, guildId: s, analyticsLocations: a, initialSelectedNameplate: d, returnRef: c });
         },
         { stackingBehavior: l },
     );

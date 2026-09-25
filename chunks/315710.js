@@ -41,31 +41,37 @@ function _(e) {
                                 i = [],
                                 r = _.current?.ownerDocument ?? a,
                                 s = r?.activeElement;
-                            if (
-                                ((i =
-                                    null != s && null != e
-                                        ? Array.from(d).filter((t) => {
-                                              let { containerElementRef: n, disabledRef: i, sequence: r } = t;
-                                              return !i.current && r > e.sequence && n.current?.contains(s) === !0;
-                                          })
-                                        : []),
-                                null == t)
-                            ) {
-                                let e = null == s || s === r?.body,
-                                    t = null != s && _.current?.contains(s) === !0,
-                                    a = null == _.current;
-                                n = e || t || i.length > 0 || a;
+                            i =
+                                null != s && null != e
+                                    ? Array.from(d).filter((t) => {
+                                          let { containerElementRef: n, disabledRef: i, sequence: r } = t;
+                                          return !i.current && r > e.sequence && n.current?.contains(s) === !0;
+                                      })
+                                    : [];
+                            let l = null == s || s === r?.body,
+                                o = null != s && _.current?.contains(s) === !0;
+                            if (null == t) {
+                                let e = null == _.current;
+                                n = l || o || i.length > 0 || e;
                             }
                             n &&
                                 requestAnimationFrame(() => {
                                     let t = E.current?.current ?? null,
                                         n = t?.isConnected ? t : c.current,
                                         r = _.current?.ownerDocument ?? a,
-                                        s = r?.activeElement;
-                                    Array.from(d).some(
-                                        (t) =>
-                                            t !== e && null != s && t.containerElementRef.current?.contains(s) === !0,
-                                    ) ||
+                                        s = r?.activeElement,
+                                        u = l || o;
+                                    Array.from(d).some((t) => {
+                                        let i, r;
+                                        return (
+                                            t !== e &&
+                                            null != s &&
+                                            t.containerElementRef.current?.contains(s) === !0 &&
+                                            ((i = null != e && t.sequence < e.sequence),
+                                            (r = null != n && t.containerElementRef.current?.contains(n) === !0),
+                                            !u || !i || !r)
+                                        );
+                                    }) ||
                                         null == n ||
                                         !n.isConnected ||
                                         i.some((e) => d.has(e) && !e.disabledRef.current) ||

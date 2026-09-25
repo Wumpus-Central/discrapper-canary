@@ -67,30 +67,32 @@ function j(e) {
 }
 function P(e) {
     let { user: n, guildId: l, disabled: r, errorMessageId: i } = e,
-        { analyticsLocations: s } = (0, u.Ay)(),
-        d = null != l,
-        { guildNameplate: h, pendingNameplate: b } = (0, v.rv)(n, l ?? void 0),
-        m = n.collectibles?.nameplate,
-        A = d ? h : m,
-        I = void 0 !== b,
-        C = null === b || (!I && null == A),
-        y = d && null != m,
-        x = (0, v.lw)({ pendingValue: b, userValue: m, guildValue: h, guildId: l ?? void 0 }),
-        { product: N } = (0, o.q)(x?.skuId),
-        P = I ? null != b : null != A,
-        E =
-            null != x && P
+        s = t.useRef(null),
+        { analyticsLocations: d } = (0, u.Ay)(),
+        h = null != l,
+        { guildNameplate: b, pendingNameplate: m } = (0, v.rv)(n, l ?? void 0),
+        A = n.collectibles?.nameplate,
+        I = h ? b : A,
+        C = void 0 !== m,
+        y = null === m || (!C && null == I),
+        x = h && null != A,
+        N = (0, v.lw)({ pendingValue: m, userValue: A, guildValue: b, guildId: l ?? void 0 }),
+        { product: P } = (0, o.q)(N?.skuId),
+        E = C ? null != m : null != I,
+        R =
+            null != N && E
                 ? {
                       onClick: () => (0, f.p)({ guildId: l ?? void 0, nameplate: null }),
-                      type: y ? "reset" : "remove",
-                      accessibleLabel: k.intl.string(y ? k.t.neYqhR : k.t["9zwziY"]),
+                      type: x ? "reset" : "remove",
+                      accessibleLabel: k.intl.string(x ? k.t.neYqhR : k.t["9zwziY"]),
                   }
                 : void 0,
         w = t.useCallback(() => {
-            (0, c.p)({ analyticsLocations: s, guildId: l ?? void 0, stackingBehavior: "stack" });
-        }, [s, l]);
+            (0, c.p)({ analyticsLocations: d, guildId: l ?? void 0, stackingBehavior: "stack", returnRef: s });
+        }, [d, l]);
     return (0, a.jsx)(p.A, {
-        affordance: C && !y ? "add" : E,
+        buttonRef: s,
+        affordance: y && !x ? "add" : R,
         variant: "bar",
         onClick: w,
         accessibleLabel: k.intl.string(k.t.x5CoXR),
@@ -101,7 +103,7 @@ function P(e) {
                 : null != l && "" !== l
                   ? l
                   : k.intl.string(a ? k.t.mo1Huz : k.t.s9kNKK);
-        })({ nameplatePreview: x, productName: (0, g.VG)(N), hasPendingSelection: null != b }),
+        })({ nameplatePreview: N, productName: (0, g.VG)(P), hasPendingSelection: null != m }),
         "aria-haspopup": "dialog",
         disabled: r,
         errorMessageId: i,
@@ -109,9 +111,9 @@ function P(e) {
             (0, a.jsx)(j, {
                 user: n,
                 guildId: l,
-                nameplatePreview: x,
-                isEmpty: C,
-                hasMainProfileFallback: y,
+                nameplatePreview: N,
+                isEmpty: y,
+                hasMainProfileFallback: x,
                 isInteracting: e,
                 disabled: r,
             }),
