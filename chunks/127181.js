@@ -22,6 +22,12 @@ let n = [
             "A project you import gets fixed up and running straight away, instead of asking you to approve a plan.",
     },
     {
+        date: "2026-09-25",
+        time: "08:01",
+        platforms: ["desktop", "mobile"],
+        summary: "A timer beside Conjuring\u2026 counts how long Conjure has been working on your latest request.",
+    },
+    {
         date: "2026-09-07",
         time: "00:01",
         platforms: ["desktop", "mobile"],
