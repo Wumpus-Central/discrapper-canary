@@ -30,11 +30,15 @@ function u(e) {
           : c.intl.formatToPlainString(o.default["7Z+aIf"], { minutes: Math.max(n, 1) });
 }
 function m(e) {
-    let [t, i] = s.useState(() => u(e));
+    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
+        [i, n] = s.useState(() => u(e));
     return (
-        (0, l.A)(() => {
-            i(u(e));
-        }, 1e3),
-        t
+        (0, l.A)(
+            () => {
+                n(u(e));
+            },
+            t ? 1e3 : null,
+        ),
+        t ? i : null
     );
 }

@@ -23,9 +23,9 @@ var r,
     N = n(778712),
     C = n(775602),
     y = n(951305),
-    _ = n(380619),
-    R = n(298305),
-    P = n(420754);
+    _ = n(810498),
+    P = n(298305),
+    R = n(420754);
 function S() {
     let e = (0, o.bG)([C.Ay], () => C.Ay.useReducedMotion),
         { claimableRewards: t } = (0, y.Pv)(),
@@ -34,11 +34,11 @@ function S() {
     let r = (0, _.gc)(n.getBannerImageUrl?.()),
         i = (0, _.K5)(n.gradientConfig, { defaultAngle: 180 });
     return (0, l.jsxs)("div", {
-        className: P.us,
+        className: R.us,
         style: r ?? i,
         children: [
             (0, l.jsxs)("div", {
-                className: P.ZR,
+                className: R.ZR,
                 children: [
                     (0, l.jsx)(u.E, {
                         variant: "text-sm/semibold",
@@ -54,8 +54,8 @@ function S() {
                 ],
             }),
             (0, l.jsx)("div", {
-                className: P.my,
-                children: (0, l.jsx)(R.A, {
+                className: R.my,
+                children: (0, l.jsx)(P.A, {
                     maxRewardImageSrc: n.getImageUrl(!0, e),
                     claimableRewards: t,
                     size: N._3.SIZE_80,
@@ -464,16 +464,16 @@ function eA(e) {
         C = N?.subscriptionTrial?.skuId,
         y = f?.hasActiveTrial ? A?.premiumType : null,
         _ = (0, v.ar)(),
-        R = (0, M.O)(),
-        P = (0, v.k5)(),
-        L = null != C || null != y ? X.Vk.PREMIUM_TRIAL : null != R || P ? X.Vk.PREMIUM_DISCOUNT : null,
+        P = (0, M.O)(),
+        R = (0, v.k5)(),
+        L = null != C || null != y ? X.Vk.PREMIUM_TRIAL : null != P || R ? X.Vk.PREMIUM_DISCOUNT : null,
         D = !u && _,
         w,
         k = w?.getBackgroundImageUrl?.(),
         B = w?.getCardImageUrl?.(),
         H = (0, c.q)((0, x.Ay)()),
         V = H ? G.at.PREMIUM_TIER_2_OLD_GRADIENT_FILL_LIGHT_MODE : G.at.PREMIUM_TIER_2_WHITE_FILL,
-        W = (0, G.rm)(P, y, R, N, C),
+        W = (0, G.rm)(R, y, P, N, C),
         Z = D && !H ? ex.on : void 0;
     return (0, l.jsxs)("div", {
         className: s()(ex.Nr, ex.hA, a, { [ex.J5]: D, [ex.lr]: D, [ex.jx]: I, [ex.ud]: I && null != B }),
@@ -512,7 +512,7 @@ function eA(e) {
                                 isGift: u,
                                 premiumTier: X.PremiumTypes.TIER_2,
                                 offerType: L,
-                                offerTierMatchesCard: C === X.pe.TIER_2 || (0, U.U9)(R, X.pe.TIER_2),
+                                offerTierMatchesCard: C === X.pe.TIER_2 || (0, U.U9)(P, X.pe.TIER_2),
                                 showYearlyPrice: r,
                                 priceOptions: p,
                                 headingVariant: "heading-md/normal",
@@ -523,7 +523,7 @@ function eA(e) {
                     (0, l.jsx)("div", { children: (0, l.jsx)(ej, { featureSet: i, isModal: h, isGift: u }) }),
                 ],
             }),
-            u || (C !== X.pe.TIER_2 && null == R) ? null : (0, l.jsx)(F.Wy, { tier: X.PremiumTypes.TIER_2 }),
+            u || (C !== X.pe.TIER_2 && null == P) ? null : (0, l.jsx)(F.Wy, { tier: X.PremiumTypes.TIER_2 }),
             n,
             I && (0, l.jsx)(S, {}),
         ],

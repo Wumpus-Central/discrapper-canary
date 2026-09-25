@@ -1,18 +1,13 @@
-n.d(t, { kz: () => f, gc: () => x, JW: () => h, Mq: () => p, K5: () => g, MD: () => C, px: () => m, x: () => A });
+n.d(t, { JW: () => h, K5: () => g, MD: () => C, Mq: () => p, gc: () => x, kz: () => f, px: () => m, x: () => A });
 var l = n(582128),
     i = n(877624),
     s = n(17928),
     r = n(554146),
     a = n(841702),
     o = n(826673),
-    u = n(412260);
-let c = (0, n(945810).mj)({
-    name: "2026-04-gift-promotion-reminder",
-    kind: "user",
-    defaultConfig: { enabled: !1 },
-    variations: { 1: { enabled: !0 } },
-});
-var d = n(202541);
+    u = n(412260),
+    c = n(860300),
+    d = n(202541);
 function h() {
     let [e, t] = l.useState(),
         n = (0, s.yK)([u.A], () => u.A.getGiftPromotionRewardSkuIds()),
@@ -74,7 +69,7 @@ function A(e, t) {
     return null != e ? e : null != t ? t : {};
 }
 function C() {
-    let { enabled: e } = c.getConfig({ location: "shouldShowGiftPromotionReminderNotice" });
+    let { enabled: e } = c.J.getConfig({ location: "shouldShowGiftPromotionReminderNotice" });
     if (!e || null == u.A.getMarketingComponentByType(i.C.GIFT_REMINDER_NAGBAR)) return !1;
     let t = u.A.getGiftPromotion()?.id;
     return (
