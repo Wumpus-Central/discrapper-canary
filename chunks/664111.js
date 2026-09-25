@@ -603,7 +603,7 @@ let $ = { tension: 250, friction: 5, clamp: !0 },
                                     null != nu.trailingGroupWidthPx ? `${nu.trailingGroupWidthPx}px` : "auto",
                             },
                             children: [
-                                eY && !tH && (0, r.jsx)("canvas", { ref: tV, className: U.Xm }),
+                                tT && eY && !tH && (0, r.jsx)("canvas", { ref: tV, className: U.Xm }),
                                 nL && er?.({ replay: nj }),
                                 el(nI),
                                 tm !== c.h$.READY &&
