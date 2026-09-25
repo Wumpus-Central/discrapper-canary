@@ -425,6 +425,13 @@ let n = [
             "Pick which app a voice channel runs from the call itself, and switch between it and the participants.",
     },
     {
+        date: "2026-09-24",
+        time: "23:06",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "Picking a template shows it running in a few seconds, instead of after Conjure has rebuilt it from scratch.",
+    },
+    {
         date: "2026-08-31",
         time: "00:03",
         platforms: ["desktop", "mobile"],
