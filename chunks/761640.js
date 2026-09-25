@@ -66,8 +66,7 @@ function k() {
 }
 function F() {
     let e = null != P && d.A.hasSearchState(P);
-    if (e === M) return !1;
-    M = e;
+    return e !== M && ((M = e), !0);
 }
 class B extends r.Ay.PersistedStore {
     static displayName = "ChannelSectionStore";
@@ -91,7 +90,6 @@ class B extends r.Ay.PersistedStore {
             (y = e.isFriendsOpen ?? !0),
             (v = e.sidebars ?? {}),
             (b = e.guildSidebars ?? {})),
-            this.syncWith([d.A], F),
             this.syncWith([I.A], k),
             this.waitFor(A.A, s.A, l.Bt, h.A, I.A, d.A, f.Ay, p.A, T.default));
     }
@@ -156,6 +154,17 @@ let V = new B(a.h, {
     SIDEBAR_SET_SELECTED_SEARCH_CONTEXT: function (e) {
         return ((P = e.searchContextId), F());
     },
+    SEARCH_MESSAGES_START: function (e) {
+        let { ids: t } = e;
+        return null != P && !!t.includes(P) && !M && ((M = !0), !0);
+    },
+    SEARCH_MESSAGES_CLEAR: function (e) {
+        let { id: t } = e;
+        return t === P && !!M && ((M = !1), !0);
+    },
+    CONNECTION_OPEN: function () {
+        return !!M && ((M = !1), !0);
+    },
     CHANNEL_TOGGLE_MEMBERS_SECTION: function () {
         (M && _._.dispatch(m.jej.SEARCH_RESULTS_CLOSE), O && (O = x(O)), R && (R = x(R)), (C = x(C, !0)));
     },
@@ -194,7 +203,7 @@ let V = new B(a.h, {
     SIDEBAR_CLOSE: function (e) {
         let { baseChannelId: t } = e,
             n = U(t);
-        null != n && delete v[n];
+        null != n && (delete v[n], F());
     },
     SIDEBAR_CLOSE_GUILD: function (e) {
         let { guildId: t } = e;
