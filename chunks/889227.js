@@ -45,6 +45,7 @@ class m extends s.A {
     primaryGuild;
     collectibles;
     displayNameStyles;
+    vadColors;
     typingIndicatorStyle;
     premiumState;
     perks;
@@ -86,6 +87,7 @@ class m extends s.A {
             (this.primaryGuild = (0, u.j)(e.primary_guild ?? e.primaryGuild ?? null)),
             (this.collectibles = e.collectibles),
             (this.displayNameStyles = e.displayNameStyles ?? (0, c.mT)(e.display_name_styles)),
+            (this.vadColors = e.vadColors ?? e.vad_colors ?? null),
             (this.typingIndicatorStyle = e.typingIndicatorStyle ?? (0, d.cE)(e.typing_indicator_style)),
             (this.premiumState = e.premiumState ?? (0, A.f)(e.premium_state)),
             (this.perks = e.perks?.activePerksBitmask != null ? e.perks : (0, E.c$)(e.perks)),

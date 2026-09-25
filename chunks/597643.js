@@ -534,25 +534,27 @@ function eY(e, t, n) {
             collectibles: A,
             display_name_styles: h,
             member_gaming_leaderboard_data: I,
+            vad_colors: f,
         } = n,
-        f = e_.Ay.getMember(e, t.id),
-        p = (0, $.t)(A),
-        T = (0, X.mT)(h),
-        m = (0, Z.Rt)(I);
-    (null != f &&
-        f.nick === a &&
-        f.avatar === s &&
-        r().isEqual(f.roles, i) &&
-        (0, K.kn)(f.avatarDecoration ?? null, l ?? null) &&
-        f.premiumSince === d &&
-        f.isPending === c &&
-        f.joinedAt === u &&
-        f.communicationDisabledUntil === _ &&
-        f.flags === o &&
-        (f.unusualDMActivityUntil ?? null) === (E ?? null) &&
-        r().isEqual(f.collectibles ?? null, p ?? null) &&
-        r().isEqual(f.displayNameStyles ?? null, T ?? null) &&
-        r().isEqual(f.gamingLeaderboardData ?? null, m ?? null)) ||
+        p = e_.Ay.getMember(e, t.id),
+        T = (0, $.t)(A),
+        m = (0, X.mT)(h),
+        g = (0, Z.Rt)(I);
+    (null != p &&
+        p.nick === a &&
+        p.avatar === s &&
+        r().isEqual(p.roles, i) &&
+        (0, K.kn)(p.avatarDecoration ?? null, l ?? null) &&
+        p.premiumSince === d &&
+        p.isPending === c &&
+        p.joinedAt === u &&
+        p.communicationDisabledUntil === _ &&
+        p.flags === o &&
+        (p.unusualDMActivityUntil ?? null) === (E ?? null) &&
+        r().isEqual(p.collectibles ?? null, T ?? null) &&
+        r().isEqual(p.displayNameStyles ?? null, m ?? null) &&
+        r().isEqual(p.gamingLeaderboardData ?? null, g ?? null) &&
+        r().isEqual(p.vadColors ?? null, f ?? null)) ||
         eW({
             type: "GUILD_MEMBER_ADD",
             guildId: e,
@@ -567,9 +569,10 @@ function eY(e, t, n) {
             communicationDisabledUntil: _,
             unusualDMActivityUntil: E,
             flags: o,
-            collectibles: p,
-            displayNameStyles: T,
-            gamingLeaderboardData: m,
+            collectibles: T,
+            displayNameStyles: m,
+            gamingLeaderboardData: g,
+            vadColors: f,
         });
 }
 function eK(e) {
@@ -1151,6 +1154,7 @@ function eq(e) {
                 collectibles: (0, $.t)(e.collectibles),
                 displayNameStyles: (0, X.mT)(e.display_name_styles),
                 gamingLeaderboardData: (0, Z.Rt)(e.member_gaming_leaderboard_data),
+                vadColors: e.vad_colors ?? null,
             });
         },
     ),

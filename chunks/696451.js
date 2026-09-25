@@ -108,21 +108,22 @@ function K(e) {
             collectibles: I,
             displayNameStyles: p,
             gamingLeaderboardData: T,
+            vadColors: S,
         } = e,
-        { colorString: S, colorStrings: N, colorRoleId: C, iconRoleId: R, hoistRoleId: y, highestRoleId: v } = Y(l, o),
-        b = {
+        { colorString: N, colorStrings: C, colorRoleId: R, iconRoleId: y, hoistRoleId: v, highestRoleId: b } = Y(l, o),
+        M = {
             userId: t,
             nick: n,
             guildId: i,
             avatar: r,
             avatarDecoration: s,
             roles: o,
-            colorString: S,
-            colorStrings: N,
-            colorRoleId: C,
-            iconRoleId: R,
-            hoistRoleId: y,
-            highestRoleId: v,
+            colorString: N,
+            colorStrings: C,
+            colorRoleId: R,
+            iconRoleId: y,
+            hoistRoleId: v,
+            highestRoleId: b,
             premiumSince: d,
             isPending: c,
             joinedAt: u,
@@ -133,18 +134,19 @@ function K(e) {
             collectibles: I,
             displayNameStyles: p,
             gamingLeaderboardData: T,
+            vadColors: S,
         };
     if (
-        ((0, a.Lt)(b.flags ?? 0, O.D.IS_GUEST) && (b.flags = (0, a.UI)(b.flags ?? 0, O.D.BYPASSES_VERIFICATION)),
+        ((0, a.Lt)(M.flags ?? 0, O.D.IS_GUEST) && (M.flags = (0, a.UI)(M.flags ?? 0, O.D.BYPASSES_VERIFICATION)),
         null == L[i])
     )
-        return b;
+        return M;
     if (t === g.default.getId())
         if (f.A.isViewingRoles(i) || f.A.isFullServerPreview(i)) {
             let e = f.A.getViewingRoles(i);
-            D[i] = { ...b, ...f.A.getMemberOptions(i), roles: null != e ? m.default.keys(e) : [] };
+            D[i] = { ...M, ...f.A.getMemberOptions(i), roles: null != e ? m.default.keys(e) : [] };
         } else null != D[i] && delete D[i];
-    return b;
+    return M;
 }
 function $(e) {
     for (let t of e)
@@ -174,31 +176,33 @@ function z(e) {
             collectibles: A,
             displayNameStyles: h,
             gamingLeaderboardData: I,
+            vadColors: f,
         } = e,
-        f = L[t];
-    if (null == f) return !1;
-    let p = C.A.getGuild(t);
-    if (null == p) return (R.warn(`Guild ${t} not found during GUILD_MEMBER_UPDATE.`), !1);
-    ((f[n.id] = K({
+        p = L[t];
+    if (null == p) return !1;
+    let T = C.A.getGuild(t);
+    if (null == T) return (R.warn(`Guild ${t} not found during GUILD_MEMBER_UPDATE.`), !1);
+    ((p[n.id] = K({
         userId: n.id,
         nick: i,
         guildId: t,
         avatar: r,
         avatarDecoration: (0, c.Xq)(a),
-        guildRoles: N.A.getUnsafeMutableRoles(p.id),
+        guildRoles: N.A.getUnsafeMutableRoles(T.id),
         roles: s,
         premiumSince: l,
         isPending: o,
         joinedAt: d,
         communicationDisabledUntil: u,
         unusualDMActivityUntil: _,
-        fullProfileLoadedTimestamp: f[n.id]?.fullProfileLoadedTimestamp,
+        fullProfileLoadedTimestamp: p[n.id]?.fullProfileLoadedTimestamp,
         flags: E,
         collectibles: A,
         displayNameStyles: h,
         gamingLeaderboardData: I,
+        vadColors: f,
     })),
-        k(t, f[n.id]));
+        k(t, p[n.id]));
 }
 function X(e, t) {
     let n = L[e];
@@ -226,6 +230,7 @@ function X(e, t) {
                   collectibles: (0, u.t)(t.collectibles),
                   displayNameStyles: (0, E.mT)(t.display_name_styles),
                   gamingLeaderboardData: (0, I.Rt)(t.member_gaming_leaderboard_data),
+                  vadColors: t.vad_colors ?? null,
               })),
                   k(e, n[t.user.id]));
           }),
@@ -270,6 +275,7 @@ function J(e) {
                 collectibles: (0, u.t)(r.collectibles),
                 displayNameStyles: (0, E.mT)(r.display_name_styles),
                 gamingLeaderboardData: (0, I.Rt)(r.member_gaming_leaderboard_data),
+                vadColors: r.vad_colors ?? null,
             });
         ((i[a] = l), k(t, l));
     }
@@ -301,6 +307,7 @@ function ee(e) {
                 collectibles: a.collectibles,
                 displayNameStyles: a.displayNameStyles,
                 gamingLeaderboardData: a.gamingLeaderboardData,
+                vadColors: a.vadColors,
             })),
                 k(e.guildId, t[r]));
         }
@@ -331,6 +338,7 @@ function et(e) {
         collectibles: a.collectibles,
         displayNameStyles: a.displayNameStyles,
         gamingLeaderboardData: a.gamingLeaderboardData,
+        vadColors: a.vadColors,
     });
 }
 function en(e, t) {
@@ -559,6 +567,7 @@ let ed = new eo(l.h, {
                 collectibles: d.collectibles,
                 displayNameStyles: d.displayNameStyles,
                 gamingLeaderboardData: d.gamingLeaderboardData,
+                vadColors: d.vadColors,
             })));
     },
     GUILD_MEMBERS_CHUNK_BATCH: function (e) {
@@ -650,6 +659,7 @@ let ed = new eo(l.h, {
             collectibles: (0, u.t)(t.collectibles),
             displayNameStyles: (0, E.mT)(t.display_name_styles),
             gamingLeaderboardData: (0, I.Rt)(t.member_gaming_leaderboard_data),
+            vadColors: t.vad_colors ?? null,
         })),
             k(n, i[t.user.id]));
     },

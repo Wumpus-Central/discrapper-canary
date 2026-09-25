@@ -75,12 +75,14 @@ function L(e) {
     void 0 !== m && ((e.displayNameStyles = (0, c.mT)(m)), delete e.display_name_styles);
     let g = e.typing_indicator_style;
     void 0 !== g && ((e.typingIndicatorStyle = (0, d.cE)(g)), delete e.typing_indicator_style);
-    let S = e.premium_state;
-    void 0 !== S && ((e.premiumState = (0, A.f)(S)), delete e.premium_state);
-    let N = e.restricted_schedule;
-    void 0 !== N && ((e.restrictedSchedule = _.kX.fromServer(N) ?? null), delete e.restricted_schedule);
-    let C = e.app_transaction_ids;
-    return (void 0 !== C && ((e.appTransactionIds = C), delete e.app_transaction_ids), e);
+    let S = e.vad_colors;
+    void 0 !== S && ((e.vadColors = S), delete e.vad_colors);
+    let N = e.premium_state;
+    void 0 !== N && ((e.premiumState = (0, A.f)(N)), delete e.premium_state);
+    let C = e.restricted_schedule;
+    void 0 !== C && ((e.restrictedSchedule = _.kX.fromServer(C) ?? null), delete e.restricted_schedule);
+    let O = e.app_transaction_ids;
+    return (void 0 !== O && ((e.appTransactionIds = O), delete e.app_transaction_ids), e);
 }
 function y(e) {
     return e.id !== p.default.getId();
