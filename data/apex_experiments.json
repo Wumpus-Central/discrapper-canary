@@ -5277,6 +5277,25 @@
     }
   },
   {
+    "kind": "user",
+    "name": "2026-09-linux-gpu-decode",
+    "defaultConfig": {
+      "mode": "all"
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "mode": "disable_nvidia"
+      },
+      "2": {
+        "mode": "disable_all"
+      }
+    }
+  },
+  {
     "name": "2026-09-markdown-file-preview",
     "kind": "user",
     "defaultConfig": {
