@@ -36,19 +36,20 @@ class u extends i.Component {
             onVolumeChange: T,
             onMute: R,
             disableArrowKeySeek: O,
-            onFullscreenChange: M,
-            allowFullScreen: L,
-            videoRef: k,
-            mediaPlayerRef: w,
-            initialTimeSec: P,
-            alt: D = o.intl.string(o.t.FlNoSV),
-            ...U
+            disableClickToUnmute: M,
+            onFullscreenChange: L,
+            allowFullScreen: k,
+            videoRef: w,
+            mediaPlayerRef: P,
+            initialTimeSec: D,
+            alt: U = o.intl.string(o.t.FlNoSV),
+            ...V
         } = this.props;
         return (0, l.jsx)(r.Ay, {
-            alt: D,
+            alt: U,
             className: n,
             src: u,
-            ...U,
+            ...V,
             minWidth: a.Ay.minWidth,
             minHeight: a.Ay.minHeight,
             shouldLink: !1,
@@ -61,8 +62,8 @@ class u extends i.Component {
                     size: { width: o, height: u },
                 } = n;
                 return (0, l.jsx)(a.Ay, {
-                    ref: w,
-                    alt: D,
+                    ref: P,
+                    alt: U,
                     className: i,
                     forceExternal: !((d <= 6016 && h <= 3384) || (d <= 3384 && h <= 6016)),
                     src: e,
@@ -92,10 +93,11 @@ class u extends i.Component {
                     mimeType: E,
                     downloadable: f,
                     disableArrowKeySeek: O,
-                    onFullscreenChange: M,
-                    allowFullScreen: L,
-                    videoRef: k,
-                    initialTimeSec: P,
+                    disableClickToUnmute: M,
+                    onFullscreenChange: L,
+                    allowFullScreen: k,
+                    videoRef: w,
+                    initialTimeSec: D,
                 });
             },
         });

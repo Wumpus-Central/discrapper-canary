@@ -316,44 +316,45 @@ function es(e) {
             onControlsShow: C,
             onVolumeChange: N,
             onMute: P,
-            href: E,
-            placeholder: T,
-            placeholderVersion: W,
-            sourceMetadata: L,
+            disableClickToUnmute: E,
+            href: T,
+            placeholder: W,
+            placeholderVersion: L,
+            sourceMetadata: R,
         } = e,
-        [R, k] = s.useState(w),
-        _ = null != d && null == d.proxyURL,
-        H = s.useCallback(() => k(!1), [k]);
-    function V(e) {
+        [k, _] = s.useState(w),
+        H = null != d && null == d.proxyURL,
+        V = s.useCallback(() => _(!1), [_]);
+    function D(e) {
         (e.preventDefault(),
             e.stopPropagation(),
             j?.(!1),
-            k(!0),
-            _ &&
+            _(!0),
+            H &&
                 (G._.dispatch(c.jej.VIDEO_EMBED_PLAYBACK_STARTED),
-                G._.subscribeOnce(c.jej.VIDEO_EMBED_PLAYBACK_STARTED, H)));
+                G._.subscribeOnce(c.jej.VIDEO_EMBED_PLAYBACK_STARTED, V)));
     }
     s.useEffect(
         () => () => {
-            _ && G._.unsubscribe(c.jej.VIDEO_EMBED_PLAYBACK_STARTED, H);
+            H && G._.unsubscribe(c.jej.VIDEO_EMBED_PLAYBACK_STARTED, V);
         },
-        [_, H],
+        [H, V],
     );
-    let { width: D, height: U } = o;
-    null != d && ((D = d.width), (U = d.height));
-    let $ = (0, K.Uj)({ width: D, height: U, maxWidth: i, maxHeight: a });
-    ((D = Math.max($.width, 150)), (U = Math.max($.height, 144)));
-    let B = (0, O.E)(o);
+    let { width: U, height: $ } = o;
+    null != d && ((U = d.width), ($ = d.height));
+    let B = (0, K.Uj)({ width: U, height: $, maxWidth: i, maxHeight: a });
+    ((U = Math.max(B.width, 150)), ($ = Math.max(B.height, 144)));
+    let F = (0, O.E)(o);
     if (null != d && null != d.proxyURL)
         return (0, r.jsx)("div", {
             className: n()(y.pu, l),
             children: g({
-                poster: B,
+                poster: F,
                 src: d.proxyURL,
-                placeholder: T,
-                placeholderVersion: W,
-                width: D,
-                height: U,
+                placeholder: W,
+                placeholderVersion: L,
+                width: U,
+                height: $,
                 responsive: m,
                 autoPlay: w,
                 onEnded: S,
@@ -368,19 +369,20 @@ function es(e) {
                 onMute: P,
                 onControlsHide: I,
                 onControlsShow: C,
-                sourceMetadata: L,
+                disableClickToUnmute: E,
+                sourceMetadata: R,
             }),
         });
-    if (R && null != d) {
+    if (k && null != d) {
         let e,
             s = !0 === v || ("function" == typeof v && v()),
-            o = { width: D, height: U },
-            c = { width: D, height: U };
+            o = { width: U, height: $ },
+            c = { width: U, height: $ };
         if (m) {
-            let l = 0 !== D ? U / D : 1;
+            let l = 0 !== U ? $ / U : 1;
             ((o = { maxWidth: i, maxHeight: a, width: void 0, height: void 0 }),
-                (c = { paddingBottom: `${100 * l}%`, maxWidth: D }),
-                (e = { position: "absolute", top: 0, left: 0, maxWidth: D, maxHeight: U }));
+                (c = { paddingBottom: `${100 * l}%`, maxWidth: U }),
+                (e = { position: "absolute", top: 0, left: 0, maxWidth: U, maxHeight: $ }));
         }
         return (0, r.jsx)("div", {
             className: l,
@@ -392,8 +394,8 @@ function es(e) {
                     provider: u,
                     src: d.url,
                     style: e,
-                    width: D,
-                    height: U,
+                    width: U,
+                    height: $,
                     allowFullScreen: h,
                     autoMute: s,
                 }),
@@ -402,21 +404,21 @@ function es(e) {
     }
     return (0, r.jsxs)("div", {
         className: n()(y.pu, l),
-        style: m ? { maxWidth: D } : { width: D, height: U },
+        style: m ? { maxWidth: U } : { width: U, height: $ },
         children: [
             p({
-                src: B,
-                width: D,
-                height: U,
-                maxWidth: D,
-                maxHeight: U,
+                src: F,
+                width: U,
+                height: $,
+                maxWidth: U,
+                maxHeight: $,
                 responsive: m,
                 containerClassName: y.tW,
                 imageClassName: y.jq,
-                placeholder: T,
-                placeholderVersion: W,
-                onClick: x && null != d ? V : null,
-                sourceMetadata: L,
+                placeholder: W,
+                placeholderVersion: L,
+                onClick: x && null != d ? D : null,
+                sourceMetadata: R,
                 analyticsSource: "EmbedVideo",
             }),
             (0, r.jsx)("div", {
@@ -425,11 +427,11 @@ function es(e) {
                     className: y.Fo,
                     children: x
                         ? (0, r.jsx)(M.A, {
-                              onPlay: null != d ? V : null,
-                              externalURL: E,
+                              onPlay: null != d ? D : null,
+                              externalURL: T,
                               renderLinkComponent: f,
-                              messageId: L?.message?.id,
-                              channelId: L?.message?.channel_id,
+                              messageId: R?.message?.id,
+                              channelId: R?.message?.channel_id,
                           })
                         : null,
                 }),

@@ -177,6 +177,7 @@ function ex(e) {
                               volume: 1,
                               autoMute: t,
                               autoPlay: !0,
+                              disableClickToUnmute: !0,
                               renderVideoComponent: eu,
                               renderImageComponent: em,
                               renderLinkComponent: ec.bU,

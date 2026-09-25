@@ -1292,26 +1292,32 @@ class ef extends i.PureComponent {
     handleMouseEnter = () => {
         ("none" === this.state.preload && this.setState({ preload: "metadata" }), this.setState({ hovering: !0 }));
     };
+    shouldUnmuteOnFirstInteraction() {
+        let {
+            props: { autoMute: e, disableClickToUnmute: t },
+            state: { hasClickedPlay: n, muted: l },
+        } = this;
+        return !t && !n && e && l;
+    }
     handleVideoClick = (e) => {
         let {
-            state: { hasClickedPlay: t, playing: n },
-            props: { onClick: l, autoPlay: i, autoMute: s },
+            state: { playing: t },
+            props: { onClick: n, autoPlay: l },
         } = this;
-        null != l
-            ? l(e)
+        null != n
+            ? n(e)
             : (e.stopPropagation(),
-              i && !t && n && s && this.state.muted
+              l && t && this.shouldUnmuteOnFirstInteraction()
                   ? this.setState({ muted: !1, hasClickedPlay: !0 })
                   : this.setPlay(!this.state.playing));
     };
     setPlay = (e) => {
         let {
-            props: { autoMute: t },
-            state: { hasClickedPlay: n, muted: l },
+            state: { muted: t },
         } = this;
         e !== this.state.playing &&
             (e
-                ? this.setState({ playing: e, hasClickedPlay: !0, muted: (!!n || !t || !l) && l })
+                ? this.setState({ playing: e, hasClickedPlay: !0, muted: !this.shouldUnmuteOnFirstInteraction() && t })
                 : this.setState({ playing: !1, hideControls: !1 }));
     };
     handleDragStart = (e) => {
