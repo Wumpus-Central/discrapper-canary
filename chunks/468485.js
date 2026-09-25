@@ -4910,7 +4910,7 @@ let aR = {
     ],
 };
 var aP = a(11779),
-    aO = a(669257);
+    aO = a(872162);
 let aB = [
         { id: "strength", label: "Strength", icon: aP.r },
         { id: "dexterity", label: "Dexterity" },
