@@ -5,7 +5,6 @@ _.exports = {
     T_: "dragRegion__535da",
     i8: "titleGroup__535da",
     gr: "titleIcon__535da",
-    DD: "title__535da",
     o1: "actions__535da",
     G7: "editActionsEnter__535da",
     BU: "dragHandle__535da",

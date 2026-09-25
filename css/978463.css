@@ -54,6 +54,13 @@
     height: calc(var(--space-8) - 3px)
 }
 
+.title_a6dccf {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
 .state_f0c906 {
     align-items: center;
     display: flex;
@@ -121,4 +128,4 @@
     width: 100%
 }
 
-/*# sourceMappingURL=431381.f532f5f016a55cc0.css.map*/
+/*# sourceMappingURL=978463.cdd742e40485fd23.css.map*/
