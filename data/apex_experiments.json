@@ -258,22 +258,6 @@
     }
   },
   {
-    "kind": "user",
-    "name": "2025-10-friend-request-alerts-v2",
-    "defaultConfig": {
-      "enabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true
-      }
-    }
-  },
-  {
     "name": "2025-10-go-live-auto-quality",
     "kind": "user",
     "defaultConfig": null,
