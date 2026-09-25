@@ -2,9 +2,9 @@
     U_: () => K,
     G8: () => z,
     I: () => L,
-    H9: () => M,
+    H9: () => k,
     VL: () => G,
-    T0: () => k,
+    T0: () => M,
     UY: () => H,
     yp: () => V,
     Yq: () => U,
@@ -64,11 +64,11 @@ function R(e, t, n, i) {
     let l = y("usernameProfile", n, i);
     return b(e.author.id, t.id, l);
 }
-function M(e, t, n, i) {
+function k(e, t, n, i) {
     let l = y("referencedUsernameProfile", n, i);
     return b(e?.author.id, t.id, l);
 }
-function k(e, t, n, i) {
+function M(e, t, n, i) {
     let l = y("interactionUsernameProfile", n, i);
     return b(e?.user.id, t.id, l);
 }

@@ -58,13 +58,13 @@ function u(e) {
                 (x(e), g(Array.from(e.values())));
             },
         },
-        M = s.useRef(v);
+        y = s.useRef(v);
     return (
         s.useEffect(() => {
-            M.current = v;
+            y.current = v;
         }),
         s.useEffect(() => {
-            let { getNextRows: e, limit: t, getLocalReferrals: i } = M.current;
+            let { getNextRows: e, limit: t, getLocalReferrals: i } = y.current;
             d > 0 ? e(0, t) : i();
         }, [t, d]),
         { eligibleUsers: m, fetchUsers: () => C(f, n), hasError: p, isFetching: h, resendUsers: E }

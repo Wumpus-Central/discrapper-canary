@@ -9,36 +9,36 @@ var i,
         (i[(i.FAILED = 3)] = "FAILED"),
         i);
 let a = {},
-    o = {};
-class E extends l.Ay.Store {
+    E = {};
+class o extends l.Ay.Store {
     static displayName = "MediaPostEmbedStore";
     getMediaPostEmbed(e) {
         if (null != e) return a[e];
     }
     getEmbedFetchState(e) {
-        return o[e] ?? 0;
+        return E[e] ?? 0;
     }
     getMediaPostEmbeds() {
         return a;
     }
 }
-let c = new E(r.h, {
+let c = new o(r.h, {
     CONNECTION_OPEN: function () {
-        ((a = {}), (o = {}));
+        ((a = {}), (E = {}));
     },
     MEDIA_POST_EMBED_FETCH: function (e) {
         let { threadId: t } = e;
-        o[t] = 1;
+        E[t] = 1;
     },
     MEDIA_POST_EMBED_FETCH_SUCCESS: function (e) {
         let { threadId: t, mediaPostEmbed: n } = e;
-        ((a = { ...a, [t]: n }), (o[t] = 2));
+        ((a = { ...a, [t]: n }), (E[t] = 2));
     },
     MEDIA_POST_EMBED_FETCH_FAILURE: function (e) {
         let { threadId: t } = e;
-        o[t] = 3;
+        E[t] = 3;
     },
     LOGOUT: function (e) {
-        e.isSwitchingAccount || ((a = {}), (o = {}));
+        e.isSwitchingAccount || ((a = {}), (E = {}));
     },
 });

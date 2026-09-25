@@ -48,10 +48,10 @@ function w(e) {
     return (0, T.K)(D(e) ? void 0 : e.stat).name;
 }
 var R = l(61567),
-    M = l(823353);
-function G() {
+    G = l(823353);
+function M() {
     return (0, n.jsxs)(b.B, {
-        className: M.w,
+        className: G.w,
         align: "center",
         justify: "center",
         gap: 6,
@@ -601,7 +601,7 @@ function eS(e) {
             },
             [I, f, g, r, o, p],
         );
-    if (D(s)) return (0, n.jsx)(G, {});
+    if (D(s)) return (0, n.jsx)(M, {});
     let b = u ? x.slice(3) : x,
         C = [x[0], x[1], x[2]];
     return (0, n.jsxs)("div", {
@@ -701,7 +701,7 @@ function ew(e) {
     });
 }
 var eR = l(460614);
-function eM(e) {
+function eG(e) {
     let { guildId: t, data: l, modalProps: i } = e;
     return (0, n.jsxs)(ey.d, {
         size: "lg",
@@ -726,7 +726,7 @@ function eM(e) {
         ],
     });
 }
-var eG = l(452027),
+var eM = l(452027),
     eL = l(103557),
     eU = l(825484),
     eP = l(821609),
@@ -838,7 +838,7 @@ let tf = {
                         maxLength: 100,
                         showCharacterCount: !0,
                     }),
-                    (0, n.jsx)(eG.D, {
+                    (0, n.jsx)(eM.D, {
                         label: h.intl.string(h.t.X4IxWL),
                         children: (0, n.jsxs)(b.B, {
                             gap: 16,
@@ -967,7 +967,7 @@ let tf = {
                               null != i &&
                                   (function (e) {
                                       let { guildId: t, data: l } = e,
-                                          i = (e) => (0, n.jsx)(eM, { guildId: t, data: l, modalProps: e });
+                                          i = (e) => (0, n.jsx)(eG, { guildId: t, data: l, modalProps: e });
                                       (0, eC.openModalLazy)(() => Promise.resolve(i), {
                                           modalKey: "guild-space-leaderboard-expand",
                                       });

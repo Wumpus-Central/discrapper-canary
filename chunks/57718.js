@@ -2,8 +2,8 @@ n.d(e, { Ay: () => T, C8: () => I });
 var s,
     i = n(477900);
 n(582128);
-var o = n(503698),
-    r = n.n(o),
+var r = n(503698),
+    o = n.n(r),
     a = n(202091),
     l = n(661531),
     u = n(462887),
@@ -19,7 +19,7 @@ let T = function (t) {
             className: e,
             logotypeClassName: n,
             gameTileSize: s = 24,
-            quest: o,
+            quest: r,
             separatorSpacing: I = 2,
             theme: T = x.NJ8.DARK,
             withCosponsor: f = !0,
@@ -28,10 +28,10 @@ let T = function (t) {
             onLoadComplete: L,
         } = t,
         y = (0, u.M)(T) ? x.NJ8.DARK : x.NJ8.LIGHT,
-        N = (0, C.a5)(o.id, y),
-        g = f && null != o.config.cosponsorMetadata && null != N;
+        N = (0, C.a5)(r.id, y),
+        g = f && null != r.config.cosponsorMetadata && null != N;
     return (0, i.jsxs)("div", {
-        className: r()(A.Iu, e),
+        className: o()(A.Iu, e),
         children: [
             O &&
                 (0, i.jsx)(E._M, {
@@ -41,7 +41,7 @@ let T = function (t) {
                             ref: t,
                             className: A._Y,
                             alt: "",
-                            src: (0, d.tW)(o, d.fY.GAME_TILE, y).url,
+                            src: (0, d.tW)(r, d.fY.GAME_TILE, y).url,
                             style: {
                                 borderRadius: (function (t) {
                                     switch (t) {
@@ -62,10 +62,10 @@ let T = function (t) {
                 children: (t) =>
                     (0, i.jsx)(a.animated.img, {
                         ref: t,
-                        className: r()(A.lW, n, { [A.TO]: g }),
+                        className: o()(A.lW, n, { [A.TO]: g }),
                         style: _,
-                        alt: o.config.messages.gameTitle,
-                        src: (0, d.tW)(o, d.fY.LOGO_TYPE, y).url,
+                        alt: r.config.messages.gameTitle,
+                        src: (0, d.tW)(r, d.fY.LOGO_TYPE, y).url,
                         onLoad: L,
                     }),
             }),
@@ -82,9 +82,9 @@ let T = function (t) {
                             children: (t) =>
                                 (0, i.jsx)(a.animated.img, {
                                     ref: t,
-                                    className: r()(A.lW, A.TO, n),
+                                    className: o()(A.lW, A.TO, n),
                                     style: _,
-                                    alt: o.config.cosponsorMetadata?.name ?? "",
+                                    alt: r.config.cosponsorMetadata?.name ?? "",
                                     src: N.url,
                                     onLoad: L,
                                 }),

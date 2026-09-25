@@ -1,7 +1,7 @@
 (n.d(t, {
-    $b: () => k,
+    $b: () => M,
     DT: () => N,
-    Io: () => M,
+    Io: () => k,
     Le: () => R,
     Nw: () => L,
     RC: () => T,
@@ -71,10 +71,10 @@ function b(e, t, n) {
 function R(e, t) {
     (0, s.A)(e.id, t.id);
 }
-function M(e, t) {
+function k(e, t) {
     (0, I.A)(e, t, void 0, f.A.getOptions(t.id));
 }
-function k(e, t, n) {
+function M(e, t, n) {
     let i = e.isPrivate(),
         l = t.author.id === u.default.getId();
     ((0, o.Yf)({ channel: e, message: t, shouldMention: !n.shiftKey && !l, showMentionToggle: !i && !l }),

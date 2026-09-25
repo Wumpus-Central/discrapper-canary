@@ -1,8 +1,8 @@
 n.d(e, { C0: () => d, CK: () => A, Dd: () => x, UK: () => c, pv: () => C, vj: () => E });
 var s,
     i = n(927813),
-    o = n(792620),
-    r = n(814793),
+    r = n(792620),
+    o = n(814793),
     a = n(79545),
     l = n(190107),
     u = n(375708),
@@ -16,11 +16,11 @@ var s,
               s)
             : null;
 function C(t) {
-    return (0, o.GL)(t)
-        ? 4 * !!(0, r.ui)(t)
-        : (0, o.vv)(t)
+    return (0, r.GL)(t)
+        ? 4 * !!(0, o.ui)(t)
+        : (0, r.vv)(t)
           ? 1
-          : (0, o.Ki)(t)
+          : (0, r.Ki)(t)
             ? t.config.features.includes(l.Li.CLOUD_GAMING_ACTIVITY)
                 ? 3
                 : 2
@@ -54,12 +54,12 @@ function E(t) {
 }
 function x(t, e, n) {
     let s = new Date(t.startsAt).getTime(),
-        o = Date.now(),
-        r = s <= o && o - s < 2 * i.A.Millis.DAY;
+        r = Date.now(),
+        o = s <= r && r - s < 2 * i.A.Millis.DAY;
     if (n) return null;
     switch (e) {
         case a.UA.UNENROLLED:
-            if (r) return u.intl.string(u.t.X6ziWN);
+            if (o) return u.intl.string(u.t.X6ziWN);
             return null;
         case a.UA.COMPLETED:
         case a.UA.EXPIRED_CLAIMABLE:
@@ -79,7 +79,7 @@ function A(t, e, n, s) {
         case a.UA.ENROLLED:
         case a.UA.INCOMPLETE:
             if (null != n) return `${n.progress}/${n.target}`;
-            return (0, o.xm)(e);
+            return (0, r.xm)(e);
         case a.UA.COMPLETED:
         case a.UA.CLAIMED:
         case a.UA.EXPIRED:

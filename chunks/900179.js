@@ -36,12 +36,12 @@ function A(e) {
         } = e,
         I = (0, p.GV)(),
         j = l.useRef(null),
-        y = (0, h.g)(),
-        T = null != R && y === R;
-    (0, E.A)(j, T);
+        T = (0, h.g)(),
+        y = null != R && T === R;
+    (0, E.A)(j, y);
     let C = "function" == typeof c ? { icon: c } : c;
     return (0, a.jsxs)("section", {
-        ref: T ? j : void 0,
+        ref: y ? j : void 0,
         className: i()(b.uW, v),
         "aria-labelledby": I,
         children: [

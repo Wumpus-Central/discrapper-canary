@@ -1,13 +1,13 @@
-n.d(t, { GE: () => f, Ny: () => d, aU: () => c, ox: () => u, y0: () => o });
+n.d(t, { GE: () => f, Ny: () => c, aU: () => d, ox: () => s, y0: () => o });
 var l = n(636537),
     r = n(913122),
     i = n(593673);
 n(754674);
 let a = "draft:",
-    s = 0;
-function u(e, t, n) {
+    u = 0;
+function s(e, t, n) {
     let l = {
-        id: `${a}${s++}`,
+        id: `${a}${u++}`,
         position: { column: 0, order: 0 },
         requires_hydration: !1,
         default_title: t,
@@ -23,10 +23,10 @@ function u(e, t, n) {
             return { ...l, type: e, config: { type: e } };
     }
 }
-function d(e) {
+function c(e) {
     return e.startsWith(a);
 }
-function c(e, t) {
+function d(e, t) {
     let n = new Map();
     for (let e of t) n.set(e.type, (n.get(e.type) ?? 0) + 1);
     return e.filter((e) => (n.get(e.type) ?? 0) < e.max_instances);
@@ -45,7 +45,7 @@ function f(e, t) {
             if ("widgets" !== e) continue;
             let i = Number(r),
                 a = Number.isInteger(i) ? t[i] : void 0,
-                s = l[0]?.message;
-            if (null != a && null != s) return { type: a.type, message: s };
+                u = l[0]?.message;
+            if (null != a && null != u) return { type: a.type, message: u };
         }
 }

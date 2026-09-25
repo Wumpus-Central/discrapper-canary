@@ -1,7 +1,7 @@
-e.d(i, { L7: () => g, qA: () => m });
+e.d(i, { L7: () => g, qA: () => S });
 var n = e(477900),
-    r = e(17928);
-if (221552 == e.j) var s = e(939249);
+    s = e(17928);
+if (221552 == e.j) var r = e(939249);
 if (221552 == e.j) var l = e(320448);
 if (221552 == e.j) var a = e(661531);
 if (221552 == e.j) var c = e(834730);
@@ -20,7 +20,7 @@ function g() {
 }
 function k(t) {
     let { children: i, onClick: e } = t;
-    return (0, n.jsxs)(s.D, {
+    return (0, n.jsxs)(r.D, {
         className: v.E1,
         onClick: e,
         children: [
@@ -29,14 +29,14 @@ function k(t) {
         ],
     });
 }
-function m(t) {
+function S(t) {
     let { onClosePopout: i } = t,
         e = d.tz.useSetting(),
-        s = (0, r.bG)([f.Ay], () => f.Ay.getFlattenedGuildIds()),
+        r = (0, s.bG)([f.Ay], () => f.Ay.getFlattenedGuildIds()),
         l = (0, C.Kk)(),
-        a = s.filter((t) => !l.has(t)),
+        a = r.filter((t) => !l.has(t)),
         o = (0, h.AB)(a);
-    return 0 === s.length
+    return 0 === r.length
         ? null
         : (0, n.jsxs)(k, {
               onClick: () => {

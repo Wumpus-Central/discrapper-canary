@@ -4,20 +4,20 @@ var i = n(536637),
     r = n(877624),
     s = n(17928),
     a = n(206959),
-    o = n(554146),
-    E = n(506774),
+    E = n(554146),
+    o = n(506774),
     c = n(228366),
     u = n(77729),
     _ = n(573648),
     A = n(521790),
-    d = n(587895),
-    T = n(145643),
+    T = n(587895),
+    d = n(145643),
     I = n(826673),
     N = n(367727),
     R = n(532205),
     C = n(487329),
-    O = n(161518),
-    S = n(736056),
+    S = n(161518),
+    O = n(736056),
     D = n(952818),
     m = n(597643),
     P = n(652896),
@@ -78,50 +78,50 @@ var w = n(220038),
 n(321073);
 var es = n(435558),
     ea = n.n(es),
-    eo = n(339048),
-    eE = n(830382),
+    eE = n(339048),
+    eo = n(830382),
     ec = n(627363),
     eu = n(469778),
     e_ = n(67480),
     eA = n(652215);
-let ed = "DetectedOffPlatformPremiumPerksStore",
-    eT = {},
+let eT = "DetectedOffPlatformPremiumPerksStore",
+    ed = {},
     eI = {},
     eN = [];
 function eR() {
     let e = !1;
     for (let { skuId: t, applicationId: n } of ea().values(eI)) {
         if (eN.includes(t)) continue;
-        let i = d.A.getApplication(n);
+        let i = T.A.getApplication(n);
         if (null == i) {
-            d.A.isFetchingApplication(n) || d.A.didFetchingApplicationFail(n) || ec.Ay.fetchApplication(n);
+            T.A.isFetchingApplication(n) || T.A.didFetchingApplicationFail(n) || ec.Ay.fetchApplication(n);
             continue;
         }
         let l = e_.A.get(t);
         if (null == l) {
-            e_.A.isFetching(t) || e_.A.didFetchingSkuFail(t) || eE.EX(i.id, t);
+            e_.A.isFetching(t) || e_.A.didFetchingSkuFail(t) || eo.EX(i.id, t);
             continue;
         }
         eu.A.applicationIdsFetching.has(i.id) ||
         eu.A.isEntitledToSku(j.default.getCurrentUser(), t, i.id, i.id) ||
         !l.available
-            ? null != eT[t] && (delete eT[t], (e = !0))
-            : ((eT[t] = { skuId: t, applicationId: n }), (e = !0));
+            ? null != ed[t] && (delete ed[t], (e = !0))
+            : ((ed[t] = { skuId: t, applicationId: n }), (e = !0));
     }
     return e;
 }
 class eC extends s.Ay.Store {
     static displayName = "DetectedOffPlatformPremiumPerksStore";
     initialize() {
-        (this.waitFor(d.A, eu.A, D.Ay, e_.A, j.default), (eN = E.w.get(ed) ?? eN));
+        (this.waitFor(T.A, eu.A, D.Ay, e_.A, j.default), (eN = o.w.get(eT) ?? eN));
     }
     getDetectedOffPlatformPremiumPerks() {
-        return ea().values(eT);
+        return ea().values(ed);
     }
 }
-let eO = new eC(c.h, {
+let eS = new eC(c.h, {
     LOGOUT: function () {
-        ((eT = {}), (eI = {}));
+        ((ed = {}), (eI = {}));
     },
     SKU_FETCH_SUCCESS: eR,
     ENTITLEMENT_FETCH_APPLICATION_SUCCESS: eR,
@@ -129,8 +129,8 @@ let eO = new eC(c.h, {
     APPLICATION_FETCH_SUCCESS: eR,
     DETECTED_OFF_PLATFORM_PREMIUM_PERKS_DISMISS: function (e) {
         let { skuId: t } = e;
-        if ((delete eT[t], eN.includes(t))) return !1;
-        (eN.push(t), E.w.set(ed, eN));
+        if ((delete ed[t], eN.includes(t))) return !1;
+        (eN.push(t), o.w.set(eT, eN));
     },
     RUNNING_GAMES_CHANGE: function () {
         let e = !1;
@@ -143,13 +143,13 @@ let eO = new eC(c.h, {
                             (eu.A.applicationIdsFetched.has(i) ||
                                 eu.A.applicationIdsFetching.has(i) ||
                                 null != eu.A.getForSku(n) ||
-                                eo.LM(i),
+                                eE.LM(i),
                             (eI[n] = { skuId: n, applicationId: i }),
                             (e = !0)));
         return (e && eR(), e);
     },
 });
-var eS = n(696451),
+var eO = n(696451),
     eD = n(317525),
     em = n(71393),
     eP = n(25578),
@@ -179,32 +179,32 @@ var eH = n(202541),
     eY = n(818348),
     eW = n(731854);
 let eQ = {
-        [eA.kqX.DOWNLOAD_NAG]: o.M.NAGBAR_NOTICE_DOWNLOAD,
-        [eA.kqX.CONNECT_SPOTIFY]: o.M.NAGBAR_NOTICE_CONNECT_SPOTIFY,
-        [eA.kqX.CONNECT_PLAYSTATION]: o.M.NAGBAR_NOTICE_CONNECT_PLAYSTATION,
-        [eA.kqX.PASSKEY_BACKUP]: o.M.NAGBAR_NOTICE_PASSKEY_BACKUP,
-        [eA.kqX.PREMIUM_TIER_2_TRIAL_ENDING]: o.M.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING,
-        [eA.kqX.PREMIUM_REACTIVATE]: o.M.NAGBAR_NOTICE_PREMIUM_REACTIVATE,
-        [eA.kqX.BOUNCED_EMAIL_DETECTED]: o.M.NAGBAR_BOUNCED_EMAIL_NOTICE,
-        [eA.kqX.PREMIUM_TIER_0_TRIAL_ENDING]: o.M.NAGBAR_NOTICE_PREMIUM_TIER_0_TRIAL_ENDING,
-        [eA.kqX.CHECKOUT_RECOVERY_NAGBAR]: o.M.CHECKOUT_RECOVERY_NAGBAR,
-        [eA.kqX.QUEST_APP_UPSELL]: o.M.NAGBAR_QUEST_APP_UPSELL,
-        [eA.kqX.RIOT_MIGRATION]: o.M.RIOT_CONNECTION_DEPRECATION_DISABLE,
-        [eA.kqX.RIOT_CONNECTION_DEPRECATION_ADMIN]: o.M.RIOT_CONNECTION_DEPRECATION_ADMIN_DISABLE,
-        [eA.kqX.BATTLENET_MIGRATION]: o.M.BATTLENET_CONNECTION_DEPRECATION_DISABLE,
-        [eA.kqX.BATTLENET_LINKED_ROLE_DEPRECATION]: o.M.BATTLENET_CONNECTION_DEPRECATION_LINKED_ROLES_DISABLE,
-        [eA.kqX.COD_3PP_NAGBAR]: o.M.COD_3PP_NAGBAR_NOTICE,
+        [eA.kqX.DOWNLOAD_NAG]: E.M.NAGBAR_NOTICE_DOWNLOAD,
+        [eA.kqX.CONNECT_SPOTIFY]: E.M.NAGBAR_NOTICE_CONNECT_SPOTIFY,
+        [eA.kqX.CONNECT_PLAYSTATION]: E.M.NAGBAR_NOTICE_CONNECT_PLAYSTATION,
+        [eA.kqX.PASSKEY_BACKUP]: E.M.NAGBAR_NOTICE_PASSKEY_BACKUP,
+        [eA.kqX.PREMIUM_TIER_2_TRIAL_ENDING]: E.M.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING,
+        [eA.kqX.PREMIUM_REACTIVATE]: E.M.NAGBAR_NOTICE_PREMIUM_REACTIVATE,
+        [eA.kqX.BOUNCED_EMAIL_DETECTED]: E.M.NAGBAR_BOUNCED_EMAIL_NOTICE,
+        [eA.kqX.PREMIUM_TIER_0_TRIAL_ENDING]: E.M.NAGBAR_NOTICE_PREMIUM_TIER_0_TRIAL_ENDING,
+        [eA.kqX.CHECKOUT_RECOVERY_NAGBAR]: E.M.CHECKOUT_RECOVERY_NAGBAR,
+        [eA.kqX.QUEST_APP_UPSELL]: E.M.NAGBAR_QUEST_APP_UPSELL,
+        [eA.kqX.RIOT_MIGRATION]: E.M.RIOT_CONNECTION_DEPRECATION_DISABLE,
+        [eA.kqX.RIOT_CONNECTION_DEPRECATION_ADMIN]: E.M.RIOT_CONNECTION_DEPRECATION_ADMIN_DISABLE,
+        [eA.kqX.BATTLENET_MIGRATION]: E.M.BATTLENET_CONNECTION_DEPRECATION_DISABLE,
+        [eA.kqX.BATTLENET_LINKED_ROLE_DEPRECATION]: E.M.BATTLENET_CONNECTION_DEPRECATION_LINKED_ROLES_DISABLE,
+        [eA.kqX.COD_3PP_NAGBAR]: E.M.COD_3PP_NAGBAR_NOTICE,
     },
-    eZ = { [eA.kqX.GIFTING_PROMOTION_REMINDER]: o.M.GIFTING_PROMOTION_REMINDER },
+    eZ = { [eA.kqX.GIFTING_PROMOTION_REMINDER]: E.M.GIFTING_PROMOTION_REMINDER },
     ez = {
-        [eA.kqX.PREMIUM_TIER_2_TRIAL_ENDING]: o.M.NAGBAR_NOTICE_OFFER_EXPIRING,
-        [eA.kqX.PREMIUM_TIER_2_DISCOUNT_ENDING]: o.M.NAGBAR_NOTICE_OFFER_EXPIRING,
-        [eA.kqX.RIOT_MIGRATION]: o.M.RIOT_CONNECTION_DEPRECATION,
-        [eA.kqX.RIOT_CONNECTION_DEPRECATION_ADMIN]: o.M.RIOT_CONNECTION_DEPRECATION_ADMIN,
-        [eA.kqX.BATTLENET_MIGRATION]: o.M.BATTLENET_CONNECTION_DEPRECATION,
-        [eA.kqX.BATTLENET_LINKED_ROLE_DEPRECATION]: o.M.BATTLENET_CONNECTION_DEPRECATION_LINKED_ROLES,
+        [eA.kqX.PREMIUM_TIER_2_TRIAL_ENDING]: E.M.NAGBAR_NOTICE_OFFER_EXPIRING,
+        [eA.kqX.PREMIUM_TIER_2_DISCOUNT_ENDING]: E.M.NAGBAR_NOTICE_OFFER_EXPIRING,
+        [eA.kqX.RIOT_MIGRATION]: E.M.RIOT_CONNECTION_DEPRECATION,
+        [eA.kqX.RIOT_CONNECTION_DEPRECATION_ADMIN]: E.M.RIOT_CONNECTION_DEPRECATION_ADMIN,
+        [eA.kqX.BATTLENET_MIGRATION]: E.M.BATTLENET_CONNECTION_DEPRECATION,
+        [eA.kqX.BATTLENET_LINKED_ROLE_DEPRECATION]: E.M.BATTLENET_CONNECTION_DEPRECATION_LINKED_ROLES,
     },
-    e$ = { [eA.kqX.OUTBOUND_PROMOTION]: o.M.THIRD_PARTY_OUTBOUND_PROMO_NAGBAR },
+    e$ = { [eA.kqX.OUTBOUND_PROMOTION]: E.M.THIRD_PARTY_OUTBOUND_PROMO_NAGBAR },
     eJ = {
         [eA.kqX.DETECTED_OFF_PLATFORM_PREMIUM_PERK_UPSELL]: "hideDetectedOffPlatformPremiumPerkUpsell",
         [eA.kqX.PREMIUM_UNCANCEL]: "hideUncancelReminder",
@@ -245,9 +245,9 @@ function e7(e) {
 function e8(e, t, n) {
     if (null == e) return;
     let i = eJ[e];
-    (null == i || t || E.w.set(i, !0), e0.has(e) && (e1[e] = !0), null != n && null != i)
-        ? E.w.set(e7(e), n.format("YYYY-MM-DDTHH:mm:ss.SSSZ"))
-        : E.w.remove(e7(e));
+    (null == i || t || o.w.set(i, !0), e0.has(e) && (e1[e] = !0), null != n && null != i)
+        ? o.w.set(e7(e), n.format("YYYY-MM-DDTHH:mm:ss.SSSZ"))
+        : o.w.remove(e7(e));
 }
 let e9 = null;
 function e6() {
@@ -275,11 +275,11 @@ function e4(e) {
     let i = eJ[e];
     if (null != i) {
         let t,
-            n = null != (t = E.w.get(e7(e))) ? l()(t) : null;
+            n = null != (t = o.w.get(e7(e))) ? l()(t) : null;
         if (null != n) return n?.isAfter(l()());
     }
     let r = e1[e];
-    return !!r || (null != i && "" !== i ? E.w.get(i) : !!e0.has(e) && r);
+    return !!r || (null != i && "" !== i ? o.w.get(i) : !!e0.has(e) && r);
 }
 let te = [
     eA.kqX.QUARANTINED,
@@ -373,7 +373,7 @@ let tt = {
         predicate: (e) => {
             let { currentUser: t, selectedGuildId: n } = e;
             if (null == n) return !1;
-            let i = eS.Ay.getMember(n, t.id);
+            let i = eO.Ay.getMember(n, t.id);
             return null != i && !i.isPending && (0, M.TR)(i);
         },
     },
@@ -410,8 +410,8 @@ let tt = {
     },
     [eA.kqX.VOICE_DISABLED]: { predicate: () => null != eg.A.getRemoteDisconnectVoiceChannelId() },
     [eA.kqX.VOICE_CONNECTED_LAST_SESSION]: { predicate: () => null != eg.A.getLastSessionVoiceChannelId() },
-    [eA.kqX.NO_INPUT_DETECTED]: { predicate: () => O.A.hasActiveErrorOfType(C.iy.NO_AUDIO_INPUT_DETECTED) },
-    [eA.kqX.NO_INPUT_DEVICES_DETECTED]: { predicate: () => O.A.hasActiveErrorOfType(C.iy.NO_INPUT_DEVICES) },
+    [eA.kqX.NO_INPUT_DETECTED]: { predicate: () => S.A.hasActiveErrorOfType(C.iy.NO_AUDIO_INPUT_DETECTED) },
+    [eA.kqX.NO_INPUT_DEVICES_DETECTED]: { predicate: () => S.A.hasActiveErrorOfType(C.iy.NO_INPUT_DEVICES) },
     [eA.kqX.VIDEO_BACKGROUND_UNAVAILABLE]: { predicate: () => eg.A.isConnected() && J.A.videoBackgroundUnavailable },
     [eA.kqX.HARDWARE_MUTE]: {
         predicate: () => eg.A.isConnected() && eP.Ay.isHardwareMute() && eP.Ay.isHardwareMuteNoticeEnabled(),
@@ -450,7 +450,7 @@ let tt = {
                 (null != t &&
                     null != n &&
                     !em.A.getGuild(t)?.features.has(eA.GuildFeatures.GUILD_ONBOARDING) &&
-                    eS.Ay.getMember(t, n.id)?.isPending) ??
+                    eO.Ay.getMember(t, n.id)?.isPending) ??
                 !1
             );
         },
@@ -474,14 +474,14 @@ let tt = {
     [eA.kqX.DETECTED_OFF_PLATFORM_PREMIUM_PERK]: {
         predicate: (e) => {
             let { currentUser: t } = e;
-            return q.Ay.canRedeemPremiumPerks(t) && eO.getDetectedOffPlatformPremiumPerks().length > 0;
+            return q.Ay.canRedeemPremiumPerks(t) && eS.getDetectedOffPlatformPremiumPerks().length > 0;
         },
-        metadata: () => eO.getDetectedOffPlatformPremiumPerks()[0],
+        metadata: () => eS.getDetectedOffPlatformPremiumPerks()[0],
     },
     [eA.kqX.DETECTED_OFF_PLATFORM_PREMIUM_PERK_UPSELL]: {
         predicate: () =>
-            !e4(eA.kqX.DETECTED_OFF_PLATFORM_PREMIUM_PERK_UPSELL) && eO.getDetectedOffPlatformPremiumPerks().length > 0,
-        metadata: () => eO.getDetectedOffPlatformPremiumPerks()[0],
+            !e4(eA.kqX.DETECTED_OFF_PLATFORM_PREMIUM_PERK_UPSELL) && eS.getDetectedOffPlatformPremiumPerks().length > 0,
+        metadata: () => eS.getDetectedOffPlatformPremiumPerks()[0],
     },
     [eA.kqX.STREAMER_MODE]: { predicate: () => ey.A.enabled },
     [eA.kqX.DOWNLOAD_NAG]: { predicate: () => !eb.isPlatformEmbedded && !e4(eA.kqX.DOWNLOAD_NAG) },
@@ -610,13 +610,13 @@ let tt = {
                 r = null != t ? l()(t.currentPeriodEnd).diff(l()(t.currentPeriodStart).startOf("day"), "days") : 0,
                 s = null != t && l()(t.currentPeriodEnd).isBefore(l()()),
                 a = eu.A.applicationIdsFetched.has(eH.tv),
-                o = eu.A.getForApplication(eH.tv),
-                E = null != t ? (0, q.EL)(t) : null,
-                c = null != E ? q.Ay.getSkuIdForPlan(E.planId) : null,
+                E = eu.A.getForApplication(eH.tv),
+                o = null != t ? (0, q.EL)(t) : null,
+                c = null != o ? q.Ay.getSkuIdForPlan(o.planId) : null,
                 u =
-                    null != o &&
                     null != E &&
-                    Array.from(o).filter((e) => {
+                    null != o &&
+                    Array.from(E).filter((e) => {
                         let { skuId: t, consumed: n } = e;
                         return !n && t === c;
                     }).length > 0,
@@ -683,7 +683,7 @@ let tt = {
         metadata: () => {
             if (null == eX.A.testModeApplicationId) return {};
             let e = eX.A.testModeApplicationId,
-                t = d.A.getApplication(e);
+                t = T.A.getApplication(e);
             return { applicationName: null != t ? t.name : e, applicationId: e };
         },
     },
@@ -763,7 +763,7 @@ let tt = {
             let t = H.A.getPromotionByTypeAndId(K.pt.MARKETING_MOMENT, e.promotionId);
             return (
                 !(null != t && t.endDate < new Date()) &&
-                !(0, I.u$)(o.M.PREMIUM_MARKETING_MOMENT_NAGBAR_UPSELL, e.promotionId).isDismissed
+                !(0, I.u$)(E.M.PREMIUM_MARKETING_MOMENT_NAGBAR_UPSELL, e.promotionId).isDismissed
             );
         },
     },
@@ -813,7 +813,7 @@ let tt = {
         predicate: () => {
             let e = null != er.A.getAccount(null, eA.fg2.RIOT_GAMES),
                 t = null != er.A.getAccount(null, eA.fg2.LEAGUE_OF_LEGENDS);
-            if (e4(eA.kqX.RIOT_MIGRATION) || (0, I.k8)(o.M.RIOT_CONNECTION_DEPRECATION_DISABLE) || (!e && !t))
+            if (e4(eA.kqX.RIOT_MIGRATION) || (0, I.k8)(E.M.RIOT_CONNECTION_DEPRECATION_DISABLE) || (!e && !t))
                 return !1;
             let n = _.A.get(eA.fg2.LEAGUE_OF_LEGENDS),
                 i = _.A.get(eA.fg2.RIOT_GAMES);
@@ -827,7 +827,7 @@ let tt = {
                 currentUser: t,
                 selectedGuildId: n,
                 platformTypes: [eA.fg2.RIOT_GAMES, eA.fg2.LEAGUE_OF_LEGENDS],
-                dismissibleContent: o.M.RIOT_CONNECTION_DEPRECATION_ADMIN_DISABLE,
+                dismissibleContent: E.M.RIOT_CONNECTION_DEPRECATION_ADMIN_DISABLE,
                 noticeType: eA.kqX.RIOT_CONNECTION_DEPRECATION_ADMIN,
             });
         },
@@ -839,7 +839,7 @@ let tt = {
                 !e.migrationData?.getMigrationExperimentEnabled("NoticeStore") ||
                 null == er.A.getAccount(null, eA.fg2.BATTLENET) ||
                 e4(eA.kqX.BATTLENET_MIGRATION) ||
-                (0, I.k8)(o.M.BATTLENET_CONNECTION_DEPRECATION_DISABLE)
+                (0, I.k8)(E.M.BATTLENET_CONNECTION_DEPRECATION_DISABLE)
             );
         },
     },
@@ -850,7 +850,7 @@ let tt = {
                 currentUser: t,
                 selectedGuildId: n,
                 platformTypes: [eA.fg2.BATTLENET],
-                dismissibleContent: o.M.BATTLENET_CONNECTION_DEPRECATION_LINKED_ROLES_DISABLE,
+                dismissibleContent: E.M.BATTLENET_CONNECTION_DEPRECATION_LINKED_ROLES_DISABLE,
                 noticeType: eA.kqX.BATTLENET_LINKED_ROLE_DEPRECATION,
             });
         },
@@ -895,12 +895,12 @@ class tl extends s.Ay.Store {
     static displayName = "NoticeStore";
     initialize() {
         (this.syncWith(
-            [O.A, ek.Ay, eM.A, eO, eU.A, H.A, eq.A, y.default, er.A, $.A, f.A, Y.A, et.A, D.Ay, ee.A, O.A, T.A, k.A],
+            [S.A, ek.Ay, eM.A, eS, eU.A, H.A, eq.A, y.default, er.A, $.A, f.A, Y.A, et.A, D.Ay, ee.A, S.A, d.A, k.A],
             tn,
         ),
             this.waitFor(
-                O.A,
-                d.A,
+                S.A,
+                T.A,
                 et.A,
                 en.default,
                 y.default,
@@ -908,17 +908,17 @@ class tl extends s.Ay.Store {
                 el.A,
                 G.A,
                 er.A,
-                eO,
+                eS,
                 ew.A,
                 eF.A,
                 eV.A,
                 eu.A,
-                S.A,
+                O.A,
                 m.A,
                 g.A,
                 f.A,
-                eS.Ay,
-                T.A,
+                eO.Ay,
+                d.A,
                 eD.A,
                 em.A,
                 h.A,

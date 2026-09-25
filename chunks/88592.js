@@ -1,13 +1,13 @@
-n.d(t, { A: () => d });
+n.d(t, { A: () => c });
 var l = n(17928),
     r = n(228366),
     i = n(754674);
 let a = {};
-function s(e) {
+function u(e) {
     let t = a[e];
     return t?.saveStatus === "saving" ? void 0 : t;
 }
-class u extends l.Ay.Store {
+class s extends l.Ay.Store {
     static displayName = "GuildSpaceEditorStore";
     getDraft(e) {
         return a[e]?.draft;
@@ -22,28 +22,28 @@ class u extends l.Ay.Store {
         return a[e]?.saveErrorMessage;
     }
 }
-let d = new u(r.h, {
+let c = new s(r.h, {
     GUILD_SPACE_EDIT_START: function (e) {
         let { guildId: t, space: n } = e;
         a[t] = { draft: { header: n.header, widgets: (0, i.W$)(n.widgets) }, saveStatus: "idle" };
     },
     GUILD_SPACE_EDIT_ADD_WIDGET: function (e) {
         let { guildId: t, widget: n, insertionTarget: l } = e,
-            r = s(t);
+            r = u(t);
         if (null == r) return !1;
         r.draft = { ...r.draft, widgets: (0, i.QD)(r.draft.widgets, n, l) };
     },
     GUILD_SPACE_EDIT_MOVE_WIDGET: function (e) {
         let { guildId: t, widgetId: n, targetColumn: l, targetIndex: r } = e,
-            a = s(t);
+            a = u(t);
         if (null == a) return !1;
-        let u = (0, i.Gm)(a.draft.widgets, n, l, r);
-        if (null == u) return !1;
-        a.draft = { ...a.draft, widgets: u };
+        let s = (0, i.Gm)(a.draft.widgets, n, l, r);
+        if (null == s) return !1;
+        a.draft = { ...a.draft, widgets: s };
     },
     GUILD_SPACE_EDIT_REMOVE_WIDGET: function (e) {
         let { guildId: t, widgetId: n } = e,
-            l = s(t);
+            l = u(t);
         if (null == l) return !1;
         let r = l.draft.widgets.filter((e) => {
             let { id: t } = e;
@@ -54,14 +54,14 @@ let d = new u(r.h, {
     },
     GUILD_SPACE_EDIT_UPDATE_WIDGET_CONFIG: function (e) {
         let { guildId: t, widgetId: n, config: l } = e,
-            r = s(t);
+            r = u(t);
         if (null == r) return !1;
         let i = r.draft.widgets.map((e) => (e.id === n ? { ...e, config: l } : e));
         r.draft = { ...r.draft, widgets: i };
     },
     GUILD_SPACE_EDIT_UPDATE_HEADER: function (e) {
         let { guildId: t, customBanner: n } = e,
-            l = s(t);
+            l = u(t);
         if (null == l) return !1;
         l.draft = { ...l.draft, header: { ...l.draft.header, custom_banner: n } };
     },

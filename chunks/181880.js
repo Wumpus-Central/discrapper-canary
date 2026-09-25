@@ -30,8 +30,8 @@ function M(e) {
         [m, p] = s.useState(g),
         [M, f] = s.useState(null),
         [O, R] = s.useState("init"),
-        L = m === c.tI.PERSONAL,
-        D = (0, l.bG)([E.A], () => E.A.getGuildId()),
+        D = m === c.tI.PERSONAL,
+        L = (0, l.bG)([E.A], () => E.A.getGuildId()),
         x = (0, l.bG)(
             [C.A],
             () => {
@@ -40,26 +40,26 @@ function M(e) {
             },
             [t],
         ),
-        G = L ? null : x;
+        G = D ? null : x;
     s.useEffect(() => {
-        D !== t && h();
-    }, [t, h, D]);
+        L !== t && h();
+    }, [t, h, L]);
     let U = s.useCallback((e) => {
             (f(null), p(e));
         }, []),
         b = s.useCallback(async () => {
             if ("init" === O) {
-                if (D !== t) return void (await h());
+                if (L !== t) return void (await h());
                 (R("submitting"), f(null));
                 try {
-                    await I(t, L);
+                    await I(t, D);
                 } catch (e) {
                     (T.error("Failed to save guild theme NUX preference", e), f(N.intl.string(N.t.fEptJP)), R("init"));
                     return;
                 }
                 (R("submitted"), n(_.i.TAKE_ACTION), await h());
             }
-        }, [t, L, n, h, D, O]),
+        }, [t, D, n, h, L, O]),
         y = s.useCallback(async () => {
             ("submitted" !== O && n(_.i.USER_DISMISS), await h());
         }, [n, h, O]),
@@ -70,7 +70,7 @@ function M(e) {
             ],
             [],
         ),
-        P = L ? N.intl.string(N.t.cvoikF) : N.intl.string(N.t["cY+Oob"]);
+        P = D ? N.intl.string(N.t.cvoikF) : N.intl.string(N.t["cY+Oob"]);
     return (0, i.jsx)(a.k, {
         size: "md",
         transitionState: A,
@@ -87,7 +87,7 @@ function M(e) {
         actions: [
             {
                 text: P,
-                variant: L ? "secondary" : "primary",
+                variant: D ? "secondary" : "primary",
                 loading: "submitting" === O,
                 disabled: "submitting" === O,
                 onClick: b,
@@ -107,7 +107,7 @@ function M(e) {
                     label: N.intl.string(N.t.Q7mm4g),
                     hideLabel: !0,
                 }),
-                L && (0, i.jsx)(u.w, { type: "warning", children: N.intl.string(N.t.tTHQAy) }),
+                D && (0, i.jsx)(u.w, { type: "warning", children: N.intl.string(N.t.tTHQAy) }),
                 null != M && (0, i.jsx)(u.w, { type: "critical", children: M }),
             ],
         }),

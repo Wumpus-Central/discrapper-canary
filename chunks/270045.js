@@ -4,20 +4,20 @@ var i = n(477900),
     r = n(323889),
     s = n(17928),
     a = n(691540),
-    o = n(857250),
-    E = n(97483),
+    E = n(857250),
+    o = n(97483),
     c = n(477782),
     u = n(980707),
     _ = n(743368),
     A = n(173936),
-    d = n(577473),
-    T = n(922016),
+    T = n(577473),
+    d = n(922016),
     I = n(442433),
     N = n(181658),
     R = n(274670),
     C = n(144779),
-    O = n(976860),
-    S = n(246356),
+    S = n(976860),
+    O = n(246356),
     D = n(957565),
     m = n(396813),
     P = n(859703),
@@ -40,8 +40,8 @@ var i = n(477900),
 function B(e) {
     let t = (0, s.bG)([P.A], () => P.A.getQuestPreviewOverride(p.uF.QUEST_BAR_V2), []),
         n = (0, s.bG)([P.A], () => P.A.getQuestPreviewOverride(p.uF.ACTIVITY_PANEL), []),
-        T = (0, s.bG)([P.A], () => P.A.getQuestPreviewOverride(p.uF.QUEST_LIVE_STREAM), []),
-        S = (0, s.bG)([P.A], () => P.A.getQuestPreviewOverride(p.uF.MEMBERS_LIST), []),
+        d = (0, s.bG)([P.A], () => P.A.getQuestPreviewOverride(p.uF.QUEST_LIVE_STREAM), []),
+        O = (0, s.bG)([P.A], () => P.A.getQuestPreviewOverride(p.uF.MEMBERS_LIST), []),
         B = (0, y.vy)(e.questContent),
         w = [p.uF.QUEST_BAR_V2, p.uF.QUEST_BAR].includes(e.questContent),
         F = (0, g.Ut)(),
@@ -76,7 +76,7 @@ function B(e) {
             ),
         });
     function ee(e) {
-        return (0, a.P0)((0, o.o)(new N.A(e, e.status).message, E.Ck.FAILURE));
+        return (0, a.P0)((0, E.o)(new N.A(e, e.status).message, o.Ck.FAILURE));
     }
     function et() {
         return (0, m.CV)(e.quest.id).catch(ee);
@@ -107,25 +107,25 @@ function B(e) {
                 (0, i.jsx)(c.sL, {
                     id: "channel-call-header",
                     label: "Show in Voice Channel Header",
-                    checked: T?.id === e.quest.id,
+                    checked: d?.id === e.quest.id,
                     action: () => z(p.uF.QUEST_LIVE_STREAM),
                 }),
-            [z, e.quest.id, T?.id],
+            [z, e.quest.id, d?.id],
         ),
         es = l.useMemo(
             () =>
                 (0, i.jsx)(c.sL, {
                     id: "members-list",
                     label: "Show in Members List",
-                    checked: S?.id === e.quest.id,
+                    checked: O?.id === e.quest.id,
                     action: () => z(p.uF.MEMBERS_LIST),
                 }),
-            [z, e.quest.id, S?.id],
+            [z, e.quest.id, O?.id],
         ),
         ea = l.useCallback(() => {
-            (0, O.pX)(q.BVt.QUEST_PREVIEW_TOOL_2(e.quest.id));
+            (0, S.pX)(q.BVt.QUEST_PREVIEW_TOOL_2(e.quest.id));
         }, [e.quest.id]),
-        eo = e.shouldShowDisclosure && e.quest.id !== j.Fw;
+        eE = e.shouldShowDisclosure && e.quest.id !== j.Fw;
     return (0, i.jsxs)(u.W, {
         "data-menu-migrated": !0,
         variant: "fixed",
@@ -192,10 +192,10 @@ function B(e) {
                                           }),
                                         (0, v.mA)({ fromContent: e.questContent, questId: e.quest.id }));
                                 },
-                                icon: d.r,
-                                leadingAccessory: { type: "icon", icon: d.r },
+                                icon: T.r,
+                                leadingAccessory: { type: "icon", icon: T.r },
                             }),
-                        eo &&
+                        eE &&
                             (0, i.jsx)(c.Dr, {
                                 id: "display-disclosure",
                                 label: b.intl.string(b.t.GcsZKJ),
@@ -308,48 +308,48 @@ function w(e) {
             onOpen: n,
             onClose: s,
             preventIdle: a,
-            quest: o,
-            questContent: E,
+            quest: E,
+            questContent: o,
             questContentPosition: c,
             sourceQuestContent: u,
             ..._
         } = e,
         A = (0, g.Ut)(),
-        d = (0, U.go)(),
+        T = (0, U.go)(),
         I = l.useRef(null),
         N = l.useCallback(() => {
             ((0, f.E5)(f.kI.STEP_2_CLICKED_INTERNAL, "quest_entry_context_menu_popout")
                 ? (0, R.r)({
                       type: C.F.CLICK_INTERNAL,
                       adCreativeType: r.p.QUEST,
-                      adCreativeId: o.id,
+                      adCreativeId: E.id,
                       questContentCTA: h.Cy.OPEN_CONTEXT_MENU,
-                      surfaceId: E,
+                      surfaceId: o,
                       sourceQuestContent: u,
-                      impressionId: d,
+                      impressionId: T,
                       questContentPosition: c,
                   })
                 : A({
-                      questId: o.id,
-                      questContent: E,
+                      questId: E.id,
+                      questContent: o,
                       questContentCTA: h.Cy.OPEN_CONTEXT_MENU,
                       questContentPosition: c,
                       sourceQuestContent: u,
                   }),
                 null != n && n());
-        }, [n, o.id, E, c, A, u, d]);
-    return (0, i.jsx)(T.Y, {
+        }, [n, E.id, o, c, A, u, T]);
+    return (0, i.jsx)(d.Y, {
         targetElementRef: I,
         onRequestOpen: N,
         onRequestClose: s,
         renderPopout: (e) => {
             let { closePopout: t } = e;
             return a
-                ? (0, i.jsx)(S.A, {
+                ? (0, i.jsx)(O.A, {
                       children: (0, i.jsx)(B, {
                           ..._,
-                          quest: o,
-                          questContent: E,
+                          quest: E,
+                          questContent: o,
                           questContentPosition: c,
                           onClose: t,
                           sourceQuestContent: u,
@@ -357,14 +357,14 @@ function w(e) {
                   })
                 : (0, i.jsx)(B, {
                       ..._,
-                      quest: o,
-                      questContent: E,
+                      quest: E,
+                      questContent: o,
                       questContentPosition: c,
                       onClose: t,
                       sourceQuestContent: u,
                   });
         },
-        animation: T.Y.Animation.NONE,
+        animation: d.Y.Animation.NONE,
         children: (e) => (0, i.jsx)("div", { ref: I, children: t(e) }),
     });
 }

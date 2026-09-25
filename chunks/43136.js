@@ -1,4 +1,4 @@
-n.d(t, { A: () => M, C: () => R });
+n.d(t, { A: () => k, C: () => R });
 var i = n(477900),
     l = n(582128),
     s = n(284009),
@@ -62,7 +62,7 @@ function R(e) {
         children: null == r || n ? o : (0, i.jsx)("img", { src: r, alt: "", className: y.N4 }),
     });
 }
-function M(e) {
+function k(e) {
     let { guild: t, subscriptionsSettings: n } = e,
         s = t.id,
         { nickname: o, nickcolor: g } = (0, r.cf)(
@@ -77,15 +77,15 @@ function M(e) {
         ),
         { isTruncated: A, ExpandableTextContainer: x } = (0, v.e)(),
         I = (n?.description?.trim().length ?? 0) > 0,
-        [_, M] = l.useState(1),
-        k = (0, m.A)("(max-width: 1439px)"),
+        [_, k] = l.useState(1),
+        M = (0, m.A)("(max-width: 1439px)"),
         { selectedTab: L, isPhantomPreview: O } = (0, N.k)(),
         P = L === j.B.GUILD_PRODUCTS_PREVIEW ? S.intl.string(S.t["LvXy/H"]) : S.intl.string(S.t.XyqKh8),
         D = I
             ? (0, i.jsxs)(i.Fragment, {
                   children: [
                       (0, i.jsx)(x, {
-                          lineClamp: k || 2 === _ ? 2 : 3,
+                          lineClamp: M || 2 === _ ? 2 : 3,
                           children: (0, i.jsx)(d.E, {
                               variant: "text-sm/normal",
                               color: "text-default",
@@ -131,7 +131,7 @@ function M(e) {
                         children: [
                             (0, i.jsx)("div", {
                                 ref: (e) => {
-                                    null != e && e.clientHeight > 30 && M(2);
+                                    null != e && e.clientHeight > 30 && k(2);
                                 },
                                 children: (0, i.jsx)(u.D, {
                                     variant: "heading-xl/semibold",

@@ -85,8 +85,8 @@ function _(e) {
             lineClamp: y = 1,
             cardWidth: b = 332,
             cardHeight: R,
-            thumbnailHeight: M = 187,
-            descriptionTextVariant: k = "text-sm/normal",
+            thumbnailHeight: k = 187,
+            descriptionTextVariant: M = "text-sm/normal",
             isDraft: L = !1,
         } = e,
         O = (0, g.Ld)(),
@@ -95,7 +95,7 @@ function _(e) {
                 (0, i.jsx)(I, {
                     showDraftBadge: L,
                     hidePurchaseToUnlockBadge: !0,
-                    children: (0, i.jsx)("img", { alt: "", src: t, className: E.K_, style: { height: M } }),
+                    children: (0, i.jsx)("img", { alt: "", src: t, className: E.K_, style: { height: k } }),
                 }),
                 (0, i.jsxs)("div", {
                     className: E.MS,
@@ -112,13 +112,13 @@ function _(e) {
                                 }),
                                 (0, i.jsx)(u.M, {
                                     children: (0, i.jsx)(p.A, {
-                                        variant: k,
+                                        variant: M,
                                         color: "text-muted",
                                         lineClamp: y,
                                         text: l,
                                     }),
                                 }),
-                                A && (0, i.jsx)(C, { onShowFullDescription: _, variant: k }),
+                                A && (0, i.jsx)(C, { onShowFullDescription: _, variant: M }),
                                 S || null == o || "" === o.name
                                     ? null
                                     : (0, i.jsxs)(i.Fragment, {

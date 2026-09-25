@@ -27,8 +27,8 @@ var i = n(477900),
     y = n(486020),
     b = n(625494),
     R = n(58703),
-    M = n(763754),
-    k = n(799162),
+    k = n(763754),
+    M = n(799162),
     L = n(834730),
     O = n(289873),
     P = n(47167),
@@ -125,7 +125,7 @@ let X = l.memo(function (e) {
                                 let e = s.value.toString(),
                                     t = S.default.getUser(e);
                                 if (null != t) {
-                                    let e = (0, M.FT)(t, a);
+                                    let e = (0, k.FT)(t, a);
                                     n = (0, i.jsxs)(G.A, {
                                         ...Y,
                                         onClick: () =>
@@ -161,7 +161,7 @@ let X = l.memo(function (e) {
                                 else {
                                     let t = S.default.getUser(e);
                                     if (null != t) {
-                                        let e = (0, M.FT)(t, a);
+                                        let e = (0, k.FT)(t, a);
                                         n = (0, i.jsxs)(G.A, {
                                             ...Y,
                                             onClick: () =>
@@ -310,7 +310,7 @@ function et(e, t, n, l, s) {
         onTargetUserContextMenu: h,
         onPopoutRequestClose: g,
     } = e;
-    return (0, i.jsx)(k.A, {
+    return (0, i.jsx)(M.A, {
         className: 1 === n ? Q.iu : "",
         compact: !0,
         author: l,
@@ -333,7 +333,7 @@ function ei(e) {
         { analyticsLocations: r, newestAnalyticsLocation: d } = (0, I.Ay)(E.A.EXECUTED_COMMAND),
         p = (0, u.bG)([S.default], () => S.default.getCurrentUser()),
         y = l.useRef(null),
-        k = l.useRef(null),
+        M = l.useRef(null),
         L = l.useMemo(
             () => (e, t, l) => (
                 o()(null != t, "ExecutedCommand: user cannot be undefined"),
@@ -361,8 +361,8 @@ function ei(e) {
         P = (0, v.Am)(n),
         D = P?.type === A.G4.APPLICATION_COMMAND && null != P.target_user ? new T.A(P.target_user) : null,
         U = P?.type === A.G4.APPLICATION_COMMAND && null != n.messageReference && null != e.renderTargetMessage,
-        G = (0, M.d8)(n.interaction?.user, s),
-        w = (0, M.d8)(D, s),
+        G = (0, k.d8)(n.interaction?.user, s),
+        w = (0, k.d8)(D, s),
         H = l.useMemo(() => (e.compact ? (0, Z.A)((0, R.i$)(c()(), "LT")) : null), [e.compact]),
         B = (0, x.Gp)(s.id),
         F = n.interaction;
@@ -440,7 +440,7 @@ function ei(e) {
                             }
                         },
                     });
-                })(e, O, k);
+                })(e, O, M);
                 return (0, i.jsx)(l.Fragment, { children: t }, "command");
             },
         })),

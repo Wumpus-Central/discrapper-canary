@@ -55,8 +55,8 @@ function b() {
     });
 }
 var R = n(818348),
-    M = n(402805);
-function k(e) {
+    k = n(402805);
+function M(e) {
     let {
         showEditProduct: t,
         showUnpublishProduct: n,
@@ -74,7 +74,7 @@ function k(e) {
         onSelect: I,
     } = e;
     return (0, i.jsx)("div", {
-        className: M.li,
+        className: k.li,
         children: (0, i.jsxs)(r.W, {
             "data-menu-migrated": !0,
             navId: "guild-product-context",
@@ -170,7 +170,7 @@ function L(e) {
             spacing: -8,
             animation: m.Y.Animation.FADE,
             renderPopout: (e) =>
-                (0, i.jsx)(k, {
+                (0, i.jsx)(M, {
                     ...e,
                     guildId: n,
                     productId: t.id,
@@ -195,11 +195,11 @@ function L(e) {
                     "aria-label": j.intl.formatToPlainString(j.t.RtqjeB, { productName: t.name }),
                     "aria-haspopup": "listbox",
                     "aria-expanded": l,
-                    className: M.hC,
+                    className: k.hC,
                     children: (0, i.jsx)(g.F, {
                         size: "md",
                         color: "currentColor",
-                        className: M.Su,
+                        className: k.Su,
                         "aria-hidden": !0,
                     }),
                 });
@@ -223,12 +223,12 @@ function O(e) {
         h = (0, _.z)(t);
     return (0, i.jsxs)(p.s, {
         tag: "article",
-        className: a()(M.gc, M.Um, { [M.r9]: c }),
+        className: a()(k.gc, k.Um, { [k.r9]: c }),
         onClick: c ? void 0 : l,
         onContextMenu: function (e) {
             (0, E.L3)(e, () =>
                 Promise.resolve((e) =>
-                    (0, i.jsx)(k, {
+                    (0, i.jsx)(M, {
                         ...e,
                         closePopout: E.Z_,
                         guildId: n,
@@ -251,28 +251,28 @@ function O(e) {
         },
         "aria-label": j.intl.formatToPlainString(j.t["X/yAKs"], { productName: t.name }),
         children: [
-            (0, i.jsx)("img", { alt: "", src: u, className: M.K_ }),
+            (0, i.jsx)("img", { alt: "", src: u, className: k.K_ }),
             (0, i.jsxs)("div", {
-                className: M.aG,
+                className: k.aG,
                 children: [
                     (0, i.jsxs)("div", {
-                        className: M.jb,
+                        className: k.jb,
                         children: [
                             (0, i.jsx)(A.D, {
                                 variant: "text-md/semibold",
                                 color: "text-strong",
-                                className: M.tZ,
+                                className: k.tZ,
                                 children: t.name,
                             }),
                             (0, i.jsx)(x.h, { size: 8 }),
                             (0, i.jsxs)("div", {
-                                className: M.MS,
+                                className: k.MS,
                                 children: [
                                     (0, i.jsx)(f.E, { variant: "text-md/normal", color: "text-default", children: m }),
                                     null != h
                                         ? (0, i.jsxs)(i.Fragment, {
                                               children: [
-                                                  (0, i.jsx)("div", { className: M.zk }),
+                                                  (0, i.jsx)("div", { className: k.zk }),
                                                   (0, i.jsx)(f.E, {
                                                       variant: "text-md/normal",
                                                       color: "text-default",
