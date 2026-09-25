@@ -1,33 +1,45 @@
-s.d(o, { A: () => a });
+s.d(o, { A: () => p });
 var e = s(477900),
     r = s(582128),
     n = s(481613),
     i = s.n(n),
-    l = s(615300),
-    d = s(346905);
-function c(t) {
+    d = s(615300),
+    l = s(17928),
+    c = s(775602),
+    h = s(346905);
+function a(t) {
     function o(t) {
         return t.interpolate({ inputRange: [0, 1], outputRange: ["0px", "1px"] });
     }
     return { transform: [{ translateX: o(t.x) }, { translateY: o(t.y) }] };
 }
-class h extends r.Component {
-    state = { x: new l.A.Value(0), y: new l.A.Value(0) };
+class k extends r.Component {
+    state = { x: new d.A.Value(0), y: new d.A.Value(0) };
     _isMounted = !1;
     componentDidMount() {
-        this._isMounted = !0;
+        ((this._isMounted = !0), this.startAnimations());
+    }
+    componentDidUpdate(t) {
+        t.reducedMotion !== this.props.reducedMotion &&
+            (this.props.reducedMotion ? (this.state.x.setValue(0), this.state.y.setValue(0)) : this.startAnimations());
+    }
+    componentWillUnmount() {
+        this._isMounted = !1;
+    }
+    shouldLoop = () => this._isMounted && !this.props.reducedMotion && "Firefox" !== i().name;
+    startAnimations() {
+        if (!this.shouldLoop()) return;
         let { x: t, y: o } = this.state;
-        "Firefox" !== i().name &&
-            (l.A.animate(t, {
-                loop: !0,
-                toValueMin: -74,
-                toValueMax: 95,
-                overshootClamping: !0,
-                friction: 5,
-                tension: 1,
-                shouldLoop: this.shouldLoop,
-            }),
-            l.A.animate(o, {
+        (d.A.animate(t, {
+            loop: !0,
+            toValueMin: -74,
+            toValueMax: 95,
+            overshootClamping: !0,
+            friction: 5,
+            tension: 1,
+            shouldLoop: this.shouldLoop,
+        }),
+            d.A.animate(o, {
                 loop: !0,
                 toValueMin: -59,
                 toValueMax: 75,
@@ -37,17 +49,13 @@ class h extends r.Component {
                 shouldLoop: this.shouldLoop,
             }));
     }
-    componentWillUnmount() {
-        this._isMounted = !1;
-    }
-    shouldLoop = () => this._isMounted;
     render() {
         return (0, e.jsxs)("div", {
-            className: d.dJ,
+            className: h.dJ,
             children: [
-                (0, e.jsx)("div", { className: d.LU }),
+                (0, e.jsx)("div", { className: h.LU }),
                 (0, e.jsxs)("svg", {
-                    className: d.GR,
+                    className: h.GR,
                     width: "320",
                     height: "280",
                     children: [
@@ -69,9 +77,9 @@ class h extends r.Component {
                                         (0, e.jsx)("mask", {
                                             id: "search-index-foreground-mask-b",
                                             fill: "#fff",
-                                            children: (0, e.jsx)(l.A.use, {
-                                                style: c(this.state),
-                                                className: d.dK,
+                                            children: (0, e.jsx)(d.A.use, {
+                                                style: a(this.state),
+                                                className: h.dK,
                                                 xlinkHref: "#search-index-foreground-mask-a",
                                             }),
                                         }),
@@ -395,9 +403,9 @@ class h extends r.Component {
                                         }),
                                     ],
                                 }),
-                                (0, e.jsxs)(l.A.g, {
-                                    className: d.KS,
-                                    style: c(this.state),
+                                (0, e.jsxs)(d.A.g, {
+                                    className: h.KS,
+                                    style: a(this.state),
                                     children: [
                                         (0, e.jsx)("path", {
                                             fill: "#C9D2F0",
@@ -450,4 +458,7 @@ class h extends r.Component {
         });
     }
 }
-let a = h;
+function p() {
+    let t = (0, l.bG)([c.Ay], () => c.Ay.useReducedMotion);
+    return (0, e.jsx)(k, { reducedMotion: t });
+}
