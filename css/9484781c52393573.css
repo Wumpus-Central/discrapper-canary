@@ -274,6 +274,13 @@
     background: var(--background-mod-subtle)
 }
 
+.turnTimer__4d627 {
+    flex-shrink: 0;
+    font-variant-numeric: tabular-nums;
+    padding-block-start: var(--space-4);
+    white-space: nowrap
+}
+
 .usagePanel_db08bb {
     background: var(--background-surface-highest);
     border-radius: var(--radius-md);
@@ -1287,4 +1294,4 @@
     white-space: nowrap
 }
 
-/*# sourceMappingURL=7a00a1c28107cfad.css.map*/
+/*# sourceMappingURL=9484781c52393573.css.map*/
