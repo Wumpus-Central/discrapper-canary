@@ -34,12 +34,14 @@
 }
 
 .clip__27753 {
-    background-color: var(--background-mod-muted);
-    border: 1px solid var(--border-muted);
+    background-color: var(--background-mod-subtle);
     border-radius: var(--radius-sm);
     box-sizing: border-box;
-    height: 56px;
-    opacity: .2
+    height: 84px
+}
+
+.clip__27753.small__27753 {
+    height: 56px
 }
 
 .tags__27753 {
@@ -51,6 +53,10 @@
     background-color: var(--background-mod-subtle);
     border-radius: var(--radius-sm);
     flex: 1;
+    height: 20px
+}
+
+.tag__27753.small__27753 {
     height: 12px
 }
 
@@ -290,4 +296,4 @@
     width: 100%
 }
 
-/*# sourceMappingURL=0b1df0210becea61.css.map*/
+/*# sourceMappingURL=b016802781032a8f.css.map*/

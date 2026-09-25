@@ -120,48 +120,50 @@ function w(a) {
 l(600253);
 var B = l(307897);
 function V(a) {
-    let { className: e } = a;
+    let { className: e, size: l } = a;
     return (0, i.jsx)("div", {
         className: n()(B.kL, e),
         "aria-hidden": !0,
         children: (0, i.jsxs)("div", {
             className: B.CX,
             children: [
-                (0, i.jsx)("div", { className: B.$Q }),
+                (0, i.jsx)("div", { className: n()(B.$Q, { [B.EX]: "small" === l }) }),
                 (0, i.jsx)("div", {
                     className: B._A,
-                    children: Array.from({ length: 4 }, (a, e) => (0, i.jsx)("div", { className: B.Tc }, e)),
+                    children: Array.from({ length: 4 }, (a, e) =>
+                        (0, i.jsx)("div", { className: n()(B.Tc, { [B.EX]: "small" === l }) }, e),
+                    ),
                 }),
             ],
         }),
     });
 }
-var K = l(553790);
-function M() {
+var X = l(553790);
+function K() {
     return (0, i.jsxs)("div", {
-        className: K.yL,
+        className: X.yL,
         children: [
-            (0, i.jsx)("div", { className: K.si }),
-            (0, i.jsx)("div", { className: K.bk }),
-            (0, i.jsx)("div", { className: K.bk }),
+            (0, i.jsx)("div", { className: X.si }),
+            (0, i.jsx)("div", { className: X.bk }),
+            (0, i.jsx)("div", { className: X.bk }),
         ],
     });
 }
-function X(a) {
+function z(a) {
     let { className: e, size: l } = a;
     return (0, i.jsxs)("div", {
-        className: n()(K.kL, e, { [K.EX]: "small" === l }),
+        className: n()(X.kL, e, { [X.EX]: "small" === l }),
         "aria-hidden": !0,
-        children: [(0, i.jsx)("div", { className: K.Iv }), (0, i.jsx)(M, {}), (0, i.jsx)(M, {})],
+        children: [(0, i.jsx)("div", { className: X.Iv }), (0, i.jsx)(K, {}), (0, i.jsx)(K, {})],
     });
 }
-var z = l(315629),
+var M = l(315629),
     Q = l(706933);
 function Y(a) {
     let { size: e } = a;
     return "default" !== e
         ? null
-        : (0, i.jsxs)(z.h, {
+        : (0, i.jsxs)(M.h, {
               color: "nitro-pink",
               className: Q.k,
               offsetBottom: -2.5,
@@ -236,8 +238,8 @@ function q(a) {
         O = e.type === r.x.APPLICATION,
         U = O ? e.applicationId : void 0,
         y = (0, I.h)(U),
-        { hasAlreadyLinked: B, canStartAuthorization: K, startAuthorization: M } = (0, j.RD)(y),
-        z = O && !B && K,
+        { hasAlreadyLinked: B, canStartAuthorization: X, startAuthorization: K } = (0, j.RD)(y),
+        M = O && !B && X,
         { analyticsLocations: Q } = (0, N.Ay)(A.A.USER_PROFILE_APPLICATION_WIDGET),
         q = s.useCallback(() => {
             !c &&
@@ -245,11 +247,11 @@ function q(a) {
                 d({ action: "WIDGET_ADDED", ...e.getProfileEditAnalyticsOptions() }),
                 (0, R.XA)(H.jM.WIDGET_ADDED),
                 l?.(),
-                z && M({ analyticsLocations: Q }));
-        }, [c, z, e, d, l, M, Q]),
+                M && K({ analyticsLocations: Q }));
+        }, [c, M, e, d, l, K, Q]),
         Z = s.useMemo(() => f(e), [e, f]),
         aa = P?.(e),
-        ae = z && !S ? o.LinkIcon : m.U,
+        ae = M && !S ? o.LinkIcon : m.U,
         al = v || (G?.() ?? !1),
         ai = !O || S,
         as = !O || !S,
@@ -266,7 +268,7 @@ function q(a) {
                 className: n()($.PH, b && $.PG, c && $.Lq),
                 onClick: q,
                 "aria-label":
-                    z && null != y ? k.intl.formatToPlainString(k.t.ATS0FK, { applicationName: y.name }) : D(e),
+                    M && null != y ? k.intl.formatToPlainString(k.t.ATS0FK, { applicationName: y.name }) : D(e),
                 "aria-busy": c,
                 children: [
                     (function () {
@@ -287,9 +289,9 @@ function q(a) {
                             case "application-widget":
                                 return (0, i.jsx)(F, { applicationId: a.applicationId, size: t });
                             case "clips-gallery":
-                                return (0, i.jsx)(V, { className: $.l4 });
+                                return (0, i.jsx)(V, { className: $.l4, size: t });
                             case "personal":
-                                return (0, i.jsx)(X, { className: $.l4, size: t });
+                                return (0, i.jsx)(z, { className: $.l4, size: t });
                             default:
                                 return (0, L.xb)(a);
                         }
