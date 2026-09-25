@@ -18,6 +18,6 @@ function i(e) {
     return {
         disableReactionReads: !i,
         disableReactionCreates: a || !h || !m,
-        disableReactionUpdates: a || !h || !0 === r || !0 === s,
+        disableReactionUpdates: c || a || !h || !0 === r || !0 === s,
     };
 }

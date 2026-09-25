@@ -1195,7 +1195,7 @@ let nT = i.memo(function e(t) {
                     disableReactionReads: !1,
                     disableReactionCreates: I,
                     disableComponentInteractivity: !0,
-                    disableReactionUpdates: !1,
+                    disableReactionUpdates: s.isSystemDM(),
                     renderThreadAccessory: h,
                     inlineAttachmentMedia: A,
                     inlineEmbedMedia: f,
