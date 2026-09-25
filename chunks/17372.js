@@ -1,9 +1,10 @@
-n.d(t, { TS: () => s, Wb: () => E, Yw: () => l, t0: () => o, tY: () => u });
+n.d(t, { TS: () => m, Wb: () => S, Yw: () => u, c7: () => E, sl: () => c, t0: () => o, tY: () => s });
 var i,
     a,
     _,
     r,
     d,
+    l,
     o =
         (((i = {}).GUILD = "guild"),
         (i.GUILD_DISCOVERY = "guild_discovery"),
@@ -16,28 +17,32 @@ var i,
         (i.APPLICATION = "application"),
         (i.WIDGET = "widget"),
         i),
-    l = (((a = {}).MESSAGE = "report_to_mod_message"), a),
-    u =
+    u = (((a = {}).MESSAGE = "report_to_mod_message"), a),
+    s =
         (((_ = {}).MESSAGE = "message_urf"),
         (_.USER = "user_urf"),
         (_.GUILD = "guild_urf"),
         (_.MEDIA_TAKEDOWN = "media_takedown"),
         _),
-    s =
-        (((r = {}).SUB_SPAM = "sub_spam"),
-        (r.SUB_UNSOLICITED_PORN = "sub_unsolicited_porn"),
-        (r.SUB_SEXUALLY_DEGRADING_CONTENT = "sub_sexually_degrading_content"),
-        (r.SUB_NCP = "sub_ncp"),
-        (r.SUB_LOLI = "sub_loli"),
-        (r.SUB_CSAM = "sub_csam"),
-        (r.SUB_GENERAL_HARASSMENT = "sub_general_harassment"),
-        (r.SUB_VULGAR_LANGUAGE = "sub_vulgar_language"),
-        (r.SUB_RACIST_OR_DICRIMINATORY_LANGUAGE_OR_IMAGERY = "sub_racist_or_discriminatory_language_or_imagery"),
-        (r.SUB_GORE = "sub_gore"),
-        (r.SUB_GLORIFYING_VIOLENCE = "sub_glorifying_violence"),
-        r),
-    E =
-        (((d = {}).SAFETY_DM_SPAM_FILTER = "safety_dm_spam_filter"),
-        (d.SAFETY_SC_FILTERS_SEXUAL_MEDIA = "safety_sc_filters_sexual_media"),
-        (d.SAFETY_SC_FILTERS_GRAPHIC_MEDIA = "safety_sc_filters_graphic_media"),
-        d);
+    c = /^2(2155|7706)2$/.test(n.j) ? (((r = {}).TIDA = "tida"), (r.UK_STOPNCII = "uk_stopncii"), r) : null;
+function E(e) {
+    return Object.values(c).includes(e);
+}
+var m =
+        (((d = {}).SUB_SPAM = "sub_spam"),
+        (d.SUB_UNSOLICITED_PORN = "sub_unsolicited_porn"),
+        (d.SUB_SEXUALLY_DEGRADING_CONTENT = "sub_sexually_degrading_content"),
+        (d.SUB_NCP = "sub_ncp"),
+        (d.SUB_LOLI = "sub_loli"),
+        (d.SUB_CSAM = "sub_csam"),
+        (d.SUB_GENERAL_HARASSMENT = "sub_general_harassment"),
+        (d.SUB_VULGAR_LANGUAGE = "sub_vulgar_language"),
+        (d.SUB_RACIST_OR_DICRIMINATORY_LANGUAGE_OR_IMAGERY = "sub_racist_or_discriminatory_language_or_imagery"),
+        (d.SUB_GORE = "sub_gore"),
+        (d.SUB_GLORIFYING_VIOLENCE = "sub_glorifying_violence"),
+        d),
+    S =
+        (((l = {}).SAFETY_DM_SPAM_FILTER = "safety_dm_spam_filter"),
+        (l.SAFETY_SC_FILTERS_SEXUAL_MEDIA = "safety_sc_filters_sexual_media"),
+        (l.SAFETY_SC_FILTERS_GRAPHIC_MEDIA = "safety_sc_filters_graphic_media"),
+        l);
