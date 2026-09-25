@@ -348,6 +348,7 @@ class j extends C.G {
                 T: () => ["discord_protos.discord_experimentation.v1.Rule.Subtype", H],
             },
             { no: 6, name: "hash", kind: "scalar", T: 9 },
+            { no: 7, name: "title", kind: "message", T: () => B.hU },
         ]);
     }
     create(e) {
@@ -382,6 +383,9 @@ class j extends C.G {
                 case 6:
                     r.hash = e.string();
                     break;
+                case 7:
+                    r.title = B.hU.internalBinaryRead(e, e.uint32(), n, r.title);
+                    break;
                 default:
                     let a = n.readUnknownField;
                     if ("throw" === a)
@@ -399,7 +403,8 @@ class j extends C.G {
         (e.override && K.internalBinaryWrite(e.override, t.tag(3, g.O0.LengthDelimited).fork(), n).join(),
             !1 !== e.isSunsetRule && t.tag(4, g.O0.Varint).bool(e.isSunsetRule),
             0 !== e.subtype && t.tag(5, g.O0.Varint).int32(e.subtype),
-            "" !== e.hash && t.tag(6, g.O0.LengthDelimited).string(e.hash));
+            "" !== e.hash && t.tag(6, g.O0.LengthDelimited).string(e.hash),
+            e.title && B.hU.internalBinaryWrite(e.title, t.tag(7, g.O0.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
         return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
     }
