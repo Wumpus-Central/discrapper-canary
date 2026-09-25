@@ -234,7 +234,7 @@ var H = n(859703),
     W = n(405670),
     Y = n(104886),
     K = n(945810);
-let $ = "illustration1",
+let $ = "illustration3",
     z = (0, K.mj)({
         name: "2026-08-bounties-mobile-quest-bar",
         kind: "user",
