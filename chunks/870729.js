@@ -2893,15 +2893,16 @@ let sS = function (e) {
                 children: [
                     s.map((e, t) => {
                         let s = e.options.map((e) => ({ label: (0, tE.up)(e.filter), value: e.filter })),
-                            o = n.filter((t) => e.options.some((e) => e.filter === t.filter)).map((e) => e.filter);
+                            o = n.filter((t) => e.options.some((e) => e.filter === t.filter)).map((e) => e.filter),
+                            u = 0 === t ? a : `${a}-${t}`;
                         return (0, r.jsxs)(
                             i.Fragment,
                             {
                                 children: [
                                     t > 0 && (0, r.jsx)("hr", { className: sC.B }),
-                                    (0, r.jsx)(sv, { id: a, children: e.heading }),
+                                    (0, r.jsx)(sv, { id: u, children: e.heading }),
                                     (0, r.jsx)(sE.$, {
-                                        "aria-labelledby": a,
+                                        "aria-labelledby": u,
                                         options: s,
                                         selectedValues: o,
                                         onChange: l(e.options),
@@ -2959,6 +2960,7 @@ let sp = function (e) {
                 children: [
                     (0, r.jsx)(sv, { id: t, children: ew.intl.string(ew.t.tZXJIS) }),
                     (0, r.jsx)(s_.z, {
+                        "aria-labelledby": t,
                         options: u,
                         onChange: (e) => {
                             (l(e), a || n());

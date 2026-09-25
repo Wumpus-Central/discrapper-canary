@@ -4986,15 +4986,31 @@ screen and (max-width:485px) {
 }
 
 .checkboxOption__714a9 {
+    --custom-checkbox-size: 20px;
+    --custom-checkbox-gap: var(--space-12);
+    --custom-checkbox-icon-size: 20px;
+    --custom-checkbox-text-start: calc(var(--custom-checkbox-size) + var(--custom-checkbox-gap));
+    --custom-checkbox-icon-offset: calc(var(--custom-checkbox-icon-size) + var(--space-4));
     align-items: start;
     border-radius: var(--radius-sm);
     display: flex;
-    gap: var(--space-12);
+    gap: var(--custom-checkbox-gap);
     max-width: 100%
 }
 
 .spacing__714a9 {
     flex: 1 1 auto
+}
+
+.labeled__714a9 {
+    display: block;
+    min-height: var(--custom-checkbox-size);
+    padding-inline-start: var(--custom-checkbox-text-start);
+    position: relative
+}
+
+.withLeadingIcon__714a9 {
+    padding-inline-start: calc(var(--custom-checkbox-text-start) + var(--custom-checkbox-icon-offset))
 }
 
 .checkboxIndicator__714a9 {
@@ -5006,10 +5022,16 @@ screen and (max-width:485px) {
     box-sizing: border-box;
     display: flex;
     flex: 0 0 auto;
-    height: 20px;
+    height: var(--custom-checkbox-size);
     justify-content: center;
     position: relative;
-    width: 20px
+    width: var(--custom-checkbox-size)
+}
+
+.labeled__714a9 .checkboxIndicator__714a9 {
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    position: absolute
 }
 
 .checkStroke__714a9 {
@@ -5085,16 +5107,19 @@ screen and (max-width:485px) {
 
 .leadingIcon__714a9 {
     color: var(--icon-strong);
-    flex-shrink: 0;
-    height: 20px;
-    width: 20px
+    height: var(--custom-checkbox-icon-size);
+    inset-block-start: 0;
+    inset-inline-start: var(--custom-checkbox-text-start);
+    position: absolute;
+    width: var(--custom-checkbox-icon-size)
 }
 
-.label__714a9 {
-    align-items: flex-start;
-    display: flex;
-    gap: var(--space-4);
-    width: 100%
+.description__714a9 {
+    margin-block-start: var(--space-4)
+}
+
+.withLeadingIcon__714a9 .description__714a9 {
+    margin-inline-start: calc(var(--custom-checkbox-icon-offset)*-1)
 }
 
 .enable-forced-colors .checkboxIndicator__714a9 {
@@ -5128,9 +5153,8 @@ screen and (max-width:485px) {
     fill: GrayText
 }
 
-.enable-forced-colors .checkboxOption__714a9[data-disabled] .label__714a9,
-.enable-forced-colors .checkboxOption__714a9[data-disabled] .label__714a9>div {
+.enable-forced-colors .checkboxOption__714a9[data-disabled] .label__714a9 {
     color: GrayText
 }
 
-/*# sourceMappingURL=603779.863bc0c4e4c6ff49.css.map*/
+/*# sourceMappingURL=146755.fd230b3ed9402884.css.map*/

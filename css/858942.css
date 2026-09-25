@@ -5180,11 +5180,28 @@ svg.radioIcon_c1e9c4 {
 }
 
 .radioGroupOption__64e61 {
-    align-items: top;
+    --custom-radio-size: 20px;
+    --custom-radio-icon-size: 20px;
+    --custom-radio-text-start: calc(var(--custom-radio-size) + var(--space-12));
+    --custom-radio-icon-offset: calc(var(--custom-radio-icon-size) + var(--space-4));
     border-radius: var(--radius-sm);
     box-sizing: border-box;
-    display: flex;
-    gap: var(--space-12)
+    display: block;
+    min-height: var(--custom-radio-size);
+    padding-inline-start: var(--custom-radio-text-start);
+    position: relative
+}
+
+.withLeadingIcon__64e61 {
+    padding-inline-start: calc(var(--custom-radio-text-start) + var(--custom-radio-icon-offset))
+}
+
+.radioGroupOption__64e61>.radioIndicator__64e61 {
+    height: var(--custom-radio-size);
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    position: absolute;
+    width: var(--custom-radio-size)
 }
 
 .radioIndicator__64e61,
@@ -5280,16 +5297,19 @@ svg.radioIcon_c1e9c4 {
 
 .radioItemIcon__64e61 {
     color: var(--icon-strong);
-    flex-shrink: 0;
-    height: 20px;
-    width: 20px
+    height: var(--custom-radio-icon-size);
+    inset-block-start: 0;
+    inset-inline-start: var(--custom-radio-text-start);
+    position: absolute;
+    width: var(--custom-radio-icon-size)
 }
 
-.label__64e61 {
-    align-items: flex-start;
-    display: flex;
-    gap: var(--space-4);
-    width: 100%
+.description__64e61 {
+    margin-block-start: var(--space-4)
+}
+
+.withLeadingIcon__64e61 .description__64e61 {
+    margin-inline-start: calc(var(--custom-radio-icon-offset)*-1)
 }
 
 .enable-forced-colors .outerRadioBorderStroke__64e61 {
@@ -6137,4 +6157,4 @@ svg.radioIcon_c1e9c4 {
     color: var(--text-strong)
 }
 
-/*# sourceMappingURL=858942.9d1a02076408a0d4.css.map*/
+/*# sourceMappingURL=858942.b7df89a6a67f28c9.css.map*/
