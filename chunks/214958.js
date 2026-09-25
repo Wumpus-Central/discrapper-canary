@@ -1,6 +1,5 @@
 ((e = r.nmd(e)),
     function () {
-        "use strict";
         var n = { function: !0, object: !0 },
             o = (n[typeof window] && window) || this,
             i = n[typeof t] && t,
