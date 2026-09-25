@@ -30,11 +30,11 @@ function c(e) {
         }),
         w = null != b && (h ? N.hasMainCard : N.hasAny),
         { data: A } = (0, s.YY)(l ?? void 0),
-        S = null != l && A?.bot?.id != null,
-        { data: E, isLoading: C } = (0, s.YY)(t ?? void 0),
-        I = c || (0, u.x)(E),
+        E = null != l && A?.bot?.id != null,
+        { data: S, isLoading: C } = (0, s.YY)(t ?? void 0),
+        I = c || (0, u.x)(S),
         T = null != t && C,
-        M = (0, d.Xm)({ installScope: f, hasFrame: I, hasProfileWidget: w, hasBotDm: S, ownerAuthorizationRevoked: m });
+        M = (0, d.Xm)({ installScope: f, hasFrame: I, hasProfileWidget: w, hasBotDm: E, ownerAuthorizationRevoked: m });
     return {
         availability: M,
         isResolving: T,

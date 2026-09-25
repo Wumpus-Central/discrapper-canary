@@ -1,4 +1,4 @@
-l.d(t, { A: () => E });
+l.d(t, { A: () => S });
 var n = l(477900),
     a = l(582128),
     r = l(17928),
@@ -22,12 +22,12 @@ var n = l(477900),
     N = l(50617),
     w = l(375708),
     A = l(472781);
-let S = { values: {}, secrets: {} };
-function E(e) {
+let E = { values: {}, secrets: {} };
+function S(e) {
     let { projectId: t, scopeKeys: l, note: f, notifyAgent: m = !1, isPreview: h = !1, children: x } = e,
         g = (0, r.bG)([y.Ay], () => y.Ay.getSettings(t)),
-        [p, b] = a.useState(S),
-        [k, E] = a.useState({}),
+        [p, b] = a.useState(E),
+        [k, S] = a.useState({}),
         [I, T] = a.useState(!1),
         [M, R] = a.useState(!1),
         P = a.useCallback((e, t) => {
@@ -75,8 +75,8 @@ function E(e) {
                         : e
                           ? (0, y.ss)(t)
                           : (0, v.Eo)(t),
-                    b(S),
-                    E({}),
+                    b(E),
+                    S({}),
                     !0
                 );
             } catch {
@@ -192,7 +192,7 @@ function E(e) {
                               text: w.intl.string(N.default.j6itec),
                               "aria-label": w.intl.formatToPlainString(N.default.cTofe2, { label: t }),
                               disabled: I,
-                              onClick: () => E((t) => ({ ...t, [e.name]: !0 })),
+                              onClick: () => S((t) => ({ ...t, [e.name]: !0 })),
                           }),
                       ],
                   },

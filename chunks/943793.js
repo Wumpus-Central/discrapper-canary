@@ -14,8 +14,8 @@ var r = i(297264),
     x = i(915089),
     f = i(409626),
     h = i(692969),
-    I = i(201438),
-    p = i(562153),
+    p = i(201438),
+    I = i(562153),
     A = i(183555),
     j = i(735321),
     E = i(451395),
@@ -37,11 +37,11 @@ function L(e) {
         m = c && (0, j.mS)(s) && u.length < 20,
         { trackUserProfileAction: x, trackUserProfileEditAction: f } = (0, A.NJ)(),
         h = (0, l.useRef)(new Map()),
-        I = (0, l.useRef)(null),
         p = (0, l.useRef)(null),
+        I = (0, l.useRef)(null),
         [E, v] = (0, l.useState)(0),
         [C, S] = (0, l.useState)(!1),
-        b = D(I, p, u, h, v),
+        b = D(p, I, u, h, v),
         k = (0, l.useCallback)(
             (e, t) => {
                 ((0, j.s1)(s, r, e),
@@ -97,7 +97,7 @@ function L(e) {
                         }),
                         E > 0 &&
                             (0, n.jsx)(O, {
-                                buttonRef: I,
+                                buttonRef: p,
                                 isExpanded: C,
                                 numberOfOverflowingTags: E,
                                 onExpandTags: () => {
@@ -110,7 +110,7 @@ function L(e) {
                             }),
                     ],
                 }),
-            m && (0, n.jsx)(y.A, { tags: t, onTagsChange: k, onOpen: L, ref: p }),
+            m && (0, n.jsx)(y.A, { tags: t, onTagsChange: k, onOpen: L, ref: I }),
         ],
     });
 }
@@ -214,7 +214,7 @@ function H(e) {
 }
 function V(e) {
     let { user: t, guildId: i, channelId: l, id: s } = e;
-    return (0, n.jsx)(d.A, { id: s, children: R.intl.format(R.t.TM0XDY, { name: p.Ay.getName(i, l, t) }) });
+    return (0, n.jsx)(d.A, { id: s, children: R.intl.format(R.t.TM0XDY, { name: I.Ay.getName(i, l, t) }) });
 }
 function B(e) {
     let { text: t, className: i } = e;
@@ -242,7 +242,7 @@ function z(e) {
         g = R.intl.string(R.t.xKSfBT),
         f = t ?? "",
         h = "" !== f.trim(),
-        I = l.useCallback(
+        p = l.useCallback(
             (e) => {
                 let t = e.trim();
                 ((0, j.oc)(o, d, "" !== t ? t : void 0),
@@ -250,7 +250,7 @@ function z(e) {
             },
             [o, d, f, u],
         ),
-        p = l.useCallback(() => {
+        I = l.useCallback(() => {
             u({ action: "PRESS_ADD_COMMENTARY", widgetEdited: o });
         }, [o, u]),
         E = (0, n.jsx)("div", { children: (0, n.jsx)(B, { text: h ? f : g, className: a()(F.qC, !h && F.qf) }) });
@@ -262,8 +262,8 @@ function z(e) {
             (0, n.jsx)(V, { user: i, guildId: s, channelId: r, id: c }),
             (0, n.jsx)(m.w, {
                 value: f,
-                onCommit: I,
-                onFocus: p,
+                onCommit: p,
+                onFocus: I,
                 autoComplete: "off",
                 defaultDirty: !0,
                 hideLabel: !0,
@@ -293,8 +293,8 @@ function X(e) {
             className: f,
         } = e,
         h = l.useRef(null),
-        { gameId: p, comment: A, tags: b } = o,
-        { coverImageUrl: k, gameName: y, isLoading: T } = (0, I.A)(p),
+        { gameId: I, comment: A, tags: b } = o,
+        { coverImageUrl: k, gameName: y, isLoading: T } = (0, p.A)(I),
         N = { variant: "heading-sm/medium", color: "text-default" },
         R = c && !u,
         w = 1 === (0, j.cv)(d),
@@ -308,7 +308,7 @@ function X(e) {
             className: null == k || u ? void 0 : U.iL,
             imageSrc: k,
             gameName: y,
-            gameId: p,
+            gameId: I,
             userId: t.id,
             disableInteraction: u,
             hideTooltip: !0,
@@ -330,15 +330,15 @@ function X(e) {
                     children: [
                         u
                             ? (0, n.jsx)(r.D, { ...N, children: y })
-                            : (0, n.jsx)(H, { gameId: p, userId: t.id, gameName: y, ...N }),
+                            : (0, n.jsx)(H, { gameId: I, userId: t.id, gameName: y, ...N }),
                         _
-                            ? (0, n.jsx)(z, { text: A, user: t, guildId: i, channelId: s, widgetType: d, gameId: p })
+                            ? (0, n.jsx)(z, { text: A, user: t, guildId: i, channelId: s, widgetType: d, gameId: I })
                             : (0, n.jsx)(Y, { text: A, user: t, guildId: i, channelId: s }),
                         (0, n.jsx)(L, {
                             tags: b,
                             allowEditing: c,
                             widgetType: d,
-                            gameId: p,
+                            gameId: I,
                             disableInteraction: u,
                             className: F._A,
                         }),

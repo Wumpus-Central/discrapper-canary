@@ -13,14 +13,14 @@ var n = i(477900),
     x = i(561243),
     f = i(783420),
     h = i(206697),
-    I = i(874402),
-    p = i(570002),
+    p = i(874402),
+    I = i(570002),
     A = i(202541),
     j = i(375708);
 function E() {
     let e = (0, g.YW)(),
         { goBack: t } = (0, g.pA)(),
-        i = (0, p.A)(j.intl.string(j.t.pj0XBN));
+        i = (0, I.A)(j.intl.string(j.t.pj0XBN));
     return (0, n.jsx)(f.A, {
         subscriptionTier: A.pe.TIER_2,
         onClick: h.t,
@@ -29,7 +29,7 @@ function E() {
         },
         children: (l) => {
             let { onClick: s } = l;
-            return (0, n.jsx)(I.$, {
+            return (0, n.jsx)(p.$, {
                 isVisible: e,
                 labelId: "premium-try-it-out-footer-bar-label",
                 noticeText: j.intl.string(j.t.X0ir7L),
@@ -96,7 +96,7 @@ function Y(e) {
         })(),
         h = (0, u.X)("UserProfileModalV2SaveBar"),
         {
-            hasUnsavedProfileChanges: p,
+            hasUnsavedProfileChanges: I,
             canSubmitProfileChanges: A,
             hasBadgeChangesToSave: E,
         } = (0, r.cf)([U.A], () => ({
@@ -104,7 +104,7 @@ function Y(e) {
             canSubmitProfileChanges: U.A.canSubmit(),
             hasBadgeChangesToSave: (0, N.gz)(U.A.getPendingChanges()),
         })),
-        b = h && p,
+        b = h && I,
         k = x || b || E,
         Y = !(x && !f) && (!h || A),
         z = l.useCallback(() => {
@@ -216,7 +216,7 @@ function Y(e) {
                 }
             );
         }, []),
-        (0, n.jsx)(I.$, {
+        (0, n.jsx)(p.$, {
             preventsPopoutDismiss: !0,
             isVisible: k,
             labelId: "user-profile-save-reset-toolbar-label",

@@ -13,8 +13,8 @@ var n = i(477900),
     x = i(695904),
     f = i(116331),
     h = i(713348),
-    I = i(827258),
-    p = i(17928),
+    p = i(827258),
+    I = i(17928),
     A = i(652215),
     j = i(28863),
     E = i(517164),
@@ -174,15 +174,15 @@ function es(e) {
     let { user: t, currentUser: i, displayProfile: l, guildId: s, channelId: a, onClose: r } = e,
         { live: o, recent: d, stream: c } = (0, k.A)(t.id),
         { voiceChannel: u, voiceActivity: g } = (0, y.A)({ userId: t.id, guildId: s }),
-        m = (0, p.bG)([E.A], () => E.A.isFetchingUserOutbox(t.id)),
+        m = (0, I.bG)([E.A], () => E.A.isFetchingUserOutbox(t.id)),
         x = t.id === i.id,
-        f = (0, p.bG)([S.A, C.A], () => {
+        f = (0, I.bG)([S.A, C.A], () => {
             let e = x ? S.A.getStatus() : C.A.getStatus(t.id);
             return e === A.clD.OFFLINE || e === A.clD.INVISIBLE;
         }),
         h = o.length > 0 || null != c,
-        I = l?.private !== !0 && null == c && null == g && null != u,
-        L = !f && (h || I),
+        p = l?.private !== !0 && null == c && null == g && null != u,
+        L = !f && (h || p),
         _ = d.length > 0;
     return L || _ || !m
         ? L || _ || m
@@ -219,7 +219,7 @@ function es(e) {
                                                 `live-${l}`,
                                             ),
                                         ),
-                                        I &&
+                                        p &&
                                             (0, n.jsx)("li", {
                                                 children: (0, n.jsx)(w.A, {
                                                     user: t,
@@ -347,7 +347,7 @@ function em(e) {
 var ex = i(398590),
     ef = i(345942),
     eh = i(51943);
-function eI(e) {
+function ep(e) {
     let { user: t, onClose: i } = e,
         { trackUserProfileAction: l } = (0, g.NJ)(),
         { mutualGuilds: s, isFetching: a } = (0, eo.A)(t);
@@ -388,7 +388,7 @@ function eI(e) {
                   : (0, n.jsx)(Q, {}),
     });
 }
-var ep = i(763432),
+var eI = i(763432),
     eA = i(132500),
     ej = i(777480),
     eE = i(821609),
@@ -502,7 +502,7 @@ let e6 = l.memo(function (e) {
 function e9(e) {
     let { items: t, profileOwner: i, guildId: s, showEditingControls: a, lastViewedAt: r } = e,
         o = eB.default.getCurrentUser(),
-        { defaultWishlistId: d } = (0, p.cf)([eX.A], () => ({ defaultWishlistId: eX.A.getFirstWishlistId(i.id) })),
+        { defaultWishlistId: d } = (0, I.cf)([eX.A], () => ({ defaultWishlistId: eX.A.getFirstWishlistId(i.id) })),
         { isDragging: c } = (0, eQ.V)((e) => ({ isDragging: e.isDragging() })),
         [u, g] = l.useState([]),
         m = l.useCallback((e) => {
@@ -569,11 +569,11 @@ var tn = i(862772),
     tx = i(95817),
     tf = i(146423),
     th = i(74135),
-    tI = i(460442),
-    tp = i(699976),
+    tp = i(460442),
+    tI = i(699976),
     tA = i(964164),
     tj = i(880465);
-let tE = tp.Z.SIZE_90;
+let tE = tI.Z.SIZE_90;
 function tv(e) {
     let {
             sku: t,
@@ -589,9 +589,9 @@ function tv(e) {
         } = e,
         { trackUserProfileWishlistAction: f } = (0, g.NJ)(),
         h = (0, ti.Ar)(),
-        I = (0, ey.A)(() => (0, eA.A)()),
-        { handleVisibilityChange: p } = (0, tx.G)(I),
-        j = (0, ts.K)(p, 0.5, h?.surface != null),
+        p = (0, ey.A)(() => (0, eA.A)()),
+        { handleVisibilityChange: I } = (0, tx.G)(p),
+        j = (0, ts.K)(I, 0.5, h?.surface != null),
         E = l.useCallback(() => {
             (f({
                 wishlistId: m,
@@ -609,12 +609,12 @@ function tv(e) {
                         item_source: h.itemSource,
                         click_type: "add_to_wishlist",
                         product_line: t.productLine,
-                        card_id: I,
+                        card_id: p,
                         impression_session_id: h.impressionSessionId,
                         location_stack: h.analyticsLocations,
                     }),
                 c());
-        }, [c, t.id, t.productLine, f, m, h, I]);
+        }, [c, t.id, t.productLine, f, m, h, p]);
     return (0, n.jsx)("div", {
         ref: j,
         children: (0, n.jsx)(tf.A, {
@@ -666,7 +666,7 @@ function tC(e) {
         onClick: f,
         isHoveringOrFocusing: s,
         ...g,
-        children: [(0, n.jsx)(tI.oU, { isHoveringOrFocusing: s, loading: m }), !s && !m && u],
+        children: [(0, n.jsx)(tp.oU, { isHoveringOrFocusing: s, loading: m }), !s && !m && u],
     });
 }
 function tS(e) {
@@ -718,7 +718,7 @@ function ty(e) {
 var tT = i(609965);
 function tN(e) {
     let { wishlist: t, guildId: i, handleOpenUserProfileModal: l, analyticsLocations: s, className: r, items: o } = e,
-        d = (0, p.bG)([eB.default], () => eB.default.getUser(t?.userId));
+        d = (0, I.bG)([eB.default], () => eB.default.getUser(t?.userId));
     return (0, n.jsx)("ul", {
         className: a()(tT.Vg, r),
         children: o.map((e, a) => {
@@ -767,7 +767,7 @@ function tG(e) {
                 s = (i?.items.length ?? 0) >= 3,
                 [a, r] = l.useState(!1);
             !n || s || a || r(!0);
-            let o = (0, p.bG)(
+            let o = (0, I.bG)(
                     [eX.A],
                     () => (null != i ? new Date(eX.A.getWishlistSettings(t, i.id)?.updated_at ?? 0).valueOf() : 0),
                     [i, t],
@@ -1174,12 +1174,12 @@ function t8(e) {
             handleAddNitroToWishlist: c,
         } = e,
         u = a.id,
-        m = (0, p.bG)([eX.A], () => eX.A.getWishlistSettings(s.id, u)),
+        m = (0, I.bG)([eX.A], () => eX.A.getWishlistSettings(s.id, u)),
         { trackUserProfileWishlistAction: x } = (0, g.NJ)(),
         f = !1 === s.nsfwAllowed,
-        [h, I] = l.useState(!0);
+        [h, p] = l.useState(!0);
     l.useEffect(() => {
-        m?.visibility != null && I(m.visibility === ej.a.PUBLIC);
+        m?.visibility != null && p(m.visibility === ej.a.PUBLIC);
     }, [m?.visibility]);
     let A = l.useCallback(
             (e) => {
@@ -1192,7 +1192,7 @@ function t8(e) {
         E = l.useCallback(() => {
             if (null == u) return;
             let e = h ? ej.a.PRIVATE : ej.a.PUBLIC;
-            (I(!h),
+            (p(!h),
                 eF.A.updateWishlistVisibility(u, e),
                 x({
                     wishlistId: u,
@@ -1260,7 +1260,7 @@ function t5(e) {
     let { profileOwner: t, guildId: i } = e,
         s = l.useRef(null);
     (0, eK.i)({ containerRef: s, itemType: "WISHLIST_ITEM" });
-    let { wishlistId: r, currentUser: o } = (0, p.cf)([eX.A, eB.default], () => ({
+    let { wishlistId: r, currentUser: o } = (0, I.cf)([eX.A, eB.default], () => ({
             wishlistId: eX.A.getFirstWishlistId(t.id),
             currentUser: eB.default.getCurrentUser(),
         })),
@@ -1271,13 +1271,13 @@ function t5(e) {
     }, [t.id]);
     let u = (0, eq.A)(t.id),
         { wishlist: g, wasFetched: m, error: f } = (0, eH.fw)({ wishlistId: r, userId: t.id }),
-        [h, I] = l.useState(!1);
-    (m && !h && I(!0), (0, eW.A)(g));
+        [h, p] = l.useState(!1);
+    (m && !h && p(!0), (0, eW.A)(g));
     let A = (function (e) {
             let { wishlist: t, profileOwner: i, currentUser: n } = e,
                 s = i.id === n?.id,
                 a = l.useMemo(() => (t?.userId != null ? [t.userId] : []), [t]),
-                r = (0, p.bG)([eG.A], () => eG.A.getDetectableIdsToApplicationIds()),
+                r = (0, I.bG)([eG.A], () => eG.A.getDetectableIdsToApplicationIds()),
                 o = l.useMemo(() => {
                     let e = [];
                     for (let i of t?.items ?? [])
@@ -1374,9 +1374,9 @@ function t4(e) {
         : l === en.RP.MUTUAL_FRIENDS
           ? (0, n.jsx)(em, { user: t, guildId: a, channelId: r, onClose: o })
           : l === en.RP.MUTUAL_GUILDS
-            ? (0, n.jsx)(eI, { user: t, onClose: o })
+            ? (0, n.jsx)(ep, { user: t, onClose: o })
             : l === en.RP.WIDGETS
-              ? (0, n.jsx)(ep.A, { user: t, guildId: a, channelId: r })
+              ? (0, n.jsx)(eI.A, { user: t, guildId: a, channelId: r })
               : l === en.RP.WISHLIST
                 ? (0, n.jsx)(t5, { profileOwner: t, guildId: a })
                 : null;
@@ -1387,7 +1387,7 @@ function t6(e) {
             currentUser: i,
             displayProfile: s,
             guildId: a,
-            channelId: p,
+            channelId: I,
             items: A,
             initialSection: j,
             onClose: E,
@@ -1434,7 +1434,7 @@ function t6(e) {
                                             : e.text,
                                     children: [
                                         e.text,
-                                        !0 === e.showNewContentDot && (0, n.jsx)(I.A, { className: t7.Pf }),
+                                        !0 === e.showNewContentDot && (0, n.jsx)(p.A, { className: t7.Pf }),
                                     ],
                                 },
                                 e.section,
@@ -1453,7 +1453,7 @@ function t6(e) {
                             currentUser: i,
                             displayProfile: s,
                             guildId: a,
-                            channelId: p,
+                            channelId: I,
                             section: T.section,
                             onClose: E,
                         }),

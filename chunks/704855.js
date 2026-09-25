@@ -73,11 +73,11 @@ function f() {
                         A = Number.isFinite(N) && Math.abs(N - i) > 16;
                     if (!v && (!w || A)) return;
                     b = Math.min(1, Math.max(0, b + ((w ? 1 : -1) * k) / 260));
-                    let S = t.getBoundingClientRect(),
-                        E = S.width > 0 ? S.width / f : 1,
+                    let E = t.getBoundingClientRect(),
+                        S = E.width > 0 ? E.width / f : 1,
                         C = r.getBoundingClientRect(),
-                        I = (C.left - S.left) / E,
-                        T = (1 - Math.min(1, Math.abs(I + C.width / E / 2 - i) / 16)) * b;
+                        I = (C.left - E.left) / S,
+                        T = (1 - Math.min(1, Math.abs(I + C.width / S / 2 - i) / 16)) * b;
                     if (T < 0.01) {
                         (v && l.clearRect(0, 0, f, m), (v = !1));
                         return;

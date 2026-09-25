@@ -1462,8 +1462,8 @@ let l5 = [
         "Verdana",
         "Work Sans",
     ],
-    l3 = ["monospace", "sans-serif", "serif"];
-function l9(l, t) {
+    l9 = ["monospace", "sans-serif", "serif"];
+function l3(l, t) {
     return ((l.font = `72px ${t}`), l.measureText("WwMmLli0Oo").width);
 }
 let l4 = (l, t, d, i) => {
@@ -1722,10 +1722,10 @@ let ts = {
                     l1(async ({ iframe: t }) => {
                         let d = t.createElement("canvas").getContext("2d");
                         if (!d) return void l(null);
-                        let i = l3.map((l) => l9(d, l)),
+                        let i = l9.map((l) => l3(d, l)),
                             e = {};
                         (l5.forEach((l) => {
-                            let t = l9(d, l);
+                            let t = l3(d, l);
                             i.includes(t) || (e[l] = t);
                         }),
                             l(e));

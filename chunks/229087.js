@@ -12,15 +12,15 @@ function u(e) {
         x = (0, o.W3)(t);
     if (null == x) return null;
     let { getText: f, icon: h } = x,
-        I = "filled" === i;
+        p = "filled" === i;
     return (0, n.jsxs)("li", {
-        className: g ?? (I ? c.zE : c.Tc),
+        className: g ?? (p ? c.zE : c.Tc),
         ref: m,
         children: [
-            (0, n.jsx)(h, { size: "xxs", color: I ? "currentColor" : void 0 }),
+            (0, n.jsx)(h, { size: "xxs", color: p ? "currentColor" : void 0 }),
             (0, n.jsx)(l.E, {
                 variant: "text-xxs/medium",
-                color: I ? "text-overlay-light" : "text-subtle",
+                color: p ? "text-overlay-light" : "text-subtle",
                 children: f(),
             }),
             null != u &&
@@ -29,7 +29,7 @@ function u(e) {
                     ariaHidden: !0,
                     children: (0, n.jsx)(a.D, {
                         onClick: u,
-                        className: I ? c.to : c.DT,
+                        className: p ? c.to : c.DT,
                         "aria-label": d.intl.formatToPlainString(d.t.GCn1ne, { tag: f() }),
                         children: (0, n.jsx)(r.P, { size: "xxs", color: "currentColor" }),
                     }),

@@ -45,8 +45,8 @@ function k(e) {
 function N(e) {
     let { settings: t, tiers: l, choices: r, disabled: d, onChange: c, placement: f, open: m, entered: N } = e,
         [w, A] = a.useState(!1),
-        S = k(w),
-        E = h.ks.indexOf(t.tier),
+        E = k(w),
+        S = h.ks.indexOf(t.tier),
         C = w ? s.t : u._,
         I = h.ks.map(x.eQ),
         T = (0, x.is)(t.tier),
@@ -59,9 +59,9 @@ function N(e) {
             role: "dialog",
             "aria-label": j.intl.string(b.default["2NWMqY"]),
             children: [
-                S.mounted
+                E.mounted
                     ? (0, n.jsx)("div", {
-                          className: i()(y.Nr, y.uO, { [y.Zr]: w && S.entered, [y.GF]: !w }),
+                          className: i()(y.Nr, y.uO, { [y.Zr]: w && E.entered, [y.GF]: !w }),
                           children: (0, n.jsx)(p.u1, { settings: t, tiers: l, choices: r, disabled: d, onChange: c }),
                       })
                     : null,
@@ -123,7 +123,7 @@ function N(e) {
                                     ],
                                 }),
                                 (0, n.jsx)(g.A, {
-                                    activeIndex: E,
+                                    activeIndex: S,
                                     stops: I,
                                     ariaLabel: j.intl.string(b.default.GDs9Vq),
                                     disabled: d,
@@ -145,7 +145,7 @@ function w(e) {
         h = a.useRef(null),
         [x, g] = (0, p.kn)(t, s),
         [v, w] = a.useState(!1),
-        { mounted: A, entered: S } = k(v);
+        { mounted: A, entered: E } = k(v);
     return (0, n.jsx)(d.Y, {
         targetElementRef: h,
         position: "top",
@@ -163,7 +163,7 @@ function w(e) {
                 onChange: g,
                 placement: t,
                 open: v,
-                entered: S,
+                entered: E,
             });
         },
         children: (e, t) => {

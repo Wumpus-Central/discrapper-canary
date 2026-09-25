@@ -22,11 +22,11 @@ function f(e) {
             item: e.getItem(),
             sourceClientOffset: e.getSourceClientOffset(),
         })),
-        I = (0, a.bG)([d.default], () => d.default.getCurrentUser()),
-        p = (0, r.VU)(),
+        p = (0, a.bG)([d.default], () => d.default.getCurrentUser()),
+        I = (0, r.VU)(),
         A = l.useMemo(
             () =>
-                null == I || null == f
+                null == p || null == f
                     ? null
                     : (function (e, t) {
                           let { id: i, itemType: l, itemPreviewProps: s } = e;
@@ -96,8 +96,8 @@ function f(e) {
                               });
                           }
                           return null;
-                      })(f, I),
-            [f, I],
+                      })(f, p),
+            [f, p],
         ),
         j = l.useRef(null),
         E = l.useCallback(() => {
@@ -118,7 +118,7 @@ function f(e) {
         return null;
     null == j.current && E();
     let { x: v, y: C } = j.current ?? { x: 0, y: 0 },
-        S = h.x - v - 60 * !!p,
+        S = h.x - v - 60 * !!I,
         b = h.y - C;
     return (0, n.jsx)("div", { className: x.kL, style: { transform: `translate3d(${S}px, ${b}px, 0)` }, children: A });
 }

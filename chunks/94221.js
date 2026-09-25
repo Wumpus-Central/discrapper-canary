@@ -1,4 +1,4 @@
-n.d(t, { I: () => r, p: () => a });
+n.d(t, { I: () => r, p: () => s });
 var l = n(842209),
     i = n(458524);
 function r(e, t) {
@@ -12,9 +12,9 @@ function r(e, t) {
     })(e, t);
     return null == n ? null : { commandId: e.id, applicationId: e.applicationId, commandText: n };
 }
-function a(e, t, n) {
+function s(e, t, n) {
     if (null == n || !(0, i.l)(n, t)) return null;
-    let { command: r, section: a } = l.EW({ channel: e, type: "channel" }, n.commandId, n.applicationId);
-    return null == r ? null : { command: r, section: a ?? null };
+    let { command: r, section: s } = l.EW({ channel: e, type: "channel" }, n.commandId, n.applicationId);
+    return null == r ? null : { command: r, section: s ?? null };
 }
 n(827669);
