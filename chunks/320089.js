@@ -1,4 +1,4 @@
-r.d(t, { A: () => er });
+r.d(t, { A: () => el });
 var n = r(477900),
     l = r(582128),
     s = r(503698),
@@ -20,15 +20,15 @@ var n = r(477900),
     v = r(975571),
     _ = r(304210),
     I = r(324157),
-    L = r(727142);
-let y = function (e) {
+    y = r(727142);
+let L = function (e) {
     let { text: t, icon: r, indicatorColor: l } = e;
     return (0, n.jsxs)("span", {
-        className: L.I,
+        className: y.I,
         children: [
             null != l &&
                 (0, n.jsx)("svg", {
-                    className: L.q,
+                    className: y.q,
                     viewBox: "0 0 8 8",
                     "aria-hidden": !0,
                     children: (0, n.jsx)("circle", { cx: "4", cy: "4", r: "3.5", fill: l }),
@@ -43,7 +43,7 @@ var f = r(435558),
     O = r(577568);
 let j = 2 * Math.PI * 57,
     b = "var(--status-positive)",
-    N = function (e) {
+    P = function (e) {
         let { current: t, target: r, progressColor: l = b, children: s } = e,
             o = j * (1 - (r <= 0 ? 0.025 : (0, f.clamp)(t / r, 0.025, 1))),
             u = (0, i.bG)([k.Ay], () => k.Ay.useReducedMotion);
@@ -78,31 +78,31 @@ let j = 2 * Math.PI * 57,
             ],
         });
     };
-var P = r(295986);
+var N = r(295986);
 let B = function (e) {
     let { assetPath: t, progress: r, progressText: l, progressColor: s } = e,
-        a = (0, n.jsx)("img", { src: t, alt: "", className: P.C, width: 120, height: 120 });
+        a = (0, n.jsx)("img", { src: t, alt: "", className: N.C, width: 120, height: 120 });
     return null == r
         ? a
         : (0, n.jsx)("div", {
-              className: P.U,
+              className: N.U,
               role: "progressbar",
               "aria-valuenow": r.current,
               "aria-valuemin": 0,
               "aria-valuemax": r.target,
               "aria-valuetext": l ?? void 0,
-              children: (0, n.jsx)(N, { current: r.current, target: r.target, progressColor: s, children: a }),
+              children: (0, n.jsx)(P, { current: r.current, target: r.target, progressColor: s, children: a }),
           });
 };
 var T = r(821609),
     R = r(450481),
     G = r(375708),
-    H = r(634293);
-function w(e) {
+    w = r(634293);
+function H(e) {
     let { product: t } = e,
         { handleUseNow: r, isApplying: l } = (0, R.p)({ product: t });
     return (0, n.jsx)("div", {
-        className: H.l,
+        className: w.l,
         children: (0, n.jsx)(T.$, {
             variant: "overlay-secondary",
             onClick: () => {
@@ -119,10 +119,10 @@ function w(e) {
 let M = function (e) {
     let { promotionRewardStatus: t, rewardProduct: r, buttonVariant: l, isClaiming: s, onClaim: a } = e;
     return t === S.GM.CONSUMED && null != r
-        ? (0, n.jsx)(w, { product: r })
+        ? (0, n.jsx)(H, { product: r })
         : t === S.GM.EARNED
           ? (0, n.jsx)("div", {
-                className: H.l,
+                className: w.l,
                 children: (0, n.jsx)(T.$, {
                     text: G.intl.string(G.t.pVBlCH),
                     variant: l,
@@ -143,12 +143,13 @@ var D = r(691540),
     W = r(839534),
     X = r(674658),
     Y = r(652215),
-    $ = r(61750),
-    q = r(119739);
-let Z = { [x.RB.LIGHT]: "theme-light", [x.RB.DARK]: "theme-dark" },
-    J = { [x.RB.LIGHT]: "overlay-secondary", [x.RB.DARK]: "overlay-primary" },
-    Q = x.RB.DARK;
-function ee(e) {
+    $ = r(497901),
+    q = r(61750),
+    Z = r(119739);
+let J = { [x.RB.LIGHT]: "theme-light", [x.RB.DARK]: "theme-dark" },
+    Q = { [x.RB.LIGHT]: "overlay-secondary", [x.RB.DARK]: "overlay-primary" },
+    ee = x.RB.DARK;
+function et(e) {
     let {
             promotion: t,
             assetPath: r,
@@ -175,11 +176,11 @@ function ee(e) {
                 direction: "vertical",
                 gap: 8,
                 align: "start",
-                className: q._,
+                className: Z._,
                 children: [
                     null != C &&
                         (0, n.jsx)(u.E, { variant: "text-md/bold", color: "text-strong", children: (0, E.U)(C) }),
-                    null != d && (0, n.jsx)(y, { icon: c.ClockIcon, text: d }),
+                    null != d && (0, n.jsx)(L, { icon: c.ClockIcon, text: d }),
                     t.rewardStatus !== S.GM.CONSUMED &&
                         (0, n.jsx)(M, {
                             promotionRewardStatus: t.rewardStatus,
@@ -193,7 +194,7 @@ function ee(e) {
         ],
     });
 }
-function et(e) {
+function er(e) {
     let {
             promotion: t,
             assetPath: r,
@@ -206,7 +207,7 @@ function et(e) {
             timeLeftText: A,
             contentThemeClassName: _,
             rewardProduct: I,
-            buttonVariant: L,
+            buttonVariant: y,
             helpCenterId: f,
             isClaiming: k,
             onClaim: O,
@@ -218,7 +219,7 @@ function et(e) {
         padding: 24,
         align: "center",
         justify: "space-between",
-        className: a()(q.N, _),
+        className: a()(Z.N, _),
         style: { backgroundImage: `url(${i})` },
         children: [
             (0, n.jsx)(B, { assetPath: r, progress: l, progressText: C, progressColor: s }),
@@ -226,7 +227,7 @@ function et(e) {
                 direction: "vertical",
                 gap: 8,
                 align: "start",
-                className: q._,
+                className: Z._,
                 children: [
                     (0, n.jsx)(u.E, { variant: "text-md/bold", color: "text-strong", children: (0, E.U)(h) }),
                     null != x &&
@@ -237,8 +238,8 @@ function et(e) {
                         align: "center",
                         wrap: !0,
                         children: [
-                            null != C && (0, n.jsx)(y, { text: C, indicatorColor: s ?? b }),
-                            null != A && (0, n.jsx)(y, { icon: c.ClockIcon, text: A }),
+                            null != C && (0, n.jsx)(L, { text: C, indicatorColor: s ?? b }),
+                            null != A && (0, n.jsx)(L, { icon: c.ClockIcon, text: A }),
                         ],
                     }),
                 ],
@@ -252,7 +253,7 @@ function et(e) {
                     (0, n.jsx)(M, {
                         promotionRewardStatus: t.rewardStatus,
                         rewardProduct: I,
-                        buttonVariant: L,
+                        buttonVariant: y,
                         isClaiming: k,
                         onClaim: O,
                     }),
@@ -274,15 +275,77 @@ function et(e) {
         ],
     });
 }
-let er = function (e) {
+function en(e) {
+    let { variant: t, promotion: r, collectAndClaim: l, rewardProduct: s, isClaiming: a, onClaim: o } = e,
+        u = (0, i.bG)([A.default], () => A.default.locale),
+        { shared: c } = l,
+        { assets: d, style: g } = c.progressIndicator,
+        m = c.helpCenter?.id,
+        p = g?.contentTheme ?? ee,
+        h = (function (e, t) {
+            let { hiddenUrl: r, revealedUrl: n } = t;
+            switch (e.rewardStatus) {
+                case S.GM.IN_PROGRESS:
+                    return { assetPath: r ?? n, showProgressRing: !0, timeLeftDate: e.endsAt };
+                case S.GM.EARNED:
+                    return { assetPath: r ?? n, showProgressRing: !0, timeLeftDate: e.redemptionEndsAt ?? e.endsAt };
+                case S.GM.CONSUMED:
+                    return { assetPath: n, showProgressRing: !1, timeLeftDate: null };
+                default:
+                    return null;
+            }
+        })(r, d.rewardPreview),
+        E = (0, $.A)(h?.timeLeftDate);
+    if (null == h) return null;
+    let { progress: x } = r;
+    if (
+        (null == x &&
+            (r.rewardStatus === S.GM.EARNED || r.rewardStatus === S.GM.CONSUMED) &&
+            (x = { current: 4, target: 4, label: "collected" }),
+        h.showProgressRing && null == x)
+    )
+        return null;
+    let C = h.showProgressRing && null != x,
+        {
+            title: v,
+            description: _,
+            progressText: y,
+            timeLeftText: L,
+        } = (0, I.MZ)({
+            promotion: r,
+            promotionProgress: x,
+            progressIndicator: c.progressIndicator,
+            helpCenterId: m,
+            daysRemaining: E,
+            locale: u,
+        }),
+        f = {
+            promotion: r,
+            assetPath: h.assetPath,
+            progress: C ? x : null,
+            progressColor: g?.progressColor,
+            backgroundUrl: d.backgroundUrl,
+            title: v,
+            description: _,
+            progressText: y,
+            timeLeftText: L,
+            contentThemeClassName: J[p],
+            rewardProduct: s,
+            buttonVariant: Q[p],
+            helpCenterId: m,
+            isClaiming: a,
+            onClaim: o,
+        };
+    return "condensed" === t ? (0, n.jsx)(et, { ...f }) : (0, n.jsx)(er, { ...f });
+}
+let el = function (e) {
     let { variant: t, collectionId: r } = e,
         s = (0, _.S)(),
-        a = (0, i.bG)([A.default], () => A.default.locale),
-        { analyticsLocations: o } = (0, h.Ay)(),
+        { analyticsLocations: a } = (0, h.Ay)(),
         {
-            onClaim: u,
-            isClaiming: c,
-            rewardProduct: d,
+            onClaim: i,
+            isClaiming: o,
+            rewardProduct: u,
         } = (function (e, t) {
             let [r, n] = l.useState(!1),
                 [s, a] = l.useState(0),
@@ -326,69 +389,13 @@ let er = function (e) {
             s,
             l.useCallback(
                 (e) => {
-                    (0, $.A)({ product: e, analyticsLocations: o });
+                    (0, q.A)({ product: e, analyticsLocations: a });
                 },
-                [o],
+                [a],
             ),
         ),
-        g = (0, C.XF)(s);
-    if (null == s || null == g || null == r || g.collectionId !== r) return null;
-    let { shared: m } = g,
-        { assets: p, style: E } = m.progressIndicator,
-        x = m.helpCenter?.id,
-        v = E?.contentTheme ?? Q,
-        L = (function (e, t) {
-            let { hiddenUrl: r, revealedUrl: n } = t;
-            switch (e.rewardStatus) {
-                case S.GM.IN_PROGRESS:
-                    return { assetPath: r ?? n, showProgressRing: !0, timeLeftDate: e.endsAt };
-                case S.GM.EARNED:
-                    return { assetPath: r ?? n, showProgressRing: !0, timeLeftDate: e.redemptionEndsAt ?? e.endsAt };
-                case S.GM.CONSUMED:
-                    return { assetPath: n, showProgressRing: !1, timeLeftDate: null };
-                default:
-                    return null;
-            }
-        })(s, p.rewardPreview);
-    if (null == L) return null;
-    let { progress: y } = s;
-    if (
-        (null == y &&
-            (s.rewardStatus === S.GM.EARNED || s.rewardStatus === S.GM.CONSUMED) &&
-            (y = { current: 4, target: 4, label: "collected" }),
-        L.showProgressRing && null == y)
-    )
-        return null;
-    let f = L.showProgressRing && null != y,
-        {
-            title: k,
-            description: O,
-            progressText: j,
-            timeLeftText: b,
-        } = (0, I.MZ)({
-            promotion: s,
-            promotionProgress: y,
-            progressIndicator: m.progressIndicator,
-            helpCenterId: x,
-            timeLeftDate: L.timeLeftDate,
-            locale: a,
-        }),
-        N = {
-            promotion: s,
-            assetPath: L.assetPath,
-            progress: f ? y : null,
-            progressColor: E?.progressColor,
-            backgroundUrl: p.backgroundUrl,
-            title: k,
-            description: O,
-            progressText: j,
-            timeLeftText: b,
-            contentThemeClassName: Z[v],
-            rewardProduct: d,
-            buttonVariant: J[v],
-            helpCenterId: x,
-            isClaiming: c,
-            onClaim: u,
-        };
-    return "condensed" === t ? (0, n.jsx)(ee, { ...N }) : (0, n.jsx)(et, { ...N });
+        c = (0, C.XF)(s);
+    return null == s || null == c || null == r || c.collectionId !== r
+        ? null
+        : (0, n.jsx)(en, { variant: t, promotion: s, collectAndClaim: c, rewardProduct: u, isClaiming: o, onClaim: i });
 };

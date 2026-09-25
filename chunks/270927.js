@@ -28,7 +28,7 @@ var l = n(477900),
     b = n(375708),
     j = n(812095),
     R = n(240248),
-    M = n(58703),
+    M = n(808598),
     O = n(287809),
     L = n(158045),
     k = n(583741),
@@ -326,18 +326,20 @@ function er(e) {
                                                   if (e.rewardStatus !== g.GM.IN_PROGRESS) return null;
                                                   let t = e.progress;
                                                   if (null == t || null == e.endsAt) return null;
-                                                  let n = Math.ceil((0, M.c_)(e.endsAt, new Date()));
-                                                  return {
-                                                      Icon: S.TagIcon,
-                                                      text: b.intl.formatToPlainString(b.t.jidBDk, {
-                                                          current: t.current,
-                                                          target: t.target,
-                                                          numDays: n,
-                                                      }),
-                                                      gradientColor: "promotion",
-                                                      textVariant: "text-sm/normal",
-                                                      textColor: "text-overlay-light",
-                                                  };
+                                                  let n = (0, M.X)(e.endsAt);
+                                                  return null == n
+                                                      ? null
+                                                      : {
+                                                            Icon: S.TagIcon,
+                                                            text: b.intl.formatToPlainString(b.t.jidBDk, {
+                                                                current: t.current,
+                                                                target: t.target,
+                                                                numDays: n,
+                                                            }),
+                                                            gradientColor: "promotion",
+                                                            textVariant: "text-sm/normal",
+                                                            textColor: "text-overlay-light",
+                                                        };
                                               })(e);
                                     case A.hE.TARGETED_OFFER: {
                                         let e = n.reward,

@@ -1471,7 +1471,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e6 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eW.A().log(
-    `[BUILD INFO] Release Channel: ${e6}, Build Number: 621449, Version Hash: bc8e7d73d7bc38c4146990aa6e9234944491ae49`,
+    `[BUILD INFO] Release Channel: ${e6}, Build Number: 621468, Version Hash: cce9a64d2b1f06276dc147cd8d1b8f9a26aac602`,
 ),
     M.A.setTags({ appContext: F.QCW }),
     ep.A.initBasic(),
@@ -19554,34 +19554,28 @@ let gd = (e) => {
             })
         );
     };
-var gu = n(496431),
-    g_ = n(58703),
+var gu = n(58703),
+    g_ = n(497901),
     gE = n(870308),
     gA = n(998694),
     gh = n(731466);
 function gI(e) {
-    let { badgeIcon: t, badgeText: n, badgeCountdownEndsAt: i } = e,
-        r = null != t && "" !== t ? L[t] : void 0,
-        a =
-            (function (e) {
-                let t,
-                    n = null == e,
-                    i = (0, gu.A)(e ?? 0, 6e4, void 0, n),
-                    { days: r, hours: a, minutes: s, seconds: l } = i;
-                return n || (0 === r && 0 === a && 0 === s && 0 === l)
-                    ? null
-                    : (0, g_.uN)(
-                          ((t = i.hours > 0 || i.minutes > 0 || i.seconds > 0),
-                          { days: Math.max(1, i.days + +!!t), hours: 0, minutes: 0, seconds: 0 }),
-                          { days: tS.t.xF3JRh, hours: tS.t.qojQSe, minutes: tS.t.JXC6bv },
-                      );
-            })(i) ?? n;
+    let t,
+        { badgeIcon: n, badgeText: i, badgeCountdownEndsAt: r } = e,
+        a = null != n && "" !== n ? L[n] : void 0,
+        s =
+            (null == (t = (0, g_.A)(r))
+                ? null
+                : (0, gu.uN)(
+                      { days: t, hours: 0, minutes: 0, seconds: 0 },
+                      { days: tS.t.xF3JRh, hours: tS.t.qojQSe, minutes: tS.t.JXC6bv },
+                  )) ?? i;
     return (0, y.jsx)("div", {
         className: gh.newBadge,
         children: (0, y.jsx)(m3.E, {
-            type: null != a && "" !== a ? { text: a } : "new",
+            type: null != s && "" !== s ? { text: s } : "new",
             variant: "expressive",
-            icon: r,
+            icon: a,
         }),
     });
 }
@@ -21819,7 +21813,7 @@ let Cn = "isHideDevBanner",
                     className: to()(Ct.Wz, Ct.mr),
                     children: [
                         (0, y.jsx)(Ce, { className: Ct.Kk }),
-                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "621449" }),
+                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "621468" }),
                         (0, y.jsx)(r, {}),
                     ],
                 })
@@ -48211,7 +48205,7 @@ let Fu = (0, tj.Fe)({
             n.e("209729"),
             n.e("918024"),
             n.e("736926"),
-            n.e("214866"),
+            n.e("656931"),
             n.e("458273"),
             n.e("93461"),
             n.e("208018"),
