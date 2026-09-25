@@ -1,10 +1,10 @@
-n.d(t, { A: () => r });
+n.d(t, { A: () => s });
 var l = n(477900);
 n(582128);
 var a = n(503698),
-    s = n.n(a),
-    i = n(13699);
-function r(e) {
+    i = n.n(a),
+    r = n(13699);
+function s(e) {
     let { className: t, size: n = 20 } = e;
     return (0, l.jsxs)("svg", {
         className: t,
@@ -23,12 +23,12 @@ function r(e) {
             (0, l.jsx)("path", {
                 fill: "currentColor",
                 d: "M7.6 2.32a.5.5 0 0 1 .94 0L9.17 4l1.66.62a.5.5 0 0 1 0 .93l-1.66.63-.63 1.66a.5.5 0 0 1-.93 0l-.63-1.66-1.66-.63a.5.5 0 0 1 0-.93l1.66-.62.63-1.67Z",
-                className: s()(i.Z$, i.KH),
+                className: i()(r.Z$, r.KH),
             }),
             (0, l.jsx)("path", {
                 fill: "currentColor",
                 d: "M17.48 14.36a.56.56 0 0 1 1.04 0l.85 2.27 2.27.85c.48.18.48.86 0 1.04l-2.27.85-.85 2.27a.56.56 0 0 1-1.04 0l-.85-2.27-2.27-.85a.56.56 0 0 1 0-1.04l2.27-.85.85-2.27Z",
-                className: s()(i.Z$, i.Q_),
+                className: i()(r.Z$, r.Q_),
             }),
         ],
     });

@@ -31,8 +31,8 @@ function A(e) {
             className: C,
             isApplicationHome: y,
             enablePremiumBrandRefresh: _,
-            headerClassName: R,
-            headingVariant: P = "heading-md/normal",
+            headerClassName: P,
+            headingVariant: R = "heading-md/normal",
             headingColor: S,
         } = e,
         L = (0, o.bG)([m.A], () => m.A.getPremiumTypeSubscription()),
@@ -55,9 +55,9 @@ function A(e) {
             l = a === T.Vk.PREMIUM_TRIAL,
             o = L.planIdFromItems === T.gD.PREMIUM_YEAR_TIER_2;
         return (0, r.jsx)(c.D, {
-            variant: P,
+            variant: R,
             color: S,
-            className: i()((l || !o) && j.K, R),
+            className: i()((l || !o) && j.K, P),
             children:
                 null == L
                     ? null
@@ -83,9 +83,9 @@ function A(e) {
         );
         if (a === T.Vk.PREMIUM_TRIAL)
             return (0, r.jsx)(c.D, {
-                variant: P,
+                variant: R,
                 color: S,
-                className: i()(j.K, R),
+                className: i()(j.K, P),
                 children: E.intl.format(E.t["9vyovu"], {
                     planName: (0, g.RH)(T.En[V?.skuId ?? T.pe.NONE] ?? T.gD.PREMIUM_MONTH_TIER_2),
                     duration: (0, g.re)({
@@ -98,9 +98,9 @@ function A(e) {
             });
         if (null != O && null != B && H)
             return (0, r.jsx)(c.D, {
-                variant: P,
+                variant: R,
                 color: S,
-                className: i()(j.K, R),
+                className: i()(j.K, P),
                 children: E.intl.format(E.t.sJTwHQ, {
                     numMonths: O.discount.intervalCount ?? T.OJ,
                     discountedPrice: B,

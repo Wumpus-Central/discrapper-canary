@@ -1,7 +1,7 @@
-n.d(t, { Q7: () => i, bF: () => s, hW: () => r, oU: () => u });
+n.d(t, { Q7: () => r, bF: () => i, hW: () => s, oU: () => u });
 var l = n(50617),
     a = n(375708);
-function s(e) {
+function i(e) {
     switch (e) {
         case "simple":
             return l.default["5DOL2g"];
@@ -13,9 +13,9 @@ function s(e) {
             return null;
     }
 }
-function i(e, t) {
-    let n = s(t);
+function r(e, t) {
+    let n = i(t);
     return null != n ? { title: e, body: a.intl.string(n) } : { body: e };
 }
-let r = { low: "Low", medium: "Medium", high: "High", xhigh: "Extra high", max: "Max" },
+let s = { low: "Low", medium: "Medium", high: "High", xhigh: "Extra high", max: "Max" },
     u = { anthropic: "Anthropic", openai: "OpenAI", deepseek: "DeepSeek", xai: "xAI", moonshotai: "Moonshot AI" };

@@ -690,8 +690,8 @@ var e0 = n(174459),
     e7 = n(999291),
     e5 = n(874402),
     e4 = n(652215),
-    e9 = n(758836),
-    e3 = n(854232),
+    e3 = n(758836),
+    e9 = n(854232),
     e6 = n(816645);
 function te(e) {
     var t;
@@ -832,9 +832,9 @@ function te(e) {
             c.map((e, t) => {
                 let n = e.id === eK.A.ORB_PROFILE_BADGE,
                     l = (0, e8.e0)(e.id),
-                    r = null != l || e.id === e3.K,
+                    r = null != l || e.id === e9.K,
                     i = "april_fools_2026" === e.id,
-                    s = void 0 !== l && e.id !== e3.K,
+                    s = void 0 !== l && e.id !== e9.K,
                     o = ej?.[e.id],
                     d = (0, a.jsx)("img", {
                         alt: " ",
@@ -875,7 +875,7 @@ function te(e) {
                             }
                             if (n) {
                                 ((0, eE.Cz)({
-                                    tab: e9.G2.ORBS,
+                                    tab: e3.G2.ORBS,
                                     analyticsLocations: en,
                                     analyticsSource: S.A.VIRTUAL_CURRENCY_ORB_PROFILE_BADGE,
                                 }),
@@ -1015,10 +1015,10 @@ function te(e) {
                 let E = (0, a.jsx)(N.Anchor, { ...u, children: d }),
                     b = (function (e) {
                         let { badge: t, tieredTenureBadge: n } = e;
-                        return void 0 !== n && t.id !== e3.K
+                        return void 0 !== n && t.id !== e9.K
                             ? (0, a.jsx)(ek, { profileBadge: t, tenureBadge: n })
                             : t.description;
-                    })({ badge: e, tieredTenureBadge: r && e.id !== e3.K ? l : void 0 });
+                    })({ badge: e, tieredTenureBadge: r && e.id !== e9.K ? l : void 0 });
                 return (0, a.jsx)(
                     v.m,
                     { __unsupportedReactNodeAsText: b, forceOpen: c, delay: eP.In, ariaHidden: !0, children: E },

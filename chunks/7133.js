@@ -1,18 +1,18 @@
-(i.d(e, { A: () => u }), i(938796));
-var s = i(536637),
-    r = i.n(s),
-    n = i(665260),
-    o = i(315069),
-    l = i(310507),
-    a = i(835095),
-    c = i(832946),
-    p = i(202541);
-let d = Object.freeze({
+(n.d(t, { A: () => _ }), n(938796));
+var i = n(536637),
+    r = n.n(i),
+    a = n(665260),
+    s = n(315069),
+    l = n(310507),
+    o = n(835095),
+    d = n(832946),
+    c = n(202541);
+let u = Object.freeze({
     PAYMENT_SOURCE_REQUIRED: 1,
     EXISTING_PREMIUM_SUBSCRIPTION_DISALLOWED: 2,
     NOT_SELF_REDEEMABLE: 4,
 });
-class u extends o.A {
+class _ extends s.A {
     userId;
     code;
     skuId;
@@ -30,50 +30,50 @@ class u extends o.A {
     subscriptionTrial;
     promotion;
     giftStyle;
-    static createFromServer(t) {
-        return new u({
-            userId: null != t.user ? t.user.id : null,
-            code: t.code,
-            skuId: t.sku_id,
-            applicationId: t.application_id,
-            uses: t.uses,
-            maxUses: t.max_uses,
-            storeListingId: null != t.store_listing ? t.store_listing.id : null,
-            expiresAt: null != t.expires_at ? r()(t.expires_at) : null,
-            redeemed: t.redeemed,
-            subscriptionPlanId: null != t.subscription_plan ? t.subscription_plan.id : t.subscription_plan_id,
-            subscriptionPlan: null != t.subscription_plan ? c.Ay.createFromServer(t.subscription_plan) : null,
+    static createFromServer(e) {
+        return new _({
+            userId: null != e.user ? e.user.id : null,
+            code: e.code,
+            skuId: e.sku_id,
+            applicationId: e.application_id,
+            uses: e.uses,
+            maxUses: e.max_uses,
+            storeListingId: null != e.store_listing ? e.store_listing.id : null,
+            expiresAt: null != e.expires_at ? r()(e.expires_at) : null,
+            redeemed: e.redeemed,
+            subscriptionPlanId: null != e.subscription_plan ? e.subscription_plan.id : e.subscription_plan_id,
+            subscriptionPlan: null != e.subscription_plan ? d.Ay.createFromServer(e.subscription_plan) : null,
             revoked: !1,
-            entitlementBranches: null != t.entitlement_branches ? t.entitlement_branches : null,
-            flags: null != t.flags ? t.flags : 0,
-            giftStyle: t.gift_style,
-            subscriptionTrial: null != t.subscription_trial ? l.A.createFromServer(t.subscription_trial) : null,
-            promotion: null != t.promotion ? a.A.createFromServer(t.promotion) : null,
+            entitlementBranches: null != e.entitlement_branches ? e.entitlement_branches : null,
+            flags: null != e.flags ? e.flags : 0,
+            giftStyle: e.gift_style,
+            subscriptionTrial: null != e.subscription_trial ? l.A.createFromServer(e.subscription_trial) : null,
+            promotion: null != e.promotion ? o.A.createFromServer(e.promotion) : null,
         });
     }
-    constructor(t) {
+    constructor(e) {
         (super(),
-            (this.userId = t.userId),
-            (this.code = t.code),
-            (this.skuId = t.skuId),
-            (this.applicationId = t.applicationId),
-            (this.uses = t.uses),
-            (this.maxUses = t.maxUses),
-            (this.expiresAt = t.expiresAt),
-            (this.redeemed = t.redeemed),
-            (this.storeListingId = t.storeListingId),
-            (this.subscriptionPlanId = t.subscriptionPlanId),
-            (this.subscriptionPlan = t.subscriptionPlan),
-            (this.revoked = t.revoked),
-            (this.entitlementBranches = t.entitlementBranches),
-            (this.flags = t.flags),
-            (this.subscriptionTrial = t.subscriptionTrial),
-            (this.promotion = t.promotion),
-            (this.giftStyle = t.giftStyle));
+            (this.userId = e.userId),
+            (this.code = e.code),
+            (this.skuId = e.skuId),
+            (this.applicationId = e.applicationId),
+            (this.uses = e.uses),
+            (this.maxUses = e.maxUses),
+            (this.expiresAt = e.expiresAt),
+            (this.redeemed = e.redeemed),
+            (this.storeListingId = e.storeListingId),
+            (this.subscriptionPlanId = e.subscriptionPlanId),
+            (this.subscriptionPlan = e.subscriptionPlan),
+            (this.revoked = e.revoked),
+            (this.entitlementBranches = e.entitlementBranches),
+            (this.flags = e.flags),
+            (this.subscriptionTrial = e.subscriptionTrial),
+            (this.promotion = e.promotion),
+            (this.giftStyle = e.giftStyle));
     }
     isExpired() {
-        let t = this.expiresAt;
-        return null != t && r()().isAfter(t);
+        let e = this.expiresAt;
+        return null != e && r()().isAfter(e);
     }
     get hasMultipleCopies() {
         return this.maxUses > 1;
@@ -88,13 +88,13 @@ class u extends o.A {
         return null != this.subscriptionPlanId;
     }
     get premiumSubscriptionType() {
-        return this.isSubscription ? (p.WN[this.skuId] ?? null) : null;
+        return this.isSubscription ? (c.WN[this.skuId] ?? null) : null;
     }
     get isSelfRedeemable() {
-        return !(0, n.Lt)(this.flags, d.NOT_SELF_REDEEMABLE);
+        return !(0, a.Lt)(this.flags, u.NOT_SELF_REDEEMABLE);
     }
     get isExistingPremiumSubscriptionDisallowed() {
-        return (0, n.Lt)(this.flags, d.EXISTING_PREMIUM_SUBSCRIPTION_DISALLOWED);
+        return (0, a.Lt)(this.flags, u.EXISTING_PREMIUM_SUBSCRIPTION_DISALLOWED);
     }
     get analyticsData() {
         return { gift_code: this.code, gift_code_max_uses: this.maxUses };
