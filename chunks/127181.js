@@ -296,6 +296,12 @@ let n = [
             "On phones, install your app or review its new permissions right from the builder; publishing no longer stops at a notice you could only act on from desktop.",
     },
     {
+        date: "2026-09-25",
+        time: "04:43",
+        platforms: ["mobile"],
+        summary: "On phones, message times in the builder chat now show the date for anything sent before today.",
+    },
+    {
         date: "2026-09-18",
         time: "00:12",
         platforms: ["mobile"],

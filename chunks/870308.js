@@ -47,6 +47,7 @@ let A = function () {
                               badgeCountdownEndsAt: t.badgeCountdownEndsAt,
                               showHoverGradient: t.showHoverGradient,
                               version: t.version,
+                              displayType: t.displayType,
                               entrypointBackgroundStyle: e?.style,
                               entryPointBackgroundAssets: {
                                   srcDarkHovered: e?.asset?.hovered?.dark,
