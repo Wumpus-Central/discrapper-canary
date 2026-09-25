@@ -23,8 +23,6 @@
     align-items: center;
     color: var(--text-default);
     display: flex;
-    font-size: 14px;
-    font-weight: var(--font-weight-semibold);
     justify-content: flex-start;
     min-width: 0;
     transition: color .125s
@@ -45,10 +43,7 @@
 }
 
 .headerLabel__14245 {
-    margin-inline-end: 4px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap
+    margin-inline-end: 4px
 }
 
 .headerIcon__14245+.headerLabel__14245 {
@@ -81,4 +76,4 @@
     color: ButtonText
 }
 
-/*# sourceMappingURL=311580.10b5fee42aa42484.css.map*/
+/*# sourceMappingURL=311580.cf55b3cb4841b265.css.map*/
