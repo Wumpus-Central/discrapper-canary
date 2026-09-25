@@ -13,7 +13,7 @@ function u(t) {
         u = (0, o.Tq)(i);
     return (
         s()(null != u, "subscriptionsSettings cannot be null"),
-        (0, a.jsx)(e.Modal, {
+        (0, a.jsx)(e.a, {
             onClose: n,
             title: c.intl.string(c.t.xPum5Q),
             transitionState: r,

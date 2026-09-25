@@ -4,13 +4,13 @@ var n = t(477900),
     i = t(284009),
     s = t.n(i),
     r = t(189213),
-    u = t(270003),
-    o = t(683071),
-    d = t(452027),
-    c = t(532446),
-    f = t(691540),
-    m = t(857250),
-    h = t(97483),
+    u = t(691540),
+    o = t(857250),
+    c = t(97483),
+    d = t(270003),
+    f = t(683071),
+    m = t(452027),
+    h = t(532446),
     g = t(95477),
     x = t(299163),
     v = t(181658),
@@ -116,11 +116,11 @@ let en = a.memo(function (e) {
         let { file: l, audio: t, className: i, waveformSettings: s } = e,
             [r, u] = a.useState({ width: 0, height: 0 }),
             o = a.useRef(null),
-            d = a.useMemo(() => {
+            c = a.useMemo(() => {
                 let e = t?.duration ?? 1;
                 return { fineTuning: -1, fineTuningResolution: e / O.Jh.fineTuningScale, duration: e, ...(s ?? {}) };
             }, [t, s]),
-            c = (function (e) {
+            d = (function (e) {
                 let [l, t] = a.useState(null),
                     [n, i] = a.useState(null);
                 return (
@@ -136,8 +136,8 @@ let en = a.memo(function (e) {
                 let [n, i] = a.useState(null),
                     [s, r] = a.useState(null),
                     [u, o] = a.useState(1),
-                    { setMaxVolume: d } = z(),
-                    c = a.useCallback(
+                    { setMaxVolume: c } = z(),
+                    d = a.useCallback(
                         (e, l) => {
                             var n;
                             (r(null),
@@ -159,17 +159,17 @@ let en = a.memo(function (e) {
                     a.useEffect(() => {
                         if (null == e || null == l) return;
                         let a = (0, O.HL)(e, t);
-                        n !== a && (i(a), c(e, l));
-                    }, [e, c, l, t, n]),
+                        n !== a && (i(a), d(e, l));
+                    }, [e, d, l, t, n]),
                     a.useEffect(() => {
-                        d(u);
-                    }, [u, d]),
+                        c(u);
+                    }, [u, c]),
                     s
                 );
-            })(c, o.current, d),
+            })(d, o.current, c),
             m = (0, W.Ay)(),
             h = (0, Y.r)(q.A.colors.ICON_STRONG).hex(),
-            g = null == c || null == f,
+            g = null == d || null == f,
             x = (0 === r.width || 0 === r.height || g) && null != l,
             v = a.useCallback(() => {
                 null != o.current && u({ width: o.current.offsetWidth, height: o.current.offsetHeight });
@@ -231,8 +231,8 @@ let es = a.memo(function (e) {
     let { playing: l, onPausePlayback: t, onPlaybackChange: i, onChangePosition: s, disabled: r = !1 } = e,
         u = { ...O.Jh },
         { audio: o } = z(),
-        d = null != o,
-        c = a.useRef(null),
+        c = null != o,
+        d = a.useRef(null),
         f = a.useRef(null),
         m = a.useRef(null),
         [h, g] = a.useState(0),
@@ -306,8 +306,8 @@ let es = a.memo(function (e) {
         );
     return (
         a.useEffect(() => {
-            null != s && d && s({ startPositionMs: h, endPositionMs: b, playheadPositionMs: x });
-        }, [h, b, s, d, x]),
+            null != s && c && s({ startPositionMs: h, endPositionMs: b, playheadPositionMs: x });
+        }, [h, b, s, c, x]),
         a.useEffect(() => {
             let e;
             if (null != o)
@@ -333,7 +333,7 @@ let es = a.memo(function (e) {
             };
         }, [u.fineTuningDelay, S, b, T, w, x, p, h]),
         (0, n.jsxs)("div", {
-            className: N()(ei.IO, { [ei.J_]: d }),
+            className: N()(ei.IO, { [ei.J_]: c }),
             children: [
                 (0, n.jsxs)("div", {
                     className: ei.Rn,
@@ -342,7 +342,7 @@ let es = a.memo(function (e) {
                             className: ei.Dn,
                             children: [
                                 (0, n.jsx)("input", {
-                                    ref: c,
+                                    ref: d,
                                     className: N()(ei.Os, ei.YT),
                                     type: "range",
                                     min: R(T, D, M),
@@ -351,7 +351,7 @@ let es = a.memo(function (e) {
                                     onChange: U,
                                     onMouseDown: (e) => F(e, 0),
                                     onMouseUp: () => P(0),
-                                    disabled: !d || r,
+                                    disabled: !c || r,
                                 }),
                                 (0, n.jsx)("input", {
                                     ref: m,
@@ -363,7 +363,7 @@ let es = a.memo(function (e) {
                                     onChange: V,
                                     onMouseDown: (e) => F(e, 2),
                                     onMouseUp: () => P(2),
-                                    disabled: !d || r,
+                                    disabled: !c || r,
                                 }),
                             ],
                         }),
@@ -379,7 +379,7 @@ let es = a.memo(function (e) {
                                 onChange: G,
                                 onMouseDown: (e) => F(e, 1),
                                 onMouseUp: () => P(1),
-                                disabled: !d || r,
+                                disabled: !c || r,
                             }),
                         }),
                     ],
@@ -440,19 +440,19 @@ let es = a.memo(function (e) {
 var er = t(980504),
     eu = t(933237);
 let eo = { startPositionMs: 0, endPositionMs: 2 * (10 * A.A.Millis.SECOND), playheadPositionMs: 0 },
-    ed = a.memo(function (e) {
+    ec = a.memo(function (e) {
         let { className: l, volume: t, disabled: i = !1, onChange: s } = e,
             { audio: r } = z(),
             [u, o] = a.useState(!1),
-            [d, c] = a.useState(eo),
-            { playheadPositionMs: f, endPositionMs: m, startPositionMs: h } = d,
+            [c, d] = a.useState(eo),
+            { playheadPositionMs: f, endPositionMs: m, startPositionMs: h } = c,
             g = null != r,
             x = m - h,
             v = x > 5 * A.A.Millis.SECOND;
         a.useEffect(() => {
             if (null != r)
                 return (
-                    c({ playheadPositionMs: 0, endPositionMs: r.duration * A.A.Millis.SECOND, startPositionMs: 0 }),
+                    d({ playheadPositionMs: 0, endPositionMs: r.duration * A.A.Millis.SECOND, startPositionMs: 0 }),
                     () => {
                         (r.pause(), o(!1));
                     }
@@ -475,7 +475,7 @@ let eo = { startPositionMs: 0, endPositionMs: 2 * (10 * A.A.Millis.SECOND), play
             }, [r, m, b, f, u, h, t]),
             p = a.useCallback(
                 (e) => {
-                    (c(e), s?.({ startMs: e.startPositionMs, endMs: e.endPositionMs }));
+                    (d(e), s?.({ startMs: e.startPositionMs, endMs: e.endPositionMs }));
                 },
                 [s],
             ),
@@ -519,18 +519,18 @@ let eo = { startPositionMs: 0, endPositionMs: 2 * (10 * A.A.Millis.SECOND), play
             ],
         });
     });
-var ec = t(102597),
+var ed = t(102597),
     ef = t(353672);
 let em = a.memo(function (e) {
     let { sound: l, volume: t, disabled: i } = e,
         [s, r] = a.useState(!1),
         u = a.useRef(null),
-        { file: o, audio: d, loadAudioFromFile: c } = z(),
-        f = a.useMemo(() => (0, ec.A)(l.soundId), [l]);
+        { file: o, audio: c, loadAudioFromFile: d } = z(),
+        f = a.useMemo(() => (0, ed.A)(l.soundId), [l]);
     return (
         a.useEffect(() => {
-            null == u.current && (u.current = G(f, l.name).then(c));
-        }, [f, c, l.name]),
+            null == u.current && (u.current = G(f, l.name).then(d));
+        }, [f, d, l.name]),
         (0, n.jsxs)("div", {
             className: ef.i1,
             children: [
@@ -538,14 +538,14 @@ let em = a.memo(function (e) {
                     onClick: i
                         ? void 0
                         : function () {
-                              null != d &&
-                                  (d.paused
-                                      ? ((d.volume = (0, T.A)(t)),
-                                        (d.currentTime = 0),
-                                        d.play(),
+                              null != c &&
+                                  (c.paused
+                                      ? ((c.volume = (0, T.A)(t)),
+                                        (c.currentTime = 0),
+                                        c.play(),
                                         r(!0),
-                                        d.addEventListener("ended", () => r(!1), { once: !0 }))
-                                      : (d.pause(), r(!1)));
+                                        c.addEventListener("ended", () => r(!1), { once: !0 }))
+                                      : (c.pause(), r(!1)));
                           },
                     className: ef.Rr,
                     "aria-label": s ? P.intl.string(P.t.hHBkuG) : P.intl.string(P.t.RscU7I),
@@ -555,7 +555,7 @@ let em = a.memo(function (e) {
                 }),
                 (0, n.jsx)("div", {
                     className: ef.FU,
-                    children: (0, n.jsx)(en, { className: ef.ou, file: o, audio: d }),
+                    children: (0, n.jsx)(en, { className: ef.ou, file: o, audio: c }),
                 }),
             ],
         })
@@ -565,13 +565,13 @@ var eh = t(735529);
 let eg = a.memo(function (e) {
     let { sound: l, volume: t, disabled: a = !1, onChange: i } = e,
         { file: s } = z();
-    return (0, n.jsx)(d.D, {
+    return (0, n.jsx)(m.D, {
         label: P.intl.string(P.t.CCRKNz),
         children: (0, n.jsxs)("div", {
             className: eh.UV,
             children: [
                 null != l && (0, n.jsx)(em, { sound: l, volume: t, disabled: a }),
-                null == l && null != s && (0, n.jsx)(ed, { className: eh.lF, volume: t, disabled: a, onChange: i }),
+                null == l && null != s && (0, n.jsx)(ec, { className: eh.lF, volume: t, disabled: a, onChange: i }),
             ],
         }),
     });
@@ -629,7 +629,7 @@ function eD(e) {
     a.useEffect(() => {
         (0, w.E7)();
     }, []);
-    let d = a.useMemo(
+    let c = a.useMemo(
             () =>
                 Object.values(u).map((e) => {
                     let { name: l, id: t } = e;
@@ -637,7 +637,7 @@ function eD(e) {
                 }),
             [u, o],
         ),
-        c = a.useCallback(
+        d = a.useCallback(
             (e) =>
                 null == e || "" === e.value
                     ? null
@@ -672,11 +672,11 @@ function eD(e) {
         onChange: h,
         value: g,
         multi: !1,
-        options: d,
-        renderOptionPrefix: c,
+        options: c,
+        renderOptionPrefix: d,
         renderOptionSuffix: f,
         renderOptionLabel: m,
-        placeholder: 0 === d.length ? P.intl.string(P.t.O3i2gV) : P.intl.string(P.t.CunCMN),
+        placeholder: 0 === c.length ? P.intl.string(P.t.O3i2gV) : P.intl.string(P.t.CunCMN),
         "data-migration-pending": !0,
     });
 }
@@ -778,7 +778,7 @@ function eO(e) {
                           emojiId: T ?? null,
                           emojiName: D ?? null,
                       })
-                    : (await en(), (0, f.P0)((0, m.o)(P.intl.string(P.t.T7dhBL), h.Ck.SUCCESS))),
+                    : (await en(), (0, u.P0)((0, o.o)(P.intl.string(P.t.T7dhBL), c.Ck.SUCCESS))),
                     y());
             } catch (e) {
                 K(e);
@@ -814,19 +814,19 @@ function eO(e) {
             ],
             [ea, el, J, ee, y],
         );
-    return (0, n.jsx)(r.Modal, {
+    return (0, n.jsx)(r.a, {
         onClose: y,
         transitionState: N,
         title: ee ? P.intl.string(P.t.HmsZGS) : P.intl.string(P.t["ioD/9I"]),
         actions: es,
-        children: (0, n.jsxs)(u.n, {
+        children: (0, n.jsxs)(d.n, {
             children: [
-                null != G && !G.hasFieldErrors() && (0, n.jsx)(o.w, { type: "critical", children: G.message }),
+                null != G && !G.hasFieldErrors() && (0, n.jsx)(f.w, { type: "critical", children: G.message }),
                 S ? (0, n.jsx)(eD, { label: P.intl.string(P.t.UYt7iQ), value: Q, onChange: W }) : null,
                 (ee || null != O) && (0, n.jsx)(eg, { sound: i, volume: k, disabled: $, onChange: H }),
                 ee || null != t
                     ? null
-                    : (0, n.jsx)(d.D, {
+                    : (0, n.jsx)(m.D, {
                           required: !0,
                           errorMessage: G?.getFirstFieldErrorMessage("sound"),
                           label: P.intl.string(P.t.sSHaG7),
@@ -838,7 +838,7 @@ function eO(e) {
                               filters: eF,
                           }),
                       }),
-                (0, n.jsxs)(c.M, {
+                (0, n.jsxs)(h.M, {
                     children: [
                         (0, n.jsx)(g.k, {
                             required: !0,

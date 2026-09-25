@@ -1,7 +1,7 @@
 n.d(t, { z: () => d });
 var r = n(582128),
-    l = n(192308),
-    i = n(139033),
+    l = n(139033),
+    i = n(192308),
     o = n(626584),
     a = n(38405),
     s = n(794400),
@@ -17,8 +17,8 @@ class d extends r.PureComponent {
     }
     onErrorCaught(e, t, n) {}
     closeAndShowAlert() {
-        ((0, l.closeAllModals)(),
-            (0, i.A)({
+        ((0, i.closeAllModals)(),
+            (0, l.A)({
                 title: u.intl.string(u.t.iufib1),
                 subtitle: u.intl.string(u.t.ZUEGFn),
                 confirmText: u.intl.string(u.t.TyCVIq),

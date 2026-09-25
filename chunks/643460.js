@@ -4,8 +4,8 @@ r(582128);
 var s = r(189213),
     n = r(214947),
     l = r(534890),
-    o = r(26137),
-    c = r(625903),
+    c = r(26137),
+    o = r(625903),
     a = r(834730),
     d = r(230837),
     m = r(975571),
@@ -15,7 +15,7 @@ var s = r(189213),
     C = r(463292);
 function j(t) {
     let { transitionState: e, onClose: r } = t;
-    return (0, i.jsx)(s.Modal, {
+    return (0, i.jsx)(s.a, {
         transitionState: e,
         title: u.intl.string(u.t.pWLGnF),
         subtitle: u.intl.string(u.t.WKxo8n),
@@ -32,9 +32,9 @@ function v(t) {
                 icon: (0, i.jsx)(l.ChatIcon, { size: "refresh_sm", color: "currentColor" }),
                 text: u.intl.string(u.t["i7/QHN"]),
             },
-            { icon: (0, i.jsx)(o.r, { size: "refresh_sm", color: "currentColor" }), text: u.intl.string(u.t.ZmBfKJ) },
+            { icon: (0, i.jsx)(c.r, { size: "refresh_sm", color: "currentColor" }), text: u.intl.string(u.t.ZmBfKJ) },
             {
-                icon: (0, i.jsx)(c.SettingsIcon, { size: "refresh_sm", color: "currentColor" }),
+                icon: (0, i.jsx)(o.SettingsIcon, { size: "refresh_sm", color: "currentColor" }),
                 text: u.intl.format(u.t.wBlJCr, {
                     recentActivityURL: m.A.getArticleURL(x.MVz.MEMBER_LIST_ACTIVITY_FEED),
                     handleActivityPrivacyClick: () => {

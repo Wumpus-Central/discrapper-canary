@@ -6,9 +6,9 @@ var i,
     r = n.n(a),
     o = n(379834),
     d = n(738678),
-    c = n(27989),
-    u = n(17928),
-    m = n(646270),
+    c = n(17928),
+    u = n(646270),
+    m = n(27989),
     h = n(610509),
     g = n(22363),
     p = n(802516),
@@ -27,8 +27,8 @@ var i,
     y = n(207371),
     b = n(205184),
     R = n(928550),
-    M = n(689168),
-    k = n(403362),
+    k = n(689168),
+    M = n(403362),
     L = n(456060),
     O = n(723702),
     P = n(850670),
@@ -121,9 +121,9 @@ function en(e) {
                     .map((e) => {
                         switch (e) {
                             case Z.MOBILE:
-                                return (0, l.jsx)(m.u, { size: "xxs", color: "currentColor" }, e);
+                                return (0, l.jsx)(u.u, { size: "xxs", color: "currentColor" }, e);
                             case Z.ANDROID:
-                                return (0, l.jsx)(Q, { width: c.E.xxs, height: c.E.xxs, color: "currentColor" }, e);
+                                return (0, l.jsx)(Q, { width: m.E.xxs, height: m.E.xxs, color: "currentColor" }, e);
                             case Z.IOS:
                                 return (0, l.jsx)(h.z, { size: "xxs", color: "currentColor" }, e);
                             case Z.PLAYSTATION:
@@ -138,7 +138,7 @@ function en(e) {
                                 return null;
                         }
                     })
-                    .filter(k.Vq),
+                    .filter(M.Vq),
             [a],
         );
     if (!(null != n || r.length > 0)) return null;
@@ -198,7 +198,7 @@ function el(e) {
             channel: a,
             header: r,
             currentUserId: d,
-            isEmbeddedApplication: c,
+            isEmbeddedApplication: u,
             tryWithGdnAction: m,
             staticBannerSrc: h,
             onClickContent: g,
@@ -206,7 +206,7 @@ function el(e) {
             onView: A,
             presenceActivity: f,
             currentUserPresenceActivity: T,
-            hideParty: k,
+            hideParty: M,
             hideBanner: Z = !1,
             partyStatusElement: q,
             analyticsLocations: Q,
@@ -248,8 +248,8 @@ function el(e) {
                 : (0, l.jsx)(x.E, { variant: "text-xs/normal", color: "none", lineClamp: 1, children: e });
         }, [f?.details]),
         eg = s.useMemo(
-            () => (0, l.jsxs)("div", { className: et.pq, children: [eh, em, k || ed ? null : q] }),
-            [em, k, ed, q, eh],
+            () => (0, l.jsxs)("div", { className: et.pq, children: [eh, em, M || ed ? null : q] }),
+            [em, M, ed, q, eh],
         ),
         ep = !!(0, R.au)(n.id),
         eA = (0, y.x)(n),
@@ -300,7 +300,7 @@ function el(e) {
             currentUserId: d,
             message: t,
             application: n,
-            isEmbeddedApplication: c,
+            isEmbeddedApplication: u,
             isFrameApplication: eA,
             isGameLaunchable: ep,
         }),
@@ -324,9 +324,9 @@ function el(e) {
         })(f, t, n, d),
         eC = (0, D.w)(T, f),
         e_ = null != f && (0, z.A)(f, V.jUm.SUPPORTS_REMOTE_ACTIVITY_ACTION_JOIN),
-        ev = (0, u.bG)(
-            [M.A],
-            () => null != f && null != f.application_id && M.A.getState(f.application_id, V.xL.JOIN) === V.eAD.LOADING,
+        ev = (0, c.bG)(
+            [k.A],
+            () => null != f && null != f.application_id && k.A.getState(f.application_id, V.xL.JOIN) === V.eAD.LOADING,
         ),
         { actions: eN, hasAccountLinkButton: ej } = s.useMemo(() => {
             let e = null,

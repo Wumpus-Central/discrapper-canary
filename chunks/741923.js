@@ -1,9 +1,9 @@
 n.d(t, { _5: () => I, rV: () => A });
 var l = n(477900),
     i = n(582128),
-    r = n(430993),
-    a = n(834730),
-    s = n(20742),
+    r = n(20742),
+    a = n(430993),
+    s = n(834730),
     o = n(534479),
     u = n(977445),
     c = n(624210);
@@ -26,7 +26,7 @@ function I() {
 }
 function g(e) {
     let { renderModalProps: t, children: n } = e,
-        i = (0, l.jsxs)(l.Fragment, { children: [(0, l.jsx)(s.rQ, {}), (0, l.jsx)(r.c, { children: n })] });
+        i = (0, l.jsxs)(l.Fragment, { children: [(0, l.jsx)(r.rQ, {}), (0, l.jsx)(a.c, { children: n })] });
     return null != t ? (0, l.jsx)(E.Jg, { ...t, children: i }) : i;
 }
 function A(e) {
@@ -34,7 +34,7 @@ function A(e) {
             loadId: t,
             skuIDs: n,
             applicationId: r,
-            paymentGateway: s,
+            paymentGateway: a,
             checkoutFlow: C,
             isGift: E,
             onOrderCreated: I,
@@ -106,7 +106,7 @@ function A(e) {
         })({
             skuIDs: n,
             applicationId: r,
-            paymentGateway: s,
+            paymentGateway: a,
             checkoutFlow: C,
             isGift: E,
             loadId: t,
@@ -118,7 +118,7 @@ function A(e) {
         else if (null != x)
             return (0, l.jsx)(g, {
                 renderModalProps: A,
-                children: (0, l.jsx)(a.E, { variant: "text-md/normal", children: S.intl.string(S.t.F8FvUy) }),
+                children: (0, l.jsx)(s.E, { variant: "text-md/normal", children: S.intl.string(S.t.F8FvUy) }),
             });
     }
     return (0, l.jsx)(y.Provider, { value: b, children: P });

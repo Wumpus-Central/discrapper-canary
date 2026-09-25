@@ -39,8 +39,8 @@ var l = s(477900),
     B = s(761508),
     V = s(834730),
     z = s(351906),
-    w = s(364522),
-    H = s(297264),
+    w = s(297264),
+    H = s(364522),
     Y = s(534890),
     W = s(687966),
     J = s(177953),
@@ -60,7 +60,7 @@ function q(e) {
             (0, l.jsxs)("div", {
                 className: Z.qg,
                 children: [
-                    (0, l.jsx)(H.D, { variant: "text-xs/semibold", children: s }),
+                    (0, l.jsx)(w.D, { variant: "text-xs/semibold", children: s }),
                     (0, l.jsx)(V.E, { variant: "text-sm/normal", children: n }),
                 ],
             }),
@@ -71,7 +71,7 @@ function $(e) {
     let { user: i } = e,
         s = (0, G.bG)([X.A], () => X.A.getUserProfile(i.id)?.application),
         { hasMessageContent: n, hasGuildPresences: t, hasGuildMembers: d } = (0, K.Z)(s);
-    return (0, l.jsxs)(w.Ip, {
+    return (0, l.jsxs)(H.Ip, {
         fade: !0,
         className: Z.XG,
         children: [
@@ -159,7 +159,7 @@ function ep(e) {
     let { user: i, displayProfile: s, guildId: n, onClose: t } = e,
         d = (0, G.bG)([X.A], () => X.A.getUserProfile(i.id)?.application),
         r = (0, G.bG)([ee.A, ei.Ay], () => ee.A.getChannel(ei.Ay.getChannelId()));
-    return (0, l.jsxs)(w.Ip, {
+    return (0, l.jsxs)(H.Ip, {
         fade: !0,
         className: em.XG,
         children: [
@@ -214,7 +214,7 @@ function e_(e) {
         m = !x && (j || I),
         p = r.length > 0;
     return m || p || !u
-        ? (0, l.jsxs)(w.Ip, {
+        ? (0, l.jsxs)(H.Ip, {
               className: eD.XG,
               fade: !0,
               children: [
@@ -312,7 +312,7 @@ function eH(e) {
         c = (0, G.bG)([eF.default], () => eF.default.locale),
         o = (0, eV.A)(i.id),
         u = (0, eB.A)(i.id);
-    return (0, l.jsxs)(w.Ip, {
+    return (0, l.jsxs)(H.Ip, {
         fade: !0,
         className: em.XG,
         children: [
@@ -377,7 +377,7 @@ function eQ(e) {
         n.useEffect(() => {
             (0, eJ.A)(i.id, u);
         }, [i.id, u]),
-        (0, l.jsx)(w.Ip, {
+        (0, l.jsx)(H.Ip, {
             className: eU.DK,
             fade: !0,
             children:
@@ -425,7 +425,7 @@ function e0(e) {
     let { user: i, onClose: s } = e,
         { trackUserProfileAction: n } = (0, v.NJ)(),
         { mutualGuilds: t, isFetching: d } = (0, eW.A)(i);
-    return (0, l.jsx)(w.Ip, {
+    return (0, l.jsx)(H.Ip, {
         className: eU.DK,
         fade: !0,
         children:
@@ -828,7 +828,7 @@ function is(e) {
                                                         eh.RP.BOT_INFO,
                                                     ),
                                                 }),
-                                                (0, l.jsxs)(w.Ip, {
+                                                (0, l.jsxs)(H.Ip, {
                                                     fade: !0,
                                                     className: em.XG,
                                                     children: [
@@ -929,7 +929,7 @@ function ip(e) {
                                 (0, l.jsxs)("div", {
                                     className: iI.FS,
                                     children: [
-                                        (0, l.jsx)(H.D, {
+                                        (0, l.jsx)(w.D, {
                                             variant: "heading-xl/bold",
                                             color: "text-default",
                                             children: Q.intl.string(Q.t.b33pLD),

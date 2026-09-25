@@ -2,25 +2,25 @@ n.d(e, { default: () => p });
 var i = n(477900),
     s = n(582128),
     a = n(189213),
-    d = n(95561),
-    o = n(845625),
-    c = n(615550),
+    c = n(95561),
+    d = n(845625),
+    o = n(615550),
     l = n(995786),
     r = n(652215),
     C = n(375708);
 function p(t) {
     let { automodDecision: e, transitionState: n, onClose: p } = t,
         k = s.useCallback(() => {
-            ((0, d.zV)(r.HAw.GUILD_AUTOMOD_FEEDBACK, {
-                feedback_type: c.Gb.BUG,
+            ((0, c.zV)(r.HAw.GUILD_AUTOMOD_FEEDBACK, {
+                feedback_type: o.Gb.BUG,
                 decision_id: e.decisionId,
                 message_id: e.messageId,
                 content: e.messageContent,
             }),
-                (0, l.E5)(e.messageId, e.channel, o.G.SUBMIT_FEEDBACK),
+                (0, l.E5)(e.messageId, e.channel, d.G.SUBMIT_FEEDBACK),
                 p());
         }, [e, p]);
-    return (0, i.jsx)(a.Modal, {
+    return (0, i.jsx)(a.a, {
         onClose: p,
         transitionState: n,
         title: C.intl.string(C.t["7bdzNo"]),

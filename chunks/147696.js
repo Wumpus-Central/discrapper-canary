@@ -3,8 +3,8 @@ var s = a(477900),
     n = a(582128),
     l = a(435558),
     i = a.n(l),
-    r = a(189213),
-    c = a(17928),
+    r = a(17928),
+    c = a(189213),
     o = a(834730),
     d = a(276293),
     m = a(939249),
@@ -25,16 +25,16 @@ function f(t) {
     function i(t) {
         return (0, s.jsx)(o.E, { tag: "span", variant: "text-md/medium", color: "text-strong", children: t });
     }
-    let c = n.useMemo(
+    let r = n.useMemo(
         () => [
             { variant: "secondary", text: y.intl.string(y.t["ETE/oC"]), onClick: e },
             { variant: "primary", text: y.intl.string(y.t.bEnleq), onClick: a },
         ],
         [a, e],
     );
-    return (0, s.jsx)(r.Modal, {
+    return (0, s.jsx)(c.a, {
         title: y.intl.string(y.t.PJOCL6),
-        actions: c,
+        actions: r,
         onClose: e,
         transitionState: l,
         children: (0, s.jsxs)("ul", {
@@ -121,7 +121,7 @@ function E(t) {
 }
 function A(t) {
     let { transitionState: e, onClose: a, guildId: l, startingChannelId: d } = t,
-        m = (0, c.yK)([p.Ay], () => {
+        m = (0, r.yK)([p.Ay], () => {
             let t = p.Ay.getChannels(l);
             return (t[p.I6] ?? [])
                 .concat(t[p.vM] ?? [])
@@ -150,7 +150,7 @@ function A(t) {
                 ((0, h.R$)(t.id, [e]), a());
             });
         }, [N, a]),
-        M = n.useMemo(
+        q = n.useMemo(
             () => [
                 { variant: "secondary", text: y.intl.string(y.t["ETE/oC"]), onClick: a },
                 { variant: "primary", text: y.intl.string(y.t.PggHmu), onClick: K, disabled: 0 === N.length },
@@ -159,10 +159,10 @@ function A(t) {
         );
     return 0 === x
         ? (0, s.jsx)(f, { handleReviewPermissions: P, onClose: a, transitionState: e })
-        : (0, s.jsxs)(r.Modal, {
+        : (0, s.jsxs)(c.a, {
               title: y.intl.string(y.t.y77PiT),
               subtitle: y.intl.string(y.t.ZSzBe5),
-              actions: M,
+              actions: q,
               onClose: a,
               transitionState: e,
               input: (0, s.jsxs)("div", {

@@ -2,22 +2,22 @@ i.d(n, { default: () => l });
 var e = i(477900),
     r = i(582128),
     s = i(732159),
-    o = i(817281),
-    a = i(375708);
+    a = i(817281),
+    c = i(375708);
 function l(t) {
     let { onSubmit: n, onClose: i, ...l } = t,
-        [c, d] = r.useState(!1);
-    return (0, e.jsx)(s.ConfirmModal, {
-        title: a.intl.string(a.t.HlAPoq),
-        subtitle: a.intl.string(a.t["cRW4D/"]),
+        [o, u] = r.useState(!1);
+    return (0, e.jsx)(s.u, {
+        title: c.intl.string(c.t.HlAPoq),
+        subtitle: c.intl.string(c.t["cRW4D/"]),
         variant: "active",
-        confirmText: a.intl.string(a.t.rimG2R),
-        cancelText: a.intl.string(a.t["ETE/oC"]),
+        confirmText: c.intl.string(c.t.rimG2R),
+        cancelText: c.intl.string(c.t["ETE/oC"]),
         onConfirm: n,
         onClose: function () {
-            return (c && o.Ay.updatedUnsyncedSettings({ disableCallUserConfirmationPrompt: !0 }), i());
+            return (o && a.Ay.updatedUnsyncedSettings({ disableCallUserConfirmationPrompt: !0 }), i());
         },
-        checkboxProps: { checked: c, onChange: (t) => d(t), label: a.intl.string(a.t["JdIQ/Y"]) },
+        checkboxProps: { checked: o, onChange: (t) => u(t), label: c.intl.string(c.t["JdIQ/Y"]) },
         ...l,
     });
 }

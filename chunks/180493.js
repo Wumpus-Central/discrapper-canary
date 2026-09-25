@@ -4,8 +4,8 @@ var e = n(477900),
     a = n(284009),
     s = n.n(a),
     r = n(189213),
-    d = n(512950),
-    c = n(696986),
+    c = n(512950),
+    d = n(696986),
     o = n(834730),
     u = n(683071),
     p = n(691885),
@@ -33,7 +33,7 @@ function b(t) {
             null != (await j({ applicationId: n.id, teamId: b })) && a());
     }
     let E = n?.team != null;
-    return (0, e.jsxs)(r.Modal, {
+    return (0, e.jsxs)(r.a, {
         transitionState: i,
         title: E ? C.intl.string(C.t["4TveVv"]) : C.intl.string(C.t.feBUAV),
         subtitle: E ? C.intl.string(C.t.c7HS0n) : C.intl.string(C.t.atZ50I),
@@ -44,17 +44,17 @@ function b(t) {
         ],
         children: [
             E
-                ? (0, e.jsxs)(d.p, {
-                      messageType: d.Y.WARNING,
+                ? (0, e.jsxs)(c.p, {
+                      messageType: c.Y.WARNING,
                       children: [
                           C.intl.string(C.t.Caz8nL),
-                          (0, e.jsx)(c.h, { size: 4 }),
+                          (0, e.jsx)(d.h, { size: 4 }),
                           (0, e.jsx)(o.E, { variant: "text-sm/normal", children: C.intl.string(C.t.u4ddHZ) }),
                       ],
                   })
                 : null,
             null != I ? (0, e.jsx)(u.w, { type: "critical", children: I.message }) : null,
-            (0, e.jsx)(c.h, { size: 16 }),
+            (0, e.jsx)(d.h, { size: 16 }),
             (0, e.jsx)(p.l, {
                 selectionMode: "single",
                 label: E ? C.intl.string(C.t.xZ6ZL6) : C.intl.string(C.t.bfmKdK),

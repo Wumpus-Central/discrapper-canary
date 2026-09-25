@@ -4,8 +4,8 @@ var s,
     a = i(582128),
     r = i(503698),
     l = i.n(r),
-    c = i(189213),
-    o = i(17928),
+    c = i(17928),
+    o = i(189213),
     u = i(453318),
     d = i(821609),
     f = i(289873),
@@ -20,14 +20,14 @@ var s,
     x = i(326084),
     C = i(851746),
     v = i(794783),
-    M = i(972007),
-    y = i(772707),
+    y = i(972007),
     b = i(844222),
-    j = i(778712),
-    w = i(97808),
-    I = i(834730),
-    N = i(534890),
-    _ = i(90517),
+    M = i(778712),
+    j = i(97808),
+    w = i(834730),
+    I = i(534890),
+    N = i(90517),
+    _ = i(772707),
     z = i(308528),
     k = i(854627),
     D = i(830543),
@@ -36,23 +36,23 @@ var s,
     L = i(37576);
 function O(e) {
     let { recipient: t, status: i, onClose: s } = e,
-        { avatarSrc: a, eventHandlers: r } = (0, k.A)({ userId: t?.id, size: j._3.SIZE_56 }),
+        { avatarSrc: a, eventHandlers: r } = (0, k.A)({ userId: t?.id, size: M._3.SIZE_56 }),
         c = E.Ay.getName(t),
         o = i === x.o.FAIL;
     return (0, n.jsxs)("div", {
         className: L.w4,
         children: [
-            (0, n.jsx)(w.eu, { imageClassName: l()({ [L.jN]: o }), src: a, "aria-label": c, size: j._3.SIZE_32, ...r }),
+            (0, n.jsx)(j.eu, { imageClassName: l()({ [L.jN]: o }), src: a, "aria-label": c, size: M._3.SIZE_32, ...r }),
             o
                 ? (0, n.jsxs)(n.Fragment, {
                       children: [
-                          (0, n.jsx)(I.E, {
+                          (0, n.jsx)(w.E, {
                               className: L.E0,
                               variant: "text-md/medium",
                               color: "text-strong",
                               children: c,
                           }),
-                          (0, n.jsx)(I.E, {
+                          (0, n.jsx)(w.E, {
                               variant: "text-md/medium",
                               className: L.nT,
                               color: "text-strong",
@@ -60,12 +60,12 @@ function O(e) {
                           }),
                       ],
                   })
-                : (0, n.jsx)(I.E, { variant: "text-md/medium", className: L.Pm, color: "text-strong", children: c }),
+                : (0, n.jsx)(w.E, { variant: "text-md/medium", className: L.Pm, color: "text-strong", children: c }),
             (0, n.jsx)(d.$, {
                 variant: "secondary",
                 size: "sm",
                 text: G.intl.string(G.t["g33r/P"]),
-                icon: N.ChatIcon,
+                icon: I.ChatIcon,
                 onClick: () => {
                     var e;
                     return ((e = t.id), void ((0, D.default)(), z.A.openPrivateChannel({ recipientIds: e }), s()));
@@ -76,18 +76,18 @@ function O(e) {
 }
 function P(e) {
     let { transitionState: t, results: i, onClose: s, isReminderConfirmation: r } = e,
-        l = (0, o.bG)([C.A], () => C.A.getReferralsRemaining());
+        l = (0, c.bG)([C.A], () => C.A.getReferralsRemaining());
     p.default.track(F.HAw.REFERRAL_PROGRAM_SHARE_CTA_CLICKED);
-    let { reducedMotion: c } = a.useContext(b.C);
+    let { reducedMotion: o } = a.useContext(b.C);
     return null === l
         ? (0, n.jsx)(f.y, {})
-        : (0, n.jsx)(y.k, {
-              graphic: c.enabled
+        : (0, n.jsx)(_.k, {
+              graphic: o.enabled
                   ? {
                         src: "https://cdn.discordapp.com/assets/content/7d3bb543f57192ba573ca7c515ef59c9cf5c285538f43508ccd8e10637ccd902.svg",
                         type: "image",
                     }
-                  : { rive: _.l, type: "rive" },
+                  : { rive: N.l, type: "rive" },
               gradientColor: "nitro-pink",
               title:
                   0 === i.filter((e) => e.status === x.o.SUCCESS).length
@@ -112,24 +112,24 @@ function P(e) {
 var T = i(989174);
 function U(e) {
     let { transitionState: t, onClose: i, onShare: s } = e,
-        r = (0, o.bG)([C.A], () => C.A.getReferralsRemaining()),
-        A = (0, o.bG)([C.A], () => C.A.getHasEligibleFriends()),
+        r = (0, c.bG)([C.A], () => C.A.getReferralsRemaining()),
+        A = (0, c.bG)([C.A], () => C.A.getHasEligibleFriends()),
         [g, h] = a.useState(new Map()),
         [R, p] = a.useState(""),
         x = (0, m.A)(R, 400),
         {
-            eligibleUsers: y,
-            fetchUsers: b,
+            eligibleUsers: b,
+            fetchUsers: M,
             hasError: j,
             isFetching: w,
             resendUsers: I,
-        } = (0, M.i)({ searchQuery: x, selectedUsers: g }),
+        } = (0, y.i)({ searchQuery: x, selectedUsers: g }),
         [N, _] = a.useState(!1),
-        z = y.reduce((e, t) => (e.has(t.id) || e.set(t.id, t), e), new Map());
+        z = b.reduce((e, t) => (e.has(t.id) || e.set(t.id, t), e), new Map());
     return null === r
         ? (0, n.jsx)(f.y, {})
         : j
-          ? (0, n.jsx)(c.Modal, {
+          ? (0, n.jsx)(o.a, {
                 transitionState: t,
                 size: "sm",
                 title: G.intl.string(G.t.lcuio4),
@@ -138,7 +138,7 @@ function U(e) {
                 actions: [],
             })
           : !1 === A
-            ? (0, n.jsx)(c.Modal, {
+            ? (0, n.jsx)(o.a, {
                   transitionState: t,
                   size: "sm",
                   title: G.intl.string(G.t["2YigPp"]),
@@ -146,7 +146,7 @@ function U(e) {
                   onClose: i,
                   actions: [],
               })
-            : (0, n.jsx)(c.Modal, {
+            : (0, n.jsx)(o.a, {
                   size: "md",
                   transitionState: t,
                   title: G.intl.string(G.t["2dVCLl"]),
@@ -214,7 +214,7 @@ function U(e) {
                               });
                           },
                           isFetching: w,
-                          onFetchMore: b,
+                          onFetchMore: M,
                           isUserDisabled: (e) =>
                               null !== r &&
                               0 !== r &&
@@ -231,7 +231,7 @@ function U(e) {
 function K(e) {
     let t,
         { transitionState: i, onClose: s, onShare: r } = e,
-        u = (0, o.bG)([C.A], () => C.A.getRecipientStatus()),
+        u = (0, c.bG)([C.A], () => C.A.getRecipientStatus()),
         [f, m] = a.useState(new Map()),
         [g, h] = a.useState(new Map()),
         [p, S] = a.useState(!1);
@@ -247,7 +247,7 @@ function K(e) {
                 m(e);
             })();
         }, [u]),
-        (0, n.jsx)(c.Modal, {
+        (0, n.jsx)(o.a, {
             size: "md",
             transitionState: i,
             title: G.intl.string(G.t.rKmy8I),
@@ -291,14 +291,14 @@ var H =
     s);
 let Q = function (e) {
     let { transitionState: t, onClose: i, startingScreen: s = 1 } = e,
-        r = (0, o.bG)([C.A], () => C.A.getReferralsRemaining()),
-        [l, c] = a.useState(s),
+        r = (0, c.bG)([C.A], () => C.A.getReferralsRemaining()),
+        [l, o] = a.useState(s),
         [u, d] = a.useState([]),
         { analyticsLocations: A } = (0, h.Ay)([g.A.PREMIUM_MARKETING_REFERALL_PROGRAM_SHARE_MODAL]);
     async function m(e) {
         p.default.track(F.HAw.REFERRAL_PROGRAM_SHARE_CTA_CLICKED, { location_stack: A });
         let t = await (0, x.xm)(Object.values(e).map((e) => e.id));
-        (d(e.map((e) => ({ recipient: e, status: t.get(e.id) }))), c(2));
+        (d(e.map((e) => ({ recipient: e, status: t.get(e.id) }))), o(2));
     }
     if (null === r) return (0, n.jsx)(f.y, {});
     switch (l) {

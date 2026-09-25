@@ -1,12 +1,12 @@
-a.d(t, { default: () => h });
+a.d(t, { default: () => M });
 var r = a(477900),
     n = a(582128),
-    i = a(189213),
-    s = a(17928),
+    i = a(17928),
+    s = a(189213),
     l = a(834730),
     o = a(39255),
-    d = a(913122),
-    u = a(517622),
+    u = a(913122),
+    d = a(517622),
     c = a(695184),
     m = a(427262),
     b = a(545868),
@@ -15,11 +15,11 @@ var r = a(477900),
     k = a(856644),
     A = a(512031),
     E = a(719366),
-    M = a(375708),
-    R = a(698013);
-function h(e) {
-    let { transitionState: t, onClose: a, roleId: h, guildId: S } = e,
-        v = (0, s.bG)([p.A], () => p.A.getRole(h), [h]),
+    R = a(375708),
+    h = a(698013);
+function M(e) {
+    let { transitionState: t, onClose: a, roleId: M, guildId: S } = e,
+        v = (0, i.bG)([p.A], () => p.A.getRole(M), [M]),
         [x, y] = n.useState(""),
         [f, w] = n.useState({}),
         [T, C] = n.useState(!1),
@@ -28,19 +28,19 @@ function h(e) {
     n.useEffect(() => {
         c.A.requestMembers(S, x.trim().toLowerCase(), k.uc);
     }, [S, x]);
-    let H = n.useCallback((e) => !e.roles.includes(h), [h]),
+    let H = n.useCallback((e) => !e.roles.includes(M), [M]),
         P = (0, k.SB)(S, H),
         L = n.useMemo(() => P.filter((e) => (0, k.EF)(x, e)), [x, P]),
         _ = n.useCallback(async () => {
             let e = Object.values(f).map((e) => e.row.id);
             C(!0);
             try {
-                (await g.A.bulkAddMemberRoles(S, h, e), (0, b.a)(S, h, !1), a());
+                (await g.A.bulkAddMemberRoles(S, M, e), (0, b.a)(S, M, !1), a());
             } catch (t) {
-                let e = new d.LG(t);
+                let e = new u.LG(t);
                 (C(!1), j(e));
             }
-        }, [S, h, f, a]),
+        }, [S, M, f, a]),
         q = n.useMemo(
             () =>
                 L.map((e) => {
@@ -60,7 +60,7 @@ function h(e) {
                 }),
             [L],
         ),
-        G = u.A.useSections({ members: q }),
+        G = d.A.useSections({ members: q }),
         N = n.useCallback(
             (e) =>
                 e.rowType === E.T6.MEMBER || e.rowType === E.T6.OWNER
@@ -69,7 +69,7 @@ function h(e) {
             [],
         ),
         U = n.useMemo(() => Object.keys(f).length, [f]);
-    return (0, r.jsx)(u.A.Provider, {
+    return (0, r.jsx)(d.A.Provider, {
         listRef: B,
         query: x,
         setQuery: y,
@@ -78,20 +78,20 @@ function h(e) {
         members: q,
         getRichTag: N,
         maxPendingRows: A.$S,
-        children: (0, r.jsx)(i.Modal, {
+        children: (0, r.jsx)(s.a, {
             onClose: a,
             transitionState: t,
-            title: M.intl.string(M.t.ZYOK46),
+            title: R.intl.string(R.t.ZYOK46),
             subtitle:
                 null != v
-                    ? M.intl.format(M.t["qP+nuZ"], { numMembers: A.$S, roleName: v.name })
-                    : M.intl.format(M.t["3OxP4q"], { numMembers: A.$S }),
+                    ? R.intl.format(R.t["qP+nuZ"], { numMembers: A.$S, roleName: v.name })
+                    : R.intl.format(R.t["3OxP4q"], { numMembers: A.$S }),
             input: (0, r.jsxs)("div", {
                 children: [
-                    (0, r.jsx)(u.A.SearchBox, { placeholderText: M.intl.string(M.t.vMiCaQ) }),
+                    (0, r.jsx)(d.A.SearchBox, { placeholderText: R.intl.string(R.t.vMiCaQ) }),
                     null != O
                         ? (0, r.jsx)(l.E, {
-                              className: R.k,
+                              className: h.k,
                               variant: "text-xs/normal",
                               color: "text-feedback-critical",
                               children: O.getAnyErrorMessage(),
@@ -101,16 +101,16 @@ function h(e) {
             }),
             listProps: {
                 ref: B,
-                sectionHeight: u.A.SECTION_HEIGHT,
-                renderSection: u.A.renderSection,
-                rowHeight: u.A.ROW_HEIGHT,
-                renderRow: u.A.renderRow,
+                sectionHeight: d.A.SECTION_HEIGHT,
+                renderSection: d.A.renderSection,
+                rowHeight: d.A.ROW_HEIGHT,
+                renderRow: d.A.renderRow,
                 sections: G,
             },
             actions: [
-                { text: M.intl.string(M.t["ETE/oC"]), variant: "secondary", onClick: a },
+                { text: R.intl.string(R.t["ETE/oC"]), variant: "secondary", onClick: a },
                 {
-                    text: M.intl.string(M.t.OYkgVk),
+                    text: R.intl.string(R.t.OYkgVk),
                     variant: "primary",
                     onClick: _,
                     loading: T,

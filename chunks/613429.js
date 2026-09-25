@@ -12,7 +12,7 @@ function d(t) {
         k = a.useCallback(() => {
             (u && r.A.disableExternalLinkAlert(), c.Ay.send("OPEN_EXTERNAL_URL", n), i());
         }, [u, n, i]);
-    return (0, e.jsx)(s.Modal, {
+    return (0, e.jsx)(s.a, {
         onClose: i,
         size: "md",
         title: o.intl.string(o.t.WLx4F6),

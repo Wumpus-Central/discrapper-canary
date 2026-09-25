@@ -1,8 +1,8 @@
 i.d(n, { default: () => h });
 var r = i(477900);
 i(582128);
-var e = i(189213),
-    l = i(17928),
+var e = i(17928),
+    l = i(189213),
     s = i(834730),
     a = i(496431),
     o = i(859703),
@@ -10,13 +10,13 @@ var e = i(189213),
     u = i(73473),
     c = i(375708);
 function p(t) {
-    let { transitionState: n, onClose: i, questEnrollmentBlockedUntil: l } = t,
-        { hours: o, minutes: d, seconds: u } = (0, a.A)(l),
+    let { transitionState: n, onClose: i, questEnrollmentBlockedUntil: e } = t,
+        { hours: o, minutes: d, seconds: u } = (0, a.A)(e),
         p = String(o).padStart(2, "0"),
         h = String(d).padStart(2, "0"),
         g = String(u).padStart(2, "0"),
         m = `${p}:${h}:${g}`;
-    return (0, r.jsx)(e.Modal, {
+    return (0, r.jsx)(l.a, {
         size: "sm",
         transitionState: n,
         onClose: i,
@@ -34,15 +34,15 @@ function p(t) {
     });
 }
 function h(t) {
-    let { onClose: n, quest: i, sourceQuestContent: e, ...s } = t,
-        a = (0, l.bG)([o.A], () => o.A.questEnrollmentBlockedUntil);
+    let { onClose: n, quest: i, sourceQuestContent: l, ...s } = t,
+        a = (0, e.bG)([o.A], () => o.A.questEnrollmentBlockedUntil);
     return null == a || null == i
         ? null
         : (0, r.jsx)(u.R, {
               overrideVisibility: !0,
               questOrQuests: i,
               questContent: d.uF.QUEST_ENROLLMENT_BLOCKED_MODAL,
-              sourceQuestContent: e,
+              sourceQuestContent: l,
               children: () => (0, r.jsx)(p, { ...s, onClose: n, questEnrollmentBlockedUntil: a }),
           });
 }

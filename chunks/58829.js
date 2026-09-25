@@ -159,7 +159,7 @@ function A(n) {
         gameApplicationIds: p,
         onCompleteIdentityApplication: u,
     } = n;
-    return (0, t.jsxs)(a.Modal, {
+    return (0, t.jsxs)(a.a, {
         title: f.intl.string(f.t.syl6HS),
         transitionState: l,
         onClose: i,

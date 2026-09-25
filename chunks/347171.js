@@ -1,16 +1,16 @@
 s.d(e, { default: () => w });
 var i = s(477900),
     a = s(582128),
-    n = s(224640),
-    l = s(408278),
-    c = s(314116),
-    r = s(704333),
-    d = s(414499),
-    o = s(597770),
-    u = s(500060),
-    x = s(297264),
-    m = s(834730),
-    f = s(885574),
+    n = s(314116),
+    l = s(704333),
+    c = s(414499),
+    r = s(597770),
+    d = s(500060),
+    o = s(224640),
+    u = s(297264),
+    x = s(834730),
+    m = s(885574),
+    f = s(408278),
     b = s(972213),
     g = s(866665),
     h = s(793574),
@@ -34,14 +34,14 @@ var i = s(477900),
     y = s(375708),
     z = s(367863);
 let M = [
-    { icon: r.B, message: P.default.bpksos },
-    { icon: d.h, message: P.default["5rbQbD"] },
-    { icon: o.GiftIcon, message: P.default.b1X5Jf, tooltip: P.default.AyECej },
-    { icon: u.o, message: P.default.xZiyZj },
+    { icon: l.B, message: P.default.bpksos },
+    { icon: c.h, message: P.default["5rbQbD"] },
+    { icon: r.GiftIcon, message: P.default.b1X5Jf, tooltip: P.default.AyECej },
+    { icon: d.o, message: P.default.xZiyZj },
 ];
 function X(t) {
-    let { transitionState: e, onClose: s, variant: r, claimStatus: d, redirect: o, requestInProgress: u } = t,
-        h = (0, S.A)(o),
+    let { transitionState: e, onClose: s, variant: l, claimStatus: c, redirect: r, requestInProgress: d } = t,
+        h = (0, S.A)(r),
         j = (0, A.M)("xbox"),
         C = (function (t) {
             let {
@@ -82,11 +82,11 @@ function X(t) {
                     };
             }
         })({
-            variant: r,
-            claimStatus: d,
+            variant: l,
+            claimStatus: c,
             handleActivationClick: h,
             cancelXboxPartnerPass: a.useCallback(() => {
-                ((0, c.A)({
+                ((0, n.A)({
                     title: y.intl.string(P.default["/GObQk"]),
                     subtitle: y.intl.string(P.default["r/jeXi"]),
                     confirmText: y.intl.string(P.default.bVwQhX),
@@ -95,9 +95,9 @@ function X(t) {
                 }),
                     j(A.H.CANCEL));
             }, [j]),
-            requestInProgress: u,
+            requestInProgress: d,
         });
-    return (0, i.jsx)(n.d, {
+    return (0, i.jsx)(o.d, {
         transitionState: e,
         onClose: s,
         size: "xl",
@@ -119,12 +119,12 @@ function X(t) {
                                 (0, i.jsxs)("div", {
                                     className: z.gY,
                                     children: [
-                                        (0, i.jsx)(x.D, {
+                                        (0, i.jsx)(u.D, {
                                             variant: "heading-xl/bold",
                                             color: "text-strong",
                                             children: y.intl.string(P.default.ukvxpp),
                                         }),
-                                        (0, i.jsx)(m.E, {
+                                        (0, i.jsx)(x.E, {
                                             variant: "text-sm/medium",
                                             color: "text-subtle",
                                             children: y.intl.format(P.default.FO4faL, { termsLink: (0, O.xA)() }),
@@ -152,11 +152,11 @@ function X(t) {
                                                   (0, i.jsxs)("div", {
                                                       className: z.ed,
                                                       children: [
-                                                          (0, i.jsx)(f.CircleInformationIcon, {
+                                                          (0, i.jsx)(m.CircleInformationIcon, {
                                                               size: "xs",
                                                               color: "var(--text-subtle)",
                                                           }),
-                                                          (0, i.jsx)(m.E, {
+                                                          (0, i.jsx)(x.E, {
                                                               variant: "text-xs/medium",
                                                               color: "text-subtle",
                                                               children: C.disclaimer,
@@ -180,7 +180,7 @@ function X(t) {
                         (0, i.jsx)("div", { className: z.gm }),
                         (0, i.jsx)("div", {
                             className: z.b,
-                            children: (0, i.jsx)(l.K, {
+                            children: (0, i.jsx)(f.K, {
                                 "aria-label": y.intl.string(y.t.cpT0Cq),
                                 onClick: s,
                                 icon: b.XLargeIcon,
@@ -198,7 +198,7 @@ function X(t) {
                                         className: z.vD,
                                         children: [
                                             (0, i.jsx)(s, { size: "sm", color: "var(--icon-strong)" }),
-                                            (0, i.jsx)(m.E, {
+                                            (0, i.jsx)(x.E, {
                                                 variant: "text-md/medium",
                                                 color: "text-default",
                                                 children: y.intl.string(a),
@@ -209,7 +209,7 @@ function X(t) {
                                                     children: (0, i.jsx)(g.m, {
                                                         text: y.intl.string(n),
                                                         position: "top",
-                                                        children: (0, i.jsx)(f.CircleInformationIcon, {
+                                                        children: (0, i.jsx)(m.CircleInformationIcon, {
                                                             size: "xxs",
                                                             color: "var(--icon-default)",
                                                         }),

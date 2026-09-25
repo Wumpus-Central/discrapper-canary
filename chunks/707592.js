@@ -2,9 +2,9 @@ n.d(t, { Py: () => c, Ul: () => d, uR: () => o });
 var i = n(477900);
 n(582128);
 var r = n(192308),
-    a = n(66834),
-    s = n(652215),
-    l = n(231723);
+    a = n(231723),
+    s = n(66834),
+    l = n(652215);
 function o(e) {
     let { eventId: t, recurrenceId: a } = e;
     (0, r.openModalLazy)(async () => {
@@ -298,7 +298,7 @@ function o(e) {
 }
 async function d(e, t) {
     let { guild_id: n } = e;
-    (await a.A.transitionToGuildSync(n, t), o({ eventId: e.id, event: e }));
+    (await s.A.transitionToGuildSync(n, t), o({ eventId: e.id, event: e }));
 }
 function c(e, t) {
     (0, r.openModalLazy)(
@@ -306,6 +306,6 @@ function c(e, t) {
             let { default: t } = await Promise.all([n.e("543267"), n.e("534526")]).then(n.bind(n, 521549));
             return (n) => (0, i.jsx)(t, { ...n, channel: e });
         },
-        { contextKey: t === s.BRT.POPOUT ? l.KX : l.SY },
+        { contextKey: t === l.BRT.POPOUT ? a.KX : a.SY },
     );
 }

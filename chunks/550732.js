@@ -2,12 +2,12 @@ l.d(t, { C: () => p });
 var e = l(477900);
 l(582128);
 var i = l(991660),
-    n = l(189213),
-    r = l(224640),
-    a = l(20742),
-    o = l(364840),
-    c = l(17928),
-    d = l(834730),
+    n = l(17928),
+    r = l(189213),
+    a = l(834730),
+    o = l(224640),
+    c = l(20742),
+    d = l(364840),
     x = l(408278),
     u = l(173936),
     m = l(691540),
@@ -26,19 +26,19 @@ var i = l(991660),
     C = l(592551);
 function p(s) {
     let { appId: t, skuId: l, transitionState: p, onClose: f, children: O, footer: P } = s,
-        U = (0, c.bG)([v.A, E.A], () => v.A.getApplication(t) ?? E.A.getApplicationRecord(t), [t]),
+        U = (0, n.bG)([v.A, E.A], () => v.A.getApplication(t) ?? E.A.getApplicationRecord(t), [t]),
         { data: k } = (0, g.d)(l);
     if (null == U) return null;
     let L = (0, S.A)(U, 25),
         { termsOfServiceUrl: D, privacyPolicyUrl: F } = U;
     if (k?.applicationId !== t)
-        return (0, e.jsx)(n.Modal, {
+        return (0, e.jsx)(r.a, {
             actions: [{ onClick: f, text: N.intl.string(N.t.BddRzS), variant: "primary" }],
             onClose: f,
             size: "sm",
             transitionState: p,
             title: N.intl.string(N.t["0Bf80I"]),
-            children: (0, e.jsx)(d.E, {
+            children: (0, e.jsx)(a.E, {
                 variant: "text-md/normal",
                 color: "text-default",
                 className: R.$r,
@@ -46,25 +46,25 @@ function p(s) {
             }),
         });
     let b = null != L ? (0, e.jsx)("img", { src: L.href, alt: "", className: R.Z2 }) : void 0;
-    return (0, e.jsxs)(r.d, {
+    return (0, e.jsxs)(o.d, {
         onClose: f,
         size: "lg",
         transitionState: p,
         "aria-label": U.name,
         children: [
-            (0, e.jsx)(a.rQ, { leading: b, title: U.name }),
+            (0, e.jsx)(c.rQ, { leading: b, title: U.name }),
             (0, e.jsx)(i.A, { children: (0, e.jsx)("main", { className: C.bodyInner, children: O }) }),
-            (0, e.jsx)(o.j, {
+            (0, e.jsx)(d.j, {
                 children: (0, e.jsxs)("div", {
                     className: R.qr,
                     children: [
                         null != D || null != F
-                            ? (0, e.jsx)(d.E, {
+                            ? (0, e.jsx)(a.E, {
                                   color: "text-strong",
                                   variant: "text-sm/normal",
                                   children: (0, e.jsx)(T.A, { termsOfServiceUrl: D, privacyPolicyUrl: F }),
                               })
-                            : (0, e.jsx)(d.E, {
+                            : (0, e.jsx)(a.E, {
                                   color: "text-strong",
                                   variant: "text-xs/normal",
                                   children: N.intl.string(N.t["3ZY+0D"]),

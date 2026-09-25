@@ -1,19 +1,19 @@
-a.d(i, { default: () => u });
+a.d(i, { default: () => l });
 var n = a(477900),
     e = a(189213),
     r = a(975807),
     s = a(88001),
-    d = a(148155),
-    l = a(375708);
-let u = function (t) {
-    return (0, n.jsx)(e.Modal, {
+    u = a(148155),
+    d = a(375708);
+let l = function (t) {
+    return (0, n.jsx)(e.a, {
         ...t,
         size: "md",
-        title: l.intl.formatToPlainString(d.default.BcZLdW, { premiumGroupProductName: (0, s.DP)() }),
-        subtitle: l.intl.string(d.default.EjhBrs),
+        title: d.intl.formatToPlainString(u.default.BcZLdW, { premiumGroupProductName: (0, s.DP)() }),
+        subtitle: d.intl.string(u.default.EjhBrs),
         actions: [
             {
-                text: l.intl.string(d.default["IO+nlU"]),
+                text: d.intl.string(u.default["IO+nlU"]),
                 variant: "secondary",
                 onClick: () => {
                     (0, r.A)(s.TE);

@@ -86,7 +86,7 @@ function T(e) {
         ],
     });
 }
-function M(e) {
+function S(e) {
     let { quest: t, questContent: s, sourceQuestContent: n, location: l, preCtaClick: a } = e,
         r = (0, g.wW)(),
         c = (0, g.go)(),
@@ -118,9 +118,9 @@ function M(e) {
         ],
     });
 }
-var S = s(408278),
-    E = s(173936),
-    _ = s(815021),
+var E = s(815021),
+    M = s(408278),
+    _ = s(173936),
     L = s(590202),
     q = s(814793),
     A = s(201805),
@@ -141,21 +141,21 @@ function I(e) {
         className: Q.n,
         children: [
             r &&
-                (0, i.jsx)(S.K, {
+                (0, i.jsx)(M.K, {
                     size: "sm",
                     variant: "overlay-secondary",
-                    icon: E.LinkIcon,
+                    icon: _.LinkIcon,
                     "aria-label": y.intl.string(y.t.WqhZss),
                     onClick: o,
                 }),
-            (0, i.jsx)(_.J, { size: "sm", variant: "overlay-secondary", onClick: a }),
+            (0, i.jsx)(E.J, { size: "sm", variant: "overlay-secondary", onClick: a }),
         ],
     });
 }
 var W = s(436511);
 function z(e) {
     let { onClose: t, transitionState: s, title: n, description: a } = e;
-    return (0, i.jsx)(l.Modal, {
+    return (0, i.jsx)(l.a, {
         size: "md",
         title: n,
         actions: [{ variant: "primary", text: y.intl.string(y.t.cpT0Cq), onClick: t }],
@@ -212,7 +212,7 @@ function D(e) {
                                       (0, i.jsx)("div", { className: W._H, children: u }),
                                       (0, i.jsx)("div", {
                                           className: W.xK,
-                                          children: (0, i.jsx)(M, {
+                                          children: (0, i.jsx)(S, {
                                               quest: t,
                                               questContent: s,
                                               sourceQuestContent: n,

@@ -6,7 +6,7 @@ var r = n(189213),
     e = n(375708);
 function l(t) {
     let { roleName: i, onConfirmDelete: n, ...l } = t;
-    return (0, a.jsx)(r.Modal, {
+    return (0, a.jsx)(r.a, {
         ...l,
         size: "sm",
         title: e.intl.string(e.t.YWISbQ),

@@ -1,8 +1,8 @@
 n.d(t, { default: () => u, f: () => d });
 var l = n(477900),
     i = n(582128),
-    s = n(189213),
-    a = n(506774),
+    s = n(506774),
+    a = n(189213),
     r = n(150934),
     o = n(39470),
     c = n(375708);
@@ -10,7 +10,7 @@ let d = "report_to_mod_dont_show_resolve_confirm";
 function u(e) {
     let { transitionState: t, onClose: n, handleResolveFlag: u } = e,
         [h, m] = i.useState(!1);
-    return (0, l.jsx)(s.Modal, {
+    return (0, l.jsx)(a.a, {
         transitionState: t,
         onClose: n,
         title: c.intl.string(o.default["8R4euh"]),
@@ -19,7 +19,7 @@ function u(e) {
             {
                 text: c.intl.string(o.default.ctefO2),
                 onClick: function () {
-                    (h && a.w.set(d, !0), n(), u());
+                    (h && s.w.set(d, !0), n(), u());
                 },
             },
         ],

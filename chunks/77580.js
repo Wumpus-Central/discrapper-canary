@@ -2,12 +2,12 @@ i.d(e, { default: () => j });
 var n = i(477900),
     a = i(582128),
     s = i(503698),
-    l = i.n(s),
-    r = i(821578),
-    c = i(189213),
-    o = i(939249),
-    d = i(834730),
-    u = i(17928),
+    r = i.n(s),
+    l = i(821578),
+    c = i(17928),
+    o = i(189213),
+    d = i(939249),
+    u = i(834730),
     m = i(964486),
     p = i(734057),
     g = i(446243),
@@ -20,7 +20,7 @@ var n = i(477900),
     A = i(692772);
 function j(t) {
     let { channelId: e, transitionState: i, onClose: s } = t,
-        j = (0, u.bG)([h.A], () => h.A.getRoom(e)?.background ?? r.I.DEFAULT),
+        j = (0, c.bG)([h.A], () => h.A.getRoom(e)?.background ?? l.I.DEFAULT),
         [N, f] = (0, a.useState)(j),
         v = (0, a.useMemo)(
             () =>
@@ -30,13 +30,13 @@ function j(t) {
                 }),
             [],
         ),
-        _ = (0, u.bG)([p.A], () => p.A.getChannel(e)?.guild_id),
+        _ = (0, c.bG)([p.A], () => p.A.getChannel(e)?.guild_id),
         E = j === N;
     return (
         (0, m.Ay)(() => {
             (0, k.n0)({ guildId: _, channelId: e, interactionType: "room_selector_opened" });
         }),
-        (0, n.jsx)(c.Modal, {
+        (0, n.jsx)(o.a, {
             transitionState: i,
             title: C.intl.string(x.default.kmzWUc),
             subtitle: C.intl.string(x.default["Rqmi9/"]),
@@ -57,12 +57,12 @@ function j(t) {
                 className: A.Qs,
                 children: v.map((t) =>
                     (0, n.jsxs)(
-                        o.D,
+                        d.D,
                         {
                             onClick: () => {
                                 f(Number(t.key));
                             },
-                            className: l()(A.eh, { [A.wH]: N.toString() === t.key }),
+                            className: r()(A.eh, { [A.wH]: N.toString() === t.key }),
                             children: [
                                 (0, n.jsx)("img", {
                                     src: t.background,
@@ -70,7 +70,7 @@ function j(t) {
                                     style: { aspectRatio: t.aspectRatio },
                                     className: A.Sl,
                                 }),
-                                (0, n.jsx)(d.E, { variant: "text-sm/semibold", children: t.getName() }),
+                                (0, n.jsx)(u.E, { variant: "text-sm/semibold", children: t.getName() }),
                             ],
                         },
                         t.key,

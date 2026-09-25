@@ -1,23 +1,23 @@
 n.d(e, { default: () => p });
 var r = n(477900),
     i = n(582128),
-    a = n(189213),
-    l = n(17928),
+    a = n(17928),
+    l = n(189213),
     u = n(95477),
-    o = n(545059),
-    s = n(870391),
+    s = n(545059),
+    o = n(870391),
     d = n(375708);
 function p(t) {
     let { onClose: e, transitionState: n, groupId: p, initialUserIds: c } = t,
-        m = (0, l.bG)([s.A], () => (null == p ? null : s.A.getGroup(p))),
+        m = (0, a.bG)([o.A], () => (null == p ? null : o.A.getGroup(p))),
         [C, h] = i.useState(m?.name ?? ""),
         k = null != p,
         G = i.useCallback(() => {
             if ("" !== C.trim()) {
-                if (k && null != p) o.A.updateGroup(p, C.trim());
+                if (k && null != p) s.A.updateGroup(p, C.trim());
                 else {
-                    let t = o.A.createGroup(C.trim());
-                    null != c && c.length > 0 && o.A.addUsersToGroup(t, c);
+                    let t = s.A.createGroup(C.trim());
+                    null != c && c.length > 0 && s.A.addUsersToGroup(t, c);
                 }
                 e();
             }
@@ -28,7 +28,7 @@ function p(t) {
             },
             [C, G],
         );
-    return (0, r.jsx)(a.Modal, {
+    return (0, r.jsx)(l.a, {
         transitionState: n,
         onClose: e,
         size: "sm",

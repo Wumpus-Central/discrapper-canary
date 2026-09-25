@@ -1,8 +1,8 @@
 e.d(n, { V: () => g });
 var i = e(477900),
     r = e(582128),
-    l = e(772707),
-    a = e(17928),
+    l = e(17928),
+    a = e(772707),
     s = e(775602),
     o = e(524246),
     u = e(816252),
@@ -23,7 +23,7 @@ let g = () => {
         } = (0, c.X)(),
         y = (0, r.useRef)(null),
         [P, v] = (0, r.useState)(!1),
-        E = (0, a.bG)([s.Ay], () => s.Ay.useReducedMotion);
+        E = (0, l.bG)([s.Ay], () => s.Ay.useReducedMotion);
     if (
         ((0, r.useEffect)(() => {
             null !== y.current && null !== x && v(!0);
@@ -35,7 +35,7 @@ let g = () => {
     return (0, i.jsxs)("div", {
         ref: y,
         children: [
-            (0, i.jsx)(l.k, {
+            (0, i.jsx)(a.k, {
                 graphic: { type: "image", src: D ? C.A : p },
                 gradientColor: D ? "nitro-pink" : "nitro-green",
                 transitionState: t,

@@ -1,10 +1,9 @@
-t.d(s, { A: () => h, h: () => e });
+t.d(s, { h: () => h });
 var p = t(477900);
-function e(i) {
+function h(i) {
     let { size: s, horizontal: t = !1 } = i,
-        e = t ? s : 1,
-        h = t ? 1 : s;
-    return (0, p.jsx)("span", { style: { display: "block", width: e, minWidth: e, height: h, minHeight: h } });
+        h = t ? s : 1,
+        n = t ? 1 : s;
+    return (0, p.jsx)("span", { style: { display: "block", width: h, minWidth: h, height: n, minHeight: n } });
 }
 t(582128);
-let h = e;

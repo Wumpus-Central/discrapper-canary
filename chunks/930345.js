@@ -3,8 +3,8 @@ var l = n(477900),
     s = n(582128),
     i = n(91871),
     a = n.n(i),
-    r = n(189213),
-    o = n(702841),
+    r = n(702841),
+    o = n(189213),
     u = n(97808),
     d = n(778712),
     c = n(123292),
@@ -23,7 +23,7 @@ var l = n(477900),
 function L(e) {
     let { transitionState: t, onClose: n, guildId: i, welcomeMessage: L, onSave: S } = e,
         [E, H] = s.useState({ ...L }),
-        w = (0, o.bG)([C.A], () => C.A.getGuild(i)),
+        w = (0, r.bG)([C.A], () => C.A.getGuild(i)),
         A = s.useCallback(
             (e) => {
                 let t = {};
@@ -52,26 +52,26 @@ function L(e) {
             },
             [i, w],
         ),
-        M = s.useCallback(
+        N = s.useCallback(
             (e) => {
                 H((t) => ({ ...t, authorIds: null != e ? [e] : [] }));
             },
             [H],
         ),
-        N = s.useCallback(
+        P = s.useCallback(
             (e) => {
                 H((t) => ({ ...t, message: e ?? "" }));
             },
             [H],
         ),
-        P = s.useCallback(() => {
+        Q = s.useCallback(() => {
             (S(E), n());
         }, [n, S, E]),
-        Q = s.useCallback(() => {
+        y = s.useCallback(() => {
             (S(null), n());
         }, [S, n]),
-        y = E.authorIds[0] ?? "",
-        F = (function (e) {
+        F = E.authorIds[0] ?? "",
+        M = (function (e) {
             if (null == e.message || 0 === e.message.length) return null;
             if (null == e.authorIds || 0 === e.authorIds.length)
                 if (e.message.length < v.Fi) return I.intl.formatToPlainString(I.t.Lj831L, { minLength: v.Fi });
@@ -83,19 +83,19 @@ function L(e) {
                 { text: I.intl.string(I.t["ETE/oC"]), onClick: n, variant: "secondary" },
                 {
                     text: I.intl.string(I.t["R3BPH+"]),
-                    onClick: P,
+                    onClick: Q,
                     variant: "primary",
-                    disabled: 0 === E.message.length || null != F,
+                    disabled: 0 === E.message.length || null != M,
                 },
             ],
-            [F, P, n, E.message.length],
+            [M, Q, n, E.message.length],
         );
-    return (0, l.jsxs)(r.Modal, {
+    return (0, l.jsxs)(o.a, {
         title: I.intl.string(I.t.UnLrit),
         transitionState: t,
         onClose: n,
         actions: T,
-        actionBarInput: (0, l.jsx)(c.Q, { text: I.intl.string(I.t.N86XcP), onClick: Q, variant: "critical" }),
+        actionBarInput: (0, l.jsx)(c.Q, { text: I.intl.string(I.t.N86XcP), onClick: y, variant: "critical" }),
         children: [
             (0, l.jsxs)("div", {
                 className: p.eH,
@@ -110,7 +110,7 @@ function L(e) {
                         color: "text-default",
                         children: I.intl.string(I.t.mQHK2S),
                     }),
-                    (0, l.jsx)(h.Z, { selectionMode: "single", value: y ?? void 0, options: A, onSelectionChange: M }),
+                    (0, l.jsx)(h.Z, { selectionMode: "single", value: F ?? void 0, options: A, onSelectionChange: N }),
                 ],
             }),
             (0, l.jsx)("div", { className: p.me }),
@@ -130,11 +130,11 @@ function L(e) {
                     (0, l.jsx)(x.f, {
                         placeholder: I.intl.string(I.t["kX/Sbx"]),
                         value: E.message,
-                        onChange: N,
+                        onChange: P,
                         maxLength: v.dl,
                     }),
-                    null != F
-                        ? (0, l.jsx)(m.E, { variant: "text-xs/normal", color: "text-feedback-critical", children: F })
+                    null != M
+                        ? (0, l.jsx)(m.E, { variant: "text-xs/normal", color: "text-feedback-critical", children: M })
                         : null,
                 ],
             }),

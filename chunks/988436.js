@@ -1,11 +1,11 @@
 n.d(e, { default: () => w, i: () => W });
 var s = n(477900),
     i = n(582128),
-    o = n(503698),
-    r = n.n(o),
+    r = n(503698),
+    o = n.n(r),
     a = n(323889),
-    l = n(189213),
-    u = n(17928),
+    l = n(17928),
+    u = n(189213),
     c = n(462887),
     C = n(866665),
     d = n(834730),
@@ -36,17 +36,17 @@ var s = n(477900),
     q = n(375708),
     b = n(175276);
 function w(t) {
-    let { quest: e, transitionState: n, onClose: o, sourceQuestContent: I, refreshOnOpen: T = !1 } = t,
+    let { quest: e, transitionState: n, onClose: r, sourceQuestContent: I, refreshOnOpen: T = !1 } = t,
         f = (0, g.O)((t) => t.getErrorHints(e.id)),
         O = (0, i.useRef)(!1),
         U = (0, Q.UX)(),
         w = (0, P.Ut)(),
         W = (0, p.vU)()?.getId(),
-        X = (0, u.bG)([_.Ay], () => _.Ay.useReducedMotion),
+        X = (0, l.bG)([_.Ay], () => _.Ay.useReducedMotion),
         z = (0, j.Xf)({ useReducedMotion: X, className: b.Zf }),
         V = f.filter((t) => ["xbox", "playstation"].includes(t.connected_account_type)),
         F = (0, h.YL)(e),
-        K = (0, u.bG)([N.A], () => N.A.getState().theme),
+        K = (0, l.bG)([N.A], () => N.A.getState().theme),
         B = (0, c.M)(K) ? M.NJ.DARK : M.NJ.LIGHT,
         { startConsoleQuest: Y, startingConsoleQuest: G } = (0, Q.Wj)({
             questId: e.id,
@@ -77,16 +77,16 @@ function w(t) {
         (0, i.useEffect)(() => {
             T && !O.current && (Y(), (O.current = !0));
         }, [T, Y]),
-        (0, s.jsx)(l.Modal, {
+        (0, s.jsx)(u.a, {
             transitionState: n,
-            onClose: o,
+            onClose: r,
             title: q.intl.string(q.t.W5lmKt),
             subtitle: U.message,
             actions: [
                 {
                     variant: "secondary",
                     onClick: () =>
-                        void (o(),
+                        void (r(),
                         (0, v.b6)(
                             { quest: e },
                             {
@@ -98,7 +98,7 @@ function w(t) {
                         )),
                     text: q.intl.string(q.t["qiS+xj"]),
                 },
-                { variant: "primary", onClick: () => o(), text: q.intl.string(q.t.cpT0Cq) },
+                { variant: "primary", onClick: () => r(), text: q.intl.string(q.t.cpT0Cq) },
             ],
             children: (0, s.jsxs)(s.Fragment, {
                 children: [
@@ -111,7 +111,7 @@ function w(t) {
                                 children: q.intl.string(q.t["+/hZM/"]),
                             }),
                             (0, s.jsxs)(E.D, {
-                                className: r()(b.Tm, { [b.r9]: G }),
+                                className: o()(b.Tm, { [b.r9]: G }),
                                 onClick: Y,
                                 children: [
                                     z.render(),
@@ -166,14 +166,14 @@ function w(t) {
     );
 }
 function k(t) {
-    let { icon: e, text: n, errors: i = [], gameTile: o } = t,
+    let { icon: e, text: n, errors: i = [], gameTile: r } = t,
         a = i.length > 0,
         l = a ? I.e : T.Q;
     return (0, s.jsxs)("div", {
         className: b.dJ,
         children: [
             (0, s.jsxs)("div", {
-                className: r()(b.w_, { [b.qu]: a }),
+                className: o()(b.w_, { [b.qu]: a }),
                 children: [
                     (0, s.jsxs)("div", {
                         className: b.d3,
@@ -185,11 +185,11 @@ function k(t) {
                     (0, s.jsxs)("div", {
                         className: b.d3,
                         children: [
-                            o,
+                            r,
                             (0, s.jsx)(l, {
                                 color: "currentColor",
                                 size: "sm",
-                                className: r()({ [b.kX]: !a, [b.z3]: a }),
+                                className: o()({ [b.kX]: !a, [b.z3]: a }),
                             }),
                         ],
                     }),

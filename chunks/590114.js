@@ -695,9 +695,9 @@ function tR(t) {
 n(321073);
 var tS = n(435558),
     tP = n.n(tS),
-    tj = n(408278),
-    tw = n(661531),
-    t_ = n(462887),
+    tj = n(661531),
+    tw = n(462887),
+    t_ = n(408278),
     tv = n(5373),
     tL = n(834730),
     tE = n(248530),
@@ -854,12 +854,12 @@ function t0(t) {
     let { className: e, children: n, onContextMenu: l, item: s } = t;
     return (0, i.jsx)("div", { className: e, onContextMenu: (t) => l(t, s), children: n });
 }
-let t1 = [tw.A.unsafe_rawColors.BLUE_345.css, tw.A.colors.INTERACTIVE_TEXT_DEFAULT.css],
+let t1 = [tj.A.unsafe_rawColors.BLUE_345.css, tj.A.colors.INTERACTIVE_TEXT_DEFAULT.css],
     t4 = (t) => {
         let { tooltip: e, onClick: n, icon: l } = t;
         return (0, i.jsx)(X.m, {
             text: e,
-            children: (0, i.jsx)(tj.K, { "aria-label": e, variant: "secondary", icon: l, onClick: n, size: "sm" }),
+            children: (0, i.jsx)(t_.K, { "aria-label": e, variant: "secondary", icon: l, onClick: n, size: "sm" }),
         });
     };
 function t5(t, e) {
@@ -990,9 +990,9 @@ class t7 extends l.PureComponent {
         let { item: t } = this.props;
         return this.renderBody({
             message: v.intl.format(v.t.z1oxGO, { remove: () => tO.Vt(t.applicationId, t.branchId) }),
-            foregroundColor: (0, t_.q)(t.theme)
-                ? tw.A.unsafe_rawColors.PRIMARY_300.css
-                : tw.A.unsafe_rawColors.PRIMARY_500.css,
+            foregroundColor: (0, tw.q)(t.theme)
+                ? tj.A.unsafe_rawColors.PRIMARY_300.css
+                : tj.A.unsafe_rawColors.PRIMARY_500.css,
             percent: 100,
         });
     }
@@ -1018,9 +1018,9 @@ class t7 extends l.PureComponent {
             (null == e || null == t) && ((e = 0), (t = v.intl.string(v.t["qS+iKY"]))),
             this.renderBody({
                 percent: e,
-                foregroundColor: (0, t_.q)(i)
-                    ? tw.A.unsafe_rawColors.PRIMARY_300.css
-                    : tw.A.unsafe_rawColors.PRIMARY_500.css,
+                foregroundColor: (0, tw.q)(i)
+                    ? tj.A.unsafe_rawColors.PRIMARY_300.css
+                    : tj.A.unsafe_rawColors.PRIMARY_500.css,
                 message: t,
             })
         );
@@ -1044,9 +1044,9 @@ class t7 extends l.PureComponent {
                       });
         return this.renderBody({
             message: a,
-            foregroundColor: (0, t_.q)(e)
-                ? tw.A.unsafe_rawColors.PRIMARY_300.css
-                : tw.A.unsafe_rawColors.PRIMARY_500.css,
+            foregroundColor: (0, tw.q)(e)
+                ? tj.A.unsafe_rawColors.PRIMARY_300.css
+                : tj.A.unsafe_rawColors.PRIMARY_500.css,
             percent: l,
         });
     }
@@ -1088,7 +1088,7 @@ class t7 extends l.PureComponent {
         return this.renderBody({
             percent: s,
             message: t3({ type: l, stage: i, percent: a, progress: n, total: e }),
-            foregroundColor: tw.A.unsafe_rawColors.BLUE_345.css,
+            foregroundColor: tj.A.unsafe_rawColors.BLUE_345.css,
         });
     }
     renderProgress() {
@@ -1226,14 +1226,14 @@ class ei extends l.PureComponent {
                                   className: h()(tZ.e4, tZ.Eg),
                                   title: v.intl.string(v.t.ytoXKr),
                                   getHistoricalTotalBytes: tK.A.getHistoricalTotalBytesDownloaded,
-                                  color: tw.A.unsafe_rawColors.GREEN_360.resolve({ saturation: 1 }).hex(),
+                                  color: tj.A.unsafe_rawColors.GREEN_360.resolve({ saturation: 1 }).hex(),
                                   animate: l,
                               }),
                               (0, i.jsx)(t$, {
                                   className: h()(tZ.e4, tZ.pn),
                                   title: v.intl.string(v.t.SjohhI),
                                   getHistoricalTotalBytes: tK.A.getHistoricalTotalBytesWritten,
-                                  color: tw.A.unsafe_rawColors.BLUE_345.resolve({ saturation: 1 }).hex(),
+                                  color: tj.A.unsafe_rawColors.BLUE_345.resolve({ saturation: 1 }).hex(),
                                   animate: l,
                               }),
                           ],

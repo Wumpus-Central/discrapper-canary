@@ -5,7 +5,7 @@ var e = i(732159),
     r = i(375708);
 function l(t) {
     let { onConfirmUninstall: n, game: i, ...l } = t;
-    return (0, a.jsx)(e.ConfirmModal, {
+    return (0, a.jsx)(e.u, {
         title: r.intl.formatToPlainString(r.t["f/BAbC"], { gameName: i.name }),
         subtitle: r.intl.format(r.t["FP+NKV"], { gameName: i.name }),
         confirmText: r.intl.string(r.t.RVy6Vl),

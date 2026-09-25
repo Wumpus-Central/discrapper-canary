@@ -19,12 +19,12 @@ var i = n(477900),
     R = n(283973),
     b = n(866665),
     v = n(408278),
-    N = n(173936),
-    S = n(691540),
-    E = n(857250),
-    A = n(97483),
-    k = n(305866),
-    w = n(707554),
+    N = n(691540),
+    S = n(857250),
+    E = n(97483),
+    A = n(305866),
+    k = n(707554),
+    w = n(173936),
     I = n(95477),
     y = n(103557),
     D = n(922016),
@@ -62,19 +62,19 @@ function _() {
             let e = await P.Ay.createFriendInvite(null, T.PE1.ADD_FRIENDS_POPOUT);
             (0, z.C)(
                 (0, L.A)(e.code),
-                () => (0, S.P0)((0, E.o)(U.intl.string(U.t.tBOSx4), A.Ck.SUCCESS)),
-                () => (0, S.P0)((0, E.o)(U.intl.string(U.t.R0RpRX), A.Ck.FAILURE)),
+                () => (0, N.P0)((0, S.o)(U.intl.string(U.t.tBOSx4), E.Ck.SUCCESS)),
+                () => (0, N.P0)((0, S.o)(U.intl.string(U.t.R0RpRX), E.Ck.FAILURE)),
             );
         } catch {
-            (0, S.P0)((0, E.o)(U.intl.string(U.t.R0RpRX), A.Ck.FAILURE));
+            (0, N.P0)((0, S.o)(U.intl.string(U.t.R0RpRX), E.Ck.FAILURE));
         } finally {
             h(!1);
         }
     }
-    return (0, i.jsx)(k.l, {
+    return (0, i.jsx)(A.l, {
         children: (0, i.jsx)("div", {
             className: B.kL,
-            children: (0, i.jsx)(w.F, {
+            children: (0, i.jsx)(k.F, {
                 component: (0, i.jsxs)("div", {
                     className: B.wx,
                     children: [
@@ -92,7 +92,7 @@ function _() {
                             align: "right",
                             caretConfig: { align: "end" },
                             children: (0, i.jsx)(v.K, {
-                                icon: N.LinkIcon,
+                                icon: w.LinkIcon,
                                 size: "sm",
                                 onClick: f,
                                 "aria-label": U.intl.string(U.t.t1T3kD),
@@ -418,7 +418,7 @@ function eR(e) {
 function eb(e) {
     let { closePopout: t } = e,
         [n, l] = s.useState("");
-    return (0, i.jsx)(k.l, {
+    return (0, i.jsx)(A.l, {
         children: (0, i.jsxs)("div", {
             className: ef.kL,
             children: [

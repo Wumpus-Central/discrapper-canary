@@ -14,7 +14,7 @@ function c(t) {
         }, [i, u, c]),
         C = n === d.f.STREAM ? o.intl.string(o.t["/lFMWr"]) : o.intl.string(o.t.xzxhZS),
         h = n === d.f.STREAM ? o.intl.string(o.t.xaOX7d) : o.intl.string(o.t.oU1p9O);
-    return (0, e.jsx)(s.Modal, {
+    return (0, e.jsx)(s.a, {
         size: "md",
         actionBarInput: (0, e.jsx)(r.S, {
             checked: u,

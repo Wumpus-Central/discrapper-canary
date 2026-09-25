@@ -3,12 +3,12 @@ var a = i(477900),
     r = i(189213),
     s = i(331322),
     e = i(834730),
-    l = i(28863),
-    c = i(818023),
+    c = i(28863),
+    l = i(818023),
     o = i(375708);
 function d(t) {
     let { application: n, onCancel: i, onClose: d, onConfirm: h, ...u } = t;
-    return (0, a.jsx)(r.Modal, {
+    return (0, a.jsx)(r.a, {
         transitionState: u.transitionState,
         onClose: d,
         title: o.intl.string(o.t["06YebE"]),
@@ -36,7 +36,7 @@ function d(t) {
                 }),
                 (0, a.jsx)(e.E, {
                     variant: "text-sm/normal",
-                    children: (0, a.jsx)(l.Anchor, { href: c.i6, children: o.intl.string(o.t.E0gf5l) }),
+                    children: (0, a.jsx)(c.Anchor, { href: l.i6, children: o.intl.string(o.t.E0gf5l) }),
                 }),
             ],
         }),

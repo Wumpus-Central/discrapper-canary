@@ -5,8 +5,8 @@ var i = n(477900),
     s = n.n(a),
     l = n(562708),
     o = n(837381),
-    d = n(113325),
-    c = n(17928),
+    d = n(17928),
+    c = n(113325),
     u = n(834730),
     _ = n(7807),
     E = n(661531),
@@ -67,8 +67,8 @@ function k(e) {
     let { channel: t, guildId: n, analyticsLocations: r, sounds: a } = e,
         s = (0, T.GV)(),
         l = (0, h.A)(s),
-        d = (0, c.bG)([N.default], () => N.default.getCurrentUser()),
-        u = (0, c.bG)([C.A], () => C.A.getVoiceState(n, d?.id ?? M.dJq)),
+        c = (0, d.bG)([N.default], () => N.default.getCurrentUser()),
+        u = (0, d.bG)([C.A], () => C.A.getVoiceState(n, c?.id ?? M.dJq)),
         _ = u?.selfDeaf || u?.mute || u?.suppress;
     return (0, i.jsx)(o.hD, {
         navigator: l,
@@ -101,8 +101,8 @@ function F(e) {
     let { channel: t, guildId: n, analyticsSource: a, openFullPicker: o } = e,
         { analyticsLocations: h } = (0, f.Ay)(I.A.SOUNDBOARD_QUICK_ACCESS_POPOUT),
         { sounds: T, hasLockedSound: m, isFetching: N } = (0, y.Ay)({ channel: t, currentGuildId: n }),
-        C = (0, c.bG)([S.A], () => S.A.getMediaSessionId()),
-        O = (0, c.bG)([L.A], () => L.A.getFavorites().size);
+        C = (0, d.bG)([S.A], () => S.A.getMediaSessionId()),
+        O = (0, d.bG)([L.A], () => L.A.getFavorites().size);
     return (
         (0, p.A)({
             type: l.ImpressionTypes.POPOUT,
@@ -120,7 +120,7 @@ function F(e) {
         }, []),
         (0, i.jsx)(f.f5, {
             value: h,
-            children: (0, i.jsxs)(d.lG, {
+            children: (0, i.jsxs)(c.lG, {
                 children: [
                     (0, i.jsxs)("div", {
                         className: s()(w.kL, m && w.Dx),

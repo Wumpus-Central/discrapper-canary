@@ -13,7 +13,7 @@ let s = function (t) {
             throw (t(o.intl.string(o.t["6D5WVg"])), i);
         }
     }
-    return (0, a.jsx)(r.ConfirmModal, {
+    return (0, a.jsx)(r.u, {
         title: o.intl.string(o.t.JmUENg),
         subtitle: o.intl.format(o.t["6l2osp"], { applicationName: n.name }),
         confirmText: o.intl.string(o.t["cY+Oob"]),

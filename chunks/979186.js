@@ -8,15 +8,15 @@ var r = n(477900),
     c = n(561028),
     d = n(121894),
     u = n(337836),
-    h = n(43990),
-    f = n(557361),
-    g = n(17928),
-    p = n(462887),
-    m = n(38021),
-    A = n(192308),
-    v = n(231723),
-    y = n(559106),
-    x = n(638495),
+    h = n(17928),
+    f = n(462887),
+    g = n(38021),
+    p = n(192308),
+    m = n(231723),
+    A = n(559106),
+    v = n(43990),
+    y = n(638495),
+    x = n(557361),
     w = n(965830),
     E = n(318009),
     C = n(92960),
@@ -75,8 +75,8 @@ function eu(e) {
         a = i.useMemo(() => new F.SpringValue(1), []),
         c = i.useRef(null),
         [d, u] = i.useState(!1),
-        [h, f] = i.useState(!1),
-        p = (0, g.bG)([Z.default], () => Z.default.getCurrentUser());
+        [f, g] = i.useState(!1),
+        p = (0, h.bG)([Z.default], () => Z.default.getCurrentUser());
     (0, J.Ay)(
         () => (
             (c.current = setTimeout(A, ed)),
@@ -92,8 +92,8 @@ function eu(e) {
         }, [a, n, o]),
         v = i.useCallback(
             (e) => {
-                h ||
-                    (f(!0),
+                f ||
+                    (g(!0),
                     n?.(),
                     z.A.track(
                         el.HAw.NOTIFICATION_CLICKED,
@@ -103,7 +103,7 @@ function eu(e) {
                     e.stopPropagation(),
                     setTimeout(() => s?.(), 200));
             },
-            [n, s, h],
+            [n, s, f],
         ),
         y = i.useCallback(
             (e) => {
@@ -117,7 +117,7 @@ function eu(e) {
             },
             [l, n],
         ),
-        w = (0, g.bG)([er.A], () => er.A.getFocusedRunningGame()),
+        w = (0, h.bG)([er.A], () => er.A.getFocusedRunningGame()),
         E = d
             ? (0, r.jsxs)("div", {
                   children: [
@@ -234,11 +234,11 @@ function eb(e) {
 }
 function eN(e) {
     let { windowKey: t, themeOverride: n } = e,
-        { theme: r } = (0, m.wR)(),
+        { theme: r } = (0, g.wR)(),
         s = n ?? r;
     return (
         i.useLayoutEffect(() => {
-            ey.Ay.setTrafficLightAppearance((0, p.M)(s) ? "dark" : "light", t);
+            ey.Ay.setTrafficLightAppearance((0, f.M)(s) ? "dark" : "light", t);
         }, [s, t]),
         null
     );
@@ -281,7 +281,7 @@ class eO extends i.Component {
             eA.isPlatformEmbedded
                 ? t.removeEventListener("contextmenu", ev.contextMenuCallbackNative)
                 : t.removeEventListener("contextmenu", ev.contextMenuCallbackWeb),
-            (0, d.r)(() => A.useModalsStore.setState((e) => ({ ...e, [v.KX]: [] }))),
+            (0, d.r)(() => p.useModalsStore.setState((e) => ({ ...e, [m.KX]: [] }))),
             e.removeEventListener("beforeunload", this.beforeUnload));
     }
     updateTitle() {
@@ -327,12 +327,12 @@ class eO extends i.Component {
                 guestWindow: o,
                 clientThemesClassName: a,
                 contentClassName: d,
-                themeOverride: g,
-                titleBarTheme: p,
-                hideModals: m = !1,
-                appContext: A,
+                themeOverride: h,
+                titleBarTheme: f,
+                hideModals: g = !1,
+                appContext: p,
             } = this.props,
-            v = eb({ withTitleBar: s, isFullScreen: i }),
+            m = eb({ withTitleBar: s, isFullScreen: i }),
             w = n === eE.f,
             C = w ? eh : P.A;
         return (0, r.jsx)(c.Kd, {
@@ -340,11 +340,11 @@ class eO extends i.Component {
                 eg.e,
                 {
                     windowKey: n,
-                    themeOverride: g,
+                    themeOverride: h,
                     children: [
-                        v && (0, r.jsx)(eN, { windowKey: n, themeOverride: p }),
+                        m && (0, r.jsx)(eN, { windowKey: n, themeOverride: f }),
                         (0, r.jsx)(O.A, {
-                            children: (0, r.jsxs)(y.xp, {
+                            children: (0, r.jsxs)(A.xp, {
                                 containerRef: this.rootRef,
                                 children: [
                                     (0, r.jsx)(e_, {
@@ -354,7 +354,7 @@ class eO extends i.Component {
                                             children: [
                                                 (0, r.jsx)(k.Al, {}),
                                                 (0, r.jsx)(U.Wr, {
-                                                    appContext: A ?? el.BRT.POPOUT,
+                                                    appContext: p ?? el.BRT.POPOUT,
                                                     renderWindow: o,
                                                     children: (0, r.jsx)(j.l, {
                                                         children: (0, r.jsxs)(M.Yf, {
@@ -362,9 +362,9 @@ class eO extends i.Component {
                                                                 (0, r.jsxs)("div", {
                                                                     className: eC.SW,
                                                                     children: [
-                                                                        v &&
-                                                                            (0, r.jsx)(h.N, {
-                                                                                theme: p,
+                                                                        m &&
+                                                                            (0, r.jsx)(v.N, {
+                                                                                theme: f,
                                                                                 children: (e) =>
                                                                                     (0, r.jsx)(S.cq, {
                                                                                         windowKey: n,
@@ -377,7 +377,7 @@ class eO extends i.Component {
                                                                         }),
                                                                     ],
                                                                 }),
-                                                                !m && (0, r.jsx)(x.b, {}),
+                                                                !g && (0, r.jsx)(y.b, {}),
                                                                 (0, r.jsx)(E.A, {}),
                                                                 (0, r.jsx)(u.P, {}),
                                                                 (0, r.jsx)(M.C8, {}),
@@ -388,7 +388,7 @@ class eO extends i.Component {
                                             ],
                                         }),
                                     }),
-                                    (0, r.jsx)(f.Ut, {}),
+                                    (0, r.jsx)(x.Ut, {}),
                                 ],
                             }),
                         }),
@@ -421,12 +421,12 @@ let e_ = i.forwardRef(function (e, t) {
         );
     }),
     eD = i.forwardRef(function (e, t) {
-        let { guestWindow: n, isFullScreen: i } = (0, g.cf)([ew.A], () => ({
+        let { guestWindow: n, isFullScreen: i } = (0, h.cf)([ew.A], () => ({
             guestWindow: ew.A.getWindow(e.windowKey),
             isFullScreen: ew.A.isWindowFullScreen(e.windowKey),
         }));
         a()(null != n, "Missing guestWindow reference");
-        let { forcedColors: s, connectedEmbeddedActivity: l } = (0, g.cf)([N.Ay, _.Ay], () => ({
+        let { forcedColors: s, connectedEmbeddedActivity: l } = (0, h.cf)([N.Ay, _.Ay], () => ({
             forcedColors: N.Ay.useForcedColors ? "yes" : "no",
             connectedEmbeddedActivity: _.Ay.getCurrentEmbeddedActivity(),
         }));
@@ -434,7 +434,7 @@ let e_ = i.forwardRef(function (e, t) {
         let { analyticsLocations: o } = (0, I.Ay)(D.A.POPOUT_WINDOW),
             { clientThemesClassName: c, clientThemesCSS: d } = (0, T.Ay)(),
             u = (0, ef.NC)(),
-            h = e.themeOverride ?? u;
+            f = e.themeOverride ?? u;
         return null == n
             ? null
             : (0, r.jsx)(w.W, {
@@ -443,7 +443,7 @@ let e_ = i.forwardRef(function (e, t) {
                       children: (0, r.jsx)(eO, {
                           ref: t,
                           ...e,
-                          titleBarTheme: h,
+                          titleBarTheme: f,
                           guestWindow: n,
                           isFullScreen: i,
                           forcedColors: s,

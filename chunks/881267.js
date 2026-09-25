@@ -3,11 +3,11 @@ var t = n(477900),
     r = n(582128),
     u = n(659421),
     o = n(700623),
-    i = n(331322),
-    a = n(17928),
-    s = n(834730),
-    d = n(821609),
-    c = n(28863),
+    i = n(17928),
+    a = n(821609),
+    s = n(28863),
+    d = n(331322),
+    c = n(834730),
     f = n(398590),
     m = n(287809),
     h = n(944771),
@@ -21,7 +21,7 @@ let C = {
     void: { name: "Void", icon: u.H, defaultSubtitle: "Explore the Void Design System" },
 };
 function b(e) {
-    let l = (0, a.bG)([m.default], () => {
+    let l = (0, i.bG)([m.default], () => {
             let e = m.default.getCurrentUser();
             return e?.isStaff() || e?.isStaffPersonal();
         }),
@@ -54,7 +54,7 @@ function b(e) {
         P = y?.name ?? (null != j ? `${j.name} Playground` : "Playground"),
         w =
             null != y && null != y.docs
-                ? (0, t.jsx)(c.Anchor, { href: y.docs, children: "Documentation" })
+                ? (0, t.jsx)(s.Anchor, { href: y.docs, children: "Documentation" })
                 : null != v
                   ? v.defaultSubtitle
                   : "Explore Components",
@@ -84,7 +84,7 @@ function b(e) {
     return (0, t.jsx)("div", {
         className: S.z,
         "data-has-story": null != y,
-        children: (0, t.jsxs)(i.B, {
+        children: (0, t.jsxs)(d.B, {
             direction: null == y ? "vertical" : "horizontal",
             align: null == y ? "start" : "center",
             gap: 12,
@@ -92,24 +92,24 @@ function b(e) {
             children: [
                 (0, t.jsx)("div", {
                     className: S.w,
-                    children: (0, t.jsxs)(i.B, {
+                    children: (0, t.jsxs)(d.B, {
                         direction: "horizontal",
                         align: "start",
                         gap: 8,
                         children: [
                             (0, t.jsx)(k, { size: "lg" }),
-                            (0, t.jsxs)(i.B, {
+                            (0, t.jsxs)(d.B, {
                                 direction: "vertical",
                                 gap: 0,
                                 children: [
-                                    (0, t.jsx)(s.E, { variant: "text-md/semibold", children: P }),
-                                    (0, t.jsx)(s.E, { variant: "text-sm/normal", children: w }),
+                                    (0, t.jsx)(c.E, { variant: "text-md/semibold", children: P }),
+                                    (0, t.jsx)(c.E, { variant: "text-sm/normal", children: w }),
                                 ],
                             }),
                         ],
                     }),
                 }),
-                (0, t.jsx)(d.$, { size: "sm", onClick: E, text: "Open Playground", fullWidth: null == y }),
+                (0, t.jsx)(a.$, { size: "sm", onClick: E, text: "Open Playground", fullWidth: null == y }),
             ],
         }),
     });

@@ -2,9 +2,9 @@ i.d(e, { default: () => j });
 var n = i(477900),
     l = i(582128),
     r = i(132500),
-    a = i(772707),
-    o = i(834730),
-    s = i(123292),
+    a = i(834730),
+    o = i(123292),
+    s = i(772707),
     E = i(331322),
     c = i(885574),
     d = i(821609),
@@ -105,7 +105,7 @@ var T = i(652215),
 function b(t) {
     let { modalSessionId: e, entryPoint: i } = t;
     return (0, m.W$)()
-        ? (0, n.jsx)(o.E, {
+        ? (0, n.jsx)(a.E, {
               variant: "text-xs/medium",
               children: I.intl.format(M.default.htWh1G, {
                   handleOnHelpUrlHook: () => {
@@ -115,7 +115,7 @@ function b(t) {
               }),
           })
         : i === f.q1.SAFETY_FLOWS
-          ? (0, n.jsx)(s.Q, {
+          ? (0, n.jsx)(o.Q, {
                 size: "sm",
                 textVariant: "text-sm/medium",
                 text: I.intl.string(I.t["2jxGer"]),
@@ -127,12 +127,12 @@ function b(t) {
           : null;
 }
 let j = function (t) {
-    let { transitionState: e, entryPoint: i, onClose: s, onComplete: _, dismissable: S, classificationId: h } = t,
+    let { transitionState: e, entryPoint: i, onClose: o, onComplete: _, dismissable: S, classificationId: h } = t,
         p = l.useMemo(() => (0, r.A)(), []),
         x = (0, m.W$)(),
         { loading: O, ageVerificationMethods: v } = P({
             onClose: () => {
-                (_?.(), s());
+                (_?.(), o());
             },
             classificationId: h,
         });
@@ -140,9 +140,9 @@ let j = function (t) {
         l.useEffect(() => {
             (0, f.Bs)(p, f.WU.EXPRESSIVE_PRIMARY, i);
         }, [p, i]),
-        (0, n.jsx)(a.k, {
+        (0, n.jsx)(s.k, {
             transitionState: e,
-            onClose: s,
+            onClose: o,
             gradientColor: "blue",
             dismissable: S,
             graphic: { type: "image", src: G.A },
@@ -169,7 +169,7 @@ let j = function (t) {
                         className: W.W,
                         children: [
                             (0, n.jsx)(c.CircleInformationIcon, { size: "lg", color: "currentColor" }),
-                            (0, n.jsx)(o.E, {
+                            (0, n.jsx)(a.E, {
                                 variant: "text-sm/medium",
                                 color: "text-feedback-info",
                                 children: I.intl.string(M.default.ar3a3q),
@@ -182,7 +182,7 @@ let j = function (t) {
                               align: "center",
                               gap: 16,
                               children: [
-                                  (0, n.jsx)(o.E, {
+                                  (0, n.jsx)(a.E, {
                                       variant: "text-xs/medium",
                                       color: "text-subtle",
                                       children: I.intl.string(M.default.cR6336),

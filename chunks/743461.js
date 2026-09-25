@@ -39,7 +39,7 @@ let u = function (t) {
         i.useEffect(() => {
             (0, L.hv)({ action: L.rY.EXPLICIT_MEDIA_LEARN_MORE_VIEWED, channelId: n, messageId: u });
         }, [n, u]),
-        (0, e.jsx)(_.Modal, {
+        (0, e.jsx)(_.a, {
             title: M.intl.string(M.t.sGW77l),
             subtitle: (function () {
                 if (g)

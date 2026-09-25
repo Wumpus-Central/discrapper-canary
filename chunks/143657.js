@@ -53,11 +53,11 @@ async function Y(e) {
 }
 var F = n(180662),
     W = n(375708);
-function M(e, t) {
+function q(e, t) {
     return { mediaAttachmentState: { status: t, mediaURL: e }, emoji: void 0, stickerId: void 0 };
 }
-var q = n(95561),
-    G = n(652215),
+var G = n(95561),
+    M = n(652215),
     z = n(503698),
     B = n.n(z),
     H = n(17928),
@@ -448,13 +448,13 @@ function eA(e) {
                             return ((l[n] = { ...l[n], text: t }), l);
                         }));
                 }, []),
-                q = i.useCallback((e, t) => {
+                G = i.useCallback((e, t) => {
                     o((n) => {
                         let l = [...n];
                         return ((l[t] = { ...l[t], image: e }), l);
                     });
                 }, []),
-                G = i.useCallback(
+                M = i.useCallback(
                     (e, t, n) => {
                         let l = r[t],
                             a = l.image?.mediaAttachmentState;
@@ -467,25 +467,25 @@ function eA(e) {
                 z = i.useCallback(
                     async (e, t, n) => {
                         let l = r[t].localCreationAnswerId;
-                        (G(e, t), q(M(n, D.PREPARING), t), null == (await _(e, l, n)))
-                            ? q(M(n, D.ERROR), t)
-                            : q(M(n, D.READY_TO_UPLOAD), t);
+                        (M(e, t), G(q(n, D.PREPARING), t), null == (await _(e, l, n)))
+                            ? G(q(n, D.ERROR), t)
+                            : G(q(n, D.READY_TO_UPLOAD), t);
                     },
-                    [r, q, G],
+                    [r, G, M],
                 ),
                 B = i.useCallback(
                     (e, t, n) => {
                         let l = r[t].localCreationAnswerId,
                             a = URL.createObjectURL(n);
-                        (G(e, t), q(M(a, D.PREPARING), t), U(e, l, n), q(M(a, D.READY_TO_UPLOAD), t));
+                        (M(e, t), G(q(a, D.PREPARING), t), U(e, l, n), G(q(a, D.READY_TO_UPLOAD), t));
                     },
-                    [r, q, G],
+                    [r, G, M],
                 ),
                 H = i.useCallback(
                     (e, t) => {
-                        (G(a, t), q({ emoji: e, stickerId: void 0, mediaAttachmentState: void 0 }, t));
+                        (M(a, t), G({ emoji: e, stickerId: void 0, mediaAttachmentState: void 0 }, t));
                     },
-                    [a, q, G],
+                    [a, G, M],
                 ),
                 V = i.useCallback((e) => {
                     o((t) => {
@@ -500,14 +500,14 @@ function eA(e) {
                     (e) => {
                         if (!O) return;
                         let t = r.length;
-                        (G(a, e),
+                        (M(a, e),
                             o((t) => {
                                 let n = [...t];
                                 return (n.splice(e, 1), n);
                             }),
                             n?.({ indexToRemove: e, numberOfAnswers: t }));
                     },
-                    [r.length, O, a, n, G],
+                    [r.length, O, a, n, M],
                 );
             i.useEffect(
                 () => () => {
@@ -598,7 +598,7 @@ function eA(e) {
                               ? (n += 1)
                               : null != a.mediaAttachmentState && (e += 1));
                 }),
-                    q.Ay.trackWithMetadata(G.HAw.POLL_CREATION_CANCELLED, {
+                    G.Ay.trackWithMetadata(M.HAw.POLL_CREATION_CANCELLED, {
                         answers_count: H.length,
                         attachments_count: e,
                         emojis_count: t,
@@ -695,7 +695,7 @@ function eA(e) {
             ],
             [ev, ed, ew, J, eI],
         );
-    return (0, a.jsx)(c.Modal, {
+    return (0, a.jsx)(c.a, {
         transitionState: r,
         onClose: u,
         title: W.intl.string(W.t["GD/8X8"]),

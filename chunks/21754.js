@@ -1,8 +1,8 @@
 l.d(n, { default: () => v });
 var a = l(477900),
     i = l(582128),
-    e = l(189213),
-    u = l(17928),
+    e = l(17928),
+    u = l(189213),
     s = l(691540),
     r = l(857250),
     o = l(97483),
@@ -22,12 +22,12 @@ function v(t) {
     let { guildId: n, userId: l, anaylticsLocations: v, transitionState: E, onClose: w } = t,
         { analyticsLocations: x } = (0, C.Ay)(),
         S = v?.[0] ?? x?.[0] ?? null,
-        _ = (0, u.bG)([h.default], () => h.default.getUser(l), [l]),
+        _ = (0, e.bG)([h.default], () => h.default.getUser(l), [l]),
         [D, N] = (0, p.Ay)(l, n),
-        [U, M] = i.useState(!1),
-        O = i.useCallback(async () => {
+        [U, O] = i.useState(!1),
+        j = i.useCallback(async () => {
             if (null != _) {
-                M(!0);
+                O(!0);
                 try {
                     (await d.A.setCommunicationDisabledDuration(n, l, null, null, S),
                         (0, s.P0)((0, r.o)(A.intl.string(A.t["/Mmbfv"]), o.Ck.SUCCESS)),
@@ -35,11 +35,11 @@ function v(t) {
                 } catch (t) {
                     (0, s.P0)((0, r.o)(A.intl.string(A.t.epyCuh), o.Ck.FAILURE));
                 } finally {
-                    M(!1);
+                    O(!1);
                 }
             }
         }, [n, _, l, w, S]),
-        j = i.useCallback(() => {
+        L = i.useCallback(() => {
             N || w();
         }, [N, w]);
     return ((0, f.Ay)(() => {
@@ -50,7 +50,7 @@ function v(t) {
     }),
     null == _ || null == n)
         ? null
-        : (0, a.jsx)(e.Modal, {
+        : (0, a.jsx)(u.a, {
               transitionState: E,
               onClose: w,
               title: A.intl.string(A.t["+ZD3ou"]),
@@ -62,7 +62,7 @@ function v(t) {
                           : (0, a.jsx)(k.A, {
                                 className: g.q,
                                 deadline: new Date(D),
-                                onInterval: j,
+                                onInterval: L,
                                 showUnits: !0,
                                 stopAtOneSec: !0,
                             });
@@ -70,7 +70,7 @@ function v(t) {
               }),
               actions: [
                   { text: A.intl.string(A.t["ETE/oC"]), onClick: w, variant: "secondary" },
-                  { text: A.intl.string(A.t.qXtNtS), onClick: O, loading: U, variant: "critical-primary" },
+                  { text: A.intl.string(A.t.qXtNtS), onClick: j, loading: U, variant: "critical-primary" },
               ],
               children: (0, a.jsx)(c.E, {
                   variant: "text-md/normal",

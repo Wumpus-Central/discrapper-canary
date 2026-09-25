@@ -14,7 +14,7 @@ function m(t) {
     a.useEffect(() => {
         (0, l.Ak)("success", 0.1);
     }, []);
-    let [d] = a.useState(() => {
+    let [f] = a.useState(() => {
         let t;
         return (t = [
             o.intl.format(o.t.ZAbzbA, {}),
@@ -26,7 +26,7 @@ function m(t) {
             o.intl.format(o.t.SN3QDR, {}),
         ])[Math.floor(Math.random() * t.length)];
     });
-    return (0, i.jsx)(s.Modal, {
+    return (0, i.jsx)(s.a, {
         transitionState: n,
         title: o.intl.string(o.t["62E+tw"]),
         actions: [{ text: o.intl.string(o.t.cpT0Cq), onClick: m, variant: "primary" }],
@@ -36,7 +36,7 @@ function m(t) {
             children: (0, i.jsxs)(e.E, {
                 className: c.KP,
                 variant: "text-sm/normal",
-                children: [o.intl.string(o.t["4z1Tq0"]), (0, i.jsx)("br", {}), d],
+                children: [o.intl.string(o.t["4z1Tq0"]), (0, i.jsx)("br", {}), f],
             }),
         }),
     });

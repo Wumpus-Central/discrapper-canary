@@ -4,9 +4,9 @@ var i = n(477900),
     r = n(435558),
     s = n(536637),
     a = n.n(s),
-    o = n(189213),
-    u = n(17928),
-    d = n(554146),
+    o = n(17928),
+    u = n(554146),
+    d = n(189213),
     c = n(862482),
     h = n(691540),
     g = n(857250),
@@ -82,12 +82,12 @@ var el = n(652215),
 function eo(e) {
     let { targetElementRef: t, channelId: n, location: r, onAddToGroup: s } = e,
         a = (0, ei.qH)(),
-        o = "staff" === a,
+        d = "staff" === a,
         c = "entitled" === a,
-        h = (0, u.bG)([et.Ay], () => et.Ay.getSection(n)),
+        h = (0, o.bG)([et.Ay], () => et.Ay.getSection(n)),
         { enabled: g } = $.A.useConfig({ location: r }),
-        [f, A] = (0, Z.kn)(g && !o ? [d.M.NITRO_GDM_CAP_COACHMARK] : []),
-        E = f === d.M.NITRO_GDM_CAP_COACHMARK,
+        [f, A] = (0, Z.kn)(g && !d ? [u.M.NITRO_GDM_CAP_COACHMARK] : []),
+        E = f === u.M.NITRO_GDM_CAP_COACHMARK,
         p = l.useCallback(() => {
             (en.default.track(el.HAw.PREMIUM_PROMOTION_OPENED, { location: r, location_object: el.ZSU.BUTTON_CTA }),
                 A(er.i.TAKE_ACTION));
@@ -142,7 +142,7 @@ function ed(e) {
         subscriptionTier: es.pe.TIER_2,
         children: (e) => {
             let { onClick: t } = e;
-            return (0, i.jsx)(o.Modal, {
+            return (0, i.jsx)(d.a, {
                 transitionState: r ?? D.ip.ENTERED,
                 onClose: async () => await s(),
                 title: ea.intl.formatToPlainString(ea.t.IyBYPN, { number: el.wLU }),
@@ -174,15 +174,15 @@ let em = { mass: 1, tension: 320, friction: 30, clamp: !0 },
     eI = l.forwardRef(function (e, t) {
         let { location: n, memberCount: r, recipientLimit: s } = e,
             a = (0, ei.qH)(),
-            { enabled: o } = $.A.useConfig({ location: n }),
-            d = (0, u.bG)([eE.Ay], () => eE.Ay.useReducedMotion),
+            { enabled: u } = $.A.useConfig({ location: n }),
+            d = (0, o.bG)([eE.Ay], () => eE.Ay.useReducedMotion),
             [c, h] = l.useState(!1),
             [g, f] = l.useState(!1),
             [A, E] = l.useState(1.4),
             p = l.useRef(1.4),
             S = l.useRef(null),
             C = l.useRef(null),
-            _ = (0, ei.yh)(a) && r >= s && o,
+            _ = (0, ei.yh)(a) && r >= s && u,
             N = l.useCallback(() => {
                 (E(p.current),
                     (p.current = Math.min(p.current + 2, 15)),
@@ -269,10 +269,10 @@ var eS = n(683063),
 function e_(e) {
     let { memberCount: t, recipientLimit: n } = e,
         l = (0, ei.qH)(),
-        r = (0, u.bG)([eE.Ay], () => eE.Ay.useReducedMotion),
+        r = (0, o.bG)([eE.Ay], () => eE.Ay.useReducedMotion),
         s = "entitled" === l && n > el.wLU,
         a = t > el.wLU,
-        o = ea.intl.formatToPlainString(ea.t["9EQix0"], { numMembers: t, maxMemberLimit: n }),
+        u = ea.intl.formatToPlainString(ea.t["9EQix0"], { numMembers: t, maxMemberLimit: n }),
         d = (0, i.jsx)("span", {
             className: eh()(eC.hJ, { [eC.VN]: r }),
             children: s
@@ -287,14 +287,14 @@ function e_(e) {
                           (0, i.jsx)(m.E, {
                               variant: "text-md/normal",
                               className: eh()(eC.qz, { [eC.fw]: a }),
-                              children: o,
+                              children: u,
                           }),
                       ],
                   })
                 : (0, i.jsx)(m.E, {
                       variant: "text-md/normal",
                       color: !s && t >= n ? "text-feedback-critical" : "text-subtle",
-                      children: o,
+                      children: u,
                   }),
         });
     return (0, i.jsx)("div", {
@@ -432,14 +432,14 @@ function e5(e) {
             comparator: r,
             mutualGuilds: s,
             selected: a,
-            checked: o,
+            checked: u,
             disabled: d = !1,
             onClick: c,
             onMouseEnter: h,
             "aria-setsize": g,
             "aria-posinset": f,
         } = e,
-        E = (0, u.bG)([e2.A], () => e2.A.getStatus(t.id)),
+        E = (0, o.bG)([e2.A], () => e2.A.getStatus(t.id)),
         p = (0, eZ.rm)(String(t.id));
     return (0, i.jsx)(A.D, {
         id: `user-row-${n}`,
@@ -452,7 +452,7 @@ function e5(e) {
         },
         ...p,
         role: "checkbox",
-        "aria-checked": o,
+        "aria-checked": u,
         "aria-disabled": d,
         "aria-setsize": g,
         "aria-posinset": f,
@@ -516,7 +516,7 @@ function e5(e) {
                         }),
                     ],
                 }),
-                (0, i.jsx)(eK.P, { checked: o, disabled: d }),
+                (0, i.jsx)(eK.P, { checked: u, disabled: d }),
             ],
         }),
     });
@@ -568,7 +568,7 @@ function tl() {
 function tr(e) {
     let { channel: t, onClose: n } = e,
         l = (0, z.Ay)(t) ?? "",
-        r = (0, u.bG)([ej.Ay], () => ej.Ay.lastMessageId(t.id) ?? t.id);
+        r = (0, o.bG)([ej.Ay], () => ej.Ay.lastMessageId(t.id) ?? t.id);
     return (0, i.jsx)(A.D, {
         onClick: () => {
             ((0, ex.uh)(el.ME, t.id), n());
@@ -591,8 +591,8 @@ function tr(e) {
 }
 function ts(e) {
     let { onConfirm: t, channelIds: n, ...l } = e,
-        r = (0, u.yK)([eP.A], () => Array.from(n).map(eP.A.getChannel), [n]);
-    return (0, i.jsx)(o.Modal, {
+        r = (0, o.yK)([eP.A], () => Array.from(n).map(eP.A.getChannel), [n]);
+    return (0, i.jsx)(d.a, {
         title: ea.intl.string(ea.t.uFHxNd),
         subtitle: ea.intl.string(ea.t.rIsSqE),
         actions: [
@@ -619,8 +619,8 @@ function ts(e) {
 }
 function ta(e) {
     let { targetElementRef: t } = e,
-        [n, l] = (0, Z.kn)([d.M.INVITE_NONFRIENDS_TO_GDM_COACHMARK]);
-    return n !== d.M.INVITE_NONFRIENDS_TO_GDM_COACHMARK
+        [n, l] = (0, Z.kn)([u.M.INVITE_NONFRIENDS_TO_GDM_COACHMARK]);
+    return n !== u.M.INVITE_NONFRIENDS_TO_GDM_COACHMARK
         ? null
         : (0, i.jsx)(e7, { targetElementRef: t, markAsDismissed: l });
 }
@@ -1183,7 +1183,7 @@ class to extends l.PureComponent {
         let { transitionState: e, onClose: t, nitroAudience: n } = this.props;
         if ((0, ei.yh)(n)) return (0, i.jsx)(ed, { transitionState: e, onClose: t, location: e6, nitroAudience: n });
         let l = (0, K.A)({ useNitroCapExperiment: !0 });
-        return (0, i.jsx)(o.Modal, {
+        return (0, i.jsx)(d.a, {
             transitionState: e ?? D.ip.ENTERED,
             onClose: async () => await t(),
             title: ea.intl.formatToPlainString(ea.t.IyBYPN, { number: l }),
@@ -1195,7 +1195,7 @@ class to extends l.PureComponent {
         let { transitionState: e, onClose: t } = this.props;
         if (this.isPartyFull() && this.props.isInNitroCapTreatment) return this.renderNitroCapFullState();
         let { actionBarInput: n, actions: l } = this.getFooterProps();
-        return (0, i.jsx)(o.Modal, {
+        return (0, i.jsx)(d.a, {
             transitionState: e ?? D.ip.ENTERED,
             onClose: async () => await t(),
             title: this.getTitle(),
@@ -1522,7 +1522,7 @@ function tu(e) {
 }
 function td(e) {
     let { channel: t, onComplete: n, entryPointType: l, ...r } = e,
-        s = (0, u.cf)([ek.A, eG.A, eb.A, eL.A, eV.A], () => {
+        s = (0, o.cf)([ek.A, eG.A, eb.A, eL.A, eV.A], () => {
             let e;
             return (
                 null != t && null != (e = eb.A.getInvite(t.id)) && e.isExpired() && (e = null),
@@ -1536,7 +1536,7 @@ function td(e) {
                 }
             );
         }),
-        a = (0, u.bG)(
+        a = (0, o.bG)(
             [ev.default],
             () =>
                 !!ev.default.getCurrentUser()?.isStaff() &&
@@ -1545,7 +1545,7 @@ function td(e) {
                 t.recipients.every((e) => ev.default.getUser(e)?.isStaff()),
             [t],
         ),
-        o = (0, ei.qH)(),
+        u = (0, ei.qH)(),
         { enabled: d } = $.A.useConfig({ location: e6 }),
         c = (function (e) {
             let { location: t } = e,
@@ -1558,7 +1558,7 @@ function td(e) {
         onComplete: n,
         entryPointType: l,
         isInNitroCapTreatment: d,
-        nitroAudience: o,
+        nitroAudience: u,
         inviteMaxAgeSeconds: c,
         ...r,
         ...s,
@@ -1607,13 +1607,13 @@ function tg(e) {
             className: r,
             icon: s,
             tooltip: a,
-            tooltipPosition: o = "bottom",
+            tooltipPosition: u = "bottom",
             subscribeToGlobalHotkey: d = !1,
         } = e,
         c = l.useRef(null),
         h = s ?? (null == t ? O.g : U.D),
         { showModal: g } = tc({ channel: t, subscribeToGlobalHotkey: d }),
-        f = (0, u.bG)([ev.default], () => ev.default.getUser(t?.getRecipientId()));
+        f = (0, o.bG)([ev.default], () => ev.default.getUser(t?.getRecipientId()));
     return f?.bot || f?.isProvisional
         ? null
         : (0, i.jsxs)(i.Fragment, {
@@ -1625,7 +1625,7 @@ function tg(e) {
                       className: r,
                       iconClassName: n,
                       tooltip: a,
-                      tooltipPosition: o,
+                      tooltipPosition: u,
                   }),
                   null != t &&
                       t.isMultiUserDM() &&
@@ -1641,15 +1641,15 @@ function tf(e) {
             icon: s,
             subscribeToGlobalHotkey: a = !1,
             allowFrictionlessGDMUpsell: o,
-            entryPointType: u,
+            entryPointType: d,
             ...c
         } = e,
         h = l.useRef(null),
-        { showModal: g } = tc({ channel: t, subscribeToGlobalHotkey: a, entryPointType: u }),
-        f = l.useMemo(() => (o ? [d.M.INVITE_NONFRIENDS_TO_GDM_COACHMARK] : []), [o]),
+        { showModal: g } = tc({ channel: t, subscribeToGlobalHotkey: a, entryPointType: d }),
+        f = l.useMemo(() => (o ? [u.M.INVITE_NONFRIENDS_TO_GDM_COACHMARK] : []), [o]),
         [A, E] = (0, Z.kn)(f),
         p = l.useCallback(() => {
-            (A === d.M.INVITE_NONFRIENDS_TO_GDM_COACHMARK && E(er.i.TAKE_ACTION), g());
+            (A === u.M.INVITE_NONFRIENDS_TO_GDM_COACHMARK && E(er.i.TAKE_ACTION), g());
         }, [g, A, E]);
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -1663,7 +1663,7 @@ function tf(e) {
                 icon: s,
                 fullWidth: n,
             }),
-            A === d.M.INVITE_NONFRIENDS_TO_GDM_COACHMARK && (0, i.jsx)(e7, { targetElementRef: h, markAsDismissed: E }),
+            A === u.M.INVITE_NONFRIENDS_TO_GDM_COACHMARK && (0, i.jsx)(e7, { targetElementRef: h, markAsDismissed: E }),
         ],
     });
 }

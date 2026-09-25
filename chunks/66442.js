@@ -3,8 +3,8 @@ var a = n(477900),
     i = n(582128),
     l = n(503698),
     s = n.n(l),
-    o = n(189213),
-    c = n(17928),
+    o = n(17928),
+    c = n(189213),
     r = n(939249),
     d = n(177953),
     u = n(22231),
@@ -80,14 +80,14 @@ let w = function (e) {
             closeOrShowDiscardChangesAlert: r,
             location: d,
         } = e,
-        u = (0, c.bG)([f.A], () => f.A.getChannel(t)),
+        u = (0, o.bG)([f.A], () => f.A.getChannel(t)),
         h = u?.name,
         x = (0, y.e5)(u),
         [w, T] = i.useState(h ?? ""),
         [b, k] = i.useState(void 0),
         N = void 0 !== b,
         { analyticsLocations: R } = (0, v.Ay)(d, p.A.GROUP_DM_EDIT_MODAL),
-        M = {
+        P = {
             channel_id: t,
             channel_type: u?.type,
             location: d,
@@ -100,9 +100,9 @@ let w = function (e) {
     }, [w, h, N, s]),
     (0, A.Ay)(
         () => (
-            g.default.track(C.HAw.GDM_EDIT_INTERACTED, { ...M, action: "opened" }),
+            g.default.track(C.HAw.GDM_EDIT_INTERACTED, { ...P, action: "opened" }),
             () => {
-                g.default.track(C.HAw.GDM_EDIT_INTERACTED, { ...M, action: "dismissed" });
+                g.default.track(C.HAw.GDM_EDIT_INTERACTED, { ...P, action: "dismissed" });
             }
         ),
     ),
@@ -117,7 +117,7 @@ let w = function (e) {
                           i = void 0 !== b;
                       if (
                           (g.default.track(C.HAw.GDM_EDIT_INTERACTED, {
-                              ...M,
+                              ...P,
                               action: "saved",
                               new_name_set: "" !== w,
                               new_icon_set: (i ? b : u?.icon) != null,
@@ -131,7 +131,7 @@ let w = function (e) {
                       }
                       n();
                   },
-                  children: (0, a.jsx)(o.Modal, {
+                  children: (0, a.jsx)(c.a, {
                       title: j.intl.string(j.t["5Q9+/L"]),
                       actions: [
                           { text: j.intl.string(j.t["ETE/oC"]), variant: "secondary", onClick: r },

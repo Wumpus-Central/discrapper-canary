@@ -4461,7 +4461,7 @@ function sX(e) {
         text: eL.intl.string(eL.t["5S3sQF"]),
         onClick: () => {
             ((0, io.openModal)((e) =>
-                (0, a.jsx)(sw.Modal, {
+                (0, a.jsx)(sw.a, {
                     title: eL.intl.string(eL.t["DT39A+"]),
                     subtitle: eL.intl.formatToPlainString(eL.t.QWGvxA, { applicationName: n.name }),
                     actions: [

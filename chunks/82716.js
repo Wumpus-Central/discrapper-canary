@@ -1,10 +1,10 @@
 n.d(t, { z: () => p });
 var a = n(477900),
     l = n(582128),
-    r = n(408278),
-    i = n(27232),
-    s = n(505930),
-    u = n(866665),
+    r = n(27232),
+    i = n(505930),
+    s = n(866665),
+    u = n(408278),
     c = n(609174),
     o = n(614584),
     d = n(268378),
@@ -18,13 +18,13 @@ function p() {
             [e],
         );
     return (0, a.jsx)(
-        u.m,
+        s.m,
         {
             text: f.intl.string(e.isFavorite ? d.default.IZsalP : d.default.ihBfyA),
             position: "top",
-            children: (0, a.jsx)(r.K, {
+            children: (0, a.jsx)(u.K, {
                 onClick: t,
-                icon: e.isFavorite ? i.StarIcon : s.y,
+                icon: e.isFavorite ? r.StarIcon : i.y,
                 "aria-label": f.intl.string(f.t.k8fFjp),
                 variant: "overlay-secondary",
                 size: "sm",

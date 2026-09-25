@@ -1,8 +1,8 @@
 (s.d(t, { default: () => C }), s(321073));
 var i = s(477900),
     n = s(582128),
-    o = s(562708),
-    a = s(189213),
+    a = s(562708),
+    o = s(189213),
     l = s(933832),
     c = s(789645),
     r = s(17928),
@@ -18,8 +18,8 @@ var i = s(477900),
     x = s(490569);
 function y(e) {
     let { user: t, status: s, ignoredUser: n } = e,
-        { analyticsLocations: o } = (0, u.Ay)();
-    function a(e) {
+        { analyticsLocations: a } = (0, u.Ay)();
+    function o(e) {
         (e.stopPropagation(), d.A.cancelFriendRequest(t.id, { location: "Spam requests modal" }));
     }
     function r(e) {
@@ -35,7 +35,7 @@ function y(e) {
             className: x.Aw,
             activeClassName: x.vu,
             noBorder: !0,
-            onClick: () => (0, g.openUserProfileModal)({ userId: t.id, sourceAnalyticsLocations: o }),
+            onClick: () => (0, g.openUserProfileModal)({ userId: t.id, sourceAnalyticsLocations: a }),
             children: (e) =>
                 (0, i.jsxs)("div", {
                     className: x.a4,
@@ -55,7 +55,7 @@ function y(e) {
                                     icon: c.P,
                                     actionType: p.A.ActionTypes.DENY,
                                     tooltip: k.intl.string(k.t.xuio0C),
-                                    onClick: a,
+                                    onClick: o,
                                     shouldHighlight: e,
                                 }),
                             ],
@@ -81,11 +81,11 @@ function C(e) {
             let e = [];
             return (p > 1 && e.push({ text: k.intl.string(k.t.O8k7O4), onClick: m, variant: "secondary" }), e);
         }, [m, p]);
-    return (0, i.jsx)(a.Modal, {
+    return (0, i.jsx)(o.a, {
         title: k.intl.string(k.t.kaYqnm),
         subtitle: k.intl.string(k.t.tRxb4H),
         actions: h,
-        trackingProps: { impression: { impressionName: o.ImpressionNames.FRIEND_REQUESTS_SPAM_INBOX } },
+        trackingProps: { impression: { impressionName: a.ImpressionNames.FRIEND_REQUESTS_SPAM_INBOX } },
         onClose: s,
         transitionState: t,
         children: (0, i.jsxs)("div", {

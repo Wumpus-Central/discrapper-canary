@@ -3,14 +3,14 @@ var l = i(477900),
     n = i(582128),
     a = i(132500),
     s = i(830917),
-    r = i(189213),
-    u = i(270003),
-    g = i(452027),
-    o = i(17928),
-    c = i(750943),
-    d = i(691540),
-    f = i(857250),
-    m = i(97483),
+    r = i(17928),
+    u = i(189213),
+    g = i(750943),
+    o = i(691540),
+    c = i(857250),
+    d = i(97483),
+    f = i(270003),
+    m = i(452027),
     p = i(95477),
     j = i(103557),
     h = i(834730),
@@ -48,13 +48,13 @@ function P(e) {
                 className: U.rA,
                 children:
                     t ??
-                    (0, l.jsx)(c.X, { size: "lg", color: "currentColor", "aria-label": B.intl.string(B.t.qOsjZh) }),
+                    (0, l.jsx)(g.X, { size: "lg", color: "currentColor", "aria-label": B.intl.string(B.t.qOsjZh) }),
             }),
             (0, l.jsx)("div", {
                 className: U.F_,
                 children:
                     t ??
-                    (0, l.jsx)(c.X, { size: "lg", color: "currentColor", "aria-label": B.intl.string(B.t.YC5NAI) }),
+                    (0, l.jsx)(g.X, { size: "lg", color: "currentColor", "aria-label": B.intl.string(B.t.YC5NAI) }),
             }),
         ],
     });
@@ -67,28 +67,28 @@ async function O(e) {
     return (0, z.bX)(l, e.name, "image/png");
 }
 function M(e) {
-    let { transitionState: t, onClose: i, guildId: s, sticker: c } = e,
-        M = (0, o.bG)([x.Ay], () => (c?.tags != null ? x.Ay.getCustomEmojiById(c.tags) : null)),
+    let { transitionState: t, onClose: i, guildId: s, sticker: g } = e,
+        M = (0, r.bG)([x.Ay], () => (g?.tags != null ? x.Ay.getCustomEmojiById(g.tags) : null)),
         X = _.default.getCurrentUser()?.isStaff() ? L.Ny : 524288,
         [H, V] = n.useState(null),
-        [Z, q] = n.useState(c?.name ?? ""),
-        [Y, W] = n.useState({ file: null, filename: (0, T.sL)(c) ?? "" }),
+        [Z, q] = n.useState(g?.name ?? ""),
+        [Y, W] = n.useState({ file: null, filename: (0, T.sL)(g) ?? "" }),
         J = n.useRef(null),
         [Q, $] = n.useState(M?.id),
-        [ee, et] = n.useState(M?.name ?? (c?.tags != null ? (S.Ay.getByName(c.tags)?.surrogates ?? c.tags) : void 0)),
-        [ei, el] = n.useState(c?.description ?? ""),
+        [ee, et] = n.useState(M?.name ?? (g?.tags != null ? (S.Ay.getByName(g.tags)?.surrogates ?? g.tags) : void 0)),
+        [ei, el] = n.useState(g?.description ?? ""),
         [en, ea] = n.useState(!1),
         [es, er] = n.useState(null),
-        eu = (0, o.bG)([y.A], () => y.A.getGuild(s)),
+        eu = (0, r.bG)([y.A], () => y.A.getGuild(s)),
         eg = eu?.features.has(N.GuildFeatures.PARTNERED) || eu?.features.has(N.GuildFeatures.VERIFIED),
-        eo = null != c,
+        eo = null != g,
         ec = eo || Y?.file != null,
         ed = 0 === ei.length || (ei.length >= 2 && ei.length <= 100),
         ef =
             !en &&
             es?.isBlocking !== !0 &&
             Z.length >= 2 &&
-            (null != Q || null != ee || (c?.tags != null && c?.tags !== "")) &&
+            (null != Q || null != ee || (g?.tags != null && g?.tags !== "")) &&
             ec &&
             ed;
     async function em(e) {
@@ -133,9 +133,9 @@ function M(e) {
     }
     async function ep(e) {
         e.preventDefault();
-        let t = Q ?? ee ?? c?.tags ?? "";
+        let t = Q ?? ee ?? g?.tags ?? "";
         try {
-            if ((ea(!0), eo)) await (0, R.MO)(s, c?.id ?? "", { name: Z, tags: t, description: ei });
+            if ((ea(!0), eo)) await (0, R.MO)(s, g?.id ?? "", { name: Z, tags: t, description: ei });
             else {
                 var l;
                 let e = new FormData();
@@ -148,7 +148,7 @@ function M(e) {
                 let i = (await J.current?.getOriginalMd5()) ?? null;
                 (await (0, R.p9)({ guildId: s, body: e, platform: "web", originalMd5: i }),
                     K(!0),
-                    (0, d.P0)((0, f.o)(B.intl.string(B.t.QR85gd), m.Ck.SUCCESS)));
+                    (0, o.P0)((0, c.o)(B.intl.string(B.t.QR85gd), d.Ck.SUCCESS)));
             }
             i();
         } catch (e) {
@@ -174,7 +174,7 @@ function M(e) {
                 a,
             );
         })({
-            sticker: c,
+            sticker: g,
             previewData: H,
             onStickerError: n.useCallback(() => {
                 er({ message: B.intl.string(B.t["/WIYNX"]), isBlocking: !0 });
@@ -184,7 +184,7 @@ function M(e) {
     return (0, l.jsx)("form", {
         onSubmit: ep,
         className: U.Zd,
-        children: (0, l.jsx)(r.Modal, {
+        children: (0, l.jsx)(u.a, {
             transitionState: t,
             onClose: i,
             title: B.intl.string(B.t.yxVsBJ),
@@ -199,9 +199,9 @@ function M(e) {
                     type: "submit",
                 },
             ],
-            children: (0, l.jsxs)(u.n, {
+            children: (0, l.jsxs)(f.n, {
                 children: [
-                    (0, l.jsx)(g.D, {
+                    (0, l.jsx)(m.D, {
                         label: B.intl.string(B.t.gjdiKE),
                         children: (0, l.jsx)(P, { stickerPreview: ej }),
                     }),
@@ -212,7 +212,7 @@ function M(e) {
                               disabled: !0,
                               value: Y?.filename ?? "",
                           })
-                        : (0, l.jsx)(g.D, {
+                        : (0, l.jsx)(m.D, {
                               label: B.intl.string(B.t.AM3mzX),
                               required: !0,
                               children: (0, l.jsx)(k.A, {

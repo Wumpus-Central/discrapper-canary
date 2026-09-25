@@ -3,17 +3,17 @@ var r = s(477900),
     n = s(582128),
     o = s(562708),
     i = s(511815),
-    a = s(189213),
-    l = s(20742),
-    d = s(430993),
-    h = s(331322),
-    c = s(696208),
-    u = s(224640),
-    g = s(17928),
-    p = s(139033),
-    f = s(192308),
-    A = s(834730),
-    C = s(123292),
+    a = s(17928),
+    l = s(139033),
+    d = s(189213),
+    h = s(192308),
+    c = s(834730),
+    u = s(123292),
+    g = s(20742),
+    p = s(430993),
+    f = s(331322),
+    A = s(696208),
+    C = s(224640),
     m = s(830215),
     w = s(275538),
     E = s(163050),
@@ -133,18 +133,18 @@ class G extends n.PureComponent {
             let e = await m.A.forgotPassword(t);
             if (!1 === e) return;
             e === i.D.ONE_TIME_LOGIN
-                ? (0, f.openModal)((e) => {
+                ? (0, h.openModal)((e) => {
                       let t = [
                           { variant: "primary", text: U.intl.string(U.t.BddRzS), onClick: e.onClose, fullWidth: !0 },
                       ];
-                      return (0, r.jsx)(a.Modal, {
+                      return (0, r.jsx)(d.a, {
                           title: U.intl.string(U.t["6Ecyts"]),
                           actions: t,
                           ...e,
-                          children: (0, r.jsx)(A.E, { variant: "text-md/normal", children: U.intl.string(U.t.iAcrqV) }),
+                          children: (0, r.jsx)(c.E, { variant: "text-md/normal", children: U.intl.string(U.t.iAcrqV) }),
                       });
                   })
-                : (0, p.A)({ title: U.intl.string(U.t.f5Pi7A), subtitle: U.intl.format(U.t["6u5hQ9"], { email: t }) });
+                : (0, l.A)({ title: U.intl.string(U.t.f5Pi7A), subtitle: U.intl.format(U.t["6u5hQ9"], { email: t }) });
         } catch (t) {
             let e = (0, S.p)(t);
             this.setState({ errors: e });
@@ -188,7 +188,7 @@ class G extends n.PureComponent {
                     }),
                     (0, r.jsx)("div", {
                         className: O.a5,
-                        children: (0, r.jsx)(C.Q, {
+                        children: (0, r.jsx)(u.Q, {
                             text: U.intl.string(U.t.wWIufs),
                             onClick: this.handleForgotPassword,
                         }),
@@ -201,9 +201,9 @@ class G extends n.PureComponent {
         let { loginStatus: e, onBackPressed: t } = this.props;
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(l.rQ, { title: U.intl.string(U.t.bPP34Q), subtitle: U.intl.string(U.t.rvx0T4) }),
-                (0, r.jsx)(d.c, {
-                    children: (0, r.jsxs)(h.B, {
+                (0, r.jsx)(g.rQ, { title: U.intl.string(U.t.bPP34Q), subtitle: U.intl.string(U.t.rvx0T4) }),
+                (0, r.jsx)(p.c, {
+                    children: (0, r.jsxs)(f.B, {
                         direction: "horizontal",
                         align: "center",
                         gap: 32,
@@ -217,8 +217,8 @@ class G extends n.PureComponent {
                         ],
                     }),
                 }),
-                (0, r.jsx)(c.H, {
-                    leading: (0, r.jsx)(C.Q, {
+                (0, r.jsx)(A.H, {
+                    leading: (0, r.jsx)(u.Q, {
                         variant: "secondary",
                         size: "md",
                         onClick: t,
@@ -253,9 +253,9 @@ class G extends n.PureComponent {
             s = e ? U.intl.string(U.t["6eNTWe"]) : U.intl.string(U.t["pCBti+"]);
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(l.rQ, { title: t, subtitle: s }),
-                (0, r.jsx)(c.H, {
-                    leading: (0, r.jsx)(A.E, {
+                (0, r.jsx)(g.rQ, { title: t, subtitle: s }),
+                (0, r.jsx)(A.H, {
+                    leading: (0, r.jsx)(c.E, {
                         variant: "text-md/normal",
                         color: "text-subtle",
                         children: U.intl.format(U.t.js2rr5, { onClick: this.handleCancelAccountDeletion }),
@@ -277,7 +277,7 @@ class G extends n.PureComponent {
     }
     renderPhonePasswordRecovery() {
         let { phoneVerifyError: e } = this.state;
-        return (0, r.jsx)(d.c, {
+        return (0, r.jsx)(p.c, {
             children: (0, r.jsx)(x.A, {
                 title: U.intl.string(U.t["+xqy3d"]),
                 subtitle: U.intl.format(U.t.ef4uZ7, { onResendClick: this.handleResendCode }),
@@ -352,8 +352,8 @@ class G extends n.PureComponent {
     };
 }
 let B = function (e) {
-    let { onClose: t, transitionState: s, onBackPressed: i, ...a } = e,
-        { suspendedUserToken: l, ...d } = (0, g.cf)([L.A, F.default, _.A, M.A], () => ({
+    let { onClose: t, transitionState: s, onBackPressed: i, ...l } = e,
+        { suspendedUserToken: d, ...h } = (0, a.cf)([L.A, F.default, _.A, M.A], () => ({
             authenticated: F.default.isAuthenticated(),
             loginStatus: F.default.getLoginStatus(),
             mfaTicket: F.default.getMFATicket(),
@@ -364,23 +364,23 @@ let B = function (e) {
             suspendedUserToken: F.default.getSuspendedUserToken(),
         }));
     (0, R.A)({ type: o.ImpressionTypes.MODAL, name: o.ImpressionNames.USER_LOGIN });
-    let h = n.useCallback(() => {
+    let c = n.useCallback(() => {
         (t(), i());
     }, [t, i]);
     return (
         n.useEffect(() => {
-            null != l && t();
-        }, [l, t]),
-        (0, r.jsx)(u.d, {
+            null != d && t();
+        }, [d, t]),
+        (0, r.jsx)(C.d, {
             size: "lg",
             onClose: t,
             transitionState: s,
             children: (0, r.jsx)(G, {
-                ...a,
-                ...d,
+                ...l,
+                ...h,
                 transitionTo: T.pX,
                 replaceWith: T.bG,
-                onBackPressed: h,
+                onBackPressed: c,
                 authBoxClassName: I.Nr,
             }),
         })

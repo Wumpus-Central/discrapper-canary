@@ -10,7 +10,7 @@ let d = "shop-assets-preview-instructions-modal",
     c = "shop-pfx-preview-instructions-modal";
 function u(e) {
     let { transitionState: t, onClose: a } = e;
-    return (0, n.jsx)(l.Modal, {
+    return (0, n.jsx)(l.a, {
         transitionState: t,
         title: "Shop Assets Preview Instructions",
         actions: [{ variant: "primary", text: "thx dude", onClick: a }],
@@ -204,7 +204,7 @@ function u(e) {
 }
 function m(e) {
     let { transitionState: t, onClose: a } = e;
-    return (0, n.jsx)(l.Modal, {
+    return (0, n.jsx)(l.a, {
         transitionState: t,
         title: "PFX Preview Instructions",
         actions: [{ variant: "primary", text: "k whatever", onClick: a }],

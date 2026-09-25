@@ -52,7 +52,7 @@ let h = Object.entries(
                     }
                 }
             }, [a, r, R]);
-        return (0, n.jsxs)(A.Modal, {
+        return (0, n.jsxs)(A.a, {
             title: "Captcha Test Tool",
             actions: [{ text: "Trigger Captcha", onClick: _, disabled: null == a }],
             onClose: t,

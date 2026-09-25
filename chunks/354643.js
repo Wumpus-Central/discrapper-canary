@@ -1,13 +1,13 @@
-i.d(n, { default: () => l });
+i.d(n, { default: () => u });
 var e = i(477900),
-    o = i(582128),
+    c = i(582128),
     r = i(732159),
     a = i(72152),
-    c = i(770376),
+    o = i(770376),
     s = i(375708);
-function l(t) {
-    let [n, i] = o.useState(!1);
-    return (0, e.jsx)(r.ConfirmModal, {
+function u(t) {
+    let [n, i] = c.useState(!1);
+    return (0, e.jsx)(r.u, {
         ...t,
         title: s.intl.string(s.t["pjYu0/"]),
         subtitle: s.intl.format(s.t["0eydyj"], {}),
@@ -17,7 +17,7 @@ function l(t) {
             (0, a.Z)(!0);
         },
         onCloseCallback: function () {
-            n && (0, c.f)();
+            n && (0, o.f)();
         },
         variant: "primary",
         checkboxProps: { checked: n, onChange: (t) => i(t) },

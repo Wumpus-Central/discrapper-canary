@@ -3,8 +3,8 @@ var a = s(477900);
 s(582128);
 var r = s(776310),
     n = s(575593),
-    o = s(772707),
-    i = s(116833),
+    o = s(116833),
+    i = s(772707),
     c = s(793574),
     l = s(688810),
     p = s(206835),
@@ -97,7 +97,7 @@ let T = (t) => {
     let { confettiColors: z } = (0, u.A)(S.styles),
         J = F ?? {
             type: "dynamic",
-            component: i.DynamicGraphicComponent.COLLECTIBLES_PREVIEW,
+            component: o.DynamicGraphicComponent.COLLECTIBLES_PREVIEW,
             aspectRatio: Z,
             props: { product: S, forCollectedModal: !0 },
         };
@@ -107,7 +107,7 @@ let T = (t) => {
             ref: N,
             children: [
                 (0, a.jsx)(r.Fk, { ref: w, className: O.L, environment: M }),
-                (0, a.jsx)(o.k, {
+                (0, a.jsx)(i.k, {
                     graphic: J,
                     title: Q,
                     subtitle: U ?? void 0,

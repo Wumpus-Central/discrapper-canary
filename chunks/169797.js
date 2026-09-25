@@ -6,10 +6,10 @@ var l = t(477900),
     i = t(20742),
     c = t(364840),
     o = t(331322),
-    d = t(224640),
-    h = t(430993),
-    u = t(289873),
-    m = t(231723),
+    d = t(289873),
+    h = t(224640),
+    u = t(231723),
+    m = t(430993),
     p = t(632088),
     x = t(500380),
     E = t(423764),
@@ -88,7 +88,7 @@ function T(a) {
     });
 }
 function L() {
-    return (0, l.jsx)(u.y, { type: u.y.Type.PULSING_ELLIPSIS, itemClassName: y.Je });
+    return (0, l.jsx)(d.y, { type: d.y.Type.PULSING_ELLIPSIS, itemClassName: y.Je });
 }
 function R(a) {
     let { className: e } = a;
@@ -97,7 +97,7 @@ function R(a) {
 function _(a) {
     let { children: e, size: t = "md", maxHeight: n = "viewport", isModalContentLoading: r, ...s } = a;
     return (0, l.jsx)(g.e0, {
-        children: (0, l.jsx)(d.d, {
+        children: (0, l.jsx)(h.d, {
             size: t,
             ...s,
             maxHeight: n,
@@ -107,7 +107,7 @@ function _(a) {
     });
 }
 function P() {
-    return (0, l.jsx)(_, { transitionState: m.ip.ENTERED, onClose: b.tEg, size: "md", isModalContentLoading: !0 });
+    return (0, l.jsx)(_, { transitionState: u.ip.ENTERED, onClose: b.tEg, size: "md", isModalContentLoading: !0 });
 }
 function S(a) {
     let {
@@ -119,12 +119,12 @@ function S(a) {
         headerBadgeIcon: i,
         onBackClick: c,
         primaryButtonProps: o,
-        children: u,
-        ...m
+        children: d,
+        ...u
     } = a;
     return (0, l.jsx)(g.e0, {
-        children: (0, l.jsxs)(d.d, {
-            ...m,
+        children: (0, l.jsxs)(h.d, {
+            ...u,
             children: [
                 (0, l.jsx)(M, {
                     gradientColor: t,
@@ -134,7 +134,7 @@ function S(a) {
                     headerBadgeText: s,
                     headerBadgeIcon: i,
                 }),
-                (0, l.jsx)(h.c, { children: u }),
+                (0, l.jsx)(m.c, { children: d }),
                 (0, l.jsx)(T, { onBackClick: c, primaryButtonProps: o }),
             ],
         }),

@@ -2,9 +2,9 @@ n.d(e, { default: () => x });
 var a = n(477900),
     i = n(582128),
     s = n(17928),
-    l = n(189213),
-    o = n(95477),
-    r = n(834730),
+    r = n(189213),
+    l = n(95477),
+    o = n(834730),
     c = n(47167),
     u = n(734057),
     d = n(181079),
@@ -22,7 +22,7 @@ function x(t) {
     }
     return (0, a.jsx)("form", {
         onSubmit: j,
-        children: (0, a.jsxs)(l.Modal, {
+        children: (0, a.jsxs)(r.a, {
             title: k,
             actions: [
                 { text: p.intl.string(p.t["ETE/oC"]), onClick: n, variant: "secondary" },
@@ -31,7 +31,7 @@ function x(t) {
             onClose: n,
             transitionState: x,
             children: [
-                (0, a.jsx)(o.k, {
+                (0, a.jsx)(l.k, {
                     label: v,
                     value: g,
                     onChange: y,
@@ -39,7 +39,7 @@ function x(t) {
                     maxLength: 100,
                     autoFocus: !0,
                 }),
-                (0, a.jsx)(r.E, {
+                (0, a.jsx)(o.E, {
                     className: m.h,
                     variant: "text-sm/normal",
                     color: "text-default",

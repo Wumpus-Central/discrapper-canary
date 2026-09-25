@@ -175,7 +175,7 @@ function P() {
                 E?.[0] === y.Fz7.EMAIL &&
                 (0, o.openModalLazy)(
                     async () => {
-                        let { default: e } = await Promise.all([n.e("844331"), n.e("410919")]).then(n.bind(n, 556506));
+                        let { Alert: e } = await Promise.all([n.e("844331"), n.e("21553")]).then(n.bind(n, 381512));
                         return (t) =>
                             (0, i.jsx)(e, {
                                 ...t,
@@ -224,7 +224,9 @@ function P() {
             onLogout: function () {
                 (0, o.openModalLazy)(
                     async () => {
-                        let { ConfirmModal: e } = await Promise.resolve().then(n.bind(n, 732159));
+                        let { ConfirmModal: e } = await Promise.all([n.e("304823"), n.e("223976"), n.e("977260")]).then(
+                            n.bind(n, 397927),
+                        );
                         return (t) =>
                             (0, i.jsx)(e, {
                                 title: R.intl.string(R.t["2jxGer"]),

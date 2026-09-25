@@ -2,11 +2,11 @@
 var i = l(477900),
     n = l(582128),
     a = l(540185),
-    s = l(224640),
-    r = l(20742),
-    d = l(17928),
-    c = l(554146),
-    u = l(834730),
+    s = l(17928),
+    r = l(554146),
+    d = l(834730),
+    c = l(224640),
+    u = l(20742),
     o = l(761508),
     g = l(508770),
     h = l(689175),
@@ -21,8 +21,8 @@ var i = l(477900),
     N = l(201799);
 function E(e) {
     let { onOpen: t } = e,
-        a = (0, d.bG)([j.A], () => (0, A.RZ)(j.A.getGuildsArray(), "VibegrationsCustomWidgetAddOption").length > 0, []),
-        s = n.useCallback(() => {
+        a = (0, s.bG)([j.A], () => (0, A.RZ)(j.A.getGuildsArray(), "VibegrationsCustomWidgetAddOption").length > 0, []),
+        r = n.useCallback(() => {
             (t?.(),
                 (0, x.openModalLazy)(
                     async () => {
@@ -40,11 +40,11 @@ function E(e) {
     return a
         ? (0, i.jsxs)(p.D, {
               className: N.u,
-              onClick: s,
+              onClick: r,
               "aria-label": y.intl.string(b.default["27bu14"]),
               children: [
                   (0, i.jsx)(f.D, { size: "custom", width: 24, height: 24, color: "var(--icon-secondary)" }),
-                  (0, i.jsx)(u.E, {
+                  (0, i.jsx)(d.E, {
                       variant: "text-sm/semibold",
                       color: "text-default",
                       children: y.intl.string(b.default["4OR+L+"]),
@@ -71,9 +71,9 @@ function L(e) {
             applicationWidgets: t,
             dense: l,
             handleAddWidget: a,
-            isSubmitting: s,
-            trackUserProfileEditAction: r,
-            highlightedApplicationIds: c,
+            isSubmitting: r,
+            trackUserProfileEditAction: c,
+            highlightedApplicationIds: u,
         } = e,
         [o, g] = n.useState(""),
         [h] = n.useState(() => Date.now());
@@ -81,14 +81,14 @@ function L(e) {
         (0, G.X)();
     }, []);
     let m = (0, R.A)(t.map((e) => e.applicationId)),
-        x = (0, d.yK)([O.A], () =>
+        x = (0, s.yK)([O.A], () =>
             m.map((e) => {
                 let t = e?.getCanonicalGameId();
                 return null != t ? O.A.getLastPlayedDateTime(t) : null;
             }),
         ),
         p = n.useMemo(() => {
-            let e = new Set(c ?? []),
+            let e = new Set(u ?? []),
                 l = h - 7776e6;
             return t
                 .map((t, i) => {
@@ -113,7 +113,7 @@ function L(e) {
                                 : t.recentlyPlayedAt - e.recentlyPlayedAt
                           : e.searchName.localeCompare(t.searchName),
                 );
-        }, [t, m, c, x, h]),
+        }, [t, m, u, x, h]),
         f = n.useMemo(() => {
             let e = o.trim().toLowerCase();
             return "" === e
@@ -155,9 +155,9 @@ function L(e) {
                                   children: (0, i.jsx)(W.A, {
                                       widget: t,
                                       onAddWidget: a,
-                                      loading: s,
+                                      loading: r,
                                       size: l ? "small" : "default",
-                                      trackUserProfileEditAction: r,
+                                      trackUserProfileEditAction: c,
                                       isHighlighted: n,
                                       hideApplicationWidgetStatus: l,
                                   }),
@@ -168,7 +168,7 @@ function L(e) {
                   })
                 : (0, i.jsx)("div", {
                       className: D.wV,
-                      children: (0, i.jsx)(u.E, {
+                      children: (0, i.jsx)(d.E, {
                           variant: "text-md/medium",
                           color: "text-subtle",
                           children: y.intl.string(y.t["+p0UgM"]),
@@ -184,7 +184,7 @@ function K(e) {
     let { children: t } = e;
     return (0, i.jsx)("div", {
         className: q.HY,
-        children: (0, i.jsx)(u.E, { variant: "text-md/medium", color: "text-subtle", children: t }),
+        children: (0, i.jsx)(d.E, { variant: "text-md/medium", color: "text-subtle", children: t }),
     });
 }
 function V(e) {
@@ -213,14 +213,14 @@ function V(e) {
 }
 function H(e) {
     let t,
-        { onClose: l, trackUserProfileEditAction: u, highlightedApplicationIds: x, initialCategory: p, ...f } = e;
+        { onClose: l, trackUserProfileEditAction: d, highlightedApplicationIds: x, initialCategory: p, ...f } = e;
     n.useEffect(
         () => () => {
-            (0, m.Dr)(c.M.USER_PROFILE_PERSONAL_WIDGET_NEW_BADGE, { dismissAction: _.i.AUTO_DISMISS });
+            (0, m.Dr)(r.M.USER_PROFILE_PERSONAL_WIDGET_NEW_BADGE, { dismissAction: _.i.AUTO_DISMISS });
         },
         [],
     );
-    let j = (0, d.bG)([S.default], () => S.default.getCurrentUser()),
+    let j = (0, s.bG)([S.default], () => S.default.getCurrentUser()),
         A = (function () {
             let e = (0, M.A)(),
                 [t, l] = n.useState(e);
@@ -288,7 +288,7 @@ function H(e) {
                                   dense: b.length >= 20,
                                   handleAddWidget: R,
                                   isSubmitting: C,
-                                  trackUserProfileEditAction: u,
+                                  trackUserProfileEditAction: d,
                                   highlightedApplicationIds: x,
                               }),
                           })
@@ -300,18 +300,18 @@ function H(e) {
                                 widgets: N,
                                 onAddWidget: R,
                                 isSubmitting: C,
-                                trackUserProfileEditAction: u,
+                                trackUserProfileEditAction: d,
                             }),
                         })
                       : (0, i.jsx)(K, { children: y.intl.format(y.t.mcdIFp, { tabName: y.intl.string(W) }) })
                 : (0, i.jsx)(K, { children: y.intl.string(y.t["1nkDOs"]) })),
-        (0, i.jsxs)(s.d, {
+        (0, i.jsxs)(c.d, {
             size: "lg",
             onClose: l,
             "aria-label": O,
             ...f,
             children: [
-                (0, i.jsx)(r.rQ, { title: O }),
+                (0, i.jsx)(u.rQ, { title: O }),
                 (0, i.jsxs)("div", {
                     className: q.rf,
                     children: [

@@ -2,8 +2,8 @@ n.d(i, { default: () => _ });
 var e = n(477900);
 n(582128);
 var r = n(834730),
-    a = n(732159),
-    l = n(702841),
+    a = n(702841),
+    l = n(732159),
     s = n(157559),
     d = n(287809),
     o = n(174459),
@@ -22,8 +22,8 @@ function c(t) {
             onClose: T,
             ...h
         } = t,
-        C = (0, l.bG)([d.default], () => d.default.getCurrentUser());
-    return (0, e.jsx)(a.ConfirmModal, {
+        C = (0, a.bG)([d.default], () => d.default.getCurrentUser());
+    return (0, e.jsx)(l.u, {
         title: i ?? m.intl.string(m.t["+78Pfm"]),
         cancelText: _ ?? m.intl.string(m.t["ETE/oC"]),
         confirmText: g ?? m.intl.string(m.t["+78Pfm"]),

@@ -153,7 +153,7 @@ function y(e) {
         (0, x.A)(() => {
             null != T.QCW && e.onClose();
         }),
-        (0, l.jsx)(a.Modal, {
+        (0, l.jsx)(a.a, {
             title: j.intl.string(j.t.NiTd0e),
             subtitle: e.subtitle,
             actions: void 0,

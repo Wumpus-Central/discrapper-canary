@@ -34,7 +34,7 @@ function h(t) {
             null != t && x?.();
         } catch (t) {}
     }
-    return (0, e.jsx)(i.Modal, {
+    return (0, e.jsx)(i.a, {
         size: "md",
         transitionState: a,
         actions: [

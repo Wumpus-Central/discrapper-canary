@@ -70,8 +70,8 @@ var C = l(562073),
     D = l(192308),
     w = l(55433),
     R = l(61567),
-    M = l(375708),
-    G = l(397462);
+    G = l(375708),
+    M = l(397462);
 function L(e) {
     let {
         title: t,
@@ -85,55 +85,55 @@ function L(e) {
         onRemove: h,
     } = e;
     return (0, n.jsxs)("div", {
-        className: r()(G.wx, { [G.kZ]: null != m }),
+        className: r()(M.wx, { [M.kZ]: null != m }),
         children: [
             (0, n.jsx)("div", {
                 ref: m,
-                className: G.T_,
+                className: M.T_,
                 "data-dnd-name": l,
                 children: (0, n.jsxs)("div", {
-                    className: G.i8,
+                    className: M.i8,
                     children: [
                         null != m &&
                             (0, n.jsx)("div", {
-                                className: G.BU,
+                                className: M.BU,
                                 children: (0, n.jsx)(v.jV, {
                                     iconSize: "xs",
-                                    "aria-label": M.intl.formatToPlainString(R.default.NV85DR, { widgetName: l }),
+                                    "aria-label": G.intl.formatToPlainString(R.default.NV85DR, { widgetName: l }),
                                 }),
                             }),
-                        null != i && (0, n.jsx)("div", { className: G.gr, children: i }),
+                        null != i && (0, n.jsx)("div", { className: M.gr, children: i }),
                         t,
                         a,
                     ],
                 }),
             }),
             (0, n.jsxs)("div", {
-                className: G.o1,
+                className: M.o1,
                 children: [
                     f &&
                         (0, n.jsx)(d.m, {
-                            text: M.intl.string(M.t.bt75uw),
+                            text: G.intl.string(G.t.bt75uw),
                             children: (0, n.jsx)(o.K, {
                                 variant: "icon-only",
                                 size: "sm",
                                 icon: c.PencilIcon,
-                                "aria-label": M.intl.string(M.t.bt75uw),
+                                "aria-label": G.intl.string(G.t.bt75uw),
                                 disabled: s,
                                 onClick: x,
                             }),
                         }),
                     null != h &&
                         (0, n.jsx)(d.m, {
-                            text: M.intl.string(M.t.Mm07Yc),
+                            text: G.intl.string(G.t.Mm07Yc),
                             children: (0, n.jsx)(o.K, {
                                 variant: "icon-only",
                                 size: "sm",
                                 icon: u.TrashIcon,
                                 "aria-label":
                                     "" === l
-                                        ? M.intl.string(M.t.Mm07Yc)
-                                        : M.intl.formatToPlainString(R.default.hmNYxk, { widgetName: l }),
+                                        ? G.intl.string(G.t.Mm07Yc)
+                                        : G.intl.formatToPlainString(R.default.hmNYxk, { widgetName: l }),
                                 disabled: s,
                                 onClick: h,
                             }),
@@ -146,13 +146,13 @@ function L(e) {
 function U(e) {
     let { title: t, titleIcon: l, accessory: i, actions: a } = e;
     return (0, n.jsxs)("div", {
-        className: G.wx,
+        className: M.wx,
         children: [
             (0, n.jsxs)("div", {
-                className: G.i8,
-                children: [null != l && (0, n.jsx)("div", { className: G.gr, children: l }), t, i],
+                className: M.i8,
+                children: [null != l && (0, n.jsx)("div", { className: M.gr, children: l }), t, i],
             }),
-            null != a && (0, n.jsx)("div", { className: G.o1, children: a }),
+            null != a && (0, n.jsx)("div", { className: M.o1, children: a }),
         ],
     });
 }
@@ -160,7 +160,7 @@ function P(e) {
     let { title: t, boostPrice: l, powerupSkuId: i, LockedPreview: a, guildId: r } = e,
         d = (0, s.bG)([j.A], () => (null != i ? j.A.getStateForGuild(r)?.allPowerups[i] : void 0), [r, i]);
     return (0, n.jsxs)(m.B, {
-        className: G.xt,
+        className: M.xt,
         align: "center",
         justify: "center",
         gap: 32,
@@ -170,7 +170,7 @@ function P(e) {
                 gap: 16,
                 children: [
                     (0, n.jsx)("div", {
-                        className: G.$x,
+                        className: M.$x,
                         children: null != a ? (0, n.jsx)(a, { alt: "", ariaHidden: !0 }) : (0, n.jsx)(b, {}),
                     }),
                     (0, n.jsxs)(m.B, {
@@ -180,7 +180,7 @@ function P(e) {
                             (0, n.jsx)(f.E, {
                                 variant: "text-md/semibold",
                                 color: "text-default",
-                                children: M.intl.formatToPlainString(R.default.G5zCGV, { widgetName: t }),
+                                children: G.intl.formatToPlainString(R.default.G5zCGV, { widgetName: t }),
                             }),
                             null != l &&
                                 l > 0 &&
@@ -197,7 +197,7 @@ function P(e) {
                                         (0, n.jsx)(f.E, {
                                             variant: "text-sm/normal",
                                             color: "text-muted",
-                                            children: M.intl.format(R.default["8wD0Un"], { boostPrice: l }),
+                                            children: G.intl.format(R.default["8wD0Un"], { boostPrice: l }),
                                         }),
                                     ],
                                 }),
@@ -209,7 +209,7 @@ function P(e) {
                 variant: "expressive",
                 size: "sm",
                 icon: x._,
-                text: M.intl.string(M.t["+7XY31"]),
+                text: G.intl.string(G.t["+7XY31"]),
                 disabled: null == d,
                 loading: null != i && null == d,
                 onClick: function () {
@@ -239,7 +239,7 @@ function k(e) {
                 (function (e) {
                     let { widget: t, Edit: l, onCommit: i } = e,
                         a = (e) =>
-                            (0, n.jsx)(T.Modal, {
+                            (0, n.jsx)(T.a, {
                                 title: t.default_title ?? void 0,
                                 actions: [],
                                 ...e,
@@ -269,7 +269,7 @@ function k(e) {
                 ? (0, n.jsx)(p, { widget: l, hydration: r, guildSpaceMode: a, guildId: t })
                 : (0, n.jsx)(C.q, { children: N });
     return (0, n.jsxs)("div", {
-        className: G.kL,
+        className: M.kL,
         children: [
             A
                 ? (0, n.jsx)(L, {
@@ -285,7 +285,7 @@ function k(e) {
                   })
                 : (0, n.jsx)(U, { title: y, titleIcon: I, accessory: _, actions: S }),
             (0, n.jsx)("div", {
-                className: G.rf,
+                className: M.rf,
                 children:
                     null != u
                         ? (0, n.jsx)(P, {

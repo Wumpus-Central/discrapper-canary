@@ -1,8 +1,8 @@
 e.d(i, { default: () => R });
 var n = e(477900),
     s = e(582128),
-    r = e(189213),
-    l = e(17928),
+    r = e(17928),
+    l = e(189213),
     o = e(28863),
     a = e(285796),
     c = e(661531),
@@ -22,11 +22,11 @@ var n = e(477900),
     k = e(535355);
 function R(t) {
     let { user: i, entry: e, transitionState: R, onAction: S, onClose: b, onOpenGameSettings: g } = t,
-        [L, O] = (0, l.yK)([C.A], () => [C.A.isDeletingEntryHistory, C.A.deleteOutboxEntryError]),
+        [L, O] = (0, r.yK)([C.A], () => [C.A.isDeletingEntryHistory, C.A.deleteOutboxEntryError]),
         j = (0, x.X)("UserProfileActivityDeleteHistoryModal");
     return (
         s.useEffect(() => u.fq, []),
-        (0, n.jsxs)(r.Modal, {
+        (0, n.jsxs)(l.a, {
             title: (0, p.W)(e),
             subtitle: I.intl.format(I.t.KV72oe, {
                 settingsHook: function (t, i) {

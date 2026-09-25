@@ -2,10 +2,10 @@ n.d(t, { default: () => z, d: () => F });
 var l = n(477900),
     i = n(582128),
     s = n(189213),
-    a = n(452027),
-    r = n(193249),
-    o = n(192308),
-    c = n(866665),
+    a = n(192308),
+    r = n(452027),
+    o = n(866665),
+    c = n(193249),
     d = n(793574),
     u = n(355622),
     m = n(408018),
@@ -21,8 +21,8 @@ var l = n(477900),
     N = n(480595),
     b = n(461213),
     E = n(652215),
-    S = n(123292),
-    y = n(834730),
+    S = n(834730),
+    y = n(123292),
     T = n(688810),
     I = n(359800),
     _ = n(206828),
@@ -46,9 +46,9 @@ function L(e) {
             className: w._,
             children: [
                 (0, l.jsx)(k.A, { game: n, size: k.M.MEDIUM }),
-                (0, l.jsx)(y.E, { variant: "text-sm/medium", color: "text-default", className: w.d, children: t }),
+                (0, l.jsx)(S.E, { variant: "text-sm/medium", color: "text-default", className: w.d, children: t }),
                 h
-                    ? (0, l.jsx)(S.Q, {
+                    ? (0, l.jsx)(y.Q, {
                           variant: "primary",
                           size: "sm",
                           text: R.intl.string(M.default.EBSaL4),
@@ -64,7 +64,7 @@ var P = n(548759);
 let D = u.oU.CREATE_GAME_INVITE_POST_DESCRIPTION,
     O = "create-game-invite-post";
 function F(e) {
-    (0, o.openModalLazy)(
+    (0, a.openModalLazy)(
         async () => {
             let { default: t } = await Promise.resolve().then(n.bind(n, 531729));
             return (n) => (0, l.jsx)(t, { ...n, parentChannel: e });
@@ -74,7 +74,7 @@ function F(e) {
 }
 let G = () => Promise.resolve({ shouldClear: !1, shouldRefocus: !1 });
 function z(e) {
-    let { parentChannel: t, transitionState: n, onClose: o } = e,
+    let { parentChannel: t, transitionState: n, onClose: a } = e,
         u = i.useMemo(() => t.availableTags ?? [], [t.availableTags]),
         [{ textValue: S, richValue: y }, T] = i.useState(() => (0, m.N3)()),
         [I, _] = i.useState(!1),
@@ -144,7 +144,7 @@ function z(e) {
             appliedTagIds: k,
             upload: f.Se,
             onThreadCreated: (e) => {
-                ((0, g.JA)(e), o());
+                ((0, g.JA)(e), a());
             },
         }),
         q = i.useCallback((e, t, n) => {
@@ -166,18 +166,18 @@ function z(e) {
             },
             [U],
         );
-    return (0, l.jsx)(s.Modal, {
+    return (0, l.jsx)(s.a, {
         title: R.intl.string(M.default.tOsHsu),
         transitionState: n,
-        onClose: o,
+        onClose: a,
         actions: [
-            { variant: "secondary", text: R.intl.string(R.t["ETE/oC"]), onClick: o, disabled: V },
+            { variant: "secondary", text: R.intl.string(R.t["ETE/oC"]), onClick: a, disabled: V },
             { variant: "primary", text: R.intl.string(R.t.CumH4u), onClick: $, disabled: !W, loading: V },
         ],
         children: (0, l.jsxs)("div", {
             className: P.rf,
             children: [
-                (0, l.jsx)(a.D, {
+                (0, l.jsx)(r.D, {
                     required: !0,
                     label: R.intl.string(M.default["/mEbGf"]),
                     children: (0, l.jsx)(h.Ay, {
@@ -199,7 +199,7 @@ function z(e) {
                     }),
                 }),
                 u.length > 0
-                    ? (0, l.jsx)(a.D, {
+                    ? (0, l.jsx)(r.D, {
                           label: R.intl.string(R.t.KM6lRG),
                           description: R.intl.formatToPlainString(M.default["yoIAe/"], { tagsMax: 5 }),
                           children: (0, l.jsx)("div", {
@@ -220,15 +220,15 @@ function z(e) {
                           }),
                       })
                     : null,
-                (0, l.jsx)(a.D, {
+                (0, l.jsx)(r.D, {
                     layout: "horizontal",
                     label: R.intl.string(M.default.Xd2NFi),
                     description: R.intl.string(M.default.G91SYQ),
-                    children: (0, l.jsx)(c.m, {
+                    children: (0, l.jsx)(o.m, {
                         text: R.intl.formatToPlainString(M.default["0s2ICk"], { noMicTagName: j.Dg }),
                         shouldShow: null == U,
                         asContainer: !0,
-                        children: (0, l.jsx)(r.d, { checked: H, onChange: Y, disabled: B }),
+                        children: (0, l.jsx)(c.d, { checked: H, onChange: Y, disabled: B }),
                     }),
                 }),
                 null != z &&

@@ -1,10 +1,10 @@
-i.d(n, { default: () => o });
+i.d(n, { default: () => r });
 var a = i(477900),
     s = i(582128),
     c = i(189213),
     e = i(375708);
-function o(t) {
-    let { transitionState: n, onConfirm: i, onClose: o, onDismiss: r } = t,
+function r(t) {
+    let { transitionState: n, onConfirm: i, onClose: r, onDismiss: o } = t,
         [l, u] = s.useState(!1);
     async function d() {
         if (!l) {
@@ -15,13 +15,13 @@ function o(t) {
             } finally {
                 u(!1);
             }
-            o();
+            r();
         }
     }
     function k() {
-        return (r(), o());
+        return (o(), r());
     }
-    return (0, a.jsx)(c.Modal, {
+    return (0, a.jsx)(c.a, {
         transitionState: n,
         onClose: k,
         title: e.intl.string(e.t["66tnno"]),

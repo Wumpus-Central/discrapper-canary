@@ -9,7 +9,7 @@ function s(t) {
     let { channel: n, onAccept: i, transitionState: s, onClose: u } = t,
         d = (0, o.mT)(n.id),
         c = (0, o.Iv)(n.id);
-    return (0, r.jsx)(e.Modal, {
+    return (0, r.jsx)(e.a, {
         onClose: u,
         transitionState: s,
         actions: [

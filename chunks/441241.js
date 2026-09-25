@@ -64,9 +64,9 @@ var O = s(841702),
 s(321073);
 var R = s(575593),
     B = s(651162),
-    F = s(40474),
-    P = s(297264),
-    G = s(821609),
+    F = s(297264),
+    P = s(821609),
+    G = s(40474),
     U = s(449543),
     D = s(152858),
     M = s(197935),
@@ -223,7 +223,7 @@ function ed(e) {
               children: [
                   (0, t.jsx)("div", {
                       className: en.bb,
-                      children: (0, t.jsx)(P.D, {
+                      children: (0, t.jsx)(F.D, {
                           variant: "heading-lg/semibold",
                           children: et.intl.string(et.t.EhRZ9o),
                       }),
@@ -288,13 +288,13 @@ function eg() {
     return (0, t.jsxs)("div", {
         className: en.nb,
         children: [
-            (0, t.jsx)(P.D, { variant: "heading-md/semibold", children: et.intl.string(et.t.Yr70c4) }),
+            (0, t.jsx)(F.D, { variant: "heading-md/semibold", children: et.intl.string(et.t.Yr70c4) }),
             (0, t.jsx)("div", {
                 className: en.J2,
                 children: eh.map((l) => {
                     let { tab: s, label: n } = l;
                     return (0, t.jsx)(
-                        G.$,
+                        P.$,
                         { variant: "secondary", text: n(), onClick: () => e.push(K.BVt.COLLECTIBLES_SHOP_WITH_TAB(s)) },
                         s,
                     );
@@ -337,7 +337,7 @@ function ex(e) {
                 }),
             [],
         );
-    return (0, t.jsx)(F.A, {
+    return (0, t.jsx)(G.A, {
         className: en.C2,
         separatorClassName: en.Lw,
         breadcrumbs: o,

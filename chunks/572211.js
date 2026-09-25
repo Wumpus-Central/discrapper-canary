@@ -5,12 +5,12 @@ var i,
     a = n(503698),
     r = n.n(a),
     o = n(299619),
-    d = n(939249),
-    c = n(834730),
-    u = n(408278),
-    m = n(821609),
-    h = n(17928),
-    g = n(866665),
+    d = n(17928),
+    c = n(939249),
+    u = n(834730),
+    m = n(866665),
+    h = n(408278),
+    g = n(821609),
     p = n(775602),
     A = n(140651),
     x = n(354287),
@@ -21,7 +21,7 @@ var i,
 function _(e) {
     let { onClick: t, children: n, className: i } = e;
     return null != t
-        ? (0, l.jsx)(d.D, { onClick: t, className: r()({ [I.or]: null != t }, i), children: n })
+        ? (0, l.jsx)(c.D, { onClick: t, className: r()({ [I.or]: null != t }, i), children: n })
         : (0, l.jsx)("div", { className: i, children: n });
 }
 function v(e) {
@@ -30,7 +30,7 @@ function v(e) {
         header: n,
         footer: i,
         info: a,
-        staticBannerSrc: d,
+        staticBannerSrc: c,
         videoBannerSrc: C,
         hideBanner: v = !1,
         bannerAspectRatio: N = 0,
@@ -42,11 +42,11 @@ function v(e) {
         onClickBanner: R,
     } = e;
     y = (0, f.Q)(y);
-    let { primaryColor: M, secondaryColor: k } = (0, A.A)(j ?? d),
-        L = `linear-gradient(45deg, ${M}, ${k})`,
-        O = (0, h.bG)([p.Ay], () => p.Ay.useReducedMotion),
+    let { primaryColor: k, secondaryColor: M } = (0, A.A)(j ?? c),
+        L = `linear-gradient(45deg, ${k}, ${M})`,
+        O = (0, d.bG)([p.Ay], () => p.Ay.useReducedMotion),
         P = (0, x.DC)(y),
-        D = null != d && !v,
+        D = null != c && !v,
         U = null != C && !1 === O && !v,
         G = D || U,
         w = 0 === N ? I.pv : I.$g,
@@ -110,7 +110,7 @@ function v(e) {
                         D &&
                             (0, l.jsx)("div", {
                                 className: I.LR,
-                                style: { backgroundImage: `url(${d})` },
+                                style: { backgroundImage: `url(${c})` },
                                 onTransitionEnd: B,
                             }),
                     ],
@@ -121,7 +121,7 @@ function v(e) {
                         className: I.hQ,
                         children: [
                             null != n &&
-                                (0, l.jsx)(c.E, {
+                                (0, l.jsx)(u.E, {
                                     variant: "text-sm/semibold",
                                     color: "none",
                                     className: I.wx,
@@ -136,7 +136,7 @@ function v(e) {
                                     (0, l.jsxs)("div", {
                                         className: I.Qs,
                                         children: [
-                                            (0, l.jsx)(c.E, {
+                                            (0, l.jsx)(u.E, {
                                                 variant: "text-md/semibold",
                                                 color: "none",
                                                 lineClamp: 1,
@@ -160,18 +160,18 @@ function v(e) {
                                                 disabledReason: r,
                                                 submitting: o,
                                                 trackingArea: d,
-                                                isDeadEnd: h,
+                                                isDeadEnd: c,
                                                 iconButton: p,
                                                 buttonRef: A,
                                             } = e,
                                             f = 0 === t;
                                         return p
                                             ? (0, l.jsx)(
-                                                  g.m,
+                                                  m.m,
                                                   {
                                                       text: n,
                                                       targetElementRef: A,
-                                                      children: (0, l.jsx)(u.K, {
+                                                      children: (0, l.jsx)(h.K, {
                                                           variant: f ? "overlay-primary" : "overlay-secondary",
                                                           disabled: a || null != r,
                                                           loading: o,
@@ -186,7 +186,7 @@ function v(e) {
                                                                       area: d,
                                                                       referrerId: y.referrerId,
                                                                       customId: y.activityCustomId,
-                                                                      isDeadEnd: h,
+                                                                      isDeadEnd: c,
                                                                       messageId: y.messageId,
                                                                   }));
                                                           },
@@ -199,7 +199,7 @@ function v(e) {
                                                   {
                                                       className: I.uc,
                                                       children: [
-                                                          (0, l.jsx)(m.$, {
+                                                          (0, l.jsx)(g.$, {
                                                               variant: f ? "overlay-primary" : "overlay-secondary",
                                                               disabled: a || null != r,
                                                               loading: o,
@@ -214,14 +214,14 @@ function v(e) {
                                                                           area: d,
                                                                           referrerId: y.referrerId,
                                                                           customId: y.activityCustomId,
-                                                                          isDeadEnd: h,
+                                                                          isDeadEnd: c,
                                                                           messageId: y.messageId,
                                                                       }));
                                                               },
                                                               fullWidth: !0,
                                                           }),
                                                           null != r &&
-                                                              (0, l.jsx)(c.E, {
+                                                              (0, l.jsx)(u.E, {
                                                                   variant: "text-xs/medium",
                                                                   color: "none",
                                                                   className: I.H$,

@@ -33,12 +33,12 @@ var C = e(173936),
     I = e(486503),
     N = e(885386),
     X = e(957565),
-    M = e(691012),
-    Y = e(691540),
+    Y = e(691012),
+    M = e(691540),
     P = e(857250),
     Q = e(97483),
-    B = e(732159),
-    F = e(192308),
+    B = e(192308),
+    F = e(732159),
     H = e(834730),
     U = e(931991),
     Z = e(496092),
@@ -108,8 +108,8 @@ function tt(t) {
                 if (new Date() > t) return null;
             }
             function x(t) {
-                (0, F.openModal)((r) =>
-                    (0, l.jsx)(B.ConfirmModal, {
+                (0, B.openModal)((r) =>
+                    (0, l.jsx)(F.u, {
                         ...r,
                         title: T.intl.string(T.t.R5bpin),
                         subtitle: T.intl.string(T.t.v2GWNQ),
@@ -162,7 +162,7 @@ function tt(t) {
             function x(t) {
                 null != o &&
                     ((null == a || t) && !s
-                        ? (0, F.openModalLazy)(async () => {
+                        ? (0, B.openModalLazy)(async () => {
                               let { default: t } = await Promise.all([
                                   e.e("489565"),
                                   e.e("998835"),
@@ -204,7 +204,7 @@ function tt(t) {
                               return (e) => (0, l.jsx)(t, { ...e, guildScheduledEventId: n, guildId: i.id });
                           }, g)
                         : null != a &&
-                          (0, F.openModalLazy)(async () => {
+                          (0, B.openModalLazy)(async () => {
                               let { default: t } = await Promise.all([
                                   e.e("730931"),
                                   e.e("853934"),
@@ -252,7 +252,7 @@ function tt(t) {
                       label: T.intl.string(T.t.cK1GGY),
                       action: function () {
                           null != a &&
-                              (0, F.openModalLazy)(async () => {
+                              (0, B.openModalLazy)(async () => {
                                   let { default: t } = await Promise.all([
                                       e.e("998835"),
                                       e.e("107427"),
@@ -272,7 +272,7 @@ function tt(t) {
             function r() {
                 let l = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
                     i = `${location.protocol}//${location.host}${S.BVt.GUILD_EVENT_DETAILS(n, t, l ? null : e)}`;
-                (0, X.C)(i, () => (0, Y.P0)((0, P.o)(T.intl.string(T.t["L/PwZf"]), Q.Ck.SUCCESS)));
+                (0, X.C)(i, () => (0, M.P0)((0, P.o)(T.intl.string(T.t["L/PwZf"]), Q.Ck.SUCCESS)));
             }
             return (0, l.jsx)(d.Dr, {
                 id: T.intl.string(T.t["9o+VKx"]),
@@ -303,7 +303,7 @@ function tt(t) {
                     { autoTrackExposure: !1 },
                 ),
                 a = (0, b.bG)([j.Ay], () => j.Ay.getGuildScheduledEvent(t)),
-                s = null != a ? (0, M.A)(a) : null,
+                s = null != a ? (0, Y.A)(a) : null,
                 u = "event-image" === n.getAttribute("data-type"),
                 o = i.useCallback(() => {
                     null != s && (0, X.C)(s);
@@ -356,9 +356,9 @@ function tt(t) {
                         : "",
                 N = (0, G.Sn)(u.recurrence_rule),
                 X = null != N ? (0, _.X7)(N) : null,
-                { startTime: M, endTime: Y } = s,
-                P = f()(M) ?? g,
-                Q = f()(Y ?? M) ?? g;
+                { startTime: Y, endTime: M } = s,
+                P = f()(Y) ?? g,
+                Q = f()(M ?? Y) ?? g;
             function B() {
                 if (null == u) return;
                 let t = c()();

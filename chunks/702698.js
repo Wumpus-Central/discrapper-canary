@@ -30,7 +30,7 @@ function m(t) {
         ),
             await m());
     }
-    return (0, i.jsx)(l.Modal, {
+    return (0, i.jsx)(l.a, {
         "aria-label": g.intl.string(g.t.E9kB45),
         title: g.intl.string(g.t.E9kB45),
         subtitle: (0, d.m1)(n.planId)

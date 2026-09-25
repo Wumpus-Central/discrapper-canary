@@ -1,14 +1,14 @@
 i.d(n, { default: () => o });
 var a = i(477900);
 i(582128);
-var r = i(189213),
-    e = i(17928),
+var r = i(17928),
+    e = i(189213),
     s = i(977997),
     l = i(375708);
 function o(t) {
     let { username: n, onConfirm: i, onClose: o, transitionState: c } = t,
-        d = (0, e.bG)([s.A], () => s.A.isCurrentClientInVoiceChannel());
-    return (0, a.jsx)(r.Modal, {
+        d = (0, r.bG)([s.A], () => s.A.isCurrentClientInVoiceChannel());
+    return (0, a.jsx)(e.a, {
         title: l.intl.formatToPlainString(l.t.RNAFdw, { username: n }),
         onClose: o,
         actions: [

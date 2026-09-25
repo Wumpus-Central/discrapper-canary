@@ -49,8 +49,8 @@ var k = t(522435),
     H = t(336807),
     D = t(285961),
     F = t(821102),
-    M = t(803805),
-    O = t(661531),
+    O = t(803805),
+    M = t(661531),
     P = t(92008),
     U = t(25277),
     w = t(327143),
@@ -58,7 +58,7 @@ var k = t(522435),
     z = t(652215),
     W = t(281743);
 let q = L.xP.map(function (e) {
-    return { type: z.dD.TRENDING_CATEGORY, categoryType: e.type, name: e.name, src: e.previewUrl, format: M.TL.IMAGE };
+    return { type: z.dD.TRENDING_CATEGORY, categoryType: e.type, name: e.name, src: e.previewUrl, format: O.TL.IMAGE };
 });
 function B(e) {
     let { name: l } = e;
@@ -109,7 +109,7 @@ function Q(e) {
                           D.uG,
                           {
                               format: u.format,
-                              color: O.A.colors.BACKGROUND_BASE_LOWEST.css,
+                              color: M.A.colors.BACKGROUND_BASE_LOWEST.css,
                               src: u.src,
                               item: u,
                               index: l,
@@ -640,7 +640,7 @@ function eo(e) {
             ],
         });
     }
-    return (0, n.jsx)(u.Modal, {
+    return (0, n.jsx)(u.a, {
         transitionState: d,
         onClose: o,
         size: "md",

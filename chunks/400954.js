@@ -23,7 +23,7 @@ function h(t) {
             },
             [u, p],
         );
-    return (0, i.jsx)(s.Modal, {
+    return (0, i.jsx)(s.a, {
         title: d.intl.string(d.t["dOWb+f"]),
         actions: [{ text: d.intl.string(d.t.cpT0Cq), onClick: n, variant: "primary" }],
         onClose: n,

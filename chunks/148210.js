@@ -3,31 +3,31 @@ var e = i(477900),
     s = i(582128),
     a = i(189213),
     l = i(103557),
-    o = i(243277),
-    r = i(375708);
+    r = i(243277),
+    o = i(375708);
 function c(t) {
     let { initialCustomMessage: n, onSubmit: i, onClose: c, transitionState: u } = t,
         [d, h] = s.useState(n);
-    return (0, e.jsx)(a.Modal, {
+    return (0, e.jsx)(a.a, {
         onClose: c,
         transitionState: u,
-        title: r.intl.string(r.t.Df4aUN),
-        subtitle: r.intl.string(r.t.eOWEmL),
+        title: o.intl.string(o.t.Df4aUN),
+        subtitle: o.intl.string(o.t.eOWEmL),
         actions: [
             {
-                text: r.intl.string(r.t["ETE/oC"]),
+                text: o.intl.string(o.t["ETE/oC"]),
                 onClick: function () {
                     c();
                 },
                 variant: "secondary",
             },
             {
-                text: r.intl.string(r.t.bt75uw),
+                text: o.intl.string(o.t.bt75uw),
                 onClick: function () {
                     i(d);
                 },
             },
         ],
-        children: (0, e.jsx)(l.f, { placeholder: r.intl.string(r.t.gDZw7A), value: d, onChange: h, maxLength: o.TZ }),
+        children: (0, e.jsx)(l.f, { placeholder: o.intl.string(o.t.gDZw7A), value: d, onChange: h, maxLength: r.TZ }),
     });
 }

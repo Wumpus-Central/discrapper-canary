@@ -2,8 +2,8 @@ s.d(t, { default: () => A });
 var n = s(477900),
     a = s(582128),
     i = s(562708),
-    r = s(189213),
-    l = s(17928),
+    r = s(17928),
+    l = s(189213),
     u = s(512950),
     c = s(139286),
     d = s(287809),
@@ -16,7 +16,7 @@ var f = s(652215),
     h = s(885531);
 function A(e) {
     let { transitionState: t, onClose: s } = e,
-        { currentUser: A, multiAccountUsers: I } = (0, l.cf)([d.default, o.A], () => ({
+        { currentUser: A, multiAccountUsers: I } = (0, r.cf)([d.default, o.A], () => ({
             currentUser: d.default.getCurrentUser(),
             multiAccountUsers: o.A.getUsers(),
         })),
@@ -51,7 +51,7 @@ function A(e) {
             I.length < 5 && C(!1);
         }, [I]),
         (0, c.A)({ type: i.ImpressionTypes.MODAL, name: i.ImpressionNames.MULTI_ACCOUNT_SWITCH_LANDING }),
-        (0, n.jsxs)(r.Modal, {
+        (0, n.jsxs)(l.a, {
             onClose: s,
             transitionState: t,
             size: "md",

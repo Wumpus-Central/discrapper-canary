@@ -109,7 +109,7 @@ let j = function (t) {
         );
     return (0, l.jsx)("form", {
         onSubmit: S,
-        children: (0, l.jsx)(s.Modal, {
+        children: (0, l.jsx)(s.a, {
             transitionState: e,
             onClose: u,
             title: y.intl.string(y.t.dilOF6),

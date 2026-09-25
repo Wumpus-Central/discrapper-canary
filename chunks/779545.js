@@ -140,7 +140,7 @@ function F(e) {
             },
             [C],
         );
-    return (0, n.jsx)(b.Modal, {
+    return (0, n.jsx)(b.a, {
         title: `${O.intl.string(O.t.zbyz7p)}\u{2014}${null != C ? C.name : ""}`,
         actions: [
             { text: O.intl.string(O.t["ETE/oC"]), onClick: a, variant: "secondary" },

@@ -5,8 +5,8 @@ var e = n(477900),
     s = n.n(r),
     l = n(539267),
     u = n(189213),
-    c = n(683071),
-    o = n(785007),
+    c = n(785007),
+    o = n(683071),
     d = n(964486),
     m = n(277984),
     p = n(158045),
@@ -49,7 +49,7 @@ function v() {
             setStep: n,
             setPauseDuration: r,
             pauseDuration: s,
-            premiumSubscription: c,
+            premiumSubscription: o,
         } = (0, D.X)(),
         m = i.useCallback(
             (t) => {
@@ -58,7 +58,7 @@ function v() {
             },
             [r],
         ),
-        p = c.status === g.Dmq.PAUSED ? y.intl.string(y.t.Lp9WoG) : y.intl.string(y.t.eSR83U),
+        p = o.status === g.Dmq.PAUSED ? y.intl.string(y.t.Lp9WoG) : y.intl.string(y.t.eSR83U),
         f = (function (t) {
             let a = t.status === g.Dmq.PAUSED ? y.t.o3upfT : y.t.dBXZEm,
                 { durations: n, currentDaysPaused: e } = (0, S.Vy)(t),
@@ -81,12 +81,12 @@ function v() {
                 }),
                 i
             );
-        })(c);
+        })(o);
     return (
         (0, d.Ay)(() => {
             f.length < 1 || r(f[0].value);
         }),
-        (0, e.jsx)(u.Modal, {
+        (0, e.jsx)(u.a, {
             transitionState: t,
             title: y.intl.string(y.t["f3nnB/"]),
             subtitle: p,
@@ -104,7 +104,7 @@ function v() {
                     },
                 },
             ],
-            children: (0, e.jsx)(o.$d, { "data-migration-pending": !0, options: f, onChange: m, value: s }),
+            children: (0, e.jsx)(c.$d, { "data-migration-pending": !0, options: f, onChange: m, value: s }),
         })
     );
 }
@@ -115,12 +115,12 @@ function P() {
             pauseDuration: n,
             premiumSubscription: r,
             analyticsLocation: l,
-            setStep: o,
+            setStep: c,
             analyticsLocations: d,
         } = (0, D.X)(),
         [m, p] = i.useState(!1),
         [S, v] = i.useState(!1);
-    if (null == n) return void o(C.g.PAUSE_SELECT);
+    if (null == n) return void c(C.g.PAUSE_SELECT);
     let P = null,
         E = [g.Dmq.PAST_DUE, g.Dmq.PAUSED].includes(r.status) ? r.currentPeriodStart : r.currentPeriodEnd,
         x = s()(E).add(n, "days").toDate();
@@ -134,7 +134,7 @@ function P() {
         default:
             P = y.intl.format(y.t.W85vFA, { pauseDate: E, resumeDate: x, pauseDuration: n });
     }
-    return (0, e.jsxs)(u.Modal, {
+    return (0, e.jsxs)(u.a, {
         title: y.intl.string(y.t.AnMG5x),
         transitionState: t,
         actions: [
@@ -163,7 +163,7 @@ function P() {
             m
                 ? (0, e.jsx)("div", {
                       className: h.QK,
-                      children: (0, e.jsx)(c.w, { type: "critical", children: y.intl.string(y.t["5mlOCW"]) }),
+                      children: (0, e.jsx)(o.w, { type: "critical", children: y.intl.string(y.t["5mlOCW"]) }),
                   })
                 : null,
             (0, e.jsx)("div", { className: h.rf, children: P }),

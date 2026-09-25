@@ -10,7 +10,7 @@ function p(t) {
     let { defaultMemberPermissions: i, onClose: n, transitionState: p } = t,
         c = [];
     for (let t of l.Q) r.zy(i, t) && c.push(t);
-    return (0, s.jsx)(a.Modal, {
+    return (0, s.jsx)(a.a, {
         "aria-label": o.intl.string(o.t.vusPtq),
         transitionState: p,
         title: o.intl.string(o.t["4gMlpQ"]),

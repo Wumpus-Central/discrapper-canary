@@ -5,12 +5,12 @@ var r = i(477900),
     o = i.n(n),
     s = i(435558),
     l = i(830917),
-    u = i(189213),
-    d = i(559106),
-    c = i(140735),
-    m = i(17928),
-    g = i(765178),
-    h = i(123292),
+    u = i(17928),
+    d = i(189213),
+    c = i(765178),
+    m = i(123292),
+    g = i(559106),
+    h = i(140735),
     f = i(695366),
     E = i(661531),
     R = i(834730),
@@ -201,7 +201,7 @@ function K(e) {
         [eC, eD] = a.useState(X?.zoomRatio ?? 1),
         [ew, ey] = a.useState(!1),
         [eI, e_] = a.useState("x"),
-        eG = (0, m.bG)([w.Ay], () => w.Ay.keyboardModeEnabled),
+        eG = (0, u.bG)([w.Ay], () => w.Ay.keyboardModeEnabled),
         { analyticsLocations: eN } = (0, I.Ay)(y.A.IMAGE_CROPPING_MODAL),
         { isGIF: eS, isCheckingAnimation: eb, isEditableAnimatedImage: eL } = (0, H._)(t),
         eO = eA || eE || eb,
@@ -318,7 +318,7 @@ function K(e) {
             var e;
             if (null == J.current || null == eu) return;
             let t = (ed + 90) % 360;
-            g.O.announce(B.intl.formatToPlainString(B.t.uYhsHT, { degrees: t }));
+            c.O.announce(B.intl.formatToPlainString(B.t.uYhsHT, { degrees: t }));
             let { x: i, y: r } = ((e = Z.current.x), { x: -Z.current.y, y: e });
             if (eu.width !== eu.height) {
                 let { newImageDimensions: e, newCropDimensions: a, newDragBoundaries: n } = eZ(eu, em);
@@ -482,10 +482,10 @@ function K(e) {
         e7 = (0, G.b)(!e4);
     return (0, r.jsx)(I.f5, {
         value: eN,
-        children: (0, r.jsxs)(u.Modal, {
+        children: (0, r.jsxs)(d.a, {
             title: B.intl.string(B.t.DxAYCF),
             size: "md",
-            actionBarInput: (0, r.jsx)(h.Q, {
+            actionBarInput: (0, r.jsx)(m.Q, {
                 text: B.intl.string(B.t.yBZMsQ),
                 textVariant: "text-md/medium",
                 onClick: eq,
@@ -522,7 +522,7 @@ function K(e) {
                             role: "group",
                             "aria-label": B.intl.formatToPlainString(B.t["40CNiu"], { filename: t.name }),
                             children: [
-                                (0, r.jsx)(d.vN, {
+                                (0, r.jsx)(g.vN, {
                                     within: !0,
                                     ringTarget: q,
                                     children: (0, r.jsxs)("div", {
@@ -534,7 +534,7 @@ function K(e) {
                                         },
                                         children: [
                                             !eE &&
-                                                (0, r.jsxs)(c.A, {
+                                                (0, r.jsxs)(h.A, {
                                                     onKeyDown: e5,
                                                     children: [
                                                         (0, r.jsx)("input", {
@@ -641,7 +641,7 @@ function K(e) {
                                         ],
                                     }),
                                 }),
-                                (0, r.jsx)(c.A, { id: ei, children: eM || eE ? null : B.intl.string(B.t.jUze6F) }),
+                                (0, r.jsx)(h.A, { id: ei, children: eM || eE ? null : B.intl.string(B.t.jUze6F) }),
                                 eG &&
                                     !eE &&
                                     (0, r.jsx)(R.E, {

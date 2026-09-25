@@ -1,8 +1,8 @@
 n.d(e, { openUploadError: () => L, D: () => I });
 var c = n(477900);
 n(582128);
-var o = n(192308),
-    i = n(189213),
+var o = n(189213),
+    i = n(192308),
     a = n(523527),
     s = n(17928),
     r = n(967198),
@@ -30,8 +30,8 @@ var u = n(976860),
     A = n(174459),
     _ = n(652215);
 function O(t) {
-    let { title: e, help: n, showPremiumUpsell: o, effectiveMaxSize: s, transitionState: r, onClose: d } = t;
-    return o
+    let { title: e, help: n, showPremiumUpsell: i, effectiveMaxSize: s, transitionState: r, onClose: d } = t;
+    return i
         ? (0, c.jsx)(b, {
               transitionState: r,
               onClose: d,
@@ -46,7 +46,7 @@ function O(t) {
               },
               effectiveMaxSize: s,
           })
-        : (0, c.jsx)(i.Modal, {
+        : (0, c.jsx)(o.a, {
               title: e,
               subtitle: n,
               transitionState: r,
@@ -56,5 +56,5 @@ function O(t) {
 }
 let I = "UPLOAD_ERROR_MODAL_KEY";
 function L(t) {
-    (0, o.openModal)((e) => (0, c.jsx)(O, { ...e, ...t }), { modalKey: I });
+    (0, i.openModal)((e) => (0, c.jsx)(O, { ...e, ...t }), { modalKey: I });
 }

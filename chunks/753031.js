@@ -31,9 +31,9 @@ let v = function () {
 };
 function L(e) {
     let { guild: s, toUser: i, fromUser: x, onClose: L, transitionState: g } = e,
-        [w, M] = a.useState(!1),
-        C = s.features.has(O.GuildFeatures.VERIFIED) || s.features.has(O.GuildFeatures.PARTNERED),
-        F = C ? T.intl.format(T.t.A37vwK, { ticketUrl: v() }) : null,
+        [w, C] = a.useState(!1),
+        F = s.features.has(O.GuildFeatures.VERIFIED) || s.features.has(O.GuildFeatures.PARTNERED),
+        M = F ? T.intl.format(T.t.A37vwK, { ticketUrl: v() }) : null,
         G =
             s.features.has(O.GuildFeatures.CREATOR_MONETIZABLE) ||
             s.features.has(O.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL);
@@ -95,7 +95,7 @@ function L(e) {
     }
     return (0, n.jsx)("form", {
         onSubmit: Z,
-        children: (0, n.jsxs)(c.Modal, {
+        children: (0, n.jsxs)(c.a, {
             title: T.intl.string(T.t.Z5s7PM),
             actions: [
                 { text: T.intl.string(T.t["ETE/oC"]), onClick: L, variant: "secondary" },
@@ -162,13 +162,13 @@ function L(e) {
                     }),
                 (0, n.jsx)(h.S, {
                     label: T.intl.format(T.t.xm6ACJ, { username: (0, y.QV)(i) }),
-                    disabled: C,
+                    disabled: F,
                     checked: w,
                     onChange: function (e) {
-                        M(e);
+                        C(e);
                     },
                 }),
-                C && (0, n.jsx)(E.p, { messageType: E.Y.WARNING, children: F }),
+                F && (0, n.jsx)(E.p, { messageType: E.Y.WARNING, children: M }),
             ],
         }),
     });

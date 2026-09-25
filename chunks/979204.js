@@ -1,8 +1,8 @@
 n.d(t, { A: () => g });
 var r = n(477900),
     l = n(582128),
-    i = n(717421),
-    s = n(17928),
+    i = n(17928),
+    s = n(717421),
     u = n(287809),
     a = n(801365),
     o = n(503698),
@@ -21,7 +21,7 @@ let C = { duration: 250 },
         let {
                 currentPx: t,
                 indicator: n,
-                isAnimated: s,
+                isAnimated: i,
                 quest: u,
                 sourceQuestContent: a,
                 expansionSpring: o,
@@ -35,7 +35,7 @@ let C = { duration: 250 },
             N = T - 4,
             k = t >= N ? Math.min(1, (t - N) / (R - N)) : 0,
             b = 0 === x && !L,
-            { fill: y } = (0, i.z)({
+            { fill: y } = (0, s.z)({
                 fill: 100 * k,
                 config: C,
                 onRest: () => {
@@ -57,8 +57,8 @@ let C = { duration: 250 },
         return (0, r.jsxs)(d.animated.div, {
             className: c()(v.ck, { [v.a]: b && O, [v.C9]: !b && O }),
             style: {
-                left: s ? o.to((e) => T - e) : T,
-                "--custom-indicator-size": s ? o.to((e) => `${26 + 2 * e}px`) : "26px",
+                left: i ? o.to((e) => T - e) : T,
+                "--custom-indicator-size": i ? o.to((e) => `${26 + 2 * e}px`) : "26px",
                 "--custom-indicator-fill": y.to((e) => e),
             },
             onMouseDown: V,
@@ -108,11 +108,11 @@ let C = { duration: 250 },
     h = { tension: 500, friction: 30, clamp: !0 };
 function g(e) {
     let { targetSec: t, quest: n, sourceQuestContent: o, questConfig: c, clickable: d = !1 } = e,
-        E = (0, s.bG)([u.default], () => u.default.getCurrentUser()),
+        E = (0, i.bG)([u.default], () => u.default.getCurrentUser()),
         _ = l.useMemo(() => c?.features.includes(S.Li.FULL_EPISODE_VIDEO_QUEST) === !0, [c?.features]),
         [f, p] = l.useState(null),
         m = l.useRef(null),
-        [{ expansion: v }, C] = (0, i.z)(() => ({
+        [{ expansion: v }, C] = (0, s.z)(() => ({
             expansion: 0,
             config: h,
             onRest: () => {

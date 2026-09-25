@@ -1,8 +1,8 @@
 n.d(e, { default: () => C });
 var a = n(477900),
     s = n(582128),
-    l = n(189213),
     i = n(17928),
+    l = n(189213),
     r = n(512950),
     c = n(297264),
     o = n(834730),
@@ -43,7 +43,7 @@ function C(t) {
         ],
         [n, f],
     );
-    return (0, a.jsxs)(l.Modal, {
+    return (0, a.jsxs)(l.a, {
         transitionState: e,
         title: g.intl.string(g.t["0Osu3x"]),
         actions: v,

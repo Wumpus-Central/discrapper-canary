@@ -29,7 +29,7 @@ function h(e) {
             T(!1);
         }
     }
-    return (0, i.jsx)(l.Modal, {
+    return (0, i.jsx)(l.a, {
         transitionState: n,
         size: "md",
         title: E.intl.string(E.t.jbdHj3),

@@ -7,8 +7,8 @@ var s = r(477900),
     u = r(765548),
     c = r(414121),
     d = r(287809),
-    o = r(765178),
-    f = r(451988),
+    o = r(451988),
+    f = r(765178),
     x = r(866665),
     m = r(408278),
     h = r(933832),
@@ -19,13 +19,13 @@ var s = r(477900),
 function v(e) {
     let { url: t } = e,
         [r, l] = n.useState(!1),
-        [a] = n.useState(() => new f.Ep());
+        [a] = n.useState(() => new o.Ep());
     n.useEffect(() => () => a.stop(), [a]);
     let [i, u] = n.useState(t);
     t !== i && (u(t), l(!1));
     let c = n.useCallback(() => {
             (0, j.C)(t, () => {
-                (l(!0), o.O.announce(p.intl.string(p.t["+5kSoW"])), a.start(1e3, () => l(!1)));
+                (l(!0), f.O.announce(p.intl.string(p.t["+5kSoW"])), a.start(1e3, () => l(!1)));
             });
         }, [t, a]),
         d = p.intl.string(r ? p.t["+5kSoW"] : p.t.WqhZss);

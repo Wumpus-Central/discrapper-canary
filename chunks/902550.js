@@ -761,7 +761,7 @@ function ep(e) {
     }, [k, C, P, d]);
     let B = A && D,
         X = L && d === ee.HL.AVATAR;
-    return (0, n.jsx)(c.Modal, {
+    return (0, n.jsx)(c.a, {
         transitionState: t,
         onClose: r,
         size: "md",

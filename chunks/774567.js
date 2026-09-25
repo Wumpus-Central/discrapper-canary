@@ -141,8 +141,8 @@ let j = function (e) {
     i.useEffect(() => {
         (0, c.wU)({ rating: l, searchContext: t });
     }, [l, t]);
-    let [j, M] = i.useState(0),
-        B = 0 === j,
+    let [j, B] = i.useState(0),
+        M = 0 === j,
         w = j === p.length - 1,
         D = i.useMemo(() => {
             let e = p[j],
@@ -164,15 +164,15 @@ let j = function (e) {
                 r());
         }, [O, l, t, b, u, o, r]),
         E = i.useCallback(() => {
-            B ? r() : M(j - 1);
-        }, [B, j, r]),
+            M ? r() : B(j - 1);
+        }, [M, j, r]),
         L = i.useCallback(() => {
-            M(j + 1);
+            B(j + 1);
         }, [j]),
         T = i.useMemo(() => {
             let e = [];
             return (
-                B
+                M
                     ? e.push({ variant: "secondary", text: d.intl.string(d.t["ETE/oC"]), onClick: r })
                     : e.push({ variant: "secondary", text: d.intl.string(d.t["13/7kX"]), onClick: E }),
                 w
@@ -180,8 +180,8 @@ let j = function (e) {
                     : e.push({ variant: "primary", text: d.intl.string(d.t.PDTjLN), onClick: L, disabled: !S }),
                 e
             );
-        }, [B, w, O, S, r, E, y, L]);
-    return (0, n.jsx)(s.Modal, {
+        }, [M, w, O, S, r, E, y, L]);
+    return (0, n.jsx)(s.a, {
         title: d.intl.string(d.t.LRGdVy),
         actions: T,
         onClose: r,

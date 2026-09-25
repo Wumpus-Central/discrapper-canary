@@ -54,7 +54,7 @@ function u(t) {
                     )
                     .finally(() => j(!1)));
         },
-        children: (0, s.jsxs)(l.Modal, {
+        children: (0, s.jsxs)(l.a, {
             title: e,
             actions: [
                 { text: d.intl.string(d.t["ETE/oC"]), onClick: N, variant: "secondary" },

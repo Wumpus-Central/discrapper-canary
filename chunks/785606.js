@@ -1,11 +1,11 @@
 (s.d(t, { default: () => L }), s(321073));
 var i = s(477900),
     a = s(582128),
-    n = s(189213),
-    l = s(772707),
-    r = s(17928),
-    u = s(95477),
-    c = s(821609),
+    n = s(17928),
+    l = s(189213),
+    r = s(95477),
+    u = s(821609),
+    c = s(772707),
     d = s(718213),
     o = s(964486),
     f = s(780964),
@@ -21,20 +21,20 @@ var i = s(477900),
     b = s(97808),
     C = s(297264),
     E = s(834730),
-    M = s(534890),
-    v = s(308528),
-    P = s(854627),
-    k = s(830543),
+    v = s(534890),
+    P = s(308528),
+    k = s(854627),
+    M = s(830543),
     j = s(148155),
     y = s(375708),
     A = s(329476);
 function R(e) {
     let { recipient: t, isSuccess: s, onClose: a } = e,
-        { avatarSrc: n, eventHandlers: l } = (0, P.A)({ userId: t?.id, size: x._3.SIZE_56 }),
+        { avatarSrc: n, eventHandlers: l } = (0, k.A)({ userId: t?.id, size: x._3.SIZE_56 }),
         r = g.Ay.getName(t),
-        u = !s;
+        c = !s;
     return (0, i.jsxs)("div", {
-        className: N()(A.nM, { [A.z3]: u }),
+        className: N()(A.nM, { [A.z3]: c }),
         children: [
             (0, i.jsx)(b.eu, { src: n, "aria-label": r, size: x._3.SIZE_32, ...l }),
             (0, i.jsxs)("div", {
@@ -46,7 +46,7 @@ function R(e) {
                         className: A.QC,
                         children: r,
                     }),
-                    u &&
+                    c &&
                         (0, i.jsx)(E.E, {
                             variant: "text-xs/normal",
                             color: "text-strong",
@@ -56,14 +56,14 @@ function R(e) {
                 ],
             }),
             s &&
-                (0, i.jsx)(c.$, {
+                (0, i.jsx)(u.$, {
                     variant: "secondary",
                     size: "sm",
                     text: y.intl.string(y.t["g33r/P"]),
-                    icon: M.ChatIcon,
+                    icon: v.ChatIcon,
                     onClick: () => {
                         var e;
-                        return ((e = t.id), void ((0, k.default)(), v.A.openPrivateChannel({ recipientIds: e }), a()));
+                        return ((e = t.id), void ((0, M.default)(), P.A.openPrivateChannel({ recipientIds: e }), a()));
                     },
                 }),
         ],
@@ -73,16 +73,16 @@ var U = s(88001),
     w = s(652215),
     D = s(593730);
 function T(e) {
-    let { onInvite: t, onClose: s, subscriptionId: l, ...o } = e,
+    let { onInvite: t, onClose: s, subscriptionId: c, ...o } = e,
         [f, m] = a.useState([]),
         [I, N] = a.useState(""),
         x = (0, d.A)(I, 400),
-        b = (0, r.bG)([S.A], () => S.A.getNumAvailableInvites()),
+        b = (0, n.bG)([S.A], () => S.A.getNumAvailableInvites()),
         {
             eligibleUsers: C,
             getNextRows: E,
-            hasError: M,
-            isFetching: v,
+            hasError: v,
+            isFetching: P,
         } = ((e) => {
             let { subscriptionId: t, searchQuery: s } = e,
                 [i, n] = a.useState([]),
@@ -107,8 +107,8 @@ function T(e) {
                 }, [t, s]),
                 { eligibleUsers: i, isFetching: u, hasError: d, getNextRows: () => f(l) }
             );
-        })({ subscriptionId: l, searchQuery: x }),
-        [P, k] = a.useState(!1),
+        })({ subscriptionId: c, searchQuery: x }),
+        [k, M] = a.useState(!1),
         A = a.useCallback(
             (e) => {
                 m((t) => t.filter((t) => !e.has(t.id)));
@@ -116,8 +116,8 @@ function T(e) {
             [m],
         ),
         R = a.useMemo(() => f.map((e) => ({ id: e.id, label: g.Ay.getName(e) })), [f]);
-    return M
-        ? (0, i.jsx)(n.Modal, {
+    return v
+        ? (0, i.jsx)(l.a, {
               size: "sm",
               title: y.intl.string(j.default["54lM5y"]),
               subtitle: y.intl.string(j.default.zrtwpV),
@@ -125,8 +125,8 @@ function T(e) {
               actions: [],
               ...o,
           })
-        : 0 !== C.length || v || 0 !== x.length
-          ? (0, i.jsx)(n.Modal, {
+        : 0 !== C.length || P || 0 !== x.length
+          ? (0, i.jsx)(l.a, {
                 size: "md",
                 title: y.intl.string(j.default["Um/7BM"]),
                 subtitle: y.intl.format(j.default.qSWXaf, {
@@ -137,7 +137,7 @@ function T(e) {
                 onClose: s,
                 input: (0, i.jsx)("div", {
                     className: D.c,
-                    children: (0, i.jsx)(u.k, {
+                    children: (0, i.jsx)(r.k, {
                         value: I,
                         onChange: N,
                         placeholder: 0 === f.length ? y.intl.string(j.default.wRS8vo) : "",
@@ -145,9 +145,9 @@ function T(e) {
                     }),
                 }),
                 actions: [],
-                actionBarInput: (0, i.jsx)(c.$, {
+                actionBarInput: (0, i.jsx)(u.$, {
                     variant: "primary",
-                    disabled: 0 === f.length || P,
+                    disabled: 0 === f.length || k,
                     text: y.intl.string(j.default["5fZHp3"]),
                     size: "md",
                     fullWidth: !0,
@@ -155,9 +155,9 @@ function T(e) {
                         (p.default.track(w.HAw.PREMIUM_GROUP_INVITE_FRIENDS_CTA_CLICKED, {
                             invited_user_ids: f.map((e) => e.id),
                         }),
-                            k(!0),
+                            M(!0),
                             await t(f),
-                            k(!1));
+                            M(!1));
                     },
                 }),
                 ...o,
@@ -168,7 +168,7 @@ function T(e) {
                         (m((s) => (t ? [...s, e] : s.filter((t) => t.id !== e.id))), t && N(""));
                     },
                     isUserDisabled: (e) => (f.length >= b && !f.some((t) => t.id === e.id)) || !e.eligible,
-                    isFetching: v,
+                    isFetching: P,
                     onFetchMore: E,
                     searchQuery: x,
                     emptySearchContent: {
@@ -186,7 +186,7 @@ function T(e) {
                     },
                 }),
             })
-          : (0, i.jsx)(n.Modal, {
+          : (0, i.jsx)(l.a, {
                 size: "sm",
                 title: y.intl.string(j.default.ONaJLH),
                 subtitle: y.intl.format(j.default["0LHbPc"], { helpCenterLink: U.TE }),
@@ -197,7 +197,7 @@ function T(e) {
 }
 function z(e) {
     let { onClose: t, inviteUsersResult: s, ...a } = e;
-    return (0, i.jsx)(l.k, {
+    return (0, i.jsx)(c.k, {
         graphic: {
             type: "image",
             src: "https://cdn.discordapp.com/assets/content/824b13be7b78cc0e651ea50dbb8e459044a59c44a6c15678761d9ef2739c7fc8.png",

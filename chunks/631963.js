@@ -1,8 +1,8 @@
 e.d(n, { default: () => P });
 var i = e(477900),
     a = e(582128),
-    l = e(189213),
-    s = e(17928),
+    l = e(17928),
+    s = e(189213),
     r = e(503698),
     o = e.n(r),
     u = e(559106),
@@ -70,12 +70,12 @@ function P(t) {
     let { guildId: n, userId: e, anaylticsLocations: r, transitionState: o, onClose: u, modReportId: c } = t,
         { analyticsLocations: d } = (0, f.Ay)(),
         M = r?.[0] ?? d?.[0] ?? null,
-        P = (0, s.bG)([j.default], () => j.default.getUser(e), [e]),
+        P = (0, l.bG)([j.default], () => j.default.getUser(e), [e]),
         [B, G] = a.useState(S.DisableCommunicationDuration.DURATION_60_SEC),
         [H, L] = a.useState(""),
         [F, K] = a.useState(!1),
         [W, X] = a.useState(!1),
-        Z = (0, s.bG)([T.A], () => T.A.getChannel(c)?.isArchivedThread()),
+        Z = (0, l.bG)([T.A], () => T.A.getChannel(c)?.isArchivedThread()),
         $ = (0, y.$9)(n, { location: M, targetUserId: e }),
         Y = a.useCallback(async () => {
             if (null != P) {
@@ -106,7 +106,7 @@ function P(t) {
     }, [n, P, u]),
     null == P || null == n)
         ? null
-        : (0, i.jsx)(l.Modal, {
+        : (0, i.jsx)(s.a, {
               transitionState: o,
               title: E.intl.formatToPlainString(E.t.OhsOy0, { user: I.Ay.getName(n, null, P) }),
               subtitle: E.intl.format(E.t.Ns83GT, { helpdeskArticle: S.MO }),

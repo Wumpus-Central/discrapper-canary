@@ -1,9 +1,9 @@
 n.d(t, { A: () => y });
 var i = n(477900),
     l = n(582128),
-    a = n(939249),
-    s = n(17928),
-    r = n(866665),
+    a = n(17928),
+    s = n(866665),
+    r = n(939249),
     o = n(90804),
     c = n(734057),
     d = n(309010),
@@ -55,13 +55,13 @@ function C() {
 }
 function y(e) {
     let { channelId: t, x: n, y, label: j, roomWidth: I, seat: N } = e,
-        v = (0, s.bG)([d.Ay], () => d.Ay.getVoiceChannelId() === t),
-        E = (0, s.bG)([p.A], () =>
+        v = (0, a.bG)([d.Ay], () => d.Ay.getVoiceChannelId() === t),
+        E = (0, a.bG)([p.A], () =>
             p.A.getRoomUsers(t)
                 .values()
                 .some((e) => e.seat === N || (e.position?.x === n && e.position?.y === y)),
         ),
-        b = (0, s.bG)([c.A], () => c.A.getChannel(t)?.guild_id),
+        b = (0, a.bG)([c.A], () => c.A.getChannel(t)?.guild_id),
         _ = l.useCallback(async () => {
             null != b &&
                 (v
@@ -77,9 +77,9 @@ function y(e) {
     if (E || null == b) return null;
     let { numericAvatarSize: S } = (0, A.F)(I),
         R = 1.2 * Math.max(S, 24);
-    return (0, i.jsx)(r.m, {
+    return (0, i.jsx)(s.m, {
         text: v || null != T ? null : x.intl.string(x.t["96ANUN"]),
-        children: (0, i.jsx)(a.D, {
+        children: (0, i.jsx)(r.D, {
             role: "listitem",
             "aria-label": j,
             className: g.am,

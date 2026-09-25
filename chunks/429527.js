@@ -4,14 +4,14 @@ var a = t(477900),
     l = t(503698),
     i = t.n(l),
     r = t(892227),
-    n = t(224640),
-    d = t(20742),
-    o = t(17928),
-    m = t(661531),
-    u = t(297264),
-    x = t(834730),
-    f = t(43990),
-    h = t(111159),
+    n = t(17928),
+    d = t(661531),
+    o = t(297264),
+    m = t(834730),
+    u = t(224640),
+    x = t(43990),
+    f = t(111159),
+    h = t(20742),
     p = t(364522),
     j = t(318254),
     N = t(577473),
@@ -46,12 +46,12 @@ function K(e) {
                         className: T.Jp,
                         children: [
                             (0, a.jsx)("div", { className: T.kf, children: s }),
-                            (0, a.jsx)(u.D, { variant: "heading-lg/semibold", color: "text-strong", children: t }),
+                            (0, a.jsx)(o.D, { variant: "heading-lg/semibold", color: "text-strong", children: t }),
                         ],
                     }),
                     (0, a.jsx)("div", {
                         className: T.jV,
-                        children: (0, a.jsx)(x.E, { variant: "text-sm/medium", color: "text-subtle", children: c }),
+                        children: (0, a.jsx)(m.E, { variant: "text-sm/medium", color: "text-subtle", children: c }),
                     }),
                     l,
                 ],
@@ -67,11 +67,11 @@ function K(e) {
 function z(e) {
     let { transitionState: s, onClose: t } = e,
         { analyticsLocations: l } = (0, A.Ay)(g.A.XBOX_PERKS_MODAL),
-        { programReward: u, totalDays: z } = (0, o.cf)([w.A], () => ({
+        { programReward: o, totalDays: z } = (0, n.cf)([w.A], () => ({
             programReward: w.A.getRewardForProgram(R.W.XBOX),
             totalDays: w.A.getTotalDaysInDuration(R.W.XBOX),
         })),
-        L = (0, S.J8)(u),
+        L = (0, S.J8)(o),
         G = (0, C.G)({ location: "xboxPerksModal" });
     c.useEffect(() => {
         G && (L ? (0, k.uM)() : (0, k.Ay)());
@@ -80,18 +80,18 @@ function z(e) {
     c.useEffect(() => {
         B.current || ((B.current = !0), E.default.track(X.HAw.OPEN_MODAL, { type: D.Xj, location_stack: l }));
     }, [l]);
-    let W = u?.reward_amount ?? 250,
+    let W = o?.reward_amount ?? 250,
         U = z ?? 30,
-        J = u?.next_reward_date != null ? Math.max(0, (0, r.default)(new Date(u.next_reward_date), new Date())) : U,
+        J = o?.next_reward_date != null ? Math.max(0, (0, r.default)(new Date(o.next_reward_date), new Date())) : U,
         V = J > U ? 0 : U - J;
     return (0, a.jsx)(A.f5, {
         value: l,
-        children: (0, a.jsx)(n.d, {
+        children: (0, a.jsx)(u.d, {
             transitionState: s,
             onClose: t,
             size: "md",
             "aria-label": P.intl.string(I.default.cRLw2a),
-            children: (0, a.jsx)(f.N, {
+            children: (0, a.jsx)(x.N, {
                 theme: X.NJ8.DARK,
                 children: (e) =>
                     (0, a.jsxs)("div", {
@@ -108,21 +108,21 @@ function z(e) {
                                                 className: T.Fn,
                                                 alt: "Xbox Game Pass",
                                             }),
-                                            (0, a.jsx)(x.E, {
+                                            (0, a.jsx)(m.E, {
                                                 variant: "text-sm/medium",
                                                 color: "text-subtle",
                                                 className: T.NO,
                                                 children: "x",
                                             }),
-                                            (0, a.jsx)(h.p, { size: "sm", color: m.A.colors.ICON_STRONG }),
+                                            (0, a.jsx)(f.p, { size: "sm", color: d.A.colors.ICON_STRONG }),
                                         ],
                                     }),
-                                    (0, a.jsx)(d.s_, {}),
+                                    (0, a.jsx)(h.s_, {}),
                                 ],
                             }),
                             (0, a.jsx)("div", {
                                 className: T.VA,
-                                children: (0, a.jsx)(x.E, {
+                                children: (0, a.jsx)(m.E, {
                                     variant: "text-sm/medium",
                                     color: "text-subtle",
                                     children: P.intl.format(I.default["70kyQr"], {
@@ -134,11 +134,11 @@ function z(e) {
                                 className: T.rN,
                                 children: [
                                     (0, a.jsx)(K, {
-                                        icon: (0, a.jsx)(j.C, { size: "sm", color: m.A.colors.ICON_STRONG }),
+                                        icon: (0, a.jsx)(j.C, { size: "sm", color: d.A.colors.ICON_STRONG }),
                                         title: P.intl.string(I.default["+tdDeK"]),
                                         description: P.intl.format(I.default.ZYc6Hv, { orbAmount: W, days: J }),
                                         footer:
-                                            null != u
+                                            null != o
                                                 ? (0, a.jsx)("div", {
                                                       className: T.hr,
                                                       children: (0, a.jsx)(O.Ay, {
@@ -154,7 +154,7 @@ function z(e) {
                                             "https://cdn.discordapp.com/assets/content/2733509d1c8c361c1a0125888c4a8c32d63471b71a304fe6aa37619f137d6d1a.png",
                                     }),
                                     (0, a.jsx)(K, {
-                                        icon: (0, a.jsx)(N.r, { size: "sm", color: m.A.colors.ICON_STRONG }),
+                                        icon: (0, a.jsx)(N.r, { size: "sm", color: d.A.colors.ICON_STRONG }),
                                         title: P.intl.string(I.default["++kzl5"]),
                                         description: P.intl.format(I.default.kc3Kvs, { multiplier: "1.2" }),
                                         thumbnailSrc:
@@ -162,7 +162,7 @@ function z(e) {
                                         thumbnailImageClassName: T.$T,
                                     }),
                                     (0, a.jsx)(K, {
-                                        icon: (0, a.jsx)(b.TagIcon, { size: "sm", color: m.A.colors.ICON_STRONG }),
+                                        icon: (0, a.jsx)(b.TagIcon, { size: "sm", color: d.A.colors.ICON_STRONG }),
                                         title: P.intl.string(I.default["a+PtZt"]),
                                         description: P.intl.format(I.default.WgkpKK, {
                                             onClick: () => {

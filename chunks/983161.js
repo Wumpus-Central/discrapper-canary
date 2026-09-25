@@ -1,10 +1,10 @@
-l.d(n, { default: () => H });
+l.d(n, { default: () => M });
 var t = l(477900),
     i = l(582128),
     a = l(91871),
     s = l.n(a),
-    c = l(189213),
-    r = l(702841),
+    c = l(702841),
+    r = l(189213),
     o = l(123292),
     d = l(297264),
     u = l(890497),
@@ -26,11 +26,11 @@ var t = l(477900),
     y = l(721228),
     D = l(375708),
     E = l(559357);
-function M(e, n, l, t) {
+function H(e, n, l, t) {
     return { channelId: e, title: n, description: l, emoji: null, icon: t ?? null };
 }
-function H(e) {
-    let { transitionState: n, onClose: l, resourceChannel: a, guildId: H, onSave: R, onDelete: U, onIconUpload: w } = e,
+function M(e) {
+    let { transitionState: n, onClose: l, resourceChannel: a, guildId: M, onSave: R, onDelete: U, onIconUpload: w } = e,
         [K, L] = i.useState(a?.title ?? ""),
         [P, z] = i.useState(a?.description ?? ""),
         [B, X] = i.useState(
@@ -40,11 +40,11 @@ function H(e) {
                 return null == n ? null : n.id;
             })(a),
         ),
-        G = (0, r.bG)([f.A], () => f.A.getResourceChannel(a?.channelId)?.icon),
-        J = (0, r.yK)([f.A], () => (f.A.getSettings()?.resourceChannels ?? []).map((e) => e.channelId)),
+        G = (0, c.bG)([f.A], () => f.A.getResourceChannel(a?.channelId)?.icon),
+        J = (0, c.yK)([f.A], () => (f.A.getSettings()?.resourceChannels ?? []).map((e) => e.channelId)),
         V = K.length < j.SM || null == B,
         W = i.useCallback(() => {
-            null == B || K.length <= 0 || (R(M(B, K, P, G)), l());
+            null == B || K.length <= 0 || (R(H(B, K, P, G)), l());
         }, [R, l, K, B, G, P]),
         Y = i.useCallback(() => {
             (U?.(), l());
@@ -57,8 +57,8 @@ function H(e) {
         ),
         F = i.useCallback(
             (e) => {
-                let n = b.Ay.getSelectableChannels(H),
-                    l = N.A.getGuild(H);
+                let n = b.Ay.getSelectableChannels(M),
+                    l = N.A.getGuild(M);
                 return Promise.resolve(
                     n
                         .filter(
@@ -81,11 +81,11 @@ function H(e) {
                         }),
                 );
             },
-            [H, J],
+            [M, J],
         ),
         O = i.useCallback(
             (e) => {
-                null != w && null != B && w(M(B, K, P), e);
+                null != w && null != B && w(H(B, K, P), e);
             },
             [B, K, w, P],
         ),
@@ -100,7 +100,7 @@ function H(e) {
             ],
             [W, V, l],
         );
-    return (0, t.jsxs)(c.Modal, {
+    return (0, t.jsxs)(r.a, {
         title: D.intl.string(D.t.SNMXYt),
         transitionState: n,
         onClose: l,

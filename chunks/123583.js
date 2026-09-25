@@ -15,8 +15,8 @@ var l = n(477900),
     g = n(86379),
     x = n(503698),
     A = n.n(x),
-    C = n(939249),
-    E = n(697744),
+    C = n(697744),
+    E = n(939249),
     I = n(795816),
     y = n(211401),
     S = n(989837),
@@ -31,7 +31,7 @@ let T = i.forwardRef(function (e, t) {
                 [S.A],
                 () => S.A.shouldShowPopup() && S.A.activeViewType() === n && S.A.activeChannelId() === s,
             ),
-            { Component: o, events: u, play: c } = (0, E.c)(),
+            { Component: o, events: u, play: c } = (0, C.c)(),
             d = i.useContext(N.Ay);
         i.useEffect(() => {
             function e() {
@@ -51,7 +51,7 @@ let T = i.forwardRef(function (e, t) {
         return (0, l.jsx)("div", {
             className: A()(b.UD, _.KG),
             ref: t,
-            children: (0, l.jsx)(C.D, {
+            children: (0, l.jsx)(E.D, {
                 tabIndex: 0,
                 className: A()(b.x6, { [b.rK]: a }),
                 onClick: h,

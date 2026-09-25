@@ -2,11 +2,11 @@ i.d(t, { default: () => N });
 var l = i(477900),
     n = i(582128),
     s = i(284009),
-    d = i.n(s),
-    a = i(562708),
-    c = i(189213),
-    r = i(17928),
-    o = i(565787),
+    a = i.n(s),
+    d = i(562708),
+    c = i(17928),
+    r = i(565787),
+    o = i(189213),
     u = i(144228),
     C = i(289873),
     f = i(157559),
@@ -16,10 +16,10 @@ var l = i(477900),
     m = i(643501),
     p = i(375708),
     j = i(510920);
-let x = (0, o.k)(function (e) {
-    let { width: t = 24, height: i = 24, color: n = "currentColor", foreground: s, ...d } = e;
+let x = (0, r.k)(function (e) {
+    let { width: t = 24, height: i = 24, color: n = "currentColor", foreground: s, ...a } = e;
     return (0, l.jsxs)("svg", {
-        ...(0, g.A)(d),
+        ...(0, g.A)(a),
         width: t,
         height: i,
         viewBox: "0 0 24 25",
@@ -74,18 +74,18 @@ function N(e) {
     let t,
         i,
         s,
-        o,
+        r,
         { channel: u, platform: h, transitionState: g, onClose: x } = e,
-        N = (0, r.bG)([m.default], () => m.default.getDevicesForPlatform(h), [h]),
-        w = (0, r.bG)([m.default], () => m.default.getLastSelectedDeviceByPlatform(h)),
+        N = (0, c.bG)([m.default], () => m.default.getDevicesForPlatform(h), [h]),
+        w = (0, c.bG)([m.default], () => m.default.getLastSelectedDeviceByPlatform(h)),
         I = n.useMemo(() => Object.values(N), [N]),
-        k = (0, r.bG)([m.default], () => m.default.getFetchingDevices(h)),
-        D = (0, r.bG)([m.default], () => m.default.getAwaitingRemoteSessionInfo()?.deviceId),
+        k = (0, c.bG)([m.default], () => m.default.getFetchingDevices(h)),
+        D = (0, c.bG)([m.default], () => m.default.getAwaitingRemoteSessionInfo()?.deviceId),
         [R, y] = n.useState(!1),
-        [E, M] = n.useState(() => N[D ?? ""]?.id ?? null);
-    async function A() {
+        [E, A] = n.useState(() => N[D ?? ""]?.id ?? null);
+    async function F() {
         let e = N[E ?? ""];
-        d()(null != e, "Cannot transfer without selected device");
+        a()(null != e, "Cannot transfer without selected device");
         try {
             (y(!0), await v.VP(h, e.id, u), x());
         } catch (t) {
@@ -101,7 +101,7 @@ function N(e) {
             v.Uc(h);
         }, [h]),
         n.useEffect(() => {
-            1 === I.length ? M(I[0].id) : null != w && M(w);
+            1 === I.length ? A(I[0].id) : null != w && A(w);
         }, [I, w]),
         k
             ? ((i = p.intl.string(p.t["+d9SH8"])),
@@ -110,20 +110,20 @@ function N(e) {
               ? ((i = p.intl.string(p.t.OkJf1e)), (s = p.intl.string(p.t["of/l5Z"])), (t = (0, l.jsx)(S, {})))
               : ((i = p.intl.string(p.t["+d9SH8"])),
                 (s = p.intl.string(p.t["5DtaWg"])),
-                (o = [{ text: p.intl.string(p.t.FJR4bD), onClick: A, loading: R || null != D, disabled: null == E }]),
+                (r = [{ text: p.intl.string(p.t.FJR4bD), onClick: F, loading: R || null != D, disabled: null == E }]),
                 (t = (0, l.jsx)(b, {
                     devices: I,
                     selectedDeviceId: E,
                     onSelectDeviceId: function (e) {
-                        (M(e), (0, v.Jm)(h, e));
+                        (A(e), (0, v.Jm)(h, e));
                     },
                 }))),
-        (0, l.jsx)(c.Modal, {
+        (0, l.jsx)(o.a, {
             title: i,
             subtitle: s,
-            actions: o,
+            actions: r,
             transitionState: g,
-            trackingProps: { impression: { impressionName: a.ImpressionNames.GAME_CONSOLE_DEVICE_LIST } },
+            trackingProps: { impression: { impressionName: d.ImpressionNames.GAME_CONSOLE_DEVICE_LIST } },
             onClose: x,
             children: t,
         })

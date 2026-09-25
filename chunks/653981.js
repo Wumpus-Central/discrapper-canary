@@ -244,7 +244,7 @@ function b(s) {
             loading: 1 === u,
         },
     ];
-    return (0, i.jsx)(c.Modal, {
+    return (0, i.jsx)(c.a, {
         transitionState: o,
         onClose: d,
         size: "md",

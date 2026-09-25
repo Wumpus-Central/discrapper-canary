@@ -2,15 +2,15 @@ l.d(i, { default: () => K });
 var t = l(477900),
     n = l(582128),
     s = l(562708),
-    a = l(189213),
-    r = l(224640),
-    d = l(289873),
+    a = l(702841),
+    r = l(189213),
+    d = l(224640),
+    c = l(289873),
     o = l(331322),
-    c = l(821609),
-    u = l(825484),
-    m = l(123292),
-    _ = l(702841),
-    A = l(778712),
+    u = l(821609),
+    m = l(778712),
+    _ = l(825484),
+    A = l(123292),
     I = l(504394),
     E = l(966327),
     x = l(964486),
@@ -78,7 +78,7 @@ function H(e) {
         { analyticsLocations: n } = (0, p.Ay)(g.A.INVITE_MODAL);
     return (0, t.jsx)(p.f5, {
         value: n,
-        children: (0, t.jsx)(a.Modal, {
+        children: (0, t.jsx)(r.a, {
             "aria-label": X.intl.string(X.t.u9zxnX),
             title: X.intl.string(X.t.u9zxnX),
             subtitle: X.intl.string(X.t.FWkU6P),
@@ -92,11 +92,11 @@ function H(e) {
 function K(e) {
     let i,
         l,
-        a,
+        r,
         { transitionState: k } = e;
-    (0, _.bG)([C.default], () => C.default.getCurrentUser()?.premiumType);
-    let U = (0, _.bG)([C.default], () => C.default.getCurrentUser()),
-        { invite: O, error: S, submitting: V, invite_instance_id: q } = (0, _.cf)([T.A], () => T.A.getProps());
+    (0, a.bG)([C.default], () => C.default.getCurrentUser()?.premiumType);
+    let U = (0, a.bG)([C.default], () => C.default.getCurrentUser()),
+        { invite: O, error: S, submitting: V, invite_instance_id: q } = (0, a.cf)([T.A], () => T.A.getProps());
     n.useEffect(() => {
         null != O && null != O.guild && (0, f.dR)(O.approximate_member_count ?? 0, O.code, O.guild.id);
     }, [O, O?.approximate_member_count, O?.code, O?.guild?.id]);
@@ -117,22 +117,22 @@ function K(e) {
     let G = (0, N.GV)(),
         { analyticsLocations: W } = (0, p.Ay)(g.A.INVITE_MODAL);
     if (null == O || null == U)
-        return (0, t.jsx)(r.d, {
+        return (0, t.jsx)(d.d, {
             size: "md",
             "aria-labelledby": G,
             transitionState: k,
             onClose: () => (R.A.close(O?.code), Promise.resolve()),
-            children: (0, t.jsx)("div", { className: F.g4, children: (0, t.jsx)(d.y, {}) }),
+            children: (0, t.jsx)("div", { className: F.g4, children: (0, t.jsx)(c.y, {}) }),
         });
     if (O.state === w.elq.EXPIRED || O.state === w.elq.BANNED || O.state === w.elq.ERROR)
         return (0, t.jsx)(H, { transitionState: k, inviteCode: O.code });
     if (null == O.channel)
-        return (0, t.jsx)(r.d, {
+        return (0, t.jsx)(d.d, {
             size: "md",
             "aria-labelledby": G,
             transitionState: k,
             onClose: () => (R.A.close(O.code), Promise.resolve()),
-            children: (0, t.jsx)("div", { className: F.g4, children: (0, t.jsx)(d.y, {}) }),
+            children: (0, t.jsx)("div", { className: F.g4, children: (0, t.jsx)(c.y, {}) }),
         });
     function K() {
         if (null == O) return;
@@ -156,14 +156,14 @@ function K(e) {
         throw Error("no name for group DM invite");
     let el = null != $ && (0, j.Sn)();
     return (
-        (a = ee
+        (r = ee
             ? X.intl.string(X.t["e/6Ogt"])
             : X.intl.format(X.t["9sWQNT"], {
                   usernameHook: () => (0, t.jsx)("span", { className: F.Pb, children: z }),
               })),
         (0, t.jsx)(p.f5, {
             value: W,
-            children: (0, t.jsx)(r.d, {
+            children: (0, t.jsx)(d.d, {
                 size: null != l ? "xl" : "sm",
                 "aria-labelledby": G,
                 "aria-label": $?.name ?? B?.name ?? "",
@@ -196,34 +196,34 @@ function K(e) {
                                                 children: [
                                                     (0, t.jsx)(v.A, { invite: O, location: "AcceptInviteModal" }),
                                                     null == J
-                                                        ? (0, t.jsx)(c.$, {
+                                                        ? (0, t.jsx)(u.$, {
                                                               onClick: K,
                                                               loading: V,
                                                               disabled: el,
                                                               variant: "primary",
                                                               fullWidth: !0,
-                                                              text: el ? X.intl.string(X.t.ZNCziL) : a,
+                                                              text: el ? X.intl.string(X.t.ZNCziL) : r,
                                                               icon:
                                                                   el || null == U
                                                                       ? void 0
                                                                       : () =>
                                                                             (0, t.jsx)(E.A, {
                                                                                 "aria-hidden": !0,
-                                                                                size: A._3.SIZE_16,
+                                                                                size: m._3.SIZE_16,
                                                                                 user: U,
                                                                                 className: F.Mp,
                                                                             }),
                                                           })
-                                                        : (0, t.jsxs)(u.e, {
+                                                        : (0, t.jsxs)(_.e, {
                                                               fullWidth: !0,
                                                               children: [
-                                                                  (0, t.jsx)(c.$, {
+                                                                  (0, t.jsx)(u.$, {
                                                                       variant: "secondary",
                                                                       text: X.intl.string(X.t.eylRaY),
                                                                       onClick: K,
                                                                       loading: V,
                                                                   }),
-                                                                  (0, t.jsx)(c.$, {
+                                                                  (0, t.jsx)(u.$, {
                                                                       variant: "primary",
                                                                       text: X.intl.string(X.t.RscU7I),
                                                                       onClick: K,
@@ -231,7 +231,7 @@ function K(e) {
                                                                   }),
                                                               ],
                                                           }),
-                                                    (0, t.jsx)(m.Q, {
+                                                    (0, t.jsx)(A.Q, {
                                                         onClick: Y,
                                                         variant: "secondary",
                                                         text: X.intl.string(X.t.ndsK4Z),

@@ -3,8 +3,8 @@ var i = n(477900),
     s = n(582128),
     o = n(132500),
     a = n(189213),
-    l = n(509434),
-    r = n(834730),
+    r = n(509434),
+    l = n(834730),
     c = n(95035),
     A = n(632738),
     d = n(975571),
@@ -26,7 +26,7 @@ let h = function (t) {
         s.useEffect(() => {
             (0, u.Bs)(T, u.WU.PRIMARY, n);
         }, [T, n]),
-        (0, i.jsxs)(a.Modal, {
+        (0, i.jsxs)(a.a, {
             transitionState: e,
             onClose: h,
             title: (0, _.ST)(n),
@@ -35,7 +35,7 @@ let h = function (t) {
                 {
                     text: I.intl.string(I.t.SJMnkX),
                     loading: P,
-                    icon: l.I,
+                    icon: r.I,
                     iconPosition: "end",
                     onClick: async () => {
                         ((0, u.St)(T, u.WU.PRIMARY, u._7.GET_STARTED), await S());
@@ -48,7 +48,7 @@ let h = function (t) {
                         (0, u.St)(T, u.WU.PRIMARY, u._7.LEARN_MORE));
                 },
                 className: M.A,
-                children: [I.intl.string(I.t["aA6q/z"]), (0, i.jsx)(l.I, { size: "xs", color: "currentColor" })],
+                children: [I.intl.string(I.t["aA6q/z"]), (0, i.jsx)(r.I, { size: "xs", color: "currentColor" })],
             }),
             children: [
                 (0, E.f6)(T).map((t, e) => {
@@ -56,7 +56,7 @@ let h = function (t) {
                     return (0, i.jsx)(A.PQ, { title: n, description: s, listType: "numbered", index: e }, e);
                 }),
                 !U &&
-                    (0, i.jsx)(r.E, {
+                    (0, i.jsx)(l.E, {
                         variant: "text-xs/medium",
                         color: "text-muted",
                         className: M.B,

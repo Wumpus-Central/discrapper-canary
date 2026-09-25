@@ -744,7 +744,7 @@ var tf = a(321593),
 function tk(e) {
     let { reason: t, transitionState: a, onClose: n } = e,
         l = t === tw.PERMISSIONS;
-    return (0, i.jsx)(tb.Modal, {
+    return (0, i.jsx)(tb.a, {
         transitionState: a,
         onClose: n,
         title: X.intl.string(l ? q.default.Rtlv25 : q.default["+UouPe"]),

@@ -1,11 +1,11 @@
 e.d(n, { default: () => m });
 var i = e(477900),
     l = e(582128),
-    a = e(189213),
-    r = e(17928),
+    a = e(17928),
+    r = e(189213),
     s = e(890497),
-    o = e(331322),
-    c = e(834730),
+    c = e(331322),
+    o = e(834730),
     u = e(47167),
     d = e(734057),
     h = e(808728),
@@ -15,7 +15,7 @@ var i = e(477900),
     f = e(375708);
 function C(t) {
     let { guildId: n, channel: e, onSelectChannel: l } = t,
-        a = (0, r.yK)(
+        r = (0, a.yK)(
             [h.Ay],
             () =>
                 h.Ay.getChannels(n)
@@ -32,9 +32,9 @@ function C(t) {
     return (0, i.jsx)(s.Z, {
         required: !0,
         value: e?.id,
-        options: a.map((t) => ({ id: t.id, value: t.id, label: (0, u.m1)(t, p.default, g.A, !0) })),
+        options: r.map((t) => ({ id: t.id, value: t.id, label: (0, u.m1)(t, p.default, g.A, !0) })),
         onSelectionChange: function (t) {
-            l(a.find((n) => n.id === t) ?? void 0);
+            l(r.find((n) => n.id === t) ?? void 0);
         },
         placeholder: f.intl.string(f.t["N+T69y"]),
         selectionMode: "single",
@@ -44,11 +44,11 @@ function m(t) {
     let { action: n, triggerType: e, guildId: s, isEdit: u, onEditChannel: h, onClose: g, transitionState: p } = t,
         [m, k] = l.useState(n.metadata.channelId),
         [v, b] = l.useState(null),
-        j = (0, r.bG)([d.A], () => d.A.getChannel(m), [m]),
+        j = (0, a.bG)([d.A], () => d.A.getChannel(m), [m]),
         y = (0, x.x)(n.type, n, e);
     if (null == y) return null;
     let { headerText: A } = y;
-    return (0, i.jsx)(a.Modal, {
+    return (0, i.jsx)(r.a, {
         onClose: g,
         transitionState: p,
         title: A,
@@ -68,7 +68,7 @@ function m(t) {
                 },
             },
         ],
-        children: (0, i.jsxs)(o.B, {
+        children: (0, i.jsxs)(c.B, {
             gap: 8,
             direction: "vertical",
             children: [
@@ -80,8 +80,8 @@ function m(t) {
                     },
                 }),
                 null != v
-                    ? (0, i.jsx)(c.E, { color: "text-feedback-critical", variant: "text-sm/normal", children: v })
-                    : (0, i.jsx)(c.E, {
+                    ? (0, i.jsx)(o.E, { color: "text-feedback-critical", variant: "text-sm/normal", children: v })
+                    : (0, i.jsx)(o.E, {
                           color: "text-muted",
                           variant: "text-sm/normal",
                           children: f.intl.string(f.t["ric+5q"]),

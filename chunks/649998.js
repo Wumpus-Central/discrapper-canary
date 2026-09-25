@@ -1,4 +1,4 @@
-n.d(t, { l: () => R, q: () => C });
+n.d(t, { q: () => C, l: () => R });
 var i = n(477900),
     r = n(582128),
     a = n(503698),
@@ -12,9 +12,14 @@ var i = n(477900),
     E = n(475825),
     A = n(289873),
     h = n(834730),
-    I = n(992251),
-    f = n(801461),
-    p = n(869431),
+    I = n(992251);
+function f() {
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "listbox",
+        t = arguments.length > 1 ? arguments[1] : void 0;
+    return `${e}-option-${t}`;
+}
+n(321073);
+var p = n(869431),
     T = n(594615);
 let m = c.A.modules.select.OPTION_HEIGHT.resolve(),
     g = m + 4,
@@ -54,7 +59,7 @@ function C(e) {
         K = Y ? y : j,
         $ = (0, l.Ay)({
             id: B,
-            defaultFocused: null != v ? (0, f.ZN)(B, v) : void 0,
+            defaultFocused: null != v ? f(B, v) : void 0,
             async scrollToEnd() {},
             async scrollToStart() {},
             isEnabled: !u,
@@ -69,7 +74,15 @@ function C(e) {
         r.useEffect(() => {
             requestAnimationFrame(() => {
                 if (null != v) {
-                    let [e, t] = (0, f.LE)(z.current, v);
+                    let [e, t] = (function (e, t) {
+                        let n = 0;
+                        for (let i = 0; i < e.length; i++) {
+                            let r = e[i].count;
+                            if (t < n + r) return [i, t - n];
+                            n += r;
+                        }
+                        return [0, t];
+                    })(z.current, v);
                     V.current?.scrollToIndex({ section: e, row: t });
                 }
             });
@@ -77,17 +90,39 @@ function C(e) {
     let { activeIndex: X, handleKeyDown: q } = R(k, H);
     r.useEffect(() => {
         if (null != X && k && -1 !== a) {
-            let e = (0, o.t$)(B, (0, f.ZN)(B, X)),
+            let e = (0, o.t$)(B, f(B, X)),
                 t = document.querySelector((0, o.Mz)(e));
             t?.focus();
         }
     }, [X, H, k, B, a]);
-    let Z = r.useCallback((e, t) => (N(H[(0, f.rp)(C, e, t)]) ? g : m), [H, C]),
+    let Z = r.useCallback(
+            (e, t) =>
+                N(
+                    H[
+                        (function (e, t, n) {
+                            let i = 0;
+                            for (let n = 0; n < t; n++) i += e[n].count;
+                            return i + n;
+                        })(C, e, t)
+                    ],
+                )
+                    ? g
+                    : m,
+            [H, C],
+        ),
         Q = r.useCallback(
             (e) => {
+                let t;
                 if (!0 === c && 1 === K.length && K.includes(e)) return;
-                let t = (0, f.qH)(_, K, e);
-                (Y || W(t), D?.(t));
+                let n =
+                    ((t = [...K]),
+                    "multiple" === _
+                        ? null != K.find((t) => t.id === e.id)
+                            ? (t = K.filter((t) => t.id !== e.id))
+                            : t.push(e)
+                        : (t = [e]),
+                    t);
+                (Y || W(n), D?.(n));
             },
             [c, K, D, Y, _],
         ),
@@ -164,7 +199,7 @@ function C(e) {
             renderRow: (e) => {
                 let { rowIndex: t } = e,
                     n = H[t],
-                    r = (0, f.ZN)(B, t),
+                    r = f(B, t),
                     s = null == M && N(n) ? `${r}-desc` : void 0,
                     l = 0 !== K.length && null != K.find((e) => e.id === n.id);
                 return (0, i.jsx)(

@@ -1,27 +1,27 @@
-n.d(i, { default: () => p });
-var a = n(477900),
-    s = n(582128),
+n.d(i, { default: () => u });
+var s = n(477900),
+    a = n(582128),
     e = n(562708),
     r = n(732159),
-    l = n(96358),
-    c = n(841365),
+    c = n(96358),
+    l = n(841365),
     o = n(375708);
-function p(t) {
+function u(t) {
     let { transitionState: i, onClose: n } = t,
-        p = s.useCallback(async () => {
+        u = a.useCallback(async () => {
             try {
-                (await (0, l.S)(), n());
+                (await (0, c.S)(), n());
             } catch {}
         }, [n]);
-    return (0, a.jsx)(r.ConfirmModal, {
+    return (0, s.jsx)(r.u, {
         transitionState: i,
         onClose: n,
-        title: o.intl.string(c.default["g7/14g"]),
-        subtitle: o.intl.string(c.default.FbTAmI),
-        confirmText: o.intl.string(c.default.V822Mp),
+        title: o.intl.string(l.default["g7/14g"]),
+        subtitle: o.intl.string(l.default.FbTAmI),
+        confirmText: o.intl.string(l.default.V822Mp),
         variant: "critical",
         cancelText: o.intl.string(o.t["ETE/oC"]),
-        onConfirm: p,
+        onConfirm: u,
         trackingProps: { impression: { impressionName: e.ImpressionNames.USER_AGE_VERIFICATION_RESET_CONFIRM } },
     });
 }

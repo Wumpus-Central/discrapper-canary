@@ -28,7 +28,7 @@ function C(e) {
                 e
             );
         }, [l, t]);
-    return (0, s.jsxs)(E.Modal, {
+    return (0, s.jsxs)(E.a, {
         ...C,
         actions: A,
         children: [(0, s.jsx)("div", { className: c[r[i]] }), (0, s.jsx)("div", { className: c.message, children: a })],

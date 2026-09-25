@@ -2,8 +2,8 @@ s.d(e, { default: () => O });
 var n = s(477900),
     o = s(582128),
     r = s(776310),
-    i = s(772707),
-    a = s(289873),
+    i = s(289873),
+    a = s(772707),
     c = s(116833),
     p = s(793574),
     u = s(688810),
@@ -48,7 +48,7 @@ let O = (t) => {
     (0, f.$V)(g, B);
     let $ = (0, h.VG)(g),
         { handleUseNow: K, isApplying: M, canUseNow: Q } = (0, E.p)({ product: g, onSuccess: O, onError: O });
-    if (D) return (0, n.jsx)(a.y, { type: a.y.Type.SPINNING_CIRCLE });
+    if (D) return (0, n.jsx)(i.y, { type: i.y.Type.SPINNING_CIRCLE });
     let W = (0, f.$k)({
             product: g,
             overrideTitle: v,
@@ -79,7 +79,7 @@ let O = (t) => {
             ref: P,
             children: [
                 (0, n.jsx)(r.Fk, { ref: w, className: x.L, environment: N }),
-                (0, n.jsx)(i.k, {
+                (0, n.jsx)(a.k, {
                     graphic: {
                         type: "dynamic",
                         component: c.DynamicGraphicComponent.COLLECTIBLES_PREVIEW,

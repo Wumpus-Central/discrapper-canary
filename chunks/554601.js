@@ -12,8 +12,8 @@ var l,
     p = n(989837),
     h = n(485878),
     A = n(17928),
-    f = n(696986),
-    x = n(364522),
+    f = n(364522),
+    x = n(696986),
     N = n(435582),
     E = n(283488),
     g = n(264322),
@@ -1425,7 +1425,7 @@ function tH(e) {
         o.useEffect(() => {
             P && g.Ay.queryInstallOnDemandApp(a.id, i?.id);
         }, [a.id, i?.id, P]),
-        (0, r.jsxs)(x.d_, {
+        (0, r.jsxs)(f.d_, {
             className: tk.k,
             fade: !0,
             ref: d,
@@ -1434,7 +1434,7 @@ function tH(e) {
             children: [
                 (0, r.jsx)(e8, { application: a, context: t, name: N, iconURL: h, scrollerRef: d, sectionName: l }),
                 null != h && (0, r.jsx)(j.A, { src: h, className: tk.Z }),
-                (0, r.jsx)(f.A, { size: 54 }),
+                (0, r.jsx)(x.h, { size: 54 }),
                 (0, r.jsx)(c ? tD : tS, { context: t, application: a, sectionName: l, hasCommands: u }),
                 s === _.s4.TEXT
                     ? (0, r.jsx)(eA, {
@@ -3005,7 +3005,7 @@ function lI(e) {
         u = (0, I.sw)(n),
         m = !(0, I.sw)(n),
         p = n === _.s4.TEXT,
-        [h, f] = lL(!0),
+        [h, x] = lL(!0),
         [N, E] = lL(d),
         [g, C] = lL(u),
         [j, y] = lL(m),
@@ -3029,7 +3029,7 @@ function lI(e) {
                 setSearchQuery: i,
                 placeholder: p ? et.intl.string(et.t.ziyFv2) : et.intl.string(et.t["pw+r5b"]),
             }),
-            (0, r.jsx)(x.Ip, {
+            (0, r.jsx)(f.Ip, {
                 ref: s,
                 className: lN.Ph,
                 fade: !0,
@@ -3037,7 +3037,7 @@ function lI(e) {
                     ? (0, r.jsx)(lu, { context: t, query: l, entrypoint: n, isScrollCloseToBottom: a })
                     : (0, r.jsxs)("div", {
                           children: [
-                              (0, r.jsx)(lv, { context: t, entrypoint: n, onEmptyState: f }),
+                              (0, r.jsx)(lv, { context: t, entrypoint: n, onEmptyState: x }),
                               d && (0, r.jsx)(lS, { context: t, onEmptyState: E }),
                               u && (0, r.jsx)(lT, { context: t, entrypoint: n, onEmptyState: C }),
                               m && (0, r.jsx)(lP, { context: t, onEmptyState: y }),
@@ -3673,7 +3673,7 @@ function lM(e) {
                     (0, r.jsx)(O.D, { variant: "heading-md/medium", color: "text-strong", children: l }),
                 ],
             }),
-            (0, r.jsx)(x.Ip, {
+            (0, r.jsx)(f.Ip, {
                 children: (0, r.jsx)("div", {
                     className: v()({ [lO.wf]: i !== nb.ROW, [lO.Ge]: i === nb.ROW }),
                     children: s.map((e, n) => {

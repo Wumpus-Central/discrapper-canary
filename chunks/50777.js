@@ -3,13 +3,13 @@ var t = n(477900),
     e = n(582128),
     a = n(503698),
     s = n.n(a),
-    r = n(825484),
-    c = n(821609),
-    o = n(17928),
-    d = n(834730),
-    u = n(318254),
-    m = n(289873),
-    p = n(866665),
+    r = n(17928),
+    c = n(834730),
+    o = n(318254),
+    d = n(289873),
+    u = n(825484),
+    m = n(866665),
+    p = n(821609),
     x = n(793574),
     A = n(688810),
     E = n(587895),
@@ -39,27 +39,27 @@ var t = n(477900),
     U = n(702360);
 let H = { placement: k.Ye.EMBED };
 function w(l) {
-    let { normalPrice: i, discountedPrice: n, discountPercent: a, orbsGate: r, orbPriceAmount: c, reward: o } = l,
+    let { normalPrice: i, discountedPrice: n, discountPercent: a, orbsGate: r, orbPriceAmount: d, reward: u } = l,
         m = e.useMemo(
             () =>
-                null == o || o.type !== b.Ns.ACTION || o.amount <= 0
+                null == u || u.type !== b.Ns.ACTION || u.amount <= 0
                     ? null
                     : (0, t.jsx)("div", {
                           className: U.pt,
-                          children: (0, t.jsx)(d.E, {
+                          children: (0, t.jsx)(c.E, {
                               variant: "text-sm/semibold",
                               color: "currentColor",
                               children: M.intl.format(M.t.GiVd2Q, {
-                                  orbCount: o.amount,
+                                  orbCount: u.amount,
                                   orbIconHook: () =>
-                                      (0, t.jsx)(u.C, { size: "xs", color: "currentColor" }, "orbs-icon"),
+                                      (0, t.jsx)(o.C, { size: "xs", color: "currentColor" }, "orbs-icon"),
                               }),
                           }),
                       }),
-            [o],
+            [u],
         );
-    if ("HIDDEN" !== r && null != c)
-        return (0, t.jsx)(y.A, { orbsGate: r, className: U.PB, orbPrice: c, fiatPrice: i });
+    if ("HIDDEN" !== r && null != d)
+        return (0, t.jsx)(y.A, { orbsGate: r, className: U.PB, orbPrice: d, fiatPrice: i });
     let p = null != a && null != n;
     return (0, t.jsx)("div", {
         className: s()(U.PB, { [U.un]: p }),
@@ -67,15 +67,15 @@ function w(l) {
             ? (0, t.jsxs)(t.Fragment, {
                   children: [
                       null != i &&
-                          (0, t.jsx)(d.E, {
+                          (0, t.jsx)(c.E, {
                               className: U.of,
                               variant: "text-md/medium",
                               color: "text-muted",
                               lineClamp: 1,
                               children: i,
                           }),
-                      (0, t.jsx)(d.E, { variant: "text-md/bold", lineClamp: 1, children: n }),
-                      (0, t.jsxs)(d.E, {
+                      (0, t.jsx)(c.E, { variant: "text-md/bold", lineClamp: 1, children: n }),
+                      (0, t.jsxs)(c.E, {
                           variant: "text-md/bold",
                           color: "text-feedback-positive",
                           lineClamp: 1,
@@ -85,30 +85,30 @@ function w(l) {
                   ],
               })
             : (0, t.jsxs)(t.Fragment, {
-                  children: [null != i && (0, t.jsx)(d.E, { variant: "text-md/bold", lineClamp: 1, children: i }), m],
+                  children: [null != i && (0, t.jsx)(c.E, { variant: "text-md/bold", lineClamp: 1, children: i }), m],
               }),
     });
 }
 function Y(l) {
     let { applicationId: i, skuId: n, channel: e } = l,
-        a = (0, o.bG)([R.A], () => R.A.getGuildIdFromApplicationId(i));
+        a = (0, r.bG)([R.A], () => R.A.getGuildIdFromApplicationId(i));
     return (0, t.jsx)(z, { applicationId: i, guildId: a, skuId: n, channel: e });
 }
 function z(l) {
     let { guildId: i, skuId: n, channel: a, applicationId: s, customNavigateToSocialLayerStorefront: y } = l,
-        Y = (0, o.bG)([f.A], () => f.A.isFetching(n)),
+        Y = (0, r.bG)([f.A], () => f.A.isFetching(n)),
         z = (0, I.A)({ skuId: n }),
-        W = (0, o.bG)([R.A], () => (null != i ? R.A.getApplicationIdFromGuildId(i) : void 0)),
+        W = (0, r.bG)([R.A], () => (null != i ? R.A.getApplicationIdFromGuildId(i) : void 0)),
         q = z?.applicationId ?? s ?? W,
-        K = (0, o.bG)([E.A], () => null != q && E.A.isFetchingApplication(q)),
-        V = (0, o.bG)([E.A], () => null != q && E.A.didFetchingApplicationFail(q)),
+        K = (0, r.bG)([E.A], () => null != q && E.A.isFetchingApplication(q)),
+        V = (0, r.bG)([E.A], () => null != q && E.A.didFetchingApplicationFail(q)),
         J = (0, h.h)(q),
         { analyticsLocations: Q } = (0, A.Ay)(x.A.SLAYER_STOREFRONT_PRODUCT_DETAILS_EMBED);
     (0, N.pE)();
-    let $ = (0, o.bG)([_.default], () =>
+    let $ = (0, r.bG)([_.default], () =>
             a.isDM() && null != a.recipients && 0 !== a.recipients.length ? _.default.getUser(a.recipients[0]) : null,
         ),
-        X = (0, o.bG)([R.A], () => (null != n ? R.A.getNormalizedSKUEligibility(n) : void 0), [n]),
+        X = (0, r.bG)([R.A], () => (null != n ? R.A.getNormalizedSKUEligibility(n) : void 0), [n]),
         { primaryIconAsset: Z, primaryIconLabel: ll } = e.useMemo(() => (0, v.Cv)(z, q), [z, q]),
         { normalPrice: li, discountedPrice: ln, discountPercent: lt, userPrice: le } = (0, j.CD)({ sku: z }),
         la = (0, j.JL)({ sku: z }),
@@ -168,7 +168,7 @@ function z(l) {
                           text: M.intl.format(M.t.JC15qj, {
                               orbPrice: ls,
                               orbIconHook: () =>
-                                  (0, t.jsx)(u.C, { className: U.fN, size: "sm", color: "currentColor" }, "orbs-icon"),
+                                  (0, t.jsx)(o.C, { className: U.fN, size: "sm", color: "currentColor" }, "orbs-icon"),
                           }),
                       }
                     : {
@@ -179,7 +179,7 @@ function z(l) {
         ),
         lC = null != q && null == J && !V;
     return (Y || K || lC) && (null == z || null == J)
-        ? (0, t.jsx)("div", { className: U.kL, children: (0, t.jsx)(m.y, { className: U.u1 }) })
+        ? (0, t.jsx)("div", { className: U.kL, children: (0, t.jsx)(d.y, { className: U.u1 }) })
         : null != J && null != z && (0, C.A)(J) && J.id === z.applicationId
           ? (0, t.jsxs)("div", {
                 className: U.kL,
@@ -206,7 +206,7 @@ function z(l) {
                                         children: [
                                             null != Z &&
                                                 (0, t.jsx)("img", { src: Z.toString(), alt: ll, className: U.ye }),
-                                            (0, t.jsx)(d.E, {
+                                            (0, t.jsx)(c.E, {
                                                 variant: "text-md/medium",
                                                 lineClamp: 1,
                                                 children: z.name,
@@ -223,20 +223,20 @@ function z(l) {
                                     }),
                                 ],
                             }),
-                            (0, t.jsxs)(r.e, {
+                            (0, t.jsxs)(u.e, {
                                 wrap: !1,
                                 fullWidth: !0,
                                 children: [
-                                    (0, t.jsx)(p.m, {
+                                    (0, t.jsx)(m.m, {
                                         text: X ? void 0 : M.intl.string(M.t.IqlPbQ),
-                                        children: (0, t.jsx)(c.$, {
+                                        children: (0, t.jsx)(p.$, {
                                             variant: X ? "secondary" : "primary",
                                             onClick: lu,
                                             text: M.intl.string(M.t.KLBTgF),
                                             fullWidth: !0,
                                         }),
                                     }),
-                                    X && (0, t.jsx)(c.$, { variant: "primary", onClick: lA, text: lE, fullWidth: !0 }),
+                                    X && (0, t.jsx)(p.$, { variant: "primary", onClick: lA, text: lE, fullWidth: !0 }),
                                     (0, t.jsx)(L.A, { onGift: lp }),
                                 ],
                             }),

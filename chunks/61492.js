@@ -32,7 +32,7 @@ function d(t) {
         T =
             (h === o.fg2.MASTODON && /^@?[a-z0-9_]+([.-]+[a-z0-9_]+)*@[^@]+\.[^.@]{2,}$/i.test(m),
             /^.+\.[^.@]{2,}$/.test(m));
-    return (0, n.jsx)(l.Modal, {
+    return (0, n.jsx)(l.a, {
         transitionState: e,
         title: u.intl.formatToPlainString(u.t["ImMhq+"], { serviceName: x }),
         subtitle: u.intl.formatToPlainString(u.t["7TByKh"], { serviceName: x }),

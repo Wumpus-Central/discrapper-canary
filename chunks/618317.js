@@ -3,9 +3,9 @@ var r = n(477900),
     i = n(503698),
     s = n.n(i),
     l = n(575593),
-    a = n(947641),
-    o = n(17928),
-    u = n(778712),
+    a = n(17928),
+    o = n(778712),
+    u = n(947641),
     d = n(661531),
     c = n(287809),
     I = n(298072),
@@ -41,20 +41,20 @@ function b(e) {
 function R(e) {
     let t,
         { product: n, isCardHovered: i } = e,
-        s = (0, o.bG)([c.default], () => c.default.getCurrentUser()),
-        a = (0, A.YW)(n),
+        s = (0, a.bG)([c.default], () => c.default.getCurrentUser()),
+        u = (0, A.YW)(n),
         d =
             ((t = (0, I.Q)(n)),
             n?.type === l.R.VARIANTS_GROUP && null != n.variants && n.variants.length > t
                 ? n.variants[t].items[0]
                 : n.items[0]);
-    switch (a) {
+    switch (u) {
         case l.R.PROFILE_EFFECT:
             return (0, r.jsx)(p.A, { skuId: d.skuId, isHighlighted: i, removeSetHeight: !0, hideBackground: !0 });
         case l.R.PROFILE_FRAME:
             return (0, r.jsx)("div", { className: h.pI, children: (0, r.jsx)(g.A, { frame: d, filterLayer: E }) });
         case l.R.AVATAR_DECORATION:
-            return (0, r.jsx)(C.i, { item: d, user: s, isHighlighted: i, avatarSize: u._3.SIZE_120 });
+            return (0, r.jsx)(C.i, { item: d, user: s, isHighlighted: i, avatarSize: o._3.SIZE_120 });
         case l.R.NAMEPLATE:
             return (0, r.jsx)(_.A, { nameplate: d, user: s, isHighlighted: i });
         case l.R.BUNDLE:
@@ -67,7 +67,7 @@ function R(e) {
 }
 function k(e) {
     let { hidden: t } = e;
-    return (0, r.jsx)(a.r, {
+    return (0, r.jsx)(u.r, {
         size: "custom",
         color: d.A.colors.INTERACTIVE_TEXT_ACTIVE,
         width: 40,

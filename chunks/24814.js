@@ -1,8 +1,8 @@
 i.d(n, { default: () => p });
 var e = i(477900),
     a = i(582128),
-    l = i(189213),
-    c = i(150934),
+    c = i(189213),
+    l = i(150934),
     s = i(817281),
     o = i(964486),
     r = i(47167),
@@ -18,13 +18,13 @@ let p = function (t) {
     }),
     null == k)
         ? null
-        : (0, e.jsx)(l.Modal, {
+        : (0, e.jsx)(c.a, {
               title: h.intl.string(h.t["0LZN5F"]),
               subtitle: h.intl.format(h.t["vA+uEs"], { channel: k }),
               transitionState: C,
               size: "md",
               onClose: p,
-              actionBarInput: (0, e.jsx)(c.S, {
+              actionBarInput: (0, e.jsx)(l.S, {
                   checked: f,
                   onChange: function (t) {
                       (s.Ay.updatedUnsyncedSettings({ disableVoiceChannelChangeAlert: t }), y(t));

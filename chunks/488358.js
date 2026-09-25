@@ -8,9 +8,9 @@ var n = l(477900),
     c = l(435558),
     u = l.n(c),
     d = l(485845),
-    m = l(189213),
-    x = l(17928),
-    h = l(661531),
+    m = l(17928),
+    x = l(661531),
+    h = l(189213),
     A = l(462887),
     f = l(297264),
     p = l(834730),
@@ -215,7 +215,7 @@ function eA(e) {
     let { eligibilityStatesGroups: t, onPlatformConnect: l, onPlatformConnected: a } = e,
         [r, c] = i.useState({}),
         [d, m] = i.useState(0),
-        [x, A] = i.useState(null),
+        [h, A] = i.useState(null),
         [f, N] = i.useState(null),
         C = i.useMemo(() => u().flatten(t), [t]),
         b = i.useMemo(
@@ -225,11 +225,11 @@ function eA(e) {
         );
     (i.useEffect(() => m(Date.now()), [C]),
         i.useEffect(() => {
-            if (null == x) return;
-            let e = b[`${x}${null != f ? `:${f.id}` : ""}`];
-            null == e || (e.every((e) => e.result) && a(e[0]?.identity_connected_account_type ?? x, f));
-        }, [b, x, f, a]));
-    let S = (0, v.r)(h.A.unsafe_rawColors.GREEN_330).hex();
+            if (null == h) return;
+            let e = b[`${h}${null != f ? `:${f.id}` : ""}`];
+            null == e || (e.every((e) => e.result) && a(e[0]?.identity_connected_account_type ?? h, f));
+        }, [b, h, f, a]));
+    let S = (0, v.r)(x.A.unsafe_rawColors.GREEN_330).hex();
     return (0, n.jsx)(n.Fragment, {
         children: Object.keys(b)
             .sort((e, t) => {
@@ -449,7 +449,7 @@ function ep(e) {
         a,
         s,
         r,
-        { transitionState: c, onClose: u, guildId: d, role: h } = e,
+        { transitionState: c, onClose: u, guildId: d, role: x } = e,
         [A, f] = i.useState(0),
         [g, j] = i.useState(null),
         [v, N] = i.useState(!1),
@@ -457,17 +457,17 @@ function ep(e) {
         [I, M] = i.useState(!1),
         [O, V] = i.useState(!0),
         [U, D] = i.useState(!1),
-        B = (0, x.bG)([Z.A], () => Z.A.getAccounts()),
-        J = (0, x.bG)([z.default], () => z.default.getNewestTokens()),
-        el = (0, x.bG)([Q.default], () => Q.default.getId()),
+        B = (0, m.bG)([Z.A], () => Z.A.getAccounts()),
+        J = (0, m.bG)([z.default], () => z.default.getNewestTokens()),
+        el = (0, m.bG)([Q.default], () => Q.default.getId()),
         [en, ei] = i.useState(null),
         [er, ed] = i.useState(null),
         [ex, eh] = i.useState(null),
         ep = (0, w.Ay)(),
-        eg = (0, x.bG)([F.default], () => F.default.locale),
-        ej = (0, x.bG)([K.Ay], () => K.Ay.getMember(d, el)),
-        ev = Object.values((0, x.bG)([W.A], () => W.A.getMutableGuildChannelsForGuild(d))).filter(
-            (e) => q.A.can(eo.xBc.VIEW_CHANNEL, e) && q.A.can(eo.xBc.SEND_MESSAGES, e) && (0, H.A)(e).includes(h),
+        eg = (0, m.bG)([F.default], () => F.default.locale),
+        ej = (0, m.bG)([K.Ay], () => K.Ay.getMember(d, el)),
+        ev = Object.values((0, m.bG)([W.A], () => W.A.getMutableGuildChannelsForGuild(d))).filter(
+            (e) => q.A.can(eo.xBc.VIEW_CHANNEL, e) && q.A.can(eo.xBc.SEND_MESSAGES, e) && (0, H.A)(e).includes(x),
         );
     function ey() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
@@ -480,24 +480,24 @@ function ep(e) {
         (ey(!0), (0, Y.openUserSettings)($.X.CONNECTIONS_CATEGORY));
     }
     async function eC() {
-        (M(!0), await T.A.assignGuildRoleConnection(d, h.id));
+        (M(!0), await T.A.assignGuildRoleConnection(d, x.id));
     }
     (i.useEffect(() => {
-        T.A.fetchGuildRoleConnectionsEligibility(d, h.id).then((e) => {
+        T.A.fetchGuildRoleConnectionsEligibility(d, x.id).then((e) => {
             (j(e), N(e.some((e) => e.every((e) => e.result))), R(!1));
         });
-    }, [d, h.id, B, J]),
+    }, [d, x.id, B, J]),
         i.useEffect(() => {
-            ee.default.track(eo.HAw.PASSPORT_CHALLENGE_VIEWED, { role_id: h.id, ...(0, L.H$)(d) });
-        }, [d, h.id]),
+            ee.default.track(eo.HAw.PASSPORT_CHALLENGE_VIEWED, { role_id: x.id, ...(0, L.H$)(d) });
+        }, [d, x.id]),
         i.useEffect(() => {
             I &&
                 null != ej &&
-                ej.roles.includes(h.id) &&
+                ej.roles.includes(x.id) &&
                 (M(!1),
                 ev.length > 0 ? f(2) : u?.(),
-                ee.default.track(eo.HAw.PASSPORT_CHALLENGE_FINISHED, { role_id: h.id, ...(0, L.H$)(d) }));
-        }, [I, ev.length, ej, d, h.id, u]));
+                ee.default.track(eo.HAw.PASSPORT_CHALLENGE_FINISHED, { role_id: x.id, ...(0, L.H$)(d) }));
+        }, [I, ev.length, ej, d, x.id, u]));
     let eb = g?.flat().some((e) => null == e.application_id) ?? !1;
     switch (A) {
         case 0: {
@@ -513,7 +513,7 @@ function ep(e) {
                                       variant: "text-md/medium",
                                       color: "text-default",
                                       children: ec.intl.format(i ? ec.t.jHfRvZ : e ? ec.t["mOQ8k+"] : ec.t.U0olLg, {
-                                          roleName: h.name,
+                                          roleName: x.name,
                                       }),
                                   }),
                                   (0, n.jsx)(k.Ip, {
@@ -522,7 +522,7 @@ function ep(e) {
                                           eligibilityStatesGroups: g,
                                           onPlatformConnect: function () {
                                               ee.default.track(eo.HAw.PASSPORT_CHALLENGE_STARTED, {
-                                                  role_id: h.id,
+                                                  role_id: x.id,
                                                   ...(0, L.H$)(d),
                                               });
                                           },
@@ -683,12 +683,12 @@ function ep(e) {
                         (0, n.jsxs)("div", {
                             className: eu.kf,
                             children: [
-                                (0, n.jsx)(ea.A, { guildId: d, className: eu.w$, role: h, size: 24 }),
+                                (0, n.jsx)(ea.A, { guildId: d, className: eu.w$, role: x, size: 24 }),
                                 (0, n.jsx)(p.E, {
                                     variant: "text-lg/semibold",
                                     color: "text-strong",
                                     className: eu.jm,
-                                    children: h.name,
+                                    children: x.name,
                                 }),
                             ],
                         }),
@@ -704,12 +704,5 @@ function ep(e) {
                     : void 0),
                 (r = () => (ey(!0), Promise.resolve())));
     }
-    return (0, n.jsx)(m.Modal, {
-        transitionState: c,
-        onClose: r,
-        title: t,
-        actions: a,
-        actionBarInput: s,
-        children: l,
-    });
+    return (0, n.jsx)(h.a, { transitionState: c, onClose: r, title: t, actions: a, actionBarInput: s, children: l });
 }

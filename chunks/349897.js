@@ -5,12 +5,12 @@ var r = n(477900),
     i = n.n(a),
     u = n(202091),
     s = n(505124),
-    c = n(866665),
-    o = n(43990),
-    d = n(717421),
-    m = n(713608),
-    f = n(918715),
-    g = n(661531),
+    c = n(661531),
+    o = n(866665),
+    d = n(43990),
+    m = n(717421),
+    f = n(713608),
+    g = n(918715),
     h = n(271520),
     p = n(762555),
     v = n(268378),
@@ -22,33 +22,33 @@ function C(e) {
         rightPx: n,
         setHoveredIndex: l,
         isAnimated: a,
-        index: d,
-        activated: m,
-        expansionSpring: f,
+        index: m,
+        activated: f,
+        expansionSpring: g,
         icon: h,
         tooltip: p,
     } = e;
-    return (0, r.jsx)(c.m, {
+    return (0, r.jsx)(o.m, {
         delay: 300,
         text: p,
-        children: (0, r.jsx)(o.N, {
+        children: (0, r.jsx)(d.N, {
             theme: s.NJ.ONYX,
             children: (e) =>
                 (0, r.jsx)(u.animated.div, {
                     className: i()(S.z, e),
-                    onMouseEnter: () => l(d),
+                    onMouseEnter: () => l(m),
                     onMouseLeave: () => l(null),
                     style: {
-                        left: a ? f.to((e) => t - e) : t,
+                        left: a ? g.to((e) => t - e) : t,
                         right: n,
-                        width: a ? f.to((e) => `${b + 2 * e}px`) : b,
-                        height: a ? f.to((e) => `${b + 2 * e}px`) : b,
+                        width: a ? g.to((e) => `${b + 2 * e}px`) : b,
+                        height: a ? g.to((e) => `${b + 2 * e}px`) : b,
                     },
                     children: (0, r.jsx)(h, {
                         size: "custom",
                         width: "100%",
                         height: "100%",
-                        color: m ? g.A.colors.INTERACTIVE_ICON_ACTIVE : g.A.colors.INTERACTIVE_ICON_DEFAULT,
+                        color: f ? c.A.colors.INTERACTIVE_ICON_ACTIVE : c.A.colors.INTERACTIVE_ICON_DEFAULT,
                     }),
                 }),
         }),
@@ -59,7 +59,7 @@ let b = 12,
 function E(e) {
     let [t, n] = l.useState(null),
         a = l.useRef(null),
-        [{ expansion: i }, u] = (0, d.z)(() => ({
+        [{ expansion: i }, u] = (0, m.z)(() => ({
             expansion: 0,
             config: y,
             onRest: () => {
@@ -74,7 +74,7 @@ function E(e) {
         ),
         c = h.A.useConfig({ location: "useClipTimelineIndicators" }).enableGameEventsOnPlayer,
         o = l.useMemo(() => (c ? e.filter((e) => null != e.game) : []), [e, c]),
-        g = l.useMemo(() => o.map((e, t) => ({ index: t, timeSec: e.timestamp_ms / 1e3, widthPx: b, gapPx: 4 })), [o]),
+        d = l.useMemo(() => o.map((e, t) => ({ index: t, timeSec: e.timestamp_ms / 1e3, widthPx: b, gapPx: 4 })), [o]),
         S = l.useCallback(
             (e, n) => {
                 let l,
@@ -85,13 +85,13 @@ function E(e) {
                 let d = n > e.leftPx;
                 switch (c.game.type) {
                     case p.Q_.MULTIKILL:
-                        ((a = x.intl.string(v.default.PMLPER)), (l = m.q));
+                        ((a = x.intl.string(v.default.PMLPER)), (l = f.q));
                         break;
                     case p.Q_.KILL:
-                        ((l = m.q), (a = x.intl.string(v.default.fYdqnM)));
+                        ((l = f.q), (a = x.intl.string(v.default.fYdqnM)));
                         break;
                     case p.Q_.DEATH:
-                        ((l = f.V), (a = x.intl.string(v.default.MhIx41)));
+                        ((l = g.V), (a = x.intl.string(v.default.MhIx41)));
                 }
                 return null == l || null == a
                     ? null
@@ -108,5 +108,5 @@ function E(e) {
             },
             [t, o, s, i],
         );
-    return { indicators: g, animatingIndex: t, expansionSpring: i, hoverExpansionPx: 4, renderIndicator: S };
+    return { indicators: d, animatingIndex: t, expansionSpring: i, hoverExpansionPx: 4, renderIndicator: S };
 }

@@ -1,21 +1,21 @@
 n.d(i, { default: () => u });
 var a = n(477900),
-    e = n(189213),
-    l = n(17928),
+    e = n(17928),
+    l = n(189213),
     r = n(587895),
     o = n(975571),
     p = n(652215),
     s = n(375708);
 let c = o.A.getArticleURL(p.MVz.MISSING_ENTITLEMENT),
-    u = l.Ay.connectStores([r.A], (t) => {
+    u = e.Ay.connectStores([r.A], (t) => {
         let { applicationId: i } = t;
         return { application: r.A.getApplication(i) };
     })(function (t) {
-        let { application: i, transitionState: n, onClose: l } = t;
-        return (0, a.jsx)(e.Modal, {
+        let { application: i, transitionState: n, onClose: e } = t;
+        return (0, a.jsx)(l.a, {
             transitionState: n,
             size: "md",
-            onClose: l,
+            onClose: e,
             title:
                 null != i
                     ? s.intl.formatToPlainString(s.t.N2mILu, { applicationName: i.name })
@@ -24,6 +24,6 @@ let c = o.A.getArticleURL(p.MVz.MISSING_ENTITLEMENT),
                 null != i
                     ? s.intl.format(s.t["MM/7qx"], { applicationName: i.name, supportArticleURL: c })
                     : s.intl.format(s.t["IfQUx+"], { supportArticleURL: c }),
-            actions: [{ text: s.intl.string(s.t.BddRzS), onClick: l, variant: "primary" }],
+            actions: [{ text: s.intl.string(s.t.BddRzS), onClick: e, variant: "primary" }],
         });
     });

@@ -1,13 +1,13 @@
 (n.d(t, { default: () => T }), n(323874), n(14289), n(35956));
 var i = n(477900),
     a = n(582128),
-    c = n(224640),
-    l = n(20742),
-    s = n(430993),
-    o = n(696208),
-    r = n(17928),
-    u = n(876230),
-    d = n(192308),
+    c = n(17928),
+    l = n(876230),
+    s = n(192308),
+    o = n(224640),
+    r = n(20742),
+    u = n(430993),
+    d = n(696208),
     _ = n(104510),
     p = n(793574),
     b = n(688810),
@@ -29,7 +29,7 @@ function T(e) {
             sourceAnalyticsLocations: j,
             videoPlacement: D,
         } = e,
-        G = (0, r.bG)([y.A], () => (null != t ? y.A.getGuild(t) : null)),
+        G = (0, c.bG)([y.A], () => (null != t ? y.A.getGuild(t) : null)),
         S = (function (e) {
             let [t, n] = a.useState(void 0);
             return (
@@ -54,7 +54,7 @@ function T(e) {
                 }, [e]),
                 t
             );
-        })((0, r.bG)([f.default], () => f.default.locale)),
+        })((0, c.bG)([f.default], () => f.default.locale)),
         { analyticsLocations: g } = (0, b.Ay)(j, p.A.GUILD_POWERUPS_MARKETING_VIDEO_MODAL),
         [k, m] = a.useState(!1),
         C = a.useRef(!1),
@@ -73,7 +73,7 @@ function T(e) {
         ),
         P = a.useCallback(
             (e) => {
-                if (e !== u.Q6.PLAYING || C.current) return;
+                if (e !== l.Q6.PLAYING || C.current) return;
                 C.current = !0;
                 let t = x.current?.duration;
                 L.default.track(R.HAw.BOOSTING_MARKETING_VIDEO_PLAYED, {
@@ -111,7 +111,7 @@ function T(e) {
     }
     async function Q() {
         (v.current?.pause(),
-            await (0, d.openModalLazy)(async () => {
+            await (0, s.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([n.e("677508"), n.e("418710")]).then(n.bind(n, 770101));
                 return (t) =>
                     (0, i.jsx)(e, {
@@ -134,14 +134,14 @@ function T(e) {
             }));
     }
     let F = E.intl.string(E.t["0f1VCH"]);
-    return (0, i.jsxs)(c.d, {
+    return (0, i.jsxs)(o.d, {
         size: "xxl",
         transitionState: T,
         onClose: I,
         "aria-label": F,
         children: [
-            (0, i.jsx)(l.rQ, { title: F }),
-            (0, i.jsx)(s.c, {
+            (0, i.jsx)(r.rQ, { title: F }),
+            (0, i.jsx)(u.c, {
                 children: (0, i.jsx)("div", {
                     className: M.K,
                     children: (0, i.jsx)(A.Ft, {
@@ -160,7 +160,7 @@ function T(e) {
                     }),
                 }),
             }),
-            (0, i.jsx)(o.H, {
+            (0, i.jsx)(d.H, {
                 actions: [
                     null != G
                         ? {

@@ -1,8 +1,8 @@
-i.d(t, { CreateEmojiWithRolesModal: () => I, UpdateEmojiRolesModal: () => M });
+i.d(t, { CreateEmojiWithRolesModal: () => I, UpdateEmojiRolesModal: () => z });
 var n = i(477900),
-    l = i(582128),
-    a = i(503698),
-    s = i.n(a),
+    a = i(582128),
+    l = i(503698),
+    s = i.n(l),
     r = i(435558),
     o = i.n(r),
     d = i(132500),
@@ -27,7 +27,7 @@ var n = i(477900),
     N = i(375708),
     R = i(748641);
 function k(e) {
-    let { className: t, onChange: i, textVariant: l = "text-md/normal", label: a, value: r, isArchived: o = !1 } = e;
+    let { className: t, onChange: i, textVariant: a = "text-md/normal", label: l, value: r, isArchived: o = !1 } = e;
     return (0, n.jsx)(u.Kj, {
         size: 24,
         className: s()(R.J_, t),
@@ -37,7 +37,7 @@ function k(e) {
         children: (0, n.jsxs)("div", {
             className: R.lN,
             children: [
-                (0, n.jsx)(m.E, { color: "interactive-text-active", variant: l, children: a }),
+                (0, n.jsx)(m.E, { color: "interactive-text-active", variant: a, children: l }),
                 o && (0, n.jsx)(h.Lp, { text: N.intl.string(N.t.nhbtEl) }),
             ],
         }),
@@ -47,15 +47,15 @@ function D(e) {
     let {
             transitionState: t,
             onClose: i,
-            initialRoleIds: a = [],
+            initialRoleIds: l = [],
             listingChoices: s,
             emojiUrl: r,
             emojiName: d,
             saving: u,
             onSave: h,
         } = e,
-        [x, p] = l.useState(() => new Set(a)),
-        v = l.useMemo(
+        [x, p] = a.useState(() => new Set(l)),
+        v = a.useMemo(
             () =>
                 o().isEqual(
                     x,
@@ -69,7 +69,7 @@ function D(e) {
             [s, x],
         ),
         f = x.size > 0;
-    return (0, n.jsx)(c.Modal, {
+    return (0, n.jsx)(c.a, {
         onClose: i,
         transitionState: t,
         title: N.intl.string(N.t.nP7nDY),
@@ -156,50 +156,50 @@ function D(e) {
     });
 }
 function I(e) {
-    let { guildId: t, data: i, file: a, ...s } = e,
-        [r, o] = l.useState(!1);
+    let { guildId: t, data: i, file: l, ...s } = e,
+        [r, o] = a.useState(!1);
     async function c(e, n) {
         try {
             o(!0);
-            let l = (0, d.A)();
-            S.default.track(y.HAw.EMOJI_UPLOAD_STARTED, { guild_id: t, upload_id: l });
-            let s = await (0, v.W)({ guildId: t, uploadId: l, data: i, file: a, roles: e });
-            ("object" == typeof s && "id" in s && f.X({ emojiId: s.id, userImage: { data: i, file: a } }), n());
+            let a = (0, d.A)();
+            S.default.track(y.HAw.EMOJI_UPLOAD_STARTED, { guild_id: t, upload_id: a });
+            let s = await (0, v.W)({ guildId: t, uploadId: a, data: i, file: l, roles: e });
+            ("object" == typeof s && "id" in s && f.X({ emojiId: s.id, userImage: { data: i, file: l } }), n());
         } catch (e) {
         } finally {
             o(!1);
         }
     }
     let u = (0, w.uP)(t, { includeSoftDeleted: !0, sortDeletedListingsLast: !0 }),
-        m = E.Ay.sanitizeEmojiName(a.name.split(".")[0]);
+        m = E.Ay.sanitizeEmojiName(l.name.split(".")[0]);
     return (0, n.jsx)(D, { emojiName: m, emojiUrl: i, onSave: c, saving: r, listingChoices: u, ...s });
 }
-function M(e) {
+function z(e) {
     let t,
         i,
-        { emoji: a, guildId: s, ...r } = e,
-        o = b.Ay.getEmojiURL({ id: a.id, animated: a.animated, size: 40 }),
+        { emoji: l, guildId: s, ...r } = e,
+        o = b.Ay.getEmojiURL({ id: l.id, animated: l.animated, size: 40 }),
         [d, { loading: c }] = (0, p.A)(x.Cp);
     async function u(e, t) {
-        null != (await d({ guildId: s, emojiId: a.id, roles: e })) && t();
+        null != (await d({ guildId: s, emojiId: l.id, roles: e })) && t();
     }
     let m = (0, w.uP)(s, { includeSoftDeleted: !0 });
     m.sort((e, t) => Number(e.soft_deleted) - Number(t.soft_deleted));
     let h =
             ((t = (0, A.bG)([C.A], () => C.A.getSortedRoles(s))),
             (i = (0, A.bG)([_.A], () => _.A.getSubscriptionRoles(s))),
-            l.useMemo(() => t.filter((e) => i.has(e.id)), [t, i])),
-        j = l.useMemo(() => {
+            a.useMemo(() => t.filter((e) => i.has(e.id)), [t, i])),
+        j = a.useMemo(() => {
             let e = new Set(
                 h.map((e) => {
                     let { id: t } = e;
                     return t;
                 }),
             );
-            return a.roles.filter((t) => e.has(t));
-        }, [a.roles, h]);
+            return l.roles.filter((t) => e.has(t));
+        }, [l.roles, h]);
     return (0, n.jsx)(D, {
-        emojiName: a.name,
+        emojiName: l.name,
         emojiUrl: o,
         onSave: u,
         initialRoleIds: j,

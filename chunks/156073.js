@@ -5,7 +5,7 @@ var e = i(732159),
     s = i(375708);
 function l(t) {
     let { onConfirm: n, onBack: i, ...l } = t;
-    return (0, r.jsx)(e.ConfirmModal, {
+    return (0, r.jsx)(e.u, {
         title: s.intl.string(s.t.YrV3I9),
         subtitle: s.intl.string(s.t.MXSMtl),
         confirmText: s.intl.string(s.t.X7eUJq),

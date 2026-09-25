@@ -43,15 +43,15 @@ var f = l(210598),
     T = l(492280),
     D = l(794248),
     P = l(598748),
-    C = l(141628),
-    G = l(17928),
+    C = l(17928),
+    G = l(141628),
     b = l(531913),
     S = l(287809),
     O = l(183555),
     k = l(375708),
     U = l(378145);
 function F(a) {
-    let e = (0, G.bG)([S.default], () => S.default.getCurrentUser());
+    let e = (0, C.bG)([S.default], () => S.default.getCurrentUser());
     return null == e ? null : (0, i.jsx)(y, { ...a, userId: e.id });
 }
 function y(a) {
@@ -86,7 +86,7 @@ function W(a) {
         : (0, i.jsxs)("div", {
               className: U.qr,
               children: [
-                  (0, i.jsx)(C.A, { size: "xs" }),
+                  (0, i.jsx)(G.A, { size: "xs" }),
                   (0, i.jsx)(p.E, {
                       variant: "text-sm/medium",
                       color: "text-subtle",

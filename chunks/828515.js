@@ -5,8 +5,8 @@ var l = n(477900),
     s = n.n(i),
     a = n(467324),
     o = n(702841),
-    u = n(653887),
-    c = n(297264),
+    u = n(297264),
+    c = n(653887),
     d = n(866665),
     p = n(881636),
     m = n(661531),
@@ -50,11 +50,11 @@ function E(e) {
         className: s()(y.sW, { [y.by]: C, [y.vk]: null != n }),
         ...I,
         children: [
-            (0, l.jsx)(a.s, { children: (0, l.jsx)(c.D, { variant: "heading-lg/semibold", children: t.name }) }),
+            (0, l.jsx)(a.s, { children: (0, l.jsx)(u.D, { variant: "heading-lg/semibold", children: t.name }) }),
             (0, l.jsx)("div", {
                 className: y.Db,
                 children: C
-                    ? (0, l.jsx)(u._, {
+                    ? (0, l.jsx)(c._, {
                           src: E,
                           fit: "cover",
                           alignment: "center-left",

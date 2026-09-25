@@ -4,8 +4,8 @@ var l,
 n(582128);
 var r = n(503698),
     s = n.n(r),
-    a = n(863610),
-    u = n(935154),
+    a = n(935154),
+    u = n(863610),
     o = n(47167),
     d = n(573435),
     c = n(260509),
@@ -32,7 +32,7 @@ let x = function (e) {
     let n,
         { className: l, iconClassName: r, size: m, channel: x, guild: T, isTyping: _ = !1, typingFillColor: y } = e,
         C = (0, o.Ay)(x),
-        v = (0, u.S3)(h.clD.ONLINE, null);
+        v = (0, a.S3)(h.clD.ONLINE, null);
     if (null == T) return null;
     let R = A[m],
         D = E[m],
@@ -87,7 +87,7 @@ let x = function (e) {
                         ? (0, i.jsx)("div", {
                               className: s()(S[m], g.WQ),
                               style: { backgroundColor: y ?? v },
-                              children: (0, i.jsx)(a.n, { dotRadius: k / 10 }),
+                              children: (0, i.jsx)(u.n, { dotRadius: k / 10 }),
                           })
                         : (0, i.jsx)("div", {
                               className: s()(S[m], g.q9),

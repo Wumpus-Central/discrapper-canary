@@ -37,7 +37,7 @@ class O extends h.Ay {
         let { code: t, message: n } = e;
         (0, a.openModalLazy)(
             async () => (e) =>
-                (0, i.jsx)(r.Modal, {
+                (0, i.jsx)(r.a, {
                     title: S.intl.formatToPlainString(S.t.hbiAO6, { code: t }),
                     subtitle: n,
                     actions: [{ text: S.intl.string(S.t.BddRzS), onClick: e.onClose, variant: "primary" }],
@@ -48,7 +48,7 @@ class O extends h.Ay {
     showLaunchErrorModal(e) {
         (0, a.openModalLazy)(
             async () => (t) =>
-                (0, i.jsx)(r.Modal, {
+                (0, i.jsx)(r.a, {
                     title: S.intl.string(S.t.PtobXW),
                     subtitle: e,
                     actions: [{ text: S.intl.string(S.t.BddRzS), onClick: t.onClose, variant: "primary" }],

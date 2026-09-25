@@ -1,10 +1,10 @@
 i.d(e, { default: () => U });
 var n = i(477900),
     a = i(582128),
-    l = i(772707),
-    s = i(683071),
-    r = i(192308),
-    c = i(116833),
+    l = i(192308),
+    s = i(772707),
+    r = i(116833),
+    c = i(683071),
     o = i(793574),
     C = i(688810),
     _ = i(277984),
@@ -61,7 +61,7 @@ function g(t) {
         a.useEffect(() => {
             O.Ay.updatedUnsyncedSettings({ disableApplicationSubscriptionCancellationSurvey: r });
         }, [r]),
-        (0, n.jsxs)(d.Modal, {
+        (0, n.jsxs)(d.a, {
             title: T.intl.string(T.t.zPxMdQ),
             subtitle: T.intl.string(T.t["QJGdB+"]),
             actions: [{ variant: "primary", text: T.intl.string(T.t.geKm7t), onClick: N, disabled: null == o }],
@@ -131,7 +131,7 @@ function U(t) {
             } catch {}
             u.Ay.disableApplicationSubscriptionCancellationSurvey
                 ? E()
-                : (0, r.openModalLazy)(
+                : (0, l.openModalLazy)(
                       async () => (await E(), (t) => (0, n.jsx)(g, { application: i, subscriptionId: S.id, ...t })),
                   );
         }
@@ -140,11 +140,11 @@ function U(t) {
         A.default.track(m.HAw.CANCELLATION_FLOW_STARTED, { location_stack: O });
     }, [O]);
     let f = (0, N.bg)(d.skuFlags);
-    return (0, n.jsx)(l.k, {
+    return (0, n.jsx)(s.k, {
         actions: [{ loading: U, onClick: y, text: T.intl.string(T.t.KSqyfW), variant: "critical-primary" }],
         graphic: {
             type: "dynamic",
-            component: c.DynamicGraphicComponent.APPLICATION_IMAGE_HEADER,
+            component: r.DynamicGraphicComponent.APPLICATION_IMAGE_HEADER,
             aspectRatio: "16/9",
             props: { application: i, className: R.Sb },
         },
@@ -163,7 +163,7 @@ function U(t) {
         children: (0, n.jsxs)("div", {
             className: R.oV,
             children: [
-                null != L ? (0, n.jsx)(s.w, { type: "critical", children: L.message }) : null,
+                null != L ? (0, n.jsx)(c.w, { type: "critical", children: L.message }) : null,
                 (0, n.jsx)(I.iH, { applicationId: i.id, storeListingBenefits: d.benefits, className: R.iq }),
             ],
         }),

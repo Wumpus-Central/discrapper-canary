@@ -4,10 +4,10 @@ var i = s(477900),
     a = s(503698),
     l = s.n(a),
     r = s(390544),
-    d = s(224640),
-    c = s(20742),
-    o = s(17928),
-    u = s(116833),
+    d = s(17928),
+    c = s(116833),
+    o = s(224640),
+    u = s(20742),
     m = s(289873),
     p = s(834730),
     x = s(821609),
@@ -24,7 +24,7 @@ var i = s(477900),
     C = s(364861);
 function T(t) {
     let { guildId: e, instance: s, onClose: a, transitionState: T } = t,
-        _ = (0, o.bG)([S.A], () => S.A.getStateForGuild(e)?.instructions[s.planId]);
+        _ = (0, d.bG)([S.A], () => S.A.getStateForGuild(e)?.instructions[s.planId]);
     n.useEffect(() => {
         null == _ && (0, N.tT)(e, s.planId);
     }, [e, s.planId, _]);
@@ -40,18 +40,18 @@ function T(t) {
                     return;
             }
         }, [s.status]);
-    return (0, i.jsxs)(d.d, {
+    return (0, i.jsxs)(o.d, {
         size: "md",
         paddingSize: "lg",
         transitionState: T,
         onClose: a,
         "aria-label": s.name,
         children: [
-            (0, i.jsx)(c.rQ, {
+            (0, i.jsx)(u.rQ, {
                 gradientColor: "purple",
                 graphic: {
                     type: "dynamic",
-                    component: u.DynamicGraphicComponent.GAME_SERVER_GAME_INSTRUCTIONS_ASSET,
+                    component: c.DynamicGraphicComponent.GAME_SERVER_GAME_INSTRUCTIONS_ASSET,
                     props: { gameId: s.gameId },
                 },
                 alignCenter: !0,

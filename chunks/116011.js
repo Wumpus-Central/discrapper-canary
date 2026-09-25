@@ -4,14 +4,14 @@ var i,
     r = n(582128),
     s = n(834730),
     l = n(947641),
-    o = n(408278),
-    d = n(624479),
-    c = n(821609),
-    u = n(695366),
-    m = n(194261),
-    p = n(297264),
-    b = n(331322),
-    f = n(661531),
+    o = n(661531),
+    d = n(408278),
+    c = n(624479),
+    u = n(821609),
+    m = n(695366),
+    p = n(194261),
+    b = n(297264),
+    f = n(331322),
     g = n(144165),
     h = n(914410),
     x = n(174459),
@@ -51,17 +51,17 @@ function I(e) {
 }
 let O = (e) => {
     let { recurrence: t, analyticsLocations: n = [] } = e,
-        i = (0, a.jsx)(l.r, { color: f.A.colors.CONTROL_CONNECTED_BACKGROUND_DEFAULT }),
-        u = (0, a.jsx)("span", {
+        i = (0, a.jsx)(l.r, { color: o.A.colors.CONTROL_CONNECTED_BACKGROUND_DEFAULT }),
+        m = (0, a.jsx)("span", {
             className: N.nP,
-            children: (0, a.jsx)(o.K, {
-                icon: d.CopyIcon,
+            children: (0, a.jsx)(d.K, {
+                icon: c.CopyIcon,
                 size: "sm",
                 variant: "icon-only",
                 "aria-label": "",
                 onClick: () => {
                     (navigator.clipboard.writeText(t.code),
-                        p(i),
+                        b(i),
                         x.default.track(A.HAw.THIRD_PARTY_PARTNER_CTA_CLICKED, {
                             partner: t.partnerId,
                             cta_type: "copy code",
@@ -72,7 +72,7 @@ let O = (e) => {
                 },
             }),
         }),
-        [m, p] = r.useState(() => u);
+        [p, b] = r.useState(() => m);
     if (null != t.code)
         return (0, a.jsx)("div", {
             className: N.oP,
@@ -87,8 +87,8 @@ let O = (e) => {
                             children: t.code,
                         }),
                     }),
-                    m,
-                    (0, a.jsx)(c.$, {
+                    p,
+                    (0, a.jsx)(u.$, {
                         variant: "secondary",
                         size: "sm",
                         text:
@@ -125,8 +125,8 @@ function L(e) {
         ? i
             ? (0, a.jsx)("div", {
                   className: l,
-                  children: (0, a.jsx)(c.$, {
-                      icon: u.E,
+                  children: (0, a.jsx)(u.$, {
+                      icon: m.E,
                       variant: "critical-secondary",
                       size: "sm",
                       disabled: !0,
@@ -135,8 +135,8 @@ function L(e) {
               })
             : (0, a.jsx)("div", {
                   className: l,
-                  children: (0, a.jsx)(c.$, {
-                      icon: m.LockIcon,
+                  children: (0, a.jsx)(u.$, {
+                      icon: p.LockIcon,
                       variant: "secondary",
                       size: "sm",
                       text: t.claimCtaText ?? E.intl.string(E.t.vwASIl),
@@ -171,7 +171,7 @@ function S(e) {
             footerContent: c,
             analyticsLocations: u = [],
         } = e,
-        [m, f] = r.useState(t.code),
+        [m, p] = r.useState(t.code),
         [h, x] = r.useState(!1),
         v = null == m;
     return (0, a.jsxs)("div", {
@@ -187,16 +187,16 @@ function S(e) {
                             (0, a.jsxs)("div", {
                                 className: null != n ? `${N.yO} ${n}` : N.yO,
                                 children: [
-                                    (0, a.jsx)(p.D, {
+                                    (0, a.jsx)(b.D, {
                                         variant: "secondary" === o ? "heading-md/semibold" : "heading-lg/semibold",
                                         color: "text-strong",
                                         children: t.title,
                                     }),
-                                    (0, a.jsxs)(b.B, {
+                                    (0, a.jsxs)(f.B, {
                                         direction: "vertical",
                                         gap: 8,
                                         children: [
-                                            (0, a.jsx)(p.D, {
+                                            (0, a.jsx)(b.D, {
                                                 variant: "heading-sm/medium",
                                                 color: "text-subtle",
                                                 children: h
@@ -210,7 +210,7 @@ function S(e) {
                                                         : t.body,
                                             }),
                                             null != t.bodyNote &&
-                                                (0, a.jsx)(p.D, {
+                                                (0, a.jsx)(b.D, {
                                                     variant: "heading-sm/medium",
                                                     color: "text-subtle",
                                                     children: E.intl.format(t.bodyNote, {
@@ -227,7 +227,7 @@ function S(e) {
                                     recurrence: t,
                                     canBeClaimed: v,
                                     hasClaimError: h,
-                                    setCode: f,
+                                    setCode: p,
                                     setHasClaimError: x,
                                     analyticsLocations: u,
                                 }),
@@ -256,7 +256,7 @@ function S(e) {
                         recurrence: t,
                         canBeClaimed: v,
                         hasClaimError: h,
-                        setCode: f,
+                        setCode: p,
                         setHasClaimError: x,
                         className: N.qx,
                         analyticsLocations: u,

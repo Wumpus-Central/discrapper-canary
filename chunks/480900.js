@@ -3,8 +3,8 @@ var n = l(477900),
     i = l(582128),
     s = l(503698),
     r = l.n(s),
-    a = l(189213),
-    o = l(17928),
+    a = l(17928),
+    o = l(189213),
     d = l(462887),
     c = l(192308),
     u = l(331322),
@@ -49,30 +49,30 @@ function G(e, t) {
 }
 let L = function (e) {
     let { guildId: t, transitionState: s, onClose: c } = e,
-        L = (0, o.bG)([C.A], () => C.A.getSortedRoles(t)),
-        U = (0, o.bG)([b.default], () => b.default.getId()),
-        z = (0, o.bG)([_.Ay], () => _.Ay.getMember(t, U)),
-        [M, T] = i.useState([]),
-        V = (0, A.Ay)();
+        L = (0, a.bG)([C.A], () => C.A.getSortedRoles(t)),
+        U = (0, a.bG)([b.default], () => b.default.getId()),
+        z = (0, a.bG)([_.Ay], () => _.Ay.getMember(t, U)),
+        [T, V] = i.useState([]),
+        M = (0, A.Ay)();
     if (
         (i.useEffect(() => {
-            0 !== M.length &&
+            0 !== T.length &&
                 y.default.track(I.HAw.PASSPORT_ENTRY_VIEWED, {
-                    role_ids: M.map((e) => {
+                    role_ids: T.map((e) => {
                         let { role_id: t } = e;
                         return t;
                     }),
                     ...(0, v.H$)(t),
                 });
-        }, [t, M]),
+        }, [t, T]),
         i.useEffect(() => {
-            g.A.getGuildRoleConnectionsConfigurations(t).then((e) => T(e));
+            g.A.getGuildRoleConnectionsConfigurations(t).then((e) => V(e));
         }, [t]),
         null == z)
     )
         return null;
     let O = L.filter((e) => null === e.tags.guild_connections);
-    return (0, n.jsx)(a.Modal, {
+    return (0, n.jsx)(o.a, {
         transitionState: s,
         title: S.intl.string(S.t.ghtnss),
         onClose: c,
@@ -83,7 +83,7 @@ let L = function (e) {
             children: O.map((e) => {
                 let s = z.roles.includes(e.id),
                     a = (function (e) {
-                        let l = M.find((t) => {
+                        let l = T.find((t) => {
                             let { role_id: l } = t;
                             return l === e;
                         });
@@ -105,7 +105,7 @@ let L = function (e) {
                                 let t = h.A.get(e.connection_type);
                                 if (null == t) continue;
                                 s = (0, n.jsx)("img", {
-                                    src: (0, d.q)(V) ? t.icon.lightSVG : t.icon.darkSVG,
+                                    src: (0, d.q)(M) ? t.icon.lightSVG : t.icon.darkSVG,
                                     alt: "",
                                     className: w.my,
                                 });

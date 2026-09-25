@@ -1,8 +1,8 @@
 l.d(t, { default: () => T });
 var n = l(477900),
     r = l(582128),
-    o = l(189213),
-    a = l(450507),
+    o = l(450507),
+    a = l(189213),
     i = l(192308),
     s = l(256311),
     c = l(174459),
@@ -150,7 +150,7 @@ class R extends r.PureComponent {
     }
     render() {
         let { changeLog: e, onScroll: t, track: l, ...r } = this.props;
-        return (0, n.jsx)(o.Modal, {
+        return (0, n.jsx)(a.a, {
             ...r,
             title: j.intl.string(j.t.LRmNAl),
             subtitle: j.intl.format(j.t.Fb8xx2, {
@@ -245,18 +245,18 @@ function T(e) {
         }, [l, t]),
         i)
     )
-        return (0, n.jsx)(o.Modal, {
+        return (0, n.jsx)(a.a, {
             title: j.intl.string(j.t.V9ospk),
             actions: [{ text: j.intl.string(j.t.BddRzS), onClick: e.onClose }],
             ...e,
         });
     if (null == t)
         if (l)
-            return (0, n.jsx)(o.Modal, {
+            return (0, n.jsx)(a.a, {
                 title: j.intl.string(j.t.O1iRT8),
                 actions: [{ text: j.intl.string(j.t.BddRzS), onClick: e.onClose }],
                 ...e,
             });
-        else return (0, a.A)(e);
+        else return (0, o.A)(e);
     return (0, n.jsx)(G, { ...e, changeLog: t });
 }

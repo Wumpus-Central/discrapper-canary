@@ -9,7 +9,7 @@ function c(t) {
         o = r.useCallback(() => {
             (i(), n());
         }, [i, n]);
-    return (0, a.jsx)(s.Modal, {
+    return (0, a.jsx)(s.a, {
         title: l.intl.string(l.t["5yF7e1"]),
         size: "sm",
         onClose: n,

@@ -1,9 +1,9 @@
 n.d(t, { k: () => d });
 var a = n(477900),
     l = n(582128),
-    r = n(408278),
-    i = n(241326),
-    s = n(866665),
+    r = n(241326),
+    i = n(866665),
+    s = n(408278),
     u = n(609174),
     c = n(192308),
     o = n(375708);
@@ -35,12 +35,12 @@ function d(e) {
             },
             [p, d, t],
         );
-    return (0, a.jsx)(s.m, {
+    return (0, a.jsx)(i.m, {
         text: o.intl.string(o.t.oyYWHE),
         position: "top",
-        children: (0, a.jsx)(r.K, {
+        children: (0, a.jsx)(s.K, {
             onClick: m,
-            icon: i.TrashIcon,
+            icon: r.TrashIcon,
             "aria-label": o.intl.string(o.t.oyYWHE),
             variant: f,
             size: "sm",

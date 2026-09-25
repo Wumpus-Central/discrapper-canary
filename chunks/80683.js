@@ -29,11 +29,11 @@ var l = n(477900),
     M = n(709977),
     R = n(212455),
     D = n(224640),
-    L = n(430993),
-    k = n(696208),
-    P = n(604121),
-    O = n(297264),
-    G = n(834730),
+    L = n(604121),
+    k = n(430993),
+    P = n(297264),
+    O = n(834730),
+    G = n(696208),
     U = n(915089),
     w = n(375708),
     F = n(788228);
@@ -52,18 +52,18 @@ let B = function (e) {
         ...e,
         size: "sm",
         children: [
-            (0, l.jsx)("div", { className: F.Mp, children: (0, l.jsx)(P.a, { importData: H, className: F.WG }) }),
-            (0, l.jsx)(L.c, {
+            (0, l.jsx)("div", { className: F.Mp, children: (0, l.jsx)(L.a, { importData: H, className: F.WG }) }),
+            (0, l.jsx)(k.c, {
                 children: (0, l.jsxs)("div", {
                     className: F.lq,
                     children: [
-                        (0, l.jsx)(O.D, {
+                        (0, l.jsx)(P.D, {
                             variant: "heading-lg/semibold",
                             className: F.wx,
                             id: t,
                             children: w.intl.format(w.t.z9qozJ, { guildName: e.guildName }),
                         }),
-                        (0, l.jsx)(G.E, {
+                        (0, l.jsx)(O.E, {
                             variant: "text-sm/medium",
                             color: "text-default",
                             children: w.intl.string(w.t.nwpqyc),
@@ -71,7 +71,7 @@ let B = function (e) {
                     ],
                 }),
             }),
-            (0, l.jsx)(k.H, {
+            (0, l.jsx)(G.H, {
                 actions: [
                     {
                         variant: "primary",
@@ -115,11 +115,11 @@ let X = function (e) {
             (0, l.jsxs)("div", {
                 className: Y.Qs,
                 children: [
-                    (0, l.jsx)(O.D, {
+                    (0, l.jsx)(P.D, {
                         variant: "heading-md/semibold",
                         children: w.intl.format(w.t.THgVCC, { guild: t.name }),
                     }),
-                    (0, l.jsx)(G.E, {
+                    (0, l.jsx)(O.E, {
                         color: "text-default",
                         variant: "text-sm/normal",
                         children: w.intl.string(w.t["1yq3nO"]),

@@ -3,11 +3,11 @@ var r = n(477900);
 n(582128);
 var l = n(503698),
     i = n.n(l),
-    a = n(297264),
-    s = n(17928),
-    o = n(462887),
-    c = n(289873),
-    u = n(331322),
+    a = n(17928),
+    s = n(462887),
+    o = n(289873),
+    c = n(331322),
+    u = n(297264),
     d = n(834730),
     m = n(736653),
     g = n(626584),
@@ -21,18 +21,18 @@ var l = n(503698),
     j = n(12260),
     A = n(658859);
 let v = new g.A("PremiumGroupPrice.tsx"),
-    N = (0, r.jsx)(c.y, { type: c.y.Type.PULSING_ELLIPSIS, className: A.xB }),
+    N = (0, r.jsx)(o.y, { type: o.y.Type.PULSING_ELLIPSIS, className: A.xB }),
     C = function (e) {
         let t,
-            { isGift: n = !1, discountOffer: l, priceOptions: c, isApplicationHome: g = !1 } = e,
-            A = (0, s.bG)([x.A], () => x.A.get(f.gD.PREMIUM_GROUP_MONTH)),
+            { isGift: n = !1, discountOffer: l, priceOptions: o, isApplicationHome: g = !1 } = e,
+            A = (0, a.bG)([x.A], () => x.A.get(f.gD.PREMIUM_GROUP_MONTH)),
             C = (0, p.N1)(f.gD.PREMIUM_GROUP_MONTH),
-            y = (0, o.q)((0, m.Ay)());
+            y = (0, s.q)((0, m.Ay)());
         if (null == A) return N;
         try {
-            t = (0, h.sS)(A, c, !1, n, !1);
+            t = (0, h.sS)(A, o, !1, n, !1);
         } catch {
-            return (v.warn(`No price available for plan ${A.id} in currency ${c?.currency ?? "unknown"}`), N);
+            return (v.warn(`No price available for plan ${A.id} in currency ${o?.currency ?? "unknown"}`), N);
         }
         let _ = f.WT.MONTH;
         if (null != l && null != C) {
@@ -40,20 +40,20 @@ let v = new g.A("PremiumGroupPrice.tsx"),
             return (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)("hr", { className: i()(j.vI, { [j.oE]: g }) }),
-                    (0, r.jsxs)(u.B, {
+                    (0, r.jsxs)(c.B, {
                         direction: "horizontal",
                         align: "center",
                         justify: "space-between",
                         gap: 12,
                         fullWidth: !1,
                         children: [
-                            (0, r.jsxs)(u.B, {
+                            (0, r.jsxs)(c.B, {
                                 direction: "vertical",
                                 gap: 4,
                                 fullWidth: !1,
                                 className: j.Yc,
                                 children: [
-                                    (0, r.jsx)(a.D, {
+                                    (0, r.jsx)(u.D, {
                                         variant: g ? "heading-md/semibold" : "heading-sm/semibold",
                                         color: "text-strong",
                                         children: E.intl.format(T.default.rCpGVA, {
@@ -98,7 +98,7 @@ let v = new g.A("PremiumGroupPrice.tsx"),
                         }),
                     ],
                 }),
-                (0, r.jsx)(a.D, {
+                (0, r.jsx)(u.D, {
                     variant: "heading-md/semibold",
                     color: "text-muted",
                     children: E.intl.string(T.default["R+dzZw"]),

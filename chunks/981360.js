@@ -38,8 +38,8 @@ var w = n(212407),
     M = n(935094),
     B = n(503698),
     F = n.n(B),
-    G = n(939249),
-    U = n(834730),
+    G = n(834730),
+    U = n(939249),
     H = n(297264),
     z = n(14702),
     V = n(818296),
@@ -139,7 +139,7 @@ var ee = n(758836),
     et = n(690901);
 function en(e) {
     let { name: t, typeLabel: n } = e;
-    return (0, s.jsxs)(U.E, {
+    return (0, s.jsxs)(G.E, {
         variant: "text-sm/medium",
         className: et.mC,
         "aria-live": "polite",
@@ -157,7 +157,7 @@ function es(e) {
             (d(ee.sH.BUNDLE_VIEW_PRODUCT, c), l(n));
         }, [d, c, l, n]),
         m = !0 === ei[t.type];
-    return (0, s.jsx)(G.D, {
+    return (0, s.jsx)(U.D, {
         tag: "div",
         role: "radio",
         "aria-checked": i,
@@ -253,7 +253,7 @@ var eg = n(975571),
 function ev(e) {
     let { skuId: t } = e;
     return (0, ee.EZ)(t)
-        ? (0, s.jsx)(U.E, {
+        ? (0, s.jsx)(G.E, {
               variant: "text-sm/normal",
               className: ef.CU,
               children: K.intl.format(K.t.Q1scdE, {
@@ -282,16 +282,16 @@ function eN(e) {
                     className: ef.sn,
                     children: [
                         (0, s.jsx)(H.D, { ref: E, variant: "heading-xl/bold", className: ef.R_, children: n }),
-                        (0, s.jsx)(U.E, { variant: "text-sm/normal", children: u }),
+                        (0, s.jsx)(G.E, { variant: "text-sm/normal", children: u }),
                         (0, s.jsx)(ev, { skuId: o.skuId }),
-                        null !== m && (0, s.jsx)(U.E, { variant: "text-xs/normal", className: ef.H$, children: m }),
+                        null !== m && (0, s.jsx)(G.E, { variant: "text-xs/normal", className: ef.H$, children: m }),
                     ],
                 }),
                 x &&
                     (0, s.jsxs)(s.Fragment, {
                         children: [
                             null != g &&
-                                (0, s.jsx)(U.E, {
+                                (0, s.jsx)(G.E, {
                                     variant: "text-xs/medium",
                                     color: "text-subtle",
                                     className: ef.a9,
@@ -363,7 +363,7 @@ function eB(e) {
         children: (0, s.jsxs)(eI.M, {
             children: [
                 (0, s.jsx)(eM, { user: a.mallow, innerClassName: ew.ab }),
-                (0, s.jsxs)(U.E, {
+                (0, s.jsxs)(G.E, {
                     variant: "text-sm/semibold",
                     className: ew.OS,
                     children: [K.intl.string(K.t["yzW/fZ"]), " - 3"],
@@ -386,7 +386,7 @@ function eB(e) {
                     }),
                 }),
                 (0, s.jsx)(eM, { user: a.locke, innerClassName: ew.e9 }),
-                (0, s.jsxs)(U.E, {
+                (0, s.jsxs)(G.E, {
                     variant: "text-sm/semibold",
                     className: ew.OS,
                     children: [K.intl.string(K.t["NG43/6"]), " - 12"],
@@ -557,7 +557,7 @@ function eK() {
                             className: eZ.UJ,
                             children: [
                                 (0, s.jsx)(eH.U, { color: ez.A.colors.WHITE }),
-                                (0, s.jsx)(U.E, {
+                                (0, s.jsx)(G.E, {
                                     variant: "text-sm/medium",
                                     color: "text-overlay-light",
                                     children: e,
@@ -657,7 +657,7 @@ let e1 = {
                             title: n,
                             children: n,
                         }),
-                        (0, s.jsx)(U.E, { variant: "text-sm/medium", color: "text-default", children: x }),
+                        (0, s.jsx)(G.E, { variant: "text-sm/medium", color: "text-default", children: x }),
                         (0, s.jsxs)("div", {
                             className: et.hZ,
                             children: [
@@ -795,11 +795,11 @@ function tE(e) {
                               className: tg.G,
                           }),
                       }),
-                      (0, s.jsx)(U.E, { variant: "text-md/semibold", children: K.intl.string(K.t.BEjTij) }),
+                      (0, s.jsx)(G.E, { variant: "text-md/semibold", children: K.intl.string(K.t.BEjTij) }),
                   ],
               }),
           })
-        : (0, s.jsx)(U.E, { variant: "text-md/semibold", className: t, children: K.intl.string(K.t["6cfuDj"]) });
+        : (0, s.jsx)(G.E, { variant: "text-md/semibold", className: t, children: K.intl.string(K.t["6cfuDj"]) });
 }
 var th = n(878112),
     tf = n(572595),
@@ -838,7 +838,7 @@ function tC(e) {
             variant: r = "heading-md/semibold",
         } = e,
         l = (0, to.RS)(t, n);
-    return (0, s.jsxs)(U.E, {
+    return (0, s.jsxs)(G.E, {
         variant: r,
         className: F()(tR.v, i),
         children: [
@@ -890,7 +890,7 @@ function tP(e) {
     let { text: t, onTrackClick: n } = e,
         { analyticsLocations: i } = (0, g.Ay)(),
         l = r.useRef(null);
-    return (0, s.jsx)(G.D, {
+    return (0, s.jsx)(U.D, {
         className: tL.F,
         innerRef: l,
         onClick: () => {
@@ -914,7 +914,7 @@ function tD(e) {
                 "aria-label": K.intl.string(K.t.X3Ekj8),
                 children: (0, s.jsx)(tk.t, { size: "md", color: "currentColor", className: tS.o }),
             }),
-            (0, s.jsx)(U.E, {
+            (0, s.jsx)(G.E, {
                 variant: "text-xs/medium",
                 children: K.intl.format(K.t.Sv8iic, {
                     price: r,
@@ -935,7 +935,7 @@ function tM(e) {
         children: [
             (0, s.jsx)("div", {
                 className: tw.zR,
-                children: (0, s.jsx)(U.E, { variant: "text-xs/normal", className: a ? tw.r9 : void 0, children: l }),
+                children: (0, s.jsx)(G.E, { variant: "text-xs/normal", className: a ? tw.r9 : void 0, children: l }),
             }),
             (0, s.jsx)(ty.x, {
                 priceAmount: t.amount,
@@ -1004,10 +1004,10 @@ function tX(e) {
                 className: tV.fZ,
                 children: [
                     (0, s.jsx)(e3.TagIcon, { size: "xs", color: "currentColor", className: tV.CE }),
-                    (0, s.jsx)(U.E, { variant: "text-xs/medium", color: "none", children: t }),
+                    (0, s.jsx)(G.E, { variant: "text-xs/medium", color: "none", children: t }),
                 ],
             }),
-            null != n && (0, s.jsx)(U.E, { variant: "text-xs/medium", color: "none", children: n }),
+            null != n && (0, s.jsx)(G.E, { variant: "text-xs/medium", color: "none", children: n }),
         ],
     });
 }
@@ -1067,7 +1067,7 @@ function tW(e) {
         w = (0, _.Zu)({ product: i, isPartiallyOwnedBundle: D, isPurchased: S }),
         M = (0, o.bG)([tu.A], () => tu.A.isClaiming === i?.skuId),
         B = (0, tr.Ay)(),
-        G = (0, te.M)(B),
+        U = (0, te.M)(B),
         H = (0, _.G0)(i),
         z = (0, _.yt)(i, O.lid.DEFAULT),
         Z = z?.amount === 0,
@@ -1099,10 +1099,10 @@ function tW(e) {
                   ? (0, s.jsxs)("div", {
                         className: tV.pq,
                         children: [
-                            (0, s.jsx)(U.E, { variant: "text-md/semibold", children: K.intl.string(K.t.rt69oo) }),
+                            (0, s.jsx)(G.E, { variant: "text-md/semibold", children: K.intl.string(K.t.rt69oo) }),
                             !S &&
-                                (0, s.jsx)(U.E, {
-                                    className: F()(tV.ed, !G && tV.un),
+                                (0, s.jsx)(G.E, {
+                                    className: F()(tV.ed, !U && tV.un),
                                     variant: "text-xxs/normal",
                                     children: K.intl.string(K.t.nKdAlO),
                                 }),

@@ -1,23 +1,23 @@
-e.d(a, { default: () => m });
-var i = e(477900),
-    n = e(582128),
-    r = e(732159),
-    s = e(468689),
-    l = e(652215),
-    u = e(375708);
+a.d(e, { default: () => m });
+var i = a(477900),
+    n = a(582128),
+    r = a(732159),
+    s = a(468689),
+    u = a(652215),
+    l = a(375708);
 function m(t) {
-    let { guild: a, ...e } = t,
-        m = a.id,
-        o = n.useCallback(() => {
+    let { guild: e, ...a } = t,
+        m = e.id,
+        d = n.useCallback(() => {
             s.A.leaveGuild(m, !0);
         }, [m]);
-    return (0, i.jsx)(r.ConfirmModal, {
-        title: u.intl.formatToPlainString(u.t["1GX6P/"], { name: a.name }),
-        subtitle: a.features.has(l.GuildFeatures.HUB)
-            ? u.intl.format(u.t.ZHTXVD, { name: a.name })
-            : u.intl.format(u.t.ZEXC0r, { name: a.name }),
-        confirmText: a.features.has(l.GuildFeatures.HUB) ? u.intl.string(u.t.Dv8gFT) : u.intl.string(u.t.J2TBi3),
-        onConfirm: o,
-        ...e,
+    return (0, i.jsx)(r.u, {
+        title: l.intl.formatToPlainString(l.t["1GX6P/"], { name: e.name }),
+        subtitle: e.features.has(u.GuildFeatures.HUB)
+            ? l.intl.format(l.t.ZHTXVD, { name: e.name })
+            : l.intl.format(l.t.ZEXC0r, { name: e.name }),
+        confirmText: e.features.has(u.GuildFeatures.HUB) ? l.intl.string(l.t.Dv8gFT) : l.intl.string(l.t.J2TBi3),
+        onConfirm: d,
+        ...a,
     });
 }

@@ -1,8 +1,8 @@
 n.d(t, { default: () => A });
 var i = n(477900),
     l = n(582128),
-    a = n(189213),
-    s = n(17928),
+    a = n(17928),
+    s = n(189213),
     r = n(834730),
     c = n(696451),
     u = n(71393),
@@ -16,10 +16,10 @@ var i = n(477900),
     b = n(449341);
 let A = function (e) {
     let { guildId: t, transitionState: n, onClose: A } = e,
-        f = (0, s.bG)([h.A], () => h.A.getRequest(t), [t]),
-        j = (0, s.bG)([u.A], () => u.A.getGuild(t), [t]),
-        x = (0, s.bG)([o.default], () => o.default.getCurrentUser()?.id),
-        C = (0, s.bG)([c.Ay], () => (null != x ? c.Ay.getMember(t, x) : null), [x, t]),
+        f = (0, a.bG)([h.A], () => h.A.getRequest(t), [t]),
+        j = (0, a.bG)([u.A], () => u.A.getGuild(t), [t]),
+        x = (0, a.bG)([o.default], () => o.default.getCurrentUser()?.id),
+        C = (0, a.bG)([c.Ay], () => (null != x ? c.Ay.getMember(t, x) : null), [x, t]),
         G = l.useCallback(() => {
             let e;
             (A(), null == C && ((e = (0, m.JK)()).length > 0 ? e.goBack() : (0, m.pX)(p.BVt.ME)));
@@ -41,7 +41,7 @@ let A = function (e) {
             ],
             [R, G],
         );
-    return (0, i.jsx)(a.Modal, {
+    return (0, i.jsx)(s.a, {
         transitionState: n,
         onClose: A,
         title:

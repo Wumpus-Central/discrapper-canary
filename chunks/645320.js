@@ -4,9 +4,9 @@ var l = n(477900),
     o = n(582128),
     a = n(503698),
     c = n.n(a),
-    u = n(772707),
-    s = n(231723),
-    d = n(289873),
+    u = n(231723),
+    s = n(289873),
+    d = n(772707),
     f = n(174459),
     h = n(625494),
     p = n(964486),
@@ -301,7 +301,7 @@ let H = new Set([
     };
 var V = n(375708),
     O = n(423075);
-let D = new Set([s.ip.ENTERING, s.ip.ENTERED]);
+let D = new Set([u.ip.ENTERING, u.ip.ENTERED]);
 function z(e) {
     let {
             onClose: r,
@@ -309,7 +309,7 @@ function z(e) {
             onReject: t,
             transitionState: i,
             headerText: a,
-            bodyText: s,
+            bodyText: u,
             rqtoken: C,
             serveInvisible: w,
             ...m
@@ -348,7 +348,7 @@ function z(e) {
     let b = (0, l.jsxs)("div", {
         className: c()(O.GC, O.P),
         children: [
-            w && (0, l.jsx)(d.y, { type: d.y.Type.SPINNING_CIRCLE }),
+            w && (0, l.jsx)(s.y, { type: s.y.Type.SPINNING_CIRCLE }),
             (0, l.jsx)(I, {
                 size: w ? "invisible" : void 0,
                 onVerify: function (e) {
@@ -359,14 +359,14 @@ function z(e) {
             }),
         ],
     });
-    return (0, l.jsx)(u.k, {
+    return (0, l.jsx)(d.k, {
         transitionState: i,
         onClose: r,
         size: "sm",
         gradientColor: "blue",
         graphic: { type: "image", src: "/assets/a1c385fb82c39bab.svg" },
         title: a ?? V.intl.string(V.t.FpoiHe),
-        subtitle: s ?? V.intl.string(V.t["/CidxO"]),
+        subtitle: u ?? V.intl.string(V.t["/CidxO"]),
         children: b,
     });
 }

@@ -5,12 +5,12 @@ var i = n(477900),
     r = n.n(s),
     a = n(91871),
     o = n.n(a),
-    d = n(561392),
-    c = n(17928),
-    u = n(602853),
-    m = n(661531),
-    g = n(545442),
-    x = n(834730),
+    d = n(17928),
+    c = n(602853),
+    u = n(661531),
+    m = n(545442),
+    g = n(834730),
+    x = n(561392),
     h = n(939249),
     E = n(404778),
     j = n(297264),
@@ -49,17 +49,17 @@ let w = l.memo(function (e) {
     let { row: t, guildId: n, className: l } = e,
         { id: s, name: a } = t.record,
         o = (0, C.Xx)({ guildId: n, roleId: s, size: 16 }),
-        d = (0, c.bG)([b.A], () => b.A.getRole(n, s)),
+        x = (0, d.bG)([b.A], () => b.A.getRole(n, s)),
         h = a.includes(v.QP) ? "" : "@",
-        E = (0, u.r)(m.A.unsafe_rawColors.PRIMARY_300).hsl(),
-        j = d?.colorString ?? E,
-        f = (0, S.X_)(n, d, d?.colorStrings);
+        E = (0, c.r)(u.A.unsafe_rawColors.PRIMARY_300).hsl(),
+        j = x?.colorString ?? E,
+        f = (0, S.X_)(n, x, x?.colorStrings);
     return (0, i.jsxs)("div", {
         className: r()(G.xZ, G.ex, l),
         children: [
-            (0, i.jsx)(g.W, { className: G.__invalid_roleDot, color: j, colors: f, background: !1, tooltip: !1 }),
+            (0, i.jsx)(m.W, { className: G.__invalid_roleDot, color: j, colors: f, background: !1, tooltip: !1 }),
             null != o ? (0, i.jsx)(_.A, { className: G.YS, ...o, enableTooltip: !1 }) : h,
-            (0, i.jsx)(x.E, { variant: O, className: G.pP, children: a }),
+            (0, i.jsx)(g.E, { variant: O, className: G.pP, children: a }),
         ],
     });
 });
@@ -71,7 +71,7 @@ function F(e) {
         className: r()(G.xZ, G.sM, { [G.p7]: s }, l),
         children: [
             null != a && (0, i.jsx)(a, { size: "xs", color: "currentColor", className: G.p }),
-            (0, i.jsx)(x.E, { variant: t.isCategory() ? "eyebrow" : O, children: n.display }),
+            (0, i.jsx)(g.E, { variant: t.isCategory() ? "eyebrow" : O, children: n.display }),
         ],
     });
 }
@@ -88,14 +88,14 @@ function H(e) {
             roleRows: n = [],
             channelRows: s = [],
             selectedChannelIds: a = new Set(),
-            selectedRoleIds: u = new Set(),
-            onChange: m,
-            placeholder: g,
+            selectedRoleIds: c = new Set(),
+            onChange: u,
+            placeholder: m,
             helperText: p,
             className: A,
         } = e,
         S = (0, I.GV)(),
-        C = (0, c.bG)([b.A], () => b.A.getRolesSnapshot(t)),
+        C = (0, d.bG)([b.A], () => b.A.getRolesSnapshot(t)),
         _ = l.useMemo(
             () =>
                 (function (e, t, n) {
@@ -111,8 +111,8 @@ function H(e) {
                         }),
                         i
                     );
-                })(a, u, C),
-            [a, u, C],
+                })(a, c, C),
+            [a, c, C],
         ),
         v = l.useMemo(() => Object.keys(_), [_]),
         [y, R] = l.useState(""),
@@ -120,7 +120,7 @@ function H(e) {
         [F, H] = l.useState(!1),
         [V, z] = l.useState(!1),
         Y = l.useRef(null),
-        { refs: W, floatingStyles: K } = (0, d.u)({ placement: "bottom-start", offset: 0, matchReferenceWidth: !0 }),
+        { refs: W, floatingStyles: K } = (0, x.u)({ placement: "bottom-start", offset: 0, matchReferenceWidth: !0 }),
         { sections: X, sectionCounts: q } = l.useMemo(() => {
             let e = "" !== y ? s.filter((e) => o()(y, e.display.toLocaleLowerCase())) : s,
                 t = "" !== y ? n.filter((e) => o()(y, e.display.toLocaleLowerCase())) : n,
@@ -143,9 +143,9 @@ function H(e) {
                             return M(t);
                         })
                         .map((e) => e.row.record.id);
-                m(new Set(n), new Set(i));
+                u(new Set(n), new Set(i));
             },
-            [m],
+            [u],
         );
     function Q() {
         (w(!1), H(!1));
@@ -223,7 +223,7 @@ function H(e) {
                         onQueryChange: function (e) {
                             R(e.trim().toLocaleLowerCase());
                         },
-                        placeholder: g ?? L.intl.string(L.t.uqHLzW),
+                        placeholder: m ?? L.intl.string(L.t.uqHLzW),
                         sections: [v.length],
                         inputProps: {
                             "aria-controls": D,
@@ -290,7 +290,7 @@ function H(e) {
                 ],
             }),
             null != p &&
-                (0, i.jsx)(x.E, {
+                (0, i.jsx)(g.E, {
                     id: S,
                     variant: "text-xs/normal",
                     color: "text-muted",

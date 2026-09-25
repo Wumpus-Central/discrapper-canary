@@ -80,10 +80,10 @@ let ev = (0, d.FT)(eh.T[ex.d.MODAL_V2].avatarSize),
     };
 var eb = l(716804),
     ej = l(679492),
-    eI = l(844222),
-    eC = l(947984),
-    ey = l(554146),
-    eN = l(43105),
+    eI = l(554146),
+    eC = l(43105),
+    ey = l(844222),
+    eN = l(947984),
     eE = l(992526),
     eP = l(643056),
     ek = l(327791),
@@ -111,16 +111,16 @@ function eD(e) {
             (r = (0, X.Ay)(n)),
             (a = (0, eT.A)(r)),
             l ?? a.length > 0),
-        { reducedMotion: m } = i.useContext(eI.C),
-        [f, p] = (0, eR.kn)(g && d && u ? [ey.M.BADGE_CUSTOMIZATION_WEB_COACHMARK] : []);
-    return f !== ey.M.BADGE_CUSTOMIZATION_WEB_COACHMARK
+        { reducedMotion: m } = i.useContext(ey.C),
+        [f, p] = (0, eR.kn)(g && d && u ? [eI.M.BADGE_CUSTOMIZATION_WEB_COACHMARK] : []);
+    return f !== eI.M.BADGE_CUSTOMIZATION_WEB_COACHMARK
         ? null
-        : (0, t.jsx)(eN.A, {
+        : (0, t.jsx)(eC.A, {
               targetElementRef: o,
               position: "right",
               caretConfig: { align: "start" },
               gradientColor: "blue",
-              graphic: { type: "rive", rive: eC.U, props: { dataBinding: { on: !0, reducedMotion: m.enabled } } },
+              graphic: { type: "rive", rive: eN.U, props: { dataBinding: { on: !0, reducedMotion: m.enabled } } },
               title: e_.intl.string(e_.t["9JoKQb"]),
               body: e_.intl.string(c ? e_.t.p82vky : e_.t.IDh31t),
               onRequestClose: () => p(eO.i.USER_DISMISS),
@@ -1954,12 +1954,12 @@ var tq = l(847374),
     tY = l(111159),
     tX = l(548118),
     t$ = l(711014),
-    tZ = l(540637),
-    tJ = l(801461),
-    tQ = l(44482),
-    t0 = l(561392),
-    t1 = l(499957),
-    t2 = l(15626),
+    tZ = l(649998),
+    tJ = l(561392),
+    tQ = l(499957),
+    t0 = l(15626),
+    t1 = l(715022),
+    t2 = l(44482),
     t3 = l(470791);
 function t9(e) {
     let {
@@ -1984,7 +1984,7 @@ function t9(e) {
             getFloatingProps: j,
             transitionStyles: I,
         } = (function () {
-            let { reducedMotion: e } = i.useContext(eI.C),
+            let { reducedMotion: e } = i.useContext(ey.C),
                 {
                     isOpen: n,
                     setIsOpen: l,
@@ -1993,8 +1993,8 @@ function t9(e) {
                     getReferenceProps: a,
                     getFloatingProps: s,
                     context: o,
-                } = (0, t0.u)({ placement: "bottom-start", matchReferenceWidth: !1, transform: e.enabled }),
-                { styles: d } = (0, t1.DL)(o, {
+                } = (0, tJ.u)({ placement: "bottom-start", matchReferenceWidth: !1, transform: e.enabled }),
+                { styles: d } = (0, tQ.DL)(o, {
                     common: { transformOrigin: "top left" },
                     initial: { opacity: 0.5, transform: "scaleY(0.96)" },
                     duration: 100,
@@ -2010,17 +2010,17 @@ function t9(e) {
             };
         })(),
         { setFloating: C } = v,
-        y = i.useContext(t2._),
+        y = i.useContext(t0._),
         N = i.useId(),
         E = i.useId(),
         P = i.useId(),
         k = i.useRef(null),
         T = i.useRef(null),
         [S, R] = i.useState(null),
-        O = null != S ? (0, tJ.ZN)(P, S) : void 0,
+        O = null != S ? (0, t1.ZN)(P, S) : void 0,
         _ = i.useRef(!1),
         D = i.useRef(!1),
-        L = i.useMemo(() => n.filter((e) => (0, tJ.fI)(e.value, [l])), [l, n]),
+        L = i.useMemo(() => n.filter((e) => (0, t1.fI)(e.value, [l])), [l, n]),
         M = i.useCallback(() => {
             u || h(!x);
         }, [u, h, x]),
@@ -2184,7 +2184,7 @@ function t9(e) {
                         onSelectionChange: V,
                         shouldFocusWrap: !1,
                         activeDescendantIndex: S,
-                        renderListItem: (e) => (null != f ? f(e) : (0, t.jsx)(tQ.c, { ...e })),
+                        renderListItem: (e) => (null != f ? f(e) : (0, t.jsx)(t2.c, { ...e })),
                         maxVisibleItems: g,
                         loading: c,
                     }),
@@ -2477,8 +2477,8 @@ function iI(e) {
 function iC(e) {
     let { user: n, guildId: l, disabled: i, errorMessage: r } = e,
         a = (0, le.ux)("UserProfileModalV2EditingPanel"),
-        [s, o] = (0, eR.kn)(a && !i ? [ey.M.DISPLAY_NAME_STYLES_FLYWHEEL_NEW_BADGE_PROFILE_PAGE] : []),
-        d = s === ey.M.DISPLAY_NAME_STYLES_FLYWHEEL_NEW_BADGE_PROFILE_PAGE;
+        [s, o] = (0, eR.kn)(a && !i ? [eI.M.DISPLAY_NAME_STYLES_FLYWHEEL_NEW_BADGE_PROFILE_PAGE] : []),
+        d = s === eI.M.DISPLAY_NAME_STYLES_FLYWHEEL_NEW_BADGE_PROFILE_PAGE;
     return (0, t.jsxs)(lF, {
         heading: e_.intl.string(e_.t.NEzEws),
         disabled: i,
@@ -3263,7 +3263,7 @@ function rI(e) {
             (e) => {
                 (e.stopPropagation(),
                     C &&
-                        (0, rx.Dr)(ey.M.DISPLAY_NAME_STYLES_FLYWHEEL_NEW_BADGE_PROFILE_PAGE, {
+                        (0, rx.Dr)(eI.M.DISPLAY_NAME_STYLES_FLYWHEEL_NEW_BADGE_PROFILE_PAGE, {
                             dismissAction: eO.i.INDIRECT_ACTION,
                         }),
                     (0, lN.L)({ analyticsLocations: v, guildId: b, stackingBehavior: "stack", returnRef: U }));
@@ -3446,7 +3446,7 @@ function rL() {
                               children: e.label,
                           }),
                       })
-                    : (0, t.jsx)(tQ.c, { ...e }),
+                    : (0, t.jsx)(t2.c, { ...e }),
             [],
         ),
         f = i.useMemo(

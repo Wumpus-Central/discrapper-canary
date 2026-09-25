@@ -2,8 +2,8 @@ n.d(t, { default: () => z });
 var s = n(477900),
     r = n(582128),
     a = n(323889),
-    i = n(189213),
-    o = n(17928),
+    i = n(17928),
+    o = n(189213),
     d = n(862482),
     u = n(834730),
     l = n(297264),
@@ -38,8 +38,8 @@ var s = n(477900),
     P = n(375708),
     U = n(50026);
 function F(e) {
-    let { rewardCode: t, questContent: n, questId: r, sourceQuestContent: i, className: u, inputClassName: l } = e,
-        C = (0, o.bG)([I.A], () => I.A.hidePersonalInformation),
+    let { rewardCode: t, questContent: n, questId: r, sourceQuestContent: o, className: u, inputClassName: l } = e,
+        C = (0, i.bG)([I.A], () => I.A.hidePersonalInformation),
         E = (0, w.Ut)(),
         m = (0, j.go)();
     return null == t
@@ -58,14 +58,14 @@ function F(e) {
                                 adCreativeId: r,
                                 questContentCTA: L.Cy.COPY_REWARD_CODE,
                                 surfaceId: n,
-                                sourceQuestContent: i,
+                                sourceQuestContent: o,
                                 impressionId: m,
                             })
                           : E({
                                 questId: r,
                                 questContent: n,
                                 questContentCTA: L.Cy.COPY_REWARD_CODE,
-                                sourceQuestContent: i,
+                                sourceQuestContent: o,
                             }));
               },
           });
@@ -74,7 +74,7 @@ function K(e) {
     let {
             quest: t,
             questContent: n,
-            sourceQuestContent: o,
+            sourceQuestContent: i,
             rewardCode: d,
             onClose: l,
             transitionState: C,
@@ -130,10 +130,10 @@ function K(e) {
                           })),
                     (0, T.A)(n));
             }, [t.id, s, i, o, d, u, n]);
-        })({ quest: t, questContent: n, redemptionLink: m, sourceQuestContent: o });
+        })({ quest: t, questContent: n, redemptionLink: m, sourceQuestContent: i });
     return (0, s.jsx)("div", {
         ref: c,
-        children: (0, s.jsx)(i.Modal, {
+        children: (0, s.jsx)(o.a, {
             size: "md",
             title: P.intl.string(P.t.NkZ7OU),
             actions: [
@@ -149,7 +149,7 @@ function K(e) {
                         className: U.V6,
                         children: P.intl.string(P.t.srzsU2),
                     }),
-                    (0, s.jsx)(F, { rewardCode: d, questContent: n, questId: t.id, sourceQuestContent: o }),
+                    (0, s.jsx)(F, { rewardCode: d, questContent: n, questId: t.id, sourceQuestContent: i }),
                 ],
             }),
             onClose: l,
@@ -209,16 +209,16 @@ function z(e) {
     let t,
         n,
         a,
-        i,
+        o,
         { initialQuest: d, onClose: u, transitionState: l, sourceQuestContent: c } = e,
         A = (0, D.C5)(d.id) ?? d,
         R = f.uF.REWARD_MODAL,
-        p = (0, o.bG)([x.default], () => x.default.getCurrentUser()),
+        p = (0, i.bG)([x.default], () => x.default.getCurrentUser()),
         {
             rewardCode: I,
             isFetchingRewardCode: h,
             isClaimingReward: q,
-        } = (0, o.cf)([N.A], () => ({
+        } = (0, i.cf)([N.A], () => ({
             rewardCode: N.A.getRewardCode(A.id),
             isFetchingRewardCode: N.A.isFetchingRewardCode(A.id),
             isClaimingReward: N.A.isClaimingReward(A.id),
@@ -269,10 +269,10 @@ function z(e) {
     })),
         (n = _.default.useIsCaptchaModalOpen()),
         (a = (0, E.Ay)(n)),
-        (i = !!(!n && a)),
+        (o = !!(!n && a)),
         r.useEffect(() => {
-            i && t();
-        }, [i, t]));
+            o && t();
+        }, [o, t]));
     let T = null == I && (h || q),
         w = g && !q && !h;
     return (0, s.jsx)(Q.A, {

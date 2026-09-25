@@ -62,7 +62,7 @@ let g = () => {
               }));
     let N = (0, o.Zb)(y),
         b = N ? C.intl.string(p.default.qbDPGM) : C.intl.string(C.t.LZunzZ);
-    return (0, i.jsx)(l.Modal, {
+    return (0, i.jsx)(l.a, {
         size: "md",
         transitionState: t,
         title: b,

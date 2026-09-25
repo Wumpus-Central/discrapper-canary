@@ -20,13 +20,13 @@ var r = n(980707),
     I = n(29293),
     C = n(509302),
     _ = n(497600),
-    f = n(646911),
-    w = n(239211),
-    U = n(373397),
-    E = n(732159),
-    M = n(17928),
+    w = n(646911),
+    U = n(239211),
+    f = n(373397),
+    E = n(17928),
     N = n(661531),
-    b = n(192308),
+    M = n(192308),
+    b = n(732159),
     X = n(778712),
     k = n(834730),
     T = n(97808),
@@ -103,15 +103,15 @@ let $ = (0, a.A)(
                 ec = $.id,
                 eh = (0, H.A)(V, ec),
                 eu = (0, W.A)(V.id, ee),
-                em = (0, U.A)({ user: V, context: ee }),
+                em = (0, f.A)({ user: V, context: ee }),
                 ex = (0, _.A)({ user: V, channelId: $.id, context: ee }),
                 eA = (0, I.A)({ user: V }),
                 ej = (0, K.A)(V.id),
                 eg =
                     ((i = V.id),
                     (n = $.id),
-                    (l = (0, M.bG)([G.default], () => G.default.getCurrentUser(), [])),
-                    null == (a = (0, M.bG)([F.A], () => F.A.getChannel(n), [n])) ||
+                    (l = (0, E.bG)([G.default], () => G.default.getCurrentUser(), [])),
+                    null == (a = (0, E.bG)([F.A], () => F.A.getChannel(n), [n])) ||
                     a.isOwner(i) ||
                     null == l ||
                     !a.isOwner(l.id) ||
@@ -128,19 +128,19 @@ let $ = (0, a.A)(
                 eI = (0, y.A)(V.id, $.id),
                 eC = (0, L.A)({ user: V }),
                 e_ = (0, c.A)(null, V),
-                ef = (0, p.A)({ user: V }),
-                ew = (0, C.A)({ user: V }),
-                eU = (0, Y.A)({ user: V }),
-                eE = (0, w.A)({ user: V, location: "GroupDMUserContextMenu" }),
-                eM = (0, B.A)({ user: V, location: "GroupDMUserContextMenu" }),
-                eN = (0, g.A)({ id: V.id, label: O.intl.string(O.t["/AXYnE"]) }),
+                ew = (0, p.A)({ user: V }),
+                eU = (0, C.A)({ user: V }),
+                ef = (0, Y.A)({ user: V }),
+                eE = (0, U.A)({ user: V, location: "GroupDMUserContextMenu" }),
+                eN = (0, B.A)({ user: V, location: "GroupDMUserContextMenu" }),
+                eM = (0, g.A)({ id: V.id, label: O.intl.string(O.t["/AXYnE"]) }),
                 eb = (0, Q.A)(V.id),
                 eX = (0, x.A)(V.id),
                 ek = (0, m.A)($.id),
                 eT = (0, v.A)(V),
                 eR = (0, A.A)(V.id),
                 eS = (0, u.A)($.id, V.id),
-                eD = (0, f.A)({
+                eD = (0, w.A)({
                     commandType: o.kc.USER,
                     commandTargetId: V.id,
                     channel: $,
@@ -148,7 +148,7 @@ let $ = (0, a.A)(
                     onHeightUpdate: et,
                 }),
                 eG =
-                    null == (h = (0, M.bG)([G.default], () => G.default.getCurrentUser())) ||
+                    null == (h = (0, E.bG)([G.default], () => G.default.getCurrentUser())) ||
                     $.ownerId !== h.id ||
                     V.id === h.id
                         ? null
@@ -157,8 +157,8 @@ let $ = (0, a.A)(
                               color: "danger",
                               label: O.intl.string(O.t["6t3CyN"]),
                               action: () => {
-                                  (0, b.openModal)((e) =>
-                                      (0, s.jsx)(E.ConfirmModal, {
+                                  (0, M.openModal)((e) =>
+                                      (0, s.jsx)(b.u, {
                                           title: O.intl.string(O.t.WZoUsm),
                                           confirmText: O.intl.string(O.t["cY+Oob"]),
                                           cancelText: O.intl.string(O.t["ETE/oC"]),
@@ -245,16 +245,16 @@ let $ = (0, a.A)(
                                         en && eR,
                                         eD,
                                         er && eC,
-                                        ef,
                                         ew,
                                         eU,
-                                        er && eM,
+                                        ef,
+                                        er && eN,
                                         er && eE,
                                     ],
                                 }),
                             ],
                         }),
-                    (0, s.jsx)(d.rX, { children: eN }),
+                    (0, s.jsx)(d.rX, { children: eM }),
                 ],
             });
         },

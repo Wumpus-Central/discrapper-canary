@@ -7,10 +7,10 @@ var r = n(477900),
     a = n(622242),
     c = n(731738),
     d = n(70298),
-    u = n(821609),
-    h = n(825484),
-    f = n(17928),
-    g = n(397613),
+    u = n(17928),
+    h = n(397613),
+    f = n(821609),
+    g = n(825484),
     p = n(148810),
     m = n(521502),
     A = n(380610),
@@ -25,7 +25,7 @@ var r = n(477900),
     O = n(684637);
 function _() {
     let [e, t] = i.useState(!1);
-    if (null == (0, f.bG)([m.A], () => ((0, A.kK)() ? m.A.getCurrentBuildOverride().overrides?.discord_web : null)))
+    if (null == (0, u.bG)([m.A], () => ((0, A.kK)() ? m.A.getCurrentBuildOverride().overrides?.discord_web : null)))
         return null;
     async function n() {
         try {
@@ -34,7 +34,7 @@ function _() {
             t(!1);
         }
     }
-    return (0, r.jsx)(u.$, {
+    return (0, r.jsx)(f.$, {
         variant: "primary",
         size: "md",
         text: N.intl.string(N.t["/Nz9rY"]),
@@ -102,9 +102,9 @@ class I extends i.PureComponent {
                         (0, r.jsx)("p", { children: N.intl.string(N.t.CvQlAH) }),
                     ],
                 }),
-                n = (0, r.jsxs)(h.e, {
+                n = (0, r.jsxs)(g.e, {
                     children: [
-                        (0, r.jsx)(u.$, {
+                        (0, r.jsx)(f.$, {
                             variant: "primary",
                             size: "md",
                             text: N.intl.string(N.t["+hivLW"]),
@@ -120,7 +120,7 @@ class I extends i.PureComponent {
                 className: O.W,
                 illustration: (0, r.jsx)("div", {
                     className: O.b,
-                    children: (0, r.jsx)(g.e, { alt: "", ariaHidden: !0 }),
+                    children: (0, r.jsx)(h.e, { alt: "", ariaHidden: !0 }),
                 }),
                 hideBackground: !0,
             });

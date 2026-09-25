@@ -8,9 +8,9 @@ n(321073);
 var a = n(323889),
     c = n(412703),
     u = n(928264),
-    d = n(802516),
-    C = n(22363),
-    T = n(17928),
+    d = n(17928),
+    C = n(802516),
+    T = n(22363),
     g = n(663417),
     O = n(274670),
     E = n(144779),
@@ -119,10 +119,10 @@ function Q(t) {
             supportedPlatforms: a,
             isConnected: c,
             noConsoleProgress: u,
-            errorHints: d,
+            errorHints: C,
         } = t,
-        C = (0, f.go)(),
-        g = (0, T.bG)([_.default], () => _.default.getCurrentUser()),
+        T = (0, f.go)(),
+        g = (0, d.bG)([_.default], () => _.default.getCurrentUser()),
         O = (0, r.fc)(e),
         E = e.userStatus?.completedAt != null,
         A = s.useMemo(
@@ -158,11 +158,11 @@ function Q(t) {
                 {
                     content: l.uF.PLAY_QUEST_MODAL,
                     ctaContent: N.Cy.VIEW_CONSOLE_CONNECTIONS_LINK,
-                    impressionId: C,
+                    impressionId: T,
                     sourceQuestContent: n,
                 },
             );
-        }, [e, C, n]),
+        }, [e, T, n]),
         S = s.useMemo(
             () => [
                 {
@@ -185,13 +185,13 @@ function Q(t) {
             [A, E, c, m],
         ),
         h = o === I.WU.DESKTOP ? L : S,
-        x = c && (u || d.length > 0) && !E;
+        x = c && (u || C.length > 0) && !E;
     return (0, i.jsx)(U.Ay, {
         heading: Y.intl.string(Y.t.dc9w4N),
         steps: h,
         className: K._,
         children:
-            x && (0, i.jsx)(F, { quest: e, questContent: l.uF.PLAY_QUEST_MODAL, sourceQuestContent: n, errorHints: d }),
+            x && (0, i.jsx)(F, { quest: e, questContent: l.uF.PLAY_QUEST_MODAL, sourceQuestContent: n, errorHints: C }),
     });
 }
 var q = n(190107),
@@ -211,7 +211,7 @@ function B(t) {
     let { quest: e, sourceQuestContent: n } = t,
         o = (0, f.wW)(),
         c = (0, S.Ut)(),
-        p = (0, T.bG)([_.default], () => _.default.getCurrentUser()),
+        p = (0, d.bG)([_.default], () => _.default.getCurrentUser()),
         U = s.useCallback(() => {
             (0, I.pu)(e, {
                 content: l.uF.PLAY_QUEST_MODAL,
@@ -236,8 +236,8 @@ function B(t) {
                 D.includes(t.id),
             ),
             ...[
-                { id: b.fg2.XBOX, value: I.WU.XBOX, label: Y.intl.string(Y.t.Nfvo72), leading: d.Y },
-                { id: b.fg2.PLAYSTATION, value: I.WU.PLAYSTATION, label: Y.intl.string(Y.t.fFl4jo), leading: C.X },
+                { id: b.fg2.XBOX, value: I.WU.XBOX, label: Y.intl.string(Y.t.Nfvo72), leading: C.Y },
+                { id: b.fg2.PLAYSTATION, value: I.WU.PLAYSTATION, label: Y.intl.string(Y.t.fFl4jo), leading: T.X },
             ].filter((t) => D.includes(q.fO.CONSOLE) && W.includes(t.id)),
         ],
         H = [

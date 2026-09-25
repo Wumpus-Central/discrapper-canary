@@ -3,19 +3,19 @@ var n = i(477900),
     r = i(23339),
     a = i(189213),
     l = i(975571),
-    o = i(123917),
-    s = i(498480),
+    s = i(123917),
+    o = i(498480),
     d = i(628049),
     p = i(652215),
     c = i(394107),
     u = i(375708);
 function C(t) {
     let { provider: e, onAccept: i, ...C } = t;
-    return (0, n.jsx)(a.Modal, {
+    return (0, n.jsx)(a.a, {
         title: u.intl.string(c.default.ny8Szd),
         subtitle: u.intl.format(c.default.D3STVx, {
             provider: (0, r.$G)(e),
-            providerUrl: () => (0, o.h)({ href: d.eh[e] }),
+            providerUrl: () => (0, s.h)({ href: d.eh[e] }),
             helpCenterUrl: l.A.getArticleURL(p.MVz.GAME_SERVER_HOSTING),
         }),
         size: "md",
@@ -24,7 +24,7 @@ function C(t) {
             {
                 text: u.intl.string(c.default.K1xIXf),
                 onClick: () => {
-                    ((0, s.Wp)(!0, e), i?.(), C.onClose());
+                    ((0, o.Wp)(!0, e), i?.(), C.onClose());
                 },
                 variant: "primary",
             },

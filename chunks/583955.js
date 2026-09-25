@@ -183,7 +183,7 @@ var P = n(72191);
 function V(e) {
     let { transitionState: t, onClose: n } = e,
         { send: l, sending: r, canSend: s } = (0, g.Vw)();
-    return (0, a.jsx)(p.Modal, {
+    return (0, a.jsx)(p.a, {
         title: A.intl.string(P.default.zgFs8C),
         actions: [{ variant: "primary", text: A.intl.string(A.t.TXNS7S), onClick: l, loading: r, disabled: !s() }],
         transitionState: t,

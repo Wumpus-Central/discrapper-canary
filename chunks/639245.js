@@ -5,8 +5,8 @@ var l = n(477900),
     r = n.n(s),
     a = n(562708),
     o = n(17928),
-    u = n(305866),
-    c = n(3026),
+    u = n(3026),
+    c = n(305866),
     d = n(834730),
     h = n(939249),
     m = n(297264),
@@ -62,7 +62,7 @@ function ee(e) {
             (s = ":pizza:" === n && i ? q.intl.formatToPlainString(q.t["1knDPI"], { emojiName: n }) : n),
             ":pizza:" === t ? s : t),
         h = a !== r.name;
-    return (0, l.jsx)(u.l, {
+    return (0, l.jsx)(c.l, {
         children: (0, l.jsx)(J.Uq, {
             children: (0, l.jsxs)(y.A, {
                 className: Q.gH,
@@ -78,7 +78,7 @@ function ee(e) {
                                 variant: "text-md/semibold",
                                 children: h
                                     ? (0, l.jsx)("div", { className: Q.Gl, children: a })
-                                    : (0, l.jsx)(c.A, { children: a }),
+                                    : (0, l.jsx)(u.A, { children: a }),
                             }),
                             (0, l.jsx)(d.E, { variant: "text-sm/normal", children: q.intl.string(q.t.sXdH8c) }),
                         ],
@@ -96,8 +96,8 @@ let et = (e) => {
             isDisplayingJoinGuildButtonInPopout: s,
             closePopout: a,
         } = e,
-        { id: o, icon: u, name: f } = n,
-        p = W.Ay.getGuildIconURL({ id: o, icon: u, size: 32, canAnimate: !0 }),
+        { id: o, icon: c, name: f } = n,
+        p = W.Ay.getGuildIconURL({ id: o, icon: c, size: 32, canAnimate: !0 }),
         g = (i = i ?? !0) || n.isDiscoverable();
     function x() {
         n.isDiscoverable() ? (a(), (0, K.Z2)(o, {})) : i && (a(), (0, V.pX)(R.BVt.CHANNEL(o, G.Ay.getChannelId(o))));
@@ -135,12 +135,12 @@ let et = (e) => {
                                       children: (0, l.jsx)(m.D, {
                                           className: Q.J5,
                                           variant: "heading-md/semibold",
-                                          children: (0, l.jsx)(c.A, { children: f }),
+                                          children: (0, l.jsx)(u.A, { children: f }),
                                       }),
                                   })
                                 : (0, l.jsx)(m.D, {
                                       variant: "heading-md/semibold",
-                                      children: (0, l.jsx)(c.A, { children: f }),
+                                      children: (0, l.jsx)(u.A, { children: f }),
                                   }),
                         ],
                     }),
@@ -189,7 +189,7 @@ function en(e) {
         {
             expressionSourceGuild: a,
             expressionSourceApplication: o,
-            sourceType: c,
+            sourceType: u,
             joinedEmojiSourceGuildRecord: d,
             emoji: h,
             isFetching: m,
@@ -248,11 +248,11 @@ function en(e) {
         })({ emojiId: t.emojiId, refreshPositionKey: s });
     return m
         ? (0, l.jsx)(J.Y0, {})
-        : (0, l.jsx)(u.l, {
+        : (0, l.jsx)(c.l, {
               "aria-label": t.name,
               children: (0, l.jsx)(el, {
                   node: t,
-                  sourceType: c,
+                  sourceType: u,
                   expressionSourceApplication: o,
                   guildEmoji: h ?? void 0,
                   expressionSourceGuild: a,
@@ -269,7 +269,7 @@ function el(e) {
         n,
         {
             node: s,
-            sourceType: u,
+            sourceType: c,
             expressionSourceApplication: m,
             expressionSourceGuild: g,
             joinedEmojiSourceGuildRecord: S,
@@ -317,7 +317,7 @@ function el(e) {
     );
     let eo = F.A.getGuildId(),
         eu = (0, Z.O)({
-            sourceType: u,
+            sourceType: c,
             expressionSourceApplication: m,
             isPremium: G,
             hasJoinedEmojiSourceGuild: K,
@@ -382,7 +382,7 @@ function el(e) {
                                     children: [
                                         (0, l.jsx)(d.E, {
                                             variant: "text-md/semibold",
-                                            children: (0, l.jsx)(c.A, { children: s.name }),
+                                            children: (0, l.jsx)(u.A, { children: s.name }),
                                         }),
                                         null != ed && (0, l.jsx)(d.E, { variant: "text-sm/normal", children: ed }),
                                     ],

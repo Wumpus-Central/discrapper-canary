@@ -1,13 +1,13 @@
 s.d(e, { default: () => E });
 var i = s(477900),
     n = s(582128),
-    l = s(189213),
-    a = s(17928),
+    l = s(17928),
+    a = s(189213),
     r = s(834730),
     d = s(28863),
     c = s(414121),
-    o = s(266080),
-    u = s(975571),
+    u = s(266080),
+    o = s(975571),
     m = s(643501),
     h = s(636537),
     x = s(47167),
@@ -35,7 +35,7 @@ function b(t) {
 }
 function E(t) {
     let { channel: e, transitionState: s, onClose: E } = t,
-        I = (0, a.bG)([m.default], () => null != m.default.getRemoteSessionId()),
+        I = (0, l.bG)([m.default], () => null != m.default.getRemoteSessionId()),
         O = (function (t, e) {
             let { nonce: s, forQRCode: i } = e,
                 n = t.getGuildId(),
@@ -58,7 +58,7 @@ function E(t) {
         n.useEffect(() => {
             (0, C.A)(e.id, A.f$.XBOX);
         }, [e.id]),
-        (0, i.jsx)(l.Modal, {
+        (0, i.jsx)(a.a, {
             title: v.intl.string(v.t["f+Aijq"]),
             subtitle: v.intl.string(v.t.mYFmDY),
             actions: [],
@@ -74,7 +74,7 @@ function E(t) {
                                 variant: "text-lg/semibold",
                                 color: "text-strong",
                                 className: R.RA,
-                                children: [(0, i.jsx)(o.A, { className: R.Fp }), v.intl.string(v.t.ZNlYbK)],
+                                children: [(0, i.jsx)(u.A, { className: R.Fp }), v.intl.string(v.t.ZNlYbK)],
                             }),
                             (0, i.jsx)(b, { step: 1, instructions: v.intl.string(v.t.dDtkl9) }),
                             (0, i.jsx)(b, { step: 2, instructions: v.intl.string(v.t.IWuXjC) }),
@@ -82,7 +82,7 @@ function E(t) {
                                 variant: "text-sm/medium",
                                 children: (0, i.jsx)(d.Anchor, {
                                     className: R.C2,
-                                    href: u.A.getArticleURL(p.MVz.XBOX_CONNECTION),
+                                    href: o.A.getArticleURL(p.MVz.XBOX_CONNECTION),
                                     children: v.intl.string(v.t.hvVgAZ),
                                 }),
                             }),

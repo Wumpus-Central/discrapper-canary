@@ -1,7 +1,7 @@
 a.d(n, { default: () => m });
 var i = a(477900),
-    l = a(582128),
-    e = a(189213),
+    e = a(582128),
+    l = a(189213),
     r = a(834730),
     s = a(939249),
     c = a(468689),
@@ -19,24 +19,24 @@ let m = function (t) {
             onSubmit: g,
         } = (function (t) {
             let { onSubmit: n, onClose: a } = t,
-                [i, e] = l.useState(!1),
-                [r, s] = l.useState(null),
-                c = l.useCallback(async () => {
+                [i, l] = e.useState(!1),
+                [r, s] = e.useState(null),
+                c = e.useCallback(async () => {
                     if (!i) {
-                        (e(!0), s(null));
+                        (l(!0), s(null));
                         try {
                             (await n(), a());
                         } catch (t) {
-                            (s(new u.LG(t).getAnyErrorMessage()), e(!1));
+                            (s(new u.LG(t).getAnyErrorMessage()), l(!1));
                         }
                     }
                 }, [a, n, i]);
             return { submitting: i, errorMessage: r, onSubmit: c };
         })({ onSubmit: E, onClose: m }),
-        S = l.useCallback(() => {
+        S = e.useCallback(() => {
             (m(), c.A.close(), (0, o.pX)(d.BVt.CHANNEL(n, x.VV.MEMBER_APPLICATIONS)));
         }, [n, m]);
-    return (0, i.jsxs)(e.Modal, {
+    return (0, i.jsxs)(l.a, {
         transitionState: C,
         onClose: m,
         title: h.intl.formatToPlainString(h.t.chV4Jb, { count: a }),

@@ -8,13 +8,13 @@ var i = n(477900),
     d = n(174768),
     c = n(503698),
     u = n.n(c),
-    _ = n(224640),
-    E = n(17928),
-    A = n(28863),
-    h = n(834730),
-    I = n(866665),
-    f = n(559106),
-    p = n(475825),
+    _ = n(17928),
+    E = n(28863),
+    A = n(834730),
+    h = n(866665),
+    I = n(559106),
+    f = n(475825),
+    p = n(224640),
     T = n(442433),
     m = n(390435),
     g = n(775121),
@@ -141,7 +141,7 @@ function $() {
             (0, i.jsx)("div", { className: K.lv, children: H.intl.string(H.t.bpbATE) }),
             (0, i.jsx)("div", {
                 className: K.PA,
-                children: (0, i.jsx)(A.Anchor, {
+                children: (0, i.jsx)(E.Anchor, {
                     href: G.A.getArticleURL(V.MVz.QUICK_SWITCHER_TUTORIAL),
                     children: H.intl.string(H.t["4iPfEO"]),
                 }),
@@ -155,7 +155,7 @@ class z extends r.Component {
         let e = D.A.getGuild(this.props.channel.guild_id);
         return (0, i.jsx)(x.c3, {
             ...this.props,
-            children: (0, i.jsx)(h.E, {
+            children: (0, i.jsx)(A.E, {
                 variant: "text-sm/medium",
                 color: "none",
                 className: K.MD,
@@ -164,7 +164,7 @@ class z extends r.Component {
         });
     }
 }
-let X = E.Ay.connectStores([b.Ay, L.A], (e) => {
+let X = _.Ay.connectStores([b.Ay, L.A], (e) => {
         let { channel: t } = e;
         return {
             unread: b.Ay.hasUnread(t.id),
@@ -173,17 +173,17 @@ let X = E.Ay.connectStores([b.Ay, L.A], (e) => {
             category: L.A.getChannel(t.parent_id),
         };
     })(z),
-    q = E.Ay.connectStores([P.Ay], (e) => {
+    q = _.Ay.connectStores([P.Ay], (e) => {
         let { channel: t } = e;
         if (null == t.guild_id)
             throw Error("ConnectedVoiceChannel - somehow we got a voice channel with no guild_id...");
         return { voiceStates: P.Ay.getVoiceStates(t.guild_id)[t.id] };
     })(z),
-    Z = E.Ay.connectStores([y.default], (e) => {
+    Z = _.Ay.connectStores([y.default], (e) => {
         let { guild: t } = e;
         return { unread: y.default.hasUnread(t.id) };
     })(x.OS),
-    Q = E.Ay.connectStores([b.Ay, v.A], (e) => {
+    Q = _.Ay.connectStores([b.Ay, v.A], (e) => {
         let { channel: t } = e,
             n = null,
             i = v.A.getState().statuses;
@@ -192,7 +192,7 @@ let X = E.Ay.connectStores([b.Ay, L.A], (e) => {
             { mentions: b.Ay.getMentionCount(t.id), status: n }
         );
     })(x.nG),
-    J = E.Ay.connectStores([L.A, b.Ay, v.A], (e) => {
+    J = _.Ay.connectStores([L.A, b.Ay, v.A], (e) => {
         let { user: t } = e,
             n = L.A.getDMFromUserId(t.id);
         return {
@@ -203,7 +203,7 @@ let X = E.Ay.connectStores([b.Ay, L.A], (e) => {
     })(x.KJ);
 function ee(e, t, n) {
     return (0, i.jsx)(
-        I.m,
+        h.m,
         { __unsupportedReactNodeAsText: n, children: (0, i.jsx)("span", { className: K.ZT, children: t }) },
         e,
     );
@@ -1109,7 +1109,7 @@ class et extends r.PureComponent {
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(U.EG, { event: V.jej.GLOBAL_CLIPBOARD_PASTE, handler: this.handleGlobalPaste }),
-                (0, i.jsx)(f.vN, {
+                (0, i.jsx)(I.vN, {
                     children: (0, i.jsx)("input", {
                         className: K.hF,
                         "aria-label": H.intl.string(H.t.ZvKwYa),
@@ -1142,7 +1142,7 @@ class et extends r.PureComponent {
                 ? (0, i.jsx)($, {})
                 : 0 === t.length
                   ? null
-                  : (0, i.jsx)(p.Ei, {
+                  : (0, i.jsx)(f.Ei, {
                         innerId: this._listId,
                         innerRole: "listbox",
                         "aria-label": H.intl.string(H.t.Wef5Do),
@@ -1333,7 +1333,7 @@ class et extends r.PureComponent {
         return t ? null : (0, i.jsx)(Y, { hasQuery: e.length > 0 && n.length > 0 });
     }
     render() {
-        return (0, i.jsx)(_.d, {
+        return (0, i.jsx)(p.d, {
             "aria-label": H.intl.string(H.t.ZvKwYa),
             size: "lg",
             transitionState: this.props.transitionState,
@@ -1347,7 +1347,7 @@ class et extends r.PureComponent {
     }
 }
 function en(e) {
-    let t = (0, E.cf)([d.A], () => d.A.getProps());
+    let t = (0, _.cf)([d.A], () => d.A.getProps());
     return (0, i.jsx)(et, { ...t, ...e });
 }
 let ei = "QUICK_SWITCHER_MODAL_KEY";

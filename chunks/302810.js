@@ -88,7 +88,7 @@ class g extends n.Component {
     }
     render() {
         let { transitionState: t } = this.props;
-        return (0, s.jsxs)(a.Modal, {
+        return (0, s.jsxs)(a.a, {
             transitionState: t,
             "aria-label": this.getTitle(),
             title: this.getTitle(),

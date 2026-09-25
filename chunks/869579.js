@@ -1,19 +1,19 @@
-(n.r(t), n.d(t, { default: () => e1 }));
+(n.r(t), n.d(t, { default: () => e3 }));
 var l = n(477900),
     r = n(582128),
     i = n(17928),
     a = n(834730),
-    s = n(289873),
-    u = n(689175),
-    d = n(250527),
-    c = n(868652),
+    u = n(289873),
+    s = n(689175),
+    c = n(250527),
+    d = n(868652),
     o = n(645619),
     f = n(71393),
     g = n(473953),
     m = n(636537),
     h = n(228366),
     E = n(652215);
-async function x(e) {
+async function p(e) {
     h.h.dispatch({ type: "GUILD_SPACE_CATALOG_FETCH_START", guildId: e });
     try {
         let { body: t } = await m.Bo.get({ url: E.Rsh.GUILD_SPACE_WIDGETS_CATALOG(e), rejectWithError: !0 });
@@ -22,18 +22,18 @@ async function x(e) {
         h.h.dispatch({ type: "GUILD_SPACE_CATALOG_FETCH_FAILURE", guildId: e });
     }
 }
-var p = n(960960),
+var x = n(960960),
     A = n(202762),
-    _ = n(88592),
-    C = n(363957),
+    C = n(88592),
+    _ = n(363957),
     v = n(513446);
-let I = 0;
-async function y(e, t) {
+let y = 0;
+async function I(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     n && h.h.dispatch({ type: "GUILD_SPACE_HYDRATE_RESET_ERRORS", guildId: e, widgetIds: t });
-    let l = C.A.getWidgetIdsToHydrate(e, t);
+    let l = _.A.getWidgetIdsToHydrate(e, t);
     if (0 === l.length) return;
-    let r = I++;
+    let r = y++;
     h.h.dispatch({ type: "GUILD_SPACE_HYDRATE_START", guildId: e, requestId: r, widgetIds: l });
     try {
         let { body: t } = await m.Bo.get({
@@ -57,27 +57,27 @@ var b = n(716357),
     L = n(868285),
     N = n(36525),
     P = n(871682),
-    U = n(331322),
-    k = n(821609),
+    k = n(331322),
+    U = n(821609),
     M = n(499373),
-    O = n(866665),
-    B = n(189213),
+    B = n(866665),
+    O = n(189213),
     W = n(939249),
-    F = n(245604),
-    H = n(104510),
-    z = n(661531),
-    K = n(192308),
-    $ = n(775602),
-    q = n(855823),
+    H = n(245604),
+    F = n(104510),
+    q = n(661531),
+    z = n(192308),
+    K = n(775602),
+    $ = n(855823),
     V = n(61567),
     X = n(375708),
     Y = n(517228);
 function J(e) {
     let { widget: t, onClick: n } = e,
-        r = (0, i.bG)([$.Ay], () => $.Ay.useReducedMotion),
-        { catalog_image_static_url: s, catalog_image_animated_url: u } = t.assets,
-        d = (r ? null : u) ?? s,
-        c = t.boost_price;
+        r = (0, i.bG)([K.Ay], () => K.Ay.useReducedMotion),
+        { catalog_image_static_url: u, catalog_image_animated_url: s } = t.assets,
+        c = (r ? null : s) ?? u,
+        d = t.boost_price;
     return (0, l.jsxs)(W.D, {
         className: Y.HL,
         onClick: n,
@@ -85,19 +85,19 @@ function J(e) {
             (0, l.jsxs)("div", {
                 className: Y.b3,
                 children: [
-                    null != d && (0, l.jsx)("img", { className: Y.YI, src: d, alt: "" }),
+                    null != c && (0, l.jsx)("img", { className: Y.YI, src: c, alt: "" }),
                     (0, l.jsxs)("div", {
                         className: Y.Nt,
                         "aria-hidden": !0,
                         children: [
                             (0, l.jsx)("div", { className: Y.Ti, children: (0, l.jsx)("div", { className: Y.dK }) }),
-                            (0, l.jsxs)(U.B, {
+                            (0, l.jsxs)(k.B, {
                                 className: Y.Cq,
                                 align: "center",
                                 justify: "center",
                                 gap: 4,
                                 children: [
-                                    (0, l.jsx)(F.U, {}),
+                                    (0, l.jsx)(H.U, {}),
                                     (0, l.jsx)(a.E, {
                                         variant: "text-sm/semibold",
                                         color: "text-default",
@@ -109,22 +109,22 @@ function J(e) {
                     }),
                 ],
             }),
-            (0, l.jsxs)(U.B, {
+            (0, l.jsxs)(k.B, {
                 gap: 4,
                 children: [
                     (0, l.jsx)(a.E, { variant: "text-sm/semibold", color: "text-default", children: t.name }),
-                    null != c && c > 0
-                        ? (0, l.jsxs)(U.B, {
+                    null != d && d > 0
+                        ? (0, l.jsxs)(k.B, {
                               direction: "horizontal",
                               align: "center",
                               gap: 4,
                               children: [
-                                  (0, l.jsx)(H._, { size: "sm", color: z.A.unsafe_rawColors.GUILD_BOOSTING_PINK }),
+                                  (0, l.jsx)(F._, { size: "sm", color: q.A.unsafe_rawColors.GUILD_BOOSTING_PINK }),
                                   (0, l.jsx)(a.E, {
                                       variant: "text-sm/normal",
                                       color: "text-muted",
                                       lineClamp: 1,
-                                      children: X.intl.format(V.default["8wD0Un"], { boostPrice: c }),
+                                      children: X.intl.format(V.default["8wD0Un"], { boostPrice: d }),
                                   }),
                               ],
                           })
@@ -140,25 +140,25 @@ function J(e) {
     });
 }
 function Q(e) {
-    let { guildId: t, insertionTarget: n, ...a } = e,
+    let { guildId: t, insertionTarget: n, onAddWidget: a, ...u } = e,
         s = (0, i.yK)(
-            [p.A, _.A],
+            [x.A, C.A],
             () => {
-                let e = _.A.getDraft(t)?.widgets ?? [],
-                    n = p.A.getWidgets(t) ?? [];
-                return (0, q.aU)(n, e);
+                let e = C.A.getDraft(t)?.widgets ?? [],
+                    n = x.A.getWidgets(t) ?? [];
+                return (0, $.aU)(n, e);
             },
             [t],
         );
     return (
         r.useEffect(() => {
-            x(t);
+            p(t);
         }, [t]),
-        (0, l.jsx)(B.Modal, {
+        (0, l.jsx)(O.a, {
             title: X.intl.string(V.default.L8Xfoo),
             subtitle: X.intl.string(V.default["N8nJ+T"]),
             actions: [],
-            ...a,
+            ...u,
             children: (0, l.jsx)("div", {
                 className: Y.Vg,
                 children: s.map((e) =>
@@ -167,7 +167,7 @@ function Q(e) {
                         {
                             widget: e,
                             onClick: () => {
-                                ((0, A.lr)(t, e.type, e.name, e.locked, n), a.onClose());
+                                (a(e, n), u.onClose());
                             },
                         },
                         e.type,
@@ -177,23 +177,48 @@ function Q(e) {
         })
     );
 }
-function Z(e, t) {
-    let n = (n) => (0, l.jsx)(Q, { guildId: e, insertionTarget: t, ...n });
-    (0, K.openModalLazy)(() => Promise.resolve(n), { modalKey: "guild-space-add-widget" });
+function Z(e, t, n) {
+    let r = (r) => (0, l.jsx)(Q, { guildId: e, insertionTarget: n, onAddWidget: t, ...r });
+    (0, z.openModalLazy)(() => Promise.resolve(r), { modalKey: "guild-space-add-widget" });
 }
-var ee = n(992303);
+let ee = r.createContext(null);
 function et(e) {
-    let { guildId: t, isEditing: n, isRemovalPending: s } = e,
-        u = (0, i.bG)([_.A], () => _.A.getSaveStatus(t), [t]),
-        d = (0, i.bG)([_.A], () => _.A.getDraft(t)?.widgets.length ?? 0, [t]),
-        c = (0, i.bG)([_.A], () => _.A.getSaveErrorMessage(t), [t]),
-        o = "saving" === u,
-        f = o || s,
-        g = c ?? X.intl.string(V.default.HmFYc5),
-        m = r.useCallback(() => {
-            f || (0, A.Fj)(t);
-        }, [t, f]),
+    let { children: t } = e,
+        n = r.useRef(null),
+        i = r.useCallback((e, t) => {
+            n.current?.(e, t);
+        }, []),
+        a = r.useCallback(
+            (e) => (
+                (n.current = e),
+                () => {
+                    n.current === e && (n.current = null);
+                }
+            ),
+            [],
+        ),
+        u = r.useMemo(() => ({ addWidget: i, registerAddWidgetHandler: a }), [i, a]);
+    return (0, l.jsx)(ee.Provider, { value: u, children: t });
+}
+function en() {
+    let e = r.useContext(ee);
+    if (null == e) throw Error("GuildSpaceEditorAddWidgetProvider is required");
+    return e;
+}
+var el = n(992303);
+function er(e) {
+    let { guildId: t, isEditing: n, isRemovalPending: u } = e,
+        { addWidget: s } = en(),
+        c = (0, i.bG)([C.A], () => C.A.getSaveStatus(t), [t]),
+        d = (0, i.bG)([C.A], () => C.A.getDraft(t)?.widgets.length ?? 0, [t]),
+        o = (0, i.bG)([C.A], () => C.A.getSaveErrorMessage(t), [t]),
+        f = "saving" === c,
+        g = f || u,
+        m = o ?? X.intl.string(V.default.HmFYc5),
         h = r.useCallback(() => {
+            g || (0, A.Fj)(t);
+        }, [t, g]),
+        E = r.useCallback(() => {
             (0, A.iX)(t);
         }, [t]);
     return (0, l.jsx)(L.F, {
@@ -201,34 +226,34 @@ function et(e) {
         children:
             n &&
             (0, l.jsx)(P.F, {
-                className: ee.K,
+                className: el.K,
                 children: (0, l.jsx)(N.A, {
-                    submitting: o,
-                    disabled: f,
-                    onSave: m,
-                    onReset: f ? void 0 : h,
-                    message: (0, l.jsxs)(U.B, {
+                    submitting: f,
+                    disabled: g,
+                    onSave: h,
+                    onReset: g ? void 0 : E,
+                    message: (0, l.jsxs)(k.B, {
                         direction: "horizontal",
                         align: "center",
                         gap: 12,
                         children: [
-                            (0, l.jsx)(k.$, {
+                            (0, l.jsx)(U.$, {
                                 variant: "secondary",
                                 size: "sm",
                                 icon: M.T,
                                 text: X.intl.string(V.default.L8Xfoo),
-                                disabled: f,
-                                onClick: () => Z(t),
+                                disabled: g,
+                                onClick: () => Z(t, s),
                             }),
-                            "error" === u
-                                ? (0, l.jsx)(O.m, {
-                                      text: g,
+                            "error" === c
+                                ? (0, l.jsx)(B.m, {
+                                      text: m,
                                       children: (0, l.jsx)(a.E, {
                                           variant: "text-sm/medium",
                                           color: "text-feedback-critical",
                                           role: "alert",
                                           lineClamp: 1,
-                                          children: g,
+                                          children: m,
                                       }),
                                   })
                                 : (0, l.jsx)(a.E, {
@@ -242,35 +267,35 @@ function et(e) {
             }),
     });
 }
-var en = n(503698),
-    el = n.n(en),
-    er = n(425763),
-    ei = n(754674),
-    ea = n(294918);
-function es(e) {
+var ei = n(503698),
+    ea = n.n(ei),
+    eu = n(425763),
+    es = n(754674),
+    ec = n(294918);
+function ed(e) {
     let { height: t } = e;
-    return (0, l.jsx)("div", { className: ea.qf, style: null == t ? void 0 : { height: t }, "aria-hidden": !0 });
+    return (0, l.jsx)("div", { className: ec.qf, style: null == t ? void 0 : { height: t }, "aria-hidden": !0 });
 }
-var eu = n(686246);
-let ed = "GUILD_SPACE_WIDGET",
-    ec = "GUILD_SPACE_WIDGETS",
-    eo = `${ed}_${ec}`;
-var ef = n(225995),
-    eg = n(333007);
-let em = "canvas, iframe, video";
-function eh(e) {
+var eo = n(686246);
+let ef = "GUILD_SPACE_WIDGET",
+    eg = "GUILD_SPACE_WIDGETS",
+    em = `${ef}_${eg}`;
+var eh = n(225995),
+    eE = n(333007);
+let ep = "canvas, iframe, video";
+function ex(e) {
     let { isKeyboardMode: t, targetColumn: n, getColumnElement: i } = e,
-        { isDragging: a, item: s } = (0, eu.V)((e) => ({
-            isDragging: e.isDragging() && e.getItemType() === eo,
+        { isDragging: a, item: u } = (0, eo.V)((e) => ({
+            isDragging: e.isDragging() && e.getItemType() === em,
             item: e.getItem(),
         })),
-        u = (0, ef.u)(),
-        d = r.useRef(null),
-        c = r.useRef(null);
+        s = (0, eh.u)(),
+        c = r.useRef(null),
+        d = r.useRef(null);
     return (r.useLayoutEffect(() => {
-        let e = d.current;
+        let e = c.current;
         if (!a || t || null == e) return;
-        let n = u.getMonitor();
+        let n = s.getMonitor();
         function l() {
             let t = n.getSourceClientOffset();
             if (null == t) {
@@ -280,17 +305,17 @@ function eh(e) {
             ((e.style.transform = `translate3d(${t.x}px, ${t.y}px, 0)`), (e.style.visibility = "visible"));
         }
         return (l(), n.subscribeToOffsetChange(l));
-    }, [u, a, t]),
+    }, [s, a, t]),
     r.useLayoutEffect(() => {
-        let e = c.current,
-            n = d.current,
-            l = a ? s?.itemPreviewProps?.getSourceElement?.() : null;
+        let e = d.current,
+            n = c.current,
+            l = a ? u?.itemPreviewProps?.getSourceElement?.() : null;
         if (!a || t || null == e || null == n || null == l) return;
         let r = l.cloneNode(!0);
         n.style.width = `${l.getBoundingClientRect().width}px`;
-        let i = l.querySelectorAll(em);
+        let i = l.querySelectorAll(ep);
         return (
-            r.querySelectorAll(em).forEach((e, t) => {
+            r.querySelectorAll(ep).forEach((e, t) => {
                 let n = document.createElement("div"),
                     l = i.item(t),
                     r = l?.getBoundingClientRect(),
@@ -302,7 +327,7 @@ function eh(e) {
                         (n.style.height = null != a && 0.5 > Math.abs(r.height - a.height) ? "100%" : `${r.height}px`)),
                     e.replaceWith(n));
             }),
-            r.classList.remove(ea.cB, ea.Ni),
+            r.classList.remove(ec.cB, ec.Ni),
             r.removeAttribute("data-dnd-name"),
             r.querySelectorAll("[id]").forEach((e) => e.removeAttribute("id")),
             r.setAttribute("aria-hidden", "true"),
@@ -310,9 +335,9 @@ function eh(e) {
             e.replaceChildren(r),
             () => e.replaceChildren()
         );
-    }, [a, t, s]),
+    }, [a, t, u]),
     r.useLayoutEffect(() => {
-        let e = d.current;
+        let e = c.current;
         if (!a || t || null == e || null == n) return;
         let l = i(n);
         if (null == l) return;
@@ -320,158 +345,184 @@ function eh(e) {
             e.style.width = `${l.clientWidth}px`;
         }
         r();
-        let s = new ResizeObserver(r);
-        return (s.observe(l), () => s.disconnect());
+        let u = new ResizeObserver(r);
+        return (u.observe(l), () => u.disconnect());
     }, [i, a, t, n]),
-    !a || t || null == s)
+    !a || t || null == u)
         ? null
-        : (0, eg.createPortal)(
+        : (0, eE.createPortal)(
               (0, l.jsx)("div", {
-                  ref: d,
-                  className: ea.dk,
+                  ref: c,
+                  className: ec.dk,
                   "aria-hidden": !0,
-                  children: (0, l.jsx)("div", { ref: c, className: ea.w4 }),
+                  children: (0, l.jsx)("div", { ref: d, className: ec.w4 }),
               }),
               document.body,
           );
 }
-var eE = n(651300);
-function ex(e) {
-    let { column: t, children: n, isPointerDragging: i, onElement: a, onDragHover: s } = e,
-        u = r.useRef(null),
-        [, d] = (0, eE.H)({
-            accept: eo,
+var eA = n(651300);
+function eC(e) {
+    let { column: t, children: n, isPointerDragging: i, registerColumnElement: a, onDragHover: u } = e,
+        s = r.useRef(null),
+        [, c] = (0, eA.H)({
+            accept: em,
             canDrop: () => i,
             hover: (e, n) => {
                 if (!i) return;
                 let l = n.getClientOffset();
-                null != l && s(e.id, t, l);
+                null != l && u(e.id, t, l);
             },
         }),
-        c = r.useCallback(
+        d = r.useCallback(
             (e) => {
-                ((u.current = e), a(t, e));
+                ((s.current = e), a(t, e));
             },
             [t, a],
         );
     return (
         r.useLayoutEffect(
             () => (
-                d(u),
+                c(s),
                 () => {
-                    d(null);
+                    c(null);
                 }
             ),
-            [d],
+            [c],
         ),
-        (0, l.jsx)("div", { ref: c, className: ea.fi, children: n })
+        (0, l.jsx)("div", { ref: d, className: ec.fi, children: n })
     );
 }
-function ep(e) {
+function e_(e) {
     let { column: t, dndName: n, onDropAtEnd: i } = e,
         a = r.useRef(null),
-        [{ isOver: s }, u] = (0, eE.H)({
-            accept: eo,
+        [{ isOver: u }, s] = (0, eA.H)({
+            accept: em,
             drop: (e) => i(e.id, t),
             collect: (e) => ({ isOver: e.isOver({ shallow: !0 }) && e.canDrop() }),
         });
     return (
         r.useLayoutEffect(
             () => (
-                u(a),
+                s(a),
                 () => {
-                    u(null);
+                    s(null);
                 }
             ),
-            [u],
+            [s],
         ),
-        (0, l.jsx)("div", { ref: a, className: el()(ea.wr, { [ea.SX]: s }), "data-dnd-name": n })
+        (0, l.jsx)("div", { ref: a, className: ea()(ec.wr, { [ec.SX]: u }), "data-dnd-name": n })
     );
 }
-var eA = n(451395),
-    e_ = n(42499),
-    eC = n(539888);
-function ev(e) {
+var ev = n(451395),
+    ey = n(42499),
+    eI = n(539888);
+function eb(e) {
     let {
             guildId: t,
             widget: n,
             column: a,
-            positionNumber: s,
-            columnWidgetCount: u,
-            flatIndex: d,
-            leftColumnCount: c,
+            positionNumber: u,
+            columnWidgetCount: s,
+            flatIndex: c,
+            leftColumnCount: d,
             isKeyboardMode: o,
             onReorder: f,
             onDrop: g,
             onDragEnd: m,
-            onSlotElement: h,
+            registerSlotElement: h,
             isSaving: E,
-            getDropLabel: x,
-            onRemove: p,
+            getDropLabel: p,
+            onRemove: x,
             onCommitConfig: A,
-            isSettling: _,
+            isSettling: C,
             onMotionEnd: v,
-            isRemoving: I,
-            isRemovalPending: y,
-            onRemovalAnimationEnd: b,
+            isEntrancePreparing: y,
+            isEntering: I,
+            onEntranceAnimationEnd: b,
+            isRemoving: S,
+            isRemovalPending: D,
+            onRemovalAnimationEnd: j,
         } = e,
-        S = r.useRef(null),
-        D = r.useRef(null),
-        j = (0, i.bG)([C.A], () => (n.requires_hydration ? C.A.getHydration(t, n.id) : void 0), [
+        G = r.useRef(null),
+        T = r.useRef(null),
+        w = (0, i.bG)([_.A], () => (n.requires_hydration ? _.A.getHydration(t, n.id) : void 0), [
             t,
             n.id,
             n.requires_hydration,
         ]),
-        G = (0, e_.K)(t, n),
-        { isDragging: T, dragSourcePosition: w } = (0, eA.gY)({
-            dragRef: S,
-            dropRef: D,
-            index: d,
-            listType: ec,
-            itemType: ed,
+        R = (0, ey.K)(t, n),
+        { isDragging: L, dragSourcePosition: N } = (0, ev.gY)({
+            dragRef: G,
+            dropRef: T,
+            index: c,
+            listType: eg,
+            itemType: ef,
             itemId: n.id,
-            itemPreviewProps: { getSourceElement: () => D.current },
+            itemPreviewProps: { getSourceElement: () => T.current },
             onDrop: (e) => g(e.id),
             onReorder: f,
             onEnd: (e, t) => m(e.id, t.didDrop()),
-            canDrag: !E && !y,
+            canDrag: !E && !D,
         }),
-        R = null == w ? null : w < c ? 0 : 1,
-        L = null != R && R !== a,
-        N = o && null != w && (L || w > d),
-        P = o && null != w && !L && w < d,
-        U = r.useCallback(
+        P = null == N ? null : N < d ? 0 : 1,
+        k = null != P && P !== a,
+        U = o && null != N && (k || N > c),
+        M = o && null != N && !k && N < c,
+        B = r.useCallback(
             (e) => {
-                ((D.current = e), h(n.id, e));
+                ((T.current = e), h(n.id, e));
             },
             [h, n.id],
         );
-    return (0, l.jsx)("div", {
-        ref: U,
-        className: el()(ea.NI, { [ea.cB]: T, [ea.Ni]: _, [ea.kC]: I, [ea.ne]: N, [ea.O3]: P }),
+    return (0, l.jsxs)("div", {
+        ref: B,
+        className: ea()(ec.NI, { [ec.cB]: L, [ec.Ni]: C, [ec.fJ]: y, [ec.Hu]: I, [ec.kC]: S, [ec.ne]: U, [ec.O3]: M }),
         onAnimationEnd: (e) => {
-            e.target === e.currentTarget && (I ? b(n.id) : _ && v(n.id));
+            e.target === e.currentTarget && (S ? j(n.id) : C ? v(n.id) : I && b(n.id));
         },
-        "data-dnd-name": x(a, s, u),
-        children: (0, l.jsx)(eC.P, {
-            guildId: t,
-            widget: n,
-            guildSpaceMode: "edit",
-            hydration: j,
-            lock: G,
-            dragHandleRef: S,
-            disabled: E,
-            onRemove: () => p(n.id),
-            onCommitConfig: A,
-        }),
+        "data-dnd-name": p(a, u, s),
+        children: [
+            I &&
+                (0, l.jsx)("div", {
+                    className: ec.q2,
+                    "aria-hidden": !0,
+                    children: (0, l.jsx)("div", { className: ec.te }),
+                }),
+            (0, l.jsx)(eI.P, {
+                guildId: t,
+                widget: n,
+                guildSpaceMode: "edit",
+                hydration: w,
+                lock: R,
+                dragHandleRef: G,
+                disabled: E,
+                onRemove: () => x(n.id),
+                onCommitConfig: A,
+            }),
+        ],
     });
 }
-var eI = n(55433);
-function ey(e) {
+function eS(e, t, n, l) {
+    let r = t.current?.getScrollerNode();
+    if (null == r) return void l();
+    let i = e.getBoundingClientRect(),
+        a = r.getBoundingClientRect(),
+        u = Math.max(
+            0,
+            Math.min(i.top - a.top + r.scrollTop - (r.clientHeight - i.height) / 2, r.scrollHeight - r.clientHeight),
+        );
+    if (n || 1 > Math.abs(r.scrollTop - u)) {
+        ((r.scrollTop = u), l());
+        return;
+    }
+    (r.addEventListener("scrollend", l, { once: !0 }), r.scrollTo({ top: u, behavior: "smooth" }));
+}
+var eD = n(55433);
+function ej(e) {
     let { column: t, disabled: n, onInsert: r } = e,
         i = X.intl.formatToPlainString(1 === t ? V.default.U0SqHk : V.default["9Ctu9P"], { positionNumber: 1 });
-    return (0, l.jsxs)(U.B, {
-        className: ea.Y$,
+    return (0, l.jsxs)(k.B, {
+        className: ec.Y$,
         align: "center",
         justify: "center",
         gap: 12,
@@ -481,7 +532,7 @@ function ey(e) {
                 color: "text-muted",
                 children: X.intl.string(V.default["/OtM0k"]),
             }),
-            (0, l.jsx)(k.$, {
+            (0, l.jsx)(U.$, {
                 variant: "secondary",
                 size: "sm",
                 icon: M.T,
@@ -493,79 +544,80 @@ function ey(e) {
         ],
     });
 }
-var eb = n(663341);
-function eS(e) {
+var eG = n(663341);
+function eT(e) {
     let { column: t, index: n, placement: r, onInsert: i } = e,
         a = X.intl.formatToPlainString(1 === t ? V.default["h9P9H+"] : V.default.xboFyi, { positionNumber: n + 1 });
     return (0, l.jsxs)(W.D, {
-        className: el()(ea.kZ, { [ea.j2]: "before" === r, [ea.AO]: "after" === r }),
+        className: ea()(ec.kZ, { [ec.j2]: "before" === r, [ec.AO]: "after" === r }),
         onClick: () => i(t, n),
         "aria-label": a,
         children: [
-            (0, l.jsx)("span", { className: ea.CF, "aria-hidden": !0 }),
+            (0, l.jsx)("span", { className: ec.CF, "aria-hidden": !0 }),
             (0, l.jsx)("span", {
-                className: ea.QN,
+                className: ec.QN,
                 "aria-hidden": !0,
-                children: (0, l.jsx)(eb.PlusLargeIcon, { size: "xs", color: "currentColor" }),
+                children: (0, l.jsx)(eG.PlusLargeIcon, { size: "xs", color: "currentColor" }),
             }),
         ],
     });
 }
-function eD(e, t, n) {
+function ew(e, t, n) {
     return X.intl.formatToPlainString(1 === e ? V.default.O9RvHQ : V.default["+cSvS8"], {
         positionNumber: t,
         positionCount: n,
     });
 }
-function ej(e) {
-    let { guildId: t, widgets: n, onRemovalPendingChange: a } = e,
-        s = r.useMemo(() => (0, ei.Rl)(n), [n]),
-        u = r.useMemo(
+function eR(e) {
+    let { guildId: t, widgets: n, onRemovalPendingChange: a, scrollerRef: u } = e,
+        s = r.useMemo(() => (0, es.Rl)(n), [n]),
+        c = r.useMemo(
             () =>
                 s.map((e) =>
                     e.filter((e) => {
                         let { type: t } = e;
-                        return null != eI.m[t];
+                        return null != eD.m[t];
                     }),
                 ),
             [s],
         ),
-        d = r.useMemo(() => [...u[0], ...u[1]], [u]),
-        c = (0, eu.V)((e) =>
-            e.isDragging() && e.getItemType() === eo
+        d = r.useMemo(() => [...c[0], ...c[1]], [c]),
+        o = (0, eo.V)((e) =>
+            e.isDragging() && e.getItemType() === em
                 ? { isDragging: !0, widgetId: e.getItem().id }
                 : { isDragging: !1 },
         ),
-        o = c.isDragging,
-        f = c.isDragging ? c.widgetId : null,
-        g = (0, er.VU)(),
-        m = (0, i.bG)([$.Ay], () => $.Ay.useReducedMotion),
-        h = (0, i.bG)([_.A], () => "saving" === _.A.getSaveStatus(t), [t]),
-        E = o && !g,
-        [x, p] = r.useState(null),
-        C = x?.type === "removing" ? x.widgetId : null,
-        v = null != C;
-    r.useEffect(() => {
-        m && x?.type === "settling" && p(null);
-    }, [m, x]);
+        f = o.isDragging,
+        g = o.isDragging ? o.widgetId : null,
+        m = (0, eu.VU)(),
+        h = (0, i.bG)([K.Ay], () => K.Ay.useReducedMotion),
+        E = (0, i.bG)([C.A], () => "saving" === C.A.getSaveStatus(t), [t]),
+        p = f && !m,
+        [x, _] = r.useState(null),
+        v = x?.type === "removing" ? x.widgetId : null,
+        y = null != v;
+    r.useLayoutEffect(() => {
+        h && x?.type === "settling" && _(null);
+    }, [h, x]);
     let I = r.useCallback(
             (e, n, l) => {
-                ((0, A.j0)(t, e, n, l), m || p({ type: "settling", widgetId: e }));
+                ((0, A.j0)(t, e, n, l), h || _({ type: "settling", widgetId: e }));
             },
-            [t, m],
+            [t, h],
         ),
         {
-            effectiveDestination: y,
-            draggedLocation: b,
-            getColumnElement: S,
-            gridDropSurfaceRef: D,
-            handleColumnHover: j,
-            handleDragEnd: G,
-            handleDrop: T,
-            placeholderHeight: w,
-            registerColumnElement: R,
-            registerSlotElement: L,
-            snapshotSlotRects: N,
+            effectiveDestination: b,
+            draggedLocation: S,
+            getColumnElement: D,
+            getSlotElement: j,
+            gridDropSurfaceRef: G,
+            handleColumnHover: T,
+            handleDragEnd: w,
+            canAcceptPointerDrop: R,
+            placeholderHeight: L,
+            registerColumnElement: N,
+            registerSlotElement: P,
+            snapshotSlotRects: k,
         } = (function (e) {
             let t,
                 n,
@@ -573,23 +625,23 @@ function ej(e) {
                 i,
                 {
                     columns: a,
-                    draftColumns: s,
-                    draggedWidgetId: u,
-                    isPointerDragging: d,
-                    isKeyboardMode: c,
+                    draftColumns: u,
+                    draggedWidgetId: s,
+                    isPointerDragging: c,
+                    isKeyboardMode: d,
                     isSaving: o,
                     reduceMotion: f,
                     onMoveWidget: g,
                 } = e,
                 [m, h] = r.useState(null),
                 E = r.useRef(null),
-                x = r.useRef(null),
                 p = r.useRef(null),
+                x = r.useRef(null),
                 A = r.useRef(null),
-                _ = r.useRef([null, null]),
-                C = r.useRef(new Map()),
-                [v, I] = r.useState(null),
-                { stopAutoScroll: y, updatePointerY: b } =
+                C = r.useRef([null, null]),
+                _ = r.useRef(new Map()),
+                [v, y] = r.useState(null),
+                { stopAutoScroll: I, updatePointerY: b } =
                     ((t = r.useRef(null)),
                     (n = r.useRef(null)),
                     (l = r.useCallback(() => {
@@ -614,11 +666,11 @@ function ej(e) {
                                             })(),
                                             i = r?.getBoundingClientRect(),
                                             a = i?.top ?? 0,
-                                            s = i?.bottom ?? window.innerHeight,
-                                            u = l - a < 96 ? -1 : +(s - l < 96);
-                                        if (0 === u) return;
-                                        let d = Math.ceil(24 * (1 - (u < 0 ? l - a : s - l) / 96));
-                                        (null != r ? r.scrollBy({ top: u * d }) : window.scrollBy({ top: u * d }),
+                                            u = i?.bottom ?? window.innerHeight,
+                                            s = l - a < 96 ? -1 : +(u - l < 96);
+                                        if (0 === s) return;
+                                        let c = Math.ceil(24 * (1 - (s < 0 ? l - a : u - l) / 96));
+                                        (null != r ? r.scrollBy({ top: s * c }) : window.scrollBy({ top: s * c }),
                                             (t.current = requestAnimationFrame(e)));
                                     })));
                         },
@@ -629,14 +681,14 @@ function ej(e) {
                 { clearSlotMotion: S, snapshotSlotRects: D } = (function (e) {
                     let { columns: t, pendingDestination: n, reduceMotion: l, slotElementsRef: i } = e,
                         a = r.useRef(new Map()),
-                        s = r.useRef(new Map()),
-                        u = r.useCallback(() => {
-                            (s.current.forEach((e) => e.cancel()), s.current.clear());
+                        u = r.useRef(new Map()),
+                        s = r.useCallback(() => {
+                            (u.current.forEach((e) => e.cancel()), u.current.clear());
                         }, []),
-                        d = r.useCallback(() => {
-                            (a.current.clear(), u());
-                        }, [u]),
-                        c = r.useCallback(
+                        c = r.useCallback(() => {
+                            (a.current.clear(), s());
+                        }, [s]),
+                        d = r.useCallback(
                             (e) => {
                                 l ||
                                     (a.current.clear(),
@@ -649,84 +701,85 @@ function ej(e) {
                     return (
                         r.useLayoutEffect(() => {
                             if (l) {
-                                (a.current.clear(), u());
+                                (a.current.clear(), s());
                                 return;
                             }
                             let e = a.current;
                             0 !== e.size &&
                                 (i.current.forEach((t, n) => {
-                                    (s.current.get(n)?.cancel(), s.current.delete(n));
+                                    (u.current.get(n)?.cancel(), u.current.delete(n));
                                     let l = e.get(n);
                                     if (null == l) return;
                                     let r = t.getBoundingClientRect(),
                                         i = l.left - r.left,
                                         a = l.top - r.top;
                                     if (1 > Math.abs(i) && 1 > Math.abs(a)) return;
-                                    let u = t.animate(
+                                    let s = t.animate(
                                         [{ transform: `translate(${i}px, ${a}px)` }, { transform: "translate(0, 0)" }],
                                         { duration: 140, easing: "cubic-bezier(0.2, 0, 0, 1)" },
                                     );
-                                    function d() {
-                                        s.current.get(n) === u && s.current.delete(n);
+                                    function c() {
+                                        u.current.get(n) === s && u.current.delete(n);
                                     }
-                                    (s.current.set(n, u), (u.onfinish = d), (u.oncancel = d));
+                                    (u.current.set(n, s), (s.onfinish = c), (s.oncancel = c));
                                 }),
                                 e.clear());
-                        }, [u, t, n, l, i]),
-                        r.useEffect(() => u, [u]),
-                        { clearSlotMotion: d, snapshotSlotRects: c }
+                        }, [s, t, n, l, i]),
+                        r.useEffect(() => s, [s]),
+                        { clearSlotMotion: c, snapshotSlotRects: d }
                     );
-                })({ columns: a, pendingDestination: m, reduceMotion: f, slotElementsRef: C }),
+                })({ columns: a, pendingDestination: m, reduceMotion: f, slotElementsRef: _ }),
                 j = (() => {
-                    if (null == u) return null;
+                    if (null == s) return null;
                     for (let [e, t] of a.entries()) {
                         let n = t.findIndex((e) => {
                             let { id: t } = e;
-                            return t === u;
+                            return t === s;
                         });
                         if (-1 !== n) return { column: e, index: n };
                     }
                     return null;
                 })(),
-                G = d && m?.widgetId === u && (null == j || m.column !== j.column || m.index !== j.index) ? m : null,
+                G = c && m?.widgetId === s && (null == j || m.column !== j.column || m.index !== j.index) ? m : null,
                 T = r.useCallback((e, t) => {
-                    _.current[e] = t;
+                    C.current[e] = t;
                 }, []),
-                w = r.useCallback((e) => _.current[e] ?? null, []),
+                w = r.useCallback((e) => C.current[e] ?? null, []),
                 R = r.useCallback((e, t) => {
-                    null == t ? C.current.delete(e) : C.current.set(e, t);
+                    null == t ? _.current.delete(e) : _.current.set(e, t);
                 }, []),
-                L = r.useCallback((e, t, n) => {
+                L = r.useCallback((e) => _.current.get(e) ?? null, []),
+                N = r.useCallback((e, t, n) => {
                     if (e === t) return !0;
-                    let l = _.current[0]?.getBoundingClientRect(),
-                        r = _.current[1]?.getBoundingClientRect();
+                    let l = C.current[0]?.getBoundingClientRect(),
+                        r = C.current[1]?.getBoundingClientRect();
                     if (null == l || null == r || !(l.right <= r.left)) return !0;
                     let i = (l.right + r.left) / 2;
                     return 1 === t ? n > i + 32 : n < i - 32;
                 }, []),
-                N = r.useCallback(() => {
-                    p.current = null;
-                    let e = x.current;
+                P = r.useCallback(() => {
+                    x.current = null;
+                    let e = p.current;
                     if (null == e) return;
                     let t = E.current;
                     (t?.widgetId !== e.widgetId || t.column !== e.column || t.index !== e.index) &&
                         (D(e.widgetId), (E.current = e), h(e));
                 }, [D]),
-                P = r.useCallback(
+                k = r.useCallback(
                     (e, t, n, l) => {
                         if (o) return;
                         b(l.y);
                         let r = E.current?.column ?? j?.column;
-                        if (null == r || !L(r, t, l.x)) return;
+                        if (null == r || !N(r, t, l.x)) return;
                         let i =
                             a[t]?.filter((t) => {
                                 let { id: n } = t;
                                 return n !== e;
                             }).length ?? 0;
-                        ((x.current = { widgetId: e, column: t, index: Math.max(0, Math.min(n, i)) }),
-                            null == p.current && (p.current = requestAnimationFrame(N)));
+                        ((p.current = { widgetId: e, column: t, index: Math.max(0, Math.min(n, i)) }),
+                            null == x.current && (x.current = requestAnimationFrame(P)));
                     },
-                    [N, a, L, j?.column, o, b],
+                    [P, a, N, j?.column, o, b],
                 ),
                 U = r.useCallback(
                     (e, t, n) => {
@@ -737,89 +790,89 @@ function ej(e) {
                                 }) ?? [],
                             r = l.findIndex((e) => {
                                 let { id: t } = e,
-                                    l = C.current.get(t)?.getBoundingClientRect();
+                                    l = _.current.get(t)?.getBoundingClientRect();
                                 return null != l && n.y < l.top + l.height / 2;
                             });
-                        P(e, t, -1 === r ? l.length : r, n);
+                        k(e, t, -1 === r ? l.length : r, n);
                     },
-                    [a, P],
+                    [a, k],
                 ),
-                k = r.useCallback(
+                M = r.useCallback(
                     (e, t) => {
                         let n = 0,
                             l = 1 / 0;
-                        (_.current.forEach((e, r) => {
+                        (C.current.forEach((e, r) => {
                             if (null == e) return;
                             let i = e.getBoundingClientRect(),
                                 a = t.x < i.left ? i.left - t.x : Math.max(0, t.x - i.right),
-                                s = t.y < i.top ? i.top - t.y : Math.max(0, t.y - i.bottom),
-                                u = a * a + s * s;
-                            u < l && ((n = r), (l = u));
+                                u = t.y < i.top ? i.top - t.y : Math.max(0, t.y - i.bottom),
+                                s = a * a + u * u;
+                            s < l && ((n = r), (l = s));
                         }),
                             U(e, n, t));
                     },
                     [U],
                 ),
-                [, M] = (0, eE.H)({
-                    accept: eo,
-                    canDrop: () => d,
+                [, B] = (0, eA.H)({
+                    accept: em,
+                    canDrop: () => c,
                     drop: () => ({}),
                     hover: (e, t) => {
-                        if (!d || !t.isOver({ shallow: !0 })) return;
+                        if (!c || !t.isOver({ shallow: !0 })) return;
                         let n = t.getClientOffset();
-                        null != n && k(e.id, n);
+                        null != n && M(e.id, n);
                     },
                 });
             r.useLayoutEffect(
                 () => (
-                    M(A),
+                    B(A),
                     () => {
-                        M(null);
+                        B(null);
                     }
                 ),
-                [M],
+                [B],
             );
             let O = r.useCallback((e) => {
-                    let t = x.current;
+                    let t = p.current;
                     if (t?.widgetId === e) return t;
                     let n = E.current;
                     return n?.widgetId === e ? n : null;
                 }, []),
-                B = r.useCallback((e, t) => (0, ei.O6)(s[t.column] ?? [], a[t.column] ?? [], t.index, e), [a, s]),
-                W = r.useCallback(() => {
-                    (null != p.current && cancelAnimationFrame(p.current),
-                        (p.current = null),
+                W = r.useCallback((e, t) => (0, es.O6)(u[t.column] ?? [], a[t.column] ?? [], t.index, e), [a, u]),
+                H = r.useCallback(() => {
+                    (null != x.current && cancelAnimationFrame(x.current),
                         (x.current = null),
+                        (p.current = null),
                         (E.current = null),
                         h(null),
-                        I(null),
+                        y(null),
                         S(),
-                        y());
-                }, [S, y]),
-                F = r.useCallback(() => d, [d]),
-                H = r.useCallback(
+                        I());
+                }, [S, I]),
+                F = r.useCallback(() => c, [c]),
+                q = r.useCallback(
                     (e, t) => {
                         let n = O(e);
                         (t &&
-                            !c &&
+                            !d &&
                             null != n &&
                             (null == j || n.column !== j.column || n.index !== j.index) &&
-                            g(e, n.column, B(e, n)),
-                            W());
+                            g(e, n.column, W(e, n)),
+                            H());
                     },
-                    [W, j, O, B, c, g],
+                    [H, j, O, W, d, g],
                 );
             return (
                 r.useLayoutEffect(() => {
-                    if (!d || null == u) return;
-                    let e = C.current.get(u);
+                    if (!c || null == s) return;
+                    let e = _.current.get(s);
                     if (null == e) return;
                     let t = e.getBoundingClientRect().height;
-                    t > 0 && t !== v && I(t);
-                }, [u, d, v]),
+                    t > 0 && t !== v && y(t);
+                }, [s, c, v]),
                 r.useEffect(
                     () => () => {
-                        null != p.current && cancelAnimationFrame(p.current);
+                        null != x.current && cancelAnimationFrame(x.current);
                     },
                     [],
                 ),
@@ -827,10 +880,11 @@ function ej(e) {
                     effectiveDestination: G,
                     draggedLocation: j,
                     getColumnElement: w,
+                    getSlotElement: L,
                     gridDropSurfaceRef: A,
                     handleColumnHover: U,
-                    handleDragEnd: H,
-                    handleDrop: F,
+                    handleDragEnd: q,
+                    canAcceptPointerDrop: F,
                     placeholderHeight: v,
                     registerColumnElement: T,
                     registerSlotElement: R,
@@ -838,47 +892,127 @@ function ej(e) {
                 }
             );
         })({
-            columns: u,
+            columns: c,
             draftColumns: s,
-            draggedWidgetId: f,
-            isPointerDragging: E,
-            isKeyboardMode: g,
-            isSaving: h,
-            reduceMotion: m,
+            draggedWidgetId: g,
+            isPointerDragging: p,
+            isKeyboardMode: m,
+            isSaving: E,
+            reduceMotion: h,
             onMoveWidget: I,
         }),
-        P = r.useCallback((e) => {
-            p((t) => (t?.type === "settling" && t.widgetId === e ? null : t));
+        {
+            clearWidgetEntrance: U,
+            handleAddWidget: M,
+            isEntrancePreparing: B,
+            isEntering: O,
+        } = (function (e) {
+            let {
+                    guildId: t,
+                    widgets: n,
+                    isSaving: l,
+                    isDraggingWidget: i,
+                    isRemovalPending: a,
+                    reduceMotion: u,
+                    scrollerRef: s,
+                    snapshotSlotRects: c,
+                    getSlotElement: d,
+                } = e,
+                { registerAddWidgetHandler: o } = en(),
+                [f, g] = r.useState(() => new Map()),
+                m = r.useRef(null),
+                [h, E] = r.useState(0),
+                p = r.useCallback((e) => {
+                    g((t) => {
+                        if (!t.has(e)) return t;
+                        let n = new Map(t);
+                        return (n.delete(e), n);
+                    });
+                }, []),
+                x = r.useCallback(
+                    (e, n) => {
+                        l ||
+                            i ||
+                            a ||
+                            ((m.current = null),
+                            c(),
+                            (m.current = (0, A.lr)(t, e.type, e.name, e.locked, n)),
+                            E((e) => e + 1));
+                    },
+                    [t, i, a, l, c],
+                );
+            return (
+                r.useLayoutEffect(() => o(x), [x, o]),
+                r.useLayoutEffect(() => {
+                    let e = m.current;
+                    if (null == e) return;
+                    let t = n.find((t) => {
+                            let { id: n } = t;
+                            return n === e;
+                        }),
+                        l = null == t ? null : d(t.id);
+                    if (null == t || null == l) {
+                        m.current = null;
+                        return;
+                    }
+                    ((m.current = null), u)
+                        ? eS(l, s, !0, () => void 0)
+                        : (g((e) => new Map(e).set(t.id, "preparing")),
+                          eS(l, s, !1, () => {
+                              l.isConnected &&
+                                  g((e) => ("preparing" !== e.get(t.id) ? e : new Map(e).set(t.id, "playing")));
+                          }));
+                }, [d, h, u, s, n]),
+                {
+                    clearWidgetEntrance: p,
+                    handleAddWidget: x,
+                    isEntrancePreparing: (e) => "preparing" === f.get(e),
+                    isEntering: (e) => "playing" === f.get(e),
+                }
+            );
+        })({
+            guildId: t,
+            widgets: n,
+            isSaving: E,
+            isDraggingWidget: f,
+            isRemovalPending: y,
+            reduceMotion: h,
+            scrollerRef: u,
+            snapshotSlotRects: k,
+            getSlotElement: j,
+        }),
+        W = r.useCallback((e) => {
+            _((t) => (t?.type === "settling" && t.widgetId === e ? null : t));
         }, []),
-        U = r.useCallback(
+        H = r.useCallback(
             (e) => {
-                (p(null == e ? null : { type: "removing", widgetId: e }), a(null != e));
+                (_(null == e ? null : { type: "removing", widgetId: e }), a(null != e));
             },
             [a],
         ),
-        k = r.useCallback(
+        F = r.useCallback(
             (e) => {
-                C === e && (N(e), (0, A.GP)(t, e), U(null));
+                v === e && (k(e), (0, A.GP)(t, e), H(null));
             },
-            [t, C, U, N],
+            [t, v, H, k],
         ),
-        M = r.useCallback(
+        q = r.useCallback(
             (e) => {
-                if (!h && !v) {
-                    if (m) {
-                        (N(e), (0, A.GP)(t, e));
+                if (!E && !y) {
+                    if ((U(e), h)) {
+                        (k(e), (0, A.GP)(t, e));
                         return;
                     }
-                    U(e);
+                    H(e);
                 }
             },
-            [t, v, h, m, U, N],
+            [U, t, y, E, h, H, k],
         );
     (r.useLayoutEffect(() => {
-        m && null != C && k(C);
-    }, [k, m, C]),
+        h && null != v && F(v);
+    }, [F, h, v]),
         r.useEffect(() => () => a(!1), [a]));
-    let O = r.useCallback(
+    let z = r.useCallback(
             (e, n) => {
                 let l = d[e],
                     r = d[n];
@@ -886,43 +1020,43 @@ function ej(e) {
             },
             [t, d],
         ),
-        B = r.useCallback(
+        $ = r.useCallback(
             (e, n) => {
                 (0, A.j0)(t, e, n, s[n]?.length ?? 0);
             },
             [s, t],
         ),
-        W = r.useCallback(
+        Y = r.useCallback(
             (e, n) => {
-                let l = (0, ei.O6)(s[e] ?? [], u[e] ?? [], n);
-                Z(t, { column: e, index: l });
+                let l = (0, es.O6)(s[e] ?? [], c[e] ?? [], n);
+                Z(t, M, { column: e, index: l });
             },
-            [u, s, t],
+            [c, s, t, M],
         );
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsx)("div", {
-                ref: D,
-                className: ea.Z7,
+                ref: G,
+                className: ec.Z7,
                 children: (0, l.jsx)("div", {
-                    className: el()(ea.Vg, { [ea.nl]: E }),
-                    children: u.map((e, n) =>
+                    className: ea()(ec.Vg, { [ec.nl]: p }),
+                    children: c.map((e, n) =>
                         (0, l.jsxs)(
-                            ex,
+                            eC,
                             {
                                 column: n,
-                                isPointerDragging: E,
-                                onElement: R,
-                                onDragHover: j,
+                                isPointerDragging: p,
+                                registerColumnElement: N,
+                                onDragHover: T,
                                 children: [
                                     (function (e, n) {
-                                        if (0 === e.length && !o)
-                                            return (0, l.jsx)(ey, { column: n, disabled: h || v, onInsert: W });
+                                        if (0 === e.length && !f)
+                                            return (0, l.jsx)(ej, { column: n, disabled: E || y, onInsert: Y });
                                         let r =
-                                            E && null != f
+                                            p && null != g
                                                 ? e.filter((e) => {
                                                       let { id: t } = e;
-                                                      return t !== f;
+                                                      return t !== g;
                                                   })
                                                 : e;
                                         return (function (e, t, n) {
@@ -934,76 +1068,76 @@ function ej(e) {
                                                 }),
                                                 i = -1 !== r && n.index > r ? n.index + 1 : n.index;
                                             return (l.splice(Math.min(i, l.length), 0, { type: "placeholder" }), l);
-                                        })(e, n, y).map((i) => {
+                                        })(e, n, b).map((i) => {
                                             if ("placeholder" === i.type)
-                                                return (0, l.jsx)(es, { height: w }, "drag-placeholder");
+                                                return (0, l.jsx)(ed, { height: L }, "drag-placeholder");
                                             let { widget: a } = i,
-                                                s = r.findIndex((e) => {
+                                                u = r.findIndex((e) => {
                                                     let { id: t } = e;
                                                     return t === a.id;
                                                 }),
-                                                c =
-                                                    -1 === s
+                                                s =
+                                                    -1 === u
                                                         ? e.findIndex((e) => {
                                                               let { id: t } = e;
                                                               return t === a.id;
                                                           })
-                                                        : s,
-                                                f = d.findIndex((e) => {
+                                                        : u,
+                                                o = d.findIndex((e) => {
                                                     let { id: t } = e;
                                                     return t === a.id;
                                                 }),
-                                                E = e.findIndex((e) => {
+                                                g = e.findIndex((e) => {
                                                     let { id: t } = e;
                                                     return t === a.id;
                                                 }),
-                                                p = !o && !h && !v;
+                                                h = !f && !E && !y;
                                             return (0, l.jsxs)(
                                                 "div",
                                                 {
-                                                    className: ea.O4,
+                                                    className: ec.O4,
                                                     children: [
-                                                        p &&
-                                                            (0, l.jsx)(eS, {
+                                                        h &&
+                                                            (0, l.jsx)(eT, {
                                                                 column: n,
-                                                                index: E,
+                                                                index: g,
                                                                 placement: "before",
-                                                                onInsert: W,
+                                                                onInsert: Y,
                                                             }),
-                                                        (0, l.jsx)(ev, {
+                                                        (0, l.jsx)(eb, {
                                                             guildId: t,
                                                             widget: a,
                                                             column: n,
-                                                            positionNumber: c + 1,
+                                                            positionNumber: s + 1,
                                                             columnWidgetCount: r.length,
-                                                            flatIndex: f,
-                                                            leftColumnCount: u[0].length,
-                                                            isKeyboardMode: g,
-                                                            isSaving: h,
-                                                            getDropLabel: eD,
-                                                            onReorder: O,
-                                                            onDrop: T,
-                                                            onDragEnd: G,
-                                                            onSlotElement: L,
+                                                            flatIndex: o,
+                                                            leftColumnCount: c[0].length,
+                                                            isKeyboardMode: m,
+                                                            isSaving: E,
+                                                            getDropLabel: ew,
+                                                            onReorder: z,
+                                                            onDrop: R,
+                                                            onDragEnd: w,
+                                                            registerSlotElement: P,
                                                             isSettling:
-                                                                x?.type === "settling" &&
-                                                                x.widgetId === a.id &&
-                                                                !g &&
-                                                                !m,
-                                                            onMotionEnd: P,
-                                                            isRemoving: C === a.id,
-                                                            isRemovalPending: v,
-                                                            onRemovalAnimationEnd: k,
-                                                            onRemove: M,
+                                                                x?.type === "settling" && x.widgetId === a.id && !m,
+                                                            onMotionEnd: W,
+                                                            isEntrancePreparing: B(a.id),
+                                                            isEntering: O(a.id),
+                                                            onEntranceAnimationEnd: U,
+                                                            isRemoving: v === a.id,
+                                                            isRemovalPending: y,
+                                                            onRemovalAnimationEnd: F,
+                                                            onRemove: q,
                                                             onCommitConfig: (e) => (0, A.Vk)(t, a.id, e),
                                                         }),
-                                                        p &&
-                                                            E === e.length - 1 &&
-                                                            (0, l.jsx)(eS, {
+                                                        h &&
+                                                            g === e.length - 1 &&
+                                                            (0, l.jsx)(eT, {
                                                                 column: n,
                                                                 index: e.length,
                                                                 placement: "after",
-                                                                onInsert: W,
+                                                                onInsert: Y,
                                                             }),
                                                     ],
                                                 },
@@ -1011,15 +1145,15 @@ function ej(e) {
                                             );
                                         });
                                     })(e, n),
-                                    g &&
-                                        o &&
-                                        !h &&
-                                        (0, l.jsx)(ep, {
+                                    m &&
+                                        f &&
+                                        !E &&
+                                        (0, l.jsx)(e_, {
                                             column: n,
                                             dndName: X.intl.string(1 === n ? V.default.fWef0G : V.default.KcdDyT),
-                                            onDropAtEnd: B,
+                                            onDropAtEnd: $,
                                         }),
-                                    E && (0, l.jsx)("div", { className: ea.XP, "aria-hidden": !0 }),
+                                    p && (0, l.jsx)("div", { className: ec.XP, "aria-hidden": !0 }),
                                 ],
                             },
                             n,
@@ -1027,92 +1161,92 @@ function ej(e) {
                     ),
                 }),
             }),
-            (0, l.jsx)(eh, { isKeyboardMode: g, targetColumn: y?.column ?? b?.column ?? null, getColumnElement: S }),
+            (0, l.jsx)(ex, { isKeyboardMode: m, targetColumn: b?.column ?? S?.column ?? null, getColumnElement: D }),
         ],
     });
 }
-var eG = n(529609),
-    eT = n(191023),
-    ew = n(408278),
-    eR = n(241326),
-    eL = n(297264),
-    eN = n(22231),
-    eP = n(654107),
-    eU = n(548118),
-    ek = n(837011),
-    eM = n(649640),
-    eO = n(2553),
-    eB = n(405810),
-    eW = n(498642),
-    eF = n(486020),
-    eH = n(488428),
-    ez = n(776231),
-    eK = n(968176),
-    e$ = n(986898);
-function eq(e) {
-    let { guildId: t, header: n, canEdit: s, isEditing: u, isSaving: d } = e,
-        c = (0, i.bG)([f.A], () => f.A.getGuild(t), [t]),
-        o = (0, i.bG)([eW.A], () => eW.A.getOnlineCount(t), [t]),
-        g = (0, i.bG)([eW.A], () => eW.A.getMemberCount(t), [t]),
+var eL = n(529609),
+    eN = n(191023),
+    eP = n(408278),
+    ek = n(241326),
+    eU = n(297264),
+    eM = n(22231),
+    eB = n(654107),
+    eO = n(548118),
+    eW = n(837011),
+    eH = n(649640),
+    eF = n(2553),
+    eq = n(405810),
+    ez = n(498642),
+    eK = n(486020),
+    e$ = n(488428),
+    eV = n(776231),
+    eX = n(968176),
+    eY = n(986898);
+function eJ(e) {
+    let { guildId: t, header: n, canEdit: u, isEditing: s, isSaving: c } = e,
+        d = (0, i.bG)([f.A], () => f.A.getGuild(t), [t]),
+        o = (0, i.bG)([ez.A], () => ez.A.getOnlineCount(t), [t]),
+        g = (0, i.bG)([ez.A], () => ez.A.getMemberCount(t), [t]),
         m = n.custom_banner,
-        h = (0, i.bG)([ek.A], () => ek.A.getProfile(t), [t]),
-        x = (0, eM.b2)().hex(),
-        p = null == c ? null : eF.Ay.getGuildIconURL({ id: c.id, icon: c.icon, size: 64 }),
-        _ = (0, eP.Ay)(p, x),
-        C = (0, eM.n6)(h?.brandColorPrimary ?? _),
+        h = (0, i.bG)([eW.A], () => eW.A.getProfile(t), [t]),
+        p = (0, eH.b2)().hex(),
+        x = null == d ? null : eK.Ay.getGuildIconURL({ id: d.id, icon: d.icon, size: 64 }),
+        C = (0, eB.Ay)(x, p),
+        _ = (0, eH.n6)(h?.brandColorPrimary ?? C),
         v = r.useMemo(
             () =>
-                null == c
+                null == d
                     ? null
                     : "string" == typeof m
                       ? m
                       : void 0 === m && null != n.custom_banner_hash
                         ? (function (e, t) {
-                              let n = eF.QB ? "webp" : "jpg",
+                              let n = eK.QB ? "webp" : "jpg",
                                   { CDN_HOST: l, API_ENDPOINT: r } = window.GLOBAL_ENV,
                                   i = E.Rsh.GUILD_SPACE_BANNER(e, t, n),
                                   a = null != l ? `https://${l}${i}` : location.protocol + r + i,
-                                  s = { size: (0, ez.kr)(1200 * (0, ez.mZ)()) };
-                              return ("jpg" === n && (s.quality = "lossless"), (a += `?${eH.stringify(s)}`));
-                          })(c.id, n.custom_banner_hash)
-                        : eF.Ay.getGuildBannerURL({ id: c.id, banner: c.banner }),
-            [c, m, n.custom_banner_hash],
+                                  u = { size: (0, eV.kr)(1200 * (0, eV.mZ)()) };
+                              return ("jpg" === n && (u.quality = "lossless"), (a += `?${e$.stringify(u)}`));
+                          })(d.id, n.custom_banner_hash)
+                        : eK.Ay.getGuildBannerURL({ id: d.id, banner: d.banner }),
+            [d, m, n.custom_banner_hash],
         ),
-        I = "string" == typeof m || (void 0 === m && null != n.custom_banner_hash);
-    return null == c
+        y = "string" == typeof m || (void 0 === m && null != n.custom_banner_hash);
+    return null == d
         ? null
         : (0, l.jsxs)("div", {
-              className: e$.wx,
+              className: eY.wx,
               children: [
                   null != v
-                      ? (0, l.jsx)("img", { className: e$.vK, src: v, alt: "" })
-                      : (0, l.jsx)("div", { className: e$.vK, style: { background: C }, "aria-hidden": !0 }),
-                  (0, l.jsx)("div", { className: e$.f5, "aria-hidden": !0 }),
-                  u
+                      ? (0, l.jsx)("img", { className: eY.vK, src: v, alt: "" })
+                      : (0, l.jsx)("div", { className: eY.vK, style: { background: _ }, "aria-hidden": !0 }),
+                  (0, l.jsx)("div", { className: eY.f5, "aria-hidden": !0 }),
+                  s
                       ? (0, l.jsxs)("div", {
-                            className: e$.j0,
+                            className: eY.j0,
                             children: [
-                                (0, l.jsx)(eB.A, {
+                                (0, l.jsx)(eq.A, {
                                     variant: "secondary",
-                                    icon: eT.ImageIcon,
+                                    icon: eN.ImageIcon,
                                     size: "sm",
                                     text: X.intl.string(V.default["EN+0gW"]),
                                     onChange: (e) => (0, A.pC)(t, e),
                                     maxFileSizeBytes: 0xa00000,
-                                    onFileSizeError: () => (0, eO.A)(0xa00000),
-                                    disabled: d,
+                                    onFileSizeError: () => (0, eF.A)(0xa00000),
+                                    disabled: c,
                                 }),
-                                I
-                                    ? (0, l.jsx)(O.m, {
+                                y
+                                    ? (0, l.jsx)(B.m, {
                                           text: X.intl.string(V.default["CunK+J"]),
                                           ariaHidden: !0,
-                                          children: (0, l.jsx)(ew.K, {
+                                          children: (0, l.jsx)(eP.K, {
                                               variant: "critical-secondary",
                                               size: "sm",
-                                              icon: eR.TrashIcon,
+                                              icon: ek.TrashIcon,
                                               "aria-label": X.intl.string(V.default["CunK+J"]),
                                               onClick: () => (0, A.pC)(t, null),
-                                              disabled: d,
+                                              disabled: c,
                                           }),
                                       })
                                     : null,
@@ -1120,32 +1254,32 @@ function eq(e) {
                         })
                       : null,
                   (0, l.jsxs)("div", {
-                      className: e$.D_,
+                      className: eY.D_,
                       children: [
-                          (0, l.jsx)(eU.Ay, {
-                              className: e$.Kk,
-                              guild: c,
-                              size: eU.Ay.Sizes.LARGE,
+                          (0, l.jsx)(eO.Ay, {
+                              className: eY.Kk,
+                              guild: d,
+                              size: eO.Ay.Sizes.LARGE,
                               active: !0,
                               "aria-hidden": !0,
                           }),
                           (0, l.jsxs)("div", {
-                              className: e$.pq,
+                              className: eY.pq,
                               children: [
-                                  (0, l.jsx)(eL.D, {
+                                  (0, l.jsx)(eU.D, {
                                       variant: "heading-lg/semibold",
                                       color: "currentColor",
                                       lineClamp: 1,
-                                      children: c.name,
+                                      children: d.name,
                                   }),
                                   (0, l.jsxs)("div", {
-                                      className: e$.M1,
+                                      className: eY.M1,
                                       children: [
                                           null != o
                                               ? (0, l.jsxs)("div", {
-                                                    className: e$.dJ,
+                                                    className: eY.dJ,
                                                     children: [
-                                                        (0, l.jsx)("span", { className: e$.RS, "aria-hidden": !0 }),
+                                                        (0, l.jsx)("span", { className: eY.RS, "aria-hidden": !0 }),
                                                         (0, l.jsx)(a.E, {
                                                             variant: "text-xs/semibold",
                                                             color: "currentColor",
@@ -1156,9 +1290,9 @@ function eq(e) {
                                               : null,
                                           null != g
                                               ? (0, l.jsxs)("div", {
-                                                    className: e$.dJ,
+                                                    className: eY.dJ,
                                                     children: [
-                                                        (0, l.jsx)("span", { className: e$.kq, "aria-hidden": !0 }),
+                                                        (0, l.jsx)("span", { className: eY.kq, "aria-hidden": !0 }),
                                                         (0, l.jsx)(a.E, {
                                                             variant: "text-xs/semibold",
                                                             color: "currentColor",
@@ -1168,9 +1302,9 @@ function eq(e) {
                                                 })
                                               : null,
                                           (0, l.jsxs)("div", {
-                                              className: e$.dJ,
+                                              className: eY.dJ,
                                               children: [
-                                                  (0, l.jsx)(H._, {
+                                                  (0, l.jsx)(F._, {
                                                       size: "xs",
                                                       color: "currentColor",
                                                       "aria-hidden": !0,
@@ -1179,7 +1313,7 @@ function eq(e) {
                                                       variant: "text-xs/semibold",
                                                       color: "currentColor",
                                                       children: X.intl.format(V.default.DwFqrb, {
-                                                          count: c.premiumSubscriberCount,
+                                                          count: d.premiumSubscriberCount,
                                                       }),
                                                   }),
                                               ],
@@ -1190,36 +1324,37 @@ function eq(e) {
                           }),
                       ],
                   }),
-                  s &&
-                      !u &&
-                      (0, l.jsx)(k.$, {
-                          icon: eN.PencilIcon,
-                          text: X.intl.string(eK.default.KcOpCm),
+                  u &&
+                      !s &&
+                      (0, l.jsx)(U.$, {
+                          icon: eM.PencilIcon,
+                          text: X.intl.string(eX.default.KcOpCm),
                           size: "sm",
                           onClick: () => (0, A.Wd)(t),
                       }),
               ],
           });
 }
-var eV = n(554146),
-    eX = n(942857),
-    eY = n(131607),
-    eJ = n(967198),
-    eQ = n(725041),
-    eZ = n(49999),
-    e0 = n(312152);
-function e1(e) {
+var eQ = n(554146),
+    eZ = n(942857),
+    e0 = n(131607),
+    e1 = n(967198),
+    e2 = n(725041),
+    e6 = n(49999),
+    e8 = n(312152);
+function e3(e) {
     let t,
         { guildId: m } = e,
         h = r.useRef(null),
-        [E, v] = r.useState(!1),
-        [I, L, N] = (0, i.yK)([b.A], () => [b.A.getSpace(m), b.A.getFetchStatus(m), b.A.isInBackoff(m)], [m]);
+        E = r.useRef(null),
+        [v, y] = r.useState(!1),
+        [L, N, P] = (0, i.yK)([b.A], () => [b.A.getSpace(m), b.A.getFetchStatus(m), b.A.isInBackoff(m)], [m]);
     (r.useEffect(() => {
         let e = h.current !== m;
         ((h.current = m), (0, g.u_)(m, e));
-    }, [L, m]),
+    }, [N, m]),
         r.useEffect(() => {
-            (0, d.L4)(m, !1, { respectBackoff: !0 });
+            (0, c.L4)(m, !1, { respectBackoff: !0 });
         }, [m]),
         (t = (0, w.n)()),
         r.useEffect(
@@ -1233,71 +1368,71 @@ function e1(e) {
             },
             [t],
         ));
-    let P = (0, i.bG)([f.A], () => f.A.getGuild(m), [m]),
-        U = (0, D.mN)(P),
-        k = (0, i.bG)([p.A], () => p.A.getFetchStatus(m), [m]);
+    let k = (0, i.bG)([f.A], () => f.A.getGuild(m), [m]),
+        U = (0, D.mN)(k),
+        M = (0, i.bG)([x.A], () => x.A.getFetchStatus(m), [m]);
     r.useEffect(() => {
-        U && "idle" === k && x(m);
-    }, [U, k, m]);
-    let M = P?.guildSpaceSettings?.publish_status !== S.B.PUBLISHED,
+        U && "idle" === M && p(m);
+    }, [U, M, m]);
+    let B = k?.guildSpaceSettings?.publish_status !== S.B.PUBLISHED,
         O = r.useCallback(() => (0, g.Wl)(m, { publish_status: S.B.PUBLISHED }), [m]),
-        [B, W] = (0, i.yK)([_.A], () => [_.A.getDraft(m), _.A.getSaveStatus(m)], [m]),
-        F = U && null != B;
+        [W, H] = (0, i.yK)([C.A], () => [C.A.getDraft(m), C.A.getSaveStatus(m)], [m]),
+        F = U && null != W;
     !(function (e, t) {
-        let a = (0, K.useHasModalOpen)(eQ.J),
-            s = (0, i.bG)([eJ.A], () => eJ.A.getGuildId()),
-            u = (0, eX.A)(),
-            [d, c] = (0, eY.kn)(t && s === e && !u ? [eV.M.GUILD_SPACE_NUX_MODAL] : [], eZ.m.GUILD_SPACE_NUX, !0),
+        let a = (0, z.useHasModalOpen)(e2.J),
+            u = (0, i.bG)([e1.A], () => e1.A.getGuildId()),
+            s = (0, eZ.A)(),
+            [c, d] = (0, e0.kn)(t && u === e && !s ? [eQ.M.GUILD_SPACE_NUX_MODAL] : [], e6.m.GUILD_SPACE_NUX, !0),
             o = r.useRef(!1),
-            f = d === eV.M.GUILD_SPACE_NUX_MODAL;
+            f = c === eQ.M.GUILD_SPACE_NUX_MODAL;
         (r.useEffect(() => {
             o.current = !1;
-        }, [e, s]),
+        }, [e, u]),
             r.useEffect(() => {
                 !f ||
                     a ||
                     o.current ||
                     ((o.current = !0),
-                    (0, K.openModalLazy)(
+                    (0, z.openModalLazy)(
                         async () => {
                             let t = await Promise.resolve().then(n.bind(n, 725041));
                             return (n) =>
                                 (0, l.jsx)(t.default, {
                                     guildId: e,
-                                    markAsDismissed: c,
+                                    markAsDismissed: d,
                                     transitionState: n.transitionState,
                                     onClose: n.onClose,
                                 });
                         },
-                        { modalKey: eQ.J },
+                        { modalKey: e2.J },
                     ).catch(() => {
                         o.current = !1;
                     }));
-            }, [e, a, c, f]));
-    })(m, U && !F && null != I);
-    let H = F ? B.widgets : I?.widgets,
-        z = r.useMemo(() => H?.some((e) => e.locked) ?? !1, [H]);
+            }, [e, a, d, f]));
+    })(m, U && !F && null != L);
+    let q = F ? W.widgets : L?.widgets,
+        K = r.useMemo(() => q?.some((e) => e.locked) ?? !1, [q]);
     r.useEffect(() => {
-        U && z && ((0, c.AK)(m), (0, c.Xd)(m));
-    }, [U, m, z]);
+        U && K && ((0, d.AK)(m), (0, d.Xd)(m));
+    }, [U, m, K]);
     let $ = (0, i.bG)(
-        [o.A, p.A],
+        [o.A, x.A],
         () =>
-            I?.widgets.some((e) => {
-                let t = p.A.getWidget(m, e.type)?.powerup_sku_id;
+            L?.widgets.some((e) => {
+                let t = x.A.getWidget(m, e.type)?.powerup_sku_id;
                 return e.locked && null != t && o.A.getStateForGuild(m)?.unlockedPowerups[t] != null;
             }) ?? !1,
-        [m, I],
+        [m, L],
     );
     (r.useEffect(() => {
         $ && (0, g.fi)(m);
     }, [m, $]),
         r.useEffect(() => {
-            U || null == B || "saving" === W || (0, A.iX)(m);
-        }, [U, B, W, m]));
-    let q = r.useMemo(
+            U || null == W || "saving" === H || (0, A.iX)(m);
+        }, [U, W, H, m]));
+    let V = r.useMemo(
             () =>
-                (H ?? [])
+                (q ?? [])
                     .filter((e) => {
                         let { requires_hydration: t } = e;
                         return t;
@@ -1306,25 +1441,25 @@ function e1(e) {
                         let { id: t } = e;
                         return t;
                     }),
-            [H],
+            [q],
         ),
-        V = (0, i.yK)([C.A], () => C.A.getWidgetIdsToHydrate(m, q), [m, q]),
-        Y = r.useRef(null);
+        Y = (0, i.yK)([_.A], () => _.A.getWidgetIdsToHydrate(m, V), [m, V]),
+        J = r.useRef(null);
     return (r.useEffect(() => {
-        if (Y.current !== m && null != I) {
-            ((Y.current = m), y(m, q, !0));
+        if (J.current !== m && null != L) {
+            ((J.current = m), I(m, V, !0));
             return;
         }
-        y(m, V);
-    }, [m, I, q, V]),
-    null == I || null == H)
+        I(m, Y);
+    }, [m, L, V, Y]),
+    null == L || null == q)
         ? (0, l.jsx)("div", {
-              className: e0.MY,
+              className: e8.MY,
               children: (0, l.jsx)("div", {
-                  className: e0.F,
+                  className: e8.F,
                   children:
-                      "error" !== L || N
-                          ? (0, l.jsx)(s.y, { type: s.y.Type.SPINNING_CIRCLE, "aria-label": X.intl.string(X.t.ZTNur7) })
+                      "error" !== N || P
+                          ? (0, l.jsx)(u.y, { type: u.y.Type.SPINNING_CIRCLE, "aria-label": X.intl.string(X.t.ZTNur7) })
                           : (0, l.jsx)(a.E, {
                                 variant: "text-md/normal",
                                 color: "text-muted",
@@ -1333,29 +1468,36 @@ function e1(e) {
                             }),
               }),
           })
-        : (0, l.jsxs)("div", {
-              className: e0.MY,
-              children: [
-                  (0, l.jsx)(u.Ch, {
-                      className: e0.XG,
-                      children: (0, l.jsxs)("div", {
-                          className: e0.Qs,
-                          children: [
-                              U && M ? (0, l.jsx)(R.A, { onPublish: O }) : null,
-                              (0, l.jsx)(eq, {
-                                  guildId: m,
-                                  header: F ? B.header : I.header,
-                                  isEditing: F,
-                                  canEdit: U,
-                                  isSaving: "saving" === W,
-                              }),
-                              F
-                                  ? (0, l.jsx)(ej, { guildId: m, widgets: H, onRemovalPendingChange: v }, m)
-                                  : (0, l.jsx)(eG.A, { canEdit: U, guildId: m, widgets: H }),
-                          ],
+        : (0, l.jsx)(et, {
+              children: (0, l.jsxs)("div", {
+                  className: e8.MY,
+                  children: [
+                      (0, l.jsx)(s.Ch, {
+                          ref: E,
+                          className: e8.XG,
+                          children: (0, l.jsxs)("div", {
+                              className: e8.Qs,
+                              children: [
+                                  U && B ? (0, l.jsx)(R.A, { onPublish: O }) : null,
+                                  (0, l.jsx)(eJ, {
+                                      guildId: m,
+                                      header: F ? W.header : L.header,
+                                      isEditing: F,
+                                      canEdit: U,
+                                      isSaving: "saving" === H,
+                                  }),
+                                  F
+                                      ? (0, l.jsx)(
+                                            eR,
+                                            { guildId: m, widgets: q, onRemovalPendingChange: y, scrollerRef: E },
+                                            m,
+                                        )
+                                      : (0, l.jsx)(eL.A, { canEdit: U, guildId: m, widgets: q }),
+                              ],
+                          }),
                       }),
-                  }),
-                  (0, l.jsx)(et, { guildId: m, isEditing: F, isRemovalPending: E }),
-              ],
+                      (0, l.jsx)(er, { guildId: m, isEditing: F, isRemovalPending: v }),
+                  ],
+              }),
           });
 }

@@ -41,7 +41,7 @@ function c(t) {
     }
     return (0, i.jsx)("form", {
         onSubmit: x,
-        children: (0, i.jsx)(a.Modal, {
+        children: (0, i.jsx)(a.a, {
             transitionState: e,
             trackingProps: {
                 impression: { impressionName: r.ImpressionNames.URF_ENTER_EMAIL },

@@ -423,11 +423,11 @@ function eS(e) {
 var ey = n(47167),
     ek = n(994500),
     eO = n(287809),
-    eL = n(123292),
-    ew = n(314116),
-    eR = n(778492),
-    eM = n(95477),
-    e_ = n(691885),
+    eL = n(314116),
+    ew = n(778492),
+    eR = n(95477),
+    eM = n(691885),
+    e_ = n(123292),
     eP = n(824953),
     eW = n(147925),
     eG = n(652215),
@@ -441,7 +441,7 @@ function eU(e) {
                 : (0, eo.ku)({ id: t.id, avatar: e, discriminator: eG.h3J });
         }, [t]),
         d = s.useCallback(() => {
-            (0, ew.A)({
+            (0, eL.A)({
                 title: Z.intl.formatToPlainString(Z.t.gBKqZ0, { name: t.name }),
                 subtitle: Z.intl.string(Z.t.zO9jrD),
                 confirmText: Z.intl.string(Z.t.CMy0Cj),
@@ -455,7 +455,7 @@ function eU(e) {
         m = [];
     null != t.source_channel &&
         null != t.source_guild &&
-        (m.push({ icon: eR.k, text: t.source_channel.name }),
+        (m.push({ icon: ew.k, text: t.source_channel.name }),
         m.push({
             text: (0, l.jsx)(
                 "span",
@@ -483,7 +483,7 @@ function eU(e) {
                                 direction: "horizontal",
                                 gap: 16,
                                 children: [
-                                    (0, l.jsx)(eM.k, {
+                                    (0, l.jsx)(eR.k, {
                                         label: Z.intl.string(Z.t.I1o5gV),
                                         value: n.name,
                                         onChange: (e) => {
@@ -492,7 +492,7 @@ function eU(e) {
                                         maxLength: 80,
                                         error: r.name,
                                     }),
-                                    (0, l.jsx)(e_.l, {
+                                    (0, l.jsx)(eM.l, {
                                         label: Z.intl.string(Z.t["4TuWfc"]),
                                         value: n.channel_id,
                                         options: i,
@@ -505,7 +505,7 @@ function eU(e) {
                                 ],
                             }),
                             (0, l.jsx)(S.c, { className: eD.Bd }),
-                            (0, l.jsx)(eL.Q, {
+                            (0, l.jsx)(e_.Q, {
                                 onClick: d,
                                 size: "sm",
                                 variant: "critical",
@@ -575,7 +575,7 @@ function eJ(e) {
             (0, eY.C)(e);
         }, [n]),
         b = s.useCallback(() => {
-            (0, ew.A)({
+            (0, eL.A)({
                 title: Z.intl.formatToPlainString(Z.t.QVFjHh, { name: n.name }),
                 subtitle: Z.intl.format(Z.t["rIWe+5"], { name: n.name }),
                 confirmText: Z.intl.string(Z.t["W+K1Fs"]),
@@ -651,7 +651,7 @@ function eJ(e) {
                                             (0, l.jsx)(g.A.Child, {
                                                 wrap: !0,
                                                 basis: "50%",
-                                                children: (0, l.jsx)(eM.k, {
+                                                children: (0, l.jsx)(eR.k, {
                                                     label: Z.intl.string(Z.t.ukdxuo),
                                                     value: i.name,
                                                     onChange: (e) => {
@@ -855,7 +855,7 @@ function eX(e) {
 var e$ = n(710135);
 function e0(e) {
     let { application: t, guild: n, integration: i, ...s } = e;
-    return (0, l.jsx)(N.ConfirmModal, {
+    return (0, l.jsx)(N.u, {
         ...s,
         title: Z.intl.formatToPlainString(Z.t["rL9d/1"], { applicationName: t.name }),
         subtitle: Z.intl.format(Z.t.FGE8ya, { applicationName: t.name }),
@@ -1042,7 +1042,7 @@ function tr(e) {
                         i.expire_behavior === e7.F.REMOVE_ROLE
                             ? Z.intl.string(Z.t["6kpw4i"])
                             : Z.intl.string(Z.t.fQUQIJ);
-                    (0, ew.A)({
+                    (0, eL.A)({
                         title: Z.intl.string(Z.t.emx3lN),
                         subtitle: i.type === e4.s.YOUTUBE ? Z.intl.string(Z.t.anKQWU) : Z.intl.string(Z.t["BW/xtn"]),
                         confirmText: e,
@@ -1275,7 +1275,7 @@ function tr(e) {
                             children: [
                                 (0, l.jsx)(g.A.Child, {
                                     basis: "50%",
-                                    children: (0, l.jsx)(e_.l, {
+                                    children: (0, l.jsx)(eM.l, {
                                         selectionMode: "single",
                                         label: n,
                                         placeholder: n,
@@ -1298,7 +1298,7 @@ function tr(e) {
                                 }),
                                 (0, l.jsx)(g.A.Child, {
                                     basis: "50%",
-                                    children: (0, l.jsx)(e_.l, {
+                                    children: (0, l.jsx)(eM.l, {
                                         selectionMode: "single",
                                         label: Z.intl.string(Z.t.uiXMow),
                                         placeholder: Z.intl.string(Z.t.uiXMow),

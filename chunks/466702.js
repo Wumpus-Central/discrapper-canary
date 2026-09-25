@@ -1,8 +1,8 @@
 n.d(i, { default: () => k });
 var e = n(477900),
     r = n(582128),
-    s = n(189213),
-    l = n(17928),
+    s = n(17928),
+    l = n(189213),
     c = n(331322),
     o = n(834730),
     a = n(379257),
@@ -21,8 +21,8 @@ let _ = [
     ],
     k = function (t) {
         let { onClose: i, transitionState: n, classificationId: k } = t,
-            E = (0, l.bG)([x.A], () => x.A.getAgeVerificationWebviewUrl()),
-            j = (0, l.bG)([x.A], () => x.A.getIsLoadingAgeVerification()),
+            E = (0, s.bG)([x.A], () => x.A.getAgeVerificationWebviewUrl()),
+            j = (0, s.bG)([x.A], () => x.A.getIsLoadingAgeVerification()),
             f = r.useCallback(() => {
                 (i(), A.A.close());
             }, [i]),
@@ -38,7 +38,7 @@ let _ = [
                         entryPoint: d.q1.AUTOMATED_UNDERAGE_APPEALS,
                     });
             }, [E, m]),
-            (0, e.jsx)(s.Modal, {
+            (0, e.jsx)(l.a, {
                 onClose: i,
                 transitionState: n,
                 title: h.intl.string(h.t["9SDLnj"]),

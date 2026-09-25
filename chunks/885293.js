@@ -5,8 +5,8 @@ var i = a(562708),
     s = a(189213),
     l = a(364522),
     r = a(834730),
-    o = a(150934),
-    c = a(139286),
+    c = a(150934),
+    o = a(139286),
     d = a(174459),
     m = a(60888),
     u = a(652215),
@@ -25,8 +25,8 @@ function _(t) {
             handleCancel: E,
         } = (0, m.u)({ url: e, trustUrl: a, onConfirm: h, onCancel: f, onClose: C });
     return (
-        (0, c.A)({ type: i.ImpressionTypes.MODAL, name: i.ImpressionNames.MASKED_LINK_MODAL }),
-        (0, n.jsxs)(s.Modal, {
+        (0, o.A)({ type: i.ImpressionTypes.MODAL, name: i.ImpressionNames.MASKED_LINK_MODAL }),
+        (0, n.jsxs)(s.a, {
             size: "md",
             transitionState: g,
             onClose: C,
@@ -77,7 +77,7 @@ function _(t) {
                 }),
                 (0, n.jsx)("div", {
                     className: x.F5,
-                    children: (0, n.jsx)(o.S, {
+                    children: (0, n.jsx)(c.S, {
                         checked: v,
                         onChange: (t) => I(t),
                         label: _

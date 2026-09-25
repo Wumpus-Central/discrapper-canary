@@ -97,7 +97,7 @@ function U(l) {
         [U, v] = a.useState(!1),
         [A, I] = a.useState(""),
         [_, k] = a.useState(null),
-        [M, N] = a.useState(null),
+        [N, M] = a.useState(null),
         [T, w] = a.useState(null),
         [P, D] = a.useState(null),
         { isEU: O, displayCountry: G, savedPostalCode: B } = (0, m.A)(),
@@ -122,7 +122,7 @@ function U(l) {
                 };
         }, [G]),
         $ = a.useCallback((l) => {
-            (j(l), w(null), N(null));
+            (j(l), w(null), M(null));
         }, []),
         z = a.useCallback(async () => {
             let l = E.trim(),
@@ -133,7 +133,7 @@ function U(l) {
                 e && (D(O ? y.intl.string(y.t["+bm+zE"]) : y.intl.string(y.t.LRlhb1)), (n = !0)),
                 !n)
             ) {
-                (v(!0), N(null));
+                (v(!0), M(null));
                 try {
                     let e = await (0, f.Ng)(l, O ? void 0 : A.trim(), O ? (_ ?? void 0) : void 0);
                     ((0, f.Ey)(e, Y),
@@ -145,7 +145,7 @@ function U(l) {
                             null != e && (0, C.YP)(e.id);
                         }));
                 } catch (l) {
-                    (N((0, f.tn)(l)), (0, f.k$)(Y));
+                    (M((0, f.tn)(l)), (0, f.k$)(Y));
                     return;
                 } finally {
                     v(!1);
@@ -153,12 +153,12 @@ function U(l) {
             }
         }, [E, O, _, A, r, t, o, Y]),
         F = a.useCallback((l) => {
-            (I(l), D(null), N(null));
+            (I(l), D(null), M(null));
         }, []),
         Q = a.useCallback((l) => {
-            (k(l), D(null), N(null));
+            (k(l), D(null), M(null));
         }, []);
-    return (0, n.jsx)(i.Modal, {
+    return (0, n.jsx)(i.a, {
         transitionState: e,
         onClose: t,
         title: Z,
@@ -168,7 +168,7 @@ function U(l) {
             isEU: O,
             postalCodeInput: A,
             selectedBillingCountry: _,
-            redemptionError: M,
+            redemptionError: N,
             codeError: T,
             billingError: P,
             onCodeInputChange: $,

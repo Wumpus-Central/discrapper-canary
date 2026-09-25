@@ -3,13 +3,13 @@ var l = n(477900),
     i = n(582128),
     s = n(435558),
     a = n.n(s),
-    r = n(189213),
-    o = n(452027),
-    c = n(17928),
-    d = n(123292),
-    u = n(331322),
-    m = n(95477),
-    h = n(404778),
+    r = n(17928),
+    o = n(189213),
+    c = n(123292),
+    d = n(331322),
+    u = n(95477),
+    m = n(404778),
+    h = n(452027),
     j = n(281595),
     g = n(695366),
     x = n(834730),
@@ -28,7 +28,7 @@ var l = n(477900),
     P = n.n(y),
     R = n(414079),
     T = n(747703);
-function M(e) {
+function w(e) {
     let { hasSetEmoji: t, onClick: n, children: s, className: a, buttonClassName: r } = e,
         [o, c] = i.useState(!1),
         d = i.useCallback(() => {
@@ -45,15 +45,15 @@ function M(e) {
         children: [s, t && o ? (0, l.jsx)(R.A, { onClick: d, className: P()(T.D, r) }) : null],
     });
 }
-var w = n(307731);
-function B(e) {
+var B = n(307731);
+function M(e) {
     let { className: t, emojiClassName: n, emoji: s, setEmoji: a, channel: r } = e,
         o = i.useRef(null),
         c =
             null == s || null == s.name
                 ? null
                 : () => (0, l.jsx)(S.A, { className: n, animated: s.animated ?? !1, emojiId: s.id, emojiName: s.name });
-    return (0, l.jsx)(M, {
+    return (0, l.jsx)(w, {
         hasSetEmoji: null != s && null != s.name,
         onClick: function () {
             a(null);
@@ -73,7 +73,7 @@ function B(e) {
                                 : a({ id: n.id, name: n.originalName ?? n.name, animated: n.animated }),
                             l && t());
                     },
-                    pickerIntention: w.EmojiIntention.COMMUNITY_CONTENT,
+                    pickerIntention: B.EmojiIntention.COMMUNITY_CONTENT,
                     channel: r,
                 });
             },
@@ -89,11 +89,11 @@ var D = n(539916),
     O = n(108148);
 function z(e) {
     let { transitionState: t, onClose: n, onSave: s, onDelete: g, option: x, guild: C, prompt: I, index: k } = e,
-        S = (0, c.bG)([f.Ay], () => f.Ay.getDefaultChannel(C.id)),
+        S = (0, r.bG)([f.Ay], () => f.Ay.getDefaultChannel(C.id)),
         [A, N] = i.useState(() => x?.emoji ?? null),
         [y, P] = i.useState(() => x?.title ?? ""),
         [R, T] = i.useState(() => x?.description ?? ""),
-        [M, w] = i.useState(() => new Set(x?.channelIds ?? [])),
+        [w, B] = i.useState(() => new Set(x?.channelIds ?? [])),
         [z, _] = i.useState(() => new Set(x?.roleIds ?? [])),
         [F, G] = i.useState({}),
         J = i.useRef(null);
@@ -106,7 +106,7 @@ function z(e) {
                     id: x?.id ?? `${Date.now()}`,
                     title: y,
                     description: R,
-                    channelIds: Array.from(M).sort(),
+                    channelIds: Array.from(w).sort(),
                     roleIds: Array.from(z).sort(),
                     emoji: null == A ? void 0 : A,
                 },
@@ -119,7 +119,7 @@ function z(e) {
                     null != (o = (0, b.fO)(e, t, l, i)) && (r.roles = o),
                     r);
             (G(d), a().isEmpty(d) && (s(c), n()));
-        }, [M, R, A, C, n, s, x?.id, I, z, y]),
+        }, [w, R, A, C, n, s, x?.id, I, z, y]),
         U = i.useMemo(
             () => [
                 { text: L.intl.string(L.t["ETE/oC"]), onClick: n, variant: "secondary" },
@@ -127,13 +127,13 @@ function z(e) {
             ],
             [Q, n],
         );
-    return (0, l.jsx)(r.Modal, {
+    return (0, l.jsx)(o.a, {
         title: L.intl.formatToPlainString(L.t.yjS3zs, { index: k + 1 }),
         subtitle: null != I.title && I.title.length > 0 ? I.title : L.intl.string(L.t.vY91C9),
         transitionState: t,
         onClose: n,
         actions: U,
-        actionBarInput: (0, l.jsx)(d.Q, {
+        actionBarInput: (0, l.jsx)(c.Q, {
             text: L.intl.string(L.t.N86XcP),
             onClick: function () {
                 (g(), n());
@@ -143,10 +143,10 @@ function z(e) {
         children: (0, l.jsxs)("div", {
             className: O.kL,
             children: [
-                (0, l.jsxs)(u.B, {
+                (0, l.jsxs)(d.B, {
                     gap: 8,
                     children: [
-                        (0, l.jsx)(m.k, {
+                        (0, l.jsx)(u.k, {
                             label: L.intl.string(L.t.VWdcBp),
                             required: !0,
                             inputRef: J,
@@ -157,7 +157,7 @@ function z(e) {
                             autoFocus: !0,
                             error: F.title,
                         }),
-                        (0, l.jsx)(m.k, {
+                        (0, l.jsx)(u.k, {
                             placeholder: L.intl.string(L.t.mIjgJK),
                             value: R,
                             onChange: (e) => T(e),
@@ -165,18 +165,18 @@ function z(e) {
                         }),
                     ],
                 }),
-                (0, l.jsx)(h.c, {}),
-                (0, l.jsxs)(o.D, {
+                (0, l.jsx)(m.c, {}),
+                (0, l.jsxs)(h.D, {
                     label: L.intl.string(L.t.TtIbPA),
                     children: [
-                        (0, l.jsxs)(u.B, {
+                        (0, l.jsxs)(d.B, {
                             gap: 8,
                             children: [
                                 (0, l.jsx)(p.A, {
                                     guildId: C.id,
-                                    selectedChannelIds: M,
+                                    selectedChannelIds: w,
                                     placeholder: L.intl.string(L.t.vephiL),
-                                    onChange: w,
+                                    onChange: B,
                                     helperText: L.intl.string(L.t.SoT6we),
                                 }),
                                 (0, l.jsx)(v.A, {
@@ -194,13 +194,13 @@ function z(e) {
                         (0, l.jsx)(Y, { guild: C, roleIds: z }),
                     ],
                 }),
-                (0, l.jsx)(h.c, {}),
+                (0, l.jsx)(m.c, {}),
                 (0, l.jsx)("div", {
                     className: O.C2,
-                    children: (0, l.jsx)(o.D, {
+                    children: (0, l.jsx)(h.D, {
                         label: L.intl.string(L.t["4ahTBl"]),
                         description: L.intl.string(L.t.Iv9RGg),
-                        children: (0, l.jsx)(B, { emoji: A, setEmoji: N, channel: S }),
+                        children: (0, l.jsx)(M, { emoji: A, setEmoji: N, channel: S }),
                     }),
                 }),
             ],
@@ -209,7 +209,7 @@ function z(e) {
 }
 function Y(e) {
     let { guild: t, roleIds: n } = e,
-        i = (0, c.bG)([C.A], () => C.A.getManyRoles(t.id, n).find(I.J));
+        i = (0, r.bG)([C.A], () => C.A.getManyRoles(t.id, n).find(I.J));
     return null == i
         ? null
         : (0, l.jsx)("div", {

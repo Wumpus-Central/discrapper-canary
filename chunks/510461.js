@@ -35,8 +35,8 @@ ${I.intl.formatToPlainString(A.default.bhoZhI, { channel: e })}`;
 }
 var w = l(683180),
     G = l(512287),
-    M = l(480007),
-    _ = l(652215),
+    _ = l(480007),
+    M = l(652215),
     R = l(381941),
     B = l(286837);
 let O = () => Promise.resolve({ shouldClear: !1, shouldRefocus: !1 });
@@ -137,7 +137,7 @@ function H(e) {
         eg = J.trim(),
         eC = null == U ? null : L(`<#${U}>`),
         ep = i.useCallback(() => {
-            ((0, k.pX)(null == U ? _.BVt.CHANNEL(t) : _.BVt.CHANNEL(t, U)), D());
+            ((0, k.pX)(null == U ? M.BVt.CHANNEL(t) : M.BVt.CHANNEL(t, U)), D());
         }, [U, t, D]),
         eN = i.useCallback(async () => {
             if (null != ef && "" !== eg) {
@@ -153,7 +153,7 @@ function H(e) {
                 }
             }
         }, [ef, eg, eC, l, D]);
-    return (0, n.jsx)(s.Modal, {
+    return (0, n.jsx)(s.a, {
         transitionState: q,
         onClose: D,
         title: I.intl.formatToPlainString(A.default.gOv8LL, { projectName: H }),
@@ -239,7 +239,7 @@ function H(e) {
                                           onFocus: () => en(!0),
                                           onBlur: () => en(!1),
                                           onSubmit: O,
-                                          parentModalKey: M.Y,
+                                          parentModalKey: _.Y,
                                           autoCompletePosition: "bottom",
                                           emojiPickerCloseOnModalOuterClick: !0,
                                           disableThemedBackground: !0,

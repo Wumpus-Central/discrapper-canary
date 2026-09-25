@@ -5,7 +5,7 @@ var r = n(189213),
     a = n(375708);
 function e(t) {
     let { onClose: i, transitionState: n } = t;
-    return (0, s.jsx)(r.Modal, {
+    return (0, s.jsx)(r.a, {
         transitionState: n,
         size: "sm",
         title: a.intl.string(a.t.wLrh03),

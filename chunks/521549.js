@@ -13,7 +13,7 @@ function c(t) {
     function o() {
         (a.default.selectVoiceChannel(null), c());
     }
-    return (0, l.jsx)(e.Modal, {
+    return (0, l.jsx)(e.a, {
         transitionState: i,
         title: u.intl.string(u.t["4Ao8LC"]),
         subtitle: u.intl.string(u.t["0I0B8f"]),

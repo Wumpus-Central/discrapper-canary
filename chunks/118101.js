@@ -10,7 +10,7 @@ function l(t) {
     function o() {
         (r.default.disconnect(), l());
     }
-    return (0, s.jsx)(a.Modal, {
+    return (0, s.jsx)(a.a, {
         transitionState: n,
         title: e.intl.string(e.t.pADdJu),
         subtitle: e.intl.string(e.t.mT7jwN),

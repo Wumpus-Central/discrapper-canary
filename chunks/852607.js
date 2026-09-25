@@ -12,10 +12,10 @@ function c() {
     });
 }
 var d = n(830382),
-    m = n(696208),
-    p = n(297264),
-    C = n(834730),
-    h = n(28863),
+    m = n(297264),
+    p = n(834730),
+    C = n(28863),
+    h = n(696208),
     f = n(375708),
     E = n(203949);
 function S(e) {
@@ -25,21 +25,21 @@ function S(e) {
         children: (0, l.jsxs)("div", {
             className: E.a,
             children: [
-                (0, l.jsx)(p.D, { variant: "heading-xl/bold", children: f.intl.string(f.t.Q03WWV) }),
+                (0, l.jsx)(m.D, { variant: "heading-xl/bold", children: f.intl.string(f.t.Q03WWV) }),
                 (0, l.jsxs)("p", {
                     children: [
-                        (0, l.jsx)(C.E, { variant: "text-md/normal", children: f.intl.string(f.t.BxPxhI) }),
+                        (0, l.jsx)(p.E, { variant: "text-md/normal", children: f.intl.string(f.t.BxPxhI) }),
                         (0, l.jsx)("br", {}),
-                        (0, l.jsx)(C.E, { variant: "text-md/normal", children: f.intl.string(f.t.Y3fdOp) }),
+                        (0, l.jsx)(p.E, { variant: "text-md/normal", children: f.intl.string(f.t.Y3fdOp) }),
                         (0, l.jsx)("br", {}),
-                        (0, l.jsxs)(C.E, {
+                        (0, l.jsxs)(p.E, {
                             variant: "text-md/normal",
                             children: [
                                 f.intl.string(f.t.Paa4v4),
                                 "\xa0",
                                 n
                                     ? f.intl.string(f.t.StGVvC)
-                                    : (0, l.jsx)(h.Anchor, { onClick: i, children: f.intl.string(f.t.Ex7sk9) }),
+                                    : (0, l.jsx)(C.Anchor, { onClick: i, children: f.intl.string(f.t.Ex7sk9) }),
                             ],
                         }),
                     ],
@@ -50,7 +50,7 @@ function S(e) {
 }
 function y() {
     let e = i.useMemo(() => [{ variant: "primary", text: f.intl.string(f.t.g8vPzy), disabled: !0 }], []);
-    return (0, l.jsx)(m.H, { actions: e });
+    return (0, l.jsx)(h.H, { actions: e });
 }
 var I = n(636950);
 function g() {

@@ -5745,7 +5745,7 @@ let at = [...eG.oz],
                                           ],
                                       });
                                   }
-                                  return (0, r.jsx)(r3.ConfirmModal, {
+                                  return (0, r.jsx)(r3.u, {
                                       onConfirm: async () => {
                                           (p(!0), (await d()) && e());
                                       },

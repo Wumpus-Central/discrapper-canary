@@ -17,11 +17,11 @@ var l = n(477900),
     s = n(503698),
     r = n.n(s),
     a = n(512750),
-    o = n(289704),
-    d = n(17928),
-    c = n(116833),
-    u = n(206248),
-    h = n(43105),
+    o = n(17928),
+    d = n(116833),
+    c = n(206248),
+    u = n(43105),
+    h = n(289704),
     A = n(775602),
     g = n(793574),
     m = n(688810),
@@ -97,7 +97,7 @@ function Y(e) {
 function X(e) {
     let { guildId: t, markAsDismissed: n, channelRowRef: i, ...s } = e,
         r = b(g.A.GUILD_POWERUPS_COACHMARK);
-    return (0, l.jsx)(u.H, {
+    return (0, l.jsx)(c.H, {
         targetElementRef: i,
         position: "right",
         alignmentStrategy: "edge",
@@ -121,8 +121,8 @@ function X(e) {
 }
 function q(e) {
     let { guildId: t, powerups: n, channelRowRef: i, markAsDismissed: s } = e,
-        a = (0, d.bG)([N.A], () => N.A.getGuild(t)?.name),
-        { onActivate: o, isLoading: c, error: u } = (0, D.A)(t, n[0]),
+        a = (0, o.bG)([N.A], () => N.A.getGuild(t)?.name),
+        { onActivate: d, isLoading: c, error: u } = (0, D.A)(t, n[0]),
         h = (0, G.A)(n[0], !0);
     if (((0, O.A)(u), 0 === n.length)) return;
     let A =
@@ -149,7 +149,7 @@ function q(e) {
                 text: m ? F.intl.string(k.default.gSxlHf) : F.intl.string(F.t.RzWDqY),
                 variant: "primary",
                 onClick: (e) => {
-                    (e.stopPropagation(), m ? o() : (0, R.A)(t, g.A.GUILD_POWERUPS_COACHMARK_PURCHASEABLE_PERKS));
+                    (e.stopPropagation(), m ? d() : (0, R.A)(t, g.A.GUILD_POWERUPS_COACHMARK_PURCHASEABLE_PERKS));
                 },
                 loading: c,
             },
@@ -271,21 +271,21 @@ function Z(e) {
 function J(e) {
     let { guildId: t, type: n, markAsDismissed: i, channelRowRef: s } = e,
         { available: r } = (0, j.A)(t),
-        { gameName: a, gameName2: c } = (0, f.A)(),
-        u = (0, d.bG)([A.Ay], () => A.Ay.useReducedMotion);
+        { gameName: a, gameName2: d } = (0, f.A)(),
+        c = (0, o.bG)([A.Ay], () => A.Ay.useReducedMotion);
     return (0, l.jsx)(es, {
         size: "video",
         targetElementRef: s,
-        asset: (0, l.jsx)(o.E, {
+        asset: (0, l.jsx)(h.E, {
             withReducedMotion: "halt",
             fit: "contain",
             className: z.Sl,
-            stateMachine: u ? "SM_Main_Int" : "SM_Auto",
+            stateMachine: c ? "SM_Main_Int" : "SM_Auto",
         }),
         title: F.intl.string(n === I.o.GAME_SERVER_HOSTING_AVAILABLE ? K.default.wXLChx : K.default["8z8RpY"]),
         body:
             n === I.o.GAME_SERVER_HOSTING_AVAILABLE
-                ? F.intl.formatToPlainString(K.default["7KXp9J"], { gameName: a, gameName2: c })
+                ? F.intl.formatToPlainString(K.default["7KXp9J"], { gameName: a, gameName2: d })
                 : F.intl.format(K.default["IQ1E+d"], { boostCount: r }),
         actions: [
             {
@@ -299,11 +299,11 @@ function J(e) {
 }
 function $(e) {
     let { guildId: t, markAsDismissed: n, channelRowRef: i } = e,
-        s = (0, d.bG)([A.Ay], () => A.Ay.useReducedMotion);
+        s = (0, o.bG)([A.Ay], () => A.Ay.useReducedMotion);
     return (0, l.jsx)(es, {
         size: "video",
         targetElementRef: i,
-        asset: (0, l.jsx)(o.E, {
+        asset: (0, l.jsx)(h.E, {
             withReducedMotion: "halt",
             fit: "contain",
             className: z.Sl,
@@ -326,7 +326,7 @@ function $(e) {
 function Q(e) {
     let { guildId: t, markAsDismissed: n, channelRowRef: i } = e,
         { gameName: s, gameName2: r } = (0, f.A)(),
-        a = (0, d.bG)([A.Ay], () => A.Ay.useReducedMotion);
+        a = (0, o.bG)([A.Ay], () => A.Ay.useReducedMotion);
     return (0, l.jsx)(es, {
         size: "video",
         targetElementRef: i,
@@ -334,7 +334,7 @@ function Q(e) {
         align: "center",
         alignmentStrategy: "edge",
         caretConfig: { align: "center" },
-        asset: (0, l.jsx)(o.E, {
+        asset: (0, l.jsx)(h.E, {
             withReducedMotion: "halt",
             fit: "contain",
             className: z.Sl,
@@ -361,10 +361,10 @@ function Q(e) {
 }
 function ee(e) {
     let { guildId: t, markAsDismissed: n, channelRowRef: i } = e,
-        s = (0, d.bG)([_.A], () => _.A.getStateForGuild(t)?.allPowerups[a.d0]),
+        s = (0, o.bG)([_.A], () => _.A.getStateForGuild(t)?.allPowerups[a.d0]),
         r = (0, G.A)(s, !0) ?? W,
-        { available: o } = (0, j.A)(t),
-        c = P.fe - o,
+        { available: d } = (0, j.A)(t),
+        c = P.fe - d,
         { analyticsLocations: u } = (0, m.Ay)(g.A.GUILD_POWERUPS_COACHMARK_GUILD_THEME_MEMBER);
     return (0, l.jsx)(es, {
         size: "video",
@@ -434,12 +434,12 @@ function et(e) {
 function en(e) {
     let { guildId: t, markAsDismissed: n, channelRowRef: i, ...s } = e,
         r = (0, v.A)(t),
-        a = (0, d.bG)([A.Ay], () => A.Ay.useReducedMotion);
+        a = (0, o.bG)([A.Ay], () => A.Ay.useReducedMotion);
     return (0, l.jsx)(es, {
         size: "video",
         targetElementRef: i,
         ...s,
-        asset: (0, l.jsx)(o.E, {
+        asset: (0, l.jsx)(h.E, {
             withReducedMotion: "halt",
             fit: "contain",
             className: z.Sl,
@@ -510,13 +510,13 @@ function el(e) {
 }
 function ei(e) {
     let { guildId: t, featuredExpiringPowerup: n, channelRowRef: s, markAsDismissed: r, ...a } = e,
-        c = (0, d.bG)([_.A], () => _.A.getStateForGuild(t)),
-        { analyticsLocations: u } = (0, m.Ay)(g.A.GUILD_POWERUPS_COACHMARK_EXPIRING_PERK),
-        h = c?.allPowerups[n.skuId],
-        f = (0, G.A)(h, !0),
+        d = (0, o.bG)([_.A], () => _.A.getStateForGuild(t)),
+        { analyticsLocations: c } = (0, m.Ay)(g.A.GUILD_POWERUPS_COACHMARK_EXPIRING_PERK),
+        u = d?.allPowerups[n.skuId],
+        f = (0, G.A)(u, !0),
         p = i.useRef(null),
-        C = (0, d.bG)([A.Ay], () => A.Ay.useReducedMotion);
-    if (null == h && !n.isGameServer) return null;
+        C = (0, o.bG)([A.Ay], () => A.Ay.useReducedMotion);
+    if (null == u && !n.isGameServer) return null;
     let x = n.isGameServer
             ? F.intl.string(k.default["9L0pAN"])
             : F.intl.formatToPlainString(k.default.gG8bI8, { perkName: n.name }),
@@ -525,14 +525,14 @@ function ei(e) {
     return (0, l.jsx)(es, {
         size: n.isGameServer ? "video" : void 0,
         asset: n.isGameServer
-            ? (0, l.jsx)(o.E, {
+            ? (0, l.jsx)(h.E, {
                   withReducedMotion: "halt",
                   fit: "contain",
                   className: z.Sl,
                   stateMachine: C ? "SM_Main_Int" : "SM_Auto",
               })
-            : h?.type === P.o9.LEVEL
-              ? (0, l.jsx)(U, { powerup: h, eventTargetRef: p, className: z.Lj })
+            : u?.type === P.o9.LEVEL
+              ? (0, l.jsx)(U, { powerup: u, eventTargetRef: p, className: z.Lj })
               : (0, l.jsx)("img", { alt: "", src: f, className: z.Sl }),
         title: x,
         body: S,
@@ -548,8 +548,8 @@ function ei(e) {
                         guild: e,
                         numberOfBoostsToAdd: n.numExpiringBoosts,
                         analyticsLocation: l,
-                        analyticsLocations: u,
-                        intent: h?.type === P.o9.PERK || n.isGameServer ? P.Pn.PERK : void 0,
+                        analyticsLocations: c,
+                        intent: u?.type === P.o9.PERK || n.isGameServer ? P.Pn.PERK : void 0,
                     }),
                         r(H.i.TAKE_ACTION));
                 },
@@ -569,18 +569,18 @@ function es(e) {
             markAsDismissed: r,
             size: a = "lg",
             asset: o,
-            aspectRatio: d,
-            ...u
+            aspectRatio: c,
+            ...h
         } = e,
         A = b(g.A.GUILD_POWERUPS_COACHMARK);
-    return (0, l.jsx)(h.A, {
-        ...u,
+    return (0, l.jsx)(u.A, {
+        ...h,
         gradientColor: "pink",
         graphic: {
             type: "dynamic",
-            component: c.DynamicGraphicComponent.GUILD_POWERUPS_COACHMARK_ASSET,
+            component: d.DynamicGraphicComponent.GUILD_POWERUPS_COACHMARK_ASSET,
             props: { asset: o },
-            aspectRatio: d,
+            aspectRatio: c,
         },
         size: a,
         shouldShow: !0,

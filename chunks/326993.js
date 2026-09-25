@@ -3,8 +3,8 @@ var n = t(477900),
     s = t(582128),
     r = t(435558),
     a = t.n(r),
-    l = t(189213),
-    d = t(17928),
+    l = t(17928),
+    d = t(189213),
     o = t(331322),
     c = t(834730),
     p = t(683071),
@@ -34,9 +34,9 @@ function N(i) {
             transitionState: N,
         } = i,
         [R, w] = s.useState(null),
-        [B, M] = s.useState(!1),
+        [B, _] = s.useState(!1),
         {
-            originalApplicationPermissions: _,
+            originalApplicationPermissions: M,
             originalCommandPermissions: O,
             editedTargetPermissions: S,
             hasChanges: T,
@@ -49,10 +49,10 @@ function N(i) {
                 n = (0, b.Ap)(u),
                 s = (0, C.Eu)(u, h.RA.ROLE),
                 r = (0, C.Eu)(n, h.RA.CHANNEL),
-                l = _[s]?.permission ?? !0,
-                d = _[r]?.permission ?? !0,
+                l = M[s]?.permission ?? !0,
+                d = M[r]?.permission ?? !0,
                 o = Object.values(e).map((i) => ({ id: i.id, permission: i.permission, type: i.type }));
-            (w(null), M(!0));
+            (w(null), _(!0));
             try {
                 (await v.Ni({
                     defaultEveryoneValue: l,
@@ -62,13 +62,13 @@ function N(i) {
                     guildId: u,
                     permissions: o,
                 }),
-                    M(!1),
+                    _(!1),
                     j());
             } catch (i) {
                 w(new y.A(i));
             }
-            M(!1);
-        }, [t, _, m.id, m.permissions, u, T, j, S, w, M]);
+            _(!1);
+        }, [t, M, m.id, m.permissions, u, T, j, S, w, _]);
     s.useEffect(
         () => () => {
             (v.C8(m.id), g.A.stopEditingCommandPermissions(m.id));
@@ -76,10 +76,10 @@ function N(i) {
         [m.id],
     );
     let G = (0, C.p6)(m.type, m.displayName),
-        H = (0, d.bG)([E.A], () => E.A.getApplication(t)),
+        H = (0, l.bG)([E.A], () => E.A.getApplication(t)),
         V = H?.bot?.id,
-        Y = (0, d.bG)([x.Ay], () => (null != V ? x.Ay.getMember(u, V) : null));
-    return (0, n.jsx)(l.Modal, {
+        Y = (0, l.bG)([x.Ay], () => (null != V ? x.Ay.getMember(u, V) : null));
+    return (0, n.jsx)(d.a, {
         "aria-label": I.intl.string(I.t["N+InBa"]),
         transitionState: N,
         onClose: j,
@@ -125,7 +125,7 @@ function N(i) {
                     commandId: m.id,
                     guildId: u,
                     inModal: !0,
-                    originalApplicationPermissions: _,
+                    originalApplicationPermissions: M,
                     originalCommandPermissions: O,
                     editedTargetPermissions: S,
                     selectedPermissionCount: z,

@@ -3,8 +3,8 @@ var r = e(477900),
     a = e(582128),
     n = e(189213),
     l = e(683071),
-    d = e(964486),
-    s = e(174459),
+    s = e(964486),
+    d = e(174459),
     u = e(427262),
     c = e(751877),
     o = e(88001),
@@ -16,19 +16,19 @@ let p = function (t) {
         [f, b] = (0, a.useState)(!1),
         [h, k] = (0, a.useState)(!1);
     async function w() {
-        (s.default.track(_.HAw.PREMIUM_GROUP_REMOVE_MEMBER_CTA_CLICKED, { subscription_id: i, member_user_id: e.id }),
+        (d.default.track(_.HAw.PREMIUM_GROUP_REMOVE_MEMBER_CTA_CLICKED, { subscription_id: i, member_user_id: e.id }),
             b(!0));
         let t = await (0, c.oO)(i, e.id);
         (b(!1), t.ok ? p() : k(!0));
     }
     return (
-        (0, d.Ay)(() => {
-            s.default.track(_.HAw.PREMIUM_GROUP_REMOVE_MEMBER_MODAL_VIEWED, {
+        (0, s.Ay)(() => {
+            d.default.track(_.HAw.PREMIUM_GROUP_REMOVE_MEMBER_MODAL_VIEWED, {
                 subscription_id: i,
                 member_user_id: e.id,
             });
         }),
-        (0, r.jsx)(n.Modal, {
+        (0, r.jsx)(n.a, {
             size: "md",
             title: m.intl.string(M.default.MJIHXY),
             subtitle: m.intl.formatToPlainString(M.default.gMyQrH, {

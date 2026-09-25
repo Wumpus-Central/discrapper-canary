@@ -3,8 +3,8 @@ var t = l(477900),
     r = l(582128),
     s = l(503698),
     n = l.n(s),
-    i = l(43990),
-    u = l(17928),
+    i = l(17928),
+    u = l(43990),
     d = l(770178),
     c = l(363195),
     o = l(746002),
@@ -104,7 +104,7 @@ function b(e) {
 }
 function y(e) {
     let { frame: a, className: l, filterLayer: s, fadeIn: n = !0, isPreview: d } = e,
-        o = (0, u.bG)([c.A], () => c.A.theme),
+        o = (0, i.bG)([c.A], () => c.A.theme),
         g = (0, m.eo)(),
         p = (0, f.i)(a),
         { profileFrameStyle: y, profileFrameClassName: j } = g?.css ?? p,
@@ -121,7 +121,7 @@ function y(e) {
         C = g?.layerData ?? N,
         M = null != g || A;
     return 0 !== v.length && M
-        ? (0, t.jsx)(i.N, {
+        ? (0, t.jsx)(u.N, {
               theme: o,
               children: (e) =>
                   (0, t.jsx)(b, {

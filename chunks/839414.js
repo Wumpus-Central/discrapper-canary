@@ -1471,7 +1471,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e6 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eW.A().log(
-    `[BUILD INFO] Release Channel: ${e6}, Build Number: 621678, Version Hash: f310c462681ca030661c7c6d86a344fe3e1935e3`,
+    `[BUILD INFO] Release Channel: ${e6}, Build Number: 621784, Version Hash: 0dcfc5ad392afbae059b72b2479a2e3b018982c9`,
 ),
     M.A.setTags({ appContext: F.QCW }),
     ep.A.initBasic(),
@@ -21813,7 +21813,7 @@ let Cn = "isHideDevBanner",
                     className: to()(Ct.Wz, Ct.mr),
                     children: [
                         (0, y.jsx)(Ce, { className: Ct.Kk }),
-                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "621678" }),
+                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "621784" }),
                         (0, y.jsx)(r, {}),
                     ],
                 })
@@ -21913,8 +21913,8 @@ function Cf() {
     });
 }
 var Cp = n(202163),
-    CT = n(219869),
-    Cm = n(499979),
+    CT = n(499979),
+    Cm = n(219869),
     Cg = n(475743),
     CS = n(299871),
     CN = n(650493),
@@ -21941,10 +21941,10 @@ function CO(e) {
             return;
         }
         if (null == i || A || !Number.isFinite(n)) return;
-        let e = (0, Cm.tB)(),
+        let e = (0, CT.tB)(),
             r = setTimeout(i, h.current);
         return () => {
-            (clearTimeout(r), (h.current -= (0, Cm.tB)() - e));
+            (clearTimeout(r), (h.current -= (0, CT.tB)() - e));
         };
     }, [t, n, i, A]),
         (0, o_.l0)(i ?? F.tEg));
@@ -21955,7 +21955,7 @@ function CO(e) {
         children:
             null != i &&
             null != r &&
-            (0, y.jsx)(CT.T, { icon: d1.P, "aria-label": r, onClick: i, variant: "icon-only", size: "xs" }),
+            (0, y.jsx)(Cm.T, { icon: d1.P, "aria-label": r, onClick: i, variant: "icon-only", size: "xs" }),
     });
     return (0, y.jsx)("div", {
         className: to()(CN.iE, a, { [CN.RP]: "exiting" === o }),
@@ -25910,8 +25910,8 @@ let RJ = (0, tj.Fe)({
                 n.e("263953"),
                 n.e("263651"),
                 n.e("493756"),
-            ]).then(n.bind(n, 965820)),
-        webpackId: 965820,
+            ]).then(n.bind(n, 869579)),
+        webpackId: 869579,
         name: "GuildSpacePage",
     }),
     R7 = (0, tj.Fe)({
@@ -40712,7 +40712,7 @@ function UI(e) {
                 variant: "primary",
             },
         ];
-    return (0, y.jsx)(UE.Modal, { ...o, title: n, subtitle: i, actions: d });
+    return (0, y.jsx)(UE.a, { ...o, title: n, subtitle: i, actions: d });
 }
 let Uf = {
     [F.e$_.SHOW_CONFIRM_MODAL]: Mt(F.e$_.SHOW_CONFIRM_MODAL, {
@@ -47052,8 +47052,8 @@ class kK extends eE.PureComponent {
     }
 }
 var k$ = n(337836),
-    kz = n(557361),
-    kX = n(59652),
+    kz = n(59652),
+    kX = n(557361),
     kq = n(638495),
     kZ = n(988393),
     kQ = n(197808),
@@ -48923,7 +48923,7 @@ let FG = function () {
             () => (
                 e
                     ? (t.current = (0, tW.openModal)((e) =>
-                          (0, y.jsx)(UE.Modal, {
+                          (0, y.jsx)(UE.a, {
                               title: tS.intl.string(tS.t.dLLxC2),
                               subtitle: tS.intl.string(tS.t["64lmtw"]),
                               actions: [
@@ -49006,7 +49006,7 @@ let FH = new FV(U.h, {
     },
 });
 function Fj(e) {
-    return (0, y.jsx)(UE.Modal, {
+    return (0, y.jsx)(UE.a, {
         size: "md",
         title: tS.intl.string(tS.t.NYklhr),
         subtitle: tS.intl.string(tS.t.EJ26Oh),
@@ -49057,7 +49057,7 @@ function F$(e) {
         (0, o_.l0)(() => {
             i && Fx.A.clearPTTAdminWarning();
         }),
-        (0, y.jsx)(UE.Modal, {
+        (0, y.jsx)(UE.a, {
             size: "md",
             title: tS.intl.string(tS.t.eotlXE),
             subtitle: tS.intl.formatToPlainString(tS.t.Lw6KXV, { game: t?.name }),
@@ -49111,7 +49111,7 @@ function Fq(e) {
         i
             ? ((t = tS.intl.string(tS.t.Y40Jke)), (n = tS.intl.string(tS.t["5J4yGc"])))
             : ((t = tS.intl.string(tS.t.FJSZVM)), (n = tS.intl.string(tS.t.etJjgW))),
-        (0, y.jsx)(UE.Modal, {
+        (0, y.jsx)(UE.a, {
             size: "md",
             title: t,
             subtitle: n,
@@ -49487,7 +49487,7 @@ var B_ = n(404374),
                 ? window.addEventListener("contextmenu", e.contextMenuCallbackNative, !1)
                 : window.addEventListener("contextmenu", e.contextMenuCallbackWeb, !1);
         }),
-    (0, kX.h)({ getDefaultLinkInterceptor: k1.default }),
+    (0, kz.h)({ getDefaultLinkInterceptor: k1.default }),
     (0, ii.Fe)({
         createPromise: () =>
             Promise.all([
@@ -49559,7 +49559,7 @@ let Bh = (0, ii.Fe)({
                                     children: [
                                         (0, y.jsx)(BE.Al, {}),
                                         (0, y.jsx)(B_.Ay, {}),
-                                        (0, y.jsx)(kz.Ut, {}),
+                                        (0, y.jsx)(kX.Ut, {}),
                                         (0, y.jsx)(tE.Wr, {
                                             appContext: F.BRT.APP,
                                             renderWindow: window,
@@ -49615,7 +49615,7 @@ let Bh = (0, ii.Fe)({
                                                 ],
                                             }),
                                         }),
-                                        (0, y.jsx)(kz.Ut, {}),
+                                        (0, y.jsx)(kX.Ut, {}),
                                     ],
                                 }),
                             }),

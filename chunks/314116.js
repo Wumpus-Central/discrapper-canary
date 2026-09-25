@@ -4,5 +4,5 @@ n(582128);
 var r = n(192308),
     a = n(732159);
 function s(e) {
-    return (0, r.openModal)((t) => (0, i.jsx)(a.ConfirmModal, { ...t, ...e }));
+    return (0, r.openModal)((t) => (0, i.jsx)(a.u, { ...t, ...e }));
 }

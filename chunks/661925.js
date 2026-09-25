@@ -3,22 +3,22 @@ var a = n(477900),
     i = n(582128),
     l = n(284009),
     r = n.n(l),
-    s = n(189213),
-    o = n(17928),
-    c = n(192308),
-    d = n(834730),
-    u = n(940856),
+    s = n(17928),
+    c = n(189213),
+    o = n(192308),
+    u = n(834730),
+    d = n(940856),
     m = n(287809),
     k = n(375708),
     p = n(223863);
 let C = function (t) {
     let { onClose: e, transitionState: l } = t,
-        C = (0, o.bG)([m.default], () => m.default.getCurrentUser()),
+        C = (0, s.bG)([m.default], () => m.default.getCurrentUser()),
         [b, f] = i.useState(!1),
         g = i.useCallback(() => (e?.(), Promise.resolve()), [e]),
         h = i.useCallback(() => {
             (e?.(),
-                (0, c.openModalLazy)(async () => {
+                (0, o.openModalLazy)(async () => {
                     let { default: t } = await Promise.all([
                         n.e("279385"),
                         n.e("722514"),
@@ -38,7 +38,7 @@ let C = function (t) {
             (e?.(),
                 r()(null != C, "ResendEmailVerificationButton: currentUser cannot be undefined"),
                 f(!0),
-                (0, u.S)(C).finally(() => f(!1)));
+                (0, d.S)(C).finally(() => f(!1)));
         }, [C, e]),
         v = i.useMemo(
             () =>
@@ -50,14 +50,14 @@ let C = function (t) {
                       ],
             [C, h, x, b],
         );
-    return (0, a.jsxs)(s.Modal, {
+    return (0, a.jsxs)(c.a, {
         title: k.intl.string(k.t.UZLrY1),
         transitionState: l,
         onClose: g,
         actions: v,
         children: [
             (0, a.jsx)("div", { className: p.p }),
-            (0, a.jsx)(d.E, { variant: "text-md/normal", className: p.i, children: k.intl.string(k.t["0LgOKH"]) }),
+            (0, a.jsx)(u.E, { variant: "text-md/normal", className: p.i, children: k.intl.string(k.t["0LgOKH"]) }),
         ],
     });
 };

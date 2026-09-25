@@ -2,9 +2,9 @@
 var i = n(477900),
     l = n(582128),
     r = n(562708),
-    s = n(189213),
-    a = n(17928),
-    o = n(933681),
+    s = n(17928),
+    a = n(933681),
+    o = n(189213),
     c = n(785007),
     d = n(276293),
     u = n(983851),
@@ -36,11 +36,11 @@ var i = n(477900),
     V = n(660652);
 function T(t) {
     let { guildId: e, transitionState: n, onSubmit: T, onClose: B } = t,
-        [M, O] = l.useState(w._Ee),
-        [X, F] = l.useState(w.rbe.GUILD_TEXT),
+        [O, X] = l.useState(w._Ee),
+        [F, M] = l.useState(w.rbe.GUILD_TEXT),
         [W, P] = l.useState(""),
         [Z, q] = l.useState(!1),
-        J = (0, a.bG)([D.A], () => D.A.getGuild(e), [e]),
+        J = (0, s.bG)([D.A], () => D.A.getGuild(e), [e]),
         K = (0, j.R)(e),
         Q = (0, C.V)(J),
         Y = l.useMemo(
@@ -114,7 +114,7 @@ function T(t) {
                 })({ canCreateStageChannel: K, canCreateMediaChannel: Q }),
             [K, Q],
         ),
-        $ = (0, a.bG)([y.A], () => y.A.getCategories(e)._categories, [e]),
+        $ = (0, s.bG)([y.A], () => y.A.getCategories(e)._categories, [e]),
         z = l.useMemo(
             () =>
                 $.map((t) => {
@@ -123,16 +123,16 @@ function T(t) {
                 }),
             [$],
         ),
-        tt = Y.find((t) => t.value === X)?.channelIcon ?? H.FX,
+        tt = Y.find((t) => t.value === F)?.channelIcon ?? H.FX,
         te = "" !== W;
     return (0, i.jsx)("form", {
         onSubmit: function (t) {
             if ((t.preventDefault(), !te)) return;
             q(!0);
             let n = {
-                type: X,
+                type: F,
                 name: W,
-                parent_id: "null" !== M ? M : void 0,
+                parent_id: "null" !== O ? O : void 0,
                 permission_overwrites: [{ id: e, type: _.r2.ROLE, allow: S.x3, deny: w.xBc.VIEW_CHANNEL }],
             };
             U.A.post({
@@ -142,7 +142,7 @@ function T(t) {
                 trackedActionData: {
                     event: r.NetworkActionNames.CHANNEL_CREATE,
                     properties: (t) =>
-                        (0, o.e0)({ is_private: !0, channel_id: t?.body?.id, channel_type: t?.body?.type }),
+                        (0, a.e0)({ is_private: !0, channel_id: t?.body?.id, channel_type: t?.body?.type }),
                 },
                 rejectWithError: !0,
             })
@@ -156,7 +156,7 @@ function T(t) {
                     q(!1);
                 });
         },
-        children: (0, i.jsx)(s.Modal, {
+        children: (0, i.jsx)(o.a, {
             transitionState: n,
             title: R.intl.string(R.t["fUYU+j"]),
             onClose: B,
@@ -170,26 +170,26 @@ function T(t) {
                     (0, i.jsx)(m.l, {
                         label: R.intl.string(R.t.vHCZwr),
                         placeholder: R.intl.string(R.t["g/Rr2S"]),
-                        value: M,
+                        value: O,
                         options: z,
-                        onSelectionChange: O,
+                        onSelectionChange: X,
                         selectionMode: "single",
                         fullWidth: !0,
                     }),
                     (0, i.jsx)(c.$d, {
                         label: R.intl.string(R.t["7ZcXG2"]),
                         options: Y,
-                        value: X,
+                        value: F,
                         onChange: (t) => {
                             let { value: e } = t;
-                            return F(e);
+                            return M(e);
                         },
                     }),
                     (0, i.jsx)(E.k, {
                         label: R.intl.string(R.t.PVbHDl),
                         value: W,
                         onChange: function (t) {
-                            ((0, k.ke)(X) && (t = (0, N.an)(t)), P(t));
+                            ((0, k.ke)(F) && (t = (0, N.an)(t)), P(t));
                         },
                         maxLength: w.Ign,
                         placeholder: R.intl.string(R.t["bw/b8E"]),

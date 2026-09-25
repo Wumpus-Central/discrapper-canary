@@ -18,7 +18,7 @@ function o(a) {
     return (
         t.hasCancelButton && u.push({ variant: "secondary", text: c.intl.string(c.t["ETE/oC"]), onClick: o }),
         null != t.primaryButtonText && u.push({ variant: "primary", text: t.primaryButtonText, onClick: p }),
-        (0, s.jsx)(n.Modal, {
+        (0, s.jsx)(n.a, {
             ...h,
             onClose: o,
             title: t.header,

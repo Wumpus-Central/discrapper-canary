@@ -18,7 +18,9 @@ let s = {
         } = e;
         (0, r.openModalLazy)(
             async () => {
-                let { Modal: e } = await Promise.resolve().then(n.bind(n, 189213));
+                let { Modal: e } = await Promise.all([n.e("454048"), n.e("304823"), n.e("223976")]).then(
+                    n.bind(n, 732955),
+                );
                 return function (n) {
                     let r = [];
                     return (

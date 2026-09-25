@@ -2,8 +2,8 @@
 var n = i(477900),
     l = i(582128),
     a = i(136722),
-    s = i(189213),
-    r = i(17928),
+    s = i(17928),
+    r = i(189213),
     d = i(289873),
     o = i(890497),
     c = i(193249),
@@ -27,13 +27,13 @@ function v(e) {
 let S = function (e) {
     let t,
         i,
-        { guild: S, channel: b, permission: j, onClose: N, transitionState: E, currentSelectedRoles: M = [] } = e,
-        { shouldEveryonePost: R, setShouldEveryonePost: A } = (function (e, t) {
+        { guild: S, channel: b, permission: j, onClose: N, transitionState: E, currentSelectedRoles: R = [] } = e,
+        { shouldEveryonePost: A, setShouldEveryonePost: M } = (function (e, t) {
             let i = y.MJ(t, e),
                 [n, a] = l.useState(i);
             return { shouldEveryonePost: n, setShouldEveryonePost: a };
         })(b, j),
-        O = ((t = (0, r.bG)([g.A], () => g.A.getSortedRoles(S.id))),
+        O = ((t = (0, s.bG)([g.A], () => g.A.getSortedRoles(S.id))),
         l.useMemo(() => (0, f.i)(t).filter((e) => C(S.id)(e.id)), [S, t])).map((e) => ({
             key: e.key,
             id: e.id,
@@ -41,12 +41,12 @@ let S = function (e) {
             value: e.id,
             leading: (0, n.jsx)(v, { rolesRow: e }),
         })),
-        [T, F] = l.useState(M.map((e) => e.id).filter(C(S.id))),
+        [T, F] = l.useState(R.map((e) => e.id).filter(C(S.id))),
         [G, P] = l.useState(!1),
         [W, Z] = l.useState(!1),
-        q = T.length > 0 || R,
+        q = T.length > 0 || A,
         K =
-            ((i = (0, r.bG)([g.A], () => g.A.getSortedRoles(S.id))),
+            ((i = (0, s.bG)([g.A], () => g.A.getSortedRoles(S.id))),
             l.useCallback(
                 (e, t) => {
                     let n = (0, f.i)(i),
@@ -82,7 +82,7 @@ let S = function (e) {
         if (!q) return;
         (P(!0), Z(!1));
         let e = [...T];
-        if (R) {
+        if (A) {
             let t = (0, x.af)(S);
             e.push(t);
         }
@@ -96,7 +96,7 @@ let S = function (e) {
     }
     return G
         ? (0, n.jsx)(d.y, {})
-        : (0, n.jsxs)(s.Modal, {
+        : (0, n.jsxs)(r.a, {
               title: k.intl.string(k.t.TFGnmk),
               actions: [
                   { variant: "secondary", text: k.intl.string(k.t["ETE/oC"]), onClick: N },
@@ -123,8 +123,8 @@ let S = function (e) {
                       children: (0, n.jsx)(c.d, {
                           label: k.intl.string(k.t["kPwwA/"]),
                           description: k.intl.format(k.t.l7Ercq, {}),
-                          checked: R,
-                          onChange: A,
+                          checked: A,
+                          onChange: M,
                       }),
                   }),
                   W

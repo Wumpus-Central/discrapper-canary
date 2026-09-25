@@ -2,12 +2,12 @@ n.d(t, { m: () => f });
 var i = n(477900);
 n(582128);
 var l = n(17928),
-    r = n(834730),
-    s = n(862482),
-    a = n(939249),
-    o = n(789645),
-    d = n(403581),
-    c = n(297264),
+    r = n(862482),
+    s = n(939249),
+    a = n(789645),
+    o = n(403581),
+    d = n(297264),
+    c = n(834730),
     u = n(821609),
     A = n(725807),
     h = n(212168),
@@ -38,21 +38,21 @@ function f(e) {
         backgroundClassName: S.u4,
         children: [
             null != f
-                ? (0, i.jsx)(a.D, {
+                ? (0, i.jsx)(s.D, {
                       className: S.VN,
                       onClick: () => f?.(I.i.DISMISS),
                       "aria-label": N.intl.string(N.t.cpT0Cq),
-                      children: (0, i.jsx)(o.P, { size: "xs", color: "currentColor", className: S.ut }),
+                      children: (0, i.jsx)(a.P, { size: "xs", color: "currentColor", className: S.ut }),
                   })
                 : null,
             (0, i.jsxs)("div", {
                 className: S.ex,
                 children: [
-                    (0, i.jsx)(d.t, { size: "sm", color: "currentColor", className: S.ax }),
-                    (0, i.jsx)(c.D, { variant: "heading-sm/bold", children: N.intl.string(N.t.dTbAxx) }),
+                    (0, i.jsx)(o.t, { size: "sm", color: "currentColor", className: S.ax }),
+                    (0, i.jsx)(d.D, { variant: "heading-sm/bold", children: N.intl.string(N.t.dTbAxx) }),
                 ],
             }),
-            (0, i.jsx)(r.E, { variant: "text-sm/normal", children: O }),
+            (0, i.jsx)(c.E, { variant: "text-sm/normal", children: O }),
             L
                 ? (0, i.jsx)(u.$, {
                       onClick: function () {
@@ -68,7 +68,7 @@ function f(e) {
                           section: T.JJy.SOUNDBOARD_SOUND_PICKER,
                           object: T.ZSU.BUTTON_CTA,
                       },
-                      color: s.$n.Colors.GREEN,
+                      color: r.$n.Colors.GREEN,
                       onSubscribeModalClose: () => f?.(I.i.PRIMARY),
                   }),
         ],

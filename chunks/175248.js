@@ -1,8 +1,8 @@
 n.d(t, { E: () => T, QuestRewardModalUnverified: () => g });
 var r = n(477900),
     i = n(582128),
-    s = n(772707),
-    l = n(17928),
+    s = n(17928),
+    l = n(772707),
     u = n(289873),
     a = n(885574),
     o = n(834730),
@@ -15,7 +15,7 @@ var r = n(477900),
     _ = n(661965);
 function g(e) {
     let { transitionState: t, onClose: n } = e,
-        c = (0, l.bG)([C.default], () => C.default.getCurrentUser()?.email),
+        c = (0, s.bG)([C.default], () => C.default.getCurrentUser()?.email),
         [g, T] = i.useState({ status: "unknown" });
     i.useEffect(() => {
         (T({ status: "loading" }),
@@ -32,7 +32,7 @@ function g(e) {
             : "success" === g.status
               ? A.intl.format(A.t.qP5xYc, { emailAddress: c, emailAddressLink: `mailto:${c}` })
               : void 0;
-    return (0, r.jsxs)(s.k, {
+    return (0, r.jsxs)(l.k, {
         transitionState: t,
         onClose: n,
         graphic: "loading" === g.status ? void 0 : { type: "image", src: _ },

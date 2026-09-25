@@ -3,8 +3,8 @@ var i = n(477900),
     l = n(582128),
     s = n(91871),
     a = n.n(s),
-    r = n(189213),
-    c = n(17928),
+    r = n(17928),
+    c = n(189213),
     d = n(683438),
     o = n(834730),
     u = n(939249),
@@ -28,15 +28,15 @@ function f(t) {
     });
 }
 function G(t) {
-    let { isTransfer: e = !1, selectedSlotGuilds: n, onClose: l, onSelectGuild: s, query: r } = t,
-        d = (0, c.bG)([j.Ay], () => j.Ay.getFlattenedGuildIds()),
-        f = (0, c.yK)([g.A], () =>
+    let { isTransfer: e = !1, selectedSlotGuilds: n, onClose: l, onSelectGuild: s, query: c } = t,
+        d = (0, r.bG)([j.Ay], () => j.Ay.getFlattenedGuildIds()),
+        f = (0, r.yK)([g.A], () =>
             d.reduce((t, e) => {
                 let i = g.A.getGuild(e);
                 return (
                     null == i ||
                         (null != n && n.some((t) => t.id === e)) ||
-                        ((r.length <= 0 || a()(r.toLowerCase(), i?.name.toLowerCase())) && t.push(i)),
+                        ((c.length <= 0 || a()(c.toLowerCase(), i?.name.toLowerCase())) && t.push(i)),
                     t
                 );
             }, []),
@@ -97,19 +97,19 @@ function G(t) {
     });
 }
 function S(t) {
-    let { onClose: e, onSelectGuild: n, transitionState: s, isTransfer: a = !1, selectedSlotGuilds: c } = t,
+    let { onClose: e, onSelectGuild: n, transitionState: s, isTransfer: a = !1, selectedSlotGuilds: r } = t,
         [d, o] = l.useState("");
     async function u() {
         await e();
     }
     let m = a ? v.intl.string(v.t.IB13DV) : v.intl.string(v.t.cQYceV);
-    return (0, i.jsx)(r.Modal, {
+    return (0, i.jsx)(c.a, {
         transitionState: s,
         onClose: u,
         size: "md",
         title: m,
         input: (0, i.jsx)(f, { query: d, setQuery: o }),
         actions: [],
-        children: (0, i.jsx)(G, { onClose: e, onSelectGuild: n, query: d, isTransfer: a, selectedSlotGuilds: c }),
+        children: (0, i.jsx)(G, { onClose: e, onSelectGuild: n, query: d, isTransfer: a, selectedSlotGuilds: r }),
     });
 }

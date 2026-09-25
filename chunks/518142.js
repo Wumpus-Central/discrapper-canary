@@ -44,7 +44,7 @@ class m extends n.PureComponent {
                       children: (0, i.jsx)(o.E, { variant: "text-md/normal", children: u.intl.string(u.t.j4qu8n) }),
                   })
                 : null;
-        return (0, i.jsx)(a.Modal, {
+        return (0, i.jsx)(a.a, {
             title: u.intl.string(u.t["mGppp/"]),
             actions: [
                 {

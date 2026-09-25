@@ -41,7 +41,7 @@ class c extends e.PureComponent {
     render() {
         let { isStreamer: t, transitionState: i, onClose: n } = this.props,
             { problem: e } = this.state;
-        return (0, l.jsxs)(s.Modal, {
+        return (0, l.jsxs)(s.a, {
             title: d.intl.string(d.t.qnJ9W3),
             subtitle: d.intl.string(d.t["7vw0h+"]),
             actions: [

@@ -6,9 +6,9 @@ var e = i(477900),
     a = i(980707),
     c = i(477782),
     s = i(365199),
-    d = i(793574),
-    p = i(688810),
-    u = i(173936),
+    p = i(793574),
+    u = i(688810),
+    d = i(173936),
     g = i(735991),
     I = i(287809),
     f = i(957565),
@@ -35,7 +35,7 @@ function S(n) {
     let { user: t, guildId: i, viewProfileItem: S } = n,
         M = o.useRef(null),
         { trackUserProfileAction: w } = (0, B.NJ)(),
-        { analyticsLocations: D, newestAnalyticsLocation: G } = (0, p.Ay)(d.A.USER_PROFILE_OVERFLOW_MENU),
+        { analyticsLocations: D, newestAnalyticsLocation: G } = (0, u.Ay)(p.A.USER_PROFILE_OVERFLOW_MENU),
         K = (0, l.bG)([N.A], () => N.A.getUserProfile(t.id)),
         W = K?.application,
         V = (0, L.A)({
@@ -70,7 +70,7 @@ function S(n) {
                                       await h.Ay.fetchApplication(n);
                                       let o = R.A.getApplication(n);
                                       return (n) =>
-                                          (0, e.jsx)(x.Modal, {
+                                          (0, e.jsx)(x.a, {
                                               title: k.intl.string(k.t.Bd10bR),
                                               actions: [],
                                               ...n,
@@ -136,9 +136,9 @@ function S(n) {
                             : (0, A.V)({ id: t.id, ...a });
                         null != n && (0, f.C)(n, o);
                     },
-                    icon: l ? void 0 : u.LinkIcon,
-                    iconLeft: l ? u.LinkIcon : void 0,
-                    leadingAccessory: { type: "icon", icon: u.LinkIcon },
+                    icon: l ? void 0 : d.LinkIcon,
+                    iconLeft: l ? d.LinkIcon : void 0,
+                    leadingAccessory: { type: "icon", icon: d.LinkIcon },
                 },
                 s,
             );

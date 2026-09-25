@@ -1,8 +1,8 @@
 s.d(t, { default: () => L });
 var n = s(477900),
     r = s(582128),
-    a = s(189213),
-    i = s(17928),
+    a = s(17928),
+    i = s(189213),
     l = s(834730),
     c = s(778712),
     d = s(821609),
@@ -25,8 +25,8 @@ var n = s(477900),
     S = s(915822);
 function y(e) {
     let { channel: t, guildName: s } = e,
-        r = (0, i.bG)([b.A], () => b.A.getGuild(t.guild_id)),
-        a = (0, j.Ay)(t);
+        r = (0, a.bG)([b.A], () => b.A.getGuild(t.guild_id)),
+        i = (0, j.Ay)(t);
     return (0, n.jsxs)("div", {
         className: S.Ke,
         children: [
@@ -34,7 +34,7 @@ function y(e) {
             (0, n.jsxs)("div", {
                 className: S.D6,
                 children: [
-                    (0, n.jsx)(l.E, { variant: "text-md/medium", children: a }),
+                    (0, n.jsx)(l.E, { variant: "text-md/medium", children: i }),
                     (0, n.jsx)(l.E, { variant: "text-xs/normal", children: s }),
                 ],
             }),
@@ -61,8 +61,8 @@ function D(e) {
 }
 function k(e) {
     let { user: t, status: s } = e,
-        r = (0, i.bG)([p.A], () => p.A.getNickname(t.id)),
-        a = v.Ay.useName(t),
+        r = (0, a.bG)([p.A], () => p.A.getNickname(t.id)),
+        i = v.Ay.useName(t),
         d = v.Ay.useUserTag(t);
     return (0, n.jsxs)("div", {
         className: S.Ke,
@@ -71,7 +71,7 @@ function k(e) {
             (0, n.jsxs)("div", {
                 className: S.D6,
                 children: [
-                    (0, n.jsx)(l.E, { variant: "text-md/medium", children: r ?? a }),
+                    (0, n.jsx)(l.E, { variant: "text-md/medium", children: r ?? i }),
                     (0, n.jsx)(l.E, { variant: "text-xs/normal", children: d }),
                 ],
             }),
@@ -123,7 +123,7 @@ function L(e) {
             results: l,
             query: c,
             activity: d,
-        } = (0, i.cf)(
+        } = (0, a.cf)(
             [_.A],
             () => ({ results: _.A.getResults(), query: _.A.getQuery(), activity: _.A.getActivity() }),
             [],
@@ -187,7 +187,7 @@ function L(e) {
     }
     return null == d
         ? null
-        : (0, n.jsx)(a.Modal, {
+        : (0, n.jsx)(i.a, {
               transitionState: t,
               title: C.intl.formatToPlainString(C.t["2tN7ih"], { name: d.name }),
               onClose: s,

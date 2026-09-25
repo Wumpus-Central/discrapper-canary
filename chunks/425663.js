@@ -3,8 +3,8 @@ var a = n(477900),
     l = n(582128),
     i = n(503698),
     o = n.n(i),
-    s = n(289873),
-    r = n(17928),
+    s = n(17928),
+    r = n(289873),
     c = n(944791),
     d = n(976860),
     u = n(439303),
@@ -79,11 +79,11 @@ function X(e) {
     let t,
         n,
         i,
-        { selectedApplicationId: s, className: c } = e,
+        { selectedApplicationId: r, className: c } = e,
         d = l.useRef(null),
         { isHovered: u, setIsHovered: C, onMouseEnter: E, onMouseLeave: A, cancelTimers: S } = (0, U.A)(100, 100),
         x =
-            ((t = (0, r.yK)([p.A], () =>
+            ((t = (0, s.yK)([p.A], () =>
                 (p.A.getConfig()?.storefronts ?? []).filter((e) => e.collectiblesShopNavigationEnabled),
             )),
             (n = l.useMemo(() => t.map((e) => e.applicationId), [t])),
@@ -99,7 +99,7 @@ function X(e) {
                     }),
                 [t, i],
             )),
-        m = (0, r.bG)([H.A], () => H.A.getApplication(s)),
+        m = (0, s.bG)([H.A], () => H.A.getApplication(r)),
         f = l.useCallback(
             (e) => {
                 (S(), C(e));
@@ -126,7 +126,7 @@ function X(e) {
         onRequestClose: () => f(!1),
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, a.jsx)(Y, { shops: x, currentApplicationId: s, onClose: t, onMouseEnter: E, onMouseLeave: A });
+            return (0, a.jsx)(Y, { shops: x, currentApplicationId: r, onClose: t, onMouseEnter: E, onMouseLeave: A });
         },
         children: (e) => {
             let t = u ? P.t : v.a;
@@ -167,7 +167,7 @@ function Q() {
     });
 }
 function K() {
-    let e = (0, r.bG)([T.default], () => T.default.getCurrentUser()),
+    let e = (0, s.bG)([T.default], () => T.default.getCurrentUser()),
         t = l.useCallback(() => {
             e?.id != null &&
                 (0, O.openUserProfileModal)({
@@ -257,11 +257,11 @@ var en = n(901123),
     ea = n(537067);
 function el(e) {
     let { applicationId: t, pageIndex: n, skuId: i } = e,
-        { guildId: E, configFetchState: L } = (0, r.cf)([p.A], () => ({
+        { guildId: E, configFetchState: L } = (0, s.cf)([p.A], () => ({
             guildId: p.A.getGuildIdFromApplicationId(t),
             configFetchState: p.A.getConfigFetchState(),
         })),
-        A = (0, r.bG)([p.A], () => p.A.getStorefrontDataForApplicationId(t)),
+        A = (0, s.bG)([p.A], () => p.A.getStorefrontDataForApplicationId(t)),
         S = null != n ? parseInt(n, 10) : 0;
     (l.useEffect(() => {
         (0, c.I)(en.BV.COLLECTIBLES_SHOP);
@@ -272,7 +272,7 @@ function el(e) {
     let x = l.useCallback((e, t) => (0, a.jsx)(et, { storefront: t, selectedPageIndex: e }), []),
         m = l.useCallback((e, n, a) => en.BV.COLLECTIBLES_SHOP_GAME_SHOP(t, e, n, a), [t]);
     return null == t || "success" !== L.state
-        ? (0, a.jsx)("div", { className: o()(ea.u1, ea.kL), children: (0, a.jsx)(s.y, {}) })
+        ? (0, a.jsx)("div", { className: o()(ea.u1, ea.kL), children: (0, a.jsx)(r.y, {}) })
         : (0, a.jsx)(C.SocialLayerStorefrontInnerWrapper, {
               applicationId: t,
               guildId: E,

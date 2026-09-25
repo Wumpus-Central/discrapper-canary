@@ -19,7 +19,7 @@ function d(t) {
         }
     }
     let k = c.intl.string(c.t["22itmo"]);
-    return (0, a.jsx)(s.Modal, {
+    return (0, a.jsx)(s.a, {
         size: "md",
         transitionState: n,
         onClose: d,

@@ -4,9 +4,9 @@ var l = n(477900),
     i = n(503698),
     a = n.n(i),
     s = n(14877),
-    o = n(189213),
-    u = n(17928),
-    d = n(843282);
+    o = n(17928),
+    u = n(843282),
+    d = n(189213);
 n(321073);
 var h = n(132500),
     c = n(668639),
@@ -327,7 +327,7 @@ let tp = "CLEAR_AFTER";
 function tf(t) {
     let { transitionState: e, onClose: n, returnRef: i, sourceAnalyticsLocations: h = [], prompt: c = null } = t,
         { analyticsLocations: g } = (0, b.Ay)(h, R.A.CUSTOM_STATUS_MODAL),
-        m = (0, u.bG)([_.default], () => _.default.getCurrentUser() ?? null),
+        m = (0, o.bG)([_.default], () => _.default.getCurrentUser() ?? null),
         f = (0, Z.K)(),
         [T, y] = r.useState(f?.state ?? ""),
         [A, S] = r.useState(f?.emoji ?? null),
@@ -419,12 +419,12 @@ function tf(t) {
         (0, s.$)({ currentLength: T.length, maxLength: z.hp, message: x.intl.string(x.t.c2Jqed) }));
     let tl = x.intl.string(x.t.rp0ahn),
         tr = "custom-status-input";
-    return (0, l.jsxs)(o.Modal, {
+    return (0, l.jsxs)(d.a, {
         title: x.intl.string(x.t.Zx4jzN),
         returnRef: i,
         actionBarInput: (0, l.jsx)("div", {
             className: tm.l3,
-            children: (0, l.jsx)(d.Te, {
+            children: (0, l.jsx)(u.Te, {
                 "aria-label": x.intl.formatToPlainString(x.t.NFJUPa, {
                     value: v === tp ? x.intl.string(x.t.E45wvP) : V(v),
                 }),

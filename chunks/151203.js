@@ -3,8 +3,8 @@ var i = r(477900),
     n = r(582128),
     s = r(435558),
     d = r.n(s),
-    u = r(189213),
-    l = r(17928),
+    u = r(17928),
+    l = r(189213),
     c = r(289873),
     a = r(442433),
     o = r(589158),
@@ -100,7 +100,7 @@ function S(e) {
     n.useEffect(() => {
         h.A.fetchFriendMembersIfNotFetched(t.id, a);
     }, [t.id, a]);
-    let o = (0, l.bG)([g.Ay], () => g.Ay.getMembers(t.id)),
+    let o = (0, u.bG)([g.Ay], () => g.Ay.getMembers(t.id)),
         m = n.useMemo(
             () =>
                 d()(o)
@@ -114,7 +114,7 @@ function S(e) {
             [a, t.id, t.ownerId, o],
         ),
         w = h.A.isFetchingFriendsForGuild(t.id);
-    return (0, i.jsxs)(u.Modal, {
+    return (0, i.jsxs)(l.a, {
         title: p.intl.string(p.t.kYxEcH),
         subtitle: p.intl.format(w ? p.t.EtQnZi : p.t.OgMdNS, { guildName: t.name, numFriends: m.length }),
         actions: void 0,

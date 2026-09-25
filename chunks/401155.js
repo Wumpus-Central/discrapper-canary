@@ -1,11 +1,11 @@
 i.d(e, { default: () => J });
 var n = i(477900),
     l = i(582128),
-    a = i(224640),
-    s = i(289873),
-    r = i(17928),
-    o = i(376728),
-    c = i(299091),
+    a = i(17928),
+    s = i(224640),
+    r = i(289873),
+    c = i(376728),
+    o = i(299091),
     u = i(189213),
     d = i(95477),
     g = i(834730),
@@ -17,13 +17,13 @@ var n = i(477900),
     S = i(375708),
     I = i(523442);
 let E = function (t) {
-    let { setStep: e, setGuildsInfo: i, email: a, setEmail: s, setGuildId: r, invite: o, ...c } = t,
+    let { setStep: e, setGuildsInfo: i, email: a, setEmail: s, setGuildId: r, invite: c, ...o } = t,
         [E, v] = l.useState(null),
         [A, j] = l.useState(!1);
     async function p(t) {
         (t.preventDefault(), v(null), j(!0));
         try {
-            let t = o?.guild?.id ?? f.A.getChannel(o?.channel?.id)?.getGuildId() ?? void 0;
+            let t = c?.guild?.id ?? f.A.getChannel(c?.channel?.id)?.getGuildId() ?? void 0;
             t === x.TA && (t = void 0);
             let n = await m.A.sendVerificationEmail(a, !0, t),
                 l = n.guilds_info;
@@ -41,15 +41,15 @@ let E = function (t) {
         }
     }
     let C = S.intl.string(S.t.H1jCHH);
-    if (o?.guild != null && o.guild.id !== x.TA && o?.approximate_member_count != null) {
-        let { name: t } = o.guild;
-        C = S.intl.formatToPlainString(S.t["4T4+p1"], { guildName: t, count: o.approximate_member_count });
+    if (c?.guild != null && c.guild.id !== x.TA && c?.approximate_member_count != null) {
+        let { name: t } = c.guild;
+        C = S.intl.formatToPlainString(S.t["4T4+p1"], { guildName: t, count: c.approximate_member_count });
     }
     return (0, n.jsx)("form", {
         className: I.o,
         onSubmit: p,
-        children: (0, n.jsxs)(u.Modal, {
-            ...c,
+        children: (0, n.jsxs)(u.a, {
+            ...o,
             title: C,
             actions: [{ variant: "primary", type: "submit", loading: A, text: S.intl.string(S.t["8vmKO0"]) }],
             children: [
@@ -80,15 +80,15 @@ var v = i(503698),
     _ = i(297264),
     b = i(573435),
     k = i(548118),
-    M = i(486020),
-    D = i(149790),
-    N = i(385276),
-    T = i(906471);
+    D = i(486020),
+    N = i(149790),
+    T = i(385276),
+    M = i(906471);
 function w(t) {
     let { guildInfo: e, onClick: i, submitting: l } = t,
-        a = M.Ay.getGuildIconURL({ id: e.id, icon: e.icon, size: 40 }) ?? void 0;
+        a = D.Ay.getGuildIconURL({ id: e.id, icon: e.icon, size: 40 }) ?? void 0;
     return (0, n.jsxs)(C.D, {
-        className: N.oG,
+        className: T.oG,
         onClick: i,
         children: [
             (0, n.jsx)(b.Ay, {
@@ -96,20 +96,20 @@ function w(t) {
                 width: 40,
                 height: 40,
                 children: (0, n.jsx)(k.Ay, {
-                    className: N.$f,
+                    className: T.$f,
                     iconSrc: a,
-                    guild: (0, D.yF)({ ...e, features: [] }),
+                    guild: (0, N.yF)({ ...e, features: [] }),
                     size: k.Ay.Sizes.MEDIUM,
                 }),
             }),
-            (0, n.jsx)(g.E, { className: N.J5, variant: "text-md/semibold", children: e.name }),
-            l ? (0, n.jsx)(s.y, { type: s.y.Type.PULSING_ELLIPSIS }) : (0, n.jsx)("img", { alt: "", src: T }),
+            (0, n.jsx)(g.E, { className: T.J5, variant: "text-md/semibold", children: e.name }),
+            l ? (0, n.jsx)(r.y, { type: r.y.Type.PULSING_ELLIPSIS }) : (0, n.jsx)("img", { alt: "", src: M }),
         ],
     });
 }
 let R = function (t) {
     let { setStep: e, email: i, guildsInfo: a, setGuildId: s, ...r } = t,
-        [o, c] = l.useState(null),
+        [c, o] = l.useState(null),
         [d, f] = l.useState(void 0),
         [y, I] = l.useState(null);
     function E() {
@@ -118,7 +118,7 @@ let R = function (t) {
     let v = a;
     return (
         null != d && "" !== d && (v = a.filter((t) => p()(d.toLowerCase(), t.name.toLowerCase()))),
-        (0, n.jsx)(u.Modal, {
+        (0, n.jsx)(u.a, {
             ...r,
             title: S.intl.string(S.t.mOMeiR),
             subtitle: S.intl.format(S.t.dZeiTJ, { onJoinWaitlist: E }),
@@ -138,7 +138,7 @@ let R = function (t) {
                     (0, n.jsx)(g.E, {
                         color: "text-feedback-critical",
                         variant: "text-xs/normal",
-                        children: o?.getAnyErrorMessage(),
+                        children: c?.getAnyErrorMessage(),
                     }),
                 ],
             }),
@@ -146,7 +146,7 @@ let R = function (t) {
             children:
                 v.length > 0
                     ? (0, n.jsx)("div", {
-                          className: N.vQ,
+                          className: T.vQ,
                           children: v.map((t) => {
                               var l;
                               return void 0 === t
@@ -158,11 +158,11 @@ let R = function (t) {
                                             onClick:
                                                 ((l = t.id),
                                                 async () => {
-                                                    (c(null), s(l), I(l));
+                                                    (o(null), s(l), I(l));
                                                     try {
                                                         (await m.A.sendVerificationEmail(i, !0, l), e(x.Di.VERIFY_PIN));
                                                     } catch (t) {
-                                                        c(new h.LG(t));
+                                                        o(new h.LG(t));
                                                     } finally {
                                                         I(null);
                                                     }
@@ -174,17 +174,17 @@ let R = function (t) {
                           }),
                       })
                     : (0, n.jsx)("div", {
-                          className: N.pb,
+                          className: T.pb,
                           children: (0, n.jsxs)("div", {
-                              className: N.rv,
+                              className: T.rv,
                               children: [
                                   (0, n.jsx)(_.D, {
-                                      className: A()(N.He, N.wx),
+                                      className: A()(T.He, T.wx),
                                       variant: "heading-xl/semibold",
                                       children: S.intl.string(S.t["1eUrDc"]),
                                   }),
                                   (0, n.jsx)(g.E, {
-                                      className: N.He,
+                                      className: T.He,
                                       variant: "text-md/normal",
                                       children: S.intl.format(S.t.flgDKM, { onJoinWaitlist: E }),
                                   }),
@@ -196,8 +196,8 @@ let R = function (t) {
 };
 var O = i(650583);
 let G = function (t) {
-    let { email: e, setStep: i, onBack: a, school: s, setSchool: r, ...o } = t,
-        [c, g] = l.useState(null),
+    let { email: e, setStep: i, onBack: a, school: s, setSchool: r, ...c } = t,
+        [o, g] = l.useState(null),
         [f, y] = l.useState(!1);
     async function I() {
         (g(null), y(!0));
@@ -212,8 +212,8 @@ let G = function (t) {
     async function E(t) {
         null != s && "" !== s && t.key === O.dh.ENTER && (await I());
     }
-    return (0, n.jsx)(u.Modal, {
-        ...o,
+    return (0, n.jsx)(u.a, {
+        ...c,
         title: S.intl.string(S.t["2FNWBG"]),
         subtitle: S.intl.string(S.t["/4y6ox"]),
         actions: [
@@ -227,7 +227,7 @@ let G = function (t) {
             onChange: function (t) {
                 r(t);
             },
-            error: c?.getAnyErrorMessage(),
+            error: o?.getAnyErrorMessage(),
         }),
     });
 };
@@ -236,8 +236,8 @@ var V = i(435558),
     H = i(976860);
 let F = function (t) {
     let { email: e, guildId: i, transitionState: a, onClose: s } = t,
-        [r, o] = l.useState(""),
-        [c, g] = l.useState(null),
+        [r, c] = l.useState(""),
+        [o, g] = l.useState(null),
         f = l.useCallback(async () => {
             if (null != i)
                 try {
@@ -253,7 +253,7 @@ let F = function (t) {
     async function I(t) {
         null != r && "" !== r && t.key === O.dh.ENTER && (await f());
     }
-    return (0, n.jsx)(u.Modal, {
+    return (0, n.jsx)(u.a, {
         transitionState: a,
         onClose: s,
         title: S.intl.string(S.t.SJ3Lxc),
@@ -263,16 +263,16 @@ let F = function (t) {
             label: S.intl.string(S.t.rpWT1s),
             onKeyPress: I,
             onChange: function (t) {
-                null != t && "" !== t && o(t);
+                null != t && "" !== t && c(t);
             },
-            error: c?.getAnyErrorMessage(),
+            error: o?.getAnyErrorMessage(),
         }),
     });
 };
 var U = i(123292);
 let Y = function (t) {
     let { school: e, setStep: i, ...l } = t;
-    return (0, n.jsx)(u.Modal, {
+    return (0, n.jsx)(u.a, {
         ...l,
         title: S.intl.string(S.t.OaloU5),
         subtitle: S.intl.format(S.t.Rs7MXJ, { school: e }),
@@ -292,9 +292,9 @@ function J(t) {
     let { inviteCode: e, ...i } = t,
         [u, d] = l.useState(null != e);
     l.useEffect(() => {
-        null != e && o.Ay.resolveInvite(e, "Hub").finally(() => d(!1));
+        null != e && c.Ay.resolveInvite(e, "Hub").finally(() => d(!1));
     }, [e]);
-    let g = (0, r.bG)([c.A], () => (null != e ? c.A.getInvite(e) : null)),
+    let g = (0, a.bG)([o.A], () => (null != e ? o.A.getInvite(e) : null)),
         [m, h] = l.useState([x.Di.VERIFY_EMAIL]),
         [f, y] = l.useState(""),
         [S, I] = l.useState(""),
@@ -304,7 +304,7 @@ function J(t) {
         h(m.concat(t).slice(-4));
     }
     let L = m[m.length - 1];
-    if (u) return (0, n.jsx)(a.d, { ...i, children: (0, n.jsx)(s.y, { className: B.u }) });
+    if (u) return (0, n.jsx)(s.d, { ...i, children: (0, n.jsx)(r.y, { className: B.u }) });
     switch (L) {
         case x.Di.VERIFY_EMAIL:
             return (0, n.jsx)(E, {

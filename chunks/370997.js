@@ -7,9 +7,9 @@ var n = l(477900),
     o = l.n(a),
     c = l(196765),
     d = l(179771),
-    u = l(189213),
-    m = l(17928),
-    p = l(257474),
+    u = l(17928),
+    m = l(257474),
+    p = l(189213),
     x = l(396478),
     h = l(885574),
     j = l(834730),
@@ -132,7 +132,7 @@ let ep = function (e) {
 var ex = l(508907),
     eh = l(165648),
     ej = l(221851);
-let eN = m.Ay.connectStores([Z.A], () => ({ theme: Z.A.theme }))(x.pp);
+let eN = u.Ay.connectStores([Z.A], () => ({ theme: Z.A.theme }))(x.pp);
 function eA(e) {
     let { className: t, text: l } = e;
     return (0, n.jsxs)("div", {
@@ -147,9 +147,9 @@ function eg(e) {
     let { disclosure: t } = e;
     return i.useMemo(() => {
         switch (t) {
-            case p.mo.IP_LOCATION:
+            case m.mo.IP_LOCATION:
                 return (0, n.jsx)(N.GlobeEarthIcon, { size: "md", color: "currentColor", className: ex.PR });
-            case p.mo.DISPLAYS_ADVERTISEMENTS:
+            case m.mo.DISPLAYS_ADVERTISEMENTS:
                 return (0, n.jsx)(A.J, { className: ex.PR });
             default:
                 return (0, n.jsx)(h.CircleInformationIcon, { className: ex.PR });
@@ -170,7 +170,7 @@ function ef(e, t, l) {
                 children: [r, (0, n.jsx)(J.A, { children: ec.intl.format(ec.t.KRnERi, { applicationName: e.name }) })],
             })),
         (0, g.openModal)((e) =>
-            (0, n.jsx)(u.Modal, {
+            (0, n.jsx)(p.a, {
                 title: i,
                 subtitle: s,
                 actions: [
@@ -465,19 +465,19 @@ function ev(e) {
 }
 let eC = (0, c.v)(() => ({ searchQuery: "" })),
     eT = function () {
-        let { fetchState: e, appAuthTokens: t } = (0, m.cf)([w.default], () => ({
+        let { fetchState: e, appAuthTokens: t } = (0, u.cf)([w.default], () => ({
                 fetchState: w.default.getFetchState(),
                 appAuthTokens: w.default.getNewestTokensForNonChildrenApplications(),
             })),
-            l = (0, m.bG)([Q.default], () => Q.default.locale),
-            s = (0, m.bG)([G.Ay], () => G.Ay.getSelfEmbeddedActivities()),
-            r = (0, m.bG)([Y.A, K.Ay], () => Y.A.getChannel(K.Ay.getChannelId())),
+            l = (0, u.bG)([Q.default], () => Q.default.locale),
+            s = (0, u.bG)([G.Ay], () => G.Ay.getSelfEmbeddedActivities()),
+            r = (0, u.bG)([Y.A, K.Ay], () => Y.A.getChannel(K.Ay.getChannelId())),
             a = r?.getGuildId(),
             c = eC((e) => e.searchQuery);
         function d(e) {
             return eC.setState({ searchQuery: e });
         }
-        function u(e) {
+        function m(e) {
             d(e);
         }
         function p() {
@@ -488,7 +488,7 @@ let eC = (0, c.v)(() => ({ searchQuery: "" })),
                 className: ex.MT,
                 children: (0, n.jsx)(P.I, {
                     query: c,
-                    onChange: u,
+                    onChange: m,
                     onClear: p,
                     placeholder: ec.intl.string(ec.t["5prvKe"]),
                     "aria-label": ec.intl.string(ec.t["5prvKe"]),

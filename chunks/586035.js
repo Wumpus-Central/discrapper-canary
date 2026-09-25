@@ -2,8 +2,8 @@ i.d(e, { A: () => Z });
 var s = i(477900),
     n = i(582128),
     a = i(189213),
-    l = i(815021),
-    r = i(935462),
+    r = i(815021),
+    l = i(935462),
     c = i(834730),
     o = i(192308),
     d = i(289873),
@@ -15,16 +15,16 @@ var s = i(477900),
     h = i(366010),
     j = i(297264),
     v = i(825484),
-    N = i(408278),
-    C = i(173936),
-    p = i(821609),
-    A = i(743368),
-    y = i(866665),
+    N = i(866665),
+    C = i(408278),
+    p = i(173936),
+    A = i(821609),
+    y = i(743368),
     E = i(736653),
     k = i(291749),
-    M = i(590202),
-    _ = i(971649),
-    L = i(651892),
+    _ = i(590202),
+    L = i(971649),
+    M = i(651892),
     T = i(901406),
     I = i(814793),
     w = i(557637),
@@ -36,17 +36,17 @@ var s = i(477900),
     O = i(375708),
     S = i(446498);
 function q(t) {
-    let { quest: e, sourceQuestContent: i, onLoadComplete: a, preCtaClick: l } = t,
-        r = (0, E.Ay)(),
-        o = (0, h.M)(r) ? R.NJ.DARK : R.NJ.LIGHT,
-        d = (0, _.wW)(),
-        u = (0, _.go)(),
+    let { quest: e, sourceQuestContent: i, onLoadComplete: a, preCtaClick: r } = t,
+        l = (0, E.Ay)(),
+        o = (0, h.M)(l) ? R.NJ.DARK : R.NJ.LIGHT,
+        d = (0, L.wW)(),
+        u = (0, L.go)(),
         x = (0, I.E0)(e.config);
     async function f() {
-        (await l?.(),
+        (await r?.(),
             (0, T.pu)(e, {
                 content: m.uF.REWARD_MODAL,
-                ctaContent: M.Cy.OPEN_GAME_LINK,
+                ctaContent: _.Cy.OPEN_GAME_LINK,
                 impressionId: d(),
                 sourceQuestContent: i,
             }));
@@ -61,8 +61,8 @@ function q(t) {
                   ? O.intl.string(O.t.y8Xf3k)
                   : O.intl.string(O.t["wirwN+"]);
         }, [e]),
-        z = (0, D.A)(e, { impressionId: u, sourceQuestContent: i }, l) ?? {
-            ctaText: (0, L.wr)(e),
+        z = (0, D.A)(e, { impressionId: u, sourceQuestContent: i }, r) ?? {
+            ctaText: (0, M.wr)(e),
             ctaVariant: "primary",
             onClickCta: f,
             title: O.intl.format(O.t.EAYZAr, { questName: e.config.messages.questName }),
@@ -79,7 +79,7 @@ function q(t) {
         trackingCtx: n.useMemo(
             () => ({
                 content: m.uF.REWARD_MODAL,
-                ctaContent: M.Cy.REWARD_MODAL_COPY_LINK,
+                ctaContent: _.Cy.REWARD_MODAL_COPY_LINK,
                 impressionId: u,
                 sourceQuestContent: i,
             }),
@@ -149,21 +149,21 @@ function q(t) {
                     fullWidthContainer: !0,
                     children: [
                         x &&
-                            (0, s.jsx)(y.m, {
+                            (0, s.jsx)(N.m, {
                                 text: O.intl.string(O.t.WmfZHZ),
-                                children: (0, s.jsx)(N.K, {
-                                    icon: C.LinkIcon,
+                                children: (0, s.jsx)(C.K, {
+                                    icon: p.LinkIcon,
                                     onClick: Y,
                                     "aria-label": O.intl.string(O.t.WmfZHZ),
                                     variant: "secondary",
                                 }),
                             }),
-                        (0, s.jsx)(p.$, {
+                        (0, s.jsx)(A.$, {
                             variant: z.ctaVariant,
                             text: z.ctaText,
                             onClick: z.onClickCta,
                             fullWidth: !0,
-                            icon: A.W,
+                            icon: y.W,
                             iconPosition: z.ctaIconPosition,
                         }),
                     ],
@@ -185,7 +185,7 @@ function z(t) {
 var G = i(832312);
 function Y(t) {
     let { onClose: e, transitionState: i } = t;
-    return (0, s.jsx)(a.Modal, {
+    return (0, s.jsx)(a.a, {
         size: "md",
         title: O.intl.string(O.t.Hd3D8W),
         actions: [{ variant: "primary", text: O.intl.string(O.t.cpT0Cq), onClick: e }],
@@ -226,17 +226,17 @@ function Z(t) {
         questContent: v,
         sourceQuestContent: i,
         children: (t) =>
-            (0, s.jsxs)(r.EO, {
+            (0, s.jsxs)(l.EO, {
                 "data-migration-pending": !0,
                 transitionState: a,
-                size: r.rI.DYNAMIC,
+                size: l.rI.DYNAMIC,
                 className: G.yl,
                 "aria-label": y ? O.intl.string(O.t.ZTNur7) : void 0,
                 parentComponent: "QuestRewardModalBase",
                 children: [
                     (0, s.jsx)("div", {
                         className: G.b,
-                        children: (0, s.jsx)(l.J, { size: "xs", variant: "overlay-secondary", onClick: c }),
+                        children: (0, s.jsx)(r.J, { size: "xs", variant: "overlay-secondary", onClick: c }),
                     }),
                     y ? (0, s.jsx)(d.y, { className: G.u1, type: d.y.Type.WANDERING_CUBES }) : null,
                     (0, s.jsx)("div", {

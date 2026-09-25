@@ -1,8 +1,8 @@
 (r.r(t), r.d(t, { default: () => D }));
 var n = r(477900),
     l = r(582128),
-    u = r(189213),
-    s = r(17928),
+    u = r(17928),
+    s = r(189213),
     a = r(812993),
     i = r(661531),
     c = r(512950),
@@ -60,9 +60,9 @@ async function I(e) {
 }
 var j = r(787392),
     G = r(75811),
-    M = r(930840),
-    _ = r(652215),
-    v = r(375708),
+    _ = r(930840),
+    v = r(652215),
+    M = r(375708),
     O = r(686418);
 function B(e) {
     let { badgeText: t, badgeColor: r } = e,
@@ -72,17 +72,17 @@ function B(e) {
 }
 function D(e) {
     let { transitionState: t, userId: r, channelId: a, onClose: C } = e,
-        N = (0, s.bG)([d.default], () => d.default.getUser(r)),
-        T = (0, s.bG)([m.A], () => m.A.getChannel(a)?.getGuildId()),
+        N = (0, u.bG)([d.default], () => d.default.getUser(r)),
+        T = (0, u.bG)([m.A], () => m.A.getChannel(a)?.getGuildId()),
         D = y.Ay.useName(T, null, N),
         { fingerprint: K, fingerprintUserKey: P } = (function (e) {
             let { userId: t, mode: r = "frozen" } = e,
-                n = (0, s.bG)([k.default], () => k.default.getId());
+                n = (0, u.bG)([k.default], () => k.default.getId());
             R()(n !== t, "[useSecureFramesPairwiseFingerprint] Should not pass current user id.");
-            let [u, a] = l.useState(null),
+            let [s, a] = l.useState(null),
                 [i, c] = l.useState(!1),
-                o = (0, s.bG)([h.A], () => h.A.getSecureFramesRosterMapEntry(t)),
-                f = (0, s.bG)([h.A], () => h.A.getSecureFramesRosterMapEntry(n)),
+                o = (0, u.bG)([h.A], () => h.A.getSecureFramesRosterMapEntry(t)),
+                f = (0, u.bG)([h.A], () => h.A.getSecureFramesRosterMapEntry(n)),
                 A = l.useCallback(
                     async () => (w.Ay.supports(U.O5.MLS_PAIRWISE_FINGERPRINTS) ? await I(t) : await F(t)),
                     [t],
@@ -110,11 +110,11 @@ function D(e) {
                 ),
                 l.useMemo(
                     () => ({
-                        fingerprint: u?.fingerprint ?? null,
-                        fingerprintUserKey: u?.fingerprintUserKey ?? null,
+                        fingerprint: s?.fingerprint ?? null,
+                        fingerprintUserKey: s?.fingerprintUserKey ?? null,
                         loading: i,
                     }),
-                    [u, i],
+                    [s, i],
                 )
             );
         })({ userId: r }),
@@ -124,23 +124,23 @@ function D(e) {
         }, [a, r]),
         V = (0, b.UF)({ userId: r, channelId: a, userKey: P });
     !(function (e) {
-        let { channelId: t, userId: r, nickname: n, onAlertOpen: u } = e,
+        let { channelId: t, userId: r, nickname: n, onAlertOpen: s } = e,
             a = (function (e) {
                 let { userId: t } = e;
-                return (0, s.bG)([h.A, E.A], () => (0, p.m8)(t, [h.A, E.A]));
+                return (0, u.bG)([h.A, E.A], () => (0, p.m8)(t, [h.A, E.A]));
             })({ userId: r }),
             i = l.useRef(null);
         l.useEffect(() => {
             a && null == i.current
                 ? (i.current = setTimeout(() => {
-                      (u(), (0, p.Vw)({ userId: r, channelId: t, nickname: n }));
+                      (s(), (0, p.Vw)({ userId: r, channelId: t, nickname: n }));
                   }, 1e3))
                 : (clearTimeout(i.current), (i.current = null));
             let e = i.current;
             return () => {
                 clearTimeout(e);
             };
-        }, [t, a, n, u, r]);
+        }, [t, a, n, s, r]);
     })({ channelId: a, userId: r, nickname: D, onAlertOpen: C });
     let {
             isCurrentUserKeyPersistent: H,
@@ -171,7 +171,7 @@ function D(e) {
             );
         })({ userId: r, userKey: P }),
         Z = l.useCallback(() => {
-            null != P && ((0, p.bk)(r, P, W, a, _.ThZ.E2EE_USER_VERIFY_MODAL), C());
+            null != P && ((0, p.bk)(r, P, W, a, v.ThZ.E2EE_USER_VERIFY_MODAL), C());
         }, [P, r, W, a, C]),
         J = l.useCallback(() => {
             null != P && ((0, p.Dh)(r, P, W), C());
@@ -179,8 +179,8 @@ function D(e) {
         [q, X] = l.useMemo(
             () =>
                 V
-                    ? [v.intl.string(v.t.UNUuem), i.A.colors.BACKGROUND_BRAND.css]
-                    : [v.intl.string(v.t.y2b7CA), i.A.colors.BACKGROUND_FEEDBACK_NOTIFICATION.css],
+                    ? [M.intl.string(M.t.UNUuem), i.A.colors.BACKGROUND_BRAND.css]
+                    : [M.intl.string(M.t.y2b7CA), i.A.colors.BACKGROUND_FEEDBACK_NOTIFICATION.css],
             [V],
         ),
         Q = l.useMemo(
@@ -194,7 +194,7 @@ function D(e) {
                     let e = new Uint8Array(r);
                     return (0, S.uo)(e);
                 }, [r]);
-            return (0, s.bG)(
+            return (0, u.bG)(
                 [j.A],
                 () => {
                     let e = j.A.getUserVerifiedKeys(t);
@@ -208,8 +208,8 @@ function D(e) {
     }, [a, r]);
     let ee = {
             transitionState: t,
-            title: v.intl.string(v.t["/WPGnF"]),
-            subtitle: v.intl.format(v.t.oc2kce, { username: D }),
+            title: M.intl.string(M.t["/WPGnF"]),
+            subtitle: M.intl.format(M.t.oc2kce, { username: D }),
         },
         et = (0, n.jsxs)(n.Fragment, {
             children: [
@@ -220,7 +220,7 @@ function D(e) {
                             (0, n.jsx)(c.p, {
                                 messageType: c.Y.INFO,
                                 className: O.Ht,
-                                children: v.intl.format(v.t.uZDkz0, { count: $ }),
+                                children: M.intl.format(M.t.uZDkz0, { count: $ }),
                             }),
                         (0, n.jsxs)("div", {
                             className: O.wx,
@@ -228,10 +228,10 @@ function D(e) {
                                 (0, n.jsx)(o.D, {
                                     variant: "text-sm/bold",
                                     color: "text-strong",
-                                    children: v.intl.string(v.t["/WPGnF"]),
+                                    children: M.intl.string(M.t["/WPGnF"]),
                                 }),
                                 null != L &&
-                                    (0, n.jsx)(M.c, {
+                                    (0, n.jsx)(_.c, {
                                         className: O.nJ,
                                         chunks: L,
                                         color: i.A.colors.INTERACTIVE_TEXT_DEFAULT,
@@ -253,10 +253,10 @@ function D(e) {
             ],
         }),
         er = {
-            text: V ? v.intl.string(v.t["Osb+/n"]) : v.intl.string(v.t["0tvNAn"]),
+            text: V ? M.intl.string(M.t["Osb+/n"]) : M.intl.string(M.t["0tvNAn"]),
             disabled: null == L || Y,
             onClick: V ? J : Z,
         },
-        en = { text: v.intl.string(v.t["ETE/oC"]), onClick: C, variant: "secondary" };
-    return (0, n.jsx)(u.Modal, { onClose: C, ...ee, actions: [en, er], children: et });
+        en = { text: M.intl.string(M.t["ETE/oC"]), onClick: C, variant: "secondary" };
+    return (0, n.jsx)(s.a, { onClose: C, ...ee, actions: [en, er], children: et });
 }

@@ -1,7 +1,7 @@
 e.d(i, { default: () => g });
 var r = e(477900),
-    a = e(772707),
-    n = e(17928),
+    a = e(17928),
+    n = e(772707),
     o = e(192308),
     s = e(975807),
     l = e(166403),
@@ -19,7 +19,7 @@ let g = function (t) {
             subscriptionPlanId: d.gD.PREMIUM_GROUP_MONTH,
         }),
         { disabled: e, ...g } = i,
-        k = (0, n.bG)([l.A], () => l.A.getPremiumTypeSubscription()),
+        k = (0, a.bG)([l.A], () => l.A.getPremiumTypeSubscription()),
         f = k?.hasActiveTrial ?? !1,
         h = e && !f;
     return (0, r.jsx)(p.A, {
@@ -27,7 +27,7 @@ let g = function (t) {
         initialPlanId: d.gD.PREMIUM_GROUP_MONTH,
         children: (i) => {
             let { onClick: e } = i;
-            return (0, r.jsx)(a.k, {
+            return (0, r.jsx)(n.k, {
                 ...t,
                 graphic: { src: T, type: "image" },
                 gradientColor: "nitro-pink",

@@ -1,8 +1,8 @@
 a.d(e, { default: () => E, O: () => C });
 var i = a(477900),
     l = a(582128),
-    r = a(834730),
-    n = a(189213),
+    r = a(189213),
+    n = a(834730),
     s = a(150934),
     c = a(503852);
 a(321073);
@@ -32,7 +32,7 @@ function C(t) {
             ...b
         } = t,
         [p, g] = l.useState(!1);
-    return (0, i.jsxs)(n.Modal, {
+    return (0, i.jsxs)(r.a, {
         ...b,
         size: e,
         title: k.intl.formatToPlainString(f.default.iEBw1M, { perk: a }),
@@ -52,16 +52,16 @@ function C(t) {
             (0, i.jsxs)("div", {
                 className: j.UW,
                 children: [
-                    (0, i.jsx)(r.E, {
+                    (0, i.jsx)(n.E, {
                         color: "text-feedback-critical",
                         variant: "eyebrow",
                         children: k.intl.string(f.default.OVt5CC),
                     }),
-                    (0, i.jsx)(r.E, { className: j.i4, tag: "span", variant: "text-sm/medium", children: o }),
+                    (0, i.jsx)(n.E, { className: j.i4, tag: "span", variant: "text-sm/medium", children: o }),
                 ],
             }),
             null != u &&
-                (0, i.jsx)(r.E, {
+                (0, i.jsx)(n.E, {
                     className: j.kc,
                     color: "text-feedback-critical",
                     variant: "text-sm/semibold",
@@ -78,7 +78,7 @@ function C(t) {
 function E(t) {
     let e,
         a,
-        n,
+        r,
         s,
         E,
         { guildId: S, powerup: y, ...A } = t,
@@ -96,7 +96,7 @@ function E(t) {
         I =
             ((e = (0, d.bG)([m.A], () => m.A.getMemberCount(S))),
             (a = (0, u.A)(S)),
-            (n = (0, d.bG)([b.A], () => b.A.getGuild(S)?.vanityURLCode != null)),
+            (r = (0, d.bG)([b.A], () => b.A.getGuild(S)?.vanityURLCode != null)),
             (s = (0, d.bG)(
                 [x.A],
                 () =>
@@ -118,7 +118,7 @@ function E(t) {
                                 : k.intl.formatToPlainString(f.default.cavtEo, { perk: y.title });
                         break;
                     case o.FB:
-                        t = n ? k.intl.string(f.default.hN75yb) : k.intl.string(f.default.Du91Rb);
+                        t = r ? k.intl.string(f.default.hN75yb) : k.intl.string(f.default.Du91Rb);
                         break;
                     case o.OJ:
                     case o.jF:
@@ -130,15 +130,15 @@ function E(t) {
                         t = k.intl.formatToPlainString(f.default["4jSvr1"], { perk: y.title, memberCount: e ?? 0 });
                 }
                 let a = [{ text: t, critical: y.skuId === o.FB }];
-                return (n && y.skuId === o.YG && a.push({ text: k.intl.string(f.default.M4XL5n), critical: !0 }), a);
-            }, [y, s, e, n])),
+                return (r && y.skuId === o.YG && a.push({ text: k.intl.string(f.default.M4XL5n), critical: !0 }), a);
+            }, [y, s, e, r])),
             l.useMemo(
                 () =>
                     (0, i.jsx)(i.Fragment, {
                         children: E.map((t, e) =>
                             t.critical
                                 ? (0, i.jsx)(
-                                      r.E,
+                                      n.E,
                                       {
                                           color: "text-feedback-critical",
                                           variant: "text-sm/semibold",

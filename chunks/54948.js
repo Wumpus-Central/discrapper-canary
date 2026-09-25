@@ -8,12 +8,12 @@ var i = t(477900),
     c = t.n(o),
     d = t(930235),
     u = t(651300),
-    x = t(834730),
-    m = t(661531),
-    f = t(916099),
-    h = t(673185),
-    j = t(565787),
-    v = t(622629),
+    x = t(661531),
+    m = t(916099),
+    f = t(673185),
+    h = t(565787),
+    j = t(622629),
+    v = t(834730),
     p = t(772838),
     g = t(939249),
     E = t(22231),
@@ -26,13 +26,13 @@ function R(e) {
         t = l.useMemo(() => {
             switch (n) {
                 case a.rX.MULTIPLE_CHOICE:
-                    return { icon: f.ListBulletsIcon, text: w.intl.string(w.t.ooKh3m) };
+                    return { icon: m.ListBulletsIcon, text: w.intl.string(w.t.ooKh3m) };
                 case a.rX.PARAGRAPH:
-                    return { icon: h.$, text: w.intl.string(w.t.gG0JBN) };
+                    return { icon: f.$, text: w.intl.string(w.t.gG0JBN) };
                 case a.rX.TEXT_INPUT:
-                    return { icon: (0, j.k)(y.A), text: w.intl.string(w.t.w6Q9wz) };
+                    return { icon: (0, h.k)(y.A), text: w.intl.string(w.t.w6Q9wz) };
                 case a.rX.TERMS:
-                    return { icon: v.B, text: w.intl.string(w.t["3pz9t3"]) };
+                    return { icon: j.B, text: w.intl.string(w.t["3pz9t3"]) };
                 default:
                     return null;
             }
@@ -43,7 +43,7 @@ function R(e) {
               className: b.L6,
               children: [
                   (0, i.jsx)(t.icon, { size: "xs", color: "currentColor" }),
-                  (0, i.jsx)(x.E, { variant: "text-sm/medium", tag: "span", children: t.text }),
+                  (0, i.jsx)(v.E, { variant: "text-sm/medium", tag: "span", children: t.text }),
               ],
           });
 }
@@ -54,7 +54,7 @@ function T(e) {
         children: (0, i.jsxs)("div", {
             className: b.ds,
             children: [
-                (0, i.jsx)(x.E, { variant: "text-md/medium", className: b.ID, children: n }),
+                (0, i.jsx)(v.E, { variant: "text-md/medium", className: b.ID, children: n }),
                 (0, i.jsx)(R, { type: t.field_type }),
             ],
         }),
@@ -66,7 +66,7 @@ function A(e) {
         o = (0, r.debounce)(async (e, n, t) => {
             await a(e, n, t);
         }),
-        x = l.useRef(null),
+        m = l.useRef(null),
         [, f] = (0, d.i)({
             type: L,
             item: { index: n, field: t },
@@ -78,7 +78,7 @@ function A(e) {
             accept: L,
             hover: (e, t) => {
                 let { index: i } = e,
-                    l = x.current?.getBoundingClientRect(),
+                    l = m.current?.getBoundingClientRect(),
                     r = t.getClientOffset();
                 if (null == l || null == r) return;
                 let s = (l.bottom - l.top) / 2,
@@ -92,7 +92,7 @@ function A(e) {
     return (
         l.useLayoutEffect(
             () => (
-                f(h(x)),
+                f(h(m)),
                 () => {
                     (h(null), f(null));
                 }
@@ -100,7 +100,7 @@ function A(e) {
             [f, h],
         ),
         (0, i.jsxs)("div", {
-            ref: x,
+            ref: m,
             "data-dnd-name": `field-${n}`,
             className: c()(b.cK, { [b.TG]: s }),
             children: [
@@ -109,7 +109,7 @@ function A(e) {
                     children: (0, i.jsx)(p.W, {
                         size: "xs",
                         className: b.co,
-                        color: m.A.unsafe_rawColors.PRIMARY_400.css,
+                        color: x.A.unsafe_rawColors.PRIMARY_400.css,
                     }),
                 }),
                 (0, i.jsx)(T, { ...e }),

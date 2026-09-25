@@ -46,7 +46,7 @@ let g = () => {
     if (null == h) return null;
     let { intervalType: S, intervalCount: T } = h,
         A = null != x ? (0, c.CE)(`${x}`, S, T) : "";
-    return (0, i.jsxs)(s.Modal, {
+    return (0, i.jsxs)(s.a, {
         size: "md",
         transitionState: t,
         title: `${p.intl.format(p.t.LZunzZ, { planPremiumType: u.Ay.getTierDisplayNameByPlanId(`${n}`) })}`,

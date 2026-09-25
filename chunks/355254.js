@@ -39,9 +39,9 @@ function P(e) {
         } = e,
         H = (0, a.bG)([c.Ay], () => c.Ay.getProject(t), [t]),
         L = (0, a.bG)([o.Ay], () => o.Ay.getModelSettings(t), [t]),
-        M = (0, a.bG)([o.Ay], () => "open" === o.Ay.getConnState(t), [t]),
-        R = null != H && (0, c.PV)(H),
-        Z = (function (e, t) {
+        R = (0, a.bG)([o.Ay], () => "open" === o.Ay.getConnState(t), [t]),
+        Z = null != H && (0, c.PV)(H),
+        q = (function (e, t) {
             let l,
                 s = (0, a.bG)([c.Ay], () => c.Ay.getProject(e), [e]),
                 r = (0, a.yK)([S.A], () => (null != t ? S.A.getSortedRoles(t) : []), [t]),
@@ -64,46 +64,46 @@ function P(e) {
                 [_, B] = i.useState(!1),
                 [V, U] = i.useState(null),
                 [H, L] = i.useState(null),
-                [M, R] = i.useState(null),
-                Z = i.useId(),
-                q = f.trim(),
-                z = null != s && (0, v.IU)(s),
-                G = null != s && null != t && (0, v.RX)(s),
+                [R, Z] = i.useState(null),
+                q = i.useId(),
+                z = f.trim(),
+                G = null != s && (0, v.IU)(s),
+                M = null != s && null != t && (0, v.RX)(s),
                 { isPublic: D, isShared: Q } = (0, y.oA)(w),
-                W = null != s && q !== g,
-                F = z && w !== (s?.flags ?? 0),
-                K = G && !((l = I instanceof Set ? I : new Set(I)).size === o.length && o.every((e) => l.has(e))),
+                W = null != s && z !== g,
+                F = G && w !== (s?.flags ?? 0),
+                K = M && !((l = I instanceof Set ? I : new Set(I)).size === o.length && o.every((e) => l.has(e))),
                 X = W || F || K,
                 N = i.useCallback((e) => {
-                    (E(e), U(null), R(null));
+                    (E(e), U(null), Z(null));
                 }, []),
                 J = i.useCallback((e, t) => {
-                    (P((l) => (t ? l | e : l & ~e)), L(null), R(null));
+                    (P((l) => (t ? l | e : l & ~e)), L(null), Z(null));
                 }, []),
                 O = i.useCallback((e) => {
                     e.length > v.sq
                         ? L(k.intl.formatToPlainString(A.default.VPUL05, { max: v.sq }))
-                        : (T(e), L(null), R(null));
+                        : (T(e), L(null), Z(null));
                 }, []),
                 Y = i.useCallback(async () => {
                     if (null == s || !X || _) return !0;
-                    if ("" === q) return (U(k.intl.string(A.default.I2hgEB)), !1);
+                    if ("" === z) return (U(k.intl.string(A.default.I2hgEB)), !1);
                     let l = {};
-                    (W && (l.name = q),
+                    (W && (l.name = z),
                         F && (l.flags = w),
                         K && (l.collaborator_role_ids = [...I].sort()),
                         null == s.guild_id && null != t && (K || (F && D)) && (l.guild_id = t),
                         B(!0),
-                        R(null));
+                        Z(null));
                     try {
-                        if (!(await (0, j.CW)(e, l)).ok) return (R(k.intl.string(A.default.dxH2ZV)), !1);
+                        if (!(await (0, j.CW)(e, l)).ok) return (Z(k.intl.string(A.default.dxH2ZV)), !1);
                         return !0;
                     } catch {
-                        return (R(k.intl.string(A.default.dxH2ZV)), !1);
+                        return (Z(k.intl.string(A.default.dxH2ZV)), !1);
                     } finally {
                         B(!1);
                     }
-                }, [w, F, t, X, D, W, s, e, K, _, I, q]);
+                }, [w, F, t, X, D, W, s, e, K, _, I, z]);
             return {
                 fields: (0, n.jsxs)(x.B, {
                     gap: 20,
@@ -117,7 +117,7 @@ function P(e) {
                             disabled: _,
                             fullWidth: !0,
                         }),
-                        z
+                        G
                             ? (0, n.jsx)(m.d, {
                                   label: k.intl.string(A.default.EHMPvA),
                                   description: k.intl.string(A.default.bQQ4uT),
@@ -126,7 +126,7 @@ function P(e) {
                                   onChange: (e) => J(v.A2.SHAREABLE, e),
                               })
                             : null,
-                        z
+                        G
                             ? (0, n.jsx)(m.d, {
                                   label: k.intl.string(A.default.fvxLKl),
                                   description: k.intl.string(A.default.Eb3Pe3),
@@ -135,7 +135,7 @@ function P(e) {
                                   onChange: (e) => J(v.A2.PUBLIC, e),
                               })
                             : null,
-                        G
+                        M
                             ? (0, n.jsxs)(x.B, {
                                   gap: 8,
                                   children: [
@@ -154,7 +154,7 @@ function P(e) {
                                           wrapTags: !0,
                                           disabled: _ || !D,
                                           "aria-invalid": null != H,
-                                          "aria-errormessage": null != H ? Z : void 0,
+                                          "aria-errormessage": null != H ? q : void 0,
                                           onSelectionChange: O,
                                       }),
                                       (0, n.jsx)(u.E, {
@@ -174,7 +174,7 @@ function P(e) {
                                             }),
                                       null != H
                                           ? (0, n.jsx)(u.E, {
-                                                id: Z,
+                                                id: q,
                                                 variant: "text-xs/normal",
                                                 color: "text-feedback-critical",
                                                 role: "alert",
@@ -184,22 +184,22 @@ function P(e) {
                                   ],
                               })
                             : null,
-                        null != M
+                        null != R
                             ? (0, n.jsx)(u.E, {
                                   variant: "text-xs/normal",
                                   color: "text-feedback-critical",
                                   role: "alert",
-                                  children: M,
+                                  children: R,
                               })
                             : null,
                     ],
                 }),
-                canSave: X && "" !== q,
+                canSave: X && "" !== z,
                 saving: _,
                 submit: Y,
             };
         })(t, H?.guild_id ?? l ?? void 0),
-        [q, z] = i.useState(null);
+        [z, G] = i.useState(null);
     return (0, n.jsx)(f.A, {
         projectId: t,
         scopeKeys: P,
@@ -208,22 +208,22 @@ function P(e) {
         isPreview: B,
         children: (e) => {
             let l = [];
-            (R && l.push("project"),
+            (Z && l.push("project"),
                 e.loaded && (e.valueCount > 0 || 0 === e.secretCount) && l.push("app"),
                 e.secretCount > 0 && l.push("secrets"),
                 L?.tierSettings != null && l.push("model"));
-            let i = [q, g].find((e) => null != e && l.includes(e)) ?? l[0],
+            let i = [z, g].find((e) => null != e && l.includes(e)) ?? l[0],
                 a = e.isScoped,
-                o = Z.saving || e.saving,
-                c = e.canSave || (!a && Z.canSave);
+                o = q.saving || e.saving,
+                c = e.canSave || (!a && q.canSave);
             async function f(t) {
                 if ((t.preventDefault(), !c || o)) return;
-                let [n, s] = await Promise.all([!!a || Z.submit(), e.submit()]);
-                n && s ? await U() : n ? "secrets" !== i && z(l.includes("app") ? "app" : "secrets") : z("project");
+                let [n, s] = await Promise.all([!!a || q.submit(), e.submit()]);
+                n && s ? await U() : n ? "secrets" !== i && G(l.includes("app") ? "app" : "secrets") : G("project");
             }
             return (0, n.jsx)("form", {
                 onSubmit: f,
-                children: (0, n.jsxs)(s.Modal, {
+                children: (0, n.jsxs)(s.a, {
                     transitionState: V,
                     onClose: U,
                     title: k.intl.string(a ? A.default.wgDhiQ : A.default.cWmjzs),
@@ -234,7 +234,7 @@ function P(e) {
                             : (0, n.jsx)(r.V, {
                                   selectedItem: i,
                                   type: "top",
-                                  onItemSelect: (e) => z(e),
+                                  onItemSelect: (e) => G(e),
                                   "aria-label": k.intl.string(A.default.FAz9Zy),
                                   children: l.map((e) =>
                                       (0, n.jsx)(r.V.Item, { id: e, children: k.intl.string(w[e]) }, e),
@@ -252,14 +252,14 @@ function P(e) {
                     ],
                     children: [
                         a || "app" === i ? e.fields : null,
-                        a || "project" !== i ? null : Z.fields,
+                        a || "project" !== i ? null : q.fields,
                         a || "secrets" !== i ? null : e.secretFields,
                         a || "model" !== i || L?.tierSettings == null
                             ? null
                             : (0, n.jsx)(I, { projectId: t, modelSettings: L, tierSettings: L.tierSettings }),
                         a || null != i
                             ? null
-                            : M
+                            : R
                               ? (0, n.jsx)(u.E, {
                                     variant: "text-sm/normal",
                                     color: "text-muted",

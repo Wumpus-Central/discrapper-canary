@@ -49,7 +49,7 @@ function N(e) {
                     ? u.intl.format(u.t["4Xyzxy"], { vendorName: N.vendor.name, modelName: N.model.name })
                     : u.intl.format(u.t.Z7XQcr, { name: n.displayName });
     }
-    return (0, a.jsx)(l.Modal, {
+    return (0, a.jsx)(l.a, {
         title: k,
         subtitle: t,
         actions: [

@@ -1,13 +1,13 @@
-n.d(i, { default: () => d });
+n.d(i, { default: () => c });
 var a = n(477900);
 n(582128);
 var s = n(189213),
     e = n(277861),
     r = n(876891),
     l = n(375708);
-function d(t) {
+function c(t) {
     let { transitionState: i, onClose: n } = t;
-    return (0, a.jsx)(s.Modal, {
+    return (0, a.jsx)(s.a, {
         size: "md",
         title: l.intl.string(r.default["+c5sxg"]),
         subtitle: l.intl.string(r.default["RFLH++"]),

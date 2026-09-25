@@ -4,11 +4,11 @@ var l,
 n(582128);
 var r = n(503698),
     a = n.n(r),
-    s = n(331322),
-    o = n(821609),
-    u = n(123292),
-    c = n(364840),
-    d = n(866665),
+    s = n(821609),
+    o = n(123292),
+    u = n(364840),
+    c = n(866665),
+    d = n(331322),
     m = n(999784),
     p = n(375708),
     C = n(88045),
@@ -27,7 +27,7 @@ function E(e) {
             primaryType: l,
             primaryText: r,
             primaryDisabled: a,
-            primarySubmitting: s,
+            primarySubmitting: o,
             onPrimary: u,
         } = e,
         c = {
@@ -35,10 +35,10 @@ function E(e) {
             disabled: a,
             onClick: u,
             icon: null == t ? void 0 : () => (0, i.jsx)(t, { color: "currentColor", className: C.C4 }),
-            loading: s,
+            loading: o,
             text: r,
         };
-    return 2 === n ? (0, i.jsx)(o.$, { variant: f(n), ...c }) : (0, i.jsx)(o.$, { ...c, variant: f(n) });
+    return 2 === n ? (0, i.jsx)(s.$, { variant: f(n), ...c }) : (0, i.jsx)(s.$, { ...c, variant: f(n) });
 }
 function S(e) {
     let {
@@ -46,7 +46,7 @@ function S(e) {
             backText: n,
             primaryIcon: l,
             primaryCTA: r,
-            primaryType: o,
+            primaryType: s,
             primaryText: h,
             primaryTooltip: f,
             primaryDisabled: S,
@@ -56,8 +56,8 @@ function S(e) {
         g =
             null == t
                 ? null
-                : (0, i.jsx)(u.Q, { text: n ?? p.intl.string(p.t["13/7kX"]), onClick: t, variant: "secondary" }),
-        A = (0, i.jsxs)(s.B, {
+                : (0, i.jsx)(o.Q, { text: n ?? p.intl.string(p.t["13/7kX"]), onClick: t, variant: "secondary" }),
+        A = (0, i.jsxs)(d.B, {
             direction: "horizontal",
             align: "center",
             gap: 0,
@@ -70,19 +70,19 @@ function S(e) {
                     let e = {
                         primaryIcon: l,
                         primaryCTA: r,
-                        primaryType: o,
+                        primaryType: s,
                         primaryText: h,
                         primaryDisabled: S,
                         primarySubmitting: y,
                         onPrimary: I,
                     };
                     return null != f
-                        ? (0, i.jsx)(d.m, { text: f, asContainer: !0, children: (0, i.jsx)(E, { ...e }) })
+                        ? (0, i.jsx)(c.m, { text: f, asContainer: !0, children: (0, i.jsx)(E, { ...e }) })
                         : (0, i.jsx)(E, { ...e, onPrimary: I });
                 })(),
             ],
         });
-    return (0, i.jsx)(c.j, {
+    return (0, i.jsx)(u.j, {
         children: (0, i.jsxs)("div", { className: a()(C.eT, { [C.T$]: null == g }), children: [g, A] }),
     });
 }

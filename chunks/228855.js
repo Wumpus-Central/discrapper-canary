@@ -2,10 +2,10 @@ n.d(i, { default: () => v });
 var e = n(477900),
     s = n(582128),
     l = n(731738),
-    r = n(189213),
-    a = n(17928),
-    d = n(691540),
-    c = n(857250),
+    r = n(17928),
+    a = n(189213),
+    c = n(691540),
+    d = n(857250),
     o = n(97483),
     u = n(331322),
     m = n(834730),
@@ -20,7 +20,7 @@ var e = n(477900),
     g = n(368549);
 function v(t) {
     let { transitionState: i, guildId: n, onClose: v } = t,
-        _ = (0, a.bG)([h.A], () => h.A.getGuild(n));
+        _ = (0, r.bG)([h.A], () => h.A.getGuild(n));
     if (
         (s.useEffect(() => {
             ((0, A.Q)(n), (0, f.$)(f.s.MODAL_VIEWED, n), x.A.increment({ name: l.K.DM_SETTINGS_UPSELL_VIEW }));
@@ -32,13 +32,13 @@ function v(t) {
         t.preventDefault();
         let i = (0, p.Tb)();
         (i.add(n),
-            D.$s.updateSetting(Array.from(i)).then(() => (0, d.P0)((0, c.o)(E.intl.string(E.t.rlYD1W), o.Ck.SUCCESS))),
+            D.$s.updateSetting(Array.from(i)).then(() => (0, c.P0)((0, d.o)(E.intl.string(E.t.rlYD1W), o.Ck.SUCCESS))),
             v(),
             (0, f.$)(f.s.MODAL_DISABLED_DMS, n));
     }
     return (0, e.jsx)("form", {
         onSubmit: b,
-        children: (0, e.jsx)(r.Modal, {
+        children: (0, e.jsx)(a.a, {
             transitionState: i,
             onClose: v,
             title: E.intl.string(E.t.w2BvnL),

@@ -2,20 +2,20 @@ a.d(n, { default: () => g });
 var i = a(477900);
 a(582128);
 var c = a(284009),
-    d = a.n(c),
-    e = a(189213),
-    l = a(17928),
+    e = a.n(c),
+    d = a(17928),
+    l = a(189213),
     s = a(32880),
     u = a(871109),
     o = a(59375),
     r = a(821609),
     h = a(882863);
 function m(t) {
-    let { guildId: n, productId: a, attachmentId: c, ...d } = t,
-        { isLoading: e, downloadAttachment: l } = (0, h.A)(n, a);
+    let { guildId: n, productId: a, attachmentId: c, ...e } = t,
+        { isLoading: d, downloadAttachment: l } = (0, h.A)(n, a);
     return (0, i.jsx)(r.$, {
-        ...d,
-        loading: e,
+        ...e,
+        loading: d,
         onClick: function () {
             l(c);
         },
@@ -42,10 +42,10 @@ function x(t) {
 }
 function g(t) {
     let { guildId: n, productId: a, onClose: c, transitionState: s } = t,
-        o = (0, l.bG)([u.A], () => u.A.getGuildProduct(a));
-    d()(null != o, "guildProductListing cannot be null");
+        o = (0, d.bG)([u.A], () => u.A.getGuildProduct(a));
+    e()(null != o, "guildProductListing cannot be null");
     let r = o.attachments ?? [];
-    return (0, i.jsx)(e.Modal, {
+    return (0, i.jsx)(l.a, {
         size: "md",
         transitionState: s,
         "aria-label": p.intl.string(p.t["3jaCac"]),

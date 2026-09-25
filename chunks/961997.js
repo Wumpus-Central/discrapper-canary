@@ -1,13 +1,13 @@
 e.d(n, { k: () => S, o: () => x });
 var i = e(477900),
     a = e(582128),
-    l = e(503698),
-    s = e.n(l),
-    o = e(508602),
-    r = e(189213),
+    s = e(503698),
+    l = e.n(s),
+    r = e(508602),
+    o = e(189213),
     c = e(700058),
-    d = e(607470),
-    u = e(59318),
+    u = e(607470),
+    d = e(59318),
     I = e(633387),
     E = e(390248),
     _ = e(961440),
@@ -21,17 +21,17 @@ function h(t) {
 function v(t) {
     let { embed: n } = t;
     if (!_.Tj.has(n.type)) return null;
-    let e = void 0 !== n.video && n.type !== o.A.GIFV ? n.video.url : (n.thumbnail?.url ?? n.image?.url);
+    let e = void 0 !== n.video && n.type !== r.A.GIFV ? n.video.url : (n.thumbnail?.url ?? n.image?.url);
     return null == e ? null : (0, i.jsx)(m, { url: e });
 }
 function m(t) {
     let { url: n, description: e } = t,
-        a = (0, u.r1)(n);
+        a = (0, d.r1)(n);
     return (0, i.jsx)("div", {
         className: p.il,
         children: a
-            ? (0, i.jsx)(d.A, { className: s()(p.Ki, p.$_), controls: !0, src: n })
-            : (0, i.jsx)("img", { className: s()(p.Sl, p.$_), src: n, alt: e }),
+            ? (0, i.jsx)(u.A, { className: l()(p.Ki, p.$_), controls: !0, src: n })
+            : (0, i.jsx)("img", { className: l()(p.Sl, p.$_), src: n, alt: e }),
     });
 }
 function x(t) {
@@ -41,12 +41,12 @@ function S(t) {
     let {
             channelId: n,
             messageId: e,
-            isReportFalsePositiveLoading: l,
-            analyticsContext: s,
-            attachmentPreview: o,
+            isReportFalsePositiveLoading: s,
+            analyticsContext: l,
+            attachmentPreview: r,
             embedPreview: c,
-            onConfirmPress: d,
-            transitionState: u,
+            onConfirmPress: u,
+            transitionState: d,
             onClose: I,
         } = t,
         _ = a.useCallback(() => {
@@ -54,33 +54,33 @@ function S(t) {
                 action: E.rY.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CANCEL,
                 channelId: n,
                 messageId: e,
-                context: s,
+                context: l,
             }),
                 I());
-        }, [n, e, s, I]),
+        }, [n, e, l, I]),
         p = a.useCallback(() => {
-            (d?.(),
+            (u?.(),
                 (0, E.hv)({
                     action: E.rY.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CONFIRM,
                     channelId: n,
                     messageId: e,
-                    context: s,
+                    context: l,
                 }));
-        }, [n, e, s, d]);
+        }, [n, e, l, u]);
     return (
         a.useEffect(() => {
-            (0, E.hv)({ action: E.rY.EXPLICIT_MEDIA_FALSE_POSITIVE_VIEWED, channelId: n, messageId: e, context: s });
-        }, [n, e, s]),
-        (0, i.jsxs)(r.Modal, {
-            transitionState: u,
+            (0, E.hv)({ action: E.rY.EXPLICIT_MEDIA_FALSE_POSITIVE_VIEWED, channelId: n, messageId: e, context: l });
+        }, [n, e, l]),
+        (0, i.jsxs)(o.a, {
+            transitionState: d,
             onClose: I,
             title: C.intl.string(C.t.TPpVkI),
             subtitle: C.intl.string(C.t["z4du/I"]),
             actions: [
-                { text: C.intl.string(C.t["ETE/oC"]), onClick: _, variant: "secondary", disabled: l },
-                { text: C.intl.string(C.t["cY+Oob"]), onClick: p, loading: l, disabled: l },
+                { text: C.intl.string(C.t["ETE/oC"]), onClick: _, variant: "secondary", disabled: s },
+                { text: C.intl.string(C.t["cY+Oob"]), onClick: p, loading: s, disabled: s },
             ],
-            children: [null != o && (0, i.jsx)(h, { attachment: o }), null != c && (0, i.jsx)(v, { embed: c })],
+            children: [null != r && (0, i.jsx)(h, { attachment: r }), null != c && (0, i.jsx)(v, { embed: c })],
         })
     );
 }

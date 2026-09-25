@@ -3,8 +3,8 @@ var n = s(477900);
 s(582128);
 var a = s(503698),
     i = s.n(a),
-    l = s(834730),
-    r = s(17928),
+    l = s(17928),
+    r = s(834730),
     o = s(28863),
     c = s(717398),
     d = s(994500),
@@ -18,7 +18,7 @@ function h(t) {
             isPendingIncoming: a,
             isBlocked: h,
             isIgnored: j,
-        } = (0, r.cf)([d.A], () => ({
+        } = (0, l.cf)([d.A], () => ({
             isPendingIncoming: d.A.getRelationshipType(e.id) === x.eA$.PENDING_INCOMING,
             isBlocked: d.A.isBlocked(e.id),
             isIgnored: d.A.isIgnored(e.id),
@@ -28,7 +28,7 @@ function h(t) {
               className: i()(E.k, s),
               children: [
                   h &&
-                      (0, n.jsx)(l.E, {
+                      (0, n.jsx)(r.E, {
                           variant: "text-sm/semibold",
                           color: "text-default",
                           children: u.intl.string(u.t["oC/fU6"]),
@@ -36,19 +36,19 @@ function h(t) {
                   j &&
                       (0, n.jsxs)(n.Fragment, {
                           children: [
-                              (0, n.jsx)(l.E, {
+                              (0, n.jsx)(r.E, {
                                   variant: "text-sm/semibold",
                                   color: "text-default",
                                   children: u.intl.string(u.t.HXz5An),
                               }),
                               (0, n.jsxs)(n.Fragment, {
                                   children: [
-                                      (0, n.jsx)(l.E, {
+                                      (0, n.jsx)(r.E, {
                                           variant: "text-sm/semibold",
                                           color: "text-default",
                                           children: "\u2022",
                                       }),
-                                      (0, n.jsx)(l.E, {
+                                      (0, n.jsx)(r.E, {
                                           variant: "text-sm/semibold",
                                           color: "text-default",
                                           children: u.intl.format(u.t.PrtAqy, {

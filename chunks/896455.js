@@ -12,7 +12,7 @@ function _(e) {
     let { channel: t, transitionState: n, onClose: _, defaultValue: E, onSubmit: A, onClear: h } = e,
         [I, f] = r.useState(E),
         p = (0, o.Vf)(I);
-    return (0, i.jsx)(a.Modal, {
+    return (0, i.jsx)(a.a, {
         transitionState: n,
         size: "md",
         title: c.intl.string(c.t["3+ii4F"]),

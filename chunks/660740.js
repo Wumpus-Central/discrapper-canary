@@ -4,8 +4,8 @@ var n = i(477900),
     l = i(17928),
     r = i(189213),
     s = i(192308),
-    o = i(331322),
-    c = i(646270),
+    c = i(331322),
+    o = i(646270),
     d = i(834730),
     u = i(557722),
     h = i(176524),
@@ -51,7 +51,7 @@ function b(t) {
                         });
                 }));
         }, [e, C]);
-    return (0, n.jsx)(r.Modal, {
+    return (0, n.jsx)(r.a, {
         onClose: e,
         title: g.intl.string(g.t.CbdZR3),
         actions: [
@@ -61,13 +61,13 @@ function b(t) {
             { text: g.intl.string(g.t.bt75uw), onClick: y, variant: "primary" },
         ],
         transitionState: b,
-        children: (0, n.jsxs)(o.B, {
+        children: (0, n.jsxs)(c.B, {
             direction: "horizontal",
             align: "center",
             gap: "md",
             children: [
-                (0, n.jsx)(h.A, { icon: c.u }),
-                (0, n.jsx)(o.B, {
+                (0, n.jsx)(h.A, { icon: o.u }),
+                (0, n.jsx)(c.B, {
                     direction: "vertical",
                     gap: 4,
                     children: (0, n.jsx)(d.E, {

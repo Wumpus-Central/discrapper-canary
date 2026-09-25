@@ -1,8 +1,8 @@
 i.d(t, { default: () => y });
 var a = i(477900),
     n = i(582128),
-    l = i(189213),
     r = i(17928),
+    l = i(189213),
     s = i(150934),
     d = i(827343),
     o = i(820284),
@@ -23,9 +23,9 @@ var a = i(477900),
     S = i(375708),
     x = i(907487);
 function y(e) {
-    let { transitionState: t, videoEnabled: i, onEnable: y, onClose: M } = e,
-        j = E.Ay.getCameraComponent(),
-        f = A.bm.useSetting(),
+    let { transitionState: t, videoEnabled: i, onEnable: y, onClose: j } = e,
+        f = E.Ay.getCameraComponent(),
+        M = A.bm.useSetting(),
         [P, I] = n.useState((0, C.i)(b.default.getCurrentUser())),
         L = (0, c.p)(),
         { analyticsLocations: R } = (0, g.Ay)(u.A.CAMERA_PREVIEW),
@@ -38,8 +38,8 @@ function y(e) {
             try {
                 await (0, v.gB)(P, { location: { page: m.liQ.PREVIEW_CAMERA_MODAL, ...L.location } });
             } catch (e) {}
-            (await M(), (0, p._C)(P));
-        }, [P, L.location, M]),
+            (await j(), (0, p._C)(P));
+        }, [P, L.location, j]),
         N = n.useCallback(async () => {
             (await B(), d.A.setVideoEnabled(!0), y?.());
         }, [B, y]),
@@ -59,20 +59,20 @@ function y(e) {
               value: R,
               children: (0, a.jsx)(o.A, {
                   page: m.liQ.PREVIEW_CAMERA_MODAL,
-                  children: (0, a.jsx)(l.Modal, {
+                  children: (0, a.jsx)(l.a, {
                       size: "md",
                       title: i ? S.intl.string(S.t.LAwwbQ) : S.intl.string(S.t["/HITVD"]),
                       actionBarInput: (0, a.jsx)(s.S, {
                           label: S.intl.string(S.t["3Ppr1h"]),
                           labelType: "secondary",
-                          checked: f,
+                          checked: M,
                           onChange: () => {
-                              (A.bm.updateSetting(!f),
-                                  w.default.track(m.HAw.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: !f }));
+                              (A.bm.updateSetting(!M),
+                                  w.default.track(m.HAw.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: !M }));
                           },
                       }),
                       actions: T,
-                      onClose: M,
+                      onClose: j,
                       transitionState: t,
                       children: (0, a.jsx)(_.Ay, {
                           hidePreviewToggle: !0,
@@ -87,7 +87,7 @@ function y(e) {
                                   children: [
                                       (0, a.jsx)("div", {
                                           className: x.U,
-                                          children: (0, a.jsx)(j, {
+                                          children: (0, a.jsx)(f, {
                                               disabled: !1,
                                               deviceId: e,
                                               width: 430,
@@ -99,16 +99,16 @@ function y(e) {
                                   ],
                               });
                           },
-                          onLearnMore: M,
+                          onLearnMore: j,
                       }),
                   }),
               }),
           })
-        : (0, a.jsx)(l.Modal, {
+        : (0, a.jsx)(l.a, {
               title: S.intl.string(S.t.Nzo5nz),
               subtitle: S.intl.string(S.t.UoW002),
               transitionState: t,
-              onClose: M,
-              actions: [{ variant: "primary", text: S.intl.string(S.t.BddRzS), onClick: M }],
+              onClose: j,
+              actions: [{ variant: "primary", text: S.intl.string(S.t.BddRzS), onClick: j }],
           });
 }

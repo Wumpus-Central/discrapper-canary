@@ -25,7 +25,7 @@ function r(t) {
             ],
             [u, c, r],
         );
-    return (0, s.jsx)(a.Modal, {
+    return (0, s.jsx)(a.a, {
         title: l.intl.string(l.t.eJzSDT),
         subtitle: l.intl.string(l.t.GB4jUw),
         actions: d,

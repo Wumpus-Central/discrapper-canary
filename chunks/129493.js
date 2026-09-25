@@ -2,8 +2,8 @@ n.d(t, { default: () => V });
 var i = n(477900),
     s = n(582128),
     a = n(731738),
-    l = n(772707),
-    r = n(702841),
+    l = n(702841),
+    r = n(772707),
     c = n(331322),
     d = n(834730),
     o = n(807393),
@@ -96,7 +96,7 @@ function V(e) {
             actionRows: j,
             learnMore: y,
         } = e,
-        N = (0, r.bG)([m.Ay], () => m.Ay.getChannelSafetyWarning(h, g));
+        N = (0, l.bG)([m.Ay], () => m.Ay.getChannelSafetyWarning(h, g));
     return (
         s.useEffect(() => {
             ((0, _.mO)(W.HAw.SAFETY_WARNING_MODAL_VIEWED, {
@@ -107,7 +107,7 @@ function V(e) {
             }),
                 o.A.increment({ name: a.K.SAFETY_WARNING_MODAL_VIEW }));
         }, [h, g, p, N]),
-        (0, i.jsx)(l.k, {
+        (0, i.jsx)(r.k, {
             onClose: n,
             transitionState: t,
             graphic: { type: "image", src: I.A },

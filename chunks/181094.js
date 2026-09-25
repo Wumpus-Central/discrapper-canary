@@ -4,8 +4,8 @@ var i = a(477900),
     s = a(834730),
     n = a(663417),
     c = a(429913),
-    o = a(47167),
-    r = a(713654),
+    r = a(47167),
+    o = a(713654),
     d = a(46054),
     p = a(975571),
     h = a(652215),
@@ -14,10 +14,10 @@ var i = a(477900),
     x = a(165648);
 function v(t) {
     let { channel: e, guild: a, onClose: v, transitionState: j } = t,
-        k = (0, r.gU)(e, a) ?? void 0,
-        N = (0, o.Ay)(e, !1),
+        k = (0, o.gU)(e, a) ?? void 0,
+        N = (0, r.Ay)(e, !1),
         b = (0, c.h)(e.linkedLobby?.application_id);
-    return (0, i.jsxs)(l.Modal, {
+    return (0, i.jsxs)(l.a, {
         title: u.intl.string(u.t.X8jMDh),
         subtitle: null != N ? { text: N, leadingIcon: k } : void 0,
         actions: void 0,

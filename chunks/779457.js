@@ -5,10 +5,10 @@ var n = l(477900),
     r = l.n(s),
     a = l(284009),
     d = l.n(a),
-    c = l(189213),
-    o = l(17928),
-    u = l(139033),
-    x = l(821609),
+    c = l(17928),
+    o = l(139033),
+    u = l(821609),
+    x = l(189213),
     m = l(834730),
     h = l(696986),
     j = l(289873),
@@ -29,7 +29,7 @@ function w(t) {
     let { guildProductListing: e, guildId: l, invoicePreview: i } = t,
         s = (0, b.z)(e),
         r = (0, p.$g)(i.total, i.currency),
-        a = (0, o.bG)([f.A], () => f.A.getGuild(l));
+        a = (0, c.bG)([f.A], () => f.A.getGuild(l));
     return (
         d()(null != a, "guild cannot be null"),
         (0, n.jsxs)("div", {
@@ -91,7 +91,7 @@ function G(t) {
                           className: P.yO,
                           children: i.map((t) => (0, n.jsx)(E.A, { attachment: t }, t.id)),
                       }),
-                      (0, n.jsx)("div", { children: (0, n.jsx)(x.$, { ...a }) }),
+                      (0, n.jsx)("div", { children: (0, n.jsx)(u.$, { ...a }) }),
                   ],
               }),
           });
@@ -107,8 +107,8 @@ function O(t) {
 }
 function I(t) {
     let { onClose: e, transitionState: l, guildProductListingId: s, guildId: r, invoicePreview: a } = t,
-        x = (0, o.bG)([N.A], () => N.A.getGuildProduct(s));
-    d()(null != x, "guildProductListing cannot be null");
+        u = (0, c.bG)([N.A], () => N.A.getGuildProduct(s));
+    d()(null != u, "guildProductListing cannot be null");
     let [g, f] = i.useState(!1);
     i.useEffect(() => {
         !(async function () {
@@ -116,7 +116,7 @@ function I(t) {
                 (f(!0), await (0, A.py)(r, s), f(!1));
             } catch (t) {
                 (e(),
-                    (0, u.A)({
+                    (0, o.A)({
                         title: C.intl.string(C.t.OCwKlu),
                         subtitle: C.intl.string(C.t.VQ0lXY),
                         confirmText: C.intl.string(C.t["NX+WJN"]),
@@ -124,18 +124,18 @@ function I(t) {
             }
         })();
     }, [r, s, e]);
-    let p = (x.attachments ?? []).length > 0,
-        b = x.role_id,
-        E = (0, o.bG)([v.A], () => (null != b ? v.A.getRole(r, b) : void 0));
-    return (0, n.jsx)(c.Modal, {
+    let p = (u.attachments ?? []).length > 0,
+        b = u.role_id,
+        E = (0, c.bG)([v.A], () => (null != b ? v.A.getRole(r, b) : void 0));
+    return (0, n.jsx)(x.a, {
         title: C.intl.string(C.t.dhAgv3),
-        subtitle: C.intl.format(C.t.X6yvvo, { productName: x.name, emphasisHook: O }),
+        subtitle: C.intl.format(C.t.X6yvvo, { productName: u.name, emphasisHook: O }),
         onClose: e,
         transitionState: l,
         size: "md",
         actions: [],
         children:
-            null == x
+            null == u
                 ? null
                 : g
                   ? (0, n.jsx)(j.y, {})
@@ -156,14 +156,14 @@ function I(t) {
                                 children: C.intl.string(C.t["9S3QHF"]),
                             }),
                             (0, n.jsx)(h.h, { size: 24 }),
-                            (0, n.jsx)(w, { guildProductListing: x, guildId: r, invoicePreview: a }),
+                            (0, n.jsx)(w, { guildProductListing: u, guildId: r, invoicePreview: a }),
                             (0, n.jsx)(h.h, { size: 32 }),
                             (0, n.jsx)("div", { className: P.yF }),
                             (0, n.jsx)(h.h, { size: 32 }),
                             (0, n.jsxs)("ul", {
                                 className: P.iq,
                                 children: [
-                                    (0, n.jsx)(G, { guildProductListing: x, guildId: r }),
+                                    (0, n.jsx)(G, { guildProductListing: u, guildId: r }),
                                     (0, n.jsx)(K, { role: E }),
                                 ],
                             }),

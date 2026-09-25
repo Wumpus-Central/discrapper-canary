@@ -3,8 +3,8 @@ var l = t(477900),
     a = t(582128),
     i = t(435558),
     s = t(837381),
-    r = t(189213),
-    o = t(17928),
+    r = t(17928),
+    o = t(189213),
     u = t(765178),
     c = t(834730),
     d = t(691540),
@@ -26,9 +26,9 @@ var l = t(477900),
     R = t(734057),
     I = t(31717),
     _ = t(232835),
-    M = t(403362),
-    E = t(975975),
-    F = t.n(E),
+    E = t(403362),
+    F = t(975975),
+    M = t.n(F),
     P = t(762230),
     N = t(665260),
     D = t(148494),
@@ -74,7 +74,7 @@ let H = {
                 (0, U.lP)(l, V.A) ||
                 (await D.A.sendMessage(l.id, O.Ay.parse(l, u), !1, { location: W.Hx.FORWARDING, flags: o })));
     },
-    sendForwards: (e, n, t) => F()(n.map((n) => H.sendForward(e, n, t))),
+    sendForwards: (e, n, t) => M()(n.map((n) => H.sendForward(e, n, t))),
 };
 var B = t(530912),
     Q = t(71393),
@@ -181,7 +181,7 @@ var eg = t(573435),
     eb = t(739126);
 function ev(e) {
     let { message: n, forwardOptions: t, channel: s } = e,
-        r = ep.hH.useSetting(),
+        o = ep.hH.useSetting(),
         {
             attachments: u,
             embeds: d,
@@ -192,11 +192,11 @@ function ev(e) {
                 a = l?.onlyAttachmentIds,
                 i = l?.onlyEmbedIndices,
                 s = n.messageSnapshots[0]?.message ?? n,
-                r = s.attachments;
-            null != a ? (r = s.attachments.filter((e) => a.includes(e.id))) : null != i && (r = []);
+                o = s.attachments;
+            null != a ? (o = s.attachments.filter((e) => a.includes(e.id))) : null != i && (o = []);
             let u = [];
             return (
-                (0, o.bG)([V.A], () => null != t && !(0, ew.fS)(t, V.A) && (0, ew.ax)(n)) ||
+                (0, r.bG)([V.A], () => null != t && !(0, ew.fS)(t, V.A) && (0, ew.ax)(n)) ||
                     ((u = s.embeds),
                     null != i ? (u = s.embeds.filter((e, n) => i.includes(n))) : null != a && (u = [])),
                 (null != i || ("" === s.content && u.length > 0)) &&
@@ -204,7 +204,7 @@ function ev(e) {
                 "" === s.content &&
                     s.embeds[0]?.rawDescription != null &&
                     (s = s.set("content", s.embeds[0].rawDescription)),
-                { attachments: r, embeds: u, hasContent: "" !== s.content && null == a, contentMessage: s }
+                { attachments: o, embeds: u, hasContent: "" !== s.content && null == a, contentMessage: s }
             );
         })({ message: n, channel: s, forwardOptions: t }),
         g = (0, er._S)(m),
@@ -289,7 +289,7 @@ function ev(e) {
                                 className: en()(eb.vp, x > 0 && eb.NL),
                                 message: n,
                                 content: f,
-                                compact: r,
+                                compact: o,
                             }),
                         x > 0 &&
                             (0, l.jsxs)("div", {
@@ -333,8 +333,8 @@ function ek(e) {
     let {
             message: n,
             initialSelectedDestinations: b = [],
-            forwardOptions: E,
-            onClose: F,
+            forwardOptions: F,
+            onClose: M,
             onRequestSent: P,
             customTitle: N,
             customSubtitle: D,
@@ -350,12 +350,12 @@ function ek(e) {
         q = n?.id,
         ee = a.useMemo(() => (null != Y ? (0, S._5)(Y) : void 0), [Y]),
         [en, et] = a.useState(!1),
-        el = (0, o.bG)(
+        el = (0, r.bG)(
             [_.A],
             () => ("checkpoint" === W ? n : null != n ? (_.A.getMessage(n.channel_id, n.id) ?? n) : void 0),
             [n, W],
         ),
-        ea = (0, o.bG)([R.A], () => (null != Y ? R.A.getChannel(Y) : void 0), [Y]),
+        ea = (0, r.bG)([R.A], () => (null != Y ? R.A.getChannel(Y) : void 0), [Y]),
         ei = (0, B.Jf)(),
         es = (0, B.nL)(),
         er = a.useRef(0),
@@ -365,7 +365,7 @@ function ek(e) {
         eh = ed >= 5,
         em = (0, U.QK)(eu),
         eg = (0, U.l2)(eu),
-        ef = (0, o.bG)([I.A], () => (null != el ? I.A.getDraft(el.channel_id, I.C.ForwardContextMessage) : "")),
+        ef = (0, r.bG)([I.A], () => (null != el ? I.A.getDraft(el.channel_id, I.C.ForwardContextMessage) : "")),
         [ex, eC] = a.useState(() => (0, w.ur)(ef)),
         eA = (0, U.M6)(eu),
         ep = (0, y.A)(),
@@ -388,10 +388,10 @@ function ek(e) {
             },
             [Y, q, es, eI],
         ),
-        eM = a.useCallback(() => {
+        eE = a.useCallback(() => {
             eI("");
         }, [eI]),
-        eE = a.useCallback(async () => {
+        eF = a.useCallback(async () => {
             (null != Y &&
                 null != q &&
                 (0, B.hH)({
@@ -400,11 +400,11 @@ function ek(e) {
                     numDestinationChanges: er.current,
                     numQueryChanges: eo.current,
                 }),
-                await F());
-        }, [Y, q, F]),
-        eF = a.useRef(null);
+                await M());
+        }, [Y, q, M]),
+        eM = a.useRef(null);
     a.useEffect(() => {
-        "" === ew && eF.current?.focus();
+        "" === ew && eM.current?.focus();
     }, [ew]);
     let eP = a.useMemo(
             () =>
@@ -457,7 +457,7 @@ function ek(e) {
                 let r = _.A.getMessage(Y, q) ?? n;
                 if (null == r) return void (0, d.P0)((0, h.o)(K.intl.string(K.t.R0RpRX), m.Ck.FAILURE));
                 et(!0);
-                let o = (await Promise.all(e.map(S.pk))).filter(M.Vq);
+                let o = (await Promise.all(e.map(S.pk))).filter(E.Vq);
                 if (
                     (function (e, n) {
                         if (!X.default.getCurrentUser()?.isStaff()) return !1;
@@ -484,7 +484,7 @@ function ek(e) {
                     i &&
                         (await v.A.fetchMessages({ channelId: o[0] }),
                         (0, j.iN)(o[0], { openTextInVoiceIfVoiceChannel: !0 })));
-                let u = await H.sendForwards(r, o, { ...E, withMessage: a }),
+                let u = await H.sendForwards(r, o, { ...F, withMessage: a }),
                     c = o.some((e) => {
                         let n = R.A.getChannel(e);
                         return null != n && n.rateLimitPerUser > 0;
@@ -519,9 +519,9 @@ function ek(e) {
                     anyDestinationHasSlowmode: c,
                 });
                 let f = e.filter((e, n) => "rejected" === u[n].status);
-                (0, z.vK)({ message: r, failedDestinations: f, forwardOptions: E });
+                (0, z.vK)({ message: r, failedDestinations: f, forwardOptions: F });
             },
-            [Y, E, q, n, P, eP, O],
+            [Y, F, q, n, P, eP, O],
         ),
         eT = a.useCallback(
             (e) => {
@@ -556,9 +556,9 @@ function ek(e) {
         children: (0, l.jsx)(s.PR, {
             children: (e) => {
                 let { ref: n, ...t } = e;
-                return (0, l.jsx)(r.Modal, {
+                return (0, l.jsx)(o.a, {
                     ...Q,
-                    onClose: eE,
+                    onClose: eF,
                     title: N ?? K.intl.string(K.t["+SkRRj"]),
                     subtitle:
                         D ??
@@ -566,10 +566,10 @@ function ek(e) {
                     input: (0, l.jsxs)(l.Fragment, {
                         children: [
                             (0, l.jsx)(f.I, {
-                                ref: eF,
+                                ref: eM,
                                 query: ew,
                                 onChange: e_,
-                                onClear: eM,
+                                onClear: eE,
                                 placeholder: K.intl.string(K.t["5h0QOP"]),
                                 "aria-label": K.intl.string(K.t["5h0QOP"]),
                                 autoFocus: !0,
@@ -586,7 +586,7 @@ function ek(e) {
                         (null != el &&
                             (0, l.jsxs)(l.Fragment, {
                                 children: [
-                                    (0, l.jsx)(ev, { message: el, forwardOptions: E, channel: em }),
+                                    (0, l.jsx)(ev, { message: el, forwardOptions: F, channel: em }),
                                     eA.length > 0 &&
                                         ex.textValue.length > 0 &&
                                         (0, l.jsx)(c.E, {

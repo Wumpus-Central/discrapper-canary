@@ -18,7 +18,7 @@ function p(t) {
     }, [n]);
     let x = null != p,
         b = h.trim().length > 0 && m.trim().length > 0;
-    return (0, l.jsx)(a.Modal, {
+    return (0, l.jsx)(a.a, {
         transitionState: n,
         title: c.intl.string(x ? c.t.qnClOB : c.t["Zz9Nf/"]),
         onClose: e,

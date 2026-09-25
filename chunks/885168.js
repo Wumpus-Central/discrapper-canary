@@ -81,7 +81,7 @@ function k(e) {
             }
         }
     }
-    return (0, i.jsx)(n.Modal, {
+    return (0, i.jsx)(n.a, {
         transitionState: l,
         onClose: h,
         title: "Clip Feedback",

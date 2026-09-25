@@ -3,9 +3,9 @@ var e = s(477900);
 s(582128);
 var i = s(503698),
     n = s.n(i),
-    l = s(834730),
-    r = s(935462),
-    d = s(862482),
+    l = s(935462),
+    r = s(862482),
+    d = s(834730),
     c = s(930861),
     m = s(793574),
     o = s(688810),
@@ -34,10 +34,10 @@ let D = function (a) {
         y = (0, N.rG)(i?.userId ?? k?.id) ?? new Date(),
         L = (0, h.CC)(k?.premiumType, v.PremiumTypes.TIER_2),
         O = R.map((a) => {
-            let { id: t, nameUnformatted: s, tenureReqNumMonths: r } = a,
-                d = I.intl.string(s),
+            let { id: t, nameUnformatted: s, tenureReqNumMonths: l } = a,
+                r = I.intl.string(s),
                 c = (0, T.I)(t).standard,
-                m = (0, g.T)(t, r),
+                m = (0, g.T)(t, l),
                 o = null == i,
                 u = o && b?.id === t,
                 x = !o && S?.id === t,
@@ -49,14 +49,14 @@ let D = function (a) {
                 {
                     className: n()(_.qS, { [_.Ny]: p || h }),
                     children: [
-                        (0, e.jsx)("img", { src: c, alt: d, className: _.pq }),
+                        (0, e.jsx)("img", { src: c, alt: r, className: _.pq }),
                         (0, e.jsxs)("div", {
                             className: _.Vv,
                             children: [
-                                (0, e.jsx)(l.E, { variant: "text-md/semibold", className: _.Vd, children: d }),
-                                (0, e.jsx)(l.E, { variant: "text-xs/normal", children: m }),
+                                (0, e.jsx)(d.E, { variant: "text-md/semibold", className: _.Vd, children: r }),
+                                (0, e.jsx)(d.E, { variant: "text-xs/normal", children: m }),
                                 p &&
-                                    (0, e.jsx)(l.E, {
+                                    (0, e.jsx)(d.E, {
                                         variant: "text-xs/normal",
                                         color: "text-muted",
                                         className: _.h8,
@@ -64,7 +64,7 @@ let D = function (a) {
                                     }),
                                 h &&
                                     null != f &&
-                                    (0, e.jsx)(l.E, {
+                                    (0, e.jsx)(d.E, {
                                         variant: "text-xs/normal",
                                         color: "text-muted",
                                         className: _.h8,
@@ -80,26 +80,26 @@ let D = function (a) {
     function P() {
         ((0, x.pX)(A.BVt.APPLICATION_STORE, { source: m.A.TIERED_TENURE_BADGES_MODAL, sourceLocationStack: D }), s?.());
     }
-    return (0, e.jsxs)(r.EO, {
+    return (0, e.jsxs)(l.EO, {
         "data-migration-pending": !0,
         transitionState: t,
         "aria-labelledby": C,
         className: n()(_.kL, "theme-dark"),
         parentComponent: "EvolvingTenureBadgeModal",
         children: [
-            (0, e.jsx)(r.s_, { "data-migration-pending": !0, onClick: s, className: _.b }),
-            (0, e.jsx)(r.$m, {
+            (0, e.jsx)(l.s_, { "data-migration-pending": !0, onClick: s, className: _.b }),
+            (0, e.jsx)(l.$m, {
                 "data-migration-pending": !0,
                 className: _.Qs,
                 children: L
                     ? (0, e.jsxs)(e.Fragment, {
                           children: [
-                              (0, e.jsx)(l.E, {
+                              (0, e.jsx)(d.E, {
                                   variant: "display-md",
                                   className: _.wx,
                                   children: I.intl.string(I.t.Og62j7),
                               }),
-                              (0, e.jsx)(l.E, {
+                              (0, e.jsx)(d.E, {
                                   variant: "text-md/medium",
                                   className: _.uI,
                                   children: I.intl.string(I.t.IdAP91),
@@ -117,12 +117,12 @@ let D = function (a) {
                       })
                     : (0, e.jsxs)(e.Fragment, {
                           children: [
-                              (0, e.jsx)(l.E, {
+                              (0, e.jsx)(d.E, {
                                   variant: "display-md",
                                   className: _.wx,
                                   children: I.intl.string(I.t.RtGeFS),
                               }),
-                              (0, e.jsx)(l.E, {
+                              (0, e.jsx)(d.E, {
                                   variant: "text-md/medium",
                                   className: _.uI,
                                   children: I.intl.format(I.t.ffatnT, { onClick: P }),
@@ -134,7 +134,7 @@ let D = function (a) {
                                   textOptions: { subscribeText: I.intl.string(I.t.JST6jl) },
                                   subscriptionTier: v.pe.TIER_2,
                                   showGradient: !0,
-                                  color: d.XD.BRAND,
+                                  color: r.XD.BRAND,
                               }),
                           ],
                       }),

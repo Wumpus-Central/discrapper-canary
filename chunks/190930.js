@@ -3,8 +3,8 @@ var a = n(477900),
     i = n(582128),
     l = n(562708),
     r = n(837381),
-    s = n(189213),
-    o = n(17928),
+    s = n(17928),
+    o = n(189213),
     c = n(834730),
     d = n(691540),
     u = n(857250),
@@ -21,8 +21,8 @@ var a = n(477900),
     S = n(429913),
     E = n(115718),
     x = n(61916),
-    M = n(823099),
-    w = n(451909),
+    w = n(823099),
+    M = n(451909),
     T = n(151054),
     v = n(734057),
     k = n(31717),
@@ -59,14 +59,14 @@ function B() {
 }
 function q(e) {
     let { applicationId: t, mediaUrl: n, onClose: E, transitionState: U, ...q } = e,
-        Y = (0, o.bG)([P.Ay], () => P.Ay.getCurrentEmbeddedActivity());
+        Y = (0, s.bG)([P.Ay], () => P.Ay.getCurrentEmbeddedActivity());
     (0, I.A)({
         type: l.ImpressionTypes.MODAL,
         name: l.ImpressionNames.ACTIVITY_SHARE_MOMENT_MODAL,
         properties: { application_id: t, activity_session_id: Y?.compositeInstanceId },
     });
     let [Q] = (0, S.A)([t]),
-        W = (0, o.bG)([D.default], () => D.default.getCurrentUser()),
+        W = (0, s.bG)([D.default], () => D.default.getCurrentUser()),
         [z, J] = i.useState(null),
         [K, X] = i.useState(null),
         [Z, $] = i.useState(!1),
@@ -162,7 +162,7 @@ function q(e) {
                 (y.A.sendMessage(
                     n,
                     null != Q
-                        ? w.Ay.parse(a, O.intl.formatToPlainString(O.t.jQULqL, { applicationName: `**${Q.name}**` }))
+                        ? M.Ay.parse(a, O.intl.formatToPlainString(O.t.jQULqL, { applicationName: `**${Q.name}**` }))
                         : { content: "", tts: !1, invalidEmojis: [], validNonShortcutEmojis: [] },
                     !1,
                     {
@@ -171,7 +171,7 @@ function q(e) {
                         applicationId: t,
                         attachmentsToUpload: i,
                         onAttachmentUploadError: (e, t, n) => {
-                            (0, M.k)({
+                            (0, w.k)({
                                 file: e,
                                 guildId: a?.getGuildId() ?? null,
                                 analyticsLocations: [],
@@ -219,7 +219,7 @@ function q(e) {
               children: (0, a.jsx)(r.PR, {
                   children: (e) => {
                       let { ref: t, ...i } = e;
-                      return (0, a.jsx)(s.Modal, {
+                      return (0, a.jsx)(o.a, {
                           transitionState: U,
                           onClose: eo,
                           size: "md",

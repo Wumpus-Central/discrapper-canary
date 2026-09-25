@@ -243,4 +243,58 @@
     width: 20px
 }
 
-/*# sourceMappingURL=363189.7d47aa131cc635db.css.map*/
+.rarity-common_ed9123 {
+    background: var(--badge-common-background);
+    border: 1px solid var(--badge-common-border);
+    color: var(--badge-common-text)
+}
+
+.rarity-epic_ed9123,
+.rarity-mythic_ed9123,
+.rarity-rare_ed9123 {
+    border: 1px solid transparent
+}
+
+.rarity-epic_ed9123:before,
+.rarity-mythic_ed9123:before,
+.rarity-rare_ed9123:before {
+    border-radius: inherit;
+    content: "";
+    inset: -1px;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    padding: 1px;
+    pointer-events: none;
+    position: absolute
+}
+
+.rarity-rare_ed9123:before {
+    background: linear-gradient(-78deg, var(--badge-rare-border-gradient-start), var(--badge-rare-border-gradient-end))
+}
+
+.rarity-epic_ed9123:before {
+    background: linear-gradient(-78deg, var(--badge-epic-border-gradient-start), var(--badge-epic-border-gradient-end))
+}
+
+.rarity-mythic_ed9123:before {
+    background: linear-gradient(-78deg, var(--badge-mythic-border-gradient-start), var(--badge-mythic-border-gradient-end))
+}
+
+.rarity-rare_ed9123 {
+    background: var(--badge-rare-background);
+    color: var(--badge-rare-text)
+}
+
+.rarity-epic_ed9123 {
+    background: var(--badge-epic-background);
+    color: var(--badge-epic-text)
+}
+
+.rarity-mythic_ed9123 {
+    background: var(--badge-mythic-background);
+    color: var(--badge-mythic-text)
+}
+
+/*# sourceMappingURL=363189.34092247a6b860b4.css.map*/

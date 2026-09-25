@@ -2,8 +2,8 @@ l.d(t, { default: () => b });
 var n = l(477900),
     s = l(582128),
     i = l(562708),
-    r = l(189213),
-    u = l(17928),
+    r = l(17928),
+    u = l(189213),
     a = l(894778),
     o = l(287809),
     A = l(174459),
@@ -20,7 +20,7 @@ function b(e) {
         [g, h] = s.useState(null),
         [G, w] = s.useState(!1),
         y = s.useRef(null),
-        N = (0, u.bG)([o.default], () => o.default.getCurrentUser()),
+        N = (0, r.bG)([o.default], () => o.default.getCurrentUser()),
         S = s.useRef(null);
     async function k(e) {
         if ((e.preventDefault(), null != b)) {
@@ -51,7 +51,7 @@ function b(e) {
     }, [S]);
     return (0, n.jsx)("form", {
         onSubmit: k,
-        children: (0, n.jsx)(r.Modal, {
+        children: (0, n.jsx)(u.a, {
             transitionState: t,
             onClose: l,
             title: E.intl.string(E.t.QpSKow),

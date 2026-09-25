@@ -5,10 +5,10 @@ var r,
     a = t(503698),
     i = t.n(a),
     c = t(742589),
-    o = t(3666),
-    d = t(922016),
-    u = t(900797),
-    h = t(847374),
+    o = t(922016),
+    d = t(900797),
+    u = t(847374),
+    h = t(3666),
     b = t(770178),
     x = t(124589),
     f = t(488995),
@@ -30,9 +30,9 @@ function v(e) {
     });
 }
 function A(e) {
-    let { onTabSelect: l, tabs: t, selectedTab: r, selected: a, onKeyDown: o } = e,
+    let { onTabSelect: l, tabs: t, selectedTab: r, selected: a, onKeyDown: h } = e,
         b = s.useRef(null);
-    return (0, n.jsx)(d.Y, {
+    return (0, n.jsx)(o.Y, {
         targetElementRef: b,
         renderPopout: (e) => {
             let { closePopout: s } = e;
@@ -45,7 +45,7 @@ function A(e) {
             return (0, n.jsxs)(c.A.Title, {
                 ...e,
                 ref: b,
-                onKeyDown: o,
+                onKeyDown: h,
                 wrapperClassName: p.Vn,
                 className: i()(p.Mf, p.OS, { [p.wH]: a }),
                 id: f.GlobalDiscoverySharedTabId.MORE,
@@ -55,7 +55,7 @@ function A(e) {
                 tabIndex: a ? 0 : -1,
                 children: [
                     j.intl.string(j.t["UKOtz+"]),
-                    t ? (0, n.jsx)(u.t, { size: "xs" }) : (0, n.jsx)(h.a, { size: "xs" }),
+                    t ? (0, n.jsx)(d.t, { size: "xs" }) : (0, n.jsx)(u.a, { size: "xs" }),
                 ],
             });
         },
@@ -63,29 +63,29 @@ function A(e) {
 }
 function g(e) {
     let { className: l, selectedTab: t, tabs: r, onTabSelect: a, onAvailableWidthChange: c } = e,
-        [d, u] = s.useState(0),
-        h = s.useRef(d),
+        [o, d] = s.useState(0),
+        u = s.useRef(o),
         {
             lastVisibleIndex: x,
             onItemLayout: f,
             overflowItemsRef: j,
             itemWidthsRef: g,
-        } = (0, o.Wv)({ items: r, itemGapPx: 24, maxLines: 1, containerWidth: d }),
+        } = (0, h.Wv)({ items: r, itemGapPx: 24, maxLines: 1, containerWidth: o }),
         R = s.useMemo(() => r.slice(0, x + 1), [x, r]),
         S = s.useMemo(() => r.slice(x + 1), [x, r]),
         T = s.useRef(null),
         w = s.useCallback(
             (e) => {
                 let l = e.contentRect.width;
-                if (null == l || h.current === l) return;
-                (u(l), (h.current = l));
+                if (null == l || u.current === l) return;
+                (d(l), (u.current = l));
                 let t = l - g.current.reduce((e, l, t) => e + l + 24 * (0 !== t));
                 c?.(t);
             },
             [g, c],
         );
     (0, b.g)(T, w);
-    let C = 0 !== d,
+    let C = 0 !== o,
         k = S.some((e) => e.id === t),
         y = s.useCallback((e) => {
             let l,
@@ -126,7 +126,7 @@ function g(e) {
                 children: [
                     r.map((e, l) =>
                         (0, n.jsx)(
-                            o.Ae,
+                            h.Ae,
                             {
                                 index: l,
                                 onItemLayout: f,

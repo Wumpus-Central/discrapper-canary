@@ -1,19 +1,19 @@
-n.d(i, { default: () => e });
+n.d(i, { default: () => o });
 var r = n(477900);
 n(582128);
 var a = n(732159),
-    o = n(816662),
-    s = n(375708);
-function e(t) {
-    let { guildId: i, channelId: n, ...e } = t;
-    return (0, r.jsx)(a.ConfirmModal, {
-        ...e,
-        title: s.intl.string(s.t["7r7op8"]),
-        subtitle: s.intl.format(s.t.K82phZ, {}),
-        confirmText: s.intl.string(s.t.H8ZQbo),
-        cancelText: s.intl.string(s.t["ETE/oC"]),
+    s = n(816662),
+    e = n(375708);
+function o(t) {
+    let { guildId: i, channelId: n, ...o } = t;
+    return (0, r.jsx)(a.u, {
+        ...o,
+        title: e.intl.string(e.t["7r7op8"]),
+        subtitle: e.intl.format(e.t.K82phZ, {}),
+        confirmText: e.intl.string(e.t.H8ZQbo),
+        cancelText: e.intl.string(e.t["ETE/oC"]),
         onConfirm: function () {
-            (0, o.jA)(i, n, !1);
+            (0, s.jA)(i, n, !1);
         },
         variant: "primary",
     });

@@ -2,8 +2,8 @@ s.d(e, { A: () => u });
 var c = s(477900),
     l = s(503698),
     i = s.n(l),
-    n = s(896572),
-    r = s(939249),
+    n = s(939249),
+    r = s(896572),
     d = s(124480),
     m = s(670455),
     t = s(164249);
@@ -33,14 +33,14 @@ function u(a) {
               className: i()(t.Bo, t.gm),
               children: e.map((a) =>
                   (0, c.jsx)(
-                      r.D,
+                      n.D,
                       {
                           onClick: () => f(a),
                           "aria-label": a,
                           className: t.qq,
                           children:
                               "animated-face" === s
-                                  ? (0, c.jsx)(n.i, { className: i()(t.Ld, u === a ? t.wH : null), artboard: o[a][s] })
+                                  ? (0, c.jsx)(r.i, { className: i()(t.Ld, u === a ? t.wH : null), artboard: o[a][s] })
                                   : (0, c.jsx)("div", { className: i()(o[a][s], u === a ? t.wH : null) }),
                       },
                       a,

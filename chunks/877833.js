@@ -5,8 +5,8 @@ var n,
     c = i(189213),
     d = i(150934),
     a = i(375708),
-    o = i(95561),
-    r = i(174459),
+    r = i(95561),
+    o = i(174459),
     u = i(975571),
     _ = i(652215),
     h =
@@ -18,18 +18,18 @@ var n,
 function k(e) {
     let { articleId: t, guildId: i, modalStep: n = null, pageView: l = null } = e;
     (open(u.A.getArticleURL(t)),
-        r.default.track(_.HAw.DISCOVERY_SETUP_CTA_CLICKED, {
+        o.default.track(_.HAw.DISCOVERY_SETUP_CTA_CLICKED, {
             cta_name: _.Mmu,
             discovery_settings_view: l,
             help_center_article_id: t,
             modal_step: n,
-            ...(0, o.H$)(i),
+            ...(0, r.H$)(i),
         }));
 }
 var E = i(544548);
 function C(e) {
-    let { guildId: t, transitionState: i, onClose: n, onConfirm: o } = e,
-        { rules: r, rulesAccepted: u } = (function () {
+    let { guildId: t, transitionState: i, onClose: n, onConfirm: r } = e,
+        { rules: o, rulesAccepted: u } = (function () {
             let [e, t] = s.useState(!1),
                 [i, n] = s.useState(!1),
                 [l, c] = s.useState(!1);
@@ -64,9 +64,9 @@ function C(e) {
             };
         })(),
         C = s.useCallback(() => {
-            (n(), o());
-        }, [n, o]);
-    return (0, l.jsx)(c.Modal, {
+            (n(), r());
+        }, [n, r]);
+    return (0, l.jsx)(c.a, {
         title: a.intl.string(a.t["Q8OFN+"]),
         subtitle: a.intl.format(a.t.JLUVfo, {
             onCommunityGuidelinesClick: () =>
@@ -79,7 +79,7 @@ function C(e) {
         onClose: n,
         children: (0, l.jsx)("div", {
             className: E.H,
-            children: r.map((e) =>
+            children: o.map((e) =>
                 (0, l.jsx)(
                     "div",
                     {

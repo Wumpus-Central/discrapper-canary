@@ -6,8 +6,8 @@ var i = e(477900),
     c = e(834730),
     s = e(181658),
     o = e(976860),
-    d = e(885386),
-    u = e(780964),
+    u = e(885386),
+    d = e(780964),
     p = e(830543),
     f = e(766075),
     h = e(652215),
@@ -20,7 +20,7 @@ function C(t) {
     async function y() {
         (S(null), g(!0));
         try {
-            (await d.dm.updateSetting(!1), (0, o.pX)(h.BVt.FRIENDS), (0, p.default)(), e());
+            (await u.dm.updateSetting(!1), (0, o.pX)(h.BVt.FRIENDS), (0, p.default)(), e());
         } catch (t) {
             S(new s.A(t).getAnyErrorMessage());
         } finally {
@@ -28,9 +28,9 @@ function C(t) {
         }
     }
     function b() {
-        ((0, f.openUserSettings)(u.X.FAMILY_CENTER_PANEL), e());
+        ((0, f.openUserSettings)(d.X.FAMILY_CENTER_PANEL), e());
     }
-    return (0, i.jsx)(l.Modal, {
+    return (0, i.jsx)(l.a, {
         transitionState: n,
         onClose: e,
         title: x.intl.string(k.default.VGB30H),

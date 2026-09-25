@@ -3,8 +3,8 @@ var i = s(477900),
     n = s(582128),
     r = s(323889),
     a = s(189213),
-    l = s(834730),
-    c = s(664121),
+    c = s(834730),
+    l = s(664121),
     o = s(998445),
     u = s(950305),
     d = s(687966),
@@ -17,7 +17,7 @@ var i = s(477900),
     f = s(375708),
     S = s(738541);
 function p(t) {
-    let { transitionState: e, onClose: s, questContent: c, quest: o, returnRef: u } = t,
+    let { transitionState: e, onClose: s, questContent: l, quest: o, returnRef: u } = t,
         d = m.H1.useSetting(),
         p = (function (t) {
             switch (t) {
@@ -31,7 +31,7 @@ function p(t) {
                 default:
                     return;
             }
-        })(c),
+        })(l),
         C = n.useMemo(
             () =>
                 (0, h.JM)({
@@ -45,7 +45,7 @@ function p(t) {
                 }),
             [o, p, d],
         );
-    return (0, i.jsxs)(a.Modal, {
+    return (0, i.jsxs)(a.a, {
         size: "sm",
         transitionState: e,
         onClose: s,
@@ -53,9 +53,9 @@ function p(t) {
         title: f.intl.string(f.t.GcsZKJ),
         actions: [{ onClick: () => s(), text: f.intl.string(f.t.cpT0Cq) }],
         children: [
-            (0, i.jsx)(l.E, { variant: "text-sm/medium", color: "text-default", className: S.gt, children: C }),
+            (0, i.jsx)(c.E, { variant: "text-sm/medium", color: "text-default", className: S.gt, children: C }),
             (0, i.jsx)(j, { targetedTraits: p, isContextualDisclosure: d }),
-            (0, i.jsx)(l.E, {
+            (0, i.jsx)(c.E, {
                 variant: "text-xs/medium",
                 color: "text-muted",
                 children: f.intl.format(f.t.tzq9Wa, {
@@ -71,7 +71,7 @@ function j(t) {
     if (s)
         return (0, i.jsx)("ul", {
             className: S.OK,
-            children: (0, i.jsx)(C, { icon: c.R, children: f.intl.string(f.t["2bL0wT"]) }),
+            children: (0, i.jsx)(C, { icon: l.R, children: f.intl.string(f.t["2bL0wT"]) }),
         });
     let { location: n, age: r, activity: a } = e;
     return (0, i.jsxs)("ul", {
@@ -85,7 +85,7 @@ function j(t) {
 }
 function C(t) {
     let { icon: e, children: s } = t;
-    return (0, i.jsxs)(l.E, {
+    return (0, i.jsxs)(c.E, {
         variant: "text-sm/medium",
         tag: "li",
         className: S.hD,

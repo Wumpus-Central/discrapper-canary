@@ -1,10 +1,10 @@
 n.d(e, { default: () => T, m: () => x });
 var a = n(477900),
     l = n(582128),
-    i = n(452027),
-    s = n(772707),
-    r = n(702841),
-    u = n(319400),
+    i = n(702841),
+    s = n(319400),
+    r = n(452027),
+    u = n(772707),
     o = n(435183),
     d = n(148494),
     c = n(47167),
@@ -24,15 +24,15 @@ let x = "VoiceChannelStatusModal";
 function T(t) {
     let { channel: e, transitionState: n, sourceAnalyticsLocations: T, onClose: b } = t,
         k = (0, h.l)(e),
-        m = (0, r.bG)([f.A], () => f.A.getMediaSessionId()),
+        m = (0, i.bG)([f.A], () => f.A.getMediaSessionId()),
         [w, I] = l.useState(k ?? ""),
         [M, O] = l.useState(!1),
         [V, L] = l.useState(null),
-        U = (0, r.bG)([E.default], () => E.default.getCurrentUser()),
+        U = (0, i.bG)([E.default], () => E.default.getCurrentUser()),
         B = (0, c.Ay)(e),
         G = w.length > 500;
     function H(t) {
-        L(new u.LG(t, t.status).getAnyErrorMessage());
+        L(new s.LG(t, t.status).getAnyErrorMessage());
     }
     async function D(t) {
         (w === k && b(), t?.preventDefault(), L(null), O(!0));
@@ -78,7 +78,7 @@ function T(t) {
     async function q() {
         return (G || M || (await D()), Promise.resolve({ shouldClear: !1, shouldRefocus: !0 }));
     }
-    let P = (0, a.jsx)(i.D, {
+    let P = (0, a.jsx)(r.D, {
         label: y.intl.string(y.t.Fq5lwN),
         errorMessage: V,
         children: (0, a.jsx)(_.Ay, {
@@ -103,7 +103,7 @@ function T(t) {
             emojiPickerCloseOnModalOuterClick: !0,
         }),
     });
-    return (0, a.jsx)(s.k, {
+    return (0, a.jsx)(u.k, {
         transitionState: n,
         onClose: b,
         graphic: { type: "image", src: v },

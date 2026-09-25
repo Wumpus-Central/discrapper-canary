@@ -3,9 +3,9 @@ var n = s(477900),
     a = s(582128),
     e = s(189213),
     c = s(231723),
-    l = s(289873),
-    r = s(375708),
-    u = s(576370);
+    r = s(289873),
+    u = s(375708),
+    l = s(576370);
 let d = function (t) {
     let { transitionState: i, processFiles: s, onClose: d } = t;
     return (
@@ -14,13 +14,13 @@ let d = function (t) {
                 i === c.ip.ENTERED && (await s(), d());
             })();
         }, [d, s, i]),
-        (0, n.jsx)(e.Modal, {
-            title: r.intl.string(r.t["B/HSDd"]),
-            subtitle: r.intl.string(r.t.k7OALr),
+        (0, n.jsx)(e.a, {
+            title: u.intl.string(u.t["B/HSDd"]),
+            subtitle: u.intl.string(u.t.k7OALr),
             actions: void 0,
             onClose: d,
             transitionState: i,
-            children: (0, n.jsx)(l.y, { className: u.u }),
+            children: (0, n.jsx)(r.y, { className: l.u }),
         })
     );
 };

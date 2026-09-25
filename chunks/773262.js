@@ -1,8 +1,8 @@
 (e.r(s), e.d(s, { default: () => j }));
-var l = e(477900),
-    n = e(582128),
-    r = e(189213),
-    a = e(17928),
+var n = e(477900),
+    l = e(582128),
+    r = e(17928),
+    a = e(189213),
     c = e(297264),
     i = e(661531),
     o = e(834730),
@@ -17,27 +17,27 @@ var g = e(375708),
     k = e(686418);
 let j = function (t) {
     let { transitionState: s, streamKey: e, channelId: j, onClose: v } = t,
-        A = (0, a.bG)([d.A], () => d.A.getSecureFramesState(e)?.epochAuthenticator),
+        A = (0, r.bG)([d.A], () => d.A.getSecureFramesState(e)?.epochAuthenticator),
         b = (0, m.z)({ fingerprintBase64: A, chunkSize: 5, desiredLength: 30 }),
-        C = n.useCallback(() => {
+        C = l.useCallback(() => {
             (0, h.y5)({ channelId: j });
         }, [j]),
         N = { transitionState: s, title: g.intl.string(g.t.QogHld), subtitle: g.intl.string(g.t.qODBkW) },
-        T = (0, l.jsxs)(l.Fragment, {
+        T = (0, n.jsxs)(n.Fragment, {
             children: [
-                (0, l.jsxs)("div", {
+                (0, n.jsxs)("div", {
                     className: k.Ot,
                     children: [
-                        (0, l.jsxs)("div", {
+                        (0, n.jsxs)("div", {
                             className: k.wx,
                             children: [
-                                (0, l.jsx)(c.D, {
+                                (0, n.jsx)(c.D, {
                                     variant: "text-sm/bold",
                                     color: "text-strong",
                                     children: g.intl.string(g.t.cgBTyO),
                                 }),
                                 null != b &&
-                                    (0, l.jsx)(p.c, {
+                                    (0, n.jsx)(p.c, {
                                         className: k.nJ,
                                         chunks: b,
                                         color: i.A.colors.INTERACTIVE_TEXT_DEFAULT,
@@ -45,10 +45,10 @@ let j = function (t) {
                                     }),
                             ],
                         }),
-                        (0, l.jsx)(x.j, { className: k.aY, chunks: b, columns: 3 }),
+                        (0, n.jsx)(x.j, { className: k.aY, chunks: b, columns: 3 }),
                     ],
                 }),
-                (0, l.jsx)(o.E, {
+                (0, n.jsx)(o.E, {
                     className: k.qr,
                     variant: "text-sm/normal",
                     color: "text-muted",
@@ -56,5 +56,5 @@ let j = function (t) {
                 }),
             ],
         });
-    return (0, l.jsx)(r.Modal, { ...N, onClose: v, actions: [], children: T });
+    return (0, n.jsx)(a.a, { ...N, onClose: v, actions: [], children: T });
 };

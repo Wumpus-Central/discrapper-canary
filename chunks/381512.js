@@ -1,4 +1,4 @@
-e.d(a, { default: () => g });
+e.d(a, { Alert: () => g });
 var i = e(477900),
     s = e(582128),
     t = e(503698),
@@ -7,8 +7,8 @@ var i = e(477900),
     d = e(297264),
     c = e(862482),
     o = e(935462),
-    u = e(834730),
-    m = e(235986),
+    m = e(834730),
+    u = e(235986),
     p = e(375708),
     h = e(341542);
 let g = function (n) {
@@ -20,9 +20,9 @@ let g = function (n) {
             cancelText: j,
             className: x,
             confirmColor: f,
-            confirmText: N = p.intl.string(p.t.BddRzS),
-            secondaryConfirmText: b,
-            onCancel: A,
+            confirmText: A = p.intl.string(p.t.BddRzS),
+            secondaryConfirmText: N,
+            onCancel: b,
             onClose: D,
             onConfirm: C,
             onConfirmSecondary: S,
@@ -47,13 +47,13 @@ let g = function (n) {
                 size: z,
                 color: c.$n.Colors.PRIMARY,
                 onClick: function () {
-                    (D?.(), A?.());
+                    (D?.(), b?.());
                 },
                 className: h.zr,
                 children: j,
             })),
-        null != N &&
-            "" !== N &&
+        null != A &&
+            "" !== A &&
             (e = (0, i.jsx)(c.$n, {
                 "data-migration-pending": !0,
                 type: "submit",
@@ -61,11 +61,11 @@ let g = function (n) {
                 size: z,
                 className: h.FS,
                 autoFocus: !0,
-                children: N,
+                children: A,
             })),
-        null != b &&
-            "" !== b &&
-            (t = (0, i.jsx)(r.S, { checked: E, onChange: (n) => R(n), label: b, labelType: "secondary" })),
+        null != N &&
+            "" !== N &&
+            (t = (0, i.jsx)(r.S, { checked: E, onChange: (n) => R(n), label: N, labelType: "secondary" })),
         (0, i.jsx)(o.EO, {
             "data-migration-pending": !0,
             transitionState: y,
@@ -97,13 +97,13 @@ let g = function (n) {
                     (0, i.jsx)(o.$m, {
                         "data-migration-pending": !0,
                         className: h.jE,
-                        children: (0, i.jsx)(m.A, {
-                            direction: m.A.Direction.VERTICAL,
-                            justify: m.A.Justify.START,
+                        children: (0, i.jsx)(u.A, {
+                            direction: u.A.Direction.VERTICAL,
+                            justify: u.A.Justify.START,
                             className: h.Qs,
                             children:
                                 null != g &&
-                                (0, i.jsx)(u.E, {
+                                (0, i.jsx)(m.E, {
                                     variant: "text-md/normal",
                                     className: h.rf,
                                     color: "text-default",
@@ -114,7 +114,7 @@ let g = function (n) {
                     (0, i.jsxs)(o.jl, {
                         "data-migration-pending": !0,
                         justify: void 0,
-                        wrap: m.A.Wrap.WRAP,
+                        wrap: u.A.Wrap.WRAP,
                         className: h.Hx,
                         children: [e, a, t],
                     }),

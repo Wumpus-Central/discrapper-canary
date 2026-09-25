@@ -51,7 +51,7 @@ function E(t) {
         (0, d.A)(h.X7G.DEVELOPER_PORTAL_TEAMS);
     }, []);
     if (!n)
-        return (0, i.jsx)(a.Modal, {
+        return (0, i.jsx)(a.a, {
             title: g.intl.string(g.t.GfObDE),
             actions: [{ variant: "primary", text: g.intl.string(g.t.geKm7t), onClick: A, disabled: !v }],
             onClose: r,
@@ -67,7 +67,7 @@ function E(t) {
         });
     {
         let t = 0 === S.length;
-        return (0, i.jsxs)(a.Modal, {
+        return (0, i.jsxs)(a.a, {
             title: g.intl.string(g.t.inJKQv),
             subtitle: t ? g.intl.format(g.t.Jyy4pV, {}) : g.intl.string(g.t.U1Vz24),
             actions: [

@@ -3,8 +3,8 @@ var e = n(477900),
     i = n(582128),
     a = n(503698),
     r = n.n(a),
-    s = n(189213),
-    u = n(17928),
+    s = n(17928),
+    u = n(189213),
     o = n(150934),
     d = n(331322),
     c = n(683071),
@@ -21,7 +21,7 @@ var e = n(477900),
     k = n(39470),
     x = n(375708),
     j = n(949057);
-function M() {
+function y() {
     return [
         { id: "none", value: 0, label: x.intl.string(x.t["4obaMS"]) },
         { id: "1hour", value: +S.A.Seconds.HOUR, label: x.intl.string(x.t.RKpitY) },
@@ -32,8 +32,8 @@ function M() {
         { id: "7days", value: 7 * S.A.Seconds.DAY, label: x.intl.string(x.t.FA7IUk) },
     ];
 }
-let y = M()[1].value,
-    R = M()[0].value;
+let M = y()[1].value,
+    R = y()[0].value;
 function U(t) {
     let l,
         {
@@ -47,10 +47,10 @@ function U(t) {
             canBulkBan: B = !1,
             modReportId: D,
         } = t,
-        [K, w] = i.useState(null != D ? R : y),
+        [K, w] = i.useState(null != D ? R : M),
         [E, H] = i.useState(""),
         [X, L] = i.useState(null),
-        { isModReportClosed: N, isModReport: W } = (0, u.cf)([A.A], () => {
+        { isModReportClosed: N, isModReport: W } = (0, s.cf)([A.A], () => {
             let t = A.A.getChannel(D);
             return { isModReportClosed: t?.isArchivedThread(), isModReport: t?.isModeratorReportChannel() };
         }),
@@ -97,7 +97,7 @@ function U(t) {
             return x.intl.formatToPlainString(null != D ? x.t.WDR8Xd : x.t.jeKpok, { username: `@${t}` });
         })(),
         tt = null == D ? null : x.intl.string(x.t.pQjhIK);
-    return (0, e.jsx)(s.Modal, {
+    return (0, e.jsx)(u.a, {
         onClose: Y,
         transitionState: T,
         title: G,
@@ -140,7 +140,7 @@ function U(t) {
                 }),
                 (0, e.jsx)(v.l, {
                     label: x.intl.string(null != D ? x.t.ERSM8H : x.t["8l3W0y"]),
-                    options: M(),
+                    options: y(),
                     value: K,
                     onSelectionChange: Z,
                     selectionMode: "single",

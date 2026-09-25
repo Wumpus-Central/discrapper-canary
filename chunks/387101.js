@@ -1,9 +1,9 @@
 a.d(e, { default: () => f });
 var n = a(477900),
     i = a(582128),
-    r = a(189213),
-    s = a(17928),
-    l = a(499979),
+    r = a(17928),
+    s = a(499979),
+    l = a(189213),
     o = a(568602),
     d = a(834730),
     c = a(144228),
@@ -26,11 +26,11 @@ function f(t) {
         [R, z] = i.useState(!1),
         [D, F] = i.useState(!1),
         [L, N] = i.useState(!1),
-        O = (0, s.bG)([y.A, h.Ay], () => {
+        O = (0, r.bG)([y.A, h.Ay], () => {
             let t = w ?? h.Ay.getCurrentGameForAnalytics()?.id;
             return null == t ? null : y.A.getDetectableGame(t);
         }),
-        P = (0, s.bG)([x.default], () => {
+        P = (0, r.bG)([x.default], () => {
             let t = x.default?.getMostRecentOverlayRenderMethod() ?? void 0;
             return null != t ? p.Ue[t] : void 0;
         }),
@@ -49,7 +49,7 @@ function f(t) {
         }, []),
         Y = i.useCallback(async () => {
             if ("unreported" === C && 0 === S.length) {
-                (F(!0), await (0, l.yy)(100), F(!1), N(!0));
+                (F(!0), await (0, s.yy)(100), F(!1), N(!0));
                 return;
             }
             (M(!0),
@@ -62,10 +62,10 @@ function f(t) {
                     most_recent_overlay_render_method: P,
                     hardware_display_count: (await _.A?.hardware?.getDisplayCount?.()) ?? null,
                 }),
-                await (0, l.yy)(1e3),
+                await (0, s.yy)(1e3),
                 M(!1),
                 z(!0),
-                await (0, l.yy)(1500),
+                await (0, s.yy)(1500),
                 e());
         }, [C, S, f, O?.id, O?.name, P, e]);
     (0, m.Ay)(() => {
@@ -85,7 +85,7 @@ function f(t) {
         ],
         [e, E, R, Y, D],
     );
-    return (0, n.jsxs)(r.Modal, {
+    return (0, n.jsxs)(l.a, {
         onClose: e,
         transitionState: a,
         title: v.intl.string(v.t["9JKzxe"]),

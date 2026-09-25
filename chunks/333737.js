@@ -65,7 +65,7 @@ class b extends a.PureComponent {
                     ],
                 }),
             });
-        return (0, i.jsxs)(n.Modal, {
+        return (0, i.jsxs)(n.a, {
             title: u.intl.string(u.t.cDgKte),
             subtitle: u.intl.string(u.t["7NGwtH"]),
             transitionState: t,

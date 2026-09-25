@@ -1,8 +1,8 @@
 n.d(t, { A: () => p });
 var i = n(477900),
     s = n(582128),
-    l = n(189213),
-    r = n(17928),
+    l = n(17928),
+    r = n(189213),
     a = n(683071),
     o = n(95477),
     u = n(691885),
@@ -21,7 +21,7 @@ function p(e) {
             authorizedApplicationId: p,
             authorizationError: T,
             authorizing: f,
-        } = (0, r.cf)([A.A], () => ({
+        } = (0, l.cf)([A.A], () => ({
             authorizedApplicationId: A.A.testModeApplicationId,
             authorizationError: A.A.error,
             authorizing: A.A.isFetchingAuthorization,
@@ -62,7 +62,7 @@ function p(e) {
             ],
             [I.length, f, O, v, N.length, L, b],
         );
-    return (0, i.jsxs)(l.Modal, {
+    return (0, i.jsxs)(r.a, {
         title: E.intl.string(E.t.f8fzky),
         subtitle: E.intl.string(E.t.a6Vill),
         actions: R,

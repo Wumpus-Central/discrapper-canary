@@ -4,10 +4,10 @@ var s = n(477900),
     i = n(284009),
     a = n.n(i),
     l = n(889137),
-    u = n(189213),
-    o = n(17928),
-    d = n(231723),
-    c = n(331322),
+    u = n(17928),
+    o = n(189213),
+    c = n(231723),
+    d = n(331322),
     m = n(95477),
     h = n(834730),
     g = n(631670),
@@ -22,7 +22,7 @@ var s = n(477900),
 function E(e) {
     var t;
     let { transitionState: n, onClose: i } = e,
-        E = (0, o.bG)([b.default], () => {
+        E = (0, u.bG)([b.default], () => {
             let e = b.default.getCurrentUser();
             return (a()(null != e, "ChangeUsernameModal: currentUser cannot be undefined"), e);
         }),
@@ -30,24 +30,24 @@ function E(e) {
         [y, w] = r.useState(E.username),
         [R, S] = r.useState(E.discriminator),
         [q, A] = r.useState(""),
-        [L, M] = r.useState(!1),
-        T = (0, o.bG)([f.A], () => f.A.getErrors()),
-        W = E.hasUniqueUsername(),
-        z = (0, x.i)(y, W, !1, E.username),
+        [L, T] = r.useState(!1),
+        W = (0, u.bG)([f.A], () => f.A.getErrors()),
+        z = E.hasUniqueUsername(),
+        M = (0, x.i)(y, z, !1, E.username),
         B = r.useRef(null),
-        D = r.useMemo(() => T?.username?.[0] ?? T?.discriminator?.[0], [T]);
+        D = r.useMemo(() => W?.username?.[0] ?? W?.discriminator?.[0], [W]);
     r.useEffect(() => {
-        n === d.ip.ENTERED && B.current?.focus();
+        n === c.ip.ENTERED && B.current?.focus();
     }, [n]);
     let N = R !== E.discriminator;
     async function P(e) {
-        (e.preventDefault(), M(!0));
+        (e.preventDefault(), T(!0));
         let t = await (0, g._L)({ username: y, discriminator: k ? R : void 0, password: q });
-        (M(!1), t?.ok && i());
+        (T(!1), t?.ok && i());
     }
     return (0, s.jsx)("form", {
         onSubmit: P,
-        children: (0, s.jsx)(u.Modal, {
+        children: (0, s.jsx)(o.a, {
             onClose: i,
             transitionState: n,
             title: j.intl.string(j.t.m5or54),
@@ -56,12 +56,12 @@ function E(e) {
                 { variant: "secondary", text: j.intl.string(j.t["ETE/oC"]), onClick: i },
                 { variant: "primary", text: j.intl.string(j.t.i4jeWR), type: "submit", loading: L },
             ],
-            children: (0, s.jsxs)(c.B, {
+            children: (0, s.jsxs)(d.B, {
                 gap: 16,
                 children: [
                     (0, s.jsxs)("div", {
                         children: [
-                            (0, s.jsxs)(c.B, {
+                            (0, s.jsxs)(d.B, {
                                 direction: "horizontal",
                                 gap: 4,
                                 children: [
@@ -75,7 +75,7 @@ function E(e) {
                                         inputRef: B,
                                         fullWidth: !0,
                                         ...((t = E.hasUniqueUsername()),
-                                        (0, l.YW)(z)
+                                        (0, l.YW)(M)
                                             .with({ type: p.q.ERROR, message: l.P.select() }, (e) => ({ error: e }))
                                             .with({ type: p.q.AVAILABLE, message: l.P.select() }, (e) => ({
                                                 successMessage: e,
@@ -106,7 +106,7 @@ function E(e) {
                     }),
                     (0, s.jsx)(m.k, {
                         label: j.intl.string(j.t.TmdnJ3),
-                        error: T?.password?.[0],
+                        error: W?.password?.[0],
                         type: "password",
                         value: q,
                         onChange: A,

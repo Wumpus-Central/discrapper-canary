@@ -61,9 +61,9 @@ var O = n(923531),
     D = n(299628),
     F = n(513687),
     L = n(375708),
-    M = n(936223),
-    P = n(31008);
-function V(t) {
+    P = n(936223),
+    V = n(31008);
+function M(t) {
     let e = (0, s.bG)([b.default], () => b.default.getCurrentUser()?.ageVerificationStatus),
         n = (0, g.Ay)(e);
     a.useEffect(() => {
@@ -81,7 +81,7 @@ function w(t) {
             children: (0, i.jsx)(f.B, {
                 justify: "center",
                 align: "center",
-                className: M.g4,
+                className: P.g4,
                 children: (0, i.jsx)(m.y, {}),
             }),
         }),
@@ -89,7 +89,7 @@ function w(t) {
 }
 function Q(t) {
     let { transitionState: e, onClose: n, title: a, description: s, primaryText: r, onPrimary: l } = t;
-    return (0, i.jsx)(o.Modal, {
+    return (0, i.jsx)(o.a, {
         transitionState: e,
         onClose: n,
         size: "sm",
@@ -118,7 +118,7 @@ function W(t) {
 }
 function z(t) {
     let { transitionState: e, onPending: n, onClose: s, teenIdentity: r } = t;
-    V(n);
+    M(n);
     let l = a.useCallback(() => {
         S.A.showAgeVerificationGetStartedModal({ entryPoint: _.q1.FAMILY_CENTER_CONNECTION });
     }, []);
@@ -143,7 +143,7 @@ function z(t) {
 }
 function Y(t) {
     let { transitionState: e, onPending: n, onClose: s } = t;
-    V(n);
+    M(n);
     let r = a.useCallback(() => {
         S.A.showAgeVerificationGetStartedModal({ entryPoint: _.q1.FAMILY_CENTER_CONNECTION });
     }, []);
@@ -187,10 +187,10 @@ function H(t) {
         n = (0, s.bG)([b.default], () => b.default.getCurrentUser()),
         a = e.global_name ?? e.username;
     return (0, i.jsxs)("div", {
-        className: M.Il,
+        className: P.Il,
         children: [
             (0, i.jsxs)("div", {
-                className: M.Y,
+                className: P.Y,
                 children: [
                     (0, i.jsx)(C.eu, {
                         src: null != n ? A.Ay.getUserAvatarURL(n) : void 0,
@@ -200,11 +200,11 @@ function H(t) {
                         }),
                     }),
                     (0, i.jsxs)("div", {
-                        className: M.I5,
+                        className: P.I5,
                         children: [
-                            (0, i.jsx)("span", { className: M.pw }),
-                            (0, i.jsx)("span", { className: M.pw }),
-                            (0, i.jsx)("span", { className: M.pw }),
+                            (0, i.jsx)("span", { className: P.pw }),
+                            (0, i.jsx)("span", { className: P.pw }),
+                            (0, i.jsx)("span", { className: P.pw }),
                         ],
                     }),
                     (0, i.jsx)(C.eu, {
@@ -216,14 +216,14 @@ function H(t) {
             }),
             (0, i.jsx)(x.D, {
                 variant: "heading-xl/semibold",
-                className: M.DD,
+                className: P.DD,
                 children: L.intl.string(F.default.sMmIbm),
             }),
-            (0, i.jsx)(x.D, { variant: "heading-xl/semibold", className: M._V, children: a }),
+            (0, i.jsx)(x.D, { variant: "heading-xl/semibold", className: P._V, children: a }),
             (0, i.jsx)(I.E, {
                 variant: "text-sm/normal",
                 color: "text-muted",
-                className: M.vJ,
+                className: P.vJ,
                 children: L.intl.format(F.default.yiUJNU, { username: a }),
             }),
         ],
@@ -251,14 +251,14 @@ function J(t) {
         size: "md",
         children: [
             (0, i.jsxs)("div", {
-                className: M.wx,
+                className: P.wx,
                 children: [
-                    (0, i.jsx)("div", { className: M.b, children: (0, i.jsx)(u.J, { onClick: S, disabled: N }) }),
+                    (0, i.jsx)("div", { className: P.b, children: (0, i.jsx)(u.J, { onClick: S, disabled: N }) }),
                     null != c
                         ? (0, i.jsx)(H, { teenIdentity: c })
                         : (0, i.jsx)(x.D, {
                               variant: "heading-xl/semibold",
-                              className: M.XW,
+                              className: P.XW,
                               children: L.intl.string(F.default.GH11eI),
                           }),
                 ],
@@ -285,7 +285,7 @@ function X(t) {
         transitionState: e,
         onClose: n,
         size: "sm",
-        graphic: { type: "image", src: P.A },
+        graphic: { type: "image", src: V.A },
         title: L.intl.string(F.default.EpwfZl),
         subtitle: L.intl.format(F.default.dVtWId, { email: a?.email }),
         actions: [{ variant: "primary", text: L.intl.string(L.t.cpT0Cq), onClick: n }],

@@ -1,10 +1,10 @@
 e.d(i, { default: () => h });
 var n = e(477900),
-    r = e(582128),
-    s = e(732159),
-    l = e(691540),
-    a = e(857250),
-    c = e(97483),
+    s = e(582128),
+    r = e(691540),
+    l = e(857250),
+    a = e(97483),
+    c = e(732159),
     d = e(885386),
     o = e(365258),
     u = e(929120),
@@ -20,20 +20,20 @@ function h(t) {
             transitionState: p,
         } = t,
         v = i === o.AI.RESTRICTING,
-        { title: g, subtitle: k, confirmText: m, toastContent: S } = (0, o.vz)(v, h),
-        A = (0, r.useMemo)(
+        { title: g, subtitle: k, confirmText: S, toastContent: m } = (0, o.vz)(v, h),
+        A = (0, s.useMemo)(
             () => () => {
-                (d._Z.updateSetting(j), (0, o.gF)(i, e), (0, l.P0)((0, a.o)(S, c.Ck.SUCCESS)));
+                (d._Z.updateSetting(j), (0, o.gF)(i, e), (0, r.P0)((0, l.o)(m, a.Ck.SUCCESS)));
             },
-            [j, i, e, S],
+            [j, i, e, m],
         ),
-        I = (0, r.useCallback)(() => {
+        I = (0, s.useCallback)(() => {
             (x(), (0, f.L7)());
         }, [x]);
-    return (0, n.jsx)(s.ConfirmModal, {
+    return (0, n.jsx)(c.u, {
         title: g,
         subtitle: k,
-        confirmText: m,
+        confirmText: S,
         cancelText: C.intl.string(C.t.X1rGEm),
         variant: "primary",
         onConfirm: A,

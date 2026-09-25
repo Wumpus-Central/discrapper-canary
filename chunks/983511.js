@@ -3,8 +3,8 @@ var i = n(477900),
     s = n(582128),
     l = n(435558),
     r = n.n(l),
-    a = n(189213),
-    o = n(17928),
+    a = n(17928),
+    o = n(189213),
     u = n(224640),
     d = n(430993),
     c = n(696208),
@@ -48,7 +48,7 @@ function X(e) {
             isInventory: s,
             showImage: l,
             onNext: r,
-            onClose: o,
+            onClose: a,
             transitionState: u,
         } = e,
         d = z.intl.format(z.t.otHdfR, { endDate: t.currentPeriodEnd });
@@ -64,12 +64,12 @@ function X(e) {
         g = t.isPurchasedExternally
             ? []
             : [
-                  { variant: "secondary", text: z.intl.string(z.t["ETE/oC"]), onClick: o },
+                  { variant: "secondary", text: z.intl.string(z.t["ETE/oC"]), onClick: a },
                   { variant: "primary", text: z.intl.string(z.t.PDTjLN), onClick: r },
               ];
-    return (0, i.jsx)(a.Modal, {
+    return (0, i.jsx)(o.a, {
         transitionState: u,
-        onClose: o,
+        onClose: a,
         size: "sm",
         title: c,
         actions: g,
@@ -113,7 +113,7 @@ function K(e) {
             guildBoostSlotId: n,
             fractionalPremiumInfo: l,
             transitionState: r,
-            useRefreshHeader: a,
+            useRefreshHeader: o,
             onBack: S,
             onNext: T,
             onClose: f,
@@ -134,7 +134,7 @@ function K(e) {
         s.useEffect(() => {
             V && k.current();
         }, [V]));
-    let { premiumSubscriptionPlan: B, premiumGuildPlan: X } = (0, o.cf)([D.A], () => {
+    let { premiumSubscriptionPlan: B, premiumGuildPlan: X } = (0, a.cf)([D.A], () => {
             let e = D.A.get(t.planId);
             return {
                 premiumSubscriptionPlan: e,
@@ -160,7 +160,7 @@ function K(e) {
             analyticsLocation: x.A.GUILD_BOOST_SLOT_CANCELLATION_MODAL_RENEWAL_INVOICE_PREVIEW,
         }),
         Q = null == q || null == B || null == X || null == W;
-    if (a && Q)
+    if (o && Q)
         return (0, i.jsxs)(u.d, {
             transitionState: r,
             onClose: f,
@@ -198,7 +198,7 @@ function K(e) {
     return (t.isPausedForFractionalPremium &&
         l.fetched &&
         (ei = z.intl.format(z.t.eb0xgS, { expirationDate: l.endsAt.toDate() })),
-    a)
+    o)
         ? (0, i.jsxs)(u.d, {
               transitionState: r,
               onClose: f,
@@ -308,10 +308,10 @@ function K(e) {
 }
 function W(e) {
     let { premiumSubscription: t, fractionalPremiumInfo: n, showImage: s, onClose: l, transitionState: r } = e,
-        o = t.currentPeriodEnd;
-    t.isPausedForFractionalPremium && (o = n.endsAt.toDate());
+        a = t.currentPeriodEnd;
+    t.isPausedForFractionalPremium && (a = n.endsAt.toDate());
     let u = [{ variant: "primary", text: z.intl.string(z.t.BddRzS), onClick: l }];
-    return (0, i.jsx)(a.Modal, {
+    return (0, i.jsx)(o.a, {
         transitionState: r,
         onClose: l,
         size: "sm",
@@ -321,7 +321,7 @@ function W(e) {
             className: Y.rf,
             children: [
                 s && (0, i.jsx)("div", { className: Y.OC }),
-                (0, i.jsx)("div", { children: z.intl.format(z.t["H+z0ns"], { endDate: o }) }),
+                (0, i.jsx)("div", { children: z.intl.format(z.t["H+z0ns"], { endDate: a }) }),
             ],
         }),
     });
@@ -336,7 +336,7 @@ function q(e) {
     s.useEffect(() => {
         P.A.hasFetchedSubscriptions() || (0, T.hP)();
     }, []);
-    let a = (0, o.bG)([P.A], () => P.A.getPremiumTypeSubscription()),
+    let o = (0, a.bG)([P.A], () => P.A.getPremiumTypeSubscription()),
         c = (0, f.A)(),
         [g, E] = s.useState(1),
         h = (0, v.D)("GuildBoostSlotCancellationModal"),
@@ -344,7 +344,7 @@ function q(e) {
         N = "control" !== h || S,
         C = !N,
         { analyticsLocations: b } = (0, p.Ay)(x.A.GUILD_BOOST_CANCELLATION_MODAL);
-    if (null == a)
+    if (null == o)
         t = N
             ? (0, i.jsxs)(u.d, {
                   transitionState: l,
@@ -362,7 +362,7 @@ function q(e) {
         switch (g) {
             case 1:
                 t = (0, i.jsx)(X, {
-                    premiumSubscription: a,
+                    premiumSubscription: o,
                     fractionalPremiumInfo: c,
                     isInventory: null == n.premiumGuildSubscription,
                     showImage: C,
@@ -374,7 +374,7 @@ function q(e) {
             case 2:
                 t = N
                     ? (0, i.jsx)(K, {
-                          premiumSubscription: a,
+                          premiumSubscription: o,
                           guildBoostSlotId: n.id,
                           fractionalPremiumInfo: c,
                           transitionState: l,
@@ -388,7 +388,7 @@ function q(e) {
                           transitionState: l,
                           parentComponent: "GuildBoostSlotCancellationModal",
                           children: (0, i.jsx)(K, {
-                              premiumSubscription: a,
+                              premiumSubscription: o,
                               guildBoostSlotId: n.id,
                               fractionalPremiumInfo: c,
                               transitionState: l,
@@ -401,7 +401,7 @@ function q(e) {
                 break;
             case 3:
                 t = (0, i.jsx)(W, {
-                    premiumSubscription: a,
+                    premiumSubscription: o,
                     fractionalPremiumInfo: c,
                     showImage: C,
                     onClose: r,

@@ -4,10 +4,10 @@ a(582128);
 var n = a(503698),
     t = a.n(n),
     l = a(224640),
-    r = a(696208),
-    d = a(364522),
-    c = a(297264),
-    x = a(270003),
+    r = a(364522),
+    d = a(297264),
+    c = a(270003),
+    x = a(696208),
     h = a(915089),
     j = a(871194),
     o = a(895600),
@@ -35,21 +35,21 @@ function u(s) {
                     }),
                     (0, e.jsx)("div", {
                         className: t()(m.jx, m.gy),
-                        children: (0, e.jsxs)(d.Ip, {
+                        children: (0, e.jsxs)(r.Ip, {
                             className: m.KJ,
                             children: [
-                                (0, e.jsx)(c.D, {
+                                (0, e.jsx)(d.D, {
                                     variant: "heading-xl/semibold",
                                     className: m.wx,
                                     children: p.intl.string(p.t.UNFvtM),
                                 }),
-                                (0, e.jsxs)(x.n, { children: [u, v] }),
+                                (0, e.jsxs)(c.n, { children: [u, v] }),
                             ],
                         }),
                     }),
                 ],
             }),
-            (0, e.jsx)(r.H, {
+            (0, e.jsx)(x.H, {
                 actions: [
                     { variant: "secondary", text: p.intl.string(p.t.cpT0Cq), onClick: a },
                     {

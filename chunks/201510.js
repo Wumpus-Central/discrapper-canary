@@ -23,7 +23,7 @@ function p(t) {
         }
     }
     let { transitionState: m, onClose: C } = t;
-    return (0, e.jsx)(l.Modal, {
+    return (0, e.jsx)(l.a, {
         title: d.intl.formatToPlainString(d.t["d+6kzl"], { guildName: i?.name }),
         actions: [
             { variant: "secondary", text: d.intl.string(d.t["ETE/oC"]), onClick: C },

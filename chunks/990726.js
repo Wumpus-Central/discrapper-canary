@@ -6,7 +6,7 @@ var a = n(189213),
     o = n(375708);
 function e(t) {
     let { transitionState: i, onClose: n } = t;
-    return (0, r.jsx)(a.Modal, {
+    return (0, r.jsx)(a.a, {
         transitionState: i,
         onClose: n,
         size: "sm",

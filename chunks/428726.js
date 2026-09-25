@@ -1,13 +1,13 @@
-n.d(e, { default: () => c });
+n.d(e, { default: () => o });
 var i = n(477900),
     a = n(582128),
     r = n(189213),
     s = n(231723),
     l = n(95477),
     u = n(917136),
-    o = n(375708);
-function c(t) {
-    let { transitionState: e, onClose: n, credential: c } = t,
+    c = n(375708);
+function o(t) {
+    let { transitionState: e, onClose: n, credential: o } = t,
         [d, g] = a.useState(!1),
         [h, p] = a.useState(""),
         [f, E] = a.useState(void 0),
@@ -15,7 +15,7 @@ function c(t) {
     async function k() {
         g(!0);
         try {
-            (await (0, u.c6)(c.id, h), n());
+            (await (0, u.c6)(o.id, h), n());
         } catch (t) {
             E(t.message);
         } finally {
@@ -26,15 +26,15 @@ function c(t) {
         a.useEffect(() => {
             e === s.ip.ENTERED && y.current?.focus();
         }, [e]),
-        (0, i.jsx)(r.Modal, {
+        (0, i.jsx)(r.a, {
             transitionState: e,
-            title: o.intl.string(o.t.YjuMsf),
+            title: c.intl.string(c.t.YjuMsf),
             onClose: n,
             input: (0, i.jsx)(l.k, {
-                label: o.intl.string(o.t["7yEgJY"]),
+                label: c.intl.string(c.t["7yEgJY"]),
                 inputRef: y,
-                "aria-label": o.intl.string(o.t["7yEgJY"]),
-                placeholder: c.name,
+                "aria-label": c.intl.string(c.t["7yEgJY"]),
+                placeholder: o.name,
                 value: h,
                 minLength: 1,
                 maxLength: 32,
@@ -44,10 +44,10 @@ function c(t) {
                 error: f,
             }),
             actions: [
-                { variant: "secondary", text: o.intl.string(o.t["ETE/oC"]), onClick: n },
+                { variant: "secondary", text: c.intl.string(c.t["ETE/oC"]), onClick: n },
                 {
                     variant: "primary",
-                    text: o.intl.string(o.t.i4jeWR),
+                    text: c.intl.string(c.t.i4jeWR),
                     disabled: 0 === h.length || h.length > 32,
                     loading: d,
                     onClick: k,

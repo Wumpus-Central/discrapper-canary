@@ -1,14 +1,14 @@
 t.d(n, { default: () => f });
 var i = t(477900),
     a = t(582128),
-    s = t(189213),
-    l = t(683071),
-    d = t(123292),
-    r = t(17928),
-    c = t(866665),
-    o = t(913122),
-    u = t(919577),
-    h = t(376310),
+    s = t(17928),
+    l = t(189213),
+    d = t(683071),
+    r = t(866665),
+    c = t(123292),
+    u = t(913122),
+    h = t(919577),
+    o = t(376310),
     m = t(734057),
     p = t(490094),
     x = t(375708),
@@ -23,7 +23,7 @@ function f(e) {
         [S, y] = (0, a.useState)(new Set()),
         [j, v] = (0, a.useState)(new Set()),
         k = j.size > 0,
-        b = (0, r.bG)([m.A], () => m.A.getChannel(n)),
+        b = (0, s.bG)([m.A], () => m.A.getChannel(n)),
         A = new Set((b?.availableTags ?? []).map((e) => e.name));
     function z(e, n) {
         y((t) => {
@@ -34,13 +34,13 @@ function f(e) {
     async function E() {
         (w(null), v(new Set(S)));
         try {
-            for (let e of S) (await u.A.createForumTag({ name: e }, n), z(e, !1));
+            for (let e of S) (await h.A.createForumTag({ name: e }, n), z(e, !1));
             t.onClose();
         } catch (e) {
-            (w(new o.LG(e)), v(new Set()));
+            (w(new u.LG(e)), v(new Set()));
         }
     }
-    return (0, i.jsxs)(s.Modal, {
+    return (0, i.jsxs)(l.a, {
         size: "sm",
         title: x.intl.string(p.default.JWRsCC),
         subtitle: x.intl.string(p.default["578719"]),
@@ -53,7 +53,7 @@ function f(e) {
             null != f
                 ? (0, i.jsx)("div", {
                       className: C.z3,
-                      children: (0, i.jsx)(l.w, { type: "critical", children: f.message }),
+                      children: (0, i.jsx)(d.w, { type: "critical", children: f.message }),
                   })
                 : null,
             (0, i.jsxs)("div", {
@@ -61,15 +61,15 @@ function f(e) {
                 children: [
                     g.map((e) =>
                         (0, i.jsx)(
-                            c.m,
+                            r.m,
                             {
                                 text: A.has(e.id) ? x.intl.string(p.default["7aCPJG"]) : null,
                                 children: (0, i.jsx)("div", {
-                                    children: (0, i.jsx)(h.Ay, {
+                                    children: (0, i.jsx)(o.Ay, {
                                         selected: S.has(e.id) || j.has(e.id) || A.has(e.id),
                                         disabled: A.has(e.id) || j.has(e.id),
                                         tag: e,
-                                        size: h.Ay.Sizes.MEDIUM,
+                                        size: o.Ay.Sizes.MEDIUM,
                                         onClick:
                                             A.has(e.id) || k
                                                 ? void 0
@@ -84,7 +84,7 @@ function f(e) {
                     ),
                     (0, i.jsx)("div", {
                         className: C.EN,
-                        children: (0, i.jsx)(d.Q, {
+                        children: (0, i.jsx)(c.Q, {
                             text: x.intl.string(p.default.F5YBmi),
                             onClick: function () {
                                 y(new Set(g.filter((e) => !A.has(e.name)).map((e) => e.name)));

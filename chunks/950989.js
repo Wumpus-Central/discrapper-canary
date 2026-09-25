@@ -1,8 +1,8 @@
 t.d(n, { default: () => y });
 var i = t(477900),
     l = t(582128),
-    a = t(189213),
-    o = t(17928),
+    a = t(17928),
+    o = t(189213),
     u = t(821609),
     d = t(95477),
     r = t(922016),
@@ -26,16 +26,16 @@ function y(e) {
         S = null != I,
         [T, R] = l.useState(I?.name ?? ""),
         [D, F] = l.useState(null != I ? { id: I.emojiId, name: I.emojiName } : null),
-        [M, w] = l.useState(I?.moderated),
-        B = (0, o.bG)([f.Ay], () => (D?.id != null ? f.Ay.getUsableCustomEmojiById(D.id) : null)),
-        H = I?.name !== T || I?.emojiId !== D?.id || I?.emojiName !== D?.name || M !== I?.moderated;
+        [w, B] = l.useState(I?.moderated),
+        H = (0, a.bG)([f.Ay], () => (D?.id != null ? f.Ay.getUsableCustomEmojiById(D.id) : null)),
+        M = I?.name !== T || I?.emojiId !== D?.id || I?.emojiName !== D?.name || w !== I?.moderated;
     function Y() {
-        if (null != T && H) {
+        if (null != T && M) {
             if (S) {
-                (v.A.updateForumTag({ id: I.id, name: T, emojiId: D?.id, emojiName: D?.name, moderated: M }, y), t());
+                (v.A.updateForumTag({ id: I.id, name: T, emojiId: D?.id, emojiName: D?.name, moderated: w }, y), t());
                 return;
             }
-            (v.A.createForumTag({ name: T, emojiId: D?.id, emojiName: D?.name, moderated: M }, y), t());
+            (v.A.createForumTag({ name: T, emojiId: D?.id, emojiName: D?.name, moderated: w }, y), t());
         }
     }
     let O = l.useCallback((e) => R(e), []),
@@ -44,7 +44,7 @@ function y(e) {
         (0, j.Ay)(() => {
             null != P.current && P.current.focus();
         }),
-        (0, i.jsxs)(a.Modal, {
+        (0, i.jsxs)(o.a, {
             title: S ? N.intl.string(N.t.zeVg5d) : N.intl.string(N.t["/jubeD"]),
             subtitle: N.intl.string(N.t["3v8kZH"]),
             transitionState: n,
@@ -61,7 +61,7 @@ function y(e) {
                     variant: "primary",
                     text: N.intl.string(N.t["R3BPH+"]),
                     onClick: Y,
-                    disabled: 0 === T.length || !H,
+                    disabled: 0 === T.length || !M,
                     autoFocus: !0,
                 },
             ],
@@ -132,7 +132,7 @@ function y(e) {
                                                               className: b.Zg,
                                                               emojiId: D.id,
                                                               emojiName: D.name,
-                                                              animated: !!B?.animated,
+                                                              animated: !!H?.animated,
                                                           })
                                                     : null,
                                         });
@@ -157,8 +157,8 @@ function y(e) {
                 }),
                 (0, i.jsx)(m.h, { size: 16 }),
                 (0, i.jsx)(c.S, {
-                    checked: M ?? !1,
-                    onChange: (e) => w(e || (I?.moderated == null && void 0)),
+                    checked: w ?? !1,
+                    onChange: (e) => B(e || (I?.moderated == null && void 0)),
                     label: N.intl.string(N.t["rMH+rt"]),
                     labelType: "secondary",
                 }),

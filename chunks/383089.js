@@ -3,10 +3,10 @@ var r = n(477900);
 n(582128);
 var l = n(224640),
     a = n(430993),
-    i = n(696208),
-    s = n(683071),
-    c = n(478016),
-    o = n(834730),
+    i = n(834730),
+    s = n(696208),
+    c = n(683071),
+    o = n(478016),
     d = n(665711),
     u = n(41032),
     x = n(188275),
@@ -16,8 +16,8 @@ function j(t) {
     let {
         sku: e,
         application: n,
-        primaryCTAButtonProps: s,
-        transitionState: c,
+        primaryCTAButtonProps: c,
+        transitionState: o,
         onClose: d,
         hasAlreadyLinked: j,
         canStartAuthorization: p,
@@ -27,7 +27,7 @@ function j(t) {
         reward: N,
     } = t;
     return (0, r.jsxs)(l.d, {
-        transitionState: c,
+        transitionState: o,
         onClose: d,
         "aria-label": C,
         children: [
@@ -37,7 +37,7 @@ function j(t) {
                     (0, r.jsxs)("div", {
                         className: h.S3,
                         children: [
-                            (0, r.jsx)(o.E, {
+                            (0, r.jsx)(i.E, {
                                 variant: "text-md/normal",
                                 color: "text-subtle",
                                 className: h.jJ,
@@ -48,7 +48,7 @@ function j(t) {
                     }),
                     !p &&
                         !j &&
-                        (0, r.jsx)(o.E, {
+                        (0, r.jsx)(i.E, {
                             variant: "text-md/normal",
                             className: h.tl,
                             color: "text-feedback-warning",
@@ -57,7 +57,7 @@ function j(t) {
                     !j &&
                         (0, r.jsx)("div", {
                             className: h.ZT,
-                            children: (0, r.jsx)(o.E, {
+                            children: (0, r.jsx)(i.E, {
                                 variant: "text-xs/normal",
                                 color: "text-subtle",
                                 children: m.intl.formatToPlainString(m.t.TTj7ME, { numDays: x.tG }),
@@ -65,7 +65,7 @@ function j(t) {
                         }),
                     g &&
                         !j &&
-                        (0, r.jsx)(o.E, {
+                        (0, r.jsx)(i.E, {
                             variant: "text-md/normal",
                             className: h.tl,
                             color: "text-feedback-positive",
@@ -73,7 +73,7 @@ function j(t) {
                         }),
                 ],
             }),
-            null != s && (0, r.jsx)(i.H, { actions: [s], actionsFullWidth: !0 }),
+            null != c && (0, r.jsx)(s.H, { actions: [c], actionsFullWidth: !0 }),
         ],
     });
 }
@@ -90,9 +90,9 @@ function v(t) {
                           children: [
                               (0, r.jsx)("div", {
                                   className: h.I8,
-                                  children: (0, r.jsx)(c.U, { size: "xs", color: "currentColor" }),
+                                  children: (0, r.jsx)(o.U, { size: "xs", color: "currentColor" }),
                               }),
-                              (0, r.jsx)(o.E, {
+                              (0, r.jsx)(i.E, {
                                   variant: "text-md/normal",
                                   className: h.qS,
                                   color: "text-subtle",
@@ -107,8 +107,8 @@ function v(t) {
                   ],
               }),
           })
-        : (0, r.jsx)(s.w, {
+        : (0, r.jsx)(c.w, {
               type: "warning",
-              children: (0, r.jsx)(o.E, { variant: "text-sm/medium", children: m.intl.string(m.t.Plv1Xk) }),
+              children: (0, r.jsx)(i.E, { variant: "text-sm/medium", children: m.intl.string(m.t.Plv1Xk) }),
           });
 }

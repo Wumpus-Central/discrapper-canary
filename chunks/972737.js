@@ -6,7 +6,9 @@ var n = i(477900),
 function u(t) {
     let { body: e, ...l } = t;
     (0, r.openModalLazy)(async () => {
-        let { VoidConfirmModal: t } = await Promise.all([i.e("304823"), i.e("977260")]).then(i.bind(i, 397927));
+        let { VoidConfirmModal: t } = await Promise.all([i.e("304823"), i.e("223976"), i.e("977260")]).then(
+            i.bind(i, 397927),
+        );
         return (i) =>
             (0, n.jsx)(t, { ...i, ...l, children: (0, n.jsx)(s.E, { variant: "text-md/normal", children: e }) });
     });

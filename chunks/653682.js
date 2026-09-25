@@ -1,13 +1,13 @@
 (e.d(a, { default: () => M }), e(321073));
 var n = e(477900),
     s = e(582128),
-    i = e(224640),
-    r = e(20742),
-    l = e(430993),
-    c = e(696208),
-    o = e(17928),
-    d = e(192308),
-    m = e(761508),
+    i = e(17928),
+    r = e(192308),
+    l = e(224640),
+    c = e(20742),
+    o = e(430993),
+    d = e(761508),
+    m = e(696208),
     g = e(71393),
     u = e(576705),
     x = e(853742),
@@ -423,8 +423,8 @@ var A = e(652215),
     H = e(271936);
 function M(t) {
     let { guildId: a, shouldUpsellCreation: h, transitionState: v, onClose: j } = t,
-        N = (0, o.bG)([g.A], () => g.A.getGuild(a), [a]),
-        f = (0, o.bG)([u.A], () => u.A.can(A.xBc.MANAGE_CHANNELS, N)),
+        N = (0, i.bG)([g.A], () => g.A.getGuild(a), [a]),
+        f = (0, i.bG)([u.A], () => u.A.can(A.xBc.MANAGE_CHANNELS, N)),
         S = [
             { id: 0, name: p.intl.string(p.t.HTA517) },
             { id: 1, name: p.intl.string(p.t["IHjjY/"]) },
@@ -443,7 +443,7 @@ function M(t) {
             variant: "primary",
             text: p.intl.string(p.t["1X8SK/"]),
             onClick: function () {
-                ((0, d.openModalLazy)(async () => {
+                ((0, r.openModalLazy)(async () => {
                     let { default: t } = await Promise.all([
                         e.e("377476"),
                         e.e("403032"),
@@ -475,28 +475,28 @@ function M(t) {
             },
         });
     let I = p.intl.string(p.t["6S6WCQ"]);
-    return (0, n.jsxs)(i.d, {
+    return (0, n.jsxs)(l.d, {
         transitionState: v,
         size: "xxl",
         onClose: async () => await j(),
         "aria-label": I,
         children: [
-            (0, n.jsx)(r.rQ, { title: I, subtitle: p.intl.string(p.t.I2BA8K) }),
-            (0, n.jsxs)(l.c, {
+            (0, n.jsx)(c.rQ, { title: I, subtitle: p.intl.string(p.t.I2BA8K) }),
+            (0, n.jsxs)(o.c, {
                 children: [
-                    (0, n.jsx)(m.V, {
+                    (0, n.jsx)(d.V, {
                         selectedItem: C,
                         type: "top",
                         onItemSelect: function (t) {
                             (P(t), (0, x.Bd)({ forumDemoId: t }));
                         },
                         className: H._,
-                        children: S.map((t, a) => (0, n.jsx)(m.V.Item, { id: a, children: t.name }, a)),
+                        children: S.map((t, a) => (0, n.jsx)(d.V.Item, { id: a, children: t.name }, a)),
                     }),
                     (0, n.jsx)(E, { id: C }),
                 ],
             }),
-            f && (0, n.jsx)(c.H, { actions: b }),
+            f && (0, n.jsx)(m.H, { actions: b }),
         ],
     });
 }

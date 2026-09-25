@@ -34,7 +34,7 @@ function g(e) {
                 : null;
     return null == l
         ? null
-        : (0, i.jsx)(n.Modal, {
+        : (0, i.jsx)(n.a, {
               title: x.intl.string(m.default.r97mLn),
               subtitle: x.intl.formatToPlainString(u.default.ieA3V0, {
                   termsUrl: r.A.getArticleURL(d.MVz.RIOT_CREDIT_CAMPAIGN),

@@ -1,11 +1,11 @@
 e.d(n, { M: () => v });
 var i = e(477900),
     r = e(582128),
-    l = e(772707),
-    a = e(683071),
-    s = e(289873),
-    o = e(403581),
-    u = e(834730),
+    l = e(289873),
+    a = e(403581),
+    s = e(772707),
+    o = e(834730),
+    u = e(683071),
     c = e(975571),
     d = e(158045),
     m = e(816252),
@@ -40,7 +40,7 @@ let v = () => {
             (M(!0), N(!1));
         }
     }
-    if (null === j || null === S) return (0, i.jsx)("div", { className: x.dc, children: (0, i.jsx)(s.y, {}) });
+    if (null === j || null === S) return (0, i.jsx)("div", { className: x.dc, children: (0, i.jsx)(l.y, {}) });
     let R = e === C.PremiumTypes.TIER_2,
         L = [
             { text: h.intl.string(h.t.zl7LZp), onClick: () => n(), variant: "secondary", disabled: A },
@@ -48,12 +48,12 @@ let v = () => {
                 text: h.intl.string(h.t.CKSuZJ),
                 onClick: () => I(),
                 variant: "primary",
-                icon: o.t,
+                icon: a.t,
                 loading: A,
                 disabled: A,
             },
         ];
-    return (0, i.jsxs)(l.k, {
+    return (0, i.jsxs)(s.k, {
         graphic: { type: "image", src: R ? P.A : y },
         gradientColor: R ? "nitro-pink" : "nitro-green",
         transitionState: t,
@@ -70,7 +70,7 @@ let v = () => {
             }),
             (0, i.jsx)("div", {
                 className: x.V6,
-                children: (0, i.jsx)(u.E, {
+                children: (0, i.jsx)(o.E, {
                     variant: "text-xs/medium",
                     color: "text-subtle",
                     children:
@@ -91,7 +91,7 @@ let v = () => {
                               }),
                 }),
             }),
-            b ? (0, i.jsx)(a.w, { type: "critical", children: h.intl.string(h.t["5mlOCW"]) }) : null,
+            b ? (0, i.jsx)(u.w, { type: "critical", children: h.intl.string(h.t["5mlOCW"]) }) : null,
         ],
     });
 };

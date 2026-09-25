@@ -30,15 +30,15 @@ function A(t) {
         R.default.track(b.HAw.FAVORITES_GUILD_ADD_MODAL_OPENED, { source: A });
     }, [A]);
     let [w, _] = a.useState(""),
-        [M, O] = a.useState([]),
-        [L, N] = a.useState(!1),
+        [O, L] = a.useState([]),
+        [M, N] = a.useState(!1),
         y = (0, j.A)(),
         { results: F, updateSearchText: H } = (0, k.R)({
             includeMissingDMs: !0,
             channelFilter: y,
-            selectedDestinations: M,
+            selectedDestinations: O,
         }),
-        U = M.length,
+        U = O.length,
         Q = U >= I.dh,
         T = a.useCallback(
             (t) => {
@@ -49,7 +49,7 @@ function A(t) {
         q = a.useCallback(
             (t, e) => {
                 let l = (0, x.I)(t),
-                    n = !M.some((t) => (0, x.I)(t) === l);
+                    n = !O.some((t) => (0, x.I)(t) === l);
                 (n && Q) ||
                     (null != e &&
                         s.O.announce(
@@ -59,21 +59,21 @@ function A(t) {
                             }),
                             "polite",
                         ),
-                    O(n ? [...M, t] : M.filter((t) => (0, x.I)(t) !== l)));
+                    L(n ? [...O, t] : O.filter((t) => (0, x.I)(t) !== l)));
             },
-            [U, M, Q],
+            [U, O, Q],
         ),
         V = a.useCallback(async () => {
             N(!0);
-            let t = (await Promise.all(M.map(x.pk))).filter(C.Vq);
+            let t = (await Promise.all(O.map(x.pk))).filter(C.Vq);
             if (0 === t.length) {
                 ((0, u.P0)((0, o.o)(P.intl.string(P.t.R0RpRX), c.Ck.FAILURE)), N(!1));
                 return;
             }
             ((0, S.S_)({ channelIds: t, parentId: f ?? null, source: "modal" }), l());
-        }, [l, f, M]),
+        }, [l, f, O]),
         X = a.useMemo(() => F.filter((t) => t.type !== g.rD.HEADER), [F]),
-        z = (0, m.s)({ rowData: X, selectedDestinations: M, handleToggleDestination: q, disableSelection: Q }),
+        z = (0, m.s)({ rowData: X, selectedDestinations: O, handleToggleDestination: q, disableSelection: Q }),
         B = a.useRef(null),
         G = (0, p.A)("favorites-add-channel-modal", B),
         K = a.useMemo(
@@ -85,7 +85,7 @@ function A(t) {
         children: (0, n.jsx)(i.PR, {
             children: (t) => {
                 let { ref: a, ...i } = t;
-                return (0, n.jsx)(r.Modal, {
+                return (0, n.jsx)(r.a, {
                     title: P.intl.string(D.default.Rp35U1),
                     actions: [],
                     transitionState: e,
@@ -110,7 +110,7 @@ function A(t) {
                                     : P.intl.string(D.default.xKXcSu),
                             onClick: V,
                             disabled: 0 === U,
-                            loading: L,
+                            loading: M,
                         }),
                     }),
                     listProps: {

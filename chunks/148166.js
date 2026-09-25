@@ -1,32 +1,32 @@
-e.d(t, { default: () => d });
+e.d(t, { default: () => o });
 var i = e(477900),
-    r = e(582128),
-    s = e(732159),
-    l = e(834730),
-    a = e(150934),
-    c = e(375708),
-    o = e(551802);
-function d(n) {
-    let { title: t, body: e, onSubmit: d, ...u } = n,
-        [h, p] = r.useState(!1);
-    return (0, i.jsxs)(s.ConfirmModal, {
+    s = e(582128),
+    r = e(732159),
+    c = e(834730),
+    l = e(150934),
+    a = e(375708),
+    d = e(551802);
+function o(n) {
+    let { title: t, body: e, onSubmit: o, ...u } = n,
+        [h, p] = s.useState(!1);
+    return (0, i.jsxs)(r.u, {
         title: t,
-        confirmText: c.intl.string(c.t["26C4oi"]),
-        cancelText: c.intl.string(c.t["ETE/oC"]),
+        confirmText: a.intl.string(a.t["26C4oi"]),
+        cancelText: a.intl.string(a.t["ETE/oC"]),
         onConfirm: function () {
-            d(null, h);
+            o(null, h);
         },
         ...u,
         children: [
-            (0, i.jsx)(l.E, { variant: "text-md/normal", children: e }),
+            (0, i.jsx)(c.E, { variant: "text-md/normal", children: e }),
             (0, i.jsx)("div", {
-                className: o.k,
-                children: (0, i.jsx)(a.S, {
+                className: d.k,
+                children: (0, i.jsx)(l.S, {
                     checked: h,
                     onChange: function () {
                         return p((n) => !n);
                     },
-                    label: c.intl.string(c.t.bq3JXs),
+                    label: a.intl.string(a.t.bq3JXs),
                     labelType: "secondary",
                 }),
             }),

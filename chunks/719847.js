@@ -2,15 +2,15 @@ s.d(i, { default: () => U });
 var l = s(477900),
     e = s(582128),
     n = s(991660),
-    a = s(224640),
-    r = s(20742),
-    c = s(364840),
-    o = s(17928),
-    p = s(408278),
-    u = s(173936),
-    d = s(691540),
-    h = s(857250),
-    x = s(97483),
+    a = s(17928),
+    r = s(408278),
+    c = s(173936),
+    o = s(691540),
+    p = s(857250),
+    u = s(97483),
+    d = s(224640),
+    h = s(20742),
+    x = s(364840),
     S = s(834730),
     j = s(627363),
     m = s(587895),
@@ -27,7 +27,7 @@ var l = s(477900),
     k = s(592551);
 function U(t) {
     let { onClose: i, transitionState: s, appId: U, guildId: _ } = t,
-        I = (0, o.bG)([m.A], () => m.A.getApplication(U), [U]),
+        I = (0, a.bG)([m.A], () => m.A.getApplication(U), [U]),
         [L, D] = e.useState(() => (m.A.isFetchingApplication(U) ? { status: 1 } : { status: 0 }));
     e.useEffect(() => {
         0 === L.status &&
@@ -45,31 +45,31 @@ function U(t) {
     let T = b.intl.formatToPlainString(b.t.XDRjs5, { appName: I.name }),
         w = (0, l.jsx)("div", { className: E.K, children: (0, l.jsx)(A.h, {}) }),
         G = v.p5
-            ? (0, l.jsx)(p.K, {
+            ? (0, l.jsx)(r.K, {
                   "aria-label": b.intl.string(b.t.WqhZss),
-                  icon: () => (0, l.jsx)(u.LinkIcon, { size: "sm" }),
+                  icon: () => (0, l.jsx)(c.LinkIcon, { size: "sm" }),
                   onClick: () => {
                       let t = `${location.protocol}//${location.host}${O.BVt.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(U, P.GlobalDiscoveryAppsSections.STORE)}`;
-                      ((0, v.C)(t, () => (0, d.P0)((0, h.o)(b.intl.string(b.t["L/PwZf"]), x.Ck.SUCCESS))),
+                      ((0, v.C)(t, () => (0, o.P0)((0, p.o)(b.intl.string(b.t["L/PwZf"]), u.Ck.SUCCESS))),
                           (0, C.K)(U, C.C.STORE_MODAL));
                   },
                   variant: "icon-only",
               })
             : void 0;
-    return (0, l.jsxs)(a.d, {
+    return (0, l.jsxs)(d.d, {
         transitionState: s,
         "aria-label": T,
         onClose: i,
         size: "xxl",
         children: [
-            (0, l.jsx)(r.rQ, { leading: w, title: T, trailing: G }),
+            (0, l.jsx)(h.rQ, { leading: w, title: T, trailing: G }),
             (0, l.jsx)(n.A, {
                 children: (0, l.jsx)("main", {
                     className: k.bodyInner,
                     children: (0, l.jsx)(g.Mp, { app: I, guildId: _, subscriptions: R, otps: N }),
                 }),
             }),
-            (0, l.jsx)(c.j, {
+            (0, l.jsx)(x.j, {
                 children: (0, l.jsx)(S.E, {
                     variant: "text-md/normal",
                     children:

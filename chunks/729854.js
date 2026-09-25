@@ -1,8 +1,8 @@
 n.d(t, { A: () => g });
 var i = n(477900),
     r = n(582128),
-    a = n(189213),
-    s = n(554146),
+    a = n(554146),
+    s = n(189213),
     l = n(192308),
     o = n(968309),
     d = n(826673),
@@ -28,7 +28,7 @@ let T = "game_console_alert_modal",
     m = "game_console_ptt_alert_modal",
     g = {
         maybeShowPTTAlert(e) {
-            if (c.Ay.getMode() !== f.TBI.PUSH_TO_TALK || (0, d.k8)(s.M.CONSOLE_PTT_DISABLE_ALERT))
+            if (c.Ay.getMode() !== f.TBI.PUSH_TO_TALK || (0, d.k8)(a.M.CONSOLE_PTT_DISABLE_ALERT))
                 return Promise.resolve();
             let t = {
                 [f.fg2.XBOX]: p.intl.string(p.t.bVZ7vy),
@@ -39,10 +39,10 @@ let T = "game_console_alert_modal",
                 ? Promise.resolve()
                 : new Promise((e) => {
                       function n() {
-                          ((0, d.Dr)(s.M.CONSOLE_PTT_DISABLE_ALERT), e());
+                          ((0, d.Dr)(a.M.CONSOLE_PTT_DISABLE_ALERT), e());
                       }
                       function r(e) {
-                          return (0, i.jsx)(a.Modal, {
+                          return (0, i.jsx)(s.a, {
                               ...e,
                               title: t,
                               subtitle: p.intl.string(p.t.bL21zs),
@@ -55,19 +55,19 @@ let T = "game_console_alert_modal",
                   });
         },
         showSelfDismissableAlert(e) {
-            let { title: t, body: n, errorCodeMessage: r, reconnectPlatformType: s } = e,
+            let { title: t, body: n, errorCodeMessage: r, reconnectPlatformType: a } = e,
                 d = (0, i.jsx)(h, { body: n, errorCodeMessage: r, dismissCallback: () => (0, l.closeModal)(T) });
             function c() {
-                null != s &&
-                    ((0, o.A)({ platformType: s }),
+                null != a &&
+                    ((0, o.A)({ platformType: a }),
                     u.default.track(f.HAw.ACCOUNT_LINK_STEP, {
                         previous_step: I.yM,
                         current_step: "desktop oauth",
-                        platform_type: s,
+                        platform_type: a,
                     }));
             }
             function _(e) {
-                return (0, i.jsx)(a.Modal, {
+                return (0, i.jsx)(s.a, {
                     ...e,
                     title: t,
                     actions: [{ text: p.intl.string(p.t.BddRzS), onClick: c }],

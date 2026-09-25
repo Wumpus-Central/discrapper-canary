@@ -2,8 +2,8 @@ i.d(s, { default: () => f });
 var e = i(477900),
     n = i(582128),
     r = i(562708),
-    l = i(509434),
-    a = i(702841),
+    l = i(702841),
+    a = i(509434),
     c = i(772707),
     o = i(331322),
     u = i(834730),
@@ -19,13 +19,13 @@ function A(t) {
     let { text: s } = t;
     return (0, e.jsxs)("li", {
         className: h.nf,
-        children: [s, " ", (0, e.jsx)(l.I, { size: "sm", color: "currentColor" })],
+        children: [s, " ", (0, e.jsx)(a.I, { size: "sm", color: "currentColor" })],
     });
 }
 function f(t) {
     let { transitionState: s } = t,
-        i = (0, a.bG)([E.A], () => E.A.getAction()),
-        [l, f] = n.useState(!1);
+        i = (0, l.bG)([E.A], () => E.A.getAction()),
+        [a, f] = n.useState(!1);
     async function g() {
         return (f(!0), i === p.a3B.AGREEMENTS && f(await (0, m.Q9)()), null);
     }
@@ -45,7 +45,7 @@ function f(t) {
             dismissable: !1,
             title: j.intl.string(j.t["7glvXu"]),
             subtitle: j.intl.string(j.t["+USXQE"]),
-            actions: [{ variant: "primary", text: j.intl.string(j.t["+TBKL1"]), onClick: g, loading: l }],
+            actions: [{ variant: "primary", text: j.intl.string(j.t["+TBKL1"]), onClick: g, loading: a }],
             transitionState: s,
             onClose: p.js$,
             children: (0, e.jsxs)(o.B, {

@@ -1,13 +1,13 @@
-n.d(i, { default: () => d });
+n.d(i, { default: () => c });
 var s = n(477900),
     r = n(189213),
     e = n(834730),
     a = n(780964),
     l = n(766075),
     o = n(375708);
-function d(t) {
+function c(t) {
     let { transitionState: i, onClose: n } = t;
-    return (0, s.jsx)(r.Modal, {
+    return (0, s.jsx)(r.a, {
         size: "sm",
         transitionState: i,
         onClose: n,

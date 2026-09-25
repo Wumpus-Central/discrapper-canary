@@ -2,8 +2,8 @@
 var n = a(477900),
     l = a(582128),
     i = a(562708),
-    s = a(189213),
-    r = a(17928),
+    s = a(17928),
+    r = a(189213),
     o = a(890497),
     u = a(834730),
     d = a(144228),
@@ -23,10 +23,10 @@ var n = a(477900),
     k = a(652215),
     I = a(375708),
     w = a(614958);
-let M = l.memo(function (e) {
+let E = l.memo(function (e) {
         let { game: t } = e,
-            a = (0, r.bG)([c.A], () => c.A.getApplicationByName(t.name) ?? c.A.getApplication(t.id), [t.id, t.name]),
-            l = (0, r.bG)(
+            a = (0, s.bG)([c.A], () => c.A.getApplicationByName(t.name) ?? c.A.getApplication(t.id), [t.id, t.name]),
+            l = (0, s.bG)(
                 [p.Ay],
                 () => {
                     let e = p.Ay.getVisibleGame(),
@@ -45,11 +45,11 @@ let M = l.memo(function (e) {
                     if (null != l) return l.id;
                 })(),
             ]),
-            s = i ?? a,
-            { data: o } = (0, v.I)(null == s ? t.id : void 0);
-        return (0, n.jsx)(h.A, { pid: l?.pid, game: s ?? o, size: h.M.XSMALL, className: w.Gt });
+            r = i ?? a,
+            { data: o } = (0, v.I)(null == r ? t.id : void 0);
+        return (0, n.jsx)(h.A, { pid: l?.pid, game: r ?? o, size: h.M.XSMALL, className: w.Gt });
     }),
-    E = {
+    G = {
         searchType: f.n.FUZZY,
         sortType: f.r.JARO_WINKLER,
         searchStringGenerator: (e) => {
@@ -60,7 +60,7 @@ let M = l.memo(function (e) {
         throttleMs: 100,
         maxSearchResults: 20,
     },
-    G = [],
+    M = [],
     N = l.memo(function (e) {
         let { games: t, selectedGame: a, onGameSelected: i, onGameSearchQueryChange: s, placeholder: r } = e,
             [u, d] = l.useState(""),
@@ -73,10 +73,10 @@ let M = l.memo(function (e) {
             c = l.useMemo(() => {
                 let e = [];
                 for (let l of (null != a &&
-                    e.push({ id: a.id, value: a.id, label: a.name, game: a, leading: (0, n.jsx)(M, { game: a }) }),
+                    e.push({ id: a.id, value: a.id, label: a.name, game: a, leading: (0, n.jsx)(E, { game: a }) }),
                 t))
                     (null == a || (a.id !== l.id && a.name.toLowerCase() !== l.name.toLowerCase())) &&
-                        e.push({ id: l.id, value: l.id, label: l.name, game: l, leading: (0, n.jsx)(M, { game: l }) });
+                        e.push({ id: l.id, value: l.id, label: l.name, game: l, leading: (0, n.jsx)(E, { game: l }) });
                 return e;
             }, [t, a]),
             g = l.useMemo(() => c.reduce((e, t) => (null != e[t.value] || (e[t.value] = t), e), {}), [c]),
@@ -101,7 +101,7 @@ let M = l.memo(function (e) {
                 [a, i, m],
             );
         return (
-            (0, A.RT)(u, c, x, E),
+            (0, A.RT)(u, c, x, G),
             (0, n.jsx)(o.Z, {
                 options: p,
                 selectionMode: "single",
@@ -116,13 +116,13 @@ let M = l.memo(function (e) {
     });
 function S(e) {
     let { onClose: t, transitionState: a, onSubmitted: g, detected: p, defaultStep: f = "issue_selection" } = e,
-        [A, M] = l.useState(f),
-        [E, N] = l.useState(null),
+        [A, E] = l.useState(f),
+        [G, N] = l.useState(null),
         [S, y] = l.useState(""),
         [T, D] = l.useState(null),
         [L, O] = l.useState(""),
         R = l.useMemo(() => (0, x.generateViewId)(), []),
-        Z = (0, b.J$)(S).results ?? G,
+        Z = (0, b.J$)(S).results ?? M,
         F = l.useMemo(
             () =>
                 Z.map((e) => ({
@@ -153,7 +153,7 @@ function S(e) {
         K = l.useCallback((e) => e, []),
         P = (function (e) {
             let t = e?.applicationId,
-                a = (0, r.bG)([c.A], () => c.A.getApplication(t), [t]),
+                a = (0, s.bG)([c.A], () => c.A.getApplication(t), [t]),
                 { data: n } = (0, v.I)(e?.gameId);
             return null == e
                 ? null
@@ -198,7 +198,7 @@ function S(e) {
                 return { title: "", actions: [] };
         }
     })();
-    return (0, n.jsx)(s.Modal, {
+    return (0, n.jsx)(r.a, {
         ...z,
         transitionState: a,
         onClose: t,
@@ -217,7 +217,7 @@ function S(e) {
                             (0, n.jsx)("div", {
                                 className: w.R$,
                                 children: (0, n.jsx)(d.z, {
-                                    value: E ?? void 0,
+                                    value: G ?? void 0,
                                     onChange: (e) => {
                                         (N(e),
                                             C.default.track(k.HAw.GAME_DETECTION_FEEDBACK_MODAL, {
@@ -226,8 +226,8 @@ function S(e) {
                                             }),
                                             setTimeout(() => {
                                                 "game_not_detected" === e || "wrong_game_shown" === e
-                                                    ? M("game_search")
-                                                    : M("other_feedback");
+                                                    ? E("game_search")
+                                                    : E("other_feedback");
                                             }, 100));
                                     },
                                     options: V

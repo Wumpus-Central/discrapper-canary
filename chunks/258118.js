@@ -40,8 +40,8 @@ function p(e) {
     });
 }
 var k = l(375708),
-    M = l(916423);
-function E(e) {
+    E = l(916423);
+function M(e) {
     let { name: i, description: l, checked: n, actionLabel: a, actionHandler: t } = e,
         c = null;
     return (
@@ -49,19 +49,19 @@ function E(e) {
             ? (0, s.jsx)(p, { width: 20, height: 20 })
             : (0, s.jsx)(v.a, { size: "custom", color: m.A.colors.ICON_FEEDBACK_CRITICAL, width: 20, height: 20 })),
         (0, s.jsxs)("div", {
-            className: M.gd,
+            className: E.gd,
             children: [
-                (0, s.jsx)("div", { className: M.aV, children: c }),
+                (0, s.jsx)("div", { className: E.aV, children: c }),
                 (0, s.jsxs)("div", {
-                    className: j()(M.__invalid_checklistText, n && M.lu),
+                    className: j()(E.__invalid_checklistText, n && E.lu),
                     children: [
-                        (0, s.jsx)(g.D, { variant: "heading-md/semibold", className: M.LA, children: i }),
+                        (0, s.jsx)(g.D, { variant: "heading-md/semibold", className: E.LA, children: i }),
                         (0, s.jsx)(A.E, { color: "interactive-text-default", variant: "text-sm/normal", children: l }),
                     ],
                 }),
                 null != a &&
                     (0, s.jsx)("div", {
-                        className: M.dT,
+                        className: E.dT,
                         children: (0, s.jsx)(C.$, { variant: "primary", onClick: t, text: a, size: "sm" }),
                     }),
             ],
@@ -97,7 +97,7 @@ function w(e) {
                         n.Fragment,
                         {
                             children: [
-                                (0, s.jsx)(E, {
+                                (0, s.jsx)(M, {
                                     name: e.checked ? e.checkedLabel : e.uncheckedLabel,
                                     description: e.description,
                                     checked: e.checked,
@@ -121,7 +121,7 @@ function y(e) {
         guildId: d,
         transitionState: r,
     } = e;
-    return (0, s.jsx)(a.Modal, {
+    return (0, s.jsx)(a.a, {
         transitionState: r,
         title: k.intl.string(k.t["3s47iN"]),
         actions: [],

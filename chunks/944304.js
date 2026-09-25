@@ -4,11 +4,11 @@ var n = t(477900),
     a = t(503698),
     l = t.n(a),
     c = t(17928),
-    r = t(502572),
-    d = t(862482),
-    o = t(194261),
-    u = t(866665),
-    m = t(821609),
+    r = t(862482),
+    d = t(194261),
+    o = t(866665),
+    u = t(821609),
+    m = t(502572),
     x = t(930861),
     h = t(104510),
     g = t(820739),
@@ -75,23 +75,23 @@ let T = function (e) {
     return ((X = null !== J && !(B.length > 0) && J?.isPausedOrPausePending && R === S.xc.NONE) &&
         ((V = (0, n.jsxs)("div", {
             className: P.x6,
-            children: [(0, n.jsx)(o.LockIcon, { size: "xs", className: P.iA }), " ", V],
+            children: [(0, n.jsx)(d.LockIcon, { size: "xs", className: P.iA }), " ", V],
         })),
         (K.disabled = !0)),
     null != q)
         ? W
-            ? (0, n.jsx)(u.m, {
+            ? (0, n.jsx)(o.m, {
                   text: q,
-                  children: (0, n.jsx)(m.$, {
+                  children: (0, n.jsx)(u.$, {
                       variant: "expressive",
-                      icon: o.LockIcon,
+                      icon: d.LockIcon,
                       iconPosition: "start",
                       disabled: !0,
                       fullWidth: K.fullWidth,
                       text: T ?? k.intl.string(k.t.gKmQ1G),
                   }),
               })
-            : (0, n.jsx)(r.A, {
+            : (0, n.jsx)(m.A, {
                   text: q,
                   "aria-label": !1,
                   children: (e) =>
@@ -99,14 +99,14 @@ let T = function (e) {
                           "data-migration-pending": !0,
                           ...e,
                           disabled: !0,
-                          size: d.$n.Sizes.SMALL,
+                          size: r.$n.Sizes.SMALL,
                           pauseAnimation: C,
                           ...K,
                           children: V,
                       }),
               })
         : W
-          ? (0, n.jsx)(m.$, {
+          ? (0, n.jsx)(u.$, {
                 variant: "expressive",
                 icon: h._,
                 disabled: X,
@@ -117,7 +117,7 @@ let T = function (e) {
             })
           : (0, n.jsx)(x.wL, {
                 "data-migration-pending": !0,
-                size: d.$n.Sizes.SMALL,
+                size: r.$n.Sizes.SMALL,
                 ...K,
                 className: l()(K.className, { [P.yj]: y }),
                 submitting: D,

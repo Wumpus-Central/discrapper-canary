@@ -7,11 +7,11 @@ var i = n(477900),
     s = n.n(a),
     l = n(492462),
     o = n(806163),
-    d = n(815390),
-    c = n(17928),
-    u = n(834730),
-    _ = n(289873),
-    E = n(297264),
+    d = n(17928),
+    c = n(815390),
+    u = n(289873),
+    _ = n(297264),
+    E = n(834730),
     A = n(573435),
     h = n(726249),
     I = n(310419),
@@ -35,12 +35,12 @@ function v(e) {
         (0, i.jsxs)("div", {
             className: D.iE,
             children: [
-                l ? (0, i.jsx)(_.y, {}) : null,
+                l ? (0, i.jsx)(u.y, {}) : null,
                 (0, i.jsx)("div", { className: s()(D.wx, r) }),
-                (0, i.jsx)(E.D, { variant: "heading-lg/bold", className: D.Qq, children: t }),
+                (0, i.jsx)(_.D, { variant: "heading-lg/bold", className: D.Qq, children: t }),
                 null != n ? n : null,
                 a
-                    ? (0, i.jsx)(u.E, {
+                    ? (0, i.jsx)(E.E, {
                           variant: "text-sm/normal",
                           color: "text-muted",
                           className: D.lO,
@@ -67,7 +67,7 @@ function M(e) {
                 }));
         }, [s, n?.id, t?.id]),
         o = I.h.getField("entrypoint"),
-        d = r.useCallback(() => {
+        c = r.useCallback(() => {
             (s?.(), S.default.track(L.HAw.OAUTH2_AUTHORIZE_SUCCESS_CLOSE_CLICKED, { application_id: n?.id }));
         }, [s, n?.id]),
         u = window.location.pathname.startsWith(L.BVt.APPLICATION_DIRECTORY),
@@ -80,14 +80,14 @@ function M(e) {
                         S.default.track(L.HAw.OAUTH2_AUTHORIZE_SUCCESS_OPEN_APP_CLICKED, { application_id: n.id }));
                 }));
         }, [n?.id, s, o]),
-        E = (0, c.bG)([g.Ay, T.A], () => T.A.getChannel(g.Ay.getChannelId())),
-        A = (0, c.bG)([m.A], () => m.A.can(L.xBc.SEND_MESSAGES, E)),
+        E = (0, d.bG)([g.Ay, T.A], () => T.A.getChannel(g.Ay.getChannelId())),
+        A = (0, d.bG)([m.A], () => m.A.can(L.xBc.SEND_MESSAGES, E)),
         h = null != t,
         N = null == t && A && (!u || null != o),
         O = [];
     return (
         (null != t || null != s) &&
-            (null != s && O.push({ variant: "secondary", text: y.intl.string(y.t.cpT0Cq), onClick: d }),
+            (null != s && O.push({ variant: "secondary", text: y.intl.string(y.t.cpT0Cq), onClick: c }),
             h &&
                 O.push({
                     variant: "primary",
@@ -116,7 +116,7 @@ function P(e) {
                     : y.intl.string(y.t["Dp+rgP"]),
             [n, t],
         ),
-        o = (0, i.jsx)(u.E, { variant: "text-md/normal", className: D.OY, children: l });
+        o = (0, i.jsx)(E.E, { variant: "text-md/normal", className: D.OY, children: l });
     return (0, i.jsx)(b, { message: s, footer: o, ...a });
 }
 function U(e) {
@@ -145,12 +145,12 @@ function U(e) {
                 (0, i.jsxs)("div", {
                     className: D.fv,
                     children: [
-                        (0, i.jsx)(E.D, {
+                        (0, i.jsx)(_.D, {
                             variant: "heading-xl/semibold",
                             color: "text-strong",
                             children: y.intl.format(y.t["1Q+p1k"], { appName: t.name }),
                         }),
-                        (0, i.jsx)(u.E, {
+                        (0, i.jsx)(E.E, {
                             variant: "text-md/normal",
                             color: "text-muted",
                             children: y.intl.format(y.t.Mr7x5U, { appName: t.name }),
@@ -177,7 +177,7 @@ function x() {
     return (0, i.jsx)(R.$, {
         removeChildWrapper: !0,
         children: (0, i.jsx)(R.f, {
-            transitionState: d.i.ENTERED,
+            transitionState: c.i.ENTERED,
             hideHeader: !0,
             children: (0, i.jsx)(P, {
                 guild: e.state?.guild,
@@ -200,7 +200,7 @@ function k(e) {
     return (0, i.jsx)(R.$, {
         removeChildWrapper: !0,
         children: (0, i.jsx)(R.f, {
-            transitionState: d.i.ENTERED,
+            transitionState: c.i.ENTERED,
             hideHeader: !0,
             children: (0, i.jsx)(G, { message: a, showsCloseWindowText: !0 }),
         }),

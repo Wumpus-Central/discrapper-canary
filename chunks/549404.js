@@ -1,11 +1,11 @@
-n.d(e, { default: () => j });
+n.d(e, { default: () => _ });
 var s = n(477900),
     i = n(582128),
     r = n(284009),
     l = n.n(r),
-    a = n(189213),
-    o = n(17928),
-    d = n(314116),
+    a = n(17928),
+    o = n(314116),
+    d = n(189213),
     c = n(297264),
     h = n(834730),
     u = n(821609),
@@ -18,29 +18,29 @@ var s = n(477900),
     k = n(287809),
     P = n(975571),
     b = n(652215),
-    M = n(375708),
-    S = n(478516);
-function T(t) {
+    S = n(375708),
+    T = n(478516);
+function f(t) {
     let { label: e, text: n, children: i, ...r } = t;
     return (0, s.jsxs)("div", {
-        className: S.jx,
+        className: T.jx,
         ...r,
         children: [
             (0, s.jsx)(c.D, { variant: "heading-md/semibold", children: e }),
-            null != n ? (0, s.jsx)(h.E, { variant: "text-md/normal", className: S.gt, children: n }) : null,
+            null != n ? (0, s.jsx)(h.E, { variant: "text-md/normal", className: T.gt, children: n }) : null,
             (0, s.jsx)("div", { children: i }),
         ],
     });
 }
-class f extends i.PureComponent {
+class j extends i.PureComponent {
     handleCloseModal = async (t) => {
         let { onClose: e, hasSeenBackupPrompt: n } = this.props;
         n
             ? await e()
-            : await (0, d.A)({
-                  title: M.intl.string(M.t.mwVXnI),
-                  confirmText: M.intl.string(M.t.MwSEoz),
-                  cancelText: M.intl.string(M.t["ETE/oC"]),
+            : await (0, o.A)({
+                  title: S.intl.string(S.t.mwVXnI),
+                  confirmText: S.intl.string(S.t.MwSEoz),
+                  cancelText: S.intl.string(S.t["ETE/oC"]),
                   onConfirm: () => {
                       (C.h.dispatch({ type: "MFA_SEEN_BACKUP_CODE_PROMPT" }), e());
                   },
@@ -48,15 +48,15 @@ class f extends i.PureComponent {
               });
     };
     renderBackupCodesSection(t) {
-        return (0, s.jsx)(T, {
-            label: M.intl.string(M.t.qZZUy6),
+        return (0, s.jsx)(f, {
+            label: S.intl.string(S.t.qZZUy6),
             text: t,
             children: (0, s.jsx)(m.A, {
                 fileContents: this.getDownloadFileContents,
                 contentType: "text/plain",
                 fileName: "discord_backup_codes.txt",
                 onDownload: () => C.h.dispatch({ type: "MFA_SEEN_BACKUP_CODE_PROMPT" }),
-                children: (0, s.jsx)(u.$, { variant: "active", size: "sm", text: M.intl.string(M.t.qZZUy6) }),
+                children: (0, s.jsx)(u.$, { variant: "active", size: "sm", text: S.intl.string(S.t.qZZUy6) }),
             }),
         });
     }
@@ -66,21 +66,21 @@ class f extends i.PureComponent {
     renderPasskeyCTASection() {
         return x.A.hasCredentials
             ? null
-            : (0, s.jsxs)(T, {
-                  label: M.intl.string(M.t.xMDCHa),
-                  text: M.intl.string(M.t.okgGTu),
+            : (0, s.jsxs)(f, {
+                  label: S.intl.string(S.t.xMDCHa),
+                  text: S.intl.string(S.t.okgGTu),
                   children: [
                       (0, s.jsx)(h.E, {
                           variant: "text-md/normal",
-                          className: S.gt,
-                          children: M.intl.format(M.t.OeGXVv, {
+                          className: T.gt,
+                          children: S.intl.format(S.t.OeGXVv, {
                               learnMoreLink: P.A.getArticleURL(b.MVz.SETTING_UP_TWO_FACTOR),
                           }),
                       }),
                       (0, s.jsx)(u.$, {
                           variant: "active",
                           size: "sm",
-                          text: M.intl.string(M.t.NIFmCJ),
+                          text: S.intl.string(S.t.NIFmCJ),
                           onClick: this.handleAddPasskey,
                       }),
                   ],
@@ -92,47 +92,47 @@ class f extends i.PureComponent {
     }
     renderTotp() {
         let { transitionState: t } = this.props;
-        return (0, s.jsxs)(a.Modal, {
-            onClose: () => this.handleCloseModal(M.intl.string(M.t.WJFPHJ)),
+        return (0, s.jsxs)(d.a, {
+            onClose: () => this.handleCloseModal(S.intl.string(S.t.WJFPHJ)),
             transitionState: t,
-            title: M.intl.string(M.t.Awk3Gw),
-            subtitle: M.intl.format(M.t["/Nhi8R"], {}),
+            title: S.intl.string(S.t.Awk3Gw),
+            subtitle: S.intl.format(S.t["/Nhi8R"], {}),
             actions: [],
             children: [
                 this.renderPasskeyCTASection(),
-                (0, s.jsx)(p.c, { className: S.yF }),
-                this.renderBackupCodesSection(M.intl.format(M.t.M0Dogh, {})),
+                (0, s.jsx)(p.c, { className: T.yF }),
+                this.renderBackupCodesSection(S.intl.format(S.t.M0Dogh, {})),
             ],
         });
     }
     renderWebAuthn() {
         let { transitionState: t } = this.props;
-        return (0, s.jsx)(a.Modal, {
-            onClose: () => this.handleCloseModal(M.intl.string(M.t.aoNIXB)),
+        return (0, s.jsx)(d.a, {
+            onClose: () => this.handleCloseModal(S.intl.string(S.t.aoNIXB)),
             transitionState: t,
-            title: M.intl.string(M.t["7wPZln"]),
-            subtitle: M.intl.format(M.t["/Nhi8R"], {}),
+            title: S.intl.string(S.t["7wPZln"]),
+            subtitle: S.intl.format(S.t["/Nhi8R"], {}),
             actions: [],
-            children: this.renderBackupCodesSection(M.intl.format(M.t.p59QLQ, {})),
+            children: this.renderBackupCodesSection(S.intl.format(S.t.p59QLQ, {})),
         });
     }
     getDownloadFileContents = () => {
         let t = this.props.backupCodes
                 .map((t) => {
                     let { consumed: e, code: n } = t;
-                    return `* ${n.substr(0, 4)}-${n.substr(4)} ${e ? `(${M.intl.string(M.t["ycME+9"])})` : ""}`;
+                    return `* ${n.substr(0, 4)}-${n.substr(4)} ${e ? `(${S.intl.string(S.t["ycME+9"])})` : ""}`;
                 })
                 .join("\r\n"),
-            e = M.intl.formatToPlainString(M.t["uYWwh/"], { email: this.props.currentUser.email });
+            e = S.intl.formatToPlainString(S.t["uYWwh/"], { email: this.props.currentUser.email });
         return `${e}\r
 \r
 ${t}`;
     };
 }
-let j = o.Ay.connectStores([k.default, A.A], () => {
+let _ = a.Ay.connectStores([k.default, A.A], () => {
     let t = k.default.getCurrentUser();
     return (
         l()(null != t, "MFAEnableSuccess: currentUser cannot be undefined"),
         { currentUser: t, backupCodes: A.A.getBackupCodes(), hasSeenBackupPrompt: A.A.hasSeenBackupPrompt }
     );
-})(f);
+})(j);

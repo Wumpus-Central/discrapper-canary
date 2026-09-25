@@ -1,21 +1,21 @@
-a.d(i, { ActivityAgeGateModal: () => o });
+a.d(i, { ActivityAgeGateModal: () => c });
 var n = a(477900),
     e = a(582128),
-    l = a(189213),
-    s = a(306537),
+    s = a(189213),
+    l = a(306537),
     r = a(375708);
-function o(t) {
-    let { application: i, onAgree: a, onClose: o, onDisagree: c, channelId: E, transitionState: A } = t;
+function c(t) {
+    let { application: i, onAgree: a, onClose: c, onDisagree: o, channelId: E, transitionState: A } = t;
     e.useEffect(() => {
-        (0, s.Bf)(s.A5.NSFW_EMBEDDED_ACTIVITY, E);
+        (0, l.Bf)(l.A5.NSFW_EMBEDDED_ACTIVITY, E);
     }, [E]);
     let C = e.useCallback(() => {
-            ((0, s.mU)(s.IY.NSFW_CHANNEL_AGREE_CTA, s.A5.NSFW_EMBEDDED_ACTIVITY, E), a(), o());
-        }, [a, o, E]),
+            ((0, l.mU)(l.IY.NSFW_CHANNEL_AGREE_CTA, l.A5.NSFW_EMBEDDED_ACTIVITY, E), a(), c());
+        }, [a, c, E]),
         _ = e.useCallback(() => {
-            ((0, s.mU)(s.IY.NSFW_CHANNEL_DISAGREE_CTA, s.A5.NSFW_EMBEDDED_ACTIVITY, E), c(), o());
-        }, [c, o, E]);
-    return (0, n.jsx)(l.Modal, {
+            ((0, l.mU)(l.IY.NSFW_CHANNEL_DISAGREE_CTA, l.A5.NSFW_EMBEDDED_ACTIVITY, E), o(), c());
+        }, [o, c, E]);
+    return (0, n.jsx)(s.a, {
         transitionState: A,
         title: r.intl.string(r.t.SSDPOF),
         subtitle: r.intl.formatToPlainString(r.t.OgmIqy, { applicationName: i.name }),

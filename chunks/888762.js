@@ -4,8 +4,8 @@ var n = a(477900),
     s = a(189213),
     l = a(192308),
     c = a(834730),
-    o = a(475358),
-    r = a(28863),
+    r = a(475358),
+    o = a(28863),
     d = a(450510),
     h = a(350535),
     u = a(317084),
@@ -35,7 +35,7 @@ function x(t) {
             ],
             [w, j],
         );
-    return (0, n.jsxs)(s.Modal, {
+    return (0, n.jsxs)(s.a, {
         onClose: j,
         actions: b,
         transitionState: y,
@@ -50,11 +50,11 @@ function x(t) {
                             "span",
                             {
                                 className: p.EY,
-                                children: (0, n.jsx)(o.e, { className: p.d4, shortcut: (0, h.dI)(m.shortcut, !1) }),
+                                children: (0, n.jsx)(r.e, { className: p.d4, shortcut: (0, h.dI)(m.shortcut, !1) }),
                             },
                             e,
                         ),
-                    openSettingsHook: (t, e) => (0, n.jsx)(r.Anchor, { onClick: w, children: t }, e),
+                    openSettingsHook: (t, e) => (0, n.jsx)(o.Anchor, { onClick: w, children: t }, e),
                 }),
             }),
             (0, n.jsx)("div", {

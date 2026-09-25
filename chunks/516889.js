@@ -4,8 +4,8 @@ var s = i(477900),
     l = i(284009),
     a = i.n(l),
     r = i(562708),
-    d = i(189213),
     c = i(17928),
+    d = i(189213),
     o = i(834730),
     m = i(696986),
     x = i(297264),
@@ -105,7 +105,7 @@ function P(t) {
         O = (0, _.X)(D),
         v = (0, c.bG)([A.A], () => A.A.getGuild(l)),
         I = (0, y.A)({ guildId: l, guildProductListingId: i, sourceAnalyticsLocations: u.A.GUILD_PRODUCT_INFO_MODAL });
-    return (0, s.jsxs)(d.Modal, {
+    return (0, s.jsxs)(d.a, {
         title: D.name,
         subtitle: f.intl.format(f.t.xImSei, { productType: b, personName: v?.name ?? "" }),
         size: "md",

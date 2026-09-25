@@ -1,8 +1,8 @@
 (n.d(t, { default: () => w }), n(321073));
 var i = n(477900),
     s = n(582128),
-    l = n(189213),
-    r = n(17928),
+    l = n(17928),
+    r = n(189213),
     a = n(770880),
     c = n(146151),
     o = n(834730),
@@ -22,28 +22,28 @@ var i = n(477900),
     k = n(496434);
 function w(e) {
     let { channelId: t, ...n } = e,
-        l = (0, r.bG)([g.A], () => g.A.getChannel(t), [t]),
-        a = (0, r.bG)([p.A], () => p.A.getGuild(l?.getGuildId()));
+        r = (0, l.bG)([g.A], () => g.A.getChannel(t), [t]),
+        a = (0, l.bG)([p.A], () => p.A.getGuild(r?.getGuildId()));
     return (s.useEffect(() => {
         A.default.track(j.HAw.OPEN_MODAL, { type: "Grant Channel Access" });
     }, []),
-    null == l || null == a)
+    null == r || null == a)
         ? null
-        : (0, i.jsx)(C, { guild: a, channel: l, ...n });
+        : (0, i.jsx)(C, { guild: a, channel: r, ...n });
 }
 function C(e) {
-    let { guild: t, channel: n, onClose: r, newChannel: g, inSettings: p, ...A } = e,
+    let { guild: t, channel: n, onClose: l, newChannel: g, inSettings: p, ...A } = e,
         [j, w] = s.useState(""),
         [C, b] = s.useState({}),
         [R, S] = s.useState(!1),
         [T, G] = s.useState(null),
         H = s.useRef(null),
         O = (0, h.Ay)(n),
-        { roles: N, members: M, getRichTag: _ } = (0, E.K)(t, n, n.accessPermissions, j),
-        I = f.A.useSections({ roles: N, members: M }),
-        L = g && 0 === Object.keys(C).length;
+        { roles: N, members: _, getRichTag: I } = (0, E.K)(t, n, n.accessPermissions, j),
+        L = f.A.useSections({ roles: N, members: _ }),
+        M = g && 0 === Object.keys(C).length;
     async function P() {
-        if (null == n || 0 === Object.keys(C).length) return void r();
+        if (null == n || 0 === Object.keys(C).length) return void l();
         S(!0);
         try {
             var e, t, i;
@@ -61,7 +61,7 @@ function C(e) {
                         : n.rowType === m.T6.MEMBER && s.push((0, y.n3)(n.id, e.type)));
             }),
             (0, d.R$)(e.id, s, i)),
-                r(),
+                l(),
                 S(!1));
         } catch (t) {
             let e = new u.LG(t);
@@ -76,12 +76,12 @@ function C(e) {
         pendingAdditions: C,
         setPendingAdditions: b,
         roles: N,
-        members: M,
-        getRichTag: _,
-        children: (0, i.jsx)(l.Modal, {
+        members: _,
+        getRichTag: I,
+        children: (0, i.jsx)(r.a, {
             ...A,
             title: v.intl.string(v.t.dMJ3Y6),
-            onClose: r,
+            onClose: l,
             input: (0, i.jsxs)("div", {
                 children: [
                     (0, i.jsxs)(o.E, {
@@ -119,12 +119,12 @@ function C(e) {
                 renderSection: f.A.renderSection,
                 rowHeight: f.A.ROW_HEIGHT,
                 renderRow: f.A.renderRow,
-                sections: I,
+                sections: L,
             },
-            actions: L
-                ? [{ variant: "secondary", text: v.intl.string(v.t.u46sxe), onClick: r }]
+            actions: M
+                ? [{ variant: "secondary", text: v.intl.string(v.t.u46sxe), onClick: l }]
                 : [
-                      { variant: "secondary", text: v.intl.string(v.t["ETE/oC"]), onClick: r },
+                      { variant: "secondary", text: v.intl.string(v.t["ETE/oC"]), onClick: l },
                       { variant: "primary", text: v.intl.string(v.t.i4jeWR), onClick: P, loading: R },
                   ],
         }),

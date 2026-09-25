@@ -7,6 +7,6 @@ var r = n(192308),
 function l(e) {
     let { title: t, subtitle: n, confirmText: l = s.intl.string(s.t.BddRzS) } = e;
     return (0, r.openModal)((e) =>
-        (0, i.jsx)(a.Modal, { ...e, title: t, subtitle: n, actions: [{ text: l, onClick: e.onClose }] }),
+        (0, i.jsx)(a.a, { ...e, title: t, subtitle: n, actions: [{ text: l, onClick: e.onClose }] }),
     );
 }

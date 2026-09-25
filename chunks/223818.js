@@ -22,7 +22,7 @@ function o(t) {
                 u(!1);
             }
         }, [c, i, o]);
-    return (0, n.jsx)(r.Modal, {
+    return (0, n.jsx)(r.a, {
         ...d,
         onClose: a,
         title: e.intl.formatToPlainString(e.t.lprb7n, { count: k }),

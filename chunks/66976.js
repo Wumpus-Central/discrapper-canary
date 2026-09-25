@@ -727,8 +727,8 @@ var tw = n(509434),
     tk = n(975807),
     tX = n(201438),
     tV = n(194362),
-    tK = n(307301),
-    tF = n(661531),
+    tK = n(661531),
+    tF = n(307301),
     tW = n(701115);
 function tY(e) {
     let { imageSrc: t } = e;
@@ -740,7 +740,7 @@ function tY(e) {
                 className: tW.gm,
                 children: (0, l.jsx)("div", {
                     className: tW.WA,
-                    children: (0, l.jsx)(tK.j, { size: "sm", color: tF.A.colors.TEXT_BRAND }),
+                    children: (0, l.jsx)(tF.j, { size: "sm", color: tK.A.colors.TEXT_BRAND }),
                 }),
             }),
         ],

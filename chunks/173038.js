@@ -7,8 +7,8 @@ var i,
     o = n(492462),
     d = n(696292),
     c = n(17928),
-    u = n(192308),
-    m = n(403581),
+    u = n(403581),
+    m = n(192308),
     p = n(793574),
     b = n(688810),
     f = n(793943),
@@ -263,7 +263,7 @@ let eR = function () {
                         variant: "primary",
                         text: er.intl.formatToPlainString(en.default.LwdrNi, { premiumGroupProductName: (0, q.DP)() }),
                         onClick: G,
-                        icon: m.t,
+                        icon: u.t,
                         iconPosition: "start",
                         disabled: eL,
                     },
@@ -271,7 +271,7 @@ let eR = function () {
                         variant: "secondary",
                         text: er.intl.string(er.t.hvVgAZ),
                         onClick: () => {
-                            (0, u.openModalLazy)(async () => {
+                            (0, m.openModalLazy)(async () => {
                                 let { default: e } = await Promise.all([
                                     n.e("499709"),
                                     n.e("403370"),
@@ -339,7 +339,7 @@ let eR = function () {
                                 analyticsLocations: t,
                                 onSubscriptionConfirmation: r,
                             }),
-                        icon: m.t,
+                        icon: u.t,
                         iconPosition: "start",
                     },
                 ],

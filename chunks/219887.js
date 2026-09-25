@@ -3,9 +3,9 @@ var i = n(477900),
     s = n(582128),
     l = n(503698),
     r = n.n(l),
-    a = n(37766),
-    o = n(85463),
-    u = n(834730),
+    a = n(85463),
+    o = n(834730),
+    u = n(37766),
     d = n(887555),
     c = n(235986),
     g = n(37537),
@@ -20,9 +20,9 @@ var i = n(477900),
 function f(e) {
     let { children: t, className: n } = e,
         s = (0, g.c)("PaymentDescriptionIndicator"),
-        l = (0, o.N)();
+        l = (0, a.N)();
     return s
-        ? (0, i.jsx)(u.E, { variant: l, color: "none", className: n, children: t })
+        ? (0, i.jsx)(o.E, { variant: l, color: "none", className: n, children: t })
         : (0, i.jsx)("div", { className: r()(n, T.Sv), children: t });
 }
 class I extends s.PureComponent {
@@ -107,7 +107,7 @@ class I extends s.PureComponent {
     }
     renderDescription() {
         let { paymentSource: e, descriptionClassName: t } = this.props;
-        return (0, i.jsx)(u.E, { className: t, variant: "text-md/semibold", children: this.getLabel(e) });
+        return (0, i.jsx)(o.E, { className: t, variant: "text-md/semibold", children: this.getLabel(e) });
     }
     renderSubText() {
         let { paymentSource: e, locale: t } = this.props,
@@ -128,7 +128,7 @@ class I extends s.PureComponent {
     }
     renderIcon() {
         let { paymentSource: e } = this.props;
-        return e instanceof A.LQ ? (0, i.jsx)(a._, { size: "lg" }) : (0, i.jsx)(m.Ay, { type: this.typeString });
+        return e instanceof A.LQ ? (0, i.jsx)(u._, { size: "lg" }) : (0, i.jsx)(m.Ay, { type: this.typeString });
     }
     render() {
         let {
@@ -159,7 +159,7 @@ class I extends s.PureComponent {
                             ],
                         }),
                         n && null != a
-                            ? (0, i.jsx)(u.E, {
+                            ? (0, i.jsx)(o.E, {
                                   variant: "text-sm/normal",
                                   color: "text-subtle",
                                   className: T.z_,

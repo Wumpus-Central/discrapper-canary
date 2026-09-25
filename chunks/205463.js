@@ -14,7 +14,7 @@ var i = e(477900),
 let p = { 1: "what_you_lose", 2: "confirmation" };
 function P(t) {
     let { onClose: n, currentUser: e, onNext: r, ...a } = t;
-    return (0, i.jsx)(o.Modal, {
+    return (0, i.jsx)(o.a, {
         title: _.intl.formatToPlainString(m.default["4e7WtF"], { premiumGroupProductName: (0, d.DP)() }),
         subtitle: _.intl.formatToPlainString(m.default["3kVEg0"], { cooldownMonths: d.wl }),
         onClose: n,
@@ -34,7 +34,7 @@ function P(t) {
 }
 function w(t) {
     let { onClose: n, onConfirm: e, isRemovingUser: r, ...a } = t;
-    return (0, i.jsx)(o.Modal, {
+    return (0, i.jsx)(o.a, {
         size: "md",
         title: _.intl.formatToPlainString(m.default.IrvJHs, { premiumGroupProductName: (0, d.DP)() }),
         subtitle: _.intl.formatToPlainString(m.default.cQDYKU, {

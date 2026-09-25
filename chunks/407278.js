@@ -1,10 +1,10 @@
 i.d(t, { A: () => E, L: () => v });
 var n = i(477900),
     s = i(196765),
-    l = i(834730),
-    a = i(434831),
-    r = i(17928),
-    d = i(506774),
+    l = i(17928),
+    a = i(506774),
+    r = i(834730),
+    d = i(434831),
     o = i(47167),
     u = i(976860),
     c = i(734057),
@@ -22,33 +22,33 @@ let g = "legacyGameInviteChannelChatBannerDismissed",
     ]),
     x = "1526555294518349946",
     f = (0, s.v)(() => ({
-        dismissedChannelIds: d.w.get(g) ?? [],
+        dismissedChannelIds: a.w.get(g) ?? [],
         dismissChannel: (e) => {
             f.setState((t) => {
                 let i = [...t.dismissedChannelIds, e];
-                return (d.w.set(g, i), { dismissedChannelIds: i });
+                return (a.w.set(g, i), { dismissedChannelIds: i });
             });
         },
     }));
 function v(e) {
     let { dismissedChannelIds: t } = f(),
         i = t?.includes(x);
-    return null != (0, r.bG)([c.A], () => c.A.getChannel(x)) && I.has(e) && !i;
+    return null != (0, l.bG)([c.A], () => c.A.getChannel(x)) && I.has(e) && !i;
 }
 function E() {
-    let e = (0, r.bG)([c.A], () => c.A.getChannel(x)),
+    let e = (0, l.bG)([c.A], () => c.A.getChannel(x)),
         t = (0, o.Ay)(e);
     function i() {
         f.getState().dismissChannel(x);
     }
     return null == e || null == t
         ? null
-        : (0, n.jsx)(l.E, {
+        : (0, n.jsx)(r.E, {
               variant: "text-sm/medium",
               color: "text-muted",
               className: A.v,
               children: p.intl.format(h.default["5jIPgz"], {
-                  channelIconHook: () => (0, n.jsx)(a.t, { size: "xs", color: "currentColor" }),
+                  channelIconHook: () => (0, n.jsx)(d.t, { size: "xs", color: "currentColor" }),
                   channelName: t,
                   onChannelClick: () => {
                       ((0, u.pX)(m.BVt.CHANNEL(e.guild_id, e.id)), i());

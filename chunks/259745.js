@@ -14,10 +14,10 @@ var r = n(477900),
     j = n(503698),
     v = n.n(j),
     f = n(317097),
-    k = n(43990),
-    N = n(406810),
-    p = n(52133),
-    g = n(417098),
+    k = n(52133),
+    N = n(417098),
+    p = n(43990),
+    g = n(406810),
     b = n(818348),
     C = n(375708),
     A = n(395822);
@@ -30,7 +30,7 @@ function y(t) {
             noticeColor: e,
             customStyle: n,
         } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        return (0, r.jsx)(g.$T, { className: t, color: e, style: n, children: l });
+        return (0, r.jsx)(N.$T, { className: t, color: e, style: n, children: l });
     }
     if ("nitro-pink" === n)
         return o({
@@ -43,7 +43,7 @@ function y(t) {
         });
     if ((0, f.qt)(n)) {
         let t = (0, f.OK)((0, f.LX)(n)) > 0.5 ? b.NJ.DARK : b.NJ.LIGHT;
-        return (0, r.jsx)(k.N, {
+        return (0, r.jsx)(p.N, {
             theme: t,
             children: (t) =>
                 o({
@@ -56,9 +56,9 @@ function y(t) {
                 }),
         });
     }
-    return (0, r.jsx)(k.N, {
+    return (0, r.jsx)(p.N, {
         theme: b.NJ.DARK,
-        children: (t) => o({ className: v()(t, A.cI, c, e), noticeColor: g.Hv.BRAND }),
+        children: (t) => o({ className: v()(t, A.cI, c, e), noticeColor: N.Hv.BRAND }),
     });
 }
 function I(t) {
@@ -72,7 +72,7 @@ function I(t) {
     }
     return ((0, i.A)(() => {
         let t = (0, h.ZH)(l);
-        a((e) => (null == t ? null : null != e && (0, p.A)(e, t) ? e : t));
+        a((e) => (null == t ? null : null != e && (0, k.A)(e, t) ? e : t));
     }, 1e3),
     null != o)
         ? o.days > 0
@@ -87,7 +87,7 @@ function S(t) {
     return (0, r.jsxs)("div", {
         className: A.S5,
         children: [
-            (0, r.jsx)(N.ClockIcon, { size: "sm", color: "currentColor" }),
+            (0, r.jsx)(g.ClockIcon, { size: "sm", color: "currentColor" }),
             (0, r.jsx)(c.E, {
                 variant: "text-sm/medium",
                 color: "currentColor",

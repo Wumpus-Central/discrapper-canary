@@ -4,8 +4,8 @@ var i = t(477900),
     n = t(834730),
     r = t(363487),
     l = t(582128),
-    o = t(503698),
-    c = t.n(o),
+    c = t(503698),
+    o = t.n(c),
     d = t(812993),
     x = t(104510),
     u = t(661531),
@@ -21,14 +21,14 @@ var i = t(477900),
     b = t(375708),
     k = t(434031);
 function f(e) {
-    let { canUseBoosts: s, guildId: t, powerup: a, isNewPerk: r, forceStaticImages: o } = e,
+    let { canUseBoosts: s, guildId: t, powerup: a, isNewPerk: r, forceStaticImages: c } = e,
         [f, w] = l.useState(!1),
         S = (0, h.Ay)(t, a),
         _ = (0, j.e)(a, S, !1),
         y = (0, h.dy)(S),
         { disabled: C } = (0, p.A)(t, a, y),
-        { onActivate: M, error: E } = (0, A.A)(t, a);
-    (0, I.A)(E);
+        { onActivate: E, error: M } = (0, A.A)(t, a);
+    (0, I.A)(M);
     let P = !s || C,
         L = y && !P,
         T = (0, i.jsxs)(i.Fragment, {
@@ -37,8 +37,8 @@ function f(e) {
                     className: k.R9,
                     children: [
                         (0, i.jsx)("div", {
-                            className: c()(k._W, { [k.vu]: y }),
-                            children: (0, i.jsx)(g.l, { powerup: a, isHovering: !P && f, forceStaticImage: o }),
+                            className: o()(k._W, { [k.vu]: y }),
+                            children: (0, i.jsx)(g.l, { powerup: a, isHovering: !P && f, forceStaticImage: c }),
                         }),
                         r && (0, i.jsx)(d.Lp, { className: k.qS, text: b.intl.string(b.t.y2b7CA) }),
                     ],
@@ -90,18 +90,18 @@ function f(e) {
         });
     return y
         ? (0, i.jsx)("div", {
-              className: c()(k.nK, k.RO, { [k.r9]: P }),
+              className: o()(k.nK, k.RO, { [k.r9]: P }),
               onMouseEnter: () => w(!0),
               onMouseLeave: () => w(!1),
               children: T,
           })
         : (0, i.jsx)(m.D, {
-              className: c()(k.nK, { [k.r9]: P }),
+              className: o()(k.nK, { [k.r9]: P }),
               onMouseEnter: () => w(!0),
               onMouseLeave: () => w(!1),
               "aria-disabled": P,
               onClick: (e) => {
-                  (e.stopPropagation(), P || M?.({ shouldCloseAllModals: !1 }));
+                  (e.stopPropagation(), P || E?.({ shouldCloseAllModals: !1 }));
               },
               children: T,
           });
@@ -112,8 +112,8 @@ function S(e) {
             guildId: s,
             title: t,
             description: l,
-            powerups: o,
-            newPowerupSkuIdSet: c,
+            powerups: c,
+            newPowerupSkuIdSet: o,
             forceStaticImages: d,
             footerInfoText: x,
             footerAction: u,
@@ -131,7 +131,7 @@ function S(e) {
                       }),
                   })
                 : void 0;
-    return (0, i.jsx)(a.Modal, {
+    return (0, i.jsx)(a.a, {
         title: t,
         subtitle: l,
         actionBarInput: h,
@@ -139,10 +139,10 @@ function S(e) {
         ...m,
         children: (0, i.jsx)("div", {
             className: w.p,
-            children: o.map((e) =>
+            children: c.map((e) =>
                 (0, i.jsx)(
                     f,
-                    { guildId: s, powerup: e, canUseBoosts: p ?? !1, isNewPerk: c?.has(e.skuId), forceStaticImages: d },
+                    { guildId: s, powerup: e, canUseBoosts: p ?? !1, isNewPerk: o?.has(e.skuId), forceStaticImages: d },
                     e.skuId,
                 ),
             ),

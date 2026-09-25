@@ -161,16 +161,16 @@ function N(t) {
     return (0, i.jsx)(L, { ingress: e, guildId: n ?? l });
 }
 var b = n(379257),
-    M = n(306537),
-    v = n(116774),
-    D = n(953298);
+    v = n(306537),
+    D = n(116774),
+    M = n(953298);
 function y(t) {
     let { ingress: e, guildId: n } = t,
         r = (0, g.q9)(),
         s = (0, m.K)(),
         d = c.$s.useSetting().includes(n),
         u = (0, U.uM)(),
-        E = (0, v.s)(),
+        E = (0, D.s)(),
         I = c.YX.useSetting(),
         C = c.Zr.useSetting().includes(n),
         G = !!E || (u ? !I : !s && !I),
@@ -196,8 +196,8 @@ function y(t) {
     }
     function L(t, e) {
         var n;
-        !t && (0, D.w)()
-            ? b.A.showAgeVerificationGetStartedModal({ entryPoint: M.q1.MESSAGE_REQUESTS_SETTINGS })
+        !t && (0, M.w)()
+            ? b.A.showAgeVerificationGetStartedModal({ entryPoint: v.q1.MESSAGE_REQUESTS_SETTINGS })
             : e
               ? p(t)
               : ((n = !t),
@@ -263,7 +263,7 @@ function w(t) {
 function O(t) {
     let { guild: e, transitionState: n, onClose: l } = t,
         s = `${R.intl.string(R.t.BayiAo)}\u{2014}${null != e ? e.name : "??"}`;
-    return (0, i.jsx)(r.Modal, {
+    return (0, i.jsx)(r.a, {
         transitionState: n,
         size: "sm",
         title: s,

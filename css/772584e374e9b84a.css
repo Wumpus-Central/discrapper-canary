@@ -245,6 +245,45 @@
     animation: widgetSettle_fe7668 .16s cubic-bezier(.2, 0, 0, 1) both
 }
 
+.preparingEntrance_fe7668 {
+    opacity: 0;
+    transform: scale(.96) rotate(-.5deg)
+}
+
+.entering_fe7668,
+.preparingEntrance_fe7668 {
+    transform-origin: center top
+}
+
+.full-motion .entering_fe7668 {
+    animation: widgetEntrance_fe7668 .32s cubic-bezier(.34, 1.4, .64, 1) both
+}
+
+.shine_fe7668 {
+    border-radius: var(--radius-md);
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 2
+}
+
+.shine_fe7668,
+.shineBar_fe7668 {
+    position: absolute
+}
+
+.shineBar_fe7668 {
+    background: linear-gradient(115deg, transparent 38%, var(--white-500) 50%, transparent 62%);
+    inset-block: 0;
+    inset-inline-start: -50%;
+    transform: translateX(-60%);
+    width: 200%
+}
+
+.full-motion .shineBar_fe7668 {
+    animation: widgetShine_fe7668 .32s ease-out both
+}
+
 .removing_fe7668 {
     pointer-events: none
 }
@@ -273,6 +312,28 @@
     to {
         opacity: 1;
         transform: scale(1)
+    }
+}
+
+@keyframes widgetEntrance_fe7668 {
+    0% {
+        opacity: 0;
+        transform: scale(.96) rotate(-.5deg)
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) rotate(0deg)
+    }
+}
+
+@keyframes widgetShine_fe7668 {
+    0% {
+        transform: translateX(-60%)
+    }
+
+    to {
+        transform: translateX(60%)
     }
 }
 
@@ -376,4 +437,4 @@
     min-height: max(var(--space-64), 40vh)
 }
 
-/*# sourceMappingURL=3b0479da9eabfb64.css.map*/
+/*# sourceMappingURL=772584e374e9b84a.css.map*/

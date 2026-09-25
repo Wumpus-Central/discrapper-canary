@@ -1,4 +1,4 @@
-n.d(t, { ConfirmModal: () => o });
+n.d(t, { u: () => o });
 var i = n(477900),
     r = n(582128),
     a = n(460890),
@@ -34,7 +34,7 @@ function o(e) {
     function N(e) {
         S(e);
     }
-    return (0, i.jsx)(s.Modal, {
+    return (0, i.jsx)(s.a, {
         actions: [
             {
                 text: n ?? I,

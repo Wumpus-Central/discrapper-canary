@@ -11,25 +11,25 @@ var n = i(477900),
 function p(t) {
     let { createReminder: e, ...i } = t,
         [s, p] = a.useState(() => l()()),
-        [h, m] = a.useState(() => l()()),
-        C = a.useCallback(() => {
+        [h, b] = a.useState(() => l()()),
+        g = a.useCallback(() => {
             e(s.toDate());
         }, [e, s]);
-    function b(t) {
+    function m(t) {
         t.isValid() && p(t);
     }
-    return (0, n.jsx)(r.ConfirmModal, {
+    return (0, n.jsx)(r.u, {
         title: d.intl.string(d.t.VKsXpY),
         confirmText: d.intl.string(d.t["R3BPH+"]),
         cancelText: d.intl.string(d.t["ETE/oC"]),
-        onConfirm: C,
+        onConfirm: g,
         ...i,
         variant: "primary",
         children: (0, n.jsxs)("div", {
             className: o.U,
             children: [
-                (0, n.jsx)(c.J, { label: d.intl.string(d.t.pSZKvM), required: !0, value: s, onSelect: b, minDate: h }),
-                (0, n.jsx)(u.c, { label: d.intl.string(d.t.GOmEb8), required: !0, value: s, onChange: b }),
+                (0, n.jsx)(c.J, { label: d.intl.string(d.t.pSZKvM), required: !0, value: s, onSelect: m, minDate: h }),
+                (0, n.jsx)(u.c, { label: d.intl.string(d.t.GOmEb8), required: !0, value: s, onChange: m }),
             ],
         }),
     });

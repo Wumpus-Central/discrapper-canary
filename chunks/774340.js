@@ -18,8 +18,8 @@ var t = a(477900),
     g = a(755571),
     N = a(475669),
     E = a(589603),
-    b = a(289704),
-    p = a(192308),
+    b = a(192308),
+    p = a(289704),
     S = a(297264),
     G = a(821609),
     C = a(104510),
@@ -128,7 +128,7 @@ function O(e) {
             (0, y.A)(s, I.A.GAME_SERVER_PAGE, w.W5);
         }, [s]),
         m = l.useCallback(() => {
-            (0, p.openModalLazy)(async () => {
+            (0, b.openModalLazy)(async () => {
                 let { default: e } = await a.e("726702").then(a.bind(a, 758909));
                 return (a) => (0, t.jsx)(e, { ...a, guildId: s });
             });
@@ -143,7 +143,7 @@ function O(e) {
                     (0, t.jsx)("div", {
                         ref: n,
                         className: T._q,
-                        children: (0, t.jsx)(b.E, { eventTargetRef: n, fit: "contain", stateMachine: "SM_Main_Int" }),
+                        children: (0, t.jsx)(p.E, { eventTargetRef: n, fit: "contain", stateMachine: "SM_Main_Int" }),
                     }),
                     (0, t.jsx)(S.D, {
                         variant: "heading-lg/semibold",

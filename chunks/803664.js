@@ -33,9 +33,12 @@ function g(t) {
                 action: function () {
                     (0, r.openModalLazy)(
                         async () => {
-                            let { ConfirmModal: t } = await Promise.all([n.e("454048"), n.e("304823")]).then(
-                                n.bind(n, 158954),
-                            );
+                            let { ConfirmModal: t } = await Promise.all([
+                                n.e("454048"),
+                                n.e("304823"),
+                                n.e("223976"),
+                                n.e("977260"),
+                            ]).then(n.bind(n, 397927));
                             return (e) =>
                                 (0, i.jsx)(t, {
                                     title: A.intl.formatToPlainString(A.t.fPLvZd, { name: m }),

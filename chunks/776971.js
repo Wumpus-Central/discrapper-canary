@@ -6,12 +6,12 @@ var i = n(477900),
     s = n(536637),
     o = n.n(s),
     u = n(562708),
-    c = n(189213),
-    E = n(772707),
-    _ = n(17928),
+    c = n(17928),
+    E = n(189213),
+    _ = n(772707),
     A = n(66834),
-    d = n(379257),
-    f = n(306537),
+    f = n(379257),
+    d = n(306537),
     g = n(734057),
     m = n(309010),
     p = n(287809),
@@ -29,8 +29,8 @@ function I(t) {
     let e,
         n,
         { transitionState: a, source: s } = t,
-        I = (0, _.bG)([p.default], () => p.default.getCurrentUser()),
-        N = (0, _.bG)([m.Ay, g.A], () => g.A.getChannel(m.Ay.getChannelId())),
+        I = (0, c.bG)([p.default], () => p.default.getCurrentUser()),
+        N = (0, c.bG)([m.Ay, g.A], () => g.A.getChannel(m.Ay.getChannelId())),
         [M, L] = l.useState(null),
         [P, F] = l.useState(null),
         [V, v] = l.useState(!1),
@@ -93,13 +93,13 @@ function I(t) {
             O.current?.focus();
         }, [O]),
         ta = l.useCallback(() => {
-            d.A.showAgeVerificationGetStartedModal({ entryPoint: f.q1.NSFW_AGE_GATE });
+            f.A.showAgeVerificationGetStartedModal({ entryPoint: d.q1.NSFW_AGE_GATE });
         }, []),
         tr = { transitionState: a, onClose: J, graphic: { type: "image", src: k.A }, gradientColor: "blue" };
     if (W) {
         let t = { text: z ?? S.intl.string(S.t.f3Pet9), onClick: J },
             e = { text: Y ?? S.intl.string(S.t.FDSSia), onClick: ta };
-        return (0, i.jsx)(E.k, {
+        return (0, i.jsx)(_.k, {
             title: Q,
             subtitle: H,
             actions: !0 === K ? [{ ...e, variant: "secondary" }, t] : [{ ...t, variant: "secondary" }, e],
@@ -111,7 +111,7 @@ function I(t) {
         });
     }
     return I?.nsfwAllowed === !1 && (q || X) && !B && !j
-        ? (0, i.jsx)(E.k, {
+        ? (0, i.jsx)(_.k, {
               title: S.intl.string(X ? S.t["H0SG/g"] : S.t.NEabBa),
               subtitle: S.intl.format(X ? S.t["6++3cX"] : S.t["2kHZes"], {
                   helpURL: R.A.getArticleURL(T.MVz.AGE_GATE),
@@ -148,7 +148,7 @@ function I(t) {
             })()),
             (0, i.jsx)("form", {
                 onSubmit: te,
-                children: (0, i.jsx)(c.Modal, {
+                children: (0, i.jsx)(E.a, {
                     title: e,
                     subtitle: n,
                     actions: [
@@ -168,7 +168,7 @@ function I(t) {
                     }),
                 }),
             }))
-          : (0, i.jsx)(c.Modal, {
+          : (0, i.jsx)(E.a, {
                 transitionState: a,
                 onClose: J,
                 title: S.intl.formatToPlainString(S.t.wumolR, { age: Z ?? "" }),

@@ -1,22 +1,22 @@
 e.d(i, { default: () => c });
-var l = e(477900),
-    n = e(582128),
-    s = e(189213),
-    a = e(468689),
+var n = e(477900),
+    s = e(582128),
+    a = e(189213),
+    l = e(468689),
     r = e(375708);
 let c = function (t) {
     let { name: i, guildId: e, onClose: c, ...o } = t,
-        u = n.useCallback(() => {
-            (c?.(), a.A.leaveGuild(e));
+        u = s.useCallback(() => {
+            (c?.(), l.A.leaveGuild(e));
         }, [e, c]),
-        d = n.useMemo(
+        d = s.useMemo(
             () => [
                 { variant: "secondary", text: r.intl.string(r.t.J2TBi3), onClick: u },
                 { text: r.intl.string(r.t.TyCVIq), onClick: c },
             ],
             [u, c],
         );
-    return (0, l.jsx)(s.Modal, {
+    return (0, n.jsx)(a.a, {
         title: r.intl.string(r.t.aCAiGl),
         subtitle: r.intl.format(r.t["4cJV9S"], { serverName: i }),
         actions: d,

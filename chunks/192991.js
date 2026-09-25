@@ -3,8 +3,8 @@ var l = i(477900),
     s = i(582128),
     n = i(284009),
     a = i.n(n),
-    r = i(189213),
-    u = i(17928),
+    r = i(17928),
+    u = i(189213),
     o = i(27192),
     d = i(683438),
     c = i(66834),
@@ -27,20 +27,20 @@ function m(e) {
             selectedPermissionCount: j,
             transitionState: v,
         } = e,
-        w = (0, u.bG)([p.A], () => p.A.getGuild(i), [i]);
+        w = (0, r.bG)([p.A], () => p.A.getGuild(i), [i]);
     a()(null != w, "");
     let [A, T] = s.useState(null),
-        { query: M, results: I, setQuery: q } = x(i),
+        { query: I, results: M, setQuery: q } = x(i),
         [N, O] = s.useState({}),
         S = s.useMemo(() => Object.keys(N).length, [N]),
         G = S + j >= g.iW,
         H = s.useMemo(
             () =>
-                I.filter((e) => {
+                M.filter((e) => {
                     let t = (0, h.Eu)(e.id, e.type);
                     return !E.includes(t);
                 }),
-            [E, I],
+            [E, M],
         ),
         R = s.useCallback(
             (e, t) => {
@@ -97,13 +97,13 @@ function m(e) {
         s.useEffect(() => {
             c.A.requestMembers(i, void 0, 200, !1);
         }, [i]),
-        (0, l.jsx)(r.Modal, {
+        (0, l.jsx)(u.a, {
             "aria-label": k.intl.string(k.t["N+InBa"]),
             transitionState: v,
             title: m,
             subtitle: G ? k.intl.string(k.t["XTwtW/"]) : void 0,
             onClose: y,
-            input: (0, l.jsx)(d.I, { query: M, placeholder: f, "aria-label": f, onChange: W, onClear: () => q("") }),
+            input: (0, l.jsx)(d.I, { query: I, placeholder: f, "aria-label": f, onChange: W, onClear: () => q("") }),
             actions: [
                 { text: k.intl.string(k.t["ETE/oC"]), onClick: y, variant: "secondary" },
                 { text: k.intl.string(k.t.OYkgVk), onClick: V, variant: "primary", disabled: 0 === S },

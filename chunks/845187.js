@@ -31,7 +31,7 @@ function h(e) {
         r.useEffect(() => {
             c.default.track(_.HAw.OPEN_MODAL, { type: A });
         }, []),
-        (0, i.jsx)(a.Modal, {
+        (0, i.jsx)(a.a, {
             size: "md",
             transitionState: n,
             onClose: m,

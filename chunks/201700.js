@@ -25,7 +25,7 @@ function p(t) {
             }
         }
     }
-    return (0, n.jsx)(l.Modal, {
+    return (0, n.jsx)(l.a, {
         transitionState: e,
         "aria-label": u.intl.string(u.t.eQ2bLp),
         onClose: i,

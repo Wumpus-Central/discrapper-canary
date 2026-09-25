@@ -4,9 +4,9 @@ s(582128);
 var i = s(503698),
     n = s.n(i),
     t = s(342952),
-    r = s(692617),
-    d = s(939249),
-    u = s(834730),
+    r = s(939249),
+    d = s(834730),
+    u = s(692617),
     c = s(548118),
     o = s(913453),
     h = s(837531),
@@ -25,7 +25,7 @@ function j(e) {
               className: n()(v.I0, s),
               children: [
                   N
-                      ? (0, a.jsxs)(d.D, {
+                      ? (0, a.jsxs)(r.D, {
                             className: v.uW,
                             onClick: () => i?.(x.RP.MUTUAL_FRIENDS),
                             children: [
@@ -40,7 +40,7 @@ function j(e) {
                                     disableUsernameTooltip: !0,
                                     "aria-hidden": !0,
                                 }),
-                                (0, a.jsx)(u.E, {
+                                (0, a.jsx)(d.E, {
                                     className: v.Qq,
                                     variant: k,
                                     color: "interactive-text-default",
@@ -51,12 +51,12 @@ function j(e) {
                       : null,
                   N && U ? (0, a.jsx)("div", { "aria-hidden": "true", className: v.jH }) : null,
                   U
-                      ? (0, a.jsxs)(d.D, {
+                      ? (0, a.jsxs)(r.D, {
                             className: v.uW,
                             onClick: () => i?.(x.RP.MUTUAL_GUILDS),
                             children: [
                                 !N &&
-                                    (0, a.jsx)(r.A, {
+                                    (0, a.jsx)(u.A, {
                                         maxGuilds: 3,
                                         guilds: A.map((e) => {
                                             let { guild: l } = e;
@@ -66,7 +66,7 @@ function j(e) {
                                         hideOverflowCount: !0,
                                         disableGuildNameTooltip: !0,
                                     }),
-                                (0, a.jsx)(u.E, {
+                                (0, a.jsx)(d.E, {
                                     className: v.Qq,
                                     variant: k,
                                     color: "interactive-text-default",

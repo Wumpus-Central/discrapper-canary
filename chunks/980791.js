@@ -4,8 +4,8 @@ var n = i(477900),
     s = i(284009),
     r = i.n(s),
     a = i(189213),
-    d = i(890497),
-    u = i(331322),
+    u = i(890497),
+    d = i(331322),
     o = i(834730),
     c = i(821609),
     p = i(272613),
@@ -74,7 +74,7 @@ var T = i(711014),
     k = i(242111);
 function y(e) {
     let { className: t, guildId: i, onChange: s, isGuildIncluded: a } = e,
-        { options: u } = (function (e) {
+        { options: d } = (function (e) {
             let { isGuildIncluded: t, selectedGuildId: i } = e,
                 n = (0, m.bG)([T.Ay], () => T.Ay.getFlattenedGuildIds()),
                 s = (0, m.bG)([h.A], () => h.A.getGuilds()),
@@ -103,17 +103,17 @@ function y(e) {
         })({ isGuildIncluded: a });
     return (0, n.jsx)("div", {
         className: t,
-        children: (0, n.jsx)(d.Z, {
+        children: (0, n.jsx)(u.Z, {
             onSelectionChange: s,
             value: i,
-            options: u,
+            options: d,
             placeholder: x.intl.string(x.t.etZ9tX),
             selectionMode: "single",
         }),
     });
 }
 function B(e) {
-    let { transitionState: t, onClose: i, feature: s, section: d, subsection: m } = e,
+    let { transitionState: t, onClose: i, feature: s, section: u, subsection: m } = e,
         {
             canCreateGuild: A,
             createGuildCta: b,
@@ -149,19 +149,19 @@ function B(e) {
                 null != h.A.getGuild(e) && (h.A.removeChangeListener(i), t());
             });
         }),
-            C.A.open(e, d, void 0, m),
+            C.A.open(e, u, void 0, m),
             i?.());
     }
-    return (0, n.jsx)(a.Modal, {
+    return (0, n.jsx)(a.a, {
         transitionState: t,
         onClose: () => Promise.resolve(i?.()),
         title: x,
         actions: [],
-        children: (0, n.jsxs)(u.B, {
+        children: (0, n.jsxs)(d.B, {
             direction: "vertical",
             gap: 32,
             children: [
-                (0, n.jsxs)(u.B, {
+                (0, n.jsxs)(d.B, {
                     direction: "vertical",
                     gap: 8,
                     children: [
@@ -179,7 +179,7 @@ function B(e) {
                                     onClick: function () {
                                         (r()(null != j, "Guild ID must not be null on click"),
                                             g.A.hasSeenCreatorOnboardingForGuild(j) || (0, G.G)(j),
-                                            C.A.open(j, d, void 0, m),
+                                            C.A.open(j, u, void 0, m),
                                             i?.());
                                     },
                                     disabled: null == j,
@@ -189,7 +189,7 @@ function B(e) {
                     ],
                 }),
                 A &&
-                    (0, n.jsxs)(u.B, {
+                    (0, n.jsxs)(d.B, {
                         direction: "vertical",
                         gap: 8,
                         align: "start",

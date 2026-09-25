@@ -1,6 +1,6 @@
 (n.d(i, { default: () => p }), n(321073));
-var l = n(477900),
-    a = n(582128),
+var a = n(477900),
+    l = n(582128),
     r = n(189213),
     s = n(939249),
     c = n(834730),
@@ -8,40 +8,40 @@ var l = n(477900),
     o = n(976860),
     C = n(513461),
     E = n(652215),
-    d = n(746080),
-    u = n(375708),
+    u = n(746080),
+    d = n(375708),
     k = n(695416);
 let p = function (t) {
     let { guildId: i, submittedGuildJoinRequestsCount: n, onClose: p, transitionState: h, onConfirm: g } = t,
-        x = a.useCallback(
+        x = l.useCallback(
             (t) => {
                 (p(), g(t));
             },
             [p, g],
         ),
-        V = a.useCallback(() => {
-            (p(), e.A.close(), (0, o.pX)(E.BVt.CHANNEL(i, d.VV.MEMBER_SAFETY)));
+        V = l.useCallback(() => {
+            (p(), e.A.close(), (0, o.pX)(E.BVt.CHANNEL(i, u.VV.MEMBER_SAFETY)));
         }, [i, p]),
         b = n > 200,
         m = [
-            { text: u.intl.string(u.t["ETE/oC"]), onClick: p, variant: "secondary" },
-            { text: u.intl.string(u.t.Gfg0rT), onClick: () => x(C.B5.REJECTED), variant: "critical-primary" },
+            { text: d.intl.string(d.t["ETE/oC"]), onClick: p, variant: "secondary" },
+            { text: d.intl.string(d.t.Gfg0rT), onClick: () => x(C.B5.REJECTED), variant: "critical-primary" },
         ];
     return (
-        b || m.push({ text: u.intl.string(u.t.VWqCvL), onClick: () => x(C.B5.APPROVED), variant: "primary" }),
-        (0, l.jsx)(r.Modal, {
-            title: u.intl.formatToPlainString(u.t.chV4Jb, { count: n }),
+        b || m.push({ text: d.intl.string(d.t.VWqCvL), onClick: () => x(C.B5.APPROVED), variant: "primary" }),
+        (0, a.jsx)(r.a, {
+            title: d.intl.formatToPlainString(d.t.chV4Jb, { count: n }),
             onClose: p,
-            subtitle: b ? u.intl.string(u.t.EPoNRs) : u.intl.string(u.t["8+nq/G"]),
+            subtitle: b ? d.intl.string(d.t.EPoNRs) : d.intl.string(d.t["8+nq/G"]),
             transitionState: h,
             actions: m,
-            children: (0, l.jsx)(s.D, {
+            children: (0, a.jsx)(s.D, {
                 className: k.K2,
                 onClick: V,
-                children: (0, l.jsx)(c.E, {
+                children: (0, a.jsx)(c.E, {
                     variant: "text-md/normal",
                     color: "text-link",
-                    children: u.intl.string(u.t.szESVF),
+                    children: d.intl.string(d.t.szESVF),
                 }),
             }),
         })

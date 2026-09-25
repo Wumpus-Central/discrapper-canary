@@ -45,7 +45,7 @@ function g(t) {
                 })),
             [],
         );
-    return (0, i.jsx)(l.Modal, {
+    return (0, i.jsx)(l.a, {
         transitionState: e,
         title: o.intl.string(o.t.uYPGsS),
         subtitle: o.intl.format(o.t.Hg8Ee7, { onClick: d }),

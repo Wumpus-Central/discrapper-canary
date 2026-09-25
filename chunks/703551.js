@@ -14,7 +14,7 @@ function d(t) {
         onSubmit: function (t) {
             (t.preventDefault(), (0, o.od)(d), n());
         },
-        children: (0, e.jsx)(s.Modal, {
+        children: (0, e.jsx)(s.a, {
             title: c.intl.string(c.t["ISN+NM"]),
             actions: [
                 { text: c.intl.string(c.t["ETE/oC"]), onClick: n, variant: "secondary" },

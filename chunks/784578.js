@@ -13,7 +13,7 @@ function p() {
 }
 function g(t) {
     let { underageMessage: e, transitionState: i } = t;
-    return (0, s.jsx)(r.Modal, {
+    return (0, s.jsx)(r.a, {
         transitionState: i,
         onClose: p,
         title: c.intl.string(c.t["NR/zrG"]),

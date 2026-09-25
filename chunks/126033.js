@@ -40,7 +40,7 @@ function j(t) {
         p = (0, c.A)(e),
         [v, g] = n.useState(new Set()),
         C = v.size > 0;
-    return (0, a.jsx)(s.Modal, {
+    return (0, a.jsx)(s.a, {
         transitionState: j,
         onClose: x,
         title: m.intl.string(m.t.xC6tUv),

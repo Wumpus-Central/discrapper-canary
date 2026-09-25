@@ -1,9 +1,9 @@
 e.d(n, { default: () => d });
 var s = e(477900),
     i = e(582128),
-    o = e(772707),
-    a = e(17928),
-    u = e(116833),
+    o = e(17928),
+    a = e(116833),
+    u = e(772707),
     r = e(396813),
     E = e(859703),
     T = e(738822),
@@ -23,7 +23,7 @@ function A(t) {
             sourceQuestContent: T.uF.QUEST_ACTIVITY_UNENROLLED_MODAL,
             withoutMarkdown: !0,
         }),
-        U = (0, a.bG)([E.A], () => E.A.isEnrolling(_.id)),
+        U = (0, o.bG)([E.A], () => E.A.isEnrolling(_.id)),
         p = i.useCallback(async () => {
             (await (0, r.Oy)(_.id, {
                 questContent: T.uF.QUEST_ACTIVITY_UNENROLLED_MODAL,
@@ -33,12 +33,12 @@ function A(t) {
                 e());
         }, [_.id, e]),
         I = i.useCallback(() => ((0, r.Zb)(_.id), e()), [_.id, e]);
-    return (0, s.jsx)(o.k, {
+    return (0, s.jsx)(u.k, {
         transitionState: n,
         onClose: I,
         graphic: {
             type: "dynamic",
-            component: u.DynamicGraphicComponent.QUEST_ACTIVITY_UNENROLLED,
+            component: a.DynamicGraphicComponent.QUEST_ACTIVITY_UNENROLLED,
             props: { quest: _ },
         },
         gradientColor: "blue",

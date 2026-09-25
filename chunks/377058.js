@@ -1,8 +1,8 @@
 n.d(t, { n: () => b, N: () => N });
 var l = n(477900),
     i = n(582128),
-    r = n(452027),
-    a = n(17928),
+    r = n(17928),
+    a = n(452027),
     s = n(637141),
     o = n(803694),
     u = n(176095),
@@ -109,7 +109,7 @@ function N(e) {
                     paymentSourceId: t,
                     setPaymentSourceId: n,
                     location: l,
-                    subscriptionPaymentSourceId: r,
+                    subscriptionPaymentSourceId: a,
                     pendingGiftCardWalletSelection: s,
                     setPendingGiftCardWalletSelection: c,
                 } = e,
@@ -140,20 +140,20 @@ function N(e) {
                     setPaymentSourceId: n,
                     location: l ?? "BaseStatefulPaymentSourceSelector",
                     isReady: C,
-                    subscriptionPaymentSourceId: r,
+                    subscriptionPaymentSourceId: a,
                 });
             !(function (e) {
                 let {
                         giftCardWallet: t,
                         isWalletBalanceLoaded: n,
                         walletCoversSubtotal: l,
-                        isGiftCardCreditsChecked: r,
+                        isGiftCardCreditsChecked: a,
                         subscriptionPaymentSourceId: s,
                         handleGiftCardCreditsToggle: o,
                         pendingGiftCardWalletSelection: c,
                         setPendingGiftCardWalletSelection: d,
                     } = e,
-                    m = (0, a.bG)([u.A], () => null != t && u.A.getIsFetching(t.id), [t]),
+                    m = (0, r.bG)([u.A], () => null != t && u.A.getIsFetching(t.id), [t]),
                     p = i.useRef(!1);
                 i.useEffect(() => {
                     if (!c) {
@@ -166,7 +166,7 @@ function N(e) {
                             return;
                         }
                         if (n) {
-                            if ((null != s && s !== t.id) || r) return void d(!1);
+                            if ((null != s && s !== t.id) || a) return void d(!1);
                             if (l) {
                                 (o(!0), d(!1));
                                 return;
@@ -174,13 +174,13 @@ function N(e) {
                             p.current && d(!1);
                         }
                     }
-                }, [c, t, m, n, l, r, s, o, d]);
+                }, [c, t, m, n, l, a, s, o, d]);
             })({
                 giftCardWallet: P,
                 isWalletBalanceLoaded: _,
                 walletCoversSubtotal: g,
                 isGiftCardCreditsChecked: v,
-                subscriptionPaymentSourceId: r,
+                subscriptionPaymentSourceId: a,
                 handleGiftCardCreditsToggle: x,
                 pendingGiftCardWalletSelection: s,
                 setPendingGiftCardWalletSelection: c,
@@ -189,7 +189,7 @@ function N(e) {
                     let e = f.find((e) => e.isDefault);
                     return null != e ? e.id : void 0;
                 }, [f]),
-                N = (0, a.bG)([d.A], () => d.A.hidePersonalInformation ?? !1);
+                N = (0, r.bG)([d.A], () => d.A.hidePersonalInformation ?? !1);
             return {
                 giftCardsEnabled: E,
                 giftCardCheckboxProps: I,
@@ -270,7 +270,7 @@ function N(e) {
         el = i.useMemo(() => (null != z ? z : (0, l.jsx)(s.Ay, { ...$, disabled: Z })), [z, Z, $]);
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, l.jsxs)(r.D, {
+            (0, l.jsxs)(a.D, {
                 label: c,
                 children: [X && ee, !et && el, !X && ee, !en && !et && void 0 !== Q && (0, l.jsx)(x.q, { ...Q })],
             }),

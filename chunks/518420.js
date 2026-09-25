@@ -12,7 +12,7 @@ let l = [],
                 let e = new URL(`${window.location.origin}/quests/${c}`);
                 return (e.searchParams.append("referrer_id", "quest_home_qr_code"), e.toString());
             }, [c]);
-        return (0, s.jsx)(n.Modal, {
+        return (0, s.jsx)(n.a, {
             actions: l,
             onClose: i,
             size: "md",

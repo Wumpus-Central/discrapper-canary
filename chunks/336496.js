@@ -5,9 +5,9 @@ var e = l(477900),
     s = l(331322),
     r = l(167417),
     d = l(103557),
-    o = l(95561),
-    u = l(615550),
-    c = l(652215),
+    u = l(95561),
+    c = l(615550),
+    o = l(652215),
     _ = l(375708),
     g = l(909408);
 function h(t) {
@@ -15,19 +15,19 @@ function h(t) {
         [b, p] = i.useState([]),
         [C, E] = i.useState(),
         S = [
-            { label: _.intl.string(_.t["//3pvi"]), value: u.n7.DM_SPAM },
-            { label: _.intl.string(_.t.SdVsip), value: u.n7.MENTION_SPAM },
-            { label: _.intl.string(_.t.uTiSVL), value: u.n7.CHANNEL_SPAM },
-            { label: _.intl.string(_.t.GQczU8), value: u.n7.SUS_NEW_MEMBERS },
-            { label: _.intl.string(_.t.AAgqy3), value: u.n7.CHANGING_SETTINGS },
-            { label: _.intl.string(_.t.ryPKb7), value: u.n7.OTHER },
+            { label: _.intl.string(_.t["//3pvi"]), value: c.n7.DM_SPAM },
+            { label: _.intl.string(_.t.SdVsip), value: c.n7.MENTION_SPAM },
+            { label: _.intl.string(_.t.uTiSVL), value: c.n7.CHANNEL_SPAM },
+            { label: _.intl.string(_.t.GQczU8), value: c.n7.SUS_NEW_MEMBERS },
+            { label: _.intl.string(_.t.AAgqy3), value: c.n7.CHANGING_SETTINGS },
+            { label: _.intl.string(_.t.ryPKb7), value: c.n7.OTHER },
         ],
         A = i.useCallback((t) => {
             p(t);
         }, []);
     return null == n
         ? (h(), null)
-        : (0, e.jsx)(a.Modal, {
+        : (0, e.jsx)(a.a, {
               transitionState: l,
               title: _.intl.string(_.t.f5hd9P),
               actions: [
@@ -35,7 +35,7 @@ function h(t) {
                   {
                       text: _.intl.string(_.t.nAt0rE),
                       onClick: function () {
-                          ((0, o.zV)(c.HAw.GUILD_RAID_LOCKDOWN_FEEDBACK, {
+                          ((0, u.zV)(o.HAw.GUILD_RAID_LOCKDOWN_FEEDBACK, {
                               raid_lockdown_feedback_type: b,
                               raid_lockdown_feedback_other_reason: C,
                               guild_id: n,
@@ -50,7 +50,7 @@ function h(t) {
                   gap: 8,
                   children: [
                       (0, e.jsx)(r.$, { selectedValues: b, onChange: A, options: S }),
-                      b.includes(u.n7.OTHER) &&
+                      b.includes(c.n7.OTHER) &&
                           (0, e.jsx)("div", {
                               className: g.Q8,
                               children: (0, e.jsx)(d.f, {

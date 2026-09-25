@@ -19,7 +19,7 @@ function d(e) {
         }),
         [k, h] = l.useState(!1),
         g = Object.values(d).some((e) => e.checked);
-    return (0, i.jsx)(s.Modal, {
+    return (0, i.jsx)(s.a, {
         title: o.intl.string(o.t.jxXMEz),
         subtitle: o.intl.format(o.t.fSv59b, { helpdeskArticle: a.A.getArticleURL(r.MVz.GDPR_PACKAGE_CONTENTS) }),
         transitionState: t.transitionState,

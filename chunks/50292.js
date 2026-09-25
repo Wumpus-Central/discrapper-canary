@@ -1,9 +1,9 @@
 n.d(i, { default: () => g });
 var r = n(477900),
     e = n(582128),
-    l = n(122720),
-    o = n(17928),
-    s = n(772707),
+    l = n(17928),
+    o = n(772707),
+    s = n(122720),
     a = n(403581),
     p = n(775602),
     u = n(793574),
@@ -20,7 +20,7 @@ var r = n(477900),
 function g(t) {
     let { onClose: i, multiplier: n, orbMultiplierEligibility: g, customSubtitle: E, ...T } = t,
         { analyticsLocations: f } = (0, c.Ay)(u.A.QUEST_ORB_MULTIPLIER_INFO_MODAL),
-        L = (0, o.bG)([p.Ay], () => p.Ay.useReducedMotion),
+        L = (0, l.bG)([p.Ay], () => p.Ay.useReducedMotion),
         U = (0, b.B9)(g),
         v = g === b.MA.XBOX_GAME_PASS,
         I = g === b.MA.NITRO || g === b.MA.UPSELL,
@@ -36,13 +36,13 @@ function g(t) {
                         : C.intl.format(C.t["G5k+lZ"], { bonusOrbMultiplier: n }),
             [v, U, n, E],
         );
-    return (0, r.jsx)(s.k, {
+    return (0, r.jsx)(o.k, {
         ...T,
         onClose: i,
         gradientColor: I ? "nitro-pink" : "blue",
         title: y,
         subtitle: B,
-        graphic: { type: "rive", rive: l.E, props: { artboard: "Torbs_Multiply", dataBinding: { reducedMotion: L } } },
+        graphic: { type: "rive", rive: s.E, props: { artboard: "Torbs_Multiply", dataBinding: { reducedMotion: L } } },
         actions: U
             ? [
                   { text: C.intl.string(C.t.cpT0Cq), variant: "secondary", onClick: i },

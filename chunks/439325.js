@@ -201,8 +201,8 @@ function ex(e) {
           });
 }
 var eh = t(821707),
-    eb = t(320448),
-    ep = t(403581),
+    eb = t(403581),
+    ep = t(320448),
     ej = t(75678),
     e_ = t(910200),
     eN = t(202541),
@@ -221,15 +221,15 @@ function eC(e) {
                 className: ef.L,
                 onClick: c,
                 children: (0, s.jsx)(e_.Ay, {
-                    Icon: ep.t,
+                    Icon: eb.t,
                     gradientColor: "nitro-pink",
                     tooltip: W.intl.string(eg.default.XwadDC),
                     text: W.intl.string(eg.default.cg95CA),
-                    trailing: (0, s.jsx)(eb._, { size: "xs" }),
+                    trailing: (0, s.jsx)(ep._, { size: "xs" }),
                 }),
             })
           : (0, s.jsx)(e_.O0, {
-                Icon: ep.t,
+                Icon: eb.t,
                 text: W.intl.string(eg.default.cg95CA),
                 endDatetime: o?.promotionEndDatetime,
                 gradientColor: "nitro-pink",

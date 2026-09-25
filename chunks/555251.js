@@ -22,7 +22,7 @@ function u(t) {
             }
             h();
         }, [x, h]);
-    return (0, e.jsx)(n.Modal, {
+    return (0, e.jsx)(n.a, {
         size: "sm",
         title: o.intl.string(o.t.rfaLTH),
         subtitle: o.intl.string(o.t.EKmxKc),

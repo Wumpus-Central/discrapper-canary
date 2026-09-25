@@ -6,7 +6,7 @@ var r = n(189213),
     l = n(375708);
 function e(t) {
     let { onClose: i, onConfirmDelete: n, transitionState: e } = t;
-    return (0, a.jsx)(r.Modal, {
+    return (0, a.jsx)(r.a, {
         transitionState: e,
         "aria-label": l.intl.string(l.t["u/2TkU"]),
         onClose: i,

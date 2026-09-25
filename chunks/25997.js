@@ -1,23 +1,23 @@
-n.d(i, { default: () => c });
+n.d(i, { default: () => l });
 var a = n(477900);
 n(582128);
 var r = n(189213),
     s = n(730852),
     e = n(849736),
-    l = n(375708);
-let c = function (t) {
-    let { channel: i, transitionState: n, onClose: c } = t;
-    return (0, a.jsx)(r.Modal, {
+    c = n(375708);
+let l = function (t) {
+    let { channel: i, transitionState: n, onClose: l } = t;
+    return (0, a.jsx)(r.a, {
         transitionState: n,
-        title: l.intl.string(l.t.xrYNBI),
-        subtitle: l.intl.string(l.t.TP1D8l),
-        onClose: c,
+        title: c.intl.string(c.t.xrYNBI),
+        subtitle: c.intl.string(c.t.TP1D8l),
+        onClose: l,
         actions: [
-            { text: l.intl.string(l.t["ETE/oC"]), onClick: c, variant: "secondary" },
+            { text: c.intl.string(c.t["ETE/oC"]), onClick: l, variant: "secondary" },
             {
-                text: l.intl.string(l.t.saZaRb),
+                text: c.intl.string(c.t.saZaRb),
                 onClick: function () {
-                    ((0, e.OE)(i), s.default.disconnect(), c());
+                    ((0, e.OE)(i), s.default.disconnect(), l());
                 },
                 variant: "critical-primary",
             },

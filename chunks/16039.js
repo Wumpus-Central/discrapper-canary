@@ -32,7 +32,7 @@ function d(t) {
         S = (0, u.x)(n.type, n, i);
     if (null == S) return null;
     let { headerText: D } = S;
-    return (0, e.jsx)(o.Modal, {
+    return (0, e.jsx)(o.a, {
         onClose: p,
         transitionState: C,
         title: D,

@@ -3,8 +3,8 @@ var i = e(477900),
     r = e(582128),
     l = e(284009),
     a = e.n(l),
-    s = e(189213),
-    o = e(17928),
+    s = e(17928),
+    o = e(189213),
     u = e(403581),
     c = e(903209),
     d = e(287809),
@@ -35,7 +35,7 @@ function D() {
             planId: D,
             fullPrice: j,
         } = (0, h.X)(),
-        S = (0, o.bG)([d.default], () => {
+        S = (0, s.bG)([d.default], () => {
             let t = d.default.getCurrentUser();
             return (a()(null != t, "ProfileItem: currentUser cannot be undefined"), t);
         });
@@ -45,7 +45,7 @@ function D() {
     let T = (0, f.A)(),
         A = "US" === T.ipCountryCode && "CA" === T.ipSubdivisionCode;
     if (v)
-        return (0, i.jsx)(s.Modal, {
+        return (0, i.jsx)(o.a, {
             transitionState: t,
             title: "",
             actions: [],
@@ -72,7 +72,7 @@ function D() {
             onClick: () => l(g.g.CONFIRM),
             variant: "primary",
         }),
-        (0, i.jsx)(s.Modal, {
+        (0, i.jsx)(o.a, {
             transitionState: t,
             title: b,
             subtitle: M,

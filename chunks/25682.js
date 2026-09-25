@@ -1027,8 +1027,8 @@ var ts = l(922016),
     th = l(548118),
     tx = l(71393),
     tf = l(341923),
-    tg = l(441349),
-    tp = l(305866),
+    tg = l(305866),
+    tp = l(441349),
     tj = l(789645),
     tv = l(620409),
     ty = l(569737);
@@ -1181,7 +1181,7 @@ function tL(e) {
             },
             [t],
         );
-    return (0, n.jsx)(tp.l, {
+    return (0, n.jsx)(tg.l, {
         "aria-label": er.intl.string(es.default.upqksT),
         onBlur: L,
         children: (0, n.jsxs)("div", {
@@ -1259,7 +1259,7 @@ function tL(e) {
                                         (0, n.jsxs)("div", {
                                             className: tE.h0,
                                             children: [
-                                                (0, n.jsx)(tg.l, {
+                                                (0, n.jsx)(tp.l, {
                                                     label: er.intl.string(es.default["96vZuU"]),
                                                     hideLabel: !0,
                                                     value: c,
@@ -1294,7 +1294,7 @@ function tL(e) {
                                         (0, n.jsxs)("div", {
                                             className: tE.h0,
                                             children: [
-                                                (0, n.jsx)(tg.l, {
+                                                (0, n.jsx)(tp.l, {
                                                     label: er.intl.string(es.default["GL51/b"]),
                                                     hideLabel: !0,
                                                     value: u,

@@ -3,8 +3,8 @@ var t = a(477900);
 a(582128);
 var i = a(562708),
     l = a(661531),
-    n = a(192308),
-    r = a(821609),
+    n = a(821609),
+    r = a(192308),
     d = a(43990),
     c = a(834730),
     o = a(820081),
@@ -23,7 +23,7 @@ var i = a(562708),
     C = a(836800);
 let E = [f.default.HZz88k, f.default.Aau2G1, f.default["6Udfv9"]];
 function A() {
-    (0, n.openModalLazy)(async () => {
+    (0, r.openModalLazy)(async () => {
         let { default: e } = await Promise.all([
             a.e("417867"),
             a.e("43578"),
@@ -40,11 +40,11 @@ function A() {
 function R(e) {
     let s,
         a,
-        { partner: n } = e,
+        { partner: r } = e,
         R =
             ((s = (0, p.L)(T.PremiumTypes.TIER_2)),
             (a = (0, v.G)({ location: "useShouldShowXboxGamePassPerksConnectionBanner" })),
-            n === j.fg2.XBOX && !1 === s && a),
+            r === j.fg2.XBOX && !1 === s && a),
         k = (0, x.A)("(max-width: 485px)"),
         { analyticsLocations: y } = (0, N.Ay)(m.A.XBOX_PERKS_CONNECTION_FOOTER);
     return ((0, u.A)(
@@ -115,7 +115,7 @@ function R(e) {
                                               children: [
                                                   (0, t.jsx)("div", {
                                                       className: C.AJ,
-                                                      children: (0, t.jsx)(r.$, {
+                                                      children: (0, t.jsx)(n.$, {
                                                           variant: "secondary",
                                                           size: "sm",
                                                           text: O.intl.string(O.t.hvVgAZ),

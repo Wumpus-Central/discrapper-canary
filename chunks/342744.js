@@ -3,8 +3,8 @@ var i = n(477900),
     s = n(582128),
     l = n(284009),
     r = n.n(l),
-    a = n(189213),
-    o = n(17928),
+    a = n(17928),
+    o = n(189213),
     u = n(683071),
     d = n(289873),
     c = n(820739),
@@ -66,7 +66,7 @@ function v(e) {
     s.useEffect(() => {
         x.A.hasFetchedSubscriptions() || (0, h.hP)();
     }, []);
-    let d = (0, o.bG)([x.A], () => x.A.getPremiumTypeSubscription()),
+    let d = (0, a.bG)([x.A], () => x.A.getPremiumTypeSubscription()),
         [c, T] = s.useState(1),
         [_, C] = s.useState(!1),
         [b, v] = s.useState(null),
@@ -89,7 +89,7 @@ function v(e) {
         }, [d, t, u]);
     return (0, i.jsx)(E.f5, {
         value: u,
-        children: (0, i.jsx)(a.Modal, {
+        children: (0, i.jsx)(o.a, {
             transitionState: n,
             onClose: async () => await l(),
             size: "sm",

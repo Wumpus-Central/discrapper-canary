@@ -3,10 +3,10 @@ var i = n(477900),
     r = n(582128),
     a = n(361158),
     s = n(80556),
-    l = n(632679),
+    l = n(17928),
     o = n(331322),
-    d = n(834730),
-    c = n(17928),
+    d = n(632679),
+    c = n(834730),
     u = n(28863),
     _ = n(830215),
     E = n(976860),
@@ -19,8 +19,8 @@ var i = n(477900),
     m = n(785613);
 function g(e) {
     let { onClose: t } = e,
-        n = (0, c.bG)([A.default, I.A], f.$),
-        a = (0, c.bG)([A.default], () => {
+        n = (0, l.bG)([A.default, I.A], f.$),
+        a = (0, l.bG)([A.default], () => {
             let e = A.default.getCurrentUser()?.restrictedSchedule?.getNextEndTime();
             return null == e
                 ? null
@@ -30,7 +30,7 @@ function g(e) {
                       weekday: "long",
                   }).format(e);
         }),
-        s = (0, c.bG)([A.default], () => A.default.getCurrentUser()?.username ?? ""),
+        s = (0, l.bG)([A.default], () => A.default.getCurrentUser()?.username ?? ""),
         g = r.useRef(!1),
         S = r.useCallback(() => {
             ((g.current = !0), (0, E.pX)(p.BVt.DEFAULT_LOGGED_OUT), _.A.logout("restricted_hours"));
@@ -50,12 +50,12 @@ function g(e) {
                 gap: 16,
                 className: `${m.kL} ${m.vx}`,
                 children: [
-                    (0, i.jsx)(l.w, {
+                    (0, i.jsx)(d.w, {
                         artboard: "Teen Screen Time Illo",
                         stateMachine: "State Machine 1",
                         className: m.jw,
                     }),
-                    (0, i.jsx)(d.E, {
+                    (0, i.jsx)(c.E, {
                         variant: "text-lg/medium",
                         color: "text-overlay-light",
                         className: m.h_,
@@ -65,7 +65,7 @@ function g(e) {
             }),
             (0, i.jsx)("div", {
                 className: `${m.qr} ${m.vx}`,
-                children: (0, i.jsx)(d.E, {
+                children: (0, i.jsx)(c.E, {
                     variant: "text-sm/medium",
                     color: "text-subtle",
                     children: h.intl.format(T.default.iqeKDz, {

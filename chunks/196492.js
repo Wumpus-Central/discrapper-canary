@@ -28,7 +28,7 @@ class A extends d.A {
         o
             ? (0, s.openModal)(
                   (e) =>
-                      (0, i.jsx)(r.Modal, {
+                      (0, i.jsx)(r.a, {
                           title: u.intl.formatToPlainString(u.t["2tN7ih"], { name: t.name }),
                           actions: [
                               {

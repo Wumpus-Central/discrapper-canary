@@ -1,13 +1,13 @@
 r.d(e, { default: () => f });
 var n = r(477900),
     s = r(582128),
-    i = r(189213),
-    a = r(17928),
+    i = r(17928),
+    a = r(189213),
     l = r(231723),
     o = r(331322),
     u = r(95477),
-    d = r(631670),
-    p = r(836602),
+    p = r(631670),
+    d = r(836602),
     c = r(774914),
     g = r(652215),
     w = r(375708);
@@ -18,13 +18,13 @@ function f(t) {
         [k, v] = s.useState(""),
         [x, E] = s.useState(null),
         [j, y] = s.useState(null),
-        { formState: R, errors: q } = (0, a.cf)([p.A], () => ({
-            formState: p.A.getFormState(),
-            errors: p.A.getErrors(),
+        { formState: R, errors: q } = (0, i.cf)([d.A], () => ({
+            formState: d.A.getFormState(),
+            errors: d.A.getErrors(),
         })),
-        M = s.useRef(null);
-    async function T(t) {
-        (t.preventDefault(), (0, d.x8)());
+        T = s.useRef(null);
+    async function _(t) {
+        (t.preventDefault(), (0, p.x8)());
         let e = !1;
         if (
             ("" === m ? (E(w.intl.string(w.t["/7/oPU"])), (e = !0)) : E(null),
@@ -32,16 +32,16 @@ function f(t) {
             e)
         )
             return;
-        let n = await (0, d._L)({ password: h, newPassword: m });
+        let n = await (0, p._L)({ password: h, newPassword: m });
         n?.ok ? r() : n?.body?.username != null && (0, c.E)();
     }
     return (
         s.useEffect(() => {
-            e === l.ip.ENTERED && M.current?.focus();
+            e === l.ip.ENTERED && T.current?.focus();
         }, [e]),
         (0, n.jsx)("form", {
-            onSubmit: T,
-            children: (0, n.jsx)(i.Modal, {
+            onSubmit: _,
+            children: (0, n.jsx)(a.a, {
                 transitionState: e,
                 onClose: f,
                 title: w.intl.string(w.t.geta79),
@@ -64,7 +64,7 @@ function f(t) {
                             type: "password",
                             value: h,
                             onChange: b,
-                            inputRef: M,
+                            inputRef: T,
                             autoComplete: "current-password",
                             required: !0,
                         }),

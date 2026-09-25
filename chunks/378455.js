@@ -201,7 +201,7 @@ function G(e) {
         children: (0, i.jsx)(r.PR, {
             children: (e) => {
                 let { ref: l, ...a } = e;
-                return (0, i.jsx)(s.Modal, {
+                return (0, i.jsx)(s.a, {
                     transitionState: t,
                     onClose: n,
                     title: N.intl.string(z.default.FrCK4r),

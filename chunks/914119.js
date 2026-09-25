@@ -1,12 +1,12 @@
-t.d(n, { default: () => M });
+t.d(n, { default: () => X });
 var i = t(477900),
     a = t(582128),
-    l = t(189213),
-    s = t(939249),
-    r = t(658675),
-    c = t(17928),
-    o = t(998445),
-    u = t(834730),
+    l = t(17928),
+    s = t(189213),
+    r = t(998445),
+    c = t(834730),
+    o = t(939249),
+    u = t(658675),
     d = t(857071),
     h = t(931991),
     A = t(571909),
@@ -90,17 +90,17 @@ var O = t(691012),
     U = t(779519),
     D = t(375708),
     V = t(247150);
-function M(e) {
+function X(e) {
     let { transitionState: n, event: t, onSuccess: f, onClose: p } = e,
         { guild_id: _, privacy_level: C } = t,
-        m = (0, c.bG)([g.A], () => g.A.getChannel(t.channel_id), [t]),
-        w = (0, c.bG)([E.A], () => E.A.getGuild(_), [_]),
+        m = (0, l.bG)([g.A], () => g.A.getChannel(t.channel_id), [t]),
+        w = (0, l.bG)([E.A], () => E.A.getGuild(_), [_]),
         { canManageGuildEvent: N } = (0, h.nr)(m ?? w),
         P = N(t),
-        S = (0, c.bG)([d.A], () => d.A.isLurking(_), [_]),
+        S = (0, l.bG)([d.A], () => d.A.isLurking(_), [_]),
         x = t.entity_type === I.Ps.STAGE_INSTANCE,
         [k, b] = a.useState(x),
-        [M, { loading: X, error: B }] = (function () {
+        [X, { loading: B, error: H }] = (function () {
             let [e, n] = a.useState(!1),
                 [t, i] = a.useState(null);
             return [
@@ -132,19 +132,19 @@ function M(e) {
             ];
         })();
     if (!P) return null;
-    let H = C === I.dD.PUBLIC ? D.intl.string(D.t.HhlaLP) : D.intl.string(D.t.GI3xXd);
+    let M = C === I.dD.PUBLIC ? D.intl.string(D.t.HhlaLP) : D.intl.string(D.t.GI3xXd);
     function q() {
         (f?.(), p(), (0, A.ek)(!1));
     }
     async function J() {
-        await M(t, k, { onSuccess: q });
+        await X(t, k, { onSuccess: q });
     }
-    return (0, i.jsxs)(l.Modal, {
+    return (0, i.jsxs)(s.a, {
         transitionState: n,
         onClose: p,
         title: t.name,
         subtitle: D.intl.format(D.t.UMajol, {
-            privacyLevel: H,
+            privacyLevel: M,
             privacyLevelHook: function (e, n) {
                 return C !== I.dD.PUBLIC
                     ? null
@@ -153,8 +153,8 @@ function M(e) {
                           {
                               className: V.ro,
                               children: [
-                                  (0, i.jsx)(o.GlobeEarthIcon, { size: "xs", color: "currentColor", className: V.HJ }),
-                                  (0, i.jsx)(u.E, { variant: "text-md/normal", children: e }),
+                                  (0, i.jsx)(r.GlobeEarthIcon, { size: "xs", color: "currentColor", className: V.HJ }),
+                                  (0, i.jsx)(c.E, { variant: "text-md/normal", children: e }),
                               ],
                           },
                           n,
@@ -162,12 +162,12 @@ function M(e) {
             },
         }),
         actionBarInput: x
-            ? (0, i.jsxs)(s.D, {
+            ? (0, i.jsxs)(o.D, {
                   onClick: () => b(!k),
                   className: V.Qy,
                   children: [
-                      (0, i.jsx)(r.P, { checked: k }),
-                      (0, i.jsx)(u.E, {
+                      (0, i.jsx)(u.P, { checked: k }),
+                      (0, i.jsx)(c.E, {
                           color: "text-default",
                           variant: "text-sm/normal",
                           children: D.intl.string(D.t["Pe+Pwp"]),
@@ -175,7 +175,7 @@ function M(e) {
                   ],
               })
             : void 0,
-        actions: [{ variant: "active", text: D.intl.string(D.t.cK1GGY), onClick: J, loading: X }],
+        actions: [{ variant: "active", text: D.intl.string(D.t.cK1GGY), onClick: J, loading: B }],
         children: [
             (0, i.jsx)(U.A, {
                 guild: w,
@@ -192,12 +192,12 @@ function M(e) {
                 hideAgeVerificationNotice: !0,
             }),
             I.Tn.has(t.entity_type) && (0, i.jsx)(v.A, { className: V.XI, channelId: t.channel_id }),
-            null != B && null != B.getAnyErrorMessage()
-                ? (0, i.jsx)(u.E, {
+            null != H && null != H.getAnyErrorMessage()
+                ? (0, i.jsx)(c.E, {
                       color: "text-feedback-critical",
                       variant: "text-sm/normal",
                       className: V.gJ,
-                      children: B.getAnyErrorMessage(),
+                      children: H.getAnyErrorMessage(),
                   })
                 : null,
         ],

@@ -15,7 +15,7 @@ function _(e) {
         r.useEffect(() => {
             d.Ay.updatedUnsyncedSettings({ disableEmbeddedActivityPopOutAlert: o });
         }, [o]),
-        (0, i.jsx)(a.Modal, {
+        (0, i.jsx)(a.a, {
             ...l,
             size: "md",
             title: u.intl.string(u.t.ye21jI),

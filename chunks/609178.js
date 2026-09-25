@@ -3,12 +3,12 @@ var l = n(477900),
     i = n(582128),
     s = n(503698),
     r = n.n(s),
-    a = n(508770),
-    o = n(935462),
-    u = n(462824),
-    c = n(315629),
-    d = n(305866),
-    h = n(353795),
+    a = n(935462),
+    o = n(462824),
+    u = n(315629),
+    c = n(305866),
+    d = n(353795),
+    h = n(508770),
     m = n(297264),
     f = n(834730),
     p = n(821609),
@@ -68,27 +68,27 @@ function D(e) {
     let q = H || W ? "nitro-pink" : "green";
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, l.jsx)(u.p, { onClick: V, isVisible: !0 }),
-            (0, l.jsx)(c.h, {
+            (0, l.jsx)(o.p, { onClick: V, isVisible: !0 }),
+            (0, l.jsx)(u.h, {
                 color: q,
                 className: L.kL,
-                children: (0, l.jsxs)(d.l, {
+                children: (0, l.jsxs)(c.l, {
                     "aria-label": n,
                     className: L.r3,
                     children: [
                         (0, l.jsxs)("div", {
                             className: L.Qs,
                             children: [
-                                (0, l.jsx)(o.s_, { "data-migration-pending": !0, onClick: V, className: L.b }),
+                                (0, l.jsx)(a.s_, { "data-migration-pending": !0, onClick: V, className: L.b }),
                                 (0, l.jsxs)("div", {
                                     className: L.hQ,
                                     children: [
                                         (0, l.jsx)("div", {
                                             className: k.headerGraphic,
                                             children:
-                                                B ?? (0, l.jsx)(h.v, { type: "video", src: t, loop: !0, loopAt: 5 }),
+                                                B ?? (0, l.jsx)(d.v, { type: "video", src: t, loop: !0, loopAt: 5 }),
                                         }),
-                                        null != Z && (0, l.jsx)(a.E, { type: { text: Z }, variant: "brand" }),
+                                        null != Z && (0, l.jsx)(h.E, { type: { text: Z }, variant: "brand" }),
                                         (0, l.jsx)(m.D, {
                                             className: r()(L.DD, { [L.GU]: null != Z }),
                                             variant: "heading-xl/bold",

@@ -5,7 +5,7 @@ var r = i(189213),
     s = i(834730);
 let a = function (t) {
     let { entry: e, transitionState: i, requestId: a, onClose: d } = t;
-    return (0, n.jsx)(r.Modal, {
+    return (0, n.jsx)(r.a, {
         title: `Debugging entry: ${e.id}`,
         transitionState: i,
         actions: [],

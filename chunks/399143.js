@@ -1,8 +1,8 @@
 (n.d(e, { GuildSubscriptionSelectionModal: () => h }), n(667532), n(321073));
 var i = n(477900),
     l = n(582128),
-    r = n(189213),
-    a = n(444550),
+    r = n(444550),
+    a = n(189213),
     s = n(289873),
     u = n(834730),
     d = n(512950),
@@ -35,7 +35,7 @@ function h(t) {
         }
         return t;
     }, [b, y, j]);
-    return (0, i.jsx)(r.Modal, {
+    return (0, i.jsx)(a.a, {
         title: x.intl.string(x.t["xgtI/K"]),
         subtitle: x.intl.string(x.t.rAXXxN),
         transitionState: e,
@@ -54,7 +54,7 @@ function h(t) {
         children: I
             ? (0, i.jsx)(s.y, { type: s.y.Type.PULSING_ELLIPSIS, className: g.u })
             : S.length > 0
-              ? (0, i.jsx)(a.p, {
+              ? (0, i.jsx)(r.p, {
                     "aria-label": x.intl.string(x.t["5qyruI"]),
                     options: S,
                     value: f,

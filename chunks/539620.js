@@ -6,8 +6,8 @@ var a = l(477900),
     r = l(821609),
     d = l(95477),
     c = l(957565),
-    o = l(277977),
-    u = l(50617),
+    u = l(277977),
+    o = l(50617),
     m = l(375708),
     x = l(652140);
 function h(e) {
@@ -30,8 +30,8 @@ function h(e) {
                 if ((e.preventDefault(), N && !b)) {
                     (g(!0), C(!1));
                     try {
-                        (await (0, o.$S)(t, { secrets: Object.fromEntries(w.map((e) => [e, f[e].trim()])) }),
-                            (0, o.dv)(t, m.intl.string(_ ? u.default.pu8e3p : u.default.lM98yZ)),
+                        (await (0, u.$S)(t, { secrets: Object.fromEntries(w.map((e) => [e, f[e].trim()])) }),
+                            (0, u.dv)(t, m.intl.string(_ ? o.default.pu8e3p : o.default.lM98yZ)),
                             await p());
                     } catch {
                         C(!0);
@@ -44,15 +44,15 @@ function h(e) {
         );
     return (0, a.jsx)("form", {
         onSubmit: A,
-        children: (0, a.jsx)(s.Modal, {
+        children: (0, a.jsx)(s.a, {
             transitionState: h,
             onClose: p,
-            title: m.intl.string(u.default.ACvhVC),
+            title: m.intl.string(o.default.ACvhVC),
             size: "md",
             actions: [
                 { text: m.intl.string(m.t["ETE/oC"]), variant: "secondary", onClick: p, disabled: b },
                 {
-                    text: m.intl.string(u.default["8SWZaW"]),
+                    text: m.intl.string(o.default["8SWZaW"]),
                     variant: "primary",
                     type: "submit",
                     loading: b,
@@ -74,14 +74,14 @@ function h(e) {
                         variant: "text-xs/normal",
                         color: "text-muted",
                         selectable: !0,
-                        children: m.intl.string(u.default.p0Ay4J),
+                        children: m.intl.string(o.default.p0Ay4J),
                     }),
                     l.fields.length > 1
                         ? (0, a.jsx)(i.E, {
                               variant: "text-xs/normal",
                               color: "text-muted",
                               selectable: !0,
-                              children: m.intl.string(u.default.LpnmXm),
+                              children: m.intl.string(o.default.LpnmXm),
                           })
                         : null,
                     (l.copy_values ?? []).length > 0
@@ -148,7 +148,7 @@ function h(e) {
                               variant: "text-xs/normal",
                               color: "text-feedback-critical",
                               role: "alert",
-                              children: m.intl.string(u.default["4nT7Lo"]),
+                              children: m.intl.string(o.default["4nT7Lo"]),
                           })
                         : null,
                 ],

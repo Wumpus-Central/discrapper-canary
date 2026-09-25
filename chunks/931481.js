@@ -9,8 +9,8 @@ var n = s(477900),
     d = s(429913),
     m = s(769015),
     x = s(390848),
-    u = s(39623),
-    E = s(17928),
+    u = s(17928),
+    E = s(39623),
     h = s(994500),
     j = s(420825),
     p = s(22212),
@@ -19,7 +19,7 @@ var n = s(477900),
 function v(t) {
     let { userId: e, analyticsLocation: s } = t,
         i = (0, j.q)(),
-        l = (0, E.bG)([h.A], () => h.A.getNote(e)),
+        l = (0, u.bG)([h.A], () => h.A.getNote(e)),
         [c, d] = a.useState(!1),
         m = a.useCallback(() => {
             (d(!0), (0, p.Yq)({ analyticsLocation: s, noteLength: l?.length ?? 0 }));
@@ -34,7 +34,7 @@ function v(t) {
                       : (0, n.jsx)("div", {
                             className: A.p6,
                             children: (0, n.jsx)(o.$, {
-                                icon: u.EyeIcon,
+                                icon: E.EyeIcon,
                                 variant: "secondary",
                                 size: "sm",
                                 onClick: m,

@@ -23,7 +23,7 @@ let m = function (t) {
             [m, a.id, u],
         ),
         k = (0, c.Ay)(a, !0);
-    return (0, n.jsx)(s.Modal, {
+    return (0, n.jsx)(s.a, {
         transitionState: p,
         "aria-label": x.intl.string(x.t.OJknhi),
         onClose: u,

@@ -4,11 +4,11 @@ var i = r(477900),
     s = r(503698),
     l = r.n(s),
     a = r(575593),
-    u = r(38021),
-    o = r(844222),
-    c = r(583094),
-    d = r(17928),
-    m = r(661531),
+    u = r(17928),
+    o = r(661531),
+    c = r(38021),
+    d = r(844222),
+    m = r(583094),
     h = r(775602),
     f = r(139136),
     x = r(665411),
@@ -91,13 +91,13 @@ function I(e) {
 }
 function S(e) {
     let { eventTargetRef: t, assetClassName: r, disableHover: s } = e,
-        a = (0, d.bG)([h.Ay], () => h.Ay.useReducedMotion),
-        { theme: f, saturation: x } = (0, u.wR)(),
-        { highContrastModeEnabled: p } = n.useContext(o.C),
-        [g, A, j, E] = m.A.colors.TEXT_DEFAULT.resolve({ theme: f, saturation: x, highContrastModeEnabled: p }).rgba();
+        a = (0, u.bG)([h.Ay], () => h.Ay.useReducedMotion),
+        { theme: f, saturation: x } = (0, c.wR)(),
+        { highContrastModeEnabled: p } = n.useContext(d.C),
+        [g, A, j, E] = o.A.colors.TEXT_DEFAULT.resolve({ theme: f, saturation: x, highContrastModeEnabled: p }).rgba();
     return (0, i.jsx)("div", {
         className: C.yv,
-        children: (0, i.jsx)(c.u, {
+        children: (0, i.jsx)(m.u, {
             className: l()(C.MO, r),
             dataBinding: { reducedMotion: s || a, logoColor: { r: g, g: A, b: j, a: E } },
             eventTargetRef: t,

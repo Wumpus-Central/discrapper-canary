@@ -933,7 +933,7 @@ let eK = [ec.Dmq.PAST_DUE, ec.Dmq.ACCOUNT_HOLD, ec.Dmq.BILLING_RETRY],
                 loading: o,
             },
         ];
-        return (0, i.jsx)(eV.Modal, {
+        return (0, i.jsx)(eV.a, {
             size: "md",
             transitionState: t,
             title: et.intl.string(et.t.LZunzZ),

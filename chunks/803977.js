@@ -1,8 +1,8 @@
 l.d(t, { default: () => eu });
 var s = l(477900),
     a = l(582128),
-    n = l(189213),
-    r = l(17928),
+    n = l(17928),
+    r = l(189213),
     i = l(691540),
     u = l(857250),
     c = l(97483),
@@ -34,8 +34,8 @@ var v = l(503698),
     w = l(276293),
     I = l(661531),
     G = l(475825),
-    M = l(966327),
-    H = l(928039),
+    H = l(966327),
+    M = l(928039),
     z = l(115718),
     F = l(47167),
     q = l(960850),
@@ -105,14 +105,14 @@ function et(e) {
 }
 function el(e) {
     let { user: t, subLabel: l, ...a } = e,
-        n = Y.Ay.useName(t),
+        r = Y.Ay.useName(t),
         i = Y.Ay.useUserTag(t, { decoration: "never" }),
-        u = (0, r.bG)([W.A], () => W.A.getNickname(t.id)),
-        c = (0, r.bG)([X.A], () => X.A.getStatus(t.id));
+        u = (0, n.bG)([W.A], () => W.A.getNickname(t.id)),
+        c = (0, n.bG)([X.A], () => X.A.getStatus(t.id));
     return (0, s.jsx)(et, {
         ...a,
-        icon: (0, s.jsx)(M.A, { "aria-hidden": !0, size: R._3.SIZE_32, user: t, status: c }),
-        label: u ?? n,
+        icon: (0, s.jsx)(H.A, { "aria-hidden": !0, size: R._3.SIZE_32, user: t, status: c }),
+        label: u ?? r,
         subLabel: l ?? i,
     });
 }
@@ -129,14 +129,14 @@ function es(e) {
 }
 function ea(e) {
     let { channel: t, subLabel: l, ...a } = e,
-        n = (0, r.bG)([B.A], () => B.A.getGuild(t?.guild_id)),
+        r = (0, n.bG)([B.A], () => B.A.getGuild(t?.guild_id)),
         i = (0, F.Ay)(t),
-        u = (0, r.bG)([p.A, A.default, W.A], () => {
+        u = (0, n.bG)([p.A, A.default, W.A], () => {
             let e = p.A.getChannel(t.parent_id);
             return null == e ? null : (0, F.m1)(e, A.default, W.A, !1);
         }),
-        c = (0, r.bG)([J.Ay], () => J.Ay.lastMessageTimestamp(t.id, K.P.CHANNEL)),
-        o = n?.name;
+        c = (0, n.bG)([J.Ay], () => J.Ay.lastMessageTimestamp(t.id, K.P.CHANNEL)),
+        o = r?.name;
     if (t.isThread() || t.isForumPost()) {
         let e = t.isForumPost() ? U.b : w.N;
         o = (0, s.jsxs)("div", {
@@ -166,7 +166,7 @@ function ea(e) {
     }
     return (0, s.jsx)(et, {
         ...a,
-        icon: (0, s.jsx)(Z.A, { size: Z.q.SMALL_32, guild: n, channel: t }),
+        icon: (0, s.jsx)(Z.A, { size: Z.q.SMALL_32, guild: r, channel: t }),
         label: i,
         subLabel: l ?? o,
     });
@@ -220,7 +220,7 @@ function en(e) {
             [r, n, t, d],
         ),
         m = a.useRef(null),
-        x = (0, H.A)("share-command-modal", m);
+        x = (0, M.A)("share-command-modal", m);
     return (0, s.jsx)(D.hD, {
         navigator: x,
         children: (0, s.jsx)(D.PR, {
@@ -255,14 +255,14 @@ function eu(e) {
             transitionState: D,
         } = e,
         [_] = (0, h.A)([t]),
-        T = (0, r.bG)([A.default], () => A.default.getCurrentUser()),
+        T = (0, n.bG)([A.default], () => A.default.getCurrentUser()),
         [R, U] = a.useState(!1),
         [w, I] = a.useState(""),
-        [G, M] = a.useState("");
+        [G, H] = a.useState("");
     a.useEffect(() => {
-        M((0, x.W)({ applicationId: t, referrerId: T?.id, customId: l, linkId: E }));
-    }, [t, T, l, E, M]);
-    let H = a.useRef(0),
+        H((0, x.W)({ applicationId: t, referrerId: T?.id, customId: l, linkId: E }));
+    }, [t, T, l, E, H]);
+    let M = a.useRef(0),
         [z, F] = a.useState([]),
         q = z.length,
         V = q >= 5;
@@ -287,9 +287,9 @@ function eu(e) {
                         let { type: l, id: s } = t;
                         return l === e.type && s === e.id;
                     });
-                    if (-1 === l) return V ? t : (I(""), (H.current += 1), [e, ...t]);
+                    if (-1 === l) return V ? t : (I(""), (M.current += 1), [e, ...t]);
                     let s = [...t];
-                    return (s.splice(l, 1), (H.current += 1), s);
+                    return (s.splice(l, 1), (M.current += 1), s);
                 });
             },
             [V],
@@ -349,7 +349,7 @@ ${n}`;
                           }),
                       ],
                   });
-    return (0, s.jsx)(n.Modal, {
+    return (0, s.jsx)(r.a, {
         transitionState: D,
         onClose: y,
         title: S.intl.string(S.t.r9qKow),

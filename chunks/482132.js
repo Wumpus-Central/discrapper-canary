@@ -4,8 +4,8 @@ var l = n(477900),
     r = n(503698),
     a = n.n(r),
     s = n(333007),
-    o = n(430993),
-    u = n(17928),
+    o = n(17928),
+    u = n(430993),
     c = n(430690),
     d = n(529427),
     m = n(883645),
@@ -25,7 +25,7 @@ function S(e) {
         })(e),
         { step: s, stepConfigs: S } = (0, m.Ay)(),
         { setBodyNode: y, setFooterNode: I, setModalOverlayNode: g } = (0, p.Gm)(),
-        A = (0, u.bG)([h.A], () => h.A.isDisplayingWowMomentConfirmation),
+        A = (0, o.bG)([h.A], () => h.A.isDisplayingWowMomentConfirmation),
         { setReadySlideId: P, unifiedCheckoutFlow: v } = (0, C.t4)((e) => ({
             setReadySlideId: e.setReadySlideId,
             unifiedCheckoutFlow: e.unifiedCheckoutFlow,
@@ -61,7 +61,7 @@ function S(e) {
                       children: [
                           T
                               ? null
-                              : (0, l.jsx)(o.c, {
+                              : (0, l.jsx)(u.c, {
                                     children: (0, l.jsx)(c.t, {
                                         shouldUseMediaQueriesForSizing: !0,
                                         activeSlide: s,

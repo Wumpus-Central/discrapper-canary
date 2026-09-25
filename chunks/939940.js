@@ -36,7 +36,7 @@ let p = function (t) {
             }
         }
     }
-    return (0, e.jsxs)(a.Modal, {
+    return (0, e.jsxs)(a.a, {
         title: f.intl.string(f.t.XlDE3k),
         subtitle: f.intl.string(f.t.lVqhdd),
         transitionState: p,

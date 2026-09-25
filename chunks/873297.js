@@ -3,14 +3,14 @@ var t = l(477900),
     n = l(582128),
     r = l(503698),
     a = l.n(r),
-    i = l(43990),
-    c = l(815021),
-    o = l(297264),
-    u = l(406810),
-    d = l(834730),
-    g = l(821609),
-    m = l(17928),
-    p = l(269115),
+    i = l(17928),
+    c = l(269115),
+    o = l(43990),
+    u = l(815021),
+    d = l(297264),
+    g = l(406810),
+    m = l(834730),
+    p = l(821609),
     h = l(688810),
     x = l(449543),
     f = l(812095),
@@ -48,7 +48,7 @@ let O = function (e) {
     n.useEffect(() => {
         (0, _.ap)(O);
     }, [O]);
-    let z = (0, m.bG)(
+    let z = (0, i.bG)(
             [k.A],
             () => {
                 let e = k.A.getStorefrontMetadata(O);
@@ -62,37 +62,37 @@ let O = function (e) {
             n.useEffect(() => {
                 for (let l of e) (0, _.Pp)(s, l);
             }, [e, s]);
-            let t = (0, m.bG)(
+            let t = (0, i.bG)(
                     [N.A],
                     () => !e.some((e) => N.A.isFetching(e)) && e.filter((e) => null != N.A.get(e)).length < 4,
                     [e],
                 ),
                 r = A.default.getCurrentUser()?.id,
                 a = n.useMemo(() => (t ? [s] : []), [t, s]),
-                i = n.useMemo(() => (t && null != r ? [r] : []), [t, r]),
-                { recommendations: c, status: o } = (0, y.XQ)({
+                c = n.useMemo(() => (t && null != r ? [r] : []), [t, r]),
+                { recommendations: o, status: u } = (0, y.XQ)({
                     applicationIds: a,
-                    userIds: i,
+                    userIds: c,
                     numItems: 4,
                     source: I.B5.USER_PROFILE,
                 }),
-                u = (0, m.yK)(
+                d = (0, i.yK)(
                     [N.A],
                     () => {
                         if (e.some((e) => N.A.isFetching(e))) return l.current;
                         let s = e.filter((e) => null != N.A.get(e));
                         if (s.length >= 4) return s;
-                        if ("loading" === o) return l.current;
+                        if ("loading" === u) return l.current;
                         let t = new Set(e);
-                        return [...s, ...c.map((e) => e.id).filter((e) => !t.has(e))].slice(0, 4);
+                        return [...s, ...o.map((e) => e.id).filter((e) => !t.has(e))].slice(0, 4);
                     },
-                    [e, c, o],
+                    [e, o, u],
                 );
             return (
                 n.useEffect(() => {
-                    u.length > 0 && (l.current = u);
-                }, [u]),
-                u
+                    d.length > 0 && (l.current = d);
+                }, [d]),
+                d
             );
         })(l, O);
     (0, v.j)({ skuIds: G });
@@ -161,10 +161,10 @@ let O = function (e) {
     ),
     0 === G.length)
         ? null
-        : (0, t.jsx)(i.N, {
+        : (0, t.jsx)(o.N, {
               theme: R.NJ8.DARK,
               children: (e) =>
-                  (0, t.jsx)(p.L, {
+                  (0, t.jsx)(c.L, {
                       innerRef: $,
                       onChange: er,
                       threshold: 0,
@@ -178,7 +178,7 @@ let O = function (e) {
                                   null != s &&
                                       (0, t.jsx)("div", {
                                           className: M.b,
-                                          children: (0, t.jsx)(c.J, { size: "sm", variant: "icon-only", onClick: en }),
+                                          children: (0, t.jsx)(u.J, { size: "sm", variant: "icon-only", onClick: en }),
                                       }),
                                   null != Y && (0, t.jsx)("img", { className: M.wm, src: Y, alt: "" }),
                                   (0, t.jsx)("div", {
@@ -186,7 +186,7 @@ let O = function (e) {
                                       children: (0, t.jsxs)("div", {
                                           className: M.B5,
                                           children: [
-                                              (0, t.jsx)(o.D, {
+                                              (0, t.jsx)(d.D, {
                                                   className: M.R_,
                                                   variant: "heading-lg/normal",
                                                   color: "text-overlay-light",
@@ -199,11 +199,11 @@ let O = function (e) {
                                                           (0, t.jsxs)("div", {
                                                               className: M.f$,
                                                               children: [
-                                                                  (0, t.jsx)(u.ClockIcon, {
+                                                                  (0, t.jsx)(g.ClockIcon, {
                                                                       size: "xs",
                                                                       color: "currentColor",
                                                                   }),
-                                                                  (0, t.jsx)(d.E, {
+                                                                  (0, t.jsx)(m.E, {
                                                                       variant: "text-xs/medium",
                                                                       color: "none",
                                                                       children: K,
@@ -212,7 +212,7 @@ let O = function (e) {
                                                           }),
                                                       "custom" === D.kind
                                                           ? D.node
-                                                          : (0, t.jsx)(g.$, {
+                                                          : (0, t.jsx)(p.$, {
                                                                 variant: "overlay-primary",
                                                                 size: "sm",
                                                                 text: D.text,
@@ -248,7 +248,7 @@ let O = function (e) {
                                           O === w.FK &&
                                               (0, t.jsx)("div", {
                                                   className: M.Ok,
-                                                  children: (0, t.jsx)(d.E, {
+                                                  children: (0, t.jsx)(m.E, {
                                                       variant: "text-xs/medium",
                                                       color: "text-muted",
                                                       children: "\xa9 2026 MARVEL",

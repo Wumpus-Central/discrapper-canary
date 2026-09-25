@@ -4,11 +4,11 @@ var s = a(477900),
     n = a(503698),
     i = a.n(n),
     r = a(132500),
-    c = a(772707),
-    o = a(441574),
-    d = a(991049),
-    h = a(280645),
-    u = a(952146),
+    c = a(441574),
+    o = a(991049),
+    d = a(280645),
+    h = a(952146),
+    u = a(772707),
     m = a(331322),
     v = a(289873),
     g = a(512950),
@@ -146,7 +146,7 @@ let G = function (e) {
         },
         [Q, el],
     );
-    return (0, s.jsxs)(c.k, {
+    return (0, s.jsxs)(u.k, {
         transitionState: C,
         onClose: H,
         gradientColor: "blue",
@@ -195,12 +195,12 @@ let G = function (e) {
                         let t,
                             a = (function (e) {
                                 switch (e) {
-                                    case o.mG.FACIAL_AGE_ESTIMATION:
-                                        return d.t;
-                                    case o.mG.ID_SELFIE_MATCH:
-                                        return h.H;
-                                    case o.mG.GOOGLE_WALLET:
-                                        return u.A;
+                                    case c.mG.FACIAL_AGE_ESTIMATION:
+                                        return o.t;
+                                    case c.mG.ID_SELFIE_MATCH:
+                                        return d.H;
+                                    case c.mG.GOOGLE_WALLET:
+                                        return h.A;
                                     default:
                                         return;
                                 }

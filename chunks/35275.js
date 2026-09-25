@@ -1,19 +1,19 @@
 n.d(t, { A: () => a });
 var i = n(477900);
 n(582128);
-var l = n(27989),
-    s = n(661531),
+var l = n(661531),
+    s = n(27989),
     r = n(953727);
 function a(e) {
     let {
             size: t = "md",
             width: n,
             height: a,
-            color: o = s.A.colors.INTERACTIVE_TEXT_DEFAULT,
+            color: o = l.A.colors.INTERACTIVE_TEXT_DEFAULT,
             colorClass: c = "",
             ...u
         } = e,
-        d = (0, l.J)(t),
+        d = (0, s.J)(t),
         h = d?.width ?? n,
         m = d?.height ?? a;
     return (0, i.jsx)("svg", {

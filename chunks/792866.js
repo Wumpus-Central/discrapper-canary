@@ -4,7 +4,7 @@ a(582128);
 var e = a(189213);
 function r(t) {
     let { transitionState: i, header: a, body: r, confirmText: s, onClose: c, onConfirm: o, children: u } = t;
-    return (0, n.jsx)(e.Modal, {
+    return (0, n.jsx)(e.a, {
         title: a,
         subtitle: r,
         transitionState: i,

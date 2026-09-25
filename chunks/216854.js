@@ -1,6 +1,6 @@
 n.d(t, { default: () => h });
-var l = n(477900),
-    i = n(582128),
+var i = n(477900),
+    l = n(582128),
     d = n(189213),
     r = n(834730),
     a = n(422653),
@@ -15,21 +15,21 @@ function h(e) {
         E = (0, o.A)(n, t.id),
         x = (0, c.CI)(n, t),
         D = (0, c.Ri)(x, E),
-        [S, f] = i.useState(D),
+        [S, f] = l.useState(D),
         [m, { loading: v, error: C }] = (0, a.A)(() => {
-            let e = (function (e, t, n, l) {
-                let i = (0, c.CI)(t, e),
-                    d = (0, c.zD)(i.startDate, n.startDate) ? null : n.startDate,
-                    r = (0, c.zD)(i.endDate, n.endDate) ? null : n.endDate;
-                if (null != l)
-                    if ((0, c.sv)(n, i))
-                        return s.default.deleteGuildEventException(e.guild_id, e.id, l.event_exception_id);
+            let e = (function (e, t, n, i) {
+                let l = (0, c.CI)(t, e),
+                    d = (0, c.zD)(l.startDate, n.startDate) ? null : n.startDate,
+                    r = (0, c.zD)(l.endDate, n.endDate) ? null : n.endDate;
+                if (null != i)
+                    if ((0, c.sv)(n, l))
+                        return s.default.deleteGuildEventException(e.guild_id, e.id, i.event_exception_id);
                     else
                         return s.default.updateGuildEventException(
                             {
                                 scheduled_start_time: d?.toISOString() ?? null,
                                 scheduled_end_time: r?.toISOString() ?? null,
-                                is_canceled: l.is_canceled,
+                                is_canceled: i.is_canceled,
                             },
                             e.guild_id,
                             e.id,
@@ -51,7 +51,7 @@ function h(e) {
             })(t, n, S, E);
             return (null == C && p(), e);
         });
-    return (0, l.jsxs)(d.Modal, {
+    return (0, i.jsxs)(d.a, {
         transitionState: h,
         title: g.intl.string(g.t.wmVmXN),
         actions: [
@@ -60,7 +60,7 @@ function h(e) {
         ],
         onClose: p,
         children: [
-            (0, l.jsx)(_.A, {
+            (0, i.jsx)(_.A, {
                 onScheduleChange: function (e) {
                     let { startDate: t, endDate: n } = e;
                     (null != t && null != n && n.isBefore(t) && (n = t.clone().add(1, "hour")),
@@ -73,7 +73,7 @@ function h(e) {
                 recurrenceRule: t.recurrence_rule,
             }),
             null != C
-                ? (0, l.jsx)(r.E, {
+                ? (0, i.jsx)(r.E, {
                       color: "text-feedback-critical",
                       variant: "text-xs/normal",
                       children: C.getAnyErrorMessage(),

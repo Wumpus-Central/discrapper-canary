@@ -9,10 +9,10 @@ var i,
     u = n(951305),
     d = n(811656),
     m = n(158045),
-    p = n(772707),
-    S = n(683071),
-    C = n(17928),
-    g = n(834730),
+    p = n(17928),
+    S = n(772707),
+    C = n(834730),
+    g = n(683071),
     y = n(158032),
     h = n(925847),
     x = n(773669),
@@ -36,10 +36,10 @@ let P = (t) => {
             fractionalPremiumInfo: c,
             setStep: u,
         } = t,
-        d = (0, C.bG)([x.default], () => x.default.locale),
+        d = (0, p.bG)([x.default], () => x.default.locale),
         P = new Date(o.subscriptionPeriodStart);
     a.isBoostOnly || (P = m.Ay.extendDateWithUnconsumedFractionalPremium(P, c.unactivatedUnits));
-    let R = (0, C.bG)([I.A], () => I.A.getForApplication(A.tv)),
+    let R = (0, p.bG)([I.A], () => I.A.getForApplication(A.tv)),
         k = (0, b.$g)(l.total, l.currency),
         [U, _] = (0, s.useState)(!1),
         [F, w] = (0, s.useState)(!1),
@@ -70,7 +70,7 @@ let P = (t) => {
             };
         W = o.taxInclusive ? M.intl.format(M.t.G8IxyE, n) : M.intl.format(M.t.kXtIIn, n);
     }
-    return (0, r.jsxs)(p.k, {
+    return (0, r.jsxs)(S.k, {
         graphic: { type: "image", src: v.A },
         gradientColor: "nitro-pink",
         transitionState: i,
@@ -78,12 +78,12 @@ let P = (t) => {
         actions: G,
         onClose: async () => n(),
         children: [
-            (0, r.jsxs)(g.E, {
+            (0, r.jsxs)(C.E, {
                 variant: "text-md/normal",
                 style: { textAlign: "center" },
                 children: [(0, r.jsx)("p", { children: W }), (0, r.jsx)("p", { children: M.intl.string(M.t.UQolSy) })],
             }),
-            F ? (0, r.jsx)(S.w, { type: "critical", children: M.intl.string(M.t["5mlOCW"]) }) : null,
+            F ? (0, r.jsx)(g.w, { type: "critical", children: M.intl.string(M.t["5mlOCW"]) }) : null,
         ],
     });
 };
@@ -95,7 +95,7 @@ var R = n(935462),
     w = n(926063);
 function O(t) {
     let { onClose: e } = t,
-        n = (0, r.jsx)(g.E, { className: w.h, variant: "text-md/normal", children: M.intl.string(M.t.FCsTCk) });
+        n = (0, r.jsx)(C.E, { className: w.h, variant: "text-md/normal", children: M.intl.string(M.t.FCsTCk) });
     return (0, r.jsx)(_.A, {
         type: U.Ay.Types.PREMIUM_ACTIVATED,
         text: n,

@@ -56,9 +56,9 @@ var I = t(331322),
     b = t(376728),
     R = t(414079),
     D = t(297413),
-    M = t(966327),
-    S = t(95561),
-    _ = t(262295),
+    S = t(966327),
+    _ = t(95561),
+    M = t(262295),
     L = t(576470),
     P = t(235986),
     T = t(363195),
@@ -83,7 +83,7 @@ class q extends n.PureComponent {
                     align: P.A.Align.CENTER,
                     className: K.CE,
                     children: [
-                        (0, i.jsx)(M.A, { user: n, size: m._3.SIZE_24, className: K.my }),
+                        (0, i.jsx)(S.A, { user: n, size: m._3.SIZE_24, className: K.my }),
                         (0, i.jsx)(D.A, {
                             user: n,
                             hideDiscriminator: s,
@@ -139,7 +139,7 @@ class V extends n.PureComponent {
             this.setState({ loading: !1, invites: s });
         }),
             F.default.track(H.HAw.OPEN_MODAL, {
-                ...(0, S.dI)(X.A.getChannel(e)),
+                ...(0, _.dI)(X.A.getChannel(e)),
                 type: "Group DM Invites",
                 source: "Group DM Menu",
             }));
@@ -173,8 +173,8 @@ class V extends n.PureComponent {
                                 id: e.code,
                                 children: [
                                     (0, i.jsx)(A, {
-                                        children: (0, i.jsx)(_.A, {
-                                            avatar: (0, i.jsx)(M.A, { user: s, size: m._3.SIZE_24 }),
+                                        children: (0, i.jsx)(M.A, {
+                                            avatar: (0, i.jsx)(S.A, { user: s, size: m._3.SIZE_24 }),
                                             name: (0, i.jsx)(D.A, {
                                                 user: s,
                                                 hideDiscriminator: t,
@@ -252,7 +252,7 @@ class V extends n.PureComponent {
     }
     render() {
         let { onClose: e, transitionState: s } = this.props;
-        return (0, i.jsx)(h.Modal, {
+        return (0, i.jsx)(h.a, {
             title: W.intl.string(W.t["9F90ic"]),
             subtitle: W.intl.string(W.t.WDw38H),
             actions: [{ text: W.intl.string(W.t.i4jeWR), onClick: this.handleClose }],

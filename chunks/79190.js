@@ -14,9 +14,9 @@ var e,
     G = i(306537),
     I = i(36149),
     N = i(506775),
-    d = i(272767),
-    D = i(375708);
-function M(t) {
+    D = i(272767),
+    S = i(375708);
+function T(t) {
     let n,
         i,
         { transitionState: e, onClose: r, onConfirm: s } = t,
@@ -25,13 +25,13 @@ function M(t) {
             confirm: o,
             goBackIsPrimary: E,
         } = (function (t) {
-            let n = (0, d.i)()[t],
-                i = { text: D.intl.string(D.t.FDSSia), joins: !1 };
+            let n = (0, D.i)()[t],
+                i = { text: S.intl.string(S.t.FDSSia), joins: !1 };
             switch (t) {
                 case N.M$.ADULT:
                     return {
                         description: n,
-                        confirm: { text: D.intl.string(D.t.wVq7uo), joins: !0 },
+                        confirm: { text: S.intl.string(S.t.wVq7uo), joins: !0 },
                         goBackIsPrimary: !1,
                     };
                 case N.M$.TEEN:
@@ -47,23 +47,23 @@ function M(t) {
             }
             f.A.showAgeVerificationGetStartedModal({ entryPoint: G.q1.NSFW_AGE_GATE });
         }, [o.joins, s, r]),
-        M = { text: D.intl.string(D.t["/g10LC"]), onClick: r },
-        S = { text: o.text, onClick: A },
-        T = E ? [{ ...S, variant: "secondary" }, M] : [{ ...M, variant: "secondary" }, S];
-    return (0, c.jsx)(_.Modal, {
+        T = { text: S.intl.string(S.t["/g10LC"]), onClick: r },
+        d = { text: o.text, onClick: A },
+        M = E ? [{ ...d, variant: "secondary" }, T] : [{ ...T, variant: "secondary" }, d];
+    return (0, c.jsx)(_.a, {
         transitionState: e,
         onClose: r,
-        title: D.intl.string(D.t.xi46lg),
+        title: S.intl.string(S.t.xi46lg),
         subtitle: a,
-        actions: T,
+        actions: M,
         trackingProps: {
             impression: { impressionName: l.ImpressionNames.USER_AGE_GATE_VERIFY },
             impressionType: l.ImpressionTypes.MODAL,
         },
     });
 }
-var S = i(521169),
-    T = i(666113),
+var d = i(521169),
+    M = i(666113),
     g = i(652215),
     p = i(204925),
     C =
@@ -82,7 +82,7 @@ function P(t) {
             var n;
             let { onConfirm: i } = t;
             return (
-                !!(0, S.n)(T.sR) && ((n = { onConfirm: i }), (0, A.openModal)((t) => (0, c.jsx)(M, { ...t, ...n })), !0)
+                !!(0, d.n)(M.sR) && ((n = { onConfirm: i }), (0, A.openModal)((t) => (0, c.jsx)(T, { ...t, ...n })), !0)
             );
         })({ onConfirm: e })
     );

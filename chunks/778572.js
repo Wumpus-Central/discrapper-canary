@@ -8,8 +8,8 @@ var l = n(284009),
     o = n(597184),
     c = n(477900),
     d = n(582128),
-    m = n(123292),
-    p = n(192308),
+    m = n(192308),
+    p = n(123292),
     y = n(721768),
     h = n(917012),
     g = n(264322),
@@ -86,7 +86,7 @@ var k = n(827669),
     x = n(65633);
 let Y = { results: { entries: [] } };
 function v() {
-    (0, p.openModalLazy)(async () => {
+    (0, m.openModalLazy)(async () => {
         let { default: e } = await n.e("152855").then(n.bind(n, 563478));
         return (t) => (0, c.jsx)(e, { ...t });
     });
@@ -162,7 +162,7 @@ let B = {
             },
             key: "commands",
             headerClassName: d ? x.Y : null,
-            headerTrailingContent: d && (0, c.jsx)(m.Q, { size: "xs", onClick: v, text: O.intl.string(O.t["8a0P0y"]) }),
+            headerTrailingContent: d && (0, c.jsx)(p.Q, { size: "xs", onClick: v, text: O.intl.string(O.t["8a0P0y"]) }),
         });
     },
     onSelect(e) {

@@ -70,7 +70,7 @@ function x(t) {
                 v(!1);
             }
         }, [h, e, p, f]);
-    return (0, a.jsx)(s.Modal, {
+    return (0, a.jsx)(s.a, {
         transitionState: g,
         onClose: f,
         title: A.intl.string(m.default["V+azw/"]),

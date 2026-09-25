@@ -1,8 +1,8 @@
 i.d(s, { default: () => D });
 var e = i(477900),
     n = i(582128),
-    r = i(772707),
-    a = i(554146),
+    r = i(554146),
+    a = i(772707),
     l = i(152367),
     c = i(834730),
     o = i(430392),
@@ -21,9 +21,9 @@ function D(t) {
     let { guildId: s, transitionState: D, onClose: E, analyticsType: b } = t;
     return (
         n.useEffect(() => {
-            p.default.track(C.HAw.DISMISSIBLE_CONTENT_SHOWN, { type: a.M[b], guild_id: s });
+            p.default.track(C.HAw.DISMISSIBLE_CONTENT_SHOWN, { type: r.M[b], guild_id: s });
         }, [s, b]),
-        (0, e.jsx)(r.k, {
+        (0, e.jsx)(a.k, {
             title: f.intl.string(f.t["2tv5YG"]),
             subtitle: f.intl.string(f.t.pgwlD7),
             transitionState: D,

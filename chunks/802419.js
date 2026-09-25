@@ -1,13 +1,13 @@
 (l.d(e, { default: () => b }), l(321073));
 var i = l(477900),
     n = l(582128),
-    a = l(189213),
-    r = l(695366),
-    o = l(17928),
-    s = l(687966),
-    c = l(834730),
-    d = l(321471),
-    p = l(691885),
+    a = l(17928),
+    r = l(189213),
+    o = l(687966),
+    s = l(834730),
+    c = l(321471),
+    d = l(691885),
+    p = l(695366),
     u = l(103557),
     A = l(736653),
     I = l(573648),
@@ -20,7 +20,7 @@ var i = l(477900),
 let f = null,
     E = null,
     C = !1;
-class T extends o.Ay.Store {
+class T extends a.Ay.Store {
     static displayName = "GuildSettingsOnboardingAllowedApplicationsStore";
     getAllowedApplicationIds(t) {
         return f === t ? E : null;
@@ -95,7 +95,7 @@ function b(t) {
         f = (0, A.Ay)(),
         E = null != L && null != N,
         C = S.A.getGuildId(),
-        T = (0, o.bG)([O], () => O.getAllowedApplicationIds(C) ?? [], [C]);
+        T = (0, a.bG)([O], () => O.getAllowedApplicationIds(C) ?? [], [C]);
     (n.useEffect(() => {
         null != C && m(C);
     }, [C]),
@@ -103,7 +103,7 @@ function b(t) {
             for (let t of T)
                 null != _.A.getApplication(t) || _.A.isFetchingApplication(t) || (0, h.TA)(t).catch(() => {});
         }, [T]));
-    let v = (0, o.yK)(
+    let v = (0, a.yK)(
             [_.A],
             () => {
                 let t = [];
@@ -150,11 +150,11 @@ function b(t) {
                 id: t.value,
                 value: t.value,
                 label: t.label,
-                leading: "string" == typeof t.icon ? { type: "image", src: t.icon } : s.GameControllerIcon,
+                leading: "string" == typeof t.icon ? { type: "image", src: t.icon } : o.GameControllerIcon,
             }),
             [],
         );
-    return (0, i.jsx)(a.Modal, {
+    return (0, i.jsx)(r.a, {
         transitionState: e,
         title: E ? D.intl.string(D.t.yqegs1) : D.intl.string(D.t.B6qOe2),
         onClose: l,
@@ -168,14 +168,14 @@ function b(t) {
                 !E &&
                     (0, i.jsxs)(i.Fragment, {
                         children: [
-                            (0, i.jsx)(c.E, {
+                            (0, i.jsx)(s.E, {
                                 variant: "text-sm/normal",
                                 color: "text-default",
                                 children: D.intl.string(D.t.mGhCgX),
                             }),
-                            (0, i.jsx)(d.e, {
+                            (0, i.jsx)(c.e, {
                                 title: D.intl.string(D.t.joNLrt),
-                                children: (0, i.jsx)(p.l, {
+                                children: (0, i.jsx)(d.l, {
                                     selectionMode: "single",
                                     value: b,
                                     onSelectionChange: (t) => {
@@ -199,8 +199,8 @@ function b(t) {
                                             {
                                                 className: y.Ff,
                                                 children: [
-                                                    (0, i.jsx)(r.E, { size: "sm", color: "currentColor" }),
-                                                    (0, i.jsx)(c.E, {
+                                                    (0, i.jsx)(p.E, { size: "sm", color: "currentColor" }),
+                                                    (0, i.jsx)(s.E, {
                                                         variant: "text-sm/normal",
                                                         color: "text-feedback-critical",
                                                         children: t,
@@ -218,12 +218,12 @@ function b(t) {
                         (0, i.jsxs)("div", {
                             style: { display: "flex", flexDirection: "column", gap: "4px", marginBottom: "8px" },
                             children: [
-                                (0, i.jsx)(c.E, {
+                                (0, i.jsx)(s.E, {
                                     variant: "text-md/medium",
                                     color: "text-strong",
                                     children: D.intl.string(D.t.WoyrU8),
                                 }),
-                                (0, i.jsx)(c.E, {
+                                (0, i.jsx)(s.E, {
                                     variant: "text-sm/normal",
                                     color: "text-subtle",
                                     children: D.intl.string(D.t.zdWNET),
