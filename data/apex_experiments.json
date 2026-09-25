@@ -5509,6 +5509,28 @@
     }
   },
   {
+    "name": "2026-09-silp-desktop-app-upsell",
+    "kind": "user",
+    "defaultConfig": {
+      "label": null
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "label": "download_discord_app"
+      },
+      "2": {
+        "label": "download_app"
+      },
+      "3": {
+        "label": "get_discord"
+      }
+    }
+  },
+  {
     "name": "2026-09-silp-direct-to-discoverable",
     "kind": "installation",
     "defaultConfig": {
