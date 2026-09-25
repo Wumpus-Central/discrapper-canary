@@ -16,6 +16,13 @@
     text-align: start
 }
 
+.belowContent__6754a {
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+    width: 100%
+}
+
 .panel_d94f6b {
     background-color: var(--background-base-lower);
     bottom: 0;
@@ -312,4 +319,4 @@
     --custom-silp-education-panel-inset: 440px
 }
 
-/*# sourceMappingURL=938a87b582b14135.css.map*/
+/*# sourceMappingURL=9c4f0bfdbdf4f0e8.css.map*/
