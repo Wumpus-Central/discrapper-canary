@@ -1,4 +1,4 @@
-n.d(t, { default: () => e3 });
+n.d(t, { default: () => e8 });
 var i = n(477900),
     s = n(582128),
     r = n(562708),
@@ -915,13 +915,13 @@ var eM = n(280450),
 function eJ() {
     let e = (0, eX.GV)(),
         t = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        n = "621618",
-        s = "99bbb2d1b6cdf9f5152c9943e535247c78018edd".substring(0, 7),
+        n = "621633",
+        s = "9018b33e56ebe64cc97d4ddbe7b2ec70c687160b".substring(0, 7),
         r = eV.A?.app.getVersion(),
         l = eV.A?.app.getBuildNumber(),
         c = eV.A?.app.getAppArch(),
         o = eY.A.getCurrentBuildOverride().overrides?.discord_web,
-        u = null != o ? (0, eq.A)("1790361694924", !1) : null,
+        u = null != o ? (0, eq.A)("1790362252346", !1) : null,
         d = null != u ? ` (built ${u})` : "",
         m = (function () {
             let e = ez()?.os?.toString();
@@ -1087,12 +1087,12 @@ function e2() {
     });
 }
 var e5 = n(402651),
-    e9 = n(669067),
-    e7 = n(830543),
+    e7 = n(669067),
+    e9 = n(830543),
     e4 = n(953056);
-let e8 = new Set([e_.X.PROFILE_PANEL, e_.X.SUBSCRIPTIONS_PANEL, e_.X.FAMILY_CENTER_PANEL, e_.X.POGGERMODE_PANEL]),
-    e6 = new Map([[e_.X.SESSIONS_PANEL, r.ImpressionNames.USER_SETTINGS_SESSIONS]]);
-function e3(e) {
+let e6 = new Set([e_.X.PROFILE_PANEL, e_.X.SUBSCRIPTIONS_PANEL, e_.X.FAMILY_CENTER_PANEL, e_.X.POGGERMODE_PANEL]),
+    e3 = new Map([[e_.X.SESSIONS_PANEL, r.ImpressionNames.USER_SETTINGS_SESSIONS]]);
+function e8(e) {
     let { target: t, ...n } = e,
         l = eL.A.useField("query"),
         a = s.useCallback(() => {
@@ -1101,7 +1101,7 @@ function e3(e) {
         [h, g] = s.useState(!1);
     return (s.useLayoutEffect(() => {
         function e() {
-            null == ek.default.getCurrentUser() && (g(!0), (0, e7.default)());
+            null == ek.default.getCurrentUser() && (g(!0), (0, e9.default)());
         }
         return (
             eM.default.addChangeListener(e),
@@ -1118,8 +1118,8 @@ function e3(e) {
               emptyState: tt,
               sidebarFooter: e2,
               onViewChange: function (e) {
-                  e8.has(e) || (0, e9._)(e);
-                  let t = e6.get(e);
+                  e6.has(e) || (0, e7._)(e);
+                  let t = e3.get(e);
                   (null != t &&
                       (0, o.x)({
                           type: r.ImpressionTypes.PANE,

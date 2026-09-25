@@ -12756,7 +12756,7 @@ var hD = n(201718),
 function hV(e) {
     let { markAsDismissed: t } = e;
     return (
-        E.useEffect(() => t(gd.i.UNKNOWN), [t]),
+        E.useEffect(() => t(gd.i.AUTO_DISMISS), [t]),
         (0, A.jsx)(tn.Lp, { className: hU.Ad, text: R.intl.string(R.t.y2b7CA) })
     );
 }

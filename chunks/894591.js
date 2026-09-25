@@ -16,8 +16,8 @@ if (221552 == n.j) var I = n(403581);
 if (221552 == n.j) var N = n(192308);
 if (221552 == n.j) var R = n(289873);
 var C = n(157559),
-    O = n(827343),
-    S = n(830215),
+    S = n(827343),
+    O = n(830215),
     D = n(228366);
 function m(e) {
     D.h.dispatch({ type: "DETECTED_OFF_PLATFORM_PREMIUM_PERKS_DISMISS", skuId: e });
@@ -254,24 +254,24 @@ function eN(e) {
                     });
                 case b.M.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING:
                     return (0, i.jsx)(eo.A, {
-                        dismissCurrentNotice: () => r(el.i.UNKNOWN),
+                        dismissCurrentNotice: () => r(el.i.USER_DISMISS),
                         subscriptionTier: en.pe.TIER_2,
                     });
                 case b.M.NAGBAR_NOTICE_PREMIUM_TIER_0_TRIAL_ENDING:
                     return (0, i.jsx)(eo.A, {
-                        dismissCurrentNotice: () => r(el.i.UNKNOWN),
+                        dismissCurrentNotice: () => r(el.i.USER_DISMISS),
                         subscriptionTier: en.pe.TIER_0,
                     });
                 case b.M.NAGBAR_NOTICE_PREMIUM_REACTIVATE:
                     return (0, i.jsxs)(d.$T, {
                         color: d.Hv.PREMIUM_TIER_2,
                         children: [
-                            (0, i.jsx)(d.PM, { noticeType: l, onClick: () => r(el.i.UNKNOWN) }),
+                            (0, i.jsx)(d.PM, { noticeType: l, onClick: () => r(el.i.USER_DISMISS) }),
                             es.intl.string(es.t["0KFB2B"]),
                             (0, i.jsx)(d.Z_, {
                                 noticeType: l,
                                 onClick: () => {
-                                    (r(el.i.UNKNOWN), (0, e_.openUserSettings)(ec.X.NITRO_PANEL));
+                                    (r(el.i.TAKE_ACTION), (0, e_.openUserSettings)(ec.X.NITRO_PANEL));
                                 },
                                 children: es.intl.string(es.t.pyYSiO),
                             }),
@@ -298,16 +298,16 @@ function eN(e) {
                     return (0, i.jsxs)(d.$T, {
                         color: d.Hv.PREMIUM_TIER_2,
                         children: [
-                            (0, i.jsx)(d.PM, { onClick: () => r(el.i.UNKNOWN), noticeType: l }),
+                            (0, i.jsx)(d.PM, { onClick: () => r(el.i.USER_DISMISS), noticeType: l }),
                             es.intl.string(es.t["O9GI+k"]),
                             (0, i.jsx)(d.Z_, {
                                 onClick: () => {
-                                    (0, Y.A)({
-                                        subscriptionTier: en.pe.TIER_2,
-                                        analyticsLocations: [x.A.CHECKOUT_RECOVERY_NAGBAR],
-                                        analyticsLocation: ei.ThZ.CHECKOUT_RECOVERY_NAGBAR,
-                                        onClose: () => r(el.i.UNKNOWN),
-                                    });
+                                    (r(el.i.TAKE_ACTION),
+                                        (0, Y.A)({
+                                            subscriptionTier: en.pe.TIER_2,
+                                            analyticsLocations: [x.A.CHECKOUT_RECOVERY_NAGBAR],
+                                            analyticsLocation: ei.ThZ.CHECKOUT_RECOVERY_NAGBAR,
+                                        }));
                                 },
                                 noticeType: l,
                                 children: es.intl.string(es.t.Zi69D4),
@@ -320,8 +320,8 @@ function eN(e) {
 }
 var eR = n(877624),
     eC = n(412260),
-    eO = n(131607),
-    eS = n(823901);
+    eS = n(131607),
+    eO = n(823901);
 function eD(e) {
     let t,
         n,
@@ -332,11 +332,11 @@ function eD(e) {
             l === b.M.GIFTING_PROMOTION_REMINDER
                 ? { snowflakeId: t, couldShow: n && null != t }
                 : { snowflakeId: void 0, couldShow: !1 }),
-        [a, o] = (0, eO.Cc)(s ? l : null, r ?? "", el.m.NOTICE_BAR, !0);
+        [a, o] = (0, eS.Cc)(s ? l : null, r ?? "", el.m.NOTICE_BAR, !0);
     return null == a
         ? null
         : a === b.M.GIFTING_PROMOTION_REMINDER
-          ? (0, i.jsx)(eS.y, { markAsDismissed: (e) => o(e) })
+          ? (0, i.jsx)(eO.y, { markAsDismissed: (e) => o(e) })
           : void 0;
 }
 var em = n(264779),
@@ -456,20 +456,20 @@ function eV(e) {
                 }),
             ],
         });
-    let O = (0, eB.P$)(u)
+    let S = (0, eB.P$)(u)
             ? es.intl.formatToPlainString(es.t.tZTx2E, { guildName: o.name })
             : (0, eB.Qm)(u)
               ? es.intl.formatToPlainString(es.t["1bSmxr"], { guildName: o.name })
               : es.intl.formatToPlainString(es.t.W87xDE, { guildName: o.name }),
-        S = A && s === ew.VV.MEMBER_SAFETY;
+        O = A && s === ew.VV.MEMBER_SAFETY;
     return (0, i.jsxs)(d.$T, {
         className: eF.lm,
         color: d.Hv.WARNING,
         children: [
             (0, i.jsx)(d.PM, { onClick: t, noticeType: ei.kqX.GUILD_RAID_NOTIFICATION }),
             R,
-            O,
-            !S &&
+            S,
+            !O &&
                 (0, i.jsx)(d.zr, {
                     className: eF.hP,
                     onClick: () => I(!0),
@@ -671,8 +671,8 @@ var tI = n(74848),
     tN = n(899847),
     tR = n(191627),
     tC = n(513687),
-    tO = n(597111);
-let tS =
+    tS = n(597111);
+let tO =
     221552 == n.j
         ? {
               "--custom-notice-background": "var(--background-feedback-warning)",
@@ -689,9 +689,9 @@ function tD(e) {
     }, [t]);
     return (0, i.jsx)(d.$T, {
         color: d.Hv.CUSTOM,
-        style: tS,
+        style: tO,
         children: (0, i.jsxs)("div", {
-            className: tO.Q,
+            className: tS.Q,
             children: [
                 (0, i.jsx)(_.E, {
                     variant: "text-sm/medium",
@@ -742,7 +742,7 @@ var th = n(378974),
     tU = n(396813),
     tL = n(14594);
 function ty() {
-    let [e, t] = (0, eO.Wl)(b.M.NAGBAR_NOTICE_IGNORE_USER_FEEDBACK, { cooldownDurationMs: tL.aH });
+    let [e, t] = (0, eS.Wl)(b.M.NAGBAR_NOTICE_IGNORE_USER_FEEDBACK, { cooldownDurationMs: tL.aH });
     return e !== b.M.NAGBAR_NOTICE_IGNORE_USER_FEEDBACK
         ? null
         : (0, i.jsxs)(d.$T, {
@@ -887,7 +887,7 @@ function t$(e) {
             {
                 text: es.intl.string(es.t.BddRzS),
                 onClick: () => {
-                    (t && O.A.setSilenceWarning(!1), e.onClose());
+                    (t && S.A.setSilenceWarning(!1), e.onClose());
                 },
                 variant: "primary",
             },
@@ -1279,7 +1279,7 @@ let ns =
                               (0, i.jsx)(d.Z_, {
                                   noticeType: r.type,
                                   onClick: () => {
-                                      (S.A.verifyResend(),
+                                      (O.A.verifyResend(),
                                           C.A.show({
                                               title: es.intl.string(es.t.LykQYk),
                                               body: es.intl.format(es.t.azKEPy, { email: e?.email }),
@@ -1321,7 +1321,7 @@ let ns =
                                   (0, i.jsx)(d.PM, {
                                       noticeType: r.type,
                                       onClick: () => {
-                                          (O.A.setEnableHardwareMuteNotice(!1), nr());
+                                          (S.A.setEnableHardwareMuteNotice(!1), nr());
                                       },
                                   }),
                                   (0, i.jsx)(d.eC, {
