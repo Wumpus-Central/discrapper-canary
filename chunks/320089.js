@@ -78,14 +78,14 @@ let j = 2 * Math.PI * 57,
             ],
         });
     };
-var N = r(295986);
-let B = function (e) {
+var B = r(295986);
+let N = function (e) {
     let { assetPath: t, progress: r, progressText: l, progressColor: s } = e,
-        a = (0, n.jsx)("img", { src: t, alt: "", className: N.C, width: 120, height: 120 });
+        a = (0, n.jsx)("img", { src: t, alt: "", className: B.C, width: 120, height: 120 });
     return null == r
         ? a
         : (0, n.jsx)("div", {
-              className: N.U,
+              className: B.U,
               role: "progressbar",
               "aria-valuenow": r.current,
               "aria-valuemin": 0,
@@ -97,12 +97,12 @@ let B = function (e) {
 var T = r(821609),
     R = r(450481),
     G = r(375708),
-    w = r(634293);
-function H(e) {
+    H = r(634293);
+function w(e) {
     let { product: t } = e,
         { handleUseNow: r, isApplying: l } = (0, R.p)({ product: t });
     return (0, n.jsx)("div", {
-        className: w.l,
+        className: H.l,
         children: (0, n.jsx)(T.$, {
             variant: "overlay-secondary",
             onClick: () => {
@@ -119,10 +119,10 @@ function H(e) {
 let M = function (e) {
     let { promotionRewardStatus: t, rewardProduct: r, buttonVariant: l, isClaiming: s, onClaim: a } = e;
     return t === S.GM.CONSUMED && null != r
-        ? (0, n.jsx)(H, { product: r })
+        ? (0, n.jsx)(w, { product: r })
         : t === S.GM.EARNED
           ? (0, n.jsx)("div", {
-                className: w.l,
+                className: H.l,
                 children: (0, n.jsx)(T.$, {
                     text: G.intl.string(G.t.pVBlCH),
                     variant: l,
@@ -162,33 +162,32 @@ function et(e) {
             rewardProduct: m,
             buttonVariant: p,
             isClaiming: h,
-            onClaim: x,
+            onClaim: S,
         } = e,
-        C = null != l ? i : a;
+        x = null != l ? i : a;
     return (0, n.jsxs)(o.B, {
         direction: "horizontal",
         gap: 16,
         align: "center",
         className: g,
         children: [
-            (0, n.jsx)(B, { assetPath: r, progress: l, progressText: i, progressColor: s }),
+            (0, n.jsx)(N, { assetPath: r, progress: l, progressText: i, progressColor: s }),
             (0, n.jsxs)(o.B, {
                 direction: "vertical",
                 gap: 8,
                 align: "start",
                 className: Z._,
                 children: [
-                    null != C &&
-                        (0, n.jsx)(u.E, { variant: "text-md/bold", color: "text-strong", children: (0, E.U)(C) }),
+                    null != x &&
+                        (0, n.jsx)(u.E, { variant: "text-md/bold", color: "text-strong", children: (0, E.U)(x) }),
                     null != d && (0, n.jsx)(L, { icon: c.ClockIcon, text: d }),
-                    t.rewardStatus !== S.GM.CONSUMED &&
-                        (0, n.jsx)(M, {
-                            promotionRewardStatus: t.rewardStatus,
-                            rewardProduct: m,
-                            buttonVariant: p,
-                            isClaiming: h,
-                            onClaim: x,
-                        }),
+                    (0, n.jsx)(M, {
+                        promotionRewardStatus: t.rewardStatus,
+                        rewardProduct: m,
+                        buttonVariant: p,
+                        isClaiming: h,
+                        onClaim: S,
+                    }),
                 ],
             }),
         ],
@@ -222,7 +221,7 @@ function er(e) {
         className: a()(Z.N, _),
         style: { backgroundImage: `url(${i})` },
         children: [
-            (0, n.jsx)(B, { assetPath: r, progress: l, progressText: C, progressColor: s }),
+            (0, n.jsx)(N, { assetPath: r, progress: l, progressText: C, progressColor: s }),
             (0, n.jsxs)(o.B, {
                 direction: "vertical",
                 gap: 8,
