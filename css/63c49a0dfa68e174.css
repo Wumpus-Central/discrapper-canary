@@ -248,6 +248,18 @@
     row-gap: 12px
 }
 
+.gameIcon_eb5373 {
+    border-radius: 2px;
+    height: 20px;
+    -o-object-fit: contain;
+    object-fit: contain;
+    width: 20px
+}
+
+.gamesSearchableSelect_eb5373 [role=option]>:last-child {
+    flex-shrink: 0
+}
+
 .container__0a560 {
     display: flex;
     flex-direction: column;
@@ -441,4 +453,4 @@
     width: 8px
 }
 
-/*# sourceMappingURL=374c9d6bd9413327.css.map*/
+/*# sourceMappingURL=63c49a0dfa68e174.css.map*/

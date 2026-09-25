@@ -1,49 +1,61 @@
-t.d(a, { R: () => h });
-var l = t(582128),
-    i = t(435558),
-    u = t.n(i),
-    s = t(929396),
-    r = t(471677),
-    n = t(321108),
-    m = t(735321),
-    o = t(403362),
-    d = t(282435);
-let p = [];
-function c(e) {
-    return d.jN.get(e) ?? 0;
+a.d(i, { R: () => c });
+var l = a(582128),
+    t = a(435558),
+    o = a.n(t),
+    r = a(929396),
+    s = a(471677),
+    u = a(321108),
+    n = a(735321),
+    m = a(403362),
+    p = a(282435);
+let d = [];
+function f(e) {
+    return p.jN.get(e) ?? 0;
 }
-function h() {
-    let { query: e, selectedGameIds: a } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-        t = l.useMemo(() => [...new Set([...d.sx, ...(a ?? p)])], [a]),
-        i = (0, n.A)(t),
-        h = l.useMemo(() => new Map(i.map((e) => [e.id, e])), [i]),
+function c() {
+    let { query: e, selectedGameIds: i } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+        a = l.useMemo(() => [...new Set([...p.sx, ...(i ?? d)])], [i]),
+        t = (0, u.A)(a),
+        c = l.useMemo(() => new Map(t.map((e) => [e.id, e])), [t]),
         v = l.useMemo(
             () =>
-                u()(d.sx)
-                    .map((e) => h.get(e))
-                    .filter(o.Vq)
-                    .filter((e) => (0, m.XX)(e))
+                o()(p.sx)
+                    .map((e) => c.get(e))
+                    .filter(m.Vq)
+                    .filter((e) => (0, n.XX)(e))
                     .map((e) => ({ id: e.id, value: e.id, label: e.name }))
                     .sortBy((e) => {
-                        let { value: a } = e;
-                        return c(a);
+                        let { value: i } = e;
+                        return f(i);
                     })
                     .reverse()
                     .value(),
-            [h],
+            [c],
         ),
-        b = l.useCallback((e, a) => c(a.item.value) - c(e.item.value), []),
-        f = l.useMemo(() => ({ baseSort: b, keys: ["label"] }), [b]),
+        b = l.useCallback((e, i) => f(i.item.value) - f(e.item.value), []),
+        h = l.useMemo(() => ({ baseSort: b, keys: ["label"] }), [b]),
         M = (e?.trim().length ?? 0) > 0,
-        { results: k } = (0, r.J$)(e ?? null),
-        g = l.useMemo(() => new Set((k ?? []).filter((e) => (0, s.qS)(e)).map((e) => e.id)), [k]),
-        w = l.useMemo(
+        { results: k } = (0, s.J$)(e ?? null),
+        y = l.useMemo(() => new Set((k ?? []).filter((e) => (0, r.qS)(e)).map((e) => e.id)), [k]),
+        g = l.useMemo(
             () => [
-                ...(k ?? []).filter((e) => g.has(e.id)).map((e) => ({ id: e.id, value: e.id, label: e.name })),
-                ...(a ?? p).filter((e) => !g.has(e)).map((e) => ({ id: e, value: e, label: h.get(e)?.name ?? "" })),
+                ...(k ?? []).filter((e) => y.has(e.id)).map((e) => ({ id: e.id, value: e.id, label: e.name })),
+                ...(i ?? d).filter((e) => !y.has(e)).map((e) => ({ id: e, value: e, label: c.get(e)?.name ?? "" })),
             ],
-            [k, g, a, h],
+            [k, y, i, c],
         ),
-        C = l.useCallback((e) => e.filter((e) => g.has(e.value)), [g]);
-    return { options: M ? w : v, matchSorterOptions: f, customMatchSorter: M ? C : void 0 };
+        w = l.useMemo(() => {
+            let e = new Map();
+            for (let i of t) e.set(i.id, { icon: i.media?.icon, platformAvailability: i.platformAvailability });
+            for (let i of k ?? []) {
+                let a = e.get(i.id);
+                e.set(i.id, {
+                    icon: i.icon ?? a?.icon,
+                    platformAvailability: i.platformAvailability ?? a?.platformAvailability,
+                });
+            }
+            return e;
+        }, [t, k]),
+        A = l.useCallback((e) => e.filter((e) => y.has(e.value)), [y]);
+    return { options: M ? g : v, matchSorterOptions: h, customMatchSorter: M ? A : void 0, metadataByGameId: w };
 }

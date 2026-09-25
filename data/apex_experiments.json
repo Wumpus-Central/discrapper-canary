@@ -5111,6 +5111,22 @@
     }
   },
   {
+    "name": "2026-09-game-search-row",
+    "kind": "user",
+    "defaultConfig": {
+      "extraChromeEnabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "extraChromeEnabled": true
+      }
+    }
+  },
+  {
     "name": "2026-09-gifting-badge-coachmark-audience",
     "kind": "user",
     "defaultConfig": {

@@ -14,7 +14,12 @@ async function c(e) {
         s.h.dispatch({ type: "GAME_AUTOCOMPLETE_FETCH", query: t });
         try {
             let { body: e } = await a.Bo.get({ url: d.Rsh.GAMES_AUTOCOMPLETE, query: { q: t }, rejectWithError: !1 }),
-                n = (e ?? []).map((e) => ({ id: String(e.id), name: e.name, icon: e.icon }));
+                n = (e ?? []).map((e) => ({
+                    id: String(e.id),
+                    name: e.name,
+                    icon: e.icon,
+                    platformAvailability: e.platform_availability,
+                }));
             s.h.dispatch({ type: "GAME_AUTOCOMPLETE_FETCH_SUCCESS", query: t, results: n });
         } catch (e) {
             throw (s.h.dispatch({ type: "GAME_AUTOCOMPLETE_FETCH_FAILURE", query: t }), e);
