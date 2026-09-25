@@ -14777,6 +14777,7 @@ function ug() {
                                   { label: "EXCEPTION_ACCESS_VIOLATION", value: 2, id: "exception_access_violation" },
                                   { label: "RaiseFailFastException", value: 3, id: "raise_fail_fast_exception" },
                                   { label: "Out of Memory", value: 4, id: "out_of_memory" },
+                                  { label: "Modified Code", value: 5, id: "modified_code" },
                               ],
                               onSelectionChange: (e) => null != e && uc.Ay.crash(e),
                           }),

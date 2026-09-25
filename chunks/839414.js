@@ -1115,7 +1115,7 @@ let eO = eC.O.NONE,
 function eb(e, t) {
     t ? (eO |= e) : (eO &= ~e);
 }
-n(40876);
+(n(40876), n(938796));
 var eM = n(141931),
     eP = n(506774),
     eU = n(25578),
@@ -1188,6 +1188,12 @@ async function eH() {
                 minidump_exception_module_code_id: s?.exceptionModuleCodeId ?? null,
                 minidump_exception_thread_name: s?.exceptionThreadName ?? null,
                 minidump_exception_stacktrace: s?.exceptionStacktrace ?? null,
+                minidump_code_integrity_bytes_different: s?.codeIntegrity?.bytesDifferent ?? null,
+                minidump_code_integrity_bytes_compared: s?.codeIntegrity?.bytesCompared ?? null,
+                minidump_code_integrity_flags: s?.codeIntegrity?.flags ?? null,
+                minidump_code_integrity_reloc_bytes_different: s?.codeIntegrity?.relocBytesDifferent ?? null,
+                minidump_code_integrity_nearest_difference_from_instruction_pointer:
+                    s?.codeIntegrity?.nearestDifferenceFromInstructionPointer ?? null,
                 ...a,
             };
         })(s, l, a);
@@ -1471,7 +1477,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e6 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eW.A().log(
-    `[BUILD INFO] Release Channel: ${e6}, Build Number: 621915, Version Hash: 0b573af58ff6d57a74fb4cb149e1a4c3043f0e1e`,
+    `[BUILD INFO] Release Channel: ${e6}, Build Number: 621932, Version Hash: 5910e24064215bca93f1ea03afd542e6c3b8a26b`,
 ),
     M.A.setTags({ appContext: F.QCW }),
     ep.A.initBasic(),
@@ -21813,7 +21819,7 @@ let Cn = "isHideDevBanner",
                     className: to()(Ct.Wz, Ct.mr),
                     children: [
                         (0, y.jsx)(Ce, { className: Ct.Kk }),
-                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "621915" }),
+                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "621932" }),
                         (0, y.jsx)(r, {}),
                     ],
                 })
@@ -30964,9 +30970,8 @@ function L1() {
         ],
     });
 }
-var L2 = n(159730);
-n(938796);
-var L3 = n(665260),
+var L2 = n(159730),
+    L3 = n(665260),
     L5 = n(56562),
     L6 = n(885437),
     L4 = n(973854),
