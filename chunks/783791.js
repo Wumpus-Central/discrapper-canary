@@ -72,10 +72,8 @@ function P(e) {
                   return t.steps;
               })(e.steps))
             : null != e.events &&
-              (t.steps = e.events.map((e) =>
-                  "announcement" === e.type
-                      ? { type: "step", kind: "announcement", message: e.message }
-                      : { type: "step", kind: "todos", items: e.items },
+              (t.steps = e.events.flatMap((e) =>
+                  "todos" === e.type ? [{ type: "step", kind: "todos", items: e.items }] : [],
               )),
         null != e.secret_request && e.secret_request.fields.length > 0 && (t.secretRequest = e.secret_request),
         null != e.settings_request && (t.settingsRequest = e.settings_request),

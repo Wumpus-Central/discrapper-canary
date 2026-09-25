@@ -241,6 +241,13 @@ let n = [
             "On phones, Select to edit in the builder\u2019s header lets you tap a part of your app\u2019s Frame, see what you picked, and tell Conjure what should change there.",
     },
     {
+        date: "2026-09-25",
+        time: "06:20",
+        platforms: ["mobile"],
+        summary:
+            "On phones, a build now opens with Conjure\u2019s name above the live status line, which says what is being made, instead of a separate opening sentence.",
+    },
+    {
         date: "2026-09-18",
         time: "00:09",
         platforms: ["mobile"],

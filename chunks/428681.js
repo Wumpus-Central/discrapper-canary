@@ -3152,7 +3152,6 @@ function l7(e) {
                                       accessories: (0, n.jsx)(tw, {
                                           projectId: t,
                                           steps: a.steps,
-                                          announcement: a.announcement,
                                           content: "",
                                           proposal: a.proposal,
                                           interrupted: !0 === a.interrupted,
