@@ -1351,7 +1351,7 @@ function e3(e) {
         [L, N, P] = (0, i.yK)([b.A], () => [b.A.getSpace(m), b.A.getFetchStatus(m), b.A.isInBackoff(m)], [m]);
     (r.useEffect(() => {
         let e = h.current !== m;
-        ((h.current = m), (0, g.u_)(m, e));
+        ((h.current = m), ("idle" === N || e) && (0, g.u)(m, { shouldRefetch: e }));
     }, [N, m]),
         r.useEffect(() => {
             (0, c.L4)(m, !1, { respectBackoff: !0 });
@@ -1375,7 +1375,7 @@ function e3(e) {
         U && "idle" === M && p(m);
     }, [U, M, m]);
     let B = k?.guildSpaceSettings?.publish_status !== S.B.PUBLISHED,
-        O = r.useCallback(() => (0, g.Wl)(m, { publish_status: S.B.PUBLISHED }), [m]),
+        O = r.useCallback(() => (0, g.W)(m, { publish_status: S.B.PUBLISHED }), [m]),
         [W, H] = (0, i.yK)([C.A], () => [C.A.getDraft(m), C.A.getSaveStatus(m)], [m]),
         F = U && null != W;
     !(function (e, t) {
@@ -1425,7 +1425,7 @@ function e3(e) {
         [m, L],
     );
     (r.useEffect(() => {
-        $ && (0, g.fi)(m);
+        $ && (0, g.u)(m, { shouldRefetch: !0 });
     }, [m, $]),
         r.useEffect(() => {
             U || null == W || "saving" === H || (0, A.iX)(m);

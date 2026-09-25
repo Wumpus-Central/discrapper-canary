@@ -24412,7 +24412,7 @@ var ph = n(473953),
 async function pj(e, t) {
     let n = { ...t };
     t.enabled || (n.publish_status = pE.B.DRAFT);
-    let i = await (0, ph.Wl)(e, n);
+    let i = await (0, ph.W)(e, n);
     eh.h.dispatch({ type: "GUILD_SETTINGS_SET_GUILD_SPACE_SETTINGS", guildId: e, settings: i });
 }
 function pf(e) {

@@ -1,36 +1,33 @@
-e.d(a, { Wl: () => u, fi: () => C, u_: () => E });
+e.d(a, { W: () => C, u: () => E });
 var c = e(562708),
     r = e(636537),
     i = e(228366),
-    n = e(499785),
-    s = e(716357),
-    h = e(513446),
-    o = e(652215);
-let _ = 0;
+    s = e(499785),
+    h = e(716357),
+    n = e(513446),
+    _ = e(652215);
+let o = 0;
 async function p(t) {
-    let a = _++;
+    let a = o++;
     i.h.dispatch({ type: "GUILD_SPACE_FETCH_START", guildId: t, requestId: a });
     try {
-        let { body: e } = await n.A.get({
-            url: o.Rsh.GUILD_SPACE(t),
+        let { body: e } = await s.A.get({
+            url: _.Rsh.GUILD_SPACE(t),
             trackedActionData: { event: c.NetworkActionNames.GUILD_SPACE_FETCH },
             rejectWithError: !0,
         });
         i.h.dispatch({ type: "GUILD_SPACE_FETCH_SUCCESS", guildId: t, requestId: a, space: e });
     } catch (e) {
-        i.h.dispatch({ type: "GUILD_SPACE_FETCH_FAILURE", guildId: t, requestId: a, retryable: (0, h.a)(e) });
+        i.h.dispatch({ type: "GUILD_SPACE_FETCH_FAILURE", guildId: t, requestId: a, retryable: (0, n.a)(e) });
     }
 }
-async function E(t) {
-    let a = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        e = s.A.getFetchStatus(t),
-        c = a && "error" === e && !s.A.isInBackoff(t);
-    ("idle" === e || c) && (await p(t));
+async function E(t, a) {
+    let { shouldRefetch: e = !1 } = a,
+        c = h.A.getFetchStatus(t),
+        r = h.A.isInBackoff(t);
+    "loading" === c || r || (("idle" === c || e) && (await p(t)));
 }
-async function C(t) {
-    await p(t);
-}
-async function u(t, a) {
-    let { body: e } = await r.Bo.patch({ url: o.Rsh.GUILD_SPACE_SETTINGS(t), body: a, rejectWithError: !0 });
+async function C(t, a) {
+    let { body: e } = await r.Bo.patch({ url: _.Rsh.GUILD_SPACE_SETTINGS(t), body: a, rejectWithError: !0 });
     return e;
 }
