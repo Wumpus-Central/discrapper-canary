@@ -51,6 +51,15 @@ let a = [
         i.F.DM_CHANNELS_READ,
         i.F.DM_CHANNELS_MESSAGES_READ,
         i.F.DM_CHANNELS_MESSAGES_WRITE,
+        i.F.PERSONAL_RELATIONSHIPS_READ,
+        i.F.PERSONAL_DM_CHANNELS_READ,
+        i.F.PERSONAL_DM_CHANNELS_MESSAGES_READ,
+        i.F.PERSONAL_GUILDS_CHANNELS_READ,
+        i.F.PERSONAL_GUILDS_CHANNELS_MESSAGES_READ,
+        i.F.PERSONAL_ACTIVITIES_WRITE,
+        i.F.PERSONAL_MENTIONS_READ,
+        i.F.PERSONAL_GUILDS_MESSAGES_SEARCH,
+        i.F.PERSONAL_DM_CHANNELS_MESSAGES_SEARCH,
         i.F.ROLE_CONNECTIONS_WRITE,
         i.F.PRESENCES_READ,
         i.F.PRESENCES_WRITE,
@@ -142,6 +151,21 @@ function d(e, t) {
             return [r.intl.string(r.t.FHeB8p)];
         case i.F.DM_CHANNELS_MESSAGES_WRITE:
             return [r.intl.string(r.t["mdh+xY"])];
+        case i.F.PERSONAL_RELATIONSHIPS_READ:
+            return [r.intl.string(r.t["521/7W"])];
+        case i.F.PERSONAL_DM_CHANNELS_READ:
+            return [r.intl.string(r.t.w8emlT)];
+        case i.F.PERSONAL_DM_CHANNELS_MESSAGES_READ:
+        case i.F.PERSONAL_DM_CHANNELS_MESSAGES_SEARCH:
+            return [r.intl.string(r.t.FHeB8p)];
+        case i.F.PERSONAL_GUILDS_CHANNELS_READ:
+            return [r.intl.string(r.t.BWGAgt)];
+        case i.F.PERSONAL_GUILDS_CHANNELS_MESSAGES_READ:
+        case i.F.PERSONAL_GUILDS_MESSAGES_SEARCH:
+        case i.F.PERSONAL_MENTIONS_READ:
+            return [r.intl.string(r.t.jVXrHb)];
+        case i.F.PERSONAL_ACTIVITIES_WRITE:
+            return [r.intl.string(r.t["6OsWXX"])];
         case i.F.GATEWAY_CONNECT:
             return [r.intl.string(r.t["uJd+85"])];
         case i.F.PAYMENT_SOURCES_COUNTRY_CODE:
@@ -181,7 +205,7 @@ function c(e) {
 function u(e) {
     return e.includes(i.F.DM_CHANNELS_MESSAGES_WRITE) || e.includes(i.F.SDK_SOCIAL_LAYER)
         ? r.intl.format(r.t.o0GMBD, {})
-        : e.includes(i.F.MESSAGES_READ) || e.includes(i.F.DM_CHANNELS_MESSAGES_READ)
+        : e.some((e) => i._.SCOPES_CAN_READ_MESSAGES.has(e))
           ? r.intl.format(r.t.Soy7jJ, {})
           : r.intl.format(r.t["TeL+Ct"], {});
 }
