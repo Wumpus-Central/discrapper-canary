@@ -12,4 +12,5 @@ _.exports = {
     sN: "designImage_af6837",
     Ip: "chips_af6837",
     jw: "chip_af6837",
+    o1: "actions_af6837",
 };

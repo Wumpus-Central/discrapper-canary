@@ -972,6 +972,10 @@
     padding: var(--space-4) var(--space-8)
 }
 
+.actions_af6837 {
+    display: flex
+}
+
 .secretCard__220b3 {
     box-sizing: border-box;
     flex-direction: column;
@@ -1294,4 +1298,4 @@
     transition: stroke-dashoffset .35s cubic-bezier(.22, 1, .36, 1)
 }
 
-/*# sourceMappingURL=2e216f8a627dabe6.css.map*/
+/*# sourceMappingURL=7cec0effbd1d92f1.css.map*/

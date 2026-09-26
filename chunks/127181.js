@@ -453,6 +453,13 @@ let n = [
             "Picking a template shows it running in a few seconds, instead of after Conjure has rebuilt it from scratch.",
     },
     {
+        date: "2026-09-26",
+        time: "02:20",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "Plan cards have an Approve button that starts the build. To change the plan, type what you want different.",
+    },
+    {
         date: "2026-08-31",
         time: "00:03",
         platforms: ["desktop", "mobile"],
