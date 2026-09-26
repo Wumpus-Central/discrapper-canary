@@ -203,6 +203,13 @@ let n = [
             "Importing a big project is faster and narrates its progress, and a zip that still has node_modules or .git inside now imports cleanly, telling you what was left out.",
     },
     {
+        date: "2026-09-26",
+        time: "02:14",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "Keys needed cards now have a clear Press here to add securely button, set apart from the key names above it.",
+    },
+    {
         date: "2026-09-08",
         time: "00:03",
         platforms: ["desktop"],

@@ -979,34 +979,21 @@
 .secretCard__220b3 {
     box-sizing: border-box;
     flex-direction: column;
-    gap: var(--space-8);
+    max-width: 100%;
+    min-width: 0;
     overflow-wrap: anywhere;
     width: 100%;
     word-break: break-word
 }
 
 .secretCard__220b3,
-.secretCardChips__220b3 {
+.secretCardActions__220b3 {
     display: flex;
-    max-width: 100%;
-    min-width: 0
-}
-
-.secretCardChips__220b3 {
-    flex-wrap: wrap;
-    gap: var(--space-4)
-}
-
-.secretCardChip__220b3 {
-    background: var(--background-mod-strong);
-    border-radius: var(--radius-xs);
-    padding: var(--space-4) var(--space-8)
+    gap: var(--space-8)
 }
 
 .secretCardActions__220b3 {
     align-items: center;
-    display: flex;
-    gap: var(--space-8);
     margin-top: var(--space-4)
 }
 
@@ -1298,4 +1285,4 @@
     transition: stroke-dashoffset .35s cubic-bezier(.22, 1, .36, 1)
 }
 
-/*# sourceMappingURL=7cec0effbd1d92f1.css.map*/
+/*# sourceMappingURL=9efa8c3169d57572.css.map*/
