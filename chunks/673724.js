@@ -93,7 +93,7 @@ let g = ["simple", "balanced", "complex"],
     O = { main: C, subagent: C, thinking: N.thinking },
     R = { tier: "balanced", provider: "openai" },
     L = {
-        simple: { model: "gpt-6-luna", thinking: "xhigh" },
+        simple: { model: "gpt-6-luna", thinking: "high" },
         balanced: { model: "gpt-6-sol", thinking: "high" },
         complex: { model: "gpt-6-astra", thinking: "high" },
     };
