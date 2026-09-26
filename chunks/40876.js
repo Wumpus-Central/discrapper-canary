@@ -383,11 +383,6 @@ let r = {
         inlineRequire: () => n(435736).Ay,
         neverLoadBeforeConnectionOpen: !0,
     },
-    OverlayFPSLimitExperimentManager: {
-        actions: ["POST_CONNECTION_OPEN", "LOGOUT"],
-        inlineRequire: () => n(186427).A,
-        hasStoreChangeListeners: !0,
-    },
     BugReporterManager: {
         actions: [
             "POST_CONNECTION_OPEN",
@@ -757,6 +752,12 @@ let r = {
         ],
         inlineRequire: () => n(599812).A,
         neverLoadBeforeConnectionOpen: !0,
+    },
+    GameModeManager: {
+        actions: ["POST_CONNECTION_OPEN", "WINDOW_FOCUS", "LOGOUT"],
+        inlineRequire: () => n(630148).A,
+        neverLoadBeforeConnectionOpen: !0,
+        hasStoreChangeListeners: !0,
     },
     DmSettingsUpsellManager: {
         actions: ["DM_SETTINGS_UPSELL_SHOW"],

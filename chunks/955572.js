@@ -62,9 +62,9 @@ function p(e) {
     i.h.dispatch({ type: "ACCESSIBILITY_SET_SATURATION", saturation: e });
 }
 function T(e) {
-    let t = s.Ay.useReducedMotion;
+    let t = s.Ay.prefersReducedMotion;
     i.h.dispatch({ type: "ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION", prefersReducedMotion: e });
-    let n = s.Ay.useReducedMotion;
+    let n = s.Ay.prefersReducedMotion;
     !t && n
         ? r.Ay.applySettingsOverride({
               gifAutoPlay: { value: !1, reasonKey: d._A.REDUCED_MOTION },

@@ -1,4 +1,4 @@
-(a.r(t), a.d(t, { default: () => R, openDevToolsPopout: () => I }));
+(a.r(t), a.d(t, { default: () => O, openDevToolsPopout: () => D }));
 var n = a(477900),
     l = a(582128),
     i = a(503698),
@@ -18,7 +18,7 @@ var n = a(477900),
     f = a(538064),
     b = a(265059),
     y = a(867041),
-    E = a(284675),
+    E = a(844878),
     C = a(231643),
     _ = a(652215),
     S = a(375708),
@@ -35,7 +35,7 @@ function k(e) {
         });
     return (0, n.jsx)("div", { onMouseDown: i, className: N.Di });
 }
-function I() {
+function D() {
     (0, v.open)(
         _.MLl.DEVTOOLS_POPOUT,
         () =>
@@ -43,12 +43,12 @@ function I() {
                 windowKey: _.MLl.DEVTOOLS_POPOUT,
                 title: "DevTools",
                 withTitleBar: !0,
-                children: (0, n.jsx)(R, { mobile: !1, isPopout: !0 }),
+                children: (0, n.jsx)(O, { mobile: !1, isPopout: !0 }),
             }),
         { width: 800, height: 600 },
     );
 }
-function D(e) {
+function I(e) {
     let { isPopout: t = !1 } = e,
         a = (0, E.x)(),
         {
@@ -79,7 +79,7 @@ function D(e) {
                         ? null
                         : (0, n.jsxs)(n.Fragment, {
                               children: [
-                                  (0, n.jsx)(p.Ay.Icon, { icon: d.t, tooltip: "Pop Out", onClick: I }),
+                                  (0, n.jsx)(p.Ay.Icon, { icon: d.t, tooltip: "Pop Out", onClick: D }),
                                   (0, n.jsx)(p.Ay.Icon, {
                                       icon: c.P,
                                       tooltip: S.intl.string(S.t.cpT0Cq),
@@ -116,15 +116,15 @@ function T() {
               "data-app-right-panel": !0,
               children: [
                   (0, n.jsx)(k, { resizableNode: e, onResize: i, onResizeEnd: s }),
-                  (0, n.jsx)("div", { className: N.wp, children: (0, n.jsx)(D, {}) }),
+                  (0, n.jsx)("div", { className: N.wp, children: (0, n.jsx)(I, {}) }),
               ],
           });
 }
-function O() {
+function R() {
     return (0, o.bG)([b.A], () => b.A.displayTools)
         ? (0, n.jsx)("div", {
               className: s()(N.kL, N.PQ),
-              children: (0, n.jsx)("div", { className: N.wp, children: (0, n.jsx)(D, {}) }),
+              children: (0, n.jsx)("div", { className: N.wp, children: (0, n.jsx)(I, {}) }),
           })
         : (0, n.jsx)("div", {
               className: N.kL,
@@ -141,11 +141,11 @@ function O() {
               }),
           });
 }
-function R(e) {
+function O(e) {
     let { mobile: t, isPopout: a = !1 } = e;
     return t
-        ? (0, n.jsx)(O, {})
+        ? (0, n.jsx)(R, {})
         : a
-          ? (0, n.jsx)("div", { className: N.jC, children: (0, n.jsx)(D, { isPopout: !0 }) })
+          ? (0, n.jsx)("div", { className: N.jC, children: (0, n.jsx)(I, { isPopout: !0 }) })
           : (0, n.jsx)(T, {});
 }

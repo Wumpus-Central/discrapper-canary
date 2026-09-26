@@ -2155,32 +2155,6 @@
     }
   },
   {
-    "name": "2026-04-overlay-fps-limit",
-    "kind": "user",
-    "defaultConfig": {
-      "overlayFPSLimit": true,
-      "mainWindowFPSLimit": true
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "overlayFPSLimit": 60,
-        "mainWindowFPSLimit": true
-      },
-      "2": {
-        "overlayFPSLimit": 30,
-        "mainWindowFPSLimit": true
-      },
-      "3": {
-        "overlayFPSLimit": 30,
-        "mainWindowFPSLimit": 30
-      }
-    }
-  },
-  {
     "name": "2026-04-overlay-streamer-mode",
     "kind": "user",
     "defaultConfig": {
@@ -4474,6 +4448,22 @@
       },
       "1": {
         "disableAgeRestrictedDestinations": true
+      }
+    }
+  },
+  {
+    "name": "2026-08-game-mode",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
       }
     }
   },

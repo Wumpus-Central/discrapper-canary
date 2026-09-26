@@ -93,7 +93,7 @@ function f() {
             switchIconsEnabled: g,
         } = (0, r.cf)([o.Ay], () => ({
             saturation: o.Ay.saturation,
-            useReducedMotion: o.Ay.useReducedMotion,
+            useReducedMotion: o.Ay.prefersReducedMotion,
             roleStyle: o.Ay.roleStyle,
             highContrastMode: o.Ay.isHighContrastModeEnabled,
             switchIconsEnabled: o.Ay.isSwitchIconsEnabled,

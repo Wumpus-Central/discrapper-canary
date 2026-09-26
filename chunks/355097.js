@@ -35,7 +35,11 @@ var i,
         (i[(i.HOURS_24 = 86400)] = "HOURS_24"),
         (i[(i.ALWAYS = -1)] = "ALWAYS"),
         i),
-    h = (((r = {}).REDUCED_MOTION = "REDUCED_MOTION"), (r.REDUCED_MOTION_STICKERS = "REDUCED_MOTION_STICKERS"), r),
+    h =
+        (((r = {}).REDUCED_MOTION = "REDUCED_MOTION"),
+        (r.REDUCED_MOTION_STICKERS = "REDUCED_MOTION_STICKERS"),
+        (r.GAME_MODE = "GAME_MODE"),
+        r),
     I = (((a = {}).AUTO = "auto"), (a.COMPACT = "compact"), (a.COZY = "cozy"), a);
 let f = "ROLE_SUBSCRIPTIONS",
     p = "APPLICATION_SUBSCRIPTION_SUBSECTION";
