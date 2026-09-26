@@ -1,4 +1,4 @@
-a.d(t, { B: () => s, MZ: () => o, TH: () => i, tn: () => l });
+a.d(t, { B: () => l, MZ: () => o, TH: () => i, tn: () => s });
 let n = [
     {
         date: "2026-09-07",
@@ -142,6 +142,13 @@ let n = [
         summary: "Conjuring has its own doorway in the desktop title bar, so it is one click away from anywhere.",
     },
     {
+        date: "2026-09-26",
+        time: "01:44",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "Deleting an app closes the confirmation right away; the app shows as deleting in your list until it is gone.",
+    },
+    {
         date: "2026-09-20",
         time: "00:04",
         platforms: ["desktop", "mobile"],
@@ -187,6 +194,13 @@ let n = [
         platforms: ["desktop", "mobile"],
         summary:
             "Hitting your project limit, or conjuring too fast, now says so instead of just asking you to try again.",
+    },
+    {
+        date: "2026-09-26",
+        time: "02:06",
+        platforms: ["desktop"],
+        summary:
+            "Hover a message you sent in the builder chat and open its More menu to copy the text, just like in a channel.",
     },
     {
         date: "2026-09-25",
@@ -714,13 +728,13 @@ let n = [
             : +(e.summary > t.summary);
 });
 function i(e) {
-    return l(e).slice(0, 3);
-}
-function l(e) {
-    return n.filter((t) => t.platforms.includes(e));
+    return s(e).slice(0, 3);
 }
 function s(e) {
-    return l(e).length > 3;
+    return n.filter((t) => t.platforms.includes(e));
+}
+function l(e) {
+    return s(e).length > 3;
 }
 function o(e) {
     return 1 === e.platforms.length;

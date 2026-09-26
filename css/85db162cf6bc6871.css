@@ -736,8 +736,31 @@
     padding-inline-end: var(--space-xl)
 }
 
+.accessoryMessageRow__72ffd:has(.userMessageButtonsShown__72ffd),
+.keyboard-mode .accessoryMessageRow__72ffd:focus-within,
 .mouse-mode.full-motion .accessoryMessageRow__72ffd:hover {
     background: var(--message-background-hover)
+}
+
+.userMessageButtons__72ffd {
+    inset-inline-end: 0;
+    opacity: 0;
+    padding-inline: 32px 14px;
+    pointer-events: none;
+    position: absolute;
+    top: -25px;
+    z-index: 1
+}
+
+.userMessageButtonsHeader__72ffd {
+    top: -16px
+}
+
+.userMessageButtonsShown__72ffd,
+.keyboard-mode .accessoryMessageRow__72ffd:focus-within .userMessageButtons__72ffd,
+.mouse-mode .accessoryMessageRow__72ffd:hover .userMessageButtons__72ffd {
+    opacity: 1;
+    pointer-events: auto
 }
 
 .messageAccessoriesUnderProse__72ffd {
@@ -835,4 +858,4 @@
     display: inline
 }
 
-/*# sourceMappingURL=5dca4542ff3caada.css.map*/
+/*# sourceMappingURL=85db162cf6bc6871.css.map*/

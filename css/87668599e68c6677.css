@@ -398,6 +398,11 @@
     background: var(--background-mod-subtle)
 }
 
+.projectCardDeleting_f8194a {
+    opacity: .5;
+    pointer-events: none
+}
+
 .projectCardSelect_f8194a {
     align-items: center;
     align-self: stretch;
@@ -544,4 +549,4 @@
     text-align: center
 }
 
-/*# sourceMappingURL=d1914d1e2eaf92d9.css.map*/
+/*# sourceMappingURL=87668599e68c6677.css.map*/

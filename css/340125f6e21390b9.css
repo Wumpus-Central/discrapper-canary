@@ -119,7 +119,7 @@
     max-width: 100%;
     min-height: 100%;
     min-width: 0;
-    padding: var(--space-8) 0 0;
+    padding: var(--space-24) 0 0;
     width: 100%
 }
 
@@ -1285,4 +1285,4 @@
     transition: stroke-dashoffset .35s cubic-bezier(.22, 1, .36, 1)
 }
 
-/*# sourceMappingURL=9efa8c3169d57572.css.map*/
+/*# sourceMappingURL=340125f6e21390b9.css.map*/

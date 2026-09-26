@@ -1,6 +1,9 @@
 e.exports = {
     $4: "conjurMessage__72ffd",
     yE: "accessoryMessageRow__72ffd",
+    vg: "userMessageButtonsShown__72ffd",
+    QE: "userMessageButtons__72ffd",
+    Rn: "userMessageButtonsHeader__72ffd",
     x1: "messageAccessoriesUnderProse__72ffd",
     Yq: "messageAccessories__72ffd",
     st: "conjurBotAvatar__72ffd",

@@ -37,6 +37,7 @@ a.exports = {
     qx: "sharedProjects_f8194a",
     uc: "sharedProjectsHeading_f8194a",
     OY: "projectCard_f8194a",
+    Wy: "projectCardDeleting_f8194a",
     W6: "projectCardSelect_f8194a",
     VJ: "projectIcon_f8194a",
     a8: "projectIconPlaceholder_f8194a",
