@@ -500,6 +500,12 @@ let n = [
             "Starting Moderation Bot from a server it can be built in now skips the pick-a-server step; the bot is made for the server you are in.",
     },
     {
+        date: "2026-09-26",
+        time: "02:20",
+        platforms: ["desktop", "mobile"],
+        summary: "Task lists show a visible empty box beside every step still to come, instead of a blank gap.",
+    },
+    {
         date: "2026-09-23",
         time: "00:05",
         platforms: ["desktop", "mobile"],

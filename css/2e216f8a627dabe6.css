@@ -1144,7 +1144,7 @@
 
 .marker__97796 {
     background: transparent;
-    border: 1px solid var(--border-muted);
+    border: 1px solid var(--checkbox-border-default);
     border-radius: var(--radius-xs);
     box-sizing: border-box;
     display: grid;
@@ -1294,4 +1294,4 @@
     transition: stroke-dashoffset .35s cubic-bezier(.22, 1, .36, 1)
 }
 
-/*# sourceMappingURL=e796a7f5c0077d0c.css.map*/
+/*# sourceMappingURL=2e216f8a627dabe6.css.map*/
