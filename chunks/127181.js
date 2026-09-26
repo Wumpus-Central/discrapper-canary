@@ -189,6 +189,13 @@ let n = [
             "Hitting your project limit, or conjuring too fast, now says so instead of just asking you to try again.",
     },
     {
+        date: "2026-09-25",
+        time: "20:30",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "If Conjure restarts partway through a long task, it now picks up from its last step and keeps the steps it already showed you.",
+    },
+    {
         date: "2026-09-08",
         time: "00:02",
         platforms: ["desktop"],
