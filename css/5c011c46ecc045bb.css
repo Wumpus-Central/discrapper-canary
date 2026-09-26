@@ -361,9 +361,9 @@
     --custom-clarification-travel: 400ms;
     --custom-clarification-stagger: 100ms;
     --custom-clarification-distance: 16px;
-    -webkit-backdrop-filter: blur(20px);
-    backdrop-filter: blur(20px);
-    background: color-mix(in oklab, var(--background-base-low) 92%, transparent);
+    -webkit-backdrop-filter: blur(20px) var(--custom-vibegrations-glass-filter);
+    backdrop-filter: blur(20px) var(--custom-vibegrations-glass-filter);
+    background: var(--custom-vibegrations-glass-ground);
     border: 1px solid var(--border-muted);
     border-radius: var(--radius-sm);
     display: flex;
@@ -397,7 +397,7 @@
 
 .header_d0997e {
     align-items: center;
-    background: var(--background-mod-normal);
+    background: var(--background-mod-muted);
     border-bottom: 1px solid var(--border-muted);
     display: flex;
     gap: var(--space-8);
@@ -786,27 +786,20 @@
 }
 
 .banner_a7b103 {
-    max-width: 504px;
-    width: calc(100% - var(--space-32)*2)
-}
-
-.layer_a7b103 {
-    --custom-vibegrations-floating-ground: color-mix(in oklab, var(--background-base-low) 92%, transparent)
-}
-
-.banner_a7b103 {
     align-items: center;
-    -webkit-backdrop-filter: blur(28px);
-    backdrop-filter: blur(28px);
-    background: var(--custom-vibegrations-floating-ground);
+    -webkit-backdrop-filter: blur(28px) var(--custom-vibegrations-glass-filter);
+    backdrop-filter: blur(28px) var(--custom-vibegrations-glass-filter);
+    background: var(--custom-vibegrations-glass-ground);
     border: 1px solid var(--border-muted);
     border-radius: 100px;
     box-shadow: var(--shadow-medium);
     display: flex;
     gap: var(--space-8);
+    max-width: 504px;
     min-height: 56px;
     padding-block: var(--space-8);
-    padding-inline: 18px var(--space-12)
+    padding-inline: 18px var(--space-12);
+    width: calc(100% - var(--space-32)*2)
 }
 
 .bannerJump_a7b103 {
@@ -836,9 +829,9 @@
 }
 
 .tasks_a7b103 {
-    -webkit-backdrop-filter: blur(28px);
-    backdrop-filter: blur(28px);
-    background: var(--custom-vibegrations-floating-ground);
+    -webkit-backdrop-filter: blur(28px) var(--custom-vibegrations-glass-filter);
+    backdrop-filter: blur(28px) var(--custom-vibegrations-glass-filter);
+    background: var(--custom-vibegrations-glass-ground);
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-medium)
 }
@@ -918,28 +911,35 @@
 
 .chat_f35ad6 {
     box-sizing: border-box;
+    display: flex;
     flex: 1;
     flex-direction: column;
     gap: var(--space-4);
     max-width: 100%;
+    min-height: 0;
+    min-width: 0;
     overflow: hidden;
+    position: relative;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text;
-    width: 100%
+    width: 100%;
+    --custom-vibegrations-glass-ground: color-mix(in oklab, var(--background-base-low) 40%, transparent);
+    --custom-vibegrations-glass-filter: brightness(0.22) saturate(4)
 }
 
-.chat_f35ad6,
+.theme-light .chat_f35ad6 {
+    --custom-vibegrations-glass-ground: color-mix(in oklab, var(--background-base-low) 45%, transparent);
+    --custom-vibegrations-glass-filter: contrast(0.1) brightness(1.8) saturate(8)
+}
+
 .chatBody_f35ad6 {
     display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
     min-height: 0;
     min-width: 0;
     position: relative
-}
-
-.chatBody_f35ad6 {
-    flex: 1 1 auto;
-    flex-direction: column
 }
 
 .statusSlot_f35ad6 {
@@ -998,9 +998,9 @@
 }
 
 .settingsPanel_f35ad6 {
-    -webkit-backdrop-filter: blur(20px);
-    backdrop-filter: blur(20px);
-    background: color-mix(in oklab, var(--background-base-low) 92%, transparent);
+    -webkit-backdrop-filter: blur(20px) var(--custom-vibegrations-glass-filter);
+    backdrop-filter: blur(20px) var(--custom-vibegrations-glass-filter);
+    background: var(--custom-vibegrations-glass-ground);
     border: 1px solid var(--border-muted);
     border-radius: var(--radius-sm);
     box-sizing: border-box;
@@ -1185,4 +1185,4 @@
     white-space: nowrap
 }
 
-/*# sourceMappingURL=d44a406dd16ab5b4.css.map*/
+/*# sourceMappingURL=5c011c46ecc045bb.css.map*/
