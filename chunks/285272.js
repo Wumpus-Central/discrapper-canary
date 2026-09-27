@@ -367,7 +367,7 @@ function ex(e) {
             widgetApplicationId: c,
         } = e,
         f = (0, u.A)(t, r),
-        { isLoading: p } = (0, h.YY)(t ?? void 0);
+        { data: p, isLoading: v } = (0, h.YY)(t ?? void 0);
     if (
         (a.useEffect(() => {
             s?.type === "permissions" && null != f && (0, x.A)().leaveFrame(f.id);
@@ -382,11 +382,11 @@ function ex(e) {
         });
     if (!i) return (0, n.jsx)(M, { className: eh.q });
     if (null == t) return null;
-    if (p) return (0, n.jsx)("div", { className: eh.q, children: (0, n.jsx)(m.y, {}) });
-    let v = o.showModeSwitch && null != d ? { role: "tabpanel", id: (0, g.z3)(d), "aria-label": (0, g.kZ)(d) } : {};
+    if (v && null == p) return (0, n.jsx)("div", { className: eh.q, children: (0, n.jsx)(m.y, {}) });
+    let b = o.showModeSwitch && null != d ? { role: "tabpanel", id: (0, g.z3)(d), "aria-label": (0, g.kZ)(d) } : {};
     return (0, n.jsxs)("div", {
         className: eh.R,
-        ...v,
+        ...b,
         children: [
             ("frame" === d && o.modes.includes("frame")) || 0 === o.modes.length
                 ? (0, n.jsx)(F, { applicationId: t, surface: r })

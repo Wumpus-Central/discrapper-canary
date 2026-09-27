@@ -714,6 +714,12 @@ let n = [
             "Your app now has its own web address: pages people can open in a browser, a second address showing the version you are still working on, and a Sign in with Discord button that never asks anyone for a password.",
     },
     {
+        date: "2026-09-27",
+        time: "06:27",
+        platforms: ["desktop", "mobile"],
+        summary: "Your frame stays on screen while a new build deploys, and only blinks once to load it.",
+    },
+    {
         date: "2026-08-31",
         time: "00:01",
         platforms: ["desktop", "mobile"],
