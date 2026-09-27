@@ -553,6 +553,13 @@ let n = [
         summary: "Remix is now called Clone: same button, same copy of the app to make your own.",
     },
     {
+        date: "2026-09-27",
+        time: "21:38",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "Reopening an app shows what Conjure is recalling while your conversation loads, and a brand new app greets you straight away.",
+    },
+    {
         date: "2026-09-02",
         time: "00:01",
         platforms: ["desktop", "mobile"],

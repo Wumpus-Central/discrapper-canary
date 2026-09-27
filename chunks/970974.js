@@ -135,7 +135,7 @@ function eh() {
         ],
     });
 }
-var ef = a(400153);
+var ef = a(379677);
 function eg(e) {
     let { className: t, ariaLabel: a, disabled: n, onClick: s, children: l } = e;
     return (0, i.jsx)(f.D, { "aria-disabled": n, "aria-label": a, className: t, onClick: n ? void 0 : s, children: l });
@@ -360,8 +360,8 @@ var eZ = a(663417),
     e6 = a(7437),
     e1 = a(147036),
     e9 = a(957565),
-    e8 = a(123917),
-    e7 = a(557875);
+    e7 = a(123917),
+    e8 = a(557875);
 let e3 = new Set();
 var e5 = a(976814),
     e4 = a(746080),
@@ -396,20 +396,20 @@ function tn(e) {
             let [a, n] = s.useState(e3),
                 i = s.useRef(e3),
                 l = s.useCallback((e) => {
-                    ((i.current = (0, e7.Q6)(i.current, e)), n(i.current));
+                    ((i.current = (0, e8.Q6)(i.current, e)), n(i.current));
                 }, []);
             return {
                 pending: a,
                 connect: s.useCallback(
                     (a) => {
                         if (null == e) return;
-                        let s = (0, e7.K9)(i.current, a.type);
+                        let s = (0, e8.K9)(i.current, a.type);
                         async function o() {
                             let n = await (0, H.JI)(e, a.type);
                             (l(a.type), "url" === n.type)
-                                ? (0, e8.h)({ href: n.url, trusted: !1 })
+                                ? (0, e7.h)({ href: n.url, trusted: !1 })
                                 : t(
-                                      "setup" === (0, e7.rq)(n.error)
+                                      "setup" === (0, e8.rq)(n.error)
                                           ? Y.intl.string(X.default.avu1u4)
                                           : Y.intl.string(X.default["5fwOcF"]),
                                   );
@@ -453,7 +453,7 @@ function tn(e) {
         })({
             canRefresh: null != j,
             refreshPending: N,
-            offers: s.useMemo(() => (0, e7.Xl)(_), [_]),
+            offers: s.useMemo(() => (0, e8.Xl)(_), [_]),
             connectPending: E,
         }),
         R = s.useMemo(() => new Map(_.map((e) => [e.type, e])), [_]),
@@ -726,7 +726,7 @@ function th() {
             null != e &&
                 ("channel" === e.kind
                     ? (0, D.pX)(tc.BVt.CHANNEL(e.guildId, e.channelId))
-                    : (0, e8.h)({ href: e.url, trusted: !0 }));
+                    : (0, e7.h)({ href: e.url, trusted: !0 }));
         }, [e]);
     return null == e
         ? null
@@ -1211,11 +1211,11 @@ function tH(e) {
                     initialDraft: e,
                 }));
         }, [m, eb, eu, o, e1]),
-        e8 =
+        e7 =
             null != o && (0, eo.jf)(o)
                 ? (0, i.jsx)(x.$, { size: "sm", variant: "primary", loading: p, disabled: ew, onClick: e9, text: ek })
                 : null,
-        e7 = (0, i.jsx)(ts, {
+        e8 = (0, i.jsx)(ts, {
             title: o?.name ?? Y.intl.string(X.default.F2dRba),
             breadcrumb: { title: Y.intl.string(X.default.Xmvb23), onClick: d },
             actions:
@@ -1317,7 +1317,7 @@ function tH(e) {
                         ? (0, i.jsxs)("div", {
                               className: tL.j5,
                               children: [
-                                  e7,
+                                  e8,
                                   (0, i.jsxs)("div", {
                                       className: tL.sD,
                                       children: [
@@ -1348,10 +1348,10 @@ function tH(e) {
                                   applicationId: o.preview_application_id,
                                   previewApplicationId: o.preview_application_id,
                                   surface: tD.sd,
-                                  header: e7,
+                                  header: e8,
                                   chatOpen: f,
                                   onCloseChat: eA,
-                                  chatHeaderAction: e8,
+                                  chatHeaderAction: e7,
                                   versionHistoryOpen: b,
                                   onCloseVersionHistory: () => I(!1),
                                   restorePointsOpen: N,

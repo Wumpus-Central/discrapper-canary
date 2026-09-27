@@ -4403,35 +4403,35 @@ function nB(e) {
             null != Q && Y(Q.id);
         }, [Q]),
         ee = G || null != Z,
-        et = (0, D.bG)([eA.Ay], () => eA.Ay.hasLoadedHistory(r), [r]),
-        el = (0, D.bG)([eA.Ay], () => eA.Ay.isHistoryUnavailable(r), [r])
-            ? "unavailable"
-            : et
-              ? "greeting"
-              : "failed" === o || "closed" === o
-                ? "unavailable"
-                : "loading",
-        en = a.useMemo(() => {
+        et = (function (e) {
+            let { historyLoaded: t, historyUnavailable: l, connState: n } = e;
+            return l ? "unavailable" : t ? "greeting" : "failed" === n || "closed" === n ? "unavailable" : "loading";
+        })({
+            historyLoaded: (0, D.bG)([eA.Ay], () => eA.Ay.hasLoadedHistory(r), [r]),
+            historyUnavailable: (0, D.bG)([eA.Ay], () => eA.Ay.isHistoryUnavailable(r), [r]),
+            connState: o,
+        }),
+        el = a.useMemo(() => {
             let e = 0;
             for (let t = 0; t < r.length; t++) e = (31 * e + r.charCodeAt(t)) % 0x7fffffff;
             return nU[e % nU.length];
         }, [r]),
-        ea = O
+        en = O
             ? C.intl.string(E.default.Jj8Ftb)
             : $?.kind === "plan_implemented"
               ? C.intl.string(E.default["3sTTBu"])
-              : "greeting" === el && 0 === s.length
-                ? en
+              : "greeting" === et && 0 === s.length
+                ? el
                 : null,
-        er = a.useMemo(() => {
+        ea = a.useMemo(() => {
             for (let e = s.length - 1; e >= 0; e--) {
                 let t = s[e];
                 if ("assistant" === t.role && !(0, eA.BL)(t)) return t;
             }
         }, [s]),
-        ei = null != er,
-        es =
-            null != er
+        er = null != ea,
+        ei =
+            null != ea
                 ? (function (e) {
                       let t = e.turn_id ?? e.steps.find((e) => null != e.turn_id)?.turn_id;
                       if (null != t && /^\d+$/.test(t)) {
@@ -4439,16 +4439,16 @@ function nB(e) {
                           if (Number.isFinite(e) && e > 0) return e;
                       }
                       return e.created_at;
-                  })(er)
+                  })(ea)
                 : void 0,
-        eo = O && F ? _ : void 0,
-        eu = a.useCallback(() => A(C.intl.string(E.default.ga8too)), [A]),
-        ed = O && F,
-        [ec, ef] = a.useState(null),
-        [em, eh] = a.useState(ei);
-    (em !== ei && (eh(ei), ei || ef(null)),
+        es = O && F ? _ : void 0,
+        eo = a.useCallback(() => A(C.intl.string(E.default.ga8too)), [A]),
+        eu = O && F,
+        [ed, ec] = a.useState(null),
+        [ef, em] = a.useState(er);
+    (ef !== er && (em(er), er || ec(null)),
         a.useEffect(() => {
-            if (!ei) return;
+            if (!er) return;
             let e = x.current?.getScrollerNode(),
                 t = e?.querySelector('[data-vibegrations-turn-status="true"][data-live="true"]');
             if (null == e || null == t) return;
@@ -4456,21 +4456,21 @@ function nB(e) {
                 (e) => {
                     let [t] = e;
                     null == t || t.isIntersecting || null == t.rootBounds
-                        ? ef(null)
-                        : ef(t.boundingClientRect.top < t.rootBounds.top ? "top" : "bottom");
+                        ? ec(null)
+                        : ec(t.boundingClientRect.top < t.rootBounds.top ? "top" : "bottom");
                 },
                 { root: e, threshold: 0 },
             );
             return (l.observe(t), () => l.disconnect());
-        }, [ei, er?.steps]));
-    let eg = a.useMemo(() => (null != er ? (0, eT.b)(er.steps) : ""), [er]),
-        ex = a.useMemo(() => (null != er ? ((0, ew.lt)(er.steps) ?? er.todos) : void 0), [er]),
-        ep = er?.provisionalTodo,
-        ev = null != er && eS(er),
-        eb = a.useMemo(() => {
+        }, [er, ea?.steps]));
+    let eh = a.useMemo(() => (null != ea ? (0, eT.b)(ea.steps) : ""), [ea]),
+        eg = a.useMemo(() => (null != ea ? ((0, ew.lt)(ea.steps) ?? ea.todos) : void 0), [ea]),
+        ex = ea?.provisionalTodo,
+        ep = null != ea && eS(ea),
+        ev = a.useMemo(() => {
             var e;
-            return null != er ? ((e = er.steps), tA((0, ew.GO)(e, { turnActive: !0 }).tasks)) : void 0;
-        }, [er]);
+            return null != ea ? ((e = ea.steps), tA((0, ew.GO)(e, { turnActive: !0 }).tasks)) : void 0;
+        }, [ea]);
     return (0, n.jsxs)("section", {
         ref: g,
         "data-vibegrations-chat": !0,
@@ -4478,12 +4478,12 @@ function nB(e) {
         children: [
             (0, n.jsx)(nD, {
                 onJumpToActivity: k,
-                line: eg,
-                placement: ei && "top" === ec ? "top" : null,
-                todos: ex,
-                todosLive: ev,
-                provisionalTodo: ep,
-                agents: eb,
+                line: eh,
+                placement: er && "top" === ed ? "top" : null,
+                todos: eg,
+                todosLive: ep,
+                provisionalTodo: ex,
+                agents: ev,
             }),
             (0, n.jsxs)("div", {
                 className: nz.JX,
@@ -4496,20 +4496,20 @@ function nB(e) {
                             ref: p,
                             projectId: r,
                             messages: s,
-                            emptyState: el,
+                            emptyState: et,
                             floatingSettingsMessageId: Q?.id,
                             onPickIdea: F ? T : void 0,
-                            onApprovePlan: ed ? eu : void 0,
+                            onApprovePlan: eu ? eo : void 0,
                         }),
                     }),
                     (0, n.jsx)("div", {
                         className: nz.NJ,
                         children: (0, n.jsx)(nA, {
                             projectId: r,
-                            thinking: ei,
-                            turnStartedAt: es,
+                            thinking: er,
+                            turnStartedAt: ei,
                             restoring: L,
-                            recalling: "loading" === el && 0 === s.length,
+                            recalling: "loading" === et && 0 === s.length,
                             thinkingActivity: c,
                             compacting: m,
                             projectUsage: d,
@@ -4542,12 +4542,12 @@ function nB(e) {
                 children: [
                     (0, n.jsx)(nD, {
                         onJumpToActivity: k,
-                        line: eg,
-                        placement: ei && "bottom" === ec ? "bottom" : null,
-                        todos: ex,
-                        todosLive: ev,
-                        provisionalTodo: ep,
-                        agents: eb,
+                        line: eh,
+                        placement: er && "bottom" === ed ? "bottom" : null,
+                        todos: eg,
+                        todosLive: ep,
+                        provisionalTodo: ex,
+                        agents: ev,
                     }),
                     0 === w.annotations.length
                         ? null
@@ -4579,14 +4579,14 @@ function nB(e) {
                         projectId: r,
                         canSend: F,
                         stopped: u,
-                        running: ei,
+                        running: er,
                         restoring: L,
                         onSend: S,
                         hasPendingContext: w.annotations.length > 0,
                         onInterrupt: F ? I : void 0,
                         onUploadFile: P,
-                        onApprove: eo,
-                        suggestion: ea,
+                        onApprove: es,
+                        suggestion: en,
                         questionOpen: null != U || null != Z,
                         tipOpen: G,
                         onDismissTip: V,
