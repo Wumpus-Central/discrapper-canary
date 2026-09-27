@@ -755,6 +755,13 @@ let n = [
     },
     {
         date: "2026-09-27",
+        time: "20:05",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "Your app's icon, name and description now travel with the project: an export includes them, and importing that export brings them back.",
+    },
+    {
+        date: "2026-09-27",
         time: "06:27",
         platforms: ["desktop", "mobile"],
         summary: "Your frame stays on screen while a new build deploys, and only blinks once to load it.",
