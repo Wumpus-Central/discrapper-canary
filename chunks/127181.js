@@ -135,6 +135,13 @@ let n = [
         summary: "Conjure can search the web and read pages, so it checks current docs and APIs instead of guessing.",
     },
     {
+        date: "2026-09-27",
+        time: "17:58",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "Conjure now follows the AGENTS.md notes in your project and the skills you add under .discord/skills, including running their JavaScript helpers.",
+    },
+    {
         date: "2026-09-26",
         time: "01:40",
         platforms: ["desktop", "mobile"],
