@@ -115,6 +115,13 @@ let n = [
             "Cloned an app? When the original improves, Conjure offers to update your copy while keeping every change you made, only checking with you on the rare spot it cannot keep both. You can also ask it to inherit updates from another app by its project id, even for a project you imported rather than cloned.",
     },
     {
+        date: "2026-09-27",
+        time: "09:51",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "Coding tools you connect to an app can now search and script its files, read the Mana docs, set its settings, public pages and icon, use your uploads, and bring in updates from the original, and a broken manifest edit is caught before it deploys.",
+    },
+    {
         date: "2026-09-06",
         time: "00:01",
         platforms: ["desktop"],
