@@ -1396,7 +1396,7 @@ function ty(e) {
                                             : e.text,
                                 }),
                             }),
-                            (0, n.jsx)(tj, { agents: d.get(e.id) ?? tv, active: "in_progress" === l }),
+                            (0, n.jsx)(tj, { agents: d.get(e.id) ?? tv, active: "completed" !== l }),
                         ],
                     },
                     e.id,
