@@ -342,6 +342,7 @@ async function x(e, t) {
                             projectId: t,
                             entries: o,
                             cursor: !0 === r.has_more ? (r.cursor ?? null) : null,
+                            degraded: !0 === r.degraded,
                         }),
                             er.delete(t),
                             (u = t),

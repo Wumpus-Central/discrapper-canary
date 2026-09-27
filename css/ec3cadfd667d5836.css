@@ -147,6 +147,20 @@
     transition: background-color .6s ease-out
 }
 
+.historySkeleton__2b71e {
+    pointer-events: none
+}
+
+.full-motion .historySkeleton__2b71e {
+    animation: history-skeleton-pulse__2b71e 1.6s ease-in-out infinite
+}
+
+@keyframes history-skeleton-pulse__2b71e {
+    50% {
+        opacity: .5
+    }
+}
+
 .chatRowHighlighted__2b71e {
     background: var(--message-highlight-background-default);
     border-radius: var(--radius-xs);
@@ -1285,4 +1299,4 @@
     transition: stroke-dashoffset .35s cubic-bezier(.22, 1, .36, 1)
 }
 
-/*# sourceMappingURL=340125f6e21390b9.css.map*/
+/*# sourceMappingURL=ec3cadfd667d5836.css.map*/
