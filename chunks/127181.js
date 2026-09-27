@@ -678,6 +678,13 @@ let n = [
             'When something breaks behind the scenes, people using your app now see a plain "Something went wrong" message instead of internal error text.',
     },
     {
+        date: "2026-09-27",
+        time: "05:47",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "When the app keeps crashing after a request, Conjure notices and fixes it on its own, even while you are away.",
+    },
+    {
         date: "2026-09-22",
         time: "00:05",
         platforms: ["desktop"],
