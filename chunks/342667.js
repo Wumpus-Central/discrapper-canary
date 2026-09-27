@@ -1,7 +1,15 @@
 e.exports = {
     om: "block_cee34d",
-    A1: "noticeArea_cee34d",
-    lm: "notice_cee34d",
-    Nq: "noticePublished_cee34d",
+    kf: "vibegrations-control-glow_cee34d",
+    D: "barArea_cee34d",
+    M0: "bar_cee34d",
+    zd: "vibegrations-control-bar-enter_cee34d",
+    Or: "vibegrations-control-bar-sheen_cee34d",
+    Kq: "vibegrations-control-bar-leave_cee34d",
+    sp: "barStatus_cee34d",
+    f4: "barCopy_cee34d",
+    Rb: "barDetail_cee34d",
+    w9: "barTitle_cee34d",
+    lC: "barActions_cee34d",
     y4: "announcer_cee34d",
 };

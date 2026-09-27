@@ -659,6 +659,13 @@ let n = [
             "When your app needs a setting before it can carry on, the form now appears right in the chat, so you fill it in without opening a dialog.",
     },
     {
+        date: "2026-09-26",
+        time: "01:46",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "While Conjure is testing your app, a blue bar across the top of your Frame says so and lets you stop it, a cursor shows every move and click it makes, and the chat keeps a line saying how long the test took.",
+    },
+    {
         date: "2026-09-24",
         time: "00:02",
         platforms: ["desktop", "mobile"],

@@ -10,8 +10,8 @@ var i = n(264686),
 var d = n(141931),
     c = n(941426),
     f = n(475735),
-    p = n(25578),
-    h = n(731854);
+    h = n(25578),
+    p = n(731854);
 let _ = new c.Vy("VibegrationsNativeCapture");
 function g(e, t) {
     return (_.verbose(`native capture not used: ${e}`, t ?? {}), null);
@@ -27,7 +27,7 @@ function w(e) {
         ? null
         : t;
 }
-async function m(e) {
+async function E(e) {
     let t = window.DiscordNative,
         n = await t?.window?.getMediaSourceId?.();
     if (null == n) return g("no media source id for our own window");
@@ -40,8 +40,8 @@ async function m(e) {
         ),
         l = Math.ceil(window.outerWidth * r),
         o = Math.ceil(window.outerHeight * r),
-        s = p.Ay.getMediaEngine();
-    if (s.supports(h.O5.WINDOW_PREVIEWS))
+        s = h.Ay.getMediaEngine();
+    if (s.supports(p.O5.WINDOW_PREVIEWS))
         try {
             let e = f.O.getConfig({ location: "vibegrationsNativeCapture" }).enabled,
                 t = await s.getSingleWindowPreview(i, l, o, e);
@@ -54,7 +54,7 @@ async function m(e) {
         a = u?.find((e) => e.id.split(":")[1] === i);
     return null == a || "" === a.url ? g("own window missing from capture sources") : a.url;
 }
-async function E() {
+async function m() {
     let e = document.createElement("div");
     return (
         (e.style.cssText =
@@ -64,7 +64,7 @@ async function E() {
         () => e.remove()
     );
 }
-async function I(e, t, n) {
+async function T(e, t, n) {
     let i = new Image();
     if (((i.decoding = "async"), (i.src = e), await i.decode(), 0 === i.naturalWidth || 0 === i.naturalHeight))
         return g("window still decoded empty");
@@ -103,20 +103,20 @@ async function I(e, t, n) {
     if (a < 1 || d < 1) return g("crop resolved empty");
     let c = Math.min(1, 1568 / Math.max(a, d), Math.sqrt(115e4 / (a * d))),
         f = Math.max(1, Math.round(a * c)),
-        p = Math.max(1, Math.round(d * c)),
-        h = document.createElement("canvas");
-    ((h.width = f), (h.height = p));
-    let _ = h.getContext("2d");
+        h = Math.max(1, Math.round(d * c)),
+        p = document.createElement("canvas");
+    ((p.width = f), (p.height = h));
+    let _ = p.getContext("2d");
     if (null == _) return g("no 2d context");
-    _.drawImage(i, s, u, a, d, 0, 0, f, p);
-    let w = await new Promise((e) => h.toBlob(e, "image/webp", 0.92));
+    _.drawImage(i, s, u, a, d, 0, 0, f, h);
+    let w = await new Promise((e) => p.toBlob(e, "image/webp", 0.92));
     return null == w || "image/webp" !== w.type
         ? g("webp encode failed")
         : w.size > 5242880
           ? g("encoded capture too large", { bytes: w.size })
-          : { blob: w, scale: (f / t.width + p / t.height) / 2 };
+          : { blob: w, scale: (f / t.width + h / t.height) / 2 };
 }
-async function T(e, t) {
+async function I(e, t) {
     try {
         var n, i, r;
         let l;
@@ -170,9 +170,9 @@ async function T(e, t) {
                 x: Math.max(0, window.outerWidth - window.innerWidth),
                 y: Math.max(0, window.outerHeight - window.innerHeight),
             },
-            u = s.x > 2 || s.y > 2 ? await E() : null;
+            u = s.x > 2 || s.y > 2 ? await m() : null;
         try {
-            l = await m(o);
+            l = await E(o);
         } finally {
             u?.();
         }
@@ -186,7 +186,7 @@ async function T(e, t) {
             Math.abs(a.height - o.height) > 1
         )
             return g("frame moved or resized during capture");
-        let d = await I(l, o, s);
+        let d = await T(l, o, s);
         if (null == d) return null;
         let c = (function (e) {
             try {
@@ -212,15 +212,15 @@ async function T(e, t) {
                 ...(null == t.build ? {} : { build: t.build }),
                 source: "native",
             },
-            p = {
+            h = {
                 "content-type": d.blob.type,
                 "x-vibegrations-capture-id": t.captureId,
                 "x-vibegrations-capture-meta": encodeURIComponent(JSON.stringify(f)),
             };
-        (null != t.build && (p["x-vibegrations-build"] = t.build),
-            null != t.uploadToken && (p["x-vibegrations-capture-token"] = t.uploadToken));
-        let h = await fetch(c, { method: "POST", headers: p, body: d.blob });
-        if (!h.ok) return g("upload refused", { status: h.status });
+        (null != t.build && (h["x-vibegrations-build"] = t.build),
+            null != t.uploadToken && (h["x-vibegrations-capture-token"] = t.uploadToken));
+        let p = await fetch(c, { method: "POST", headers: h, body: d.blob });
+        if (!p.ok) return g("upload refused", { status: p.status });
         return (
             _.verbose("native capture uploaded", { id: t.captureId, bytes: d.blob.size, scale: f.scale }),
             { status: "accepted" }
@@ -231,19 +231,20 @@ async function T(e, t) {
 }
 var A = n(120426),
     S = n(320510),
-    v = n(227189),
+    R = n(227189),
+    v = n(940107),
     y = n(171936),
-    R = n(809685),
-    O = n(777977),
-    b = n(484697);
+    O = n(809685),
+    b = n(777977),
+    k = n(484697);
 (n(321073), n(667532));
-var k = n(112420),
-    N = n(652215);
+var N = n(112420),
+    P = n(652215);
 function C(e) {
     return "string" == typeof e && "" !== e ? e : void 0;
 }
-let P = {
-    [N.e$_.OPEN_CONTEXT_MENU]: (e, t) => {
+let M = {
+    [P.e$_.OPEN_CONTEXT_MENU]: (e, t) => {
         let n = "custom" === e.args.type,
             i = n
                 ? (function e(t) {
@@ -271,7 +272,7 @@ let P = {
                     }
             : { result: { opened: !0 }, answered: "opened, no selection to make" };
     },
-    [N.e$_.SHOW_CONFIRM_MODAL]: (e, t) => {
+    [P.e$_.SHOW_CONFIRM_MODAL]: (e, t) => {
         let n = !0 === t.confirm,
             i = C(e.args.title);
         return {
@@ -280,32 +281,32 @@ let P = {
             subject: i,
         };
     },
-    [N.e$_.OPEN_EXTERNAL_LINK]: (e) => ({
+    [P.e$_.OPEN_EXTERNAL_LINK]: (e) => ({
         result: { opened: !1 },
         answered: "cancelled \u2014 an agent may not open external links",
         subject: C(e.args.url),
     }),
-    [N.e$_.SHARE_CONTENT]: (e) => ({
+    [P.e$_.SHARE_CONTENT]: (e) => ({
         result: { success: !1, didCopyLink: !1, didSendMessage: !1 },
         answered: "closed without sharing \u2014 an agent may not send a message for the user",
         subject: C(e.args.preview_title) ?? C(e.args.content),
     }),
-    [N.e$_.OPEN_USER_PROFILE]: () => ({ result: { opened: !0 }, answered: "opened" }),
-    [N.e$_.OPEN_USER_POPOUT]: () => ({ result: { opened: !0 }, answered: "opened" }),
-    [N.e$_.SHOW_TOOLTIP]: () => ({ result: { shown: !0 }, answered: "shown" }),
-    [N.e$_.HIDE_TOOLTIP]: () => ({ result: { hidden: !0 }, answered: "hidden" }),
-    [N.e$_.OPEN_MEDIA_VIEWER]: () => ({ result: { opened: !0 }, answered: "opened" }),
-    [N.e$_.SHOW_TOAST]: () => ({ result: { shown: !0 }, answered: "shown" }),
-    [N.e$_.OPEN_INVITE_DIALOG]: () => ({ result: void 0, answered: "opened" }),
-    [N.e$_.OPEN_SHARE_MOMENT_DIALOG]: () => ({ result: void 0, answered: "opened" }),
+    [P.e$_.OPEN_USER_PROFILE]: () => ({ result: { opened: !0 }, answered: "opened" }),
+    [P.e$_.OPEN_USER_POPOUT]: () => ({ result: { opened: !0 }, answered: "opened" }),
+    [P.e$_.SHOW_TOOLTIP]: () => ({ result: { shown: !0 }, answered: "shown" }),
+    [P.e$_.HIDE_TOOLTIP]: () => ({ result: { hidden: !0 }, answered: "hidden" }),
+    [P.e$_.OPEN_MEDIA_VIEWER]: () => ({ result: { opened: !0 }, answered: "opened" }),
+    [P.e$_.SHOW_TOAST]: () => ({ result: { shown: !0 }, answered: "shown" }),
+    [P.e$_.OPEN_INVITE_DIALOG]: () => ({ result: void 0, answered: "opened" }),
+    [P.e$_.OPEN_SHARE_MOMENT_DIALOG]: () => ({ result: void 0, answered: "opened" }),
 };
-Object.keys(P);
-let M = { drain: () => [], end: () => {}, iframeId: null },
-    B = [];
-function L(e) {
-    let t = B.find((t) => t.iframeId === e.iframeId);
+Object.keys(M);
+let B = { drain: () => [], end: () => {}, iframeId: null },
+    L = [];
+function D(e) {
+    let t = L.find((t) => t.iframeId === e.iframeId);
     if (null == t) return null;
-    let n = P[e.cmd];
+    let n = M[e.cmd];
     if (null == n) return null;
     let { result: i, answered: r, options: l, subject: o } = n(e, t.answers);
     return (
@@ -319,38 +320,38 @@ function L(e) {
         { result: i }
     );
 }
-function D(e) {
+function G(e) {
     let t = e.contentWindow;
-    return null == t ? null : ((0, b.lw)(t) ?? null);
+    return null == t ? null : ((0, k.lw)(t) ?? null);
 }
-function G(e, t, n) {
-    var i = D(e);
-    if (null == i) return M;
+function V(e, t, n) {
+    var i = G(e);
+    if (null == i) return B;
     let r = { iframeId: i, answers: t ?? {}, recorded: [] };
     return (
-        n?.beneathBatches === !0 ? B.push(r) : B.unshift(r),
-        1 === B.length && (0, k.C)(L),
+        n?.beneathBatches === !0 ? L.push(r) : L.unshift(r),
+        1 === L.length && (0, N.C)(D),
         {
             iframeId: i,
             drain: () => r.recorded.splice(0, r.recorded.length),
             end: () => {
-                let e = B.indexOf(r);
-                -1 !== e && (B.splice(e, 1), 0 === B.length && (0, k.C)(null));
+                let e = L.indexOf(r);
+                -1 !== e && (L.splice(e, 1), 0 === L.length && (0, N.C)(null));
             },
         }
     );
 }
-var V = n(948230),
-    H = n(805332),
-    x = n(796036);
-function F(e) {
+var H = n(948230),
+    x = n(805332),
+    F = n(796036);
+function U(e) {
     let t = (0, y.J8)(e);
     if (null == t) return null;
     let n = t.getBoundingClientRect();
     return n.width < 1 || n.height < 1 ? null : { width: Math.round(n.width), height: Math.round(n.height) };
 }
-async function U(e, t) {
-    let n = F(e);
+async function W(e, t) {
+    let n = U(e);
     if (null == n)
         return {
             ok: !1,
@@ -360,7 +361,7 @@ async function U(e, t) {
             code: "unavailable",
             message: "no preview frame is on screen for this project",
         };
-    if (null == H.A.getBuilderPreviewApplicationId() && !(0, x.h)(e))
+    if (null == x.A.getBuilderPreviewApplicationId() && !(0, F.h)(e))
         return {
             ok: !1,
             mode: t,
@@ -369,11 +370,11 @@ async function U(e, t) {
             message:
                 "the phone/desktop lens is the Conjure builder header's, and this preview is not the builder screen's \u2014 open the app preview there to switch it",
         };
-    (0, V.GG)("phone" === t);
+    (0, H.GG)("phone" === t);
     let i = Date.now() + 2e3;
     for (;;) {
         var r;
-        let l = F(e);
+        let l = U(e);
         if (null != l && ((r = l.width), "phone" === t ? 60 >= Math.abs(r - 390) : r >= 520))
             return { ok: !0, mode: t, ...l };
         if (Date.now() >= i)
@@ -388,47 +389,47 @@ async function U(e, t) {
     }
 }
 n(762399);
-var W = n(559676);
-function j(e, t) {
+var j = n(559676);
+function q(e, t) {
     try {
         t();
     } catch (t) {
         console.error(`[vibegrations] preview native surfaces: ${e} failed`, t);
     }
 }
-var q = n(165610);
-async function $(e) {
+var $ = n(165610);
+async function J(e) {
     let { onClose: t, ...i } = e,
         { openOAuth2Modal: r } = await Promise.resolve().then(n.bind(n, 887909));
-    r((0, v.p)(i), t);
+    r((0, R.p)(i), t);
 }
-async function J(e, t, n) {
+async function z(e, t, n) {
     let { probe: i, spec: r, build: l, onAccepted: o } = n ?? {};
     if (!0 === i) return { status: (0, y.EA)(e) ? "accepted" : "unavailable" };
     let s = await (0, y.ZW)(e, 6e3);
     if (null == s) return { status: "unavailable" };
     let u = null == o ? { uploadToken: void 0 } : await o();
     if (null == u) return { status: "unavailable" };
-    let a = await T(s, { captureId: t, spec: r, build: l, uploadToken: u.uploadToken });
+    let a = await I(s, { captureId: t, spec: r, build: l, uploadToken: u.uploadToken });
     return null != a ? a : await (0, A.x)(s, t, r, u.uploadToken);
 }
-async function z(e, t, n, i) {
+async function Y(e, t, n, i) {
     if (!(0, y.EA)(e)) return { status: "unavailable" };
-    let r = (0, W.t_)(e);
+    let r = (0, j.t_)(e);
     try {
         let r = await (0, y.ZW)(e, 6e3);
         if (null == r) return { status: "unavailable" };
         let l = await i?.();
         if (!1 === l) return { status: "unavailable" };
         if (null != n.viewport) {
-            let t = await U(e, n.viewport);
+            let t = await W(e, n.viewport);
             if (!t.ok) return { status: "failed", message: t.message ?? "the preview lens did not change" };
         }
-        let o = G(r, n.native);
+        let o = V(r, n.native);
         try {
             let i = await (0, S.S)(r, t, n);
             if ("completed" !== i.status) return i;
-            let l = [...Y.drain(e), ...o.drain()];
+            let l = [...K.drain(e), ...o.drain()];
             if (0 === l.length) return i;
             return { ...i, response: { ...i.response, native: l } };
         } finally {
@@ -438,98 +439,105 @@ async function z(e, t, n, i) {
         r();
     }
 }
-let Y = (function (e) {
-        let t = new Map();
-        function n(e) {
-            let n = t.get(e);
-            (null != n && (t.delete(e), j("closing the operation session", () => n.end())), (0, W.Rh)(e));
-        }
-        return {
-            begin: function (i) {
-                (0, W.BP)(i);
-                let r = e(i);
-                if (null == r) return;
-                let l = t.get(i);
-                if (null != l) {
-                    if (null != l.iframeId && l.iframeId === r.identity) return;
-                    (t.delete(i), j("replacing a stale operation session", () => l.end()));
-                }
-                (j("dismissing what was left standing", () => r.dismiss()),
-                    j("opening the operation session", () => {
-                        let e = r.open(),
-                            l = (0, W.FQ)(() => {
-                                (0, W.RW)(i) || n(i);
-                            });
-                        t.set(i, {
-                            iframeId: e.iframeId,
-                            drain: () => e.drain(),
-                            end: () => {
-                                (l(), e.end());
-                            },
+let K = (function (e) {
+    let t = new Map();
+    function n(e) {
+        let n = t.get(e);
+        (null != n && (t.delete(e), q("closing the operation session", () => n.end())), (0, j.Rh)(e));
+    }
+    return {
+        begin: function (i) {
+            (0, j.BP)(i);
+            let r = e(i);
+            if (null == r) return;
+            let l = t.get(i);
+            if (null != l) {
+                if (null != l.iframeId && l.iframeId === r.identity) return;
+                (t.delete(i), q("replacing a stale operation session", () => l.end()));
+            }
+            (q("dismissing what was left standing", () => r.dismiss()),
+                q("opening the operation session", () => {
+                    let e = r.open(),
+                        l = (0, j.FQ)(() => {
+                            (0, j.RW)(i) || n(i);
                         });
-                    }));
-            },
-            end: n,
-            drain: (e) => t.get(e)?.drain() ?? [],
-        };
-    })((e) => {
-        let t = (0, y.J8)(e);
-        return null == t
-            ? null
-            : {
-                  identity: D(t),
-                  dismiss: () =>
-                      (function (e) {
-                          let t = e.contentWindow;
-                          if (null == t) return;
-                          let n = (0, b.lw)(t);
-                          null != n && ((0, R.ir)(n), (0, O.OR)(n));
-                      })(t),
-                  open: () => G(t, void 0, { beneathBatches: !0 }),
-              };
-    }),
-    X = {
-        openVibegrationsAppInstallModal: $,
-        isWindowFocused: function () {
-            return u.A.isFocused();
+                    t.set(i, {
+                        iframeId: e.iframeId,
+                        drain: () => e.drain(),
+                        end: () => {
+                            (l(), e.end());
+                        },
+                    });
+                }));
         },
-        areTurnNotificationsDisabled: function () {
-            return s.A.getDesktopType() === N.nRU.NEVER;
-        },
-        presentTurnNotification: function (e) {
-            let { projectId: t, title: r, body: l, route: s, sound: u, volume: d } = e;
-            i.default.showNotification(
-                n(608598),
-                r,
-                l,
-                { notif_type: "VIBEGRATIONS_ASSISTANT_FINISHED" },
-                {
-                    tag: `vibegrations-${t}`,
-                    sound: u,
-                    volume: d,
-                    fallbackDeepLink: null == s ? void 0 : (0, a.I)(s),
-                    onClick: null == s ? void 0 : () => (0, o.pX)(s),
-                    isUserAvatar: !1,
-                },
-            );
-        },
-        relayPreviewCapture: J,
-        relayPreviewControl: z,
-        beginPreviewOperation: function (e) {
-            Y.begin(e);
-        },
-        endPreviewOperation: function (e) {
-            Y.end(e);
-        },
-        releasePreviewControl: function (e) {
-            (0, W.xm)(e);
-        },
-        reloadAppFrames: function (e) {
-            if (null != e)
-                for (let t of l.A.getAllFrames())
-                    (0, q.x1)(t) &&
-                        t.applicationId === e &&
-                        !t.data.proxyTicketRefreshing &&
-                        r.A.refreshProxyTicket(t.id);
-        },
+        end: n,
+        drain: (e) => t.get(e)?.drain() ?? [],
     };
+})((e) => {
+    let t = (0, y.J8)(e);
+    return null == t
+        ? null
+        : {
+              identity: G(t),
+              dismiss: () =>
+                  (function (e) {
+                      let t = e.contentWindow;
+                      if (null == t) return;
+                      let n = (0, k.lw)(t);
+                      null != n && ((0, O.ir)(n), (0, b.OR)(n));
+                  })(t),
+              open: () => V(t, void 0, { beneathBatches: !0 }),
+          };
+});
+(0, j.Qg)((e) => {
+    let t = (0, y.J8)(e);
+    null != t &&
+        (0, v.W)(
+            t,
+            "control-end",
+            {},
+            { timeoutMs: 2e3, retryMs: 400, sourceMatch: "origin", label: "control end" },
+        ).catch(() => {});
+});
+let X = {
+    openVibegrationsAppInstallModal: J,
+    isWindowFocused: function () {
+        return u.A.isFocused();
+    },
+    areTurnNotificationsDisabled: function () {
+        return s.A.getDesktopType() === P.nRU.NEVER;
+    },
+    presentTurnNotification: function (e) {
+        let { projectId: t, title: r, body: l, route: s, sound: u, volume: d } = e;
+        i.default.showNotification(
+            n(608598),
+            r,
+            l,
+            { notif_type: "VIBEGRATIONS_ASSISTANT_FINISHED" },
+            {
+                tag: `vibegrations-${t}`,
+                sound: u,
+                volume: d,
+                fallbackDeepLink: null == s ? void 0 : (0, a.I)(s),
+                onClick: null == s ? void 0 : () => (0, o.pX)(s),
+                isUserAvatar: !1,
+            },
+        );
+    },
+    relayPreviewCapture: z,
+    relayPreviewControl: Y,
+    beginPreviewOperation: function (e) {
+        K.begin(e);
+    },
+    endPreviewOperation: function (e) {
+        K.end(e);
+    },
+    releasePreviewControl: function (e) {
+        (0, j.xm)(e);
+    },
+    reloadAppFrames: function (e) {
+        if (null != e)
+            for (let t of l.A.getAllFrames())
+                (0, $.x1)(t) && t.applicationId === e && !t.data.proxyTicketRefreshing && r.A.refreshProxyTicket(t.id);
+    },
+};

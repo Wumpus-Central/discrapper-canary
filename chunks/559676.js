@@ -1,8 +1,19 @@
-n.d(t, { BP: () => a, FQ: () => h, RW: () => f, Rh: () => d, k: () => p, o4: () => _, t_: () => s, xm: () => c });
+n.d(t, {
+    BP: () => c,
+    FQ: () => g,
+    Qg: () => w,
+    RW: () => p,
+    Rh: () => f,
+    k: () => _,
+    o4: () => E,
+    t_: () => a,
+    xm: () => h,
+});
 var i = n(582128);
 let r = new Map(),
-    l = new Set();
-function o() {
+    l = new Set(),
+    o = new Set();
+function s() {
     for (let e of [...l])
         try {
             e();
@@ -10,7 +21,15 @@ function o() {
             console.error("[vibegrations] control lease subscriber threw", e);
         }
 }
-function s(e) {
+function u(e) {
+    for (let t of [...o])
+        try {
+            t(e);
+        } catch (e) {
+            console.error("[vibegrations] control release subscriber threw", e);
+        }
+}
+function a(e) {
     let t = r.get(e) ?? { holders: 0, timers: new Set() };
     ((t.holders += 1), r.set(e, t));
     let n = !1,
@@ -18,45 +37,45 @@ function s(e) {
             (console.warn("[vibegrations] control lease expired without release", { projectId: e }), l());
         }, 35e3);
     function l() {
-        n ||
-            ((n = !0),
-            clearTimeout(i),
-            r.get(e) === t && (t.timers.delete(i), (t.holders -= 1), t.holders <= 0 && r.delete(e), o()));
+        if (n || ((n = !0), clearTimeout(i), r.get(e) !== t)) return;
+        (t.timers.delete(i), (t.holders -= 1));
+        let l = t.holders <= 0;
+        (l && r.delete(e), s(), l && u(e));
     }
-    return (t.timers.add(i), o(), l);
+    return (t.timers.add(i), s(), l);
 }
-let u = new Map();
-function a(e) {
-    let t = u.get(e),
-        n = setTimeout(() => d(e), 2e4);
+let d = new Map();
+function c(e) {
+    let t = d.get(e),
+        n = setTimeout(() => f(e), 2e4);
     if (null != t) {
         clearTimeout(t.timer);
-        let i = s(e);
-        (t.release(), u.set(e, { release: i, timer: n }));
+        let i = a(e);
+        (t.release(), d.set(e, { release: i, timer: n }));
         return;
     }
-    u.set(e, { release: s(e), timer: n });
+    d.set(e, { release: a(e), timer: n });
 }
-function d(e) {
-    let t = u.get(e);
-    null != t && (u.delete(e), clearTimeout(t.timer), t.release());
+function f(e) {
+    let t = d.get(e);
+    null != t && (d.delete(e), clearTimeout(t.timer), t.release());
 }
-function c(e) {
-    let t = u.get(e);
-    null != t && (u.delete(e), clearTimeout(t.timer));
+function h(e) {
+    let t = d.get(e);
+    null != t && (d.delete(e), clearTimeout(t.timer));
     let n = r.get(e);
     if (null != n) {
         for (let e of n.timers) clearTimeout(e);
-        (r.delete(e), o());
+        (r.delete(e), s(), u(e));
     }
 }
-function f(e) {
+function p(e) {
     return (r.get(e)?.holders ?? 0) > 0;
 }
-function p() {
+function _() {
     return [...r.keys()];
 }
-function h(e) {
+function g(e) {
     return (
         l.add(e),
         () => {
@@ -64,7 +83,15 @@ function h(e) {
         }
     );
 }
-function _(e) {
-    let t = i.useCallback(() => null != e && f(e), [e]);
-    return i.useSyncExternalStore(h, t, t);
+function w(e) {
+    return (
+        o.add(e),
+        () => {
+            o.delete(e);
+        }
+    );
+}
+function E(e) {
+    let t = i.useCallback(() => null != e && p(e), [e]);
+    return i.useSyncExternalStore(g, t, t);
 }
