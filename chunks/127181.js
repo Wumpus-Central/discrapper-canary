@@ -133,7 +133,13 @@ let n = [
         time: "01:40",
         platforms: ["desktop", "mobile"],
         summary:
-            "Conjure talks you through what it finds and changes while it works, in everyday words, instead of saving it all for the end.",
+            "Conjure talks you through what it is doing between steps, and each step says in plain words what it looked at or changed.",
+    },
+    {
+        date: "2026-09-27",
+        time: "03:00",
+        platforms: ["desktop", "mobile"],
+        summary: "Conjure ticks off each checklist step as it finishes it, instead of all at once at the end.",
     },
     {
         date: "2026-09-25",

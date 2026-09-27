@@ -3054,6 +3054,7 @@ function ne(e) {
                                     active: e,
                                     attachmentsHost: a.attachmentsHost,
                                     content: a.closingContent,
+                                    sideReply: "side_reply" === t.kind,
                                 },
                                 {
                                     actor: "assistant",
@@ -3221,6 +3222,7 @@ function ne(e) {
                                           interrupted: !0 === a.interrupted,
                                           hoistedProse: !0,
                                           hoistedAttachmentsHost: e.attachmentsHost,
+                                          sideReply: e.sideReply,
                                           active: e.active,
                                           ideas: a.ideas,
                                           pickedIdeaIds:
