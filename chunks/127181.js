@@ -533,6 +533,13 @@ let n = [
             "Plans for an app you imported or cloned no longer invent a wireframe sketch: the sketch is reserved for brand-new apps that have no screens yet.",
     },
     {
+        date: "2026-09-27",
+        time: "21:37",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "Preview checks finish as soon as your Activity loads instead of waiting a few seconds, and Conjure now fixes a crash in your app the first time it happens.",
+    },
+    {
         date: "2026-09-23",
         time: "00:00",
         platforms: ["desktop", "mobile"],
