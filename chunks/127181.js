@@ -196,6 +196,12 @@ let n = [
             "Files you attach in the chat stay put while you hop to another server, view, or app, until you send or remove them.",
     },
     {
+        date: "2026-09-27",
+        time: "08:19",
+        platforms: ["desktop", "mobile"],
+        summary: "Files your connected MCP tools generate can now be saved into your project.",
+    },
+    {
         date: "2026-09-05",
         time: "00:03",
         platforms: ["desktop", "mobile"],
