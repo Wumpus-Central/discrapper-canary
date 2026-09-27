@@ -129,6 +129,13 @@ let n = [
             "Comment mode now picks whatever is under your pointer, not only buttons and headings, and outlines it so you can see what you are about to comment on. Each note is pinned to the exact spot you clicked, and its card opens out of that pin.",
     },
     {
+        date: "2026-09-26",
+        time: "01:40",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "Conjure talks you through what it finds and changes while it works, in everyday words, instead of saving it all for the end.",
+    },
+    {
         date: "2026-09-25",
         time: "05:01",
         platforms: ["desktop", "mobile"],

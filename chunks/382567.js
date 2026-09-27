@@ -915,13 +915,13 @@ var eM = n(280450),
 function eJ() {
     let e = (0, eX.GV)(),
         t = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        n = "622361",
-        s = "5192b408a670b4808c7ccd3d708207ee5e709c58".substring(0, 7),
+        n = "622379",
+        s = "83437a943af657616d8191e6228bf000f9e8faec".substring(0, 7),
         r = eV.A?.app.getVersion(),
         l = eV.A?.app.getBuildNumber(),
         c = eV.A?.app.getAppArch(),
         o = eY.A.getCurrentBuildOverride().overrides?.discord_web,
-        u = null != o ? (0, eq.A)("1790459635296", !1) : null,
+        u = null != o ? (0, eq.A)("1790469306669", !1) : null,
         d = null != u ? ` (built ${u})` : "",
         m = (function () {
             let e = ez()?.os?.toString();
@@ -1087,11 +1087,11 @@ function e2() {
     });
 }
 var e5 = n(402651),
-    e7 = n(669067),
-    e9 = n(830543),
+    e9 = n(669067),
+    e7 = n(830543),
     e4 = n(953056);
-let e8 = new Set([e_.X.PROFILE_PANEL, e_.X.SUBSCRIPTIONS_PANEL, e_.X.FAMILY_CENTER_PANEL, e_.X.POGGERMODE_PANEL]),
-    e6 = new Map([[e_.X.SESSIONS_PANEL, r.ImpressionNames.USER_SETTINGS_SESSIONS]]);
+let e6 = new Set([e_.X.PROFILE_PANEL, e_.X.SUBSCRIPTIONS_PANEL, e_.X.FAMILY_CENTER_PANEL, e_.X.POGGERMODE_PANEL]),
+    e8 = new Map([[e_.X.SESSIONS_PANEL, r.ImpressionNames.USER_SETTINGS_SESSIONS]]);
 function e3(e) {
     let { target: t, ...n } = e,
         l = eL.A.useField("query"),
@@ -1101,7 +1101,7 @@ function e3(e) {
         [h, g] = s.useState(!1);
     return (s.useLayoutEffect(() => {
         function e() {
-            null == ek.default.getCurrentUser() && (g(!0), (0, e9.default)());
+            null == ek.default.getCurrentUser() && (g(!0), (0, e7.default)());
         }
         return (
             eM.default.addChangeListener(e),
@@ -1118,8 +1118,8 @@ function e3(e) {
               emptyState: tt,
               sidebarFooter: e2,
               onViewChange: function (e) {
-                  e8.has(e) || (0, e7._)(e);
-                  let t = e6.get(e);
+                  e6.has(e) || (0, e9._)(e);
+                  let t = e8.get(e);
                   (null != t &&
                       (0, o.x)({
                           type: r.ImpressionTypes.PANE,
