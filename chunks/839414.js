@@ -1477,7 +1477,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e6 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eW.A().log(
-    `[BUILD INFO] Release Channel: ${e6}, Build Number: 622396, Version Hash: d18a1ba2434fbd84adf74edac091c6e30b536e3d`,
+    `[BUILD INFO] Release Channel: ${e6}, Build Number: 622401, Version Hash: 2defc39737ba78463a8ab6148fa11b65add89e26`,
 ),
     M.A.setTags({ appContext: F.QCW }),
     ep.A.initBasic(),
@@ -21820,7 +21820,7 @@ let Cn = "isHideDevBanner",
                     className: to()(Ct.Wz, Ct.mr),
                     children: [
                         (0, y.jsx)(Ce, { className: Ct.Kk }),
-                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "622396" }),
+                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "622401" }),
                         (0, y.jsx)(r, {}),
                     ],
                 })
@@ -44536,6 +44536,19 @@ let GD = [
     {
         version: 21,
         run: (e) => e.appearance?.uiDensity === eT.NS.COMPACT && ((e.appearance.uiDensity = eT.NS.DEFAULT), !0),
+        cleanup() {},
+    },
+    {
+        version: 22,
+        run(e) {
+            let t = eP.w.get("UnsyncedUserSettingsStore");
+            return (
+                t?._state?.displayCompactAvatars === !0 &&
+                ((e.textAndImages ??= eT.oJ.create()),
+                null == e.textAndImages.displayCompactAvatars &&
+                    ((e.textAndImages.displayCompactAvatars = GC._t.create({ value: !0 })), !0))
+            );
+        },
         cleanup() {},
     },
 ];

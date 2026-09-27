@@ -50,9 +50,6 @@ class h extends a.Ay.DeviceSettingsStore {
     getUserAgnosticState() {
         return A;
     }
-    get displayCompactAvatars() {
-        return A.displayCompactAvatars ?? !1;
-    }
     get lowQualityImageMode() {
         return A.lowQualityImageMode ?? !1;
     }
