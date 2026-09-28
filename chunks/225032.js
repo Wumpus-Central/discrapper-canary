@@ -1478,7 +1478,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e6 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eW.A().log(
-    `[BUILD INFO] Release Channel: ${e6}, Build Number: 623713, Version Hash: 5ffa89ae4ab203a3ba3a7d45013fd99198b5e14a`,
+    `[BUILD INFO] Release Channel: ${e6}, Build Number: 623737, Version Hash: fa08c91172efc69c8d1a04c8fa35c095962cd067`,
 ),
     M.A.setTags({ appContext: F.QCW }),
     ep.A.initBasic(),
@@ -21840,7 +21840,7 @@ let N9 = "isHideDevBanner",
                     className: to()(N8.Wz, N8.mr),
                     children: [
                         (0, y.jsx)(N7, { className: N8.Kk }),
-                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "623713" }),
+                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "623737" }),
                         (0, y.jsx)(r, {}),
                     ],
                 })
@@ -27094,7 +27094,7 @@ let Rq = (0, tj.Fe)({
                 n.e("408203"),
                 n.e("398791"),
                 n.e("74336"),
-                n.e("581360"),
+                n.e("186204"),
                 n.e("997708"),
                 n.e("147662"),
                 n.e("544571"),
@@ -27172,8 +27172,8 @@ let Rq = (0, tj.Fe)({
                 n.e("209114"),
                 n.e("192910"),
                 n.e("983373"),
-            ]).then(n.bind(n, 66976)),
-        webpackId: 66976,
+            ]).then(n.bind(n, 263294)),
+        webpackId: 263294,
         name: "GuildSidebar",
         renderLoader: ir.L,
     }),
@@ -49307,8 +49307,7 @@ function F5() {
         null
     );
 }
-var F6 = n(48686);
-function F4(e) {
+function F6(e) {
     let t,
         n,
         { afk: i, ...r } = e,
@@ -49340,57 +49339,49 @@ function F4(e) {
         })
     );
 }
-let F7 = function () {
+let F4 = function () {
         let e = eE.useRef(null);
         function t() {
             null !== e.current && ((0, tW.closeModal)(e.current), (e.current = null));
         }
-        let [i, r] = (0, ed.yK)([kV], () => [kV.shouldShowWarning(), kV.isAFKChannel()], []),
-            a = eE.useCallback(() => {
-                e.current = (0, tW.openModal)((e) => (0, y.jsx)(F4, { afk: r, ...e }));
-            }, [r]),
-            s = eE.useCallback(() => {
-                (0, tW.openModalLazy)(async () => {
-                    let { default: e } = await Promise.all([n.e("99608"), n.e("659866")]).then(n.bind(n, 937489));
-                    return (t) => (0, y.jsx)(e, { ...t, showHideSuppressWarning: !0 });
-                }).then((t) => {
-                    null != t && (e.current = t);
-                });
-            }, []);
+        let [n, i] = (0, ed.yK)([kV], () => [kV.shouldShowWarning(), kV.isAFKChannel()], []),
+            r = eE.useCallback(() => {
+                e.current = (0, tW.openModal)((e) => (0, y.jsx)(F6, { afk: i, ...e }));
+            }, [i]);
         return (
             eE.useEffect(
                 () => (
-                    i && (0, F6.t)() ? s() : i ? a() : t(),
+                    n ? r() : t(),
                     () => {
                         t();
                     }
                 ),
-                [i, a, s],
+                [n, r],
             ),
             null
         );
     },
-    F8 = function () {
+    F7 = function () {
         return (0, y.jsxs)(y.Fragment, {
-            children: [(0, y.jsx)(F5, {}), (0, y.jsx)(FK, {}), (0, y.jsx)(F7, {}), (0, y.jsx)(F0, {})],
+            children: [(0, y.jsx)(F5, {}), (0, y.jsx)(FK, {}), (0, y.jsx)(F4, {}), (0, y.jsx)(F0, {})],
         });
     };
-var F9 = n(663413),
-    Be = n(82495),
-    Bt = n(725807),
-    Bn = n(450232);
-function Bi() {
+var F8 = n(663413),
+    F9 = n(82495),
+    Be = n(725807),
+    Bt = n(450232);
+function Bn() {
     U.h.dispatch({ type: "APP_ICON_EDITOR_RESET" });
 }
-var Br = n(526162),
-    Ba = n(806932),
-    Bs = n(174197),
-    Bl = n(111173);
-function Bo() {
+var Bi = n(526162),
+    Br = n(806932),
+    Ba = n(174197),
+    Bs = n(111173);
+function Bl() {
     let e = (0, ed.bG)([ew.default], () => gK.Ay.isPremium(ew.default.getCurrentUser())),
         t = (0, g9.V)(),
         n = t?.subscriptionTrial?.skuId === dk.pe.TIER_2;
-    return (0, y.jsx)(Bt.A, {
+    return (0, y.jsx)(Be.A, {
         size: ai.$n.Sizes.MEDIUM,
         textOptions: {
             textOverride: e
@@ -49405,38 +49396,38 @@ function Bo() {
         subscriptionTier: dk.pe.TIER_2,
     });
 }
-function Bd(e) {
+function Bo(e) {
     let { markAsDismissed: t } = e;
     return (0, y.jsxs)("div", {
-        className: Bl.nV,
+        className: Bs.nV,
         children: [
             (0, y.jsx)(td.D, {
-                className: Bl.VV,
-                onClick: () => void (t?.(ih.i.DISMISS), (0, y4.Jp)(), Bi()),
-                children: (0, y.jsx)(_R.a, { size: "md", color: "currentColor", className: Bl.P0 }),
+                className: Bs.VV,
+                onClick: () => void (t?.(ih.i.DISMISS), (0, y4.Jp)(), Bn()),
+                children: (0, y.jsx)(_R.a, { size: "md", color: "currentColor", className: Bs.P0 }),
             }),
             (0, y.jsxs)("div", {
-                className: Bl.DD,
+                className: Bs.DD,
                 children: [
                     (0, y.jsx)(aZ.D, { variant: "heading-lg/extrabold", children: tS.intl.string(tS.t["hb/wE0"]) }),
-                    (0, y.jsx)(Bn.A, { color: "strong", size: "sm" }),
+                    (0, y.jsx)(Bt.A, { color: "strong", size: "sm" }),
                 ],
             }),
         ],
     });
 }
-function Bc(e) {
+function Bd(e) {
     let { isCoachmark: t, markAsDismissed: n } = e,
-        i = (0, ed.bG)([Br.A], () => Br.A.isUpsellPreview);
+        i = (0, ed.bG)([Bi.A], () => Bi.A.isUpsellPreview);
     return (0, y.jsxs)("div", {
-        className: Bl.N3,
+        className: Bs.N3,
         children: [
-            i && (0, y.jsx)(Bo, {}),
+            i && (0, y.jsx)(Bl, {}),
             (0, y.jsx)(ta.$, {
                 onClick: function () {
                     (n?.(ih.i.DISMISS),
                         (0, y4.Jp)(),
-                        Bi(),
+                        Bn(),
                         t || (0, sx.openUserSettings)(sG.X.APPEARANCE_IN_APP_ICON_CATEGORY));
                 },
                 variant: "secondary",
@@ -49446,12 +49437,12 @@ function Bc(e) {
         ],
     });
 }
-function Bu(e) {
-    let { isCoachmark: t, markAsDismissed: n, iconSize: i = Bs.N8.SIZE_60 } = e,
+function Bc(e) {
+    let { isCoachmark: t, markAsDismissed: n, iconSize: i = Ba.N8.SIZE_60 } = e,
         { analyticsLocations: r } = (0, sb.Ay)(nS.A.APP_ICON_EDITOR),
         a = (0, ed.bG)([ew.default], () => ew.default.getCurrentUser()),
-        { isUpsellPreview: s, shouldEditorAnimate: l } = (0, ed.cf)([Br.A, e_.Ay], () => ({
-            isUpsellPreview: Br.A.isUpsellPreview,
+        { isUpsellPreview: s, shouldEditorAnimate: l } = (0, ed.cf)([Bi.A, e_.Ay], () => ({
+            isUpsellPreview: Bi.A.isUpsellPreview,
             shouldEditorAnimate: t && !e_.Ay.useReducedMotion,
         })),
         o = y4.fy.getState().activePanel === y4.HP.APP_ICON;
@@ -49460,9 +49451,9 @@ function Bu(e) {
             (B.default.track(F.HAw.PREMIUM_UPSELL_VIEWED, { type: dk.e.APP_ICON_UPSELL, location_stack: r }),
             (0, bE.sq)(F.U7l.PREMIUM_UPSELL_VIEWED, r, () => (0, bA.uq)(dk.e.APP_ICON_UPSELL)));
     }, [s, r]);
-    let d = (0, Be.A)(null, s ? Bi : F.tEg);
+    let d = (0, F9.A)(null, s ? Bn : F.tEg);
     eE.useEffect(() => {
-        if (s && !o) return Bi;
+        if (s && !o) return Bn;
     }, [s, o]);
     let c = eE.useMemo(
         () => ({
@@ -49477,30 +49468,30 @@ function Bu(e) {
               value: r,
               children: (0, y.jsx)("div", {
                   ref: d,
-                  className: to()(Bl.EN, l ? Bl.hP : null),
+                  className: to()(Bs.EN, l ? Bs.hP : null),
                   "data-app-right-panel": !0,
                   style: c,
                   children: (0, y.jsxs)(aq.F, {
                       children: [
-                          (0, y.jsx)(Bd, { markAsDismissed: n }),
+                          (0, y.jsx)(Bo, { markAsDismissed: n }),
                           (0, y.jsx)(sD.Ip, {
-                              className: Bl.sV,
-                              children: (0, y.jsx)(Ba.A, { className: Bl.Gg, isEditor: !0, iconSize: i }),
+                              className: Bs.sV,
+                              children: (0, y.jsx)(Br.A, { className: Bs.Gg, isEditor: !0, iconSize: i }),
                           }),
-                          (0, y.jsx)(Bc, { markAsDismissed: n, isCoachmark: t }),
+                          (0, y.jsx)(Bd, { markAsDismissed: n, isCoachmark: t }),
                       ],
                   }),
               }),
           });
 }
-var B_ = n(141343),
-    BE = n(103714),
-    BA = n(748284),
-    Bh = n(438221);
-function BI() {
-    return (0, y.jsx)("div", { "data-app-right-panel": !0, className: BA.kL });
+var Bu = n(141343),
+    B_ = n(103714),
+    BE = n(748284),
+    BA = n(438221);
+function Bh() {
+    return (0, y.jsx)("div", { "data-app-right-panel": !0, className: BE.kL });
 }
-let Bf = (0, ii.Fe)({
+let BI = (0, ii.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("371496"),
@@ -49520,9 +49511,9 @@ let Bf = (0, ii.Fe)({
                 n.e("366996"),
             ]).then(n.bind(n, 974800)),
         webpackId: 974800,
-        renderLoader: BI,
+        renderLoader: Bh,
     }),
-    Bp = (0, ii.Fe)({
+    Bf = (0, ii.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("371496"),
@@ -49554,9 +49545,9 @@ let Bf = (0, ii.Fe)({
                 n.e("851200"),
             ]).then(n.bind(n, 238234)),
         webpackId: 238234,
-        renderLoader: BI,
+        renderLoader: Bh,
     }),
-    BT = (0, ii.Fe)({
+    Bp = (0, ii.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("249169"),
@@ -49589,10 +49580,10 @@ let Bf = (0, ii.Fe)({
             ]).then(n.bind(n, 214103)),
         webpackId: 214103,
         renderLoader: function () {
-            return (0, y.jsx)("div", { "data-app-right-panel": !0, className: Bh.kL });
+            return (0, y.jsx)("div", { "data-app-right-panel": !0, className: BA.kL });
         },
     }),
-    Bm = (0, ii.Fe)({
+    BT = (0, ii.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("70866"),
@@ -49624,7 +49615,7 @@ let Bf = (0, ii.Fe)({
             ]).then(n.bind(n, 466020)),
         webpackId: 466020,
     }),
-    Bg = function (e) {
+    Bm = function (e) {
         let { mobile: t } = e,
             n = (0, ed.bG)([ew.default], () => gK.Ay.canUseClientThemes(ew.default.getCurrentUser())),
             i = (0, ed.bG)([bq.A], () => bq.A.isCoachmark),
@@ -49637,7 +49628,7 @@ let Bf = (0, ii.Fe)({
                         return !1;
                     }
                 })(),
-            a = (0, B_.V)(),
+            a = (0, Bu.V)(),
             { activePanel: s, metadata: l } = (0, y4.fy)(),
             o = (0, ed.bG)([aD.A], () => aD.A.hasLayers()),
             d = [];
@@ -49663,7 +49654,7 @@ let Bf = (0, ii.Fe)({
             return (0, y.jsxs)(y.Fragment, {
                 children: [
                     I &&
-                        (0, y.jsx)(Bf, {
+                        (0, y.jsx)(BI, {
                             markAsDismissed: _
                                 ? u
                                 : () => {
@@ -49674,18 +49665,18 @@ let Bf = (0, ii.Fe)({
                                   },
                             showClientThemesCoachmark: _,
                         }),
-                    f && (0, y.jsx)(Bu, { isCoachmark: !1, markAsDismissed: u }),
-                    p && (0, y.jsx)(Bp, { metadata: l ?? {}, markAsDismissed: u, isCoachmark: E, isMobile: t }),
-                    T && (0, y.jsx)(BT, { isMobile: t }),
-                    m && (0, y.jsx)(Bm, {}),
+                    f && (0, y.jsx)(Bc, { isCoachmark: !1, markAsDismissed: u }),
+                    p && (0, y.jsx)(Bf, { metadata: l ?? {}, markAsDismissed: u, isCoachmark: E, isMobile: t }),
+                    T && (0, y.jsx)(Bp, { isMobile: t }),
+                    m && (0, y.jsx)(BT, {}),
                 ],
             });
         }
-        return t ? (0, y.jsx)("div", { className: BE.A, children: g() }) : g();
+        return t ? (0, y.jsx)("div", { className: B_.A, children: g() }) : g();
     };
-var BS = n(404374),
-    BN = n(573435),
-    BC = n(349805);
+var Bg = n(404374),
+    BS = n(573435),
+    BN = n(349805);
 (n(939857),
     Promise.resolve()
         .then(n.bind(n, 677134))
@@ -49714,17 +49705,17 @@ var BS = n(404374),
             ),
         webpackId: 461624,
     }));
-let BO = (0, ii.Fe)({
+let BC = (0, ii.Fe)({
         createPromise: () => Promise.all([n.e("748231"), n.e("398254"), n.e("999063")]).then(n.bind(n, 1464)),
         webpackId: 1464,
     }),
-    BR = eE.memo(function () {
+    BO = eE.memo(function () {
         let e = (0, ed.bG)([aD.A], () => aD.A.hasLayers()),
             t = (0, tW.useModalsStore)(tW.hasAnyModalOpen),
             n = (0, ed.bG)([J.default], () => J.default.isAuthenticated());
         return (0, y.jsx)(r2.v5, { fixed: !0, show: e || t || !n, isLayerOpen: e });
     }),
-    BL = function (e) {
+    BR = function (e) {
         var t;
         let n,
             { children: i, skipsSettingDefaultPageTitle: r } = e,
@@ -49758,27 +49749,27 @@ let BO = (0, ii.Fe)({
             {
                 children: (0, y.jsxs)(Fn.A, {
                     children: [
-                        (0, y.jsx)(F9.A, { skipsSettingDefaultPageTitle: r }),
+                        (0, y.jsx)(F8.A, { skipsSettingDefaultPageTitle: r }),
                         (0, y.jsx)(Fe.N, {
                             children: (0, y.jsx)(FN.A, {
                                 children: (0, y.jsxs)(eu.xp, {
                                     containerRef: o,
                                     children: [
-                                        (0, y.jsx)(BN.Al, {}),
-                                        (0, y.jsx)(BS.Ay, {}),
+                                        (0, y.jsx)(BS.Al, {}),
+                                        (0, y.jsx)(Bg.Ay, {}),
                                         (0, y.jsx)(k6.Ut, {}),
                                         (0, y.jsx)(tE.Wr, {
                                             appContext: F.BRT.APP,
                                             renderWindow: window,
                                             children: (0, y.jsxs)(Fr.Yf, {
                                                 children: [
-                                                    null != a ? (0, y.jsx)(BR, {}) : null,
+                                                    null != a ? (0, y.jsx)(BO, {}) : null,
                                                     (0, y.jsxs)("div", {
-                                                        className: to()(BC.XX, s && BC.Xq),
+                                                        className: to()(BN.XX, s && BN.Xq),
                                                         children: [
                                                             (0, y.jsx)(Fp.C1, {}),
                                                             (0, y.jsx)("div", {
-                                                                className: BC.x$,
+                                                                className: BN.x$,
                                                                 "data-app-not-dev-tools": !0,
                                                                 children: (0, y.jsx)(Ff.l, {
                                                                     children: (0, y.jsx)(Gd.ks, {
@@ -49788,7 +49779,7 @@ let BO = (0, ii.Fe)({
                                                                                 children: [
                                                                                     (0, y.jsx)("div", {
                                                                                         className: to()(
-                                                                                            s ? BC.C$ : BC.yA,
+                                                                                            s ? BN.C$ : BN.yA,
                                                                                         ),
                                                                                         children: i,
                                                                                     }),
@@ -49796,7 +49787,7 @@ let BO = (0, ii.Fe)({
                                                                                     (0, y.jsx)(FP, {}),
                                                                                     (0, y.jsx)(k9.A, {}),
                                                                                     (0, y.jsx)(k4.b, {}),
-                                                                                    (0, y.jsx)(F8, {}),
+                                                                                    (0, y.jsx)(F7, {}),
                                                                                     (0, y.jsx)(yR.up, {}),
                                                                                     (0, y.jsx)(k3.P, {}),
                                                                                     (0, y.jsx)(Fr.C8, {}),
@@ -49806,7 +49797,7 @@ let BO = (0, ii.Fe)({
                                                                                     }),
                                                                                     (0, y.jsx)(Fl, {}),
                                                                                     (0, y.jsx)(Fj, {}),
-                                                                                    _ && (0, y.jsx)(BO, {}),
+                                                                                    _ && (0, y.jsx)(BC, {}),
                                                                                 ],
                                                                             }),
                                                                         }),
@@ -49814,7 +49805,7 @@ let BO = (0, ii.Fe)({
                                                                 }),
                                                             }),
                                                             (0, y.jsx)(FA, {}),
-                                                            (0, y.jsx)(Bg, { mobile: s }),
+                                                            (0, y.jsx)(Bm, { mobile: s }),
                                                             (0, y.jsx)(FS, { mobile: s }),
                                                         ],
                                                     }),
@@ -49833,34 +49824,34 @@ let BO = (0, ii.Fe)({
             d,
         );
     };
-var By =
+var BL =
     (((O = {})[(O.NOT_STARTED = 0)] = "NOT_STARTED"),
     (O[(O.IN_PROGRESS = 1)] = "IN_PROGRESS"),
     (O[(O.FAILED = 2)] = "FAILED"),
     (O[(O.SKIPPED = 3)] = "SKIPPED"),
     O);
-let BD = 0;
-class Bv extends ed.Ay.Store {
+let By = 0;
+class BD extends ed.Ay.Store {
     static displayName = "DomainMigrationStore";
     getMigrationStatus() {
-        return BD;
+        return By;
     }
 }
-let Bb = new Bv(U.h, {
+let Bv = new BD(U.h, {
     DOMAIN_MIGRATION_START: function () {
-        BD = 1;
+        By = 1;
     },
     DOMAIN_MIGRATION_FAILURE: function () {
-        BD = 2;
+        By = 2;
     },
     DOMAIN_MIGRATION_SKIP: function () {
-        BD = 3;
+        By = 3;
     },
 });
-function BM(e) {
+function Bb(e) {
     return e?._state?.lastTestTimestamp;
 }
-function BP() {
+function BM() {
     return (
         eE.useEffect(() => {
             window.location.origin === window.GLOBAL_ENV.MIGRATION_DESTINATION_ORIGIN &&
@@ -49877,7 +49868,7 @@ function BP() {
                         n = 0 !== t.length,
                         i = null != e.token,
                         r = null == e.RTCRegionStore ? null : JSON.parse(e.RTCRegionStore),
-                        a = null == r || null == BM(r) || BM(r) <= BM(eP.w.get("RTCRegionStore"));
+                        a = null == r || null == Bb(r) || Bb(r) <= Bb(eP.w.get("RTCRegionStore"));
                     (n &&
                         i &&
                         !a &&
@@ -49901,7 +49892,7 @@ function BP() {
         null
     );
 }
-class BU extends nt.A {
+class BP extends nt.A {
     _initialize() {
         U.h.subscribe("CONNECTION_OPEN", this.handleConnectionOpen);
     }
@@ -49912,9 +49903,9 @@ class BU extends nt.A {
         ((0, eG.isWindows)() || (0, eG.isMac)()) && ee.encryptAndStoreTokens();
     };
 }
-let Bw = new BU();
-var BG = n(53505);
-function Bx(e) {
+let BU = new BP();
+var Bw = n(53505);
+function BG(e) {
     if (null == e || "" === e) return null;
     try {
         let t = new URL(e);
@@ -49923,42 +49914,42 @@ function Bx(e) {
         return null;
     }
 }
-var Bk = n(396574);
+var Bx = n(396574);
 n(967347);
-let BF = (0, ii.Fe)({
+let Bk = (0, ii.Fe)({
         createPromise: () => Promise.all([n.e("990994"), n.e("299681")]).then(n.bind(n, 224116)),
         webpackId: 224116,
         name: "UnsupportedBrowser",
     }),
-    BB = (0, ii.Fe)({
+    BF = (0, ii.Fe)({
         createPromise: () => Promise.all([n.e("915082"), n.e("944602"), n.e("825280")]).then(n.bind(n, 987482)),
         webpackId: 987482,
         name: "DownloadApps",
     }),
-    BV = (0, ii.Fe)({
+    BB = (0, ii.Fe)({
         createPromise: () => n.e("184809").then(n.bind(n, 312625)),
         webpackId: 312625,
         name: "InviteProxy",
     }),
-    BH = (0, ii.Fe)({
+    BV = (0, ii.Fe)({
         createPromise: () =>
             Promise.all([n.e("99351"), n.e("234917"), n.e("496891"), n.e("346391")]).then(n.bind(n, 459789)),
         webpackId: 459789,
         name: "VerifyConnectedAccount",
     }),
-    Bj = (0, ii.Fe)({
+    BH = (0, ii.Fe)({
         createPromise: () =>
             Promise.all([n.e("99351"), n.e("234917"), n.e("496891"), n.e("963832")]).then(n.bind(n, 744185)),
         webpackId: 744185,
         name: "VerifyConnectedAccountSuccess",
     }),
-    BW = (0, ii.Fe)({
+    Bj = (0, ii.Fe)({
         createPromise: () =>
             Promise.all([n.e("99351"), n.e("234917"), n.e("496891"), n.e("750033")]).then(n.bind(n, 885338)),
         webpackId: 885338,
         name: "VerifyConnectedAccountError",
     }),
-    BY = (0, ii.Fe)({
+    BW = (0, ii.Fe)({
         createPromise: () =>
             Promise.all([n.e("99351"), n.e("234917"), n.e("336335"), n.e("496891"), n.e("346391"), n.e("252986")]).then(
                 n.bind(n, 97649),
@@ -49966,12 +49957,12 @@ let BF = (0, ii.Fe)({
         webpackId: 97649,
         name: "LinkConnectedAccount",
     }),
-    BK = (0, ii.Fe)({
+    BY = (0, ii.Fe)({
         createPromise: () => Promise.all([n.e("698965"), n.e("336335"), n.e("765893")]).then(n.bind(n, 209086)),
         webpackId: 209086,
         name: "LinkAuthorize",
     }),
-    B$ = (0, ii.Fe)({
+    BK = (0, ii.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("630279"),
@@ -49986,7 +49977,7 @@ let BF = (0, ii.Fe)({
         webpackId: 627318,
         name: "ActivateDevice",
     }),
-    Bz = (0, ii.Fe)({
+    B$ = (0, ii.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("324732"),
@@ -50299,7 +50290,7 @@ let BF = (0, ii.Fe)({
         webpackId: 810973,
         name: "ViewsWithAuth",
     }),
-    BX = (0, ii.Fe)({
+    Bz = (0, ii.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("630279"),
@@ -50313,17 +50304,17 @@ let BF = (0, ii.Fe)({
         webpackId: 234260,
         name: "ViewsWithOAuth2",
     }),
-    Bq = (0, ii.Fe)({
+    BX = (0, ii.Fe)({
         createPromise: () => Promise.all([n.e("301969"), n.e("730514")]).then(n.bind(n, 146088)),
         webpackId: 146088,
         name: "BrowserHandoff",
     }),
-    BZ = (0, ii.Fe)({
+    Bq = (0, ii.Fe)({
         createPromise: () => n.e("574272").then(n.bind(n, 569710)),
         webpackId: 569710,
         name: "MobileWebHandoffFallback",
     }),
-    BQ = (0, ii.Fe)({
+    BZ = (0, ii.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("82731"),
@@ -50967,7 +50958,7 @@ let BF = (0, ii.Fe)({
         webpackId: 436405,
         name: "Overlay",
     }),
-    BJ = (0, ii.Fe)({
+    BQ = (0, ii.Fe)({
         createPromise: () =>
             Promise.all([n.e("213217"), n.e("895359"), n.e("483518"), n.e("85216"), n.e("51194"), n.e("666708")]).then(
                 n.bind(n, 654423),
@@ -50975,60 +50966,60 @@ let BF = (0, ii.Fe)({
         webpackId: 654423,
         name: "SuspendedUserSafetyHubPage",
     }),
-    B0 = (0, ii.Fe)({
+    BJ = (0, ii.Fe)({
         createPromise: () =>
             Promise.all([n.e("346829"), n.e("101953"), n.e("339895"), n.e("771791")]).then(n.bind(n, 125820)),
         webpackId: 125820,
         name: "QuestsLandingPage",
     }),
-    B1 = (0, ii.Fe)({
+    B0 = (0, ii.Fe)({
         createPromise: () =>
             Promise.all([n.e("346829"), n.e("101953"), n.e("339895"), n.e("44900")]).then(n.bind(n, 589877)),
         webpackId: 589877,
         name: "QuestPreviewLandingPage",
     }),
-    B2 = (0, ii.Fe)({
+    B1 = (0, ii.Fe)({
         createPromise: () =>
             Promise.all([n.e("99351"), n.e("234917"), n.e("496891"), n.e("881881")]).then(n.bind(n, 519716)),
         webpackId: 519716,
         name: "ConnectionsAuthorizeContinue",
     }),
-    B3 = (0, ii.Fe)({
+    B2 = (0, ii.Fe)({
         createPromise: () => n.e("215243").then(n.bind(n, 190662)),
         webpackId: 190662,
         name: "ApplicationDirectoryRoutes",
     }),
-    B5 = (0, ii.Fe)({
+    B3 = (0, ii.Fe)({
         createPromise: () => n.e("338217").then(n.bind(n, 149755)),
         webpackId: 149755,
         name: "ApplicationDirectoryGlobalDiscoveryRoutes",
     });
-function B6() {
+function B5() {
     return (0, y.jsx)(k2, {});
 }
-let B4 = new Set([
+let B6 = new Set([
     F.BVt.LOGIN,
     F.BVt.LOGIN_HANDOFF,
     F.BVt.INVITE_LOGIN(":inviteCode"),
     F.BVt.GIFT_CODE_LOGIN(":giftCode"),
     F.BVt.GUILD_TEMPLATE_LOGIN(":guildTemplateCode"),
 ]);
-function B7(e, t) {
-    return t ? e.filter((e) => !B4.has(e)) : e;
+function B4(e, t) {
+    return t ? e.filter((e) => !B6.has(e)) : e;
 }
-function B8() {
+function B7() {
     let e = (0, ed.bG)([J.default], () => J.default.isAuthenticated());
-    return (0, ed.bG)([Bb], () => Bb.getMigrationStatus()) === By.IN_PROGRESS
+    return (0, ed.bG)([Bv], () => Bv.getMigrationStatus()) === BL.IN_PROGRESS
         ? null
-        : Bk.VP
+        : Bx.VP
           ? eG.isPlatformEmbedded
               ? (0, y.jsxs)(tG.dO, {
                     children: [
-                        e ? null : (0, y.jsx)(tG.qh, { path: F.BVt.ACCOUNT_STANDING, component: BJ }),
+                        e ? null : (0, y.jsx)(tG.qh, { path: F.BVt.ACCOUNT_STANDING, component: BQ }),
                         (0, y.jsx)(tG.qh, { exact: !0, path: F.BVt.INDEX, render: () => (0, y.jsx)(tV, {}) }),
-                        (0, y.jsx)(id.A, { exact: !0, path: F.BVt.APPS, component: BB }),
+                        (0, y.jsx)(id.A, { exact: !0, path: F.BVt.APPS, component: BF }),
                         (0, y.jsx)(tG.qh, {
-                            path: B7(
+                            path: B4(
                                 [
                                     F.BVt.LOGIN,
                                     F.BVt.REGISTER,
@@ -51040,19 +51031,19 @@ function B8() {
                                 ],
                                 !1,
                             ),
-                            component: Bz,
+                            component: B$,
                         }),
-                        (0, y.jsx)(id.A, { path: F.BVt.INVITE_PROXY(NQ.pv.channelId()), component: BV }),
+                        (0, y.jsx)(id.A, { path: F.BVt.INVITE_PROXY(NQ.pv.channelId()), component: BB }),
                         (0, y.jsx)(tG.rd, { from: F.BVt.INVITE(""), to: F.BVt.LOGIN }),
                         (0, y.jsx)(tG.rd, { from: F.BVt.GIFT_CODE(""), to: F.BVt.LOGIN }),
-                        (0, y.jsx)(tG.qh, { render: B6 }),
+                        (0, y.jsx)(tG.qh, { render: B5 }),
                     ],
                 })
               : (0, y.jsxs)(tG.dO, {
                     children: [
                         (0, y.jsx)(id.A, { exact: !0, path: F.BVt.INDEX, render: () => (0, y.jsx)(tV, {}) }),
                         (0, y.jsx)(tG.qh, {
-                            path: B7(
+                            path: B4(
                                 [
                                     F.BVt.LOGIN_ONE_TIME,
                                     F.BVt.LOGIN,
@@ -51075,13 +51066,13 @@ function B8() {
                                 ],
                                 !1,
                             ),
-                            component: Bz,
+                            component: B$,
                         }),
                         e
                             ? null
                             : (0, y.jsx)(tG.qh, {
                                   path: F.BVt.PICK_GUILD_SETTINGS(":section?", ":subsection?"),
-                                  component: Bz,
+                                  component: B$,
                               }),
                         e
                             ? null
@@ -51091,31 +51082,31 @@ function B8() {
                                       NQ.pv.channelId({ optional: !0 }),
                                       ":messageId?",
                                   ),
-                                  component: Bz,
+                                  component: B$,
                               }),
                         (0, y.jsx)(tG.rd, { from: F.BVt.INVITE(""), to: F.BVt.LOGIN }),
-                        (0, y.jsx)(id.A, { path: F.BVt.INVITE_PROXY(NQ.pv.channelId()), component: BV }),
+                        (0, y.jsx)(id.A, { path: F.BVt.INVITE_PROXY(NQ.pv.channelId()), component: BB }),
                         (0, y.jsx)(tG.rd, { from: F.BVt.GIFT_CODE(""), to: F.BVt.LOGIN }),
                         (0, y.jsx)(id.A, {
                             path: F.BVt.QUESTS(":questId"),
-                            component: B0,
+                            component: BJ,
                             impressionName: tx.ImpressionNames.QUESTS_LANDING_PAGE,
                             impressionProperties: (e) => {
                                 let { match: t } = e;
                                 return { quest_id: t?.params.questId != null ? Number(t.params.questId) : void 0 };
                             },
                         }),
-                        (0, y.jsx)(id.A, { path: F.BVt.QUEST_PREVIEW(":questId"), component: B1 }),
-                        (0, y.jsx)(id.A, { path: F.BVt.HANDOFF, component: Bq }),
-                        (0, y.jsx)(id.A, { path: F.BVt.MOBILE_WEB_HANDOFF, component: BZ }),
-                        (0, y.jsx)(id.A, { path: F.BVt.CONNECTION_LINK(":type"), component: BY }),
-                        (0, y.jsx)(id.A, { path: F.BVt.CONNECTION_LINK_AUTHORIZE(":type"), component: BK }),
-                        (0, y.jsx)(id.A, { path: F.BVt.ACTIVATE, component: B$ }),
-                        (0, y.jsx)(id.A, { path: F.BVt.ACTIVATE_HANDOFF, component: B$ }),
-                        (0, y.jsx)(id.A, { path: F.BVt.CONNECTIONS_AUTHORIZE_CONTINUE(":type"), component: B2 }),
-                        (0, y.jsx)(id.A, { path: F.BVt.CONNECTIONS_SUCCESS(":type"), component: Bj }),
-                        (0, y.jsx)(id.A, { path: F.BVt.CONNECTIONS_ERROR(":type"), component: BW }),
-                        (0, y.jsx)(id.A, { path: F.BVt.CONNECTIONS(":type"), component: BH }),
+                        (0, y.jsx)(id.A, { path: F.BVt.QUEST_PREVIEW(":questId"), component: B0 }),
+                        (0, y.jsx)(id.A, { path: F.BVt.HANDOFF, component: BX }),
+                        (0, y.jsx)(id.A, { path: F.BVt.MOBILE_WEB_HANDOFF, component: Bq }),
+                        (0, y.jsx)(id.A, { path: F.BVt.CONNECTION_LINK(":type"), component: BW }),
+                        (0, y.jsx)(id.A, { path: F.BVt.CONNECTION_LINK_AUTHORIZE(":type"), component: BY }),
+                        (0, y.jsx)(id.A, { path: F.BVt.ACTIVATE, component: BK }),
+                        (0, y.jsx)(id.A, { path: F.BVt.ACTIVATE_HANDOFF, component: BK }),
+                        (0, y.jsx)(id.A, { path: F.BVt.CONNECTIONS_AUTHORIZE_CONTINUE(":type"), component: B1 }),
+                        (0, y.jsx)(id.A, { path: F.BVt.CONNECTIONS_SUCCESS(":type"), component: BH }),
+                        (0, y.jsx)(id.A, { path: F.BVt.CONNECTIONS_ERROR(":type"), component: Bj }),
+                        (0, y.jsx)(id.A, { path: F.BVt.CONNECTIONS(":type"), component: BV }),
                         (0, y.jsx)(id.A, {
                             path: F.BVt.DOWNLOAD_QR_CODE_REDIRECT,
                             render: () => {
@@ -51132,7 +51123,7 @@ function B8() {
                                             referring_location: n,
                                             qr_code: !0,
                                         }),
-                                    (window.location.href = (0, BG.b$)(null != n && "" !== n ? n : "qr_code", e)),
+                                    (window.location.href = (0, Bw.b$)(null != n && "" !== n ? n : "qr_code", e)),
                                     null
                                 );
                             },
@@ -51146,15 +51137,15 @@ function B8() {
                                     i =
                                         ((e = window.location.search ?? ""),
                                         {
-                                            desktop: Bx((t = (0, tH.parse)(e)).desktop_link),
-                                            mobile: Bx(t.mobile_link),
+                                            desktop: BG((t = (0, tH.parse)(e)).desktop_link),
+                                            mobile: BG(t.mobile_link),
                                         });
                                 if ("iOS" !== n && "Android" !== n)
                                     return (0, y.jsx)(tG.rd, {
                                         to: null != i.desktop ? `${i.desktop.pathname}${i.desktop.search}` : F.BVt.APP,
                                     });
                                 {
-                                    let e = (0, BG.b$)("app_open_from_email", n, i.mobile),
+                                    let e = (0, Bw.b$)("app_open_from_email", n, i.mobile),
                                         t = (0, tF.X7)(e);
                                     (null != t &&
                                         B.default.track(F.HAw.DEEP_LINK_CLICKED, {
@@ -51178,24 +51169,24 @@ function B8() {
                                 F.BVt.OAUTH2_ERROR,
                                 F.BVt.OAUTH2_WHITELIST_ACCEPT,
                             ],
-                            component: BX,
+                            component: Bz,
                         }),
-                        e ? null : (0, y.jsx)(tG.qh, { path: [F.BVt.ACCOUNT_STANDING], component: BJ }),
-                        e ? null : (0, y.jsx)(tG.qh, { path: [F.BVt.APPLICATION_DIRECTORY], component: B3 }),
-                        e ? null : (0, y.jsx)(tG.qh, { path: [F.BVt.GLOBAL_DISCOVERY_APPS], component: B5 }),
-                        (0, y.jsx)(tG.qh, { render: B6 }),
+                        e ? null : (0, y.jsx)(tG.qh, { path: [F.BVt.ACCOUNT_STANDING], component: BQ }),
+                        e ? null : (0, y.jsx)(tG.qh, { path: [F.BVt.APPLICATION_DIRECTORY], component: B2 }),
+                        e ? null : (0, y.jsx)(tG.qh, { path: [F.BVt.GLOBAL_DISCOVERY_APPS], component: B3 }),
+                        (0, y.jsx)(tG.qh, { render: B5 }),
                         (0, y.jsx)(tG.rd, { from: F.BVt.ACCOUNT_REVERT(""), to: F.BVt.LOGIN }),
                     ],
                 })
-          : (0, y.jsx)(tG.dO, { children: (0, y.jsx)(id.A, { component: BF }) });
+          : (0, y.jsx)(tG.dO, { children: (0, y.jsx)(id.A, { component: Bk }) });
 }
-function B9() {
-    let e = (0, ed.bG)([Bb], () => Bb.getMigrationStatus());
-    return eG.isPlatformEmbedded && (e === By.NOT_STARTED || e === By.IN_PROGRESS) && !0 !== eP.w.get(tk.qx)
-        ? (0, y.jsx)(BP, {})
+function B8() {
+    let e = (0, ed.bG)([Bv], () => Bv.getMigrationStatus());
+    return eG.isPlatformEmbedded && (e === BL.NOT_STARTED || e === BL.IN_PROGRESS) && !0 !== eP.w.get(tk.qx)
+        ? (0, y.jsx)(BM, {})
         : null;
 }
-function Ve() {
+function B9() {
     let e = (function () {
         let { pathname: e } = (0, tG.zy)();
         return null != (0, NJ.B)(e, { path: F.BVt.APPLICATION_DIRECTORY });
@@ -51211,18 +51202,18 @@ function Ve() {
         eE.useEffect(
             () => (
                 ex.Ay.cleanupDisplaySleep(),
-                Bw.initialize(),
+                BU.initialize(),
                 (xv.A.wasAuthenticated = J.default.isAuthenticated()),
                 () => {
-                    Bw.terminate();
+                    BU.terminate();
                 }
             ),
             [],
         ),
-        (0, y.jsxs)(BL, { skipsSettingDefaultPageTitle: e, children: [(0, y.jsx)(B8, {}), (0, y.jsx)(B9, {})] })
+        (0, y.jsxs)(BR, { skipsSettingDefaultPageTitle: e, children: [(0, y.jsx)(B7, {}), (0, y.jsx)(B8, {})] })
     );
 }
-class Vt extends nt.A {
+class Ve extends nt.A {
     _initialize() {
         eG.isPlatformEmbedded &&
             (ex.Ay.on("APP_PUSH_ANALYTICS", (e, t) => {
@@ -51256,16 +51247,16 @@ class Vt extends nt.A {
             });
     }
 }
-let Vn = new Vt(),
-    Vi = "1402418696126992445";
-function Vr(e, t) {
+let Vt = new Ve(),
+    Vn = "1402418696126992445";
+function Vi(e, t) {
     if (null == t) return null;
-    if (t.applicationId === Vi) {
+    if (t.applicationId === Vn) {
         let n, i, r;
         return (
             (n = t.processPath.length > 1 ? t.processPath[t.processPath.length - 2] : 0),
             void 0 !==
-            (r = (i = e.filter((e) => e.applicationId === Vi && e.processPath.includes(n))).find(
+            (r = (i = e.filter((e) => e.applicationId === Vn && e.processPath.includes(n))).find(
                 (e) => "league of legends.exe" === e.executableName,
             ))
                 ? r
@@ -51286,20 +51277,20 @@ function Vr(e, t) {
         .filter((e) => e.rootedPath[0] === i.processId);
     r.sort((e, t) => {
         let i = e.rootedPath.map((e) => n.get(e)).filter((e) => null != e && null != e.windowHandle),
-            r = Va(
+            r = Vr(
                 t.rootedPath.map((e) => n.get(e)).filter((e) => null != e && null != e.windowHandle),
                 i,
             );
-        return 0 !== r ? r : Va(t.rootedPath, e.rootedPath);
+        return 0 !== r ? r : Vr(t.rootedPath, e.rootedPath);
     });
     let a = r.find((e) => null != e.application.windowHandle) ?? r[0];
     return null == a ? null : a.application;
 }
-function Va(e, t) {
+function Vr(e, t) {
     return e.length - t.length;
 }
-var Vs = (((R = {}).STREAM = "stream"), (R.PAUSE = "pause"), (R.STOP = "stop"), R);
-class Vl {
+var Va = (((R = {}).STREAM = "stream"), (R.PAUSE = "pause"), (R.STOP = "stop"), R);
+class Vs {
     callback;
     active;
     application;
@@ -51314,7 +51305,7 @@ class Vl {
     }
     onStreamBegin(e, t, n) {
         let i,
-            r = null == (i = e.find((e) => e.processId === t)) ? null : Vr(e, i);
+            r = null == (i = e.find((e) => e.processId === t)) ? null : Vi(e, i);
         ((this.sound = n), null == r || null == r.windowHandle ? this.callback({ type: "stop" }) : this._stream(r));
     }
     onStreamKilled() {
@@ -51335,7 +51326,7 @@ class Vl {
             : this._stop();
     }
     _update(e) {
-        let t = Vr(e, this.application);
+        let t = Vi(e, this.application);
         if (null != t) return null == t.windowHandle ? this._pause() : this._stream(t);
         this._stop();
     }
@@ -51364,8 +51355,8 @@ class Vl {
         this.active && ((this.application.windowHandle = null), this.callback({ type: "pause" }));
     }
 }
-var Vo = n(929921);
-class Vd {
+var Vl = n(929921);
+class Vo {
     director;
     applications;
     streamKey;
@@ -51373,7 +51364,7 @@ class Vd {
     constructor() {
         ((this.mode = null),
             (this.applications = []),
-            (this.director = new Vl((e) => this._onDirectorAction(e))),
+            (this.director = new Vs((e) => this._onDirectorAction(e))),
             U.h.subscribe("STREAM_START", (e) => {
                 let { streamType: t, guildId: n, channelId: i, pid: r, sourceId: a, audioSourceId: s, sound: l } = e,
                     o = J.default.getId(),
@@ -51430,7 +51421,7 @@ class Vd {
             (this.streamKey = e),
             (this.director.sound = i ?? !0),
             (this.director.application = null),
-            this._onDirectorAction({ type: Vs.STREAM, sourceId: t, audioSourceId: n, sound: i }));
+            this._onDirectorAction({ type: Va.STREAM, sourceId: t, audioSourceId: n, sound: i }));
     }
     _onStreamEnd(e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
@@ -51440,7 +51431,7 @@ class Vd {
                     this.director.onStreamEnd();
                     break;
                 case "verbatim-source":
-                    this._onDirectorAction({ type: Vs.STOP, alsoClose: t });
+                    this._onDirectorAction({ type: Va.STOP, alsoClose: t });
                     break;
                 default:
                     throw Error(`unknown streaming mode: ${this.mode ?? "(none)"}`);
@@ -51460,9 +51451,9 @@ class Vd {
     }
     _onDirectorAction(e) {
         let t = Rt.A.getCurrentUserActiveStream(),
-            n = Vo.A.getState();
+            n = Vl.A.getState();
         switch (e.type) {
-            case Vs.STREAM:
+            case Va.STREAM:
                 if ((null != t && (0, s5.TZ)(t, !1), e.sourceId.startsWith("camera") && null != e.audioSourceId)) {
                     let t = e.sourceId.indexOf(":") + 1,
                         i = e.sourceId.substring(t);
@@ -51482,10 +51473,10 @@ class Vd {
                         context: nL.x.STREAM,
                     });
                 break;
-            case Vs.PAUSE:
+            case Va.PAUSE:
                 null != t && (0, s5.TZ)(t, !0);
                 break;
-            case Vs.STOP:
+            case Va.STOP:
                 null != t && (0, Ob.A)(t, !0, e.alsoClose ?? !0);
                 break;
             default:
@@ -51510,8 +51501,8 @@ class Vd {
         }
     }
 }
-var Vc = n(579872);
-class Vu extends nt.A {
+var Vd = n(579872);
+class Vc extends nt.A {
     _initialize() {
         U.h.subscribe("MEDIA_ENGINE_PERMISSION", this.handlePermission);
     }
@@ -51523,7 +51514,7 @@ class Vu extends nt.A {
             i = "Firefox" === tt().name ? F.MVz.ENABLE_MIC_FIREFOX : F.MVz.ENABLE_MIC_CHROME;
         if (!n) {
             let e = "audio" !== t;
-            Vc.A.show({
+            Vd.A.show({
                 title: e ? tS.intl.string(tS.t.OqloH8) : tS.intl.string(tS.t["kI+OOV"]),
                 body: e ? tS.intl.string(tS.t.l3P7K0) : tS.intl.string(tS.t.l3jwOd),
                 onConfirm: () => window.open(tb.A.getArticleURL(i), "_blank"),
@@ -51532,8 +51523,8 @@ class Vu extends nt.A {
         }
     };
 }
-let V_ = new Vu();
-function VE() {
+let Vu = new Vc();
+function V_() {
     return {
         num_failed: 0,
         num_delta_installed: 0,
@@ -51546,18 +51537,18 @@ function VE() {
         background_install_ms_total: 0,
     };
 }
-function VA(e) {
+function VE(e) {
     return "host" === e;
 }
-class Vh {
+class VA {
     _installingModules = {};
     _downloadingModules = {};
     _report;
     constructor() {
-        this._report = VE();
+        this._report = V_();
     }
     handleDownloadingModule(e) {
-        if (!VA(e.name)) {
+        if (!VE(e.name)) {
             if (null != this._downloadingModules[e.name])
                 return void console.warn("Duplicate downloading-module event for module ", e.name);
             this._downloadingModules[e.name] = { startTime: BigInt(e.now), foreground: e.foreground };
@@ -51577,7 +51568,7 @@ class Vh {
         this._updateReportField(e, t, Math.max);
     }
     handleDownloadedModule(e) {
-        if (VA(e.name)) return;
+        if (VE(e.name)) return;
         let t = this._downloadingModules[e.name];
         if (null == t)
             return void console.warn("Downloaded complete without corresponding downloading event for module ", e.name);
@@ -51594,7 +51585,7 @@ class Vh {
             delete this._downloadingModules[e.name]);
     }
     handleInstallingModule(e) {
-        if (!VA(e.name)) {
+        if (!VE(e.name)) {
             if (null != this._installingModules[e.name])
                 return void console.warn("Duplicate installing-module event for module ", e.name);
             this._installingModules[e.name] = {
@@ -51606,7 +51597,7 @@ class Vh {
         }
     }
     handleInstalledModule(e) {
-        if (VA(e.name)) return;
+        if (VE(e.name)) return;
         let t = this._installingModules[e.name];
         if (null == t) return;
         let n = t.foreground ? "foreground" : "background",
@@ -51644,7 +51635,7 @@ class Vh {
         return this._report;
     }
     reset() {
-        this._report = VE();
+        this._report = V_();
     }
     submissionReady() {
         return (
@@ -51659,8 +51650,8 @@ class Vh {
         );
     }
 }
-class VI extends nt.A {
-    _tracker = new Vh();
+class Vh extends nt.A {
+    _tracker = new VA();
     _initialize() {
         eG.isPlatformEmbedded &&
             (ex.Ay.on("UPDATE_DOWNLOADED", () => this.processModuleEvents()),
@@ -51692,23 +51683,23 @@ class VI extends nt.A {
                 (B.default.track(F.HAw.APP_MODULES_UPDATED, this._tracker.getStats()), this._tracker.reset()));
     }
 }
-let Vf = new VI();
+let VI = new Vh();
 (n(742459), n(321034));
-var Vp = n(823598);
-let VT = new nA.Ep(),
-    Vm = !1,
-    Vg = window.document.createElement("canvas");
-((Vg.width = 512), (Vg.height = 288));
-let VS = Vg.getContext("2d");
-function VN() {
-    (VT.stop(), null != d && (d = null));
+var Vf = n(823598);
+let Vp = new nA.Ep(),
+    VT = !1,
+    Vm = window.document.createElement("canvas");
+((Vm.width = 512), (Vm.height = 288));
+let Vg = Vm.getContext("2d");
+function VS() {
+    (Vp.stop(), null != d && (d = null));
 }
-let VC = nw().debounce((e, t, n, i) => {
-    VO(e, (0, Lx._z)({ streamType: null != t ? vn.U4.GUILD : vn.U4.CALL, guildId: t, channelId: n, ownerId: i }));
+let VN = nw().debounce((e, t, n, i) => {
+    VC(e, (0, Lx._z)({ streamType: null != t ? vn.U4.GUILD : vn.U4.CALL, guildId: t, channelId: n, ownerId: i }));
 }, 500);
-async function VO(e, t) {
+async function VC(e, t) {
     if (d === e && !(((0, eG.isWeb)() && eS.uh.getSetting()) || Rt.A.getIsActiveStreamPreviewDisabled(t))) {
-        if (!Vm)
+        if (!VT)
             try {
                 var n, i;
                 let r, a, s, l, o, c, u, _;
@@ -51716,7 +51707,7 @@ async function VO(e, t) {
                 (_ = 0),
                 (eG.isPlatformEmbedded
                     ? function (e, t) {
-                          let n = (0, Vp.lE)();
+                          let n = (0, Vf.lE)();
                           return new Promise((i, r) => {
                               n.getNextVideoOutputFrame(e).then(
                                   function (e) {
@@ -51765,15 +51756,15 @@ async function VO(e, t) {
                     (a = Math.min(r, 288 / n.height)),
                     (s = n.width * a),
                     (l = n.height * a),
-                    (Vg.width = s),
-                    (Vg.height = l),
+                    (Vm.width = s),
+                    (Vm.height = l),
                     (c = (o = window.document.createElement("canvas")).getContext("2d")),
                     (o.width = n.width),
                     (o.height = n.height),
                     (u = new ImageData(n.data, n.width, n.height)),
                     c?.putImageData(u, 0, 0),
-                    VS?.drawImage(o, 0, 0, n.width, n.height, 0, 0, s, l));
-                let E = Vg.toDataURL("image/jpeg");
+                    Vg?.drawImage(o, 0, 0, n.width, n.height, 0, 0, s, l));
+                let E = Vm.toDataURL("image/jpeg");
                 if (
                     (U.h.dispatch({ type: "STREAM_PREVIEW_FETCH_SUCCESS", streamKey: t, previewURL: E }),
                     eG.isPlatformEmbedded)
@@ -51794,33 +51785,33 @@ async function VO(e, t) {
                     });
             } catch (t) {
                 (new eW.A("ApplicationStreamPreviewUploadManager").error("Failed to post stream preview", t),
-                    d === e && VT.start(6e4, r));
+                    d === e && Vp.start(6e4, r));
                 return;
             }
-        d === e && (Vm ? VT.start(6e4, r) : VT.start(3e5, r));
+        d === e && (VT ? Vp.start(6e4, r) : Vp.start(3e5, r));
     }
     function r() {
-        return VO(e, t);
+        return VC(e, t);
     }
 }
-function VR(e, t) {
+function VO(e, t) {
     return !(e === F.TGd.BROWSER && vo.Ay.hasKeybind(a8.zY.MOUSE_BUTTON, t));
 }
-let VL = new (class {
+let VR = new (class {
     initialize() {
         (0, eG.isDesktop)() &&
             (ex.Ay.on("NAVIGATE_BACK", (e, t) => {
-                VR(t, a8.RX.Back) && (0, ib.OE)("native");
+                VO(t, a8.RX.Back) && (0, ib.OE)("native");
             }),
             ex.Ay.on("NAVIGATE_FORWARD", (e, t) => {
-                VR(t, a8.RX.Forward) && (0, ib.Qb)("native");
+                VO(t, a8.RX.Forward) && (0, ib.Qb)("native");
             }));
     }
 })();
-var Vy = n(812729),
-    VD = n.n(Vy),
-    Vv = n(675991);
-class Vb extends nt.A {
+var VL = n(812729),
+    Vy = n.n(VL),
+    VD = n(675991);
+class Vv extends nt.A {
     callbackActions = {
         [eM.dv.VIDEO]: () => {
             eU.Ay.supports(nL.O5.VIDEO) &&
@@ -51885,7 +51876,7 @@ class Vb extends nt.A {
             s = n$.A.getChannel(e),
             l = null == s || (0, O5.r)(s),
             { reachedLimit: o, limit: d } = null != s ? (0, O3.M)(s) : { reachedLimit: void 0, limit: void 0 },
-            c = (0, Vv.Q)({
+            c = (0, VD.Q)({
                 enabled: r,
                 join: !1,
                 channel: s,
@@ -51908,33 +51899,33 @@ class Vb extends nt.A {
             this.setThumbarButtons(u));
     }, 100);
     setThumbarButtons(e) {
-        VD()(this.prevButtons, e) || ((this.prevButtons = e), ex.Ay.setThumbarButtons(e));
+        Vy()(this.prevButtons, e) || ((this.prevButtons = e), ex.Ay.setThumbarButtons(e));
     }
 }
-let VM = new Vb();
-var VP = n(350723),
-    VU = n(346142),
-    Vw = n(848421);
-function VG(e) {
+let Vb = new Vv();
+var VM = n(350723),
+    VP = n(346142),
+    VU = n(848421);
+function Vw(e) {
     let { children: t } = e;
     return (
         eE.useEffect(() => (NZ.A.initialize(), () => NZ.A.cleanup()), []),
         (0, y.jsx)(tn.vd, {
-            children: (0, y.jsx)(tG.Ix, { history: (0, dr.JK)(), children: (0, y.jsx)(Vw.Kl, { children: t }) }),
+            children: (0, y.jsx)(tG.Ix, { history: (0, dr.JK)(), children: (0, y.jsx)(VU.Kl, { children: t }) }),
         })
     );
 }
-var Vx = n(306173),
-    Vk = n(279234);
-let VF = new eW.A("libdiscore"),
-    VB = !1;
-async function VV() {
-    if (!VB) {
+var VG = n(306173),
+    Vx = n(279234);
+let Vk = new eW.A("libdiscore"),
+    VF = !1;
+async function VB() {
+    if (!VF) {
         try {
             let e;
-            await (0, Vk.P)();
-            let t = (0, Vx.t7)(6, 7);
-            (VF.info("The answer for life the universe and everything is:", t),
+            await (0, Vx.P)();
+            let t = (0, VG.t7)(6, 7);
+            (Vk.info("The answer for life the universe and everything is:", t),
                 (e = []),
                 eJ.ML.forEach((t) => {
                     let n = t.getEnabledFeatureName();
@@ -51944,7 +51935,7 @@ async function VV() {
         } catch (e) {
             !(function (e) {
                 let t, n;
-                VF.error("Failed to execute smoke test:", e);
+                Vk.error("Failed to execute smoke test:", e);
                 let i =
                     ((t = ""),
                     (n = null),
@@ -51958,50 +51949,50 @@ async function VV() {
                 B.default.track(F.HAw.LIBDISCORE_LOADED, { success: !1, error: i });
             })(e);
         }
-        VB = !0;
+        VF = !0;
     }
 }
-var VH = n(300923),
-    Vj = n(316501);
-let VW = !1,
+var VV = n(300923),
+    VH = n(316501);
+let Vj = !1,
+    VW = null,
     VY = null,
-    VK = null,
-    V$ = (0, k.mj)({
+    VK = (0, k.mj)({
         name: "2026-06-web-translate-dom-guard",
         kind: "installation",
         defaultConfig: { enabled: !0 },
         variations: { 1: { enabled: !1 } },
     });
-function Vz() {
-    V$.getConfig({ location: "web_app_entrypoint" }).enabled ||
-        (VW &&
-            ((VW = !1),
-            null != VY && (Node.prototype.removeChild = VY),
-            null != VK && (Node.prototype.insertBefore = VK)),
-        xX.A.removeChangeListener(Vz));
+function V$() {
+    VK.getConfig({ location: "web_app_entrypoint" }).enabled ||
+        (Vj &&
+            ((Vj = !1),
+            null != VW && (Node.prototype.removeChild = VW),
+            null != VY && (Node.prototype.insertBefore = VY)),
+        xX.A.removeChangeListener(V$));
 }
-var VX = n(394072);
-(wu.default.cssDebuggingEnabled && n.e("836050").then(n.t.bind(n, 581929, 19)), (0, Vj.pF)(), (0, VX.tO)());
-let Vq = 5 * nh.A.Millis.MINUTE,
-    VZ = document.getElementById("app-mount");
-(e8()(null != VZ, "Could not find app-mount"),
-    (VZ.className = __OVERLAY__ ? "" : VH.l),
-    !VW &&
+var Vz = n(394072);
+(wu.default.cssDebuggingEnabled && n.e("836050").then(n.t.bind(n, 581929, 19)), (0, VH.pF)(), (0, Vz.tO)());
+let VX = 5 * nh.A.Millis.MINUTE,
+    Vq = document.getElementById("app-mount");
+(e8()(null != Vq, "Could not find app-mount"),
+    (Vq.className = __OVERLAY__ ? "" : VV.l),
+    !Vj &&
         (0, eG.isWeb)() &&
         "function" == typeof Node &&
         null != Node.prototype &&
-        ((VW = !0),
-        (VY = Node.prototype.removeChild),
+        ((Vj = !0),
+        (VW = Node.prototype.removeChild),
         (Node.prototype.removeChild = function (e) {
-            return e.parentNode !== this ? e : VY.call(this, e);
+            return e.parentNode !== this ? e : VW.call(this, e);
         }),
-        (VK = Node.prototype.insertBefore),
+        (VY = Node.prototype.insertBefore),
         (Node.prototype.insertBefore = function (e, t) {
-            return null != t && t.parentNode !== this ? e : VK.call(this, e, t);
+            return null != t && t.parentNode !== this ? e : VY.call(this, e, t);
         })),
-    (0, eG.isWeb)() && (xX.A.addChangeListener(Vz), Vz()));
-let VQ = (0, e4.createRoot)(VZ),
-    VJ = {
+    (0, eG.isWeb)() && (xX.A.addChangeListener(V$), V$()));
+let VZ = (0, e4.createRoot)(Vq),
+    VQ = {
         "/oauth2/authorize": function (e) {
             let t = e?.get("client_id"),
                 n = e?.get("scope")?.split(" "),
@@ -52034,9 +52025,9 @@ let VQ = (0, e4.createRoot)(VZ),
             return null != t && (UF({ token: t }), !0);
         },
     };
-function V0(e) {
-    let t = (0, y.jsx)(FY.e, { children: (0, y.jsx)(VG, { children: (0, y.jsx)(e, {}) }) });
-    return VQ.render(t);
+function VJ(e) {
+    let t = (0, y.jsx)(FY.e, { children: (0, y.jsx)(Vw, { children: (0, y.jsx)(e, {}) }) });
+    return VZ.render(t);
 }
 if (null != ef.A) {
     (ef.A.setUncaughtExceptionHandler?.((e, t) => {
@@ -52058,57 +52049,57 @@ if (null != ef.A) {
         ex.Ay.initializeExitHook(),
         ex.Ay.initializeWERHandler());
 }
-if (((0, VU.M)(window), __OVERLAY__)) V0(() => (0, y.jsx)(e9.W, { children: (0, y.jsx)(BQ, {}) }));
-else if (null != window.require && null == window.DiscordNative) V0(tU);
+if (((0, VP.M)(window), __OVERLAY__)) VJ(() => (0, y.jsx)(e9.W, { children: (0, y.jsx)(BZ, {}) }));
+else if (null != window.require && null == window.DiscordNative) VJ(tU);
 else {
     if ((document.addEventListener("scroll", (e) => e.preventDefault()), eG.isPlatformEmbedded)) {
         ((window.onbeforeunload = () => ex.Ay.beforeUnload()),
             ex.Ay.on("HELP_OPEN", () => window.open(tb.A.getCommunityURL())));
-        let e = new nA.J_(Vq, () => ex.Ay.purgeMemory());
+        let e = new nA.J_(VX, () => ex.Ay.purgeMemory());
         (ex.Ay.on("MAIN_WINDOW_BLUR", () => {
-            (e.delay(), ex.Ay.setFocused(!1), (0, VP.XC)(window, !1));
+            (e.delay(), ex.Ay.setFocused(!1), (0, VM.XC)(window, !1));
         }),
             ex.Ay.on("MAIN_WINDOW_FOCUS", () => {
-                (e.cancel(), ex.Ay.setFocused(!0), (0, VP.XC)(window, !0));
+                (e.cancel(), ex.Ay.setFocused(!0), (0, VM.XC)(window, !0));
             }),
             ex.Ay.on("MAIN_WINDOW_PATH", function (e, t, n) {
                 let i = null != n ? new URLSearchParams(n) : null;
-                VJ[t]?.(i) || (0, dr.pX)(t);
+                VQ[t]?.(i) || (0, dr.pX)(t);
             }),
             ex.Ay.on("MAIN_WINDOW_HIDDEN", () => {
-                (0, VP.R)(window);
+                (0, VM.R)(window);
             }));
     }
-    (Vf.initialize(),
-        Vn.initialize(),
+    (VI.initialize(),
+        Vt.initialize(),
         {
             instance: null,
             init() {
-                null == this.instance && (this.instance = new Vd());
+                null == this.instance && (this.instance = new Vo());
             },
         }.init(),
         {
             init() {
-                (U.h.subscribe("CONNECTION_OPEN", VN),
-                    U.h.subscribe("LOGOUT", VN),
-                    U.h.subscribe("STREAM_DELETE", VN),
+                (U.h.subscribe("CONNECTION_OPEN", VS),
+                    U.h.subscribe("LOGOUT", VS),
+                    U.h.subscribe("STREAM_DELETE", VS),
                     U.h.subscribe("RTC_CONNECTION_VIDEO", (e) => {
                         let { guildId: t, channelId: n, userId: i, streamId: r, context: a } = e;
                         null == r ||
                             a !== nL.x.STREAM ||
                             i !== J.default.getId() ||
                             __OVERLAY__ ||
-                            (VN(), (d = r), VC(r, t, n, i));
+                            (VS(), (d = r), VN(r, t, n, i));
                     }),
                     U.h.subscribe("MEDIA_ENGINE_VIDEO_STATE_CHANGED", (e) => {
                         let { videoState: t } = e;
-                        Vm = t === F.uPF.PAUSED;
+                        VT = t === F.uPF.PAUSED;
                     }));
             },
         }.init(),
-        V_.initialize(),
-        VL.initialize(),
-        VM.initialize(),
-        VV(),
-        V0(() => (0, y.jsx)(e9.W, { children: (0, y.jsx)(Ve, {}) })));
+        Vu.initialize(),
+        VR.initialize(),
+        Vb.initialize(),
+        VB(),
+        VJ(() => (0, y.jsx)(e9.W, { children: (0, y.jsx)(B9, {}) })));
 }
