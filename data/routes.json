@@ -163,6 +163,7 @@
   "COLLECTIBLES_SHOP_TAB_LAYOUT": "/collectibles-shop-tab-layouts/:param",
   "GUILD_MEMBER_BANNER": "/guilds/:param/users/:param/banners/:param./:param",
   "INTELLIGENCE_LAYER_SEARCH": "/guilds/:param/intelligence/search",
+  "INTELLIGENCE_LAYER_SUGGESTED_SEARCHES": "/guilds/:param/intelligence/search/suggestions",
   "CHANNEL_CONVERSATIONS": "/channels/:param/conversations",
   "CHANNEL_CONVERSATION": "/channels/:param/conversations/:param",
   "CHANNEL_CONVERSATION_MESSAGES": "/channels/:param/conversations/:param/messages",
