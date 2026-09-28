@@ -13,6 +13,7 @@
 }
 
 .giftImagePromotion_d1e69f {
+    align-self: flex-start;
     border-radius: var(--radius-sm);
     flex-shrink: 0;
     height: 130px;
@@ -37,16 +38,12 @@
     margin-bottom: var(--space-8)
 }
 
-.giftText_d1e69f {
-    margin-bottom: var(--space-12)
-}
-
-.giftTextPromotion_d1e69f {
-    margin-bottom: var(--space-16)
-}
-
 .giftAdditionalTerm_d1e69f {
     font-style: italic
 }
 
-/*# sourceMappingURL=760a46d98aa846ff.css.map*/
+.giftButtonPromotion_d1e69f {
+    margin-top: var(--space-16)
+}
+
+/*# sourceMappingURL=c12046c574269066.css.map*/
