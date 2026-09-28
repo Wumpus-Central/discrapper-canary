@@ -21,7 +21,34 @@ function d(e, t) {
                     l.some((e) => e.toLowerCase().includes(t))
                 );
             });
-        }, [e, a]);
+        }, [e, a]),
+        { ungroupedTabs: u, sortedGroups: m } = l.useMemo(() => {
+            let e = (function (e) {
+                let t = new Map();
+                for (let a of e) {
+                    let e = t.get(a.group) ?? [];
+                    (e.push(a), t.set(a.group, e));
+                }
+                return t;
+            })(c.filter((e) => e.group !== o.fu.NONE));
+            return {
+                ungroupedTabs: c.filter((e) => e.group === o.fu.NONE),
+                sortedGroups: o.BW.flatMap((t) => {
+                    let a = e.get(t);
+                    return null == a || 0 === a.length
+                        ? []
+                        : [
+                              {
+                                  group: t,
+                                  sortedTabs: a.sort((e, t) =>
+                                      ((0, i.O)(e.name) ?? "").localeCompare((0, i.O)(t.name) ?? ""),
+                                  ),
+                              },
+                          ];
+                }),
+            };
+        }, [c]),
+        h = "" !== a.trim() ? (u[0] ?? m[0]?.sortedTabs[0])?.id : void 0;
     return [
         l.useMemo(
             () =>
@@ -29,89 +56,86 @@ function d(e, t) {
                     s.aK,
                     {
                         id: "devtools-search",
-                        control: (e, t) =>
-                            (0, n.jsx)(r.V, { ...e, query: a, onChange: d, placeholder: "Search DevTools...", ref: t }),
+                        control: (e, l) =>
+                            (0, n.jsx)(r.V, {
+                                ...e,
+                                query: a,
+                                onChange: d,
+                                onKeyDown: (a) => {
+                                    "Enter" === a.key && null != h && (a.preventDefault(), t(h), e.onClose?.());
+                                },
+                                placeholder: "Search DevTools...",
+                                ref: l,
+                            }),
                     },
                     "devtools-search",
                 ),
-            [a],
+            [a, h, t],
         ),
         ...l.useMemo(() => {
             let e = [];
-            if ("" !== a.trim() && 0 === c.length)
-                e.push(
-                    (0, n.jsx)(
-                        s.Dr,
-                        { id: "devtools-no-results", label: `No DevTools found for "${a}"`, disabled: !0 },
-                        "devtools-no-results",
-                    ),
-                );
-            else {
-                let l = c.filter((e) => e.group === o.fu.NONE),
-                    r = (function (e) {
-                        let t = new Map();
-                        for (let a of e) {
-                            let e = t.get(a.group) ?? [];
-                            (e.push(a), t.set(a.group, e));
-                        }
-                        return t;
-                    })(c.filter((e) => e.group !== o.fu.NONE));
-                (l.forEach((a) => {
-                    let { id: l, name: r } = a;
-                    return e.push((0, n.jsx)(s.Dr, { id: l, label: (0, i.O)(r) ?? "", action: () => t(l) }, l));
-                }),
-                    o.BW.forEach((l) => {
-                        let o = r.get(l);
-                        if (null != o && o.length > 0) {
-                            let r = o.sort((e, t) => ((0, i.O)(e.name) ?? "").localeCompare((0, i.O)(t.name) ?? ""));
-                            "" === a.trim()
-                                ? e.push(
-                                      (0, n.jsx)(
-                                          s.Dr,
-                                          {
-                                              id: `devtools-${l}`,
-                                              label: l,
-                                              children: (0, n.jsx)(s.rX, {
-                                                  children: r.map((e) =>
-                                                      (0, n.jsx)(
-                                                          s.Dr,
-                                                          {
-                                                              id: `devtools-${e.id}`,
-                                                              label: (0, i.O)(e.name) ?? "",
-                                                              action: () => t(e.id),
-                                                          },
-                                                          e.id,
-                                                      ),
-                                                  ),
-                                              }),
-                                          },
-                                          `devtools-${l}`,
-                                      ),
-                                  )
-                                : e.push(
-                                      (0, n.jsx)(
-                                          s.rX,
-                                          {
-                                              label: l,
-                                              children: r.map((e) =>
-                                                  (0, n.jsx)(
-                                                      s.Dr,
-                                                      {
-                                                          id: `devtools-filtered-${e.id}`,
-                                                          label: (0, i.O)(e.name) ?? "",
-                                                          action: () => t(e.id),
-                                                      },
-                                                      e.id,
-                                                  ),
-                                              ),
-                                          },
-                                          `devtools-filtered-${l}`,
-                                      ),
-                                  );
-                        }
-                    }));
-            }
-            return e;
-        }, [c, a, t]),
+            return (
+                "" !== a.trim() && 0 === c.length
+                    ? e.push(
+                          (0, n.jsx)(
+                              s.Dr,
+                              { id: "devtools-no-results", label: `No DevTools found for "${a}"`, disabled: !0 },
+                              "devtools-no-results",
+                          ),
+                      )
+                    : (u.forEach((a) => {
+                          let { id: l, name: r } = a;
+                          return e.push((0, n.jsx)(s.Dr, { id: l, label: (0, i.O)(r) ?? "", action: () => t(l) }, l));
+                      }),
+                      m.forEach((l) => {
+                          let { group: r, sortedTabs: o } = l;
+                          "" === a.trim()
+                              ? e.push(
+                                    (0, n.jsx)(
+                                        s.Dr,
+                                        {
+                                            id: `devtools-${r}`,
+                                            label: r,
+                                            children: (0, n.jsx)(s.rX, {
+                                                children: o.map((e) =>
+                                                    (0, n.jsx)(
+                                                        s.Dr,
+                                                        {
+                                                            id: `devtools-${e.id}`,
+                                                            label: (0, i.O)(e.name) ?? "",
+                                                            action: () => t(e.id),
+                                                        },
+                                                        e.id,
+                                                    ),
+                                                ),
+                                            }),
+                                        },
+                                        `devtools-${r}`,
+                                    ),
+                                )
+                              : e.push(
+                                    (0, n.jsx)(
+                                        s.rX,
+                                        {
+                                            label: r,
+                                            children: o.map((e) =>
+                                                (0, n.jsx)(
+                                                    s.Dr,
+                                                    {
+                                                        id: `devtools-filtered-${e.id}`,
+                                                        label: (0, i.O)(e.name) ?? "",
+                                                        action: () => t(e.id),
+                                                    },
+                                                    e.id,
+                                                ),
+                                            ),
+                                        },
+                                        `devtools-filtered-${r}`,
+                                    ),
+                                );
+                      })),
+                e
+            );
+        }, [c, u, m, a, t]),
     ];
 }

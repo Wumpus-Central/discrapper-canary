@@ -12,12 +12,13 @@ let o = r.forwardRef(function (e, t) {
             placeholder: c = l.intl.string(l.t["5h0QOP"]),
             "aria-label": u,
             onInteraction: _,
+            onKeyDown: E,
         } = e,
-        E = r.useRef(null);
+        A = r.useRef(null);
     return (
         r.useImperativeHandle(
             t,
-            () => ({ focus: () => E.current?.focus(), blur: () => E.current?.blur(), activate: () => !1 }),
+            () => ({ focus: () => A.current?.focus(), blur: () => A.current?.blur(), activate: () => !1 }),
             [],
         ),
         (0, i.jsx)(a.I, {
@@ -29,11 +30,12 @@ let o = r.forwardRef(function (e, t) {
             onClear: function () {
                 (o(""), _?.(s.Q.SEARCH));
             },
+            onKeyDown: E,
             query: n,
             placeholder: c,
             autoFocus: !1,
             "aria-label": u,
-            ref: E,
+            ref: A,
             focusProps: { offset: { top: 2, bottom: 2, left: 4, right: 4 } },
         })
     );
