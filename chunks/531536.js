@@ -11,14 +11,17 @@ var n = r(503698),
     d = r(287809),
     m = r(137504);
 function h(e) {
-    let { title: t, body: r, image: n, badge: l, className: a } = e;
+    let { title: t, body: r, image: n, badge: l, className: a, textGroupClassName: u } = e;
     return (0, i.jsxs)("div", {
         className: s()(m.kL, a),
         children: [
             null != n && (0, i.jsx)("div", { className: m.Sl, children: n }),
             (0, i.jsxs)("div", {
                 className: m.Qs,
-                children: [null != l && (0, i.jsx)("div", { className: m.oL, children: l }), t, r],
+                children: [
+                    null != l && (0, i.jsx)("div", { className: m.oL, children: l }),
+                    (0, i.jsxs)("div", { className: s()(m.Z, u), children: [t, r] }),
+                ],
             }),
         ],
     });

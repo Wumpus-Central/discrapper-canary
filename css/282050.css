@@ -25,6 +25,10 @@
     width: 64px
 }
 
+.tileTextGroup__72cd3 {
+    gap: var(--space-0)
+}
+
 .textSection__72cd3 {
     display: flex;
     flex-direction: column;
@@ -53,4 +57,4 @@
     transform-origin: bottom left
 }
 
-/*# sourceMappingURL=282050.37751e9a057271d1.css.map*/
+/*# sourceMappingURL=282050.1c9744016ff39e17.css.map*/

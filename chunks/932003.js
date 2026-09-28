@@ -49,6 +49,7 @@ function f(e) {
                 null != n
                     ? (0, r.jsx)(a.E, { type: { text: n.toUpperCase() }, variant: "brand", icon: s.ClockIcon })
                     : void 0,
+            textGroupClassName: I.RI,
             title: (0, r.jsx)(o.E, { variant: "text-md/medium", color: "text-default", children: l }),
             body: (0, r.jsx)(o.E, { variant: "text-sm/medium", color: "text-muted", children: i }),
         }),

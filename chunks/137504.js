@@ -3,6 +3,7 @@ e.exports = {
     Sl: "image__3e00d",
     Qs: "content__3e00d",
     oL: "badgeSlot__3e00d",
+    Z: "textGroup__3e00d",
     yn: "collectiblesPreview__3e00d",
     ML: "scaledSkuPreview__3e00d",
     M: "avatarDecoration__3e00d",
