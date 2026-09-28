@@ -205,6 +205,9 @@ class Z {
     get usableEmojis() {
         return (this._computeEmojiUsability(), this._usableEmojis);
     }
+    hasUsableEmoji() {
+        return null != this._usableEmojis ? this._usableEmojis.length > 0 : this.emojis.some((e) => this.isUsable(e));
+    }
     get hiddenEmojiIds() {
         return (this._computeEmojiUsability(), this._hiddenEmojiIds);
     }
@@ -241,9 +244,7 @@ function ec(e) {
         computeBonus: () => 100,
         lookupKey: (e) => j.Ay.getByName(e) ?? el(e),
         afterCompute: () => {
-            (e(),
-                (ei = [...X]),
-                o().some(er, (e) => e.usableEmojis.length > 0) || ei.splice(X.indexOf($.R2.CUSTOM), 1));
+            (e(), (ei = [...X]), o().some(er, (e) => e.hasUsableEmoji()) || ei.splice(X.indexOf($.R2.CUSTOM), 1));
         },
         numFrequentlyItems: 42,
     };
@@ -711,7 +712,7 @@ class eg extends _.Ay.PersistedStore {
         return es.get(e);
     }
     hasUsableEmojiInAnyGuild() {
-        return (ed(), B.default.keys(er).some((e) => er[e].usableEmojis.length > 0));
+        return (ed(), B.default.keys(er).some((e) => er[e].hasUsableEmoji()));
     }
     hasFavoriteEmojis(e) {
         let t = eu.get(e);
