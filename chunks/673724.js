@@ -95,5 +95,5 @@ let g = ["simple", "balanced", "complex"],
     L = {
         simple: { model: "gpt-6-luna", thinking: "high" },
         balanced: { model: "gpt-6-sol", thinking: "high" },
-        complex: { model: "gpt-6-astra", thinking: "high" },
+        complex: { model: "claude-opus-5-5", thinking: "high" },
     };

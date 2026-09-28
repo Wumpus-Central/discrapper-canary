@@ -1,4 +1,4 @@
-a.d(t, { B: () => l, MZ: () => o, TH: () => i, tn: () => s });
+a.d(t, { B: () => o, MZ: () => l, TH: () => i, tn: () => s });
 let n = [
     {
         date: "2026-09-07",
@@ -100,6 +100,13 @@ let n = [
         platforms: ["desktop", "mobile"],
         summary:
             "Claude Fable 5.1 replaces Claude Fable 5 in the model picker, sharper on long builds at the same price.",
+    },
+    {
+        date: "2026-09-28",
+        time: "02:26",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "Claude Opus 5.5 now powers the Big Brain effort stop, and each effort stop runs the same models in every project.",
     },
     {
         date: "2026-09-03",
@@ -855,9 +862,9 @@ function i(e) {
 function s(e) {
     return n.filter((t) => t.platforms.includes(e));
 }
-function l(e) {
+function o(e) {
     return s(e).length > 3;
 }
-function o(e) {
+function l(e) {
     return 1 === e.platforms.length;
 }
