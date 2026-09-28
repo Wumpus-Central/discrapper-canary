@@ -1720,6 +1720,10 @@ function eq(e) {
             animationId: e.animation_id,
             soundId: e.sound_id,
             soundVolume: e.sound_volume,
+            soundName: e.name,
+            sourceGuildId: e.source_guild_id,
+            isEcho: e.is_echo,
+            authorId: e.author_id,
         });
     }),
     eV(["CLIPS_REMOTE_TRIGGER"], (e) => {
