@@ -567,6 +567,7 @@ function eP(e) {
                       align: "top",
                       alignmentStrategy: "edge",
                       caretConfig: { align: "start" },
+                      scrollBehavior: "close",
                       onRequestClose: () => a(eA.i.USER_DISMISS),
                   })
                 : null,
