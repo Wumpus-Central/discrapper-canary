@@ -147,18 +147,13 @@
     transition: background-color .6s ease-out
 }
 
-.historySkeleton__2b71e {
-    pointer-events: none
+.chatLogListLoading__2b71e {
+    justify-content: center;
+    padding-block-start: 0
 }
 
-.full-motion .historySkeleton__2b71e {
-    animation: history-skeleton-pulse__2b71e 1.6s ease-in-out infinite
-}
-
-@keyframes history-skeleton-pulse__2b71e {
-    50% {
-        opacity: .5
-    }
+.historySpinner__2b71e {
+    align-items: center
 }
 
 .chatRowHighlighted__2b71e {
@@ -1330,4 +1325,4 @@
     }
 }
 
-/*# sourceMappingURL=491a79779af33146.css.map*/
+/*# sourceMappingURL=e01e8bd8edd8bcfb.css.map*/
