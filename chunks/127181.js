@@ -164,6 +164,13 @@ let n = [
             "Comment mode now picks whatever is under your pointer, not only buttons and headings, and outlines it so you can see what you are about to comment on. Each note is pinned to the exact spot you clicked, and its card opens out of that pin.",
     },
     {
+        date: "2026-09-28",
+        time: "01:59",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "Conjure can ask questions where you pick several answers at once, and add your own words alongside them.",
+    },
+    {
         date: "2026-09-27",
         time: "04:34",
         platforms: ["desktop", "mobile"],

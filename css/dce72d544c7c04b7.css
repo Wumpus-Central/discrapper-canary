@@ -430,6 +430,25 @@
     min-width: 0
 }
 
+.optionSelected_d0997e,
+.optionSelected_d0997e:hover {
+    background: var(--background-mod-normal)
+}
+
+.markCheckbox_d0997e {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    height: var(--space-32);
+    justify-content: center;
+    width: var(--space-32)
+}
+
+.hint_d0997e {
+    padding-block: var(--space-8) 0;
+    padding-inline: var(--space-12)
+}
+
 .mark_d0997e {
     align-items: center;
     background: var(--control-secondary-background-default);
@@ -590,7 +609,8 @@
 }
 
 .footerNav_d0997e {
-    display: flex
+    display: flex;
+    gap: var(--space-12)
 }
 
 .footerNav_d0997e,
@@ -625,12 +645,6 @@
 
 .iconButton_d0997e:active {
     color: var(--interactive-text-active)
-}
-
-.iconButtonSpent_d0997e {
-    cursor: not-allowed;
-    opacity: .5;
-    pointer-events: none
 }
 
 .full-motion .clarification_d0997e {
@@ -1185,4 +1199,4 @@
     white-space: nowrap
 }
 
-/*# sourceMappingURL=5c011c46ecc045bb.css.map*/
+/*# sourceMappingURL=dce72d544c7c04b7.css.map*/
