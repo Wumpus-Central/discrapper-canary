@@ -363,7 +363,7 @@ let K = "playground-announcement-modal",
                                     n.e("68532"),
                                     n.e("20382"),
                                     n.e("273165"),
-                                    n.e("734268"),
+                                    n.e("851957"),
                                     n.e("963333"),
                                     n.e("954372"),
                                 ]).then(n.bind(n, 103407));
@@ -913,13 +913,13 @@ async function e5(e) {
     }
     return n;
 }
-let e4 = [
+let e9 = [
     { type: "marketing_moment", label: "Marketing Moments" },
     { type: "gift", label: "Gift Promotions" },
 ];
-function e9(e) {
+function e4(e) {
     let t = [];
-    for (let n of e4) {
+    for (let n of e9) {
         let o = e.filter((e) => e.type === n.type);
         if (0 !== o.length)
             for (let e of (t.push({ id: `header-${n.type}`, value: `header-${n.type}`, label: n.label, disabled: !0 }),
@@ -1807,8 +1807,8 @@ let ta = {
                     }
                 );
             }, []);
-            let l = i.useMemo(() => e9(t), [t]),
-                a = i.useCallback((e, n) => e9((0, e7.Ht)(t, n, { keys: ["name"] })), [t]);
+            let l = i.useMemo(() => e4(t), [t]),
+                a = i.useCallback((e, n) => e4((0, e7.Ht)(t, n, { keys: ["name"] })), [t]);
             return 0 === t.length
                 ? null
                 : (0, p.jsx)("div", {
