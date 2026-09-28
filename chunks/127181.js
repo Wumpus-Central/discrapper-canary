@@ -548,6 +548,13 @@ let n = [
             "One Effort scale, from Speedrun to Big Brain, sets how much thinking goes into a run, instead of choosing models and thinking levels separately.",
     },
     {
+        date: "2026-09-28",
+        time: "19:00",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "Paste an image into the chat box and it attaches like an upload. On desktop, pasting anywhere in the builder or into the box for a part of your Frame you picked works too.",
+    },
+    {
         date: "2026-09-22",
         time: "00:04",
         platforms: ["desktop", "mobile"],
