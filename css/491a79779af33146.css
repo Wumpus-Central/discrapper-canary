@@ -1299,4 +1299,35 @@
     transition: stroke-dashoffset .35s cubic-bezier(.22, 1, .36, 1)
 }
 
-/*# sourceMappingURL=ec3cadfd667d5836.css.map*/
+.awaitingSurface__7777f {
+    border-color: var(--background-brand);
+    position: relative
+}
+
+.awaitingSurface__7777f:after {
+    border-radius: inherit;
+    box-shadow: 0 0 0 var(--space-4) var(--background-brand);
+    content: "";
+    inset: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute
+}
+
+.full-motion .awaitingSurface__7777f:after {
+    animation: vibegrationsAwaitingPulse__7777f 2s ease-in-out infinite
+}
+
+@keyframes vibegrationsAwaitingPulse__7777f {
+
+    0%,
+    to {
+        opacity: 0
+    }
+
+    50% {
+        opacity: .35
+    }
+}
+
+/*# sourceMappingURL=491a79779af33146.css.map*/

@@ -60,28 +60,28 @@ function C(e, t) {
 }
 function P(e) {
     let t = C(e.role, e.content, { ts: e.ts, id: e.id, userId: e.user_id, attachments: e.attachments });
-    return (
-        null != e.kind && (t.kind = e.kind),
-        "interrupted" === e.kind && ((t.interrupted = !0), (t.content = ""), (t.finished = !0)),
-        null != e.proposal && (t.proposal = e.proposal),
-        null != e.ideas && e.ideas.length > 0 && (t.ideas = e.ideas),
-        null != e.clarification && e.clarification.questions.length > 0 && (t.clarification = e.clarification),
-        null == e.steps && null == e.events && null != e.todos && e.todos.length > 0 && (t.todos = e.todos),
-        null != e.steps
-            ? (t.steps = (function (e) {
-                  let t = j();
-                  for (let n of e) q(t, n);
-                  return t.steps;
-              })(e.steps))
-            : null != e.events &&
-              (t.steps = e.events.flatMap((e) =>
-                  "todos" === e.type ? [{ type: "step", kind: "todos", items: e.items }] : [],
-              )),
-        null != e.secret_request && e.secret_request.fields.length > 0 && (t.secretRequest = e.secret_request),
-        null != e.settings_request && (t.settingsRequest = e.settings_request),
-        null != e.intake && e.intake.questions.length > 0 && (t.intake = e.intake),
-        t
-    );
+    for (let n of (null != e.kind && (t.kind = e.kind),
+    "interrupted" === e.kind && ((t.interrupted = !0), (t.content = ""), (t.finished = !0)),
+    null != e.proposal && (t.proposal = e.proposal),
+    null != e.ideas && e.ideas.length > 0 && (t.ideas = e.ideas),
+    null != e.clarification && e.clarification.questions.length > 0 && (t.clarification = e.clarification),
+    null == e.steps && null == e.events && null != e.todos && e.todos.length > 0 && (t.todos = e.todos),
+    null != e.steps
+        ? (t.steps = (function (e) {
+              let t = j();
+              for (let n of e) q(t, n);
+              return t.steps;
+          })(e.steps))
+        : null != e.events &&
+          (t.steps = e.events.flatMap((e) =>
+              "todos" === e.type ? [{ type: "step", kind: "todos", items: e.items }] : [],
+          )),
+    null != e.secret_request && e.secret_request.fields.length > 0 && (t.secretRequest = e.secret_request),
+    null != e.settings_request && (t.settingsRequest = e.settings_request),
+    null != e.intake && e.intake.questions.length > 0 && (t.intake = e.intake),
+    e.steps ?? []))
+        "awaiting_user" === n.kind && "secrets" === n.action && (t.awaitingUser = { action: n.action });
+    return t;
 }
 function M(e, t) {
     if (null == t) return -1;

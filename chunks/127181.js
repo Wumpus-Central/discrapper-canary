@@ -678,6 +678,13 @@ let n = [
         summary: "What\u2019s new keeps its three newest lines and adds View all, which opens the whole history.",
     },
     {
+        date: "2026-09-27",
+        time: "20:17",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "When Conjure needs keys only you can add, their card pulses and says so, and reminds you that you can always just ask what to do.",
+    },
+    {
         date: "2026-09-02",
         time: "00:00",
         platforms: ["desktop", "mobile"],
