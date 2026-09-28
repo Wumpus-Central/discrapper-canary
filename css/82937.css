@@ -1,5 +1,5 @@
 .container__3e00d {
-    align-items: center;
+    align-items: flex-start;
     display: flex;
     flex-direction: row;
     gap: var(--space-16)
@@ -10,6 +10,7 @@
 }
 
 .content__3e00d {
+    align-self: center;
     display: flex;
     flex: 1;
     flex-direction: column;
@@ -72,4 +73,4 @@
     transform: scale(.42)
 }
 
-/*# sourceMappingURL=82937.aa1328e1bdab1757.css.map*/
+/*# sourceMappingURL=82937.b5a153a259aa4733.css.map*/
