@@ -8,6 +8,13 @@ let n = [
             "A Priority toggle arrives in the model picker: on models that offer it, replies come back sooner for more runes, and the Speedrun stop now runs it by default.",
     },
     {
+        date: "2026-09-28",
+        time: "19:34",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "A clone of another project, or one you link to another app, goes straight to building instead of asking you to approve a plan.",
+    },
+    {
         date: "2026-09-11",
         time: "00:00",
         platforms: ["desktop", "mobile"],
