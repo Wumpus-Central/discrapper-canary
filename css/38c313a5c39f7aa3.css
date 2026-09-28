@@ -470,8 +470,13 @@
     min-height: 0
 }
 
+.body__2e07e {
+    overflow-y: auto
+}
+
 .body__2e07e,
-.entry__2e07e {
+.entry__2e07e,
+.value__2e07e {
     flex: 1;
     min-height: 0
 }
@@ -893,4 +898,4 @@
     margin-bottom: 0
 }
 
-/*# sourceMappingURL=f84248e179a7b8c4.css.map*/
+/*# sourceMappingURL=38c313a5c39f7aa3.css.map*/

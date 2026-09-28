@@ -4888,6 +4888,7 @@ function lQ(e) {
             }),
             (0, r.jsxs)(Q.B, {
                 gap: 4,
+                className: lq.Uq,
                 children: [
                     (0, r.jsx)(p.E, { variant: "text-sm/semibold", children: "DetectableGameStore" }),
                     (0, r.jsx)("pre", { className: lq.aY, children: JSON.stringify(t, null, 2) }),
