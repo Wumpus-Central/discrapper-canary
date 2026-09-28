@@ -129,6 +129,13 @@ let n = [
             "Coding tools you connect to an app can now search and script its files, read the Mana docs, set its settings, public pages and icon, use your uploads, and bring in updates from the original, and a broken manifest edit is caught before it deploys.",
     },
     {
+        date: "2026-09-25",
+        time: "15:51",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "Cloning an app shows your copy running in a few seconds, before Conjure has even finished looking it over.",
+    },
+    {
         date: "2026-09-06",
         time: "00:01",
         platforms: ["desktop"],

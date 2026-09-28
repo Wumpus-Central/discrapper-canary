@@ -5,13 +5,13 @@
     _v: () => eE,
     n6: () => ev,
     ss: () => eI,
-    cS: () => eT,
+    cS: () => em,
     R7: () => ee,
     aF: () => eR,
     Lj: () => et,
     JI: () => eO,
     Vm: () => eN,
-    oX: () => em,
+    oX: () => ew,
     ms: () => eu,
     TV: () => z,
     dv: () => Z,
@@ -23,7 +23,7 @@
     fu: () => K,
     $C: () => Y,
     Ay: () => eB,
-    Xk: () => ew,
+    Xk: () => eT,
     vX: () => ey,
     dz: () => e_,
     ST: () => ec,
@@ -72,7 +72,8 @@ class u {
                 this.socket === a && o?.();
             }));
     }
-    sendUserMessage(e, t, n, r, o) {
+    sendUserMessage(e, t, n, r) {
+        let { templateId: o, remix: s } = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
         if (null == this.socket || this.socket.readyState !== WebSocket.OPEN) throw Error("WebSocket not open");
         this.socket.send(
             JSON.stringify({
@@ -82,6 +83,7 @@ class u {
                 attachment_ids: n,
                 project_name: r,
                 template_id: o,
+                remix: s,
             }),
         );
     }
@@ -162,12 +164,12 @@ var g = n(557875),
     y = n(783791),
     S = n(972786),
     E = n(50617),
-    T = n(375708);
-function w(e, t) {
+    m = n(375708);
+function T(e, t) {
     let n = e.pendingPublish;
     null != n && ((e.pendingPublish = null), clearTimeout(n.timeout), n.reject(Error(t)));
 }
-function m(e, t) {
+function w(e, t) {
     let n = e.pendingPatchNotesDraft;
     null != n && ((e.pendingPatchNotesDraft = null), clearTimeout(n.timeout), n.reject(Error(t)));
 }
@@ -224,7 +226,7 @@ function H(e, t) {
                 r.nonce,
                 r.attachments?.map((e) => e.id),
                 S.Ay.getProject(e)?.name,
-                r.templateId,
+                { templateId: r.templateId, remix: r.remix },
             );
         } catch (t) {
             (console.error("[vibegrations] queued send failed", t),
@@ -251,7 +253,7 @@ let L = {
         preview: { location: "runtime_worker", code: l.xA.RUNTIME_WORKER_ERROR },
     },
     j = new Map();
-async function W(e, t, n) {
+async function x(e, t, n) {
     let r,
         o = Date.now();
     console.debug("[vibegrations] capture request received", { id: n.id, build: n.build, probe: n.probe });
@@ -273,7 +275,7 @@ async function W(e, t, n) {
     }),
         t.ws.sendCaptureAck(n.id, r.status, r.code, r.message));
 }
-async function q(e, t, n) {
+async function W(e, t, n) {
     let r = Date.now();
     console.debug("[vibegrations] control request received", {
         id: n.id,
@@ -298,7 +300,7 @@ async function q(e, t, n) {
             t.ws.sendControlAck(n.id, "failed", void 0, "the client could not drive the preview frame"));
     }
 }
-async function x(e, t) {
+async function q(e, t) {
     t.ws.close();
     try {
         let { ticket: n, baseUrl: r } = await (0, p.d)(e);
@@ -412,7 +414,7 @@ async function x(e, t) {
                                       turnId: r.turn_id,
                                       patch: { content: e, kind: "message" },
                                   })
-                                : C(t, T.intl.string(E.default.Z8Eo8I), v);
+                                : C(t, m.intl.string(E.default.Z8Eo8I), v);
                         } else if ("thinking_lifecycle" === r.kind) {
                             let { phase: e, session: n, seq: o, ticks: i, elapsed_ms: a, text: c } = r;
                             null != e &&
@@ -496,7 +498,7 @@ async function x(e, t) {
                                       turnId: r.turn_id,
                                       patch: { proposal: r.proposal, kind: "proposal" },
                                   })
-                                : C(t, T.intl.string(E.default.IHCafX), v);
+                                : C(t, m.intl.string(E.default.IHCafX), v);
                         else if ("ideas" === r.kind)
                             null != r.ideas &&
                                 r.ideas.length > 0 &&
@@ -634,8 +636,8 @@ async function x(e, t) {
                                       (0, c.tZ)(t, { isPreview: !0 }).catch((e) => {
                                           console.error("[vibegrations] post-preview-publish refresh failed", t, e);
                                       }));
-                    else if ("capture_preview" === r.type) W(t, n, r).catch(() => {});
-                    else if ("control_preview" === r.type) q(t, n, r).catch(() => {});
+                    else if ("capture_preview" === r.type) x(t, n, r).catch(() => {});
+                    else if ("control_preview" === r.type) W(t, n, r).catch(() => {});
                     else if ("control_claim" === r.type || "capture_claim" === r.type) {
                         let e;
                         ((i = r.id),
@@ -738,8 +740,8 @@ async function x(e, t) {
                                             })(t, r));
                 })(e, t, n),
             onClose: () => {
-                (w(t, "Connection closed before the publish result arrived"),
-                m(t, "Connection closed before the draft arrived"),
+                (T(t, "Connection closed before the publish result arrived"),
+                w(t, "Connection closed before the draft arrived"),
                 _(e),
                 t.disposed)
                     ? R(e, "closed")
@@ -758,8 +760,8 @@ async function x(e, t) {
         (R(e, "failed"),
             $(e, t, n instanceof Error ? n.message : "ws open failed"),
             (t.pendingModelSettings = null),
-            w(t, "Connection failed before the publish result arrived"),
-            m(t, "Connection failed before the draft arrived"),
+            T(t, "Connection failed before the publish result arrived"),
+            w(t, "Connection failed before the draft arrived"),
             (0, l.Z0)(e, {
                 location: "connection",
                 code: l.xA.WS_OPEN_FAILED,
@@ -790,7 +792,7 @@ function J(e) {
         (n.reconnectPending = !1),
         R(e, "connecting"),
         s.h.dispatch({ type: "VIBEGRATIONS_TRACE_REPLAY_STARTING", projectId: e }),
-        x(e, n));
+        q(e, n));
 }
 function F(e) {
     var t;
@@ -799,8 +801,8 @@ function F(e) {
         null != n &&
         ((n.disposed = !0),
         n.backoff.cancel(),
-        w(n, "Connection closed before the publish result arrived"),
-        m(n, "Connection closed before the draft arrived"),
+        T(n, "Connection closed before the publish result arrived"),
+        w(n, "Connection closed before the draft arrived"),
         n.ws.close(),
         k.delete(e),
         (t = e),
@@ -818,22 +820,22 @@ function X(e) {
     ("closed" !== n && "failed" !== n) || t.reconnectPending || J(e);
 }
 function Z(e, t, n) {
-    let { templateId: r } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-        o = t.trim(),
-        s = null != n && n.length > 0 ? n : void 0;
-    if ("" === o && null == s) return;
-    let a = { content: o, nonce: (0, i.m)(), attachments: s, templateId: r },
-        c = k.get(e);
-    if (null != c && ("connecting" === A.get(e) || c.reconnectPending)) return void c.pendingSends.push(a);
-    D(e, a);
+    let { templateId: r, remix: o } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
+        s = t.trim(),
+        a = null != n && n.length > 0 ? n : void 0;
+    if ("" === s && null == a) return;
+    let c = { content: s, nonce: (0, i.m)(), attachments: a, templateId: r, remix: o },
+        l = k.get(e);
+    if (null != l && ("connecting" === A.get(e) || l.reconnectPending)) return void l.pendingSends.push(c);
+    D(e, c);
     try {
-        if (null == c) throw Error("Not connected");
-        c.ws.sendUserMessage(
-            a.content,
-            a.nonce,
-            a.attachments?.map((e) => e.id),
+        if (null == l) throw Error("Not connected");
+        l.ws.sendUserMessage(
+            c.content,
+            c.nonce,
+            c.attachments?.map((e) => e.id),
             S.Ay.getProject(e)?.name,
-            a.templateId,
+            { templateId: c.templateId, remix: c.remix },
         );
     } catch (t) {
         (console.error("[vibegrations] send failed", t), C(e, t instanceof Error ? t.message : "send failed"));
@@ -855,7 +857,7 @@ function z(e) {
         if (null == r) return void n(Error("Not connected"));
         if (null != r.pendingPublish) return void n(Error("Publish already in flight"));
         let o = setTimeout(() => {
-            w(r, "Publish timed out");
+            T(r, "Publish timed out");
         }, 12e4);
         r.pendingPublish = { resolve: t, reject: n, timeout: o };
         try {
@@ -871,10 +873,10 @@ function Y(e) {
     return new Promise((t, n) => {
         let r = k.get(e);
         if (null == r) return void n(Error("Not connected"));
-        m(r, "Superseded by a newer draft request");
+        w(r, "Superseded by a newer draft request");
         let o = `${Date.now()}-${Math.random().toString(36).slice(2)}`,
             s = setTimeout(() => {
-                m(r, "Draft timed out");
+                w(r, "Draft timed out");
             }, 1e4);
         r.pendingPatchNotesDraft = { resolve: t, reject: n, timeout: s, nonce: o };
         try {
@@ -1077,20 +1079,20 @@ class eE extends Error {
         (super(`export failed (${e})`), (this.status = e));
     }
 }
-async function eT(e, t) {
+async function em(e, t) {
     let { ticket: n, baseUrl: r } = await (0, p.d)(e),
         o = new URLSearchParams({ ticket: n, name: t }),
         s = await fetch(`${r}/agent/export?${o}`);
     if (!s.ok) throw new eE(s.status);
     return await s.blob();
 }
-class ew extends Error {
+class eT extends Error {
     status;
     constructor(e) {
         (super(`remix failed (${e})`), (this.status = e));
     }
 }
-async function em(e, t) {
+async function ew(e, t) {
     let [n, r] = await Promise.all([(0, p.g)(e), (0, p.d)(t)]),
         o = new URLSearchParams({ ticket: n.ticket }),
         s = await fetch(`${n.baseUrl}/agent/fork?${o}`, {
@@ -1098,7 +1100,7 @@ async function em(e, t) {
             headers: { "content-type": "application/json" },
             body: JSON.stringify({ dest_ticket: r.ticket }),
         });
-    if (!s.ok) throw new ew(s.status);
+    if (!s.ok) throw new eT(s.status);
 }
 async function ek(e, t) {
     let { ticket: n, baseUrl: r } = await (0, p.d)(e),
