@@ -1,4 +1,4 @@
-(n.d(t, { A: () => S }), n(376728));
+(n.d(t, { A: () => N }), n(376728));
 var i = n(439372);
 n(993748);
 var r = n(292572),
@@ -9,26 +9,27 @@ var r = n(292572),
     d = n(254160),
     c = n(67480),
     u = n(733391),
-    _ = n(227327);
-let E = new Set();
-function A(e, t) {
-    E.has(e) ||
-        (E.add(e),
+    _ = n(637893),
+    E = n(227327);
+let A = new Set();
+function h(e, t) {
+    A.has(e) ||
+        (A.add(e),
         (0, d.f)(async () => {
             try {
                 await t();
             } finally {
-                E.delete(e);
+                A.delete(e);
             }
         }));
 }
-var h = n(168543),
-    I = n(903209),
-    f = n(734057);
+var I = n(168543),
+    f = n(903209),
+    p = n(734057);
 n(299091);
-var p = n(721779);
-function T(e, t) {
-    let n = (0, p.Ay)(e);
+var T = n(721779);
+function m(e, t) {
+    let n = (0, T.Ay)(e);
     null != n &&
         0 !== n.length &&
         n.forEach((e) => {
@@ -59,10 +60,10 @@ function T(e, t) {
                 case o.I.GAME_SERVER_SHARE:
                     break;
                 case o.I.USER_PROFILE:
-                    if ((0, h.l)("MessageCodedLinkManager")) {
-                        let e = null == t ? null : f.A.getChannel(t);
+                    if ((0, I.l)("MessageCodedLinkManager")) {
+                        let e = null == t ? null : p.A.getChannel(t);
                         (0, d.f)(async () => {
-                            await (0, I.A)(i, void 0, {
+                            await (0, f.A)(i, void 0, {
                                 guildId: e?.guild_id ?? void 0,
                                 withMutualGuilds: !0,
                                 withMutualFriends: !0,
@@ -73,24 +74,27 @@ function T(e, t) {
                 case o.I.SOCIAL_LAYER_STOREFRONT:
                 case o.I.SOCIAL_LAYER_STOREFRONT_APP:
                     !(function (e, t) {
-                        let n = (0, _.rg)(t);
+                        let n = (0, E.rg)(t);
                         if (null == n) return;
                         let i =
                             e === o.I.SOCIAL_LAYER_STOREFRONT_APP
                                 ? { type: "application", applicationId: n.scopeId }
                                 : { type: "guild", guildId: n.scopeId };
-                        if (n.skuIds.length > 1)
-                            return A(`${e}:${n.scopeId}`, async () => {
+                        if (n.skuIds.length > 1) {
+                            if (!(0, _.x)("resolveStorefrontCodedLink")) return;
+                            h(`${e}:${n.scopeId}`, async () => {
                                 "application" === i.type
                                     ? await (0, u.ap)(i.applicationId, { eager: !1 })
                                     : await (0, u.Rw)(i.guildId, { eager: !1 });
                             });
+                            return;
+                        }
                         let [r] = n.skuIds;
                         null != c.A.get(r) ||
                             c.A.isFetching(r) ||
                             c.A.didFetchingSkuFail(r) ||
                             (l.h.dispatch({ type: "STORE_LISTINGS_FETCH_START", skuId: r }),
-                            A((0, _.m5)([r], n.scopeId), async () => {
+                            h((0, E.m5)([r], n.scopeId), async () => {
                                 let e = {};
                                 "application" === i.type
                                     ? await (0, u.Pp)(i.applicationId, r, e)
@@ -105,16 +109,16 @@ function T(e, t) {
             }
         });
 }
-function m(e) {
-    (T(e.content ?? null, e.channel_id),
+function g(e) {
+    (m(e.content ?? null, e.channel_id),
         e.message_snapshots?.forEach((t) => {
             let { message: n } = t;
-            return T(n.content, e.channel_id);
+            return m(n.content, e.channel_id);
         }));
 }
-class g extends i.A {
+class S extends i.A {
     constructor() {
-        (super(), (0, s.A)(this, m));
+        (super(), (0, s.A)(this, g));
     }
 }
-let S = new g();
+let N = new S();
