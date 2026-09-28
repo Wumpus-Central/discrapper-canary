@@ -4,8 +4,8 @@ var i,
     a = n.n(r),
     s = n(17928),
     l = n(228366),
-    o = n(987741),
-    d = n(958720),
+    o = n(181041),
+    d = n(987741),
     c = n(390248),
     u = n(320095),
     _ = n(734057),
@@ -88,7 +88,7 @@ function g(e) {
                   e.type === A.lAJ.THREAD_STARTER_MESSAGE && g(t))
                 : m.set(e.channel_id, i, { state: 2 });
         } else {
-            let e = E.A.getMessage(n.channel_id, i) ?? d.A.getMessage(n.channel_id, i) ?? o.A.getMessage(i);
+            let e = E.A.getMessage(n.channel_id, i) ?? o.A.getMessage(n.channel_id, i) ?? d.A.getMessage(i);
             null != e ? m.set(n.channel_id, i, { state: 0, message: e }) : m.set(n.channel_id, i, I);
         }
         t = !0;
@@ -128,7 +128,7 @@ function y(e) {
 class D extends s.Ay.Store {
     static displayName = "ReferencedMessageStore";
     initialize() {
-        this.waitFor(E.A, _.A, d.A, o.A);
+        this.waitFor(E.A, _.A, o.A, d.A);
     }
     getMessageByReference(e) {
         let t;
@@ -156,11 +156,11 @@ let v = new D(l.h, {
         return S(t, (e) => g(e));
     },
     MOD_VIEW_SEARCH_MESSAGES_SUCCESS: C,
-    CONVERSATION_FETCH_SUCCESS: function (e) {
+    CONVERSATION_MESSAGES_FETCH_SUCCESS: function (e) {
         let { messages: t, messageReferences: n } = e;
         return S(t.concat(n), (e) => g(e));
     },
-    CONVERSATIONS_FETCH_SUCCESS: function (e) {
+    CHANNEL_CONVERSATIONS_FETCH_SUCCESS: function (e) {
         let { rawConversations: t } = e;
         return S(t, (e) => {
             let { messages: t } = e;

@@ -90,7 +90,7 @@ class C extends a.Ay.Store {
     }
 }
 let O = new C(s.h, {
-    CONVERSATION_GET_SUCCESS: function (e) {
+    CONVERSATION_FETCH_SUCCESS: function (e) {
         let { rawConversation: t } = e,
             n = (0, E.a)(t);
         if (null == n) return !1;
@@ -107,14 +107,14 @@ let O = new C(s.h, {
             !0
         );
     },
-    CONVERSATION_FETCH_START: function (e) {
+    CONVERSATION_MESSAGES_FETCH_START: function (e) {
         var t;
         let n,
             { conversationId: i, full: r, isStandalone: a } = e;
         if (!0 !== a) return !1;
         ((t = r ? "full" : "preview"), null != (n = I.get(i)) ? n.add(t) : I.set(i, new Set([t])));
     },
-    CONVERSATION_FETCH_SUCCESS: function (e) {
+    CONVERSATION_MESSAGES_FETCH_SUCCESS: function (e) {
         let { conversationId: t, messages: n, messageReferences: i, fullyHydrated: r, isStandalone: a } = e;
         if (!0 !== a) return !1;
         p(t, r ? "full" : "preview");
@@ -137,7 +137,7 @@ let O = new C(s.h, {
             !0)
         );
     },
-    CONVERSATION_FETCH_FAILURE: function (e) {
+    CONVERSATION_MESSAGES_FETCH_FAILURE: function (e) {
         let { conversationId: t, full: n, isStandalone: i } = e;
         if (!0 !== i) return !1;
         p(t, n ? "full" : "preview");

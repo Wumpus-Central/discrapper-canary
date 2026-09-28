@@ -859,9 +859,9 @@ var nI = t(568598),
     nk = t(549973),
     nU = t(957565),
     nG = t(935208),
-    nw = t(256331),
-    nF = t(623562),
-    nH = t(958720),
+    nw = t(181041),
+    nF = t(256331),
+    nH = t(623562),
     nB = t(403862);
 let nV = ["high", "medium", "low"],
     nW = s.memo(function (e) {
@@ -1027,7 +1027,7 @@ let nV = ["high", "medium", "low"],
             a = (0, nk.e)({ timestamp: i }),
             r = Math.max(1, Math.round((s - i) / 1e3)),
             d = (0, nD.WR)({ seconds: r, getFormatter: nD.i }),
-            o = (0, A.bG)([nH.A], () => nH.A.getConversationColor(n.channelId, n.id) ?? void 0, [n.channelId, n.id]);
+            o = (0, A.bG)([nw.A], () => nw.A.getConversationColor(n.channelId, n.id) ?? void 0, [n.channelId, n.id]);
         return (0, l.jsxs)(nv.D, {
             className: nB.Nm,
             style: { backgroundColor: o },
@@ -1174,12 +1174,12 @@ let nV = ["high", "medium", "low"],
     });
 function nY(e) {
     let { channel: n } = e,
-        t = (0, A.bG)([nH.A], () => nH.A.getChannelConversations(n.id) ?? [], [n.id]),
-        i = (0, A.bG)([nH.A], () => nH.A.isPendingFetch(n.id), [n.id]),
-        a = (0, A.bG)([nw.A], () => nw.A.isHighlightingEnabled(), []),
+        t = (0, A.bG)([nw.A], () => nw.A.getChannelConversations(n.id) ?? [], [n.id]),
+        i = (0, A.bG)([nw.A], () => nw.A.isPendingFetch(n.id), [n.id]),
+        a = (0, A.bG)([nF.A], () => nF.A.isHighlightingEnabled(), []),
         r = s.useCallback(
             (e) => {
-                (0, nF.xI)(n.id, e.id);
+                (0, nH.xI)(n.id, e.id);
             },
             [n],
         );
@@ -1208,7 +1208,7 @@ function nY(e) {
                             "aria-label": a ? "Hide highlights" : "Show highlights",
                             variant: "secondary",
                             size: "sm",
-                            onClick: nF.Eg,
+                            onClick: nH.Eg,
                         }),
                     }),
                 ],
@@ -2321,7 +2321,7 @@ var iw = t(284252);
 function iF(e) {
     let { channelId: n } = e,
         t = (0, A.bG)([iU.Ay], () => iU.Ay.getSection(n), [n]) === ed.YvQ.CONVERSATIONS,
-        i = (0, A.bG)([nH.A], () => (nH.A.getChannelConversations(n)?.length ?? 0) > 0, [n]),
+        i = (0, A.bG)([nw.A], () => (nw.A.getChannelConversations(n)?.length ?? 0) > 0, [n]),
         a = s.useMemo(() => (i ? { type: "important", position: "bottom" } : void 0), [i]);
     return (0, l.jsx)(no.In, {
         onClick: b.A.toggleConversationsSection,

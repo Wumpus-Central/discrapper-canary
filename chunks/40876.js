@@ -968,8 +968,8 @@ let r = {
         actions: [
             "CHANNEL_SELECT",
             "CHANNEL_DELETE",
-            "CONVERSATIONS_FETCH_FAILURE",
-            "CONVERSATIONS_FETCH_SUCCESS",
+            "CHANNEL_CONVERSATIONS_FETCH_FAILURE",
+            "CHANNEL_CONVERSATIONS_FETCH_SUCCESS",
             "LOGOUT",
             "UPDATE_VISIBLE_MESSAGES",
         ],

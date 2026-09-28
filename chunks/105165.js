@@ -104,8 +104,8 @@ let R = [],
 var k = n(429913),
     P = n(47167),
     O = n(147248),
-    G = n(828488),
-    U = n(958720),
+    G = n(181041),
+    U = n(828488),
     w = n(623562),
     F = n(727011),
     H = n(319365);
@@ -117,7 +117,7 @@ function K(e) {
         { isFocused: o, setIsFocused: c } = (0, H.D7)(),
         d = r.useCallback(
             async (e) => {
-                (o && U.A.getSelectedConversationId(t.id) === e) ||
+                (o && G.A.getSelectedConversationId(t.id) === e) ||
                     ((s.current = e),
                     await new Promise((l) => {
                         let i = () => {
@@ -126,7 +126,7 @@ function K(e) {
                         (n.addScrollCompleteCallback(i), (0, w.xI)(t.id, e));
                     }),
                     s.current === e && (s.current = null),
-                    e === U.A.getSelectedConversationId(t.id) &&
+                    e === G.A.getSelectedConversationId(t.id) &&
                         (c(!0), F.X.trackFocusModeImpression({ channelId: t.id, conversationId: e })));
             },
             [t.id, n, c, o],
@@ -353,7 +353,7 @@ function ew(e) {
     let { channel: t, conversation: n, actionsShifted: l, suppressBorder: i, onFocusToggle: s } = e,
         [o, d] = r.useState(!1),
         u = r.useRef(null),
-        m = (0, h.bG)([U.A], () => U.A.getConversationFeedbackRating(t.id, n.id), [t.id, n.id]),
+        m = (0, h.bG)([G.A], () => G.A.getConversationFeedbackRating(t.id, n.id), [t.id, n.id]),
         { isFocused: g } = (0, H.D7)(),
         p = r.useCallback(() => d(!1), []),
         A = r.useCallback(() => {
@@ -1977,7 +1977,7 @@ let n8 = (0, a.jsxs)(a.Fragment, {
 });
 function n5(e) {
     let { channel: t, conversation: n, focusStream: l, isCollapsed: i } = e,
-        s = (0, h.bG)([U.A], () => U.A.isConversationFetchPending(n.id, !0), [n]);
+        s = (0, h.bG)([G.A], () => G.A.isConversationFetchPending(n.id, !0), [n]);
     return (0, a.jsxs)("div", {
         className: n4.XT,
         children: [
@@ -2077,10 +2077,10 @@ function ld(e) {
         }, [i]),
         _ = (0, h.bG)([ep.A], () => ep.A.getMessages(n.id), [n.id]),
         j = (0, h.bG)(
-            [U.A],
+            [G.A],
             () => {
                 if (l?.id == null) return null;
-                let e = U.A.getConversationMetadata(n.id, l.id);
+                let e = G.A.getConversationMetadata(n.id, l.id);
                 return e?.fullyHydrated === !0 ? e.hydratedMessages : null;
             },
             [n.id, l],
@@ -2186,7 +2186,7 @@ function lu(e) {
         { isFocused: s, isFocusedRef: o, setIsFocused: d } = (0, H.D7)(),
         u = r.useRef(!1),
         m = r.useRef(null),
-        g = (0, h.bG)([U.A], () => U.A.getSelectedConversationId(t.id), [t.id]),
+        g = (0, h.bG)([G.A], () => G.A.getSelectedConversationId(t.id), [t.id]),
         p = r.useCallback(
             async (e) => {
                 if (o.current && !u.current) {
@@ -2196,7 +2196,7 @@ function lu(e) {
                             F.X.trackFocusModeDismissed({ channelId: t.id, conversationId: g, dismissReason: e }),
                         "return" === e && null != g)
                     ) {
-                        let e = U.A.getConversationMetadata(t.id, g)?.conversation;
+                        let e = G.A.getConversationMetadata(t.id, g)?.conversation;
                         if (null != e)
                             try {
                                 await _.A.jumpToMessage({ channelId: t.id, messageId: e.startMessageId, flash: !1 });
@@ -2290,7 +2290,7 @@ function lu(e) {
             }),
             C((e, n) => {
                 if (null == n) return null;
-                let l = U.A.getConversationMetadata(t.id, n)?.conversation ?? null;
+                let l = G.A.getConversationMetadata(t.id, n)?.conversation ?? null;
                 return (0, a.jsx)(ld, { style: e, channel: t, conversation: l, scrollerRef: m, requestDismiss: p });
             }),
         ],
@@ -2587,7 +2587,7 @@ function lN() {
 function lT(e) {
     let { channel: t, conversationId: n } = e,
         { isFocused: l } = (0, H.D7)(),
-        i = (0, h.bG)([U.A], () => U.A.getHydratedMessages(t.id, n), [n, t.id]),
+        i = (0, h.bG)([G.A], () => G.A.getHydratedMessages(t.id, n), [n, t.id]),
         s = r.useMemo(() => i?.slice(0, 4) ?? null, [i]);
     return (0, a.jsx)("div", {
         className: c()(lj.Zt, l && lj.CU),
@@ -2608,7 +2608,7 @@ function lT(e) {
 var lM = n(130791);
 function lR(e) {
     let { channel: t, scrollManager: n, conversations: l } = e,
-        i = (0, h.bG)([U.A], () => U.A.getSelectedConversation(t.id)?.id ?? null, [t.id]),
+        i = (0, h.bG)([G.A], () => G.A.getSelectedConversation(t.id)?.id ?? null, [t.id]),
         { selectAndFocusConversation: s } = V(),
         { isFocused: o } = (0, H.D7)(),
         { dismissReason: d } = W(),
@@ -2770,13 +2770,13 @@ function lR(e) {
 }
 function lD(e) {
     let { channel: t, scrollManager: n } = e,
-        l = (0, G.sV)(t.guild_id, "scrollbar_chips"),
-        i = (0, h.yK)([U.A], () => (l ? (U.A.getChannelConversations(t.id) ?? []) : []), [t.id, l]);
+        l = (0, U.sV)(t.guild_id, "scrollbar_chips"),
+        i = (0, h.yK)([G.A], () => (l ? (G.A.getChannelConversations(t.id) ?? []) : []), [t.id, l]);
     return l && 0 !== i.length ? (0, a.jsx)(lR, { channel: t, scrollManager: n, conversations: i }) : null;
 }
 function lL(e) {
     let { channel: t, scrollManager: n } = e;
-    return (0, G.sV)(t.guild_id, "scrollbar_chips")
+    return (0, U.sV)(t.guild_id, "scrollbar_chips")
         ? (0, a.jsxs)(q, {
               children: [(0, a.jsx)(lh, { channel: t }), (0, a.jsx)(lD, { channel: t, scrollManager: n })],
           })
@@ -3655,7 +3655,7 @@ function iI(e) {
     let { channel: t, scrollManager: n } = e,
         l = r.useRef(null),
         { selectAndFocusConversation: i } = V(),
-        s = (0, h.bG)([U.A], () => U.A.getSelectedConversation(t.id)),
+        s = (0, h.bG)([G.A], () => G.A.getSelectedConversation(t.id)),
         { isShifted: o } = (function (e) {
             let { bannerRef: t, scrollManager: n, channelId: l, selectedConversationId: i } = e,
                 { bannerMeasurementRef: s, conversationJumpInProgressRef: a } = V(),
@@ -6004,7 +6004,7 @@ function r8(e) {
             showingQuarantineBanner: D,
             hideSummaries: L = !1,
             jumpBarClassName: k,
-            typingGradient: U,
+            typingGradient: G,
             isGameInvitesPost: w,
         } = e,
         [F, H] = r.useState(lH.A.isAtBottom(m.id) ?? !0),
@@ -6118,7 +6118,7 @@ function r8(e) {
             handleScrollFromBottom: r.useCallback(() => H(!1), [H]),
             additionalMessagePadding: 48,
         }),
-        ee = (0, G.sV)(m.guild_id, "message_stream"),
+        ee = (0, U.sV)(m.guild_id, "message_stream"),
         ei = (function (e) {
             let { scrollerRef: t, ...n } = e,
                 l = (0, b.A)(() => {
@@ -6591,8 +6591,8 @@ function r8(e) {
         eS = (0, lF.V)(),
         eI = (0, lO.Q)(),
         ey = null != ex || (null != eE && !eS) || null != eI,
-        ej = r.useMemo(() => (U ? (F ? r3.gA : r3.ru) : r3.Zd), [U, F]),
-        eb = r.useMemo(() => (U ? (F ? r3.cz : r3.XF) : r3.U6), [U, F]);
+        ej = r.useMemo(() => (G ? (F ? r3.gA : r3.ru) : r3.Zd), [G, F]),
+        eb = r.useMemo(() => (G ? (F ? r3.cz : r3.XF) : r3.U6), [G, F]);
     return (0, a.jsxs)(u.hD, {
         navigator: ei,
         children: [
@@ -6734,8 +6734,8 @@ let r5 = r.memo(function (e) {
                 c = (0, lk.A)("use_topic_dividers_in_chat"),
                 d = (0, h.yK)([lw.A], () => (o && c ? (lw.A.summaries(e.id) ?? []) : []), [o, e.id, c]),
                 u = (0, h.bG)([lw.A], () => (o ? lw.A.selectedSummary(e.id) : null), [o, e.id]),
-                m = (0, G.sV)(e.guild_id, "message_stream"),
-                g = (0, h.bG)([U.A], () => (m ? U.A.getSelectedConversation(e.id) : null), [m, e.id]),
+                m = (0, U.sV)(e.guild_id, "message_stream"),
+                g = (0, h.bG)([G.A], () => (m ? G.A.getSelectedConversation(e.id) : null), [m, e.id]),
                 p =
                     ((t = l),
                     (n = r.useMemo(() => {

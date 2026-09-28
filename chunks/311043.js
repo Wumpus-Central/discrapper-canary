@@ -106,11 +106,11 @@ let I = new h(r.h, {
     LOAD_MESSAGES_SUCCESS: _,
     LOAD_MESSAGES_AROUND_SUCCESS: _,
     LOAD_RECENT_MENTIONS_SUCCESS: _,
-    CONVERSATION_FETCH_SUCCESS: function (e) {
+    CONVERSATION_MESSAGES_FETCH_SUCCESS: function (e) {
         let { messages: t, messageReferences: n } = e;
         return t.concat(n).reduce((e, t) => u(t) || e, !1);
     },
-    CONVERSATIONS_FETCH_SUCCESS: function (e) {
+    CHANNEL_CONVERSATIONS_FETCH_SUCCESS: function (e) {
         let { rawConversations: t } = e,
             n = !1;
         return (
