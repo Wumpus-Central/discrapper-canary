@@ -750,19 +750,20 @@ function nu(e) {
         }, [m]),
         v = l.useRef(null),
         E = l.useRef(null),
-        C = l.useCallback(
+        C = l.useRef(null),
+        _ = l.useCallback(
             (e) => {
-                (E.current?.disconnect(),
-                    (E.current = null),
+                (C.current?.disconnect(),
+                    (C.current = null),
                     null != e &&
-                        ((E.current = new ResizeObserver(() => {
+                        ((C.current = new ResizeObserver(() => {
                             g();
                         })),
-                        E.current.observe(e)));
+                        C.current.observe(e)));
             },
             [g],
         );
-    (l.useEffect(() => () => E.current?.disconnect(), []),
+    (l.useEffect(() => () => C.current?.disconnect(), []),
         l.useEffect(() => {
             if (c)
                 return (document.addEventListener("mouseover", e), () => document.removeEventListener("mouseover", e));
@@ -773,13 +774,13 @@ function nu(e) {
                 null != n && n !== v.current && (g(), h(!1));
             }
         }, [c, g, h]));
-    let _ = l.useRef(!1);
+    let I = l.useRef(!1);
     l.useEffect(() => {
-        c || (_.current = !1);
+        c || (I.current = !1);
     }, [c]);
-    let I = l.useCallback(() => {
-            (_.current ||
-                ((_.current = !0),
+    let b = l.useCallback(() => {
+            (I.current ||
+                ((I.current = !0),
                 (0, na.Y)({
                     pageType: M.A.USER_PROFILE_ACCOUNT_POPOUT,
                     sectionType: M.A.ORB_WALLET,
@@ -787,18 +788,18 @@ function nu(e) {
                 })),
                 u());
         }, [u]),
-        b = (0, eO.rE)({ action: "PRESS_ORBS", onClick: I });
+        S = (0, eO.rE)({ action: "PRESS_ORBS", onClick: b });
     l.useEffect(() => {
         n && u();
     }, [n, u]);
-    let S = l.useMemo(
+    let j = l.useMemo(
             () =>
                 null != r
                     ? V.intl.format(V.t["8xDISf"], { balance: String(r) })
                     : (0, i.jsx)(nn.n, { dotRadius: 3.5, themed: !0, className: nc.K }),
             [r],
         ),
-        j = l.useMemo(
+        T = l.useMemo(
             () =>
                 o === no.Y0.NEW_ACHIEVEMENT
                     ? (0, i.jsx)(ni.E, { type: "new", variant: "brand" })
@@ -807,13 +808,13 @@ function nu(e) {
                       : null,
             [o],
         ),
-        T = l.useCallback(() => {
+        N = l.useCallback(() => {
             (h(!1), a());
         }, [h, a]);
     return (0, i.jsx)("li", {
         ref: v,
         className: ew.j$,
-        onMouseEnter: I,
+        onMouseEnter: b,
         onMouseLeave: A,
         children: (0, i.jsx)(f.Y, {
             targetElementRef: t,
@@ -821,10 +822,10 @@ function nu(e) {
             spacing: -16,
             renderPopout: () =>
                 (0, i.jsx)("div", {
-                    ref: C,
+                    ref: _,
                     onMouseEnter: u,
                     onMouseLeave: A,
-                    children: (0, i.jsx)(nd.vG, { onCloseWallet: T, isProfilePopout: !0 }),
+                    children: (0, i.jsx)(nd.vG, { onCloseWallet: N, returnRef: E, isProfilePopout: !0 }),
                 }),
             shouldShow: c,
             onRequestClose: A,
@@ -832,9 +833,10 @@ function nu(e) {
                 (0, i.jsx)("div", {
                     className: ew.jG,
                     children: (0, i.jsxs)(p.D, {
+                        innerRef: E,
                         className: ew.ef,
                         ...e,
-                        onClick: b,
+                        onClick: S,
                         children: [
                             (0, i.jsx)("div", {
                                 className: ew.iA,
@@ -847,13 +849,13 @@ function nu(e) {
                                         color: "currentColor",
                                         variant: "text-sm/medium",
                                         className: ew.W1,
-                                        children: S,
+                                        children: j,
                                     }),
                                 }),
                             }),
                             (0, i.jsxs)("div", {
                                 className: s()(ew.ap, nc._),
-                                children: [j, (0, i.jsx)(eR._, { size: "xs", color: "currentColor" })],
+                                children: [T, (0, i.jsx)(eR._, { size: "xs", color: "currentColor" })],
                             }),
                         ],
                     }),
@@ -2683,7 +2685,7 @@ function lv(e) {
         }, [s]),
         g = eu.A.coachmarkDismissibleContent;
     if (null != a) {
-        let e = (0, lx.A)("1790626418518", !0);
+        let e = (0, lx.A)("1790626572834", !0);
         t =
             null != e
                 ? V.intl.formatToPlainString(V.t.wve4kg, { webBuildOverride: a.id, builtAt: e })

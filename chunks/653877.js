@@ -12,6 +12,8 @@ e.exports = {
     re: "orbChallengesNoticeContainer__81c60",
     Oi: "orbChallengesNoticeContainerSpacing__81c60",
     GN: "orbChallengesCardEmptyContainer__81c60",
+    Up: "orbChallengesList__81c60",
+    tJ: "orbChallengesListItem__81c60",
     $b: "orbChallengesCardTitleBlock__81c60",
     AZ: "orbChallengesCardEmptyContent__81c60",
     W: "orbWalletFooter__81c60",

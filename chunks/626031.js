@@ -1,4 +1,4 @@
-n.d(t, { A: () => A, t: () => R });
+n.d(t, { A: () => A, t: () => h });
 var r = n(477900),
     a = n(582128),
     l = n(503698),
@@ -18,22 +18,23 @@ let N = new c.A("BalanceCounter"),
 function C(e) {
     return null == e ? 0 : `${e.toFixed(0)}`.length;
 }
-function R(e) {
+function h(e) {
     let {
             value: t,
             textVariant: n = "text-md/semibold",
             horizontalAlignment: l = "right",
             textColor: i,
-            className: d,
-            ...c
+            ariaHidden: d,
+            className: c,
+            ...m
         } = e,
-        m = null === t,
-        [f, g] = (0, a.useState)(null),
-        b = (0, a.useMemo)(() => C(t), [t]),
-        N = (0, s.Ay)(b) ?? 0,
-        E = (0, a.useMemo)(() => (null === f ? Math.max(N, b) : Math.max(b, f)), [N, b, f]),
-        R = `${m ? 0 : E}ch`,
-        { marginClassName: A, textAlignClassName: P } = (0, a.useMemo)(
+        f = null === t,
+        [g, b] = (0, a.useState)(null),
+        N = (0, a.useMemo)(() => C(t), [t]),
+        E = (0, s.Ay)(N) ?? 0,
+        h = (0, a.useMemo)(() => (null === g ? Math.max(E, N) : Math.max(N, g)), [E, N, g]),
+        A = `${f ? 0 : h}ch`,
+        { marginClassName: P, textAlignClassName: D } = (0, a.useMemo)(
             () =>
                 "left" === l
                     ? { marginClassName: p.v6, textAlignClassName: p.Sc }
@@ -41,22 +42,23 @@ function R(e) {
             [l],
         );
     return (0, r.jsx)(o.E, {
+        "aria-hidden": d,
         variant: n,
         color: i,
-        className: u()(p.SP, m ? void 0 : A, P, d),
-        style: { width: R, opacity: m ? "0" : 1 },
-        children: m
+        className: u()(p.SP, f ? void 0 : P, D, c),
+        style: { width: A, opacity: f ? "0" : 1 },
+        children: f
             ? null
-            : (0, r.jsx)(h, {
+            : (0, r.jsx)(R, {
                   onSetDigitCount: (e) => {
-                      e !== f && g(e);
+                      e !== g && b(e);
                   },
                   value: t,
-                  ...c,
+                  ...m,
               }),
     });
 }
-let h = (e) => {
+let R = (e) => {
         let {
                 value: t,
                 onSetDigitCount: n,
@@ -68,7 +70,7 @@ let h = (e) => {
             } = e,
             [m, b] = (0, a.useState)(0),
             p = (0, a.useRef)(null),
-            R = (0, a.useRef)(null);
+            h = (0, a.useRef)(null);
         (0, a.useEffect)(() => {
             if (null === t) return;
             if (null === p.current) {
@@ -77,28 +79,28 @@ let h = (e) => {
             }
             let e = null !== p.current ? t - p.current : t;
             (0 !== e && null !== p.current && l(e),
-                (R.current = { lastChangedAt: Date.now(), totalDelta: Math.abs(e) }));
+                (h.current = { lastChangedAt: Date.now(), totalDelta: Math.abs(e) }));
         }, [t, l]);
-        let h = t ?? 0,
-            A = p.current ?? h,
-            { duration: P, delay: D } = (0, f.v)(h - A, { targetTime: o, isRenderedWithoutLottieAnimation: s }),
+        let R = t ?? 0,
+            A = p.current ?? R,
+            { duration: P, delay: D } = (0, f.v)(R - A, { targetTime: o, isRenderedWithoutLottieAnimation: s }),
             { number: S } = (0, d.z)({
-                from: { number: p.current ?? h },
-                number: h,
+                from: { number: p.current ?? R },
+                number: R,
                 config: { mass: 1, tension: 20, friction: 10, duration: P },
                 delay: D,
                 onStart: () => {
                     n(C(A));
                 },
                 onRest: () => {
-                    if ((b(m + 1), u(), !E && null !== R.current && null !== p.current)) {
+                    if ((b(m + 1), u(), !E && null !== h.current && null !== p.current)) {
                         let e = Date.now();
                         N.log("Balance Counter finished updating: ", {
-                            time: e - R.current.lastChangedAt,
-                            delta: h - p.current,
+                            time: e - h.current.lastChangedAt,
+                            delta: R - p.current,
                         });
                     }
-                    (n(C(h)), (p.current = h));
+                    (n(C(R)), (p.current = R));
                 },
             }),
             _ = C(Math.max(t ?? 0, S.get()));
@@ -108,4 +110,4 @@ let h = (e) => {
             children: S.to((e) => `${e.toFixed(0)}`),
         });
     },
-    A = R;
+    A = h;

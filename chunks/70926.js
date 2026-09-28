@@ -1,8 +1,8 @@
 a.d(t, { SS: () => en, cP: () => ea });
 var n = a(477900),
     l = a(582128),
-    s = a(503698),
-    r = a.n(s),
+    r = a(503698),
+    s = a.n(r),
     i = a(82495),
     u = a(793574),
     c = a(482589),
@@ -14,15 +14,15 @@ var n = a(477900),
     h = a(834730),
     j = a(43990),
     A = a(821609),
-    k = a(303136),
-    v = a(366505),
-    C = a(976860),
-    R = a(309954),
-    g = a(287809),
+    R = a(303136),
+    g = a(366505),
+    k = a(976860),
+    v = a(309954),
+    C = a(287809),
     E = a(975571),
-    N = a(474090),
-    b = a(920050),
-    p = a(94264),
+    p = a(474090),
+    N = a(920050),
+    b = a(94264),
     O = a(549384),
     L = a(566119),
     _ = a(202541),
@@ -32,34 +32,34 @@ var n = a(477900),
     M = a(375708),
     D = a(226068),
     w = a(268920),
-    B = a(633217),
-    P = a(909340);
+    P = a(633217),
+    B = a(909340);
 function U() {
     return (0, n.jsx)("div", {
         className: D.s,
-        children: (0, n.jsx)(k.A, { src: B.A, fallbackImage: w.A, className: D.Cb }),
+        children: (0, n.jsx)(R.A, { src: P.A, fallbackImage: w.A, className: D.Cb }),
     });
 }
 function F() {
-    ((0, L.RQ)(), (0, C.pX)(T.BV.NITRO_HOME, { search: (0, d.stringify)({ perk: b.NITRO_ORBS_REWARDS_CARD_ID }) }));
+    ((0, L.RQ)(), (0, k.pX)(T.BV.NITRO_HOME, { search: (0, d.stringify)({ perk: N.NITRO_ORBS_REWARDS_CARD_ID }) }));
 }
 function I() {
-    ((0, L.gP)(), (0, C.pX)(T.BV.NITRO_HOME, { search: (0, d.stringify)({ section: O.L }) }));
+    ((0, L.gP)(), (0, k.pX)(T.BV.NITRO_HOME, { search: (0, d.stringify)({ section: O.L }) }));
 }
 function W() {
     ((0, L.b)(), window.open(E.A.getArticleURL(y.MVz.ORBS_FAQ), "_blank"));
 }
 function z(e) {
-    let { targetElementRef: t, shouldShow: a, onRequestClose: s, ctaText: i, ctaOnClick: u } = e,
-        { passesGeneralUIInvariant: c, programReward: d } = (0, v.F)({
+    let { targetElementRef: t, shouldShow: a, onRequestClose: r, ctaText: i, ctaOnClick: u } = e,
+        { passesGeneralUIInvariant: c, programReward: d } = (0, g.F)({
             location: "PremiumTenureRewardsOrbsBalancePopover",
         }),
-        C = (0, m.bG)([g.default], () => g.default.getCurrentUser()),
-        { balance: E } = (0, R.W)(),
-        b = !(0, N.ki)(C),
+        k = (0, m.bG)([C.default], () => C.default.getCurrentUser()),
+        { balance: E } = (0, v.W)(),
+        N = !(0, p.ki)(k),
         O = l.useMemo(() => {
-            let e = (0, N.YE)(C, _.PremiumTypes.TIER_2);
-            if (!c || b) return null;
+            let e = (0, p.YE)(k, _.PremiumTypes.TIER_2);
+            if (!c || N) return null;
             if (e && null != d) {
                 let e = (0, o.default)(new Date(d.next_reward_date), new Date());
                 return (0, n.jsxs)(n.Fragment, {
@@ -72,17 +72,17 @@ function z(e) {
                                 deepLinkToNitroOrbs: F,
                             }),
                         }),
-                        (0, n.jsx)(p.A, {}),
+                        (0, n.jsx)(b.A, {}),
                     ],
                 });
             }
             return null;
-        }, [C, b, d, c]),
+        }, [k, N, d, c]),
         L = (E ?? 0) >= 4100;
     return (0, n.jsx)(f.x, {
         targetElementRef: t,
         shouldShow: a,
-        onRequestClose: s,
+        onRequestClose: r,
         position: "bottom",
         gradientColor: "blue",
         modal: !0,
@@ -91,13 +91,13 @@ function z(e) {
             theme: L ? y.NJ8.DARK : void 0,
             children: (e) =>
                 (0, n.jsxs)("div", {
-                    className: r()(e, D.j),
+                    className: s()(e, D.j),
                     children: [
-                        L && (0, n.jsx)(k.A, { src: P.A, className: D.yG }),
+                        L && (0, n.jsx)(R.A, { src: B.A, className: D.yG }),
                         (0, n.jsxs)("div", {
                             className: D.Qs,
                             children: [
-                                (0, n.jsx)(x.q, { onClick: s }),
+                                (0, n.jsx)(x.q, { onClick: r }),
                                 (0, n.jsxs)("div", {
                                     className: D.hQ,
                                     children: [
@@ -133,9 +133,9 @@ function z(e) {
                                         }),
                                         (0, n.jsx)(h.E, {
                                             variant: "text-xs/normal",
-                                            color: b ? "text-default" : "text-muted",
+                                            color: N ? "text-default" : "text-muted",
                                             className: D.CU,
-                                            children: b
+                                            children: N
                                                 ? M.intl.format(S.default.juvXqj, { deepLinkToNitroOrbs: I })
                                                 : M.intl.format(S.default.fhAVek, { helpdeskArticle: W }),
                                         }),
@@ -160,22 +160,22 @@ var K = a(440005),
 var X = a(505274),
     Y = a(37402);
 function Z(e) {
-    let { pillRef: t, ...a } = e,
-        { balancePillOverlay: l } = (0, m.cf)([X.A], () => ({ balancePillOverlay: X.A.balancePillOverlay })),
-        s = (0, n.jsx)(Y.Gy, { ref: t, ...a }),
-        r = (0, n.jsx)(Y.Gy, { ...a, isInModalOverlay: !0, disabled: !0 }),
-        i = null != t.current ? t.current.offsetHeight : 36;
+    let { pillRef: t, clickableRef: a, ...l } = e,
+        { balancePillOverlay: r } = (0, m.cf)([X.A], () => ({ balancePillOverlay: X.A.balancePillOverlay })),
+        s = (0, n.jsx)(Y.Gy, { ref: t, clickableRef: a, ...l }),
+        i = (0, n.jsx)(Y.Gy, { ...l, isInModalOverlay: !0, disabled: !0 }),
+        u = null != t.current ? t.current.offsetHeight : 36;
     return (0, n.jsx)(Q.Y, {
         fixed: !0,
         autoInvert: !1,
-        renderPopout: () => r,
+        renderPopout: () => i,
         position: "bottom",
         align: "right",
-        shouldShow: l,
-        spacing: -i,
+        shouldShow: r,
+        spacing: -u,
         animation: Q.Y.Animation.NONE,
         targetElementRef: t,
-        positionKey: `${a.balance}-${l}`,
+        positionKey: `${l.balance}-${r}`,
         children: () => s,
     });
 }
@@ -186,22 +186,23 @@ function en(e) {
     let {
             showNotificationBadge: t,
             ctaText: a,
-            ctaOnClick: s,
+            ctaOnClick: r,
             analyticsPage: o,
             linkText: d = M.intl.string(M.t.XRdyjz),
             cardAlignment: m = ea.START,
             className: f,
         } = e,
-        { balance: x } = (0, R.W)(),
+        { balance: x } = (0, v.W)(),
         h = (0, V.DK)(K.W.NITRO, "BalanceWidgetMenu"),
         [j, A] = l.useState(H.k.DEFAULT),
-        [k, v] = l.useState(!1),
-        [C, g] = l.useState(!1),
-        E = l.useRef(null);
-    (0, c.j)(!k);
+        [R, g] = l.useState(!1),
+        [k, C] = l.useState(!1),
+        E = l.useRef(null),
+        p = l.useRef(null);
+    (0, c.j)(!R);
     let N = (0, $.H)({ location: "BalanceWidgetMenu" }),
         b = l.useCallback(() => {
-            let e = !k;
+            let e = !R;
             (e &&
                 null != o &&
                 (0, q.Y)({
@@ -210,46 +211,49 @@ function en(e) {
                     ctaObject: N ? u.A.ORB_WALLET_OPEN_FROM_BALANCE_PILL : y.ZSU.OPEN_ORB_BALANCE_MENU_FROM_PILL,
                 }),
                 A(e ? H.k.SELECTED : H.k.DEFAULT),
-                v(e));
-        }, [k, o, N]),
-        p = l.useCallback(() => {
-            k && b();
-        }, [k, b]),
-        O = (0, i.A)(null, p),
-        L = l.useMemo(
+                g(e));
+        }, [R, o, N]),
+        O = l.useCallback(() => {
+            R && b();
+        }, [R, b]),
+        L = (0, i.A)(null, O),
+        _ = l.useMemo(
             () =>
                 (0, n.jsx)(J.b, {
                     analyticsPage: o,
                     ctaText: a,
                     ctaOnClick: () => {
-                        (b(), s());
+                        (b(), r());
                     },
                     linkText: d,
                 }),
-            [o, a, d, b, s],
+            [o, a, d, b, r],
         ),
-        { hasUnreadUpdate: _ } = (0, G.I)({ enabled: N }),
-        T = t ?? _,
-        S = l.useMemo(
+        { hasUnreadUpdate: T } = (0, G.I)({ enabled: N }),
+        S = t ?? T,
+        D = l.useMemo(
             () =>
                 (0, n.jsx)(Z, {
                     pillRef: E,
+                    clickableRef: p,
+                    ariaExpanded: R,
                     balance: x,
                     balanceWidgetMode: j,
                     onMouseDown: (e) => {
                         e.stopPropagation();
                     },
                     onClick: b,
-                    showNotificationBadge: T,
+                    showNotificationBadge: S,
                 }),
-            [x, j, T, b],
+            [x, j, S, b, R],
         ),
-        D = l.useCallback(
+        w = l.useCallback(
             (e, t) =>
                 N
                     ? e
                         ? (0, n.jsx)(ee.EA, {
-                              cardRef: O,
+                              cardRef: L,
+                              returnRef: p,
                               targetElementRef: E,
                               shouldShow: e,
                               analyticsPage: o,
@@ -263,18 +267,18 @@ function en(e) {
                             onRequestClose: b,
                             ctaText: a,
                             ctaOnClick: () => {
-                                (b(), s());
+                                (b(), r());
                             },
                         })
                       : e
                         ? (0, n.jsx)("div", {
-                              className: r()(et.Ui, m, { [et.R]: t, [et.RK]: !t }),
-                              ref: O,
-                              children: L,
+                              className: s()(et.Ui, m, { [et.R]: t, [et.RK]: !t }),
+                              ref: L,
+                              children: _,
                           })
                         : null,
-            [N, L, m, O, E, b, a, s, h, o],
+            [N, _, m, L, E, b, a, r, h, o],
         );
-    return (0, n.jsxs)("div", { className: r()(et.kL, f, { [et.R]: C, [et.RK]: !C }), children: [S, D(k, C)] });
+    return (0, n.jsxs)("div", { className: s()(et.kL, f, { [et.R]: k, [et.RK]: !k }), children: [D, w(R, k)] });
 }
 en.CardAlignment = ea;

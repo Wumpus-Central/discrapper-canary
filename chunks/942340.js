@@ -1,4 +1,4 @@
-(t.d(e, { E: () => p, p: () => x }), t(321073));
+(t.d(e, { E: () => x, p: () => E }), t(321073));
 var l = t(582128),
     n = t(602853),
     r = t(661531),
@@ -9,8 +9,9 @@ var l = t(582128),
     d = t(648335),
     h = t(908166),
     u = t(818348);
-let m = new i.A("useStripePaymentElementOptions");
-function p() {
+let m = new i.A("useStripePaymentElementOptions"),
+    p = { fontSize: "16px", lineHeight: "20px", fontWeight: "500" };
+function x() {
     let a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         e = (0, n.r)(r.A.colors.MODAL_BACKGROUND),
         t = (0, n.r)(r.A.colors.TEXT_STRONG),
@@ -22,19 +23,28 @@ function p() {
         h = a.inputBackgroundColor ?? s.hex(),
         u = i.hex(),
         m = a.tabBackgroundColor ?? s.hex(),
-        p = a.tabSelectedBackgroundColor ?? null;
+        x = a.tabSelectedBackgroundColor ?? null;
     return {
         elementsAppearance: l.useMemo(
             () => ({
                 theme: c,
                 variables: { colorText: o, colorBackground: d },
                 rules: {
-                    ".Input": { backgroundColor: h, borderColor: u, borderWidth: "1px", borderStyle: "solid" },
+                    ".Label": { ...p, color: o },
+                    ".Input": {
+                        marginTop: "8px",
+                        backgroundColor: h,
+                        borderColor: u,
+                        borderWidth: "1px",
+                        borderStyle: "solid",
+                    },
+                    ".Error": { ...p },
+                    ".CheckboxInput": { border: `1px solid ${u}` },
                     ".Tab": { backgroundColor: m },
-                    ...(null != p ? { ".Tab--selected": { backgroundColor: p } } : {}),
+                    ...(null != x ? { ".Tab--selected": { backgroundColor: x } } : {}),
                 },
             }),
-            [c, o, d, h, u, m, p],
+            [c, o, d, h, u, m, x],
         ),
         elementsAppearanceOptions: {
             theme: c,
@@ -45,13 +55,13 @@ function p() {
         },
     };
 }
-function x(a) {
+function E(a) {
     let { onSetupError: e, elementsAppearanceOptions: t = {} } = a,
         [n, r] = l.useState(void 0),
-        [i, x] = l.useState(null),
+        [i, p] = l.useState(null),
         [E, C] = l.useState(!0),
-        [A, v] = l.useState([]),
-        { createSetupIntentDeduped: g } = (0, h.x)(),
+        [A, g] = l.useState([]),
+        { createSetupIntentDeduped: v } = (0, h.x)(),
         [j, f] = l.useState([]),
         { customPaymentMethods: b, customPaymentMethodIdsToSourceTypes: y } = l.useMemo(
             () => ({
@@ -67,8 +77,8 @@ function x(a) {
             try {
                 let a,
                     e,
-                    { client_secret: t, custom_payment_methods: l, payment_method_order: n } = await g();
-                (v(l),
+                    { client_secret: t, custom_payment_methods: l, payment_method_order: n } = await v();
+                (g(l),
                     r(t),
                     f(
                         null != n && Array.isArray(n)
@@ -79,17 +89,17 @@ function x(a) {
                               a),
                     ));
             } catch (a) {
-                (x(a),
+                (p(a),
                     null != e && e(a),
                     m.error("there was an error on setup for Payment Elements: ", a),
                     (0, c.pM)(a, { tags: { source: "payment_elements" } }));
             }
             C(!1);
-        }, [e, g]);
+        }, [e, v]);
     (0, s.Ay)(() => {
         M();
     });
-    let { elementsAppearance: I, elementsAppearanceOptions: T } = p(t),
+    let { elementsAppearance: I, elementsAppearanceOptions: T } = x(t),
         L = (0, o.PU)(),
         R = l.useMemo(
             () =>
