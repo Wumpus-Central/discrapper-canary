@@ -1,6 +1,6 @@
-(n.d(t, { W: () => r }), n(323874), n(14289), n(35956));
-var i = n(762399);
-function r(e, t, n, r) {
+(n.d(t, { W: () => i }), n(323874), n(14289), n(35956));
+var r = n(762399);
+function i(e, t, n, i) {
     let o = e.contentWindow;
     if (null == o) return Promise.reject(Error("preview frame not ready"));
     let s = (function (e) {
@@ -14,15 +14,15 @@ function r(e, t, n, r) {
     let u = `vibegrations-${t}`,
         a = `${u}-result`,
         d = `${u}-ack`,
-        c = r.sourceMatch ?? "window",
-        f = r.id ?? `${t}-${++l}-${Date.now()}`;
+        c = i.sourceMatch ?? "window",
+        f = i.id ?? `${t}-${++l}-${Date.now()}`;
     return new Promise((l, h) => {
         let p = 0,
             _ = o,
             g = window.setTimeout(() => {
-                (m(), h(new i.fq(t, r.timeoutMs)));
-            }, r.timeoutMs),
-            w = null != r.retryMs ? window.setInterval(T, r.retryMs) : null;
+                (m(), h(new r.fq(t, i.timeoutMs)));
+            }, i.timeoutMs),
+            w = null != i.retryMs ? window.setInterval(T, i.retryMs) : null;
         function E() {
             null != w && window.clearInterval(w);
         }
@@ -32,16 +32,16 @@ function r(e, t, n, r) {
         function T() {
             (p += 1) > 1 &&
                 console.debug("[vibegrations] re-offering call to the preview frame", {
-                    call: r.label ?? t,
+                    call: i.label ?? t,
                     id: f,
                     attempt: p,
                 });
-            let i = { type: u, id: f, ...n };
-            ((_ = e.contentWindow), e.contentWindow?.postMessage(i, s));
+            let r = { type: u, id: f, ...n };
+            ((_ = e.contentWindow), e.contentWindow?.postMessage(r, s));
         }
         function I(e) {
             ("window" === c ? e.source !== _ : e.origin !== s) ||
-                ((0, i.YX)(e.data, d, f) ? E() : (0, i.YX)(e.data, a, f) && (m(), l(e.data)));
+                ((0, r.YX)(e.data, d, f) ? E() : (0, r.YX)(e.data, a, f) && (m(), l(e.data)));
         }
         (window.addEventListener("message", I), T());
     });

@@ -1,11 +1,11 @@
-l.d(t, { X: () => d });
+l.d(t, { X: () => c });
 var n = l(582128),
     s = l(59520),
     i = l(440938),
     r = l(790297),
     a = l(174459),
     o = l(652215);
-function c(e, t, l, n) {
+function u(e, t, l, n) {
     let { scrollTop: s = 0, scrollOffset: i = 0, scrollHeight: r = 0, scrollWidth: o = 0 } = n;
     if (r > 0) {
         let n = (s + i) / r;
@@ -19,23 +19,23 @@ function c(e, t, l, n) {
             });
     }
 }
-function d(e, t) {
+function c(e, t) {
     let { analyticsSource: l } = (0, r.lC)(t),
-        a = (0, s.I)(c, 5e3, [], { trailing: !0 }),
-        d = (0, i.uM)(),
-        u = d?.sessionId;
+        a = (0, s.I)(u, 5e3, [], { trailing: !0 }),
+        c = (0, i.uM)(),
+        d = c?.sessionId;
     return {
         handleScroll: n.useCallback(() => {
             if (null != e.current) {
                 let t = e.current.getScrollerNode();
                 null != t &&
-                    a(o.HAw.COLLECTIBLES_SHOP_SCROLLED, null != u ? u : "", l, {
+                    a(o.HAw.COLLECTIBLES_SHOP_SCROLLED, null != d ? d : "", l, {
                         scrollTop: t.scrollTop,
                         scrollOffset: t.offsetHeight,
                         scrollHeight: t.scrollHeight,
                         scrollWidth: t.scrollWidth,
                     });
             }
-        }, [a, l, u, e]),
+        }, [a, l, d, e]),
     };
 }

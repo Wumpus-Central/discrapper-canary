@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     wx: "header__6e1e4",
     DD: "title__6e1e4",
     KW: "metaRow__6e1e4",

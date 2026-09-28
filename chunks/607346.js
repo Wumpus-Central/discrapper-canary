@@ -1,4 +1,4 @@
-r.exports = {
+a.exports = {
     XG: "scroller_a02225",
     Nr: "card_a02225",
     aZ: "skeletonArtwork_a02225",

@@ -1,4 +1,4 @@
-a.exports = {
+e.exports = {
     mu: "shelfBlock__07a06",
     VA: "withBackground__07a06",
     iL: "backgroundImage__07a06",

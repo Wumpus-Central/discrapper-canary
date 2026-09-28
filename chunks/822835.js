@@ -16,9 +16,9 @@ function c(e) {
             ownerAuthorizationRevoked: m,
             mainCardOnly: h = !1,
         } = e,
-        [g, x] = n.useState(null),
+        [x, g] = n.useState(null),
         [p, v] = n.useState(t);
-    p !== t && (v(t), x(null));
+    p !== t && (v(t), g(null));
     let b = null != l && l === t ? l : null,
         j = (0, r.bG)([u.default], () => u.default.getId()),
         { applicationWidgetConfig: y } = (0, i.A)(j, b ?? void 0),
@@ -33,13 +33,13 @@ function c(e) {
         S = null != l && A?.bot?.id != null,
         { data: E, isLoading: C } = (0, s.YY)(t ?? void 0),
         I = c || (0, o.x)(E),
-        T = null != t && C && null == E,
-        M = (0, d.Xm)({ installScope: f, hasFrame: I, hasProfileWidget: w, hasBotDm: S, ownerAuthorizationRevoked: m });
+        M = null != t && C && null == E,
+        T = (0, d.Xm)({ installScope: f, hasFrame: I, hasProfileWidget: w, hasBotDm: S, ownerAuthorizationRevoked: m });
     return {
-        availability: M,
-        isResolving: T,
-        activeMode: T ? null : (0, d.Qs)(g, M),
-        setMode: x,
+        availability: T,
+        isResolving: M,
+        activeMode: M ? null : (0, d.Qs)(x, T),
+        setMode: g,
         widgetApplicationId: b,
     };
 }

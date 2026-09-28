@@ -1,1 +1,1 @@
-e.exports = { T: "background__6cac4" };
+_.exports = { T: "background__6cac4" };

@@ -1,6 +1,6 @@
 (n.d(t, { Ay: () => H, H_: () => d, PV: () => s, jf: () => a }), n(321073));
-var i = n(17928),
-    r = n(228366),
+var r = n(17928),
+    i = n(228366),
     l = n(287809),
     o = n(673724);
 function s(e) {
@@ -35,24 +35,24 @@ function v(e, t, n) {
 }
 function O(e, t, n) {
     if (null == t) return;
-    let i = y.get(e);
-    for (null == i && ((i = new Map()), y.set(e, i)), i.set(t, n); i.size > 800;) {
-        let e = i.keys().next();
+    let r = y.get(e);
+    for (null == r && ((r = new Map()), y.set(e, r)), r.set(t, n); r.size > 800;) {
+        let e = r.keys().next();
         if (!0 === e.done) break;
-        i.delete(e.value);
+        r.delete(e.value);
     }
 }
 let b = { status: "idle", truncated: !1, count: 0 },
     k = new Map();
-function N(e, t, n) {
-    let i = k.get(e);
-    (null == i && ((i = new Map()), k.set(e, i)), i.set(t, n));
-}
 function C(e, t, n) {
-    let i = t.concat(n);
-    R.set(e, i.length > 400 ? i.slice(-400) : i);
+    let r = k.get(e);
+    (null == r && ((r = new Map()), k.set(e, r)), r.set(t, n));
 }
-class P extends i.Ay.Store {
+function N(e, t, n) {
+    let r = t.concat(n);
+    R.set(e, r.length > 400 ? r.slice(-400) : r);
+}
+class P extends r.Ay.Store {
     initialize() {
         this.waitFor(l.default);
     }
@@ -87,9 +87,9 @@ class P extends i.Ay.Store {
         let t = m.get(e);
         if (null == t) return 0;
         let n = A.get(e) ?? 0,
-            i = 0;
-        for (let e of t) e.key > n && "error" === e.log.level && !0 !== e.log.historical && (i += 1);
-        return i;
+            r = 0;
+        for (let e of t) e.key > n && "error" === e.log.level && !0 !== e.log.historical && (r += 1);
+        return r;
     }
     getTrace(e) {
         return R.get(e) ?? S;
@@ -124,11 +124,11 @@ function D(e, t, n) {
 function G(e, t, n) {
     return e.findIndex((e) => e.kind === t && e.id === n);
 }
-function V(e, t, n, i) {
-    let r = t.slice();
-    ((r[n] = i), R.set(e, r));
+function V(e, t, n, r) {
+    let i = t.slice();
+    ((i[n] = r), R.set(e, i));
 }
-let H = new P(r.h, {
+let H = new P(i.h, {
     LOGOUT: function () {
         if (
             0 === c.size &&
@@ -164,8 +164,8 @@ let H = new P(r.h, {
     },
     VIBEGRATIONS_PROJECTS_FETCH_SUCCESS: function (e) {
         let { projects: t, guildId: n } = e,
-            i = new Set(t.map((e) => e.id));
-        for (let [e, t] of c) !i.has(e) && (s(t) || (null != n && t.guild_id === n)) && c.delete(e);
+            r = new Set(t.map((e) => e.id));
+        for (let [e, t] of c) !r.has(e) && (s(t) || (null != n && t.guild_id === n)) && c.delete(e);
         for (let e of t) c.set(e.id, e);
         for (let e of (null != n && (g.add(n), w.set(n, "success")), f.keys())) c.has(e) || f.delete(e);
         for (let [e, t] of h) c.has(t) || h.delete(e);
@@ -213,11 +213,11 @@ let H = new P(r.h, {
         B.set(t, { snapshot: new Set((R.get(t) ?? S).map((e) => L(e.kind, e.id))), touched: new Set() });
     },
     VIBEGRATIONS_HISTORY_LOAD_SETTLE: function (e) {
-        let { projectId: t, scope: n, status: i, count: r, truncated: l } = e,
+        let { projectId: t, scope: n, status: r, count: i, truncated: l } = e,
             o = "trace" === n ? B.get(t) : void 0;
-        if (("trace" === n && B.delete(t), "failed" === i)) {
+        if (("trace" === n && B.delete(t), "failed" === r)) {
             let e = k.get(t)?.get(n);
-            N(t, n, { status: "failed", truncated: e?.truncated ?? !1, count: e?.count ?? 0 });
+            C(t, n, { status: "failed", truncated: e?.truncated ?? !1, count: e?.count ?? 0 });
             return;
         }
         if (null != o) {
@@ -228,34 +228,34 @@ let H = new P(r.h, {
                     e.filter((e) => !o.snapshot.has(L(e.kind, e.id)) || o.touched.has(L(e.kind, e.id))),
                 );
         }
-        N(t, n, { status: "loaded", truncated: l, count: r });
+        C(t, n, { status: "loaded", truncated: l, count: i });
     },
     VIBEGRATIONS_LOG_APPEND: function (e) {
         let { projectId: t, log: n } = e,
-            i = n.seq;
-        if (null != i) {
+            r = n.seq;
+        if (null != r) {
             let e = I.get(t);
-            if (null != e && i <= e) return !1;
-            I.set(t, i);
+            if (null != e && r <= e) return !1;
+            I.set(t, r);
         }
-        let r = { key: ++T, log: n },
+        let i = { key: ++T, log: n },
             l = m.get(t),
-            o = null == l ? [r] : l.concat(r);
+            o = null == l ? [i] : l.concat(i);
         m.set(t, o.length > 500 ? o.slice(-500) : o);
     },
     VIBEGRATIONS_LOGS_SEEN: function (e) {
         let { projectId: t } = e,
             n = m.get(t),
-            i = null == n || 0 === n.length ? 0 : n[n.length - 1].key;
-        if ((A.get(t) ?? 0) >= i) return !1;
-        A.set(t, i);
+            r = null == n || 0 === n.length ? 0 : n[n.length - 1].key;
+        if ((A.get(t) ?? 0) >= r) return !1;
+        A.set(t, r);
     },
     VIBEGRATIONS_TOOL_CALL_APPEND: function (e) {
         let { projectId: t, toolCall: n } = e;
         if ((D(t, "tool", n.id), v(t, n.entry_id, n.status))) return !1;
-        let i = R.get(t) ?? S,
-            r = G(i, "tool", n.id),
-            l = -1 === r ? null : i[r],
+        let r = R.get(t) ?? S,
+            i = G(r, "tool", n.id),
+            l = -1 === i ? null : r[i],
             o = n.summary ?? l?.summary,
             s = n.fields ?? l?.fields,
             u = n.schema ?? l?.schema,
@@ -282,14 +282,14 @@ let H = new P(r.h, {
                 ...(null != n.error ? { error: n.error } : {}),
                 startedAt: l?.startedAt ?? n.ts,
             };
-        (O(t, n.entry_id, n.status), null != l) ? V(t, i, r, f) : C(t, i, f);
+        (O(t, n.entry_id, n.status), null != l) ? V(t, r, i, f) : N(t, r, f);
     },
     VIBEGRATIONS_MODEL_CALL_APPEND: function (e) {
         let { projectId: t, modelCall: n } = e;
         if ((D(t, "model", n.id), v(t, n.entry_id, n.status))) return !1;
-        let i = R.get(t) ?? S,
-            r = G(i, "model", n.id),
-            l = -1 === r ? null : i[r],
+        let r = R.get(t) ?? S,
+            i = G(r, "model", n.id),
+            l = -1 === i ? null : r[i],
             o = {
                 kind: "model",
                 id: n.id,
@@ -299,9 +299,9 @@ let H = new P(r.h, {
                 status: n.status,
                 ...(function (e, t) {
                     let n = {};
-                    for (let [i, r] of Object.entries(t)) {
-                        let t = r ?? e?.[i];
-                        "number" == typeof t && (n[i] = t);
+                    for (let [r, i] of Object.entries(t)) {
+                        let t = i ?? e?.[r];
+                        "number" == typeof t && (n[r] = t);
                     }
                     return n;
                 })(l, {
@@ -323,6 +323,6 @@ let H = new P(r.h, {
                 ...(null != n.error ? { error: n.error } : {}),
                 startedAt: l?.startedAt ?? n.ts,
             };
-        (O(t, n.entry_id, n.status), null != l) ? V(t, i, r, o) : C(t, i, o);
+        (O(t, n.entry_id, n.status), null != l) ? V(t, r, i, o) : N(t, r, o);
     },
 });

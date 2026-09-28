@@ -1,4 +1,4 @@
-r.d(t, { A: () => H });
+r.d(t, { A: () => w });
 var n = r(477900),
     l = r(582128),
     s = r(503698),
@@ -26,12 +26,12 @@ var n = r(477900),
     k = r(212407),
     O = r(521e3),
     j = r(783857),
-    b = r(815280),
-    P = r(60140),
-    B = r(758836),
-    N = r(652215),
-    T = r(375708),
-    R = r(105499);
+    B = r(815280),
+    N = r(60140),
+    P = r(758836),
+    b = r(652215),
+    R = r(375708),
+    T = r(105499);
 let G = {
         rankedSkuIds: [],
         name: "",
@@ -41,13 +41,13 @@ let G = {
         type: u.g.HERO,
         categoryStoreListingId: "",
     },
-    H = (e) => {
+    w = (e) => {
         let {
                 isLoading: t,
                 handleTransition: r,
                 category: s,
-                heroBlock: H,
-                tab: w,
+                heroBlock: w,
+                tab: H,
                 onVisibilityChange: M,
                 badge: D,
                 hideButton: U = !1,
@@ -69,8 +69,8 @@ let G = {
             q = (0, y.S)(),
             Z = l.useMemo(
                 () =>
-                    null != H
-                        ? H
+                    null != w
+                        ? w
                         : null == s
                           ? G
                           : {
@@ -87,11 +87,11 @@ let G = {
                                 heroBannerUrl: s.heroBannerUrl,
                                 heroBannerAnimatedUrl: s.heroBannerAnimatedUrl,
                             },
-                [H, s],
+                [w, s],
             ),
             J = l.useMemo(() => (0, L.HF)(q, Z), [q, Z]),
             Q = null != J,
-            ee = l.useMemo(() => (null == q ? Z : (0, L.O8)(q, Z, w, X)), [q, Z, w, X]),
+            ee = l.useMemo(() => (null == q ? Z : (0, L.O8)(q, Z, H, X)), [q, Z, H, X]),
             {
                 bannerDisplayConfig: et,
                 logoDisplayConfig: er,
@@ -103,15 +103,15 @@ let G = {
             ei = et?.responsive ?? !1,
             eo = et?.backgroundStyle,
             eu = null != ea && !Q,
-            ec = w === B.G2.ORBS,
+            ec = H === P.G2.ORBS,
             ed = null != s && s.isOrbsExclusive,
-            eg = ec ? T.intl.string(T.t["1CdL8d"]) : T.intl.string(T.t.xYKa1T);
+            eg = ec ? R.intl.string(R.t["1CdL8d"]) : R.intl.string(R.t.xYKa1T);
         function em() {
             ec
                 ? ((0, C.Y)({
-                      pageType: N.liQ.SHOP_ORBS_TAB,
-                      sectionType: N.JJy.ORBS_SHOP_HERO_BLOCK,
-                      ctaObject: N.ZSU.CTA_TO_QUEST_HOME,
+                      pageType: b.liQ.SHOP_ORBS_TAB,
+                      sectionType: b.JJy.ORBS_SHOP_HERO_BLOCK,
+                      ctaObject: b.ZSU.CTA_TO_QUEST_HOME,
                   }),
                   (0, S.mA)({ fromContent: o.u.ORBS_SHOP_HERO_CTA }))
                 : (r?.({
@@ -120,10 +120,10 @@ let G = {
                       isInternalShopDeeplink: !0,
                       isOrbsExclusive: ed,
                   }),
-                  v.default.track(N.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                  v.default.track(b.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                       collectibles_shop_session_id: Y?.sessionId,
                       sku_id: ee.categorySkuId,
-                      page_type: w,
+                      page_type: H,
                       page_section: Y?.pageSection,
                       page_category: Y?.pageCategory,
                       cta_name: "shop latest category hero button",
@@ -137,15 +137,15 @@ let G = {
             value: $,
             children: (0, n.jsxs)("div", {
                 ref: V,
-                className: R.os,
+                className: T.os,
                 children: [
-                    eu ? (0, O.VA)({ isCustomCursorEnabled: z, className: R.Xt, riveEventTargetRef: K }) : null,
+                    eu ? (0, O.VA)({ isCustomCursorEnabled: z, className: T.Xt, riveEventTargetRef: K }) : null,
                     (0, n.jsx)("div", {
-                        className: a()(R.vK, { [R.cN]: eu, [R.no]: ei }),
+                        className: a()(T.vK, { [T.cN]: eu, [T.no]: ei }),
                         style: null != eo ? { background: eo } : void 0,
                         children:
                             null != el &&
-                            (0, n.jsx)(b.A, {
+                            (0, n.jsx)(B.A, {
                                 bannerStatic: el,
                                 bannerAnimated: es,
                                 bannerRive: eu ? ea : void 0,
@@ -154,32 +154,32 @@ let G = {
                             }),
                     }),
                     (0, n.jsxs)("div", {
-                        className: a()(R.xX, { [R.ub]: Q && w === B.G2.COLLECTION_INDEX }),
+                        className: a()(T.xX, { [T.ub]: Q && H === P.G2.COLLECTION_INDEX }),
                         children: [
                             eu
-                                ? (0, n.jsx)("div", { className: R.fy, children: ep() })
+                                ? (0, n.jsx)("div", { className: T.fy, children: ep() })
                                 : (0, n.jsxs)("div", {
-                                      className: a()(R.bC, { [R.no]: ei, [R.RD]: Q && w === B.G2.COLLECTION_INDEX }),
+                                      className: a()(T.bC, { [T.no]: ei, [T.RD]: Q && H === P.G2.COLLECTION_INDEX }),
                                       children: [
                                           t
-                                              ? (0, n.jsx)("div", { className: R.Hw })
+                                              ? (0, n.jsx)("div", { className: T.Hw })
                                               : (0, n.jsxs)("div", {
-                                                    className: R.Hw,
+                                                    className: T.Hw,
                                                     children: [
                                                         (0, I.HF)(ee.unpublishedAt) &&
                                                             (0, n.jsx)(d.Lp, {
                                                                 disableColor: !0,
-                                                                text: T.intl.string(T.t["h/uBCR"]),
-                                                                className: R.v0,
+                                                                text: R.intl.string(R.t["h/uBCR"]),
+                                                                className: T.v0,
                                                             }),
                                                         (0, n.jsxs)("div", {
-                                                            className: R.Wq,
+                                                            className: T.Wq,
                                                             children: [
                                                                 null != D &&
-                                                                    (0, n.jsx)("div", { className: R._I, children: D }),
+                                                                    (0, n.jsx)("div", { className: T._I, children: D }),
                                                                 null != en &&
                                                                     (0, n.jsx)("img", {
-                                                                        className: R.rm,
+                                                                        className: T.rm,
                                                                         src: en,
                                                                         alt: ee.name,
                                                                         style: er?.toDesktopStyles(),
@@ -187,7 +187,7 @@ let G = {
                                                                 null != ee.title &&
                                                                     (0, n.jsx)(g.D, {
                                                                         variant: "heading-xxl/bold",
-                                                                        className: ec ? R.DD : void 0,
+                                                                        className: ec ? T.DD : void 0,
                                                                         color: "text-strong",
                                                                         children: ee.title,
                                                                     }),
@@ -197,7 +197,7 @@ let G = {
                                                                         variant: Q
                                                                             ? "text-sm/normal"
                                                                             : "text-md/normal",
-                                                                        className: a()(ec ? R.h4 : R.Tm, { [R.vd]: Q }),
+                                                                        className: a()(ec ? T.h4 : T.Tm, { [T.vd]: Q }),
                                                                         style: { color: ee.bannerTextColor ?? void 0 },
                                                                         children: ee.summary,
                                                                     }),
@@ -205,9 +205,9 @@ let G = {
                                                         }),
                                                         null != q &&
                                                             Q &&
-                                                            w === B.G2.COLLECTION_INDEX &&
+                                                            H === P.G2.COLLECTION_INDEX &&
                                                             (0, n.jsx)("div", {
-                                                                className: R.Zz,
+                                                                className: T.Zz,
                                                                 children: (0, n.jsx)(f.A, {
                                                                     collectionId: ee.categorySkuId,
                                                                     variant: "full",
@@ -215,15 +215,15 @@ let G = {
                                                             }),
                                                     ],
                                                 }),
-                                          !U && !t && (0, n.jsx)("div", { className: R.IS, children: ep() }),
+                                          !U && !t && (0, n.jsx)("div", { className: T.IS, children: ep() }),
                                       ],
                                   }),
                             !F &&
-                                (0, n.jsx)(P.A, {
+                                (0, n.jsx)(N.A, {
                                     heroBlockRecord: ee,
-                                    tab: w,
+                                    tab: H,
                                     isBlockLoading: t,
-                                    layout: w === B.G2.HOME ? "hscroll" : "feed",
+                                    layout: H === P.G2.HOME ? "hscroll" : "feed",
                                 }),
                         ],
                     }),

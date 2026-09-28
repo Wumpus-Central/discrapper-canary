@@ -1,4 +1,4 @@
-l.d(t, { Ay: () => p, kn: () => g, u1: () => x });
+l.d(t, { Ay: () => p, kn: () => x, u1: () => g });
 var n = l(477900),
     a = l(582128),
     r = l(691885),
@@ -11,7 +11,7 @@ var n = l(477900),
     f = l(50617),
     m = l(375708),
     h = l(425721);
-function g(e, t) {
+function x(e, t) {
     let [l, n] = a.useState(null),
         [r, i] = a.useState(e);
     return (
@@ -27,14 +27,14 @@ function g(e, t) {
         ]
     );
 }
-function x(e) {
+function g(e) {
     let { settings: t, tiers: l, choices: s, disabled: o, onChange: c } = e,
         h = a.useMemo(
             () => s.main.map((e) => ({ id: e.id, label: e.label, value: e.id, description: d.oU[e.provider] })),
             [s.main],
         ),
-        g = a.useMemo(() => s.thinking.map((e) => ({ id: e, label: d.hW[e] ?? e, value: e })), [s.thinking]);
-    function x(e) {
+        x = a.useMemo(() => s.thinking.map((e) => ({ id: e, label: d.hW[e] ?? e, value: e })), [s.thinking]);
+    function g(e) {
         c((0, u.zy)(e));
     }
     let p = (0, u.$G)(t, l, t.tier);
@@ -45,7 +45,7 @@ function x(e) {
                       label: m.intl.string(f.default["9FRudW"]),
                       options: h,
                       value: p,
-                      onSelectionChange: (e) => x((0, u.gh)(t, t.tier, e)),
+                      onSelectionChange: (e) => g((0, u.gh)(t, t.tier, e)),
                       selectionMode: "single",
                       disabled: o,
                       fullWidth: !0,
@@ -53,9 +53,9 @@ function x(e) {
                 : null,
             (0, n.jsx)(r.l, {
                 label: m.intl.string(f.default["4AsQHS"]),
-                options: g,
+                options: x,
                 value: t.thinking ?? l?.[t.tier]?.thinking ?? "",
-                onSelectionChange: (e) => x({ ...t, thinking: e }),
+                onSelectionChange: (e) => g({ ...t, thinking: e }),
                 selectionMode: "single",
                 disabled: o,
                 fullWidth: !0,
@@ -66,7 +66,7 @@ function x(e) {
                       description: m.intl.string(f.default.HITWAI),
                       checked: !0 === t.fast,
                       disabled: o,
-                      onChange: (e) => x({ ...t, fast: e }),
+                      onChange: (e) => g({ ...t, fast: e }),
                   })
                 : null,
         ],
@@ -127,7 +127,7 @@ function p(e) {
                     }),
                 ],
             }),
-            (0, n.jsx)(x, { settings: t, tiers: l, choices: a, disabled: r, onChange: i }),
+            (0, n.jsx)(g, { settings: t, tiers: l, choices: a, disabled: r, onChange: i }),
         ],
     });
 }

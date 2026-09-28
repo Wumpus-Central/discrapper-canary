@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     f4: "centeringWrapper__5d537",
     qs: "timelineCard__5d537",
     fL: "timelineWrapper__5d537",

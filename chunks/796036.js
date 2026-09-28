@@ -1,6 +1,6 @@
 n.d(t, { h: () => w, s: () => g });
-var i = n(91242),
-    r = n(812901),
+var r = n(91242),
+    i = n(812901),
     l = n(649248),
     o = n(559676),
     s = n(805332),
@@ -17,7 +17,7 @@ function g() {
         ((_ = !0),
         u.Ay.addChangeListener(E),
         a.Ay.addChangeListener(E),
-        i.A.addChangeListener(E),
+        r.A.addChangeListener(E),
         s.A.addChangeListener(E),
         (0, o.FQ)(E),
         E());
@@ -33,15 +33,15 @@ function E() {
             let t = a.Ay.getProject(e)?.preview_application_id;
             if (null == t) return null;
             let n = (0, f.VA)(t, f.sd);
-            return (0, f.x1)(i.A.getFrame(n)) ? n : null;
+            return (0, f.x1)(r.A.getFrame(n)) ? n : null;
         })(t);
         null != n && e.set(t, n);
     }
-    for (let [i, r] of [...p]) {
+    for (let [r, i] of [...p]) {
         var t, n;
-        e.get(i) !== r.frameId &&
-            ((t = i),
-            (n = r),
+        e.get(r) !== i.frameId &&
+            ((t = r),
+            (n = i),
             p.delete(t),
             n.unregisterLookup(),
             l.A.removeFrameTarget(n.frameId, n.element),
@@ -56,10 +56,10 @@ function E() {
                     n.setAttribute("aria-hidden", "true"),
                     m(n, s.A.isBuilderPreviewMobile()),
                     document.body.appendChild(n));
-                let i = { frameId: t, element: n, unregisterLookup: () => {} };
-                (p.set(e, i),
-                    (i.unregisterLookup = (0, c.mn)(e, () => (0, d.F)(n, t))),
-                    l.A.registerFrameTarget(t, n, r.A.Backstage));
+                let r = { frameId: t, element: n, unregisterLookup: () => {} };
+                (p.set(e, r),
+                    (r.unregisterLookup = (0, c.mn)(e, () => (0, d.F)(n, t))),
+                    l.A.registerFrameTarget(t, n, i.A.Backstage));
             })(t, n);
     let _ = s.A.isBuilderPreviewMobile();
     for (let e of p.values()) m(e.element, _);

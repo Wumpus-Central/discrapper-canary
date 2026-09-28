@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     OJ: "editorPane__51bac",
     pC: "cropOverlay__51bac",
     E$: "cropBox__51bac",

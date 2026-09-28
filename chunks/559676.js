@@ -9,8 +9,8 @@ n.d(t, {
     t_: () => a,
     xm: () => h,
 });
-var i = n(582128);
-let r = new Map(),
+var r = n(582128);
+let i = new Map(),
     l = new Set(),
     o = new Set();
 function s() {
@@ -30,19 +30,19 @@ function u(e) {
         }
 }
 function a(e) {
-    let t = r.get(e) ?? { holders: 0, timers: new Set() };
-    ((t.holders += 1), r.set(e, t));
+    let t = i.get(e) ?? { holders: 0, timers: new Set() };
+    ((t.holders += 1), i.set(e, t));
     let n = !1,
-        i = setTimeout(() => {
+        r = setTimeout(() => {
             (console.warn("[vibegrations] control lease expired without release", { projectId: e }), l());
         }, 35e3);
     function l() {
-        if (n || ((n = !0), clearTimeout(i), r.get(e) !== t)) return;
-        (t.timers.delete(i), (t.holders -= 1));
+        if (n || ((n = !0), clearTimeout(r), i.get(e) !== t)) return;
+        (t.timers.delete(r), (t.holders -= 1));
         let l = t.holders <= 0;
-        (l && r.delete(e), s(), l && u(e));
+        (l && i.delete(e), s(), l && u(e));
     }
-    return (t.timers.add(i), s(), l);
+    return (t.timers.add(r), s(), l);
 }
 let d = new Map();
 function c(e) {
@@ -50,8 +50,8 @@ function c(e) {
         n = setTimeout(() => f(e), 2e4);
     if (null != t) {
         clearTimeout(t.timer);
-        let i = a(e);
-        (t.release(), d.set(e, { release: i, timer: n }));
+        let r = a(e);
+        (t.release(), d.set(e, { release: r, timer: n }));
         return;
     }
     d.set(e, { release: a(e), timer: n });
@@ -63,17 +63,17 @@ function f(e) {
 function h(e) {
     let t = d.get(e);
     null != t && (d.delete(e), clearTimeout(t.timer));
-    let n = r.get(e);
+    let n = i.get(e);
     if (null != n) {
         for (let e of n.timers) clearTimeout(e);
-        (r.delete(e), s(), u(e));
+        (i.delete(e), s(), u(e));
     }
 }
 function p(e) {
-    return (r.get(e)?.holders ?? 0) > 0;
+    return (i.get(e)?.holders ?? 0) > 0;
 }
 function _() {
-    return [...r.keys()];
+    return [...i.keys()];
 }
 function g(e) {
     return (
@@ -92,6 +92,6 @@ function w(e) {
     );
 }
 function E(e) {
-    let t = i.useCallback(() => null != e && p(e), [e]);
-    return i.useSyncExternalStore(g, t, t);
+    let t = r.useCallback(() => null != e && p(e), [e]);
+    return r.useSyncExternalStore(g, t, t);
 }

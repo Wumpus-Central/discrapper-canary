@@ -1,13 +1,13 @@
-l.d(t, { A: () => E });
+l.d(t, { A: () => _ });
 var n = l(477900),
     s = l(582128),
     i = l(503698),
     r = l.n(i),
     a = l(575593),
     o = l(770178),
-    c = l(590180),
-    d = l(395856),
-    u = l(682301),
+    u = l(590180),
+    c = l(395856),
+    d = l(682301),
     m = l(929283),
     h = l(758836),
     g = l(171934);
@@ -34,9 +34,9 @@ let x = [],
 function p(e) {
     let { config: t, baseLeft: l, transitioning: s, resolvedProduct: i } = e,
         r = window.innerHeight,
-        o = i ?? c.A.getProduct(t.skuId),
-        d = o?.items[0],
-        u = o?.type,
+        o = i ?? u.A.getProduct(t.skuId),
+        c = o?.items[0],
+        d = o?.type,
         h = l + t.horizontalJitter;
     return (0, n.jsx)("div", {
         className: g.LY,
@@ -49,12 +49,12 @@ function p(e) {
             transitionDelay: t.transitionDelay,
             transitionDuration: t.transitionDuration,
         },
-        children: null != d && u === a.R.AVATAR_DECORATION && (0, n.jsx)(m.i, { item: d }),
+        children: null != c && d === a.R.AVATAR_DECORATION && (0, n.jsx)(m.i, { item: c }),
     });
 }
-function b(e) {
+function E(e) {
     let { peaking: t, transitioning: l, parentWidth: i } = e,
-        [o, c] = s.useState(!1),
+        [o, u] = s.useState(!1),
         [m] = s.useState(() =>
             [...f]
                 .sort(() => Math.random() - 0.5)
@@ -68,53 +68,53 @@ function b(e) {
                     transitionDuration: `${h.H1 - 200 * Math.random()}ms`,
                 })),
         ),
-        b = (0, d.$)("shop_transition_jumble"),
-        E = s.useMemo(() => f, []),
-        v = (0, u.hv)(b ? E : x, { needsCategory: !1 }),
-        j = s.useMemo(() => {
-            if (!b) return m;
+        E = (0, c.$)("shop_transition_jumble"),
+        _ = s.useMemo(() => f, []),
+        b = (0, d.hv)(E ? _ : x, { needsCategory: !1 }),
+        C = s.useMemo(() => {
+            if (!E) return m;
             let e = m.filter((e) => {
-                let t = v[e.skuId]?.product;
+                let t = b[e.skuId]?.product;
                 return t?.items[0] != null && t.type === a.R.AVATAR_DECORATION;
             });
             return e.length > 0 ? e : m;
-        }, [b, m, v]),
-        S = s.useMemo(() => {
+        }, [E, m, b]),
+        v = s.useMemo(() => {
             if (null == i || i <= 0) return [];
             let e = Math.max(1, Math.floor(i / 130)),
                 t = i / e;
-            return Array.from({ length: e }, (e, l) => ({ config: j[l % j.length], baseLeft: l * t }));
-        }, [i, j]);
+            return Array.from({ length: e }, (e, l) => ({ config: C[l % C.length], baseLeft: l * t }));
+        }, [i, C]);
     return (
         s.useEffect(() => {
-            l && setTimeout(() => c(!0), h.H1);
+            l && setTimeout(() => u(!0), h.H1);
         }, [l]),
         (0, n.jsx)("div", {
             className: r()(g.rA, { [g.Kb]: t, [g.pp]: o }),
-            children: S.map((e, t) => {
+            children: v.map((e, t) => {
                 let { config: s, baseLeft: i } = e;
                 return (0, n.jsx)(
                     p,
-                    { config: s, baseLeft: i, transitioning: l, resolvedProduct: v[s.skuId]?.product },
+                    { config: s, baseLeft: i, transitioning: l, resolvedProduct: b[s.skuId]?.product },
                     s.skuId + t,
                 );
             }),
         })
     );
 }
-let E = function (e) {
+let _ = function (e) {
     let { peaking: t, transitioning: l } = e,
         i = s.useRef(null),
         [r, a] = s.useState(0),
-        c = s.useCallback(() => {
+        u = s.useCallback(() => {
             null != i.current && a(i.current.offsetWidth);
         }, []);
     return (
-        (0, o.g)(i, c),
+        (0, o.g)(i, u),
         (0, n.jsx)("div", {
             ref: i,
             className: g.eL,
-            children: (0, n.jsx)(b, { peaking: t, transitioning: l, parentWidth: r }),
+            children: (0, n.jsx)(E, { peaking: t, transitioning: l, parentWidth: r }),
         })
     );
 };

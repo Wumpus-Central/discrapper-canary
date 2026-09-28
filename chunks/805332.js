@@ -1,9 +1,9 @@
 n.d(t, { A: () => u });
-var i = n(17928),
-    r = n(228366);
+var r = n(17928),
+    i = n(228366);
 let l = null,
     o = !1;
-class s extends i.Ay.Store {
+class s extends r.Ay.Store {
     getBuilderPreviewApplicationId() {
         return l;
     }
@@ -11,7 +11,7 @@ class s extends i.Ay.Store {
         return o;
     }
 }
-let u = new s(r.h, {
+let u = new s(i.h, {
     LOGOUT: function () {
         if (null == l && !o) return !1;
         ((l = null), (o = !1));
