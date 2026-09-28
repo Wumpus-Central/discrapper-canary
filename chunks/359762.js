@@ -181,7 +181,7 @@ function G(e) {
     });
 }
 var W = n(682530),
-    X = n(961941);
+    X = n(184322);
 let V = Array.from({ length: 10 }, (e, t) =>
     (0, i.jsxs)(
         "div",

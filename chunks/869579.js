@@ -276,11 +276,11 @@ function ed(e) {
     let { height: t } = e;
     return (0, l.jsx)("div", { className: ec.qf, style: null == t ? void 0 : { height: t }, "aria-hidden": !0 });
 }
-var eo = n(686246);
+var eo = n(675816);
 let ef = "GUILD_SPACE_WIDGET",
     eg = "GUILD_SPACE_WIDGETS",
     em = `${ef}_${eg}`;
-var eh = n(225995),
+var eh = n(204581),
     eE = n(333007);
 let ep = "canvas, iframe, video";
 function ex(e) {
@@ -360,7 +360,7 @@ function ex(e) {
               document.body,
           );
 }
-var eA = n(651300);
+var eA = n(708793);
 function eC(e) {
     let { column: t, children: n, isPointerDragging: i, registerColumnElement: a, onDragHover: u } = e,
         s = r.useRef(null),

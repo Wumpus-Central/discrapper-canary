@@ -853,21 +853,21 @@ var eX = i(702841),
     e$ = i(465318),
     e0 = i(384377),
     e1 = i(554146),
-    e2 = i(43105),
-    e8 = i(131607),
+    e8 = i(43105),
+    e2 = i(131607),
     e5 = i(518477),
     e7 = i(49999);
 function e3() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
         t = e$.A.useConfig({ location: "PersonalWidgetUpsellCoachmark" }).enabled,
-        [i, n] = (0, e8.kn)(e && t ? [e1.M.USER_PROFILE_PERSONAL_WIDGET_COACHMARK] : []);
+        [i, n] = (0, e2.kn)(e && t ? [e1.M.USER_PROFILE_PERSONAL_WIDGET_COACHMARK] : []);
     return [i === e1.M.USER_PROFILE_PERSONAL_WIDGET_COACHMARK, n];
 }
 function e4(e) {
     let { targetElementRef: t, isVisible: i, markAsDismissed: l } = e,
         { trackUserProfileEditAction: s } = (0, eQ.NJ)();
     return i
-        ? (0, n.jsx)(e2.A, {
+        ? (0, n.jsx)(e8.A, {
               targetElementRef: t,
               badge: "beta",
               graphic: {
@@ -1507,8 +1507,8 @@ function t1(e) {
         }),
     });
 }
-var t2 = i(769015),
-    t8 = i(409626),
+var t8 = i(769015),
+    t2 = i(409626),
     t5 = i(692969),
     t7 = i(202163),
     t3 = i(207803),
@@ -1523,7 +1523,7 @@ function ie(e) {
         c = (0, t5.A)({
             location: "WidgetClipGameIcon",
             applicationId: t,
-            source: t8.GameProfileSources.UserProfile,
+            source: t2.GameProfileSources.UserProfile,
             sourceUserId: i,
         }),
         u = l.useCallback(
@@ -1538,7 +1538,7 @@ function ie(e) {
         ),
         g = r?.name;
     if (null == g) return null;
-    let m = (0, n.jsx)(t2.A, { game: r, size: t2.M.XSMALL, allowUnknownGameIcon: !1 });
+    let m = (0, n.jsx)(t8.A, { game: r, size: t8.M.XSMALL, allowUnknownGameIcon: !1 });
     return (0, n.jsx)(q.m, {
         text: g,
         ariaHidden: !0,
@@ -2278,7 +2278,7 @@ function iK(e) {
         children: t.map((e, t) => (0, n.jsx)("li", { children: i(e, t) }, e.gameId)),
     });
 }
-var iq = i(686246),
+var iq = i(675816),
     iJ = i(201438),
     iZ = i(788593),
     iQ = i(858808),
@@ -2304,7 +2304,7 @@ function i1(e) {
         children: (0, n.jsx)("div", { ref: c, className: i0.An, children: o }),
     });
 }
-function i2(e) {
+function i8(e) {
     let {
             game: t,
             userId: i,
@@ -2343,13 +2343,13 @@ function i2(e) {
           ? (0, n.jsx)(i1, { widgetType: l, index: r ?? 0, game: t, coverImageUrl: c, gameName: u, children: h() })
           : (0, n.jsx)("div", { className: i0.kL, children: h() });
 }
-function i8(e) {
+function i2(e) {
     let { games: t, userId: i, widgetType: l, allowEditing: s, disableInteraction: a } = e,
         { registerItemRef: r, manageFocusOnDelete: o } = (0, tU.r)();
     return (0, n.jsx)(iK, {
         games: t,
         renderGame: (e, t) =>
-            (0, n.jsx)(i2, {
+            (0, n.jsx)(i8, {
                 index: t,
                 game: e,
                 userId: i,
@@ -2370,7 +2370,7 @@ function i5(e) {
         u = s.length > 8,
         g = (0, n.jsxs)(n.Fragment, {
             children: [
-                (0, n.jsx)(i8, { ...e, games: c }),
+                (0, n.jsx)(i2, { ...e, games: c }),
                 u && (0, n.jsx)(Y, { expanded: o, onClick: () => d((e) => !e) }),
             ],
         });
