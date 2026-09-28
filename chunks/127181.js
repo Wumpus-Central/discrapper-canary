@@ -588,6 +588,13 @@ let n = [
             "Starting Moderation Bot from a server it can be built in now skips the pick-a-server step; the bot is made for the server you are in.",
     },
     {
+        date: "2026-09-28",
+        time: "02:09",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "Starting from a template shows its progress as one Putting it in the preview step, the same as every other change.",
+    },
+    {
         date: "2026-09-26",
         time: "02:20",
         platforms: ["desktop", "mobile"],
