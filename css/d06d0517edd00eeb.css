@@ -77,6 +77,12 @@
     --bg-gradient-hanami-2-hsl: 330 100 71%;
     --bg-gradient-hanami-3: hotpink;
     --bg-gradient-hanami-3-hsl: 330 100 71%;
+    --bg-gradient-hexagon-promo-1: hotpink;
+    --bg-gradient-hexagon-promo-1-hsl: 330 100 71%;
+    --bg-gradient-hexagon-promo-2: hotpink;
+    --bg-gradient-hexagon-promo-2-hsl: 330 100 71%;
+    --bg-gradient-hexagon-promo-3: hotpink;
+    --bg-gradient-hexagon-promo-3-hsl: 330 100 71%;
     --bg-gradient-lofi-vibes-1: hotpink;
     --bg-gradient-lofi-vibes-1-hsl: 330 100 71%;
     --bg-gradient-lofi-vibes-2: hotpink;
@@ -3769,6 +3775,10 @@
     --guild-folder-background: hsla(240, 4%, 61%, .12);
     --guild-notifications-bottom-sheet-pill-background: #1f1f21;
     --guild-profile-banner-background-default: #2b2e33;
+    --hexagon-campaign-promo-gradient-1: rgba(255, 0, 158, .6);
+    --hexagon-campaign-promo-gradient-2: rgba(145, 46, 255, .6);
+    --hexagon-campaign-promo-gradient-3: rgba(33, 8, 51, .6);
+    --hexagon-campaign-promo-gradient-shade: rgba(0, 0, 0, .52);
     --home-background: #29292e;
     --icon-brand: #94a8ff;
     --icon-default: #f2f2f5;
@@ -4508,6 +4518,10 @@
     --guild-folder-background: hsla(240, 4%, 61%, .12);
     --guild-notifications-bottom-sheet-pill-background: #fff;
     --guild-profile-banner-background-default: #70707a;
+    --hexagon-campaign-promo-gradient-1: rgba(255, 0, 158, .6);
+    --hexagon-campaign-promo-gradient-2: rgba(145, 46, 255, .6);
+    --hexagon-campaign-promo-gradient-3: rgba(33, 8, 51, .6);
+    --hexagon-campaign-promo-gradient-shade: rgba(0, 0, 0, .52);
     --home-background: #fafafa;
     --icon-brand: #525ee0;
     --icon-default: #2e2e33;
@@ -5247,6 +5261,10 @@
     --guild-folder-background: hsla(240, 4%, 61%, .12);
     --guild-notifications-bottom-sheet-pill-background: #1f1f21;
     --guild-profile-banner-background-default: #000;
+    --hexagon-campaign-promo-gradient-1: rgba(255, 0, 158, .6);
+    --hexagon-campaign-promo-gradient-2: rgba(145, 46, 255, .6);
+    --hexagon-campaign-promo-gradient-3: rgba(33, 8, 51, .6);
+    --hexagon-campaign-promo-gradient-shade: rgba(0, 0, 0, .52);
     --home-background: #26262e;
     --icon-brand: #6373f5;
     --icon-default: #d4d6d9;
@@ -5986,6 +6004,10 @@
     --guild-folder-background: hsla(240, 4%, 61%, .12);
     --guild-notifications-bottom-sheet-pill-background: #1f1f21;
     --guild-profile-banner-background-default: #121214;
+    --hexagon-campaign-promo-gradient-1: rgba(255, 0, 158, .6);
+    --hexagon-campaign-promo-gradient-2: rgba(145, 46, 255, .6);
+    --hexagon-campaign-promo-gradient-3: rgba(33, 8, 51, .6);
+    --hexagon-campaign-promo-gradient-shade: rgba(0, 0, 0, .52);
     --home-background: #26262e;
     --icon-brand: #788cfa;
     --icon-default: #f0f0f2;
@@ -6363,4 +6385,4 @@
     --white: #fff
 }
 
-/*# sourceMappingURL=d05fb73b902f1ddc.css.map*/
+/*# sourceMappingURL=d06d0517edd00eeb.css.map*/
