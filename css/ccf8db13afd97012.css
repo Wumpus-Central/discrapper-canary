@@ -283,7 +283,8 @@
     box-shadow: 0 0 0 2px var(--background-surface-high);
     max-width: 40px;
     min-width: 40px;
-    width: 40px
+    width: 40px;
+    z-index: 0
 }
 
 .previewImageContainer__0d4ce:not(:first-child) {
@@ -296,4 +297,4 @@
     width: 40px
 }
 
-/*# sourceMappingURL=065d1c4901eda3f3.css.map*/
+/*# sourceMappingURL=ccf8db13afd97012.css.map*/
