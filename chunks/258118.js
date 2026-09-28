@@ -14,10 +14,10 @@ var s = l(477900),
     m = l(661531),
     v = l(285796),
     g = l(297264),
-    A = l(834730),
-    C = l(821609),
-    b = l(953727);
-function p(e) {
+    C = l(834730),
+    b = l(821609),
+    p = l(953727);
+function A(e) {
     let {
         width: i = 24,
         height: l = 24,
@@ -26,7 +26,7 @@ function p(e) {
         ...t
     } = e;
     return (0, s.jsxs)("svg", {
-        ...(0, b.A)(t),
+        ...(0, p.A)(t),
         width: i,
         height: l,
         viewBox: "0 0 14 14",
@@ -40,37 +40,37 @@ function p(e) {
     });
 }
 var k = l(375708),
-    E = l(916423);
-function M(e) {
+    f = l(916423);
+function E(e) {
     let { name: i, description: l, checked: n, actionLabel: a, actionHandler: t } = e,
         c = null;
     return (
         (c = n
-            ? (0, s.jsx)(p, { width: 20, height: 20 })
+            ? (0, s.jsx)(A, { width: 20, height: 20 })
             : (0, s.jsx)(v.a, { size: "custom", color: m.A.colors.ICON_FEEDBACK_CRITICAL, width: 20, height: 20 })),
         (0, s.jsxs)("div", {
-            className: E.gd,
+            className: f.gd,
             children: [
-                (0, s.jsx)("div", { className: E.aV, children: c }),
+                (0, s.jsx)("div", { className: f.aV, children: c }),
                 (0, s.jsxs)("div", {
-                    className: j()(E.__invalid_checklistText, n && E.lu),
+                    className: j()(f.__invalid_checklistText, n && f.lu),
                     children: [
-                        (0, s.jsx)(g.D, { variant: "heading-md/semibold", className: E.LA, children: i }),
-                        (0, s.jsx)(A.E, { color: "interactive-text-default", variant: "text-sm/normal", children: l }),
+                        (0, s.jsx)(g.D, { variant: "heading-md/semibold", className: f.LA, children: i }),
+                        (0, s.jsx)(C.E, { color: "interactive-text-default", variant: "text-sm/normal", children: l }),
                     ],
                 }),
                 null != a &&
                     (0, s.jsx)("div", {
-                        className: E.dT,
-                        children: (0, s.jsx)(C.$, { variant: "primary", onClick: t, text: a, size: "sm" }),
+                        className: f.dT,
+                        children: (0, s.jsx)(b.$, { variant: "primary", onClick: t, text: a, size: "sm" }),
                     }),
             ],
         })
     );
 }
 l(848887);
-var _ = l(413611),
-    f = l(652215);
+var M = l(413611),
+    _ = l(652215);
 function w(e) {
     let { eligibility: i, eligibilityLoading: l, eligibilityError: a, guildId: x, onEligibilityBecameStale: j } = e,
         m = n.useMemo(
@@ -80,7 +80,7 @@ function w(e) {
                 actions: {
                     onEnableMFAClick: u.Ay.enableMFA,
                     onRequireModeratorMFAClick: () => {
-                        ((0, t.closeModal)(_.m), h.A.open(x, f.BEX.SAFETY, void 0, f.nd0.SAFETY_PERMISSIONS));
+                        ((0, t.closeModal)(M.m), h.default.open(x, _.BEX.SAFETY, void 0, _.nd0.SAFETY_PERMISSIONS));
                     },
                 },
             }),
@@ -97,7 +97,7 @@ function w(e) {
                         n.Fragment,
                         {
                             children: [
-                                (0, s.jsx)(M, {
+                                (0, s.jsx)(E, {
                                     name: e.checked ? e.checkedLabel : e.uncheckedLabel,
                                     description: e.description,
                                     checked: e.checked,
@@ -126,7 +126,7 @@ function y(e) {
         title: k.intl.string(k.t["3s47iN"]),
         actions: [],
         onClose: async () => {
-            await (0, t.closeModal)(_.m);
+            await (0, t.closeModal)(M.m);
         },
         children: (0, s.jsx)(w, {
             eligibility: i,

@@ -63,7 +63,7 @@ function Z(e) {
               icon: W.q,
               tooltipText: Q.intl.string(Q.t.kj3tz2),
               onClick: () => {
-                  (q.A.close(),
+                  (q.default.close(),
                       null != p && (0, B.iN)(p),
                       (0, z.A)(o),
                       a.dispatch(Y.jej.POPOUT_CLOSE),

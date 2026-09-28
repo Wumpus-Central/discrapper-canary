@@ -2204,7 +2204,12 @@ function i_(e) {
                                 text: Y.intl.string(Y.t["I/XhUn"]),
                                 onClick: function () {
                                     ((0, iy.rf)(n),
-                                        iE.A.open(n, ed.BEX.ROLE_SUBSCRIPTIONS, void 0, ed.nd0.ROLE_SUBSCRIPTION_TIERS),
+                                        iE.default.open(
+                                            n,
+                                            ed.BEX.ROLE_SUBSCRIPTIONS,
+                                            void 0,
+                                            ed.nd0.ROLE_SUBSCRIPTION_TIERS,
+                                        ),
                                         (0, iv.Fx)(n));
                                 },
                             }),

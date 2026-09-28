@@ -1,59 +1,59 @@
-t.d(s, { default: () => L });
+s.d(t, { default: () => L });
 var i,
-    n = t(477900),
-    a = t(582128),
-    r = t(562708),
-    l = t(139033),
-    c = t(189213),
-    o = t(192308),
-    d = t(97808),
-    u = t(778712),
-    m = t(834730),
-    f = t(812993),
-    E = t(512950),
-    h = t(150934),
-    N = t(398590),
-    _ = t(966327),
-    A = t(139286),
-    p = t(235986),
-    I = t(468689),
-    x = t(773669),
-    R = t(486020),
-    j = t(562153),
-    y = t(427262),
-    O = t(652215),
+    a = s(477900),
+    n = s(582128),
+    r = s(562708),
+    l = s(139033),
+    c = s(189213),
+    o = s(192308),
+    d = s(97808),
+    u = s(778712),
+    m = s(834730),
+    f = s(812993),
+    E = s(512950),
+    h = s(150934),
+    N = s(398590),
+    _ = s(966327),
+    p = s(139286),
+    A = s(235986),
+    I = s(468689),
+    x = s(773669),
+    R = s(486020),
+    j = s(562153),
+    y = s(427262),
+    O = s(652215),
     S = (((i = {}).MFA = "mfa"), (i.SMS = "sms"), (i.EMAIL = "email"), i),
-    T = t(375708),
-    b = t(430918);
+    T = s(375708),
+    b = s(430918);
 let v = function () {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : x.default.locale;
     return `https://${O.XlF}/hc/${e.toLowerCase()}/requests/new?ticket_form_id=360000168511`;
 };
 function L(e) {
-    let { guild: s, toUser: i, fromUser: x, onClose: L, transitionState: g } = e,
-        [w, C] = a.useState(!1),
-        F = s.features.has(O.GuildFeatures.VERIFIED) || s.features.has(O.GuildFeatures.PARTNERED),
+    let { guild: t, toUser: i, fromUser: x, onClose: L, transitionState: g } = e,
+        [w, C] = n.useState(!1),
+        F = t.features.has(O.GuildFeatures.VERIFIED) || t.features.has(O.GuildFeatures.PARTNERED),
         M = F ? T.intl.format(T.t.A37vwK, { ticketUrl: v() }) : null,
         G =
-            s.features.has(O.GuildFeatures.CREATOR_MONETIZABLE) ||
-            s.features.has(O.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL);
+            t.features.has(O.GuildFeatures.CREATOR_MONETIZABLE) ||
+            t.features.has(O.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL);
     async function k(e) {
-        await I.A.transferOwnership(s.id, i.id, S.EMAIL, e);
+        await I.default.transferOwnership(t.id, i.id, S.EMAIL, e);
     }
     async function P() {
-        await I.A.sendTransferOwnershipPincode(s.id, !0);
+        await I.default.sendTransferOwnershipPincode(t.id, !0);
     }
     async function Z(e) {
         (e.preventDefault(), L());
         try {
             x.mfaEnabled || null == x.email
-                ? (await I.A.transferOwnership(s.id, i.id, x.mfaEnabled ? S.MFA : null), (0, N.jH)())
-                : (await I.A.sendTransferOwnershipPincode(s.id),
+                ? (await I.default.transferOwnership(t.id, i.id, x.mfaEnabled ? S.MFA : null), (0, N.jH)())
+                : (await I.default.sendTransferOwnershipPincode(t.id),
                   (0, o.openModalLazy)(async () => {
-                      let { default: e } = await Promise.all([t.e("932606"), t.e("919840")]).then(t.bind(t, 79779));
-                      return (s) =>
-                          (0, n.jsx)(e, {
-                              ...s,
+                      let { default: e } = await Promise.all([s.e("932606"), s.e("919840")]).then(s.bind(s, 79779));
+                      return (t) =>
+                          (0, a.jsx)(e, {
+                              ...t,
                               onFormSubmit: k,
                               onResend: P,
                               onSuccess: N.jH,
@@ -74,28 +74,28 @@ function L(e) {
                 });
         }
     }
-    (0, A.A)({ type: r.ImpressionTypes.MODAL, name: r.ImpressionNames.GUILD_TRANSFER_OWNERSHIP });
-    let D = j.Ay.getNickname(s.id, void 0, i),
-        H = i.hasAvatarForGuild(s.id);
+    (0, p.A)({ type: r.ImpressionTypes.MODAL, name: r.ImpressionNames.GUILD_TRANSFER_OWNERSHIP });
+    let D = j.Ay.getNickname(t.id, void 0, i),
+        H = i.hasAvatarForGuild(t.id);
     function V() {
-        return (0, n.jsxs)("span", {
+        return (0, a.jsxs)("span", {
             className: b.v_,
             children: [
-                null != s.icon
-                    ? (0, n.jsx)(d.eu, {
-                          src: R.Ay.getGuildIconURL({ id: s.id, icon: s.icon, size: 16 }),
+                null != t.icon
+                    ? (0, a.jsx)(d.eu, {
+                          src: R.Ay.getGuildIconURL({ id: t.id, icon: t.icon, size: 16 }),
                           size: u._3.SIZE_16,
                           className: b.sD,
                           "aria-hidden": !0,
                       })
                     : null,
-                (0, n.jsx)(m.E, { className: b.J5, variant: "text-sm/bold", children: s.name }),
+                (0, a.jsx)(m.E, { className: b.J5, variant: "text-sm/bold", children: t.name }),
             ],
         });
     }
-    return (0, n.jsx)("form", {
+    return (0, a.jsx)("form", {
         onSubmit: Z,
-        children: (0, n.jsxs)(c.a, {
+        children: (0, a.jsxs)(c.a, {
             title: T.intl.string(T.t.Z5s7PM),
             actions: [
                 { text: T.intl.string(T.t["ETE/oC"]), onClick: L, variant: "secondary" },
@@ -104,7 +104,7 @@ function L(e) {
             onClose: L,
             transitionState: g,
             children: [
-                (0, n.jsx)(m.E, {
+                (0, a.jsx)(m.E, {
                     variant: "text-sm/normal",
                     className: b.uI,
                     children:
@@ -113,23 +113,23 @@ function L(e) {
                                   GuildHook: V,
                                   user: (0, y.QV)(i),
                                   AKAHook: function () {
-                                      return (0, n.jsxs)("span", {
+                                      return (0, a.jsxs)("span", {
                                           className: b.Dy,
                                           children: [
-                                              (0, n.jsx)(f.Lp, {
+                                              (0, a.jsx)(f.Lp, {
                                                   text: T.intl.string(T.t.l1QVfj),
                                                   disableColor: !0,
                                                   className: b.RV,
                                               }),
                                               H
-                                                  ? (0, n.jsx)(d.eu, {
-                                                        src: i.getAvatarURL(s.id, 16, !0),
+                                                  ? (0, a.jsx)(d.eu, {
+                                                        src: i.getAvatarURL(t.id, 16, !0),
                                                         size: u._3.SIZE_16,
                                                         className: b.H,
                                                         "aria-hidden": !0,
                                                     })
                                                   : null,
-                                              (0, n.jsx)(m.E, {
+                                              (0, a.jsx)(m.E, {
                                                   className: b.$R,
                                                   variant: "text-sm/normal",
                                                   children: D ?? y.Ay.getName(i),
@@ -140,27 +140,27 @@ function L(e) {
                               })
                             : T.intl.format(T.t["2XLnG0"], { GuildHook: V, user: (0, y.QV)(i) }),
                 }),
-                (0, n.jsxs)(p.A, {
+                (0, a.jsxs)(A.A, {
                     className: b.nS,
-                    justify: p.A.Justify.CENTER,
+                    justify: A.A.Justify.CENTER,
                     children: [
-                        (0, n.jsx)("div", {
+                        (0, a.jsx)("div", {
                             className: b.HT,
-                            children: (0, n.jsx)(_.A, { user: x, size: u._3.SIZE_80 }),
+                            children: (0, a.jsx)(_.A, { user: x, size: u._3.SIZE_80 }),
                         }),
-                        (0, n.jsx)("div", {
+                        (0, a.jsx)("div", {
                             className: b.to,
-                            children: (0, n.jsx)(_.A, { user: i, size: u._3.SIZE_80 }),
+                            children: (0, a.jsx)(_.A, { user: i, size: u._3.SIZE_80 }),
                         }),
                     ],
                 }),
                 G &&
-                    (0, n.jsx)(E.p, {
+                    (0, a.jsx)(E.p, {
                         messageType: E.Y.INFO,
                         className: b.rk,
                         children: T.intl.format(T.t.LAlucb, { server_subscription_owner_transfer_article: O.Oi0 }),
                     }),
-                (0, n.jsx)(h.S, {
+                (0, a.jsx)(h.S, {
                     label: T.intl.format(T.t.xm6ACJ, { username: (0, y.QV)(i) }),
                     disabled: F,
                     checked: w,
@@ -168,7 +168,7 @@ function L(e) {
                         C(e);
                     },
                 }),
-                F && (0, n.jsx)(E.p, { messageType: E.Y.WARNING, children: M }),
+                F && (0, a.jsx)(E.p, { messageType: E.Y.WARNING, children: M }),
             ],
         }),
     });

@@ -1,8 +1,8 @@
 i.d(e, { default: () => O });
 var l = i(477900),
     n = i(582128),
-    r = i(17928),
-    a = i(189213),
+    a = i(17928),
+    r = i(189213),
     s = i(834730),
     o = i(47167),
     d = i(60868),
@@ -30,11 +30,11 @@ let O = (t) => {
         D = (0, o.Ay)(O, !0),
         I = O.id,
         S = O.isForumPost(),
-        R = (0, r.bG)([h.A], () => h.A.getGuild(O.getGuildId())),
+        R = (0, a.bG)([h.A], () => h.A.getGuild(O.getGuildId())),
         v = (0, k.ob)(I),
         { isSubscriptionGated: L } = (0, f.A)(O.id),
         _ =
-            ((e = (0, r.bG)([A.A], () => (null != R ? A.A.getRolesSnapshot(R.id) : void 0))),
+            ((e = (0, a.bG)([A.A], () => (null != R ? A.A.getRolesSnapshot(R.id) : void 0))),
             (i = (0, g.A)(R?.id)),
             n.useMemo(() => {
                 let t =
@@ -43,13 +43,13 @@ let O = (t) => {
                                   let l = new Set();
                                   for (let t of Object.keys(i.permissionOverwrites)) {
                                       let n = e[t],
-                                          r = i.permissionOverwrites[t];
-                                      (0, p.U)(n) && (0, C.Uj)(i, r) && l.add(n);
+                                          a = i.permissionOverwrites[t];
+                                      (0, p.U)(n) && (0, C.Uj)(i, a) && l.add(n);
                                   }
                                   let n = e[(0, m.af)(t)],
-                                      r = !(0, E._m)(n, b.xBc.VIEW_CHANNEL),
-                                      a = (0, C.AN)(i, i.permissionOverwrites[t.id]);
-                                  if (r && !a) for (let t of Object.values(e)) (0, p.U)(t) && (0, C.iR)(t) && l.add(t);
+                                      a = !(0, E._m)(n, b.xBc.VIEW_CHANNEL),
+                                      r = (0, C.AN)(i, i.permissionOverwrites[t.id]);
+                                  if (a && !r) for (let t of Object.values(e)) (0, p.U)(t) && (0, C.iR)(t) && l.add(t);
                                   return [...l];
                               })(R, e, O)
                             : [],
@@ -64,9 +64,9 @@ let O = (t) => {
                 return l;
             }, [i, R, O, e])),
         [j, K] = n.useState(),
-        M = (0, r.bG)([y.default], () => O.isOwner(y.default.getId()), [O]),
-        z = (0, r.bG)([x.A], () => x.A.can(O.isThread() ? b.xBc.MANAGE_THREADS : b.xBc.MANAGE_CHANNELS, O), [O]),
-        F = (0, r.bG)([T.A], () => T.A.getCount(O.id) ?? 0, [O.id]),
+        M = (0, a.bG)([y.default], () => O.isOwner(y.default.getId()), [O]),
+        z = (0, a.bG)([x.A], () => x.A.can(O.isThread() ? b.xBc.MANAGE_THREADS : b.xBc.MANAGE_CHANNELS, O), [O]),
+        F = (0, a.bG)([T.A], () => T.A.getCount(O.id) ?? 0, [O.id]),
         H = S && (z || (M && F < 1)),
         P = v.length > 0 && (O.type === b.rbe.GUILD_VOICE || O.type === b.rbe.GUILD_STAGE_VOICE);
     if (
@@ -88,10 +88,10 @@ let O = (t) => {
     if (null != j) {
         let t;
         async function Y() {
-            null != R && (await G.A.open(R.id, b.BEX.ONBOARDING), await U());
+            null != R && (await G.default.open(R.id, b.BEX.ONBOARDING), await U());
         }
         async function V() {
-            null != R && (await G.A.open(R.id, b.BEX.COMMUNITY), await U());
+            null != R && (await G.default.open(R.id, b.BEX.COMMUNITY), await U());
         }
         switch (j) {
             case u.K5.DEFAULT:
@@ -109,7 +109,7 @@ let O = (t) => {
             case u.K5.UPDATES:
                 t = B.intl.format(B.t["kB1f+3"], { reason: B.intl.string(B.t["1B1/NB"]), onClick: V });
         }
-        return (0, l.jsx)(a.a, {
+        return (0, l.jsx)(r.a, {
             title: B.intl.string(B.t["TY/V+H"]),
             onClose: U,
             subtitle: t,
@@ -144,7 +144,7 @@ let O = (t) => {
                         deleteText: B.intl.string(B.t["8D8Rsb"]),
                         deleteBody: B.intl.format(B.t.a6Gz9J, { channelName: D }),
                     };
-    return (0, l.jsx)(a.a, {
+    return (0, l.jsx)(r.a, {
         size: "sm",
         onClose: U,
         transitionState: N,

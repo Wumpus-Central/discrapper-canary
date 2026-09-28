@@ -102,6 +102,12 @@ let n = [
             "Ask Conjure to undo a change, or open a reply\u2019s menu and pick Restore this version, to put your app back the way it was.",
     },
     {
+        date: "2026-09-28",
+        time: "01:26",
+        platforms: ["desktop", "mobile"],
+        summary: "Chat messages keep the time they were sent after you reload the builder.",
+    },
+    {
         date: "2026-09-01",
         time: "00:00",
         platforms: ["desktop", "mobile"],
@@ -822,6 +828,13 @@ let n = [
         platforms: ["desktop", "mobile"],
         summary:
             "When the app keeps crashing after a request, Conjure notices and fixes it on its own, even while you are away.",
+    },
+    {
+        date: "2026-09-27",
+        time: "21:19",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "When your app is done, one Publish button makes it live and takes you to it; after that the button opens it, and says Update when your latest changes are not live yet.",
     },
     {
         date: "2026-09-22",

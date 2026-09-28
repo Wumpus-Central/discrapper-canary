@@ -44,7 +44,7 @@ function M(e) {
             p.intl.format(P.default.iMCLA5, { connectionName: N?.name, date: R }),
             (0, i.jsx)(E.Z_, {
                 onClick: () => {
-                    (t(m.i.TAKE_ACTION), T.A.open(_, D.BEX.ROLES));
+                    (t(m.i.TAKE_ACTION), T.default.open(_, D.BEX.ROLES));
                 },
                 noticeType: s,
                 className: f.NS,

@@ -6,8 +6,8 @@ var l = t(477900),
     a = t(890497),
     d = t(913122),
     s = t(468689),
-    c = t(34457),
-    u = t(317525),
+    u = t(34457),
+    c = t(317525),
     f = t(242273),
     g = t(652215),
     h = t(375708);
@@ -16,7 +16,7 @@ function p(e) {
         [v, b] = n.useState(i.verificationRoleId ?? void 0),
         [R, C] = n.useState(null),
         k = (0, o.bG)(
-            [u.A],
+            [c.A],
             () => {
                 function e(e) {
                     var i;
@@ -40,13 +40,13 @@ function p(e) {
                 }
                 if (!p) {
                     if (null != i.verificationRoleId) {
-                        let t = u.A.getRole(i.id, i.verificationRoleId);
+                        let t = c.A.getRole(i.id, i.verificationRoleId);
                         if (null != t) return [e(t)];
                     }
                     return [];
                 }
-                return u.A.getSortedRoles(i.id)
-                    .filter((e) => !(0, c.Oy)(e) && (!e.managed || e.tags?.guild_connections === null))
+                return c.A.getSortedRoles(i.id)
+                    .filter((e) => !(0, u.Oy)(e) && (!e.managed || e.tags?.guild_connections === null))
                     .map(e);
             },
             [i.id, i.verificationRoleId, p],
@@ -55,7 +55,7 @@ function p(e) {
             C(null);
             try {
                 let e = v ?? null;
-                (await s.A.saveGuild(i.id, { verificationRoleId: e }), t());
+                (await s.default.saveGuild(i.id, { verificationRoleId: e }), t());
             } catch (e) {
                 C(new d.LG(e).getAnyErrorMessage());
             }

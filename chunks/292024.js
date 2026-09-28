@@ -21,7 +21,8 @@ function g(e, t) {
                   icon: a.E,
                   leadingAccessory: { type: "icon", icon: a.E },
                   action: () => {
-                      (r.A.close(), (0, o.Tk)(e.id, { type: c._.ROLES, roles: { [t.id]: t }, returnToSection: n }));
+                      (r.default.close(),
+                          (0, o.Tk)(e.id, { type: c._.ROLES, roles: { [t.id]: t }, returnToSection: n }));
                   },
               },
               "view-as-role",

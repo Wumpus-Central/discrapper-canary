@@ -1,8 +1,8 @@
 (i.r(t), i.d(t, { default: () => h }));
 var s = i(477900),
     r = i(582128),
-    n = i(806163),
-    u = i(17928),
+    u = i(806163),
+    n = i(17928),
     d = i(289873),
     l = i(916603),
     o = i(448564),
@@ -12,7 +12,7 @@ var s = i(477900),
     f = i(652215);
 function h(e) {
     let { guildId: t } = e,
-        i = (0, u.bG)([p.A], () => p.A.getGuild(t)),
+        i = (0, n.bG)([p.A], () => p.A.getGuild(t)),
         [h, b] = r.useState(!0);
     return (r.useEffect(() => {
         let e = setTimeout(() => {
@@ -25,7 +25,7 @@ function h(e) {
         null != i &&
             h &&
             (o.A.hasSeenCreatorOnboardingForGuild(i.id) || (0, l.G)(i.id),
-            a.A.open(i.id, f.BEX.ROLE_SUBSCRIPTIONS),
+            a.default.open(i.id, f.BEX.ROLE_SUBSCRIPTIONS),
             b(!1));
     }, [h, i]),
     null == i || h)
@@ -33,5 +33,5 @@ function h(e) {
               style: { display: "flex", justifyContent: "center", width: "100%" },
               children: (0, s.jsx)(d.y, {}),
           })
-        : (0, s.jsx)(n.rd, { to: f.BVt.CHANNEL(t) });
+        : (0, s.jsx)(u.rd, { to: f.BVt.CHANNEL(t) });
 }

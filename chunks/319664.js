@@ -66,7 +66,7 @@ function g(s) {
                                                 ...(0, d.H$)(t),
                                                 action_taken: v.hN.GET_STARTED_CLICK,
                                             }),
-                                                o.A.open(t, h.BEX.GUILD_PRODUCTS));
+                                                o.default.open(t, h.BEX.GUILD_PRODUCTS));
                                         },
                                     }),
                             ],

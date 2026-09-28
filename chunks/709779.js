@@ -11,8 +11,8 @@ var n = i(477900),
     p = i(452027),
     g = i(150934),
     x = i(347704),
-    S = i(47167),
-    f = i(468689),
+    f = i(47167),
+    S = i(468689),
     m = i(555337),
     E = i(636042),
     h = i(376092),
@@ -60,7 +60,7 @@ function B(t) {
     return (
         u[j.I6].forEach((t) => {
             let { channel: e } = t;
-            e.type === M.rbe.GUILD_TEXT && g.push({ value: e.id, label: (0, S.m1)(e, b.default, I.A, !0) });
+            e.type === M.rbe.GUILD_TEXT && g.push({ value: e.id, label: (0, f.m1)(e, b.default, I.A, !0) });
         }),
         (0, n.jsxs)(o.B, {
             gap: 16,
@@ -247,7 +247,7 @@ function w(t) {
         u = null != d && d > M.PvD.NONE,
         p = c === M.gh6.ALL_MEMBERS,
         g = !(u && p),
-        [S, h] = s.useState(P.SP),
+        [f, h] = s.useState(P.SP),
         [j, I] = s.useState(P.SP),
         [b] = s.useState(() => !P.dR.some((t) => A.Ib(t, i))),
         [v] = s.useState(() => i?.defaultMessageNotifications),
@@ -265,13 +265,13 @@ function w(t) {
         }
         let e = {
             features: new Set([...i.features, M.GuildFeatures.COMMUNITY]),
-            rulesChannelId: S,
+            rulesChannelId: f,
             publicUpdatesChannelId: j,
             ...(!u && { verificationLevel: M.PvD.LOW }),
             ...(!p && { explicitContentFilter: M.gh6.ALL_MEMBERS }),
             ...(!O && { defaultMessageNotifications: M.orn.ONLY_MENTIONS }),
         };
-        (f.A.updateGuild(e), await f.A.saveGuild(i.id, e, { throwErr: !0 }));
+        (S.default.updateGuild(e), await S.default.saveGuild(i.id, e, { throwErr: !0 }));
     }
     async function K() {
         (N.default.track(M.HAw.MODAL_DISMISSED, { type: P.bK }), await e.onClose());
@@ -301,7 +301,7 @@ function w(t) {
                 modalProps: { title: L.intl.string(L.t.YtXpEh), subtitle: L.intl.string(L.t["J/fYR8"]) },
                 body: (0, n.jsx)(B, {
                     guild: i,
-                    rulesChannelId: S,
+                    rulesChannelId: f,
                     publicUpdatesChannelId: j,
                     onRulesChannelChange: h,
                     onPublicUpdatesChannelChange: I,

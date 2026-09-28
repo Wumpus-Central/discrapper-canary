@@ -987,7 +987,7 @@ function tc(e) {
                           title: eW.intl.string(eW.t.ZzdgUm),
                           subtitle: eW.intl.format(eW.t.DwY2vN, {
                               onClick: () => {
-                                  (Z.A.open(t.id, eZ.BEX.ONBOARDING), n.onClose());
+                                  (Z.default.open(t.id, eZ.BEX.ONBOARDING), n.onClose());
                               },
                           }),
                           actions: [{ text: eW.intl.string(eW.t.BddRzS), onClick: n.onClose }],

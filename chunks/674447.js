@@ -929,7 +929,7 @@ function tP(e) {
                 null == e ||
                     (null != t &&
                         ((0, c.Z_)(),
-                        F.A.open(t, X.BEX.GUILD_AUTOMOD),
+                        F.default.open(t, X.BEX.GUILD_AUTOMOD),
                         setTimeout(() => {
                             d(t, H, { triggerMetadata: { keywordFilter: [e], regexPatterns: [], allowList: [] } });
                         }, 400)));

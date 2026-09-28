@@ -30,7 +30,7 @@ function T(e) {
         n.features.has(E.GuildFeatures.COMMUNITY) ||
         n.features.has(E.GuildFeatures.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)
             ? (0, r.pX)(E.BVt.CHANNEL(e, c.VV.MEMBER_SAFETY))
-            : l.A.open(n.id, E.BEX.MEMBERS),
+            : l.default.open(n.id, E.BEX.MEMBERS),
         !0)
     );
 }

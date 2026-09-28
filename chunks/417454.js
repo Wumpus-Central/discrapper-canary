@@ -9,8 +9,8 @@ var n = s(477900),
     c = s(837381),
     u = s(887129),
     m = s(317097),
-    x = s(17928),
-    f = s(661531),
+    f = s(17928),
+    x = s(661531),
     h = s(305866),
     g = s(138134),
     j = s(834730),
@@ -58,7 +58,7 @@ function X(e) {
                 children: [
                     (0, n.jsx)(g.FlagIcon, {
                         size: "xs",
-                        color: f.A.unsafe_rawColors.PRIMARY_400.css,
+                        color: x.A.unsafe_rawColors.PRIMARY_400.css,
                         className: F.LP,
                     }),
                     (0, n.jsx)(j.E, {
@@ -88,7 +88,7 @@ let B = r.forwardRef(function (e, l) {
         } = e,
         { tabIndex: w, ...M } = (0, c.rm)(d.id),
         E = (0, T.Xx)({ roleId: d.id, size: 16, guildId: h, role: d, guild: y }),
-        S = (0, x.bG)([_.Ay], () => _.Ay.roleStyle),
+        S = (0, f.bG)([_.Ay], () => _.Ay.roleStyle),
         k = (0, I.X_)(h, void 0, d.colorStrings),
         H = d.tags?.guild_connections === null,
         L = r.useCallback(
@@ -100,12 +100,12 @@ let B = r.forwardRef(function (e, l) {
             },
             [d.id],
         ),
-        z = (0, b.r)(f.A.unsafe_rawColors.PRIMARY_300).hsl(),
+        z = (0, b.r)(x.A.unsafe_rawColors.PRIMARY_300).hsl(),
         Y = d.colorString ?? z,
         O = (0, m.xp)(Y, 0.6) ?? void 0,
-        U = f.A.unsafe_rawColors.WHITE.css,
+        U = x.A.unsafe_rawColors.WHITE.css,
         $ = (0, m.LX)(Y);
-    (null != $ && 0.3 > (0, m.OK)($) && (U = f.A.unsafe_rawColors.PRIMARY_630.css),
+    (null != $ && 0.3 > (0, m.OK)($) && (U = x.A.unsafe_rawColors.PRIMARY_630.css),
         (o = H
             ? (0, n.jsx)(P.A, { className: F.U4, iconClassName: i ? F.gD : void 0, color: Y, size: 14 })
             : "dot" === S
@@ -167,7 +167,7 @@ function Q(e) {
     let l = r.useRef(null),
         { guild: s, user: o, handleAddRole: i, roleClassName: a, addButtonClassName: d, addButtonIconClassName: u } = e,
         m = (0, c.rm)(`overflow-add-roles-${o.id}`),
-        f = (0, x.bG)([_.Ay], () => _.Ay.roleStyle),
+        x = (0, f.bG)([_.Ay], () => _.Ay.roleStyle),
         h = U.A.getHighestRole(s),
         g = Y.Ay.getMember(s.id, o.id);
     function j(e) {
@@ -177,7 +177,7 @@ function Q(e) {
         targetElementRef: l,
         renderPopout: (e) => {
             let { closePopout: l } = e;
-            return (0, n.jsx)(L.A, { guild: s, roleStyle: f, roleFilter: j, onSelect: i, onClose: l });
+            return (0, n.jsx)(L.A, { guild: s, roleStyle: x, roleFilter: j, onSelect: i, onClose: l });
         },
         position: "bottom",
         align: "center",
@@ -207,7 +207,7 @@ function q(e) {
             guild: o,
             userRoleIds: i,
             wrap: m = !0,
-            width: f,
+            width: x,
             className: h,
             readOnly: g,
             roleClassName: j,
@@ -219,28 +219,28 @@ function q(e) {
                 let l = i.filter((l) => l !== e.id);
                 e.tags?.guild_connections === null
                     ? w.A.unassignGuildRoleConnection(o.id, e.id)
-                    : k.A.updateMemberRoles(o.id, s.id, l, [], [e.id]);
+                    : k.default.updateMemberRoles(o.id, s.id, l, [], [e.id]);
             },
             [i, o.id, s.id],
         ),
         p = r.useCallback(
             (e) => {
                 let l = i;
-                (l.includes(e) || (l = [...l, e]), k.A.updateMemberRoles(o.id, s.id, l, [e], []));
+                (l.includes(e) || (l = [...l, e]), k.default.updateMemberRoles(o.id, s.id, l, [e], []));
             },
             [i, o.id, s.id],
         ),
         [v, N] = r.useState(null),
-        y = (0, x.yK)([O.A], () => O.A.getManyRoles(o.id, i).sort(H.m)),
+        y = (0, f.yK)([O.A], () => O.A.getManyRoles(o.id, i).sort(H.m)),
         C = r.useMemo(() => (null != v ? y.slice(0, v) : y), [y, v]),
         M = i.length - C.length;
     r.useLayoutEffect(() => {
         if (m) return;
-        if ("number" != typeof f) throw Error("Unexpected null width");
-        if (0 === f) return;
+        if ("number" != typeof x) throw Error("Unexpected null width");
+        if (0 === x) return;
         let e = 0,
             l = 0,
-            s = f - 30 - 4;
+            s = x - 30 - 4;
         for (let n = 0; n < C.length; n++) {
             let r = C[n],
                 o = A.current[r.id];
@@ -250,7 +250,7 @@ function q(e) {
             }
         }
         N((l) => (e < C.length ? e : l));
-    }, [m, f, C]);
+    }, [m, x, C]);
     let _ = $.default.getCurrentUser();
     a()(null != _, "MemberRolesList: currentUser cannot be undefined");
     let P = !g && U.A.can(V.xBc.MANAGE_ROLES, o),
@@ -299,7 +299,7 @@ function q(e) {
 let Z = (0, M.A)(q);
 function ee(e) {
     return (
-        (0, x.bG)([U.A], () => U.A.getGuildVersion(e.guild?.id)),
+        (0, f.bG)([U.A], () => U.A.getGuildVersion(e.guild?.id)),
         !1 === e.wrap ? (0, n.jsx)(Z, { ...e }) : (0, n.jsx)(q, { ...e })
     );
 }

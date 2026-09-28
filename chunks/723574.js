@@ -464,7 +464,7 @@ function eM(e, t) {
                               A = i
                                   ? () => {
                                         (r
-                                            ? eU.A.open(t, ep.BEX.TAG, ep.JJy.GUILD_POWERUPS_OVERVIEW_CARD)
+                                            ? eU.default.open(t, ep.BEX.TAG, ep.JJy.GUILD_POWERUPS_OVERVIEW_CARD)
                                             : null != u && (0, eB.A)(t, u),
                                             (0, x.closeAllModals)());
                                     }

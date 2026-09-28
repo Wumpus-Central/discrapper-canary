@@ -44,7 +44,7 @@ function A(e) {
         l(53656);
     }, []);
     let R = i.useCallback(() => {
-            v?.id != null && (d.A.open(v.id, j.BEX.INTEGRATIONS), a.A.setSection(j.wLn.APPLICATION, E), I?.());
+            v?.id != null && (d.default.open(v.id, j.BEX.INTEGRATIONS), a.A.setSection(j.wLn.APPLICATION, E), I?.());
         }, [E, v?.id, I]),
         D = i.useCallback(() => {
             (0, p.openUserSettings)(u.X.AUTHORIZED_APPS_CATEGORY);

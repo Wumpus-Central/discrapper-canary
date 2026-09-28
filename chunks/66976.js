@@ -370,7 +370,7 @@ function ta(e) {
                     text: tl.intl.string(tl.t.OgQQbG),
                     variant: "primary",
                     onClick: function () {
-                        ts.A.open(t, H.BEX.ROLE_SUBSCRIPTIONS);
+                        ts.default.open(t, H.BEX.ROLE_SUBSCRIPTIONS);
                     },
                 },
             ],
@@ -391,7 +391,7 @@ function to(e) {
             text: tl.intl.string(tl.t.BQq86h),
             variant: "primary",
             onClick: function () {
-                ts.A.open(t, H.BEX.ROLE_SUBSCRIPTIONS, void 0, H.nd0.ROLE_SUBSCRIPTION_TIER_TEMPLATE);
+                ts.default.open(t, H.BEX.ROLE_SUBSCRIPTIONS, void 0, H.nd0.ROLE_SUBSCRIPTION_TIER_TEMPLATE);
             },
         },
         onRequestClose: () => n(eE.i.USER_DISMISS),
@@ -433,7 +433,7 @@ function th(e) {
                 text: tl.intl.string(tl.t["9l+df7"]),
                 variant: "primary",
                 onClick: function (e) {
-                    ts.A.open(t.id, H.BEX.DISCOVERY_LANDING_PAGE);
+                    ts.default.open(t.id, H.BEX.DISCOVERY_LANDING_PAGE);
                 },
             },
         ],
@@ -1331,7 +1331,7 @@ function nV(e) {
         type: H.n5X.COMMANDS_MIGRATION,
         image: "/assets/ab63b30e9bc8855c.svg",
         onClick: () => {
-            (n(), ts.A.open(t.id, H.BEX.INTEGRATIONS));
+            (n(), ts.default.open(t.id, H.BEX.INTEGRATIONS));
         },
         imageMarginTop: 15,
         imageMarginX: 22,
@@ -1376,7 +1376,7 @@ function nW(e) {
               type: H.n5X.APPLICATION_SUBSCRIPTION_EXPIRATION,
               image: "/assets/eaaec668caed688e.svg",
               onClick: () => {
-                  (s(), ts.A.open(n.id, H.BEX.INTEGRATIONS));
+                  (s(), ts.default.open(n.id, H.BEX.INTEGRATIONS));
               },
               imageMarginTop: 6,
               imageMarginX: 46,
@@ -1393,7 +1393,7 @@ let nz = function (e) {
     return (0, l.jsx)(tO, {
         guild: t,
         onDismissed: n,
-        onClick: () => ts.A.open(t.id, H.BEX.COMMUNITY),
+        onClick: () => ts.default.open(t.id, H.BEX.COMMUNITY),
         message: tl.intl.string(tl.t["2klD0Z"]),
         trackingSource: H.kZU.ENABLE_PUBLIC_GUILD_UPSELL_NOTICE,
         type: H.n5X.PUBLIC_UPSELL,

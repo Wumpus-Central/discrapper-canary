@@ -90,7 +90,7 @@ let C = {
                         sectionDescription: c
                             ? a.intl.format(a.t["4Z9Fbb"], {
                                   setUpAutomod: () => {
-                                      A.A.open(t, I.BEX.GUILD_AUTOMOD);
+                                      A.default.open(t, I.BEX.GUILD_AUTOMOD);
                                   },
                               })
                             : void 0,
@@ -111,7 +111,7 @@ let C = {
                         sectionDescription: c
                             ? a.intl.format(a.t["4Z9Fbb"], {
                                   setUpAutomod: () => {
-                                      A.A.open(t, I.BEX.GUILD_AUTOMOD);
+                                      A.default.open(t, I.BEX.GUILD_AUTOMOD);
                                   },
                               })
                             : void 0,
@@ -133,7 +133,7 @@ let C = {
                         sectionDescription: c
                             ? a.intl.format(E, {
                                   setUpAutomod: () => {
-                                      (d || (0, S.El)(), A.A.open(t, I.BEX.GUILD_AUTOMOD));
+                                      (d || (0, S.El)(), A.default.open(t, I.BEX.GUILD_AUTOMOD));
                                   },
                               })
                             : void 0,

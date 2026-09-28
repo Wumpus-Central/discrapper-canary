@@ -1,7 +1,7 @@
 i.d(t, { default: () => p });
 var a = i(477900),
-    n = i(582128),
-    l = i(144228),
+    l = i(582128),
+    n = i(144228),
     r = i(913122),
     s = i(468689),
     u = i(809505),
@@ -10,18 +10,20 @@ var a = i(477900),
     o = i(375708);
 function p(e) {
     let { guild: t, onClose: i, hideColors: p } = e,
-        [h, f] = n.useState(t.verificationLevel),
-        [v, C] = n.useState(null),
+        [f, h] = l.useState(t.verificationLevel),
+        [v, C] = l.useState(null),
         k = t.features.has(c.GuildFeatures.COMMUNITY),
         b = (0, u.vd)(k, p).filter((e) => !e.disabled),
-        g = n.useCallback(async () => {
+        g = l.useCallback(async () => {
             null != v && C(null);
             try {
-                (await s.A.saveGuild(t.id, { verificationLevel: h }), s.A.updateGuild({ verificationLevel: h }), i());
+                (await s.default.saveGuild(t.id, { verificationLevel: f }),
+                    s.default.updateGuild({ verificationLevel: f }),
+                    i());
             } catch (e) {
                 C(new r.LG(e).getAnyErrorMessage());
             }
-        }, [v, t.id, h, i]);
+        }, [v, t.id, f, i]);
     return (0, a.jsx)(d.A, {
         ...e,
         title: o.intl.string(o.t.DpRdYK),
@@ -29,6 +31,6 @@ function p(e) {
         errorText: v,
         onConfirm: g,
         onCancel: i,
-        children: (0, a.jsx)(l.z, { value: h, options: b, onChange: (e) => f(e) }),
+        children: (0, a.jsx)(n.z, { value: f, options: b, onChange: (e) => h(e) }),
     });
 }

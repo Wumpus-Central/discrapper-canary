@@ -11,14 +11,14 @@ var l = n(477900),
     g = n(980707),
     y = n(477782),
     p = n(70688),
-    A = n(625903),
-    I = n(231483),
+    I = n(625903),
+    A = n(231483),
     b = n(104510),
     h = n(555704),
     x = n(245604),
-    D = n(234020),
-    j = n(782603),
-    f = n(952270),
+    f = n(234020),
+    D = n(782603),
+    j = n(952270),
     G = n(686449),
     L = n(293260),
     E = n(5180),
@@ -71,12 +71,12 @@ let eu = t.memo(function (e) {
     let m,
         eu,
         { guild: eg, onClose: ey, onSelect: ep } = e,
-        eA = (0, c.bG)([ed.default], () => ed.default.getCurrentUser());
-    (o()(null != eA, "GuildHeaderPopout: user cannot be undefined"),
+        eI = (0, c.bG)([ed.default], () => ed.default.getCurrentUser());
+    (o()(null != eI, "GuildHeaderPopout: user cannot be undefined"),
         t.useEffect(() => {
             ec.default.track(es.HAw.GUILD_DROPDOWN_MENU_VIEWED, { guild_id: eg.id });
         }));
-    let eI = (0, c.bG)([eo.Ay], () => eo.Ay.isGuildCollapsed(eg.id), [eg.id]),
+    let eA = (0, c.bG)([eo.Ay], () => eo.Ay.isGuildCollapsed(eg.id), [eg.id]),
         {
             canAccessSettings: eb,
             canManageChannels: eh,
@@ -91,16 +91,16 @@ let eu = t.memo(function (e) {
             }),
             [eg],
         ),
-        eD = (0, z.ic)(eg),
-        ej = (0, el.bM)(eg, eA),
-        ef = (0, c.bG)([$.A], () => $.A.isLurking(eg.id), [eg.id]),
+        ef = (0, z.ic)(eg),
+        eD = (0, el.bM)(eg, eI),
+        ej = (0, c.bG)([$.A], () => $.A.isLurking(eg.id), [eg.id]),
         eG = (0, c.bG)([et.Ay], () => et.Ay.isCurrentUserGuest(eg.id)),
         eL = (0, J.A)(eg.id, !0),
         eE = (0, L.Ay)(eg),
         ev = (0, F.A)({ source: es.PE1.GUILD_HEADER, guild: eg }),
         em = (0, N.A)({
             guildId: eg.id,
-            userId: eA.id,
+            userId: eI.id,
             analyticsLocation: { page: es.liQ.GUILD_CHANNEL, section: es.JJy.GUILD_DROPDOWN_MENU },
             icon: r.PencilIcon,
         }),
@@ -193,7 +193,7 @@ let eu = t.memo(function (e) {
                 return (i) => (0, l.jsx)(e, { ...i, guild: eg });
             });
         }, [eg]);
-    return ef || eG
+    return ej || eG
         ? (0, l.jsxs)(g.W, {
               "data-menu-migrated-auto": !0,
               onSelect: ep,
@@ -208,7 +208,7 @@ let eu = t.memo(function (e) {
                       icon: p.DoorExitIcon,
                       leadingAccessory: { type: "icon", icon: p.DoorExitIcon },
                       action: () => {
-                          R.A.leaveGuild(eg.id, !0);
+                          R.default.leaveGuild(eg.id, !0);
                       },
                   }),
                   (0, l.jsx)(y.rX, { children: eB }),
@@ -239,10 +239,10 @@ let eu = t.memo(function (e) {
                                   ? (0, l.jsx)(y.Dr, {
                                         id: "settings",
                                         label: T.intl.string(T.t["154/bL"]),
-                                        icon: A.SettingsIcon,
-                                        leadingAccessory: { type: "icon", icon: A.SettingsIcon },
+                                        icon: I.SettingsIcon,
+                                        leadingAccessory: { type: "icon", icon: I.SettingsIcon },
                                         action: () => {
-                                            R.A.open(eg.id, (0, Q.x)());
+                                            R.default.open(eg.id, (0, Q.x)());
                                         },
                                     })
                                   : null,
@@ -250,8 +250,8 @@ let eu = t.memo(function (e) {
                               (0, l.jsx)(y.Dr, {
                                   id: "privacy",
                                   label: T.intl.string(T.t.BayiAo),
-                                  icon: I.ShieldIcon,
-                                  leadingAccessory: { type: "icon", icon: I.ShieldIcon },
+                                  icon: A.ShieldIcon,
+                                  leadingAccessory: { type: "icon", icon: A.ShieldIcon },
                                   action: () =>
                                       (0, u.openModalLazy)(async () => {
                                           let { default: e } = await Promise.all([
@@ -268,7 +268,7 @@ let eu = t.memo(function (e) {
                               em,
                           ],
                       }),
-                      ej
+                      eD
                           ? null
                           : (0, l.jsx)(y.rX, {
                                 children: (0, l.jsx)(y.Dr, {
@@ -364,10 +364,10 @@ let eu = t.memo(function (e) {
                                     ? (0, l.jsx)(y.Dr, {
                                           id: "settings",
                                           label: T.intl.string(T.t["154/bL"]),
-                                          icon: A.SettingsIcon,
-                                          leadingAccessory: { type: "icon", icon: A.SettingsIcon },
+                                          icon: I.SettingsIcon,
+                                          leadingAccessory: { type: "icon", icon: I.SettingsIcon },
                                           action: () => {
-                                              R.A.open(eg.id, (0, Q.x)());
+                                              R.default.open(eg.id, (0, Q.x)());
                                           },
                                       })
                                     : null,
@@ -377,7 +377,7 @@ let eu = t.memo(function (e) {
                                           label: T.intl.string(T.t["0wWfUG"]),
                                           icon: h.U,
                                           leadingAccessory: { type: "icon", icon: h.U },
-                                          action: () => R.A.open(eg.id, es.BEX.ANALYTICS),
+                                          action: () => R.default.open(eg.id, es.BEX.ANALYTICS),
                                       })
                                     : null,
                                 eh
@@ -420,8 +420,8 @@ let eu = t.memo(function (e) {
                                               (0, l.jsx)(y.Dr, {
                                                   id: "create-category",
                                                   label: T.intl.string(T.t["ISN+NM"]),
-                                                  icon: D.Y,
-                                                  leadingAccessory: { type: "icon", icon: D.Y },
+                                                  icon: f.Y,
+                                                  leadingAccessory: { type: "icon", icon: f.Y },
                                                   action: () =>
                                                       (0, u.openModalLazy)(async () => {
                                                           let { default: e } = await Promise.all([
@@ -467,8 +467,8 @@ let eu = t.memo(function (e) {
                                 (0, l.jsx)(y.Dr, {
                                     id: "notifications",
                                     label: T.intl.string(T.t.h850Ss),
-                                    icon: j.BellIcon,
-                                    leadingAccessory: { type: "icon", icon: j.BellIcon },
+                                    icon: D.BellIcon,
+                                    leadingAccessory: { type: "icon", icon: D.BellIcon },
                                     action: () =>
                                         (0, u.openModalLazy)(async () => {
                                             let { default: e } = await Promise.all([
@@ -490,8 +490,8 @@ let eu = t.memo(function (e) {
                                 (0, l.jsx)(y.Dr, {
                                     id: "privacy",
                                     label: T.intl.string(T.t.BayiAo),
-                                    icon: I.ShieldIcon,
-                                    leadingAccessory: { type: "icon", icon: I.ShieldIcon },
+                                    icon: A.ShieldIcon,
+                                    leadingAccessory: { type: "icon", icon: A.ShieldIcon },
                                     action: () =>
                                         (0, u.openModalLazy)(async () => {
                                             let { default: e } = await Promise.all([
@@ -513,8 +513,8 @@ let eu = t.memo(function (e) {
                                 (0, l.jsx)(y.sL, {
                                     id: "hide-muted-channels",
                                     label: T.intl.string(T.t.UwOLJO),
-                                    leadingAccessory: { type: "icon", icon: f.EyeSlashIcon },
-                                    checked: eI,
+                                    leadingAccessory: { type: "icon", icon: j.EyeSlashIcon },
+                                    checked: eA,
                                     action: () => G.A.toggleCollapseGuild(eg.id),
                                 }),
                             ],
@@ -522,17 +522,17 @@ let eu = t.memo(function (e) {
                         (0, l.jsxs)(y.rX, {
                             children: [
                                 eM,
-                                eD && eg.features.has(es.GuildFeatures.COMMUNITY)
+                                ef && eg.features.has(es.GuildFeatures.COMMUNITY)
                                     ? (0, l.jsx)(y.Dr, {
                                           id: "report-raid",
                                           label: T.intl.string(T.t.cswId3),
-                                          icon: I.ShieldIcon,
-                                          leadingAccessory: { type: "icon", icon: I.ShieldIcon },
+                                          icon: A.ShieldIcon,
+                                          leadingAccessory: { type: "icon", icon: A.ShieldIcon },
                                           color: "danger",
                                           action: () => (0, W.M)(eg.id),
                                       })
                                     : null,
-                                ej
+                                eD
                                     ? null
                                     : (0, l.jsx)(y.Dr, {
                                           id: "leave",

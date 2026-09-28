@@ -187,7 +187,7 @@ function Z() {
             (f.A.isFullServerPreview(t) && (0, C.pX)(X.BVt.CHANNEL(t)),
             T.Ay.shouldShowOnboarding(t) && (d.A.finishOnboarding(t), (0, I.Jg)(t)),
             (0, p.rf)(t),
-            n && R.A.open(t, s),
+            n && R.default.open(t, s),
             s === X.BEX.ROLE_SUBSCRIPTIONS && (0, N.Fx)(t));
     }
     return (0, i.jsxs)(c.$T, {

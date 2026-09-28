@@ -177,10 +177,18 @@
 }
 
 .projectHeaderIconActions_f8194a {
+    padding-inline-start: var(--space-xs)
+}
+
+.projectHeaderIconActions_f8194a,
+.publishAction_f8194a {
     align-items: center;
     display: flex;
-    gap: var(--space-xs);
-    padding-inline-start: var(--space-xs)
+    gap: var(--space-xs)
+}
+
+.publishAction_f8194a {
+    min-width: 0
 }
 
 .projectHeaderDivider_f8194a {
@@ -578,4 +586,4 @@
     text-align: center
 }
 
-/*# sourceMappingURL=b61f8564c5628d1a.css.map*/
+/*# sourceMappingURL=bbd15a811a002182.css.map*/

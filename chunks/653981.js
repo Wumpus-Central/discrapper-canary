@@ -13,9 +13,9 @@ var i = n(477900),
     N = n(885574),
     E = n(468689),
     g = n(636042),
-    h = n(376092),
-    j = n(317525),
-    f = n(488926),
+    f = n(376092),
+    h = n(317525),
+    j = n(488926),
     p = n(45780),
     I = n(652215),
     v = n(49999),
@@ -24,7 +24,7 @@ var i = n(477900),
     M = n(477919);
 function C(s) {
     let { guild: t } = s,
-        n = (0, r.bG)([j.A], () => j.A.getEveryoneRole(t));
+        n = (0, r.bG)([h.A], () => h.A.getEveryoneRole(t));
     if (null == n) return null;
     let { name: e, color: l } = n;
     return (0, i.jsxs)("span", {
@@ -41,7 +41,7 @@ function C(s) {
     });
 }
 function A(s) {
-    return s.toString() === I.xBc.MENTION_EVERYONE.toString() ? _.intl.string(_.t.yCpsQw) : (0, h.hx)(s);
+    return s.toString() === I.xBc.MENTION_EVERYONE.toString() ? _.intl.string(_.t.yCpsQw) : (0, f.hx)(s);
 }
 function O(s) {
     let { permissions: t, step: n } = s;
@@ -193,7 +193,7 @@ function b(s) {
                 n = [];
             return (
                 S.dR.map((i) => {
-                    f.Ib(i, t) ? s.push(i) : n.push(i);
+                    j.Ib(i, t) ? s.push(i) : n.push(i);
                 }),
                 { enabledPermissions: s, disabledPermissions: n }
             );
@@ -203,16 +203,16 @@ function b(s) {
         (n &&
             (function () {
                 if (null == t) return;
-                let s = j.A.getEveryoneRole(t),
+                let s = h.A.getEveryoneRole(t),
                     n = l.TF(s.permissions, S.e$);
                 (0, g.JY)(t.id, [{ ...s, permissions: n }]);
             })(),
             r &&
                 null != t &&
-                (E.A.updateGuild({ defaultMessageNotifications: I.orn.ONLY_MENTIONS }),
-                E.A.saveGuild(t.id, { defaultMessageNotifications: I.orn.ONLY_MENTIONS })));
+                (E.default.updateGuild({ defaultMessageNotifications: I.orn.ONLY_MENTIONS }),
+                E.default.saveGuild(t.id, { defaultMessageNotifications: I.orn.ONLY_MENTIONS })));
     }
-    let h = [
+    let f = [
         ...(0 === u
             ? [
                   {
@@ -250,7 +250,7 @@ function b(s) {
         size: "md",
         title: n ? _.intl.string(_.t["7/ux15"]) : _.intl.string(_.t.sRcn4z),
         subtitle: n ? _.intl.string(_.t.aliKPx) : _.intl.string(_.t.F4KDOH),
-        actions: h,
+        actions: f,
         children: (0, i.jsx)(y, {
             guild: t,
             permissions: x,

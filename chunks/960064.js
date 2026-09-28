@@ -9,8 +9,8 @@ var i = n(980707),
     c = n(793574),
     o = n(398590),
     u = n(468689),
-    A = n(652215),
-    T = n(375708),
+    T = n(652215),
+    A = n(375708),
     O = n(957316),
     b = n(17928),
     p = n(192308),
@@ -26,24 +26,24 @@ let U = (0, d.A)(
                 d,
                 { guildId: c, context: U, onSelect: x } = e,
                 D =
-                    U === A.BRT.POPOUT
+                    U === T.BRT.POPOUT
                         ? null
                         : (0, l.jsx)(a.Dr, {
                               id: "report-raid",
-                              label: T.intl.string(T.t.cswId3),
+                              label: A.intl.string(A.t.cswId3),
                               action: () => {
                                   ((0, o.jH)(), (0, O.M)(c));
                               },
                           }),
                 I =
-                    ((t = U === A.BRT.POPOUT),
+                    ((t = U === T.BRT.POPOUT),
                     (s = (0, b.bG)([j.A], () => j.A.getGuild(c), [c])),
                     (d = (0, b.bG)([h.A], () => (null != s ? h.A.getGuildIncident(s.id) : null))),
                     t
                         ? null
                         : (0, l.jsx)(a.Dr, {
                               id: "nav-security-actions",
-                              label: T.intl.string(T.t.UgXhdn),
+                              label: A.intl.string(A.t.UgXhdn),
                               action: () => {
                                   let e = { source: E.Eo.MESSAGE, alertType: (0, g.$5)(d) };
                                   (0, p.openModalLazy)(async () => {
@@ -63,25 +63,25 @@ let U = (0, d.A)(
                               },
                           })),
                 M =
-                    U === A.BRT.POPOUT
+                    U === T.BRT.POPOUT
                         ? null
                         : (0, l.jsx)(a.Dr, {
                               id: "nav-server-settings",
-                              label: T.intl.string(T.t["154/bL"]),
+                              label: A.intl.string(A.t["154/bL"]),
                               action: () => {
-                                  ((0, o.jH)(), u.A.open(c, A.BEX.MODERATION));
+                                  ((0, o.jH)(), u.default.open(c, T.BEX.MODERATION));
                               },
                           });
             return (0, l.jsxs)(i.W, {
                 "data-menu-migrated-auto": !0,
                 navId: "moderation-raid-context",
                 onClose: r.Z_,
-                "aria-label": T.intl.string(T.t.liqwPJ),
+                "aria-label": A.intl.string(A.t.liqwPJ),
                 onSelect: x,
                 children: [(0, l.jsx)(a.rX, { children: I }), (0, l.jsxs)(a.rX, { children: [M, D] })],
             });
         },
-        { object: A.ZSU.CONTEXT_MENU },
+        { object: T.ZSU.CONTEXT_MENU },
     ),
     [c.A.CONTEXT_MENU, c.A.GUILD_MODERATION_RAID_MENU],
 );

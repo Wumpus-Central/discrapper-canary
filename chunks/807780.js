@@ -105,7 +105,8 @@ function eg(e) {
                           (0, l.jsx)(p.$, {
                               variant: "overlay-primary",
                               onClick: function () {
-                                  (eu.A.open(n.id, el.BEX.ONBOARDING), (0, C.Dr)(s, { dismissAction: em.i.PRIMARY }));
+                                  (eu.default.open(n.id, el.BEX.ONBOARDING),
+                                      (0, C.Dr)(s, { dismissAction: em.i.PRIMARY }));
                               },
                               text: es.intl.string(es.t["+OtO4e"]),
                           }),

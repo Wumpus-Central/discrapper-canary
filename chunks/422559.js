@@ -4,8 +4,8 @@ var i = t(477900),
     a = t(17928),
     s = t(398590),
     c = t(83257),
-    o = t(793574),
-    u = t(95561),
+    u = t(793574),
+    o = t(95561),
     d = t(688810),
     r = t(460760),
     A = t(817818),
@@ -15,8 +15,8 @@ var i = t(477900),
     h = t(122906),
     G = t(699609),
     m = t(887501),
-    b = t(97469),
-    f = t(363195),
+    f = t(97469),
+    b = t(363195),
     M = t(225315),
     S = t(684407),
     y = t(808728),
@@ -32,7 +32,7 @@ var i = t(477900),
 function j(e) {
     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
         t = arguments.length > 2 ? arguments[2] : void 0;
-    u.Ay.trackWithMetadata(D.HAw.SETTINGS_PANE_VIEWED, {
+    o.Ay.trackWithMetadata(D.HAw.SETTINGS_PANE_VIEWED, {
         settings_type: "guild",
         origin_pane: n,
         destination_pane: e,
@@ -59,7 +59,7 @@ class N extends l.PureComponent {
         j(this.props.section, null, this.props.analyticsLocation);
     }
     componentWillUnmount() {
-        w.A.close();
+        w.default.close();
     }
     componentDidUpdate(e) {
         let { section: n } = e,
@@ -69,8 +69,8 @@ class N extends l.PureComponent {
                 canManageGuild: l,
                 canManageRoles: a,
                 canManageBans: c,
-                canManageNicknames: o,
-                canManageGuildExpressions: u,
+                canManageNicknames: u,
+                canManageGuildExpressions: o,
                 canViewAuditLog: d,
                 canManageWebhooks: r,
                 canUnlinkChannels: A,
@@ -78,12 +78,12 @@ class N extends l.PureComponent {
                 canViewGuildAnalytics: p,
             } = this.props;
         (t !== n && j(t, n),
-            ((i || l || a || c || o || u || d || g || r || A || p) &&
+            ((i || l || a || c || u || o || d || g || r || A || p) &&
                 (d || t !== D.BEX.AUDIT_LOG) &&
                 (a || t !== D.BEX.ROLES) &&
-                (u || t !== D.BEX.EMOJI) &&
-                (u || t !== D.BEX.STICKERS) &&
-                (u || t !== D.BEX.SOUNDBOARD) &&
+                (o || t !== D.BEX.EMOJI) &&
+                (o || t !== D.BEX.STICKERS) &&
+                (o || t !== D.BEX.SOUNDBOARD) &&
                 (c || t !== D.BEX.BANS) &&
                 (g || t !== D.BEX.MEMBERS)) ||
                 (0, s.jH)());
@@ -95,8 +95,8 @@ class N extends l.PureComponent {
             section: t,
             guild: l,
             isGuildAdmin: a,
-            canManageGuild: o,
-            canViewAuditLog: u,
+            canManageGuild: u,
+            canViewAuditLog: o,
             canManageRoles: d,
             canManageGuildExpressions: r,
             canManageWebhooks: A,
@@ -105,8 +105,8 @@ class N extends l.PureComponent {
             canAccessMembersPage: E,
             canViewGuildAnalytics: h,
             isOwner: m,
-            isOwnerWithRequiredMfaLevel: b,
-            showDirtyGuildTemplateIndicator: f,
+            isOwnerWithRequiredMfaLevel: f,
+            showDirtyGuildTemplateIndicator: b,
             memberCount: M,
             onboardingStep: S,
             onboardingEnabled: y,
@@ -117,8 +117,8 @@ class N extends l.PureComponent {
         let T = (0, L.SB)({
                 guild: l,
                 isGuildAdmin: a,
-                canManageGuild: o,
-                canViewAuditLog: u,
+                canManageGuild: u,
+                canViewAuditLog: o,
                 canManageRoles: d,
                 canManageGuildExpressions: r,
                 canManageWebhooks: A,
@@ -127,8 +127,8 @@ class N extends l.PureComponent {
                 canAccessMembersPage: E,
                 canViewGuildAnalytics: h,
                 isOwner: m,
-                isOwnerWithRequiredMfaLevel: b,
-                showDirtyGuildTemplateIndicator: f,
+                isOwnerWithRequiredMfaLevel: f,
+                showDirtyGuildTemplateIndicator: b,
                 memberCount: M,
                 onboardingStep: S,
                 onboardingEnabled: y,
@@ -144,7 +144,7 @@ class N extends l.PureComponent {
                     theme: e,
                     sidebarTheme: n,
                     section: I && null != t ? t : D,
-                    onSetSection: w.A.setSection,
+                    onSetSection: w.default.setSection,
                     onClose: s.jH,
                     title: "" !== l.name ? l.name : _.intl.string(_.t["154/bL"]),
                     sections: T,
@@ -162,9 +162,9 @@ function O() {
             guildMetadata: s,
             isGuildMetadataLoaded: c,
         } = (0, a.cf)([T.A], () => T.A.getProps()),
-        { analyticsLocations: u } = (0, d.Ay)(o.A.GUILD_SETTINGS),
-        G = (0, a.bG)([f.A], () => f.A.theme),
-        L = (0, b.NC)(),
+        { analyticsLocations: o } = (0, d.Ay)(u.A.GUILD_SETTINGS),
+        G = (0, a.bG)([b.A], () => b.A.theme),
+        L = (0, f.NC)(),
         x = (0, a.bG)([y.Ay], () => (null != e ? y.Ay.getChannels(e.id).SELECTABLE : null), [e]),
         _ = (0, a.cf)([B.A], () => (null != e ? B.A.getGuildPermissionProps(e) : k)),
         j = e?.id,
@@ -185,14 +185,14 @@ function O() {
         null != j && _.canManageGuild && E.A.loadTemplatesForGuild(j);
     }, [j, _.canManageGuild]),
         l.useEffect(() => {
-            O || w.A.close();
+            O || w.default.close();
         }, [O]));
     let v = (0, a.bG)([I.A], () => I.A.getCurrentPage()),
         R = (0, a.bG)([g.A], () => null != j && g.A.getEnabled(j)),
         V = (0, a.bG)([S.A], () => null != j && S.A.isEmpty(j)),
         W = (0, m.A)(j).length > 0;
     return (0, i.jsx)(d.f5, {
-        value: u,
+        value: o,
         children: (0, i.jsx)(N, {
             guild: e,
             section: n,

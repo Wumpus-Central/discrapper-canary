@@ -14,13 +14,13 @@ var n = i(477900),
     C = i(468689),
     h = i(71393),
     m = i(17928),
-    A = i(736056),
-    b = i(576705),
-    v = i(567305),
-    S = i(652215),
+    b = i(736056),
+    v = i(576705),
+    S = i(567305),
+    A = i(652215),
     x = i(375708),
-    I = i(469993),
-    f = i(836039),
+    f = i(469993),
+    I = i(836039),
     j = i(260509),
     M = i(555325);
 let E = {
@@ -30,15 +30,15 @@ let E = {
             canCreateGuild: !1,
             useIsGuildSupported: () =>
                 (0, m.bG)(
-                    [A.A],
+                    [b.A],
                     () => (e, t) =>
                         (0, j.bM)(e, t) &&
                         (0, M.V9)({
                             guild: e,
                             isOwner: !0,
                             canManageGuildRoleSubscriptions: !0,
-                            isUserInCreatorMonetizationEligibleCountry: (0, I.Z1)(),
-                            shouldRestrictUpdatingRoleSubscriptionSettings: (0, f.mk)(e.id),
+                            isUserInCreatorMonetizationEligibleCountry: (0, f.Z1)(),
+                            shouldRestrictUpdatingRoleSubscriptionSettings: (0, I.mk)(e.id),
                         }),
                     [],
                     m.My,
@@ -50,12 +50,12 @@ let E = {
             canCreateGuild: !1,
             useIsGuildSupported: () =>
                 (0, m.bG)(
-                    [A.A, b.A],
+                    [b.A, v.A],
                     () => (e) =>
-                        e.features.has(S.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED) &&
-                        !e.features.has(S.GuildFeatures.CREATOR_MONETIZABLE_RESTRICTED) &&
-                        b.A.can(S.xBc.ADMINISTRATOR, e) &&
-                        (0, v.TG)(e.id),
+                        e.features.has(A.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED) &&
+                        !e.features.has(A.GuildFeatures.CREATOR_MONETIZABLE_RESTRICTED) &&
+                        v.A.can(A.xBc.ADMINISTRATOR, e) &&
+                        (0, S.TG)(e.id),
                     [],
                 ),
         },
@@ -67,7 +67,7 @@ let E = {
         createGuildDescription: () => x.intl.string(x.t.anOisx),
         createGuildCta: () => x.intl.string(x.t.B44MTm),
         canCreateGuild: !0,
-        useIsGuildSupported: () => (0, m.bG)([b.A], () => (e) => b.A.canAccessGuildSettings(e), [], m.My),
+        useIsGuildSupported: () => (0, m.bG)([v.A], () => (e) => v.A.canAccessGuildSettings(e), [], m.My),
     };
 var T = i(711014),
     O = i(287809),
@@ -115,13 +115,13 @@ function y(e) {
 function B(e) {
     let { transitionState: t, onClose: i, feature: s, section: u, subsection: m } = e,
         {
-            canCreateGuild: A,
-            createGuildCta: b,
-            createGuildDescription: v,
-            selectGuildCta: S,
+            canCreateGuild: b,
+            createGuildCta: v,
+            createGuildDescription: S,
+            selectGuildCta: A,
             title: x,
-            description: I,
-            isGuildSupported: f,
+            description: f,
+            isGuildSupported: I,
         } = (function (e) {
             let [t] = l.useState(null == e ? void 0 : E[e]),
                 i = R.useIsGuildSupported(),
@@ -149,7 +149,7 @@ function B(e) {
                 null != h.A.getGuild(e) && (h.A.removeChangeListener(i), t());
             });
         }),
-            C.A.open(e, u, void 0, m),
+            C.default.open(e, u, void 0, m),
             i?.());
     }
     return (0, n.jsx)(a.a, {
@@ -165,21 +165,21 @@ function B(e) {
                     direction: "vertical",
                     gap: 8,
                     children: [
-                        (0, n.jsx)(o.E, { variant: "text-md/medium", children: I }),
+                        (0, n.jsx)(o.E, { variant: "text-md/medium", children: f }),
                         (0, n.jsxs)("div", {
                             className: k.c,
                             children: [
                                 (0, n.jsx)("div", {
                                     className: k.o,
-                                    children: (0, n.jsx)(y, { guildId: j, onChange: M, isGuildIncluded: f }),
+                                    children: (0, n.jsx)(y, { guildId: j, onChange: M, isGuildIncluded: I }),
                                 }),
                                 (0, n.jsx)(c.$, {
                                     variant: "primary",
-                                    text: S,
+                                    text: A,
                                     onClick: function () {
                                         (r()(null != j, "Guild ID must not be null on click"),
                                             g.A.hasSeenCreatorOnboardingForGuild(j) || (0, G.G)(j),
-                                            C.A.open(j, u, void 0, m),
+                                            C.default.open(j, u, void 0, m),
                                             i?.());
                                     },
                                     disabled: null == j,
@@ -188,14 +188,14 @@ function B(e) {
                         }),
                     ],
                 }),
-                A &&
+                b &&
                     (0, n.jsxs)(d.B, {
                         direction: "vertical",
                         gap: 8,
                         align: "start",
                         children: [
-                            (0, n.jsx)(o.E, { variant: "text-md/medium", children: v }),
-                            (0, n.jsx)(c.$, { variant: "primary", text: b, onClick: B, loading: T }),
+                            (0, n.jsx)(o.E, { variant: "text-md/medium", children: S }),
+                            (0, n.jsx)(c.$, { variant: "primary", text: v, onClick: B, loading: T }),
                         ],
                     }),
             ],

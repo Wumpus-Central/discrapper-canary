@@ -16,7 +16,7 @@ let m = function (t) {
         {
             submitting: p,
             errorMessage: b,
-            onSubmit: g,
+            onSubmit: f,
         } = (function (t) {
             let { onSubmit: n, onClose: a } = t,
                 [i, l] = e.useState(!1),
@@ -33,8 +33,8 @@ let m = function (t) {
                 }, [a, n, i]);
             return { submitting: i, errorMessage: r, onSubmit: c };
         })({ onSubmit: E, onClose: m }),
-        S = e.useCallback(() => {
-            (m(), c.A.close(), (0, o.pX)(d.BVt.CHANNEL(n, x.VV.MEMBER_APPLICATIONS)));
+        g = e.useCallback(() => {
+            (m(), c.default.close(), (0, o.pX)(d.BVt.CHANNEL(n, x.VV.MEMBER_APPLICATIONS)));
         }, [n, m]);
     return (0, i.jsxs)(l.a, {
         transitionState: C,
@@ -42,7 +42,7 @@ let m = function (t) {
         title: h.intl.formatToPlainString(h.t.chV4Jb, { count: a }),
         actions: [
             { text: h.intl.string(h.t["ETE/oC"]), onClick: m, variant: "secondary" },
-            { text: h.intl.string(h.t.LW0aUP), onClick: g, variant: "primary", loading: p },
+            { text: h.intl.string(h.t.LW0aUP), onClick: f, variant: "primary", loading: p },
         ],
         children: [
             (0, i.jsx)(r.E, {
@@ -53,7 +53,7 @@ let m = function (t) {
             }),
             (0, i.jsx)(s.D, {
                 className: k.K2,
-                onClick: S,
+                onClick: g,
                 children: (0, i.jsx)(r.E, {
                     variant: "text-sm/normal",
                     color: "text-link",

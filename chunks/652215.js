@@ -5511,6 +5511,7 @@ var rb =
         (ew.FRIEND_REQUEST_NOTE_VIEWED = "friend_request_note_viewed"),
         (ew.VIBEGRATION_TURN_RESULTED = "vibegration_turn_resulted"),
         (ew.VIBEGRATION_DEPLOYED = "vibegration_deployed"),
+        (ew.VIBEGRATION_PUBLISH_ACTION_CLICKED = "vibegration_publish_action_clicked"),
         (ew.VIBEGRATION_ERRORED = "vibegration_errored"),
         ew),
     rP = (((eG = {}).CANARY = "canary"), (eG.PTB = "ptb"), (eG.STABLE = "stable"), eG),

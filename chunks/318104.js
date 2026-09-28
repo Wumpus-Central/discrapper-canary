@@ -12,9 +12,9 @@ var a = n(477900),
     g = n(939249),
     h = n(789645),
     x = n(334738),
-    A = n(964486),
-    E = n(915089),
-    f = n(860071),
+    E = n(964486),
+    f = n(915089),
+    A = n(860071),
     p = n(71393),
     j = n(573163),
     v = n(174459),
@@ -77,7 +77,7 @@ function q(e) {
                     className: P.Ec,
                     children: L.intl.format(L.t["K+DH2o"], {
                         onClick: () => {
-                            (_.A.open(t, w.BEX.ROLES), n());
+                            (_.default.open(t, w.BEX.ROLES), n());
                         },
                     }),
                 }),
@@ -90,7 +90,7 @@ var z = n(823508),
     V = n(968588);
 function K(e) {
     let { transitionState: t, onClose: l, guildId: I } = e,
-        _ = (0, E.GV)(),
+        _ = (0, f.GV)(),
         y = (0, s.bG)([p.A], () => p.A.getGuild(I)),
         M = (0, k.A)(y?.id),
         P = (0, G.Ay)(I),
@@ -100,7 +100,7 @@ function K(e) {
         i.useEffect(() => {
             (P.forEach((e) => b.A.getGuildEventUserCounts(I, e.id, [])), b.A.getGuildEventsForCurrentUser(I));
         }, [P, I]),
-        (0, A.Ay)(() => {
+        (0, E.Ay)(() => {
             v.default.track(w.HAw.OPEN_MODAL, { type: S.BV, guild_id: I, guild_events_count: P.length });
         }),
         i.useEffect(() => {
@@ -109,7 +109,7 @@ function K(e) {
                 .filter(N.Vq)
                 .uniq()
                 .forEach((e) => {
-                    f.A.requestMember(I, e);
+                    A.A.requestMember(I, e);
                 });
         }, [I, P]),
         i.useEffect(() => {

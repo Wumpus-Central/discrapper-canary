@@ -4213,7 +4213,7 @@ function sb(e) {
                                       disabled: !p,
                                       verified: i,
                                       onClick: () => {
-                                          (sf.A.open(t.guild_id, eu.BEX.MEMBERS), sf.A.selectRole(e.id));
+                                          (sf.default.open(t.guild_id, eu.BEX.MEMBERS), sf.default.selectRole(e.id));
                                       },
                                   },
                                   e.id,

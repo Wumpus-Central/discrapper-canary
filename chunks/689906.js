@@ -1,37 +1,37 @@
-r.d(e, { A: () => u });
+r.d(e, { A: () => d });
 var n = r(582128),
     s = r(512750),
-    i = r(192308),
-    a = r(468689),
+    a = r(192308),
+    i = r(468689),
     l = r(568065),
-    c = r(652215);
-function u(t, e) {
+    u = r(652215);
+function d(t, e) {
     let r = n.useCallback(
         (r) => {
             if ((r.stopPropagation(), e.type !== l.o9.LEVEL))
-                switch (((0, i.closeModal)(l.Fq), e.skuId)) {
+                switch (((0, a.closeModal)(l.Fq), e.skuId)) {
                     case s.SL:
-                        a.A.open(t, c.BEX.TAG, c.JJy.GUILD_POWERUPS_OVERVIEW_CARD);
+                        i.default.open(t, u.BEX.TAG, u.JJy.GUILD_POWERUPS_OVERVIEW_CARD);
                         return;
                     case s.aN:
-                        a.A.open(t, c.BEX.ROLES, c.JJy.GUILD_POWERUPS_OVERVIEW_CARD);
+                        i.default.open(t, u.BEX.ROLES, u.JJy.GUILD_POWERUPS_OVERVIEW_CARD);
                         return;
                     case s.FB:
-                        a.A.open(
+                        i.default.open(
                             t,
-                            c.BEX.BOOST_PERKS,
-                            c.JJy.GUILD_POWERUPS_OVERVIEW_CARD,
-                            c.nd0.BOOST_PERKS_VANITY_URL,
+                            u.BEX.BOOST_PERKS,
+                            u.JJy.GUILD_POWERUPS_OVERVIEW_CARD,
+                            u.nd0.BOOST_PERKS_VANITY_URL,
                         );
                         return;
                     case s.d0:
-                        a.A.open(t, c.BEX.GUILD_THEME, c.JJy.GUILD_POWERUPS_OVERVIEW_CARD);
+                        i.default.open(t, u.BEX.GUILD_THEME, u.JJy.GUILD_POWERUPS_OVERVIEW_CARD);
                         return;
                     case s.jF:
                     case s.OJ:
                     case s.Ht:
                     case s.tv:
-                        ((0, i.closeAllModals)(), a.A.open(t, c.BEX.TAG, c.JJy.GUILD_POWERUPS_OVERVIEW_CARD));
+                        ((0, a.closeAllModals)(), i.default.open(t, u.BEX.TAG, u.JJy.GUILD_POWERUPS_OVERVIEW_CARD));
                         return;
                     default:
                         return;

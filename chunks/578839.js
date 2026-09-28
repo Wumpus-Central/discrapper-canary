@@ -51,7 +51,7 @@ function U(e) {
             icon: i,
             text: a,
             onClick: function () {
-                w.A.open(n.id, V.BEX.ONBOARDING, void 0, V.nd0.SERVER_GUIDE);
+                w.default.open(n.id, V.BEX.ONBOARDING, void 0, V.nd0.SERVER_GUIDE);
             },
         }),
     });

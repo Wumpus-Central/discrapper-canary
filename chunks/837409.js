@@ -2100,7 +2100,12 @@ let nA =
                               null != t
                                   ? (0, i.jsx)(d.zr, {
                                         onClick: () =>
-                                            tI.A.open(t, eu.BEX.GUILD_AUTOMOD, void 0, eu.nd0.AUTOMOD_MENTION_SPAM),
+                                            tI.default.open(
+                                                t,
+                                                eu.BEX.GUILD_AUTOMOD,
+                                                void 0,
+                                                eu.nd0.AUTOMOD_MENTION_SPAM,
+                                            ),
                                         children: F.intl.string(F.t["1R7QIx"]),
                                     })
                                   : null,

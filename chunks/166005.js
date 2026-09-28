@@ -18,9 +18,9 @@ var t = n(477900),
     R = n(559106),
     C = n(922016),
     v = n(307301),
-    A = n(921853),
-    p = n(442433),
-    y = n(66834),
+    p = n(921853),
+    y = n(442433),
+    A = n(66834),
     N = n(775602),
     M = n(915089),
     S = n(468689),
@@ -140,16 +140,16 @@ function $(e) {
         h = (0, u.bG)([N.Ay], () => N.Ay.roleStyle),
         b = i.useRef(null),
         R = a ?? b,
-        A = i.useCallback(
+        p = i.useCallback(
             (e) => {
                 o?.();
                 let t = P.Ay.getMember(n.id, l),
                     i = t?.roles ?? [];
-                (i.includes(e) || (i = [...i, e]), S.A.updateMemberRoles(n.id, l, i, [e], []));
+                (i.includes(e) || (i = [...i, e]), S.default.updateMemberRoles(n.id, l, i, [e], []));
             },
             [n.id, l, o],
         );
-    function p(e) {
+    function y(e) {
         return !(0, L.Oy)(e) && !e.managed && _.A.isRoleHigher(n, c, e) && -1 === g.indexOf(e.id);
     }
     return (0, t.jsx)(C.Y, {
@@ -158,7 +158,7 @@ function $(e) {
         align: "center",
         renderPopout: (e) => {
             let { closePopout: l } = e;
-            return (0, t.jsx)(z.A, { guild: n, roleStyle: h, roleFilter: p, onSelect: A, onClose: l });
+            return (0, t.jsx)(z.A, { guild: n, roleStyle: h, roleFilter: y, onSelect: p, onClose: l });
         },
         children: (e) =>
             (0, t.jsx)(m.m, {
@@ -217,15 +217,15 @@ function Q(e, l, n) {
             let i = P.Ay.getMember(l, e),
                 r = (i?.roles ?? []).filter((e) => e !== t.id);
             t.tags?.guild_connections === null
-                ? y.A.unassignGuildRoleConnection(l, t.id)
-                : S.A.updateMemberRoles(l, e, r, [], [t.id]);
+                ? A.A.unassignGuildRoleConnection(l, t.id)
+                : S.default.updateMemberRoles(l, e, r, [], [t.id]);
         },
         [n, l, e],
     );
 }
 function U() {
     return i.useCallback((e, l) => {
-        (0, p.L3)(e, async () => {
+        (0, y.L3)(e, async () => {
             let { default: e } = await n.e("715687").then(n.bind(n, 646938));
             return (n) => (0, t.jsx)(e, { ...n, id: l, label: H.intl.string(H.t.sMsaLg) });
         });
@@ -302,7 +302,7 @@ function K(e) {
             onClick: i,
             className: s()(O.s6, { [O.X1]: !l }),
             children: l
-                ? (0, t.jsx)(A.n, { size: "xs", color: "currentColor" })
+                ? (0, t.jsx)(p.n, { size: "xs", color: "currentColor" })
                 : (0, t.jsx)(f.E, { variant: "text-xs/normal", color: "none", children: `+${n}` }),
         }),
     });
@@ -337,8 +337,8 @@ function q(e) {
     function v(e, l) {
         null != l ? (C.current[e] = l) : delete C.current[e];
     }
-    let [A, p] = i.useState(r),
-        [y, N] = i.useState(268),
+    let [p, y] = i.useState(r),
+        [A, N] = i.useState(268),
         [M, S] = i.useState(!1),
         w = i.useRef(null),
         k = i.useRef(null),
@@ -366,15 +366,15 @@ function q(e) {
                     ((e += o + 4), n.push(i));
                 }
             }
-            (p(n.length !== A.length || n.some((e, l) => e.id !== A[l]?.id) ? n : A), N(t), I.current++);
-        }, [r, A, M]));
-    let E = M ? r : A;
+            (y(n.length !== p.length || n.some((e, l) => e.id !== p[l]?.id) ? n : p), N(t), I.current++);
+        }, [r, p, M]));
+    let E = M ? r : p;
     function L() {
         M ? (c?.(), S(!1)) : (u?.(), S(!0));
     }
     function P() {
-        return A.length < r.length
-            ? (0, t.jsx)(K, { isExpanded: M, overflowCount: r.length - A.length, onClick: L, buttonRef: w })
+        return p.length < r.length
+            ? (0, t.jsx)(K, { isExpanded: M, overflowCount: r.length - p.length, onClick: L, buttonRef: w })
             : null;
     }
     function _() {
@@ -401,7 +401,7 @@ function q(e) {
                                             onRemoveRole: m ? b : void 0,
                                             itemRef: (l) => v(e.id, l),
                                             onContextMenu: f ? (l) => R(l, e.id) : void 0,
-                                            style: { maxWidth: M || l !== A.length - 1 ? 268 : y },
+                                            style: { maxWidth: M || l !== p.length - 1 ? 268 : A },
                                         },
                                         e.id,
                                     ),
@@ -423,7 +423,7 @@ function q(e) {
                                                     itemRef: (l) => v(e.id, l),
                                                     role: e,
                                                     guildId: n.id,
-                                                    style: { maxWidth: M || l !== A.length - 1 ? 268 : y },
+                                                    style: { maxWidth: M || l !== p.length - 1 ? 268 : A },
                                                 }),
                                             },
                                             e.id,

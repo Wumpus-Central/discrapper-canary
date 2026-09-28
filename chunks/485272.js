@@ -250,7 +250,7 @@ function Z(e) {
                 })(e);
             if (__OVERLAY__ || !s) return null;
             function d(i) {
-                (w.A.open(e.id, i), l.dispatch(T.jej.POPOUT_CLOSE), (0, r.closeAllModals)());
+                (w.default.open(e.id, i), l.dispatch(T.jej.POPOUT_CLOSE), (0, r.closeAllModals)());
             }
             return (0, n.jsx)(o.Dr, {
                 id: "guild-settings",

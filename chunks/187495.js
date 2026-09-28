@@ -211,7 +211,7 @@ function J(e) {
                         setup_type: q.XT.CHANNEL_WELCOME,
                         action: q.AG.PERSONALIZE_SERVER,
                     }),
-                        null != t && w.A.open(t.id, (0, H.x)(), { section: U.JJy.CHANNEL_WELCOME_CTA }));
+                        null != t && w.default.open(t.id, (0, H.x)(), { section: U.JJy.CHANNEL_WELCOME_CTA }));
                 }, [t])),
                 (x = i.useCallback(() => {
                     (b.Ay.trackWithMetadata(U.HAw.SERVER_SETUP_CTA_CLICKED, {

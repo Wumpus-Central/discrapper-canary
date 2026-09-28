@@ -39,7 +39,7 @@ var o = n(118517),
     _ = n(652215);
 function v(e) {
     let t = e.getGuildId();
-    null != t && r.A.open(t, _.BEX.ENGAGEMENT);
+    null != t && r.default.open(t, _.BEX.ENGAGEMENT);
 }
 function N(e, t, n) {
     (0, p.C)(n.shiftKey ? `${t.channel_id}-${t.id}` : t.id);

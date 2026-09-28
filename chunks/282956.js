@@ -54,7 +54,13 @@ let l = {
     async saveIntegration(e, t) {
         try {
             (T.h.dispatch({ type: "INTEGRATION_SETTINGS_SUBMITTING" }),
-                await i.A.updateIntegration(e, t.id, t.expire_behavior, t.expire_grace_period, t.enable_emoticons),
+                await i.default.updateIntegration(
+                    e,
+                    t.id,
+                    t.expire_behavior,
+                    t.expire_grace_period,
+                    t.enable_emoticons,
+                ),
                 T.h.dispatch({ type: "INTEGRATION_SETTINGS_SAVE_SUCCESS" }));
         } catch (e) {
             T.h.dispatch({ type: "INTEGRATION_SETTINGS_SAVE_FAILURE", errors: e.body });

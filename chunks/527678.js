@@ -7,8 +7,8 @@ var i = n(228366),
     d = n(713125),
     o = n(961973),
     c = n(608401),
-    I = n(529942),
-    u = n(209700),
+    u = n(529942),
+    I = n(209700),
     E = n(734057),
     N = n(71393),
     S = n(403362),
@@ -50,9 +50,9 @@ function x(t, e) {
 async function L(t) {
     let e = N.A.getGuild(t);
     null != e &&
-        (m.A.close(),
-        (0, I.Tk)(e.id, {
-            type: u._.NEW_MEMBER,
+        (m.default.close(),
+        (0, u.Tk)(e.id, {
+            type: I._.NEW_MEMBER,
             roles: {},
             optInChannels: new Set(),
             optInEnabled: !1,

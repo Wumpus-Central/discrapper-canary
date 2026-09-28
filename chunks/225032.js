@@ -1478,7 +1478,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e6 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eW.A().log(
-    `[BUILD INFO] Release Channel: ${e6}, Build Number: 623699, Version Hash: 43f05866a51005be999eb6a7b144b10adb7b3143`,
+    `[BUILD INFO] Release Channel: ${e6}, Build Number: 623712, Version Hash: 5ac7247036dd1be52c8d2333a6146bee11f0af47`,
 ),
     M.A.setTags({ appContext: F.QCW }),
     ep.A.initBasic(),
@@ -21840,7 +21840,7 @@ let N9 = "isHideDevBanner",
                     className: to()(N8.Wz, N8.mr),
                     children: [
                         (0, y.jsx)(N7, { className: N8.Kk }),
-                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "623699" }),
+                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "623712" }),
                         (0, y.jsx)(r, {}),
                     ],
                 })
@@ -25397,12 +25397,12 @@ let Rq = (0, tj.Fe)({
                 n.e("148620"),
                 n.e("785352"),
                 n.e("256769"),
-                n.e("750044"),
+                n.e("360285"),
                 n.e("911687"),
                 n.e("326458"),
                 n.e("530615"),
-            ]).then(n.bind(n, 998259)),
-        webpackId: 998259,
+            ]).then(n.bind(n, 711064)),
+        webpackId: 711064,
         name: "VibegrationsScreen",
         renderLoader: RX,
     }),
@@ -29540,7 +29540,7 @@ let Rq = (0, tj.Fe)({
                 n.e("256769"),
                 n.e("407845"),
                 n.e("979513"),
-                n.e("750044"),
+                n.e("360285"),
                 n.e("173092"),
             ]).then(n.bind(n, 592121)),
         webpackId: 592121,
@@ -46776,7 +46776,7 @@ let kQ = [
                 { guildId: n, section: i, subsection: r } = t.params;
             return (
                 (0, DH.B)(() => {
-                    DK.A.open(n, (0, D$.A)(F.BEX, i), void 0, (0, D$.A)(F.nd0, r));
+                    DK.default.open(n, (0, D$.A)(F.BEX, i), void 0, (0, D$.A)(F.nd0, r));
                 }),
                 (0, y.jsx)(tG.rd, { to: F.BVt.CHANNEL(n) })
             );

@@ -861,7 +861,7 @@ function e0(e) {
         subtitle: Z.intl.format(Z.t.FGE8ya, { applicationName: t.name }),
         confirmText: Z.intl.string(Z.t.ebGf4m),
         onConfirm: () => {
-            w.A.disableIntegration(n.id, i.id).catch(() => {
+            w.default.disableIntegration(n.id, i.id).catch(() => {
                 L.A.show({ title: Z.intl.string(Z.t.wYqMmI), body: Z.intl.string(Z.t.A4Mnst) });
             });
         },
@@ -1056,10 +1056,10 @@ function tr(e) {
                     });
         }, [i, m, b]),
         E = s.useCallback(() => {
-            w.A.syncIntegration(n.id, i.id);
+            w.default.syncIntegration(n.id, i.id);
         }, [n.id, i.id]),
         v = s.useCallback(() => {
-            null != i.role_id && (w.A.setSection(eG.BEX.ROLES), w.A.selectRole(i.role_id));
+            null != i.role_id && (w.default.setSection(eG.BEX.ROLES), w.default.selectRole(i.role_id));
         }, [i.role_id]),
         {
             serviceName: y,
@@ -1431,13 +1431,13 @@ function tc(e) {
         g = e3.A.get(a),
         h = s.useCallback(
             async (e) => {
-                m() && (await w.A.enableIntegration(i.id, e.type, e.id), u.A.startEditingIntegration(e.id));
+                m() && (await w.default.enableIntegration(i.id, e.type, e.id), u.A.startEditingIntegration(e.id));
             },
             [m, i.id],
         ),
         x = s.useCallback(
             (e) => {
-                m() && (e.id === n?.id && u.A.stopEditingIntegration(), w.A.disableIntegration(i.id, e.id));
+                m() && (e.id === n?.id && u.A.stopEditingIntegration(), w.default.disableIntegration(i.id, e.id));
             },
             [m, n, i.id],
         ),

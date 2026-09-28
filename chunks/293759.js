@@ -489,7 +489,7 @@ let e8 = function (e) {
                           variant: "primary",
                           text: eA.intl.string(eA.t.bwNjug),
                           onClick: function () {
-                              ((0, V.v8)(), eQ.A.open(n, eg.BEX.STICKERS, u));
+                              ((0, V.v8)(), eQ.default.open(n, eg.BEX.STICKERS, u));
                           },
                       }),
                   ],
