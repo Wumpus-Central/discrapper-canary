@@ -679,6 +679,13 @@ let n = [
             'The working status above the chat box now reads simply "Conjuring\u2026" or "Thinking\u2026", without repeating the name in front.',
     },
     {
+        date: "2026-09-27",
+        time: "23:27",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "Tools from an MCP server you connect are ready right away, so Conjure can use them without waiting for your next message.",
+    },
+    {
         date: "2026-09-18",
         time: "00:02",
         platforms: ["desktop", "mobile"],
