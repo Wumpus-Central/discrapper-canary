@@ -4967,6 +4967,22 @@
     }
   },
   {
+    "name": "2026-09-application-test-mode-quick-access",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
     "name": "2026-09-automod-application-rules",
     "kind": "guild",
     "defaultConfig": {

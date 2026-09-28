@@ -9,5 +9,6 @@ e.exports = {
     sZ: "alignedRightContent__8dd9e",
     gb: "iconButton__8dd9e",
     ij: "wishlistButton__8dd9e",
+    pL: "devToolsButton__8dd9e",
     AJ: "learnMoreButton__8dd9e",
 };

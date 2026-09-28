@@ -103,6 +103,39 @@
     margin-inline-start: 16px
 }
 
+.testModeNotice_b68a35 {
+    padding-inline-end: 76px
+}
+
+.testModeActions_b68a35 {
+    align-items: center;
+    bottom: 0;
+    display: flex;
+    gap: var(--space-8);
+    inset-inline-end: var(--space-8);
+    position: absolute;
+    top: 0;
+    -webkit-app-region: no-drag
+}
+
+.testModeActions_b68a35 .testModeActionButton_b68a35 {
+    align-items: center;
+    background-color: var(--background-mod-subtle);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    display: flex;
+    height: 28px;
+    justify-content: center;
+    position: static;
+    transition: background-color .1s ease;
+    width: 28px
+}
+
+.testModeActions_b68a35 .testModeActionButton_b68a35:active,
+.testModeActions_b68a35 .testModeActionButton_b68a35:hover {
+    background-color: var(--background-mod-normal)
+}
+
 .premiumLogo_b68a35 {
     background-image: url(/assets/a3541a1173e706be.svg);
     background-repeat: no-repeat;
@@ -160,4 +193,4 @@
     width: 16px
 }
 
-/*# sourceMappingURL=520689.97cf31c70f4db8f4.css.map*/
+/*# sourceMappingURL=520689.be0862caedbf5896.css.map*/

@@ -85,8 +85,13 @@
     width: 32px
 }
 
+.devToolsButton__8dd9e,
 .learnMoreButton__8dd9e {
     padding: 0 var(--space-12)
+}
+
+.devToolsButton__8dd9e {
+    gap: var(--space-8)
 }
 
 @media (max-width:948px) {
@@ -147,4 +152,4 @@ screen and (max-width:485px) {
     width: 804px
 }
 
-/*# sourceMappingURL=679157.1df52703037c65d0.css.map*/
+/*# sourceMappingURL=679157.a7f78f5b688b8064.css.map*/

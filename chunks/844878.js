@@ -8580,7 +8580,7 @@ let rQ = {
                 });
         },
         StaffOnlyEntryDebugMenu: async () => {
-            let { default: e } = await Promise.all([a.e("886456"), a.e("789346")]).then(a.bind(a, 949881)),
+            let { default: e } = await a.e("789346").then(a.bind(a, 949881)),
                 { ContentInventoryEntryType: t } = await Promise.resolve().then(a.bind(a, 681154)),
                 { ContentInventoryAuthorType: n } = await Promise.resolve().then(a.bind(a, 6161)),
                 l = ec.default.getCurrentUser(),
