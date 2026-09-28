@@ -1,4 +1,4 @@
-(i.d(e, { EA: () => I, Gj: () => A, IY: () => g, Ig: () => D, QM: () => x, fk: () => y, iK: () => b, ib: () => v }),
+(i.d(e, { EA: () => I, Gj: () => A, IY: () => g, Ig: () => D, QM: () => x, fk: () => y, iK: () => b, ib: () => T }),
     i(321073));
 var n = i(536637),
     l = i.n(n),
@@ -14,7 +14,7 @@ var n = i(536637),
 function p(t) {
     return (0, d.xq)(t) || (0, d.Zb)(t);
 }
-function v(t) {
+function T(t) {
     let { includeNowSuffix: e } =
         arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { includeNowSuffix: !1 };
     return e
@@ -23,7 +23,7 @@ function v(t) {
           })
         : (0, s.$g)(0, t);
 }
-function T(t, e, i) {
+function v(t, e, i) {
     return { id: t.discount_id ?? e, label: i, amount: -t.amount, lineItemType: "discount" };
 }
 function b(t) {
@@ -51,7 +51,7 @@ function I(t) {
     let { id: e, label: i, amount: n, subscriptionDiscount: l, entitlementDiscount: u, currency: r } = t,
         a = [{ id: e, label: i, amount: n }];
     return (
-        null != l && a.push(T(l, "subscription-discount", m.intl.string(f.default["9yHcmL"]))),
+        null != l && a.push(v(l, "subscription-discount", m.intl.string(f.default["9yHcmL"]))),
         { hasSubscriptionCredit: null != u, lineItems: a, currency: r }
     );
 }
@@ -69,7 +69,7 @@ function P(t, e) {
             label: s,
             amount: c,
             amountWithoutDiscount: p,
-            subscriptionDiscount: v,
+            subscriptionDiscount: T,
             entitlementDiscount: b,
         } = (0, o.Ae)(t, {
             overrideAmount: i,
@@ -78,7 +78,7 @@ function P(t, e) {
             isPrepaidPaymentSource: n,
             currency: u,
         }),
-        I = null != v || null != b,
+        I = null != T || null != b,
         P = { id: t.id, label: s, amount: I ? p : c, lineItemType: "main" },
         D = [
             P,
@@ -92,7 +92,7 @@ function P(t, e) {
             })),
         ];
     return (
-        null == v || d || D.push(T(v, "subscription-discount", m.intl.string(f.default["9yHcmL"]))),
+        null == T || d || D.push(v(T, "subscription-discount", m.intl.string(f.default["9yHcmL"]))),
         { lineItems: D, primaryLineItem: P, entitlementDiscount: b }
     );
 }
@@ -114,7 +114,7 @@ function D(t, e) {
     let {
         lineItems: f,
         primaryLineItem: p,
-        entitlementDiscount: v,
+        entitlementDiscount: T,
     } = P(r, {
         subscriptionPlan: i,
         subscriptionTrial: null,
@@ -126,7 +126,7 @@ function D(t, e) {
     return (
         0 !== s && null != a && null != d && null != c && f.push({ id: a.id, label: c, amount: s }),
         l && f.push({ id: "tax", label: m.intl.string(m.t.jiRvC7), amount: t.tax, lineItemType: "tax" }),
-        { lineItems: f, primaryLineItem: p, entitlementDiscount: v }
+        { lineItems: f, primaryLineItem: p, entitlementDiscount: T }
     );
 }
 function g(t, e) {
@@ -255,7 +255,7 @@ function A(t, e, i) {
             overrideRenewalDate: n,
             isSubscriptionUpdate: l,
             discountOffer: r,
-            fractionalPremiumInfo: v,
+            fractionalPremiumInfo: T,
         } = arguments.length > 3 && void 0 !== arguments[3]
             ? arguments[3]
             : {
@@ -264,12 +264,12 @@ function A(t, e, i) {
                   discountOffer: null,
                   fractionalPremiumInfo: null,
               },
-        T = (0, o.Q8)(e, t, { isSubscriptionUpdate: l }),
+        v = (0, o.Q8)(e, t, { isSubscriptionUpdate: l }),
         { intervalType: b, intervalCount: I } = (0, d.Ge)(e),
         P = e.currency,
         D = [],
-        g = T.some((t) => (0, d.xq)(t.subscriptionPlanId));
-    for (let t of T) {
+        g = v.some((t) => (0, d.xq)(t.subscriptionPlanId));
+    for (let t of v) {
         let { subscriptionPlanId: e } = t,
             { lineItem: n } = (function (t, e, i) {
                 let {
@@ -280,13 +280,13 @@ function A(t, e, i) {
                         discountOffer: c,
                         currency: p,
                     } = i,
-                    { showGuildSubscriptionAdjustmentTooltip: v } = t,
+                    { showGuildSubscriptionAdjustmentTooltip: T } = t,
                     {
-                        label: T,
+                        label: v,
                         subscriptionDiscount: b,
                         originalAmount: I,
                     } = (0, o.Ae)(t, { subscriptionTrial: e, currency: p }),
-                    P = v ? m.intl.format(m.t.UDop9c, {}) : void 0,
+                    P = T ? m.intl.format(m.t.UDop9c, {}) : void 0,
                     D =
                         l || null == b
                             ? null
@@ -306,7 +306,7 @@ function A(t, e, i) {
                                   subTextColor: "text-feedback-positive",
                               }
                             : null;
-                return { matchedDiscountInfo: y, lineItem: { id: t.id, label: T, amount: g, tooltip: P, ...x, ...D } };
+                return { matchedDiscountInfo: y, lineItem: { id: t.id, label: v, amount: g, tooltip: P, ...x, ...D } };
             })(t, i, {
                 invoiceIncludesPremiumBasePlan: g,
                 isPremiumPlanInvoiceItem: p(e),
@@ -323,7 +323,7 @@ function A(t, e, i) {
             currentInvoice: t,
             renewalInvoice: e,
             isSubscriptionUpdate: l,
-            fractionalPremiumInfo: v,
+            fractionalPremiumInfo: T,
         });
     return {
         renewalDate: x,

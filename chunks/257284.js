@@ -1,4 +1,4 @@
-n.d(t, { A: () => C });
+n.d(t, { A: () => R });
 var r = n(477900);
 n(582128);
 var l = n(503698),
@@ -12,34 +12,34 @@ var l = n(503698),
     m = n(736653),
     g = n(626584),
     x = n(97352),
-    h = n(158045),
+    T = n(158045),
     p = n(511484),
     I = n(795269),
-    f = n(202541),
-    T = n(148155),
-    E = n(375708),
-    j = n(12260),
-    A = n(658859);
+    h = n(202541),
+    f = n(148155),
+    j = n(375708),
+    E = n(12260),
+    P = n(658859);
 let v = new g.A("PremiumGroupPrice.tsx"),
-    N = (0, r.jsx)(o.y, { type: o.y.Type.PULSING_ELLIPSIS, className: A.xB }),
-    C = function (e) {
+    A = (0, r.jsx)(o.y, { type: o.y.Type.PULSING_ELLIPSIS, className: P.xB }),
+    R = function (e) {
         let t,
             { isGift: n = !1, discountOffer: l, priceOptions: o, isApplicationHome: g = !1 } = e,
-            A = (0, a.bG)([x.A], () => x.A.get(f.gD.PREMIUM_GROUP_MONTH)),
-            C = (0, p.N1)(f.gD.PREMIUM_GROUP_MONTH),
-            y = (0, s.q)((0, m.Ay)());
-        if (null == A) return N;
+            P = (0, a.bG)([x.A], () => x.A.get(h.gD.PREMIUM_GROUP_MONTH)),
+            R = (0, p.N1)(h.gD.PREMIUM_GROUP_MONTH),
+            _ = (0, s.q)((0, m.Ay)());
+        if (null == P) return A;
         try {
-            t = (0, h.sS)(A, o, !1, n, !1);
+            t = (0, T.sS)(P, o, !1, n, !1);
         } catch {
-            return (v.warn(`No price available for plan ${A.id} in currency ${o?.currency ?? "unknown"}`), N);
+            return (v.warn(`No price available for plan ${P.id} in currency ${o?.currency ?? "unknown"}`), A);
         }
-        let _ = f.WT.MONTH;
-        if (null != l && null != C) {
+        let N = h.WT.MONTH;
+        if (null != l && null != R) {
             let e = l.discount.intervalCount;
             return (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, r.jsx)("hr", { className: i()(j.vI, { [j.oE]: g }) }),
+                    (0, r.jsx)("hr", { className: i()(E.vI, { [E.oE]: g }) }),
                     (0, r.jsxs)(c.B, {
                         direction: "horizontal",
                         align: "center",
@@ -51,32 +51,32 @@ let v = new g.A("PremiumGroupPrice.tsx"),
                                 direction: "vertical",
                                 gap: 4,
                                 fullWidth: !1,
-                                className: j.Yc,
+                                className: E.Yc,
                                 children: [
                                     (0, r.jsx)(u.D, {
                                         variant: g ? "heading-md/semibold" : "heading-sm/semibold",
                                         color: "text-strong",
-                                        children: E.intl.format(T.default.rCpGVA, {
-                                            discountedPrice: C,
+                                        children: j.intl.format(f.default.rCpGVA, {
+                                            discountedPrice: R,
                                             discountInterval: e,
                                         }),
                                     }),
                                     (0, r.jsx)(d.E, {
                                         variant: g ? "text-sm/medium" : "text-xs/medium",
                                         color: "text-muted",
-                                        children: E.intl.format(T.default["4b2ByP"], { regularPrice: t }),
+                                        children: j.intl.format(f.default["4b2ByP"], { regularPrice: t }),
                                     }),
                                 ],
                             }),
                             (0, r.jsx)(I.R, {
-                                text: E.intl.formatToPlainString(T.default.GEwdVw, {
+                                text: j.intl.formatToPlainString(f.default.GEwdVw, {
                                     percent: l.discount.amount,
                                     discountOfferAmount: l.discount.amount,
                                 }),
                             }),
                         ],
                     }),
-                    (0, r.jsx)("hr", { className: i()(j.yF, { [j.oE]: g }) }),
+                    (0, r.jsx)("hr", { className: i()(E.yF, { [E.oE]: g }) }),
                 ],
             });
         }
@@ -86,7 +86,7 @@ let v = new g.A("PremiumGroupPrice.tsx"),
                     children: [
                         (0, r.jsx)(d.E, {
                             variant: "heading-xxl/extrabold",
-                            color: y ? "text-strong" : "text-overlay-light",
+                            color: _ ? "text-strong" : "text-overlay-light",
                             tag: "span",
                             children: t,
                         }),
@@ -94,16 +94,16 @@ let v = new g.A("PremiumGroupPrice.tsx"),
                             variant: "text-xs/medium",
                             tag: "span",
                             color: "text-muted",
-                            children: ["/", (0, h.FJ)(_)],
+                            children: ["/", (0, T.FJ)(N)],
                         }),
                     ],
                 }),
                 (0, r.jsx)(u.D, {
                     variant: "heading-md/semibold",
                     color: "text-muted",
-                    children: E.intl.string(T.default["R+dzZw"]),
+                    children: j.intl.string(f.default["R+dzZw"]),
                 }),
-                (0, r.jsx)("hr", { className: j.yF }),
+                (0, r.jsx)("hr", { className: E.yF }),
             ],
         });
     };

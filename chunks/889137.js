@@ -1,4 +1,4 @@
-r.d(t, { P: () => H, YW: () => q });
+r.d(t, { P: () => W, YW: () => q });
 let n = Symbol.for("@ts-pattern/matcher"),
     i = Symbol.for("@ts-pattern/isVariadic"),
     o = "@ts-pattern/anonymous-select-key",
@@ -245,12 +245,12 @@ let w = f(
             return "symbol" == typeof e;
         }),
     ),
-    W = f(
+    H = f(
         m(function (e) {
             return null == e;
         }),
     );
-var H = {
+var W = {
     __proto__: null,
     matcher: n,
     optional: d,
@@ -380,7 +380,7 @@ var H = {
     bigint: V,
     boolean: U,
     symbol: z,
-    nullish: W,
+    nullish: H,
     instanceOf: function (e) {
         return f(m((t) => t instanceof e));
     },

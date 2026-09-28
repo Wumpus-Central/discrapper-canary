@@ -270,10 +270,10 @@ function U(e, t) {
     return n;
 }
 function z(e, t, r, n) {
-    return W.apply(this, arguments);
+    return H.apply(this, arguments);
 }
-function W() {
-    return (W = u(
+function H() {
+    return (H = u(
         l.mark(function e(t, r, n, i) {
             var s, c, f, d, h;
             return l.wrap(function (e) {
@@ -586,7 +586,7 @@ function W() {
         }),
     )).apply(this, arguments);
 }
-function H(e, t) {
+function W(e, t) {
     ((e.cancelId = t), (e.asyncId = e.asyncTo = e.promise = void 0));
 }
 var G = (function (e) {
@@ -865,7 +865,7 @@ var G = (function (e) {
                 var t = this;
                 return (
                     this.is(et) ||
-                        (H(this._state, this._lastCallId),
+                        (W(this._state, this._lastCallId),
                         this._focus(this.get()),
                         p.batchedUpdates(function () {
                             return t._stop(e);
@@ -1012,17 +1012,17 @@ var G = (function (e) {
                 if (x)
                     if (U) R = this._updateNode(j);
                     else {
-                        var W = this._getNodeType(y);
-                        if (W !== R.constructor)
+                        var H = this._getNodeType(y);
+                        if (H !== R.constructor)
                             throw Error(
                                 "Cannot animate between " +
                                     R.constructor.name +
                                     " and " +
-                                    W.name +
+                                    H.name +
                                     ', as the "to" prop suggests',
                             );
                     }
-                var H = R.constructor,
+                var W = R.constructor,
                     G = !!k,
                     q = !1;
                 if (!G) {
@@ -1033,7 +1033,7 @@ var G = (function (e) {
                 if ((q && this.is(Z) && (i.changed && !L ? (G = !0) : G || this._stop()), !T)) {
                     ((G || o.getFluidConfig(h)) &&
                         ((i.values = R.getPayload()),
-                        (i.toValues = k ? null : H == d.AnimatedString ? [1] : o.toArray(j))),
+                        (i.toValues = k ? null : W == d.AnimatedString ? [1] : o.toArray(j))),
                         (i.immediate = U),
                         (i.onStart = ei(c("onStart"), n)),
                         (i.onChange = ei(c("onChange"), n)));
@@ -1245,7 +1245,7 @@ var eu = ["onStart", "onChange", "onRest"],
                     (this.each(function (e) {
                         return e.stop();
                     }),
-                        H(this._state, this._lastAsyncId));
+                        W(this._state, this._lastAsyncId));
                 else {
                     var t = this.springs;
                     o.each(o.toArray(e), function (e) {
@@ -1386,13 +1386,13 @@ function ed(e, t) {
                                       pause: o.noop,
                                       resume: o.noop,
                                       start: function (e, r) {
-                                          if (((e.onRest = s), e.cancel)) o.is.und(O(e, "cancel")) || H(c, e.callId);
+                                          if (((e.onRest = s), e.cancel)) o.is.und(O(e, "cancel")) || W(c, e.callId);
                                           else r(z(l, e, c, t));
                                       },
                                   },
                               }),
                           )
-                        : r.keys || !0 !== r.cancel || H(c, t._lastAsyncId),
+                        : r.keys || !0 !== r.cancel || W(c, t._lastAsyncId),
                     Promise.all(u).then(function (o) {
                         var s = B(t, o);
                         if (a && s.finished && !(n && s.noop)) {

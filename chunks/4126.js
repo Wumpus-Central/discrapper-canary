@@ -14,7 +14,7 @@ function m(e) {
         { applicationId: n, storeListingBenefits: i, skuBenefits: r, className: a } = e;
     return (
         null != i
-            ? (t = i.map((e) => (0, l.jsx)(C, { applicationId: n, benefit: e, className: a }, e.id)))
+            ? (t = i.map((e) => (0, l.jsx)(h, { applicationId: n, benefit: e, className: a }, e.id)))
             : null != r && (t = r.map((e, t) => (0, l.jsx)(p, { benefit: e, className: a }, t))),
         t
     );
@@ -55,7 +55,7 @@ function p(e) {
         ],
     });
 }
-function C(e) {
+function h(e) {
     let {
         applicationId: t,
         benefit: n,
@@ -84,17 +84,17 @@ function C(e) {
         ],
     });
 }
-var h = n(877852);
+var C = n(877852);
 function f(e) {
     let { application: t, asset: n, className: i, ...r } = e;
     return (0, l.jsx)(s.A, { application: t, size: s.V.MEDIUM, asset: n, className: i, ...r });
 }
 function E(e) {
     let { children: t, className: n, id: i, ...s } = e;
-    return (0, l.jsx)(a.D, { className: r()(h.wx, n), variant: "heading-xl/extrabold", id: i, ...s, children: t });
+    return (0, l.jsx)(a.D, { className: r()(C.wx, n), variant: "heading-xl/extrabold", id: i, ...s, children: t });
 }
 function S() {
-    return (0, l.jsx)("hr", { className: h.yF });
+    return (0, l.jsx)("hr", { className: C.yF });
 }
 function y(e) {
     let { className: t, title: n, description: i, ...r } = e;
@@ -110,12 +110,12 @@ function y(e) {
 function I(e) {
     let { applicationId: t, storeListingBenefits: n, skuBenefits: i, className: a, ...s } = e;
     return (0, l.jsx)("div", {
-        className: r()(h.iq, a),
+        className: r()(C.iq, a),
         ...s,
-        children: (0, l.jsx)(m, { applicationId: t, storeListingBenefits: n, skuBenefits: i, className: h.gX }),
+        children: (0, l.jsx)(m, { applicationId: t, storeListingBenefits: n, skuBenefits: i, className: C.gX }),
     });
 }
 function g(e) {
     let { children: t, className: n, ...i } = e;
-    return (0, l.jsx)("div", { className: r()(h.kL, n), ...i, children: t });
+    return (0, l.jsx)("div", { className: r()(C.kL, n), ...i, children: t });
 }

@@ -64,12 +64,12 @@ var y = l(957565),
     N = l(723702),
     E = l(435558),
     L = l.n(E),
-    M = l(280450),
-    O = l(986238),
+    O = l(280450),
+    M = l(986238),
     _ = l(652215),
-    A = l(375708),
+    B = l(375708),
     I = l(100281);
-function B(e) {
+function T(e) {
     let { url: t } = e,
         [l, s] = n.useState(!1),
         i = n.useRef(void 0),
@@ -87,13 +87,13 @@ function B(e) {
                   onClick: a,
                   children: [
                       (0, r.jsx)(p.LinkIcon, { size: "md", color: "currentColor", className: I.n7 }),
-                      l ? A.intl.string(A.t.GmrIJY) : A.intl.string(A.t.iVzBOh),
+                      l ? B.intl.string(B.t.GmrIJY) : B.intl.string(B.t.iVzBOh),
                   ],
               })
             : null
     );
 }
-function T(e) {
+function A(e) {
     let {
         subHead: t,
         buildDetails: l,
@@ -136,8 +136,8 @@ let S = function (e) {
                         className: I.DD,
                         children:
                             null != s && null != s.releaseChannel
-                                ? A.intl.formatToPlainString(A.t.bFj63b, { releaseChannel: s.releaseChannel })
-                                : A.intl.string(A.t.Wj3LW4),
+                                ? B.intl.formatToPlainString(B.t.bFj63b, { releaseChannel: s.releaseChannel })
+                                : B.intl.string(B.t.Wj3LW4),
                     }),
                     (0, r.jsx)(v.Anchor, {
                         className: I.Pl,
@@ -149,7 +149,7 @@ let S = function (e) {
                             className: I.G,
                         }),
                     }),
-                    t ? null : (0, r.jsx)(B, { url: i }),
+                    t ? null : (0, r.jsx)(T, { url: i }),
                 ],
             }),
             (0, r.jsxs)("div", {
@@ -183,7 +183,7 @@ let S = function (e) {
                                   c = ["discord_web"];
                               N.isPlatformEmbedded || c.push("discord_marketing", "discord_developers");
                               let d = (function (e, t) {
-                                  if (null == e || null == t) return { valid: !1, reason: A.intl.string(A.t.d34xi4) };
+                                  if (null == e || null == t) return { valid: !1, reason: B.intl.string(B.t.d34xi4) };
                                   let {
                                           releaseChannel: l,
                                           expiresAt: r,
@@ -195,8 +195,8 @@ let S = function (e) {
                                   if (0 === L().intersection(a, t).length)
                                       return {
                                           valid: !1,
-                                          reason: A.intl.formatToPlainString(A.t.wySUzv, {
-                                              requestedTargets: a.map((e) => O.v_[e] ?? "unknown").join(", "),
+                                          reason: B.intl.formatToPlainString(B.t.wySUzv, {
+                                              requestedTargets: a.map((e) => M.v_[e] ?? "unknown").join(", "),
                                           }),
                                       };
                                   if (null != l && l !== window.GLOBAL_ENV.RELEASE_CHANNEL) {
@@ -206,7 +206,7 @@ let S = function (e) {
                                               : `${l.charAt(0).toUpperCase()}${l.slice(1)}`;
                                       return {
                                           valid: !1,
-                                          reason: A.intl.formatToPlainString(A.t.GOEF0C, { releaseChannel: e }),
+                                          reason: B.intl.formatToPlainString(B.t.GOEF0C, { releaseChannel: e }),
                                       };
                                   }
                                   if (null != s) {
@@ -214,24 +214,24 @@ let S = function (e) {
                                       ((e = !1), !0);
                                       return {
                                           valid: !1,
-                                          reason: A.intl.formatToPlainString(A.t.GOEF0C, {
+                                          reason: B.intl.formatToPlainString(B.t.GOEF0C, {
                                               releaseChannel: s.join(", "),
                                           }),
                                       };
                                   }
                                   let o = null != r ? new Date(r).getTime() : null;
                                   return null != o && o < Date.now()
-                                      ? { valid: !1, reason: A.intl.string(A.t["8eRE6S"]) }
-                                      : n.length > 0 && !n.includes(M.default.getId())
-                                        ? { valid: !1, reason: A.intl.string(A.t.qZgV0a) }
+                                      ? { valid: !1, reason: B.intl.string(B.t["8eRE6S"]) }
+                                      : n.length > 0 && !n.includes(O.default.getId())
+                                        ? { valid: !1, reason: B.intl.string(B.t.qZgV0a) }
                                         : { valid: !0 };
                               })(s, c);
                               if (!d.valid) {
                                   var u;
                                   return (
                                       (u = d.reason),
-                                      T({
-                                          subHead: A.intl.string(A.t.ODXApH),
+                                      A({
+                                          subHead: B.intl.string(B.t.ODXApH),
                                           variant: "secondary",
                                           buttonText: "Invalid",
                                           buildDetails: u,
@@ -253,19 +253,19 @@ let S = function (e) {
                                   null == n || null == n.discord_web
                                       ? 1
                                       : g.id !== n.discord_web.id || g.type !== n.discord_web.type)
-                                      ? ((l = A.intl.string(A.t.nOunHC)), (t = i), (r = "primary"))
-                                      : ((l = A.intl.string(A.t.tX4xrt)), (t = a), (r = "critical-primary")),
-                                  T({
-                                      subHead: A.intl.string("branch" === g.type ? A.t.p9TwTG : A.t.RCYGot),
+                                      ? ((l = B.intl.string(B.t.nOunHC)), (t = i), (r = "primary"))
+                                      : ((l = B.intl.string(B.t.tX4xrt)), (t = a), (r = "critical-primary")),
+                                  A({
+                                      subHead: B.intl.string("branch" === g.type ? B.t.p9TwTG : B.t.RCYGot),
                                       buildDetails: g.id,
                                       buttonClick: function () {
                                           b.A.isConnected()
                                               ? x.A.show({
-                                                    title: A.intl.string(A.t.tiu1ly),
-                                                    body: A.intl.string(A.t["zK+lqW"]),
+                                                    title: B.intl.string(B.t.tiu1ly),
+                                                    body: B.intl.string(B.t["zK+lqW"]),
                                                     onConfirm: t,
-                                                    cancelText: A.intl.string(A.t["ETE/oC"]),
-                                                    confirmText: A.intl.string(A.t["QDX/qu"]),
+                                                    cancelText: B.intl.string(B.t["ETE/oC"]),
+                                                    confirmText: B.intl.string(B.t["QDX/qu"]),
                                                     confirmVariant: "critical-primary",
                                                 })
                                               : t();

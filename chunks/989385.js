@@ -1,4 +1,5 @@
 e.exports = (() => {
+    "use strict";
     var e,
         t,
         r,
@@ -44,8 +45,8 @@ e.exports = (() => {
         V,
         U,
         z,
-        W,
         H,
+        W,
         G,
         q,
         Y,
@@ -1250,11 +1251,11 @@ e.exports = (() => {
                             },
                             U = [],
                             z = [],
-                            W = () => {
+                            H = () => {
                                 var t = e.preRun.shift();
                                 z.push(t);
                             },
-                            H = !0,
+                            W = !0,
                             G = () => {
                                 var e = k[eK >> 2];
                                 return ((eK += 4), e);
@@ -1944,11 +1945,11 @@ e.exports = (() => {
                                     (super(e), (this.name = "BindingError"));
                                 }
                             },
-                            eW = (e) => {
+                            eH = (e) => {
                                 if (!e) throw new ez(`Cannot use deleted val. handle = ${e}`);
                                 return eU[e];
                             },
-                            eH = (e) => {
+                            eW = (e) => {
                                 switch (e) {
                                     case void 0:
                                         return 2;
@@ -2168,7 +2169,7 @@ e.exports = (() => {
                                             var n = t.clone();
                                             ((r = this.hd(
                                                 r,
-                                                eH(() => n.delete()),
+                                                eW(() => n.delete()),
                                             )),
                                                 null !== e && e.push(this.Va, r));
                                         }
@@ -2293,10 +2294,10 @@ e.exports = (() => {
                             tM = {
                                 name: "emscripten::val",
                                 Aa: (e) => {
-                                    var t = eW(e);
+                                    var t = eH(e);
                                     return (tT(e), t);
                                 },
-                                Ea: (e, t) => eH(t),
+                                Ea: (e, t) => eW(t),
                                 Ma: e4,
                                 La: null,
                             },
@@ -2383,10 +2384,10 @@ e.exports = (() => {
                             tz = (e) => {
                                 if (!(e instanceof $ || "unwind" == e)) throw e;
                             },
-                            tW = (t) => {
-                                throw ((g = t), H || 0 < tN || (e.onExit?.(t), (D = !0)), new $(t));
+                            tH = (t) => {
+                                throw ((g = t), W || 0 < tN || (e.onExit?.(t), (D = !0)), new $(t));
                             },
-                            tH = [],
+                            tW = [],
                             tG = {},
                             tq = () => {
                                 if (!tx) {
@@ -2597,7 +2598,7 @@ e.exports = (() => {
                                           : tm(n.wa.Sa, { Da: n, Ba: i });
                                 },
                             }),
-                            e.noExitRuntime && (H = e.noExitRuntime),
+                            e.noExitRuntime && (W = e.noExitRuntime),
                             e.print && (I = e.print),
                             e.printErr && (O = e.printErr),
                             e.wasmBinary && (y = e.wasmBinary),
@@ -2893,7 +2894,7 @@ e.exports = (() => {
                                 },
                                 P: () => N(""),
                                 o: (e, t, r) => {
-                                    ((e = eq(e)), (t = eZ(t, "wrapper")), (r = eW(r)));
+                                    ((e = eq(e)), (t = eZ(t, "wrapper")), (r = eH(r)));
                                     var n = t.wa,
                                         i = n.Sa,
                                         o = n.Ia.Sa,
@@ -2932,7 +2933,7 @@ e.exports = (() => {
                                         }),
                                         (e.prototype = Object.create(i)),
                                         Object.assign(e.prototype, r),
-                                        eH(e)
+                                        eW(e)
                                     );
                                 },
                                 _: (e) => {
@@ -3451,7 +3452,7 @@ e.exports = (() => {
                                     te(e, { $c: !0, name: (t = eq(t)), Aa: () => {}, Ea: () => {} });
                                 },
                                 A: () => {
-                                    ((H = !1), (tN = 0));
+                                    ((W = !1), (tN = 0));
                                 },
                                 y: () => {
                                     throw 1 / 0;
@@ -3474,18 +3475,18 @@ e.exports = (() => {
                                                 for (var a = 0, c = 0; c < e; ++c) ((u[c] = l[c](o + a)), (a += 8));
                                                 switch (r) {
                                                     case 0:
-                                                        var f = eW(t).apply(null, u);
+                                                        var f = eH(t).apply(null, u);
                                                         break;
                                                     case 2:
-                                                        f = Reflect.construct(eW(t), u);
+                                                        f = Reflect.construct(eH(t), u);
                                                         break;
                                                     case 3:
                                                         f = u[0];
                                                         break;
                                                     case 1:
-                                                        f = eW(t)[tK(n)](...u);
+                                                        f = eH(t)[tK(n)](...u);
                                                 }
-                                                return ((f = s((t = []), f)), t.length && (C[i >> 2] = eH(t)), f);
+                                                return ((f = s((t = []), f)), t.length && (C[i >> 2] = eW(t)), f);
                                             },
                                         )),
                                         (i = tj.length),
@@ -3494,20 +3495,20 @@ e.exports = (() => {
                                     );
                                 },
                                 ca: tT,
-                                X: (t) => eH(e[(t = tK(t))]),
-                                Y: (e, t) => eH((e = eW(e))[(t = eW(t))]),
+                                X: (t) => eW(e[(t = tK(t))]),
+                                Y: (e, t) => eW((e = eH(e))[(t = eH(t))]),
                                 v: (e) => {
                                     9 < e && (eU[e + 1] += 1);
                                 },
                                 e: (e, t, r, n, i) => tj[e](t, r, n, i),
-                                Z: () => eH([]),
-                                ba: (e) => eH(tK(e)),
-                                da: () => eH({}),
+                                Z: () => eW([]),
+                                ba: (e) => eW(tK(e)),
+                                da: () => eW({}),
                                 w: (e) => {
-                                    (e5(eW(e)), tT(e));
+                                    (e5(eH(e)), tT(e));
                                 },
                                 g: (e, t, r) => {
-                                    ((e = eW(e)), (t = eW(t)), (r = eW(r)), (e[t] = r));
+                                    ((e = eH(e)), (t = eH(t)), (r = eH(r)), (e[t] = r));
                                 },
                                 F: function (e, t) {
                                     ((e = new Date(
@@ -3553,9 +3554,9 @@ e.exports = (() => {
                                         var t = () => t4(e, performance.now());
                                         if (!D)
                                             try {
-                                                if ((t(), !(H || 0 < tN)))
+                                                if ((t(), !(W || 0 < tN)))
                                                     try {
-                                                        ((g = t = g), tW(t));
+                                                        ((g = t = g), tH(t));
                                                     } catch (e) {
                                                         tz(e);
                                                     }
@@ -3589,12 +3590,12 @@ e.exports = (() => {
                                         : 28;
                                 },
                                 j: (e, t, r) => {
-                                    tH.length = 0;
+                                    tW.length = 0;
                                     for (var n; (n = S[t++]);) {
                                         var i = 105 != n;
                                         ((i &= 112 != n),
                                             (r += i && r % 8 ? 4 : 0),
-                                            tH.push(
+                                            tW.push(
                                                 112 == n
                                                     ? C[r >> 2]
                                                     : 106 == n
@@ -3605,7 +3606,7 @@ e.exports = (() => {
                                             ),
                                             (r += i ? 8 : 4));
                                     }
-                                    return rt[e](...tH);
+                                    return rt[e](...tW);
                                 },
                                 N: () => Date.now(),
                                 Q: () => performance.now(),
@@ -3765,7 +3766,7 @@ e.exports = (() => {
                                 R: function () {
                                     return -1 < navigator.platform.indexOf("Win");
                                 },
-                                z: tW,
+                                z: tH,
                                 S: function (t, r, n) {
                                     ((r = e.HEAP8.subarray(r, r + n)),
                                         (n = new Uint8Array(n)).set(r),
@@ -3849,7 +3850,7 @@ e.exports = (() => {
                             })()),
                             e.preRun)
                         )
-                            for ("function" == typeof e.preRun && (e.preRun = [e.preRun]); e.preRun.length;) W();
+                            for ("function" == typeof e.preRun && (e.preRun = [e.preRun]); e.preRun.length;) H();
                         return (
                             V(z),
                             e.setStatus
@@ -5857,7 +5858,7 @@ e.exports = (() => {
             StateMachineInput: () => C,
             StateMachineInputType: () => n,
             Testing: () => eu,
-            ViewModel: () => H,
+            ViewModel: () => W,
             ViewModelInstance: () => Y,
             ViewModelInstanceArtboard: () => ea,
             ViewModelInstanceAssetFont: () => eo,
@@ -7078,7 +7079,7 @@ e.exports = (() => {
                 }),
                 (e.prototype.viewModelByName = function (e) {
                     var t = this.file.viewModelByName(e);
-                    return null !== t ? new H(t) : null;
+                    return null !== t ? new W(t) : null;
                 }),
                 (e.prototype.globalViewModelNames = function () {
                     return this.file.globalViewModelNames();
@@ -7505,7 +7506,7 @@ e.exports = (() => {
                                 var h = d[f],
                                     m = this.file.viewModelByName(h);
                                 if (null !== m) {
-                                    var v = new H(m).defaultInstance();
+                                    var v = new W(m).defaultInstance();
                                     null !== v && this.setGlobalViewModelInstance(h, v);
                                 }
                             }
@@ -8390,7 +8391,7 @@ e.exports = (() => {
                 }),
                 (t.prototype.viewModelByIndex = function (e) {
                     var t = this.file.viewModelByIndex(e);
-                    return null !== t ? new H(t) : null;
+                    return null !== t ? new W(t) : null;
                 }),
                 (t.prototype.viewModelByName = function (e) {
                     var t;
@@ -8408,7 +8409,7 @@ e.exports = (() => {
                 (t.prototype.defaultViewModel = function () {
                     if (this.artboard) {
                         var e = this.file.defaultArtboardViewModel(this.artboard);
-                        if (e) return new H(e);
+                        if (e) return new W(e);
                     }
                     return null;
                 }),
@@ -8440,20 +8441,20 @@ e.exports = (() => {
                 t
             );
         })()),
-        ((W = l || (l = {})).none = "none"),
-        (W.string = "string"),
-        (W.number = "number"),
-        (W.boolean = "boolean"),
-        (W.color = "color"),
-        (W.list = "list"),
-        (W.enumType = "enumType"),
-        (W.trigger = "trigger"),
-        (W.viewModel = "viewModel"),
-        (W.integer = "integer"),
-        (W.listIndex = "listIndex"),
-        (W.image = "image"),
-        (W.artboard = "artboard"),
-        (H = (function () {
+        ((H = l || (l = {})).none = "none"),
+        (H.string = "string"),
+        (H.number = "number"),
+        (H.boolean = "boolean"),
+        (H.color = "color"),
+        (H.list = "list"),
+        (H.enumType = "enumType"),
+        (H.trigger = "trigger"),
+        (H.viewModel = "viewModel"),
+        (H.integer = "integer"),
+        (H.listIndex = "listIndex"),
+        (H.image = "image"),
+        (H.artboard = "artboard"),
+        (W = (function () {
             function e(e) {
                 this._viewModel = e;
             }

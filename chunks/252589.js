@@ -20,15 +20,15 @@ function p(e) {
     let i = e.find((e) => n.some((t) => e.description.toLowerCase().includes(t)));
     return i?.title;
 }
-let C = n(568065).Wb,
-    h = [u.Puh.SUBSCRIPTION, u.Puh.SUBSCRIPTION_GROUP];
+let h = n(568065).Wb,
+    C = [u.Puh.SUBSCRIPTION, u.Puh.SUBSCRIPTION_GROUP];
 function f() {
     let [e, t] = l.useState(0);
     l.useEffect(() => {
-        ((0, a.d2)({ applicationId: C, skuTypes: h, includePricing: !0 }), r.Ay.getDetectableGames());
+        ((0, a.d2)({ applicationId: h, skuTypes: C, includePricing: !0 }), r.Ay.getDetectableGames());
     }, [e]);
-    let n = (0, i.bG)([s.A], () => s.A.getCollectionsForApplication(C)),
-        c = (0, i.bG)([s.A], () => s.A.getFetchStateForApplication(C)),
+    let n = (0, i.bG)([s.A], () => s.A.getCollectionsForApplication(h)),
+        c = (0, i.bG)([s.A], () => s.A.getFetchStateForApplication(h)),
         f = l.useMemo(
             () =>
                 null != n

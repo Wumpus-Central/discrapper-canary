@@ -1,7 +1,7 @@
-n.d(t, { L: () => i });
+n.d(t, { L: () => o });
 var r = n(582128),
     l = n(263532);
-function i() {
+function o() {
     let e = r.useRef(null),
         { purchaseError: t, setPurchaseError: n } = (0, l.t4)((e) => ({
             purchaseError: e.purchaseError,

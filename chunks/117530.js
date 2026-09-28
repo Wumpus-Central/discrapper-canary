@@ -148,15 +148,15 @@ function v(e) {
         V = (0, d.useRef)(null),
         U = (0, d.useRef)([]),
         { parentNode: z } = (0, d.useContext)(p) || {},
-        W = (0, d.useMemo)(() => new I({ scopeRef: U }), [U]);
+        H = (0, d.useMemo)(() => new I({ scopeRef: U }), [U]);
     ((0, f.N)(() => {
         let e = z || O.root;
         if (O.getTreeNode(e.scopeRef) && m && !_(m, e.scopeRef)) {
             let t = O.getTreeNode(m);
             t && (e = t);
         }
-        (e.addChild(W), O.addNode(W));
-    }, [W, z]),
+        (e.addChild(H), O.addNode(H));
+    }, [H, z]),
         (0, f.N)(() => {
             let e = O.getTreeNode(U);
             e && (e.contain = !!j);
@@ -371,7 +371,7 @@ function v(e) {
             },
             [U],
         ));
-    let H = (0, d.useMemo)(() => {
+    let W = (0, d.useMemo)(() => {
             var e;
             return (
                 (e = U),
@@ -415,7 +415,7 @@ function v(e) {
                 }
             );
         }, []),
-        G = (0, d.useMemo)(() => ({ focusManager: H, parentNode: W }), [W, H]);
+        G = (0, d.useMemo)(() => ({ focusManager: W, parentNode: H }), [H, W]);
     return d.createElement(
         p.Provider,
         { value: G },

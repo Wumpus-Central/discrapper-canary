@@ -1103,13 +1103,13 @@ var t = (function () {
             var V = 4 * F,
                 U = 4;
             if (B <= 256 && !1 == f) {
-                for (var z = new Uint8Array((V = Math.ceil((y * F) / 8)) * K), W = T[b], H = 0; H < K; H++) {
-                    var S = H * V,
-                        G = H * F;
-                    if (8 == y) for (var q = 0; q < F; q++) z[S + q] = W[G + q];
-                    else if (4 == y) for (var q = 0; q < F; q++) z[S + (q >> 1)] |= W[G + q] << (4 - (1 & q) * 4);
-                    else if (2 == y) for (var q = 0; q < F; q++) z[S + (q >> 2)] |= W[G + q] << (6 - (3 & q) * 2);
-                    else if (1 == y) for (var q = 0; q < F; q++) z[S + (q >> 3)] |= W[G + q] << (7 - (7 & q) * 1);
+                for (var z = new Uint8Array((V = Math.ceil((y * F) / 8)) * K), H = T[b], W = 0; W < K; W++) {
+                    var S = W * V,
+                        G = W * F;
+                    if (8 == y) for (var q = 0; q < F; q++) z[S + q] = H[G + q];
+                    else if (4 == y) for (var q = 0; q < F; q++) z[S + (q >> 1)] |= H[G + q] << (4 - (1 & q) * 4);
+                    else if (2 == y) for (var q = 0; q < F; q++) z[S + (q >> 2)] |= H[G + q] << (6 - (3 & q) * 2);
+                    else if (1 == y) for (var q = 0; q < F; q++) z[S + (q >> 3)] |= H[G + q] << (7 - (7 & q) * 1);
                 }
                 (($ = z), (v = 3), (U = 1));
             } else if (!1 == x && 1 == E.length) {

@@ -1,4 +1,4 @@
-n.d(t, { UnifiedCheckoutFlowManagerSingletons: () => C });
+n.d(t, { UnifiedCheckoutFlowManagerSingletons: () => h });
 var l = n(75304),
     i = n(675219);
 let r = null,
@@ -10,7 +10,7 @@ let r = null,
     d = null,
     m = null,
     p = null,
-    C = {
+    h = {
         [l.C.ORB_CHECKOUT]: {
             get: function () {
                 return (null == r && (r = new i.od({ checkoutFlow: l.C.ORB_CHECKOUT })), r);

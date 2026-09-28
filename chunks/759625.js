@@ -2,8 +2,8 @@ n.d(t, { A: () => d });
 var r = n(477900);
 n(582128);
 var l = n(939249),
-    i = n(834730),
-    o = n(147925),
+    o = n(834730),
+    i = n(147925),
     a = n(807973),
     s = n(898612),
     u = n(232492),
@@ -24,20 +24,20 @@ function d(e) {
             (0, r.jsxs)("div", {
                 className: c.op,
                 children: [
-                    (0, r.jsx)(i.E, {
+                    (0, r.jsx)(o.E, {
                         variant: "text-md/medium",
                         color: "text-strong",
                         className: c.UU,
                         children: (0, s.A)(t),
                     }),
-                    (0, r.jsx)(i.E, {
+                    (0, r.jsx)(o.E, {
                         color: "interactive-text-default",
                         variant: "text-sm/normal",
                         children: t.description,
                     }),
                 ],
             }),
-            (0, r.jsx)(o.A, { direction: o.A.Directions.RIGHT, className: c.OW }),
+            (0, r.jsx)(i.A, { direction: i.A.Directions.RIGHT, className: c.OW }),
         ],
     });
 }

@@ -212,8 +212,8 @@ var L = function e(t) {
     V = N.call(A, String.prototype.slice),
     U = N.call(A, RegExp.prototype.exec),
     z = /[^%.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|%$))/g,
-    W = /\\(\\)?/g,
-    H = function (e) {
+    H = /\\(\\)?/g,
+    W = function (e) {
         var t = V(e, 0, 1),
             r = V(e, -1);
         if ("%" === t && "%" !== r) throw new u("invalid intrinsic syntax, expected closing `%`");
@@ -221,7 +221,7 @@ var L = function e(t) {
         var n = [];
         return (
             $(e, z, function (e, t, r, i) {
-                n[n.length] = r ? $(i, W, "$1") : t || e;
+                n[n.length] = r ? $(i, H, "$1") : t || e;
             }),
             n
         );
@@ -242,7 +242,7 @@ e.exports = function (e, t) {
     if (arguments.length > 1 && "boolean" != typeof t) throw new c('"allowMissing" argument must be a boolean');
     if (null === U(/^%?[^%]*%?$/, e))
         throw new u("`%` may not be present anywhere but at the beginning and end of the intrinsic name");
-    var r = H(e),
+    var r = W(e),
         n = r.length > 0 ? r[0] : "",
         i = G("%" + n + "%", t),
         o = i.name,

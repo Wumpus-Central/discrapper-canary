@@ -754,7 +754,7 @@ function z(e, t, r) {
     }),
         (n["[[initializedIntlObject]]"] = !0));
     var a = I(t),
-        r = H(r, "any", "date"),
+        r = W(r, "any", "date"),
         s = new Z();
     ((E = F(r, "localeMatcher", "string", new ee("lookup", "best fit"), "best fit")), (s["[[localeMatcher]]"] = E));
     var f = b.DateTimeFormat,
@@ -767,9 +767,9 @@ function z(e, t, r) {
     var h = p["[[dataLocale]]"],
         m = r.timeZone;
     if (void 0 !== m && "UTC" !== (m = er(m))) throw RangeError("timeZone is not supported.");
-    for (var v in ((n["[[timeZone]]"] = m), (s = new Z()), W))
-        if (u.call(W, v)) {
-            var y = F(r, v, "string", W[v]);
+    for (var v in ((n["[[timeZone]]"] = m), (s = new Z()), H))
+        if (u.call(H, v)) {
+            var y = F(r, v, "string", H[v]);
             s["[[" + v + "]]"] = y;
         }
     var g,
@@ -777,8 +777,8 @@ function z(e, t, r) {
         S = d[h],
         x = ((g = S.formats), "[object Array]" === Object.prototype.toString.call(g) ? g : o.createDateTimeFormats(g)),
         E = F(r, "formatMatcher", "string", new ee("basic", "best fit"), "best fit");
-    for (var v in ((S.formats = x), (_ = "basic" === E ? G(s, x) : G(s, x, !0)), W))
-        if (u.call(W, v) && u.call(_, v)) {
+    for (var v in ((S.formats = x), (_ = "basic" === E ? G(s, x) : G(s, x, !0)), H))
+        if (u.call(H, v) && u.call(_, v)) {
             var k = _[v];
             n["[[" + v + "]]"] = k;
         }
@@ -829,7 +829,7 @@ function z(e, t, r) {
 }),
     c(a, "DateTimeFormat", { configurable: !0, writable: !0, value: U }),
     c(U, "prototype", { writable: !1 }));
-var W = {
+var H = {
     weekday: ["narrow", "short", "long"],
     era: ["narrow", "short", "long"],
     year: ["2-digit", "numeric"],
@@ -840,7 +840,7 @@ var W = {
     second: ["2-digit", "numeric"],
     timeZoneName: ["short", "long"],
 };
-function H(e, t, r) {
+function W(e, t, r) {
     if (void 0 === e) e = null;
     else {
         var n = en(e);
@@ -862,8 +862,8 @@ function G(e, t, r) {
     for (var n, i = -1 / 0, o = 0, a = t.length; o < a;) {
         var s = t[o],
             l = 0;
-        for (var c in W)
-            if (u.call(W, c)) {
+        for (var c in H)
+            if (u.call(H, c)) {
                 var d = e["[[" + c + "]]"],
                     p = u.call(s, c) ? s[c] : void 0;
                 if (void 0 === d && void 0 !== p) l -= 20;
@@ -923,7 +923,7 @@ function Y(e, t) {
         f = r["[[dataLocale]]"],
         d = b.DateTimeFormat["[[localeData]]"][f].calendars,
         p = r["[[calendar]]"];
-    for (var h in W)
+    for (var h in H)
         if (u.call(r, "[[" + h + "]]")) {
             var m,
                 v,
@@ -1088,7 +1088,7 @@ function ei(e) {
         if (isNaN(e)) return "Invalid Date";
         var t = arguments[0],
             r = arguments[1],
-            r = H(r, "any", "all");
+            r = W(r, "any", "all");
         return Y(new U(t, r), e);
     }),
     (X.Date.toLocaleDateString = function () {
@@ -1098,7 +1098,7 @@ function ei(e) {
         if (isNaN(e)) return "Invalid Date";
         var t = arguments[0],
             r = arguments[1],
-            r = H(r, "date", "date");
+            r = W(r, "date", "date");
         return Y(new U(t, r), e);
     }),
     (X.Date.toLocaleTimeString = function () {
@@ -1108,7 +1108,7 @@ function ei(e) {
         if (isNaN(e)) return "Invalid Date";
         var t = arguments[0],
             r = arguments[1],
-            r = H(r, "time", "time");
+            r = W(r, "time", "time");
         return Y(new U(t, r), e);
     }),
     c(a, "__applyLocaleSensitivePrototypes", {

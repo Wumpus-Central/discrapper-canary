@@ -118,7 +118,7 @@ function M(e) {
             pointerType: null,
             disposables: [],
         }),
-        { addGlobalListener: W, removeAllGlobalListeners: H } = (0, S.A)(),
+        { addGlobalListener: H, removeAllGlobalListeners: W } = (0, S.A)(),
         G = (0, b.useCallback)(
             (e, t) => {
                 let n = z.current;
@@ -174,14 +174,14 @@ function M(e) {
                     (t.isOverTarget = !1),
                     (t.activePointerId = null),
                     (t.pointerType = null),
-                    H(),
+                    W(),
                     B || f(t.target),
                     t.disposables))
                         r();
                     t.disposables = [];
                 }
             },
-            [B, H, q],
+            [B, W, q],
         ),
         Z = (0, _.J)(Q);
     (0, b.useEffect)(() => {
@@ -224,7 +224,7 @@ function M(e) {
                                 (e.pointerType = "keyboard"),
                                 (i = G(t, "keyboard")));
                             let s = t.currentTarget;
-                            (W(
+                            (H(
                                 (0, o.TW)(t.currentTarget),
                                 "keyup",
                                 (0, n.c)((t) => {
@@ -276,7 +276,7 @@ function M(e) {
                             n = (0, p.sD)(e.target, r);
                         (Y(I(e.target, t), "keyboard", n),
                             n && er(t, e.target),
-                            H(),
+                            W(),
                             "Enter" !== t.key &&
                                 P(e.target) &&
                                 (0, p.sD)(e.target, r) &&
@@ -324,8 +324,8 @@ function M(e) {
                             ("hasPointerCapture" in s
                                 ? s.hasPointerCapture(t.pointerId) && s.releasePointerCapture(t.pointerId)
                                 : s.releasePointerCapture(t.pointerId)),
-                            W((0, o.TW)(t.currentTarget), "pointerup", r, !1),
-                            W((0, o.TW)(t.currentTarget), "pointercancel", n, !1));
+                            H((0, o.TW)(t.currentTarget), "pointerup", r, !1),
+                            H((0, o.TW)(t.currentTarget), "pointercancel", n, !1));
                     }
                     i && t.stopPropagation();
                 }),
@@ -366,7 +366,7 @@ function M(e) {
                                             e.target instanceof HTMLElement &&
                                             (r ? Z(t) : ((0, d.e)(e.target), e.target.click()));
                                     }, 80);
-                                (W(t.currentTarget, "click", () => (r = !0), !0),
+                                (H(t.currentTarget, "click", () => (r = !0), !0),
                                     e.disposables.push(() => clearTimeout(n)));
                             } else Z(t);
                             e.isOverTarget = !1;
@@ -380,7 +380,7 @@ function M(e) {
                 };
             }
             return t;
-        }, [W, L, N, H, B, ee, G, et, er]);
+        }, [H, L, N, W, B, ee, G, et, er]);
     return (
         (0, b.useEffect)(() => {
             if (!K) return;

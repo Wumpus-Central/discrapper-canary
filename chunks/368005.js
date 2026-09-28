@@ -1,1 +1,1 @@
-o.exports = { R: "moderationTag__2d9ce" };
+_.exports = { R: "moderationTag__2d9ce" };

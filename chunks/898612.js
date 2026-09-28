@@ -2,8 +2,8 @@ n.d(t, { A: () => m });
 var r = n(477900);
 n(582128);
 var l = n(191023),
-    i = n(140735),
-    o = n(963027),
+    o = n(140735),
+    i = n(963027),
     a = n(47167),
     s = n(713654),
     u = n(403362),
@@ -19,7 +19,7 @@ function p(e) {
     let d = n.isMediaChannel() ? l.ImageIcon : (0, s._U)(n.type);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(i.A, { children: (0, o.Ay)({ channel: n }) }),
+            (0, r.jsx)(o.A, { children: (0, i.Ay)({ channel: n }) }),
             (0, r.jsxs)("div", {
                 "aria-hidden": !0,
                 children: [null != d && (0, r.jsx)(d, { className: C.K, "aria-hidden": !0 }), u],

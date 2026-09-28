@@ -1,4 +1,4 @@
-n.d(t, { t: () => C });
+n.d(t, { t: () => h });
 var l = n(477900);
 n(582128);
 var i = n(503698),
@@ -11,13 +11,13 @@ var i = n(503698),
     d = n(165191),
     m = n(238017),
     p = n(254125);
-function C(e) {
+function h(e) {
     let { isShopGift: t } = e,
         {
             giftRecipient: n,
             selectedGiftStyle: i,
-            emojiConfetti: C,
-            soundEffect: h,
+            emojiConfetti: h,
+            soundEffect: C,
             setEmojiConfetti: f,
             setSoundEffect: E,
         } = (0, s.Pv)(),
@@ -49,12 +49,12 @@ function C(e) {
                                 className: r()(p.b7, p.Ow),
                                 children: [
                                     (0, l.jsx)(o.A, {
-                                        sound: h,
+                                        sound: C,
                                         onSelect: function (e) {
                                             null != E && E(null == e ? void 0 : e);
                                         },
                                     }),
-                                    (0, l.jsx)(m.A, { setEmojiConfetti: f, emojiConfetti: null == C ? void 0 : C }),
+                                    (0, l.jsx)(m.A, { setEmojiConfetti: f, emojiConfetti: null == h ? void 0 : h }),
                                 ],
                             }),
                     ],

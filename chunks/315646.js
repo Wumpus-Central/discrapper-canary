@@ -85,27 +85,27 @@ e.exports = function e(t, n, i, s) {
         S,
         C,
         M = n || {};
-    if (H(M, "quoteStyle") && !H(j, M.quoteStyle)) throw TypeError('option "quoteStyle" must be "single" or "double"');
+    if (W(M, "quoteStyle") && !W(j, M.quoteStyle)) throw TypeError('option "quoteStyle" must be "single" or "double"');
     if (
-        H(M, "maxStringLength") &&
+        W(M, "maxStringLength") &&
         ("number" == typeof M.maxStringLength
             ? M.maxStringLength < 0 && M.maxStringLength !== 1 / 0
             : null !== M.maxStringLength)
     )
         throw TypeError('option "maxStringLength", if provided, must be a positive integer, Infinity, or `null`');
-    var F = !H(M, "customInspect") || M.customInspect;
+    var F = !W(M, "customInspect") || M.customInspect;
     if ("boolean" != typeof F && "symbol" !== F)
         throw TypeError("option \"customInspect\", if provided, must be `true`, `false`, or `'symbol'`");
     if (
-        H(M, "indent") &&
+        W(M, "indent") &&
         null !== M.indent &&
         "	" !== M.indent &&
         !(parseInt(M.indent, 10) === M.indent && M.indent > 0)
     )
         throw TypeError('option "indent" must be "\\t", an integer > 0, or `null`');
-    if (H(M, "numericSeparator") && "boolean" != typeof M.numericSeparator)
+    if (W(M, "numericSeparator") && "boolean" != typeof M.numericSeparator)
         throw TypeError('option "numericSeparator", if provided, must be `true` or `false`');
-    var W = M.numericSeparator;
+    var H = M.numericSeparator;
     if (void 0 === t) return "undefined";
     if (null === t) return "null";
     if ("boolean" == typeof t) return t ? "true" : "false";
@@ -121,11 +121,11 @@ e.exports = function e(t, n, i, s) {
     if ("number" == typeof t) {
         if (0 === t) return 1 / 0 / t > 0 ? "0" : "-0";
         var et = String(t);
-        return W ? R(t, et) : et;
+        return H ? R(t, et) : et;
     }
     if ("bigint" == typeof t) {
         var er = String(t) + "n";
-        return W ? R(t, er) : er;
+        return H ? R(t, er) : er;
     }
     var en = void 0 === M.depth ? 5 : M.depth;
     if ((void 0 === i && (i = 0), i >= en && en > 0 && "object" == typeof t)) return V(t) ? "[Array]" : "[Object]";
@@ -143,7 +143,7 @@ e.exports = function e(t, n, i, s) {
     function eo(t, r, n) {
         if ((r && (s = k.call(s)).push(r), n)) {
             var o = { depth: M.depth };
-            return (H(M, "quoteStyle") && (o.quoteStyle = M.quoteStyle), e(t, o, i + 1, s));
+            return (W(M, "quoteStyle") && (o.quoteStyle = M.quoteStyle), e(t, o, i + 1, s));
         }
         return e(t, M, i + 1, s);
     }
@@ -321,13 +321,13 @@ e.exports = function e(t, n, i, s) {
     }
     return String(t);
 };
-var W =
+var H =
     Object.prototype.hasOwnProperty ||
     function (e) {
         return e in this;
     };
-function H(e, t) {
-    return W.call(e, t);
+function W(e, t) {
+    return H.call(e, t);
 }
 function G(e) {
     return m.call(e);
@@ -362,7 +362,7 @@ function ee(e, t) {
         i = [];
     if (n) {
         i.length = e.length;
-        for (var o = 0; o < e.length; o++) i[o] = H(e, o) ? t(e[o], e) : "";
+        for (var o = 0; o < e.length; o++) i[o] = W(e, o) ? t(e[o], e) : "";
     }
     var a = "function" == typeof M ? M(e) : [];
     if (A) {
@@ -370,7 +370,7 @@ function ee(e, t) {
         for (var s = 0; s < a.length; s++) r["$" + a[s]] = a[s];
     }
     for (var l in e)
-        if (H(e, l) && (!n || String(Number(l)) !== l || !(l < e.length)))
+        if (W(e, l) && (!n || String(Number(l)) !== l || !(l < e.length)))
             if (A && r["$" + l] instanceof Symbol) continue;
             else S.call(/[^\w$]/, l) ? i.push(t(l, e) + ": " + t(e[l], e)) : i.push(l + ": " + t(e[l], e));
     if ("function" == typeof M)

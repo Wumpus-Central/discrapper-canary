@@ -4,8 +4,8 @@ var i = n(17928),
     r = n(228366),
     s = n(785796);
 let a = "MaintenanceStore",
-    E = null,
     o = null,
+    E = null,
     c = null;
 class u extends i.Ay.Store {
     static displayName = "MaintenanceStore";
@@ -13,25 +13,25 @@ class u extends i.Ay.Store {
         c = l.w.get(a);
     }
     getIncident() {
-        return E;
+        return o;
     }
     getScheduledMaintenance() {
-        let e = o?.scheduled_until ?? o?.scheduled_for;
-        return null != o && o.id !== c && (null == e || Date.now() < new Date(e).getTime()) ? o : null;
+        let e = E?.scheduled_until ?? E?.scheduled_for;
+        return null != E && E.id !== c && (null == e || Date.now() < new Date(e).getTime()) ? E : null;
     }
 }
 let _ = new u(r.h, {
     CONNECTION_OPEN: function () {
-        ((E = null), s.A.checkScheduledMaintenances());
+        ((o = null), s.A.checkScheduledMaintenances());
     },
     STATUS_PAGE_INCIDENT: function (e) {
-        E = e.incident;
+        o = e.incident;
     },
     STATUS_PAGE_SCHEDULED_MAINTENANCE: function (e) {
-        o = e.maintenance;
+        E = e.maintenance;
     },
     STATUS_PAGE_SCHEDULED_MAINTENANCE_ACK: function () {
-        if (null == o) return !1;
-        ((c = o.id), l.w.set(a, c));
+        if (null == E) return !1;
+        ((c = E.id), l.w.set(a, c));
     },
 });

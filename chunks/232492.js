@@ -1,8 +1,8 @@
 n.d(t, { A: () => d });
 var r = n(17928),
     l = n(963027),
-    i = n(262763),
-    o = n(976860),
+    o = n(262763),
+    i = n(976860),
     a = n(734057),
     s = n(977997),
     u = n(499211),
@@ -16,13 +16,13 @@ function d(e, t) {
         navigateToChannel: function () {
             null != n &&
                 (h
-                    ? i.A.handleVoiceConnect({
+                    ? o.A.handleVoiceConnect({
                           channel: n,
                           connected: s.A.isInChannel(n.id),
                           needSubscriptionToAccess: !1,
                           routeDirectlyToChannel: !0,
                       })
-                    : (0, o.pX)(c.BVt.CHANNEL(e, n.id)));
+                    : (0, i.pX)(c.BVt.CHANNEL(e, n.id)));
         },
         ariaLabel: (0, l.Ay)({ channel: n }),
     };

@@ -10,8 +10,8 @@ var l = n(477900),
     d = n(463376),
     m = n(266060),
     p = n(951305),
-    C = n(263532),
-    h = n(473617),
+    h = n(263532),
+    C = n(473617),
     f = n(699595),
     E = n(558620),
     S = n(669510),
@@ -21,8 +21,8 @@ var l = n(477900),
     A = n(45938),
     P = n(158045),
     v = n(683071),
-    _ = n(834730),
-    x = n(212739);
+    x = n(834730),
+    _ = n(212739);
 n(216238);
 var T = n(202541),
     N = n(181666),
@@ -89,8 +89,8 @@ function Z(e) {
               children: (0, l.jsxs)("div", {
                   className: V.zN,
                   children: [
-                      (0, l.jsx)(_.E, { variant: "text-sm/medium", color: "currentColor", children: n }),
-                      null != o && (0, l.jsx)(_.E, { variant: "text-sm/medium", color: "currentColor", children: o }),
+                      (0, l.jsx)(x.E, { variant: "text-sm/medium", color: "currentColor", children: n }),
+                      null != o && (0, l.jsx)(x.E, { variant: "text-sm/medium", color: "currentColor", children: o }),
                   ],
               }),
           });
@@ -150,7 +150,7 @@ function en(e) {
             expressCheckoutSubmitting: V,
             shouldUseStripeExpressCheckout: $,
             premiumPlanOptions: en,
-        } = (0, C.t4)((e) => ({
+        } = (0, h.t4)((e) => ({
             checkoutInvoicePreview: e.checkoutInvoicePreview,
             checkoutPriceOptions: e.checkoutPriceOptions,
             checkoutInvoiceError: e.checkoutInvoiceError,
@@ -177,7 +177,7 @@ function en(e) {
             purchaseDisabled: ep,
         } = (function (e) {
             let { selectedPlanId: t, verifiedTrialId: n, metadata: l, isVerifiedTrial: r = !1 } = e,
-                { priceOptions: a, activeSubscription: s } = (0, C.t4)((e) => ({
+                { priceOptions: a, activeSubscription: s } = (0, h.t4)((e) => ({
                     priceOptions: e.checkoutPriceOptions,
                     activeSubscription: e.activeSubscription,
                 })),
@@ -196,7 +196,7 @@ function en(e) {
                             renewalInvoicePreview: m,
                             quantity: E,
                             primaryInvoicesError: S,
-                        } = (0, C.t4)((e) => ({
+                        } = (0, h.t4)((e) => ({
                             selectedSkuId: e.selectedSkuId,
                             setFetchCheckoutInvoicePreviewRequest: e.setFetchCheckoutInvoicePreviewRequest,
                             setFetchRenewalInvoicePreviewRequest: e.setFetchRenewalInvoicePreviewRequest,
@@ -211,12 +211,12 @@ function en(e) {
                             purchaseDisabled: g,
                             newItems: A,
                             preventInvoiceFetch: P,
-                        } = (0, h.TP)({ selectedPlanId: t, priceOptions: n }),
+                        } = (0, C.TP)({ selectedPlanId: t, priceOptions: n }),
                         {
                             universalInvoiceRequestParams: v,
-                            checkoutInvoiceRequestParams: _,
-                            renewalInvoiceRequestParams: x,
-                        } = (0, h.jq)({
+                            checkoutInvoiceRequestParams: x,
+                            renewalInvoiceRequestParams: _,
+                        } = (0, C.jq)({
                             items: A,
                             preventFetch: P,
                             priceOptions: n,
@@ -230,10 +230,10 @@ function en(e) {
                                           type: "premium_one_time_gift_purchase_invoice",
                                           params: { ...v, skuId: s, subscriptionPlanId: t, quantity: E },
                                       }
-                                    : { type: "subscription_checkout_invoice", params: _ },
-                            [v, _, y, t, s, E],
+                                    : { type: "subscription_checkout_invoice", params: x },
+                            [v, x, y, t, s, E],
                         ),
-                        N = i.useMemo(() => (y ? null : { type: "subscription_renewal_invoice", params: x }), [x, y]);
+                        N = i.useMemo(() => (y ? null : { type: "subscription_renewal_invoice", params: _ }), [_, y]);
                     (i.useEffect(() => {
                         o(T);
                     }, [T, o]),
@@ -273,11 +273,11 @@ function en(e) {
                 proratedInvoicePreview: d,
             };
         })({ selectedPlanId: ei, verifiedTrialId: t, metadata: L, isVerifiedTrial: eu }),
-        eC = (0, m.K)(),
-        eh = es ?? ea,
+        eh = (0, m.K)(),
+        eC = es ?? ea,
         { giftRecipient: ef } = (0, p.Pv)(),
         eE = H && (0, A.Ik)(ef),
-        eS = (0, C.t4)((e) => e.getIsInOneStepSubscriptionCheckout({ isTrial: eu })) && !eo && !Y,
+        eS = (0, h.t4)((e) => e.getIsInOneStepSubscriptionCheckout({ isTrial: eu })) && !eo && !Y,
         ey = L?.guild_id ?? void 0,
         eI = (0, r.A)({ forceFetch: !1, excludeReverseTrial: !1, excludeReverseTrialFromCountdown: !0 }),
         { paymentSources: eg } = (0, u.j)(),
@@ -285,10 +285,10 @@ function en(e) {
             hasEntitlements: eA,
             paymentSourceType: eP,
             isPrepaid: ev,
-            paymentSourceOptionalWarningCopy: e_,
+            paymentSourceOptionalWarningCopy: ex,
         } = (function (e) {
             let { subscriptionPlan: t, paymentSources: n } = e,
-                { priceOptions: l, isGift: r } = (0, C.t4)((e) => ({
+                { priceOptions: l, isGift: r } = (0, h.t4)((e) => ({
                     priceOptions: e.checkoutPriceOptions,
                     isGift: e.isGift,
                 })),
@@ -308,10 +308,10 @@ function en(e) {
                 hasEntitlements: u,
             };
         })({ subscriptionPlan: el, paymentSources: eg }),
-        ex = em ?? D,
+        e_ = em ?? D,
         eT = i.useMemo(
-            () => null != eh && null != eh.discount && null != ex && (0, I.Ro)(ex, eh.discount.id),
-            [eh, ex],
+            () => null != eC && null != eC.discount && null != e_ && (0, I.Ro)(e_, eC.discount.id),
+            [eC, e_],
         ),
         eN = (0, l.jsx)(J, {
             label: b.intl.string(b.t["u+Cw58"]),
@@ -340,10 +340,10 @@ function en(e) {
                     currentInvoiceHasMatchingDiscountOffer: u,
                     discountOffer: d,
                     isEligibleForTrial: m,
-                    isPremiumGroupPurchase: h,
+                    isPremiumGroupPurchase: C,
                     fractionalPremiumInfo: f,
                 } = e,
-                { isGift: S, activeSubscription: y } = (0, C.t4)((e) => ({
+                { isGift: S, activeSubscription: y } = (0, h.t4)((e) => ({
                     isGift: e.isGift,
                     activeSubscription: e.activeSubscription,
                 })),
@@ -380,14 +380,14 @@ function en(e) {
                 }, [k, u, d, L, s, n, r, S, A]),
                 D = (function (e) {
                     let { skuId: t, isGift: n } = e,
-                        r = (0, x.O)();
+                        r = (0, _.O)();
                     return i.useMemo(
                         () =>
                             n || t !== T.pe.TIER_2 || !1 === r
                                 ? null
                                 : (0, l.jsx)(v.w, {
                                       type: "info",
-                                      children: (0, l.jsx)(_.E, {
+                                      children: (0, l.jsx)(x.E, {
                                           variant: "text-sm/medium",
                                           children: b.intl.format(N.default.Urtyu9, { days: 7 }),
                                       }),
@@ -410,22 +410,22 @@ function en(e) {
                                   }),
                                   key: "fractional-premium-notice",
                               })
-                            : h && e.push({ type: "info", message: (0, M.Nn)(), key: "premium-group-purchase-notice" }),
+                            : C && e.push({ type: "info", message: (0, M.Nn)(), key: "premium-group-purchase-notice" }),
                         null != D && e.push({ directContent: D, key: "xbox-perks-notice" }),
                         e.length > 0 ? e : null
                     );
-                }, [w, f, m, P, o, h, D]),
+                }, [w, f, m, P, o, C, D]),
                 promotionalNoticeContent: U ?? G ?? null,
             };
         })({
             planGroup: n,
             yearlySavingsPercent: eR,
             isGiftingPremiumYearly: ej,
-            mainPreviewInvoice: ex,
+            mainPreviewInvoice: e_,
             discriminatedInvoicePreview: ec,
             subscriptionPeriodEnd: ed,
             currentInvoiceHasMatchingDiscountOffer: eT,
-            discountOffer: eh,
+            discountOffer: eC,
             isEligibleForTrial: er,
             isPremiumGroupPurchase: eo,
             fractionalPremiumInfo: eI,
@@ -433,10 +433,10 @@ function en(e) {
         ew = i.useMemo(() => {
             let e = [];
             (null != k && "" !== k && e.push({ type: "warning", message: k, key: "review-warning" }),
-                null != e_ && e.push({ type: "info", message: e_, key: "payment-source-optional-warning" }));
+                null != ex && e.push({ type: "info", message: ex, key: "payment-source-optional-warning" }));
             let t = [...e, ...(eL ?? [])];
             return t.length > 0 ? t : null;
-        }, [eL, k, e_]),
+        }, [eL, k, ex]),
         eU = null != ec ? ec.invoicePreview : null,
         { priceOptions: eD, planPricesLoading: eG } = (0, P.Pr)(G, eU, F),
         eF = {
@@ -478,7 +478,7 @@ function en(e) {
         null != ec.renewalInvoicePreview
     ) {
         let e = (0, et.Gj)(ec.invoicePreview, ec.renewalInvoicePreview, eB, {
-            discountOffer: eh,
+            discountOffer: eC,
             isSubscriptionUpdate: null != W,
             fractionalPremiumInfo: eI,
         });
@@ -489,7 +489,7 @@ function en(e) {
             : (0, l.jsx)(ee._, {
                   type: ec.type,
                   invoicePreview: ec.invoicePreview,
-                  storeListing: eC,
+                  storeListing: eh,
                   subscriptionPlan: el,
                   isPrepaidPaymentSource: ev,
                   giftRecipient: ef,

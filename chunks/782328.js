@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     nM: "row__06c2b",
     uW: "section__06c2b",
     c6: "width100__06c2b section__06c2b",

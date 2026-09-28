@@ -218,10 +218,10 @@ function x(e) {
                   }
                 : void 0,
         ));
-    let W = (0, b.useRef)(E),
-        H = (0, b.useRef)(!1);
+    let H = (0, b.useRef)(E),
+        W = (0, b.useRef)(!1);
     (0, b.useEffect)(() => {
-        if (W.current) {
+        if (H.current) {
             let e = null;
             ("first" === E && (e = w.getFirstKey?.() ?? null), "last" === E && (e = w.getLastKey?.() ?? null));
             let t = r.selectedKeys;
@@ -235,7 +235,7 @@ function x(e) {
             (r.setFocused(!0),
                 r.setFocusedKey(e),
                 null == e && !I && x.current && (0, i.l)(x.current),
-                r.collection.size > 0 && ((W.current = !1), (H.current = !0)));
+                r.collection.size > 0 && ((H.current = !1), (W.current = !0)));
         }
     });
     let G = (0, b.useRef)(r.focusedKey),
@@ -244,14 +244,14 @@ function x(e) {
         if (
             r.isFocused &&
             null != r.focusedKey &&
-            (r.focusedKey !== G.current || H.current) &&
+            (r.focusedKey !== G.current || W.current) &&
             D.current &&
             x.current
         ) {
             let e = (0, l.ME)(),
                 t = (0, u.au)(x, r.focusedKey);
             if (!(t instanceof HTMLElement)) return;
-            ("keyboard" === e || H.current) &&
+            ("keyboard" === e || W.current) &&
                 (q.current && cancelAnimationFrame(q.current),
                 (q.current = requestAnimationFrame(() => {
                     D.current &&
@@ -260,7 +260,7 @@ function x(e) {
         }
         (!I && r.isFocused && null == r.focusedKey && null != G.current && x.current && (0, i.l)(x.current),
             (G.current = r.focusedKey),
-            (H.current = !1));
+            (W.current = !1));
     }),
         (0, b.useEffect)(
             () => () => {

@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => C, O0: () => f });
+n.d(t, { Ay: () => h, O0: () => f });
 var l = n(477900);
 n(582128);
 var i = n(503698),
@@ -11,14 +11,14 @@ var i = n(503698),
     d = n(812095),
     m = n(421108),
     p = n(898744);
-function C(e) {
+function h(e) {
     let {
         className: t,
         Icon: n = a.TagIcon,
         iconSize: i,
         customGraphic: m,
-        gradientColor: C = "green",
-        tooltip: h,
+        gradientColor: h = "green",
+        tooltip: C,
         text: f,
         trailing: E,
         ...S
@@ -26,7 +26,7 @@ function C(e) {
     function y() {
         return (0, l.jsx)(c.A, {
             className: r()(p.Xx, t),
-            gradientColor: C,
+            gradientColor: h,
             ...(null != m ? { customGraphic: m } : { Icon: n, iconSize: i }),
             ...S,
             children: (0, l.jsxs)("div", {
@@ -42,15 +42,15 @@ function C(e) {
             }),
         });
     }
-    return null != h && "object" == typeof h
-        ? (0, l.jsx)(o.u, { assetSize: 48, asContainer: !0, element: "div", ...h, children: y() })
-        : null != h && "string" == typeof h
-          ? (0, l.jsx)(u.m, { text: h, asContainer: !0, tag: "div", children: y() })
+    return null != C && "object" == typeof C
+        ? (0, l.jsx)(o.u, { assetSize: 48, asContainer: !0, element: "div", ...C, children: y() })
+        : null != C && "string" == typeof C
+          ? (0, l.jsx)(u.m, { text: C, asContainer: !0, tag: "div", children: y() })
           : y();
 }
-function h(e) {
+function C(e) {
     let { trailingText: t, ...n } = e;
-    return (0, l.jsx)(C, {
+    return (0, l.jsx)(h, {
         trailing:
             null != t
                 ? (0, l.jsx)(s.E, {
@@ -65,5 +65,5 @@ function h(e) {
 function f(e) {
     let { text: t, endDatetime: n, ...i } = e,
         r = (0, m.dA)(n);
-    return null != n && null == r ? null : (0, l.jsx)(h, { text: t, trailingText: null != r ? r : void 0, ...i });
+    return null != n && null == r ? null : (0, l.jsx)(C, { text: t, trailingText: null != r ? r : void 0, ...i });
 }

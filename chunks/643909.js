@@ -1,4 +1,5 @@
 !(function (e, t) {
+    "use strict";
     function r(e, t) {
         var r = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
@@ -705,8 +706,8 @@
                   );
               },
         z = B("auBankAccount", K),
-        W = B("card", K),
-        H = B("cardNumber", K),
+        H = B("card", K),
+        W = B("cardNumber", K),
         G = B("cardExpiry", K),
         q = B("cardCvc", K),
         Y = B("fpxBank", K),
@@ -729,9 +730,9 @@
         (e.AfterpayClearpayMessageElement = eu),
         (e.AuBankAccountElement = z),
         (e.CardCvcElement = q),
-        (e.CardElement = W),
+        (e.CardElement = H),
         (e.CardExpiryElement = G),
-        (e.CardNumberElement = H),
+        (e.CardNumberElement = W),
         (e.CheckoutProvider = F),
         (e.CurrencySelectorElement = er),
         (e.Elements = M),

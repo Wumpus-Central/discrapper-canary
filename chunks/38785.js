@@ -1,8 +1,8 @@
-n.d(t, { T_: () => I, Ed: () => f });
+n.d(t, { T_: () => P, Ed: () => y });
 var r = n(477900),
     l = n(582128),
-    i = n(503698),
-    o = n.n(i),
+    o = n(503698),
+    i = n.n(o),
     a = n(683071),
     s = n(725836);
 n(321073);
@@ -16,26 +16,26 @@ n(652215);
 var m = n(583741),
     E = n(375708),
     A = n(66414);
-function f(e) {
+function y(e) {
     let { className: t, shouldShowUnifiedHeader: n, headerBadgeConfig: l } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             n ? (0, r.jsx)(s.UY, { children: (0, r.jsx)(h.f, { headerBadgeConfig: l }) }) : null,
-            (0, r.jsx)(C.DJ, { className: o()(A.g4, t) }),
+            (0, r.jsx)(C.DJ, { className: i()(A.g4, t) }),
         ],
     });
 }
-function y(e) {
+function f(e) {
     return null != e && "object" == typeof e && "message" in e && "type" in e
         ? (0, r.jsx)(a.w, { type: e.type, hidden: e.hidden, children: e.message }, e.key)
         : (0, r.jsx)(l.Fragment, { children: e.directContent }, e.key);
 }
-function g(e) {
+function S(e) {
     return null == e || "" === e;
 }
-function S(e) {
+function g(e) {
     let { children: t, showUpperNoticesAboveGlobalNotices: n = !1 } = e,
-        { errorMessage: i, richNotices: o } = (function () {
+        { errorMessage: o, richNotices: i } = (function () {
             let { errorMessage: e } = (0, u.j)({}),
                 t = (function () {
                     let { paymentSourceId: e, checkoutPaymentSources: t } = (0, d.t4)((e) => ({
@@ -44,8 +44,8 @@ function S(e) {
                         })),
                         {
                             relocationCountry: n,
-                            relocationCurrencyCode: i,
-                            willForfeitGiftCardBalance: o,
+                            relocationCurrencyCode: o,
+                            willForfeitGiftCardBalance: i,
                         } = l.useMemo(() => {
                             let n = null != e ? t.find((t) => t.id === e) : null;
                             return {
@@ -61,12 +61,12 @@ function S(e) {
                                 : {
                                       directContent: (0, r.jsx)(c.c, {
                                           relocationCountry: n,
-                                          relocationCurrencyCode: i,
-                                          willForfeitGiftCardBalance: o,
+                                          relocationCurrencyCode: o,
+                                          willForfeitGiftCardBalance: i,
                                       }),
                                       key: "store-relocation-notice",
                                   },
-                        [n, i, o],
+                        [n, o, i],
                     );
                 })();
             return {
@@ -80,12 +80,12 @@ function S(e) {
         s = l.useRef(null);
     return (
         l.useEffect(() => {
-            g(i) || null == s.current || s.current.scrollIntoView({ behavior: "smooth" });
-        }, [i]),
+            S(o) || null == s.current || s.current.scrollIntoView({ behavior: "smooth" });
+        }, [o]),
         l.useMemo(() => {
-            if (!(!g(i) || o.length > 0 || null != t)) return null;
+            if (!(!S(o) || i.length > 0 || null != t)) return null;
             let e = (0, r.jsxs)(r.Fragment, {
-                children: [g(i) ? null : (0, r.jsx)(a.w, { type: "critical", children: i }), o.map(y)],
+                children: [S(o) ? null : (0, r.jsx)(a.w, { type: "critical", children: o }), i.map(f)],
             });
             return (0, r.jsx)("div", {
                 ref: s,
@@ -94,7 +94,7 @@ function S(e) {
                     ? (0, r.jsxs)(r.Fragment, { children: [t, e] })
                     : (0, r.jsxs)(r.Fragment, { children: [e, t] }),
             });
-        }, [i, o, t, n])
+        }, [o, i, t, n])
     );
 }
 function _(e) {
@@ -105,65 +105,65 @@ function _(e) {
                 : Array.isArray(e)
                   ? 0 === e.length
                       ? null
-                      : (0, r.jsx)(r.Fragment, { children: e.map((e) => y(e)) })
+                      : (0, r.jsx)(r.Fragment, { children: e.map((e) => f(e)) })
                   : null != e
-                    ? y(e)
+                    ? f(e)
                     : null,
         [e],
     );
 }
-function P(e) {
-    let { upperInlineNoticeProps: t, shouldShowGlobalNotices: n, showUpperNoticesAboveGlobalNotices: i } = e,
-        o = _(t);
+function T(e) {
+    let { upperInlineNoticeProps: t, shouldShowGlobalNotices: n, showUpperNoticesAboveGlobalNotices: o } = e,
+        i = _(t);
     return l.useMemo(
         () =>
-            null != o || n
+            null != i || n
                 ? n
-                    ? null != o
-                        ? (0, r.jsx)(S, { showUpperNoticesAboveGlobalNotices: i, children: o })
-                        : (0, r.jsx)(S, {})
-                    : (0, r.jsx)("div", { className: A.dD, children: o })
+                    ? null != i
+                        ? (0, r.jsx)(g, { showUpperNoticesAboveGlobalNotices: o, children: i })
+                        : (0, r.jsx)(g, {})
+                    : (0, r.jsx)("div", { className: A.dD, children: i })
                 : null,
-        [n, o, i],
+        [n, i, o],
     );
 }
-function I(e) {
+function P(e) {
     let {
             upperInlineNoticeProps: t,
             planSelectContent: n,
             purchaseItemContent: l,
-            subscriptionDetailsContent: i,
+            subscriptionDetailsContent: o,
             isStepLoading: a,
             paymentMethodContent: u,
             invoiceSummaryContent: c,
             promotionalNoticeContent: d,
             legalContent: C,
-            invoiceTotalDueLabel: y = E.intl.string(m.default.R0cZsM),
-            invoiceTotalDueValue: g,
-            shouldShowGlobalNotices: S,
-            showUpperNoticesAboveGlobalNotices: I,
-            footerInlineNoticeProps: T,
+            invoiceTotalDueLabel: f = E.intl.string(m.default.R0cZsM),
+            invoiceTotalDueValue: S,
+            shouldShowGlobalNotices: g,
+            showUpperNoticesAboveGlobalNotices: P,
+            footerInlineNoticeProps: I,
             headerBadgeConfig: N,
             className: x,
         } = e,
-        k = _(T),
+        O = _(I),
         { setCheckoutFooterLineItemNode: v } = (0, s.ck)();
     return a
-        ? (0, r.jsx)(f, { className: x, shouldShowUnifiedHeader: !0 })
+        ? (0, r.jsx)(y, { className: x, shouldShowUnifiedHeader: !0 })
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsxs)("div", {
-                      className: o()(x, { [A.pg]: null == c }),
+                      className: i()(x, { [A.pg]: null == c }),
                       children: [
-                          (0, r.jsx)(P, {
+                          (0, r.jsx)(T, {
                               upperInlineNoticeProps: t,
-                              shouldShowGlobalNotices: S,
-                              showUpperNoticesAboveGlobalNotices: I,
+                              shouldShowGlobalNotices: g,
+                              showUpperNoticesAboveGlobalNotices: P,
                           }),
                           n,
                           null != n && null != l && (0, r.jsx)("div", { className: A.ls }),
                           l,
-                          null != i && (0, r.jsx)("div", { className: A.P3, children: i }),
+                          null != o && (0, r.jsx)("div", { className: A.P3, children: o }),
                           (0, r.jsx)("div", { className: A.Jv, children: u }),
                           null != c && (0, r.jsx)("div", { className: A.ZF, children: c }),
                       ],
@@ -172,10 +172,10 @@ function I(e) {
                   (0, r.jsxs)(s.bx, {
                       children: [
                           (0, r.jsx)("div", { ref: v }),
-                          null != y && null != g && (0, r.jsx)(p.Qf, { className: A.NR, label: y, value: g }),
+                          null != f && null != S && (0, r.jsx)(p.Qf, { className: A.NR, label: f, value: S }),
                           null != d ? (0, r.jsx)("div", { className: A.uh, children: d }) : null,
                           C,
-                          null != k ? (0, r.jsx)("div", { className: A.Uu, children: k }) : null,
+                          null != O ? (0, r.jsx)("div", { className: A.Uu, children: O }) : null,
                       ],
                   }),
               ],

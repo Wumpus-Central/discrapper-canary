@@ -1,1 +1,1 @@
-o.exports = { w: "linkIcon_ebf183" };
+_.exports = { w: "linkIcon_ebf183" };

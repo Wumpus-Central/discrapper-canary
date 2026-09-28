@@ -74,8 +74,8 @@ t.default = (function () {
                         value: "[^{}\\\\\\0-\\x1F\x7f \\t\\n\\r]",
                         description: "[^{}\\\\\\0-\\x1F\x7f \\t\\n\\r]",
                     },
-                    W = { type: "literal", value: "\\\\", description: '"\\\\\\\\"' },
-                    H = { type: "literal", value: "\\#", description: '"\\\\#"' },
+                    H = { type: "literal", value: "\\\\", description: '"\\\\\\\\"' },
+                    W = { type: "literal", value: "\\#", description: '"\\\\#"' },
                     G = { type: "literal", value: "\\{", description: '"\\\\{"' },
                     q = { type: "literal", value: "\\}", description: '"\\\\}"' },
                     Y = { type: "literal", value: "\\u", description: '"\\\\u"' },
@@ -398,11 +398,11 @@ t.default = (function () {
                         U.test(t.charAt(X)) ? ((e = t.charAt(X)), X++) : ((e = l), 0 === et && er(z)),
                         e === l &&
                             ((e = X),
-                            "\\\\" === t.substr(X, 2) ? ((r = "\\\\"), (X += 2)) : ((r = l), 0 === et && er(W)),
+                            "\\\\" === t.substr(X, 2) ? ((r = "\\\\"), (X += 2)) : ((r = l), 0 === et && er(H)),
                             r !== l && (r = "\\"),
                             (e = r) === l &&
                                 ((e = X),
-                                "\\#" === t.substr(X, 2) ? ((r = "\\#"), (X += 2)) : ((r = l), 0 === et && er(H)),
+                                "\\#" === t.substr(X, 2) ? ((r = "\\#"), (X += 2)) : ((r = l), 0 === et && er(W)),
                                 r !== l && (r = "\\#"),
                                 (e = r) === l &&
                                     ((e = X),

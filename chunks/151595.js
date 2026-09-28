@@ -10,8 +10,8 @@ var l = n(477900),
     d = n(287809),
     m = n(676279),
     p = n(573359),
-    C = n(659746),
-    h = n(375708),
+    h = n(659746),
+    C = n(375708),
     f = n(836949);
 let E = function (e) {
     let { type: t, text: n, buttonText: i, buttonLoading: E, hideClose: S, onClose: y } = e,
@@ -25,12 +25,12 @@ let E = function (e) {
             : "https://cdn.discordapp.com/assets/content/2688d55b4d0db6d6e603fdc61131d6e8d8c691bd159952078f166ea177fc970b.webm",
         P = (function (e) {
             switch (e) {
-                case C.Or.PREMIUM_UPDATED:
-                    return h.intl.string(h.t["75Wt0E"]);
-                case C.Or.PREMIUM_ACTIVATED:
-                    return h.intl.string(h.t.QWljxE);
+                case h.Or.PREMIUM_UPDATED:
+                    return C.intl.string(C.t["75Wt0E"]);
+                case h.Or.PREMIUM_ACTIVATED:
+                    return C.intl.string(C.t.QWljxE);
                 default:
-                    return h.intl.string(h.t.X79Az5);
+                    return C.intl.string(C.t.X79Az5);
             }
         })(t);
     return (0, l.jsxs)("div", {

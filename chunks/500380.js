@@ -1,14 +1,14 @@
-n.d(t, { t: () => c });
+n.d(t, { t: () => u });
 var l = n(96337),
     r = n(997101),
-    s = n(626584);
-let a = new Set(l.A.map((e) => e.alpha2)),
-    i = [`${r.d.AN}`, `${r.d.MI}`, `${r.d.TP}`],
-    o = new s.A("GetFlagEmoji");
-function c(e) {
+    a = n(626584);
+let i = new Set(l.A.map((e) => e.alpha2)),
+    s = [`${r.d.AN}`, `${r.d.MI}`, `${r.d.TP}`],
+    o = new a.A("GetFlagEmoji");
+function u(e) {
     if (null == e) return "";
     try {
-        if (i.includes(e) || !a.has(e)) return n(874629)("./1f30e.svg");
+        if (s.includes(e) || !i.has(e)) return n(874629)("./1f30e.svg");
         let t = e
             .toUpperCase()
             .split("")

@@ -92,30 +92,30 @@ function b(e) {
             (k && (k(), w.current?.dispatchEvent(new CustomEvent("react-aria-item-action", { bubbles: !0 }))),
                 D && w.current && M.open(w.current, e, U.href, U.routerOptions));
         },
-        W = { ref: w };
+        H = { ref: w };
     _
-        ? ((W.onPressStart = (e) => {
+        ? ((H.onPressStart = (e) => {
               ((B.current = e.pointerType),
                   ($.current = K),
                   "keyboard" !== e.pointerType || (j && " " !== e.key) || P(e));
           }),
           C
-              ? ((W.onPressUp = F
+              ? ((H.onPressUp = F
                     ? void 0
                     : (e) => {
                           "mouse" === e.pointerType && R && P(e);
                       }),
-                (W.onPress = F
+                (H.onPress = F
                     ? z
                     : (e) => {
                           "keyboard" !== e.pointerType && "mouse" !== e.pointerType && R && P(e);
                       }))
-              : (W.onPress = (e) => {
+              : (H.onPress = (e) => {
                     F || (N && "mouse" !== e.pointerType)
                         ? ("keyboard" !== e.pointerType || "Enter" === e.key) && z(e)
                         : "keyboard" !== e.pointerType && R && P(e);
                 }))
-        : ((W.onPressStart = (e) => {
+        : ((H.onPressStart = (e) => {
               ((B.current = e.pointerType),
                   ($.current = K),
                   (V.current = F),
@@ -123,7 +123,7 @@ function b(e) {
                       (("mouse" !== e.pointerType || F) && ("keyboard" !== e.pointerType || (L && " " !== e.key))) ||
                       P(e));
           }),
-          (W.onPress = (e) => {
+          (H.onPress = (e) => {
               ("touch" === e.pointerType ||
                   "pen" === e.pointerType ||
                   "virtual" === e.pointerType ||
@@ -131,13 +131,13 @@ function b(e) {
                   ("mouse" === e.pointerType && V.current)) &&
                   (j ? z(e) : R && P(e));
           }));
-    let H = (0, a.EG)(r.collection);
+    let W = (0, a.EG)(r.collection);
     if (
-        ((A["data-collection"] = H),
+        ((A["data-collection"] = W),
         (A["data-key"] = b),
-        (W.preventFocusOnPress = S),
+        (H.preventFocusOnPress = S),
         S &&
-            (W = (0, u.v)(W, {
+            (H = (0, u.v)(H, {
                 onPressStart(e) {
                     "touch" !== e.pointerType && (r.setFocused(!0), r.setFocusedKey(b));
                 },
@@ -148,8 +148,8 @@ function b(e) {
         U)
     )
         for (let e of ["onPressStart", "onPressEnd", "onPressChange", "onPress", "onPressUp", "onClick"])
-            U[e] && (W[e] = (0, n.c)(W[e], U[e]));
-    let { pressProps: G, isPressed: q } = (0, d.d)(W),
+            U[e] && (H[e] = (0, n.c)(H[e], U[e]));
+    let { pressProps: G, isPressed: q } = (0, d.d)(H),
         Y = N
             ? (e) => {
                   "mouse" === B.current && (e.stopPropagation(), e.preventDefault(), z(e));
@@ -230,7 +230,7 @@ function b(e) {
             let t = e;
             for (; t && t !== w.current;) {
                 let e = t.getAttribute("data-collection");
-                if (null != e) return e !== H;
+                if (null != e) return e !== W;
                 t = t.parentElement;
             }
             return (0, l.A)(e);

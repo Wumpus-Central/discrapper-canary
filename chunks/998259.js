@@ -33,8 +33,8 @@ var n,
     M = a(661531),
     O = a(627363),
     G = a(625180),
-    z = a(672929),
-    D = a(742589),
+    D = a(672929),
+    z = a(742589),
     L = a(976860),
     F = a(885386),
     V = a(696451),
@@ -172,8 +172,8 @@ var eS = a(210744),
     eM = a(885576),
     eO = a(236730);
 let eG = "heading-xxl/semibold",
-    ez = !1;
-function eD() {
+    eD = !1;
+function ez() {
     let e = s.useRef(null),
         [t, a] = s.useState(!0),
         n = (0, e_.A)((e) => {
@@ -182,13 +182,13 @@ function eD() {
         l = (0, eT.w)(n, [], { fireOnMount: !0 }),
         o = (0, u.bG)([eR.A], () => eR.A.isConnected());
     s.useEffect(() => {
-        if (!o || !t || ez) return;
+        if (!o || !t || eD) return;
         let a = !1,
             n = 0;
         function i() {
             a ||
                 (n = window.setTimeout(() => {
-                    ((ez = !0), e.current?.play());
+                    ((eD = !0), e.current?.play());
                 }, 400));
         }
         let s = document.fonts;
@@ -203,7 +203,7 @@ function eD() {
         d = s.useRef(r);
     s.useEffect(() => {
         let t = d.current && !r;
-        ((d.current = r), t && ez && (e.current?.stop(), e.current?.play()));
+        ((d.current = r), t && eD && (e.current?.stop(), e.current?.play()));
     }, [r]);
     let m = K.intl.string(q.default["2tYpRK"]);
     return (0, i.jsx)("div", {
@@ -466,8 +466,8 @@ function tu(e) {
         }),
         O = s.useMemo(() => new Map(R.map((e) => [e.type, e])), [R]),
         G = null != p && r,
-        z = o && null != c,
-        L = G || null != d || z || null != h || null != f || null != g,
+        D = o && null != c,
+        L = G || null != d || D || null != h || null != f || null != g,
         F = tt.p5 && null != n,
         V = tt.p5;
     return null != y || null != k || L || V || o
@@ -548,7 +548,7 @@ function tu(e) {
                                                   action: d,
                                               })
                                             : null,
-                                        z
+                                        D
                                             ? (0, i.jsx)(eV.Dr, {
                                                   id: "import",
                                                   label: K.intl.string(q.default.lf8HqE),
@@ -666,7 +666,7 @@ function tu(e) {
                                         onClick: a,
                                     }),
                                 })
-                              : (0, i.jsx)(D.A.Icon, {
+                              : (0, i.jsx)(z.A.Icon, {
                                     icon: e5.MoreHorizontalIcon,
                                     tooltip: K.intl.string(K.t["UKOtz+"]),
                                     "aria-label": K.intl.string(K.t["UKOtz+"]),
@@ -707,7 +707,7 @@ function tb(e) {
 var tw = a(769979);
 function tk(e) {
     let { title: t, actions: a, breadcrumb: n } = e;
-    return (0, i.jsx)(D.A, {
+    return (0, i.jsx)(z.A, {
         hideSearch: !0,
         toolbar: a,
         className: tw.wx,
@@ -725,12 +725,12 @@ function tk(e) {
                 null != n
                     ? (0, i.jsxs)(i.Fragment, {
                           children: [
-                              (0, i.jsx)(D.A.Title, { onClick: n.onClick, children: n.title }),
-                              (0, i.jsx)(D.A.Caret, {}),
+                              (0, i.jsx)(z.A.Title, { onClick: n.onClick, children: n.title }),
+                              (0, i.jsx)(z.A.Caret, {}),
                           ],
                       })
                     : null,
-                (0, i.jsx)(D.A.Title, { className: tw.Qw, wrapperClassName: tw.DD, children: t }),
+                (0, i.jsx)(z.A.Title, { className: tw.Qw, wrapperClassName: tw.DD, children: t }),
             ],
         }),
     });
@@ -805,8 +805,8 @@ function tO(e) {
     (0, ey.openModal)((t) => (0, i.jsx)(tM, { ...t, reason: e }));
 }
 var tG = a(480007),
-    tz = a(584936),
-    tD = a(536820),
+    tD = a(584936),
+    tz = a(536820),
     tL = a(548118);
 let tF = "user",
     tV = "user",
@@ -927,13 +927,13 @@ function t6(e) {
         R = N.preview_application_id ?? N.application_id,
         { data: M } = (0, O.YY)(R),
         G = M?.icon == null ? null : U.Ay.getApplicationIconURL({ id: R, icon: M.icon, size: 40 }),
-        z =
+        D =
             null == N.updated_at
                 ? null
                 : K.intl.formatToPlainString(q.default.oMDaqr, { time: d()(N.updated_at).fromNow() }),
-        D = (0, Z.HC)(N),
+        z = (0, Z.HC)(N),
         F =
-            (0, u.bG)([B.A], () => (null == D ? null : (B.A.getGuild(D)?.name ?? null)), [D]) ??
+            (0, u.bG)([B.A], () => (null == z ? null : (B.A.getGuild(z)?.name ?? null)), [z]) ??
             K.intl.string(q.default["qqH+iN"]),
         V = (0, u.bG)([ep.Ay], () => ep.Ay.isProjectDeleting(N.id), [N.id]),
         H =
@@ -1043,7 +1043,7 @@ function t6(e) {
                                         className: tQ.Wb,
                                         children: V ? K.intl.string(q.default.EwXXks) : F,
                                     }),
-                                    null == z || V
+                                    null == D || V
                                         ? null
                                         : (0, i.jsxs)(i.Fragment, {
                                               children: [
@@ -1056,7 +1056,7 @@ function t6(e) {
                                                       variant: "text-sm/normal",
                                                       color: "text-subtle",
                                                       className: tQ.zM,
-                                                      children: z,
+                                                      children: D,
                                                   }),
                                               ],
                                           }),
@@ -1200,15 +1200,15 @@ function t1(e) {
         eM = (0, u.bG)([ec.A], () => ec.A.isBuilderPreviewMobile()),
         eO = K.intl.string(eM ? q.default["3uCc8U"] : q.default["+nzCxZ"]),
         eG = s.useCallback(() => (0, W.GG)(!eM), [eM]),
-        ez = (0, z.A)(o?.preview_application_id ?? null, t$.sd),
-        eD = (0, t$.x1)(ez) && ez.data.proxyTicketRefreshing,
+        eD = (0, D.A)(o?.preview_application_id ?? null, t$.sd),
+        ez = (0, t$.x1)(eD) && eD.data.proxyTicketRefreshing,
         eL = s.useCallback(() => {
-            null == ez || eD || G.A.refreshProxyTicket(ez.id);
-        }, [ez, eD]),
+            null == eD || ez || G.A.refreshProxyTicket(eD.id);
+        }, [eD, ez]),
         eF = s.useCallback(() => {
             var e, t;
-            (null != o && ((e = o.id), (t = ez?.id), (0, Y.Bn)(e), (0, tP.A)().leaveFrame(t)), d());
-        }, [o, ez?.id, d]),
+            (null != o && ((e = o.id), (t = eD?.id), (0, Y.Bn)(e), (0, tP.A)().leaveFrame(t)), d());
+        }, [o, eD?.id, d]),
         eV = s.useCallback(() => {
             null != o && (y(!0), (0, Y.dv)(o.id, K.intl.string(q.default["2ejwtJ"])));
         }, [o]),
@@ -1239,7 +1239,7 @@ function t1(e) {
             ),
         ),
         eH = s.useCallback(() => {
-            null != o && (0, tz.A)(o, c);
+            null != o && (0, tD.A)(o, c);
         }, [o, c]),
         eq = s.useCallback(async () => {
             if (null == B || H.current !== B) return;
@@ -1345,14 +1345,14 @@ function t1(e) {
                           className: tQ.FO,
                           children: [
                               es.showModeSwitch ? (0, i.jsx)(e6, { modes: es.modes, mode: er, onChange: eh }) : null,
-                              (0, i.jsx)(D.A.Icon, {
+                              (0, i.jsx)(z.A.Icon, {
                                   icon: eM ? t2 : t0,
                                   tooltip: eO,
                                   "aria-label": eO,
                                   selected: eM,
                                   onClick: eG,
                               }),
-                              (0, i.jsx)(D.A.Icon, {
+                              (0, i.jsx)(z.A.Icon, {
                                   ref: eI,
                                   icon: tv.A,
                                   tooltip: eE,
@@ -1361,10 +1361,10 @@ function t1(e) {
                                   disabled: eN,
                                   onClick: eP,
                               }),
-                              "frame" === er ? (0, i.jsx)(eS.A, { frame: ez, controlProjectId: o.id }) : null,
+                              "frame" === er ? (0, i.jsx)(eS.A, { frame: eD, controlProjectId: o.id }) : null,
                               (0, i.jsx)("div", { className: tQ.YJ }),
                               T
-                                  ? (0, i.jsx)(D.A.Icon, {
+                                  ? (0, i.jsx)(z.A.Icon, {
                                         icon: A.BugIcon,
                                         tooltip: K.intl.string(q.default["8MLfBT"]),
                                         "aria-label": K.intl.string(q.default["8MLfBT"]),
@@ -1372,7 +1372,7 @@ function t1(e) {
                                         onClick: eT,
                                     })
                                   : null,
-                              (0, i.jsx)(D.A.Icon, {
+                              (0, i.jsx)(z.A.Icon, {
                                   icon: I.SettingsIcon,
                                   tooltip: K.intl.string(q.default.cWmjzs),
                                   "aria-label": K.intl.string(q.default.cWmjzs),
@@ -1385,8 +1385,8 @@ function t1(e) {
                                   projectGuildId: o.guild_id,
                                   isOwner: (0, ep.PV)(o),
                                   canRemix: (0, ep.H_)(o),
-                                  onRefresh: (0, t$.x1)(ez) ? eL : void 0,
-                                  isRefreshing: eD,
+                                  onRefresh: (0, t$.x1)(eD) ? eL : void 0,
+                                  isRefreshing: ez,
                                   onClose: eF,
                                   onExport: eV,
                                   onImport: eB.open,
@@ -1422,7 +1422,7 @@ function t1(e) {
                               }),
                               ek
                                   ? null
-                                  : (0, i.jsx)(D.A.Icon, { icon: tJ, tooltip: ex, "aria-label": ex, onClick: ej }),
+                                  : (0, i.jsx)(z.A.Icon, { icon: tJ, tooltip: ex, "aria-label": ex, onClick: ej }),
                           ],
                       }),
         });
@@ -1514,7 +1514,7 @@ function t9(e) {
             onStartTemplate: N,
             onSubmitTemplate: O,
             onCancelTemplate: G,
-            onSkipTemplate: z,
+            onSkipTemplate: D,
             onImportNewProject: L,
             importing: F,
         } = e,
@@ -1670,7 +1670,7 @@ function t9(e) {
                         onStart: (t) => N(e.name, t),
                         onSubmit: (t, a, n) => O(e, t, a, n),
                         onCancel: G,
-                        onSkip: z,
+                        onSkip: D,
                     }),
                     (0, ey.openModalLazy)(
                         async () => {
@@ -1684,7 +1684,7 @@ function t9(e) {
                 }
                 I(e);
             },
-            [h, l, G, I, z, N, O],
+            [h, l, G, I, D, N, O],
         ),
         ed = K.intl.string(q.default.FYK2xQ),
         eu = K.intl.string(q.default["/SUK82"]),
@@ -1722,7 +1722,7 @@ function t9(e) {
                     children: [
                         (0, i.jsx)(tk, {
                             title: K.intl.string(q.default.Xmvb23),
-                            actions: (0, i.jsx)(D.A.Icon, {
+                            actions: (0, i.jsx)(z.A.Icon, {
                                 icon: S.Z,
                                 tooltip: e_,
                                 "aria-label": e_,
@@ -1738,7 +1738,7 @@ function t9(e) {
                                     className: o()(tQ.Qs, tQ.Ix),
                                     children: [
                                         (0, i.jsx)(tS, {}),
-                                        (0, i.jsx)(eD, {}),
+                                        (0, i.jsx)(ez, {}),
                                         (0, i.jsxs)("section", {
                                             className: tQ.WI,
                                             "aria-label": ed,
@@ -1923,7 +1923,7 @@ function t9(e) {
                                     className: tQ.Ss,
                                     children: [
                                         (0, i.jsx)(e$, { importing: F, onImport: L }),
-                                        (0, i.jsx)(D.A.Icon, { icon: _.P, tooltip: eT, "aria-label": eT, onClick: eP }),
+                                        (0, i.jsx)(z.A.Icon, { icon: _.P, tooltip: eT, "aria-label": eT, onClick: eP }),
                                     ],
                                 }),
                             ],
@@ -1993,7 +1993,7 @@ function t9(e) {
                                                           project: e,
                                                           guildId: l,
                                                           onSelect: () => en(e),
-                                                          onRemix: () => (0, tz.A)(e, l),
+                                                          onRemix: () => (0, tD.A)(e, l),
                                                       },
                                                       e.id,
                                                   ),
@@ -2027,7 +2027,7 @@ function t9(e) {
                                                               project: e,
                                                               guildId: l,
                                                               onSelect: () => en(e),
-                                                              onRemix: () => (0, tz.A)(e, l),
+                                                              onRemix: () => (0, tD.A)(e, l),
                                                               shared: !0,
                                                           },
                                                           e.id,
@@ -2062,7 +2062,7 @@ function t7(e) {
         c = n ?? null,
         [p, h] = s.useState(!1),
         [f, g] = s.useState(null),
-        y = (0, tD._)("VibegrationsScreen"),
+        y = (0, tz._)("VibegrationsScreen"),
         [b, w] = s.useState(null);
     s.useEffect(() => {
         w(null);
@@ -2162,12 +2162,12 @@ function t7(e) {
             },
             [a],
         ),
-        [G, z] = s.useState(!1),
-        D = s.useCallback(
+        [G, D] = s.useState(!1),
+        z = s.useCallback(
             async (e, t) => {
                 let n = eY(e);
                 if (null != n) return void (0, v.P0)((0, x.o)(n, j.Ck.FAILURE));
-                z(!0);
+                D(!0);
                 let i = null;
                 try {
                     ((i = await (0, W.gA)({ guild_id: a, install_scope: t })),
@@ -2180,7 +2180,7 @@ function t7(e) {
                     (null != i && (await (0, W.xx)(i).catch(() => void 0)),
                         (0, v.P0)((0, x.o)(K.intl.string(q.default["02GpNr"]), j.Ck.FAILURE)));
                 } finally {
-                    z(!1);
+                    D(!1);
                 }
             },
             [a, N],
@@ -2226,7 +2226,7 @@ function t7(e) {
               onSubmitTemplate: R,
               onCancelTemplate: M,
               onSkipTemplate: O,
-              onImportNewProject: D,
+              onImportNewProject: z,
               importing: G,
               conjureTarget: C,
               onConjureTargetChange: w,

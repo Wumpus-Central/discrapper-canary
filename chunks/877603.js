@@ -192,13 +192,13 @@ var D = r(383491),
     V = r(691719),
     U = r(872236),
     z = r(993558);
-let W = { ltr: "ArrowRight", rtl: "ArrowLeft" },
-    H = { ltr: "ArrowLeft", rtl: "ArrowRight" };
+let H = { ltr: "ArrowRight", rtl: "ArrowLeft" },
+    W = { ltr: "ArrowLeft", rtl: "ArrowRight" };
 function G(e, t, r, n, i, o, a, s) {
     if (!("expandedKeys" in t) || (!s && o !== a)) return !1;
-    if (e.key === W[i] && t.selectionManager.focusedKey === r.key && n && !t.expandedKeys.has(r.key))
+    if (e.key === H[i] && t.selectionManager.focusedKey === r.key && n && !t.expandedKeys.has(r.key))
         return (t.toggleKey(r.key), e.stopPropagation(), !0);
-    if (e.key === H[i] && t.selectionManager.focusedKey === r.key) {
+    if (e.key === W[i] && t.selectionManager.focusedKey === r.key) {
         if (n && t.expandedKeys.has(r.key)) return (t.toggleKey(r.key), e.stopPropagation(), !0);
         else if (!t.expandedKeys.has(r.key) && r.parentKey && t.collection.getItem(r.parentKey)?.type === "item")
             return (t.selectionManager.setFocusedKey(r.parentKey), e.stopPropagation(), !0);
