@@ -5,10 +5,10 @@ var i = n(582128),
     u = n(71393),
     d = n(576705),
     o = n(906786),
-    a = n(637708),
-    s = n(683180),
-    c = n(783791),
-    f = n(972786);
+    a = n(783791),
+    s = n(972786),
+    c = n(637708),
+    f = n(683180);
 function m(e, t) {
     return (
         e.nextExpiry === t.nextExpiry &&
@@ -32,8 +32,8 @@ function p(e, t) {
 }
 function g(e) {
     let [t, n] = i.useState(0),
-        { entries: d, nextExpiry: s } = (0, r.bG)(
-            [f.Ay, c.Ay, u.A, l.Bt],
+        { entries: d, nextExpiry: f } = (0, r.bG)(
+            [s.Ay, a.Ay, u.A, l.Bt],
             () =>
                 (function (e) {
                     let t = Date.now(),
@@ -47,14 +47,14 @@ function g(e) {
                     let r = new Set(),
                         l = [],
                         d = null;
-                    function s(e) {
+                    function f(e) {
                         if (r.has(e.id)) return;
-                        let n = (0, a.HC)(e);
+                        let n = (0, c.HC)(e);
                         if (null != n && !i(n)) return;
                         r.add(e.id);
-                        let o = c.Ay.isThinking(e.id),
-                            s = c.Ay.getFinishedAt(e.id),
-                            f = (0, a.rs)({ thinking: o, finishedAt: s, now: t });
+                        let o = a.Ay.isThinking(e.id),
+                            s = a.Ay.getFinishedAt(e.id),
+                            f = (0, c.rs)({ thinking: o, finishedAt: s, now: t });
                         if ("done" === f && null != s) {
                             let e = s + 6e4;
                             d = null == d ? e : Math.min(d, e);
@@ -76,21 +76,21 @@ function g(e) {
                             })(e, s),
                         });
                     }
-                    for (let e of f.Ay.getOwnedProjects()) s(e);
+                    for (let e of s.Ay.getOwnedProjects()) f(e);
                     for (let e of Object.values(u.A.getGuilds()))
-                        if (f.Ay.hasFetchedGuildProjects(e.id) && i(e.id))
-                            for (let t of f.Ay.getSharedProjects(e.id)) s(t);
-                    return { entries: (0, a.io)(l), nextExpiry: d };
+                        if (s.Ay.hasFetchedGuildProjects(e.id) && i(e.id))
+                            for (let t of s.Ay.getSharedProjects(e.id)) f(t);
+                    return { entries: (0, c.io)(l), nextExpiry: d };
                 })(e),
             [e, t],
             m,
         );
     return (
         i.useEffect(() => {
-            if (null == s) return;
-            let e = setTimeout(() => n((e) => e + 1), Math.max(0, s - Date.now()));
+            if (null == f) return;
+            let e = setTimeout(() => n((e) => e + 1), Math.max(0, f - Date.now()));
             return () => clearTimeout(e);
-        }, [s, n]),
+        }, [f, n]),
         d
     );
 }
@@ -99,7 +99,7 @@ function h(e) {
         [u.A, l.Bt, d.A],
         () =>
             Object.values(u.A.getGuilds())
-                .filter((t) => (0, s.pG)(t, e))
+                .filter((t) => (0, f.pG)(t, e))
                 .sort((e, t) => e.name.localeCompare(t.name)),
         [e],
         p,

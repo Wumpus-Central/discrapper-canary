@@ -499,6 +499,13 @@ let n = [
             "On phones, the strip above the composer now shows what Conjure is doing and the runes used, as on desktop; tap the indicator to read the model\u2019s reasoning as it streams.",
     },
     {
+        date: "2026-09-28",
+        time: "17:21",
+        platforms: ["mobile"],
+        summary:
+            "On phones, the wand at the start of your profile\u2019s bottom bar opens your projects from every server, as the title bar wand does on desktop.",
+    },
+    {
         date: "2026-09-18",
         time: "00:03",
         platforms: ["mobile"],

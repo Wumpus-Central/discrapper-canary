@@ -16,56 +16,131 @@ var i = l(477900),
     f = l(228366),
     p = l(964486),
     N = l(948230),
-    v = l(408278),
-    b = l(663341),
-    I = l(980707),
-    E = l(477782),
-    y = l(834730),
-    S = l(323384),
-    A = l(289873),
-    k = l(821609),
-    C = l(364522),
-    R = l(627363),
-    L = l(145497),
-    _ = l(976860),
-    D = l(967198),
-    G = l(486020),
-    P = l(972786),
-    T = l(321593),
-    O = l(856795),
-    w = l(13699),
-    V = l(265498);
-function q(e) {
+    v = l(459514),
+    b = l(408278),
+    I = l(663341),
+    E = l(980707),
+    y = l(477782),
+    S = l(976860),
+    A = l(652215),
+    k = l(746080);
+function C(e, t) {
+    (0, S.pX)(null == t ? A.BVt.CHANNEL(e, k.VV.VIBEGRATIONS) : A.BVt.CHANNEL(e, k.VV.VIBEGRATIONS, t));
+}
+var R = l(50617),
+    L = l(375708),
+    _ = l(789752);
+function D(e) {
+    let { guilds: t, onNavigate: l } = e,
+        a = n.useRef(null),
+        s = L.intl.string(R.default.qbAREO);
+    return (0, i.jsx)(h.Y, {
+        targetElementRef: a,
+        align: "right",
+        position: "bottom",
+        renderPopout: (e) => {
+            let { closePopout: n } = e;
+            return (0, i.jsx)(G, { guilds: t, onNavigate: l, onClose: n });
+        },
+        children: (e) => {
+            let { onClick: t } = e;
+            return (0, i.jsx)("div", {
+                ref: a,
+                className: _.h,
+                children: (0, i.jsx)(c.m, {
+                    position: "bottom",
+                    text: s,
+                    asContainer: !0,
+                    children: (0, i.jsx)(b.K, {
+                        "aria-label": s,
+                        icon: I.PlusLargeIcon,
+                        variant: "icon-only",
+                        size: "sm",
+                        onClick: t,
+                    }),
+                }),
+            });
+        },
+    });
+}
+function G(e) {
+    let { guilds: t, onNavigate: l, onClose: n } = e,
+        a = L.intl.string(R.default.qbAREO);
+    return (0, i.jsx)(E.W, {
+        "data-menu-migrated": !0,
+        navId: "vibegrations-create",
+        "aria-label": a,
+        onClose: n,
+        onSelect: n,
+        children: (0, i.jsx)(y.rX, {
+            label: a,
+            children:
+                0 === t.length
+                    ? (0, i.jsx)(y.Dr, {
+                          id: "vibegrations-create-empty",
+                          disabled: !0,
+                          label: L.intl.string(R.default["g/BU5S"]),
+                      })
+                    : t.map((e) =>
+                          (0, i.jsx)(
+                              y.Dr,
+                              {
+                                  id: `vibegrations-create-${e.id}`,
+                                  label: e.name,
+                                  action: () => {
+                                      (C(e.id), l());
+                                  },
+                              },
+                              e.id,
+                          ),
+                      ),
+        }),
+    });
+}
+var P = l(834730),
+    T = l(323384),
+    O = l(289873),
+    w = l(821609),
+    V = l(364522),
+    q = l(627363),
+    H = l(145497),
+    M = l(967198),
+    z = l(486020),
+    Q = l(972786),
+    $ = l(321593),
+    F = l(856795),
+    B = l(13699),
+    U = l(265498);
+function Y(e) {
     let { line: t } = e,
-        { text: l, phase: n } = (0, O.Q)(t),
-        a = (0, i.jsx)(y.E, {
+        { text: l, phase: n } = (0, F.Q)(t),
+        a = (0, i.jsx)(P.E, {
             tag: "span",
             variant: "text-sm/normal",
             color: "currentColor",
-            className: s()(w.qo, V.Pf, { [w._q]: "exit" === n, [w.GD]: "enter" === n }),
+            className: s()(B.qo, U.Pf, { [B._q]: "exit" === n, [B.GD]: "enter" === n }),
             children: l,
         });
     return (0, i.jsx)("ol", {
-        className: s()(V.Hc, w.pj),
+        className: s()(U.Hc, B.pj),
         "data-live": "true",
         children: (0, i.jsx)("li", {
-            className: s()(w.K1, V.AS),
+            className: s()(B.K1, U.AS),
             "data-live": "true",
             children: (0, i.jsxs)("div", {
-                className: s()(w.ep, V.nM),
+                className: s()(B.ep, U.nM),
                 children: [
-                    (0, i.jsx)("span", { className: s()(w.$m, V.m0), children: a }),
-                    (0, i.jsx)("span", { className: s()(w.$m, w.pw, V.m0), "aria-hidden": !0, children: a }),
+                    (0, i.jsx)("span", { className: s()(B.$m, U.m0), children: a }),
+                    (0, i.jsx)("span", { className: s()(B.$m, B.pw, U.m0), "aria-hidden": !0, children: a }),
                 ],
             }),
         }),
     });
 }
-var H = l(536820),
-    M = l(903586),
-    z = l(717447);
-let Q = { activityLine: null, todos: [], completed: 0, total: 0, focus: null };
-function $(e, t) {
+var Z = l(903586),
+    K = l(717447);
+let X = { activityLine: null, todos: [], completed: 0, total: 0, focus: null };
+function W(e, t) {
     return (
         e.activityLine === t.activityLine &&
         e.completed === t.completed &&
@@ -74,7 +149,7 @@ function $(e, t) {
         e.focus?.status === t.focus?.status
     );
 }
-function F(e) {
+function J(e) {
     return (0, r.bG)(
         [m.Ay],
         () => {
@@ -86,8 +161,8 @@ function F(e) {
                 }
                 return null;
             })(e);
-            if (null == t) return Q;
-            let l = (0, M.lt)(t.steps) ?? t.todos ?? [],
+            if (null == t) return X;
+            let l = (0, Z.lt)(t.steps) ?? t.todos ?? [],
                 i = 0,
                 n = null,
                 a = null;
@@ -97,103 +172,96 @@ function F(e) {
                     : "in_progress" === e.status && null == n
                       ? (n = e)
                       : "pending" === e.status && null == a && (a = e);
-            return { activityLine: (0, z.b)(t.steps), todos: l, completed: i, total: l.length, focus: n ?? a };
+            return { activityLine: (0, K.b)(t.steps), todos: l, completed: i, total: l.length, focus: n ?? a };
         },
         [e],
-        $,
+        W,
     );
 }
-var B = l(652215),
-    U = l(746080),
-    Y = l(50617),
-    Z = l(375708),
-    K = l(654402);
-function X(e, t) {
-    (0, _.pX)(null == t ? B.BVt.CHANNEL(e, U.VV.VIBEGRATIONS) : B.BVt.CHANNEL(e, U.VV.VIBEGRATIONS, t));
-}
-function W(e) {
+var ee = l(654402);
+function et(e) {
     let { projectId: t } = e,
-        { completed: l, total: n } = F(t);
+        { completed: l, total: n } = J(t);
     return 0 === n
         ? null
-        : (0, i.jsx)(y.E, {
+        : (0, i.jsx)(P.E, {
               tag: "span",
               variant: "text-xs/medium",
               color: "text-default",
-              className: K.IW,
-              "aria-label": Z.intl.formatToPlainString(Y.default["7Io+dh"], { completed: l, total: n }),
-              children: Z.intl.formatToPlainString(Y.default.JmMDaL, { completed: l, total: n }),
+              className: ee.IW,
+              "aria-label": L.intl.formatToPlainString(R.default["7Io+dh"], { completed: l, total: n }),
+              children: L.intl.formatToPlainString(R.default.JmMDaL, { completed: l, total: n }),
           });
 }
-function J(e) {
+function el(e) {
     let { projectId: t } = e,
-        { activityLine: l } = F(t);
-    return null == l ? null : (0, i.jsx)("div", { className: K.Bs, children: (0, i.jsx)(q, { line: l }) });
+        { activityLine: l } = J(t);
+    return null == l ? null : (0, i.jsx)("div", { className: ee.Bs, children: (0, i.jsx)(Y, { line: l }) });
 }
-function ee(e) {
+function ei(e) {
     let { entry: t, fallbackGuildId: l, onNavigate: n } = e,
         a = "building" === t.activity,
         s = t.guildId ?? l,
         r = t.project.preview_application_id ?? t.project.application_id,
-        { data: c } = (0, R.YY)(r),
-        d = c?.icon == null ? null : G.Ay.getApplicationIconURL({ id: r, icon: c.icon, size: 44 }),
-        u = t.guildName ?? Z.intl.string(Y.default["qqH+iN"]),
+        { data: c } = (0, q.YY)(r),
+        d = c?.icon == null ? null : z.Ay.getApplicationIconURL({ id: r, icon: c.icon, size: 44 }),
+        u = t.guildName ?? L.intl.string(R.default["qqH+iN"]),
         m =
             null == t.guildName
-                ? Z.intl.formatToPlainString(Y.default.aj4bR0, { name: t.name })
-                : Z.intl.formatToPlainString(Y.default["+Lq5Ha"], { name: t.name, server: t.guildName });
+                ? L.intl.formatToPlainString(R.default.aj4bR0, { name: t.name })
+                : L.intl.formatToPlainString(R.default["+Lq5Ha"], { name: t.name, server: t.guildName });
     return (0, i.jsxs)("li", {
-        className: K.dc,
+        className: ee.dc,
         children: [
-            (0, i.jsx)(T.Ay, { projectId: t.projectId }),
+            (0, i.jsx)($.Ay, { projectId: t.projectId }),
             (0, i.jsxs)(o.D, {
-                className: K.nM,
+                className: ee.nM,
                 "aria-label": m,
                 "aria-disabled": null == s,
                 "data-project-id": t.projectId,
                 onClick: () => {
-                    null != s && (X(s, t.projectId), n());
+                    null != s && (C(s, t.projectId), n());
                 },
                 children: [
                     null == d
                         ? (0, i.jsx)("div", {
-                              className: K.Pz,
+                              className: ee.Pz,
                               "aria-hidden": !0,
-                              children: (0, i.jsx)(S.k, {
+                              children: (0, i.jsx)(T.k, {
                                   size: "custom",
                                   width: 20,
                                   height: 20,
                                   color: "var(--icon-muted)",
                               }),
                           })
-                        : (0, i.jsx)("img", { alt: "", src: d, className: K.Z2 }),
+                        : (0, i.jsx)("img", { alt: "", src: d, className: ee.Z2 }),
                     (0, i.jsxs)("div", {
-                        className: K.fw,
+                        className: ee.fw,
                         children: [
-                            (0, i.jsx)(y.E, {
+                            (0, i.jsx)(P.E, {
                                 variant: "text-md/semibold",
                                 color: "text-strong",
-                                className: K.j1,
+                                className: ee.j1,
                                 children: t.name,
                             }),
                             (0, i.jsxs)("div", {
-                                className: K.lk,
+                                className: ee.lk,
                                 children: [
-                                    (0, i.jsx)(y.E, {
+                                    (0, i.jsx)(P.E, {
                                         variant: "text-sm/normal",
                                         color: "text-muted",
-                                        className: K.L5,
+                                        className: ee.L5,
                                         children: u,
                                     }),
                                     a
                                         ? (0, i.jsxs)(i.Fragment, {
                                               children: [
                                                   (0, i.jsx)("span", {
-                                                      className: K.Yy,
+                                                      className: ee.Yy,
                                                       "aria-hidden": !0,
                                                       children: "\u2022",
                                                   }),
-                                                  (0, i.jsx)(J, { projectId: t.projectId }),
+                                                  (0, i.jsx)(el, { projectId: t.projectId }),
                                               ],
                                           })
                                         : null,
@@ -201,76 +269,76 @@ function ee(e) {
                             }),
                         ],
                     }),
-                    (0, i.jsx)("div", { className: K.en, children: a && (0, i.jsx)(W, { projectId: t.projectId }) }),
+                    (0, i.jsx)("div", { className: ee.en, children: a && (0, i.jsx)(et, { projectId: t.projectId }) }),
                 ],
             }),
         ],
     });
 }
-function et(e) {
+function en(e) {
     let { id: t, heading: l, entries: n, fallbackGuildId: a, onNavigate: s } = e;
     if (0 === n.length) return null;
     let r = `vibegrations-section-${t}`;
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(j.D, { variant: "text-sm/medium", color: "text-subtle", id: r, className: K.SF, children: l }),
+            (0, i.jsx)(j.D, { variant: "text-sm/medium", color: "text-subtle", id: r, className: ee.SF, children: l }),
             (0, i.jsx)("ul", {
-                className: K.p_,
+                className: ee.p_,
                 "aria-labelledby": r,
-                children: n.map((e) => (0, i.jsx)(ee, { entry: e, fallbackGuildId: a, onNavigate: s }, e.projectId)),
+                children: n.map((e) => (0, i.jsx)(ei, { entry: e, fallbackGuildId: a, onNavigate: s }, e.projectId)),
             }),
         ],
     });
 }
-function el(e) {
+function ea(e) {
     let { guilds: t, onNavigate: l } = e;
     return 0 === t.length
         ? (0, i.jsxs)("div", {
-              className: K.wk,
+              className: ee.wk,
               children: [
-                  (0, i.jsx)(y.E, {
+                  (0, i.jsx)(P.E, {
                       variant: "text-sm/semibold",
                       color: "text-strong",
-                      children: Z.intl.string(Y.default.qSQH7H),
+                      children: L.intl.string(R.default.qSQH7H),
                   }),
-                  (0, i.jsx)(y.E, {
+                  (0, i.jsx)(P.E, {
                       variant: "text-sm/normal",
                       color: "text-subtle",
-                      children: Z.intl.string(Y.default.I92Gjf),
+                      children: L.intl.string(R.default.I92Gjf),
                   }),
               ],
           })
         : (0, i.jsxs)("div", {
-              className: K.p$,
+              className: ee.p$,
               children: [
-                  (0, i.jsx)(y.E, {
+                  (0, i.jsx)(P.E, {
                       variant: "text-sm/semibold",
                       color: "text-strong",
-                      children: Z.intl.string(Y.default.qSQH7H),
+                      children: L.intl.string(R.default.qSQH7H),
                   }),
-                  (0, i.jsx)(y.E, {
+                  (0, i.jsx)(P.E, {
                       variant: "text-sm/normal",
                       color: "text-subtle",
-                      children: Z.intl.formatToPlainString(Y.default["8NmOZ5"], { count: t.length }),
+                      children: L.intl.formatToPlainString(R.default["8NmOZ5"], { count: t.length }),
                   }),
                   (0, i.jsx)("ul", {
-                      className: K.gc,
+                      className: ee.gc,
                       children: t.map((e) =>
                           (0, i.jsx)(
                               "li",
                               {
                                   children: (0, i.jsxs)(o.D, {
-                                      className: K.b6,
+                                      className: ee.b6,
                                       "aria-label": e.name,
                                       onClick: () => {
-                                          (X(e.id), l());
+                                          (C(e.id), l());
                                       },
                                       children: [
-                                          (0, i.jsx)(L.Ay, { guild: e, iconSize: 32, className: K.$f }),
-                                          (0, i.jsx)(y.E, {
+                                          (0, i.jsx)(H.Ay, { guild: e, iconSize: 32, className: ee.$f }),
+                                          (0, i.jsx)(P.E, {
                                               variant: "text-sm/medium",
                                               color: "text-strong",
-                                              className: K.qL,
+                                              className: ee.qL,
                                               children: e.name,
                                           }),
                                       ],
@@ -283,59 +351,59 @@ function el(e) {
               ],
           });
 }
-function ei(e) {
+function es(e) {
     let { eligibleGuilds: t, onNavigate: l } = e,
-        n = (0, H.T)("VibegrationsProjectList"),
-        a = (0, r.bG)([P.Ay], () => P.Ay.getProjectsFetchState()),
-        s = (0, r.bG)([D.A], () => D.A.getGuildId()),
+        n = (0, v.T)("VibegrationsProjectList"),
+        a = (0, r.bG)([Q.Ay], () => Q.Ay.getProjectsFetchState()),
+        s = (0, r.bG)([M.A], () => M.A.getGuildId()),
         c = t.find((e) => e.id === s)?.id ?? t[0]?.id ?? null,
         o = n.filter((e) => "idle" !== e.activity),
         d = n.filter((e) => "idle" === e.activity);
     return 0 === n.length
         ? null == a || "loading" === a.type
             ? (0, i.jsxs)("div", {
-                  className: K.wk,
+                  className: ee.wk,
                   children: [
-                      (0, i.jsx)(A.y, {}),
-                      (0, i.jsx)(y.E, {
+                      (0, i.jsx)(O.y, {}),
+                      (0, i.jsx)(P.E, {
                           variant: "text-sm/normal",
                           color: "text-subtle",
-                          children: Z.intl.string(Y.default["/aUeR9"]),
+                          children: L.intl.string(R.default["/aUeR9"]),
                       }),
                   ],
               })
             : "error" === a.type
               ? (0, i.jsxs)("div", {
-                    className: K.wk,
+                    className: ee.wk,
                     children: [
-                        (0, i.jsx)(y.E, {
+                        (0, i.jsx)(P.E, {
                             variant: "text-sm/normal",
                             color: "text-subtle",
-                            children: Z.intl.string(Y.default["IN/HRP"]),
+                            children: L.intl.string(R.default["IN/HRP"]),
                         }),
-                        (0, i.jsx)(k.$, {
+                        (0, i.jsx)(w.$, {
                             variant: "secondary",
                             size: "sm",
-                            text: Z.intl.string(Y.default["42EdIV"]),
+                            text: L.intl.string(R.default["42EdIV"]),
                             onClick: () => (0, N.hF)(),
                         }),
                     ],
                 })
-              : (0, i.jsx)(el, { guilds: t, onNavigate: l })
-        : (0, i.jsxs)(C.Ip, {
+              : (0, i.jsx)(ea, { guilds: t, onNavigate: l })
+        : (0, i.jsxs)(V.Ip, {
               fade: !0,
-              className: K.XG,
+              className: ee.XG,
               children: [
-                  (0, i.jsx)(et, {
+                  (0, i.jsx)(en, {
                       id: "active",
-                      heading: Z.intl.string(Y.default["1SDxuI"]),
+                      heading: L.intl.string(R.default["1SDxuI"]),
                       entries: o,
                       fallbackGuildId: c,
                       onNavigate: l,
                   }),
-                  (0, i.jsx)(et, {
+                  (0, i.jsx)(en, {
                       id: "idle",
-                      heading: Z.intl.string(Y.default.r9EdXu),
+                      heading: L.intl.string(R.default.r9EdXu),
                       entries: d,
                       fallbackGuildId: c,
                       onNavigate: l,
@@ -343,79 +411,11 @@ function ei(e) {
               ],
           });
 }
-var en = l(789752);
-function ea(e) {
-    let { guilds: t, onNavigate: l } = e,
-        a = n.useRef(null),
-        s = Z.intl.string(Y.default.qbAREO);
-    return (0, i.jsx)(h.Y, {
-        targetElementRef: a,
-        align: "right",
-        position: "bottom",
-        renderPopout: (e) => {
-            let { closePopout: n } = e;
-            return (0, i.jsx)(es, { guilds: t, onNavigate: l, onClose: n });
-        },
-        children: (e) => {
-            let { onClick: t } = e;
-            return (0, i.jsx)("div", {
-                ref: a,
-                className: en.h,
-                children: (0, i.jsx)(c.m, {
-                    position: "bottom",
-                    text: s,
-                    asContainer: !0,
-                    children: (0, i.jsx)(v.K, {
-                        "aria-label": s,
-                        icon: b.PlusLargeIcon,
-                        variant: "icon-only",
-                        size: "sm",
-                        onClick: t,
-                    }),
-                }),
-            });
-        },
-    });
-}
-function es(e) {
-    let { guilds: t, onNavigate: l, onClose: n } = e,
-        a = Z.intl.string(Y.default.qbAREO);
-    return (0, i.jsx)(I.W, {
-        "data-menu-migrated": !0,
-        navId: "vibegrations-create",
-        "aria-label": a,
-        onClose: n,
-        onSelect: n,
-        children: (0, i.jsx)(E.rX, {
-            label: a,
-            children:
-                0 === t.length
-                    ? (0, i.jsx)(E.Dr, {
-                          id: "vibegrations-create-empty",
-                          disabled: !0,
-                          label: Z.intl.string(Y.default["g/BU5S"]),
-                      })
-                    : t.map((e) =>
-                          (0, i.jsx)(
-                              E.Dr,
-                              {
-                                  id: `vibegrations-create-${e.id}`,
-                                  label: e.name,
-                                  action: () => {
-                                      (X(e.id), l());
-                                  },
-                              },
-                              e.id,
-                          ),
-                      ),
-        }),
-    });
-}
 var er = l(437170);
 function ec(e) {
     let { onNavigate: t } = e,
-        l = Z.intl.string(Y.default.ZnvpQR),
-        n = (0, H._)("VibegrationsPopout");
+        l = L.intl.string(R.default.ZnvpQR),
+        n = (0, v._)("VibegrationsPopout");
     return (0, i.jsxs)("div", {
         className: er.kL,
         children: [
@@ -435,11 +435,11 @@ function ec(e) {
                             }),
                             (0, i.jsx)("div", {
                                 className: er.$s,
-                                children: (0, i.jsx)(ea, { guilds: n, onNavigate: t }),
+                                children: (0, i.jsx)(D, { guilds: n, onNavigate: t }),
                             }),
                         ],
                     }),
-                    children: (0, i.jsx)(ei, { eligibleGuilds: n, onNavigate: t }),
+                    children: (0, i.jsx)(es, { eligibleGuilds: n, onNavigate: t }),
                 }),
             }),
         ],
@@ -466,7 +466,7 @@ function eo(e) {
             onRequestClose: r,
             renderPopout: () =>
                 (0, i.jsx)(g.l, {
-                    "aria-label": Z.intl.string(Y.default.ZnvpQR),
+                    "aria-label": L.intl.string(R.default.ZnvpQR),
                     children: (0, i.jsx)(ec, { onNavigate: r }),
                 }),
             children: (e, l) => {
@@ -481,7 +481,7 @@ function eu() {
     let e = n.useRef(null),
         [t, l] = n.useState(!1),
         a = (0, r.bG)([m.Ay], () => m.Ay.isAnyThinking()),
-        x = Z.intl.string(Y.default.ZnvpQR);
+        x = L.intl.string(R.default.ZnvpQR);
     return (0, i.jsx)(eo, {
         targetElementRef: e,
         children: (n, r, m) =>

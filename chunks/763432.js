@@ -855,8 +855,8 @@ var eX = i(702841),
     e1 = i(554146),
     e8 = i(43105),
     e2 = i(131607),
-    e5 = i(518477),
-    e7 = i(49999);
+    e7 = i(518477),
+    e5 = i(49999);
 function e3() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
         t = e$.A.useConfig({ location: "PersonalWidgetUpsellCoachmark" }).enabled,
@@ -881,7 +881,7 @@ function e4(e) {
               gradientColor: "nitro-pink",
               title: V.intl.string(V.t.KKGxNt),
               body: V.intl.string(V.t["IS+QTV"]),
-              onRequestClose: () => l(e7.i.USER_DISMISS),
+              onRequestClose: () => l(e5.i.USER_DISMISS),
               actions: [
                   {
                       text: V.intl.string(V.t.RCy7Px),
@@ -890,7 +890,7 @@ function e4(e) {
                           let e = (0, I.g0)();
                           ((0, F.Y5)(e),
                               s({ action: "WIDGET_ADDED", ...e.getProfileEditAnalyticsOptions() }),
-                              (0, e0.XA)(e5.jM.WIDGET_ADDED));
+                              (0, e0.XA)(e7.jM.WIDGET_ADDED));
                       },
                   },
               ],
@@ -902,11 +902,11 @@ function e9(e) {
     let { buttonRef: t, isCoachmarkVisible: i, markCoachmarkAsDismissed: s } = e,
         { trackUserProfileEditAction: a } = (0, eQ.NJ)(),
         r = l.useCallback(() => {
-            i && s(e7.i.TAKE_ACTION);
+            i && s(e5.i.TAKE_ACTION);
             let e = (0, I.g0)();
             ((0, F.Y5)(e),
                 a({ action: "WIDGET_ADDED", ...e.getProfileEditAnalyticsOptions() }),
-                (0, e0.XA)(e5.jM.WIDGET_ADDED));
+                (0, e0.XA)(e7.jM.WIDGET_ADDED));
         }, [a, i, s]);
     return (0, n.jsx)(eK.$, {
         icon: eq.t,
@@ -934,7 +934,7 @@ function te(e) {
         })(),
         m = (0, eZ.c)("UserProfileWidgetEditingHeader"),
         x = l.useCallback(() => {
-            (c && u(e7.i.TAKE_ACTION),
+            (c && u(e5.i.TAKE_ACTION),
                 s({ action: "PRESS_ADD_WIDGET" }),
                 (0, ej.openModalLazy)(
                     async () => {
@@ -1016,7 +1016,7 @@ async function tE(e, t, i, n, l) {
             c = await E.A.uploadWidgetClip(d, { onProgress: (e) => (0, tI.Fj)(t, e), signal: n.signal });
         if (!(0, F.WX)(t, c)) return;
         r({
-            action: a === e5.IE.PICKER ? "CLIP_ADDED_FROM_PICKER" : "CLIP_ADDED_FROM_SUGGESTED",
+            action: a === e7.IE.PICKER ? "CLIP_ADDED_FROM_PICKER" : "CLIP_ADDED_FROM_SUGGESTED",
             widgetEdited: b.x.CLIPS_GALLERY,
             gameId: i,
         });
@@ -1509,18 +1509,18 @@ function t1(e) {
 }
 var t8 = i(769015),
     t2 = i(409626),
-    t5 = i(692969),
-    t7 = i(202163),
+    t7 = i(692969),
+    t5 = i(202163),
     t3 = i(207803),
     t4 = i(591179),
     t6 = i(485745),
     t9 = i(308766);
 function ie(e) {
     let { gameId: t, userId: i, className: s } = e,
-        { gameRecord: r } = (0, t7.A)(t),
+        { gameRecord: r } = (0, t5.A)(t),
         o = !(0, t4.X)("WidgetClipGameIcon"),
         d = (0, t6.A)(o),
-        c = (0, t5.A)({
+        c = (0, t7.A)({
             location: "WidgetClipGameIcon",
             applicationId: t,
             source: t2.GameProfileSources.UserProfile,
@@ -1690,7 +1690,7 @@ function ic(e) {
             },
             [_],
         ),
-        ea = l.useCallback((e) => es(e, e5.IE.SUGGESTED), [es]),
+        ea = l.useCallback((e) => es(e, e7.IE.SUGGESTED), [es]),
         er = l.useCallback(() => {
             (_({ action: "PRESS_ADD_CLIP", widgetEdited: b.x.CLIPS_GALLERY }),
                 (0, ej.openModalLazy)(
@@ -1701,7 +1701,9 @@ function ic(e) {
                             i.e("269714"),
                             i.e("19385"),
                             i.e("718955"),
-                            i.e("323589"),
+                            i.e("94954"),
+                            i.e("571247"),
+                            i.e("498167"),
                             i.e("553829"),
                             i.e("895840"),
                             i.e("865257"),
@@ -1744,7 +1746,7 @@ function ic(e) {
                                 initialMainLink: td.oH.ALL_CLIPS,
                                 picker: {
                                     onPick: (e) => {
-                                        (((e) => es(e, e5.IE.PICKER))(e), t.onClose());
+                                        (((e) => es(e, e7.IE.PICKER))(e), t.onClose());
                                     },
                                     action: td.qh.UPLOAD,
                                     filterClip: it,
@@ -1864,7 +1866,7 @@ function iI(e) {
             null != r &&
                 ((0, F.Y5)(r),
                 a({ action: "WIDGET_ADDED", ...r.getProfileEditAnalyticsOptions() }),
-                (0, e0.XA)(e5.jM.WIDGET_ADDED));
+                (0, e0.XA)(e7.jM.WIDGET_ADDED));
         }, [r, a]);
     return (0, n.jsx)(_.A, {
         user: t,
@@ -1886,7 +1888,7 @@ function iI(e) {
                             icon: tx.P,
                             "aria-label": V.intl.string(V.t.WAI6xu),
                             onClick: () => {
-                                s(e7.i.USER_DISMISS);
+                                s(e5.i.USER_DISMISS);
                             },
                         }),
                     }),
@@ -1899,7 +1901,7 @@ function iI(e) {
                             icon: ip.U,
                             "aria-label": V.intl.formatToPlainString(V.t.KfGahB, { applicationName: i.name }),
                             onClick: () => {
-                                (s(e7.i.TAKE_ACTION), o());
+                                (s(e5.i.TAKE_ACTION), o());
                             },
                         }),
                     }),
@@ -2361,7 +2363,7 @@ function i2(e) {
             }),
     });
 }
-function i5(e) {
+function i7(e) {
     let { widgetType: t, allowEditing: i, disableInteraction: l = !1, games: s } = e,
         { getManageButtonForWidget: a } = (0, tt.r)(),
         r = a(t),
@@ -2383,7 +2385,7 @@ function i5(e) {
           })
         : g;
 }
-function i7(e) {
+function i5(e) {
     let { user: t, widget: i, guildId: l, channelId: s, allowEditing: a, disableInteraction: r, ...o } = e;
     return (0, n.jsx)(W.A, {
         userId: t.id,
@@ -2393,7 +2395,7 @@ function i7(e) {
         ...o,
         children:
             i.games.length > 0
-                ? (0, n.jsx)(i5, {
+                ? (0, n.jsx)(i7, {
                       userId: t.id,
                       widgetType: i.type,
                       games: i.games,
@@ -2415,7 +2417,7 @@ function i3(e) {
         ...o,
         children:
             i.games.length > 0
-                ? (0, n.jsx)(i5, {
+                ? (0, n.jsx)(i7, {
                       userId: t.id,
                       widgetType: i.type,
                       games: i.games,
@@ -2492,7 +2494,7 @@ function nt(e) {
         case b.x.WANT_TO_PLAY_GAMES:
             return (0, n.jsx)(i3, { widget: t, ...i });
         case b.x.PLAYED_GAMES:
-            return (0, n.jsx)(i7, { widget: t, ...i });
+            return (0, n.jsx)(i5, { widget: t, ...i });
         default:
             return null;
     }
