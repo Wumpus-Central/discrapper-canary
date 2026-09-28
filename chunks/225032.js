@@ -1478,7 +1478,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e6 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eW.A().log(
-    `[BUILD INFO] Release Channel: ${e6}, Build Number: 623496, Version Hash: 49c71d8b3e29bf8117993fa3433ab7e7fc54fd30`,
+    `[BUILD INFO] Release Channel: ${e6}, Build Number: 623505, Version Hash: e1fdbec0092807af2acd00b8633c51df9f9b295d`,
 ),
     M.A.setTags({ appContext: F.QCW }),
     ep.A.initBasic(),
@@ -21840,7 +21840,7 @@ let N9 = "isHideDevBanner",
                     className: to()(N8.Wz, N8.mr),
                     children: [
                         (0, y.jsx)(N7, { className: N8.Kk }),
-                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "623496" }),
+                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "623505" }),
                         (0, y.jsx)(r, {}),
                     ],
                 })
@@ -36270,39 +36270,44 @@ class bW {
         });
     }
     start(e) {
-        let { frameId: t, applicationId: n } = this.validateFrame(e),
-            i = this.getConnectedRTCConnection(),
-            r = i?.getMediaEngineConnectionId();
-        if (null == i || null == r)
+        let { frameId: t, applicationId: n, channelId: i } = this.validateFrame(e),
+            r = this.getConnectedRTCConnection(),
+            a = r?.getMediaEngineConnectionId();
+        if (null == r || null == a)
             throw new bP.A(
                 { errorCode: F.Lw6.INVALID_CHANNEL },
                 "Join a voice channel before starting a voice session",
             );
-        let a = this.sessions.get(t);
-        null != a && this.releaseSession(a);
-        let s = a?.focusSequence ?? (bM.A.isFrameVisible(t) ? ++this.focusSequence : 0),
-            l = {
+        if (i !== r.channelId)
+            throw new bP.A(
+                { errorCode: F.Lw6.UNAUTHORIZED_FOR_APPLICATION },
+                "Only an app running in your voice channel can start a voice session",
+            );
+        let s = this.sessions.get(t);
+        null != s && this.releaseSession(s);
+        let l = s?.focusSequence ?? (bM.A.isFrameVisible(t) ? ++this.focusSequence : 0),
+            o = {
                 id: (0, bb.A)(),
                 socketId: e.id,
                 frameId: t,
                 applicationId: n,
-                channelId: i.channelId,
-                rtcConnectionId: i.getRTCConnectionId(),
-                mediaEngineConnectionId: r,
+                channelId: r.channelId,
+                rtcConnectionId: r.getRTCConnectionId(),
+                mediaEngineConnectionId: a,
                 spatialEnabled: !1,
-                focusSequence: s,
+                focusSequence: l,
                 backgrounded: !bM.A.isFrameVisible(t),
                 pooled: bM.A.isFramePooled(t),
                 sources: [],
                 appliedUserIds: new Set(),
                 updateTimer: null,
             };
-        if (!this.hasMediaEngineConnection(l))
+        if (!this.hasMediaEngineConnection(o))
             throw new bP.A({ errorCode: F.Lw6.INVALID_CHANNEL }, "The voice connection is unavailable");
         return (
-            this.sessions.set(t, l),
+            this.sessions.set(t, o),
             (this.unsubscribeFrameLifecycle ??= bM.A.subscribe(this.handleFrameLifecycleChange)),
-            l
+            o
         );
     }
     enableSpatial(e, t) {
@@ -36543,14 +36548,14 @@ class bW {
         null != e.updateTimer && (clearTimeout(e.updateTimer), (e.updateTimer = null));
     }
     validateFrame(e) {
-        let { applicationId: t, iframeId: n } = bx(e),
-            i = rB.A.getFrameByIframeId(n);
-        if (null == i || i.applicationId !== t)
+        let { applicationId: t, iframeId: n, channelId: i } = bx(e),
+            r = rB.A.getFrameByIframeId(n);
+        if (null == r || r.applicationId !== t)
             throw new bP.A(
                 { errorCode: F.Lw6.UNAUTHORIZED_FOR_APPLICATION },
                 "The RPC socket does not belong to this Frame",
             );
-        return { frameId: i.id, applicationId: i.applicationId };
+        return { frameId: r.id, applicationId: r.applicationId, channelId: i };
     }
     validateSession(e, t) {
         let { frameId: n, applicationId: i } = this.validateFrame(e),
@@ -37338,8 +37343,15 @@ let Mc = {
                     socket: n,
                     args: { channel_id: i, timeout: r = 0, force: a = !1, navigate: s = !1 },
                 } = e;
-                if ((n.authorization.scopes.includes(bZ.F.RPC) || bx(n), !i))
-                    return (tX.default.selectVoiceChannel(null), null);
+                if (!n.authorization.scopes.includes(bZ.F.RPC))
+                    throw (
+                        bx(n),
+                        new bP.A(
+                            { errorCode: F.Lw6.UNAUTHORIZED_FOR_APPLICATION },
+                            "Embedded apps cannot select a voice channel",
+                        )
+                    );
+                if (!i) return (tX.default.selectVoiceChannel(null), null);
                 let l = na.Ay.getVoiceChannelId();
                 if (null != l && l !== i && !1 === a)
                     throw new bP.A(
@@ -40159,10 +40171,13 @@ class P0 {
         let t = rE.A.getRTCConnection();
         if (null == t || "RTC_CONNECTED" !== t.state)
             throw new bP.A({ errorCode: F.Lw6.INVALID_CHANNEL }, "Join the stream channel first");
-        let n = t.channelId,
-            i = t.guildId ?? n$.A.getChannel(n)?.getGuildId() ?? null;
-        if (null != e.guildId && i !== e.guildId)
-            throw new bP.A({ errorCode: F.Lw6.INVALID_CHANNEL }, "Join a voice channel in the same server as this app");
+        let n = t.channelId;
+        if (e.channelId !== n)
+            throw new bP.A(
+                { errorCode: F.Lw6.UNAUTHORIZED_FOR_APPLICATION },
+                "Only an app running in your voice channel can view video",
+            );
+        let i = t.guildId ?? n$.A.getChannel(n)?.getGuildId() ?? null;
         return { channelId: n, guildId: i, rtcConnectionId: t.getRTCConnectionId() };
     }
     validateFrame(e) {
@@ -40706,19 +40721,14 @@ let Ud =
             scope: Uc,
             handler(e) {
                 let { socket: t } = e;
-                return (bx(t), P1.getCameraCapabilitiesForSocket(t));
+                return (bx(t), { available: !1, transport: "none", max_sessions: 0 });
             },
         }),
         [F.e$_.START_CAMERA_VIEW]: Me(F.e$_.START_CAMERA_VIEW, {
             scope: Uc,
             handler(e) {
-                let {
-                    socket: t,
-                    args: { owner_user_id: n, transport_nonce: i },
-                } = e;
-                bx(t);
-                let r = P1.startCamera(t, n, i);
-                return { session_id: r.id, owner_user_id: r.ownerUserId, channel_id: r.channelId, transport: "rgba" };
+                let { socket: t } = e;
+                throw (bx(t), new bP.A({ errorCode: F.Lw6.INVALID_COMMAND }, "Camera views are not available"));
             },
         }),
         [F.e$_.SUSPEND_CAMERA_VIEW]: Me(F.e$_.SUSPEND_CAMERA_VIEW, {
