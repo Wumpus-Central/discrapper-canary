@@ -93,7 +93,7 @@ async function S(e, t, n, i, l) {
             d = o.id;
         return (a.h.dispatch({ type: "ORDER_CREATE_SUCCESS", orderId: d, order: o }), d);
     } catch (e) {
-        throw (a.h.dispatch({ type: "ORDER_CREATE_FAIL" }), new s.Ey(`Failed to create order: ${e}`));
+        throw (a.h.dispatch({ type: "ORDER_CREATE_FAIL" }), new s.Ey(e));
     }
 }
 async function N(e, t, n) {

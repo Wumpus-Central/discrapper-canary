@@ -6665,7 +6665,10 @@ let a8 = { payment_gateway: tG.kM.VIRTUAL_CURRENCY, currency: eB.Yri.DISCORD_ORB
                                 return null;
                             }, [d, m, a]);
                         p?.orbPriceAmount == null &&
-                            (0, aY.hD)("Orb price not found for product", { tags: { sku_id: t } });
+                            (0, aY.hD)("Orb price not found for product", {
+                                tags: { sku_id: t },
+                                fingerprint: ["orb-price-not-found-for-product"],
+                            });
                         let {
                                 redeemVirtualCurrency: h,
                                 isSubmitting: C,
