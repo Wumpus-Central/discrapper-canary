@@ -249,6 +249,13 @@ let n = [
             "If Conjure restarts partway through a long task, it now picks up from its last step and keeps the steps it already showed you.",
     },
     {
+        date: "2026-09-27",
+        time: "08:08",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "Images you attach before your app is built now reach Conjure, whether you send them while it works, approve a plan, pick an idea, or answer its questions.",
+    },
+    {
         date: "2026-09-08",
         time: "00:02",
         platforms: ["desktop"],
