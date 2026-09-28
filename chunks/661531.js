@@ -9447,6 +9447,7 @@ let { Themes: c } = d.zv,
                 WIDTH_SMALL: { resolve: () => 442 },
             },
             select: { MAX_WIDTH: { resolve: () => 248 }, OPTION_HEIGHT: { resolve: () => 40 } },
+            toast: { MAX_WIDTH: { resolve: () => 280 }, TEXT_LINE_COUNT: { resolve: () => 2 } },
         },
     },
     {

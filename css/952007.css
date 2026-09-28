@@ -10105,7 +10105,9 @@
     --modal-width-medium: 602px;
     --modal-width-small: 442px;
     --select-max-width: 248px;
-    --select-option-height: 40px
+    --select-option-height: 40px;
+    --toast-max-width: 280px;
+    --toast-text-line-count: 2px
 }
 
 .mobile-visual-refresh {
@@ -10303,4 +10305,4 @@
     --motion-spring-subtle-duration: 598ms
 }
 
-/*# sourceMappingURL=952007.2308d8f9bc028a51.css.map*/
+/*# sourceMappingURL=952007.b29b758ae21a6edd.css.map*/
