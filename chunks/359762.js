@@ -9,8 +9,8 @@ var i = n(477900),
     c = n(761929),
     d = n(97469),
     h = n(925166),
-    x = n(605117),
-    f = n(331322),
+    f = n(605117),
+    x = n(331322),
     m = n(214947),
     g = n(661531),
     j = n(297264),
@@ -55,8 +55,8 @@ function _() {
         [a, o] = s.useState(""),
         [u, c] = s.useState(""),
         [d, h] = s.useState(!1),
-        { enabled: x } = F.A.useConfig({ location: "AddFriendPopout" });
-    async function f() {
+        { enabled: f } = F.A.useConfig({ location: "AddFriendPopout" });
+    async function x() {
         h(!0);
         try {
             let e = await P.Ay.createFriendInvite(null, T.PE1.ADD_FRIENDS_POPOUT);
@@ -94,7 +94,7 @@ function _() {
                             children: (0, i.jsx)(v.K, {
                                 icon: w.LinkIcon,
                                 size: "sm",
-                                onClick: f,
+                                onClick: x,
                                 "aria-label": U.intl.string(U.t.t1T3kD),
                                 variant: "icon-only",
                                 loading: d,
@@ -108,7 +108,7 @@ function _() {
                             t({ type: "SENDING" }),
                             (0, M.Ay)({
                                 discordTag: a,
-                                note: x && "" !== u ? u : void 0,
+                                note: f && "" !== u ? u : void 0,
                                 location: "Add Friend Popout",
                                 errorUxConfig: M.gB.SHOW_ONLY_IF_ACTION_NEEDED,
                             })
@@ -138,7 +138,7 @@ function _() {
                                 "data-lpignore": !0,
                                 "data-1p-ignore": !0,
                             }),
-                            x &&
+                            f &&
                                 (0, i.jsx)(y.f, {
                                     label: U.intl.string(U.t["6dVPSI"]),
                                     value: u,
@@ -194,25 +194,25 @@ let V = Array.from({ length: 10 }, (e, t) =>
     ),
 );
 function q() {
-    return (0, x.c)() ? (0, i.jsx)($, {}) : (0, i.jsx)(Z, {});
+    return (0, f.c)() ? (0, i.jsx)($, {}) : (0, i.jsx)(Z, {});
 }
 function Z() {
     return (0, i.jsxs)("div", {
         className: X.kL,
         children: [
             (0, i.jsx)("div", { className: X.Dd, children: V }),
-            (0, i.jsx)(f.B, {
+            (0, i.jsx)(x.B, {
                 align: "center",
                 justify: "center",
                 padding: { left: 24, right: 24 },
                 className: X.C,
-                children: (0, i.jsxs)(f.B, {
+                children: (0, i.jsxs)(x.B, {
                     align: "center",
                     gap: 16,
                     padding: { bottom: 80 },
                     children: [
                         (0, i.jsx)(m.$, { size: "lg", color: g.A.colors.ICON_DEFAULT }),
-                        (0, i.jsxs)(f.B, {
+                        (0, i.jsxs)(x.B, {
                             gap: 4,
                             className: X.Dk,
                             children: [
@@ -263,6 +263,7 @@ function $() {
                             return (0, i.jsx)(b.m, {
                                 text: U.intl.string(W.default.au4mU4),
                                 position: "bottom",
+                                targetElementRef: t,
                                 children: (0, i.jsx)(v.K, {
                                     buttonRef: t,
                                     size: "sm",
@@ -298,8 +299,8 @@ var ei = n(17928),
     ec = n(734057),
     ed = n(290863),
     eh = n(994500),
-    ex = n(287809),
-    ef = n(972910);
+    ef = n(287809),
+    ex = n(972910);
 function em(e) {
     let { friend: t, appendGap: n, closePopout: l } = e,
         [a, o] = s.useState(!1),
@@ -313,7 +314,7 @@ function em(e) {
             isVR: ed.A.isVROnline(t.userId),
         }));
     return (0, i.jsx)(K.D, {
-        className: r()(ef.Ke, { [ef.w$]: n }),
+        className: r()(ex.Ke, { [ex.w$]: n }),
         onMouseEnter: () => o(!0),
         onMouseLeave: () => o(!1),
         onClick: function () {
@@ -329,7 +330,7 @@ function em(e) {
             subText: (0, i.jsx)(p.E, { variant: "text-xs/medium", color: "text-muted", children: t.user.username }),
             hovered: a,
             showAccountIdentifier: !1,
-            className: ef.eF,
+            className: ex.eF,
         }),
     });
 }
@@ -351,36 +352,36 @@ function eg(e) {
         renderSection: (e) => {
             let { section: n } = e;
             return (0, i.jsx)(p.E, {
-                className: ef.nw,
+                className: ex.nw,
                 variant: "text-sm/medium",
                 children: U.intl.format(U.t.xIWGxu, { count: t.length }),
             });
         },
-        className: ef.Xv,
+        className: ex.Xv,
     });
 }
 function ej() {
     return (0, i.jsx)(p.E, {
         variant: "text-sm/medium",
-        className: ef.n1,
+        className: ex.n1,
         children: U.intl.string(W.default["0usxBd"]),
     });
 }
 function ep() {
-    return (0, i.jsx)(p.E, { variant: "text-sm/medium", className: ef.n1, children: U.intl.string(W.default.VH2HXW) });
+    return (0, i.jsx)(p.E, { variant: "text-sm/medium", className: ex.n1, children: U.intl.string(W.default.VH2HXW) });
 }
 function eC(e) {
     let { rawQuery: t, closePopout: n } = e,
         s = (0, ea.HI)(t),
         l = (0, ei.bG)(
-            [eh.A, ex.default],
+            [eh.A, ef.default],
             () => {
                 if ("" === s) return [];
                 let e = eh.A.getFriendIDs(),
                     t = [];
                 return (
                     e.forEach((e) => {
-                        let n = ex.default.getUser(e);
+                        let n = ef.default.getUser(e);
                         if (void 0 === n) return;
                         let i = eh.A.getNickname(e),
                             l = [(0, ea.HI)(n.username)];
@@ -410,7 +411,7 @@ function eC(e) {
 function eR(e) {
     let { query: t, width: n, closePopout: s } = e;
     return (0, i.jsx)("div", {
-        className: r()(ef.kL, ef.zZ),
+        className: r()(ex.kL, ex.zZ),
         style: n > 0 ? { "--custom-search-friends-popout-width": `${n}px` } : void 0,
         children: (0, i.jsx)(eC, { rawQuery: t, closePopout: s }),
     });
@@ -420,10 +421,10 @@ function eb(e) {
         [n, l] = s.useState("");
     return (0, i.jsx)(A.l, {
         children: (0, i.jsxs)("div", {
-            className: ef.kL,
+            className: ex.kL,
             children: [
                 (0, i.jsx)("div", {
-                    className: ef.M6,
+                    className: ex.M6,
                     children: (0, i.jsx)(I.k, { placeholder: U.intl.string(U.t.lLDtTK), value: n, onChange: l }),
                 }),
                 (0, i.jsx)(eC, { rawQuery: n, closePopout: t }),
@@ -434,7 +435,7 @@ function eb(e) {
 var ev = n(540950);
 function eN(e) {
     let { isSearching: t, setIsSearching: n } = e,
-        l = (0, x.c)(),
+        l = (0, f.c)(),
         { appBarToggleEnabled: r } = h.A.useConfig({ location: "FriendsListHeader" }),
         [a, o] = s.useState(!1),
         c = s.useRef(null),
@@ -454,7 +455,7 @@ function eN(e) {
           : (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsx)(eS, { compact: a }),
-                    (0, i.jsxs)(f.B, {
+                    (0, i.jsxs)(x.B, {
                         direction: "horizontal",
                         fullWidth: !1,
                         ref: m,
@@ -475,7 +476,7 @@ function eN(e) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(eS, { ghost: !0, ref: d }),
-            (0, i.jsx)(f.B, {
+            (0, i.jsx)(x.B, {
                 direction: "horizontal",
                 fullWidth: !1,
                 justify: l ? "center" : "space-between",
@@ -503,7 +504,7 @@ function eS(e) {
             className: r()(ev.Iw, { [ev.qy]: n }),
             "aria-label": U.intl.string(W.default["7kJd9e"]),
             innerRef: l,
-            children: (0, i.jsxs)(f.B, {
+            children: (0, i.jsxs)(x.B, {
                 direction: "horizontal",
                 gap: 4,
                 align: "center",
@@ -536,7 +537,7 @@ function eE() {
     });
 }
 function eA() {
-    return (0, i.jsxs)(f.B, {
+    return (0, i.jsxs)(x.B, {
         gap: 4,
         padding: 8,
         fullWidth: !1,
@@ -651,17 +652,17 @@ function ey(e) {
 var eD = n(45863);
 function eP() {
     let e = s.useRef(null),
-        t = (0, x.c)(),
+        t = (0, f.c)(),
         n = s.useRef(!1),
-        l = s.useMemo(() => ({ width: (0, x.A)() ? 64 : 280 }), []),
-        { appBarToggleEnabled: f } = h.A.useConfig({ location: "FriendsSidebar" }),
+        l = s.useMemo(() => ({ width: (0, f.A)() ? 64 : 280 }), []),
+        { appBarToggleEnabled: x } = h.A.useConfig({ location: "FriendsSidebar" }),
         [m, g] = s.useState(!1);
     s.useLayoutEffect(() => {
         null == e.current || n.current || (e.current.style.width = `${t ? 64 : 280}px`);
     }, [t]);
     let j = s.useCallback((e, t) => {
             let n = t <= 200;
-            n !== (0, x.A)() && (0, a.flushSync)(() => u.A.setFriendsSidebarCollapsed(n));
+            n !== (0, f.A)() && (0, a.flushSync)(() => u.A.setFriendsSidebarCollapsed(n));
         }, []),
         p = s.useCallback(() => {
             ((n.current = !0), g(!1));
@@ -669,13 +670,13 @@ function eP() {
         C = s.useCallback(() => {
             n.current = !1;
         }, []),
-        R = s.useCallback((e) => (f ? Math.min(Math.max(e, 280), 320) : e <= 200 ? 64 : Math.min(e, 320)), [f]),
+        R = s.useCallback((e) => (x ? Math.min(Math.max(e, 280), 320) : e <= 200 ? 64 : Math.min(e, 320)), [x]),
         b = (0, c.A)({
             resizableDomNodeRef: e,
             minDimension: 64,
             maxDimension: 320,
             orientation: c.R.HORIZONTAL_LEFT,
-            onElementResize: f ? T.tEg : j,
+            onElementResize: x ? T.tEg : j,
             onElementResizeStart: p,
             onElementResizeEnd: C,
             throttleDuration: 0,
@@ -694,7 +695,7 @@ function eP() {
                         role: "separator",
                         "aria-orientation": "vertical",
                         "aria-label": U.intl.string(W.default["F3+Xei"]),
-                        "aria-valuemin": f ? 280 : 64,
+                        "aria-valuemin": x ? 280 : 64,
                         "aria-valuemax": 320,
                         className: eD.D,
                         onMouseDown: b,
