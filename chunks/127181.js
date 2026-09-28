@@ -88,6 +88,13 @@ let n = [
         summary: "Apps you install just for yourself can hold an ordinary back-and-forth conversation with you in DMs.",
     },
     {
+        date: "2026-09-24",
+        time: "23:16",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "Ask Conjure to undo a change, or open a reply\u2019s menu and pick Restore this version, to put your app back the way it was.",
+    },
+    {
         date: "2026-09-01",
         time: "00:00",
         platforms: ["desktop", "mobile"],

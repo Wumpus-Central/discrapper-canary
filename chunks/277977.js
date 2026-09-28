@@ -5,7 +5,7 @@
     _v: () => eE,
     n6: () => ev,
     ss: () => eI,
-    cS: () => em,
+    cS: () => eT,
     R7: () => ee,
     aF: () => eR,
     Lj: () => et,
@@ -14,16 +14,16 @@
     oX: () => ew,
     ms: () => eu,
     TV: () => z,
-    dv: () => Z,
-    Hc: () => X,
+    dv: () => X,
+    Hc: () => K,
     Bn: () => eC,
     XZ: () => en,
     oB: () => el,
     $D: () => ef,
-    fu: () => K,
+    fu: () => Z,
     $C: () => Y,
     Ay: () => eB,
-    Xk: () => eT,
+    Xk: () => em,
     vX: () => ey,
     dz: () => e_,
     ST: () => ec,
@@ -164,8 +164,8 @@ var g = n(557875),
     y = n(783791),
     S = n(972786),
     E = n(50617),
-    m = n(375708);
-function T(e, t) {
+    T = n(375708);
+function m(e, t) {
     let n = e.pendingPublish;
     null != n && ((e.pendingPublish = null), clearTimeout(n.timeout), n.reject(Error(t)));
 }
@@ -397,6 +397,13 @@ async function q(e, t) {
                             content: r.content,
                             timestamp: r.ts,
                         });
+                    else if ("source_checkpoint" === r.type)
+                        s.h.dispatch({
+                            type: "VIBEGRATIONS_CHAT_SOURCE_CHECKPOINT",
+                            projectId: t,
+                            turnId: r.turn_id,
+                            sourceSha: r.source_sha,
+                        });
                     else if ("provisional_todo" === r.type)
                         s.h.dispatch({
                             type: "VIBEGRATIONS_CHAT_PROVISIONAL_TODO",
@@ -414,7 +421,7 @@ async function q(e, t) {
                                       turnId: r.turn_id,
                                       patch: { content: e, kind: "message" },
                                   })
-                                : C(t, m.intl.string(E.default.Z8Eo8I), v);
+                                : C(t, T.intl.string(E.default.Z8Eo8I), v);
                         } else if ("thinking_lifecycle" === r.kind) {
                             let { phase: e, session: n, seq: o, ticks: i, elapsed_ms: a, text: c } = r;
                             null != e &&
@@ -498,7 +505,7 @@ async function q(e, t) {
                                       turnId: r.turn_id,
                                       patch: { proposal: r.proposal, kind: "proposal" },
                                   })
-                                : C(t, m.intl.string(E.default.IHCafX), v);
+                                : C(t, T.intl.string(E.default.IHCafX), v);
                         else if ("ideas" === r.kind)
                             null != r.ideas &&
                                 r.ideas.length > 0 &&
@@ -507,6 +514,14 @@ async function q(e, t) {
                                     projectId: t,
                                     turnId: r.turn_id,
                                     patch: { ideas: r.ideas },
+                                });
+                        else if ("restore_proposal" === r.kind)
+                            null != r.restore_proposal &&
+                                s.h.dispatch({
+                                    type: "VIBEGRATIONS_CHAT_TURN_PATCH",
+                                    projectId: t,
+                                    turnId: r.turn_id,
+                                    patch: { restoreProposal: r.restore_proposal },
                                 });
                         else if ("clarification" === r.kind)
                             null != r.clarification &&
@@ -740,7 +755,7 @@ async function q(e, t) {
                                             })(t, r));
                 })(e, t, n),
             onClose: () => {
-                (T(t, "Connection closed before the publish result arrived"),
+                (m(t, "Connection closed before the publish result arrived"),
                 w(t, "Connection closed before the draft arrived"),
                 _(e),
                 t.disposed)
@@ -760,7 +775,7 @@ async function q(e, t) {
         (R(e, "failed"),
             $(e, t, n instanceof Error ? n.message : "ws open failed"),
             (t.pendingModelSettings = null),
-            T(t, "Connection failed before the publish result arrived"),
+            m(t, "Connection failed before the publish result arrived"),
             w(t, "Connection failed before the draft arrived"),
             (0, l.Z0)(e, {
                 location: "connection",
@@ -801,7 +816,7 @@ function F(e) {
         null != n &&
         ((n.disposed = !0),
         n.backoff.cancel(),
-        T(n, "Connection closed before the publish result arrived"),
+        m(n, "Connection closed before the publish result arrived"),
         w(n, "Connection closed before the draft arrived"),
         n.ws.close(),
         k.delete(e),
@@ -813,13 +828,13 @@ function F(e) {
         !0)
     );
 }
-function X(e) {
+function K(e) {
     let t = k.get(e);
     if (null == t) return void J(e);
     let n = A.get(e);
     ("closed" !== n && "failed" !== n) || t.reconnectPending || J(e);
 }
-function Z(e, t, n) {
+function X(e, t, n) {
     let { templateId: r, remix: o } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
         s = t.trim(),
         a = null != n && n.length > 0 ? n : void 0;
@@ -841,7 +856,7 @@ function Z(e, t, n) {
         (console.error("[vibegrations] send failed", t), C(e, t instanceof Error ? t.message : "send failed"));
     }
 }
-function K(e) {
+function Z(e) {
     let t = k.get(e);
     try {
         if (null == t) throw Error("Not connected");
@@ -857,7 +872,7 @@ function z(e) {
         if (null == r) return void n(Error("Not connected"));
         if (null != r.pendingPublish) return void n(Error("Publish already in flight"));
         let o = setTimeout(() => {
-            T(r, "Publish timed out");
+            m(r, "Publish timed out");
         }, 12e4);
         r.pendingPublish = { resolve: t, reject: n, timeout: o };
         try {
@@ -1079,14 +1094,14 @@ class eE extends Error {
         (super(`export failed (${e})`), (this.status = e));
     }
 }
-async function em(e, t) {
+async function eT(e, t) {
     let { ticket: n, baseUrl: r } = await (0, p.d)(e),
         o = new URLSearchParams({ ticket: n, name: t }),
         s = await fetch(`${r}/agent/export?${o}`);
     if (!s.ok) throw new eE(s.status);
     return await s.blob();
 }
-class eT extends Error {
+class em extends Error {
     status;
     constructor(e) {
         (super(`remix failed (${e})`), (this.status = e));
@@ -1100,7 +1115,7 @@ async function ew(e, t) {
             headers: { "content-type": "application/json" },
             body: JSON.stringify({ dest_ticket: r.ticket }),
         });
-    if (!s.ok) throw new eT(s.status);
+    if (!s.ok) throw new em(s.status);
 }
 async function ek(e, t) {
     let { ticket: n, baseUrl: r } = await (0, p.d)(e),
