@@ -1316,8 +1316,8 @@ let nM = "",
             let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "png";
             return `/guilds/${e}/users/${t}/banners/${n}.${i}`;
         },
-        INTELLIGENCE_LAYER_SEARCH: (e) => `/guilds/${e}/intelligence/search`,
-        INTELLIGENCE_LAYER_SUGGESTED_SEARCHES: (e) => `/guilds/${e}/intelligence/search/suggestions`,
+        SMART_SEARCH: (e) => `/guilds/${e}/intelligence/search`,
+        SUGGESTED_SEARCHES: (e) => `/guilds/${e}/intelligence/search/suggestions`,
         CHANNEL_CONVERSATIONS: (e) => `/channels/${e}/conversations`,
         CHANNEL_CONVERSATION: (e, t) => `/channels/${e}/conversations/${t}`,
         CHANNEL_CONVERSATION_MESSAGES: (e, t) => `/channels/${e}/conversations/${t}/messages`,

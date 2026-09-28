@@ -98,7 +98,7 @@ let I = new h(r.h, {
         });
     },
     SEARCH_MESSAGES_SUCCESS: E,
-    INTELLIGENCE_SEARCH_FETCH_SUCCESS: function (e) {
+    SMART_SEARCH_FETCH_SUCCESS: function (e) {
         let { messages: t } = e;
         return t.reduce((e, t) => u(t) || e, !1);
     },

@@ -149,7 +149,7 @@ let T = new p(r.h, {
         return !1;
     },
     SEARCH_MESSAGES_SUCCESS: f,
-    INTELLIGENCE_SEARCH_FETCH_SUCCESS: function (e) {
+    SMART_SEARCH_FETCH_SUCCESS: function (e) {
         let { guildId: t, messages: n } = e;
         return h(t, n);
     },

@@ -1478,7 +1478,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e6 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eW.A().log(
-    `[BUILD INFO] Release Channel: ${e6}, Build Number: 623247, Version Hash: 2f3c310a4020ea9fa62001f4aa364dfbc4eaf561`,
+    `[BUILD INFO] Release Channel: ${e6}, Build Number: 623253, Version Hash: 974f0b2d6882ba05d7fe71e870c21f4d90e2bdf3`,
 ),
     M.A.setTags({ appContext: F.QCW }),
     ep.A.initBasic(),
@@ -21843,7 +21843,7 @@ let N9 = "isHideDevBanner",
                     className: to()(N8.Wz, N8.mr),
                     children: [
                         (0, y.jsx)(N7, { className: N8.Kk }),
-                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "623247" }),
+                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "623253" }),
                         (0, y.jsx)(r, {}),
                     ],
                 })
@@ -45997,7 +45997,7 @@ function ks() {
     ki.reset();
 }
 class kl extends ed.Ay.Store {
-    static displayName = "IntelligenceSearchStore";
+    static displayName = "SmartSearchResultsStore";
     initialize() {
         this.waitFor(nK.A, ew.default);
     }
@@ -46012,11 +46012,11 @@ class kl extends ed.Ay.Store {
     }
 }
 new kl(U.h, {
-    INTELLIGENCE_SEARCH_FETCH_START: function (e) {
+    SMART_SEARCH_FETCH_START: function (e) {
         let { requestKey: t, guildId: n, queryText: i, channelIds: r } = e;
         kr(n).set(t, { status: ke.LOADING, queryText: i, answerText: "", citations: [], channelIds: r });
     },
-    INTELLIGENCE_SEARCH_FETCH_SUCCESS: function (e) {
+    SMART_SEARCH_FETCH_SUCCESS: function (e) {
         let { requestKey: t, guildId: n, response: i, channelIds: r } = e,
             a = i.message_citations
                 .map((e) => ({
@@ -46047,7 +46047,7 @@ new kl(U.h, {
             channelIds: r,
         });
     },
-    INTELLIGENCE_SEARCH_FETCH_FAILURE: function (e) {
+    SMART_SEARCH_FETCH_FAILURE: function (e) {
         let { requestKey: t, guildId: n, status: i, queryText: r, channelIds: a } = e;
         kr(n).set(t, { status: i, queryText: r, answerText: "", citations: [], channelIds: a });
     },

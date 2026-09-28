@@ -559,7 +559,7 @@ class eB extends T.A {
             CURRENT_USER_UPDATE: V,
             PRESENCE_UPDATES: es,
             SEARCH_MESSAGES_SUCCESS: z,
-            INTELLIGENCE_SEARCH_FETCH_SUCCESS: X,
+            SMART_SEARCH_FETCH_SUCCESS: X,
             MOD_VIEW_SEARCH_MESSAGES_SUCCESS: z,
             LOAD_MESSAGES_SUCCESS: j,
             LOAD_MESSAGES_AROUND_SUCCESS: j,

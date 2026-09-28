@@ -151,7 +151,7 @@ let v = new D(l.h, {
     LOAD_MESSAGES_SUCCESS: N,
     LOAD_MESSAGES_AROUND_SUCCESS: N,
     SEARCH_MESSAGES_SUCCESS: C,
-    INTELLIGENCE_SEARCH_FETCH_SUCCESS: function (e) {
+    SMART_SEARCH_FETCH_SUCCESS: function (e) {
         let { messages: t } = e;
         return S(t, (e) => g(e));
     },
