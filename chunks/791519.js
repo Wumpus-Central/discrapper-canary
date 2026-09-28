@@ -414,14 +414,14 @@ var eK = n(933832),
     eJ = n(294454),
     e0 = n(625903),
     e1 = n(445927),
-    e4 = n(376205);
-function e8(e) {
+    e8 = n(376205);
+function e4(e) {
     let { server: t, onOpenSettings: n } = e,
         s = t.instance.subscriptionId,
         l = (0, k.bG)(
             [U.A],
             () =>
-                (0, e4.Yg)({
+                (0, e8.Yg)({
                     subscriptionId: s,
                     hasFetchedSubscriptions: U.A.hasFetchedSubscriptions(),
                     getSubscriptionById: (e) => U.A.getSubscriptionById(e),
@@ -685,7 +685,7 @@ let tn = r.memo(function (e) {
                         onClick: _,
                         tooltip: es.intl.string(es.t.RDE0Sc),
                     }),
-                    (0, i.jsx)(e8, { server: t, onOpenSettings: a }),
+                    (0, i.jsx)(e4, { server: t, onOpenSettings: a }),
                 ],
             }),
             (0, i.jsxs)("div", {
@@ -1437,8 +1437,8 @@ var tQ = n(177366),
     tJ = n(124987),
     t0 = n(691885),
     t1 = n(783857),
-    t4 = n(878278);
-let t8 = function () {
+    t8 = n(878278);
+let t4 = function () {
     let { sort: e, onSetSort: t, hasRelevanceFilters: n } = (0, T.v)(),
         s = (0, _.uM)(),
         l = (0, t1.yB)("CollectiblesSortSelect"),
@@ -1485,7 +1485,7 @@ let t8 = function () {
         ),
         g = d(e);
     return (0, i.jsx)("div", {
-        className: o()(t4.k, { [t1.jP]: l }),
+        className: o()(t8.k, { [t1.jP]: l }),
         children: (0, i.jsx)(t0.l, {
             label: es.intl.string(es.t.uaX705),
             hideLabel: !0,
@@ -2167,7 +2167,7 @@ function nM(e) {
                                                 variant: "text-md/semibold",
                                                 children: es.intl.string(es.t.uaX705),
                                             }),
-                                            (0, i.jsx)(t8, {}),
+                                            (0, i.jsx)(t4, {}),
                                         ],
                                     }),
                                     (0, i.jsx)("div", {
@@ -2221,9 +2221,9 @@ function nM(e) {
     );
 }
 var nk = n(599062),
-    ny = n(109210),
+    ny = n(628989),
     nP = n(154323),
-    nD = n(839534),
+    nD = n(815996),
     nB = n(295811),
     nG = n(870216);
 let nw = { "Any:personalization-header": n(645501).A },
@@ -2495,8 +2495,8 @@ function nX(e) {
 var nJ = n(626148),
     n0 = n(235939),
     n1 = n(976860),
-    n4 = n(870308),
-    n8 = n(650583);
+    n8 = n(870308),
+    n4 = n(650583);
 function n5(e) {
     let { children: t, shouldAddEventListener: n, onClose: s } = e,
         l = (0, m.useHasAnyModalOpen)();
@@ -2504,7 +2504,7 @@ function n5(e) {
         r.useEffect(() => {
             if (n && !l) return (window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e));
             function e(e) {
-                e.key === n8.N$.Escape && s();
+                e.key === n4.N$.Escape && s();
             }
         }, [n, l, s]),
         t
@@ -2549,7 +2549,7 @@ let n2 = function (e) {
         }, []),
         { selectedTab: V, transitionState: Y, transitionToTab: $ } = (0, O.o)(k);
     ((0, f.HU)({ location: es.intl.string(es.t.pWG4ze) }), (0, N.uS)(n, V, F, Y, z), (0, N.N0)(V, s));
-    let { dismissShopButtonDC: W } = (0, n4.A)();
+    let { dismissShopButtonDC: W } = (0, n8.A)();
     (r.useEffect(() => {
         W();
     }, [W]),

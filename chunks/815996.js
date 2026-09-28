@@ -1,22 +1,21 @@
 n.d(t, {
-    rh: () => es,
-    CK: () => en,
-    h$: () => ec,
-    BX: () => eA,
-    JJ: () => eo,
-    RE: () => ea,
-    Or: () => eu,
-    ue: () => eE,
-    Jp: () => er,
-    Sw: () => J,
-    Cz: () => Q,
-    iJ: () => el,
-    RD: () => ee,
-    gB: () => ei,
-    T2: () => eh,
-    gn: () => et,
-    Aq: () => e_,
-    LX: () => ed,
+    h$: () => ed,
+    CK: () => et,
+    rh: () => ea,
+    JJ: () => el,
+    RE: () => er,
+    Or: () => ec,
+    ue: () => e_,
+    Jp: () => ei,
+    Sw: () => Q,
+    Cz: () => Z,
+    iJ: () => es,
+    RD: () => J,
+    gB: () => en,
+    T2: () => eE,
+    gn: () => ee,
+    Aq: () => eu,
+    LX: () => eo,
 });
 var i,
     r = (((i = {})[(i.DESKTOP = 0)] = "DESKTOP"), (i[(i.MOBILE = 1)] = "MOBILE"), i),
@@ -450,54 +449,6 @@ class W {
     }
 }
 class Y {
-    categorySkuId;
-    name;
-    summary;
-    categoryStoreListingId;
-    title;
-    rankedSkuIds;
-    unpublishedAt;
-    bannerTextColor;
-    mobileTitle;
-    mobileSummary;
-    mobileProductsTitle;
-    rewardSkuId;
-    heroBannerUrl;
-    heroBannerAnimatedUrl;
-    heroRiveUrl;
-    heroLogoUrl;
-    mobileHeroUrl;
-    mobileHeroAnimatedUrl;
-    bannerDisplayConfig;
-    logoDisplayConfig;
-    constructor(e) {
-        ((this.type = G.g.REWARD_HERO),
-            (this.categorySkuId = e.category_sku_id),
-            (this.name = e.name),
-            (this.summary = e.summary.trim()),
-            (this.categoryStoreListingId = e.category_store_listing_id),
-            (this.title = e.title),
-            (this.rankedSkuIds = e.ranked_sku_ids),
-            (this.unpublishedAt = null != e.unpublished_at ? new Date(e.unpublished_at) : null),
-            (this.bannerTextColor = e.banner_text_color),
-            (this.mobileTitle = e.mobile_title),
-            (this.mobileSummary = e.mobile_summary),
-            (this.mobileProductsTitle = e.mobile_products_title),
-            (this.rewardSkuId = e.reward_sku_id),
-            (this.heroBannerUrl = e.hero_banner_url),
-            (this.heroBannerAnimatedUrl = e.hero_banner_animated_url),
-            (this.heroRiveUrl = e.hero_rive_url),
-            (this.heroLogoUrl = e.hero_logo_url),
-            (this.mobileHeroUrl = e.mobile_hero_url),
-            (this.mobileHeroAnimatedUrl = e.mobile_hero_animated_url),
-            (this.logoDisplayConfig = (0, T.f6)(e.logo_display_config)),
-            (this.bannerDisplayConfig = (0, T.f6)(e.banner_display_config)));
-    }
-    static fromServer(e) {
-        return new Y(e);
-    }
-}
-class K {
     name;
     rankedSkuIds;
     categorySkuId;
@@ -518,10 +469,10 @@ class K {
             (this.mobileBackgroundImage = e.mobile_background_image ?? null));
     }
     static fromServer(e) {
-        return new K(e);
+        return new Y(e);
     }
 }
-class $ {
+class K {
     applicationId;
     headerText;
     gradientColors;
@@ -542,10 +493,10 @@ class $ {
             (this.logoUrl = e.logo_url));
     }
     static fromServer(e) {
-        return new $(e);
+        return new K(e);
     }
 }
-class z {
+class $ {
     title;
     body;
     categoryStoreListingId;
@@ -576,10 +527,10 @@ class z {
             (this.dismissibleContentVersion = e.dismissible_content_version));
     }
     static fromServer(e) {
-        return new z(e);
+        return new $(e);
     }
 }
-class X {
+class z {
     shopBlocks;
     categories;
     constructor(e) {
@@ -593,17 +544,15 @@ class X {
                     case G.g.FEED:
                         return V.fromServer(e);
                     case G.g.WIDE_BANNER:
-                        return z.fromServer(e);
+                        return $.fromServer(e);
                     case G.g.SHELF:
-                        return K.fromServer(e);
+                        return Y.fromServer(e);
                     case G.g.COUNTDOWN_TIMER:
                         return x.fromServer(e);
                     case G.g.IMMERSIVE_BANNER:
                         return W.fromServer(e);
-                    case G.g.REWARD_HERO:
-                        return Y.fromServer(e);
                     case G.g.SOCIAL_LAYER_STOREFRONT_PROMOTIONAL_BANNER:
-                        return $.fromServer(e);
+                        return K.fromServer(e);
                     case G.g.GAME_SERVER_HOSTING_BANNER:
                         return H.fromServer(e);
                     default:
@@ -614,18 +563,18 @@ class X {
             (this.categories = e.categories.map((e) => g.A.fromServer(e))));
     }
     static fromServer(e) {
-        return new X(e);
+        return new z(e);
     }
 }
-var q = n(100057),
-    Z = n(181774);
-function Q(e) {
+var X = n(100057),
+    q = n(181774);
+function Z(e) {
     let { tab: t, initialCollectionId: i, ...r } = e;
     {
         let { default: e } = n(830543),
             { default: a } = n(408166),
             { closeUserProfileModal: s } = n(402860);
-        (J(r),
+        (Q(r),
             e(),
             s(),
             a(),
@@ -638,14 +587,14 @@ function Q(e) {
             ));
     }
 }
-function J(e) {
+function Q(e) {
     o.h.dispatch({ type: "COLLECTIBLES_SHOP_OPEN", ...e });
 }
-function ee(e) {
+function J(e) {
     o.h.dispatch({ type: "COLLECTIBLES_PRODUCT_DETAILS_OPEN", skuId: e });
 }
 (n(457421), n(295811));
-function et(e, t) {
+function ee(e, t) {
     return (
         !!e?.noCache == !!t?.noCache &&
         !!e?.includeUnpublished == !!t?.includeUnpublished &&
@@ -657,14 +606,14 @@ function et(e, t) {
         e?.skipNumCategories === t?.skipNumCategories
     );
 }
-async function en(e, t, n) {
+async function et(e, t, n) {
     o.h.dispatch({ type: "COLLECTIBLES_CATEGORIES_FETCH", options: e ?? {} });
-    let i = (0, Z.ao)(e),
+    let i = (0, q.ao)(e),
         r = c.Ay.get("shop_show_debug_overlay");
     (e?.logPerf &&
-        (0, q.z)({
+        (0, X.z)({
             sessionId: n?.sessionId,
-            checkpoint: q.t.CATEGORIES_FETCH_STARTED,
+            checkpoint: X.t.CATEGORIES_FETCH_STARTED,
             tab: n?.tab,
             unpublishedCategoriesShown: e?.includeUnpublished,
             cacheDisabled: e?.noCache,
@@ -673,9 +622,9 @@ async function en(e, t, n) {
     try {
         let a = await l.Bo.get({ url: U.Rsh.COLLECTIBLES_CATEGORIES_V2, query: i, rejectWithError: !0 });
         (e?.logPerf &&
-            (0, q.z)({
+            (0, X.z)({
                 sessionId: n?.sessionId,
-                checkpoint: q.t.CATEGORIES_FETCH_COMPLETED,
+                checkpoint: X.t.CATEGORIES_FETCH_COMPLETED,
                 tab: n?.tab,
                 unpublishedCategoriesShown: e?.includeUnpublished,
                 cacheDisabled: e?.noCache,
@@ -689,7 +638,7 @@ async function en(e, t, n) {
             r && I(`fetchCollectiblesCategories failed: ${e.message}`));
     }
 }
-async function ei() {
+async function en() {
     if (f.A.isFetching) return;
     o.h.dispatch({ type: "COLLECTIBLES_PURCHASES_FETCH" });
     let e = c.Ay.get("shop_show_debug_overlay");
@@ -714,7 +663,7 @@ async function ei() {
         );
     }
 }
-async function er(e, t) {
+async function ei(e, t) {
     o.h.dispatch({ type: "COLLECTIBLES_PRODUCT_FETCH", skuId: e, startedAt: Date.now() });
     try {
         let n = { locale: E.default.locale };
@@ -734,16 +683,16 @@ async function er(e, t) {
             o.h.dispatch({ type: "COLLECTIBLES_PRODUCT_FETCH_FAILURE", skuId: e, error: t, endedAt: Date.now() }));
     }
 }
-async function ea(e, t) {
-    A.A.isFetchingProduct(e) || A.A.isProductFetchBackedOff(e) || (await er(e, t));
+async function er(e, t) {
+    A.A.isFetchingProduct(e) || A.A.isProductFetchBackedOff(e) || (await ei(e, t));
 }
-function es(e) {
+function ea(e) {
     let t = Date.now();
     for (let n of (0, T.XS)([e]))
         null == A.A.getProduct(n.skuId) &&
             o.h.dispatch({ type: "COLLECTIBLES_PRODUCT_FETCH_SUCCESS", skuId: n.skuId, product: n, endedAt: t });
 }
-async function el(e) {
+async function es(e) {
     o.h.dispatch({ type: "COLLECTIBLES_CLAIM", skuId: e });
     try {
         let t = await l.Bo.put({ url: U.Rsh.COLLECTIBLES_CLAIM, body: { sku_id: e }, rejectWithError: !0 });
@@ -753,7 +702,7 @@ async function el(e) {
         throw (o.h.dispatch({ type: "COLLECTIBLES_CLAIM_FAILURE", skuId: e, error: t }), t);
     }
 }
-async function eo(e, t) {
+async function el(e, t) {
     try {
         return (
             await l.Bo.get({
@@ -766,7 +715,7 @@ async function eo(e, t) {
         return ((0, u.o)(new d.LG(e)), !1);
     }
 }
-async function ed(e) {
+async function eo(e) {
     let { release: t = a.P.PROD } = e;
     o.h.dispatch({ type: "COLLECTIBLES_MARKETING_FETCH" });
     let n = { platform: r.DESKTOP };
@@ -778,13 +727,13 @@ async function ed(e) {
         ((0, u.o)(new d.LG(e)), o.h.dispatch({ type: "COLLECTIBLES_MARKETING_FETCH_FAILURE" }));
     }
 }
-async function ec(e, t, n) {
+async function ed(e, t, n) {
     o.h.dispatch({ type: "COLLECTIBLES_SHOP_HOME_FETCH", tab: e, options: t ?? {} });
-    let i = (0, Z.ao)(t, e);
+    let i = (0, q.ao)(t, e);
     t?.logPerf &&
-        (0, q.z)({
+        (0, X.z)({
             sessionId: n?.sessionId,
-            checkpoint: q.t.SHOP_HOME_FETCH_STARTED,
+            checkpoint: X.t.SHOP_HOME_FETCH_STARTED,
             tab: n?.tab,
             unpublishedCategoriesShown: t?.includeUnpublished,
             cacheDisabled: t?.noCache,
@@ -792,43 +741,29 @@ async function ec(e, t, n) {
     try {
         let r = await l.Bo.get({ url: U.Rsh.COLLECTIBLES_SHOP, query: i, rejectWithError: !0 });
         (t?.logPerf &&
-            (0, q.z)({
+            (0, X.z)({
                 sessionId: n?.sessionId,
-                checkpoint: q.t.SHOP_HOME_FETCH_COMPLETED,
+                checkpoint: X.t.SHOP_HOME_FETCH_COMPLETED,
                 tab: n?.tab,
                 unpublishedCategoriesShown: t?.includeUnpublished,
                 cacheDisabled: t?.noCache,
             }),
-            o.h.dispatch({ type: "COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS", tab: e, shopHome: X.fromServer(r.body) }));
+            o.h.dispatch({ type: "COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS", tab: e, shopHome: z.fromServer(r.body) }));
     } catch (n) {
         let t = new d.LG(n);
         ((0, u.o)(t), o.h.dispatch({ type: "COLLECTIBLES_SHOP_HOME_FETCH_FAILURE", tab: e, error: t }));
     }
 }
-function eu(e) {
+function ec(e) {
     o.h.dispatch({ type: "COLLECTIBLES_SET_SHOP_HOME_CONFIG_OVERRIDE", shopHomeConfigOverride: e });
 }
-function e_(e) {
+function eu(e) {
     o.h.dispatch({ type: "COLLECTIBLES_SET_SHOP_LAYOUT_URL_OVERRIDE", shopLayoutUrlOverride: e });
 }
-function eE(e) {
+function e_(e) {
     o.h.dispatch({ type: "COLLECTIBLES_SKIP_NUM_CATEGORIES", skipNumCategories: e });
 }
-async function eA(e, t) {
-    o.h.dispatch({ type: "COLLECTIBLES_CLAIM", skuId: t });
-    try {
-        let n = await l.Bo.put({
-            url: U.Rsh.COLLECTIBLES_CLAIM_CATEGORY_REWARD,
-            body: { category_id: e },
-            rejectWithError: !0,
-        });
-        o.h.dispatch({ type: "COLLECTIBLES_CLAIM_SUCCESS", skuId: t, purchases: n.body?.map(w.fromServer) });
-    } catch (n) {
-        let e = new d.LG(n);
-        throw (o.h.dispatch({ type: "COLLECTIBLES_CLAIM_FAILURE", skuId: t, error: e }), e);
-    }
-}
-async function eh(e) {
+async function eE(e) {
     let { tab: t, abortSignal: n } = e;
     if (p.A.isFetchingLayout(t)) return;
     let i = p.A.getLayoutFetchError(t);

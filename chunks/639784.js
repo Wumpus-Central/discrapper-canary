@@ -1,4 +1,4 @@
-i.d(t, { K: () => t3, A: () => t6 });
+i.d(t, { K: () => t3, A: () => t4 });
 var n = i(477900),
     l = i(582128),
     s = i(503698),
@@ -400,7 +400,7 @@ var eI = i(763432),
     ey = i(444927),
     eT = i(793574),
     eN = i(429913),
-    eR = i(839534),
+    eR = i(815996),
     ew = i(895360),
     eL = i(152472),
     e_ = i(267102),
@@ -432,7 +432,7 @@ var eO = i(721932),
     e5 = i(451395),
     e7 = i(823016),
     e3 = i(100741);
-function e4(e) {
+function e6(e) {
     let { item: t, index: i, wishlistId: l, onReorder: s, children: a } = e,
         { manageFocusOnReorder: r } = (0, e7.r)();
     return (0, n.jsx)(e5.mG, {
@@ -451,7 +451,7 @@ function e4(e) {
         children: (0, n.jsx)("div", { className: e3.An, children: a }),
     });
 }
-let e6 = l.memo(function (e) {
+let e4 = l.memo(function (e) {
     let {
             item: t,
             index: i,
@@ -495,7 +495,7 @@ let e6 = l.memo(function (e) {
         );
     return r
         ? (0, n.jsx)("li", {
-              children: (0, n.jsx)(e4, { item: t, index: i, wishlistId: o, onReorder: c, children: h }),
+              children: (0, n.jsx)(e6, { item: t, index: i, wishlistId: o, onReorder: c, children: h }),
           })
         : (0, n.jsx)("li", { children: h });
 });
@@ -524,7 +524,7 @@ function e9(e) {
         className: e3.Vg,
         children: t.map((e, t) =>
             (0, n.jsx)(
-                e6,
+                e4,
                 {
                     item: e,
                     index: t,
@@ -1367,7 +1367,7 @@ function t3(e) {
     let { children: t, className: i, scrollerRef: l, ...s } = e;
     return (0, n.jsx)(r.Ip, { ref: l, className: a()(t7.gN, i), fade: !0, ...s, children: t });
 }
-function t4(e) {
+function t6(e) {
     let { user: t, currentUser: i, section: l, displayProfile: s, guildId: a, channelId: r, onClose: o } = e;
     return l === en.RP.ACTIVITY
         ? (0, n.jsx)(es, { user: t, currentUser: i, displayProfile: s, guildId: a, channelId: r, onClose: o })
@@ -1381,7 +1381,7 @@ function t4(e) {
                 ? (0, n.jsx)(t5, { profileOwner: t, guildId: a })
                 : null;
 }
-function t6(e) {
+function t4(e) {
     let {
             user: t,
             currentUser: i,
@@ -1448,7 +1448,7 @@ function t6(e) {
                     className: t7.NM,
                     children: (0, n.jsx)(d.F, {
                         component: (0, n.jsx)(c.A, { children: (0, n.jsx)(d.H, { children: T.text }) }),
-                        children: (0, n.jsx)(t4, {
+                        children: (0, n.jsx)(t6, {
                             user: t,
                             currentUser: i,
                             displayProfile: s,

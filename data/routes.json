@@ -153,7 +153,6 @@
   "COLLECTIBLES_CATEGORIES_V2": "/collectibles-categories/v2",
   "COLLECTIBLES_SEARCH": "/shop/search",
   "COLLECTIBLES_CLAIM": "/users/@me/claim-premium-collectibles-product",
-  "COLLECTIBLES_CLAIM_CATEGORY_REWARD": "/users/@me/claim-reward-category-product",
   "COLLECTIBLES_PURCHASES": "/users/@me/collectibles-purchases",
   "COLLECTIBLES_PRODUCTS": "/collectibles-products/:param",
   "COLLECTIBLES_VALID_GIFT_RECIPIENT": "/users/@me/valid-collectibles-gift-recipient",
