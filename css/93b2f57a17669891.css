@@ -64,4 +64,10 @@
     width: 100%
 }
 
-/*# sourceMappingURL=a30af652090b8c6c.css.map*/
+.storeLinksContainer__4177a {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8)
+}
+
+/*# sourceMappingURL=93b2f57a17669891.css.map*/

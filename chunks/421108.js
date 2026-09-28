@@ -1,4 +1,4 @@
-i.d(t, { ZH: () => d, dA: () => m, ur: () => u });
+i.d(t, { ZH: () => d, dA: () => T, tm: () => u, ur: () => m });
 var s = i(582128),
     n = i(536637),
     r = i.n(n),
@@ -20,6 +20,11 @@ function d(e) {
     };
 }
 function u(e) {
+    let t = null != e && null == d(e),
+        [, i] = s.useReducer((e) => e + 1, 0);
+    return ((0, l.A)(i, null == e || t ? null : a.A.Millis.SECOND), t);
+}
+function m(e) {
     let t = d(e);
     if (null == t) return null;
     let { days: i, hours: s, minutes: n } = t;
@@ -29,13 +34,13 @@ function u(e) {
           ? c.intl.formatToPlainString(o.default.PPaJSw, { hours: s })
           : c.intl.formatToPlainString(o.default["7Z+aIf"], { minutes: Math.max(n, 1) });
 }
-function m(e) {
+function T(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        [i, n] = s.useState(() => u(e));
+        [i, n] = s.useState(() => m(e));
     return (
         (0, l.A)(
             () => {
-                n(u(e));
+                n(m(e));
             },
             t ? 1e3 : null,
         ),
