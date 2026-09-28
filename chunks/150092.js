@@ -4,7 +4,7 @@ var i = n(532309),
     a = n(321191),
     s = n(287809),
     l = n(158045),
-    o = n(26508);
+    o = n(17843);
 function d() {
     let e = i.A.shouldFetch();
     return (

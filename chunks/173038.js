@@ -57,7 +57,7 @@ let H = l.forwardRef((e, t) => {
 });
 H.displayName = "PremiumRewardsBentoBoxAsset";
 var z = n(440005),
-    F = n(26508),
+    F = n(17843),
     K = n(592909),
     W = n(989790),
     X = n(612413),
