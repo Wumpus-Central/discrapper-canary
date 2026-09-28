@@ -4,7 +4,7 @@ function i(e) {
     let { alt: t, ariaLabel: n, ariaHidden: i, role: s, width: l = 288, height: o = 192 } = e;
     return (0, r.jsx)("img", {
         style: { width: l, height: o },
-        src: "https://cdn.discordapp.com/assets/content/964e407bb0ca2d2738cb00779040e7aaf668b99fdbbe776e69247d582cfcb230.svg",
+        src: "https://cdn.discordapp.com/assets/content/25ad255d2f59df1823aa4ce609aafdb973421d70df2a3755c2a81d27bd608938.svg",
         alt: t,
         "aria-label": n,
         "aria-hidden": i,
