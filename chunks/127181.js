@@ -210,6 +210,13 @@ let n = [
         summary: "Conjuring has its own doorway in the desktop title bar, so it is one click away from anywhere.",
     },
     {
+        date: "2026-09-28",
+        time: "06:26",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "Deleting an app also removes the channel it was published in, so it no longer lingers in your server.",
+    },
+    {
         date: "2026-09-26",
         time: "01:44",
         platforms: ["desktop", "mobile"],
