@@ -6425,7 +6425,7 @@ let aJ = Object.freeze({
         USER_APPLICATION_IDENTITIES: (e) => `user-application-identities/${e}`,
         ACTIVITIES_DISCORD_CONFIG: (e) => `activities-discord-config/${e}`,
         GAME: (e) => (null != e ? `games/${e}` : null),
-        GAME_AUTOCOMPLETE: (e) => (null != e ? `game-autocomplete/${e}` : null),
+        GAME_AUTOCOMPLETE: (e, t) => (null != e ? `game-autocomplete/${t}/${e}` : null),
         GAME_PROFILE_INVITE: (e) => (null != e ? `game-profile-invite/${e}` : null),
         GUILD_OFFICIAL_MESSAGES: (e) => (null != e ? `guild-official-messages/${e}` : null),
         __DO_NOT_USE__STOREFRONT_MESSAGE_EMBED_PARENT_SKU: (e) => (null != e ? `useParentSkuData/${e}` : null),
