@@ -628,6 +628,13 @@ let n = [
         summary: "The builder chat now glides smoothly with the keyboard as it opens and closes.",
     },
     {
+        date: "2026-09-28",
+        time: "03:35",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "The chat no longer adds a \u201CTested the app\u201D line; the blue bar on your Frame shows when Conjure is testing.",
+    },
+    {
         date: "2026-09-08",
         time: "00:01",
         platforms: ["desktop", "mobile"],
