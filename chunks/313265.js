@@ -1,4 +1,4 @@
-n.d(t, { Q7: () => r, bF: () => i, hW: () => s, oU: () => u });
+n.d(t, { Q7: () => r, bF: () => i, hW: () => s, oU: () => o });
 var l = n(50617),
     a = n(375708);
 function i(e) {
@@ -18,4 +18,4 @@ function r(e, t) {
     return null != n ? { title: e, body: a.intl.string(n) } : { body: e };
 }
 let s = { low: "Low", medium: "Medium", high: "High", xhigh: "Extra high", max: "Max" },
-    u = { anthropic: "Anthropic", openai: "OpenAI", deepseek: "DeepSeek", xai: "xAI", moonshotai: "Moonshot AI" };
+    o = { anthropic: "Anthropic", openai: "OpenAI", deepseek: "DeepSeek", xai: "xAI", moonshotai: "Moonshot AI" };

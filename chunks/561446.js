@@ -22,8 +22,8 @@ function x(e) {
         {
             joinRequest: S,
             isModmin: I,
-            guildId: _,
-            maxMembers: y,
+            guildId: y,
+            maxMembers: _,
         } = (0, i.cf)([m.A, d.A, u.A], () => {
             let e = m.A.getRequest(E),
                 t = d.A.getGuild(e?.guildId);
@@ -34,9 +34,9 @@ function x(e) {
                 maxMembers: t?.maxMembers,
             };
         }),
-        j = (0, i.bG)([c.A], () => (null != _ ? c.A.getMemberCount(_) : 0)),
-        b = null != y && (j ?? 0) >= y,
-        { approveRequest: N, rejectRequest: T, submitting: v } = (0, p.W)(S?.guildId, S?.userId, S?.joinRequestId);
+        j = (0, i.bG)([c.A], () => (null != y ? c.A.getMemberCount(y) : 0)),
+        b = null != _ && (j ?? 0) >= _,
+        { approveRequest: v, rejectRequest: N, submitting: T } = (0, p.W)(S?.guildId, S?.userId, S?.joinRequestId);
     return null != S && S.applicationStatus === g.B5.SUBMITTED && I
         ? (0, l.jsxs)("div", {
               className: C.U,
@@ -48,8 +48,8 @@ function x(e) {
                           variant: "active",
                           size: "sm",
                           text: f.intl.string(f.t.BzjDQJ),
-                          loading: v,
-                          onClick: N,
+                          loading: T,
+                          onClick: v,
                           disabled: b,
                       }),
                   }),
@@ -57,8 +57,8 @@ function x(e) {
                       variant: "critical-primary",
                       size: "sm",
                       text: f.intl.string(f.t.hDtbsz),
-                      onClick: T,
-                      disabled: v,
+                      onClick: N,
+                      disabled: T,
                   }),
                   n &&
                       (0, l.jsx)(a.$, {

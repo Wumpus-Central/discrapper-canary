@@ -29,14 +29,14 @@ let c = new Map(),
     A = new Map(),
     S = [],
     R = new Map(),
-    v = new Map();
-function y(e, t, n) {
-    return null != t && v.get(e)?.get(t) === n;
+    y = new Map();
+function v(e, t, n) {
+    return null != t && y.get(e)?.get(t) === n;
 }
 function O(e, t, n) {
     if (null == t) return;
-    let i = v.get(e);
-    for (null == i && ((i = new Map()), v.set(e, i)), i.set(t, n); i.size > 800;) {
+    let i = y.get(e);
+    for (null == i && ((i = new Map()), y.set(e, i)), i.set(t, n); i.size > 800;) {
         let e = i.keys().next();
         if (!0 === e.done) break;
         i.delete(e.value);
@@ -48,11 +48,11 @@ function N(e, t, n) {
     let i = k.get(e);
     (null == i && ((i = new Map()), k.set(e, i)), i.set(t, n));
 }
-function P(e, t, n) {
+function C(e, t, n) {
     let i = t.concat(n);
     R.set(e, i.length > 400 ? i.slice(-400) : i);
 }
-class C extends i.Ay.Store {
+class P extends i.Ay.Store {
     initialize() {
         this.waitFor(l.default);
     }
@@ -128,7 +128,7 @@ function V(e, t, n, i) {
     let r = t.slice();
     ((r[n] = i), R.set(e, r));
 }
-let H = new C(r.h, {
+let H = new P(r.h, {
     LOGOUT: function () {
         if (
             0 === c.size &&
@@ -139,7 +139,7 @@ let H = new C(r.h, {
             0 === g.size &&
             0 === R.size &&
             0 === k.size &&
-            0 === v.size &&
+            0 === y.size &&
             null == _
         )
             return !1;
@@ -154,7 +154,7 @@ let H = new C(r.h, {
             A.clear(),
             R.clear(),
             k.clear(),
-            v.clear(),
+            y.clear(),
             (_ = null),
             B.clear());
     },
@@ -195,7 +195,7 @@ let H = new C(r.h, {
         A.delete(t),
         R.delete(t),
         k.delete(t),
-        v.delete(t),
+        y.delete(t),
         h))
             n === t && h.delete(e);
     },
@@ -252,7 +252,7 @@ let H = new C(r.h, {
     },
     VIBEGRATIONS_TOOL_CALL_APPEND: function (e) {
         let { projectId: t, toolCall: n } = e;
-        if ((D(t, "tool", n.id), y(t, n.entry_id, n.status))) return !1;
+        if ((D(t, "tool", n.id), v(t, n.entry_id, n.status))) return !1;
         let i = R.get(t) ?? S,
             r = G(i, "tool", n.id),
             l = -1 === r ? null : i[r],
@@ -282,11 +282,11 @@ let H = new C(r.h, {
                 ...(null != n.error ? { error: n.error } : {}),
                 startedAt: l?.startedAt ?? n.ts,
             };
-        (O(t, n.entry_id, n.status), null != l) ? V(t, i, r, f) : P(t, i, f);
+        (O(t, n.entry_id, n.status), null != l) ? V(t, i, r, f) : C(t, i, f);
     },
     VIBEGRATIONS_MODEL_CALL_APPEND: function (e) {
         let { projectId: t, modelCall: n } = e;
-        if ((D(t, "model", n.id), y(t, n.entry_id, n.status))) return !1;
+        if ((D(t, "model", n.id), v(t, n.entry_id, n.status))) return !1;
         let i = R.get(t) ?? S,
             r = G(i, "model", n.id),
             l = -1 === r ? null : i[r],
@@ -323,6 +323,6 @@ let H = new C(r.h, {
                 ...(null != n.error ? { error: n.error } : {}),
                 startedAt: l?.startedAt ?? n.ts,
             };
-        (O(t, n.entry_id, n.status), null != l) ? V(t, i, r, o) : P(t, i, o);
+        (O(t, n.entry_id, n.status), null != l) ? V(t, i, r, o) : C(t, i, o);
     },
 });

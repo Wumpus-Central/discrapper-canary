@@ -1,12 +1,12 @@
 (a.d(t, {
-    Bl: () => l,
-    Bp: () => c,
-    I6: () => m,
+    Bl: () => s,
+    Bp: () => m,
+    I6: () => c,
     In: () => o,
     NE: () => u,
     _F: () => p,
     hU: () => h,
-    iZ: () => s,
+    iZ: () => l,
     rL: () => d,
     v8: () => r,
 }),
@@ -14,10 +14,10 @@
     a(683180));
 var n = a(50617),
     i = a(375708);
-function l(e, t) {
+function s(e, t) {
     return !t.some((t) => t.id === e);
 }
-function s(e, t) {
+function l(e, t) {
     let a = Array.from({ length: Math.max(1, e.length) }, (e, t) => ({ kind: "question", index: t }));
     return t ? ["about", "server", ...a] : ["about", ...a];
 }
@@ -46,10 +46,10 @@ function u(e) {
               })),
           };
 }
-function c(e) {
+function m(e) {
     return e?.server ?? { title: i.intl.string(n.default.WQCnSf), hint: i.intl.string(n.default.KLTQfQ) };
 }
-function m(e) {
+function c(e) {
     return e?.questions ?? [];
 }
 function p(e, t) {

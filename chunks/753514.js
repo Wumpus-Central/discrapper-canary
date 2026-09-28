@@ -1,4 +1,4 @@
-l.d(t, { kZ: () => s, uZ: () => r, z3: () => u });
+l.d(t, { kZ: () => s, uZ: () => r, z3: () => o });
 var n = l(50617),
     a = l(375708);
 let r = ["frame", "widget", "bot"],
@@ -6,6 +6,6 @@ let r = ["frame", "widget", "bot"],
 function s(e) {
     return a.intl.string(i[e]);
 }
-function u(e) {
+function o(e) {
     return `vibegrations-preview-mode-panel-${e}`;
 }

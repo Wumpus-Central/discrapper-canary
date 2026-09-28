@@ -1,4 +1,4 @@
-n.d(t, { Xv: () => f, Z0: () => h, qs: () => p, xA: () => u });
+n.d(t, { Xv: () => f, Z0: () => p, qs: () => h, xA: () => u });
 var i = n(587895),
     r = n(174459),
     l = n(972786),
@@ -57,7 +57,7 @@ function f(e, t) {
               }),
     });
 }
-function p(e, t) {
+function h(e, t) {
     let { isPreview: n } = t,
         l = d(e),
         o = n ? l.preview_application_id : l.application_id,
@@ -69,7 +69,7 @@ function p(e, t) {
         ...c(e, n),
     });
 }
-function h(e, t) {
+function p(e, t) {
     let { location: n, code: i, message: l, details: o, isPreview: u = !0 } = t;
     r.default.track(s.HAw.VIBEGRATION_ERRORED, {
         ...d(e),

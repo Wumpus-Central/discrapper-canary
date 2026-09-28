@@ -2,20 +2,20 @@ n.d(t, {
     CW: () => S,
     Eo: () => _,
     GG: () => M,
-    HV: () => C,
+    HV: () => P,
     I$: () => N,
     Is: () => h,
     K: () => O,
-    M7: () => v,
+    M7: () => y,
     Ru: () => R,
     U1: () => m,
-    Zq: () => P,
+    Zq: () => C,
     dm: () => b,
     gA: () => T,
     hF: () => E,
     oB: () => A,
     tZ: () => k,
-    xx: () => y,
+    xx: () => v,
 });
 var i = n(636537),
     r = n(228366),
@@ -120,10 +120,10 @@ async function R(e, t) {
     }
     return n;
 }
-function v(e, t) {
+function y(e, t) {
     return I(e, t);
 }
-async function y(e) {
+async function v(e) {
     let t;
     r.h.dispatch({ type: "VIBEGRATIONS_PROJECT_DELETE_START", projectId: e });
     try {
@@ -140,7 +140,7 @@ async function y(e) {
     );
 }
 function O(e, t) {
-    y(e).then((e) => {
+    v(e).then((e) => {
         e.ok || t();
     }, t);
 }
@@ -157,10 +157,10 @@ async function k(e, t) {
 function N(e, t) {
     r.h.dispatch({ type: "VIBEGRATIONS_COMPOSER_DRAFT_SET", projectId: e, draft: t });
 }
-function P(e) {
+function C(e) {
     r.h.dispatch({ type: "VIBEGRATIONS_CHAT_SIDEBAR_WIDTH_SET", width: e });
 }
-function C(e) {
+function P(e) {
     r.h.dispatch({ type: "VIBEGRATIONS_BUILDER_PREVIEW_APPLICATION_SET", applicationId: e });
 }
 function M(e) {

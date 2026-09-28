@@ -20,43 +20,43 @@ var l = n(477900),
 function S(e) {
     var t, S;
     let I,
-        _,
         y,
+        _,
         j,
         b,
+        v,
         N,
         T,
-        v,
         { channel: M, children: R } = e,
         D = (0, s.bG)([A.A], () => A.A.isBlocked(M.getRecipientId()));
     ((S = t = M.id),
         (I = (0, s.bG)([m.A], () => m.A.getLastMessage(S))),
-        (_ = I?.changelogId),
-        (y = (0, s.bG)([c.default], () => c.default.locale)),
-        (j = (0, s.bG)([h.A], () => h.A.getChangelog(_ ?? "", y), [_, y])),
+        (y = I?.changelogId),
+        (_ = (0, s.bG)([c.default], () => c.default.locale)),
+        (j = (0, s.bG)([h.A], () => h.A.getChangelog(y ?? "", _), [y, _])),
         (b = (0, g.A)(t)),
-        (N = i.useRef(b ? Date.now() : null)),
-        (T = (0, s.bG)([d.Ay], () => d.Ay.getUnreadCount(t), [t])),
-        (v = i.useRef(T)),
+        (v = i.useRef(b ? Date.now() : null)),
+        (N = (0, s.bG)([d.Ay], () => d.Ay.getUnreadCount(t), [t])),
+        (T = i.useRef(N)),
         i.useEffect(() => {
-            v.current = T;
+            T.current = N;
         }),
         i.useEffect(() => {
-            N.current = Date.now();
+            v.current = Date.now();
         }, [b]),
         i.useEffect(() => {
-            b && null != _ && o.A.fetchChangelog(_, y, !0);
-        }, [_, y, b]),
+            b && null != y && o.A.fetchChangelog(y, _, !0);
+        }, [y, _, b]),
         i.useEffect(() => {
             b &&
                 null != j &&
                 u.default.track(p.HAw.CHANGE_LOG_OPENED, {
                     change_log_id: `${j.date}:${j.revision}`,
-                    unread_count: v.current,
+                    unread_count: T.current,
                 });
         }, [b, j]),
         i.useEffect(() => {
-            let e = N.current;
+            let e = v.current;
             return () => {
                 b &&
                     null != j &&
@@ -64,9 +64,9 @@ function S(e) {
                     (u.default.track(p.HAw.CHANGE_LOG_CLOSED, {
                         seconds_open: Math.round((Date.now() - e) / 1e3),
                         change_log_id: `${j.date}:${j.revision}`,
-                        unread_count: v.current,
+                        unread_count: T.current,
                     }),
-                    (N.current = 0));
+                    (v.current = 0));
             };
         }, [b, j]));
     let L = (0, g.A)(M.id),

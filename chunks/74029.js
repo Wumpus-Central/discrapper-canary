@@ -1,4 +1,4 @@
-l.d(t, { PR: () => x, PS: () => d, Q_: () => p, _w: () => c, dy: () => h, fA: () => f, nI: () => o, zz: () => m });
+l.d(t, { PR: () => g, PS: () => d, Q_: () => p, _w: () => c, dy: () => h, fA: () => f, nI: () => u, zz: () => m });
 var n = l(582128);
 l(29692);
 let a = Object.freeze({ active: !1, annotations: Object.freeze([]), context: null }),
@@ -7,7 +7,7 @@ let a = Object.freeze({ active: !1, annotations: Object.freeze([]), context: nul
 function s(e) {
     return r.get(e) ?? a;
 }
-function u(e, t) {
+function o(e, t) {
     for (let l of (t.active || 0 !== t.annotations.length ? r.set(e, t) : r.delete(e), [...i]))
         try {
             l();
@@ -15,22 +15,22 @@ function u(e, t) {
             console.error("[vibegrations] design feedback subscriber threw", e);
         }
 }
-function o(e) {
+function u(e) {
     let t = s(e);
-    t.active || u(e, { ...t, active: !0 });
+    t.active || o(e, { ...t, active: !0 });
 }
 function d(e) {
-    r.has(e) && u(e, a);
+    r.has(e) && o(e, a);
 }
 function c(e, t) {
     let l = s(e);
-    l.active && u(e, { ...l, context: t });
+    l.active && o(e, { ...l, context: t });
 }
 function f(e, t) {
     let l = s(e);
     l.active &&
         0 !== t.size &&
-        u(e, {
+        o(e, {
             ...l,
             annotations: l.annotations.map((e) => {
                 let l = t.get(e.id);
@@ -46,14 +46,14 @@ function h(e, t, l, n) {
         r = a.annotations.find((e) => e.id === l);
     null != r &&
         m(r, t) &&
-        u(e, { ...a, annotations: a.annotations.map((e) => (e.id === l ? { ...e, comment: n } : e)) });
+        o(e, { ...a, annotations: a.annotations.map((e) => (e.id === l ? { ...e, comment: n } : e)) });
 }
-function x(e, t, l) {
+function g(e, t, l) {
     let n = s(e),
         a = n.annotations.find((e) => e.id === l);
-    null != a && m(a, t) && u(e, { ...n, annotations: n.annotations.filter((e) => e.id !== l) });
+    null != a && m(a, t) && o(e, { ...n, annotations: n.annotations.filter((e) => e.id !== l) });
 }
-function g(e) {
+function x(e) {
     return (
         i.add(e),
         () => {
@@ -63,5 +63,5 @@ function g(e) {
 }
 function p(e) {
     let t = n.useCallback(() => (null == e ? a : s(e)), [e]);
-    return n.useSyncExternalStore(g, t, t);
+    return n.useSyncExternalStore(x, t, t);
 }

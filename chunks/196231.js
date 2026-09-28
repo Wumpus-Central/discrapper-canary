@@ -35,8 +35,8 @@ function v(e) {
         j = (0, E.s4)(t, r, v),
         b = l.useRef(null),
         P = r?.bodyText,
-        N = r?.name ?? t?.name,
-        B = null != N ? C.intl.formatToPlainString(C.t.frSHlf, { destination: N }) : void 0,
+        B = r?.name ?? t?.name,
+        N = null != B ? C.intl.formatToPlainString(C.t.frSHlf, { destination: B }) : void 0,
         T = (0, m.uM)();
     return (0, n.jsx)(i.L, {
         innerRef: b,
@@ -84,7 +84,7 @@ function v(e) {
                     children: (0, n.jsx)(d.$, {
                         variant: "overlay-primary",
                         text: C.intl.string(C.t.jVcuVY),
-                        "aria-label": B,
+                        "aria-label": N,
                         tabIndex: L?.tabIndex,
                         onClick: (e) => {
                             (y({

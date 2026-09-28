@@ -4,15 +4,15 @@ var l = n(477900),
     i = n(256905),
     r = n(673724),
     s = n(277977),
-    u = n(590380),
-    o = n(50617),
+    o = n(590380),
+    u = n(50617),
     d = n(375708),
     c = n(375068);
 function m(e) {
     let { projectId: t, attachments: n } = e,
         i = n.filter(f),
         [r, s] = a.useState(() => new Set()),
-        u = a.useCallback((e) => {
+        o = a.useCallback((e) => {
             s((t) => (t.has(e) ? t : new Set(t).add(e)));
         }, []);
     return (0, l.jsx)("div", {
@@ -22,13 +22,13 @@ function m(e) {
                 ? (0, l.jsx)(h, { name: e.name }, n)
                 : f(e)
                   ? (0, l.jsx)(
-                        g,
+                        p,
                         {
                             projectId: t,
                             viewableImages: i,
                             viewerIndex: i.indexOf(e),
                             unavailableIds: r,
-                            markUnavailable: u,
+                            markUnavailable: o,
                         },
                         n,
                     )
@@ -41,8 +41,8 @@ function f(e) {
 }
 function h(e) {
     let { name: t, unavailable: n = !1 } = e,
-        a = n ? d.intl.formatToPlainString(o.default.OBr7WW, { name: t }) : t;
-    return (0, l.jsx)(u.p, { name: a, compact: !0 });
+        a = n ? d.intl.formatToPlainString(u.default.OBr7WW, { name: t }) : t;
+    return (0, l.jsx)(o.p, { name: a, compact: !0 });
 }
 function x(e) {
     let { projectId: t, id: n, name: i } = e,
@@ -61,17 +61,17 @@ function x(e) {
         }, [t, n]);
     return r
         ? (0, l.jsx)(h, { name: i, unavailable: !0 })
-        : (0, l.jsx)(u.n, {
+        : (0, l.jsx)(o.n, {
               name: i,
               thumbSrc: null,
-              ariaLabel: d.intl.formatToPlainString(o.default.gV5YcR, { name: i }),
+              ariaLabel: d.intl.formatToPlainString(u.default.gV5YcR, { name: i }),
               onClick: m,
           });
 }
-function g(e) {
+function p(e) {
     let { projectId: t, viewableImages: n, viewerIndex: r, unavailableIds: c, markUnavailable: m } = e,
         { id: f, name: x } = n[r],
-        [g, p] = a.useState(null),
+        [p, g] = a.useState(null),
         k = c.has(f),
         [v, b] = a.useState(0);
     a.useEffect(() => {
@@ -79,7 +79,7 @@ function g(e) {
         return (
             (0, s.PK)(t, f).then(
                 (t) => {
-                    e || p(t);
+                    e || g(t);
                 },
                 () => {},
             ),
@@ -106,13 +106,13 @@ function g(e) {
     }, [t, n, r, c]);
     return k
         ? (0, l.jsx)(h, { name: x, unavailable: !0 })
-        : (0, l.jsx)(u.n, {
+        : (0, l.jsx)(o.n, {
               name: x,
-              thumbSrc: g,
-              ariaLabel: d.intl.formatToPlainString(o.default.QUFLUq, { name: x }),
+              thumbSrc: p,
+              ariaLabel: d.intl.formatToPlainString(u.default.QUFLUq, { name: x }),
               onClick: j,
               onThumbError: () => {
-                  (p(null),
+                  (g(null),
                       (0, s.n6)(t, f).then(
                           (e) => {
                               e ? 0 === v && b(1) : m(f);

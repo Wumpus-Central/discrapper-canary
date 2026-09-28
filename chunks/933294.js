@@ -232,19 +232,19 @@ async function I(e, t) {
 var A = n(120426),
     S = n(320510),
     R = n(227189),
-    v = n(940107),
-    y = n(171936),
+    y = n(940107),
+    v = n(171936),
     O = n(809685),
     b = n(777977),
     k = n(484697);
 (n(321073), n(667532));
 var N = n(112420),
-    P = n(652215);
-function C(e) {
+    C = n(652215);
+function P(e) {
     return "string" == typeof e && "" !== e ? e : void 0;
 }
 let M = {
-    [P.e$_.OPEN_CONTEXT_MENU]: (e, t) => {
+    [C.e$_.OPEN_CONTEXT_MENU]: (e, t) => {
         let n = "custom" === e.args.type,
             i = n
                 ? (function e(t) {
@@ -253,7 +253,7 @@ let M = {
                       for (let i of t) {
                           if (n.length >= 40) break;
                           if (null == i || "object" != typeof i) continue;
-                          let t = C(i.id);
+                          let t = P(i.id);
                           (null != t && n.push(t), e(i.items, n));
                       }
                       return n;
@@ -272,33 +272,33 @@ let M = {
                     }
             : { result: { opened: !0 }, answered: "opened, no selection to make" };
     },
-    [P.e$_.SHOW_CONFIRM_MODAL]: (e, t) => {
+    [C.e$_.SHOW_CONFIRM_MODAL]: (e, t) => {
         let n = !0 === t.confirm,
-            i = C(e.args.title);
+            i = P(e.args.title);
         return {
             result: "confirm" === e.args.type ? { confirmed: n } : { acknowledged: n },
             answered: n ? "confirmed" : "dismissed",
             subject: i,
         };
     },
-    [P.e$_.OPEN_EXTERNAL_LINK]: (e) => ({
+    [C.e$_.OPEN_EXTERNAL_LINK]: (e) => ({
         result: { opened: !1 },
         answered: "cancelled \u2014 an agent may not open external links",
-        subject: C(e.args.url),
+        subject: P(e.args.url),
     }),
-    [P.e$_.SHARE_CONTENT]: (e) => ({
+    [C.e$_.SHARE_CONTENT]: (e) => ({
         result: { success: !1, didCopyLink: !1, didSendMessage: !1 },
         answered: "closed without sharing \u2014 an agent may not send a message for the user",
-        subject: C(e.args.preview_title) ?? C(e.args.content),
+        subject: P(e.args.preview_title) ?? P(e.args.content),
     }),
-    [P.e$_.OPEN_USER_PROFILE]: () => ({ result: { opened: !0 }, answered: "opened" }),
-    [P.e$_.OPEN_USER_POPOUT]: () => ({ result: { opened: !0 }, answered: "opened" }),
-    [P.e$_.SHOW_TOOLTIP]: () => ({ result: { shown: !0 }, answered: "shown" }),
-    [P.e$_.HIDE_TOOLTIP]: () => ({ result: { hidden: !0 }, answered: "hidden" }),
-    [P.e$_.OPEN_MEDIA_VIEWER]: () => ({ result: { opened: !0 }, answered: "opened" }),
-    [P.e$_.SHOW_TOAST]: () => ({ result: { shown: !0 }, answered: "shown" }),
-    [P.e$_.OPEN_INVITE_DIALOG]: () => ({ result: void 0, answered: "opened" }),
-    [P.e$_.OPEN_SHARE_MOMENT_DIALOG]: () => ({ result: void 0, answered: "opened" }),
+    [C.e$_.OPEN_USER_PROFILE]: () => ({ result: { opened: !0 }, answered: "opened" }),
+    [C.e$_.OPEN_USER_POPOUT]: () => ({ result: { opened: !0 }, answered: "opened" }),
+    [C.e$_.SHOW_TOOLTIP]: () => ({ result: { shown: !0 }, answered: "shown" }),
+    [C.e$_.HIDE_TOOLTIP]: () => ({ result: { hidden: !0 }, answered: "hidden" }),
+    [C.e$_.OPEN_MEDIA_VIEWER]: () => ({ result: { opened: !0 }, answered: "opened" }),
+    [C.e$_.SHOW_TOAST]: () => ({ result: { shown: !0 }, answered: "shown" }),
+    [C.e$_.OPEN_INVITE_DIALOG]: () => ({ result: void 0, answered: "opened" }),
+    [C.e$_.OPEN_SHARE_MOMENT_DIALOG]: () => ({ result: void 0, answered: "opened" }),
 };
 Object.keys(M);
 let B = { drain: () => [], end: () => {}, iframeId: null },
@@ -345,7 +345,7 @@ var H = n(948230),
     x = n(805332),
     F = n(796036);
 function U(e) {
-    let t = (0, y.J8)(e);
+    let t = (0, v.J8)(e);
     if (null == t) return null;
     let n = t.getBoundingClientRect();
     return n.width < 1 || n.height < 1 ? null : { width: Math.round(n.width), height: Math.round(n.height) };
@@ -405,8 +405,8 @@ async function J(e) {
 }
 async function z(e, t, n) {
     let { probe: i, spec: r, build: l, onAccepted: o } = n ?? {};
-    if (!0 === i) return { status: (0, y.EA)(e) ? "accepted" : "unavailable" };
-    let s = await (0, y.ZW)(e, 6e3);
+    if (!0 === i) return { status: (0, v.EA)(e) ? "accepted" : "unavailable" };
+    let s = await (0, v.ZW)(e, 6e3);
     if (null == s) return { status: "unavailable" };
     let u = null == o ? { uploadToken: void 0 } : await o();
     if (null == u) return { status: "unavailable" };
@@ -414,10 +414,10 @@ async function z(e, t, n) {
     return null != a ? a : await (0, A.x)(s, t, r, u.uploadToken);
 }
 async function Y(e, t, n, i) {
-    if (!(0, y.EA)(e)) return { status: "unavailable" };
+    if (!(0, v.EA)(e)) return { status: "unavailable" };
     let r = (0, j.t_)(e);
     try {
-        let r = await (0, y.ZW)(e, 6e3);
+        let r = await (0, v.ZW)(e, 6e3);
         if (null == r) return { status: "unavailable" };
         let l = await i?.();
         if (!1 === l) return { status: "unavailable" };
@@ -474,7 +474,7 @@ let K = (function (e) {
         drain: (e) => t.get(e)?.drain() ?? [],
     };
 })((e) => {
-    let t = (0, y.J8)(e);
+    let t = (0, v.J8)(e);
     return null == t
         ? null
         : {
@@ -490,9 +490,9 @@ let K = (function (e) {
           };
 });
 (0, j.Qg)((e) => {
-    let t = (0, y.J8)(e);
+    let t = (0, v.J8)(e);
     null != t &&
-        (0, v.W)(
+        (0, y.W)(
             t,
             "control-end",
             {},
@@ -505,7 +505,7 @@ let X = {
         return u.A.isFocused();
     },
     areTurnNotificationsDisabled: function () {
-        return s.A.getDesktopType() === P.nRU.NEVER;
+        return s.A.getDesktopType() === C.nRU.NEVER;
     },
     presentTurnNotification: function (e) {
         let { projectId: t, title: r, body: l, route: s, sound: u, volume: d } = e;

@@ -26,21 +26,21 @@ var A = n(832712),
     E = n(652215),
     S = n(790782),
     I = n(355097),
-    _ = n(375708),
-    y = n(113528);
+    y = n(375708),
+    _ = n(113528);
 function j(e) {
     let { channel: t, clearUnreadsNotice: n } = e;
     return (0, l.jsxs)("div", {
-        className: y.l,
+        className: _.l,
         children: [
             (0, l.jsx)(p, { id: t.id }),
             (0, l.jsx)("div", {
-                className: y.p,
-                children: (0, l.jsx)(d.E, { variant: "text-sm/medium", children: _.intl.format(_.t.P6Y2N1, {}) }),
+                className: _.p,
+                children: (0, l.jsx)(d.E, { variant: "text-sm/medium", children: y.intl.format(y.t.P6Y2N1, {}) }),
             }),
             (0, l.jsx)(u.$, {
                 variant: "secondary",
-                text: _.intl.string(_.t.KyUKhT),
+                text: y.intl.string(y.t.KyUKhT),
                 icon: h.e,
                 size: "sm",
                 onClick: () => {
@@ -62,9 +62,9 @@ function j(e) {
     });
 }
 var b = n(228098),
-    N = n(157259),
-    T = n(503698),
-    v = n.n(T),
+    v = n(157259),
+    N = n(503698),
+    T = n.n(N),
     M = n(95561),
     R = n(174459),
     D = n(867455),
@@ -82,18 +82,18 @@ function P(e) {
             });
         }, [t]),
         (0, l.jsxs)("div", {
-            className: v()(k.JD, { [k.sc]: n }),
+            className: T()(k.JD, { [k.sc]: n }),
             children: [
                 (0, l.jsx)(d.E, {
                     className: k.E5,
                     variant: "text-sm/normal",
                     color: "text-default",
-                    children: t.isForumPost() ? _.intl.string(_.t["833FDn"]) : _.intl.string(_.t.rEeodK),
+                    children: t.isForumPost() ? y.intl.string(y.t["833FDn"]) : y.intl.string(y.t.rEeodK),
                 }),
                 s
                     ? (0, l.jsx)(u.$, {
                           variant: "secondary",
-                          text: _.intl.string(_.t["0dvvEi"]),
+                          text: y.intl.string(y.t["0dvvEi"]),
                           onClick: function () {
                               (R.default.track(E.HAw.CHANNEL_BANNER_CTA_CLICKED, {
                                   ...(0, M.H$)(t.getGuildId()),
@@ -122,18 +122,18 @@ function O(e) {
             });
         }, [t]),
         (0, l.jsxs)("div", {
-            className: v()(k.JD, { [k.sc]: n }),
+            className: T()(k.JD, { [k.sc]: n }),
             children: [
                 (0, l.jsx)(d.E, {
                     className: k.E5,
                     variant: "text-sm/normal",
                     color: "text-default",
-                    children: t.isForumPost() ? _.intl.string(_.t.E7oO8u) : _.intl.string(_.t["V/JF2N"]),
+                    children: t.isForumPost() ? y.intl.string(y.t.E7oO8u) : y.intl.string(y.t["V/JF2N"]),
                 }),
                 s
                     ? (0, l.jsx)(u.$, {
                           variant: "secondary",
-                          text: _.intl.string(_.t.zA9d1J),
+                          text: y.intl.string(y.t.zA9d1J),
                           onClick: function () {
                               (R.default.track(E.HAw.CHANNEL_BANNER_CTA_CLICKED, {
                                   ...(0, M.H$)(t.getGuildId()),
@@ -177,6 +177,6 @@ let U = i.memo(function (e) {
             : h
               ? (0, l.jsx)(j, { channel: t, clearUnreadsNotice: m })
               : d && u.includes(G.i.OPT_IN_CHANNEL)
-                ? (0, l.jsx)(N.A, { channel: t, narrow: n })
+                ? (0, l.jsx)(v.A, { channel: t, narrow: n })
                 : null;
 });

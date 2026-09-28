@@ -5,26 +5,26 @@ var a = n(503698),
     i = n.n(a),
     r = n(514042),
     s = n(834730),
-    u = n(939249),
-    o = n(298668);
+    o = n(939249),
+    u = n(298668);
 function d(e) {
-    return i()(o._B, { [o.ND]: e });
+    return i()(u._B, { [u.ND]: e });
 }
 function c(e) {
-    let { name: t, thumbSrc: n = null, compact: a = !1, subText: i, children: u, onThumbError: d } = e;
+    let { name: t, thumbSrc: n = null, compact: a = !1, subText: i, children: o, onThumbError: d } = e;
     return (0, l.jsxs)(l.Fragment, {
         children: [
             null != n
-                ? (0, l.jsx)("img", { src: n, alt: "", className: o.gJ, onError: d })
+                ? (0, l.jsx)("img", { src: n, alt: "", className: u.gJ, onError: d })
                 : (0, l.jsx)(r.FileIcon, { size: a ? "xs" : "sm", color: "currentColor" }),
             (0, l.jsxs)("div", {
-                className: o.Wd,
+                className: u.Wd,
                 children: [
-                    (0, l.jsx)(s.E, { variant: "text-sm/medium", color: "text-default", className: o.Rr, children: t }),
+                    (0, l.jsx)(s.E, { variant: "text-sm/medium", color: "text-default", className: u.Rr, children: t }),
                     i,
                 ],
             }),
-            u,
+            o,
         ],
     });
 }
@@ -33,8 +33,8 @@ function m(e) {
 }
 function f(e) {
     let { name: t, thumbSrc: n, ariaLabel: a, onClick: r, onThumbError: s } = e;
-    return (0, l.jsx)(u.D, {
-        className: i()(d(!0), o.w8),
+    return (0, l.jsx)(o.D, {
+        className: i()(d(!0), u.w8),
         onClick: r,
         "aria-label": a,
         children: c({ name: t, thumbSrc: n, compact: !0, onThumbError: s }),

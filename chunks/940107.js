@@ -16,34 +16,34 @@ function r(e, t, n, r) {
         d = `${u}-ack`,
         c = r.sourceMatch ?? "window",
         f = r.id ?? `${t}-${++l}-${Date.now()}`;
-    return new Promise((l, p) => {
-        let h = 0,
+    return new Promise((l, h) => {
+        let p = 0,
             _ = o,
             g = window.setTimeout(() => {
-                (E(), p(new i.fq(t, r.timeoutMs)));
+                (m(), h(new i.fq(t, r.timeoutMs)));
             }, r.timeoutMs),
-            w = null != r.retryMs ? window.setInterval(I, r.retryMs) : null;
-        function m() {
+            w = null != r.retryMs ? window.setInterval(T, r.retryMs) : null;
+        function E() {
             null != w && window.clearInterval(w);
         }
-        function E() {
-            (window.clearTimeout(g), m(), window.removeEventListener("message", T));
+        function m() {
+            (window.clearTimeout(g), E(), window.removeEventListener("message", I));
         }
-        function I() {
-            (h += 1) > 1 &&
+        function T() {
+            (p += 1) > 1 &&
                 console.debug("[vibegrations] re-offering call to the preview frame", {
                     call: r.label ?? t,
                     id: f,
-                    attempt: h,
+                    attempt: p,
                 });
             let i = { type: u, id: f, ...n };
             ((_ = e.contentWindow), e.contentWindow?.postMessage(i, s));
         }
-        function T(e) {
+        function I(e) {
             ("window" === c ? e.source !== _ : e.origin !== s) ||
-                ((0, i.YX)(e.data, d, f) ? m() : (0, i.YX)(e.data, a, f) && (E(), l(e.data)));
+                ((0, i.YX)(e.data, d, f) ? E() : (0, i.YX)(e.data, a, f) && (m(), l(e.data)));
         }
-        (window.addEventListener("message", T), I());
+        (window.addEventListener("message", I), T());
     });
 }
 let l = 0;

@@ -1,4 +1,4 @@
-i.d(e, { Jn: () => A, Y9: () => d });
+i.d(e, { Jn: () => f, Y9: () => d });
 var n = i(684013),
     l = i(532624),
     a = i(184809),
@@ -22,7 +22,7 @@ function d(t, e) {
         },
     };
 }
-function A() {
+function f() {
     let t;
     return (null != (t = l.Ay.getOverlayKeybind()) ? (0, r.dI)(t.shortcut, !0) : "???").split(" + ");
 }

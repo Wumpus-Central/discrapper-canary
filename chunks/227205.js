@@ -1,4 +1,4 @@
-r.d(t, { A: () => w });
+r.d(t, { A: () => H });
 var n = r(477900),
     l = r(582128),
     s = r(503698),
@@ -28,8 +28,8 @@ var n = r(477900),
     j = r(783857),
     b = r(815280),
     P = r(60140),
-    N = r(758836),
-    B = r(652215),
+    B = r(758836),
+    N = r(652215),
     T = r(375708),
     R = r(105499);
 let G = {
@@ -41,13 +41,13 @@ let G = {
         type: u.g.HERO,
         categoryStoreListingId: "",
     },
-    w = (e) => {
+    H = (e) => {
         let {
                 isLoading: t,
                 handleTransition: r,
                 category: s,
-                heroBlock: w,
-                tab: H,
+                heroBlock: H,
+                tab: w,
                 onVisibilityChange: M,
                 badge: D,
                 hideButton: U = !1,
@@ -69,8 +69,8 @@ let G = {
             q = (0, y.S)(),
             Z = l.useMemo(
                 () =>
-                    null != w
-                        ? w
+                    null != H
+                        ? H
                         : null == s
                           ? G
                           : {
@@ -87,11 +87,11 @@ let G = {
                                 heroBannerUrl: s.heroBannerUrl,
                                 heroBannerAnimatedUrl: s.heroBannerAnimatedUrl,
                             },
-                [w, s],
+                [H, s],
             ),
             J = l.useMemo(() => (0, L.HF)(q, Z), [q, Z]),
             Q = null != J,
-            ee = l.useMemo(() => (null == q ? Z : (0, L.O8)(q, Z, H, X)), [q, Z, H, X]),
+            ee = l.useMemo(() => (null == q ? Z : (0, L.O8)(q, Z, w, X)), [q, Z, w, X]),
             {
                 bannerDisplayConfig: et,
                 logoDisplayConfig: er,
@@ -103,15 +103,15 @@ let G = {
             ei = et?.responsive ?? !1,
             eo = et?.backgroundStyle,
             eu = null != ea && !Q,
-            ec = H === N.G2.ORBS,
+            ec = w === B.G2.ORBS,
             ed = null != s && s.isOrbsExclusive,
             eg = ec ? T.intl.string(T.t["1CdL8d"]) : T.intl.string(T.t.xYKa1T);
         function em() {
             ec
                 ? ((0, C.Y)({
-                      pageType: B.liQ.SHOP_ORBS_TAB,
-                      sectionType: B.JJy.ORBS_SHOP_HERO_BLOCK,
-                      ctaObject: B.ZSU.CTA_TO_QUEST_HOME,
+                      pageType: N.liQ.SHOP_ORBS_TAB,
+                      sectionType: N.JJy.ORBS_SHOP_HERO_BLOCK,
+                      ctaObject: N.ZSU.CTA_TO_QUEST_HOME,
                   }),
                   (0, S.mA)({ fromContent: o.u.ORBS_SHOP_HERO_CTA }))
                 : (r?.({
@@ -120,10 +120,10 @@ let G = {
                       isInternalShopDeeplink: !0,
                       isOrbsExclusive: ed,
                   }),
-                  v.default.track(B.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                  v.default.track(N.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                       collectibles_shop_session_id: Y?.sessionId,
                       sku_id: ee.categorySkuId,
-                      page_type: H,
+                      page_type: w,
                       page_section: Y?.pageSection,
                       page_category: Y?.pageCategory,
                       cta_name: "shop latest category hero button",
@@ -154,12 +154,12 @@ let G = {
                             }),
                     }),
                     (0, n.jsxs)("div", {
-                        className: a()(R.xX, { [R.ub]: Q && H === N.G2.COLLECTION_INDEX }),
+                        className: a()(R.xX, { [R.ub]: Q && w === B.G2.COLLECTION_INDEX }),
                         children: [
                             eu
                                 ? (0, n.jsx)("div", { className: R.fy, children: ep() })
                                 : (0, n.jsxs)("div", {
-                                      className: a()(R.bC, { [R.no]: ei, [R.RD]: Q && H === N.G2.COLLECTION_INDEX }),
+                                      className: a()(R.bC, { [R.no]: ei, [R.RD]: Q && w === B.G2.COLLECTION_INDEX }),
                                       children: [
                                           t
                                               ? (0, n.jsx)("div", { className: R.Hw })
@@ -205,7 +205,7 @@ let G = {
                                                         }),
                                                         null != q &&
                                                             Q &&
-                                                            H === N.G2.COLLECTION_INDEX &&
+                                                            w === B.G2.COLLECTION_INDEX &&
                                                             (0, n.jsx)("div", {
                                                                 className: R.Zz,
                                                                 children: (0, n.jsx)(f.A, {
@@ -221,9 +221,9 @@ let G = {
                             !F &&
                                 (0, n.jsx)(P.A, {
                                     heroBlockRecord: ee,
-                                    tab: H,
+                                    tab: w,
                                     isBlockLoading: t,
-                                    layout: H === N.G2.HOME ? "hscroll" : "feed",
+                                    layout: w === B.G2.HOME ? "hscroll" : "feed",
                                 }),
                         ],
                     }),

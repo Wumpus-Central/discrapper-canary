@@ -49,13 +49,13 @@ function S(e) {
 }
 n(321073);
 var I = n(554146),
-    _ = n(192308),
-    y = n(383669),
+    y = n(192308),
+    _ = n(383669),
     j = n(793574),
     b = n(95561),
-    N = n(435558),
-    T = n.n(N),
-    v = n(855687),
+    v = n(435558),
+    N = n.n(v),
+    T = n(855687),
     M = n(143413),
     R = n(734057),
     D = n(808728),
@@ -73,8 +73,8 @@ var I = n(554146),
     V = n(287809),
     z = n(625494),
     W = n(723702),
-    $ = n(936649),
-    q = n(375708);
+    q = n(936649),
+    $ = n(375708);
 function J(e) {
     let t,
         s,
@@ -83,7 +83,7 @@ function J(e) {
         C = (0, o.bG)([m.A], () => (null != f ? m.A.getGuild(f.getGuildId()) : null), [f]),
         x = (0, o.bG)([h.default], () => C?.ownerId === h.default.getId(), [C]),
         {
-            steps: N,
+            steps: v,
             shouldAnimate: J,
             isOldGuild: Z,
         } = (function (e, t) {
@@ -101,12 +101,12 @@ function J(e) {
                 E = null != (s = t?.id) && G.default.extractTimestamp(s) < Date.now() - U.NOr,
                 {
                     canInvite: S,
-                    canManageGuild: N,
+                    canManageGuild: v,
                     canMessage: J,
                 } = (0, o.cf)(
                     [O.A],
                     () => ({
-                        canInvite: (0, v.K)(O.A, t, e),
+                        canInvite: (0, T.K)(O.A, t, e),
                         canManageGuild: null != t && O.A.can(U.xBc.MANAGE_GUILD, t),
                         canMessage: null != e && O.A.can(U.xBc.SEND_MESSAGES, e),
                         canCreateChannel: null != t && O.A.can(U.xBc.MANAGE_CHANNELS, t),
@@ -138,12 +138,12 @@ function J(e) {
                         ((d = (0, o.bG)([R.A], () =>
                             null != t ? R.A.getMutableBasicGuildChannelsForGuild(t.id) : null,
                         )),
-                        (a = i.useMemo(() => (null == d ? [] : T().values(d)), [d])),
+                        (a = i.useMemo(() => (null == d ? [] : N().values(d)), [d])),
                         (u = (0, o.bG)([h.default], () => h.default.getId())),
                         (0, o.bG)([P.A], () =>
-                            T().some(a, (e) => {
+                            N().some(a, (e) => {
                                 let t = P.A.getMessages(e.id).toArray();
-                                return T().some(t, (e) => e.author.id === u && !(0, M.A)(e));
+                                return N().some(t, (e) => e.author.id === u && !(0, M.A)(e));
                             }),
                         )),
                     guildPersonalized:
@@ -177,11 +177,11 @@ function J(e) {
                     handleBoost: er,
                 } = ((A = i.useCallback(() => {
                     (b.Ay.trackWithMetadata(U.HAw.SERVER_SETUP_CTA_CLICKED, {
-                        setup_type: $.XT.CHANNEL_WELCOME,
-                        action: $.AG.INVITE,
+                        setup_type: q.XT.CHANNEL_WELCOME,
+                        action: q.AG.INVITE,
                     }),
                         null != t &&
-                            (0, _.openModalLazy)(async () => {
+                            (0, y.openModalLazy)(async () => {
                                 let { default: e } = await Promise.all([
                                     n.e("683621"),
                                     n.e("711162"),
@@ -201,24 +201,24 @@ function J(e) {
                 }, [t])),
                 (f = i.useCallback(() => {
                     (b.Ay.trackWithMetadata(U.HAw.SERVER_SETUP_CTA_CLICKED, {
-                        setup_type: $.XT.CHANNEL_WELCOME,
-                        action: $.AG.SEND_MESSAGE,
+                        setup_type: q.XT.CHANNEL_WELCOME,
+                        action: q.AG.SEND_MESSAGE,
                     }),
                         z._.dispatch(U.jej.TEXTAREA_FOCUS, { highlight: !0, channelId: U.dJq }));
                 }, [])),
                 (C = i.useCallback(() => {
                     (b.Ay.trackWithMetadata(U.HAw.SERVER_SETUP_CTA_CLICKED, {
-                        setup_type: $.XT.CHANNEL_WELCOME,
-                        action: $.AG.PERSONALIZE_SERVER,
+                        setup_type: q.XT.CHANNEL_WELCOME,
+                        action: q.AG.PERSONALIZE_SERVER,
                     }),
                         null != t && w.A.open(t.id, (0, H.x)(), { section: U.JJy.CHANNEL_WELCOME_CTA }));
                 }, [t])),
                 (x = i.useCallback(() => {
                     (b.Ay.trackWithMetadata(U.HAw.SERVER_SETUP_CTA_CLICKED, {
-                        setup_type: $.XT.CHANNEL_WELCOME,
-                        action: $.AG.DOWNLOAD,
+                        setup_type: q.XT.CHANNEL_WELCOME,
+                        action: q.AG.DOWNLOAD,
                     }),
-                        (0, _.openModalLazy)(async () => {
+                        (0, y.openModalLazy)(async () => {
                             let { default: e } = await Promise.all([n.e("915082"), n.e("944602"), n.e("825280")]).then(
                                 n.bind(n, 987482),
                             );
@@ -233,10 +233,10 @@ function J(e) {
                     handleAddApplication: i.useCallback(() => {
                         null != t &&
                             (b.Ay.trackWithMetadata(U.HAw.SERVER_SETUP_CTA_CLICKED, {
-                                setup_type: $.XT.CHANNEL_WELCOME,
-                                action: $.AG.ADD_APP,
+                                setup_type: q.XT.CHANNEL_WELCOME,
+                                action: q.AG.ADD_APP,
                             }),
-                            (0, _.openModalLazy)(async () => {
+                            (0, y.openModalLazy)(async () => {
                                 let { default: e } = await Promise.all([n.e("851503"), n.e("566003")]).then(
                                     n.bind(n, 258942),
                                 );
@@ -250,8 +250,8 @@ function J(e) {
                     }, [t]),
                     handleBoost: i.useCallback(() => {
                         (b.Ay.trackWithMetadata(U.HAw.SERVER_SETUP_CTA_CLICKED, {
-                            setup_type: $.XT.CHANNEL_WELCOME,
-                            action: $.AG.BOOST,
+                            setup_type: q.XT.CHANNEL_WELCOME,
+                            action: q.AG.BOOST,
                         }),
                             null != t && (0, K.A)(t.id, j.A.GUILD_POWERUPS_CHANNEL_WELCOME_CTA));
                     }, [t]),
@@ -274,15 +274,15 @@ function J(e) {
                         eh.push({
                             key: "invite",
                             iconUrl: "/assets/ea08bfae3e0ab96d.svg",
-                            title: q.intl.string(q.t.q9n0Ta),
+                            title: $.intl.string($.t.q9n0Ta),
                             completed: Y,
                             onClick: en,
                         }),
-                    N &&
+                    v &&
                         eh.push({
                             key: "customize",
                             iconUrl: "/assets/428a003b3c729aa6.svg",
-                            title: q.intl.string(q.t.c5kxPh),
+                            title: $.intl.string($.t.c5kxPh),
                             completed: Q,
                             onClick: ei,
                         }),
@@ -290,7 +290,7 @@ function J(e) {
                         eh.push({
                             key: "message",
                             iconUrl: "/assets/2ed198e767bd5423.svg",
-                            title: q.intl.string(q.t["SoP7+l"]),
+                            title: $.intl.string($.t["SoP7+l"]),
                             completed: X,
                             onClick: el,
                         }),
@@ -298,14 +298,14 @@ function J(e) {
                         eh.push({
                             key: "download",
                             iconUrl: "/assets/eea7561d0cfcff41.svg",
-                            title: q.intl.string(q.t.pGVNI9),
+                            title: $.intl.string($.t.pGVNI9),
                             completed: Z,
                             onClick: es,
                         }),
                     eh.push({
                         key: "addapp",
-                        iconUrl: y,
-                        title: q.intl.string(q.t.IhHDEO),
+                        iconUrl: _,
+                        title: $.intl.string($.t.IhHDEO),
                         completed: ed,
                         onClick: ea,
                     }),
@@ -314,7 +314,7 @@ function J(e) {
                             key: "boost",
                             iconUrl:
                                 "https://cdn.discordapp.com/assets/content/bc3217e772906510d881b75ebefea754b9c3ba903ddf6f994e46e5c5a85770a3.svg",
-                            title: q.intl.string(q.t["6Qbqxw"]),
+                            title: $.intl.string($.t["6Qbqxw"]),
                             completed: ee,
                             onClick: er,
                         })),
@@ -356,7 +356,7 @@ function J(e) {
                 opacities: A,
             });
     if (null == C) return null;
-    let Q = N.map((e, t) =>
+    let Q = v.map((e, t) =>
             (0, l.jsx)(
                 r.A.div,
                 {
@@ -372,8 +372,8 @@ function J(e) {
                 e.key,
             ),
         ),
-        ee = x ? q.intl.string(q.t["1ach9C"]) : q.intl.string(q.t["ezm+/j"]);
-    Z && (ee = q.intl.string(q.t["gwyU/J"]));
+        ee = x ? $.intl.string($.t["1ach9C"]) : $.intl.string($.t["ezm+/j"]);
+    Z && (ee = $.intl.string($.t["gwyU/J"]));
     let et = `${g.A.getArticleURL(U.MVz.GUILD_GETTING_STARTED)}?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm`;
     return (0, l.jsx)(p.Ay, {
         channelId: f.id,
@@ -388,13 +388,13 @@ function J(e) {
                             (0, l.jsx)(c.D, {
                                 className: E.ud,
                                 variant: "heading-xxl/medium",
-                                children: q.intl.format(q.t.rkHVKf, { guildName: C.name }),
+                                children: $.intl.format($.t.rkHVKf, { guildName: C.name }),
                             }),
                             (0, l.jsxs)(d.E, {
                                 color: "text-default",
                                 className: a()({ [E.VA]: !0, [E.lg]: 0 === Q.length }),
                                 variant: "text-sm/normal",
-                                children: [ee, " ", Q.length > 0 ? q.intl.format(q.t.UOtD32, { guideURL: et }) : null],
+                                children: [ee, " ", Q.length > 0 ? $.intl.format($.t.UOtD32, { guideURL: et }) : null],
                             }),
                         ],
                     }),

@@ -5,8 +5,8 @@ var a = n(683063),
     i = n(76275),
     r = n(313265),
     s = n(903586),
-    u = n(191521),
-    o = n(196582),
+    o = n(191521),
+    u = n(196582),
     d = n(883455),
     c = n(50617),
     m = n(375708),
@@ -24,31 +24,31 @@ function x(e) {
             steps: n,
             fallbackLabel: h,
             live: x,
-            durationMs: g,
-            connectsDown: p = !1,
+            durationMs: p,
+            connectsDown: g = !1,
             closed: k = !1,
             tier: v,
         } = e,
         b = (0, s.SY)(n),
         j = (0, r.Q7)(m.intl.string(c.default.ZnvpQR), v),
-        _ = x ? void 0 : g,
-        y = null != _ ? (0, i.nY)(_) : null != b ? (0, s.WQ)(b) : (h ?? m.intl.string(c.default.nv6pUM)),
-        S = n.length > 1 || n.some((e) => e.detail.length > 0 || e.screenshots.length > 0 || e.attachments.length > 0);
-    return (0, l.jsx)(o.A, {
+        _ = x ? void 0 : p,
+        S = null != _ ? (0, i.nY)(_) : null != b ? (0, s.WQ)(b) : (h ?? m.intl.string(c.default.nv6pUM)),
+        y = n.length > 1 || n.some((e) => e.detail.length > 0 || e.screenshots.length > 0 || e.attachments.length > 0);
+    return (0, l.jsx)(u.A, {
         glyph: (0, l.jsx)(a.u, {
-            asset: (0, l.jsx)(u.A, { size: 32 }),
+            asset: (0, l.jsx)(o.A, { size: 32 }),
             assetSize: 32,
             title: j.title,
             body: j.body,
             position: "left",
-            children: (0, l.jsx)("span", { className: f.nC, children: (0, l.jsx)(u.A, {}) }),
+            children: (0, l.jsx)("span", { className: f.nC, children: (0, l.jsx)(o.A, {}) }),
         }),
-        line: y,
+        line: S,
         anchor: !0,
         live: x,
         settled: null != _ || (!x && k),
-        connectsDown: p,
-        detail: S
+        connectsDown: g,
+        detail: y
             ? (0, l.jsx)("ol", {
                   className: f.dO,
                   children: n.map((e) =>

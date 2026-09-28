@@ -768,8 +768,8 @@ var e2 = n(536637),
     e6 = n(144165),
     e7 = n(297264),
     e9 = n(75678),
-    e8 = n(58703),
-    e4 = n(975571),
+    e4 = n(58703),
+    e8 = n(975571),
     te = n(158045),
     tt = n(851746),
     tn = n(727949),
@@ -807,7 +807,7 @@ class tc extends a.Component {
         if (this.isSender) return y.intl.format(y.t["4/EMxl"], { receiver: e?.username });
         let t = T.default.getUser(this.trialOffer.referrerId),
             n = t?.username !== void 0 ? t.username : "";
-        return y.intl.format(y.t.yisueA, { sender: n, helpdeskArticle: e4.A.getArticleURL(D.MVz.REFERRAL_PROGRAM) });
+        return y.intl.format(y.t.yisueA, { sender: n, helpdeskArticle: e8.A.getArticleURL(D.MVz.REFERRAL_PROGRAM) });
     }
     getTitleText() {
         let e = T.default.getUser(this.trialOffer.userId),
@@ -827,7 +827,7 @@ class tc extends a.Component {
             ? this.offerExpired
                 ? null
                 : y.intl.string(y.t.lQLlOb)
-            : y.intl.format(y.t.LwCwT9, { helpdeskArticle: e4.A.getArticleURL(D.MVz.REFERRAL_PROGRAM) });
+            : y.intl.format(y.t.LwCwT9, { helpdeskArticle: e8.A.getArticleURL(D.MVz.REFERRAL_PROGRAM) });
     }
     renderActions() {
         let e =
@@ -863,11 +863,11 @@ class tc extends a.Component {
     renderExpirationDate() {
         let { trialOffer: e, trialEndsAt: t } = this.props;
         if (e.isRedeemed && !this.isSender && null !== t)
-            return y.intl.formatToPlainString(y.t.nP0ivR, { date: (0, e8.i$)(e3()(t), "LL") });
+            return y.intl.formatToPlainString(y.t.nP0ivR, { date: (0, e4.i$)(e3()(t), "LL") });
         if (this.recipientHasNitro || null == e.expiresAt) return null;
         let n = e3()(e.expiresAt);
         return this.offerExpired
-            ? y.intl.formatToPlainString(y.t.PuSHfU, { date: (0, e8.i$)(e3()(n), "LL") })
+            ? y.intl.formatToPlainString(y.t.PuSHfU, { date: (0, e4.i$)(e3()(n), "LL") })
             : (0, tn.GQ)(n.valueOf());
     }
     renderMedia() {
@@ -884,7 +884,7 @@ class tc extends a.Component {
                         return {
                             headerText: y.intl.formatToPlainString(y.t.qABVhL, { recipient: t }),
                             bodyText: y.intl.formatToPlainString(y.t.u7hyDx, {
-                                helpdeskArticle: e4.A.getArticleURL(D.MVz.REFERRAL_PROGRAM),
+                                helpdeskArticle: e8.A.getArticleURL(D.MVz.REFERRAL_PROGRAM),
                             }),
                         };
                     else
@@ -1227,12 +1227,12 @@ var tB = n(470710),
     t6 = n(788833),
     t7 = n(690802);
 let t9 = (0, tZ.FT)(tZ._3.SIZE_56),
-    t8 = (0, tZ.FT)(tZ._3.SIZE_24);
-function t4(e) {
+    t4 = (0, tZ.FT)(tZ._3.SIZE_24);
+function t8(e) {
     let { user: t, ariaLabel: n, showCutout: i } = e,
         l = a.useId(),
-        r = "u" > typeof document && document.documentElement?.dir === "rtl" ? -2 : t9 - t8 - -2,
-        o = t9 - t8 - -3;
+        r = "u" > typeof document && document.documentElement?.dir === "rtl" ? -2 : t9 - t4 - -2,
+        o = t9 - t4 - -3;
     return (0, s.jsxs)("svg", {
         width: t9,
         height: t9,
@@ -1245,7 +1245,7 @@ function t4(e) {
                     maskUnits: "userSpaceOnUse",
                     children: [
                         (0, s.jsx)("rect", { x: 0, y: 0, width: t9, height: t9, fill: "white" }),
-                        (0, s.jsx)("circle", { cx: r + t8 / 2, cy: o + t8 / 2, r: t8 / 2 + 2, fill: "black" }),
+                        (0, s.jsx)("circle", { cx: r + t4 / 2, cy: o + t4 / 2, r: t4 / 2 + 2, fill: "black" }),
                     ],
                 }),
             (0, s.jsx)("foreignObject", {
@@ -1302,7 +1302,7 @@ function ne(e) {
                             (0, s.jsxs)("div", {
                                 className: t7.HD,
                                 children: [
-                                    (0, s.jsx)(t4, { user: i, ariaLabel: i.username, showCutout: null != m }),
+                                    (0, s.jsx)(t8, { user: i, ariaLabel: i.username, showCutout: null != m }),
                                     null != m &&
                                         (0, s.jsx)(t$.A, {
                                             className: t7.GM,
@@ -1990,8 +1990,8 @@ var n0 = n(718564),
     n6 = n(953822),
     n7 = n(585510),
     n9 = n(903093),
-    n8 = n(894591),
-    n4 = n(854627),
+    n4 = n(894591),
+    n8 = n(854627),
     ie = n(474352);
 function it() {
     return (0, s.jsx)("div", { className: ie.Om });
@@ -2060,7 +2060,7 @@ function ia(e) {
         i = T.default.getUser((0, E.ZD)(t)),
         l = tF.A.getBasicChannel(t.channel_id)?.guild_id,
         r = null != l && null != i ? j.Ay.getMember(l, i.id) : null,
-        { avatarSrc: o, avatarDecorationSrc: d, eventHandlers: c } = (0, n4.A)({ userId: i?.id, guildId: l, size: 12 }),
+        { avatarSrc: o, avatarDecorationSrc: d, eventHandlers: c } = (0, n8.A)({ userId: i?.id, guildId: l, size: 12 }),
         u = a.useRef(null);
     return (0, s.jsx)(id, {
         compact: n,
@@ -2284,7 +2284,7 @@ function io(e) {
                             null != i &&
                                 null != r &&
                                 (0, nf.W5)(i, r, () => {
-                                    ((0, n8.w)(o), (0, nf.wu)(i));
+                                    ((0, n4.w)(o), (0, nf.wu)(i));
                                 });
                         },
                     }),
@@ -2956,7 +2956,7 @@ function i7(e) {
                 className: i6.Y_,
                 children: [(0, s.jsx)(i5.A, { game: o, size: i5.M.XXSMALL, className: i6.p4 }), " ", e],
             }),
-        helpdeskArticle: e4.A.getArticleURL(D.MVz.SOCIAL_LAYER_CONNECTIONS),
+        helpdeskArticle: e8.A.getArticleURL(D.MVz.SOCIAL_LAYER_CONNECTIONS),
     });
     return (0, s.jsx)(_.A, {
         iconNode: (0, s.jsx)(i3.GameControllerIcon, { size: "sm" }),
@@ -2973,7 +2973,7 @@ function i9(e) {
         u = y.intl.format(y.t.MMN2Jq, { username: o, usernameHook: d, otherUsername: i, otherUsernameHook: c });
     return (0, s.jsx)(_.A, { icon: n(617184), timestamp: t.timestamp, compact: r, children: u });
 }
-function i8(e) {
+function i4(e) {
     let t,
         { message: i, usernameHook: l, otherUser: a, otherUsernameHook: r, compact: o, channel: d } = e,
         c = (0, L.Ay)(i),
@@ -2986,7 +2986,7 @@ function i8(e) {
     } else t = y.intl.format(y.t["5v2xa8"], { username: u, usernameHook: m });
     return (0, s.jsx)(_.A, { icon: n(884797), timestamp: i.timestamp, compact: o, children: t });
 }
-var i4 = n(451394),
+var i8 = n(451394),
     le = n(598490);
 function lt(e) {
     let { message: t, compact: n, usernameHook: i } = e,
@@ -2995,7 +2995,7 @@ function lt(e) {
         r = y.intl.format(y.t["zla/ux"], { username: l.nick, usernameHook: a, topic: t.content });
     return (0, s.jsx)(_.A, {
         className: le.d,
-        iconNode: (0, s.jsx)(i4.q, { size: "md", color: "currentColor" }),
+        iconNode: (0, s.jsx)(i8.q, { size: "md", color: "currentColor" }),
         iconContainerClassName: le.z,
         timestamp: t.timestamp,
         compact: n,
@@ -3038,7 +3038,7 @@ function ls(e) {
         r = y.intl.format(y.t["Rv+TSM"], { username: l.nick, usernameHook: a, topic: t.content });
     return (0, s.jsx)(_.A, {
         className: le.d,
-        iconNode: (0, s.jsx)(i4.q, { size: "md", color: eg.A.unsafe_rawColors.GREEN_360.css }),
+        iconNode: (0, s.jsx)(i8.q, { size: "md", color: eg.A.unsafe_rawColors.GREEN_360.css }),
         iconContainerClassName: le.z,
         timestamp: t.timestamp,
         compact: n,
@@ -3052,7 +3052,7 @@ function la(e) {
         r = y.intl.format(y.t.Yy6vLs, { username: l.nick, usernameHook: a, topic: t.content });
     return (0, s.jsx)(_.A, {
         className: le.d,
-        iconNode: (0, s.jsx)(i4.q, { size: "md", color: "currentColor" }),
+        iconNode: (0, s.jsx)(i8.q, { size: "md", color: "currentColor" }),
         iconContainerClassName: le.z,
         timestamp: t.timestamp,
         compact: n,
@@ -3616,8 +3616,8 @@ function l9(e) {
         }, [c, l]);
     return (0, s.jsx)(_.A, { iconNode: m, timestamp: t.timestamp, compact: i, children: u });
 }
-var l8 = n(325278);
-function l4(e) {
+var l4 = n(325278);
+function l8(e) {
     let { message: t, channel: n, compact: i } = e,
         { author: l } = t,
         { guild_id: r } = n,
@@ -3692,7 +3692,7 @@ let sn = Object.freeze({
                       targetUsernameHook: c,
                   })
                 : null != r && r.id !== l.id
-                  ? (0, s.jsx)(i8, {
+                  ? (0, s.jsx)(i4, {
                         message: t,
                         channel: n,
                         compact: i,
@@ -3700,7 +3700,7 @@ let sn = Object.freeze({
                         otherUser: r,
                         otherUsernameHook: c,
                     })
-                  : (0, s.jsx)(i8, { message: t, channel: n, compact: i, usernameHook: o });
+                  : (0, s.jsx)(i4, { message: t, channel: n, compact: i, usernameHook: o });
         },
         [D.lAJ.CALL]: function (e) {
             let { message: t, compact: n, channel: i } = e,
@@ -3768,10 +3768,10 @@ let sn = Object.freeze({
                 ],
             });
         },
-        [D.lAJ.GUILD_BOOST]: l4,
-        [D.lAJ.GUILD_BOOST_TIER_1]: l4,
-        [D.lAJ.GUILD_BOOST_TIER_2]: l4,
-        [D.lAJ.GUILD_BOOST_TIER_3]: l4,
+        [D.lAJ.GUILD_BOOST]: l8,
+        [D.lAJ.GUILD_BOOST_TIER_1]: l8,
+        [D.lAJ.GUILD_BOOST_TIER_2]: l8,
+        [D.lAJ.GUILD_BOOST_TIER_3]: l8,
         [D.lAJ.CHANNEL_FOLLOW_ADD]: function (e) {
             let { message: t, compact: n, channel: i } = e,
                 { author: l } = t,
@@ -3794,7 +3794,7 @@ let sn = Object.freeze({
                 p = a.useCallback(() => {
                     null != m &&
                         null != h &&
-                        (0, A.Nl)({ streamType: l8.U4.GUILD, ownerId: r, channelId: m.id, guildId: h });
+                        (0, A.Nl)({ streamType: l4.U4.GUILD, ownerId: r, channelId: m.id, guildId: h });
                 }, [r, m, h]);
             return null != o && null != m && null != o.guild_id
                 ? (0, s.jsx)(i2, {

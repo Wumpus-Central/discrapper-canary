@@ -23,26 +23,26 @@ let p = function (e) {
             imageSrc: E,
             animationSrc: S,
             secondaryButtonText: I,
-            onSecondaryButtonClick: _,
-            children: y,
+            onSecondaryButtonClick: y,
+            children: _,
             useReducedMotion: j = !1,
             buttonVariant: b,
         } = e,
-        N = (0, a.bG)([m.Ay], () => m.Ay.getState().isMembersOpen);
-    if (s.Fr && N) return null;
-    if (null == t) return (0, l.jsx)(l.Fragment, { children: i.Children.only(y) });
-    let T = null;
+        v = (0, a.bG)([m.Ay], () => m.Ay.getState().isMembersOpen);
+    if (s.Fr && v) return null;
+    if (null == t) return (0, l.jsx)(l.Fragment, { children: i.Children.only(_) });
+    let N = null;
     return (
         null != E
-            ? (T = (0, l.jsx)("img", { alt: "", src: E, className: g.Sl }))
-            : null != S && (T = (0, l.jsx)(r.a, { importData: S, shouldAnimate: !j, className: g.lY })),
+            ? (N = (0, l.jsx)("img", { alt: "", src: E, className: g.Sl }))
+            : null != S && (N = (0, l.jsx)(r.a, { importData: S, shouldAnimate: !j, className: g.lY })),
         (0, l.jsxs)("div", {
             className: g.iE,
             children: [
                 (0, l.jsxs)("div", {
                     className: g.Qs,
                     children: [
-                        T,
+                        N,
                         (0, l.jsxs)("div", {
                             className: g.Qq,
                             children: [
@@ -59,7 +59,7 @@ let p = function (e) {
                         null != I &&
                             (0, l.jsx)("div", {
                                 className: g.x6,
-                                children: (0, l.jsx)(d.Q, { textVariant: "text-sm/semibold", text: I, onClick: _ }),
+                                children: (0, l.jsx)(d.Q, { textVariant: "text-sm/semibold", text: I, onClick: y }),
                             }),
                         null != A &&
                             (0, l.jsx)("div", {

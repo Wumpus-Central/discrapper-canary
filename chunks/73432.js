@@ -1,10 +1,10 @@
-l.d(t, { A: () => u });
+l.d(t, { A: () => o });
 var n = l(477900),
     a = l(582128),
     r = l(503698),
     i = l.n(r),
     s = l(27989);
-function u(e) {
+function o(e) {
     let t = a.useId(),
         l = "custom" === e.size ? { width: e.width, height: e.height } : (0, s.J)(e.size ?? "md");
     return (0, n.jsxs)("svg", {

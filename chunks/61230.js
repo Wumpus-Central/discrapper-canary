@@ -8,8 +8,8 @@ var t = l(477900),
     c = l(323073),
     d = l(10862),
     u = l(734057),
-    m = l(576705),
-    h = l(342952),
+    h = l(576705),
+    m = l(342952),
     g = l(834730),
     x = l(778712),
     A = l(821609),
@@ -21,8 +21,8 @@ var t = l(477900),
     I = l(616356),
     b = l(977997),
     C = l(47167),
-    y = l(475889),
-    E = l(262763),
+    E = l(475889),
+    y = l(262763),
     M = l(402216),
     _ = l(375708),
     S = l(971718);
@@ -31,7 +31,7 @@ let R = function (e) {
         l = (0, a.bG)([b.A], () => b.A.isInChannel(n.id)),
         i = (0, N.A)(n),
         s = (0, C.Ay)(n),
-        r = (0, y.H)(n),
+        r = (0, E.H)(n),
         o = (0, a.bG)([I.A], () => I.A.getAllApplicationStreamsForChannel(n.id)[0]);
     return (0, t.jsxs)(v.Uq, {
         className: S.jC,
@@ -79,7 +79,7 @@ let R = function (e) {
                                 (0, t.jsx)(M.Ay, { size: M.Ay.Sizes.SMALL, className: S.wI }),
                             ],
                         }),
-                    (0, t.jsx)(h.A, {
+                    (0, t.jsx)(m.A, {
                         users: i,
                         guildId: n.guild_id,
                         channelId: n.id,
@@ -95,7 +95,7 @@ let R = function (e) {
                         onClick: function () {
                             n.isGuildStageVoice()
                                 ? (0, f.av)(n)
-                                : E.A.handleVoiceConnect({
+                                : y.A.handleVoiceConnect({
                                       channel: n,
                                       connected: l,
                                       needSubscriptionToAccess: !1,
@@ -120,23 +120,23 @@ function O(e) {
                 d(!0);
             }),
         ),
-        m = i.useRef(
+        h = i.useRef(
             new s.J_(175, () => {
                 d(!1);
             }),
         );
     i.useEffect(() => {
         let e = u.current,
-            n = m.current;
+            n = h.current;
         return () => {
             (e.cancel(), n.cancel());
         };
     }, []);
-    let h = i.useCallback(() => {
-            (m.current.cancel(), u.current.delay());
+    let m = i.useCallback(() => {
+            (h.current.cancel(), u.current.delay());
         }, []),
         g = i.useCallback(() => {
-            (u.current.cancel(), m.current.delay());
+            (u.current.cancel(), h.current.delay());
         }, []);
     return (0, t.jsx)(r.Y, {
         targetElementRef: o,
@@ -147,20 +147,20 @@ function O(e) {
         position: "right",
         shouldShow: c,
         renderPopout: () =>
-            (0, t.jsx)("div", { onMouseEnter: h, onMouseLeave: g, children: (0, t.jsx)(R, { channel: n }) }),
-        children: () => (0, t.jsx)("div", { className: a, ref: o, onMouseEnter: h, onMouseLeave: g, children: l }),
+            (0, t.jsx)("div", { onMouseEnter: m, onMouseLeave: g, children: (0, t.jsx)(R, { channel: n }) }),
+        children: () => (0, t.jsx)("div", { className: a, ref: o, onMouseEnter: m, onMouseLeave: g, children: l }),
     });
 }
 function G(e) {
     let { guild: n, message: l } = e,
         { voiceState: i, voiceChannel: s } = (0, o.Ay)({ userId: l.author.id, guildId: n.id }),
         r = (0, a.bG)([u.A], () => u.A.getChannel(l.channel_id)?.isVocal()),
-        h = (0, a.bG)([m.A], () => {
+        m = (0, a.bG)([h.A], () => {
             if (null == s) return !1;
             let e = (0, c.r9)() && (0, c.UK)(s.id);
-            return (s.isPrivate() || (m.A.can(T.xBc.VIEW_CHANNEL, s) && m.A.can(T.xBc.CONNECT, s))) && !e;
+            return (s.isPrivate() || (h.A.can(T.xBc.VIEW_CHANNEL, s) && h.A.can(T.xBc.CONNECT, s))) && !e;
         });
-    return null != i && null != s && s.isGuildVocal() && h && !r
+    return null != i && null != s && s.isGuildVocal() && m && !r
         ? (0, t.jsx)(O, {
               channel: s,
               childWrapperClassName: w.y,
