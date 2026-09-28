@@ -10,8 +10,8 @@ var l = n(477900),
     d = n(270537),
     m = n(241989),
     p = n(263532),
-    C = n(818296),
-    h = n(486020),
+    h = n(818296),
+    C = n(486020),
     f = n(580630),
     E = n(403581),
     S = n(278416),
@@ -21,8 +21,8 @@ var l = n(477900),
     A = n(604913),
     P = n(223311),
     v = n(306396),
-    _ = n(151115),
-    x = n(518865),
+    x = n(151115),
+    _ = n(518865),
     T = n(536572),
     N = n(652215),
     b = n(375708),
@@ -44,7 +44,7 @@ function U(e) {
                     setCollectedModalGradientColor: a,
                 } = (0, I.z)(),
                 s = (0, P.A)(N.FYj),
-                o = null != n ? (0, _.L)(n, s) : null,
+                o = null != n ? (0, x.L)(n, s) : null,
                 u = o?.tenantMetadata?.collectibles;
             (0, i.useEffect)(() => {
                 switch (u?.type) {
@@ -62,7 +62,7 @@ function U(e) {
                         let e = u.reward,
                             n = null != e ? o?.rewardConfig?.discount?.id : null,
                             i = null != n && t?.getDiscountIdIfExists() === String(n) ? e : null;
-                        (l(i?.collected?.overrideTitle), r(void 0), a(null != i ? (0, x.lG)(i.flavor) : void 0));
+                        (l(i?.collected?.overrideTitle), r(void 0), a(null != i ? (0, _.lG)(i.flavor) : void 0));
                         return;
                     }
                 }
@@ -82,7 +82,7 @@ var D = n(951305),
     V = n(31823),
     K = n(427675),
     Z = n(977445),
-    q = n(331329),
+    q = n(118982),
     z = n(566980),
     Q = n(319820),
     $ = n(52635);
@@ -127,7 +127,7 @@ function en(e) {
         { isSocialLayerGameItem: i } = (0, Q.AO)({ sku: n }),
         r = i ? b.intl.string(k.default.qwSlCO) : b.intl.string(k.default.iZe9Wy),
         a = i
-            ? { header: t.name, headerIconSrc: h.Ay.getApplicationIconURL({ id: t.id, icon: t.icon, size: 16 }) }
+            ? { header: t.name, headerIconSrc: C.Ay.getApplicationIconURL({ id: t.id, icon: t.icon, size: 16 }) }
             : {};
     return (0, l.jsx)(et, { ...e, description: r, ...a });
 }
@@ -171,7 +171,7 @@ function er(e) {
                 paymentSourceType: null != t ? t.type : null,
             };
         }),
-        { isGift: h, giftRecipient: E } = (0, D.Pv)(),
+        { isGift: C, giftRecipient: E } = (0, D.Pv)(),
         {
             sku: y,
             application: I,
@@ -210,8 +210,8 @@ function er(e) {
                               hasSeparateAccountLinkNotice: !0,
                           })
                         : (0, l.jsx)($.T3, { paymentSourceType: i });
-                })(n, { skuId: y.id, paymentSourceType: m, isGift: h }),
-            [n, y.id, m, h],
+                })(n, { skuId: y.id, paymentSourceType: m, isGift: C }),
+            [n, y.id, m, C],
         ),
         { upperInlineNoticeProps: O, footerInlineNoticeProps: L } = (function (e) {
             let { sku: t, application: n, isGift: l } = e,
@@ -249,7 +249,7 @@ function er(e) {
                     );
                 }, [d]),
             };
-        })({ sku: y, application: I, isGift: h }),
+        })({ sku: y, application: I, isGift: C }),
         w = i.useMemo(() => ({ paymentGatewayRestrictions: P, shouldUseUnifiedCheckoutUI: !0 }), [P]),
         G = (0, l.jsx)(u.N, {
             label: b.intl.string(b.t["u+Cw58"]),
@@ -307,7 +307,7 @@ function er(e) {
             );
         }, [n, y, I, E, er]),
         eo = i.useMemo(() => (null != r ? (0, f.$g)(r.total, r.currency) : void 0), [r]),
-        eu = (0, C.g)(X ?? null),
+        eu = (0, h.g)(X ?? null),
         ec = i.useMemo(
             () =>
                 (function (e, t) {
@@ -347,9 +347,9 @@ function er(e) {
                                             l = t?.text;
                                         if ((0, R.uJ)(l)) return null;
                                         return {
-                                            Icon: (0, _.s)(t?.icon),
+                                            Icon: (0, x.s)(t?.icon),
                                             text: (0, j.U)(l),
-                                            gradientColor: (0, x.aJ)(e?.flavor),
+                                            gradientColor: (0, _.aJ)(e?.flavor),
                                         };
                                     }
                                     default:
@@ -370,8 +370,8 @@ function er(e) {
                         });
                     }
                     return null;
-                })(n, { invoicePreview: r, isGift: h, promotion: eu, productLine: y.productLine }),
-            [n, r, h, eu, y.productLine],
+                })(n, { invoicePreview: r, isGift: C, promotion: eu, productLine: y.productLine }),
+            [n, r, C, eu, y.productLine],
         ),
         ed = i.useMemo(() => (null != ec ? { headerBadgeText: b.intl.string(k.default.Fjpyfj) } : {}), [ec]);
     return (0, l.jsxs)(l.Fragment, {

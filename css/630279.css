@@ -1,3 +1,32 @@
+.page__06b92 {
+    align-items: safe center;
+    box-sizing: border-box;
+    display: flex;
+    height: 100%;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    justify-content: center;
+    overflow-y: auto;
+    position: absolute
+}
+
+.card__06b92,
+.page__06b92 {
+    padding: var(--space-24);
+    width: 100%
+}
+
+.card__06b92 {
+    max-width: 440px;
+    min-width: 0
+}
+
+.divider__06b92 {
+    background-color: var(--border-muted);
+    height: 1px;
+    width: 100%
+}
+
 .wrapper_b97385 {
     height: 100%;
     width: 100%
@@ -533,4 +562,4 @@
     width: 100%
 }
 
-/*# sourceMappingURL=890901.ff4cf3f72bd01165.css.map*/
+/*# sourceMappingURL=630279.7a14b76dad52023e.css.map*/

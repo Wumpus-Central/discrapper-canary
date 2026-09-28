@@ -3,7 +3,7 @@ var r = n(582128),
     a = n(17928),
     l = n(778712),
     i = n(562819),
-    u = n(963977),
+    u = n(215689),
     o = n(287809),
     s = n(62199);
 function A(e) {
@@ -16,18 +16,18 @@ function A(e) {
             avatarOverride: v,
             avatarDecorationOverride: E,
         } = e,
-        g = (0, a.bG)([o.default], () => o.default.getUser(t)),
+        f = (0, a.bG)([o.default], () => o.default.getUser(t)),
         {
-            avatarSrc: f,
+            avatarSrc: g,
             isAvatarAnimating: p,
             eventHandlers: R,
-        } = (0, s.A)({ user: g, guildId: n, size: (0, l.FT)(A), showPending: d, animateOnHover: c, avatarOverride: v }),
+        } = (0, s.A)({ user: f, guildId: n, size: (0, l.FT)(A), showPending: d, animateOnHover: c, avatarOverride: v }),
         {
             avatarPlaceholderSrc: m,
             avatarDecorationSrc: T,
             eventHandlers: _,
         } = (0, u.A)({
-            user: g,
+            user: f,
             guildId: n,
             avatarDecorationOverride: E,
             size: (0, i.Te)(A),
@@ -36,7 +36,7 @@ function A(e) {
     return {
         avatarPlaceholderSrc: m,
         avatarDecorationSrc: T,
-        avatarSrc: f,
+        avatarSrc: g,
         isAnimating: p,
         eventHandlers: {
             onMouseEnter: r.useCallback(() => {
