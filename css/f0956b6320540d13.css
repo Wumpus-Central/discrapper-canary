@@ -355,10 +355,6 @@
     border-color: var(--border-subtle)
 }
 
-.composerDragOver_ffba0c {
-    border-color: var(--border-strong)
-}
-
 .composerRow_ffba0c {
     align-items: flex-start;
     box-sizing: border-box;
@@ -858,4 +854,4 @@
     display: inline
 }
 
-/*# sourceMappingURL=85db162cf6bc6871.css.map*/
+/*# sourceMappingURL=f0956b6320540d13.css.map*/

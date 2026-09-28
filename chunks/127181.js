@@ -196,6 +196,12 @@ let n = [
             "Deleting an app closes the confirmation right away; the app shows as deleting in your list until it is gone.",
     },
     {
+        date: "2026-09-28",
+        time: "01:17",
+        platforms: ["desktop"],
+        summary: "Drop images and files anywhere on the chat to bring them along, not just onto the message box.",
+    },
+    {
         date: "2026-09-20",
         time: "00:04",
         platforms: ["desktop", "mobile"],

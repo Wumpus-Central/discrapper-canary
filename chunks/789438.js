@@ -1,6 +1,5 @@
 e.exports = {
     DA: "composer_ffba0c",
-    pV: "composerDragOver_ffba0c",
     VA: "composerRow_ffba0c",
     wg: "composerGlow_ffba0c",
     EB: "composerGlowVisible_ffba0c",
