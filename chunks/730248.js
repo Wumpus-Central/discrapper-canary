@@ -2273,7 +2273,9 @@ class ti extends p.A {
     }
     getInboundDurationStats(e) {
         let t = this.inboundStats[e];
-        return null == t ? {} : { duration_connected_ms: Math.round(performance.now() - t.connectedAtMs) };
+        return null == t
+            ? {}
+            : { duration_connected_ms: Math.round((t.disconnectedAtMs ?? performance.now()) - t.connectedAtMs) };
     }
     getInboundJitterStats(e) {
         let t = this.inboundStats[e];
@@ -2484,8 +2486,9 @@ class ti extends p.A {
         }
         return e;
     }
-    destroyUser(e) {
-        (delete this.inboundStats[e], delete this.periodicInboundStats[e]);
+    markUserDisconnected(e) {
+        let t = this.inboundStats[e];
+        null != t && (t.disconnectedAtMs = performance.now());
     }
     getInboundParticipants() {
         return eF.default.keys(this.inboundStats);
@@ -2586,11 +2589,14 @@ class ti extends p.A {
                                 decryptInvalidNonceCount: e.decryptInvalidNonceCount ?? 0,
                             };
                         if (null != n) {
-                            let _ =
-                                n.decryptFailureBeforeSuccessCount ??
-                                (u.decryptSuccessCount > 0 ? u.decryptFailureCount : void 0);
+                            let _ = i < n.packetsReceived,
+                                E = _
+                                    ? void 0
+                                    : (n.decryptFailureBeforeSuccessCount ??
+                                      (u.decryptSuccessCount > 0 ? u.decryptFailureCount : void 0));
                             ((this.inboundStats[t] = {
-                                connectedAtMs: n.connectedAtMs,
+                                connectedAtMs: _ ? performance.now() : n.connectedAtMs,
+                                disconnectedAtMs: _ ? void 0 : n.disconnectedAtMs,
                                 packetsReceived: i,
                                 bytesReceived: a,
                                 packetsLost: r,
@@ -2599,7 +2605,7 @@ class ti extends p.A {
                                 fecPacketsDiscarded: o,
                                 bufferStats: d,
                                 frameOpStats: c,
-                                decryptFailureBeforeSuccessCount: _,
+                                decryptFailureBeforeSuccessCount: E,
                                 ...u,
                             }),
                                 (this.periodicInboundStats[t] = {
@@ -4047,23 +4053,7 @@ class tA extends p.A {
                 this._videoHealthManager?.deleteUser(e));
         }
         let n = this._voiceQuality;
-        if (null != n) {
-            let t = n.getInboundPacketsStats(e);
-            ((t.num_packets ?? 0) > 0 &&
-                this.shouldReport() &&
-                es.default.track(eT.HAw.VOICE_STREAM_ENDED, {
-                    ...this._getAnalyticsProperties(),
-                    media_session_id: this.getMediaSessionId(),
-                    parent_media_session_id: this.parentMediaSessionId,
-                    sender_user_id: e,
-                    participant_type: "receiver",
-                    ...t,
-                    ...n.getInboundBytesStats(e),
-                    ...n.getInboundDurationStats(e),
-                    ...n.getInboundJitterStats(e),
-                }),
-                n.destroyUser(e));
-        }
+        null != n && n.markUserDisconnected(e);
         let i = this._connection;
         (null != i && i.destroyUser(e),
             this._localMediaSinkWantsManager?.destroyUser(e),
