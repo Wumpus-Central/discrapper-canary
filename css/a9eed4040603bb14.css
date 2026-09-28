@@ -2102,6 +2102,7 @@
     max-height: 400px;
     max-width: 320px;
     min-width: 144px;
+    padding-bottom: var(--space-xs);
     width: var(--custom-search-friends-popout-width, 264px)
 }
 
@@ -2233,4 +2234,4 @@
     background-color: var(--background-mod-strong)
 }
 
-/*# sourceMappingURL=123e7eb01532f55c.css.map*/
+/*# sourceMappingURL=a9eed4040603bb14.css.map*/

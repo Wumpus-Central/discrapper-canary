@@ -3,13 +3,13 @@ var i = n(477900),
     s = n(582128),
     l = n(503698),
     r = n.n(l),
-    a = n(333007),
-    o = n(43990),
+    o = n(333007),
+    a = n(43990),
     u = n(604681),
     c = n(761929),
     d = n(97469),
-    h = n(925166),
-    f = n(605117),
+    f = n(925166),
+    h = n(605117),
     x = n(331322),
     m = n(214947),
     g = n(661531),
@@ -52,12 +52,12 @@ function H(e, t) {
 function _() {
     let [e, t] = s.useReducer(H, O),
         { sending: n, success: l, error: r } = e,
-        [a, o] = s.useState(""),
+        [o, a] = s.useState(""),
         [u, c] = s.useState(""),
-        [d, h] = s.useState(!1),
-        { enabled: f } = F.A.useConfig({ location: "AddFriendPopout" });
+        [d, f] = s.useState(!1),
+        { enabled: h } = F.A.useConfig({ location: "AddFriendPopout" });
     async function x() {
-        h(!0);
+        f(!0);
         try {
             let e = await P.Ay.createFriendInvite(null, T.PE1.ADD_FRIENDS_POPOUT);
             (0, z.C)(
@@ -68,7 +68,7 @@ function _() {
         } catch {
             (0, N.P0)((0, S.o)(U.intl.string(U.t.R0RpRX), E.Ck.FAILURE));
         } finally {
-            h(!1);
+            f(!1);
         }
     }
     return (0, i.jsx)(A.l, {
@@ -107,13 +107,13 @@ function _() {
                         (e.preventDefault(),
                             t({ type: "SENDING" }),
                             (0, M.Ay)({
-                                discordTag: a,
-                                note: f && "" !== u ? u : void 0,
+                                discordTag: o,
+                                note: h && "" !== u ? u : void 0,
                                 location: "Add Friend Popout",
                                 errorUxConfig: M.gB.SHOW_ONLY_IF_ACTION_NEEDED,
                             })
                                 .then((e) => {
-                                    (t({ type: "SUCCESS", text: e }), o(""), c(""));
+                                    (t({ type: "SUCCESS", text: e }), a(""), c(""));
                                 })
                                 .catch((e) => t({ type: "ERROR", text: e })));
                     },
@@ -122,9 +122,9 @@ function _() {
                         className: B.hQ,
                         children: [
                             (0, i.jsx)(I.k, {
-                                value: a,
+                                value: o,
                                 onChange: (e) => {
-                                    (o(e), t({ type: "RESET" }));
+                                    (a(e), t({ type: "RESET" }));
                                 },
                                 label: U.intl.string(U.t["5C3rVr"]),
                                 fullWidth: !0,
@@ -138,7 +138,7 @@ function _() {
                                 "data-lpignore": !0,
                                 "data-1p-ignore": !0,
                             }),
-                            f &&
+                            h &&
                                 (0, i.jsx)(y.f, {
                                     label: U.intl.string(U.t["6dVPSI"]),
                                     value: u,
@@ -157,7 +157,7 @@ function _() {
                                 size: "md",
                                 text: U.intl.string(U.t.HWT3wh),
                                 fullWidth: !0,
-                                disabled: "" === a.trim() || n,
+                                disabled: "" === o.trim() || n,
                                 type: "submit",
                             }),
                         ],
@@ -168,16 +168,18 @@ function _() {
     });
 }
 function G(e) {
-    let { position: t, children: n } = e,
-        l = s.useRef(null),
-        [r, a] = s.useState(!1);
+    let { position: t, onClose: n, children: l } = e,
+        r = s.useRef(null),
+        [o, a] = s.useState(!1);
     return (0, i.jsx)(D.Y, {
-        targetElementRef: l,
-        shouldShow: r,
-        onRequestClose: () => a(!1),
+        targetElementRef: r,
+        shouldShow: o,
+        onRequestClose: function () {
+            (a(!1), n?.());
+        },
         position: t,
         renderPopout: () => (0, i.jsx)(_, {}),
-        children: () => n({ buttonRef: l, onClick: () => a(!r) }),
+        children: () => l({ buttonRef: r, onClick: () => a(!o) }),
     });
 }
 var W = n(682530),
@@ -194,7 +196,7 @@ let V = Array.from({ length: 10 }, (e, t) =>
     ),
 );
 function q() {
-    return (0, f.c)() ? (0, i.jsx)($, {}) : (0, i.jsx)(Z, {});
+    return (0, h.c)() ? (0, i.jsx)($, {}) : (0, i.jsx)(Z, {});
 }
 function Z() {
     return (0, i.jsxs)("div", {
@@ -293,17 +295,17 @@ var ei = n(17928),
     es = n(602853),
     el = n(475825),
     er = n(308528),
-    ea = n(565860),
-    eo = n(723690),
+    eo = n(565860),
+    ea = n(723690),
     eu = n(976860),
     ec = n(734057),
     ed = n(290863),
-    eh = n(994500),
-    ef = n(287809),
+    ef = n(994500),
+    eh = n(287809),
     ex = n(972910);
 function em(e) {
     let { friend: t, appendGap: n, closePopout: l } = e,
-        [a, o] = s.useState(!1),
+        [o, a] = s.useState(!1),
         {
             status: u,
             isMobile: c,
@@ -315,20 +317,20 @@ function em(e) {
         }));
     return (0, i.jsx)(K.D, {
         className: r()(ex.Ke, { [ex.w$]: n }),
-        onMouseEnter: () => o(!0),
-        onMouseLeave: () => o(!1),
+        onMouseEnter: () => a(!0),
+        onMouseLeave: () => a(!1),
         onClick: function () {
             let e = ec.A.getDMFromUserId(t.user.id);
             (null != e ? (0, eu.pX)(T.BVt.CHANNEL(T.ME, e)) : er.A.openPrivateChannel({ recipientIds: t.user.id }),
                 l?.());
         },
-        children: (0, i.jsx)(eo.A, {
+        children: (0, i.jsx)(ea.A, {
             user: t.user,
             status: u,
             isMobile: c,
             isVR: d,
             subText: (0, i.jsx)(p.E, { variant: "text-xs/medium", color: "text-muted", children: t.user.username }),
-            hovered: a,
+            hovered: o,
             showAccountIdentifier: !1,
             className: ex.eF,
         }),
@@ -339,7 +341,7 @@ function eg(e) {
         s = (0, es.r)(g.A.space.SPACE_XS),
         l = (0, es.r)(g.A.space.SPACE_XXS),
         r = 36 + 2 * s,
-        a = [t.length];
+        o = [t.length];
     return (0, i.jsx)(el.OZ, {
         renderRow: (e) => {
             let { section: s, row: l } = e,
@@ -347,7 +349,7 @@ function eg(e) {
             return (0, i.jsx)(em, { friend: r, appendGap: l !== t.length - 1, closePopout: n }, r.userId);
         },
         rowHeight: (e, n) => (n === t.length - 1 ? r : r + l),
-        sections: a,
+        sections: o,
         sectionHeight: 18 + l,
         renderSection: (e) => {
             let { section: n } = e;
@@ -372,21 +374,21 @@ function ep() {
 }
 function eC(e) {
     let { rawQuery: t, closePopout: n } = e,
-        s = (0, ea.HI)(t),
+        s = (0, eo.HI)(t),
         l = (0, ei.bG)(
-            [eh.A, ef.default],
+            [ef.A, eh.default],
             () => {
                 if ("" === s) return [];
-                let e = eh.A.getFriendIDs(),
+                let e = ef.A.getFriendIDs(),
                     t = [];
                 return (
                     e.forEach((e) => {
-                        let n = ef.default.getUser(e);
+                        let n = eh.default.getUser(e);
                         if (void 0 === n) return;
-                        let i = eh.A.getNickname(e),
-                            l = [(0, ea.HI)(n.username)];
-                        (null != n.globalName && l.push((0, ea.HI)(n.globalName)),
-                            null != i && l.push((0, ea.HI)(i)),
+                        let i = ef.A.getNickname(e),
+                            l = [(0, eo.HI)(n.username)];
+                        (null != n.globalName && l.push((0, eo.HI)(n.globalName)),
+                            null != i && l.push((0, eo.HI)(i)),
                             l.some((e) => e.includes(s)) &&
                                 t.push({
                                     userId: e,
@@ -435,9 +437,9 @@ function eb(e) {
 var ev = n(540950);
 function eN(e) {
     let { isSearching: t, setIsSearching: n } = e,
-        l = (0, f.c)(),
-        { appBarToggleEnabled: r } = h.A.useConfig({ location: "FriendsListHeader" }),
-        [a, o] = s.useState(!1),
+        l = (0, h.c)(),
+        { appBarToggleEnabled: r } = f.A.useConfig({ location: "FriendsListHeader" }),
+        [o, a] = s.useState(!1),
         c = s.useRef(null),
         d = s.useRef(null),
         m = s.useRef(null),
@@ -445,7 +447,7 @@ function eN(e) {
             let { width: t } = e,
                 n = d.current?.getBoundingClientRect().width,
                 i = m.current?.getBoundingClientRect().width;
-            null != t && null != n && null != i && o(t - (n + i) <= 24);
+            null != t && null != n && null != i && a(t - (n + i) <= 24);
         }, []);
     (0, en.i4)(c, g);
     let j = l
@@ -454,7 +456,7 @@ function eN(e) {
           ? (0, i.jsx)(ew, { isSearching: !0, setIsSearching: n })
           : (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, i.jsx)(eS, { compact: a }),
+                    (0, i.jsx)(eS, { compact: o }),
                     (0, i.jsxs)(x.B, {
                         direction: "horizontal",
                         fullWidth: !1,
@@ -490,15 +492,15 @@ function eN(e) {
 }
 function eS(e) {
     let { compact: t = !1, ghost: n = !1, ref: l } = e,
-        a = n ? s.Fragment : b.m,
-        o = t
+        o = n ? s.Fragment : b.m,
+        a = t
             ? (0, i.jsx)(m.$, { size: "xs", color: "var(--icon-default)" })
             : (0, i.jsx)(p.E, {
                   variant: "heading-md/medium",
                   tag: "span",
                   children: U.intl.string(W.default["7kJd9e"]),
               });
-    return (0, i.jsx)(a, {
+    return (0, i.jsx)(o, {
         text: U.intl.string(W.default["7kJd9e"]),
         children: (0, i.jsx)(K.D, {
             className: r()(ev.Iw, { [ev.qy]: n }),
@@ -509,7 +511,7 @@ function eS(e) {
                 gap: 4,
                 align: "center",
                 padding: { top: 6, bottom: 6, left: 8, right: 8 },
-                children: [o, (0, i.jsx)(Q.a, { color: "var(--text-default)", size: "sm" })],
+                children: [a, (0, i.jsx)(Q.a, { color: "var(--text-default)", size: "sm" })],
             }),
         }),
     });
@@ -520,12 +522,15 @@ function eE() {
     function l(e) {
         (e.preventDefault(), n(!0));
     }
+    function r() {
+        n(!1);
+    }
     return (0, i.jsx)(D.Y, {
         targetElementRef: e,
         shouldShow: t,
-        onRequestClose: () => n(!1),
+        onRequestClose: r,
         position: "bottom",
-        renderPopout: () => (0, i.jsx)(eA, {}),
+        renderPopout: () => (0, i.jsx)(eA, { onClose: r }),
         children: () =>
             (0, i.jsx)(ey, {
                 buttonRef: e,
@@ -536,7 +541,8 @@ function eE() {
             }),
     });
 }
-function eA() {
+function eA(e) {
+    let { onClose: t } = e;
     return (0, i.jsxs)(x.B, {
         gap: 4,
         padding: 8,
@@ -544,40 +550,41 @@ function eA() {
         className: ev.QG,
         children: [
             (0, i.jsx)(ey, { icon: ee.R, label: U.intl.string(W.default["i+986w"]), tooltipPosition: "left" }),
-            (0, i.jsx)(ek, {}),
-            (0, i.jsx)(eI, { popoutPosition: "left", tooltipPosition: "left" }),
+            (0, i.jsx)(ek, { onClose: t }),
+            (0, i.jsx)(eI, { popoutPosition: "left", tooltipPosition: "left", onClose: t }),
         ],
     });
 }
-function ek() {
-    let e = s.useRef(null),
-        [t, n] = s.useState(!1);
-    function l() {
-        n(!1);
+function ek(e) {
+    let { onClose: t } = e,
+        n = s.useRef(null),
+        [l, r] = s.useState(!1);
+    function o() {
+        (r(!1), t?.());
     }
     return (0, i.jsx)(D.Y, {
-        targetElementRef: e,
-        shouldShow: t,
-        onRequestClose: l,
+        targetElementRef: n,
+        shouldShow: l,
+        onRequestClose: o,
         position: "left",
-        renderPopout: () => (0, i.jsx)(eb, { closePopout: l }),
+        renderPopout: () => (0, i.jsx)(eb, { closePopout: o }),
         children: () =>
             (0, i.jsx)(ey, {
-                buttonRef: e,
+                buttonRef: n,
                 icon: et.MagnifyingGlassIcon,
                 label: U.intl.string(W.default["60M8Ae"]),
                 tooltipPosition: "left",
-                onClick: () => n(!t),
+                onClick: () => r(!l),
             }),
     });
 }
 function ew(e) {
     let { isSearching: t, setIsSearching: n } = e,
         l = s.useRef(null),
-        [r, a] = s.useState(""),
-        [o, u] = s.useState(0);
+        [r, o] = s.useState(""),
+        [a, u] = s.useState(0);
     function c() {
-        (n(!1), a(""));
+        (n(!1), o(""));
     }
     return (s.useLayoutEffect(() => {
         if (!t) return;
@@ -592,7 +599,7 @@ function ew(e) {
               position: "bottom",
               align: "center",
               nudgeAlignIntoViewport: !1,
-              renderPopout: () => (0, i.jsx)(eR, { query: r, width: o, closePopout: c }),
+              renderPopout: () => (0, i.jsx)(eR, { query: r, width: a, closePopout: c }),
               children: () =>
                   (0, i.jsx)("div", {
                       ref: l,
@@ -604,7 +611,7 @@ function ew(e) {
                           hideLabel: !0,
                           placeholder: U.intl.string(U.t.lLDtTK),
                           value: r,
-                          onChange: a,
+                          onChange: o,
                       }),
                   }),
           })
@@ -615,9 +622,10 @@ function ew(e) {
           });
 }
 function eI(e) {
-    let { popoutPosition: t, tooltipPosition: n } = e;
+    let { popoutPosition: t, tooltipPosition: n, onClose: s } = e;
     return (0, i.jsx)(G, {
         position: t,
+        onClose: s,
         children: (e) => {
             let { buttonRef: t, onClick: s } = e;
             return (0, i.jsx)(ey, {
@@ -631,12 +639,12 @@ function eI(e) {
     });
 }
 function ey(e) {
-    let { icon: t, label: n, onClick: l, onContextMenu: r, tooltipPosition: a, buttonRef: o } = e,
+    let { icon: t, label: n, onClick: l, onContextMenu: r, tooltipPosition: o, buttonRef: a } = e,
         u = s.useRef(null),
-        c = o ?? u;
+        c = a ?? u;
     return (0, i.jsx)(b.m, {
         text: n,
-        position: a,
+        position: o,
         targetElementRef: c,
         anchorRef: c,
         children: (0, i.jsx)(K.D, {
@@ -652,17 +660,17 @@ function ey(e) {
 var eD = n(45863);
 function eP() {
     let e = s.useRef(null),
-        t = (0, f.c)(),
+        t = (0, h.c)(),
         n = s.useRef(!1),
-        l = s.useMemo(() => ({ width: (0, f.A)() ? 64 : 280 }), []),
-        { appBarToggleEnabled: x } = h.A.useConfig({ location: "FriendsSidebar" }),
+        l = s.useMemo(() => ({ width: (0, h.A)() ? 64 : 280 }), []),
+        { appBarToggleEnabled: x } = f.A.useConfig({ location: "FriendsSidebar" }),
         [m, g] = s.useState(!1);
     s.useLayoutEffect(() => {
         null == e.current || n.current || (e.current.style.width = `${t ? 64 : 280}px`);
     }, [t]);
     let j = s.useCallback((e, t) => {
             let n = t <= 200;
-            n !== (0, f.A)() && (0, a.flushSync)(() => u.A.setFriendsSidebarCollapsed(n));
+            n !== (0, h.A)() && (0, o.flushSync)(() => u.A.setFriendsSidebarCollapsed(n));
         }, []),
         p = s.useCallback(() => {
             ((n.current = !0), g(!1));
@@ -683,7 +691,7 @@ function eP() {
             getClampedValue: R,
         }),
         v = (0, d.NC)();
-    return (0, i.jsx)(o.N, {
+    return (0, i.jsx)(a.N, {
         theme: v,
         children: (t) =>
             (0, i.jsxs)("div", {
