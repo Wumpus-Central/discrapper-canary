@@ -663,6 +663,13 @@ let n = [
             "Task lists stop spinning once Conjure finishes or you press Stop, and an earlier list folds away with its unfinished tasks marked when a new one starts.",
     },
     {
+        date: "2026-09-28",
+        time: "19:37",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "The Conjuring MCP panel now gives you an Authorization header to add alongside the link, so the link itself no longer carries your key.",
+    },
+    {
         date: "2026-09-09",
         time: "00:00",
         platforms: ["desktop"],

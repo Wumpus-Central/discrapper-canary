@@ -1,34 +1,35 @@
-a.d(l, { default: () => C });
-var e = a(477900),
-    i = a(582128),
-    n = a(314116),
-    s = a(224640),
-    r = a(331322),
-    c = a(408278),
-    d = a(789645),
-    o = a(297264),
-    u = a(834730),
-    x = a(95477),
-    g = a(825484),
-    h = a(821609),
-    m = a(957565),
-    f = a(277977),
-    j = a(50617),
-    p = a(375708),
-    b = a(397239);
-function C(t) {
-    let { projectId: l, transitionState: a, onClose: C } = t,
-        [v, k] = i.useState(null),
+e.d(l, { default: () => b });
+var a = e(477900),
+    i = e(582128),
+    n = e(314116),
+    s = e(224640),
+    r = e(331322),
+    c = e(408278),
+    d = e(789645),
+    o = e(297264),
+    u = e(834730),
+    x = e(95477),
+    h = e(825484),
+    g = e(821609),
+    m = e(957565),
+    j = e(277977),
+    f = e(50617),
+    p = e(375708),
+    C = e(397239);
+function b(t) {
+    let { projectId: l, transitionState: e, onClose: b } = t,
+        [k, v] = i.useState(null),
         [y, z] = i.useState(!0),
-        [w, N] = i.useState(!1),
-        [T, B] = i.useState(!1),
+        [N, T] = i.useState(!1),
+        [B, w] = i.useState(!1),
+        [A, S] = i.useState(!1),
         E = i.useCallback(
             async (t) => {
-                (z(!0), N(!1), B(!1));
+                (z(!0), T(!1), w(!1), S(!1));
                 try {
-                    k(await (0, f.y_)(l, { regenerate: t }));
+                    v(await (0, j.y_)(l, { regenerate: t }));
                 } catch {
-                    (t && k(null), N(!0));
+                    (t && v(null), T(!0));
                 } finally {
                     z(!1);
                 }
@@ -38,126 +39,158 @@ function C(t) {
     i.useEffect(() => {
         E(!1).catch(() => {});
     }, [E]);
-    let S = i.useCallback(() => {
-            null != v && (0, m.C)(v.url, () => B(!0));
-        }, [v]),
-        K = i.useCallback(() => {
+    let K = i.useCallback(() => {
+            null != k && (0, m.C)(k.url, () => w(!0));
+        }, [k]),
+        W = i.useCallback(() => {
+            null != k && (0, m.C)(`Authorization: Bearer ${k.token}`, () => S(!0));
+        }, [k]),
+        $ = i.useCallback(() => {
             (0, n.A)({
-                title: p.intl.string(j.default.jKNAzJ),
-                subtitle: p.intl.string(j.default.oWzC0r),
-                confirmText: p.intl.string(j.default.dZxnCn),
+                title: p.intl.string(f.default.jKNAzJ),
+                subtitle: p.intl.string(f.default.oWzC0r),
+                confirmText: p.intl.string(f.default.dZxnCn),
                 variant: "critical",
                 onConfirm: () => {
                     E(!0).catch(() => {});
                 },
             });
         }, [E]),
-        A = p.intl.string(j.default["xMOS+Z"]);
-    return (0, e.jsx)(s.d, {
-        transitionState: a,
-        onClose: C,
-        "aria-label": A,
+        O = p.intl.string(f.default["xMOS+Z"]);
+    return (0, a.jsx)(s.d, {
+        transitionState: e,
+        onClose: b,
+        "aria-label": O,
         size: "md",
-        children: (0, e.jsxs)(r.B, {
+        children: (0, a.jsxs)(r.B, {
             gap: 24,
             padding: { top: 16, right: 24, bottom: 8, left: 24 },
-            className: b.GV,
+            className: C.GV,
             children: [
-                (0, e.jsx)("div", {
-                    className: b.b,
-                    children: (0, e.jsx)(c.K, {
+                (0, a.jsx)("div", {
+                    className: C.b,
+                    children: (0, a.jsx)(c.K, {
                         "aria-label": p.intl.string(p.t.cpT0Cq),
                         icon: d.P,
-                        onClick: C,
+                        onClick: b,
                         variant: "secondary",
                         size: "sm",
                     }),
                 }),
-                (0, e.jsxs)(r.B, {
+                (0, a.jsxs)(r.B, {
                     gap: 8,
                     children: [
-                        (0, e.jsx)(o.D, { variant: "heading-lg/semibold", color: "text-strong", children: A }),
-                        (0, e.jsx)(u.E, {
+                        (0, a.jsx)(o.D, { variant: "heading-lg/semibold", color: "text-strong", children: O }),
+                        (0, a.jsx)(u.E, {
                             variant: "text-sm/normal",
                             color: "text-subtle",
-                            children: p.intl.string(j.default["1Ew5/j"]),
+                            children: p.intl.string(f.default["1Ew5/j"]),
                         }),
                     ],
                 }),
-                null != v
-                    ? (0, e.jsxs)(r.B, {
+                null != k
+                    ? (0, a.jsxs)(r.B, {
                           gap: 8,
                           children: [
-                              (0, e.jsxs)(r.B, {
+                              (0, a.jsxs)(r.B, {
                                   direction: "horizontal",
                                   align: "end",
                                   gap: 8,
-                                  className: b._T,
+                                  className: C._T,
                                   children: [
-                                      (0, e.jsx)("div", {
-                                          className: b.UQ,
-                                          children: (0, e.jsx)(x.k, {
-                                              label: p.intl.string(j.default.DRgXyU),
-                                              value: v.url,
+                                      (0, a.jsx)("div", {
+                                          className: C.UQ,
+                                          children: (0, a.jsx)(x.k, {
+                                              label: p.intl.string(f.default.DRgXyU),
+                                              value: k.url,
                                               readOnly: !0,
                                               fullWidth: !0,
                                               onFocus: (t) => t.currentTarget.select(),
                                           }),
                                       }),
-                                      (0, e.jsxs)(g.e, {
+                                      (0, a.jsxs)(h.e, {
                                           size: "md",
                                           wrap: !1,
-                                          className: b.CA,
+                                          className: C.CA,
                                           children: [
-                                              (0, e.jsx)(h.$, {
+                                              (0, a.jsx)(g.$, {
                                                   variant: "primary",
                                                   minWidth: 60,
-                                                  text: p.intl.string(T ? p.t.t5VZ88 : p.t.OpuAlK),
-                                                  onClick: S,
+                                                  text: p.intl.string(B ? p.t.t5VZ88 : p.t.OpuAlK),
+                                                  onClick: K,
                                               }),
-                                              (0, e.jsx)(h.$, {
+                                              (0, a.jsx)(g.$, {
                                                   variant: "secondary",
                                                   minWidth: 60,
-                                                  text: p.intl.string(j.default.bsDgiq),
-                                                  onClick: K,
+                                                  text: p.intl.string(f.default.bsDgiq),
+                                                  onClick: $,
                                                   loading: y,
                                               }),
                                           ],
                                       }),
                                   ],
                               }),
-                              (0, e.jsx)(u.E, {
+                              (0, a.jsxs)(r.B, {
+                                  direction: "horizontal",
+                                  align: "end",
+                                  gap: 8,
+                                  className: C._T,
+                                  children: [
+                                      (0, a.jsx)("div", {
+                                          className: C.UQ,
+                                          children: (0, a.jsx)(x.k, {
+                                              label: p.intl.string(f.default.tgtTuF),
+                                              value: `Authorization: Bearer ${k.token}`,
+                                              readOnly: !0,
+                                              fullWidth: !0,
+                                              onFocus: (t) => t.currentTarget.select(),
+                                          }),
+                                      }),
+                                      (0, a.jsx)(h.e, {
+                                          size: "md",
+                                          wrap: !1,
+                                          className: C.CA,
+                                          children: (0, a.jsx)(g.$, {
+                                              variant: "primary",
+                                              minWidth: 60,
+                                              text: p.intl.string(A ? p.t.t5VZ88 : p.t.OpuAlK),
+                                              onClick: W,
+                                          }),
+                                      }),
+                                  ],
+                              }),
+                              (0, a.jsx)(u.E, {
                                   variant: "text-xs/normal",
                                   color: "text-muted",
-                                  children: p.intl.string(j.default.lTtxBT),
+                                  children: p.intl.string(f.default.lTtxBT),
                               }),
                           ],
                       })
                     : y
-                      ? (0, e.jsx)(u.E, {
+                      ? (0, a.jsx)(u.E, {
                             variant: "text-sm/normal",
                             color: "text-muted",
                             role: "status",
-                            children: p.intl.string(j.default.c3R8Tx),
+                            children: p.intl.string(f.default.c3R8Tx),
                         })
                       : null,
-                w
-                    ? (0, e.jsxs)(r.B, {
+                N
+                    ? (0, a.jsxs)(r.B, {
                           direction: "horizontal",
                           align: "center",
                           justify: "space-between",
                           gap: 12,
                           children: [
-                              (0, e.jsx)(u.E, {
+                              (0, a.jsx)(u.E, {
                                   variant: "text-xs/normal",
                                   color: "text-feedback-critical",
                                   role: "alert",
-                                  children: p.intl.string(j.default.QJKw6N),
+                                  children: p.intl.string(f.default.QJKw6N),
                               }),
-                              (0, e.jsx)(h.$, {
+                              (0, a.jsx)(g.$, {
                                   variant: "secondary",
                                   size: "sm",
-                                  text: p.intl.string(j.default["7xdKYd"]),
+                                  text: p.intl.string(f.default["7xdKYd"]),
                                   onClick: () => {
                                       E(!1).catch(() => {});
                                   },
