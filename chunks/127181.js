@@ -1,4 +1,4 @@
-a.d(t, { B: () => o, MZ: () => l, TH: () => i, tn: () => s });
+a.d(t, { B: () => l, MZ: () => o, TH: () => i, tn: () => s });
 let n = [
     {
         date: "2026-09-07",
@@ -581,6 +581,13 @@ let n = [
             "Reopening an app shows what Conjure is recalling while your conversation loads, and a brand new app greets you straight away.",
     },
     {
+        date: "2026-09-25",
+        time: "23:27",
+        platforms: ["desktop"],
+        summary:
+            "Shared projects show the faces of the people who made and work on them beside the name; hover them to see who they are.",
+    },
+    {
         date: "2026-09-02",
         time: "00:01",
         platforms: ["desktop", "mobile"],
@@ -862,9 +869,9 @@ function i(e) {
 function s(e) {
     return n.filter((t) => t.platforms.includes(e));
 }
-function o(e) {
+function l(e) {
     return s(e).length > 3;
 }
-function l(e) {
+function o(e) {
     return 1 === e.platforms.length;
 }

@@ -20,6 +20,13 @@
     display: inline-flex
 }
 
+.people_c366b2 {
+    align-items: center;
+    display: flex;
+    flex: 0 0 auto;
+    gap: var(--space-4)
+}
+
 .header__90588 {
     flex: 0 0 auto;
     padding-inline-end: var(--space-xs);
@@ -393,8 +400,9 @@
     position: relative
 }
 
-.projectCard_f8194a:focus-within,
-.projectCard_f8194a:hover {
+.projectCard_f8194a:has(.projectSettingsAction_f8194a [aria-expanded=true]),
+.keyboard-mode .projectCard_f8194a:focus-within,
+.mouse-mode .projectCard_f8194a:hover {
     background: var(--background-mod-subtle)
 }
 
@@ -434,7 +442,6 @@
     outline-color: var(--border-normal)
 }
 
-.projectCardAction_f8194a,
 .projectIconPlaceholder_f8194a {
     align-items: center;
     display: flex;
@@ -442,11 +449,11 @@
 }
 
 .projectCardAction_f8194a {
-    flex: 0 0 auto;
-    height: var(--space-32);
-    margin-inline-end: var(--space-8);
-    position: relative;
-    width: var(--space-32)
+    display: flex;
+    inset-inline-end: var(--space-4);
+    position: absolute;
+    top: calc(var(--space-8) - var(--space-6));
+    z-index: 1
 }
 
 .projectSettingsAction_f8194a {
@@ -455,8 +462,9 @@
     transition: opacity .15s ease-out
 }
 
-.projectCard_f8194a:focus-within .projectSettingsAction_f8194a,
-.projectCard_f8194a:hover .projectSettingsAction_f8194a {
+.projectSettingsAction_f8194a:has([aria-expanded=true]),
+.keyboard-mode .projectCard_f8194a:focus-within .projectSettingsAction_f8194a,
+.mouse-mode .projectCard_f8194a:hover .projectSettingsAction_f8194a {
     opacity: 1;
     pointer-events: auto
 }
@@ -465,6 +473,18 @@
     .projectSettingsAction_f8194a {
         opacity: 1;
         pointer-events: auto
+    }
+}
+
+.projectCard_f8194a:has(.projectSettingsAction_f8194a [aria-expanded=true]) .projectPeople_f8194a,
+.keyboard-mode .projectCard_f8194a:focus-within .projectPeople_f8194a,
+.mouse-mode .projectCard_f8194a:hover .projectPeople_f8194a {
+    visibility: hidden
+}
+
+@media (hover:none) {
+    .projectPeople_f8194a {
+        visibility: hidden
     }
 }
 
@@ -482,16 +502,25 @@
 }
 
 .projectName_f8194a {
+    flex: 1;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap
 }
 
-.projectMetadata_f8194a {
+.projectTitleRow_f8194a {
+    gap: var(--space-8)
+}
+
+.projectMetadata_f8194a,
+.projectTitleRow_f8194a {
     align-items: center;
     display: flex;
-    gap: var(--space-4);
     min-width: 0
+}
+
+.projectMetadata_f8194a {
+    gap: var(--space-4)
 }
 
 .projectServerName_f8194a {
@@ -549,4 +578,4 @@
     text-align: center
 }
 
-/*# sourceMappingURL=87668599e68c6677.css.map*/
+/*# sourceMappingURL=b61f8564c5628d1a.css.map*/
