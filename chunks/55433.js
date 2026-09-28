@@ -1,4 +1,4 @@
-l.d(t, { m: () => tm });
+l.d(t, { m: () => tf });
 var n = l(477900),
     i = l(582128),
     a = l(593673),
@@ -741,80 +741,84 @@ var eM = l(452027),
     ez = l(967198),
     eF = l(488428),
     eH = l(776231),
-    eY = l(486020),
+    eY = l(676279),
     eq = l(652215);
-function eK(e, t, l) {
-    let n = eY.QB ? "webp" : "jpg",
-        { CDN_HOST: i, API_ENDPOINT: a } = window.GLOBAL_ENV,
-        r = eq.Rsh.GUILD_SPACE_IMAGE_TEXT_WIDGET_IMAGE(e, t, l, n),
-        s = null != i ? `https://${i}${r}` : location.protocol + a + r,
-        d = { size: (0, eH.kr)(500 * (0, eH.mZ)()) };
-    return ("jpg" === n && (d.quality = "lossless"), (s += `?${eF.stringify(d)}`));
+let eK = (0, eY.cy)();
+function eX(e, t, l) {
+    let n = l.startsWith("a_"),
+        i = n ? (eK ? "webp" : "gif") : eK ? "webp" : "jpg",
+        { CDN_HOST: a, API_ENDPOINT: r } = window.GLOBAL_ENV,
+        s = eq.Rsh.GUILD_SPACE_IMAGE_TEXT_WIDGET_IMAGE(e, t, l, i),
+        d = null != a ? `https://${a}${s}` : location.protocol + r + s,
+        o = { size: (0, eH.kr)(500 * (0, eH.mZ)()) };
+    return (
+        "jpg" === i && (o.quality = "lossless"), "webp" === i && n && (o.animated = !0), (d += `?${eF.stringify(o)}`)
+    );
 }
-var eX = l(868602),
-    eV = l(445187),
-    e$ = l(890497),
-    eQ = l(734057),
-    eZ = l(317525),
-    eJ = l(576705),
-    e0 = l(935208),
-    e1 = l(44167);
+var eV = l(868602),
+    e$ = l(445187),
+    eQ = l(890497),
+    eZ = l(734057),
+    eJ = l(317525),
+    e0 = l(576705),
+    e1 = l(935208),
+    e8 = l(44167);
 l(321073);
-var e8 = l(485845),
-    e2 = l(136722),
-    e3 = l(435183),
-    e6 = l(155718),
-    e7 = l(795816),
-    e5 = l(933958),
-    e4 = l(574152),
-    e9 = l(627363),
-    te = l(712440),
-    tt = l(733110),
-    tl = l(488926),
-    tn = l(818023);
-async function ti(e) {
-    null == J.A.getApplication(tn.NW) && (await (0, e9.TA)(tn.NW));
-    let t = e5.Ay.getEmbeddedActivitiesForChannel(e).every((e) => e.applicationId !== tn.NW);
-    return await (0, e7.su)({
+var e2 = l(485845),
+    e3 = l(136722),
+    e6 = l(435183),
+    e7 = l(155718),
+    e5 = l(795816),
+    e4 = l(933958),
+    e9 = l(574152),
+    te = l(627363),
+    tt = l(712440),
+    tl = l(733110),
+    tn = l(488926),
+    ti = l(818023);
+async function ta(e) {
+    null == J.A.getApplication(ti.NW) && (await (0, te.TA)(ti.NW));
+    let t = e4.Ay.getEmbeddedActivitiesForChannel(e).every((e) => e.applicationId !== ti.NW);
+    return await (0, e5.su)({
         channelId: e,
-        applicationId: tn.NW,
+        applicationId: ti.NW,
         isStart: t,
-        embeddedActivitiesManager: (0, e4.A)(),
+        embeddedActivitiesManager: (0, e9.A)(),
         renderInFramePool: !0,
     });
 }
-async function ta(e) {
+async function tr(e) {
     let { channel: t, selectedRoleIds: l } = e,
         n = [];
     if (l.length > 0)
-        for (let e of (n.push({ id: t.guild_id, type: e6.r2.ROLE, allow: tl.x3, deny: eq.xBc.USE_EMBEDDED_ACTIVITIES }),
+        for (let e of (n.push({ id: t.guild_id, type: e7.r2.ROLE, allow: tn.x3, deny: eq.xBc.USE_EMBEDDED_ACTIVITIES }),
         l))
-            n.push({ id: e, type: e6.r2.ROLE, allow: eq.xBc.USE_EMBEDDED_ACTIVITIES, deny: tl.x3 });
-    let i = await (0, e3.RT)(t.id, { permissionOverwrites: n });
+            n.push({ id: e, type: e7.r2.ROLE, allow: eq.xBc.USE_EMBEDDED_ACTIVITIES, deny: tn.x3 });
+    let i = await (0, e6.RT)(t.id, { permissionOverwrites: n });
     if (!i.ok) throw i;
 }
-let tr = [];
-var ts = l(344351),
-    td = l(256693),
-    to = l(812901),
-    tc = l(317608),
-    tu = l(953538);
-let tm = {
+let ts = [];
+var td = l(344351),
+    to = l(256693),
+    tc = l(812901),
+    tu = l(317608),
+    tm = l(953538);
+let tf = {
     [a.a.IMAGE_TEXT]: {
         View: function (e) {
             let { widget: t, guildSpaceMode: l, guildId: i } = e,
                 { text: a, image_hash: r } = t.config,
                 s = "edit" === l ? t.config.image : void 0,
-                d = void 0 !== s ? s : null != r ? eK(i, t.id, r) : null;
+                d = void 0 !== s ? s : null != r ? eX(i, t.id, r) : null;
             return (0, n.jsxs)("div", {
-                className: eV.kL,
+                className: e$.kL,
                 children: [
-                    null != d && (0, n.jsx)("img", { className: eV.Sl, src: d, alt: "" }),
+                    null != d && (0, n.jsx)("img", { className: e$.Sl, src: d, alt: "" }),
                     null != a &&
                         (0, n.jsx)(x.E, {
                             variant: "text-md/normal",
                             color: "text-subtle",
-                            className: eV.Qq,
+                            className: e$.Qq,
                             children: a,
                         }),
                 ],
@@ -828,7 +832,7 @@ let tm = {
                 [x, g] = i.useState(s.image),
                 [j, p] = i.useState(null),
                 A = (0, E.bG)([ez.A], () => ez.A.getGuildId()),
-                v = void 0 !== x ? x : null != s.image_hash && null != A ? eK(A, t.id, s.image_hash) : null;
+                v = void 0 !== x ? x : null != s.image_hash && null != A ? eX(A, t.id, s.image_hash) : null;
             return (0, n.jsxs)(C.B, {
                 gap: 16,
                 children: [
@@ -848,7 +852,7 @@ let tm = {
                             direction: "horizontal",
                             align: "center",
                             justify: "space-between",
-                            className: eX.B,
+                            className: eV.B,
                             children: [
                                 (0, n.jsxs)(C.B, {
                                     gap: 8,
@@ -878,7 +882,7 @@ let tm = {
                                             }),
                                     ],
                                 }),
-                                null != v && (0, n.jsx)("img", { className: eX.V, src: v, alt: "" }),
+                                null != v && (0, n.jsx)("img", { className: eV.V, src: v, alt: "" }),
                             ],
                         }),
                     }),
@@ -984,42 +988,42 @@ let tm = {
         View: function (e) {
             let t,
                 l,
-                a = (0, e1.n)(),
+                a = (0, e8.n)(),
                 r = (0, E.bG)(
-                    [eQ.A, eJ.A],
+                    [eZ.A, e0.A],
                     () => {
-                        let e = null != a ? eQ.A.getChannel(a) : void 0;
-                        return null != e && eJ.A.can(eq.xBc.USE_EMBEDDED_ACTIVITIES, e);
+                        let e = null != a ? eZ.A.getChannel(a) : void 0;
+                        return null != e && e0.A.can(eq.xBc.USE_EMBEDDED_ACTIVITIES, e);
                     },
                     [a],
                 ),
                 s = (0, E.bG)(
-                    [e5.Ay],
+                    [e4.Ay],
                     () => {
-                        let e = e5.Ay.getCurrentEmbeddedActivity();
+                        let e = e4.Ay.getCurrentEmbeddedActivity();
                         return null == e ||
-                            e.applicationId !== tn.NW ||
-                            e.location.kind !== ts.T.GUILD_CHANNEL ||
+                            e.applicationId !== ti.NW ||
+                            e.location.kind !== td.T.GUILD_CHANNEL ||
                             e.location.channel_id !== a
                             ? null
                             : e;
                     },
                     [a],
                 ),
-                d = (0, E.bG)([e5.Ay], () => e5.Ay.isLaunchingActivity(), []),
+                d = (0, E.bG)([e4.Ay], () => e4.Ay.isLaunchingActivity(), []),
                 { authResolved: o, isAuthorized: c } =
                     ((t = (0, E.bG)(
-                        [tt.default],
-                        () => tt.default.getFetchStateForApplication(tn.NW) === tt.FetchState.FETCHED,
+                        [tl.default],
+                        () => tl.default.getFetchStateForApplication(ti.NW) === tl.FetchState.FETCHED,
                         [],
                     )),
                     (l = (0, E.bG)(
-                        [tt.default, J.A],
+                        [tl.default, J.A],
                         () => {
-                            let e = tt.default.getNewestTokenForApplication(tn.NW);
+                            let e = tl.default.getNewestTokenForApplication(ti.NW);
                             if (null == e) return !1;
-                            let t = J.A.getApplication(tn.NW),
-                                l = t?.integrationTypesConfig?.[e8.b.USER_INSTALL]?.oauth2InstallParams?.scopes;
+                            let t = J.A.getApplication(ti.NW),
+                                l = t?.integrationTypesConfig?.[e2.b.USER_INSTALL]?.oauth2InstallParams?.scopes;
                             if (null == l) return !0;
                             let n = new Set(e.scopes);
                             return l.every((e) => n.has(e));
@@ -1027,33 +1031,33 @@ let tm = {
                         [],
                     )),
                     i.useEffect(() => {
-                        (tt.default.getFetchStateForApplication(tn.NW) === tt.FetchState.NOT_FETCHED &&
-                            te.A.fetch([tn.NW]),
-                            null == J.A.getApplication(tn.NW) && (0, e9.TA)(tn.NW));
+                        (tl.default.getFetchStateForApplication(ti.NW) === tl.FetchState.NOT_FETCHED &&
+                            tt.A.fetch([ti.NW]),
+                            null == J.A.getApplication(ti.NW) && (0, te.TA)(ti.NW));
                     }, []),
                     { authResolved: t, isAuthorized: l }),
                 u = i.useRef(!1);
             i.useEffect(() => {
-                null == s && null != a && r && o && c && !u.current && ((u.current = !0), ti(a));
+                null == s && null != a && r && o && c && !u.current && ((u.current = !0), ta(a));
             }, [r, a, s, o, c]);
             let m = i.useCallback(() => {
-                    null != a && ((u.current = !0), ti(a));
+                    null != a && ((u.current = !0), ta(a));
                 }, [a]),
                 f = null != a && o && !c;
             return r
                 ? (0, n.jsxs)("div", {
-                      className: tu.kL,
+                      className: tm.kL,
                       children: [
                           null != s &&
-                              (0, n.jsx)(tc.A, {
-                                  frameId: (0, td.Ri)(s),
-                                  level: to.A.WithinAppContent,
-                                  className: tu.t$,
+                              (0, n.jsx)(tu.A, {
+                                  frameId: (0, to.Ri)(s),
+                                  level: tc.A.WithinAppContent,
+                                  className: tm.t$,
                               }),
                           null == s &&
                               f &&
                               (0, n.jsx)("div", {
-                                  className: tu.P5,
+                                  className: tm.P5,
                                   children: (0, n.jsx)(eU.$, {
                                       variant: "secondary",
                                       text: h.intl.string(M.default.PSuly6),
@@ -1064,9 +1068,9 @@ let tm = {
                       ],
                   })
                 : (0, n.jsx)("div", {
-                      className: tu.kL,
+                      className: tm.kL,
                       children: (0, n.jsx)("div", {
-                          className: tu.m0,
+                          className: tm.m0,
                           children: (0, n.jsx)(x.E, {
                               variant: "text-sm/normal",
                               color: "text-muted",
@@ -1078,11 +1082,11 @@ let tm = {
         Edit: function (e) {
             let { cancel: t } = e,
                 l = (0, E.bG)([ez.A], () => ez.A.getGuildId()),
-                a = e0.default.castGuildIdAsEveryoneGuildRoleId(l),
-                r = (0, e1.n)(),
-                s = (0, E.bG)([eQ.A], () => (null != r ? eQ.A.getChannel(r) : void 0), [r]),
-                d = (0, E.bG)([eJ.A], () => null != s && eJ.A.can(eq.xBc.MANAGE_ROLES, s), [s]),
-                o = (0, E.bG)([eZ.A], () => (null == l ? tr : eZ.A.getSortedRoles(l).filter((e) => e.id !== a)), [
+                a = e1.default.castGuildIdAsEveryoneGuildRoleId(l),
+                r = (0, e8.n)(),
+                s = (0, E.bG)([eZ.A], () => (null != r ? eZ.A.getChannel(r) : void 0), [r]),
+                d = (0, E.bG)([e0.A], () => null != s && e0.A.can(eq.xBc.MANAGE_ROLES, s), [s]),
+                o = (0, E.bG)([eJ.A], () => (null == l ? ts : eJ.A.getSortedRoles(l).filter((e) => e.id !== a)), [
                     l,
                     a,
                 ]),
@@ -1090,11 +1094,11 @@ let tm = {
                     let e;
                     return null != s
                         ? null != (e = s.permissionOverwrites[s.guild_id]) &&
-                          e2.zy(e.deny, eq.xBc.USE_EMBEDDED_ACTIVITIES)
+                          e3.zy(e.deny, eq.xBc.USE_EMBEDDED_ACTIVITIES)
                             ? o
                                   .filter((e) => {
                                       let t = s.permissionOverwrites[e.id];
-                                      return null != t && e2.zy(t.allow, eq.xBc.USE_EMBEDDED_ACTIVITIES);
+                                      return null != t && e3.zy(t.allow, eq.xBc.USE_EMBEDDED_ACTIVITIES);
                                   })
                                   .map((e) => e.id)
                             : []
@@ -1109,7 +1113,7 @@ let tm = {
                 if (null != s) {
                     (j(!1), x(!0));
                     try {
-                        (await ta({ channel: s, selectedRoleIds: p }), t());
+                        (await tr({ channel: s, selectedRoleIds: p }), t());
                     } catch {
                         (x(!1), j(!0));
                     }
@@ -1120,7 +1124,7 @@ let tm = {
                 : (0, n.jsxs)(C.B, {
                       gap: 16,
                       children: [
-                          (0, n.jsx)(e$.Z, {
+                          (0, n.jsx)(eQ.Z, {
                               selectionMode: "multiple",
                               label: h.intl.string(M.default.XXLbfv),
                               description: h.intl.string(M.default.XrpYIG),
