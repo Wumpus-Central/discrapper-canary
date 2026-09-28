@@ -1,39 +1,39 @@
-a.d(t, { Gy: () => E, k7: () => u.k });
-var n = a(477900),
-    l = a(582128),
-    r = a(503698),
-    s = a.n(r),
-    i = a(939249);
-a(14115);
-var u = a(305003),
-    c = a(626031),
-    o = a(744682);
+n.d(t, { Gy: () => C, k7: () => u.k });
+var a = n(477900),
+    l = n(582128),
+    r = n(503698),
+    s = n.n(r),
+    i = n(939249);
+n(14115);
+var u = n(305003),
+    o = n(626031),
+    c = n(744682);
 let d = { earn: { name: "earn", start: 0, duration: 180 }, spend: { name: "spend", start: 240, duration: 180 } },
-    m = { earn: { name: "earn", start: 0, duration: 180 }, spend: { name: "spend", start: 240, duration: 180 } };
-var f = a(462887),
-    x = a(736653),
-    h = a(802814);
-let j = { width: 60, height: 60 };
-function A(e) {
-    let { currentAnimationType: t, animationTypeRef: a, onSetAnimationDurationMS: n, play: r, getDuration: s } = e,
+    f = { earn: { name: "earn", start: 0, duration: 180 }, spend: { name: "spend", start: 240, duration: 180 } };
+var m = n(462887),
+    x = n(736653),
+    h = n(802814);
+let g = { width: 60, height: 60 };
+function p(e) {
+    let { currentAnimationType: t, animationTypeRef: n, onSetAnimationDurationMS: a, play: r, getDuration: s } = e,
         i = s(),
         u = null != i ? 1e3 * i : 3e3;
     ((0, l.useEffect)(() => {
-        null !== t && t !== a.current && ((a.current = t), r());
-    }, [t, r, a]),
+        null !== t && t !== n.current && ((n.current = t), r());
+    }, [t, r, n]),
         (0, l.useEffect)(() => {
-            n(u);
-        }, [n, u]));
+            a(u);
+        }, [a, u]));
 }
-function R(e) {
+function j(e) {
     var t;
     let r,
         s,
         i,
         u,
-        { currentAnimationType: c, ...d } = e,
-        { Component: f, ...x } =
-            ((t = c ?? "earn"),
+        { currentAnimationType: o, ...d } = e,
+        { Component: m, ...x } =
+            ((t = o ?? "earn"),
             (r = l.useRef(null)),
             ((s = l.useRef(t)).current = t),
             (i = l.useMemo(
@@ -44,12 +44,12 @@ function R(e) {
             )),
             (u = l.useCallback(
                 (e) =>
-                    (0, n.jsx)(o.P, {
+                    (0, a.jsx)(c.P, {
                         ...e,
-                        src: () => a.e("278611").then(a.t.bind(a, 433886, 19)),
+                        src: () => n.e("278611").then(n.t.bind(n, 433886, 19)),
                         ref: r,
                         initialAnimation: s.current,
-                        markers: m,
+                        markers: f,
                     }),
                 [],
             )),
@@ -61,19 +61,19 @@ function R(e) {
                 Component: u,
             });
     return (
-        A({ currentAnimationType: c, ...d, ...x }),
-        (0, n.jsx)(f, { ...j, size: "custom", className: h.E$, useLottieDefaultColors: !0 })
+        p({ currentAnimationType: o, ...d, ...x }),
+        (0, a.jsx)(m, { ...g, size: "custom", className: h.E$, useLottieDefaultColors: !0 })
     );
 }
-function g(e) {
+function k(e) {
     var t;
     let r,
         s,
         i,
         u,
-        { currentAnimationType: c, ...m } = e,
-        { Component: f, ...x } =
-            ((t = c ?? "earn"),
+        { currentAnimationType: o, ...f } = e,
+        { Component: m, ...x } =
+            ((t = o ?? "earn"),
             (r = l.useRef(null)),
             ((s = l.useRef(t)).current = t),
             (i = l.useMemo(
@@ -84,9 +84,9 @@ function g(e) {
             )),
             (u = l.useCallback(
                 (e) =>
-                    (0, n.jsx)(o.P, {
+                    (0, a.jsx)(c.P, {
                         ...e,
-                        src: () => a.e("245492").then(a.t.bind(a, 653727, 19)),
+                        src: () => n.e("245492").then(n.t.bind(n, 653727, 19)),
                         ref: r,
                         initialAnimation: s.current,
                         markers: d,
@@ -101,102 +101,102 @@ function g(e) {
                 Component: u,
             });
     return (
-        A({ currentAnimationType: c, ...m, ...x }),
-        (0, n.jsx)(f, { ...j, size: "custom", className: h.E$, useLottieDefaultColors: !0 })
+        p({ currentAnimationType: o, ...f, ...x }),
+        (0, a.jsx)(m, { ...g, size: "custom", className: h.E$, useLottieDefaultColors: !0 })
     );
 }
-let k = function (e) {
+let A = function (e) {
     let t = (0, x.Ay)();
-    return (0, f.q)(t) ? (0, n.jsx)(g, { ...e }) : (0, n.jsx)(R, { ...e });
+    return (0, m.q)(t) ? (0, a.jsx)(k, { ...e }) : (0, a.jsx)(j, { ...e });
 };
-var v = a(375708);
-function C() {
-    return (0, n.jsx)("div", { className: h.V8, "aria-hidden": !0 });
+var E = n(375708);
+function v() {
+    return (0, a.jsx)("div", { className: h.V8, "aria-hidden": !0 });
 }
-let E = (0, l.forwardRef)(function (e, t) {
+let C = (0, l.forwardRef)(function (e, t) {
     let {
-            id: a,
+            id: n,
             balance: r,
-            balanceWidgetMode: o = u.k.DEFAULT,
+            balanceWidgetMode: c = u.k.DEFAULT,
             showNotificationBadge: d,
-            onClick: m,
-            onMouseDown: f,
+            onClick: f,
+            onMouseDown: m,
             disabled: x,
-            isInModalOverlay: j,
-            ariaExpanded: A,
-            clickableRef: R,
-            className: g,
+            isInModalOverlay: g,
+            ariaExpanded: p,
+            clickableRef: j,
+            className: k,
         } = e,
-        [E, p] = (0, l.useState)(!1),
-        N = (0, l.useMemo)(() => (o === u.k.SELECTED ? h.wH : E ? h.mr : h.Ay), [o, E]),
-        [b, O] = (0, l.useState)(!1),
-        [L, _] = (0, l.useState)(!1),
-        [y, T] = (0, l.useState)(2700),
-        S = null === r;
+        [C, R] = (0, l.useState)(!1),
+        b = (0, l.useMemo)(() => (c === u.k.SELECTED ? h.wH : C ? h.mr : h.Ay), [c, C]),
+        [N, L] = (0, l.useState)(!1),
+        [O, S] = (0, l.useState)(!1),
+        [_, y] = (0, l.useState)(2700),
+        T = null === r;
     ((0, l.useEffect)(() => {
-        S &&
-            !b &&
-            (O(!0),
+        T &&
+            !N &&
+            (L(!0),
             setTimeout(() => {
-                _(!0);
+                S(!0);
             }, 500));
-    }, [S, O, b]),
+    }, [T, L, N]),
         (0, l.useEffect)(() => {
-            L && !S && O(!1);
-        }, [S, L]));
-    let M = S || b,
-        D = b ? null : r,
+            O && !T && L(!1);
+        }, [T, O]));
+    let D = T || N,
+        M = N ? null : r,
         [w, P] = (0, l.useState)(null),
         B = (0, l.useRef)(null),
-        U = (0, l.useCallback)(() => {
+        F = (0, l.useCallback)(() => {
             ((B.current = null), P(null));
         }, []),
-        F = (0, l.useCallback)(
+        U = (0, l.useCallback)(
             (e) => {
                 let t = w === B.current;
                 e > 0 && ("earn" !== w || !t) && P("earn");
             },
             [P, w],
         );
-    return (0, n.jsx)(i.D, {
-        innerRef: R,
-        onClick: M ? void 0 : m,
-        "aria-expanded": A,
-        "aria-haspopup": null != A ? "dialog" : void 0,
+    return (0, a.jsx)(i.D, {
+        innerRef: j,
+        onClick: D ? void 0 : f,
+        "aria-expanded": p,
+        "aria-haspopup": null != p ? "dialog" : void 0,
         "aria-label": (function (e) {
-            let { loading: t, balance: a, hasUnread: n } = e;
+            let { loading: t, balance: n, hasUnread: a } = e;
             return t
-                ? v.intl.string(v.t.y0WGqP)
-                : n
-                  ? v.intl.formatToPlainString(v.t.AgMngw, { balance: a })
-                  : v.intl.formatToPlainString(v.t.zPaLL9, { balance: a });
-        })({ loading: M, balance: D ?? 0, hasUnread: !0 === d }),
-        "aria-busy": M,
+                ? E.intl.string(E.t.y0WGqP)
+                : a
+                  ? E.intl.formatToPlainString(E.t.AgMngw, { balance: n })
+                  : E.intl.formatToPlainString(E.t.zPaLL9, { balance: n });
+        })({ loading: D, balance: M ?? 0, hasUnread: !0 === d }),
+        "aria-busy": D,
         className: s()(h.vk, { [h.r9]: x }),
-        id: a ?? "balance-widget-pill",
-        children: (0, n.jsxs)("span", {
-            onMouseDown: f,
-            onMouseEnter: x ? void 0 : () => p(!0),
-            onMouseLeave: x ? void 0 : () => p(!1),
+        id: n ?? "balance-widget-pill",
+        children: (0, a.jsxs)("span", {
+            onMouseDown: m,
+            onMouseEnter: x ? void 0 : () => R(!0),
+            onMouseLeave: x ? void 0 : () => R(!1),
             ref: t,
-            className: s()(h.kL, N, g, { [h.En]: M, [h.dA]: j, [h.r9]: x }),
+            className: s()(h.kL, b, k, { [h.En]: D, [h.dA]: g, [h.r9]: x }),
             children: [
-                (0, n.jsx)("div", {
-                    className: s()(h.hr, M ? h.nr : void 0),
-                    children: (0, n.jsx)(k, {
+                (0, a.jsx)("div", {
+                    className: s()(h.hr, D ? h.nr : void 0),
+                    children: (0, a.jsx)(A, {
                         currentAnimationType: w,
                         animationTypeRef: B,
-                        onSetAnimationDurationMS: T,
+                        onSetAnimationDurationMS: y,
                     }),
                 }),
-                (0, n.jsx)(c.A, {
-                    value: D,
-                    onValueChange: F,
-                    onValueReached: U,
-                    targetTotalCounterTime: y,
-                    className: M ? h.F : void 0,
+                (0, a.jsx)(o.A, {
+                    value: M,
+                    onValueChange: U,
+                    onValueReached: F,
+                    targetTotalCounterTime: _,
+                    className: D ? h.F : void 0,
                 }),
-                d && (0, n.jsx)(C, {}),
+                d && (0, a.jsx)(v, {}),
             ],
         }),
     });

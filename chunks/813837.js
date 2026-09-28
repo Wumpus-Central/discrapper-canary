@@ -24,8 +24,8 @@ var i = l(477900),
     A = l(95477),
     G = l(939249),
     T = l(663417),
-    k = l(975571),
-    C = l(123917),
+    C = l(975571),
+    k = l(123917),
     R = l(498480),
     _ = l(42957),
     M = l(614393),
@@ -103,8 +103,8 @@ function D() {
         ],
     });
 }
-var O = l(628026),
-    U = l(749351),
+var U = l(628026),
+    O = l(749351),
     y = l(115815),
     H = l(445927),
     K = l(231513),
@@ -170,7 +170,7 @@ function Y(e) {
               ],
           });
 }
-function B() {
+function Z() {
     let {
         guildId: e,
         currentGame: s,
@@ -201,8 +201,8 @@ function B() {
         ),
         L = a.useMemo(() => g.some((e) => "" !== e.pingUrl), [g]),
         z = a.useMemo(() => s?.plans.map((e) => ({ value: e, label: e.name })) ?? [], [s]),
-        y = (0, U.A)(),
-        { isValid: B, errors: Z } = (0, U.u)(d),
+        y = (0, O.A)(),
+        { isValid: Z, errors: B } = (0, O.u)(d),
         $ = null != n,
         ee = (0, H.A)(n),
         es = (0, F.A)(p),
@@ -247,7 +247,7 @@ function B() {
                                               placeholder: X.intl.string(W.default.ElVYr3),
                                               maxLength: Q.XF,
                                               disabled: h || !ee,
-                                              error: Z.name,
+                                              error: B.name,
                                           }),
                                       ],
                                   }),
@@ -411,21 +411,21 @@ function B() {
                           null != p &&
                           X.intl.format($ ? W.default.num0a6 : W.default.p5KZDr, {
                               provider: es,
-                              termsOfServiceUrl: () => (0, C.h)({ href: el }),
-                              helpCenterUrl: k.A.getArticleURL(P.MVz.GAME_SERVER_HOSTING),
+                              termsOfServiceUrl: () => (0, k.h)({ href: el }),
+                              helpCenterUrl: C.A.getArticleURL(P.MVz.GAME_SERVER_HOSTING),
                           }),
                   }),
                   null != j &&
                       (0, i.jsx)(f.E, { variant: "text-xs/medium", color: "text-feedback-critical", children: j }),
-                  (0, i.jsxs)(O.N4, {
+                  (0, i.jsxs)(U.N4, {
                       step: Q.HS.SERVER_SETTINGS,
                       className: J.xQ,
-                      children: [(0, i.jsx)(O.AI, {}), (0, i.jsx)(O.cp, { disabled: !y || !B })],
+                      children: [(0, i.jsx)(U.AI, {}), (0, i.jsx)(U.cp, { disabled: !y || !Z })],
                   }),
               ],
           });
 }
-var Z = l(207381);
+var B = l(207381);
 function $(e) {
     let { step: s, setFooterNode: l } = (0, w.bv)(),
         a = (0, o.U)("GameServerSetupModal"),
@@ -445,11 +445,11 @@ function $(e) {
             (0, i.jsx)(t.rQ, { title: c, subtitle: m }),
             a &&
                 (0, i.jsx)("div", {
-                    className: Z.M,
+                    className: B.M,
                     children: (0, i.jsx)(x.A, { look: x.k.WARNING, children: X.intl.format(W.default.XzXjK2, {}) }),
                 }),
             (0, i.jsx)(d.Ip, {
-                className: Z.j,
+                className: B.j,
                 style: { width: Q.ST },
                 children: (0, i.jsx)("div", {
                     style: { padding: Q.by },
@@ -460,7 +460,7 @@ function $(e) {
                             (0, i.jsx)(r.q, { id: Q.HS.SELECT_GAME, children: (0, i.jsx)(u.A, {}) }, Q.HS.SELECT_GAME),
                             (0, i.jsx)(
                                 r.q,
-                                { id: Q.HS.SERVER_SETTINGS, children: (0, i.jsx)(B, {}) },
+                                { id: Q.HS.SERVER_SETTINGS, children: (0, i.jsx)(Z, {}) },
                                 Q.HS.SERVER_SETTINGS,
                             ),
                         ],

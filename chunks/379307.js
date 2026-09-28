@@ -15,8 +15,8 @@ var n = l(477900),
     g = l(704855),
     p = l(98115),
     v = l(856795),
-    b = l(50617),
-    j = l(375708),
+    j = l(50617),
+    b = l(375708),
     y = l(752065);
 function k(e) {
     let [t, l] = a.useState(e),
@@ -57,7 +57,7 @@ function N(e) {
         children: (0, n.jsxs)("div", {
             className: i()(y.t$, { [y.Zr]: m && N, [y.GF]: !m }),
             role: "dialog",
-            "aria-label": j.intl.string(b.default["2NWMqY"]),
+            "aria-label": b.intl.string(j.default["2NWMqY"]),
             children: [
                 S.mounted
                     ? (0, n.jsx)("div", {
@@ -75,14 +75,14 @@ function N(e) {
                                     type: "button",
                                     className: y.y6,
                                     "aria-expanded": w,
-                                    "aria-label": j.intl.string(b.default.IaLFoX),
+                                    "aria-label": b.intl.string(j.default.IaLFoX),
                                     onClick: () => A((e) => !e),
                                     children: [
                                         (0, n.jsx)(u.E, {
                                             tag: "span",
                                             variant: "text-md/medium",
                                             color: "none",
-                                            children: j.intl.string(b.default.GDs9Vq),
+                                            children: b.intl.string(j.default.GDs9Vq),
                                         }),
                                         (0, n.jsx)(C, {
                                             size: "custom",
@@ -112,20 +112,20 @@ function N(e) {
                                             tag: "span",
                                             variant: "text-sm/medium",
                                             color: "text-subtle",
-                                            children: j.intl.string(b.default["5DOL2g"]),
+                                            children: b.intl.string(j.default["5DOL2g"]),
                                         }),
                                         (0, n.jsx)(u.E, {
                                             tag: "span",
                                             variant: "text-sm/medium",
                                             color: "text-subtle",
-                                            children: j.intl.string(b.default.OJIfkn),
+                                            children: b.intl.string(j.default.OJIfkn),
                                         }),
                                     ],
                                 }),
                                 (0, n.jsx)(g.A, {
                                     activeIndex: E,
                                     stops: I,
-                                    ariaLabel: j.intl.string(b.default.GDs9Vq),
+                                    ariaLabel: b.intl.string(j.default.GDs9Vq),
                                     disabled: d,
                                     onSelect: function (e) {
                                         let l = h.ks[e];
@@ -169,13 +169,13 @@ function w(e) {
         children: (e, t) => {
             let { isShown: l } = t;
             return (0, n.jsx)(c.m, {
-                text: j.intl.string(b.default.GoSNDN),
+                text: b.intl.string(j.default.GoSNDN),
                 shouldShow: !l,
                 ariaHidden: !0,
                 children: (0, n.jsx)(f.D, {
                     innerRef: h,
                     className: o ?? y.hZ,
-                    "aria-label": j.intl.string(b.default.GoSNDN),
+                    "aria-label": b.intl.string(j.default.GoSNDN),
                     ...e,
                     onClick: () => w((e) => !e),
                     "aria-expanded": v,

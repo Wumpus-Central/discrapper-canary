@@ -14,10 +14,10 @@ function m(a) {
     let { mediaUrls: e, isSuccess: t, transitionState: r, onClose: m, children: p } = a,
         x = (0, i.bG)([o.Ay], () => o.Ay.useReducedMotion),
         [E, C] = (0, n.useState)("entry"),
-        [A, v] = (0, n.useState)("entry"),
-        g = (0, n.useRef)(null),
+        [A, g] = (0, n.useState)("entry"),
+        v = (0, n.useRef)(null),
         j = (0, n.useCallback)(() => {
-            "entry" === E && (C("idle"), v("idle"), g.current?.play());
+            "entry" === E && (C("idle"), g("idle"), v.current?.play());
         }, [E]),
         f = (0, n.useCallback)(async () => {
             "exit" !== E && (C("exit"), await new Promise((a) => setTimeout(a, 175)), await m());
@@ -50,7 +50,7 @@ function m(a) {
                             children: (0, l.jsx)("source", { src: e.celebrationEntry }),
                         }),
                         (0, l.jsx)(d.A, {
-                            ref: g,
+                            ref: v,
                             playsInline: !0,
                             muted: !0,
                             loop: !0,

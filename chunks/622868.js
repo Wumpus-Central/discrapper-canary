@@ -1,4 +1,4 @@
-(l.d(n, { ix: () => e4, Ay: () => nn, tO: () => e9 }), l(321073), l(938796));
+(l.d(n, { ix: () => e9, Ay: () => nn, tO: () => e4 }), l(321073), l(938796));
 var t = l(477900),
     i = l(582128),
     a = l(503698),
@@ -506,8 +506,8 @@ var eD = l(854627),
     eZ = l(98318),
     eQ = l(976860),
     e0 = l(746080),
-    e8 = l(829136);
-let e1 = function (e) {
+    e1 = l(829136);
+let e8 = function (e) {
     let { roleIcon: n, guild: l } = e,
         { name: i } = n;
     (0, ej.Ay)(() => {
@@ -533,26 +533,26 @@ let e1 = function (e) {
     return (0, t.jsx)(eq.l, {
         children: (0, t.jsx)(ep.Uq, {
             children: (0, t.jsxs)("div", {
-                className: e8.jC,
+                className: e1.jC,
                 children: [
                     (0, t.jsxs)("div", {
-                        className: e8.rb,
+                        className: e1.rb,
                         children: [
                             (0, t.jsx)("div", {
-                                className: e8.Xq,
+                                className: e1.Xq,
                                 children: (0, t.jsx)(eM.A, {
                                     ...o,
                                     enableTooltip: !1,
-                                    className: e8.__invalid_roleIcon,
+                                    className: e1.__invalid_roleIcon,
                                     enableHeight: !1,
                                 }),
                             }),
                             (0, t.jsxs)("div", {
-                                className: e8.bM,
+                                className: e1.bM,
                                 children: [
                                     (0, t.jsx)(ex.D, {
                                         variant: "heading-md/semibold",
-                                        className: e8.S3,
+                                        className: e1.S3,
                                         children: (0, t.jsx)(eK.A, { children: i }),
                                     }),
                                     (0, t.jsx)(_.E, { variant: "text-sm/normal", children: r }),
@@ -652,7 +652,7 @@ let e5 = i.memo(function (e) {
                                 autoInvert: !0,
                                 nudgeAlignIntoViewport: !0,
                                 position: "right",
-                                renderPopout: () => (0, t.jsx)(e1, { roleIcon: o, guild: y }),
+                                renderPopout: () => (0, t.jsx)(e8, { roleIcon: o, guild: y }),
                                 clickTrap: !0,
                                 children: (e) => {
                                     let { onClick: n } = e;
@@ -719,7 +719,7 @@ let e5 = i.memo(function (e) {
               ],
           });
 });
-function e9(e, n, l) {
+function e4(e, n, l) {
     let {
         message: i,
         channel: a,
@@ -751,7 +751,7 @@ function e9(e, n, l) {
         ],
     });
 }
-function e4(e) {
+function e9(e) {
     let {
             message: n,
             avatar: l,
@@ -990,7 +990,7 @@ let nn = i.memo(function (e) {
         L = (0, eF.xl)(n),
         V = v ? `${D}` : `${D} ${L}`,
         H = l?.state === ey.a.LOADED ? (0, eF.nS)(n) : void 0;
-    return (0, t.jsx)(e4, {
+    return (0, t.jsx)(e9, {
         message: n,
         avatar: S,
         username: (0, t.jsxs)(t.Fragment, {

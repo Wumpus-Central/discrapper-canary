@@ -1,4 +1,4 @@
-l.d(t, { o: () => P });
+l.d(t, { o: () => _ });
 var a = l(477900),
     n = l(582128),
     i = l(192308),
@@ -19,7 +19,7 @@ var a = l(477900),
     v = l(347378),
     E = l(606423),
     S = l(652215);
-function C(e) {
+function j(e) {
     let {
             transitionState: t,
             onClose: l,
@@ -35,10 +35,10 @@ function C(e) {
             activeStep: x,
         } = e,
         { analyticsLocations: f } = (0, h.Ay)(b.A.USER_SETTINGS),
-        [g, v] = n.useState(j(x));
+        [g, v] = n.useState(C(x));
     return (
         (0, n.useEffect)(() => {
-            v(j(x));
+            v(C(x));
         }, [x]),
         (0, a.jsx)(y.CancellationContext.Provider, {
             value: {
@@ -77,7 +77,7 @@ function C(e) {
         })
     );
 }
-function j(e) {
+function C(e) {
     switch (e) {
         case d.g.DISCOUNT_APPLIED:
             return (0, a.jsx)(g.V, {});
@@ -95,7 +95,7 @@ function j(e) {
 var T = l(601107),
     A = l(202541),
     I = l(818348);
-let P = () => {
+let _ = () => {
     let [e, t] = n.useState(A.PremiumTypes.TIER_0),
         [l, p] = n.useState(d.g.WHAT_YOU_LOSE),
         [b, h] = n.useState(null),
@@ -105,7 +105,7 @@ let P = () => {
             let e = new Date();
             return (e.setMonth(e.getMonth() + 1), e);
         }),
-        [j, P] = n.useState(null),
+        [C, _] = n.useState(null),
         [k, R] = n.useState(!1),
         [M, N] = n.useState(!1),
         [D, O] = n.useState(!1);
@@ -152,10 +152,10 @@ let P = () => {
             }
         }, [e]),
         (0, n.useEffect)(() => {
-            ([d.g.CONFIRM_DISCOUNT, d.g.DISCOUNT_APPLIED].includes(l) && null === b && h(_()),
+            ([d.g.CONFIRM_DISCOUNT, d.g.DISCOUNT_APPLIED].includes(l) && null === b && h(P()),
                 l === d.g.PREVIEW &&
-                    null === j &&
-                    P(
+                    null === C &&
+                    _(
                         new m.A({
                             id: "",
                             invoiceItems: [
@@ -185,13 +185,13 @@ let P = () => {
                             status: S.lT7.PAID,
                         }),
                     ),
-                l !== d.g.PREVIEW && null !== j && P(null));
-        }, [l, b, v, x, j]));
+                l !== d.g.PREVIEW && null !== C && _(null));
+        }, [l, b, v, x, C]));
     let L = n.useCallback(async () => {
         (O(!0),
             await (0, i.openModalLazy)(
                 async () => (t) =>
-                    (0, a.jsx)(C, {
+                    (0, a.jsx)(j, {
                         ...t,
                         onClose: () => {
                             (t.onClose(), O(!1));
@@ -199,7 +199,7 @@ let P = () => {
                         premiumType: e,
                         churnDiscount: b,
                         planId: x,
-                        renewalInvoice: j,
+                        renewalInvoice: C,
                         renewalInvoiceDetails: { intervalType: A.WT.MONTH, intervalCount: 1 },
                         errorOnCancel: k,
                         errorOnRedeem: M,
@@ -231,7 +231,7 @@ let P = () => {
                         },
                     }),
             ));
-    }, [e, b, x, j, k, M, l, v]);
+    }, [e, b, x, C, k, M, l, v]);
     return (
         (0, n.useEffect)(() => {
             D && L();
@@ -290,7 +290,7 @@ let P = () => {
                     children: (0, a.jsx)(o.S, {
                         checked: null !== b,
                         onChange: () => {
-                            null === b ? h(_()) : h(null);
+                            null === b ? h(P()) : h(null);
                         },
                         label: "Churn Discount",
                     }),
@@ -326,7 +326,7 @@ let P = () => {
         })
     );
 };
-function _() {
+function P() {
     return p.A.createFromServer({
         id: "",
         discount_id: "",

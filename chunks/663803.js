@@ -16,8 +16,8 @@ function p(a) {
     let { value: e, onChange: t, className: r, minValue: p, maxValue: x } = a,
         [E, C] = n.useState(e),
         A = m(E) || (null != p && E <= p),
-        v = m(E) || (null != x && E >= x);
-    function g(a) {
+        g = m(E) || (null != x && E >= x);
+    function v(a) {
         (t(m(a) ? (p ?? 0) : a), C(a));
     }
     return (0, l.jsxs)("div", {
@@ -28,7 +28,7 @@ function p(a) {
                 size: "sm",
                 icon: c.MinusIcon,
                 onClick: function (a) {
-                    (a.stopPropagation(), A || g(E - 1));
+                    (a.stopPropagation(), A || v(E - 1));
                 },
                 "aria-label": h.intl.string(h.t["k+ohJm"]),
                 disabled: A,
@@ -38,9 +38,9 @@ function p(a) {
                 children: (0, l.jsx)(o.k, {
                     value: `${E}`,
                     onChange: function (a) {
-                        if (m(a)) return g(a);
+                        if (m(a)) return v(a);
                         let e = parseInt(a);
-                        if (!isNaN(e)) return null != x && e >= x ? g(x) : null != p && e <= p ? g(p) : g(e);
+                        if (!isNaN(e)) return null != x && e >= x ? v(x) : null != p && e <= p ? v(p) : v(e);
                     },
                 }),
             }),
@@ -49,10 +49,10 @@ function p(a) {
                 variant: "icon-only",
                 icon: d.j,
                 onClick: function (a) {
-                    (a.stopPropagation(), v || g(E + 1));
+                    (a.stopPropagation(), g || v(E + 1));
                 },
                 "aria-label": h.intl.string(h.t.w8Sc4B),
-                disabled: v,
+                disabled: g,
             }),
         ],
     });

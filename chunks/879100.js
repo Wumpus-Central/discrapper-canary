@@ -15,8 +15,8 @@ var l = t(477900),
     E = t(659746),
     C = t(975571),
     A = t(652215),
-    v = t(26279),
-    g = t(202541),
+    g = t(26279),
+    v = t(202541),
     j = t(818348),
     f = t(375708),
     b = t(458924);
@@ -112,7 +112,7 @@ function M(a) {
                 (0, l.jsx)(E.Ay, {
                     className: b.E,
                     theme: M,
-                    premiumType: g.PremiumTypes.TIER_2,
+                    premiumType: v.PremiumTypes.TIER_2,
                     type: j.Nc.has(o ?? j.he.UNKNOWN)
                         ? E.Ay.Types.PREMIUM_PAYMENT_STARTED
                         : E.Ay.Types.GUILD_BOOST_APPLIED,
@@ -123,7 +123,7 @@ function M(a) {
                     className: b.xR,
                     children: e,
                 }),
-                y === v.uH.META_QUEST_WEB_REDIRECT_CHECKOUT
+                y === g.uH.META_QUEST_WEB_REDIRECT_CHECKOUT
                     ? (0, l.jsx)(h.E, {
                           variant: "text-md/medium",
                           color: "interactive-text-default",
@@ -135,7 +135,7 @@ function M(a) {
                     : (0, l.jsx)(u.$, {
                           variant: "primary",
                           text:
-                              y === v.uH.MOBILE_WEB_REDIRECT_CHECKOUT
+                              y === g.uH.MOBILE_WEB_REDIRECT_CHECKOUT
                                   ? f.intl.string(f.t.sRApon)
                                   : f.intl.string(f.t["/iTxgz"]),
                           onClick: t,

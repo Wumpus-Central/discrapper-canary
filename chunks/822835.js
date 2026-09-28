@@ -19,16 +19,16 @@ function c(e) {
         [x, g] = n.useState(null),
         [p, v] = n.useState(t);
     p !== t && (v(t), g(null));
-    let b = null != l && l === t ? l : null,
-        j = (0, r.bG)([u.default], () => u.default.getId()),
-        { applicationWidgetConfig: y } = (0, i.A)(j, b ?? void 0),
+    let j = null != l && l === t ? l : null,
+        b = (0, r.bG)([u.default], () => u.default.getId()),
+        { applicationWidgetConfig: y } = (0, i.A)(b, j ?? void 0),
         k = y?.surfaces,
         N = (0, d.yZ)({
             widgetTop: k?.[a.m.WIDGET_TOP] != null,
             widgetBottom: k?.[a.m.WIDGET_BOTTOM] != null,
             miniProfile: k?.[a.m.MINI_PROFILE] != null,
         }),
-        w = null != b && (h ? N.hasMainCard : N.hasAny),
+        w = null != j && (h ? N.hasMainCard : N.hasAny),
         { data: A } = (0, s.YY)(l ?? void 0),
         S = null != l && A?.bot?.id != null,
         { data: E, isLoading: C } = (0, s.YY)(t ?? void 0),
@@ -40,6 +40,6 @@ function c(e) {
         isResolving: M,
         activeMode: M ? null : (0, d.Qs)(x, T),
         setMode: g,
-        widgetApplicationId: b,
+        widgetApplicationId: j,
     };
 }

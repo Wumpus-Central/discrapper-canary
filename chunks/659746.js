@@ -1,4 +1,4 @@
-t.d(e, { Ay: () => g, Or: () => A });
+t.d(e, { Ay: () => v, Or: () => A });
 var l,
     n = t(477900),
     r = t(582128),
@@ -26,7 +26,7 @@ var A =
     (l.GUILD_BOOST_APPLIED = "GUILD_BOOST_APPLIED"),
     (l.PREMIUM_PAYMENT_STARTED = "PREMIUM_PAYMENT_STARTED"),
     l);
-class v extends r.PureComponent {
+class g extends r.PureComponent {
     animation = new c.A.Value(0);
     static Types = A;
     componentDidMount() {
@@ -290,11 +290,11 @@ class v extends r.PureComponent {
         });
     }
 }
-function g(a) {
+function v(a) {
     let { theme: e, ...t } = a,
         l = (0, u.r)(o.A.unsafe_rawColors.WHITE).hex(),
         r = (0, u.r)(o.A.unsafe_rawColors.BRAND_500).hex(),
         s = (0, d.M)(e) ? l : r;
-    return (0, n.jsx)(v, { ...t, theme: e, flashColor: s });
+    return (0, n.jsx)(g, { ...t, theme: e, flashColor: s });
 }
-g.Types = A;
+v.Types = A;

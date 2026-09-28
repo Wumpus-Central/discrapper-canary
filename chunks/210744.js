@@ -23,13 +23,13 @@ function g(e) {
             [t],
         );
     if (!(0, h.x1)(t) || v || p) return null;
-    let b = (0, f.Uv)(t.id);
-    if (null == b || !(0, d.Ub)(b)) return null;
-    let j = x.intl.string(g ? x.t.Z7MyNB : x.t.OIDkcp);
+    let j = (0, f.Uv)(t.id);
+    if (null == j || !(0, d.Ub)(j)) return null;
+    let b = x.intl.string(g ? x.t.Z7MyNB : x.t.OIDkcp);
     return (0, n.jsx)(o.A.Icon, {
-        tooltip: j,
+        tooltip: b,
         icon: g ? r.z : i.T,
-        "aria-label": j,
+        "aria-label": b,
         role: "switch",
         "aria-checked": g,
         selected: g,

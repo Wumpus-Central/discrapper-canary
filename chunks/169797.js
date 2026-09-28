@@ -15,8 +15,8 @@ var l = t(477900),
     E = t(423764),
     C = t(683433),
     A = t(708791),
-    v = t(981036),
-    g = t(725836),
+    g = t(981036),
+    v = t(725836),
     j = t(263532),
     f = t(520149),
     b = t(652215),
@@ -63,11 +63,11 @@ let I = { top: 16, bottom: 8 };
 function T(a) {
     let { onBackClick: e, primaryButtonProps: t, portalClassName: n, stripeExpressCheckoutComponent: r } = a,
         { variant: i } = t,
-        { setCheckoutFooterContentNode: d } = (0, g.ck)(),
+        { setCheckoutFooterContentNode: d } = (0, v.ck)(),
         { shouldUseStripeExpressCheckout: h } = (0, j.t4)((a) => ({
             shouldUseStripeExpressCheckout: a.getShouldUseStripeExpressCheckout(),
         })),
-        u = (0, l.jsx)(v.p, { ...t, variant: i ?? "active", autoFocus: !0 });
+        u = (0, l.jsx)(g.p, { ...t, variant: i ?? "active", autoFocus: !0 });
     return (0, l.jsxs)(c.j, {
         children: [
             (0, l.jsx)("div", { ref: d, className: s()(y.K4, n) }),
@@ -96,7 +96,7 @@ function R(a) {
 }
 function _(a) {
     let { children: e, size: t = "md", maxHeight: n = "viewport", isModalContentLoading: r, ...s } = a;
-    return (0, l.jsx)(g.e0, {
+    return (0, l.jsx)(v.e0, {
         children: (0, l.jsx)(h.d, {
             size: t,
             ...s,
@@ -122,7 +122,7 @@ function S(a) {
         children: d,
         ...u
     } = a;
-    return (0, l.jsx)(g.e0, {
+    return (0, l.jsx)(v.e0, {
         children: (0, l.jsxs)(h.d, {
             ...u,
             children: [

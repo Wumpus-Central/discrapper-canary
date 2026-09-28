@@ -16,7 +16,7 @@ let p = function () {
         [f, g] = n.useState(d.qP.BLUE),
         [y, v] = n.useState("darkslategray"),
         [E, S] = n.useState("blanchedalmond"),
-        [C, j] = n.useState("pink"),
+        [j, C] = n.useState("pink"),
         [T, A] = n.useState(!0),
         I = n.useMemo(
             () =>
@@ -26,7 +26,7 @@ let p = function () {
                 }),
             [],
         ),
-        P = n.useMemo(
+        _ = n.useMemo(
             () =>
                 Object.entries(d.qP).map((e) => {
                     let [t, l] = e;
@@ -42,7 +42,7 @@ let p = function () {
                 maximum: l,
                 weight: h,
                 variant: f,
-                override: { default: { background: y, gradientStart: E, gradientEnd: C } },
+                override: { default: { background: y, gradientStart: E, gradientEnd: j } },
                 glowing: T,
             }),
             (0, a.jsx)(c.nB, {}),
@@ -85,7 +85,7 @@ let p = function () {
                         null !== e && g(e);
                     },
                     value: f,
-                    options: P,
+                    options: _,
                     selectionMode: "single",
                     fullWidth: !0,
                 }),
@@ -142,9 +142,9 @@ let p = function () {
             }),
             (0, a.jsx)(c.MG, {
                 children: (0, a.jsx)(r.k, {
-                    value: C,
+                    value: j,
                     onChange: (e) => {
-                        j(e);
+                        C(e);
                     },
                     label: "Gradient End",
                 }),
