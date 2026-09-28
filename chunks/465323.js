@@ -1,15 +1,22 @@
-n.d(t, { $g: () => l, LQ: () => c, TW: () => _, yR: () => o });
+n.d(t, { $g: () => o, LQ: () => u, TW: () => E, yR: () => d });
 var i = n(737291),
     r = n.n(i),
     a = n(997101),
     s = n(818348);
-let l = function (e, t, n) {
-        let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+let l = new Map(),
+    o = function (e, t, n) {
+        var i;
+        let r,
+            a,
+            o = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
         if (t === s.Yr.DISCORD_ORB) return e.toString();
-        let { convertToMajorUnits: r = !0, ...a } = i;
-        return Intl.NumberFormat(n, { style: "currency", currency: t, ...a }).format(r ? d(e, t) : e);
+        let { convertToMajorUnits: d = !0, ...u } = o;
+        return ((i = { style: "currency", currency: t, ...u }),
+        (r = `${n}|${JSON.stringify(i)}`),
+        null == (a = l.get(r)) && ((a = Intl.NumberFormat(n, i)), l.set(r, a)),
+        a).format(d ? c(e, t) : e);
     },
-    o = {
+    d = {
         [s.Yr.AED]: 2,
         [s.Yr.AFN]: 2,
         [s.Yr.ALL]: 2,
@@ -194,18 +201,18 @@ let l = function (e, t, n) {
         [s.Yr.ZWL]: 2,
         [s.Yr.DISCORD_ORB]: 0,
     },
-    d = (e, t) => {
-        let n = o[t];
+    c = (e, t) => {
+        let n = d[t];
         if (null == n) throw Error(`Unexpected currency ${t}`);
         return new (r())(e).dividedBy(10 ** n).toNumber();
     },
-    c = (e, t) => {
-        let n = o[t];
+    u = (e, t) => {
+        let n = d[t];
         if (null == n) return null;
         let i = 10 ** n;
         return Math.floor(e / i) * i;
     },
-    u = {
+    _ = {
         [a.d.AD]: s.Yr.EUR,
         [a.d.AE]: s.Yr.AED,
         [a.d.AF]: s.Yr.AFN,
@@ -450,8 +457,8 @@ let l = function (e, t, n) {
         [a.d.ZA]: s.Yr.ZAR,
         [a.d.ZM]: s.Yr.ZMW,
     },
-    _ = (e) => {
+    E = (e) => {
         let t = s.Yr.USD,
             [n, i] = e.split("-");
-        return void 0 === i ? t : (u[i.toUpperCase()] ?? t);
+        return void 0 === i ? t : (_[i.toUpperCase()] ?? t);
     };
