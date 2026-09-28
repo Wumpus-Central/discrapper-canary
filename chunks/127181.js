@@ -1,4 +1,4 @@
-a.d(t, { B: () => l, MZ: () => o, TH: () => i, tn: () => s });
+a.d(t, { B: () => o, MZ: () => l, TH: () => i, tn: () => s });
 let n = [
     {
         date: "2026-09-07",
@@ -675,6 +675,13 @@ let n = [
         summary: "The create screen greets you with a little more magic.",
     },
     {
+        date: "2026-09-28",
+        time: "17:34",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "The cursor Conjure moves while testing your app is now about the size of your own, still blue and easy to spot.",
+    },
+    {
         date: "2026-09-17",
         time: "00:00",
         platforms: ["mobile"],
@@ -882,9 +889,9 @@ function i(e) {
 function s(e) {
     return n.filter((t) => t.platforms.includes(e));
 }
-function l(e) {
+function o(e) {
     return s(e).length > 3;
 }
-function o(e) {
+function l(e) {
     return 1 === e.platforms.length;
 }
