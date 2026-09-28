@@ -30,14 +30,8 @@ function x() {
                 theme: c,
                 variables: { colorText: o, colorBackground: d },
                 rules: {
-                    ".Label": { ...p, color: o },
-                    ".Input": {
-                        marginTop: "8px",
-                        backgroundColor: h,
-                        borderColor: u,
-                        borderWidth: "1px",
-                        borderStyle: "solid",
-                    },
+                    ".Label": { ...p, color: o, marginBottom: "8px" },
+                    ".Input": { backgroundColor: h, borderColor: u, borderWidth: "1px", borderStyle: "solid" },
                     ".Error": { ...p },
                     ".CheckboxInput": { border: `1px solid ${u}` },
                     ".Tab": { backgroundColor: m },
