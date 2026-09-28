@@ -42,9 +42,9 @@ var f = r(435558),
     k = r(775602),
     O = r(577568);
 let j = 2 * Math.PI * 57,
-    b = "var(--status-positive)",
-    P = function (e) {
-        let { current: t, target: r, progressColor: l = b, children: s } = e,
+    B = "var(--status-positive)",
+    N = function (e) {
+        let { current: t, target: r, progressColor: l = B, children: s } = e,
             o = j * (1 - (r <= 0 ? 0.025 : (0, f.clamp)(t / r, 0.025, 1))),
             u = (0, i.bG)([k.Ay], () => k.Ay.useReducedMotion);
         return (0, n.jsxs)("div", {
@@ -78,58 +78,65 @@ let j = 2 * Math.PI * 57,
             ],
         });
     };
-var B = r(295986);
-let N = function (e) {
+var P = r(295986);
+let b = function (e) {
     let { assetPath: t, progress: r, progressText: l, progressColor: s } = e,
-        a = (0, n.jsx)("img", { src: t, alt: "", className: B.C, width: 120, height: 120 });
+        a = (0, n.jsx)("img", { src: t, alt: "", className: P.C, width: 120, height: 120 });
     return null == r
         ? a
         : (0, n.jsx)("div", {
-              className: B.U,
+              className: P.U,
               role: "progressbar",
               "aria-valuenow": r.current,
               "aria-valuemin": 0,
               "aria-valuemax": r.target,
               "aria-valuetext": l ?? void 0,
-              children: (0, n.jsx)(P, { current: r.current, target: r.target, progressColor: s, children: a }),
+              children: (0, n.jsx)(N, { current: r.current, target: r.target, progressColor: s, children: a }),
           });
 };
-var T = r(821609),
-    R = r(450481),
+var R = r(821609),
+    T = r(450481),
     G = r(375708),
-    H = r(634293);
-function w(e) {
-    let { product: t } = e,
-        { handleUseNow: r, isApplying: l } = (0, R.p)({ product: t });
+    w = r(634293);
+function H(e) {
+    let { product: t, useNowButtonVariant: r = "overlay-secondary" } = e,
+        { handleUseNow: l, isApplying: s } = (0, T.p)({ product: t });
     return (0, n.jsx)("div", {
-        className: H.l,
-        children: (0, n.jsx)(T.$, {
-            variant: "overlay-secondary",
+        className: w.l,
+        children: (0, n.jsx)(R.$, {
+            variant: r,
             onClick: () => {
-                r();
+                l();
             },
             size: "md",
             fullWidth: !0,
             minWidth: 96,
-            loading: l,
+            loading: s,
             text: G.intl.string(G.t.MAS7uK),
         }),
     });
 }
 let M = function (e) {
-    let { promotionRewardStatus: t, rewardProduct: r, buttonVariant: l, isClaiming: s, onClaim: a } = e;
+    let {
+        promotionRewardStatus: t,
+        rewardProduct: r,
+        claimRewardButtonVariant: l,
+        useNowButtonVariant: s,
+        isClaiming: a,
+        onClaim: i,
+    } = e;
     return t === S.GM.CONSUMED && null != r
-        ? (0, n.jsx)(w, { product: r })
+        ? (0, n.jsx)(H, { product: r, useNowButtonVariant: s })
         : t === S.GM.EARNED
           ? (0, n.jsx)("div", {
-                className: H.l,
-                children: (0, n.jsx)(T.$, {
+                className: w.l,
+                children: (0, n.jsx)(R.$, {
                     text: G.intl.string(G.t.pVBlCH),
                     variant: l,
                     fullWidth: !0,
                     minWidth: 96,
-                    loading: s,
-                    onClick: a,
+                    loading: a,
+                    onClick: i,
                 }),
             })
           : null;
@@ -160,7 +167,7 @@ function et(e) {
             timeLeftText: d,
             contentThemeClassName: g,
             rewardProduct: m,
-            buttonVariant: p,
+            claimRewardButtonVariant: p,
             isClaiming: h,
             onClaim: S,
         } = e,
@@ -171,7 +178,7 @@ function et(e) {
         align: "center",
         className: g,
         children: [
-            (0, n.jsx)(N, { assetPath: r, progress: l, progressText: i, progressColor: s }),
+            (0, n.jsx)(b, { assetPath: r, progress: l, progressText: i, progressColor: s }),
             (0, n.jsxs)(o.B, {
                 direction: "vertical",
                 gap: 8,
@@ -184,7 +191,8 @@ function et(e) {
                     (0, n.jsx)(M, {
                         promotionRewardStatus: t.rewardStatus,
                         rewardProduct: m,
-                        buttonVariant: p,
+                        claimRewardButtonVariant: p,
+                        useNowButtonVariant: p,
                         isClaiming: h,
                         onClaim: S,
                     }),
@@ -206,7 +214,7 @@ function er(e) {
             timeLeftText: A,
             contentThemeClassName: _,
             rewardProduct: I,
-            buttonVariant: y,
+            claimRewardButtonVariant: y,
             helpCenterId: f,
             isClaiming: k,
             onClaim: O,
@@ -221,7 +229,7 @@ function er(e) {
         className: a()(Z.N, _),
         style: { backgroundImage: `url(${i})` },
         children: [
-            (0, n.jsx)(N, { assetPath: r, progress: l, progressText: C, progressColor: s }),
+            (0, n.jsx)(b, { assetPath: r, progress: l, progressText: C, progressColor: s }),
             (0, n.jsxs)(o.B, {
                 direction: "vertical",
                 gap: 8,
@@ -237,7 +245,7 @@ function er(e) {
                         align: "center",
                         wrap: !0,
                         children: [
-                            null != C && (0, n.jsx)(L, { text: C, indicatorColor: s ?? b }),
+                            null != C && (0, n.jsx)(L, { text: C, indicatorColor: s ?? B }),
                             null != A && (0, n.jsx)(L, { icon: c.ClockIcon, text: A }),
                         ],
                     }),
@@ -252,7 +260,7 @@ function er(e) {
                     (0, n.jsx)(M, {
                         promotionRewardStatus: t.rewardStatus,
                         rewardProduct: I,
-                        buttonVariant: y,
+                        claimRewardButtonVariant: y,
                         isClaiming: k,
                         onClaim: O,
                     }),
@@ -330,7 +338,7 @@ function en(e) {
             timeLeftText: L,
             contentThemeClassName: J[p],
             rewardProduct: s,
-            buttonVariant: Q[p],
+            claimRewardButtonVariant: Q[p],
             helpCenterId: m,
             isClaiming: a,
             onClaim: o,
