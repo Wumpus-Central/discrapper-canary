@@ -693,6 +693,13 @@ let n = [
             "Tools from an MCP server you connect are ready right away, so Conjure can use them without waiting for your next message.",
     },
     {
+        date: "2026-09-27",
+        time: "23:57",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "Tools you connect now say what each call is for in Conjure's activity, instead of repeating the tool's name down the list.",
+    },
+    {
         date: "2026-09-18",
         time: "00:02",
         platforms: ["desktop", "mobile"],
