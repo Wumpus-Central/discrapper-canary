@@ -108,6 +108,13 @@ let n = [
             "Ask Conjure to undo a change, or open a reply\u2019s menu and pick Restore this version, to put your app back the way it was.",
     },
     {
+        date: "2026-09-29",
+        time: "16:38",
+        platforms: ["mobile"],
+        summary:
+            "Attachments waiting in the mobile chat box show as thumbnails you can scroll through, like in any Discord chat.",
+    },
+    {
         date: "2026-09-28",
         time: "01:26",
         platforms: ["desktop", "mobile"],
