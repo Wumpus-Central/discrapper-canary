@@ -63,6 +63,7 @@ class s extends a {
     status;
     orbsReward;
     checkoutContext;
+    applyWalletBalance;
     static createInvoiceFromServer(e) {
         return new s({
             id: e.id,
@@ -134,6 +135,7 @@ class s extends a {
             subscriptionPeriodEnd: new Date(0),
             orbsReward: e.orbs_reward,
             checkoutContext: e.checkout_context,
+            applyWalletBalance: e.apply_wallet_balance,
         });
     }
     constructor(e) {
@@ -145,7 +147,8 @@ class s extends a {
             (this.subscriptionPeriodEnd = e.subscriptionPeriodEnd),
             (this.status = e.status),
             (this.orbsReward = e.orbsReward),
-            (this.checkoutContext = e.checkoutContext));
+            (this.checkoutContext = e.checkoutContext),
+            (this.applyWalletBalance = e.applyWalletBalance));
     }
     findInvoiceItemByPlanId(e) {
         return this.invoiceItems.find((t) => t.subscriptionPlanId === e) ?? null;

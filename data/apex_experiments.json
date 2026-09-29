@@ -4722,6 +4722,22 @@
     }
   },
   {
+    "name": "2026-08-split-payments",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
     "name": "2026-08-timestamp-autocomplete-mobile",
     "kind": "user",
     "defaultConfig": {

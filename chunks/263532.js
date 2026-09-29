@@ -616,6 +616,8 @@ function J(e) {
             setCheckoutReviewButtonLabel: (t) => e({ checkoutReviewButtonLabel: t }),
             paymentSourceId: d,
             setPaymentSourceId: (t) => e({ paymentSourceId: t ?? null }),
+            applyWalletBalance: null,
+            setApplyWalletBalance: (t) => e({ applyWalletBalance: t }),
             pendingPaymentSourceId: null,
             setPendingPaymentSourceId: (t) => e({ pendingPaymentSourceId: t ?? null }),
             hasAddedPaymentSourceThisSession: !1,

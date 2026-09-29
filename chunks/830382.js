@@ -42,16 +42,16 @@ async function T(e) {
     return (a.h.dispatch({ type: "SKUS_FETCH_SUCCESS", skus: n }), n);
 }
 async function m(e) {
-    let { applicationId: t, skuId: n, paymentSourceId: i, isGift: a, currency: o } = e,
-        d = { payment_source_id: i, gift: a, currency: o };
-    (0, c.Fs)(t) && (d.test_mode = !0);
-    let _ = u.A.getPromotionIdOverride();
-    null != _ && (d.promotion_id_override = _);
+    let { applicationId: t, skuId: n, paymentSourceId: i, isGift: a, currency: o, applyWalletBalance: d } = e,
+        _ = { payment_source_id: i, gift: a, currency: o };
+    (null != d && (_.apply_wallet_balance = d), (0, c.Fs)(t) && (_.test_mode = !0));
+    let E = u.A.getPromotionIdOverride();
+    null != E && (_.promotion_id_override = E);
     try {
         return (
             await (0, I.aP)({
                 url: f.Rsh.STORE_SKU_PURCHASE(n),
-                query: d,
+                query: _,
                 oldFormErrors: !0,
                 rejectWithError: (0, r.fT)(),
             })
@@ -108,11 +108,12 @@ async function N(e, t, n) {
         loadId: S,
         countryCode: N,
         quantity: C,
+        applyWalletBalance: O,
     } = { ...g, ...n };
     a.h.wait(() => {
         a.h.dispatch({ type: "SKU_PURCHASE_START", applicationId: e, skuId: t, isGift: p, loadId: S });
     });
-    let O = (0, c.Fs)(e);
+    let R = (0, c.Fs)(e);
     try {
         let e = {
                 gift: p,
@@ -122,7 +123,7 @@ async function N(e, t, n) {
                 gift_info_options: T,
             },
             n = u.A.getPromotionIdOverride();
-        if ((null != n && (e.promotion_id_override = n), O)) e.test_mode = !0;
+        if ((null != n && (e.promotion_id_override = n), R)) e.test_mode = !0;
         else {
             if (
                 null != i &&
@@ -137,7 +138,8 @@ async function N(e, t, n) {
         (null != o && (e.expected_amount = o),
             null != _ && (e.expected_currency = _),
             (e.purchase_token = (0, h.r)()),
-            null != C && (e.quantity = C));
+            null != C && (e.quantity = C),
+            (e.apply_wallet_balance = O ?? !1));
         let s = await r.Bo.post({
             url: f.Rsh.STORE_SKU_PURCHASE(t),
             body: e,
