@@ -5558,6 +5558,22 @@
     }
   },
   {
+    "name": "2026-09-server-onboarding-setup-progress",
+    "kind": "user",
+    "defaultConfig": {
+      "showSetupProgressRow": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "showSetupProgressRow": true
+      }
+    }
+  },
+  {
     "name": "2026-09-silp-cta-copy-tests",
     "kind": "user",
     "defaultConfig": {
