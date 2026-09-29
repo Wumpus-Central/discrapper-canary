@@ -8,7 +8,6 @@ e.exports = {
     TN: "betaTag_bbb935",
     D4: "checklist_bbb935",
     Au: "socialLinksContainer_bbb935",
-    NG: "tabMainDescription_bbb935",
     $U: "imageUploaderInnerSquare_bbb935",
     z3: "error_bbb935",
 };

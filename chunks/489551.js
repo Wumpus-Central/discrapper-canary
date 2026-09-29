@@ -11772,12 +11772,13 @@ function ut() {
                 m(e.every((e) => !0 === e)));
         }
     }, [a]);
-    let j = (0, L.bG)([O.A], () => (null != t ? O.A.getErrors() : null));
+    let j = (0, L.bG)([O.A], () => (null != t ? O.A.getErrors() : null)),
+        f = (t?.id, void 0 ?? null);
     if (null == t || null == a) return null;
-    function f(e) {
+    function N(e) {
         et.default.updateGuild({ discoverySplash: e });
     }
-    function N(e) {
+    function A(e) {
         if (null != t) {
             if (e) return void i();
             null != t.vanityURLCode
@@ -11821,11 +11822,11 @@ function ut() {
                 et.default.saveGuild(t.id, { discoverySplash: t.discoverySplash, description: t.description }));
         }
     }
-    function A(e) {
+    function I(e) {
         let { reason: t = "", emoji_name: n = "" } = e;
         return null !== t && t.length >= 10 && t.length <= 128 && null !== n;
     }
-    let I = [
+    let S = [
         {
             title: el.intl.string(el.t["/SWsH3"]),
             items: [
@@ -11847,14 +11848,14 @@ function ut() {
                                 (function (e) {
                                     let { reason: t = "", emoji_name: n = "" } = e;
                                     return (null === t || "" === t) && null === n;
-                                })(e) || A(e),
+                                })(e) || I(e),
                         ) &&
-                        a.reasonsToJoin.filter(A).length >= 2,
+                        a.reasonsToJoin.filter(I).length >= 2,
                 },
             ],
         },
     ];
-    function S(e, t) {
+    function C(e, t) {
         let n = [...g];
         ((n[e] = t), x(n));
     }
@@ -11876,23 +11877,35 @@ function ut() {
                                     (0, p.jsxs)("div", {
                                         className: c9.rb,
                                         children: [
-                                            (0, p.jsxs)(D.D, {
-                                                variant: "heading-lg/semibold",
+                                            (0, p.jsxs)(sr.B, {
+                                                gap: 8,
                                                 children: [
-                                                    el.intl.string(el.t.kGlQGF),
-                                                    (0, p.jsx)(y.A, { className: c9.TN }),
-                                                ],
-                                            }),
-                                            (0, p.jsxs)(G.E, {
-                                                variant: "text-sm/normal",
-                                                className: c9.NG,
-                                                children: [
-                                                    el.intl.format(el.t["+ScrMf"], {
-                                                        discordURL: window.GLOBAL_ENV.MARKETING_ENDPOINT,
+                                                    (0, p.jsxs)(D.D, {
+                                                        variant: "heading-lg/semibold",
+                                                        children: [
+                                                            f?.title ?? el.intl.string(el.t.kGlQGF),
+                                                            null == f ? (0, p.jsx)(y.A, { className: c9.TN }) : null,
+                                                        ],
                                                     }),
-                                                    " ",
-                                                    el.intl.format(el.t.T6WtKw, {
-                                                        learnMoreURL: $.A.getArticleURL(ei.MVz.SERVER_WEB_PAGES),
+                                                    (0, p.jsx)(G.E, {
+                                                        variant: "text-sm/normal",
+                                                        children:
+                                                            null != f
+                                                                ? f.description
+                                                                : (0, p.jsxs)(p.Fragment, {
+                                                                      children: [
+                                                                          el.intl.format(el.t["+ScrMf"], {
+                                                                              discordURL:
+                                                                                  window.GLOBAL_ENV.MARKETING_ENDPOINT,
+                                                                          }),
+                                                                          " ",
+                                                                          el.intl.format(el.t.T6WtKw, {
+                                                                              learnMoreURL: $.A.getArticleURL(
+                                                                                  ei.MVz.SERVER_WEB_PAGES,
+                                                                              ),
+                                                                          }),
+                                                                      ],
+                                                                  }),
                                                     }),
                                                 ],
                                             }),
@@ -11970,7 +11983,7 @@ function ut() {
                                                                                     size: 512 * (0, c$.mZ)(),
                                                                                 }),
                                                                             disabled: !s,
-                                                                            onChange: f,
+                                                                            onChange: N,
                                                                             hint: el.intl.string(el.t.uPvxqJ),
                                                                             imageClassName: c9.$U,
                                                                             hideSize: !0,
@@ -11980,7 +11993,7 @@ function ut() {
                                                                             variant: "secondary",
                                                                             fullWidth: !0,
                                                                             text: el.intl.string(el.t.yG2pUi),
-                                                                            onChange: f,
+                                                                            onChange: N,
                                                                             disabled: !s,
                                                                         }),
                                                                     ],
@@ -12067,10 +12080,10 @@ function ut() {
                                                                           "div",
                                                                           {
                                                                               className: c9.Au,
-                                                                              onMouseOver: () => S(n, !0),
-                                                                              onFocus: () => S(n, !0),
-                                                                              onMouseOut: () => S(n, !1),
-                                                                              onBlur: () => S(n, !1),
+                                                                              onMouseOver: () => C(n, !0),
+                                                                              onFocus: () => C(n, !0),
+                                                                              onMouseOut: () => C(n, !1),
+                                                                              onBlur: () => C(n, !1),
                                                                               children: [
                                                                                   (0, p.jsx)(t_.l, {
                                                                                       selectionMode: "single",
@@ -12244,7 +12257,7 @@ function ut() {
                                                                         variant: "critical-primary",
                                                                         size: "sm",
                                                                         text: el.intl.string(el.t["DCHd/G"]),
-                                                                        onClick: () => N(!1),
+                                                                        onClick: () => A(!1),
                                                                         disabled: !s,
                                                                     }),
                                                                 }),
@@ -12266,9 +12279,9 @@ function ut() {
                                             className: c9.D4,
                                             children: (0, p.jsx)(cQ, {
                                                 title: el.intl.string(el.t["2kCyn/"]),
-                                                children: I,
+                                                children: S,
                                                 buttonLabel: el.intl.string(el.t.tVK6S9),
-                                                buttonCallback: () => N(!0),
+                                                buttonCallback: () => A(!0),
                                                 disabled: !s || !u,
                                             }),
                                         }),
@@ -27761,22 +27774,27 @@ let { getSectionDefinition: IY } = {
                         element: ch,
                         predicate: () => r,
                     };
-                case ei.BEX.DISCOVERY_LANDING_PAGE:
+                case ei.BEX.DISCOVERY_LANDING_PAGE: {
+                    let e =
+                            t.canManageGuild &&
+                            (t.guild.features.has(ei.GuildFeatures.DISCOVERABLE) || !!t.guildMetadata?.isPublished),
+                        n = e ? (t.guild.id, void 0 ?? null) : null;
                     return {
                         section: ei.BEX.DISCOVERY_LANDING_PAGE,
                         impressionName: A.ImpressionNames.GUILD_SETTINGS_DISCOVERY_LANDING_PAGE,
-                        label: (0, p.jsxs)("div", {
-                            className: Iz.o2,
-                            children: [el.intl.string(el.t.kGlQGF), " ", (0, p.jsx)(y.A, {})],
-                        }),
-                        ariaLabel: el.intl.string(el.t.kGlQGF),
+                        label:
+                            n ??
+                            (0, p.jsxs)("div", {
+                                className: Iz.o2,
+                                children: [el.intl.string(el.t.kGlQGF), " ", (0, p.jsx)(y.A, {})],
+                            }),
+                        ariaLabel: n ?? el.intl.string(el.t.kGlQGF),
                         element: un,
                         notice: { stores: [O.A], element: ue },
                         type: T.Py.CUSTOM,
-                        predicate: () =>
-                            t.canManageGuild &&
-                            (t.guild.features.has(ei.GuildFeatures.DISCOVERABLE) || !!t.guildMetadata?.isPublished),
+                        predicate: () => e,
                     };
+                }
                 case ei.BEX.COMMUNITY_WELCOME:
                     return {
                         section: ei.BEX.COMMUNITY_WELCOME,
