@@ -38,9 +38,8 @@ let l = {
             ? "1425215263548117002"
             : "staging" === window.GLOBAL_ENV.PROJECT_ENV
               ? "1415044199572832256"
-              : "1415025086791942144";
-window.GLOBAL_ENV.PROJECT_ENV;
-let I =
+              : "1415025086791942144",
+    I =
         "production" === window.GLOBAL_ENV.PROJECT_ENV
             ? "1402418491272986635"
             : "staging" === window.GLOBAL_ENV.PROJECT_ENV
