@@ -5801,7 +5801,8 @@
     "name": "2026-10-badge-directory-updates",
     "kind": "user",
     "defaultConfig": {
-      "enabled": false
+      "enabled": false,
+      "swipeBetweenBadges": false
     },
     "variations": {
       "0": {
@@ -5809,7 +5810,12 @@
         "variant": 0
       },
       "1": {
-        "enabled": true
+        "enabled": true,
+        "swipeBetweenBadges": false
+      },
+      "2": {
+        "enabled": true,
+        "swipeBetweenBadges": true
       }
     }
   }
