@@ -1,0 +1,3 @@
+s.exports = JSON.parse(
+    '{"jw65bq":["\u0395\u03BD\u03B5\u03C1\u03B3\u03BF\u03C0\u03BF\u03AF\u03B7\u03C3\u03B7"],"/sw6q+":["\u038C\u03C7\u03B9 \u03C4\u03CE\u03C1\u03B1"]}',
+);
