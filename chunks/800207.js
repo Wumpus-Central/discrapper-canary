@@ -1,4 +1,4 @@
-(d.r(s), d.d(s, { default: () => r }));
-let r = JSON.parse(
-    '{"4g4Fpz":["4g4Fpz"],"/2ypah":["/2ypah"],"pjdMpI":["pjdMpI"],"YRjiSW":["YRjiSW"],"r97mLn":["r97mLn"],"u113tL":["u113tL"],"jKrPE9":["jKrPE9"],"en2ls2":["en2ls2"],"8VH2lL":["8VH2lL"],"zCdMTs":["zCdMTs"]}',
+(a.r(r), a.d(r, { default: () => o }));
+let o = JSON.parse(
+    '{"6dmFs5":["While supplies last"],"4g4Fpz":["Redeem your reward for eligible in-game content in VALORANT or League of Legends. Claim by ",[3,"date","medium"],"."],"/2ypah":["Your $10 Riot Games reward is ready to claim"],"pjdMpI":["Unlock"],"YRjiSW":["Redeem Code"],"r97mLn":["Riot Credits Reward"],"u113tL":["More codes are on the way! Check back soon for updates."],"jKrPE9":["Codes for the Riot Games reward are unavailable right now"],"en2ls2":["Unlock Reward"],"8VH2lL":["Use your $10 reward on eligible in-game content in VALORANT or League of Legends. ",[8,"$link",["Terms Apply."],[[1,"termsUrl"]]]],"zCdMTs":["Redeem a $10 Riot Games reward"]}',
 );

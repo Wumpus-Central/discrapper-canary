@@ -1,3 +1,3 @@
-p.exports = JSON.parse(
-    '{"4g4Fpz":["4g4Fpz"],"/2ypah":["/2ypah"],"pjdMpI":["pjdMpI"],"YRjiSW":["YRjiSW"],"r97mLn":["r97mLn"],"u113tL":["u113tL"],"jKrPE9":["jKrPE9"],"en2ls2":["en2ls2"],"8VH2lL":["8VH2lL"],"zCdMTs":["zCdMTs"]}',
+e.exports = JSON.parse(
+    '{"4g4Fpz":["Revendic\u0103-\u021Bi recompensa pentru con\u021Binut eligibil din cadrul jocului \xeen VALORANT sau League of Legends. E disponibil\u0103 p\xe2n\u0103 pe ",[3,"date","medium"],"."],"/2ypah":["Recompensa Riot Games de 10 USD e gata s\u0103 fie revendicat\u0103"],"pjdMpI":["Deblocheaz\u0103"],"YRjiSW":["Valorific\u0103-\u021Bi codul"],"r97mLn":["Recompens\u0103 \xeen credite Riot"],"u113tL":["Vor sosi \u0219i alte coduri! Revino \u0219i vezi ce e nou."],"jKrPE9":["Codurile pentru recompensa Riot Games nu sunt disponibile momentan"],"en2ls2":["Deblocheaz\u0103 recompensa"],"8VH2lL":["Folose\u0219te-\u021Bi recompensa de 10 USD pentru a-\u021Bi lua con\u021Binut eligibil din joc \xeen VALORANT sau League of Legends. ",[8,"$link",["Se aplic\u0103 Condi\u021Bii."],[[1,"termsUrl"]]]],"zCdMTs":["Revendic\u0103 o recompens\u0103 Riot Games de 10 USD"]}',
 );

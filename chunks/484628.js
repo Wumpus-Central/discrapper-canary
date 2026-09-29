@@ -1,3 +1,3 @@
-p.exports = JSON.parse(
-    '{"4g4Fpz":["4g4Fpz"],"/2ypah":["/2ypah"],"pjdMpI":["pjdMpI"],"YRjiSW":["YRjiSW"],"r97mLn":["r97mLn"],"u113tL":["u113tL"],"jKrPE9":["jKrPE9"],"en2ls2":["en2ls2"],"8VH2lL":["8VH2lL"],"zCdMTs":["zCdMTs"]}',
+e.exports = JSON.parse(
+    '{"4g4Fpz":["Vyu\u017Eij svou odm\u011Bnu na vybran\xfd obsah ve hr\xe1ch VALORANT nebo League of Legends. \u010Cas m\xe1\u0161 do ",[3,"date","medium"],"."],"/2ypah":["Tv\xe1 odm\u011Bna na produkty Riot Games v\xa0hodnot\u011B 10\xa0USD je p\u0159ipravena k\xa0vyzvednut\xed"],"pjdMpI":["Odemknout"],"YRjiSW":["Uplatnit k\xf3d"],"r97mLn":["Odm\u011Bna v\xa0Riot kreditech"],"u113tL":["Dal\u0161\xed k\xf3dy jsou na cest\u011B! Brzy zde zve\u0159ejn\xedme aktuality."],"jKrPE9":["K\xf3dy pro odm\u011Bnu od Riot Games jsou moment\xe1ln\u011B nedostupn\xe9"],"en2ls2":["Odemknout odm\u011Bnu"],"8VH2lL":["Vyu\u017Eij odm\u011Bnu 10\xa0USD na vybran\xfd obsah ve hr\xe1ch VALORANT nebo League of Legends. ",[8,"$link",["\u0158\xedd\xed se platn\xfdmi podm\xednkami."],[[1,"termsUrl"]]]],"zCdMTs":["Vyu\u017Eij odm\u011Bnu 10\xa0USD na produkty Riot Games"]}',
 );

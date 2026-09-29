@@ -1,3 +1,3 @@
-p.exports = JSON.parse(
-    '{"4g4Fpz":["4g4Fpz"],"/2ypah":["/2ypah"],"pjdMpI":["pjdMpI"],"YRjiSW":["YRjiSW"],"r97mLn":["r97mLn"],"u113tL":["u113tL"],"jKrPE9":["jKrPE9"],"en2ls2":["en2ls2"],"8VH2lL":["8VH2lL"],"zCdMTs":["zCdMTs"]}',
+a.exports = JSON.parse(
+    '{"4g4Fpz":["Panaudok apdovanojim\u0105 tam tikram VALORANT arba League of Legends \u017Eaidimo turiniui. Atsiimk iki ",[3,"date","medium"]],"/2ypah":["Tavo 10\xa0$ Riot Games apdovanojimas paruo\u0161tas atsiimti"],"pjdMpI":["Gauti"],"YRjiSW":["Panaudoti kod\u0105"],"r97mLn":["Riot Credits apdovanojimas"],"u113tL":["Daugiau kod\u0173 netrukus atkeliaus! Kiek v\u0117liau patikrink, ar yra ko naujo."],"jKrPE9":["\u0160iuo metu n\u0117ra prieinam\u0173 Riot Games apdovanojim\u0173 kod\u0173"],"en2ls2":["Gauti apdovanojim\u0105"],"8VH2lL":["Panaudok 10\xa0$ apdovanojim\u0105 tam tikram VALORANT arba League of Legends \u017Eaidimo turiniui. ",[8,"$link",["Taikomos s\u0105lygos."],[[1,"termsUrl"]]]],"zCdMTs":["Panaudok 10\xa0$ Riot Games apdovanojim\u0105"]}',
 );

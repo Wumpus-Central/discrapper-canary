@@ -1,3 +1,3 @@
-p.exports = JSON.parse(
-    '{"4g4Fpz":["4g4Fpz"],"/2ypah":["/2ypah"],"pjdMpI":["pjdMpI"],"YRjiSW":["YRjiSW"],"r97mLn":["r97mLn"],"u113tL":["u113tL"],"jKrPE9":["jKrPE9"],"en2ls2":["en2ls2"],"8VH2lL":["8VH2lL"],"zCdMTs":["zCdMTs"]}',
+e.exports = JSON.parse(
+    '{"4g4Fpz":["Canjea tu recompensa por contenido del juego elegible en VALORANT o League of Legends. Obtenla antes del ",[3,"date","medium"],"."],"/2ypah":["Ya puedes obtener tu recompensa de 10\xa0$ de Riot Games"],"pjdMpI":["Desbloquear"],"YRjiSW":["Canjear c\xf3digo"],"r97mLn":["Recompensa de cr\xe9ditos de Riot"],"u113tL":["\xa1Hay m\xe1s c\xf3digos en camino! Vuelve pronto para ver las actualizaciones."],"jKrPE9":["Los c\xf3digos de la recompensa de Riot Games no est\xe1n disponibles ahora mismo"],"en2ls2":["Desbloquear recompensa"],"8VH2lL":["Usa tu recompensa de 10\xa0$ en contenido apto del juego en VALORANT o League of Legends. ",[8,"$link",["Se aplican condiciones."],[[1,"termsUrl"]]]],"zCdMTs":["Canjea una recompensa de 10\xa0$ de Riot Games"]}',
 );

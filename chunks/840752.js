@@ -1,3 +1,3 @@
-p.exports = JSON.parse(
-    '{"4g4Fpz":["4g4Fpz"],"/2ypah":["/2ypah"],"pjdMpI":["pjdMpI"],"YRjiSW":["YRjiSW"],"r97mLn":["r97mLn"],"u113tL":["u113tL"],"jKrPE9":["jKrPE9"],"en2ls2":["en2ls2"],"8VH2lL":["8VH2lL"],"zCdMTs":["zCdMTs"]}',
+a.exports = JSON.parse(
+    '{"4g4Fpz":["Iskoristi svoju nagradu za sadr\u017Eaj u igri VALORANT ili League of Legends koji ispunjava preduvjete. Uzmi do ",[3,"date","medium"],"."],"/2ypah":["Tvoja nagrada od 10 USD za Riot Games spremna je za uzimanje"],"pjdMpI":["Otklju\u010Daj"],"YRjiSW":["Iskoristi kod"],"r97mLn":["Nagrada u Riot kreditima"],"u113tL":["Uskoro sti\u017Ee jo\u0161 kodova! Vrati se uskoro i provjeri ima li novosti."],"jKrPE9":["Kodovi za nagradu za Riot Games trenuta\u010Dno nisu dostupni"],"en2ls2":["Otklju\u010Daj nagradu"],"8VH2lL":["Iskoristi nagradu od 10 USD na sadr\u017Eaj u igri VALORANT ili League of Legends koji ispunjava preduvjete. ",[8,"$link",["Podlije\u017Ee dodatnim odredbama."],[[1,"termsUrl"]]]],"zCdMTs":["Iskoristi nagradu od 10 USD za Riot Games"]}',
 );

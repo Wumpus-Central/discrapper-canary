@@ -1,3 +1,3 @@
-p.exports = JSON.parse(
-    '{"4g4Fpz":["4g4Fpz"],"/2ypah":["/2ypah"],"pjdMpI":["pjdMpI"],"YRjiSW":["YRjiSW"],"r97mLn":["r97mLn"],"u113tL":["u113tL"],"jKrPE9":["jKrPE9"],"en2ls2":["en2ls2"],"8VH2lL":["8VH2lL"],"zCdMTs":["zCdMTs"]}',
+e.exports = JSON.parse(
+    '{"4g4Fpz":["Verzilver je beloning voor in aanmerking komende in-game-content in VALORANT of League of Legends. Je hebt de tijd tot ",[3,"date","medium"],"."],"/2ypah":["Je kunt je beloning, $ 10 aan Riot Games-credits, nu claimen"],"pjdMpI":["Ontgrendelen"],"YRjiSW":["Code verzilveren"],"r97mLn":["Riot Credits-beloning"],"u113tL":["Er zijn nog meer codes onderweg! Kom binnenkort terug voor updates."],"jKrPE9":["Codes voor de Riot Games-beloning zijn momenteel niet beschikbaar"],"en2ls2":["Beloning ontgrendelen"],"8VH2lL":["Gebruik je beloning van $ 10 voor in aanmerking komende in-game-content in VALORANT of League of Legends. ",[8,"$link",["Check de voorwaarden."],[[1,"termsUrl"]]]],"zCdMTs":["Verzilver voor $ 10 aan Riot Games-credits"]}',
 );

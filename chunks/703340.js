@@ -1,3 +1,3 @@
-p.exports = JSON.parse(
-    '{"4g4Fpz":["4g4Fpz"],"/2ypah":["/2ypah"],"pjdMpI":["pjdMpI"],"YRjiSW":["YRjiSW"],"r97mLn":["r97mLn"],"u113tL":["u113tL"],"jKrPE9":["jKrPE9"],"en2ls2":["en2ls2"],"8VH2lL":["8VH2lL"],"zCdMTs":["zCdMTs"]}',
+e.exports = JSON.parse(
+    '{"4g4Fpz":["VALORANT veya League of Legends\'ta uygun oyun i\xe7i i\xe7eriklere y\xf6nelik \xf6d\xfcl\xfcn\xfc ",[3,"date","medium"]," tarihine kadar al."],"/2ypah":["10 $ de\u011Ferinde Riot Games \xf6d\xfcl\xfcn almaya haz\u0131r"],"pjdMpI":["A\xe7"],"YRjiSW":["Kod Al"],"r97mLn":["Riot Kredisi \xd6d\xfcl\xfc"],"u113tL":["Daha fazla kod yolda! G\xfcncellemeler i\xe7in yak\u0131nda tekrar u\u011Fra."],"jKrPE9":["Riot Games \xf6d\xfcl kodlar\u0131 \u015Fu anda mevcut de\u011Fil"],"en2ls2":["\xd6d\xfcl\xfc A\xe7"],"8VH2lL":["VALORANT veya League of Legends\'ta uygun oyun i\xe7i i\xe7eriklerde 10 $ \xf6d\xfcl\xfcn\xfc kullan. ",[8,"$link",["Ko\u015Fullar ge\xe7erlidir."],[[1,"termsUrl"]]]],"zCdMTs":["10 $ de\u011Ferinde Riot Games \xf6d\xfcl\xfcn\xfc al"]}',
 );

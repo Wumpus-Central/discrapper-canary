@@ -1843,7 +1843,7 @@ function sM(e) {
                                   blurTint: "#310A0B",
                                   isThirdPartyPerk: !0,
                                   onCtaClick: () => {
-                                      (0, sT.W)({ analyticsLocations: [] });
+                                      (0, sT.W)({ analyticsLocations: e });
                                   },
                                   analyticsOptions: { thirdPartyPartner: "riot" },
                               }

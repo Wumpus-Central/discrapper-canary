@@ -1,3 +1,3 @@
-p.exports = JSON.parse(
-    '{"4g4Fpz":["4g4Fpz"],"/2ypah":["/2ypah"],"pjdMpI":["pjdMpI"],"YRjiSW":["YRjiSW"],"r97mLn":["r97mLn"],"u113tL":["u113tL"],"jKrPE9":["jKrPE9"],"en2ls2":["en2ls2"],"8VH2lL":["8VH2lL"],"zCdMTs":["zCdMTs"]}',
+e.exports = JSON.parse(
+    '{"4g4Fpz":["R\xe9cup\xe8re ta r\xe9compense pour du contenu en jeu \xe9ligible dans VALORANT ou League of Legends. \xc0 r\xe9cup\xe9rer avant le ",[3,"date","medium"],"."],"/2ypah":["Ta r\xe9compense Riot Games de 10\xa0$ est pr\xeate \xe0 \xeatre r\xe9cup\xe9r\xe9e"],"pjdMpI":["D\xe9verrouiller"],"YRjiSW":["Utiliser le code"],"r97mLn":["R\xe9compense de cr\xe9dits Riot"],"u113tL":["D\'autres codes sont en chemin\xa0! Reviens bient\xf4t pour en savoir plus."],"jKrPE9":["Les codes pour la r\xe9compense Riot Games sont indisponibles pour le moment."],"en2ls2":["D\xe9verrouille ta r\xe9compense"],"8VH2lL":["Utilise ta r\xe9compense de 10\xa0$ pour du contenu en jeu \xe9ligible dans VALORANT ou League of Legends. ",[8,"$link",["Voir conditions."],[[1,"termsUrl"]]]],"zCdMTs":["R\xe9cup\xe8re une r\xe9compense Riot Games de 10\xa0$"]}',
 );

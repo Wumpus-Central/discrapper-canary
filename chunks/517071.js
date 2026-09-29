@@ -1,3 +1,3 @@
-p.exports = JSON.parse(
-    '{"4g4Fpz":["4g4Fpz"],"/2ypah":["/2ypah"],"pjdMpI":["pjdMpI"],"YRjiSW":["YRjiSW"],"r97mLn":["r97mLn"],"u113tL":["u113tL"],"jKrPE9":["jKrPE9"],"en2ls2":["en2ls2"],"8VH2lL":["8VH2lL"],"zCdMTs":["zCdMTs"]}',
+i.exports = JSON.parse(
+    '{"4g4Fpz":["Riscatta la tua ricompensa per i contenuti di gioco idonei su VALORANT o League of Legends. Scadenza: ",[3,"date","medium"],"."],"/2ypah":["La tua ricompensa di Riot Games da 10 $ \xe8 pronta per il riscatto"],"pjdMpI":["Sblocca"],"YRjiSW":["Riscatta codice"],"r97mLn":["Ricompensa crediti Riot"],"u113tL":["Sono in arrivo altri codici! Torna presto per vedere se ci sono novit\xe0."],"jKrPE9":["I codici per la ricompensa di Riot Games non sono disponibili al momento"],"en2ls2":["Sblocca ricompensa"],"8VH2lL":["Usa la tua ricompensa di 10 $ per contenuti di gioco idonei di VALORANT o League of Legends. ",[8,"$link",["L\'offerta \xe8 soggetta a Termini."],[[1,"termsUrl"]]]],"zCdMTs":["Riscatta una ricompensa di Riot Games da 10 $"]}',
 );

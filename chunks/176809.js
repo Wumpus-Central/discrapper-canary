@@ -1,3 +1,3 @@
-p.exports = JSON.parse(
-    '{"4g4Fpz":["4g4Fpz"],"/2ypah":["/2ypah"],"pjdMpI":["pjdMpI"],"YRjiSW":["YRjiSW"],"r97mLn":["r97mLn"],"u113tL":["u113tL"],"jKrPE9":["jKrPE9"],"en2ls2":["en2ls2"],"8VH2lL":["8VH2lL"],"zCdMTs":["zCdMTs"]}',
+e.exports = JSON.parse(
+    '{"4g4Fpz":["Hent premien for \xe5 f\xe5 utvalgt innhold i VALORANT eller League of Legends. M\xe5 hentes innen ",[3,"date","medium"],"."],"/2ypah":["Du kan hente Riot Games-premien til en verdi av $\xa010"],"pjdMpI":["L\xe5s opp"],"YRjiSW":["Bruk kode"],"r97mLn":["Riot Credits-premie"],"u113tL":["Flere koder er p\xe5 vei! Kom snart innom igjen."],"jKrPE9":["Ingen koder til Riot Games-premien kan hentes n\xe5"],"en2ls2":["L\xe5s opp premie"],"8VH2lL":["Bruk premien p\xe5 $\xa010 p\xe5 utvalgt innhold i VALORANT eller League of Legends. ",[8,"$link",["Vilk\xe5r gjelder."],[[1,"termsUrl"]]]],"zCdMTs":["Hent en Riot Games-premie verdt $\xa010"]}',
 );

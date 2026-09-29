@@ -1,3 +1,3 @@
-p.exports = JSON.parse(
-    '{"4g4Fpz":["4g4Fpz"],"/2ypah":["/2ypah"],"pjdMpI":["pjdMpI"],"YRjiSW":["YRjiSW"],"r97mLn":["r97mLn"],"u113tL":["u113tL"],"jKrPE9":["jKrPE9"],"en2ls2":["en2ls2"],"8VH2lL":["8VH2lL"],"zCdMTs":["zCdMTs"]}',
+e.exports = JSON.parse(
+    '{"4g4Fpz":["Indl\xf8s din bel\xf8nning for berettiget indhold i VALORANT eller League of Legends. Hent den inden ",[3,"date","medium"],"."],"/2ypah":["Din 10 $ bel\xf8nning fra Riot Games er klar til afhentning"],"pjdMpI":["L\xe5s op"],"YRjiSW":["Indl\xf8sningskoder"],"r97mLn":["Riot-kreditbel\xf8nning"],"u113tL":["Der er flere koder p\xe5 vej! Kom tilbage snart for opdateringer."],"jKrPE9":["Koder til bel\xf8nningen fra Riot Games er ikke tilg\xe6ngelige lige nu"],"en2ls2":["L\xe5s op for bel\xf8nninger"],"8VH2lL":["Brug din bel\xf8nning p\xe5 10 $ p\xe5 berettiget indhold i spillet i VALORANT eller League of Legends. ",[8,"$link",["Vilk\xe5r g\xe6lder."],[[1,"termsUrl"]]]],"zCdMTs":["Indl\xf8s en 10 $ bel\xf8nning fra Riot Games"]}',
 );

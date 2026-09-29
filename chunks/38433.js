@@ -1,3 +1,3 @@
-p.exports = JSON.parse(
-    '{"4g4Fpz":["4g4Fpz"],"/2ypah":["/2ypah"],"pjdMpI":["pjdMpI"],"YRjiSW":["YRjiSW"],"r97mLn":["r97mLn"],"u113tL":["u113tL"],"jKrPE9":["jKrPE9"],"en2ls2":["en2ls2"],"8VH2lL":["8VH2lL"],"zCdMTs":["zCdMTs"]}',
+e.exports = JSON.parse(
+    '{"4g4Fpz":["L\xf6se deine Belohnung f\xfcr berechtigte Inhalte in VALORANT oder League of Legends ein. Bis ",[3,"date","medium"]," einl\xf6sbar."],"/2ypah":["Deine Riot Games-Belohnung von 10\xa0$ kann jetzt beansprucht werden"],"pjdMpI":["Freischalten"],"YRjiSW":["Code einl\xf6sen"],"r97mLn":["Belohnung: Riot-Credits"],"u113tL":["Weitere Codes sind unterwegs! Schau bald wieder vorbei, um Updates zu erhalten."],"jKrPE9":["Codes f\xfcr die Riot Games-Belohnung sind derzeit nicht verf\xfcgbar"],"en2ls2":["Belohnung freischalten"],"8VH2lL":["Verwende deine Belohnung von 10\xa0$ f\xfcr berechtigte Inhalte in VALORANT oder League of Legends. ",[8,"$link",["Nutzungsbedingungen gelten."],[[1,"termsUrl"]]]],"zCdMTs":["L\xf6se eine Riot Games-Belohnung von 10\xa0$ ein"]}',
 );

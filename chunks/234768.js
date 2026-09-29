@@ -1,3 +1,3 @@
-p.exports = JSON.parse(
-    '{"4g4Fpz":["4g4Fpz"],"/2ypah":["/2ypah"],"pjdMpI":["pjdMpI"],"YRjiSW":["YRjiSW"],"r97mLn":["r97mLn"],"u113tL":["u113tL"],"jKrPE9":["jKrPE9"],"en2ls2":["en2ls2"],"8VH2lL":["8VH2lL"],"zCdMTs":["zCdMTs"]}',
+e.exports = JSON.parse(
+    '{"4g4Fpz":["L\xf6s in din bel\xf6ning mot ber\xe4ttigat spelinneh\xe5ll i VALORANT eller League of Legends. H\xe4mta senast ",[3,"date","medium"],"."],"/2ypah":["Din bel\xf6ning p\xe5 10\xa0$ fr\xe5n Riot Games \xe4r redo att h\xe4mtas"],"pjdMpI":["L\xe5s upp"],"YRjiSW":["L\xf6s in kod"],"r97mLn":["Riot Credits-bel\xf6ning"],"u113tL":["Fler koder \xe4r p\xe5 v\xe4g! H\xe5ll utkik efter uppdateringar."],"jKrPE9":["Koderna f\xf6r Riot Games-bel\xf6ningen \xe4r inte tillg\xe4ngliga just nu"],"en2ls2":["L\xe5s upp bel\xf6ning"],"8VH2lL":["Anv\xe4nd din bel\xf6ning p\xe5 10 $ till ber\xe4ttigat spelinneh\xe5ll i VALORANT eller League of Legends. ",[8,"$link",["Villkor g\xe4ller."],[[1,"termsUrl"]]]],"zCdMTs":["L\xf6s in en Riot Games-bel\xf6ning p\xe5 10 $"]}',
 );

@@ -1,3 +1,3 @@
-p.exports = JSON.parse(
-    '{"4g4Fpz":["4g4Fpz"],"/2ypah":["/2ypah"],"pjdMpI":["pjdMpI"],"YRjiSW":["YRjiSW"],"r97mLn":["r97mLn"],"u113tL":["u113tL"],"jKrPE9":["jKrPE9"],"en2ls2":["en2ls2"],"8VH2lL":["8VH2lL"],"zCdMTs":["zCdMTs"]}',
+e.exports = JSON.parse(
+    '{"4g4Fpz":["Zrealizuj nagrod\u0119 na kwalifikuj\u0105ce si\u0119 tre\u015Bci w grze VALORANT lub League of Legends. Odbierz j\u0105 do ",[3,"date","medium"],"."],"/2ypah":["Twoja nagroda Riot Games o warto\u015Bci 10 USD czeka na odebranie"],"pjdMpI":["Odblokuj"],"YRjiSW":["Zrealizuj kod"],"r97mLn":["Nagroda w postaci kredyt\xf3w Riot"],"u113tL":["Kolejne kody s\u0105 ju\u017C w drodze! Zajrzyj tu wkr\xf3tce, aby sprawdzi\u0107 nowo\u015Bci."],"jKrPE9":["Kody do nagrody Riot Games s\u0105 obecnie niedost\u0119pne"],"en2ls2":["Odblokuj nagrod\u0119"],"8VH2lL":["Wykorzystaj nagrod\u0119 o warto\u015Bci 10 USD na kwalifikuj\u0105ce si\u0119 tre\u015Bci w grze VALORANT lub League of Legends. ",[8,"$link",["Obowi\u0105zuj\u0105 warunki."],[[1,"termsUrl"]]]],"zCdMTs":["Zrealizuj nagrod\u0119 Riot Games o warto\u015Bci 10 USD"]}',
 );

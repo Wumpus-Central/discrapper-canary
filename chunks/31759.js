@@ -1,3 +1,3 @@
-p.exports = JSON.parse(
-    '{"4g4Fpz":["4g4Fpz"],"/2ypah":["/2ypah"],"pjdMpI":["pjdMpI"],"YRjiSW":["YRjiSW"],"r97mLn":["r97mLn"],"u113tL":["u113tL"],"jKrPE9":["jKrPE9"],"en2ls2":["en2ls2"],"8VH2lL":["8VH2lL"],"zCdMTs":["zCdMTs"]}',
+a.exports = JSON.parse(
+    '{"4g4Fpz":["Lunasta palkintosi ehdot t\xe4ytt\xe4v\xe4\xe4n VALORANT- tai League of Legends \u2011pelisis\xe4lt\xf6\xf6n. Lunasta viimeist\xe4\xe4n ",[3,"date","medium"],"."],"/2ypah":["10\xa0$:n Riot Games \u2011palkintosi on valmis lunastettavaksi"],"pjdMpI":["Avaa"],"YRjiSW":["Lunasta koodi"],"r97mLn":["Riot Credits \u2011palkinto"],"u113tL":["Lis\xe4\xe4 koodeja on luvassa! Tarkista tilanne pian uudelleen."],"jKrPE9":["Riot Games \u2011palkinnon koodit eiv\xe4t juuri nyt ole saatavana"],"en2ls2":["Avaa palkinto"],"8VH2lL":["K\xe4yt\xe4 10\xa0$:n palkintosi ehdot t\xe4ytt\xe4v\xe4\xe4n VALORANT- tai League of Legends \u2011pelisis\xe4lt\xf6\xf6n. ",[8,"$link",["Tarjoukseen liittyy ehtoja."],[[1,"termsUrl"]]]],"zCdMTs":["Lunasta 10\xa0$:n Riot Games \u2011palkinto"]}',
 );
