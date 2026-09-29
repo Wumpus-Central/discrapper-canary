@@ -313,23 +313,23 @@ function e5(e) {
         ],
     });
 }
-var e7 = n(562708),
-    e2 = n(702841),
+var e2 = n(562708),
+    e7 = n(702841),
     e9 = n(139286),
     e4 = n(468689),
     te = n(375708),
     tt = n(330766);
 function tn(e) {
     let { guildId: t, markAsDismissed: n, targetElementRef: i } = e,
-        l = (0, e2.bG)([v.A, eg.default], () => {
+        l = (0, e7.bG)([v.A, eg.default], () => {
             let e = eg.default.getCurrentUser(),
                 n = v.A.getGuild(t);
             return null != n && (0, eI.bM)(n, e);
         });
     return (
         (0, e9.A)({
-            type: e7.ImpressionTypes.POPOUT,
-            name: e7.ImpressionNames.ENABLE_CREATOR_MONETIZATION_GUILD_HEADER_UPSELL,
+            type: e2.ImpressionTypes.POPOUT,
+            name: e2.ImpressionNames.ENABLE_CREATOR_MONETIZATION_GUILD_HEADER_UPSELL,
             properties: { guild_id: t, is_owner: l },
         }),
         (0, s.jsx)(c.A, {
@@ -802,8 +802,8 @@ var t$ = n(503698),
     t3 = n(116085),
     t8 = n(597601),
     t5 = n(451394),
-    t7 = n(104171),
-    t2 = n(47167),
+    t2 = n(104171),
+    t7 = n(47167),
     t9 = n(713654),
     t4 = n(976860),
     ne = n(790535),
@@ -888,7 +888,7 @@ let nI = l.memo(function (e) {
 });
 function ng(e) {
     let { guildEvent: t, channel: n } = e,
-        i = (0, t2.Ay)(n),
+        i = (0, t7.Ay)(n),
         l = (0, o.yK)(
             [R.Ay],
             () =>
@@ -933,7 +933,7 @@ function n_(e) {
         i = (0, nA.oF)(t),
         r = null != i ? (0, nu.y)(i, !0) : null,
         a = (0, nA.WN)(t),
-        o = (0, t2.Ay)(a),
+        o = (0, t7.Ay)(a),
         d = (0, t9.gU)(a),
         { startTime: u, endTime: c } = (0, nc.Ay)(t),
         { startDateTimeString: A, upcomingEvent: E, diffMinutes: h } = (0, nE.CC)(u.toISOString(), c?.toISOString()),
@@ -1074,7 +1074,7 @@ function np(e) {
 }
 function nT(e) {
     let { stageInstance: t, channel: n } = e,
-        i = (0, t2.Ay)(n),
+        i = (0, t7.Ay)(n),
         l = (0, o.yK)([S.A], () => [...new Set(S.A.getMutableParticipants(n.id, p.ip.SPEAKER).map((e) => e.user))], [
             n.id,
         ]),
@@ -1142,7 +1142,7 @@ function nM(e) {
                       ? (0, s.jsxs)("div", {
                             className: tJ()(nm.fI, nm.pF),
                             children: [
-                                (0, s.jsx)(t7.Ay, { guildId: a, users: d, showUserPopout: !0, size: t7.DN.SIZE_16 }),
+                                (0, s.jsx)(t2.Ay, { guildId: a, users: d, showUserPopout: !0, size: t2.DN.SIZE_16 }),
                                 (0, s.jsx)(ts.E, {
                                     color: "none",
                                     variant: "text-xs/normal",
@@ -1453,8 +1453,8 @@ let n0 = new nJ(I.h),
 function n5(e) {
     e.stopPropagation();
 }
-let n7 = [];
-function n2(e) {
+let n2 = [];
+function n7(e) {
     var t, n;
     let i,
         r,
@@ -1477,7 +1477,7 @@ function n2(e) {
             (c = a && u),
             l.useMemo(() => {
                 let e = [];
-                return (c && e.push(d.M.GAME_CLAIM_COACHMARK), e.length > 0 ? e : n7);
+                return (c && e.push(d.M.GAME_CLAIM_COACHMARK), e.length > 0 ? e : n2);
             }, [c])),
         [I, g] = (0, $.ww)(m, A.id, eo.m.CHANNEL_NOTICES, !0),
         C = null != I,
@@ -1543,7 +1543,7 @@ let n9 = function (e) {
         case Y.APPLICATION_SUBSCRIPTION_EXPIRATION:
             return (0, s.jsx)(nU, { guild: t });
     }
-    return nP.P.isDisallowPopupsSet() ? null : (0, s.jsx)(n2, { guild: e.guild });
+    return nP.P.isDisallowPopupsSet() ? null : (0, s.jsx)(n7, { guild: e.guild });
 };
 var n4 = n(883476);
 function ie(e) {
@@ -1969,12 +1969,11 @@ class ia extends l.PureComponent {
                     n.e("676418"),
                     n.e("875842"),
                     n.e("940258"),
-                    n.e("675706"),
                     n.e("401518"),
                     n.e("198329"),
                     n.e("571210"),
                     n.e("292583"),
-                    n.e("302969"),
+                    n.e("930233"),
                     n.e("586127"),
                     n.e("854461"),
                     n.e("173764"),
@@ -2119,10 +2118,10 @@ class ia extends l.PureComponent {
                     n.e("728136"),
                     n.e("978046"),
                     n.e("127659"),
+                    n.e("610943"),
                     n.e("66580"),
                     n.e("216084"),
                     n.e("343116"),
-                    n.e("610943"),
                     n.e("283230"),
                     n.e("582486"),
                     n.e("273669"),
@@ -2616,7 +2615,7 @@ function io(e) {
         e3 = (0, o.bG)([ez.A], () => ez.A.desyncedVoiceStatesCount),
         e8 = (0, eb.A)(D),
         e5 = (0, ee.ai)(D) ? null : e8,
-        e7 =
+        e2 =
             (function (e) {
                 let t = (0, eb.A)(e),
                     n = (0, eP.DD)(e, "useShouldShowGuildThemeMemberCoachmark"),
@@ -2629,11 +2628,11 @@ function io(e) {
                 return n && i && !s && o && !l && !1 === t;
             })(D) && !(0, ee.ai)(D);
     it.A.useConfig({ guildId: D, location: "guild_sidebar" });
-    let e2 = (0, ei.C$)(D, "GuildSidebar"),
+    let e7 = (0, ei.C$)(D, "GuildSidebar"),
         e9 = (0, o.bG)([v.A], () => v.A.getGuild(D)?.features.has(B.GuildFeatures.GAME_SERVERS) ?? !1, [D]),
-        e4 = e2 && !e9 && !1 === e5,
+        e4 = e7 && !e9 && !1 === e5,
         te = (0, es.S)(D, "GuildSidebar"),
-        tt = e2 && !e9 && te && !1 === e5,
+        tt = e7 && !e9 && te && !1 === e5,
         tn = (0, ey.A)(),
         ti = (0, eG.A)(D),
         ts = !1 === e5 && tn && null != ti,
@@ -2644,12 +2643,12 @@ function io(e) {
         eR && ta.push(d.M.GUILD_HEADER_ROLE_SUBSCRIPTION_UPSELL),
         ek && ta.push(d.M.GUILD_DISCOVERY_LANDING_PAGE_SETTINGS_UPSELL),
         !1 === e5 && ta.push(d.M.GUILD_POWERUP_PERKS_COACHMARK),
-        e7 && ta.push(d.M.GUILD_THEME_MEMBER_COACHMARK),
+        e2 && ta.push(d.M.GUILD_THEME_MEMBER_COACHMARK),
         e4 && ta.push(d.M.GAME_SERVER_HOSTING_NEW_PERK_AVAILABLE_COACHMARK),
         tt && ta.push(d.M.GAME_SERVER_PRICING_CHANGE_COACHMARK),
         e1 && ta.push(d.M.SERVER_SUBSCRIPTION_TIER_TEMPLATE_UPSELL));
     let [to, td] = (0, $.kn)(ta, eo.m.GUILD_HEADER_TOOLTIPS),
-        [tu, tc] = (0, ex.vB)(e2 && !1 === e5 && !(0, ee.ai)(D), eo.m.GUILD_HEADER_TOOLTIPS),
+        [tu, tc] = (0, ex.vB)(e7 && !1 === e5 && !(0, ee.ai)(D), eo.m.GUILD_HEADER_TOOLTIPS),
         [tA, tE] = (0, $.D8)(
             ts ? d.M.BOOST_TO_UNLOCK_COACHMARK : null,
             D,

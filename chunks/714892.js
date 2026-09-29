@@ -1,74 +1,72 @@
-a.d(t, { default: () => P });
+a.d(n, { default: () => v });
 var e = a(477900),
-    n = a(582128),
-    s = a(834730),
-    l = a(173936),
+    l = a(582128),
+    t = a(834730),
+    s = a(173936),
     o = a(691540),
-    r = a(857250),
+    d = a(857250),
     c = a(97483),
-    d = a(148494),
+    r = a(148494),
     u = a(9578),
-    m = a(688810),
-    p = a(429913),
-    C = a(914718),
+    m = a(429913),
+    p = a(914718),
     k = a(451909),
-    h = a(446244),
-    f = a(734057),
-    x = a(174459),
-    _ = a(957565),
-    g = a(403362),
-    N = a(871123),
-    I = a(366523),
-    A = a(995393),
-    E = a(652215),
-    S = a(381941),
-    j = a(375708),
-    v = a(884540);
-function L(i) {
-    let { skus: t } = i,
-        [a] = t,
-        o = (0, p.h)(a?.applicationId),
-        r = n.useMemo(() => t.map((i) => i.id), [t]),
-        c = n.useMemo(() => (null != a ? (0, N.aU)(a.applicationId, r) : ""), [a, r]),
-        d = t.length > 1 ? j.intl.formatToPlainString(j.t.j7Go5A, { count: t.length }) : a?.name;
+    _ = a(446244),
+    C = a(734057),
+    h = a(174459),
+    g = a(957565),
+    f = a(403362),
+    x = a(871123),
+    E = a(366523),
+    S = a(652215),
+    N = a(381941),
+    A = a(375708),
+    j = a(884540);
+function I(i) {
+    let { skus: n } = i,
+        [a] = n,
+        o = (0, m.h)(a?.applicationId),
+        d = l.useMemo(() => n.map((i) => i.id), [n]),
+        c = l.useMemo(() => (null != a ? (0, x.aU)(a.applicationId, d) : ""), [a, d]),
+        r = n.length > 1 ? A.intl.formatToPlainString(A.t.j7Go5A, { count: n.length }) : a?.name;
     return (0, e.jsxs)("div", {
-        className: v.sq,
+        className: j.sq,
         children: [
             (0, e.jsxs)("div", {
-                className: v.kx,
+                className: j.kx,
                 children: [
                     (0, e.jsx)(u.A, {
-                        title: d,
+                        title: r,
                         href: c,
-                        children: (0, e.jsx)(s.E, {
+                        children: (0, e.jsx)(t.E, {
                             variant: "text-md/medium",
                             color: "text-link",
                             lineClamp: 1,
-                            children: d,
+                            children: r,
                         }),
                     }),
                     (0, e.jsxs)("div", {
-                        className: v.Bo,
+                        className: j.Bo,
                         children: [
-                            (0, e.jsx)(l.LinkIcon, { size: "xs", color: "currentColor", className: v.wP }),
-                            (0, e.jsx)(s.E, {
+                            (0, e.jsx)(s.LinkIcon, { size: "xs", color: "currentColor", className: j.wP }),
+                            (0, e.jsx)(t.E, {
                                 variant: "text-sm/medium",
                                 color: "text-muted",
-                                children: j.intl.formatToPlainString(j.t["CqpEC+"], { applicationName: o?.name }),
+                                children: A.intl.formatToPlainString(A.t["CqpEC+"], { applicationName: o?.name }),
                             }),
                         ],
                     }),
                 ],
             }),
             (0, e.jsx)("div", {
-                className: v.sN,
-                children: t.map((i) =>
+                className: j.sN,
+                children: n.map((i) =>
                     (0, e.jsx)(
-                        I.e,
+                        E.e,
                         {
-                            containerClassName: v.Pq,
-                            foregroundImageClassName: v.nf,
-                            backgroundImageClassName: v.nf,
+                            containerClassName: j.Pq,
+                            foregroundImageClassName: j.nf,
+                            backgroundImageClassName: j.nf,
                             sku: i,
                             shape: "square",
                         },
@@ -79,75 +77,77 @@ function L(i) {
         ],
     });
 }
-function P(i) {
-    let { skus: t, guildId: a, source: s, onClose: u, analyticsLocations: p, analyticsContext: I, ...v } = i,
-        { analyticsLocations: P } = (0, m.Ay)(p ?? []),
-        w = n.useCallback(
-            async (i, a, e) => {
-                let { withMessage: n, closeAfterSend: s } = a;
-                e(!0);
+function v(i) {
+    let { skus: n, source: a, onClose: t, ...u } = i,
+        E = n[0]?.applicationId,
+        j = (0, m.h)(E),
+        v = l.useMemo(() => n.map((i) => i.id), [n]),
+        w = l.useCallback(
+            async (i, n, a) => {
+                let { withMessage: e, closeAfterSend: l } = n;
+                a(!0);
                 try {
-                    let a = (await Promise.all(i.map(h.pk))).filter(g.Vq);
-                    if (0 === a.length) return void e(!1);
-                    s && u();
-                    let l = t[0]?.applicationId;
-                    if (null == l) return void e(!1);
-                    let m = (0, N.c2)(
-                        l,
-                        t.map((i) => i.id),
-                    );
-                    for (let i of a) {
-                        let t = f.A.getChannel(i);
-                        null != t &&
-                            (await d.A.sendMessage(t.id, k.Ay.parse(t, m + (n ?? "")), !1, {
-                                location: S.Hx.SOCIAL_LAYER_STOREFRONT,
-                            }));
+                    let n = (await Promise.all(i.map(_.pk))).filter(f.Vq);
+                    if (0 === n.length || (l && t(), null == E)) return void a(!1);
+                    let s = (0, x.c2)(E, v);
+                    for (let i of n) {
+                        let n = C.A.getChannel(i);
+                        if (null != n) {
+                            let i = await r.A.sendMessage(n.id, k.Ay.parse(n, s + (e ?? "")), !1, {
+                                location: N.Hx.SOCIAL_LAYER_STOREFRONT,
+                            });
+                            i?.ok === !0 &&
+                                h.default.track(S.HAw.SLAYER_STOREFRONT_EMBED_SENT, {
+                                    application_id: E,
+                                    application_name: j?.name ?? null,
+                                    guild_id: (0, x.n5)(E) ?? null,
+                                    destination_guild_id: n.getGuildId() ?? null,
+                                    channel_id: n.id,
+                                    message_id: i.body?.id ?? null,
+                                    sku_ids: v,
+                                    sku_count: v.length,
+                                });
+                        }
                     }
-                    (0, o.P0)((0, r.o)(j.intl.string(j.t.kwmYkt), c.Ck.SUCCESS));
+                    (0, o.P0)((0, d.o)(A.intl.string(A.t.kwmYkt), c.Ck.SUCCESS));
                 } catch (i) {
-                    (0, o.P0)((0, r.o)(j.intl.string(j.t.iufib1), c.Ck.FAILURE));
+                    (0, o.P0)((0, d.o)(A.intl.string(A.t.iufib1), c.Ck.FAILURE));
                 } finally {
-                    e(!1);
+                    a(!1);
                 }
             },
-            [u, t],
+            [j, E, t, v],
         ),
-        y = n.useMemo(
+        P = l.useMemo(
             () => [
                 {
                     variant: "secondary",
                     text: void 0,
                     onClick: () => {
-                        x.default.track(E.HAw.SLAYER_STOREFRONT_FORWARD_MODAL_ELEMENT_CLICKED, {
-                            slayer_storefront_session_id: I?.sessionId,
-                            guild_id: a,
-                            application_id: t[0]?.applicationId,
-                            sku_id: t[0]?.id,
-                            cta_type: A.Ng.COPY_LINK_BUTTON,
-                            location_stack: P,
-                        });
-                        let i = t[0]?.applicationId;
-                        null != i &&
-                            (0, _.C)(
-                                (0, N.aU)(
-                                    i,
-                                    t.map((i) => i.id),
-                                ),
-                                () => (0, o.P0)((0, r.o)(j.intl.string(j.t["L/PwZf"]), c.Ck.SUCCESS)),
-                            );
+                        null != E &&
+                            (h.default.track(S.HAw.SLAYER_STOREFRONT_EMBED_COPY_LINK_CLICKED, {
+                                application_id: E,
+                                application_name: j?.name ?? null,
+                                guild_id: (0, x.n5)(E) ?? null,
+                                sku_ids: v,
+                                sku_count: v.length,
+                            }),
+                            (0, g.C)((0, x.aU)(E, v), () =>
+                                (0, o.P0)((0, d.o)(A.intl.string(A.t["L/PwZf"]), c.Ck.SUCCESS)),
+                            ));
                     },
-                    icon: l.LinkIcon,
+                    icon: s.LinkIcon,
                 },
             ],
-            [a, t, I?.sessionId, P],
+            [j, E, v],
         );
-    return (0, e.jsx)(C.ForwardModal, {
-        ...v,
-        onClose: u,
-        source: s,
-        customPreview: (0, e.jsx)(L, { skus: t }),
-        customSubtitle: j.intl.string(j.t.yiaXeN),
+    return (0, e.jsx)(p.ForwardModal, {
+        ...u,
+        onClose: t,
+        source: a,
+        customPreview: (0, e.jsx)(I, { skus: n }),
+        customSubtitle: A.intl.string(A.t.yiaXeN),
         customSendHandler: w,
-        additionalActions: y,
+        additionalActions: P,
     });
 }

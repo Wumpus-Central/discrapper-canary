@@ -86,7 +86,9 @@
 }
 
 .metric__86e10 {
-    align-items: flex-end
+    align-items: flex-start;
+    cursor: pointer;
+    width: 96px
 }
 
 .metricPrimary__86e10 {
@@ -98,7 +100,7 @@
 .games__86e10 {
     display: flex;
     justify-content: flex-end;
-    width: calc(var(--space-64) + var(--space-32))
+    width: 80px
 }
 
 .gameStack__86e10 {
@@ -154,6 +156,7 @@
 
 .pillarColumn_c6c010 {
     align-items: center;
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     gap: var(--space-12)
@@ -209,7 +212,6 @@
     align-items: center;
     background-color: var(--background-mod-strong);
     box-sizing: border-box;
-    cursor: pointer;
     display: flex;
     flex-direction: column;
     gap: 2px;
@@ -273,7 +275,7 @@
 }
 
 .list__95c51.inModal__95c51 {
-    max-height: calc(var(--space-40)*10)
+    max-height: calc(var(--space-40)*14)
 }
 
 .floatingRowBackground__95c51 {
@@ -296,10 +298,13 @@
     inset-block-start: 0
 }
 
-.floatingRow__95c51 {
+.currentUserRowHighlight__95c51 {
     background: linear-gradient(270deg, rgba(88, 101, 242, 0) 0, rgba(88, 101, 242, .1) 100%), var(--background-surface-highest);
     border-radius: var(--radius-sm);
-    box-shadow: inset 0 0 0 1px var(--border-subtle);
+    box-shadow: inset 0 0 0 1px var(--border-subtle)
+}
+
+.floatingRow__95c51 {
     inset-inline-end: var(--space-4);
     inset-inline-start: var(--space-4);
     position: absolute;
@@ -350,8 +355,59 @@
     padding: var(--space-12)
 }
 
+.activityBar__95c51 {
+    z-index: 4;
+    justify-content: space-between;
+    margin: var(--space-4);
+    margin-block-start: 0;
+    padding: var(--space-8)
+}
+
+.activityBar__95c51,
+.activityBarLeft__95c51 {
+    align-items: center;
+    display: flex;
+    gap: var(--space-8)
+}
+
+.activityBarLeft__95c51 {
+    flex: 1;
+    min-width: 0
+}
+
+.activityBarRank__95c51 {
+    align-items: center;
+    display: flex;
+    flex-shrink: 0;
+    height: var(--space-24);
+    justify-content: center;
+    width: var(--space-24)
+}
+
+.activityBarAvatar__95c51 {
+    flex-shrink: 0;
+    margin-inline-end: var(--space-4)
+}
+
+.activityBarText__95c51 {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-width: 0
+}
+
+.activityBarSubtitle__95c51 {
+    align-items: center;
+    display: flex;
+    gap: var(--space-4)
+}
+
+.activityBarRight__95c51 {
+    flex-shrink: 0
+}
+
 .badge__2906f {
-    background-color: var(--background-code);
+    background-color: var(--background-mod-subtle);
     border-radius: var(--radius-xs);
     cursor: pointer;
     padding: 0 var(--space-4)
@@ -398,4 +454,4 @@
     min-height: 0
 }
 
-/*# sourceMappingURL=ea006ec1c8fa65ae.css.map*/
+/*# sourceMappingURL=bd32c6366c693847.css.map*/

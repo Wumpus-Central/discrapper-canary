@@ -1,394 +1,397 @@
-(i.r(t), i.d(t, { default: () => eE }));
-var l = i(477900),
-    n = i(582128),
-    s = i(503698),
-    a = i.n(s),
-    r = i(435558),
-    d = i(506774),
-    o = i(297264),
-    c = i(408278),
-    u = i(807072),
-    m = i(289873),
-    f = i(761508),
-    x = i(707554),
-    h = i(761929),
-    g = i(429913),
-    v = i(793943),
-    j = i(409626),
-    p = i(692969),
-    A = i(381999),
-    N = i(147964),
-    b = i(17928),
-    I = i(834730),
-    y = i(821609),
-    C = i(292801),
-    E = i(638916),
-    S = i(871123),
-    D = i(192308),
-    O = i(294454),
-    R = i(366523),
-    T = i(67480),
-    _ = i(976860),
-    k = i(832163),
-    w = i(44724),
-    L = i(375708),
-    W = i(621547),
-    G = i(326941);
-let M = "embed-builder";
-function F(e) {
-    let { applicationId: t } = e,
-        { actions: i } = (0, A.qZ)((e) => e);
-    return (0, l.jsxs)("div", {
-        className: G.hA,
+(l.r(t), l.d(t, { default: () => eR }));
+var i = l(477900),
+    n = l(582128),
+    s = l(503698),
+    a = l.n(s),
+    r = l(435558),
+    d = l(506774),
+    o = l(297264),
+    c = l(408278),
+    u = l(807072),
+    m = l(289873),
+    f = l(761508),
+    x = l(707554),
+    h = l(761929),
+    g = l(429913),
+    p = l(793943),
+    v = l(409626),
+    j = l(692969),
+    A = l(381999),
+    N = l(147964),
+    E = l(17928),
+    I = l(834730),
+    b = l(821609),
+    _ = l(292801),
+    S = l(638916),
+    C = l(871123),
+    R = l(192308),
+    y = l(294454),
+    D = l(366523),
+    T = l(67480),
+    O = l(174459),
+    k = l(976860),
+    w = l(832163),
+    L = l(44724),
+    W = l(652215),
+    G = l(375708),
+    M = l(621547),
+    F = l(326941);
+let B = "embed-builder";
+function P(e) {
+    let { applicationId: t, applicationName: l } = e,
+        { actions: n } = (0, A.qZ)((e) => e);
+    return (0, i.jsxs)("div", {
+        className: F.hA,
         children: [
-            (0, l.jsx)("div", {
-                className: G.wx,
-                children: (0, l.jsx)(o.D, {
+            (0, i.jsx)("div", {
+                className: F.wx,
+                children: (0, i.jsx)(o.D, {
                     variant: "heading-lg/semibold",
-                    children: L.intl.string(W.default.Z3uXLR),
+                    children: G.intl.string(M.default.Z3uXLR),
                 }),
             }),
-            (0, l.jsx)(I.E, {
+            (0, i.jsx)(I.E, {
                 variant: "text-md/medium",
                 color: "text-subtle",
-                children: L.intl.string(W.default.sS4xGd),
+                children: G.intl.string(M.default.sS4xGd),
             }),
-            (0, l.jsx)("div", {
-                children: (0, l.jsx)(y.$, {
+            (0, i.jsx)("div", {
+                children: (0, i.jsx)(b.$, {
                     fullWidth: !0,
                     variant: "primary",
                     size: "sm",
-                    text: L.intl.string(W.default.fr7qnZ),
+                    text: G.intl.string(M.default.fr7qnZ),
                     onClick: function () {
-                        if (!i.startMultiselect({ applicationId: t, key: M, maxSelections: 6 })) return;
-                        let { pathname: e, search: l } = (0, _.JK)().location,
-                            n = k.A.getGuildIdFromApplicationId(t);
-                        (0, S.rG)(e, l, t, n) || (0, w.default)({ applicationId: t });
+                        if (!n.startMultiselect({ applicationId: t, key: B, maxSelections: 6 })) return;
+                        O.default.track(W.HAw.SLAYER_STOREFRONT_EMBED_BUILDER_STARTED, {
+                            application_id: t,
+                            application_name: l,
+                            guild_id: (0, C.n5)(t) ?? null,
+                        });
+                        let { pathname: e, search: i } = (0, k.JK)().location,
+                            s = w.A.getGuildIdFromApplicationId(t);
+                        (0, C.rG)(e, i, t, s) || (0, L.default)({ applicationId: t });
                     },
                 }),
             }),
         ],
     });
 }
-var P = i(367224);
-function B() {
-    let { selectedIds: e, actions: t } = (0, A.qZ)((e) => e),
-        n = (0, b.yK)([T.A], () => [...e].map((e) => T.A.get(e)), [e]);
-    return (0, l.jsxs)("div", {
-        className: P.hA,
+var V = l(367224);
+function z() {
+    let { config: e, selectedIds: t, actions: n } = (0, A.qZ)((e) => e),
+        s = e?.applicationId,
+        a = (0, g.h)(s),
+        r = (0, E.yK)([T.A], () => [...t].map((e) => T.A.get(e)), [t]);
+    return (0, i.jsxs)("div", {
+        className: V.hA,
         children: [
-            (0, l.jsxs)("div", {
-                className: P.rf,
+            (0, i.jsxs)("div", {
+                className: V.rf,
                 children: [
-                    (0, l.jsx)(o.D, { variant: "heading-lg/semibold", children: L.intl.string(W.default.Z3uXLR) }),
-                    (0, l.jsx)(I.E, {
+                    (0, i.jsx)(o.D, { variant: "heading-lg/semibold", children: G.intl.string(M.default.Z3uXLR) }),
+                    (0, i.jsx)(I.E, {
                         variant: "text-md/medium",
                         color: "text-subtle",
-                        children: L.intl.string(W.default.sS4xGd),
+                        children: G.intl.string(M.default.sS4xGd),
                     }),
-                    (0, l.jsxs)("div", {
-                        className: P.t8,
+                    (0, i.jsxs)("div", {
+                        className: V.t8,
                         children: [
-                            (0, l.jsx)(I.E, {
+                            (0, i.jsx)(I.E, {
                                 variant: "text-xs/medium",
                                 color: "text-subtle",
-                                children: L.intl.formatToPlainString(W.default.mmTvZn, { count: e.size, max: 6 }),
+                                children: G.intl.formatToPlainString(M.default.mmTvZn, { count: t.size, max: 6 }),
                             }),
-                            (0, l.jsx)("div", {
-                                className: P.Mc,
-                                children: n.map((e, t) =>
-                                    (0, l.jsx)(V, { sku: e, doubleWidth: 0 === t && n.length % 2 == 1 }, e.id),
+                            (0, i.jsx)("div", {
+                                className: V.Mc,
+                                children: r.map((e, t) =>
+                                    (0, i.jsx)(K, { sku: e, doubleWidth: 0 === t && r.length % 2 == 1 }, e.id),
                                 ),
                             }),
                         ],
                     }),
                 ],
             }),
-            (0, l.jsxs)("div", {
-                className: P.o1,
+            (0, i.jsxs)("div", {
+                className: V.o1,
                 children: [
-                    (0, l.jsx)(y.$, {
-                        icon: C.t,
-                        disabled: 0 === e.size,
-                        text: L.intl.string(W.default.ozurym),
+                    (0, i.jsx)(b.$, {
+                        icon: _.t,
+                        disabled: 0 === t.size,
+                        text: G.intl.string(M.default.ozurym),
                         variant: "primary",
                         fullWidth: !0,
                         onClick: function () {
-                            (t.endMultiselect(M),
+                            null != s &&
+                                (O.default.track(W.HAw.SLAYER_STOREFRONT_EMBED_SHARE_CLICKED, {
+                                    application_id: s,
+                                    application_name: a?.name ?? null,
+                                    guild_id: (0, C.n5)(s) ?? null,
+                                    sku_ids: r.map((e) => e.id),
+                                    sku_count: r.length,
+                                }),
+                                n.endMultiselect(B),
                                 ((e) => {
-                                    let {
-                                        skus: t,
-                                        guildId: n,
-                                        source: s,
-                                        analyticsLocations: a,
-                                        analyticsContext: r,
-                                    } = e;
+                                    let { skus: t, source: n } = e;
                                     0 !== t.length &&
-                                        (0, D.openModalLazy)(
+                                        (0, R.openModalLazy)(
                                             async () => {
                                                 let { default: e } = await Promise.all([
-                                                    i.e("325522"),
-                                                    i.e("401317"),
-                                                    i.e("862735"),
-                                                    i.e("476988"),
-                                                    i.e("552653"),
-                                                    i.e("311580"),
-                                                    i.e("174554"),
-                                                    i.e("116815"),
-                                                    i.e("82389"),
-                                                    i.e("812720"),
-                                                    i.e("891089"),
-                                                    i.e("371496"),
-                                                    i.e("196063"),
-                                                    i.e("392028"),
-                                                    i.e("124054"),
-                                                    i.e("441674"),
-                                                    i.e("419656"),
-                                                    i.e("67702"),
-                                                    i.e("702154"),
-                                                    i.e("85427"),
-                                                    i.e("51872"),
-                                                    i.e("560570"),
-                                                    i.e("334324"),
-                                                    i.e("64769"),
-                                                    i.e("992956"),
-                                                    i.e("880150"),
-                                                    i.e("490743"),
-                                                    i.e("7452"),
-                                                    i.e("529787"),
-                                                    i.e("309499"),
-                                                    i.e("415695"),
-                                                    i.e("591114"),
-                                                    i.e("691398"),
-                                                    i.e("266201"),
-                                                    i.e("752704"),
-                                                    i.e("56606"),
-                                                    i.e("227652"),
-                                                    i.e("629972"),
-                                                    i.e("40791"),
-                                                    i.e("358404"),
-                                                    i.e("245758"),
-                                                    i.e("561672"),
-                                                    i.e("977306"),
-                                                    i.e("847980"),
-                                                    i.e("957251"),
-                                                    i.e("677624"),
-                                                    i.e("879641"),
-                                                    i.e("720210"),
-                                                    i.e("98857"),
-                                                    i.e("495628"),
-                                                    i.e("390430"),
-                                                    i.e("326605"),
-                                                    i.e("644289"),
-                                                    i.e("460915"),
-                                                    i.e("675582"),
-                                                    i.e("79324"),
-                                                    i.e("192388"),
-                                                    i.e("165994"),
-                                                    i.e("652091"),
-                                                    i.e("996907"),
-                                                    i.e("657503"),
-                                                    i.e("377989"),
-                                                    i.e("797845"),
-                                                    i.e("867721"),
-                                                    i.e("567999"),
-                                                    i.e("156032"),
-                                                    i.e("267526"),
-                                                    i.e("377265"),
-                                                    i.e("400088"),
-                                                    i.e("35328"),
-                                                    i.e("915170"),
-                                                    i.e("296956"),
-                                                    i.e("334168"),
-                                                    i.e("582012"),
-                                                    i.e("468787"),
-                                                    i.e("650387"),
-                                                    i.e("195719"),
-                                                    i.e("678906"),
-                                                    i.e("358931"),
-                                                    i.e("168248"),
-                                                    i.e("533240"),
-                                                    i.e("962953"),
-                                                    i.e("434168"),
-                                                    i.e("59565"),
-                                                    i.e("456885"),
-                                                    i.e("459086"),
-                                                    i.e("61531"),
-                                                    i.e("177086"),
-                                                    i.e("319714"),
-                                                    i.e("189281"),
-                                                    i.e("205035"),
-                                                    i.e("911680"),
-                                                    i.e("267732"),
-                                                    i.e("225307"),
-                                                    i.e("332165"),
-                                                    i.e("618416"),
-                                                    i.e("524434"),
-                                                    i.e("90343"),
-                                                    i.e("842760"),
-                                                    i.e("424199"),
-                                                    i.e("342551"),
-                                                    i.e("247932"),
-                                                    i.e("985788"),
-                                                    i.e("720157"),
-                                                    i.e("454048"),
-                                                    i.e("481647"),
-                                                    i.e("776602"),
-                                                    i.e("300699"),
-                                                    i.e("140402"),
-                                                    i.e("349619"),
-                                                    i.e("599666"),
-                                                    i.e("543039"),
-                                                    i.e("721690"),
-                                                    i.e("264236"),
-                                                    i.e("253729"),
-                                                    i.e("117268"),
-                                                    i.e("161379"),
-                                                    i.e("740428"),
-                                                    i.e("832817"),
-                                                    i.e("398125"),
-                                                    i.e("827708"),
-                                                    i.e("221825"),
-                                                    i.e("416143"),
-                                                    i.e("901555"),
-                                                    i.e("930758"),
-                                                    i.e("234236"),
-                                                    i.e("295366"),
-                                                    i.e("28154"),
-                                                    i.e("844695"),
-                                                    i.e("948804"),
-                                                    i.e("988077"),
-                                                    i.e("593600"),
-                                                    i.e("431011"),
-                                                    i.e("561216"),
-                                                    i.e("50015"),
-                                                    i.e("707826"),
-                                                    i.e("475166"),
-                                                    i.e("417286"),
-                                                    i.e("829177"),
-                                                    i.e("199999"),
-                                                    i.e("106943"),
-                                                    i.e("232551"),
-                                                    i.e("482815"),
-                                                    i.e("631644"),
-                                                    i.e("892340"),
-                                                    i.e("611523"),
-                                                    i.e("313681"),
-                                                    i.e("672727"),
-                                                    i.e("675706"),
-                                                    i.e("772493"),
-                                                    i.e("401518"),
-                                                    i.e("444376"),
-                                                    i.e("170653"),
-                                                    i.e("147786"),
-                                                    i.e("770697"),
-                                                    i.e("318546"),
-                                                    i.e("123216"),
-                                                    i.e("854461"),
-                                                    i.e("936320"),
-                                                    i.e("190889"),
-                                                    i.e("790244"),
-                                                    i.e("851130"),
-                                                    i.e("718573"),
-                                                    i.e("418943"),
-                                                    i.e("784103"),
-                                                    i.e("958428"),
-                                                    i.e("317225"),
-                                                    i.e("390098"),
-                                                    i.e("499941"),
-                                                    i.e("809915"),
-                                                    i.e("34472"),
-                                                    i.e("757364"),
-                                                    i.e("53374"),
-                                                    i.e("710638"),
-                                                    i.e("696123"),
-                                                    i.e("236676"),
-                                                    i.e("631825"),
-                                                    i.e("696443"),
-                                                    i.e("361626"),
-                                                    i.e("731390"),
-                                                    i.e("799657"),
-                                                    i.e("252574"),
-                                                    i.e("747017"),
-                                                    i.e("146248"),
-                                                    i.e("715391"),
-                                                    i.e("445421"),
-                                                    i.e("126780"),
-                                                    i.e("401827"),
-                                                    i.e("570506"),
-                                                    i.e("761935"),
-                                                    i.e("592731"),
-                                                    i.e("511527"),
-                                                    i.e("478476"),
-                                                    i.e("103730"),
-                                                    i.e("763070"),
-                                                    i.e("193158"),
-                                                    i.e("502018"),
-                                                    i.e("757598"),
-                                                    i.e("452299"),
-                                                    i.e("400954"),
-                                                    i.e("61129"),
-                                                    i.e("249366"),
-                                                    i.e("105136"),
-                                                    i.e("115754"),
-                                                    i.e("728633"),
-                                                    i.e("314805"),
-                                                    i.e("173547"),
-                                                    i.e("599141"),
-                                                    i.e("398082"),
-                                                    i.e("434691"),
-                                                    i.e("515572"),
-                                                    i.e("225990"),
-                                                    i.e("636126"),
-                                                    i.e("562168"),
-                                                    i.e("636989"),
-                                                    i.e("244721"),
-                                                    i.e("401590"),
-                                                    i.e("8563"),
-                                                    i.e("416311"),
-                                                    i.e("377766"),
-                                                    i.e("148660"),
-                                                    i.e("30517"),
-                                                    i.e("577084"),
-                                                    i.e("844780"),
-                                                    i.e("979630"),
-                                                    i.e("236946"),
-                                                    i.e("935948"),
-                                                    i.e("464704"),
-                                                    i.e("692639"),
-                                                    i.e("890480"),
-                                                    i.e("440963"),
-                                                    i.e("565617"),
-                                                    i.e("766031"),
-                                                    i.e("394317"),
-                                                    i.e("744385"),
-                                                    i.e("84755"),
-                                                    i.e("179271"),
-                                                    i.e("304329"),
-                                                    i.e("233817"),
-                                                    i.e("85460"),
-                                                    i.e("773437"),
-                                                ]).then(i.bind(i, 714892));
-                                                return (i) =>
-                                                    (0, l.jsx)(e, {
-                                                        ...i,
-                                                        skus: t,
-                                                        guildId: n,
-                                                        source: s,
-                                                        analyticsLocations: a,
-                                                        analyticsContext: r,
-                                                    });
+                                                    l.e("325522"),
+                                                    l.e("401317"),
+                                                    l.e("862735"),
+                                                    l.e("476988"),
+                                                    l.e("552653"),
+                                                    l.e("311580"),
+                                                    l.e("174554"),
+                                                    l.e("116815"),
+                                                    l.e("82389"),
+                                                    l.e("812720"),
+                                                    l.e("891089"),
+                                                    l.e("371496"),
+                                                    l.e("196063"),
+                                                    l.e("392028"),
+                                                    l.e("124054"),
+                                                    l.e("441674"),
+                                                    l.e("419656"),
+                                                    l.e("67702"),
+                                                    l.e("702154"),
+                                                    l.e("85427"),
+                                                    l.e("51872"),
+                                                    l.e("560570"),
+                                                    l.e("334324"),
+                                                    l.e("64769"),
+                                                    l.e("992956"),
+                                                    l.e("880150"),
+                                                    l.e("490743"),
+                                                    l.e("7452"),
+                                                    l.e("529787"),
+                                                    l.e("309499"),
+                                                    l.e("415695"),
+                                                    l.e("294546"),
+                                                    l.e("691398"),
+                                                    l.e("266201"),
+                                                    l.e("752704"),
+                                                    l.e("56606"),
+                                                    l.e("227652"),
+                                                    l.e("629972"),
+                                                    l.e("40791"),
+                                                    l.e("358404"),
+                                                    l.e("245758"),
+                                                    l.e("561672"),
+                                                    l.e("977306"),
+                                                    l.e("847980"),
+                                                    l.e("957251"),
+                                                    l.e("677624"),
+                                                    l.e("879641"),
+                                                    l.e("720210"),
+                                                    l.e("98857"),
+                                                    l.e("495628"),
+                                                    l.e("390430"),
+                                                    l.e("326605"),
+                                                    l.e("644289"),
+                                                    l.e("460915"),
+                                                    l.e("675582"),
+                                                    l.e("79324"),
+                                                    l.e("192388"),
+                                                    l.e("165994"),
+                                                    l.e("652091"),
+                                                    l.e("996907"),
+                                                    l.e("657503"),
+                                                    l.e("377989"),
+                                                    l.e("797845"),
+                                                    l.e("867721"),
+                                                    l.e("567999"),
+                                                    l.e("156032"),
+                                                    l.e("267526"),
+                                                    l.e("377265"),
+                                                    l.e("400088"),
+                                                    l.e("35328"),
+                                                    l.e("915170"),
+                                                    l.e("296956"),
+                                                    l.e("334168"),
+                                                    l.e("582012"),
+                                                    l.e("468787"),
+                                                    l.e("650387"),
+                                                    l.e("195719"),
+                                                    l.e("678906"),
+                                                    l.e("358931"),
+                                                    l.e("168248"),
+                                                    l.e("533240"),
+                                                    l.e("962953"),
+                                                    l.e("434168"),
+                                                    l.e("59565"),
+                                                    l.e("456885"),
+                                                    l.e("459086"),
+                                                    l.e("61531"),
+                                                    l.e("177086"),
+                                                    l.e("319714"),
+                                                    l.e("189281"),
+                                                    l.e("205035"),
+                                                    l.e("911680"),
+                                                    l.e("267732"),
+                                                    l.e("225307"),
+                                                    l.e("332165"),
+                                                    l.e("618416"),
+                                                    l.e("524434"),
+                                                    l.e("90343"),
+                                                    l.e("842760"),
+                                                    l.e("424199"),
+                                                    l.e("342551"),
+                                                    l.e("247932"),
+                                                    l.e("985788"),
+                                                    l.e("720157"),
+                                                    l.e("454048"),
+                                                    l.e("481647"),
+                                                    l.e("776602"),
+                                                    l.e("300699"),
+                                                    l.e("140402"),
+                                                    l.e("349619"),
+                                                    l.e("264236"),
+                                                    l.e("599666"),
+                                                    l.e("543039"),
+                                                    l.e("721690"),
+                                                    l.e("253729"),
+                                                    l.e("117268"),
+                                                    l.e("161379"),
+                                                    l.e("740428"),
+                                                    l.e("832817"),
+                                                    l.e("398125"),
+                                                    l.e("827708"),
+                                                    l.e("221825"),
+                                                    l.e("416143"),
+                                                    l.e("901555"),
+                                                    l.e("930758"),
+                                                    l.e("234236"),
+                                                    l.e("295366"),
+                                                    l.e("28154"),
+                                                    l.e("844695"),
+                                                    l.e("948804"),
+                                                    l.e("988077"),
+                                                    l.e("593600"),
+                                                    l.e("431011"),
+                                                    l.e("561216"),
+                                                    l.e("50015"),
+                                                    l.e("707826"),
+                                                    l.e("475166"),
+                                                    l.e("417286"),
+                                                    l.e("829177"),
+                                                    l.e("199999"),
+                                                    l.e("106943"),
+                                                    l.e("232551"),
+                                                    l.e("482815"),
+                                                    l.e("631644"),
+                                                    l.e("892340"),
+                                                    l.e("611523"),
+                                                    l.e("313681"),
+                                                    l.e("672727"),
+                                                    l.e("772493"),
+                                                    l.e("401518"),
+                                                    l.e("444376"),
+                                                    l.e("170653"),
+                                                    l.e("147786"),
+                                                    l.e("770697"),
+                                                    l.e("318546"),
+                                                    l.e("123216"),
+                                                    l.e("854461"),
+                                                    l.e("936320"),
+                                                    l.e("190889"),
+                                                    l.e("790244"),
+                                                    l.e("851130"),
+                                                    l.e("718573"),
+                                                    l.e("418943"),
+                                                    l.e("784103"),
+                                                    l.e("958428"),
+                                                    l.e("317225"),
+                                                    l.e("390098"),
+                                                    l.e("499941"),
+                                                    l.e("809915"),
+                                                    l.e("34472"),
+                                                    l.e("757364"),
+                                                    l.e("53374"),
+                                                    l.e("710638"),
+                                                    l.e("696123"),
+                                                    l.e("236676"),
+                                                    l.e("631825"),
+                                                    l.e("696443"),
+                                                    l.e("361626"),
+                                                    l.e("731390"),
+                                                    l.e("799657"),
+                                                    l.e("252574"),
+                                                    l.e("747017"),
+                                                    l.e("146248"),
+                                                    l.e("715391"),
+                                                    l.e("445421"),
+                                                    l.e("126780"),
+                                                    l.e("401827"),
+                                                    l.e("570506"),
+                                                    l.e("761935"),
+                                                    l.e("592731"),
+                                                    l.e("511527"),
+                                                    l.e("478476"),
+                                                    l.e("103730"),
+                                                    l.e("763070"),
+                                                    l.e("371482"),
+                                                    l.e("193158"),
+                                                    l.e("502018"),
+                                                    l.e("757598"),
+                                                    l.e("452299"),
+                                                    l.e("400954"),
+                                                    l.e("61129"),
+                                                    l.e("249366"),
+                                                    l.e("105136"),
+                                                    l.e("115754"),
+                                                    l.e("728633"),
+                                                    l.e("314805"),
+                                                    l.e("173547"),
+                                                    l.e("599141"),
+                                                    l.e("398082"),
+                                                    l.e("434691"),
+                                                    l.e("515572"),
+                                                    l.e("225990"),
+                                                    l.e("636126"),
+                                                    l.e("562168"),
+                                                    l.e("636989"),
+                                                    l.e("610449"),
+                                                    l.e("401590"),
+                                                    l.e("8563"),
+                                                    l.e("416311"),
+                                                    l.e("377766"),
+                                                    l.e("148660"),
+                                                    l.e("30517"),
+                                                    l.e("577084"),
+                                                    l.e("844780"),
+                                                    l.e("979630"),
+                                                    l.e("236946"),
+                                                    l.e("935948"),
+                                                    l.e("464704"),
+                                                    l.e("692639"),
+                                                    l.e("890480"),
+                                                    l.e("440963"),
+                                                    l.e("565617"),
+                                                    l.e("766031"),
+                                                    l.e("394317"),
+                                                    l.e("744385"),
+                                                    l.e("84755"),
+                                                    l.e("179271"),
+                                                    l.e("304329"),
+                                                    l.e("233817"),
+                                                    l.e("85460"),
+                                                    l.e("773437"),
+                                                ]).then(l.bind(l, 714892));
+                                                return (l) => (0, i.jsx)(e, { ...l, skus: t, source: n });
                                             },
-                                            { stackingBehavior: "stack", modalKey: O.aU },
+                                            { stackingBehavior: "stack", modalKey: y.aU },
                                         );
-                                })({ skus: n, guildId: void 0, source: "social-layer-storefront-embed" }));
+                                })({ skus: r, source: "social-layer-storefront-embed" }));
                         },
                     }),
-                    (0, l.jsx)(y.$, {
-                        text: L.intl.string(L.t["ETE/oC"]),
+                    (0, i.jsx)(b.$, {
+                        text: G.intl.string(G.t["ETE/oC"]),
                         variant: "secondary",
                         onClick: function () {
-                            t.endMultiselect(M);
+                            n.endMultiselect(B);
                         },
                     }),
                 ],
@@ -396,51 +399,51 @@ function B() {
         ],
     });
 }
-function V(e) {
-    let { sku: t, doubleWidth: i } = e,
-        n = (0, S.fq)(t),
-        s = (0, S.xf)(t);
-    return (0, l.jsx)("div", {
-        className: a()(P.hu, i && P.m4),
+function K(e) {
+    let { sku: t, doubleWidth: l } = e,
+        n = (0, C.fq)(t),
+        s = (0, C.xf)(t);
+    return (0, i.jsx)("div", {
+        className: a()(V.hu, l && V.m4),
         children:
             null != n
-                ? (0, l.jsx)(R.A, {
-                      containerClassName: P.Vl,
-                      foregroundImageClassName: P.wP,
+                ? (0, i.jsx)(D.A, {
+                      containerClassName: V.Vl,
+                      foregroundImageClassName: V.wP,
                       cardImage: n,
                       altText: t.name,
                       shape: "custom",
-                      backgroundImageClassName: P.GC,
+                      backgroundImageClassName: V.GC,
                       cardBackgroundImage: s,
                       cssPosition: "absolute",
                   })
-                : (0, l.jsx)("div", {
-                      className: P.t7,
-                      children: (0, l.jsx)(E.q, {
+                : (0, i.jsx)("div", {
+                      className: V.t7,
+                      children: (0, i.jsx)(S.q, {
                           color: "white",
                           size: "custom",
                           height: 80,
                           width: 80,
-                          className: P.Cw,
+                          className: V.Cw,
                       }),
                   }),
     });
 }
-var z = i(156454),
-    K = i(933958),
-    Z = i(869003),
-    U = i(793574),
-    q = i(688810),
-    J = i(206828),
-    $ = i(487431),
-    H = i(712440),
-    Q = i(134861),
-    X = i(942370),
-    Y = i(538524),
-    ee = i(712289);
-function et(e) {
+var Z = l(156454),
+    U = l(933958),
+    q = l(869003),
+    H = l(793574),
+    J = l(688810),
+    $ = l(206828),
+    Q = l(487431),
+    X = l(712440),
+    Y = l(134861),
+    ee = l(942370),
+    et = l(538524),
+    el = l(712289);
+function ei(e) {
     let { application: t } = e,
-        { analyticsLocations: i } = (0, q.Ay)(U.A.SDK_DEBUG_TOOLS),
+        { analyticsLocations: l } = (0, J.Ay)(H.A.SDK_DEBUG_TOOLS),
         {
             canStartAuthorization: n,
             hasAlreadyLinked: s,
@@ -448,101 +451,101 @@ function et(e) {
             chosenFlow: r,
             connectionApp: d,
             debug: { isSubscribedToAuthorizeRequest: o, oauth2Token: c, hasConnectionEntrypointUrl: u, validFlows: m },
-        } = (0, J.RD)(t, { debug: !0 }),
-        f = (0, b.bG)([Q.A], () => Q.A.isConnected(t.id)),
-        x = (0, p.A)({ applicationId: t.id, source: j.GameProfileSources.DevTools, trackEntryPointImpression: !1 }),
-        h = (0, b.bG)([K.Ay], () => K.Ay.getSelfEmbeddedActivities());
-    return (0, l.jsxs)(l.Fragment, {
+        } = (0, $.RD)(t, { debug: !0 }),
+        f = (0, E.bG)([Y.A], () => Y.A.isConnected(t.id)),
+        x = (0, j.A)({ applicationId: t.id, source: v.GameProfileSources.DevTools, trackEntryPointImpression: !1 }),
+        h = (0, E.bG)([U.Ay], () => U.Ay.getSelfEmbeddedActivities());
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, l.jsxs)("div", {
-                className: ee.r,
+            (0, i.jsxs)("div", {
+                className: el.r,
                 children: [
-                    (0, l.jsx)(I.E, {
+                    (0, i.jsx)(I.E, {
                         variant: "text-md/medium",
                         color: "text-subtle",
-                        children: L.intl.string(Y.default["no+FQS"]),
+                        children: G.intl.string(et.default["no+FQS"]),
                     }),
-                    (0, l.jsx)($.VT, {
-                        flow: X._.RPC,
-                        overallStatus: o ? $.nW.OVERALL_GOOD : f ? $.nW.WARN : $.nW.OVERALL_BAD,
-                        name: L.intl.string(Y.default.AGLx00),
+                    (0, i.jsx)(Q.VT, {
+                        flow: ee._.RPC,
+                        overallStatus: o ? Q.nW.OVERALL_GOOD : f ? Q.nW.WARN : Q.nW.OVERALL_BAD,
+                        name: G.intl.string(et.default.AGLx00),
                         steps: [
                             {
-                                status: f ? $.nW.GOOD : $.nW.BAD,
-                                text: L.intl.string(Y.default.kxF9br),
-                                description: f ? null : L.intl.string(Y.default.PFxxJa),
+                                status: f ? Q.nW.GOOD : Q.nW.BAD,
+                                text: G.intl.string(et.default.kxF9br),
+                                description: f ? null : G.intl.string(et.default.PFxxJa),
                                 learnMoreLink: f
                                     ? null
                                     : "https://discord.com/developers/docs/discord-social-sdk/how-to/debug-log",
                             },
                             {
-                                status: o ? $.nW.GOOD : f ? $.nW.WARN : $.nW.BAD,
-                                text: L.intl.string(Y.default.S94dzs),
-                                description: o || !f ? null : L.intl.string(Y.default.aTULMB),
+                                status: o ? Q.nW.GOOD : f ? Q.nW.WARN : Q.nW.BAD,
+                                text: G.intl.string(et.default.S94dzs),
+                                description: o || !f ? null : G.intl.string(et.default.aTULMB),
                                 learnMoreLink:
                                     o || !f
                                         ? null
                                         : "https://discord.com/developers/docs/discord-social-sdk/how-to/debug-log",
                             },
                         ],
-                        isChosen: r === X._.RPC,
+                        isChosen: r === ee._.RPC,
                     }),
-                    (0, l.jsx)($.VT, {
-                        flow: X._.WEB,
-                        overallStatus: u ? $.nW.OVERALL_GOOD : $.nW.OVERALL_BAD,
-                        name: L.intl.string(Y.default.K3ObrU),
+                    (0, i.jsx)(Q.VT, {
+                        flow: ee._.WEB,
+                        overallStatus: u ? Q.nW.OVERALL_GOOD : Q.nW.OVERALL_BAD,
+                        name: G.intl.string(et.default.K3ObrU),
                         steps: [
                             {
-                                status: u ? $.nW.GOOD : $.nW.BAD,
-                                text: L.intl.string(Y.default["8a7IrV"]),
+                                status: u ? Q.nW.GOOD : Q.nW.BAD,
+                                text: G.intl.string(et.default["8a7IrV"]),
                                 description: u
-                                    ? L.intl.formatToPlainString(Y.default["9iLeL2"], {
+                                    ? G.intl.formatToPlainString(et.default["9iLeL2"], {
                                           url: d?.connectionEntrypointUrl,
                                       })
                                     : null,
                             },
                         ],
-                        isChosen: r === X._.WEB,
+                        isChosen: r === ee._.WEB,
                     }),
                 ],
             }),
-            (0, l.jsxs)("div", {
-                className: ee.q,
+            (0, i.jsxs)("div", {
+                className: el.q,
                 children: [
-                    (0, l.jsx)($.Sy, {
-                        status: s ? $.nW.OVERALL_GOOD : $.nW.OVERALL_BAD,
-                        text: L.intl.string(L.t["Vu/zmQ"]),
+                    (0, i.jsx)(Q.Sy, {
+                        status: s ? Q.nW.OVERALL_GOOD : Q.nW.OVERALL_BAD,
+                        text: G.intl.string(G.t["Vu/zmQ"]),
                     }),
                     0 === m.length &&
-                        (0, l.jsx)(I.E, {
+                        (0, i.jsx)(I.E, {
                             style: { minWidth: 0, overflow: "hidden" },
                             variant: "text-md/medium",
-                            children: L.intl.string(Y.default.eg0mNa),
+                            children: G.intl.string(et.default.eg0mNa),
                         }),
-                    (0, l.jsx)(y.$, {
+                    (0, i.jsx)(b.$, {
                         variant: "secondary",
                         disabled: !n || s,
-                        onClick: () => a({ analyticsLocations: i }),
-                        text: L.intl.string(Y.default.w0pN4R),
+                        onClick: () => a({ analyticsLocations: l }),
+                        text: G.intl.string(et.default.w0pN4R),
                         fullWidth: !0,
                     }),
                     null != c &&
-                        (0, l.jsx)(y.$, {
+                        (0, i.jsx)(b.$, {
                             variant: "secondary",
                             onClick: () => {
-                                H.A.delete(c.id);
+                                X.A.delete(c.id);
                                 let e = h.get(t.id);
                                 null != e &&
-                                    Z.A.leaveActivity({ location: e.location, applicationId: t.id, showFeedback: !1 });
+                                    q.A.leaveActivity({ location: e.location, applicationId: t.id, showFeedback: !1 });
                             },
-                            text: L.intl.string(Y.default.tkIymA),
+                            text: G.intl.string(et.default.tkIymA),
                             fullWidth: !0,
                         }),
-                    (0, l.jsx)(y.$, {
+                    (0, i.jsx)(b.$, {
                         variant: "secondary",
                         onClick: x ?? void 0,
                         disabled: null == x,
-                        text: L.intl.string(Y.default.cCvdJy),
+                        text: G.intl.string(et.default.cCvdJy),
                         fullWidth: !0,
                     }),
                 ],
@@ -550,72 +553,72 @@ function et(e) {
         ],
     });
 }
-var ei = i(404778);
-let el = (0, i(945810).mj)({
+var en = l(404778);
+let es = (0, l(945810).mj)({
     name: "2026-09-multisku-embed-builder",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-var en = i(661531),
-    es = i(144228),
-    ea = i(702860),
-    er = i(406810),
-    ed = i(628284),
-    eo = i(285796),
-    ec = i(785562),
-    eu = i(379418),
-    em = i(733391),
-    ef = i(220334);
-function ex(e) {
-    let t = (0, eu.WA)({ timestamp: String(Math.floor(e.getTime() / 1e3)), format: "R" });
-    return null != t ? (0, l.jsx)(ec.A, { node: t }) : null;
+var ea = l(661531),
+    er = l(144228),
+    ed = l(702860),
+    eo = l(406810),
+    ec = l(628284),
+    eu = l(285796),
+    em = l(785562),
+    ef = l(379418),
+    ex = l(733391),
+    eh = l(220334);
+function eg(e) {
+    let t = (0, ef.WA)({ timestamp: String(Math.floor(e.getTime() / 1e3)), format: "R" });
+    return null != t ? (0, i.jsx)(em.A, { node: t }) : null;
 }
-function eh(e) {
+function ep(e) {
     let { applicationId: t } = e,
-        i = (0, z.A)({ applicationId: t }),
-        { entries: s } = (0, z.T)(t),
-        a = s.find((e) => e.id === i.selectedStorefrontId),
-        r = null == i.selectedStorefrontId || null == a,
-        d = null != i.selectedStorefrontId && i.selectedStorefrontId === i.liveStorefrontId,
+        l = (0, Z.A)({ applicationId: t }),
+        { entries: s } = (0, Z.T)(t),
+        a = s.find((e) => e.id === l.selectedStorefrontId),
+        r = null == l.selectedStorefrontId || null == a,
+        d = null != l.selectedStorefrontId && l.selectedStorefrontId === l.liveStorefrontId,
         o = n.useMemo(
             () =>
                 s.map((e) => {
                     var t;
-                    let l;
+                    let i;
                     return {
                         name:
-                            ((t = e.id === i.liveStorefrontId),
-                            (l = "" !== e.title ? e.title : L.intl.string(W.default.OvBwPV)),
+                            ((t = e.id === l.liveStorefrontId),
+                            (i = "" !== e.title ? e.title : G.intl.string(M.default.OvBwPV)),
                             t
-                                ? L.intl.formatToPlainString(W.default.eF1VJh, { title: l })
+                                ? G.intl.formatToPlainString(M.default.eF1VJh, { title: i })
                                 : null == e.publishedAt
-                                  ? L.intl.formatToPlainString(W.default.dX2mQt, { title: l })
-                                  : l),
+                                  ? G.intl.formatToPlainString(M.default.dX2mQt, { title: i })
+                                  : i),
                         value: e.id,
                     };
                 }),
-            [s, i.liveStorefrontId],
+            [s, l.liveStorefrontId],
         ),
         c = n.useCallback(
             (e) => {
-                (0, em.ZR)(t, e === i.liveStorefrontId ? null : e);
+                (0, ex.ZR)(t, e === l.liveStorefrontId ? null : e);
             },
-            [i.liveStorefrontId, t],
+            [l.liveStorefrontId, t],
         );
-    return (0, l.jsxs)("div", {
-        className: ef.u,
+    return (0, i.jsxs)("div", {
+        className: eh.u,
         children: [
-            (0, l.jsx)(eg, { isLoading: r, isLive: d, publishedAt: a?.publishedAt }),
+            (0, i.jsx)(ev, { isLoading: r, isLive: d, publishedAt: a?.publishedAt }),
             s.length > 1 &&
-                (0, l.jsxs)(l.Fragment, {
+                (0, i.jsxs)(i.Fragment, {
                     children: [
-                        (0, l.jsx)(ei.c, {}),
-                        (0, l.jsx)("div", {
-                            children: (0, l.jsx)(es.z, {
-                                label: L.intl.string(W.default["3nB2PV"]),
+                        (0, i.jsx)(en.c, {}),
+                        (0, i.jsx)("div", {
+                            children: (0, i.jsx)(er.z, {
+                                label: G.intl.string(M.default["3nB2PV"]),
                                 options: o,
-                                value: i.selectedStorefrontId,
+                                value: l.selectedStorefrontId,
                                 onChange: c,
                             }),
                         }),
@@ -624,125 +627,128 @@ function eh(e) {
         ],
     });
 }
-function eg(e) {
+function ev(e) {
     let t,
-        i,
+        l,
         { publishedAt: s, isLive: a, isLoading: r } = e,
         [d] = n.useState(() => Date.now());
     return (
         r
-            ? ((t = L.intl.string(L.t.ZTNur7)), (i = (0, l.jsx)(m.y, { type: m.y.Type.SPINNING_CIRCLE_SIMPLE })))
+            ? ((t = G.intl.string(G.t.ZTNur7)), (l = (0, i.jsx)(m.y, { type: m.y.Type.SPINNING_CIRCLE_SIMPLE })))
             : null == s
-              ? ((t = L.intl.string(W.default.CUAKSg)),
-                (i = (0, l.jsx)(ea.W, { color: en.A.colors.ICON_FEEDBACK_WARNING })))
+              ? ((t = G.intl.string(M.default.CUAKSg)),
+                (l = (0, i.jsx)(ed.W, { color: ea.A.colors.ICON_FEEDBACK_WARNING })))
               : s.getTime() > d
-                ? ((t = L.intl.format(W.default.evGwDW, { timestamp: ex(s) })),
-                  (i = (0, l.jsx)(er.ClockIcon, { color: en.A.colors.ICON_FEEDBACK_INFO })))
+                ? ((t = G.intl.format(M.default.evGwDW, { timestamp: eg(s) })),
+                  (l = (0, i.jsx)(eo.ClockIcon, { color: ea.A.colors.ICON_FEEDBACK_INFO })))
                 : a
-                  ? ((t = L.intl.format(W.default.rbAtUi, { timestamp: ex(s) })),
-                    (i = (0, l.jsx)(ed.y, { color: en.A.colors.ICON_FEEDBACK_POSITIVE })))
-                  : ((t = L.intl.format(W.default["3x/M9Z"], { timestamp: ex(s) })),
-                    (i = (0, l.jsx)(eo.a, { color: en.A.colors.ICON_MUTED }))),
-        (0, l.jsxs)("div", {
-            className: ef.D,
-            children: [i, (0, l.jsx)(o.D, { variant: "heading-md/semibold", children: t })],
+                  ? ((t = G.intl.format(M.default.rbAtUi, { timestamp: eg(s) })),
+                    (l = (0, i.jsx)(ec.y, { color: ea.A.colors.ICON_FEEDBACK_POSITIVE })))
+                  : ((t = G.intl.format(M.default["3x/M9Z"], { timestamp: eg(s) })),
+                    (l = (0, i.jsx)(eu.a, { color: ea.A.colors.ICON_MUTED }))),
+        (0, i.jsxs)("div", {
+            className: eh.D,
+            children: [l, (0, i.jsx)(o.D, { variant: "heading-md/semibold", children: t })],
         })
     );
 }
-var ev = i(471364);
-function ej(e) {
+var ej = l(471364);
+function eA(e) {
     let { application: t } = e,
-        i = t.id,
-        { enabled: n } = el.useConfig({ location: "storefront_debug_tab" });
-    return (0, l.jsxs)("div", {
-        className: ev.r,
+        l = t.id,
+        { enabled: n } = es.useConfig({ location: "storefront_debug_tab" });
+    return (0, i.jsxs)("div", {
+        className: ej.r,
         children: [
-            (0, l.jsx)(eh, { applicationId: i }),
-            n && (0, l.jsxs)(l.Fragment, { children: [(0, l.jsx)(ei.c, {}), (0, l.jsx)(F, { applicationId: i })] }),
+            (0, i.jsx)(ep, { applicationId: l }),
+            n &&
+                (0, i.jsxs)(i.Fragment, {
+                    children: [(0, i.jsx)(en.c, {}), (0, i.jsx)(P, { applicationId: l, applicationName: t.name })],
+                }),
         ],
     });
 }
-var ep = i(616633),
-    eA = i(464851);
-let eN = "social_layer_dev_tools_panel_width";
+var eN = l(616633),
+    eE = l(464851);
+let eI = "social_layer_dev_tools_panel_width";
 function eb() {
-    let e = d.w.get(eN);
+    let e = d.w.get(eI);
     return "number" == typeof e && Number.isFinite(e) && e > 0 ? e : 350;
 }
-function eI(e) {
-    d.w.set(eN, e);
+function e_(e) {
+    d.w.set(eI, e);
 }
-let ey = null;
+let eS = null;
 function eC(e) {
-    let { resizableNode: t, onResize: i, onResizeEnd: n } = e,
+    let { resizableNode: t, onResize: l, onResizeEnd: n } = e,
         s = (0, h.A)({
             minDimension: 320,
             maxDimension: 720,
             resizableDomNodeRef: t,
-            onElementResize: i,
+            onElementResize: l,
             onElementResizeEnd: n,
             orientation: h.R.HORIZONTAL_LEFT,
             throttleDuration: 16,
         });
-    return (0, l.jsx)("div", { onMouseDown: s, className: eA.Di, "aria-hidden": !0 });
+    return (0, i.jsx)("div", { onMouseDown: s, className: eE.Di, "aria-hidden": !0 });
 }
-function eE() {
+function eR() {
     var e;
     let t,
-        i,
+        l,
         s = (0, g.h)(N.A.testModeApplicationId),
-        d = (0, v.fy)(),
+        d = (0, p.fy)(),
         h = n.useRef(!1),
-        b = d.metadata,
-        I = (0, p.A)({ applicationId: s?.id, source: j.GameProfileSources.DevTools, trackEntryPointImpression: !1 });
+        E = d.metadata,
+        I = (0, j.A)({ applicationId: s?.id, source: v.GameProfileSources.DevTools, trackEntryPointImpression: !1 });
     n.useEffect(() => {
-        b?.shouldAutoOpenGameProfile !== !0 || null == I || h.current || ((h.current = !0), I());
-    }, [b, I]);
-    let y = n.useRef(null),
-        [C, E] = n.useState(eb),
-        S = (0, r.clamp)(C, 320, 720),
-        D = (function (e) {
+        E?.shouldAutoOpenGameProfile !== !0 || null == I || h.current || ((h.current = !0), I());
+    }, [E, I]);
+    let b = n.useRef(null),
+        [_, S] = n.useState(eb),
+        C = (0, r.clamp)(_, 320, 720),
+        R = (function (e) {
             let t = e?.id,
-                { isTestMode: i, entries: s } = (0, z.T)(t),
-                a = i && s.length > 0;
+                { isTestMode: l, entries: s } = (0, Z.T)(t),
+                a = l && s.length > 0;
             return n.useMemo(
                 () =>
                     [
                         {
-                            id: ep.t.ACCOUNT_LINKING,
-                            name: L.intl.string(Y.default.vR0zs6),
-                            render: (e) => (0, l.jsx)(et, { ...e }),
+                            id: eN.t.ACCOUNT_LINKING,
+                            name: G.intl.string(et.default.vR0zs6),
+                            render: (e) => (0, i.jsx)(ei, { ...e }),
                         },
                         {
-                            id: ep.t.STOREFRONT,
-                            name: L.intl.string(W.default["qnSo/i"]),
-                            render: (e) => (0, l.jsx)(ej, { ...e }),
+                            id: eN.t.STOREFRONT,
+                            name: G.intl.string(M.default["qnSo/i"]),
+                            render: (e) => (0, i.jsx)(eA, { ...e }),
                             predicate: (e) => null != e && a,
                         },
                     ].filter((t) => null == t.predicate || t.predicate(e)),
                 [e, a],
             );
         })(s),
-        [O, R] = n.useState(void 0),
-        T = D.find((e) => e.id === (O ?? b?.initialTabId)) ?? D[0],
-        _ = (0, A.qZ)((e) => e.config?.key === M);
+        [y, D] = n.useState(void 0),
+        T = R.find((e) => e.id === (y ?? E?.initialTabId)) ?? R[0],
+        O = (0, A.qZ)((e) => e.config?.key === B);
     function k(e) {
-        return (0, l.jsxs)("div", {
-            className: eA.wx,
+        return (0, i.jsxs)("div", {
+            className: eE.wx,
             children: [
-                (0, l.jsx)("div", {
-                    className: eA.if,
-                    children: (0, l.jsx)(o.D, {
+                (0, i.jsx)("div", {
+                    className: eE.if,
+                    children: (0, i.jsx)(o.D, {
                         variant: "heading-lg/extrabold",
-                        children: L.intl.format(Y.default.KoK4J9, { appName: e }),
+                        children: G.intl.format(et.default.KoK4J9, { appName: e }),
                     }),
                 }),
                 null != s &&
-                    (0, l.jsx)(c.K, {
+                    (0, i.jsx)(c.K, {
                         variant: "icon-only",
                         icon: u.U,
-                        "aria-label": L.intl.string(L.t.cpT0Cq),
-                        onClick: () => (0, v.Jp)(),
+                        "aria-label": G.intl.string(G.t.cpT0Cq),
+                        onClick: () => (0, p.Jp)(),
                     }),
             ],
         });
@@ -750,46 +756,46 @@ function eE() {
     return (
         n.useEffect(
             () => (
-                null != ey && (clearTimeout(ey), (ey = null)),
+                null != eS && (clearTimeout(eS), (eS = null)),
                 () => {
-                    ey = setTimeout(() => {
-                        ((ey = null), A.Rj.getState().actions.endMultiselect(M));
+                    eS = setTimeout(() => {
+                        ((eS = null), A.Rj.getState().actions.endMultiselect(B));
                     }, 0);
                 }
             ),
             [],
         ),
-        (0, l.jsxs)("div", {
+        (0, i.jsxs)("div", {
             "data-app-right-panel": !0,
-            ref: y,
-            className: eA.nE,
-            style: { width: S },
+            ref: b,
+            className: eE.nE,
+            style: { width: C },
             children: [
-                (0, l.jsx)(eC, { resizableNode: y, onResize: E, onResizeEnd: eI }),
-                (0, l.jsx)(x.F, {
+                (0, i.jsx)(eC, { resizableNode: b, onResize: S, onResizeEnd: e_ }),
+                (0, i.jsx)(x.F, {
                     children:
                         null != s
                             ? ((e = s.name),
-                              (i = !0),
-                              _ ? ((t = (0, l.jsx)(B, {})), (i = !1)) : (t = T?.render({ application: s })),
-                              (0, l.jsxs)(l.Fragment, {
+                              (l = !0),
+                              O ? ((t = (0, i.jsx)(z, {})), (l = !1)) : (t = T?.render({ application: s })),
+                              (0, i.jsxs)(i.Fragment, {
                                   children: [
                                       k(e),
-                                      i &&
-                                          (0, l.jsx)("div", {
-                                              className: eA.Mv,
-                                              children: (0, l.jsx)(f.V, {
-                                                  className: eA.$H,
+                                      l &&
+                                          (0, i.jsx)("div", {
+                                              className: eE.Mv,
+                                              children: (0, i.jsx)(f.V, {
+                                                  className: eE.$H,
                                                   selectedItem: T?.id,
-                                                  onItemSelect: R,
+                                                  onItemSelect: D,
                                                   orientation: "horizontal",
                                                   type: "top",
                                                   look: "brand",
-                                                  children: D.map((e) =>
-                                                      (0, l.jsx)(
+                                                  children: R.map((e) =>
+                                                      (0, i.jsx)(
                                                           f.V.Item,
                                                           {
-                                                              className: a()(eA.Mf, { [eA.wH]: e.id === T?.id }),
+                                                              className: a()(eE.Mf, { [eE.wH]: e.id === T?.id }),
                                                               id: e.id,
                                                               "aria-label": e.name,
                                                               children: e.name,
@@ -799,15 +805,15 @@ function eE() {
                                                   ),
                                               }),
                                           }),
-                                      (0, l.jsx)("div", { className: eA.rf, children: t }),
+                                      (0, i.jsx)("div", { className: eE.rf, children: t }),
                                   ],
                               }))
-                            : (0, l.jsxs)(l.Fragment, {
+                            : (0, i.jsxs)(i.Fragment, {
                                   children: [
                                       k(""),
-                                      (0, l.jsx)("div", {
-                                          className: eA.TG,
-                                          children: (0, l.jsx)(m.y, { className: eA.u1 }),
+                                      (0, i.jsx)("div", {
+                                          className: eE.TG,
+                                          children: (0, i.jsx)(m.y, { className: eE.u1 }),
                                       }),
                                   ],
                               }),
