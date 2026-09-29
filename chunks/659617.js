@@ -90,52 +90,48 @@ function H(e) {
     } = e;
     return r.useCallback(
         async (e, r, A) => {
-            let h = null == n,
-                I = F(i, a),
-                f = i.name ?? "";
-            if ("" === f && d) {
+            var h, I, f, p, m;
+            let g = null == n,
+                S = F(i, a),
+                O = i.name ?? "";
+            if ("" === O && d) {
                 let e = V(t, n);
-                f = "" !== e ? e : G.intl.string(G.t["7Xm5QI"]);
+                O = "" !== e ? e : G.intl.string(G.t["7Xm5QI"]);
             }
-            let p = (0, v.Gl)(t),
-                m = N.A.getChannel(y.default.castMessageIdAsChannelId(n)),
-                g = C.A.getDraft(t.id, C.C.FirstThreadMessage),
-                S = await Y(t, [], void 0, () => {
+            let R = (0, v.Gl)(t),
+                L = N.A.getChannel(y.default.castMessageIdAsChannelId(n)),
+                D = await Y(t, [], void 0, () => {
                     let e = null != n ? U.Rsh.CHANNEL_MESSAGE_THREADS(t.id, n) : U.Rsh.CHANNEL_THREADS(t.id);
                     return s.Bo.post({
                         url: e,
                         body: {
-                            name: f,
-                            type: I
+                            name: O,
+                            type: S
                                 ? U.rbe.PRIVATE_THREAD
                                 : t.type === U.rbe.GUILD_ANNOUNCEMENT
                                   ? U.rbe.ANNOUNCEMENT_THREAD
                                   : U.rbe.PUBLIC_THREAD,
-                            auto_archive_duration: p,
+                            auto_archive_duration: R,
                             location: l,
                         },
                         rejectWithError: (0, s.fT)(),
                     });
                 });
-            if (S !== m) {
-                var O, R, L, D, b;
-                let n = g.trim();
+            (D !== L &&
                 (c.A.clearDraft(t.id, C.C.ThreadSettings),
-                    c.A.clearDraft(t.id, C.C.FirstThreadMessage),
-                    "" !== n && n !== e.trim() && c.A.saveDraft(S.id, g, C.C.ChannelMessage),
-                    o?.(S),
-                    (h || e.length > 0 || (null != r && r.length > 0) || (null != A && A.length > 0)) &&
-                        ((O = S),
-                        (R = e),
-                        (L = r),
-                        (D = A),
-                        null != (b = E) && null != D && D.length > 0
-                            ? b(O, D, R, L)
-                            : null != L && L.length > 0
-                              ? u.A.sendStickers(O.id, L, T.Ay.parse(O, R), { location: w.Hx.THREAD_CREATION })
-                              : u.A.sendMessage(O.id, T.Ay.parse(O, R), void 0, { location: w.Hx.THREAD_CREATION })));
-            }
-            _.A.clearAll(t.id, C.C.FirstThreadMessage);
+                c.A.clearDraft(t.id, C.C.FirstThreadMessage),
+                o?.(D),
+                (g || e.length > 0 || (null != r && r.length > 0) || (null != A && A.length > 0)) &&
+                    ((h = D),
+                    (I = e),
+                    (f = r),
+                    (p = A),
+                    null != (m = E) && null != p && p.length > 0
+                        ? m(h, p, I, f)
+                        : null != f && f.length > 0
+                          ? u.A.sendStickers(h.id, f, T.Ay.parse(h, I), { location: w.Hx.THREAD_CREATION })
+                          : u.A.sendMessage(h.id, T.Ay.parse(h, I), void 0, { location: w.Hx.THREAD_CREATION }))),
+                _.A.clearAll(t.id, C.C.FirstThreadMessage));
         },
         [t, n, i, o, a, l, d, E],
     );
