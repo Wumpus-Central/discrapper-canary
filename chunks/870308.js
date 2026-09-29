@@ -1,4 +1,4 @@
-n.d(t, { A: () => E });
+n.d(t, { A: () => A });
 var i = n(582128),
     r = n(379197),
     a = n(488430),
@@ -8,13 +8,14 @@ var i = n(582128),
     d = n(131607),
     c = n(457421),
     u = n(212407),
-    _ = n(966971);
-let E = function () {
+    _ = n(966971),
+    E = n(49999);
+let A = function () {
     let e = (0, s.bG)([c.A], () => c.A.getMarketingBySurface(r.R.DESKTOP_SHOP_BUTTON)),
         t = !(0, o.hasAnyModalOpen)(),
-        [n, E] = (0, d.RF)(t ? l.M.COLLECTIBLES_SHOP_ENTRY_MARKETING : null, e?.version ?? 0, void 0, !0),
-        A = (0, u.bv)(e),
-        h =
+        [n, A] = (0, d.RF)(t ? l.M.COLLECTIBLES_SHOP_ENTRY_MARKETING : null, e?.version ?? 0, void 0, !0),
+        h = (0, u.bv)(e),
+        I =
             null != n
                 ? (function (e, t) {
                       if (t?.type === a.G.BADGE)
@@ -73,13 +74,10 @@ let E = function () {
                                 showHoverGradient: t.showHoverGradient,
                             }
                           : null;
-                  })(A, e)
+                  })(h, e)
                 : null,
-        I = i.useCallback(
-            (e) => {
-                null != h && E(e);
-            },
-            [h, E],
-        );
-    return { shopButtonDisplayOptions: h, dismissShopButtonDC: I };
+        f = i.useCallback(() => {
+            null != I && A(E.i.AUTO);
+        }, [I, A]);
+    return { shopButtonDisplayOptions: I, dismissShopButtonDC: f };
 };
