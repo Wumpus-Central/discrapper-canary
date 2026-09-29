@@ -120,8 +120,6 @@ var i,
         (i.GUILD_POWERUPS_COACHMARK_GAME_SERVER_HOSTING_AVAILABLE =
             "guild powerups - coachmark - game server hosting available"),
         (i.GUILD_POWERUPS_COACHMARK_GAME_SERVER_NEW_GAMES = "guild powerups - coachmark - game server new games"),
-        (i.GUILD_POWERUPS_COACHMARK_GAME_SERVER_PRICING_CHANGE =
-            "guild powerups - coachmark - game server pricing change"),
         (i.GUILD_POWERUPS_COACHMARK_BOOST_TO_UNLOCK = "guild powerups - coachmark - boost to unlock"),
         (i.GUILD_POWERUPS_COACHMARK_EXPIRING_PERK = "guild powerups - coachmark - expiring perk"),
         (i.GUILD_POWERUPS_COACHMARK_GUILD_THEME_MEMBER = "guild powerups - coachmark - guild theme member"),

@@ -467,23 +467,6 @@
   },
   {
     "kind": "guild",
-    "id": "2026-03_game_server_pricing",
-    "label": "Game Server Pricing",
-    "defaultConfig": {
-      "enabled": false
-    },
-    "treatments": [
-      {
-        "id": 1,
-        "label": "Enable Game Server Pricing",
-        "config": {
-          "enabled": true
-        }
-      }
-    ]
-  },
-  {
-    "kind": "guild",
     "id": "2026-03_guild_official_messages",
     "label": "Guild Official Messages",
     "defaultConfig": {

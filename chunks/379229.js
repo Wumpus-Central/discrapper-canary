@@ -1,6 +1,6 @@
-n.d(t, { bW: () => l, cD: () => s, lE: () => u, mD: () => r, o: () => A });
-let u = 216e5,
-    l = 2592e6,
+n.d(t, { bW: () => u, cD: () => s, lE: () => l, mD: () => r, o: () => A });
+let l = 216e5,
+    u = 2592e6,
     r = 2592e5;
 var i,
     o,
@@ -16,5 +16,4 @@ var i,
         (o[(o.GAME_SERVER_HOSTING_GUILD_ELIGIBLE = 7)] = "GAME_SERVER_HOSTING_GUILD_ELIGIBLE"),
         (o[(o.GAME_SERVER_HOSTING_ENABLED = 8)] = "GAME_SERVER_HOSTING_ENABLED"),
         (o[(o.GAME_SERVER_NEW_GAMES = 9)] = "GAME_SERVER_NEW_GAMES"),
-        (o[(o.GAME_SERVER_PRICING_CHANGE = 10)] = "GAME_SERVER_PRICING_CHANGE"),
         o);
