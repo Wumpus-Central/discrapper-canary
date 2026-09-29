@@ -651,5 +651,6 @@ var i,
         (i.XBOX_PERKS_CONNECTION_FOOTER = "xbox perks connection footer"),
         (i.XBOX_PERKS_MODAL = "xbox perks modal"),
         (i.YOUTUBE_NITRO_TAB_POPOVER = "youtube nitro tab popover"),
+        (i.YOUTUBE_3PP_NAGBAR = "youtube 3pp nagbar"),
         i);
 let a = r;

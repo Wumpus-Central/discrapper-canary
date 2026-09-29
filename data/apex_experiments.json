@@ -5817,6 +5817,22 @@
     }
   },
   {
+    "kind": "user",
+    "name": "2026-09-youtube-3p-nagbar",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
     "name": "2026-10-badge-directory-updates",
     "kind": "user",
     "defaultConfig": {
