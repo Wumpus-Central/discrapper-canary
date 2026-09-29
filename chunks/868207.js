@@ -6,19 +6,8 @@ var i = n(435558),
     l = n(626584),
     o = n(320095),
     d = n(491001),
-    c = n(935208);
-function u(e, t, n) {
-    let i = (function (e, t, n) {
-        let i = 0,
-            r = e.length;
-        for (; i < r;) {
-            let a = (i + r) >>> 1;
-            0 > n(e[a], t) ? (i = a + 1) : (r = a);
-        }
-        return i;
-    })(e, t, n);
-    e.splice(i, 0, t);
-}
+    c = n(935208),
+    u = n(636889);
 let _ = (0, n(945810).mj)({
     name: "2026-04-ensure-received-messages-added-in-order",
     kind: "user",
@@ -558,7 +547,7 @@ class p {
                           ((e._map[i.id] = i),
                               null != t
                                   ? (e._array[e._array.indexOf(t)] = i)
-                                  : u(e._array, i, (e, t) => c.default.compare(e.id, t.id)));
+                                  : u.Yr(e._array, i, (e, t) => c.default.compare(e.id, t.id)));
                       }, !0)
                     : this.merge([i])),
             t)
@@ -664,7 +653,7 @@ class p {
         (0, s.D)(e);
         let n = e.map((e) => I(this, e)).reverse(),
             i = this._array.filter((e) => !n.some((t) => t.id === e.id));
-        (i.filter((e) => !h(e)).forEach((e) => u(n, e, (e, t) => c.default.compare(e.id, t.id))),
+        (i.filter((e) => !h(e)).forEach((e) => u.Yr(n, e, (e, t) => c.default.compare(e.id, t.id))),
             n.push(...i.filter(h)));
         let r = !t && this.cached;
         return this.reset(n).mutate({
