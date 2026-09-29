@@ -134,6 +134,7 @@ let a = {
         "applications.store.update",
         "identify",
     ]),
+    PERSONAL_ACCESS_TOKEN: new Set(["connections", "guilds", "guilds.members.read", "identify"]),
     EMBEDDED_APPS: new Set(["rpc.activities.write", "rpc.voice.read", "rpc.voice.write"]),
     CLIENT_CREDENTIALS: new Set(["applications.commands.update"]),
     CONFIDENTIAL_REQUEST_SCOPES: new Set(["role_connections.write"]),
