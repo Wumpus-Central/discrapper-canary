@@ -2229,9 +2229,10 @@
     z-index: 1
 }
 
+.resizeHandle_b17982.dragging_b17982,
 .resizeHandle_b17982:active,
 .resizeHandle_b17982:hover {
     background-color: var(--background-mod-strong)
 }
 
-/*# sourceMappingURL=a9eed4040603bb14.css.map*/
+/*# sourceMappingURL=e40d5fb395bf48d5.css.map*/

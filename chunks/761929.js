@@ -42,7 +42,7 @@ let s = function (e) {
             function t(e) {
                 return p(e, a ?? 0, r ?? e);
             }
-            let l = (0, u.throttle)(s, d),
+            let l = null != s ? (0, u.throttle)(s, d) : null,
                 I = 1 === i(f) ? "width" : "height",
                 A =
                     C ??
@@ -53,13 +53,13 @@ let s = function (e) {
                 if (null == n.current) return null;
                 let u = e(r),
                     a = t(u);
-                (A(a), S.current || ((S.current = !0), c?.(a)), l(a, u));
+                (A(a), S.current || ((S.current = !0), c?.(a)), l?.(a, u));
             }
             function g(n) {
                 m(!1);
                 let r = e(n),
                     l = t(r);
-                (A(l), s(l, r), o?.(l), (S.current = !1));
+                (A(l), s?.(l, r), o?.(l), (S.current = !1));
             }
             let R = h ? "pointerup" : "mouseup",
                 L = h ? "pointermove" : "mousemove",
@@ -68,7 +68,7 @@ let s = function (e) {
                 T.addEventListener(R, g),
                 T.addEventListener(L, _),
                 () => {
-                    (T.removeEventListener(R, g), T.removeEventListener(L, _), l.cancel());
+                    (T.removeEventListener(R, g), T.removeEventListener(L, _), l?.cancel());
                 }
             );
         }, [E, s, a, r, f, n, d, o, h, p, c, C]),
