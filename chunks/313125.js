@@ -24,20 +24,24 @@ function c(e) {
         ),
         C = (0, n.useCallback)(
             async function () {
-                let { loadId: e, errorExtra: r } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+                let {
+                    loadId: e,
+                    purchaseToken: r,
+                    errorExtra: n,
+                } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
                 if (null == t) return (h(new a.Ay("Order not created yet")), { type: "failed" });
                 u(null);
                 try {
-                    let r = await (0, i.Ub)({ orderId: t.id, loadId: e });
-                    if (r.status !== s.Re.SIGNED) {
-                        if (null != r.errors && r.errors.length > 0)
-                            throw Error(`Order signing failed with errors: ${r.errors.join(", ")}`);
-                        throw Error(`Unexpected order status: ${r.status}`);
+                    let n = await (0, i.Ub)({ orderId: t.id, loadId: e, purchaseToken: r });
+                    if (n.status !== s.Re.SIGNED) {
+                        if (null != n.errors && n.errors.length > 0)
+                            throw Error(`Order signing failed with errors: ${n.errors.join(", ")}`);
+                        throw Error(`Unexpected order status: ${n.status}`);
                     }
-                    return { type: "signed", order: r };
+                    return { type: "signed", order: n };
                 } catch (e) {
                     if (e instanceof i.FY) return (c?.(e.order), h(e), { type: "failed" });
-                    return (_(e, { ...r, orderId: t.id }), { type: "failed" });
+                    return (_(e, { ...n, orderId: t.id }), { type: "failed" });
                 }
             },
             [t, c, _, h],
