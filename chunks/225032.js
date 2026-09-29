@@ -1478,7 +1478,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e6 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eW.A().log(
-    `[BUILD INFO] Release Channel: ${e6}, Build Number: 623859, Version Hash: e15f8b0af625b402df524f67d23ef7fb8781d79c`,
+    `[BUILD INFO] Release Channel: ${e6}, Build Number: 623860, Version Hash: ba4e24be2fc1890d7b7395ad3fd43fd253e7afc3`,
 ),
     M.A.setTags({ appContext: F.QCW }),
     ep.A.initBasic(),
@@ -21842,7 +21842,7 @@ let N9 = "isHideDevBanner",
                     className: to()(N8.Wz, N8.mr),
                     children: [
                         (0, y.jsx)(N7, { className: N8.Kk }),
-                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "623859" }),
+                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "623860" }),
                         (0, y.jsx)(r, {}),
                     ],
                 })
@@ -30773,12 +30773,15 @@ function LY() {
 function LK() {
     return (
         LV(
-            [eU.Ay],
+            [eU.Ay, nY.A],
             () => eU.Ay.isSelfMutedTemporarily(),
             (e, t) => {
                 if (e !== t) {
                     let e = eU.Ay.isSelfMute();
-                    if (eU.Ay.getMode() === F.TBI.VOICE_ACTIVITY && !e) return t ? "ptt_stop" : "ptt_start";
+                    if (eU.Ay.getMode() === F.TBI.VOICE_ACTIVITY && !e) {
+                        if (nY.A.isSoundDisabled(t ? "mute" : "unmute")) return;
+                        return t ? "ptt_stop" : "ptt_start";
+                    }
                 }
             },
         ),
