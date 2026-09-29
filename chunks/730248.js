@@ -2171,11 +2171,11 @@ function tt(e) {
                 (t[n + "_p99"] = Math.round(r.percentiles[99])),
                 (t[n + "_max"] = Math.round(r.max)));
         } else
-            ((t[n + "_mean"] = null != i ? i.mean : null),
-                (t[n + "_p75"] = null != i ? i.p75 : null),
-                (t[n + "_p95"] = null != i ? i.p95 : null),
-                (t[n + "_p99"] = null != i ? i.p99 : null),
-                (t[n + "_max"] = null != i ? i.max : null));
+            ((t[n + "_mean"] = null != i ? i.mean : 0),
+                (t[n + "_p75"] = null != i ? i.p75 : 0),
+                (t[n + "_p95"] = null != i ? i.p95 : 0),
+                (t[n + "_p99"] = null != i ? i.p99 : 0),
+                (t[n + "_max"] = null != i ? i.max : 0));
     }
     return t;
 }
