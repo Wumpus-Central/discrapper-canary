@@ -2887,7 +2887,7 @@ class l9 {
         return this.loading || this.props.messages.loadingMore;
     }
     isPinned() {
-        return this.pinned;
+        return this.pinned && !this.props.messages.hasMoreAfter;
     }
     isJumping() {
         return this.jumping;
@@ -3081,8 +3081,7 @@ class l9 {
                   callback: this.handleScroll,
               }))
             : this.mergeTo(n, this.handleScroll),
-            this.isActivelyScrolling() ? this.setAutomaticAnchor(null) : this.setAutomaticAnchor(this.findAnchor()),
-            this.isLoading() || (this.messageFetchAnchor = null));
+            this.isActivelyScrolling() ? this.setAutomaticAnchor(null) : this.setAutomaticAnchor(this.findAnchor()));
     }
     hasAnchor() {
         return null != this.focusAnchor || null != this.messageFetchAnchor || null != this.automaticAnchor;
@@ -3238,9 +3237,10 @@ class l9 {
             (this.scrollHeightCache = t),
             (this.prevScrollTop = null),
             this.fixJumpTarget(),
-            this.isPinned() && null == this.messageFetchAnchor && null == this.focusAnchor
+            this.isPinned() && null == this.focusAnchor
                 ? this.scrollTo(Number.MAX_SAFE_INTEGER, !1, this.handleScroll)
-                : this.fixAnchorScrollPosition());
+                : this.fixAnchorScrollPosition(),
+            this.isLoading() || (this.messageFetchAnchor = null));
     }
     fixJumpTarget() {
         if (!this.isJumping()) return;
