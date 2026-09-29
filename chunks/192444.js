@@ -7,6 +7,7 @@ n.d(t, {
     Se: () => C,
     uK: () => d,
     lk: () => p,
+    LV: () => g,
     Mk: () => _,
     sy: () => f,
     d: () => h,
@@ -132,4 +133,10 @@ let _ = (0, u.mj)({
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
+});
+let g = (0, u.mj)({
+    name: "2026-09-new-orb-reward-visuals",
+    kind: "user",
+    defaultConfig: { enabled: !1 },
+    variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
 });

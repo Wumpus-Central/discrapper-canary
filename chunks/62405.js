@@ -16,9 +16,9 @@ var s = r(477900),
     R = r(607470),
     _ = r(287809),
     E = r(104886),
-    x = r(192444),
-    N = r(426110),
-    g = r(291749),
+    g = r(192444),
+    x = r(426110),
+    N = r(291749),
     I = r(18437),
     p = r(590202),
     h = r(971649),
@@ -41,18 +41,19 @@ let Q = function (e) {
             sourceQuestContent: k,
             lazyLoad: D = !1,
             fullWidth: P = !1,
-            style: U,
-            location: V,
+            style: V,
+            location: U,
         } = e,
         Y = (0, I.Ut)(),
         G = (0, h.go)(),
         z = (0, o.bG)([C.Ay], () => C.Ay.useReducedMotion),
         B = (0, o.bG)([_.default], () => _.default.getCurrentUser()),
         H = (function (e, t) {
-            let { useNewTile: r } = x.aD.useConfig({ location: t }),
-                s = (0, o.bG)([_.default], () => (0, N.Q)(e, _.default.getCurrentUser()));
-            return r ? s : void 0;
-        })(i.config, V),
+            let { useNewTile: r } = g.aD.useConfig({ location: t }),
+                { enabled: s } = g.LV.useConfig({ location: t }),
+                n = (0, o.bG)([_.default], () => (0, x.Q)(e, _.default.getCurrentUser()));
+            return r || s ? n : void 0;
+        })(i.config, U),
         K = n.useMemo(
             () =>
                 (0, j.ks)(i.config) && i.userStatus?.claimedAt != null
@@ -62,8 +63,8 @@ let Q = function (e) {
                     : (0, j.mq)(i.config, B),
             [i.config, i.userStatus?.claimedAt, i.userStatus?.orbQuantityClaimed, B],
         ),
-        X = n.useMemo(() => (0, g.tW)(i, g.fY.REWARD, void 0, void 0, H), [i, H]),
-        F = n.useMemo(() => (0, g.tW)(i, g.fY.REWARD_IMAGE), [i]),
+        X = n.useMemo(() => (0, N.tW)(i, N.fY.REWARD, void 0, void 0, H), [i, H]),
+        F = n.useMemo(() => (0, N.tW)(i, N.fY.REWARD_IMAGE), [i]),
         O = n.useCallback(
             (t) => {
                 ((0, u.vq)(t.currentTarget, HTMLElement) && t.currentTarget.blur(),
@@ -129,7 +130,7 @@ let Q = function (e) {
             onLoadComplete: e.onLoadComplete,
         });
     else if (X.isAnimated) {
-        let r = (0, g.WV)(X.url);
+        let r = (0, N.WV)(X.url);
         t = (0, s.jsx)(v._M, {
             id: "QuestRewardTile_rewardTileAnimated",
             children: (t) =>
@@ -159,11 +160,11 @@ let Q = function (e) {
                 (0, s.jsx)("img", { ref: t, alt: K, className: l()(b.eB, b.Qz), src: X.url, onLoad: e.onLoadComplete }),
         });
     return null == S
-        ? (0, s.jsx)("div", { className: l()(b.al, r, { [b.Ij]: P }), style: U, children: t })
+        ? (0, s.jsx)("div", { className: l()(b.al, r, { [b.Ij]: P }), style: V, children: t })
         : (0, s.jsxs)(c.D, {
               className: l()(b.a$, b.al, b.Yi, r, { [b.Ij]: P }),
               onClick: O,
-              style: U,
+              style: V,
               children: [
                   t,
                   "text" === S &&
