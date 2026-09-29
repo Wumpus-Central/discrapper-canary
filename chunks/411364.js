@@ -17935,6 +17935,7 @@ function ID(e) {
 }
 async function IP() {
     let e = Ib.A.getVerificationKey();
+    if ("" === e) return void IL();
     try {
         await fi.A.confirmViewBackupCodes(e, !0);
     } catch (e) {
