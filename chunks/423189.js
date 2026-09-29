@@ -1478,7 +1478,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e6 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eW.A().log(
-    `[BUILD INFO] Release Channel: ${e6}, Build Number: 624410, Version Hash: b986f74a02147275c143efd37bcac8b496b19068`,
+    `[BUILD INFO] Release Channel: ${e6}, Build Number: 624422, Version Hash: 83408afea6a8c97b61c507b0ff04aaaa47f04ec6`,
 ),
     M.A.setTags({ appContext: F.QCW }),
     ep.A.initBasic(),
@@ -21842,7 +21842,7 @@ let N9 = "isHideDevBanner",
                     className: to()(N8.Wz, N8.mr),
                     children: [
                         (0, y.jsx)(N7, { className: N8.Kk }),
-                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "624410" }),
+                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "624422" }),
                         (0, y.jsx)(r, {}),
                     ],
                 })
