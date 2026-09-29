@@ -769,6 +769,12 @@ let n = [
         summary: "The model picker now offers Grok 4.7 alongside Claude and GPT.",
     },
     {
+        date: "2026-09-26",
+        time: "01:47",
+        platforms: ["desktop", "mobile"],
+        summary: "The project menu now calls its MCP item just MCP, matching the items beside it.",
+    },
+    {
         date: "2026-09-05",
         time: "00:02",
         platforms: ["desktop", "mobile"],
