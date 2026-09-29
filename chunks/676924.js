@@ -1,19 +1,24 @@
-a.d(n, { A: () => p });
-var i = a(477900),
-    c = a(582128),
-    r = a(696292),
-    e = a(617986),
-    s = a(70926),
-    l = a(375708);
-function p(t) {
-    let { onNavigateToQuestHome: n, variant: a } = t,
-        p = c.useCallback(() => {
-            (n?.(), (0, e.mA)({ fromContent: r.u.ORBS_BALANCE_MENU }));
-        }, [n]);
-    return (0, i.jsx)(s.SS, {
-        cardAlignment: s.SS.CardAlignment.END,
-        ctaText: l.intl.string(l.t.VC4Mq0),
-        ctaOnClick: p,
-        pillVariant: a,
+n.d(a, { A: () => A });
+var e = n(477900),
+    c = n(582128),
+    i = n(696292),
+    s = n(617986),
+    p = n(318346),
+    r = n(70926),
+    l = n(652215),
+    C = n(375708);
+function A(t) {
+    let { location: a, onNavigateToQuestHome: n, variant: A } = t,
+        _ = c.useCallback(() => {
+            ((0, p.Y)({ pageType: a, sectionType: l.JJy.ORBS_BALANCE_MENU, ctaObject: l.ZSU.CTA_TO_QUEST_HOME }),
+                n?.(),
+                (0, s.mA)({ fromContent: i.u.ORBS_BALANCE_MENU }));
+        }, [a, n]);
+    return (0, e.jsx)(r.SS, {
+        analyticsPage: a,
+        cardAlignment: r.SS.CardAlignment.END,
+        ctaText: C.intl.string(C.t.VC4Mq0),
+        ctaOnClick: _,
+        pillVariant: A,
     });
 }

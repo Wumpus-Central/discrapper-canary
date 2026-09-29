@@ -1452,14 +1452,14 @@ function nf(e) {
         p = (0, d.bG)([z.A], () => z.A.getApplicationIdFromDetectableId(s.id)),
         v = (0, d.bG)([z.A], () => z.A.hasStorefrontForApplicationId(p), [p]),
         E = U({ location: "GameProfileOverflowMenu" }),
-        N = a.useCallback(() => {
+        I = a.useCallback(() => {
             null != p && (0, t4.G)({ applicationId: p });
         }, [p]),
-        I = a.useCallback(() => {
+        k = a.useCallback(() => {
             null != p && (c(M.GameProfileTrackActionActions.GameShop), (0, t4.default)({ applicationId: p }), A());
         }, [p, c, A]),
-        k = a.useCallback(() => A(!1), [A]),
-        S = a.useCallback(() => {
+        S = a.useCallback(() => A(!1), [A]),
+        b = a.useCallback(() => {
             c(M.GameProfileTrackActionActions.CopyLink);
             let e = `${location.protocol}${window.GLOBAL_ENV.WEBAPP_ENDPOINT}${eR.BVt.GAME_PROFILE(s.id)}`;
             (0, t9.C)(e, () => {
@@ -1469,7 +1469,12 @@ function nf(e) {
     return (0, i.jsxs)("div", {
         className: r,
         children: [
-            E && (0, i.jsx)(t3.A, { variant: "overlay-secondary", onNavigateToQuestHome: A }),
+            E &&
+                (0, i.jsx)(t3.A, {
+                    location: N.A.GAME_PROFILE,
+                    onNavigateToQuestHome: A,
+                    variant: "overlay-secondary",
+                }),
             null != j &&
                 (0, i.jsx)(tJ.Y, {
                     targetElementRef: u,
@@ -1508,8 +1513,8 @@ function nf(e) {
                         variant: "overlay-secondary",
                         size: "sm",
                         "aria-label": eN.intl.string(eN.t.apFNLU),
-                        onMouseDown: N,
-                        onClick: I,
+                        onMouseDown: I,
+                        onClick: k,
                     }),
                 }),
             (0, i.jsx)(x.m, {
@@ -1519,7 +1524,7 @@ function nf(e) {
                     variant: "overlay-secondary",
                     size: "sm",
                     "aria-label": eN.intl.string(eN.t.WqhZss),
-                    onClick: S,
+                    onClick: b,
                 }),
             }),
             (null != m || null != g) &&
@@ -1561,7 +1566,7 @@ function nf(e) {
                 icon: t5.P,
                 variant: "overlay-secondary",
                 size: "sm",
-                onClick: k,
+                onClick: S,
                 "aria-label": eN.intl.string(eN.t.cpT0Cq),
             }),
         ],
