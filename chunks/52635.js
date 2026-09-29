@@ -8,8 +8,8 @@ var l = n(477900),
     u = n(818824),
     c = n(25149),
     d = n(263532),
-    m = n(67480),
-    p = n(951305),
+    p = n(67480),
+    m = n(951305),
     h = n(652215);
 function C(e) {
     let {
@@ -17,7 +17,7 @@ function C(e) {
             paymentSourceType: n = null,
             purchaseButtonText: i,
             isGift: o,
-            checkoutLegalType: p = c.I0.GiftGameShop,
+            checkoutLegalType: m = c.I0.GiftGameShop,
             hasSeparateAccountLinkNotice: C = !1,
         } = e,
         { immediateDelivery: f } = (0, u.U)(),
@@ -32,19 +32,19 @@ function C(e) {
                 { checkoutReviewButtonLabel: u } = (0, d.t4)((e) => ({
                     checkoutReviewButtonLabel: e.checkoutReviewButtonLabel,
                 })),
-                p = (0, r.bG)([m.A], () => m.A.get(t), [t]),
-                C = p?.productLine,
-                f = p?.applicationId,
+                m = (0, r.bG)([p.A], () => p.A.get(t), [t]),
+                C = m?.productLine,
+                f = m?.applicationId,
                 E = (0, r.bG)([s.A], () => (C === h.EZt.SOCIAL_LAYER_GAME_ITEM ? s.A.getApplication(f) : null), [f, C]),
-                { fetched: S, hasAlreadyLinked: I } = (0, a.RD)(E);
+                { fetched: S, hasAlreadyLinked: y } = (0, a.RD)(E);
             return {
                 type: l,
                 purchaseButtonText: n ?? u,
                 applicationName: E?.name,
                 applicationId: f,
-                shouldAppendDisclaimer: i || (S && (o ? I : !I)),
+                shouldAppendDisclaimer: i || (S && (o ? y : !y)),
             };
-        })({ skuId: t, purchaseButtonText: i, isGift: o, checkoutLegalType: p, hasSeparateAccountLinkNotice: C });
+        })({ skuId: t, purchaseButtonText: i, isGift: o, checkoutLegalType: m, hasSeparateAccountLinkNotice: C });
     return (0, l.jsx)(c._P, { variant: E, paymentSourceType: n, immediateDelivery: f });
 }
 function f(e) {
@@ -53,9 +53,9 @@ function f(e) {
             unifiedCheckoutFlow: e.unifiedCheckoutFlow,
             checkoutReviewButtonLabel: e.checkoutReviewButtonLabel,
         })),
-        { isGift: a } = (0, p.Pv)(),
+        { isGift: a } = (0, m.Pv)(),
         { immediateDelivery: s } = (0, u.U)(),
-        m = i.useMemo(
+        p = i.useMemo(
             () =>
                 n === o.C.PREMIUM_APPS_OTP_CHECKOUT
                     ? { type: c.I0.PremiumAppsOneTimePurchase, purchaseButtonText: r }
@@ -66,5 +66,5 @@ function f(e) {
                         : { type: c.I0.Shop, purchaseButtonText: r },
             [n, r, a],
         );
-    return (0, l.jsx)(c._P, { variant: m, paymentSourceType: t, immediateDelivery: s });
+    return (0, l.jsx)(c._P, { variant: p, paymentSourceType: t, immediateDelivery: s });
 }

@@ -8,8 +8,8 @@ var l = n(477900),
     u = n(144165),
     c = n(262427),
     d = n(139286),
-    m = n(462718);
-function p(e) {
+    p = n(462718);
+function m(e) {
     let { componentId: t, promotionId: n, promotionBannerMarketingComponentFields: i } = e;
     (0, d.A)({
         type: o.ImpressionTypes.VIEW,
@@ -17,7 +17,7 @@ function p(e) {
         properties: { component_type: r.C.PAYMENT_MODAL_BANNER, component_id: t, promotion_id: n },
     });
     let a = (0, l.jsx)(u._, { src: i.assetUrl, width: 48, height: 48, zoomable: !1 });
-    return (0, l.jsx)(c.J, { className: m.No, customGraphic: a, text: i.body });
+    return (0, l.jsx)(c.J, { className: p.No, customGraphic: a, text: i.body });
 }
 var h = n(951305),
     C = n(202541);
@@ -35,7 +35,7 @@ function f(e) {
             "paymentModalBanner" !== c.properties.properties.oneofKind ||
             (c.properties.contentIdentifier === C.iu && n?.orbsReward !== C.Qm)
                 ? null
-                : (0, l.jsx)(p, {
+                : (0, l.jsx)(m, {
                       componentId: c.id,
                       promotionId: c.promotionId,
                       promotionBannerMarketingComponentFields: c.properties.properties.paymentModalBanner,

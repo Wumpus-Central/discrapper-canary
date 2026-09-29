@@ -56,7 +56,7 @@ function d(e, t, l, n) {
     });
     return -1 === s ? i.length : s;
 }
-function o(e, t, l, n) {
+function c(e, t, l, n) {
     let s = e.find((e) => {
         let { id: l } = e;
         return l === t;
@@ -73,7 +73,7 @@ function o(e, t, l, n) {
                 return l !== t;
             }),
         ],
-        o = d[+(1 === l)];
-    return (o.splice(Math.max(0, Math.min(n, o.length)), 0, s), a(d));
+        c = d[+(1 === l)];
+    return (c.splice(Math.max(0, Math.min(n, c.length)), 0, s), a(d));
 }
-l.d(t, { Gm: () => o, O6: () => d, QD: () => r, Rl: () => i, W$: () => s });
+l.d(t, { Gm: () => c, O6: () => d, QD: () => r, Rl: () => i, W$: () => s });

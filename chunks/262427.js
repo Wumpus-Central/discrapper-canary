@@ -44,14 +44,14 @@ function c(e) {
         Icon: i = a.TagIcon,
         iconSize: c,
         customGraphic: d,
-        className: m,
-        textVariant: p = "text-sm/medium",
+        className: p,
+        textVariant: m = "text-sm/medium",
         textColor: h = "currentColor",
     } = e;
     return (0, l.jsx)(u, {
-        className: r()(o.Cu, m),
+        className: r()(o.Cu, p),
         gradientColor: n,
         ...(null != d ? { customGraphic: d } : { Icon: i, iconSize: c }),
-        children: (0, l.jsx)(s.E, { variant: p, color: h, className: o.Ct, children: t }),
+        children: (0, l.jsx)(s.E, { variant: m, color: h, className: o.Ct, children: t }),
     });
 }

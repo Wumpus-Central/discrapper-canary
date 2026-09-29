@@ -7,30 +7,30 @@ var l = n(582128),
 function o(e) {
     let t,
         { priceOptions: n, trialId: o, metadata: u, discountInvoicePreview: c } = e,
-        { isEligibleForDiscount: d, discountOffer: m } = (0, s.i)(),
-        p = (0, r.YJ)(m),
+        { isEligibleForDiscount: d, discountOffer: p } = (0, s.i)(),
+        m = (0, r.YJ)(p),
         h = !0 === n.loaded,
         C = null != c,
         [f, E] = (0, i.YV)({
-            items: null != p ? [{ planId: p, quantity: 1 }] : [],
+            items: null != m ? [{ planId: m, quantity: 1 }] : [],
             renewal: !1,
-            preventFetch: C || !d || null == p || !h,
+            preventFetch: C || !d || null == m || !h,
             trialId: o,
             paymentSourceId: n.paymentSourceId,
             currency: n.currency,
             metadata: u,
         }),
         S = C ? c : f,
-        I = l.useMemo(() => {
+        y = l.useMemo(() => {
             let e = d ? (S ?? null) : null;
             return {
-                discountOffer: m,
-                applicablePlan: p,
+                discountOffer: p,
+                applicablePlan: m,
                 discountInvoicePreview: e,
-                discountAmountOff: null != p ? (0, r.pg)(e, p) : null,
+                discountAmountOff: null != m ? (0, r.pg)(e, m) : null,
                 discountInvoiceError: E,
             };
-        }, [m, p, S, E, d]);
+        }, [p, m, S, E, d]);
     return (
         (t = (0, a.t4)((e) => {
             let { setPremiumDiscountInfo: t } = e;
@@ -38,13 +38,13 @@ function o(e) {
         })),
         l.useEffect(
             () => (
-                t(I),
+                t(y),
                 () => {
                     t(r.TI);
                 }
             ),
-            [I, t],
+            [y, t],
         ),
-        I
+        y
     );
 }

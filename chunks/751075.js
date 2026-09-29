@@ -1,64 +1,64 @@
-n.d(t, { CD: () => d, YP: () => c, e0: () => g, qP: () => E });
-var i,
-    s = n(477900),
-    l = n(582128),
-    r = n(503698),
-    a = n.n(r),
-    o = n(573435),
-    u = n(97385);
-let d = 48,
-    c = 40;
-var g = (((i = {})[(i.ROUNDED = 0)] = "ROUNDED"), (i[(i.SQUIRCLE = 1)] = "SQUIRCLE"), i);
-function m(e) {
+n.d(t, { CD: () => c, YP: () => T, e0: () => d, qP: () => C });
+var r,
+    i = n(477900),
+    u = n(582128),
+    o = n(503698),
+    l = n.n(o),
+    a = n(573435),
+    s = n(97385);
+let c = 48,
+    T = 40;
+var d = (((r = {})[(r.ROUNDED = 0)] = "ROUNDED"), (r[(r.SQUIRCLE = 1)] = "SQUIRCLE"), r);
+function O(e) {
     let { sizePx: t } = e,
         n = 0.5 / t,
-        i = `translate(${n}, ${n}) scale(${1 - 2 * n})`;
-    return (0, s.jsx)("svg", {
-        className: u.v9,
+        r = `translate(${n}, ${n}) scale(${1 - 2 * n})`;
+    return (0, i.jsx)("svg", {
+        className: s.v9,
         width: t,
         height: t,
         viewBox: "0 0 1 1",
         "aria-hidden": !0,
-        children: (0, s.jsx)("path", {
-            d: o.Vf,
+        children: (0, i.jsx)("path", {
+            d: a.Vf,
             fill: "none",
             stroke: "var(--border-subtle)",
             strokeWidth: 1 / t,
-            transform: i,
+            transform: r,
         }),
     });
 }
-function A(e) {
-    let { icon: t, sizePx: n, positionClassName: i } = e,
-        r = l.useMemo(() => ({ width: `${n}px`, height: `${n}px` }), [n]);
+function f(e) {
+    let { icon: t, sizePx: n, positionClassName: r } = e,
+        o = u.useMemo(() => ({ width: `${n}px`, height: `${n}px` }), [n]);
     switch (t.shape) {
         case 1:
-            return (0, s.jsxs)("div", {
-                className: a()(u.Gt, i),
-                style: r,
+            return (0, i.jsxs)("div", {
+                className: l()(s.Gt, r),
+                style: o,
                 children: [
-                    (0, s.jsx)(o.Ay, {
-                        mask: o.Ay.Masks.SQUIRCLE,
+                    (0, i.jsx)(a.Ay, {
+                        mask: a.Ay.Masks.SQUIRCLE,
                         width: n,
                         height: n,
-                        children: (0, s.jsx)("div", { className: u.pU, style: r, children: t.icon }),
+                        children: (0, i.jsx)("div", { className: s.pU, style: o, children: t.icon }),
                     }),
-                    (0, s.jsx)(m, { sizePx: n }),
+                    (0, i.jsx)(O, { sizePx: n }),
                 ],
             });
         case 0:
-            return (0, s.jsx)("div", { className: a()(u.Gt, i, u.Nb), style: r, children: t.icon });
+            return (0, i.jsx)("div", { className: l()(s.Gt, r, s.Nb), style: o, children: t.icon });
     }
 }
-function E(e) {
+function C(e) {
     let { icons: t } = e,
-        { frontIcon: n, backIcon: i } = t;
-    return (0, s.jsxs)("div", {
-        className: u.VD,
+        { frontIcon: n, backIcon: r } = t;
+    return (0, i.jsxs)("div", {
+        className: s.VD,
         "aria-hidden": !0,
         children: [
-            null != i && (0, s.jsx)(A, { icon: i, sizePx: c, positionClassName: u.j2 }),
-            (0, s.jsx)(A, { icon: n, sizePx: d, positionClassName: u.hU }),
+            null != r && (0, i.jsx)(f, { icon: r, sizePx: T, positionClassName: s.j2 }),
+            (0, i.jsx)(f, { icon: n, sizePx: c, positionClassName: s.hU }),
         ],
     });
 }

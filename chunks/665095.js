@@ -29,7 +29,7 @@ var i = n(477900),
     R = n(375708),
     M = n(690807);
 let O = N.A.getArticleURL(y.MVz.VERIFICATION_FAQ);
-class w extends l.PureComponent {
+class k extends l.PureComponent {
     static defaultProps = { types: [y.Fz7.CAPTCHA], onCaptchaVerify: y.tEg, onLogout: y.tEg };
     renderFields() {
         let { types: e, captchaKey: t, theme: n, onCaptchaVerify: l } = this.props;
@@ -132,7 +132,7 @@ class w extends l.PureComponent {
         t?.(e);
     };
 }
-var k = n(87404),
+var w = n(87404),
     L = n(53516);
 function P() {
     let { action: e, theme: t } = (0, s.cf)([x.A, A.A], () => ({ action: x.A.getAction(), theme: A.A.theme })),
@@ -148,7 +148,7 @@ function P() {
                     );
                     return (t) => (0, i.jsx)(e, { ...t });
                 },
-                { modalKey: k.H1, Layer: p.Ay },
+                { modalKey: w.H1, Layer: p.Ay },
             ));
     }
     return (
@@ -184,10 +184,10 @@ function P() {
                                 confirmText: R.intl.string(R.t["3oK4qw"]),
                             });
                     },
-                    { modalKey: k.Pr, Layer: p.Ay, onCloseCallback: b },
+                    { modalKey: w.Pr, Layer: p.Ay, onCloseCallback: b },
                 );
         }, [E, I]),
-        (0, i.jsx)(w, {
+        (0, i.jsx)(k, {
             types: E,
             captchaKey: C,
             onCaptchaVerify: function (e) {

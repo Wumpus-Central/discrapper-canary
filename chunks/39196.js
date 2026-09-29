@@ -13,27 +13,27 @@ function u(e, t, r, l) {
     let g,
         m = o(e, t);
     if (null == e || null == m) return t;
-    let p = (0, i.Q7)(m, r),
-        h = {
+    let E = (0, i.Q7)(m, r),
+        _ = {
             locale: l,
             endsAt: e.endsAt,
             redemptionEndsAt: e.redemptionEndsAt,
             helpCenterId: m.shared.helpCenter?.id,
         },
-        E = p?.title != null && "" !== p.title ? (0, n.U)((0, s.wJ)(p.title, h)) : t.title,
-        S = p?.description != null && "" !== p.description ? (0, n.U)((0, s.wJ)(p.description, h)) : t.summary,
-        x =
-            null != p
-                ? ((u = p.rewardStates),
+        C = E?.title != null && "" !== E.title ? (0, n.U)((0, s.wJ)(E.title, _)) : t.title,
+        p = E?.description != null && "" !== E.description ? (0, n.U)((0, s.wJ)(E.description, _)) : t.summary,
+        h =
+            null != E
+                ? ((u = E.rewardStates),
                   (c = e.rewardStatus),
                   (d = e.progress?.current ?? 0),
                   null != (g = (0, a.x)(u, c, d)?.heroUrl) && "" !== g ? g : void 0)
                 : void 0;
     return {
         ...t,
-        title: E,
-        summary: S,
-        heroBannerUrl: x ?? t.heroBannerUrl,
+        title: C,
+        summary: p,
+        heroBannerUrl: h ?? t.heroBannerUrl,
         heroBannerAnimatedUrl: void 0,
         heroRiveUrl: void 0,
     };

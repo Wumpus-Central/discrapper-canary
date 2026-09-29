@@ -1,13 +1,13 @@
-i.d(e, { YG: () => r, xk: () => l });
-var n = i(196765);
-let r = "0",
-    s = { selectedGuildId: r },
-    l = (0, n.v)((t) => ({
+_.d(t, { YG: () => i, xk: () => r });
+var u = _(196765);
+let i = "0",
+    s = { selectedGuildId: i },
+    r = (0, u.v)((e) => ({
         ...s,
-        setSelectedGuildId: (e) => {
-            t({ selectedGuildId: e });
+        setSelectedGuildId: (t) => {
+            e({ selectedGuildId: t });
         },
         reset: () => {
-            t(s);
+            e(s);
         },
     }));

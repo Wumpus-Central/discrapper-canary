@@ -14,8 +14,8 @@ var l = n(75304),
     u = n(482132),
     c = n(981036),
     d = n(202475),
-    m = n(375708),
-    p = n(338039);
+    p = n(375708),
+    m = n(338039);
 function h(e) {
     let {
             paymentModalStepProps: { handleStepChange: t },
@@ -28,18 +28,18 @@ function h(e) {
             onBackClick: E,
         } = e,
         { hasPaymentSources: S } = (0, d.j)(),
-        I = S ? o.pn.REVIEW : o.pn.ADD_PAYMENT_STEPS,
-        y = s.useCallback(() => t(I), [t, I]),
+        y = S ? o.pn.REVIEW : o.pn.ADD_PAYMENT_STEPS,
+        I = s.useCallback(() => t(y), [t, y]),
         g = s.useMemo(
             () =>
                 n === l.X.CUSTOM_STEP_BODY
                     ? i()
                     : (0, a.jsxs)(a.Fragment, {
-                          children: [(0, a.jsxs)("div", { className: p.D, children: [r(), h()] }), null != C && C()],
+                          children: [(0, a.jsxs)("div", { className: m.D, children: [r(), h()] }), null != C && C()],
                       }),
             [n, i, r, h, C],
         ),
-        A = s.useMemo(() => ({ ...f, onClick: y, text: m.intl.string(m.t.XiOHRX) }), [f, y]);
+        A = s.useMemo(() => ({ ...f, onClick: I, text: p.intl.string(p.t.XiOHRX) }), [f, I]);
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsx)(u.dZ, { children: g }),

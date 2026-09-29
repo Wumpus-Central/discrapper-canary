@@ -1,4 +1,4 @@
-n.d(t, { AB: () => S, AI: () => A, Xc: () => T, ae: () => p, g8: () => _, gF: () => f, gS: () => N, vz: () => I });
+n.d(t, { AB: () => S, AI: () => A, Xc: () => I, ae: () => p, g8: () => _, gF: () => f, gS: () => N, vz: () => T });
 var i,
     l = n(873298),
     r = n(885386),
@@ -69,7 +69,7 @@ function _(e, t) {
           }),
           { affectedGuildIds: A, direction: l });
 }
-function T(e) {
+function I(e) {
     switch (e) {
         case h.ACTIVITY_STATUS_OFF:
             return u.intl.string(u.t.FzgQna).toLowerCase();
@@ -81,7 +81,7 @@ function T(e) {
             return "";
     }
 }
-function I(e, t) {
+function T(e, t) {
     return {
         title: u.intl.string(e ? u.t.eYDA7D : u.t["9jYwjo"]),
         subtitle: u.intl.format(e ? u.t["c5/jDc"] : u.t.ajzh8S, { settingName: t }),

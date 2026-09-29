@@ -1,9 +1,9 @@
-i.d(e, { e: () => l });
-var n = i(582128),
-    r = i(115063),
-    s = i(885386);
-function l() {
-    let t = s.FA.useSetting(),
-        e = n.useMemo(() => (0, r.Lx)(t), [t]);
-    return e.mutualGuilds && !e.all;
+_.d(t, { e: () => r });
+var u = _(582128),
+    i = _(115063),
+    s = _(885386);
+function r() {
+    let e = s.FA.useSetting(),
+        t = u.useMemo(() => (0, i.Lx)(e), [e]);
+    return t.mutualGuilds && !t.all;
 }

@@ -1,30 +1,30 @@
-n.d(t, { Q: () => d, U: () => c });
-var i = n(636537),
-    l = n(228366),
-    r = n(652215),
-    s = n(375708);
-function a(e) {
-    return (null != e && null != e.body && l.h.dispatch({ type: "UPDATE_CONSENTS", consents: { ...e.body } }), e.body);
+o.d(t, { Q: () => c, U: () => l });
+var s = o(636537),
+    n = o(228366),
+    e = o(652215),
+    u = o(375708);
+function d(r) {
+    return (null != r && null != r.body && n.h.dispatch({ type: "UPDATE_CONSENTS", consents: { ...r.body } }), r.body);
 }
-function o(e) {
+function i(r) {
     throw Error(
-        e.status >= 500 && e.status <= 599
-            ? s.intl.string(s.t.cvJdtg)
-            : null != e && null != e.body && null != e.body.message
-              ? e.body.message
-              : s.intl.string(s.t.cvJdtg),
+        r.status >= 500 && r.status <= 599
+            ? u.intl.string(u.t.cvJdtg)
+            : null != r && null != r.body && null != r.body.message
+              ? r.body.message
+              : u.intl.string(u.t.cvJdtg),
     );
 }
-function d() {
-    return i.Bo.get({ url: r.Rsh.SETTINGS_CONSENT, oldFormErrors: !0, rejectWithError: (0, i.fT)() }).then(a, (e) =>
-        Promise.reject(Error(e.body.message)),
+function c() {
+    return s.Bo.get({ url: e.Rsh.SETTINGS_CONSENT, oldFormErrors: !0, rejectWithError: (0, s.fT)() }).then(d, (r) =>
+        Promise.reject(Error(r.body.message)),
     );
 }
-function c(e, t) {
-    return i.Bo.post({
-        url: r.Rsh.SETTINGS_CONSENT,
-        body: { grant: e, revoke: t },
+function l(r, t) {
+    return s.Bo.post({
+        url: e.Rsh.SETTINGS_CONSENT,
+        body: { grant: r, revoke: t },
         oldFormErrors: !0,
-        rejectWithError: (0, i.fT)(),
-    }).then(a, o);
+        rejectWithError: (0, s.fT)(),
+    }).then(d, i);
 }

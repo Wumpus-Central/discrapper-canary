@@ -1,17 +1,17 @@
-n.d(t, { D: () => o });
-var a = n(477900);
-n(582128);
-var r = n(113494),
-    l = n(782134),
-    i = n(460890),
-    s = n(657718);
-function o(e) {
-    let { "aria-label": t, playing: n, ...o } = e,
-        { i18n: c } = (0, i.G9)();
-    return (0, a.jsx)(s.S, {
-        ...o,
-        "aria-label": t ?? (n ? c.PAUSE_BUTTON_LABEL : c.PLAY_BUTTON_LABEL),
-        icon: n ? r.PauseIcon : l.PlayIcon,
+t.d(n, { D: () => s });
+var a = t(477900);
+t(582128);
+var l = t(113494),
+    i = t(782134),
+    r = t(460890),
+    d = t(657718);
+function s(e) {
+    let { "aria-label": n, playing: t, ...s } = e,
+        { i18n: _ } = (0, r.G9)();
+    return (0, a.jsx)(d.S, {
+        ...s,
+        "aria-label": n ?? (t ? _.PAUSE_BUTTON_LABEL : _.PLAY_BUTTON_LABEL),
+        icon: t ? l.PauseIcon : i.PlayIcon,
         variant: "overlay-secondary",
         fullWidth: !1,
         rounded: !0,

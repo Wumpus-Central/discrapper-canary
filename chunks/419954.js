@@ -1,102 +1,102 @@
 n.d(t, {
-    AK: () => C,
-    D1: () => m,
-    E2: () => b,
-    FW: () => S,
-    Hn: () => _,
-    Hr: () => r,
-    Qx: () => N,
-    Tf: () => T,
-    WI: () => a,
-    bd: () => g,
-    gN: () => E,
-    hl: () => s,
-    i4: () => o,
-    sN: () => I,
-    t0: () => A,
-    t_: () => u,
-    v_: () => p,
-    zC: () => d,
-    zD: () => f,
-    zY: () => h,
-    zZ: () => c,
+    AK: () => _,
+    D1: () => O,
+    E2: () => p,
+    FW: () => E,
+    Hn: () => D,
+    Hr: () => o,
+    Qx: () => R,
+    Tf: () => A,
+    WI: () => l,
+    bd: () => d,
+    gN: () => C,
+    hl: () => i,
+    i4: () => a,
+    sN: () => y,
+    t0: () => f,
+    t_: () => s,
+    v_: () => I,
+    zC: () => c,
+    zD: () => h,
+    zY: () => N,
+    zZ: () => T,
 });
-var i = n(963935);
-function s(e) {
+var r = n(963935);
+function i(e) {
     return (function e(t) {
         if ("buildLayout" in t && "function" == typeof t.buildLayout) {
             let n = t.buildLayout().map(e),
-                { buildLayout: i, ...s } = t,
-                l = { ...s, layout: n };
-            return (n.forEach((e) => (e.parent = l)), l);
+                { buildLayout: r, ...i } = t,
+                u = { ...i, layout: n };
+            return (n.forEach((e) => (e.parent = u)), u);
         }
         return t;
     })(e);
 }
-function l(e, t, n) {
+function u(e, t, n) {
     return { ...n, key: e, type: t };
 }
-function r(e) {
-    return l("$Root", i.Z6.ROOT, e);
+function o(e) {
+    return u("$Root", r.Z6.ROOT, e);
+}
+function l(e, t) {
+    return u(e, r.Z6.SECTION, t);
 }
 function a(e, t) {
-    return l(e, i.Z6.SECTION, t);
+    return u(e, r.Z6.SIDEBAR_ITEM, t);
 }
-function o(e, t) {
-    return l(e, i.Z6.SIDEBAR_ITEM, t);
-}
-function u(e, t) {
-    return l(e, i.Z6.PANEL, t);
-}
-function d(e, t) {
-    return l(e, i.Z6.SPLIT, t);
+function s(e, t) {
+    return u(e, r.Z6.PANEL, t);
 }
 function c(e, t) {
-    return l(e, i.Z6.CATEGORY, t);
-}
-function g(e, t) {
-    return l(e, i.Z6.ACCORDION, t);
-}
-function m(e, t) {
-    return l(e, i.Z6.LIST, t);
-}
-function A(e, t) {
-    return l(e, i.Z6.NESTED_PANEL_NAVIGATOR, t);
-}
-function E(e, t) {
-    return l(e, i.Z6.RELATED, t);
-}
-function h(e, t) {
-    return l(e, i.Z6.CARD, t);
-}
-function S(e, t) {
-    return l(e, i.Z6.FIELD_SET, t);
-}
-function x(e, t, n) {
-    return { ...n, key: e, type: t };
-}
-function p(e, t) {
-    return x(e, i.Z6.STATIC, t);
+    return u(e, r.Z6.SPLIT, t);
 }
 function T(e, t) {
-    return x(e, i.Z6.BUTTON, t);
+    return u(e, r.Z6.CATEGORY, t);
+}
+function d(e, t) {
+    return u(e, r.Z6.ACCORDION, t);
+}
+function O(e, t) {
+    return u(e, r.Z6.LIST, t);
 }
 function f(e, t) {
-    return x(e, i.Z6.TOGGLE, t);
-}
-function I(e, t) {
-    return x(e, i.Z6.SLIDER, t);
-}
-function _(e, t) {
-    let n = t.selectionMode ?? "single";
-    return { ...t, selectionMode: n, key: e, type: i.Z6.SELECT };
-}
-function N(e, t) {
-    return x(e, i.Z6.RADIO, t);
+    return u(e, r.Z6.NESTED_PANEL_NAVIGATOR, t);
 }
 function C(e, t) {
-    return x(e, i.Z6.NAVIGATOR, t);
+    return u(e, r.Z6.RELATED, t);
 }
-function b(e, t) {
-    return x(e, i.Z6.CUSTOM, t);
+function N(e, t) {
+    return u(e, r.Z6.CARD, t);
+}
+function E(e, t) {
+    return u(e, r.Z6.FIELD_SET, t);
+}
+function S(e, t, n) {
+    return { ...n, key: e, type: t };
+}
+function I(e, t) {
+    return S(e, r.Z6.STATIC, t);
+}
+function A(e, t) {
+    return S(e, r.Z6.BUTTON, t);
+}
+function h(e, t) {
+    return S(e, r.Z6.TOGGLE, t);
+}
+function y(e, t) {
+    return S(e, r.Z6.SLIDER, t);
+}
+function D(e, t) {
+    let n = t.selectionMode ?? "single";
+    return { ...t, selectionMode: n, key: e, type: r.Z6.SELECT };
+}
+function R(e, t) {
+    return S(e, r.Z6.RADIO, t);
+}
+function _(e, t) {
+    return S(e, r.Z6.NAVIGATOR, t);
+}
+function p(e, t) {
+    return S(e, r.Z6.CUSTOM, t);
 }

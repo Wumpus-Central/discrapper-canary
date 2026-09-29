@@ -8,8 +8,8 @@ var l = n(477900),
     u = n(922016),
     c = n(305866),
     d = n(939249),
-    m = n(7807),
-    p = n(807348),
+    p = n(7807),
+    m = n(807348),
     h = n(511558),
     C = n(375708),
     f = n(649028);
@@ -17,8 +17,8 @@ let E = [54, 8, 8, 8];
 function S(e) {
     let { onSelect: t, sound: n } = e,
         [r, S] = i.useState(!1),
-        I = i.useRef(null),
-        y = a()(f.Qq, f.Ow);
+        y = i.useRef(null),
+        I = a()(f.Qq, f.Ow);
     function g(e) {
         (S(!1), t?.(e));
     }
@@ -38,7 +38,7 @@ function S(e) {
         });
     }
     return (0, l.jsx)(u.Y, {
-        targetElementRef: I,
+        targetElementRef: y,
         shouldShow: r,
         position: "bottom",
         align: "left",
@@ -54,7 +54,7 @@ function S(e) {
                     onClose: t,
                     onSelect: g,
                     analyticsSource: "gift soundboard",
-                    soundButtonOverlay: p.If.ADD,
+                    soundButtonOverlay: m.If.ADD,
                     listPadding: E,
                     renderHeader: A,
                     defaultSoundsOnly: !0,
@@ -65,13 +65,13 @@ function S(e) {
             (0, l.jsx)(d.D, {
                 className: a()(f.kL, f.Ow),
                 onClick: () => S(!0),
-                innerRef: I,
+                innerRef: y,
                 children:
                     null == n
                         ? (0, l.jsxs)("div", {
                               className: f.hQ,
                               children: [
-                                  (0, l.jsx)(m.J, {
+                                  (0, l.jsx)(p.J, {
                                       size: "custom",
                                       color: s.A.colors.ICON_STRONG,
                                       className: f.tc,
@@ -79,7 +79,7 @@ function S(e) {
                                       height: 14,
                                   }),
                                   (0, l.jsx)(o.E, {
-                                      className: y,
+                                      className: I,
                                       variant: "text-sm/semibold",
                                       lineClamp: 1,
                                       children: C.intl.string(C.t.aThJz8),
@@ -90,13 +90,13 @@ function S(e) {
                               className: f.hQ,
                               children: [
                                   (0, l.jsx)(o.E, {
-                                      className: y,
+                                      className: I,
                                       variant: "text-sm/semibold",
                                       lineClamp: 1,
                                       children: n.emojiName,
                                   }),
                                   (0, l.jsx)(o.E, {
-                                      className: y,
+                                      className: I,
                                       variant: "text-sm/semibold",
                                       lineClamp: 1,
                                       children: n.name,

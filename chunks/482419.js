@@ -13,19 +13,19 @@ function c(e) {
             subscriptionPlan: n,
             subscriptionTrial: c,
             isPrepaidPaymentSource: d,
-            isCustomGift: m,
+            isCustomGift: p,
         } = e,
-        { invoicePreview: p } = t,
+        { invoicePreview: m } = t,
         h = [];
     h =
         t.type === a.u$.PREMIUM_GIFT
-            ? (0, i.fk)(p, { isCustomGift: m, isPrepaidPaymentSource: d, subscriptionPlan: n })
-            : (0, i.IY)(p, {
+            ? (0, i.fk)(m, { isCustomGift: p, isPrepaidPaymentSource: d, subscriptionPlan: n })
+            : (0, i.IY)(m, {
                   isPrepaidPaymentSource: d,
                   invoiceSummaryType: t.type,
                   subscriptionPlan: n,
                   subscriptionTrial: c,
               }).lineItems;
-    let C = (0, r.lp)(p, { manualLineItems: h, includeTaxLineItem: !0 });
-    return (0, l.jsx)(s.Vm, { label: u.intl.string(o.default.eoXh7B), lineItems: C, currency: p.currency });
+    let C = (0, r.lp)(m, { manualLineItems: h, includeTaxLineItem: !0 });
+    return (0, l.jsx)(s.Vm, { label: u.intl.string(o.default.eoXh7B), lineItems: C, currency: m.currency });
 }

@@ -1,31 +1,31 @@
-n.d(e, { _: () => s, h: () => c });
-var r = n(477900);
-n(582128);
-var i = n(503698),
-    l = n.n(i),
-    o = n(297264),
-    u = n(834730),
-    d = n(140038);
-function s(t) {
-    let { header: e, description: n, relatedId: i, disabled: s } = t;
-    return (0, r.jsxs)("div", {
-        className: d.wx,
+e.d(r, { _: () => d, h: () => h });
+var s = e(477900);
+e(582128);
+var a = e(503698),
+    n = e.n(a),
+    c = e(297264),
+    l = e(834730),
+    i = e(140038);
+function d(t) {
+    let { header: r, description: e, relatedId: a, disabled: d } = t;
+    return (0, s.jsxs)("div", {
+        className: i.wx,
         children: [
-            (0, r.jsx)(o.D, {
+            (0, s.jsx)(c.D, {
                 variant: "text-md/medium",
                 color: "text-strong",
-                children: (0, r.jsx)("label", { htmlFor: i, className: l()(d.DD, { [d.r9]: s }), children: e }),
+                children: (0, s.jsx)("label", { htmlFor: a, className: n()(i.DD, { [i.r9]: d }), children: r }),
             }),
-            (0, r.jsx)(u.E, {
+            (0, s.jsx)(l.E, {
                 variant: "text-sm/normal",
                 color: "text-default",
-                className: l()(d.h_, { [d.r9]: s }),
-                children: n,
+                className: n()(i.h_, { [i.r9]: d }),
+                children: e,
             }),
         ],
     });
 }
-function c(t) {
-    let { className: e, children: n } = t;
-    return (0, r.jsx)("div", { className: l()(d.kL, e), children: n });
+function h(t) {
+    let { className: r, children: e } = t;
+    return (0, s.jsx)("div", { className: n()(i.kL, r), children: e });
 }

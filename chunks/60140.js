@@ -1,4 +1,4 @@
-r.d(t, { A: () => I });
+r.d(t, { A: () => x });
 var n = r(477900),
     l = r(582128),
     s = r(449543),
@@ -10,36 +10,36 @@ var n = r(477900),
     d = r(313276),
     g = r(206077),
     m = r(258245),
-    p = r(561769),
-    h = r(484469),
-    E = r(375708),
-    S = r(105499);
-function x(e) {
+    E = r(561769),
+    _ = r(484469),
+    C = r(375708),
+    p = r(105499);
+function h(e) {
     return String(e);
 }
-function C(e) {
+function I(e) {
     return e.skuId;
 }
-function A(e) {
+function S(e) {
     let { isLoading: t, products: r, tab: l } = e,
-        s = (0, p.Mk)(l);
+        s = (0, E.Mk)(l);
     return t
         ? (0, n.jsx)("div", {
-              className: S.hm,
-              children: [void 0, void 0, void 0, void 0].map((e, t) => (0, n.jsx)(h.A, {}, t)),
+              className: p.hm,
+              children: [void 0, void 0, void 0, void 0].map((e, t) => (0, n.jsx)(_.A, {}, t)),
           })
         : (0, n.jsx)("div", {
-              className: S.hm,
-              children: (0, n.jsx)(p.v3.Provider, {
+              className: p.hm,
+              children: (0, n.jsx)(E.v3.Provider, {
                   value: { flattenProductVariants: !1 },
-                  children: r.map((e, t) => (0, n.jsx)(_, { item: e, index: t, prioritizedCurrency: s }, e.skuId)),
+                  children: r.map((e, t) => (0, n.jsx)(A, { item: e, index: t, prioritizedCurrency: s }, e.skuId)),
               }),
           });
 }
-function v(e) {
+function L(e) {
     let { isLoading: t, products: r, tab: l } = e,
-        i = (0, p.Mk)(l),
-        o = E.intl.string(E.t.HP8LNG);
+        i = (0, E.Mk)(l),
+        o = C.intl.string(C.t.HP8LNG);
     if ((0, u.Y)("hero_block_cards")) {
         if (t) {
             let e = [void 0, void 0, void 0, void 0].map((e, t) => t);
@@ -47,67 +47,67 @@ function v(e) {
                 gap: "xl",
                 "aria-label": o,
                 items: e,
-                getItemKey: x,
-                renderItem: (e) => (0, n.jsx)(h.A, {}, e),
+                getItemKey: h,
+                renderItem: (e) => (0, n.jsx)(_.A, {}, e),
             });
         }
-        return (0, n.jsx)(p.v3.Provider, {
+        return (0, n.jsx)(E.v3.Provider, {
             value: { flattenProductVariants: !1 },
             children: (0, n.jsx)(a.A, {
                 gap: "xl",
                 "aria-label": o,
                 items: r,
-                getItemKey: C,
+                getItemKey: I,
                 maintainFocusOnReorder: !0,
                 renderItem: (e, t, r) =>
-                    (0, n.jsx)(_, { item: e, index: r, prioritizedCurrency: i, listItemProps: t }, e.skuId),
+                    (0, n.jsx)(A, { item: e, index: r, prioritizedCurrency: i, listItemProps: t }, e.skuId),
             }),
         });
     }
     if (t) {
         let e = [void 0, void 0, void 0, void 0].map((e, t) => t);
-        return (0, n.jsx)(s.A, { gap: "xl", "aria-label": o, children: e.map((e) => (0, n.jsx)(h.A, {}, e)) });
+        return (0, n.jsx)(s.A, { gap: "xl", "aria-label": o, children: e.map((e) => (0, n.jsx)(_.A, {}, e)) });
     }
-    return (0, n.jsx)(p.v3.Provider, {
+    return (0, n.jsx)(E.v3.Provider, {
         value: { flattenProductVariants: !1 },
         children: (0, n.jsx)(s.A, {
             gap: "xl",
             "aria-label": o,
-            children: r.map((e, t) => (0, n.jsx)(_, { item: e, index: t, prioritizedCurrency: i }, e.skuId)),
+            children: r.map((e, t) => (0, n.jsx)(A, { item: e, index: t, prioritizedCurrency: i }, e.skuId)),
         }),
     });
 }
-function _(e) {
+function A(e) {
     let { item: t, index: r, prioritizedCurrency: l, listItemProps: s } = e;
     return (0, n.jsx)(i.R9, {
         newValue: { tilePosition: r, pageSection: "top 4", categoryPosition: 0 },
         children: (0, n.jsx)(m.A, { skuId: t.skuId, prioritizedCurrency: l, listItemProps: s }),
     });
 }
-let I = function (e) {
+let x = function (e) {
     let t,
         r,
         s,
         { heroBlockRecord: a, layout: i, tab: u, isBlockLoading: m = !1 } = e,
-        { products: p } =
+        { products: E } =
             ((t = (0, d.A)()),
             (r = (0, c.p)()),
             (s = l.useMemo(() => (m ? [] : r(t(a.rankedSkuIds))), [m, t, a.rankedSkuIds, r])),
             { products: (0, g.X)(s) }),
-        h = l.useMemo(
+        _ = l.useMemo(
             () =>
                 !m &&
                 0 !== a.rankedSkuIds.length &&
-                !(p.length > 0) &&
+                !(E.length > 0) &&
                 a.rankedSkuIds.every((e) => o.A.getProduct(e)?.variantGroupStoreListingId != null),
-            [m, a.rankedSkuIds, p.length],
+            [m, a.rankedSkuIds, E.length],
         ),
-        E = m || h,
-        S = l.useMemo(() => p.filter((e) => null != o.A.getCategoryForProduct(e.skuId)), [p]);
+        C = m || _,
+        p = l.useMemo(() => E.filter((e) => null != o.A.getCategoryForProduct(e.skuId)), [E]);
     switch (i) {
         case "feed":
-            return (0, n.jsx)(A, { isLoading: E, products: S, tab: u });
+            return (0, n.jsx)(S, { isLoading: C, products: p, tab: u });
         case "hscroll":
-            return (0, n.jsx)(v, { isLoading: E, products: S, tab: u });
+            return (0, n.jsx)(L, { isLoading: C, products: p, tab: u });
     }
 };

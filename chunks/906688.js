@@ -26,8 +26,8 @@ function C(e) {
         g = (0, u.vM)(t);
     if (null == g) return null;
     let _ = (0, s.Kj)(l),
-        { name: T, rarity: I } = g,
-        { color: p } = (0, u.ag)(I),
+        { name: I, rarity: T } = g,
+        { color: p } = (0, u.ag)(T),
         N = (0, r.M)(C) ? h : E,
         S = (_.size - _.offset - 2 * _.stroke) * 0.8,
         f = _.size - _.stroke,
@@ -36,7 +36,7 @@ function C(e) {
     return (0, i.jsxs)("div", {
         className: A.kL,
         style: { width: f, height: f, padding: _.stroke },
-        "aria-label": `${T() ?? ""}`,
+        "aria-label": `${I() ?? ""}`,
         children: [
             (0, i.jsx)("div", {
                 className: A.r5,
@@ -49,7 +49,7 @@ function C(e) {
                     children: (0, i.jsx)(o.LockIcon, { size: "custom", color: N.locked, ...m }),
                 }),
             n &&
-                I === u.md.LEGENDARY &&
+                T === u.md.LEGENDARY &&
                 (0, i.jsx)("div", { className: A.dq, style: O, children: (0, i.jsx)(c.A, { className: A.ox, ...m }) }),
         ],
     });

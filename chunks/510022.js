@@ -7,9 +7,9 @@ var l = n(477900),
 let o = "social-layer-storefront-item-claimed-successfully-modal",
     u = (e) => {
         let { sku: t, application: u, analyticsLocations: c, entitlement: d } = e,
-            m = !1;
-        function p(e) {
-            m = e.shouldIgnoreCloseRequest;
+            p = !1;
+        function m(e) {
+            p = e.shouldIgnoreCloseRequest;
         }
         (0, i.openModalLazy)(
             async () => {
@@ -28,13 +28,13 @@ let o = "social-layer-storefront-item-claimed-successfully-modal",
                         application: u,
                         analyticsLocations: c,
                         entitlement: d,
-                        onSetIgnoreCloseRequest: p,
+                        onSetIgnoreCloseRequest: m,
                     });
             },
             {
                 modalKey: o,
                 onCloseRequest: () => {
-                    m || (0, i.closeModal)(o);
+                    p || (0, i.closeModal)(o);
                 },
                 onCloseCallback: () => {
                     r.default.track(s.HAw.SLAYER_STOREFRONT_MODAL_CLOSED, {

@@ -9,8 +9,8 @@ var i = n(503698),
     u = n(140735),
     c = n(834730),
     d = n(318254),
-    m = n(580630),
-    p = n(993408),
+    p = n(580630),
+    m = n(993408),
     h = n(818348),
     C = n(375708),
     f = n(182732),
@@ -21,12 +21,12 @@ function S(e) {
         priceCurrency: n,
         discountIconConfig: i,
         className: r,
-        discount: a = p.rr,
+        discount: a = m.rr,
         variant: s = "text-md/semibold",
     } = e;
     return n === h.Yr.DISCORD_ORB
         ? (0, l.jsx)(g, { orbAmount: t, className: r, discount: a, variant: s })
-        : (0, l.jsx)(y, {
+        : (0, l.jsx)(I, {
               priceAmount: t,
               priceCurrency: n,
               discountIconConfig: i,
@@ -35,11 +35,11 @@ function S(e) {
               variant: s,
           });
 }
-function I(e) {
+function y(e) {
     let { config: t } = e,
         n = t.size ?? "md";
     switch (t.source) {
-        case p.D0.NITRO: {
+        case m.D0.NITRO: {
             let e = (0, l.jsx)(a.t, { size: n, color: "currentColor", className: E.Kk });
             if ("tooltip" === t.displayMode)
                 return (0, l.jsx)(s.m, {
@@ -49,7 +49,7 @@ function I(e) {
                 });
             return e;
         }
-        case p.D0.THIRDPARTY: {
+        case m.D0.THIRDPARTY: {
             let e = (0, l.jsx)(o.TagIcon, { size: n, color: "currentColor", className: E.Kk });
             if ("tooltip" === t.displayMode)
                 return (0, l.jsx)(s.m, { text: C.intl.string(f.default.DePOcS), children: e });
@@ -59,18 +59,18 @@ function I(e) {
             return (t.source, null);
     }
 }
-function y(e) {
+function I(e) {
     let {
             priceAmount: t,
             priceCurrency: n,
             discountIconConfig: i,
             className: a,
-            discount: s = p.rr,
+            discount: s = m.rr,
             variant: o = "heading-md/semibold",
         } = e,
-        d = (0, m.RS)(t, n),
+        d = (0, p.RS)(t, n),
         h =
-            s !== p.rr && s.discountPercentage >= p.es
+            s !== m.rr && s.discountPercentage >= m.es
                 ? (0, l.jsxs)(l.Fragment, {
                       children: [
                           (0, l.jsx)(u.A, {
@@ -96,15 +96,15 @@ function y(e) {
     return (0, l.jsxs)("div", {
         className: r()(E.kL, a),
         children: [
-            null != i ? (0, l.jsx)(I, { config: i }) : null,
+            null != i ? (0, l.jsx)(y, { config: i }) : null,
             (0, l.jsx)(c.E, { variant: o, color: "currentColor", lineClamp: 1, children: h }),
         ],
     });
 }
 function g(e) {
-    let { orbAmount: t, className: n, discount: i = p.rr, variant: a = "text-md/semibold" } = e,
+    let { orbAmount: t, className: n, discount: i = m.rr, variant: a = "text-md/semibold" } = e,
         s =
-            i !== p.rr && i.discountPercentage >= p.es
+            i !== m.rr && i.discountPercentage >= m.es
                 ? (0, l.jsxs)(l.Fragment, {
                       children: [
                           (0, l.jsx)(u.A, {

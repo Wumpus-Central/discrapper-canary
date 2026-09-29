@@ -8,15 +8,15 @@ let a = "",
     u = !1,
     c = null,
     d = "",
-    m = "",
     p = "",
+    m = "",
     h = "",
     C = "",
     f = "",
     E = "",
     S = "",
-    I = !1,
-    y = null,
+    y = !1,
+    I = null,
     g = null,
     A = null,
     P = null;
@@ -27,29 +27,29 @@ function v() {
         (u = !1),
         (c = null),
         (d = "US"),
-        (m = ""),
         (p = ""),
+        (m = ""),
         (h = ""),
         (C = ""),
         (f = ""),
         (E = ""),
         (S = ""),
-        (I = !1),
-        (y = null),
+        (y = !1),
+        (I = null),
         (g = null),
         (A = null),
         (P = null));
 }
-function x() {
-    y = null;
+function _() {
+    I = null;
 }
-function _(e) {
+function x(e) {
     let { error: t } = e;
-    y = t;
+    I = t;
 }
 function T(e) {
     let { message: t } = e;
-    y = new r.Ey(t);
+    I = new r.Ey(t);
 }
 class N extends l.Ay.Store {
     static displayName = "NewPaymentSourceStore";
@@ -78,38 +78,38 @@ class N extends l.Ay.Store {
         P = null;
     }
     getCreditCardInfo() {
-        return { name: m };
+        return { name: p };
     }
     get isCardInfoValid() {
         return u;
     }
     getBillingAddressInfo() {
-        return { name: m, email: p, country: d, line1: h, line2: C, city: f, postalCode: E, state: S };
+        return { name: p, email: m, country: d, line1: h, line2: C, city: f, postalCode: E, state: S };
     }
     get isBillingAddressInfoValid() {
-        return I;
+        return y;
     }
     get error() {
-        return y;
+        return I;
     }
 }
 let b = new N(i.h, {
     NEW_PAYMENT_SOURCE_CARD_INFO_UPDATE: function (e) {
         let { info: t, isValid: n } = e;
-        ((m = t.name), (u = n));
+        ((p = t.name), (u = n));
     },
     NEW_PAYMENT_SOURCE_ADDRESS_INFO_UPDATE: function (e) {
         let { info: t, isValid: n } = e;
-        (null != t.name && "" !== t.name && (m = t.name),
+        (null != t.name && "" !== t.name && (p = t.name),
             (d = t.country),
-            (m = t.name),
+            (p = t.name),
             (h = t.line1),
             (C = t.line2),
             (f = t.city),
             (E = t.postalCode),
             (S = t.state),
-            (p = t.email),
-            (I = n));
+            (m = t.email),
+            (y = n));
     },
     BRAINTREE_TOKENIZE_PAYPAL_START: function () {
         ((a = ""), (s = null));
@@ -118,15 +118,15 @@ let b = new N(i.h, {
         let { email: t, nonce: n, billingAddress: l } = e;
         ((a = t),
             (s = n),
-            (m = l.name),
+            (p = l.name),
             (d = l.country),
             (h = l.line1),
             (C = l.line2),
             (f = l.city),
             (E = l.postalCode),
             (S = l.state),
-            (p = l.email),
-            (I = d.length > 0));
+            (m = l.email),
+            (y = d.length > 0));
     },
     BRAINTREE_TOKENIZE_VENMO_START: function () {
         ((o = ""), (s = null));
@@ -141,11 +141,11 @@ let b = new N(i.h, {
         let { data: t } = e;
         c = t;
     },
-    BILLING_PAYMENT_SOURCE_CREATE_START: x,
-    MODAL_POP: x,
-    NEW_PAYMENT_SOURCE_CLEAR_ERROR: x,
-    BILLING_PAYMENT_SOURCE_CREATE_FAIL: _,
-    STRIPE_TOKEN_FAILURE: _,
+    BILLING_PAYMENT_SOURCE_CREATE_START: _,
+    MODAL_POP: _,
+    NEW_PAYMENT_SOURCE_CLEAR_ERROR: _,
+    BILLING_PAYMENT_SOURCE_CREATE_FAIL: x,
+    STRIPE_TOKEN_FAILURE: x,
     BILLING_PAYMENT_SOURCE_CREATE_SUCCESS: v,
     LOGOUT: v,
     BILLING_POPUP_BRIDGE_CALLBACK: function (e) {

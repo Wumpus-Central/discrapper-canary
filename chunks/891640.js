@@ -29,14 +29,14 @@ async function d(e, t) {
     let { stripe: n, billingAddressState: l, analyticsLocation: i } = e;
     return { paymentSource: await (0, r.bw)(n, l.info, t, i), responseType: "payment-source" };
 }
-async function m(e) {
+async function p(e) {
     let { braintreeNonce: t, billingAddressState: n, analyticsLocation: l } = e;
     return (
         i()(null != t, "Missing braintreeNonce"),
         { paymentSource: await (0, r.u1)(t, n.info, l), responseType: "payment-source" }
     );
 }
-async function p(e, t, n) {
+async function m(e, t, n) {
     let { adyenPaymentData: l, billingAddressState: i, analyticsLocation: s } = e;
     if (null != n && n.requireAdyenPaymentData && null == l)
         throw new a.v({
@@ -97,13 +97,13 @@ let f = {
     },
     [u.he.GIROPAY]: { submitAddressStep: async (e) => await d(e, u.he.GIROPAY) },
     [u.he.BANCONTACT]: { submitAddressStep: async (e) => await d(e, u.he.BANCONTACT) },
-    [u.he.PAYPAL]: { submitAddressStep: async (e) => await m(e) },
-    [u.he.VENMO]: { submitAddressStep: async (e) => await m(e) },
+    [u.he.PAYPAL]: { submitAddressStep: async (e) => await p(e) },
+    [u.he.VENMO]: { submitAddressStep: async (e) => await p(e) },
     [u.he.PAYSAFE_CARD]: { submitAddressStep: async (e) => await h(e, u.he.PAYSAFE_CARD) },
     [u.he.GRABPAY_MY]: { submitAddressStep: async (e) => await h(e, u.he.GRABPAY_MY) },
     [u.he.CASH_APP]: {
         submitAddressStep: async (e) => {
-            let { paymentSource: t } = await p(e, u.he.CASH_APP, {
+            let { paymentSource: t } = await m(e, u.he.CASH_APP, {
                 requireAdyenPaymentData: !0,
                 overwriteSubscriptionPaymentSource: e.overwriteSubscriptionPaymentSource,
             });
@@ -120,25 +120,25 @@ let f = {
     },
     [u.he.GCASH]: {
         submitAddressStep: async (e) => {
-            let { hasRedirectURL: t } = await p(e, u.he.GCASH);
+            let { hasRedirectURL: t } = await m(e, u.he.GCASH);
             return { hasRedirectURL: t, responseType: "redirect-url" };
         },
     },
     [u.he.MOMO_WALLET]: {
         submitAddressStep: async (e) => {
-            let { hasRedirectURL: t } = await p(e, u.he.MOMO_WALLET);
+            let { hasRedirectURL: t } = await m(e, u.he.MOMO_WALLET);
             return { hasRedirectURL: t, responseType: "redirect-url" };
         },
     },
     [u.he.KAKAOPAY]: {
         submitAddressStep: async (e) => {
-            let { hasRedirectURL: t } = await p(e, u.he.KAKAOPAY);
+            let { hasRedirectURL: t } = await m(e, u.he.KAKAOPAY);
             return { hasRedirectURL: t, responseType: "redirect-url" };
         },
     },
     [u.he.GOPAY_WALLET]: {
         submitAddressStep: async (e) => {
-            let { hasRedirectURL: t } = await p(e, u.he.GOPAY_WALLET);
+            let { hasRedirectURL: t } = await m(e, u.he.GOPAY_WALLET);
             return { hasRedirectURL: t, responseType: "redirect-url" };
         },
     },

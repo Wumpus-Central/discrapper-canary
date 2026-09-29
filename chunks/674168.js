@@ -15,8 +15,8 @@ var l = n(17928),
     C = n(766075),
     g = n(287809),
     _ = n(158045),
-    T = n(652215),
-    I = n(49999),
+    I = n(652215),
+    T = n(49999),
     p = n(202541),
     N = n(375708),
     S = n(316632);
@@ -40,7 +40,7 @@ function f(e) {
             null != f
                 ? (0, i.jsx)(s.D, {
                       className: S.VN,
-                      onClick: () => f?.(I.i.DISMISS),
+                      onClick: () => f?.(T.i.DISMISS),
                       "aria-label": N.intl.string(N.t.cpT0Cq),
                       children: (0, i.jsx)(a.P, { size: "xs", color: "currentColor", className: S.ut }),
                   })
@@ -56,7 +56,7 @@ function f(e) {
             L
                 ? (0, i.jsx)(u.$, {
                       onClick: function () {
-                          ((0, C.openUserSettings)(E.X.SOUNDBOARD_CATEGORY), n?.(), f?.(I.i.PRIMARY));
+                          ((0, C.openUserSettings)(E.X.SOUNDBOARD_CATEGORY), n?.(), f?.(T.i.PRIMARY));
                       },
                       text: N.intl.string(N.t.RzWDqY),
                       fullWidth: !0,
@@ -65,11 +65,11 @@ function f(e) {
                       textOptions: { textOverride: N.intl.string(N.t.pj0XBN) },
                       subscriptionTier: p.pe.TIER_2,
                       premiumModalAnalyticsLocation: {
-                          section: T.JJy.SOUNDBOARD_SOUND_PICKER,
-                          object: T.ZSU.BUTTON_CTA,
+                          section: I.JJy.SOUNDBOARD_SOUND_PICKER,
+                          object: I.ZSU.BUTTON_CTA,
                       },
                       color: r.$n.Colors.GREEN,
-                      onSubscribeModalClose: () => f?.(I.i.PRIMARY),
+                      onSubscribeModalClose: () => f?.(T.i.PRIMARY),
                   }),
         ],
     });

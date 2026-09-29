@@ -1,4 +1,4 @@
-r.d(t, { N0: () => S, lC: () => h, uS: () => E });
+r.d(t, { N0: () => p, lC: () => _, uS: () => C });
 var n = r(582128),
     l = r(17928),
     s = r(793574),
@@ -10,8 +10,8 @@ var n = r(582128),
     d = r(870216),
     g = r(758836),
     m = r(652215),
-    p = r(202541);
-function h(e) {
+    E = r(202541);
+function _(e) {
     let { analyticsSource: t, analyticsLocations: r } = (0, l.cf)([d.A], () => d.A.getAnalytics()),
         n = (function (e) {
             switch (e) {
@@ -46,8 +46,8 @@ function h(e) {
         { analyticsLocations: i, newestAnalyticsLocation: o } = (0, a.Ay)([...r, s.A.COLLECTIBLES_SHOP, n]);
     return { analyticsSource: t, analyticsLocations: i, newestAnalyticsLocation: o, currentTabLocation: n };
 }
-function E(e, t, r, l, s) {
-    let { analyticsLocations: a, analyticsSource: i, currentTabLocation: o, newestAnalyticsLocation: c } = h(t);
+function C(e, t, r, l, s) {
+    let { analyticsLocations: a, analyticsSource: i, currentTabLocation: o, newestAnalyticsLocation: c } = _(t);
     n.useEffect(() => {
         if (l !== g.Pf.VISIBLE || c !== o) return;
         let n = t === g.G2.CATALOG ? s : i;
@@ -60,12 +60,12 @@ function E(e, t, r, l, s) {
         });
     }, [a, e, t, r, o, l, s, i, c]);
 }
-function S(e, t) {
-    let { analyticsLocations: r } = h(e);
+function p(e, t) {
+    let { analyticsLocations: r } = _(e);
     n.useEffect(() => {
         null == t ||
             c.Ay.canUseCollectibles(t) ||
-            (u.default.track(m.HAw.PREMIUM_UPSELL_VIEWED, { type: p.e.COLLECTIBLES_SHOP, location_stack: r }),
-            (0, i.sq)(m.U7l.PREMIUM_UPSELL_VIEWED, r, () => (0, o.uq)(p.e.COLLECTIBLES_SHOP)));
+            (u.default.track(m.HAw.PREMIUM_UPSELL_VIEWED, { type: E.e.COLLECTIBLES_SHOP, location_stack: r }),
+            (0, i.sq)(m.U7l.PREMIUM_UPSELL_VIEWED, r, () => (0, o.uq)(E.e.COLLECTIBLES_SHOP)));
     }, [r, t]);
 }

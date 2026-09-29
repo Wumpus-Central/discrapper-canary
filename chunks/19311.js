@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => I, CY: () => f, ti: () => C });
+n.d(t, { Ay: () => y, CY: () => f, ti: () => C });
 var l,
     i = n(477900);
 n(582128);
@@ -9,8 +9,8 @@ var r = n(503698),
     u = n(364840),
     c = n(866665),
     d = n(331322),
-    m = n(999784),
-    p = n(375708),
+    p = n(999784),
+    m = n(375708),
     h = n(88045),
     C =
         (((l = {})[(l.CONTINUE = 0)] = "CONTINUE"),
@@ -50,13 +50,13 @@ function S(e) {
             primaryText: C,
             primaryTooltip: f,
             primaryDisabled: S,
-            primarySubmitting: I,
-            onPrimary: y,
+            primarySubmitting: y,
+            onPrimary: I,
         } = e,
         g =
             null == t
                 ? null
-                : (0, i.jsx)(o.Q, { text: n ?? p.intl.string(p.t["13/7kX"]), onClick: t, variant: "secondary" }),
+                : (0, i.jsx)(o.Q, { text: n ?? m.intl.string(m.t["13/7kX"]), onClick: t, variant: "secondary" }),
         A = (0, i.jsxs)(d.B, {
             direction: "horizontal",
             align: "center",
@@ -64,7 +64,7 @@ function S(e) {
             padding: 0,
             fullWidth: !1,
             children: [
-                (0, i.jsx)(m.A, {}),
+                (0, i.jsx)(p.A, {}),
                 (function () {
                     if (null == r || null == C) return null;
                     let e = {
@@ -73,12 +73,12 @@ function S(e) {
                         primaryType: s,
                         primaryText: C,
                         primaryDisabled: S,
-                        primarySubmitting: I,
-                        onPrimary: y,
+                        primarySubmitting: y,
+                        onPrimary: I,
                     };
                     return null != f
                         ? (0, i.jsx)(c.m, { text: f, asContainer: !0, children: (0, i.jsx)(E, { ...e }) })
-                        : (0, i.jsx)(E, { ...e, onPrimary: y });
+                        : (0, i.jsx)(E, { ...e, onPrimary: I });
                 })(),
             ],
         });
@@ -87,4 +87,4 @@ function S(e) {
     });
 }
 S.CTAType = C;
-let I = S;
+let y = S;

@@ -1,4 +1,4 @@
-n.d(t, { A: () => I, I: () => C });
+n.d(t, { A: () => T, I: () => C });
 var i = n(477900);
 n(582128);
 var l = n(607399),
@@ -50,8 +50,8 @@ function g(e) {
         toolbar: c,
         mobileToolbar: g,
         "aria-label": _,
-        "aria-labelledby": T,
-        scrollable: I,
+        "aria-labelledby": I,
+        scrollable: T,
         role: p,
         hideSearch: N,
         disableDoubleClick: S,
@@ -78,9 +78,9 @@ function g(e) {
         hidden: d,
         onDoubleClick: () => C(S),
         "aria-label": _,
-        "aria-labelledby": T,
+        "aria-labelledby": I,
         role: p,
-        scrollable: I,
+        scrollable: T,
         disableFocusRingScope: f,
         children: t,
     });
@@ -105,7 +105,7 @@ function _(e) {
         children: t,
     });
 }
-function T(e) {
+function I(e) {
     let { isAuthenticated: t = !0, ...n } = e,
         { analyticsLocations: l } = (0, s.Ay)(r.A.HEADER_BAR);
     return (0, i.jsx)(s.f5, {
@@ -113,9 +113,9 @@ function T(e) {
         children: t ? (0, i.jsx)(g, { ...n, className: n.className }) : (0, i.jsx)(_, { ...n, className: n.className }),
     });
 }
-((T.Title = u.Ay.Title),
-    (T.Icon = u.Ay.Icon),
-    (T.ChannelIcon = u.Ay.ChannelIcon),
-    (T.Divider = u.Ay.Divider),
-    (T.Caret = u.Ay.Caret));
-let I = T;
+((I.Title = u.Ay.Title),
+    (I.Icon = u.Ay.Icon),
+    (I.ChannelIcon = u.Ay.ChannelIcon),
+    (I.Divider = u.Ay.Divider),
+    (I.Caret = u.Ay.Caret));
+let T = I;

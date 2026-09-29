@@ -1,4 +1,4 @@
-n.d(t, { yx: () => _, yv: () => T });
+n.d(t, { yx: () => _, yv: () => I });
 var i = n(435558),
     l = n.n(i),
     r = n(5180),
@@ -35,7 +35,7 @@ let _ = {
         comboKeysBindGlobal: !0,
         action: (e, t) => (e.preventDefault(), e.stopPropagation(), g(t, 1) || h(), !1),
     },
-    T = {
+    I = {
         binds: ["mod+alt+up", "mod+shift+[", "ctrl+shift+tab"],
         comboKeysBindGlobal: !0,
         action: (e, t) => (e.preventDefault(), e.stopPropagation(), g(t, -1) || h(-1), !1),

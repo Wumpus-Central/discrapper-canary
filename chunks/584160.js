@@ -15,19 +15,19 @@ function d(e) {
             step: n,
             storeCountryFromCheckoutContext: l,
             relocationCountry: d,
-            headerBadgePreset: m,
-            headerBadgeText: p,
+            headerBadgePreset: p,
+            headerBadgeText: m,
             headerBadgeIcon: h,
             headerBadgeVariant: C,
         } = e,
         f = o.intl.string(o.t.q9EGps);
     n === r.pn.ADD_PAYMENT_STEPS && (f = o.intl.string(o.t.CpOiEO));
-    let E = { headerBadgeText: p, headerBadgeIcon: h, headerBadgeVariant: C };
-    "beta" === m
+    let E = { headerBadgeText: m, headerBadgeIcon: h, headerBadgeVariant: C };
+    "beta" === p
         ? ((E.headerBadgeText = o.intl.string(o.t.oW0eUd)), (E.headerBadgeVariant = "default"))
-        : "trial" === m
+        : "trial" === p
           ? ((E.headerBadgeText = o.intl.string(s.default["mWL08+"])), (E.headerBadgeIcon = i.TagIcon))
-          : "promo" === m && (E.headerBadgeText = o.intl.string(s.default.Fjpyfj));
+          : "promo" === p && (E.headerBadgeText = o.intl.string(s.default.Fjpyfj));
     let S = null != n && u.includes(n) ? { countryCode: c(l), relocationCountryCode: c(d) } : void 0;
     return null == t
         ? { title: f, gradientColor: void 0, ...S, ...E }

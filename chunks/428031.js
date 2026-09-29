@@ -1,7 +1,7 @@
-i.d(e, { K: () => r });
-var n = i(885386);
-function r() {
-    let t = n.Zt.useSetting(),
-        e = n.n6.useSetting();
-    return null != e ? e : !!t || t;
+_.d(t, { K: () => i });
+var u = _(885386);
+function i() {
+    let e = u.Zt.useSetting(),
+        t = u.n6.useSetting();
+    return null != t ? t : !!e || e;
 }

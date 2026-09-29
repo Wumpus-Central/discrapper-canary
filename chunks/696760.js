@@ -1,4 +1,4 @@
-n.d(t, { Bx: () => eI, Ay: () => ep, Gm: () => eC, Q_: () => eE, zF: () => eg, zR: () => eT });
+n.d(t, { Bx: () => eT, Ay: () => ep, Gm: () => eC, Q_: () => eE, zF: () => eg, zR: () => eI });
 var i,
     l = n(192308),
     r = n(793322),
@@ -14,16 +14,16 @@ var i,
     C = n(406704),
     g = n(747926),
     _ = n(774603),
-    T = n(176522),
-    I = n(435558),
-    p = n.n(I),
+    I = n(176522),
+    T = n(435558),
+    p = n.n(T),
     N = n(691540),
     S = n(857250),
     f = n(97483),
     m = n(147036),
     O = n(957565),
     L = n(375708);
-let b = (0, I.throttle)(() => (0, N.P0)((0, S.o)(L.intl.string(L.t["+5kSoW"]), f.Ck.SUCCESS)), 3e3, {
+let b = (0, T.throttle)(() => (0, N.P0)((0, S.o)(L.intl.string(L.t["+5kSoW"]), f.Ck.SUCCESS)), 3e3, {
     leading: !0,
     trailing: !1,
 });
@@ -115,23 +115,23 @@ function eg(e) {
 function e_() {
     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
     return t.map((e) => {
-        let t = eT[e];
+        let t = eI[e];
         if (null == t) throw Error(`getBindsFor(...): No bind for ${t}`);
         return t.binds[0];
     });
 }
-let eT = {
+let eI = {
     [U.IWg.SERVER_NEXT]: z.yx,
     [U.IWg.SERVER_PREV]: z.yv,
-    [U.IWg.CHANNEL_NEXT]: T.kF,
-    [U.IWg.CHANNEL_PREV]: T.Oc,
-    [U.IWg.NAVIGATE_BACK]: T.GY,
-    [U.IWg.NAVIGATE_FORWARD]: T.M$,
+    [U.IWg.CHANNEL_NEXT]: I.kF,
+    [U.IWg.CHANNEL_PREV]: I.Oc,
+    [U.IWg.NAVIGATE_BACK]: I.GY,
+    [U.IWg.NAVIGATE_FORWARD]: I.M$,
     [U.IWg.UNREAD_NEXT]: ec.mH,
     [U.IWg.UNREAD_PREV]: ec.US,
     [U.IWg.MENTION_CHANNEL_NEXT]: ec.BD,
     [U.IWg.MENTION_CHANNEL_PREV]: ec.X8,
-    [U.IWg.TOGGLE_PREVIOUS_GUILD]: T.Fv,
+    [U.IWg.TOGGLE_PREVIOUS_GUILD]: I.Fv,
     [U.IWg.JUMP_TO_GUILD]: P.J,
     [U.IWg.SUBMIT]: X.X,
     [U.IWg.TEXTAREA_FOCUS]: J.c,
@@ -347,7 +347,7 @@ let eT = {
         },
     },
 };
-function eI() {
+function eT() {
     return [
         {
             description: L.intl.string(L.t.bx4Uyz),
@@ -421,4 +421,4 @@ function eI() {
         { description: L.intl.string(L.t.z9c6mt), binds: e_(U.IWg.VIBE_WITH_WUMPUS), group: "MISCELLANEOUS" },
     ];
 }
-let ep = 221552 == n.j ? eT : null;
+let ep = 221552 == n.j ? eI : null;

@@ -1,76 +1,76 @@
-n.d(t, { H: () => I });
-var a = n(477900),
-    r = n(582128),
-    l = n(941861),
-    i = n(844222),
-    s = n(460890),
-    o = n(978495),
-    c = n(353795),
-    d = n(80687),
-    u = n(607470),
-    m = n(256905),
-    p = n(273875),
-    h = n(208756),
-    _ = n(798618),
-    g = n(627330),
-    f = n(478542),
-    E = n(818348),
-    x = n(314341),
-    v = n(375708),
-    b = n(594024);
-function I(e) {
+t.d(n, { H: () => M });
+var a = t(477900),
+    l = t(582128),
+    i = t(941861),
+    r = t(844222),
+    d = t(460890),
+    s = t(978495),
+    _ = t(353795),
+    c = t(80687),
+    o = t(607470),
+    u = t(256905),
+    E = t(273875),
+    m = t(208756),
+    p = t(798618),
+    h = t(627330),
+    I = t(478542),
+    S = t(818348),
+    g = t(314341),
+    b = t(375708),
+    A = t(594024);
+function M(e) {
     let {
-            title: t,
-            body: n,
-            assetUrl: I,
-            previewUrl: S = I,
+            title: n,
+            body: t,
+            assetUrl: M,
+            previewUrl: O = M,
             disableMediaViewer: k = !1,
-            action: C,
-            caretConfig: y = { align: "center" },
-            badge: M,
-            textLink: A,
-            onWatchVideo: j,
-            onRequestClose: w,
-            popoverRef: O,
-            position: N,
-            ...R
+            action: D,
+            caretConfig: C = { align: "center" },
+            badge: T,
+            textLink: y,
+            onWatchVideo: P,
+            onRequestClose: R,
+            popoverRef: f,
+            position: w,
+            ...N
         } = e,
-        { reducedMotion: D } = r.useContext(i.C),
-        P = (0, l.R)(),
-        T = (0, s.G9)().isWindowFocused?.() ?? P,
-        L = r.useRef(null),
-        V = (0, o.RJ)(S),
-        B = (0, o.gA)(S),
-        W = r.useCallback(
-            () => ({ type: "VIDEO", url: I, proxyUrl: I, alt: t, width: 1280, height: 720, className: b.$_ }),
-            [I, t],
+        { reducedMotion: v } = l.useContext(r.C),
+        x = (0, i.R)(),
+        V = (0, d.G9)().isWindowFocused?.() ?? x,
+        L = l.useRef(null),
+        j = (0, s.RJ)(O),
+        B = (0, s.gA)(O),
+        H = l.useCallback(
+            () => ({ type: "VIDEO", url: M, proxyUrl: M, alt: n, width: 1280, height: 720, className: A.$_ }),
+            [M, n],
         );
-    r.useEffect(() => {
-        null != L.current && (!D.enabled && T ? L.current?.play().catch(E.tE) : L.current?.pause());
-    }, [T, D.enabled]);
-    let H = r.useCallback(() => {
-            (null !== L.current && L.current.pause(), w?.());
-        }, [w]),
-        U = r.useCallback(() => {
-            (null !== L.current && L.current.pause(), w?.());
-        }, [w]),
-        G = r.useCallback(() => {
+    l.useEffect(() => {
+        null != L.current && (!v.enabled && V ? L.current?.play().catch(S.tE) : L.current?.pause());
+    }, [V, v.enabled]);
+    let W = l.useCallback(() => {
+            (null !== L.current && L.current.pause(), R?.());
+        }, [R]),
+        U = l.useCallback(() => {
+            (null !== L.current && L.current.pause(), R?.());
+        }, [R]),
+        G = l.useCallback(() => {
             null !== L.current && L.current.pause();
-            let e = W();
-            ((0, m.R)({ items: [e], startingIndex: 0, location: "VideoPopover", shouldHideMediaOptions: !0 }),
-                w?.(),
-                j?.());
-        }, [W, j, w]),
+            let e = H();
+            ((0, u.R)({ items: [e], startingIndex: 0, location: "VideoPopover", shouldHideMediaOptions: !0 }),
+                R?.(),
+                P?.());
+        }, [H, P, R]),
         z = (0, a.jsxs)(a.Fragment, {
             children: [
-                V || B
-                    ? (0, a.jsx)(c.v, { type: "image", src: S })
-                    : (0, a.jsx)(u.A, {
+                j || B
+                    ? (0, a.jsx)(_.v, { type: "image", src: O })
+                    : (0, a.jsx)(o.A, {
                           ref: L,
-                          src: S,
+                          src: O,
                           width: 232,
                           height: 131,
-                          autoPlay: !D.enabled && T,
+                          autoPlay: !v.enabled && V,
                           muted: !0,
                           loop: !0,
                           playsInline: !0,
@@ -79,38 +79,38 @@ function I(e) {
                       }),
                 !k &&
                     (0, a.jsx)("div", {
-                        className: b.Rr,
-                        children: (0, a.jsx)(d.D, {
+                        className: A.Rr,
+                        children: (0, a.jsx)(c.D, {
                             playing: !1,
                             size: "sm",
-                            "aria-label": v.intl.string(x.default.YpT3kk),
+                            "aria-label": b.intl.string(g.default.YpT3kk),
                             onClick: G,
                         }),
                     }),
             ],
         }),
-        Z = {
-            targetElementRef: R.targetElementRef,
-            shouldShow: R.shouldShow,
-            scrollBehavior: R.scrollBehavior,
-            position: N,
-            onRequestClose: H,
+        K = {
+            targetElementRef: N.targetElementRef,
+            shouldShow: N.shouldShow,
+            scrollBehavior: N.scrollBehavior,
+            position: w,
+            onRequestClose: W,
             hasVideo: !0,
-            caretConfig: y,
-            ...("edge" === R.alignmentStrategy
-                ? { alignmentStrategy: "edge", align: R.align }
+            caretConfig: C,
+            ...("edge" === N.alignmentStrategy
+                ? { alignmentStrategy: "edge", align: N.align }
                 : { alignmentStrategy: "trigger-center" }),
         };
-    return (0, a.jsx)(p.x, {
-        ...Z,
+    return (0, a.jsx)(E.x, {
+        ...K,
         children: (0, a.jsxs)("div", {
-            ref: O,
+            ref: f,
             children: [
-                (0, a.jsx)(f.p, { onClick: U }),
-                (0, a.jsx)(_.F, {}),
-                (0, a.jsx)("div", { className: b.s, children: z }),
-                (0, a.jsx)(g.D, { title: t, body: n, badge: M, textLink: A }),
-                null != C ? (0, a.jsx)(h.Z, { actions: [C] }) : null,
+                (0, a.jsx)(I.p, { onClick: U }),
+                (0, a.jsx)(p.F, {}),
+                (0, a.jsx)("div", { className: A.s, children: z }),
+                (0, a.jsx)(h.D, { title: n, body: t, badge: T, textLink: y }),
+                null != D ? (0, a.jsx)(m.Z, { actions: [D] }) : null,
             ],
         }),
     });

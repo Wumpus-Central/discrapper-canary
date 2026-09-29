@@ -12,10 +12,10 @@ function d(e, t) {
     let n = e.prices[t]?.countryPrices?.prices?.[0];
     return null != n ? { amount: n.amount, currency: n.currency } : void 0;
 }
-function m(e) {
+function p(e) {
     return c.intl.formatToPlainString(c.t.AbOLNu, { price: (0, o.$g)(e.amount, e.currency) });
 }
-function p(e) {
+function m(e) {
     for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), l = 1; l < t; l++) n[l - 1] = arguments[l];
     let i = e.find((e) => n.some((t) => e.description.toLowerCase().includes(t)));
     return i?.title;
@@ -74,19 +74,19 @@ function f() {
                                                           return null != t
                                                               ? { value: t[1], unit: t[2] }
                                                               : { value: e, unit: "" };
-                                                      })(p(i, "ram", "memory"));
+                                                      })(m(i, "ram", "memory"));
                                                   t.push({
                                                       id: n.id,
                                                       name: n.name,
-                                                      standardPriceLabel: m(e),
-                                                      nitroPriceLabel: null != l ? m(l) : void 0,
+                                                      standardPriceLabel: p(e),
+                                                      nitroPriceLabel: null != l ? p(l) : void 0,
                                                       standardPriceAmount: e.amount,
                                                       nitroPriceAmount: l?.amount,
                                                       priceCurrency: e.currency,
-                                                      playersLabel: p(i, "player") ?? "",
+                                                      playersLabel: m(i, "player") ?? "",
                                                       ramValueLabel: r.value,
                                                       ramUnitLabel: r.unit,
-                                                      vcpusLabel: p(i, "vcpu", "cpu") ?? "",
+                                                      vcpusLabel: m(i, "vcpu", "cpu") ?? "",
                                                   });
                                               }
                                               return t;

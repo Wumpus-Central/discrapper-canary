@@ -1,4 +1,4 @@
-n.d(t, { D: () => p, b: () => h });
+n.d(t, { D: () => m, b: () => h });
 var l = n(582128),
     i = n(17928),
     r = n(561573),
@@ -8,19 +8,19 @@ var l = n(582128),
     u = n(556766),
     c = n(459005),
     d = n(621547),
-    m = n(375708);
-function p(e) {
+    p = n(375708);
+function m(e) {
     let { surface: t, applicationId: n, skuId: o } = e,
-        p = (0, u.m)(n),
+        m = (0, u.m)(n),
         h = (0, i.bG)([r.A], () => r.A.getPromotionIdsForSkuId(o), [o]),
         C = l.useMemo(() => {
-            if (null == p || null == h) return null;
+            if (null == m || null == h) return null;
             for (let e of h) {
-                let t = p[e];
+                let t = m[e];
                 if (null != t) return t;
             }
             return null;
-        }, [p, h]),
+        }, [m, h]),
         f = (0, c.n)({ surface: t, skuId: o });
     return l.useMemo(() => {
         if (null == C) return null;
@@ -61,7 +61,7 @@ function p(e) {
                 if ((0, a.uJ)(l)) return null;
                 return {
                     Icon: (0, s.LZ)("TAG"),
-                    text: m.intl.string(d.default.hriMCc),
+                    text: p.intl.string(d.default.hriMCc),
                     tooltip: (0, s.Ew)(n?.tooltip ?? null, f.amount),
                     endsAt: e,
                     flavor: C.flavor,
@@ -73,7 +73,7 @@ function p(e) {
 }
 function h(e) {
     let { surface: t, applicationId: n, skuId: i } = e,
-        r = p({ surface: t, applicationId: n, skuId: i }),
+        r = m({ surface: t, applicationId: n, skuId: i }),
         a = (0, c.n)({ surface: t, skuId: i }),
         s = (0, o.x)({ surface: t, skuId: i });
     return l.useMemo(() => ({ display: r, reward: a, offers: s }), [r, a, s]);

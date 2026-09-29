@@ -8,19 +8,19 @@ var l = n(477900),
     u = n(344346),
     c = n(303136),
     d = n(287809),
-    m = n(676279),
-    p = n(573359),
+    p = n(676279),
+    m = n(573359),
     h = n(659746),
     C = n(375708),
     f = n(836949);
 let E = function (e) {
-    let { type: t, text: n, buttonText: i, buttonLoading: E, hideClose: S, onClose: I } = e,
-        y = (0, a.bG)([d.default], () => {
+    let { type: t, text: n, buttonText: i, buttonLoading: E, hideClose: S, onClose: y } = e,
+        I = (0, a.bG)([d.default], () => {
             let e = d.default.getCurrentUser();
             return (r()(null != e, "UserSettingsProfileCustomization: user cannot be undefined"), e);
         }),
-        g = (0, a.bG)([p.A], () => p.A.nameplatePreviewOverrides),
-        A = (0, m.TM)()
+        g = (0, a.bG)([m.A], () => m.A.nameplatePreviewOverrides),
+        A = (0, p.TM)()
             ? "https://cdn.discordapp.com/assets/content/239903eff27463f888314f6f702385c58dc4f6ef0e8e1a999e0c1051d86f2f11.mov"
             : "https://cdn.discordapp.com/assets/content/2688d55b4d0db6d6e603fdc61131d6e8d8c691bd159952078f166ea177fc970b.webm",
         P = (function (e) {
@@ -47,10 +47,10 @@ let E = function (e) {
                         children: (0, l.jsx)("source", { src: A }),
                     }),
                     (0, l.jsx)(u.A, {
-                        user: y,
+                        user: I,
                         isHighlighted: !0,
                         nameplate: null,
-                        nameplateData: y.nameplate,
+                        nameplateData: I.nameplate,
                         className: f.M4,
                         nameplatePreviewSize: "large",
                         pendingDisplayNameStyles: g?.displayNameStyles,
@@ -66,7 +66,7 @@ let E = function (e) {
                         variant: "expressive",
                         fullWidth: !0,
                         text: i,
-                        onClick: I,
+                        onClick: y,
                         loading: E,
                     }),
                 }),

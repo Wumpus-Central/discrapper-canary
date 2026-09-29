@@ -8,21 +8,21 @@ var l = n(477900),
     u = n(377058),
     c = n(38785),
     d = n(270537),
-    m = n(241989),
-    p = n(263532),
+    p = n(241989),
+    m = n(263532),
     h = n(818296),
     C = n(486020),
     f = n(580630),
     E = n(403581),
     S = n(278416),
-    I = n(993408),
-    y = n(1076),
+    y = n(993408),
+    I = n(1076),
     g = n(288106),
     A = n(604913),
     P = n(223311),
     v = n(306396),
-    x = n(151115),
-    _ = n(518865),
+    _ = n(151115),
+    x = n(518865),
     T = n(536572),
     N = n(652215),
     b = n(375708),
@@ -42,9 +42,9 @@ function U(e) {
                     setCollectedModalOverrideTitle: l,
                     setCollectedModalOverrideDescription: r,
                     setCollectedModalGradientColor: a,
-                } = (0, y.z)(),
+                } = (0, I.z)(),
                 s = (0, P.A)(N.FYj),
-                o = null != n ? (0, x.L)(n, s) : null,
+                o = null != n ? (0, _.L)(n, s) : null,
                 u = o?.tenantMetadata?.collectibles;
             (0, i.useEffect)(() => {
                 switch (u?.type) {
@@ -62,7 +62,7 @@ function U(e) {
                         let e = u.reward,
                             n = null != e ? o?.rewardConfig?.discount?.id : null,
                             i = null != n && t?.getDiscountIdIfExists() === String(n) ? e : null;
-                        (l(i?.collected?.overrideTitle), r(void 0), a(null != i ? (0, _.lG)(i.flavor) : void 0));
+                        (l(i?.collected?.overrideTitle), r(void 0), a(null != i ? (0, x.lG)(i.flavor) : void 0));
                         return;
                     }
                 }
@@ -111,9 +111,9 @@ function et(e) {
             giftRecipient: a,
             ...s
         } = e,
-        o = (0, l.jsx)(m.WH, { sku: t, product: n }),
+        o = (0, l.jsx)(p.WH, { sku: t, product: n }),
         u = J(t);
-    return (0, l.jsx)(m.f7, {
+    return (0, l.jsx)(p.f7, {
         description: r,
         price: i,
         graphic: o,
@@ -144,12 +144,12 @@ function ei(e) {
                 ? (function (e) {
                       let t = O.default.getCurrentUser(),
                           n = L.Ay.canUseShopDiscounts(t),
-                          l = (0, I.xM)(t),
-                          i = (0, I.WD)(e, { hasShopDiscount: n, discount: (0, I.fT)(e, n) });
+                          l = (0, y.xM)(t),
+                          i = (0, y.WD)(e, { hasShopDiscount: n, discount: (0, y.fT)(e, n) });
                       if (null != i && !i.showDefaultPriceOnly && i.showDiscountPrice) {
-                          if (l === I.D0.NITRO)
+                          if (l === y.D0.NITRO)
                               return { PriceIcon: E.t, priceTooltip: b.intl.string(k.default.YUNJJa) };
-                          if (l === I.D0.THIRDPARTY)
+                          if (l === y.D0.THIRDPARTY)
                               return { PriceIcon: S.TagIcon, priceTooltip: b.intl.string(w.default.DePOcS) };
                       }
                       return {};
@@ -162,8 +162,8 @@ function er(e) {
         {
             unifiedCheckoutFlow: n,
             checkoutInvoicePreview: r,
-            paymentSourceType: m,
-        } = (0, p.t4)((e) => {
+            paymentSourceType: p,
+        } = (0, m.t4)((e) => {
             let t = e.get("checkoutSelectedPaymentSource");
             return {
                 unifiedCheckoutFlow: e.unifiedCheckoutFlow,
@@ -173,12 +173,12 @@ function er(e) {
         }),
         { isGift: C, giftRecipient: E } = (0, D.Pv)(),
         {
-            sku: I,
-            application: y,
+            sku: y,
+            application: I,
             eligiblePaymentGateways: P,
             disabled: v,
         } = (function () {
-            let { selectedSkuId: e, purchaseState: t } = (0, p.t4)((e) => ({
+            let { selectedSkuId: e, purchaseState: t } = (0, m.t4)((e) => ({
                     selectedSkuId: e.selectedSkuId,
                     purchaseState: e.purchaseState,
                 })),
@@ -210,8 +210,8 @@ function er(e) {
                               hasSeparateAccountLinkNotice: !0,
                           })
                         : (0, l.jsx)($.T3, { paymentSourceType: i });
-                })(n, { skuId: I.id, paymentSourceType: m, isGift: C }),
-            [n, I.id, m, C],
+                })(n, { skuId: y.id, paymentSourceType: p, isGift: C }),
+            [n, y.id, p, C],
         ),
         { upperInlineNoticeProps: O, footerInlineNoticeProps: L } = (function (e) {
             let { sku: t, application: n, isGift: l } = e,
@@ -249,7 +249,7 @@ function er(e) {
                     );
                 }, [d]),
             };
-        })({ sku: I, application: y, isGift: C }),
+        })({ sku: y, application: I, isGift: C }),
         w = i.useMemo(() => ({ paymentGatewayRestrictions: P, shouldUseUnifiedCheckoutUI: !0 }), [P]),
         G = (0, l.jsx)(u.N, {
             label: b.intl.string(b.t["u+Cw58"]),
@@ -258,7 +258,7 @@ function er(e) {
             additionalPaymentSourceDropdownProps: w,
             disabled: v,
         }),
-        { product: X } = (0, Q.AO)({ sku: I }),
+        { product: X } = (0, Q.AO)({ sku: y }),
         { unifiedInvoiceSummaryProps: ee, priceText: er } = i.useMemo(
             () =>
                 (function (e) {
@@ -288,15 +288,15 @@ function er(e) {
                         );
                     }
                     return { unifiedInvoiceSummaryProps: null, priceText: "", discount: null };
-                })({ sku: I, invoicePreview: r }),
-            [I, r],
+                })({ sku: y, invoicePreview: r }),
+            [y, r],
         ),
         ea = i.useMemo(() => (null != ee ? (0, l.jsx)(d.Vm, { ...ee }) : null), [ee]),
         es = i.useMemo(() => {
             var e, t;
             return (
                 (e = n),
-                (t = { priceText: er, sku: I, application: y, giftRecipient: E }),
+                (t = { priceText: er, sku: y, application: I, giftRecipient: E }),
                 e === o.C.SLAYER_STOREFRONT_CHECKOUT
                     ? (0, l.jsx)(en, { ...t })
                     : e === o.C.GUILD_PRODUCT_CHECKOUT
@@ -305,7 +305,7 @@ function er(e) {
                         ? (0, l.jsx)(ei, { ...t })
                         : (0, l.jsx)(et, { ...t })
             );
-        }, [n, I, y, E, er]),
+        }, [n, y, I, E, er]),
         eo = i.useMemo(() => (null != r ? (0, f.$g)(r.total, r.currency) : void 0), [r]),
         eu = (0, h.g)(X ?? null),
         ec = i.useMemo(
@@ -347,9 +347,9 @@ function er(e) {
                                             l = t?.text;
                                         if ((0, R.uJ)(l)) return null;
                                         return {
-                                            Icon: (0, x.s)(t?.icon),
+                                            Icon: (0, _.s)(t?.icon),
                                             text: (0, j.U)(l),
-                                            gradientColor: (0, _.aJ)(e?.flavor),
+                                            gradientColor: (0, x.aJ)(e?.flavor),
                                         };
                                     }
                                     default:
@@ -370,8 +370,8 @@ function er(e) {
                         });
                     }
                     return null;
-                })(n, { invoicePreview: r, isGift: C, promotion: eu, productLine: I.productLine }),
-            [n, r, C, eu, I.productLine],
+                })(n, { invoicePreview: r, isGift: C, promotion: eu, productLine: y.productLine }),
+            [n, r, C, eu, y.productLine],
         ),
         ed = i.useMemo(() => (null != ec ? { headerBadgeText: b.intl.string(k.default.Fjpyfj) } : {}), [ec]);
     return (0, l.jsxs)(l.Fragment, {
@@ -395,6 +395,6 @@ function er(e) {
     });
 }
 function ea(e) {
-    let { isCheckoutDataLoading: t } = (0, p.t4)((e) => ({ isCheckoutDataLoading: e.get("isCheckoutDataLoading") }));
+    let { isCheckoutDataLoading: t } = (0, m.t4)((e) => ({ isCheckoutDataLoading: e.get("isCheckoutDataLoading") }));
     return t ? (0, l.jsx)(c.Ed, { shouldShowUnifiedHeader: !0 }) : (0, l.jsx)(er, { ...e });
 }

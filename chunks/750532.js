@@ -8,21 +8,21 @@ var l = n(477900),
     u = n(883645),
     c = n(427675),
     d = n(580133),
-    m = n(263532),
-    p = n(242874),
+    p = n(263532),
+    m = n(242874),
     h = n(573359),
     C = n(332026),
     f = n(557679),
     E = n(892349),
     S = n(35587),
-    I = n(165191),
-    y = n(237412),
+    y = n(165191),
+    I = n(237412),
     g = n(45938),
     A = n(158045),
     P = n(951305),
     v = n(166532),
-    x = n(652215),
-    _ = n(202541),
+    _ = n(652215),
+    x = n(202541),
     T = n(375708),
     N = n(805161),
     b = n(894575),
@@ -34,7 +34,7 @@ function R(e) {
             selectedPlanId: d,
             purchaseState: S,
             quantity: R,
-        } = (0, m.t4)((e) => ({
+        } = (0, p.t4)((e) => ({
             selectedSkuId: e.selectedSkuId,
             selectedPlanId: e.selectedPlanId,
             purchaseState: e.purchaseState,
@@ -47,8 +47,8 @@ function R(e) {
         { isGift: G, selectedGiftStyle: F, giftRecipient: B } = (0, P.Pv)(),
         H = (0, E.p)("PremiumUnifiedCheckoutCustomHeader"),
         W = (0, C.Wh)({ location: "PremiumUnifiedCheckoutCustomHeader" }),
-        Y = U?.productLine === x.EZt.COLLECTIBLES,
-        V = U?.productLine === x.EZt.SOCIAL_LAYER_GAME_ITEM,
+        Y = U?.productLine === _.EZt.COLLECTIBLES,
+        V = U?.productLine === _.EZt.SOCIAL_LAYER_GAME_ITEM,
         K = D === v.pn.CONFIRM && W && (0, f.M)({ isGift: G, giftRecipient: B, selectedPlanId: d }),
         Z = G && (0, g.Ik)(B) && D === v.pn.CONFIRM && null != F && !Y && !V,
         q = [v.pn.SKU_SELECT, v.pn.SELECT_FREE_SKU],
@@ -77,8 +77,8 @@ function R(e) {
                             (0, l.jsx)("div", {
                                 "aria-hidden": !0,
                                 style: { display: "contents" },
-                                children: (0, l.jsx)(I.A, {
-                                    defaultAnimationState: p.oA.LOOP,
+                                children: (0, l.jsx)(y.A, {
+                                    defaultAnimationState: m.oA.LOOP,
                                     giftStyle: F,
                                     className: b.qq,
                                 }),
@@ -90,11 +90,11 @@ function R(e) {
                     ? (e = (0, l.jsx)(s.rQ, { gradientColor: "nitro-pink", title: T.intl.string(T.t["7YWj6+"]) }))
                     : z &&
                       (e =
-                          n in _.WN
-                              ? (0, l.jsx)(y.A, {
+                          n in x.WN
+                              ? (0, l.jsx)(I.A, {
                                     currentStep: D ?? void 0,
                                     purchaseState: S,
-                                    premiumType: _.WN[n],
+                                    premiumType: x.WN[n],
                                     onClose: Q,
                                     showTrialBadge: k,
                                     showDiscountBadge: w,
@@ -111,7 +111,7 @@ function R(e) {
     }, [F, Q, S, n, D, k, w, R, d, K, Z, H, z, G, B, O, M, L]);
 }
 function M(e) {
-    let { premiumDiscountPercent: t, isPremiumDiscountAppliedToCheckoutInvoice: n } = (0, m.t4)((e) => ({
+    let { premiumDiscountPercent: t, isPremiumDiscountAppliedToCheckoutInvoice: n } = (0, p.t4)((e) => ({
             premiumDiscountPercent: e.get("premiumDiscountPercent"),
             isPremiumDiscountAppliedToCheckoutInvoice: e.get("isPremiumDiscountAppliedToCheckoutInvoice"),
             selectedPlanId: e.selectedPlanId,

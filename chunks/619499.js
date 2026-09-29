@@ -72,7 +72,7 @@ var x = n(631670),
     p = n(933725),
     T = n(885386),
     f = n(774914);
-function I() {
+function _() {
     let { canSubmit: e, errors: t } = (0, l.cf)([u.A], () => ({ canSubmit: u.A.canSubmit(), errors: u.A.getErrors() })),
         [n, c] = s.useState(!1),
         g = s.useMemo(() => (Object.keys(t ?? {}).length > 0 ? A.intl.string(A.t["84MExs"]) : null), [t]),
@@ -121,8 +121,8 @@ function I() {
         }, []);
     return (0, i.jsx)(r.A, { submitting: n, onSave: m, onReset: h, disabled: !e, errorMessage: g ?? void 0 });
 }
-var _ = n(507553),
+var I = n(507553),
     N = n(355097);
 function C() {
-    return _.A.useField("subsection") === N.Eq.GUILD ? (0, i.jsx)(S, {}) : (0, i.jsx)(I, {});
+    return I.A.useField("subsection") === N.Eq.GUILD ? (0, i.jsx)(S, {}) : (0, i.jsx)(_, {});
 }

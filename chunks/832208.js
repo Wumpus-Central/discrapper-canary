@@ -29,8 +29,8 @@ class c extends i.PureComponent {
             {
                 getClassNameForLayout: c,
                 renderInput: d,
-                title: m,
-                name: p,
+                title: p,
+                name: m,
                 id: h,
                 placeholder: C,
                 helperText: f,
@@ -39,9 +39,9 @@ class c extends i.PureComponent {
             S = {
                 ...E,
                 placeholder: C?.(),
-                error: this.getError(p),
-                value: t[p],
-                name: p,
+                error: this.getError(m),
+                value: t[m],
+                name: m,
                 "aria-labelledby": h,
                 onChange: n,
                 onFocus: i,
@@ -51,9 +51,9 @@ class c extends i.PureComponent {
             "div",
             {
                 className: a()(c?.(o)),
-                children: (0, l.jsx)(s.D, { id: h, label: m(), helperText: f?.(), children: d(S, u, o) }),
+                children: (0, l.jsx)(s.D, { id: h, label: p(), helperText: f?.(), children: d(S, u, o) }),
             },
-            p,
+            m,
         );
     };
     renderFormRow = (e) => {

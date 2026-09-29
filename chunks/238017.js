@@ -1,4 +1,4 @@
-n.d(t, { A: () => y });
+n.d(t, { A: () => I });
 var l = n(477900),
     i = n(582128),
     r = n(503698),
@@ -8,19 +8,19 @@ var l = n(477900),
     u = n(922016),
     c = n(305866),
     d = n(939249),
-    m = n(460905),
-    p = n(267889),
+    p = n(460905),
+    m = n(267889),
     h = n(652215),
     C = n(307731),
     f = n(375708),
     E = n(921787);
 let S = { section: h.JJy.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER, openPopoutType: "gift_effect_emoji_picker" },
-    I = C.EmojiIntention.GIFT;
-function y(e) {
+    y = C.EmojiIntention.GIFT;
+function I(e) {
     let { setEmojiConfetti: t, emojiConfetti: n } = e,
         [r, h] = i.useState(!1),
         C = i.useRef(null),
-        y = a()(E.Qq, E.Ow);
+        I = a()(E.Qq, E.Ow);
     function g(e) {
         return (0, l.jsxs)("div", {
             className: E.ZC,
@@ -49,12 +49,12 @@ function y(e) {
         renderPopout: (e) => {
             let { closePopout: t } = e;
             return (0, l.jsx)(c.l, {
-                children: (0, l.jsx)(p.A, {
+                children: (0, l.jsx)(m.A, {
                     analyticsOverride: S,
                     closePopout: t,
                     onSelectEmoji: A,
                     wrapper: "div",
-                    pickerIntention: I,
+                    pickerIntention: y,
                     showAddEmojiButton: !1,
                     renderHeader: g,
                     headerClassName: E.a8,
@@ -75,7 +75,7 @@ function y(e) {
                         ? (0, l.jsxs)("div", {
                               className: E.hQ,
                               children: [
-                                  (0, l.jsx)(m.n, {
+                                  (0, l.jsx)(p.n, {
                                       size: "custom",
                                       color: s.A.colors.ICON_STRONG,
                                       className: E.mI,
@@ -83,7 +83,7 @@ function y(e) {
                                       height: 14,
                                   }),
                                   (0, l.jsx)(o.E, {
-                                      className: y,
+                                      className: I,
                                       variant: "text-sm/semibold",
                                       lineClamp: 1,
                                       children: f.intl.string(f.t.Hl2Ige),
@@ -94,12 +94,12 @@ function y(e) {
                               className: E.hQ,
                               children: [
                                   (0, l.jsx)(o.E, {
-                                      className: y,
+                                      className: I,
                                       variant: "text-sm/semibold",
                                       children: null == n.guildId ? n.optionallyDiverseSequence : null,
                                   }),
                                   (0, l.jsx)(o.E, {
-                                      className: y,
+                                      className: I,
                                       variant: "text-sm/semibold",
                                       lineClamp: 1,
                                       children: n.name.replace(/_/g, " "),

@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => S, UX: () => y, dZ: () => I });
+n.d(t, { Ay: () => S, UX: () => I, dZ: () => y });
 var l = n(477900),
     i = n(582128),
     r = n(503698),
@@ -8,8 +8,8 @@ var l = n(477900),
     u = n(430993),
     c = n(430690),
     d = n(529427),
-    m = n(883645),
-    p = n(601194),
+    p = n(883645),
+    m = n(601194),
     h = n(263532),
     C = n(573359),
     f = n(166532),
@@ -23,39 +23,39 @@ function S(e) {
             let { header: t, disableDefaultSlideTransformStyling: n, ...l } = e;
             return { header: t, disableDefaultSlideTransformStyling: n, stepProps: l };
         })(e),
-        { step: s, stepConfigs: S } = (0, m.Ay)(),
-        { setBodyNode: I, setFooterNode: y, setModalOverlayNode: g } = (0, p.Gm)(),
+        { step: s, stepConfigs: S } = (0, p.Ay)(),
+        { setBodyNode: y, setFooterNode: I, setModalOverlayNode: g } = (0, m.Gm)(),
         A = (0, o.bG)([C.A], () => C.A.isDisplayingWowMomentConfirmation),
         { setReadySlideId: P, unifiedCheckoutFlow: v } = (0, h.t4)((e) => ({
             setReadySlideId: e.setReadySlideId,
             unifiedCheckoutFlow: e.unifiedCheckoutFlow,
         })),
-        x = S.find((e) => e.key === s);
+        _ = S.find((e) => e.key === s);
     if (
         (i.useEffect(() => {
             g(null);
         }, [s, g]),
-        null == x)
+        null == _)
     )
         throw new d.vd({
             message: "Unknown step for current payment flow (PaymentModalStep)",
-            extraSentryInformation: { stepConfig: x, step: s, unifiedCheckoutFlow: v, stepConfigs: S },
+            extraSentryInformation: { stepConfig: _, step: s, unifiedCheckoutFlow: v, stepConfigs: S },
         });
-    let _ = x?.options?.hideSlider ?? !1,
-        T = x?.options?.hideDefaultModalBody ?? !1,
-        N = x?.options?.sliderBodyClassName,
+    let x = _?.options?.hideSlider ?? !1,
+        T = _?.options?.hideDefaultModalBody ?? !1,
+        N = _?.options?.sliderBodyClassName,
         b = s === f.pn.REVIEW,
         j = i.useCallback(
             (e, t) => {
-                t === s && I(e);
+                t === s && y(e);
             },
-            [s, I],
+            [s, y],
         );
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (x?.options?.renderHeader ?? !0) ? t : null,
-            x.renderStep(r),
-            null == s || _
+            (_?.options?.renderHeader ?? !0) ? t : null,
+            _.renderStep(r),
+            null == s || x
                 ? null
                 : (0, l.jsxs)(l.Fragment, {
                       children: [
@@ -86,7 +86,7 @@ function S(e) {
                                         ),
                                     }),
                                 }),
-                          (0, l.jsx)("div", { ref: (e) => y(e) }),
+                          (0, l.jsx)("div", { ref: (e) => I(e) }),
                           (0, l.jsx)("div", {
                               ref: (e) => {
                                   g(e);
@@ -97,13 +97,13 @@ function S(e) {
         ],
     });
 }
-function I(e) {
-    let { children: t } = e,
-        { bodyNode: n } = (0, p.Gm)();
-    return null == n ? null : s.createPortal(t, n);
-}
 function y(e) {
     let { children: t } = e,
-        { footerNode: n } = (0, p.Gm)();
+        { bodyNode: n } = (0, m.Gm)();
+    return null == n ? null : s.createPortal(t, n);
+}
+function I(e) {
+    let { children: t } = e,
+        { footerNode: n } = (0, m.Gm)();
     return null == n ? null : s.createPortal(t, n);
 }

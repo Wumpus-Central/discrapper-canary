@@ -9,8 +9,8 @@ function c(e) {
         { purchaseErrorBlockRef: n } = (0, a.L)(),
         [r, o] = i.useState(null),
         [u, c] = i.useState(null),
-        [d, m] = i.useState(null),
-        p = i.useMemo(
+        [d, p] = i.useState(null),
+        m = i.useMemo(
             () => ({
                 purchaseErrorBlockRef: n,
                 bodyNode: r,
@@ -18,9 +18,9 @@ function c(e) {
                 footerNode: u,
                 setFooterNode: c,
                 modalOverlayNode: d,
-                setModalOverlayNode: m,
+                setModalOverlayNode: p,
             }),
             [n, r, u, d],
         );
-    return (0, l.jsx)(s, { value: p, children: t });
+    return (0, l.jsx)(s, { value: m, children: t });
 }

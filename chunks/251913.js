@@ -1,4 +1,4 @@
-n.d(t, { QR: () => h, b: () => p, oc: () => m });
+n.d(t, { QR: () => h, b: () => m, oc: () => p });
 var l,
     i = n(582128),
     r = n(17928),
@@ -8,13 +8,13 @@ var l,
     u = n(597643),
     c = n(166532),
     d = n(566980),
-    m =
+    p =
         (((l = {})[(l.PENDING = 1)] = "PENDING"),
         (l[(l.ERROR = 2)] = "ERROR"),
         (l[(l.NONE = 3)] = "NONE"),
         (l[(l.CANCELLED = 4)] = "CANCELLED"),
         l);
-function p(e, t, n, l) {
+function m(e, t, n, l) {
     let r = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
         a = arguments.length > 5 ? arguments[5] : void 0,
         s = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];

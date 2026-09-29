@@ -8,8 +8,8 @@ let r = null,
     u = null,
     c = null,
     d = null,
-    m = null,
     p = null,
+    m = null,
     h = {
         [l.C.ORB_CHECKOUT]: {
             get: function () {
@@ -48,12 +48,12 @@ let r = null,
         },
         [l.C.PREMIUM_CHECKOUT]: {
             get: function () {
-                return (null == m && (m = new i.od({ checkoutFlow: l.C.PREMIUM_CHECKOUT })), m);
+                return (null == p && (p = new i.od({ checkoutFlow: l.C.PREMIUM_CHECKOUT })), p);
             },
         },
         [l.C.GAME_SERVER_SUBSCRIPTION_CHECKOUT]: {
             get: function () {
-                return (null == p && (p = new i.od({ checkoutFlow: l.C.GAME_SERVER_SUBSCRIPTION_CHECKOUT })), p);
+                return (null == m && (m = new i.od({ checkoutFlow: l.C.GAME_SERVER_SUBSCRIPTION_CHECKOUT })), m);
             },
         },
     };

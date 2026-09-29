@@ -1,10 +1,10 @@
-n.d(t, { N: () => o, l: () => u });
+t.d(n, { N: () => s, l: () => o });
 var a,
-    r = n(196765),
-    l = n(734057),
-    i = n(174459),
-    s = n(652215),
-    o =
+    l = t(196765),
+    i = t(734057),
+    r = t(174459),
+    d = t(652215),
+    s =
         (((a = {}).VIEWER_SWIPE = "number_viewer_swipes"),
         (a.THUMBNAIL_SWIPE = "number_thumbnail_swipes"),
         (a.SELECTED_ITEM_CHANGE = "number_selected_item_changes"),
@@ -20,31 +20,31 @@ var a,
         (a.COPY_LINK_PRESSED = "number_copy_link_more_menu_pressed"),
         (a.CONTEXT_MENU_OPENED = "number_context_menu_opened"),
         a);
-let c = {
+let _ = {
         guildId: void 0,
         channelId: void 0,
         channelType: void 0,
         numMediaItems: 0,
         hasMediaOptions: void 0,
         source: void 0,
-        incrementableActions: Object.fromEntries(Object.values(o).map((e) => [e, 0])),
+        incrementableActions: Object.fromEntries(Object.values(s).map((e) => [e, 0])),
     },
-    d = (0, r.v)(() => c),
-    u = {
+    c = (0, l.v)(() => _),
+    o = {
         markSessionStarted: (e) => {
-            let t = l.A.getChannel(e.channelId);
-            (i.default.track(s.HAw.OPEN_MODAL, {
-                type: s.JJy.MEDIA_VIEWER,
+            let n = i.A.getChannel(e.channelId);
+            (r.default.track(d.HAw.OPEN_MODAL, {
+                type: d.JJy.MEDIA_VIEWER,
                 source: e.source,
                 channel_id: e.channelId,
-                channel_type: t?.type,
-                guild_id: t?.guild_id,
+                channel_type: n?.type,
+                guild_id: n?.guild_id,
             }),
-                d.setState({ ...c, ...e, channelId: e.channelId, channelType: t?.type, guildId: t?.guild_id }));
+                c.setState({ ..._, ...e, channelId: e.channelId, channelType: n?.type, guildId: n?.guild_id }));
         },
         markSessionCompleted: () => {
-            let e = d.getState();
-            (i.default.track(s.HAw.MEDIA_VIEWER_SESSION_COMPLETED, {
+            let e = c.getState();
+            (r.default.track(d.HAw.MEDIA_VIEWER_SESSION_COMPLETED, {
                 source: e.source,
                 guild_id: e.guildId,
                 channel_id: e.channelId,
@@ -53,51 +53,51 @@ let c = {
                 has_media_options: e.hasMediaOptions,
                 ...e.incrementableActions,
             }),
-                d.setState({ ...c }));
+                c.setState({ ..._ }));
         },
         markActionPerformed: (e) => {
-            d.setState((t) => ({
-                incrementableActions: { ...t.incrementableActions, [e]: t.incrementableActions[e] + 1 },
+            c.setState((n) => ({
+                incrementableActions: { ...n.incrementableActions, [e]: n.incrementableActions[e] + 1 },
             }));
         },
         trackMediaViewerImageSaved: (e) => {
-            let { url: t, success: n } = e,
-                a = d.getState();
-            i.default.track(s.HAw.MEDIA_VIEWER_IMAGE_SAVED, { url: t, success: n, channel_id: a.channelId });
+            let { url: n, success: t } = e,
+                a = c.getState();
+            r.default.track(d.HAw.MEDIA_VIEWER_IMAGE_SAVED, { url: n, success: t, channel_id: a.channelId });
         },
         trackMediaViewerImageCopied: (e) => {
-            let { url: t, success: n } = e,
-                a = d.getState();
-            i.default.track(s.HAw.MEDIA_VIEWER_IMAGE_COPIED, { url: t, success: n, channel_id: a.channelId });
+            let { url: n, success: t } = e,
+                a = c.getState();
+            r.default.track(d.HAw.MEDIA_VIEWER_IMAGE_COPIED, { url: n, success: t, channel_id: a.channelId });
         },
         trackMediaViewerLinkCopied: (e) => {
-            let { href: t, success: n } = e,
-                a = d.getState();
-            i.default.track(s.HAw.MEDIA_VIEWER_LINK_COPIED, { href: t, success: n, channel_id: a.channelId });
+            let { href: n, success: t } = e,
+                a = c.getState();
+            r.default.track(d.HAw.MEDIA_VIEWER_LINK_COPIED, { href: n, success: t, channel_id: a.channelId });
         },
         trackMediaViewerLinkOpened: (e) => {
-            let { href: t } = e,
-                n = d.getState();
-            i.default.track(s.HAw.MEDIA_VIEWER_LINK_OPENED, { href: t, channel_id: n.channelId });
+            let { href: n } = e,
+                t = c.getState();
+            r.default.track(d.HAw.MEDIA_VIEWER_LINK_OPENED, { href: n, channel_id: t.channelId });
         },
         trackMediaViewerDownloadButtonTapped: () => {
-            let e = d.getState();
-            i.default.track(s.HAw.MEDIA_VIEWER_DOWNLOAD_BUTTON_TAPPED, {
+            let e = c.getState();
+            r.default.track(d.HAw.MEDIA_VIEWER_DOWNLOAD_BUTTON_TAPPED, {
                 guild_id: e.guildId,
                 channel_id: e.channelId,
                 channel_type: e.channelType,
             });
         },
         trackMediaViewerShareButtonTapped: () => {
-            let e = d.getState();
-            i.default.track(s.HAw.MEDIA_VIEWER_SHARE_BUTTON_TAPPED, {
+            let e = c.getState();
+            r.default.track(d.HAw.MEDIA_VIEWER_SHARE_BUTTON_TAPPED, {
                 guild_id: e.guildId,
                 channel_id: e.channelId,
                 channel_type: e.channelType,
             });
         },
         trackMessageEmbedsActionCompleted: (e) => {
-            let { platform: t, action: n, error: a } = e;
-            i.default.track(s.HAw.MESSAGE_EMBEDS_ACTION_COMPLETED, { platform: t, error: a, action: n });
+            let { platform: n, action: t, error: a } = e;
+            r.default.track(d.HAw.MESSAGE_EMBEDS_ACTION_COMPLETED, { platform: n, error: a, action: t });
         },
     };

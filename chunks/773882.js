@@ -1,4 +1,4 @@
-n.d(t, { p: () => m });
+n.d(t, { p: () => p });
 var l = n(477900),
     i = n(582128),
     r = n(166532),
@@ -40,23 +40,23 @@ class d {
         };
     };
 }
-function m(e) {
+function p(e) {
     let { isGift: t, invoicePreview: n } = (0, o.t4)((e) => ({
             isGift: e.isGift,
             invoicePreview: e.checkoutInvoicePreview,
         })),
         a = n?.total === 0,
         u = e.handleStepChange,
-        m = i.useCallback(() => {
+        p = i.useCallback(() => {
             if (t) return void u(r.pn.GIFT_CUSTOMIZATION);
         }, [u, t]),
-        p = i.useMemo(() => new d({ isGift: t, isFree: a }), [t, a]);
+        m = i.useMemo(() => new d({ isGift: t, isFree: a }), [t, a]);
     return (0, l.jsx)(s.Y, {
         ...e,
         isBackButtonEligible: t,
-        onFooterBackClick: m,
+        onFooterBackClick: p,
         renderStepBody: c,
-        resolveInternalState: p.resolveInternalState,
-        resolveTenantReviewButtonProps: p.resolveTenantReviewButtonProps,
+        resolveInternalState: m.resolveInternalState,
+        resolveTenantReviewButtonProps: m.resolveTenantReviewButtonProps,
     });
 }

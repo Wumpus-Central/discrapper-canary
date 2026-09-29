@@ -69,10 +69,10 @@ function _(e) {
         ],
     });
 }
-function T(e) {
+function I(e) {
     let { achievement: t, unlocked: n } = e,
         { name: r, description: s, rarity: a, hideDescriptionUntilUnlock: o, onAction: c } = t,
-        { color: T } = (0, d.ag)(a);
+        { color: I } = (0, d.ag)(a);
     l.useEffect(() => {
         let e = setTimeout(() => {
             E.A.playAchievementUnlockSound();
@@ -81,12 +81,12 @@ function T(e) {
             clearTimeout(e);
         };
     }, []);
-    let I = null != c && n,
-        p = I ? A.D : "div";
+    let T = null != c && n,
+        p = T ? A.D : "div";
     return (0, i.jsxs)(p, {
-        className: u()(g.kL, I && g.b),
+        className: u()(g.kL, T && g.b),
         onClick: function () {
-            I && c();
+            T && c();
         },
         children: [
             (0, i.jsx)("div", {
@@ -104,11 +104,11 @@ function T(e) {
                     }),
                 ],
             }),
-            (0, i.jsx)("div", { className: g.Db, children: (0, i.jsx)(_, { color: T }) }),
+            (0, i.jsx)("div", { className: g.Db, children: (0, i.jsx)(_, { color: I }) }),
         ],
     });
 }
-var I = n(375708);
+var T = n(375708);
 function p(e) {
     o.h.dispatch({ type: "POGGERMODE_ACHIEVEMENT_UNLOCK", achievementId: e });
 }
@@ -116,9 +116,9 @@ function N(e, t) {
     let n = (0, d.vM)(e);
     null != n &&
         (0, r.P0)(
-            (0, s.o)(I.intl.string(I.t.MPpEUA), a.Ck.CUSTOM, {
+            (0, s.o)(T.intl.string(T.t.MPpEUA), a.Ck.CUSTOM, {
                 position: a.xJ.BOTTOM,
-                component: (0, i.jsx)(T, { achievement: n, unlocked: t }),
+                component: (0, i.jsx)(I, { achievement: n, unlocked: t }),
                 duration: 6e3,
             }),
         );

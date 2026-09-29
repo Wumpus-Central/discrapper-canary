@@ -1,41 +1,41 @@
-n.d(t, { D: () => u });
-var a = n(477900),
-    r = n(503698),
-    l = n.n(r),
-    i = n(508770),
+n.d(t, { D: () => d });
+var r = n(477900),
+    a = n(503698),
+    l = n.n(a),
+    o = n(508770),
     s = n(297264),
-    o = n(28863),
+    i = n(28863),
     c = n(834730),
-    d = n(489387);
-function u(e) {
-    let { title: t, body: n, badge: r, className: i, textLink: u } = e,
-        h = u?.external ?? !0;
-    return (0, a.jsxs)("div", {
-        className: l()(d.header, i),
+    u = n(489387);
+function d(e) {
+    let { title: t, body: n, badge: a, className: o, textLink: d } = e,
+        h = d?.external ?? !0;
+    return (0, r.jsxs)("div", {
+        className: l()(u.header, o),
         children: [
-            (0, a.jsxs)("div", {
+            (0, r.jsxs)("div", {
                 children: [
-                    (0, a.jsx)(m, { badge: r }),
-                    (0, a.jsx)(s.D, { variant: "heading-md/semibold", className: d.title, children: t }),
+                    (0, r.jsx)(f, { badge: a }),
+                    (0, r.jsx)(s.D, { variant: "heading-md/semibold", className: u.title, children: t }),
                 ],
             }),
-            (0, a.jsx)(p, { body: n }),
-            null != u &&
-                (0, a.jsx)(o.Anchor, {
-                    onClick: u.onClick,
-                    href: u.link,
-                    target: h && null != u.link ? "_blank" : void 0,
-                    rel: h && null != u.link ? "noopener noreferrer" : void 0,
-                    children: (0, a.jsx)(c.E, { variant: "text-sm/normal", className: d.footerLink, children: u.text }),
+            (0, r.jsx)(p, { body: n }),
+            null != d &&
+                (0, r.jsx)(i.Anchor, {
+                    onClick: d.onClick,
+                    href: d.link,
+                    target: h && null != d.link ? "_blank" : void 0,
+                    rel: h && null != d.link ? "noopener noreferrer" : void 0,
+                    children: (0, r.jsx)(c.E, { variant: "text-sm/normal", className: u.footerLink, children: d.text }),
                 }),
         ],
     });
 }
-function m(e) {
+function f(e) {
     let { badge: t } = e;
     if (null == t) return null;
-    let n = (0, i.U)(t);
-    return (0, a.jsx)("div", { className: d.badgeContainer, children: (0, a.jsx)(i.E, { variant: "brand", ...n }) });
+    let n = (0, o.U)(t);
+    return (0, r.jsx)("div", { className: u.badgeContainer, children: (0, r.jsx)(o.E, { variant: "brand", ...n }) });
 }
 function p(e) {
     let { body: t } = e;
@@ -43,8 +43,8 @@ function p(e) {
     let n = Array.isArray(t) ? t : [t];
     return 0 === n.length || n.every((e) => null == e || "" === e)
         ? null
-        : (0, a.jsx)("div", {
-              className: d.headerBody,
-              children: n.map((e, t) => (0, a.jsx)(c.E, { variant: "text-sm/normal", color: "none", children: e }, t)),
+        : (0, r.jsx)("div", {
+              className: u.headerBody,
+              children: n.map((e, t) => (0, r.jsx)(c.E, { variant: "text-sm/normal", color: "none", children: e }, t)),
           });
 }

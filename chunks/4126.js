@@ -1,4 +1,4 @@
-n.d(t, { Mx: () => I, kj: () => E, iH: () => y, KF: () => f, ri: () => S, $K: () => g });
+n.d(t, { Mx: () => y, kj: () => E, iH: () => I, KF: () => f, ri: () => S, $K: () => g });
 var l = n(477900);
 n(582128);
 var i = n(503698),
@@ -9,17 +9,17 @@ var i = n(503698),
     u = n(565645),
     c = n(3432),
     d = n(575625);
-function m(e) {
+function p(e) {
     let t,
         { applicationId: n, storeListingBenefits: i, skuBenefits: r, className: a } = e;
     return (
         null != i
             ? (t = i.map((e) => (0, l.jsx)(h, { applicationId: n, benefit: e, className: a }, e.id)))
-            : null != r && (t = r.map((e, t) => (0, l.jsx)(p, { benefit: e, className: a }, t))),
+            : null != r && (t = r.map((e, t) => (0, l.jsx)(m, { benefit: e, className: a }, t))),
         t
     );
 }
-function p(e) {
+function m(e) {
     let {
         benefit: t,
         className: n,
@@ -63,7 +63,7 @@ function h(e) {
         emojiContainerClassName: a,
         showsDescription: s = !0,
         nameTextVariant: u = "text-md/medium",
-        nameTextColor: m = "text-strong",
+        nameTextColor: p = "text-strong",
     } = e;
     return (0, l.jsxs)("div", {
         className: r()(d.kL, i),
@@ -72,7 +72,7 @@ function h(e) {
             (0, l.jsxs)("div", {
                 className: d.op,
                 children: [
-                    (0, l.jsx)(o.E, { variant: u, color: m, className: d.UU, children: n.name }),
+                    (0, l.jsx)(o.E, { variant: u, color: p, className: d.UU, children: n.name }),
                     s &&
                         (0, l.jsx)(o.E, {
                             color: "interactive-text-default",
@@ -96,7 +96,7 @@ function E(e) {
 function S() {
     return (0, l.jsx)("hr", { className: C.yF });
 }
-function I(e) {
+function y(e) {
     let { className: t, title: n, description: i, ...r } = e;
     return (0, l.jsxs)("div", {
         className: t,
@@ -107,12 +107,12 @@ function I(e) {
         ],
     });
 }
-function y(e) {
+function I(e) {
     let { applicationId: t, storeListingBenefits: n, skuBenefits: i, className: a, ...s } = e;
     return (0, l.jsx)("div", {
         className: r()(C.iq, a),
         ...s,
-        children: (0, l.jsx)(m, { applicationId: t, storeListingBenefits: n, skuBenefits: i, className: C.gX }),
+        children: (0, l.jsx)(p, { applicationId: t, storeListingBenefits: n, skuBenefits: i, className: C.gX }),
     });
 }
 function g(e) {

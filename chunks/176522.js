@@ -26,7 +26,7 @@ let _ = () => {
         C.BVt.QUEST_HOME,
     ].filter(h.Vq);
 };
-function T() {
+function I() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
         t = o.A.getState().guildId;
     if (null == t)
@@ -57,13 +57,13 @@ function T() {
             (0, E.i)(t, s));
     }
 }
-var I = n(963169),
+var T = n(963169),
     p = n(345942),
     N = n(309010),
     S = n(967198),
     f = n(723702);
-let m = { binds: ["alt+down"], comboKeysBindGlobal: !0, action: () => (T(), !1) },
-    O = { binds: ["alt+up"], comboKeysBindGlobal: !0, action: () => (T(-1), !1) },
+let m = { binds: ["alt+down"], comboKeysBindGlobal: !0, action: () => (I(), !1) },
+    O = { binds: ["alt+up"], comboKeysBindGlobal: !0, action: () => (I(-1), !1) },
     L = {
         binds: ["mod+alt+right"],
         comboKeysBindGlobal: !0,
@@ -80,10 +80,10 @@ let m = { binds: ["alt+down"], comboKeysBindGlobal: !0, action: () => (T(), !1) 
     b = {
         binds: (0, f.isMac)() || (0, f.isMacWeb)() ? ["mod+["] : ["alt+left"],
         comboKeysBindGlobal: !0,
-        action: () => ((0, I.OE)("keybind"), !1),
+        action: () => ((0, T.OE)("keybind"), !1),
     },
     v = {
         binds: (0, f.isMac)() || (0, f.isMacWeb)() ? ["mod+]"] : ["alt+right"],
         comboKeysBindGlobal: !0,
-        action: () => ((0, I.Qb)("keybind"), !1),
+        action: () => ((0, T.Qb)("keybind"), !1),
     };

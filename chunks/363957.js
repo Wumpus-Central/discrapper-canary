@@ -5,15 +5,15 @@ var n = l(158390),
     s = l(927813);
 let r = s.A.Millis.SECOND,
     d = 10 * s.A.Millis.SECOND,
-    o = { status: "idle" },
-    c = { status: "loading" },
+    c = { status: "idle" },
+    o = { status: "loading" },
     u = { status: "error" },
     m = {};
 function x(e, t) {
     let l = e.entriesByWidgetId.get(t);
-    return (null == l && ((l = { state: o, attempts: 0 }), e.entriesByWidgetId.set(t, l)), l);
+    return (null == l && ((l = { state: c, attempts: 0 }), e.entriesByWidgetId.set(t, l)), l);
 }
-function f(e, t, l, i) {
+function h(e, t, l, i) {
     if (0 === l.length) {
         e.backoff?.pending !== !0 && e.backoff?.succeed();
         return;
@@ -28,10 +28,10 @@ function f(e, t, l, i) {
             e.backoff.pending ||
                 e.backoff.fail(() => a.h.dispatch({ type: "GUILD_SPACE_HYDRATE_BACKOFF_EXPIRED", guildId: t }))));
 }
-class h extends i.Ay.Store {
+class f extends i.Ay.Store {
     static displayName = "GuildSpaceHydrationStore";
     getHydration(e, t) {
-        return m[e]?.entriesByWidgetId.get(t)?.state ?? o;
+        return m[e]?.entriesByWidgetId.get(t)?.state ?? c;
     }
     getWidgetIdsToHydrate(e, t) {
         let l = m[e];
@@ -39,10 +39,10 @@ class h extends i.Ay.Store {
             ? [...t]
             : null != l.activeRequestId
               ? []
-              : t.filter((e) => "idle" === (l.entriesByWidgetId.get(e)?.state ?? o).status);
+              : t.filter((e) => "idle" === (l.entriesByWidgetId.get(e)?.state ?? c).status);
     }
 }
-let g = new h(a.h, {
+let g = new f(a.h, {
     GUILD_SPACE_HYDRATE_START: function (e) {
         let t,
             { guildId: l, requestId: n, widgetIds: i } = e,
@@ -51,7 +51,7 @@ let g = new h(a.h, {
             (a.activeWidgetIds = i),
             i.forEach((e) => {
                 let t = x(a, e);
-                ((t.state = c), (t.attempts += 1));
+                ((t.state = o), (t.attempts += 1));
             }));
     },
     GUILD_SPACE_HYDRATE_SUCCESS: function (e) {
@@ -74,14 +74,14 @@ let g = new h(a.h, {
                 ((l.state = { status: "success", data: t }), (l.attempts = 0));
             } else r.push(e);
         }),
-            f(i, t, r, !0));
+            h(i, t, r, !0));
     },
     GUILD_SPACE_HYDRATE_FAILURE: function (e) {
         let { guildId: t, requestId: l, retryable: n } = e,
             i = m[t];
         if (i?.activeRequestId !== l) return !1;
         let a = i.activeWidgetIds ?? [];
-        (delete i.activeRequestId, delete i.activeWidgetIds, f(i, t, a, n));
+        (delete i.activeRequestId, delete i.activeWidgetIds, h(i, t, a, n));
     },
     GUILD_SPACE_HYDRATE_BACKOFF_EXPIRED: function (e) {
         let { guildId: t } = e,
@@ -100,7 +100,7 @@ let g = new h(a.h, {
                 });
         if (0 === i.length) return !1;
         i.forEach((e) => {
-            e.state = o;
+            e.state = c;
         });
     },
     GUILD_SPACE_HYDRATE_RESET_ERRORS: function (e) {

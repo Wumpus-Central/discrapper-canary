@@ -14,8 +14,8 @@ var r = n(477900),
     p = n(148810),
     m = n(521502),
     A = n(380610),
-    v = n(807393),
-    y = n(976860),
+    y = n(807393),
+    v = n(976860),
     x = n(174459),
     w = n(38405),
     E = n(19575),
@@ -44,7 +44,7 @@ function _() {
 }
 let D = l().throttle(
     (e) => {
-        v.A.increment(
+        y.A.increment(
             {
                 name: c.K.APP_CRASHED,
                 tags: [`reason:${o.J.UNHANDLED_JS_ERROR}`, `level:${a.k.FATAL}`, `modded_client:${e}`],
@@ -62,7 +62,7 @@ class I extends i.PureComponent {
         this.triggerSoftCrash(e, t);
     }
     triggerSoftCrash(e, t) {
-        let n = (0, y.JK)().location;
+        let n = (0, v.JK)().location;
         this.setState({ error: e, info: t });
         let r = (0, d.b)(),
             i = w.A.captureCrash(e, { extra: t });

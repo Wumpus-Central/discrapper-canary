@@ -1,4 +1,4 @@
-n.d(t, { A: () => P });
+n.d(t, { A: () => j });
 var l = n(477900),
     s = n(582128),
     a = n(503698),
@@ -11,14 +11,14 @@ var l = n(477900),
     f = n(84571),
     m = n(36075),
     N = n(834730),
-    p = n(775602),
-    O = n(248778),
+    O = n(775602),
+    p = n(248778),
     E = n(945096),
     x = n(310784),
     A = n.n(x),
-    y = n(998304),
-    I = n(898985),
-    z = n(824994),
+    I = n(998304),
+    z = n(898985),
+    y = n(824994),
     h = n(922301),
     L = n(750656);
 let T = "--custom-display-name-styles-main-color";
@@ -69,8 +69,8 @@ function C(e) {
 }
 var D = n(73392),
     _ = n(658385);
-let v = [u.x.CHERRY_BOMB, u.x.CHICLE],
-    P = s.memo(function (e) {
+let P = [u.x.CHERRY_BOMB, u.x.CHICLE],
+    j = s.memo(function (e) {
         let {
                 userName: t,
                 displayNameStyles: n,
@@ -82,28 +82,28 @@ let v = [u.x.CHERRY_BOMB, u.x.CHICLE],
                 boldFontOpacity: g = 1,
                 shouldUnderlineOnHover: M = !1,
                 appendedInlineContent: R,
-                textVariant: P,
+                textVariant: j,
             } = e,
-            W = (0, O.DW)("UserNameWithEffects"),
+            W = (0, p.DW)("UserNameWithEffects"),
             G = (0, E.sx)(n, W),
-            b = (0, D.a)({ displayNameStyles: G }),
-            { useReducedMotion: U } = (0, i.cf)([p.Ay], () => ({ useReducedMotion: p.Ay.useReducedMotion })),
-            k = (0, z.W)({ location: "UserNameWithEffects" }),
+            U = (0, D.a)({ displayNameStyles: G }),
+            { useReducedMotion: b } = (0, i.cf)([O.Ay], () => ({ useReducedMotion: O.Ay.useReducedMotion })),
+            k = (0, y.W)({ location: "UserNameWithEffects" }),
             w = (0, c.r)(d.A.colors.BACKGROUND_BASE_LOW).hex(),
             F = G?.effectId ?? o.z.SOLID,
             Y = (0, f.O)(t),
             B = (0, m.CR)(Y, F === o.z.TOON ? _.Zg : void 0),
             H = (function (e) {
                 let { displayNameStyles: t, backgroundColor: n } = e,
-                    l = (0, i.bG)([p.Ay], () => (p.Ay.desaturateUserColors ? p.Ay.saturation : 1)),
+                    l = (0, i.bG)([O.Ay], () => (O.Ay.desaturateUserColors ? O.Ay.saturation : 1)),
                     a = t?.effectId ?? o.z.SOLID,
-                    r = (0, I._)(a);
+                    r = (0, z._)(a);
                 return s.useMemo(
                     () =>
                         null == t
                             ? []
                             : t.colors.map((e) =>
-                                  (0, y.lZ)({
+                                  (0, I.lZ)({
                                       foreground: A()(e),
                                       background: a === o.z.TOON ? A()("#333") : A()(n),
                                       ratio: r.minContrastRatio,
@@ -184,7 +184,7 @@ let v = [u.x.CHERRY_BOMB, u.x.CHICLE],
                     "--custom-display-name-styles-wrap": a ? "wrap" : "nowrap",
                     "--custom-display-name-styles-font-opacity": r,
                 };
-            })(F, H, { shouldWrap: S, fontOpacity: v.includes(G.fontId) ? g : 1, nameLength: Y?.length ?? 0 }),
+            })(F, H, { shouldWrap: S, fontOpacity: P.includes(G.fontId) ? g : 1, nameLength: Y?.length ?? 0 }),
             K = (function (e) {
                 switch (e) {
                     case o.z.GRADIENT:
@@ -206,9 +206,9 @@ let v = [u.x.CHERRY_BOMB, u.x.CHICLE],
                 }
             })(F),
             Z = a !== h.G.PLAIN,
-            X = a === h.G.ANIMATED && !U,
+            X = a === h.G.ANIMATED && !b,
             J = (0, l.jsx)("div", {
-                className: r()(_.kL, b, N, {
+                className: r()(_.kL, U, N, {
                     [_.rD]: Z,
                     [_.CS]: X,
                     [_.HW]: x,
@@ -217,8 +217,8 @@ let v = [u.x.CHERRY_BOMB, u.x.CHICLE],
                     [_._j]: S,
                 }),
                 style: $,
-                children: (0, l.jsx)(j, {
-                    textVariant: P,
+                children: (0, l.jsx)(v, {
+                    textVariant: j,
                     "data-username-with-effects": Y,
                     className: r()(_.WH, K, { [_._W]: M }),
                     children:
@@ -235,7 +235,7 @@ let v = [u.x.CHERRY_BOMB, u.x.CHICLE],
             });
         return null != R ? (0, l.jsxs)("div", { className: _.g8, children: [J, R] }) : J;
     });
-function j(e) {
+function v(e) {
     let { textVariant: t, ...n } = e;
     return null != t ? (0, l.jsx)(N.E, { color: "none", variant: t, ...n }) : (0, l.jsx)("span", { ...n });
 }

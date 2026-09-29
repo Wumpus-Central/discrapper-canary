@@ -1,9 +1,9 @@
-i.d(e, { s: () => l });
-var n = i(923457),
-    r = i(36149),
-    s = i(207560);
-function l() {
-    let t = (0, r.yM)(),
-        e = (0, s.yv)(n.p.MESSAGE_REQUEST_RESTRICTIONS);
-    return t && e;
+_.d(t, { s: () => r });
+var u = _(923457),
+    i = _(36149),
+    s = _(207560);
+function r() {
+    let e = (0, i.yM)(),
+        t = (0, s.yv)(u.p.MESSAGE_REQUEST_RESTRICTIONS);
+    return e && t;
 }

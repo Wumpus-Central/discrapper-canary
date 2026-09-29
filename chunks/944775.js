@@ -28,8 +28,8 @@ let m = {
         titleBarStyle: null,
     },
     A = f.ed.padding,
-    v = m.width - A,
-    y = m.height - A;
+    y = m.width - A,
+    v = m.height - A;
 async function x(e) {
     let t = c.A.getGuildId(),
         n = c.A.getChannelId(),
@@ -47,8 +47,8 @@ async function x(e) {
                 children: (0, r.jsx)(h.A, {
                     guildId: t,
                     channel: i,
-                    width: v,
-                    height: y,
+                    width: y,
+                    height: v,
                     keepOpen: e,
                     onClose: w,
                     analyticsSource: "global",

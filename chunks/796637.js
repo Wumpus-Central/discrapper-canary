@@ -14,8 +14,8 @@ var i = n(582128),
     C = n(924985),
     g = n(734057),
     _ = n(945886),
-    T = n(576705),
-    I = n(573163),
+    I = n(576705),
+    T = n(573163),
     p = n(309010),
     N = n(543465),
     S = n(403362),
@@ -25,7 +25,7 @@ var i = n(582128),
     L = n(349828),
     b = n(281405),
     v = n(818348);
-let R = 221552 == n.j ? [a.Ay, f.A, o.A, d.Ay, u.A, A.A, C.A, g.A, T.A, I.Ay, p.Ay, N.Ay] : null;
+let R = 221552 == n.j ? [a.Ay, f.A, o.A, d.Ay, u.A, A.A, C.A, g.A, I.A, T.Ay, p.Ay, N.Ay] : null;
 function U(e) {
     let { limit: t, includeLoading: n } = e,
         i = f.A.getFavoriteChannels(),
@@ -109,7 +109,7 @@ function y(e) {
         let { isCollapsed: l, isMuted: s } = t;
         return r()(e)
             .map((e) => {
-                if (!e.isPrivate() && !T.A.can(v.xB.VIEW_CHANNEL, e)) return null;
+                if (!e.isPrivate() && !I.A.can(v.xB.VIEW_CHANNEL, e)) return null;
                 let d = null != a && (a.id === e.id || o === e.id),
                     h = null != a && a.isThread() && a.parent_id === e.id,
                     C =
@@ -131,10 +131,10 @@ function y(e) {
                         isFirstVoiceChannel: !1,
                         subtitle: (0, c.go)(e, p, !1),
                     };
-                return d || h || !r().isEmpty(C) || I.Ay.getMentionCount(e.id) > 0
+                return d || h || !r().isEmpty(C) || T.Ay.getMentionCount(e.id) > 0
                     ? f
                     : (i && S) ||
-                        (l && (S || s || (0, E.gV)(e.type) || ((0, E.ig)(e.type) && !1 === I.Ay.hasUnread(e.id))))
+                        (l && (S || s || (0, E.gV)(e.type) || ((0, E.ig)(e.type) && !1 === T.Ay.hasUnread(e.id))))
                       ? null
                       : f;
             })
