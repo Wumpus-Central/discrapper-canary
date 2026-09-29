@@ -235,7 +235,7 @@ function z(e, t, l) {
         i = n.id,
         s = t.navigatesOnPublish ? t.destination : null,
         u = "user" === n.install_scope || null != s ? null : (0, g.$C)(i);
-    (u?.catch(() => {}), "channel" === s && U(i, !0));
+    (u?.catch(() => {}), "channel" === s && G(i, !0));
     let o = (0, g.TV)(i).then((e) => {
             if (!0 !== e.ok) throw Error(P.intl.string(T.default.fNP6Cd));
             return e;
@@ -254,13 +254,13 @@ function z(e, t, l) {
                     null != s &&
                         (q.has(s) && (0, I.cP)(i),
                         d
-                            .then(() => ("channel" === s ? G(i, r) : void 0))
-                            .finally(() => U(i, !1))
+                            .then(() => ("channel" === s ? U(i, r) : void 0))
+                            .finally(() => G(i, !1))
                             .then(() => O(D(i, r) ?? e, s, a))
                             .catch(() => {})));
             },
             (e) => {
-                (U(i, !1), a.showError(e instanceof Error ? e.message : P.intl.string(T.default.fNP6Cd)));
+                (G(i, !1), a.showError(e instanceof Error ? e.message : P.intl.string(T.default.fNP6Cd)));
             },
         ),
         null != u && null != e.guildId)
@@ -277,10 +277,10 @@ function z(e, t, l) {
             }));
     }
 }
-function U(e, t) {
+function G(e, t) {
     r.h.dispatch({ type: "VIBEGRATIONS_PROJECT_APP_CHANNEL_PENDING", projectId: e, pending: t });
 }
-async function G(e, t) {
+async function U(e, t) {
     let l = Date.now() + 5e3;
     for (; D(e, t)?.appChannelId == null && Date.now() < l;) await new Promise((e) => setTimeout(e, 250));
 }
@@ -420,7 +420,7 @@ function K(e, t) {
         ? {
               ...I,
               status: S?.status ?? null,
-              guildName: S?.guildName ?? null,
+              guildId: p,
               publishing: h,
               disabled: h || !0 === r.busy || null != I.disabledReason,
               run: M,

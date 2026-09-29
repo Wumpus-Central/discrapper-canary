@@ -782,6 +782,12 @@ let n = [
         summary: "The project menu now calls its MCP item just MCP, matching the items beside it.",
     },
     {
+        date: "2026-09-29",
+        time: "03:18",
+        platforms: ["desktop", "mobile"],
+        summary: "The publish card is now just a button, with the server's icon and name beside it.",
+    },
+    {
         date: "2026-09-05",
         time: "00:02",
         platforms: ["desktop", "mobile"],
