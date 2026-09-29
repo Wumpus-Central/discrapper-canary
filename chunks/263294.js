@@ -259,19 +259,19 @@ var ef = n(875317),
     eY = n(763827),
     eQ = n(158045),
     eq = n(885631),
-    eZ = n(182707),
+    eZ = n(889119),
     e$ = n(960628),
     eJ = n(206248),
     e0 = n(498470),
     e1 = n(807098),
     e6 = n(637706),
-    e3 = n(788883),
-    e8 = n(7667);
+    e8 = n(788883),
+    e3 = n(7667);
 function e5(e) {
     let { guildId: t, componentId: n, promotionId: i, coachmark: r, targetElementRef: a, markAsDismissed: o } = e,
         { analyticsLocations: u } = (0, _.Ay)(),
         c = (0, e1.T)(r.asset),
-        { terms: A } = (0, e8.A)(i),
+        { terms: A } = (0, e3.A)(i),
         E = l.useCallback(() => {
             o(eo.i.DISMISS);
         }, [o]),
@@ -292,7 +292,7 @@ function e5(e) {
         C = r.button?.copy ?? "";
     return (0, s.jsxs)(s.Fragment, {
         children: [
-            (0, s.jsx)(e3.A, {
+            (0, s.jsx)(e8.A, {
                 componentType: er.C.GUILD_HEADER_COACHMARK,
                 componentId: n,
                 promotionId: i,
@@ -799,8 +799,8 @@ var t$ = n(503698),
     t0 = n(933832),
     t1 = n(782603),
     t6 = n(81466),
-    t3 = n(116085),
-    t8 = n(597601),
+    t8 = n(116085),
+    t3 = n(597601),
     t5 = n(451394),
     t7 = n(104171),
     t2 = n(47167),
@@ -999,7 +999,7 @@ function n_(e) {
                     children: [
                         null != d
                             ? (0, s.jsx)(d, { size: "xs", color: "currentColor", className: nm.uE })
-                            : (0, s.jsx)(t3.B, {
+                            : (0, s.jsx)(t8.B, {
                                   size: "custom",
                                   color: "currentColor",
                                   width: 16,
@@ -1029,7 +1029,7 @@ function nN(e) {
               heading: te.intl.string(te.t["1+boPi"]),
               topic: t.name,
               location: (0, nu.y)(n, !0),
-              locationIcon: (0, s.jsx)(t3.B, {
+              locationIcon: (0, s.jsx)(t8.B, {
                   size: "custom",
                   color: "currentColor",
                   width: 16,
@@ -1085,7 +1085,7 @@ function nT(e) {
         heading: te.intl.string(te.t["X2K3/4"]),
         location: i,
         details: a,
-        detailsIcon: (0, s.jsx)(t8.L, {
+        detailsIcon: (0, s.jsx)(t3.L, {
             size: "custom",
             color: "currentColor",
             width: 14,
@@ -1448,8 +1448,8 @@ let n0 = new nJ(I.h),
         { type: B.n5X.LINKED_ROLES_ADMIN, dismissibleContentType: d.M.LINKED_ROLE_ADMIN_GUILD },
         { type: B.n5X.GAME_CLAIM, dismissibleContentType: d.M.GAME_CLAIM_COACHMARK },
     ],
-    n3 = n6.map((e) => e.store).filter(nl.Vq),
-    n8 = new Set([d.M.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION, d.M.CHANNEL_NOTICE_GUILD_BANNER]);
+    n8 = n6.map((e) => e.store).filter(nl.Vq),
+    n3 = new Set([d.M.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION, d.M.CHANNEL_NOTICE_GUILD_BANNER]);
 function n5(e) {
     e.stopPropagation();
 }
@@ -1482,14 +1482,14 @@ function n2(e) {
         [I, g] = (0, $.ww)(m, A.id, eo.m.CHANNEL_NOTICES, !0),
         C = null != I,
         _ = (0, o.yK)(
-            n3,
+            n8,
             () =>
                 C
                     ? []
                     : n6
                           .filter((e) => {
                               let { dismissibleContentType: t, store: n } = e;
-                              return !0 === n?.channelNoticePredicate(A, E) && !n8.has(t);
+                              return !0 === n?.channelNoticePredicate(A, E) && !n3.has(t);
                           })
                           .map((e) => e.dismissibleContentType),
             [A, E, C],
@@ -2613,9 +2613,9 @@ function io(e) {
         }, []),
     });
     let e6 = (0, o.bG)([eY.A], () => eY.A.getChannelId()),
-        e3 = (0, o.bG)([ez.A], () => ez.A.desyncedVoiceStatesCount),
-        e8 = (0, eb.A)(D),
-        e5 = (0, ee.ai)(D) ? null : e8,
+        e8 = (0, o.bG)([ez.A], () => ez.A.desyncedVoiceStatesCount),
+        e3 = (0, eb.A)(D),
+        e5 = (0, ee.ai)(D) ? null : e3,
         e7 =
             (function (e) {
                 let t = (0, eb.A)(e),
@@ -2713,7 +2713,7 @@ function io(e) {
         selectedVoiceChannelId: H,
         voiceStates: y,
         rtcConnectedChannelId: e6,
-        rtcDesyncedVoiceStatesCount: e3,
+        rtcDesyncedVoiceStatesCount: e8,
         isUnavailable: k,
         user: X,
         hasChannelNotice: null != eC || Z,
