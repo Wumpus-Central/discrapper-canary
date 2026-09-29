@@ -30,7 +30,8 @@ function m(e) {
         h = (0, o.bG)([d.Ay], () => d.Ay.alwaysShowLinkDecorations),
         f = (0, o.bG)([d.Ay], () => d.Ay.keyboardModeEnabled),
         m = (0, o.bG)([d.Ay], () => d.Ay.isSwitchIconsEnabled),
-        A = i.useMemo(
+        A = (0, o.bG)([d.Ay], () => d.Ay.minToastDurationMs),
+        y = i.useMemo(
             () => ({
                 reducedMotion: n,
                 prefersCrossfades: !1,
@@ -39,8 +40,9 @@ function m(e) {
                 highContrastModeEnabled: c,
                 keyboardModeEnabled: f,
                 switchIconsEnabled: m,
+                minToastDurationMs: A,
             }),
-            [n, l, h, c, f, m],
+            [n, l, h, c, f, m, A],
         );
     return (
         i.useEffect(
@@ -52,6 +54,6 @@ function m(e) {
             ),
             [],
         ),
-        (0, r.jsx)(a.C.Provider, { value: A, children: t })
+        (0, r.jsx)(a.C.Provider, { value: y, children: t })
     );
 }

@@ -7,4 +7,5 @@ let i = n(582128).createContext({
     highContrastModeEnabled: !1,
     keyboardModeEnabled: !0,
     switchIconsEnabled: !1,
+    minToastDurationMs: 0,
 });

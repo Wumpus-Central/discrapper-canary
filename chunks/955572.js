@@ -3,9 +3,10 @@ n.d(t, {
     Bm: () => A,
     D3: () => m,
     Dm: () => L,
+    E7: () => v,
     Er: () => I,
-    FU: () => P,
-    Gm: () => b,
+    FU: () => U,
+    Gm: () => M,
     HU: () => p,
     IX: () => O,
     Jb: () => S,
@@ -17,11 +18,11 @@ n.d(t, {
     Xt: () => y,
     YV: () => h,
     kI: () => N,
-    n8: () => M,
+    n8: () => P,
     qz: () => T,
     ts: () => C,
     uS: () => E,
-    uh: () => v,
+    uh: () => b,
     w_: () => R,
 });
 var i = n(228366),
@@ -106,14 +107,17 @@ function D() {
     i.h.dispatch({ type: "ACCESSIBILITY_SYNC_PROFILE_THEME_WITH_USER_THEME_TOGGLE" });
 }
 function v(e) {
-    i.h.dispatch({ type: "ACCESSIBILITY_SET_CONTRAST_MODE", contrastMode: e });
+    i.h.dispatch({ type: "ACCESSIBILITY_SET_MIN_TOAST_DURATION", minToastDurationMs: e });
 }
 function b(e) {
-    i.h.dispatch({ type: "ACCESSIBILITY_SET_SWITCH_ICONS_ENABLED", switchIconsEnabled: e });
+    i.h.dispatch({ type: "ACCESSIBILITY_SET_CONTRAST_MODE", contrastMode: e });
 }
 function M(e) {
-    i.h.dispatch({ type: "ACCESSIBILITY_SET_CHAT_BAR_SETTINGS", ...e });
+    i.h.dispatch({ type: "ACCESSIBILITY_SET_SWITCH_ICONS_ENABLED", switchIconsEnabled: e });
 }
 function P(e) {
+    i.h.dispatch({ type: "ACCESSIBILITY_SET_CHAT_BAR_SETTINGS", ...e });
+}
+function U(e) {
     i.h.dispatch({ type: "UNSYNCED_USER_SETTINGS_UPDATE", settings: { hdrDynamicRange: e } });
 }

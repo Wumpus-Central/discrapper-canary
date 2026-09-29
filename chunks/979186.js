@@ -14,8 +14,8 @@ var r = n(477900),
     p = n(192308),
     m = n(231723),
     A = n(559106),
-    v = n(43990),
-    y = n(638495),
+    y = n(43990),
+    v = n(638495),
     x = n(557361),
     w = n(965830),
     E = n(318009),
@@ -90,7 +90,7 @@ function eu(e) {
         A = i.useCallback(() => {
             (a.set(0), null != c.current && clearTimeout(c.current), (c.current = null), n?.(), o?.());
         }, [a, n, o]),
-        v = i.useCallback(
+        y = i.useCallback(
             (e) => {
                 f ||
                     (g(!0),
@@ -105,7 +105,7 @@ function eu(e) {
             },
             [n, s, f],
         ),
-        y = i.useCallback(
+        v = i.useCallback(
             (e) => {
                 (e.stopPropagation(), e.shiftKey ? (u(!0), null != c.current && clearTimeout(c.current)) : u(!1));
             },
@@ -151,8 +151,8 @@ function eu(e) {
         confirmText: eo.intl.string(eo.t.a3HlgJ),
         cancelText: null != w ? eo.intl.string(eo.t.qIYnPo) : void 0,
         icon: (0, r.jsx)(q.A, { width: 40, height: 40, className: ea.Lo }),
-        onNotificationClick: y,
-        onConfirmClick: v,
+        onNotificationClick: v,
+        onConfirmClick: y,
         onCancelClick: null != w ? x : void 0,
         onDismissClick: n,
         expand: !0,
@@ -218,12 +218,12 @@ class eh extends i.PureComponent {
     }
 }
 var ef = n(97469),
-    eg = n(75483),
+    eg = n(164942),
     ep = n(597619),
     em = n(892019),
     eA = n(723702),
-    ev = n(677134),
-    ey = n(19575),
+    ey = n(677134),
+    ev = n(19575),
     ex = n(346142),
     ew = n(869146),
     eE = n(392164),
@@ -238,7 +238,7 @@ function eN(e) {
         s = n ?? r;
     return (
         i.useLayoutEffect(() => {
-            ey.Ay.setTrafficLightAppearance((0, f.M)(s) ? "dark" : "light", t);
+            ev.Ay.setTrafficLightAppearance((0, f.M)(s) ? "dark" : "light", t);
         }, [s, t]),
         null
     );
@@ -257,15 +257,15 @@ class eO extends i.Component {
             (0, ex.M)(e),
             e.addEventListener("blur", this.handleBlur),
             eA.isPlatformEmbedded
-                ? t.addEventListener("contextmenu", ev.contextMenuCallbackNative, !1)
-                : t.addEventListener("contextmenu", ev.contextMenuCallbackWeb, !1),
+                ? t.addEventListener("contextmenu", ey.contextMenuCallbackNative, !1)
+                : t.addEventListener("contextmenu", ey.contextMenuCallbackWeb, !1),
             e.addEventListener("beforeunload", this.beforeUnload),
             this.registerPopoutGlobalKeybinds());
     }
     beforeUnload = (e) => {
         let { onBeforeUnload: t } = this.props,
             n = () => {
-                (ew.A.unmountWindow(this.props.windowKey), eA.isPlatformEmbedded && ey.Ay.close(this.props.windowKey));
+                (ew.A.unmountWindow(this.props.windowKey), eA.isPlatformEmbedded && ev.Ay.close(this.props.windowKey));
             };
         null != t ? t({ e, unmountWindow: n }) : n();
     };
@@ -279,8 +279,8 @@ class eO extends i.Component {
         (this.unregisterPopoutGlobalKeybinds(),
             e.removeEventListener("blur", this.handleBlur),
             eA.isPlatformEmbedded
-                ? t.removeEventListener("contextmenu", ev.contextMenuCallbackNative)
-                : t.removeEventListener("contextmenu", ev.contextMenuCallbackWeb),
+                ? t.removeEventListener("contextmenu", ey.contextMenuCallbackNative)
+                : t.removeEventListener("contextmenu", ey.contextMenuCallbackWeb),
             (0, d.r)(() => p.useModalsStore.setState((e) => ({ ...e, [m.KX]: [] }))),
             e.removeEventListener("beforeunload", this.beforeUnload));
     }
@@ -363,7 +363,7 @@ class eO extends i.Component {
                                                                     className: eC.SW,
                                                                     children: [
                                                                         m &&
-                                                                            (0, r.jsx)(v.N, {
+                                                                            (0, r.jsx)(y.N, {
                                                                                 theme: f,
                                                                                 children: (e) =>
                                                                                     (0, r.jsx)(S.cq, {
@@ -377,7 +377,7 @@ class eO extends i.Component {
                                                                         }),
                                                                     ],
                                                                 }),
-                                                                !g && (0, r.jsx)(y.b, {}),
+                                                                !g && (0, r.jsx)(v.b, {}),
                                                                 (0, r.jsx)(E.A, {}),
                                                                 (0, r.jsx)(u.P, {}),
                                                                 (0, r.jsx)(M.C8, {}),

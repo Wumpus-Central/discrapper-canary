@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => O, IG: () => f, _1: () => I });
+n.d(t, { Ay: () => R, IG: () => f, _1: () => I });
 var i,
     r,
     a = n(17928),
@@ -23,6 +23,7 @@ let p = {
         lowContrastMode: !1,
         saturation: 1,
         contrast: 1,
+        minToastDurationMs: A.hH7.TOAST_DURATION_DEFAULT_MS,
         desaturateUserColors: !1,
         forcedColorsModalSeen: !1,
         keyboardNavigationExplainerModalSeen: !1,
@@ -51,17 +52,22 @@ let p = {
         youBarNameplateAnimation: "animate-never",
         youBarAvatarDecoAnimation: "animate-never",
     },
-    T = p,
-    m = {
-        12: "font-size-12",
-        14: "font-size-14",
-        15: "font-size-15",
-        16: "font-size-16",
-        18: "font-size-18",
-        20: "font-size-20",
-        24: "font-size-24",
-    };
-function g() {
+    T = p;
+function m(e) {
+    return Number.isFinite(e)
+        ? Math.min(Math.max(e, 1e3 * A.hH7.TOAST_DURATION_MIN_SECONDS), 1e3 * A.hH7.TOAST_DURATION_MAX_SECONDS)
+        : A.hH7.TOAST_DURATION_DEFAULT_MS;
+}
+let g = {
+    12: "font-size-12",
+    14: "font-size-14",
+    15: "font-size-15",
+    16: "font-size-16",
+    18: "font-size-18",
+    20: "font-size-20",
+    24: "font-size-24",
+};
+function S() {
     switch (T.prefersReducedMotion) {
         case "no-preference":
             return !1;
@@ -71,7 +77,7 @@ function g() {
             return "reduce" === T.systemPrefersReducedMotion;
     }
 }
-function S() {
+function N() {
     let e;
     return (
         !T.officialMessageStyleExplicitlySet &&
@@ -84,9 +90,9 @@ function S() {
         ((T.officialMessageStyle = "no_text_color"), !0)
     );
 }
-function N() {
+function C() {
     function e(e) {
-        return "animate-never" === e ? "animate-never" : g() ? "respect-motion-settings" : "animate-always";
+        return "animate-never" === e ? "animate-never" : S() ? "respect-motion-settings" : "animate-always";
     }
     T = {
         ...T,
@@ -94,7 +100,7 @@ function N() {
         youBarAvatarDecoAnimation: e(T.youBarAvatarDecoAnimation),
     };
 }
-class C extends a.Ay.DeviceSettingsStore {
+class O extends a.Ay.DeviceSettingsStore {
     static displayName = "AccessibilityStore";
     static persistKey = "AccessibilityStore";
     static migrations = [
@@ -168,9 +174,10 @@ class C extends a.Ay.DeviceSettingsStore {
     initialize(e) {
         (this.waitFor(_.A),
             isNaN((T = { ...p, ...(e ?? null) }).fontSize) && (T.fontSize = A.hH7.FONT_SIZE_DEFAULT),
+            (T.minToastDurationMs = m(T.minToastDurationMs)),
             0 > h.qh.indexOf(null != T.messageGroupSpacing ? T.messageGroupSpacing : -1) &&
                 (T.messageGroupSpacing = null),
-            this.syncWith([_.A, d.A], S));
+            this.syncWith([_.A, d.A], N));
         let t = !1;
         this.syncWith([o.A], () => {
             let e = o.A.isThrottling;
@@ -190,7 +197,7 @@ class C extends a.Ay.DeviceSettingsStore {
         return T.fontSize < A.hH7.FONT_SIZE_DEFAULT;
     }
     get fontScaleClass() {
-        let e = m[this.fontSize] ?? "";
+        let e = g[this.fontSize] ?? "";
         return this.isFontScaledUp
             ? `a11y-font-scaled-up ${e}`
             : this.isFontScaledDown
@@ -220,6 +227,9 @@ class C extends a.Ay.DeviceSettingsStore {
     }
     get contrast() {
         return T.contrast;
+    }
+    get minToastDurationMs() {
+        return T.minToastDurationMs;
     }
     get desaturateUserColors() {
         return T.desaturateUserColors;
@@ -254,7 +264,7 @@ class C extends a.Ay.DeviceSettingsStore {
         return T.prefersReducedMotion;
     }
     get prefersReducedMotion() {
-        return g();
+        return S();
     }
     get useReducedMotion() {
         return !!o.A.isThrottling || this.prefersReducedMotion;
@@ -343,7 +353,7 @@ class C extends a.Ay.DeviceSettingsStore {
         return T;
     }
 }
-let O = new C(l.h, {
+let R = new O(l.h, {
     ACCESSIBILITY_SET_FONT_SIZE: function (e) {
         var t;
         let n = ((t = e.fontSize), A.hH7.FONT_SIZES.indexOf(t) >= 0 ? t : A.hH7.FONT_SIZE_DEFAULT);
@@ -390,7 +400,7 @@ let O = new C(l.h, {
     },
     ACCESSIBILITY_SYSTEM_PREFERS_REDUCED_MOTION_CHANGED: function (e) {
         if (T.systemPrefersReducedMotion === e.systemPrefersReducedMotion) return !1;
-        ((T = { ...T, systemPrefersReducedMotion: e.systemPrefersReducedMotion }), N());
+        ((T = { ...T, systemPrefersReducedMotion: e.systemPrefersReducedMotion }), C());
     },
     ACCESSIBILITY_SYSTEM_PREFERS_CROSSFADES_CHANGED: function (e) {
         if (T.systemPrefersCrossfades === e.systemPrefersCrossfades) return !1;
@@ -398,7 +408,7 @@ let O = new C(l.h, {
     },
     ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION: function (e) {
         if (T.prefersReducedMotion === e.prefersReducedMotion) return !1;
-        ((T = { ...T, prefersReducedMotion: e.prefersReducedMotion }), N());
+        ((T = { ...T, prefersReducedMotion: e.prefersReducedMotion }), C());
     },
     ACCESSIBILITY_SET_SYNC_FORCED_COLORS: function (e) {
         T.syncForcedColors = e.syncForcedColors;
@@ -437,6 +447,9 @@ let O = new C(l.h, {
     ACCESSIBILITY_SET_CONTRAST: function (e) {
         let { contrast: t } = e;
         T = { ...T, contrast: t };
+    },
+    ACCESSIBILITY_SET_MIN_TOAST_DURATION: function (e) {
+        (T = { ...T }).minToastDurationMs = m(e.minToastDurationMs);
     },
     ACCESSIBILITY_SET_CONTRAST_MODE: function (e) {
         let { contrastMode: t } = e;

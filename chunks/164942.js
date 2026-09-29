@@ -56,14 +56,9 @@ var f = n(775602),
     T = n(71855),
     m = n(267102),
     g = n(652215);
-let S = ["Shift", "Alt", "Meta", "Control"],
-    N = (0, n(945810).mj)({
-        name: "2026-09-design-systems-notification-components",
-        kind: "user",
-        defaultConfig: { enabled: !1 },
-        variations: { 1: { enabled: !0 } },
-    });
-var C = n(534409),
+let S = ["Shift", "Alt", "Meta", "Control"];
+var N = n(973283),
+    C = n(534409),
     O = n(37537),
     R = n(750506),
     L = n(869146),
@@ -155,7 +150,7 @@ function x(e) {
         ee = (0, C.k5)("RootThemeContextProvider"),
         et = (0, C.lV)("RootThemeContextProvider"),
         en = (0, O.c)("RootThemeContextProvider"),
-        ei = N.useConfig({ location: "RootThemeContextProvider" }).enabled,
+        ei = (0, N.D)("RootThemeContextProvider"),
         er = (0, T.m2)({ isPopoutWindow: l }),
         ea = (function (e) {
             let { theme: t, saturation: n, enabledExperiments: i, focused: r, mainWindowVisible: l, locale: o } = e,

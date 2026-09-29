@@ -3755,6 +3755,10 @@ let rv = Object.freeze({
     ZOOM_MIN: 50,
     ZOOM_MAX: 200,
     ZOOM_SCALES: [50, 67, 75, 80, 90, 100, 110, 125, 150, 175, 200],
+    TOAST_DURATION_DEFAULT_MS: 3e3,
+    TOAST_DURATION_MIN_SECONDS: 3,
+    TOAST_DURATION_MAX_SECONDS: 20,
+    TOAST_DURATION_SECOND_INCREMENTS: [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
 });
 var rb =
         (((eU = {}).OVERLAY_UNLOCKED = "overlay_unlocked"),
