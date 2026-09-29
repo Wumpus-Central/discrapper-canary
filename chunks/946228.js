@@ -174,13 +174,14 @@ let ew = eL.Ay.getEnableHardwareAcceleration(),
                 isMobileOnline: y,
                 isVROnline: S,
                 premiumSince: v,
-                nameplate: N,
-                ..._
+                nameplate: _,
+                ...j
             } = e,
-            j = i.useRef(null),
-            [b, T] = i.useState(!1),
-            R = null != v ? new Date(v) : null,
-            O = i.useCallback(
+            b = i.useRef(null),
+            [T, R] = i.useState(!1),
+            O = null != v ? new Date(v) : null,
+            { analyticsLocations: M } = (0, N.Ay)(),
+            L = i.useCallback(
                 (e) => {
                     (0, A.L3)(e, async () => {
                         let { default: e } = await Promise.all([
@@ -190,8 +191,6 @@ let ew = eL.Ay.getEnableHardwareAcceleration(),
                                 n.e("216947"),
                                 n.e("463317"),
                                 n.e("326692"),
-                                n.e("926132"),
-                                n.e("146652"),
                                 n.e("834552"),
                                 n.e("708757"),
                                 n.e("993103"),
@@ -254,19 +253,27 @@ let ew = eL.Ay.getEnableHardwareAcceleration(),
                                 n.e("184841"),
                             ]).then(n.bind(n, 107632)),
                             t = eT.A.isInChannel(e_.Ay.getVoiceChannelId(), c.id);
-                        return (n) => (0, l.jsx)(e, { ...n, user: c, guildId: x, channel: g, showMediaItems: t });
+                        return (n) =>
+                            (0, l.jsx)(e, {
+                                ...n,
+                                user: c,
+                                guildId: x,
+                                channel: g,
+                                showMediaItems: t,
+                                analyticsLocations: M,
+                            });
                     });
                 },
-                [c, x, g],
+                [c, x, g, M],
             ),
-            M = i.useCallback(() => {
+            k = i.useCallback(() => {
                 let e = `@${eM.Ay.getUserTag(c, { decoration: "never" })}`,
                     t = `<@${c.id}>`;
                 (eR._.dispatch(V.jej.TEXTAREA_FOCUS, { channelId: g.id }),
                     eR._.dispatchToLastSubscribed(V.jej.INSERT_TEXT, { plainText: e, rawText: t }),
                     E.A.startTyping(g.id));
             }, [c, g.id]),
-            L = i.useCallback(
+            w = i.useCallback(
                 (e) => {
                     null != x &&
                         (e.stopPropagation(),
@@ -278,24 +285,24 @@ let ew = eL.Ay.getEnableHardwareAcceleration(),
                 [x],
             );
         return (0, l.jsx)(ey.A, {
-            targetElementRef: j,
+            targetElementRef: b,
             user: c,
             guildId: x,
             channelId: g.id,
             roleId: a,
             position: d.Fr ? "window_center" : "left",
             spacing: 16,
-            onShiftClick: M,
-            shouldShow: b,
+            onShiftClick: k,
+            shouldShow: T,
             onRequestClose: () => {
-                T(!1);
+                R(!1);
             },
             children: (e) => {
                 let { onClick: n, onMouseDown: i, ...a } = e;
                 return (0, l.jsx)(I.A, {
-                    ref: j,
+                    ref: b,
                     className: H.Dc,
-                    onContextMenu: O,
+                    onContextMenu: L,
                     shouldAnimateStatus: ew,
                     user: c,
                     currentUser: h,
@@ -304,7 +311,7 @@ let ew = eL.Ay.getEnableHardwareAcceleration(),
                     activities: m,
                     applicationStream: f,
                     isOwner: o,
-                    premiumSince: R,
+                    premiumSince: O,
                     colorString: t,
                     colorStrings: s,
                     colorRoleName: r,
@@ -313,15 +320,15 @@ let ew = eL.Ay.getEnableHardwareAcceleration(),
                     guildId: x,
                     isMobile: y,
                     isVR: S,
-                    onClickPremiumGuildIcon: L,
-                    selected: b,
-                    itemProps: _,
-                    nameplate: N,
+                    onClickPremiumGuildIcon: w,
+                    selected: T,
+                    itemProps: j,
+                    nameplate: _,
                     onClick: (e) => {
-                        e.shiftKey ? M?.() : T((e) => !e);
+                        e.shiftKey ? k?.() : R((e) => !e);
                     },
                     onMouseDown: (e) => {
-                        b ? e.stopPropagation() : i?.(e);
+                        T ? e.stopPropagation() : i?.(e);
                     },
                     ...a,
                 });

@@ -130,8 +130,6 @@ let ev = l.memo(function (e) {
                 (0, es.L3)(e, async () => {
                     let { default: e } = await Promise.all([
                         n.e("463317"),
-                        n.e("926132"),
-                        n.e("146652"),
                         n.e("893190"),
                         n.e("189673"),
                         n.e("229787"),
@@ -455,7 +453,7 @@ function e3(e) {
         ],
     });
 }
-function e6(e) {
+function e7(e) {
     let { className: t, numRequestToSpeak: n } = e,
         l = n > 0;
     return (0, i.jsxs)("div", {
@@ -466,7 +464,7 @@ function e6(e) {
         ],
     });
 }
-function e7(e) {
+function e6(e) {
     let {
             toggleRequestToSpeakSidebar: t,
             showRequestToSpeakSidebar: n,
@@ -482,7 +480,7 @@ function e7(e) {
         onClick: c,
         label: n ? eg.intl.string(eg.t.gKGz7A) : eg.intl.string(eg.t.ImQ4dW),
         className: s,
-        iconComponent: () => (0, i.jsx)(e6, { numRequestToSpeak: a, className: s }),
+        iconComponent: () => (0, i.jsx)(e7, { numRequestToSpeak: a, className: s }),
         ...o,
     });
 }
@@ -513,7 +511,7 @@ function ti(e) {
             !l && d
                 ? (0, i.jsx)("div", {
                       className: a()(tn.x6, { [tn.vc]: c }),
-                      children: (0, i.jsx)(e7, {
+                      children: (0, i.jsx)(e6, {
                           toggleRequestToSpeakSidebar: function () {
                               (c && A.A.updateChatOpen(t.id, !1), (0, S.X)(r, S.O.OPEN_REQUEST_TO_SPEAK_SIDEBAR), n());
                           },
@@ -809,8 +807,6 @@ let tN = l.memo(function (e) {
                     async () => {
                         let { default: e } = await Promise.all([
                             n.e("463317"),
-                            n.e("926132"),
-                            n.e("146652"),
                             n.e("893190"),
                             n.e("189673"),
                             n.e("229787"),
@@ -1110,8 +1106,6 @@ let tX = l.memo(function (e) {
                         async () => {
                             let { default: e } = await Promise.all([
                                 n.e("463317"),
-                                n.e("926132"),
-                                n.e("146652"),
                                 n.e("893190"),
                                 n.e("189673"),
                                 n.e("229787"),
@@ -1209,8 +1203,6 @@ function t3(e) {
             async () => {
                 let { default: e } = await Promise.all([
                     n.e("463317"),
-                    n.e("926132"),
-                    n.e("146652"),
                     n.e("893190"),
                     n.e("189673"),
                     n.e("229787"),
@@ -1278,7 +1270,7 @@ function t3(e) {
             }),
     });
 }
-function t6(e) {
+function t7(e) {
     let { speakers: t, channel: n } = e;
     return (0, i.jsx)(t2.A, {
         className: t4.z,
@@ -1289,7 +1281,7 @@ function t6(e) {
         renderMoreUsers: (e, t, n) => (0, i.jsx)("div", { className: a()(t4.$U, t), children: e }, n),
     });
 }
-var t7 = n(784269);
+var t6 = n(784269);
 let t8 = l.memo(function (e) {
     let {
         label: t,
@@ -1303,21 +1295,21 @@ let t8 = l.memo(function (e) {
     } = e;
     return (0, i.jsxs)(X.D, {
         onClick: l,
-        className: a()(t7.kL, s),
+        className: a()(t6.kL, s),
         children: [
             null == o
-                ? (0, i.jsx)(eW.n, { size: "custom", color: "currentColor", width: 20, height: 20, className: t7.Vo })
+                ? (0, i.jsx)(eW.n, { size: "custom", color: "currentColor", width: 20, height: 20, className: t6.Vo })
                 : (0, i.jsx)(eY.MicrophoneIcon, {
                       size: "custom",
                       color: "currentColor",
                       width: 20,
                       height: 20,
-                      className: t7.Vo,
+                      className: t6.Vo,
                   }),
             (0, i.jsxs)(J.E, {
                 color: "text-strong",
                 variant: "text-md/semibold",
-                className: t7.Qq,
+                className: t6.Qq,
                 children: [t, " \u2014 ", n],
             }),
             r &&
@@ -1325,14 +1317,14 @@ let t8 = l.memo(function (e) {
                 null != o &&
                 o.length > 0 &&
                 (0, i.jsxs)(i.Fragment, {
-                    children: [(0, i.jsx)(t6, { channel: c, speakers: o }), d && (0, i.jsx)(t0.Ay, {})],
+                    children: [(0, i.jsx)(t7, { channel: c, speakers: o }), d && (0, i.jsx)(t0.Ay, {})],
                 }),
             (0, i.jsx)(tJ.a, {
                 size: "custom",
                 color: "currentColor",
                 width: 20,
                 height: 20,
-                className: a()(t7.mw, { [t7.VU]: r }),
+                className: a()(t6.mw, { [t6.VU]: r }),
             }),
         ],
     });
@@ -2018,10 +2010,10 @@ function n5(e) {
 }
 var n4 = n(104171),
     n3 = n(81466),
-    n6 = n(823508);
-function n7(e) {
+    n7 = n(823508);
+function n6(e) {
     let { className: t, guildId: l } = e,
-        s = (0, n6.A)();
+        s = (0, n7.A)();
     return (0, i.jsx)(nT.A, {
         className: t,
         icon: (0, i.jsx)(n3.CalendarIcon, { size: "custom", color: "currentColor", height: 20, width: 20 }),
@@ -2157,7 +2149,7 @@ function ii(e) {
                     }),
                     d ? null : (0, i.jsx)(nj.A, { channelId: t.id, showDismiss: !1 }),
                     s ? (0, i.jsx)(n_, { className: n8.fN, channel: t }) : null,
-                    c ? (0, i.jsx)(n7, { className: n8.fN, guildId: r }) : null,
+                    c ? (0, i.jsx)(n6, { className: n8.fN, guildId: r }) : null,
                     s ? (0, i.jsx)(ie, { className: a()({ [n8.fN]: !0 }), onClick: n }) : null,
                     (0, i.jsx)(it, { channel: t }),
                 ],
