@@ -47,7 +47,7 @@ function T(e) {
             return (0, i.jsxs)(i.Fragment, {
                 children: [
                     null != d && (0, i.jsx)(I, { graphic: d, size: n }),
-                    (0, i.jsx)(A.E, { color: "none", variant: r[n], children: t }),
+                    (0, i.jsx)(A.E, { color: "none", variant: r[n], className: p.v6, children: t }),
                     s &&
                         (0, i.jsx)(u.$, {
                             slot: "remove",

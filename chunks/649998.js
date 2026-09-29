@@ -231,6 +231,7 @@ function C(e) {
                 return (0, i.jsx)("div", {
                     onBlur: G,
                     onFocus: x,
+                    onMouseDown: -1 === a ? (e) => e.preventDefault() : void 0,
                     "aria-busy": w,
                     ref: n,
                     onKeyDown: (e) => {

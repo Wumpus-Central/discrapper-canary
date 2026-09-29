@@ -29,7 +29,7 @@ function O(e) {
             autoFocus: I,
             clearable: f,
             fullWidth: O,
-            closeOnSelect: L = !0,
+            closeOnSelect: L,
             shouldFocusWrap: y,
             placeholder: D = t.SELECT_PLACEHOLDER,
             name: v,

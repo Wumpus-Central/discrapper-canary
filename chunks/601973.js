@@ -50,6 +50,7 @@ function E(e) {
     return t
         ? (0, i.jsx)(s.vN, {
               children: (0, i.jsx)("button", {
+                  type: "button",
                   className: u.mt,
                   "aria-label": a.CLEAR_SELECTION,
                   onClick: r,
@@ -62,6 +63,7 @@ function A(e) {
     let { show: t, isOpen: n, onClick: r } = e;
     return t
         ? (0, i.jsx)("button", {
+              type: "button",
               "aria-hidden": !0,
               tabIndex: -1,
               className: u.E1,

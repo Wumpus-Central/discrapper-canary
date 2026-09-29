@@ -112,6 +112,9 @@ function v(e) {
         L || ("single" === u && k(H.current?.label ?? "", ""));
     }, [k, j, u, L]),
         r.useEffect(() => {
+            n && !s && "multiple" === u && k("", "");
+        }, [n, s, u, k]),
+        r.useEffect(() => {
             if (s && null != H.current) {
                 let e = B.findIndex((e) => e.value === H.current?.value);
                 R(-1 !== e ? e : null);
@@ -127,11 +130,11 @@ function v(e) {
                     : "multiple" === u
                       ? I(t.map((e) => e.value))
                       : I(t[0]?.value),
-                    "multiple" === u && k("", ""),
+                    "multiple" !== u || n || k("", ""),
                     A && s && o?.(!1),
                     y(!1));
             },
-            [W, u, I, A, s, o, m, k],
+            [W, u, n, I, A, s, o, m, k],
         ),
         K = j.length > 0;
     return (0, i.jsx)(N.Provider, {
