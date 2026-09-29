@@ -1,86 +1,71 @@
-(i.d(e, { default: () => b }), i(321073));
+i.d(e, { default: () => h });
 var n = i(477900),
-    r = i(582128),
-    s = i(132500),
-    l = i(772707),
-    o = i(331322),
-    a = i(512950),
-    d = i(834730),
-    c = i(632738),
+    s = i(582128),
+    l = i(132500),
+    r = i(772707),
+    a = i(331322),
+    o = i(512950),
+    c = i(834730),
+    d = i(632738),
     u = i(975571),
-    E = i(379257),
-    p = i(306537),
+    p = i(379257),
+    m = i(306537),
     R = i(36149),
-    g = i(737567),
-    m = i(652215),
-    _ = i(239093),
-    x = i(375708),
-    A = i(227746),
+    E = i(652215),
+    g = i(375708),
+    x = i(227746),
     T = i(700129);
-let b = function (t) {
-    let { transitionState: e, entryPoint: i, onClose: b } = t,
-        { loading: h, initiateAgeVerification: L } = (0, R.nn)({ onComplete: b, entryPoint: p.q1.RETRY_MODAL }),
-        k = r.useMemo(() => (0, s.A)(), []),
-        U = (0, g.I)("age_verification_retry_modal"),
-        f = x.intl.string(x.t.JSdbBe),
-        M = x.intl.string(x.t.JNK1ue),
-        N = x.intl.string(x.t.mFvt9M);
-    r.useEffect(() => {
-        (0, p.Bs)(k, p.WU.RETRY, i);
-    }, [k, i]);
-    let S = r.useMemo(() => {
-        let t = [
+let h = function (t) {
+    let { transitionState: e, entryPoint: i, onClose: h } = t,
+        { loading: b, initiateAgeVerification: k } = (0, R.nn)({ onComplete: h, entryPoint: m.q1.RETRY_MODAL }),
+        A = s.useMemo(() => (0, l.A)(), []),
+        _ = g.intl.string(g.t.JSdbBe),
+        f = g.intl.string(g.t.JNK1ue),
+        M = g.intl.string(g.t.mFvt9M);
+    s.useEffect(() => {
+        (0, m.Bs)(A, m.WU.RETRY, i);
+    }, [A, i]);
+    let C = s.useMemo(
+        () => [
             {
-                title: x.intl.string(x.t.FYkioq),
-                description: x.intl.string(x.t.xMfbRz),
-                buttonText: N,
-                buttonLoading: h,
+                title: g.intl.string(g.t.FYkioq),
+                description: g.intl.string(g.t.xMfbRz),
+                buttonText: M,
+                buttonLoading: b,
                 onButtonPress: () => {
-                    (L(), (0, p.St)(k, p.WU.RETRY, p._7.GET_STARTED));
+                    (k(), (0, m.St)(A, m.WU.RETRY, m._7.GET_STARTED));
                 },
             },
-        ];
-        return (
-            U ||
-                t.push({
-                    title: x.intl.string(x.t["LZO+Hd"]),
-                    description: x.intl.string(x.t.N2mHaK),
-                    buttonText: x.intl.string(x.t["LZO+Hd"]),
-                    buttonLoading: h,
-                    onButtonPress: () => {
-                        (E.A.openUrl(_.d$.APPEALS_LINK), (0, p.St)(k, p.WU.RETRY, p._7.MANUAL_REVIEW_REQUEST));
-                    },
-                }),
-            t
-        );
-    }, [L, k, h, U, N]);
-    return (0, n.jsx)(l.k, {
+        ],
+        [k, A, b, M],
+    );
+    return (0, n.jsx)(r.k, {
         transitionState: e,
-        onClose: b,
+        onClose: h,
         gradientColor: "blue",
         graphic: { src: T.A, type: "image" },
-        title: f,
-        subtitle: M,
-        children: (0, n.jsxs)(o.B, {
+        title: _,
+        subtitle: f,
+        children: (0, n.jsxs)(a.B, {
             direction: "vertical",
             gap: 16,
             children: [
-                (0, n.jsx)(a.p, {
-                    messageType: a.Y.INFO,
-                    className: A.e,
+                (0, n.jsx)(o.p, {
+                    messageType: o.Y.INFO,
+                    className: x.e,
                     textColor: "text-feedback-info",
                     textVariant: "text-sm/medium",
-                    children: x.intl.string(x.t.El4aXl),
+                    children: g.intl.string(g.t.El4aXl),
                 }),
-                S.map((t, e) => (0, n.jsx)(c.PQ, { variant: "clickable", ...t }, e)),
-                (0, n.jsx)(d.E, {
+                C.map((t, e) => (0, n.jsx)(d.PQ, { variant: "clickable", ...t }, e)),
+                (0, n.jsx)(c.E, {
                     variant: "text-xs/medium",
                     color: "text-muted",
-                    className: A.Z,
-                    children: x.intl.format(x.t["L+FgkZ"], {
+                    className: x.Z,
+                    children: g.intl.format(g.t["L+FgkZ"], {
                         handleOnHelpUrlHook: () => {
-                            (E.A.openUrl(u.A.getArticleURL(m.MVz.TIGGER_PAWTECT_LEARN_MORE)),
-                                (0, p.St)(k, p.WU.RETRY, p._7.LEARN_MORE));
+                            (p.A.openUrl(u.A.getArticleURL(E.MVz.TIGGER_PAWTECT_LEARN_MORE)),
+                                (0, m.St)(A, m.WU.RETRY, m._7.LEARN_MORE));
                         },
                     }),
                 }),

@@ -1,73 +1,55 @@
-n.d(e, { default: () => h });
+n.d(e, { default: () => M });
 var i = n(477900),
     s = n(582128),
     o = n(132500),
-    a = n(189213),
-    r = n(509434),
-    l = n(834730),
-    c = n(95035),
-    A = n(632738),
-    d = n(975571),
-    R = n(379257),
-    u = n(306537),
-    _ = n(36149),
-    p = n(737567),
-    E = n(40449),
-    m = n(652215),
-    x = n(239093),
-    I = n(375708),
-    M = n(381944);
-let h = function (t) {
-    let { transitionState: e, entryPoint: n, onClose: h } = t,
-        { loading: P, initiateAgeVerification: S } = (0, _.nn)({ onComplete: h, entryPoint: n }),
-        T = s.useMemo(() => (0, o.A)(), []),
-        U = (0, p.I)("age_verification_get_started_modal");
+    r = n(189213),
+    c = n(509434),
+    l = n(95035),
+    a = n(632738),
+    u = n(975571),
+    A = n(379257),
+    p = n(306537),
+    R = n(36149),
+    d = n(40449),
+    E = n(652215),
+    _ = n(375708),
+    C = n(381944);
+let M = function (t) {
+    let { transitionState: e, entryPoint: n, onClose: M } = t,
+        { loading: T, initiateAgeVerification: h } = (0, R.nn)({ onComplete: M, entryPoint: n }),
+        k = s.useMemo(() => (0, o.A)(), []);
     return (
         s.useEffect(() => {
-            (0, u.Bs)(T, u.WU.PRIMARY, n);
-        }, [T, n]),
-        (0, i.jsxs)(a.a, {
+            (0, p.Bs)(k, p.WU.PRIMARY, n);
+        }, [k, n]),
+        (0, i.jsx)(r.a, {
             transitionState: e,
-            onClose: h,
-            title: (0, _.ST)(n),
-            subtitle: (0, _.mK)(n),
+            onClose: M,
+            title: (0, R.ST)(n),
+            subtitle: (0, R.mK)(n),
             actions: [
                 {
-                    text: I.intl.string(I.t.SJMnkX),
-                    loading: P,
-                    icon: r.I,
+                    text: _.intl.string(_.t.SJMnkX),
+                    loading: T,
+                    icon: c.I,
                     iconPosition: "end",
                     onClick: async () => {
-                        ((0, u.St)(T, u.WU.PRIMARY, u._7.GET_STARTED), await S());
+                        ((0, p.St)(k, p.WU.PRIMARY, p._7.GET_STARTED), await h());
                     },
                 },
             ],
-            actionBarInput: (0, i.jsxs)(c.A, {
+            actionBarInput: (0, i.jsxs)(l.A, {
                 onClick: () => {
-                    (R.A.openUrl(d.A.getArticleURL(m.MVz.TIGGER_PAWTECT_LEARN_MORE)),
-                        (0, u.St)(T, u.WU.PRIMARY, u._7.LEARN_MORE));
+                    (A.A.openUrl(u.A.getArticleURL(E.MVz.TIGGER_PAWTECT_LEARN_MORE)),
+                        (0, p.St)(k, p.WU.PRIMARY, p._7.LEARN_MORE));
                 },
-                className: M.A,
-                children: [I.intl.string(I.t["aA6q/z"]), (0, i.jsx)(r.I, { size: "xs", color: "currentColor" })],
+                className: C.A,
+                children: [_.intl.string(_.t["aA6q/z"]), (0, i.jsx)(c.I, { size: "xs", color: "currentColor" })],
             }),
-            children: [
-                (0, E.f6)(T).map((t, e) => {
-                    let { title: n, description: s } = t;
-                    return (0, i.jsx)(A.PQ, { title: n, description: s, listType: "numbered", index: e }, e);
-                }),
-                !U &&
-                    (0, i.jsx)(l.E, {
-                        variant: "text-xs/medium",
-                        color: "text-muted",
-                        className: M.B,
-                        children: I.intl.format(I.t.pJAxgQ, {
-                            handleOnRequestHook: () => {
-                                (R.A.openUrl(x.d$.APPEALS_LINK),
-                                    (0, u.St)(T, u.WU.PRIMARY, u._7.MANUAL_REVIEW_REQUEST));
-                            },
-                        }),
-                    }),
-            ],
+            children: (0, d.f6)(k).map((t, e) => {
+                let { title: n, description: s } = t;
+                return (0, i.jsx)(a.PQ, { title: n, description: s, listType: "numbered", index: e }, e);
+            }),
         })
     );
 };

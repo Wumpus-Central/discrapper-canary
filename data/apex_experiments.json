@@ -341,22 +341,6 @@
     }
   },
   {
-    "kind": "user",
-    "name": "2025-11-hide-manual-link",
-    "defaultConfig": {
-      "isHidden": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "isHidden": true
-      }
-    }
-  },
-  {
     "name": "2025-11-mana-context-menu",
     "kind": "user",
     "defaultConfig": {
