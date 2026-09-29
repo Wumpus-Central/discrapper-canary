@@ -17,8 +17,8 @@ var n = r(477900),
     h = r(617986),
     I = r(773669),
     S = r(318346),
-    L = r(287809),
-    A = r(174459),
+    A = r(287809),
+    L = r(174459),
     x = r(440938),
     v = r(993408),
     f = r(304210),
@@ -54,8 +54,8 @@ let M = {
                 tab: F,
                 onVisibilityChange: K,
                 badge: V,
-                hideButton: X = !1,
-                hideCards: W = !1,
+                hideButton: W = !1,
+                hideCards: X = !1,
             } = e,
             z = (0, i.K)(
                 (e) => {
@@ -66,7 +66,7 @@ let M = {
             ),
             Y = l.useRef(null),
             Z = (0, B.yB)("HeroBlock"),
-            $ = (0, c.bG)([L.default], () => L.default.getCurrentUser()),
+            $ = (0, c.bG)([A.default], () => A.default.getCurrentUser()),
             q = (0, c.bG)([I.default], () => I.default.locale),
             J = (0, x.uM)(),
             { analyticsLocations: Q } = (0, p.Ay)(C.A.COLLECTIBLES_SHOP_HERO),
@@ -93,10 +93,10 @@ let M = {
                             },
                 [U, s],
             ),
-            er = l.useMemo(() => (0, O.HF)(ee, et), [ee, et]),
-            en = null != er,
-            el = null != er && ee?.endsAt != null && null == (0, k.X)(ee.endsAt) && F === w.G2.COLLECTION_INDEX,
-            es = l.useMemo(() => (null == ee ? et : (0, O.O8)(ee, et, F, q)), [ee, et, F, q]),
+            er = null != l.useMemo(() => (0, O.HF)(ee, et), [ee, et]),
+            en = er && ee?.endsAt != null && null == (0, k.X)(ee.endsAt) && F === w.G2.HOME,
+            el = er && !en,
+            es = l.useMemo(() => (null == ee || en ? et : (0, O.O8)(ee, et, F, q)), [ee, et, en, F, q]),
             {
                 bannerDisplayConfig: ea,
                 logoDisplayConfig: ei,
@@ -107,7 +107,7 @@ let M = {
             } = (0, T.Kk)(es),
             eg = ea?.responsive ?? !1,
             em = ea?.backgroundStyle,
-            eE = null != ed && !en,
+            eE = null != ed && !el,
             e_ = F === w.G2.ORBS,
             eC = null != s && s.isOrbsExclusive,
             ep = F === w.G2.COLLECTION_INDEX ? R.S.COLLECTION_INDEX : R.S.HOME,
@@ -126,7 +126,7 @@ let M = {
                       isInternalShopDeeplink: !0,
                       isOrbsExclusive: eC,
                   }),
-                  A.default.track(D.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                  L.default.track(D.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                       collectibles_shop_session_id: J?.sessionId,
                       sku_id: es.categorySkuId,
                       page_type: F,
@@ -137,7 +137,7 @@ let M = {
         }
         if (null == $ || (!t && es === M)) return null;
         function eS() {
-            return t || X ? null : (0, n.jsx)(_.$, { variant: "overlay-primary", onClick: eI, text: eh });
+            return t || W ? null : (0, n.jsx)(_.$, { variant: "overlay-primary", onClick: eI, text: eh });
         }
         return (0, n.jsx)(p.f5, {
             value: Q,
@@ -160,12 +160,12 @@ let M = {
                             }),
                     }),
                     (0, n.jsxs)("div", {
-                        className: a()(H.xX, { [H.ub]: en && F === w.G2.COLLECTION_INDEX }),
+                        className: a()(H.xX, { [H.ub]: el && F === w.G2.COLLECTION_INDEX }),
                         children: [
                             eE
                                 ? (0, n.jsx)("div", { className: H.fy, children: eS() })
                                 : (0, n.jsxs)("div", {
-                                      className: a()(H.bC, { [H.no]: eg, [H.RD]: en && F === w.G2.COLLECTION_INDEX }),
+                                      className: a()(H.bC, { [H.no]: eg, [H.RD]: el && F === w.G2.COLLECTION_INDEX }),
                                       children: [
                                           t
                                               ? (0, n.jsx)("div", { className: H.Hw })
@@ -190,28 +190,26 @@ let M = {
                                                                         alt: es.name,
                                                                         style: ei?.toDesktopStyles(),
                                                                     }),
-                                                                !el &&
-                                                                    null != es.title &&
+                                                                null != es.title &&
                                                                     (0, n.jsx)(g.D, {
                                                                         variant: "heading-xxl/bold",
                                                                         className: e_ ? H.DD : void 0,
                                                                         color: "text-strong",
                                                                         children: es.title,
                                                                     }),
-                                                                !el &&
-                                                                    null != es.summary &&
+                                                                null != es.summary &&
                                                                     "" !== es.summary &&
                                                                     (0, n.jsx)(m.B, {
                                                                         onClick:
-                                                                            null != ee && en
+                                                                            null != ee && el
                                                                                 ? (e) => (0, y.h)(e, ee, ep)
                                                                                 : void 0,
                                                                         children: (0, n.jsx)(E.E, {
-                                                                            variant: en
+                                                                            variant: el
                                                                                 ? "text-sm/normal"
                                                                                 : "text-md/normal",
                                                                             className: a()(e_ ? H.h4 : H.Tm, {
-                                                                                [H.vd]: en,
+                                                                                [H.vd]: el,
                                                                             }),
                                                                             style: {
                                                                                 color: es.bannerTextColor ?? void 0,
@@ -222,7 +220,7 @@ let M = {
                                                             ],
                                                         }),
                                                         null != ee &&
-                                                            en &&
+                                                            el &&
                                                             F === w.G2.COLLECTION_INDEX &&
                                                             (0, n.jsx)("div", {
                                                                 className: H.Zz,
@@ -234,10 +232,10 @@ let M = {
                                                             }),
                                                     ],
                                                 }),
-                                          !X && !t && (0, n.jsx)("div", { className: H.IS, children: eS() }),
+                                          !W && !t && (0, n.jsx)("div", { className: H.IS, children: eS() }),
                                       ],
                                   }),
-                            !W &&
+                            !X &&
                                 (0, n.jsx)(P.A, {
                                     heroBlockRecord: es,
                                     tab: F,
@@ -246,10 +244,6 @@ let M = {
                                 }),
                         ],
                     }),
-                    null != ee &&
-                        null != er &&
-                        !en &&
-                        (0, n.jsx)(N.A, { collectionId: es.categorySkuId, variant: "full", surface: ep }),
                 ],
             }),
         });
