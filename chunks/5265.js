@@ -1481,7 +1481,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e8 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new e$.A().log(
-    `[BUILD INFO] Release Channel: ${e8}, Build Number: 624336, Version Hash: e76c154731e2919fea80996a863213605d65551b`,
+    `[BUILD INFO] Release Channel: ${e8}, Build Number: 624340, Version Hash: bcea99e3fe3c005304467a92c245898bc8b6277d`,
 ),
     w.A.setTags({ appContext: H.QCW }),
     eg.A.initBasic(),
@@ -21845,7 +21845,7 @@ let Cn = "isHideDevBanner",
                     className: tu()(Ct.Wz, Ct.mr),
                     children: [
                         (0, b.jsx)(Ce, { className: Ct.Kk }),
-                        tO.intl.format(tO.t.uyrfYF, { buildNumber: "624336" }),
+                        tO.intl.format(tO.t.uyrfYF, { buildNumber: "624340" }),
                         (0, b.jsx)(r, {}),
                     ],
                 })
@@ -49484,7 +49484,7 @@ function Bg() {
     );
 }
 var BS = n(639735),
-    BN = n(164942);
+    BN = n(75483);
 let BC = function () {
     let e = (0, e_.bG)([ex.Ay], () => ex.Ay.isInteractionRequired(), []),
         t = eI.useRef(null);
