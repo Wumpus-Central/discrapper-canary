@@ -2551,7 +2551,7 @@ let n2 = function (e) {
     ((0, f.HU)({ location: es.intl.string(es.t.pWG4ze) }), (0, N.uS)(n, V, F, Y, z), (0, N.N0)(V, s));
     let { dismissShopButtonDC: W } = (0, n4.A)();
     (r.useEffect(() => {
-        W();
+        W(e6.i.AUTO_DISMISS);
     }, [W]),
         r.useEffect(() => {
             (0, h.I)(e5.BVt.COLLECTIBLES_SHOP);
