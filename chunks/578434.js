@@ -20,55 +20,55 @@ var l = n(477900),
 function S(e) {
     var t, S;
     let I,
+        j,
         y,
         _,
-        j,
-        b,
         v,
+        b,
         N,
         T,
         { channel: M, children: R } = e,
         D = (0, s.bG)([A.A], () => A.A.isBlocked(M.getRecipientId()));
     ((S = t = M.id),
         (I = (0, s.bG)([m.A], () => m.A.getLastMessage(S))),
-        (y = I?.changelogId),
-        (_ = (0, s.bG)([c.default], () => c.default.locale)),
-        (j = (0, s.bG)([h.A], () => h.A.getChangelog(y ?? "", _), [y, _])),
-        (b = (0, g.A)(t)),
-        (v = i.useRef(b ? Date.now() : null)),
+        (j = I?.changelogId),
+        (y = (0, s.bG)([c.default], () => c.default.locale)),
+        (_ = (0, s.bG)([h.A], () => h.A.getChangelog(j ?? "", y), [j, y])),
+        (v = (0, g.A)(t)),
+        (b = i.useRef(v ? Date.now() : null)),
         (N = (0, s.bG)([d.Ay], () => d.Ay.getUnreadCount(t), [t])),
         (T = i.useRef(N)),
         i.useEffect(() => {
             T.current = N;
         }),
         i.useEffect(() => {
-            v.current = Date.now();
-        }, [b]),
+            b.current = Date.now();
+        }, [v]),
         i.useEffect(() => {
-            b && null != y && o.A.fetchChangelog(y, _, !0);
-        }, [y, _, b]),
+            v && null != j && o.A.fetchChangelog(j, y, !0);
+        }, [j, y, v]),
         i.useEffect(() => {
-            b &&
-                null != j &&
+            v &&
+                null != _ &&
                 u.default.track(p.HAw.CHANGE_LOG_OPENED, {
-                    change_log_id: `${j.date}:${j.revision}`,
+                    change_log_id: `${_.date}:${_.revision}`,
                     unread_count: T.current,
                 });
-        }, [b, j]),
+        }, [v, _]),
         i.useEffect(() => {
-            let e = v.current;
+            let e = b.current;
             return () => {
-                b &&
-                    null != j &&
+                v &&
+                    null != _ &&
                     null != e &&
                     (u.default.track(p.HAw.CHANGE_LOG_CLOSED, {
                         seconds_open: Math.round((Date.now() - e) / 1e3),
-                        change_log_id: `${j.date}:${j.revision}`,
+                        change_log_id: `${_.date}:${_.revision}`,
                         unread_count: T.current,
                     }),
-                    (v.current = 0));
+                    (b.current = 0));
             };
-        }, [b, j]));
+        }, [v, _]));
     let L = (0, g.A)(M.id),
         k = M.isSystemDM(),
         P = D && !k && !M.isMultiUserDM(),

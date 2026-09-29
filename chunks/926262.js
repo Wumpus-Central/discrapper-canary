@@ -15,33 +15,33 @@ var l = n(477900),
     A = n(548426),
     f = n(165648);
 function C(e) {
-    let { onClose: t, onConfirm: C, onCancel: x, channel: E, analyticsType: S, popoutText: I, animation: y } = e;
+    let { onClose: t, onConfirm: C, onCancel: x, channel: E, analyticsType: S, popoutText: I, animation: j } = e;
     i.useEffect(() => {
         m.default.track(g.HAw.OPEN_POPOUT, { type: S, ...(0, u.dI)(E) });
     }, [S, E]);
-    let _ = i.useCallback(() => {
+    let y = i.useCallback(() => {
             (C?.(), t());
         }, [C, t]),
-        j = i.useCallback(() => {
+        _ = i.useCallback(() => {
             (x?.(), t());
         }, [x, t]),
-        b = i.useRef(null);
+        v = i.useRef(null);
     return (
         i.useEffect(() => {
             let e,
                 t = h.A.theme,
                 l = !1;
             return (
-                null != y &&
+                null != j &&
                     (async () => {
                         let [{ default: i }, s] = await Promise.all([
                             n.e("996382").then(n.t.bind(n, 883885, 23)),
-                            (0, a.M)(t) ? y.dark() : y.light(),
+                            (0, a.M)(t) ? j.dark() : j.light(),
                         ]);
                         l ||
-                            null == b.current ||
+                            null == v.current ||
                             (e = i.loadAnimation({
-                                container: b.current,
+                                container: v.current,
                                 renderer: "svg",
                                 loop: !0,
                                 autoplay: !0,
@@ -52,17 +52,17 @@ function C(e) {
                     ((l = !0), null != e && (e.destroy(), (e = void 0)));
                 }
             );
-        }, [y]),
+        }, [j]),
         (0, l.jsx)(r.l, {
             "aria-labelledby": "content-warning-popout-label",
             children: (0, l.jsxs)("form", {
                 className: A.$,
-                onSubmit: _,
+                onSubmit: y,
                 children: [
                     (0, l.jsxs)("div", {
                         className: A.rf,
                         children: [
-                            null != y && (0, l.jsx)("div", { className: A.lY, ref: b }),
+                            null != j && (0, l.jsx)("div", { className: A.lY, ref: v }),
                             (0, l.jsxs)("div", {
                                 className: A.Qs,
                                 children: [
@@ -83,7 +83,7 @@ function C(e) {
                                                         className: A.x6,
                                                         children: (0, l.jsx)(c.$, {
                                                             variant: "secondary",
-                                                            onClick: j,
+                                                            onClick: _,
                                                             text: p.intl.string(p.t.fsBWmS),
                                                         }),
                                                     }),
@@ -101,7 +101,7 @@ function C(e) {
                                                         className: A.x6,
                                                         children: (0, l.jsx)(c.$, {
                                                             variant: "primary",
-                                                            onClick: _,
+                                                            onClick: y,
                                                             text: p.intl.string(p.t.KJnHq3),
                                                             autoFocus: !0,
                                                         }),

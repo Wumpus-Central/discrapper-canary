@@ -541,7 +541,7 @@ function ej(e) {
             },
             [r, eE, ev, ek, eQ],
         ),
-        { primaryIconAsset: e2, primaryIconLabel: e7 } = a.useMemo(() => (0, F.Cv)(ej, eE), [ej, eE]),
+        { primaryIconAsset: e7, primaryIconLabel: e2 } = a.useMemo(() => (0, F.Cv)(ej, eE), [ej, eE]),
         e9 = (0, m.bG)([z.A], () => z.A.getStorefrontState(eE)?.activePage ?? 0),
         e6 = a.useMemo(() => {
             let e = ej?.tenantMetadata?.socialLayer?.expiresAt;
@@ -737,10 +737,10 @@ function ej(e) {
                                                           eL
                                                               ? (0, n.jsxs)(n.Fragment, {
                                                                     children: [
-                                                                        null != e2 &&
+                                                                        null != e7 &&
                                                                             (0, n.jsx)("img", {
-                                                                                src: e2.toString(),
-                                                                                alt: e7,
+                                                                                src: e7.toString(),
+                                                                                alt: e2,
                                                                                 className: er.ye,
                                                                             }),
                                                                         (0, n.jsx)(p.E, {

@@ -23,19 +23,19 @@ let p = function (e) {
             imageSrc: E,
             animationSrc: S,
             secondaryButtonText: I,
-            onSecondaryButtonClick: y,
-            children: _,
-            useReducedMotion: j = !1,
-            buttonVariant: b,
+            onSecondaryButtonClick: j,
+            children: y,
+            useReducedMotion: _ = !1,
+            buttonVariant: v,
         } = e,
-        v = (0, a.bG)([m.Ay], () => m.Ay.getState().isMembersOpen);
-    if (s.Fr && v) return null;
-    if (null == t) return (0, l.jsx)(l.Fragment, { children: i.Children.only(_) });
+        b = (0, a.bG)([m.Ay], () => m.Ay.getState().isMembersOpen);
+    if (s.Fr && b) return null;
+    if (null == t) return (0, l.jsx)(l.Fragment, { children: i.Children.only(y) });
     let N = null;
     return (
         null != E
             ? (N = (0, l.jsx)("img", { alt: "", src: E, className: g.Sl }))
-            : null != S && (N = (0, l.jsx)(r.a, { importData: S, shouldAnimate: !j, className: g.lY })),
+            : null != S && (N = (0, l.jsx)(r.a, { importData: S, shouldAnimate: !_, className: g.lY })),
         (0, l.jsxs)("div", {
             className: g.iE,
             children: [
@@ -59,7 +59,7 @@ let p = function (e) {
                         null != I &&
                             (0, l.jsx)("div", {
                                 className: g.x6,
-                                children: (0, l.jsx)(d.Q, { textVariant: "text-sm/semibold", text: I, onClick: y }),
+                                children: (0, l.jsx)(d.Q, { textVariant: "text-sm/semibold", text: I, onClick: j }),
                             }),
                         null != A &&
                             (0, l.jsx)("div", {
@@ -67,7 +67,7 @@ let p = function (e) {
                                 children: (0, l.jsx)(u.$, {
                                     text: A,
                                     size: "sm",
-                                    variant: b ?? "secondary",
+                                    variant: v ?? "secondary",
                                     onClick: x,
                                     loading: C,
                                     icon: f,
