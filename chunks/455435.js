@@ -237,7 +237,14 @@ function z(e, t, l) {
         u = "user" === n.install_scope || null != s ? null : (0, g.$C)(i);
     (u?.catch(() => {}), "channel" === s && G(i, !0));
     let o = (0, g.TV)(i).then((e) => {
-            if (!0 !== e.ok) throw Error(P.intl.string(T.default.fNP6Cd));
+            if (!0 !== e.ok) {
+                let t;
+                throw Error(
+                    null != (t = e.detail?.trim()) && "" !== t
+                        ? P.intl.formatToPlainString(T.default.xTlB8O, { reason: t })
+                        : P.intl.string(T.default.fNP6Cd),
+                );
+            }
             return e;
         }),
         d = o.then(

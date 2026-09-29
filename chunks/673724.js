@@ -1,31 +1,33 @@
 (n.d(t, {
-    $f: () => f,
+    $f: () => T,
     A2: () => r,
-    CA: () => _,
-    IU: () => l,
-    Is: () => I,
-    RX: () => o,
-    S8: () => N,
-    Wb: () => h,
+    CA: () => A,
+    IU: () => d,
+    Is: () => p,
+    KQ: () => l,
+    RS: () => o,
+    RX: () => c,
+    S8: () => O,
+    Wb: () => f,
     XE: () => a,
-    ZJ: () => m,
-    a7: () => d,
-    aM: () => c,
-    ks: () => g,
-    qf: () => L,
-    sj: () => u,
+    ZJ: () => S,
+    a7: () => u,
+    aM: () => _,
+    ks: () => N,
+    qf: () => D,
+    sj: () => E,
     sq: () => i,
     tr: () => s,
-    v0: () => R,
-    wF: () => O,
-    wU: () => E,
-    wV: () => A,
-    x5: () => T,
-    yr: () => p,
+    v0: () => y,
+    wF: () => L,
+    wU: () => h,
+    wV: () => I,
+    x5: () => g,
+    yr: () => m,
 }),
     n(938796));
 let i = 25,
-    r = Object.freeze({ PUBLIC: 1, SHAREABLE: 2 });
+    r = Object.freeze({ PUBLIC: 1, SHAREABLE: 2, NATIVE_APP_CHANNELS: 4 });
 function a(e) {
     return ((e.flags ?? 0) & r.PUBLIC) != 0;
 }
@@ -33,28 +35,34 @@ function s(e) {
     return ((e.flags ?? 0) & r.SHAREABLE) != 0;
 }
 function l(e) {
-    return null != e.flags;
+    return ((e.flags ?? 0) & r.NATIVE_APP_CHANNELS) != 0;
 }
 function o(e) {
-    return null != e.collaborator_role_ids;
+    return r.PUBLIC | (e ? r.NATIVE_APP_CHANNELS : 0);
 }
 function d(e) {
-    return Math.floor(100 * e);
+    return null != e.flags;
 }
 function c(e) {
-    return e.input_tokens + e.output_tokens + e.cache_creation_input_tokens + e.cache_read_input_tokens;
+    return null != e.collaborator_role_ids;
 }
 function u(e) {
-    return e.input_tokens + e.cache_creation_input_tokens + e.cache_read_input_tokens;
+    return Math.floor(100 * e);
 }
 function _(e) {
-    let t = u(e);
-    return 0 === t ? 0 : e.cache_read_input_tokens / t;
+    return e.input_tokens + e.output_tokens + e.cache_creation_input_tokens + e.cache_read_input_tokens;
 }
 function E(e) {
+    return e.input_tokens + e.cache_creation_input_tokens + e.cache_read_input_tokens;
+}
+function A(e) {
+    let t = E(e);
+    return 0 === t ? 0 : e.cache_read_input_tokens / t;
+}
+function h(e) {
     return e ?? { input_tokens: 0, output_tokens: 0, cache_creation_input_tokens: 0, cache_read_input_tokens: 0 };
 }
-function A(e, t) {
+function I(e, t) {
     return {
         input_tokens: e.input_tokens + t.input_tokens,
         output_tokens: e.output_tokens + t.output_tokens,
@@ -62,20 +70,20 @@ function A(e, t) {
         cache_read_input_tokens: e.cache_read_input_tokens + t.cache_read_input_tokens,
     };
 }
-let h = new Set(["image/png", "image/jpeg", "image/gif", "image/webp"]),
-    I = 10,
-    f = 36e5;
-function p(e) {
-    return h.has(e) ? 5242880 : 0x3200000;
-}
-function T(e, t) {
-    return e <= p(t);
-}
+let f = new Set(["image/png", "image/jpeg", "image/gif", "image/webp"]),
+    p = 10,
+    T = 36e5;
 function m(e) {
+    return f.has(e) ? 5242880 : 0x3200000;
+}
+function g(e, t) {
+    return e <= m(t);
+}
+function S(e) {
     return `${Math.round(e / 1048576)} MB`;
 }
-let g = ["simple", "balanced", "complex"],
-    S = [
+let N = ["simple", "balanced", "complex"],
+    C = [
         { id: "claude-fable-5-1", label: "Claude Fable 5.1", provider: "anthropic" },
         { id: "claude-opus-5-5", label: "Claude Opus 5.5", provider: "anthropic" },
         { id: "claude-sonnet-5-5", label: "Claude Sonnet 5.5", provider: "anthropic" },
@@ -85,14 +93,14 @@ let g = ["simple", "balanced", "complex"],
         { id: "gpt-6-luna", label: "GPT-6 Luna", provider: "openai", supports_fast: !0 },
         { id: "xai/grok-4.7", label: "Grok 4.7", provider: "xai" },
     ],
-    N = { main: S, subagent: S, thinking: ["low", "medium", "high", "xhigh", "max"] },
-    C = [
+    O = { main: C, subagent: C, thinking: ["low", "medium", "high", "xhigh", "max"] },
+    R = [
         { id: "deepseek/deepseek-flash", label: "DeepSeek V4.1 Flash", provider: "deepseek" },
         { id: "moonshotai/kimi-k3", label: "Kimi K3", provider: "moonshotai" },
     ],
-    O = { main: C, subagent: C, thinking: N.thinking },
-    R = { tier: "balanced", provider: "openai" },
-    L = {
+    L = { main: R, subagent: R, thinking: O.thinking },
+    y = { tier: "balanced", provider: "openai" },
+    D = {
         simple: { model: "gpt-6-luna", thinking: "high" },
         balanced: { model: "gpt-6-sol", thinking: "high" },
         complex: { model: "claude-opus-5-5", thinking: "high" },

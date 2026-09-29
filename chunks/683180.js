@@ -48,12 +48,12 @@ function f(e, t) {
     );
 }
 function p(e, t) {
-    for (let { channel: n } of r.Ay.getChannels(e)[r.I6].filter((e) => {
-        let { channel: t } = e;
-        return t.type === c.rbe.GUILD_TEXT;
-    }))
-        if (I(n.topic) === t) return n.id;
-    return null;
+    let n = null;
+    for (let { channel: i } of r.Ay.getChannels(e)[r.I6]) {
+        if (i.type === c.rbe.GUILD_APP && i.application_id === t) return i.id;
+        null == n && i.type === c.rbe.GUILD_TEXT && I(i.topic) === t && (n = i.id);
+    }
+    return n;
 }
 function T(e, t) {
     return (0, d.ix)({ guildId: e.id, location: t }) && !e.features.has(c.GuildFeatures.INTERNAL_EMPLOYEE_ONLY);

@@ -356,6 +356,13 @@ let n = [
         summary: "Moderation Bot now starts with a short wizard, builds straight away, then tells you how to test it.",
     },
     {
+        date: "2026-09-25",
+        time: "17:34",
+        platforms: ["desktop"],
+        summary:
+            "New server apps can ship into Discord's own app channels, and the Feature Showcase shows one app living in two of them.",
+    },
+    {
         date: "2026-09-22",
         time: "00:02",
         platforms: ["desktop", "mobile"],
