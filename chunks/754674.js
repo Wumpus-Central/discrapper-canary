@@ -24,14 +24,14 @@ function a(e) {
         ),
     );
 }
-function r(e) {
+function s(e) {
     return a(i(e));
 }
-function s(e, t, l) {
+function r(e, t, l) {
     let n = i(e),
-        r = n[+(l?.column === 1)],
-        s = l?.index ?? r.length;
-    return (r.splice(Math.max(0, Math.min(s, r.length)), 0, t), a(n));
+        s = n[+(l?.column === 1)],
+        r = l?.index ?? s.length;
+    return (s.splice(Math.max(0, Math.min(r, s.length)), 0, t), a(n));
 }
 function d(e, t, l, n) {
     let i =
@@ -50,30 +50,30 @@ function d(e, t, l, n) {
                   })
         )[l];
     if (null == a) return i.length;
-    let r = i.findIndex((e) => {
+    let s = i.findIndex((e) => {
         let { id: t } = e;
         return t === a.id;
     });
-    return -1 === r ? i.length : r;
+    return -1 === s ? i.length : s;
 }
 function o(e, t, l, n) {
-    let r = e.find((e) => {
+    let s = e.find((e) => {
         let { id: l } = e;
         return l === t;
     });
-    if (null == r) return null;
-    let s = i(e),
+    if (null == s) return null;
+    let r = i(e),
         d = [
-            s[0].filter((e) => {
+            r[0].filter((e) => {
                 let { id: l } = e;
                 return l !== t;
             }),
-            s[1].filter((e) => {
+            r[1].filter((e) => {
                 let { id: l } = e;
                 return l !== t;
             }),
         ],
         o = d[+(1 === l)];
-    return (o.splice(Math.max(0, Math.min(n, o.length)), 0, r), a(d));
+    return (o.splice(Math.max(0, Math.min(n, o.length)), 0, s), a(d));
 }
-l.d(t, { Gm: () => o, O6: () => d, QD: () => s, Rl: () => i, W$: () => r });
+l.d(t, { Gm: () => o, O6: () => d, QD: () => r, Rl: () => i, W$: () => s });

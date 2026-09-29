@@ -1,9 +1,9 @@
 t.d(n, { C: () => N });
 var i,
     l = t(477900),
-    s = t(582128),
-    a = t(503698),
-    o = t.n(a),
+    a = t(582128),
+    s = t(503698),
+    o = t.n(s),
     r = t(202091),
     c = t(696292),
     u = t(834730),
@@ -19,17 +19,17 @@ var i,
     E = t(375708),
     I = t(441386);
 let v = ["embedded_cover"],
-    T = { tension: 800, friction: 24 };
-var j =
-    (((i = j || {})[(i.THIRTEEN_BY_ELEVEN = 0)] = "THIRTEEN_BY_ELEVEN"),
+    j = { tension: 800, friction: 24 };
+var T =
+    (((i = T || {})[(i.THIRTEEN_BY_ELEVEN = 0)] = "THIRTEEN_BY_ELEVEN"),
     (i[(i.SIXTEEN_BY_NINE = 1)] = "SIXTEEN_BY_NINE"),
     i);
 function N(e) {
-    let { context: n, activityItem: t, onClick: i, aspectRatio: a = 0, animatedDivClass: j, commandOrigin: N } = e,
+    let { context: n, activityItem: t, onClick: i, aspectRatio: s = 0, animatedDivClass: T, commandOrigin: N } = e,
         {
             onActivityItemSelected: _,
-            imageBackground: O,
-            activityAction: b,
+            imageBackground: b,
+            activityAction: O,
             labelType: y,
         } = (0, C.Ay)({
             context: n,
@@ -41,14 +41,14 @@ function N(e) {
             assetNames: v,
             commandOrigin: N,
         }),
-        [S, R] = s.useState(!1),
-        D = s.useCallback(() => {
+        [S, R] = a.useState(!1),
+        D = a.useCallback(() => {
             R(!0);
         }, [R]),
-        L = s.useCallback(() => {
+        L = a.useCallback(() => {
             R(!1);
         }, [R]),
-        M = s.useMemo(
+        M = a.useMemo(
             () =>
                 (0, l.jsx)("div", {
                     className: I.Gz,
@@ -56,8 +56,8 @@ function N(e) {
                 }),
             [y],
         ),
-        P = s.useMemo(() => {
-            switch (b) {
+        P = a.useMemo(() => {
+            switch (O) {
                 case C.o6.JOIN:
                     return (0, l.jsx)("div", {
                         className: I.m9,
@@ -86,7 +86,7 @@ function N(e) {
                 default:
                     return null;
             }
-        }, [b]);
+        }, [O]);
     return (0, l.jsx)(d.D, {
         onClick: _,
         onFocus: D,
@@ -95,7 +95,7 @@ function N(e) {
         onMouseLeave: L,
         className: I.XA,
         children: (0, l.jsx)(A.c, {
-            config: T,
+            config: j,
             from: { value: 0 },
             to: { value: +!!S },
             children: (e) => {
@@ -109,11 +109,11 @@ function N(e) {
                             children: (i) =>
                                 (0, l.jsxs)(r.animated.div, {
                                     ref: i,
-                                    className: o()(e, I.LM, j, { [I.$g]: 0 === a, [I.J3]: 1 === a }),
+                                    className: o()(e, I.LM, T, { [I.$g]: 0 === s, [I.J3]: 1 === s }),
                                     style: { transform: n.to([0, 1], [1, 1.05]).to((e) => `scale(${e})`) },
                                     children: [
                                         (0, l.jsx)(p.A, {
-                                            imageBackground: O,
+                                            imageBackground: b,
                                             applicationName: t.application.name,
                                             imageClassName: I.jj,
                                             imageNotFoundClassName: I.v_,
@@ -128,4 +128,4 @@ function N(e) {
         }),
     });
 }
-N.AspectRatio = j;
+N.AspectRatio = T;

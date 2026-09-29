@@ -25,12 +25,12 @@ function v(e) {
             enablePreview: v,
             pageType: _ = S.G2.HOME,
             className: I,
-            handleTransition: L,
+            handleTransition: f,
             listItemProps: y,
         } = e,
-        f = r?.categorySkuId;
-    null == f && null != r && (f = p.A.getCategoryByStoreListingId(r?.categoryStoreListingId)?.skuId);
-    let k = f ?? t?.skuId ?? "",
+        L = r?.categorySkuId;
+    null == L && null != r && (L = p.A.getCategoryByStoreListingId(r?.categoryStoreListingId)?.skuId);
+    let k = L ?? t?.skuId ?? "",
         { handleCardVisibilityChange: O } = (0, h.Z)(k, _, "marketing featured block"),
         j = (0, E.s4)(t, r, v),
         B = l.useRef(null),
@@ -48,7 +48,7 @@ function v(e) {
             style: { ...(null != j && { backgroundImage: `url(${j})` }) },
             ...y,
             onClick: () => {
-                (L({
+                (f({
                     sourceButton: "shop marketing tile",
                     categorySkuId: k,
                     isInternalShopDeeplink: !0,
@@ -87,7 +87,7 @@ function v(e) {
                         "aria-label": b,
                         tabIndex: y?.tabIndex,
                         onClick: (e) => {
-                            (L({
+                            (f({
                                 sourceButton: "shop marketing take me there button",
                                 categorySkuId: k,
                                 isInternalShopDeeplink: !0,

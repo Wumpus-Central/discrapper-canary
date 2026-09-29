@@ -1,9 +1,9 @@
 t.d(n, { A: () => C, x: () => m });
 var i,
     l = t(477900),
-    s = t(582128),
-    a = t(503698),
-    o = t.n(a),
+    a = t(582128),
+    s = t(503698),
+    o = t.n(s),
     r = t(559106),
     c = t(765671),
     u = t(401685),
@@ -15,11 +15,11 @@ function h(e) {
             disableGradients: n = !1,
             renderHeader: t,
             renderBottomLeft: i,
-            renderBottomCenter: a,
+            renderBottomCenter: s,
             renderBottomRight: o,
             renderCenter: d,
         } = e,
-        m = s.useRef(null),
+        m = a.useRef(null),
         { width: h, ref: C } = (0, c.Ay)(),
         p = (0, u.bf)(h);
     return (0, l.jsx)(r.xp, {
@@ -39,7 +39,7 @@ function h(e) {
                         ref: C,
                         children: [
                             (0, l.jsx)("div", { className: A.i$, children: i?.() }),
-                            (0, l.jsx)("div", { className: A.Kz, children: a?.() }),
+                            (0, l.jsx)("div", { className: A.Kz, children: s?.() }),
                             (0, l.jsx)("div", { className: A.He, children: o?.() }),
                         ],
                     }),
@@ -53,8 +53,8 @@ function C(e) {
         screenMessage: n,
         onDoubleClick: t,
         onActive: i,
-        onForceIdle: s,
-        idle: a,
+        onForceIdle: a,
+        idle: s,
         children: r,
         renderChatToasts: c,
         renderVoiceChannelEffects: u,
@@ -63,11 +63,11 @@ function C(e) {
         ...p
     } = e;
     return (0, l.jsxs)("div", {
-        className: o()(A.zr, { [A.N7]: a }),
+        className: o()(A.zr, { [A.N7]: s }),
         style: m,
         onMouseMove: i,
         onMouseDown: i,
-        onMouseLeave: s,
+        onMouseLeave: a,
         onDoubleClick: t,
         children: [
             !C && (0, l.jsx)(h, { ...p }),

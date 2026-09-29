@@ -1,8 +1,8 @@
-t.d(n, { A: () => T });
+t.d(n, { A: () => j });
 var i = t(477900),
     l = t(582128),
-    s = t(554146),
-    a = t(789645),
+    a = t(554146),
+    s = t(789645),
     o = t(534890),
     r = t(367513),
     c = t(738876),
@@ -19,19 +19,19 @@ var i = t(477900),
     E = t(49999),
     I = t(375708),
     v = t(62502);
-let T = function (e) {
-    let { channel: n, guild: t, maxWidth: T } = e,
-        j = (0, u.Ay)(n);
+let j = function (e) {
+    let { channel: n, guild: t, maxWidth: j } = e,
+        T = (0, u.Ay)(n);
     l.useEffect(() => {
-        (0, h.Dr)(s.M.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK, { dismissAction: E.i.AUTO });
+        (0, h.Dr)(a.M.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK, { dismissAction: E.i.AUTO });
     }, []);
     let N = l.useCallback(() => {
             (r.A.updateChatOpen(n.id, !1), x._.safeDispatch(f.jej.FOCUS_CHAT_BUTTON));
         }, [n.id]),
-        _ = (0, i.jsx)(C.Ay.Icon, { icon: a.P, tooltip: I.intl.string(I.t.cpT0Cq), onClick: N });
+        _ = (0, i.jsx)(C.Ay.Icon, { icon: s.P, tooltip: I.intl.string(I.t.cpT0Cq), onClick: N });
     return (0, i.jsxs)(A.A, {
         sidebarType: A.X.CallChatSidebar,
-        maxWidth: T,
+        maxWidth: j,
         floatingLayer: g.Ay,
         children: [
             (0, i.jsx)(c.A, { channel: n, draftType: p.C.ChannelMessage }),
@@ -40,7 +40,7 @@ let T = function (e) {
                 "aria-label": I.intl.string(I.t.BIYAqa),
                 children: [
                     (0, i.jsx)(C.Ay.ChannelIcon, { icon: o.ChatIcon, "aria-label": I.intl.string(I.t.Kx5kCN) }),
-                    (0, i.jsx)(C.Ay.Title, { children: j }),
+                    (0, i.jsx)(C.Ay.Title, { children: T }),
                 ],
             }),
             (0, i.jsx)("div", {

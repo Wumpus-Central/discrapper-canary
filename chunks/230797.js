@@ -1,4 +1,4 @@
-(n.d(t, { iV: () => d8, OC: () => ct, Ay: () => ce }), n(938796));
+(n.d(t, { iV: () => d9, OC: () => ct, Ay: () => ce }), n(938796));
 var i,
     l,
     s = n(477900),
@@ -725,7 +725,7 @@ function e5(e) {
 var e6 = n(401374),
     e7 = n(562708),
     e4 = n(139286);
-function e9(e) {
+function e8(e) {
     let { application: t, message: n } = e,
         { analyticsLocations: i } = (0, E.Ay)(f.A.APP_OAUTH2_LINK_EMBED),
         l = a.useCallback(() => {
@@ -746,7 +746,7 @@ function e9(e) {
           })
         : null;
 }
-var e8 = n(778492),
+var e9 = n(778492),
     te = n(297264),
     tt = n(285796),
     tn = n(857182),
@@ -823,7 +823,7 @@ let tg = function (e) {
                   (0, s.jsxs)("div", {
                       className: th.mp,
                       children: [
-                          (0, s.jsx)(e8.k, { size: "xs", color: "currentColor", className: th.Kk }),
+                          (0, s.jsx)(e9.k, { size: "xs", color: "currentColor", className: th.Kk }),
                           (0, s.jsx)(te.D, {
                               variant: "heading-sm/normal",
                               className: th.dS,
@@ -998,8 +998,8 @@ var tG = n(132500),
     t6 = n(298072),
     t7 = n(993408),
     t4 = n(682301),
-    t9 = n(841702),
-    t8 = n(466459),
+    t8 = n(841702),
+    t9 = n(466459),
     ne = n(777829),
     nt = n(859587),
     nn = n(918838),
@@ -1075,7 +1075,7 @@ var nj = n(347722),
     nR = n(202541),
     nk = n(278324);
 function nM() {
-    return ((0, t9.b5)(), null);
+    return ((0, t8.b5)(), null);
 }
 function nL(e) {
     let { disableFetch: t } = e;
@@ -1139,7 +1139,7 @@ function nP(e) {
     let _ = (0, t6.Q)(t),
         v = (0, ni.B1)(t) ? (t.variants[_] ?? t) : t,
         N = v.skuId,
-        { isPurchased: j } = (0, t8.h)(v),
+        { isPurchased: j } = (0, t9.h)(v),
         T = (0, u.bG)([t5.A], () => t5.A.hasPreviouslyFetched || null != t5.A.fetchError),
         S = !c || T,
         y = c && j,
@@ -1476,8 +1476,8 @@ function n7(e) {
     return (0, s.jsx)(ex.$, { variant: "secondary", text: X.intl.string(X.t["4q1Elf"]), onClick: l, disabled: !i });
 }
 var n4 = n(320448),
-    n9 = n(958340),
-    n8 = n(384231),
+    n8 = n(958340),
+    n9 = n(384231),
     ie = n(959698),
     it = n(438729),
     ii = n(439762),
@@ -1509,7 +1509,7 @@ class im {
             n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : U.A,
             i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : ts.A,
             l = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : nK.A,
-            s = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : n9.A,
+            s = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : n8.A,
             { snapshotIndex: a, parentMessage: r, messageSnapshot: o } = this,
             d = (0, id.Fe)(o.message.timestamp),
             c = e.getChannel(this.parentMessage.channel_id);
@@ -1585,8 +1585,8 @@ function iI(e) {
     let { message: t, snapshot: n, index: i } = e,
         l = a.useMemo(() => new im(t, n, i), [t, n, i]),
         r = (0, u.bG)(
-            [D.A, w.default, U.A, ts.A, nK.A, n9.A],
-            () => l.getForwardInfo(D.A, w.default, U.A, ts.A, nK.A, n9.A).footerInfo,
+            [D.A, w.default, U.A, ts.A, nK.A, n8.A],
+            () => l.getForwardInfo(D.A, w.default, U.A, ts.A, nK.A, n8.A).footerInfo,
             [l],
             h.A,
         ),
@@ -1620,7 +1620,7 @@ function iC(e) {
         c = ia.rs.useSetting(),
         m = (0, u.bG)([ir.A], () => ir.A.isDeveloper),
         h = (0, ie.U)(),
-        g = (0, n8.S)((o.editedTimestamp ?? o.timestamp).valueOf()),
+        g = (0, n9.S)((o.editedTimestamp ?? o.timestamp).valueOf()),
         {
             content: p,
             hasSpoilerEmbeds: A,
@@ -2060,8 +2060,8 @@ function i4(e) {
             })
           : (0, s.jsx)(es, { app: i3.Ay.createFromServer(i), linkType: en.J.APP_DISCOVERY, onView: h, message: n });
 }
-var i9 = n(229527),
-    i8 = n(870136),
+var i8 = n(229527),
+    i9 = n(870136),
     le = n(330075),
     lt = n(412728);
 function ln(e) {
@@ -2542,8 +2542,8 @@ var lV = n(492230),
     l6 = n(943815),
     l7 = n(447215),
     l4 = n(256416),
-    l9 = n(832038),
-    l8 = n(318626),
+    l8 = n(832038),
+    l9 = n(318626),
     se = n(513653);
 let st = (e) => {
     let { reportingUserId: t, guildId: n, compact: i, channel: l, messageId: r, reportedTimestamp: d } = e,
@@ -2556,16 +2556,16 @@ let st = (e) => {
                 ? X.intl.format(l4.default["+zqXZs"], { username: c.username, onUserClick: m })
                 : X.intl.string(l4.default.xpRjfS);
     return (0, s.jsxs)("div", {
-        className: o()(l8.NB, l8.JZ, u),
+        className: o()(l9.NB, l9.JZ, u),
         children: [
-            (0, s.jsx)(tI.eu, { src: h, size: tC._3.SIZE_16, className: l9.my, "aria-label": "" }),
-            (0, s.jsx)(A.E, { variant: "text-sm/medium", color: "text-subtle", className: l9.Xh, children: g }),
+            (0, s.jsx)(tI.eu, { src: h, size: tC._3.SIZE_16, className: l8.my, "aria-label": "" }),
+            (0, s.jsx)(A.E, { variant: "text-sm/medium", color: "text-subtle", className: l8.Xh, children: g }),
             (0, s.jsxs)(A.E, {
                 variant: "text-sm/medium",
                 color: "text-subtle",
                 children: [
-                    (0, s.jsx)("span", { className: l9.Ek, children: "\u2022" }),
-                    (0, s.jsx)(l5.A, { timestamp: d, className: l9.vE }),
+                    (0, s.jsx)("span", { className: l8.Ek, children: "\u2022" }),
+                    (0, s.jsx)(l5.A, { timestamp: d, className: l8.vE }),
                 ],
             }),
         ],
@@ -2576,8 +2576,8 @@ function si(e) {
     let { message: t, snapshot: n, index: i } = e,
         l = a.useMemo(() => new im(t, n, i), [t, n, i]),
         r = (0, u.bG)(
-            [D.A, w.default, U.A, ts.A, nK.A, n9.A],
-            () => l.getForwardInfo(D.A, w.default, U.A, ts.A, nK.A, n9.A).footerInfo,
+            [D.A, w.default, U.A, ts.A, nK.A, n8.A],
+            () => l.getForwardInfo(D.A, w.default, U.A, ts.A, nK.A, n8.A).footerInfo,
             [l],
             h.A,
         ),
@@ -2693,7 +2693,7 @@ function ss(e) {
         d = ia.hD.useSetting(),
         c = ia.rs.useSetting(),
         m = (0, u.bG)([ir.A], () => ir.A.isDeveloper),
-        h = (0, n8.S)((o.editedTimestamp ?? o.timestamp).valueOf()),
+        h = (0, n9.S)((o.editedTimestamp ?? o.timestamp).valueOf()),
         {
             content: g,
             hasSpoilerEmbeds: p,
@@ -2870,7 +2870,7 @@ function sf(e) {
 function sE(e) {
     let { iconType: t } = e,
         n = {
-            default: (0, s.jsx)(e8.k, { size: "xs", color: nw.A.colors.TEXT_LINK.css }),
+            default: (0, s.jsx)(e9.k, { size: "xs", color: nw.A.colors.TEXT_LINK.css }),
             danger: (0, s.jsx)(so.WarningIcon, { color: nw.A.colors.ICON_FEEDBACK_CRITICAL }),
         };
     return null != t && t in n ? (0, s.jsx)("div", { className: sp.Kk, children: n[t] }) : null;
@@ -3080,7 +3080,7 @@ function s4(e) {
     }),
         (0, s$.e)());
 }
-function s9(e) {
+function s8(e) {
     let { sticker: t, description: n } = e;
     return (0, s.jsxs)(sX.A, {
         children: [
@@ -3097,7 +3097,7 @@ function s9(e) {
         ],
     });
 }
-function s8(e) {
+function s9(e) {
     let { closePopout: t, sticker: n, channel: i, refreshPositionKey: l } = e,
         [r, o, d] = (0, u.yK)(
             [s1.A],
@@ -3268,7 +3268,7 @@ function ae(e) {
                       return (0, s.jsxs)("div", {
                           className: s7.gH,
                           children: [
-                              (0, s.jsx)(s9, { description: t, sticker: n }),
+                              (0, s.jsx)(s8, { description: t, sticker: n }),
                               b &&
                                   (0, s.jsx)(s0.A, {
                                       className: s7.lI,
@@ -3395,7 +3395,7 @@ function at(e) {
     let { channel: t, closePopout: n, sticker: i } = e;
     return (0, s.jsx)(sH.Uq, {
         className: s6.Bm,
-        children: (0, s.jsx)(s9, {
+        children: (0, s.jsx)(s8, {
             sticker: i,
             description: X.intl.format(X.t.hGWuxU, {
                 openPremiumSettings: () => {
@@ -3409,7 +3409,7 @@ let an = function (e) {
     let { renderableSticker: t, channel: n, closePopout: i, refreshPositionKey: l } = e,
         [a, r] = (0, sF.Zq)(t, !0);
     return null != a && (0, lz.FD)(a)
-        ? (0, s.jsx)(s8, { sticker: a, closePopout: i, channel: n, refreshPositionKey: l })
+        ? (0, s.jsx)(s9, { sticker: a, closePopout: i, channel: n, refreshPositionKey: l })
         : null != a && (0, lz.Xw)(a)
           ? (0, s.jsx)(ae, { sticker: a, channel: n, closePopout: i, refreshPositionKey: l })
           : r
@@ -3513,27 +3513,27 @@ function aI(e) {
         ),
         d = (0, sD.IL)(n);
     return (0, s.jsxs)("div", {
-        className: l8.up,
+        className: l9.up,
         children: [
-            (0, s.jsx)("img", { alt: "", src: t.author.getAvatarURL(n.guild_id, 16), className: l8.FJ }),
+            (0, s.jsx)("img", { alt: "", src: t.author.getAvatarURL(n.guild_id, 16), className: l9.FJ }),
             (0, s.jsx)(af.A, { message: t, channel: n, compact: !0 }),
             (0, s.jsx)("div", {
-                className: l8.Au,
+                className: l9.Au,
                 children: d
-                    ? (0, s.jsx)("span", { className: l8.dp, children: X.intl.string(X.t["5uaI/7"]) })
+                    ? (0, s.jsx)("span", { className: l9.dp, children: X.intl.string(X.t["5uaI/7"]) })
                     : (function (e, t, n, i) {
                           let {
                               contentPlaceholder: l,
                               renderedContent: a,
                               leadingIcon: r,
                               trailingIcon: o,
-                          } = (0, ax.o)(e, t, n, i, l8.tP, {
-                              trailingIconClass: l8._v,
-                              leadingIconClass: l8.a5,
+                          } = (0, ax.o)(e, t, n, i, l9.tP, {
+                              trailingIconClass: l9._v,
+                              leadingIconClass: l9.a5,
                               iconSize: aE.eJ,
                           });
                           return (0, s.jsxs)(s.Fragment, {
-                              children: [r, a ?? (0, s.jsx)("span", { className: l8.dp, children: l }), o],
+                              children: [r, a ?? (0, s.jsx)("span", { className: l9.dp, children: l }), o],
                           });
                       })(t, o, i, l),
             }),
@@ -3882,8 +3882,8 @@ function a7(e) {
         : null;
 }
 var a4 = n(789645),
-    a9 = n(298236),
-    a8 = n(953756),
+    a8 = n(298236),
+    a9 = n(953756),
     re = n(564107),
     rt = n(216763),
     rn = n(359886);
@@ -3899,7 +3899,7 @@ function ri(e) {
             onSuppressEmbed: c,
             hiddenSpoiler: u = !1,
         } = e,
-        [m, h] = (0, a8.zn)();
+        [m, h] = (0, a9.zn)();
     return 0 === t.length
         ? null
         : (0, s.jsx)(re.N, {
@@ -3908,15 +3908,15 @@ function ri(e) {
               getOnMediaItemContextMenu: a,
               shouldHideMediaOptions: r,
               enabledContentHarmTypeFlags: d,
-              children: (0, s.jsx)(a9.f5, {
+              children: (0, s.jsx)(a8.f5, {
                   message: n,
                   shouldDisableInteractiveComponents: !0,
-                  children: (0, s.jsx)(a8.O7.Root, {
+                  children: (0, s.jsx)(a9.O7.Root, {
                       containerInnerWidth: h,
                       children: (0, s.jsx)("div", {
                           style: { width: "100%" },
                           ref: m,
-                          children: (0, s.jsx)(a8.O7.AutoMeasuredNestedContainer, {
+                          children: (0, s.jsx)(a9.O7.AutoMeasuredNestedContainer, {
                               children: (e) =>
                                   (0, s.jsxs)("div", {
                                       ref: e,
@@ -4568,14 +4568,14 @@ let r7 = function (e) {
     });
 };
 var r4 = n(992856);
-let r9 = function (e) {
+let r8 = function (e) {
     let { className: t } = e;
     return (0, s.jsx)("div", {
         className: o()(r4.T, t),
         children: (0, s.jsx)("span", { className: r4.Q, children: X.intl.string(X.t["8IfYqa"]) }),
     });
 };
-var r8 = n(615300),
+var r9 = n(615300),
     oe = n(868285),
     ot = n(358618),
     on = n(983851),
@@ -4583,13 +4583,13 @@ var r8 = n(615300),
     ol = n(607470),
     os = n(856328);
 class oa extends a.Component {
-    _animatedValue = new r8.A.Value(1);
+    _animatedValue = new r9.A.Value(1);
     state = { imageLoadError: !1, imageLoading: !0 };
     componentWillEnter = (e) => {
-        (this._animatedValue.setValue(0), r8.A.timing(this._animatedValue, { toValue: 1, duration: 400 }).start(e));
+        (this._animatedValue.setValue(0), r9.A.timing(this._animatedValue, { toValue: 1, duration: 400 }).start(e));
     };
     componentWillLeave = (e) => {
-        r8.A.timing(this._animatedValue, { toValue: 0, duration: 400 }).start(e);
+        r9.A.timing(this._animatedValue, { toValue: 0, duration: 400 }).start(e);
     };
     getImageStyle = () => ({ opacity: this._animatedValue });
     handleImageError = () => {
@@ -4601,7 +4601,7 @@ class oa extends a.Component {
     renderMedia() {
         let { src: e, className: t, title: n } = this.props,
             { imageLoading: i } = this.state;
-        return (0, s.jsx)(r8.A.img, {
+        return (0, s.jsx)(r9.A.img, {
             className: o()({ [os.YC]: i }, t),
             src: e,
             alt: n,
@@ -4614,8 +4614,8 @@ class oa extends a.Component {
         let { className: e, title: t, src: n } = this.props,
             { imageLoadError: i, imageLoading: l } = this.state;
         return null == n || i
-            ? (0, s.jsx)(r8.A.div, { className: o()(os.gn, e), style: this.getImageStyle(), children: t })
-            : (0, s.jsxs)(r8.A.div, {
+            ? (0, s.jsx)(r9.A.div, { className: o()(os.gn, e), style: this.getImageStyle(), children: t })
+            : (0, s.jsxs)(r9.A.div, {
                   className: o()(l ? os.g4 : null, e),
                   style: this.getImageStyle(),
                   children: [
@@ -4806,7 +4806,7 @@ class ou extends a.PureComponent {
                           splashPlaceholderClassName: oc.NB,
                       }),
                       l.exclusive
-                          ? (0, s.jsx)(r9, { className: o()(oc.LJ, { [oc.V9]: e }) })
+                          ? (0, s.jsx)(r8, { className: o()(oc.LJ, { [oc.V9]: e }) })
                           : l.isTheGameAwardsWinner
                             ? (0, s.jsx)(r7, { className: o()(oc.LJ, { [oc.V9]: e }) })
                             : null,
@@ -6025,8 +6025,8 @@ var o5 = n(9994),
     o6 = n(461888),
     o7 = n(263908),
     o4 = n(123213),
-    o9 = n(963402),
-    o8 = n(42780),
+    o8 = n(963402),
+    o9 = n(42780),
     de = n(897288),
     dt = n(151101);
 function dn(e) {
@@ -6078,9 +6078,9 @@ function dn(e) {
                 className: dt.uY,
                 ref: d,
                 children: [
-                    (0, s.jsx)(o8.J$, { profile: C, className: dt.vK }),
-                    (0, s.jsx)(o8.CG, { profile: C }),
-                    (0, s.jsx)(o9.A, { profile: C, disableGuildNameClick: !g, guildNameId: c }),
+                    (0, s.jsx)(o9.J$, { profile: C, className: dt.vK }),
+                    (0, s.jsx)(o9.CG, { profile: C }),
+                    (0, s.jsx)(o8.A, { profile: C, disableGuildNameClick: !g, guildNameId: c }),
                     (0, s.jsx)(o7.P, { profile: C, className: dt.rb }),
                     (0, s.jsx)(de.A, {
                         guild: null != t.guild ? (0, oO.DY)(t.guild) : null,
@@ -7206,14 +7206,14 @@ var d2 = n(343552),
 let d6 = [W.Auw.GIFV],
     d7 = 15 * nf.A.Millis.MINUTE,
     d4 = new Set(["discord-developers", "discord-testers", "discord-townhall", "discordgameslab"]),
-    d9 = (e) => () => {
+    d8 = (e) => () => {
         let { url: t, proxyUrl: n, width: i, height: l, flags: a } = e,
             r = (0, c.Lt)(a, lf.e5.IS_ANIMATED);
         return null != i && null != l && (lE.bp.test(n) || (r && (lE.P8.test(n) || lE.p4.test(n))))
             ? (0, s.jsx)(rI.A, { width: i, height: l, src: n, url: t, format: m.TL.IMAGE, className: d5.jj })
             : null;
     };
-class d8 extends a.Component {
+class d9 extends a.Component {
     static defaultProps = { renderEmbeds: !0, compact: !1, hideInviteEmbedBanner: !1, hideActivityInvite: !1 };
     state = { showSuppressModal: !1, showRemoveAttachmentModal: !1, attachmentToDelete: null };
     getAcceptInviteContext = (e, t) => {
@@ -7307,7 +7307,7 @@ class d8 extends a.Component {
                                     let { skuId: l } = n;
                                     return (0, s.jsx)(e3, { application: t, message: e, skuId: l });
                                 case tP.I.APP_OAUTH2_LINK:
-                                    return (0, s.jsx)(e9, { application: t, message: e });
+                                    return (0, s.jsx)(e8, { application: t, message: e });
                                 default:
                                     return null;
                             }
@@ -7510,7 +7510,7 @@ class d8 extends a.Component {
                             duration: l,
                         });
                     },
-                    gifFavoriteButton: d9(r),
+                    gifFavoriteButton: d8(r),
                     allowFullScreen: !this.props.disableComponentInteractivity,
                 },
                 d = (0, aW.E)({ proxyURL: s.proxy_url, url: s.url });
@@ -7643,7 +7643,7 @@ class d8 extends a.Component {
                                       components: t.components ?? [],
                                       message: e,
                                       gifAutoPlay: n,
-                                      getGifFavButton: d9,
+                                      getGifFavButton: d8,
                                       getOnMediaItemContextMenu:
                                           null == r
                                               ? void 0
@@ -7705,7 +7705,7 @@ class d8 extends a.Component {
         } = this.props;
         return (0, s.jsx)(re.N, {
             gifAutoPlay: t,
-            getGifFavButton: d9,
+            getGifFavButton: d8,
             getOnMediaItemContextMenu:
                 null == a
                     ? void 0
@@ -8011,8 +8011,8 @@ function ce(e) {
             }),
             [x, n],
         ),
-        _ = (0, i9.ix)(n.guild_id),
-        [, v] = (0, i8.c)(n.guild_id),
+        _ = (0, i8.ix)(n.guild_id),
+        [, v] = (0, i9.c)(n.guild_id),
         N = (0, aa.Id)(n),
         j =
             (d === i.author.id || C) &&
@@ -8041,7 +8041,7 @@ function ce(e) {
             isActiveChannelOrUnarchivableThread: N,
             isAutomodQuarantined: _,
         }),
-        R = (0, n8.S)((i.editedTimestamp ?? i.timestamp).valueOf()),
+        R = (0, n9.S)((i.editedTimestamp ?? i.timestamp).valueOf()),
         k = (0, lI.A)(n?.id),
         M = (0, lJ.A)(i),
         L = (0, n0.P)(i),
@@ -8049,7 +8049,7 @@ function ce(e) {
         D = (0, aq._f)(i.id, i.channel_id),
         U = (0, nQ._R)(),
         G = (0, ie.U)();
-    return (0, s.jsx)(d8, {
+    return (0, s.jsx)(d9, {
         canSuppressEmbeds: j,
         canDeleteAttachments: T,
         ...b,
@@ -8093,12 +8093,12 @@ function ct(e) {
         m = ia.rs.useSetting(),
         h = ia.kt.useSetting(),
         g = (0, ie.U)(),
-        p = (0, n8.S)((t.editedTimestamp ?? t.timestamp).valueOf()),
+        p = (0, n9.S)((t.editedTimestamp ?? t.timestamp).valueOf()),
         A = (0, lI.A)(n?.id),
         x = (0, n0.P)(t),
         f = (0, aq._f)(t.id, t.channel_id),
         E = (0, lJ.A)(t);
-    return (0, s.jsx)(d8, {
+    return (0, s.jsx)(d9, {
         ...d,
         message: t,
         channel: n,

@@ -2,9 +2,9 @@ e.d(l, { A: () => d });
 var n = e(599026),
     a = e(440594),
     i = e(541806),
-    s = e(765379),
-    o = e(90644),
-    r = e(82149),
+    o = e(765379),
+    r = e(90644),
+    s = e(82149),
     u = e(652215),
     p = e(375708);
 function d(t) {
@@ -19,18 +19,18 @@ function d(t) {
             : t?.status_display_type === n.A.STATE && null != c
               ? (A = c)
               : t?.status_display_type === n.A.DETAILS && null != d && (A = d),
-        (0, s.A)(t))
+        (0, o.A)(t))
     ) {
         let t = (0, a.A)(e);
         return { text: t, tooltip: t };
     }
     if (t?.type === u.$pd.PLAYING && null != A)
         return { text: A, tooltip: p.intl.formatToPlainString(p.t.lFApmz, { game: A }) };
-    if ((0, o.A)(t) && l && null != c) {
+    if ((0, r.A)(t) && l && null != c) {
         let t = c.split("; ")?.join(", ");
         return { text: t, tooltip: p.intl.formatToPlainString(p.t.Vnuxue, { name: t }) };
     }
-    return (0, r.Cy)(t) && null != e
+    return (0, s.Cy)(t) && null != e
         ? { text: e, tooltip: p.intl.formatToPlainString(p.t.pW3Ip3, { name: e }) }
         : t?.type === u.$pd.LISTENING && null != A
           ? { text: A, tooltip: p.intl.formatToPlainString(p.t.Vnuxue, { name: A }) }

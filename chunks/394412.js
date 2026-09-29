@@ -2,8 +2,8 @@ t.d(n, { A: () => f });
 var i = t(477900);
 t(582128);
 var l = t(17928),
-    s = t(661531),
-    a = t(192308),
+    a = t(661531),
+    s = t(192308),
     o = t(81466),
     r = t(931991),
     c = t(734057),
@@ -21,15 +21,15 @@ function f(e) {
         E = (0, l.bG)([c.A], () => c.A.getChannel(n), [n]),
         I = (0, h.RO)(n),
         v = null != (0, h.Qs)(n),
-        { canManageGuildEvent: T } = (0, r.nr)(E),
-        j = (0, l.bG)([u.A], () => I.filter((e) => !u.A.isEventDismissed(e.id)), [I]),
-        N = (0, l.cf)([A.Ay], () => j.reduce((e, n) => ((e[n.id] = A.Ay.getUserCount(n.id, (0, C.G3)(n))), e), {}), [
-            j,
+        { canManageGuildEvent: j } = (0, r.nr)(E),
+        T = (0, l.bG)([u.A], () => I.filter((e) => !u.A.isEventDismissed(e.id)), [I]),
+        N = (0, l.cf)([A.Ay], () => T.reduce((e, n) => ((e[n.id] = A.Ay.getUserCount(n.id, (0, C.G3)(n))), e), {}), [
+            T,
         ]);
-    return j.length < 1 || v
+    return T.length < 1 || v
         ? null
         : (0, i.jsx)(i.Fragment, {
-              children: j.map((e) =>
+              children: T.map((e) =>
                   (0, i.jsx)(
                       p.A,
                       {
@@ -39,14 +39,14 @@ function f(e) {
                               height: 20,
                               width: 20,
                           }),
-                          color: s.A.unsafe_rawColors.GREEN_360.css,
-                          title: x.intl.formatToPlainString(T(e) ? x.t["1vGXqM"] : x.t.xMJyla, { eventName: e.name }),
+                          color: a.A.unsafe_rawColors.GREEN_360.css,
+                          title: x.intl.formatToPlainString(j(e) ? x.t["1vGXqM"] : x.t.xMJyla, { eventName: e.name }),
                           description: x.intl.formatToPlainString(x.t.PTebCR, {
                               startTime: (0, C.CC)(e.scheduled_start_time).startDateTimeString,
                           }),
                           onClick: () => {
-                              T(e)
-                                  ? (0, a.openModalLazy)(async () => {
+                              j(e)
+                                  ? (0, s.openModalLazy)(async () => {
                                         let { default: n } = await Promise.all([
                                             t.e("476227"),
                                             t.e("998835"),

@@ -1,8 +1,8 @@
 t.d(n, { A: () => E });
 var i = t(477900),
     l = t(582128),
-    s = t(17928),
-    a = t(922016),
+    a = t(17928),
+    s = t(922016),
     o = t(980707),
     r = t(477782),
     c = t(285796),
@@ -20,19 +20,19 @@ function E(e) {
     let { channelId: n, onClick: t } = e,
         E = (0, u.Us)(),
         I = (0, g.Qs)(n),
-        v = (0, s.bG)([h.A], () => h.A.getChannel(n), [n]),
-        { canManageGuildEvent: T } = (0, d.nr)(v),
-        j = T(I),
+        v = (0, a.bG)([h.A], () => h.A.getChannel(n), [n]),
+        { canManageGuildEvent: j } = (0, d.nr)(v),
+        T = j(I),
         N = l.useRef(null);
     if (null == I) return null;
     function _() {
         null != v && (0, x.A)(v) ? (0, C.Py)(v, E) : t();
     }
-    function O() {
+    function b() {
         null != I && p.default.endEvent(I.id, I.guild_id);
     }
-    return j
-        ? (0, i.jsx)(a.Y, {
+    return T
+        ? (0, i.jsx)(s.Y, {
               targetElementRef: N,
               renderPopout: (e) => {
                   let { closePopout: n } = e;
@@ -46,7 +46,7 @@ function E(e) {
                           children: (0, i.jsx)(r.Dr, {
                               id: "end-voice-event",
                               color: "danger",
-                              action: O,
+                              action: b,
                               label: f.intl.string(f.t.qaYzPA),
                               leadingAccessory: { type: "icon", icon: c.a },
                               icon: c.a,
@@ -56,7 +56,7 @@ function E(e) {
               },
               align: "center",
               position: "top",
-              animation: a.Y.Animation.FADE,
+              animation: s.Y.Animation.FADE,
               children: (e) => {
                   let { onClick: n } = e;
                   return (0, i.jsx)(m.A, {

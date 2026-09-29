@@ -1,8 +1,8 @@
 t.d(n, { K: () => _ });
 var i = t(477900),
     l = t(582128),
-    s = t(17928),
-    a = t(554146),
+    a = t(17928),
+    s = t(554146),
     o = t(922016),
     r = t(866665),
     c = t(155718),
@@ -19,18 +19,18 @@ var i = t(477900),
     E = t(421773),
     I = t(168754),
     v = t(376086),
-    T = t(652215),
-    j = t(49999),
+    j = t(652215),
+    T = t(49999),
     N = t(375708);
 function _(e) {
-    let { channel: n, idle: t, whichPopoutIsOpen: _, setWhichPopoutIsOpen: O } = e,
-        b = (0, s.bG)([u.Ay], () => u.Ay.isLaunchingActivity()),
+    let { channel: n, idle: t, whichPopoutIsOpen: _, setWhichPopoutIsOpen: b } = e,
+        O = (0, a.bG)([u.Ay], () => u.Ay.isLaunchingActivity()),
         y = (0, A.et)(n.id),
         S = (0, A.dL)(y),
-        R = y !== A.xy.CAN_LAUNCH || b,
+        R = y !== A.xy.CAN_LAUNCH || O,
         { isHovered: D, setIsHovered: L, onMouseEnter: M, onMouseLeave: P } = (0, E.A)(200, 300),
         k = (0, d.b)({ surface: c.YI.VOICE_LAUNCHER }),
-        U = (0, s.bG)(
+        U = (0, a.bG)(
             [u.Ay],
             () => null != u.Ay.getSelfEmbeddedActivityForLocation(u.Ay.getConnectedActivityLocation()),
         ),
@@ -41,7 +41,7 @@ function _(e) {
             },
             [M],
         ),
-        B = (0, f.Us)() === T.BRT.POPOUT,
+        B = (0, f.Us)() === j.BRT.POPOUT,
         { parentAnalyticsLocation: w, newestAnalyticsLocation: H } = (0, C.Ay)(),
         Y = l.useCallback(() => {
             ((0, x.X)(w, x.O.ACTIVITY),
@@ -51,16 +51,16 @@ function _(e) {
                     analyticsLocation: H,
                 }));
         }, [n, B, H, w]),
-        F = R ? [] : [a.M.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP],
+        F = R ? [] : [s.M.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP],
         X = l.useRef(!1),
         K = l.useRef(null);
     return (0, i.jsx)(g.Ay, {
         contentTypes: F,
         children: (e) => {
-            let { visibleContent: l, markAsDismissed: s } = e,
-                c = l === a.M.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP && !t && !D;
+            let { visibleContent: l, markAsDismissed: a } = e,
+                c = l === s.M.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP && !t && !D;
             return (
-                X.current && !c && s(j.i.AUTO_DISMISS),
+                X.current && !c && a(T.i.AUTO_DISMISS),
                 X.current !== c && (X.current = c),
                 (0, i.jsx)(o.Y, {
                     targetElementRef: K,
@@ -72,7 +72,7 @@ function _(e) {
                     align: "center",
                     spacing: 16,
                     onRequestClose: () => {
-                        (L(!1), O?.(void 0));
+                        (L(!1), b?.(void 0));
                     },
                     renderPopout: (e) => {
                         let { closePopout: t, setPopoutRef: l } = e;
@@ -86,13 +86,13 @@ function _(e) {
                                   onMouseEnter: M,
                                   onMouseLeave: P,
                                   isHovered: D,
-                                  onClick: () => s(j.i.UNKNOWN),
+                                  onClick: () => a(T.i.UNKNOWN),
                               })
                             : (0, i.jsx)(i.Fragment, {});
                     },
                     children: () =>
                         (0, i.jsx)(g.GY, {
-                            contentType: a.M.ACTIVITIES_VOICE_LAUNCHER_BADGE,
+                            contentType: s.M.ACTIVITIES_VOICE_LAUNCHER_BADGE,
                             latestVersion: k,
                             children: (e) => {
                                 let { visibleContent: n, markAsDismissed: t } = e;
@@ -112,18 +112,18 @@ function _(e) {
                                                     onClick: () => {
                                                         (Y(),
                                                             l ===
-                                                                a.M
+                                                                s.M
                                                                     .VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP &&
-                                                                s(j.i.TAKE_ACTION),
-                                                            n === a.M.ACTIVITIES_VOICE_LAUNCHER_BADGE &&
-                                                                t(j.i.TAKE_ACTION));
+                                                                a(T.i.TAKE_ACTION),
+                                                            n === s.M.ACTIVITIES_VOICE_LAUNCHER_BADGE &&
+                                                                t(T.i.TAKE_ACTION));
                                                     },
                                                     onMouseEnter: V,
                                                     onMouseLeave: P,
                                                 }),
                                             }),
                                         }),
-                                        n === a.M.ACTIVITIES_VOICE_LAUNCHER_BADGE
+                                        n === s.M.ACTIVITIES_VOICE_LAUNCHER_BADGE
                                             ? (0, i.jsx)(h.a, { top: 2, right: 2, size: 6 })
                                             : null,
                                     ],

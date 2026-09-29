@@ -1,8 +1,8 @@
 t.d(n, { h: () => c });
 var i = t(477900),
     l = t(582128),
-    s = t(416696),
-    a = t(797394),
+    a = t(416696),
+    s = t(797394),
     o = t(204651),
     r = t(375708);
 function c(e) {
@@ -30,8 +30,8 @@ function c(e) {
           : c
             ? r.intl.string(r.t.fjBNo1)
             : r.intl.string(r.t.uQn9B8);
-    let { Component: E, events: I, play: v } = (0, s.c)(u ? "disable" : "enable"),
-        T = A ? a.i : E;
+    let { Component: E, events: I, play: v } = (0, a.c)(u ? "disable" : "enable"),
+        j = A ? s.i : E;
     return (
         l.useEffect(() => () => v(), [u, v]),
         (0, i.jsx)(f, {
@@ -39,7 +39,7 @@ function c(e) {
             isTrayButton: !0,
             label: t,
             disabled: !c,
-            iconComponent: T,
+            iconComponent: j,
             isActive: u,
             color: (p ? (n = "premiumGradient") : u && (n = "green"), n),
             onMouseEnter: (e) => {
