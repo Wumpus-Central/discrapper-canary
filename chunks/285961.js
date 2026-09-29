@@ -1,4 +1,4 @@
-r.d(t, { d5: () => V, Ay: () => H, uG: () => U });
+r.d(t, { d5: () => H, Ay: () => W, uG: () => O });
 var n = r(477900),
     s = r(582128),
     l = r(503698),
@@ -66,7 +66,17 @@ function b(e, t) {
 function M(e) {
     return e === c.TL.VIDEO;
 }
-class U extends s.PureComponent {
+function U(e) {
+    let t = x.A.toURLSafe(e, document.baseURI),
+        r = null != t && (v.BX(t) || v.i(t)) && t.pathname.toLowerCase().endsWith(".gif");
+    return null != t &&
+        (((v.BX(t) || v.i(t)) &&
+            (t.pathname.toLowerCase().endsWith(".webp") || t.pathname.toLowerCase().endsWith(".avif"))) ||
+            r)
+        ? (r && t.searchParams.set("format", "webp"), t.searchParams.set("animated", "true"), t.toString())
+        : e;
+}
+class O extends s.PureComponent {
     ref = null;
     _video = null;
     _image = null;
@@ -78,7 +88,7 @@ class U extends s.PureComponent {
             M(t) ||
                 ((this._image = n.getElement()),
                 (this._image.onload = () => this.setState({ loaded: !0 })),
-                (this._image.src = e.src)));
+                (this._image.src = U(e.src))));
     }
     componentDidMount() {
         let {
@@ -123,34 +133,12 @@ class U extends s.PureComponent {
         t?.(e, r);
     };
     renderGIF() {
-        let e,
-            t,
-            {
-                src: r,
-                coords: { width: s, height: l },
+        let {
+                src: e,
+                coords: { width: t, height: r },
             } = this.props,
-            { loaded: i } = this.state;
-        return i
-            ? (0, n.jsx)("img", {
-                  src:
-                      ((t =
-                          null != (e = x.A.toURLSafe(r)) &&
-                          (v.BX(e) || v.i(e)) &&
-                          e.pathname.toLowerCase().endsWith(".gif")),
-                      null != e &&
-                      (((v.BX(e) || v.i(e)) &&
-                          (e.pathname.toLowerCase().endsWith(".webp") || e.pathname.toLowerCase().endsWith(".avif"))) ||
-                          t)
-                          ? (t && e.searchParams.set("format", "webp"),
-                            e.searchParams.set("animated", "true"),
-                            e.toString())
-                          : r),
-                  width: s,
-                  height: l,
-                  className: G.nX,
-                  alt: "",
-              })
-            : null;
+            { loaded: s } = this.state;
+        return s ? (0, n.jsx)("img", { src: U(e), width: t, height: r, className: G.nX, alt: "" }) : null;
     }
     render() {
         let { item: e, renderExtras: t, format: r, coords: s, focused: l, selected: i, "aria-label": a } = this.props,
@@ -171,7 +159,7 @@ class U extends s.PureComponent {
         });
     }
 }
-class O extends s.PureComponent {
+class V extends s.PureComponent {
     _masonryRef = s.createRef();
     _footerContent = null;
     prevResultQuery = null;
@@ -247,7 +235,7 @@ class O extends s.PureComponent {
         if (null == c) return null;
         let h = null != u && P(u) === P(c);
         return (0, n.jsx)(
-            U,
+            O,
             {
                 item: c,
                 index: t,
@@ -435,7 +423,7 @@ class O extends s.PureComponent {
         );
     }
 }
-function V() {
+function H() {
     let { renderWindow: e } = s.useContext(C.Ay),
         t = e.document,
         [r] = s.useState(
@@ -472,7 +460,7 @@ function V() {
         );
     return { imagePool: r, videoPool: n };
 }
-let H = function (e) {
-    let t = V();
-    return (0, n.jsx)(O, { ...e, ...t });
+let W = function (e) {
+    let t = H();
+    return (0, n.jsx)(V, { ...e, ...t });
 };
