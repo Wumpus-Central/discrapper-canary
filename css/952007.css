@@ -10128,7 +10128,9 @@
     --modal-width-small: 442px;
     --select-max-width: 248px;
     --select-option-height: 40px;
+    --toast-animation-duration-ms: 300px;
     --toast-max-width: 280px;
+    --toast-queue-enter-delay-ms: 400px;
     --toast-text-line-count: 2px
 }
 
@@ -10327,4 +10329,4 @@
     --motion-spring-subtle-duration: 598ms
 }
 
-/*# sourceMappingURL=952007.3cae7334a43e71b3.css.map*/
+/*# sourceMappingURL=952007.3a32a6c100854d4e.css.map*/

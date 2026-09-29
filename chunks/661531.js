@@ -9478,7 +9478,12 @@ let { Themes: c } = d.zv,
                 WIDTH_SMALL: { resolve: () => 442 },
             },
             select: { MAX_WIDTH: { resolve: () => 248 }, OPTION_HEIGHT: { resolve: () => 40 } },
-            toast: { MAX_WIDTH: { resolve: () => 280 }, TEXT_LINE_COUNT: { resolve: () => 2 } },
+            toast: {
+                ANIMATION_DURATION_MS: { resolve: () => 300 },
+                MAX_WIDTH: { resolve: () => 280 },
+                QUEUE_ENTER_DELAY_MS: { resolve: () => 400 },
+                TEXT_LINE_COUNT: { resolve: () => 2 },
+            },
         },
     },
     {
