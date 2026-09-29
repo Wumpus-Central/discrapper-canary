@@ -1,4 +1,4 @@
-(n.d(t, { A: () => A, W: () => h }), n(321073));
+(n.d(t, { A: () => A, W: () => E }), n(321073));
 var i = n(582128),
     l = n(17928),
     r = n(796637),
@@ -12,35 +12,35 @@ function A(e) {
     let { withVoiceChannels: t = !1, withCurrentVoiceChannel: n = !1 } =
             arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         i = arguments.length > 2 ? arguments[2] : void 0;
-    return E(
+    return h(
         (0, s.ai)(e) ? (0, r.g)() : a.A.getGuildWithoutChangingGuildActionRows(e).guildChannels,
         { currentVoiceChannelId: u.Ay.getVoiceChannelId(), selectedChannelId: u.Ay.getChannelId() },
         { withVoiceChannels: t, withCurrentVoiceChannel: n },
         i,
     );
 }
-function h(e, t, n) {
+function E(e, t, n) {
     let { withVoiceChannels: r = !1, withCurrentVoiceChannel: s = !1 } =
             arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
         a = arguments.length > 4 ? arguments[4] : void 0,
         o = (0, l.bG)([c.default], () => c.default.getGuildChangeSentinel(e)),
         A = (0, l.bG)([d.A], () => d.A.version),
-        { currentVoiceChannelId: h, selectedChannelId: C } = (0, l.cf)([u.Ay], () => ({
+        { currentVoiceChannelId: E, selectedChannelId: C } = (0, l.cf)([u.Ay], () => ({
             currentVoiceChannelId: u.Ay.getVoiceChannelId(),
             selectedChannelId: u.Ay.getChannelId(),
         }));
     return (0, i.useMemo)(
         () =>
-            E(
+            h(
                 t,
-                { currentVoiceChannelId: h, selectedChannelId: C },
+                { currentVoiceChannelId: E, selectedChannelId: C },
                 { withVoiceChannels: r, withCurrentVoiceChannel: s },
                 a,
             ).map((e) => e.id),
         [t, n, o, A],
     );
 }
-function E(e, t) {
+function h(e, t) {
     let { currentVoiceChannelId: n, selectedChannelId: i } = t,
         { withVoiceChannels: l, withCurrentVoiceChannel: r } =
             arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},

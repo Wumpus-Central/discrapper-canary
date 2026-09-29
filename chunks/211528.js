@@ -1,4 +1,4 @@
-n.d(t, { KS: () => _, Wf: () => f, ZB: () => g });
+n.d(t, { KS: () => g, Wf: () => f, ZB: () => _ });
 var r = n(477900),
     l = n(582128),
     o = n(643909),
@@ -34,7 +34,7 @@ let f = l.memo(function (e) {
             let e = u.default.getCurrentUser();
             return null != e ? e.globalName : null;
         }),
-        g = l.useCallback(
+        _ = l.useCallback(
             (e) => {
                 if (p !== s.pn.PAYMENT_ELEMENT) return;
                 let t = (0, m.Wn)(e.value.type, a);
@@ -54,7 +54,7 @@ let f = l.memo(function (e) {
             },
             [C, d, p, a],
         ),
-        _ = l.useMemo(
+        g = l.useMemo(
             () => ({
                 applePay: n.includes("applePay") ? "auto" : "never",
                 googlePay: n.includes("googlePay") ? "auto" : "never",
@@ -69,11 +69,11 @@ let f = l.memo(function (e) {
         P = l.useMemo(
             () => ({
                 id: "stripe-payment-element",
-                options: { layout: { type: "tabs" }, wallets: _, defaultValues: T, paymentMethodOrder: t, ...h },
-                onChange: g,
+                options: { layout: { type: "tabs" }, wallets: g, defaultValues: T, paymentMethodOrder: t, ...h },
+                onChange: _,
                 ...y,
             }),
-            [_, T, h, y, g, t],
+            [g, T, h, y, _, t],
         );
     return (0, r.jsx)(o.PaymentElement, { ...P });
 });
@@ -88,10 +88,10 @@ function S(e) {
         children: t,
     });
 }
-function g(e) {
+function _(e) {
     return null != e && null != e && (!(0, d.uJ)(e.line1) || !(0, d.uJ)(e.city));
 }
-let _ = l.memo(function (e) {
+let g = l.memo(function (e) {
     let {
             options: t,
             renderAsStandaloneElement: n,
@@ -104,7 +104,7 @@ let _ = l.memo(function (e) {
         p = null != c && c.length > 0 ? c[0] : (0, d.uJ)(a.country) ? "" : a.country,
         m = l.useMemo(() => {
             let { name: e, address: t } = (0, h._Z)({ ...a, country: p });
-            return null != t && g(t)
+            return null != t && _(t)
                 ? {
                       ...(null != e && "" !== e && { name: e }),
                       address: Object.fromEntries(

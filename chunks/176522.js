@@ -1,4 +1,4 @@
-(n.d(t, { M$: () => v, Fv: () => L, kF: () => m, Oc: () => O, GY: () => b }), n(667532));
+(n.d(t, { M$: () => v, Fv: () => m, kF: () => f, Oc: () => L, GY: () => b }), n(667532));
 var i = n(310953),
     l = n(473529),
     r = n(519059),
@@ -9,11 +9,11 @@ var i = n(310953),
     c = n(189081),
     u = n(839067),
     A = n(645959),
-    h = n(403362),
-    E = n(265422),
+    E = n(403362),
+    h = n(265422),
     C = n(652215),
-    g = n(746080);
-let _ = () => {
+    _ = n(746080);
+let g = () => {
     let e = s.A.getMessageRequestsCount() > 0 || a.A.getSpamChannelsCount() > 0;
     return [
         C.BVt.FRIENDS,
@@ -24,7 +24,7 @@ let _ = () => {
         C.BVt.COLLECTIBLES_SHOP,
         d.dm.getSetting() ? C.BVt.FAMILY_CENTER : null,
         C.BVt.QUEST_HOME,
-    ].filter(h.Vq);
+    ].filter(E.Vq);
 };
 function I() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
@@ -34,37 +34,37 @@ function I() {
             var t, n;
             let { channelId: i, path: l, basePath: r } = o.A.getState(),
                 s = A.A.getPrivateChannelIds(),
-                a = __OVERLAY__ ? s : [..._(), ...s],
+                a = __OVERLAY__ ? s : [...g(), ...s],
                 d =
-                    (null == i ? ((t = l ?? r), _().findIndex((e) => t.startsWith(e))) : null != i ? a.indexOf(i) : 0) +
+                    (null == i ? ((t = l ?? r), g().findIndex((e) => t.startsWith(e))) : null != i ? a.indexOf(i) : 0) +
                     e;
             d >= a.length ? (d = 0) : d < 0 && (d = a.length - 1);
             let c = a[d];
-            if (_().includes(c)) {
+            if (g().includes(c)) {
                 let e;
-                ((e = u.A.getCurrentRoute()), c === C.BVt.APPLICATION_STORE && null != e ? (0, E.a)(e) : (0, E.a)(c));
-            } else ((n = C.ME), (0, E.i)(n, c));
+                ((e = u.A.getCurrentRoute()), c === C.BVt.APPLICATION_STORE && null != e ? (0, h.a)(e) : (0, h.a)(c));
+            } else ((n = C.ME), (0, h.i)(n, c));
         })(e);
     else {
         var n, r, s;
         let a, d;
         ((a = o.A.getState().channelId),
             (d = (0, i.A)(t, { withCurrentVoiceChannel: !0 }).map((e) => e.id)),
-            (0, l.K)(t) && d.unshift(g.VV.GUILD_HOME),
+            (0, l.K)(t) && d.unshift(_.VV.GUILD_HOME),
             (n = (null != a ? d.indexOf(a) : -1) + e),
             (r = d.length),
             (s = d[n < 0 ? r - 1 : n >= r ? 0 : n]),
-            (0, E.i)(t, s));
+            (0, h.i)(t, s));
     }
 }
 var T = n(963169),
     p = n(345942),
     N = n(309010),
     S = n(967198),
-    f = n(723702);
-let m = { binds: ["alt+down"], comboKeysBindGlobal: !0, action: () => (I(), !1) },
-    O = { binds: ["alt+up"], comboKeysBindGlobal: !0, action: () => (I(-1), !1) },
-    L = {
+    O = n(723702);
+let f = { binds: ["alt+down"], comboKeysBindGlobal: !0, action: () => (I(), !1) },
+    L = { binds: ["alt+up"], comboKeysBindGlobal: !0, action: () => (I(-1), !1) },
+    m = {
         binds: ["mod+alt+right"],
         comboKeysBindGlobal: !0,
         action() {
@@ -72,18 +72,18 @@ let m = { binds: ["alt+down"], comboKeysBindGlobal: !0, action: () => (I(), !1) 
             if (null != S.A.getGuildId()) e = C.ME;
             else {
                 let t = S.A.getLastSelectedGuildId();
-                null != t && ((e = t), (0, E.i)(t, N.Ay.getChannelId(t)));
+                null != t && ((e = t), (0, h.i)(t, N.Ay.getChannelId(t)));
             }
             return (null != e && (0, p.u)(e), !1);
         },
     },
     b = {
-        binds: (0, f.isMac)() || (0, f.isMacWeb)() ? ["mod+["] : ["alt+left"],
+        binds: (0, O.isMac)() || (0, O.isMacWeb)() ? ["mod+["] : ["alt+left"],
         comboKeysBindGlobal: !0,
         action: () => ((0, T.OE)("keybind"), !1),
     },
     v = {
-        binds: (0, f.isMac)() || (0, f.isMacWeb)() ? ["mod+]"] : ["alt+right"],
+        binds: (0, O.isMac)() || (0, O.isMacWeb)() ? ["mod+]"] : ["alt+right"],
         comboKeysBindGlobal: !0,
         action: () => ((0, T.Qb)("keybind"), !1),
     };

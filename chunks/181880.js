@@ -29,8 +29,8 @@ function M(e) {
     let { guildId: t, markAsDismissed: n, transitionState: A, onClose: h } = e,
         [m, p] = s.useState(I),
         [M, f] = s.useState(null),
-        [L, R] = s.useState("init"),
-        D = m === c.tI.PERSONAL,
+        [L, D] = s.useState("init"),
+        R = m === c.tI.PERSONAL,
         O = (0, l.bG)([E.A], () => E.A.getGuildId()),
         x = (0, l.bG)(
             [C.A],
@@ -40,7 +40,7 @@ function M(e) {
             },
             [t],
         ),
-        G = D ? null : x;
+        G = R ? null : x;
     s.useEffect(() => {
         O !== t && h();
     }, [t, h, O]);
@@ -50,16 +50,16 @@ function M(e) {
         b = s.useCallback(async () => {
             if ("init" === L) {
                 if (O !== t) return void (await h());
-                (R("submitting"), f(null));
+                (D("submitting"), f(null));
                 try {
-                    await g(t, D);
+                    await g(t, R);
                 } catch (e) {
-                    (T.error("Failed to save guild theme NUX preference", e), f(N.intl.string(N.t.fEptJP)), R("init"));
+                    (T.error("Failed to save guild theme NUX preference", e), f(N.intl.string(N.t.fEptJP)), D("init"));
                     return;
                 }
-                (R("submitted"), n(_.i.TAKE_ACTION), await h());
+                (D("submitted"), n(_.i.TAKE_ACTION), await h());
             }
-        }, [t, D, n, h, O, L]),
+        }, [t, R, n, h, O, L]),
         y = s.useCallback(async () => {
             ("submitted" !== L && n(_.i.USER_DISMISS), await h());
         }, [n, h, L]),
@@ -70,7 +70,7 @@ function M(e) {
             ],
             [],
         ),
-        H = D ? N.intl.string(N.t.cvoikF) : N.intl.string(N.t["cY+Oob"]);
+        H = R ? N.intl.string(N.t.cvoikF) : N.intl.string(N.t["cY+Oob"]);
     return (0, i.jsx)(a.k, {
         size: "md",
         transitionState: A,
@@ -87,7 +87,7 @@ function M(e) {
         actions: [
             {
                 text: H,
-                variant: D ? "secondary" : "primary",
+                variant: R ? "secondary" : "primary",
                 loading: "submitting" === L,
                 disabled: "submitting" === L,
                 onClick: b,
@@ -107,7 +107,7 @@ function M(e) {
                     label: N.intl.string(N.t.Q7mm4g),
                     hideLabel: !0,
                 }),
-                D && (0, i.jsx)(u.w, { type: "warning", children: N.intl.string(N.t.tTHQAy) }),
+                R && (0, i.jsx)(u.w, { type: "warning", children: N.intl.string(N.t.tTHQAy) }),
                 null != M && (0, i.jsx)(u.w, { type: "critical", children: M }),
             ],
         }),

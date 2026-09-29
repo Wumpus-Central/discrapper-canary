@@ -10,12 +10,12 @@ var l = n(661531),
     c = n(459793),
     u = n(927018),
     A = n(700696);
-let h = {
+let E = {
         trophy: l.A.unsafe_rawColors.PRIMARY_400.css,
         locked: l.A.unsafe_rawColors.PRIMARY_400.css,
         unlocked: l.A.unsafe_rawColors.GREEN_330.css,
     },
-    E = {
+    h = {
         trophy: l.A.unsafe_rawColors.PRIMARY_400.css,
         locked: l.A.unsafe_rawColors.PRIMARY_400.css,
         unlocked: l.A.unsafe_rawColors.GREEN_330.css,
@@ -23,19 +23,19 @@ let h = {
 function C(e) {
     let { achievementId: t, unlocked: n, size: l = s._3.SIZE_40 } = e,
         C = (0, d.Ay)(),
-        g = (0, u.vM)(t);
-    if (null == g) return null;
-    let _ = (0, s.Kj)(l),
-        { name: I, rarity: T } = g,
+        _ = (0, u.vM)(t);
+    if (null == _) return null;
+    let g = (0, s.Kj)(l),
+        { name: I, rarity: T } = _,
         { color: p } = (0, u.ag)(T),
-        N = (0, r.M)(C) ? h : E,
-        S = (_.size - _.offset - 2 * _.stroke) * 0.8,
-        f = _.size - _.stroke,
-        m = { width: 0.4 * S, height: 0.4 * S },
-        O = { width: m.width + 1, height: m.height + 1, right: _.stroke + 1, bottom: _.stroke + 1, padding: 0 };
+        N = (0, r.M)(C) ? E : h,
+        S = (g.size - g.offset - 2 * g.stroke) * 0.8,
+        O = g.size - g.stroke,
+        f = { width: 0.4 * S, height: 0.4 * S },
+        L = { width: f.width + 1, height: f.height + 1, right: g.stroke + 1, bottom: g.stroke + 1, padding: 0 };
     return (0, i.jsxs)("div", {
         className: A.kL,
-        style: { width: f, height: f, padding: _.stroke },
+        style: { width: O, height: O, padding: g.stroke },
         "aria-label": `${I() ?? ""}`,
         children: [
             (0, i.jsx)("div", {
@@ -45,12 +45,12 @@ function C(e) {
             !n &&
                 (0, i.jsx)("div", {
                     className: A.dq,
-                    style: O,
-                    children: (0, i.jsx)(o.LockIcon, { size: "custom", color: N.locked, ...m }),
+                    style: L,
+                    children: (0, i.jsx)(o.LockIcon, { size: "custom", color: N.locked, ...f }),
                 }),
             n &&
                 T === u.md.LEGENDARY &&
-                (0, i.jsx)("div", { className: A.dq, style: O, children: (0, i.jsx)(c.A, { className: A.ox, ...m }) }),
+                (0, i.jsx)("div", { className: A.dq, style: L, children: (0, i.jsx)(c.A, { className: A.ox, ...f }) }),
         ],
     });
 }

@@ -74,10 +74,10 @@ function f() {
                     if (!v && (!w || A)) return;
                     b = Math.min(1, Math.max(0, b + ((w ? 1 : -1) * k) / 260));
                     let S = t.getBoundingClientRect(),
-                        E = S.width > 0 ? S.width / f : 1,
-                        C = r.getBoundingClientRect(),
-                        I = (C.left - S.left) / E,
-                        M = (1 - Math.min(1, Math.abs(I + C.width / E / 2 - i) / 16)) * b;
+                        C = S.width > 0 ? S.width / f : 1,
+                        E = r.getBoundingClientRect(),
+                        I = (E.left - S.left) / C,
+                        M = (1 - Math.min(1, Math.abs(I + E.width / C / 2 - i) / 16)) * b;
                     if (M < 0.01) {
                         (v && l.clearRect(0, 0, f, m), (v = !1));
                         return;

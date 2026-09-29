@@ -1,4 +1,4 @@
-n.d(t, { e: () => g });
+n.d(t, { e: () => _ });
 var i = n(477900),
     l = n(582128),
     r = n(503698),
@@ -9,23 +9,23 @@ if (221552 == n.j) var d = n(28863);
 if (221552 == n.j) var c = n(939249);
 if (221552 == n.j) var u = n(789645);
 var A = n(558001),
-    h = n(835002),
-    E = n(375708),
+    E = n(835002),
+    h = n(375708),
     C = n(323747);
-function g(e) {
-    let { label: t, labelHook: n, count: r, dismissNotice: g, className: _, noticeType: I } = e,
-        T = null != g;
+function _(e) {
+    let { label: t, labelHook: n, count: r, dismissNotice: _, className: g, noticeType: I } = e,
+        T = null != _;
     l.useEffect(() => {
-        (0, A.N)(I, h.YX.VIEWED);
+        (0, A.N)(I, E.YX.VIEWED);
     }, [I]);
     let p = l.useCallback(() => {
-            null != g && (g(), (0, A.N)(I, h.YX.DISMISS));
-        }, [I, g]),
+            null != _ && (_(), (0, A.N)(I, E.YX.DISMISS));
+        }, [I, _]),
         N = l.useCallback(() => {
-            (n(), (0, A.N)(I, h.YX.LEARN_MORE));
+            (n(), (0, A.N)(I, E.YX.LEARN_MORE));
         }, [I, n]);
     return (0, i.jsxs)("div", {
-        className: s()(C.I, _),
+        className: s()(C.I, g),
         children: [
             (0, i.jsx)(a.CircleInformationIcon, { size: "md" }),
             (0, i.jsx)(o.E, {
@@ -33,11 +33,11 @@ function g(e) {
                 color: "interactive-text-active",
                 children:
                     null != r
-                        ? E.intl.format(t, {
+                        ? h.intl.format(t, {
                               hook: (e, t) => (0, i.jsx)(d.Anchor, { onClick: N, children: e }, t),
                               count: r,
                           })
-                        : E.intl.format(t, { hook: (e, t) => (0, i.jsx)(d.Anchor, { onClick: N, children: e }, t) }),
+                        : h.intl.format(t, { hook: (e, t) => (0, i.jsx)(d.Anchor, { onClick: N, children: e }, t) }),
             }),
             T && (0, i.jsx)(c.D, { className: C.b, onClick: p, children: (0, i.jsx)(u.P, {}) }),
         ],

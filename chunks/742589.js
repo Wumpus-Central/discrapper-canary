@@ -10,8 +10,8 @@ var l = n(607399),
     c = n(19575),
     u = n(58736),
     A = n(746080),
-    h = n(549575);
-let E = (0, a.Fe)({
+    E = n(549575);
+let h = (0, a.Fe)({
     createPromise: () =>
         Promise.all([
             n.e("245553"),
@@ -38,7 +38,7 @@ async function C(e) {
         "Minimize" === e ? c.Ay.minimize() : "Maximize" === e && c.Ay.maximize();
     }
 }
-function g(e) {
+function _(e) {
     let {
         children: t,
         className: n,
@@ -48,14 +48,14 @@ function g(e) {
         transparent: o = !1,
         hidden: d = !1,
         toolbar: c,
-        mobileToolbar: g,
-        "aria-label": _,
+        mobileToolbar: _,
+        "aria-label": g,
         "aria-labelledby": I,
         scrollable: T,
         role: p,
         hideSearch: N,
         disableDoubleClick: S,
-        disableFocusRingScope: f,
+        disableFocusRingScope: O,
     } = e;
     return (0, i.jsx)(u.Ay, {
         className: n,
@@ -64,12 +64,12 @@ function g(e) {
             if (null == c) return null;
             let e = null != r && !N;
             return l.Fr
-                ? g
+                ? _
                 : (0, i.jsxs)(i.Fragment, {
                       children: [
                           c,
                           e && !(0, A.jq)(r)
-                              ? (0, i.jsx)(E, { guildId: s, channelId: r, className: h.$P }, s ?? r)
+                              ? (0, i.jsx)(h, { guildId: s, channelId: r, className: E.$P }, s ?? r)
                               : null,
                       ],
                   });
@@ -77,15 +77,15 @@ function g(e) {
         transparent: o,
         hidden: d,
         onDoubleClick: () => C(S),
-        "aria-label": _,
+        "aria-label": g,
         "aria-labelledby": I,
         role: p,
         scrollable: T,
-        disableFocusRingScope: f,
+        disableFocusRingScope: O,
         children: t,
     });
 }
-function _(e) {
+function g(e) {
     let {
         children: t,
         className: n,
@@ -110,7 +110,7 @@ function I(e) {
         { analyticsLocations: l } = (0, s.Ay)(r.A.HEADER_BAR);
     return (0, i.jsx)(s.f5, {
         value: l,
-        children: t ? (0, i.jsx)(g, { ...n, className: n.className }) : (0, i.jsx)(_, { ...n, className: n.className }),
+        children: t ? (0, i.jsx)(_, { ...n, className: n.className }) : (0, i.jsx)(g, { ...n, className: n.className }),
     });
 }
 ((I.Title = u.Ay.Title),

@@ -1,4 +1,4 @@
-n.d(t, { c: () => g });
+n.d(t, { c: () => _ });
 var i = n(621466),
     l = n(557361),
     r = n(775602),
@@ -9,7 +9,7 @@ var i = n(621466),
     c = n(350535),
     u = n(652215);
 let A = new Set(["PageDown", "PageUp", "Home", "End", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"]),
-    h = new Set([
+    E = new Set([
         "Alt",
         "AltGraph",
         "CapsLock",
@@ -26,7 +26,7 @@ let A = new Set(["PageDown", "PageUp", "Home", "End", "ArrowUp", "ArrowDown", "A
         "Symbol",
         "SymbolLock",
     ]),
-    E = new Set([
+    h = new Set([
         "F1",
         "F2",
         "F3",
@@ -84,14 +84,14 @@ let A = new Set(["PageDown", "PageUp", "Home", "End", "ArrowUp", "ArrowDown", "A
         "VolumeDown",
         "VolumeMute",
     ]),
-    g = {
+    _ = {
         binds: ["any-character"],
         keydown(e, t) {
             let n = (0, i.BF)(e)?.activeElement;
-            if ((0, i.Cw)(n) || l.rx.isActive() || h.has(t) || E.has(t) || C.has(t)) return !1;
-            let g = null != n && "BODY" === n.tagName;
+            if ((0, i.Cw)(n) || l.rx.isActive() || E.has(t) || h.has(t) || C.has(t)) return !1;
+            let _ = null != n && "BODY" === n.tagName;
             if (
-                (r.Ay.keyboardModeEnabled && !g && !/^[a-zA-Z0-9]$/.test(t)) ||
+                (r.Ay.keyboardModeEnabled && !_ && !/^[a-zA-Z0-9]$/.test(t)) ||
                 d._.hasSubscribers(u.jej.MODAL_CLOSE) ||
                 s.A.hasLayers()
             )
@@ -114,7 +114,7 @@ let A = new Set(["PageDown", "PageUp", "Home", "End", "ArrowUp", "ArrowDown", "A
                 A.has(t)
             )
                 return !1;
-            let _ = "Enter" === t && !e.shiftKey && !e.altKey;
-            d._.dispatchToLastSubscribed(u.jej.TEXTAREA_FOCUS, { event: e, wasEnterPressed: _ });
+            let g = "Enter" === t && !e.shiftKey && !e.altKey;
+            d._.dispatchToLastSubscribed(u.jej.TEXTAREA_FOCUS, { event: e, wasEnterPressed: g });
         },
     };

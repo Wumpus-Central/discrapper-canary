@@ -9,11 +9,11 @@ var i = n(477900),
     c = n(503698),
     u = n.n(c),
     A = n(939249),
-    h = n(834730),
-    E = n(64585),
+    E = n(834730),
+    h = n(64585),
     C = n(906688),
-    g = n(857015);
-function _(e) {
+    _ = n(857015);
+function g(e) {
     let { color: t } = e;
     return (0, i.jsxs)("svg", {
         width: "48",
@@ -28,7 +28,7 @@ function _(e) {
                 width: "14.4203",
                 height: "14.4203",
                 transform: "rotate(45 10.1968 7)",
-                className: g.__invalid_toastBG,
+                className: _.__invalid_toastBG,
             }),
             (0, i.jsx)("rect", {
                 x: "27.3936",
@@ -36,7 +36,7 @@ function _(e) {
                 width: "23.4851",
                 height: "23.4851",
                 transform: "rotate(45 27.3936 0.59021)",
-                className: g.__invalid_toastBG,
+                className: _.__invalid_toastBG,
             }),
             (0, i.jsx)("rect", {
                 x: "44.5903",
@@ -44,7 +44,7 @@ function _(e) {
                 width: "14.4203",
                 height: "14.4203",
                 transform: "rotate(45 44.5903 7)",
-                className: g.__invalid_toastBG,
+                className: _.__invalid_toastBG,
             }),
             (0, i.jsx)("rect", {
                 x: "10.1968",
@@ -75,7 +75,7 @@ function I(e) {
         { color: I } = (0, d.ag)(a);
     l.useEffect(() => {
         let e = setTimeout(() => {
-            E.A.playAchievementUnlockSound();
+            h.A.playAchievementUnlockSound();
         }, 50);
         return () => {
             clearTimeout(e);
@@ -84,27 +84,27 @@ function I(e) {
     let T = null != c && n,
         p = T ? A.D : "div";
     return (0, i.jsxs)(p, {
-        className: u()(g.kL, T && g.b),
+        className: u()(_.kL, T && _.b),
         onClick: function () {
             T && c();
         },
         children: [
             (0, i.jsx)("div", {
-                className: g.zc,
+                className: _.zc,
                 children: (0, i.jsx)(C.A, { achievementId: t.id, size: C.A.Sizes.SIZE_40, unlocked: n }),
             }),
             (0, i.jsxs)("div", {
-                className: g.__invalid_nameContainer,
+                className: _.__invalid_nameContainer,
                 children: [
-                    (0, i.jsx)(h.E, { variant: "text-md/semibold", color: "text-strong", children: r() }),
-                    (0, i.jsx)(h.E, {
+                    (0, i.jsx)(E.E, { variant: "text-md/semibold", color: "text-strong", children: r() }),
+                    (0, i.jsx)(E.E, {
                         variant: "text-xs/medium",
                         color: "text-default",
                         children: o && !n ? "?????" : s(),
                     }),
                 ],
             }),
-            (0, i.jsx)("div", { className: g.Db, children: (0, i.jsx)(_, { color: I }) }),
+            (0, i.jsx)("div", { className: _.Db, children: (0, i.jsx)(g, { color: I }) }),
         ],
     });
 }

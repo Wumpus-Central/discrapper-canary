@@ -1,4 +1,4 @@
-n.d(t, { A: () => E });
+n.d(t, { A: () => h });
 var i = n(17928),
     l = n(228366),
     r = n(734057),
@@ -13,7 +13,7 @@ function A(e) {
     if (u === t) return !1;
     u = t;
 }
-class h extends i.Ay.Store {
+class E extends i.Ay.Store {
     static displayName = "AppViewStore";
     initialize() {
         this.waitFor(s.A, d.A, o.Ay, a.A, r.A);
@@ -22,7 +22,7 @@ class h extends i.Ay.Store {
         return u ?? s.A.fallbackRoute;
     }
 }
-let E = new h(l.h, {
+let h = new E(l.h, {
     OVERLAY_INITIALIZE: function () {
         let e = d.A.getPrivateChannelIds(),
             t = o.Ay.getChannelId(c.ME);

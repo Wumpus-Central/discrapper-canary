@@ -1,22 +1,22 @@
-a.d(c, { W: () => l });
-var n = a(582128),
-    i = a(17928),
-    t = a(786953),
-    s = a(505274);
-function l(e) {
+r.d(t, { W: () => s });
+var n = r(582128),
+    a = r(17928),
+    i = r(786953),
+    l = r(505274);
+function s(e) {
     let {
-        balance: c,
-        isFetching: a,
-        error: l,
-    } = (0, i.cf)([s.A], () => ({
-        balance: s.A.balance,
-        isFetching: s.A.isFetchingBalance,
-        error: s.A.fetchBalanceError,
+        balance: t,
+        isFetching: r,
+        error: s,
+    } = (0, a.cf)([l.A], () => ({
+        balance: l.A.balance,
+        isFetching: l.A.isFetchingBalance,
+        error: l.A.fetchBalanceError,
     }));
     return (
         (0, n.useEffect)(() => {
-            e?.disableFetch || null !== c || null !== l || s.A.isFetchingBalance || (0, t.Bf)();
-        }, [c, l, e?.disableFetch]),
-        { balance: c, isFetching: a, error: l }
+            e?.disableFetch || null !== t || null !== s || l.A.isFetchingBalance || (0, i.Bf)();
+        }, [t, s, e?.disableFetch]),
+        { balance: t, isFetching: r, error: s }
     );
 }

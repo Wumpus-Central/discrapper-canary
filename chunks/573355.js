@@ -1,25 +1,25 @@
-n.d(t, { SE: () => k, bc: () => G, cO: () => D, ES: () => F, Ef: () => y, VI: () => V });
+n.d(t, { SE: () => k, bc: () => G, cO: () => P, ES: () => F, Ef: () => L, VI: () => V });
 var i = n(477900),
     l = n(582128),
     r = n(283973),
     s = n(497767),
-    o = n(565829),
-    a = n(717398),
+    a = n(565829),
+    o = n(717398),
     u = n(993401),
     c = n(17928),
     d = n(922016),
     E = n(980707),
     f = n(803664),
     R = n(509302),
-    p = n(460597),
-    I = n(994500),
+    I = n(460597),
+    p = n(994500),
     _ = n(403362),
     A = n(183555),
     g = n(652215),
     m = n(375708);
 function O(e) {
     let { user: t, analyticsLocation: n } = e,
-        i = (0, c.bG)([I.A], () => I.A.getRelationshipType(t.id) === g.eA$.PENDING_OUTGOING),
+        i = (0, c.bG)([p.A], () => p.A.getRelationshipType(t.id) === g.eA$.PENDING_OUTGOING),
         { trackUserProfileAction: r } = (0, A.NJ)(),
         s = (0, f.A)({
             user: t,
@@ -27,11 +27,11 @@ function O(e) {
             onFriendRemove: () => r({ action: "REMOVE_FRIEND" }),
             onFriendRequestSent: () => r({ action: "SEND_FRIEND_REQUEST" }),
         }),
-        o = (0, R.A)({ user: t }),
-        a = (0, p.A)({ user: t });
-    return l.useMemo(() => [i ? null : s, o, a].filter(_.Vq), [o, s, i, a]);
+        a = (0, R.A)({ user: t }),
+        o = (0, I.A)({ user: t });
+    return l.useMemo(() => [i ? null : s, a, o].filter(_.Vq), [a, s, i, o]);
 }
-function h(e) {
+function x(e) {
     let { menuItems: t, children: n, targetElementRef: l } = e;
     return (0, i.jsx)(d.Y, {
         targetElementRef: l,
@@ -49,32 +49,32 @@ function h(e) {
         children: (e) => n(e),
     });
 }
-var x = n(682348),
+var N = n(682348),
     b = n(429913),
-    N = n(834730),
+    h = n(834730),
     v = n(769015),
-    T = n(773544);
-function C(e) {
+    C = n(773544);
+function S(e) {
     let { applications: t } = e;
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(N.E, {
+            (0, i.jsx)(h.E, {
                 variant: "text-xs/semibold",
                 color: "text-default",
-                className: T.wx,
+                className: C.wx,
                 children: m.intl.string(m.t["Uv/eTx"]),
             }),
             (0, i.jsx)("div", {
-                className: T.p_,
+                className: C.p_,
                 children: t.map((e) => {
                     if (null != e)
                         return (0, i.jsxs)(
                             "div",
                             {
-                                className: T.nM,
+                                className: C.nM,
                                 children: [
                                     (0, i.jsx)(v.A, { game: e, size: v.M.XXSMALL }),
-                                    (0, i.jsx)(N.E, {
+                                    (0, i.jsx)(h.E, {
                                         variant: "text-xs/normal",
                                         color: "text-muted",
                                         children: e.name,
@@ -88,11 +88,11 @@ function C(e) {
         ],
     });
 }
-let S = [];
+let T = [];
 function M(e) {
     let { gameFriends: t, hasIncomingPendingGameFriends: n, hasOutgoingPendingGameFriends: r } = e,
-        [s, a] = l.useState(!1),
-        u = l.useCallback(() => a(!0), []),
+        [s, o] = l.useState(!1),
+        u = l.useCallback(() => o(!0), []),
         c = l.useMemo(
             () =>
                 s
@@ -100,7 +100,7 @@ function M(e) {
                           let { applicationId: t } = e;
                           return t;
                       })
-                    : S,
+                    : T,
             [s, t],
         ),
         d = (0, b.A)(c, s),
@@ -108,7 +108,7 @@ function M(e) {
         { tooltipText: f, ariaLabel: R } = l.useMemo(() => {
             if (t.length > 0)
                 return {
-                    tooltipText: (0, i.jsx)(C, { applications: E }),
+                    tooltipText: (0, i.jsx)(S, { applications: E }),
                     ariaLabel:
                         (function (e) {
                             switch (e.length) {
@@ -149,53 +149,53 @@ function M(e) {
         ariaLabel: R,
         tooltipText: f,
         icon: l.useMemo(() => {
-            if (t.length > 0) return x._;
-            if (n || r) return o.l;
+            if (t.length > 0) return N._;
+            if (n || r) return a.l;
             throw Error("[GameRelationshipButton] Icon should not be undefined.");
         }, [t.length, n, r]),
     };
 }
 var j = n(518477);
-function P(e) {
+function D(e) {
     let { userId: t, analyticsLocation: n } = e,
-        i = l.useCallback(() => a.A.addRelationship({ userId: t, context: { location: n } }), [n, t]);
+        i = l.useCallback(() => o.A.addRelationship({ userId: t, context: { location: n } }), [n, t]);
     return { action: j.pt.SEND_FRIEND_REQUEST, icon: r.R, text: m.intl.string(m.t.w5uwoI), onClick: i };
 }
-function D(e) {
+function P(e) {
     let { userId: t, analyticsLocation: n, ...l } = e,
-        r = P({ userId: t, analyticsLocation: n });
+        r = D({ userId: t, analyticsLocation: n });
     return (0, i.jsx)(u.FD, { ...r, ...l });
 }
 function k(e) {
     let { userId: t, analyticsLocation: n } = e,
         [r, s] = l.useState(!1),
-        { text: o, onClick: a, ...c } = P({ userId: t, analyticsLocation: n }),
+        { text: a, onClick: o, ...c } = D({ userId: t, analyticsLocation: n }),
         d = l.useCallback(async () => {
             s(!0);
             try {
-                await a?.();
+                await o?.();
             } finally {
                 s(!1);
             }
-        }, [a]);
-    return (0, i.jsx)(u.br, { tooltipText: o, ...c, onClick: d, loading: r });
+        }, [o]);
+    return (0, i.jsx)(u.br, { tooltipText: a, ...c, onClick: d, loading: r });
 }
-let U = { [g.eA$.FRIEND]: s.V, [g.eA$.PENDING_OUTGOING]: o.l, [g.eA$.PENDING_INCOMING]: o.l },
-    L = {
+let U = { [g.eA$.FRIEND]: s.V, [g.eA$.PENDING_OUTGOING]: a.l, [g.eA$.PENDING_INCOMING]: a.l },
+    y = {
         [g.eA$.FRIEND]: () => m.intl.string(m.t.G7jMpU),
         [g.eA$.PENDING_OUTGOING]: () => m.intl.string(m.t["s/+byI"]),
         [g.eA$.PENDING_INCOMING]: () => m.intl.string(m.t["6QQCQ+"]),
     };
-function y(e) {
+function L(e) {
     let { user: t, relationshipType: n, analyticsLocation: r, ...s } = e,
-        o = U[n],
-        a = L[n](),
+        a = U[n],
+        o = y[n](),
         c = O({ user: t, analyticsLocation: r }),
         d = l.useRef(null),
-        E = { icon: o, tooltipText: a, ...s };
+        E = { icon: a, tooltipText: o, ...s };
     return 0 === c.length
         ? (0, i.jsx)(u.q3, { ...E, disabled: !0 })
-        : (0, i.jsx)(h, {
+        : (0, i.jsx)(x, {
               targetElementRef: d,
               menuItems: c,
               children: (e) => (0, i.jsx)(u.q3, { buttonRef: d, ...e, ...E }),
@@ -203,14 +203,14 @@ function y(e) {
 }
 function G(e) {
     let { user: t, relationshipType: n, analyticsLocation: r, ...s } = e,
-        o = U[n],
-        a = L[n](),
+        a = U[n],
+        o = y[n](),
         c = O({ user: t, analyticsLocation: r }),
         d = l.useRef(null),
-        E = { icon: o, tooltipText: a, ...s };
+        E = { icon: a, tooltipText: o, ...s };
     return 0 === c.length
         ? (0, i.jsx)(u.br, { ...E, disabled: !0, tooltipPosition: "top" })
-        : (0, i.jsx)(h, {
+        : (0, i.jsx)(x, {
               targetElementRef: d,
               menuItems: c,
               children: (e) => (0, i.jsx)(u.br, { buttonRef: d, ...e, ...E, tooltipPosition: "top" }),
@@ -222,8 +222,8 @@ function F(e) {
             gameFriends: n,
             hasOutgoingPendingGameFriends: r,
             hasIncomingPendingGameFriends: s,
-            analyticsLocation: o,
-            ...a
+            analyticsLocation: a,
+            ...o
         } = e,
         {
             tooltipText: c,
@@ -231,19 +231,19 @@ function F(e) {
             ariaLabel: E,
             icon: f,
         } = M({ gameFriends: n, hasOutgoingPendingGameFriends: r, hasIncomingPendingGameFriends: s }),
-        R = O({ user: t, analyticsLocation: o }),
-        p = l.useRef(null),
-        I = { icon: f, __unsupportedReactNodeAsText: c, "aria-label": E, onMouseEnter: d, ...a };
+        R = O({ user: t, analyticsLocation: a }),
+        I = l.useRef(null),
+        p = { icon: f, __unsupportedReactNodeAsText: c, "aria-label": E, onMouseEnter: d, ...o };
     return 0 === R.length
-        ? (0, i.jsx)(u.q3, { ...I, disabled: !0 })
-        : (0, i.jsx)(h, {
-              targetElementRef: p,
+        ? (0, i.jsx)(u.q3, { ...p, disabled: !0 })
+        : (0, i.jsx)(x, {
+              targetElementRef: I,
               menuItems: R,
               children: (e) =>
                   (0, i.jsx)(u.q3, {
-                      buttonRef: p,
+                      buttonRef: I,
                       ...e,
-                      ...I,
+                      ...p,
                       onMouseEnter: function () {
                           (d?.(), e.onMouseEnter?.());
                       },
@@ -256,8 +256,8 @@ function V(e) {
             gameFriends: n,
             hasOutgoingPendingGameFriends: r,
             hasIncomingPendingGameFriends: s,
-            analyticsLocation: o,
-            ...a
+            analyticsLocation: a,
+            ...o
         } = e,
         {
             tooltipText: c,
@@ -265,21 +265,21 @@ function V(e) {
             ariaLabel: E,
             icon: f,
         } = M({ gameFriends: n, hasOutgoingPendingGameFriends: r, hasIncomingPendingGameFriends: s }),
-        R = O({ user: t, analyticsLocation: o }),
-        p = l.useRef(null),
-        I = { icon: f, __unsupportedReactNodeAsText: c, "aria-label": E, onMouseEnter: d, ...a };
+        R = O({ user: t, analyticsLocation: a }),
+        I = l.useRef(null),
+        p = { icon: f, __unsupportedReactNodeAsText: c, "aria-label": E, onMouseEnter: d, ...o };
     return 0 === R.length
-        ? (0, i.jsx)(u.br, { tooltipPosition: "left", tooltipAlign: "top", ...I, disabled: !0 })
-        : (0, i.jsx)(h, {
-              targetElementRef: p,
+        ? (0, i.jsx)(u.br, { tooltipPosition: "left", tooltipAlign: "top", ...p, disabled: !0 })
+        : (0, i.jsx)(x, {
+              targetElementRef: I,
               menuItems: R,
               children: (e) =>
                   (0, i.jsx)(u.br, {
-                      buttonRef: p,
+                      buttonRef: I,
                       tooltipPosition: "left",
                       tooltipAlign: "top",
                       ...e,
-                      ...I,
+                      ...p,
                       onMouseEnter: function () {
                           (d?.(), e.onMouseEnter?.());
                       },

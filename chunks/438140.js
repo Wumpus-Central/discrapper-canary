@@ -9,34 +9,34 @@ var o = n(379257),
     c = n(36149),
     u = n(780964),
     A = n(766075),
-    h = n(975571),
-    E = n(666113),
+    E = n(975571),
+    h = n(666113),
     C = n(652215),
-    g = n(49999),
-    _ = n(737117),
+    _ = n(49999),
+    g = n(737117),
     I = n(375708);
 function T(e) {
     let { markAsDismissed: t, targetElementRef: n } = e,
         i = (0, c.yM)(),
         l = s.useCallback(() => {
-            (t(g.i.TAKE_ACTION), o.A.showAgeVerificationGetStartedModal({ entryPoint: d.q1.TINY_BRONCO_POPOVER }));
+            (t(_.i.TAKE_ACTION), o.A.showAgeVerificationGetStartedModal({ entryPoint: d.q1.TINY_BRONCO_POPOVER }));
         }, [t]),
         T = s.useCallback(() => {
-            (t(g.i.TAKE_ACTION), o.A.openUrl(h.A.getArticleURL(C.MVz.TIGGER_PAWTECT_LEARN_MORE)));
+            (t(_.i.TAKE_ACTION), o.A.openUrl(E.A.getArticleURL(C.MVz.TIGGER_PAWTECT_LEARN_MORE)));
         }, [t]),
         p = s.useCallback(() => {
-            (t(g.i.TAKE_ACTION), (0, A.openUserSettings)(u.X.ACCOUNT_STANDING_CATEGORY));
+            (t(_.i.TAKE_ACTION), (0, A.openUserSettings)(u.X.ACCOUNT_STANDING_CATEGORY));
         }, [t]),
         N = s.useCallback(() => {
-            t(g.i.USER_DISMISS);
+            t(_.i.USER_DISMISS);
         }, [t]),
-        S = i ? I.intl.string(_.default.f7c7qE) : I.intl.string(_.default.jssaTD),
+        S = i ? I.intl.string(g.default.f7c7qE) : I.intl.string(g.default.jssaTD),
+        O = i
+            ? { text: I.intl.string(g.default.ZzcLhc), onClick: l, external: !1 }
+            : { text: I.intl.string(g.default["Bp/1dq"]), link: h.m5, external: !0 },
         f = i
-            ? { text: I.intl.string(_.default.ZzcLhc), onClick: l, external: !1 }
-            : { text: I.intl.string(_.default["Bp/1dq"]), link: E.m5, external: !0 },
-        m = i
-            ? { text: I.intl.string(_.default["+7NlgO"]), variant: "primary", onClick: T }
-            : { text: I.intl.string(_.default.jjpcno), variant: "primary", onClick: p };
+            ? { text: I.intl.string(g.default["+7NlgO"]), variant: "primary", onClick: T }
+            : { text: I.intl.string(g.default.jjpcno), variant: "primary", onClick: p };
     return (0, r.jsx)(a.A, {
         targetElementRef: n,
         shouldShow: !0,
@@ -45,9 +45,9 @@ function T(e) {
         caretConfig: { align: "end" },
         size: "md",
         graphic: { type: "image", src: "/assets/ddff1a600b2b202b.svg", aspectRatio: "6/4" },
-        title: I.intl.string(_.default.GdTVPF),
+        title: I.intl.string(g.default.GdTVPF),
         body: S,
-        textLink: f,
-        actions: [m],
+        textLink: O,
+        actions: [f],
     });
 }

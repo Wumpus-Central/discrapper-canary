@@ -1,4 +1,4 @@
-r.d(t, { S: () => L });
+r.d(t, { S: () => A });
 var n = r(477900),
     l = r(582128),
     s = r(503698),
@@ -17,13 +17,13 @@ var n = r(477900),
     h = r(652215),
     I = r(375708),
     S = r(105499);
-function L(e) {
+function A(e) {
     let {
             category: t,
             subblock: r,
             badgeText: s,
-            enablePreview: L,
-            pageType: A = p.G2.HOME,
+            enablePreview: A,
+            pageType: L = p.G2.HOME,
             className: x,
             handleTransition: v,
             listItemProps: f,
@@ -31,8 +31,8 @@ function L(e) {
         O = r?.categorySkuId;
     null == O && null != r && (O = E.A.getCategoryByStoreListingId(r?.categoryStoreListingId)?.skuId);
     let y = O ?? t?.skuId ?? "",
-        { handleCardVisibilityChange: k } = (0, _.Z)(y, A, "marketing featured block"),
-        N = (0, C.s4)(t, r, L),
+        { handleCardVisibilityChange: k } = (0, _.Z)(y, L, "marketing featured block"),
+        N = (0, C.s4)(t, r, A),
         T = l.useRef(null),
         j = r?.bodyText,
         B = r?.name ?? t?.name,
@@ -57,7 +57,7 @@ function L(e) {
                     g.default.track(h.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                         collectibles_shop_session_id: P?.sessionId,
                         sku_id: y,
-                        page_type: A,
+                        page_type: L,
                         page_section: P?.pageSection,
                         page_category: P?.pageCategory,
                         tile_type: "FEATURED_BLOCK",
@@ -97,7 +97,7 @@ function L(e) {
                                 g.default.track(h.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                                     collectibles_shop_session_id: P?.sessionId,
                                     sku_id: y,
-                                    page_type: A,
+                                    page_type: L,
                                     page_section: P?.pageSection,
                                     page_category: P?.pageCategory,
                                     tile_type: "FEATURED_BLOCK",

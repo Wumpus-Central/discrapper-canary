@@ -23,36 +23,36 @@ function f(e) {
             purchaseError: e.purchaseError,
             purchasePreviewError: e.purchasePreviewError,
         })),
-        g = null;
-    null != S ? (g = S) : null != n && null == (0, E.ou)(n) ? (g = n) : null != f ? (g = f) : null != t && (g = t);
-    let _ = (0, p.vx)(),
+        _ = null;
+    null != S ? (_ = S) : null != n && null == (0, E.ou)(n) ? (_ = n) : null != f ? (_ = f) : null != t && (_ = t);
+    let g = (0, p.vx)(),
         T = l.useCallback(() => {
-            ((0, o.closeAllModals)(), s.A.openPrivateChannel({ recipientIds: _ }));
-        }, [_]),
+            ((0, o.closeAllModals)(), s.A.openPrivateChannel({ recipientIds: g }));
+        }, [g]),
         P = a.length > 1,
-        I = null != g ? g.message : "";
+        I = null != _ ? _.message : "";
     if (
-        null != g &&
-        g instanceof u.Ey &&
-        (g.code === c.tG.CARD_DECLINED && P && (I += ` ${y.intl.string(y.t.iWvwQS)}`),
-        g.code === c.tG.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (I = y.intl.string(y.t.ypuSd8)),
-        g.code === A.t02.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (I = y.intl.string(y.t.mXMmWE)),
-        g.code === c.tG.INVALID_CURRENCY_FOR_PAYMENT_SOURCE && (I = y.intl.string(y.t.mC1Fjz)),
-        (g.code === c.tG.BILLING_SPENDING_LIMIT_REACHED || g.code === c.tG.BILLING_SPENDING_LIMIT_WILL_EXCEED) &&
+        null != _ &&
+        _ instanceof u.Ey &&
+        (_.code === c.tG.CARD_DECLINED && P && (I += ` ${y.intl.string(y.t.iWvwQS)}`),
+        _.code === c.tG.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (I = y.intl.string(y.t.ypuSd8)),
+        _.code === A.t02.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (I = y.intl.string(y.t.mXMmWE)),
+        _.code === c.tG.INVALID_CURRENCY_FOR_PAYMENT_SOURCE && (I = y.intl.string(y.t.mC1Fjz)),
+        (_.code === c.tG.BILLING_SPENDING_LIMIT_REACHED || _.code === c.tG.BILLING_SPENDING_LIMIT_WILL_EXCEED) &&
             (I = y.intl.format(y.t["mv/fF2"], {
                 guardianHook: (e, t) =>
-                    _.length > 0
+                    g.length > 0
                         ? (0, r.jsx)(i.Anchor, { onClick: T, children: e }, t)
                         : (0, r.jsx)(l.Fragment, { children: e }, t),
             })),
-        g.code === c.tG.INVALID_BILLING_ADDRESS)
+        _.code === c.tG.INVALID_BILLING_ADDRESS)
     ) {
         let e = y.intl.format(y.t.BPDKoA, {
             helpdeskArticle: m.A.getArticleURL(A.MVz.BILLING).concat(A.bNI.INVALID_BILLING_ADDRESS),
         });
         I = (0, r.jsxs)(r.Fragment, { children: [y.intl.string(y.t["yVIm/G"]), " ", e] });
     }
-    return { error: g, errorMessage: I };
+    return { error: _, errorMessage: I };
 }
 function S(e) {
     let { planError: t, purchaseErrorBlockRef: n, className: l } = e,

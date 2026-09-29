@@ -1,4 +1,4 @@
-(n.d(t, { A: () => m }), n(321073));
+(n.d(t, { A: () => f }), n(321073));
 var i = n(228366),
     l = n(272355),
     r = n(400492),
@@ -9,14 +9,14 @@ var i = n(228366),
     c = n(741961),
     u = n(3137),
     A = n(559908),
-    h = n(652215);
-let E = (0, r.aN)("poggermode_applause", s.A.getSoundpack()),
+    E = n(652215);
+let h = (0, r.aN)("poggermode_applause", s.A.getSoundpack()),
     C = !1,
-    g = !1,
-    _ = [],
+    _ = !1,
+    g = [],
     I = null;
 function T() {
-    (E.stop(), (C = !1));
+    (h.stop(), (C = !1));
 }
 function p() {
     let e = u.A.isEnabled(),
@@ -24,15 +24,15 @@ function p() {
     return !!e && !!t && null != d.Ay.getChannelId();
 }
 function N() {
-    if (0 === _.length || !p() || g) return;
-    g = !0;
-    let [e, t] = _[_.length - 1];
+    if (0 === g.length || !p() || _) return;
+    _ = !0;
+    let [e, t] = g[g.length - 1];
     ((0, r.Ak)(e, t), (I = setTimeout(S, 1e3)));
 }
 function S() {
-    (_.pop(), (g = !1), N());
+    (g.pop(), (_ = !1), N());
 }
-class f extends l.A {
+class O extends l.A {
     _initialize() {
         (A.Ay.addChangeListener(this.startAudio),
             i.h.subscribe("RTC_CONNECTION_STATE", this.setVolume),
@@ -52,7 +52,7 @@ class f extends l.A {
     }
     setVolume(e) {
         let { state: t } = e;
-        t === h.S7L.RTC_CONNECTED ? (E.volume = 0.1) : (E.volume = 1);
+        t === E.S7L.RTC_CONNECTED ? (h.volume = 0.1) : (h.volume = 1);
     }
     handleTypingStop(e) {
         let { userId: t } = e;
@@ -69,15 +69,15 @@ class f extends l.A {
             n = c.A.isTyping(e, t),
             i = A.Ay.getUserCombo(t, e),
             l = i?.multiplier ?? 1;
-        n && l >= 7 ? C || (E.loop(), (C = !0)) : T();
+        n && l >= 7 ? C || (h.loop(), (C = !0)) : T();
     }
     playAchievementUnlockSound() {
         p() &&
             (function (e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
                     n = o.A.isConnected();
-                (_.push([e, t * (n ? 0.1 : 1)]), N());
+                (g.push([e, t * (n ? 0.1 : 1)]), N());
             })("poggermode_achievement_unlock");
     }
 }
-let m = new f();
+let f = new O();

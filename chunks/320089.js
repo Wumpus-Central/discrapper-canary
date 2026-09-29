@@ -17,8 +17,8 @@ var n = r(477900),
     h = r(604913),
     I = r(65238),
     S = r(773669),
-    L = r(975571),
-    A = r(304210),
+    A = r(975571),
+    L = r(304210),
     x = r(324157),
     v = r(480750),
     f = r(727142);
@@ -171,8 +171,8 @@ let U = function (e) {
 var F = r(691540),
     K = r(857250),
     V = r(97483),
-    X = r(765178),
-    W = r(39418),
+    W = r(765178),
+    X = r(39418),
     z = r(828596),
     Y = r(815996),
     Z = r(674658),
@@ -213,7 +213,7 @@ function es(e) {
             onClaim: h,
         } = e,
         I = null != s ? d : i,
-        { handleInlineHelpTextClick: S, handleClaim: L, handleUseNowClick: A } = el(t, r, h);
+        { handleInlineHelpTextClick: S, handleClaim: A, handleUseNowClick: L } = el(t, r, h);
     return (0, n.jsxs)(o.B, {
         direction: "horizontal",
         gap: 16,
@@ -237,8 +237,8 @@ function es(e) {
                         claimRewardButtonVariant: _,
                         useNowButtonVariant: _,
                         isClaiming: p,
-                        onClaim: L,
-                        onUseNowClick: A,
+                        onClaim: A,
+                        onUseNowClick: L,
                     }),
                 ],
             }),
@@ -255,7 +255,7 @@ function ea(e) {
             backgroundUrl: h,
             title: I,
             description: S,
-            progressText: A,
+            progressText: L,
             timeLeftText: x,
             contentThemeClassName: f,
             rewardProduct: y,
@@ -264,7 +264,7 @@ function ea(e) {
             isClaiming: T,
             onClaim: B,
         } = e,
-        b = null != N && "" !== N ? L.A.getArticleURL(N) : null,
+        b = null != N && "" !== N ? A.A.getArticleURL(N) : null,
         { handleInlineHelpTextClick: P, handleClaim: w, handleUseNowClick: D } = el(t, r, B),
         H = l.useCallback(() => {
             null != b && ((0, v.l)(t, r, Q.Z.INFO_BUTTON_CLICKED), (0, E.A)(b));
@@ -278,7 +278,7 @@ function ea(e) {
         className: a()(ee.N, f),
         style: { backgroundImage: `url(${h})` },
         children: [
-            (0, n.jsx)(R, { assetPath: s, progress: i, progressText: A, progressColor: _ }),
+            (0, n.jsx)(R, { assetPath: s, progress: i, progressText: L, progressColor: _ }),
             (0, n.jsxs)(o.B, {
                 direction: "vertical",
                 gap: 8,
@@ -295,7 +295,7 @@ function ea(e) {
                         align: "center",
                         wrap: !0,
                         children: [
-                            null != A && (0, n.jsx)(O, { text: A, indicatorColor: _ ?? j }),
+                            null != L && (0, n.jsx)(O, { text: L, indicatorColor: _ ?? j }),
                             null != x && (0, n.jsx)(O, { icon: c.ClockIcon, text: x }),
                         ],
                     }),
@@ -358,15 +358,15 @@ function ei(e) {
         })(s, m.rewardPreview),
         I = (0, q.A)(h?.timeLeftDate);
     if (null == h) return null;
-    let { progress: L } = s;
+    let { progress: A } = s;
     if (
-        (null == L &&
+        (null == A &&
             (s.rewardStatus === p.GM.EARNED || s.rewardStatus === p.GM.CONSUMED) &&
-            (L = { current: 4, target: 4, label: "collected" }),
-        h.showProgressRing && null == L)
+            (A = { current: 4, target: 4, label: "collected" }),
+        h.showProgressRing && null == A)
     )
         return null;
-    let A = h.showProgressRing && null != L,
+    let L = h.showProgressRing && null != A,
         {
             title: f,
             description: O,
@@ -374,7 +374,7 @@ function ei(e) {
             timeLeftText: k,
         } = (0, x.MZ)({
             promotion: s,
-            promotionProgress: L,
+            promotionProgress: A,
             progressIndicator: g.progressIndicator,
             helpCenterId: _,
             daysRemaining: I,
@@ -384,7 +384,7 @@ function ei(e) {
             promotion: s,
             surface: r,
             assetPath: h.assetPath,
-            progress: A ? L : null,
+            progress: L ? A : null,
             progressColor: E?.progressColor,
             backgroundUrl: m.backgroundUrl,
             title: f,
@@ -402,7 +402,7 @@ function ei(e) {
 }
 let eo = function (e) {
     let { variant: t, surface: r, collectionId: s } = e,
-        a = (0, A.S)(),
+        a = (0, L.S)(),
         { analyticsLocations: i } = (0, _.Ay)(),
         {
             onClaim: o,
@@ -427,9 +427,9 @@ let eo = function (e) {
                             try {
                                 await (0, z.cF)(o, $.FYj);
                             } catch (e) {
-                                ((0, W.o)(e),
+                                ((0, X.o)(e),
                                     (0, F.P0)((0, K.o)(G.intl.string(G.t.F8FvUy), V.Ck.FAILURE)),
-                                    X.O.announce(G.intl.string(G.t.F8FvUy)),
+                                    W.O.announce(G.intl.string(G.t.F8FvUy)),
                                     n(!1));
                                 return;
                             }
@@ -437,7 +437,7 @@ let eo = function (e) {
                             try {
                                 await (0, Y.gB)();
                             } catch (e) {
-                                (0, W.o)(e);
+                                (0, X.o)(e);
                             } finally {
                                 n(!1);
                             }

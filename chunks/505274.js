@@ -1,7 +1,7 @@
-r.d(t, { A: () => i });
+r.d(t, { A: () => l });
 var n = r(17928),
     a = r(228366);
-class l extends n.Ay.Store {
+class i extends n.Ay.Store {
     static displayName = "VirtualCurrencyStore";
     _entitlements = null;
     _redeemingSkuId = null;
@@ -108,4 +108,4 @@ class l extends n.Ay.Store {
         this._onboardingModalOpenedPrior = !1;
     }
 }
-let i = new l();
+let l = new i();

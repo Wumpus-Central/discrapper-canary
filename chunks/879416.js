@@ -10,7 +10,7 @@ function a(e) {
         c = (0, i.bG)([l.A], () => l.A.getPremiumTypeSubscription()),
         u = null != c && !c.isPurchasedExternally,
         A = null != c && c.hasPremiumNitroMonthly,
-        h = !0 === a && o === r.xb.ORBS,
-        E = !0 === a && o === r.xb.DISCOUNT && u && A;
-    return { isEligibleForIncentive: h || E, referralRewardType: o, useAltReferralCardArt: d };
+        E = !0 === a && o === r.xb.ORBS,
+        h = !0 === a && o === r.xb.DISCOUNT && u && A;
+    return { isEligibleForIncentive: E || h, referralRewardType: o, useAltReferralCardArt: d };
 }

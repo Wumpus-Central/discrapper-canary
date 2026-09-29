@@ -31,9 +31,9 @@ function c(e) {
         w = null != b && (h ? N.hasMainCard : N.hasAny),
         { data: A } = (0, s.YY)(l ?? void 0),
         S = null != l && A?.bot?.id != null,
-        { data: E, isLoading: C } = (0, s.YY)(t ?? void 0),
-        I = c || (0, u.x)(E),
-        M = null != t && C && null == E,
+        { data: C, isLoading: E } = (0, s.YY)(t ?? void 0),
+        I = c || (0, u.x)(C),
+        M = null != t && E && null == C,
         T = (0, d.Xm)({ installScope: f, hasFrame: I, hasProfileWidget: w, hasBotDm: S, ownerAuthorizationRevoked: m });
     return {
         availability: T,

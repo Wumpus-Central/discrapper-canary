@@ -46,8 +46,8 @@ function N(e) {
     let { settings: t, tiers: l, choices: r, disabled: d, onChange: c, placement: f, open: m, entered: N } = e,
         [w, A] = a.useState(!1),
         S = k(w),
-        E = h.ks.indexOf(t.tier),
-        C = w ? s.t : u._,
+        C = h.ks.indexOf(t.tier),
+        E = w ? s.t : u._,
         I = h.ks.map(g.eQ),
         M = (0, g.is)(t.tier),
         { text: T, phase: P } = (0, v.Q)(M);
@@ -84,7 +84,7 @@ function N(e) {
                                             color: "none",
                                             children: j.intl.string(b.default.GDs9Vq),
                                         }),
-                                        (0, n.jsx)(C, {
+                                        (0, n.jsx)(E, {
                                             size: "custom",
                                             width: 16,
                                             height: 16,
@@ -123,7 +123,7 @@ function N(e) {
                                     ],
                                 }),
                                 (0, n.jsx)(x.A, {
-                                    activeIndex: E,
+                                    activeIndex: C,
                                     stops: I,
                                     ariaLabel: j.intl.string(b.default.GDs9Vq),
                                     disabled: d,

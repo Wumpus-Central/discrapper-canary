@@ -641,8 +641,8 @@ function e3(e) {
 }
 var e8 = n(191023),
     e5 = n(192308),
-    e6 = n(28863),
-    e7 = n(695366),
+    e7 = n(28863),
+    e6 = n(695366),
     e4 = n(834730),
     e9 = n(789645),
     te = n(565645),
@@ -690,7 +690,7 @@ function tu(e) {
             null != c && (0, tr.isWindows)() && !f
                 ? eG.intl.format(eG.t.udMTth, {
                       keybind: (0, ta.dI)(c.shortcut, !0),
-                      openSettingsHook: (e, t) => (0, l.jsx)(e6.Anchor, { onClick: h, children: e }, t),
+                      openSettingsHook: (e, t) => (0, l.jsx)(e7.Anchor, { onClick: h, children: e }, t),
                   })
                 : null;
     return null == p
@@ -698,7 +698,7 @@ function tu(e) {
         : (0, l.jsxs)("div", {
               className: to.g,
               children: [
-                  (0, l.jsx)(e7.E, { size: "custom", width: 20, height: 20, color: "currentColor", className: to.QW }),
+                  (0, l.jsx)(e6.E, { size: "custom", width: 20, height: 20, color: "currentColor", className: to.QW }),
                   (0, l.jsx)(e4.E, { variant: "text-sm/medium", color: "text-default", className: to.L5, children: p }),
                   (0, l.jsx)(_.D, {
                       className: to.b,
@@ -1295,8 +1295,8 @@ function t_(e) {
             let e = (0, G.Dd)(eO.PremiumTypes.TIER_2);
             return eG.intl.format(eG.t["tw/SSq"], { nitroTierName: e, onClick: e8 });
         }, [e8]),
-        e6 = i.useCallback((e) => (e2(e, t) ? tE : 32), [t, e2]),
-        e7 = i.useCallback(
+        e7 = i.useCallback((e) => (e2(e, t) ? tE : 32), [t, e2]),
+        e6 = i.useCallback(
             (e) => {
                 let t = e === eB.length - 1;
                 return ez && t ? 70 : eK && e === eW ? 20 : 0;
@@ -1472,8 +1472,8 @@ function t_(e) {
                     renderCategoryList: ti,
                     renderHeaderAccessories: tl,
                     rowHeight: 48,
-                    sectionHeaderHeight: e6,
-                    sectionFooterHeight: e7,
+                    sectionHeaderHeight: e7,
+                    sectionFooterHeight: e6,
                     itemNodeWidth: 150,
                     gridNavigatorId: Z,
                     renderEmptySearchState: tv,

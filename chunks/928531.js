@@ -1,4 +1,4 @@
-n.d(t, { yx: () => _, yv: () => I });
+n.d(t, { yx: () => g, yv: () => I });
 var i = n(435558),
     l = n.n(i),
     r = n(5180),
@@ -9,7 +9,7 @@ var i = n(435558),
     c = n(619921),
     u = n(265422),
     A = n(652215);
-let h = l().throttle(function () {
+let E = l().throttle(function () {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
         t = d.Ay.getFlattenedGuildIds(),
         n = (function (e) {
@@ -25,18 +25,18 @@ let h = l().throttle(function () {
         l = o.Ay.getChannelId(i);
     (0, u.i)(i, l === i ? null : l, !1);
 }, A.ugG);
-var E = n(114129),
+var h = n(114129),
     C = n(442325);
-function g(e, t) {
-    return !!e.includes("tab") && !!C.A.isEnabled() && !(C.A.getTabs().length <= 1) && ((0, E.TC)(t), !0);
+function _(e, t) {
+    return !!e.includes("tab") && !!C.A.isEnabled() && !(C.A.getTabs().length <= 1) && ((0, h.TC)(t), !0);
 }
-let _ = {
+let g = {
         binds: ["mod+alt+down", "mod+shift+]", "ctrl+tab"],
         comboKeysBindGlobal: !0,
-        action: (e, t) => (e.preventDefault(), e.stopPropagation(), g(t, 1) || h(), !1),
+        action: (e, t) => (e.preventDefault(), e.stopPropagation(), _(t, 1) || E(), !1),
     },
     I = {
         binds: ["mod+alt+up", "mod+shift+[", "ctrl+shift+tab"],
         comboKeysBindGlobal: !0,
-        action: (e, t) => (e.preventDefault(), e.stopPropagation(), g(t, -1) || h(-1), !1),
+        action: (e, t) => (e.preventDefault(), e.stopPropagation(), _(t, -1) || E(-1), !1),
     };

@@ -33,7 +33,7 @@ function f(e) {
 function S(e) {
     return null == e || "" === e;
 }
-function g(e) {
+function _(e) {
     let { children: t, showUpperNoticesAboveGlobalNotices: n = !1 } = e,
         { errorMessage: o, richNotices: i } = (function () {
             let { errorMessage: e } = (0, u.j)({}),
@@ -97,7 +97,7 @@ function g(e) {
         }, [o, i, t, n])
     );
 }
-function _(e) {
+function g(e) {
     return l.useMemo(
         () =>
             null == e
@@ -114,14 +114,14 @@ function _(e) {
 }
 function T(e) {
     let { upperInlineNoticeProps: t, shouldShowGlobalNotices: n, showUpperNoticesAboveGlobalNotices: o } = e,
-        i = _(t);
+        i = g(t);
     return l.useMemo(
         () =>
             null != i || n
                 ? n
                     ? null != i
-                        ? (0, r.jsx)(g, { showUpperNoticesAboveGlobalNotices: o, children: i })
-                        : (0, r.jsx)(g, {})
+                        ? (0, r.jsx)(_, { showUpperNoticesAboveGlobalNotices: o, children: i })
+                        : (0, r.jsx)(_, {})
                     : (0, r.jsx)("div", { className: A.dD, children: i })
                 : null,
         [n, i, o],
@@ -140,14 +140,14 @@ function P(e) {
             legalContent: C,
             invoiceTotalDueLabel: f = E.intl.string(m.default.R0cZsM),
             invoiceTotalDueValue: S,
-            shouldShowGlobalNotices: g,
+            shouldShowGlobalNotices: _,
             showUpperNoticesAboveGlobalNotices: P,
             footerInlineNoticeProps: I,
             headerBadgeConfig: N,
             className: x,
         } = e,
-        O = _(I),
-        { setCheckoutFooterLineItemNode: v } = (0, s.ck)();
+        v = g(I),
+        { setCheckoutFooterLineItemNode: O } = (0, s.ck)();
     return a
         ? (0, r.jsx)(y, { className: x, shouldShowUnifiedHeader: !0 })
         : (0, r.jsxs)(r.Fragment, {
@@ -157,7 +157,7 @@ function P(e) {
                       children: [
                           (0, r.jsx)(T, {
                               upperInlineNoticeProps: t,
-                              shouldShowGlobalNotices: g,
+                              shouldShowGlobalNotices: _,
                               showUpperNoticesAboveGlobalNotices: P,
                           }),
                           n,
@@ -171,11 +171,11 @@ function P(e) {
                   (0, r.jsx)(s.UY, { children: (0, r.jsx)(h.f, { headerBadgeConfig: N }) }),
                   (0, r.jsxs)(s.bx, {
                       children: [
-                          (0, r.jsx)("div", { ref: v }),
+                          (0, r.jsx)("div", { ref: O }),
                           null != f && null != S && (0, r.jsx)(p.Qf, { className: A.NR, label: f, value: S }),
                           null != d ? (0, r.jsx)("div", { className: A.uh, children: d }) : null,
                           C,
-                          null != O ? (0, r.jsx)("div", { className: A.Uu, children: O }) : null,
+                          null != v ? (0, r.jsx)("div", { className: A.Uu, children: v }) : null,
                       ],
                   }),
               ],

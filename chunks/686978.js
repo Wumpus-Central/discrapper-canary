@@ -1,8 +1,8 @@
 n.d(t, { cO: () => o, ye: () => d });
-var i = n(17928),
-    l = n(228366);
+var l = n(17928),
+    i = n(228366);
 let s = new Set();
-class r extends i.Ay.PersistedStore {
+class r extends l.Ay.PersistedStore {
     static displayName = "ServerOnboardingSetupProgressSkipStore";
     static persistKey = "ServerOnboardingSetupProgressSkippedGuildIds";
     initialize(e) {
@@ -15,15 +15,15 @@ class r extends i.Ay.PersistedStore {
         return s.has(e);
     }
 }
-let a = new r(l.h, {
+let a = new r(i.h, {
     SERVER_ONBOARDING_SETUP_PROGRESS_SKIP: function (e) {
         let { guildId: t } = e;
         s = new Set(s).add(t);
     },
 });
 function o(e) {
-    l.h.dispatch({ type: "SERVER_ONBOARDING_SETUP_PROGRESS_SKIP", guildId: e });
+    i.h.dispatch({ type: "SERVER_ONBOARDING_SETUP_PROGRESS_SKIP", guildId: e });
 }
 function d(e) {
-    return (0, i.bG)([a], () => a.isSkipped(e), [e]);
+    return (0, l.bG)([a], () => a.isSkipped(e), [e]);
 }

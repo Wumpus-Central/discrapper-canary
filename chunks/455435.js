@@ -23,8 +23,8 @@ var n = l(582128),
     w = l(976860),
     A = l(345942),
     S = l(287809),
-    E = l(652215),
-    C = l(165610),
+    C = l(652215),
+    E = l(165610),
     I = l(522250),
     M = l(58551),
     T = l(759967),
@@ -161,7 +161,7 @@ function D(e, t) {
             guildName: r?.name ?? null,
             appChannelName: null == a ? null : (d.A.getChannel(a)?.name ?? null),
             appChannelPending: x.Ay.isAppChannelPending(e),
-            canManageGuild: null == r ? null : m.A.can(E.xBc.MANAGE_GUILD, r),
+            canManageGuild: null == r ? null : m.A.can(C.xBc.MANAGE_GUILD, r),
             botInGuild: (function (e, t) {
                 if (null == t) return null;
                 let l = o.A.getMutualGuilds(F(e));
@@ -182,7 +182,7 @@ function O(e, t, l) {
         switch (e) {
             case "launch":
                 if ((0, N.x)(u.A.getApplication(n)))
-                    return (k.A.launchFrame({ applicationId: n, surface: C.sd }).catch(() => {}), Promise.resolve());
+                    return (k.A.launchFrame({ applicationId: n, surface: E.sd }).catch(() => {}), Promise.resolve());
                 break;
             case "profile": {
                 let e = S.default.getCurrentUser()?.id;
@@ -190,7 +190,7 @@ function O(e, t, l) {
                 break;
             }
             case "channel":
-                if (null != a && null != r) return ((0, w.pX)(E.BVt.CHANNEL(a, r)), Promise.resolve());
+                if (null != a && null != r) return ((0, w.pX)(C.BVt.CHANNEL(a, r)), Promise.resolve());
                 break;
             case "automod":
                 if (null != a && null != s) return (s(a), Promise.resolve());
@@ -198,7 +198,7 @@ function O(e, t, l) {
         if ("dm" !== e && null != a) {
             let e;
             return (
-                null != (e = c.Ay.getDefaultChannel(a)?.id) ? (0, w.pX)(E.BVt.CHANNEL(a, e)) : (0, A.u)(a),
+                null != (e = c.Ay.getDefaultChannel(a)?.id) ? (0, w.pX)(C.BVt.CHANNEL(a, e)) : (0, A.u)(a),
                 Promise.resolve()
             );
         }
@@ -407,11 +407,11 @@ function K(e, t) {
                       },
             [g, v, b, j, y, k, N, w, A],
         ),
-        E = S?.status?.state ?? null,
-        C = S?.installScope === "guild" && S.status?.surface === "bot";
+        C = S?.status?.state ?? null,
+        E = S?.installScope === "guild" && S.status?.surface === "bot";
     n.useEffect(() => {
-        null != g && null != p && C && null != E && "unpublished" !== E && B(g);
-    }, [g?.id, p, C, E]);
+        null != g && null != p && E && null != C && "unpublished" !== C && B(g);
+    }, [g?.id, p, E, C]);
     let I = n.useMemo(() => (null == S ? null : _(S)), [S]),
         M = n.useCallback(
             (t) => {

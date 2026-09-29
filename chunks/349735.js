@@ -1,4 +1,4 @@
-l.d(t, { A: () => E });
+l.d(t, { A: () => C });
 var n = l(477900),
     a = l(582128),
     r = l(17928),
@@ -23,11 +23,11 @@ var n = l(477900),
     w = l(375708),
     A = l(472781);
 let S = { values: {}, secrets: {} };
-function E(e) {
+function C(e) {
     let { projectId: t, scopeKeys: l, note: f, notifyAgent: m = !1, isPreview: h = !1, children: g } = e,
         x = (0, r.bG)([y.Ay], () => y.Ay.getSettings(t)),
         [p, b] = a.useState(S),
-        [k, E] = a.useState({}),
+        [k, C] = a.useState({}),
         [I, M] = a.useState(!1),
         [T, P] = a.useState(!1),
         _ = a.useCallback((e, t) => {
@@ -76,7 +76,7 @@ function E(e) {
                           ? (0, y.ss)(t)
                           : (0, v.Eo)(t),
                     b(S),
-                    E({}),
+                    C({}),
                     !0
                 );
             } catch {
@@ -128,7 +128,7 @@ function E(e) {
         }
         return "channel" === e.type
             ? (0, n.jsx)(
-                  C,
+                  E,
                   {
                       projectId: t,
                       isPreview: h,
@@ -192,7 +192,7 @@ function E(e) {
                               text: w.intl.string(N.default.j6itec),
                               "aria-label": w.intl.formatToPlainString(N.default.cTofe2, { label: t }),
                               disabled: I,
-                              onClick: () => E((t) => ({ ...t, [e.name]: !0 })),
+                              onClick: () => C((t) => ({ ...t, [e.name]: !0 })),
                           }),
                       ],
                   },
@@ -293,7 +293,7 @@ function E(e) {
         }),
     });
 }
-function C(e) {
+function E(e) {
     let { projectId: t, isPreview: l, def: a, hint: i, value: u, disabled: o, onChange: d, fallback: c } = e,
         v = (0, r.bG)([k.Ay], () => (0, b.t7)(k.Ay.getProject(t), l), [l, t]),
         j = (0, r.bG)([g.Ay], () => (null == v ? null : g.Ay.getChannels(v)), [v]);

@@ -10,13 +10,13 @@ var l = n(435558),
     c = n(967198),
     u = n(711014),
     A = n(645959),
-    h = n(625494),
-    E = n(265422),
+    E = n(625494),
+    h = n(265422),
     C = n(652215),
-    g = n(790782);
-function _(e, t) {
+    _ = n(790782);
+function g(e, t) {
     return [
-        { resourceId: e, type: g.P.GUILD_EVENT },
+        { resourceId: e, type: _.P.GUILD_EVENT },
         ...(e === C.ME
             ? A.A.getPrivateChannelIds()
             : (0, a.A)(e, { withVoiceChannels: t, withCurrentVoiceChannel: !0 }).map((e) => e.id)),
@@ -28,31 +28,31 @@ let I = r().throttle(function (e, t) {
         a,
         A,
         {
-            channelPredicate: g = () => !0,
+            channelPredicate: _ = () => !0,
             guildPredicate: I = () => !0,
             guildFeaturePredicate: T = () => !1,
             ensureChatIsVisible: p = () => !1,
             withVoiceChannels: N = !1,
         } = t,
         S = o.A.getState().guildId ?? C.ME,
-        f = o.A.getState().channelId,
-        m =
+        O = o.A.getState().channelId,
+        f =
             ((l = S),
             (a = (r = [C.ME, ...u.Ay.getFlattenedGuildIds()]).indexOf(l)),
             e > 0
                 ? r.slice(a).concat(r.slice(0, a), l)
                 : (r.splice(a, 0, l), r.slice(a + 1).concat(r.slice(0, a + 1)))),
-        O = e > 0 ? 0 : m.length - 1,
-        L = _(S, N),
-        b = L.indexOf(f) + e;
+        L = e > 0 ? 0 : f.length - 1,
+        m = g(S, N),
+        b = m.indexOf(O) + e;
     for (; null != S && "" !== S;) {
-        if (((A = L[b]), I(S)))
+        if (((A = m[b]), I(S)))
             for (; null != A && "" !== A;) {
                 if ("string" == typeof A) {
-                    if (g(S, A)) return (0, E.i)(S, A, !1, p(S, A));
+                    if (_(S, A)) return (0, h.i)(S, A, !1, p(S, A));
                 } else if ("object" == typeof A && T(A.resourceId, A.type))
                     return (
-                        S !== c.A.getGuildId() && (0, E.i)(S, d.Ay.getDefaultChannel(S)?.id),
+                        S !== c.A.getGuildId() && (0, h.i)(S, d.Ay.getDefaultChannel(S)?.id),
                         (0, s.openModalLazy)(async () => {
                             let { default: e } = await Promise.all([
                                 n.e("489565"),
@@ -83,36 +83,36 @@ let I = r().throttle(function (e, t) {
                             return (t) => (0, i.jsx)(e, { ...t, guildId: S });
                         })
                     );
-                ((b += e), (A = L[b]));
+                ((b += e), (A = m[b]));
             }
-        if (((O += e), null == (S = m[O]) || "" === S)) break;
-        ((L = _(S, N)), (b = e < 0 ? L.length - 1 : 0));
+        if (((L += e), null == (S = f[L]) || "" === S)) break;
+        ((m = g(S, N)), (b = e < 0 ? m.length - 1 : 0));
     }
-    h._.dispatch(C.jej.SHAKE_APP, { duration: 200, intensity: 2 });
+    E._.dispatch(C.jej.SHAKE_APP, { duration: 200, intensity: 2 });
 }, C.ugG);
 var T = n(455234),
     p = n(95701),
     N = n(734057),
     S = n(573163),
-    f = n(309010),
-    m = n(543465);
-let O = (e, t) => {
+    O = n(309010),
+    f = n(543465);
+let L = (e, t) => {
         let n = N.A.getChannel(t);
         return (
             null != n &&
             ((0, p.Gw)(n.type) || C.kvI.GUILD_VOCAL_PRIMARY.has(n.type)
-                ? S.Ay.getMentionCount(t) > 0 || f.Ay.getVoiceChannelId() === t
-                : (!m.Ay.isChannelMuted(e, t) || S.Ay.getMentionCount(t) > 0) && (0, T.Y)(n))
+                ? S.Ay.getMentionCount(t) > 0 || O.Ay.getVoiceChannelId() === t
+                : (!f.Ay.isChannelMuted(e, t) || S.Ay.getMentionCount(t) > 0) && (0, T.Y)(n))
         );
     },
-    L = (e, t) =>
-        t === g.P.GUILD_EVENT ? !m.Ay.isMuteScheduledEventsEnabled(e) && S.Ay.hasUnread(e, t) : S.Ay.hasUnread(e, t),
+    m = (e, t) =>
+        t === _.P.GUILD_EVENT ? !f.Ay.isMuteScheduledEventsEnabled(e) && S.Ay.hasUnread(e, t) : S.Ay.hasUnread(e, t),
     b = (e, t) => {
         let n = N.A.getChannel(t);
         return (
             null != n &&
             !!C.kvI.GUILD_VOCAL.has(n.type) &&
-            (S.Ay.getMentionCount(t) > 0 || (f.Ay.getVoiceChannelId() === t && S.Ay.getUnreadCount(t) > 0))
+            (S.Ay.getMentionCount(t) > 0 || (O.Ay.getVoiceChannelId() === t && S.Ay.getUnreadCount(t) > 0))
         );
     },
     v = {
@@ -122,9 +122,9 @@ let O = (e, t) => {
             let e = o.A.getState().guildId ?? C.ME;
             return (
                 I(1, {
-                    channelPredicate: O,
-                    guildPredicate: (t) => t === e || !m.Ay.isMuted(t),
-                    guildFeaturePredicate: L,
+                    channelPredicate: L,
+                    guildPredicate: (t) => t === e || !f.Ay.isMuted(t),
+                    guildFeaturePredicate: m,
                     ensureChatIsVisible: b,
                     withVoiceChannels: !0,
                 }),
@@ -139,9 +139,9 @@ let O = (e, t) => {
             let e = o.A.getState().guildId ?? C.ME;
             return (
                 I(-1, {
-                    channelPredicate: O,
-                    guildPredicate: (t) => t === e || !m.Ay.isMuted(t),
-                    guildFeaturePredicate: L,
+                    channelPredicate: L,
+                    guildPredicate: (t) => t === e || !f.Ay.isMuted(t),
+                    guildFeaturePredicate: m,
                     ensureChatIsVisible: b,
                     withVoiceChannels: !0,
                 }),

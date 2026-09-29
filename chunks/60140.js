@@ -32,11 +32,11 @@ function S(e) {
               className: p.hm,
               children: (0, n.jsx)(E.v3.Provider, {
                   value: { flattenProductVariants: !1 },
-                  children: r.map((e, t) => (0, n.jsx)(A, { item: e, index: t, prioritizedCurrency: s }, e.skuId)),
+                  children: r.map((e, t) => (0, n.jsx)(L, { item: e, index: t, prioritizedCurrency: s }, e.skuId)),
               }),
           });
 }
-function L(e) {
+function A(e) {
     let { isLoading: t, products: r, tab: l } = e,
         i = (0, E.Mk)(l),
         o = C.intl.string(C.t.HP8LNG);
@@ -60,7 +60,7 @@ function L(e) {
                 getItemKey: I,
                 maintainFocusOnReorder: !0,
                 renderItem: (e, t, r) =>
-                    (0, n.jsx)(A, { item: e, index: r, prioritizedCurrency: i, listItemProps: t }, e.skuId),
+                    (0, n.jsx)(L, { item: e, index: r, prioritizedCurrency: i, listItemProps: t }, e.skuId),
             }),
         });
     }
@@ -73,11 +73,11 @@ function L(e) {
         children: (0, n.jsx)(s.A, {
             gap: "xl",
             "aria-label": o,
-            children: r.map((e, t) => (0, n.jsx)(A, { item: e, index: t, prioritizedCurrency: i }, e.skuId)),
+            children: r.map((e, t) => (0, n.jsx)(L, { item: e, index: t, prioritizedCurrency: i }, e.skuId)),
         }),
     });
 }
-function A(e) {
+function L(e) {
     let { item: t, index: r, prioritizedCurrency: l, listItemProps: s } = e;
     return (0, n.jsx)(i.R9, {
         newValue: { tilePosition: r, pageSection: "top 4", categoryPosition: 0 },
@@ -108,6 +108,6 @@ let x = function (e) {
         case "feed":
             return (0, n.jsx)(S, { isLoading: C, products: p, tab: u });
         case "hscroll":
-            return (0, n.jsx)(L, { isLoading: C, products: p, tab: u });
+            return (0, n.jsx)(A, { isLoading: C, products: p, tab: u });
     }
 };
