@@ -89,6 +89,12 @@ let n = [
         summary: "Apps you build can now use the phone's tilt and motion sensors, so gyroscope-driven play works.",
     },
     {
+        date: "2026-09-29",
+        time: "00:11",
+        platforms: ["desktop", "mobile"],
+        summary: "Apps you build now follow your Discord theme's colors, unless you ask for colors of their own.",
+    },
+    {
         date: "2026-08-28",
         time: "00:00",
         platforms: ["desktop", "mobile"],
