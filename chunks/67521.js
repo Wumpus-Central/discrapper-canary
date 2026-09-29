@@ -40,7 +40,12 @@ let U = {
                             );
                             return (A) => (0, E.jsx)(e, { ...A });
                         }
-                        let { default: e } = await Promise.all([t.e("32039"), t.e("930375")]).then(t.bind(t, 188602));
+                        let { default: e } = await Promise.all([
+                            t.e("32039"),
+                            t.e("637038"),
+                            t.e("774542"),
+                            t.e("930375"),
+                        ]).then(t.bind(t, 188602));
                         return (A) =>
                             (0, E.jsx)(e, {
                                 entryPoint: i.q1.AUTOMATED_UNDERAGE_APPEALS,

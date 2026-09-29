@@ -9,9 +9,10 @@ function l(e, n) {
             let { default: d } = await Promise.all([
                 t.e("684986"),
                 t.e("531997"),
+                t.e("774542"),
                 t.e("689913"),
                 t.e("202669"),
-                t.e("310023"),
+                t.e("673859"),
                 t.e("890078"),
             ]).then(t.bind(t, 904685));
             return (t) => (0, a.jsx)(d, { ...t, userId: e, linkCode: n });
