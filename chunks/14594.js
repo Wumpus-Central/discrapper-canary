@@ -1,4 +1,4 @@
-n.d(t, { A4: () => E, aH: () => a, jZ: () => u, tF: () => o, w$: () => c });
+n.d(t, { A4: () => c, aH: () => a, jZ: () => u, tF: () => o, w$: () => E });
 var i,
     l,
     r = n(927813),
@@ -10,7 +10,7 @@ var o =
     (i.HARD_TO_ACCESS = "hard_to_access"),
     (i.SOMETHING_ELSE = "something_else"),
     i);
-function E() {
+function c() {
     return [
         { value: "confusion", label: s.intl.string(s.t["64Oph/"]) },
         { value: "does_not_achieve_wants", label: s.intl.string(s.t["wH5R/r"]) },
@@ -18,7 +18,7 @@ function E() {
         { value: "something_else", label: s.intl.string(s.t.YicFbD) },
     ];
 }
-var c =
+var E =
     (((l = {}).CONFUSION = "confusion"),
     (l.DOES_NOT_ACHIEVE_WANTS = "does_not_achieve_wants"),
     (l.HARD_TO_ACCESS = "hard_to_access"),

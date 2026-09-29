@@ -1,4 +1,4 @@
-n.d(t, { h: () => _ });
+n.d(t, { h: () => d });
 var i = n(477900);
 n(582128);
 var l = n(192308),
@@ -6,15 +6,15 @@ var l = n(192308),
     s = n(166403),
     a = n(625494),
     o = n(158045),
-    E = n(598653),
-    c = n(202541),
+    c = n(598653),
+    E = n(202541),
     u = n(652215);
-function _(e) {
-    let { processedCode: t, channelContext: _, customGiftMessage: A, giftInfo: d } = e,
+function d(e) {
+    let { processedCode: t, channelContext: d, customGiftMessage: _, giftInfo: A } = e,
         T = !1,
         I = null,
         N = r.default.getCurrentUser(),
-        R = (0, o.CC)(N?.premiumType, c.PremiumTypes.TIER_0);
+        R = (0, o.CC)(N?.premiumType, E.PremiumTypes.TIER_0);
     (0, l.openModalLazy)(
         async () => {
             let { default: e } = await Promise.all([
@@ -39,13 +39,13 @@ function _(e) {
             return (n) =>
                 (0, i.jsx)(e, {
                     code: t,
-                    channelContext: _,
-                    customGiftMessage: A,
-                    emojiName: d?.emoji?.name,
-                    soundId: d?.sound?.id,
+                    channelContext: d,
+                    customGiftMessage: _,
+                    emojiName: A?.emoji?.name,
+                    soundId: A?.sound?.id,
                     onComplete: (e, t) => {
                         ((I = e),
-                            t && ((T = t), e.isSubscription && null == s.A.getPremiumSubscription(!1) && (0, E.o)(!0)));
+                            t && ((T = t), e.isSubscription && null == s.A.getPremiumSubscription(!1) && (0, c.o)(!0)));
                     },
                     ...n,
                 });
@@ -56,7 +56,7 @@ function _(e) {
                     null != I &&
                     !R &&
                     I.isSubscription &&
-                    I?.subscriptionPlan?.premiumSubscriptionType === c.PremiumTypes.TIER_2 &&
+                    I?.subscriptionPlan?.premiumSubscriptionType === E.PremiumTypes.TIER_2 &&
                     a._.dispatch(u.jej.PREMIUM_SUBSCRIPTION_CREATED);
             },
         },

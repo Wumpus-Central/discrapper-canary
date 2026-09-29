@@ -1,8 +1,8 @@
-r.d(t, { A: () => l });
-var i = r(778712),
-    n = r(486020),
-    s = r(562819);
-let l = function (e) {
-    let { legacyAssetId: t, skuId: r, size: l = i._3.SIZE_80, canAnimate: a } = e;
-    return (0, n.F_)({ avatarDecoration: { asset: t, skuId: r }, size: (0, s.Te)(l), canAnimate: a });
+r.d(t, { A: () => n });
+var s = r(778712),
+    i = r(486020),
+    l = r(562819);
+let n = function (e) {
+    let { legacyAssetId: t, skuId: r, size: n = s._3.SIZE_80, canAnimate: a } = e;
+    return (0, i.F_)({ avatarDecoration: { asset: t, skuId: r }, size: (0, l.Te)(n), canAnimate: a });
 };

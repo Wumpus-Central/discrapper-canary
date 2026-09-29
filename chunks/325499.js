@@ -1,15 +1,15 @@
-t.d(n, { b: () => i, i: () => u });
-let r = (0, t(945810).mj)({
+n.d(t, { b: () => l, i: () => r });
+let i = (0, n(945810).mj)({
     name: "2026-03-croissant",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
 });
-function i(e) {
-    let { enabled: n } = r.useConfig({ location: e });
-    return n;
+function l(e) {
+    let { enabled: t } = i.useConfig({ location: e });
+    return t;
 }
-function u(e) {
-    let { enabled: n } = r.getConfig({ location: e });
-    return n;
+function r(e) {
+    let { enabled: t } = i.getConfig({ location: e });
+    return t;
 }

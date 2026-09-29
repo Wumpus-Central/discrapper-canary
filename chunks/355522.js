@@ -1,40 +1,40 @@
-l.d(t, { M: () => r });
-var i = l(477900);
-l(582128);
-var a = l(661531),
-    n = l(996682),
-    s = l(27989);
+i.d(t, { M: () => r });
+var l = i(477900);
+i(582128);
+var n = i(661531),
+    a = i(996682),
+    s = i(27989);
 function r(e) {
     let {
             size: t = "md",
-            width: l,
+            width: i,
             height: r,
-            color: c = a.A.colors.INTERACTIVE_ICON_DEFAULT,
-            colorClass: h = "",
+            color: o = n.A.colors.INTERACTIVE_ICON_DEFAULT,
+            colorClass: c = "",
             ...d
         } = e,
-        o = (0, s.J)(t),
-        _ = o?.width ?? l,
-        u = o?.height ?? r;
-    return (0, i.jsxs)("svg", {
-        ...(0, n.A)(d),
+        h = (0, s.J)(t),
+        u = h?.width ?? i,
+        _ = h?.height ?? r;
+    return (0, l.jsxs)("svg", {
+        ...(0, a.A)(d),
         xmlns: "http://www.w3.org/2000/svg",
-        width: _,
-        height: u,
+        width: u,
+        height: _,
         fill: "none",
         viewBox: "0 0 24 24",
         children: [
-            (0, i.jsx)("path", {
-                fill: "string" == typeof c ? c : c.css,
+            (0, l.jsx)("path", {
+                fill: "string" == typeof o ? o : o.css,
                 d: "M9 15H8v-4h1v4ZM12 11a1 1 0 0 1 1 1v3h-2v-3a1 1 0 0 1 1-1ZM16 15h-1v-4h1v4Z",
-                className: h,
+                className: c,
             }),
-            (0, i.jsx)("path", {
-                fill: "string" == typeof c ? c : c.css,
+            (0, l.jsx)("path", {
+                fill: "string" == typeof o ? o : o.css,
                 fillRule: "evenodd",
                 d: "M21.6 4c1.32 0 2.4.9 2.4 2v12c0 1.1-1.08 2-2.4 2H2.4C1.08 20 0 19.1 0 18V6c0-1.1 1.08-2 2.4-2h19.2Zm-9.18 3.15c-.27-.1-.57-.1-.84 0L4.45 9.7a.67.67 0 0 0 .22 1.3H6v4a1 1 0 0 0-1 1v1h14v-1a1 1 0 0 0-.9-1H18v-4h1.33a.67.67 0 0 0 .22-1.3l-7.13-2.55Z",
                 clipRule: "evenodd",
-                className: h,
+                className: c,
             }),
         ],
     });

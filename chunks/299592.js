@@ -1,4 +1,4 @@
-c.exports = {
+e.exports = {
     Hc: "modalHeader_c28af8",
     PV: "closeBtn_c28af8",
     LY: "asset_c28af8",

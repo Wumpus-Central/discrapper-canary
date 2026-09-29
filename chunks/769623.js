@@ -1,5 +1,5 @@
-t.d(n, { Y: () => i });
-let r = (0, t(945810).mj)({
+r.d(n, { Y: () => i });
+let t = (0, r(945810).mj)({
     name: "2026-07-premium-group-expansion-announcement",
     kind: "user",
     defaultConfig: !1,
@@ -7,5 +7,5 @@ let r = (0, t(945810).mj)({
 });
 function i(e) {
     let { location: n } = e;
-    return r.useConfig({ location: n });
+    return t.useConfig({ location: n });
 }

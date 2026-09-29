@@ -1,4 +1,4 @@
-n.d(t, { A: () => c, e: () => o });
+n.d(t, { A: () => E, e: () => o });
 var i,
     l = n(17928),
     r = n(228366);
@@ -9,7 +9,7 @@ var o =
     (i[(i.FETCHING = 1)] = "FETCHING"),
     (i[(i.FETCHED = 2)] = "FETCHED"),
     i);
-class E extends l.Ay.Store {
+class c extends l.Ay.Store {
     static displayName = "CreatorMonetizationStore";
     getPriceTiersFetchStateForGuildAndType(e, t) {
         return a.get(e)?.get(t) ?? 0;
@@ -18,7 +18,7 @@ class E extends l.Ay.Store {
         return s.get(e)?.get(t);
     }
 }
-let c = new E(r.h, {
+let E = new c(r.h, {
     CONNECTION_OPEN: function () {
         (s.clear(), a.clear());
     },

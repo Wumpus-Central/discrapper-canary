@@ -1,4 +1,4 @@
-r.d(t, { rQ: () => s, W0: () => n.W, Qr: () => c.Q });
+r.d(t, { rQ: () => s, W0: () => n.W, Qr: () => o.Q });
 var n = r(309954),
     a = r(582128),
     l = r(17928),
@@ -21,4 +21,4 @@ function s(e) {
         { totalRedeemed: t, isFetching: r, error: n }
     );
 }
-var c = r(715054);
+var o = r(715054);

@@ -1,29 +1,29 @@
-n.d(t, { A: () => O });
+n.d(t, { A: () => m });
 var i = n(17928),
     l = n(228366),
     r = n(779185),
     s = n(320095),
     a = n(734057),
     o = n(232835),
-    E = n(935208),
-    c = n(753738),
+    c = n(935208),
+    E = n(753738),
     u = n(877133),
-    _ = n(652215);
-let A = {},
-    d = 0,
+    d = n(652215);
+let _ = {},
+    A = 0,
     T = {},
     I = {};
 function N(e) {
-    (null != A[e] && delete A[e], d++);
+    (null != _[e] && delete _[e], A++);
 }
 function R(e) {
     let t,
         n,
         { messageData: i, errorResponseBody: l } = e;
     return (
-        (n = { id: (t = (0, r.cR)(i)), isBlockedEdit: (0, r.Qn)(i), messageData: i, errorMessage: (0, c.PD)(i, l) }),
-        (A[t] = n),
-        d++,
+        (n = { id: (t = (0, r.cR)(i)), isBlockedEdit: (0, r.Qn)(i), messageData: i, errorMessage: (0, E.PD)(i, l) }),
+        (_[t] = n),
+        A++,
         !0
     );
 }
@@ -34,12 +34,12 @@ function C(e) {
     let l = I[i],
         r = n.reduce(
             (e, t) =>
-                t.type === _.lAJ.AUTO_MODERATION_ACTION &&
+                t.type === d.lAJ.AUTO_MODERATION_ACTION &&
                 t.embeds?.some((e) => {
                     let { type: t } = e;
-                    return t === _.Auw.AUTO_MODERATION_NOTIFICATION;
+                    return t === d.Auw.AUTO_MODERATION_NOTIFICATION;
                 })
-                    ? null == e || -1 === E.default.compare(e, t.id)
+                    ? null == e || -1 === c.default.compare(e, t.id)
                         ? t.id
                         : void 0
                     : e,
@@ -47,20 +47,20 @@ function C(e) {
         );
     return null != r && I[i] !== r && ((I[i] = r), !0);
 }
-class S extends i.Ay.PersistedStore {
+class O extends i.Ay.PersistedStore {
     static displayName = "GuildAutomodMessageStore";
     static persistKey = "GuildAutomodMessages";
     initialize(e) {
-        (this.waitFor(a.A, o.A), null != e && ((A = e.automodFailedMessages), (T = e.mentionRaidDetectionByGuild)));
+        (this.waitFor(a.A, o.A), null != e && ((_ = e.automodFailedMessages), (T = e.mentionRaidDetectionByGuild)));
     }
     getState() {
-        return { automodFailedMessages: A, mentionRaidDetectionByGuild: T, lastIncidentAlertMessage: I };
+        return { automodFailedMessages: _, mentionRaidDetectionByGuild: T, lastIncidentAlertMessage: I };
     }
     getMessage(e) {
-        return null == e ? null : (A[e] ?? null);
+        return null == e ? null : (_[e] ?? null);
     }
     getMessagesVersion() {
-        return d;
+        return A;
     }
     getMentionRaidDetected(e) {
         return T[e] ?? null;
@@ -69,15 +69,15 @@ class S extends i.Ay.PersistedStore {
         return I[e] ?? null;
     }
 }
-let O = new S(l.h, {
+let m = new O(l.h, {
     CONNECTION_OPEN: function (e) {
-        return 0 !== Object.keys(A).length && ((A = {}), d++, !0);
+        return 0 !== Object.keys(_).length && ((_ = {}), A++, !0);
     },
     LOAD_MESSAGES_SUCCESS: C,
     LOCAL_MESSAGES_LOADED: C,
     MESSAGE_CREATE: function (e) {
         let { guildId: t, message: n } = e;
-        if (null == t || n.type !== _.lAJ.AUTO_MODERATION_ACTION) return !1;
+        if (null == t || n.type !== d.lAJ.AUTO_MODERATION_ACTION) return !1;
         let i = (0, s.rh)(n);
         return !!(0, u.ER)(i) && !!(0, u.de)(i) && ((I[t] = i.id), !0);
     },
@@ -86,7 +86,7 @@ let O = new S(l.h, {
     AUTO_MODERATION_CONTENT_DELETED: function (e) {
         let { message: t, notice: n } = e;
         return (
-            null != t && ((A[t.id] = { id: t.id, messageData: void 0, isBlockedEdit: !1, errorMessage: n }), d++, !0)
+            null != t && ((_[t.id] = { id: t.id, messageData: void 0, isBlockedEdit: !1, errorMessage: n }), A++, !0)
         );
     },
     REMOVE_AUTOMOD_MESSAGE_NOTICE: function (e) {
@@ -95,7 +95,7 @@ let O = new S(l.h, {
     },
     MESSAGE_END_EDIT: function (e) {
         let { response: t } = e;
-        if (t?.body == null || t.body.code === _.t02.AUTOMOD_MESSAGE_BLOCKED) return !1;
+        if (t?.body == null || t.body.code === d.t02.AUTOMOD_MESSAGE_BLOCKED) return !1;
         let n = t.body.id;
         if (null == n) return !1;
         N(n);

@@ -21,8 +21,8 @@ let C = {
         if (!l || null == a || null == r) return null;
         let _ = (0, i.default)(new Date(a.next_reward_date), new Date()),
             E = a.program_current_state === u.L.PREMIUM_CHURNING,
-            g = E ? C.churning.start : C.active.start,
-            A = E ? C.churning.end : C.active.end;
+            A = E ? C.churning.start : C.active.start,
+            g = E ? C.churning.end : C.active.end;
         return (0, n.jsxs)("div", {
             className: s()(m.k, t),
             children: [
@@ -30,7 +30,7 @@ let C = {
                     variant: h.qP.UNSET,
                     progress: r - _,
                     maximum: r,
-                    override: { default: { gradientStart: g, gradientEnd: A } },
+                    override: { default: { gradientStart: A, gradientEnd: g } },
                 }),
                 E
                     ? (0, n.jsx)(c.t, { size: "sm", color: "currentColor", className: m.K })
