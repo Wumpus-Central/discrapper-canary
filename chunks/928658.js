@@ -32,9 +32,9 @@ function c(e, t) {
     (y(l.t0.GUILD_DIRECTORY_ENTRY, { channel_id: e.channelId, guild_id: e.guildId }),
         (0, u.T)({ name: l.t0.GUILD_DIRECTORY_ENTRY, record: e }, {}, { onSubmit: t }));
 }
-function E(e, t, n) {
+function E(e, t, n, i) {
     (y(l.t0.MESSAGE, { message_id: e.id, channel_id: e.channel_id }),
-        (0, u.T)({ name: l.t0.MESSAGE, record: e }, {}, { onSubmit: n }));
+        (0, u.T)({ name: l.t0.MESSAGE, record: e }, {}, { onSubmit: n, onClose: i }));
 }
 function m(e, t, n) {
     (y(l.t0.MESSAGE, { message_id: e.id, channel_id: e.channel_id }),

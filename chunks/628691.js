@@ -1,31 +1,27 @@
-n.d(t, { AR: () => c, UN: () => o, ul: () => d });
+n.d(t, { AR: () => d, UN: () => l, ul: () => o });
 var i = n(734057),
-    r = n(498642),
-    a = n(576705),
-    s = n(287809),
-    l = n(652215);
-function o(e) {
+    r = n(576705),
+    a = n(287809),
+    s = n(652215);
+function l(e) {
     if (null == e) return !1;
     let t = e.id,
-        n = s.default.getCurrentUser();
+        n = a.default.getCurrentUser();
     return null != n && n.id !== t && !0 !== e.system;
 }
-function d(e) {
-    return null != e && !l.MRS.NON_REPORTABLE.has(e.type) && o(e.author);
+function o(e) {
+    return null != e && !s.MRS.NON_REPORTABLE.has(e.type) && l(e.author);
 }
-function c(e) {
+function d(e) {
+    var t;
+    let n;
     return (
         null != e &&
-        d(e) &&
-        (function (e) {
-            let t = i.A.getChannel(e);
-            if (null == t) return !1;
-            if (t.type === l.rbe.DM || t.type === l.rbe.GROUP_DM) return !0;
-            if (a.A.canWithPartialContext(l.xBc.MANAGE_MESSAGES, { channelId: e })) {
-                let e = r.A.getMemberCount(t.getGuildId());
-                return null != e && e >= 50;
-            }
-            return !1;
-        })(e.getChannelId())
+        o(e) &&
+        ((t = e.getChannelId()),
+        null != (n = i.A.getChannel(t)) &&
+            (n.type === s.rbe.DM ||
+                n.type === s.rbe.GROUP_DM ||
+                r.A.canWithPartialContext(s.xBc.MANAGE_MESSAGES, { channelId: t })))
     );
 }

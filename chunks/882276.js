@@ -689,5 +689,7 @@ async function s(e, t, s) {
                 dismissable: r,
             },
         );
-    } catch {}
+    } catch {
+        p?.();
+    }
 }
