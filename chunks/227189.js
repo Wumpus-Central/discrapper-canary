@@ -1,17 +1,17 @@
 n.d(t, { p: () => u });
-var r = n(485845),
-    i = n(179771),
+var i = n(485845),
+    r = n(179771),
     l = n(136722),
     o = n(803306);
-let s = [i.F.BOT, i.F.APPLICATIONS_COMMANDS];
+let s = [r.F.BOT, r.F.APPLICATIONS_COMMANDS];
 function u(e) {
-    let { applicationId: t, application: n, guildId: i } = e,
-        u = n?.integrationTypesConfig?.[r.b.GUILD_INSTALL]?.oauth2InstallParams ?? n?.installParams;
+    let { applicationId: t, application: n, guildId: r } = e,
+        u = n?.integrationTypesConfig?.[i.b.GUILD_INSTALL]?.oauth2InstallParams ?? n?.installParams;
     return {
         clientId: t,
-        guildId: i,
+        guildId: r,
         disableGuildSelect: !0,
-        integrationType: r.b.GUILD_INSTALL,
+        integrationType: i.b.GUILD_INSTALL,
         scopes: u?.scopes ?? s,
         permissions: u?.permissions != null ? l.iu(u.permissions) : void 0,
         callback: () => ((0, o.eO)(t, { withMutualGuilds: !0 }), !0),

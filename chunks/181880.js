@@ -12,10 +12,10 @@ var i = n(477900),
     E = n(967198),
     h = n(594061),
     m = n(617617);
-function g() {
+function I() {
     return m.A.getDefaultGuildThemePreference() === c.tI.PERSONAL ? c.tI.PERSONAL : c.tI.GUILD;
 }
-async function I(e, t) {
+async function g(e, t) {
     let n = t ? c.tI.PERSONAL : c.tI.GUILD;
     (await (0, h.JM)(n), await (0, h.Sh)(e));
 }
@@ -27,11 +27,11 @@ let p = "GUILD_THEME_NUX_MODAL",
     T = new A.A("GuildThemeNuxModal");
 function M(e) {
     let { guildId: t, markAsDismissed: n, transitionState: A, onClose: h } = e,
-        [m, p] = s.useState(g),
+        [m, p] = s.useState(I),
         [M, f] = s.useState(null),
-        [O, R] = s.useState("init"),
+        [L, R] = s.useState("init"),
         D = m === c.tI.PERSONAL,
-        L = (0, l.bG)([E.A], () => E.A.getGuildId()),
+        O = (0, l.bG)([E.A], () => E.A.getGuildId()),
         x = (0, l.bG)(
             [C.A],
             () => {
@@ -42,35 +42,35 @@ function M(e) {
         ),
         G = D ? null : x;
     s.useEffect(() => {
-        L !== t && h();
-    }, [t, h, L]);
+        O !== t && h();
+    }, [t, h, O]);
     let U = s.useCallback((e) => {
             (f(null), p(e));
         }, []),
         b = s.useCallback(async () => {
-            if ("init" === O) {
-                if (L !== t) return void (await h());
+            if ("init" === L) {
+                if (O !== t) return void (await h());
                 (R("submitting"), f(null));
                 try {
-                    await I(t, D);
+                    await g(t, D);
                 } catch (e) {
                     (T.error("Failed to save guild theme NUX preference", e), f(N.intl.string(N.t.fEptJP)), R("init"));
                     return;
                 }
                 (R("submitted"), n(_.i.TAKE_ACTION), await h());
             }
-        }, [t, D, n, h, L, O]),
+        }, [t, D, n, h, O, L]),
         y = s.useCallback(async () => {
-            ("submitted" !== O && n(_.i.USER_DISMISS), await h());
-        }, [n, h, O]),
-        H = s.useMemo(
+            ("submitted" !== L && n(_.i.USER_DISMISS), await h());
+        }, [n, h, L]),
+        P = s.useMemo(
             () => [
                 { value: c.tI.GUILD, id: "guild", label: N.intl.string(N.t.aN3RNQ) },
                 { value: c.tI.PERSONAL, id: "personal", label: N.intl.string(N.t.js8y7t) },
             ],
             [],
         ),
-        P = D ? N.intl.string(N.t.cvoikF) : N.intl.string(N.t["cY+Oob"]);
+        H = D ? N.intl.string(N.t.cvoikF) : N.intl.string(N.t["cY+Oob"]);
     return (0, i.jsx)(a.k, {
         size: "md",
         transitionState: A,
@@ -86,10 +86,10 @@ function M(e) {
         subtitle: N.intl.string(N.t.XLpBLj),
         actions: [
             {
-                text: P,
+                text: H,
                 variant: D ? "secondary" : "primary",
-                loading: "submitting" === O,
-                disabled: "submitting" === O,
+                loading: "submitting" === L,
+                disabled: "submitting" === L,
                 onClick: b,
             },
         ],
@@ -100,7 +100,7 @@ function M(e) {
             children: [
                 (0, i.jsx)(d.l, {
                     selectionMode: "single",
-                    options: H,
+                    options: P,
                     value: m,
                     onSelectionChange: U,
                     fullWidth: !0,

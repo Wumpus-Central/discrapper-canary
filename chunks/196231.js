@@ -25,8 +25,8 @@ function v(e) {
             enablePreview: v,
             pageType: _ = S.G2.HOME,
             className: I,
-            handleTransition: y,
-            listItemProps: L,
+            handleTransition: L,
+            listItemProps: y,
         } = e,
         f = r?.categorySkuId;
     null == f && null != r && (f = p.A.getCategoryByStoreListingId(r?.categoryStoreListingId)?.skuId);
@@ -46,9 +46,9 @@ function v(e) {
             className: a()(A.oT, I),
             innerRef: B,
             style: { ...(null != j && { backgroundImage: `url(${j})` }) },
-            ...L,
+            ...y,
             onClick: () => {
-                (y({
+                (L({
                     sourceButton: "shop marketing tile",
                     categorySkuId: k,
                     isInternalShopDeeplink: !0,
@@ -85,9 +85,9 @@ function v(e) {
                         variant: "overlay-primary",
                         text: C.intl.string(C.t.jVcuVY),
                         "aria-label": b,
-                        tabIndex: L?.tabIndex,
+                        tabIndex: y?.tabIndex,
                         onClick: (e) => {
-                            (y({
+                            (L({
                                 sourceButton: "shop marketing take me there button",
                                 categorySkuId: k,
                                 isInternalShopDeeplink: !0,

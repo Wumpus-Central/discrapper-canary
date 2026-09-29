@@ -7,19 +7,19 @@ var i = n(435558),
     d = n(555337),
     o = n(652215),
     c = n(539916);
-let I = !1,
-    u = null,
+let u = !1,
+    I = null,
     E = [],
     N = !1,
     S = [];
 function m() {
-    ((I = !1),
-        (u = null),
+    ((u = !1),
+        (I = null),
         (S = []),
         (N = !1),
-        null != (u = d.A.getGuildId()) &&
+        null != (I = d.A.getGuildId()) &&
             d.A.getSection() === o.BEX.ONBOARDING &&
-            ((E = a.A.getOnboardingPrompts(u)), (N = a.A.isAdvancedMode(u))));
+            ((E = a.A.getOnboardingPrompts(I)), (N = a.A.isAdvancedMode(I))));
 }
 class _ extends s.Ay.Store {
     static displayName = "GuildSettingsOnboardingPromptsStore";
@@ -27,21 +27,21 @@ class _ extends s.Ay.Store {
         this.waitFor(d.A, a.A);
     }
     hasChanges() {
-        return null != u && !l().isEqual(a.A.getOnboardingPrompts(u), E);
+        return null != I && !l().isEqual(a.A.getOnboardingPrompts(I), E);
     }
     getChangedPrompts() {
-        if (null == u) return [];
-        let t = a.A.getOnboardingPrompts(u);
+        if (null == I) return [];
+        let t = a.A.getOnboardingPrompts(I);
         return E.filter((e) => {
             let n = t.find((t) => t.id === e.id);
             return null == n || !l().isEqual(e, n);
         });
     }
     get guildId() {
-        return u;
+        return I;
     }
     get submitting() {
-        return I;
+        return u;
     }
     get errors() {
         return S;
@@ -61,14 +61,14 @@ let g = new _(r.h, {
     GUILD_SETTINGS_DEFAULT_CHANNELS_RESET: m,
     GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_SUCCESS: m,
     GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_FAILED: function (t) {
-        ((S = t.errors ?? []), (I = !1));
+        ((S = t.errors ?? []), (u = !1));
     },
     GUILD_SETTINGS_ONBOARDING_PROMPTS_EDIT: function (t) {
         let { prompts: e } = t;
         E = e;
     },
     GUILD_SETTINGS_ONBOARDING_PROMPTS_SUBMIT: function () {
-        ((I = !0), (S = []));
+        ((u = !0), (S = []));
     },
     GUILD_SETTINGS_ONBOARDING_PROMPTS_ERRORS: function (t) {
         S = t.errors ?? [];

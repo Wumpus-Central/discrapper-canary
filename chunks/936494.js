@@ -1,6 +1,6 @@
 n.d(t, { $k: () => u, Xd: () => a, hj: () => s, uQ: () => o });
-var r = n(652215),
-    i = n(50617),
+var i = n(652215),
+    r = n(50617),
     l = n(375708);
 class o extends Error {
     reason;
@@ -17,8 +17,8 @@ function s(e) {
     let { status: t, body: n } = e;
     if ("number" != typeof t) return "unknown";
     if (429 === t) return "rate_limited";
-    let i = n?.code;
-    return 409 === t && i === r.t02.TOO_MANY_VIBEGRATIONS_PROJECTS ? "project_limit" : "unknown";
+    let r = n?.code;
+    return 409 === t && r === i.t02.TOO_MANY_VIBEGRATIONS_PROJECTS ? "project_limit" : "unknown";
 }
 function u(e) {
     let t = e?.status;
@@ -27,10 +27,10 @@ function u(e) {
 function a(e) {
     switch (e instanceof o ? e.reason : "unknown") {
         case "project_limit":
-            return l.intl.string(i.default.Asusmn);
+            return l.intl.string(r.default.Asusmn);
         case "rate_limited":
-            return l.intl.string(i.default.DT6qly);
+            return l.intl.string(r.default.DT6qly);
         default:
-            return l.intl.string(i.default.KKkp5Y);
+            return l.intl.string(r.default.KKkp5Y);
     }
 }

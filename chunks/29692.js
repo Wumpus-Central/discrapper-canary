@@ -1,13 +1,13 @@
 (l.d(t, {
     F6: () => n,
     LL: () => h,
-    Mx: () => x,
+    Mx: () => g,
     ec: () => a,
     gq: () => r,
-    iw: () => u,
+    iw: () => o,
     jo: () => s,
     to: () => i,
-    ts: () => o,
+    ts: () => u,
     v_: () => m,
 }),
     l(321073));
@@ -24,14 +24,14 @@ function s(e, t, l) {
     let n = null,
         a = 1 / 0;
     for (let r of e) {
-        let { x: e, y: i, width: s, height: o } = r.rect;
-        if (s < 1 || o < 1 || t < e || l < i || t > e + s || l > i + o) continue;
-        let u = s * o;
-        u < a && ((n = r), (a = u));
+        let { x: e, y: i, width: s, height: u } = r.rect;
+        if (s < 1 || u < 1 || t < e || l < i || t > e + s || l > i + u) continue;
+        let o = s * u;
+        o < a && ((n = r), (a = o));
     }
     return n;
 }
-function o(e) {
+function u(e) {
     let t = e.name.trim(),
         l = (function (e) {
             switch (e.role) {
@@ -121,8 +121,8 @@ function o(e) {
             : { kind: "", name: t }
         : { kind: l, name: t };
 }
-function u(e) {
-    let { kind: t, name: l } = o(e);
+function o(e) {
+    let { kind: t, name: l } = u(e);
     return [t, l].filter((e) => "" !== e).join(" ");
 }
 function d(e) {
@@ -142,7 +142,7 @@ function d(e) {
 let c = "[vibegrations:selected] ",
     f = " \u2014 ";
 function m(e, t) {
-    let { kind: l, name: n } = o(e),
+    let { kind: l, name: n } = u(e),
         a = [l, n].filter((e) => "" !== e).join(": ");
     return `${c}${a}${f}${d(e)}
 ${t.trim()}`;
@@ -157,7 +157,7 @@ function h(e) {
         i = (-1 === r ? a : a.slice(0, r)).trim();
     return "" === i ? null : { label: i, body: n };
 }
-function x(e) {
+function g(e) {
     let { annotations: t, metaComment: l, context: n } = e,
         a = t.filter((e) => i(e.comment)),
         s = [];
@@ -177,6 +177,6 @@ function x(e) {
             s.push(`${t + 1}. ${d(e.target)}`),
             s.push(`   Feedback: ${(l = e.comment.trim()).length <= r ? l : `${l.slice(0, r)}\u{2026}`}`));
     });
-    let o = l.trim();
-    return ("" !== o && (s.push(""), s.push(`Note for the whole batch: ${o}`)), s.join("\n"));
+    let u = l.trim();
+    return ("" !== u && (s.push(""), s.push(`Note for the whole batch: ${u}`)), s.join("\n"));
 }

@@ -1,4 +1,4 @@
-l.d(t, { Qg: () => o, Qs: () => i, Xm: () => r, yZ: () => s });
+l.d(t, { Qg: () => u, Qs: () => i, Xm: () => r, yZ: () => s });
 var n = l(753514);
 let a = { frame: (e) => e.hasFrame, widget: (e) => e.hasProfileWidget, bot: (e) => !0 === e.hasBotDm };
 function r(e) {
@@ -21,7 +21,7 @@ function s(e) {
         l = e.miniProfile;
     return { hasMainCard: t, hasPopoutCard: l, hasAny: t || l };
 }
-function o(e) {
+function u(e) {
     let { installScope: t, previewReady: l, integrationInstalled: n, botPermissionsChanged: a } = e;
     return !!l && null != n && (!!a || ("user" !== t && !n));
 }

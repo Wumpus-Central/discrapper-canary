@@ -1,6 +1,6 @@
 n.d(t, { A: () => X });
-var r = n(264686),
-    i = n(625180),
+var i = n(264686),
+    r = n(625180),
     l = n(91242),
     o = n(976860),
     s = n(803224),
@@ -31,30 +31,30 @@ async function E(e) {
     let t = window.DiscordNative,
         n = await t?.window?.getMediaSourceId?.();
     if (null == n) return g("no media source id for our own window");
-    let r = n.split(":")[1];
-    if (null == r || "" === r) return g("unrecognized media source id", { sourceId: n });
-    let i = Math.min(
+    let i = n.split(":")[1];
+    if (null == i || "" === i) return g("unrecognized media source id", { sourceId: n });
+    let r = Math.min(
             window.devicePixelRatio,
             1568 / Math.max(e.width, e.height),
             Math.sqrt(115e4 / (e.width * e.height)),
         ),
-        l = Math.ceil(window.outerWidth * i),
-        o = Math.ceil(window.outerHeight * i),
+        l = Math.ceil(window.outerWidth * r),
+        o = Math.ceil(window.outerHeight * r),
         s = h.Ay.getMediaEngine();
     if (s.supports(p.O5.WINDOW_PREVIEWS))
         try {
             let e = f.O.getConfig({ location: "vibegrationsNativeCapture" }).enabled,
-                t = await s.getSingleWindowPreview(r, l, o, e);
+                t = await s.getSingleWindowPreview(i, l, o, e);
             if (null != t && "" !== t.url) return t.url;
         } catch {}
     let u = await t?.desktopCapture?.getDesktopCaptureSources({
             types: [d.fS.WINDOW],
             thumbnailSize: { width: l, height: o },
         }),
-        a = u?.find((e) => e.id.split(":")[1] === r);
+        a = u?.find((e) => e.id.split(":")[1] === i);
     return null == a || "" === a.url ? g("own window missing from capture sources") : a.url;
 }
-async function m() {
+async function T() {
     let e = document.createElement("div");
     return (
         (e.style.cssText =
@@ -64,42 +64,42 @@ async function m() {
         () => e.remove()
     );
 }
-async function T(e, t, n) {
-    let r = new Image();
-    if (((r.decoding = "async"), (r.src = e), await r.decode(), 0 === r.naturalWidth || 0 === r.naturalHeight))
+async function m(e, t, n) {
+    let i = new Image();
+    if (((i.decoding = "async"), (i.src = e), await i.decode(), 0 === i.naturalWidth || 0 === i.naturalHeight))
         return g("window still decoded empty");
-    let i = r.naturalWidth / window.outerWidth,
-        l = r.naturalHeight / window.outerHeight;
-    if (i <= 0 || l <= 0 || Math.abs(i - l) > 0.03 * i)
+    let r = i.naturalWidth / window.outerWidth,
+        l = i.naturalHeight / window.outerHeight;
+    if (r <= 0 || l <= 0 || Math.abs(r - l) > 0.03 * r)
         return g("window still does not match the window geometry", {
-            image: { width: r.naturalWidth, height: r.naturalHeight },
+            image: { width: i.naturalWidth, height: i.naturalHeight },
             window: { width: window.outerWidth, height: window.outerHeight },
         });
-    let o = (function (e, t, n, r) {
-        let i = t.x > 2 ? [0, t.x] : [0],
+    let o = (function (e, t, n, i) {
+        let r = t.x > 2 ? [0, t.x] : [0],
             l = t.y > 2 ? [0, t.y] : [0];
-        if (1 === i.length && 1 === l.length) return { x: 0, y: 0 };
-        for (let t of i)
-            for (let i of l)
+        if (1 === r.length && 1 === l.length) return { x: 0, y: 0 };
+        for (let t of r)
+            for (let r of l)
                 if (
                     (function (e, t, n) {
-                        let r = document.createElement("canvas");
-                        ((r.width = 1), (r.height = 1));
-                        let i = r.getContext("2d");
-                        if (null == i) return !1;
-                        i.drawImage(e, t, n, 1, 1, 0, 0, 1, 1);
-                        let [l, o, s] = i.getImageData(0, 0, 1, 1).data;
+                        let i = document.createElement("canvas");
+                        ((i.width = 1), (i.height = 1));
+                        let r = i.getContext("2d");
+                        if (null == r) return !1;
+                        r.drawImage(e, t, n, 1, 1, 0, 0, 1, 1);
+                        let [l, o, s] = r.getImageData(0, 0, 1, 1).data;
                         return l > 150 && s > 150 && o < Math.min(l, s) - 80;
-                    })(e, Math.round((t + 43) * n), Math.round((i + 43) * r))
+                    })(e, Math.round((t + 43) * n), Math.round((r + 43) * i))
                 )
-                    return { x: t, y: i };
+                    return { x: t, y: r };
         return null;
-    })(r, n, i, l);
+    })(i, n, r, l);
     if (null == o) return g("document not found inside the window still", { inset: n });
-    let s = Math.max(0, Math.floor((o.x + t.left) * i)),
+    let s = Math.max(0, Math.floor((o.x + t.left) * r)),
         u = Math.max(0, Math.floor((o.y + t.top) * l)),
-        a = Math.min(r.naturalWidth - s, Math.round(t.width * i)),
-        d = Math.min(r.naturalHeight - u, Math.round(t.height * l));
+        a = Math.min(i.naturalWidth - s, Math.round(t.width * r)),
+        d = Math.min(i.naturalHeight - u, Math.round(t.height * l));
     if (a < 1 || d < 1) return g("crop resolved empty");
     let c = Math.min(1, 1568 / Math.max(a, d), Math.sqrt(115e4 / (a * d))),
         f = Math.max(1, Math.round(a * c)),
@@ -108,7 +108,7 @@ async function T(e, t, n) {
     ((p.width = f), (p.height = h));
     let _ = p.getContext("2d");
     if (null == _) return g("no 2d context");
-    _.drawImage(r, s, u, a, d, 0, 0, f, h);
+    _.drawImage(i, s, u, a, d, 0, 0, f, h);
     let w = await new Promise((e) => p.toBlob(e, "image/webp", 0.92));
     return null == w || "image/webp" !== w.type
         ? g("webp encode failed")
@@ -118,7 +118,7 @@ async function T(e, t, n) {
 }
 async function I(e, t) {
     try {
-        var n, r, i;
+        var n, i, r;
         let l;
         if (null == window.DiscordNative) return g("not the desktop app");
         if (
@@ -126,12 +126,12 @@ async function I(e, t) {
             null != n &&
                 "viewport" !==
                     (n.mode ??
-                        (null != (r = n.target) &&
-                        ((null != r.ref && "" !== r.ref) ||
-                            (null != r.selector && "" !== r.selector) ||
-                            (null != r.text && "" !== r.text))
+                        (null != (i = n.target) &&
+                        ((null != i.ref && "" !== i.ref) ||
+                            (null != i.selector && "" !== i.selector) ||
+                            (null != i.text && "" !== i.text))
                             ? "element"
-                            : null != (i = n.rect) && i.width > 0 && i.height > 0
+                            : null != (r = n.rect) && r.width > 0 && r.height > 0
                               ? "rect"
                               : "viewport")))
         )
@@ -141,17 +141,17 @@ async function I(e, t) {
         if (null == o) return g("frame not fully on screen");
         if (
             !(function (e, t) {
-                for (let [n, r] of [
+                for (let [n, i] of [
                     [t.left + t.width / 2, t.top + t.height / 2],
                     [t.left + 8, t.top + 8],
                     [t.right - 8, t.top + 8],
                     [t.left + 8, t.bottom - 8],
                     [t.right - 8, t.bottom - 8],
                 ]) {
-                    let i = document.elementFromPoint(n, r);
-                    if (i === e) continue;
-                    if (null == i) return !1;
-                    let l = i.getBoundingClientRect();
+                    let r = document.elementFromPoint(n, i);
+                    if (r === e) continue;
+                    if (null == r) return !1;
+                    let l = r.getBoundingClientRect();
                     if (
                         !(
                             2 >= Math.abs(l.left - t.left) &&
@@ -170,7 +170,7 @@ async function I(e, t) {
                 x: Math.max(0, window.outerWidth - window.innerWidth),
                 y: Math.max(0, window.outerHeight - window.innerHeight),
             },
-            u = s.x > 2 || s.y > 2 ? await m() : null;
+            u = s.x > 2 || s.y > 2 ? await T() : null;
         try {
             l = await E(o);
         } finally {
@@ -186,7 +186,7 @@ async function I(e, t) {
             Math.abs(a.height - o.height) > 1
         )
             return g("frame moved or resized during capture");
-        let d = await T(l, o, s);
+        let d = await m(l, o, s);
         if (null == d) return null;
         let c = (function (e) {
             try {
@@ -232,125 +232,125 @@ async function I(e, t) {
 var A = n(120426),
     S = n(320510),
     R = n(227189),
-    y = n(940107),
-    v = n(171936),
-    O = n(809685),
+    O = n(940107),
+    y = n(171936),
+    v = n(809685),
     b = n(777977),
-    k = n(484697);
+    N = n(484697);
 (n(321073), n(667532));
-var C = n(112420),
-    N = n(652215);
-function P(e) {
+var P = n(112420),
+    C = n(652215);
+function k(e) {
     return "string" == typeof e && "" !== e ? e : void 0;
 }
 let M = {
-    [N.e$_.OPEN_CONTEXT_MENU]: (e, t) => {
+    [C.e$_.OPEN_CONTEXT_MENU]: (e, t) => {
         let n = "custom" === e.args.type,
-            r = n
+            i = n
                 ? (function e(t) {
                       let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
                       if (!Array.isArray(t)) return n;
-                      for (let r of t) {
+                      for (let i of t) {
                           if (n.length >= 40) break;
-                          if (null == r || "object" != typeof r) continue;
-                          let t = P(r.id);
-                          (null != t && n.push(t), e(r.items, n));
+                          if (null == i || "object" != typeof i) continue;
+                          let t = k(i.id);
+                          (null != t && n.push(t), e(i.items, n));
                       }
                       return n;
                   })(e.args.items)
                 : [],
-            i = n ? t.contextMenuSelect : void 0;
+            r = n ? t.contextMenuSelect : void 0;
         return n
-            ? null == i
-                ? { result: { opened: !0, selected_id: null }, answered: "dismissed", options: r }
-                : r.includes(i)
-                  ? { result: { opened: !0, selected_id: i }, answered: `selected "${i}"`, options: r }
+            ? null == r
+                ? { result: { opened: !0, selected_id: null }, answered: "dismissed", options: i }
+                : i.includes(r)
+                  ? { result: { opened: !0, selected_id: r }, answered: `selected "${r}"`, options: i }
                   : {
                         result: { opened: !0, selected_id: null },
-                        answered: `dismissed \u{2014} no item with id "${i}"`,
-                        options: r,
+                        answered: `dismissed \u{2014} no item with id "${r}"`,
+                        options: i,
                     }
             : { result: { opened: !0 }, answered: "opened, no selection to make" };
     },
-    [N.e$_.SHOW_CONFIRM_MODAL]: (e, t) => {
+    [C.e$_.SHOW_CONFIRM_MODAL]: (e, t) => {
         let n = !0 === t.confirm,
-            r = P(e.args.title);
+            i = k(e.args.title);
         return {
             result: "confirm" === e.args.type ? { confirmed: n } : { acknowledged: n },
             answered: n ? "confirmed" : "dismissed",
-            subject: r,
+            subject: i,
         };
     },
-    [N.e$_.OPEN_EXTERNAL_LINK]: (e) => ({
+    [C.e$_.OPEN_EXTERNAL_LINK]: (e) => ({
         result: { opened: !1 },
         answered: "cancelled \u2014 an agent may not open external links",
-        subject: P(e.args.url),
+        subject: k(e.args.url),
     }),
-    [N.e$_.SHARE_CONTENT]: (e) => ({
+    [C.e$_.SHARE_CONTENT]: (e) => ({
         result: { success: !1, didCopyLink: !1, didSendMessage: !1 },
         answered: "closed without sharing \u2014 an agent may not send a message for the user",
-        subject: P(e.args.preview_title) ?? P(e.args.content),
+        subject: k(e.args.preview_title) ?? k(e.args.content),
     }),
-    [N.e$_.OPEN_USER_PROFILE]: () => ({ result: { opened: !0 }, answered: "opened" }),
-    [N.e$_.OPEN_USER_POPOUT]: () => ({ result: { opened: !0 }, answered: "opened" }),
-    [N.e$_.SHOW_TOOLTIP]: () => ({ result: { shown: !0 }, answered: "shown" }),
-    [N.e$_.HIDE_TOOLTIP]: () => ({ result: { hidden: !0 }, answered: "hidden" }),
-    [N.e$_.OPEN_MEDIA_VIEWER]: () => ({ result: { opened: !0 }, answered: "opened" }),
-    [N.e$_.SHOW_TOAST]: () => ({ result: { shown: !0 }, answered: "shown" }),
-    [N.e$_.OPEN_INVITE_DIALOG]: () => ({ result: void 0, answered: "opened" }),
-    [N.e$_.OPEN_SHARE_MOMENT_DIALOG]: () => ({ result: void 0, answered: "opened" }),
+    [C.e$_.OPEN_USER_PROFILE]: () => ({ result: { opened: !0 }, answered: "opened" }),
+    [C.e$_.OPEN_USER_POPOUT]: () => ({ result: { opened: !0 }, answered: "opened" }),
+    [C.e$_.SHOW_TOOLTIP]: () => ({ result: { shown: !0 }, answered: "shown" }),
+    [C.e$_.HIDE_TOOLTIP]: () => ({ result: { hidden: !0 }, answered: "hidden" }),
+    [C.e$_.OPEN_MEDIA_VIEWER]: () => ({ result: { opened: !0 }, answered: "opened" }),
+    [C.e$_.SHOW_TOAST]: () => ({ result: { shown: !0 }, answered: "shown" }),
+    [C.e$_.OPEN_INVITE_DIALOG]: () => ({ result: void 0, answered: "opened" }),
+    [C.e$_.OPEN_SHARE_MOMENT_DIALOG]: () => ({ result: void 0, answered: "opened" }),
 };
 Object.keys(M);
 let B = { drain: () => [], end: () => {}, iframeId: null },
     L = [];
-function D(e) {
+function G(e) {
     let t = L.find((t) => t.iframeId === e.iframeId);
     if (null == t) return null;
     let n = M[e.cmd];
     if (null == n) return null;
-    let { result: r, answered: i, options: l, subject: o } = n(e, t.answers);
+    let { result: i, answered: r, options: l, subject: o } = n(e, t.answers);
     return (
         t.recorded.length < 20 &&
             t.recorded.push({
                 command: e.cmd,
-                answered: i,
+                answered: r,
                 ...(null != l && l.length > 0 ? { options: l } : {}),
                 ...(null != o ? { subject: o } : {}),
             }),
-        { result: r }
+        { result: i }
     );
 }
-function G(e) {
+function D(e) {
     let t = e.contentWindow;
-    return null == t ? null : ((0, k.lw)(t) ?? null);
+    return null == t ? null : ((0, N.lw)(t) ?? null);
 }
 function V(e, t, n) {
-    var r = G(e);
-    if (null == r) return B;
-    let i = { iframeId: r, answers: t ?? {}, recorded: [] };
+    var i = D(e);
+    if (null == i) return B;
+    let r = { iframeId: i, answers: t ?? {}, recorded: [] };
     return (
-        n?.beneathBatches === !0 ? L.push(i) : L.unshift(i),
-        1 === L.length && (0, C.C)(D),
+        n?.beneathBatches === !0 ? L.push(r) : L.unshift(r),
+        1 === L.length && (0, P.C)(G),
         {
-            iframeId: r,
-            drain: () => i.recorded.splice(0, i.recorded.length),
+            iframeId: i,
+            drain: () => r.recorded.splice(0, r.recorded.length),
             end: () => {
-                let e = L.indexOf(i);
-                -1 !== e && (L.splice(e, 1), 0 === L.length && (0, C.C)(null));
+                let e = L.indexOf(r);
+                -1 !== e && (L.splice(e, 1), 0 === L.length && (0, P.C)(null));
             },
         }
     );
 }
 var H = n(948230),
-    x = n(805332),
-    U = n(796036);
+    U = n(805332),
+    x = n(796036);
 function F(e) {
-    let t = (0, v.J8)(e);
+    let t = (0, y.J8)(e);
     if (null == t) return null;
     let n = t.getBoundingClientRect();
     return n.width < 1 || n.height < 1 ? null : { width: Math.round(n.width), height: Math.round(n.height) };
 }
-async function W(e, t) {
+async function j(e, t) {
     let n = F(e);
     if (null == n)
         return {
@@ -361,7 +361,7 @@ async function W(e, t) {
             code: "unavailable",
             message: "no preview frame is on screen for this project",
         };
-    if (null == x.A.getBuilderPreviewApplicationId() && !(0, U.h)(e))
+    if (null == U.A.getBuilderPreviewApplicationId() && !(0, x.h)(e))
         return {
             ok: !1,
             mode: t,
@@ -371,13 +371,13 @@ async function W(e, t) {
                 "the phone/desktop lens is the Conjure builder header's, and this preview is not the builder screen's \u2014 open the app preview there to switch it",
         };
     (0, H.GG)("phone" === t);
-    let r = Date.now() + 2e3;
+    let i = Date.now() + 2e3;
     for (;;) {
-        var i;
+        var r;
         let l = F(e);
-        if (null != l && ((i = l.width), "phone" === t ? 60 >= Math.abs(i - 390) : i >= 520))
+        if (null != l && ((r = l.width), "phone" === t ? 60 >= Math.abs(r - 390) : r >= 520))
             return { ok: !0, mode: t, ...l };
-        if (Date.now() >= r)
+        if (Date.now() >= i)
             return {
                 ok: !1,
                 mode: t,
@@ -389,7 +389,7 @@ async function W(e, t) {
     }
 }
 n(762399);
-var j = n(559676);
+var W = n(559676);
 function q(e, t) {
     try {
         t();
@@ -397,71 +397,71 @@ function q(e, t) {
         console.error(`[vibegrations] preview native surfaces: ${e} failed`, t);
     }
 }
-var $ = n(165610);
-async function J(e) {
-    let { onClose: t, ...r } = e,
-        { openOAuth2Modal: i } = await Promise.resolve().then(n.bind(n, 887909));
-    i((0, R.p)(r), t);
+var J = n(165610);
+async function $(e) {
+    let { onClose: t, ...i } = e,
+        { openOAuth2Modal: r } = await Promise.resolve().then(n.bind(n, 887909));
+    r((0, R.p)(i), t);
 }
 async function z(e, t, n) {
-    let { probe: r, spec: i, build: l, onAccepted: o } = n ?? {};
-    if (!0 === r) return { status: (0, v.EA)(e) ? "accepted" : "unavailable" };
-    let s = await (0, v.ZW)(e, 6e3);
+    let { probe: i, spec: r, build: l, onAccepted: o } = n ?? {};
+    if (!0 === i) return { status: (0, y.EA)(e) ? "accepted" : "unavailable" };
+    let s = await (0, y.ZW)(e, 6e3);
     if (null == s) return { status: "unavailable" };
     let u = null == o ? { uploadToken: void 0 } : await o();
     if (null == u) return { status: "unavailable" };
-    let a = await I(s, { captureId: t, spec: i, build: l, uploadToken: u.uploadToken });
-    return null != a ? a : await (0, A.x)(s, t, i, u.uploadToken);
+    let a = await I(s, { captureId: t, spec: r, build: l, uploadToken: u.uploadToken });
+    return null != a ? a : await (0, A.x)(s, t, r, u.uploadToken);
 }
-async function Y(e, t, n, r) {
-    if (!(0, v.EA)(e)) return { status: "unavailable" };
-    let i = (0, j.t_)(e);
+async function Y(e, t, n, i) {
+    if (!(0, y.EA)(e)) return { status: "unavailable" };
+    let r = (0, W.t_)(e);
     try {
-        let i = await (0, v.ZW)(e, 6e3);
-        if (null == i) return { status: "unavailable" };
-        let l = await r?.();
+        let r = await (0, y.ZW)(e, 6e3);
+        if (null == r) return { status: "unavailable" };
+        let l = await i?.();
         if (!1 === l) return { status: "unavailable" };
         if (null != n.viewport) {
-            let t = await W(e, n.viewport);
+            let t = await j(e, n.viewport);
             if (!t.ok) return { status: "failed", message: t.message ?? "the preview lens did not change" };
         }
-        let o = V(i, n.native);
+        let o = V(r, n.native);
         try {
-            let r = await (0, S.S)(i, t, n);
-            if ("completed" !== r.status) return r;
+            let i = await (0, S.S)(r, t, n);
+            if ("completed" !== i.status) return i;
             let l = [...K.drain(e), ...o.drain()];
-            if (0 === l.length) return r;
-            return { ...r, response: { ...r.response, native: l } };
+            if (0 === l.length) return i;
+            return { ...i, response: { ...i.response, native: l } };
         } finally {
             o.end();
         }
     } finally {
-        i();
+        r();
     }
 }
 let K = (function (e) {
     let t = new Map();
     function n(e) {
         let n = t.get(e);
-        (null != n && (t.delete(e), q("closing the operation session", () => n.end())), (0, j.Rh)(e));
+        (null != n && (t.delete(e), q("closing the operation session", () => n.end())), (0, W.Rh)(e));
     }
     return {
-        begin: function (r) {
-            (0, j.BP)(r);
-            let i = e(r);
-            if (null == i) return;
-            let l = t.get(r);
+        begin: function (i) {
+            (0, W.BP)(i);
+            let r = e(i);
+            if (null == r) return;
+            let l = t.get(i);
             if (null != l) {
-                if (null != l.iframeId && l.iframeId === i.identity) return;
-                (t.delete(r), q("replacing a stale operation session", () => l.end()));
+                if (null != l.iframeId && l.iframeId === r.identity) return;
+                (t.delete(i), q("replacing a stale operation session", () => l.end()));
             }
-            (q("dismissing what was left standing", () => i.dismiss()),
+            (q("dismissing what was left standing", () => r.dismiss()),
                 q("opening the operation session", () => {
-                    let e = i.open(),
-                        l = (0, j.FQ)(() => {
-                            (0, j.RW)(r) || n(r);
+                    let e = r.open(),
+                        l = (0, W.FQ)(() => {
+                            (0, W.RW)(i) || n(i);
                         });
-                    t.set(r, {
+                    t.set(i, {
                         iframeId: e.iframeId,
                         drain: () => e.drain(),
                         end: () => {
@@ -474,25 +474,25 @@ let K = (function (e) {
         drain: (e) => t.get(e)?.drain() ?? [],
     };
 })((e) => {
-    let t = (0, v.J8)(e);
+    let t = (0, y.J8)(e);
     return null == t
         ? null
         : {
-              identity: G(t),
+              identity: D(t),
               dismiss: () =>
                   (function (e) {
                       let t = e.contentWindow;
                       if (null == t) return;
-                      let n = (0, k.lw)(t);
-                      null != n && ((0, O.ir)(n), (0, b.OR)(n));
+                      let n = (0, N.lw)(t);
+                      null != n && ((0, v.ir)(n), (0, b.OR)(n));
                   })(t),
               open: () => V(t, void 0, { beneathBatches: !0 }),
           };
 });
-(0, j.Qg)((e) => {
-    let t = (0, v.J8)(e);
+(0, W.Qg)((e) => {
+    let t = (0, y.J8)(e);
     null != t &&
-        (0, y.W)(
+        (0, O.W)(
             t,
             "control-end",
             {},
@@ -500,18 +500,18 @@ let K = (function (e) {
         ).catch(() => {});
 });
 let X = {
-    openVibegrationsAppInstallModal: J,
+    openVibegrationsAppInstallModal: $,
     isWindowFocused: function () {
         return u.A.isFocused();
     },
     areTurnNotificationsDisabled: function () {
-        return s.A.getDesktopType() === N.nRU.NEVER;
+        return s.A.getDesktopType() === C.nRU.NEVER;
     },
     presentTurnNotification: function (e) {
-        let { projectId: t, title: i, body: l, route: s, sound: u, volume: d } = e;
-        r.default.showNotification(
+        let { projectId: t, title: r, body: l, route: s, sound: u, volume: d } = e;
+        i.default.showNotification(
             n(608598),
-            i,
+            r,
             l,
             { notif_type: "VIBEGRATIONS_ASSISTANT_FINISHED" },
             {
@@ -533,11 +533,11 @@ let X = {
         K.end(e);
     },
     releasePreviewControl: function (e) {
-        (0, j.xm)(e);
+        (0, W.xm)(e);
     },
     reloadAppFrames: function (e) {
         if (null != e)
             for (let t of l.A.getAllFrames())
-                (0, $.x1)(t) && t.applicationId === e && !t.data.proxyTicketRefreshing && i.A.refreshProxyTicket(t.id);
+                (0, J.x1)(t) && t.applicationId === e && !t.data.proxyTicketRefreshing && r.A.refreshProxyTicket(t.id);
     },
 };

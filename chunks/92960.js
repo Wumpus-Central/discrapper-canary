@@ -5,11 +5,11 @@ var i = n(367513),
     s = n(334738),
     a = n(198052),
     o = n(267102),
-    u = n(118517),
-    c = n(853145),
+    c = n(118517),
+    u = n(853145),
     d = n(138298),
-    A = n(940382),
-    h = n(931664),
+    h = n(940382),
+    A = n(931664),
     m = n(631576),
     g = n(761640),
     f = n(734057),
@@ -45,19 +45,19 @@ function j(e) {
             let r = _.A.getGuildId(),
                 l = e ?? v.Ay.getChannelId(r),
                 s = f.A.getChannel(l),
-                u = g.Ay.getSection(l, s?.isDM()) === y.YvQ.SIDEBAR_CHAT ? g.Ay.getSidebarState(l) : null,
-                c = u?.type === A.PE.VIEW_CHANNEL ? u.channelId : null;
-            if (!1 === R(l) || !1 === R(c)) return !1;
+                c = g.Ay.getSection(l, s?.isDM()) === y.YvQ.SIDEBAR_CHAT ? g.Ay.getSidebarState(l) : null,
+                u = c?.type === h.PE.VIEW_CHANNEL ? c.channelId : null;
+            if (!1 === R(l) || !1 === R(u)) return !1;
             if (x._.hasSubscribers(y.jej.GUILD_ROOM_NOTE_PLACEMENT_CANCEL))
                 return (x._.dispatch(y.jej.GUILD_ROOM_NOTE_PLACEMENT_CANCEL), !1);
             if (x._.hasSubscribers(y.jej.GUILD_ROOM_VIDEO_OVERLAY_CLOSE))
                 return (x._.dispatch(y.jej.GUILD_ROOM_VIDEO_OVERLAY_CLOSE), !1);
-            if (null != l && u?.type === A.PE.CREATE_THREAD) return (d.A.closeChannelSidebar(l), !1);
-            let h = I(l),
-                m = I(c);
+            if (null != l && c?.type === h.PE.CREATE_THREAD) return (d.A.closeChannelSidebar(l), !1);
+            let A = I(l),
+                m = I(u);
             return (
-                null == l || h || m || null == u
-                    ? null != l && !h && !1 !== E.A.isAtBottom(l) && a.A.getChatOpen(l)
+                null == l || A || m || null == c
+                    ? null != l && !A && !1 !== E.A.isAtBottom(l) && a.A.getChatOpen(l)
                         ? i.A.updateChatOpen(l, !1)
                         : x._.dispatch(y.jej.SCROLLTO_PRESENT)
                     : d.A.closeChannelSidebar(l),
@@ -69,9 +69,9 @@ function j(e) {
 function R(e) {
     if (null != e) {
         if (p.A.isEditingAny(e)) return (l.A.endEditMessage(e), !1);
-        if (null != c.A.getPendingReply(e)) return ((0, u.Jx)(e), !1);
+        if (null != u.A.getPendingReply(e)) return ((0, c.Jx)(e), !1);
         if (null != b.A.getScheduledMessage(e)) return (r.A.clearDraft(e, b.C.ScheduledMessage), !1);
-        if (null != h.A.getStickerPreview(e, b.C.ChannelMessage)) return ((0, m.x5)(e, b.C.ChannelMessage), !1);
+        if (null != A.A.getStickerPreview(e, b.C.ChannelMessage)) return ((0, m.x5)(e, b.C.ChannelMessage), !1);
     }
 }
 function I(e) {

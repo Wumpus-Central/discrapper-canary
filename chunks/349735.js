@@ -4,19 +4,19 @@ var n = l(477900),
     r = l(17928),
     i = l(691885),
     s = l(834730),
-    o = l(150934),
-    u = l(95477),
+    u = l(150934),
+    o = l(95477),
     d = l(821609),
     c = l(289873),
     f = l(890497),
     m = l(47167),
     h = l(713654),
-    x = l(808728),
-    g = l(994500),
+    g = l(808728),
+    x = l(994500),
     p = l(287809),
     v = l(948230),
-    j = l(683180),
-    b = l(783791),
+    b = l(683180),
+    j = l(783791),
     y = l(277977),
     k = l(972786),
     N = l(50617),
@@ -24,31 +24,31 @@ var n = l(477900),
     A = l(472781);
 let S = { values: {}, secrets: {} };
 function E(e) {
-    let { projectId: t, scopeKeys: l, note: f, notifyAgent: m = !1, isPreview: h = !1, children: x } = e,
-        g = (0, r.bG)([y.Ay], () => y.Ay.getSettings(t)),
-        [p, j] = a.useState(S),
+    let { projectId: t, scopeKeys: l, note: f, notifyAgent: m = !1, isPreview: h = !1, children: g } = e,
+        x = (0, r.bG)([y.Ay], () => y.Ay.getSettings(t)),
+        [p, b] = a.useState(S),
         [k, E] = a.useState({}),
         [I, M] = a.useState(!1),
-        [T, R] = a.useState(!1),
-        P = a.useCallback((e, t) => {
-            (R(!1), j((l) => ({ ...l, values: { ...l.values, [e]: t } })));
-        }, []),
+        [T, P] = a.useState(!1),
         _ = a.useCallback((e, t) => {
-            (R(!1), j((l) => ({ ...l, secrets: { ...l.secrets, [e]: t } })));
+            (P(!1), b((l) => ({ ...l, values: { ...l.values, [e]: t } })));
         }, []),
-        L = a.useMemo(() => g?.schema ?? [], [g]),
-        F = a.useMemo(() => g?.values ?? {}, [g]),
+        R = a.useCallback((e, t) => {
+            (P(!1), b((l) => ({ ...l, secrets: { ...l.secrets, [e]: t } })));
+        }, []),
+        L = a.useMemo(() => x?.schema ?? [], [x]),
+        F = a.useMemo(() => x?.values ?? {}, [x]),
         D = a.useMemo(
             () =>
-                (g?.secrets ?? []).map((e) => ({ ...e, def: L.find((t) => t.key === e.name && "secret" === t.type) })),
-            [L, g],
+                (x?.secrets ?? []).map((e) => ({ ...e, def: L.find((t) => t.key === e.name && "secret" === t.type) })),
+            [L, x],
         ),
-        $ = L.filter((e) => "secret" !== e.type),
-        O = new Map(D.map((e) => [e.name, e])),
-        q = (l ?? []).filter((e) => $.some((t) => t.key === e) || O.has(e)),
+        O = L.filter((e) => "secret" !== e.type),
+        $ = new Map(D.map((e) => [e.name, e])),
+        q = (l ?? []).filter((e) => O.some((t) => t.key === e) || $.has(e)),
         z = q.length > 0,
-        U = q.some((e) => O.has(e)),
-        B = a.useMemo(() => {
+        U = q.some((e) => $.has(e)),
+        G = a.useMemo(() => {
             let e = {};
             for (let [t, l] of Object.entries(p.values)) {
                 let n = L.find((e) => e.key === t);
@@ -63,37 +63,37 @@ function E(e) {
                 ...(Object.keys(t).length > 0 ? { secrets: t } : {}),
             };
         }, [p, L, F]),
-        G = null != B.values || null != B.secrets,
+        B = null != G.values || null != G.secrets,
         V = a.useCallback(async () => {
-            if (!G || I) return !0;
-            (M(!0), R(!1));
+            if (!B || I) return !0;
+            (M(!0), P(!1));
             try {
-                let { rebuildRequired: e } = await (0, y.nU)(t, B);
+                let { rebuildRequired: e } = await (0, y.nU)(t, G);
                 return (
-                    m || b.Ay.hasPendingSettingsRequest(t)
+                    m || j.Ay.hasPendingSettingsRequest(t)
                         ? (0, y.dv)(t, w.intl.string(N.default.gqJFu0))
                         : e
                           ? (0, y.ss)(t)
                           : (0, v.Eo)(t),
-                    j(S),
+                    b(S),
                     E({}),
                     !0
                 );
             } catch {
-                return (R(!0), !1);
+                return (P(!0), !1);
             } finally {
                 M(!1);
             }
-        }, [G, m, t, I, B]);
-    function W(e) {
+        }, [B, m, t, I, G]);
+    function H(e) {
         let t = [
             e?.hint != null && "" !== e.hint ? e.hint : void 0,
             e?.requires_rebuild === !0 ? w.intl.string(N.default.xPxvYa) : void 0,
         ].filter((e) => null != e);
         return 0 === t.length ? void 0 : t.join(" ");
     }
-    function H(e) {
-        let l = W(e);
+    function W(e) {
+        let l = H(e);
         if ("select" === e.type) {
             let t = p.values[e.key] ?? F[e.key];
             return (0, n.jsxs)(
@@ -105,7 +105,7 @@ function E(e) {
                             label: e.label,
                             options: (e.options ?? []).map((e) => ({ id: e.value, label: e.label, value: e.value })),
                             value: "string" == typeof t ? t : void 0,
-                            onSelectionChange: (t) => P(e.key, t),
+                            onSelectionChange: (t) => _(e.key, t),
                             selectionMode: "single",
                             disabled: I,
                             fullWidth: !0,
@@ -121,8 +121,8 @@ function E(e) {
         if ("checkbox" === e.type) {
             let t = p.values[e.key] ?? F[e.key];
             return (0, n.jsx)(
-                o.S,
-                { label: e.label, description: l, checked: !0 === t, onChange: (t) => P(e.key, t), disabled: I },
+                u.S,
+                { label: e.label, description: l, checked: !0 === t, onChange: (t) => _(e.key, t), disabled: I },
                 e.key,
             );
         }
@@ -136,7 +136,7 @@ function E(e) {
                       hint: l,
                       value: p.values[e.key] ?? F[e.key],
                       disabled: I,
-                      onChange: (t) => P(e.key, t),
+                      onChange: (t) => _(e.key, t),
                       fallback: K(e, l),
                   },
                   e.key,
@@ -146,7 +146,7 @@ function E(e) {
     function K(e, t) {
         let l = p.values[e.key] ?? F[e.key];
         return (0, n.jsx)(
-            u.k,
+            o.k,
             {
                 label: e.label,
                 helperText: t,
@@ -154,7 +154,7 @@ function E(e) {
                 autoComplete: "off",
                 required: !0 === e.required,
                 value: "string" == typeof l ? l : "",
-                onChange: (t) => P(e.key, t),
+                onChange: (t) => _(e.key, t),
                 disabled: I,
                 fullWidth: !0,
             },
@@ -163,7 +163,7 @@ function E(e) {
     }
     function Y(e) {
         let t = e.def?.label ?? e.name,
-            l = W(e.def);
+            l = H(e.def);
         return e.set && !0 !== k[e.name]
             ? (0, n.jsxs)(
                   "div",
@@ -199,7 +199,7 @@ function E(e) {
                   e.name,
               )
             : (0, n.jsx)(
-                  u.k,
+                  o.k,
                   {
                       label: t,
                       helperText: l,
@@ -211,7 +211,7 @@ function E(e) {
                           : void 0,
                       required: e.def?.required === !0 && !e.set,
                       value: p.secrets[e.name] ?? "",
-                      onChange: (t) => _(e.name, t),
+                      onChange: (t) => R(e.name, t),
                       disabled: I,
                       fullWidth: !0,
                   },
@@ -232,16 +232,16 @@ function E(e) {
                 null != f && "" !== f
                     ? (0, n.jsx)(s.E, { variant: "text-sm/normal", color: "text-default", selectable: !0, children: f })
                     : null,
-                null == g
+                null == x
                     ? (0, n.jsx)("div", { className: A.kZ, children: (0, n.jsx)(c.y, {}) })
-                    : 0 === $.length && 0 === D.length
+                    : 0 === O.length && 0 === D.length
                       ? (0, n.jsx)(s.E, {
                             variant: "text-sm/normal",
                             color: "text-muted",
                             children: w.intl.string(N.default.URnN4B),
                         })
                       : null,
-                null == g
+                null == x
                     ? null
                     : z
                       ? (0, n.jsxs)(n.Fragment, {
@@ -255,14 +255,14 @@ function E(e) {
                                       })
                                     : null,
                                 q.map(function (e) {
-                                    let t = O.get(e);
+                                    let t = $.get(e);
                                     if (null != t) return Y(t);
-                                    let l = $.find((t) => t.key === e);
-                                    return null == l ? null : H(l);
+                                    let l = O.find((t) => t.key === e);
+                                    return null == l ? null : W(l);
                                 }),
                             ],
                         })
-                      : $.map(H),
+                      : O.map(W),
                 X,
             ],
         }),
@@ -280,13 +280,13 @@ function E(e) {
             ],
         });
     return (0, n.jsx)(n.Fragment, {
-        children: x({
+        children: g({
             fields: Q,
             secretFields: Z,
-            loaded: null != g,
-            valueCount: $.length,
+            loaded: null != x,
+            valueCount: O.length,
             secretCount: D.length,
-            canSave: G,
+            canSave: B,
             saving: I,
             isScoped: z,
             submit: V,
@@ -294,14 +294,14 @@ function E(e) {
     });
 }
 function C(e) {
-    let { projectId: t, isPreview: l, def: a, hint: i, value: o, disabled: u, onChange: d, fallback: c } = e,
-        v = (0, r.bG)([k.Ay], () => (0, j.t7)(k.Ay.getProject(t), l), [l, t]),
-        b = (0, r.bG)([x.Ay], () => (null == v ? null : x.Ay.getChannels(v)), [v]);
-    if (null == b) return c;
-    let y = (0, j.qx)(b, a.channel_filter).map((e) => ({
+    let { projectId: t, isPreview: l, def: a, hint: i, value: u, disabled: o, onChange: d, fallback: c } = e,
+        v = (0, r.bG)([k.Ay], () => (0, b.t7)(k.Ay.getProject(t), l), [l, t]),
+        j = (0, r.bG)([g.Ay], () => (null == v ? null : g.Ay.getChannels(v)), [v]);
+    if (null == j) return c;
+    let y = (0, b.qx)(j, a.channel_filter).map((e) => ({
         id: e.id,
         value: e.id,
-        label: (0, m.m1)(e, p.default, g.A),
+        label: (0, m.m1)(e, p.default, x.A),
         leading: (0, h.gU)(e),
     }));
     return (0, n.jsxs)("div", {
@@ -312,10 +312,10 @@ function C(e) {
                 clearable: !0,
                 label: a.label,
                 options: y,
-                value: "string" == typeof o && "" !== o ? o : void 0,
+                value: "string" == typeof u && "" !== u ? u : void 0,
                 placeholder: w.intl.string(N.default.grukkJ),
                 onSelectionChange: (e) => d(e ?? ""),
-                disabled: u,
+                disabled: o,
                 fullWidth: !0,
             }),
             null != i ? (0, n.jsx)(s.E, { variant: "text-xs/normal", color: "text-muted", children: i }) : null,

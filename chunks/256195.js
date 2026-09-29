@@ -6,11 +6,11 @@ var r = n(503698),
     s = n(17928),
     a = n(821609),
     o = n(866665),
-    u = n(408278),
-    c = n(622631),
+    c = n(408278),
+    u = n(622631),
     d = n(401843),
-    A = n(616356),
-    h = n(280450),
+    h = n(616356),
+    A = n(280450),
     m = n(200749),
     g = n(375708),
     f = n(604889);
@@ -18,10 +18,10 @@ let E = n(913516);
 function b(e) {
     let { participant: t, width: n, noArt: r = !1, selected: b = !1 } = e,
         p = n < 195,
-        C = (0, s.bG)([A.A, h.default], () =>
-            A.A.getAllActiveStreams().some((e) => {
+        C = (0, s.bG)([h.A, A.default], () =>
+            h.A.getAllActiveStreams().some((e) => {
                 let { ownerId: t } = e;
-                return t !== h.default.getId();
+                return t !== A.default.getId();
             }),
         );
     return (0, i.jsx)("div", {
@@ -51,10 +51,10 @@ function b(e) {
                                     className: l()(f.lO, f.EU),
                                     children: (0, i.jsx)(o.m, {
                                         text: g.intl.string(g.t.wCrzut),
-                                        children: (0, i.jsx)(u.K, {
+                                        children: (0, i.jsx)(c.K, {
                                             variant: "secondary",
                                             size: p ? "sm" : "md",
-                                            icon: c.v,
+                                            icon: u.v,
                                             "aria-label": g.intl.string(g.t.wCrzut),
                                             onClick: (e) => {
                                                 (e.stopPropagation(), (0, d.A9)(t.stream, { forceMultiple: !0 }));

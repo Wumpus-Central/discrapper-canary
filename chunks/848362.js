@@ -5,18 +5,18 @@ var i = n(477900),
     s = n(980707),
     a = n(477782),
     o = n(959988),
-    u = n(820284),
-    c = n(198052),
+    c = n(820284),
+    u = n(198052),
     d = n(74329),
-    A = n(405916),
-    h = n(338771),
+    h = n(405916),
+    A = n(338771),
     m = n(616356),
     g = n(287809),
     f = n(562153),
     E = n(652215),
     b = n(375708);
 function p(e, t, n) {
-    let i = (0, l.bG)([c.A], () => (null != e ? c.A.getSelectedParticipantId(e.id) : null)),
+    let i = (0, l.bG)([u.A], () => (null != e ? u.A.getSelectedParticipantId(e.id) : null)),
         s = (0, l.bG)([m.A], () => (null != i ? m.A.getActiveStreamForStreamKey(i) : null), [i]),
         a = (0, l.cf)([g.default], () => n.reduce((e, t) => ((e[t.ownerId] = g.default.getUser(t.ownerId)), e), {}), [
             n,
@@ -35,7 +35,7 @@ function C(e) {
             currentUser: n,
             activeStreams: r,
             hideSelfOptions: l = !1,
-            showReportOption: c = !1,
+            showReportOption: u = !1,
             handleGoLive: m,
             onClose: g,
             onSelect: f,
@@ -46,15 +46,15 @@ function C(e) {
         _ = r.find((e) => e.ownerId === n?.id) ?? null,
         O = p(t, n, r),
         T = (0, d.A)(_, C),
-        x = (0, A.E)({
+        x = (0, h.E)({
             disableChangeWindows: S,
             stream: _,
-            showReportOption: c,
+            showReportOption: u,
             handleGoLive: m,
             minimal: !0,
             appContext: C,
         });
-    return (0, i.jsx)(u.A, {
+    return (0, i.jsx)(c.A, {
         section: E.JJy.CONTEXT_MENU,
         children: (0, i.jsxs)(s.W, {
             "data-menu-migrated": !0,
@@ -74,7 +74,7 @@ function C(e) {
                                 label: b.intl.formatToPlainString(b.t["7rkg+/"], { username: n }),
                                 icon: o.G,
                                 leadingAccessory: { type: "icon", icon: o.G },
-                                action: () => (0, h.A)(t),
+                                action: () => (0, A.A)(t),
                             },
                             `manage-stream-menu${t.ownerId}`,
                         );

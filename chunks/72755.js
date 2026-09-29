@@ -5,16 +5,16 @@ var i = n(477900),
     s = n.n(l),
     a = n(661531),
     o = n(97808),
-    u = n(654107),
-    c = n(707683);
+    c = n(654107),
+    u = n(707683);
 let d = function (e) {
     let { children: t, shouldAnimate: n } = e;
     return n
-        ? (0, i.jsx)("div", { className: c.nw, children: (0, i.jsx)("div", { className: c.WH, children: t }) })
+        ? (0, i.jsx)("div", { className: u.nw, children: (0, i.jsx)("div", { className: u.WH, children: t }) })
         : t;
 };
-var A = n(543699),
-    h = n(999291),
+var h = n(543699),
+    A = n(999291),
     m = n(920601),
     g = n(903209);
 let f = (0, n(945810).mj)({
@@ -31,17 +31,17 @@ let C = function (e) {
             style: t,
             src: n,
             backgroundSrc: l,
-            userId: c,
+            userId: u,
             guildId: C,
             pulseSpeakingIndicator: S = !1,
             speaking: v = !1,
             ..._
         } = e,
         O = l ?? n,
-        T = (0, u.Ay)(O, a.A.unsafe_rawColors.PRIMARY_800.css),
+        T = (0, c.Ay)(O, a.A.unsafe_rawColors.PRIMARY_800.css),
         x = f.useConfig({ location: "VideoBackground" }).enabled,
-        y = (0, h.Ay)(c ?? E.dJq, C),
-        j = (0, A.tM)(y?.themeColors?.[0]) ?? E.NJ8.DARK,
+        y = (0, A.Ay)(u ?? E.dJq, C),
+        j = (0, h.tM)(y?.themeColors?.[0]) ?? E.NJ8.DARK,
         { profileThemeStyle: R, profileThemeClassName: I } = (0, m.A)({
             theme: j,
             themeType: b.d.VIDEO_TILE_BACKGROUND,
@@ -51,8 +51,8 @@ let C = function (e) {
         M = y?.themeColors?.[0] != null && y?.themeColors?.[1] != null;
     if (
         (r.useEffect(() => {
-            null != c && x && (0, g.A)(c, void 0, { guildId: C, dispatchWait: !0 });
-        }, [x, c, C]),
+            null != u && x && (0, g.A)(u, void 0, { guildId: C, dispatchWait: !0 });
+        }, [x, u, C]),
         null == n)
     )
         return null;

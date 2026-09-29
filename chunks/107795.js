@@ -17,8 +17,8 @@ var i = n(636537),
     d = n(734057),
     o = n(317525),
     c = n(403362),
-    I = n(655943),
-    u = n(652215),
+    u = n(655943),
+    I = n(652215),
     E = n(539916),
     N = n(375708);
 function S() {
@@ -27,13 +27,13 @@ function S() {
 function m(t, e, n) {
     g(
         t,
-        I.A.editedOnboardingPrompts.map((t) => (t.id === e ? { ...t, ...n } : t)),
+        u.A.editedOnboardingPrompts.map((t) => (t.id === e ? { ...t, ...n } : t)),
     );
 }
 function _(t, e) {
     g(
         t,
-        I.A.editedOnboardingPrompts.filter((t) => t.id !== e),
+        u.A.editedOnboardingPrompts.filter((t) => t.id !== e),
     );
 }
 function g(t, e) {
@@ -45,13 +45,13 @@ function g(t, e) {
 }
 function h(t, e) {
     let n;
-    if (!I.A.hasChanges()) return null;
+    if (!u.A.hasChanges()) return null;
     let i =
-            ((n = I.A.getChangedPrompts()),
+            ((n = u.A.getChangedPrompts()),
             null != e && e.ignoreDefaultPrompt && 1 === n.length && (0, E.Km)(n[0]) && (n = []),
             n),
-        r = I.A.editedOnboardingPrompts,
-        u = r.map((e) => {
+        r = u.A.editedOnboardingPrompts,
+        I = r.map((e) => {
             if (!i.some((t) => t.id === e.id)) return e;
             let n = e.options.map((e) => {
                 let n = null == e.roleIds ? e.roleIds : e.roleIds.filter((e) => null != o.A.getRole(t.id, e)),
@@ -68,10 +68,10 @@ function h(t, e) {
             });
             return { ...e, options: n, type: n.length >= E.Bu ? E.ME.DROPDOWN : E.ME.MULTIPLE_CHOICE };
         });
-    if (0 === u.length) return null;
-    let S = u.filter((t) => t.inOnboarding),
-        m = u.filter((t) => !0 !== t.inOnboarding),
-        _ = u.map((e) => (i.some((t) => t.id === e.id) ? f(t, u, e) : null));
+    if (0 === I.length) return null;
+    let S = I.filter((t) => t.inOnboarding),
+        m = I.filter((t) => !0 !== t.inOnboarding),
+        _ = I.map((e) => (i.some((t) => t.id === e.id) ? f(t, I, e) : null));
     if (_.filter(c.Vq).length > 0)
         throw (
             l.h.dispatch({ type: "GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_FAILED", errors: _ }),
@@ -89,7 +89,7 @@ function h(t, e) {
     return [...S, ...m];
 }
 async function T(t, e) {
-    if (!I.A.hasChanges()) return;
+    if (!u.A.hasChanges()) return;
     let n = h(t, e);
     (null == n && (n = []), l.h.dispatch({ type: "GUILD_SETTINGS_ONBOARDING_PROMPTS_SUBMIT" }));
     try {
@@ -118,7 +118,7 @@ async function A(t, e) {
     }
 }
 async function D(t, e) {
-    await i.Bo.put({ url: u.Rsh.GUILD_ONBOARDING(t), body: e, rejectWithError: (0, i.fT)() });
+    await i.Bo.put({ url: I.Rsh.GUILD_ONBOARDING(t), body: e, rejectWithError: (0, i.fT)() });
 }
 function f(t, e, n) {
     let i = { optionErrors: [] },

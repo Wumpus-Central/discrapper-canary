@@ -1,4 +1,4 @@
-n.d(t, { A: () => h });
+n.d(t, { A: () => A });
 var i = n(477900);
 n(582128);
 var r = n(17928),
@@ -6,13 +6,13 @@ var r = n(17928),
     s = n(477782),
     a = n(695366),
     o = n(652896),
-    u = n(834757),
-    c = n(280450),
+    c = n(834757),
+    u = n(280450),
     d = n(116956),
-    A = n(375708);
-function h(e, t, h) {
-    let m = (0, u.AO)(e),
-        g = (0, r.bG)([c.default], () => c.default.getId());
+    h = n(375708);
+function A(e, t, A) {
+    let m = (0, c.AO)(e),
+        g = (0, r.bG)([u.default], () => u.default.getId());
     if (null == e) return null;
     let f = (0, o._z)(e),
         E = d.A.getVideoStats(f) ?? {},
@@ -26,9 +26,9 @@ function h(e, t, h) {
     return (0, i.jsx)(s.Dr, {
         id: "report-stream-problem",
         color: "danger",
-        label: A.intl.string(A.t.sdnCxV),
+        label: h.intl.string(h.t.sdnCxV),
         action: function () {
-            (h?.(),
+            (A?.(),
                 null != e &&
                     (0, l.openModalLazy)(async () => {
                         let { default: t } = await Promise.all([n.e("617171"), n.e("186889")]).then(n.bind(n, 292208));

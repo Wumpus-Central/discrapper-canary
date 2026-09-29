@@ -1,20 +1,20 @@
-(n.d(t, { EA: () => o, J8: () => l, ZW: () => s, mn: () => i }), n(321073));
-let r = new Map();
-function i(e, t) {
-    let n = r.get(e) ?? [];
+(n.d(t, { EA: () => o, J8: () => l, ZW: () => s, mn: () => r }), n(321073));
+let i = new Map();
+function r(e, t) {
+    let n = i.get(e) ?? [];
     return (
         n.push(t),
-        r.set(e, n),
+        i.set(e, n),
         () => {
-            let n = r.get(e);
+            let n = i.get(e);
             if (null == n) return;
-            let i = n.indexOf(t);
-            (-1 !== i && n.splice(i, 1), 0 === n.length && r.delete(e));
+            let r = n.indexOf(t);
+            (-1 !== r && n.splice(r, 1), 0 === n.length && i.delete(e));
         }
     );
 }
 function l(e) {
-    let t = r.get(e);
+    let t = i.get(e);
     if (null == t) return null;
     for (let n = t.length - 1; n >= 0; n--)
         try {
@@ -26,26 +26,26 @@ function l(e) {
     return null;
 }
 function o(e) {
-    return r.has(e);
+    return i.has(e);
 }
 function s(e, t, n) {
-    let r = l(e);
-    return null != r
-        ? Promise.resolve(r)
+    let i = l(e);
+    return null != i
+        ? Promise.resolve(i)
         : o(e) && n?.aborted !== !0
           ? (console.debug("[vibegrations] preview frame not ready, waiting", { projectId: e, timeoutMs: t }),
-            new Promise((r) => {
-                let i = Date.now(),
-                    s = i + t;
+            new Promise((i) => {
+                let r = Date.now(),
+                    s = r + t;
                 function u(t) {
                     (window.clearInterval(d),
                         n?.removeEventListener("abort", a),
                         console.debug("[vibegrations] preview frame wait finished", {
                             projectId: e,
                             found: null != t,
-                            ms: Date.now() - i,
+                            ms: Date.now() - r,
                         }),
-                        r(t));
+                        i(t));
                 }
                 function a() {
                     u(null);

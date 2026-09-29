@@ -7,8 +7,8 @@ var i = n(477900),
     d = n(778492),
     o = n(276293),
     c = n(56059),
-    I = n(834730),
-    u = n(297264),
+    u = n(834730),
+    I = n(297264),
     E = n(933832),
     N = n(821609),
     S = n(404778),
@@ -30,19 +30,19 @@ function L(t) {
     return (0, i.jsxs)("div", {
         className: n,
         children: [
-            (0, i.jsx)(I.E, {
+            (0, i.jsx)(u.E, {
                 variant: "text-sm/medium",
                 color: "text-default",
                 children: p.intl.format(l, {
                     testimonialHook: (t, e) =>
-                        (0, i.jsx)(I.E, { tag: "span", variant: "text-sm/bold", color: a, children: t }, e),
+                        (0, i.jsx)(u.E, { tag: "span", variant: "text-sm/bold", color: a, children: t }, e),
                 }),
             }),
             (0, i.jsxs)("div", {
                 className: x.f1,
                 children: [
                     (0, i.jsx)(h.eu, { src: s, size: T._3.SIZE_16, "aria-hidden": !0 }),
-                    (0, i.jsx)(I.E, { variant: "text-sm/medium", color: "text-default", children: r }),
+                    (0, i.jsx)(u.E, { variant: "text-sm/medium", color: "text-default", children: r }),
                 ],
             }),
         ],
@@ -72,7 +72,7 @@ function C(t) {
                 className: x.nI,
                 children: (0, i.jsx)(A.F, { items: [o], renderItem: c, getItemKey: (t) => t.adminTitle }),
             }),
-            (0, i.jsx)(I.E, { variant: "text-lg/bold", className: x.wV, "aria-hidden": !0, children: "\u201C" }),
+            (0, i.jsx)(u.E, { variant: "text-lg/bold", className: x.wV, "aria-hidden": !0, children: "\u201C" }),
             (0, i.jsxs)("div", {
                 className: x.Jv,
                 children: [
@@ -154,15 +154,15 @@ function F(t) {
         ];
     e && n.pop();
     let l = e
-            ? (0, i.jsx)(I.E, {
+            ? (0, i.jsx)(u.E, {
                   variant: "text-sm/semibold",
                   color: "text-strong",
                   children: p.intl.string(p.t.nTI2mQ),
               })
-            : (0, i.jsx)(u.D, { variant: "heading-md/semibold", children: p.intl.string(p.t.g1OQtu) }),
+            : (0, i.jsx)(I.D, { variant: "heading-md/semibold", children: p.intl.string(p.t.g1OQtu) }),
         s = e
-            ? (0, i.jsx)(I.E, { variant: "text-xxs/normal", children: p.intl.format(p.t.hGwDPV, {}) })
-            : (0, i.jsx)(I.E, { variant: "text-xs/normal", children: p.intl.format(p.t["8XLD3r"], {}) });
+            ? (0, i.jsx)(u.E, { variant: "text-xxs/normal", children: p.intl.format(p.t.hGwDPV, {}) })
+            : (0, i.jsx)(u.E, { variant: "text-xs/normal", children: p.intl.format(p.t["8XLD3r"], {}) });
     return (0, i.jsxs)("div", {
         className: r()(k.SI, k.f5, { [k.YL]: e }),
         children: [
@@ -177,7 +177,7 @@ function F(t) {
                             className: r()(k.CQ, { [k.wH]: a }),
                             children: [
                                 (0, i.jsx)("span", { role: "img", "aria-label": l, children: n }),
-                                (0, i.jsx)(I.E, { variant: "text-sm/medium", color: "text-strong", children: s }),
+                                (0, i.jsx)(u.E, { variant: "text-sm/medium", color: "text-strong", children: s }),
                                 a &&
                                     (0, i.jsx)("div", {
                                         className: k.ct,
@@ -249,11 +249,11 @@ function V() {
                           (0, i.jsxs)("div", {
                               className: k.KF,
                               children: [
-                                  (0, i.jsx)(u.D, {
+                                  (0, i.jsx)(I.D, {
                                       variant: "heading-xl/semibold",
                                       children: p.intl.string(p.t.GnKOAx),
                                   }),
-                                  (0, i.jsx)(I.E, { variant: "text-md/normal", children: p.intl.string(p.t.SJRFJj) }),
+                                  (0, i.jsx)(u.E, { variant: "text-md/normal", children: p.intl.string(p.t.SJRFJj) }),
                               ],
                           }),
                           (0, i.jsx)("div", {
@@ -287,11 +287,11 @@ function V() {
                                   (0, i.jsxs)("div", {
                                       className: k.Ru,
                                       children: [
-                                          (0, i.jsx)(u.D, {
+                                          (0, i.jsx)(I.D, {
                                               variant: "heading-md/semibold",
                                               children: p.intl.string(p.t.Z7kqKZ),
                                           }),
-                                          (0, i.jsx)(I.E, {
+                                          (0, i.jsx)(u.E, {
                                               variant: "text-sm/normal",
                                               children: p.intl.string(p.t.di3UC5),
                                           }),
@@ -305,11 +305,11 @@ function V() {
                                   (0, i.jsxs)("div", {
                                       className: k.Ru,
                                       children: [
-                                          (0, i.jsx)(u.D, {
+                                          (0, i.jsx)(I.D, {
                                               variant: "heading-md/semibold",
                                               children: p.intl.string(p.t.O4jYEh),
                                           }),
-                                          (0, i.jsx)(I.E, {
+                                          (0, i.jsx)(u.E, {
                                               variant: "text-sm/normal",
                                               children: p.intl.string(p.t["l/l/Gw"]),
                                           }),
@@ -397,7 +397,7 @@ function V() {
                                                           className: k.Ix,
                                                           children: [
                                                               n(),
-                                                              (0, i.jsx)(I.E, {
+                                                              (0, i.jsx)(u.E, {
                                                                   variant: "text-md/medium",
                                                                   color: "text-strong",
                                                                   children: l,
@@ -423,11 +423,11 @@ function V() {
                                   (0, i.jsxs)("div", {
                                       className: k.Ru,
                                       children: [
-                                          (0, i.jsx)(u.D, {
+                                          (0, i.jsx)(I.D, {
                                               variant: "heading-md/semibold",
                                               children: p.intl.string(p.t["3T9aHG"]),
                                           }),
-                                          (0, i.jsx)(I.E, {
+                                          (0, i.jsx)(u.E, {
                                               variant: "text-sm/normal",
                                               children: p.intl.string(p.t.dA7Cag),
                                           }),

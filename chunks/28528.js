@@ -5,18 +5,18 @@ var i = n(477900),
     s = n.n(l),
     a = n(202091),
     o = n(17928),
-    u = n(834730),
-    c = n(821609),
+    c = n(834730),
+    u = n(821609),
     d = n(97808),
-    A = n(778712),
-    h = n(939249),
+    h = n(778712),
+    A = n(939249),
     m = n(717421),
     g = n(684013),
     f = n(789645),
     E = n(616566);
 let b = (e) => {
     let { className: t, onDismiss: n, "aria-label": r } = e;
-    return (0, i.jsx)(h.D, {
+    return (0, i.jsx)(A.D, {
         role: "button",
         onClick: n,
         className: s()(E.r, t),
@@ -96,7 +96,7 @@ let y = r.memo(function (e) {
                 className: s()(T.af, w),
                 onScroll: x,
                 children: [
-                    (0, i.jsx)(h.D, {
+                    (0, i.jsx)(A.D, {
                         innerRef: P,
                         ignoreKeyPress: !0,
                         onMouseOver: J,
@@ -116,7 +116,7 @@ let y = r.memo(function (e) {
                                                 : "string" == typeof I
                                                   ? (0, i.jsx)(d.eu, {
                                                         src: I,
-                                                        size: A._3.SIZE_40,
+                                                        size: h._3.SIZE_40,
                                                         className: T.my,
                                                         "aria-hidden": !0,
                                                     })
@@ -125,7 +125,7 @@ let y = r.memo(function (e) {
                                                 className: T.zH,
                                                 children: [
                                                     null != N
-                                                        ? (0, i.jsx)(u.E, {
+                                                        ? (0, i.jsx)(c.E, {
                                                               color: "interactive-text-default",
                                                               variant: "text-sm/semibold",
                                                               lineClamp: 2,
@@ -133,7 +133,7 @@ let y = r.memo(function (e) {
                                                           })
                                                         : null,
                                                     null != M
-                                                        ? (0, i.jsx)(u.E, {
+                                                        ? (0, i.jsx)(c.E, {
                                                               color: "interactive-text-default",
                                                               variant: "text-sm/normal",
                                                               lineClamp: null != l ? l * (F ? 2 : 1) : void 0,
@@ -142,7 +142,7 @@ let y = r.memo(function (e) {
                                                         : null,
                                                     ((n = "function" == typeof y ? y(F, K) : y),
                                                     null != y
-                                                        ? (0, i.jsx)(u.E, {
+                                                        ? (0, i.jsx)(c.E, {
                                                               className: T.aK,
                                                               color: "text-muted",
                                                               variant: "text-xxs/medium",
@@ -157,7 +157,7 @@ let y = r.memo(function (e) {
                                                                   null != E
                                                                       ? (0, i.jsx)("div", {
                                                                             className: T.x6,
-                                                                            children: (0, i.jsx)(c.$, {
+                                                                            children: (0, i.jsx)(u.$, {
                                                                                 size: "sm",
                                                                                 variant: "active",
                                                                                 onClick: H,
@@ -168,7 +168,7 @@ let y = r.memo(function (e) {
                                                                   null != p
                                                                       ? (0, i.jsx)("div", {
                                                                             className: T.x6,
-                                                                            children: (0, i.jsx)(c.$, {
+                                                                            children: (0, i.jsx)(u.$, {
                                                                                 size: "sm",
                                                                                 variant: "secondary",
                                                                                 onClick: W,
@@ -183,7 +183,7 @@ let y = r.memo(function (e) {
                                         ],
                                     }),
                                     null != t &&
-                                        (0, i.jsx)(h.D, {
+                                        (0, i.jsx)(A.D, {
                                             className: T.qr,
                                             ignoreKeyPress: !0,
                                             onClick: (e) => e.stopPropagation(),
@@ -203,23 +203,23 @@ function j(e) {
     let {
         springs: { opacity: t, scale: n, transform: r, height: l },
         scaleOverride: o,
-        index: u,
-        children: c,
+        index: c,
+        children: u,
         locked: d,
-        animationWrapperClassName: A,
+        animationWrapperClassName: h,
     } = e;
     return (0, i.jsx)(a.animated.div, {
-        className: s()(T.k$, d && 0 !== u && T.fF, A),
+        className: s()(T.k$, d && 0 !== c && T.fF, h),
         style: {
-            pointerEvents: d && 0 !== u ? "none" : "auto",
-            zIndex: Math.max(5 - u, 0),
+            pointerEvents: d && 0 !== c ? "none" : "auto",
+            zIndex: Math.max(5 - c, 0),
             opacity: t,
             transform: r.to((e) => `translate3d(0, ${e}px, 0)`),
             scale: o ?? n.to([0, 1], [0.7, 1]),
             height: l,
-            maxWidth: 0 === u ? void 0 : "100%",
+            maxWidth: 0 === c ? void 0 : "100%",
         },
-        children: c,
+        children: u,
     });
 }
 function R(e) {
@@ -230,25 +230,25 @@ let I = { mass: 1, friction: 8, tension: 300 };
 function M(e) {
     let { notification: t, index: n, locked: l, pinned: s, transitionState: a, cleanUp: o } = e,
         {
-            id: u,
+            id: c,
             props: {
-                onNotificationShow: c,
+                onNotificationShow: u,
                 onDismissClick: d,
-                onNotificationClick: A,
-                onConfirmClick: h,
+                onNotificationClick: h,
+                onConfirmClick: A,
                 onCancelClick: f,
                 renderFooter: E,
                 animationWrapperClassName: b,
             },
         } = t,
         p = r.useCallback(() => {
-            c(u);
-        }, [c, u]),
+            u(c);
+        }, [u, c]),
         C = r.useCallback(
             (e) => {
-                (g.A.updateNotificationStatus(u), d?.(e, u));
+                (g.A.updateNotificationStatus(c), d?.(e, c));
             },
-            [u, d],
+            [c, d],
         ),
         { clickSpring: S, handleMouseClick: _ } = (function () {
             let [e, t] = r.useState(!1),
@@ -272,23 +272,23 @@ function M(e) {
         })(),
         O = r.useCallback(
             (e) => {
-                (A?.(e, u), _());
+                (h?.(e, c), _());
             },
-            [A, u, _],
+            [h, c, _],
         ),
         T = r.useCallback(
             (e) => {
-                h?.(e, u);
+                A?.(e, c);
             },
-            [h, u],
+            [A, c],
         ),
         x = r.useCallback(
             (e) => {
-                f?.(e, u);
+                f?.(e, c);
             },
-            [f, u],
+            [f, c],
         ),
-        M = r.useCallback((e, t) => E?.(e, u, t), [E, u]),
+        M = r.useCallback((e, t) => E?.(e, c, t), [E, c]),
         {
             props: {
                 onNotificationShow: N,
@@ -324,7 +324,7 @@ function M(e) {
                 onNotificationShow: 0 === n ? p : void 0,
                 onDismissClick: C,
                 onNotificationClick: O,
-                onConfirmClick: null != h ? T : void 0,
+                onConfirmClick: null != A ? T : void 0,
                 onCancelClick: null != f ? x : void 0,
                 renderFooter: M,
                 expand: !1,

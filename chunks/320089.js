@@ -20,15 +20,15 @@ var n = r(477900),
     v = r(975571),
     _ = r(304210),
     I = r(324157),
-    y = r(727142);
-let L = function (e) {
+    L = r(727142);
+let y = function (e) {
     let { text: t, icon: r, indicatorColor: l } = e;
     return (0, n.jsxs)("span", {
-        className: y.I,
+        className: L.I,
         children: [
             null != l &&
                 (0, n.jsx)("svg", {
-                    className: y.q,
+                    className: L.q,
                     viewBox: "0 0 8 8",
                     "aria-hidden": !0,
                     children: (0, n.jsx)("circle", { cx: "4", cy: "4", r: "3.5", fill: l }),
@@ -116,7 +116,7 @@ function H(e) {
         }),
     });
 }
-let M = function (e) {
+let D = function (e) {
     let {
         promotionRewardStatus: t,
         rewardProduct: r,
@@ -141,7 +141,7 @@ let M = function (e) {
             })
           : null;
 };
-var D = r(691540),
+var M = r(691540),
     U = r(857250),
     F = r(97483),
     V = r(765178),
@@ -187,8 +187,8 @@ function et(e) {
                 children: [
                     null != x &&
                         (0, n.jsx)(u.E, { variant: "text-md/bold", color: "text-strong", children: (0, E.U)(x) }),
-                    null != d && (0, n.jsx)(L, { icon: c.ClockIcon, text: d }),
-                    (0, n.jsx)(M, {
+                    null != d && (0, n.jsx)(y, { icon: c.ClockIcon, text: d }),
+                    (0, n.jsx)(D, {
                         promotionRewardStatus: t.rewardStatus,
                         rewardProduct: m,
                         claimRewardButtonVariant: p,
@@ -214,7 +214,7 @@ function er(e) {
             timeLeftText: A,
             contentThemeClassName: _,
             rewardProduct: I,
-            claimRewardButtonVariant: y,
+            claimRewardButtonVariant: L,
             helpCenterId: f,
             isClaiming: k,
             onClaim: O,
@@ -245,8 +245,8 @@ function er(e) {
                         align: "center",
                         wrap: !0,
                         children: [
-                            null != C && (0, n.jsx)(L, { text: C, indicatorColor: s ?? B }),
-                            null != A && (0, n.jsx)(L, { icon: c.ClockIcon, text: A }),
+                            null != C && (0, n.jsx)(y, { text: C, indicatorColor: s ?? B }),
+                            null != A && (0, n.jsx)(y, { icon: c.ClockIcon, text: A }),
                         ],
                     }),
                 ],
@@ -257,10 +257,10 @@ function er(e) {
                 align: "center",
                 fullWidth: !1,
                 children: [
-                    (0, n.jsx)(M, {
+                    (0, n.jsx)(D, {
                         promotionRewardStatus: t.rewardStatus,
                         rewardProduct: I,
-                        claimRewardButtonVariant: y,
+                        claimRewardButtonVariant: L,
                         isClaiming: k,
                         onClaim: O,
                     }),
@@ -316,8 +316,8 @@ function en(e) {
         {
             title: v,
             description: _,
-            progressText: y,
-            timeLeftText: L,
+            progressText: L,
+            timeLeftText: y,
         } = (0, I.MZ)({
             promotion: r,
             promotionProgress: x,
@@ -334,8 +334,8 @@ function en(e) {
             backgroundUrl: d.backgroundUrl,
             title: v,
             description: _,
-            progressText: y,
-            timeLeftText: L,
+            progressText: L,
+            timeLeftText: y,
             contentThemeClassName: J[p],
             rewardProduct: s,
             claimRewardButtonVariant: Q[p],
@@ -373,7 +373,7 @@ let el = function (e) {
                                 await (0, z.cF)(o, Y.FYj);
                             } catch (e) {
                                 ((0, K.o)(e),
-                                    (0, D.P0)((0, U.o)(G.intl.string(G.t.F8FvUy), F.Ck.FAILURE)),
+                                    (0, M.P0)((0, U.o)(G.intl.string(G.t.F8FvUy), F.Ck.FAILURE)),
                                     V.O.announce(G.intl.string(G.t.F8FvUy)),
                                     n(!1));
                                 return;
