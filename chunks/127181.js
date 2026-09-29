@@ -289,6 +289,12 @@ let n = [
         summary: "GPT-6 Astra joins the model picker and now powers the Big Brain effort stop.",
     },
     {
+        date: "2026-09-29",
+        time: "17:55",
+        platforms: ["desktop", "mobile"],
+        summary: "GPT-6.1 Sol replaces GPT-6 Sol in the model picker and on the Balanced tier of GPT projects.",
+    },
+    {
         date: "2026-08-26",
         time: "00:00",
         platforms: ["desktop", "mobile"],
