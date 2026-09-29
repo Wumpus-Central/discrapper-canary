@@ -1,4 +1,4 @@
-n.d(t, { default: () => e6 });
+n.d(t, { default: () => e3 });
 var i = n(477900),
     s = n(582128),
     r = n(562708),
@@ -15,8 +15,8 @@ var i = n(477900),
     f = n(775602),
     p = n(531685),
     A = n(625494),
-    v = n(140735),
-    b = n(297264),
+    b = n(140735),
+    v = n(297264),
     y = n(707554),
     S = n(964486);
 (n(667532), n(134528), n(947204));
@@ -439,7 +439,7 @@ function ef(e) {
 }
 var ep = n(686380);
 let eA = "refresh_sm";
-function ev(e) {
+function eb(e) {
     let { onClick: t, active: n, node: r, dismissibleBadge: l, panelKey: c, listItemProps: o, children: u } = e,
         {
             icon: d,
@@ -465,17 +465,17 @@ function ev(e) {
                     return en.A.colors.ICON_FEEDBACK_CRITICAL;
             }
         })(x),
-        v = h?.(n),
-        b = s.useMemo(
+        b = h?.(n),
+        v = s.useMemo(
             () =>
                 null != l
                     ? n
                         ? null
                         : (0, i.jsx)(er, { badge: l })
-                    : null != v
-                      ? (0, i.jsx)(B.A, { badge: v })
+                    : null != b
+                      ? (0, i.jsx)(B.A, { badge: b })
                       : void 0,
-            [n, l, v],
+            [n, l, b],
         );
     return (0, i.jsxs)("li", {
         "data-settings-sidebar-item": c,
@@ -497,14 +497,14 @@ function ev(e) {
                                   (0, i.jsx)(a.E, { variant: "text-md/medium", color: p, children: f }),
                               ],
                           }),
-                    b,
+                    v,
                 ],
             }),
             u,
         ],
     });
 }
-function eb(e) {
+function ev(e) {
     let { node: t, visibleContent: n, dismissibleBadges: r, hoisted: l = !1 } = e,
         a = s.useMemo(() => t.layout[0], [t]),
         c = L.A.useField("currentPanelKey"),
@@ -543,7 +543,7 @@ function eb(e) {
         ),
         f = s.useMemo(() => et(t.key, n, r), [t.key, n, r]);
     return l
-        ? (0, i.jsx)(ev, {
+        ? (0, i.jsx)(eb, {
               panelKey: a?.key,
               onClick: h,
               active: d,
@@ -555,7 +555,7 @@ function eb(e) {
         : (0, i.jsx)(Y.tG, {
               id: a?.key ?? t.key,
               children: (e) =>
-                  (0, i.jsx)(ev, {
+                  (0, i.jsx)(eb, {
                       panelKey: a?.key,
                       onClick: h,
                       active: d,
@@ -643,8 +643,8 @@ function eS(e) {
                 "aria-labelledby": P,
                 className: I()(ey.pz, e, { [ey.Hw]: N.Fr, [ey.n7]: o }),
                 children: [
-                    (0, i.jsx)(v.A, {
-                        children: (0, i.jsx)(b.D, {
+                    (0, i.jsx)(b.A, {
+                        children: (0, i.jsx)(v.D, {
                             variant: "text-sm/bold",
                             id: P,
                             children: K.intl.string(K.t["ZU3/B4"]),
@@ -727,7 +727,7 @@ function ej(e) {
         children: (0, i.jsx)("ul", {
             className: ey.C4,
             children: t.layout.map((e) =>
-                (0, i.jsx)(eb, { node: e, visibleContent: n, dismissibleBadges: s, hoisted: !0 }, e.key),
+                (0, i.jsx)(ev, { node: e, visibleContent: n, dismissibleBadges: s, hoisted: !0 }, e.key),
             ),
         }),
     });
@@ -741,10 +741,10 @@ function eI(e) {
         "aria-labelledby": a,
         children: [
             t.hideTitle
-                ? (0, i.jsx)(v.A, { children: (0, i.jsx)(b.D, { id: a, variant: "heading-sm/medium", children: l }) })
+                ? (0, i.jsx)(b.A, { children: (0, i.jsx)(v.D, { id: a, variant: "heading-sm/medium", children: l }) })
                 : (0, i.jsx)("div", {
                       className: ey.a9,
-                      children: (0, i.jsx)(b.D, {
+                      children: (0, i.jsx)(v.D, {
                           id: a,
                           className: ey.Pf,
                           variant: "heading-sm/medium",
@@ -755,7 +755,7 @@ function eI(e) {
             (0, i.jsx)("ul", {
                 className: ey.C4,
                 children: t.layout.map((e) =>
-                    (0, i.jsx)(eb, { node: e, visibleContent: n, dismissibleBadges: r }, e.key),
+                    (0, i.jsx)(ev, { node: e, visibleContent: n, dismissibleBadges: r }, e.key),
                 ),
             }),
         ],
@@ -815,7 +815,7 @@ function eT(e) {
         children: (0, i.jsxs)("div", {
             className: eC.k,
             children: [
-                (0, i.jsx)(v.A, { children: (0, i.jsx)(b.D, { variant: "text-sm/bold", children: R }) }),
+                (0, i.jsx)(b.A, { children: (0, i.jsx)(v.D, { variant: "text-sm/bold", children: R }) }),
                 (0, i.jsxs)(y.F, {
                     children: [
                         (0, i.jsx)(eS, {
@@ -850,7 +850,7 @@ function ew(e) {
             searchBar: d,
             ...m
         } = e,
-        [v, b] = s.useState(!1),
+        [b, v] = s.useState(!1),
         [y, S] = s.useState(1.4),
         j = s.useRef(null),
         I = (0, h.bG)([f.Ay], () => f.Ay.useReducedMotion),
@@ -861,7 +861,7 @@ function ew(e) {
                 let { intensity: t, duration: n } = e;
                 !I &&
                     N &&
-                    (b(!0), S(t ?? 1.4), clearTimeout(j.current), (j.current = setTimeout(() => b(!1), n ?? 1e3)));
+                    (v(!0), S(t ?? 1.4), clearTimeout(j.current), (j.current = setTimeout(() => v(!1), n ?? 1e3)));
             }
             return (
                 A._.subscribe(eR.jej.SHAKE_SETTINGS_MODAL, e),
@@ -871,7 +871,7 @@ function ew(e) {
             );
         }, [I, N]),
         (0, i.jsx)(x.b, {
-            isShaking: v,
+            isShaking: b,
             intensity: y,
             children: (0, i.jsx)(g.N, {
                 ...m,
@@ -915,13 +915,13 @@ var eM = n(280450),
 function eJ() {
     let e = (0, eX.GV)(),
         t = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        n = "624213",
-        s = "22b2eb7afbcdf56b21ab14a598cfd056d4a9cb90".substring(0, 7),
+        n = "624228",
+        s = "eb00befbbda4db7ec75bb6abc9b5b980f1ab2400".substring(0, 7),
         r = eV.A?.app.getVersion(),
         l = eV.A?.app.getBuildNumber(),
         c = eV.A?.app.getAppArch(),
         o = eY.A.getCurrentBuildOverride().overrides?.discord_web,
-        u = null != o ? (0, eq.A)("1790700003352", !1) : null,
+        u = null != o ? (0, eq.A)("1790700436829", !1) : null,
         d = null != u ? ` (built ${u})` : "",
         m = (function () {
             let e = ez()?.os?.toString();
@@ -998,7 +998,7 @@ function eJ() {
                             ],
                         }),
                 }),
-                (0, i.jsx)(v.A, { id: e, children: K.intl.string(K.t["9Al4Qd"]) }),
+                (0, i.jsx)(b.A, { id: e, children: K.intl.string(K.t["9Al4Qd"]) }),
             ],
         })
     );
@@ -1091,8 +1091,8 @@ var e5 = n(402651),
     e9 = n(830543),
     e4 = n(953056);
 let e8 = new Set([e_.X.PROFILE_PANEL, e_.X.SUBSCRIPTIONS_PANEL, e_.X.FAMILY_CENTER_PANEL, e_.X.POGGERMODE_PANEL]),
-    e3 = new Map([[e_.X.SESSIONS_PANEL, r.ImpressionNames.USER_SETTINGS_SESSIONS]]);
-function e6(e) {
+    e6 = new Map([[e_.X.SESSIONS_PANEL, r.ImpressionNames.USER_SETTINGS_SESSIONS]]);
+function e3(e) {
     let { target: t, ...n } = e,
         l = eL.A.useField("query"),
         a = s.useCallback(() => {
@@ -1119,7 +1119,7 @@ function e6(e) {
               sidebarFooter: e2,
               onViewChange: function (e) {
                   e8.has(e) || (0, e7._)(e);
-                  let t = e3.get(e);
+                  let t = e6.get(e);
                   (null != t &&
                       (0, o.x)({
                           type: r.ImpressionTypes.PANE,

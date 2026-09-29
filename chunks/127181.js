@@ -343,6 +343,13 @@ let n = [
         summary: "Messages sent mid-task route faster: questions, follow-ups, and interrupts respond right away.",
     },
     {
+        date: "2026-09-29",
+        time: "04:10",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "Messages you send while Conjure is just getting started stay above its reply instead of landing below it.",
+    },
+    {
         date: "2026-09-21",
         time: "00:01",
         platforms: ["desktop", "mobile"],
