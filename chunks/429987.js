@@ -625,7 +625,7 @@ function eY(e) {
                         title: w.intl.string(w.t.wOr6hB),
                         help: w.intl.formatToPlainString(w.t.dy6viJ, { maxValues: n }),
                     });
-                if ((0, ez.fJ)(e, A.guild_id)) return (0, eF.V)(A, e);
+                if ((0, ez.fJ)({ files: e, guildId: A.guild_id })) return (0, eF.V)(A, e);
                 if (!g(e.map((e) => e.name))) return j();
                 let l = e.map((e) => {
                     let n = (0, eu.so)(p),

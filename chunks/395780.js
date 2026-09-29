@@ -46,24 +46,31 @@ class A extends r.EventEmitter {
             ? (E.log(`Too many attachments for ${this.id}`),
               this._handleError({ code: u.t02.TOO_MANY_ATTACHMENTS }),
               !1)
-            : !(this._fileSize() > e.getMaxTotalAttachmentSize()) ||
-                  (this._handleError({
-                      code: u.t02.ENTITY_TOO_LARGE,
-                      reason: { type: _.ty.POSTCOMPRESSION_SUM_TOO_LARGE },
-                  }),
-                  !1);
+            : this.checkTotalAttachmentSize();
+    }
+    checkTotalAttachmentSize() {
+        let e = (0, d.B)(this.files[0]?.item?.target);
+        return (
+            !(this._fileSize() > e.getMaxTotalAttachmentSize()) ||
+            (this.setUploadingTextForUI(),
+            this._handleError({ code: u.t02.ENTITY_TOO_LARGE, reason: { type: _.ty.POSTCOMPRESSION_SUM_TOO_LARGE } }),
+            !1)
+        );
     }
     setUploadingTextForUI() {
-        let e = this.files.some((e) => e.isImage),
-            t = this.files.some((e) => e.isVideo),
-            n = this._fileSize();
-        (E.log(`setUploadingTextForUI - total content: ${n} bytes and ${this.files.length} attachments for ${this.id}`),
+        let { isCompressionComplete: e = !0 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+            t = this.files.some((e) => e.isImage),
+            n = this.files.some((e) => e.isVideo),
+            i = e
+                ? this._fileSize()
+                : s().sumBy(this.files, (e) => (e.reactNativeFilePrepped ? e.currentSize : e.preCompressionSize));
+        (E.log(`setUploadingTextForUI - total content: ${i} bytes and ${this.files.length} attachments for ${this.id}`),
             (this._file = {
                 ...this._file,
-                totalPostCompressionSize: n,
-                currentSize: n,
-                hasVideo: t,
-                hasImage: e,
+                totalPostCompressionSize: e ? i : void 0,
+                currentSize: i,
+                hasVideo: n,
+                hasImage: t,
                 attachmentsCount: this.files.length,
                 items: this.files,
             }));
@@ -189,7 +196,12 @@ class I extends A {
                 this._aborted || (this._handleStart(() => n.abort()), !(await this.compressAndCheckFileSize())))
             )
                 return t;
-            (this.setUploadingTextForUI(), await (0, h.A)(this.files, !0, this._recomputeProgress.bind(this)));
+            this.setUploadingTextForUI();
+            try {
+                await (0, h.A)(this.files, !0, this._recomputeProgress.bind(this));
+            } finally {
+                this.setUploadingTextForUI();
+            }
         } catch (a) {
             let e = this.files.find((e) => e.status === i.jP.ERROR),
                 t = e?.error,

@@ -25,7 +25,7 @@ function A(e) {
                 ((d = (e = t.items ?? []).map((e) => e.preCompressionSize)),
                 {
                     preCompressionFileSizes: d,
-                    postCompressionFileSizes: (A = e.map((e) => e.postCompressionSize ?? e.preCompressionSize)),
+                    postCompressionFileSizes: (A = e.map((e) => e.postCompressionSize ?? e.currentSize)),
                     preCompressionAggregateSize: t.totalPreCompressionSize > 0 ? t.totalPreCompressionSize : _(d),
                     postCompressionAggregateSize:
                         null != t.totalPostCompressionSize && t.totalPostCompressionSize > 0

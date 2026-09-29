@@ -1,21 +1,22 @@
-(i.d(t, { LJ: () => m, WQ: () => p, fJ: () => d }), i(321073));
+(i.d(t, { LJ: () => m, WQ: () => d, fJ: () => p }), i(321073));
 var r = i(565150),
     n = i(409481),
-    o = i(453771),
-    l = i(158045),
+    l = i(453771),
+    o = i(158045),
     a = i(202541),
     s = i(375708);
-function p(e, t, i) {
-    let r = o.Hb(i ?? o.o2(t));
-    return l.Ay.isPremium(e, a.PremiumTypes.TIER_2)
+function d(e, t, i) {
+    let r = l.Hb(i ?? l.o2(t));
+    return o.Ay.isPremium(e, a.PremiumTypes.TIER_2)
         ? s.intl.formatToPlainString(s.t.fxEKdS, { maxSize: r })
-        : l.Ay.isPremium(e, a.PremiumTypes.TIER_1)
+        : o.Ay.isPremium(e, a.PremiumTypes.TIER_1)
           ? s.intl.formatToPlainString(s.t["Nr+LsZ"], { maxSize: r })
           : s.intl.formatToPlainString(s.t.fxEKdS, { maxSize: r });
 }
-function d(e, t) {
-    let i = (0, n.C)(o.o2(t));
-    return Array.from(e).some((e) => e.size > i) || o.Aw(e);
+function p(e) {
+    let { files: t, guildId: i } = e,
+        r = (0, n.C)(l.o2(i));
+    return Array.from(t).some((e) => e.size > r) || l.Aw(t);
 }
 function m(e) {
     return e.reduce((e, t) => (t.item.platform === r.xz.WEB && e.push(t.item.file), e), []);

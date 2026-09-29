@@ -1607,7 +1607,8 @@ class n1 extends i.PureComponent {
             }
             if (null != n && n.length > 0) {
                 let e = (0, nT.LJ)(n);
-                if ((0, nT.fJ)(e, d?.id)) return ((0, ej.V)(h, e), { shouldClear: !1, shouldRefocus: !1 });
+                if ((0, nT.fJ)({ files: e, guildId: d?.id }))
+                    return ((0, ej.V)(h, e), { shouldClear: !1, shouldRefocus: !1 });
                 ((I.eagerDispatch = !1),
                     (I.attachmentsToUpload = n),
                     (I.onAttachmentUploadError = (e, t, n) => {
