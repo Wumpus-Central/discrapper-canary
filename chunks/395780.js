@@ -1,4 +1,4 @@
-n.d(t, { A: () => I });
+n.d(t, { A: () => f });
 var i = n(280889),
     r = n(143236),
     a = n(435558),
@@ -41,12 +41,14 @@ class A extends r.EventEmitter {
         return this.files.reduce((e, t) => (e += t.currentSize ?? 0), 0);
     }
     async compressAndCheckFileSize() {
-        let e = (0, d.B)(this.files[0]?.item?.target);
-        return this.files.length > e.getMaxAttachmentsCount()
+        let { deferTotalSizeCheckUntilAfterCompression: e = !1 } =
+                arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+            t = (0, d.B)(this.files[0]?.item?.target);
+        return this.files.length > t.getMaxAttachmentsCount()
             ? (E.log(`Too many attachments for ${this.id}`),
               this._handleError({ code: u.t02.TOO_MANY_ATTACHMENTS }),
               !1)
-            : this.checkTotalAttachmentSize();
+            : e || this.checkTotalAttachmentSize();
     }
     checkTotalAttachmentSize() {
         let e = (0, d.B)(this.files[0]?.item?.target);
@@ -177,8 +179,9 @@ class A extends r.EventEmitter {
             }));
     }
 }
-var h = n(358579);
-class I extends A {
+var h = n(358579),
+    I = n(820465);
+class f extends A {
     async uploadFiles(e) {
         super.upload(e);
         let t = new Promise((e, t) => {
@@ -191,17 +194,17 @@ class I extends A {
             }),
             n = new AbortController();
         try {
-            if (
-                ((this.files = e),
-                this._aborted || (this._handleStart(() => n.abort()), !(await this.compressAndCheckFileSize())))
-            )
-                return t;
+            if (((this.files = e), this._aborted)) return t;
+            this._handleStart(() => n.abort());
+            let i = (0, I.M)();
+            if (!(await this.compressAndCheckFileSize({ deferTotalSizeCheckUntilAfterCompression: i }))) return t;
             this.setUploadingTextForUI();
             try {
                 await (0, h.A)(this.files, !0, this._recomputeProgress.bind(this));
             } finally {
                 this.setUploadingTextForUI();
             }
+            if (!this.checkTotalAttachmentSize()) return t;
         } catch (a) {
             let e = this.files.find((e) => e.status === i.jP.ERROR),
                 t = e?.error,

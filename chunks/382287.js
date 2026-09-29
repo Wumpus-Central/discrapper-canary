@@ -1,23 +1,25 @@
-(i.d(t, { LJ: () => m, WQ: () => d, fJ: () => p }), i(321073));
+(i.d(t, { LJ: () => u, WQ: () => p, fJ: () => m }), i(321073));
 var r = i(565150),
     n = i(409481),
-    l = i(453771),
-    o = i(158045),
-    a = i(202541),
-    s = i(375708);
-function d(e, t, i) {
-    let r = l.Hb(i ?? l.o2(t));
-    return o.Ay.isPremium(e, a.PremiumTypes.TIER_2)
-        ? s.intl.formatToPlainString(s.t.fxEKdS, { maxSize: r })
-        : o.Ay.isPremium(e, a.PremiumTypes.TIER_1)
-          ? s.intl.formatToPlainString(s.t["Nr+LsZ"], { maxSize: r })
-          : s.intl.formatToPlainString(s.t.fxEKdS, { maxSize: r });
-}
-function p(e) {
-    let { files: t, guildId: i } = e,
-        r = (0, n.C)(l.o2(i));
-    return Array.from(t).some((e) => e.size > r) || l.Aw(t);
+    l = i(820465),
+    o = i(453771),
+    a = i(158045),
+    s = i(202541),
+    d = i(375708);
+function p(e, t, i) {
+    let r = o.Hb(i ?? o.o2(t));
+    return a.Ay.isPremium(e, s.PremiumTypes.TIER_2)
+        ? d.intl.formatToPlainString(d.t.fxEKdS, { maxSize: r })
+        : a.Ay.isPremium(e, s.PremiumTypes.TIER_1)
+          ? d.intl.formatToPlainString(d.t["Nr+LsZ"], { maxSize: r })
+          : d.intl.formatToPlainString(d.t.fxEKdS, { maxSize: r });
 }
 function m(e) {
+    let { files: t, guildId: i, canDeferSizeChecks: r = !0 } = e;
+    if (r && (0, l.M)()) return !1;
+    let a = (0, n.C)(o.o2(i));
+    return Array.from(t).some((e) => e.size > a) || o.Aw(t);
+}
+function u(e) {
     return e.reduce((e, t) => (t.item.platform === r.xz.WEB && e.push(t.item.file), e), []);
 }
