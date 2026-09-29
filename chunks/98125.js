@@ -1,5 +1,4 @@
 !(function (e) {
-    "use strict";
     var i = {
             1: "\u0967",
             2: "\u0968",
