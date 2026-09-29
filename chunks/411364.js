@@ -6296,7 +6296,7 @@ let dt = (0, d.zZ)(c.X.REDEEM_GIFT_CATEGORY, {
         buildLayout: () => [di],
     });
 var dl = n(659758),
-    dr = n(962766),
+    dr = n(459808),
     da = n(877624),
     du = n(269115),
     dd = n(462887),

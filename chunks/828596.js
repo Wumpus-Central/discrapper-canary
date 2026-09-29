@@ -42,14 +42,15 @@ async function T(e) {
         }
 }
 async function m(e, t) {
+    let n;
     r.h.dispatch({ type: "STOREFRONT_PROMOTION_CLAIM_START", promotionId: e });
     try {
-        await i.Bo.post({ url: E.Rsh.STOREFRONT_PROMOTION_CLAIM(e), body: {}, rejectWithError: !0 });
+        n = await i.Bo.post({ url: E.Rsh.STOREFRONT_PROMOTION_CLAIM(e), body: {}, rejectWithError: !0 });
     } catch (n) {
         let t = new a.A(n);
         throw (r.h.dispatch({ type: "STOREFRONT_PROMOTION_CLAIM_FAIL", promotionId: e, apiError: t }), t);
     }
-    (r.h.dispatch({ type: "STOREFRONT_PROMOTION_CLAIM_SUCCESS", promotionId: e }), await T([t]));
+    return (r.h.dispatch({ type: "STOREFRONT_PROMOTION_CLAIM_SUCCESS", promotionId: e }), await T([t]), n.body);
 }
 function g(e) {
     return e?.type === "error" ? A : I;

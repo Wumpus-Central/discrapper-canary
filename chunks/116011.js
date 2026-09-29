@@ -16,8 +16,8 @@ var i,
     h = n(914410),
     x = n(174459),
     v = n(58703),
-    _ = n(975571),
-    C = n(38405),
+    C = n(975571),
+    _ = n(38405),
     P = n(264779),
     T = n(962644),
     R = n(852218),
@@ -120,6 +120,9 @@ function L(e) {
         setHasClaimError: s,
         className: l,
         analyticsLocations: o = [],
+        onClaim: d,
+        onClaimError: c,
+        isClaiming: b,
     } = e;
     return n
         ? i
@@ -140,18 +143,22 @@ function L(e) {
                       variant: "secondary",
                       size: "sm",
                       text: t.claimCtaText ?? E.intl.string(E.t.vwASIl),
+                      loading: b,
                       onClick: () => {
-                          (0, P.kd)({
-                              promotionId: t.id,
-                              promotionTitle: t.outboundTitle,
-                              partnerId: t.partnerId,
-                              analyticsLocations: o,
-                          })
+                          (null != d
+                              ? d()
+                              : (0, P.kd)({
+                                    promotionId: t.id,
+                                    promotionTitle: t.outboundTitle,
+                                    partnerId: t.partnerId,
+                                    analyticsLocations: o,
+                                }).then((e) => ((0, T.LI)(e), e.code))
+                          )
                               .then((e) => {
-                                  ((0, T.LI)(e), r(e.code));
+                                  null != e && r(e);
                               })
                               .catch((e) => {
-                                  (s(!0), C.A.captureException(e));
+                                  !1 === (null != c && c(e)) && (s(!0), _.A.captureException(e));
                               });
                       },
                   }),
@@ -170,10 +177,13 @@ function S(e) {
             claimButtonPlacement: d = "inline",
             footerContent: c,
             analyticsLocations: u = [],
+            onClaim: m,
+            onClaimError: p,
+            isClaiming: h,
         } = e,
-        [m, p] = r.useState(t.code),
-        [h, x] = r.useState(!1),
-        v = null == m;
+        [x, v] = r.useState(t.code),
+        [_, P] = r.useState(!1),
+        T = null == x;
     return (0, a.jsxs)("div", {
         className: N.lA,
         children: [
@@ -199,11 +209,11 @@ function S(e) {
                                             (0, a.jsx)(b.D, {
                                                 variant: "heading-sm/medium",
                                                 color: "text-subtle",
-                                                children: h
+                                                children: _
                                                     ? E.intl.format(E.t.i2EuFO, {
-                                                          helpdeskArticle: _.A.getArticleURL(A.MVz.RECURRING_PROMOTION),
+                                                          helpdeskArticle: C.A.getArticleURL(A.MVz.RECURRING_PROMOTION),
                                                       })
-                                                    : v
+                                                    : T
                                                       ? t.body
                                                       : null != t.bodyClaimed
                                                         ? E.intl.format(t.bodyClaimed, { date: t.endDate })
@@ -215,7 +225,7 @@ function S(e) {
                                                     color: "text-subtle",
                                                     children: E.intl.format(t.bodyNote, {
                                                         partnerName: R.CD[t.partnerId].label,
-                                                        helpdeskArticle: _.A.getArticleURL(A.MVz.RECURRING_PROMOTION),
+                                                        helpdeskArticle: C.A.getArticleURL(A.MVz.RECURRING_PROMOTION),
                                                     }),
                                                 }),
                                         ],
@@ -225,11 +235,14 @@ function S(e) {
                             "inline" === d &&
                                 (0, a.jsx)(L, {
                                     recurrence: t,
-                                    canBeClaimed: v,
-                                    hasClaimError: h,
-                                    setCode: p,
-                                    setHasClaimError: x,
+                                    canBeClaimed: T,
+                                    hasClaimError: _,
+                                    setCode: v,
+                                    setHasClaimError: P,
                                     analyticsLocations: u,
+                                    onClaim: m,
+                                    onClaimError: p,
+                                    isClaiming: h,
                                 }),
                         ],
                     }),
@@ -248,18 +261,21 @@ function S(e) {
                 ],
             }),
             "footer" === d && c,
-            null != m && (0, a.jsx)(O, { recurrence: { ...t, code: m }, analyticsLocations: u }),
+            null != x && (0, a.jsx)(O, { recurrence: { ...t, code: x }, analyticsLocations: u }),
             "footer" === d &&
-                null == m &&
+                null == x &&
                 (0, a.jsx)(I, {
                     children: (0, a.jsx)(L, {
                         recurrence: t,
-                        canBeClaimed: v,
-                        hasClaimError: h,
-                        setCode: p,
-                        setHasClaimError: x,
+                        canBeClaimed: T,
+                        hasClaimError: _,
+                        setCode: v,
+                        setHasClaimError: P,
                         className: N.qx,
                         analyticsLocations: u,
+                        onClaim: m,
+                        onClaimError: p,
+                        isClaiming: h,
                     }),
                 }),
         ],

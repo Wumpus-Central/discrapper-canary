@@ -58,9 +58,15 @@ let m = {
                     rejectWithError: (0, a.fT)(),
                 })
             ).body.map(_.Ng);
-            l.h.dispatch({ type: "CLAIMED_OUTBOUND_PROMOTION_CODES_FETCH_SUCCESS", claimedOutboundPromotionCodes: e });
+            return (
+                l.h.dispatch({
+                    type: "CLAIMED_OUTBOUND_PROMOTION_CODES_FETCH_SUCCESS",
+                    claimedOutboundPromotionCodes: e,
+                }),
+                !0
+            );
         } catch {
-            l.h.dispatch({ type: "CLAIMED_OUTBOUND_PROMOTION_CODES_FETCH_FAIL" });
+            return (l.h.dispatch({ type: "CLAIMED_OUTBOUND_PROMOTION_CODES_FETCH_FAIL" }), !1);
         }
     },
     addClaimedOutboundPromotionCode: T,

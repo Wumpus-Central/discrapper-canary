@@ -1,4 +1,4 @@
-(n.d(t, { CD: () => g, JL: () => N, Oj: () => p, j9: () => S, ou: () => m }), n(938796));
+(n.d(t, { CD: () => g, JL: () => N, OF: () => C, Oj: () => p, j9: () => S, ou: () => m }), n(938796));
 var i = n(582128),
     r = n(435558),
     a = n.n(r);
@@ -151,4 +151,8 @@ function N(e) {
         }
         return r ?? null;
     }, [t, o, a, r]);
+}
+function C(e) {
+    for (let t of e.redemptions) for (let e of t.rewards) if (null != e.promo_code) return e.promo_code;
+    return null;
 }
