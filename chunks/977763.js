@@ -1,10 +1,10 @@
-(a.r(t), a.d(t, { playgroundConfig: () => W, guildSpaceCollection: () => B }));
+(a.r(t), a.d(t, { playgroundConfig: () => F, guildSpaceCollection: () => q }));
 var s = a(477900),
     l = a(582128),
     n = a(503698),
     r = a.n(n),
-    o = a(834730),
-    i = a(872188),
+    i = a(834730),
+    o = a(872188),
     d = a(450284);
 let u = {
     title: "Server Hub Publishing",
@@ -18,7 +18,7 @@ let u = {
                     [n, u] = l.useState(!1),
                     [c, p] = l.useState(a);
                 c !== a && (p(a), u(!1));
-                let m = l.useCallback(() => {
+                let _ = l.useCallback(() => {
                     switch (a) {
                         case "success":
                             return (u(!0), Promise.resolve());
@@ -31,13 +31,13 @@ let u = {
                 return (0, s.jsx)("div", {
                     className: r()(d.frame, d[t]),
                     children: n
-                        ? (0, s.jsx)(o.E, {
+                        ? (0, s.jsx)(i.E, {
                               variant: "text-sm/normal",
                               color: "text-muted",
                               children:
                                   "Published \u2014 the real notice unmounts here, and the tab appears for members.",
                           })
-                        : (0, s.jsx)(i.A, { onPublish: m }),
+                        : (0, s.jsx)(o.A, { onPublish: _ }),
                 });
             },
             controls: {
@@ -66,10 +66,10 @@ let u = {
 };
 var c = a(228366),
     p = a(593673),
-    m = a(518782),
-    h = a(529609);
-let g = 0;
-function _(e, t, a, s) {
+    _ = a(518782),
+    m = a(529609);
+let h = 0;
+function g(e, t, a, s) {
     let l = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
     return {
         id: e,
@@ -81,19 +81,19 @@ function _(e, t, a, s) {
         locked: !1,
     };
 }
-var A = a(81253);
-let b = [
-        _("left-2", p.a.LEADERBOARD, 0, 1, { heading: "Top chatters this week" }),
-        _("right-1", p.a.LEADERBOARD, 1, 0, { heading: "Top boosters" }),
-        _("left-1", p.a.IMAGE_TEXT, 0, 0, {
+var b = a(81253);
+let y = [
+        g("left-2", p.a.LEADERBOARD, 0, 1, { heading: "Top chatters this week" }),
+        g("right-1", p.a.LEADERBOARD, 1, 0, { heading: "Top boosters" }),
+        g("left-1", p.a.IMAGE_TEXT, 0, 0, {
             title: "Welcome to the server",
             body: "Drop in, say hi, and check the pinned posts for the rules and event schedule.",
             imageUrl: "https://placehold.co/640x180",
             imageAlt: "Server banner placeholder",
         }),
-        _("right-2", p.a.IMAGE_TEXT, 1, 1, { title: "Events", body: "Game night every Friday." }),
+        g("right-2", p.a.IMAGE_TEXT, 1, 1, { title: "Events", body: "Game night every Friday." }),
     ],
-    v = b
+    A = y
         .filter((e) => {
             let { requires_hydration: t } = e;
             return t;
@@ -102,10 +102,10 @@ let b = [
             let { id: t } = e;
             return t;
         }),
-    y = {
-        stat: m.RE.GAMING_LEADERBOARD_STAT_HOURS_PLAYED,
+    v = {
+        stat: _.RE.GAMING_LEADERBOARD_STAT_HOURS_PLAYED,
         week_start_ts: 1756512e3,
-        next_stat: m.RE.GAMING_LEADERBOARD_STAT_DAYS_PLAYED,
+        next_stat: _.RE.GAMING_LEADERBOARD_STAT_DAYS_PLAYED,
         previous_winner: "2",
         streak_count: 3,
         entries: [
@@ -138,7 +138,7 @@ let b = [
             },
         ],
     },
-    S = {
+    f = {
         title: "Server Hub Page",
         stories: [
             {
@@ -148,16 +148,16 @@ let b = [
                 component: function (e) {
                     let t,
                         { width: a, hydration: n } = e,
-                        o =
+                        i =
                             ((t = `guild-space-story-${n}`),
                             l.useEffect(() => {
-                                let e = g++;
+                                let e = h++;
                                 if (
                                     (c.h.dispatch({
                                         type: "GUILD_SPACE_HYDRATE_START",
                                         guildId: t,
                                         requestId: e,
-                                        widgetIds: v,
+                                        widgetIds: A,
                                     }),
                                     "loading" !== n)
                                 ) {
@@ -172,17 +172,17 @@ let b = [
                                         type: "GUILD_SPACE_HYDRATE_SUCCESS",
                                         guildId: t,
                                         requestId: e,
-                                        widgets: v.map((e) => ({
+                                        widgets: A.map((e) => ({
                                             id: e,
-                                            data: "success" === n ? { type: p.a.LEADERBOARD, ...y } : null,
+                                            data: "success" === n ? { type: p.a.LEADERBOARD, ...v } : null,
                                         })),
                                     });
                                 }
                             }, [t, n]),
                             t);
                     return (0, s.jsx)("div", {
-                        className: r()(A.frame, A[a]),
-                        children: (0, s.jsx)(h.A, { canEdit: !0, guildId: o, widgets: b }),
+                        className: r()(b.frame, b[a]),
+                        children: (0, s.jsx)(m.A, { canEdit: !0, guildId: i, widgets: y }),
                     });
                 },
                 controls: {
@@ -214,56 +214,56 @@ let b = [
         ],
     };
 a(321073);
-var f = a(17928),
-    E = a(994500),
-    x = a(711014),
+var x = a(17928),
+    S = a(994500),
+    E = a(711014),
     w = a(287809),
     R = a(427262),
-    D = a(539888),
-    I = a(927813);
-let G = a(282435).sx.slice(0, 10),
+    I = a(539888),
+    D = a(927813);
+let k = a(282435).sx.slice(0, 10),
     T = [
-        { days: 7, totalSeconds: 38 * I.A.Seconds.HOUR + 900, gameIndexes: [0, 1, 2, 3, 4, 5, 6, 7] },
-        { days: 7, totalSeconds: 32 * I.A.Seconds.HOUR + 2400, gameIndexes: [1, 2, 3, 4, 5, 6, 8] },
-        { days: 5, totalSeconds: 26 * I.A.Seconds.HOUR + 3e3, gameIndexes: [0, 2, 4, 6, 8, 9] },
-        { days: 4, totalSeconds: 21 * I.A.Seconds.HOUR + 600, gameIndexes: [1, 3, 5, 7, 9] },
-        { days: 3, totalSeconds: 14 * I.A.Seconds.HOUR + 2100, gameIndexes: [0, 1, 2, 3, 4] },
-        { days: 2, totalSeconds: 9 * I.A.Seconds.HOUR + 2880, gameIndexes: [2, 4, 6, 8] },
-        { days: 2, totalSeconds: 8 * I.A.Seconds.HOUR + 720, gameIndexes: [0, 3, 5, 9] },
-        { days: 1, totalSeconds: 7 * I.A.Seconds.HOUR + 2280, gameIndexes: [1, 4, 7] },
-        { days: 1, totalSeconds: 6 * I.A.Seconds.HOUR + 720, gameIndexes: [0, 2, 8] },
-        { days: 1, totalSeconds: 5 * I.A.Seconds.HOUR + 1140, gameIndexes: [3, 6] },
-        { days: 1, totalSeconds: 4 * I.A.Seconds.HOUR + 3420, gameIndexes: [1, 9] },
-        { days: 1, totalSeconds: 4 * I.A.Seconds.HOUR + 2760, gameIndexes: [0, 5] },
-        { days: 1, totalSeconds: 3 * I.A.Seconds.HOUR + 2100, gameIndexes: [4] },
-        { days: 1, totalSeconds: 2 * I.A.Seconds.HOUR + 3060, gameIndexes: [7] },
-        { days: 1, totalSeconds: +I.A.Seconds.HOUR + 1320, gameIndexes: [2] },
+        { days: 7, totalSeconds: 38 * D.A.Seconds.HOUR + 900, gameIndexes: [0, 1, 2, 3, 4, 5, 6, 7] },
+        { days: 7, totalSeconds: 32 * D.A.Seconds.HOUR + 2400, gameIndexes: [1, 2, 3, 4, 5, 6, 8] },
+        { days: 5, totalSeconds: 26 * D.A.Seconds.HOUR + 3e3, gameIndexes: [0, 2, 4, 6, 8, 9] },
+        { days: 4, totalSeconds: 21 * D.A.Seconds.HOUR + 600, gameIndexes: [1, 3, 5, 7, 9] },
+        { days: 3, totalSeconds: 14 * D.A.Seconds.HOUR + 2100, gameIndexes: [0, 1, 2, 3, 4] },
+        { days: 2, totalSeconds: 9 * D.A.Seconds.HOUR + 2880, gameIndexes: [2, 4, 6, 8] },
+        { days: 2, totalSeconds: 8 * D.A.Seconds.HOUR + 720, gameIndexes: [0, 3, 5, 9] },
+        { days: 1, totalSeconds: 7 * D.A.Seconds.HOUR + 2280, gameIndexes: [1, 4, 7] },
+        { days: 1, totalSeconds: 6 * D.A.Seconds.HOUR + 720, gameIndexes: [0, 2, 8] },
+        { days: 1, totalSeconds: 5 * D.A.Seconds.HOUR + 1140, gameIndexes: [3, 6] },
+        { days: 1, totalSeconds: 4 * D.A.Seconds.HOUR + 3420, gameIndexes: [1, 9] },
+        { days: 1, totalSeconds: 4 * D.A.Seconds.HOUR + 2760, gameIndexes: [0, 5] },
+        { days: 1, totalSeconds: 3 * D.A.Seconds.HOUR + 2100, gameIndexes: [4] },
+        { days: 1, totalSeconds: 2 * D.A.Seconds.HOUR + 3060, gameIndexes: [7] },
+        { days: 1, totalSeconds: +D.A.Seconds.HOUR + 1320, gameIndexes: [2] },
         { days: 1, totalSeconds: 3480, gameIndexes: [5] },
         { days: 1, totalSeconds: 2820, gameIndexes: [8] },
         { days: 1, totalSeconds: 2160, gameIndexes: [0] },
         { days: 1, totalSeconds: 1440, gameIndexes: [6] },
         { days: 1, totalSeconds: 660, gameIndexes: [9] },
     ];
-var N = a(546184);
-let k = _("leaderboard", p.a.LEADERBOARD, 0, 0);
-function L(e) {
+var G = a(546184);
+let L = g("leaderboard", p.a.LEADERBOARD, 0, 0);
+function P(e) {
     let { label: t, className: a, children: l } = e;
     return (0, s.jsxs)("div", {
-        className: `${N.Gt} ${a}`,
-        children: [(0, s.jsx)(o.E, { variant: "text-xs/medium", color: "text-muted", children: t }), l],
+        className: `${G.Gt} ${a}`,
+        children: [(0, s.jsx)(i.E, { variant: "text-xs/medium", color: "text-muted", children: t }), l],
     });
 }
-let O = {
+let N = {
     name: "Gaming Leaderboard",
     id: "guild-space-gaming-leaderboard",
     component: function (e) {
         let t,
             a,
-            { state: n, stat: r, currentUserPlacement: i } = e,
-            d = (0, f.bG)([w.default], () => w.default.getCurrentUser()?.id),
-            u = (0, f.bG)([x.Ay], () => x.Ay.getFlattenedGuildIds()[0]),
+            { state: n, stat: r, currentUserPlacement: o } = e,
+            d = (0, x.bG)([w.default], () => w.default.getCurrentUser()?.id),
+            u = (0, x.bG)([E.Ay], () => E.Ay.getFlattenedGuildIds()[0]),
             c =
-                ((t = (0, f.yK)([E.A], () => E.A.getFriendIDs())),
+                ((t = (0, x.yK)([S.A], () => S.A.getFriendIDs())),
                 l.useMemo(
                     () =>
                         t
@@ -280,7 +280,7 @@ let O = {
                     [t],
                 ));
         if (null == u || 0 === c.length)
-            return (0, s.jsx)(o.E, {
+            return (0, s.jsx)(i.E, {
                 variant: "text-sm/normal",
                 color: "text-muted",
                 children: "Waiting for the client to load a guild and your friends list\u2026",
@@ -288,20 +288,20 @@ let O = {
         let p = (function (e) {
                 let {
                         memberIds: t,
-                        gameIds: a = G,
-                        stat: s = m.RE.GAMING_LEADERBOARD_STAT_DAYS_PLAYED,
+                        gameIds: a = k,
+                        stat: s = _.RE.GAMING_LEADERBOARD_STAT_DAYS_PLAYED,
                         entryCount: l = T.length,
                         ended: n = !1,
                     } = e,
                     r = 0 === t.length ? [] : T.slice(0, l),
-                    o = Math.floor(Date.now() / 1e3);
+                    i = Math.floor(Date.now() / 1e3);
                 return {
                     stat: s,
-                    week_start_ts: o - (n ? 8 : 3) * I.A.Seconds.DAY,
-                    next_stat: m.RE.GAMING_LEADERBOARD_STAT_HOURS_PLAYED,
+                    week_start_ts: i - (n ? 8 : 3) * D.A.Seconds.DAY,
+                    next_stat: _.RE.GAMING_LEADERBOARD_STAT_HOURS_PLAYED,
                     previous_winner: t[0],
                     streak_count: 3,
-                    computed_at: new Date((o - I.A.Seconds.DAY) * 1e3).toISOString(),
+                    computed_at: new Date((i - D.A.Seconds.DAY) * 1e3).toISOString(),
                     entries: r.map((e, l) => {
                         let n;
                         return {
@@ -309,9 +309,9 @@ let O = {
                             name: n,
                             value: (function (e, t) {
                                 switch (t) {
-                                    case m.RE.GAMING_LEADERBOARD_STAT_DAYS_PLAYED:
+                                    case _.RE.GAMING_LEADERBOARD_STAT_DAYS_PLAYED:
                                         return e.days;
-                                    case m.RE.GAMING_LEADERBOARD_STAT_UNIQUE_GAMES_PLAYED:
+                                    case _.RE.GAMING_LEADERBOARD_STAT_UNIQUE_GAMES_PLAYED:
                                         return e.gameIndexes.length;
                                     default:
                                         return 1e3 * e.totalSeconds;
@@ -325,12 +325,12 @@ let O = {
                     }),
                 };
             })({ memberIds: c, stat: r, entryCount: "empty" === n ? 2 : 20, ended: "ended" === n }),
-            h = "on-podium" === i ? 2 : 12,
-            g = "absent" !== i && "outside-list" !== i && null != d,
-            _ = { ...p, entries: g ? p.entries.map((e) => (e.rank === h ? { ...e, user_id: d } : e)) : p.entries };
-        ("outside-list" === i &&
+            m = "on-podium" === o ? 2 : 12,
+            h = "absent" !== o && "outside-list" !== o && null != d,
+            g = { ...p, entries: h ? p.entries.map((e) => (e.rank === m ? { ...e, user_id: d } : e)) : p.entries };
+        ("outside-list" === o &&
             null != d &&
-            _.entries.push({
+            g.entries.push({
                 user_id: d,
                 name: "you",
                 value: p.entries[p.entries.length - 1].value,
@@ -344,13 +344,13 @@ let O = {
                     ? { status: "loading" }
                     : "error" === n
                       ? { status: "error" }
-                      : { status: "success", data: _ }));
-        let A = (0, s.jsx)(D.P, { guildId: u, widget: k, guildSpaceMode: "view", hydration: a });
+                      : { status: "success", data: g }));
+        let b = (0, s.jsx)(I.P, { guildId: u, widget: L, guildSpaceMode: "view", hydration: a });
         return (0, s.jsxs)("div", {
-            className: N.Zp,
+            className: G.Zp,
             children: [
-                (0, s.jsx)(L, { label: "Narrow column (380px)", className: N.sc, children: A }),
-                (0, s.jsx)(L, { label: "Wide column (685px)", className: N.U, children: A }),
+                (0, s.jsx)(P, { label: "Narrow column (380px)", className: G.sc, children: b }),
+                (0, s.jsx)(P, { label: "Wide column (685px)", className: G.U, children: b }),
             ],
         });
     },
@@ -370,11 +370,11 @@ let O = {
         stat: {
             label: "Stat",
             type: "select",
-            defaultValue: m.RE.GAMING_LEADERBOARD_STAT_DAYS_PLAYED,
+            defaultValue: _.RE.GAMING_LEADERBOARD_STAT_DAYS_PLAYED,
             options: [
-                { label: "Most Game Days", value: m.RE.GAMING_LEADERBOARD_STAT_DAYS_PLAYED },
-                { label: "Most Game Time", value: m.RE.GAMING_LEADERBOARD_STAT_HOURS_PLAYED },
-                { label: "Most Unique Games", value: m.RE.GAMING_LEADERBOARD_STAT_UNIQUE_GAMES_PLAYED },
+                { label: "Most Game Days", value: _.RE.GAMING_LEADERBOARD_STAT_DAYS_PLAYED },
+                { label: "Most Game Time", value: _.RE.GAMING_LEADERBOARD_STAT_HOURS_PLAYED },
+                { label: "Most Unique Games", value: _.RE.GAMING_LEADERBOARD_STAT_UNIQUE_GAMES_PLAYED },
             ],
         },
         currentUserPlacement: {
@@ -390,9 +390,10 @@ let O = {
         },
     },
 };
-var P = a(343508);
-let U = _("popular-music", p.a.POPULAR_MUSIC, 0, 0),
-    H = {
+var O = a(343508);
+let U = g("popular-music", p.a.POPULAR_MUSIC, 0, 0),
+    H = ["1330000000000000101", "1330000000000000102", "1330000000000000103"],
+    M = {
         ranked_songs: [
             {
                 track_external_id: "2plbrEY59IikOBgBGLjaoe",
@@ -402,6 +403,8 @@ let U = _("popular-music", p.a.POPULAR_MUSIC, 0, 0),
                 cover_art_hash: "ab67616d0000b273d2e5f0b0e0b0a0c0d0e0f001",
                 plays: 21,
                 unique_listeners: 8,
+                plays_change_percent: 2,
+                facepile_user_ids: H,
             },
             {
                 track_external_id: "4eCwFoinvpIQi1kBEoAzQO",
@@ -411,34 +414,97 @@ let U = _("popular-music", p.a.POPULAR_MUSIC, 0, 0),
                 cover_art_hash: "ab67616d0000b273d2e5f0b0e0b0a0c0d0e0f002",
                 plays: 17,
                 unique_listeners: 6,
+                plays_change_percent: -4,
+                facepile_user_ids: H,
+            },
+            {
+                track_external_id: "1BxfuPKGuaTgP7aM0Bbdwr",
+                track_title: "Cruel Summer",
+                artist_external_id: "06HL4z0CvFAxyc27GXpf02",
+                artist_name: "Taylor Swift",
+                cover_art_hash: "ab67616d0000b273d2e5f0b0e0b0a0c0d0e0f003",
+                plays: 14,
+                unique_listeners: 5,
+                facepile_user_ids: H,
+            },
+            {
+                track_external_id: "0V3wPSX9ygBnCm8psDIegu",
+                track_title: "Anti-Hero",
+                artist_external_id: "06HL4z0CvFAxyc27GXpf02",
+                artist_name: "Taylor Swift",
+                cover_art_hash: "ab67616d0000b273d2e5f0b0e0b0a0c0d0e0f004",
+                plays: 11,
+                unique_listeners: 5,
+                facepile_user_ids: null,
+            },
+            {
+                track_external_id: "3n3Ppam7vgaVa1iaRUc9Lp",
+                track_title: "Mr. Brightside",
+                artist_external_id: "0C0XlULifJtAgn6ZNCW2eu",
+                artist_name: "The Killers",
+                cover_art_hash: "ab67616d0000b273d2e5f0b0e0b0a0c0d0e0f005",
+                plays: 9,
+                unique_listeners: 4,
+                facepile_user_ids: H,
+            },
+            {
+                track_external_id: "2takcwOaAZWiXQijPHIx7B",
+                track_title: null,
+                artist_external_id: null,
+                artist_name: null,
+                cover_art_hash: null,
+                plays: 6,
+                unique_listeners: 2,
+                facepile_user_ids: null,
             },
         ],
         ranked_artists: [
             { artist_external_id: "1vCWHaC5f2uS3yhpwWbIA6", artist_name: "Dayseeker", plays: 38, unique_listeners: 11 },
         ],
         top_listeners: [{ user_id: "1330000000000000101", plays: 84 }],
+        summary: { listening_time_ms: 7704e4, listener_count: 14, plays_change_percent: 2 },
         computed_at: null,
-    };
-function M(e) {
+    },
+    j = {
+        ranked_songs: M.ranked_songs.map((e) => ({
+            track_external_id: e.track_external_id,
+            track_title: null,
+            artist_external_id: null,
+            artist_name: null,
+            cover_art_hash: null,
+            plays: e.plays,
+            unique_listeners: e.unique_listeners,
+        })),
+        ranked_artists: M.ranked_artists.map((e) => ({
+            artist_external_id: e.artist_external_id,
+            artist_name: null,
+            plays: e.plays,
+            unique_listeners: e.unique_listeners,
+        })),
+        top_listeners: M.top_listeners,
+        computed_at: null,
+    },
+    C = { ranked_songs: [], ranked_artists: [], top_listeners: [], computed_at: null };
+function B(e) {
     let { label: t, className: a, children: l } = e;
     return (0, s.jsxs)("div", {
-        className: `${P.Gt} ${a}`,
-        children: [(0, s.jsx)(o.E, { variant: "text-xs/medium", color: "text-muted", children: t }), l],
+        className: `${O.Gt} ${a}`,
+        children: [(0, s.jsx)(i.E, { variant: "text-xs/medium", color: "text-muted", children: t }), l],
     });
 }
-function j(e) {
+function Y(e) {
     let { label: t, className: a, children: l } = e;
     return (0, s.jsxs)("div", {
-        className: `${N.Gt} ${a}`,
-        children: [(0, s.jsx)(o.E, { variant: "text-xs/medium", color: "text-muted", children: t }), l],
+        className: `${G.Gt} ${a}`,
+        children: [(0, s.jsx)(i.E, { variant: "text-xs/medium", color: "text-muted", children: t }), l],
     });
 }
-function C(e) {
-    let { mode: t, hydration: a, type: n, initialConfig: r, successData: o } = e,
-        [i, d] = l.useState(r),
-        u = (0, s.jsx)(D.P, {
+function W(e) {
+    let { mode: t, hydration: a, type: n, initialConfig: r, successData: i } = e,
+        [o, d] = l.useState(r),
+        u = (0, s.jsx)(I.P, {
             guildId: "widget-slot-story-guild",
-            widget: { id: "1", type: n, config: i },
+            widget: { id: "1", type: n, config: o },
             guildSpaceMode: t,
             hydration: (function (e, t) {
                 switch (e) {
@@ -449,27 +515,27 @@ function C(e) {
                     default:
                         return { status: e };
                 }
-            })(a, o),
+            })(a, i),
             onRemove: () => {},
             onCommitConfig: d,
         });
     return (0, s.jsxs)("div", {
-        className: N.Zp,
+        className: G.Zp,
         children: [
-            (0, s.jsx)(j, { label: "Narrow column (380px)", className: N.sc, children: u }),
-            (0, s.jsx)(j, { label: "Wide column (685px)", className: N.U, children: u }),
+            (0, s.jsx)(Y, { label: "Narrow column (380px)", className: G.sc, children: u }),
+            (0, s.jsx)(Y, { label: "Wide column (685px)", className: G.U, children: u }),
         ],
     });
 }
-let Y = {
+let V = {
         text: "Drop in, say hi, and check the pinned posts for the rules and event schedule.",
         image_hash: "some_hash",
     },
-    B = {
+    q = {
         id: "guild-space",
         name: "Server Hub",
         groups: [
-            S,
+            f,
             u,
             {
                 title: "Server Hub Widget Framework",
@@ -479,11 +545,11 @@ let Y = {
                         id: "guild-space-widget-slot-image-text",
                         docs: "ImageText reference widget (no hydration) across view/edit and each mock hydration state. In edit mode the pencil opens the framework-owned Edit modal; Save commits config through onCommitConfig, Cancel/close discards.",
                         component: function (e) {
-                            return (0, s.jsx)(C, {
+                            return (0, s.jsx)(W, {
                                 ...e,
                                 type: p.a.IMAGE_TEXT,
                                 title: "Image + Text",
-                                initialConfig: Y,
+                                initialConfig: V,
                                 successData: void 0,
                             });
                         },
@@ -513,20 +579,24 @@ let Y = {
                     },
                 ],
             },
-            { title: "Server Hub Gaming Leaderboard", stories: [O] },
+            { title: "Server Hub Gaming Leaderboard", stories: [N] },
             {
                 title: "Server Hub Popular Music",
                 stories: [
                     {
                         name: "Popular Music",
                         id: "guild-space-popular-music",
-                        docs: "Shows the Popular Music widget shell at wide, narrow, and minimum widths across populated, loading, and error states.",
+                        docs: "Shows the Popular Music widget at wide, narrow, and minimum widths across populated, minimal, empty, loading, and error states.",
                         component: function (e) {
                             let { state: t, mode: a } = e,
                                 l = (function (e) {
                                     switch (e) {
                                         case "populated":
-                                            return { status: "success", data: H };
+                                            return { status: "success", data: M };
+                                        case "minimal":
+                                            return { status: "success", data: j };
+                                        case "empty":
+                                            return { status: "success", data: C };
                                         case "loading":
                                             return { status: "loading" };
                                         case "error":
@@ -535,7 +605,7 @@ let Y = {
                                 })(t);
                             function n(e) {
                                 return (0, s.jsx)(
-                                    D.P,
+                                    I.P,
                                     {
                                         guildId: "popular-music-story-guild",
                                         widget: { ...U, id: `${U.id}-${e}` },
@@ -547,21 +617,21 @@ let Y = {
                                 );
                             }
                             return (0, s.jsxs)("div", {
-                                className: P.Zp,
+                                className: O.Zp,
                                 children: [
-                                    (0, s.jsx)(M, {
+                                    (0, s.jsx)(B, {
                                         label: "Wide column (685px)",
-                                        className: P.U,
+                                        className: O.U,
                                         children: n("wide"),
                                     }),
-                                    (0, s.jsx)(M, {
+                                    (0, s.jsx)(B, {
                                         label: "Narrow column (380px)",
-                                        className: P.sc,
+                                        className: O.sc,
                                         children: n("narrow"),
                                     }),
-                                    (0, s.jsx)(M, {
+                                    (0, s.jsx)(B, {
                                         label: "Minimum width (320px)",
-                                        className: P.Bp,
+                                        className: O.Bp,
                                         children: n("minimum"),
                                     }),
                                 ],
@@ -574,6 +644,8 @@ let Y = {
                                 defaultValue: "populated",
                                 options: [
                                     { label: "Populated", value: "populated" },
+                                    { label: "Minimal", value: "minimal" },
+                                    { label: "Empty", value: "empty" },
                                     { label: "Loading", value: "loading" },
                                     { label: "Error", value: "error" },
                                 ],
@@ -594,4 +666,4 @@ let Y = {
         ],
         tags: ["Server Hub", "Widgets", "GuildSpace", "Publish", "Leaderboard", "Popular Music"],
     },
-    W = { playgroundBaseUrl: "guild-space", collections: [B] };
+    F = { playgroundBaseUrl: "guild-space", collections: [q] };

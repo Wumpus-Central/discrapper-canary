@@ -50,6 +50,7 @@ let f = Object.freeze({
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "desktop";
         return `https://open.spotify.com/${encodeURIComponent(e)}/${encodeURIComponent(t)}${I(n)}`;
     },
+    IMAGE: (e) => `https://i.scdn.co/image/${encodeURIComponent(e)}`,
     EMBED: function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "desktop";
         return `https://open.spotify.com/embed${e}${I(t)}`;

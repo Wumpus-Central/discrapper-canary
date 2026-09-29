@@ -73,20 +73,21 @@ let E = function (e) {
             scrollStep: _ = "page",
             className: q,
             itemClassName: Z,
-            iconButtonSize: B,
-            "aria-label": D,
-            maintainFocusOnReorder: Q = !1,
-            disableFocusRingScope: X = !1,
+            actionsClassName: B,
+            iconButtonSize: D,
+            "aria-label": Q,
+            maintainFocusOnReorder: X = !1,
+            disableFocusRingScope: Y = !1,
         } = e,
-        Y = `${n.useId()}hscroll`,
-        J = n.useRef(0),
-        U = n.useRef(null),
+        J = `${n.useId()}hscroll`,
+        U = n.useRef(0),
+        V = n.useRef(null),
         {
-            containerRef: V,
-            showActions: ee,
-            canScrollLeft: et,
-            canScrollRight: er,
-            updateActionState: el,
+            containerRef: ee,
+            showActions: et,
+            canScrollLeft: er,
+            canScrollRight: el,
+            updateActionState: en,
         } = (function (e, t) {
             let r = n.useRef(0),
                 l = n.useRef(0),
@@ -131,22 +132,22 @@ let E = function (e) {
                 }, [e, t, d]),
                 { containerRef: f, showActions: i, canScrollLeft: s, canScrollRight: u, updateActionState: d }
             );
-        })(U, J),
+        })(V, U),
         {
-            onClickScrollLeft: en,
-            onClickScrollRight: ei,
-            onScroll: ec,
-            listNavigator: es,
+            onClickScrollLeft: ei,
+            onClickScrollRight: ec,
+            onScroll: es,
+            listNavigator: ea,
         } = ((t = (0, L.bG)([y.Ay], () => y.Ay.useReducedMotion) ? "auto" : "smooth"),
         (r = (0, L.bG)([y.Ay], () => y.Ay.keyboardModeEnabled)),
         (i = n.useRef(!1)),
         (E = n.useRef(0)),
         (j = n.useCallback(
             (e) => {
-                let r = U.current;
+                let r = V.current;
                 return null == r || r.scrollLeft === e
                     ? Promise.resolve()
-                    : ((J.current = e),
+                    : ((U.current = e),
                       (i.current = !0),
                       new Promise((l) => {
                           let n = !1;
@@ -154,32 +155,32 @@ let E = function (e) {
                               n ||
                                   ((n = !0),
                                   clearTimeout(s),
-                                  U.current?.removeEventListener("scrollend", c),
+                                  V.current?.removeEventListener("scrollend", c),
                                   (i.current = !1),
                                   l());
                           }
                           let s = setTimeout(c, 1e3);
                           (r.addEventListener("scrollend", c, { once: !0 }),
                               r.scrollTo({ left: e, behavior: t }),
-                              el());
+                              en());
                       }));
             },
-            [t, el, U, J],
+            [t, en, V, U],
         )),
         (S = n.useCallback(() => j(0), [j])),
         (A = n.useCallback(() => {
-            let e = U.current;
+            let e = V.current;
             return j(null == e ? 0 : Math.max(0, e.scrollWidth - e.clientWidth));
-        }, [j, U])),
+        }, [j, V])),
         (R = n.useCallback(
             (e) => {
-                i.current || ((J.current = e.target.scrollLeft), el());
+                i.current || ((U.current = e.target.scrollLeft), en());
             },
-            [el, J],
+            [en, U],
         )),
         (w = n.useCallback(
             (e, t) => {
-                let r = U.current,
+                let r = V.current,
                     l = document.querySelector(e);
                 if (null == r || null == l) return;
                 let n = ++E.current,
@@ -187,7 +188,7 @@ let E = function (e) {
                     c = r.children[i];
                 if (null == c) return void l.focus({ preventScroll: !0 });
                 let s = Math.max(0, r.scrollWidth - r.clientWidth),
-                    a = J.current,
+                    a = U.current,
                     u = a + r.clientWidth,
                     o = c.offsetLeft,
                     d = o + c.offsetWidth,
@@ -212,10 +213,10 @@ let E = function (e) {
                       })
                     : l.focus({ preventScroll: !0 });
             },
-            [j, _, U, J],
+            [j, _, V, U],
         )),
         (N = (0, b.Ay)({
-            id: Y,
+            id: J,
             isEnabled: r,
             orientation: x.Gl.HORIZONTAL,
             defaultFocused: "0",
@@ -244,20 +245,20 @@ let E = function (e) {
         )),
         (H = n.useCallback(
             (e) => {
-                let t = U.current;
+                let t = V.current;
                 if (null == t) return;
                 let r = "left" === e ? -1 : 1;
                 if ("item" === _) {
-                    let { index: l, isPartiallyHidden: n } = M("left", t, J.current, 16),
+                    let { index: l, isPartiallyHidden: n } = M("left", t, U.current, 16),
                         i = "left" === e && n ? l : Math.max(0, Math.min(t.childElementCount - 1, l + r));
                     F(t, i, "start", r);
                 } else {
-                    let { index: l, isPartiallyHidden: n } = M(e, t, J.current, 16),
+                    let { index: l, isPartiallyHidden: n } = M(e, t, U.current, 16),
                         i = n ? l : Math.max(0, Math.min(t.childElementCount - 1, l + r));
                     F(t, i, "left" === e ? "end" : "start", r);
                 }
             },
-            [_, F, U, J],
+            [_, F, V, U],
         )),
         (I = n.useCallback(() => H("left"), [H])),
         (P = n.useCallback(() => H("right"), [H])),
@@ -267,8 +268,8 @@ let E = function (e) {
             onScroll: R,
             listNavigator: N,
         }),
-        { ref: ea, ...eu } = (0, s.LT)(es),
-        eo = (0, a.A)(U, ea);
+        { ref: eu, ...eo } = (0, s.LT)(ea),
+        ed = (0, a.A)(V, eu);
     !(function (e) {
         let {
                 items: t,
@@ -294,14 +295,14 @@ let E = function (e) {
         }, [t, c, s, r, l, u, a]);
     })({
         items: G,
-        scrollerRef: U,
-        expectedScrollEndRef: J,
-        listNavigator: es,
-        listId: Y,
-        containerRef: V,
-        enabled: Q,
+        scrollerRef: V,
+        expectedScrollEndRef: U,
+        listNavigator: ea,
+        listId: J,
+        containerRef: ee,
+        enabled: X,
     });
-    let ed = n.useMemo(
+    let ef = n.useMemo(
             () =>
                 G.map((e, t) =>
                     (0, l.jsx)(
@@ -322,62 +323,62 @@ let E = function (e) {
                 ),
             [G, T, O, Z],
         ),
-        ef = { "--custom-edge-fade-width": `var(--space-${$})` };
+        eh = { "--custom-edge-fade-width": `var(--space-${$})` };
     return (0, l.jsxs)("div", {
-        ref: V,
-        role: null != D ? "region" : void 0,
-        "aria-label": D,
-        style: ef,
+        ref: ee,
+        role: null != Q ? "region" : void 0,
+        "aria-label": Q,
+        style: eh,
         className: c()(p.kL, q),
         children: [
-            ee &&
+            et &&
                 (0, l.jsxs)("div", {
-                    className: p.o1,
+                    className: c()(p.o1, B),
                     role: "group",
                     children: [
                         (0, l.jsx)("div", {
-                            className: c()(p.x6, { [p.r9]: !et }),
-                            children: (0, l.jsx)(u.K, {
-                                icon: o.Z,
-                                size: B,
-                                variant: "overlay-secondary",
-                                onClick: en,
-                                disabled: !et,
-                                "aria-label": g.intl.string(g.t.FQx1Ru),
-                                "aria-hidden": !et,
-                                "aria-controls": Y,
-                            }),
-                        }),
-                        (0, l.jsx)("div", {
                             className: c()(p.x6, { [p.r9]: !er }),
                             children: (0, l.jsx)(u.K, {
-                                icon: d.K,
-                                size: B,
+                                icon: o.Z,
+                                size: D,
                                 variant: "overlay-secondary",
                                 onClick: ei,
                                 disabled: !er,
-                                "aria-label": g.intl.string(g.t.H4hwjn),
+                                "aria-label": g.intl.string(g.t.FQx1Ru),
                                 "aria-hidden": !er,
-                                "aria-controls": Y,
+                                "aria-controls": J,
+                            }),
+                        }),
+                        (0, l.jsx)("div", {
+                            className: c()(p.x6, { [p.r9]: !el }),
+                            children: (0, l.jsx)(u.K, {
+                                icon: d.K,
+                                size: D,
+                                variant: "overlay-secondary",
+                                onClick: ec,
+                                disabled: !el,
+                                "aria-label": g.intl.string(g.t.H4hwjn),
+                                "aria-hidden": !el,
+                                "aria-controls": J,
                             }),
                         }),
                     ],
                 }),
             (0, l.jsx)(s.hD, {
-                navigator: es,
+                navigator: ea,
                 children:
                     ((z = (0, l.jsx)(f.B, {
                         direction: "horizontal",
                         gap: K,
-                        id: Y,
-                        "aria-label": D,
-                        ref: eo,
-                        className: c()(p.Y_, { [p.jL]: et, [p.w6]: er, [p.XG]: et && er }),
-                        ...eu,
-                        onScroll: ec,
-                        children: ed,
+                        id: J,
+                        "aria-label": Q,
+                        ref: ed,
+                        className: c()(p.Y_, { [p.jL]: er, [p.w6]: el, [p.XG]: er && el }),
+                        ...eo,
+                        onScroll: es,
+                        children: ef,
                     })),
-                    X ? z : (0, l.jsx)(h.xp, { containerRef: V, children: z })),
+                    Y ? z : (0, l.jsx)(h.xp, { containerRef: ee, children: z })),
             }),
         ],
     });

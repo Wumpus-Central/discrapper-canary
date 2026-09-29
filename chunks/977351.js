@@ -348,8 +348,8 @@ let K = "playground-announcement-modal",
                                     n.e("545749"),
                                     n.e("896137"),
                                     n.e("979630"),
-                                    n.e("3131"),
                                     n.e("918024"),
+                                    n.e("3131"),
                                     n.e("220287"),
                                     n.e("647177"),
                                     n.e("165211"),
@@ -363,7 +363,8 @@ let K = "playground-announcement-modal",
                                     n.e("68532"),
                                     n.e("20382"),
                                     n.e("273165"),
-                                    n.e("851957"),
+                                    n.e("365074"),
+                                    n.e("734268"),
                                     n.e("963333"),
                                     n.e("954372"),
                                 ]).then(n.bind(n, 103407));
@@ -913,13 +914,13 @@ async function e5(e) {
     }
     return n;
 }
-let e9 = [
+let e4 = [
     { type: "marketing_moment", label: "Marketing Moments" },
     { type: "gift", label: "Gift Promotions" },
 ];
-function e4(e) {
+function e9(e) {
     let t = [];
-    for (let n of e9) {
+    for (let n of e4) {
         let o = e.filter((e) => e.type === n.type);
         if (0 !== o.length)
             for (let e of (t.push({ id: `header-${n.type}`, value: `header-${n.type}`, label: n.label, disabled: !0 }),
@@ -1807,8 +1808,8 @@ let ta = {
                     }
                 );
             }, []);
-            let l = i.useMemo(() => e4(t), [t]),
-                a = i.useCallback((e, n) => e4((0, e7.Ht)(t, n, { keys: ["name"] })), [t]);
+            let l = i.useMemo(() => e9(t), [t]),
+                a = i.useCallback((e, n) => e9((0, e7.Ht)(t, n, { keys: ["name"] })), [t]);
             return 0 === t.length
                 ? null
                 : (0, p.jsx)("div", {

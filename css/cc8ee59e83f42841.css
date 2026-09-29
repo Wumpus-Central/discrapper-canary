@@ -138,6 +138,12 @@
     text-align: center
 }
 
+.heading__684c5,
+.trigger__684c5 {
+    display: flex;
+    min-width: 0
+}
+
 .trigger__684c5 {
     align-items: center;
     -webkit-appearance: none;
@@ -146,9 +152,7 @@
     background: none;
     border: 0;
     cursor: pointer;
-    display: flex;
     gap: var(--space-6);
-    min-width: 0;
     padding: 0
 }
 
@@ -170,4 +174,4 @@
     white-space: nowrap
 }
 
-/*# sourceMappingURL=0cbd4a2fc67ce1ac.css.map*/
+/*# sourceMappingURL=cc8ee59e83f42841.css.map*/
