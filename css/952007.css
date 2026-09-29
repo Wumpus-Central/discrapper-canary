@@ -845,8 +845,8 @@
     --control-overlay-primary-text-active: var(--neutral-100);
     --control-overlay-primary-text-default: var(--neutral-100);
     --control-overlay-primary-text-hover: var(--neutral-100);
-    --control-overlay-secondary-background-active: hsl(var(--opacity-black-48-hsl)/0.47843137254901963);
-    --control-overlay-secondary-background-default: hsl(var(--opacity-black-52-hsl)/0.5215686274509804);
+    --control-overlay-secondary-background-active: hsl(var(--opacity-black-56-hsl)/0.5607843137254902);
+    --control-overlay-secondary-background-default: hsl(var(--opacity-black-56-hsl)/0.5607843137254902);
     --control-overlay-secondary-background-hover: hsl(var(--opacity-black-64-hsl)/0.6392156862745098);
     --control-overlay-secondary-border-active: hsl(var(--opacity-4-hsl)/0.0392156862745098);
     --control-overlay-secondary-border-default: hsl(var(--opacity-4-hsl)/0.0392156862745098);
@@ -1824,8 +1824,8 @@
     --control-overlay-primary-text-active: var(--neutral-100);
     --control-overlay-primary-text-default: var(--neutral-100);
     --control-overlay-primary-text-hover: var(--neutral-100);
-    --control-overlay-secondary-background-active: hsl(var(--opacity-black-48-hsl)/0.47843137254901963);
-    --control-overlay-secondary-background-default: hsl(var(--opacity-black-52-hsl)/0.5215686274509804);
+    --control-overlay-secondary-background-active: hsl(var(--opacity-black-56-hsl)/0.5607843137254902);
+    --control-overlay-secondary-background-default: hsl(var(--opacity-black-56-hsl)/0.5607843137254902);
     --control-overlay-secondary-background-hover: hsl(var(--opacity-black-64-hsl)/0.6392156862745098);
     --control-overlay-secondary-border-active: hsl(var(--opacity-20-hsl)/0.2);
     --control-overlay-secondary-border-default: hsl(var(--opacity-20-hsl)/0.2);
@@ -2803,8 +2803,8 @@
     --control-overlay-primary-text-active: var(--neutral-100);
     --control-overlay-primary-text-default: var(--neutral-100);
     --control-overlay-primary-text-hover: var(--neutral-100);
-    --control-overlay-secondary-background-active: hsl(var(--opacity-black-48-hsl)/0.47843137254901963);
-    --control-overlay-secondary-background-default: hsl(var(--opacity-black-52-hsl)/0.5215686274509804);
+    --control-overlay-secondary-background-active: hsl(var(--opacity-black-56-hsl)/0.5607843137254902);
+    --control-overlay-secondary-background-default: hsl(var(--opacity-black-56-hsl)/0.5607843137254902);
     --control-overlay-secondary-background-hover: hsl(var(--opacity-black-64-hsl)/0.6392156862745098);
     --control-overlay-secondary-border-active: hsl(var(--opacity-16-hsl)/0.1607843137254902);
     --control-overlay-secondary-border-default: hsl(var(--opacity-16-hsl)/0.1607843137254902);
@@ -3782,8 +3782,8 @@
     --control-overlay-primary-text-active: var(--neutral-100);
     --control-overlay-primary-text-default: var(--neutral-100);
     --control-overlay-primary-text-hover: var(--neutral-100);
-    --control-overlay-secondary-background-active: hsl(var(--opacity-black-48-hsl)/0.47843137254901963);
-    --control-overlay-secondary-background-default: hsl(var(--opacity-black-52-hsl)/0.5215686274509804);
+    --control-overlay-secondary-background-active: hsl(var(--opacity-black-56-hsl)/0.5607843137254902);
+    --control-overlay-secondary-background-default: hsl(var(--opacity-black-56-hsl)/0.5607843137254902);
     --control-overlay-secondary-background-hover: hsl(var(--opacity-black-64-hsl)/0.6392156862745098);
     --control-overlay-secondary-border-active: hsl(var(--opacity-4-hsl)/0.0392156862745098);
     --control-overlay-secondary-border-default: hsl(var(--opacity-4-hsl)/0.0392156862745098);
@@ -10327,4 +10327,4 @@
     --motion-spring-subtle-duration: 598ms
 }
 
-/*# sourceMappingURL=952007.753abd23cc85fa72.css.map*/
+/*# sourceMappingURL=952007.3cae7334a43e71b3.css.map*/
