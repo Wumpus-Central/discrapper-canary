@@ -223,22 +223,39 @@
 }
 
 .orbChallengesCardEmptyContent__81c60 {
-    flex-direction: column;
+    justify-content: center;
     row-gap: var(--space-4)
 }
 
 .orbChallengesCardEmptyContent__81c60,
-.orbWalletFooter__81c60 {
+.orbWalletFooterSection__81c60 {
     align-items: center;
     align-self: stretch;
     display: flex;
-    justify-content: center
+    flex-direction: column
+}
+
+.orbWalletFooterSection__81c60 {
+    row-gap: var(--space-16)
 }
 
 .orbWalletFooter__81c60 {
+    align-self: stretch;
     -moz-column-gap: var(--space-12);
     column-gap: var(--space-12);
+    justify-content: center
+}
+
+.orbWalletFooter__81c60,
+.orbWalletLifetimeRedeemed__81c60 {
+    align-items: center;
+    display: flex;
     flex-direction: row
+}
+
+.orbWalletLifetimeRedeemed__81c60 {
+    -moz-column-gap: var(--space-4);
+    column-gap: var(--space-4)
 }
 
 @keyframes orbSkeletonPulse__81c60 {
@@ -319,4 +336,4 @@
     white-space: nowrap
 }
 
-/*# sourceMappingURL=40271.01192a82e8fdbd99.css.map*/
+/*# sourceMappingURL=40271.0d823abc0fa21670.css.map*/

@@ -1,7 +1,7 @@
-r.d(t, { A: () => l });
+r.d(t, { A: () => i });
 var n = r(17928),
     a = r(228366);
-class i extends n.Ay.Store {
+class l extends n.Ay.Store {
     static displayName = "VirtualCurrencyStore";
     _entitlements = null;
     _redeemingSkuId = null;
@@ -10,6 +10,9 @@ class i extends n.Ay.Store {
     _balance = null;
     _fetchBalanceError = null;
     _isFetchingBalance = !1;
+    _totalRedeemed = null;
+    _fetchTotalRedeemedError = null;
+    _isFetchingTotalRedeemed = !1;
     _onboardingModalOpenedPrior = !1;
     _balancePillOverlay = !1;
     constructor() {
@@ -21,6 +24,9 @@ class i extends n.Ay.Store {
             VIRTUAL_CURRENCY_BALANCE_FETCH_SUCCESS: (e) => this.handleBalanceFetchSuccess(e),
             VIRTUAL_CURRENCY_BALANCE_FETCH_FAIL: (e) => this.handleBalanceFetchFail(e),
             VIRTUAL_CURRENCY_BALANCE_UPDATE: (e) => this.handleBalanceUpdate(e),
+            VIRTUAL_CURRENCY_TOTAL_REDEEMED_FETCH: (e) => this.handleTotalRedeemedFetch(e),
+            VIRTUAL_CURRENCY_TOTAL_REDEEMED_FETCH_SUCCESS: (e) => this.handleTotalRedeemedFetchSuccess(e),
+            VIRTUAL_CURRENCY_TOTAL_REDEEMED_FETCH_FAIL: (e) => this.handleTotalRedeemedFetchFail(e),
             VIRTUAL_CURRENCY_ONBOARDING_MODAL_OPEN: (e) => this.handleOnboardingModalOpen(e),
             VIRTUAL_CURRENCY_ONBOARDING_MODAL_RESET: (e) => this.handleOnboardingModalReset(e),
             LOGIN_SUCCESS: () => this.handleBalanceStateReset(),
@@ -50,6 +56,15 @@ class i extends n.Ay.Store {
     get isFetchingBalance() {
         return this._isFetchingBalance;
     }
+    get totalRedeemed() {
+        return this._totalRedeemed;
+    }
+    get fetchTotalRedeemedError() {
+        return this._fetchTotalRedeemedError;
+    }
+    get isFetchingTotalRedeemed() {
+        return this._isFetchingTotalRedeemed;
+    }
     get onboardingModalOpenedPrior() {
         return this._onboardingModalOpenedPrior;
     }
@@ -63,7 +78,12 @@ class i extends n.Ay.Store {
         return this.balance;
     }
     handleBalanceStateReset() {
-        ((this._balance = null), (this._fetchBalanceError = null), (this._isFetchingBalance = !1));
+        ((this._balance = null),
+            (this._fetchBalanceError = null),
+            (this._isFetchingBalance = !1),
+            (this._totalRedeemed = null),
+            (this._fetchTotalRedeemedError = null),
+            (this._isFetchingTotalRedeemed = !1));
     }
     handleBalanceFetch(e) {
         let {} = e;
@@ -78,8 +98,20 @@ class i extends n.Ay.Store {
         ((this._isFetchingBalance = !1), (this._fetchBalanceError = t));
     }
     handleBalanceUpdate(e) {
-        let { balance: t } = e;
-        this._balance = t;
+        let { balance: t, totalRedeemed: r } = e;
+        ((this._balance = t), null != r && (this._totalRedeemed = r));
+    }
+    handleTotalRedeemedFetch(e) {
+        let {} = e;
+        ((this._isFetchingTotalRedeemed = !0), (this._fetchTotalRedeemedError = null));
+    }
+    handleTotalRedeemedFetchSuccess(e) {
+        let { totalRedeemed: t } = e;
+        ((this._isFetchingTotalRedeemed = !1), (this._totalRedeemed = t), (this._fetchTotalRedeemedError = null));
+    }
+    handleTotalRedeemedFetchFail(e) {
+        let { error: t } = e;
+        ((this._isFetchingTotalRedeemed = !1), (this._fetchTotalRedeemedError = t));
     }
     handleRedeemVirtualCurrencyStart(e) {
         let { skuId: t } = e;
@@ -108,4 +140,4 @@ class i extends n.Ay.Store {
         this._onboardingModalOpenedPrior = !1;
     }
 }
-let l = new i();
+let i = new l();

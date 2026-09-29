@@ -1926,7 +1926,7 @@ function eq(e) {
         eW({ type: "CONTENT_INVENTORY_INBOX_STALE", refreshAfterMs: e.refresh_after_ms });
     }),
     eV(["VIRTUAL_CURRENCY_BALANCE_UPDATE"], (e) => {
-        eW({ type: "VIRTUAL_CURRENCY_BALANCE_UPDATE", balance: e.balance });
+        eW({ type: "VIRTUAL_CURRENCY_BALANCE_UPDATE", balance: e.balance, totalRedeemed: e.total_redeemed });
     }),
     eV(["USER_DISCORD_ACHIEVEMENT_STATE_UPDATE"], (e) => {
         eW({ type: "USER_DISCORD_ACHIEVEMENT_STATE_UPDATE", payload: e });

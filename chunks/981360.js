@@ -770,7 +770,7 @@ var te = n(462887),
     tl = n(44120),
     ta = n(465794),
     tc = n(757036),
-    td = n(761705),
+    td = n(478996),
     to = n(580630),
     tu = n(4227),
     tm = n(466459),
@@ -1080,7 +1080,7 @@ function tW(e) {
         }),
         Q = r.useMemo(() => (0, _.fT)(i, j, q[0]?.currency), [i, j, q]),
         et = r.useMemo(() => q.some((e) => e.currency === tb.Yr.DISCORD_ORB), [q]);
-    (0, td.W)({ disableFetch: !et });
+    (0, td.W0)({ disableFetch: !et });
     let en = r.useCallback(() => {
         (g(ee.sH.BUY_WITH_FIAT),
             (0, tl.A)({

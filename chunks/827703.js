@@ -408,7 +408,7 @@ var es = l(488428),
     eO = l(194509),
     eL = l(511484),
     eV = l(794400),
-    eU = l(761705),
+    eU = l(478996),
     ew = l(71393),
     eB = l(166403),
     eG = l(202541),
@@ -492,8 +492,8 @@ let ez = {
                     { analyticsLocations: C } = (0, p.Ay)(c.A.PAYMENT_FLOW_TEST_PAGE),
                     [T, A] = u.useState(""),
                     [I, _] = u.useState(N.dJq),
-                    { balance: P, isFetching: k, error: R } = (0, eU.W)(),
-                    { isSubmitting: M, responseMessage: D, redeemVirtualCurrency: O } = (0, eU.Q)(),
+                    { balance: P, isFetching: k, error: R } = (0, eU.W0)(),
+                    { isSubmitting: M, responseMessage: D, redeemVirtualCurrency: O } = (0, eU.Qr)(),
                     [L, U] = u.useState(N.dJq),
                     [w, B] = u.useState(""),
                     [G, H] = u.useState(N.dJq);
@@ -1084,7 +1084,7 @@ let e6 = { isGift: { label: "Is Gift", type: "boolean", defaultValue: !1 } },
             ...e6,
         },
     },
-    e7 = {
+    e9 = {
         name: "Premium Review Step",
         id: "premium-checkout-review-step",
         component: (e) => {
@@ -1150,7 +1150,7 @@ let e6 = { isGift: { label: "Is Gift", type: "boolean", defaultValue: !1 } },
             ...e6,
         },
     };
-var e9 = l(993077),
+var e7 = l(993077),
     e5 = l(939249),
     te = l(658675),
     tt = l(478531),
@@ -1195,9 +1195,9 @@ let ts = {
                         parentTransitionState: g.ip.ENTERED,
                     }),
                 }),
-                (0, s.jsxs)(e9.Z, {
+                (0, s.jsxs)(e7.Z, {
                     className: to.nd,
-                    type: e9.s.PRIMARY,
+                    type: e7.s.PRIMARY,
                     style: { width: m },
                     children: [
                         (0, s.jsxs)("div", {
@@ -1536,7 +1536,7 @@ let tw = { name: "Expressive Progress", component: tE.A, id: "expressive-progres
                                 glowAmount: e.glowAmount,
                                 blurAmount: e.blurAmount,
                                 hueRotate: e.hueRotate,
-                                cardType: e9.s.PRIMARY,
+                                cardType: e7.s.PRIMARY,
                                 glowing: !0,
                                 children: (0, s.jsxs)("div", {
                                     style: { padding: 16, display: "flex", flexDirection: "column", gap: 8 },
@@ -2238,11 +2238,11 @@ let t4 = [
             body: "Show off your style with a custom nameplate, available with Nitro.",
         },
     },
-    t7 = [
+    t9 = [
         { id: "near_limit", label: "Near Limit (99 guilds)", value: 99 },
         { id: "at_limit", label: "At Limit (100 guilds)", value: N.qlD },
     ],
-    t9 = [
+    t7 = [
         { id: "avatar", label: "Avatar", value: t6.HL.AVATAR },
         { id: "banner", label: "Banner", value: t6.HL.BANNER },
     ];
@@ -2312,6 +2312,7 @@ let li = {
                 orbBalance: { label: "Balance", type: "number", defaultValue: 4240 },
                 hasErrorMessage: { label: "Has Error Message", type: "boolean", defaultValue: !1 },
                 isLoading: { label: "Is Loading", type: "boolean", defaultValue: !1 },
+                totalOrbsRedeemed: { label: "Total Orbs Redeemed", type: "number", defaultValue: 15600 },
             },
         },
         { name: "User (Stateful) Orb Wallet", id: "orb-wallet-stateful", component: () => (0, s.jsx)(la.vG, {}) },
@@ -3258,8 +3259,8 @@ let l8 = {
     ],
 };
 l(321073);
-var l7 = l(96337),
-    l9 = l(997101),
+var l9 = l(96337),
+    l7 = l(997101),
     l5 = l(597770),
     ae = l(278416),
     at = l(169797),
@@ -3458,7 +3459,7 @@ let an = {
         },
     },
     ar = { "nitro-wheel": r.t, gift: l5.GiftIcon, orbs: i.C },
-    ao = l7.A.map((e) => ({ id: e.alpha2, value: e.alpha2, label: e.name })),
+    ao = l9.A.map((e) => ({ id: e.alpha2, value: e.alpha2, label: e.name })),
     as = {
         name: "Modal: Unified Checkout Stateless Modal",
         id: "unified-checkout-stateless-modal",
@@ -3518,7 +3519,7 @@ let an = {
                     { label: "None", value: "none" },
                 ],
             },
-            countryCode: { label: "Country Code", type: "select", defaultValue: l9.d.US, options: ao },
+            countryCode: { label: "Country Code", type: "select", defaultValue: l7.d.US, options: ao },
             headerBadgeText: { label: "Header Pill Text", type: "text", defaultValue: "PROMO" },
             headerBadgeHasIcon: { label: "Header Badge Has Icon", type: "boolean", defaultValue: !1 },
             gradientColor: {
@@ -3782,7 +3783,7 @@ let an = {
                     return (0, s.jsx)(al.s7, { storeCountry: t });
                 },
                 controls: {
-                    storeCountry: { label: "Store Country", type: "select", defaultValue: l9.d.US, options: ao },
+                    storeCountry: { label: "Store Country", type: "select", defaultValue: l7.d.US, options: ao },
                 },
             },
             {
@@ -3800,7 +3801,7 @@ let an = {
                     relocationCountry: {
                         label: "Relocation Country",
                         type: "select",
-                        defaultValue: l9.d.US,
+                        defaultValue: l7.d.US,
                         options: ao,
                     },
                     relocationCurrencyCode: { label: "Relocation Currency Code", type: "text", defaultValue: "USD" },
@@ -3941,7 +3942,7 @@ let aj = ["Revenue Storybook", "Revenue Playground"],
                     },
                 ],
             },
-            { title: "Checkout Review Step", stories: [e8, e7] },
+            { title: "Checkout Review Step", stories: [e8, e9] },
             {
                 title: "Miscellaneous",
                 stories: [
@@ -4344,7 +4345,7 @@ let aj = ["Revenue Storybook", "Revenue Playground"],
                                             placeholder: "Select state",
                                             onSelectionChange: (e) => t(e),
                                             value: e,
-                                            options: t7,
+                                            options: t9,
                                             selectionMode: "single",
                                             fullWidth: !0,
                                         }),
@@ -4383,7 +4384,7 @@ let aj = ["Revenue Storybook", "Revenue Playground"],
                                             placeholder: "Select type",
                                             onSelectionChange: (e) => t(e),
                                             value: e,
-                                            options: t9,
+                                            options: t7,
                                             selectionMode: "single",
                                             fullWidth: !0,
                                         }),
