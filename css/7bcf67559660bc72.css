@@ -1,5 +1,6 @@
 .row__79ea5 {
     border-radius: var(--radius-sm);
+    cursor: pointer;
     height: var(--custom-friend-row-height)
 }
 
@@ -2296,4 +2297,4 @@
     background-color: var(--background-mod-strong)
 }
 
-/*# sourceMappingURL=969ef6f069d858a0.css.map*/
+/*# sourceMappingURL=7bcf67559660bc72.css.map*/

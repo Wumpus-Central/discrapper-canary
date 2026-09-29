@@ -733,8 +733,11 @@
 }
 
 .accessoryMessageRow__72ffd:has(.userMessageButtonsShown__72ffd),
+.conjurMessage__72ffd:has(.userMessageButtonsShown__72ffd) .accessoryMessageRow__72ffd,
 .keyboard-mode .accessoryMessageRow__72ffd:focus-within,
-.mouse-mode.full-motion .accessoryMessageRow__72ffd:hover {
+.keyboard-mode .conjurMessage__72ffd:focus-within .accessoryMessageRow__72ffd,
+.mouse-mode.full-motion .accessoryMessageRow__72ffd:hover,
+.mouse-mode.full-motion .conjurMessage__72ffd:hover .accessoryMessageRow__72ffd {
     background: var(--message-background-hover)
 }
 
@@ -754,7 +757,9 @@
 
 .userMessageButtonsShown__72ffd,
 .keyboard-mode .accessoryMessageRow__72ffd:focus-within .userMessageButtons__72ffd,
-.mouse-mode .accessoryMessageRow__72ffd:hover .userMessageButtons__72ffd {
+.keyboard-mode .conjurMessage__72ffd:focus-within .userMessageButtons__72ffd,
+.mouse-mode .accessoryMessageRow__72ffd:hover .userMessageButtons__72ffd,
+.mouse-mode .conjurMessage__72ffd:hover .userMessageButtons__72ffd {
     opacity: 1;
     pointer-events: auto
 }
@@ -854,4 +859,4 @@
     display: inline
 }
 
-/*# sourceMappingURL=f0956b6320540d13.css.map*/
+/*# sourceMappingURL=2f4ff69232bdd622.css.map*/

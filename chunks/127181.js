@@ -690,6 +690,12 @@ let n = [
             "Reopening an app shows what Conjure is recalling while your conversation loads, and a brand new app greets you straight away.",
     },
     {
+        date: "2026-09-29",
+        time: "20:30",
+        platforms: ["desktop"],
+        summary: "Restore this version is in the More menu when you hover a Conjure reply, as well as on right-click.",
+    },
+    {
         date: "2026-09-25",
         time: "23:27",
         platforms: ["desktop"],
