@@ -48,11 +48,11 @@ function S(e) {
         }),
     });
 }
-function y() {
+function I() {
     let e = i.useMemo(() => [{ variant: "primary", text: f.intl.string(f.t.g8vPzy), disabled: !0 }], []);
     return (0, l.jsx)(C.H, { actions: e });
 }
-var I = n(636950);
+var y = n(636950);
 function g() {
     let [e, t] = i.useState(!1);
     async function n() {
@@ -61,8 +61,8 @@ function g() {
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsx)(s.A, {}),
-            (0, l.jsx)(o.dZ, { children: (0, l.jsx)(S, { className: I.r, isEmailResent: e, resendEmail: n }) }),
-            (0, l.jsx)(o.UX, { children: (0, l.jsx)(y, {}) }),
+            (0, l.jsx)(o.dZ, { children: (0, l.jsx)(S, { className: y.r, isEmailResent: e, resendEmail: n }) }),
+            (0, l.jsx)(o.UX, { children: (0, l.jsx)(I, {}) }),
         ],
     });
 }
@@ -157,10 +157,10 @@ function Z(e) {
         })),
         f = (0, x.Hp)(),
         E = (0, k.A)(),
-        { hasFetchedRelatedSubscriptionPlans: S, subscriptionPriceOptionsLoading: y } = (0, B.Jn)(),
-        { isGift: I } = (0, N.Pv)(),
-        g = (0, U.A)({ isGift: I, skuId: d }),
-        T = !E || !S || y || !c,
+        { hasFetchedRelatedSubscriptionPlans: S, subscriptionPriceOptionsLoading: I } = (0, B.Jn)(),
+        { isGift: y } = (0, N.Pv)(),
+        g = (0, U.A)({ isGift: y, skuId: d }),
+        T = !E || !S || I || !c,
         b = (0, A.bG)([D.A], () => D.A.applicationIdsFetched.has(V.tv));
     (0, v.A)(
         "Payment Modal",
@@ -169,7 +169,7 @@ function Z(e) {
         {
             hasFetchedSubscriptions: E,
             hasFetchedSubscriptionPlans: S,
-            subscriptionPriceOptionsLoading: y,
+            subscriptionPriceOptionsLoading: I,
             hasFetchedPaymentSources: c,
         },
         { tags: { app_context: "billing" } },
@@ -192,7 +192,7 @@ function Z(e) {
                               ? a(r.pn.PLAN_SELECT)
                               : a(r.pn.SKU_SELECT)
                     : a(r.pn.ADD_PAYMENT_STEPS, { emitPaymentFlowLoadedEvent: !0, trackedFromStep: s })));
-    }, [C, s, o, p, f, b, n, T, a, t, d, m, g, h, I, j, u]),
+    }, [C, s, o, p, f, b, n, T, a, t, d, m, g, h, y, j, u]),
     T)
         ? (0, l.jsx)(L.A, {})
         : f

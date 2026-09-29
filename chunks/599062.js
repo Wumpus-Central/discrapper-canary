@@ -22,13 +22,13 @@ let E = function (e) {
             return e?.isStaff() || e?.isStaffPersonal();
         }),
         S = 1 === n ? p.tV : p.Df,
-        y = 1 === n ? m.intl.string(m.t["+2QBZX"]) : m.intl.string(m.t.LuhKs2);
+        I = 1 === n ? m.intl.string(m.t["+2QBZX"]) : m.intl.string(m.t.LuhKs2);
     return (0, i.jsxs)("div", {
         className: S,
         children: [
             (0, i.jsx)("img", { className: p.__invalid_loadIssueImg, src: (0, a.M)(f) ? h : C, alt: "" }),
             (0, i.jsx)(s.D, { className: p.st, variant: "heading-xl/semibold", children: m.intl.string(m.t.i5SQ74) }),
-            (0, i.jsx)(o.E, { className: p.h_, variant: "text-md/normal", children: y }),
+            (0, i.jsx)(o.E, { className: p.h_, variant: "text-md/normal", children: I }),
             E && null != l && (0, i.jsx)(o.E, { variant: "text-md/normal", children: "staff-only debug: " + l }),
             (0, i.jsx)("div", {
                 "data-button-hoisted-classname-wrapper": !0,

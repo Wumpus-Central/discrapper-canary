@@ -1,4 +1,4 @@
-(l.d(t, { Fx: () => m, JH: () => T, SY: () => N, aV: () => R, fE: () => g, pF: () => A, zu: () => v }),
+(l.d(t, { Fx: () => v, JH: () => T, SY: () => R, aV: () => m, fE: () => I, pF: () => N, zu: () => A }),
     l(938796),
     l(321073));
 var i = l(582128),
@@ -10,31 +10,31 @@ var i = l(582128),
     h = l(755584),
     d = l(734057),
     o = l(567305),
-    u = l(636194),
-    f = l(846922),
-    p = l(555325),
-    S = l(74399),
-    _ = l(652215),
-    C = l(746080);
+    _ = l(636194),
+    u = l(846922),
+    S = l(555325),
+    p = l(74399),
+    C = l(652215),
+    E = l(746080);
 n().shim();
-let E = {};
-function g(e) {
+let f = {};
+function I(e) {
     let t = (0, r.bG)([d.A], () => d.A.getChannel(e)),
-        l = (0, r.bG)([S.A], () => S.A.getChannel(e)),
-        a = (0, r.bG)([u.A], () => u.A.getBenefitChannel(e)),
+        l = (0, r.bG)([p.A], () => p.A.getChannel(e)),
+        a = (0, r.bG)([_.A], () => _.A.getBenefitChannel(e)),
         n = (0, i.useMemo)(
             () =>
                 null != t && t.isObfuscated() && null != a
-                    ? t.merge({ name: a.name, flags: s.VL(t.flags, C.lx.OBFUSCATED) })
+                    ? t.merge({ name: a.name, flags: s.VL(t.flags, E.lx.OBFUSCATED) })
                     : null,
             [t, a],
         );
     return null == t ? l : t.isObfuscated() ? (n ?? t) : t;
 }
-function v(e, t, l) {
-    let i = (0, r.bG)([u.A], () => u.A.getSubscriptionListingsForGuild(e)),
-        a = (0, f.y)((t) => t.editStateIdsForGroup[e]),
-        n = (0, f.y)((e) => e.listings);
+function A(e, t, l) {
+    let i = (0, r.bG)([_.A], () => _.A.getSubscriptionListingsForGuild(e)),
+        a = (0, u.y)((t) => t.editStateIdsForGroup[e]),
+        n = (0, u.y)((e) => e.listings);
     if (void 0 === l || void 0 === t) return null;
     let s = i.filter((e) => !e.soft_deleted && !e.archived).map((e) => e.subscription_plans[0].price),
         c = [];
@@ -52,20 +52,20 @@ function v(e, t, l) {
     for (let e = d + 1; e < t.length && (h.has(t[e]) || o.push(t[e]), 3 !== o.length); e++);
     return o;
 }
-function I(e) {
-    let t = f.y.getState().editStateIdsForGroup[e],
-        l = f.y.getState().listings,
+function g(e) {
+    let t = u.y.getState().editStateIdsForGroup[e],
+        l = u.y.getState().listings,
         i = new Set();
     null != t &&
         t.forEach((e) => {
             let t = l[e]?.channelBenefits;
             t?.forEach((e) => {
-                null != S.A.getChannel(e.ref_id) && i.add(e.ref_id);
+                null != p.A.getChannel(e.ref_id) && i.add(e.ref_id);
             });
         });
     let a = [];
     for (let t of i) {
-        let l = S.A.getChannel(t);
+        let l = p.A.getChannel(t);
         if (null != l) {
             let t = l.set("guild_id", e);
             a.push(t);
@@ -73,24 +73,24 @@ function I(e) {
     }
     return a;
 }
-function N(e) {
-    let t = I(e);
-    ((E[e] = t),
+function R(e) {
+    let t = g(e);
+    ((f[e] = t),
         t.forEach((e) => {
-            let t = e.set("flags", C.lx.IS_ROLE_SUBSCRIPTION_TEMPLATE_PREVIEW_CHANNEL);
+            let t = e.set("flags", E.lx.IS_ROLE_SUBSCRIPTION_TEMPLATE_PREVIEW_CHANNEL);
             c.h.dispatch({ type: "CHANNEL_CREATE", channel: t });
         }));
 }
-function m(e) {
-    (E[e] ?? I(e)).forEach((e) => {
+function v(e) {
+    (f[e] ?? g(e)).forEach((e) => {
         c.h.dispatch({ type: "CHANNEL_DELETE", channel: e });
     });
 }
-async function A(e, t) {
+async function N(e, t) {
     let l = [],
         i = [];
     (t.forEach((t) => {
-        let a = S.A.getChannel(t.ref_id);
+        let a = p.A.getChannel(t.ref_id);
         null != a && (l.push(h.A.createRoleSubscriptionTemplateChannel(e, a.name, a.type, a.topic)), i.push(a));
     }),
         0 === l.length ||
@@ -98,8 +98,8 @@ async function A(e, t) {
                 let n = i[a].id;
                 if ("fulfilled" === l.status) {
                     let t = l.value.body,
-                        i = f.y.getState().editStateIdsForGroup[e],
-                        a = f.y.getState().listings;
+                        i = u.y.getState().editStateIdsForGroup[e],
+                        a = u.y.getState().listings;
                     null != i &&
                         i.forEach((e) => {
                             let l = a[e]?.channelBenefits;
@@ -114,10 +114,10 @@ async function A(e, t) {
             }));
 }
 function T(e, t) {
-    let l = f.y.getState().listings[e],
+    let l = u.y.getState().listings[e],
         i = l?.usedTemplate;
     if (null == i) return { templateCategory: null, hasChangeFromTemplate: null };
-    let a = S.A.getTemplateWithCategory(t, i);
+    let a = p.A.getTemplateWithCategory(t, i);
     if (null == a) return { templateCategory: null, hasChangeFromTemplate: null };
     let n = a.listings[0];
     if (
@@ -144,6 +144,6 @@ function T(e, t) {
     }
     return { templateCategory: a.category, hasChangeFromTemplate: !1 };
 }
-function R(e) {
-    return (0, p.X9)(e) && e.features.has(_.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED) && (0, o.TG)(e.id);
+function m(e) {
+    return (0, S.X9)(e) && e.features.has(C.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED) && (0, o.TG)(e.id);
 }

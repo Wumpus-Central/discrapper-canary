@@ -21,15 +21,15 @@ function c(e) {
             subscriptionTrial: E,
         } = e,
         { immediateDelivery: S } = (0, s.U)(),
-        { checkoutReviewButtonLabel: y } = (0, u.t4)((e) => ({
+        { checkoutReviewButtonLabel: I } = (0, u.t4)((e) => ({
             checkoutReviewButtonLabel: e.checkoutReviewButtonLabel,
         }));
     if (d.type === a.u$.LOADING) return null;
-    let { invoicePreview: I } = d,
-        g = ("renewalInvoicePreview" in d ? d.renewalInvoicePreview : null) ?? I,
+    let { invoicePreview: y } = d,
+        g = ("renewalInvoicePreview" in d ? d.renewalInvoicePreview : null) ?? y,
         A = (0, r.de)({
             overrideRenewalDate: m,
-            currentInvoice: h ? I : void 0,
+            currentInvoice: h ? y : void 0,
             renewalInvoice: g,
             isSubscriptionUpdate: null != c,
             fractionalPremiumInfo: p,
@@ -39,11 +39,11 @@ function c(e) {
             subscriptionTrial: E,
         }),
         x = {
-            purchaseButtonText: y,
-            totalDue: h ? I.total : 0,
+            purchaseButtonText: I,
+            totalDue: h ? y.total : 0,
             renewalPrice: P,
             multiPeriodDiscountAttributes: v,
-            currency: I.currency,
+            currency: y.currency,
             interval: t.interval,
             intervalCount: t.intervalCount,
             startDate: A,

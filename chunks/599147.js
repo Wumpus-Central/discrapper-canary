@@ -14,8 +14,8 @@ var a = l(477900),
     h = l(688810),
     x = l(95337),
     f = l(412314),
-    g = l(456459),
-    y = l(916974),
+    y = l(456459),
+    g = l(916974),
     v = l(347378),
     E = l(606423),
     S = l(652215);
@@ -35,12 +35,12 @@ function j(e) {
             activeStep: x,
         } = e,
         { analyticsLocations: f } = (0, h.Ay)(b.A.USER_SETTINGS),
-        [g, v] = n.useState(C(x));
+        [y, v] = n.useState(C(x));
     return (
         (0, n.useEffect)(() => {
             v(C(x));
         }, [x]),
-        (0, a.jsx)(y.CancellationContext.Provider, {
+        (0, a.jsx)(g.CancellationContext.Provider, {
             value: {
                 setStep: m,
                 premiumType: r,
@@ -73,14 +73,14 @@ function j(e) {
                 pauseDuration: null,
                 setPauseDuration: () => {},
             },
-            children: g,
+            children: y,
         })
     );
 }
 function C(e) {
     switch (e) {
         case d.g.DISCOUNT_APPLIED:
-            return (0, a.jsx)(g.V, {});
+            return (0, a.jsx)(y.V, {});
         case d.g.CONFIRM_DISCOUNT:
             return (0, a.jsx)(f.M, {});
         case d.g.CONFIRM:
@@ -100,7 +100,7 @@ let _ = () => {
         [l, p] = n.useState(d.g.WHAT_YOU_LOSE),
         [b, h] = n.useState(null),
         [x, f] = n.useState(A.gD.PREMIUM_MONTH_TIER_0),
-        [g, y] = n.useState([]),
+        [y, g] = n.useState([]),
         [v, E] = n.useState(() => {
             let e = new Date();
             return (e.setMonth(e.getMonth() + 1), e);
@@ -130,21 +130,21 @@ let _ = () => {
         (0, n.useEffect)(() => {
             switch (e) {
                 case A.PremiumTypes.TIER_0:
-                    (y([
+                    (g([
                         { label: "Nitro Basic Monthly", value: A.gD.PREMIUM_MONTH_TIER_0 },
                         { label: "Nitro Basic Yearly", value: A.gD.PREMIUM_YEAR_TIER_0 },
                     ]),
                         f(A.gD.PREMIUM_MONTH_TIER_0));
                     break;
                 case A.PremiumTypes.TIER_1:
-                    (y([
+                    (g([
                         { label: "Nitro Classic Monthly", value: A.gD.PREMIUM_MONTH_TIER_1 },
                         { label: "Nitro Classic Yearly", value: A.gD.PREMIUM_YEAR_TIER_1 },
                     ]),
                         f(A.gD.PREMIUM_MONTH_TIER_1));
                     break;
                 case A.PremiumTypes.TIER_2:
-                    (y([
+                    (g([
                         { label: "Nitro Monthly", value: A.gD.PREMIUM_MONTH_TIER_2 },
                         { label: "Nitro Yearly", value: A.gD.PREMIUM_YEAR_TIER_2 },
                     ]),
@@ -253,7 +253,7 @@ let _ = () => {
                         fullWidth: !0,
                     }),
                 }),
-                g.length > 0 &&
+                y.length > 0 &&
                     (0, a.jsx)(c.MG, {
                         children: (0, a.jsx)(r.l, {
                             label: "Subscription Interval",
@@ -264,7 +264,7 @@ let _ = () => {
                                 return { id: l, label: t, value: l };
                             },
                             value: x,
-                            options: g,
+                            options: y,
                             selectionMode: "single",
                             fullWidth: !0,
                         }),

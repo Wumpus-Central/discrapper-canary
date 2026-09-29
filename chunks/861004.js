@@ -14,13 +14,13 @@ function r(e) {
             ...d
         } = e,
         o = (0, s.J)(t),
-        u = o?.width ?? l,
-        f = o?.height ?? r;
+        _ = o?.width ?? l,
+        u = o?.height ?? r;
     return (0, i.jsx)("svg", {
         ...(0, n.A)(d),
         xmlns: "http://www.w3.org/2000/svg",
-        width: u,
-        height: f,
+        width: _,
+        height: u,
         fill: "none",
         viewBox: "0 0 24 24",
         children: (0, i.jsx)("path", {

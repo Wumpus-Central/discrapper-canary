@@ -16,8 +16,8 @@ var i = n(477900),
     h = n(363195),
     x = n(174459),
     v = n(792656),
-    _ = n(962644),
-    C = n(35587),
+    C = n(962644),
+    _ = n(35587),
     P = n(412260),
     T = n(852218),
     R = n(194261),
@@ -213,8 +213,8 @@ function Q(e) {
         [b, g] = a.useState(!1),
         x = [...l].sort((e, t) => (t.startDate > e.startDate ? 1 : -1)),
         v = b ? x : x.slice(0, 1),
-        _ = !b && x.length > 1,
-        C =
+        C = !b && x.length > 1,
+        _ =
             ((t = l[0]?.partnerId ?? ""),
             (n = (0, r.bG)([h.A], () => (0, o.M)(h.A.theme))),
             null == (s = K[t]?.logos) ? void 0 : n ? s.dark : s.light);
@@ -242,7 +242,7 @@ function Q(e) {
                                             ? e.outboundRedemptionPageLink
                                             : (n?.landingUrl ?? ""),
                                 }),
-                            partnerLogo: C,
+                            partnerLogo: _,
                             showPartnerImage: !0,
                             claimButtonPlacement: j.u5.FOOTER,
                             footerContent: (0, i.jsx)(j.vw, {}),
@@ -252,7 +252,7 @@ function Q(e) {
                     );
                 }),
             }),
-            _ &&
+            C &&
                 (0, i.jsx)(c.D, {
                     className: E.K8,
                     onClick: () => {
@@ -283,7 +283,7 @@ function et(e) {
             onClose: c,
             analyticsLocationsProp: u,
         } = e,
-        { promotionsLoaded: p } = (0, C.y7)(),
+        { promotionsLoaded: p } = (0, _.y7)(),
         { analyticsLocations: b } = (0, g.Ay)(u);
     return p
         ? (0, i.jsx)(g.f5, {
@@ -299,7 +299,7 @@ function et(e) {
                           c();
                       },
                       onSubscribeModalClose: (e) => {
-                          if (e) return _.Ay.fetchActivePromotions();
+                          if (e) return C.Ay.fetchActivePromotions();
                       },
                   }),
                   transitionState: o,
@@ -361,13 +361,13 @@ function ei(e) {
             [t],
             J,
         ),
-        { promotionsLoaded: x, claimedOutboundPromotionCodeMap: v } = (0, C.y7)();
+        { promotionsLoaded: x, claimedOutboundPromotionCodeMap: v } = (0, _.y7)();
     if (!x) return (0, i.jsx)(m.y, {});
-    let _ = t
+    let C = t
             .map((e) => K[e])
             .filter(Boolean)
             .every((e) => !1 !== e.showSectionHeaders),
-        T = _ ? { recurring: B.intl.string(D.default["9Y2p6p"]), oneTime: B.intl.string(D.default.Wm58LR) } : void 0,
+        T = C ? { recurring: B.intl.string(D.default["9Y2p6p"]), oneTime: B.intl.string(D.default.Wm58LR) } : void 0,
         R = (0, i.jsx)(d.B, {
             direction: "vertical",
             gap: 12,
@@ -409,7 +409,7 @@ function ei(e) {
                         ],
                     }),
                 g.length > 0 &&
-                    (_
+                    (C
                         ? (0, i.jsx)("div", {
                               className: E.E7,
                               children: (0, i.jsxs)(d.B, {
@@ -470,7 +470,7 @@ function er(e) {
         } = e,
         u = o ? [...t, "xbox"] : t;
     (x.default.track(q.HAw.THIRD_PARTY_PROMOTION_MODAL_OPENED, { partner_ids: u, partner_id: u[0], location_stack: d }),
-        _.Ay.fetchActivePromotions(),
+        C.Ay.fetchActivePromotions(),
         (0, b.openModalLazy)(
             async () => {
                 let { ThirdPartyPromotionsModal: e } = await Promise.resolve().then(n.bind(n, 239016));

@@ -1,17 +1,17 @@
-n.d(t, { F: () => s });
+n.d(t, { F: () => o });
 var r = n(17928),
     a = n(166403),
     l = n(532309),
     u = n(440005),
     i = n(17843),
-    o = n(150092),
-    d = n(892227);
-function s(e) {
+    s = n(150092),
+    c = n(892227);
+function o(e) {
     let t = e?.location ?? "useNitroProgramReward",
         n = (0, i.DK)(u.W.NITRO, t),
         {
-            isReady: s,
-            programReward: c,
+            isReady: o,
+            programReward: d,
             totalDays: m,
         } = (0, r.cf)([l.A], () => ({
             isReady: l.A.isReady(),
@@ -19,8 +19,8 @@ function s(e) {
             totalDays: l.A.getTotalDaysInDuration(u.W.NITRO),
         })),
         f = (0, r.bG)([a.A], () => a.A.getPremiumTypeSubscription()?.isPurchasedExternally ?? !1),
-        g = (0, o.q)(),
-        b = (function (e, t) {
+        g = (0, s.q)(),
+        N = (function (e, t) {
             if (!t || null == e) return !1;
             let n = e.next_reward_date,
                 r = e.program_current_state;
@@ -32,20 +32,20 @@ function s(e) {
                 if (Number.isNaN(e) || e < Date.now()) return !1;
             }
             return !0;
-        })(c, n),
-        p = (function (e, t, n) {
+        })(d, n),
+        h = (function (e, t, n) {
             if (!n || null == e || null == t) return !1;
             let r = e.next_reward_date;
             if (null == r || "" === r) return !1;
             let a = new Date(r).getTime();
-            return !(Number.isNaN(a) || a <= Date.now() || (0, d.default)(new Date(r), new Date()) > t);
-        })(c, m, n);
+            return !(Number.isNaN(a) || a <= Date.now() || (0, c.default)(new Date(r), new Date()) > t);
+        })(d, m, n);
     return {
         isEligible: n,
-        isReady: s,
-        passesGeneralUIInvariant: b,
-        passesProgressBarInvariant: p,
-        programReward: c,
+        isReady: o,
+        passesGeneralUIInvariant: N,
+        passesProgressBarInvariant: h,
+        programReward: d,
         shouldFetch: g,
         totalDays: m,
         wouldBeEligibleForNitroOrbsButIsExternalSub: n && f,

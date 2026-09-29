@@ -16,8 +16,8 @@ var i = n(477900),
     h = n(241524),
     x = n(303136),
     v = n(607470),
-    _ = n(174459),
-    C = n(676279),
+    C = n(174459),
+    _ = n(676279),
     P = n(406860),
     T = n(173038),
     R = n(652215),
@@ -47,7 +47,7 @@ let E = (e) => {
             containerClassName: H,
         } = e,
         z = (0, m.N)(),
-        F = (0, C.TM)(),
+        F = (0, _.TM)(),
         K = a.useRef(null),
         W = a.useRef(0),
         { sectionRef: X, handleVisibilityChange: $ } = (0, P.A)({ boxType: t }),
@@ -58,7 +58,7 @@ let E = (e) => {
         ee = a.useMemo(
             () =>
                 (0, l.debounce)(() => {
-                    _.default.track(R.HAw.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED, { box_type: (0, l.snakeCase)(t) });
+                    C.default.track(R.HAw.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED, { box_type: (0, l.snakeCase)(t) });
                 }, 800),
             [t],
         );

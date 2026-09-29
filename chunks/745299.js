@@ -52,17 +52,17 @@ let C =
               )
                   return null;
               let m = n === I.pe.TIER_2 ? N.kqX.PREMIUM_TIER_2_TRIAL_ENDING : N.kqX.PREMIUM_TIER_0_TRIAL_ENDING,
-                  P = (0, _.re)({
+                  p = (0, _.re)({
                       intervalType: S.subscriptionTrial?.interval,
                       intervalCount: S.subscriptionTrial?.intervalCount,
                   }),
-                  p = u.A.getArticleURL(S.trialId === I.yo ? N.MVz.NITRO_TRIAL_FOR_ALL : N.MVz.PREMIUM_TRIAL);
+                  f = u.A.getArticleURL(S.trialId === I.yo ? N.MVz.NITRO_TRIAL_FOR_ALL : N.MVz.PREMIUM_TRIAL);
               return (0, i.jsxs)(d.T0, {
                   onClick: () => {
                       (t(), c.default.track(N.HAw.APP_NOTICE_CLOSED, { notice_type: m, trial_id: S.trialId }));
                   },
                   children: [
-                      (0, i.jsx)(d.In, { children: (0, T.GZ)(n, O, P, p) }),
+                      (0, i.jsx)(d.In, { children: (0, T.GZ)(n, O, p, f) }),
                       (0, i.jsx)(d.fY, {
                           onClick: function () {
                               null != S &&

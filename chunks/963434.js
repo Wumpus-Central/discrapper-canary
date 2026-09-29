@@ -1,4 +1,4 @@
-r.r(
+t.r(
     (e.exports = {
         badge: "badge_c2b88c",
         label: "label_c2b88c",

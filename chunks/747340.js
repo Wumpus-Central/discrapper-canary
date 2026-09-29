@@ -15,7 +15,7 @@ var l,
     f = n(184015),
     E = n(723702),
     S = n(652215);
-function y() {
+function I() {
     let e = h.A.getClient();
     null != e &&
         (0, f.j)().then((t) => {
@@ -29,7 +29,7 @@ function y() {
                 });
         });
 }
-function I() {
+function y() {
     let e = h.A.getClient();
     null != e &&
         (0, f.j)().then((t) => {
@@ -318,29 +318,29 @@ let eE = function (e) {
         [p, h] = a.useState(!1),
         [C, f] = a.useState(null),
         [E, S] = a.useState({}),
-        y = (0, ed.useElements)(),
-        I = a.useCallback(() => {
-            if (null != y)
+        I = (0, ed.useElements)(),
+        y = a.useCallback(() => {
+            if (null != I)
                 switch (n) {
                     case "cardNumber": {
-                        let e = y.getElement(ed.CardNumberElement);
+                        let e = I.getElement(ed.CardNumberElement);
                         if (null == e) return;
                         (e.off("change"), e.off("focus"), e.off("blur"));
                         break;
                     }
                     case "cardExpiry": {
-                        let e = y.getElement(ed.CardExpiryElement);
+                        let e = I.getElement(ed.CardExpiryElement);
                         if (null == e) return;
                         (e.off("change"), e.off("focus"), e.off("blur"));
                         break;
                     }
                     case "cardCvc": {
-                        let e = y.getElement(ed.CardCvcElement);
+                        let e = I.getElement(ed.CardCvcElement);
                         if (null == e) return;
                         (e.off("change"), e.off("focus"), e.off("blur"));
                     }
                 }
-        }, [y, n]),
+        }, [I, n]),
         g = a.useCallback(
             (e) => {
                 (p || e.empty || h(!0), null != i && i(e.complete), null != e.error && m(!1));
@@ -354,10 +354,10 @@ let eE = function (e) {
             (m(!1), o?.());
         }, [o]),
         v = a.useCallback(() => {
-            if (null != y)
+            if (null != I)
                 switch (n) {
                     case "cardNumber": {
-                        let e = y.getElement(ed.CardNumberElement);
+                        let e = I.getElement(ed.CardNumberElement);
                         if (null == e) return;
                         (e.on("change", (e) => {
                             (u !== e.brand && c(e.brand),
@@ -373,7 +373,7 @@ let eE = function (e) {
                         break;
                     }
                     case "cardExpiry": {
-                        let e = y.getElement(ed.CardExpiryElement);
+                        let e = I.getElement(ed.CardExpiryElement);
                         if (null == e) return;
                         (e.on("change", (e) => {
                             (null != e.error || (e.empty && p) ? f(Y.intl.string(Y.t["9/zZdl"])) : f(null), g(e));
@@ -383,7 +383,7 @@ let eE = function (e) {
                         break;
                     }
                     case "cardCvc": {
-                        let e = y.getElement(ed.CardCvcElement);
+                        let e = I.getElement(ed.CardCvcElement);
                         if (null == e) return;
                         (e.on("change", (e) => {
                             (null != e.error || (e.empty && p) ? f(Y.intl.string(Y.t.ro4isZ)) : f(null), g(e));
@@ -392,15 +392,15 @@ let eE = function (e) {
                             e.on("blur", P));
                     }
                 }
-        }, [P, g, A, u, y, p, n]);
+        }, [P, g, A, u, I, p, n]);
     a.useEffect(
         () => (
             v(),
             () => {
-                I();
+                y();
             }
         ),
-        [v, I],
+        [v, y],
     );
     let x = (0, ep.r)(em.A.colors.TEXT_SUBTLE).hex(),
         _ = (0, ep.r)(em.A.colors.TEXT_STRONG).hex();
@@ -458,8 +458,8 @@ let eE = function (e) {
     );
 };
 var eS = n(719941),
-    ey = n(782328);
-let eI = function (e) {
+    eI = n(782328);
+let ey = function (e) {
     let { onCardInfoChange: t, error: n } = e,
         l = a.useRef(t),
         [i, s] = a.useState(!1),
@@ -477,7 +477,7 @@ let eI = function (e) {
     function S(e, t) {
         !!o[e] !== t && u((n) => ({ ...n, [e]: t }));
     }
-    let y = a.useCallback(
+    let I = a.useCallback(
         function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
                 t = {};
@@ -487,9 +487,9 @@ let eI = function (e) {
     );
     return (
         a.useEffect(() => {
-            let e = o.cardNumber && o.cardExpiry && o.cardCvc && 0 === Object.keys(y(!0)).length;
+            let e = o.cardNumber && o.cardExpiry && o.cardCvc && 0 === Object.keys(I(!0)).length;
             l.current({ name: c.name }, !!e);
-        }, [o, c, y]),
+        }, [o, c, I]),
         (0, r.jsxs)("div", {
             children: [
                 eu.default.getCurrentUser()?.nsfwAllowed
@@ -525,7 +525,7 @@ let eI = function (e) {
                                     id: "card-number",
                                     name: "cardNumber",
                                     title: () => Y.intl.string(Y.t.cVyJ3o),
-                                    getClassNameForLayout: () => ey.c6,
+                                    getClassNameForLayout: () => eI.c6,
                                     renderInput: () =>
                                         (0, r.jsx)(eE, {
                                             stripeType: "cardNumber",
@@ -542,7 +542,7 @@ let eI = function (e) {
                                     id: "card-expiration-date",
                                     name: "cardExpiry",
                                     title: () => Y.intl.string(Y.t["CeBa/4"]),
-                                    getClassNameForLayout: () => ey.ep,
+                                    getClassNameForLayout: () => eI.ep,
                                     renderInput: () =>
                                         (0, r.jsx)(eE, {
                                             stripeType: "cardExpiry",
@@ -554,7 +554,7 @@ let eI = function (e) {
                                     id: "card-cvc",
                                     name: "cardCvc",
                                     title: () => Y.intl.string(Y.t.Fd3rOz),
-                                    getClassNameForLayout: () => ey.ep,
+                                    getClassNameForLayout: () => eI.ep,
                                     renderInput: () =>
                                         (0, r.jsx)(eE, {
                                             stripeType: "cardCvc",
@@ -577,7 +577,7 @@ let eI = function (e) {
                                     title: () => Y.intl.string(Y.t.VUlFdU),
                                     autoComplete: "cc-name",
                                     placeholder: () => Y.intl.string(Y.t["yf7ms+"]),
-                                    getClassNameForLayout: () => ey.c6,
+                                    getClassNameForLayout: () => eI.c6,
                                     renderInput: (e) => (0, r.jsx)(es.k, { ...e }),
                                 },
                             ],
@@ -599,7 +599,7 @@ let eI = function (e) {
                             C(i));
                     },
                     onFieldBlur: function () {
-                        C(y());
+                        C(I());
                     },
                 }),
             ],
@@ -692,7 +692,7 @@ function ej(e) {
                       children: (0, r.jsx)(el.w, { type: "critical", children: Y.intl.string(Y.t["4vnhKV"]) }),
                   })
                 : null,
-            (0, r.jsx)(eI, { onCardInfoChange: n, error: t }),
+            (0, r.jsx)(ey, { onCardInfoChange: n, error: t }),
         ],
     });
 }
@@ -737,7 +737,7 @@ class ek extends a.PureComponent {
     }
     componentWillUnmount() {
         P(h.A.getPayPalClient(), { type: "BRAINTREE_TEARDOWN_PAYPAL_CLIENT" }).then(() => {
-            null != h.A.getClient() && I();
+            null != h.A.getClient() && y();
         });
     }
     render() {
@@ -767,7 +767,7 @@ class eF extends a.PureComponent {
     }
     componentWillUnmount() {
         P(h.A.getVenmoClient(), { type: "BRAINTREE_TEARDOWN_VENMO_CLIENT" }).then(() => {
-            null != h.A.getClient() && y();
+            null != h.A.getClient() && I();
         });
     }
     render() {
@@ -982,7 +982,7 @@ function tl(e) {
         })),
         f = (0, e0.A)(),
         { isGift: E } = (0, e3.Pv)(),
-        [y, I] = a.useState(!1);
+        [I, y] = a.useState(!1);
     switch (n) {
         case R.pn.AWAITING_BROWSER_CHECKOUT_GOOGLE_PAY:
             t = S.do8.GOOGLE_PAY;
@@ -993,8 +993,8 @@ function tl(e) {
     return (
         a.useEffect(() => {
             let e = setTimeout(() => {
-                y ||
-                    (I(!0),
+                I ||
+                    (y(!0),
                     (0, p.Ze)(c.loadId),
                     (0, e2.my)(
                         {
@@ -1007,7 +1007,7 @@ function tl(e) {
                     ));
             }, 1e3);
             return () => clearTimeout(e);
-        }, [f, E, c, i, I, y, t]),
+        }, [f, E, c, i, y, I, t]),
         a.useEffect(() => {
             (null !== h && (tt.oz.includes(h) && ((0, eX.ur)(h), (0, p.hP)()), o(h)),
                 null !== C && u(C),
@@ -1114,8 +1114,8 @@ function tp(e) {
             isSubmittingCurrentStep: f,
             billingAddressState: E,
             setIsSubmittingCurrentStep: S,
-            hasRedirectURL: y,
-            setHasRedirectURL: I,
+            hasRedirectURL: I,
+            setHasRedirectURL: y,
             isAuthenticating: g,
         } = t;
     async function A() {
@@ -1140,7 +1140,7 @@ function tp(e) {
                 createSetupIntent: C,
                 overwriteSubscriptionPaymentSource: u,
             });
-            ("redirect-url" === e.responseType ? I(e.hasRedirectURL) : l(e.paymentSource), y || S(!1));
+            ("redirect-url" === e.responseType ? y(e.hasRedirectURL) : l(e.paymentSource), I || S(!1));
         } catch (e) {
             (S(!1), tm.warn(`Error confirming submitting Address Step for Payment Source Type: ${P}`, e));
         }
@@ -1215,11 +1215,11 @@ function tf(e) {
                 n(!1);
             }
         }, [o, m, h, C, u, s, n, l]),
-        y = a.useCallback(() => {
+        I = a.useCallback(() => {
             (f(), null != d && d());
         }, [f, d]);
     return (0, r.jsx)(td, {
-        onBack: y,
+        onBack: I,
         primaryCTA: e$.Ay.CTAType.CONTINUE,
         primaryType: "submit",
         primaryText: Y.intl.string(Y.t.PDTjLN),
@@ -1230,8 +1230,8 @@ function tf(e) {
 }
 var tE = n(757089),
     tS = n(170870);
-let ty = new Q.A("AddPaymentMethodSubstepRegistry.tsx");
-function tI(e) {
+let tI = new Q.A("AddPaymentMethodSubstepRegistry.tsx");
+function ty(e) {
     let { setCreditCardState: t, setBillingAddressState: n } = e,
         l = a.useCallback(
             (e, l) => {
@@ -1252,7 +1252,7 @@ function tg(e) {
             let t = await (0, p.YJ)(o, e);
             (n({ token: t }), a(R.pn.ADDRESS));
         } catch (e) {
-            ty.error(e.message ?? JSON.stringify(e));
+            tI.error(e.message ?? JSON.stringify(e));
         } finally {
             t(!1);
         }
@@ -1359,7 +1359,7 @@ function tN(e) {
 }
 let tb = {
     [R.pn.CREDIT_CARD_INFORMATION]: {
-        renderStepBody: (e) => (0, r.jsx)(tI, { ...e }),
+        renderStepBody: (e) => (0, r.jsx)(ty, { ...e }),
         renderStepFooter: (e) => (0, r.jsx)(tg, { ...e }),
     },
     [R.pn.AWAITING_BROWSER_CHECKOUT]: {
@@ -1537,8 +1537,8 @@ function tD(e) {
             header: C,
             analyticsLocation: f,
             analyticsData: E,
-            overwriteSubscriptionPaymentSource: y = !1,
-            useCheckoutStep: I = !1,
+            overwriteSubscriptionPaymentSource: I = !1,
+            useCheckoutStep: y = !1,
             isEligibleForTrial: g = !1,
             allowDesktopRedirectPurchase: A = !1,
             toastContent: P,
@@ -1692,7 +1692,7 @@ function tD(e) {
                 null != n && (e(n), t(!1), k.A.clearRedirectedPaymentSourceId());
             })();
         }, [el]));
-    let ea = I ? (0, r.jsx)(O.A, { className: tE._8 }) : null,
+    let ea = y ? (0, r.jsx)(O.A, { className: tE._8 }) : null,
         es = a.useCallback(() => {
             (Z(F), q(R.pn.PAYMENT_ELEMENT));
         }, [Z, q, F]),
@@ -1721,16 +1721,16 @@ function tD(e) {
                 completeSteps: en,
                 analyticsLocation: f,
                 analyticsData: E,
-                overwriteSubscriptionPaymentSource: y,
+                overwriteSubscriptionPaymentSource: I,
             }),
-            [q, v, W, K, ee, es, eo, eu, f, m, d, en, E, y],
+            [q, v, W, K, ee, es, eo, eu, f, m, d, en, E, I],
         );
     if (!(W in tb))
         throw new N.v({ message: `Unexpected Add Payment sub-step: ${W}`, extraSentryInformation: { currentStep: W } });
     let { renderStepBody: ed, renderStepFooter: em } = tb[W],
         ep = ed(t),
         eh = em(t);
-    return I
+    return y
         ? (0, r.jsxs)(r.Fragment, {
               children: [
                   g && (0, r.jsx)(M.A, { className: tE.At, isEligibleForTrial: g }),
@@ -1790,7 +1790,7 @@ function tG(e) {
                         });
                     })
                         .then(() => {
-                            (I(), y());
+                            (y(), I());
                         })
                         .catch((e) => {
                             C.pM(e);

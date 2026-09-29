@@ -13,8 +13,8 @@ let p = function () {
         [l, p] = n.useState(4),
         [m, b] = n.useState(2),
         [h, x] = n.useState(d.fh.LIGHT),
-        [f, g] = n.useState(d.qP.BLUE),
-        [y, v] = n.useState("darkslategray"),
+        [f, y] = n.useState(d.qP.BLUE),
+        [g, v] = n.useState("darkslategray"),
         [E, S] = n.useState("blanchedalmond"),
         [j, C] = n.useState("pink"),
         [T, A] = n.useState(!0),
@@ -42,7 +42,7 @@ let p = function () {
                 maximum: l,
                 weight: h,
                 variant: f,
-                override: { default: { background: y, gradientStart: E, gradientEnd: j } },
+                override: { default: { background: g, gradientStart: E, gradientEnd: j } },
                 glowing: T,
             }),
             (0, a.jsx)(c.nB, {}),
@@ -82,7 +82,7 @@ let p = function () {
                     hideLabel: !0,
                     placeholder: "Variant",
                     onSelectionChange: (e) => {
-                        null !== e && g(e);
+                        null !== e && y(e);
                     },
                     value: f,
                     options: _,
@@ -124,7 +124,7 @@ let p = function () {
             }),
             (0, a.jsx)(c.MG, {
                 children: (0, a.jsx)(r.k, {
-                    value: y,
+                    value: g,
                     onChange: (e) => {
                         v(e);
                     },

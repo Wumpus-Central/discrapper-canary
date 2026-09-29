@@ -15,8 +15,8 @@ var l = n(477900),
     f = n(263532),
     E = n(652215),
     S = n(649975),
-    y = n(375708);
-class I {
+    I = n(375708);
+class y {
     isTrial;
     isGift;
     selectedPlan;
@@ -46,20 +46,20 @@ class I {
         return !(!e.disablePurchase && null != l && (this.isGift || !this.isTrial || null == n || n.canRedeemTrial()));
     }
     resolveReviewButtonLabel() {
-        if (this.isGift) return y.intl.string(y.t.ouo4FK);
+        if (this.isGift) return I.intl.string(I.t.ouo4FK);
         if (null != this.selectedPlan && (0, d.ys)(this.selectedPlan.id))
             return this.isInPastDueCheckout
-                ? y.intl.string(S.default.LvcUx4)
+                ? I.intl.string(S.default.LvcUx4)
                 : this.isPrepaidPaymentSource
-                  ? y.intl.string(y.t.cRCCJ3)
+                  ? I.intl.string(I.t.cRCCJ3)
                   : null != this.premiumSubscription
                     ? this.premiumSubscription.isPausedAllowsResumeButNotUpdates
-                        ? y.intl.string(y.t.zpi5pg)
+                        ? I.intl.string(I.t.zpi5pg)
                         : (0, m.Ge)(this.premiumSubscription, this.selectedPlan.id, this.planGroup)
-                          ? y.intl.string(y.t.IJI7yk)
-                          : y.intl.string(y.t.VPuTc5)
+                          ? I.intl.string(I.t.IJI7yk)
+                          : I.intl.string(I.t.VPuTc5)
                     : (0, d.ff)(null, this.selectedPlan);
-        return y.intl.string(y.t.YScQSF);
+        return I.intl.string(I.t.YScQSF);
     }
     resolveTenantReviewButtonProps = (e) => {
         let { onReviewButtonClick: t, loading: n, disabled: i, hasAcceptedTerms: a } = e,
@@ -92,7 +92,7 @@ function g(e) {
             activeSubscription: m,
             isPremium: E,
             isGift: S,
-            checkoutPriceOptions: y,
+            checkoutPriceOptions: I,
             isInOneStepSubscriptionCheckout: g,
             shouldDisallowPlanSelection: A,
             verifiedTrialId: P,
@@ -125,11 +125,11 @@ function g(e) {
                         : R(s.pn.PLAN_SELECT),
             [R, g, j, n],
         ),
-        O = (0, d.J$)(y.paymentSourceId),
+        O = (0, d.J$)(I.paymentSourceId),
         L = (0, h.R)({ hasOpenInvoice: _ ?? !1 }),
         k = i.useMemo(
             () =>
-                new I({
+                new y({
                     isTrial: t,
                     isGift: S,
                     selectedPlan: x,

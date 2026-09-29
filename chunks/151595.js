@@ -14,8 +14,8 @@ var l = n(477900),
     C = n(375708),
     f = n(836949);
 let E = function (e) {
-    let { type: t, text: n, buttonText: i, buttonLoading: E, hideClose: S, onClose: y } = e,
-        I = (0, a.bG)([d.default], () => {
+    let { type: t, text: n, buttonText: i, buttonLoading: E, hideClose: S, onClose: I } = e,
+        y = (0, a.bG)([d.default], () => {
             let e = d.default.getCurrentUser();
             return (r()(null != e, "UserSettingsProfileCustomization: user cannot be undefined"), e);
         }),
@@ -47,10 +47,10 @@ let E = function (e) {
                         children: (0, l.jsx)("source", { src: A }),
                     }),
                     (0, l.jsx)(u.A, {
-                        user: I,
+                        user: y,
                         isHighlighted: !0,
                         nameplate: null,
-                        nameplateData: I.nameplate,
+                        nameplateData: y.nameplate,
                         className: f.M4,
                         nameplatePreviewSize: "large",
                         pendingDisplayNameStyles: g?.displayNameStyles,
@@ -66,7 +66,7 @@ let E = function (e) {
                         variant: "expressive",
                         fullWidth: !0,
                         text: i,
-                        onClick: y,
+                        onClick: I,
                         loading: E,
                     }),
                 }),

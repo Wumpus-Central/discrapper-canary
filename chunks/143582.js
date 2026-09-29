@@ -1,4 +1,4 @@
-l.d(t, { Hc: () => u, _R: () => f, f5: () => o, vz: () => d });
+l.d(t, { Hc: () => _, _R: () => u, f5: () => o, vz: () => d });
 var i = l(228366),
     a = l(73825),
     n = l(337095),
@@ -69,10 +69,10 @@ async function o(e) {
         i.h.dispatch({ type: "APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_FAILURE", guildId: e });
     }
 }
-function u(e) {
+function _(e) {
     i.h.dispatch({ type: "APPLICATION_SUBSCRIPTIONS_CHANNEL_NOTICE_DISMISSED", guildId: e });
 }
-async function f(e) {
+async function u(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
     i.h.dispatch({ type: "APPLICATION_SUBSCRIPTIONS_FETCH_LISTING_FOR_PLAN", planId: e });
     try {
@@ -86,7 +86,7 @@ async function f(e) {
         ),
             h(l));
     } catch (l) {
-        if ("status" in l && 429 === l.status && t < 10) await f(e, ++t);
+        if ("status" in l && 429 === l.status && t < 10) await u(e, ++t);
         else throw l;
     }
 }

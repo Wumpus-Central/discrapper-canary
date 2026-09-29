@@ -47,8 +47,8 @@ function E(e) {
         $ = new Map(D.map((e) => [e.name, e])),
         q = (l ?? []).filter((e) => O.some((t) => t.key === e) || $.has(e)),
         z = q.length > 0,
-        U = q.some((e) => $.has(e)),
-        G = a.useMemo(() => {
+        G = q.some((e) => $.has(e)),
+        U = a.useMemo(() => {
             let e = {};
             for (let [t, l] of Object.entries(p.values)) {
                 let n = L.find((e) => e.key === t);
@@ -63,12 +63,12 @@ function E(e) {
                 ...(Object.keys(t).length > 0 ? { secrets: t } : {}),
             };
         }, [p, L, F]),
-        B = null != G.values || null != G.secrets,
+        B = null != U.values || null != U.secrets,
         V = a.useCallback(async () => {
             if (!B || I) return !0;
             (M(!0), P(!1));
             try {
-                let { rebuildRequired: e } = await (0, y.nU)(t, G);
+                let { rebuildRequired: e } = await (0, y.nU)(t, U);
                 return (
                     m || j.Ay.hasPendingSettingsRequest(t)
                         ? (0, y.dv)(t, w.intl.string(N.default.gqJFu0))
@@ -84,7 +84,7 @@ function E(e) {
             } finally {
                 M(!1);
             }
-        }, [B, m, t, I, G]);
+        }, [B, m, t, I, U]);
     function H(e) {
         let t = [
             e?.hint != null && "" !== e.hint ? e.hint : void 0,
@@ -246,7 +246,7 @@ function E(e) {
                     : z
                       ? (0, n.jsxs)(n.Fragment, {
                             children: [
-                                U
+                                G
                                     ? (0, n.jsx)(s.E, {
                                           variant: "text-xs/normal",
                                           color: "text-muted",

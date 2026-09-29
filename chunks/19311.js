@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => y, CY: () => f, ti: () => C });
+n.d(t, { Ay: () => I, CY: () => f, ti: () => C });
 var l,
     i = n(477900);
 n(582128);
@@ -50,8 +50,8 @@ function S(e) {
             primaryText: C,
             primaryTooltip: f,
             primaryDisabled: S,
-            primarySubmitting: y,
-            onPrimary: I,
+            primarySubmitting: I,
+            onPrimary: y,
         } = e,
         g =
             null == t
@@ -73,12 +73,12 @@ function S(e) {
                         primaryType: s,
                         primaryText: C,
                         primaryDisabled: S,
-                        primarySubmitting: y,
-                        onPrimary: I,
+                        primarySubmitting: I,
+                        onPrimary: y,
                     };
                     return null != f
                         ? (0, i.jsx)(c.m, { text: f, asContainer: !0, children: (0, i.jsx)(E, { ...e }) })
-                        : (0, i.jsx)(E, { ...e, onPrimary: I });
+                        : (0, i.jsx)(E, { ...e, onPrimary: y });
                 })(),
             ],
         });
@@ -87,4 +87,4 @@ function S(e) {
     });
 }
 S.CTAType = C;
-let y = S;
+let I = S;

@@ -18,8 +18,8 @@ var i = s(477900),
     A = s(89366),
     j = s(724651),
     E = s(732280),
-    T = s(331322),
-    b = s(508770),
+    b = s(331322),
+    T = s(508770),
     R = s(834730),
     C = s(441574),
     I = s(989790),
@@ -70,14 +70,14 @@ function L(e) {
     return (0, i.jsxs)("div", {
         className: l()(O.kL, t),
         children: [
-            (0, i.jsxs)(T.B, {
+            (0, i.jsxs)(b.B, {
                 direction: "horizontal",
                 gap: 8,
                 align: "center",
                 className: O.wx,
                 children: [
                     (0, i.jsx)(d.D, { variant: "nitro-sm", className: O.Ss, children: (0, S.DP)() }),
-                    (0, i.jsx)(b.E, { type: "beta", variant: "expressive" }),
+                    (0, i.jsx)(T.E, { type: "beta", variant: "expressive" }),
                 ],
             }),
             (0, i.jsx)(R.E, { variant: "text-md/medium", className: O.m_, color: "text-default", children: a }),
@@ -195,9 +195,9 @@ let es = function (e) {
     var t;
     let s,
         a,
-        T,
+        b,
         {
-            className: b,
+            className: T,
             hideCTAs: R = !1,
             headingOverride: C,
             hidePill: I = !1,
@@ -458,7 +458,7 @@ let es = function (e) {
               withBottomBorderRadius: !0,
               buttonsRow: null == ei,
           }),
-        (T = I
+        (b = I
             ? null
             : null != ei || null != en
               ? (0, i.jsx)(w.HU, {
@@ -480,7 +480,7 @@ let es = function (e) {
     return (0, i.jsx)(x.f5, {
         value: P,
         children: (0, i.jsxs)("div", {
-            className: l()(X.zr, b),
+            className: l()(X.zr, T),
             "data-testid": "v2-marketing-page-comparison-table",
             children: [
                 (0, i.jsx)(d.D, {
@@ -492,7 +492,7 @@ let es = function (e) {
                 (0, i.jsxs)("div", {
                     className: X.wY,
                     children: [
-                        (0, i.jsx)("div", { className: l()(_, { [X.A9]: eg, [X.ce]: !eg && !H }), children: !eg && T }),
+                        (0, i.jsx)("div", { className: l()(_, { [X.A9]: eg, [X.ce]: !eg && !H }), children: !eg && b }),
                         (0, i.jsxs)("table", {
                             className: X.tp,
                             children: [

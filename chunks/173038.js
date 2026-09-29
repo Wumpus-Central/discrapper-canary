@@ -1,4 +1,4 @@
-(n.d(t, { A0: () => eP, NI: () => eT, Ay: () => eR, Tb: () => eC }), n(321073));
+(n.d(t, { A0: () => eP, NI: () => eT, Ay: () => eR, Tb: () => e_ }), n(321073));
 var i,
     a,
     r,
@@ -16,8 +16,8 @@ var i,
     h = n(741231),
     x = n(325499),
     v = n(75678),
-    _ = n(206835),
-    C = n(192444),
+    C = n(206835),
+    _ = n(192444),
     P = n(216934),
     T = n(591179),
     R = n(462463),
@@ -92,8 +92,8 @@ let eu = "/assets/035ad0fba4997f3f.svg",
 var eh = n(576765),
     ex = n(88433),
     ev = n(909340),
-    e_ = n(455482),
-    eC = (((i = {}).CONTAINED = "contained"), (i.OVERLAY = "overlay"), i),
+    eC = n(455482),
+    e_ = (((i = {}).CONTAINED = "contained"), (i.OVERLAY = "overlay"), i),
     eP = (((a = {}).SMALL = "small"), (a.MEDIUM = "medium"), (a.LARGE = "large"), a),
     eT =
         (((r = {}).REFERRAL_PROGRAM = "referralProgram"),
@@ -120,7 +120,7 @@ let eR = function () {
         r = (0, l.useCallback)(() => {
             (0, h.A)(J.BVt.NITRO_HOME, { search: (0, o.stringify)({ perk: U.CALL_OF_DUTY_3PP_CARD_ID }) });
         }, []),
-        B = (0, _.A)({ scrollPosition: Q._F.TRY_IT_OUT, analyticsLocations: t }),
+        B = (0, C.A)({ scrollPosition: Q._F.TRY_IT_OUT, analyticsLocations: t }),
         Y = (0, l.useCallback)(() => {
             (0, y.openUserSettings)(A.X.PROFILE_PANEL, { analyticsLocations: t }, () =>
                 (0, g.L)({ analyticsLocations: t }),
@@ -130,8 +130,8 @@ let eR = function () {
             (0, v.A)({ subscriptionTier: $.pe.TIER_2, initialPlanId: $.gD.PREMIUM_GROUP_MONTH, analyticsLocations: t });
         }, [t]),
         V = (0, N.TM)(),
-        eC = j.A.getArticleURL(J.MVz.REFERRAL_PROGRAM),
-        { shouldShowBonusOrbsUX: eP, multiplier: eR } = (0, C.lk)(Z.rE.NITRO_HOME_MARKETING),
+        e_ = j.A.getArticleURL(J.MVz.REFERRAL_PROGRAM),
+        { shouldShowBonusOrbsUX: eP, multiplier: eR } = (0, _.lk)(Z.rE.NITRO_HOME_MARKETING),
         eA = l.useRef(null),
         ey = (0, x.b)("bento_box"),
         eE = (function () {
@@ -198,7 +198,7 @@ let eR = function () {
                     ? "https://cdn.discordapp.com/assets/content/a39efd6ebd57352a7cf6887285f4e13988cef7068f17d31bd4839fcbd54189e4.mov"
                     : "https://cdn.discordapp.com/assets/content/2951de28d84d4fcba8b5c4db54b094b98dca5bfb168d77d356e9896708768a5f.webm",
             },
-            orbRewards: { thumbnail: e_.A, assetUrl: ev.A },
+            orbRewards: { thumbnail: eC.A, assetUrl: ev.A },
             orbMultiplier: { thumbnail: eb, assetUrl: V ? em : ep },
             combinedOrbs: { thumbnail: eb, assetUrl: V ? em : ep },
             callOfDuty: { thumbnail: ef, assetUrl: ef },
@@ -222,7 +222,7 @@ let eR = function () {
             referralProgram: {
                 name: "referralProgram",
                 title: er.intl.string(er.t.tPY4o9),
-                description: er.intl.format(er.t.jRPQUH, { learnMoreLink: eC }),
+                description: er.intl.format(er.t.jRPQUH, { learnMoreLink: e_ }),
                 previewImage: eN.referralProgram.thumbnail,
                 videoUrl: eN.referralProgram.assetUrl,
             },

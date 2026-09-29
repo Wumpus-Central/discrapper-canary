@@ -15,8 +15,8 @@ var l = n(477900),
     f = n(297264),
     E = n(289873),
     S = n(890497),
-    y = n(398590),
-    I = n(717398),
+    I = n(398590),
+    y = n(717398),
     g = n(966327),
     A = n(674658),
     P = n(769015),
@@ -69,7 +69,7 @@ function el(e) {
         [A, P] = i.useState(!1),
         { isLoading: x, potentialRecipients: _ } = (function () {
             i.useEffect(() => {
-                (I.A.fetchRelationships(), (0, T.u)());
+                (y.A.fetchRelationships(), (0, T.u)());
             }, []);
             let { userAffinities: e, isLoading: t } = (0, u.cf)([N.A], () => ({
                     userAffinities: N.A.getUserAffinitiesMap(),
@@ -129,7 +129,7 @@ function el(e) {
             P(!1);
         }
         (h(),
-            (0, y.bz)(),
+            (0, I.bz)(),
             (e = {
                 recipients: i.recipients,
                 failedRecipients: i.failedRecipients,
@@ -213,7 +213,7 @@ function el(e) {
                         children: ee.intl.format(et.default.ZvgWUV, {
                             giftCount: r,
                             onInventoryClick: function () {
-                                (h(), (0, y.bz)(), (0, $.openUserSettings)(Q.X.GIFT_PANEL, { analyticsLocations: b }));
+                                (h(), (0, I.bz)(), (0, $.openUserSettings)(Q.X.GIFT_PANEL, { analyticsLocations: b }));
                             },
                         }),
                     }),
@@ -229,7 +229,7 @@ function el(e) {
                             disabled: es || A,
                             onClick: function () {
                                 (h(),
-                                    (0, y.bz)(),
+                                    (0, I.bz)(),
                                     null != eo
                                         ? (0, q.A)({
                                               product: eo,
@@ -276,7 +276,7 @@ function eo(e) {
             giftCodeDeliveryReady: s = !1,
             shouldUsePostPurchaseRecipientDelivery: o = !1,
             application: S,
-            sku: I,
+            sku: y,
             subscriptionPlan: A,
             selectedGiftStyle: v,
             onClose: _,
@@ -288,7 +288,7 @@ function eo(e) {
         [G, F] = i.useState(p.e.Modes.DEFAULT),
         B = (0, u.bG)([R.A], () => R.A.enabled),
         H = T || (null != v && null != N),
-        W = I?.productLine === er.EZt.COLLECTIBLES,
+        W = y?.productLine === er.EZt.COLLECTIBLES,
         {
             selectedGiftingPromotionRewards: Y,
             openGiftingBadgePostPurchaseModal: V,
@@ -297,7 +297,7 @@ function eo(e) {
         Z = (0, x.Mq)(A) && Y.length > 0,
         q = K && 0 === Y.length;
     function z() {
-        return null != A ? A.skuId : null != I ? I.id : null;
+        return null != A ? A.skuId : null != y ? y.id : null;
     }
     function Q() {
         let e;
@@ -330,7 +330,7 @@ function eo(e) {
                 mode: G,
                 text: e,
                 onCopy: (e) => {
-                    (null != I && (0, L.AK)(new b.A({ code: t, maxUses: 1 }), I),
+                    (null != y && (0, L.AK)(new b.A({ code: t, maxUses: 1 }), y),
                         (0, O.C)(
                             e,
                             () => F(p.e.Modes.SUCCESS),
@@ -415,7 +415,7 @@ function eo(e) {
                                               (0, l.jsx)(ec, {
                                                   giftCode: t,
                                                   onClose: () => {
-                                                      (_(), (0, y.bz)(), q && V());
+                                                      (_(), (0, I.bz)(), q && V());
                                                   },
                                               }),
                                           (0, l.jsx)("div", { className: es.yF }),
@@ -475,7 +475,7 @@ function eu(e) {
 function ec(e) {
     let { giftCode: t, onClose: n } = e;
     i.useEffect(() => {
-        (I.A.fetchRelationships(), (0, T.u)());
+        (y.A.fetchRelationships(), (0, T.u)());
     }, []);
     let [r, a] = i.useState(),
         [s, c] = i.useState(!1),
@@ -485,8 +485,8 @@ function ec(e) {
             isLoading: N.A.isFetching(),
         })),
         E = Array.from(h.keys()).sort((e, t) => N.A.compare(e, t)),
-        y = (0, u.bG)([j.A], () => j.A.getFriendIDs()),
-        A = o().difference(y, E),
+        I = (0, u.bG)([j.A], () => j.A.getFriendIDs()),
+        A = o().difference(I, E),
         P = [...E, ...A],
         x = (0, u.bG)([M.default], () => M.default.filter((e) => P.includes(e.id) && !e.bot), [P]);
     if (null == x || 0 === x.length) return null;

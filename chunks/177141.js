@@ -20,9 +20,9 @@ var i = n(536637),
     O = n(736056),
     D = n(952818),
     m = n(597643),
-    P = n(652896),
-    p = n(585510),
-    f = n(610136),
+    p = n(652896),
+    f = n(585510),
+    P = n(610136),
     M = n(229527),
     g = n(93474),
     h = n(164956),
@@ -35,25 +35,25 @@ var i = n(536637),
     v = n(243217),
     j = n(287809),
     q = n(158045);
-let b = !1;
-class X extends s.Ay.Store {
+let X = !1;
+class b extends s.Ay.Store {
     initialize() {
         this.waitFor(j.default);
     }
     static displayName = "SubscriptionRemindersStore";
     shouldShowReactivateNotice() {
         let e = j.default.getCurrentUser();
-        return !(0, q.TW)(e) && b;
+        return !(0, q.TW)(e) && X;
     }
 }
-let B = new X(c.h, {
+let B = new b(c.h, {
     BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_SUCCESS: function (e) {
         let { subscription: t } = e;
         if (null != t) {
             let e = v.A.createFromServer(t);
             if (null == (0, q.EL)(e) || e.metadata?.ended_at == null) return;
             let n = l()(e.metadata.ended_at);
-            l()().isBetween(n.clone().add(4, "days"), n.clone().add(11, "days")) && (b = !0);
+            l()().isBetween(n.clone().add(4, "days"), n.clone().add(11, "days")) && (X = !0);
         }
     },
 });
@@ -152,9 +152,9 @@ let eS = new eC(c.h, {
 var eO = n(696451),
     eD = n(317525),
     em = n(71393),
-    eP = n(25578),
-    ep = n(803224),
-    ef = n(576705),
+    ep = n(25578),
+    ef = n(803224),
+    eP = n(576705),
     eM = n(362790),
     eg = n(763827),
     eh = n(309010),
@@ -167,8 +167,8 @@ var eO = n(696451),
     ev = n(295405),
     ej = n(166403),
     eq = n(354670),
-    eb = n(147964),
-    eX = n(723702),
+    eX = n(147964),
+    eb = n(723702),
     eB = n(19575),
     ew = n(755439),
     eF = n(422033),
@@ -366,7 +366,7 @@ let te = [
 let tt = {
     [eA.kqX.GIFTING_PROMOTION_REMINDER]: { predicate: () => (0, F.MD)() },
     [eA.kqX.GUILD_RAID_NOTIFICATION]: {
-        predicate: () => (0, p.dj)().show && !e4(eA.kqX.GUILD_RAID_NOTIFICATION),
+        predicate: () => (0, f.dj)().show && !e4(eA.kqX.GUILD_RAID_NOTIFICATION),
         metadata: () => ({ dismissUntil: l()().add(3, "hours").toDate() }),
     },
     [eA.kqX.AUTOMOD_QUARANTINED_USER_PROFILE]: {
@@ -414,9 +414,9 @@ let tt = {
     [eA.kqX.NO_INPUT_DEVICES_DETECTED]: { predicate: () => S.A.hasActiveErrorOfType(C.iy.NO_INPUT_DEVICES) },
     [eA.kqX.VIDEO_BACKGROUND_UNAVAILABLE]: { predicate: () => eg.A.isConnected() && J.A.videoBackgroundUnavailable },
     [eA.kqX.HARDWARE_MUTE]: {
-        predicate: () => eg.A.isConnected() && eP.Ay.isHardwareMute() && eP.Ay.isHardwareMuteNoticeEnabled(),
+        predicate: () => eg.A.isConnected() && ep.Ay.isHardwareMute() && ep.Ay.isHardwareMuteNoticeEnabled(),
         metadata: () => {
-            let e = eP.Ay.getInputDeviceId(),
+            let e = ep.Ay.getInputDeviceId(),
                 t = ei.A.getVendor(e),
                 n = ei.A.getModel(e);
             if (null != t && null != n) return { vendor: t, model: n };
@@ -425,8 +425,8 @@ let tt = {
     [eA.kqX.PTT_NO_KEYBIND_WARNING]: {
         predicate: () =>
             !!eg.A.isConnected() &&
-            eP.Ay.getMode() === eA.TBI.PUSH_TO_TALK &&
-            !(eP.Ay.getSettings().modeOptions.shortcut.length > 0),
+            ep.Ay.getMode() === eA.TBI.PUSH_TO_TALK &&
+            !(ep.Ay.getSettings().modeOptions.shortcut.length > 0),
     },
     [eA.kqX.DISPATCH_ERROR]: {
         predicate: () => null != ew.A.getLastError(),
@@ -457,7 +457,7 @@ let tt = {
     },
     [eA.kqX.OUTBOUND_PROMOTION]: { predicate: () => (0, V.So)() },
     [eA.kqX.CORRUPT_INSTALLATION]: {
-        predicate: () => eX.isPlatformEmbedded && (!a.A.supported() || eV.A.isCorruptInstallation()),
+        predicate: () => eb.isPlatformEmbedded && (!a.A.supported() || eV.A.isCorruptInstallation()),
     },
     [eA.kqX.VIDEO_UNSUPPORTED_BROWSER]: {
         predicate: (e) => {
@@ -465,7 +465,7 @@ let tt = {
             return (
                 null != t &&
                 eG.A.hasVideo(t) &&
-                !eP.Ay.supports(eW.O5.VIDEO) &&
+                !ep.Ay.supports(eW.O5.VIDEO) &&
                 L.k.getConfig({ location: "NoticeStore.VIDEO_UNSUPPORTED_BROWSER" }).videoEnabled &&
                 !e4(eA.kqX.VIDEO_UNSUPPORTED_BROWSER)
             );
@@ -484,8 +484,8 @@ let tt = {
         metadata: () => eS.getDetectedOffPlatformPremiumPerks()[0],
     },
     [eA.kqX.STREAMER_MODE]: { predicate: () => ey.A.enabled },
-    [eA.kqX.DOWNLOAD_NAG]: { predicate: () => !eX.isPlatformEmbedded && !e4(eA.kqX.DOWNLOAD_NAG) },
-    [eA.kqX.QUEST_APP_UPSELL]: { predicate: () => (0, eX.isOculusWeb)() && !e4(eA.kqX.QUEST_APP_UPSELL) },
+    [eA.kqX.DOWNLOAD_NAG]: { predicate: () => !eb.isPlatformEmbedded && !e4(eA.kqX.DOWNLOAD_NAG) },
+    [eA.kqX.QUEST_APP_UPSELL]: { predicate: () => (0, eb.isOculusWeb)() && !e4(eA.kqX.QUEST_APP_UPSELL) },
     [eA.kqX.SCHEDULED_MAINTENANCE]: {
         predicate: () => null != eL.A.getScheduledMaintenance(),
         metadata: () => {
@@ -679,10 +679,10 @@ let tt = {
         },
     },
     [eA.kqX.APPLICATION_TEST_MODE]: {
-        predicate: () => null != eb.A.testModeApplicationId,
+        predicate: () => null != eX.A.testModeApplicationId,
         metadata: () => {
-            if (null == eb.A.testModeApplicationId) return {};
-            let e = eb.A.testModeApplicationId,
+            if (null == eX.A.testModeApplicationId) return {};
+            let e = eX.A.testModeApplicationId,
                 t = d.A.getApplication(e);
             return { applicationName: null != t ? t.name : e, applicationId: e };
         },
@@ -739,13 +739,13 @@ let tt = {
         predicate: () => {
             let e = et.A.getCurrentUserActiveStream();
             if (null == e) return !1;
-            let t = (0, P._z)(e),
+            let t = (0, p._z)(e),
                 n = Y.A.getStreamHeartbeatFailure(t);
             return null != n && Date.now() - n.firstFailedAt >= eK.tZ;
         },
         metadata: () => {
             let e = et.A.getCurrentUserActiveStream();
-            return { streamKey: null != e ? (0, P._z)(e) : null };
+            return { streamKey: null != e ? (0, p._z)(e) : null };
         },
     },
     [eA.kqX.CHECKOUT_RECOVERY_NAGBAR]: {
@@ -785,7 +785,7 @@ let tt = {
                 e4(eA.kqX.SYSTEM_SERVICE_WARNING) ||
                 !(0, z.yA)(D.Ay) ||
                 null == t ||
-                eP.Ay.getMode() !== eA.TBI.PUSH_TO_TALK
+                ep.Ay.getMode() !== eA.TBI.PUSH_TO_TALK
             )
                 return !1;
             let n = D.Ay.getVisibleGame();
@@ -795,7 +795,7 @@ let tt = {
     [eA.kqX.E2EE_UPDATE_REQUIRED]: {
         predicate: () => {
             if (e4(eA.kqX.E2EE_UPDATE_REQUIRED) || !eg.A.isConnected()) return !1;
-            let e = eP.Ay.getMediaEngine();
+            let e = ep.Ay.getMediaEngine();
             return 1 !== (e.getSupportedSecureFramesProtocolVersion?.() ?? 0);
         },
         metadata: () => ({ dismissUntil: l()().add(5, "days").toDate() }),
@@ -803,11 +803,11 @@ let tt = {
     [eA.kqX.WINDOWS_MEDIA_PACK_REQUIRED]: {
         predicate: () =>
             !(
-                !eX.isPlatformEmbedded ||
+                !eb.isPlatformEmbedded ||
                 u.A?.process.platform !== "win32" ||
                 e4(eA.kqX.WINDOWS_MEDIA_PACK_REQUIRED) ||
                 eB.Ay.getEnableHardwareAcceleration()
-            ) && !1 === eP.Ay.isH264MfDecodeAvailable(),
+            ) && !1 === ep.Ay.isH264MfDecodeAvailable(),
     },
     [eA.kqX.RIOT_MIGRATION]: {
         predicate: () => {
@@ -895,7 +895,7 @@ class tl extends s.Ay.Store {
     static displayName = "NoticeStore";
     initialize() {
         (this.syncWith(
-            [S.A, ek.Ay, eM.A, eS, eU.A, H.A, eq.A, y.default, er.A, $.A, f.A, Y.A, et.A, D.Ay, ee.A, S.A, T.A, k.A],
+            [S.A, ek.Ay, eM.A, eS, eU.A, H.A, eq.A, y.default, er.A, $.A, P.A, Y.A, et.A, D.Ay, ee.A, S.A, T.A, k.A],
             tn,
         ),
             this.waitFor(
@@ -916,18 +916,18 @@ class tl extends s.Ay.Store {
                 O.A,
                 m.A,
                 g.A,
-                f.A,
+                P.A,
                 eO.Ay,
                 T.A,
                 eD.A,
                 em.A,
                 h.A,
                 U.A,
-                eP.Ay,
-                ep.A,
+                ep.Ay,
+                ef.A,
                 k.A,
                 ev.A,
-                ef.A,
+                eP.A,
                 eM.A,
                 H.A,
                 Y.A,
@@ -941,7 +941,7 @@ class tl extends s.Ay.Store {
                 B,
                 ej.A,
                 ek.Ay,
-                eb.A,
+                eX.A,
                 eq.A,
                 ex.A,
                 $.A,

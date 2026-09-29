@@ -17,8 +17,8 @@ let E = [54, 8, 8, 8];
 function S(e) {
     let { onSelect: t, sound: n } = e,
         [r, S] = i.useState(!1),
-        y = i.useRef(null),
-        I = a()(f.Qq, f.Ow);
+        I = i.useRef(null),
+        y = a()(f.Qq, f.Ow);
     function g(e) {
         (S(!1), t?.(e));
     }
@@ -38,7 +38,7 @@ function S(e) {
         });
     }
     return (0, l.jsx)(u.Y, {
-        targetElementRef: y,
+        targetElementRef: I,
         shouldShow: r,
         position: "bottom",
         align: "left",
@@ -65,7 +65,7 @@ function S(e) {
             (0, l.jsx)(d.D, {
                 className: a()(f.kL, f.Ow),
                 onClick: () => S(!0),
-                innerRef: y,
+                innerRef: I,
                 children:
                     null == n
                         ? (0, l.jsxs)("div", {
@@ -79,7 +79,7 @@ function S(e) {
                                       height: 14,
                                   }),
                                   (0, l.jsx)(o.E, {
-                                      className: I,
+                                      className: y,
                                       variant: "text-sm/semibold",
                                       lineClamp: 1,
                                       children: C.intl.string(C.t.aThJz8),
@@ -90,13 +90,13 @@ function S(e) {
                               className: f.hQ,
                               children: [
                                   (0, l.jsx)(o.E, {
-                                      className: I,
+                                      className: y,
                                       variant: "text-sm/semibold",
                                       lineClamp: 1,
                                       children: n.emojiName,
                                   }),
                                   (0, l.jsx)(o.E, {
-                                      className: I,
+                                      className: y,
                                       variant: "text-sm/semibold",
                                       lineClamp: 1,
                                       children: n.name,

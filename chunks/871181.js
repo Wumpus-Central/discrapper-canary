@@ -1,4 +1,4 @@
-n.d(t, { A: () => I });
+n.d(t, { A: () => y });
 var l = n(477900),
     i = n(582128),
     r = n(503698),
@@ -15,8 +15,8 @@ var l = n(477900),
     f = n(375708),
     E = n(474055);
 let S = (0, p.createChannelRecord)({ id: "1", type: C.rbe.DM }),
-    y = (0, m.Ld)();
-function I(e) {
+    I = (0, m.Ld)();
+function y(e) {
     let {
             label: t = f.intl.string(f.t.B3miE8),
             onTextChange: n,
@@ -24,7 +24,7 @@ function I(e) {
             currentText: m,
             className: p,
             innerClassName: C,
-            disableThemedBackground: I = !1,
+            disableThemedBackground: y = !1,
         } = e,
         [g, A] = i.useState(r ?? m),
         [P, v] = i.useState((0, c.x7)(g)),
@@ -55,7 +55,7 @@ function I(e) {
                     (0, l.jsxs)(l.Fragment, {
                         children: [
                             (0, l.jsx)(d.Ay, {
-                                "aria-describedby": `${e.describedById} ${y}`,
+                                "aria-describedby": `${e.describedById} ${I}`,
                                 "aria-labelledby": e.labelId,
                                 innerClassName: a()(E.Tg, C),
                                 editorClassName: E.OT,
@@ -73,9 +73,9 @@ function I(e) {
                                 },
                                 focused: x.current,
                                 onSubmit: T,
-                                disableThemedBackground: I,
+                                disableThemedBackground: y,
                             }),
-                            (0, l.jsx)(o.A, { id: y, children: f.intl.format(f.t["+DFxLc"], { maxLength: h.Jo }) }),
+                            (0, l.jsx)(o.A, { id: I, children: f.intl.format(f.t["+DFxLc"], { maxLength: h.Jo }) }),
                         ],
                     }),
             }),

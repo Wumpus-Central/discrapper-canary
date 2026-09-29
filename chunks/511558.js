@@ -640,8 +640,8 @@ function e3(e) {
     });
 }
 var e8 = n(191023),
-    e6 = n(192308),
-    e5 = n(28863),
+    e5 = n(192308),
+    e6 = n(28863),
     e7 = n(695366),
     e4 = n(834730),
     e9 = n(789645),
@@ -675,7 +675,7 @@ function tu(e) {
         });
     function h() {
         (i(),
-            (0, e6.openModalLazy)(async () => {
+            (0, e5.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
                     n.e("161411"),
                     n.e("498640"),
@@ -690,7 +690,7 @@ function tu(e) {
             null != c && (0, tr.isWindows)() && !f
                 ? eG.intl.format(eG.t.udMTth, {
                       keybind: (0, ta.dI)(c.shortcut, !0),
-                      openSettingsHook: (e, t) => (0, l.jsx)(e5.Anchor, { onClick: h, children: e }, t),
+                      openSettingsHook: (e, t) => (0, l.jsx)(e6.Anchor, { onClick: h, children: e }, t),
                   })
                 : null;
     return null == p
@@ -716,7 +716,7 @@ var tc = n(817232),
     tm = n(468689);
 function tf(e) {
     (tm.default.open(e, ej.BEX.SOUNDBOARD),
-        (0, e6.openModalLazy)(async () => {
+        (0, e5.openModalLazy)(async () => {
             let { default: t } = await Promise.all([
                 n.e("860350"),
                 n.e("207998"),
@@ -1291,11 +1291,11 @@ function t_(e) {
             let e = g.A.getSoundById("3");
             null != e && V(e);
         }, []),
-        e6 = i.useCallback(() => {
+        e5 = i.useCallback(() => {
             let e = (0, G.Dd)(eO.PremiumTypes.TIER_2);
             return eG.intl.format(eG.t["tw/SSq"], { nitroTierName: e, onClick: e8 });
         }, [e8]),
-        e5 = i.useCallback((e) => (e2(e, t) ? tE : 32), [t, e2]),
+        e6 = i.useCallback((e) => (e2(e, t) ? tE : 32), [t, e2]),
         e7 = i.useCallback(
             (e) => {
                 let t = e === eB.length - 1;
@@ -1403,7 +1403,7 @@ function t_(e) {
                 ez
                     ? (0, l.jsx)(ee.d, {
                           showUpsell: eH,
-                          text: e6(),
+                          text: e5(),
                           button: ts(),
                           buttonAnalyticsObject: { section: ej.JJy.SOUND_PICKER_FLOATING_UPSELL },
                           leadingAction: (0, l.jsx)(en.l, {
@@ -1414,7 +1414,7 @@ function t_(e) {
                           }),
                       })
                     : null,
-            [e6, ts, ez, eH],
+            [e5, ts, ez, eH],
         ),
         ta = i.useCallback(
             (e) =>
@@ -1472,7 +1472,7 @@ function t_(e) {
                     renderCategoryList: ti,
                     renderHeaderAccessories: tl,
                     rowHeight: 48,
-                    sectionHeaderHeight: e5,
+                    sectionHeaderHeight: e6,
                     sectionFooterHeight: e7,
                     itemNodeWidth: 150,
                     gridNavigatorId: Z,

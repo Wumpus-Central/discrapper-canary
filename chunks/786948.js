@@ -15,8 +15,8 @@ var l = n(477900),
     f = n(830382),
     E = n(243217),
     S = n(158045),
-    y = n(652215),
-    I = n(202541);
+    I = n(652215),
+    y = n(202541);
 async function g(e) {
     let {
         onPurchaseAttempt: t,
@@ -47,7 +47,7 @@ async function g(e) {
     try {
         let e, n, i, O;
         if ((t(), r)) return;
-        if (T === y.VVm.ONE_TIME)
+        if (T === I.VVm.ONE_TIME)
             (a()(null != _, "SKU must exist and be fetched."),
                 a()(null != R, "invoicePreview must exist."),
                 (e = await (0, f.XU)(_.applicationId, _.id, {
@@ -72,7 +72,7 @@ async function g(e) {
             if (s) {
                 let t = R.total,
                     n = R.currency;
-                e = await (0, f.XU)(I.tv, d.skuId, {
+                e = await (0, f.XU)(y.tv, d.skuId, {
                     expectedAmount: t,
                     expectedCurrency: n,
                     paymentSource: g,
@@ -82,15 +82,15 @@ async function g(e) {
                     giftInfoOptions: j,
                     quantity: M,
                 });
-            } else if (null != g && null != P && P.status === y.Dmq.PAST_DUE && null != A) {
+            } else if (null != g && null != P && P.status === I.Dmq.PAST_DUE && null != A) {
                 let n = h.currency ?? R.currency;
-                e = y.AD1.has(g.type)
+                e = I.AD1.has(g.type)
                     ? await (0, c.LD)(P, A, g, n, b)
                     : await (0, c.nV)(P, { paymentSource: g, currency: n }, t, l, u, o, b);
             } else if (null != P) {
                 let n = (0, S.Pg)(P, d.id, 1, new Set(m)),
                     i = { paymentSource: g, currency: h.currency ?? R.currency };
-                (P.status === y.Dmq.PAUSED && (i.status = y.Dmq.ACTIVE),
+                (P.status === I.Dmq.PAUSED && (i.status = I.Dmq.ACTIVE),
                     P.isPausedAllowsResumeButNotUpdates || (i.items = n),
                     (e = await (0, c.nV)(P, i, t, l, u, o, b)));
             } else
@@ -150,7 +150,7 @@ class G {
         return {
             variant: "active",
             text:
-                this.init.purchaseType === y.VVm.SUBSCRIPTION
+                this.init.purchaseType === I.VVm.SUBSCRIPTION
                     ? D.intl.string(D.t.YScQSF)
                     : D.intl.string(U.default.BPzQj4),
             dataTestId: "purchase",
@@ -205,7 +205,7 @@ class G {
                     ...u,
                     tooltipText: D.intl.string(D.t.XdvBLS),
                     disabled: !0,
-                    onClick: y.tEg,
+                    onClick: I.tEg,
                     dataTestId: "submitButton",
                 };
     };
@@ -253,8 +253,8 @@ function W(e) {
                 C = null != c && p.some((e) => e.id === c && null != e.relocationCountry),
                 { application: f } = (0, k.V)(),
                 E = (0, R.bG)([M.A], () => M.A.getFetchState()),
-                S = (0, O.n)(f, y.gfo.EMBEDDED) && E === M.$.LOADING,
-                I = l ?? !1,
+                S = (0, O.n)(f, I.gfo.EMBEDDED) && E === M.$.LOADING,
+                y = l ?? !1,
                 g = (null != h || r) ?? !1,
                 A = i.useMemo(
                     () =>
@@ -274,8 +274,8 @@ function W(e) {
                     [m, n, a, t, o, C, c, u, s],
                 ),
                 P = i.useMemo(
-                    () => A.resolveReviewButtonProps({ loading: I, disabled: g, isApplicationDevShelfLoading: S }),
-                    [I, g, S, A],
+                    () => A.resolveReviewButtonProps({ loading: y, disabled: g, isApplicationDevShelfLoading: S }),
+                    [y, g, S, A],
                 );
             return (
                 i.useEffect(() => {
@@ -302,7 +302,7 @@ function Y(e) {
             planGroup: f = [],
             analyticsLocation: E,
             openInvoiceId: S,
-            metadata: I,
+            metadata: y,
             backButtonEligible: R,
             disablePurchase: M,
             onPaymentSourceAdd: O,
@@ -365,17 +365,17 @@ function Y(e) {
             selectedGiftingPromotionRewards: eE,
         } = (0, h.Pv)(),
         eS = (0, x.Mq)(eu),
-        ey = (0, N.lo)(ef),
-        eI = {};
-    ((eI.gift_style = em),
-        (eI.reward_sku_ids = eS ? eE : []),
-        ey === N.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD &&
+        eI = (0, N.lo)(ef),
+        ey = {};
+    ((ey.gift_style = em),
+        (ey.reward_sku_ids = eS ? eE : []),
+        eI === N.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD &&
             (a()(null != ef, "Gift recipient must be set at purchase review step for these gift options."),
-            (eI.recipient_id = ef.id),
-            (eI.custom_message = ep),
-            (eI.emoji_id = eh?.id),
-            (eI.emoji_name = eh?.id == null ? eh?.surrogates : void 0),
-            (eI.sound_id = eC?.soundId)));
+            (ey.recipient_id = ef.id),
+            (ey.custom_message = ep),
+            (ey.emoji_id = eh?.id),
+            (ey.emoji_name = eh?.id == null ? eh?.surrogates : void 0),
+            (ey.sound_id = eC?.soundId)));
     let eg = eu?.id,
         { analyticsLocations: eA } = (0, u.Ay)(),
         eP = (0, v.W)(eo, q),
@@ -392,7 +392,7 @@ function Y(e) {
     );
     let { hasEntitlements: eM } = (0, _.X)(eg, ed),
         eO = null;
-    $ === y.VVm.ONE_TIME &&
+    $ === I.VVm.ONE_TIME &&
         (a()(null != H, "SKU must be selected for one-time purchases"),
         (eO = ec[H] ?? null),
         a()(null != eO, "SKU must exist and be fetched."));
@@ -402,7 +402,7 @@ function Y(e) {
                 eT(!0),
                 s.h.wait(o.ET),
                 z(null),
-                T.default.track(y.HAw.PAYMENT_FLOW_COMPLETED, {
+                T.default.track(I.HAw.PAYMENT_FLOW_COMPLETED, {
                     ...n,
                     subtotal: Y?.subtotal,
                     tax: Y?.tax,
@@ -417,7 +417,7 @@ function Y(e) {
             (e) => {
                 (K(P.h.FAIL),
                     z(e),
-                    T.default.track(y.HAw.PAYMENT_FLOW_FAILED, {
+                    T.default.track(I.HAw.PAYMENT_FLOW_FAILED, {
                         ...n,
                         payment_error_code: e?.code,
                         payment_source_id: eP?.id,
@@ -516,17 +516,17 @@ function Y(e) {
             openInvoiceId: S,
             premiumSubscription: G ?? null,
             onNext: eF,
-            metadata: I,
+            metadata: y,
             sku: eO,
             purchaseType: $,
             referralCode: J,
             loadId: Z.loadId,
-            giftInfoOptions: eI,
+            giftInfoOptions: ey,
             invoicePreview: Y,
             quantity: X,
         });
     }
-    let eY = null != S || ($ === y.VVm.ONE_TIME && !ed),
+    let eY = null != S || ($ === I.VVm.ONE_TIME && !ed),
         eV = el ? (0, l.jsx)(j.E, { makePurchase: eW, isSubmitting: e_, setIsSubmitting: eT }) : null;
     return (0, l.jsx)(W, {
         stripeExpressCheckoutComponent: eV,

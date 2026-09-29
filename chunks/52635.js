@@ -36,13 +36,13 @@ function C(e) {
                 C = p?.productLine,
                 f = p?.applicationId,
                 E = (0, r.bG)([s.A], () => (C === h.EZt.SOCIAL_LAYER_GAME_ITEM ? s.A.getApplication(f) : null), [f, C]),
-                { fetched: S, hasAlreadyLinked: y } = (0, a.RD)(E);
+                { fetched: S, hasAlreadyLinked: I } = (0, a.RD)(E);
             return {
                 type: l,
                 purchaseButtonText: n ?? u,
                 applicationName: E?.name,
                 applicationId: f,
-                shouldAppendDisclaimer: i || (S && (o ? y : !y)),
+                shouldAppendDisclaimer: i || (S && (o ? I : !I)),
             };
         })({ skuId: t, purchaseButtonText: i, isGift: o, checkoutLegalType: p, hasSeparateAccountLinkNotice: C });
     return (0, l.jsx)(c._P, { variant: E, paymentSourceType: n, immediateDelivery: f });

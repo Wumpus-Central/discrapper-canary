@@ -15,8 +15,8 @@ var l,
     f = n(951305),
     E = n(419212),
     S = n(97352),
-    y = n(67480),
-    I = n(975571),
+    I = n(67480),
+    y = n(975571),
     g = n(158045),
     A = n(615396),
     P = n(573359),
@@ -185,7 +185,7 @@ function H(e) {
             startingIsInPastDueCheckout: e.startingIsInPastDueCheckout,
         })),
         { theme: Y } = (0, c.wR)(),
-        V = (0, o.bG)([y.A], () => (null != C ? y.A.get(C.id) : null)),
+        V = (0, o.bG)([I.A], () => (null != C ? I.A.get(C.id) : null)),
         K = (0, A.b2)(T),
         Z = H === k.uH.META_QUEST_WEB_REDIRECT_CHECKOUT;
     function q(e) {
@@ -243,7 +243,7 @@ function H(e) {
                           (0, i.jsx)("p", { children: U.intl.string(U.t["L9lcG/"]) }),
                           (0, i.jsx)("p", {
                               children: U.intl.format(U.t.EoDFuN, {
-                                  helpCenterLink: I.A.getArticleURL(L.MVz.FRACTIONAL_PREMIUM_ABOUT),
+                                  helpCenterLink: y.A.getArticleURL(L.MVz.FRACTIONAL_PREMIUM_ABOUT),
                               }),
                           }),
                       ],
@@ -257,7 +257,7 @@ function H(e) {
                           (0, i.jsx)("p", { children: U.intl.string(U.t.UPpbP3) }),
                           (0, i.jsx)("p", {
                               children: U.intl.format(U.t.EoDFuN, {
-                                  helpCenterLink: I.A.getArticleURL(L.MVz.FRACTIONAL_PREMIUM_ABOUT),
+                                  helpCenterLink: y.A.getArticleURL(L.MVz.FRACTIONAL_PREMIUM_ABOUT),
                               }),
                           }),
                       ],
@@ -346,15 +346,15 @@ function W(e) {
         m = (0, o.bG)([S.A], () => S.A.get(t));
     s()(null != m, "Missing plan");
     let p = (0, o.bG)([E.A], () => E.A.getGiftCode(m.skuId)),
-        { quantity: y, checkoutSessionId: I } = (0, h.t4)((e) => ({
+        { quantity: I, checkoutSessionId: y } = (0, h.t4)((e) => ({
             quantity: e.quantity,
             checkoutSessionId: e.contextMetadata.loadId,
         })),
-        g = (0, o.bG)([E.A], () => E.A.isGiftCodeDeliveryReady(I), [I]);
+        g = (0, o.bG)([E.A], () => E.A.isGiftCodeDeliveryReady(y), [y]);
     return (0, i.jsx)(C.A, {
         giftCode: p,
-        giftCount: y,
-        checkoutSessionId: I,
+        giftCount: I,
+        checkoutSessionId: y,
         giftCodeDeliveryReady: g,
         shouldUsePostPurchaseRecipientDelivery: l,
         subscriptionPlan: m,

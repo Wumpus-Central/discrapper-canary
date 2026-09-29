@@ -1,4 +1,4 @@
-l.d(t, { A: () => _ });
+l.d(t, { A: () => C });
 var i = l(435558),
     a = l.n(i),
     n = l(17928),
@@ -8,9 +8,9 @@ var i = l(435558),
     h = l(38910);
 let d = {},
     o = 0,
-    u = !1,
-    f = !1;
-function p(e) {
+    _ = !1,
+    u = !1;
+function S(e) {
     let t = null != e.contact_names && e.contact_names.length >= 2 ? e.contact_names.slice(0, 2) : [];
     return {
         key: e.suggested_user.id,
@@ -20,7 +20,7 @@ function p(e) {
         contactNames: t,
     };
 }
-class S extends n.Ay.Store {
+class p extends n.Ay.Store {
     static displayName = "FriendSuggestionStore";
     initialize() {
         this.waitFor(c.default);
@@ -38,17 +38,17 @@ class S extends n.Ay.Store {
         return d[e];
     }
 }
-let _ = new S(s.h, {
+let C = new p(s.h, {
     CONNECTION_OPEN: function (e) {
         ((d = {}),
             (o = e.friendSuggestionCount) > 0
-                ? ((f = !0), !u && f && ((u = !0), (f = !1), h.A.fetch()))
+                ? ((u = !0), !_ && u && ((_ = !0), (u = !1), h.A.fetch()))
                 : (function () {
                       arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
                   })());
     },
     FRIEND_SUGGESTION_CREATE: function (e) {
-        let t = p(e.suggestion);
+        let t = S(e.suggestion);
         if (null != d[t.key]) return !1;
         (o++, (d = { ...d, [t.key]: t }));
     },
@@ -57,16 +57,16 @@ let _ = new S(s.h, {
     },
     LOAD_FRIEND_SUGGESTIONS_SUCCESS: function (e) {
         var t;
-        ((u = !1),
+        ((_ = !1),
             (t = e.suggestions),
             (d = a()
                 .chain(t)
-                .map((e) => p(e))
+                .map((e) => S(e))
                 .keyBy((e) => e.key)
                 .value()),
             (o = a().keys(d).length));
     },
     LOAD_FRIEND_SUGGESTIONS_FAILURE: function () {
-        ((u = !1), (d = {}));
+        ((_ = !1), (d = {}));
     },
 });

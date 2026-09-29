@@ -20,9 +20,9 @@ var I = n(736653),
     O = n(772680),
     D = n(281020),
     m = n(206828),
-    P = n(49999),
-    p = n(121286),
-    f = n(375708),
+    p = n(49999),
+    f = n(121286),
+    P = n(375708),
     M = n(971656);
 let g =
     221552 == n.j
@@ -42,15 +42,15 @@ let g =
                   k = y?.name,
                   { startAuthorization: x, canStartAuthorization: G, hasAlreadyLinked: v, fetched: j } = (0, m.RD)(y),
                   { analyticsLocations: q } = (0, R.Ay)(N.A.NOTICE),
-                  b = null == a ? U : a;
+                  X = null == a ? U : a;
               if (
                   (l.useEffect(() => {
-                      v && j && (null != L && (0, D.M8)(L), t(P.i.INDIRECT_ACTION));
+                      v && j && (null != L && (0, D.M8)(L), t(p.i.INDIRECT_ACTION));
                   }, [v, j, t, L]),
                   null == y || !G || !j || v)
               )
                   return null;
-              function X() {
+              function b() {
                   null != y &&
                       (0, O.RI)({
                           applicationId: y.id,
@@ -70,15 +70,15 @@ let g =
                       (0, i.jsx)(A.PM, {
                           noticeType: E,
                           onClick: () => {
-                              t(P.i.USER_DISMISS);
+                              t(p.i.USER_DISMISS);
                           },
                       }),
                       (0, i.jsx)("img", {
-                          src: "light" === h ? b?.icon.blackSVG : b?.icon.whiteSVG,
+                          src: "light" === h ? X?.icon.blackSVG : X?.icon.whiteSVG,
                           alt: k,
                           className: c()(M.tV, M.Y5),
                       }),
-                      f.intl.format(p.default.qV9zT6, {
+                      P.intl.format(f.default.qV9zT6, {
                           connectionName: U?.name,
                           orbsIconHook: () =>
                               (0, i.jsx)(d.C, {
@@ -90,16 +90,16 @@ let g =
                       }),
                       (0, i.jsx)(A.Z_, {
                           onClick: function () {
-                              x({ analyticsLocations: q, onSuccess: X });
+                              x({ analyticsLocations: q, onSuccess: b });
                           },
                           className: M.NS,
                           noticeType: E,
-                          children: f.intl.string(p.default.ZeOhh9),
+                          children: P.intl.string(f.default.ZeOhh9),
                       }),
                       (0, i.jsx)(A.zr, {
-                          onClick: () => r(P.i.USER_DISMISS),
+                          onClick: () => r(p.i.USER_DISMISS),
                           className: M.go,
-                          children: f.intl.string(p.default["8qJAeT"]),
+                          children: P.intl.string(f.default["8qJAeT"]),
                       }),
                   ],
               });
@@ -115,8 +115,8 @@ var h = n(521790),
     v = n(635995),
     j = n(99462),
     q = n(202541),
-    b = n(652215);
-let X =
+    X = n(652215);
+let b =
     221552 == n.j
         ? function (e) {
               let { dismissCurrentNotice: t, subscriptionTier: n } = e,
@@ -131,8 +131,8 @@ let X =
                   : (0, i.jsxs)(v.T0, {
                         onClick: () => {
                             (t(),
-                                k.default.track(b.HAw.APP_NOTICE_CLOSED, {
-                                    notice_type: b.kqX.PREMIUM_TIER_2_DISCOUNT_ENDING,
+                                k.default.track(X.HAw.APP_NOTICE_CLOSED, {
+                                    notice_type: X.kqX.PREMIUM_TIER_2_DISCOUNT_ENDING,
                                 }));
                         },
                         children: [
@@ -143,13 +143,13 @@ let X =
                                         subscriptionTier: n,
                                         analyticsLocations: l,
                                         analyticsObject: {
-                                            page: b.liQ.IN_APP,
-                                            section: b.JJy.NOTIFICATION_BAR,
-                                            object: b.ZSU.BUTTON_CTA,
+                                            page: X.liQ.IN_APP,
+                                            section: X.JJy.NOTIFICATION_BAR,
+                                            object: X.ZSU.BUTTON_CTA,
                                         },
                                     });
                                 },
-                                text: f.intl.string(f.t.zLXssK),
+                                text: P.intl.string(P.t.zLXssK),
                             }),
                         ],
                     });
@@ -162,16 +162,16 @@ var B = n(745299),
     H = n(595529);
 function K(e) {
     switch (e) {
-        case b.kqX.PREMIUM_TIER_2_TRIAL_ENDING:
+        case X.kqX.PREMIUM_TIER_2_TRIAL_ENDING:
             let t = w.A.getAlmostExpiringTrialOffersForReminder([q.pe.TIER_2]);
             return { cooldownDurationMs: (0, F.e1)(t[0]) };
-        case b.kqX.PREMIUM_TIER_2_DISCOUNT_ENDING:
+        case X.kqX.PREMIUM_TIER_2_DISCOUNT_ENDING:
             let n = w.A.getAlmostExpiringDiscountOffersForReminder([q.pe.TIER_2]);
             return { cooldownDurationMs: (0, F.e1)(n[0]) };
-        case b.kqX.RIOT_MIGRATION:
-        case b.kqX.RIOT_CONNECTION_DEPRECATION_ADMIN:
-        case b.kqX.BATTLENET_MIGRATION:
-        case b.kqX.BATTLENET_LINKED_ROLE_DEPRECATION:
+        case X.kqX.RIOT_MIGRATION:
+        case X.kqX.RIOT_CONNECTION_DEPRECATION_ADMIN:
+        case X.kqX.BATTLENET_MIGRATION:
+        case X.kqX.BATTLENET_LINKED_ROLE_DEPRECATION:
             return { cooldownDurationMs: 6048e5 };
         default:
             return { cooldownDurationMs: 1 / 0 };
@@ -181,70 +181,70 @@ function Y(e) {
     let { dismissibleContent: t, noticeType: n } = e,
         r = l.useMemo(() => K(n), [n]),
         E = s()().add(5, "days").toDate(),
-        [c, u] = (0, H.Bo)(t, r, P.m.NOTICE_BAR);
+        [c, u] = (0, H.Bo)(t, r, p.m.NOTICE_BAR);
     if (null == c) return null;
     switch (c) {
         case a.M.NAGBAR_NOTICE_OFFER_EXPIRING:
-            if (n === b.kqX.PREMIUM_TIER_2_TRIAL_ENDING)
+            if (n === X.kqX.PREMIUM_TIER_2_TRIAL_ENDING)
                 return (0, i.jsx)(B.A, {
                     dismissCurrentNotice: () => {
-                        (u(P.i.USER_DISMISS), (0, U.w)(E));
+                        (u(p.i.USER_DISMISS), (0, U.w)(E));
                     },
                     subscriptionTier: q.pe.TIER_2,
                 });
-            if (n === b.kqX.PREMIUM_TIER_2_DISCOUNT_ENDING)
-                return (0, i.jsx)(X, {
+            if (n === X.kqX.PREMIUM_TIER_2_DISCOUNT_ENDING)
+                return (0, i.jsx)(b, {
                     dismissCurrentNotice: () => {
-                        (u(P.i.USER_DISMISS), (0, U.w)(E));
+                        (u(p.i.USER_DISMISS), (0, U.w)(E));
                     },
                     subscriptionTier: q.pe.TIER_2,
                 });
             break;
         case a.M.RIOT_CONNECTION_DEPRECATION:
             return (0, i.jsx)(g, {
-                noticeType: b.kqX.RIOT_MIGRATION,
+                noticeType: X.kqX.RIOT_MIGRATION,
                 markAsDismissed: (e) => {
                     ((0, V.Dr)(a.M.RIOT_CONNECTION_DEPRECATION_DISABLE), u(e));
                 },
                 recurringDismiss: (e) => {
                     u(e);
                 },
-                platformTypes: [b.fg2.LEAGUE_OF_LEGENDS, b.fg2.RIOT_GAMES],
-                platformIconOverride: o.A.get(b.fg2.RIOT_GAMES),
+                platformTypes: [X.fg2.LEAGUE_OF_LEGENDS, X.fg2.RIOT_GAMES],
+                platformIconOverride: o.A.get(X.fg2.RIOT_GAMES),
             });
         case a.M.RIOT_CONNECTION_DEPRECATION_ADMIN:
             return (0, i.jsx)(h.Ay, {
-                noticeType: b.kqX.RIOT_CONNECTION_DEPRECATION_ADMIN,
+                noticeType: X.kqX.RIOT_CONNECTION_DEPRECATION_ADMIN,
                 markAsDismissed: (e) => {
                     ((0, V.Dr)(a.M.RIOT_CONNECTION_DEPRECATION_ADMIN_DISABLE), u(e));
                 },
                 recurringDismiss: (e) => {
                     u(e);
                 },
-                platformType: b.fg2.RIOT_GAMES,
+                platformType: X.fg2.RIOT_GAMES,
             });
         case a.M.BATTLENET_CONNECTION_DEPRECATION:
             return (0, i.jsx)(g, {
-                noticeType: b.kqX.BATTLENET_MIGRATION,
+                noticeType: X.kqX.BATTLENET_MIGRATION,
                 markAsDismissed: (e) => {
                     ((0, V.Dr)(a.M.BATTLENET_CONNECTION_DEPRECATION_DISABLE), u(e));
                 },
                 recurringDismiss: (e) => {
                     u(e);
                 },
-                platformTypes: [b.fg2.BATTLENET],
-                platformIconOverride: o.A.get(b.fg2.BATTLENET),
+                platformTypes: [X.fg2.BATTLENET],
+                platformIconOverride: o.A.get(X.fg2.BATTLENET),
             });
         case a.M.BATTLENET_CONNECTION_DEPRECATION_LINKED_ROLES:
             return (0, i.jsx)(h.Ay, {
-                noticeType: b.kqX.BATTLENET_LINKED_ROLE_DEPRECATION,
+                noticeType: X.kqX.BATTLENET_LINKED_ROLE_DEPRECATION,
                 markAsDismissed: (e) => {
                     ((0, V.Dr)(a.M.BATTLENET_CONNECTION_DEPRECATION_LINKED_ROLES_DISABLE), u(e));
                 },
                 recurringDismiss: (e) => {
                     u(e);
                 },
-                platformType: b.fg2.BATTLENET,
+                platformType: X.fg2.BATTLENET,
             });
     }
 }

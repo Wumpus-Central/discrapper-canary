@@ -21,7 +21,7 @@ function o(e) {
             metadata: u,
         }),
         S = C ? c : f,
-        y = l.useMemo(() => {
+        I = l.useMemo(() => {
             let e = d ? (S ?? null) : null;
             return {
                 discountOffer: m,
@@ -38,13 +38,13 @@ function o(e) {
         })),
         l.useEffect(
             () => (
-                t(y),
+                t(I),
                 () => {
                     t(r.TI);
                 }
             ),
-            [y, t],
+            [I, t],
         ),
-        y
+        I
     );
 }

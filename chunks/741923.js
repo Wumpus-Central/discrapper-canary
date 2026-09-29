@@ -1,4 +1,4 @@
-n.d(t, { _5: () => I, rV: () => A });
+n.d(t, { _5: () => y, rV: () => A });
 var l = n(477900),
     i = n(582128),
     r = n(20742),
@@ -20,9 +20,9 @@ var m = n(211287),
 let f = new Set([h.C.COLLECTIBLES_CHECKOUT, h.C.SLAYER_STOREFRONT_CHECKOUT]);
 var E = n(169797),
     S = n(375708);
-let y = i.createContext({ order: null, isOrderCreationEnabled: !1 });
-function I() {
-    return i.useContext(y);
+let I = i.createContext({ order: null, isOrderCreationEnabled: !1 });
+function y() {
+    return i.useContext(I);
 }
 function g(e) {
     let { renderModalProps: t, children: n } = e,
@@ -37,7 +37,7 @@ function A(e) {
             paymentGateway: a,
             checkoutFlow: h,
             isGift: E,
-            onOrderCreated: I,
+            onOrderCreated: y,
             renderModalProps: A,
             children: P,
         } = e,
@@ -60,10 +60,10 @@ function A(e) {
                 } = e,
                 E = m.A.useConfig({ location: "payment_modal" }).enabled,
                 S = d.useConfig({ location: "payment_modal" }).enabled,
-                y = r === C.kM.VIRTUAL_CURRENCY,
-                I = null != a && f.has(a);
-            t = y ? E : !!I && !0 !== s && S;
-            let g = y && E,
+                I = r === C.kM.VIRTUAL_CURRENCY,
+                y = null != a && f.has(a);
+            t = I ? E : !!y && !0 !== s && S;
+            let g = I && E,
                 A = null != n ? n[0] : void 0,
                 [P, v] = (0, i.useState)(null),
                 [x, _] = (0, i.useState)(null),
@@ -110,7 +110,7 @@ function A(e) {
             checkoutFlow: h,
             isGift: E,
             loadId: t,
-            onOrderCreated: I,
+            onOrderCreated: y,
         }),
         b = i.useMemo(() => ({ order: v, isOrderCreationEnabled: N }), [v, N]);
     if (T) {
@@ -121,5 +121,5 @@ function A(e) {
                 children: (0, l.jsx)(s.E, { variant: "text-md/normal", children: S.intl.string(S.t.F8FvUy) }),
             });
     }
-    return (0, l.jsx)(y.Provider, { value: b, children: P });
+    return (0, l.jsx)(I.Provider, { value: b, children: P });
 }
