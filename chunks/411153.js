@@ -1,4 +1,4 @@
-n.d(t, { Ag: () => u, Ay: () => d, QO: () => c, pq: () => o });
+n.d(t, { Ag: () => u, Ay: () => d, QO: () => _, pq: () => o });
 var l = n(536637),
     r = n.n(l),
     a = n(315069),
@@ -8,11 +8,12 @@ var l = n(536637),
 function u(e) {
     if (e === E.F_X.ALL) return E.GaG.ALL;
     if (e <= E.F_X.GUILD_UPDATE) return E.GaG.GUILD;
-    if (e <= E.F_X.CHANNEL_DELETE || e === E.F_X.MESSAGE_BULK_DELETE) return E.GaG.CHANNEL;
+    if (e <= E.F_X.CHANNEL_DELETE || e === E.F_X.MESSAGE_BULK_DELETE || e === E.F_X.CHANNEL_POSITION_UPDATE)
+        return E.GaG.CHANNEL;
     if (e <= E.F_X.CHANNEL_OVERWRITE_DELETE) return E.GaG.CHANNEL_OVERWRITE;
     if (e <= E.F_X.BOT_ADD || e === E.F_X.MESSAGE_DELETE || e === E.F_X.MESSAGE_PIN || e === E.F_X.MESSAGE_UNPIN)
         return E.GaG.USER;
-    else if (e <= E.F_X.ROLE_DELETE) return E.GaG.ROLE;
+    else if (e <= E.F_X.ROLE_DELETE || e === E.F_X.ROLE_POSITION_UPDATE) return E.GaG.ROLE;
     else if (e <= E.F_X.INVITE_DELETE) return E.GaG.INVITE;
     else if (e <= E.F_X.WEBHOOK_DELETE) return E.GaG.WEBHOOK;
     else if (e <= E.F_X.EMOJI_DELETE) return E.GaG.EMOJI;
@@ -95,9 +96,11 @@ function o(e) {
         case E.F_X.GUILD_UPDATE:
         case E.F_X.CHANNEL_UPDATE:
         case E.F_X.CHANNEL_OVERWRITE_UPDATE:
+        case E.F_X.CHANNEL_POSITION_UPDATE:
         case E.F_X.MEMBER_UPDATE:
         case E.F_X.MEMBER_ROLE_UPDATE:
         case E.F_X.ROLE_UPDATE:
+        case E.F_X.ROLE_POSITION_UPDATE:
         case E.F_X.INVITE_UPDATE:
         case E.F_X.WEBHOOK_UPDATE:
         case E.F_X.EMOJI_UPDATE:
@@ -127,7 +130,7 @@ function o(e) {
     }
     return E.RWi.ALL;
 }
-class c {
+class _ {
     key;
     oldValue;
     newValue;
@@ -136,7 +139,7 @@ class c {
         ((this.key = e), (this.oldValue = t), (this.newValue = n));
     }
 }
-class _ extends a.A {
+class c extends a.A {
     id;
     actionType;
     action;
@@ -165,4 +168,4 @@ class _ extends a.A {
             (this.user = e.user ?? null));
     }
 }
-let d = _;
+let d = c;
