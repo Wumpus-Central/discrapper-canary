@@ -595,6 +595,13 @@ let n = [
             "Plan cards have an Approve button that starts the build. To change the plan, type what you want different.",
     },
     {
+        date: "2026-09-28",
+        time: "20:30",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "Plan cards now say Conjure it! on the button, with a reminder beside it that you can tell Conjure what to change.",
+    },
+    {
         date: "2026-08-31",
         time: "00:03",
         platforms: ["desktop", "mobile"],

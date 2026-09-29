@@ -976,7 +976,10 @@
 }
 
 .actions_af6837 {
-    display: flex
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-8) var(--space-12)
 }
 
 .panel_c5030f {
@@ -1407,4 +1410,4 @@
     }
 }
 
-/*# sourceMappingURL=d700c7e2c050b219.css.map*/
+/*# sourceMappingURL=0d8cb541268cf7c2.css.map*/

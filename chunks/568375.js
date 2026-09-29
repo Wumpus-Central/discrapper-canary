@@ -895,14 +895,22 @@ function tu(e) {
                 (0, n.jsx)(tr, { label: C.intl.string(E.default.ieqTtP), names: l.bot_permissions ?? [] }),
                 (0, n.jsx)(tr, { label: C.intl.string(E.default.Cn9qix), names: l.privileged_intents ?? [] }),
                 null != a
-                    ? (0, n.jsx)("div", {
+                    ? (0, n.jsxs)("div", {
                           className: tl.o1,
-                          children: (0, n.jsx)(X.$, {
-                              variant: "primary",
-                              size: "sm",
-                              text: C.intl.string(E.default["hG0Y0+"]),
-                              onClick: a,
-                          }),
+                          children: [
+                              (0, n.jsx)(X.$, {
+                                  variant: "primary",
+                                  size: "sm",
+                                  text: C.intl.string(E.default["hG0Y0+"]),
+                                  onClick: a,
+                              }),
+                              (0, n.jsx)(v.E, {
+                                  variant: "text-sm/normal",
+                                  color: "text-muted",
+                                  tag: "span",
+                                  children: C.intl.string(E.default.Vl3IL0),
+                              }),
+                          ],
                       })
                     : null,
             ],
