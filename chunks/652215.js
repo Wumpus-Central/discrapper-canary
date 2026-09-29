@@ -5214,6 +5214,7 @@ var rb =
         (ew.SHOP_CARD_HOVERED = "shop_card_hovered"),
         (ew.SHOP_PRODUCT_DETAIL_PAGE_CLICKED = "shop_product_detail_page_clicked"),
         (ew.SHOP_CARD_CLICKED = "shop_card_clicked"),
+        (ew.SHOP_COLLECT_AND_CLAIM_TAKEOVER_PROMOTION_ACTION = "shop_collect_and_claim_takeover_promotion_action"),
         (ew.SLIDE_CAROUSEL_ITEM_VIEWED = "slide_carousel_item_viewed"),
         (ew.SLIDE_CAROUSEL_PAGINATION_CLICKED = "slide_carousel_pagination_clicked"),
         (ew.SHOP_HEADER_CAROUSEL_CTA_CLICKED = "shop_header_carousel_cta_clicked"),
