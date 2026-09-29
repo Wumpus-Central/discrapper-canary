@@ -1478,7 +1478,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e6 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eW.A().log(
-    `[BUILD INFO] Release Channel: ${e6}, Build Number: 625054, Version Hash: 1a7044533bca6eb3f73af45f096531d427e39f33`,
+    `[BUILD INFO] Release Channel: ${e6}, Build Number: 625056, Version Hash: 824dcfeb886a84b2336862bb72ce6ea2b853b1e6`,
 ),
     M.A.setTags({ appContext: F.QCW }),
     ep.A.initBasic(),
@@ -21075,6 +21075,7 @@ function Nu(e) {
         graphic: { type: "image", src: o },
         size: "md",
         shouldShow: !i,
+        alignmentStrategy: "edge",
         align: "top",
         position: "right",
         gradientColor: "nitro-pink",
@@ -21121,6 +21122,7 @@ function N_(e) {
         graphic: { type: "image", src: Nd.A },
         size: "md",
         shouldShow: r && !i,
+        alignmentStrategy: "edge",
         align: "top",
         position: "right",
         gradientColor: "nitro-pink",
@@ -21836,7 +21838,7 @@ let N9 = "isHideDevBanner",
                     className: to()(N8.Wz, N8.mr),
                     children: [
                         (0, y.jsx)(N7, { className: N8.Kk }),
-                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "625054" }),
+                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "625056" }),
                         (0, y.jsx)(r, {}),
                     ],
                 })
