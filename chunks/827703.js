@@ -22,8 +22,8 @@ var a,
     h = l(635358),
     x = l(702841),
     f = l(834730),
-    g = l(28863),
-    y = l(231723),
+    y = l(28863),
+    g = l(231723),
     v = l(228366),
     E = l(830382),
     S = l(73825),
@@ -67,7 +67,7 @@ function R(e) {
             (0, s.jsx)(f.E, { variant: "text-md/normal", children: e.text }),
             (0, s.jsx)("div", {
                 style: { marginTop: 16 },
-                children: (0, s.jsx)(g.Anchor, {
+                children: (0, s.jsx)(y.Anchor, {
                     onClick: () => e.handleStepChange(e.originStep),
                     children: "\u2190 Go Back",
                 }),
@@ -109,7 +109,7 @@ function M(e) {
                     children: (0, s.jsx)(
                         A.q,
                         {
-                            transitionState: y.ip.ENTERED,
+                            transitionState: g.ip.ENTERED,
                             onClose: i,
                             onComplete: r,
                             applicationId: l,
@@ -178,7 +178,7 @@ function z(e) {
                 children: [
                     void 0 !== n &&
                         (0, s.jsxs)(f.E, { variant: "text-xs/normal", className: H.D5, children: [n, "\xa0"] }),
-                    (0, s.jsx)(g.Anchor, {
+                    (0, s.jsx)(y.Anchor, {
                         target: "_blank",
                         rel: "author",
                         href: w.A.getArticleURL(N.MVz.ORBS_FAQ),
@@ -237,6 +237,15 @@ let Q = {
                 { label: "Selected", value: Z.k7.SELECTED },
             ],
             defaultValue: Z.k7.DEFAULT,
+        },
+        variant: {
+            label: "Variant",
+            type: "select",
+            options: [
+                { label: "Default", value: "default" },
+                { label: "Overlay Secondary", value: "overlay-secondary" },
+            ],
+            defaultValue: "default",
         },
         showNotificationBadge: { label: "Show Notification Badge", type: "boolean", defaultValue: !1 },
         shouldUseTabularNums: { label: "Use Tabular Nums Font Variant", type: "boolean", defaultValue: !1 },
@@ -379,8 +388,8 @@ var es = l(488428),
     eh = l(95477),
     ex = l(866665),
     ef = l(270003),
-    eg = l(289873),
-    ey = l(20742),
+    ey = l(289873),
+    eg = l(20742),
     ev = l(192308),
     eE = l(297264),
     eS = l(277984),
@@ -477,7 +486,7 @@ let ez = {
                     r = n.map((e) => ({ id: e.id, value: e, label: e.name })),
                     [o, m] = u.useState(r.length > 0 ? r[0].value : null),
                     [b, h] = u.useState(""),
-                    [x, y] = u.useState({ plan_id: eG.gD.PREMIUM_MONTH_TIER_2, gift: "true" }),
+                    [x, g] = u.useState({ plan_id: eG.gD.PREMIUM_MONTH_TIER_2, gift: "true" }),
                     v = "true" !== x.gift && null != i,
                     [E, j] = u.useState(r.length > 0 ? r[0].value : null),
                     { analyticsLocations: C } = (0, p.Ay)(c.A.PAYMENT_FLOW_TEST_PAGE),
@@ -571,7 +580,7 @@ let ez = {
                                     direction: "vertical",
                                     gap: 8,
                                     children: [
-                                        (0, s.jsx)(g.Anchor, {
+                                        (0, s.jsx)(y.Anchor, {
                                             href: "https://i.dis.gd/createPromo",
                                             children: "How to create promotion",
                                         }),
@@ -623,7 +632,7 @@ let ez = {
                                                 },
                                             ],
                                             onSelectionChange: (e) => {
-                                                y((t) => ({ ...t, plan_id: e }));
+                                                g((t) => ({ ...t, plan_id: e }));
                                             },
                                             selectionMode: "single",
                                             fullWidth: !0,
@@ -636,7 +645,7 @@ let ez = {
                                                 { id: "not_gift", value: "false", label: "Not Gift" },
                                             ],
                                             onSelectionChange: (e) => {
-                                                y((t) => ({ ...t, gift: e }));
+                                                g((t) => ({ ...t, gift: e }));
                                             },
                                             selectionMode: "single",
                                             fullWidth: !0,
@@ -671,7 +680,7 @@ let ez = {
                                                 k
                                                     ? (0, s.jsx)("div", {
                                                           className: J.wG,
-                                                          children: (0, s.jsx)(eg.y, { type: eg.t.SPINNING_CIRCLE }),
+                                                          children: (0, s.jsx)(ey.y, { type: ey.t.SPINNING_CIRCLE }),
                                                       })
                                                     : (0, s.jsxs)("div", {
                                                           className: J.dB,
@@ -881,7 +890,7 @@ let ez = {
                                                         key: m.pn.PLAN_SELECT,
                                                         renderStep: () => (0, s.jsx)(eF, {}),
                                                         renderHeader: () =>
-                                                            (0, s.jsx)(ey.rQ, {
+                                                            (0, s.jsx)(eg.rQ, {
                                                                 title: "Checkout Error Boundary Test",
                                                             }),
                                                     },
@@ -1095,7 +1104,7 @@ let e6 = { isGift: { label: "Is Gift", type: "boolean", defaultValue: !1 } },
             u.useEffect(() => {
                 h.current || null == p || ((h.current = !0), b(p));
             }, [p, m]);
-            let { isLoadedForPremiumSKUs: f, selectedPlan: g } = (function (e) {
+            let { isLoadedForPremiumSKUs: f, selectedPlan: y } = (function (e) {
                 let { subscriptionPlanId: t } = e;
                 u.useEffect(() => {
                     I.A.isLoadedForPremiumSKUs() || v.h.wait(() => (0, S.zS)());
@@ -1106,7 +1115,7 @@ let e6 = { isGift: { label: "Is Gift", type: "boolean", defaultValue: !1 } },
                     selectedPlan: l,
                 };
             })({ subscriptionPlanId: m });
-            return !o && null != d && f && c && null != g
+            return !o && null != d && f && c && null != y
                 ? (0, s.jsxs)("div", {
                       className: J.Cd,
                       children: [
@@ -1183,7 +1192,7 @@ let ts = {
                         autoplay: n,
                         orientation: l,
                         renderOverlay: p,
-                        parentTransitionState: y.ip.ENTERED,
+                        parentTransitionState: g.ip.ENTERED,
                     }),
                 }),
                 (0, s.jsxs)(e7.Z, {
@@ -1416,8 +1425,8 @@ var tb = l(687021),
     th = l(487233),
     tx = l(120386),
     tf = l(374654);
-let tg = { value: "", label: "No Guild (main profile)" };
-var ty = l(99696),
+let ty = { value: "", label: "No Guild (main profile)" };
+var tg = l(99696),
     tv = l(599147),
     tE = l(808411),
     tS = l(435558),
@@ -1724,7 +1733,7 @@ let tw = { name: "Expressive Progress", component: tE.A, id: "expressive-progres
                                             badgeName: c,
                                             rarity: d,
                                             variant: a,
-                                            children: (0, s.jsx)(g.Anchor, {
+                                            children: (0, s.jsx)(y.Anchor, {
                                                 href: "#",
                                                 ref: n,
                                                 "aria-label": G.intl.string(G.t["JEiq/c"]),
@@ -1747,7 +1756,7 @@ let tw = { name: "Expressive Progress", component: tE.A, id: "expressive-progres
                                             badgeName: c,
                                             rarity: d,
                                             variant: a,
-                                            children: (0, s.jsx)(g.Anchor, {
+                                            children: (0, s.jsx)(y.Anchor, {
                                                 href: "#",
                                                 ref: i,
                                                 "aria-label": G.intl.string(G.t["JEiq/c"]),
@@ -1813,8 +1822,8 @@ let tw = { name: "Expressive Progress", component: tE.A, id: "expressive-progres
                             estimatedTooltipHeight: h,
                         } = e,
                         x = u.useRef(null),
-                        g = u.useRef(null),
-                        y = u.useMemo(
+                        y = u.useRef(null),
+                        g = u.useMemo(
                             () =>
                                 ({
                                     bronze: eG.Ac.PREMIUM_TENURE_1_MONTH,
@@ -1828,16 +1837,16 @@ let tw = { name: "Expressive Progress", component: tE.A, id: "expressive-progres
                                 })[i],
                             [i],
                         ),
-                        v = null != y ? (0, tk.I)(y).standard : null,
+                        v = null != g ? (0, tk.I)(g).standard : null,
                         E = u.useMemo(() => {
-                            if (null == y) return "";
-                            let e = eG.VD[y];
+                            if (null == g) return "";
+                            let e = eG.VD[g];
                             return (
                                 G.intl.string(G.t.lG6a5x) +
                                 " " +
                                 G.intl.string(e.nameUnformatted)
                             ).toLocaleUpperCase();
-                        }, [y]),
+                        }, [g]),
                         S = u.useMemo(() => {
                             if (!a || null == v) return;
                             let e = r
@@ -1885,9 +1894,9 @@ let tw = { name: "Expressive Progress", component: tE.A, id: "expressive-progres
                                         children: (0, s.jsx)(V.$, { buttonRef: x, variant: "primary", text: "Left" }),
                                     }),
                                     (0, s.jsx)(tO.L, {
-                                        targetElementRef: g,
+                                        targetElementRef: y,
                                         ...j,
-                                        children: (0, s.jsx)(V.$, { buttonRef: g, variant: "primary", text: "Right" }),
+                                        children: (0, s.jsx)(V.$, { buttonRef: y, variant: "primary", text: "Right" }),
                                     }),
                                 ],
                             }),
@@ -2001,23 +2010,23 @@ let tq = { none: void 0, nitroWheel: r.t },
                 isReducedMotion: x,
                 previewImageStyle: f,
             } = e;
-            function g() {
+            function y() {
                 return (0, tH.P0)((0, t$.o)("CTA clicked!", tW.Ck.SUCCESS));
             }
-            let y = tq[d],
+            let g = tq[d],
                 v =
                     "descriptionCta" === a
-                        ? { descriptionCta: n, onClick: g }
+                        ? { descriptionCta: n, onClick: y }
                         : "actions" === a
                           ? {
                                 actions: [
                                     {
                                         text: i,
                                         variant: r,
-                                        onClick: g,
-                                        ...(null != y ? { icon: y, iconPosition: c } : {}),
+                                        onClick: y,
+                                        ...(null != g ? { icon: g, iconPosition: c } : {}),
                                     },
-                                    ...(o.length > 0 ? [{ text: o, variant: u, onClick: g }] : []),
+                                    ...(o.length > 0 ? [{ text: o, variant: u, onClick: y }] : []),
                                 ],
                             }
                           : {};
@@ -2403,15 +2412,15 @@ function lf() {
         u.useEffect(() => {
             null != x && null == p && m(x);
         }, [x, p]));
-    let g = u.useRef(null);
+    let y = u.useRef(null);
     u.useEffect(() => {
         if (null == r || "" === r) {
-            g.current = p;
+            y.current = p;
             return;
         }
-        if (p !== g.current) {
+        if (p !== y.current) {
             if (null == p || "" === p) {
-                g.current = p;
+                y.current = p;
                 return;
             }
             (lx(r, p)
@@ -2424,10 +2433,10 @@ Payment source changed.`);
                     let t = e instanceof Error ? e.message : String(e);
                     i(`Failed to update order: ${t}`);
                 }),
-                (g.current = p));
+                (y.current = p));
         }
     }, [r, p]);
-    let y = u.useMemo(
+    let g = u.useMemo(
         () =>
             Object.values(b).map((e) => {
                 var t;
@@ -2639,7 +2648,7 @@ Error: ${t}`);
                                         selectionMode: "single",
                                         value: p,
                                         onSelectionChange: m,
-                                        options: y,
+                                        options: g,
                                         placeholder: "Select a payment source...",
                                         disabled: !h,
                                         label: "Payment Source",
@@ -2700,8 +2709,8 @@ Error: ${t}`);
         ],
     });
 }
-var lg = l(150934),
-    ly = l(36167);
+var ly = l(150934),
+    lg = l(36167);
 let lv = [
         { id: "tier_2", value: eG.gD.PREMIUM_MONTH_TIER_2, label: "Nitro (Monthly)" },
         { id: "tier_1", value: eG.gD.PREMIUM_MONTH_TIER_1, label: "Nitro Classic (Monthly)" },
@@ -2731,7 +2740,7 @@ function lj(e) {
         { error: r, handleSuccess: o, handleFailure: c } = lS(),
         p = u.useCallback(() => {
             let e = (0, d.A)();
-            (0, ly.OD)({ planId: l, isGift: n, loadId: e, flowType: t }, o, c);
+            (0, lg.OD)({ planId: l, isGift: n, loadId: e, flowType: t }, o, c);
         }, [l, n, t, o, c]);
     return (0, s.jsxs)(tC.Hq, {
         label: "Nitro Checkout",
@@ -2775,7 +2784,7 @@ function lC(e) {
             if (null == t) return;
             let e = (0, d.A)(),
                 l = N.BVt.BILLING_MANAGE_SUBSCRIPTION_WITH_FLOW_TYPE(t, e);
-            (0, ly.xq)(l, a, n);
+            (0, lg.xq)(l, a, n);
         }, [t, a, n]);
     return (0, s.jsxs)(tC.Hq, {
         label: "Manage Subscription",
@@ -2800,7 +2809,7 @@ function lT(e) {
             if (0 === l.length || null == t) return;
             let e = (0, d.A)(),
                 a = N.BVt.BILLING_STANDALONE_GUILD_BOOST_CHECKOUT_PAGE(l, void 0, e, t);
-            (0, ly.xq)(a, i, r);
+            (0, lg.xq)(a, i, r);
         }, [l, i, r, t]);
     return (0, s.jsxs)(tC.Hq, {
         label: "Guild Boosts",
@@ -3080,8 +3089,8 @@ function lQ(e) {
             continueSessionToInitialStep: void 0,
         }),
         {
-            elementsOptions: g,
-            isLoading: y,
+            elementsOptions: y,
+            isLoading: g,
             setupError: v,
             customPaymentMethodIdsToSourceTypes: E,
         } = (0, lL.p)({
@@ -3097,7 +3106,7 @@ function lQ(e) {
                 tabSelectedBackgroundColor: o,
             },
         });
-    return y || null != v || null == p
+    return g || null != v || null == p
         ? (0, s.jsx)(lG.eR, {})
         : (0, s.jsxs)("div", {
               children: [
@@ -3119,7 +3128,7 @@ function lQ(e) {
                                   className: L()(lK.o6, "joined-payment-address-elements" === d ? lK.fF : lK.u1),
                                   children: (0, s.jsxs)(lA.Elements, {
                                       stripe: p,
-                                      options: g,
+                                      options: y,
                                       children: [
                                           "stripe-address-element" === d
                                               ? (0, s.jsx)("div", {
@@ -3346,8 +3355,8 @@ let aa = {
                     item1Tooltip: h,
                     item1LabelSubText: x,
                     item1SubText: f,
-                    item1SubTextHasStrikethrough: g,
-                    item2Label: y,
+                    item1SubTextHasStrikethrough: y,
+                    item2Label: g,
                     item2Amount: v,
                     item2FormatWithoutRate: E,
                     hasDiscount: S,
@@ -3363,13 +3372,13 @@ let aa = {
                               tooltip: "" !== h ? h : void 0,
                               labelSubText: "" !== x ? x : void 0,
                               subText: "" !== f ? f : void 0,
-                              subTextHasStrikethrough: g,
+                              subTextHasStrikethrough: y,
                           },
-                          ...("" !== y
+                          ...("" !== g
                               ? [
                                     {
                                         id: 2,
-                                        label: y,
+                                        label: g,
                                         amount: v,
                                         icon: (0, s.jsx)(r.t, { size: "xs" }),
                                         formatWithoutRate: E,
@@ -3810,7 +3819,7 @@ var ac = l(903209),
     ah = l(711014),
     ax = l(427262),
     af = l(198498);
-function ag(e) {
+function ay(e) {
     let { label: t, options: l, value: a, onChange: n } = e;
     return (0, s.jsx)(ab.Z, {
         label: t,
@@ -3821,7 +3830,7 @@ function ag(e) {
         placeholder: 0 === l.length ? "Waiting for client to connect\u2026" : void 0,
     });
 }
-function ay(e) {
+function ag(e) {
     let { children: t } = e;
     return (0, s.jsx)("div", { className: af.t, children: t });
 }
@@ -3858,7 +3867,7 @@ let aS = ["Revenue Storybook", "Revenue Playground"],
                                         variant: "primary",
                                         text: "Open Redemption Modal",
                                         onClick: () =>
-                                            (0, ty.HF)({
+                                            (0, tg.HF)({
                                                 withRedemptionSuccessModal: !0,
                                                 onComplete: () => {},
                                                 onClose: () => {},
@@ -3884,7 +3893,7 @@ let aS = ["Revenue Storybook", "Revenue Playground"],
                                         variant: "primary",
                                         text: "Open Success Modal",
                                         onClick: () =>
-                                            (0, ty.cV)({
+                                            (0, tg.cV)({
                                                 amountRedeemed: 5e3,
                                                 currencyCode: N.Yri.USD,
                                                 onClose: () => {},
@@ -3958,7 +3967,7 @@ let aS = ["Revenue Storybook", "Revenue Playground"],
                                         gap: 8,
                                         align: "end",
                                         children: [
-                                            (0, s.jsx)(lg.S, { label: "Enable Flow Type", checked: e, onChange: n }),
+                                            (0, s.jsx)(ly.S, { label: "Enable Flow Type", checked: e, onChange: n }),
                                             (0, s.jsx)(em.l, {
                                                 label: "Flow Type",
                                                 value: l,
@@ -4551,7 +4560,7 @@ let aS = ["Revenue Storybook", "Revenue Playground"],
                                               onChange: function (e) {
                                                   l(e?.id ?? "");
                                               },
-                                              globalOption: tg,
+                                              globalOption: ty,
                                           }),
                                           (0, s.jsx)(th.A, { user: a, guildId: "" === t ? null : t }),
                                       ],
@@ -4579,7 +4588,7 @@ let aS = ["Revenue Storybook", "Revenue Playground"],
                                               onChange: function (e) {
                                                   l(e?.id ?? "");
                                               },
-                                              globalOption: tg,
+                                              globalOption: ty,
                                           }),
                                           (0, s.jsx)(tx.A, { user: a, guildId: "" === t ? null : t }),
                                       ],
@@ -4607,7 +4616,7 @@ let aS = ["Revenue Storybook", "Revenue Playground"],
                                               onChange: function (e) {
                                                   l(e?.id ?? "");
                                               },
-                                              globalOption: tg,
+                                              globalOption: ty,
                                           }),
                                           (0, s.jsx)(tf.A, { user: a, guildId: "" === t ? null : t }),
                                       ],
@@ -4691,11 +4700,11 @@ let aS = ["Revenue Storybook", "Revenue Playground"],
                                             direction: "horizontal",
                                             gap: 8,
                                             children: [
-                                                (0, s.jsx)(ag, { label: "User", options: a, value: c, onChange: r }),
-                                                (0, s.jsx)(ag, { label: "Context", options: p, value: o, onChange: d }),
+                                                (0, s.jsx)(ay, { label: "User", options: a, value: c, onChange: r }),
+                                                (0, s.jsx)(ay, { label: "Context", options: p, value: o, onChange: d }),
                                             ],
                                         }),
-                                        (0, s.jsx)(ay, {
+                                        (0, s.jsx)(ag, {
                                             children:
                                                 null != c && (0, s.jsx)(ap.G, { userId: c, guildId: b, channelId: h }),
                                         }),

@@ -82,6 +82,21 @@
     background-color: var(--modal-background)
 }
 
+.container_a3e8db.overlaySecondary_a3e8db {
+    background-color: var(--control-overlay-secondary-background-default);
+    border-color: var(--control-overlay-secondary-border-default)
+}
+
+.container_a3e8db.overlaySecondary_a3e8db.highlighted_a3e8db {
+    background-color: var(--control-overlay-secondary-background-hover);
+    border-color: var(--control-overlay-secondary-border-hover)
+}
+
+.container_a3e8db.overlaySecondary_a3e8db.selected_a3e8db {
+    background-color: var(--control-overlay-secondary-background-active);
+    border-color: var(--control-overlay-secondary-border-active)
+}
+
 .notificationBadge_a3e8db {
     background-color: var(--background-brand);
     border-radius: 50%;
@@ -93,4 +108,4 @@
     width: 8px
 }
 
-/*# sourceMappingURL=6d7122ffacaba4d2.css.map*/
+/*# sourceMappingURL=776dd4c568c26af8.css.map*/

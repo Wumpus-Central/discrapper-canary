@@ -12,5 +12,6 @@ e.exports = {
     mr: "highlighted_a3e8db",
     wH: "selected_a3e8db",
     dA: "inModalOverlay_a3e8db",
+    D0: "overlaySecondary_a3e8db",
     V8: "notificationBadge_a3e8db",
 };
