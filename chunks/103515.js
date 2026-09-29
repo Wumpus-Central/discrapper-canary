@@ -328,31 +328,34 @@ function T(e) {
         J = r.useCallback(
             (e, r) => {
                 if (null == t.current) return;
-                let l = t.current?.error,
-                    s = t.current?.networkState,
-                    u = null != t.current ? (0, h.zh)(t.current.currentTime, t.current.duration) : void 0,
-                    a = null != r ? { hls_error_subtype: r.errorDetails, hls_error_fatal: r.fatal } : {};
+                let s = t.current?.error,
+                    u = t.current?.networkState,
+                    a = null != t.current ? (0, h.zh)(t.current.currentTime, t.current.duration) : void 0,
+                    o = null != r ? { hls_error_subtype: r.errorDetails, hls_error_fatal: r.fatal } : {};
                 (y({
                     questId: P,
                     event: I.HAw.QUEST_VIDEO_ERROR,
                     properties: {
-                        video_progress: u,
+                        video_progress: a,
                         video_error_type: e,
                         video_asset_id: x,
                         network_connection_speed: M,
                         video_session_id: R,
-                        video_error_code: l?.code,
-                        video_error_message: l?.message,
-                        video_network_state: s,
+                        video_error_code: s?.code,
+                        video_error_message: s?.message,
+                        video_network_state: u,
                         is_full_episode_video_quest: k,
                         is_hls_supported: (0, d.Ap)(),
                         ...D(n),
-                        ...a,
+                        ...o,
                     },
                     sourceQuestContent: L,
                 }),
                     (e === g.SB.SOURCE_ERROR || e === g.SB.NO_VALID_SOURCE) &&
-                        c.A.increment({ name: i.K.QUEST_VIDEO_ERROR, tags: [`quest_id:${P}`, `error_type:${e}`] }));
+                        c.A.increment({
+                            name: i.K.QUEST_VIDEO_ERROR,
+                            tags: [`ad_creative_id:${P}`, `ad_creative_type:${l.p[l.p.QUEST]}`, `error_type:${e}`],
+                        }));
             },
             [P, t, x, R, n, y, L, M, k],
         );
