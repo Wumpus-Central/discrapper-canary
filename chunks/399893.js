@@ -256,8 +256,8 @@ function tt(t) {
                                   let { default: t } = await Promise.all([
                                       e.e("998835"),
                                       e.e("107427"),
-                                      e.e("2329"),
                                       e.e("858337"),
+                                      e.e("2329"),
                                       e.e("970644"),
                                       e.e("69772"),
                                   ]).then(e.bind(e, 914119));

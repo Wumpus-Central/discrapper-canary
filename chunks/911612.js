@@ -50,7 +50,7 @@ function u(e) {
                                       n.e("358608"),
                                       n.e("221500"),
                                       n.e("637038"),
-                                  ]).then(n.bind(n, 684343));
+                                  ]).then(n.bind(n, 906724));
                                   return (n) => (0, t.jsx)(a, { ...n, channelType: s.rbe.GUILD_TEXT, guildId: e.id });
                               }),
                       },
@@ -82,7 +82,7 @@ function u(e) {
                                       n.e("358608"),
                                       n.e("221500"),
                                       n.e("637038"),
-                                  ]).then(n.bind(n, 684343));
+                                  ]).then(n.bind(n, 906724));
                                   return (n) =>
                                       (0, t.jsx)(a, { ...n, channelType: s.rbe.GUILD_CATEGORY, guildId: e.id });
                               }),

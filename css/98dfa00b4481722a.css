@@ -44,6 +44,122 @@
     padding: var(--space-4)
 }
 
+.footer_e4c320 {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-shrink: 0;
+    gap: var(--space-8);
+    height: 40px;
+    justify-content: space-between;
+    padding-inline: var(--space-12)
+}
+
+.group_e4c320 {
+    min-width: 0
+}
+
+.attribution_e4c320,
+.group_e4c320 {
+    align-items: center;
+    display: flex;
+    gap: var(--space-4)
+}
+
+.attribution_e4c320 {
+    color: var(--text-subtle);
+    flex-shrink: 0
+}
+
+.attribution_e4c320:hover {
+    color: var(--text-default)
+}
+
+.icon_e4c320 {
+    display: flex;
+    flex-shrink: 0
+}
+
+.label_e4c320 {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.attributionLabel_e4c320,
+.label_e4c320 {
+    white-space: nowrap
+}
+
+.body_d19f2b {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative
+}
+
+.ambientArt_d19f2b {
+    background-position: 50%;
+    background-size: cover;
+    bottom: 0;
+    filter: blur(64px);
+    height: 272px;
+    inset-inline-start: 0;
+    opacity: .4;
+    pointer-events: none;
+    position: absolute;
+    width: 272px
+}
+
+.content_d19f2b {
+    min-height: 136px;
+    position: relative
+}
+
+.content_d19f2b,
+.panel_d19f2b {
+    display: flex;
+    flex: 1;
+    flex-direction: column
+}
+
+.panel_d19f2b {
+    outline: 0
+}
+
+.panel_d19f2b:focus-visible {
+    border-radius: var(--radius-sm);
+    outline: 2px solid var(--border-focus);
+    outline-offset: -2px
+}
+
+.stub_d19f2b {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--space-4);
+    padding: var(--space-16)
+}
+
+.stubEntry_d19f2b {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.titleRow_a1156a {
+    align-items: center;
+    display: flex;
+    gap: var(--space-6);
+    min-width: 0
+}
+
+.icon_a1156a {
+    display: flex;
+    flex-shrink: 0
+}
+
 .container__36d06 {
     aspect-ratio: 3/2;
     width: 100%
@@ -123,6 +239,25 @@
     flex: 0 1 auto;
     gap: var(--space-6);
     padding: var(--space-8)
+}
+
+.headerEnd__535da {
+    align-items: center;
+    gap: var(--space-8);
+    justify-content: flex-end;
+    margin-block: calc(var(--space-8)*-1)
+}
+
+.headerEnd__535da,
+.headerTrailing__535da {
+    align-self: stretch;
+    display: flex;
+    min-width: 0
+}
+
+.headerTrailing__535da {
+    align-items: stretch;
+    padding-inline-end: var(--space-8)
 }
 
 .titleIcon__535da {
@@ -215,4 +350,4 @@
     display: none
 }
 
-/*# sourceMappingURL=84066b138e359cfd.css.map*/
+/*# sourceMappingURL=98dfa00b4481722a.css.map*/

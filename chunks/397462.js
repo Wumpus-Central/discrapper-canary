@@ -4,6 +4,8 @@ _.exports = {
     kZ: "draggable__535da",
     T_: "dragRegion__535da",
     i8: "titleGroup__535da",
+    Bo: "headerEnd__535da",
+    o5: "headerTrailing__535da",
     gr: "titleIcon__535da",
     o1: "actions__535da",
     G7: "editActionsEnter__535da",

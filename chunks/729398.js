@@ -467,7 +467,7 @@ function eL(e) {
                                       n.e("358608"),
                                       n.e("221500"),
                                       n.e("637038"),
-                                  ]).then(n.bind(n, 684343));
+                                  ]).then(n.bind(n, 906724));
                                   return (n) =>
                                       (0, i.jsx)(e, { ...n, channelType: eu.rbe.GUILD_STAGE_VOICE, guildId: t });
                               }));

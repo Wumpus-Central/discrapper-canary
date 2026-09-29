@@ -536,7 +536,7 @@ function eO(e) {
                     t.e("662068"),
                     t.e("358608"),
                     t.e("221500"),
-                ]).then(t.bind(t, 684343));
+                ]).then(t.bind(t, 906724));
                 return (t) => (0, l.jsx)(e, { ...t, channelType: null, guildId: n });
             });
         }, [n]),

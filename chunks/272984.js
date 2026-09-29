@@ -59,6 +59,7 @@ let f = Object.freeze({
             i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "desktop";
         return `${o}:${encodeURIComponent(e)}:${encodeURIComponent(t)}${n ? I(i) : ""}`;
     },
+    WEB_HOME: `https://open.spotify.com/${I("desktop")}`,
     PREMIUM_SITE: `https://www.spotify.com/premium/${I("desktop")}`,
     INSTALL_ATTRIBUTION: (e) => `https://app.adjust.com/bdyga9?campaign=${e}`,
     APP_STORE: (0, s.isAndroid)()
