@@ -52,7 +52,7 @@ var m = n(604121),
     R = n(427262),
     O = n(652215),
     M = n(49999),
-    L = n(556427),
+    L = n(95769),
     k = n(375708);
 function w(e) {
     let { currentTier: t, giftCount: n, variant: s, onComplete: r, markAsDismissed: a, children: u } = e,

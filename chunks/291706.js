@@ -4,7 +4,7 @@ var i = n(691540),
     a = n(97483),
     s = n(228366),
     r = n(308528),
-    o = n(389036),
+    o = n(4998),
     c = n(375708);
 function d(e) {
     s.h.dispatch({ type: "VOICE_CHANNEL_APP_SURFACE_TOGGLE", channelId: e });

@@ -53,7 +53,7 @@ var T = t(945096),
     B = t(661531),
     Y = t(48736),
     G = t(317097),
-    H = t(701974),
+    H = t(763052),
     z = t(375708);
 function U(e) {
     return l.useMemo(
@@ -767,8 +767,8 @@ var ez = t(366010),
     e8 = t(101058),
     e2 = t(999291),
     e5 = t(686189),
-    e9 = t(946356),
-    e3 = t(975571),
+    e3 = t(946356),
+    e9 = t(975571),
     e6 = t(996988),
     e7 = t(228839);
 function e4(e) {
@@ -823,7 +823,7 @@ function e4(e) {
         className: e7._l,
         children: [
             null != Y &&
-                (0, a.jsx)(e9.A, {
+                (0, a.jsx)(e3.A, {
                     user: s,
                     displayProfile: x,
                     themeType: e6.d.MODAL_V2,
@@ -903,7 +903,7 @@ function e4(e) {
                         variant: "text-xs/normal",
                         color: "text-muted",
                         children: z.intl.format(H.default.prQba8, {
-                            helpArticleLink: e3.A.getArticleURL(O.MVz.DISPLAY_NAME_STYLES),
+                            helpArticleLink: e9.A.getArticleURL(O.MVz.DISPLAY_NAME_STYLES),
                         }),
                     }),
                     (0, a.jsx)(se, { darkPreview: h, onToggleTheme: W }),

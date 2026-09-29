@@ -287,8 +287,8 @@ var e3 = s(188828);
 let e7 =
     "https://cdn.discordapp.com/assets/content/ceb223833c25175aadddac32ce46fd1c60f4455860c6be9017c8d5993dce01c9.png";
 var e6 = s(764014),
-    e5 = s(484252);
-let e8 =
+    e8 = s(484252);
+let e5 =
     "https://cdn.discordapp.com/assets/content/f55a25cc26b81c0d72e110bb7fd978e6aff78e847f53b34011ba4600be592975.svg";
 function e9(e) {
     let { user: t } = e,
@@ -343,8 +343,8 @@ function tn(e) {
                 ? { src: e7, srcSet: `${e7} 1x, ${e6.A} 2x`, dimensions: r ? ts : tt }
                 : a === eK.xb.DISCOUNT
                   ? { src: e2, srcSet: `${e2} 1x, ${e3.A} 2x`, dimensions: ti }
-                  : { src: e8, srcSet: void 0, dimensions: null }
-            : { src: e8, srcSet: void 0, dimensions: null },
+                  : { src: e5, srcSet: void 0, dimensions: null }
+            : { src: e5, srcSet: void 0, dimensions: null },
         m = u?.width ?? s,
         g = u?.height ?? s;
     return (0, c.jsx)(eQ.a, {
@@ -365,7 +365,7 @@ function tn(e) {
                       muted: !0,
                       playsInline: !0,
                       controls: !1,
-                      children: (0, c.jsx)("source", { src: e5.A, type: "video/webm" }),
+                      children: (0, c.jsx)("source", { src: e8.A, type: "video/webm" }),
                   })
                 : null != d
                   ? (0, c.jsx)("img", { src: o, srcSet: d, alt: "", role: "presentation", width: m, height: g })
@@ -1208,8 +1208,8 @@ function tB(e) {
                                                         s.e("907167"),
                                                         s.e("861060"),
                                                         s.e("952372"),
-                                                        s.e("910486"),
-                                                        s.e("56366"),
+                                                        s.e("716460"),
+                                                        s.e("264572"),
                                                         s.e("678157"),
                                                         s.e("641248"),
                                                         s.e("544571"),
@@ -1426,11 +1426,11 @@ var tQ = s(325499),
     t3 = s(139286),
     t7 = s(872725),
     t6 = s(920050),
-    t5 = s(51965),
-    t8 = s(375776),
+    t8 = s(51965),
+    t5 = s(375776),
     t9 = s(727811),
     t4 = s(222652),
-    se = s(553875),
+    se = s(428685),
     st = s(934353);
 function ss(e) {
     let { openRewardModal: t } = e,
@@ -1457,7 +1457,7 @@ function ss(e) {
             (0, c.jsxs)("div", {
                 className: st.R$,
                 children: [
-                    (0, c.jsx)(t5.A, {
+                    (0, c.jsx)(t8.A, {
                         variant: "overlay-primary",
                         size: "md",
                         text: s.text,
@@ -1632,10 +1632,10 @@ var su = s(517846),
     sT = s(280761),
     sb = s(45420),
     sR = s(612413),
-    sC = s(310235),
-    sI = s(334551),
-    s_ = s(287388),
-    sv = s(762359);
+    sC = s(14429),
+    sI = s(810889),
+    s_ = s(293838),
+    sv = s(264865);
 let sP =
         "https://cdn.discordapp.com/assets/content/74dd725dde373bfdbced9606d5201ed2c555fc895f4da644a8de314de6906be3.webp",
     sS =
@@ -1950,8 +1950,8 @@ let sU = function (e) {
                                 s.e("907167"),
                                 s.e("861060"),
                                 s.e("952372"),
-                                s.e("910486"),
-                                s.e("56366"),
+                                s.e("716460"),
+                                s.e("264572"),
                                 s.e("678157"),
                                 s.e("641248"),
                                 s.e("544571"),
@@ -2124,8 +2124,8 @@ var s1 = s(462887),
     s3 = s(259065),
     s7 = s(206835),
     s6 = s(591179),
-    s5 = s(462463),
-    s8 = s(219882),
+    s8 = s(462463),
+    s5 = s(219882),
     s9 = s(19886),
     s4 = s(425713),
     ie = s(696292),
@@ -2133,7 +2133,7 @@ var s1 = s(462887),
     is = s(617986),
     ii = s(892227),
     ia = s(81466),
-    il = s(1889),
+    il = s(249755),
     ir = s(749012);
 let ic = function () {
     let { passesGeneralUIInvariant: e, programReward: t } = (0, H.F)({ location: "NitroOrbsWhatsNewCardFooter" });
@@ -2237,7 +2237,7 @@ var im = s(975807),
     ix = s(95035),
     ig = s(989790),
     ip = s(88001),
-    ih = s(148155),
+    ih = s(259589),
     iN = s(817577);
 function iA() {
     (0, im.A)(ip.TE);
@@ -2293,7 +2293,7 @@ function ij(e) {
 var iE = s(562819),
     iT = s(793943),
     ib = s(757036),
-    iR = s(235955),
+    iR = s(473933),
     iC = s(655752),
     iI = s(945810);
 let i_ = (0, iI.mj)({
@@ -2318,7 +2318,7 @@ function iU() {
         t,
         { analyticsLocations: s } = (0, j.Ay)(A.A.PREMIUM_MARKETING_PERK_CARD),
         i = (0, s6.X)("useWhatsNewPerkCards"),
-        n = (0, s5.A)({ analyticsLocations: s }),
+        n = (0, s8.A)({ analyticsLocations: s }),
         a = (0, o.useCallback)(() => {
             (0, ed.openUserSettings)(eo.X.PROFILE_PANEL, { analyticsLocations: s }, () =>
                 (0, s3.L)({ analyticsLocations: s }),
@@ -2409,7 +2409,7 @@ function iU() {
         { nitroOrbsRewardsCard: m, questOrbMultiplierCard: g } = iu("useWhatsNewPerkCards"),
         p =
             ((e = (0, ib.L)(tG.PremiumTypes.TIER_2)),
-            (t = (0, s8.rX)()),
+            (t = (0, s5.rX)()),
             (0, o.useMemo)(
                 () =>
                     e && t
@@ -2511,7 +2511,7 @@ function iz(e) {
                 m = (0, o.useCallback)(() => {
                     (0, ed.openUserSettings)(eo.X.SOUNDBOARD_CATEGORY, { analyticsLocations: n });
                 }, [n]),
-                x = (0, s5.A)({ analyticsLocations: n }),
+                x = (0, s8.A)({ analyticsLocations: n }),
                 g = (0, o.useCallback)(() => {
                     (0, ed.openUserSettings)(eo.X.PROFILE_PANEL, { analyticsLocations: n }, () =>
                         (0, s3.L)({ analyticsLocations: n }),
@@ -2569,7 +2569,7 @@ function iz(e) {
                         {
                             id: t6.LARGE_UPLOADS_CARD_ID,
                             title: q.intl.string(q.t.nL1WZV),
-                            description: (0, s8.M6)({
+                            description: (0, s5.M6)({
                                 legacyCopy: q.intl.formatToPlainString(q.t.k8LC1w, { maxSizeMb: 500 }),
                                 rolloutCopy: q.intl.formatToPlainString(q.t.teOTfv, {
                                     maxFileSize: (0, ex.EJ)(tG.PremiumTypes.TIER_2, { useSpace: !1 }),
@@ -2929,14 +2929,14 @@ let i7 = (0, iI.mj)({
     variations: { 0: !1, 1: !0 },
 });
 var i6 = s(297346);
-let i5 =
+let i8 =
     "https://cdn.discordapp.com/assets/content/3aa94cb4beecb43100d482e94a5a707f188e2e2315d9b15865689b51409c4d56.png";
-function i8(e) {
+function i5(e) {
     let { alt: t, ariaLabel: s, ariaHidden: i, role: n, width: a = 288, height: l = 192 } = e;
     return (0, c.jsx)("img", {
         style: { width: a, height: l },
-        src: i5,
-        srcSet: `${i5} 1x, https://cdn.discordapp.com/assets/content/e33cdb99c455ad732bab8cc40ca15b8bf926a7e9e078cd8834edfd15e4010217.png 2x`,
+        src: i8,
+        srcSet: `${i8} 1x, https://cdn.discordapp.com/assets/content/e33cdb99c455ad732bab8cc40ca15b8bf926a7e9e078cd8834edfd15e4010217.png 2x`,
         alt: t,
         "aria-label": s,
         "aria-hidden": i,
@@ -3282,7 +3282,7 @@ function nN(e) {
                   (0, c.jsx)("div", {
                       className: nf.kX,
                       "aria-hidden": !0,
-                      children: (0, c.jsx)(i8, { alt: "", ariaHidden: !0, width: "100%", height: "auto" }),
+                      children: (0, c.jsx)(i5, { alt: "", ariaHidden: !0, width: "100%", height: "auto" }),
                   }),
                   T,
               ],
@@ -3653,7 +3653,7 @@ var nO = s(704333),
     nB = s(870975),
     nH = s(698834);
 function nF() {
-    let { sectionRef: e, handleVisibilityChange: t } = (0, nw.A)({ boxType: t8.$, thirdPartyPartner: "xbox" }),
+    let { sectionRef: e, handleVisibilityChange: t } = (0, nw.A)({ boxType: t5.$, thirdPartyPartner: "xbox" }),
         s = [
             { icon: nO.B, text: q.intl.string(se.default.MUypiB) },
             { icon: nL.h, text: q.intl.string(se.default.ec5Rdd) },
@@ -3908,7 +3908,7 @@ let n7 = function (e) {
     });
 };
 var n6 = s(14057);
-let n5 = o.memo(
+let n8 = o.memo(
     o.forwardRef(function (e, t) {
         let { className: s, subscriptionTier: i, isEligibleForBogoPromotion: n } = e,
             { analyticsLocations: a } = (0, j.Ay)(A.A.PREMIUM_MARKETING_HERO_CTA),
@@ -4009,12 +4009,12 @@ let n5 = o.memo(
         });
     }),
 );
-var n8 = s(820081),
+var n5 = s(820081),
     n9 = s(140735),
     n4 = s(401432),
     ae = s(580630),
     at = s(795269),
-    as = s(701974),
+    as = s(763052),
     ai = s(55647),
     an = s(202600);
 function aa(e) {
@@ -4022,7 +4022,7 @@ function aa(e) {
     return t
         ? (0, c.jsxs)(c.Fragment, {
               children: [
-                  (0, c.jsx)(n8.B, { size: "sm", color: tr.A.colors.TEXT_STRONG, "aria-hidden": !0 }),
+                  (0, c.jsx)(n5.B, { size: "sm", color: tr.A.colors.TEXT_STRONG, "aria-hidden": !0 }),
                   (0, c.jsx)(n9.A, { children: q.intl.string(q.t["tq+6t/"]) }),
               ],
           })
@@ -4514,7 +4514,7 @@ let ap = () => {
                                 onChange: (e) => g(e),
                                 threshold: 0,
                                 active: !0,
-                                children: (0, c.jsx)(n5, { ref: n, subscriptionTier: I }),
+                                children: (0, c.jsx)(n8, { ref: n, subscriptionTier: I }),
                             }),
                         }),
                         (0, c.jsx)("div", {

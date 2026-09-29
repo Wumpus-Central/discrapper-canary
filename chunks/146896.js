@@ -27,7 +27,7 @@ var i = l(477900),
 function C(e, t) {
     (0, S.pX)(null == t ? A.BVt.CHANNEL(e, k.VV.VIBEGRATIONS) : A.BVt.CHANNEL(e, k.VV.VIBEGRATIONS, t));
 }
-var R = l(50617),
+var R = l(759967),
     L = l(375708),
     _ = l(789752);
 function D(e) {

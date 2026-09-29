@@ -1,6 +1,6 @@
 Object.defineProperty(t, "__esModule", { value: !0 });
 let n = r(858197),
-    a = r(167385),
+    a = r(389766),
     i = r(767130),
     s = /(?:questo|questa)?\s{0,3}(mattina|pomeriggio|sera|notte|mezzanotte|mezzogiorno)(?=\W|$)/i;
 class o extends a.AbstractParserWithWordBoundaryChecking {

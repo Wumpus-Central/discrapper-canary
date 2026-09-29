@@ -86,7 +86,7 @@ var ts = i(429913),
     tc = i(188321),
     td = i(825502),
     tf = i(818023),
-    tA = i(141531);
+    tA = i(964549);
 function tp(t) {
     let { game: e } = t,
         i = (0, ts.h)(e.id);
@@ -113,7 +113,7 @@ var ty = i(387755),
     tk = i(560595),
     tM = i(929921),
     tU = i(753070),
-    tV = i(905322),
+    tV = i(431788),
     tP = i(941971),
     tj = i(521981),
     tw = i(976860),
@@ -197,7 +197,7 @@ function t1(t) {
     });
 }
 var t2 = i(119191),
-    t8 = i(671210);
+    t8 = i(25448);
 function t5(t) {
     t && (0, tK.Ak)(D.cH, D.pD, void 0, void 0, { trackNotificationFailure: !0 });
 }

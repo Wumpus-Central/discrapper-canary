@@ -265,8 +265,8 @@ var eL = n(875317),
     e0 = n(206248),
     e1 = n(498470),
     e6 = n(807098),
-    e3 = n(637706),
-    e8 = n(788883),
+    e8 = n(637706),
+    e3 = n(788883),
     e5 = n(7667);
 function e7(e) {
     let { guildId: t, componentId: n, promotionId: i, coachmark: r, targetElementRef: a, markAsDismissed: o } = e,
@@ -287,13 +287,13 @@ function e7(e) {
             })(),
                 o(ed.i.TAKE_ACTION));
         }, [r.button, t, u, o]),
-        m = (0, e3.C)(r.helpArticle, ""),
+        m = (0, e8.C)(r.helpArticle, ""),
         I = [r.body, A].filter((e) => "" !== e).join(" "),
         { icon: g } = (0, e1.x)({ buttonAction: r.button?.buttonAction }),
         C = r.button?.copy ?? "";
     return (0, s.jsxs)(s.Fragment, {
         children: [
-            (0, s.jsx)(e8.A, {
+            (0, s.jsx)(e3.A, {
                 componentType: ea.C.GUILD_HEADER_COACHMARK,
                 componentId: n,
                 promotionId: i,
@@ -799,8 +799,8 @@ var tJ = n(503698),
     t0 = n.n(tJ),
     t1 = n(933832),
     t6 = n(782603),
-    t3 = n(81466),
-    t8 = n(116085),
+    t8 = n(81466),
+    t3 = n(116085),
     t5 = n(597601),
     t7 = n(451394),
     t2 = n(104171),
@@ -980,7 +980,7 @@ function nN(e) {
                 (0, s.jsxs)("div", {
                     className: t0()(nI.fI, nI.pF),
                     children: [
-                        (0, s.jsx)(t3.CalendarIcon, {
+                        (0, s.jsx)(t8.CalendarIcon, {
                             size: "custom",
                             color: "currentColor",
                             className: nI.uE,
@@ -1000,7 +1000,7 @@ function nN(e) {
                     children: [
                         null != d
                             ? (0, s.jsx)(d, { size: "xs", color: "currentColor", className: nI.uE })
-                            : (0, s.jsx)(t8.B, {
+                            : (0, s.jsx)(t3.B, {
                                   size: "custom",
                                   color: "currentColor",
                                   width: 16,
@@ -1030,7 +1030,7 @@ function nS(e) {
               heading: tt.intl.string(tt.t["1+boPi"]),
               topic: t.name,
               location: (0, nc.y)(n, !0),
-              locationIcon: (0, s.jsx)(t8.B, {
+              locationIcon: (0, s.jsx)(t3.B, {
                   size: "custom",
                   color: "currentColor",
                   width: 16,
@@ -1436,7 +1436,7 @@ class n0 extends o.Ay.Store {
 }
 let n1 = new n0(I.h),
     n6 = "lastHiddenChannelNotice",
-    n3 = [
+    n8 = [
         {
             type: B.n5X.GUILD_BOOSTING,
             store: nZ,
@@ -1449,7 +1449,7 @@ let n1 = new n0(I.h),
         { type: B.n5X.LINKED_ROLES_ADMIN, dismissibleContentType: d.M.LINKED_ROLE_ADMIN_GUILD },
         { type: B.n5X.GAME_CLAIM, dismissibleContentType: d.M.GAME_CLAIM_COACHMARK },
     ],
-    n8 = n3.map((e) => e.store).filter(nr.Vq),
+    n3 = n8.map((e) => e.store).filter(nr.Vq),
     n5 = new Set([d.M.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION, d.M.CHANNEL_NOTICE_GUILD_BANNER]);
 function n7(e) {
     e.stopPropagation();
@@ -1483,11 +1483,11 @@ function n9(e) {
         [I, g] = (0, $.ww)(m, A.id, ed.m.CHANNEL_NOTICES, !0),
         C = null != I,
         _ = (0, o.yK)(
-            n8,
+            n3,
             () =>
                 C
                     ? []
-                    : n3
+                    : n8
                           .filter((e) => {
                               let { dismissibleContentType: t, store: n } = e;
                               return !0 === n?.channelNoticePredicate(A, E) && !n5.has(t);
@@ -1914,8 +1914,8 @@ class io extends l.PureComponent {
                     n.e("262156"),
                     n.e("960235"),
                     n.e("77333"),
-                    n.e("910486"),
-                    n.e("56366"),
+                    n.e("716460"),
+                    n.e("264572"),
                     n.e("678157"),
                     n.e("641248"),
                     n.e("331988"),
@@ -1926,7 +1926,7 @@ class io extends l.PureComponent {
                     n.e("834552"),
                     n.e("190779"),
                     n.e("373122"),
-                    n.e("217951"),
+                    n.e("724285"),
                     n.e("221856"),
                     n.e("293159"),
                     n.e("186212"),
@@ -1938,7 +1938,7 @@ class io extends l.PureComponent {
                     n.e("362931"),
                     n.e("745959"),
                     n.e("858529"),
-                    n.e("793716"),
+                    n.e("41298"),
                     n.e("481987"),
                     n.e("595653"),
                     n.e("958038"),
@@ -2009,7 +2009,7 @@ class io extends l.PureComponent {
                     n.e("147626"),
                     n.e("613867"),
                     n.e("979483"),
-                    n.e("164776"),
+                    n.e("417886"),
                     n.e("553984"),
                     n.e("943780"),
                     n.e("203589"),
@@ -2087,7 +2087,7 @@ class io extends l.PureComponent {
                     n.e("589916"),
                     n.e("695170"),
                     n.e("460773"),
-                    n.e("28676"),
+                    n.e("142266"),
                     n.e("458273"),
                     n.e("208018"),
                     n.e("968763"),
@@ -2145,7 +2145,7 @@ class io extends l.PureComponent {
                     n.e("995602"),
                     n.e("346313"),
                     n.e("463726"),
-                    n.e("816589"),
+                    n.e("170571"),
                     n.e("256373"),
                     n.e("929569"),
                     n.e("636002"),
@@ -2159,7 +2159,7 @@ class io extends l.PureComponent {
                     n.e("359702"),
                     n.e("708364"),
                     n.e("452823"),
-                    n.e("779348"),
+                    n.e("556967"),
                     n.e("647011"),
                     n.e("331203"),
                     n.e("466913"),
@@ -2472,7 +2472,7 @@ function id(e) {
     D !== W && (z(D), F(!V));
     let [Z, et] = (0, q.Ay)(
             (e) => [
-                n3.some((t) => e.currentlyShown.has(t.dismissibleContentType)),
+                n8.some((t) => e.currentlyShown.has(t.dismissibleContentType)),
                 e.currentlyShownGroup.has(ed.m.GUILD_HEADER_TOOLTIPS),
             ],
             a.x,
@@ -2613,8 +2613,8 @@ function id(e) {
             );
         }, []),
     });
-    let e3 = (0, o.bG)([eQ.A], () => eQ.A.getChannelId()),
-        e8 = (0, o.bG)([eY.A], () => eY.A.desyncedVoiceStatesCount),
+    let e8 = (0, o.bG)([eQ.A], () => eQ.A.getChannelId()),
+        e3 = (0, o.bG)([eY.A], () => eY.A.desyncedVoiceStatesCount),
         e5 = (0, ey.A)(D),
         e7 = (0, ee.ai)(D) ? null : e5,
         e2 =
@@ -2714,8 +2714,8 @@ function id(e) {
         selectedChannel: eZ,
         selectedVoiceChannelId: H,
         voiceStates: y,
-        rtcConnectedChannelId: e3,
-        rtcDesyncedVoiceStatesCount: e8,
+        rtcConnectedChannelId: e8,
+        rtcDesyncedVoiceStatesCount: e3,
         isUnavailable: k,
         user: X,
         hasChannelNotice: null != e_ || Z,

@@ -1,5 +1,5 @@
 n.d(t, { C7: () => o, MB: () => i, Us: () => u, nY: () => r });
-var l = n(50617),
+var l = n(759967),
     a = n(375708);
 function i(e) {
     let t = Math.max(1, Math.round(e / 1e3));

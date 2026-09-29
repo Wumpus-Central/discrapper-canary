@@ -5,7 +5,7 @@ var r = n(980707),
     a = n(477782),
     s = n(744898),
     d = n(442433),
-    l = n(50617),
+    l = n(759967),
     o = n(375708);
 function c(t) {
     let { onSelect: e, onRestoreVersion: n } = t;

@@ -1,0 +1,3 @@
+a.exports = JSON.parse(
+    '{"BLKD4B":["No se ha podido solicitar una actualizaci\xf3n. Int\xe9ntalo de nuevo en un momento."],"1UFWet":["Esta aplicaci\xf3n a\xfan no tiene configurada una tarjeta de perfil."],"T1n7hc":["Acabas de actualizar esto. Int\xe9ntalo de nuevo en un minuto."],"um/5Kc":["Actualizaci\xf3n solicitada. Tu tarjeta se actualizar\xe1 pronto."],"30UxZU":["Esta aplicaci\xf3n no puede actualizar tu tarjeta hasta que la autorices de nuevo en Aplicaciones autorizadas."],"ypKX9A":["No se ha podido contactar con esta aplicaci\xf3n para solicitar una actualizaci\xf3n. Int\xe9ntalo de nuevo en un momento."]}',
+);

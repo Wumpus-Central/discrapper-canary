@@ -12,7 +12,7 @@ var r = i(821609),
     u = i(689906),
     m = i(743569),
     k = i(568065),
-    g = i(25525),
+    g = i(356863),
     x = i(375708);
 function f(t) {
     let { guildId: e, powerup: i, onClose: r, ...l } = t,

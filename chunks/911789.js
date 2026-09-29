@@ -1,7 +1,7 @@
 Object.defineProperty(t, "__esModule", { value: !0 });
 let n = r(41943),
     a = r(115835),
-    i = r(167385),
+    i = r(389766),
     s = `(?:(?:\u{43F}\u{440}\u{438}\u{431}\u{43B}\u{438}\u{437}\u{43D}\u{43E}|\u{43E}\u{440}\u{456}\u{454}\u{43D}\u{442}\u{43E}\u{432}\u{43D}\u{43E})\\s*(?:~\\s*)?)?(${n.TIME_UNITS_PATTERN})${n.REGEX_PARTS.rightBoundary}`;
 class o extends i.AbstractParserWithWordBoundaryChecking {
     patternLeftBoundary() {

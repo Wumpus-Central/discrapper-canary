@@ -69,7 +69,7 @@ var b = n(716357),
     z = n(192308),
     K = n(775602),
     $ = n(855823),
-    V = n(61567),
+    V = n(104129),
     X = n(375708),
     Y = n(517228);
 function J(e) {
@@ -1181,7 +1181,7 @@ var eL = n(529609),
     eK = n(486020),
     e$ = n(488428),
     eV = n(776231),
-    eX = n(968176),
+    eX = n(784890),
     eY = n(986898);
 function eJ(e) {
     let { guildId: t, header: n, canEdit: u, isEditing: s, isSaving: c } = e,
@@ -1340,8 +1340,8 @@ var eQ = n(554146),
     e0 = n(131607),
     e1 = n(967198),
     e2 = n(725041),
-    e6 = n(49999),
-    e8 = n(312152);
+    e8 = n(49999),
+    e6 = n(312152);
 function e3(e) {
     let t,
         { guildId: m } = e,
@@ -1382,7 +1382,7 @@ function e3(e) {
         let a = (0, z.useHasModalOpen)(e2.J),
             u = (0, i.bG)([e1.A], () => e1.A.getGuildId()),
             s = (0, eZ.A)(),
-            [c, d] = (0, e0.kn)(t && u === e && !s ? [eQ.M.GUILD_SPACE_NUX_MODAL] : [], e6.m.GUILD_SPACE_NUX, !0),
+            [c, d] = (0, e0.kn)(t && u === e && !s ? [eQ.M.GUILD_SPACE_NUX_MODAL] : [], e8.m.GUILD_SPACE_NUX, !0),
             o = r.useRef(!1),
             f = c === eQ.M.GUILD_SPACE_NUX_MODAL;
         (r.useEffect(() => {
@@ -1454,9 +1454,9 @@ function e3(e) {
     }, [m, L, V, Y]),
     null == L || null == q)
         ? (0, l.jsx)("div", {
-              className: e8.MY,
+              className: e6.MY,
               children: (0, l.jsx)("div", {
-                  className: e8.F,
+                  className: e6.F,
                   children:
                       "error" !== N || P
                           ? (0, l.jsx)(u.y, { type: u.y.Type.SPINNING_CIRCLE, "aria-label": X.intl.string(X.t.ZTNur7) })
@@ -1470,13 +1470,13 @@ function e3(e) {
           })
         : (0, l.jsx)(et, {
               children: (0, l.jsxs)("div", {
-                  className: e8.MY,
+                  className: e6.MY,
                   children: [
                       (0, l.jsx)(s.Ch, {
                           ref: E,
-                          className: e8.XG,
+                          className: e6.XG,
                           children: (0, l.jsxs)("div", {
-                              className: e8.Qs,
+                              className: e6.Qs,
                               children: [
                                   U && B ? (0, l.jsx)(R.A, { onPublish: O }) : null,
                                   (0, l.jsx)(eJ, {

@@ -1,7 +1,7 @@
 Object.defineProperty(t, "__esModule", { value: !0 });
 let n = r(793277),
     a = r(115835),
-    i = r(167385),
+    i = r(389766),
     s = r(628403),
     o = RegExp("(" + n.TIME_UNITS_PATTERN + ")(?:geleden|voor|eerder)(?=(?:\\W|$))", "i"),
     u = RegExp("(" + n.TIME_UNITS_PATTERN + ")geleden(?=(?:\\W|$))", "i");
