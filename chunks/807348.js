@@ -11,7 +11,7 @@ var i,
         (i[(i.ADD = 2)] = "ADD"),
         (i[(i.SOUNDMOJI = 3)] = "SOUNDMOJI"),
         i),
-    c = (((r = {}).ENTRY = "entry_sound"), (r.EXIT = "exit_sound"), (r.DEFAULT = "default"), r),
+    c = (((r = {}).ENTRY = "entry_sound"), (r.EXIT = "exit_sound"), (r.DEFAULT = "default"), (r.ECHO = "echo"), r),
     u = (((a = {}).ADDED = "added"), (a.UPDATED = "updated"), (a.REMOVED = "removed"), a),
     _ = (((s = {}).DEFAULT = "default"), (s.CUSTOM = "custom"), s);
 function E(e, t) {

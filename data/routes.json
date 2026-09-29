@@ -713,6 +713,7 @@
   "SOUNDBOARD_SOUND_GUILD_DATA": "/soundboard-sounds/:param/guild/:param",
   "SOUNDBOARD_DEFAULT_SOUNDS": "/soundboard-default-sounds",
   "SEND_SOUNDBOARD_SOUND": "/channels/:param/send-soundboard-sound",
+  "SEND_SOUNDBOARD_ECHO": "/channels/:param/send-soundboard-echo",
   "SEND_CLIPS_REMOTE_TRIGGER": "/channels/:param/clips-remote-trigger",
   "APPLICATION_COMMANDS_SEARCH": "/channels/:param/application-commands/search",
   "APPLICATION_COMMAND_INDEX_CHANNEL": "/channels/:param/application-command-index",

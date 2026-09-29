@@ -21024,6 +21024,7 @@
   "UaGc2V": "Make some noise with Soundboard!",
   "jLlfDN": "Discord failed to download that sound for some reason. Sorry about that.",
   "mK3tDH": "Sound Download Failed",
+  "VOmeSq": "echo sound {name}",
   "M17qLj": "Failed to encode file.",
   "2y3xGU": "Invalid audio file type. {fileType} is not supported.",
   "6w+Dyr": "This audio file could not be read. It may be corrupt or use an unsupported codec.",
