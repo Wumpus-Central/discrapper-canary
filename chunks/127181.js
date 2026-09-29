@@ -497,6 +497,13 @@ let n = [
         summary: "On phones, opening the chat in an app\u2019s channel now marks its messages read.",
     },
     {
+        date: "2026-09-28",
+        time: "21:49",
+        platforms: ["mobile"],
+        summary:
+            "On phones, opening the keyboard in the builder chat keeps the messages you were reading in view above it.",
+    },
+    {
         date: "2026-09-18",
         time: "00:04",
         platforms: ["mobile"],
@@ -579,6 +586,13 @@ let n = [
         platforms: ["desktop", "mobile"],
         summary:
             "One Effort scale, from Speedrun to Big Brain, sets how much thinking goes into a run, instead of choosing models and thinking levels separately.",
+    },
+    {
+        date: "2026-09-29",
+        time: "16:45",
+        platforms: ["mobile"],
+        summary:
+            "Opening a project on your phone now lands on its newest message instead of stopping partway up the conversation.",
     },
     {
         date: "2026-09-28",
