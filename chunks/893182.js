@@ -740,7 +740,10 @@ function eW(e) {
             },
             [E, f, p, s, c, _],
         );
-    if (J(r)) return (0, i.jsx)(en, {});
+    if (J(r))
+        return (0, i.jsxs)("div", {
+            children: [(0, i.jsx)(en, {}), N && (0, i.jsx)(ez, { guildId: s, isEmptyLeaderboard: !0 })],
+        });
     let b = x ? g.slice(3) : g,
         S = [g[0], g[1], g[2]];
     return (0, i.jsxs)("div", {
@@ -812,19 +815,19 @@ function eB(e) {
           });
 }
 function ez(e) {
-    let { guildId: t } = e,
-        n = H.tz.useSetting(),
-        a = H.JG.useSetting(),
-        s = (0, k.bG)([q.A], () => q.A.hasConsented(eU.YAq.PERSONALIZATION)),
-        r = v.intl.string(et.default.toxuHd),
-        d = !1;
-    ((!n || a.includes(t)) && ((r = v.intl.string(et.default["8y885d"])), (d = !0)),
-        s || ((r = v.intl.string(et.default.mTARYx)), (d = !0)));
-    let c = (0, k.bG)([Y.default], () => Y.default.getCurrentUser()),
-        o = V.Ay.useName(t, void 0, c),
-        u = (0, k.bG)([K.Ay], () => K.Ay.getMember(t, c?.id ?? "")),
-        m = (0, F.gn)(t, c?.id, u?.colorStrings ?? null);
-    return null == c
+    let { guildId: t, isEmptyLeaderboard: n = !1 } = e,
+        a = H.tz.useSetting(),
+        s = H.JG.useSetting(),
+        r = (0, k.bG)([q.A], () => q.A.hasConsented(eU.YAq.PERSONALIZATION)),
+        d = v.intl.string(et.default.toxuHd),
+        c = !1;
+    ((!a || s.includes(t)) && ((d = v.intl.string(et.default["8y885d"])), (c = !0)),
+        r || ((d = v.intl.string(et.default.mTARYx)), (c = !0)));
+    let o = (0, k.bG)([Y.default], () => Y.default.getCurrentUser()),
+        u = V.Ay.useName(t, void 0, o),
+        m = (0, k.bG)([K.Ay], () => K.Ay.getMember(t, o?.id ?? "")),
+        h = (0, F.gn)(t, o?.id, m?.colorStrings ?? null);
+    return null == o || (n && !c)
         ? null
         : (0, i.jsxs)("div", {
               className: eO.Xx,
@@ -846,7 +849,7 @@ function ez(e) {
                           }),
                           (0, i.jsx)(G.eu, {
                               size: U._3.SIZE_32,
-                              src: c.getAvatarURL(t, (0, U.FT)(U._3.SIZE_32)) ?? void 0,
+                              src: o.getAvatarURL(t, (0, U.FT)(U._3.SIZE_32)) ?? void 0,
                               className: eO.SA,
                               "aria-hidden": !0,
                           }),
@@ -858,9 +861,9 @@ function ez(e) {
                                       color: "text-default",
                                       lineClamp: 1,
                                       children: (0, i.jsx)(O.g, {
-                                          name: o,
-                                          colorString: u?.colorString ?? null,
-                                          colorStrings: m,
+                                          name: u,
+                                          colorString: m?.colorString ?? null,
+                                          colorStrings: h,
                                       }),
                                   }),
                                   (0, i.jsx)("div", {
@@ -868,14 +871,14 @@ function ez(e) {
                                       children: (0, i.jsx)(x.E, {
                                           variant: "text-xs/medium",
                                           color: "text-subtle",
-                                          children: r,
+                                          children: d,
                                       }),
                                   }),
                               ],
                           }),
                       ],
                   }),
-                  d &&
+                  c &&
                       (0, i.jsx)("div", {
                           className: eO.rl,
                           children: (0, i.jsx)(W.$, {
