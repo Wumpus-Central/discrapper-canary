@@ -777,28 +777,6 @@
     }
   },
   {
-    "name": "2026-02-activity-privacy-matching",
-    "kind": "user",
-    "defaultConfig": {
-      "copyChanges": false,
-      "upsell": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "copyChanges": true,
-        "upsell": false
-      },
-      "2": {
-        "copyChanges": true,
-        "upsell": true
-      }
-    }
-  },
-  {
     "kind": "user",
     "name": "2026-02-announcement-composer",
     "defaultConfig": {
