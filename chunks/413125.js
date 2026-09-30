@@ -25,8 +25,8 @@ var l = a(477900),
     k = a(468689),
     m = a(794967),
     I = a(595818),
-    G = a(363487),
-    f = a(828162),
+    f = a(363487),
+    G = a(828162),
     O = a(378570),
     P = a(309010),
     R = a(287809),
@@ -115,7 +115,7 @@ function x(e, t) {
             ),
         },
         el = (t?.premiumSubscriberCount ?? 0) > 0,
-        en = !0 === (0, G.A)(t?.id),
+        en = !0 === (0, f.A)(t?.id),
         {
             handleInvite: ei,
             handleMessage: es,
@@ -202,13 +202,14 @@ function x(e, t) {
                     setup_type: D.XT.CHANNEL_WELCOME,
                     action: D.AG.BOOST,
                 }),
-                    null != t && (0, f.A)(t.id, A.A.GUILD_POWERUPS_CHANNEL_WELCOME_CTA));
+                    null != t && (0, G.A)(t.id, A.A.GUILD_POWERUPS_CHANNEL_WELCOME_CTA));
             }, [t]),
         }),
         [eE, eo] = n.useState({ guildId: S.dJq, applicationIds: [] }),
         er = t?.id ?? S.dJq,
         eC = eE.guildId === er && eE.applicationIds.length > 0;
     n.useEffect(() => {
+        if (!Q) return;
         let e = !0;
         return (
             v
@@ -221,7 +222,7 @@ function x(e, t) {
                 e = !1;
             }
         );
-    }, [er]);
+    }, [er, Q]);
     let ep = !($ || ee || et || ea || el),
         e_ = [];
     return (
@@ -258,7 +259,7 @@ function x(e, t) {
                     completed: $,
                     onClick: ec,
                 }),
-            e_.push({ key: "addapp", iconUrl: u, title: w.intl.string(w.t.IhHDEO), completed: eC, onClick: eu }),
+            Q && e_.push({ key: "addapp", iconUrl: u, title: w.intl.string(w.t.IhHDEO), completed: eC, onClick: eu }),
             en &&
                 e_.push({
                     key: "boost",
