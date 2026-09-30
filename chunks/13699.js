@@ -30,6 +30,7 @@ c.exports = {
     kG: "stepDisclosureToggle__30c5c",
     nV: "step-row-enter__30c5c",
     zH: "stepStat__30c5c",
+    SS: "stepCommand__30c5c",
     sI: "stepStatPositive__30c5c",
     eh: "stepStatNegative__30c5c",
     iq: "stepItem__30c5c",

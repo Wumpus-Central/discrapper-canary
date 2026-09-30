@@ -183,6 +183,12 @@ let n = [
             "Collaborators on an app shared with their server can now clone it for themselves, with no need for the owner to turn sharing on first.",
     },
     {
+        date: "2026-09-28",
+        time: "06:02",
+        platforms: ["desktop", "mobile"],
+        summary: "Commands the agent runs show up to four lines in chat, set in Discord's code font.",
+    },
+    {
         date: "2026-09-08",
         time: "00:00",
         platforms: ["desktop"],

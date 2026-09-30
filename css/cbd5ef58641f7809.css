@@ -392,6 +392,11 @@
     color: var(--text-default)
 }
 
+.stepCommand__30c5c {
+    font-family: var(--font-code);
+    font-size: .875em
+}
+
 .stepStatPositive__30c5c {
     color: var(--text-feedback-positive)
 }
@@ -483,4 +488,4 @@
     flex-shrink: 0
 }
 
-/*# sourceMappingURL=32623b44f704a2d8.css.map*/
+/*# sourceMappingURL=cbd5ef58641f7809.css.map*/
