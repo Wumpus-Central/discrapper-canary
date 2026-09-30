@@ -45,9 +45,9 @@ var S = n(112107),
     V = n(24686),
     G = n(147190),
     F = n(556300),
-    H = n(990474);
+    B = n(990474);
 n(938796);
-var B = n(380610),
+var H = n(380610),
     W = n(435954),
     K = n(721779),
     z = n(333421),
@@ -285,7 +285,7 @@ function em(e) {
             parse: (e, t) => ({ target: e, type: "devLink" }),
             react: (e, t, n) => {
                 let s = e.target[0];
-                return (0, B.h4)(s)
+                return (0, H.h4)(s)
                     ? (0, l.jsxs)(
                           i.Fragment,
                           { children: [(0, l.jsx)("span", { children: s }), (0, l.jsx)(W.default, { url: s }, s)] },
@@ -373,7 +373,7 @@ function em(e) {
             })(e),
         ),
         channelMention: (0, F.A)(e),
-        commandMention: (0, H.Ay)(e),
+        commandMention: (0, B.Ay)(e),
         attachmentLink: {
             react(t, i, s) {
                 let a = s.noStyleAndInteraction

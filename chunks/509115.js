@@ -1,4 +1,4 @@
-c.r(
+_.r(
     (a.exports = {
         cardIcon: "cardIcon__29abc",
         visa: "visa__29abc",

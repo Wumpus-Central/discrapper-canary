@@ -1,9 +1,9 @@
-n.d(t, { j: () => s, v: () => r.v });
+n.d(t, { j: () => a, v: () => i.v });
 var l = n(260447),
-    i = n(174459),
-    r = n(71804),
-    a = n(652215);
-class s extends l.z {
+    r = n(174459),
+    i = n(71804),
+    s = n(652215);
+class a extends l.z {
     getSentryAppContext() {
         return "billing";
     }
@@ -15,23 +15,23 @@ class s extends l.z {
             loadId: t,
             selectedSkuId: n,
             selectedPlanId: l,
-            skuIds: i,
-            isGift: a,
-            purchaseType: s,
-            locationStack: o,
-            checkoutStepsHistory: u,
+            skuIds: r,
+            isGift: s,
+            purchaseType: a,
+            locationStack: u,
+            checkoutStepsHistory: c,
         } = this.props;
         return {
             loadId: t,
             selectedSkuId: n,
             selectedPlanId: l,
-            isGift: a,
-            purchaseType: s,
-            skuIds: i,
-            locationStack: o,
+            isGift: s,
+            purchaseType: a,
+            skuIds: r,
+            locationStack: u,
             checkoutStepsHistory:
-                null != u ? u.map((e) => (e.toLowerCase().includes("auth") ? e.replaceAll("auth", "a") : e)) : [],
-            ...(e instanceof r.v ? { checkoutErrorExtraInformation: e.extraSentryInformation } : {}),
+                null != c ? c.map((e) => (e.toLowerCase().includes("auth") ? e.replaceAll("auth", "a") : e)) : [],
+            ...(e instanceof i.v ? { checkoutErrorExtraInformation: e.extraSentryInformation } : {}),
         };
     }
     onErrorCaught(e, t, n) {
@@ -39,15 +39,15 @@ class s extends l.z {
     }
     emitPaymentFlowErrorAnalytics(e, t) {
         let n = this.getCrashedFlag(e),
-            { loadId: l, locationStack: r, additionalAnalyticsData: s } = this.props,
-            o = "string" == typeof e ? e : e.message;
-        i.default.track(a.HAw.PAYMENT_FLOW_ERROR, {
+            { loadId: l, locationStack: i, additionalAnalyticsData: a } = this.props,
+            u = "string" == typeof e ? e : e.message;
+        r.default.track(s.HAw.PAYMENT_FLOW_ERROR, {
             load_id: l,
             crashed: n,
-            error_message: o,
+            error_message: u,
             sentry_event_id: t,
-            location_stack: r ?? [],
-            ...s,
+            location_stack: i ?? [],
+            ...a,
         });
     }
 }

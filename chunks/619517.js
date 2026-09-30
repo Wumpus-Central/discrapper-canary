@@ -322,7 +322,7 @@ class v extends i.Component {
             V = (0, s.clamp)(Math.round(g * U), C ?? 0, I ?? 1 / 0),
             G = (0, s.clamp)(Math.round(x * U), E ?? 0, y ?? 1 / 0),
             F = _.getConfig({ location: "LazyImage_render" }).enabled,
-            H = {
+            B = {
                 alt: e,
                 readyState: k,
                 onContextMenu: r ?? void 0,
@@ -354,28 +354,28 @@ class v extends i.Component {
                 onFocus: this.onFocus,
                 onBlur: this.onBlur,
             };
-        if (1 === H.width && 1 === H.height) return null;
+        if (1 === B.width && 1 === B.height) return null;
         switch (
-            ((D || null != S) && (H.onClick = this.onClick), i && (H.original = null != u && "" !== u ? u : H.src), k)
+            ((D || null != S) && (B.onClick = this.onClick), i && (B.original = null != u && "" !== u ? u : B.src), k)
         ) {
             case A.Rv1.LOADING:
-                null != t && (H.src = t);
+                null != t && (B.src = t);
                 break;
             case A.Rv1.READY:
                 if (v.isAnimated(this.props)) {
-                    H.onMouseLeave = this.onMouseLeave;
+                    B.onMouseLeave = this.onMouseLeave;
                     let e = (a || w || P) && (null == p || p) && v.visibilityObserver.isVisible(this);
                     (e
-                        ? ((H.src = this.getSrc(U, f)), (H.renderAccessory = N))
-                        : ((H.src = this.getSrc(U, f || !h || !a)), (H.renderAccessory = this.renderAccessory)),
+                        ? ((B.src = this.getSrc(U, f)), (B.renderAccessory = N))
+                        : ((B.src = this.getSrc(U, f || !h || !a)), (B.renderAccessory = this.renderAccessory)),
                         null != m &&
-                            (H.children = (t) => {
+                            (B.children = (t) => {
                                 let { src: n, size: l, alt: i, mediaLayoutType: s } = t;
                                 return m({ src: n, size: l, animating: e, alt: i, mediaLayoutType: s });
                             }));
-                } else H.src = this.getSrc(U);
+                } else B.src = this.getSrc(U);
         }
-        return (0, l.jsx)(o._, { disableLoadingSpinner: F, ref: this._imageRef, ...H });
+        return (0, l.jsx)(o._, { disableLoadingSpinner: F, ref: this._imageRef, ...B });
     }
 }
 let N = (0, u.mj)({

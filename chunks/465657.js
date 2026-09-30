@@ -18,25 +18,25 @@ function f(e) {
             onFooterBackClick: n,
             isBackButtonEligible: r,
             subscriptionMetadata: f,
-            renderStepBody: E,
-            resolveInternalState: S,
+            renderStepBody: S,
+            resolveInternalState: E,
             resolveTenantReviewButtonProps: y,
-            handleStepChange: I,
-            openInvoiceId: g,
-            analyticsData: A,
+            handleStepChange: A,
+            openInvoiceId: I,
+            analyticsData: g,
             analyticsLocation: P,
         } = e,
         {
             paymentSourceId: v,
-            purchasePreviewError: _,
-            customCheckoutFlow: x,
+            purchasePreviewError: x,
+            customCheckoutFlow: _,
             contextMetadata: T,
             purchaseError: N,
             setCheckoutCurrency: b,
             setLinkWalletEnabled: j,
             checkoutPaymentSources: R,
-            hasCheckoutContextLoaded: M,
-            invoicePreview: O,
+            hasCheckoutContextLoaded: O,
+            invoicePreview: M,
         } = (0, h.t4)((e) => ({
             customCheckoutFlow: e.customCheckoutFlow,
             contextMetadata: e.contextMetadata,
@@ -53,29 +53,29 @@ function f(e) {
     a()(null != L, "Step should be set");
     let k = i.useRef(null),
         { paymentSources: w } = (0, p.j)(),
-        U = (0, c.W)(w, v),
-        D = i.useMemo(() => {
+        D = (0, c.W)(w, v),
+        U = i.useMemo(() => {
             if (null == v) return !1;
-            if (!M) return !0;
+            if (!O) return !0;
             let e = R.find((e) => e.id === v);
             return null != e && !e.enabled;
-        }, [R, M, v]),
+        }, [R, O, v]),
         G = (0, s.iB)({ checkoutPaymentSources: R, paymentSourceId: v, location: "CheckoutBaseReviewStep" }),
         { disablePurchase: F } = i.useMemo(() => {
-            let e = { disablePurchase: G || x === C.uH.DEV_STORYBOOK_CHECKOUT };
-            return null != S
-                ? S(
+            let e = { disablePurchase: G || _ === C.uH.DEV_STORYBOOK_CHECKOUT };
+            return null != E
+                ? E(
                       { ...e },
                       {
-                          paymentSource: U,
+                          paymentSource: D,
                           paymentSourceId: v,
-                          isSelectedPaymentSourceDisabled: D,
-                          invoicePreview: O,
-                          purchasePreviewError: _,
+                          isSelectedPaymentSourceDisabled: U,
+                          invoicePreview: M,
+                          purchasePreviewError: x,
                       },
                   )
                 : e;
-        }, [S, U, v, D, O, _, G, x]);
+        }, [E, D, v, U, M, x, G, _]);
     i.useEffect(() => {
         null != N && null != k.current && k.current.scrollIntoView({ behavior: "smooth" });
     }, [N]);
@@ -84,11 +84,11 @@ function f(e) {
         }, [b, n]),
         H = i.useCallback(
             (e) => {
-                (j(e?.linkWalletEnabled ?? !0), I(o.pn.ADD_PAYMENT_STEPS));
+                (j(e?.linkWalletEnabled ?? !0), A(o.pn.ADD_PAYMENT_STEPS));
             },
-            [I, j],
+            [A, j],
         ),
-        W = i.useMemo(() => E({ handlePaymentSourceAdd: H }), [E, H]),
+        W = i.useMemo(() => S({ handlePaymentSourceAdd: H }), [S, H]),
         Y = (0, l.jsx)(d.U, {
             resolveTenantReviewButtonProps: y,
             onBack: B,
@@ -96,9 +96,9 @@ function f(e) {
             onPaymentSourceAdd: H,
             disablePurchase: F,
             analyticsLocation: P,
-            baseAnalyticsData: A,
-            openInvoiceId: g,
-            handleStepChange: I,
+            baseAnalyticsData: g,
+            openInvoiceId: I,
+            handleStepChange: A,
             postPurchaseStep: o.pn.CONFIRM,
             backButtonEligible: r,
             metadata: f,

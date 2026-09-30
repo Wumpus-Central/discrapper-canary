@@ -1,19 +1,19 @@
-t.d(e, { A: () => h });
-var l = t(477900);
-t(582128);
-var n = t(503698),
-    r = t.n(n),
-    s = t(194261),
-    i = t(834730),
-    c = t(375708),
-    o = t(629264),
-    d = t(938442);
-function h() {
-    return (0, l.jsxs)("div", {
-        className: r()(o.iG, d.Uu, d.Hu),
+l.d(e, { A: () => d });
+var t = l(477900);
+l(582128);
+var r = l(503698),
+    s = l.n(r),
+    n = l(194261),
+    h = l(834730),
+    i = l(375708),
+    o = l(629264),
+    c = l(938442);
+function d() {
+    return (0, t.jsxs)("div", {
+        className: s()(o.iG, c.Uu, c.Hu),
         children: [
-            (0, l.jsx)(s.LockIcon, { size: "sm", color: "currentColor", className: o.hz }),
-            (0, l.jsx)(i.E, { variant: "text-sm/medium", className: o.aK, children: c.intl.string(c.t.Kv6Z4I) }),
+            (0, t.jsx)(n.LockIcon, { size: "sm", color: "currentColor", className: o.hz }),
+            (0, t.jsx)(h.E, { variant: "text-sm/medium", className: o.aK, children: i.intl.string(i.t.Kv6Z4I) }),
         ],
     });
 }

@@ -1,10 +1,10 @@
-t.d(a, { t: () => i });
-var n = t(734057),
-    l = t(576705),
-    s = t(652215);
-function i(e) {
-    let a = n.A.getChannel(e),
-        t = a?.isPrivate(),
-        i = a?.isForumChannel();
-    return t || (l.A.can(s.xBc.ATTACH_FILES, a) && l.A.can(s.xBc.SEND_MESSAGES, a) && !i);
+l.d(e, { t: () => i });
+var t = l(734057),
+    n = l(576705),
+    s = l(652215);
+function i(a) {
+    let e = t.A.getChannel(a),
+        l = e?.isPrivate(),
+        i = e?.isForumChannel();
+    return l || (n.A.can(s.xBc.ATTACH_FILES, e) && n.A.can(s.xBc.SEND_MESSAGES, e) && !i);
 }

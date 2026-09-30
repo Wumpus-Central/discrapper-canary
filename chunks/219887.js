@@ -1,4 +1,4 @@
-n.d(t, { A: () => _ });
+n.d(t, { A: () => I });
 var i = n(477900),
     s = n(582128),
     l = n(503698),
@@ -25,7 +25,7 @@ function f(e) {
         ? (0, i.jsx)(o.E, { variant: l, color: "none", className: n, children: t })
         : (0, i.jsx)("div", { className: r()(n, T.Sv), children: t });
 }
-class _ extends s.PureComponent {
+class I extends s.PureComponent {
     static defaultProps = {
         isForSubscription: !1,
         isDefault: !1,

@@ -1,4 +1,4 @@
-b.exports = {
+e.exports = {
     _x: "shopCard_bab2bc",
     mr: "highlighted_bab2bc",
     Vp: "shopCardAnimation_bab2bc",

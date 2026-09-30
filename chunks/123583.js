@@ -103,8 +103,8 @@ let F = i.memo(
               });
     }),
 );
-var H = n(530134),
-    B = n(3203),
+var B = n(530134),
+    H = n(3203),
     W = n(866665),
     K = n(617617),
     z = n(234320),
@@ -130,7 +130,7 @@ let Y = i.memo(
         let C = i.useCallback(() => {
                 (0, D.r$)(V.kx.GIF, s, a.id);
             }, [s, a.id]),
-            { Component: E, events: I, play: y } = (0, B.V)();
+            { Component: E, events: I, play: y } = (0, H.V)();
         if (n) return null;
         let S = d === V.kx.GIF && m === s && p === a.id;
         return (0, l.jsx)(W.m, {
@@ -292,7 +292,7 @@ let ee = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
                 activeCommandOption: u.A.getActiveOption(C.id),
             })),
             V = (0, g.dw)(),
-            B = [],
+            H = [],
             W = !C.isDM() || void 0 === C.recipients || C.recipients.length > 1,
             K = (0, r.bG)([p.default], () => (W ? null : p.default.getUser(C.recipients[0]))),
             z = (function (e) {
@@ -329,28 +329,28 @@ let ee = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
                 null == D &&
                 !V &&
                 (null == K || k.Ay.isPremiumEligible(K)) &&
-                B.push((0, l.jsx)(q.A, { disabled: A, channel: C }, "gift")),
+                H.push((0, l.jsx)(q.A, { disabled: A, channel: C }, "gift")),
             x.gifs?.button != null &&
                 null == D &&
                 y &&
                 T &&
                 !S &&
-                B.push((0, l.jsx)(Y, { disabled: A, type: x, channel: C }, "gif")),
+                H.push((0, l.jsx)(Y, { disabled: A, type: x, channel: C }, "gif")),
             x.stickers?.button != null &&
                 null == D &&
                 y &&
                 w &&
                 !S &&
-                B.push((0, l.jsx)(et, { disabled: A, type: x, channel: C }, "sticker"))),
+                H.push((0, l.jsx)(et, { disabled: A, type: x, channel: C }, "sticker"))),
         x.emojis?.button != null &&
             !S &&
             J &&
             (y || S
-                ? b && B.push((0, l.jsx)(F, { disabled: A, type: x, channelId: C.id }, "emoji"))
-                : B.push((0, l.jsx)(H.A, { disabled: A, type: x, channel: C }, "expression"))),
-        z && j && B.push((0, l.jsx)(R, { channelId: C.id, type: x }, "appLauncher")),
-        Z && B.push((0, l.jsx)(X, { onClick: E, disabled: A || P }, "submit")),
-        0 === B.length)
+                ? b && H.push((0, l.jsx)(F, { disabled: A, type: x, channelId: C.id }, "emoji"))
+                : H.push((0, l.jsx)(B.A, { disabled: A, type: x, channel: C }, "expression"))),
+        z && j && H.push((0, l.jsx)(R, { channelId: C.id, type: x }, "appLauncher")),
+        Z && H.push((0, l.jsx)(X, { onClick: E, disabled: A || P }, "submit")),
+        0 === H.length)
             ? null
-            : (0, l.jsx)("div", { className: G.Uo, children: B });
+            : (0, l.jsx)("div", { className: G.Uo, children: H });
     });

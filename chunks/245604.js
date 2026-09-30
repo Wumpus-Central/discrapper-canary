@@ -1,9 +1,9 @@
 n.d(t, { U: () => s });
 var l = n(477900);
 n(582128);
-var r = n(661531),
+var i = n(661531),
     a = n(996682),
-    i = n(27989);
+    r = n(27989);
 function s(e) {
     let {
             size: t = "md",
@@ -11,18 +11,18 @@ function s(e) {
             height: s,
             secondaryColor: o = "transparent",
             secondaryColorClass: u = "",
-            color: c = r.A.colors.INTERACTIVE_ICON_DEFAULT,
+            color: c = i.A.colors.INTERACTIVE_ICON_DEFAULT,
             colorClass: d = "",
             ...f
         } = e,
-        h = (0, i.J)(t),
-        A = h?.width ?? n,
-        m = h?.height ?? s;
+        A = (0, r.J)(t),
+        S = A?.width ?? n,
+        h = A?.height ?? s;
     return (0, l.jsxs)("svg", {
         ...(0, a.A)(f),
         xmlns: "http://www.w3.org/2000/svg",
-        width: A,
-        height: m,
+        width: S,
+        height: h,
         fill: "none",
         viewBox: "0 0 24 24",
         children: [

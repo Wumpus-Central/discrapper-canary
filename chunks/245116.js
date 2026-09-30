@@ -1,4 +1,4 @@
-l.d(t, { fn: () => b, As: () => y, JQ: () => j });
+l.d(t, { fn: () => j, As: () => b, JQ: () => C });
 var a = l(477900),
     n = l(582128),
     i = l(376357),
@@ -15,13 +15,13 @@ var c = l(77729),
     u = l(696016),
     d = l(704796),
     m = l(375708);
-class f extends Error {
+class h extends Error {
     userMessage;
     constructor(e) {
         (super(e), (this.userMessage = e), (this.name = "ClipImageError"));
     }
 }
-async function h(e, t) {
+async function f(e, t) {
     let l,
         a =
             e.length >= 8 && 137 === e[0] && 80 === e[1] && 78 === e[2] && 71 === e[3]
@@ -33,11 +33,11 @@ async function h(e, t) {
                       "WEBP" === String.fromCharCode(...e.subarray(8, 12))
                     ? "image/webp"
                     : null;
-    if (null == a || !u._9.includes(a)) throw new f(m.intl.string(d.default.j3AKJQ));
+    if (null == a || !u._9.includes(a)) throw new h(m.intl.string(d.default.j3AKJQ));
     try {
         l = await createImageBitmap(new Blob([e], { type: a }));
     } catch {
-        throw new f(m.intl.string(d.default.piRNeN));
+        throw new h(m.intl.string(d.default.piRNeN));
     }
     try {
         let n = Math.max(l.width, l.height),
@@ -60,7 +60,7 @@ async function h(e, t) {
                 let a = document.createElement("canvas");
                 ((a.width = t), (a.height = l));
                 let n = a.getContext("2d");
-                if (null == n) throw new f(m.intl.string(d.default.piRNeN));
+                if (null == n) throw new h(m.intl.string(d.default.piRNeN));
                 n.drawImage(e, 0, 0, e.width, e.height, 0, 0, t, l);
                 let i = a.toDataURL(u.w6, u.ku),
                     s = i.startsWith(`data:${u.w6}`) ? u.w6 : "image/png";
@@ -71,7 +71,7 @@ async function h(e, t) {
         l.close();
     }
 }
-async function x() {
+async function p() {
     let e;
     try {
         e = await c.A.fileManager.openFiles(
@@ -79,16 +79,16 @@ async function x() {
             u.sL,
         );
     } catch (e) {
-        if (null != e && "object" == typeof e && "ETOOLARGE" === e.code) throw new f(m.intl.string(d.default.ar2OUZ));
+        if (null != e && "object" == typeof e && "ETOOLARGE" === e.code) throw new h(m.intl.string(d.default.ar2OUZ));
         throw e;
     }
     let t = e[0];
     return null == t ? null : { bytes: t.data, fileName: t.filename };
 }
-var p = l(635793),
+var x = l(635793),
     v = l(362081);
 let g = n.createContext(null);
-function j(e) {
+function C(e) {
     let { children: t, isCropEnabled: l = !0 } = e,
         {
             setActiveTool: i,
@@ -98,75 +98,75 @@ function j(e) {
             removeTrack: u,
             updateTrackRange: d,
             updateTextTrackData: m,
-            updateImageTrackData: f,
+            updateImageTrackData: h,
         } = (0, v.T)(),
-        { enabled: h } = o.useConfig({ location: "ClipsEditorContextProvider" }),
-        [x, j] = n.useState(null),
-        b = n.useCallback(
+        { enabled: f } = o.useConfig({ location: "ClipsEditorContextProvider" }),
+        [p, C] = n.useState(null),
+        j = n.useCallback(
             (e) => {
-                (i(p.Y.NONE), j(e));
+                (i(x.Y.NONE), C(e));
             },
             [i],
         ),
-        y = n.useCallback(() => {
-            j(r());
+        b = n.useCallback(() => {
+            C(r());
         }, [r]),
         w = n.useCallback(async () => {
-            let e = await C();
-            null != e && j(c(e));
+            let e = await y();
+            null != e && C(c(e));
         }, [c]),
-        N = n.useCallback(
-            async (e) => {
-                let t = await C();
-                null != t && f(e, (e) => ({ ...e, ...t }));
-            },
-            [f],
-        ),
         E = n.useCallback(
+            async (e) => {
+                let t = await y();
+                null != t && h(e, (e) => ({ ...e, ...t }));
+            },
+            [h],
+        ),
+        N = n.useCallback(
             (e) => {
-                (u(e), j((t) => (t === e ? null : t)));
+                (u(e), C((t) => (t === e ? null : t)));
             },
             [u],
         ),
-        k = n.useMemo(() => ({ isCropEnabled: l, isTextTrackEnabled: !0, isImageTrackEnabled: h }), [l, !0, h]),
+        k = n.useMemo(() => ({ isCropEnabled: l, isTextTrackEnabled: !0, isImageTrackEnabled: f }), [l, !0, f]),
         A = n.useMemo(
             () => ({
                 tracks: s,
-                selectedTrackId: x,
-                setSelectedTrackId: b,
-                addTextTrack: y,
+                selectedTrackId: p,
+                setSelectedTrackId: j,
+                addTextTrack: b,
                 pickAndAddImageTrack: w,
-                pickAndReplaceImage: N,
-                removeTrack: E,
+                pickAndReplaceImage: E,
+                removeTrack: N,
                 updateTrackRange: d,
                 updateTextTrackData: m,
-                updateImageTrackData: f,
+                updateImageTrackData: h,
                 editorFeatures: k,
             }),
-            [s, x, b, y, w, N, E, d, m, f, k],
+            [s, p, j, b, w, E, N, d, m, h, k],
         );
     return (0, a.jsx)(g.Provider, { value: A, children: t });
 }
-async function C() {
+async function y() {
     try {
         var e;
-        let t = await x();
+        let t = await p();
         if (null == t) return null;
-        let l = await h(t.bytes, t.fileName);
+        let l = await f(t.bytes, t.fileName);
         if (!(await (l.src, (e = l.mimeType), Promise.resolve({ allowed: !0, checked: !1 }))).allowed)
             return ((0, i.P)((0, s.o)(m.intl.string(d.default.uF5VXk), r.Ck.FAILURE)), null);
         return l;
     } catch (t) {
         u.nx.warn("Failed to add clip image track", t);
-        let e = t instanceof f ? t.userMessage : m.intl.string(d.default["+20A3o"]);
+        let e = t instanceof h ? t.userMessage : m.intl.string(d.default["+20A3o"]);
         return ((0, i.P)((0, s.o)(e, r.Ck.FAILURE)), null);
     }
 }
-function b() {
+function j() {
     let e = n.useContext(g);
     if (null == e) throw Error("useClipsEditorContext must be used within a ClipsEditorContextProvider");
     return e;
 }
-function y() {
-    return b().editorFeatures;
+function b() {
+    return j().editorFeatures;
 }

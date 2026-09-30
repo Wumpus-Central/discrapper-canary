@@ -98,12 +98,12 @@ function f() {
                     : [],
             [n],
         ),
-        E = l.useCallback(() => t((e) => e + 1), []);
+        S = l.useCallback(() => t((e) => e + 1), []);
     return {
         games: f,
         isLoading: "loading" === c,
         hasError: "error" === c,
         isEmpty: "success" === c && 0 === f.length,
-        refetch: E,
+        refetch: S,
     };
 }

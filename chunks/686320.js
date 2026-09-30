@@ -1,14 +1,14 @@
-t.d(i, { $: () => l });
-var c = t(95635),
-    n = t(405433),
-    o = t(111994),
-    s = t(375708);
-function l(e) {
-    switch (e) {
-        case o.qh.UPLOAD:
-            return { label: s.intl.string(s.t.rI0i0a), icon: c.UploadIcon };
-        case o.qh.SHARE:
+e.d(a, { $: () => c });
+var t = e(95635),
+    i = e(405433),
+    s = e(111994),
+    n = e(375708);
+function c(l) {
+    switch (l) {
+        case s.qh.UPLOAD:
+            return { label: n.intl.string(n.t.rI0i0a), icon: t.UploadIcon };
+        case s.qh.SHARE:
         case void 0:
-            return { label: s.intl.string(s.t.RDE0Sc), icon: n.ShareIcon };
+            return { label: n.intl.string(n.t.RDE0Sc), icon: i.ShareIcon };
     }
 }

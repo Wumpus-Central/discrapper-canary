@@ -1,4 +1,4 @@
-n.d(t, { F: () => _ });
+n.d(t, { F: () => I });
 var i = n(419954),
     s = n(780964),
     l = n(477900),
@@ -74,4 +74,4 @@ let f = (0, i.Qx)(s.X.TIME_FORMAT_SETTING, {
             ];
         },
     }),
-    _ = (0, i.zZ)(s.X.LANGUAGE_AND_TIME_CATEGORY, { buildLayout: () => [x, f] });
+    I = (0, i.zZ)(s.X.LANGUAGE_AND_TIME_CATEGORY, { buildLayout: () => [x, f] });

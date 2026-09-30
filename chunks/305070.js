@@ -37,7 +37,7 @@ let D = new Map([["thread", new Set(["name"])]]);
 var U = n(5867),
     V = n(940169);
 let G = i.forwardRef(function (e, t) {
-    let { channel: n, type: s, editorHeight: G, onVisibilityChange: F, editorScrollerRef: H, barsHeight: B } = e,
+    let { channel: n, type: s, editorHeight: G, onVisibilityChange: F, editorScrollerRef: B, barsHeight: H } = e,
         W = (0, g.GV)(),
         K = (0, o.bG)([C.A], () => C.A.getGuild(n.guild_id) ?? null, [n.guild_id]),
         z = i.useRef(null),
@@ -217,9 +217,9 @@ let G = i.forwardRef(function (e, t) {
     let en = { [V.pK]: null == X, [V.YB]: null != X, [V.sQ]: null == X && "bottom" === e.position, [V.mO]: Q },
         el = 490;
     null != X && (el = s.autocomplete?.small ? 200 : Z.query?.type === E.DB.EMOJIS_AND_STICKERS ? 490 : 245);
-    let ei = Math.max(G, H?.current?.clientHeight ?? 0),
+    let ei = Math.max(G, B?.current?.clientHeight ?? 0),
         es = Math.min(0.5 * window.innerHeight, ei);
-    el = Math.min(window.innerHeight - 120 - es - (B ?? 0), el);
+    el = Math.min(window.innerHeight - 120 - es - (H ?? 0), el);
     let er = (0, l.jsx)(p.Ay, {
         id: W,
         className: r()(V.nx, en),

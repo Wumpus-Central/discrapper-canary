@@ -82,8 +82,8 @@ let g = i().once(() =>
     V = i().once(() => s.X(h())),
     G = i().once(() => s.X(g())),
     F = i().once(() => s.X(C())),
-    H = i().once(() => s.X(E())),
-    B = i().once(() => s.X(I())),
+    B = i().once(() => s.X(E())),
+    H = i().once(() => s.X(I())),
     W = i().once(() => s.X(N())),
     K = {
         combineAndInjectMentionRule: d,
@@ -156,11 +156,11 @@ let g = i().once(() =>
         },
         parseEmbedTitleWithoutLinksToAST: function () {
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-            return H()(...t);
+            return B()(...t);
         },
         parseInlineReplyToAST: function () {
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-            return B()(...t);
+            return H()(...t);
         },
         parseAutoModerationSystemMessageToAST: function () {
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];

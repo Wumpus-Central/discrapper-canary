@@ -1,17 +1,17 @@
-t.d(s, { f: () => i, A: () => l });
-var n = t(477900);
-t(582128);
-var r = t(691885),
-    a = t(375708);
-function i(e) {
-    let { currencies: s, className: t, children: r } = e;
-    return s.length < 2 ? null : (0, n.jsx)("div", { className: t, children: r });
+s.d(t, { f: () => l, A: () => i });
+var n = s(477900);
+s(582128);
+var r = s(691885),
+    a = s(375708);
+function l(e) {
+    let { currencies: t, className: s, children: r } = e;
+    return t.length < 2 ? null : (0, n.jsx)("div", { className: s, children: r });
 }
-let l = function (e) {
-    let { label: s, currencies: t, onChange: i, selectedCurrency: l, disabled: c = !1 } = e;
-    if (t.length < 2 || null == l) return null;
-    let u = t.map((e, s) => ({
-        id: s.toString(),
+let i = function (e) {
+    let { label: t, currencies: s, onChange: l, selectedCurrency: i, disabled: c = !1 } = e;
+    if (s.length < 2 || null == i) return null;
+    let u = s.map((e, t) => ({
+        id: t.toString(),
         value: e,
         label: `${e.toUpperCase()} - ${(function (e) {
             switch (e) {
@@ -78,11 +78,11 @@ let l = function (e) {
     }));
     return (0, n.jsx)(r.l, {
         selectionMode: "single",
-        label: s,
-        value: l,
+        label: t,
+        value: i,
         options: u,
         onSelectionChange: function (e) {
-            null != e && i(e);
+            null != e && l(e);
         },
         disabled: c,
     });

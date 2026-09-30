@@ -1,29 +1,29 @@
-t.d(e, { A: () => c });
-var l = t(477900);
-t(582128);
-var n = t(772707),
-    r = t(834730),
-    s = t(375708),
-    i = t(832011);
-function c(a) {
-    let e,
-        { transitionState: t, guild: c, guildBoostQuantity: o, isTransfer: d, graphic: h, onClose: u } = a,
-        m = c?.name;
-    e = d
-        ? null == m
-            ? s.intl.format(s.t.mYRfYx, {})
-            : s.intl.format(s.t["Ps/5bb"], { guildName: m })
-        : null == m
-          ? s.intl.format(s.t["4fw/T2"], { guildSubscriptionQuantity: o })
-          : s.intl.format(s.t.IeFTQu, { guildName: m, guildSubscriptionQuantity: o });
-    let p = d ? s.intl.string(s.t["5uYZHN"]) : s.intl.string(s.t.mpb7t3),
-        x = [{ variant: "primary", text: s.intl.string(s.t["/iTxgz"]), onClick: u }];
-    return (0, l.jsx)(n.k, {
-        transitionState: t,
-        onClose: u,
-        graphic: h,
-        title: p,
-        actions: x,
-        children: (0, l.jsx)(r.E, { variant: "text-md/normal", className: i.x, children: e }),
+n.d(t, { A: () => l });
+var a = n(477900);
+n(582128);
+var i = n(772707),
+    c = n(834730),
+    r = n(375708),
+    s = n(832011);
+function l(e) {
+    let t,
+        { transitionState: n, guild: l, guildBoostQuantity: o, isTransfer: d, graphic: u, onClose: b } = e,
+        p = l?.name;
+    t = d
+        ? null == p
+            ? r.intl.format(r.t.mYRfYx, {})
+            : r.intl.format(r.t["Ps/5bb"], { guildName: p })
+        : null == p
+          ? r.intl.format(r.t["4fw/T2"], { guildSubscriptionQuantity: o })
+          : r.intl.format(r.t.IeFTQu, { guildName: p, guildSubscriptionQuantity: o });
+    let f = d ? r.intl.string(r.t["5uYZHN"]) : r.intl.string(r.t.mpb7t3),
+        m = [{ variant: "primary", text: r.intl.string(r.t["/iTxgz"]), onClick: b }];
+    return (0, a.jsx)(i.k, {
+        transitionState: n,
+        onClose: b,
+        graphic: u,
+        title: f,
+        actions: m,
+        children: (0, a.jsx)(c.E, { variant: "text-md/normal", className: s.x, children: t }),
     });
 }

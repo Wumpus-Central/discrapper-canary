@@ -27,8 +27,8 @@ var g = n(503698),
     p = n(139286),
     T = n(793943),
     f = n(996254),
-    _ = n(830543),
-    I = n(738419),
+    I = n(830543),
+    _ = n(738419),
     N = n(328157),
     C = n(325600),
     b = n(114149);
@@ -58,9 +58,9 @@ function y(e) {
                     variant: "primary",
                     text: u.intl.string(u.t.uw9zI7),
                     onClick: function () {
-                        ((0, I.b0)(I.G8.APPEARANCE_SETTINGS),
+                        ((0, _.b0)(_.G8.APPEARANCE_SETTINGS),
                             (0, T.nf)(T.HP.CUSTOM_THEME, { from: T.xv.SETTING }),
-                            (0, _.default)());
+                            (0, I.default)());
                     },
                 }),
             }),

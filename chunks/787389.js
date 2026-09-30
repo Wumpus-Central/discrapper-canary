@@ -1,40 +1,40 @@
-n.d(t, { A: () => f });
-var i = n(582128),
-    r = n(17928),
-    s = n(522305),
-    o = n(627363),
-    u = n(625180),
-    a = n(91242),
-    l = n(207371),
-    d = n(933958),
-    c = n(748975),
-    C = n(165610);
-function f(e) {
-    let { applicationId: t, analyticsLocations: n, runBeforeLaunchAttempt: f, runAfterLaunchAttempt: A } = e,
-        { data: E } = (0, o.YY)(t),
-        p = (0, r.bG)([d.Ay], () => d.Ay.getCurrentEmbeddedActivity()),
-        I = (0, r.bG)([a.A], () => a.A.getMainFrame()),
-        m = (0, l.x)(E);
-    return i.useCallback(async () => {
-        if (null == t || null == E) return;
+n.d(t, { A: () => A });
+var r = n(582128),
+    u = n(17928),
+    l = n(522305),
+    i = n(627363),
+    o = n(625180),
+    s = n(91242),
+    a = n(207371),
+    c = n(933958),
+    d = n(748975),
+    f = n(165610);
+function A(e) {
+    let { applicationId: t, analyticsLocations: n, runBeforeLaunchAttempt: A, runAfterLaunchAttempt: E } = e,
+        { data: _ } = (0, i.YY)(t),
+        p = (0, u.bG)([c.Ay], () => c.Ay.getCurrentEmbeddedActivity()),
+        C = (0, u.bG)([s.A], () => s.A.getMainFrame()),
+        I = (0, a.x)(_);
+    return r.useCallback(async () => {
+        if (null == t || null == _) return;
         let e = null != p && p.applicationId === t;
-        if (null != I && I.applicationId === t)
-            return void u.A.updateFrameLayoutMode({ frameId: I.id, layoutMode: C.y0.FOCUSED });
+        if (null != C && C.applicationId === t)
+            return void o.A.updateFrameLayoutMode({ frameId: C.id, layoutMode: f.y0.FOCUSED });
         if (e) {
             let e = p.location;
-            (0, c.A)("guild_id" in e ? e.guild_id : null, e);
+            (0, d.A)("guild_id" in e ? e.guild_id : null, e);
             return;
         }
-        f?.();
+        A?.();
         try {
-            m
-                ? await u.A.launchFrame({
+            I
+                ? await o.A.launchFrame({
                       applicationId: t,
-                      surface: C.sd,
+                      surface: f.sd,
                       analyticsContext: { isStart: !0, analyticsLocations: n },
                   })
-                : E?.bot?.id != null && (await (0, s.Q)({ appId: t, botId: E?.bot?.id, analyticsLocations: n ?? [] }));
+                : _?.bot?.id != null && (await (0, l.Q)({ appId: t, botId: _?.bot?.id, analyticsLocations: n ?? [] }));
         } catch (e) {}
-        A?.();
-    }, [n, E, t, m, p, I, A, f]);
+        E?.();
+    }, [n, _, t, I, p, C, E, A]);
 }

@@ -1,45 +1,45 @@
-n.d(t, { J$: () => m, WM: () => a.WM, cZ: () => p, eG: () => f, vd: () => I, vm: () => E, zh: () => A, zv: () => C });
-var i = n(544180),
-    r = n(396813),
-    s = n(859703),
-    o = n(405670),
-    u = n(561844),
-    a = n(546121),
-    l = n(710969),
-    d = n(792620),
-    c = n(652215);
-function C(e, t) {
-    (0, l.Ic)(e) || e.userStatus?.enrolledAt == null || e.userStatus?.completedAt != null || (0, r.uI)(e.id, t);
+n.d(t, { J$: () => I, WM: () => s.WM, cZ: () => p, eG: () => A, vd: () => C, vm: () => _, zh: () => E, zv: () => f });
+var r = n(544180),
+    u = n(396813),
+    l = n(859703),
+    i = n(405670),
+    o = n(561844),
+    s = n(546121),
+    a = n(710969),
+    c = n(792620),
+    d = n(652215);
+function f(e, t) {
+    (0, a.Ic)(e) || e.userStatus?.enrolledAt == null || e.userStatus?.completedAt != null || (0, u.uI)(e.id, t);
 }
 n(375708);
-function f(e) {
+function A(e) {
     let t = e.assets.video;
     return null == t || null == t.width || null == t.height || t.width > t.height ? "landscape" : "portrait";
 }
-function A(e, t) {
+function E(e, t) {
     return e <= 0 || t <= 0 ? 0 : e >= t ? 1 : Math.min(1, Math.round((e / t) * 100) / 100);
 }
-function E(e) {
-    let { questId: t, sourceQuestContent: n, videoSessionId: r } = e;
-    o.Ay.getState().setTranscriptEnabled(!1);
-    let a = o.Ay.getState().getVideoProgress(t);
-    if (null == a) return;
-    let l = s.A.getQuest(t);
-    null != l && l.userStatus?.enrolledAt != null && l.userStatus?.completedAt == null && C(l, a.maxTimestampSec);
-    let d = A(a.maxTimestampSec, a.duration);
-    ((0, u.av)({
+function _(e) {
+    let { questId: t, sourceQuestContent: n, videoSessionId: u } = e;
+    i.Ay.getState().setTranscriptEnabled(!1);
+    let s = i.Ay.getState().getVideoProgress(t);
+    if (null == s) return;
+    let a = l.A.getQuest(t);
+    null != a && a.userStatus?.enrolledAt != null && a.userStatus?.completedAt == null && f(a, s.maxTimestampSec);
+    let c = E(s.maxTimestampSec, s.duration);
+    ((0, o.av)({
         questId: t,
-        event: c.HAw.QUEST_VIDEO_PROGRESSED,
-        properties: { progress: d, video_timestamp_seconds: a.maxTimestampSec, video_session_id: r },
+        event: d.HAw.QUEST_VIDEO_PROGRESSED,
+        properties: { progress: c, video_timestamp_seconds: s.maxTimestampSec, video_session_id: u },
         sourceQuestContent: n,
     }),
-        (0, u.av)({
+        (0, o.av)({
             questId: t,
-            event: c.HAw.QUEST_VIDEO_MODAL_CLOSED,
+            event: d.HAw.QUEST_VIDEO_MODAL_CLOSED,
             properties: {
-                video_progress: d,
-                video_session_id: r,
-                network_connection_speed: i.A.getEffectiveConnectionSpeed(),
+                video_progress: c,
+                video_session_id: u,
+                network_connection_speed: r.A.getEffectiveConnectionSpeed(),
             },
             sourceQuestContent: n,
         }));
@@ -47,9 +47,9 @@ function E(e) {
 function p(e) {
     return `VIDEO-QUEST-${e}`;
 }
-function I(e, t) {
+function C(e, t) {
     return e >= t - 1 ? Math.max(e, t) : e;
 }
-function m(e) {
-    return !!(0, d.vv)(e) && (0, n(192308).hasModalOpen)(p(e.id));
+function I(e) {
+    return !!(0, c.vv)(e) && (0, n(192308).hasModalOpen)(p(e.id));
 }

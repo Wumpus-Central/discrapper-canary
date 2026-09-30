@@ -34,10 +34,10 @@ class c extends i.PureComponent {
                 id: h,
                 placeholder: C,
                 helperText: f,
-                ...E
+                ...S
             } = e,
-            S = {
-                ...E,
+            E = {
+                ...S,
                 placeholder: C?.(),
                 error: this.getError(m),
                 value: t[m],
@@ -51,7 +51,7 @@ class c extends i.PureComponent {
             "div",
             {
                 className: a()(c?.(o)),
-                children: (0, l.jsx)(s.D, { id: h, label: p(), helperText: f?.(), children: d(S, u, o) }),
+                children: (0, l.jsx)(s.D, { id: h, label: p(), helperText: f?.(), children: d(E, u, o) }),
             },
             m,
         );

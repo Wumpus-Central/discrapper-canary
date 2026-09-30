@@ -1,7 +1,7 @@
 n.d(t, {
     ks: () => tF,
     UK: () => tZ,
-    Ez: () => tB,
+    Ez: () => tH,
     _z: () => tL,
     LL: () => tD,
     Uq: () => tq,
@@ -16,7 +16,7 @@ n.d(t, {
     _d: () => tV,
     gL: () => tw,
     Dk: () => tG,
-    Ab: () => tH,
+    Ab: () => tB,
 });
 var l,
     i = n(477900),
@@ -119,7 +119,7 @@ var M = n(9578),
     V = n(611371),
     G = n(453771),
     F = n(440014);
-class H extends s.PureComponent {
+class B extends s.PureComponent {
     render() {
         let {
             src: e,
@@ -157,7 +157,7 @@ class H extends s.PureComponent {
         });
     }
 }
-var B = n(248643),
+var H = n(248643),
     W = n(866665),
     K = n(408278),
     z = n(900797),
@@ -601,7 +601,7 @@ var eD = n(97808),
     eV = n(707606),
     eG = n(403362),
     eF = n(439511);
-let eH = (0, eV.A)(function (e) {
+let eB = (0, eV.A)(function (e) {
         let { member: t, empty: n, guildId: l } = e;
         return n || null == t
             ? (0, i.jsx)("div", { className: eF.pO })
@@ -615,22 +615,22 @@ let eH = (0, eV.A)(function (e) {
                   }),
               });
     }),
-    eB = function (e) {
+    eH = function (e) {
         let { partySize: t, members: n, minAvatarsShown: l = 1, maxAvatarsShown: s = 2, guildId: r } = e,
             { totalSize: a, knownSize: o } = t;
         if (a < l) return null;
         let c = u()(n)
                 .filter(eG.Vq)
                 .take(s)
-                .map((e) => (0, i.jsx)(eH, { member: e, guildId: r }, e.id))
+                .map((e) => (0, i.jsx)(eB, { member: e, guildId: r }, e.id))
                 .value(),
             d = a - o;
         for (let e = 0; e < d && c.length < s; e++)
-            c.push((0, i.jsx)(eH, { empty: !0, guildId: r }, `empty-member-${e}`));
+            c.push((0, i.jsx)(eB, { empty: !0, guildId: r }, `empty-member-${e}`));
         let m = Math.max(Math.min(a - c.length, 99), 0);
         if (1 === m) {
             let e = n[s];
-            c.push((0, i.jsx)(eH, { member: e, guildId: r }, e.id));
+            c.push((0, i.jsx)(eB, { member: e, guildId: r }, e.id));
         }
         return (0, i.jsx)("div", {
             className: eF.iE,
@@ -725,7 +725,7 @@ function eJ(e) {
                             (0, i.jsxs)(i.Fragment, {
                                 children: [
                                     (0, i.jsx)(eb.A, { height: 4, width: 4, "aria-hidden": "true", className: eq.Om }),
-                                    (0, i.jsx)(eB, {
+                                    (0, i.jsx)(eH, {
                                         partySize: { knownSize: r.length, totalSize: r.length },
                                         maxAvatarsShown: 3,
                                         members: r,
@@ -796,7 +796,7 @@ var eX = n(885386),
     e1 = n(775602),
     e2 = n(228366),
     e3 = n(713021);
-let e8 = s.forwardRef(function (e, t) {
+let e6 = s.forwardRef(function (e, t) {
     let n,
         l,
         { muted: r, volume: a, playing: o, playbackRate: u, ...c } = e,
@@ -829,9 +829,9 @@ let e8 = s.forwardRef(function (e, t) {
         (0, i.jsx)("audio", { ref: m, ...c })
     );
 });
-var e7 = n(20504),
-    e5 = n(625494),
-    e6 = n(927813),
+var e8 = n(20504),
+    e7 = n(625494),
+    e5 = n(927813),
     e4 = n(824744);
 n(508300);
 var e9 = n(661531),
@@ -1176,10 +1176,10 @@ let tC = s.memo(function (e) {
         [D, U] = s.useState("none"),
         [V, G] = s.useState(() => ("function" == typeof l ? l() : l)),
         F = s.useRef(void 0),
-        H = s.useCallback(() => {
+        B = s.useCallback(() => {
             (L((e) => !e), P(!0));
         }, []),
-        B = s.useCallback(() => {
+        H = s.useCallback(() => {
             U("metadata");
         }, []),
         W = s.useCallback((e) => {
@@ -1256,7 +1256,7 @@ let tC = s.memo(function (e) {
                     !M &&
                     (e = setInterval(() => {
                         K(E.current?.currentTime ?? 0);
-                    }, e6.A.Millis.SECOND)),
+                    }, e5.A.Millis.SECOND)),
                 () => {
                     null != e && clearInterval(e);
                 }
@@ -1265,7 +1265,7 @@ let tC = s.memo(function (e) {
         s.useEffect(() => {
             let { played: e, currentTime: t, onPause: n, onPlay: l } = el.current;
             if (e || O)
-                if (O) ((et.current = performance.now()), l?.(!1, t, (E.current?.duration ?? 0) * e6.A.Millis.SECOND));
+                if (O) ((et.current = performance.now()), l?.(!1, t, (E.current?.duration ?? 0) * e5.A.Millis.SECOND));
                 else {
                     let e = performance.now(),
                         l = et.current;
@@ -1287,10 +1287,10 @@ let tC = s.memo(function (e) {
         s.useEffect(() => {
             if (O)
                 return (
-                    e5._.dispatch(eZ.jej.VOICE_MESSAGE_PLAYBACK_STARTED, { src: n }),
-                    e5._.subscribe(eZ.jej.VOICE_MESSAGE_PLAYBACK_STARTED, e),
+                    e7._.dispatch(eZ.jej.VOICE_MESSAGE_PLAYBACK_STARTED, { src: n }),
+                    e7._.subscribe(eZ.jej.VOICE_MESSAGE_PLAYBACK_STARTED, e),
                     () => {
-                        e5._.unsubscribe(eZ.jej.VOICE_MESSAGE_PLAYBACK_STARTED, e);
+                        e7._.unsubscribe(eZ.jej.VOICE_MESSAGE_PLAYBACK_STARTED, e);
                     }
                 );
             function e(e) {
@@ -1319,7 +1319,7 @@ let tC = s.memo(function (e) {
                       playbackRate: y,
                   }),
               })
-            : (0, i.jsx)(e8, {
+            : (0, i.jsx)(e6, {
                   ref: E,
                   className: tg.Zn,
                   controls: !1,
@@ -1336,7 +1336,7 @@ let tC = s.memo(function (e) {
     let eo = (0, d.bG)([e1.Ay], () => e1.Ay.useReducedMotion);
     return (0, i.jsxs)("div", {
         className: a()(tg.kL, { [tg.he]: O }),
-        onMouseEnter: B,
+        onMouseEnter: H,
         role: "region",
         "aria-label": ed.intl.string(ed.t.c8U6xd),
         children: [
@@ -1346,7 +1346,7 @@ let tC = s.memo(function (e) {
             }),
             (0, i.jsx)(x.D, {
                 className: tg.k0,
-                onClick: H,
+                onClick: B,
                 "aria-label": es,
                 children: (0, i.jsx)(ei, { className: tg.uZ, color: "currentColor", size: "sm" }),
             }),
@@ -1377,7 +1377,7 @@ let tC = s.memo(function (e) {
                 "aria-label": er,
                 children: (0, i.jsx)(m.E, { variant: "text-xs/semibold", className: tg.Sn, children: ea }),
             }),
-            (0, i.jsx)(e7.A, {
+            (0, i.jsx)(e8.A, {
                 className: tg.bk,
                 iconClassName: tg._j,
                 iconColor: "currentColor",
@@ -1496,7 +1496,7 @@ function tM(e) {
         y = C && !c && eX._z.getSetting() && null != a && "" !== a && !0 !== d;
     return (0, i.jsxs)(s.Fragment, {
         children: [
-            (0, i.jsx)(B.A, {
+            (0, i.jsx)(H.A, {
                 ...g,
                 alt: a,
                 autoMute: r,
@@ -1549,7 +1549,7 @@ function tw(e) {
         (n = null == n ? tS.v1 : n),
         (0, i.jsxs)(s.Fragment, {
             children: [
-                (0, i.jsx)(H, {
+                (0, i.jsx)(B, {
                     ...u,
                     onVolumeChange: c,
                     onMute: d,
@@ -1641,7 +1641,7 @@ function tG(e) {
     return (0, i.jsx)(P.A, { ...e });
 }
 var tF = (((l = {})[(l.OLD_MESSAGES = 0)] = "OLD_MESSAGES"), (l[(l.REPLY = 1)] = "REPLY"), l);
-let tH = (e) => {
+let tB = (e) => {
     let { type: t = 0, onClick: n, className: l } = e;
     return (0, i.jsx)(D.Y.Consumer, {
         children: (e) =>
@@ -1692,7 +1692,7 @@ let tH = (e) => {
                   }),
     });
 };
-function tB(e) {
+function tH(e) {
     let { onClick: t, loading: n, className: l } = e;
     return (0, i.jsx)(D.Y.Consumer, {
         children: (e) =>
@@ -1876,7 +1876,7 @@ function tK(e) {
             },
             [_, t, M, l],
         ),
-        H = s.useCallback((e) => {
+        B = s.useCallback((e) => {
             U(e);
             let t = N.current?.scrollTop;
             null != t && g(t);
@@ -1884,7 +1884,7 @@ function tK(e) {
     s.useEffect(() => {
         null != f && P && N.current?.scrollTo({ top: f });
     }, [f, P]);
-    let B = s.useCallback(
+    let H = s.useCallback(
         (e) => {
             ((0, c.vq)(e.target) && p.current?.contains(e.target)) ||
                 (P &&
@@ -1899,9 +1899,9 @@ function tK(e) {
                         channel_id: t.id,
                         channel_type: t.type,
                     }),
-                H(!1));
+                B(!1));
         },
-        [P, _, t, H],
+        [P, _, t, B],
     );
     (s.useEffect(
         () => (
@@ -1917,16 +1917,16 @@ function tK(e) {
         }, [t.id]),
         s.useEffect(
             () => (
-                document.addEventListener("mousedown", B),
+                document.addEventListener("mousedown", H),
                 () => {
-                    document.removeEventListener("mousedown", B);
+                    document.removeEventListener("mousedown", H);
                 }
             ),
-            [B],
+            [H],
         ));
     let W = s.useMemo(
-            () => (0, i.jsx)(e$, { channel: t, summaries: _, summariesMembers: b, selectTopic: F, setOpen: H }),
-            [_, b, F, H, t],
+            () => (0, i.jsx)(e$, { channel: t, summaries: _, summariesMembers: b, selectTopic: F, setOpen: B }),
+            [_, b, F, B, t],
         ),
         K = s.useCallback(() => {
             let e = eL.Ay.ackMessageId(t.id);
@@ -2147,10 +2147,10 @@ function tZ(e) {
         F = s.useCallback(() => {
             G(_ - 1, tN.eh.PILL_NEXT_ARROW);
         }, [G, _]),
-        H = s.useCallback(() => {
+        B = s.useCallback(() => {
             G(_ + 1, tN.eh.PILL_PREVIOUS_ARROW);
         }, [_, G]),
-        B = s.useCallback((e) => {
+        H = s.useCallback((e) => {
             P(e);
             let t = g.current?.scrollTop;
             null != t && f(t);
@@ -2173,9 +2173,9 @@ function tZ(e) {
                         channel_id: t.id,
                         channel_type: t.type,
                     }),
-                B(!1));
+                H(!1));
         },
-        [M, A, t, B],
+        [M, A, t, H],
     );
     (s.useEffect(
         () => (
@@ -2199,8 +2199,8 @@ function tZ(e) {
             [W],
         ));
     let K = s.useMemo(
-        () => (0, i.jsx)(e$, { channel: t, summaries: A, summariesMembers: N, selectTopic: G, setOpen: B }),
-        [A, N, G, B, t],
+        () => (0, i.jsx)(e$, { channel: t, summaries: A, summariesMembers: N, selectTopic: G, setOpen: H }),
+        [A, N, G, H, t],
     );
     if (!(0, d.bG)([eN.A], () => eN.A.shouldShowTopicsBar())) return null;
     let z = ed.intl.string(ed.t["38qwgO"]);
@@ -2242,7 +2242,7 @@ function tZ(e) {
                                   children: [
                                       (0, i.jsx)(x.D, {
                                           "aria-label": ed.intl.string(ed.t["4huCnC"]),
-                                          onClick: H,
+                                          onClick: B,
                                           className: a()(tj.ZMY, tj.vzA, { [tj.jfO]: null == T }),
                                           children: (0, i.jsx)(tI.A, {
                                               width: 16,

@@ -43,8 +43,8 @@ function D(e) {
             onClose: V,
             onDisplay: G,
             onUpsellClicked: F,
-            isEmojiPickerOverlay: H = !1,
-            graphic: B,
+            isEmojiPickerOverlay: B = !1,
+            graphic: H,
             useNitroGradient: W = !1,
         } = e;
     i.useEffect(() => {
@@ -58,14 +58,14 @@ function D(e) {
         z = i.useCallback(() => (0, I.LE)(K, T.pe.TIER_2) ?? L.intl.string(L.t.pj0XBN), [K]),
         Z = (0, N.A)(T.pe.TIER_2),
         Y = (0, _.O9)();
-    t = H
+    t = B
         ? (0, E.TM)()
             ? "https://cdn.discordapp.com/assets/content/c0f100da7d39f5e84ae361150c05077f9ca94ea62d0f7dd086ba1aa8fe17ae68.mov"
             : "https://cdn.discordapp.com/assets/content/75e94ffcd07b3b84cdd4305c93b43b3c94bf3ae56ace551f59b8dba7f3616c1c.webm"
         : (0, E.TM)()
           ? w.A
           : P.A;
-    let q = H || W ? "nitro-pink" : "green";
+    let q = B || W ? "nitro-pink" : "green";
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsx)(o.p, { onClick: V, isVisible: !0 }),
@@ -86,7 +86,7 @@ function D(e) {
                                         (0, l.jsx)("div", {
                                             className: k.headerGraphic,
                                             children:
-                                                B ?? (0, l.jsx)(d.v, { type: "video", src: t, loop: !0, loopAt: 5 }),
+                                                H ?? (0, l.jsx)(d.v, { type: "video", src: t, loop: !0, loopAt: 5 }),
                                         }),
                                         null != Z && (0, l.jsx)(m.E, { type: { text: Z }, variant: "brand" }),
                                         (0, l.jsx)(h.D, {
@@ -103,7 +103,7 @@ function D(e) {
                                         }),
                                     ],
                                 }),
-                                H &&
+                                B &&
                                     Y &&
                                     (0, l.jsx)("div", {
                                         className: M.Zr,

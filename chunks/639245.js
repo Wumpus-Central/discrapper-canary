@@ -38,8 +38,8 @@ var l = n(477900),
     V = n(976860),
     G = n(309010),
     F = n(967198),
-    H = n(287809),
-    B = n(174459),
+    B = n(287809),
+    H = n(174459),
     W = n(486020),
     K = n(449054),
     z = n(158045),
@@ -279,7 +279,7 @@ function el(e) {
             demoMode: b = !1,
             nonce: L,
         } = e,
-        M = (0, o.bG)([H.default], () => H.default.getCurrentUser()),
+        M = (0, o.bG)([B.default], () => B.default.getCurrentUser()),
         V = (0, o.bG)([F.A], () => F.A.getGuildId()),
         G = z.Ay.isPremium(M),
         W = null != V && (V === g?.id || V === S?.id),
@@ -329,7 +329,7 @@ function el(e) {
             shouldHideRoleSubscriptionCTA: er,
             onOpenPremiumSettings: () => {
                 (N(),
-                    B.default.track(R.HAw.PREMIUM_PROMOTION_OPENED, {
+                    H.default.track(R.HAw.PREMIUM_PROMOTION_OPENED, {
                         location_page: ee.page,
                         location_section: ee.section,
                     }),
@@ -465,7 +465,7 @@ function el(e) {
                                                 (_?.(),
                                                 ef ||
                                                     b ||
-                                                    B.default.track(R.HAw.EMOJI_UPSELL_POPOUT_MORE_EMOJIS_OPENED, em),
+                                                    H.default.track(R.HAw.EMOJI_UPSELL_POPOUT_MORE_EMOJIS_OPENED, em),
                                                 eg(!ef));
                                         },
                                         className: Q.wK,

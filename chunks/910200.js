@@ -20,15 +20,15 @@ function h(e) {
         gradientColor: h = "green",
         tooltip: C,
         text: f,
-        trailing: E,
-        ...S
+        trailing: S,
+        ...E
     } = e;
     function y() {
         return (0, l.jsx)(c.A, {
             className: r()(m.Xx, t),
             gradientColor: h,
             ...(null != p ? { customGraphic: p } : { Icon: n, iconSize: i }),
-            ...S,
+            ...E,
             children: (0, l.jsxs)("div", {
                 className: m.Yu,
                 children: [
@@ -37,7 +37,7 @@ function h(e) {
                         color: "currentColor",
                         children: "string" == typeof f ? (0, d.U)(f) : f,
                     }),
-                    (0, l.jsx)("div", { className: m.HF, children: E }),
+                    (0, l.jsx)("div", { className: m.HF, children: S }),
                 ],
             }),
         });

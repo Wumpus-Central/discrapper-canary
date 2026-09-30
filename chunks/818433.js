@@ -1,4 +1,4 @@
-l.d(t, { A: () => x });
+l.d(t, { A: () => p });
 var a = l(477900),
     n = l(582128),
     i = l(503698),
@@ -9,34 +9,34 @@ var a = l(477900),
     u = l(22231),
     d = l(718812),
     m = l(362081),
-    f = l(696016);
+    h = l(696016);
 l(600253);
-var h = l(880275);
-function x(e) {
+var f = l(880275);
+function p(e) {
     let { variant: t, className: l, containerClassName: i } = e,
-        { clip: x, clipName: p, setClipName: v } = (0, m.T)(),
-        g = (0, d.h)(x),
-        [j, C] = n.useState(!1);
-    if (j)
+        { clip: p, clipName: x, setClipName: v } = (0, m.T)(),
+        g = (0, d.h)(p),
+        [C, y] = n.useState(!1);
+    if (C)
         return (0, a.jsx)(r.k, {
             autoFocus: !0,
-            value: p,
+            value: x,
             placeholder: g,
-            minLength: f.U_,
+            minLength: h.U_,
             maxLength: 200,
             onChange: (e) => v("" === e ? void 0 : e),
-            onBlur: () => C(!1),
+            onBlur: () => y(!1),
             onKeyDown: (e) => {
                 ("Enter" === e.key || "Escape" === e.key) && (e.stopPropagation(), e.currentTarget.blur());
             },
         });
-    let b = null != p && "" !== p ? p : g;
+    let j = null != x && "" !== x ? x : g;
     return (0, a.jsxs)(o.D, {
-        className: s()(h.x, i),
-        onClick: () => C(!0),
+        className: s()(f.x, i),
+        onClick: () => y(!0),
         children: [
-            (0, a.jsx)(c.E, { variant: t, color: "text-default", className: l, children: b }),
-            (0, a.jsx)(u.PencilIcon, { className: h.I, size: "xs", color: "currentColor" }),
+            (0, a.jsx)(c.E, { variant: t, color: "text-default", className: l, children: j }),
+            (0, a.jsx)(u.PencilIcon, { className: f.I, size: "xs", color: "currentColor" }),
         ],
     });
 }

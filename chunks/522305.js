@@ -1,18 +1,18 @@
-n.d(t, { Q: () => o });
-var i = n(308528),
-    r = n(956549),
-    s = n(859007);
-async function o(e) {
-    let { appId: t, botId: n, analyticsLocations: o, customId: u, referrerId: a, commandOrigin: l } = e;
-    if ((0, s.y)({ applicationId: t, analyticsContext: { isStart: !0, analyticsLocations: o } }))
+n.d(t, { Q: () => i });
+var r = n(308528),
+    u = n(956549),
+    l = n(859007);
+async function i(e) {
+    let { appId: t, botId: n, analyticsLocations: i, customId: o, referrerId: s, commandOrigin: a } = e;
+    if ((0, l.y)({ applicationId: t, analyticsContext: { isStart: !0, analyticsLocations: i } }))
         return Promise.resolve(!0);
-    let d = await i.A.openPrivateChannel({ recipientIds: n });
-    return await (0, r.A)({
+    let c = await r.A.openPrivateChannel({ recipientIds: n });
+    return await (0, u.A)({
         targetApplicationId: t,
-        channelId: d,
-        analyticsLocations: o,
-        customId: u,
-        referrerId: a,
-        commandOrigin: l,
+        channelId: c,
+        analyticsLocations: i,
+        customId: o,
+        referrerId: s,
+        commandOrigin: a,
     });
 }

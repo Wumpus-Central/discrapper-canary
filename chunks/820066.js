@@ -153,10 +153,10 @@ function P(e, t, n, l, s) {
         case "emoji":
         case "customEmoji":
             if ((t.startsWith(u[0], l) || (l = K(e, t, l, t.length)), t.startsWith(u[0], l)))
-                return H({ result: e, sourceText: t, text: u[0], originalStart: l, attributes: [a], data: n });
+                return B({ result: e, sourceText: t, text: u[0], originalStart: l, attributes: [a], data: n });
             throw Error(`Slate: Unable to find emoji: ${u[0]} in ${t} at ${l}`);
         case "soundboard":
-            return H({
+            return B({
                 result: e,
                 sourceText: t,
                 text: u[0],
@@ -174,7 +174,7 @@ function P(e, t, n, l, s) {
             if (null != s)
                 return (
                     i()(s === u[0], "Slate: text mentions must exactly match the regex match"),
-                    H({
+                    B({
                         result: e,
                         sourceText: t,
                         text: s,
@@ -183,11 +183,11 @@ function P(e, t, n, l, s) {
                         data: { text: s },
                     })
                 );
-            return H({ result: e, sourceText: t, text: u[0], originalStart: l, attributes: [a], data: { id: r } });
+            return B({ result: e, sourceText: t, text: u[0], originalStart: l, attributes: [a], data: { id: r } });
         }
         case "staticRouteLink":
             let { id: c, itemId: d } = n;
-            return H({
+            return B({
                 result: e,
                 sourceText: t,
                 text: u[0],
@@ -196,7 +196,7 @@ function P(e, t, n, l, s) {
                 data: { id: c, itemId: d },
             });
         case "gameMention":
-            return H({
+            return B({
                 result: e,
                 sourceText: t,
                 text: u[0],
@@ -206,7 +206,7 @@ function P(e, t, n, l, s) {
             });
         case "timestamp":
         case "timestampMentionInput":
-            return H({ result: e, sourceText: t, text: u[0], originalStart: l, attributes: [a], data: n });
+            return B({ result: e, sourceText: t, text: u[0], originalStart: l, attributes: [a], data: n });
         case "em":
         case "autolink":
         case "mailto":
@@ -222,7 +222,7 @@ function P(e, t, n, l, s) {
         case "url":
         case "link":
         case "subtext": {
-            l = B(t, l);
+            l = H(t, l);
             let { before: n, after: i } = (function (e, t, n, l) {
                     if ("inlineCode" === t) return { before: l[1], after: l[1] };
                     if ("em" === t && "_" === e.substring(n, n + 1)) return { before: "_", after: "_" };
@@ -251,7 +251,7 @@ function P(e, t, n, l, s) {
                 (l = G(e, t, r ?? "", l, s)),
                 s.pop(),
                 (l = F({ result: e, sourceText: t, syntaxCharacters: i, pos: l, attributes: c })),
-                B(t, l)
+                H(t, l)
             );
         }
         default:
@@ -294,12 +294,12 @@ function V(e) {
 function G(e, t, n, l, i) {
     return (
         "string" == typeof n
-            ? (l = H({ result: e, sourceText: t, text: n, originalStart: l, attributes: i, data: null }))
+            ? (l = B({ result: e, sourceText: t, text: n, originalStart: l, attributes: i, data: null }))
             : (n instanceof Array || (n = [n]),
               n.forEach((n) => {
                   l = P(e, t, n, l, i);
               })),
-        B(t, l)
+        H(t, l)
     );
 }
 function F(e) {
@@ -312,9 +312,9 @@ function F(e) {
     }
     return i;
 }
-function H(e) {
+function B(e) {
     let { result: t, sourceText: n, text: l, originalStart: i, attributes: s, data: r } = e,
-        a = B(n, i);
+        a = H(n, i);
     for (; "\n" === l.charAt(0) || " " === l.charAt(0);) l = l.substring(1);
     let o = n.indexOf(l, a);
     if ((o !== a ? (a = i = K(t, n, a, o)) : "\\" === l && "\\" === n.charAt(o + 1) && (o++, (i = ++a)), o !== a))
@@ -323,7 +323,7 @@ function H(e) {
         c = n.substring(i, u);
     return (t.push({ text: c, attributes: s.slice(), start: i, data: r }), u);
 }
-function B(e, t) {
+function H(e, t) {
     for (; "\n" === e.charAt(t) || " " === e.charAt(t);) t++;
     return t;
 }
@@ -335,7 +335,7 @@ function K(e, t, n, l) {
     for (; n < l;)
         if (y.has(t[n]))
             ((n = F({ result: e, sourceText: t, syntaxCharacters: t[n], pos: n, attributes: ["syntaxBefore"] })),
-                (n = B(t, n)));
+                (n = H(t, n)));
         else break;
     return n;
 }

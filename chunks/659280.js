@@ -185,8 +185,8 @@ function U(e) {
 var V = n(524007),
     G = n(47167),
     F = n(713654),
-    H = n(688810),
-    B = n(573435),
+    B = n(688810),
+    H = n(573435),
     W = n(10392),
     K = n(82498),
     z = n(174459),
@@ -197,7 +197,7 @@ var V = n(524007),
     $ = n(211319);
 let X = function (e) {
     let { emojis: t } = e,
-        { analyticsLocations: n } = (0, H.Ay)();
+        { analyticsLocations: n } = (0, B.Ay)();
     i.useEffect(() => {
         (z.default.track(Y.HAw.PREMIUM_UPSELL_VIEWED, { type: J.e.EMOJI_AUTOCOMPLETE_INLINE, location_stack: n }),
             (0, W.sq)(Y.U7l.PREMIUM_UPSELL_VIEWED, n, () => (0, K.uq)(J.e.EMOJI_AUTOCOMPLETE_INLINE)));
@@ -221,8 +221,8 @@ let X = function (e) {
             return 2 === t
                 ? n
                 : (0, l.jsx)(
-                      B.Ay,
-                      { className: $.j3, mask: B.Ay.Masks.AUTOCOMPLETE_EMOJI_UPSELL_EMOJI, children: n },
+                      H.Ay,
+                      { className: $.j3, mask: H.Ay.Masks.AUTOCOMPLETE_EMOJI_UPSELL_EMOJI, children: n },
                       e.id,
                   );
         }),

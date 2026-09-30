@@ -1,5 +1,5 @@
-t.d(i, { $: () => c });
-let c = t(582128).createContext({
+e.d(a, { $: () => t });
+let t = e(582128).createContext({
     selectedClipIds: new Set(),
     toggleClipSelection: () => {},
     clearSelection: () => {},

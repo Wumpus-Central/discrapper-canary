@@ -20,7 +20,7 @@ var r = n(503698),
 function f(e) {
     return 2 === e ? "expressive" : 0 === e ? "primary" : "active";
 }
-function E(e) {
+function S(e) {
     let {
             primaryIcon: t,
             primaryCTA: n,
@@ -40,7 +40,7 @@ function E(e) {
         };
     return 2 === n ? (0, i.jsx)(s.$, { variant: f(n), ...c }) : (0, i.jsx)(s.$, { ...c, variant: f(n) });
 }
-function S(e) {
+function E(e) {
     let {
             onBack: t,
             backText: n,
@@ -49,15 +49,15 @@ function S(e) {
             primaryType: s,
             primaryText: C,
             primaryTooltip: f,
-            primaryDisabled: S,
+            primaryDisabled: E,
             primarySubmitting: y,
-            onPrimary: I,
+            onPrimary: A,
         } = e,
-        g =
+        I =
             null == t
                 ? null
                 : (0, i.jsx)(o.Q, { text: n ?? m.intl.string(m.t["13/7kX"]), onClick: t, variant: "secondary" }),
-        A = (0, i.jsxs)(d.B, {
+        g = (0, i.jsxs)(d.B, {
             direction: "horizontal",
             align: "center",
             gap: 0,
@@ -72,19 +72,19 @@ function S(e) {
                         primaryCTA: r,
                         primaryType: s,
                         primaryText: C,
-                        primaryDisabled: S,
+                        primaryDisabled: E,
                         primarySubmitting: y,
-                        onPrimary: I,
+                        onPrimary: A,
                     };
                     return null != f
-                        ? (0, i.jsx)(c.m, { text: f, asContainer: !0, children: (0, i.jsx)(E, { ...e }) })
-                        : (0, i.jsx)(E, { ...e, onPrimary: I });
+                        ? (0, i.jsx)(c.m, { text: f, asContainer: !0, children: (0, i.jsx)(S, { ...e }) })
+                        : (0, i.jsx)(S, { ...e, onPrimary: A });
                 })(),
             ],
         });
     return (0, i.jsx)(u.j, {
-        children: (0, i.jsxs)("div", { className: a()(h.eT, { [h.T$]: null == g }), children: [g, A] }),
+        children: (0, i.jsxs)("div", { className: a()(h.eT, { [h.T$]: null == I }), children: [I, g] }),
     });
 }
-S.CTAType = C;
-let y = S;
+E.CTAType = C;
+let y = E;

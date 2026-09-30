@@ -1,15 +1,15 @@
-t.d(s, { Ay: () => f, Be: () => p, Nj: () => x, y3: () => C });
+s.d(t, { Ay: () => g, Be: () => v, Nj: () => I, y3: () => m });
 var n,
-    r = t(477900),
-    a = t(582128),
-    i = t(503698),
-    l = t.n(i),
-    c = t(355522),
-    u = t(37766),
-    o = t(637956),
-    d = t(352224),
-    m = t(509115),
-    p =
+    r = s(477900),
+    a = s(582128),
+    l = s(503698),
+    i = s.n(l),
+    c = s(355522),
+    u = s(37766),
+    o = s(637956),
+    d = s(352224),
+    p = s(509115),
+    v =
         (((n = {}).UNKNOWN = "unknown"),
         (n.VISA = "visa"),
         (n.DISCOVER = "discover"),
@@ -41,86 +41,86 @@ var n,
         (n.GIFT_CARD = "gift_card"),
         (n.PIX = "pix"),
         n);
-function x(e) {
-    let s = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "dark";
-    if ("light" === s) {
-        if ("apple" === e) return t(685430);
-        if ("venmo" === e) return t(779777);
+function I(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "dark";
+    if ("light" === t) {
+        if ("apple" === e) return s(685430);
+        if ("venmo" === e) return s(779777);
     }
     switch (e) {
         case "visa":
-            return t(998723);
+            return s(998723);
         case "amex":
-            return t(44377);
+            return s(44377);
         case "discover":
-            return t(216329);
+            return s(216329);
         case "mastercard":
-            return t(2832);
+            return s(2832);
         case "paypal":
-            return t(331273);
+            return s(331273);
         case "paymentRequest":
-            return t(414456);
+            return s(414456);
         case "gPay":
-            return t(696551);
+            return s(696551);
         case "sofort":
-            return t(320648);
+            return s(320648);
         case "przelewy24":
-            return t(418971);
+            return s(418971);
         case "giropay":
-            return t(856718);
+            return s(856718);
         case "paysafecard":
-            return t(130512);
+            return s(130512);
         case "gcash":
-            return t(446409);
+            return s(446409);
         case "grabpay":
-            return t(238355);
+            return s(238355);
         case "momo_wallet":
-            return t(510669);
+            return s(510669);
         case "venmo":
-            return t(280427);
+            return s(280427);
         case "kakaopay":
-            return t(503714);
+            return s(503714);
         case "gopay_wallet":
-            return t(235323);
+            return s(235323);
         case "bancontact":
-            return t(999776);
+            return s(999776);
         case "eps":
-            return t(116129);
+            return s(116129);
         case "ideal":
-            return t(147496);
+            return s(147496);
         case "cash_app":
-            return t(464568);
+            return s(464568);
         case "apple":
-            return t(685430);
+            return s(685430);
         case "apple_light":
-            return t(545350);
+            return s(545350);
         default:
-            return t(511403);
+            return s(511403);
     }
 }
-let C = { SMALL: m.cardIconSmall, MEDIUM: m.cardIconMedium, LARGE: m.cardIconLarge, XLARGE: m.cardIconXLarge };
-class L extends a.PureComponent {
-    static Types = p;
-    static Sizes = C;
+let m = { SMALL: p.cardIconSmall, MEDIUM: p.cardIconMedium, LARGE: p.cardIconLarge, XLARGE: p.cardIconXLarge };
+class E extends a.PureComponent {
+    static Types = v;
+    static Sizes = m;
     static getType(e) {
-        return null == e ? "unknown" : p[e.replace(/[^a-z0-9_]/gi, "").toUpperCase()] || "unknown";
+        return null == e ? "unknown" : v[e.replace(/[^a-z0-9_]/gi, "").toUpperCase()] || "unknown";
     }
-    static defaultProps = { size: C.SMALL, flipped: !1 };
+    static defaultProps = { size: m.SMALL, flipped: !1 };
     render() {
-        let { flipped: e, type: s, className: t, size: n } = this.props;
-        return "bank" === s
-            ? (0, r.jsx)(c.M, { className: t })
-            : "gift_card" === s
-              ? (0, r.jsx)(u._, { className: t, size: "lg" })
-              : "pix" === s
-                ? (0, r.jsx)(o.W, { className: t, size: "lg" })
-                : "ideal" === s
-                  ? (0, r.jsx)(d.E, { className: t, size: "lg" })
+        let { flipped: e, type: t, className: s, size: n } = this.props;
+        return "bank" === t
+            ? (0, r.jsx)(c.M, { className: s })
+            : "gift_card" === t
+              ? (0, r.jsx)(u._, { className: s, size: "lg" })
+              : "pix" === t
+                ? (0, r.jsx)(o.W, { className: s, size: "lg" })
+                : "ideal" === t
+                  ? (0, r.jsx)(d.E, { className: s, size: "lg" })
                   : (0, r.jsx)("div", {
                         "aria-hidden": !0,
-                        className: l()(n, m[s], t, { [m.flipped]: e }),
-                        children: s,
+                        className: i()(n, p[t], s, { [p.flipped]: e }),
+                        children: t,
                     });
     }
 }
-let f = L;
+let g = E;

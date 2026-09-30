@@ -2,8 +2,8 @@ n.d(t, {
     C: () => t2,
     Sk: () => t4,
     Zx: () => tQ,
-    v7: () => t7,
-    L0: () => t8,
+    v7: () => t8,
+    L0: () => t7,
     N_: () => t3,
     MD: () => t9,
     Ay: () => nt,
@@ -131,8 +131,8 @@ var k = n(861382),
     V = n(95561),
     G = n(659280),
     F = n(579940),
-    H = n(962125),
-    B = n(915089),
+    B = n(962125),
+    H = n(915089),
     W = n(850992),
     K = n(887695),
     z = n(286509),
@@ -404,7 +404,7 @@ let eu = [8, 8, 0, 8],
                 },
                 [n, x, R, f, u],
             ),
-            k = (0, B.GV)();
+            k = (0, H.GV)();
         return (
             (0, F.gf)(k, !0, (0, G.aI)(u)),
             i.useEffect(
@@ -428,7 +428,7 @@ let eu = [8, 8, 0, 8],
                         onSectionClick: T,
                         applicationCommandListRef: d,
                     }),
-                    (0, l.jsx)(H.A, {
+                    (0, l.jsx)(B.A, {
                         role: "listbox",
                         className: eo.p_,
                         listPadding: eu,
@@ -498,8 +498,8 @@ var eL = n(931664),
     eV = n(576705),
     eG = n(309010),
     eF = n(638128),
-    eH = n(522602),
-    eB = n(287809),
+    eB = n(522602),
+    eH = n(287809),
     eW = n(821102),
     eK = n(174459),
     ez = n(234320),
@@ -515,8 +515,8 @@ var eL = n(931664),
     e2 = n(463930),
     e3 = n(935063),
     e6 = n(73392),
-    e7 = n(650019),
-    e8 = n(763754),
+    e8 = n(650019),
+    e7 = n(763754),
     e5 = n(967144),
     e4 = n(118517),
     e9 = n(976860),
@@ -586,10 +586,10 @@ function to(e) {
             colorRoleName: A,
             authorId: C,
             displayNameStyles: E,
-        } = (0, e8.Ay)(u),
+        } = (0, e7.Ay)(u),
         I = (0, e5.gn)(p, C, x),
         y = (0, e6.a)({ displayNameStyles: E }),
-        S = (0, e7.A)(m, u.attachments),
+        S = (0, e8.A)(m, u.attachments),
         v =
             ((t = o.id),
             (n = u.id),
@@ -832,7 +832,7 @@ class tE extends h.Ay.PersistedStore {
     static displayName = "PTOStore";
     static persistKey = "PTOStore";
     initialize(e) {
-        (this.waitFor(tA.A, eU.Ay, eG.Ay, eB.default), null != e && (tC = new Set(e)));
+        (this.waitFor(tA.A, eU.Ay, eG.Ay, eH.default), null != e && (tC = new Set(e)));
     }
     hasId(e) {
         return tC.has(e);
@@ -974,8 +974,8 @@ function tV(e) {
 }
 var tG = n(123583),
     tF = n(822610),
-    tH = n(625928),
-    tB = n(135261),
+    tB = n(625928),
+    tH = n(135261),
     tW = n(820066),
     tK = n(922016),
     tz = n(375499),
@@ -994,7 +994,7 @@ function tJ(e) {
               children: [
                   (0, l.jsx)("div", {
                       className: tq.Wy,
-                      children: (0, l.jsx)(tB.P, {
+                      children: (0, l.jsx)(tH.P, {
                           slateEditor: a,
                           options: s.markdown,
                           iconClassName: tq.C7,
@@ -1037,7 +1037,7 @@ function tQ(e, t, s, r, a) {
                 if (o) return;
                 u(!0);
                 let A = eL.A.getStickerPreview(a, t.drafts.type)?.map((e) => e.id) ?? [],
-                    C = eH.A.getUploads(a, t.drafts.type) ?? [];
+                    C = eB.A.getUploads(a, t.drafts.type) ?? [];
                 if (null == d && !h && !f && (0, eC.xz)(C, a)) {
                     (u(!1),
                         (0, p.openModalLazy)(async () => {
@@ -1218,7 +1218,7 @@ function t6(e, t, n) {
         }
     );
 }
-function t7() {
+function t8() {
     let e = i.useRef(null),
         t = i.useCallback(() => {
             e.current?.onMaybeShowAutocomplete();
@@ -1228,7 +1228,7 @@ function t7() {
         }, []);
     return { autocompleteRef: e, handleMaybeShowAutocomplete: t, handleHideAutocomplete: n };
 }
-function t8(e) {
+function t7(e) {
     let t = i.useRef(null);
     if (null != e && "function" == typeof e) throw Error("Only Ref objects are supported");
     return null == e ? t : e;
@@ -1248,8 +1248,8 @@ function t5(e) {
 function t4(e, t, n, l) {
     let i = e.getGuildId(),
         s = (0, h.bG)([eI.A], () => null != i && eI.A.isLurking(i), [i]),
-        r = (0, h.bG)([eU.Ay, eB.default], () => {
-            let e = eB.default.getCurrentUser();
+        r = (0, h.bG)([eU.Ay, eH.default], () => {
+            let e = eH.default.getCurrentUser();
             return (null != i && null != e ? eU.Ay.getMember(i, e.id)?.isPending : null) ?? !1;
         }),
         a = (0, h.cf)(
@@ -1327,8 +1327,8 @@ let nt = i.memo(
                 onResize: V,
                 onBlur: G,
                 onFocus: F,
-                onKeyDown: H,
-                onSubmit: B,
+                onKeyDown: B,
+                onSubmit: H,
                 promptToUpload: W,
                 highlighted: K,
                 canMentionRoles: z,
@@ -1350,7 +1350,7 @@ let nt = i.memo(
             } = e;
         u()(null != T, "chat input type must be set");
         let { analyticsLocations: eu } = (0, I.Ay)(E.A.CHANNEL_TEXT_AREA),
-            ec = t8(t),
+            ec = t7(t),
             em = i.useRef(null),
             eC = i.useRef(null),
             eE = i.useRef(null),
@@ -1379,7 +1379,7 @@ let nt = i.memo(
             })),
             {
                 isLurking: eG,
-                isPendingMember: eH,
+                isPendingMember: eB,
                 disabled: eW,
                 canAttachFiles: ez,
                 canCreateThreads: eY,
@@ -1390,23 +1390,23 @@ let nt = i.memo(
             e2 = !e1 || !T.commands?.enabled || !R || "/" !== a,
             e3 = (0, ey.A)(),
             { fontSize: e6 } = (0, h.cf)([C.Ay], () => ({ fontSize: C.Ay.fontSize })),
-            e7 = (0, h.bG)([eF.A], () => eF.A.isEnabled());
+            e8 = (0, h.bG)([eF.A], () => eF.A.isEnabled());
         t3(T, eW, b.id);
-        let { eventEmitter: e8, handleEditorSelectionChanged: e5 } = t6(eE, a, o),
+        let { eventEmitter: e7, handleEditorSelectionChanged: e5 } = t6(eE, a, o),
             e4 = i.useRef(a);
         e4.current = a;
         let e9 = i.useCallback(
                 (e, t, n) => {
-                    ("/" === t && "" === e4.current && T.commands?.enabled && e8.emit("command-sentinel-typed"),
+                    ("/" === t && "" === e4.current && T.commands?.enabled && e7.emit("command-sentinel-typed"),
                         U?.(e, t, n));
                 },
-                [U, T.commands?.enabled, e8],
+                [U, T.commands?.enabled, e7],
             ),
-            { submitting: te, submit: tt, handleSubmit: tn } = tQ(B, T, eE, eS, b.id),
-            { autocompleteRef: tl, handleMaybeShowAutocomplete: ti, handleHideAutocomplete: ts } = t7(),
+            { submitting: te, submit: tt, handleSubmit: tn } = tQ(H, T, eE, eS, b.id),
+            { autocompleteRef: tl, handleMaybeShowAutocomplete: ti, handleHideAutocomplete: ts } = t8(),
             ta = t0(tt, T, eE),
             tu = t1(eE),
-            tc = t2({ editorRef: eE, disabled: eW, textValue: a, channelId: b.id, chatInputType: T, submit: B }),
+            tc = t2({ editorRef: eE, disabled: eW, textValue: a, channelId: b.id, chatInputType: T, submit: H }),
             td = i.useCallback(
                 (e, t, n) => {
                     let l = eE.current;
@@ -1475,7 +1475,7 @@ let nt = i.memo(
                     ),
                     n
                 );
-            })(e8, eE),
+            })(e7, eE),
             { handleAutocompleteVisibilityChange: tM } = ne(T, b.id),
             tk = (function (e) {
                 let { type: t, channelId: n } = e;
@@ -1489,11 +1489,11 @@ let nt = i.memo(
                 );
             })({ type: T, channelId: b.id }),
             tw = i.useCallback(() => {
-                e8.emit("submit-failure");
-            }, [e8]);
-        (0, eJ.R)(e8, b.guild_id, b.id);
+                e7.emit("submit-failure");
+            }, [e7]);
+        (0, eJ.R)(e7, b.guild_id, b.id);
         let tP = null != D,
-            tK = (eW && !((eG || eH) && eQ)) || (te && T.submit?.useDisabledStylesOnSubmit),
+            tK = (eW && !((eG || eB) && eQ)) || (te && T.submit?.useDisabledStylesOnSubmit),
             tz = null;
         null != ew ? (tz = w?.(ew, eV, tU.g$)) : (!eW || eY) && (tz = L?.(tP, tU.g$));
         let { isVisible: tZ, showsUpsell: tY } = (0, t$.A)({
@@ -1518,10 +1518,10 @@ let nt = i.memo(
                         activeCommandOption: k.A.getActiveOption(t.id),
                         activeCommandOptionStates: k.A.getOptionStates(t.id),
                     })),
-                    m = (0, h.bG)([eU.Ay, eB.default, tI], () => {
-                        let e = eB.default.getCurrentUser();
+                    m = (0, h.bG)([eU.Ay, eH.default, tI], () => {
+                        let e = eH.default.getCurrentUser();
                         if (null == e || !e.isStaff() || !t.isDM()) return !1;
-                        let n = eB.default.getUser(t.getRecipientId());
+                        let n = eH.default.getUser(t.getRecipientId());
                         if (!n?.isStaff()) return !1;
                         let l = eU.Ay.getNicknames(n.id).some((e) => e.endsWith("[PTO]") || e.endsWith("[OOO]"));
                         return l ? !tI.hasId(n.id) && l : (tC.delete(n.id) && tI.emitChange(), !1);
@@ -1579,7 +1579,7 @@ let nt = i.memo(
                           expressionButtonsHidden: eM,
                       }),
             nu = tq
-                ? (0, l.jsx)(tH.A, {
+                ? (0, l.jsx)(tB.A, {
                       type: T,
                       textValue: a,
                       className: $,
@@ -1592,14 +1592,14 @@ let nt = i.memo(
                 R && eZ._.dispatch(ea.jej.CHANNEL_TEXT_AREA_FOCUSED, { channelId: b.id });
             }, [R, b.id]),
             (0, l.jsx)(eg.Sv, {
-                value: e8,
+                value: e7,
                 children: (0, l.jsxs)(I.f5, {
                     value: eu,
                     children: [
                         tX && e0
                             ? (0, l.jsx)(tJ, { getSlateEditor: ev, onInsertEmoji: tu, type: T, channel: b })
                             : tX
-                              ? (0, l.jsx)(tB.A, { ref: eS, getSlateEditor: ev, containerRef: eI, options: T.markdown })
+                              ? (0, l.jsx)(tH.A, { ref: eS, getSlateEditor: ev, containerRef: eI, options: T.markdown })
                               : null,
                         (0, l.jsxs)("div", {
                             ref: ec,
@@ -1652,7 +1652,7 @@ let nt = i.memo(
                                                         placeholder: _,
                                                         required: v,
                                                         accessibilityLabel: j,
-                                                        isPreviewing: (eG || eH) && eQ,
+                                                        isPreviewing: (eG || eB) && eQ,
                                                         channel: b,
                                                         type: T,
                                                         canPasteFiles: ez,
@@ -1664,7 +1664,7 @@ let nt = i.memo(
                                                         onResize: tf,
                                                         onBlur: G,
                                                         onFocus: F,
-                                                        onKeyDown: H,
+                                                        onKeyDown: B,
                                                         onSubmit: tt,
                                                         onSubmitFailure: tw,
                                                         onTab: tx,
@@ -1676,7 +1676,7 @@ let nt = i.memo(
                                                         onHideAutocomplete: ts,
                                                         promptToUpload: W,
                                                         fontSize: e6,
-                                                        spellcheckEnabled: e7,
+                                                        spellcheckEnabled: e8,
                                                         canOnlyUseTextCommands: tP,
                                                         className: r()(
                                                             {

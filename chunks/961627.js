@@ -197,11 +197,11 @@ function t1(t) {
     });
 }
 var t2 = i(119191),
-    t8 = i(25448);
-function t5(t) {
+    t9 = i(25448);
+function t8(t) {
     t && (0, tK.Ak)(D.cH, D.pD, void 0, void 0, { trackNotificationFailure: !0 });
 }
-var t9 = i(554146),
+var t5 = i(554146),
     t7 = i(298990),
     t3 = i(826673),
     t4 = i(25578),
@@ -642,7 +642,7 @@ let ev = new eT(s.h, {
                                         className: en.kL,
                                     })));
                     }
-                let r = (0, t3.k8)(t9.M.OVERLAY_OOP_WELCOME_NUX),
+                let r = (0, t3.k8)(t5.M.OVERLAY_OOP_WELCOME_NUX),
                     s = H.intl.string(H.t.KWDIrh);
                 return {
                     icon:
@@ -655,16 +655,16 @@ let ev = new eT(s.h, {
                     },
                     ...a,
                     onNotificationShow: (t) => {
-                        (n(), r || (0, t3.Dr)(t9.M.OVERLAY_OOP_WELCOME_NUX), a.onNotificationShow?.(t));
+                        (n(), r || (0, t3.Dr)(t5.M.OVERLAY_OOP_WELCOME_NUX), a.onNotificationShow?.(t));
                     },
                     onNotificationClick: (t, e) => {
                         (l("unlock"),
                             o.A.setInputLocked(!1, j.A.getTargetPID()),
-                            r || (0, t3.Dr)(t9.M.OVERLAY_OOP_WELCOME_NUX),
+                            r || (0, t3.Dr)(t5.M.OVERLAY_OOP_WELCOME_NUX),
                             a.onNotificationClick?.(t, e));
                     },
                     onDismissClick: (t, e) => {
-                        (l("dismiss"), r || (0, t3.Dr)(t9.M.OVERLAY_OOP_WELCOME_NUX), a.onDismissClick?.(t, e));
+                        (l("dismiss"), r || (0, t3.Dr)(t5.M.OVERLAY_OOP_WELCOME_NUX), a.onDismissClick?.(t, e));
                     },
                 };
             })(l, e);
@@ -923,7 +923,7 @@ let ev = new eT(s.h, {
         let r = !_.A.isSoundDisabled(D.cH),
             s = (function (t, e, i, n) {
                 let { hasChat: l } = (0, U.NI)("textChatNotification");
-                if (P.A.isNotificationDisabled(Y.KS.TextChat)) return (t5(!0), null);
+                if (P.A.isNotificationDisabled(Y.KS.TextChat)) return (t8(!0), null);
                 let { icon: a, title: r, body: s } = (0, p.TB)(t, e, i),
                     { trackView: u, trackClick: c } = (0, F.Y9)(Y.KS.TextChat, {
                         notif_type: Y.KS.TextChat,
@@ -946,7 +946,7 @@ let ev = new eT(s.h, {
                     hint: (t, e) =>
                         t || !e || (!l && (0, tH.$)())
                             ? null
-                            : (0, t2.sI)((0, F.Jn)(), l ? t8.default.VMcw8s : H.t.ykjOAJ),
+                            : (0, t2.sI)((0, F.Jn)(), l ? t9.default.VMcw8s : H.t.ykjOAJ),
                     maxBodyLines: 2,
                     renderFooter: (i, n, a) =>
                         l || (0, tH.$)()
@@ -955,7 +955,7 @@ let ev = new eT(s.h, {
                               ? (0, z.jsx)(t1, { id: n, replyToMessageId: e.id, channel: t, onSend: () => c("send") })
                               : null,
                     onNotificationShow: () => {
-                        (t5(n), u());
+                        (t8(n), u());
                     },
                     onNotificationClick: (i, n) => {
                         let a = j.A.getTargetPID();

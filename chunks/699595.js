@@ -11,7 +11,7 @@ function o(e) {
         m = (0, r.YJ)(p),
         h = !0 === n.loaded,
         C = null != c,
-        [f, E] = (0, i.YV)({
+        [f, S] = (0, i.YV)({
             items: null != m ? [{ planId: m, quantity: 1 }] : [],
             renewal: !1,
             preventFetch: C || !d || null == m || !h,
@@ -20,17 +20,17 @@ function o(e) {
             currency: n.currency,
             metadata: u,
         }),
-        S = C ? c : f,
+        E = C ? c : f,
         y = l.useMemo(() => {
-            let e = d ? (S ?? null) : null;
+            let e = d ? (E ?? null) : null;
             return {
                 discountOffer: p,
                 applicablePlan: m,
                 discountInvoicePreview: e,
                 discountAmountOff: null != m ? (0, r.pg)(e, m) : null,
-                discountInvoiceError: E,
+                discountInvoiceError: S,
             };
-        }, [p, m, S, E, d]);
+        }, [p, m, E, S, d]);
     return (
         (t = (0, a.t4)((e) => {
             let { setPremiumDiscountInfo: t } = e;

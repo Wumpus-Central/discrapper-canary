@@ -1,26 +1,26 @@
-n.d(t, { Gm: () => o, yv: () => c });
+n.d(t, { Gm: () => u, yv: () => o });
 var l = n(477900),
-    i = n(582128),
-    r = n(786300),
-    a = n(195269);
-let [s, o, u] = (0, r.A)();
-function c(e) {
+    r = n(582128),
+    i = n(786300),
+    s = n(195269);
+let [a, u, c] = (0, i.A)();
+function o(e) {
     let { children: t } = e,
-        { purchaseErrorBlockRef: n } = (0, a.L)(),
-        [r, o] = i.useState(null),
-        [u, c] = i.useState(null),
-        [d, p] = i.useState(null),
-        m = i.useMemo(
+        { purchaseErrorBlockRef: n } = (0, s.L)(),
+        [i, u] = r.useState(null),
+        [c, o] = r.useState(null),
+        [d, f] = r.useState(null),
+        h = r.useMemo(
             () => ({
                 purchaseErrorBlockRef: n,
-                bodyNode: r,
-                setBodyNode: o,
-                footerNode: u,
-                setFooterNode: c,
+                bodyNode: i,
+                setBodyNode: u,
+                footerNode: c,
+                setFooterNode: o,
                 modalOverlayNode: d,
-                setModalOverlayNode: p,
+                setModalOverlayNode: f,
             }),
-            [n, r, u, d],
+            [n, i, c, d],
         );
-    return (0, l.jsx)(s, { value: m, children: t });
+    return (0, l.jsx)(a, { value: h, children: t });
 }

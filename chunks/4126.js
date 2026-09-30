@@ -1,4 +1,4 @@
-n.d(t, { Mx: () => y, kj: () => E, iH: () => I, KF: () => f, ri: () => S, $K: () => g });
+n.d(t, { Mx: () => y, kj: () => S, iH: () => A, KF: () => f, ri: () => E, $K: () => I });
 var l = n(477900);
 n(582128);
 var i = n(503698),
@@ -89,11 +89,11 @@ function f(e) {
     let { application: t, asset: n, className: i, ...r } = e;
     return (0, l.jsx)(s.A, { application: t, size: s.V.MEDIUM, asset: n, className: i, ...r });
 }
-function E(e) {
+function S(e) {
     let { children: t, className: n, id: i, ...s } = e;
     return (0, l.jsx)(a.D, { className: r()(C.wx, n), variant: "heading-xl/extrabold", id: i, ...s, children: t });
 }
-function S() {
+function E() {
     return (0, l.jsx)("hr", { className: C.yF });
 }
 function y(e) {
@@ -107,7 +107,7 @@ function y(e) {
         ],
     });
 }
-function I(e) {
+function A(e) {
     let { applicationId: t, storeListingBenefits: n, skuBenefits: i, className: a, ...s } = e;
     return (0, l.jsx)("div", {
         className: r()(C.iq, a),
@@ -115,7 +115,7 @@ function I(e) {
         children: (0, l.jsx)(p, { applicationId: t, storeListingBenefits: n, skuBenefits: i, className: C.gX }),
     });
 }
-function g(e) {
+function I(e) {
     let { children: t, className: n, ...i } = e;
     return (0, l.jsx)("div", { className: r()(C.kL, n), ...i, children: t });
 }

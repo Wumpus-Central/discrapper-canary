@@ -1,46 +1,46 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => h });
 var l = n(477900),
-    r = n(582128),
+    i = n(582128),
     a = n(503698),
-    i = n.n(a),
+    r = n.n(a),
     s = n(123292),
     o = n(688810),
     u = n(183555),
     c = n(402860),
     d = n(308244),
     f = n(900179),
-    h = n(375708),
-    A = n(975316);
-let m = r.memo(function (e) {
+    A = n(375708),
+    S = n(975316);
+let h = i.memo(function (e) {
     let {
             userId: t,
             userBio: n,
             onClose: a,
-            animateOnHoverOrFocusOnly: m = !1,
-            isHoveringOrFocusing: S = !1,
-            hidePersonalInformation: T = !1,
+            animateOnHoverOrFocusOnly: h = !1,
+            isHoveringOrFocusing: T = !1,
+            hidePersonalInformation: m = !1,
             hideRestrictedProfile: g = !1,
             viewFullBioDisabled: x = !1,
         } = e,
-        { context: p } = (0, u.NJ)(),
-        { analyticsLocations: E } = (0, o.Ay)(),
-        [R, y] = r.useState(!1),
-        [v, C] = r.useState(!1),
-        j = r.useRef(null);
-    return T || null == n || "" === n
+        { context: E } = (0, u.NJ)(),
+        { analyticsLocations: p } = (0, o.Ay)(),
+        [R, y] = i.useState(!1),
+        [C, v] = i.useState(!1),
+        j = i.useRef(null);
+    return m || null == n || "" === n
         ? null
         : (0, l.jsxs)(f.A, {
-              heading: h.intl.string(h.t.ZzAR2Y),
+              heading: A.intl.string(A.t.ZzAR2Y),
               hideHeading: !0,
               children: [
                   (0, l.jsx)("div", {
                       ref: (e) => {
                           ((j.current = e),
                               null == e ||
-                                  (y(!v && e.scrollHeight - e.clientHeight > 1),
-                                  e.getBoundingClientRect().height > 57.75 && C(!0)));
+                                  (y(!C && e.scrollHeight - e.clientHeight > 1),
+                                  e.getBoundingClientRect().height > 57.75 && v(!0)));
                       },
-                      className: i()(A.mA, v && A.Em),
+                      className: r()(S.mA, C && S.Em),
                       onBlur: function (e) {
                           null == j.current ||
                               j.current.contains(e.relatedTarget) ||
@@ -52,25 +52,25 @@ let m = r.memo(function (e) {
                           userBio: n,
                           setLineClamp: !1,
                           textColor: "text-strong",
-                          animateOnHoverOrFocusOnly: m,
-                          isHoveringOrFocusing: S,
+                          animateOnHoverOrFocusOnly: h,
+                          isHoveringOrFocusing: T,
                       }),
                   }),
-                  (R || v) &&
+                  (R || C) &&
                       (0, l.jsx)("div", {
-                          className: A.HV,
+                          className: S.HV,
                           children: (0, l.jsx)(s.Q, {
                               textVariant: "text-xs/normal",
                               size: "sm",
                               variant: "secondary",
-                              text: h.intl.string(h.t.YDiPq8),
+                              text: A.intl.string(A.t.YDiPq8),
                               onClick: function () {
                                   (a?.(),
                                       (0, c.openUserProfileModal)({
-                                          ...p,
+                                          ...E,
                                           userId: t,
                                           hideRestrictedProfile: g,
-                                          sourceAnalyticsLocations: E,
+                                          sourceAnalyticsLocations: p,
                                       }));
                               },
                               disabled: x,

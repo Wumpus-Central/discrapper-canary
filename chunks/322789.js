@@ -63,7 +63,7 @@ let R = [S.iq, S.Zc, S.Xy, S.$X, S.tR, S.K7, S.fg, S.sp, S.MK],
                 className: T.xn,
                 showTooltip: k?.text != null,
             }),
-            H = (0, l.jsx)(v.ZB, { children: t.extra.game_name });
+            B = (0, l.jsx)(v.ZB, { children: t.extra.game_name });
         return (0, l.jsxs)(v.Zp, {
             selected: i,
             usesCardRows: !0,
@@ -78,7 +78,7 @@ let R = [S.iq, S.Zc, S.Xy, S.$X, S.tR, S.K7, S.fg, S.sp, S.MK],
                                 (0, l.jsxs)(v.UA, {
                                     children: [
                                         (0, l.jsx)(v.Hp, { entry: t, channelId: n.id, guildId: n.guild_id }),
-                                        null != V ? (0, l.jsx)(I.A, { className: b.N4, onClick: V, children: H }) : H,
+                                        null != V ? (0, l.jsx)(I.A, { className: b.N4, onClick: V, children: B }) : B,
                                         (0, l.jsx)(S.mG, {
                                             location: S.N5.CARD,
                                             children: R.map((e, n) => (0, l.jsx)(e, { entry: t, hovered: O }, n)),

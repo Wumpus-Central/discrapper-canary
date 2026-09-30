@@ -144,22 +144,22 @@ var U = n(412260),
     V = n(927813),
     G = n(935208),
     F = n(240248),
-    H = n(767089),
-    B = n(621255),
+    B = n(767089),
+    H = n(621255),
     W = n(495088);
 let K = V.A.Millis.DAYS_30;
 function z(e) {
     let { boxAnimationUrl: t, hovered: n, onClick: s } = e,
         r = i.useCallback(() => Promise.resolve({ default: t }), [t]);
-    return (0, l.jsx)(H.A, {
+    return (0, l.jsx)(B.A, {
         className: W.x6,
         "aria-label": k.intl.string(k.t.Z1RnTk),
         isActive: !1,
         noHover: !0,
         onClick: s,
         children: (0, l.jsx)("div", {
-            className: B.zc,
-            children: n ? (0, l.jsx)(h.a, { className: B.Hl, importData: r }) : (0, l.jsx)(p.GiftIcon, {}),
+            className: H.zc,
+            children: n ? (0, l.jsx)(h.a, { className: H.Hl, importData: r }) : (0, l.jsx)(p.GiftIcon, {}),
         }),
     });
 }
@@ -167,7 +167,7 @@ function Z(e) {
     let { trinketAnimationUrl: t, hovered: n, onClick: i } = e,
         { Component: s, events: r, play: a } = m(),
         u = (0, o.bG)([x.Ay], () => x.Ay.useReducedMotion);
-    return (0, l.jsxs)(H.A, {
+    return (0, l.jsxs)(B.A, {
         className: W.x6,
         "aria-label": k.intl.string(k.t.Z1RnTk),
         isActive: !1,
@@ -177,8 +177,8 @@ function Z(e) {
         },
         ...r,
         children: [
-            (0, l.jsx)("div", { className: B.zc, children: (0, l.jsx)(s, { className: B.is, color: "currentColor" }) }),
-            n && !u && (0, l.jsx)("img", { className: B.rY, src: t, alt: "" }),
+            (0, l.jsx)("div", { className: H.zc, children: (0, l.jsx)(s, { className: H.is, color: "currentColor" }) }),
+            n && !u && (0, l.jsx)("img", { className: H.rY, src: t, alt: "" }),
         ],
     });
 }
@@ -192,7 +192,7 @@ function Y(e) {
         ? (0, l.jsx)(f.m, {
               ariaHidden: i,
               text: k.intl.string(i ? k.t.TW4JV0 : k.t.sWtWDX),
-              children: (0, l.jsx)(H.A, {
+              children: (0, l.jsx)(B.A, {
                   className: W.x6,
                   isActive: !1,
                   "aria-label": k.intl.string(i ? k.t.TW4JV0 : k.t.Z1RnTk),
@@ -238,15 +238,15 @@ let q = i.memo(function (e) {
         k = (0, o.bG)([U.A], () => U.A.getGiftPromotion()?.id),
         w = null != N && !t && !m && p >= K && null != k,
         [P, V] = (0, E.Cc)(w ? u.M.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK : null, k ?? ""),
-        H = null != P,
+        B = null != P,
         { giftingBadgeCoachmarkVariant: W, markGiftingBadgeCoachmarkAsDismissed: z } = (function (e) {
             let { location: t, enabled: n } = e,
                 l = (0, g.A)(),
                 i = (0, y.Hv)({ platform: "web", location: t, enabled: n }),
                 [s, r] = (0, E.kn)(null == i || l ? [] : [u.M.NEW_GIFTING_BADGES_COACHMARK]);
             return { giftingBadgeCoachmarkVariant: null != s ? i : null, markGiftingBadgeCoachmarkAsDismissed: r };
-        })({ location: "ChannelPremiumGiftButton", enabled: !t && !H }),
-        Z = c || H || null != W,
+        })({ location: "ChannelPremiumGiftButton", enabled: !t && !B }),
+        Z = c || B || null != W,
         {
             openGiftModal: q,
             shouldShowWishlistModal: J,
@@ -280,7 +280,7 @@ let q = i.memo(function (e) {
         },
     });
     return (0, l.jsx)("div", {
-        className: r()(B.kL, { [B.DM]: Z }),
+        className: r()(H.kL, { [H.DM]: Z }),
         style: b,
         onMouseEnter: () => {
             c || d(!0);
@@ -288,7 +288,7 @@ let q = i.memo(function (e) {
         onMouseLeave: () => {
             d(!1);
         },
-        children: H
+        children: B
             ? (0, l.jsx)(v.A, {
                   onComplete: () => d(!1),
                   onCheckItOutClick: q,

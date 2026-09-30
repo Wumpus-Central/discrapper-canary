@@ -21,7 +21,7 @@ function C(e) {
             hasSeparateAccountLinkNotice: C = !1,
         } = e,
         { immediateDelivery: f } = (0, u.U)(),
-        E = (function (e) {
+        S = (function (e) {
             let {
                     skuId: t,
                     purchaseButtonText: n,
@@ -35,17 +35,17 @@ function C(e) {
                 m = (0, r.bG)([p.A], () => p.A.get(t), [t]),
                 C = m?.productLine,
                 f = m?.applicationId,
-                E = (0, r.bG)([s.A], () => (C === h.EZt.SOCIAL_LAYER_GAME_ITEM ? s.A.getApplication(f) : null), [f, C]),
-                { fetched: S, hasAlreadyLinked: y } = (0, a.RD)(E);
+                S = (0, r.bG)([s.A], () => (C === h.EZt.SOCIAL_LAYER_GAME_ITEM ? s.A.getApplication(f) : null), [f, C]),
+                { fetched: E, hasAlreadyLinked: y } = (0, a.RD)(S);
             return {
                 type: l,
                 purchaseButtonText: n ?? u,
-                applicationName: E?.name,
+                applicationName: S?.name,
                 applicationId: f,
-                shouldAppendDisclaimer: i || (S && (o ? y : !y)),
+                shouldAppendDisclaimer: i || (E && (o ? y : !y)),
             };
         })({ skuId: t, purchaseButtonText: i, isGift: o, checkoutLegalType: m, hasSeparateAccountLinkNotice: C });
-    return (0, l.jsx)(c._P, { variant: E, paymentSourceType: n, immediateDelivery: f });
+    return (0, l.jsx)(c._P, { variant: S, paymentSourceType: n, immediateDelivery: f });
 }
 function f(e) {
     let { paymentSourceType: t } = e,

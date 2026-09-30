@@ -1,1 +1,1 @@
-e.exports = { v: "banner__68edb" };
+p.exports = { v: "banner__68edb" };

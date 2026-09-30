@@ -70,11 +70,11 @@ var R = n(268218),
     V = n(531685),
     G = n(620141),
     F = n(19309),
-    H = n(224964);
-function B(e) {
+    B = n(224964);
+function H(e) {
     let { confettiSpawnRef: t, shouldFire: n } = e,
         l = (0, o.bG)([V.A], () => V.A.isFocused()),
-        i = (0, H.A)();
+        i = (0, B.A)();
     return (
         s.useEffect(() => {
             if (l && n) {
@@ -86,7 +86,7 @@ function B(e) {
     );
 }
 function W(e) {
-    return (0, i.jsx)(G.A, { confettiLocation: e.confettiLocation, children: (0, i.jsx)(B, { ...e }) });
+    return (0, i.jsx)(G.A, { confettiLocation: e.confettiLocation, children: (0, i.jsx)(H, { ...e }) });
 }
 var K = n(967144),
     z = n(859703),
@@ -352,8 +352,8 @@ let el = s.memo(function (e) {
                 onContextMenu: V,
                 onClickPremiumGuildIcon: G,
                 "aria-controls": F,
-                "aria-expanded": H,
-                "aria-posinset": B,
+                "aria-expanded": B,
+                "aria-posinset": H,
                 "aria-setsize": W,
                 id: J,
                 tabIndex: Q,
@@ -507,9 +507,9 @@ let el = s.memo(function (e) {
                               onClickPremiumGuildIcon: G,
                           }),
                           "aria-controls": F,
-                          "aria-expanded": H,
+                          "aria-expanded": B,
                           "aria-setsize": W,
-                          "aria-posinset": B,
+                          "aria-posinset": H,
                           id: J,
                           tabIndex: Q,
                           onFocus: ew,

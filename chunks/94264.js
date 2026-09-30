@@ -1,8 +1,8 @@
 l.d(t, { A: () => _ });
-var n = l(477900);
+var a = l(477900);
 l(582128);
-var a = l(503698),
-    s = l.n(a),
+var n = l(503698),
+    s = l.n(n),
     i = l(892227),
     r = l(661531),
     c = l(403581),
@@ -17,24 +17,24 @@ let C = {
     },
     _ = function (e) {
         let { className: t } = e,
-            { passesProgressBarInvariant: l, programReward: a, totalDays: r } = (0, d.F)();
-        if (!l || null == a || null == r) return null;
-        let _ = (0, i.default)(new Date(a.next_reward_date), new Date()),
-            E = a.program_current_state === u.L.PREMIUM_CHURNING,
-            A = E ? C.churning.start : C.active.start,
-            g = E ? C.churning.end : C.active.end;
-        return (0, n.jsxs)("div", {
+            { passesProgressBarInvariant: l, programReward: n, totalDays: r } = (0, d.F)();
+        if (!l || null == n || null == r) return null;
+        let _ = (0, i.default)(new Date(n.next_reward_date), new Date()),
+            E = n.program_current_state === u.L.PREMIUM_CHURNING,
+            g = E ? C.churning.start : C.active.start,
+            A = E ? C.churning.end : C.active.end;
+        return (0, a.jsxs)("div", {
             className: s()(m.k, t),
             children: [
-                (0, n.jsx)(h.Ay, {
+                (0, a.jsx)(h.Ay, {
                     variant: h.qP.UNSET,
                     progress: r - _,
                     maximum: r,
-                    override: { default: { gradientStart: A, gradientEnd: g } },
+                    override: { default: { gradientStart: g, gradientEnd: A } },
                 }),
                 E
-                    ? (0, n.jsx)(c.t, { size: "sm", color: "currentColor", className: m.K })
-                    : (0, n.jsx)(o.C, { size: "sm", color: "currentColor", className: m.K }),
+                    ? (0, a.jsx)(c.t, { size: "sm", color: "currentColor", className: m.K })
+                    : (0, a.jsx)(o.C, { size: "sm", color: "currentColor", className: m.K }),
             ],
         });
     };

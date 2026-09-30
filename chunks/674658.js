@@ -1,21 +1,21 @@
-n.d(t, { q: () => d });
-var i = n(582128),
-    r = n(575593),
-    s = n(702841),
-    o = n(67480),
-    u = n(815996),
-    a = n(590180),
-    l = n(652215);
-function d(e, t) {
-    let n = (0, s.bG)([o.A], () => (null != e ? o.A.get(e) : null)),
-        d = null != n && n.productLine !== l.EZt.COLLECTIBLES,
-        [c, C] = (0, s.yK)([a.A], () => [a.A.getProduct(e), a.A.getProductFetch(e)]),
-        f = (0, s.bG)([a.A], () => a.A.isProductFetchBackedOff(e)),
-        A = !0 === t && c?.type === r.R.BUNDLE && 0 === c.items.length;
+n.d(t, { q: () => c });
+var r = n(582128),
+    u = n(575593),
+    l = n(702841),
+    i = n(67480),
+    o = n(815996),
+    s = n(590180),
+    a = n(652215);
+function c(e, t) {
+    let n = (0, l.bG)([i.A], () => (null != e ? i.A.get(e) : null)),
+        c = null != n && n.productLine !== a.EZt.COLLECTIBLES,
+        [d, f] = (0, l.yK)([s.A], () => [s.A.getProduct(e), s.A.getProductFetch(e)]),
+        A = (0, l.bG)([s.A], () => s.A.isProductFetchBackedOff(e)),
+        E = !0 === t && d?.type === u.R.BUNDLE && 0 === d.items.length;
     return (
-        (0, i.useEffect)(() => {
-            null == e || (null != c && !A) || d || C?.state === "fetching" || f || (0, u.Jp)(e, { includeBundles: t });
-        }, [e, c, d, C, t, A, f]),
-        { product: c, isFetching: C?.state === "fetching" }
+        (0, r.useEffect)(() => {
+            null == e || (null != d && !E) || c || f?.state === "fetching" || A || (0, o.Jp)(e, { includeBundles: t });
+        }, [e, d, c, f, t, E, A]),
+        { product: d, isFetching: f?.state === "fetching" }
     );
 }

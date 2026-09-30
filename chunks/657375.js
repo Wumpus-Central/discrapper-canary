@@ -1,93 +1,93 @@
-(n.d(t, { FW: () => _, bg: () => g, RH: () => m }), n(134528), n(947204));
-var i,
-    r = (((i = {}).AD_ATTRIBUTION_KIT = "aak"), i),
-    s = n(626584),
-    o = n(692184),
-    u = n(929482),
-    a = n(636537),
-    l = n(38405),
-    d = n(652215);
-async function c(e) {
-    let { metadataSealed: t, impressionId: n, specs: i, signal: r } = e;
+(n.d(t, { FW: () => S, bg: () => O, RH: () => I }), n(134528), n(947204));
+var r,
+    u = (((r = {}).AD_ATTRIBUTION_KIT = "aak"), r),
+    l = n(626584),
+    i = n(692184),
+    o = n(929482),
+    s = n(636537),
+    a = n(38405),
+    c = n(652215);
+async function d(e) {
+    let { metadataSealed: t, impressionId: n, specs: r, signal: u } = e;
     try {
         return (
             (
-                await a.Bo.post({
-                    url: d.Rsh.ADS_IOS_ATTRIBUTION_SIGN_PAYLOAD,
-                    body: { metadata_sealed: t, impression_id: n, specs: i },
+                await s.Bo.post({
+                    url: c.Rsh.ADS_IOS_ATTRIBUTION_SIGN_PAYLOAD,
+                    body: { metadata_sealed: t, impression_id: n, specs: r },
                     failImmediatelyWhenRateLimited: !0,
                     rejectWithError: !0,
                     timeout: 5e3,
-                    signal: r,
+                    signal: u,
                 })
             ).body.payloads ?? null
         );
     } catch (e) {
-        return (l.A.captureException(e, { tags: { app_context: "ios_attribution" } }), null);
+        return (a.A.captureException(e, { tags: { app_context: "ios_attribution" } }), null);
     }
 }
-let C = { [r.AD_ATTRIBUTION_KIT]: { viewThroughSpec: { kind: r.AD_ATTRIBUTION_KIT } } },
-    f = new s.A("IosAttribution"),
-    A = new Map();
-function E(e, t) {
-    return A.get(e) === t;
+let f = { [u.AD_ATTRIBUTION_KIT]: { viewThroughSpec: { kind: u.AD_ATTRIBUTION_KIT } } },
+    A = new l.A("IosAttribution"),
+    E = new Map();
+function _(e, t) {
+    return E.get(e) === t;
 }
 function p(e, t) {
-    E(e, t) && A.delete(e);
+    _(e, t) && E.delete(e);
+}
+function C(e) {
+    null != e && (0, o.bg)(e).catch(() => {});
 }
 function I(e) {
-    null != e && (0, u.bg)(e).catch(() => {});
-}
-function m(e) {
-    let { impressionId: t, metadataSealed: n, framework: i } = e,
-        r = { framework: i, token: null, signAbort: new AbortController(), registration: Promise.resolve() };
-    (A.set(t, r),
-        (r.registration = T({ impressionId: t, metadataSealed: n, framework: i, impression: r }).catch(() => {
-            p(t, r);
+    let { impressionId: t, metadataSealed: n, framework: r } = e,
+        u = { framework: r, token: null, signAbort: new AbortController(), registration: Promise.resolve() };
+    (E.set(t, u),
+        (u.registration = T({ impressionId: t, metadataSealed: n, framework: r, impression: u }).catch(() => {
+            p(t, u);
         })));
 }
 async function T(e) {
-    let { impressionId: t, metadataSealed: n, framework: i, impression: r } = e,
-        s = C[i]?.viewThroughSpec;
-    if (null == s) {
-        (f.warn(`No strategy for ${i}; impression ${t} is unattributed`), (0, o.$8)(o.vI.NO_FRAMEWORK, i), p(t, r));
-        return;
-    }
-    let a = await c({ metadataSealed: n, impressionId: t, specs: [s], signal: r.signAbort.signal });
-    if (!E(t, r)) return;
-    let l = null != a ? (a.at(0)?.payload ?? null) : null;
+    let { impressionId: t, metadataSealed: n, framework: r, impression: u } = e,
+        l = f[r]?.viewThroughSpec;
     if (null == l) {
-        ((0, o.$8)(o.vI.SIGN_FAILED, i, t), A.delete(t));
+        (A.warn(`No strategy for ${r}; impression ${t} is unattributed`), (0, i.$8)(i.vI.NO_FRAMEWORK, r), p(t, u));
         return;
     }
-    let d = await (0, u.EO)(t, i, JSON.stringify(l));
-    if (!E(t, r)) return void I(d);
-    if (null == d) {
-        ((0, o.$8)(o.vI.NO_TOKEN, i, t), A.delete(t));
+    let s = await d({ metadataSealed: n, impressionId: t, specs: [l], signal: u.signAbort.signal });
+    if (!_(t, u)) return;
+    let a = null != s ? (s.at(0)?.payload ?? null) : null;
+    if (null == a) {
+        ((0, i.$8)(i.vI.SIGN_FAILED, r, t), E.delete(t));
         return;
     }
-    ((0, o.$8)(o.vI.REGISTERED, i, t), (r.token = d));
+    let c = await (0, o.EO)(t, r, JSON.stringify(a));
+    if (!_(t, u)) return void C(c);
+    if (null == c) {
+        ((0, i.$8)(i.vI.NO_TOKEN, r, t), E.delete(t));
+        return;
+    }
+    ((0, i.$8)(i.vI.REGISTERED, r, t), (u.token = c));
 }
-async function h(e) {
-    let t = A.get(e);
+async function m(e) {
+    let t = E.get(e);
     return null == t
-        ? (f.warn(`No tracked impression for ${e} at click time; store sheet will be unattributed`),
-          (0, o.y9)(o.s5.NO_IMPRESSION, (0, u.BU)(), e),
+        ? (A.warn(`No tracked impression for ${e} at click time; store sheet will be unattributed`),
+          (0, i.y9)(i.s5.NO_IMPRESSION, (0, o.BU)(), e),
           null)
-        : (null == t.token && (await t.registration), E(e, t) && null != t.token)
-          ? ((0, o.y9)(o.s5.ATTRIBUTED, t.framework, e), t.token)
-          : (f.warn(`Impression ${e} not registered natively in time; store sheet will be unattributed`),
-            (0, o.y9)(o.s5.NOT_READY, t.framework, e),
+        : (null == t.token && (await t.registration), _(e, t) && null != t.token)
+          ? ((0, i.y9)(i.s5.ATTRIBUTED, t.framework, e), t.token)
+          : (A.warn(`Impression ${e} not registered natively in time; store sheet will be unattributed`),
+            (0, i.y9)(i.s5.NOT_READY, t.framework, e),
             null);
 }
-async function _(e) {
+async function S(e) {
     let { impressionId: t } = e,
-        n = (0, u.BU)();
-    if (null == n || null == C[n]) return;
-    let i = await h(t);
-    return null != i ? { impressionToken: i } : void 0;
+        n = (0, o.BU)();
+    if (null == n || null == f[n]) return;
+    let r = await m(t);
+    return null != r ? { impressionToken: r } : void 0;
 }
-function g(e) {
-    let t = A.get(e);
-    null != t && (A.delete(e), t.signAbort.abort(), I(t.token));
+function O(e) {
+    let t = E.get(e);
+    null != t && (E.delete(e), t.signAbort.abort(), C(t.token));
 }

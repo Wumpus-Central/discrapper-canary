@@ -1,59 +1,59 @@
-r.d(t, { W: () => h, v: () => x });
-var s = r(477900);
-r(582128);
-var i = r(503698),
-    l = r.n(i),
-    n = r(575593),
-    a = r(17928),
-    c = r(834730),
-    u = r(474012),
-    d = r(607123),
-    o = r(287809),
-    m = r(137504);
+s.d(t, { W: () => h, v: () => f });
+var l = s(477900);
+s(582128);
+var a = s(503698),
+    n = s.n(a),
+    r = s(575593),
+    i = s(17928),
+    u = s(834730),
+    d = s(474012),
+    c = s(607123),
+    o = s(287809),
+    g = s(137504);
 function h(e) {
-    let { title: t, body: r, image: i, badge: n, className: a, textGroupClassName: c } = e;
-    return (0, s.jsxs)("div", {
-        className: l()(m.kL, a),
+    let { title: t, body: s, image: a, badge: r, className: i, textGroupClassName: u } = e;
+    return (0, l.jsxs)("div", {
+        className: n()(g.kL, i),
         children: [
-            null != i && (0, s.jsx)("div", { className: m.Sl, children: i }),
-            (0, s.jsxs)("div", {
-                className: m.Qs,
+            null != a && (0, l.jsx)("div", { className: g.Sl, children: a }),
+            (0, l.jsxs)("div", {
+                className: g.Qs,
                 children: [
-                    null != n && (0, s.jsx)("div", { className: m.oL, children: n }),
-                    (0, s.jsxs)("div", { className: l()(m.Z, c), children: [t, r] }),
+                    null != r && (0, l.jsx)("div", { className: g.oL, children: r }),
+                    (0, l.jsxs)("div", { className: n()(g.Z, u), children: [t, s] }),
                 ],
             }),
         ],
     });
 }
-function x(e) {
-    let { className: t, product: r, title: i, subtitle: x, badge: p } = e,
-        f = (0, a.bG)([o.default], () => o.default.getCurrentUser()),
-        g = (0, u.tP)(r);
-    return null == g
+function f(e) {
+    let { className: t, product: s, title: a, subtitle: f, badge: m } = e,
+        E = (0, i.bG)([o.default], () => o.default.getCurrentUser()),
+        S = (0, d.tP)(s);
+    return null == S
         ? null
-        : (0, s.jsx)(h, {
+        : (0, l.jsx)(h, {
               className: t,
-              image: (0, s.jsx)("div", {
-                  className: m.yn,
-                  children: (0, s.jsx)("div", {
-                      className: l()(m.ML, {
-                          [m.M]: r?.type === n.R.AVATAR_DECORATION,
-                          [m.Hm]: r?.type === n.R.PROFILE_EFFECT,
-                          [m.hH]: r?.type === n.R.PROFILE_FRAME,
-                          [m.qF]: r?.type === n.R.NAMEPLATE,
-                          [m.l2]: r?.type === n.R.BUNDLE,
+              image: (0, l.jsx)("div", {
+                  className: g.yn,
+                  children: (0, l.jsx)("div", {
+                      className: n()(g.ML, {
+                          [g.M]: s?.type === r.R.AVATAR_DECORATION,
+                          [g.Hm]: s?.type === r.R.PROFILE_EFFECT,
+                          [g.hH]: s?.type === r.R.PROFILE_FRAME,
+                          [g.qF]: s?.type === r.R.NAMEPLATE,
+                          [g.l2]: s?.type === r.R.BUNDLE,
                       }),
-                      children: (0, s.jsx)(d.pL, {
-                          collectiblesItem: g,
-                          user: f,
-                          nameplatePreviewStyle: m.M4,
-                          nameplatePreviewRescalerStyle: m.N1,
+                      children: (0, l.jsx)(c.pL, {
+                          collectiblesItem: S,
+                          user: E,
+                          nameplatePreviewStyle: g.M4,
+                          nameplatePreviewRescalerStyle: g.N1,
                       }),
                   }),
               }),
-              badge: p,
-              title: null != i && (0, s.jsx)(c.E, { variant: "text-md/medium", color: "text-default", children: i }),
-              body: null != x && (0, s.jsx)(c.E, { variant: "text-sm/medium", color: "text-muted", children: x }),
+              badge: m,
+              title: null != a && (0, l.jsx)(u.E, { variant: "text-md/medium", color: "text-default", children: a }),
+              body: null != f && (0, l.jsx)(u.E, { variant: "text-sm/medium", color: "text-muted", children: f }),
           });
 }

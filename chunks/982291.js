@@ -1,4 +1,4 @@
-n.d(t, { c: () => E });
+n.d(t, { c: () => S });
 var l = n(477900),
     i = n(582128),
     r = n(951305),
@@ -41,14 +41,14 @@ function f(e) {
         { isGift: c, claimableRewards: d } = (0, r.Pv)(),
         h = (0, o.A)({ isGift: c, skuId: n }),
         f = (0, m.t4)((e) => e.getIsInOneStepSubscriptionCheckout({ isTrial: h })),
-        E = (0, u.px)(s, c, d),
-        S = i.useMemo(() => {
+        S = (0, u.px)(s, c, d),
+        E = i.useMemo(() => {
             let e = null == t ? a.pn.PLAN_SELECT : a.pn.REVIEW;
-            return (f && (e = a.pn.REVIEW), E && (e = a.pn.SELECT_FREE_SKU), e);
-        }, [f, E, t]);
-    return (0, l.jsx)(C, { paymentModalStepProps: e, returnStep: a.pn.REVIEW, returnStepIfNoPaymentSources: S });
+            return (f && (e = a.pn.REVIEW), S && (e = a.pn.SELECT_FREE_SKU), e);
+        }, [f, S, t]);
+    return (0, l.jsx)(C, { paymentModalStepProps: e, returnStep: a.pn.REVIEW, returnStepIfNoPaymentSources: E });
 }
-function E(e) {
+function S(e) {
     let { checkoutFlow: t, returnStep: n = a.pn.REVIEW, returnStepIfNoPaymentSources: i, paymentModalStepProps: r } = e;
     return t === d.C.PREMIUM_CHECKOUT
         ? (0, l.jsx)(f, { ...r })

@@ -18,8 +18,8 @@ var i = n(477900),
     p = n(811611),
     T = n(174459),
     f = n(830543),
-    _ = n(652215),
-    I = n(385803),
+    I = n(652215),
+    _ = n(385803),
     N = n(202541),
     C = n(375708),
     b = n(510081);
@@ -34,7 +34,7 @@ function v() {
     return (0, i.jsx)(S.A, {
         subscriptionTier: N.pe.TIER_2,
         defaultTextOverride: t,
-        premiumModalAnalyticsLocation: { object: _.ZSU.BUTTON_CTA, objectType: _.AnalyticsObjectTypes.BUY },
+        premiumModalAnalyticsLocation: { object: I.ZSU.BUTTON_CTA, objectType: I.AnalyticsObjectTypes.BUY },
         fullWidth: !0,
     });
 }
@@ -57,11 +57,11 @@ function O(e) {
         { analyticsLocations: r } = (0, u.Ay)(o.A.USER_SETTINGS);
     return (s.useEffect(() => {
         n &&
-            (T.default.track(_.HAw.PREMIUM_UPSELL_VIEWED, {
+            (T.default.track(I.HAw.PREMIUM_UPSELL_VIEWED, {
                 type: N.e.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
                 location_stack: r,
             }),
-            (0, m.sq)(_.U7l.PREMIUM_UPSELL_VIEWED, r, () => (0, A.uq)(N.e.PREMIUM_CLIENT_THEME_TRY_IT_OUT)));
+            (0, m.sq)(I.U7l.PREMIUM_UPSELL_VIEWED, r, () => (0, A.uq)(N.e.PREMIUM_CLIENT_THEME_TRY_IT_OUT)));
     }, [n, r]),
     n)
         ? (0, i.jsx)("div", { className: b._$, children: t })
@@ -106,7 +106,7 @@ function R() {
                     wrap: !0,
                     gap: 8,
                     padding: { top: 24 },
-                    children: (0, i.jsx)(c.Zg, { disabled: !1, size: I.ni.SIZE_48 }),
+                    children: (0, i.jsx)(c.Zg, { disabled: !1, size: _.ni.SIZE_48 }),
                 }),
                 (0, i.jsx)(L, {}),
             ],
