@@ -6655,9 +6655,14 @@ let dP = (e) => {
             ],
         });
     };
-var dM = n(387316);
-let dU = "url(#gradient)",
-    dV = (e) => {
+var dM = n(387316),
+    dU =
+        (((i = {})[(i.NITRO_GEM = 0)] = "NITRO_GEM"),
+        (i[(i.NITRO_LOGO = 1)] = "NITRO_LOGO"),
+        (i[(i.AVATAR_DECO = 2)] = "AVATAR_DECO"),
+        i);
+let dV = "url(#gradient)",
+    dk = (e) => {
         let {
                 percentage: t = 0,
                 children: n,
@@ -6680,34 +6685,25 @@ let dU = "url(#gradient)",
             m = (0, dm.q)(g),
             E = (function (e) {
                 switch (e) {
-                    case dw.NITRO_GEM:
-                    case dw.AVATAR_DECO:
+                    case 0:
+                    case 2:
                         return "var(--background-base-low)";
-                    case dw.NITRO_LOGO:
+                    case 1:
                         return "var(--premium-tier-2-purple)";
                     default:
                         return;
                 }
             })(r),
-            S = (function (e, t) {
-                switch (e) {
-                    case dw.NITRO_LOGO:
-                        return t ? "0.3" : "0.2";
-                    case dw.NITRO_GEM:
-                    case dw.AVATAR_DECO:
-                    default:
-                        return;
-                }
-            })(r, m),
+            S = 1 === r ? (m ? "0.3" : "0.2") : void 0,
             x =
                 a ??
                 (function (e, t) {
                     switch (t) {
-                        case dw.NITRO_GEM:
-                        case dw.AVATAR_DECO:
-                            return dU;
-                        case dw.NITRO_LOGO:
-                            return e ? "url(#gradient_nitro_logo)" : dU;
+                        case 0:
+                        case 2:
+                            return dV;
+                        case 1:
+                            return e ? "url(#gradient_nitro_logo)" : dV;
                         default:
                             return;
                     }
@@ -6720,7 +6716,7 @@ let dU = "url(#gradient)",
                     className: dM.fB,
                     children: [
                         (0, A.jsx)("circle", {
-                            className: r === dw.NITRO_GEM || r === dw.AVATAR_DECO ? dM.F3 : void 0,
+                            className: 0 === r || 2 === r ? dM.F3 : void 0,
                             fill: "transparent",
                             strokeWidth: l,
                             r: `${o}`,
@@ -6786,20 +6782,15 @@ let dU = "url(#gradient)",
             ],
         });
     };
-var dk = n(104773),
-    dw =
-        (((i = {})[(i.NITRO_GEM = 0)] = "NITRO_GEM"),
-        (i[(i.NITRO_LOGO = 1)] = "NITRO_LOGO"),
-        (i[(i.AVATAR_DECO = 2)] = "AVATAR_DECO"),
-        i);
+var dw = n(104773);
 function dF(e) {
     let { avatarDecorationLegacyAssetId: t, avatarDecorationSkuId: n, avatarDecoAssetDescription: i } = e,
         s = h.useMemo(() => (0, dR.A)({ legacyAssetId: t, skuId: n, size: I._3.SIZE_120, canAnimate: !1 }), [t, n]);
     return (0, A.jsx)("div", {
-        className: dk.Q7,
+        className: dw.Q7,
         children: (0, A.jsx)("div", {
-            className: dk.Nk,
-            children: null != s && (0, A.jsx)("img", { className: dk.CH, alt: i, src: s }),
+            className: dw.Nk,
+            children: null != s && (0, A.jsx)("img", { className: dw.CH, alt: i, src: s }),
         }),
     });
 }
@@ -6813,7 +6804,7 @@ let dB = function (e) {
             backgroundCircleSize: r,
             percentage: a,
             initialPercentage: o,
-            progressCircleVariation: u = 0,
+            progressCircleVariation: u = dU.NITRO_GEM,
             avatarDecorationLegacyAssetId: d,
             avatarDecorationSkuId: c,
             avatarDecoAssetDescription: g,
@@ -6825,9 +6816,9 @@ let dB = function (e) {
         p = (0, E.bG)([N.Ay], () => N.Ay.useReducedMotion),
         T = t && !p;
     return (0, A.jsx)("div", {
-        className: ic()(dk.G3, n),
-        children: (0, A.jsx)(dV, {
-            animationClassName: ic()(dk._0, { [dk.uJ]: T, [h ?? ""]: T }),
+        className: ic()(dw.G3, n),
+        children: (0, A.jsx)(dk, {
+            animationClassName: ic()(dw._0, { [dw.uJ]: T, [h ?? ""]: T }),
             progressCircleStroke: x,
             progressCircleStrokeSize: l,
             percentage: i ?? a,
@@ -6835,15 +6826,15 @@ let dB = function (e) {
             progressCircleVariation: u,
             children: (function () {
                 switch (u) {
-                    case 0:
+                    case dU.NITRO_GEM:
                         return (0, A.jsx)(dP, {
-                            className: T ? dk.Ow : void 0,
-                            backgroundColor: ic()(dk.vH, s),
+                            className: T ? dw.Ow : void 0,
+                            backgroundColor: ic()(dw.vH, s),
                             backgroundCircleSize: r,
                         });
-                    case 1:
+                    case dU.NITRO_LOGO:
                         return (0, A.jsx)(dG, { circleColor: S, ellipseOpacity: m });
-                    case 2:
+                    case dU.AVATAR_DECO:
                         if (null != c)
                             return (0, A.jsx)(dF, {
                                 avatarDecorationLegacyAssetId: d,
@@ -6915,7 +6906,7 @@ let dK = function () {
         d = (0, A.jsxs)("div", {
             className: dz.hE,
             children: [
-                (0, A.jsx)(dB, { percentage: u, progressCircleVariation: dw.NITRO_LOGO, iconClassName: dz.ER }),
+                (0, A.jsx)(dB, { percentage: u, progressCircleVariation: dU.NITRO_LOGO, iconClassName: dz.ER }),
                 (0, A.jsxs)("div", {
                     className: dz.Ns,
                     children: [

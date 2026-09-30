@@ -16,15 +16,15 @@ var n = a(477900),
     v = a(964486),
     h = a(77729),
     _ = a(736056),
-    I = a(763827),
-    b = a(773371),
-    N = a(174459),
-    A = a(220478),
+    b = a(763827),
+    I = a(773371),
+    A = a(174459),
+    N = a(220478),
     S = a(9302),
     x = a(41984),
     G = a(181435),
-    E = a(78878),
-    w = a(651930);
+    w = a(78878),
+    E = a(651930);
 a(321073);
 var k = a(952818),
     D = a(760751),
@@ -109,7 +109,7 @@ function W(e) {
             [],
         ),
         i = (0, u.bG)([D.A], () => (null == t ? null : L(t, [D.A])), [t]);
-    return (0, n.jsx)(w.i, {
+    return (0, n.jsx)(E.i, {
         games: r,
         selectedGame: i ?? null,
         onGameSelected: function (e) {
@@ -134,10 +134,11 @@ function W(e) {
         placeholder: l,
     });
 }
-var U = a(489277),
-    B = a(127242),
-    R = a(614455),
-    H = a(652215),
+var B = a(489277),
+    U = a(127242),
+    R = a(614455);
+a(672396);
+var H = a(652215),
     K = a(375708),
     z = a(582830);
 function q(e, t) {
@@ -154,13 +155,13 @@ let J = new Set([
     Z = {
         HandleFocusChanged: (e, t) => {
             if (!(0, G.$8)(e, "HandleFocusChanged")) return !0;
-            let a = null != t ? (U.A.getKnownWindowHandlesForPID(t) ?? new Set()) : new Set(),
+            let a = null != t ? (B.A.getKnownWindowHandlesForPID(t) ?? new Set()) : new Set(),
                 { focusedPid: n, focusedWindowHandle: l } = e.data;
-            return null != l && null != n && n !== S.UNSET_PID && !!a.has(l) && n === t;
+            return null != l && null != n && -1 !== n && !!a.has(l) && n === t;
         },
         EventHook: (e, t) => {
             if (!(0, G.$8)(e, "EventHook")) return !0;
-            let a = null != t ? (U.A.getKnownWindowHandlesForPID(t) ?? new Set()) : new Set();
+            let a = null != t ? (B.A.getKnownWindowHandlesForPID(t) ?? new Set()) : new Set();
             try {
                 let { receivedWindow: n, targetPid: l } = e.data;
                 if (null != n && a.has(n)) return null != l && l === t;
@@ -173,18 +174,18 @@ function X(e) {
     let t,
         r,
         i,
-        w,
+        E,
         D,
         { onClose: j, transitionState: M, location: C, appContext: L } = e,
-        X = (0, u.bG)([b.default], () => b.default.getFocusedPID()) ?? (0, S.getPID)(),
+        X = (0, u.bG)([I.default], () => I.default.getFocusedPID()) ?? (0, S.getPID)(),
         $ = (0, u.bG)([T.default], () => T.default.getTrackedGameByPid(X), [X]),
         [V, Y] = l.useState(null),
         [Q, ee] = l.useState(""),
         et =
             ((t = (0, P.b4)()),
-            (r = (0, u.bG)([b.default], () => b.default.getFocusedPID()) ?? (0, S.getPID)()),
+            (r = (0, u.bG)([I.default], () => I.default.getFocusedPID()) ?? (0, S.getPID)()),
             (i = (0, u.bG)([T.default], () => T.default.getTrackedGameByPid(r), [r])),
-            (w = (0, u.bG)([k.Ay], () => k.Ay.getVisibleGame())),
+            (E = (0, u.bG)([k.Ay], () => k.Ay.getVisibleGame())),
             (D = (0, u.bG)([k.Ay], () => k.Ay.getGamesSeen(!1)[0])),
             (0, u.bG)(
                 [k.Ay, T.default],
@@ -219,7 +220,7 @@ function X(e) {
                                     trackedGame: null != l ? (a.getTrackedGameByPid(l) ?? void 0) : void 0,
                                 };
                             })(t, [k.Ay, T.default]);
-                        case null != w:
+                        case null != E:
                             return (function (e) {
                                 let [t] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [T.default];
                                 return {
@@ -230,14 +231,14 @@ function X(e) {
                                     trackedGame: O(e, [t]) ?? void 0,
                                     runningGame: e,
                                 };
-                            })(w, [T.default]);
+                            })(E, [T.default]);
                         case null != D:
                             return F(D, [k.Ay, T.default]);
                         default:
                             return null;
                     }
                 },
-                [t, i, w, D],
+                [t, i, E, D],
             )),
         [ea, en] = l.useState(et?.fullscreenType ?? $?.fullscreenType ?? null),
         [el, er] = l.useState(et),
@@ -258,8 +259,8 @@ function X(e) {
                 ),
             ),
             (0, u.bG)(
-                [B.A],
-                () => ({ nativeState: B.A.getDebuggingState(), breadcrumbs: B.A.getOverlayLoggingBreadcrumbs() }),
+                [U.A],
+                () => ({ nativeState: U.A.getDebuggingState(), breadcrumbs: U.A.getOverlayLoggingBreadcrumbs() }),
                 [],
                 q,
             )),
@@ -296,9 +297,9 @@ function X(e) {
             return;
         }
         eu(!0);
-        let e = b.default.getFocusedPID() ?? (0, S.getPID)(),
+        let e = I.default.getFocusedPID() ?? (0, S.getPID)(),
             t = T.default.getTrackedGameByPid(e),
-            l = U.A.getPopoutInitializationStages(),
+            l = B.A.getPopoutInitializationStages(),
             r = t?.overlayMethod != null ? x.Ue[t.overlayMethod] : null,
             i = t?.fullscreenType ?? p.aI.UNKNOWN,
             u = (0, G.tn)(eg, (t) => {
@@ -310,8 +311,8 @@ function X(e) {
                     }
                 return !0;
             }),
-            s = E.A.getRecentActions(10),
-            m = A.A.getRecentExperimentBuckets(_.A.getAllExperimentAssignments(), new Date(Date.now() - 7776e6)),
+            s = w.A.getRecentActions(10),
+            m = N.A.getRecentExperimentBuckets(_.A.getAllExperimentAssignments(), new Date(Date.now() - 7776e6)),
             c =
                 t?.fullscreenHistory == null
                     ? null
@@ -341,11 +342,11 @@ function X(e) {
                 overlay_module_error_message: R.A.errorMessage,
                 overlay_module_breadcrumbs: JSON.stringify(u),
                 fullscreen_history_for_pid: c,
-                media_session_id: I.A.getMediaSessionId(),
+                media_session_id: b.A.getMediaSessionId(),
                 recent_experiment_buckets: JSON.stringify(m),
                 location: C,
             };
-        (await N.default.track(H.HAw.OVERLAY_BUG_REPORT, g),
+        (await A.default.track(H.HAw.OVERLAY_BUG_REPORT, g),
             await (0, d.yy)(1e3),
             eu(!1),
             j?.(),
@@ -359,7 +360,7 @@ function X(e) {
     }
     return (
         (0, v.Ay)(() => {
-            N.default.track(H.HAw.OPEN_MODAL, { type: "overlay_bug_reporter_modal", location: C });
+            A.default.track(H.HAw.OPEN_MODAL, { type: "overlay_bug_reporter_modal", location: C });
         }),
         (0, n.jsx)(s.a, {
             transitionState: M,

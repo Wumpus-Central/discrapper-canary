@@ -1,18 +1,18 @@
-n.d(t, { A: () => d });
+n.d(t, { A: () => o });
 var i = n(477900),
     r = n(477782),
-    a = n(342053),
-    s = n(23722),
-    l = n(192308),
-    o = n(294454),
-    u = n(375708);
-function d(e) {
-    let { user: t, location: d } = e,
-        c = (0, a.g)(d),
-        f = (0, s.A)(() => {
+    u = n(342053),
+    l = n(23722),
+    s = n(192308),
+    a = n(294454),
+    d = n(375708);
+function o(e) {
+    let { user: t, location: o } = e,
+        c = (0, u.g)(o),
+        g = (0, l.A)(() => {
             !(function (e) {
                 let { user: t, source: r } = e;
-                (0, l.openModalLazy)(
+                (0, s.openModalLazy)(
                     async () => {
                         let { default: e } = await Promise.all([
                             n.e("267732"),
@@ -41,15 +41,15 @@ function d(e) {
                             n.e("766031"),
                             n.e("394317"),
                             n.e("744385"),
-                            n.e("84755"),
                             n.e("304329"),
+                            n.e("84755"),
                             n.e("260832"),
                         ]).then(n.bind(n, 880867));
                         return (n) => (0, i.jsx)(e, { ...n, user: t, source: r });
                     },
-                    { stackingBehavior: "stack", modalKey: o.aU },
+                    { stackingBehavior: "stack", modalKey: a.aU },
                 );
             })({ user: t, source: "user-profile-embed" });
         });
-    return c ? (0, i.jsx)(r.Dr, { id: "share-profile", label: u.intl.string(u.t["sFN1/M"]), action: f }) : null;
+    return c ? (0, i.jsx)(r.Dr, { id: "share-profile", label: d.intl.string(d.t["sFN1/M"]), action: g }) : null;
 }

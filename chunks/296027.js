@@ -23,8 +23,9 @@ var N = n(515183),
     C = n(592598),
     O = n(682763),
     R = n(614455),
-    L = n(394072),
-    y = n(392164);
+    L = n(394072);
+n(672396);
+var y = n(392164);
 let D = new d.A("OverlayRenderStore"),
     v = m.V6.UNSET,
     b = !1,
@@ -376,7 +377,7 @@ async function el(e) {
     let o = Q(s, l);
     if (
         (s.overlayMethod === o.overlayMethod && s.oopEnabled === o.enabledOOP && s.legacyEnabled === o.enabledLegacy) ||
-        ((U === f.UNSET_PID || null === U) && s.state === m.AR.OVERLAY_RENDERING)
+        ((-1 === U || null === U) && s.state === m.AR.OVERLAY_RENDERING)
     )
         return a;
     let d = v === m.V6.OUT_OF_PROCESS_V3 || v === m.V6.OUT_OF_PROCESS_V3_LIMITED_INTERACTION,

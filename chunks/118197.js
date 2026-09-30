@@ -782,8 +782,8 @@ function eP(e) {
                                                   l.e("390213"),
                                                   l.e("759174"),
                                                   l.e("340346"),
-                                                  l.e("421778"),
                                                   l.e("944602"),
+                                                  l.e("421778"),
                                                   l.e("863443"),
                                                   l.e("273084"),
                                                   l.e("821403"),
@@ -904,9 +904,9 @@ function e1(e, t, l) {
 }
 var e2 = l(868602),
     e3 = l(445187),
-    e7 = l(650583),
+    e6 = l(650583),
     e4 = l(684343);
-function e6(e) {
+function e7(e) {
     let { label: t, tabs: l, selectedId: n, panelId: s, getTabId: r, onSelect: d } = e,
         c = a.useCallback((e) => {
             let t,
@@ -917,18 +917,18 @@ function e6(e) {
                 a = i.indexOf(l);
             if (-1 !== a && 0 !== i.length) {
                 switch (e.key) {
-                    case e7.dh.ARROW_RIGHT:
-                    case e7.dh.ARROW_DOWN:
+                    case e6.dh.ARROW_RIGHT:
+                    case e6.dh.ARROW_DOWN:
                         t = (a + 1) % i.length;
                         break;
-                    case e7.dh.ARROW_LEFT:
-                    case e7.dh.ARROW_UP:
+                    case e6.dh.ARROW_LEFT:
+                    case e6.dh.ARROW_UP:
                         t = (a - 1 + i.length) % i.length;
                         break;
-                    case e7.dh.HOME:
+                    case e6.dh.HOME:
                         t = 0;
                         break;
-                    case e7.dh.END:
+                    case e6.dh.END:
                         t = i.length - 1;
                         break;
                     default:
@@ -1066,7 +1066,8 @@ function tn(e) {
                             l.e("296956"),
                             l.e("334168"),
                             l.e("582012"),
-                            l.e("468787"),
+                            l.e("166336"),
+                            l.e("304527"),
                             l.e("650387"),
                             l.e("195719"),
                             l.e("251400"),
@@ -1241,8 +1242,8 @@ function tn(e) {
                             l.e("766031"),
                             l.e("394317"),
                             l.e("744385"),
-                            l.e("84755"),
                             l.e("304329"),
+                            l.e("84755"),
                             l.e("256831"),
                         ]).then(l.bind(l, 99266));
                         return function (l) {
@@ -1919,20 +1920,20 @@ function t2(e) {
 function t3(e) {
     return t0((t) => t.byWidgetId[e]?.isCompact ?? tJ.isCompact);
 }
-function t7(e) {
+function t6(e) {
     return t0((t) => t.byWidgetId[e]?.selectedTrackId ?? tJ.selectedTrackId);
 }
 function t4(e, t) {
     (t0.getState().byWidgetId[e] ?? tJ).view !== t && t1(e, { view: t, selectedTrackId: null });
 }
-function t6(e) {
+function t7(e) {
     return e.track_external_id;
 }
 function t8(e) {
     var t;
     let l,
         { guildId: n, widgetId: s, isCompact: r, data: d } = e,
-        c = t7(s),
+        c = t6(s),
         o = t0((e) => e.byWidgetId[s]?.canShowEmbed ?? tJ.canShowEmbed),
         u = a.useCallback(
             (e) => {
@@ -1958,7 +1959,7 @@ function t8(e) {
                 label: tS(tE.TOP_SONGS),
                 items: d.ranked_songs,
                 isCompact: r,
-                getItemKey: t6,
+                getItemKey: t7,
                 renderItem: m,
             }),
             null != x
@@ -2359,7 +2360,7 @@ let lP = {
                     n),
                 x = t3(c.id),
                 h = t2(c.id),
-                f = t7(c.id),
+                f = t6(c.id),
                 g = !x && "view" === u,
                 j =
                     o?.status === "success" && h !== tE.TOP_LISTENERS
@@ -2421,7 +2422,7 @@ let lP = {
                 a = t2(t.id);
             return n
                 ? null
-                : (0, i.jsx)(e6, {
+                : (0, i.jsx)(e7, {
                       label: l,
                       tabs: tb.map((e) => ({ id: e, label: tS(e) })),
                       selectedId: a,

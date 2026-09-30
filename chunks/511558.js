@@ -604,7 +604,7 @@ function e3(e) {
         m = (0, G.TW)(d, eO.PremiumTypes.TIER_2),
         h = i.useCallback(
             (e, t, n, i) => {
-                let r = s && ty(e.categoryInfo, m, o);
+                let r = s && e8(e.categoryInfo, m, o);
                 return (0, l.jsx)(e2, {
                     category: e,
                     categoryIndex: t,
@@ -639,35 +639,38 @@ function e3(e) {
         itemIdPrefix: e$,
     });
 }
-var e8 = n(191023),
-    e5 = n(192308),
-    e6 = n(28863),
-    e7 = n(695366),
-    e4 = n(834730),
-    e9 = n(789645),
-    te = n(565645),
-    tt = n(775602),
-    tn = n(826673),
-    tl = n(182922),
-    ti = n(532624),
-    ts = n(531685),
-    tr = n(723702),
-    ta = n(350535),
-    to = n(115023);
-function tu(e) {
+function e8(e, t, n) {
+    return (null == n && e.type === ec.Cx.GUILD && !t) || (e.type === ec.Cx.GUILD && e.guild.id !== n && !t);
+}
+var e5 = n(191023),
+    e6 = n(192308),
+    e7 = n(28863),
+    e4 = n(695366),
+    e9 = n(834730),
+    te = n(789645),
+    tt = n(565645),
+    tn = n(775602),
+    tl = n(826673),
+    ti = n(182922),
+    ts = n(532624),
+    tr = n(531685),
+    ta = n(723702),
+    to = n(350535),
+    tu = n(115023);
+function tc(e) {
     let { soundboardSound: t, closePicker: i } = e,
         s = (0, d.RQ)((e) => e.searchQuery),
         r = (0, h.bG)([g.A], () => null != t && g.A.isFavoriteSound(t.soundId)),
         a = (0, h.bG)([ex.A], () => ex.A.getGuild(t?.guildId)),
-        o = (0, h.bG)([tt.Ay], () => tt.Ay.useReducedMotion, []),
-        u = (0, h.bG)([ts.A], () => ts.A.isFocused()),
-        c = (0, h.bG)([ti.Ay], () => ti.Ay.getKeybindForAction(ej.hCu.SOUNDBOARD_HOLD));
+        o = (0, h.bG)([tn.Ay], () => tn.Ay.useReducedMotion, []),
+        u = (0, h.bG)([tr.A], () => tr.A.isFocused()),
+        c = (0, h.bG)([ts.Ay], () => ts.Ay.getKeybindForAction(ej.hCu.SOUNDBOARD_HOLD));
     if (null != t && s.length > 0)
-        return (0, l.jsx)(tl.A, {
+        return (0, l.jsx)(ti.A, {
             graphicPrimary:
                 null != t.emojiId || null != t.emojiName
-                    ? (0, l.jsx)(te.A, { emojiId: t.emojiId, emojiName: t.emojiName, className: to.Zg })
-                    : (0, l.jsx)(e8.ImageIcon, { size: "md", color: "currentColor", className: to.Zg }),
+                    ? (0, l.jsx)(tt.A, { emojiId: t.emojiId, emojiName: t.emojiName, className: tu.Zg })
+                    : (0, l.jsx)(e5.ImageIcon, { size: "md", color: "currentColor", className: tu.Zg }),
             graphicSecondary: null != a ? (0, l.jsx)(w.A, { guild: a, shouldAnimate: !o && u }) : null,
             titlePrimary: t.name,
             titleSecondary: a?.name,
@@ -675,7 +678,7 @@ function tu(e) {
         });
     function m() {
         (i(),
-            (0, e5.openModalLazy)(async () => {
+            (0, e6.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
                     n.e("161411"),
                     n.e("498640"),
@@ -685,38 +688,38 @@ function tu(e) {
                 return (t) => (0, l.jsx)(e, { ...t });
             }));
     }
-    let p = (0, tn.k8)(eP.M.SOUNDBOARD_KEYBIND_TIP),
+    let p = (0, tl.k8)(eP.M.SOUNDBOARD_KEYBIND_TIP),
         f =
-            null != c && (0, tr.isWindows)() && !p
+            null != c && (0, ta.isWindows)() && !p
                 ? eG.intl.format(eG.t.udMTth, {
-                      keybind: (0, ta.dI)(c.shortcut, !0),
-                      openSettingsHook: (e, t) => (0, l.jsx)(e6.Anchor, { onClick: m, children: e }, t),
+                      keybind: (0, to.dI)(c.shortcut, !0),
+                      openSettingsHook: (e, t) => (0, l.jsx)(e7.Anchor, { onClick: m, children: e }, t),
                   })
                 : null;
     return null == f
         ? null
         : (0, l.jsxs)("div", {
-              className: to.g,
+              className: tu.g,
               children: [
-                  (0, l.jsx)(e7.E, { size: "custom", width: 20, height: 20, color: "currentColor", className: to.QW }),
-                  (0, l.jsx)(e4.E, { variant: "text-sm/medium", color: "text-default", className: to.L5, children: f }),
+                  (0, l.jsx)(e4.E, { size: "custom", width: 20, height: 20, color: "currentColor", className: tu.QW }),
+                  (0, l.jsx)(e9.E, { variant: "text-sm/medium", color: "text-default", className: tu.L5, children: f }),
                   (0, l.jsx)(_.D, {
-                      className: to.b,
+                      className: tu.b,
                       onClick: function () {
-                          return (0, tn.Dr)(eP.M.SOUNDBOARD_KEYBIND_TIP);
+                          return (0, tl.Dr)(eP.M.SOUNDBOARD_KEYBIND_TIP);
                       },
-                      children: (0, l.jsx)(e9.P, { size: "xs", color: "currentColor" }),
+                      children: (0, l.jsx)(te.P, { size: "xs", color: "currentColor" }),
                   }),
               ],
           });
 }
-var tc = n(817232),
-    td = n(890856),
-    tm = n(307301),
-    th = n(468689);
-function tp(e) {
-    (th.default.open(e, ej.BEX.SOUNDBOARD),
-        (0, e5.openModalLazy)(async () => {
+var td = n(817232),
+    tm = n(890856),
+    th = n(307301),
+    tp = n(468689);
+function tf(e) {
+    (tp.default.open(e, ej.BEX.SOUNDBOARD),
+        (0, e6.openModalLazy)(async () => {
             let { default: t } = await Promise.all([
                 n.e("860350"),
                 n.e("207998"),
@@ -724,8 +727,8 @@ function tp(e) {
                 n.e("775417"),
                 n.e("67491"),
                 n.e("308555"),
-                n.e("220287"),
                 n.e("883952"),
+                n.e("220287"),
                 n.e("66580"),
                 n.e("808979"),
                 n.e("420643"),
@@ -738,24 +741,24 @@ function tp(e) {
             return (n) => (0, l.jsx)(t, { ...n, guildId: e });
         }));
 }
-var tf = n(948611),
-    tg = n(308078);
-function tx(e) {
+var tg = n(948611),
+    tx = n(308078);
+function tA(e) {
     let { guild: t, focused: n, onSelectItem: i, ...s } = e,
         { canCreateExpressions: a } = (0, ef.nr)(t);
     return (0, l.jsx)(eH.m, {
         text: eG.intl.string(eG.t["fHo+z1"]),
         shouldShow: !a,
         children: (0, l.jsx)("li", {
-            className: tf.H,
-            children: (0, l.jsxs)(td.s, {
+            className: tg.H,
+            children: (0, l.jsxs)(tm.s, {
                 ...s,
                 "aria-label": eG.intl.formatToPlainString(eG.t.c1qVYh, { guildName: t.name }),
-                className: r()(tg.n4, { [tg.in]: n, [tg.r9]: !a }),
-                onClick: () => (null != i ? i() : tp(t.id)),
+                className: r()(tx.n4, { [tx.in]: n, [tx.r9]: !a }),
+                onClick: () => (null != i ? i() : tf(t.id)),
                 children: [
-                    (0, l.jsx)(tm.j, { size: "sm", color: "currentColor" }),
-                    (0, l.jsx)(e4.E, {
+                    (0, l.jsx)(th.j, { size: "sm", color: "currentColor" }),
+                    (0, l.jsx)(e9.E, {
                         variant: "text-xs/semibold",
                         color: a ? "currentColor" : "text-muted",
                         children: eG.intl.string(eG.t["8Fu/S7"]),
@@ -765,7 +768,7 @@ function tx(e) {
         }),
     });
 }
-function tA(e) {
+function tC(e) {
     let {
             descriptor: t,
             soundButtonProps: n,
@@ -786,7 +789,7 @@ function tA(e) {
         x = r && f.rowIndex === l && f.columnIndex === s;
     switch (t.item.type) {
         case ec.uq.SOUND:
-            return (0, i.createElement)(tc.Ay, {
+            return (0, i.createElement)(td.Ay, {
                 ...o(s),
                 ...n,
                 key: g,
@@ -802,7 +805,7 @@ function tA(e) {
                 isSoundmoji: !0 === p,
             });
         case ec.uq.ADD_SOUND:
-            return (0, i.createElement)(tx, {
+            return (0, i.createElement)(tA, {
                 ...o(s),
                 key: g,
                 guild: t.item.guild,
@@ -811,9 +814,9 @@ function tA(e) {
             });
     }
 }
-var tC = n(635799);
-let tE = 32 + et.kg - 8,
-    tI = {
+var tE = n(635799);
+let tI = 32 + et.kg - 8,
+    ty = {
         [ec.Cx.SEARCH]: u.A.SOUNDBOARD_SEARCH_RESULTS_SECTION,
         [ec.Cx.DEFAULTS]: u.A.SOUNDBOARD_DEFAULT_SOUNDS_SECTION,
         [ec.Cx.GUILD]: u.A.SOUNDBOARD_GUILD_SOUNDS_SECTION,
@@ -821,9 +824,6 @@ let tE = 32 + et.kg - 8,
         [ec.Cx.FREQUENTLY_USED]: u.A.SOUNDBOARD_FREQUENTLY_USED_SECTION,
         [ec.Cx.TOP_SOUNDS]: u.A.SOUNDBOARD_TOP_SOUNDS_SECTION,
     };
-function ty(e, t, n) {
-    return (null == n && e.type === ec.Cx.GUILD && !t) || (e.type === ec.Cx.GUILD && e.guild.id !== n && !t);
-}
 function tS(e) {
     let {
             categoryInfo: t,
@@ -836,16 +836,16 @@ function tS(e) {
         c = i.useRef(null);
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            o && (0, l.jsx)(et.Ay, { className: tC.yH }),
+            o && (0, l.jsx)(et.Ay, { className: tE.yH }),
             (0, l.jsx)("div", {
-                className: r()(tC.hd, { [tC.Jb]: a, [tC.VD]: a }),
+                className: r()(tE.hd, { [tE.Jb]: a, [tE.VD]: a }),
                 children: (0, l.jsx)(_.D, {
-                    className: tC.bV,
+                    className: tE.bV,
                     onClick: s,
                     onKeyDown: (e) => e.stopPropagation(),
                     "aria-expanded": !n,
                     children: (0, l.jsxs)("div", {
-                        className: tC.M2,
+                        className: tE.M2,
                         ref: u ? c : void 0,
                         children: [
                             (function () {
@@ -854,13 +854,13 @@ function tS(e) {
                                         return (0, l.jsx)(I.StarIcon, {
                                             size: "xs",
                                             color: "currentColor",
-                                            className: tC.nr,
+                                            className: tE.nr,
                                         });
                                     case ec.Cx.FREQUENTLY_USED:
                                         return (0, l.jsx)(y.ClockIcon, {
                                             size: "xs",
                                             color: "currentColor",
-                                            className: tC.nr,
+                                            className: tE.nr,
                                         });
                                     case ec.Cx.GUILD:
                                         return (0, l.jsx)(w.A, { guild: t.guild, height: 16, width: 16 });
@@ -870,26 +870,26 @@ function tS(e) {
                                             width: 28,
                                             height: 28,
                                             color: "currentColor",
-                                            className: tC.nr,
+                                            className: tE.nr,
                                         });
                                     case ec.Cx.SEARCH:
                                         return (0, l.jsx)(v.MagnifyingGlassIcon, {
                                             size: "md",
                                             color: "currentColor",
-                                            className: tC.nr,
+                                            className: tE.nr,
                                         });
                                     case ec.Cx.TOP_SOUNDS:
                                         return (0, l.jsx)(N.TrophyIcon, {
                                             size: "xs",
                                             color: "currentColor",
-                                            className: tC.nr,
+                                            className: tE.nr,
                                         });
                                 }
                             })(),
                             (0, l.jsx)(j.D, {
                                 variant: "text-sm/semibold",
                                 color: "none",
-                                className: tC.Gf,
+                                className: tE.Gf,
                                 children: (function () {
                                     switch (t.type) {
                                         case ec.Cx.FAVORITES:
@@ -910,7 +910,7 @@ function tS(e) {
                                 })(),
                             }),
                             (0, l.jsx)(eo.A, {
-                                className: tC.nr,
+                                className: tE.nr,
                                 direction: n ? eo.A.Directions.RIGHT : eo.A.Directions.DOWN,
                             }),
                         ],
@@ -1213,11 +1213,11 @@ function t_(e) {
             (e, t) => {
                 switch (e.item.type) {
                     case ec.uq.SOUND:
-                        let n = tI[e?.category] ?? null,
+                        let n = ty[e?.category] ?? null,
                             l = e?.item.index;
                         return eQ(e.item.sound, null == n ? b : [...b, n], t?.shiftKey !== !0, l);
                     case ec.uq.ADD_SOUND:
-                        return (o(), tp(e.item.guild.id));
+                        return (o(), tf(e.item.guild.id));
                 }
             },
             [b, eQ, o],
@@ -1225,13 +1225,13 @@ function t_(e) {
         e1 = i.useCallback(
             (e, n, i, a, o) => {
                 let u = eH[i.sectionIndex],
-                    c = f && ty(u.categoryInfo, B, t) && eK,
+                    c = f && e8(u.categoryInfo, B, t) && eK,
                     d = Y && u.categoryInfo.type === ec.Cx.FAVORITES;
                 return (0, l.jsx)(
                     "ul",
                     {
                         ...n,
-                        className: r()(tC.a, { [tC.uL]: c }),
+                        className: r()(tE.a, { [tE.uL]: c }),
                         children: e.map((e, t) => {
                             let n =
                                     e.item.type === ec.uq.SOUND &&
@@ -1242,7 +1242,7 @@ function t_(e) {
                                         ? `sound-${e.item.sound.soundId}`
                                         : `add-sound-${e.item.guild.id}`;
                             return (0, l.jsx)(
-                                tA,
+                                tC,
                                 {
                                     descriptor: e,
                                     soundButtonProps: {
@@ -1281,39 +1281,39 @@ function t_(e) {
                 if (e <= 0 || !f) return !1;
                 let n = eH[e],
                     l = eH[e - 1],
-                    i = ty(n.categoryInfo, B, t),
-                    s = ty(l.categoryInfo, B, t);
+                    i = e8(n.categoryInfo, B, t),
+                    s = e8(l.categoryInfo, B, t);
                 return i && !s;
             },
             [eH, f, B],
         ),
-        e8 = i.useCallback(() => {
+        e5 = i.useCallback(() => {
             let e = g.A.getSoundById("3");
             null != e && V(e);
         }, []),
-        e5 = i.useCallback(() => {
+        e6 = i.useCallback(() => {
             let e = (0, G.Dd)(eO.PremiumTypes.TIER_2);
-            return eG.intl.format(eG.t["tw/SSq"], { nitroTierName: e, onClick: e8 });
-        }, [e8]),
-        e6 = i.useCallback((e) => (e2(e, t) ? tE : 32), [t, e2]),
-        e7 = i.useCallback(
+            return eG.intl.format(eG.t["tw/SSq"], { nitroTierName: e, onClick: e5 });
+        }, [e5]),
+        e7 = i.useCallback((e) => (e2(e, t) ? tI : 32), [t, e2]),
+        e4 = i.useCallback(
             (e) => {
                 let t = e === eH.length - 1;
                 return ez && t ? 70 : eK && e === eW ? 20 : 0;
             },
             [eH.length, eK, ez, eW],
         ),
-        e4 = i.useCallback(
+        e9 = i.useCallback(
             (e, t) => {
                 let n = et && eH[e]?.categoryInfo.type !== ec.Cx.FAVORITES;
-                return (0, l.jsx)("div", { className: r()({ [tC.YJ]: n }), children: t }, e);
+                return (0, l.jsx)("div", { className: r()({ [tE.YJ]: n }), children: t }, e);
             },
             [eH, et],
         ),
-        e9 = i.useCallback(
+        te = i.useCallback(
             (e, n) => {
                 let i = `${e.key}`,
-                    s = f && ty(e.categoryInfo, B, t),
+                    s = f && e8(e.categoryInfo, B, t),
                     r = e2(n, t),
                     a = eq.has(i);
                 return (0, l.jsx)(
@@ -1341,20 +1341,20 @@ function t_(e) {
             },
             [eq, eX, t, e2, f, B, eK, Y],
         ),
-        te = i.useCallback(
+        tt = i.useCallback(
             (e, t) => {
                 let n = t === eH.length - 1,
                     i = t === eW;
                 return ez && n
-                    ? (0, l.jsx)("div", { className: r()(tC.Lk, { [tC.Ns]: i }) })
+                    ? (0, l.jsx)("div", { className: r()(tE.Lk, { [tE.Ns]: i }) })
                     : eK && t === eW
-                      ? (0, l.jsx)("div", { className: r()(tC.a3, { [tC.Ns]: i }) })
+                      ? (0, l.jsx)("div", { className: r()(tE.a3, { [tE.Ns]: i }) })
                       : null;
             },
             [eW, eK, ez, eH.length],
         ),
-        tt = i.useCallback((e) => eV((0, eh.lG)(e, eP, F, s, b)), [s, F, eP, b]),
-        tn = i.useCallback(
+        tn = i.useCallback((e) => eV((0, eh.lG)(e, eP, F, s, b)), [s, F, eP, b]),
+        tl = i.useCallback(
             (e) => {
                 (0, R.L3)(e, async () => {
                     let { default: e } = await n.e("811562").then(n.bind(n, 666801));
@@ -1363,26 +1363,26 @@ function t_(e) {
             },
             [b],
         ),
-        tl = i.useCallback(
+        ti = i.useCallback(
             () =>
                 N
                     ? (0, l.jsx)(Q.Gq, {
                           renderPopout: () => (0, l.jsx)(Q.qn, {}),
                           tooltipText: eG.intl.string(eG.t["19lt24"]),
                           position: "top",
-                          clickableClassName: r()(tC.Jm, tC.Zz),
-                          children: (0, l.jsx)(T.H, { size: "md", color: "currentColor", className: tC.By }),
+                          clickableClassName: r()(tE.Jm, tE.Zz),
+                          children: (0, l.jsx)(T.H, { size: "md", color: "currentColor", className: tE.By }),
                       })
                     : (0, l.jsx)(_.D, {
                           tabIndex: 0,
-                          className: tC.Jm,
-                          onClick: tn,
+                          className: tE.Jm,
+                          onClick: tl,
                           "aria-label": eG.intl.string(eG.t.kbFsAD),
-                          children: (0, l.jsx)(tN, { className: tC.By }),
+                          children: (0, l.jsx)(tN, { className: tE.By }),
                       }),
-            [N, tn],
+            [N, tl],
         ),
-        ti = i.useCallback(
+        ts = i.useCallback(
             (e) =>
                 (0, l.jsx)(e3, {
                     soundboardListRef: e,
@@ -1394,36 +1394,36 @@ function t_(e) {
                 }),
             [eN, y, eK, t, N],
         ),
-        ts = i.useCallback(() => {
+        tr = i.useCallback(() => {
             let e = (0, X.qD)();
             return (0, G.LE)(e, eO.pe.TIER_2) ?? eG.intl.string(eG.t.pj0XBN);
         }, []),
-        tr = i.useCallback(
+        ta = i.useCallback(
             () =>
                 ez
                     ? (0, l.jsx)(ee.d, {
                           showUpsell: eB,
-                          text: e5(),
-                          button: ts(),
+                          text: e6(),
+                          button: tr(),
                           buttonAnalyticsObject: { section: ej.JJy.SOUND_PICKER_FLOATING_UPSELL },
                           leadingAction: (0, l.jsx)(en.l, {
                               size: "sm",
-                              className: tC.ij,
+                              className: tE.ij,
                               location: u.A.PREMIUM_WISHLIST_SOUNDBOARD_UPSELL,
                               forceDarkTheme: !0,
                           }),
                       })
                     : null,
-            [e5, ts, ez, eB],
+            [e6, tr, ez, eB],
         ),
-        ta = i.useCallback(
+        to = i.useCallback(
             (e) =>
                 e?.item.type === ec.uq.SOUND
-                    ? (0, l.jsx)(tu, { closePicker: o, soundboardSound: e?.item.sound ?? null })
+                    ? (0, l.jsx)(tc, { closePicker: o, soundboardSound: e?.item.sound ?? null })
                     : null,
             [o],
         ),
-        to = (0, E.bG)([es.A], () => es.A.getMediaSessionId());
+        tu = (0, E.bG)([es.A], () => es.A.getMediaSessionId());
     return (
         (0, M.A)({
             type: C.ImpressionTypes.POPOUT,
@@ -1431,7 +1431,7 @@ function t_(e) {
             properties: {
                 source: j,
                 guild_id: t,
-                media_session_id: to,
+                media_session_id: tu,
                 available_custom_sounds_count: eD.unlockedCustomSoundCount,
                 unavailable_custom_sounds_count: eD.lockedCustomSoundCount,
                 favorite_sounds_count: eD.favoriteSoundCount,
@@ -1462,25 +1462,25 @@ function t_(e) {
                     containerWidth: a,
                     store: P.LW,
                     onSelectItem: e0,
-                    onSearchExpressions: tt,
+                    onSearchExpressions: tn,
                     hasSearchResults: eU.length > 0,
                     defaultSearchPlaceholder: eG.intl.string(eG.t.sKt3xS),
                     renderRow: e1,
-                    renderSectionHeader: e9,
-                    renderSectionFooter: te,
-                    renderSection: e4,
-                    renderCategoryList: ti,
-                    renderHeaderAccessories: tl,
+                    renderSectionHeader: te,
+                    renderSectionFooter: tt,
+                    renderSection: e9,
+                    renderCategoryList: ts,
+                    renderHeaderAccessories: ti,
                     rowHeight: 48,
-                    sectionHeaderHeight: e6,
-                    sectionFooterHeight: e7,
+                    sectionHeaderHeight: e7,
+                    sectionFooterHeight: e4,
                     itemNodeWidth: 150,
                     gridNavigatorId: Z,
                     renderEmptySearchState: tv,
-                    renderInspector: ta,
+                    renderInspector: to,
                     gridNotice: x,
                     renderHeader: S,
-                    renderUpsell: tr,
+                    renderUpsell: ta,
                 }),
             ],
         })

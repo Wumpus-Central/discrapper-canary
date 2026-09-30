@@ -553,6 +553,7 @@ let ts = r.memo(function (e) {
                             n.e("440963"),
                             n.e("766031"),
                             n.e("394317"),
+                            n.e("304329"),
                             n.e("84755"),
                             n.e("835868"),
                         ]).then(n.bind(n, 729751));
@@ -2255,7 +2256,7 @@ let nF = { "Any:personalization-header": n(645501).A },
     };
 var nK = n(613258),
     nV = n(105499);
-let nY = { prioritizedCurrency: nb.Hi.ORBS };
+let nY = { prioritizedCurrency: tu.Hi.ORBS };
 function nW(e) {
     let { tab: t } = e,
         [n, s, l] = (0, y.yK)([nw.A], () => [nw.A.getLayout(t), nw.A.isFetchingLayout(t), nw.A.getLayoutFetchError(t)]),

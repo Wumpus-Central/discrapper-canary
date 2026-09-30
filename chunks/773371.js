@@ -56,7 +56,7 @@ var S = n(777334),
     k = n(9302),
     F = n(899699),
     B = n(652215);
-n(644434);
+(n(672396), n(644434));
 var V =
     (((r = {}).ATTACHING = "ATTACHING"),
     (r.CONNECTING = "CONNECTING"),
@@ -502,8 +502,8 @@ async function eE(e) {
 }
 let eA = eo("updateIntendedOverlayPIDs", (e) => (en.info("updateIntendedOverlayPIDs", e), eE(e))),
     eh = eo("clearPID", (e) => {
-        if (null == e) return (0, k.setPID)(k.UNSET_PID);
-        y.A.isOverlayV3EnabledForPID(e) || (0, k.setPID)(k.UNSET_PID);
+        if (null == e) return (0, k.setPID)(-1);
+        y.A.isOverlayV3EnabledForPID(e) || (0, k.setPID)(-1);
     });
 function eI() {
     return new Promise((e) => {
@@ -762,7 +762,7 @@ let ey = new eL(
                       let { port: t } = e;
                       q = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
                       let n = new URLSearchParams();
-                      (n.append("build_id", "5c79f2ddc4d9c3bc2565273e73d37478fa01a646"),
+                      (n.append("build_id", "c4eb56e0df74a0f6488847aba36a7eda3ab73bae"),
                           n.append("rpc", String(t)),
                           n.append("rpc_auth_token", q),
                           (i = `${location.protocol}//${location.host}/overlay?${n.toString()}`));

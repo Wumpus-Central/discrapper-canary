@@ -1,18 +1,16 @@
-(n.r(t), n.d(t, { isOverlayChannelVisible: () => c, isOverlayCurrentlyVisibleAndUnlocked: () => d }));
+(n.r(t), n.d(t, { isOverlayChannelVisible: () => d, isOverlayCurrentlyVisibleAndUnlocked: () => o }));
 var i = n(567249),
-    r = n(9302),
-    a = n(140069),
-    s = n(489277),
-    l = n(222506),
-    o = n(392164);
-function d() {
-    let e = s.A.getTargetPID();
-    return (
-        !(null == e || e === r.UNSET_PID || !s.A.isFocused(e) || l.A.isInputLocked(e)) && !!i.A.getWindowVisible(o.f)
-    );
+    r = n(140069),
+    a = n(489277),
+    s = n(222506);
+n(672396);
+var l = n(392164);
+function o() {
+    let e = a.A.getTargetPID();
+    return !(null == e || -1 === e || !a.A.isFocused(e) || s.A.isInputLocked(e)) && !!i.A.getWindowVisible(l.f);
 }
-function c(e) {
+function d(e) {
     if (__OVERLAY__) return !1;
-    let t = a.A.getSelectedChannelId();
-    return null != t && t === e && d();
+    let t = r.A.getSelectedChannelId();
+    return null != t && t === e && o();
 }

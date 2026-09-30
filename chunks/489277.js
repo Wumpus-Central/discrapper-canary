@@ -15,8 +15,9 @@ var A = n(682763),
     I = n(777334),
     f = n(296027),
     p = n(515183),
-    T = n(614455),
-    m = n(652215);
+    T = n(614455);
+n(672396);
+var m = n(652215);
 let g = {};
 function S(e) {
     return f.default.getTrackedGameByPid(e)?.overlayMethod ?? null;
@@ -71,7 +72,7 @@ let L = new R(
               },
               OVERLAY_V3_NATIVE_DESTROY_HOST_WINDOW: function (e) {
                   let { lastAssociatedPID: t } = e;
-                  if (t !== c.UNSET_PID) return (h.default.track(m.HAw.OVERLAY_HOOK_RESULT, N(t)), (g = {}), !0);
+                  if (-1 !== t) return (h.default.track(m.HAw.OVERLAY_HOOK_RESULT, N(t)), (g = {}), !0);
               },
               OVERLAY_SUCCESSFULLY_SHOWN: function (e) {
                   let t,
@@ -89,10 +90,9 @@ let L = new R(
                       r = n instanceof Error ? n : Error(n ?? "Unknown error");
                   return (
                       "native" === i
-                          ? (t !== c.UNSET_PID &&
-                                C(t, { host_crash_count: 1, error: r.message, error_description: r.stack }),
+                          ? (-1 !== t && C(t, { host_crash_count: 1, error: r.message, error_description: r.stack }),
                             (0, I.St)(r, _.Ue.OutOfProcess, { extra: O(t, "host") }))
-                          : (t !== c.UNSET_PID &&
+                          : (-1 !== t &&
                                 C(t, { renderer_crash_count: 1, error: r.message, error_description: r.stack }),
                             (0, I.St)(r, _.Ue.OutOfProcess, { extra: O(t, "renderer") })),
                       !0
@@ -141,7 +141,7 @@ let U = new v.Vy("OverlayV3NativeClickZoneStore"),
     F = !1;
 function B(e, t) {
     if (null == w) return void U.error("Overlay module not found");
-    let n = w?.getLastAssociatedPID() ?? c.UNSET_PID;
+    let n = w?.getLastAssociatedPID() ?? -1;
     try {
         let i,
             r =
@@ -301,7 +301,7 @@ async function eI() {
                     J.clear(),
                     Z.verbose("Cleared all tracked games"));
             } catch (e) {
-                (Z.error("Error clearing tracked games:", e), (0, A.mD)(c.UNSET_PID, e, { crashType: "native" }));
+                (Z.error("Error clearing tracked games:", e), (0, A.mD)(-1, e, { crashType: "native" }));
             }
         })();
     await eS();
@@ -315,7 +315,7 @@ async function eI() {
 }
 function ef(e) {
     let t = l.Ay.getGameOrTransformedSubgameForPID(e);
-    a.A.setAssociatedGame(es ?? c.UNSET_PID, e, t);
+    a.A.setAssociatedGame(es ?? -1, e, t);
 }
 function ep() {
     null == ea ||
@@ -370,11 +370,7 @@ function eC(e) {
     return (
         null != n && null != t && eu(t, (0, M.Oy)(n)),
         (et !== t || en !== n) &&
-            (0, A._r)(t ?? et ?? c.UNSET_PID, "overlay_focused", {
-                focusedPID: t,
-                focusedWindowHandle: en,
-                windowHandle: n,
-            }),
+            (0, A._r)(t ?? et ?? -1, "overlay_focused", { focusedPID: t, focusedWindowHandle: en, windowHandle: n }),
         (et = t),
         (en = n),
         !0
@@ -404,7 +400,7 @@ class eO extends i.Ay.Store {
         return null != t && t.pinned;
     }
     getTargetPID() {
-        return (0, X.LK)() && (ei === c.UNSET_PID || null == ei) ? c.DEV_PID : (ei ?? c.UNSET_PID);
+        return (0, X.LK)() && (-1 === ei || null == ei) ? c.DEV_PID : (ei ?? -1);
     }
     getFocusedPID() {
         return et;
@@ -419,7 +415,7 @@ class eO extends i.Ay.Store {
         return null == ec[e] ? null : ec[e];
     }
     isFocused(e) {
-        return null != et && e !== c.UNSET_PID && (!!Q.has(e) || e === c.DEV_PID) && et === e;
+        return null != et && -1 !== e && (!!Q.has(e) || e === c.DEV_PID) && et === e;
     }
     getFocusedRunningGame() {
         return null == et ? null : (l.Ay.getGameOrTransformedSubgameForPID(et) ?? null);
@@ -527,7 +523,7 @@ let eR = new eO(
                           null != es && null != ec[(e = es)] && (ec[e] = new Set()),
                           (es = null),
                           (ei = null),
-                          (0, c.setPID)(c.UNSET_PID),
+                          (0, c.setPID)(-1),
                           (el = null),
                           eE());
                   },
@@ -548,7 +544,7 @@ let eR = new eO(
                   OVERLAY_V3_NATIVE_WINDOW_HANDLE_INITIALIZED: function (e) {
                       let { initialized: t } = e;
                       if (((e_ = { ...e_, windowHandleSentToNative: t }), t)) {
-                          let e = ei ?? c.UNSET_PID;
+                          let e = ei ?? -1;
                           (e_.reactInitializationStarted
                               ? a.A.updateOverlayState(
                                     e,

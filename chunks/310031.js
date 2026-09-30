@@ -23,7 +23,7 @@ var i = n(284009),
     C = n(645959),
     O = n(935208),
     R = n(851109),
-    L = n(394953),
+    L = n(989342),
     y = n(435558),
     D = n.n(y),
     v = n(849077);
@@ -459,7 +459,7 @@ let ei = new en(s.h, {
     },
     NOTIFICATIONS_INBOX_ITEM_ACK: function (e) {
         let { channelId: t, messageId: n } = e;
-        (0, L.zo)({ channelId: t, id: n }, Y) && (Y = null);
+        (0, L.z)({ channelId: t, id: n }, Y) && (Y = null);
     },
     NOTIFICATIONS_INBOX_CLOSE: function () {
         Y = null;

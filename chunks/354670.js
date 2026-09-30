@@ -205,7 +205,7 @@ class v extends a.Ay.PersistedStore {
         return !p.Pn.includes(e.trialId) || u({ location: "user_offer_store" });
     }
     getAlmostExpiringTrialOffersForReminder(e) {
-        let t = Object.values(p.TP).map((e) => e.id),
+        let t = Object.values(p.kb).map((e) => e.id),
             n = A.default.getCurrentUser();
         return (0, I.TW)(n) && !this.canFractionalPremiumUserUseOffer()
             ? []

@@ -1,6 +1,6 @@
-i.d(t, { X: () => _ });
-var n = i(460905),
-    s = i(7807),
+i.d(t, { X: () => E });
+var s = i(460905),
+    n = i(7807),
     r = i(391242),
     l = i(597601),
     a = i(183623),
@@ -10,32 +10,32 @@ var n = i(460905),
     u = i(27232),
     m = i(451394),
     T = i(797285),
-    g = i(473145);
-function _(e) {
+    _ = i(202541);
+function E(e) {
     switch (e) {
-        case g.TP.EMOJI:
-            return n.n;
-        case g.TP.SOUNDBOARD:
-            return s.J;
-        case g.TP.ANIMATED:
+        case _.TP.EMOJI:
+            return s.n;
+        case _.TP.SOUNDBOARD:
+            return n.J;
+        case _.TP.ANIMATED:
             return r.O;
-        case g.TP.AUDIO:
+        case _.TP.AUDIO:
             return l.L;
-        case g.TP.STREAM:
+        case _.TP.STREAM:
             return a.F;
-        case g.TP.UPLOAD:
+        case _.TP.UPLOAD:
             return o.UploadIcon;
-        case g.TP.CUSTOM_ROLE_ICON:
+        case _.TP.CUSTOM_ROLE_ICON:
             return c.i;
-        case g.TP.CUSTOMIZATION:
+        case _.TP.CUSTOMIZATION:
             return d.s;
-        case g.TP.VANITY:
+        case _.TP.VANITY:
             return u.StarIcon;
-        case g.TP.STAGE_VIDEO:
+        case _.TP.STAGE_VIDEO:
             return m.q;
-        case g.TP.STICKER:
+        case _.TP.STICKER:
             return T.t;
         default:
-            return n.n;
+            return s.n;
     }
 }

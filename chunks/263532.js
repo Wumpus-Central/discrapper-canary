@@ -514,7 +514,7 @@ function J(e) {
                         { referralTrialOfferId: n, selectedSkuId: r, get: a } = i(),
                         s = a("isPremiumPurchase"),
                         l = t ?? n ?? null,
-                        o = null != l && l in O.TP ? O.TP[l].skus : [];
+                        o = null != l && l in O.kb ? O.kb[l].skus : [];
                     return null != l && (!s || o.includes(r)) ? l : null;
                 },
                 getEffectivePlanGroup: (e) => {

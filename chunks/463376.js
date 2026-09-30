@@ -25,7 +25,7 @@ function c() {
         }),
         c = (0, r.V)(a ?? void 0),
         d = !n && !o && null != e,
-        p = !!(d && null != c && u.TP[c.trialId].skus.includes(e) && !n),
+        p = !!(d && null != c && u.kb[c.trialId].skus.includes(e) && !n),
         m = (0, i.O)(),
         h =
             null != e &&

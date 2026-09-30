@@ -32,7 +32,7 @@ var c = n(115718),
     T = n(427262),
     m = n(692986),
     g = n(268988),
-    S = n(822382),
+    S = n(902008),
     N = n(5990),
     C = n(257120);
 let O = /(?:\s*#?((?:"(\\\\|\\"|[^\\"])*")|(?:[^\s]+)))/i,
@@ -145,7 +145,7 @@ function W(e, t) {
     if (D.Ut1.test(a)) return (e.setData("channelIds", [a]), !0);
     if (
         (a.startsWith('"') && a.endsWith('"') && (a = a.substring(1, a.length - 1).replaceAll(/\\(.)/g, (e, t) => t)),
-        (0, S._B)(t))
+        (0, S._)(t))
     ) {
         let r, s, o;
         return (
@@ -344,7 +344,7 @@ function en(e) {
         ? (t = t.substring(1, t.length - 1).replaceAll(/\\(.)/g, (e, t) => t))
         : t.startsWith('"') && (t = t.substring(1).replaceAll(/\\(.)/g, (e, t) => t)),
     "#" === t[0] && (t = t.substring(1)),
-    (0, S._B)(n))
+    (0, S._)(n))
         ? (function (e, t, n) {
               let i = p.Ay.queryChannels({
                   query: e,

@@ -1,4 +1,4 @@
-n.d(t, { EJ: () => f, U4: () => g, i3: () => S, i7: () => p, lI: () => T, tZ: () => m, zo: () => N });
+n.d(t, { EJ: () => f, U4: () => g, i3: () => S, i7: () => p, lI: () => T, tZ: () => m });
 var i = n(892227),
     r = n(806163),
     a = n(17928),
@@ -81,7 +81,4 @@ function S() {
         t = (0, l.lA)("NotificationsInboxUtils"),
         n = (0, a.bG)([o.A], () => o.A.getSavedMessageCount());
     return e && (n > 0 || t);
-}
-function N(e, t) {
-    return null != t && e.channelId === t.channelId && E.default.compare(e.id, t.messageId) >= 0;
 }

@@ -3,7 +3,7 @@ var r = n(855104),
     i = n(287809),
     s = n(158045),
     l = n(623373),
-    a = n(561769),
+    a = n(758836),
     o = n(652215);
 function u(e) {
     let { product: t, hasShopDiscount: n } = e,

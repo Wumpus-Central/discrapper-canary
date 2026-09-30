@@ -11,8 +11,8 @@ function i(e, n, i, s, u) {
                   let { default: e } = await Promise.all([
                       t.e("463317"),
                       t.e("926132"),
-                      t.e("834552"),
                       t.e("146652"),
+                      t.e("834552"),
                       t.e("708757"),
                       t.e("21921"),
                       t.e("676418"),
@@ -52,8 +52,8 @@ function i(e, n, i, s, u) {
                   let { default: e } = await Promise.all([
                       t.e("463317"),
                       t.e("926132"),
-                      t.e("834552"),
                       t.e("146652"),
+                      t.e("834552"),
                       t.e("708757"),
                       t.e("189673"),
                       t.e("797558"),

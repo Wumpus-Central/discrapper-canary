@@ -273,6 +273,7 @@ class L {
             (0, c.Lt)(e));
     }
 }
+n(672396);
 let y = new r.Vy("OverlayV3NativeModuleStore"),
     D = !1,
     v = !1,
@@ -288,7 +289,7 @@ let y = new r.Vy("OverlayV3NativeModuleStore"),
             } catch (e) {
                 ((0, c._r)(null, "module_initialization_failed", { error: e }),
                     (D = !1),
-                    (0, c.mD)(l.UNSET_PID, e, { crashType: "native" }));
+                    (0, c.mD)(-1, e, { crashType: "native" }));
             } finally {
                 F.emitChange();
             }

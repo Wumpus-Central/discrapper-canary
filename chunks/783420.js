@@ -33,7 +33,7 @@ function f(e) {
         D = (0, r.bG)([E.A], () => E.A.getPremiumTypeSubscription()),
         { analyticsLocations: v } = (0, s.Ay)(),
         b = (0, A.V)(),
-        M = !C && null != b && null != f && h.TP[b.trialId].skus.includes(f);
+        M = !C && null != b && null != f && h.kb[b.trialId].skus.includes(f);
     return L({
         onClick: function (e) {
             if ((e.preventDefault(), null == y))

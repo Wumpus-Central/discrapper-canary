@@ -1,4 +1,4 @@
-n.d(t, { HF: () => E, f8: () => A, c: () => _ });
+n.d(t, { HF: () => E, f8: () => h, c: () => _, Lg: () => A });
 var i = n(945810),
     r = n(17928),
     a = n(228366);
@@ -39,24 +39,27 @@ let d = new o(a.h, {
 function _(e) {
     let t = (0, r.bG)([d], () => d.get(c), [c]),
         { enabled: n } = u.useConfig({ location: e }),
-        i = h.useConfig({ location: e });
+        i = I.useConfig({ location: e });
     return !t && n && i.icymiDesktopEnabled;
 }
 function E(e) {
     let t = d.get(c),
         { enabled: n } = u.getConfig({ location: e });
     {
-        let { icymiDesktopEnabled: i } = h.getConfig({ location: e });
+        let { icymiDesktopEnabled: i } = I.getConfig({ location: e });
         return !t && n && i;
     }
 }
-let A = (0, i.mj)({
+function A(e) {
+    return E(e);
+}
+let h = (0, i.mj)({
         name: "2026-03-icymi-staff-debugging-utility",
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 1: { enabled: !0 } },
     }),
-    h = (0, i.mj)({
+    I = (0, i.mj)({
         name: "2026-03-icymi-desktop",
         kind: "user",
         defaultConfig: { icymiDesktopEnabled: !1 },

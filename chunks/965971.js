@@ -512,7 +512,7 @@ class M {
 }
 function P() {
     let e = I.default.getFocusedPID();
-    if (null == e || e === m.UNSET_PID || !E.default.isOverlayOOPEnabledForPid(e)) return null;
+    if (null == e || -1 === e || !E.default.isOverlayOOPEnabledForPid(e)) return null;
     let t = E.default.getTrackedGameByPid(e);
     return null == t || null == t.gameName || null == t.gameId || t.state !== _.AR.OVERLAY_RENDERING
         ? null
@@ -557,9 +557,7 @@ function x(e) {
 }
 function k(e) {
     if (
-        (L.verbose("OVERLAY_FOCUSED", e),
-        M.gameSetAllUnfocused(),
-        null == e.pid || e.pid === m.DEV_PID || e.pid === m.UNSET_PID)
+        (L.verbose("OVERLAY_FOCUSED", e), M.gameSetAllUnfocused(), null == e.pid || e.pid === m.DEV_PID || -1 === e.pid)
     )
         return;
     let t = M.getByPid(e.pid);
@@ -611,10 +609,7 @@ function H(e) {
 }
 function j(e) {
     let t = (0, S.A)();
-    null != t &&
-        t !== m.DEV_PID &&
-        t !== m.UNSET_PID &&
-        (L.verbose("AUDIO_TOGGLE_SELF_MUTE", e), M.handleMuteToggled());
+    null != t && t !== m.DEV_PID && -1 !== t && (L.verbose("AUDIO_TOGGLE_SELF_MUTE", e), M.handleMuteToggled());
 }
 function W(e) {
     L.verbose("WINDOW_FOCUS", e);
@@ -624,7 +619,7 @@ function W(e) {
         : M.desktopSetFocused(e.focused);
 }
 function Y(e) {
-    if (e.pid === m.DEV_PID || e.pid === m.UNSET_PID) return;
+    if (e.pid === m.DEV_PID || -1 === e.pid) return;
     let t = M.getByPid(e.pid);
     null == t ? L.error("OVERLAY_SUCCESSFULLY_SHOWN: Game not found", e, M.debug) : (t.successfullyShown = !0);
 }

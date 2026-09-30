@@ -1898,7 +1898,7 @@ class n1 extends i.PureComponent {
             {
                 page: (0, ny.DJ)(this.props.channel),
                 children: (0, l.jsx)(tU.di, {
-                    children: (0, l.jsx)(tG.Xq, {
+                    children: (0, l.jsx)(tG.X, {
                         children: (0, l.jsxs)(nv.Ah, {
                             ref: this.dispatchGroupRef,
                             children: [
