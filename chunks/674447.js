@@ -45,7 +45,7 @@ var D = n(646911),
     O = n(231483),
     N = n(627794),
     w = n(928348),
-    R = n(53594),
+    R = n(452245),
     U = n(364806),
     k = n(979816),
     P = n(677420),
@@ -169,8 +169,8 @@ var eK = n(110384),
     e8 = n(928658),
     e7 = n(400528),
     e6 = n(892340),
-    e1 = n(715757),
-    e2 = n(967198),
+    e2 = n(715757),
+    e1 = n(967198),
     e4 = n(287809),
     e3 = n(628691),
     e5 = n(49999),
@@ -306,8 +306,8 @@ function tP(e) {
             textSelection: t8,
             favoriteableType: t7,
             favoriteableId: t6,
-            favoriteableName: t1,
-            itemHref: t2,
+            favoriteableName: t2,
+            itemHref: t1,
             itemSrc: t4,
             itemSafeSrc: t3,
             itemTextContent: t5,
@@ -858,8 +858,8 @@ function tP(e) {
                   })),
         nN = (0, ep.A)(tY, tQ),
         nw =
-            ((tX = (0, x.bG)([e2.A], () => e2.A.getGuildId())),
-            (tz = (0, e1.Qo)(tX)),
+            ((tX = (0, x.bG)([e1.A], () => e1.A.getGuildId())),
+            (tz = (0, e2.Qo)(tX)),
             (0, e3.ul)(tY)
                 ? (0, l.jsx)(s.Dr, {
                       id: "report",
@@ -906,7 +906,7 @@ function tP(e) {
                   })
                 : null;
         })(tY),
-        nk = (0, eD.A)({ type: t7, id: t6, name: t1 }),
+        nk = (0, eD.A)({ type: t7, id: t6, name: t2 }),
         nP = (function (e, t) {
             let { perGuildMaxCount: n } = R.i$[H],
                 { isLoading: i, saveRule: r, errorMessage: o } = (0, U.S)(),
@@ -1078,7 +1078,7 @@ function tP(e) {
                       action: t$,
                   })
                 : null),
-        nq = (0, f.A)(t2 ?? t4, t5, tY, { shouldHideMediaOptions: na }),
+        nq = (0, f.A)(t1 ?? t4, t5, tY, { shouldHideMediaOptions: na }),
         nH = (0, A.A)({ id: tY.id, label: j.intl.string(j.t.zBoHlf), shiftId: `${tY.channel_id}-${tY.id}` }),
         nK = (function (e) {
             let { messageId: t, itemId: n, type: i, imageSrc: r } = e,

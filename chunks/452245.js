@@ -1,16 +1,21 @@
-(n.d(t, { H2: () => o, J6: () => f, i$: () => s, kT: () => T, ub: () => h, ws: () => p, xG: () => _, yT: () => S }),
+(n.d(t, { yT: () => S, H2: () => s, ub: () => f, kT: () => g, ws: () => p, J6: () => h, i$: () => A, xG: () => _ }),
     n(938796));
 var r,
     i,
-    u = n(582128),
-    a = n(318729),
-    l = n(979816),
+    u = n(582128);
+let a = (0, n(945810).mj)({
+    name: "2026-09-automod-application-rules",
+    kind: "guild",
+    defaultConfig: { enabled: !1 },
+    variations: { 1: { enabled: !0 } },
+});
+var l = n(979816),
     E = n(243277),
-    A = n(375708),
-    o = (((r = {}).NEW = "new"), (r.RECOMMENDED = "recommended"), (r.BETA = "beta"), (r.ALPHA = "alpha"), r);
-let s = {
+    o = n(375708),
+    s = (((r = {}).NEW = "new"), (r.RECOMMENDED = "recommended"), (r.BETA = "beta"), (r.ALPHA = "alpha"), r);
+let A = {
     [E.uh.SPAM_LINK]: {
-        getDefaultRuleName: () => A.intl.string(A.t.ffR2cM),
+        getDefaultRuleName: () => o.intl.string(o.t.ffR2cM),
         type: E.uh.SPAM_LINK,
         eventType: E.Mc.MESSAGE_SEND,
         perGuildMaxCount: 0,
@@ -19,7 +24,7 @@ let s = {
         defaultActionTypes: new Set(),
     },
     [E.uh.KEYWORD]: {
-        getDefaultRuleName: () => A.intl.string(A.t.ffR2cM),
+        getDefaultRuleName: () => o.intl.string(o.t.ffR2cM),
         type: E.uh.KEYWORD,
         eventType: E.Mc.MESSAGE_SEND,
         perGuildMaxCount: 6,
@@ -28,7 +33,7 @@ let s = {
         defaultActionTypes: new Set([E.AH.BLOCK_MESSAGE]),
     },
     [E.uh.ML_SPAM]: {
-        getDefaultRuleName: () => A.intl.string(A.t["puF/Os"]),
+        getDefaultRuleName: () => o.intl.string(o.t["puF/Os"]),
         type: E.uh.ML_SPAM,
         eventType: E.Mc.MESSAGE_SEND,
         perGuildMaxCount: 1,
@@ -37,7 +42,7 @@ let s = {
         defaultActionTypes: new Set([E.AH.BLOCK_MESSAGE]),
     },
     [E.uh.DEFAULT_KEYWORD_LIST]: {
-        getDefaultRuleName: () => A.intl.string(A.t.LnGhZv),
+        getDefaultRuleName: () => o.intl.string(o.t.LnGhZv),
         type: E.uh.DEFAULT_KEYWORD_LIST,
         eventType: E.Mc.MESSAGE_SEND,
         perGuildMaxCount: 1,
@@ -46,7 +51,7 @@ let s = {
         defaultActionTypes: new Set([E.AH.BLOCK_MESSAGE]),
     },
     [E.uh.MENTION_SPAM]: {
-        getDefaultRuleName: () => A.intl.string(A.t.pX7i6n),
+        getDefaultRuleName: () => o.intl.string(o.t.pX7i6n),
         type: E.uh.MENTION_SPAM,
         eventType: E.Mc.MESSAGE_SEND,
         perGuildMaxCount: 1,
@@ -55,7 +60,7 @@ let s = {
         defaultActionTypes: new Set([E.AH.BLOCK_MESSAGE]),
     },
     [E.uh.USER_PROFILE]: {
-        getDefaultRuleName: () => A.intl.string(A.t.q1L2v8),
+        getDefaultRuleName: () => o.intl.string(o.t.q1L2v8),
         type: E.uh.USER_PROFILE,
         eventType: E.Mc.GUILD_MEMBER_JOIN_OR_UPDATE,
         perGuildMaxCount: 1,
@@ -64,7 +69,7 @@ let s = {
         defaultActionTypes: new Set([E.AH.QUARANTINE_USER]),
     },
     [E.uh.SERVER_POLICY]: {
-        getDefaultRuleName: () => A.intl.string(A.t.ZQr92M),
+        getDefaultRuleName: () => o.intl.string(o.t.ZQr92M),
         type: E.uh.SERVER_POLICY,
         eventType: E.Mc.MESSAGE_SEND,
         perGuildMaxCount: 1,
@@ -73,7 +78,7 @@ let s = {
         defaultActionTypes: new Set(),
     },
     [E.uh.APPLICATION]: {
-        getDefaultRuleName: () => A.intl.string(A.t.VxE3o6),
+        getDefaultRuleName: () => o.intl.string(o.t.VxE3o6),
         type: E.uh.APPLICATION,
         eventType: E.Mc.MESSAGE_SEND,
         perGuildMaxCount: E.Ix,
@@ -84,25 +89,25 @@ let s = {
 };
 var S = (((i = {}).MEMBERS = "members"), (i.CONTENT = "content"), i);
 let c = {
-    members: [s[E.uh.USER_PROFILE]],
+    members: [A[E.uh.USER_PROFILE]],
     content: [
-        s[E.uh.SERVER_POLICY],
-        s[E.uh.MENTION_SPAM],
-        s[E.uh.ML_SPAM],
-        s[E.uh.DEFAULT_KEYWORD_LIST],
-        s[E.uh.KEYWORD],
-        s[E.uh.APPLICATION],
+        A[E.uh.SERVER_POLICY],
+        A[E.uh.MENTION_SPAM],
+        A[E.uh.ML_SPAM],
+        A[E.uh.DEFAULT_KEYWORD_LIST],
+        A[E.uh.KEYWORD],
+        A[E.uh.APPLICATION],
     ],
 };
-function h(e, t) {
-    return s[e].flags.has(t);
+function f(e, t) {
+    return A[e].flags.has(t);
 }
-function f(e) {
-    return Array.from(s[e].availableActionTypes);
+function h(e) {
+    return Array.from(A[e].availableActionTypes);
 }
 function _(e, t) {
     let { id: n, eventType: r, triggerType: i, actions: u } = e,
-        a = s[i];
+        a = A[i];
     if (t.filter((e) => n !== e.id && e.triggerType === i).length > a.perGuildMaxCount)
         throw Error(`You have exceeded the maximum number of rules of type ${i}`);
     if (u.some((e) => !a.availableActionTypes.has(e.type)))
@@ -111,7 +116,10 @@ function _(e, t) {
 }
 function p(e) {
     let t = (0, l.XO)(e),
-        n = (0, a.ZQ)(e);
+        n = (function (e) {
+            let { enabled: t } = a.useConfig({ guildId: e, location: "automod_settings" });
+            return t;
+        })(e);
     return u.useMemo(
         () =>
             Object.keys(c).reduce(
@@ -132,8 +140,7 @@ function p(e) {
         [t, n],
     );
 }
-function T(e, t) {
-    let n = (0, a.pt)(t);
+function g(e, t) {
     switch (e) {
         case E.uh.DEFAULT_KEYWORD_LIST:
             return { allowList: [], presets: [] };
@@ -141,7 +148,7 @@ function T(e, t) {
         case E.uh.KEYWORD:
             return { keywordFilter: [], regexPatterns: [], allowList: [] };
         case E.uh.MENTION_SPAM:
-            return { mentionTotalLimit: E.Nu, mentionRaidProtectionEnabled: n };
+            return { mentionTotalLimit: E.Nu, mentionRaidProtectionEnabled: (0, l.AH)(t) };
         case E.uh.APPLICATION:
             return { applicationId: null };
         case E.uh.ML_SPAM:

@@ -1,42 +1,49 @@
-n.d(t, { XO: () => o, _x: () => h, hX: () => a, iI: () => d, i_: () => A });
-var e = n(17928),
-    r = n(71393),
-    i = n(576705),
-    l = n(243277),
-    c = n(652215);
-function s(u) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : r.A,
-        n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : i.A,
-        e = t.getGuild(u);
-    return null != e && n.can(c.xBc.MANAGE_GUILD, e);
+e.d(u, { AH: () => G, DG: () => h, XO: () => f, _x: () => o, hX: () => c, iI: () => d, i_: () => a });
+var n = e(17928),
+    r = e(71393),
+    i = e(576705),
+    l = e(243277),
+    A = e(652215);
+function s(t) {
+    let u = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : r.A,
+        e = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : i.A,
+        n = u.getGuild(t);
+    return null != n && e.can(A.xBc.MANAGE_GUILD, n);
 }
-function A(u) {
-    return null != u && s(u);
+function a(t) {
+    return null != t && s(t);
 }
-function a(u) {
-    return s(u);
+function c(t) {
+    return s(t);
 }
-function d(u) {
-    return (0, e.bG)([r.A, i.A], () => s(u, r.A, i.A), [u]);
+function d(t) {
+    return (0, n.bG)([r.A, i.A], () => s(t, r.A, i.A), [t]);
 }
-function h(u, t) {
-    return (0, e.bG)(
+function G(t) {
+    let u = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : r.A;
+    return u.getGuild(t)?.features.has(A.GuildFeatures.COMMUNITY) ?? !1;
+}
+function h(t) {
+    return (0, n.bG)([r.A], () => G(t, r.A), [t]);
+}
+function o(t, u) {
+    return (0, n.bG)(
         [r.A],
         () => {
-            if (t !== l.uh.MENTION_SPAM) return !1;
-            let n = r.A.getGuild(u);
-            return null != n && n.features.has(c.GuildFeatures.COMMUNITY);
+            if (u !== l.uh.MENTION_SPAM) return !1;
+            let e = r.A.getGuild(t);
+            return null != e && e.features.has(A.GuildFeatures.COMMUNITY);
         },
-        [u, t],
+        [t, u],
     );
 }
-function o(u) {
-    return (0, e.bG)(
+function f(t) {
+    return (0, n.bG)(
         [r.A],
         () => {
-            let t = r.A.getGuild(u);
-            return t?.features.has(c.GuildFeatures.COMMUNITY) || !1;
+            let u = r.A.getGuild(t);
+            return u?.features.has(A.GuildFeatures.COMMUNITY) || !1;
         },
-        [u],
+        [t],
     );
 }
