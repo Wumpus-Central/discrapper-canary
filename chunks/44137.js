@@ -740,10 +740,10 @@ var t8 = n(394816),
     nd = n(646731),
     nc = n(769001);
 function nu(e) {
-    let { popoutContainerRef: t, forceOpen: n, onCloseAccountPopout: a } = e;
+    let { popoutContainerRef: t, scrollerRef: n, shouldScrollIntoView: a, onCloseAccountPopout: r } = e;
     (0, ns.I)({ enabled: !0 });
-    let { balance: r } = (0, nr.W)(),
-        o = (0, d.bG)([no.Ay], () =>
+    let { balance: o } = (0, nr.W)(),
+        c = (0, d.bG)([no.Ay], () =>
             no.Ay.userOpenedWalletViaProfileDCF ? no.Y0.NEW_ACHIEVEMENT : no.Ay.clientUnreadNotificationType,
         );
     l.useEffect(
@@ -752,99 +752,126 @@ function nu(e) {
         },
         [],
     );
-    let { isHovered: c, onMouseEnter: u, onMouseLeave: m, setIsHovered: h, cancelTimers: g } = (0, nl.A)(0, 500),
-        A = l.useCallback(() => {
-            (0, x.hasAnyModalOpen)() || m();
-        }, [m]),
-        v = l.useRef(null),
+    let { isHovered: u, onMouseEnter: m, onMouseLeave: h, setIsHovered: g, cancelTimers: A } = (0, nl.A)(0, 500),
+        v = l.useCallback(() => {
+            (0, x.hasAnyModalOpen)() || h();
+        }, [h]),
         E = l.useRef(null),
         C = l.useRef(null),
-        _ = l.useCallback(
+        _ = l.useRef(null),
+        I = l.useCallback(
             (e) => {
-                (C.current?.disconnect(),
-                    (C.current = null),
+                (_.current?.disconnect(),
+                    (_.current = null),
                     null != e &&
-                        ((C.current = new ResizeObserver(() => {
-                            g();
+                        ((_.current = new ResizeObserver(() => {
+                            A();
                         })),
-                        C.current.observe(e)));
+                        _.current.observe(e)));
             },
-            [g],
+            [A],
         );
-    (l.useEffect(() => () => C.current?.disconnect(), []),
+    (l.useEffect(() => () => _.current?.disconnect(), []),
         l.useEffect(() => {
-            if (c)
+            if (u)
                 return (document.addEventListener("mouseover", e), () => document.removeEventListener("mouseover", e));
             function e(e) {
                 if ((0, x.hasAnyModalOpen)()) return;
                 let t = (0, ne.vq)(e.target, Element) ? e.target : null,
                     n = t?.closest(`.${ek.j$}`);
-                null != n && n !== v.current && (g(), h(!1));
+                null != n && n !== E.current && (A(), g(!1));
             }
-        }, [c, g, h]));
-    let I = l.useRef(!1);
+        }, [u, A, g]));
+    let b = l.useRef(!1);
     l.useEffect(() => {
-        c || (I.current = !1);
-    }, [c]);
-    let b = l.useCallback(() => {
-            (I.current ||
-                ((I.current = !0),
+        u || (b.current = !1);
+    }, [u]);
+    let S = l.useCallback(() => {
+            (b.current ||
+                ((b.current = !0),
                 (0, na.Y)({
                     pageType: M.A.USER_PROFILE_ACCOUNT_POPOUT,
                     sectionType: M.A.ORB_WALLET,
                     ctaObject: M.A.ORB_WALLET_OPEN_FROM_PROFILE,
                 })),
-                u());
-        }, [u]),
-        S = (0, eO.rE)({ action: "PRESS_ORBS", onClick: b });
+                m());
+        }, [m]),
+        j = (0, eO.rE)({ action: "PRESS_ORBS", onClick: S });
     l.useEffect(() => {
-        n && u();
-    }, [n, u]);
-    let j = l.useMemo(
+        let e = n?.current,
+            t = E.current;
+        if (!a || null == e || null == t) return;
+        function i() {
+            if (null == e || null == t) return;
+            let n = e.getBoundingClientRect(),
+                i = t.getBoundingClientRect(),
+                l = i.bottom + 24 - n.bottom,
+                a = n.top - (i.top - 24);
+            l > 0 ? (e.scrollTop += l) : a > 0 && (e.scrollTop -= a);
+        }
+        let l = requestAnimationFrame(i),
+            s = new ResizeObserver(i);
+        for (let t of (s.observe(e), Array.from(e.children))) s.observe(t);
+        function r() {
+            (s.disconnect(), clearTimeout(o));
+        }
+        let o = setTimeout(r, 3e3);
+        return (
+            e.addEventListener("wheel", r, { once: !0 }),
+            e.addEventListener("pointerdown", r, { once: !0 }),
+            () => {
+                (cancelAnimationFrame(l),
+                    r(),
+                    e.removeEventListener("wheel", r),
+                    e.removeEventListener("pointerdown", r));
+            }
+        );
+    }, [a, n]);
+    let T = l.useMemo(
             () =>
-                null != r
-                    ? V.intl.format(V.t["8xDISf"], { balance: String(r) })
+                null != o
+                    ? V.intl.format(V.t["8xDISf"], { balance: String(o) })
                     : (0, i.jsx)(nn.n, { dotRadius: 3.5, themed: !0, className: nc.K }),
-            [r],
-        ),
-        T = l.useMemo(
-            () =>
-                o === no.Y0.NEW_ACHIEVEMENT
-                    ? (0, i.jsx)(ni.E, { type: "new", variant: "brand" })
-                    : o === no.Y0.UNCLAIMED_ACHIEVEMENT
-                      ? (0, i.jsx)(ni.E, { type: { text: V.intl.string(V.t.O13yhz) }, variant: "brand" })
-                      : null,
             [o],
         ),
-        N = l.useCallback(() => {
-            (h(!1), a());
-        }, [h, a]);
+        N = l.useMemo(
+            () =>
+                c === no.Y0.NEW_ACHIEVEMENT
+                    ? (0, i.jsx)(ni.E, { type: "new", variant: "brand" })
+                    : c === no.Y0.UNCLAIMED_ACHIEVEMENT
+                      ? (0, i.jsx)(ni.E, { type: { text: V.intl.string(V.t.O13yhz) }, variant: "brand" })
+                      : null,
+            [c],
+        ),
+        y = l.useCallback(() => {
+            (g(!1), r());
+        }, [g, r]);
     return (0, i.jsx)("li", {
-        ref: v,
+        ref: E,
         className: ek.j$,
-        onMouseEnter: b,
-        onMouseLeave: A,
+        onMouseEnter: S,
+        onMouseLeave: v,
         children: (0, i.jsx)(f.Y, {
             targetElementRef: t,
             align: "bottom",
             spacing: -16,
             renderPopout: () =>
                 (0, i.jsx)("div", {
-                    ref: _,
-                    onMouseEnter: u,
-                    onMouseLeave: A,
-                    children: (0, i.jsx)(nd.vG, { onCloseWallet: N, returnRef: E, isProfilePopout: !0 }),
+                    ref: I,
+                    onMouseEnter: m,
+                    onMouseLeave: v,
+                    children: (0, i.jsx)(nd.vG, { onCloseWallet: y, returnRef: C, isProfilePopout: !0 }),
                 }),
-            shouldShow: c,
-            onRequestClose: A,
+            shouldShow: u,
+            onRequestClose: v,
             children: (e) =>
                 (0, i.jsx)("div", {
                     className: ek.jG,
                     children: (0, i.jsxs)(p.D, {
-                        innerRef: E,
+                        innerRef: C,
                         className: ek.ef,
                         ...e,
-                        onClick: S,
+                        onClick: j,
                         children: [
                             (0, i.jsx)("div", {
                                 className: ek.iA,
@@ -857,13 +884,13 @@ function nu(e) {
                                         color: "currentColor",
                                         variant: "text-sm/medium",
                                         className: ek.W1,
-                                        children: j,
+                                        children: T,
                                     }),
                                 }),
                             }),
                             (0, i.jsxs)("div", {
                                 className: s()(ek.ap, nc._),
-                                children: [T, (0, i.jsx)(eR._, { size: "xs", color: "currentColor" })],
+                                children: [N, (0, i.jsx)(eR._, { size: "xs", color: "currentColor" })],
                             }),
                         ],
                     }),
@@ -1381,7 +1408,7 @@ function n0(e) {
         l.useEffect(
             () => (
                 tS.A.setState({ isOpen: !0 }),
-                () => tS.A.setState({ isOpen: !1, shouldRenderTenureLevelUp: !1, shouldOpenOrbsWallet: !1 })
+                () => tS.A.setState({ isOpen: !1, shouldRenderTenureLevelUp: !1, shouldScrollToOrbsMenuItem: !1 })
             ),
             [],
         ));
@@ -1585,41 +1612,42 @@ function n0(e) {
         L = (0, eN.d)({ location: "UserProfileAccountPopout" }),
         D = l.useRef(null),
         U = l.useRef(null),
-        F = (0, tg.A)(p?.profileFrame?.skuId),
-        G = (0, tp.A)(p?.profileFrame?.skuId);
+        F = l.useRef(null),
+        G = (0, tg.A)(p?.profileFrame?.skuId),
+        H = (0, tp.A)(p?.profileFrame?.skuId);
     (0, tA.A)({ skuId: p?.profileFrame?.skuId, openedAt: o, context: v, analyticsLocations: A });
-    let H = l.useRef((0, tS.A)((e) => e.shouldRenderTenureLevelUp)),
-        W = l.useMemo(() => (0, tv.A)(), []),
-        [Z, K] = l.useState(() => tS.A.getState().shouldRenderTenureLevelUp);
-    function q(e) {
-        (n?.(), (0, tz.openUserProfileModal)({ customStatusPrompt: W, sourceAnalyticsLocations: A, ...v, ...e }));
+    let W = l.useRef((0, tS.A)((e) => e.shouldRenderTenureLevelUp)),
+        Z = l.useMemo(() => (0, tv.A)(), []),
+        [K, q] = l.useState(() => tS.A.getState().shouldRenderTenureLevelUp);
+    function Y(e) {
+        (n?.(), (0, tz.openUserProfileModal)({ customStatusPrompt: Z, sourceAnalyticsLocations: A, ...v, ...e }));
     }
     l.useEffect(() => {
         let e = setTimeout(() => {
-            K(!1);
+            q(!1);
         }, 500);
         return () => clearTimeout(e);
     }, []);
-    let Y = p?.widgets != null && p.widgets.length > 0,
-        $ = l.useCallback(() => {
+    let $ = p?.widgets != null && p.widgets.length > 0,
+        X = l.useCallback(() => {
             n();
         }, [n]),
-        X = l.useCallback(() => {
-            (R(), $());
-        }, [R, $]),
-        Q = (0, es.ux)("UserProfileAccountPopout"),
-        J = tH.A.useConfig({ location: "UserProfileAccountPopout" }).enabled,
-        ee = (0, t9.H)({ location: "UserProfileAccountPopout" }),
-        et = (0, tS.A)((e) => e.shouldOpenOrbsWallet),
-        [en, ei] = (0, tE.kn)(
+        Q = l.useCallback(() => {
+            (R(), X());
+        }, [R, X]),
+        J = (0, es.ux)("UserProfileAccountPopout"),
+        ee = tH.A.useConfig({ location: "UserProfileAccountPopout" }).enabled,
+        et = (0, t9.H)({ location: "UserProfileAccountPopout" }),
+        en = (0, tS.A)((e) => e.shouldScrollToOrbsMenuItem),
+        [ei, el] = (0, tE.kn)(
             [
-                Q ? c.M.DISPLAY_NAME_STYLES_FLYWHEEL_EDIT_PROFILE_NEW_BADGE : void 0,
-                J ? c.M.USER_PROFILE_PERSONAL_WIDGET_COACHMARK : void 0,
+                J ? c.M.DISPLAY_NAME_STYLES_FLYWHEEL_EDIT_PROFILE_NEW_BADGE : void 0,
+                ee ? c.M.USER_PROFILE_PERSONAL_WIDGET_COACHMARK : void 0,
             ].filter(nf.Vq),
             void 0,
             !0,
         ),
-        el = l.useId();
+        ea = l.useId();
     return (0, i.jsx)(O.f5, {
         value: A,
         children: (0, i.jsx)(tV.of, {
@@ -1630,11 +1658,11 @@ function n0(e) {
             isLoaded: p?.isLoaded,
             children: (0, i.jsxs)(ep.l, {
                 ref: E,
-                "aria-labelledby": el,
+                "aria-labelledby": ea,
                 className: s()(ek.jC, u),
                 "data-layer": "base",
                 children: [
-                    (0, i.jsx)(g.A, { children: (0, i.jsx)(eg.H, { id: el, children: V.intl.string(V.t["5fWB8U"]) }) }),
+                    (0, i.jsx)(g.A, { children: (0, i.jsx)(eg.H, { id: ea, children: V.intl.string(V.t["5fWB8U"]) }) }),
                     (0, i.jsxs)(eg.F, {
                         children: [
                             (0, i.jsxs)(tQ.A, {
@@ -1651,27 +1679,28 @@ function n0(e) {
                                                 user: t,
                                                 displayProfile: p,
                                                 avatarSize: nQ.T[nX.d.POPOUT].avatarSize,
-                                                onOpenProfile: f ? void 0 : q,
+                                                onOpenProfile: f ? void 0 : Y,
                                             }),
                                             (0, i.jsx)(t8.A, {
                                                 ref: D,
                                                 user: t,
                                                 themeType: nX.d.POPOUT,
                                                 onCloseProfile: n,
-                                                prompt: W,
+                                                prompt: Z,
                                             }),
                                         ],
                                     }),
                                     (0, i.jsxs)(eA.Ip, {
+                                        ref: F,
                                         className: ek.rf,
-                                        style: { pointerEvents: Z ? "none" : void 0 },
+                                        style: { pointerEvents: K ? "none" : void 0 },
                                         children: [
                                             (0, i.jsx)(tY.A, { userId: t.id }),
                                             (0, i.jsx)(tJ.Ay, {
                                                 className: ek.eF,
                                                 user: t,
                                                 displayName: np.Ay.getName(void 0, null, t),
-                                                onClickName: f ? void 0 : q,
+                                                onClickName: f ? void 0 : Y,
                                                 displayNameTrailing: (0, i.jsx)(t7, { user: t, isVisible: C }),
                                                 pronouns: p?.pronouns,
                                                 trailing: (0, i.jsx)(tZ.A, {
@@ -1679,7 +1708,7 @@ function n0(e) {
                                                     themeType: nX.d.POPOUT,
                                                     onClose: n,
                                                     shouldOpenBadgeTooltip: null != r ? (e) => e === r : void 0,
-                                                    shouldGlowTenureBadge: H.current,
+                                                    shouldGlowTenureBadge: W.current,
                                                 }),
                                             }),
                                             (0, i.jsx)(tq.A, { isPremiumUser: w, onInteraction: n }),
@@ -1689,16 +1718,16 @@ function n0(e) {
                                                 hidePersonalInformation: S,
                                                 onClose: n,
                                             }),
-                                            Y &&
+                                            $ &&
                                                 (0, i.jsx)(tX.A, {
                                                     user: t,
                                                     widgets: p?.widgets,
-                                                    onOpenUserProfileModal: q,
+                                                    onOpenUserProfileModal: Y,
                                                 }),
                                             (0, i.jsx)(t$.A, {
                                                 user: t,
                                                 currentUser: t,
-                                                onOpenUserProfileModal: q,
+                                                onOpenUserProfileModal: Y,
                                                 onClose: n,
                                             }),
                                             (0, i.jsxs)("div", {
@@ -1713,18 +1742,18 @@ function n0(e) {
                                                                     label: V.intl.string(V.t.s5vZlQ),
                                                                     icon: ex.PencilIcon,
                                                                     trailing:
-                                                                        null != en
+                                                                        null != ei
                                                                             ? (0, i.jsx)(ev.Lp, {
                                                                                   text: V.intl.string(V.t.y2b7CA),
                                                                                   "aria-hidden": !0,
                                                                               })
                                                                             : null,
                                                                     onClick: () => {
-                                                                        (en ===
+                                                                        (ei ===
                                                                             c.M
                                                                                 .DISPLAY_NAME_STYLES_FLYWHEEL_EDIT_PROFILE_NEW_BADGE &&
-                                                                            ei(z.i.TAKE_ACTION),
-                                                                            X());
+                                                                            el(z.i.TAKE_ACTION),
+                                                                            Q());
                                                                     },
                                                                     ref: U,
                                                                 }),
@@ -1818,10 +1847,11 @@ function n0(e) {
                                                                         },
                                                                     }),
                                                                 (0, i.jsx)(th, { onClose: n, popoutContainerRef: E }),
-                                                                ee &&
+                                                                et &&
                                                                     (0, i.jsx)(nu, {
                                                                         popoutContainerRef: E,
-                                                                        forceOpen: et,
+                                                                        scrollerRef: F,
+                                                                        shouldScrollIntoView: en,
                                                                         onCloseAccountPopout: n,
                                                                     }),
                                                             ],
@@ -1867,9 +1897,9 @@ function n0(e) {
                                         ],
                                     }),
                                     p?.profileEffect != null &&
-                                        !H.current &&
+                                        !W.current &&
                                         (0, i.jsx)(tf.A, { skuId: p.profileEffect.skuId, isHovering: _ }),
-                                    null != F && (0, i.jsx)(tx.A, { frame: F, fadeIn: G }),
+                                    null != G && (0, i.jsx)(tx.A, { frame: G, fadeIn: H }),
                                 ],
                             }),
                             (0, i.jsx)(nG, { targetElementRef: U, onClose: n }),
@@ -2177,7 +2207,7 @@ function iW(e) {
                       text: V.intl.string(V.t.dcOuei),
                       onClick: function () {
                           (a(z.i.TAKE_ACTION),
-                              tS.A.setState({ shouldOpenOrbsWallet: !0 }),
+                              tS.A.setState({ shouldScrollToOrbsMenuItem: !0 }),
                               no.Ay.setUserOpenedWalletViaProfileDCF(!0),
                               id._.dispatch(tr.jej.SHOW_ACCOUNT_PROFILE_POPOUT, {}));
                       },
@@ -2699,7 +2729,7 @@ function lx(e) {
         }, [s]),
         g = eu.A.coachmarkDismissibleContent;
     if (null != a) {
-        let e = (0, lA.A)("1790799631121", !0);
+        let e = (0, lA.A)("1790800039528", !0);
         t =
             null != e
                 ? V.intl.formatToPlainString(V.t.wve4kg, { webBuildOverride: a.id, builtAt: e })
