@@ -1,10 +1,11 @@
 let r;
-l.d(t, { F: () => m, Q4: () => p, W9: () => h });
+l.d(t, { F: () => p, Q4: () => g, W9: () => m });
 var n = l(915639);
 let s = new Map(),
     i = new Map(),
-    a = new Set();
-function o(e) {
+    a = new Set(),
+    o = Promise.resolve();
+function c(e) {
     let t = s.get(e);
     if (null != t) return t;
     if (!(e in n.pb)) {
@@ -12,17 +13,30 @@ function o(e) {
         return (s.set(e, t), t);
     }
     return (
-        (t = (null == r && (r = (0, n.A)()), r)
-            .then((t) => t.loadGrammar(n.pb[e]))
+        (o = (t = o
+            .then(async () => {
+                let t = await (null == r &&
+                    (r = Promise.resolve()
+                        .then(() => (0, n.A)())
+                        .catch(() => null)
+                        .then((e) => (null == e && (r = void 0), e))),
+                r);
+                return null == t ? null : t.loadGrammar(n.pb[e]);
+            })
             .then((t) => {
+                if (null == t) return (s.delete(e), i.delete(e), null);
                 for (let l of (i.set(e, t), a)) l(e);
                 return t;
-            })),
+            })
+            .catch(() => (s.delete(e), i.delete(e), null))).then(
+            () => {},
+            () => {},
+        )),
         s.set(e, t),
         t
     );
 }
-function c(e) {
+function u(e) {
     return {
         highlightToHtml(t) {
             let l = e.createSession();
@@ -37,22 +51,22 @@ function c(e) {
     };
 }
 let d = new Map();
-async function u(e) {
+async function h(e) {
     try {
-        let t = await o(e);
-        return null == t ? null : c(t);
-    } catch (t) {
-        throw (d.delete(e), t);
+        let t = await c(e);
+        return null == t ? null : u(t);
+    } catch {
+        return null;
     }
 }
-function h(e) {
-    let t = d.get(e);
-    return (null == t && ((t = u(e)), d.set(e, t)), t);
-}
 function m(e) {
-    let t = i.has(e) ? (i.get(e) ?? null) : (o(e), null);
-    return null != t ? c(t) : null;
+    let t = d.get(e);
+    return (null == t && ((t = h(e)), d.set(e, t)), t);
 }
 function p(e) {
+    let t = i.has(e) ? (i.get(e) ?? null) : (c(e), null);
+    return null != t ? u(t) : null;
+}
+function g(e) {
     return (a.add(e), () => a.delete(e));
 }

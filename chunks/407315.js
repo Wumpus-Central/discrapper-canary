@@ -50,9 +50,12 @@ function v(e) {
             (g.VW.richValue(e) !== l &&
                 (h.o.withoutSaving(e, () => {
                     g.VW.withoutNormalizing(e, () => {
-                        N(e, r) &&
-                            null == y &&
-                            !i &&
+                        let t = N(e, r),
+                            { enabled: s } = o.L.getConfig({ location: "syntaxHighlightCodeBlocks" });
+                        !t ||
+                            s ||
+                            null != y ||
+                            i ||
                             ((i = !0),
                             (null == S &&
                                 (S = Promise.all([n.e("818449"), n.e("175134")])
