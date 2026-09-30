@@ -56,13 +56,13 @@ let C =
                       intervalType: O.subscriptionTrial?.interval,
                       intervalCount: O.subscriptionTrial?.intervalCount,
                   }),
-                  g = u.A.getArticleURL(O.trialId === I.yo ? N.MVz.NITRO_TRIAL_FOR_ALL : N.MVz.PREMIUM_TRIAL);
+                  D = u.A.getArticleURL(O.trialId === I.yo ? N.MVz.NITRO_TRIAL_FOR_ALL : N.MVz.PREMIUM_TRIAL);
               return (0, i.jsxs)(A.T0, {
                   onClick: () => {
                       (t(), E.default.track(N.HAw.APP_NOTICE_CLOSED, { notice_type: f, trial_id: O.trialId }));
                   },
                   children: [
-                      (0, i.jsx)(A.In, { children: (0, T.GZ)(n, m, p, g) }),
+                      (0, i.jsx)(A.In, { children: (0, T.GZ)(n, m, p, D) }),
                       (0, i.jsx)(A.fY, {
                           onClick: function () {
                               null != O &&

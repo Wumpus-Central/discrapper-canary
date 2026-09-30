@@ -1,7 +1,7 @@
 n.d(t, { A: () => x });
-var l = n(477900);
+var i = n(477900);
 n(582128);
-var i = n(17928),
+var l = n(17928),
     s = n(836480),
     r = n(307301),
     a = n(192308),
@@ -10,26 +10,26 @@ var i = n(17928),
     c = n(771640),
     u = n(976860),
     h = n(309010),
-    A = n(519480),
-    g = n(370876),
-    m = n(573163),
+    g = n(519480),
+    m = n(370876),
+    A = n(573163),
     f = n(935208),
     p = n(652215),
     C = n(375708);
 let E = [
         {
             key: "JOIN_SERVERS",
-            renderIcon: (e) => (0, l.jsx)(s.CompassIcon, { size: "md", color: "currentColor", className: e }),
+            renderIcon: (e) => (0, i.jsx)(s.CompassIcon, { size: "md", color: "currentColor", className: e }),
             getName: () => C.intl.string(C.t.K50GHd),
             handler: (e, t) => (0, u.uh)(e.id, t.id),
         },
         {
             key: "ADD_SERVERS",
-            renderIcon: (e) => (0, l.jsx)(r.j, { size: "md", color: "currentColor", className: e }),
+            renderIcon: (e) => (0, i.jsx)(r.j, { size: "md", color: "currentColor", className: e }),
             getName: () => C.intl.string(C.t.emRpdS),
             handler: (e, t) =>
                 (0, a.openModalLazy)(async () => {
-                    let { default: i } = await Promise.all([
+                    let { default: l } = await Promise.all([
                         n.e("122326"),
                         n.e("533651"),
                         n.e("554970"),
@@ -43,7 +43,7 @@ let E = [
                         n.e("796349"),
                     ]).then(n.bind(n, 579735));
                     return (n) =>
-                        (0, l.jsx)(i, {
+                        (0, i.jsx)(l, {
                             ...n,
                             directoryGuildName: e.name,
                             directoryGuildId: e.id,
@@ -53,11 +53,11 @@ let E = [
         },
         {
             key: "INVITE_MEMBERS",
-            renderIcon: (e) => (0, l.jsx)(o.D, { className: e }),
+            renderIcon: (e) => (0, i.jsx)(o.D, { className: e }),
             getName: () => C.intl.string(C.t.MJQOuJ),
             handler: (e, t) =>
                 (0, a.openModalLazy)(async () => {
-                    let { default: i } = await Promise.all([
+                    let { default: l } = await Promise.all([
                         n.e("683621"),
                         n.e("711162"),
                         n.e("159957"),
@@ -65,42 +65,42 @@ let E = [
                         n.e("216084"),
                         n.e("284819"),
                     ]).then(n.bind(n, 405342));
-                    return (n) => (0, l.jsx)(i, { ...n, guild: e, channel: t, source: p.PE1.HUB_SIDEBAR });
+                    return (n) => (0, i.jsx)(l, { ...n, guild: e, channel: t, source: p.PE1.HUB_SIDEBAR });
                 }),
         },
     ],
     x = function (e) {
         let { guild: t, channel: n } = e,
-            s = (0, i.bG)([h.Ay], () => null != n && h.Ay.getChannelId() === n.id),
-            r = (0, i.bG)(
-                [A.A, m.Ay],
+            s = (0, l.bG)([h.Ay], () => null != n && h.Ay.getChannelId() === n.id),
+            r = (0, l.bG)(
+                [g.A, A.Ay],
                 () => {
                     if (null == n) return 0;
-                    let e = m.Ay.ackMessageId(n.id);
+                    let e = A.Ay.ackMessageId(n.id);
                     if (null == e) return 0;
-                    let t = Object.values(A.A.getDirectoryEntries(n.id) ?? {}).filter(
+                    let t = Object.values(g.A.getDirectoryEntries(n.id) ?? {}).filter(
                         (t) => new Date(t.createdAt).getTime() > f.default.extractTimestamp(e),
                     );
-                    return Math.min(g.zP, t.length);
+                    return Math.min(m.zP, t.length);
                 },
                 [n],
             );
-        return (0, l.jsx)(l.Fragment, {
+        return (0, i.jsx)(i.Fragment, {
             children: E.map((e) => {
-                let { key: i, getName: a, handler: o, renderIcon: u } = e,
-                    h = s && "JOIN_SERVERS" === i,
-                    A = `${i}-${t.id}`;
-                return (0, l.jsx)(
+                let { key: l, getName: a, handler: o, renderIcon: u } = e,
+                    h = s && "JOIN_SERVERS" === l,
+                    g = `${l}-${t.id}`;
+                return (0, i.jsx)(
                     d.G,
                     {
-                        id: A,
+                        id: g,
                         renderIcon: u,
                         text: a(),
                         selected: h,
                         onClick: null != n ? () => o(t, n) : void 0,
-                        trailing: "JOIN_SERVERS" === i && r > 0 ? (0, c.wN)(r) : null,
+                        trailing: "JOIN_SERVERS" === l && r > 0 ? (0, c.wN)(r) : null,
                     },
-                    A,
+                    g,
                 );
             }),
         });

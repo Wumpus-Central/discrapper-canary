@@ -33,12 +33,12 @@ function c(e) {
         S = null != l && A?.bot?.id != null,
         { data: C, isLoading: E } = (0, s.YY)(t ?? void 0),
         I = c || (0, u.x)(C),
-        M = null != t && E && null == C,
-        T = (0, d.Xm)({ installScope: f, hasFrame: I, hasProfileWidget: w, hasBotDm: S, ownerAuthorizationRevoked: m });
+        T = null != t && E && null == C,
+        M = (0, d.Xm)({ installScope: f, hasFrame: I, hasProfileWidget: w, hasBotDm: S, ownerAuthorizationRevoked: m });
     return {
-        availability: T,
-        isResolving: M,
-        activeMode: M ? null : (0, d.Qs)(g, T),
+        availability: M,
+        isResolving: T,
+        activeMode: T ? null : (0, d.Qs)(g, M),
         setMode: x,
         widgetApplicationId: b,
     };

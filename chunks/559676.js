@@ -2,9 +2,9 @@ n.d(t, {
     BP: () => c,
     FQ: () => g,
     Qg: () => w,
-    RW: () => p,
+    RW: () => _,
     Rh: () => f,
-    k: () => _,
+    k: () => p,
     o4: () => E,
     t_: () => a,
     xm: () => h,
@@ -69,10 +69,10 @@ function h(e) {
         (r.delete(e), s(), u(e));
     }
 }
-function p(e) {
+function _(e) {
     return (r.get(e)?.holders ?? 0) > 0;
 }
-function _() {
+function p() {
     return [...r.keys()];
 }
 function g(e) {
@@ -92,6 +92,6 @@ function w(e) {
     );
 }
 function E(e) {
-    let t = i.useCallback(() => null != e && p(e), [e]);
+    let t = i.useCallback(() => null != e && _(e), [e]);
     return i.useSyncExternalStore(g, t, t);
 }

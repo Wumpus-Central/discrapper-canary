@@ -10,11 +10,11 @@ var i = n(91242),
     c = n(171936),
     f = n(165610),
     h = n(600732);
-let p = new Map(),
-    _ = !1;
+let _ = new Map(),
+    p = !1;
 function g() {
-    _ ||
-        ((_ = !0),
+    p ||
+        ((p = !0),
         u.Ay.addChangeListener(E),
         a.Ay.addChangeListener(E),
         i.A.addChangeListener(E),
@@ -23,7 +23,7 @@ function g() {
         E());
 }
 function w(e) {
-    return p.has(e);
+    return _.has(e);
 }
 function E() {
     let e = new Map();
@@ -37,18 +37,18 @@ function E() {
         })(t);
         null != n && e.set(t, n);
     }
-    for (let [i, r] of [...p]) {
+    for (let [i, r] of [..._]) {
         var t, n;
         e.get(i) !== r.frameId &&
             ((t = i),
             (n = r),
-            p.delete(t),
+            _.delete(t),
             n.unregisterLookup(),
             l.A.removeFrameTarget(n.frameId, n.element),
             n.element.remove());
     }
     for (let [t, n] of e)
-        p.has(t) ||
+        _.has(t) ||
             (function (e, t) {
                 let n = document.createElement("div");
                 ((n.className = h.tF),
@@ -57,12 +57,12 @@ function E() {
                     T(n, s.A.isBuilderPreviewMobile()),
                     document.body.appendChild(n));
                 let i = { frameId: t, element: n, unregisterLookup: () => {} };
-                (p.set(e, i),
+                (_.set(e, i),
                     (i.unregisterLookup = (0, c.mn)(e, () => (0, d.F)(n, t))),
                     l.A.registerFrameTarget(t, n, r.A.Backstage));
             })(t, n);
-    let _ = s.A.isBuilderPreviewMobile();
-    for (let e of p.values()) T(e.element, _);
+    let p = s.A.isBuilderPreviewMobile();
+    for (let e of _.values()) T(e.element, p);
 }
 function T(e, t) {
     (e.classList.toggle(h.lZ, t), e.classList.toggle(h.L_, !t));

@@ -22,8 +22,8 @@ var E = n(736653),
     S = n(652215),
     f = n(49999),
     p = n(121286),
-    g = n(375708),
-    D = n(971656);
+    D = n(375708),
+    g = n(971656);
 function P(e) {
     let { markAsDismissed: t, recurringDismiss: n, platformType: l, noticeType: s } = e,
         d = C.A.getGuildId(),
@@ -39,23 +39,23 @@ function P(e) {
             (0, i.jsx)("img", {
                 src: "light" === _ ? N?.icon.blackSVG : N?.icon.whiteSVG,
                 alt: N?.name,
-                className: r()(D.tV, D.Y5),
+                className: r()(g.tV, g.Y5),
             }),
-            g.intl.format(p.default.iMCLA5, { connectionName: N?.name, date: R }),
+            D.intl.format(p.default.iMCLA5, { connectionName: N?.name, date: R }),
             (0, i.jsx)(c.Z_, {
                 onClick: () => {
                     (t(f.i.TAKE_ACTION), T.default.open(d, S.BEX.ROLES));
                 },
                 noticeType: s,
-                className: D.NS,
-                children: g.intl.string(p.default.kxlybP),
+                className: g.NS,
+                children: D.intl.string(p.default.kxlybP),
             }),
             (0, i.jsx)(c.zr, {
                 onClick: () => {
                     n(f.i.USER_DISMISS);
                 },
-                className: D.go,
-                children: g.intl.string(p.default["8qJAeT"]),
+                className: g.go,
+                children: D.intl.string(p.default["8qJAeT"]),
             }),
         ],
     });

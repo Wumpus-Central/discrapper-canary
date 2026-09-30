@@ -1,4 +1,4 @@
-n.d(t, { default: () => M, u: () => p });
+n.d(t, { default: () => M, u: () => S });
 var i = n(477900),
     s = n(582128),
     l = n(17928),
@@ -22,17 +22,17 @@ async function g(e, t) {
 var C = n(244696),
     _ = n(49999),
     N = n(375708),
-    S = n(975366);
-let p = "GUILD_THEME_NUX_MODAL",
+    p = n(975366);
+let S = "GUILD_THEME_NUX_MODAL",
     T = new A.A("GuildThemeNuxModal");
 function M(e) {
     let { guildId: t, markAsDismissed: n, transitionState: A, onClose: h } = e,
-        [m, p] = s.useState(I),
+        [m, S] = s.useState(I),
         [M, f] = s.useState(null),
         [L, D] = s.useState("init"),
         R = m === c.tI.PERSONAL,
-        O = (0, l.bG)([E.A], () => E.A.getGuildId()),
-        x = (0, l.bG)(
+        x = (0, l.bG)([E.A], () => E.A.getGuildId()),
+        O = (0, l.bG)(
             [C.A],
             () => {
                 let e = C.A.getGuildThemeSnapshot(t);
@@ -40,16 +40,16 @@ function M(e) {
             },
             [t],
         ),
-        G = R ? null : x;
+        G = R ? null : O;
     s.useEffect(() => {
-        O !== t && h();
-    }, [t, h, O]);
+        x !== t && h();
+    }, [t, h, x]);
     let U = s.useCallback((e) => {
-            (f(null), p(e));
+            (f(null), S(e));
         }, []),
         b = s.useCallback(async () => {
             if ("init" === L) {
-                if (O !== t) return void (await h());
+                if (x !== t) return void (await h());
                 (D("submitting"), f(null));
                 try {
                     await g(t, R);
@@ -59,7 +59,7 @@ function M(e) {
                 }
                 (D("submitted"), n(_.i.TAKE_ACTION), await h());
             }
-        }, [t, R, n, h, O, L]),
+        }, [t, R, n, h, x, L]),
         y = s.useCallback(async () => {
             ("submitted" !== L && n(_.i.USER_DISMISS), await h());
         }, [n, h, L]),
@@ -96,7 +96,7 @@ function M(e) {
         children: (0, i.jsxs)(o.B, {
             direction: "vertical",
             gap: 16,
-            className: S.r,
+            className: p.r,
             children: [
                 (0, i.jsx)(d.l, {
                     selectionMode: "single",

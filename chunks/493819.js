@@ -1,6 +1,6 @@
-n.d(t, { A: () => A });
-var l = n(477900),
-    i = n(582128),
+n.d(t, { A: () => g });
+var i = n(477900),
+    l = n(582128),
     s = n(17928),
     r = n(775602),
     a = n(607470),
@@ -10,10 +10,10 @@ n(131955);
 var c = n(577961);
 function u(e) {
     let { src: t, className: n, autoPlayOnMount: s } = e,
-        r = i.useRef(null),
-        o = i.useRef(!1),
-        [d, u] = i.useState(!1);
-    i.useEffect(() => {
+        r = l.useRef(null),
+        o = l.useRef(!1),
+        [d, u] = l.useState(!1);
+    l.useEffect(() => {
         if (!s) return;
         let e = r.current;
         if (null != e)
@@ -27,48 +27,48 @@ function u(e) {
             o.current || null == e || ((o.current = !0), e.play());
         }
     }, [t, s]);
-    let h = i.useCallback(() => {
+    let h = l.useCallback(() => {
             let e = r.current;
             null != e && ((e.currentTime = 0), u(!0), e.play());
         }, []),
-        A = i.useCallback(() => {
+        g = l.useCallback(() => {
             let e = r.current;
             null != e && (u(!1), e.pause());
         }, []);
-    return (0, l.jsx)("div", {
+    return (0, i.jsx)("div", {
         className: c.j,
         onMouseEnter: h,
-        onMouseLeave: A,
-        children: (0, l.jsx)(a.A, { ref: r, className: n, src: t, muted: !0, playsInline: !0, loop: d }),
+        onMouseLeave: g,
+        children: (0, i.jsx)(a.A, { ref: r, className: n, src: t, muted: !0, playsInline: !0, loop: d }),
     });
 }
 function h(e) {
     let { animatedSrc: t, staticSrc: n, className: s, autoPlayOnMount: r, animationDurationMs: a = 4e3 } = e,
-        [o, d] = i.useState(() => r),
-        c = i.useRef(!r);
-    i.useEffect(() => {
+        [o, d] = l.useState(() => r),
+        c = l.useRef(!r);
+    l.useEffect(() => {
         if (!r) return;
         let e = setTimeout(() => {
             ((c.current = !0), d(!1));
         }, a);
         return () => clearTimeout(e);
     }, [r, a]);
-    let u = i.useCallback(() => {
+    let u = l.useCallback(() => {
             d(!0);
         }, []),
-        h = i.useCallback(() => {
+        h = l.useCallback(() => {
             c.current && d(!1);
         }, []);
-    return (0, l.jsx)("img", { className: s, src: o ? t : n, alt: "", onMouseEnter: u, onMouseLeave: h });
+    return (0, i.jsx)("img", { className: s, src: o ? t : n, alt: "", onMouseEnter: u, onMouseLeave: h });
 }
-function A(e) {
-    let { imageUrl: t, animatedUrl: n, className: i, autoPlayOnMount: a = !0 } = e,
+function g(e) {
+    let { imageUrl: t, animatedUrl: n, className: l, autoPlayOnMount: a = !0 } = e,
         c = (0, s.bG)([r.Ay], () => r.Ay.useReducedMotion),
-        A = o.kt.useSetting(),
-        g = a && A && !c;
+        g = o.kt.useSetting(),
+        m = a && g && !c;
     return null != n && (0, d.LG)(n)
-        ? (0, l.jsx)(u, { src: n, className: i, autoPlayOnMount: g })
+        ? (0, i.jsx)(u, { src: n, className: l, autoPlayOnMount: m })
         : null != n
-          ? (0, l.jsx)(h, { animatedSrc: n, staticSrc: t, className: i, autoPlayOnMount: g }, n)
-          : (0, l.jsx)("img", { className: i, src: t, alt: "" });
+          ? (0, i.jsx)(h, { animatedSrc: n, staticSrc: t, className: l, autoPlayOnMount: m }, n)
+          : (0, i.jsx)("img", { className: l, src: t, alt: "" });
 }

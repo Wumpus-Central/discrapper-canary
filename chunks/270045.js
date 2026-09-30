@@ -21,8 +21,8 @@ var i = n(477900),
     S = n(957565),
     f = n(396813),
     p = n(859703),
-    g = n(738822),
-    D = n(104886),
+    D = n(738822),
+    g = n(104886),
     P = n(866157),
     h = n(18437),
     M = n(590202),
@@ -38,18 +38,18 @@ var i = n(477900),
     q = n(818348),
     B = n(375708);
 function X(e) {
-    let t = (0, s.bG)([p.A], () => p.A.getQuestPreviewOverride(g.uF.QUEST_BAR_V2), []),
-        n = (0, s.bG)([p.A], () => p.A.getQuestPreviewOverride(g.uF.ACTIVITY_PANEL), []),
-        T = (0, s.bG)([p.A], () => p.A.getQuestPreviewOverride(g.uF.QUEST_LIVE_STREAM), []),
-        m = (0, s.bG)([p.A], () => p.A.getQuestPreviewOverride(g.uF.MEMBERS_LIST), []),
+    let t = (0, s.bG)([p.A], () => p.A.getQuestPreviewOverride(D.uF.QUEST_BAR_V2), []),
+        n = (0, s.bG)([p.A], () => p.A.getQuestPreviewOverride(D.uF.ACTIVITY_PANEL), []),
+        T = (0, s.bG)([p.A], () => p.A.getQuestPreviewOverride(D.uF.QUEST_LIVE_STREAM), []),
+        m = (0, s.bG)([p.A], () => p.A.getQuestPreviewOverride(D.uF.MEMBERS_LIST), []),
         X = (0, L.vy)(e.questContent),
-        w = [g.uF.QUEST_BAR_V2, g.uF.QUEST_BAR].includes(e.questContent),
+        w = [D.uF.QUEST_BAR_V2, D.uF.QUEST_BAR].includes(e.questContent),
         F = (0, h.Ut)(),
         H = (0, U.go)(),
         V = (0, y.wr)(e.quest),
-        Y = !0 === e.showShareLink && (0, k.E0)(e.quest.config),
+        K = !0 === e.showShareLink && (0, k.E0)(e.quest.config),
         {
-            handleComplete: K,
+            handleComplete: Y,
             handleProgress: W,
             handleResetDismissibilityClick: Q,
             handleResetStatusClick: Z,
@@ -62,7 +62,7 @@ function X(e) {
             sourceQuestContent: e.sourceQuestContent,
         }),
         J = (0, v.Lk)({
-            isShareable: Y,
+            isShareable: K,
             questId: e.quest.id,
             trackingCtx: l.useMemo(
                 () => ({
@@ -88,7 +88,7 @@ function X(e) {
                     id: "delivery",
                     label: "Show in Quest Bar",
                     checked: t?.id === e.quest.id,
-                    action: () => z(g.uF.QUEST_BAR_V2),
+                    action: () => z(D.uF.QUEST_BAR_V2),
                 }),
             [z, e.quest.id, t?.id],
         ),
@@ -98,7 +98,7 @@ function X(e) {
                     id: "activity-panel",
                     label: "Show in Activity Panel",
                     checked: n?.id === e.quest.id,
-                    action: () => z(g.uF.ACTIVITY_PANEL),
+                    action: () => z(D.uF.ACTIVITY_PANEL),
                 }),
             [z, e.quest.id, n?.id],
         ),
@@ -108,7 +108,7 @@ function X(e) {
                     id: "channel-call-header",
                     label: "Show in Voice Channel Header",
                     checked: T?.id === e.quest.id,
-                    action: () => z(g.uF.QUEST_LIVE_STREAM),
+                    action: () => z(D.uF.QUEST_LIVE_STREAM),
                 }),
             [z, e.quest.id, T?.id],
         ),
@@ -118,7 +118,7 @@ function X(e) {
                     id: "members-list",
                     label: "Show in Members List",
                     checked: m?.id === e.quest.id,
-                    action: () => z(g.uF.MEMBERS_LIST),
+                    action: () => z(D.uF.MEMBERS_LIST),
                 }),
             [z, e.quest.id, m?.id],
         ),
@@ -147,7 +147,7 @@ function X(e) {
                             icon: d.W,
                             leadingAccessory: { type: "icon", icon: d.W },
                         }),
-                        Y &&
+                        K &&
                             (0, i.jsx)(E.Dr, {
                                 id: "share-link",
                                 label: B.intl.string(B.t.RDE0Sc),
@@ -172,7 +172,7 @@ function X(e) {
                                 id: "learn-more",
                                 label: B.intl.string(B.t["Ws2Bl+"]),
                                 action: function () {
-                                    ((0, D.E5)(D.kI.STEP_2_CLICKED_INTERNAL, "quest_entry_context_menu")
+                                    ((0, g.E5)(g.kI.STEP_2_CLICKED_INTERNAL, "quest_entry_context_menu")
                                         ? (0, R.r)({
                                               type: C.F.CLICK_INTERNAL,
                                               adCreativeType: r.p.QUEST,
@@ -218,7 +218,7 @@ function X(e) {
                                 id: "hide-entrypoint",
                                 label: B.intl.string(B.t.NN79E9),
                                 action: function () {
-                                    ((0, D.E5)(D.kI.STEP_2_CLICKED_INTERNAL, "quest_entry_context_menu")
+                                    ((0, g.E5)(g.kI.STEP_2_CLICKED_INTERNAL, "quest_entry_context_menu")
                                         ? (0, R.r)({
                                               type: C.F.CLICK_INTERNAL,
                                               adCreativeType: r.p.QUEST,
@@ -266,7 +266,7 @@ function X(e) {
                                     W(0.9 * Math.random() + 0.03);
                                 },
                             }),
-                            (0, i.jsx)(E.Dr, { id: "complete", label: B.intl.string(B.t.jQEfRT), action: K }),
+                            (0, i.jsx)(E.Dr, { id: "complete", label: B.intl.string(B.t.jQEfRT), action: Y }),
                             (0, x.g5)(e.quest) &&
                                 (0, i.jsxs)(E.Dr, {
                                     id: "console",
@@ -318,7 +318,7 @@ function w(e) {
         A = (0, U.go)(),
         I = l.useRef(null),
         N = l.useCallback(() => {
-            ((0, D.E5)(D.kI.STEP_2_CLICKED_INTERNAL, "quest_entry_context_menu_popout")
+            ((0, g.E5)(g.kI.STEP_2_CLICKED_INTERNAL, "quest_entry_context_menu_popout")
                 ? (0, R.r)({
                       type: C.F.CLICK_INTERNAL,
                       adCreativeType: r.p.QUEST,

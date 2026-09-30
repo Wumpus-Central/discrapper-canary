@@ -1,4 +1,4 @@
-l.d(n, { e: () => g, l: () => m });
+l.d(n, { e: () => g, l: () => f });
 var t = l(477900),
     i = l(582128),
     r = l(192308),
@@ -19,7 +19,7 @@ function g(e) {
         a = c({ userId: n, onClose: l });
     return (0, t.jsx)(o.FD, { variant: i, ...a, ...r });
 }
-function m(e) {
+function f(e) {
     let { userId: n, onClose: l, variant: i = "primary", ...r } = e,
         { text: a, ...s } = c({ userId: n, onClose: l });
     return (0, t.jsx)(o.q3, { tooltipText: a, "aria-label": a, variant: i, ...s, ...r });

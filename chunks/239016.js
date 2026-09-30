@@ -21,8 +21,8 @@ var i = n(477900),
     S = n(412260),
     f = n(852218),
     p = n(194261),
-    g = n(297264),
-    D = n(144165),
+    D = n(297264),
+    g = n(144165),
     P = n(341973);
 function h(e) {
     let { title: t, body: n, asset: l } = e;
@@ -41,8 +41,8 @@ function h(e) {
                         (0, i.jsxs)("div", {
                             className: P.yO,
                             children: [
-                                (0, i.jsx)(g.D, { variant: "heading-lg/semibold", color: "text-strong", children: t }),
-                                (0, i.jsx)(g.D, { variant: "heading-sm/medium", color: "text-subtle", children: n }),
+                                (0, i.jsx)(D.D, { variant: "heading-lg/semibold", color: "text-strong", children: t }),
+                                (0, i.jsx)(D.D, { variant: "heading-sm/medium", color: "text-subtle", children: n }),
                             ],
                         }),
                     ],
@@ -50,7 +50,7 @@ function h(e) {
                 null != l &&
                     (0, i.jsx)("div", {
                         className: P.R4,
-                        children: (0, i.jsx)(D._, {
+                        children: (0, i.jsx)(g._, {
                             src: l,
                             className: P.Ys,
                             width: 100,
@@ -99,7 +99,7 @@ function H() {
 function V() {
     return (0, y.i)("ThirdPartyPromotionPartnerConfigs") ? q.intl.string(q.t.nmvvaN) : q.intl.string(q.t.igiSKe);
 }
-let Y = {
+let K = {
     [f.KS]: {
         getLockedPreview: () => ({ title: H(), body: V(), asset: X }),
         landingUrl: "https://steelseries.com/",
@@ -174,11 +174,11 @@ let Y = {
         showSectionHeaders: !1,
     },
 };
-var K = n(428685);
+var Y = n(428685);
 function W() {
     return (0, i.jsx)(h, {
-        title: q.intl.string(K.default.oDfh3O),
-        body: q.intl.string(K.default.nDEuO1),
+        title: q.intl.string(Y.default.oDfh3O),
+        body: q.intl.string(Y.default.nDEuO1),
         asset: "https://cdn.discordapp.com/assets/content/7ce3849519c8d8cd4657b08bd2c689ea934bb60f53b959a04eb3b1db5d2f002a.png",
     });
 }
@@ -188,7 +188,7 @@ function z(e, t) {
     return (0, s.v)(e[0], t[0]) && (0, s.v)(e[1], t[1]);
 }
 function $(e, t, n) {
-    let i = Y[e.partnerId ?? ""],
+    let i = K[e.partnerId ?? ""],
         l = F(i?.outboundConfigs, e.outboundTitle);
     return {
         id: e.id,
@@ -217,7 +217,7 @@ function J(e) {
         m =
             ((t = a[0]?.partnerId ?? ""),
             (n = (0, r.bG)([N.A], () => (0, o.M)(N.A.theme))),
-            null == (s = Y[t]?.logos) ? void 0 : n ? s.dark : s.light);
+            null == (s = K[t]?.logos) ? void 0 : n ? s.dark : s.light);
     return (0, i.jsxs)("div", {
         children: [
             (0, i.jsx)(c.B, {
@@ -231,7 +231,7 @@ function J(e) {
                         {
                             recurrence:
                                 ((t = d[e.id] ?? null),
-                                (n = Y[e.partnerId ?? ""]),
+                                (n = K[e.partnerId ?? ""]),
                                 (l = F(n?.outboundConfigs, e.outboundTitle)),
                                 {
                                     ...$(e, t, _),
@@ -269,7 +269,7 @@ function J(e) {
 }
 function ee(e) {
     let { partnerId: t } = e,
-        n = Y[t]?.getLockedPreview?.() ?? null;
+        n = K[t]?.getLockedPreview?.() ?? null;
     return null == n ? null : (0, i.jsx)(h, { title: n.title, body: n.body, asset: n.asset });
 }
 function et(e) {
@@ -348,7 +348,7 @@ function ei(e) {
                     n = [];
                 return (
                     t.forEach((t) => {
-                        let i = Y[t]?.outboundConfigs;
+                        let i = K[t]?.outboundConfigs;
                         function l(e) {
                             return null != F(i, e.outboundTitle);
                         }
@@ -364,7 +364,7 @@ function ei(e) {
         { promotionsLoaded: R, claimedOutboundPromotionCodeMap: C } = (0, m.y7)();
     if (!R) return (0, i.jsx)(d.y, {});
     let O = t
-            .map((e) => Y[e])
+            .map((e) => K[e])
             .filter(Boolean)
             .every((e) => !1 !== e.showSectionHeaders),
         f = O ? { recurring: q.intl.string(G.default["9Y2p6p"]), oneTime: q.intl.string(G.default.Wm58LR) } : void 0,
@@ -373,7 +373,7 @@ function ei(e) {
             gap: 12,
             children: I.map((e) => {
                 let t = $(e, C[e.id] ?? null, _),
-                    n = F(Y[e.partnerId ?? ""]?.outboundConfigs, e.outboundTitle);
+                    n = F(K[e.partnerId ?? ""]?.outboundConfigs, e.outboundTitle);
                 return (0, i.jsx)(
                     U,
                     {

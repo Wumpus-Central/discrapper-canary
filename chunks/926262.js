@@ -22,10 +22,10 @@ function C(e) {
     let y = i.useCallback(() => {
             (C?.(), t());
         }, [C, t]),
-        _ = i.useCallback(() => {
+        v = i.useCallback(() => {
             (x?.(), t());
         }, [x, t]),
-        v = i.useRef(null);
+        _ = i.useRef(null);
     return (
         i.useEffect(() => {
             let e,
@@ -39,9 +39,9 @@ function C(e) {
                             (0, a.M)(t) ? j.dark() : j.light(),
                         ]);
                         l ||
-                            null == v.current ||
+                            null == _.current ||
                             (e = i.loadAnimation({
-                                container: v.current,
+                                container: _.current,
                                 renderer: "svg",
                                 loop: !0,
                                 autoplay: !0,
@@ -62,7 +62,7 @@ function C(e) {
                     (0, l.jsxs)("div", {
                         className: A.rf,
                         children: [
-                            null != j && (0, l.jsx)("div", { className: A.lY, ref: v }),
+                            null != j && (0, l.jsx)("div", { className: A.lY, ref: _ }),
                             (0, l.jsxs)("div", {
                                 className: A.Qs,
                                 children: [
@@ -83,7 +83,7 @@ function C(e) {
                                                         className: A.x6,
                                                         children: (0, l.jsx)(c.$, {
                                                             variant: "secondary",
-                                                            onClick: _,
+                                                            onClick: v,
                                                             text: p.intl.string(p.t.fsBWmS),
                                                         }),
                                                     }),

@@ -22,8 +22,8 @@ function S(e) {
     let I,
         j,
         y,
-        _,
         v,
+        _,
         b,
         N,
         T,
@@ -33,9 +33,9 @@ function S(e) {
         (I = (0, s.bG)([m.A], () => m.A.getLastMessage(S))),
         (j = I?.changelogId),
         (y = (0, s.bG)([c.default], () => c.default.locale)),
-        (_ = (0, s.bG)([h.A], () => h.A.getChangelog(j ?? "", y), [j, y])),
-        (v = (0, g.A)(t)),
-        (b = i.useRef(v ? Date.now() : null)),
+        (v = (0, s.bG)([h.A], () => h.A.getChangelog(j ?? "", y), [j, y])),
+        (_ = (0, g.A)(t)),
+        (b = i.useRef(_ ? Date.now() : null)),
         (N = (0, s.bG)([d.Ay], () => d.Ay.getUnreadCount(t), [t])),
         (T = i.useRef(N)),
         i.useEffect(() => {
@@ -43,32 +43,32 @@ function S(e) {
         }),
         i.useEffect(() => {
             b.current = Date.now();
-        }, [v]),
+        }, [_]),
         i.useEffect(() => {
-            v && null != j && o.A.fetchChangelog(j, y, !0);
-        }, [j, y, v]),
+            _ && null != j && o.A.fetchChangelog(j, y, !0);
+        }, [j, y, _]),
         i.useEffect(() => {
-            v &&
-                null != _ &&
+            _ &&
+                null != v &&
                 u.default.track(p.HAw.CHANGE_LOG_OPENED, {
-                    change_log_id: `${_.date}:${_.revision}`,
+                    change_log_id: `${v.date}:${v.revision}`,
                     unread_count: T.current,
                 });
-        }, [v, _]),
+        }, [_, v]),
         i.useEffect(() => {
             let e = b.current;
             return () => {
-                v &&
-                    null != _ &&
+                _ &&
+                    null != v &&
                     null != e &&
                     (u.default.track(p.HAw.CHANGE_LOG_CLOSED, {
                         seconds_open: Math.round((Date.now() - e) / 1e3),
-                        change_log_id: `${_.date}:${_.revision}`,
+                        change_log_id: `${v.date}:${v.revision}`,
                         unread_count: T.current,
                     }),
                     (b.current = 0));
             };
-        }, [v, _]));
+        }, [_, v]));
     let L = (0, g.A)(M.id),
         k = M.isSystemDM(),
         P = D && !k && !M.isMultiUserDM(),

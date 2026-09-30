@@ -1,6 +1,6 @@
-n.d(t, { Er: () => h, Kg: () => i, bQ: () => A, e$: () => l, xP: () => d });
-let l = "HangoutWindowPickerModal",
-    i = [
+n.d(t, { Er: () => h, Kg: () => l, bQ: () => g, e$: () => i, xP: () => d });
+let i = "HangoutWindowPickerModal",
+    l = [
         {
             gif: "https://cdn.discordapp.com/assets/content/4560eab7e3aecfcdaa9f9450560a00b4039915c24bee7731163e22519adf5198.gif",
             png: "https://cdn.discordapp.com/assets/content/ca10385209b572c1fc8d08335b96104d9a7ebba10b4ccbacea0e20a4ff86767a.png",
@@ -91,6 +91,6 @@ let d = [
 function h(e) {
     return null == e ? null : c.has(e) ? e : null;
 }
-function A(e) {
+function g(e) {
     return null == e ? null : u.has(e) ? e : null;
 }

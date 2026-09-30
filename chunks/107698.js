@@ -1,31 +1,31 @@
-l.d(t, { $C: () => f, $G: () => o, eQ: () => i, gc: () => d, gh: () => c, is: () => u, zy: () => m });
-var n = l(313265),
-    a = l(759967),
-    r = l(375708);
+n.d(t, { $C: () => f, $G: () => o, eQ: () => i, gc: () => d, gh: () => c, is: () => u, zy: () => h });
+var l = n(313265),
+    r = n(759967),
+    a = n(375708);
 function i(e) {
-    let t = (0, n.bF)(e);
-    return null != t ? r.intl.string(t) : e;
+    let t = (0, l.bF)(e);
+    return null != t ? a.intl.string(t) : e;
 }
-let s = { simple: a.default.Mo0a1m, balanced: a.default.dkt78K, complex: a.default.Ly6zYL };
+let s = { simple: r.default.Mo0a1m, balanced: r.default.dkt78K, complex: r.default.Ly6zYL };
 function u(e) {
-    return r.intl.string(s[e]);
+    return a.intl.string(s[e]);
 }
-function o(e, t, l) {
-    return e.models?.[l] ?? t?.[l]?.model ?? null;
+function o(e, t, n) {
+    return e.models?.[n] ?? t?.[n]?.model ?? null;
 }
 function d(e, t) {
     if (t === e.tier) return e;
-    let { thinking: l, ...n } = e;
-    return { ...n, tier: t };
+    let { thinking: n, ...l } = e;
+    return { ...l, tier: t };
 }
-function c(e, t, l) {
-    return { ...e, models: { ...e.models, [t]: l } };
+function c(e, t, n) {
+    return { ...e, models: { ...e.models, [t]: n } };
 }
-function f(e, t, l) {
-    let n = o(e, t, e.tier);
-    return null != n && l.find((e) => e.id === n)?.supports_fast === !0;
+function f(e, t, n) {
+    let l = o(e, t, e.tier);
+    return null != l && n.find((e) => e.id === l)?.supports_fast === !0;
 }
-function m(e) {
-    let { fast: t, ...l } = e;
-    return !0 === t ? { ...l, fast: !0 } : l;
+function h(e) {
+    let { fast: t, ...n } = e;
+    return !0 === t ? { ...n, fast: !0 } : n;
 }

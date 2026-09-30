@@ -1,4 +1,4 @@
-l.d(n, { A: () => f });
+l.d(n, { A: () => m });
 var t = l(477900),
     i = l(582128),
     r = l(17928),
@@ -9,11 +9,11 @@ var t = l(477900),
     u = l(652215),
     c = l(650583),
     g = l(375708),
-    m = l(759847);
-function f(e) {
-    let { autoFocus: n = !1, className: l, userId: f, onUpdate: p } = e,
+    f = l(759847);
+function m(e) {
+    let { autoFocus: n = !1, className: l, userId: m, onUpdate: p } = e,
         x = (0, r.bG)([d.A], () => d.A.hidePersonalInformation),
-        { loading: h, note: v } = (0, o.A)(f),
+        { loading: h, note: v } = (0, o.A)(m),
         A = i.useRef(null);
     return (i.useEffect(() => {
         if (!n || x) return;
@@ -26,13 +26,13 @@ function f(e) {
               className: l,
               children: (0, t.jsx)(a.y, {
                   ref: A,
-                  className: m.P,
+                  className: f.P,
                   disabled: h,
                   placeholder: h ? g.intl.string(g.t["WLKx/9"]) : g.intl.string(g.t.VBhOe2),
                   "aria-label": g.intl.string(g.t.PbMNh2),
                   onBlur: function (e) {
                       let n = e.currentTarget.value;
-                      (v ?? "") !== n && (p?.(), s.A.updateNote(f, n));
+                      (v ?? "") !== n && (p?.(), s.A.updateNote(m, n));
                   },
                   onKeyPress: function (e) {
                       e.key === c.dh.ENTER

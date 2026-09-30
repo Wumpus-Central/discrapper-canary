@@ -17,33 +17,33 @@ function r(e, t, n, r) {
         c = r.sourceMatch ?? "window",
         f = r.id ?? `${t}-${++l}-${Date.now()}`;
     return new Promise((l, h) => {
-        let p = 0,
-            _ = o,
+        let _ = 0,
+            p = o,
             g = window.setTimeout(() => {
                 (T(), h(new i.fq(t, r.timeoutMs)));
             }, r.timeoutMs),
-            w = null != r.retryMs ? window.setInterval(m, r.retryMs) : null;
+            w = null != r.retryMs ? window.setInterval(I, r.retryMs) : null;
         function E() {
             null != w && window.clearInterval(w);
         }
         function T() {
-            (window.clearTimeout(g), E(), window.removeEventListener("message", I));
+            (window.clearTimeout(g), E(), window.removeEventListener("message", m));
         }
-        function m() {
-            (p += 1) > 1 &&
+        function I() {
+            (_ += 1) > 1 &&
                 console.debug("[vibegrations] re-offering call to the preview frame", {
                     call: r.label ?? t,
                     id: f,
-                    attempt: p,
+                    attempt: _,
                 });
             let i = { type: u, id: f, ...n };
-            ((_ = e.contentWindow), e.contentWindow?.postMessage(i, s));
+            ((p = e.contentWindow), e.contentWindow?.postMessage(i, s));
         }
-        function I(e) {
-            ("window" === c ? e.source !== _ : e.origin !== s) ||
+        function m(e) {
+            ("window" === c ? e.source !== p : e.origin !== s) ||
                 ((0, i.YX)(e.data, d, f) ? E() : (0, i.YX)(e.data, a, f) && (T(), l(e.data)));
         }
-        (window.addEventListener("message", I), m());
+        (window.addEventListener("message", m), I());
     });
 }
 let l = 0;

@@ -1,4 +1,4 @@
-n.d(t, { $: () => K, D: () => Y });
+n.d(t, { $: () => Y, D: () => K });
 var i = n(477900),
     l = n(582128),
     r = n(536637),
@@ -21,8 +21,8 @@ var I = n(736653),
     S = n(281020),
     f = n(206828),
     p = n(49999),
-    g = n(121286),
-    D = n(375708),
+    D = n(121286),
+    g = n(375708),
     P = n(971656);
 let h =
     221552 == n.j
@@ -78,7 +78,7 @@ let h =
                           alt: x,
                           className: E()(P.tV, P.Y5),
                       }),
-                      D.intl.format(g.default.qV9zT6, {
+                      g.intl.format(D.default.qV9zT6, {
                           connectionName: U?.name,
                           orbsIconHook: () =>
                               (0, i.jsx)(A.C, {
@@ -94,12 +94,12 @@ let h =
                           },
                           className: P.NS,
                           noticeType: c,
-                          children: D.intl.string(g.default.ZeOhh9),
+                          children: g.intl.string(D.default.ZeOhh9),
                       }),
                       (0, i.jsx)(_.zr, {
                           onClick: () => r(p.i.USER_DISMISS),
                           className: P.go,
-                          children: D.intl.string(g.default["8qJAeT"]),
+                          children: g.intl.string(D.default["8qJAeT"]),
                       }),
                   ],
               });
@@ -149,7 +149,7 @@ let B =
                                         },
                                     });
                                 },
-                                text: D.intl.string(D.t.zLXssK),
+                                text: g.intl.string(g.t.zLXssK),
                             }),
                         ],
                     });
@@ -160,7 +160,7 @@ var X = n(745299),
     F = n(158045),
     H = n(826673),
     V = n(595529);
-function Y(e) {
+function K(e) {
     switch (e) {
         case q.kqX.PREMIUM_TIER_2_TRIAL_ENDING:
             let t = w.A.getAlmostExpiringTrialOffersForReminder([b.pe.TIER_2]);
@@ -177,9 +177,9 @@ function Y(e) {
             return { cooldownDurationMs: 1 / 0 };
     }
 }
-function K(e) {
+function Y(e) {
     let { dismissibleContent: t, noticeType: n } = e,
-        r = l.useMemo(() => Y(n), [n]),
+        r = l.useMemo(() => K(n), [n]),
         c = s()().add(5, "days").toDate(),
         [E, u] = (0, V.Bo)(t, r, p.m.NOTICE_BAR);
     if (null == E) return null;

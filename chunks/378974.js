@@ -117,7 +117,7 @@ function S(e) {
 }
 var f = n(880652),
     p = n(838353);
-function g(e) {
+function D(e) {
     let { question: t, questionId: n, value: l, onValueChange: r } = e,
         { selectedChoice: s, textInputs: a } = (function (e) {
             if (null == e || "" === e) return { selectedChoice: null, textInputs: {} };
@@ -169,7 +169,7 @@ function g(e) {
               }),
           });
 }
-function D(e) {
+function g(e) {
     let { question: t, questionId: n, value: l, onValueChange: r } = e,
         { selectedChoices: s, textInputs: a } = (function (e) {
             if (null == e || "" === e) return { selectedChoices: [], textInputs: {} };
@@ -236,8 +236,8 @@ function D(e) {
 function P(e) {
     let { question: t, questionId: n, value: l, onValueChange: r } = e;
     return t.Selector === f.BO.SINGLE_ANSWER
-        ? (0, i.jsx)(g, { question: t, questionId: n, value: l, onValueChange: r })
-        : (0, i.jsx)(D, { question: t, questionId: n, value: l, onValueChange: r });
+        ? (0, i.jsx)(D, { question: t, questionId: n, value: l, onValueChange: r })
+        : (0, i.jsx)(g, { question: t, questionId: n, value: l, onValueChange: r });
 }
 var h = n(103557),
     M = n(424349);
@@ -297,8 +297,8 @@ function j(e) {
         })(n),
         [O, m] = l.useState(C.blockId),
         [S, f] = l.useState(C.pageIndex),
-        [p, g] = l.useState(!1);
-    function D(e, n) {
+        [p, D] = l.useState(!1);
+    function g(e, n) {
         I(t, e, n);
     }
     let P = l.useCallback(
@@ -475,7 +475,7 @@ function j(e) {
                 }
                 return { blockId: null, pageIndex: 0, questionIds: [], isComplete: !0 };
             })(n, { blockId: O, pageIndex: S, responses: R });
-            (N(t, h), e.isComplete && c.Ay.submitSurveyResponse(t, R), m(e.blockId), f(e.pageIndex), g(e.isComplete));
+            (N(t, h), e.isComplete && c.Ay.submitSurveyResponse(t, R), m(e.blockId), f(e.pageIndex), D(e.isComplete));
         }, [n, O, S, R, t, h, N]);
     l.useEffect(() => {
         0 === h.length && M();
@@ -522,7 +522,7 @@ function j(e) {
                                         ? null
                                         : (0, i.jsx)(
                                               x,
-                                              { question: t, questionId: e, responses: R, onResponseChange: D },
+                                              { question: t, questionId: e, responses: R, onResponseChange: g },
                                               e,
                                           );
                                 }),

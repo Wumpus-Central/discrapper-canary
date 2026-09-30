@@ -1,15 +1,15 @@
-(n.d(t, { T: () => g, _: () => h }), n(321073));
+(n.d(t, { T: () => h, _: () => m }), n(321073));
 var i = n(582128),
-    r = n(17928),
-    l = n(945810),
+    l = n(17928),
+    r = n(945810),
     u = n(71393),
-    d = n(576705),
-    o = n(906786),
-    a = n(783791),
-    s = n(972786),
+    a = n(576705),
+    d = n(906786),
+    s = n(783791),
+    o = n(972786),
     c = n(637708),
     f = n(683180);
-function m(e, t) {
+function g(e, t) {
     return (
         e.nextExpiry === t.nextExpiry &&
         e.entries.length === t.entries.length &&
@@ -30,10 +30,10 @@ function m(e, t) {
 function p(e, t) {
     return e.length === t.length && e.every((e, n) => e === t[n]);
 }
-function g(e) {
+function h(e) {
     let [t, n] = i.useState(0),
-        { entries: d, nextExpiry: f } = (0, r.bG)(
-            [s.Ay, a.Ay, u.A, l.Bt],
+        { entries: a, nextExpiry: f } = (0, l.bG)(
+            [o.Ay, s.Ay, u.A, r.Bt],
             () =>
                 (function (e) {
                     let t = Date.now(),
@@ -41,49 +41,49 @@ function g(e) {
                     function i(t) {
                         let i = n.get(t);
                         if (null != i) return i;
-                        let r = (0, o.ix)({ guildId: t, location: e });
-                        return (n.set(t, r), r);
+                        let l = (0, d.ix)({ guildId: t, location: e });
+                        return (n.set(t, l), l);
                     }
-                    let r = new Set(),
-                        l = [],
-                        d = null;
+                    let l = new Set(),
+                        r = [],
+                        a = null;
                     function f(e) {
-                        if (r.has(e.id)) return;
+                        if (l.has(e.id)) return;
                         let n = (0, c.HC)(e);
                         if (null != n && !i(n)) return;
-                        r.add(e.id);
-                        let o = a.Ay.isThinking(e.id),
-                            s = a.Ay.getFinishedAt(e.id),
-                            f = (0, c.rs)({ thinking: o, finishedAt: s, now: t });
-                        if ("done" === f && null != s) {
-                            let e = s + 6e4;
-                            d = null == d ? e : Math.min(d, e);
+                        l.add(e.id);
+                        let d = s.Ay.isThinking(e.id),
+                            o = s.Ay.getFinishedAt(e.id),
+                            f = (0, c.rs)({ thinking: d, finishedAt: o, now: t });
+                        if ("done" === f && null != o) {
+                            let e = o + 6e4;
+                            a = null == a ? e : Math.min(a, e);
                         }
-                        let m = (null == n ? null : u.A.getGuild(n)) ?? null;
-                        l.push({
+                        let g = (null == n ? null : u.A.getGuild(n)) ?? null;
+                        r.push({
                             project: e,
                             projectId: e.id,
                             name: e.name,
                             guildId: n,
-                            guild: m,
-                            guildName: m?.name ?? null,
+                            guild: g,
+                            guildName: g?.name ?? null,
                             activity: f,
                             sortTime: (function (e, t) {
                                 if (null != t) return t;
                                 if (null == e.updated_at) return 0;
                                 let n = Date.parse(e.updated_at);
                                 return Number.isNaN(n) ? 0 : n;
-                            })(e, s),
+                            })(e, o),
                         });
                     }
-                    for (let e of s.Ay.getOwnedProjects()) f(e);
+                    for (let e of o.Ay.getOwnedProjects()) f(e);
                     for (let e of Object.values(u.A.getGuilds()))
-                        if (s.Ay.hasFetchedGuildProjects(e.id) && i(e.id))
-                            for (let t of s.Ay.getSharedProjects(e.id)) f(t);
-                    return { entries: (0, c.io)(l), nextExpiry: d };
+                        if (o.Ay.hasFetchedGuildProjects(e.id) && i(e.id))
+                            for (let t of o.Ay.getSharedProjects(e.id)) f(t);
+                    return { entries: (0, c.io)(r), nextExpiry: a };
                 })(e),
             [e, t],
-            m,
+            g,
         );
     return (
         i.useEffect(() => {
@@ -91,12 +91,12 @@ function g(e) {
             let e = setTimeout(() => n((e) => e + 1), Math.max(0, f - Date.now()));
             return () => clearTimeout(e);
         }, [f, n]),
-        d
+        a
     );
 }
-function h(e) {
-    return (0, r.bG)(
-        [u.A, l.Bt, d.A],
+function m(e) {
+    return (0, l.bG)(
+        [u.A, r.Bt, a.A],
         () =>
             Object.values(u.A.getGuilds())
                 .filter((t) => (0, f.pG)(t, e))

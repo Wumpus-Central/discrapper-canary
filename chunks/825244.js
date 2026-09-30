@@ -24,7 +24,7 @@ function S(e) {
         { channel: S } = e,
         I = (0, o.bG)([m.A], () => (null != S ? m.A.getGuild(S.getGuildId()) : null), [S]),
         j = (0, o.bG)([h.default], () => I?.ownerId === h.default.getId(), [I]),
-        { steps: y, shouldAnimate: _, isOldGuild: v } = (0, f.c)(S, I),
+        { steps: y, shouldAnimate: v, isOldGuild: _ } = (0, f.c)(S, I),
         { titleAnimatedStyle: b, opacities: N } =
             ((t = (0, u.A)(() => new r.A.Value(0))),
             (n = (0, u.A)(() => new r.A.Value(0))),
@@ -49,7 +49,7 @@ function S(e) {
                 ]).start();
             }, [n, t, s]),
             {
-                titleAnimatedStyle: _
+                titleAnimatedStyle: v
                     ? {
                           transform: [
                               { translateY: t.interpolate({ inputRange: [0, 1], outputRange: ["-20px", "0px"] }) },
@@ -65,7 +65,7 @@ function S(e) {
                 r.A.div,
                 {
                     className: E.cW,
-                    style: _ ? { opacity: N[t] } : {},
+                    style: v ? { opacity: N[t] } : {},
                     children: (0, l.jsx)(A.E, {
                         iconUrl: e.iconUrl,
                         header: e.title,
@@ -77,7 +77,7 @@ function S(e) {
             ),
         ),
         M = j ? x.intl.string(x.t["1ach9C"]) : x.intl.string(x.t["ezm+/j"]);
-    v && (M = x.intl.string(x.t["gwyU/J"]));
+    _ && (M = x.intl.string(x.t["gwyU/J"]));
     let R = `${g.A.getArticleURL(C.MVz.GUILD_GETTING_STARTED)}?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm`;
     return (0, l.jsx)(p.Ay, {
         channelId: S.id,

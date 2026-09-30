@@ -639,10 +639,10 @@ function e3(e) {
         itemIdPrefix: e$,
     });
 }
-var e6 = n(191023),
-    e8 = n(192308),
-    e7 = n(28863),
-    e5 = n(695366),
+var e8 = n(191023),
+    e5 = n(192308),
+    e6 = n(28863),
+    e7 = n(695366),
     e4 = n(834730),
     e9 = n(789645),
     te = n(565645),
@@ -667,7 +667,7 @@ function tu(e) {
             graphicPrimary:
                 null != t.emojiId || null != t.emojiName
                     ? (0, l.jsx)(te.A, { emojiId: t.emojiId, emojiName: t.emojiName, className: to.Zg })
-                    : (0, l.jsx)(e6.ImageIcon, { size: "md", color: "currentColor", className: to.Zg }),
+                    : (0, l.jsx)(e8.ImageIcon, { size: "md", color: "currentColor", className: to.Zg }),
             graphicSecondary: null != a ? (0, l.jsx)(w.A, { guild: a, shouldAnimate: !o && u }) : null,
             titlePrimary: t.name,
             titleSecondary: a?.name,
@@ -675,7 +675,7 @@ function tu(e) {
         });
     function m() {
         (i(),
-            (0, e8.openModalLazy)(async () => {
+            (0, e5.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
                     n.e("161411"),
                     n.e("498640"),
@@ -690,7 +690,7 @@ function tu(e) {
             null != c && (0, tr.isWindows)() && !p
                 ? eG.intl.format(eG.t.udMTth, {
                       keybind: (0, ta.dI)(c.shortcut, !0),
-                      openSettingsHook: (e, t) => (0, l.jsx)(e7.Anchor, { onClick: m, children: e }, t),
+                      openSettingsHook: (e, t) => (0, l.jsx)(e6.Anchor, { onClick: m, children: e }, t),
                   })
                 : null;
     return null == f
@@ -698,7 +698,7 @@ function tu(e) {
         : (0, l.jsxs)("div", {
               className: to.g,
               children: [
-                  (0, l.jsx)(e5.E, { size: "custom", width: 20, height: 20, color: "currentColor", className: to.QW }),
+                  (0, l.jsx)(e7.E, { size: "custom", width: 20, height: 20, color: "currentColor", className: to.QW }),
                   (0, l.jsx)(e4.E, { variant: "text-sm/medium", color: "text-default", className: to.L5, children: f }),
                   (0, l.jsx)(_.D, {
                       className: to.b,
@@ -716,7 +716,7 @@ var tc = n(817232),
     th = n(468689);
 function tp(e) {
     (th.default.open(e, ej.BEX.SOUNDBOARD),
-        (0, e8.openModalLazy)(async () => {
+        (0, e5.openModalLazy)(async () => {
             let { default: t } = await Promise.all([
                 n.e("860350"),
                 n.e("207998"),
@@ -1287,16 +1287,16 @@ function t_(e) {
             },
             [eH, f, B],
         ),
-        e6 = i.useCallback(() => {
+        e8 = i.useCallback(() => {
             let e = g.A.getSoundById("3");
             null != e && V(e);
         }, []),
-        e8 = i.useCallback(() => {
+        e5 = i.useCallback(() => {
             let e = (0, G.Dd)(eO.PremiumTypes.TIER_2);
-            return eG.intl.format(eG.t["tw/SSq"], { nitroTierName: e, onClick: e6 });
-        }, [e6]),
-        e7 = i.useCallback((e) => (e2(e, t) ? tE : 32), [t, e2]),
-        e5 = i.useCallback(
+            return eG.intl.format(eG.t["tw/SSq"], { nitroTierName: e, onClick: e8 });
+        }, [e8]),
+        e6 = i.useCallback((e) => (e2(e, t) ? tE : 32), [t, e2]),
+        e7 = i.useCallback(
             (e) => {
                 let t = e === eH.length - 1;
                 return ez && t ? 70 : eK && e === eW ? 20 : 0;
@@ -1403,7 +1403,7 @@ function t_(e) {
                 ez
                     ? (0, l.jsx)(ee.d, {
                           showUpsell: eB,
-                          text: e8(),
+                          text: e5(),
                           button: ts(),
                           buttonAnalyticsObject: { section: ej.JJy.SOUND_PICKER_FLOATING_UPSELL },
                           leadingAction: (0, l.jsx)(en.l, {
@@ -1414,7 +1414,7 @@ function t_(e) {
                           }),
                       })
                     : null,
-            [e8, ts, ez, eB],
+            [e5, ts, ez, eB],
         ),
         ta = i.useCallback(
             (e) =>
@@ -1472,8 +1472,8 @@ function t_(e) {
                     renderCategoryList: ti,
                     renderHeaderAccessories: tl,
                     rowHeight: 48,
-                    sectionHeaderHeight: e7,
-                    sectionFooterHeight: e5,
+                    sectionHeaderHeight: e6,
+                    sectionFooterHeight: e7,
                     itemNodeWidth: 150,
                     gridNavigatorId: Z,
                     renderEmptySearchState: tv,

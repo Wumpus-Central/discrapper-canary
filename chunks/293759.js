@@ -443,8 +443,8 @@ var ez = n(404778),
     e2 = n(931991),
     e3 = n(473145),
     e8 = n(625633),
-    e6 = n(136123);
-let e5 = function (e) {
+    e5 = n(136123);
+let e6 = function (e) {
     let { className: t, guildId: n, channel: s, shouldTrackUpsellViewed: a, setTrackedUpsellViewed: o } = e,
         { location: u } = (0, w.p)(),
         { analyticsLocations: c } = (0, D.Ay)(),
@@ -467,13 +467,13 @@ let e5 = function (e) {
     null != m && h)
         ? p
             ? (0, l.jsxs)("div", {
-                  className: r()(e6.UX, t),
+                  className: r()(e5.UX, t),
                   onKeyDown: (e) => e.stopPropagation(),
                   children: [
-                      (0, l.jsx)(eX.v, { size: "md", color: "currentColor", className: e6.Kk }),
+                      (0, l.jsx)(eX.v, { size: "md", color: "currentColor", className: e5.Kk }),
                       (0, l.jsx)(ek.E, {
                           color: "interactive-text-default",
-                          className: e6.rf,
+                          className: e5.rf,
                           variant: "text-sm/normal",
                           children: eE.intl.format(eE.t.AXWla1, { count: (0, e3.aG)(eA.TVA.TIER_1) }),
                       }),
@@ -493,19 +493,19 @@ let e5 = function (e) {
                   ],
               })
             : (0, l.jsxs)("div", {
-                  className: r()(e6.UX, t),
+                  className: r()(e5.UX, t),
                   onKeyDown: (e) => e.stopPropagation(),
                   children: [
                       (0, l.jsx)(eo.t, {
                           size: "custom",
                           color: "currentColor",
-                          className: e6.Kk,
+                          className: e5.Kk,
                           width: 20,
                           height: 20,
                       }),
                       (0, l.jsx)(ek.E, {
                           color: "interactive-text-default",
-                          className: e6.rf,
+                          className: e5.rf,
                           variant: "text-sm/normal",
                           children: eE.intl.string(eE.t.S83wgh),
                       }),
@@ -1152,7 +1152,7 @@ let tM = i.forwardRef(function (e, t) {
                                     n.type !== en.Z2.EMPTY_GUILD_UPSELL || i
                                         ? null
                                         : (0, l.jsx)(
-                                              e5,
+                                              e6,
                                               {
                                                   className: tm.Ij,
                                                   guildId: n.id,
@@ -1467,8 +1467,8 @@ let t$ = (0, q.xI)(M.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
     t2 = (0, q.xI)(M.A.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS),
     t3 = (0, q.xI)(M.A.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS_SMALL),
     t8 = O()(et.Qz, 200),
-    t6 = O()(et.HA, 200),
-    t5 = i.forwardRef(function (e, t) {
+    t5 = O()(et.HA, 200),
+    t6 = i.forwardRef(function (e, t) {
         let { containerWidth: s, channel: r, onSelectSticker: a, closePopout: o } = e,
             u = tk.useConfig({ location: "StickerPicker" }).padding,
             c = W("web.StickerPicker"),
@@ -1670,7 +1670,7 @@ let t$ = (0, q.xI)(M.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 ("" === y.current && "" !== E && (0, et.Fg)(), (y.current = E));
             }, [E]),
             i.useEffect(() => {
-                0 === J ? t8(E) : t6(E, J, I);
+                0 === J ? t8(E) : t5(E, J, I);
             }, [E, J, I]),
             i.useLayoutEffect(() => {
                 A.current?.focus();
@@ -1733,7 +1733,7 @@ let t$ = (0, q.xI)(M.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 id: eB.GX,
                 "aria-labelledby": eB.LD,
                 role: "tabpanel",
-                children: e.isLoading ? (0, l.jsx)(k.y, { className: tJ.Mz }) : (0, l.jsx)(t5, { ...e, ref: t }),
+                children: e.isLoading ? (0, l.jsx)(k.y, { className: tJ.Mz }) : (0, l.jsx)(t6, { ...e, ref: t }),
             })
         );
     });

@@ -429,13 +429,13 @@ var eO = i(721932),
     e1 = i(666810),
     e8 = i(248550),
     e2 = i(419731),
-    e7 = i(451395),
-    e5 = i(823016),
+    e5 = i(451395),
+    e7 = i(823016),
     e3 = i(100741);
 function e4(e) {
     let { item: t, index: i, wishlistId: l, onReorder: s, children: a } = e,
-        { manageFocusOnReorder: r } = (0, e5.r)();
-    return (0, n.jsx)(e7.mG, {
+        { manageFocusOnReorder: r } = (0, e7.r)();
+    return (0, n.jsx)(e5.mG, {
         index: i,
         itemId: String(t.skuId),
         listType: String(l),
@@ -464,14 +464,14 @@ let e6 = l.memo(function (e) {
             isNew: u,
             onClick: g,
         } = e,
-        { registerDragHandleRef: m } = (0, e5.r)(),
+        { registerDragHandleRef: m } = (0, e7.r)(),
         x = l.useCallback(() => {
             g(t.skuId);
         }, [g, t.skuId]),
         f = l.useMemo(
             () =>
                 r
-                    ? (0, n.jsx)(e7.jV, {
+                    ? (0, n.jsx)(e5.jV, {
                           buttonRef: m(String(t.skuId)),
                           className: e3.BU,
                           onFocus: (e) => e.stopPropagation(),
@@ -541,7 +541,7 @@ function e9(e) {
             ),
         ),
     });
-    return a ? (0, n.jsx)(e5.B, { emptyListFallbackRef: null, children: f }) : f;
+    return a ? (0, n.jsx)(e7.B, { emptyListFallbackRef: null, children: f }) : f;
 }
 function te(e) {
     let t = eB.default.getCurrentUser()?.id,
@@ -1256,7 +1256,7 @@ function t2(e) {
         ],
     });
 }
-function t7(e) {
+function t5(e) {
     let { profileOwner: t, guildId: i } = e,
         s = l.useRef(null);
     (0, eK.i)({ containerRef: s, itemType: "WISHLIST_ITEM" });
@@ -1362,10 +1362,10 @@ function t7(e) {
         ],
     });
 }
-var t5 = i(131058);
+var t7 = i(131058);
 function t3(e) {
     let { children: t, className: i, scrollerRef: l, ...s } = e;
-    return (0, n.jsx)(r.Ip, { ref: l, className: a()(t5.gN, i), fade: !0, ...s, children: t });
+    return (0, n.jsx)(r.Ip, { ref: l, className: a()(t7.gN, i), fade: !0, ...s, children: t });
 }
 function t4(e) {
     let { user: t, currentUser: i, section: l, displayProfile: s, guildId: a, channelId: r, onClose: o } = e;
@@ -1378,7 +1378,7 @@ function t4(e) {
             : l === en.RP.WIDGETS
               ? (0, n.jsx)(eI.A, { user: t, guildId: a, channelId: r })
               : l === en.RP.WISHLIST
-                ? (0, n.jsx)(t7, { profileOwner: t, guildId: a })
+                ? (0, n.jsx)(t5, { profileOwner: t, guildId: a })
                 : null;
 }
 function t6(e) {
@@ -1405,12 +1405,12 @@ function t6(e) {
     return (
         T.section !== k && y(T.section),
         (0, n.jsxs)("div", {
-            className: t5.kL,
+            className: t7.kL,
             children: [
                 C && (0, n.jsx)(x.kM, { location: "UserProfileModalV2Tabs" }),
                 (0, n.jsx)(r.Ip, {
                     orientation: "horizontal",
-                    className: t5.gU,
+                    className: t7.gU,
                     fade: !0,
                     scrollbarGutter: !1,
                     children: (0, n.jsx)(o.V, {
@@ -1426,7 +1426,7 @@ function t6(e) {
                             (0, n.jsxs)(
                                 o.V.Item,
                                 {
-                                    className: t5.YU,
+                                    className: t7.YU,
                                     id: e.section,
                                     "aria-label":
                                         !0 === e.showNewContentDot
@@ -1434,7 +1434,7 @@ function t6(e) {
                                             : e.text,
                                     children: [
                                         e.text,
-                                        !0 === e.showNewContentDot && (0, n.jsx)(p.A, { className: t5.Pf }),
+                                        !0 === e.showNewContentDot && (0, n.jsx)(p.A, { className: t7.Pf }),
                                     ],
                                 },
                                 e.section,
@@ -1445,7 +1445,7 @@ function t6(e) {
                 (0, n.jsx)(o.V.Panel, {
                     id: T.section,
                     "aria-label": T.text,
-                    className: t5.NM,
+                    className: t7.NM,
                     children: (0, n.jsx)(d.F, {
                         component: (0, n.jsx)(c.A, { children: (0, n.jsx)(d.H, { children: T.text }) }),
                         children: (0, n.jsx)(t4, {

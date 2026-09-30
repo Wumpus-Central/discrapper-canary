@@ -21,8 +21,8 @@ var l,
     I = n(554146),
     j = n(826673),
     y = n(367727),
-    _ = n(597643),
-    v = n(31717),
+    v = n(597643),
+    _ = n(31717),
     b = n(49999);
 let N = I.M.SCHEDULED_MESSAGES_DRAFT_COACHMARK;
 var T = n(566908),
@@ -106,7 +106,7 @@ var ea = n(661531),
         l),
     ej = n(412136);
 let ey = /(.*)```(\w+)\n(.*)```(.*)/s;
-function e_(e) {
+function ev(e) {
     let {
             channel: t,
             options: l,
@@ -382,7 +382,7 @@ function e_(e) {
         })
     );
 }
-var ev = n(696016),
+var e_ = n(696016),
     eb = n(657851);
 let eN = s.memo(function (e) {
     let {
@@ -466,7 +466,7 @@ let eN = s.memo(function (e) {
                         picker: { onPick: (e) => ee({ clips: [e] }), action: C.qh.SHARE, allowMultiSelect: !0 },
                     });
             },
-            { modalKey: ev.nm },
+            { modalKey: e_.nm },
         ),
             el(null));
     }
@@ -587,8 +587,8 @@ let eN = s.memo(function (e) {
         { isCoachmarkVisible: ek, dismissCoachmark: eP } = (function (e) {
             let { channel: t, draftText: n, isEligible: l } = e,
                 i = (0, j.HX)(N),
-                a = (0, o.bG)([v.A], () => null != v.A.getScheduledMessage(t.id)),
-                r = (0, o.bG)([_.A], () => _.A.isConnected()),
+                a = (0, o.bG)([_.A], () => null != _.A.getScheduledMessage(t.id)),
+                r = (0, o.bG)([v.A], () => v.A.isConnected()),
                 c = l && n.trim().length > 10 && !a && r,
                 [d, u] = s.useState(!1),
                 h = d && c,
@@ -627,7 +627,7 @@ let eN = s.memo(function (e) {
             },
             renderPopout: (e) => {
                 if ("attachMenu" === en)
-                    return (0, i.jsx)(e_, {
+                    return (0, i.jsx)(ev, {
                         ...e,
                         onClose: () => el(null),
                         options: eL,

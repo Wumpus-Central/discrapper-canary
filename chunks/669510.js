@@ -5,8 +5,8 @@ var l = n(477900),
     i = n.n(a),
     s = n(834730),
     o = n(580630),
-    c = n(777485),
-    u = n(564082);
+    u = n(777485),
+    c = n(564082);
 function d(e) {
     let {
             label: t,
@@ -16,17 +16,17 @@ function d(e) {
             showTotalWhenCollapsed: m = !1,
             lineItems: x,
             intervalType: f,
-            intervalCount: h,
-            currency: p,
+            intervalCount: p,
+            currency: h,
             defaultExpanded: v = !1,
         } = e,
         [j, g] = r.useState(v),
         E = r.useMemo(() => {
             let e = x.reduce((e, t) => e + t.amount, 0),
-                t = (0, o.$g)(e, p);
-            return (0, o.CE)(t, f, h);
-        }, [x, p, f, h]),
-        b = (0, l.jsxs)(c.h, {
+                t = (0, o.$g)(e, h);
+            return (0, o.CE)(t, f, p);
+        }, [x, h, f, p]),
+        N = (0, l.jsxs)(u.h, {
             label: t,
             defaultExpanded: v,
             isDisabled: x.length <= 0,
@@ -37,12 +37,12 @@ function d(e) {
             children: [
                 x.map((e) => {
                     let { formatWithoutRate: t, amount: n, ...r } = e,
-                        a = (0, o.$g)(n, p),
-                        i = t ? a : (0, o.CE)(a, f, h);
-                    return (0, l.jsx)(c.i, { value: i, ...r }, r.id);
+                        a = (0, o.$g)(n, h),
+                        i = t ? a : (0, o.CE)(a, f, p);
+                    return (0, l.jsx)(u.i, { value: i, ...r }, r.id);
                 }),
-                (0, l.jsx)("div", { className: u.m }),
-                (0, l.jsx)(c.i, {
+                (0, l.jsx)("div", { className: c.m }),
+                (0, l.jsx)(u.i, {
                     label: n ?? t,
                     labelSubText: a,
                     value: E,
@@ -52,5 +52,5 @@ function d(e) {
                 }),
             ],
         });
-    return (0, l.jsx)("div", { className: i()({ [u.k]: j }), children: b });
+    return (0, l.jsx)("div", { className: i()({ [c.k]: j }), children: N });
 }

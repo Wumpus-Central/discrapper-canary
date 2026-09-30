@@ -1,26 +1,26 @@
-l.d(t, { Ay: () => p, kn: () => g, u1: () => x });
-var n = l(477900),
-    a = l(582128),
-    r = l(691885),
-    i = l(193249),
-    s = l(834730),
-    u = l(673724),
-    o = l(107698),
-    d = l(313265),
-    c = l(704855),
-    f = l(759967),
-    m = l(375708),
-    h = l(425721);
-function g(e, t) {
-    let [l, n] = a.useState(null),
-        [r, i] = a.useState(e);
+n.d(t, { Ay: () => g, kn: () => p, u1: () => x });
+var l = n(477900),
+    r = n(582128),
+    a = n(691885),
+    i = n(193249),
+    s = n(834730),
+    u = n(673724),
+    o = n(107698),
+    d = n(313265),
+    c = n(704855),
+    f = n(759967),
+    h = n(375708),
+    m = n(425721);
+function p(e, t) {
+    let [n, l] = r.useState(null),
+        [a, i] = r.useState(e);
     return (
-        e !== r && (i(e), n(null)),
+        e !== a && (i(e), l(null)),
         [
-            l ?? e,
-            a.useCallback(
+            n ?? e,
+            r.useCallback(
                 (e) => {
-                    (n(e), t(e));
+                    (l(e), t(e));
                 },
                 [t],
             ),
@@ -28,42 +28,42 @@ function g(e, t) {
     );
 }
 function x(e) {
-    let { settings: t, tiers: l, choices: s, disabled: u, onChange: c } = e,
-        h = a.useMemo(
+    let { settings: t, tiers: n, choices: s, disabled: u, onChange: c } = e,
+        m = r.useMemo(
             () => s.main.map((e) => ({ id: e.id, label: e.label, value: e.id, description: d.oU[e.provider] })),
             [s.main],
         ),
-        g = a.useMemo(() => s.thinking.map((e) => ({ id: e, label: d.hW[e] ?? e, value: e })), [s.thinking]);
+        p = r.useMemo(() => s.thinking.map((e) => ({ id: e, label: d.hW[e] ?? e, value: e })), [s.thinking]);
     function x(e) {
         c((0, o.zy)(e));
     }
-    let p = (0, o.$G)(t, l, t.tier);
-    return (0, n.jsxs)(n.Fragment, {
+    let g = (0, o.$G)(t, n, t.tier);
+    return (0, l.jsxs)(l.Fragment, {
         children: [
-            null != p
-                ? (0, n.jsx)(r.l, {
-                      label: m.intl.string(f.default["9FRudW"]),
-                      options: h,
-                      value: p,
+            null != g
+                ? (0, l.jsx)(a.l, {
+                      label: h.intl.string(f.default["9FRudW"]),
+                      options: m,
+                      value: g,
                       onSelectionChange: (e) => x((0, o.gh)(t, t.tier, e)),
                       selectionMode: "single",
                       disabled: u,
                       fullWidth: !0,
                   })
                 : null,
-            (0, n.jsx)(r.l, {
-                label: m.intl.string(f.default["4AsQHS"]),
-                options: g,
-                value: t.thinking ?? l?.[t.tier]?.thinking ?? "",
+            (0, l.jsx)(a.l, {
+                label: h.intl.string(f.default["4AsQHS"]),
+                options: p,
+                value: t.thinking ?? n?.[t.tier]?.thinking ?? "",
                 onSelectionChange: (e) => x({ ...t, thinking: e }),
                 selectionMode: "single",
                 disabled: u,
                 fullWidth: !0,
             }),
-            (0, o.$C)(t, l, s.main)
-                ? (0, n.jsx)(i.d, {
-                      label: m.intl.string(f.default.SYLSgx),
-                      description: m.intl.string(f.default.HITWAI),
+            (0, o.$C)(t, n, s.main)
+                ? (0, l.jsx)(i.d, {
+                      label: h.intl.string(f.default.SYLSgx),
+                      description: h.intl.string(f.default.HITWAI),
                       checked: !0 === t.fast,
                       disabled: u,
                       onChange: (e) => x({ ...t, fast: e }),
@@ -72,25 +72,25 @@ function x(e) {
         ],
     });
 }
-function p(e) {
-    let { settings: t, tiers: l, choices: a, disabled: r, onChange: i } = e,
+function g(e) {
+    let { settings: t, tiers: n, choices: r, disabled: a, onChange: i } = e,
         d = u.ks.indexOf(t.tier);
-    return (0, n.jsxs)("div", {
-        className: h.OA,
+    return (0, l.jsxs)("div", {
+        className: m.OA,
         children: [
-            (0, n.jsxs)("div", {
-                className: h.hs,
+            (0, l.jsxs)("div", {
+                className: m.hs,
                 children: [
-                    (0, n.jsxs)("div", {
-                        className: h.UT,
+                    (0, l.jsxs)("div", {
+                        className: m.UT,
                         children: [
-                            (0, n.jsx)(s.E, {
+                            (0, l.jsx)(s.E, {
                                 tag: "span",
                                 variant: "text-md/medium",
                                 color: "text-default",
-                                children: m.intl.string(f.default.GDs9Vq),
+                                children: h.intl.string(f.default.GDs9Vq),
                             }),
-                            (0, n.jsx)(s.E, {
+                            (0, l.jsx)(s.E, {
                                 tag: "span",
                                 variant: "text-sm/normal",
                                 color: "text-muted",
@@ -98,36 +98,36 @@ function p(e) {
                             }),
                         ],
                     }),
-                    (0, n.jsxs)("div", {
-                        className: h.Nb,
+                    (0, l.jsxs)("div", {
+                        className: m.Nb,
                         children: [
-                            (0, n.jsx)(s.E, {
+                            (0, l.jsx)(s.E, {
                                 tag: "span",
                                 variant: "text-sm/medium",
                                 color: "text-subtle",
-                                children: m.intl.string(f.default["5DOL2g"]),
+                                children: h.intl.string(f.default["5DOL2g"]),
                             }),
-                            (0, n.jsx)(s.E, {
+                            (0, l.jsx)(s.E, {
                                 tag: "span",
                                 variant: "text-sm/medium",
                                 color: "text-subtle",
-                                children: m.intl.string(f.default.OJIfkn),
+                                children: h.intl.string(f.default.OJIfkn),
                             }),
                         ],
                     }),
-                    (0, n.jsx)(c.A, {
+                    (0, l.jsx)(c.A, {
                         activeIndex: d,
                         stops: u.ks.map(o.eQ),
-                        ariaLabel: m.intl.string(f.default.GDs9Vq),
-                        disabled: r,
+                        ariaLabel: h.intl.string(f.default.GDs9Vq),
+                        disabled: a,
                         onSelect: function (e) {
-                            let l = u.ks[e];
-                            null != l && l !== t.tier && i((0, o.zy)((0, o.gc)(t, l)));
+                            let n = u.ks[e];
+                            null != n && n !== t.tier && i((0, o.zy)((0, o.gc)(t, n)));
                         },
                     }),
                 ],
             }),
-            (0, n.jsx)(x, { settings: t, tiers: l, choices: a, disabled: r, onChange: i }),
+            (0, l.jsx)(x, { settings: t, tiers: n, choices: r, disabled: a, onChange: i }),
         ],
     });
 }

@@ -5,8 +5,8 @@ var l = n(477900),
     i = n(866665),
     s = n(290136),
     o = n(99018),
-    c = n(407815),
-    u = n(160844),
+    u = n(407815),
+    c = n(160844),
     d = n(559106),
     m = n(847374),
     x = n(556995);
@@ -14,11 +14,11 @@ function f(e) {
     let { children: t } = e;
     return (0, l.jsx)(o.kS, { className: x.nd, children: t });
 }
-function h(e) {
+function p(e) {
     let { children: t, ...n } = e,
-        { isDisabled: r } = (0, c.CC)(u.k, "trigger");
+        { isDisabled: r } = (0, u.CC)(c.k, "trigger");
     return (0, l.jsx)(d.vN, {
-        children: (0, l.jsx)(u.$, {
+        children: (0, l.jsx)(c.$, {
             slot: "trigger",
             className: x.hZ,
             children: (0, l.jsxs)(a.E, {
@@ -29,7 +29,7 @@ function h(e) {
         }),
     });
 }
-var p = n(423389);
+var h = n(423389);
 function v(e) {
     let {
             label: t,
@@ -37,9 +37,9 @@ function v(e) {
             onExpandedChange: a,
             isDisabled: i = !1,
             collapsedContent: s,
-            children: c,
+            children: u,
         } = e,
-        [u, d] = r.useState(n),
+        [c, d] = r.useState(n),
         m = r.useCallback(
             (e) => {
                 (d(e), null != a && a(e));
@@ -52,13 +52,13 @@ function v(e) {
         onExpandedChange: m,
         children: [
             (0, l.jsxs)("div", {
-                className: p.wx,
+                className: h.wx,
                 children: [
-                    (0, l.jsx)(h, { variant: "text-md/medium", color: u ? "text-strong" : "text-muted", children: t }),
-                    (!u || i) && s,
+                    (0, l.jsx)(p, { variant: "text-md/medium", color: c ? "text-strong" : "text-muted", children: t }),
+                    (!c || i) && s,
                 ],
             }),
-            (0, l.jsx)(f, { children: (0, l.jsx)("div", { className: p.CS, children: c }) }),
+            (0, l.jsx)(f, { children: (0, l.jsx)("div", { className: h.CS, children: u }) }),
         ],
     });
 }
@@ -67,38 +67,38 @@ function j(e) {
             label: t,
             labelSubText: n,
             value: o,
-            color: c = "text-muted",
-            valueColor: u = "text-muted",
+            color: u = "text-muted",
+            valueColor: c = "text-muted",
             valueIcon: d,
             icon: m,
             tooltip: x,
             tooltipAriaLabel: f,
-            subText: h,
+            subText: p,
             subTextColor: v = "text-muted",
             subTextHasStrikethrough: j,
         } = e,
         g = r.useMemo(() => {
             let e = (0, l.jsxs)(a.E, {
                 variant: "text-md/normal",
-                color: u,
-                className: p.U4,
+                color: c,
+                className: h.U4,
                 children: [null != d && (0, l.jsx)(d, { size: "xs" }), o],
             });
-            return null == h
+            return null == p
                 ? e
                 : (0, l.jsxs)("div", {
-                      className: p.Lm,
+                      className: h.Lm,
                       children: [
                           e,
                           (0, l.jsx)(a.E, {
                               variant: "text-xs/medium",
                               color: v,
-                              className: j ? p.tP : void 0,
-                              children: h,
+                              className: j ? h.tP : void 0,
+                              children: p,
                           }),
                       ],
                   });
-        }, [o, d, h, j, u, v]),
+        }, [o, d, p, j, c, v]),
         E = r.useMemo(
             () =>
                 null == n
@@ -112,12 +112,12 @@ function j(e) {
             [t, n],
         );
     return (0, l.jsxs)("div", {
-        className: p.Yn,
+        className: h.Yn,
         children: [
             (0, l.jsxs)(a.E, {
                 variant: "text-md/normal",
-                color: c,
-                className: p.yB,
+                color: u,
+                className: h.yB,
                 children: [
                     m,
                     E,

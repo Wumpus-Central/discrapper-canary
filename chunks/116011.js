@@ -21,8 +21,8 @@ var i,
     S = n(264779),
     f = n(962644),
     p = n(852218),
-    g = n(652215),
-    D = n(810889),
+    D = n(652215),
+    g = n(810889),
     P = n(375708),
     h = n(341973);
 function M() {
@@ -35,7 +35,7 @@ function M() {
                 variant: "text-sm/normal",
                 color: "text-muted",
                 className: h.kT,
-                children: P.intl.format(D.default["65EEvD"], { days: t }),
+                children: P.intl.format(g.default["65EEvD"], { days: t }),
             }),
             (0, l.jsx)(N.Ay, {
                 progress: e,
@@ -62,7 +62,7 @@ let y = (e) => {
                 onClick: () => {
                     (navigator.clipboard.writeText(t.code),
                         A(i),
-                        R.default.track(g.HAw.THIRD_PARTY_PARTNER_CTA_CLICKED, {
+                        R.default.track(D.HAw.THIRD_PARTY_PARTNER_CTA_CLICKED, {
                             partner: t.partnerId,
                             cta_type: "copy code",
                             promotion: t.outboundTitle,
@@ -96,8 +96,8 @@ let y = (e) => {
                             P.intl.formatToPlainString(P.t.DF68t7, { redemptionURL: t.redemptionURL }),
                         onClick: () => {
                             (window.open(t.redemptionURL, "_blank"),
-                                R.default.track(g.HAw.RECURRING_PROMOTION_CLAIMED),
-                                R.default.track(g.HAw.THIRD_PARTY_PARTNER_CTA_CLICKED, {
+                                R.default.track(D.HAw.RECURRING_PROMOTION_CLAIMED),
+                                R.default.track(D.HAw.THIRD_PARTY_PARTNER_CTA_CLICKED, {
                                     partner: t.partnerId,
                                     cta_type: "visit store",
                                     promotion: t.outboundTitle,
@@ -211,7 +211,7 @@ function k(e) {
                                                 color: "text-subtle",
                                                 children: m
                                                     ? P.intl.format(P.t.i2EuFO, {
-                                                          helpdeskArticle: O.A.getArticleURL(g.MVz.RECURRING_PROMOTION),
+                                                          helpdeskArticle: O.A.getArticleURL(D.MVz.RECURRING_PROMOTION),
                                                       })
                                                     : f
                                                       ? t.body
@@ -225,7 +225,7 @@ function k(e) {
                                                     color: "text-subtle",
                                                     children: P.intl.format(t.bodyNote, {
                                                         partnerName: p.CD[t.partnerId].label,
-                                                        helpdeskArticle: O.A.getArticleURL(g.MVz.RECURRING_PROMOTION),
+                                                        helpdeskArticle: O.A.getArticleURL(D.MVz.RECURRING_PROMOTION),
                                                     }),
                                                 }),
                                         ],

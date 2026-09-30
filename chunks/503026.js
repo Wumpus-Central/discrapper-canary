@@ -10,8 +10,8 @@ var i = l(17928),
     u = l(1659),
     c = l(166005),
     g = l(900179),
-    m = l(518477),
-    f = l(652215),
+    f = l(518477),
+    m = l(652215),
     p = l(375708);
 function x(e) {
     let { userId: n, guildId: l, ...x } = e,
@@ -20,13 +20,13 @@ function x(e) {
         A = (0, i.bG)([r.Ay], () => r.Ay.getMember(l, n)),
         b = A?.roles,
         j = (0, i.yK)([a.A], () => a.A.getManyRoles(l, b ?? []).sort(u.m), [b, l]),
-        [I] = (0, i.yK)([o.A], () => [o.A.can(f.xBc.MANAGE_ROLES, v), o.A.getGuildVersion(l)]);
+        [I] = (0, i.yK)([o.A], () => [o.A.can(m.xBc.MANAGE_ROLES, v), o.A.getGuildVersion(l)]);
     if (null == v) return null;
     let C = I && null != A;
     return 0 !== j.length || C
         ? (0, t.jsx)(g.A, {
               heading: p.intl.string(p.t["LPJmL/"]),
-              scrollTargetId: m.bk.ROLES,
+              scrollTargetId: f.bk.ROLES,
               ...x,
               children: (0, t.jsx)(c.YR, {
                   userId: n,

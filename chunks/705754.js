@@ -3,8 +3,8 @@ var l = n(477900);
 n(582128);
 var a = n(834730),
     i = n(13699);
-let r = /^(.*?)\s*\(([^()]+)\)$/,
-    s = /[[\]{}<>`\xab\xbb;$\\=]/,
+let s = /^(.*?)\s*\(([^()]+)\)$/,
+    r = /[[\]{}<>`\xab\xbb;$\\=]/,
     o = /'[^']*'|"[^"]*"/,
     u = {
         "text-xs/normal": "text-xs/semibold",
@@ -25,8 +25,8 @@ function d(e, t) {
 function c(e) {
     let { text: t, variant: n, prose: a } = e;
     if (!0 === a) return t;
-    let u = r.exec(t);
-    return null == u || s.test(u[2]) || o.test(u[2])
+    let u = s.exec(t);
+    return null == u || r.test(u[2]) || o.test(u[2])
         ? d(t, n)
         : (0, l.jsxs)(l.Fragment, {
               children: [

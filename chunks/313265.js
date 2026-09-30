@@ -1,21 +1,21 @@
-n.d(t, { Q7: () => r, bF: () => i, hW: () => s, oU: () => o });
-var l = n(759967),
-    a = n(375708);
-function i(e) {
+i.d(t, { Q7: () => u, bF: () => o, hW: () => h, oU: () => r });
+var n = i(759967),
+    a = i(375708);
+function o(e) {
     switch (e) {
         case "simple":
-            return l.default["5DOL2g"];
+            return n.default["5DOL2g"];
         case "balanced":
-            return l.default["5I6PKl"];
+            return n.default["5I6PKl"];
         case "complex":
-            return l.default.OJIfkn;
+            return n.default.OJIfkn;
         default:
             return null;
     }
 }
-function r(e, t) {
-    let n = i(t);
-    return null != n ? { title: e, body: a.intl.string(n) } : { body: e };
+function u(e, t) {
+    let i = o(t);
+    return null != i ? { title: e, body: a.intl.string(i) } : { body: e };
 }
-let s = { low: "Low", medium: "Medium", high: "High", xhigh: "Extra high", max: "Max" },
-    o = { anthropic: "Anthropic", openai: "OpenAI", deepseek: "DeepSeek", xai: "xAI", moonshotai: "Moonshot AI" };
+let h = { low: "Low", medium: "Medium", high: "High", xhigh: "Extra high", max: "Max" },
+    r = { anthropic: "Anthropic", openai: "OpenAI", deepseek: "DeepSeek", xai: "xAI", moonshotai: "Moonshot AI" };

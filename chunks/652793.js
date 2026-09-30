@@ -1,8 +1,8 @@
 n.d(t, { G: () => h });
-var l = n(477900);
+var i = n(477900);
 n(582128);
-var i = n(503698),
-    s = n.n(i),
+var l = n(503698),
+    s = n.n(l),
     r = n(837381),
     a = n(84571),
     o = n(890856),
@@ -13,21 +13,21 @@ function h(e) {
     let {
             id: t,
             className: n,
-            innerClassName: i,
+            innerClassName: l,
             renderIcon: h,
-            text: A,
-            selected: g,
-            trailing: m,
+            text: g,
+            selected: m,
+            trailing: A,
             background: f,
             showUnread: p = !1,
             ref: C,
             ...E
         } = e,
         x = (0, r.rm)(t),
-        N = (0, a.O)(A) ?? "";
-    return (0, l.jsx)("li", {
+        N = (0, a.O)(g) ?? "";
+    return (0, i.jsx)("li", {
         ref: C,
-        children: (0, l.jsxs)(o.s, {
+        children: (0, i.jsxs)(o.s, {
             ...E,
             buttonProps: { ...x, id: t, role: "button" },
             tag: "div",
@@ -39,22 +39,22 @@ function h(e) {
                     : (e) => {
                           e.stopPropagation();
                       },
-            className: s()(c.fx, u.iE, { [u.J1]: g }, n),
+            className: s()(c.fx, u.iE, { [u.J1]: m }, n),
             children: [
                 f,
-                p ? (0, l.jsx)("div", { className: s()(u.gy, u.WS) }) : null,
-                (0, l.jsxs)("div", {
-                    className: s()([u.nf, u.ae, i]),
+                p ? (0, i.jsx)("div", { className: s()(u.gy, u.WS) }) : null,
+                (0, i.jsxs)("div", {
+                    className: s()([u.nf, u.ae, l]),
                     children: [
                         h(u.Kk),
-                        (0, l.jsx)(d.E, {
+                        (0, i.jsx)(d.E, {
                             color: "none",
                             variant: "text-md/medium",
                             className: u.UU,
                             "aria-hidden": !0,
-                            children: A,
+                            children: g,
                         }),
-                        m,
+                        A,
                     ],
                 }),
             ],

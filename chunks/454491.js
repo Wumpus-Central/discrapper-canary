@@ -12,18 +12,18 @@ var s = t(477900),
     x = t(202541),
     h = t(873417);
 function b(e) {
-    let { promotion: l, reward: t, applicationId: b, analyticsLocations: p, onUpsellClick: j } = e,
+    let { promotion: l, reward: t, applicationId: b, analyticsLocations: j, onUpsellClick: p } = e,
         _ = (0, d.Pc)(l),
         N = null != t ? null : i.t,
-        g = n.useCallback(() => {
-            (j(),
+        f = n.useCallback(() => {
+            (p(),
                 (0, o.A)({
                     subscriptionTier: x.pe.TIER_2,
                     applicationId: b,
-                    analyticsLocations: p,
+                    analyticsLocations: j,
                     ...(0, c.zl)(l.rewardRequirements),
                 }));
-        }, [j, b, p, l.rewardRequirements]);
+        }, [p, b, j, l.rewardRequirements]);
     return null != l.endsAt && null == (0, u.ZH)(l.endsAt)
         ? null
         : "nitro" !== l.flavor
@@ -31,7 +31,7 @@ function b(e) {
           : (0, d.ad)(_)
             ? (0, s.jsx)(a.D, {
                   className: h.U,
-                  onClick: g,
+                  onClick: f,
                   children: (0, s.jsx)(m.Ay, {
                       gradientColor: "nitro-pink",
                       Icon: N,
