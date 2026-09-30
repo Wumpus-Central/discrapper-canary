@@ -7419,6 +7419,7 @@ class d9 extends a.Component {
                     return (0, s.jsx)(nG, { skuId: e.skuId, tab: e.tab, channel: t }, l);
                 }
                 case tP.I.EXPERIMENT:
+                case tP.I.GAME_ORGANIZATION_INVITE:
                     return null;
                 default:
                     throw Error(`Unknown coded link type: ${i}`);

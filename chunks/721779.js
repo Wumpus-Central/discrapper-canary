@@ -1,13 +1,13 @@
 (n.d(t, {
-    F9: () => es,
-    br: () => ea,
-    rL: () => J,
-    Ay: () => ee,
-    $9: () => ei,
-    l7: () => er,
-    tl: () => Z,
-    ts: () => en,
-    st: () => k,
+    F9: () => el,
+    br: () => es,
+    rL: () => ee,
+    Ay: () => et,
+    $9: () => er,
+    l7: () => ea,
+    tl: () => Q,
+    ts: () => ei,
+    st: () => F,
 }),
     n(321073));
 var i = n(492462),
@@ -48,27 +48,28 @@ let S = /^\/([a-zA-Z0-9-]+)$/,
     b = /^\/channels\/([0-9]+)\/shop$/,
     M = /^\/quests\/([0-9-]+)\/?$/,
     P = /^\/game-servers\/share\/([A-Za-z0-9_-]+)$/,
-    U = /^\/games\/([0-9]+)(?:\/[A-Za-z0-9-]*)?\/?$/,
-    w = /^\/users\/([0-9]+)\/?$/,
-    G = /^\/oauth2\/authorize/,
-    x = /^#itemSkuId=([0-9]+)$/,
-    k = /dev:\/\/[\w-.~:\/?#\[\]@!$&'()*+,;=%]+/i,
-    F = z(window.GLOBAL_ENV.INVITE_HOST),
-    B = z(window.GLOBAL_ENV.GUILD_TEMPLATE_HOST),
-    V = z(window.GLOBAL_ENV.WEBAPP_ENDPOINT ?? `//canary.${m.U2_}`),
-    H = z(`//canary.${m.U2_}`),
-    j = z(`//ptb.${m.U2_}`),
-    W = z("discordapp.com"),
-    Y = z("discord.com"),
-    K = [
-        _.A.escape(F.host ?? ""),
+    U = /^\/game-organizations\/invite\/([A-Za-z0-9_-]+)\/?$/,
+    w = /^\/games\/([0-9]+)(?:\/[A-Za-z0-9-]*)?\/?$/,
+    G = /^\/users\/([0-9]+)\/?$/,
+    x = /^\/oauth2\/authorize/,
+    k = /^#itemSkuId=([0-9]+)$/,
+    F = /dev:\/\/[\w-.~:\/?#\[\]@!$&'()*+,;=%]+/i,
+    B = X(window.GLOBAL_ENV.INVITE_HOST),
+    V = X(window.GLOBAL_ENV.GUILD_TEMPLATE_HOST),
+    H = X(window.GLOBAL_ENV.WEBAPP_ENDPOINT ?? `//canary.${m.U2_}`),
+    j = X(`//canary.${m.U2_}`),
+    W = X(`//ptb.${m.U2_}`),
+    Y = X("discordapp.com"),
+    K = X("discord.com"),
+    $ = [
         _.A.escape(B.host ?? ""),
         _.A.escape(V.host ?? ""),
-        _.A.escape(W.host ?? ""),
+        _.A.escape(H.host ?? ""),
         _.A.escape(Y.host ?? ""),
+        _.A.escape(K.host ?? ""),
     ].filter(Boolean),
-    $ = RegExp(`((https?://[^ ]*)|^|\\s)(${K.join("|")})`, "g");
-function z(e) {
+    z = RegExp(`((https?://[^ ]*)|^|\\s)(${$.join("|")})`, "g");
+function X(e) {
     if (null == e) return { host: null, pathPrefix: null };
     if (e.indexOf("/") >= 0) {
         let t = (0, r.parse)(e, void 0, !0);
@@ -76,22 +77,22 @@ function z(e) {
     }
     return { host: e, pathPrefix: null };
 }
-function X(e, t) {
+function q(e, t) {
     return t.host?.replace(/^www[.]/i, "") === e.host;
 }
-function q(e, t) {
-    if (!X(e, t)) return null;
+function Z(e, t) {
+    if (!q(e, t)) return null;
     let n = t.pathname ?? "",
         i = e.pathPrefix ?? "";
     if (!n.startsWith(i)) return null;
     let r = n.substring(i.length);
     return "" === r ? null : r;
 }
-function Z(e) {
-    return q(V, e) ?? q(H, e) ?? q(j, e) ?? q(W, e) ?? q(Y, e);
-}
 function Q(e) {
-    let t = er(e);
+    return Z(H, e) ?? Z(j, e) ?? Z(W, e) ?? Z(Y, e) ?? Z(K, e);
+}
+function J(e) {
+    let t = ea(e);
     if (null == t || null == t.pathname)
         return {
             url: null,
@@ -99,27 +100,27 @@ function Q(e) {
             templateHostRemainingPath: null,
             primaryHostRemainingPath: null,
         };
-    let n = q(F, t),
-        i = q(B, t),
-        r = q(V, t) ?? q(H, t) ?? q(j, t) ?? q(W, t) ?? q(Y, t);
+    let n = Z(B, t),
+        i = Z(V, t),
+        r = Z(H, t) ?? Z(j, t) ?? Z(W, t) ?? Z(Y, t) ?? Z(K, t);
     return { url: t, inviteHostRemainingPath: n, templateHostRemainingPath: i, primaryHostRemainingPath: r };
 }
-function J(e) {
+function ee(e) {
     if (e.includes("\\")) {
-        let t = er(e);
+        let t = ea(e);
         if (null == t) return !1;
-        if (X(F, t)) return !0;
-        if ([V, H, j, W, Y].some((e) => X(e, t))) return t.pathname?.toUpperCase().includes(E.I.INVITE) ?? !1;
+        if (q(B, t)) return !0;
+        if ([H, j, W, Y, K].some((e) => q(e, t))) return t.pathname?.toUpperCase().includes(E.I.INVITE) ?? !1;
     }
     return !1;
 }
-function ee(e) {
+function et(e) {
     let t;
     if (null == e) return [];
     let n =
-            ((t = (e = e.replace($, (e, t, n, i) => (null == n ? `${t}http://${i}` : e))).replaceAll(f, " ").match(I)),
+            ((t = (e = e.replace(z, (e, t, n, i) => (null == n ? `${t}http://${i}` : e))).replaceAll(f, " ").match(I)),
             t?.map(T) ?? []),
-        r = e.match(k);
+        r = e.match(F);
     return (function (e) {
         if (null == e || 0 === e.length) return [];
         let t = new Set(),
@@ -130,7 +131,7 @@ function ee(e) {
                 inviteHostRemainingPath: _,
                 templateHostRemainingPath: A,
                 primaryHostRemainingPath: h,
-            } = Q(o);
+            } = J(o);
             if (null == e || null == e.pathname) continue;
             let I = null != e.query && e.query.length <= 1e3 ? e.query : null;
             function r(e, i) {
@@ -167,7 +168,7 @@ function ee(e) {
                         E.I.EVENT,
                         `${p.guildId}-${p.guildEventId}` + (null != p.recurrenceId ? `-${p.recurrenceId}` : ""),
                     ),
-                null != h?.match(G) && null != I)
+                null != h?.match(x) && null != I)
             ) {
                 let e = (0, d._)(I),
                     t = e.clientId;
@@ -195,31 +196,33 @@ function ee(e) {
                 let e = M[1];
                 r(E.I.ACTIVITY_BOOKMARK, e);
             }
-            let k = h?.match(D);
-            null != k && r(E.I.GUILD_PRODUCT, `${k[1]}-${k[2]}`);
-            let F = h?.match(b);
-            null != F && r(E.I.SERVER_SHOP, F[1]);
-            let B = h?.match(v);
-            if (null != B) {
-                let e = B[1] ?? B[2],
-                    t = et(B[3], null != I ? (0, i.parse)(I) : null);
+            let F = h?.match(D);
+            null != F && r(E.I.GUILD_PRODUCT, `${F[1]}-${F[2]}`);
+            let B = h?.match(b);
+            null != B && r(E.I.SERVER_SHOP, B[1]);
+            let V = h?.match(v);
+            if (null != V) {
+                let e = V[1] ?? V[2],
+                    t = en(V[3], null != I ? (0, i.parse)(I) : null);
                 t.length > 0 && r(E.I.SOCIAL_LAYER_STOREFRONT, (0, c.m5)(t, e));
             }
-            let V = en(o);
-            null != V && r(E.I.QUESTS_EMBED, V);
-            let H = h?.match(U);
-            null != H && r(E.I.GAME_PROFILE, H[1]);
-            let j = h?.match(P);
-            null != j && r(E.I.GAME_SERVER_SHARE, j[1]);
-            let W = h?.match(w);
-            if ((null != W && r(E.I.USER_PROFILE, W[1]), "/shop" === h)) {
+            let H = ei(o);
+            null != H && r(E.I.QUESTS_EMBED, H);
+            let j = h?.match(w);
+            null != j && r(E.I.GAME_PROFILE, j[1]);
+            let W = h?.match(P);
+            null != W && r(E.I.GAME_SERVER_SHARE, W[1]);
+            let Y = h?.match(U);
+            null != Y && r(E.I.GAME_ORGANIZATION_INVITE, Y[1]);
+            let K = h?.match(G);
+            if ((null != K && r(E.I.USER_PROFILE, K[1]), "/shop" === h)) {
                 let t = null != I ? (0, i.parse)(I) : null,
                     n = t?.tab,
                     a = t?.applicationId,
-                    s = n === g.G2.GAME_SHOPS && "string" == typeof a ? et(t?.skuId, t) : [];
+                    s = n === g.G2.GAME_SHOPS && "string" == typeof a ? en(t?.skuId, t) : [];
                 if ("string" == typeof a && s.length > 0) r(E.I.SOCIAL_LAYER_STOREFRONT_APP, (0, c.m5)(s, a));
                 else {
-                    let t = e.hash?.match(x);
+                    let t = e.hash?.match(k);
                     r(E.I.COLLECTIBLES_SHOP, `${n ?? ""}-${t?.[1] ?? ""}`);
                 }
             }
@@ -227,7 +230,7 @@ function ee(e) {
         return n;
     })((n = n.concat(r ?? []))).slice(0, 10);
 }
-function et(e, t) {
+function en(e, t) {
     if ("string" == typeof e) return (0, c.Z_)([e]);
     let n = t?.skuIds;
     return "string" == typeof n
@@ -236,26 +239,26 @@ function et(e, t) {
           ? (0, c.Z_)(n.flatMap((e) => ("string" == typeof e ? e.split(",") : [])))
           : [];
 }
-function en(e) {
-    let t = Q(e),
+function ei(e) {
+    let t = J(e),
         n = t?.primaryHostRemainingPath?.match(M);
     return n?.[1] ?? null;
 }
-function ei(e) {
-    let t = Q(e),
+function er(e) {
+    let t = J(e),
         n = t?.primaryHostRemainingPath?.match(P);
     return n?.[1] ?? null;
 }
-function er(e) {
+function ea(e) {
     try {
         return (0, r.parse)(e);
     } catch (e) {
         return null;
     }
 }
-function ea(e) {
-    return ee(e)[0];
-}
 function es(e) {
-    return null != e && ee((0, o.El)(e)).length > 0;
+    return et(e)[0];
+}
+function el(e) {
+    return null != e && et((0, o.El)(e)).length > 0;
 }

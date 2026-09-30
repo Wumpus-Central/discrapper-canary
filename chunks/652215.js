@@ -6453,6 +6453,7 @@ let aJ = Object.freeze({
         GAME: (e) => (null != e ? `games/${e}` : null),
         GAME_AUTOCOMPLETE: (e, t) => (null != e ? `game-autocomplete/${t}/${e}` : null),
         GAME_PROFILE_INVITE: (e) => (null != e ? `game-profile-invite/${e}` : null),
+        GAME_ORGANIZATION_INVITE: (e) => (null != e ? `game-organization-invite/${e}` : null),
         GUILD_OFFICIAL_MESSAGES: (e) => (null != e ? `guild-official-messages/${e}` : null),
         __DO_NOT_USE__STOREFRONT_MESSAGE_EMBED_PARENT_SKU: (e) => (null != e ? `useParentSkuData/${e}` : null),
     }),

@@ -1179,6 +1179,7 @@ ${a}`),
                                                         break;
                                                     case m.I.COLLECTIBLES_SHOP:
                                                     case m.I.GAME_SERVER_SHARE:
+                                                    case m.I.GAME_ORGANIZATION_INVITE:
                                                         break;
                                                     default:
                                                         throw Error(`Unknown coded link type: ${t}`);
