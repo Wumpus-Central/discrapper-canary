@@ -123,7 +123,7 @@ var en = t(310784),
     er = t(654107),
     eo = t(175671),
     ec = t(619517),
-    ed = t(85935),
+    ed = t(966245),
     eu = t(549100);
 function em(e) {
     return (0, ed.$o)({ ...e, className: eu.tN, mediaPlayerClassName: eu.yf });

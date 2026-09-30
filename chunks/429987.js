@@ -1325,7 +1325,7 @@ function tV(e) {
     });
 }
 var tK = n(998218),
-    tY = n(85935);
+    tY = n(966245);
 function tW(e) {
     let t = e.item.originalItem.media;
     return (0, i.jsx)(tV, {
