@@ -160,8 +160,8 @@ var D = l(17928),
     q = l(334738),
     z = l(688438),
     G = l(355622),
-    U = l(734057),
-    B = l(531685),
+    B = l(734057),
+    U = l(531685),
     V = l(365971),
     H = l(362417);
 function W(e) {
@@ -183,16 +183,16 @@ function Y(e) {
         { previewApplicationId: r } = e,
         { data: i, isLoading: s } = (0, h.YY)(r),
         u = i?.bot?.id ?? null,
-        o = (0, D.bG)([U.A], () => {
+        o = (0, D.bG)([B.A], () => {
             if (null == u) return null;
-            let e = U.A.getDMFromUserId(u);
-            return null != e ? U.A.getChannel(e) : null;
+            let e = B.A.getDMFromUserId(u);
+            return null != e ? B.A.getChannel(e) : null;
         });
     ((t = o?.id ?? null),
         a.useEffect(() => {
             null != t && $.A.preload(_.ME, t);
         }, [t]),
-        (l = (0, D.bG)([B.A], () => B.A.isFocused())),
+        (l = (0, D.bG)([U.A], () => U.A.isFocused())),
         a.useEffect(() => {
             if (null == t || !l) return;
             let e = (0, V.Xg)();
@@ -481,17 +481,17 @@ function e$(e) {
 var eq = l(839214),
     ez = l(673724);
 let eG = [],
-    eU = 1,
-    eB = (0, eq.D)(() => ({ draftsByProject: {} }));
+    eB = 1,
+    eU = (0, eq.D)(() => ({ draftsByProject: {} }));
 function eV(e, t, l) {
     return e.draftsByProject[t]?.[l] ?? eG;
 }
 function eH(e, t) {
-    return eV(eB.getState(), e, t);
+    return eV(eU.getState(), e, t);
 }
 function eW(e, t, l) {
-    let { draftsByProject: n } = eB.getState();
-    eB.setState({ draftsByProject: { ...n, [e]: { ...n[e], [t]: l } } });
+    let { draftsByProject: n } = eU.getState();
+    eU.setState({ draftsByProject: { ...n, [e]: { ...n[e], [t]: l } } });
 }
 function eK(e, t, l, n) {
     let a = eH(e, t);
@@ -515,13 +515,13 @@ function eX(e, t) {
 }
 function eQ(e, t) {
     let { deleteFromWorker: l } = t,
-        { draftsByProject: n } = eB.getState(),
+        { draftsByProject: n } = eU.getState(),
         a = n[e];
     if (null == a) return;
     for (let t of Object.values(a))
         for (let n of t ?? eG) l ? eX(e, n) : null != n.previewUrl && URL.revokeObjectURL(n.previewUrl);
     let { [e]: r, ...i } = n;
-    eB.setState({ draftsByProject: i });
+    eU.setState({ draftsByProject: i });
 }
 function eZ(e, t) {
     let l = eH(e, t);
@@ -543,7 +543,7 @@ function e0(e, t) {
     (0, f.dv)(e, t, a, { clarificationAnswers: l });
 }
 (eP.h.subscribe("LOGOUT", () => {
-    for (let e of Object.keys(eB.getState().draftsByProject)) eQ(e, { deleteFromWorker: !0 });
+    for (let e of Object.keys(eU.getState().draftsByProject)) eQ(e, { deleteFromWorker: !0 });
 }),
     eP.h.subscribe("VIBEGRATIONS_PROJECT_DELETE_SUCCESS", (e) => {
         let { projectId: t } = e;
@@ -1217,8 +1217,8 @@ function t$(e) {
 var tq = l(530557),
     tz = l(872162),
     tG = l(192308),
-    tU = l(479191);
-function tB(e) {
+    tB = l(479191);
+function tU(e) {
     let { projectId: t, request: r, awaiting: i } = e,
         s = a.useCallback(() => {
             (0, tG.openModalLazy)(async () => {
@@ -1228,7 +1228,7 @@ function tB(e) {
         }, [t, r]),
         u = a.useMemo(() => r.fields.map((e) => ({ id: e.name, label: e.label, icon: tq.R })), [r.fields]);
     return (0, n.jsxs)("article", {
-        className: tU.L,
+        className: tB.L,
         children: [
             (0, n.jsx)(v.E, {
                 variant: "text-xs/semibold",
@@ -1244,7 +1244,7 @@ function tB(e) {
             }),
             (0, n.jsx)(tz.C, { label: E.intl.string(C.default["/e28TK"]), size: "xs", items: u }),
             (0, n.jsx)("div", {
-                className: tU.s,
+                className: tB.s,
                 children: (0, n.jsx)(X.$, {
                     variant: "primary",
                     size: "sm",
@@ -2045,7 +2045,7 @@ function lc(e) {
             null != d
                 ? (0, n.jsx)("div", {
                       className: i()(t3.ky, ls.XR, { [li.O]: null != c }),
-                      children: (0, n.jsx)(tB, { projectId: t, request: d, awaiting: c }),
+                      children: (0, n.jsx)(tU, { projectId: t, request: d, awaiting: c }),
                   })
                 : null,
             null != f
@@ -2117,7 +2117,7 @@ function lL(e, t, l, n) {
         if (0 === l.length) return;
         let n = l.map((e) => {
             let { draft: t, upload: l } = e;
-            return { draft: { ...t, localId: eU++ }, upload: l };
+            return { draft: { ...t, localId: eB++ }, upload: l };
         });
         for (let { draft: l, upload: a } of (eW(e, t, [
             ...eH(e, t),
@@ -2176,7 +2176,7 @@ function lL(e, t, l, n) {
 }
 function lF(e) {
     let { projectId: t, surface: l, onUploadFile: n } = e,
-        r = eB.useState((e) => eV(e, t, l)),
+        r = eU.useState((e) => eV(e, t, l)),
         i = a.useCallback((e) => lL(t, l, e, n), [t, l, n]),
         s = a.useCallback(
             (e) => {
@@ -2386,10 +2386,10 @@ function lG(e) {
             takeRefs: z,
         } = lF({ projectId: t, surface: "chat", onUploadFile: d }),
         G = "" !== k.trim() || L.length > 0 || v,
-        U = l && G && q,
-        [B, V] = a.useState(null);
+        B = l && G && q,
+        [U, V] = a.useState(null);
     a.useEffect(() => {
-        if (null == B) return;
+        if (null == U) return;
         let e = 0,
             t = requestAnimationFrame(() => {
                 e = requestAnimationFrame(() => V(null));
@@ -2397,9 +2397,9 @@ function lG(e) {
         return () => {
             (cancelAnimationFrame(t), 0 !== e && cancelAnimationFrame(e));
         };
-    }, [B]);
+    }, [U]);
     let H = a.useCallback(() => {
-            if (!U) return;
+            if (!B) return;
             p?.();
             let e = z();
             u(k, e.length > 0 ? e : void 0);
@@ -2431,7 +2431,7 @@ function lG(e) {
                 return (f > 0 ? c.slice(0, f) : c).trimEnd();
             })(J.current?.querySelector("textarea") ?? null, eu.current, k);
             ("" !== t && V(t), w(""));
-        }, [U, k, u, z, w, p]),
+        }, [B, k, u, z, w, p]),
         W = a.useCallback(
             (e) => {
                 (e.preventDefault(), H());
@@ -2491,7 +2491,7 @@ function lG(e) {
             null != t && el(t);
         }
         ea(!0);
-        let t = setTimeout(() => ea(!1), lU);
+        let t = setTimeout(() => ea(!1), lB);
         return () => clearTimeout(t);
     }, [k]);
     let er = a.useMemo(() => ({ "--custom-glow-x": `${et}px` }), [et]),
@@ -2519,7 +2519,7 @@ function lG(e) {
         }, []),
         ec = a.useId(),
         ef = null != Y,
-        em = B ?? Y ?? es,
+        em = U ?? Y ?? es,
         eh = "" === k && "" !== em;
     return (0, n.jsxs)("form", {
         onSubmit: W,
@@ -2623,7 +2623,7 @@ function lG(e) {
                               ref: ed,
                               className: lO.ar,
                               "aria-hidden": "true",
-                              children: (0, n.jsx)(lz, { text: em, offering: ef && null == B, typed: null != B }),
+                              children: (0, n.jsx)(lz, { text: em, offering: ef && null == U, typed: null != U }),
                           })
                         : null,
                     (0, n.jsx)(ly.y, {
@@ -2685,7 +2685,7 @@ function lG(e) {
                                   (0, n.jsx)("button", {
                                       type: "submit",
                                       className: lO.rt,
-                                      disabled: !U,
+                                      disabled: !B,
                                       "aria-label": E.intl.string(C.default["22GHMt"]),
                                       children: (0, n.jsx)(lN.SendMessageIcon, {
                                           size: "custom",
@@ -2703,8 +2703,8 @@ function lG(e) {
         ],
     });
 }
-let lU = 1500,
-    lB = [
+let lB = 1500,
+    lU = [
         "font-family",
         "font-size",
         "font-weight",
@@ -2745,7 +2745,7 @@ function lV(e) {
             );
         })(),
         l = window.getComputedStyle(e);
-    for (let e of lB) t.style.setProperty(e, l.getPropertyValue(e));
+    for (let e of lU) t.style.setProperty(e, l.getPropertyValue(e));
     ((t.style.width = `${e.clientWidth}px`), (t.textContent = e.value.slice(0, e.selectionStart ?? e.value.length)));
     let n = document.createElement("span");
     ((n.textContent = "\u200B"), t.appendChild(n));
@@ -3480,7 +3480,22 @@ function n_(e) {
             );
         }, [l, k, N]),
         A = l.at(-1),
-        S =
+        S = a.useMemo(
+            () =>
+                (function (e) {
+                    if (e.at(-1)?.role !== "assistant") return null;
+                    for (let t = e.length - 1; t >= 0; t--) {
+                        let l = e[t];
+                        if ("assistant" === l.role) {
+                            if (!(0, eS.BL)(l) || "plan_implemented" === l.kind) return null;
+                            if (null != l.proposal) return l.render_id;
+                        }
+                    }
+                    return null;
+                })(l),
+            [l],
+        ),
+        I =
             (A?.role !== "assistant" || null == A.awaitingUser || null == A.secretRequest
                 ? null
                 : (0, eS.BL)(A)
@@ -3710,14 +3725,14 @@ function n_(e) {
                                                   })(l, a, a.ideas),
                                         attachments: a.attachments,
                                         secretRequest: e.active ? void 0 : a.secretRequest,
-                                        secretRequestAwaiting: a === A ? S : void 0,
+                                        secretRequestAwaiting: a === A ? I : void 0,
                                         settingsRequest: e.active || a.id === f ? void 0 : a.settingsRequest,
                                         publishCta: e.active ? null : a.publishCta,
                                         onPickIdea: u,
                                         offerIdeas: tw(a, A),
                                         onAskForIdeas: o,
                                         draftHasText: d,
-                                        onApprovePlan: a === A ? c : void 0,
+                                        onApprovePlan: a.render_id === S ? c : void 0,
                                         restoreProposal: s,
                                         onRestoreProposal:
                                             null != s && null != h && a === A
@@ -3743,7 +3758,7 @@ function n_(e) {
                     }
                 }
             }),
-            null != S
+            null != I
                 ? (0, n.jsx)(nR, {
                       role: "assistant",
                       continuation: !0,
@@ -3815,7 +3830,7 @@ function nz(e) {
     );
 }
 var nG = l(921461);
-function nU(e) {
+function nB(e) {
     let {
             activity: t,
             compacting: l = !1,
@@ -3940,7 +3955,7 @@ function nU(e) {
             }),
     });
 }
-let nB = { second: 1e3, minute: 6e4 };
+let nU = { second: 1e3, minute: 6e4 };
 function nV(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "second",
         [l, n] = a.useState(() => Date.now());
@@ -3948,7 +3963,7 @@ function nV(e) {
         a.useEffect(() => {
             let l;
             if (null == e) return;
-            let a = nB[t];
+            let a = nU[t];
             return (
                 !(function t() {
                     let r = Date.now();
@@ -4124,7 +4139,7 @@ function n1(e) {
                 "data-vibegrations-activity": !0,
                 children: [
                     r || s || u || m
-                        ? (0, n.jsx)(nU, {
+                        ? (0, n.jsx)(nB, {
                               activity: o,
                               compacting: d,
                               restoring: s,
@@ -4320,9 +4335,9 @@ function an(e) {
         [$, q] = a.useState(null),
         z = d[L.id] ?? "",
         G = !0 === L.multi_select,
-        U = f[L.id] ?? at,
-        { text: B, phase: V } = (0, n8.Q)(L.question),
-        H = B === L.question,
+        B = f[L.id] ?? at,
+        { text: U, phase: V } = (0, n8.Q)(L.question),
+        H = U === L.question,
         W = H && $?.id === L.id && $.truncated;
     a.useLayoutEffect(() => {
         if (null == S || O || !H) return;
@@ -4372,11 +4387,11 @@ function an(e) {
                 T.current += 1;
                 let l = T.current;
                 (p({ direction: t, moves: l }),
-                    j({ question: L, draft: z, selected: U, direction: t, moves: l }),
+                    j({ question: L, draft: z, selected: B, direction: t, moves: l }),
                     w(!0),
                     g(e));
             },
-            [z, L, U],
+            [z, L, B],
         ),
         Z = a.useCallback(() => {
             let e = A.current,
@@ -4424,15 +4439,15 @@ function an(e) {
             let e, t;
             return G
                 ? ((e = z.trim()),
-                  (t = L.options.filter((e) => U.includes(e.id)).map((e) => e.label)),
+                  (t = L.options.filter((e) => B.includes(e.id)).map((e) => e.label)),
                   {
                       kind: "multi",
-                      optionIds: U,
+                      optionIds: B,
                       ...("" === e ? {} : { custom: e }),
                       text: [...t, ...("" === e ? [] : [e])].join(", "),
                   })
                 : null;
-        }, [z, G, L, U]),
+        }, [z, G, L, B]),
         er = a.useCallback(() => {
             if (null != ea) {
                 "" !== ea.text && ee(ea);
@@ -4513,7 +4528,7 @@ function an(e) {
                                 selectable: !0,
                                 lineClamp: O ? void 0 : 5,
                                 className: i()(n9.TK, n9.R_, { [n9.TB]: "exit" === V, [n9.JU]: "enter" === V }),
-                                children: B,
+                                children: U,
                             }),
                             W || O
                                 ? (0, n.jsx)("div", {
@@ -4578,7 +4593,7 @@ function an(e) {
                                                     option: e,
                                                     position: t + 1,
                                                     disabled: P,
-                                                    selected: G ? U.includes(e.id) : void 0,
+                                                    selected: G ? B.includes(e.id) : void 0,
                                                     onPick: (e) =>
                                                         G
                                                             ? m((t) => {
@@ -4960,10 +4975,10 @@ function ah(e) {
         q = a.useCallback(() => e0(r, E.intl.string(C.default.Jj8Ftb)), [r]),
         z = i?.status === "restoring",
         G = "open" === o && !d && !z,
-        U = u[u.length - 1],
-        B = null != U && "assistant" === U.role && null != U.proposal,
+        B = u[u.length - 1],
+        U = null != B && "assistant" === B.role && null != B.proposal,
         [V, H] = a.useState(null),
-        W = U?.clarification != null && U.clarification.id !== V ? U.clarification : null,
+        W = B?.clarification != null && B.clarification.id !== V ? B.clarification : null,
         K = a.useCallback(() => {
             null != W && H(W.id);
         }, [W]),
@@ -4980,12 +4995,12 @@ function ah(e) {
         [ee, et] = a.useState(null),
         el =
             !Y &&
-            null != U &&
-            "assistant" === U.role &&
-            null != U.settingsRequest &&
-            (0, eS.BL)(U) &&
-            U.id !== ee &&
-            ((t = U.settingsRequest),
+            null != B &&
+            "assistant" === B.role &&
+            null != B.settingsRequest &&
+            (0, eS.BL)(B) &&
+            B.id !== ee &&
+            ((t = B.settingsRequest),
             null != J &&
                 (t.keys ?? []).some((e) => {
                     let t = J.schema.find((t) => t.key === e);
@@ -4994,7 +5009,7 @@ function ah(e) {
                     let l = J.values[e];
                     return null == l || "" === l;
                 }))
-                ? U
+                ? B
                 : null,
         en = el?.settingsRequest ?? null,
         ea = a.useCallback(() => {
@@ -5015,7 +5030,7 @@ function ah(e) {
             for (let t = 0; t < r.length; t++) e = (31 * e + r.charCodeAt(t)) % 0x7fffffff;
             return am[e % am.length];
         }, [r]),
-        eo = B ? E.intl.string(C.default.Jj8Ftb) : "greeting" === ei && 0 === u.length ? eu : null,
+        eo = U ? E.intl.string(C.default.Jj8Ftb) : "greeting" === ei && 0 === u.length ? eu : null,
         ed = a.useMemo(() => {
             for (let e = u.length - 1; e >= 0; e--) {
                 let t = u[e];
@@ -5034,12 +5049,11 @@ function ah(e) {
                       return e.created_at;
                   })(ed)
                 : void 0,
-        em = B && G ? q : void 0,
+        em = U && G ? q : void 0,
         eh = a.useCallback(() => e0(r, E.intl.string(C.default.ga8too)), [r]),
-        eg = B && G,
-        [ex, ep] = a.useState(null),
-        [ev, eb] = a.useState(ec);
-    (ev !== ec && (eb(ec), ec || ep(null)),
+        [eg, ex] = a.useState(null),
+        [ep, ev] = a.useState(ec);
+    (ep !== ec && (ev(ec), ec || ex(null)),
         a.useEffect(() => {
             if (!ec) return;
             let e = p.current?.getScrollerNode(),
@@ -5049,18 +5063,18 @@ function ah(e) {
                 (e) => {
                     let [t] = e;
                     null == t || t.isIntersecting || null == t.rootBounds
-                        ? ep(null)
-                        : ep(t.boundingClientRect.top < t.rootBounds.top ? "top" : "bottom");
+                        ? ex(null)
+                        : ex(t.boundingClientRect.top < t.rootBounds.top ? "top" : "bottom");
                 },
                 { root: e, threshold: 0 },
             );
             return (l.observe(t), () => l.disconnect());
         }, [ec, ed?.steps]));
-    let ej = a.useMemo(() => (null != ed ? (0, e7.b)(ed.steps) : ""), [ed]),
-        ey = a.useMemo(() => (null != ed ? ((0, eA.lt)(ed.steps) ?? ed.todos) : void 0), [ed]),
-        eI = ed?.provisionalTodo,
-        eM = null != ed && eC(ed),
-        eT = a.useMemo(() => {
+    let eb = a.useMemo(() => (null != ed ? (0, e7.b)(ed.steps) : ""), [ed]),
+        ej = a.useMemo(() => (null != ed ? ((0, eA.lt)(ed.steps) ?? ed.todos) : void 0), [ed]),
+        ey = ed?.provisionalTodo,
+        eI = null != ed && eC(ed),
+        eM = a.useMemo(() => {
             var e;
             return null != ed ? ((e = ed.steps), lo((0, eA.GO)(e, { turnActive: !0 }).tasks)) : void 0;
         }, [ed]);
@@ -5079,12 +5093,12 @@ function ah(e) {
                 : null,
             (0, n.jsx)(as, {
                 onJumpToActivity: N,
-                line: ej,
-                placement: ec && "top" === ex ? "top" : null,
-                todos: ey,
-                todosLive: eM,
-                provisionalTodo: eI,
-                agents: eT,
+                line: eb,
+                placement: ec && "top" === eg ? "top" : null,
+                todos: ej,
+                todosLive: eI,
+                provisionalTodo: ey,
+                agents: eM,
             }),
             (0, n.jsxs)("div", {
                 className: af.JX,
@@ -5103,7 +5117,7 @@ function ah(e) {
                             onPickIdea: G ? T : void 0,
                             onAskForIdeas: G ? R : void 0,
                             draftHasText: P,
-                            onApprovePlan: eg ? eh : void 0,
+                            onApprovePlan: G ? eh : void 0,
                             onRestoreVersion: z || ec ? void 0 : s,
                         }),
                     }),
@@ -5147,12 +5161,12 @@ function ah(e) {
                 children: [
                     (0, n.jsx)(as, {
                         onJumpToActivity: N,
-                        line: ej,
-                        placement: ec && "bottom" === ex ? "bottom" : null,
-                        todos: ey,
-                        todosLive: eM,
-                        provisionalTodo: eI,
-                        agents: eT,
+                        line: eb,
+                        placement: ec && "bottom" === eg ? "bottom" : null,
+                        todos: ej,
+                        todosLive: eI,
+                        provisionalTodo: ey,
+                        agents: eM,
                     }),
                     0 === A.annotations.length
                         ? null
@@ -5406,7 +5420,7 @@ function aG(e) {
         a = String(t.getSeconds()).padStart(2, "0");
     return `${l}:${n}:${a}`;
 }
-function aU(e) {
+function aB(e) {
     let t = new Date(e);
     if (Number.isNaN(t.getTime())) return e;
     let l = new Date();
@@ -5414,7 +5428,7 @@ function aU(e) {
         ? t.toLocaleTimeString()
         : t.toLocaleString();
 }
-function aB(e) {
+function aU(e) {
     let t = e.split("/").filter((e) => "" !== e),
         l = t[t.length - 1] ?? e;
     return l.length > 12 ? l.slice(0, 12) : l;
@@ -5476,7 +5490,7 @@ function aZ(e) {
                             ? (0, n.jsx)(v.E, {
                                   variant: "text-xs/normal",
                                   color: "text-muted",
-                                  children: E.intl.formatToPlainString(C.default["4NpaEk"], { time: aU(t) }),
+                                  children: E.intl.formatToPlainString(C.default["4NpaEk"], { time: aB(t) }),
                               })
                             : null,
             }),
@@ -5755,7 +5769,7 @@ function a8(e) {
                                       value: `${az(o.tokensBefore)} \u{2192} ${az(o.tokensAfter)}`,
                                       hint: E.intl.formatToPlainString(C.default.jA05ru, {
                                           count: az(o.retainedMessages),
-                                          time: aU(o.observedAt),
+                                          time: aB(o.observedAt),
                                       }),
                                   }),
                               ],
@@ -5773,7 +5787,7 @@ function a8(e) {
                             label: E.intl.string(C.default["se+2ls"]),
                             value: `${az(d.projected)} / ${az(d.threshold)}`,
                             critical: !0,
-                            hint: E.intl.formatToPlainString(C.default.KHK44U, { time: aU(d.observedAt) }),
+                            hint: E.intl.formatToPlainString(C.default.KHK44U, { time: aB(d.observedAt) }),
                         }),
                     (0, n.jsxs)("div", {
                         className: a5.Lj,
@@ -5795,7 +5809,7 @@ function a8(e) {
                                 children: (function (e) {
                                     if ("idle" === e) return E.intl.string(C.default.wBng42);
                                     if ("pending" === e) return E.intl.string(C.default["0tgo31"]);
-                                    let t = aU(e.observedAt);
+                                    let t = aB(e.observedAt);
                                     if ("compacted" === e.outcome)
                                         return E.intl.formatToPlainString(C.default["eL8+rZ"], { time: t });
                                     let l =
@@ -5868,7 +5882,7 @@ function a8(e) {
                                 children: [
                                     (0, n.jsx)(a0, {
                                         label: E.intl.string(C.default["wt5X/o"]),
-                                        value: aU(b.instance_since),
+                                        value: aB(b.instance_since),
                                         hint: E.intl.string(C.default.QX2UQC),
                                     }),
                                     (0, n.jsx)(a0, { label: E.intl.string(C.default["4lgurx"]), value: az(b.sockets) }),
@@ -6254,7 +6268,7 @@ function ro(e) {
                       value: az(a.events_received),
                       hint:
                           null != a.last_event_type && null != a.last_event_at
-                              ? `${a.last_event_type} \xb7 ${aU(a.last_event_at)}`
+                              ? `${a.last_event_type} \xb7 ${aB(a.last_event_at)}`
                               : void 0,
                   }),
                   (0, n.jsx)(a0, { label: E.intl.string(C.default.ElaQ0A), value: az(a.guild_count) }),
@@ -6265,7 +6279,7 @@ function ro(e) {
                           null != a.last_close_code && null != a.last_close_at
                               ? E.intl.formatToPlainString(C.default.bSzLue, {
                                     code: a.last_close_code,
-                                    time: aU(a.last_close_at),
+                                    time: aB(a.last_close_at),
                                 })
                               : void 0,
                   }),
@@ -6291,9 +6305,9 @@ function rd(e) {
                 ? E.intl.formatToPlainString(C.default["0ayoy+"], {
                       host: l.last_failure.host,
                       status: l.last_failure.status ?? "network",
-                      time: aU(l.last_failure.at),
+                      time: aB(l.last_failure.at),
                   })
-                : E.intl.formatToPlainString(C.default["1PdrB1"], { time: aU(l.since) }),
+                : E.intl.formatToPlainString(C.default["1PdrB1"], { time: aB(l.since) }),
     });
 }
 function rc(e) {
@@ -6317,7 +6331,7 @@ function rc(e) {
                                       attempt: e.pending_attempt ?? 1,
                                   })
                                 : null != e.next_run_at
-                                  ? E.intl.formatToPlainString(C.default["7ecbr3"], { time: aU(e.next_run_at) })
+                                  ? E.intl.formatToPlainString(C.default["7ecbr3"], { time: aB(e.next_run_at) })
                                   : void 0,
                     },
                     `${t}-${e.id}`,
@@ -6354,7 +6368,7 @@ function rm(e) {
             (0, n.jsx)(a0, {
                 label: E.intl.string(C.default.KOnL3g),
                 value: az(l.requests),
-                hint: E.intl.formatToPlainString(C.default["1PdrB1"], { time: aU(l.since) }),
+                hint: E.intl.formatToPlainString(C.default["1PdrB1"], { time: aB(l.since) }),
             }),
             (0, n.jsx)(a0, { label: E.intl.string(C.default.CjPhyY), value: az(l.errors), critical: l.errors > 0 }),
             i
@@ -6392,7 +6406,7 @@ function rm(e) {
                 critical: l.exceeded_memory > 0,
                 hint: E.intl.formatToPlainString(C.default["5iALNP"], { limit: `${a.memory_mb} MB` }),
             }),
-            null != l.build && (0, n.jsx)(a0, { label: E.intl.string(C.default.JUZs7g), value: aB(l.build) }),
+            null != l.build && (0, n.jsx)(a0, { label: E.intl.string(C.default.JUZs7g), value: aU(l.build) }),
         ],
     });
 }
@@ -6494,13 +6508,13 @@ function rg(e) {
                                     label: E.intl.string(C.default["+m8XM6"]),
                                     value:
                                         null != t.deployments.preview_build
-                                            ? aB(t.deployments.preview_build)
+                                            ? aU(t.deployments.preview_build)
                                             : "\u2014",
                                 }),
                                 (0, n.jsx)(a0, {
                                     label: E.intl.string(C.default.kiOVnt),
                                     value:
-                                        null != t.deployments.stable_build ? aB(t.deployments.stable_build) : "\u2014",
+                                        null != t.deployments.stable_build ? aU(t.deployments.stable_build) : "\u2014",
                                 }),
                             ],
                         }),
@@ -6741,7 +6755,7 @@ function rG(e) {
         }),
     });
 }
-function rU(e) {
+function rB(e) {
     let { entries: t } = e;
     return 0 === t.length
         ? null
@@ -6801,7 +6815,7 @@ function rU(e) {
               ],
           });
 }
-function rB(e) {
+function rU(e) {
     let { detail: t } = e,
         l =
             null == t || "loaded" === t.status || "forbidden" === t.status
@@ -6916,9 +6930,9 @@ function rV(e) {
                       children: [
                           (l.fields ?? []).map((e) => (0, n.jsx)(rG, { field: e }, e.key)),
                           d?.status === "loaded" && null != d.rich.args
-                              ? (0, n.jsx)(rU, { entries: d.rich.args })
+                              ? (0, n.jsx)(rB, { entries: d.rich.args })
                               : null,
-                          (0, n.jsx)(rB, { detail: d }),
+                          (0, n.jsx)(rU, { detail: d }),
                       ],
                   })
                 : null,
@@ -6947,7 +6961,7 @@ function rV(e) {
                                     }),
                                 }),
                           d?.status === "loaded" && null != d.rich.result
-                              ? (0, n.jsx)(rU, { entries: d.rich.result })
+                              ? (0, n.jsx)(rB, { entries: d.rich.result })
                               : null,
                       ],
                   })
@@ -7889,8 +7903,8 @@ function im(e) {
         [F, O] = a.useState(!1),
         [$, q] = a.useState(null),
         [z, G] = a.useState(null),
-        U = a.useRef(!1),
-        [B, V] = a.useState(!1),
+        B = a.useRef(!1),
+        [U, V] = a.useState(!1),
         [H, W] = a.useState(null),
         K = o && !c && !m;
     null == $ || (K && $.projectId === u) || q(null);
@@ -8045,11 +8059,11 @@ function im(e) {
         ),
         en = a.useCallback(() => {
             if (null == $) return;
-            let e = !U.current;
+            let e = !B.current;
             (G({ at: $.at, label: $.label, draft: $.draft, instant: e }), V(e), q(null));
         }, [$]);
     (a.useEffect(() => {
-        if (!B) return;
+        if (!U) return;
         let e = 0,
             t = requestAnimationFrame(() => {
                 e = requestAnimationFrame(() => V(!1));
@@ -8057,7 +8071,7 @@ function im(e) {
         return () => {
             (cancelAnimationFrame(t), 0 !== e && cancelAnimationFrame(e));
         };
-    }, [B]),
+    }, [U]),
         a.useEffect(() => {
             if (null == z) return;
             let e = setTimeout(() => G(null), ix);
@@ -8075,7 +8089,7 @@ function im(e) {
                 null != u &&
                     (eZ(u, "design"),
                     W(null),
-                    (U.current = !1),
+                    (B.current = !1),
                     q({ projectId: u, target: e, anchor: t, draft: "", at: l, label: (0, ew.ts)(e) }));
             },
             [u],
@@ -8094,7 +8108,7 @@ function im(e) {
             (e) => {
                 if (null == x || null != H) return;
                 if (((_.current = { x: e.clientX, y: e.clientY }), ec(), M(!0), null != $)) {
-                    (Math.abs(e.clientX - $.at.x) > ip || Math.abs(e.clientY - $.at.y) > ip) && (U.current = !0);
+                    (Math.abs(e.clientX - $.at.x) > ip || Math.abs(e.clientY - $.at.y) > ip) && (B.current = !0);
                     return;
                 }
                 if (!er) return void S(null);
@@ -8284,7 +8298,7 @@ function im(e) {
                                   children: (0, n.jsx)("div", {
                                       className: ir.xz,
                                       "data-shown": null != A && null == H && null == $ ? "" : void 0,
-                                      "data-instant": B ? "" : void 0,
+                                      "data-instant": U ? "" : void 0,
                                       children: (0, n.jsxs)(v.E, {
                                           variant: "text-xs/medium",
                                           className: ir.Ux,

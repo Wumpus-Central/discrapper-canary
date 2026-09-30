@@ -663,6 +663,13 @@ let n = [
             "Plan cards have an Approve button that starts the build. To change the plan, type what you want different.",
     },
     {
+        date: "2026-09-30",
+        time: "05:23",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "Plan cards keep their Conjure it! button while you ask Conjure follow-up questions, until a newer plan takes its place.",
+    },
+    {
         date: "2026-09-28",
         time: "20:30",
         platforms: ["desktop", "mobile"],
