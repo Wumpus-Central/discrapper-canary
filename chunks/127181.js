@@ -798,6 +798,13 @@ let n = [
         summary: "Templates are now called recipes.",
     },
     {
+        date: "2026-09-29",
+        time: "20:21",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "The Conjuring MCP panel now gives you a one-time link, good for 10 minutes, to hand your coding agent. It signs you in with Discord instead of asking you to paste a header, and stays connected for up to 30 days.",
+    },
+    {
         date: "2026-09-28",
         time: "19:37",
         platforms: ["desktop", "mobile"],

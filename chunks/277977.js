@@ -3,32 +3,33 @@
     r2: () => et,
     $S: () => ek,
     _v: () => em,
-    n6: () => eU,
+    n6: () => eG,
     ss: () => eO,
     cS: () => ew,
     R7: () => en,
-    aF: () => eC,
+    aF: () => ev,
     Lj: () => er,
-    JI: () => eR,
-    Vm: () => eP,
+    JI: () => eP,
+    Vm: () => eC,
     oX: () => eI,
     ms: () => eh,
     TV: () => Q,
     dv: () => z,
     Hc: () => Z,
-    Bn: () => eG,
+    Bn: () => eB,
     XZ: () => es,
     oB: () => eu,
+    ho: () => eN,
     $D: () => eg,
     fu: () => Y,
     $C: () => ee,
-    Ay: () => eH,
+    Ay: () => e$,
     Xk: () => eA,
     vX: () => eT,
     dz: () => ey,
     ST: () => ed,
-    PK: () => ev,
-    y_: () => eN,
+    PK: () => eU,
+    y_: () => eR,
     nU: () => eb,
     _m: () => ef,
 }),
@@ -1215,17 +1216,21 @@ function eO(e) {
         console.warn("[vibegrations] settings rebuild request failed", e, t);
     });
 }
-async function eN(e) {
+function eN(e) {
+    return new Date(e.expiresAtMs).toLocaleTimeString(void 0, { hour: "numeric", minute: "2-digit" });
+}
+async function eR(e) {
     let { regenerate: t = !1 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { ticket: n, baseUrl: r } = await (0, p.d)(e),
         s = new URLSearchParams({ ticket: n });
     t && s.set("regenerate", "1");
     let i = await fetch(`${r}/agent/mcp-token?${s}`, { method: "POST" });
     if (!i.ok) throw Error(`mcp token failed (${i.status})`);
-    let o = await i.json();
-    return { url: o.url, token: o.token, expiresAt: o.expires_at };
+    let o = await i.json(),
+        a = "number" == typeof o.expires_in ? Date.now() + 1e3 * o.expires_in : Date.parse(o.expires_at);
+    return { url: o.url, expiresAtMs: a };
 }
-async function eR(e, t) {
+async function eP(e, t) {
     let n, r;
     try {
         let { ticket: r, baseUrl: s } = await (0, p.d)(e);
@@ -1253,36 +1258,36 @@ async function eR(e, t) {
         ? { type: "url", url: r }
         : { type: "error", error: "unavailable" };
 }
-async function eP(e, t) {
+async function eC(e, t) {
     let { ticket: n, baseUrl: r } = await (0, p.d)(e),
         s = new URLSearchParams({ ticket: n }),
         i = await fetch(`${eS(r, t)}?${s}`, { method: "DELETE", keepalive: !0 });
     if (!i.ok) throw Error(`attachment cleanup failed (${i.status})`);
 }
-async function eC(e, t) {
+async function ev(e, t) {
     let { ticket: n, baseUrl: r } = await el(e),
         s = new URLSearchParams({ ticket: n });
     return `${r}/agent/screenshots/${encodeURIComponent(t)}?${s}`;
 }
-async function ev(e, t) {
+async function eU(e, t) {
     let { download: n = !1 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         { ticket: r, baseUrl: s } = await el(e),
         i = new URLSearchParams({ ticket: r });
     return (n && i.set("download", "1"), `${eS(s, t)}?${i}`);
 }
-async function eU(e, t) {
+async function eG(e, t) {
     async function n() {
-        return fetch(await ev(e, t), { method: "HEAD" });
+        return fetch(await eU(e, t), { method: "HEAD" });
     }
     let r = await n();
     if ((401 === r.status && (ea.delete(e), (r = await n())), 404 === r.status)) return !1;
     if (!r.ok) throw Error(`attachment availability check failed (${r.status})`);
     return !0;
 }
-function eG(e) {
+function eB(e) {
     X(e);
 }
-class eB extends s.Ay.Store {
+class eD extends s.Ay.Store {
     initialize() {
         this.waitFor(a.default, y.Ay, S.Ay);
     }
@@ -1299,11 +1304,11 @@ class eB extends s.Ay.Store {
         return P.get(e) ?? null;
     }
     getDeclaredConnections(e) {
-        return P.get(e)?.connections ?? eD;
+        return P.get(e)?.connections ?? eH;
     }
 }
-let eD = [],
-    eH = new eB(i.h, {
+let eH = [],
+    e$ = new eD(i.h, {
         VIBEGRATIONS_CHAT_CONN_STATE: function (e) {
             let { projectId: t, connState: n } = e;
             if (b.get(t) === n) return !1;
