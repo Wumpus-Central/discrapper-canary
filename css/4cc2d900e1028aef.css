@@ -173,6 +173,11 @@
     min-height: 0
 }
 
+.container__4d08f {
+    display: flex;
+    width: var(--custom-group-config-popout-width)
+}
+
 .heading-sm\/normal_fcd769 {
     font-family: var(--font-primary);
     font-size: 14px;
@@ -2165,7 +2170,7 @@
     max-width: 320px;
     min-width: 144px;
     padding-bottom: var(--space-xs);
-    width: var(--custom-search-friends-popout-width, 264px)
+    width: var(--custom-search-friends-popout-width)
 }
 
 .matchTargetWidth_fcd769 {
@@ -2235,7 +2240,6 @@
 }
 
 .button_b5f5a6:active,
-.button_b5f5a6:focus,
 .button_b5f5a6:hover {
     background-color: var(--background-mod-subtle);
     color: var(--icon-strong)
@@ -2297,4 +2301,4 @@
     background-color: var(--background-mod-strong)
 }
 
-/*# sourceMappingURL=7bcf67559660bc72.css.map*/
+/*# sourceMappingURL=4cc2d900e1028aef.css.map*/
