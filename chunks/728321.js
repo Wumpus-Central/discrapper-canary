@@ -1,4 +1,4 @@
-n.d(t, { A: () => h });
+n.d(t, { A: () => m });
 var l = n(477900),
     i = n(582128),
     s = n(621466),
@@ -42,11 +42,11 @@ class d extends i.Component {
         if (e && null == u) {
             let e = t?.current;
             if (!(0, s.vq)(e)) return;
-            let { top: a, left: u, right: d, bottom: h } = e.getBoundingClientRect();
+            let { top: a, left: u, right: d, bottom: m } = e.getBoundingClientRect();
             o.WU(n, {
                 position: l,
                 targetWidth: d - u,
-                targetHeight: h - a,
+                targetHeight: m - a,
                 autoInvert: c,
                 origin: { x: u, y: a },
                 offset: { x: i, y: r },
@@ -82,7 +82,7 @@ class d extends i.Component {
             : i.Children.only(n);
     }
 }
-function h(e) {
+function m(e) {
     let { tutorialId: t, disabled: n } = e,
         i = (0, r.bG)([c.A], () => !n && c.A.shouldShow(t), [n, t]),
         s = (0, r.bG)([a.A], () => a.A.isFocused()),

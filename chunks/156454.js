@@ -1,48 +1,48 @@
-n.d(t, { A: () => d, T: () => f });
-var l = n(582128),
-    r = n(17928),
-    o = n(977445),
-    u = n(733391),
-    i = n(832163);
-let s = [];
-function f(e) {
+l.d(t, { A: () => d, T: () => i });
+var n = l(582128),
+    r = l(17928),
+    o = l(977445),
+    u = l(733391),
+    s = l(832163);
+let f = [];
+function i(e) {
     let t = (0, o.uS)(e ?? void 0),
-        n = (0, r.bG)(
-            [i.A],
-            () => (null == e ? null : (i.A.getStorefrontDataForApplicationId(e)?.storefront ?? null)),
+        l = (0, r.bG)(
+            [s.A],
+            () => (null == e ? null : (s.A.getStorefrontDataForApplicationId(e)?.storefront ?? null)),
             [e],
         ),
-        f = (0, r.bG)([i.A], () => (null != e ? i.A.getStorefrontEntries(e) : void 0), [e]),
-        d = (0, r.bG)([i.A], () => (null != e ? i.A.getPreviewStorefrontId(e) : null), [e]);
-    l.useEffect(() => {
+        i = (0, r.bG)([s.A], () => (null != e ? s.A.getStorefrontEntries(e) : void 0), [e]),
+        d = (0, r.bG)([s.A], () => (null != e ? s.A.getPreviewStorefrontId(e) : null), [e]);
+    n.useEffect(() => {
         t && null != e && (0, u.JX)(e);
     }, [t, e]);
-    let c = n?.id ?? null;
+    let c = l?.id ?? null;
     return t
         ? {
               isTestMode: t,
-              entries: f?.state === "fetched" ? f.entries : s,
+              entries: i?.state === "fetched" ? i.entries : f,
               selectedStorefrontId: d ?? c,
               liveStorefrontId: c,
-              liveStorefront: n,
+              liveStorefront: l,
           }
-        : { isTestMode: !1, entries: s, selectedStorefrontId: c, liveStorefrontId: c, liveStorefront: n };
+        : { isTestMode: !1, entries: f, selectedStorefrontId: c, liveStorefrontId: c, liveStorefront: l };
 }
 function d(e) {
     let { applicationId: t } = e,
-        { isTestMode: n, selectedStorefrontId: o, liveStorefrontId: s, liveStorefront: d } = f(t),
-        c = n && null != o && o !== s;
-    (l.useEffect(() => {
+        { isTestMode: l, selectedStorefrontId: o, liveStorefrontId: f, liveStorefront: d } = i(t),
+        c = l && null != o && o !== f;
+    (n.useEffect(() => {
         null != t && (0, u.ap)(t, { eager: !1 });
     }, [t]),
-        l.useEffect(() => {
+        n.useEffect(() => {
             c && null != t && null != o && (0, u.d8)(t, o);
         }, [c, t, o]));
-    let a = (0, r.bG)([i.A], () => (c && null != o ? i.A.getStorefrontById(o) : void 0), [c, o]);
+    let a = (0, r.bG)([s.A], () => (c && null != o ? s.A.getStorefrontById(o) : void 0), [c, o]);
     return {
-        isTestMode: n,
+        isTestMode: l,
         selectedStorefrontId: o,
-        liveStorefrontId: s,
+        liveStorefrontId: f,
         effectiveStorefront: c ? (a?.storefront ?? null) : d,
     };
 }

@@ -1,4 +1,4 @@
-n.d(t, { A: () => M });
+n.d(t, { A: () => L });
 var l = n(477900),
     i = n(582128),
     s = n(17928),
@@ -8,10 +8,10 @@ var l = n(477900),
     u = n(939249),
     c = n(696451),
     d = n(927813),
-    h = n(251812),
-    m = n(518782),
-    f = n(964486),
-    p = n(309010),
+    m = n(251812),
+    h = n(518782),
+    p = n(964486),
+    f = n(309010),
     g = n(287809),
     x = n(174459),
     A = n(562153),
@@ -84,13 +84,13 @@ function b(e) {
 var T = n(652215);
 function R(e) {
     let { guildId: t, userId: n, onClose: i, leaderboardWinnerData: r, detailText: a } = e,
-        o = (0, s.bG)([p.Ay], () => p.Ay.getChannelId(t)),
+        o = (0, s.bG)([f.Ay], () => f.Ay.getChannelId(t)),
         u = (0, s.bG)([g.default], () => g.default.getUser(n)),
         c = A.Ay.useName(t, o, u);
-    (0, f.Ay)(() => {
+    (0, p.Ay)(() => {
         x.default.track(T.HAw.OPEN_POPOUT, { type: "Leaderboard Winner Badge Popout", guild_id: t, channel_id: o });
     });
-    let d = (0, h.K)(r?.winningStat).name;
+    let d = (0, m.K)(r?.winningStat).name;
     return (0, l.jsx)("div", {
         role: "dialog",
         "aria-label": _.intl.formatToPlainString(_.t["LRh/OJ"], { username: c, statName: d }),
@@ -98,31 +98,31 @@ function R(e) {
     });
 }
 var O = n(631949);
-function M(e) {
+function L(e) {
     let { guildId: t, userId: n } = e,
-        f = i.useRef(null),
-        [p, g] = i.useState(!1),
+        p = i.useRef(null),
+        [f, g] = i.useState(!1),
         x = (0, s.bG)([c.Ay], () => c.Ay.getMember(t, n)?.gamingLeaderboardData),
         A = i.useCallback(() => g(!1), []),
         C = i.useCallback((e) => {
             (e.preventDefault(), e.stopPropagation(), g((e) => !e));
         }, []);
     if (null == x) return null;
-    let E = (0, h.K)(x.winningStat).name,
+    let E = (0, m.K)(x.winningStat).name,
         I = (function (e) {
             let t = e.winningValue;
             if (null == t || !Number.isFinite(t) || t < 0) return null;
             switch (e.winningStat) {
-                case m.RE.GAMING_LEADERBOARD_STAT_HOURS_PLAYED: {
+                case h.RE.GAMING_LEADERBOARD_STAT_HOURS_PLAYED: {
                     let e = Math.floor(t / d.A.Millis.MINUTE);
                     return _.intl.formatToPlainString(N.default.GC7N5H, {
                         hours: Math.floor(e / d.A.Minutes.HOUR),
                         minutes: e % d.A.Minutes.HOUR,
                     });
                 }
-                case m.RE.GAMING_LEADERBOARD_STAT_DAYS_PLAYED:
+                case h.RE.GAMING_LEADERBOARD_STAT_DAYS_PLAYED:
                     return _.intl.formatToPlainString(N.default.IXdbVJ, { days: t });
-                case m.RE.GAMING_LEADERBOARD_STAT_UNIQUE_GAMES_PLAYED:
+                case h.RE.GAMING_LEADERBOARD_STAT_UNIQUE_GAMES_PLAYED:
                     return _.intl.formatToPlainString(N.default["/VAMco"], { count: t });
                 default:
                     return null;
@@ -130,13 +130,13 @@ function M(e) {
         })(x),
         y = null != I ? `${E}. ${I}` : E;
     return (0, l.jsx)(r.Y, {
-        targetElementRef: f,
+        targetElementRef: p,
         animation: r.Y.Animation.TRANSLATE,
         align: "center",
         autoInvert: !0,
         nudgeAlignIntoViewport: !0,
         position: "top",
-        shouldShow: p,
+        shouldShow: f,
         onRequestClose: A,
         clickTrap: !0,
         renderPopout: (e) => {
@@ -155,14 +155,14 @@ function M(e) {
                 assetSize: 32,
                 position: "top",
                 ariaHidden: !0,
-                shouldShow: !p,
+                shouldShow: !f,
                 children: (0, l.jsx)(u.D, {
                     tag: "span",
-                    innerRef: f,
+                    innerRef: p,
                     className: O.M,
                     "aria-label": y,
                     "aria-haspopup": "dialog",
-                    "aria-expanded": p,
+                    "aria-expanded": f,
                     onClick: C,
                     children: (0, l.jsx)(o.TrophyIcon, { size: "xs", color: "currentColor", "aria-hidden": !0 }),
                 }),

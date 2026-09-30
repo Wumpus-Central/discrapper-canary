@@ -15,15 +15,15 @@ function a(e) {
                 emojiComesFromCurrentGuild: u,
                 userIsRoleSubscriber: c,
                 isRoleSubscriptionEmoji: d,
-                shouldHideRoleSubscriptionCTA: h,
-                onOpenPremiumSettings: m,
+                shouldHideRoleSubscriptionCTA: m,
+                onOpenPremiumSettings: h,
             } = e;
             return t === i.rV.APPLICATION && null != n
                 ? s.intl.formatToPlainString(s.t.uERlTd, { appName: n.name })
                 : l
                   ? r
                       ? d
-                          ? h && a
+                          ? m && a
                               ? s.intl.string(s.t.xFb68j)
                               : a
                                 ? c
@@ -37,7 +37,7 @@ function a(e) {
                         ? s.intl.string(s.t.xE9WGt)
                         : s.intl.string(s.t["0LMpW+"])
                   : r
-                    ? h && a
+                    ? m && a
                         ? s.intl.string(s.t.xFb68j)
                         : a
                           ? c
@@ -48,7 +48,7 @@ function a(e) {
                             : s.intl.string(s.t.jQy3aM)
                     : o
                       ? s.intl.string(s.t.FJ6Z01)
-                      : s.intl.format(s.t.U6vLcA, { openPremiumSettings: m });
+                      : s.intl.format(s.t.U6vLcA, { openPremiumSettings: h });
         })(e),
         n = (function (e) {
             let {

@@ -10,16 +10,16 @@ let c = function (e, t) {
     let n = t?.includesPremiumGroup ?? !1,
         c = (0, i.V)(),
         d = (0, l.O)(),
-        h = (0, l.p)();
+        m = (0, l.p)();
     if (null != c && (null == e || c.subscriptionTrial?.skuId === e))
         return c.isReferralTrial ? u.intl.string(u.t.gtNqJQ) : u.intl.string(u.t.IBYG5U);
     if (null != d && (null == e || (0, s.U9)(d, e))) {
         let e = r.U4.includes(d.discountId);
         return u.intl.formatToPlainString(e ? u.t.mYNXed : u.t.iiLbvu, { percent: d.discount.amount });
     }
-    return n && null != h && null != h.discount
+    return n && null != m && null != m.discount
         ? u.intl.formatToPlainString(o.default["7j70dP"], {
-              percent: h.discount.amount,
+              percent: m.discount.amount,
               premiumGroupProductName: (0, a.DP)(),
           })
         : null;

@@ -8,10 +8,10 @@ var l = n(477900),
     u = n(834730),
     c = n(866665),
     d = n(672979),
-    h = n(87664),
-    m = n(834757),
-    f = n(430363),
-    p = n(51183),
+    m = n(87664),
+    h = n(834757),
+    p = n(430363),
+    f = n(51183),
     g = n(287809),
     x = n(823854);
 n(851883);
@@ -23,8 +23,8 @@ function C(e) {
             iconClassName: s,
             textClassName: a,
             userId: d,
-            textSize: h = "xs",
-            animateEmoji: m = !0,
+            textSize: m = "xs",
+            animateEmoji: h = !0,
             hideEmoji: C = !1,
             hideTooltip: E = !1,
         } = e,
@@ -35,19 +35,19 @@ function C(e) {
                 r = null == s || null == n ? null : n === s.senderId ? s.targetId : s.senderId,
                 a = (0, o.bG)([g.default], () => (null != r ? g.default.getUser(r) : null), [r]),
                 u = (0, o.bG)([x.A], () => (null == n ? null : x.A.getProgressForUserId(n)), [n]);
-            return (0, f.Uk)(l)
+            return (0, p.Uk)(l)
                 ? { presence: s, progress: u, statusTextOverride: (a?.globalName ?? a?.username, null) }
                 : { presence: null, progress: null, statusTextOverride: null };
         })({ customStatusActivity: n, statusOwnerId: d, location: "CustomStatusVoiceDare" }),
         S = y.statusTextOverride ?? n?.state,
         v = null != S && "" !== S,
         N = null;
-    null == I || C || (N = (0, l.jsx)(p.A, { emoji: I, animate: m, className: s, hideTooltip: E || v }));
+    null == I || C || (N = (0, l.jsx)(f.A, { emoji: I, animate: h, className: s, hideTooltip: E || v }));
     let _ = v ? (null != N ? ` ${S}` : S) : null;
     return null == n
         ? null
         : (0, l.jsx)(u.E, {
-              variant: `text-${h}/medium`,
+              variant: `text-${m}/medium`,
               color: "none",
               className: r()(A.ps, a),
               children:
@@ -89,18 +89,18 @@ function R(e) {
             hideText: u = !1,
             hideTooltip: c = !1,
             canTruncate: d = !0,
-            showChannelName: h = !1,
+            showChannelName: m = !1,
         } = e,
-        m = (0, o.bG)([_.A], () => _.A.getChannel(t.channelId)),
-        f = (0, N.Ay)(m),
-        p = n?.name === "" ? null : n?.name,
-        g = null != p ? p : T.intl.string(T.t.eXan7B),
-        x = null != f ? `${g} (${f})` : g,
-        A = h ? x : g;
+        h = (0, o.bG)([_.A], () => _.A.getChannel(t.channelId)),
+        p = (0, N.Ay)(h),
+        f = n?.name === "" ? null : n?.name,
+        g = null != f ? f : T.intl.string(T.t.eXan7B),
+        x = null != p ? `${g} (${p})` : g,
+        A = m ? x : g;
     return (0, l.jsx)(b.A, {
         icon: a ? void 0 : (0, l.jsx)(j.A, { icon: v.U, className: r }),
         text: A,
-        tooltipText: c ? void 0 : u ? x : h ? void 0 : (f ?? void 0),
+        tooltipText: c ? void 0 : u ? x : m ? void 0 : (p ?? void 0),
         textVariant: i,
         className: s,
         canTruncate: d,
@@ -110,8 +110,8 @@ function R(e) {
     });
 }
 var O = n(3026),
-    M = n(208971);
-function L(e) {
+    L = n(208971);
+function M(e) {
     let t,
         {
             customStatusActivity: n,
@@ -121,22 +121,22 @@ function L(e) {
             textSize: o = "xs",
             animateEmoji: c = !0,
             hideEmoji: d = !1,
-            hideTooltip: h = !1,
+            hideTooltip: m = !1,
         } = e,
-        m = (0, M.G)(n?.state);
+        h = (0, L.G)(n?.state);
     if (null == n) return null;
-    let f = n?.emoji,
-        g = null != m && "" !== m,
+    let p = n?.emoji,
+        g = null != h && "" !== h,
         x = null;
-    null == f || d || (x = (0, l.jsx)(p.A, { emoji: f, animate: c, className: s, hideTooltip: h || g }));
-    let C = g && (null != x ? ` ${m}` : m);
+    null == p || d || (x = (0, l.jsx)(f.A, { emoji: p, animate: c, className: s, hideTooltip: m || g }));
+    let C = g && (null != x ? ` ${h}` : h);
     return (0, l.jsx)(u.E, {
         variant: `text-${o}/medium`,
         color: "none",
         className: r()(A.ps, i),
         children:
-            ((t = null != f && !d && !g),
-            h || t
+            ((t = null != p && !d && !g),
+            m || t
                 ? (0, l.jsxs)(l.Fragment, { children: [x, C] })
                 : (0, l.jsxs)(O.A, {
                       delay: 150,
@@ -162,24 +162,24 @@ function U(e) {
             showChannelName: c = !1,
         } = e,
         d = (0, w.S3)(P.clD.ONLINE),
-        h = (0, N.Ay)(t),
-        m = t.isDM() || t.isGroupDM(),
-        f = m
+        m = (0, N.Ay)(t),
+        h = t.isDM() || t.isGroupDM(),
+        p = h
             ? T.intl.string(T.t["9FaEzi"])
             : t.isGuildStageVoice()
               ? T.intl.string(T.t.QygGCN)
               : T.intl.string(T.t.msxteM),
-        p = null != h ? `${f} (${h})` : f,
-        g = c ? p : f;
+        f = null != m ? `${p} (${m})` : p,
+        g = c ? f : p;
     return (0, l.jsx)(b.A, {
         icon: (0, l.jsx)(D.A, { size: "custom", color: d, channel: t, className: r()(A.Kk, s) }),
         text: g,
-        tooltipText: o ? void 0 : a ? p : m || c ? void 0 : (h ?? void 0),
+        tooltipText: o ? void 0 : a ? f : h || c ? void 0 : (m ?? void 0),
         textVariant: n,
         textClassName: i,
         hideTooltip: o,
         canTruncate: u,
-        "aria-label": p,
+        "aria-label": f,
         hideText: a,
     });
 }
@@ -202,7 +202,7 @@ function F(e) {
         activities: n,
         applicationStream: s,
         voiceChannel: u,
-        textClassName: p,
+        textClassName: f,
         iconClassName: g,
         textSize: x = "xs",
         animateEmoji: I = !0,
@@ -210,9 +210,9 @@ function F(e) {
         hideEmoji: v = !1,
         hideTooltip: N = !1,
     } = e;
-    (0, h.A)(t?.id);
+    (0, m.A)(t?.id);
     let _ = s?.discoverable !== !1 ? s : null,
-        j = (0, m.AO)(_),
+        j = (0, h.AO)(_),
         b = i.useMemo(() => {
             let e = n?.find((e) => {
                 let { type: t } = e;
@@ -222,9 +222,9 @@ function F(e) {
             let t = e.state?.trim() ?? null;
             return null == ("" === t ? null : t) && null == e.emoji ? null : e;
         }, [n]),
-        T = (0, f.Uk)("ActivityStatus"),
+        T = (0, p.Uk)("ActivityStatus"),
         O = i.useMemo(() => (null != b, null), [b, T]),
-        M = i.useMemo(
+        L = i.useMemo(
             () =>
                 (0, a.uniqWith)(
                     n?.filter((e) => {
@@ -242,10 +242,10 @@ function F(e) {
         w = n?.find((e) => e.name === j?.name),
         D = t?.bot === !0,
         F = (0, o.bG)([E.A], () => E.A.isBlockedOrIgnored(t?.id)),
-        B = b?.state != null,
-        H = null != _,
-        W = !H && null != u,
-        K = M.length + (H || W ? 1 : 0),
+        H = b?.state != null,
+        B = null != _,
+        W = !B && null != u,
+        K = L.length + (B || W ? 1 : 0),
         z = K > 1,
         Z = b?.state != null && "xs" === x;
     if (F) return null;
@@ -257,18 +257,18 @@ function F(e) {
                 stream: _,
                 game: w,
                 textVariant: `text-${x}/medium`,
-                textClassName: p,
+                textClassName: f,
                 iconClassName: g,
                 hideText: Z,
                 hideIcon: D,
                 hideTooltip: t,
             });
-        let n = M?.[0];
+        let n = L?.[0];
         return null != n
             ? (0, l.jsx)(k.A, {
                   activity: n,
                   textVariant: `text-${x}/medium`,
-                  textClassName: p,
+                  textClassName: f,
                   iconClassName: g,
                   hideText: Z,
                   hideIcon: D,
@@ -278,7 +278,7 @@ function F(e) {
               ? (0, l.jsx)(U, {
                     channel: u,
                     textVariant: `text-${x}/medium`,
-                    textClassName: p,
+                    textClassName: f,
                     iconClassName: g,
                     hideText: Z,
                     hideTooltip: t,
@@ -288,8 +288,8 @@ function F(e) {
     function q() {
         return (0, l.jsx)(V, {
             textVariant: `text-${x}/medium`,
-            className: p,
-            hasCustomStatusText: B,
+            className: f,
+            hasCustomStatusText: H,
             totalActivityCount: K,
         });
     }
@@ -314,7 +314,7 @@ function F(e) {
                               e.push(
                                   (0, l.jsx)(R, { stream: _, game: n?.find(d.A), ...t, showChannelName: !0 }, "stream"),
                               ),
-                          M.forEach((n, i) => {
+                          L.forEach((n, i) => {
                               e.push((0, l.jsx)(k.A, { activity: n, ...t }, `activity-${i}`));
                           }),
                           W && e.push((0, l.jsx)(U, { channel: u, ...t, showChannelName: !0 }, "voice")),
@@ -337,12 +337,12 @@ function F(e) {
                             animateEmoji: I,
                             hideEmoji: v,
                             hideTooltip: N,
-                            textClassName: p,
+                            textClassName: f,
                             iconClassName: g,
                             tooltipClassName: $,
                             userId: t?.id,
                         }),
-                  K > 0 && (0, l.jsx)(G, { textVariant: `text-${x}/normal`, className: p }),
+                  K > 0 && (0, l.jsx)(G, { textVariant: `text-${x}/normal`, className: f }),
                   J(),
                   y && (0, l.jsx)(S, {}),
               ],
@@ -351,16 +351,16 @@ function F(e) {
               className: $,
               children: [
                   J(),
-                  null != b && K > 0 && (0, l.jsx)(G, { textVariant: `text-${x}/normal`, className: p }),
+                  null != b && K > 0 && (0, l.jsx)(G, { textVariant: `text-${x}/normal`, className: f }),
                   null == b
                       ? null
-                      : (0, l.jsx)(L, {
+                      : (0, l.jsx)(M, {
                             customStatusActivity: b,
                             textSize: x,
                             animateEmoji: I,
                             hideEmoji: v,
                             hideTooltip: N,
-                            textClassName: p,
+                            textClassName: f,
                             iconClassName: g,
                             tooltipClassName: $,
                         }),

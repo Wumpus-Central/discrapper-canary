@@ -1,4 +1,4 @@
-n.d(t, { AR: () => h, So: () => f, fh: () => p, uA: () => m });
+n.d(t, { AR: () => m, So: () => p, fh: () => f, uA: () => h });
 var l = n(95561),
     i = n(597184),
     s = n(194004),
@@ -13,12 +13,12 @@ function d() {
         a.default.track(o.HAw.DETECTABLE_GAME_SEARCHED_BATCHED, { surface: e, search_count: t, interval: 1 });
     u.clear();
 }
-function h(e, t) {
+function m(e, t) {
     if (!r.BQ.getSetting() || e !== i.DB.GAME) return;
     let n = "game_mention_autocomplete";
     (u.set(n, (u.get(n) ?? 0) + 1), null == c && (c = setTimeout(d, 1e3)));
 }
-function m(e, t, n) {
+function h(e, t, n) {
     a.default.track(o.HAw.CHANNEL_AUTOCOMPLETE_OPEN, {
         ...(0, l.dI)(t),
         ...(0, l.H$)(t.guild_id),
@@ -29,7 +29,7 @@ function m(e, t, n) {
         game_mentions_available: n?.gameMentionsAvailable,
     });
 }
-function f(e, t, n, i) {
+function p(e, t, n, i) {
     a.default.track(o.HAw.CHANNEL_AUTOCOMPLETE_SELECTED, {
         ...(0, l.dI)(n),
         ...(0, l.H$)(n.guild_id),
@@ -45,7 +45,7 @@ function f(e, t, n, i) {
         application_id: i?.gameId,
     });
 }
-function p(e) {
+function f(e) {
     let { sticker: t, stickerSelectLocation: n, isReplacement: l, analyticsLocations: i } = e;
     a.default.track(o.HAw.STICKER_ATTACHED, {
         replaced: l,

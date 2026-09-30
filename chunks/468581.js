@@ -9,7 +9,7 @@ var l = n(477900),
 let c = [a.iq, a.Zc, a.Xy, a.$X, a.fg, a.MK],
     d = i.memo(function (e) {
         let { entry: t, channel: n, selected: i, hovered: d } = e,
-            { largeImage: h } = (0, s.nO)({
+            { largeImage: m } = (0, s.nO)({
                 entry: t,
                 showCoverImage: !1,
                 trackingSource: "memberlist_activity_content_row",
@@ -27,7 +27,7 @@ let c = [a.iq, a.Zc, a.Xy, a.$X, a.fg, a.MK],
                         }),
                     ],
                 }),
-                (0, l.jsx)(r.V, { alt: h?.alt, src: h?.src, size: 48, className: u.xn }),
+                (0, l.jsx)(r.V, { alt: m?.alt, src: m?.src, size: 48, className: u.xn }),
             ],
         });
     });

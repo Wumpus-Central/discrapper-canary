@@ -8,10 +8,10 @@ var l = n(477900),
     u = n(721768),
     c = n(842209),
     d = n(392054),
-    h = n(332173),
-    m = n(406704),
-    f = n(885386),
-    p = n(734057),
+    m = n(332173),
+    h = n(406704),
+    p = n(885386),
+    f = n(734057),
     g = n(31717),
     x = n(576705),
     A = n(309010),
@@ -35,7 +35,7 @@ function S(e, t, n, l, i) {
             : s());
     function s() {
         if (null == e) return;
-        let s = p.A.getChannel(e);
+        let s = f.A.getChannel(e);
         if (null == s) return;
         let { command: r, application: a } = c.EW({ channel: s, type: "channel" }, n, i);
         if (null != r && r.untranslatedName === t) {
@@ -57,18 +57,18 @@ function S(e, t, n, l, i) {
 }
 function v(e) {
     let { node: t, stateKey: n, children: r } = e,
-        a = (0, s.bG)([p.A, A.Ay], () => p.A.getChannel(t.channelId ?? A.Ay.getChannelId()), [t.channelId]),
+        a = (0, s.bG)([f.A, A.Ay], () => f.A.getChannel(t.channelId ?? A.Ay.getChannelId()), [t.channelId]),
         { hasSendMessagePerm: o, hasUseAppCommandsPerm: u } = (0, s.cf)([x.A], () => ({
             hasSendMessagePerm: x.A.can(E.xBc.SEND_MESSAGES, a),
             hasUseAppCommandsPerm: x.A.can(E.xBc.USE_APPLICATION_COMMANDS, a),
         })),
         g = void 0 !== a ? { type: "channel", channel: a } : { type: "contextless" },
         { command: C } = c.D3(g, t.commandKey ?? ""),
-        y = f.D_.useSetting(),
+        y = p.D_.useSetting(),
         v = i.useMemo(() => {
             if (null == C || null == a || C.untranslatedName !== t.commandName || y) return !1;
             let e = a.isPrivate();
-            if ((0, m.UJ)(a) || (!e && !o)) return !1;
+            if ((0, h.UJ)(a) || (!e && !o)) return !1;
             let n = C?.applicationId === I.Ik.BUILT_IN;
             return !!e || !!n || !!u;
         }, [a, C, o, u, t.commandName, y]),
@@ -83,7 +83,7 @@ function v(e) {
             [a, t.commandKey, t.commandName],
         );
     return v
-        ? (0, l.jsxs)(h.A, { role: "link", onClick: N, children: ["/", r] }, n)
+        ? (0, l.jsxs)(m.A, { role: "link", onClick: N, children: ["/", r] }, n)
         : (0, l.jsxs)("span", { children: ["/", r] });
 }
 function N(e) {

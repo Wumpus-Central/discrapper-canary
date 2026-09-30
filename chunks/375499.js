@@ -8,10 +8,10 @@ var l = n(477900),
     u = n(554146),
     c = n(939249),
     d = n(805901),
-    h = n(683063),
-    m = n(604121),
-    f = n(866665),
-    p = n(775602),
+    m = n(683063),
+    h = n(604121),
+    p = n(866665),
+    f = n(775602),
     g = n(131607),
     x = n(189551),
     A = n(526292),
@@ -27,9 +27,9 @@ function N(e) {
             renderButtonContents: n,
             active: s,
             onMouseEnter: u,
-            onMouseLeave: h,
-            onContextMenu: m,
-            onFocus: f,
+            onMouseLeave: m,
+            onContextMenu: h,
+            onFocus: p,
             spriteClassName: g,
             spriteSize: A,
             ref: E,
@@ -47,31 +47,31 @@ function N(e) {
                 "--custom-emoji-sprite-col": e % 20,
             };
         })(j, A),
-        M = i.useCallback(() => {
+        L = i.useCallback(() => {
             if (T) return;
             let e = Math.floor(77 * Math.random());
             (_(!0), b(e), (0, x.K)(I.EmojiInteractionPoint.EmojiButtonMouseEntered));
         }, [T, _, b]),
-        L = i.useCallback(() => {
+        M = i.useCallback(() => {
             _(!1);
         }, [_]),
         k = i.useCallback(() => (0, x.K)(I.EmojiInteractionPoint.EmojiButtonFocused), []),
-        w = (0, o.bG)([p.Ay], () => p.Ay.useReducedMotion);
+        w = (0, o.bG)([f.Ay], () => f.Ay.useReducedMotion);
     return (0, l.jsx)(c.D, {
         innerRef: E,
         className: r()(R, t),
         "aria-expanded": s,
         onMouseEnter: () => {
-            (M(), u?.());
+            (L(), u?.());
         },
-        onMouseOver: M,
+        onMouseOver: L,
         onMouseLeave: () => {
-            (L(), h?.());
+            (M(), m?.());
         },
         onFocus: () => {
-            (k(), f?.());
+            (k(), p?.());
         },
-        onContextMenu: m,
+        onContextMenu: h,
         ...y,
         children:
             null != n
@@ -115,16 +115,16 @@ function _(e) {
             canShowNUXPremiumTooltip: I = !1,
             ...v
         } = e,
-        _ = (0, o.bG)([p.Ay], () => p.Ay.useReducedMotion),
+        _ = (0, o.bG)([f.Ay], () => f.Ay.useReducedMotion),
         j = (0, A.k0)(),
         [b, T] = (0, g.kn)(j ? [u.M.TRIAL_NUX_EMOJI_BUTTON] : [], void 0, !0),
         R = I && b === u.M.TRIAL_NUX_EMOJI_BUTTON,
         O = !a && R,
-        M = i.useRef(null),
-        L = x ?? M;
+        L = i.useRef(null),
+        M = x ?? L;
     function k() {
         return (0, l.jsx)(N, {
-            ref: L,
+            ref: M,
             onMouseLeave: () => {
                 R && T(E.i.USER_DISMISS);
             },
@@ -141,10 +141,10 @@ function _(e) {
     return null == s
         ? k()
         : O
-          ? (0, l.jsx)(h.u, {
-                targetElementRef: L,
+          ? (0, l.jsx)(m.u, {
+                targetElementRef: M,
                 body: y.intl.format(y.t["/7R4q4"], {}),
-                asset: (0, l.jsx)(m.a, {
+                asset: (0, l.jsx)(h.a, {
                     className: r()(S.premiumUnlockAnimation, { [S.reducedMotion]: _ }),
                     loop: !1,
                     shouldAnimate: !_,
@@ -155,5 +155,5 @@ function _(e) {
                 shouldShow: !0,
                 children: k(),
             })
-          : (0, l.jsx)(f.m, { targetElementRef: L, shouldShow: !0, text: s, keyboardShortcut: C, children: k() });
+          : (0, l.jsx)(p.m, { targetElementRef: M, shouldShow: !0, text: s, keyboardShortcut: C, children: k() });
 }

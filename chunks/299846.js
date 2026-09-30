@@ -21,15 +21,15 @@ function a(e) {
         u = n.assets?.large_text != null || n.assets?.small_text != null,
         c = n.name ?? ("game_name" in e.extra ? e.extra.game_name : void 0),
         d = n.details,
-        h = n.state,
-        m = n.party;
+        m = n.state,
+        h = n.party;
     return {
-        isRich: o || u || null != d || null != h || null != m,
+        isRich: o || u || null != d || null != m || null != h,
         user: t,
         activity: n,
-        state: h,
+        state: m,
         details: d,
-        party: m,
+        party: h,
         appName: c,
         embeddedActivity: a,
     };

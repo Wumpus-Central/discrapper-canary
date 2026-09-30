@@ -1,4 +1,4 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => h });
 var l = n(477900),
     i = n(582128),
     s = n(503698),
@@ -12,7 +12,7 @@ function d(e) {
         n = t % 60;
     return `${(t - n) / 60}:${String(n).padStart(2, "0")}`;
 }
-class h extends i.Component {
+class m extends i.Component {
     static Types = c;
     static defaultProps = { currentWindow: window };
     state = {
@@ -114,7 +114,7 @@ class h extends i.Component {
     render() {
         let { buffers: e, type: t, className: n, sliderClassName: i } = this.props,
             { dragging: s, previewWidth: u, animatedProgress: d } = this.state,
-            h = s ? d : u;
+            m = s ? d : u;
         return (0, l.jsx)("div", {
             className: r()(n, t === c.VOLUME ? o.Vd : o.xM),
             children: (0, l.jsx)("div", {
@@ -152,7 +152,7 @@ class h extends i.Component {
                             ? (0, l.jsx)(a.A.div, {
                                   ref: this.setBubbleRef,
                                   className: o.Tq,
-                                  style: { left: h.interpolate({ inputRange: [0, 1], outputRange: ["0%", "100%"] }) },
+                                  style: { left: m.interpolate({ inputRange: [0, 1], outputRange: ["0%", "100%"] }) },
                               })
                             : null,
                     ],
@@ -161,4 +161,4 @@ class h extends i.Component {
         });
     }
 }
-let m = h;
+let h = m;

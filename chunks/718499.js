@@ -1,23 +1,23 @@
-n.d(t, { Ay: () => c, Bu: () => o, OJ: () => s, XY: () => u });
+n.d(t, { Ay: () => c, Bu: () => o, OJ: () => u, XY: () => s });
 var r = n(582128),
     l = n(876230),
     a = n(614269),
     i = n(53200);
-let u = 8e5,
-    s = 20,
+let s = 8e5,
+    u = 20,
     o = 30;
 function c(e, t) {
-    let { src: n, initialTimeSec: c = 0, onError: d, onHlsInstance: m, crossOrigin: f = "anonymous" } = t,
-        h = r.useRef(null),
+    let { src: n, initialTimeSec: c = 0, onError: d, onHlsInstance: m, crossOrigin: h = "anonymous" } = t,
+        f = r.useRef(null),
         [p, v] = r.useState(null),
-        x = r.useRef(c);
-    x.current = c;
-    let g = r.useRef(d),
+        g = r.useRef(c);
+    g.current = c;
+    let x = r.useRef(d),
         E = r.useRef(m),
-        b = r.useRef(f);
-    ((b.current = f),
+        b = r.useRef(h);
+    ((b.current = h),
         r.useEffect(() => {
-            g.current = d;
+            x.current = d;
         }, [d]),
         r.useEffect(() => {
             E.current = m;
@@ -36,9 +36,9 @@ function c(e, t) {
                     if (r) return;
                     if (!e.isSupported()) return void C(!0);
                     let i = (a = new e({
-                        backBufferLength: s,
+                        backBufferLength: u,
                         maxBufferLength: o,
-                        startPosition: x.current,
+                        startPosition: g.current,
                         startFragPrefetch: !0,
                         startLevel: -1,
                         xhrSetup: (e) => {
@@ -57,7 +57,7 @@ function c(e, t) {
                             new Request(e.url, t)
                         ),
                     }));
-                    ((h.current = i), v(i), E.current?.(i));
+                    ((f.current = i), v(i), E.current?.(i));
                     let d = 0;
                     ((c = () => {
                         i.mainForwardBufferInfo?.len === 0 &&
@@ -68,11 +68,11 @@ function c(e, t) {
                             });
                     }),
                         i.on(e.Events.FRAG_LOADING, function () {
-                            i.config.minAutoBitrate !== u && (i.config.minAutoBitrate = u);
+                            i.config.minAutoBitrate !== s && (i.config.minAutoBitrate = s);
                         }),
                         i.on(e.Events.ERROR, function (t, n) {
                             if (
-                                (g.current?.(
+                                (x.current?.(
                                     (function (e, t) {
                                         switch (t) {
                                             case e.ErrorTypes.NETWORK_ERROR:
@@ -92,7 +92,7 @@ function c(e, t) {
                                 n.fatal)
                             ) {
                                 if (d >= 3) {
-                                    (i.destroy(), (h.current = null), v(null), E.current?.(null));
+                                    (i.destroy(), (f.current = null), v(null), E.current?.(null));
                                     return;
                                 }
                                 switch ((d++, n.type)) {
@@ -103,7 +103,7 @@ function c(e, t) {
                                         i.recoverMediaError();
                                         break;
                                     default:
-                                        (i.destroy(), (h.current = null), E.current?.(null));
+                                        (i.destroy(), (f.current = null), E.current?.(null));
                                 }
                             }
                         }),
@@ -115,12 +115,12 @@ function c(e, t) {
                     ((r = !0),
                         null != c && t.removeEventListener("seeking", c),
                         null != a &&
-                            (h.current === a && (a.destroy(), (h.current = null), v(null), E.current?.(null)),
+                            (f.current === a && (a.destroy(), (f.current = null), v(null), E.current?.(null)),
                             t.removeAttribute("src"),
                             t.load()));
                 }
             );
         }, [y, n, e]),
-        { isHlsActive: y, hlsRef: h, hls: p }
+        { isHlsActive: y, hlsRef: f, hls: p }
     );
 }

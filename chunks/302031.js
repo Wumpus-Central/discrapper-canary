@@ -8,10 +8,10 @@ var l,
     u = n(87221),
     c = n(834730),
     d = n(939249),
-    h = n(952270),
-    m = n(39623),
-    f = n(683063),
-    p = n(379257),
+    m = n(952270),
+    h = n(39623),
+    p = n(683063),
+    f = n(379257),
     g = n(306537),
     x = n(36149),
     A = n(390248),
@@ -70,8 +70,8 @@ function j(e) {
                   onClick: l,
                   "aria-label": I.intl.string(I.t.ex5G9m),
                   children: n
-                      ? (0, i.jsx)(m.EyeIcon, { size: "md", color: "currentColor" })
-                      : (0, i.jsx)(h.EyeSlashIcon, { size: "md", color: "currentColor" }),
+                      ? (0, i.jsx)(h.EyeIcon, { size: "md", color: "currentColor" })
+                      : (0, i.jsx)(m.EyeSlashIcon, { size: "md", color: "currentColor" }),
               }),
           });
 }
@@ -92,7 +92,7 @@ class T extends s.PureComponent {
             (0, A.Wi)({ obscure: this.state.visible }),
             this.props.shouldAgeVerify)
         )
-            return void p.A.showAgeVerificationGetStartedModal({ entryPoint: g.q1.OBSCURED_MEDIA });
+            return void f.A.showAgeVerificationGetStartedModal({ entryPoint: g.q1.OBSCURED_MEDIA });
         let { onToggleObscurity: t } = this.props;
         (null != t && t(e), this.setState((e) => ({ visible: !e.visible })));
     };
@@ -101,7 +101,7 @@ class T extends s.PureComponent {
         e && this.setState({ visible: !1 });
     };
     renderWithTooltip(e) {
-        return this.state.visible ? e : (0, i.jsx)(f.u, { position: "left", body: this.tooltipText, children: e });
+        return this.state.visible ? e : (0, i.jsx)(p.u, { position: "left", body: this.tooltipText, children: e });
     }
     renderObscuredAttachment() {
         let {
@@ -115,47 +115,47 @@ class T extends s.PureComponent {
                 obscurityControlClassName: u,
                 isVerifiedTeen: c,
             } = this.props,
-            { visible: h } = this.state,
-            m = (0, i.jsx)(b.Consumer, {
-                children: (m) => {
-                    let f = m || h || !s;
+            { visible: m } = this.state,
+            h = (0, i.jsx)(b.Consumer, {
+                children: (h) => {
+                    let p = h || m || !s;
                     return C._K.has(r) && !t
                         ? (0, i.jsxs)("div", {
-                              "aria-label": f ? void 0 : this.ariaLabel,
-                              "aria-expanded": f,
+                              "aria-label": p ? void 0 : this.ariaLabel,
+                              "aria-expanded": p,
                               style: l,
-                              className: a()(n, y.ur, y.q2, y.Dq, y.OZ, { [y.R]: !f, [y.h5]: o }),
-                              role: f ? "presentation" : "button",
-                              tabIndex: f ? -1 : 0,
+                              className: a()(n, y.ur, y.q2, y.Dq, y.OZ, { [y.R]: !p, [y.h5]: o }),
+                              role: p ? "presentation" : "button",
+                              tabIndex: p ? -1 : 0,
                               children: [
-                                  f ? null : (0, i.jsx)(_, { reason: r, isSingleMosaicItem: o }),
-                                  (0, i.jsx)("div", { "aria-hidden": !f, className: y.Qu, children: e(!f) }),
+                                  p ? null : (0, i.jsx)(_, { reason: r, isSingleMosaicItem: o }),
+                                  (0, i.jsx)("div", { "aria-hidden": !p, className: y.Qu, children: e(!p) }),
                                   c
                                       ? null
                                       : (0, i.jsx)(j, {
                                             obscureReason: r,
-                                            isVisible: h,
+                                            isVisible: m,
                                             handleToggleObscurity: this.handleToggleObscurity,
                                             obscurityControlClassName: u,
                                         }),
                               ],
                           })
                         : (0, i.jsxs)(d.D, {
-                              onClick: f ? void 0 : this.removeObscurity,
-                              "aria-label": f ? void 0 : this.ariaLabel,
-                              "aria-expanded": f,
+                              onClick: p ? void 0 : this.removeObscurity,
+                              "aria-label": p ? void 0 : this.ariaLabel,
+                              "aria-expanded": p,
                               style: l,
-                              className: a()(n, y.ur, y.q2, y.Dq, { [y.R]: !f, [y.rP]: !f }),
-                              role: f ? "presentation" : "button",
-                              tabIndex: f ? -1 : 0,
+                              className: a()(n, y.ur, y.q2, y.Dq, { [y.R]: !p, [y.rP]: !p }),
+                              role: p ? "presentation" : "button",
+                              tabIndex: p ? -1 : 0,
                               children: [
-                                  f || t ? null : (0, i.jsx)(_, { reason: r, isSingleMosaicItem: o }),
-                                  (0, i.jsx)("div", { "aria-hidden": !f, className: y.Qu, children: e(!f) }),
+                                  p || t ? null : (0, i.jsx)(_, { reason: r, isSingleMosaicItem: o }),
+                                  (0, i.jsx)("div", { "aria-hidden": !p, className: y.Qu, children: e(!p) }),
                               ],
                           });
                 },
             });
-        return t ? this.renderWithTooltip(m) : m;
+        return t ? this.renderWithTooltip(h) : h;
     }
     renderObscuredEmbed() {
         let {
@@ -170,18 +170,18 @@ class T extends s.PureComponent {
             { visible: u } = this.state;
         return (0, i.jsx)(b.Consumer, {
             children: (c) => {
-                let h = c || u;
+                let m = c || u;
                 return C._K.has(r)
                     ? (0, i.jsxs)("div", {
                           "aria-label": u ? void 0 : this.ariaLabel,
-                          "aria-expanded": h,
+                          "aria-expanded": m,
                           style: n,
-                          className: a()(t, y.ur, y.q2, y.x, y.OZ, { [y.R]: !h }),
-                          role: h ? "presentation" : "button",
-                          tabIndex: h ? -1 : 0,
+                          className: a()(t, y.ur, y.q2, y.x, y.OZ, { [y.R]: !m }),
+                          role: m ? "presentation" : "button",
+                          tabIndex: m ? -1 : 0,
                           children: [
-                              h ? null : (0, i.jsx)(_, { reason: r, isSingleMosaicItem: l }),
-                              (0, i.jsx)("div", { "aria-hidden": !h, className: y.Qu, children: e(!h) }),
+                              m ? null : (0, i.jsx)(_, { reason: r, isSingleMosaicItem: l }),
+                              (0, i.jsx)("div", { "aria-hidden": !m, className: y.Qu, children: e(!m) }),
                               o
                                   ? null
                                   : (0, i.jsx)(j, {
@@ -194,15 +194,15 @@ class T extends s.PureComponent {
                       })
                     : (0, i.jsxs)(d.D, {
                           "aria-label": this.ariaLabel,
-                          "aria-expanded": h,
-                          className: a()(t, y.ur, y.q2, y.x, { [y.R]: !h }),
-                          onClick: h ? void 0 : this.removeObscurity,
+                          "aria-expanded": m,
+                          className: a()(t, y.ur, y.q2, y.x, { [y.R]: !m }),
+                          onClick: m ? void 0 : this.removeObscurity,
                           style: n,
-                          role: h ? "presentation" : "button",
-                          tabIndex: h ? -1 : 0,
+                          role: m ? "presentation" : "button",
+                          tabIndex: m ? -1 : 0,
                           children: [
-                              h ? null : (0, i.jsx)(_, { reason: r, className: y.E6 }),
-                              (0, i.jsx)("div", { "aria-hidden": !h, children: e(!h) }),
+                              m ? null : (0, i.jsx)(_, { reason: r, className: y.E6 }),
+                              (0, i.jsx)("div", { "aria-hidden": !m, children: e(!m) }),
                           ],
                       });
             },

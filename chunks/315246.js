@@ -8,10 +8,10 @@ var l = n(477900),
     u = n(939249),
     c = n(365199),
     d = n(442433),
-    h = n(50268),
-    m = n(409626),
-    f = n(692969),
-    p = n(243949),
+    m = n(50268),
+    h = n(409626),
+    p = n(692969),
+    f = n(243949),
     g = n(20805),
     x = n(438692),
     A = n(375708),
@@ -21,15 +21,15 @@ function I(e) {
     let { user: t, guildId: n, channel: I, entry: y, onSelect: S, disableGameProfileLinks: v } = e,
         N = i.useRef(null),
         _ = i.useContext(x.Jd),
-        j = (0, p.A)({ userId: t.id, guildId: n, channelId: I?.id, onAction: _ }),
-        b = (0, h.A)({ id: t.id, label: A.intl.string(A.t["/AXYnE"]) }),
+        j = (0, f.A)({ userId: t.id, guildId: n, channelId: I?.id, onAction: _ }),
+        b = (0, m.A)({ id: t.id, label: A.intl.string(A.t["/AXYnE"]) }),
         T = "application_id" in y.extra ? y.extra.application_id : null,
-        R = (0, h.A)({ id: T, label: A.intl.string(A.t["FfCL+6"]) }),
+        R = (0, m.A)({ id: T, label: A.intl.string(A.t["FfCL+6"]) }),
         O = (0, g.zD)(y),
-        M = (0, f.A)({
+        L = (0, p.A)({
             location: "ContentPopoutContextMenu",
             applicationId: O && !0 !== v ? y.extra?.application_id : void 0,
-            source: m.GameProfileSources.ActivityCardContextMenu,
+            source: h.GameProfileSources.ActivityCardContextMenu,
             trackEntryPointImpression: !0,
             sourceUserId: y.author_id,
         });
@@ -53,12 +53,12 @@ function I(e) {
                         (0, l.jsxs)(a.rX, {
                             children: [
                                 j,
-                                null != M &&
+                                null != L &&
                                     (0, l.jsx)(a.Dr, {
                                         id: "game-profile",
                                         label: A.intl.string(A.t.f7aVGn),
                                         action: (e) => {
-                                            (M(e), _?.());
+                                            (L(e), _?.());
                                         },
                                     }),
                             ],

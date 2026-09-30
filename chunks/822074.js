@@ -5,10 +5,10 @@ var a = n(435558),
     u = n(17928),
     c = n(228366),
     d = n(432371),
-    h = n(115718),
-    m = n(736056),
-    f = n(174768),
-    p = n(734057),
+    m = n(115718),
+    h = n(736056),
+    p = n(174768),
+    f = n(734057),
     g = n(71393),
     x = n(573163),
     A = n(309010),
@@ -38,10 +38,10 @@ let N = {},
     T = {},
     R = { status: "ok", lastRequest: null, lastResponse: null },
     O = [],
-    M = [];
-function L() {
-    O = f.A.getProps()
-        .results.filter((e) => e.type === h.rD.TEXT_CHANNEL && 0 === e.record.type)
+    L = [];
+function M() {
+    O = p.A.getProps()
+        .results.filter((e) => e.type === m.rD.TEXT_CHANNEL && 0 === e.record.type)
         .map((e) => e.record.id);
 }
 class k extends u.Ay.PersistedStore {
@@ -51,8 +51,8 @@ class k extends u.Ay.PersistedStore {
     }
     initialize(e) {
         ((l = e?.shouldShowTopicsBar ?? !0),
-            this.waitFor(p.A, m.A, g.A, f.A, x.Ay, A.Ay, C.Ay, E.default),
-            this.syncWith([f.A], L));
+            this.waitFor(f.A, h.A, g.A, p.A, x.Ay, A.Ay, C.Ay, E.default),
+            this.syncWith([p.A], M));
     }
     allSummaries() {
         return N;
@@ -68,7 +68,7 @@ class k extends u.Ay.PersistedStore {
             .sort((e, t) => y.default.extractTimestamp(t.endId) - y.default.extractTimestamp(e.endId));
     }
     summaries(e) {
-        return N[e] ?? M;
+        return N[e] ?? L;
     }
     shouldShowTopicsBar() {
         return l;
@@ -90,7 +90,7 @@ class k extends u.Ay.PersistedStore {
     }
     shouldFetch(e, t) {
         let n = _[e],
-            l = p.A.getChannel(e);
+            l = f.A.getChannel(e);
         if (!(0, d.pk)(l)) return !1;
         if (null != t) {
             let e = n?.summaryIdLastRequestedAt ?? 0,
@@ -123,11 +123,11 @@ class k extends u.Ay.PersistedStore {
             n && (s = s.concat(b.map((e) => e.channel_id))),
             l &&
                 (s = s.filter((e) => {
-                    let t = p.A.getChannel(e);
+                    let t = f.A.getChannel(e);
                     return null != t && !C.Ay.isChannelMuted(t.guild_id, e) && x.Ay.hasUnread(e);
                 })),
             (s = s.filter((e) => {
-                let t = p.A.getChannel(e);
+                let t = f.A.getChannel(e);
                 return (0, d.pk)(t, !1, !1);
             })).slice(0, i)
         );

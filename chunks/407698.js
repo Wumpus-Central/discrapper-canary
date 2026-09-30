@@ -1,4 +1,4 @@
-n.d(t, { Q: () => m });
+n.d(t, { Q: () => h });
 var l = n(477900),
     i = n(582128),
     s = n(866665),
@@ -8,24 +8,24 @@ var l = n(477900),
     u = n(454938),
     c = n(714991),
     d = n(107773),
-    h = n(652215);
-function m(e) {
+    m = n(652215);
+function h(e) {
     let { guild: t, children: n } = e,
-        m = (0, u.A)(t);
+        h = (0, u.A)(t);
     return i.useMemo(() => {
-        if (m) {
+        if (h) {
             let e = (0, o.Jp)(t);
             return (0, a.K)(e) !== a._.NONE;
         }
         return (
-            t.features.has(h.GuildFeatures.INTERNAL_EMPLOYEE_ONLY) ||
-            t.features.has(h.GuildFeatures.HUB) ||
-            t.features.has(h.GuildFeatures.VERIFIED) ||
-            t.features.has(h.GuildFeatures.PARTNERED)
+            t.features.has(m.GuildFeatures.INTERNAL_EMPLOYEE_ONLY) ||
+            t.features.has(m.GuildFeatures.HUB) ||
+            t.features.has(m.GuildFeatures.VERIFIED) ||
+            t.features.has(m.GuildFeatures.PARTNERED)
         );
-    }, [t, m])
+    }, [t, h])
         ? (0, l.jsx)(r.u, {
-              asset: m
+              asset: h
                   ? (0, l.jsx)(d.A, { disableBoostClick: !0, guild: t, size: 20 })
                   : (0, l.jsx)(c.A, { guild: t, size: 20 }),
               assetSize: 20,

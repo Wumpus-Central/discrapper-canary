@@ -1,4 +1,4 @@
-(n.d(t, { $2: () => M, Ky: () => T, L_: () => R, no: () => j, vV: () => y, xz: () => O, yC: () => b }), n(938796));
+(n.d(t, { $2: () => L, Ky: () => T, L_: () => R, no: () => j, vV: () => y, xz: () => O, yC: () => b }), n(938796));
 var l,
     i = n(582128),
     s = n(665260),
@@ -8,10 +8,10 @@ var l,
     u = n(59318),
     c = n(456874),
     d = n(885386),
-    h = n(734057),
-    m = n(232835),
-    f = n(287809),
-    p = n(403362),
+    m = n(734057),
+    h = n(232835),
+    p = n(287809),
+    f = n(403362),
     g = n(935208),
     x = n(998218),
     A = n(652215);
@@ -51,31 +51,31 @@ function S(e) {
                           content_scan_version: d,
                       } = e;
                       if (null == a || null == o) return null;
-                      let h = (0, u.AE)(c),
-                          m = null != e.flags && (0, s.Lt)(e.flags, A.sbO.IS_THUMBNAIL),
-                          f = n ?? l;
-                      if (h) {
+                      let m = (0, u.AE)(c),
+                          h = null != e.flags && (0, s.Lt)(e.flags, A.sbO.IS_THUMBNAIL),
+                          p = n ?? l;
+                      if (m) {
                           let e = x.A.toURLSafe(n);
                           if (null == e) return null;
-                          (e.searchParams.append("format", "webp"), (f = e.toString()));
+                          (e.searchParams.append("format", "webp"), (p = e.toString()));
                       }
                       return {
                           type: "attachment",
-                          src: f,
+                          src: p,
                           width: a,
                           height: o,
                           spoiler: (0, s.Lt)(r ?? 0, A.sbO.IS_SPOILER),
                           flags: r,
                           contentScanVersion: d,
                           alt: i,
-                          isVideo: h,
-                          isThumbnail: m,
+                          isVideo: m,
+                          isThumbnail: h,
                           attachmentId: e.id,
                           mediaIndex: t,
                           srcIsAnimated: (0, s.Lt)(e.flags ?? 0, A.sbO.IS_ANIMATED),
                       };
                   })
-                  .filter(p.Vq);
+                  .filter(f.Vq);
     })(e, d.X6.useSetting());
 }
 function v(e, t) {
@@ -104,7 +104,7 @@ function v(e, t) {
                       };
                   }
               })
-              .filter(p.Vq)
+              .filter(f.Vq)
         : [];
 }
 function N(e) {
@@ -122,7 +122,7 @@ function N(e) {
                   }
                   return null;
               })
-              .filter(p.Vq)
+              .filter(f.Vq)
         : [];
 }
 function _(e, t) {
@@ -171,20 +171,20 @@ function R(e, t) {
     return null == n[0] && null == i[0] && null != l[0];
 }
 function O(e, t) {
-    let n = h.A.getChannel(t);
+    let n = m.A.getChannel(t);
     if (null == n) return !1;
-    let l = m.A.getMessage(n.id, g.default.castChannelIdAsMessageId(n.id));
+    let l = h.A.getMessage(n.id, g.default.castChannelIdAsMessageId(n.id));
     return (
         null != l &&
         e.length > 0 &&
         null != e.find((e) => e.isImage || e.isVideo) &&
         n.isForumPost() &&
-        n.ownerId === f.default.getCurrentUser()?.id &&
+        n.ownerId === p.default.getCurrentUser()?.id &&
         0 === c.A.getCount(n.id) &&
         (0 === l.attachments.length || null == l.attachments.find((e) => C(e) || E(e)))
     );
 }
-function M(e) {
+function L(e) {
     return e.reduce(
         (e, t) => ({ containsVideo: e.containsVideo || t.isVideo, containsGif: e.containsGif || (0, u.ge)(t.src) }),
         { containsVideo: !1, containsGif: !1 },

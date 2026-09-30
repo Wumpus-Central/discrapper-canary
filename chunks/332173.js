@@ -1,4 +1,4 @@
-n.d(t, { A: () => h });
+n.d(t, { A: () => m });
 var l = n(477900),
     i = n(582128),
     s = n(503698),
@@ -8,29 +8,29 @@ var l = n(477900),
     u = n(939249),
     c = n(232042),
     d = n(209599);
-let h = function (e) {
+let m = function (e) {
     let {
             ref: t,
             children: n,
             className: s,
-            color: h,
-            roleColors: m,
-            iconType: f,
-            onMouseEnter: p,
+            color: m,
+            roleColors: h,
+            iconType: p,
+            onMouseEnter: f,
             onMouseLeave: g,
             ...x
         } = e,
         [A, C] = i.useState(!1),
         { gradientStyle: E, gradientClassname: I } = (0, o.v5)({
-            colorStrings: m ?? null,
+            colorStrings: h ?? null,
             roleStyle: "username",
             animateGradient: A,
         }),
         y = i.useCallback(
             (e) => {
-                (C(!0), p?.(e));
+                (C(!0), f?.(e));
             },
-            [C, p],
+            [C, f],
         ),
         S = i.useCallback(
             (e) => {
@@ -40,7 +40,7 @@ let h = function (e) {
         ),
         v = {};
     return (
-        null != h && (v = { color: (0, a.Hl)(h), backgroundColor: A ? (0, a.gq)(h, 0.3) : (0, a.gq)(h, 0.1) }),
+        null != m && (v = { color: (0, a.Hl)(m), backgroundColor: A ? (0, a.gq)(m, 0.3) : (0, a.gq)(m, 0.1) }),
         (0, l.jsx)(u.D, {
             ...x,
             innerRef: t,
@@ -51,9 +51,9 @@ let h = function (e) {
             style: v,
             tabIndex: null != x.onClick ? 0 : -1,
             children:
-                null != f
-                    ? (0, l.jsx)(c.A, { iconType: f, children: n })
-                    : null != m
+                null != p
+                    ? (0, l.jsx)(c.A, { iconType: p, children: n })
+                    : null != h
                       ? (0, l.jsx)("span", { style: { ...E }, className: I, children: n })
                       : n,
         })

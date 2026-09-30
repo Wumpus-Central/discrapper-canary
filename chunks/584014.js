@@ -14,7 +14,7 @@ function u(e) {
         let { current: e } = n;
         null != e && null != t.soundId && c && e.addEventListener("pause", () => d(!1), { once: !0 });
     });
-    let h = l.useCallback(async () => {
+    let m = l.useCallback(async () => {
         if (null == e) {
             u.current = null;
             return;
@@ -25,15 +25,15 @@ function u(e) {
     }, [u, e]);
     return (
         l.useEffect(() => {
-            h();
-        }, [h]),
+            m();
+        }, [m]),
         {
             isPlaying: c,
             playSound: l.useCallback(
                 async function () {
                     let { volume: e, outputChannel: l = o.a.DEFAULT } =
                         arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-                    (await h(), n.current?.pause());
+                    (await m(), n.current?.pause());
                     let { current: i } = u;
                     return (
                         null != i &&
@@ -49,7 +49,7 @@ function u(e) {
                         !0)
                     );
                 },
-                [n, t.soundId, h],
+                [n, t.soundId, m],
             ),
             stopSound: l.useCallback(() => {
                 let { current: e } = n;

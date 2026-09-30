@@ -17,16 +17,16 @@ let c = i.forwardRef(function (e, t) {
             selected: u = !1,
             children: c,
             disabled: d = !1,
-            dangerous: h,
-            ...m
+            dangerous: m,
+            ...h
         } = e;
         return (0, l.jsx)(a.D, {
             innerRef: t,
             onClick: d ? void 0 : n,
             onContextMenu: d ? void 0 : i,
             "aria-disabled": !!d || void 0,
-            className: r()(s, { [o.x6]: !0, [o.wH]: u, [o.r9]: d, [o.lv]: h }),
-            ...m,
+            className: r()(s, { [o.x6]: !0, [o.wH]: u, [o.r9]: d, [o.lv]: m }),
+            ...h,
             children: c,
         });
     }),

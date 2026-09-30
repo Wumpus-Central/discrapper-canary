@@ -12,17 +12,17 @@ function u() {
         [n, u] = l.useState(() => o(Date.now())),
         c = (0, i.bG)([r.Ay], () => r.Ay.useReducedMotion),
         d = !t || (c && !e),
-        h = d ? 15 * a.A.Millis.SECOND : a.A.Millis.SECOND;
+        m = d ? 15 * a.A.Millis.SECOND : a.A.Millis.SECOND;
     return (
         l.useEffect(() => {
             let e = new s.IX();
             return (
-                e.start(h, () => {
+                e.start(m, () => {
                     u(o(Date.now()));
                 }),
                 () => e.stop()
             );
-        }, [h]),
+        }, [m]),
         { now: n, slowTickMode: d }
     );
 }

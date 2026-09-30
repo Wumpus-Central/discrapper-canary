@@ -1,4 +1,4 @@
-n.d(t, { A: () => m, x: () => h });
+n.d(t, { A: () => h, x: () => m });
 var l,
     i = n(477900),
     s = n(582128),
@@ -10,13 +10,13 @@ var l,
 function d(e, t) {
     return { toValue: e, duration: t ?? 300, easing: o.A.Easing.inOut(o.A.Easing.back()) };
 }
-function h(e, t, n) {
+function m(e, t, n) {
     if (null != t) {
         let l = Math.ceil(Math.log10(e + 1));
         return null != n && n > 0 ? Math.min(l, n) * t : l * t;
     }
 }
-class m extends s.PureComponent {
+class h extends s.PureComponent {
     static Positions = c;
     prevAnimate;
     currAnimate;
@@ -73,7 +73,7 @@ class m extends s.PureComponent {
     }
     getMinWidth(e) {
         let { digitWidth: t, padStartLength: n } = this.props;
-        return h(e, t, n);
+        return m(e, t, n);
     }
     padValue(e) {
         let { padStartLength: t } = this.props;

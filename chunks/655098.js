@@ -8,10 +8,10 @@ var l = n(477900),
     u = n(267102),
     c = n(676279),
     d = n(723702),
-    h = n(38405),
-    m = n(19575),
-    f = n(408018),
-    p = n(186306),
+    m = n(38405),
+    h = n(19575),
+    p = n(408018),
+    f = n(186306),
     g = n(654821),
     x = n(35277),
     A = n(820066),
@@ -28,8 +28,8 @@ var l = n(477900),
     T = n(47167),
     R = n(442247),
     O = n(569926),
-    M = n(106191),
-    L = n(545868),
+    L = n(106191),
+    M = n(545868),
     k = n(376943),
     w = n(465365),
     P = n(78390),
@@ -39,8 +39,8 @@ var l = n(477900),
     G = n(593284),
     F = n(967144);
 n(209932);
-var B = n(734057),
-    H = n(317525),
+var H = n(734057),
+    B = n(317525),
     W = n(994500),
     K = n(351906),
     z = n(287809),
@@ -99,21 +99,21 @@ function et(e) {
 }
 function en(e) {
     let { id: t, guildId: n, channelId: s } = e,
-        r = (0, E.bG)([H.A], () => (null != n ? H.A.getRole(n, t) : void 0)),
+        r = (0, E.bG)([B.A], () => (null != n ? B.A.getRole(n, t) : void 0)),
         a = (0, E.bG)([b.Ay], () => b.Ay.roleStyle),
         o = (0, F.X_)(n, r, r?.colorStrings),
         u = i.useRef(null);
     if (null == r) return (0, l.jsxs)("span", { children: ["@", J.intl.string(J.t["YV4F/n"])] });
     let c = null != r.color && 0 !== r.color,
         d = "dot" === a,
-        h = "username" === a && c;
-    function m(e) {
+        m = "username" === a && c;
+    function h(e) {
         return null == r
             ? null
             : (0, l.jsxs)(U.A, {
                   ref: u,
-                  color: h ? r.color : null,
-                  roleColors: h ? o : null,
+                  color: m ? r.color : null,
+                  roleColors: m ? o : null,
                   ...e,
                   children: [
                       d && (0, l.jsx)(v.W, { color: r.colorString, colors: o, background: !1, tooltip: !1 }),
@@ -123,20 +123,20 @@ function en(e) {
               });
     }
     return null == n || null == s
-        ? m()
+        ? h()
         : (0, l.jsx)(N.Y, {
               targetElementRef: u,
               preload: async () => {
-                  await (0, L.a)(n, t);
+                  await (0, M.a)(n, t);
               },
               renderPopout: (e) => (0, l.jsx)(G.Y, { guildId: n, channelId: s, roleId: t, popoutProps: e }),
               position: "top",
-              children: m,
+              children: h,
           });
 }
 function el(e) {
     let { id: t } = e,
-        n = (0, E.bG)([B.A], () => B.A.getChannel(t)),
+        n = (0, E.bG)([H.A], () => H.A.getChannel(t)),
         i = J.intl.string(J.t.zLZPmk).toLowerCase(),
         s = "text",
         r = !0;
@@ -151,7 +151,7 @@ function el(e) {
 function ei(e) {
     let { id: t, itemId: n, guildId: i } = e,
         s = (0, P.Q)(t),
-        r = (0, E.bG)([H.A], () => (0, P.f)(H.A, t, n, i), [t, n, i]);
+        r = (0, E.bG)([B.A], () => (0, P.f)(B.A, t, n, i), [t, n, i]);
     return (0, l.jsxs)(U.A, { iconType: t, children: [s, null != r && (0, l.jsx)(V.A, {}), r] });
 }
 function es(e) {
@@ -168,7 +168,7 @@ function ea(e) {
         i = null != n;
     return ((0, O.I)(i ? void 0 : t), i)
         ? (0, l.jsxs)(U.A, {
-              children: [(0, l.jsx)(M.A, { game: { id: t, icon: n.gameIcon }, iconClassName: $.Kk }), n.gameName],
+              children: [(0, l.jsx)(L.A, { game: { id: t, icon: n.gameIcon }, iconClassName: $.Kk }), n.gameName],
           })
         : (0, l.jsxs)("span", { children: ["@", J.intl.string(J.t["11pdXZ"])] });
 }
@@ -194,14 +194,14 @@ let ed = {
         codeBlockLang: eo.codeBlockLang,
         subtext: eo.subtext,
     },
-    eh = new Set(["link", "url", "autolink"]);
-var em = n(165648);
-function ef(e) {
+    em = new Set(["link", "url", "autolink"]);
+var eh = n(165648);
+function ep(e) {
     let { className: t, attributes: n, children: i } = e,
         s = r()(eu.S0, eu.Cj, t);
     return (0, l.jsx)("span", { ...n, className: s, contentEditable: !1, children: i });
 }
-var ep = n(652215),
+var ef = n(652215),
     eg = n(809067);
 class ex extends i.PureComponent {
     containerRef = i.createRef();
@@ -221,7 +221,7 @@ class ex extends i.PureComponent {
             (this.handleContextMenu = this.handleContextMenu.bind(this)),
             (this.handlePasteCapture = this.handlePasteCapture.bind(this)),
             A.VW.isEditorEmpty(e.editor)
-                ? (this.state = { initialValue: (0, f.N3)().richValue, showPlaceholder: !0 })
+                ? (this.state = { initialValue: (0, p.N3)().richValue, showPlaceholder: !0 })
                 : (this.state = { initialValue: A.VW.richValue(e.editor), showPlaceholder: !1 }));
     }
     componentDidMount() {
@@ -236,7 +236,7 @@ class ex extends i.PureComponent {
         this.props.editor.events.removeListener("onChange", this.handleOnChange);
     }
     componentDidCatch(e, t) {
-        (h.A.captureException(e, { extra: t }), this.setState({ initialValue: [...this.props.editor.children] }));
+        (m.A.captureException(e, { extra: t }), this.setState({ initialValue: [...this.props.editor.children] }));
     }
     renderElement(e) {
         let { guildId: t, channelId: n, renderExtraElement: i, spellCheck: s } = this.props,
@@ -268,78 +268,78 @@ class ex extends i.PureComponent {
                             });
                         return (0, l.jsx)("div", { ...s, children: a });
                     case "blockQuote": {
-                        let e = r()(em.h, em.MN);
+                        let e = r()(eh.h, eh.MN);
                         return (0, l.jsxs)("div", {
                             ...s,
                             className: e,
                             children: [
-                                (0, l.jsx)("span", { contentEditable: !1, className: em.r }),
+                                (0, l.jsx)("span", { contentEditable: !1, className: eh.r }),
                                 (0, l.jsx)("blockquote", { children: a }),
                             ],
                         });
                     }
                     case "emoji":
-                        return (0, l.jsxs)(ef, {
+                        return (0, l.jsxs)(ep, {
                             attributes: s,
                             className: c,
                             children: [(0, l.jsx)(X, { emoji: o.emoji }), a],
                         });
                     case "customEmoji":
-                        return (0, l.jsxs)(ef, {
+                        return (0, l.jsxs)(ep, {
                             attributes: s,
                             className: c,
                             children: [(0, l.jsx)(Q, { emoji: o.emoji }), a],
                         });
                     case "textMention":
-                        return (0, l.jsxs)(ef, {
+                        return (0, l.jsxs)(ep, {
                             attributes: s,
                             className: c,
                             children: [(0, l.jsx)(ee, { text: o.name }), a],
                         });
                     case "userMention":
-                        return (0, l.jsxs)(ef, {
+                        return (0, l.jsxs)(ep, {
                             attributes: s,
                             className: c,
                             children: [(0, l.jsx)(et, { id: o.userId, channelId: n, guildId: t }), a],
                         });
                     case "roleMention":
-                        return (0, l.jsxs)(ef, {
+                        return (0, l.jsxs)(ep, {
                             attributes: s,
                             className: c,
                             children: [(0, l.jsx)(en, { id: o.roleId, guildId: t, channelId: n }), a],
                         });
                     case "channelMention":
-                        return (0, l.jsxs)(ef, {
+                        return (0, l.jsxs)(ep, {
                             attributes: s,
                             className: c,
                             children: [(0, l.jsx)(el, { id: o.channelId }), a],
                         });
                     case "staticRouteLink":
-                        return (0, l.jsxs)(ef, {
+                        return (0, l.jsxs)(ep, {
                             attributes: s,
                             className: c,
                             children: [(0, l.jsx)(ei, { id: o.id, itemId: o.itemId, guildId: t }), a],
                         });
                     case "soundboard":
-                        return (0, l.jsxs)(ef, {
+                        return (0, l.jsxs)(ep, {
                             attributes: s,
                             className: c,
                             children: [(0, l.jsx)(C.LF, { soundId: o.soundId }), a],
                         });
                     case "commandMention":
-                        return (0, l.jsxs)(ef, {
+                        return (0, l.jsxs)(ep, {
                             attributes: s,
                             className: c,
                             children: [(0, l.jsx)(es, { text: o.commandName, id: o.commandId }), a],
                         });
                     case "timestamp":
-                        return (0, l.jsxs)(ef, {
+                        return (0, l.jsxs)(ep, {
                             attributes: s,
                             className: c,
                             children: [(0, l.jsx)(er, { timestamp: o.parsed }), a],
                         });
                     case "gameMention":
-                        return (0, l.jsxs)(ef, {
+                        return (0, l.jsxs)(ep, {
                             attributes: s,
                             className: c,
                             children: [(0, l.jsx)(ea, { id: o.gameId }), a],
@@ -379,7 +379,7 @@ class ex extends i.PureComponent {
                                             t.startsWith("before_") || t.startsWith("after_"))
                                         )
                                             return [eo[t]];
-                                        if (u && eh.has(t)) return [];
+                                        if (u && em.has(t)) return [];
                                         if (t in ed) return [ed[t]];
                                         throw Error(`Slate: Unknown decoration attribute: ${t}`);
                                     }
@@ -437,7 +437,7 @@ class ex extends i.PureComponent {
                 null != n &&
                     null != e.data &&
                     (A.ZF.isExpanded(n)
-                        ? p.o.withSingleEntry(t, () => {
+                        ? f.o.withSingleEntry(t, () => {
                               ((t.selection = n), t.deleteFragment(), t.insertText(e.data), e.preventDefault());
                           })
                         : (t.insertText(e.data), e.preventDefault()));
@@ -569,7 +569,7 @@ class ex extends i.PureComponent {
                             n.e("230803"),
                             n.e("722401"),
                         ]).then(n.bind(n, 258360)),
-                        i = m.Ay.clipboardHasMixedContent();
+                        i = h.Ay.clipboardHasMixedContent();
                     return (n) =>
                         (0, l.jsx)(e, {
                             ...n,
@@ -580,7 +580,7 @@ class ex extends i.PureComponent {
                 },
                 {
                     align: null != i && null != s && i < s / 2 ? "top" : "bottom",
-                    enableSpellCheck: r === ep.BRT.APP,
+                    enableSpellCheck: r === ef.BRT.APP,
                     repositionOnContentChange: !0,
                 },
             );
@@ -605,10 +605,10 @@ class ex extends i.PureComponent {
             decorate: u,
             "aria-multiline": c = !0,
             channelId: d,
-            guildId: h,
-            onChange: m,
-            onFocus: f,
-            onBlur: p,
+            guildId: m,
+            onChange: h,
+            onFocus: p,
+            onBlur: f,
             onKeyDown: g,
             onKeyUp: x,
             renderExtraElement: A,
@@ -632,7 +632,7 @@ class ex extends i.PureComponent {
                     value: [...this.state.initialValue],
                     children: (0, l.jsx)(a.Fo, {
                         ...E,
-                        className: r()(em.PT, eg.E, t),
+                        className: r()(eh.PT, eg.E, t),
                         decorate: u,
                         renderElement: this.renderElement,
                         renderLeaf: this.renderLeaf,

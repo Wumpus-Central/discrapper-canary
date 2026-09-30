@@ -79,11 +79,11 @@ function V(e) {
         n = _.A.getChannel(t);
     return null == n ? v.clearGuildId(t) : v.clearGuildId(n.guild_id);
 }
-function j(e) {
+function w(e) {
     let { guildId: t } = e;
     return v.clearGuildId(t);
 }
-function w() {
+function j() {
     return v.updateSubtitles();
 }
 function H(e) {
@@ -110,12 +110,12 @@ class B extends r.Ay.Store {
     }
 }
 let k = new B(s.h, {
-    APPLICATION_FETCH_FAIL: w,
-    APPLICATION_FETCH_SUCCESS: w,
-    APPLICATION_FETCH: w,
-    APPLICATIONS_FETCH_FAIL: w,
-    APPLICATIONS_FETCH_SUCCESS: w,
-    APPLICATIONS_FETCH: w,
+    APPLICATION_FETCH_FAIL: j,
+    APPLICATION_FETCH_SUCCESS: j,
+    APPLICATION_FETCH: j,
+    APPLICATIONS_FETCH_FAIL: j,
+    APPLICATIONS_FETCH_SUCCESS: j,
+    APPLICATIONS_FETCH: j,
     BACKGROUND_SYNC: R,
     BULK_ACK: function (e) {
         let { channels: t } = e,
@@ -165,7 +165,7 @@ let k = new B(s.h, {
             n
         );
     },
-    CONNECTION_OPEN_SUPPLEMENTAL: w,
+    CONNECTION_OPEN_SUPPLEMENTAL: j,
     CONNECTION_OPEN: R,
     CURRENT_USER_UPDATE: R,
     DECAY_READ_STATES: R,
@@ -180,18 +180,18 @@ let k = new B(s.h, {
         return v.updateSubtitles((0, o.D)(t.location), (0, o.H)(t.location));
     },
     EMBEDDED_ACTIVITY_LAUNCH_START: function (e) {
-        w();
+        j();
     },
-    EMBEDDED_ACTIVITY_LAUNCH_SUCCESS: w,
+    EMBEDDED_ACTIVITY_LAUNCH_SUCCESS: j,
     ENABLE_AUTOMATIC_ACK: G,
     FETCH_GUILD_EVENTS_FOR_GUILD: function (e) {
         let { guildId: t } = e;
         return v.updateSubtitles(t);
     },
-    GAMES_DATABASE_FETCH_FAIL: w,
-    GAMES_DATABASE_FETCH: w,
-    GAMES_DATABASE_UPDATE: w,
-    GUILD_APPLICATIONS_FETCH_SUCCESS: w,
+    GAMES_DATABASE_FETCH_FAIL: j,
+    GAMES_DATABASE_FETCH: j,
+    GAMES_DATABASE_UPDATE: j,
+    GUILD_APPLICATIONS_FETCH_SUCCESS: j,
     GUILD_CREATE: U,
     GUILD_DELETE: U,
     GUILD_MEMBER_UPDATE: function (e) {
@@ -272,8 +272,8 @@ let k = new B(s.h, {
             i
         );
     },
-    VOICE_CATEGORY_COLLAPSE: j,
-    VOICE_CATEGORY_EXPAND: j,
+    VOICE_CATEGORY_COLLAPSE: w,
+    VOICE_CATEGORY_EXPAND: w,
     VOICE_CHANNEL_SELECT: P,
     VOICE_CHANNEL_STATUS_UPDATE: function (e) {
         return v.nonPositionalChannelIdUpdate(e.id);

@@ -6,12 +6,12 @@ var r = n(477900),
     o = n(17928),
     a = n(844222),
     c = n(174459),
-    d = n(775602),
-    u = n(264927),
+    u = n(775602),
+    d = n(264927),
     h = n(652215),
     f = n(650583),
-    g = n(375708);
-function p(e) {
+    p = n(375708);
+function g(e) {
     if (e.ctrlKey || e.altKey || e.metaKey || e.key !== f.dh.TAB || null == e.target) return;
     let { target: t } = e,
         n = (0, l.BF)(e)?.activeElement;
@@ -24,13 +24,13 @@ function p(e) {
 }
 function m(e) {
     let { children: t } = e,
-        n = (0, o.cf)([d.Ay], () => ({ enabled: d.Ay.useReducedMotion, rawValue: d.Ay.rawPrefersReducedMotion })),
-        l = (0, o.cf)([d.Ay], () => ({ enabled: d.Ay.useForcedColors, rawValue: d.Ay.systemForcedColors })),
-        c = (0, o.bG)([d.Ay], () => d.Ay.isHighContrastModeEnabled),
-        h = (0, o.bG)([d.Ay], () => d.Ay.alwaysShowLinkDecorations),
-        f = (0, o.bG)([d.Ay], () => d.Ay.keyboardModeEnabled),
-        m = (0, o.bG)([d.Ay], () => d.Ay.isSwitchIconsEnabled),
-        A = (0, o.bG)([d.Ay], () => d.Ay.minToastDurationMs),
+        n = (0, o.cf)([u.Ay], () => ({ enabled: u.Ay.useReducedMotion, rawValue: u.Ay.rawPrefersReducedMotion })),
+        l = (0, o.cf)([u.Ay], () => ({ enabled: u.Ay.useForcedColors, rawValue: u.Ay.systemForcedColors })),
+        c = (0, o.bG)([u.Ay], () => u.Ay.isHighContrastModeEnabled),
+        h = (0, o.bG)([u.Ay], () => u.Ay.alwaysShowLinkDecorations),
+        f = (0, o.bG)([u.Ay], () => u.Ay.keyboardModeEnabled),
+        m = (0, o.bG)([u.Ay], () => u.Ay.isSwitchIconsEnabled),
+        A = (0, o.bG)([u.Ay], () => u.Ay.minToastDurationMs),
         y = i.useMemo(
             () => ({
                 reducedMotion: n,
@@ -47,10 +47,10 @@ function m(e) {
     return (
         i.useEffect(
             () => (
-                (0, s.waitForAllDefaultIntlMessagesLoaded)().then(() => (0, u.Z7)()),
-                g.intl.onLocaleChange(() => (0, u.Z7)()),
-                window.addEventListener("keydown", p),
-                () => window.removeEventListener("keydown", p)
+                (0, s.waitForAllDefaultIntlMessagesLoaded)().then(() => (0, d.Z7)()),
+                p.intl.onLocaleChange(() => (0, d.Z7)()),
+                window.addEventListener("keydown", g),
+                () => window.removeEventListener("keydown", g)
             ),
             [],
         ),

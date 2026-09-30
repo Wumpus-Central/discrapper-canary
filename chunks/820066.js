@@ -21,10 +21,10 @@ var a = n(635377),
     u = n(478676),
     c = n(807081),
     d = n(626584),
-    h = n(694403),
-    m = n(999915),
-    f = n(704726),
-    p = n(551965),
+    m = n(694403),
+    h = n(999915),
+    p = n(704726),
+    f = n(551965),
     g = n(927813);
 let x = /^[a-z0-9_+\-.#]+$/i,
     A = new d.A("MarkdownToSlate"),
@@ -83,14 +83,14 @@ let x = /^[a-z0-9_+\-.#]+$/i,
     y = new Set(["*", "_", "~", "|", "\\"]),
     S = {},
     v = {};
-for (let e in m.Ay.RULES) {
+for (let e in h.Ay.RULES) {
     if (!(e in C))
         throw Error(
             `Slate: Unknown markdown rule: ${e}.  If you have just added a new markdown rule then you probably need to add it to this file so that the rich chat box understands it.`,
         );
     let t = C[e];
-    ("skip" !== t.type && (S[e] = N(m.Ay.RULES[e])),
-        "skip" !== t.type && "inlineObject" !== t.type && (v[e] = N("text" === e ? f.Ay : m.Ay.RULES[e])));
+    ("skip" !== t.type && (S[e] = N(h.Ay.RULES[e])),
+        "skip" !== t.type && "inlineObject" !== t.type && (v[e] = N("text" === e ? p.Ay : h.Ay.RULES[e])));
 }
 function N(e) {
     i()(null != e.parse, "Slate: rule must have a parse function");
@@ -109,12 +109,12 @@ function _(e) {
 let j = {
         url: {
             parse: (e) =>
-                null == (0, h.W1)(e[1])
+                null == (0, m.W1)(e[1])
                     ? { type: "text", content: e[0], originalMatch: e }
                     : { type: "link", content: e[1], originalMatch: e },
         },
         autolink: {
-            parse: (e) => (null == (0, h.W1)(e[1]) ? { type: "text", content: e[0], originalMatch: e } : _(e)),
+            parse: (e) => (null == (0, m.W1)(e[1]) ? { type: "text", content: e[0], originalMatch: e } : _(e)),
         },
         mailto: { parse: _ },
         tel: { parse: _ },
@@ -131,13 +131,13 @@ let j = {
         },
     },
     b = /(-# +)/,
-    T = (0, p.A)([S, j]),
-    R = (0, p.A)([v, j]),
+    T = (0, f.A)([S, j]),
+    R = (0, f.A)([v, j]),
     O = c.X(T),
-    M = c.X(R),
-    L = { max: 1 / 0, maxAge: +g.A.Millis.MINUTE, updateAgeOnGet: !0 },
-    k = new (o())(L),
-    w = new (o())(L);
+    L = c.X(R),
+    M = { max: 1 / 0, maxAge: +g.A.Millis.MINUTE, updateAgeOnGet: !0 },
+    k = new (o())(M),
+    w = new (o())(M);
 function P(e, t, n, l, s) {
     let { content: r, type: a } = n,
         o = null == n.originalMatch && "text" === a && "string" == typeof r;
@@ -153,10 +153,10 @@ function P(e, t, n, l, s) {
         case "emoji":
         case "customEmoji":
             if ((t.startsWith(u[0], l) || (l = K(e, t, l, t.length)), t.startsWith(u[0], l)))
-                return B({ result: e, sourceText: t, text: u[0], originalStart: l, attributes: [a], data: n });
+                return H({ result: e, sourceText: t, text: u[0], originalStart: l, attributes: [a], data: n });
             throw Error(`Slate: Unable to find emoji: ${u[0]} in ${t} at ${l}`);
         case "soundboard":
-            return B({
+            return H({
                 result: e,
                 sourceText: t,
                 text: u[0],
@@ -174,7 +174,7 @@ function P(e, t, n, l, s) {
             if (null != s)
                 return (
                     i()(s === u[0], "Slate: text mentions must exactly match the regex match"),
-                    B({
+                    H({
                         result: e,
                         sourceText: t,
                         text: s,
@@ -183,11 +183,11 @@ function P(e, t, n, l, s) {
                         data: { text: s },
                     })
                 );
-            return B({ result: e, sourceText: t, text: u[0], originalStart: l, attributes: [a], data: { id: r } });
+            return H({ result: e, sourceText: t, text: u[0], originalStart: l, attributes: [a], data: { id: r } });
         }
         case "staticRouteLink":
             let { id: c, itemId: d } = n;
-            return B({
+            return H({
                 result: e,
                 sourceText: t,
                 text: u[0],
@@ -196,7 +196,7 @@ function P(e, t, n, l, s) {
                 data: { id: c, itemId: d },
             });
         case "gameMention":
-            return B({
+            return H({
                 result: e,
                 sourceText: t,
                 text: u[0],
@@ -206,7 +206,7 @@ function P(e, t, n, l, s) {
             });
         case "timestamp":
         case "timestampMentionInput":
-            return B({ result: e, sourceText: t, text: u[0], originalStart: l, attributes: [a], data: n });
+            return H({ result: e, sourceText: t, text: u[0], originalStart: l, attributes: [a], data: n });
         case "em":
         case "autolink":
         case "mailto":
@@ -222,7 +222,7 @@ function P(e, t, n, l, s) {
         case "url":
         case "link":
         case "subtext": {
-            l = H(t, l);
+            l = B(t, l);
             let { before: n, after: i } = (function (e, t, n, l) {
                     if ("inlineCode" === t) return { before: l[1], after: l[1] };
                     if ("em" === t && "_" === e.substring(n, n + 1)) return { before: "_", after: "_" };
@@ -251,7 +251,7 @@ function P(e, t, n, l, s) {
                 (l = G(e, t, r ?? "", l, s)),
                 s.pop(),
                 (l = F({ result: e, sourceText: t, syntaxCharacters: i, pos: l, attributes: c })),
-                H(t, l)
+                B(t, l)
             );
         }
         default:
@@ -294,12 +294,12 @@ function V(e) {
 function G(e, t, n, l, i) {
     return (
         "string" == typeof n
-            ? (l = B({ result: e, sourceText: t, text: n, originalStart: l, attributes: i, data: null }))
+            ? (l = H({ result: e, sourceText: t, text: n, originalStart: l, attributes: i, data: null }))
             : (n instanceof Array || (n = [n]),
               n.forEach((n) => {
                   l = P(e, t, n, l, i);
               })),
-        H(t, l)
+        B(t, l)
     );
 }
 function F(e) {
@@ -312,9 +312,9 @@ function F(e) {
     }
     return i;
 }
-function B(e) {
+function H(e) {
     let { result: t, sourceText: n, text: l, originalStart: i, attributes: s, data: r } = e,
-        a = H(n, i);
+        a = B(n, i);
     for (; "\n" === l.charAt(0) || " " === l.charAt(0);) l = l.substring(1);
     let o = n.indexOf(l, a);
     if ((o !== a ? (a = i = K(t, n, a, o)) : "\\" === l && "\\" === n.charAt(o + 1) && (o++, (i = ++a)), o !== a))
@@ -323,7 +323,7 @@ function B(e) {
         c = n.substring(i, u);
     return (t.push({ text: c, attributes: s.slice(), start: i, data: r }), u);
 }
-function H(e, t) {
+function B(e, t) {
     for (; "\n" === e.charAt(t) || " " === e.charAt(t);) t++;
     return t;
 }
@@ -335,7 +335,7 @@ function K(e, t, n, l) {
     for (; n < l;)
         if (y.has(t[n]))
             ((n = F({ result: e, sourceText: t, syntaxCharacters: t[n], pos: n, attributes: ["syntaxBefore"] })),
-                (n = H(t, n)));
+                (n = B(t, n)));
         else break;
     return n;
 }
@@ -358,51 +358,51 @@ if ((n(827669), n(654821), !s.KE._addedDiscordOverrides)) {
                 : { anchor: r, focus: Z.end(t, []) }
             : Z.range(t, r);
         let [c, d] = Q.edges(n),
-            h = Z.blocks(t),
-            m = o ? -1 : 1,
-            f = c.path[0] ?? 0,
-            p = d.path[0] ?? h.length - 1,
-            g = o ? p : f,
-            x = o ? f : p,
+            m = Z.blocks(t),
+            h = o ? -1 : 1,
+            p = c.path[0] ?? 0,
+            f = d.path[0] ?? m.length - 1,
+            g = o ? f : p,
+            x = o ? p : f,
             A = !1;
         "line" === a && (yield o ? d : c);
-        for (let n = g; !A && (!o ? n <= x : n >= x); n += m)
+        for (let n = g; !A && (!o ? n <= x : n >= x); n += h)
             for (let r of (function* n(r) {
-                let [h, f] = r,
-                    p = f.length,
-                    g = $.isAncestor(f, c.path),
-                    x = $.isAncestor(f, d.path),
-                    C = g ? c.path[p] : 0,
-                    E = x ? d.path[p] : h.children.length - 1,
+                let [m, p] = r,
+                    f = p.length,
+                    g = $.isAncestor(p, c.path),
+                    x = $.isAncestor(p, d.path),
+                    C = g ? c.path[f] : 0,
+                    E = x ? d.path[f] : m.children.length - 1,
                     I = o ? E : C,
                     y = o ? C : E;
-                for (let r = I; !A && (!o ? r <= y : r >= y); r += m) {
-                    let m = h.children[r],
-                        p = $.child(f, r);
-                    if (q.isElement(m)) {
+                for (let r = I; !A && (!o ? r <= y : r >= y); r += h) {
+                    let h = m.children[r],
+                        f = $.child(p, r);
+                    if (q.isElement(h)) {
                         let e = o ? d.path : c.path;
-                        if (!($.equals(p, e) || $.isAncestor(p, e))) {
-                            let e = t.isVoid(m);
-                            if ("line" === a && q.isElement(m) && !e) {
+                        if (!($.equals(f, e) || $.isAncestor(f, e))) {
+                            let e = t.isVoid(h);
+                            if ("line" === a && q.isElement(h) && !e) {
                                 (null != l && (yield l, (l = void 0)), (A = !0));
                                 return;
                             }
                             if (!u && e) continue;
                         }
-                        for (let e of n([m, p])) yield e;
-                    } else if (J.isText(m))
-                        if ("line" === a) l = { path: p, offset: o ? 0 : m.text.length };
-                        else if (0 === m.text.length) yield { path: p, offset: 0 };
+                        for (let e of n([h, f])) yield e;
+                    } else if (J.isText(h))
+                        if ("line" === a) l = { path: f, offset: o ? 0 : h.text.length };
+                        else if (0 === h.text.length) yield { path: f, offset: 0 };
                         else {
-                            let n = s.KE.range(t, p);
-                            for (let l of ($.equals(p, c.path) && (n.anchor = c),
-                            $.equals(p, d.path) && (n.focus = d),
+                            let n = s.KE.range(t, f);
+                            for (let l of ($.equals(f, c.path) && (n.anchor = c),
+                            $.equals(f, d.path) && (n.focus = d),
                             e(t, { ...i, at: n })))
                                 yield l;
                         }
                 }
-                "line" === a && q.isElement(h) && !t.isVoid(h) && (null != l && (yield l, (l = void 0)), (A = !0));
-            })(h[n]))
+                "line" === a && q.isElement(m) && !t.isVoid(m) && (null != l && (yield l, (l = void 0)), (A = !0));
+            })(m[n]))
                 yield r;
     };
     let t = r.rL.findDocumentOrShadowRoot;
@@ -608,7 +608,7 @@ let Z = {
                                         a = {
                                             originalMatch: { index: 0, 0: "" },
                                             type: "paragraph",
-                                            content: (n ? M : O)(r, !0, {
+                                            content: (n ? L : O)(r, !0, {
                                                 returnMentionIds: !0,
                                                 disableAutoBlockNewlines: !0,
                                                 guildId: t,

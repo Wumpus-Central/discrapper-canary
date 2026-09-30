@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => p, hh: () => m, u7: () => f });
+n.d(t, { Ay: () => f, hh: () => h, u7: () => p });
 var l = n(477900),
     i = n(582128),
     s = n(17928),
@@ -8,9 +8,9 @@ var l = n(477900),
     u = n(263577),
     c = n(506326),
     d = n(868065),
-    h = n(804779);
-let m = [c.R_];
-function f(e) {
+    m = n(804779);
+let h = [c.R_];
+function p(e) {
     let t = (0, s.bG)([o.A], () => o.A.getMatchingActivity(e)),
         n = (0, s.bG)([r.default], () => r.default.getUser(e.author_id));
     if (null == t || null == n) return {};
@@ -19,10 +19,10 @@ function f(e) {
         a = t.details ?? l.media.title;
     return { activity: t, artist: i, currentEntry: l, title: a, user: n };
 }
-let p = i.memo(function (e) {
+let f = i.memo(function (e) {
     let { entry: t, channel: n, selected: i, hovered: s } = e,
-        { activity: r, artist: o } = f(t),
-        { largeImage: p } = (0, a.nO)({ entry: t, trackingSource: "memberlist_listened_session_content_row" });
+        { activity: r, artist: o } = p(t),
+        { largeImage: f } = (0, a.nO)({ entry: t, trackingSource: "memberlist_listened_session_content_row" });
     return null == r
         ? (0, l.jsx)(d.eG, {})
         : (0, l.jsxs)(d.Zp, {
@@ -34,11 +34,11 @@ let p = i.memo(function (e) {
                           (0, l.jsx)(d.ZB, { children: o.replace(/; /g, ", ") }),
                           (0, l.jsx)(c.mG, {
                               location: c.N5.CARD,
-                              children: m.map((e, n) => (0, l.jsx)(e, { entry: t, hovered: s }, n)),
+                              children: h.map((e, n) => (0, l.jsx)(e, { entry: t, hovered: s }, n)),
                           }),
                       ],
                   }),
-                  (0, l.jsx)(u.V, { src: p?.src, size: 48, className: h.xn }),
+                  (0, l.jsx)(u.V, { src: f?.src, size: 48, className: m.xn }),
               ],
           });
 });

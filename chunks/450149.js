@@ -9,11 +9,11 @@ var l = n(582128),
     c = n(818348);
 function d(e, t, n) {
     let d = null == t || null == n,
-        h = (0, i.bG)([a.A], () => a.A.getChannel(t)),
-        m = (0, i.bG)([o.A], () => null != h && o.A.canBasicChannel(c.hV.CONNECT, h)),
-        f = (0, i.bG)([u.Ay], () => u.Ay.getVoiceChannelId() === t),
+        m = (0, i.bG)([a.A], () => a.A.getChannel(t)),
+        h = (0, i.bG)([o.A], () => null != m && o.A.canBasicChannel(c.hV.CONNECT, m)),
+        p = (0, i.bG)([u.Ay], () => u.Ay.getVoiceChannelId() === t),
         {
-            shouldFetchPreview: p,
+            shouldFetchPreview: f,
             previewUrl: g,
             isLoading: x,
         } = (0, i.cf)([r.A], () => ({
@@ -21,10 +21,10 @@ function d(e, t, n) {
             previewUrl: d ? null : r.A.getPreviewURL(e, t, n),
             isLoading: !d && r.A.getIsPreviewLoading(e, t, n),
         })),
-        A = m || f;
+        A = h || p;
     return (l.useEffect(() => {
-        p && !d && A && (0, s.Tp)(e, t, n);
-    }, [p, t, e, n, d, A]),
+        f && !d && A && (0, s.Tp)(e, t, n);
+    }, [f, t, e, n, d, A]),
     d || !A)
         ? { previewUrl: void 0, isLoading: !1 }
         : { previewUrl: g, isLoading: x };

@@ -1,4 +1,4 @@
-n.d(t, { l: () => f, A: () => p });
+n.d(t, { l: () => p, A: () => f });
 var l = n(582128),
     i = n(17928),
     s = n(99753),
@@ -8,14 +8,14 @@ var l = n(582128),
 let u = [];
 var c = n(52133),
     d = n(290863),
-    h = n(583846),
-    m = n(818348);
-function f(e, t) {
+    m = n(583846),
+    h = n(818348);
+function p(e, t) {
     let { types: n } = e;
     return null == n || !!n.has(t.content_type);
 }
-function p(e) {
-    var t, n, p;
+function f(e) {
+    var t, n, f;
     let g,
         x,
         A,
@@ -27,7 +27,7 @@ function p(e) {
         { feed: N, filters: _ } = (0, i.cf)([s.A], () => ({ feed: s.A.getFeed(S), filters: s.A.getFilters() })),
         j = l.useMemo(() => {
             let e = v ? N?.unranked_game_entries.map((e) => e.content) : N?.entries.map((e) => e.content);
-            return null != _ ? e?.filter((e) => f(_, e)) : e;
+            return null != _ ? e?.filter((e) => p(_, e)) : e;
         }, [N, _, v]);
     return (
         (t = j),
@@ -51,21 +51,21 @@ function p(e) {
                     }),
                 [t, C],
             )),
-        (p = j = (0, i.yK)([o.A], () => (null == n ? u : n.filter(o.A.canRenderContent)), [n])),
+        (f = j = (0, i.yK)([o.A], () => (null == n ? u : n.filter(o.A.canRenderContent)), [n])),
         (E = l.useRef(new Set())),
         (I = l.useMemo(() => {
-            let e = new Set(p?.map((e) => e.author_id));
+            let e = new Set(f?.map((e) => e.author_id));
             return ((0, c.v)([...E.current], [...e]) || (E.current = e), E.current);
-        }, [p])),
+        }, [f])),
         (y = (0, i.yK)([d.A], () =>
             Array.from(I).filter((e) => {
                 let t = d.A.getStatus(e);
-                return null !== t && [m.cl.OFFLINE, m.cl.INVISIBLE].includes(t);
+                return null !== t && [h.cl.OFFLINE, h.cl.INVISIBLE].includes(t);
             }),
         )),
         (j = l.useMemo(() => {
             let e = new Set(y);
-            return p?.filter((t) => !(0, h.JM)(t) || !e.has(t.author_id));
-        }, [p, y]))
+            return f?.filter((t) => !(0, m.JM)(t) || !e.has(t.author_id));
+        }, [f, y]))
     );
 }

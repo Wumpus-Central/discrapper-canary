@@ -1,4 +1,4 @@
-var n, a, l, i;
+var n, a, i, l;
 function s(e, t) {
     if (!1 === e || null == e) throw Error(t);
 }
@@ -26,16 +26,16 @@ function u(e, t, r) {
         (function (e, t, r, n) {
             let a = f(("string" == typeof t ? h(t) : t).pathname || "/", r);
             if (null == a) return null;
-            let l = (function e(t, r, n, a) {
+            let i = (function e(t, r, n, a) {
                 (void 0 === r && (r = []), void 0 === n && (n = []), void 0 === a && (a = ""));
-                let l = (t, l, i) => {
+                let i = (t, i, l) => {
                     var o, h;
                     let u,
                         d,
                         f = {
-                            relativePath: void 0 === i ? t.path || "" : i,
+                            relativePath: void 0 === l ? t.path || "" : l,
                             caseSensitive: !0 === t.caseSensitive,
-                            childrenIndex: l,
+                            childrenIndex: i,
                             route: t,
                         };
                     f.relativePath.startsWith("/") &&
@@ -82,24 +82,24 @@ function u(e, t, r) {
                                 let r = t.split("/");
                                 if (0 === r.length) return [];
                                 let [n, ...a] = r,
-                                    l = n.endsWith("?"),
-                                    i = n.replace(/\?$/, "");
-                                if (0 === a.length) return l ? [i, ""] : [i];
+                                    i = n.endsWith("?"),
+                                    l = n.replace(/\?$/, "");
+                                if (0 === a.length) return i ? [l, ""] : [l];
                                 let s = e(a.join("/")),
                                     o = [];
                                 return (
-                                    o.push(...s.map((e) => ("" === e ? i : [i, e].join("/")))),
-                                    l && o.push(...s),
+                                    o.push(...s.map((e) => ("" === e ? l : [l, e].join("/")))),
+                                    i && o.push(...s),
                                     o.map((e) => (t.startsWith("/") && "" === e ? "/" : e))
                                 );
                             })(e.path))
-                                l(e, t, r);
-                        else l(e, t);
+                                i(e, t, r);
+                        else i(e, t);
                     }),
                     r
                 );
             })(e);
-            l.sort((e, t) => {
+            i.sort((e, t) => {
                 var r, n;
                 return e.score !== t.score
                     ? t.score - e.score
@@ -109,8 +109,8 @@ function u(e, t, r) {
                           ? r[r.length - 1] - n[n.length - 1]
                           : 0);
             });
-            let i = null;
-            for (let e = 0; null == i && e < l.length; ++e) {
+            let l = null;
+            for (let e = 0; null == l && e < i.length; ++e) {
                 let t = (function (e) {
                     try {
                         return e
@@ -131,16 +131,16 @@ function u(e, t, r) {
                         );
                     }
                 })(a);
-                i = (function (e, t, r) {
+                l = (function (e, t, r) {
                     void 0 === r && (r = !1);
                     let { routesMeta: n } = e,
                         a = {},
-                        l = "/",
-                        i = [];
+                        i = "/",
+                        l = [];
                     for (let e = 0; e < n.length; ++e) {
                         let s = n[e],
                             o = e === n.length - 1,
-                            h = "/" === l ? t : t.slice(l.length) || "/",
+                            h = "/" === i ? t : t.slice(i.length) || "/",
                             u = d({ path: s.relativePath, caseSensitive: s.caseSensitive, end: o }, h),
                             c = s.route;
                         if (
@@ -153,34 +153,34 @@ function u(e, t, r) {
                         )
                             return null;
                         (Object.assign(a, u.params),
-                            i.push({
+                            l.push({
                                 params: a,
-                                pathname: v([l, u.pathname]),
-                                pathnameBase: g(v([l, u.pathnameBase])),
+                                pathname: v([i, u.pathname]),
+                                pathnameBase: g(v([i, u.pathnameBase])),
                                 route: c,
                             }),
-                            "/" !== u.pathnameBase && (l = v([l, u.pathnameBase])));
+                            "/" !== u.pathnameBase && (i = v([i, u.pathnameBase])));
                     }
-                    return i;
-                })(l[e], t, n);
+                    return l;
+                })(i[e], t, n);
             }
-            return i;
+            return l;
         })(e, t, r, !1)
     );
 }
 (r.d(t, { HS: () => v, Oi: () => s, Rr: () => h, pX: () => b, pb: () => f, rc: () => n, tH: () => m, ue: () => u }),
-    ((l = n || (n = {})).Pop = "POP"),
-    (l.Push = "PUSH"),
-    (l.Replace = "REPLACE"),
-    ((i = a || (a = {})).data = "data"),
-    (i.deferred = "deferred"),
-    (i.redirect = "redirect"),
-    (i.error = "error"));
+    ((i = n || (n = {})).Pop = "POP"),
+    (i.Push = "PUSH"),
+    (i.Replace = "REPLACE"),
+    ((l = a || (a = {})).data = "data"),
+    (l.deferred = "deferred"),
+    (l.redirect = "redirect"),
+    (l.error = "error"));
 let c = /^:[\w-]+$/,
     p = (e) => "*" === e;
 function d(e, t) {
     var r, n, a;
-    let l, i;
+    let i, l;
     "string" == typeof e && (e = { path: e, caseSensitive: !1, end: !0 });
     let [s, h] =
             ((r = e.path),
@@ -198,8 +198,8 @@ function d(e, t) {
                     r.replace(/\*$/, "/*") +
                     '".',
             ),
-            (l = []),
-            (i =
+            (i = []),
+            (l =
                 "^" +
                 r
                     .replace(/\/*\*?$/, "")
@@ -208,16 +208,16 @@ function d(e, t) {
                     .replace(
                         /\/:([\w-]+)(\?)?/g,
                         (e, t, r) => (
-                            l.push({ paramName: t, isOptional: null != r }),
+                            i.push({ paramName: t, isOptional: null != r }),
                             r ? "/?([^\\/]+)?" : "/([^\\/]+)"
                         ),
                     )),
             r.endsWith("*")
-                ? (l.push({ paramName: "*" }), (i += "*" === r || "/*" === r ? "(.*)$" : "(?:\\/(.+)|\\/*)$"))
+                ? (i.push({ paramName: "*" }), (l += "*" === r || "/*" === r ? "(.*)$" : "(?:\\/(.+)|\\/*)$"))
                 : a
-                  ? (i += "\\/*$")
-                  : "" !== r && "/" !== r && (i += "(?:(?=\\/|$))"),
-            [new RegExp(i, n ? void 0 : "i"), l]),
+                  ? (l += "\\/*$")
+                  : "" !== r && "/" !== r && (l += "(?:(?=\\/|$))"),
+            [new RegExp(l, n ? void 0 : "i"), i]),
         u = t.match(s);
     if (!u) return null;
     let c = u[0],
@@ -230,8 +230,8 @@ function d(e, t) {
                 let e = d[r] || "";
                 p = c.slice(0, c.length - e.length).replace(/(.)\/+$/, "$1");
             }
-            let l = d[r];
-            return (a && !l ? (e[n] = void 0) : (e[n] = (l || "").replace(/%2F/g, "/")), e);
+            let i = d[r];
+            return (a && !i ? (e[n] = void 0) : (e[n] = (i || "").replace(/%2F/g, "/")), e);
         }, {}),
         pathname: c,
         pathnameBase: p,

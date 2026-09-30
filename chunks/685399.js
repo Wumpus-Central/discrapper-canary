@@ -1,4 +1,4 @@
-(n.d(t, { Ay: () => d, IQ: () => m, Rz: () => f, a1: () => h }), n(321073));
+(n.d(t, { Ay: () => d, IQ: () => h, Rz: () => p, a1: () => m }), n(321073));
 var l = n(582128),
     i = n(17928),
     s = n(429913),
@@ -8,15 +8,15 @@ var l = n(582128),
     u = n(933958),
     c = n(969151);
 function d(e, t) {
-    return m(
+    return h(
         (0, i.yK)([u.Ay], () =>
             null != e && null != e.id && "" !== e.id ? u.Ay.getEmbeddedActivitiesForChannel(e.id) : u.Am,
         ),
         t,
     );
 }
-function h(e) {
-    let t = m((0, i.bG)([u.Ay], () => (null != e ? u.Ay.getEmbeddedActivitiesForGuild(e) : u.Am)));
+function m(e) {
+    let t = h((0, i.bG)([u.Ay], () => (null != e ? u.Ay.getEmbeddedActivitiesForGuild(e) : u.Am)));
     return l.useMemo(() => {
         let e = new Map();
         return (
@@ -30,7 +30,7 @@ function h(e) {
         );
     }, [t]);
 }
-function m(e, t) {
+function h(e, t) {
     let n = e.map((e) => e.applicationId),
         r = (0, s.A)(n),
         u = new Set([]);
@@ -68,7 +68,7 @@ function m(e, t) {
         );
     }, [e, r, c, t]);
 }
-function f(e) {
+function p(e) {
     return (0, i.bG)(
         [r.A],
         () => {

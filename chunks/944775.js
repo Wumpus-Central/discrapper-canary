@@ -7,12 +7,12 @@ var i = n(228366),
     o = n(574172),
     a = n(734057),
     c = n(763827),
-    d = n(184809),
-    u = n(19575),
+    u = n(184809),
+    d = n(19575),
     h = n(317084),
     f = n(980504),
-    g = n(652215),
-    p = n(375708);
+    p = n(652215),
+    g = n(375708);
 let m = {
         width: f.ed.width,
         height: f.ed.height,
@@ -35,14 +35,14 @@ async function x(e) {
         n = c.A.getChannelId(),
         i = a.A.getChannel(n);
     if (null == t || null == i) return;
-    let { x: s, y: d } = await u.Ay.invoke("GET_MOUSE_COORDINATES");
+    let { x: s, y: u } = await d.Ay.invoke("GET_MOUSE_COORDINATES");
     (0, o.open)(
-        g.MLl.SOUNDBOARD,
+        p.MLl.SOUNDBOARD,
         (n) =>
             (0, r.jsx)(l.A, {
                 windowKey: n,
                 withTitleBar: !1,
-                title: p.intl.string(p.t["IiA///"]),
+                title: g.intl.string(g.t["IiA///"]),
                 onBlur: w,
                 children: (0, r.jsx)(h.A, {
                     guildId: t,
@@ -54,21 +54,21 @@ async function x(e) {
                     analyticsSource: "global",
                 }),
             }),
-        { ...m, left: s - m.width / 2, top: d - m.height / 2 },
+        { ...m, left: s - m.width / 2, top: u - m.height / 2 },
     );
 }
 function w() {
-    (0, o.close)(g.MLl.SOUNDBOARD);
+    (0, o.close)(p.MLl.SOUNDBOARD);
 }
 function E(e, t) {
     let n = s.A.isOverlayV3EnabledForPID(t),
-        r = d.default.disableClickableRegions;
+        r = u.default.disableClickableRegions;
     (n || r || i.h.dispatch({ type: "OVERLAY_SET_INPUT_LOCKED", locked: !1, pid: t }),
         i.h.dispatch({ type: "SOUNDBOARD_SET_OVERLAY_ENABLED", pid: t, enabled: !0, keepOpen: e }));
 }
 function C(e) {
     i.h.dispatch({ type: "SOUNDBOARD_SET_OVERLAY_ENABLED", pid: e, enabled: !1 });
     let t = s.A.isOverlayV3EnabledForPID(e),
-        n = d.default.disableClickableRegions;
-    d.default.isLocked(e) || t || n || i.h.dispatch({ type: "OVERLAY_SET_INPUT_LOCKED", locked: !0, pid: e });
+        n = u.default.disableClickableRegions;
+    u.default.isLocked(e) || t || n || i.h.dispatch({ type: "OVERLAY_SET_INPUT_LOCKED", locked: !0, pid: e });
 }

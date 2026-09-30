@@ -8,10 +8,10 @@ var l,
     u = n(305866),
     c = n(707554),
     d = n(825484),
-    h = n(821609),
-    m = n(43990),
-    f = n(922016),
-    p = n(235986),
+    m = n(821609),
+    h = n(43990),
+    p = n(922016),
+    f = n(235986),
     g = n(174459),
     x = n(652215),
     A = n(375708),
@@ -41,33 +41,33 @@ class y extends r.PureComponent {
                 className: r,
                 onClickSkipAll: a,
             } = this.props,
-            m = "left" === t || n,
-            f = "center" === t || !m;
+            h = "left" === t || n,
+            p = "center" === t || !h;
         return (0, s.jsxs)(u.l, {
             className: o()(C.Sy, r),
             children: [
                 null != e &&
-                    (0, s.jsx)(p.A, {
+                    (0, s.jsx)(f.A, {
                         className: C.il,
-                        justify: m ? p.A.Justify.START : p.A.Justify.CENTER,
+                        justify: h ? f.A.Justify.START : f.A.Justify.CENTER,
                         children: e(),
                     }),
-                (0, s.jsx)(c.H, { className: o()({ [C.Av]: f, [C.gH]: m }), children: l }),
+                (0, s.jsx)(c.H, { className: o()({ [C.Av]: p, [C.gH]: h }), children: l }),
                 (0, s.jsx)("string" == typeof i ? "p" : "div", {
-                    className: o()({ [C.IF]: f, [C.If]: m }),
+                    className: o()({ [C.IF]: p, [C.If]: h }),
                     children: i,
                 }),
                 (0, s.jsxs)(d.e, {
                     fullWidth: !0,
                     direction: "vertical",
                     children: [
-                        (0, s.jsx)(h.$, {
+                        (0, s.jsx)(m.$, {
                             fullWidth: !0,
                             variant: "primary",
                             onClick: this.handleDismiss,
                             text: A.intl.string(A.t["+IrDzN"]),
                         }),
-                        (0, s.jsx)(h.$, {
+                        (0, s.jsx)(m.$, {
                             fullWidth: !0,
                             variant: "secondary",
                             onClick: a,
@@ -93,7 +93,7 @@ class S extends r.PureComponent {
         let { closePopout: t, position: n } = e,
             { forceTheme: l, isLongText: i, arrowAlignment: r, renderMedia: a } = this.props,
             u = null != a;
-        return (0, s.jsx)(m.N, {
+        return (0, s.jsx)(h.N, {
             theme: l,
             children: (e) =>
                 (0, s.jsx)(y, {
@@ -132,13 +132,13 @@ class S extends r.PureComponent {
                 spacing: u,
                 forceTheme: c,
                 innerRef: d,
-                ...h
+                ...m
             } = this.props,
-            m = "top" === h.position || "bottom" === h.position ? "center" : "top";
-        return (0, s.jsx)(f.Y, {
+            h = "top" === m.position || "bottom" === m.position ? "center" : "top";
+        return (0, s.jsx)(p.Y, {
             targetElementRef: d,
-            ...h,
-            align: m,
+            ...m,
+            align: h,
             spacing: u ?? 0,
             renderPopout: this.renderPopoutContent,
             nudgeAlignIntoViewport: !0,

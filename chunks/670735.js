@@ -6,12 +6,12 @@ var r = n(477900),
     o = n(258873),
     a = n(622242),
     c = n(731738),
-    d = n(70298),
-    u = n(17928),
+    u = n(70298),
+    d = n(17928),
     h = n(397613),
     f = n(821609),
-    g = n(825484),
-    p = n(148810),
+    p = n(825484),
+    g = n(148810),
     m = n(521502),
     A = n(380610),
     y = n(807393),
@@ -25,11 +25,11 @@ var r = n(477900),
     O = n(684637);
 function _() {
     let [e, t] = i.useState(!1);
-    if (null == (0, u.bG)([m.A], () => ((0, A.kK)() ? m.A.getCurrentBuildOverride().overrides?.discord_web : null)))
+    if (null == (0, d.bG)([m.A], () => ((0, A.kK)() ? m.A.getCurrentBuildOverride().overrides?.discord_web : null)))
         return null;
     async function n() {
         try {
-            (t(!0), await (0, p.iD)(), window.location.reload(!0));
+            (t(!0), await (0, g.iD)(), window.location.reload(!0));
         } catch (e) {
             t(!1);
         }
@@ -64,7 +64,7 @@ class I extends i.PureComponent {
     triggerSoftCrash(e, t) {
         let n = (0, v.JK)().location;
         this.setState({ error: e, info: t });
-        let r = (0, d.b)(),
+        let r = (0, u.b)(),
             i = w.A.captureCrash(e, { extra: t });
         (x.default.track(b.HAw.APP_CRASHED, {
             path: n.pathname,
@@ -102,7 +102,7 @@ class I extends i.PureComponent {
                         (0, r.jsx)("p", { children: N.intl.string(N.t.CvQlAH) }),
                     ],
                 }),
-                n = (0, r.jsxs)(g.e, {
+                n = (0, r.jsxs)(p.e, {
                     children: [
                         (0, r.jsx)(f.$, {
                             variant: "primary",

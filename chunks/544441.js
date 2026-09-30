@@ -1,4 +1,4 @@
-n.d(t, { A: () => f });
+n.d(t, { A: () => p });
 var l = n(582128),
     i = n(202163),
     s = n(989441),
@@ -25,19 +25,19 @@ let d = {
             analyticsAction: "PRESS_PLAY_ON_STEAM_BUTTON",
         },
     },
-    h = [s.D.XBOX_GAME_PASS, s.D.STEAM],
-    m = [];
-function f(e) {
+    m = [s.D.XBOX_GAME_PASS, s.D.STEAM],
+    h = [];
+function p(e) {
     let { gameRecord: t } = (0, i.A)(e);
     return (0, l.useMemo)(() => {
-        if (null == t) return m;
-        let e = new Set(h),
+        if (null == t) return h;
+        let e = new Set(m),
             n = new Map();
         for (let l of t.thirdPartySkus) {
             let t = l.distributor;
             null != l.id && e.has(t) && !n.has(t) && n.set(t, l.id);
         }
-        return h.flatMap((e) => {
+        return m.flatMap((e) => {
             let t = n.get(e),
                 l = d[e];
             return null == t || null == l ? [] : [{ ctaConfig: l, skuId: t }];

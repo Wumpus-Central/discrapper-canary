@@ -1,4 +1,4 @@
-(n.d(t, { A: () => p }), n(321073));
+(n.d(t, { A: () => f }), n(321073));
 var l = n(477900),
     i = n(582128),
     s = n(503698),
@@ -8,29 +8,29 @@ var l = n(477900),
     u = n(983851),
     c = n(889227),
     d = n(621531),
-    h = n(440155);
-function m(e, t, n) {
+    m = n(440155);
+function h(e, t, n) {
     return (0, l.jsx)("div", { className: t, children: e }, n);
 }
-class f extends i.PureComponent {
+class p extends i.PureComponent {
     _ref;
-    static defaultProps = { max: 10, renderMoreUsers: m, size: a._3.SIZE_24 };
+    static defaultProps = { max: 10, renderMoreUsers: h, size: a._3.SIZE_24 };
     defaultRenderUser = (e, t, n, i) => {
-        let { onClick: s, size: u, guildId: m } = this.props,
-            f = e instanceof c.A ? e : null != e ? e.user : null;
-        return null == f
+        let { onClick: s, size: u, guildId: h } = this.props,
+            p = e instanceof c.A ? e : null != e ? e.user : null;
+        return null == p
             ? (0, l.jsx)("div", { className: r()(d.F2, t), style: { width: (0, a.FT)(u), height: (0, a.FT)(u) } }, n)
             : (0, l.jsx)(
                   o.eu,
                   {
                       tabIndex: 0,
-                      src: f.getAvatarURL(m, (0, a.FT)(u)),
+                      src: p.getAvatarURL(h, (0, a.FT)(u)),
                       size: u,
-                      "aria-label": f.username,
-                      className: r()(t, h.or),
-                      onClick: (e) => (null != s ? s(e, f, this._ref) : null),
+                      "aria-label": p.username,
+                      className: r()(t, m.or),
+                      onClick: (e) => (null != s ? s(e, p, this._ref) : null),
                   },
-                  f.id,
+                  p.id,
               );
     };
     renderUsers() {
@@ -67,4 +67,4 @@ class f extends i.PureComponent {
         });
     }
 }
-let p = f;
+let f = p;

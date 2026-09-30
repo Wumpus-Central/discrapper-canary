@@ -8,15 +8,15 @@ var l = n(477900),
     u = n(192308),
     c = n(952270),
     d = n(922016),
-    h = n(939249),
-    m = n(625903),
-    f = n(180170),
-    p = n(435738),
+    m = n(939249),
+    h = n(625903),
+    p = n(180170),
+    f = n(435738),
     g = n(652215),
     x = n(375708);
 function A(e) {
     let { closePopout: t } = e,
-        i = (0, s.bG)([p.A], () => p.A.hidden);
+        i = (0, s.bG)([f.A], () => f.A.hidden);
     return (0, l.jsx)(r.W, {
         "data-menu-migrated": !0,
         onSelect: () => {},
@@ -49,7 +49,7 @@ function A(e) {
                     checked: i,
                     leadingAccessory: { type: "icon", icon: c.EyeSlashIcon },
                     action: () => {
-                        ((0, f.Il)(), t?.());
+                        ((0, p.Il)(), t?.());
                     },
                 }),
             ],
@@ -68,7 +68,7 @@ let C = function (e) {
             return (0, l.jsx)(A, { closePopout: t });
         },
         children: (n) =>
-            (0, l.jsx)(h.D, {
+            (0, l.jsx)(m.D, {
                 ...n,
                 ...e,
                 innerRef: t,
@@ -77,7 +77,7 @@ let C = function (e) {
                     (e.stopPropagation(), n.onClick(e));
                 },
                 style: { width: "12px", height: "12px", display: "flex" },
-                children: (0, l.jsx)(m.SettingsIcon, { size: "xxs" }),
+                children: (0, l.jsx)(h.SettingsIcon, { size: "xxs" }),
             }),
     });
 };

@@ -112,8 +112,8 @@ let S = i.memo(function () {
 var I = n(192308),
     b = n(834730),
     G = n(276293),
-    R = n(661531),
-    j = n(983851),
+    j = n(661531),
+    R = n(983851),
     v = n(534890),
     y = n(331322),
     L = n(297264),
@@ -146,21 +146,21 @@ function V() {
             (0, l.jsxs)("div", {
                 className: O._f,
                 children: [
-                    (0, l.jsx)(G.N, { size: "xs", color: R.A.colors.ICON_MUTED }),
+                    (0, l.jsx)(G.N, { size: "xs", color: j.A.colors.ICON_MUTED }),
                     (0, l.jsx)("div", { className: O.D_ }),
                 ],
             }),
             (0, l.jsxs)("div", {
                 className: O._f,
                 children: [
-                    (0, l.jsx)(j.H, { size: "xs", color: R.A.colors.ICON_MUTED }),
+                    (0, l.jsx)(R.H, { size: "xs", color: j.A.colors.ICON_MUTED }),
                     (0, l.jsx)("div", { className: O.VG }),
                 ],
             }),
             (0, l.jsxs)("div", {
                 className: O._f,
                 children: [
-                    (0, l.jsx)(v.ChatIcon, { size: "xs", color: R.A.colors.ICON_MUTED }),
+                    (0, l.jsx)(v.ChatIcon, { size: "xs", color: j.A.colors.ICON_MUTED }),
                     (0, l.jsx)("div", { className: O.D_ }),
                 ],
             }),

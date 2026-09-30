@@ -1,4 +1,4 @@
-n.d(t, { L_: () => d, au: () => f, dB: () => m });
+n.d(t, { L_: () => d, au: () => p, dB: () => h });
 var l = n(17928),
     i = n(627363),
     s = n(651743),
@@ -24,21 +24,21 @@ function d(e) {
         [e],
     );
 }
-function h(e, t) {
+function m(e, t) {
     let [n] = d(e),
         [l] = d(t?.id);
     return null != e && n ? e : null != t && l ? t.id : null;
 }
-function m(e) {
+function h(e) {
     let { data: t } = (0, i.YY)(e);
-    return h(
+    return m(
         e,
         (0, l.bG)([a.A], () => (null != t ? (a.A.getOfficialGame(t) ?? a.A.getGameByApplication(t)) : null), [t]),
     );
 }
-function f(e) {
+function p(e) {
     let { data: t } = (0, i.YY)(e);
-    return h(
+    return m(
         e,
         (0, l.bG)([a.A], () => (null != t ? a.A.getOfficialGame(t) : null), [t]),
     );

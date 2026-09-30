@@ -10,14 +10,14 @@ var l = n(582128),
 function d(e, t) {
     let n = (0, i.bG)([a.default], () => a.default.getCurrentUser()),
         d = e?.guild_id ?? u.dJq,
-        h = (0, i.bG)([r.Ay], () => r.Ay.getFlattenedGuildIds()),
-        m = (0, i.bG)([s.A], () => null == e || null == e.guild_id || s.A.can(c.xB.USE_EXTERNAL_SOUNDS, e));
+        m = (0, i.bG)([r.Ay], () => r.Ay.getFlattenedGuildIds()),
+        h = (0, i.bG)([s.A], () => null == e || null == e.guild_id || s.A.can(c.xB.USE_EXTERNAL_SOUNDS, e));
     return l.useMemo(() => {
-        if ((o.Ay.canUseSoundboardEverywhere(n) || !t) && m) {
+        if ((o.Ay.canUseSoundboardEverywhere(n) || !t) && h) {
             let e = "" !== d,
-                t = e ? h.filter((e) => e !== d) : h;
+                t = e ? m.filter((e) => e !== d) : m;
             return (e && t.unshift(d), t);
         }
         return [d];
-    }, [n, t, d, h, m]);
+    }, [n, t, d, m, h]);
 }

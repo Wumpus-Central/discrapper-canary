@@ -8,10 +8,10 @@ var l = n(582128),
     u = n(587895),
     c = n(429913),
     d = n(569926),
-    h = n(82149),
-    m = n(174459),
-    f = n(970928),
-    p = n(486020),
+    m = n(82149),
+    h = n(174459),
+    p = n(970928),
+    f = n(486020),
     g = n(20805),
     x = n(327098),
     A = n(652215),
@@ -35,16 +35,16 @@ function y(e) {
         { activity: s, activityApplication: r, fallbackApplication: a } = (0, x.A)(n),
         o = a ?? r,
         { largeImage: u, smallImage: c } = _(s, r),
-        { largeImage: h } = S(s, o),
-        m = o?.getCanonicalGameId(),
-        { data: p } = (0, d.I)(m),
-        A = p?.getCoverURL(),
+        { largeImage: m } = S(s, o),
+        h = o?.getCanonicalGameId(),
+        { data: f } = (0, d.I)(h),
+        A = f?.getCoverURL(),
         E =
             (0, g.Tq)(n) && n.extra.entries.length > 0
                 ? { src: n.extra.entries[0].media.image_url }
                 : (0, g.Lf)(n)
                   ? {
-                        src: (0, f.uD)(n.extra.application_id, n.extra.media_assets_large_image, C.iu.LARGE),
+                        src: (0, p.uD)(n.extra.application_id, n.extra.media_assets_large_image, C.iu.LARGE),
                         alt: n.extra.media_title,
                     }
                   : (0, g.p6)(n)
@@ -58,7 +58,7 @@ function y(e) {
                   ? { largeImage: E, smallImage: void 0 }
                   : null != A && l
                     ? { largeImage: { src: A }, smallImage: void 0 }
-                    : { largeImage: h, smallImage: void 0 }),
+                    : { largeImage: m, smallImage: void 0 }),
         N({ activity: s, application: a ?? r, largeImageSrc: t.largeImage?.src, trackingSource: i }),
         t
     );
@@ -68,11 +68,11 @@ function S(e, t) {
     return (function (e) {
         let { activity: t, application: n, largeImage: l, smallImage: i } = e;
         if (null != l) return { largeImage: l, smallImage: i };
-        if ((0, h.Cy)(t)) {
-            let e = (0, h.UW)(t),
+        if ((0, m.Cy)(t)) {
+            let e = (0, m.UW)(t),
                 n =
                     null != e
-                        ? p.Ay.getGuildIconURL({ id: e.guildId, icon: t?.assets?.small_image, size: C.iu.SMALL })
+                        ? f.Ay.getGuildIconURL({ id: e.guildId, icon: t?.assets?.small_image, size: C.iu.SMALL })
                         : void 0;
             return { largeImage: null != n ? { src: n } : void 0, smallImage: void 0 };
         }
@@ -99,9 +99,9 @@ function N(e) {
         a = t?.application_id,
         o = (0, c.h)(a),
         d = (0, i.bG)([u.A], () => null != a && u.A.didFetchingApplicationFail(a)),
-        h = null == a || null != o || d,
-        f = null != o || null != n,
-        p = null == s,
+        m = null == a || null != o || d,
+        p = null != o || null != n,
+        f = null == s,
         g = t?.name,
         x = t?.type,
         C = t?.session_id,
@@ -109,18 +109,18 @@ function N(e) {
         I = null != t;
     (0, l.useEffect)(() => {
         I &&
-            h &&
-            p &&
-            m.default.track(A.HAw.ACTIVITY_DEFAULT_ICON_SHOWN, {
+            m &&
+            f &&
+            h.default.track(A.HAw.ACTIVITY_DEFAULT_ICON_SHOWN, {
                 source: r,
                 application_id: a,
                 activity_name: g,
                 activity_type: x,
                 activity_session_id: C,
-                application_found: f,
+                application_found: p,
                 has_rich_assets: E,
             });
-    }, [r, I, h, p, a, g, x, C, f, E]);
+    }, [r, I, m, f, a, g, x, C, p, E]);
 }
 function _(e, t) {
     let n = (0, c.h)(e?.application_id);
@@ -129,7 +129,7 @@ function _(e, t) {
         i =
             null != l
                 ? {
-                      src: (0, f.uD)(e.application_id, l, [C.iu.LARGE, C.iu.LARGE]),
+                      src: (0, p.uD)(e.application_id, l, [C.iu.LARGE, C.iu.LARGE]),
                       text: e.assets?.large_text?.trim(),
                       url: e.assets?.large_url,
                   }
@@ -138,7 +138,7 @@ function _(e, t) {
         a =
             null != s
                 ? {
-                      src: (0, f.uD)(e.application_id, s, [C.iu.LARGE, C.iu.LARGE]),
+                      src: (0, p.uD)(e.application_id, s, [C.iu.LARGE, C.iu.LARGE]),
                       text: e.assets?.small_text?.trim(),
                       url: e.assets?.small_url,
                   }

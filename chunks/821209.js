@@ -1,4 +1,4 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => h });
 var l = n(477900);
 n(582128);
 var i = n(503698),
@@ -23,35 +23,35 @@ function c(e) {
     });
 }
 var d = n(375708),
-    h = n(621634);
-let m = function (e) {
+    m = n(621634);
+let h = function (e) {
     let {
         onPlay: t,
         externalURL: n,
         className: i,
         renderLinkComponent: u,
-        inactive: m,
-        messageId: f,
-        channelId: p,
+        inactive: h,
+        messageId: p,
+        channelId: f,
     } = e;
     return (0, l.jsx)(o.Y.Consumer, {
         children: (e) =>
             (0, l.jsxs)("div", {
-                className: s()(i, h.iE, { [h.y7]: e.disableInteractions }),
+                className: s()(i, m.iE, { [m.y7]: e.disableInteractions }),
                 children: [
-                    m && null == t
+                    h && null == t
                         ? (0, l.jsx)("div", {
-                              className: h.P0,
-                              children: (0, l.jsx)(r.PlayIcon, { size: "xs", color: "currentColor", className: h._R }),
+                              className: m.P0,
+                              children: (0, l.jsx)(r.PlayIcon, { size: "xs", color: "currentColor", className: m._R }),
                           })
                         : null,
                     null != t
                         ? (0, l.jsx)(a.D, {
                               onClick: t,
-                              className: h.Rw,
-                              tabIndex: m ? -1 : 0,
+                              className: m.Rw,
+                              tabIndex: h ? -1 : 0,
                               "aria-label": d.intl.string(d.t.RscU7I),
-                              children: (0, l.jsx)(r.PlayIcon, { size: "xs", color: "currentColor", className: h._R }),
+                              children: (0, l.jsx)(r.PlayIcon, { size: "xs", color: "currentColor", className: m._R }),
                           })
                         : null,
                     null != n
@@ -59,13 +59,13 @@ let m = function (e) {
                               href: n,
                               target: "_blank",
                               rel: "noreferrer noopener",
-                              className: h.Rw,
+                              className: m.Rw,
                               children: (0, l.jsx)(c, {
                                   "aria-label": d.intl.string(d.t.wuRE8M),
-                                  className: null != t ? h._L : h.Zl,
+                                  className: null != t ? m._L : m.Zl,
                               }),
-                              messageId: f,
-                              channelId: p,
+                              messageId: p,
+                              channelId: f,
                           })
                         : null,
                 ],

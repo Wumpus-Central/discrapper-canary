@@ -6,12 +6,12 @@ var i = n(17928),
     o = n(115718),
     a = n(47167),
     c = n(734057),
-    d = n(71393),
-    u = n(480595),
+    u = n(71393),
+    d = n(480595),
     h = n(290863),
     f = n(994500),
-    g = n(287809),
-    p = n(645959),
+    p = n(287809),
+    g = n(645959),
     m = n(652215);
 let A = [o.rD.TEXT_CHANNEL, o.rD.GROUP_DM, o.rD.USER],
     y = null,
@@ -25,13 +25,13 @@ function C() {
     ((y = null), null != r && (r.destroy(), (r = null)), null != v && v());
 }
 function b() {
-    let e = null != y && null != y.application_id ? u.A.getApplicationActivity(y.application_id) : null;
+    let e = null != y && null != y.application_id ? d.A.getApplicationActivity(y.application_id) : null;
     if (null != y && (null == e || null == e.party || null == e.party.id)) return C();
 }
 class N extends i.Ay.Store {
     static displayName = "ActivityInviteModalStore";
     initialize() {
-        this.waitFor(c.A, d.A, u.A, h.A, p.A, g.default);
+        this.waitFor(c.A, u.A, d.A, h.A, g.A, p.default);
     }
     getActivity() {
         return y;
@@ -55,12 +55,12 @@ let O = new N(s.h, {
                             ((w = (
                                 "" === t.trim()
                                     ? ((n = []),
-                                      p.A.getPrivateChannelIds().forEach((e) => {
+                                      g.A.getPrivateChannelIds().forEach((e) => {
                                           let t = c.A.getChannel(e);
                                           if (null != t)
                                               if (t.type === m.rbe.DM) {
                                                   let e = t.getRecipientId(),
-                                                      r = null != e ? g.default.getUser(e) : null;
+                                                      r = null != e ? p.default.getUser(e) : null;
                                                   null != r && n.push({ type: o.rD.USER, record: r, score: 0 });
                                               } else
                                                   t.isMultiUserDM() &&
@@ -83,11 +83,11 @@ let O = new N(s.h, {
                                         case o.rD.TEXT_CHANNEL: {
                                             let { record: t } = e,
                                                 n = c.A.getChannel(t.parent_id),
-                                                r = d.A.getGuild(t.guild_id);
+                                                r = u.A.getGuild(t.guild_id);
                                             return {
                                                 type: o.rD.TEXT_CHANNEL,
                                                 sent: x.includes(t.id),
-                                                categoryName: null != n ? (0, a.m1)(n, g.default, f.A) : "",
+                                                categoryName: null != n ? (0, a.m1)(n, p.default, f.A) : "",
                                                 guildName: r?.name ?? "",
                                                 data: e,
                                             };

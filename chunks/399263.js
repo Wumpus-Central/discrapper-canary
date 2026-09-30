@@ -1,4 +1,4 @@
-(n.d(t, { A: () => p }), n(142703));
+(n.d(t, { A: () => f }), n(142703));
 var l = n(17928),
     i = n(228366),
     s = n(232835);
@@ -8,18 +8,18 @@ let r = Object.freeze([]),
     u = {},
     c = {},
     d = {};
-function h(e, t) {
+function m(e, t) {
     let n = a[e];
     return null != n && ((a[e] = n.filter((e) => e.id !== t)), delete o[t], delete u[t], n.length !== a[e].length);
 }
-function m(e, t) {
+function h(e, t) {
     let n = a[e];
     if (null == n) return !1;
     a[e] = n.map((e) => (e.id === t.id ? { ...e, ...t } : e));
     let l = u[t.id];
     null != l && null != c[l.id] && (c[l.id] = { ...c[l.id], ...t });
 }
-class f extends l.Ay.Store {
+class p extends l.Ay.Store {
     static displayName = "UploadStore";
     initialize() {
         this.waitFor(s.A);
@@ -37,7 +37,7 @@ class f extends l.Ay.Store {
         if (null != e) return d[e];
     }
 }
-let p = new f(i.h, {
+let f = new p(i.h, {
     CONNECTION_OPEN: function () {
         d = {};
     },
@@ -55,19 +55,19 @@ let p = new f(i.h, {
     },
     UPLOAD_COMPRESSION_PROGRESS: function (e) {
         let { channelId: t, file: n } = e;
-        m(t, n);
+        h(t, n);
     },
     UPLOAD_PROGRESS: function (e) {
         let { channelId: t, file: n } = e;
-        m(t, n);
+        h(t, n);
     },
     UPLOAD_COMPLETE: function (e) {
         let { channelId: t, file: n } = e;
-        return h(t, n.id);
+        return m(t, n.id);
     },
     UPLOAD_FAIL: function (e) {
         let { channelId: t, file: n } = e;
-        return h(t, n.id);
+        return m(t, n.id);
     },
     UPLOAD_CANCEL_REQUEST: function (e) {
         let { file: t } = e,
@@ -84,7 +84,7 @@ let p = new f(i.h, {
     UPLOAD_FILE_UPDATE: function (e) {
         let { channelId: t, file: n } = e,
             l = u[n.id];
-        (null != l && (l.nonce ?? l.id), m(t, n));
+        (null != l && (l.nonce ?? l.id), h(t, n));
     },
     UPLOAD_RESTORE_FAILED_UPLOAD: function (e) {
         let { file: t, messageId: n } = e;

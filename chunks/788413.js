@@ -32,11 +32,11 @@ function o(e, t) {
                 { ...e, focusedX: o, focusedY: u }
             );
         case i.X2.NAVIGATE_LEFT:
-            let c, d, h;
+            let c, d, m;
             return (
                 (d = (c = 0 !== e.focusedY && 0 === e.focusedX) ? e.focusedY - 1 : e.focusedY),
-                (h = c ? e.columnCounts[d] - 1 : r(0, e.focusedX - 1)),
-                { ...e, focusedX: h, focusedY: d }
+                (m = c ? e.columnCounts[d] - 1 : r(0, e.focusedX - 1)),
+                { ...e, focusedX: m, focusedY: d }
             );
         case i.X2.NAVIGATE_INLINE_START:
             return { ...e, focusedX: 0 };
@@ -45,8 +45,8 @@ function o(e, t) {
         case i.X2.NAVIGATE_START:
             return { ...e, focusedX: 0, focusedY: 0 };
         case i.X2.NAVIGATE_END:
-            let m;
-            return ((m = e.columnCounts.length - 1), { ...e, focusedX: e.columnCounts[m] - 1, focusedY: m });
+            let h;
+            return ((h = e.columnCounts.length - 1), { ...e, focusedX: e.columnCounts[h] - 1, focusedY: h });
         case "UPDATE_COLUMN_COUNTS":
             return (function (e, t) {
                 let { columnCounts: n } = t,

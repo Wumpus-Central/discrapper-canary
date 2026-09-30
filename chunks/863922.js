@@ -8,18 +8,18 @@ var l = n(582128),
     u = n(913122),
     c = n(432371),
     d = n(597643),
-    h = n(734057),
-    m = n(927813),
-    f = n(822074),
-    p = n(652215);
-let g = 30 * m.A.Millis.SECOND;
+    m = n(734057),
+    h = n(927813),
+    p = n(822074),
+    f = n(652215);
+let g = 30 * h.A.Millis.SECOND;
 async function x(e, t) {
     let n, l;
-    if (!f.A.shouldFetch(e, t)) return;
+    if (!p.A.shouldFetch(e, t)) return;
     let i = Date.now();
     o.h.dispatch({ type: "REQUEST_CHANNEL_SUMMARY", channelId: e, summaryId: t, requestedAt: i });
     try {
-        let n = await a.Bo.get({ url: p.BVt.CHANNEL_SUMMARY(e, t), rejectWithError: !1 });
+        let n = await a.Bo.get({ url: f.BVt.CHANNEL_SUMMARY(e, t), rejectWithError: !1 });
         l = n?.body;
     } catch (e) {
         n = new u.LG(e);
@@ -35,11 +35,11 @@ async function x(e, t) {
 }
 async function A(e) {
     let t, n;
-    if (!f.A.shouldFetch(e)) return;
+    if (!p.A.shouldFetch(e)) return;
     let l = Date.now();
     o.h.dispatch({ type: "REQUEST_CHANNEL_SUMMARIES", channelId: e, requestedAt: l });
     try {
-        n = await a.Bo.get({ url: p.BVt.CHANNEL_SUMMARIES(e), rejectWithError: !1 });
+        n = await a.Bo.get({ url: f.BVt.CHANNEL_SUMMARIES(e), rejectWithError: !1 });
     } catch (e) {
         t = new u.LG(e);
     }
@@ -72,7 +72,7 @@ function S(e, t) {
 }
 async function v() {
     let e, t;
-    if (!f.A.shouldFetchChannelAffinities()) return Promise.resolve(null);
+    if (!p.A.shouldFetchChannelAffinities()) return Promise.resolve(null);
     let n = Date.now();
     o.h.dispatch({ type: "REQUEST_CHANNEL_AFFINITIES", requestedAt: n });
     try {
@@ -99,14 +99,14 @@ async function N(e) {
     if (
         0 ===
         (e = e
-            .concat(f.A.defaultChannelIds({ withQuickSwitcher: l, withChannelAffinities: i }))
+            .concat(p.A.defaultChannelIds({ withQuickSwitcher: l, withChannelAffinities: i }))
             .filter((e) => {
-                let t = h.A.getChannel(e);
+                let t = m.A.getChannel(e);
                 return (0, c.pk)(t, !1, !0);
             })
             .filter((e) => {
                 let t = Date.now(),
-                    n = f.A.status(e);
+                    n = p.A.status(e);
                 if (n?.fetching) return !1;
                 let l = n?.lastReceivedAt;
                 return null == l || t - l > g;
@@ -116,7 +116,7 @@ async function N(e) {
         return Promise.resolve(null);
     o.h.dispatch({ type: "REQUEST_CHANNEL_SUMMARIES_BULK", channelIds: e, requestedAt: s });
     try {
-        n = await a.Bo.post({ url: p.BVt.USER_SUMMARIES, body: { channel_ids: e }, rejectWithError: !1 });
+        n = await a.Bo.post({ url: f.BVt.USER_SUMMARIES, body: { channel_ids: e }, rejectWithError: !1 });
     } catch (e) {
         t = new u.LG(e);
     }
@@ -132,7 +132,7 @@ async function N(e) {
 }
 async function _(e) {
     try {
-        (await a.Bo.del({ url: p.BVt.CHANNEL_SUMMARY(e.channelId, e.id), rejectWithError: !1 }),
+        (await a.Bo.del({ url: f.BVt.CHANNEL_SUMMARY(e.channelId, e.id), rejectWithError: !1 }),
             o.h.dispatch({ type: "DELETE_SUMMARY", summary: e }));
     } catch (e) {
         throw new u.LG(e);
@@ -164,7 +164,7 @@ let j =
                                   }
                               }, [n, t]);
                           })(t),
-                          (0, r.yK)([f.A], () => f.A.topSummaries(), [])
+                          (0, r.yK)([p.A], () => p.A.topSummaries(), [])
                       );
                   },
                   deleteSummary: _,

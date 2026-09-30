@@ -1,4 +1,4 @@
-n.d(t, { l: () => u });
+n.d(t, { l: () => d });
 var r = n(477900),
     i = n(582128),
     s = n(776310),
@@ -6,33 +6,33 @@ var r = n(477900),
     o = n(309010),
     a = n(21161),
     c = n(536283),
-    d = n(920822);
-function u(e) {
+    u = n(920822);
+function d(e) {
     let { children: t } = e,
-        [n, u] = i.useState(null),
+        [n, d] = i.useState(null),
         [h, f] = i.useState(null),
-        g = i.useRef(void 0),
-        p = i.useRef(new Set()),
+        p = i.useRef(void 0),
+        g = i.useRef(new Set()),
         [m, A] = i.useState(!1),
         y = (0, l.bG)([o.Ay], () => o.Ay.getCurrentlySelectedChannelId()),
         v = i.useCallback((e) => {
-            (p.current.delete(e), A(p.current.size > 0));
+            (g.current.delete(e), A(g.current.size > 0));
         }, []),
-        x = i.useCallback((e) => (p.current.add(e), A(!0), () => v(e)), [v]),
+        x = i.useCallback((e) => (g.current.add(e), A(!0), () => v(e)), [v]),
         w = i.useCallback((e, t) => {
-            for (let n of p.current) n(e, t);
+            for (let n of g.current) n(e, t);
         }, []);
     i.useEffect(() => {
         h?.clearConfetti();
     }, [h, y]);
     let E = i.useCallback((e) => {
-            (window.clearTimeout(g.current),
-                (g.current = window.setTimeout(() => {
+            (window.clearTimeout(p.current),
+                (p.current = window.setTimeout(() => {
                     ((e.width = 0), (e.height = 0));
                 }, 1e4)));
         }, []),
         C = i.useCallback((e) => {
-            window.clearTimeout(g.current);
+            window.clearTimeout(p.current);
             let t = e.canvas;
             if (0 === t.width && 0 === t.height) {
                 let { width: e, height: n } = t.getBoundingClientRect();
@@ -53,7 +53,7 @@ function u(e) {
             return (
                 t.observe(e),
                 () => {
-                    (t.disconnect(), window.clearTimeout(g.current));
+                    (t.disconnect(), window.clearTimeout(p.current));
                 }
             );
         }, [h, E]),
@@ -69,13 +69,13 @@ function u(e) {
                 }),
                 (0, r.jsx)(s.Fk, {
                     ref: f,
-                    className: d.J,
+                    className: u.J,
                     environment: c.XA,
                     onClick: m ? w : void 0,
                     onBeforeRender: C,
                     onAfterRender: b,
                 }),
-                (0, r.jsx)(s.K_, { ref: u, colors: c._t, sprites: c.uI, spriteWidth: c.wn, spriteHeight: c.wn }),
+                (0, r.jsx)(s.K_, { ref: d, colors: c._t, sprites: c.uI, spriteWidth: c.wn, spriteHeight: c.wn }),
             ],
         })
     );

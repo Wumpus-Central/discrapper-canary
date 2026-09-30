@@ -6,12 +6,12 @@ var r = n(477900),
     o = n(17928),
     a = n(980707),
     c = n(442433),
-    d = n(139286),
-    u = n(267102),
+    u = n(139286),
+    d = n(267102),
     h = n(363195),
     f = n(712687),
-    g = n(625494),
-    p = n(652215);
+    p = n(625494),
+    g = n(652215);
 function m() {
     window.getSelection().removeAllRanges();
 }
@@ -24,7 +24,7 @@ function A(e) {
             rect: c,
             position: h,
             align: f,
-            impressionName: g,
+            impressionName: p,
             impressionProperties: A,
             disableClickTrap: y = !1,
             repositionOnContentChange: v = !1,
@@ -38,13 +38,13 @@ function A(e) {
         w.current = o;
     }),
         i.useEffect(() => () => w.current?.(), []),
-        (0, d.A)({ type: s.ImpressionTypes.MENU, name: g, properties: A }));
-    let E = (0, u.aL)(),
+        (0, u.A)({ type: s.ImpressionTypes.MENU, name: p, properties: A }));
+    let E = (0, d.aL)(),
         C = i.useCallback(() => {
-            E.dispatch(p.jej.POPOUT_SHOW);
+            E.dispatch(g.jej.POPOUT_SHOW);
         }, [E]),
         b = i.useCallback(() => {
-            E.dispatch(p.jej.POPOUT_HIDE);
+            E.dispatch(g.jej.POPOUT_HIDE);
         }, [E]),
         N = a.ownerDocument;
     return (0, r.jsx)(l.Ow, {
@@ -74,7 +74,7 @@ class y extends i.PureComponent {
         let { renderLazy: e, renderWindow: t } = this.props;
         if (
             (t.addEventListener("resize", this.closeResize, !0),
-            g._.subscribe(p.jej.CONTEXT_MENU_CLOSE, this.props.closeContextMenu),
+            p._.subscribe(g.jej.CONTEXT_MENU_CLOSE, this.props.closeContextMenu),
             null != e)
         ) {
             let t = setTimeout(() => {
@@ -92,7 +92,7 @@ class y extends i.PureComponent {
     componentWillUnmount() {
         let { renderWindow: e } = this.props;
         (e.removeEventListener("resize", this.closeResize, !0),
-            g._.unsubscribe(p.jej.CONTEXT_MENU_CLOSE, this.props.closeContextMenu));
+            p._.unsubscribe(g.jej.CONTEXT_MENU_CLOSE, this.props.closeContextMenu));
     }
     closeResize = (e) => {
         let { renderWindow: t } = this.props;
@@ -147,6 +147,6 @@ function v() {
             isOpen: n,
         } = (0, o.cf)([f.A], () => ({ contextMenu: f.A.getContextMenu(), version: f.A.version, isOpen: f.A.isOpen() })),
         s = (0, o.bG)([h.A], () => h.A.theme),
-        { appContext: l, renderWindow: a } = i.useContext(u.Ay);
+        { appContext: l, renderWindow: a } = i.useContext(d.Ay);
     return (0, r.jsx)(y, { appContext: l, renderWindow: a, ...e, isOpen: n, theme: s, closeContextMenu: c.Z_ }, t);
 }

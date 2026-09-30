@@ -8,17 +8,17 @@ var l = n(477900),
     u = n(366010),
     c = n(194261),
     d = n(604121),
-    h = n(403581),
-    m = n(834730),
-    f = n(736653),
-    p = n(775602),
+    m = n(403581),
+    h = n(834730),
+    p = n(736653),
+    f = n(775602),
     g = n(131607),
     x = n(49999),
     A = n(375708),
     C = n(988864);
 let E = 41;
 function I() {
-    let e = (0, a.bG)([p.Ay], () => p.Ay.useReducedMotion),
+    let e = (0, a.bG)([f.Ay], () => f.Ay.useReducedMotion),
         [t, s] = (0, g.kn)([o.M.TRIAL_NUX_EMOJI_PICKER]),
         u = t === o.M.TRIAL_NUX_EMOJI_PICKER;
     return (
@@ -47,8 +47,8 @@ function I() {
                         (0, l.jsxs)("div", {
                             className: r()(C.bl, { [C.VN]: e || !u }),
                             children: [
-                                (0, l.jsx)(h.t, { size: "xs", color: "white" }),
-                                (0, l.jsx)(m.E, {
+                                (0, l.jsx)(m.t, { size: "xs", color: "white" }),
+                                (0, l.jsx)(h.E, {
                                     variant: "text-xs/medium",
                                     color: "text-overlay-light",
                                     lineClamp: 1,
@@ -66,7 +66,7 @@ function I() {
 }
 let y = function (e) {
     let { className: t } = e,
-        n = (0, f.Ay)(),
+        n = (0, p.Ay)(),
         i = (0, u.q)(n);
     return (0, l.jsxs)("div", {
         className: r()(C.gg, t),

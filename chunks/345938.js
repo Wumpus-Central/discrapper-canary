@@ -1,9 +1,9 @@
-r.d(e, { d: () => u });
+r.d(e, { d: () => a });
 var i = r(477900),
     n = r(192308),
     l = r(294454);
-let u = (t) => {
-    let { sku: e, guildId: u, source: a, analyticsLocations: o, analyticsContext: s } = t;
+let a = (t) => {
+    let { sku: e, guildId: a, source: u, analyticsLocations: o, analyticsContext: s } = t;
     (0, n.openModalLazy)(
         async () => {
             let { default: t } = await Promise.all([
@@ -37,7 +37,7 @@ let u = (t) => {
                 r.e("510404"),
             ]).then(r.bind(r, 763375));
             return (r) =>
-                (0, i.jsx)(t, { ...r, sku: e, guildId: u, source: a, analyticsLocations: o, analyticsContext: s });
+                (0, i.jsx)(t, { ...r, sku: e, guildId: a, source: u, analyticsLocations: o, analyticsContext: s });
         },
         { stackingBehavior: "stack", modalKey: l.aU },
     );

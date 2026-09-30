@@ -8,10 +8,10 @@ var l = n(477900),
     u = n(945810),
     c = n(693875),
     d = n(776231),
-    h = n(807393),
-    m = n(742023),
-    f = n(544180),
-    p = n(174459),
+    m = n(807393),
+    h = n(742023),
+    p = n(544180),
+    f = n(174459),
     g = n(486020),
     x = n(515718),
     A = n(652215),
@@ -80,39 +80,39 @@ class v extends i.Component {
             src: t,
             dimensions: { maxWidth: n, maxHeight: l, imageWidth: i, imageHeight: s },
             options: { srcIsAnimated: r, original: a, animated: o, sourceMetadata: u, freeze: c },
-            callback: h,
+            callback: m,
         } = e;
         if (1 === i && 1 === s) return;
-        let { format: m, quality: f } = v.getFormatQuality({
+        let { format: h, quality: p } = v.getFormatQuality({
                 src: t,
                 original: a,
                 animated: o,
                 srcIsAnimated: r,
                 freeze: c,
             }),
-            p = (0, d.AE)({
+            f = (0, d.AE)({
                 src: t,
                 width: i,
                 height: s,
                 maxWidth: n,
                 maxHeight: l,
                 srcIsAnimated: r,
-                format: m,
-                quality: f,
+                format: h,
+                quality: p,
             }),
             g = performance.now();
-        return (0, d.yt)(p, (e, n) => {
+        return (0, d.yt)(f, (e, n) => {
             (v.trackLoadingCompleted({
                 error: e,
                 imageData: n,
                 trigger: "PRELOAD",
                 startLoadingTime: g,
                 readyState: A.Rv1.READY,
-                format: m,
-                quality: f,
+                format: h,
+                quality: p,
                 imageProps: { src: t, width: i, height: s, sourceMetadata: u, original: a },
             }),
-                h?.(e, n));
+                m?.(e, n));
         });
     }
     static async trackLoadingCompleted(e) {
@@ -126,13 +126,13 @@ class v extends i.Component {
             quality: o,
             imageProps: { src: u, height: c, width: d, original: g, sourceMetadata: x },
         } = e;
-        if ((t && h.A.increment({ name: r.K.IMAGE_LOAD_ERROR }), !N.getConfig({ location: "lazy_image" }).enabled))
+        if ((t && m.A.increment({ name: r.K.IMAGE_LOAD_ERROR }), !N.getConfig({ location: "lazy_image" }).enabled))
             return;
         let C = await fetch(n.url).catch(() => void 0),
             E = C?.headers?.get("content-length"),
             I = null != E ? Number(E) : null,
             y = Math.round(performance.now() - i);
-        p.default.track(A.HAw.IMAGE_LOADING_COMPLETED, {
+        f.default.track(A.HAw.IMAGE_LOADING_COMPLETED, {
             duration_ms: y,
             requested_height: n.height,
             requested_width: n.width,
@@ -144,15 +144,15 @@ class v extends i.Component {
             format: a,
             quality: o,
             state: t ? A.Rv1.ERROR : s,
-            data_saving_mode: m.Ay.dataSavingMode,
-            low_quality_image_mode: m.Ay.dataSavingMode,
+            data_saving_mode: h.Ay.dataSavingMode,
+            low_quality_image_mode: h.Ay.dataSavingMode,
             trigger: l,
             size: I,
             message_id: x?.message?.id,
             message_sent_timestamp: x?.message?.timestamp.getTime(),
-            connection_type: f.A.getType(),
-            effective_connection_speed: f.A.getEffectiveConnectionSpeed(),
-            service_provider: f.A.getServiceProvider(),
+            connection_type: p.A.getType(),
+            effective_connection_speed: p.A.getEffectiveConnectionSpeed(),
+            service_provider: p.A.getServiceProvider(),
         });
     }
     state = { readyState: A.Rv1.LOADING, hasMouseOver: !1, hasFocus: !1 };
@@ -296,10 +296,10 @@ class v extends i.Component {
                 original: u,
                 className: c,
                 imageClassName: d,
-                children: h,
-                animated: m,
-                shouldAnimate: f,
-                freeze: p,
+                children: m,
+                animated: h,
+                shouldAnimate: p,
+                freeze: f,
                 width: g,
                 height: x,
                 minWidth: C,
@@ -313,8 +313,8 @@ class v extends i.Component {
                 useFullWidth: T,
                 placeholder: R,
                 placeholderVersion: O,
-                dataSafeSrc: M,
-                srcIsAnimated: L,
+                dataSafeSrc: L,
+                srcIsAnimated: M,
             } = this.props,
             { readyState: k, hasMouseOver: w, hasFocus: P } = this.state,
             D = null != n,
@@ -322,7 +322,7 @@ class v extends i.Component {
             V = (0, s.clamp)(Math.round(g * U), C ?? 0, I ?? 1 / 0),
             G = (0, s.clamp)(Math.round(x * U), E ?? 0, y ?? 1 / 0),
             F = _.getConfig({ location: "LazyImage_render" }).enabled,
-            B = {
+            H = {
                 alt: e,
                 readyState: k,
                 onContextMenu: r ?? void 0,
@@ -340,13 +340,13 @@ class v extends i.Component {
                 src: "",
                 placeholder: R,
                 placeholderVersion: O,
-                dataSafeSrc: M,
-                srcIsAnimated: L,
+                dataSafeSrc: L,
+                srcIsAnimated: M,
                 children:
-                    null != h
+                    null != m
                         ? (e) => {
                               let { src: t, size: n, alt: l, mediaLayoutType: i } = e;
-                              return h({ src: t, size: n, alt: l, mediaLayoutType: i });
+                              return m({ src: t, size: n, alt: l, mediaLayoutType: i });
                           }
                         : void 0,
                 onMouseEnter: this.onMouseEnter,
@@ -354,28 +354,28 @@ class v extends i.Component {
                 onFocus: this.onFocus,
                 onBlur: this.onBlur,
             };
-        if (1 === B.width && 1 === B.height) return null;
+        if (1 === H.width && 1 === H.height) return null;
         switch (
-            ((D || null != S) && (B.onClick = this.onClick), i && (B.original = null != u && "" !== u ? u : B.src), k)
+            ((D || null != S) && (H.onClick = this.onClick), i && (H.original = null != u && "" !== u ? u : H.src), k)
         ) {
             case A.Rv1.LOADING:
-                null != t && (B.src = t);
+                null != t && (H.src = t);
                 break;
             case A.Rv1.READY:
                 if (v.isAnimated(this.props)) {
-                    B.onMouseLeave = this.onMouseLeave;
-                    let e = (a || w || P) && (null == f || f) && v.visibilityObserver.isVisible(this);
+                    H.onMouseLeave = this.onMouseLeave;
+                    let e = (a || w || P) && (null == p || p) && v.visibilityObserver.isVisible(this);
                     (e
-                        ? ((B.src = this.getSrc(U, p)), (B.renderAccessory = N))
-                        : ((B.src = this.getSrc(U, p || !m || !a)), (B.renderAccessory = this.renderAccessory)),
-                        null != h &&
-                            (B.children = (t) => {
+                        ? ((H.src = this.getSrc(U, f)), (H.renderAccessory = N))
+                        : ((H.src = this.getSrc(U, f || !h || !a)), (H.renderAccessory = this.renderAccessory)),
+                        null != m &&
+                            (H.children = (t) => {
                                 let { src: n, size: l, alt: i, mediaLayoutType: s } = t;
-                                return h({ src: n, size: l, animating: e, alt: i, mediaLayoutType: s });
+                                return m({ src: n, size: l, animating: e, alt: i, mediaLayoutType: s });
                             }));
-                } else B.src = this.getSrc(U);
+                } else H.src = this.getSrc(U);
         }
-        return (0, l.jsx)(o._, { disableLoadingSpinner: F, ref: this._imageRef, ...B });
+        return (0, l.jsx)(o._, { disableLoadingSpinner: F, ref: this._imageRef, ...H });
     }
 }
 let N = (0, u.mj)({

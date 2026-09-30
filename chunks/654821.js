@@ -8,8 +8,8 @@ var l = n(235599);
             {
                 anchorNode: u,
                 anchorOffset: d,
-                focusNode: h,
-                focusOffset: m,
+                focusNode: m,
+                focusOffset: h,
             } = null != (r = (i = t) && i.anchorNode && c(i.anchorNode)) && i instanceof r.Selection
                 ? {
                       anchorNode: t.anchorNode,
@@ -23,14 +23,14 @@ var l = n(235599);
                       focusNode: t.endContainer,
                       focusOffset: t.endOffset,
                   },
-            f = s(u, d, h, m);
-        if (null == u || null == h || null == d || null == m) {
+            p = s(u, d, m, h);
+        if (null == u || null == m || null == d || null == h) {
             if (o) return null;
             throw Error("Cannot resolve a Slate range from DOM range");
         }
-        let p = l.rL.toSlatePoint(e, [u, d], { exactMatch: a, suppressThrow: o }),
-            g = f ? p : l.rL.toSlatePoint(e, [h, m], { exactMatch: a, suppressThrow: o });
-        return null != p && null != g ? { anchor: p, focus: g } : null;
+        let f = l.rL.toSlatePoint(e, [u, d], { exactMatch: a, suppressThrow: o }),
+            g = p ? f : l.rL.toSlatePoint(e, [m, h], { exactMatch: a, suppressThrow: o });
+        return null != f && null != g ? { anchor: f, focus: g } : null;
     };
     let e = l.rL.toSlatePoint;
     l.rL.toSlatePoint = (t, n, l) => {

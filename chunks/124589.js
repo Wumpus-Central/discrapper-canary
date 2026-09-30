@@ -1,13 +1,13 @@
 t.d(l, { A: () => c });
 var r = t(477900);
 t(582128);
-var n = t(980707),
-    s = t(477782),
+var s = t(980707),
+    n = t(477782),
     a = t(628284),
     i = t(375708);
 function c(e) {
     let { tabs: l, selectedTab: t, onTabSelect: c, onClose: o } = e;
-    return (0, r.jsx)(n.W, {
+    return (0, r.jsx)(s.W, {
         "data-menu-migrated-auto": !0,
         navId: "global-discovery-tabs-overflow-menu",
         "aria-label": i.intl.string(i.t.riPnr0),
@@ -15,15 +15,15 @@ function c(e) {
         onClose: o,
         onSelect: o,
         children: (0, r.jsx)(
-            s.rX,
+            n.rX,
             {
                 children: l.map((e) => {
-                    let { id: l, label: n } = e;
+                    let { id: l, label: s } = e;
                     return (0, r.jsx)(
-                        s.Dr,
+                        n.Dr,
                         {
                             id: l,
-                            label: n,
+                            label: s,
                             icon: l === t ? a.y : void 0,
                             leadingAccessory: l === t ? { type: "icon", icon: a.y } : void 0,
                             action: () => c(l),

@@ -16,13 +16,13 @@ function d(e, t) {
         (0, o.A)([e, ...t, l])
     );
 }
-let h = { enableBuildOverrides: !1, enableEmojiClick: !0 },
-    m = i().once(() => d(a.Ay.RULES, [(0, r.Ay)({ enableBuildOverrides: !0 })])),
-    f = i().once(() => i().omit(d(a.Ay.RULES, [(0, r.Ay)(h)]), "paragraph", "newline"));
-function p() {
+let m = { enableBuildOverrides: !1, enableEmojiClick: !0 },
+    h = i().once(() => d(a.Ay.RULES, [(0, r.Ay)({ enableBuildOverrides: !0 })])),
+    p = i().once(() => i().omit(d(a.Ay.RULES, [(0, r.Ay)(m)]), "paragraph", "newline"));
+function f() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     return (0, r.Ay)({
-        ...h,
+        ...m,
         emojiTooltipPosition: "bottom",
         shouldCloseDefaultModals: !0,
         shouldStopPropagation: !0,
@@ -30,31 +30,31 @@ function p() {
     });
 }
 let g = i().once(() =>
-        d(a.Ay.CHANNEL_TOPIC_RULES, [p(), (0, r.r3)(), { codeBlock: { react: a.Ay.RULES.text.react } }], {
+        d(a.Ay.CHANNEL_TOPIC_RULES, [f(), (0, r.r3)(), { codeBlock: { react: a.Ay.RULES.text.react } }], {
             shouldStopPropagation: !0,
         }),
     ),
     x = i().once(() =>
         d(
             a.Ay.CHANNEL_TOPIC_RULES,
-            [p({ emojiFocusable: !1 }), (0, r.r3)(), { codeBlock: { react: a.Ay.RULES.text.react } }],
+            [f({ emojiFocusable: !1 }), (0, r.r3)(), { codeBlock: { react: a.Ay.RULES.text.react } }],
             { shouldStopPropagation: !0 },
         ),
     ),
-    A = i().once(() => d(a.Ay.VOICE_CHANNEL_STATUS_RULES, [(0, r.Ay)({ ...h, enableEmojiClick: !1 })])),
-    C = i().once(() => d(a.Ay.EMBED_TITLE_RULES, [(0, r.Ay)(h)])),
-    E = i().once(() => i().omit(d(a.Ay.EMBED_TITLE_RULES, [(0, r.Ay)(h)]), c)),
-    I = i().once(() => d(a.Ay.INLINE_REPLY_RULES, [(0, r.Ay)(h)])),
-    y = i().once(() => d(a.Ay.GUILD_VERIFICATION_FORM_RULES, [(0, r.Ay)(h)])),
+    A = i().once(() => d(a.Ay.VOICE_CHANNEL_STATUS_RULES, [(0, r.Ay)({ ...m, enableEmojiClick: !1 })])),
+    C = i().once(() => d(a.Ay.EMBED_TITLE_RULES, [(0, r.Ay)(m)])),
+    E = i().once(() => i().omit(d(a.Ay.EMBED_TITLE_RULES, [(0, r.Ay)(m)]), c)),
+    I = i().once(() => d(a.Ay.INLINE_REPLY_RULES, [(0, r.Ay)(m)])),
+    y = i().once(() => d(a.Ay.GUILD_VERIFICATION_FORM_RULES, [(0, r.Ay)(m)])),
     S = i().once(() => {
-        let e = { ...h, shouldStopPropagation: !0 };
+        let e = { ...m, shouldStopPropagation: !0 };
         return d(a.Ay.GUILD_EVENT_RULES, [(0, r.Ay)(e)], e);
     }),
     v = i().once(() => i().omit(S(), "subtext")),
-    N = i().once(() => d(a.Ay.AUTO_MODERATION_SYSTEM_MESSAGE_RULES, [(0, r.Ay)(h)])),
+    N = i().once(() => d(a.Ay.AUTO_MODERATION_SYSTEM_MESSAGE_RULES, [(0, r.Ay)(m)])),
     _ = i().once(() =>
         i().omit(
-            d(a.Ay.RULES, [(0, r.Ay)(h)]),
+            d(a.Ay.RULES, [(0, r.Ay)(m)]),
             "paragraph",
             "newline",
             "strong",
@@ -68,29 +68,29 @@ let g = i().once(() =>
         ),
     ),
     j = { text: a.Ay.RULES.text },
-    b = i().once(() => s.aV(m())),
+    b = i().once(() => s.aV(h())),
     T = i().once(() => s.aV(g())),
     R = i().once(() => s.aV(x())),
     O = i().once(() => s.aV(A())),
-    M = i().once(() => s.aV(C())),
-    L = i().once(() => s.aV(E())),
+    L = i().once(() => s.aV(C())),
+    M = i().once(() => s.aV(E())),
     k = i().once(() => s.aV(I())),
     w = i().once(() => s.aV(y())),
     P = i().once(() => s.aV(S())),
     D = i().once(() => s.aV(N())),
-    U = i().once(() => s.aV(f())),
-    V = i().once(() => s.X(m())),
+    U = i().once(() => s.aV(p())),
+    V = i().once(() => s.X(h())),
     G = i().once(() => s.X(g())),
     F = i().once(() => s.X(C())),
-    B = i().once(() => s.X(E())),
-    H = i().once(() => s.X(I())),
+    H = i().once(() => s.X(E())),
+    B = i().once(() => s.X(I())),
     W = i().once(() => s.X(N())),
     K = {
         combineAndInjectMentionRule: d,
         createReactRules: r.Ay,
-        defaultReactRuleOptions: h,
+        defaultReactRuleOptions: m,
         get defaultRules() {
-            return m();
+            return h();
         },
         get guildEventRules() {
             return S();
@@ -116,11 +116,11 @@ let g = i().once(() =>
         },
         parseEmbedTitle: function () {
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-            return M()(...t);
+            return L()(...t);
         },
         parseEmbedTitleWithoutLinks: function () {
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-            return L()(...t);
+            return M()(...t);
         },
         parseInlineReply: function () {
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
@@ -156,11 +156,11 @@ let g = i().once(() =>
         },
         parseEmbedTitleWithoutLinksToAST: function () {
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-            return B()(...t);
+            return H()(...t);
         },
         parseInlineReplyToAST: function () {
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-            return H()(...t);
+            return B()(...t);
         },
         parseAutoModerationSystemMessageToAST: function () {
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];

@@ -1,4 +1,4 @@
-n.d(t, { A: () => g, z: () => p });
+n.d(t, { A: () => g, z: () => f });
 var l = n(477900),
     i = n(582128),
     s = n(503698),
@@ -8,10 +8,10 @@ var l = n(477900),
     u = n(140735),
     c = n(773669),
     d = n(574520),
-    h = n(583846),
-    m = n(809854),
-    f = n(358509);
-function p(e) {
+    m = n(583846),
+    h = n(809854),
+    p = n(358509);
+function f(e) {
     let {
             entry: t,
             inline: n = !1,
@@ -20,13 +20,13 @@ function p(e) {
             hovered: c = !1,
             scaleFontToUserSetting: d = !1,
         } = e,
-        { now: p } = (0, m.e)(c),
+        { now: f } = (0, h.e)(c),
         { timestamp: g, a11yTimeStamp: x } = i.useMemo(
-            () => ({ timestamp: (0, h.W6)(t, p), a11yTimeStamp: (0, h.U3)(t, p) }),
-            [t, p],
+            () => ({ timestamp: (0, m.W6)(t, f), a11yTimeStamp: (0, m.U3)(t, f) }),
+            [t, f],
         );
     return (0, l.jsxs)(o.E, {
-        className: r()(f.$N, { [f.E1]: n }),
+        className: r()(p.$N, { [p.E1]: n }),
         variant: "text-xs/normal",
         tabularNumbers: a,
         color: s,
@@ -39,14 +39,14 @@ function p(e) {
 }
 let g = function (e) {
     let { entry: t, textColor: n, hovered: i = !1, scaleFontToUserSetting: s = !1 } = e,
-        r = (0, h.Hd)(t),
-        m = (0, a.bG)([c.default], () => c.default.locale),
-        f = (0, a.bG)([d.A], () => d.A.getMatchingActivity(t)),
-        g = f?.timestamps?.start ?? f?.created_at;
-    if (null != g) return (0, l.jsx)(p, { entry: { start: g }, textColor: n, hovered: i, scaleFontToUserSetting: s });
-    if (r) return (0, l.jsx)(p, { entry: t, textColor: n, hovered: i, scaleFontToUserSetting: s });
-    let x = (0, h.aJ)(t, m),
-        A = (0, h.aJ)(t, m, void 0, { formatSet: h.sg });
+        r = (0, m.Hd)(t),
+        h = (0, a.bG)([c.default], () => c.default.locale),
+        p = (0, a.bG)([d.A], () => d.A.getMatchingActivity(t)),
+        g = p?.timestamps?.start ?? p?.created_at;
+    if (null != g) return (0, l.jsx)(f, { entry: { start: g }, textColor: n, hovered: i, scaleFontToUserSetting: s });
+    if (r) return (0, l.jsx)(f, { entry: t, textColor: n, hovered: i, scaleFontToUserSetting: s });
+    let x = (0, m.aJ)(t, h),
+        A = (0, m.aJ)(t, h, void 0, { formatSet: m.sg });
     return (0, l.jsxs)(o.E, {
         variant: "text-xs/normal",
         color: n,

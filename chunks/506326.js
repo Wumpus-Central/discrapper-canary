@@ -8,14 +8,14 @@ n.d(t, {
     Xr: () => er,
     Xy: () => X,
     Y8: () => ea,
-    Yq: () => em,
+    Yq: () => eh,
     Zc: () => ee,
     er: () => J,
     fM: () => $,
     fg: () => eo,
-    iT: () => ep,
+    iT: () => ef,
     iq: () => Q,
-    mG: () => ef,
+    mG: () => ep,
     sp: () => ei,
     tR: () => en,
     zi: () => ec,
@@ -29,10 +29,10 @@ var l,
     u = n.n(o),
     c = n(794248),
     d = n(598748),
-    h = n(681154),
-    m = n(974690),
-    f = n(379834),
-    p = n(866665),
+    m = n(681154),
+    h = n(974690),
+    p = n(379834),
+    f = n(866665),
     g = n(140735),
     x = n(834730),
     A = n(983851),
@@ -49,8 +49,8 @@ var l,
     T = n(369606),
     R = n(825860),
     O = n(605323),
-    M = n(748562),
-    L = n(306788),
+    L = n(748562),
+    M = n(306788),
     k = n(531913),
     w = n(47167),
     P = n(927813),
@@ -59,17 +59,17 @@ var l,
     V = n(20805),
     G = n(202195),
     F = n(583846),
-    B = n(299846),
-    H = n(693879);
+    H = n(299846),
+    B = n(693879);
 n(424994);
 var W = n(375708),
     K = n(681978);
 let z = {
-    [h.ContentInventoryEntryType.TOP_ARTIST]: [ea],
-    [h.ContentInventoryEntryType.PLAYED_GAME]: [Q, ee, X, eu, en, es, eo, ei, el],
-    [h.ContentInventoryEntryType.TOP_GAME]: [er],
-    [h.ContentInventoryEntryType.WATCHED_MEDIA]: [ec, ed],
-    [h.ContentInventoryEntryType.LAUNCHED_ACTIVITY]: [Q, ee, X, eu, eo, el],
+    [m.ContentInventoryEntryType.TOP_ARTIST]: [ea],
+    [m.ContentInventoryEntryType.PLAYED_GAME]: [Q, ee, X, eu, en, es, eo, ei, el],
+    [m.ContentInventoryEntryType.TOP_GAME]: [er],
+    [m.ContentInventoryEntryType.WATCHED_MEDIA]: [ec, ed],
+    [m.ContentInventoryEntryType.LAUNCHED_ACTIVITY]: [Q, ee, X, eu, eo, el],
 };
 var Z =
     (((l = {})[(l.CARD = 0)] = "CARD"),
@@ -95,7 +95,7 @@ function J(e) {
 function $(e) {
     let { Icon: t, text: n, iconColor: l, tooltipText: s, showTooltip: r, a11yText: a } = e,
         { defaultTextColor: o, defaultIconColor: u, location: c } = q();
-    return (0, i.jsx)(p.m, {
+    return (0, i.jsx)(f.m, {
         text: s,
         shouldShow: r,
         children: (0, i.jsxs)(J, {
@@ -131,7 +131,7 @@ function Q(e) {
     return (0, i.jsxs)(J, {
         children: [
             (0, i.jsx)(c, { size: "xxs", color: o }),
-            (0, i.jsx)(H.A, {
+            (0, i.jsx)(B.A, {
                 entry: t,
                 textColor: a ? "text-feedback-positive" : l,
                 hovered: n,
@@ -143,7 +143,7 @@ function Q(e) {
 function ee(e) {
     let { entry: t } = e,
         { defaultTextColor: n, defaultIconColor: l } = q(),
-        { state: s, party: r } = (0, B.u)(t),
+        { state: s, party: r } = (0, H.u)(t),
         a = (0, F.gF)(s, r);
     return null == a
         ? null
@@ -163,7 +163,7 @@ function et(e) {
         className: K.fC,
         children: [
             (0, i.jsx)(v.T, { size: "xxs", color: o }),
-            (0, i.jsx)(H.A, { entry: t, textColor: a ? "text-feedback-positive" : l, hovered: n }),
+            (0, i.jsx)(B.A, { entry: t, textColor: a ? "text-feedback-positive" : l, hovered: n }),
         ],
     });
 }
@@ -232,7 +232,7 @@ function er(e) {
 function ea(e) {
     let { entry: t } = e,
         { location: n } = q(),
-        l = (0, F.Pv)(t, m.K.AGGREGATE_COUNT)?.count;
+        l = (0, F.Pv)(t, h.K.AGGREGATE_COUNT)?.count;
     if (null == l) return null;
     let s = (0, D.S1)(n, [1, 2, 5])
         ? W.intl.formatToPlainString(W.t.HtifnG, { count: l })
@@ -244,7 +244,7 @@ function eo(e) {
         { location: n } = q();
     if (3 === n) return null;
     let l = (0, F.CZ)(t);
-    return null == l || l === f.m.TRENDING_TYPE_UNSPECIFIED
+    return null == l || l === p.m.TRENDING_TYPE_UNSPECIFIED
         ? null
         : (0, i.jsx)($, { Icon: R.FireIcon, text: W.intl.string(W.t.kAlUsy) });
 }
@@ -263,8 +263,8 @@ function ec(e) {
     return (0, i.jsxs)("div", {
         className: K.fC,
         children: [
-            (0, i.jsx)(M.U, { size: "xxs", color: o }),
-            (0, i.jsx)(H.A, { entry: t, textColor: a ? "text-feedback-positive" : l, hovered: n }),
+            (0, i.jsx)(L.U, { size: "xxs", color: o }),
+            (0, i.jsx)(B.A, { entry: t, textColor: a ? "text-feedback-positive" : l, hovered: n }),
         ],
     });
 }
@@ -273,9 +273,9 @@ function ed(e) {
         n = (0, F.kR)(t.extra.media_assets_large_text);
     if (null == n) return null;
     let l = (0, F.WC)(t.extra.media_assets_large_text);
-    return (0, i.jsx)($, { Icon: L.K, text: n, a11yText: l });
+    return (0, i.jsx)($, { Icon: M.K, text: n, a11yText: l });
 }
-function eh(e) {
+function em(e) {
     let { userId: t, widgetApplicationId: n } = e,
         { defaultTextColor: l } = q(),
         s = (0, k.A)(t, n),
@@ -291,13 +291,13 @@ function eh(e) {
           })
         : null;
 }
-function em(e) {
+function eh(e) {
     let { entry: t } = e;
     return "applicationWidgetPreview" in t && null != t.applicationWidgetPreview
-        ? (0, i.jsx)(eh, { userId: t.author_id, widgetApplicationId: t.applicationWidgetPreview.widgetApplicationId })
+        ? (0, i.jsx)(em, { userId: t.author_id, widgetApplicationId: t.applicationWidgetPreview.widgetApplicationId })
         : null;
 }
-function ef(e) {
+function ep(e) {
     let t,
         { location: n, children: l, className: s } = e;
     return (
@@ -322,23 +322,23 @@ function ef(e) {
         })
     );
 }
-function ep(e) {
+function ef(e) {
     let { entry: t, location: n, className: l } = e,
         s = (function (e) {
             switch (e.content_type) {
-                case h.ContentInventoryEntryType.TOP_ARTIST:
+                case m.ContentInventoryEntryType.TOP_ARTIST:
                     return z[e.content_type].map((t, n) => (0, i.jsx)(t, { entry: e }, n));
-                case h.ContentInventoryEntryType.PLAYED_GAME:
+                case m.ContentInventoryEntryType.PLAYED_GAME:
                     return z[e.content_type].map((t, n) => (0, i.jsx)(t, { entry: e }, n));
-                case h.ContentInventoryEntryType.TOP_GAME:
+                case m.ContentInventoryEntryType.TOP_GAME:
                     return z[e.content_type].map((t, n) => (0, i.jsx)(t, { entry: e }, n));
-                case h.ContentInventoryEntryType.WATCHED_MEDIA:
+                case m.ContentInventoryEntryType.WATCHED_MEDIA:
                     return z[e.content_type].map((t, n) => (0, i.jsx)(t, { entry: e }, n));
-                case h.ContentInventoryEntryType.LAUNCHED_ACTIVITY:
+                case m.ContentInventoryEntryType.LAUNCHED_ACTIVITY:
                     return z[e.content_type].map((t, n) => (0, i.jsx)(t, { entry: e }, n));
                 default:
                     return null;
             }
         })(t);
-    return null == s ? null : (0, i.jsx)(ef, { location: n, className: l, children: s });
+    return null == s ? null : (0, i.jsx)(ep, { location: n, className: l, children: s });
 }

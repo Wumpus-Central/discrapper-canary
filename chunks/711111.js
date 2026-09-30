@@ -1,8 +1,8 @@
 t.d(l, { G: () => a });
 var r = t(582128),
-    n = t(202091);
-class s {
-    top = new n.SpringValue(0);
+    s = t(202091);
+class n {
+    top = new s.SpringValue(0);
     handleScroll(e) {
         this.top.set(e.currentTarget.scrollTop);
     }
@@ -11,7 +11,7 @@ class s {
     }
 }
 function a() {
-    let e = r.useRef(new s()),
+    let e = r.useRef(new n()),
         l = r.useCallback((l) => {
             e.current.handleScroll(l);
         }, []);

@@ -7,7 +7,7 @@ var l = n(477900),
     o = n(101555),
     u = n(343005);
 function c(e) {
-    let { onClick: t, children: n, tooltip: s, dangerous: c = !1, className: d, "aria-label": h } = e;
+    let { onClick: t, children: n, tooltip: s, dangerous: c = !1, className: d, "aria-label": m } = e;
     return (0, l.jsx)(a.m, {
         text: s,
         children: (0, l.jsx)(o.$n, {
@@ -15,7 +15,7 @@ function c(e) {
                 (e.stopPropagation(), t(e));
             },
             dangerous: c,
-            "aria-label": h ?? s,
+            "aria-label": m ?? s,
             className: d,
             children: i.Children.map(n, (e) =>
                 i.isValidElement(e) ? i.cloneElement(e, { className: r()(e.props.className, u.l) }) : e,

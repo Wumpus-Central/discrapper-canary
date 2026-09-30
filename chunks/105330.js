@@ -8,7 +8,7 @@ function r(e) {
         u = r?.query,
         c = r?.isVisible,
         { renderWindow: d } = l.useContext(i.Ay),
-        h = l.useCallback(() => {
+        m = l.useCallback(() => {
             if (null != r && (null == u || !c)) return void o(void 0);
             if (u?.type === s.DB.GIFS || (null != n && !n.autocomplete?.alwaysUseLayer)) return void o(null);
             let e = d.document.getSelection(),
@@ -28,20 +28,20 @@ function r(e) {
             if (null == l) return;
             let a = d.document.createRange();
             (a.setStart(l, i), a.setEnd(l, i));
-            let h = a.getBoundingClientRect();
-            h?.height !== 0 && o(h ?? null);
+            let m = a.getBoundingClientRect();
+            m?.height !== 0 && o(m ?? null);
         }, [d.document, r, c, u, n]);
     return (
         l.useEffect(
             () => (
-                d.document.addEventListener("selectionchange", h),
-                () => d.document.removeEventListener("selectionchange", h)
+                d.document.addEventListener("selectionchange", m),
+                () => d.document.removeEventListener("selectionchange", m)
             ),
-            [d.document, h],
+            [d.document, m],
         ),
         l.useEffect(() => {
-            h();
-        }, [h, t]),
+            m();
+        }, [m, t]),
         a
     );
 }

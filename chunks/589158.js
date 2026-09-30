@@ -8,10 +8,10 @@ var l,
     u = n(319060),
     c = n(866665),
     d = n(329177),
-    h = n(939249),
-    m = n(104510),
-    f = n(661531),
-    p = n(463930),
+    m = n(939249),
+    h = n(104510),
+    p = n(661531),
+    f = n(463930),
     g = n(97808),
     x = n(778712),
     A = n(922016),
@@ -60,8 +60,8 @@ class T extends s.Component {
 }
 var R = n(268218),
     O = n(193663),
-    M = n(490427),
-    L = n(609425),
+    L = n(490427),
+    M = n(609425),
     k = n(922301),
     w = n(660184),
     P = n(73392),
@@ -70,11 +70,11 @@ var R = n(268218),
     V = n(531685),
     G = n(620141),
     F = n(19309),
-    B = n(224964);
-function H(e) {
+    H = n(224964);
+function B(e) {
     let { confettiSpawnRef: t, shouldFire: n } = e,
         l = (0, o.bG)([V.A], () => V.A.isFocused()),
-        i = (0, B.A)();
+        i = (0, H.A)();
     return (
         s.useEffect(() => {
             if (l && n) {
@@ -86,7 +86,7 @@ function H(e) {
     );
 }
 function W(e) {
-    return (0, i.jsx)(G.A, { confettiLocation: e.confettiLocation, children: (0, i.jsx)(H, { ...e }) });
+    return (0, i.jsx)(G.A, { confettiLocation: e.confettiLocation, children: (0, i.jsx)(B, { ...e }) });
 }
 var K = n(967144),
     z = n(859703),
@@ -158,10 +158,10 @@ let el = s.memo(function (e) {
             : (0, i.jsx)(c.m, {
                   text: ee.intl.formatToPlainString(ee.t.IWkAq7, { date: t }),
                   asContainer: !0,
-                  children: (0, i.jsx)(h.D, {
+                  children: (0, i.jsx)(m.D, {
                       onClick: n,
                       tabIndex: -1,
-                      children: (0, i.jsx)(m._, { color: f.A.unsafe_rawColors.GUILD_BOOSTING_PINK, className: et.PC }),
+                      children: (0, i.jsx)(h._, { color: p.A.unsafe_rawColors.GUILD_BOOSTING_PINK, className: et.PC }),
                   }),
               });
     }),
@@ -199,19 +199,19 @@ let el = s.memo(function (e) {
                 guildId: o,
                 isHovering: u,
             } = e,
-            c = (0, L.A)({ userId: a?.id, guildId: o }),
+            c = (0, M.A)({ userId: a?.id, guildId: o }),
             d = (0, P.a)({ displayNameStyles: c }),
-            h = null == o && null != c;
+            m = null == o && null != c;
         return (0, i.jsxs)(i.Fragment, {
             children: [
-                h
+                m
                     ? (0, i.jsx)(w.A, {
                           userName: s ?? "",
                           displayNameStyles: c,
                           effectDisplayType: u ? k.G.ANIMATED : k.G.STATIC,
                           loop: !0,
                       })
-                    : (0, i.jsx)(p.g, {
+                    : (0, i.jsx)(f.g, {
                           roleName: t,
                           colorString: n,
                           colorStrings: l,
@@ -244,15 +244,15 @@ let el = s.memo(function (e) {
                 isVR: u,
                 isTyping: c,
                 avatarDecorationSrc: d,
-                handleSetTypingRef: h,
-                typingRef: m,
-                currentUser: f,
+                handleSetTypingRef: m,
+                typingRef: h,
+                currentUser: p,
             } = e,
-            p = s === X.clD.OFFLINE,
+            f = s === X.clD.OFFLINE,
             A = n ? g.Js : g.eu,
             E = (0, C.A)(l) ? X.clD.STREAMING : s;
         return (
-            (E = p ? void 0 : E),
+            (E = f ? void 0 : E),
             (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsx)(A, {
@@ -266,11 +266,11 @@ let el = s.memo(function (e) {
                         "aria-label": t.username,
                         statusTooltip: !0,
                         avatarDecoration: d,
-                        typingIndicatorRef: h,
+                        typingIndicatorRef: m,
                     }),
                     (0, i.jsx)(W, {
-                        confettiSpawnRef: m,
-                        shouldFire: c && null != f && t.id !== f.id,
+                        confettiSpawnRef: h,
+                        shouldFire: c && null != p && t.id !== p.id,
                         confettiLocation: Q.k.MEMBER_USER,
                     }),
                 ],
@@ -288,15 +288,15 @@ let el = s.memo(function (e) {
                 user: u,
                 channel: c,
                 isHoveringOrFocusing: d,
-                quest: h,
+                quest: m,
             } = e,
-            m = s.useMemo(
+            h = s.useMemo(
                 () => (0, E.A)({ activities: l, status: r, applicationStream: a, voiceChannel: o }),
                 [l, r, a, o],
             ),
-            f = s.useMemo(
+            p = s.useMemo(
                 () =>
-                    !(0, M.A)({
+                    !(0, L.A)({
                         activity: l?.find((e) => {
                             let { type: t } = e;
                             return t === X.$pd.CUSTOM_STATUS;
@@ -306,7 +306,7 @@ let el = s.memo(function (e) {
                     }),
                 [l, u, c],
             );
-        return t || !m
+        return t || !h
             ? null
             : (0, i.jsx)(y.A, {
                   user: u,
@@ -314,8 +314,8 @@ let el = s.memo(function (e) {
                   applicationStream: a,
                   voiceChannel: o,
                   animateEmoji: d,
-                  hideEmoji: f,
-                  hasQuest: null != h,
+                  hideEmoji: p,
+                  hasQuest: null != m,
                   hideTooltip: n,
               });
     }),
@@ -327,10 +327,10 @@ let el = s.memo(function (e) {
                 colorRoleName: r,
                 isOwner: u,
                 ownerTooltipText: d,
-                lostPermissionTooltipText: h,
-                isTyping: m = !1,
-                nick: f,
-                user: p,
+                lostPermissionTooltipText: m,
+                isTyping: h = !1,
+                nick: p,
+                user: f,
                 currentUser: g,
                 activities: C,
                 applicationStream: E,
@@ -342,8 +342,8 @@ let el = s.memo(function (e) {
                 channel: j,
                 guildId: b,
                 className: R,
-                nameplate: M,
-                hideClanTag: L = !1,
+                nameplate: L,
+                hideClanTag: M = !1,
                 hideSubtext: k = !1,
                 hideTooltip: w = !1,
                 onMouseDown: P,
@@ -352,27 +352,27 @@ let el = s.memo(function (e) {
                 onContextMenu: V,
                 onClickPremiumGuildIcon: G,
                 "aria-controls": F,
-                "aria-expanded": B,
-                "aria-posinset": H,
+                "aria-expanded": H,
+                "aria-posinset": B,
                 "aria-setsize": W,
                 id: J,
                 tabIndex: Q,
                 itemProps: ee,
                 ref: el,
             } = e,
-            ei = p?.id,
-            es = $.Ay.useName(p),
+            ei = f?.id,
+            es = $.Ay.useName(f),
             ec = s.useRef(null),
             ed = el ?? ec,
-            [eh, em] = s.useState(!1),
-            [ef, ep] = s.useState(!1),
+            [em, eh] = s.useState(!1),
+            [ep, ef] = s.useState(!1),
             [eg, ex] = s.useState(null),
             { voiceChannel: eA } = (0, I.Ay)({ userId: ei, guildId: b }),
             {
                 avatarDecorationSrc: eC,
                 avatarSrc: eE,
                 eventHandlers: eI,
-            } = (0, q.A)({ userId: ei, size: x._3.SIZE_32, animateOnHover: !(t || eh), guildId: b }),
+            } = (0, q.A)({ userId: ei, size: x._3.SIZE_32, animateOnHover: !(t || em), guildId: b }),
             { onFocus: ey, ...eS } = ee ?? {},
             ev = (0, K.gn)(b, ei, l ?? null),
             [eN, e_] = s.useState(!1);
@@ -384,18 +384,18 @@ let el = s.memo(function (e) {
             eT = null != eb,
             eR = eT ? eb : ej,
             eO = (0, Y.Yl)(ej, E, ei),
-            eM = (eT || eO) && t && !eN,
-            eL = s.useCallback(() => {
-                em(!0);
+            eL = (eT || eO) && t && !eN,
+            eM = s.useCallback(() => {
+                eh(!0);
             }, []),
             ek = s.useCallback(() => {
-                em(!1);
+                eh(!1);
             }, []),
             ew = s.useCallback(() => {
-                (ep(!0), ey?.());
+                (ef(!0), ey?.());
             }, [ey]),
             eP = s.useCallback(() => {
-                ep(!1);
+                ef(!1);
             }, []),
             eD = s.useCallback((e) => {
                 ex(e);
@@ -405,22 +405,22 @@ let el = s.memo(function (e) {
                     null == eR
                         ? null
                         : (0, i.jsx)(en, {
-                              name: f ?? es,
+                              name: p ?? es,
                               quest: eR,
                               memberListItemRef: ed,
                               applicationStream: E,
                               ...e,
                               closePopout: () => e_(!0),
                           }),
-                [eR, ed, E, f, es],
+                [eR, ed, E, p, es],
             );
-        return null == p
+        return null == f
             ? (0, i.jsx)(T, { avatarSize: x._3.SIZE_32, className: et.qf })
             : (0, i.jsx)(A.Y, {
                   targetElementRef: ed,
                   renderPopout: eU,
                   position: "bottom",
-                  shouldShow: eM,
+                  shouldShow: eL,
                   nudgeAlignIntoViewport: !1,
                   useRawTargetDimensions: !0,
                   animation: A.Y.Animation.NONE,
@@ -429,49 +429,49 @@ let el = s.memo(function (e) {
                       (0, i.jsx)(O.A, {
                           ref: ed,
                           selected: t,
-                          className: a()(et.Dc, R, { [et.WK]: y === X.clD.OFFLINE && !t, [et.PJ]: eM }),
+                          className: a()(et.Dc, R, { [et.WK]: y === X.clD.OFFLINE && !t, [et.PJ]: eL }),
                           innerClassName: et.Hz,
                           onClick: U,
                           onKeyDown: D,
                           onMouseDown: P,
                           onContextMenu: V,
-                          onMouseEnter: eL,
+                          onMouseEnter: eM,
                           onMouseLeave: ek,
                           onBlur: eP,
-                          hovered: eh,
+                          hovered: em,
                           name:
-                              null == h
+                              null == m
                                   ? (0, i.jsx)("span", {
                                         className: et.Xh,
                                         children: (0, i.jsx)(ea, {
                                             colorRoleName: r,
                                             colorString: n ?? null,
-                                            name: f ?? es,
+                                            name: p ?? es,
                                             colorStrings: ev,
-                                            hideClanTag: L,
-                                            user: p,
+                                            hideClanTag: M,
+                                            user: f,
                                             guildId: b,
-                                            isHovering: eh,
+                                            isHovering: em,
                                         }),
                                     })
                                   : (0, i.jsx)(c.m, {
-                                        text: h,
+                                        text: m,
                                         children: (0, i.jsx)("span", {
                                             className: a()(et.Xh, et.oj),
                                             children: (0, i.jsx)(ea, {
                                                 colorRoleName: r,
                                                 colorString: n ?? null,
-                                                name: f ?? es,
+                                                name: p ?? es,
                                                 colorStrings: ev,
-                                                hideClanTag: L,
-                                                user: p,
+                                                hideClanTag: M,
+                                                user: f,
                                                 guildId: b,
-                                                isHovering: eh,
+                                                isHovering: em,
                                             }),
                                         }),
                                     }),
                           avatar: (0, i.jsx)(eo, {
-                              user: p,
+                              user: f,
                               shouldAnimateStatus: S,
                               activities: C,
                               status: y,
@@ -479,37 +479,37 @@ let el = s.memo(function (e) {
                               avatarSrc: eE,
                               isMobile: v,
                               isVR: N,
-                              isTyping: m,
+                              isTyping: h,
                               avatarDecorationSrc: eC,
                               handleSetTypingRef: eD,
                               typingRef: eg,
                               currentUser: g,
                           }),
-                          nameplate: M,
+                          nameplate: L,
                           subText: (0, i.jsx)(eu, {
                               hideSubtext: k,
                               activities: C,
                               status: y,
                               applicationStream: E,
                               voiceStatusChannel: eA,
-                              user: p,
+                              user: f,
                               channel: j,
-                              isHoveringOrFocusing: eh || ef,
+                              isHoveringOrFocusing: em || ep,
                               quest: ej,
                               hideTooltip: w,
                           }),
                           decorators: (0, i.jsx)(er, {
-                              user: p,
+                              user: f,
                               isOwner: u,
-                              lostPermissionTooltipText: h,
+                              lostPermissionTooltipText: m,
                               ownerTooltipText: d,
                               premiumSince: _,
                               onClickPremiumGuildIcon: G,
                           }),
                           "aria-controls": F,
-                          "aria-expanded": B,
+                          "aria-expanded": H,
                           "aria-setsize": W,
-                          "aria-posinset": H,
+                          "aria-posinset": B,
                           id: J,
                           tabIndex: Q,
                           onFocus: ew,

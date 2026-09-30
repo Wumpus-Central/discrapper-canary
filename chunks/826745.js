@@ -1,5 +1,5 @@
 let l;
-n.d(t, { y: () => m });
+n.d(t, { y: () => h });
 var i = n(477900),
     s = n(582128),
     r = n(503698),
@@ -15,7 +15,7 @@ let d = `
   top:0;
   right:0;
 `,
-    h = [
+    m = [
         "letter-spacing",
         "line-height",
         "padding-top",
@@ -30,7 +30,7 @@ let d = `
         "border-width",
         "box-sizing",
     ];
-class m extends s.PureComponent {
+class h extends s.PureComponent {
     static defaultProps = { autoFocus: !1, disabled: !1, autoCorrect: "off" };
     _textArea;
     constructor(e) {
@@ -73,7 +73,7 @@ class m extends s.PureComponent {
                 parseFloat(t.getPropertyValue("border-bottom-width")) +
                 parseFloat(t.getPropertyValue("border-top-width"));
         return {
-            sizingStyle: h.map((e) => `${e}:${t.getPropertyValue(e)}`).join(";"),
+            sizingStyle: m.map((e) => `${e}:${t.getPropertyValue(e)}`).join(";"),
             paddingSize: l,
             borderSize: i,
             boxSizing: n,

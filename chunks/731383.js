@@ -1,4 +1,4 @@
-n.d(t, { i: () => h });
+n.d(t, { i: () => m });
 var l = n(582128),
     i = n(964486),
     s = n(95561),
@@ -8,19 +8,19 @@ var l = n(582128),
     u = n(189551),
     c = n(307731),
     d = n(652215);
-let h = (e) => {
-    let { emojiId: t, currentGuildId: n, popoutData: h, nonce: m, demoMode: f } = e,
-        { current: p } = l.useRef({ guild_id: n, emoji_id: t, ...(0, s.dI)(r.A.getChannel(a.Ay.getChannelId(n))) });
+let m = (e) => {
+    let { emojiId: t, currentGuildId: n, popoutData: m, nonce: h, demoMode: p } = e,
+        { current: f } = l.useRef({ guild_id: n, emoji_id: t, ...(0, s.dI)(r.A.getChannel(a.Ay.getChannelId(n))) });
     return (
         (0, i.Ay)(() => {
             ((0, u.K)(c.EmojiInteractionPoint.TrackOpenPopoutUsed),
-                f ||
+                p ||
                     o.default.track(d.HAw.OPEN_POPOUT, {
-                        type: h?.analyticsType ?? "Standard Emoji Popout",
-                        nonce: m,
-                        ...p,
+                        type: m?.analyticsType ?? "Standard Emoji Popout",
+                        nonce: h,
+                        ...f,
                     }));
         }),
-        p
+        f
     );
 };

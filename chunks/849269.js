@@ -8,10 +8,10 @@ var l,
     u = n(625180),
     c = n(207371),
     d = n(723702),
-    h = n(933958),
-    m = n(62583),
-    f = n(956549),
-    p = n(685399),
+    m = n(933958),
+    h = n(62583),
+    p = n(956549),
+    f = n(685399),
     g = n(969151),
     x = n(847381),
     A = n(435582),
@@ -33,23 +33,23 @@ function _(e) {
             backgroundResolution: o = 250,
             launchingComponentId: u,
             commandOrigin: c,
-            source: h,
+            source: m,
         } = e,
-        { application: m, activity: f } = t,
-        g = f.client_platform_config[(0, x.A)((0, d.getOS)())],
+        { application: h, activity: p } = t,
+        g = p.client_platform_config[(0, x.A)((0, d.getOS)())],
         C = Date.now(),
         E =
             null != g.label_until &&
             C < Date.parse(g.label_until) &&
             null != g.label_from &&
             C > Date.parse(g.label_from),
-        y = (0, I.A)({ applicationId: m.id, size: o, names: a, format: "webp" }),
-        S = null != f.activity_preview_video_asset_id ? (0, A.A)(m.id, f.activity_preview_video_asset_id) : null,
-        v = (0, p.Ay)("channel" === n.type ? n.channel : void 0).find((e) => {
+        y = (0, I.A)({ applicationId: h.id, size: o, names: a, format: "webp" }),
+        S = null != p.activity_preview_video_asset_id ? (0, A.A)(h.id, p.activity_preview_video_asset_id) : null,
+        v = (0, f.Ay)("channel" === n.type ? n.channel : void 0).find((e) => {
             let { embeddedActivity: t } = e;
-            return m.id === t.applicationId;
+            return h.id === t.applicationId;
         }),
-        N = b({ context: n, applicationId: m.id }),
+        N = b({ context: n, applicationId: h.id }),
         _ = T({
             application: t.application,
             context: n,
@@ -58,9 +58,9 @@ function _(e) {
             onActivityItemSelectedProp: i,
             launchingComponentId: u,
             commandOrigin: c,
-            source: h,
+            source: m,
         }),
-        R = j(m, t.activity);
+        R = j(h, t.activity);
     return {
         imageBackground: y,
         videoUrl: S,
@@ -83,7 +83,7 @@ function b(e) {
         r = (0, C.A)(),
         o = (0, E.A)({ fetchesApplication: l }),
         u = (0, a.h)(n, l),
-        c = (0, p.Ay)(s).find((e) => {
+        c = (0, f.Ay)(s).find((e) => {
             let { embeddedActivity: t } = e;
             return null != u && u.id === t.applicationId;
         });
@@ -100,7 +100,7 @@ function T(e) {
             embeddedActivitiesManager: a,
             onActivityItemSelectedProp: o,
             launchingComponentId: d,
-            commandOrigin: p,
+            commandOrigin: f,
             sectionName: g,
             source: x,
             fetchesApplication: A = !0,
@@ -143,13 +143,13 @@ function T(e) {
                     } catch (e) {
                         return;
                     }
-                await (0, f.A)({
+                await (0, p.A)({
                     targetApplicationId: S,
                     locationObject: s,
                     channelId: e,
                     analyticsLocations: _,
                     componentId: d,
-                    commandOrigin: p,
+                    commandOrigin: f,
                     sectionName: g,
                     source: x,
                     customId: E,
@@ -159,8 +159,8 @@ function T(e) {
             };
         case 1:
             return async () => {
-                h.Ay.isLaunchingActivity() ||
-                    (await (0, m.A)({
+                m.Ay.isLaunchingActivity() ||
+                    (await (0, h.A)({
                         applicationId: S,
                         activityChannelId: "channel" === l.type ? l.channel.id : void 0,
                         locationObject: s,
@@ -174,7 +174,7 @@ function T(e) {
             };
         case 2:
             return () => {
-                h.Ay.isLaunchingActivity() ||
+                m.Ay.isLaunchingActivity() ||
                     (null != j && a.leaveActivity({ location: j.location, applicationId: S }),
                     o?.({ applicationId: S }));
             };

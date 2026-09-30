@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => h, Ur: () => d, mk: () => c });
+n.d(t, { Ay: () => m, Ur: () => d, mk: () => c });
 var l = n(143236),
     i = n(721768),
     s = n(612394),
@@ -17,7 +17,7 @@ function d() {
         isInitialAfterError: !1,
     };
 }
-class h extends l.EventEmitter {
+class m extends l.EventEmitter {
     props;
     state;
     nextUpdateQueryChanged = !1;
@@ -125,20 +125,20 @@ class h extends l.EventEmitter {
             {
                 findCommandOptionAutocompleteType: o,
                 findMatchingAutocompleteType: d,
-                getOptions: h,
+                getOptions: m,
             } = await Promise.all([n.e("435751"), n.e("423798"), n.e("753149")]).then(n.bind(n, 778572));
         if (null == this.props.editorRef.current) return;
-        let m = h(this.props),
-            f = this.props.editorRef.current.getSlateEditor();
-        null != f &&
+        let h = m(this.props),
+            p = this.props.editorRef.current.getSlateEditor();
+        null != p &&
             (t =
-                null != (e = r.VW.getSelectedParentOfType(f, c))
-                    ? r.VW.getTextFromRange(f, r.VW.range(f, e[1]))
+                null != (e = r.VW.getSelectedParentOfType(p, c))
+                    ? r.VW.getTextFromRange(p, r.VW.range(p, e[1]))
                     : null);
-        let p = d({
+        let f = d({
                 channel: this.props.channel,
                 guild: this.props.guild,
-                options: m,
+                options: h,
                 currentWord: this.props.currentWord,
                 currentWordIsAtStart: this.props.currentWordIsAtStart,
                 textValue: this.props.textValue,
@@ -146,26 +146,26 @@ class h extends l.EventEmitter {
                 parentAutocompleteInputType: e?.[0].type,
                 parentAutocompleteInputValue: t,
             }),
-            g = m.commands !== u.Ze.DISABLED ? o(this.props.activeCommandOption, this.props.currentWord) : null;
-        if (null == p && null != g) p = g;
-        else if (null == p || (null != g && p.type !== g.type)) return void this.clearQuery();
-        let { type: x, typeInfo: A, query: C } = p,
+            g = h.commands !== u.Ze.DISABLED ? o(this.props.activeCommandOption, this.props.currentWord) : null;
+        if (null == f && null != g) f = g;
+        else if (null == f || (null != g && f.type !== g.type)) return void this.clearQuery();
+        let { type: x, typeInfo: A, query: C } = f,
             E = i || (l && (this.state.query?.queryText !== C || this.state.query?.typeInfo !== A)),
             I = a.ML.getSetting();
-        m.allowStickers = m.allowStickers ? I : m.allowStickers;
+        h.allowStickers = h.allowStickers ? I : h.allowStickers;
         let y = a.eK.getSetting();
-        m.allowSoundmoji = m.allowSoundmoji ? y : m.allowSoundmoji;
-        let { results: S, metadata: v } = A.queryResults(this.props.channel, this.props.guild, C, m, E),
+        h.allowSoundmoji = h.allowSoundmoji ? y : h.allowSoundmoji;
+        let { results: S, metadata: v } = A.queryResults(this.props.channel, this.props.guild, C, h, E),
             N = 0;
         for (let e of Object.values(S)) Array.isArray(e) && (N += e.length);
-        l && C.length > 0 && C !== this.state.query?.queryText && (0, s.AR)(x, m);
+        l && C.length > 0 && C !== this.state.query?.queryText && (0, s.AR)(x, h);
         let _ = !0 === S.isLoading,
             j = this.shouldShow(N, _, A),
             b = this.state.selectedIndex;
         (!j || _ ? (b = null) : null != b && b >= N && (b = N - 1),
             j && !this.state.isVisible && (0, s.uA)(x, this.props.channel, v),
             this.setState({
-                query: { type: x, typeInfo: A, queryText: C, results: S, resultCount: N, options: m, isLoading: _ },
+                query: { type: x, typeInfo: A, queryText: C, results: S, resultCount: N, options: h, isLoading: _ },
                 isVisible: j,
                 selectedIndex: b,
                 hadInitialResults: !0,

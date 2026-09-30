@@ -8,13 +8,13 @@ var l = n(284009),
     u = n(317525),
     c = n(994500),
     d = n(967198),
-    h = n(287809),
-    m = n(427262),
-    f = n(820066),
-    p = n(827669);
+    m = n(287809),
+    h = n(427262),
+    p = n(820066),
+    f = n(827669);
 function g(e, t) {
     let { mode: n, ignoreTrailingEmptyNodes: l, preventEmojiSurrogates: i } = t ?? {},
-        [s, r] = t?.range != null ? f.ZF.edges(t.range) : [void 0, void 0];
+        [s, r] = t?.range != null ? p.ZF.edges(t.range) : [void 0, void 0];
     return x(e, { mode: n, start: s, end: r, ignoreTrailingEmptyNodes: l, preventEmojiSurrogates: i });
 }
 function x(e, t) {
@@ -27,36 +27,36 @@ function x(e, t) {
             ignoreTrailingEmptyNodes: a,
             preventEmojiSurrogates: o,
         } = t ?? {},
-        u = e.length > 0 && !f.l5.isText(e[0]);
+        u = e.length > 0 && !p.l5.isText(e[0]);
     null == s && (s = u ? "\n" : "");
     let c = l?.path[0] ?? 0,
         d = i?.path[0] ?? e.length - 1;
     if (a)
         for (let t = d; t >= c; t--) {
             let n = e[t];
-            if (f.l5.isText(n)) {
+            if (p.l5.isText(n)) {
                 if (n.text.length > 0) {
                     d = t;
                     break;
                 }
-            } else if (!f.cv.isEmpty(n)) {
+            } else if (!p.cv.isEmpty(n)) {
                 d = t;
                 break;
             }
             if (t === c) return "";
         }
-    let h = c > 0 && f.AS.isType(e[c - 1], "blockQuote"),
-        m = f.AS.isType(e[c], "blockQuote"),
-        p = f.AS.isType(e[d], "blockQuote"),
+    let m = c > 0 && p.AS.isType(e[c - 1], "blockQuote"),
+        h = p.AS.isType(e[c], "blockQuote"),
+        f = p.AS.isType(e[d], "blockQuote"),
         g = [];
     for (let t = c; t <= d; t++) {
         let s = e[t];
-        if (r && f.l5.isText(s) && 0 === s.text.length) continue;
+        if (r && p.l5.isText(s) && 0 === s.text.length) continue;
         let a = A(s, {
             mode: n,
             start: null != l && t === c ? { path: l.path.slice(1), offset: l.offset } : void 0,
             end: null != i && t === d ? { path: i.path.slice(1), offset: i.offset } : void 0,
-            allowBlockQuotePrefix: null == l || null == i || (!h && (!m || p)),
+            allowBlockQuotePrefix: null == l || null == i || (!m && (!h || f)),
             preventEmojiSurrogates: o,
         });
         (!r || a.length > 0) && g.push(a);
@@ -65,7 +65,7 @@ function x(e, t) {
 }
 function A(e, t) {
     let { mode: n, start: l, allowBlockQuotePrefix: g = !1, preventEmojiSurrogates: A = !1 } = t ?? {};
-    if (f.l5.isText(e))
+    if (p.l5.isText(e))
         return (function (e, t) {
             let { start: n, end: l } = t ?? {};
             return (
@@ -107,7 +107,7 @@ function A(e, t) {
             if ("raw" === n) return t;
             let l = o.A.getChannel(e.channelId);
             if (null == l) return t;
-            return (0, s.m1)(l, h.default, c.A, !0, !0);
+            return (0, s.m1)(l, m.default, c.A, !0, !0);
         }
         case "soundboard": {
             let t = `<sound:${e.guildId}:${e.soundId}>`;
@@ -129,16 +129,16 @@ function A(e, t) {
         case "userMention": {
             let t = `<@${e.userId}>`;
             if ("raw" === n) return t;
-            let l = h.default.getUser(e.userId);
+            let l = m.default.getUser(e.userId);
             if (null == l) return t;
-            return `@${m.Ay.getUserTag(l, { decoration: "never" })}`;
+            return `@${h.Ay.getUserTag(l, { decoration: "never" })}`;
         }
         case "commandMention":
             return `</${e.commandName}:${e.commandId}>`;
         case "timestamp":
             return (0, r.tf)(e.parsed.timestamp, e.parsed.format);
         case "gameMention":
-            return (0, p.KW)(e.gameId);
+            return (0, f.KW)(e.gameId);
         case "timestampMentionInput": {
             let n = x(e.children, t);
             if (null == l) return `<@time:${n}>`;

@@ -9,10 +9,10 @@ var i = n(503698),
     u = n(463930),
     c = n(834730),
     d = n(140735),
-    h = n(297264),
-    m = n(573435),
-    f = n(73392),
-    p = n(967144),
+    m = n(297264),
+    h = n(573435),
+    p = n(73392),
+    f = n(967144),
     g = n(696451),
     x = n(317525),
     A = n(287809),
@@ -45,12 +45,12 @@ function _(e) {
             return s === t.length - 1
                 ? (0, l.jsx)("div", { className: y.tr, children: r }, e.id)
                 : (0, l.jsx)(
-                      m.Ay,
+                      h.Ay,
                       {
                           width: 16,
                           height: 16,
                           className: y.tr,
-                          mask: m.Ay.Masks.CONTENT_INVENTORY_CARD_FACE_PILE_AVATAR,
+                          mask: h.Ay.Masks.CONTENT_INVENTORY_CARD_FACE_PILE_AVATAR,
                           children: r,
                       },
                       e.id,
@@ -62,18 +62,18 @@ function j(e) {
     let { guildId: t, channelId: n, entry: i, maxAvatars: s = 3 } = e,
         a = i.author_id,
         o = (0, r.bG)([A.default], () => A.default.getUser(a)),
-        { displayParticipants: h, participant1: m, participant2: S, numOtherParticipants: v } = (0, E.A)(i, s),
+        { displayParticipants: m, participant1: h, participant2: S, numOtherParticipants: v } = (0, E.A)(i, s),
         N = (0, r.bG)([g.Ay], () => g.Ay.getMember(t, a)),
-        j = (0, f.a)({ displayNameStyles: o?.displayNameStyles }),
+        j = (0, p.a)({ displayNameStyles: o?.displayNameStyles }),
         b = (0, r.bG)([x.A], () => (N?.colorRoleId != null ? x.A.getRole(t, N.colorRoleId)?.name : void 0), [t, N]),
-        T = (0, p.gn)(t, a, N?.colorStrings ?? null);
+        T = (0, f.gn)(t, a, N?.colorStrings ?? null);
     if (null == o) return null;
     let R = N?.colorString,
         O = C.Ay.getName(t, n, o);
     return (0, l.jsxs)("div", {
         className: y.dw,
         children: [
-            (0, l.jsx)(_, { users: h, guildId: t, "aria-hidden": !0 }),
+            (0, l.jsx)(_, { users: m, guildId: t, "aria-hidden": !0 }),
             (0, l.jsx)(u.g, {
                 colorString: R ?? null,
                 roleName: b,
@@ -97,7 +97,7 @@ function j(e) {
                 : null,
             (0, l.jsx)(d.A, {
                 children: I.intl.format(I.t.rH95Gu, {
-                    user0: C.Ay.getName(t, n, m),
+                    user0: C.Ay.getName(t, n, h),
                     user1: C.Ay.getName(t, n, S),
                     countOthers: v,
                     name0Hook: (e, t) => (0, l.jsx)("span", { children: e }, t),
@@ -110,7 +110,7 @@ function j(e) {
 }
 function b(e) {
     let { children: t } = e;
-    return (0, l.jsx)(h.D, {
+    return (0, l.jsx)(m.D, {
         color: "text-default",
         variant: "heading-sm/medium",
         className: y.eu,

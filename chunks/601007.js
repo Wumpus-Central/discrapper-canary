@@ -8,14 +8,14 @@ var l,
     u = n(980707),
     c = n(900797),
     d = n(847374),
-    h = n(964486),
-    m = n(37948),
-    f = n(174459),
-    p = n(652215),
+    m = n(964486),
+    h = n(37948),
+    p = n(174459),
+    f = n(652215),
     g = (((l = {}).PRIMARY = "primary"), (l.SECONDARY = "secondary"), l);
 function x(e) {
     let { analyticsLocations: t, distributor: n, gameId: l, level: i } = e;
-    f.default.track(p.HAw.PLAY_CTA_IMPRESSION, { location_stack: t, distributor: n, game_id: l, level: i });
+    p.default.track(f.HAw.PLAY_CTA_IMPRESSION, { location_stack: t, distributor: n, game_id: l, level: i });
 }
 var A = n(375708);
 function C(e) {
@@ -29,15 +29,15 @@ function C(e) {
             onAction: y,
             onClose: S,
         } = e,
-        v = (0, m.A)(),
+        v = (0, h.A)(),
         N = s.useRef(null),
         [_, j] = s.useState(!1);
     if (
-        ((0, h.Ay)(() => {
+        ((0, m.Ay)(() => {
             0 !== t.length &&
                 (!(function (e) {
                     let { analyticsLocations: t, gameId: n, distributors: l } = e;
-                    f.default.track(p.HAw.PLAY_CTA_DISPLAYED, { location_stack: t, game_id: n, distributors: l });
+                    p.default.track(f.HAw.PLAY_CTA_DISPLAYED, { location_stack: t, game_id: n, distributors: l });
                 })({
                     analyticsLocations: l,
                     gameId: n,
@@ -55,7 +55,7 @@ function C(e) {
     function b(e, t, i, s) {
         (!(function (e) {
             let { analyticsLocations: t, distributor: n, gameId: l, level: i } = e;
-            f.default.track(p.HAw.PLAY_CTA_CLICKED, { location_stack: t, distributor: n, game_id: l, level: i });
+            p.default.track(f.HAw.PLAY_CTA_CLICKED, { location_stack: t, distributor: n, game_id: l, level: i });
         })({ analyticsLocations: l, distributor: t, gameId: n, level: s }),
             y?.({ action: i }),
             S?.(),

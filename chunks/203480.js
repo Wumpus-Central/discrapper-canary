@@ -6,49 +6,49 @@ var r = n(582128),
     o = n(312138),
     a = n(775121),
     c = n(955572),
-    d = n(775602),
-    u = n(502229),
+    u = n(775602),
+    d = n(502229),
     h = n(532624),
     f = n(350535),
-    g = n(650583);
-function p(e) {
+    p = n(650583);
+function g(e) {
     let t = e.ctrlKey || e.altKey || e.metaKey;
-    e.key !== g.N$.Tab ||
+    e.key !== p.N$.Tab ||
         t ||
         __OVERLAY__ ||
         (0, l.hasAnyModalOpen)() ||
-        u.A.maybeShowKeyboardNavigationExplainerModal();
+        d.A.maybeShowKeyboardNavigationExplainerModal();
 }
 function m() {
     (0, c.Bm)();
 }
 let A = function (e, t) {
-    let n = (0, s.bG)([d.Ay], () => d.Ay.keyboardModeEnabled);
+    let n = (0, s.bG)([u.Ay], () => u.Ay.keyboardModeEnabled);
     (0, o.Op)(n);
     let l = (0, r.useCallback)(
         (e) => {
             !(function (e, t) {
                 let n = (0, i.Cw)((0, i.BF)(e)?.activeElement);
                 if (
-                    (n && e.key !== g.N$.Tab) ||
+                    (n && e.key !== p.N$.Tab) ||
                     e.ctrlKey ||
                     e.altKey ||
                     e.metaKey ||
-                    (e.key !== g.N$.Tab && e.shiftKey)
+                    (e.key !== p.N$.Tab && e.shiftKey)
                 )
                     return;
                 let r = (function (e) {
                     let t = f.Cy("shift"),
                         n = f.Cy("tab");
-                    if (e.key === g.N$.Tab && e.shiftKey && null != t && null != n)
+                    if (e.key === p.N$.Tab && e.shiftKey && null != t && null != n)
                         return [
-                            [g.zY.KEYBOARD_KEY, t],
-                            [g.zY.KEYBOARD_KEY, n],
+                            [p.zY.KEYBOARD_KEY, t],
+                            [p.zY.KEYBOARD_KEY, n],
                         ];
-                    let r = g.G1.get(e.key);
+                    let r = p.G1.get(e.key);
                     if (null != r) {
                         let e = f.Cy(r);
-                        if (null != e) return [[g.zY.KEYBOARD_KEY, e]];
+                        if (null != e) return [[p.zY.KEYBOARD_KEY, e]];
                     }
                     return null;
                 })(e);
@@ -64,11 +64,11 @@ let A = function (e, t) {
         (0, r.useLayoutEffect)(
             () => (
                 n
-                    ? (e.addEventListener("mousedown", m), e.addEventListener("keydown", p))
+                    ? (e.addEventListener("mousedown", m), e.addEventListener("keydown", g))
                     : e.addEventListener("keydown", l),
                 () => {
                     n
-                        ? (e.removeEventListener("mousedown", m), e.removeEventListener("keydown", p))
+                        ? (e.removeEventListener("mousedown", m), e.removeEventListener("keydown", g))
                         : e.removeEventListener("keydown", l);
                 }
             ),

@@ -8,10 +8,10 @@ var l = n(435558),
     u = n(290863),
     c = n(99753),
     d = n(20805),
-    h = n(83971),
-    m = n(583846),
-    f = n(652215);
-let p = new Set([r.ContentInventoryEntryType.LISTENED_SESSION]),
+    m = n(83971),
+    h = n(583846),
+    p = n(652215);
+let f = new Set([r.ContentInventoryEntryType.LISTENED_SESSION]),
     g = new Map();
 function x(e) {
     return `${e.author_id}:${e.id}`;
@@ -21,13 +21,13 @@ function A(e) {
         n = new Set();
     for (let l of e) {
         let e = (function (e) {
-            return (0, m.I5)(e)
+            return (0, h.I5)(e)
                 ? null
-                : (0, m.JM)(e) && e.author_type === s.ContentInventoryAuthorType.USER
+                : (0, h.JM)(e) && e.author_type === s.ContentInventoryAuthorType.USER
                   ? u.A.getActivities(e.author_id).find((t) =>
-                        t.type === f.$pd.PLAYING && (0, d.P)(e)
-                            ? (0, h.fp)(e, t)
-                            : !!(t.type === f.$pd.LISTENING && (0, d.Tq)(e)) && (0, h.qb)(e, t),
+                        t.type === p.$pd.PLAYING && (0, d.P)(e)
+                            ? (0, m.fp)(e, t)
+                            : !!(t.type === p.$pd.LISTENING && (0, d.Tq)(e)) && (0, m.qb)(e, t),
                     )
                   : void 0;
         })(l.content);
@@ -59,9 +59,9 @@ class E extends a.Ay.Store {
     initialize() {
         (this.waitFor(c.A, u.A), this.syncWith([u.A], C));
     }
-    canRenderContent = (e) => !(0, m.I5)(e) && (!p.has(e.content_type) || null != this.getMatchingActivity(e));
+    canRenderContent = (e) => !(0, h.I5)(e) && (!f.has(e.content_type) || null != this.getMatchingActivity(e));
     getMatchingActivity(e) {
-        return (0, m.I5)(e) ? null : g.get(x(e));
+        return (0, h.I5)(e) ? null : g.get(x(e));
     }
 }
 let I = new E(o.h, {

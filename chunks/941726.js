@@ -8,10 +8,10 @@ var l = n(477900),
     u = n(587895),
     c = n(429913),
     d = n(201718),
-    h = n(339580),
-    m = n(633075),
-    f = n(321191),
-    p = n(903209),
+    m = n(339580),
+    h = n(633075),
+    p = n(321191),
+    f = n(903209),
     g = n(885386),
     x = n(403362),
     A = n(382483),
@@ -41,8 +41,8 @@ function I(e) {
                         T,
                         R,
                         O,
-                        M,
                         L,
+                        M,
                         { appsWithConfigs: k, isLoadingConfigs: w } =
                             ((n = g.Q_.useSetting()),
                             i.useEffect(() => {
@@ -104,51 +104,51 @@ function I(e) {
                         )),
                         { widgetApps: j, userIdsWhoMightHaveWidgetData: b, isFetchingApplications: N }),
                         { identitiesByUserId: V, isLoadingIdentities: G } =
-                            ((T = (0, a.cf)([h.A], () =>
-                                Object.fromEntries(D.map((e) => [e, h.A.getUserIdentities(e)]).filter(x.QE)),
+                            ((T = (0, a.cf)([m.A], () =>
+                                Object.fromEntries(D.map((e) => [e, m.A.getUserIdentities(e)]).filter(x.QE)),
                             )),
-                            (R = (0, a.bG)([h.A], () =>
-                                D.some((e) => h.A.getFetchState(e) === h.e.NOT_FETCHED || h.A.isFetchingUser(e)),
+                            (R = (0, a.bG)([m.A], () =>
+                                D.some((e) => m.A.getFetchState(e) === m.e.NOT_FETCHED || m.A.isFetchingUser(e)),
                             )),
                             i.useEffect(() => {
                                 D.length > 0 && d.P.fetchMany(...D.map((e) => [e]));
                             }, [D]),
                             { identitiesByUserId: T, isLoadingIdentities: R }),
-                        { profilesByUserId: F, isLoadingProfiles: B } =
-                            ((O = (0, a.cf)([f.A], () =>
-                                Object.fromEntries(D.map((e) => [e, f.A.getUserProfile(e) ?? null]).filter(x.QE)),
+                        { profilesByUserId: F, isLoadingProfiles: H } =
+                            ((O = (0, a.cf)([p.A], () =>
+                                Object.fromEntries(D.map((e) => [e, p.A.getUserProfile(e) ?? null]).filter(x.QE)),
                             )),
-                            (M = (0, a.yK)([f.A], () =>
-                                D.filter((e) => null == f.A.getUserProfile(e) && !f.A.isFetchingProfile(e)),
+                            (L = (0, a.yK)([p.A], () =>
+                                D.filter((e) => null == p.A.getUserProfile(e) && !p.A.isFetchingProfile(e)),
                             )),
-                            (L = (0, a.bG)([f.A], () => D.some((e) => f.A.isFetchingProfile(e)))),
+                            (M = (0, a.bG)([p.A], () => D.some((e) => p.A.isFetchingProfile(e)))),
                             i.useEffect(() => {
-                                for (let e of M) (0, p.A)(e);
-                            }, [M]),
-                            { profilesByUserId: O, isLoadingProfiles: M.length > 0 || L }),
-                        H = (0, a.cf)(
+                                for (let e of L) (0, f.A)(e);
+                            }, [L]),
+                            { profilesByUserId: O, isLoadingProfiles: L.length > 0 || M }),
+                        B = (0, a.cf)(
                             [C.A],
                             () => Object.fromEntries([...k].map((e) => [e, C.A.getConfig(e)]).filter(x.QE)),
                             [k],
                         ),
-                        W = w || U || G || B,
+                        W = w || U || G || H,
                         K = i.useMemo(() => {
                             if (!W && void 0 !== e)
                                 return e.map((e) => {
                                     if (e.content_type !== r.ContentInventoryEntryType.PLAYED_GAME) return e;
                                     let t = P[e.extra.application_id] ?? null;
                                     if (null == t) return e;
-                                    let n = H[t.id] ?? null;
+                                    let n = B[t.id] ?? null;
                                     if (null == n || null == n.surfaces[s.m.ACTIVITY_ACCESSORY]) return e;
                                     let l = V[e.author_id]?.find((e) => e.application_id === t.id) ?? null;
                                     if (l?.profile == null) return e;
-                                    let i = F[e.author_id]?.widgets?.some((e) => (0, m.E)(e, t.id)) ?? !1;
+                                    let i = F[e.author_id]?.widgets?.some((e) => (0, h.E)(e, t.id)) ?? !1;
                                     return {
                                         ...e,
                                         applicationWidgetPreview: { widgetApplicationId: t.id, hasWidget: i },
                                     };
                                 });
-                        }, [W, e, P, H, V, F]),
+                        }, [W, e, P, B, V, F]),
                         [z, Z] = i.useState(K);
                     return (
                         i.useEffect(() => {

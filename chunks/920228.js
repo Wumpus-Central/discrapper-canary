@@ -3,10 +3,10 @@ var r = n(582128);
 function l(e) {
     let { videoRef: t, enabled: n, onPipPause: l, onHiddenPause: a } = e,
         i = r.useRef(l),
-        u = r.useRef(a),
-        s = r.useRef(!1);
+        s = r.useRef(a),
+        u = r.useRef(!1);
     (r.useEffect(() => {
-        ((i.current = l), (u.current = a));
+        ((i.current = l), (s.current = a));
     }, [l, a]),
         r.useEffect(() => {
             if (!n) return;
@@ -23,17 +23,17 @@ function l(e) {
                     }
                 );
             function r() {
-                s.current || i.current();
+                u.current || i.current();
             }
             function l() {
                 document.pictureInPictureElement === e
                     ? i.current()
                     : "hidden" === document.visibilityState
-                      ? u.current()
-                      : (s.current = !1);
+                      ? s.current()
+                      : (u.current = !1);
             }
             function a() {
-                s.current = !0;
+                u.current = !0;
             }
         }, [t, n]));
 }

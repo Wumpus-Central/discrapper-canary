@@ -11,6 +11,6 @@ function o(e) {
     if (null == u.id || null == o || !(0, i.ke)(o.type)) return !0;
     let c = l.Ay.getUsableCustomEmojiById(u.id),
         d = s.Ay.isInternalEmojiForGuildId(c, o.getGuildId()),
-        h = r.$3({ permission: a.xBc.USE_EXTERNAL_EMOJIS, user: n, context: o });
-    return !d || h;
+        m = r.$3({ permission: a.xBc.USE_EXTERNAL_EMOJIS, user: n, context: o });
+    return !d || m;
 }

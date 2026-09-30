@@ -12,20 +12,20 @@ let u = i.lazy(() =>
 );
 function c(e) {
     let { participants: t, maxVisibleParticipants: n, guildId: c, layerContext: d } = e,
-        h = i.useRef(null),
-        m = (0, i.useCallback)(
+        m = i.useRef(null),
+        h = (0, i.useCallback)(
             () => (0, l.jsx)(i.Suspense, { fallback: null, children: (0, l.jsx)(u, { users: t, guildId: c }) }),
             [t, c],
         );
     return (0, l.jsx)(s.Y, {
-        renderPopout: m,
+        renderPopout: h,
         layerContext: d,
-        targetElementRef: h,
+        targetElementRef: m,
         position: "right",
         children: (e) =>
             (0, l.jsx)(r.D, {
                 ...e,
-                innerRef: h,
+                innerRef: m,
                 className: o.x,
                 onClick: (t) => {
                     (t.stopPropagation(), e.onClick?.(t));

@@ -1,4 +1,4 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => h });
 var l = n(477900),
     i = n(582128),
     s = n(503698),
@@ -8,15 +8,15 @@ var l = n(477900),
     u = n(939249),
     c = n(88686),
     d = n(214881),
-    h = n(996205);
-let m = function (e) {
+    m = n(996205);
+let h = function (e) {
     let {
         ref: t,
         avatar: n,
         name: s,
-        nameplate: m,
-        children: f,
-        subText: p,
+        nameplate: h,
+        children: p,
+        subText: f,
         decorators: g,
         onClick: x,
         hovered: A,
@@ -31,37 +31,37 @@ let m = function (e) {
         focusProps: j,
         ...b
     } = e;
-    ((b.className = r()(b.className, h.kL, {
-        [h.wH]: C,
-        [h.mr]: _,
+    ((b.className = r()(b.className, m.kL, {
+        [m.wH]: C,
+        [m.mr]: _,
         [S ?? ""]: C,
-        [h.vk]: !C && (null != I || null != x),
+        [m.vk]: !C && (null != I || null != x),
     })),
         (b["aria-selected"] = b["aria-selected"] ?? C));
     let T = i.useRef(null),
         R = (0, l.jsxs)("div", {
-            className: r()(h.sn, { [h.EY]: null != m }),
+            className: r()(m.sn, { [m.EY]: null != h }),
             children: [
-                (0, l.jsx)(d.A, { nameplate: m, hovered: A, selected: C, content: T, placement: c.u.MEMBER_LIST }),
+                (0, l.jsx)(d.A, { nameplate: h, hovered: A, selected: C, content: T, placement: c.u.MEMBER_LIST }),
                 (0, l.jsxs)("div", {
                     ref: T,
-                    className: r()(v, h.Zp, { [h.SU]: !C && E, [h.Ib]: N }),
+                    className: r()(v, m.Zp, { [m.SU]: !C && E, [m.Ib]: N }),
                     children: [
-                        (0, l.jsx)("div", { className: r()(h.my, y), children: n }),
+                        (0, l.jsx)("div", { className: r()(m.my, y), children: n }),
                         (0, l.jsxs)("div", {
-                            className: h.Qs,
+                            className: m.Qs,
                             children: [
                                 (0, l.jsxs)("div", {
-                                    className: h.BG,
+                                    className: m.BG,
                                     children: [
-                                        (0, l.jsx)("div", { className: r()(h.UU, { [h.to]: N }), children: s }),
+                                        (0, l.jsx)("div", { className: r()(m.UU, { [m.to]: N }), children: s }),
                                         g,
                                     ],
                                 }),
-                                null != p ? (0, l.jsx)("div", { className: h.Sv, children: p }) : null,
+                                null != f ? (0, l.jsx)("div", { className: m.Sv, children: f }) : null,
                             ],
                         }),
-                        null != f ? (0, l.jsx)("div", { className: h.Y_, children: f }) : null,
+                        null != p ? (0, l.jsx)("div", { className: m.Y_, children: p }) : null,
                     ],
                 }),
             ],

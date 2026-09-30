@@ -19,19 +19,19 @@ var l,
     u = n(108089),
     c = n(503698),
     d = n.n(c),
-    h = n(834730),
-    m = n(779300),
-    f = n(835792);
-function p(e) {
+    m = n(834730),
+    h = n(779300),
+    p = n(835792);
+function f(e) {
     let { variant: t, media: n, alt: l } = e;
     return null != n
-        ? (0, i.jsx)(h.E, {
+        ? (0, i.jsx)(m.E, {
               variant: t,
               children: (0, i.jsx)("img", {
                   src: n.url,
                   width: n.width,
                   height: n.height,
-                  className: f.K,
+                  className: p.K,
                   alt: l ?? "",
               }),
           })
@@ -40,7 +40,7 @@ function p(e) {
 var g = n(436385);
 function x(e) {
     let { width: t, variant: n, className: l } = e;
-    return (0, i.jsx)(h.E, {
+    return (0, i.jsx)(m.E, {
         variant: n ?? "text-md/normal",
         children: (0, i.jsx)("div", {
             className: d()(g.z, l),
@@ -61,16 +61,16 @@ function C(e) {
             imagePosition: o = "right",
             hideLabel: u = !1,
         } = e,
-        { resolveFieldValue: c, numberFormat: f, renderText: g } = en(),
-        C = (0, m.Hx)(t, c, f, s, u);
+        { resolveFieldValue: c, numberFormat: p, renderText: g } = en(),
+        C = (0, h.Hx)(t, c, p, s, u);
     if ("hidden" === C.status) return null;
     if ("skeleton" === C.status) return (0, i.jsx)(x, { variant: n, className: r });
-    let E = null != C.icon ? (0, i.jsx)(p, { media: C.icon, variant: n }) : null;
+    let E = null != C.icon ? (0, i.jsx)(f, { media: C.icon, variant: n }) : null;
     return (0, i.jsxs)("div", {
         className: d()(A.k, r),
         children: [
             null != E && "left" === o ? E : null,
-            (0, i.jsx)(h.E, { variant: n, color: l, lineClamp: a, children: g?.(C.text) ?? C.text }),
+            (0, i.jsx)(m.E, { variant: n, color: l, lineClamp: a, children: g?.(C.text) ?? C.text }),
             null != E && "right" === o ? E : null,
         ],
     });
@@ -155,7 +155,7 @@ function T(e) {
 }
 var R = n(506619),
     O = n(15555);
-function M(e) {
+function L(e) {
     let { surfaceConfig: t, resolveFieldValue: n } = en(),
         l = n(t.components.hero_image?.fields.image, [v.o.MEDIA]);
     return (0, i.jsx)(_, {
@@ -169,7 +169,7 @@ function M(e) {
         }),
     });
 }
-var L = n(123292),
+var M = n(123292),
     k = n(402233);
 function w(e) {
     let { image: t } = e,
@@ -190,7 +190,7 @@ function w(e) {
                                 lineClamp: 1,
                                 required: !0,
                             }),
-                            (0, i.jsx)(L.Q, {
+                            (0, i.jsx)(M.Q, {
                                 textVariant: "text-xs/normal",
                                 variant: "secondary",
                                 text: "View All Stats",
@@ -248,10 +248,10 @@ function F(e) {
                 className: G.Vx,
                 children: [
                     null != l
-                        ? (0, i.jsx)(h.E, { variant: "text-sm/medium", lineClamp: 2, children: l.value })
+                        ? (0, i.jsx)(m.E, { variant: "text-sm/medium", lineClamp: 2, children: l.value })
                         : (0, i.jsx)(x, { variant: "text-sm/medium", width: "6ch" }),
                     null != s
-                        ? (0, i.jsx)(h.E, {
+                        ? (0, i.jsx)(m.E, {
                               variant: "text-xs/medium",
                               color: "text-subtle",
                               lineClamp: 2,
@@ -263,7 +263,7 @@ function F(e) {
         ],
     });
 }
-function B() {
+function H() {
     let { surfaceConfig: e } = en();
     return (0, i.jsxs)("div", {
         className: G.zr,
@@ -275,7 +275,7 @@ function B() {
         ],
     });
 }
-var H = n(141255);
+var B = n(141255);
 function W() {
     let { surfaceConfig: e, resolveFieldValue: t } = en(),
         n = s.useId(),
@@ -284,33 +284,33 @@ function W() {
         a = t(e.components.objective?.fields.description, [v.o.STRING]),
         o = t(e.components.progress?.fields.current, [v.o.NUMBER]),
         u = t(e.components.progress?.fields.max, [v.o.NUMBER]),
-        c = (0, m.eq)(o, u);
+        c = (0, h.eq)(o, u);
     return (0, i.jsxs)("div", {
-        className: H.zr,
+        className: B.zr,
         children: [
             null != l
-                ? (0, i.jsx)("img", { src: l.media.url, className: H.Sl, alt: "" })
-                : (0, i.jsx)(S, { className: H.Sl }),
+                ? (0, i.jsx)("img", { src: l.media.url, className: B.Sl, alt: "" })
+                : (0, i.jsx)(S, { className: B.Sl }),
             (0, i.jsxs)("div", {
-                className: H.Qs,
+                className: B.Qs,
                 children: [
                     (0, i.jsx)("div", {
-                        className: H.L$,
+                        className: B.L$,
                         role: "progressbar",
                         "aria-labelledby": n,
                         "aria-valuenow": o?.value ?? 0,
                         "aria-valuemax": u?.value ?? 1,
                         "aria-valuetext": null != u && null != o ? `${o.value} of ${u.value}` : void 0,
-                        children: (0, i.jsx)("div", { className: H.qB, style: { "--custom-progress": `${c}%` } }),
+                        children: (0, i.jsx)("div", { className: B.qB, style: { "--custom-progress": `${c}%` } }),
                     }),
                     (0, i.jsxs)("div", {
-                        className: H.P_,
+                        className: B.P_,
                         children: [
                             (0, i.jsxs)("div", {
-                                className: H.n_,
+                                className: B.n_,
                                 children: [
                                     null != r
-                                        ? (0, i.jsx)(h.E, {
+                                        ? (0, i.jsx)(m.E, {
                                               tag: "div",
                                               variant: "heading-sm/medium",
                                               id: n,
@@ -319,7 +319,7 @@ function W() {
                                           })
                                         : (0, i.jsx)(x, { variant: "heading-sm/medium" }),
                                     null != a
-                                        ? (0, i.jsx)(h.E, {
+                                        ? (0, i.jsx)(m.E, {
                                               variant: "text-xs/medium",
                                               color: "text-subtle",
                                               lineClamp: 2,
@@ -329,11 +329,11 @@ function W() {
                                 ],
                             }),
                             null != o
-                                ? (0, i.jsx)(h.E, {
+                                ? (0, i.jsx)(m.E, {
                                       variant: "text-sm/medium",
                                       lineClamp: 1,
-                                      className: H.l_,
-                                      children: null != u ? `${o.value}/${u.value}` : `${(0, m.rr)(o.value)}%`,
+                                      className: B.l_,
+                                      children: null != u ? `${o.value}/${u.value}` : `${(0, h.rr)(o.value)}%`,
                                   })
                                 : (0, i.jsx)(x, { variant: "text-sm/medium", width: "4ch" }),
                         ],
@@ -347,7 +347,7 @@ var K = n(620376);
 function z(e) {
     let { component: t, required: n = !1 } = e,
         { resolveFieldValue: l, numberFormat: s, durationFormat: r, renderText: a } = en(),
-        o = (0, m.CZ)(
+        o = (0, h.CZ)(
             t,
             l,
             s,
@@ -374,18 +374,18 @@ function z(e) {
                       ? (0, i.jsxs)("div", {
                             className: K.U,
                             children: [
-                                (0, i.jsx)(h.E, {
+                                (0, i.jsx)(m.E, {
                                     variant: "text-sm/medium",
                                     lineClamp: 2,
                                     children: a?.(o.value.text) ?? o.value.text,
                                 }),
                                 null != o.value.icon &&
-                                    (0, i.jsx)(p, { variant: "text-sm/medium", media: o.value.icon }),
+                                    (0, i.jsx)(f, { variant: "text-sm/medium", media: o.value.icon }),
                             ],
                         })
                       : (0, i.jsx)(x, { variant: "text-sm/medium", width: "8ch" }),
                   "value" === o.label.status
-                      ? (0, i.jsx)(h.E, {
+                      ? (0, i.jsx)(m.E, {
                             variant: "text-xs/normal",
                             color: "text-subtle",
                             lineClamp: 2,
@@ -496,7 +496,7 @@ let el = {
     [a.m.WIDGET_BOTTOM]: {
         [o.WIDGET_BOTTOM_STATS]: () => (0, i.jsx)(Y, {}),
         [o.WIDGET_BOTTOM_PROGRESS]: () => (0, i.jsx)(W, {}),
-        [o.WIDGET_BOTTOM_COLLECTION]: () => (0, i.jsx)(B, {}),
+        [o.WIDGET_BOTTOM_COLLECTION]: () => (0, i.jsx)(H, {}),
     },
     [a.m.MINI_PROFILE]: {
         [o.MINI_PROFILE_HERO_STAT]: () => (0, i.jsx)(V, {}),
@@ -504,7 +504,7 @@ let el = {
     },
     [a.m.ACTIVITY_ACCESSORY]: { [o.ACTIVITY_ACCESSORY_STAT]: (e) => (0, i.jsx)(I, { ...e }) },
     [a.m.ADD_WIDGET_PREVIEW]: {
-        [o.ADD_WIDGET_PREVIEW_HERO]: (e) => (0, i.jsx)(M, { ...e }),
+        [o.ADD_WIDGET_PREVIEW_HERO]: (e) => (0, i.jsx)(L, { ...e }),
         [o.ADD_WIDGET_PREVIEW_CONTAINED]: (e) => (0, i.jsx)(b, { ...e }),
     },
 };
@@ -517,26 +517,26 @@ function ei(e) {
             header: o,
             onClick: c,
             renderText: d,
-            layoutProps: h,
+            layoutProps: m,
         } = e,
-        m = s.useMemo(() => (0, u.e)(a), [a]),
-        f = s.useMemo(() => new r.Y(a, { style: "narrow" }), [a]);
+        h = s.useMemo(() => (0, u.e)(a), [a]),
+        p = s.useMemo(() => new r.Y(a, { style: "narrow" }), [a]);
     if (null == n) return null;
-    let p = el[t]?.[n.layout];
-    return null == p
+    let f = el[t]?.[n.layout];
+    return null == f
         ? null
         : (0, i.jsx)(et.Provider, {
               value: {
                   surfaceConfig: n,
                   locale: a,
-                  numberFormat: m,
-                  durationFormat: f,
+                  numberFormat: h,
+                  durationFormat: p,
                   header: o,
                   onClick: c,
                   renderText: d,
                   resolutionContext: l,
                   resolveFieldValue: (0, v.J)(l),
               },
-              children: p(h),
+              children: f(m),
           });
 }

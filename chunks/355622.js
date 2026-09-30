@@ -60,7 +60,7 @@ let c = {
         showSlowmodeIndicator: !0,
         showTypingIndicator: !0,
     },
-    h = {
+    m = {
         analyticsName: "sidebar",
         attachments: !0,
         autocomplete: { addReactionShortcut: !0 },
@@ -87,7 +87,7 @@ let c = {
         showSlowmodeIndicator: !0,
         showTypingIndicator: !0,
     },
-    m = {
+    h = {
         analyticsName: "edit",
         drafts: { type: r.C.ChannelMessage },
         emojis: { button: !0 },
@@ -99,7 +99,7 @@ let c = {
         autocomplete: { alwaysUseLayer: !0, small: !0 },
         showCharacterCount: !0,
     },
-    f = {
+    p = {
         analyticsName: "forum",
         drafts: { type: r.C.ChannelMessage },
         emojis: { button: !0 },
@@ -111,7 +111,7 @@ let c = {
         showSlowmodeIndicator: !0,
         showTypingIndicator: !0,
     },
-    p = {
+    f = {
         analyticsName: "voice_channel_status",
         drafts: { type: r.C.ChannelMessage },
         emojis: { button: !0 },
@@ -212,10 +212,10 @@ let c = {
             hideAccessoryBar: !0,
             layout: 1,
         },
-        SIDEBAR: h,
-        EDIT: m,
-        FORM: f,
-        VOICE_CHANNEL_STATUS: p,
+        SIDEBAR: m,
+        EDIT: h,
+        FORM: p,
+        VOICE_CHANNEL_STATUS: f,
         THREAD_CREATION: g,
         USER_PROFILE: I,
         USER_PROFILE_REPLY: {

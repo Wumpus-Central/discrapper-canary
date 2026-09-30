@@ -17,11 +17,11 @@ let a = {
             if (null == e.selection) return;
             n = e.selection;
         }
-        let [d, h] = s.ZF.isRange(n) ? s.ZF.edges(n) : s.VW.edges(e, n);
+        let [d, m] = s.ZF.isRange(n) ? s.ZF.edges(n) : s.VW.edges(e, n);
         if (null != i || null != r)
             if (a) {
                 let t = s.VW.before(e, d, { distance: i, unit: r }) ?? s.VW.start(e, []);
-                if ("character" === r && (i ?? 1) === 1 && s.PW.equals(d.path, h.path)) {
+                if ("character" === r && (i ?? 1) === 1 && s.PW.equals(d.path, m.path)) {
                     let n = s.VW.leaf(e, d.path),
                         l = null != n ? n[0].text : "";
                     l.length > 0 &&
@@ -29,13 +29,13 @@ let a = {
                         (t = s.VW.before(e, d, { distance: i, unit: "offset" }) ?? s.VW.start(e, []));
                 }
                 d = t;
-            } else h = s.VW.after(e, h, { distance: i, unit: r }) ?? s.VW.end(e, []);
+            } else m = s.VW.after(e, m, { distance: i, unit: r }) ?? s.VW.end(e, []);
         if (null != u) {
             let [e, t] = s.ZF.edges(u);
-            (s.Kh.isBefore(d, e) && (d = e), s.Kh.isAfter(h, t) && (h = t));
+            (s.Kh.isBefore(d, e) && (d = e), s.Kh.isAfter(m, t) && (m = t));
         }
-        !s.Kh.equals(d, h) &&
-            (l.gB.delete(e, { at: { anchor: d, focus: h }, hanging: !0, voids: c }),
+        !s.Kh.equals(d, m) &&
+            (l.gB.delete(e, { at: { anchor: d, focus: m }, hanging: !0, voids: c }),
             o && s.VW.hasPath(e, d.path) && l.gB.select(e, d));
     },
     textToText(e, t, n) {

@@ -1,4 +1,4 @@
-n.d(t, { A: () => h });
+n.d(t, { A: () => m });
 var l = n(477900),
     i = n(582128),
     s = n(503698),
@@ -8,43 +8,43 @@ var l = n(477900),
     u = n(866665),
     c = n(375708),
     d = n(408968);
-let h = i.forwardRef(function (e, t) {
+let m = i.forwardRef(function (e, t) {
     let n,
         {
             className: i,
             src: s,
-            unicodeEmoji: h,
-            name: m,
-            size: f = 20,
-            enableTooltip: p = !0,
+            unicodeEmoji: m,
+            name: h,
+            size: p = 20,
+            enableTooltip: f = !0,
             enableHeight: g = !0,
             onClick: x,
         } = e;
-    return null == s && null == h
+    return null == s && null == m
         ? null
         : (0, l.jsx)(u.m, {
               asContainer: !0,
-              text: m,
+              text: h,
               "aria-label": !1,
-              shouldShow: p,
+              shouldShow: f,
               tag: "span",
               children:
                   ((n = (0, l.jsx)("img", {
                       ref: t,
-                      alt: c.intl.formatToPlainString(c.t["9+YWrE"], { name: m }),
+                      alt: c.intl.formatToPlainString(c.t["9+YWrE"], { name: h }),
                       className: r()(d.U, i, { [d.v]: null != x }),
-                      height: g ? f : void 0,
+                      height: g ? p : void 0,
                       src: s,
-                      width: f,
+                      width: p,
                   })),
-                  (null != h &&
+                  (null != m &&
                       (n = (0, l.jsx)("img", {
                           ref: t,
-                          alt: h.allNamesString,
+                          alt: m.allNamesString,
                           className: r()(d.U, i, { [d.v]: null != x }),
-                          height: g ? f : void 0,
-                          src: h.url,
-                          width: f,
+                          height: g ? p : void 0,
+                          src: m.url,
+                          width: p,
                       })),
                   null == x)
                       ? (0, l.jsx)(a.vN, { offset: { left: 5 }, children: n })

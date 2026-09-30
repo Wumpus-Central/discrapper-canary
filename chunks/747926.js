@@ -8,10 +8,10 @@ var l = n(284009),
     u = n(9588),
     c = n(267102),
     d = n(892340),
-    h = n(976860),
-    m = n(378570),
-    f = n(162199),
-    p = n(885386),
+    m = n(976860),
+    h = n(378570),
+    p = n(162199),
+    f = n(885386),
     g = n(761640),
     x = n(31717),
     A = n(309010),
@@ -23,22 +23,22 @@ function S(e, t, n) {
     if (!(0, d.C$)(e.id)) return void (0, u.showInaccessibleReportPostModal)();
     c.Uw.dispatch(I.jej.POPOUT_CLOSE);
     let l = { state: { hideThreadCallUI: !0 } };
-    if (t || !p.SY.getSetting() || __OVERLAY__) {
+    if (t || !f.SY.getSetting() || __OVERLAY__) {
         (s.h.dispatch({ type: "SIDEBAR_CLOSE", baseChannelId: e.parent_id }),
-            null != n ? (0, m.N9)(e, { ...l, source: n }) : (0, m.iN)(e.id, l));
+            null != n ? (0, h.N9)(e, { ...l, source: n }) : (0, h.iN)(e.id, l));
         return;
     }
     i()(null != e.parent_id, "all threads must have parents");
     let r = e.getGuildId();
     if (null != r && null != g.Ay.getGuildSidebarState(r)) {
         (s.h.dispatch({ type: "SIDEBAR_CLOSE", baseChannelId: e.parent_id }),
-            null != n ? (0, m.N9)(e, { ...l, source: n }) : (0, m.iN)(e.id, l));
+            null != n ? (0, h.N9)(e, { ...l, source: n }) : (0, h.iN)(e.id, l));
         return;
     }
     let a = A.Ay.getChannelId();
-    (e.parent_id === a || (0, y.mP)(a) || (0, m.iN)(e.parent_id),
-        (0, h.pX)(
-            I.BVt.CHANNEL_THREAD_VIEW((0, f.j)(e), (0, y.mP)(a) ? y.VV.GUILD_HOME : e.parent_id, e.id),
+    (e.parent_id === a || (0, y.mP)(a) || (0, h.iN)(e.parent_id),
+        (0, m.pX)(
+            I.BVt.CHANNEL_THREAD_VIEW((0, p.j)(e), (0, y.mP)(a) ? y.VV.GUILD_HOME : e.parent_id, e.id),
             e.isForumPost() ? { source: E.H9.FORUM } : void 0,
         ),
         setTimeout(() => {
@@ -51,7 +51,7 @@ function v(e, t, n) {
         i()(!__OVERLAY__, "Cannot create threads in the overlay."),
         (0, o.zV)(I.HAw.THREAD_CREATION_STARTED, { location: n, channel_id: e.id, guild_id: e.guild_id }),
         c.Uw.dispatch(I.jej.POPOUT_CLOSE),
-        A.Ay.getChannelId() !== e.id && (0, m.iN)(e.id),
+        A.Ay.getChannelId() !== e.id && (0, h.iN)(e.id),
         "" === x.A.getDraft(e.id, x.C.FirstThreadMessage))
     ) {
         let t = x.A.getDraft(e.id, x.C.ChannelMessage);
@@ -62,7 +62,7 @@ function v(e, t, n) {
     }, 0);
 }
 function N(e, t) {
-    ((0, h.pX)(I.BVt.CHANNEL(e, (0, y.mP)(t) ? y.VV.GUILD_HOME : t)),
+    ((0, m.pX)(I.BVt.CHANNEL(e, (0, y.mP)(t) ? y.VV.GUILD_HOME : t)),
         s.h.dispatch({ type: "SIDEBAR_CLOSE", baseChannelId: t }));
 }
 function _(e) {

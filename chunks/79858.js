@@ -1,4 +1,4 @@
-n.d(t, { A: () => p });
+n.d(t, { A: () => f });
 var l = n(607399),
     i = n(17928),
     s = n(228366),
@@ -20,21 +20,21 @@ let o = {},
     u = {},
     c = !0,
     d = {},
-    h = !1;
-function m() {
+    m = !1;
+function h() {
     if (((d = {}), !c))
         for (let [e, t] of Object.entries(a)) {
             let n = !1 !== o[e];
             if (((d[e] = n), n && null != t.prerequisites)) for (let n of t.prerequisites) !1 !== o[n] && (d[e] = !1);
         }
 }
-class f extends i.Ay.Store {
+class p extends i.Ay.Store {
     static displayName = "TutorialIndicatorStore";
     initialize() {
-        (m(), this.mustEmitChanges((e) => "CONNECTION_OPEN" !== e.type), this.waitFor(r.A));
+        (h(), this.mustEmitChanges((e) => "CONNECTION_OPEN" !== e.type), this.waitFor(r.A));
     }
     shouldShow(e) {
-        return !(!h || c || (l.Fr && ["writing-messages", "organize-by-topic"].includes(e))) && (d[e] || !1);
+        return !(!m || c || (l.Fr && ["writing-messages", "organize-by-topic"].includes(e))) && (d[e] || !1);
     }
     shouldShowAnyIndicators() {
         return !c;
@@ -50,20 +50,20 @@ class f extends i.Ay.Store {
         return null != t ? t[e] : null;
     }
 }
-let p = new f(s.h, {
+let f = new p(s.h, {
     CONNECTION_OPEN: function (e) {
         let { tutorial: t } = e;
-        ((h = !0),
+        ((m = !0),
             (c = !0),
             (o = {}),
             null != t && ((c = t.indicators_suppressed), t.indicators_confirmed.forEach((e) => (o[e] = !1))),
-            m());
+            h());
     },
     CONNECTION_CLOSED: function () {
-        h = !1;
+        m = !1;
     },
     TUTORIAL_INDICATOR_DISMISS: function (e) {
-        ((o = { ...o, [e.tutorialId]: !1 }), (u = { ...u }), delete u[e.tutorialId], m());
+        ((o = { ...o, [e.tutorialId]: !1 }), (u = { ...u }), delete u[e.tutorialId], h());
     },
     TUTORIAL_INDICATOR_SHOW: function (e) {
         u = { ...u, [e.tutorialId]: e.renderData };

@@ -1,4 +1,4 @@
-n.d(t, { Px: () => p, Sx: () => c, fO: () => g });
+n.d(t, { Px: () => f, Sx: () => c, fO: () => g });
 var l = n(284009),
     i = n.n(l),
     s = n(186306),
@@ -29,30 +29,30 @@ function d(e, t) {
     let r = l.substring(i, s),
         u = {};
     return (
-        m({ result: u, text: r, startIndex: i, syntax: "***", type1: "italics", type2: "bold" }),
-        m({ result: u, text: r, startIndex: i, syntax: "___", type1: "italics", type2: "underline" }),
-        h(u, r, i, "**", "bold"),
-        h(u, r, i, "*", "italics"),
-        h(u, r, i, "_", "italics"),
-        h(u, r, i, "__", "underline"),
-        h(u, r, i, "`", "inlineCode"),
-        h(u, r, i, "~~", "strikethrough"),
-        h(u, r, i, "||", "spoiler"),
+        h({ result: u, text: r, startIndex: i, syntax: "***", type1: "italics", type2: "bold" }),
+        h({ result: u, text: r, startIndex: i, syntax: "___", type1: "italics", type2: "underline" }),
+        m(u, r, i, "**", "bold"),
+        m(u, r, i, "*", "italics"),
+        m(u, r, i, "_", "italics"),
+        m(u, r, i, "__", "underline"),
+        m(u, r, i, "`", "inlineCode"),
+        m(u, r, i, "~~", "strikethrough"),
+        m(u, r, i, "||", "spoiler"),
         u
     );
 }
-function h(e, t, n, l, i) {
-    let s = f(t, l);
+function m(e, t, n, l, i) {
+    let s = p(t, l);
     s >= 0 && (e[i] = { chars: l, location: n + s });
 }
-function m(e) {
+function h(e) {
     let { result: t, text: n, startIndex: l, syntax: i, type1: s, type2: r } = e,
-        a = f(n, i);
+        a = p(n, i);
     a >= 0 &&
         ((t[s] = { chars: i.substring(0, 1), location: a + l }),
         (t[r] = { chars: i.substring(1), location: a + l + 1 }));
 }
-function f(e, t) {
+function p(e, t) {
     let n = e.indexOf(t);
     if (n >= 0) {
         let l = t.charAt(0);
@@ -60,7 +60,7 @@ function f(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function f(e, t) {
     (s.o.withSingleEntry(e, () => {
         a.VW.withoutNormalizing(e, () => {
             i()(null != e.selection, "Editor has no selection");
@@ -68,10 +68,10 @@ function p(e, t) {
                 s = c(e, n, l),
                 o = s.before[t],
                 d = s.after[t],
-                h = a.VW.node(e, n.path),
-                m = a.VW.node(e, l.path);
-            if (null == h || null == m || !a.l5.isText(h[0]) || !a.l5.isText(m[0])) return;
-            let f = a.PW.equals(h[1], m[1]);
+                m = a.VW.node(e, n.path),
+                h = a.VW.node(e, l.path);
+            if (null == m || null == h || !a.l5.isText(m[0]) || !a.l5.isText(h[0])) return;
+            let p = a.PW.equals(m[1], h[1]);
             if (null != o && null != d) {
                 let t = { path: n.path, offset: o.location },
                     i = { path: l.path, offset: d.location };
@@ -80,7 +80,7 @@ function p(e, t) {
                 let s = n.offset,
                     u = l.offset;
                 (a.Kh.isBefore(n, t) || (s -= o.chars.length),
-                    f && !a.Kh.isBefore(l, t) && (u -= o.chars.length),
+                    p && !a.Kh.isBefore(l, t) && (u -= o.chars.length),
                     a.Kh.isAfter(l, i) && (u -= d.chars.length),
                     r.b.select(e, {
                         anchor: { path: n.path, offset: Math.max(0, s) },
@@ -89,11 +89,11 @@ function p(e, t) {
             } else {
                 let i = u[t];
                 (r.b.insertText(e, i, { at: l }), r.b.insertText(e, i, { at: n }));
-                let s = h[0].text.length + i.length,
-                    a = m[0].text.length + (f ? 2 * i.length : i.length);
+                let s = m[0].text.length + i.length,
+                    a = h[0].text.length + (p ? 2 * i.length : i.length);
                 r.b.select(e, {
                     anchor: { path: n.path, offset: Math.min(s, n.offset + i.length) },
-                    focus: { path: l.path, offset: Math.min(a, l.offset + (f ? i.length : 0)) },
+                    focus: { path: l.path, offset: Math.min(a, l.offset + (p ? i.length : 0)) },
                 });
             }
         });

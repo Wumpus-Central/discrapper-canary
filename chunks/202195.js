@@ -1,4 +1,4 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => h });
 var l = n(17928),
     i = n(6161),
     s = n(890615),
@@ -8,9 +8,9 @@ var l = n(17928),
     u = n(576705),
     c = n(290863),
     d = n(977997),
-    h = n(583846);
-function m(e) {
-    let t = (0, h.JM)(e),
+    m = n(583846);
+function h(e) {
+    let t = (0, m.JM)(e),
         n = (0, l.bG)(
             [d.A, o.A, u.A],
             () => {
@@ -22,12 +22,12 @@ function m(e) {
             },
             [e, t],
         ),
-        m = (0, l.bG)([c.A], () => (null != t ? c.A.getPrimaryActivity(e.author_id, n?.guild_id) : null), [
+        h = (0, l.bG)([c.A], () => (null != t ? c.A.getPrimaryActivity(e.author_id, n?.guild_id) : null), [
             n,
             e.author_id,
             t,
         ]),
-        f = (0, l.bG)([a.A], () => (t ? a.A.getStreamForUser(e.author_id, n?.guild_id) : null), [n, e.author_id, t]),
-        { previewUrl: p } = (0, r.A)(f?.guildId, f?.channelId, f?.ownerId);
-    return { channel: n, activity: m, streamPreviewUrl: p, stream: f };
+        p = (0, l.bG)([a.A], () => (t ? a.A.getStreamForUser(e.author_id, n?.guild_id) : null), [n, e.author_id, t]),
+        { previewUrl: f } = (0, r.A)(p?.guildId, p?.channelId, p?.ownerId);
+    return { channel: n, activity: h, streamPreviewUrl: f, stream: p };
 }

@@ -1,8 +1,8 @@
 (a.d(t, { N: () => d }), a(321073));
 var n = a(477900),
     l = a(582128),
-    i = a(84571),
-    s = a(477782),
+    s = a(84571),
+    i = a(477782),
     r = a(583650),
     o = a(231643);
 function d(e, t) {
@@ -11,7 +11,7 @@ function d(e, t) {
             if ("" === a.trim()) return e;
             let t = a.toLowerCase().trim();
             return e.filter((e) => {
-                let a = ((0, i.O)(e.name) ?? "").toLowerCase(),
+                let a = ((0, s.O)(e.name) ?? "").toLowerCase(),
                     n = (e.group ?? "").toLowerCase(),
                     l = e.tags ?? [];
                 return (
@@ -41,7 +41,7 @@ function d(e, t) {
                               {
                                   group: t,
                                   sortedTabs: a.sort((e, t) =>
-                                      ((0, i.O)(e.name) ?? "").localeCompare((0, i.O)(t.name) ?? ""),
+                                      ((0, s.O)(e.name) ?? "").localeCompare((0, s.O)(t.name) ?? ""),
                                   ),
                               },
                           ];
@@ -53,7 +53,7 @@ function d(e, t) {
         l.useMemo(
             () =>
                 (0, n.jsx)(
-                    s.aK,
+                    i.aK,
                     {
                         id: "devtools-search",
                         control: (e, l) =>
@@ -78,31 +78,31 @@ function d(e, t) {
                 "" !== a.trim() && 0 === c.length
                     ? e.push(
                           (0, n.jsx)(
-                              s.Dr,
+                              i.Dr,
                               { id: "devtools-no-results", label: `No DevTools found for "${a}"`, disabled: !0 },
                               "devtools-no-results",
                           ),
                       )
                     : (u.forEach((a) => {
                           let { id: l, name: r } = a;
-                          return e.push((0, n.jsx)(s.Dr, { id: l, label: (0, i.O)(r) ?? "", action: () => t(l) }, l));
+                          return e.push((0, n.jsx)(i.Dr, { id: l, label: (0, s.O)(r) ?? "", action: () => t(l) }, l));
                       }),
                       m.forEach((l) => {
                           let { group: r, sortedTabs: o } = l;
                           "" === a.trim()
                               ? e.push(
                                     (0, n.jsx)(
-                                        s.Dr,
+                                        i.Dr,
                                         {
                                             id: `devtools-${r}`,
                                             label: r,
-                                            children: (0, n.jsx)(s.rX, {
+                                            children: (0, n.jsx)(i.rX, {
                                                 children: o.map((e) =>
                                                     (0, n.jsx)(
-                                                        s.Dr,
+                                                        i.Dr,
                                                         {
                                                             id: `devtools-${e.id}`,
-                                                            label: (0, i.O)(e.name) ?? "",
+                                                            label: (0, s.O)(e.name) ?? "",
                                                             action: () => t(e.id),
                                                         },
                                                         e.id,
@@ -115,15 +115,15 @@ function d(e, t) {
                                 )
                               : e.push(
                                     (0, n.jsx)(
-                                        s.rX,
+                                        i.rX,
                                         {
                                             label: r,
                                             children: o.map((e) =>
                                                 (0, n.jsx)(
-                                                    s.Dr,
+                                                    i.Dr,
                                                     {
                                                         id: `devtools-filtered-${e.id}`,
-                                                        label: (0, i.O)(e.name) ?? "",
+                                                        label: (0, s.O)(e.name) ?? "",
                                                         action: () => t(e.id),
                                                     },
                                                     e.id,

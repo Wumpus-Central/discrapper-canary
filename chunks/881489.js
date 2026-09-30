@@ -9,10 +9,10 @@ var a = n(496431),
     u = n(826673),
     c = n(367727),
     d = n(287809),
-    h = n(354670),
-    m = n(469778),
-    f = n(202541),
-    p = n(652215);
+    m = n(354670),
+    h = n(469778),
+    p = n(202541),
+    f = n(652215);
 function g() {
     return (0, i.bG)([d.default], () => {
         let e = d.default.getCurrentUser();
@@ -47,11 +47,11 @@ function A(e, t, i) {
 function C() {
     let e = d.default.getCurrentUser();
     if (null == e || !e.isOnReverseTrial()) return;
-    let t = m.A.getFractionalPremium({ excludeReverseTrial: !1 }).find((e) => e.sourceType === p.GD.REVERSE_TRIAL);
+    let t = h.A.getFractionalPremium({ excludeReverseTrial: !1 }).find((e) => e.sourceType === f.GD.REVERSE_TRIAL);
     null != t && A("initial", s.M.ML_REVERSE_TRIAL_UPSELL_MODAL, t.id);
 }
 function E() {
     if (null == d.default.getCurrentUser()) return;
-    let e = h.A.getUserTrialOffer(f.Tt);
+    let e = m.A.getUserTrialOffer(p.Tt);
     null != e && A("followup", s.M.ML_REVERSE_TRIAL_FOLLOWUP_UPSELL_MODAL, e.id);
 }

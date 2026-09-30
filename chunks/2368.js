@@ -8,10 +8,10 @@ var l = n(284009),
     u = n(22098),
     c = n(323350),
     d = n(35277),
-    h = n(820066);
-let m =
+    m = n(820066);
+let h =
         /(@[^@#]+(?:#0|#\d{4}))|(@[^\s\t@#:]+)(?=[\s\t@:])|(:[a-zA-Z0-9_~]+:)|(#"(?:\\\\|\\"|(?!")[^\\])+")|(#[^\s\t@#:]+(?=[\s\t@#:]))/g,
-    f = new Set([
+    p = new Set([
         "emoji",
         "customEmoji",
         "textMention",
@@ -23,21 +23,21 @@ let m =
         "timestamp",
         "gameMention",
     ]),
-    p = new Set(["textMention", "userMention", "roleMention", "channelMention"]),
+    f = new Set(["textMention", "userMention", "roleMention", "channelMention"]),
     g = new Set(["gameMentionInput", "timestampMentionInput"]),
     x = new Set(["line", "blockQuote"]),
     A = new Set(["applicationCommandOption"]);
 function C(e, t, n) {
     let { isInline: l, isVoid: i, onChange: s } = e;
-    ((e.isVoid = (e) => !!f.has(e.type) || i(e)), (e.isInline = (e) => !!(f.has(e.type) || g.has(e.type)) || l(e)));
+    ((e.isVoid = (e) => !!p.has(e.type) || i(e)), (e.isInline = (e) => !!(p.has(e.type) || g.has(e.type)) || l(e)));
     let r = null,
         a = !0;
     return (
         (e.onChange = () => {
-            let l = h.VW.richValue(e);
+            let l = m.VW.richValue(e);
             ((l !== r || e.previewMarkdown !== a) &&
                 (o.o.withMergedEntry(e, () => {
-                    h.VW.withoutNormalizing(e, () => E(e, t, n));
+                    m.VW.withoutNormalizing(e, () => E(e, t, n));
                 }),
                 (r = l),
                 (a = e.previewMarkdown)),
@@ -47,15 +47,15 @@ function C(e, t, n) {
     );
 }
 function E(e, t, n) {
-    let l = h.VW.areStylesDisabled(e);
-    for (let i of h.VW.blocks(e))
+    let l = m.VW.areStylesDisabled(e);
+    for (let i of m.VW.blocks(e))
         if (x.has(i[0].type)) l ? y(e, i, !0, null) : I(e, i, t, n);
         else {
             let [s, r] = i;
             for (let i = s.children.length - 1; i >= 0; i--) {
                 let a = s.children[i];
-                if (!h.l5.isText(a) && A.has(a.type)) {
-                    let s = [a, h.PW.child(r, i)];
+                if (!m.l5.isText(a) && A.has(a.type)) {
+                    let s = [a, m.PW.child(r, i)];
                     l ? y(e, s, !0, null) : I(e, s, t, n);
                 }
             }
@@ -63,29 +63,29 @@ function E(e, t, n) {
 }
 function I(e, t, n, l) {
     let s = "line" === t[0].type && t[0].codeBlockState?.isInCodeBlock === !0,
-        r = h.cv.markdown(t[0], n);
-    (y(e, t, s, r) && ((t = h.cv.updateElement(e, t)), (r = h.cv.markdown(t[0], n))),
+        r = m.cv.markdown(t[0], n);
+    (y(e, t, s, r) && ((t = m.cv.updateElement(e, t)), (r = m.cv.markdown(t[0], n))),
         !s &&
             ((function (e, t, n, l, s) {
                 let [r, o] = t,
                     u = !1,
                     c = N(e, o);
-                for (let f = r.children.length - 1; f >= 0; f--) {
-                    let p,
-                        g = r.children[f];
-                    if (!h.l5.isText(g)) continue;
-                    let x = h.PW.child(o, f),
+                for (let p = r.children.length - 1; p >= 0; p--) {
+                    let f,
+                        g = r.children[p];
+                    if (!m.l5.isText(g)) continue;
+                    let x = m.PW.child(o, p),
                         A = [];
-                    for (m.lastIndex = 0; null != (p = m.exec(g.text));) {
-                        if (0 !== p.index && null == g.text.charAt(p.index - 1).match(/(\t|\s)/)) {
-                            m.lastIndex = p.index + 1;
+                    for (h.lastIndex = 0; null != (f = h.exec(g.text));) {
+                        if (0 !== f.index && null == g.text.charAt(f.index - 1).match(/(\t|\s)/)) {
+                            h.lastIndex = f.index + 1;
                             continue;
                         }
-                        if (_(c, { path: x, offset: p.index }, s)) continue;
-                        let i = (0, a.p)(p[0], n, l);
+                        if (_(c, { path: x, offset: f.index }, s)) continue;
+                        let i = (0, a.p)(f[0], n, l);
                         null != i && j(e, l, t[0], i)
-                            ? A.push({ index: p.index, length: p[0].length, node: i })
-                            : (m.lastIndex = p.index + 1);
+                            ? A.push({ index: f.index, length: f[0].length, node: i })
+                            : (h.lastIndex = f.index + 1);
                     }
                     for (let t of A.reverse())
                         ((function (e, t, n, l, s) {
@@ -101,12 +101,12 @@ function I(e, t, n, l) {
                                     "Failed to find valid end position for raw mention replace",
                                 ),
                                 d.b.textToVoid(e, s, { anchor: o, focus: u }));
-                        })(e, [g, h.PW.child(o, f)], t.index, t.length, t.node),
+                        })(e, [g, m.PW.child(o, p)], t.index, t.length, t.node),
                             (u = !0));
                 }
                 return u;
-            })(e, t, n, l, r) && ((t = h.cv.updateElement(e, t)), (r = h.cv.markdown(t[0], n))),
-            S(e, t, l, r) && ((t = h.cv.updateElement(e, t)), (r = h.cv.markdown(t[0], n)))));
+            })(e, t, n, l, r) && ((t = m.cv.updateElement(e, t)), (r = m.cv.markdown(t[0], n))),
+            S(e, t, l, r) && ((t = m.cv.updateElement(e, t)), (r = m.cv.markdown(t[0], n)))));
 }
 function y(e, t, n, l) {
     let [i, s] = t,
@@ -114,9 +114,9 @@ function y(e, t, n, l) {
         a = n || null == l ? null : N(e, s);
     for (let t = i.children.length - 1; t >= 0; t--) {
         let o = i.children[t];
-        if (h.l5.isText(o) && !n) {
+        if (m.l5.isText(o) && !n) {
             let n = t < i.children.length - 1 ? i.children[t + 1] : null;
-            if (null == n || !h.cv.isElement(n) || !e.isVoid(n)) continue;
+            if (null == n || !m.cv.isElement(n) || !e.isVoid(n)) continue;
             let l = !1,
                 a = 0;
             for (;;) {
@@ -129,12 +129,12 @@ function y(e, t, n, l) {
                 a = e + 2;
             }
             if (l) {
-                let l = h.PW.child(s, t + 1);
+                let l = m.PW.child(s, t + 1);
                 (d.b.voidToText(e, (0, c.IQ)(n, { mode: "plain", preventEmojiSurrogates: !0 }), l), (r = !0));
             }
-        } else if (h.cv.isElement(o) && e.isVoid(o)) {
-            let i = h.PW.child(s, t),
-                u = { path: h.PW.child(i, 0), offset: 0 };
+        } else if (m.cv.isElement(o) && e.isVoid(o)) {
+            let i = m.PW.child(s, t),
+                u = { path: m.PW.child(i, 0), offset: 0 };
             (n || (null != l && _(a, u, l))) &&
                 (d.b.voidToText(e, (0, c.IQ)(o, { mode: "plain", preventEmojiSurrogates: !0 }), i), (r = !0));
         }
@@ -148,11 +148,11 @@ function S(e, t, n, l) {
         a = l.serializedChildren.join(""),
         o = a.includes('#"');
     for (let c = 0; c < r.length; c++) {
-        let h,
-            m = r[c],
-            f = r[c + 1];
-        if (null != f && f.text.endsWith("\\") && m.start === f.start + f.text.length) continue;
-        switch (m.attributes[0]) {
+        let m,
+            h = r[c],
+            p = r[c + 1];
+        if (null != p && p.text.endsWith("\\") && h.start === p.start + p.text.length) continue;
+        switch (h.attributes[0]) {
             case "emoji":
                 if (
                     o &&
@@ -165,66 +165,66 @@ function S(e, t, n, l) {
                             if ("\\" === i[e]) e++;
                             else if ('"' === i[e]) return !1;
                         return !0;
-                    })(a, m.start)
+                    })(a, h.start)
                 )
                     continue;
-                h = {
+                m = {
                     type: "emoji",
                     emoji: {
-                        name: m.data.name,
-                        src: m.data.src,
-                        surrogate: m.data.surrogate,
-                        jumboable: !0 === m.data.jumboable,
+                        name: h.data.name,
+                        src: h.data.src,
+                        surrogate: h.data.surrogate,
+                        jumboable: !0 === h.data.jumboable,
                     },
                     children: [{ text: "" }],
                 };
                 break;
             case "customEmoji":
-                h = {
+                m = {
                     type: "customEmoji",
                     emoji: {
-                        emojiId: m.data.emojiId,
-                        name: m.data.name,
-                        animated: m.data.animated,
-                        jumboable: !0 === m.data.jumboable,
+                        emojiId: h.data.emojiId,
+                        name: h.data.name,
+                        animated: h.data.animated,
+                        jumboable: !0 === h.data.jumboable,
                     },
                     children: [{ text: "" }],
                 };
                 break;
             case "textMention":
-                h = { type: "textMention", name: m.data.text, children: [{ text: "" }] };
+                m = { type: "textMention", name: h.data.text, children: [{ text: "" }] };
                 break;
             case "mention":
-                h = { type: "userMention", userId: m.data.id, children: [{ text: "" }] };
+                m = { type: "userMention", userId: h.data.id, children: [{ text: "" }] };
                 break;
             case "roleMention":
-                h = { type: "roleMention", roleId: m.data.id, children: [{ text: "" }] };
+                m = { type: "roleMention", roleId: h.data.id, children: [{ text: "" }] };
                 break;
             case "channelMention":
-                h = { type: "channelMention", channelId: m.data.id, children: [{ text: "" }] };
+                m = { type: "channelMention", channelId: h.data.id, children: [{ text: "" }] };
                 break;
             case "staticRouteLink":
-                h = { type: "staticRouteLink", id: m.data.id, itemId: m.data.itemId, children: [{ text: "" }] };
+                m = { type: "staticRouteLink", id: h.data.id, itemId: h.data.itemId, children: [{ text: "" }] };
                 break;
             case "soundboard":
-                h = { type: "soundboard", guildId: m.data.guildId, soundId: m.data.soundId, children: [{ text: "" }] };
+                m = { type: "soundboard", guildId: h.data.guildId, soundId: h.data.soundId, children: [{ text: "" }] };
                 break;
             case "timestamp":
-                h = { type: "timestamp", parsed: m.data, children: [{ text: "" }] };
+                m = { type: "timestamp", parsed: h.data, children: [{ text: "" }] };
                 break;
             case "gameMention":
-                h = { type: "gameMention", gameId: m.data.id, children: [{ text: "" }] };
+                m = { type: "gameMention", gameId: h.data.id, children: [{ text: "" }] };
                 break;
             case "timestampMentionInput":
-                h = { type: "timestampMentionInput", children: [{ text: m.data.content }] };
+                m = { type: "timestampMentionInput", children: [{ text: h.data.content }] };
                 break;
             default:
                 continue;
         }
-        if (!j(e, n, t[0], h)) continue;
-        let p = (0, u.Q)(e, i, l.serializedChildren, m.start),
-            g = (0, u.Q)(e, i, l.serializedChildren, m.start + m.text.length);
-        (d.b.textToVoid(e, h, { anchor: p, focus: g }), (s = !0));
+        if (!j(e, n, t[0], m)) continue;
+        let f = (0, u.Q)(e, i, l.serializedChildren, h.start),
+            g = (0, u.Q)(e, i, l.serializedChildren, h.start + h.text.length);
+        (d.b.textToVoid(e, m, { anchor: f, focus: g }), (s = !0));
     }
     return s;
 }
@@ -233,9 +233,9 @@ function v(e) {
 }
 function N(e, t) {
     let n = new Map(),
-        l = h.VW.nodes(e, { at: { anchor: h.VW.start(e, t), focus: h.VW.end(e, t) }, mode: "lowest" }),
+        l = m.VW.nodes(e, { at: { anchor: m.VW.start(e, t), focus: m.VW.end(e, t) }, mode: "lowest" }),
         i = 0;
-    for (let [e, t] of l) (n.set(v(t), i), (i += h.l5.isText(e) ? e.text.length : 1));
+    for (let [e, t] of l) (n.set(v(t), i), (i += m.l5.isText(e) ? e.text.length : 1));
     return n;
 }
 function _(e, t, n) {
@@ -243,7 +243,7 @@ function _(e, t, n) {
     let l = e.get(v(t.path));
     if (null != l) l += t.offset;
     else {
-        let n = e.get(v(h.PW.parent(t.path)));
+        let n = e.get(v(m.PW.parent(t.path)));
         if (null == n) return !1;
         l = n + 1;
     }
@@ -256,7 +256,7 @@ function _(e, t, n) {
     return !1;
 }
 function j(e, t, n, l) {
-    if (e.chatInputType.markdown?.disableMentions === !0 && p.has(l.type)) return !1;
+    if (e.chatInputType.markdown?.disableMentions === !0 && f.has(l.type)) return !1;
     if ("applicationCommandOption" !== n.type) return !0;
     switch (n.optionType) {
         case s.n4.CHANNEL:

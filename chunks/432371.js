@@ -1,4 +1,4 @@
-n.d(t, { Kc: () => u, cI: () => h, pk: () => c, vC: () => m });
+n.d(t, { Kc: () => u, cI: () => m, pk: () => c, vC: () => h });
 var l = n(702841),
     i = n(5180),
     s = n(260509),
@@ -35,12 +35,12 @@ function d(e) {
         (!n || e.features.has(a.GuildFeatures.SUMMARIES_ENABLED_BY_USER))
     );
 }
-function h(e) {
+function m(e) {
     arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     let t = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     return c(e, t);
 }
-function m(e) {
+function h(e) {
     return (
         arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         (0, l.bG)([r.A], () => d(r.A.getGuild(e?.id ?? a.dJq), !1), [e])

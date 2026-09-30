@@ -1,17 +1,17 @@
-n.d(t, { X: () => h });
+n.d(t, { X: () => f });
 var r = n(477900),
     l = n(582128),
     a = n(297264),
     i = n(939249),
-    u = n(789645),
-    s = n(559106),
+    s = n(789645),
+    u = n(559106),
     o = n(364522),
     c = n(289873),
     d = n(871273),
     m = n(375708),
-    f = n(862649);
-function h(e) {
-    let { text: t, isLoading: n = !1, onClose: h } = e,
+    h = n(862649);
+function f(e) {
+    let { text: t, isLoading: n = !1, onClose: f } = e,
         p = l.useMemo(
             () =>
                 (t ?? "")
@@ -23,7 +23,7 @@ function h(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)("div", {
-                className: f.Mm,
+                className: h.Mm,
                 children: [
                     (0, r.jsx)(a.D, {
                         variant: "heading-md/semibold",
@@ -31,22 +31,22 @@ function h(e) {
                         children: m.intl.string(d.default["VZkd/n"]),
                     }),
                     (0, r.jsx)(i.D, {
-                        onClick: h,
-                        className: f.GI,
+                        onClick: f,
+                        className: h.GI,
                         "aria-label": m.intl.string(d.default["6/dkHh"]),
-                        children: (0, r.jsx)(u.P, { color: "currentColor" }),
+                        children: (0, r.jsx)(s.P, { color: "currentColor" }),
                     }),
                 ],
             }),
-            (0, r.jsx)(s.vN, {
+            (0, r.jsx)(u.vN, {
                 children: (0, r.jsx)(o.Ar, {
-                    className: f.j5,
+                    className: h.j5,
                     fade: !0,
                     children: (0, r.jsx)("div", {
-                        className: f.FN,
+                        className: h.FN,
                         children: n
                             ? (0, r.jsx)("div", {
-                                  className: f.Cw,
+                                  className: h.Cw,
                                   children: (0, r.jsx)(c.y, { type: c.y.Type.WANDERING_CUBES }),
                               })
                             : (0, r.jsx)(a.D, {

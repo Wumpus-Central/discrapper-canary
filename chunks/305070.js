@@ -8,10 +8,10 @@ var l = n(477900),
     u = n(689175),
     c = n(623646),
     d = n(811024),
-    h = n(933958),
-    m = n(969151),
-    f = n(659280),
-    p = n(579940),
+    m = n(933958),
+    h = n(969151),
+    p = n(659280),
+    f = n(579940),
     g = n(915089),
     x = n(750506),
     A = n(513609),
@@ -28,8 +28,8 @@ var l = n(477900),
     T = n(351906),
     R = n(287809),
     O = n(31498),
-    M = n(887129),
-    L = n(741918),
+    L = n(887129),
+    M = n(741918),
     k = n(267102),
     w = n(652215),
     P = n(307731);
@@ -37,7 +37,7 @@ let D = new Map([["thread", new Set(["name"])]]);
 var U = n(5867),
     V = n(940169);
 let G = i.forwardRef(function (e, t) {
-    let { channel: n, type: s, editorHeight: G, onVisibilityChange: F, editorScrollerRef: B, barsHeight: H } = e,
+    let { channel: n, type: s, editorHeight: G, onVisibilityChange: F, editorScrollerRef: H, barsHeight: B } = e,
         W = (0, g.GV)(),
         K = (0, o.bG)([C.A], () => C.A.getGuild(n.guild_id) ?? null, [n.guild_id]),
         z = i.useRef(null),
@@ -49,7 +49,7 @@ let G = i.forwardRef(function (e, t) {
                     let e = R.default.getCurrentUser();
                     return (null != l.guild_id && null != e ? j.Ay.getMember(l.guild_id, e.id)?.isPending : null) ?? !1;
                 }),
-                { canMentionEveryone: d, hidePersonalInformation: h } = (0, o.cf)(
+                { canMentionEveryone: d, hidePersonalInformation: m } = (0, o.cf)(
                     [b.A, T.A],
                     () => ({
                         canMentionEveryone:
@@ -58,16 +58,16 @@ let G = i.forwardRef(function (e, t) {
                     }),
                     [l, s, c],
                 ),
-                { activeCommand: m, activeCommandOption: f } = (0, o.cf)([v.A], () => ({
+                { activeCommand: h, activeCommandOption: p } = (0, o.cf)([v.A], () => ({
                     activeCommand: v.A.getActiveCommand(l.id),
                     activeCommandOption: v.A.getActiveOption(l.id),
                 })),
-                p = i.useMemo(
+                f = i.useMemo(
                     () =>
-                        m?.untranslatedName != null &&
-                        f?.name != null &&
-                        (D.get(m.untranslatedName)?.has(f.name) ?? !1),
-                    [m?.untranslatedName, f?.name],
+                        h?.untranslatedName != null &&
+                        p?.name != null &&
+                        (D.get(h.untranslatedName)?.has(p.name) ?? !1),
+                    [h?.untranslatedName, p?.name],
                 ),
                 g = (function (e) {
                     let { navId: t, scrollerRef: n, state: l, onFocus: s } = e,
@@ -89,10 +89,10 @@ let G = i.forwardRef(function (e, t) {
                             (u.setFocus(e.toString()), s?.(e));
                         }
                     }
-                    let u = (0, M.Ay)({
+                    let u = (0, L.Ay)({
                             id: t,
                             isEnabled: l.isVisible,
-                            orientation: L.Gl.VERTICAL,
+                            orientation: M.Gl.VERTICAL,
                             useVirtualFocus: !0,
                             setFocus: function (e, t) {
                                 let l = r.document.querySelector(e);
@@ -121,26 +121,26 @@ let G = i.forwardRef(function (e, t) {
             let I = {
                     ...e,
                     navigator: g,
-                    activeCommand: m,
-                    activeCommandOption: f,
+                    activeCommand: h,
+                    activeCommandOption: p,
                     activeInlineAutocompleteInput: C,
                     canMentionUsers: s.users?.allowMentioning ?? !1,
                     canMentionEveryone: d,
-                    hidePersonalInformation: h,
+                    hidePersonalInformation: m,
                     hideMentionDescription: s === N.oU.RULES_INPUT,
                     emojiIntention:
                         s === N.oU.RULES_INPUT
                             ? P.EmojiIntention.COMMUNITY_CONTENT
-                            : p
+                            : f
                               ? P.EmojiIntention.NO_CUSTOM_EMOJI
                               : P.EmojiIntention.CHAT,
                     currentWord: x?.word ?? "",
                     currentWordIsAtStart: x?.isAtStart === !0,
                     optionText:
-                        null != f
+                        null != p
                             ? (0, S.getString)(
-                                  { [f.name]: e.editorRef.current?.getCurrentCommandOptionValue() ?? [] },
-                                  f.name,
+                                  { [p.name]: e.editorRef.current?.getCurrentCommandOptionValue() ?? [] },
+                                  p.name,
                               )
                             : "",
                 },
@@ -178,15 +178,15 @@ let G = i.forwardRef(function (e, t) {
             );
         })({ ...e, guild: K }, t, z),
         J = s.autocomplete?.forceChatLayer ? A.Ay : x.Ay,
-        $ = (0, f.aI)(Z.selectedIndex);
-    (0, p.gf)(W, Z.isVisible, $);
+        $ = (0, p.aI)(Z.selectedIndex);
+    (0, f.gf)(W, Z.isVisible, $);
     let X = (0, I.l)({ editorHeight: G, type: s, state: Z }),
         Q = (0, o.bG)(
-            [h.Ay],
+            [m.Ay],
             () => {
-                let e = h.Ay.getSelfEmbeddedActivityForChannel(n.id),
-                    t = h.Ay.getActivityPanelMode();
-                return (0, d.AX)(n) && null != e && (0, m.H)(e.location) === n.id && t === U.Gd.PANEL;
+                let e = m.Ay.getSelfEmbeddedActivityForChannel(n.id),
+                    t = m.Ay.getActivityPanelMode();
+                return (0, d.AX)(n) && null != e && (0, h.H)(e.location) === n.id && t === U.Gd.PANEL;
             },
             [n],
         ),
@@ -217,10 +217,10 @@ let G = i.forwardRef(function (e, t) {
     let en = { [V.pK]: null == X, [V.YB]: null != X, [V.sQ]: null == X && "bottom" === e.position, [V.mO]: Q },
         el = 490;
     null != X && (el = s.autocomplete?.small ? 200 : Z.query?.type === E.DB.EMOJIS_AND_STICKERS ? 490 : 245);
-    let ei = Math.max(G, B?.current?.clientHeight ?? 0),
+    let ei = Math.max(G, H?.current?.clientHeight ?? 0),
         es = Math.min(0.5 * window.innerHeight, ei);
-    el = Math.min(window.innerHeight - 120 - es - (H ?? 0), el);
-    let er = (0, l.jsx)(f.Ay, {
+    el = Math.min(window.innerHeight - 120 - es - (B ?? 0), el);
+    let er = (0, l.jsx)(p.Ay, {
         id: W,
         className: r()(V.nx, en),
         innerClassName: V.Fv,
@@ -241,7 +241,7 @@ let G = i.forwardRef(function (e, t) {
                         className: V.XG,
                         style: { maxHeight: el },
                         role: "listbox",
-                        "aria-labelledby": (0, f.Sz)(W),
+                        "aria-labelledby": (0, p.Sz)(W),
                         children: et,
                     });
                 },

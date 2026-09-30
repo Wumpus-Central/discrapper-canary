@@ -1,4 +1,4 @@
-n.d(t, { A: () => p });
+n.d(t, { A: () => f });
 var l = n(477900),
     i = n(17928),
     s = n(364522),
@@ -8,12 +8,12 @@ var l = n(477900),
     u = n(538451),
     c = n(342296),
     d = n(363195),
-    h = n(562153),
-    m = n(462117);
-function f(e) {
+    m = n(562153),
+    h = n(462117);
+function p(e) {
     let { participants: t, channel: i } = e;
     return (0, l.jsx)(s.Ip, {
-        className: m.S,
+        className: h.S,
         children: t.map((e) =>
             (0, l.jsx)(
                 u.A,
@@ -21,7 +21,7 @@ function f(e) {
                     user: e,
                     guildId: i?.guild_id,
                     channelId: i?.id,
-                    nick: h.Ay.getNickname(i?.guild_id, i?.id, e),
+                    nick: m.Ay.getNickname(i?.guild_id, i?.id, e),
                     onContextMenu: (t) => {
                         (0, o.L3)(t, async () => {
                             let { default: t } = await Promise.all([
@@ -59,16 +59,16 @@ function f(e) {
         ),
     });
 }
-function p(e) {
+function f(e) {
     let { children: t, participants: n, channel: s, onPopoutClosed: o, targetElementRef: u } = e,
-        h = (0, i.bG)([d.A], () => d.A.theme),
-        m = 1 === n.length ? n[0] : null;
-    return null != m
+        m = (0, i.bG)([d.A], () => d.A.theme),
+        h = 1 === n.length ? n[0] : null;
+    return null != h
         ? (0, l.jsx)(r.w, {
-              theme: h,
+              theme: m,
               children: (0, l.jsx)(c.A, {
                   targetElementRef: u,
-                  user: m,
+                  user: h,
                   guildId: s?.guild_id,
                   channelId: s?.id,
                   onClosePopout: o,
@@ -76,11 +76,11 @@ function p(e) {
               }),
           })
         : (0, l.jsx)(r.w, {
-              theme: h,
+              theme: m,
               children: (0, l.jsx)(a.Y, {
                   targetElementRef: u,
                   renderPopout: () => {
-                      if (null != n) return (0, l.jsx)(f, { participants: n, channel: s });
+                      if (null != n) return (0, l.jsx)(p, { participants: n, channel: s });
                       throw Error("One of participant or participants is required");
                   },
                   children: t,

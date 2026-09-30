@@ -1,4 +1,4 @@
-n.d(t, { A: () => W, Y: () => H });
+n.d(t, { A: () => W, Y: () => B });
 var l = n(477900),
     i = n(582128),
     s = n(503698),
@@ -8,10 +8,10 @@ var l = n(477900),
     u = n(621466),
     c = n(17928),
     d = n(939249),
-    h = n(186111),
-    m = n(531685),
-    f = n(787541),
-    p = n(244083),
+    m = n(186111),
+    h = n(531685),
+    p = n(787541),
+    f = n(244083),
     g = n(953792);
 let x = "/assets/b6c2e5ec03845c03.jpg",
     A = "/assets/f2e13fd1d0c497be.jpg";
@@ -250,8 +250,8 @@ var y = n(462180),
     T = n(71393),
     R = n(287809),
     O = n(486020),
-    M = n(316386);
-function L() {
+    L = n(316386);
+function M() {
     let { guildId: e, channelId: t } = (0, j.A)((e) => {
             let { guildId: t, channelId: n } = e;
             return { guildId: t, channelId: n };
@@ -261,22 +261,22 @@ function L() {
         s = (0, c.bG)([R.default], () => R.default.getCurrentUser()),
         r = null != i ? (0, N.Y)(i) : null,
         a = null != s ? s.getAvatarURL(e, 80) : O.vI["0"],
-        o = (0, l.jsx)(S.eu, { src: a, "aria-hidden": !0, size: v._3.SIZE_80, className: M.HT }),
+        o = (0, l.jsx)(S.eu, { src: a, "aria-hidden": !0, size: v._3.SIZE_80, className: L.HT }),
         u = null;
     return (
         (u =
             null != n
                 ? (0, l.jsx)(_.Ay, { guild: n })
                 : null != r
-                  ? (0, l.jsx)(S.eu, { "aria-hidden": !0, src: r, size: v._3.SIZE_80, className: M.HT })
+                  ? (0, l.jsx)(S.eu, { "aria-hidden": !0, src: r, size: v._3.SIZE_80, className: L.HT })
                   : o),
         (0, l.jsxs)("div", {
-            className: M.kL,
+            className: L.kL,
             children: [
-                (0, l.jsx)("div", { className: M.$H, children: o }),
-                (0, l.jsx)("div", { className: M.XN, children: u }),
+                (0, l.jsx)("div", { className: L.$H, children: o }),
+                (0, l.jsx)("div", { className: L.XN, children: u }),
                 (0, l.jsx)("svg", {
-                    className: M.bm,
+                    className: L.bm,
                     xmlns: "http://www.w3.org/2000/svg",
                     width: "156",
                     height: "70",
@@ -359,21 +359,21 @@ let k = Object.freeze({
     "voice-conversations": {
         popoutPosition: "right",
         highPriority: !0,
-        textAlign: p.YL.CENTER,
+        textAlign: f.YL.CENTER,
         media: () => (0, l.jsx)(I, {}),
     },
     "writing-messages": {
         popoutPosition: "top",
         highPriority: !0,
-        textAlign: p.YL.CENTER,
+        textAlign: f.YL.CENTER,
         spacing: 10,
-        media: () => (0, l.jsx)(L, {}),
+        media: () => (0, l.jsx)(M, {}),
     },
     "direct-messages": { popoutPosition: "right" },
     "create-first-server": { popoutPosition: "right", highPriority: !0 },
     "organize-by-topic": {
         popoutPosition: "right",
-        textAlign: p.YL.CENTER,
+        textAlign: f.YL.CENTER,
         spacing: 8,
         media: () => (0, l.jsx)(C, {}),
     },
@@ -401,8 +401,8 @@ function G() {
     return (0, l.jsx)(l.Fragment, { children: D.intl.format(D.t.oQuG3K, { serverName: t }) });
 }
 var F = n(79858),
-    B = n(303634);
-class H extends i.PureComponent {
+    H = n(303634);
+class B extends i.PureComponent {
     state = { offsetX: null, offsetY: null };
     contentRef = i.createRef();
     componentDidMount() {
@@ -448,10 +448,10 @@ class H extends i.PureComponent {
         ((l.offsetX += this.props.offset.x ?? 0), (l.offsetY += this.props.offset.y ?? 0), this.setState(l));
     }
     handleSkipTips() {
-        f.n7();
+        p.n7();
     }
     handleDismiss = () => {
-        f.X8(this.props.tutorialId);
+        p.X8(this.props.tutorialId);
     };
     getTutorialPopoutText() {
         let e,
@@ -492,27 +492,27 @@ class H extends i.PureComponent {
                 textAlign: o,
                 isLongText: u,
                 highPriority: c,
-                spacing: h,
-                arrowAlignment: m = p.oN.TOP,
-                popoutPosition: f,
+                spacing: m,
+                arrowAlignment: h = f.oN.TOP,
+                popoutPosition: p,
             } = s,
             { offsetX: g, offsetY: x } = this.state,
             A = { left: null != g ? i.x + g : void 0, top: null != x ? i.y + x : void 0 };
         function C(e) {
             let t = n && !e;
-            return { [B.bW]: t, [B.EO]: !t, [B.TX]: c };
+            return { [H.bW]: t, [H.EO]: !t, [H.TX]: c };
         }
         let E = this.getTutorialPopoutText();
-        return (0, l.jsx)(p.Ay, {
+        return (0, l.jsx)(f.Ay, {
             innerRef: this.contentRef,
-            position: f,
+            position: p,
             renderMedia: a,
             textAlign: o,
-            spacing: h,
+            spacing: m,
             isLongText: u,
             uniqueId: e,
             autoInvert: t,
-            arrowAlignment: m,
+            arrowAlignment: h,
             onSkipAll: this.handleSkipTips,
             onComplete: this.handleDismiss,
             ...E,
@@ -522,23 +522,23 @@ class H extends i.PureComponent {
                 return (0, l.jsx)(d.D, {
                     ...e,
                     "aria-label": D.intl.string(D.t.IyCzIF),
-                    className: B.q3,
+                    className: H.q3,
                     style: A,
                     innerRef: this.contentRef,
                     children: (0, l.jsxs)("div", {
-                        className: r()(B.Mp, C(s)),
+                        className: r()(H.Mp, C(s)),
                         children: [
                             ((i = n && !s),
                             !0 !== c
                                 ? null
                                 : (0, l.jsxs)("div", {
                                       children: [
-                                          (0, l.jsx)("div", { className: r()(B.Mn, { [B.bW]: i, [B.EO]: !i }) }),
-                                          (0, l.jsx)("div", { className: r()(B.sQ, { [B.bW]: i, [B.EO]: !i }) }),
+                                          (0, l.jsx)("div", { className: r()(H.Mn, { [H.bW]: i, [H.EO]: !i }) }),
+                                          (0, l.jsx)("div", { className: r()(H.sQ, { [H.bW]: i, [H.EO]: !i }) }),
                                       ],
                                   })),
-                            (0, l.jsx)("div", { className: r()(B.r6, C(s)) }),
-                            (0, l.jsx)("div", { className: r()(B.CY, C(s)) }),
+                            (0, l.jsx)("div", { className: r()(H.r6, C(s)) }),
+                            (0, l.jsx)("div", { className: r()(H.CY, C(s)) }),
                         ],
                     }),
                 });
@@ -554,11 +554,11 @@ let W =
                   tutorialData: t,
                   windowFocused: n,
                   shouldShowAny: i,
-              } = (0, c.cf)([F.A, m.A, h.A], () => ({
+              } = (0, c.cf)([F.A, h.A, m.A], () => ({
                   indicators: F.A.getIndicators(),
                   tutorialData: F.A.getData(),
-                  shouldShowAny: F.A.shouldShowAnyIndicators() && !h.A.hasLayers(),
-                  windowFocused: m.A.isFocused(),
+                  shouldShowAny: F.A.shouldShowAnyIndicators() && !m.A.hasLayers(),
+                  windowFocused: h.A.isFocused(),
               }));
               return i
                   ? (0, l.jsx)(l.Fragment, {
@@ -567,7 +567,7 @@ let W =
                                 r = t[i];
                             return (
                                 o()(null != r, `Missing tutorial definition for ${i}`),
-                                (0, l.jsx)(H, { tutorialId: i, tutorialDefinition: r, focused: n, ...s }, i)
+                                (0, l.jsx)(B, { tutorialId: i, tutorialDefinition: r, focused: n, ...s }, i)
                             );
                         }),
                     })

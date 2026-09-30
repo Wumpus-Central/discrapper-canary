@@ -39,7 +39,7 @@ class c {
         return e.getAttribute("data-dnd-name") ?? e.getAttribute("aria-label") ?? t;
     }
 }
-class d {
+class u {
     container;
     svg;
     foreignObject;
@@ -84,7 +84,7 @@ class d {
     }
 }
 n(321073);
-var u = n(52724);
+var d = n(52724);
 let h = "dndOriginalRole";
 class f {
     targetNodes;
@@ -101,7 +101,7 @@ class f {
             (this.previewer = r),
             (this.announcer = i),
             (this.currentHoveredNode = this.findInitialHoveredNode(e, t)),
-            (this.focusManager = (0, u.C)({
+            (this.focusManager = (0, d.C)({
                 getFocusableElements: () => this.getViableTargets(t),
                 getActiveElement: () => e.ownerDocument.activeElement,
             })),
@@ -193,8 +193,8 @@ class f {
               }, []);
     }
 }
-let g = [" ", "Enter"],
-    p = ["Escape"];
+let p = [" ", "Enter"],
+    g = ["Escape"];
 function m(e) {
     (e.preventDefault(), e.stopImmediatePropagation());
 }
@@ -230,7 +230,7 @@ class v {
             (this.sourcePreviewNodes = new Map()),
             (this.sourcePreviewNodeOptions = new Map()),
             (this.targetNodes = new Map()),
-            (this._previewer = new d(t.document)),
+            (this._previewer = new u(t.document)),
             (this._announcer = new c(n?.announcer)));
     }
     setup() {
@@ -245,7 +245,7 @@ class v {
             this.endDrag());
     }
     handleGlobalKeyDown = (e) => {
-        this.monitor.isDragging() && A(e, p) && (this.endDrag(e), this._announcer.announceCancel());
+        this.monitor.isDragging() && A(e, g) && (this.endDrag(e), this._announcer.announceCancel());
     };
     setDndMode(e) {
         this.options?.onDndModeChanged(e);
@@ -313,7 +313,7 @@ class v {
             this._announcer.announceDrag(n, e));
     };
     handleDrop = (e) => {
-        A(e, g) && (this.actions.drop(), this.endDrag(e), this._announcer.announceDrop());
+        A(e, p) && (this.actions.drop(), this.endDrag(e), this._announcer.announceDrop());
     };
     endDrag(e) {
         (null != e && m(e),

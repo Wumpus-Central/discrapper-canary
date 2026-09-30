@@ -1,4 +1,4 @@
-(n.d(t, { FV: () => p, Ff: () => x, Fk: () => g, JZ: () => C, oV: () => f, se: () => A }), n(321073));
+(n.d(t, { FV: () => f, Ff: () => x, Fk: () => g, JZ: () => C, oV: () => p, se: () => A }), n(321073));
 var l = n(582128),
     i = n(435558),
     s = n.n(i),
@@ -8,14 +8,14 @@ var l = n(582128),
     u = n(23339),
     c = n(319060),
     d = n(60587),
-    h = n(652215);
-let m = (0, u.xI)(c.A.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT);
-function f(e) {
+    m = n(652215);
+let h = (0, u.xI)(c.A.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT);
+function p(e) {
     let {
             gridWrapperRef: t,
             containerWidth: n,
             showingEmptyState: i,
-            listPaddingLeft: r = m,
+            listPaddingLeft: r = h,
             listScrollbarWidth: a = 8,
         } = e,
         [o, u] = l.useState(void 0),
@@ -34,7 +34,7 @@ function f(e) {
         o
     );
 }
-function p(e) {
+function f(e) {
     let { activeCategoryIndex: t, listRef: n, searchQuery: i } = e,
         s = l.useRef(i),
         r = l.useRef(!0);
@@ -58,17 +58,17 @@ let g = (e) => {
             onActiveCategoryIndexChange: o,
             disableForSearch: u = !0,
         } = e,
-        c = l.useRef(h.An1),
+        c = l.useRef(m.An1),
         d = l.useRef(t);
     d.current = t;
-    let m = l.useMemo(
+    let h = l.useMemo(
             () =>
                 s().debounce(() => {
                     i.current = !1;
                 }, 250),
             [i],
         ),
-        f = l.useMemo(
+        p = l.useMemo(
             () =>
                 s().debounce((e) => {
                     ("" !== r && u) ||
@@ -90,9 +90,9 @@ let g = (e) => {
         );
     return l.useCallback(
         (e) => {
-            ((i.current = !0), m(), f(e));
+            ((i.current = !0), h(), p(e));
         },
-        [i, m, f],
+        [i, h, p],
     );
 };
 function x(e) {
@@ -112,7 +112,7 @@ function x(e) {
             },
             [i],
         ),
-        h = l.useCallback(
+        m = l.useCallback(
             (e) => {
                 let { focusedX: t, focusedY: n } = e;
                 c.current = !0;
@@ -123,7 +123,7 @@ function x(e) {
             },
             [d, s, u],
         ),
-        m = l.useCallback(
+        h = l.useCallback(
             (e, t, n) => {
                 switch (n.type) {
                     case r.X2.NAVIGATE_UP:
@@ -136,12 +136,12 @@ function x(e) {
                     case r.X2.NAVIGATE_END:
                     case r.X2.NAVIGATE_CROSSLINE_START:
                     case r.X2.NAVIGATE_CROSSLINE_END:
-                        h(t);
+                        m(t);
                 }
             },
-            [h],
+            [m],
         ),
-        f = l.useCallback(
+        p = l.useCallback(
             (e, t, n) => {
                 let l = d(e, t);
                 null != l && o(l, n);
@@ -149,15 +149,15 @@ function x(e) {
             [d, o],
         ),
         {
-            dispatch: p,
+            dispatch: f,
             getItemProps: g,
             getRowProps: x,
             getContainerProps: A,
         } = (0, a.A)({
             navId: n,
             columnCounts: t,
-            onDispatch: m,
-            onSelect: f,
+            onDispatch: h,
+            onSelect: p,
             autoFocusElement: !1,
             useVirtualFocus: !0,
         }),
@@ -173,7 +173,7 @@ function x(e) {
             return (window.addEventListener("mousemove", e), () => window.removeEventListener("mousemove", e));
         }, []),
         {
-            gridDispatch: p,
+            gridDispatch: f,
             getItemProps: g,
             getRowProps: x,
             gridContainerProps: C,
@@ -198,15 +198,15 @@ function A(e) {
             u = [],
             c = [],
             d = 0,
-            h = 0,
-            m = 0;
+            m = 0,
+            h = 0;
         if (0 !== i)
             for (let l of t)
                 l.items.length > 0 &&
                     (function (t, n) {
                         let l = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
                             i = Math.ceil(t.length / e);
-                        u[h] = l ? 0 : i;
+                        u[m] = l ? 0 : i;
                         for (let s = 0; s < i; s++) {
                             let i = s * e,
                                 r = i + e,
@@ -214,15 +214,15 @@ function A(e) {
                                     .slice(i, r)
                                     .map((e, t) => ({
                                         item: e,
-                                        gridSectionIndex: h,
+                                        gridSectionIndex: m,
                                         rowIndex: d,
                                         columnIndex: t,
-                                        visibleRowIndex: m,
+                                        visibleRowIndex: h,
                                         category: n,
                                     }));
-                            (l || (m++, c.push(a), o.push(a.length)), d++);
+                            (l || (h++, c.push(a), o.push(a.length)), d++);
                         }
-                        h++;
+                        m++;
                     })(l.items, l.categoryInfo.type, n?.has(`${l.key}`) ?? !1);
         return { expressionsGrid: c, rowCount: d, rowCountBySection: u, columnCounts: o, gutterWidth: l };
     }, [t, n, i, a, r, s]);
@@ -239,10 +239,10 @@ function C(e) {
         {
             gridDispatch: u,
             getItemProps: c,
-            getRowProps: h,
-            gridContainerProps: m,
-            handleGridContainerKeyDown: f,
-            isUsingKeyboardNavigation: p,
+            getRowProps: m,
+            gridContainerProps: h,
+            handleGridContainerKeyDown: p,
+            isUsingKeyboardNavigation: f,
         } = x({
             columnCounts: t,
             gridNavigatorId: r,
@@ -266,10 +266,10 @@ function C(e) {
         ),
         {
             getItemProps: c,
-            getRowProps: h,
-            gridContainerProps: m,
-            handleGridContainerKeyDown: f,
-            isUsingKeyboardNavigation: p,
+            getRowProps: m,
+            gridContainerProps: h,
+            handleGridContainerKeyDown: p,
+            isUsingKeyboardNavigation: f,
         }
     );
 }

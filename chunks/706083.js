@@ -1,4 +1,4 @@
-n.d(t, { o: () => m });
+n.d(t, { o: () => h });
 var l = n(730852),
     i = n(235393),
     s = n(376943),
@@ -13,8 +13,8 @@ let d = (0, n(945810).mj)({
     defaultConfig: { navigateOnly: !1 },
     variations: { 1: { navigateOnly: !0 } },
 });
-var h = n(652215);
-async function m(e, t, n) {
+var m = n(652215);
+async function h(e, t, n) {
     if (null == t) return;
     if (
         (i.A.trackDiscordLinkClicked({ guildId: e, channelId: t, messageId: n }),
@@ -27,10 +27,10 @@ async function m(e, t, n) {
                 return;
             } catch {}
     }
-    let m = a.A.getChannel(t);
-    if (null != m && null == n && m.isGuildVocal() && (0, s.nc)(m)) {
+    let h = a.A.getChannel(t);
+    if (null != h && null == n && h.isGuildVocal() && (0, s.nc)(h)) {
         let { navigateOnly: e } = d.getConfig({ location: "channel_mention" });
-        if (!e) return void l.default.selectVoiceChannel(m.id);
+        if (!e) return void l.default.selectVoiceChannel(h.id);
     }
-    (0, r.A)(h.BVt.CHANNEL(e, t, n));
+    (0, r.A)(m.BVt.CHANNEL(e, t, n));
 }

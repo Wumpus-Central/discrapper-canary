@@ -1,4 +1,4 @@
-n.d(t, { A: () => h });
+n.d(t, { A: () => m });
 var l = n(477900),
     i = n(582128),
     s = n(503698),
@@ -8,22 +8,22 @@ var l = n(477900),
     u = n(151271),
     c = n(698279),
     d = n(495088);
-let h = i.memo(
+let m = i.memo(
     i.forwardRef(function (e, t) {
-        let { disabled: n, type: s, className: h, onClick: m, channel: f } = e,
-            [p, g, x] = (0, u.RQ)((e) => [e.activeView, e.activeViewType, e.activeChannelId], a.x),
+        let { disabled: n, type: s, className: m, onClick: h, channel: p } = e,
+            [f, g, x] = (0, u.RQ)((e) => [e.activeView, e.activeViewType, e.activeChannelId], a.x),
             A = i.useCallback(() => {
-                ((0, u.ed)(s, f.id), m?.());
-            }, [s, m, f.id]);
+                ((0, u.ed)(s, p.id), h?.());
+            }, [s, h, p.id]);
         return n
             ? null
             : (0, l.jsx)("div", {
                   className: r()(c.VQ, d.UD),
                   ref: t,
                   children: (0, l.jsx)(o.A, {
-                      className: r()(d.Z8, h),
+                      className: r()(d.Z8, m),
                       onClick: A,
-                      active: (p === c.kx.GIF || p === c.kx.EMOJI || p === c.kx.STICKER) && g === s && x === f.id,
+                      active: (f === c.kx.GIF || f === c.kx.EMOJI || f === c.kx.STICKER) && g === s && x === p.id,
                       tabIndex: 0,
                       focusProps: { offset: { top: 4, bottom: 4, left: -4, right: -4 } },
                   }),

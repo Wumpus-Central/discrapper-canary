@@ -1,4 +1,4 @@
-n.d(t, { V: () => f });
+n.d(t, { V: () => p });
 var l = n(477900),
     i = n(582128),
     s = n(503698),
@@ -8,15 +8,15 @@ var l = n(477900),
     u = n(661531),
     c = n(866665),
     d = n(736653),
-    h = n(375708),
-    m = n(130811);
-function f(e) {
+    m = n(375708),
+    h = n(130811);
+function p(e) {
     let {
             src: t,
             size: n,
             constrain: s = "height",
-            className: f,
-            alt: p,
+            className: p,
+            alt: f,
             fallbackSrc: g,
             "aria-hidden": x,
             showTooltip: A = !1,
@@ -33,21 +33,21 @@ function f(e) {
             height: "100%",
             color: (0, a.M)(C) ? u.A.colors.WHITE : u.A.colors.BLACK,
             style: { maxWidth: E },
-            className: r()(m.f, f),
+            className: r()(h.f, p),
         });
     let _ = "height" === s ? { maxWidth: E, height: E } : { maxWidth: E, minHeight: E };
     return (0, l.jsx)(
         c.m,
         {
-            "aria-label": p,
-            __unsupportedReactNodeAsText: p,
+            "aria-label": f,
+            __unsupportedReactNodeAsText: f,
             shouldShow: A,
             children: (0, l.jsx)("img", {
                 style: _,
-                className: r()(m.f, f),
+                className: r()(h.f, p),
                 src: I && null != g ? g : t,
                 "aria-hidden": x,
-                alt: p ?? (x ? void 0 : h.intl.string(h.t["2B/phM"])),
+                alt: f ?? (x ? void 0 : m.intl.string(m.t["2B/phM"])),
                 onError: (e) => (I ? v(!0) : y(!0)),
             }),
         },

@@ -8,10 +8,10 @@ function o(e) {
     let { type: t, textValue: n, maxCharacterCount: o, showRemainingCharsAfterCount: u } = e,
         c = (0, l.bG)([s.default], () => r.Ay.canUseIncreasedMessageLength(s.default.getCurrentUser())),
         d = (0, i.A)(),
-        h = n.length,
-        m = null != t.upsellLongMessages && h > a.uvi && c,
-        f = null != t.upsellLongMessages && !c,
-        p = (o ?? d) - h,
-        g = p > (u ?? o ?? d / 10);
-    return { isVisible: (m && p >= 0) || !g, showsUpsell: f && !g };
+        m = n.length,
+        h = null != t.upsellLongMessages && m > a.uvi && c,
+        p = null != t.upsellLongMessages && !c,
+        f = (o ?? d) - m,
+        g = f > (u ?? o ?? d / 10);
+    return { isVisible: (h && f >= 0) || !g, showsUpsell: p && !g };
 }

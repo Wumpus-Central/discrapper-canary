@@ -1,4 +1,4 @@
-n.d(t, { A: () => f });
+n.d(t, { A: () => p });
 var l = n(477900),
     i = n(582128),
     s = n(503698),
@@ -8,15 +8,15 @@ var l = n(477900),
     u = n(696451),
     c = n(486020),
     d = n(392054),
-    h = n(125805),
-    m = n(532406);
-function f(e) {
+    m = n(125805),
+    h = n(532406);
+function p(e) {
     let {
             section: t,
             channel: { guild_id: n },
             isSelected: s,
-            width: f,
-            height: p,
+            width: p,
+            height: f,
             className: g,
             selectable: x = !1,
             isSquircle: A,
@@ -51,24 +51,24 @@ function f(e) {
                           bot: t.application?.bot,
                           botIconFirst: !0,
                           guildMember: R,
-                          size: f,
+                          size: p,
                       })
-                    : m,
-            [t, f, R],
+                    : h,
+            [t, p, R],
         );
     return (0, l.jsx)("div", {
         ...S,
-        className: r()(h.iE, g, { [h.rb]: x, [h.wH]: x && s }),
+        className: r()(m.iE, g, { [m.rb]: x, [m.wH]: x && s }),
         onFocus: _,
         onBlur: j,
         onMouseOver: b,
         onMouseLeave: T,
         children: (0, l.jsx)(o.Ay, {
-            className: h.dK,
+            className: m.dK,
             mask: A || (x && (s || v)) ? o.hW.SQUIRCLE : o.hW.AVATAR_DEFAULT,
-            width: f,
-            height: p,
-            children: (0, l.jsx)("img", { alt: "", className: h.Kk, style: { width: f, height: p }, src: O }),
+            width: p,
+            height: f,
+            children: (0, l.jsx)("img", { alt: "", className: m.Kk, style: { width: p, height: f }, src: O }),
         }),
     });
 }

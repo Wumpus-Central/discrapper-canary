@@ -1,4 +1,4 @@
-n.d(t, { A: () => L });
+n.d(t, { A: () => M });
 var l = n(477900),
     i = n(582128),
     s = n(503698),
@@ -8,10 +8,10 @@ var l = n(477900),
     u = n(866665),
     c = n(403581),
     d = n(834730),
-    h = n(140735),
-    m = n(793574),
-    f = n(688810),
-    p = n(135621),
+    m = n(140735),
+    h = n(793574),
+    p = n(688810),
+    f = n(135621),
     g = n(287809),
     x = n(158045),
     A = n(192308),
@@ -37,7 +37,7 @@ function R(e) {
             let e = S.A.getChannel(v.Ay.getChannelId());
             return e?.isPrivate() ? _.liQ.DM_CHANNEL : _.liQ.GUILD_CHANNEL;
         }),
-        { analyticsLocations: a } = (0, f.Ay)(m.A.PREMIUM_UPSELL);
+        { analyticsLocations: a } = (0, p.Ay)(h.A.PREMIUM_UPSELL);
     return (
         i.useEffect(() => {
             (N.default.track(_.HAw.PREMIUM_UPSELL_VIEWED, {
@@ -71,11 +71,11 @@ function R(e) {
     );
 }
 var O = n(263582),
-    M = n(412028);
-function L(e) {
+    L = n(412028);
+function M(e) {
     let { type: t, textValue: n, maxCharacterCount: i, showRemainingCharsAfterCount: s, className: A } = e,
         C = (0, o.bG)([g.default], () => x.Ay.canUseIncreasedMessageLength(g.default.getCurrentUser())),
-        E = (0, p.A)(),
+        E = (0, f.A)(),
         I = i ?? E,
         y = s ?? i ?? E / 10,
         S = n.length,
@@ -84,35 +84,35 @@ function L(e) {
         b = I - S,
         T = b > y;
     (0, a.$)({ currentLength: S, maxLength: I, message: j.intl.string(j.t.c2Jqed) });
-    let L =
+    let M =
             0 === b
                 ? j.intl.string(j.t.tU6YQ7)
                 : b > 0
                   ? j.intl.formatToPlainString(j.t.qH8uFW, { count: b })
                   : j.intl.string(j.t.YSRIqa),
-        { analyticsLocations: k } = (0, f.Ay)(m.A.CHARACTER_COUNT),
+        { analyticsLocations: k } = (0, p.Ay)(h.A.CHARACTER_COUNT),
         { isVisible: w } = (0, O.A)({ type: t, textValue: n, maxCharacterCount: i, showRemainingCharsAfterCount: s });
     if (!w) return null;
     let P = b >= 0;
-    return (0, l.jsx)(f.f5, {
+    return (0, l.jsx)(p.f5, {
         value: k,
         children: (0, l.jsxs)("div", {
-            className: r()(A, M.Dq),
+            className: r()(A, L.Dq),
             children: [
                 (0, l.jsxs)("div", {
-                    className: M.SW,
+                    className: L.SW,
                     children: [
                         v && P
                             ? (0, l.jsx)(u.m, {
                                   text: j.intl.formatToPlainString(j.t.vcvHa0, { maxLength: I }),
                                   position: "top",
-                                  children: (0, l.jsx)(c.t, { size: "md", color: "currentColor", className: M.y }),
+                                  children: (0, l.jsx)(c.t, { size: "md", color: "currentColor", className: L.y }),
                               })
                             : null,
                         T
                             ? null
                             : (0, l.jsx)(u.m, {
-                                  text: L,
+                                  text: M,
                                   position: "top",
                                   children: (0, l.jsx)(d.E, {
                                       variant: "text-sm/semibold",
@@ -124,9 +124,9 @@ function L(e) {
                               }),
                     ],
                 }),
-                (0, l.jsx)(h.A, { "aria-live": "polite", children: j.intl.format(j.t.qH8uFW, { count: b }) }),
+                (0, l.jsx)(m.A, { "aria-live": "polite", children: j.intl.format(j.t.qH8uFW, { count: b }) }),
                 N && !T
-                    ? (0, l.jsx)(R, { className: M.UX, iconOnly: t.upsellLongMessages?.iconOnly || !1, remaining: b })
+                    ? (0, l.jsx)(R, { className: L.UX, iconOnly: t.upsellLongMessages?.iconOnly || !1, remaining: b })
                     : null,
             ],
         }),

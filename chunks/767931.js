@@ -8,10 +8,10 @@ var l = n(477900),
     u = n(778712),
     c = n(939249),
     d = n(834730),
-    h = n(565645),
-    m = n(114166),
-    f = n(209932),
-    p = n(813564),
+    m = n(565645),
+    h = n(114166),
+    p = n(209932),
+    f = n(813564),
     g = n(228366),
     x = n(734057),
     A = n(927813),
@@ -50,7 +50,7 @@ let v = new S(g.h, {
         if (null == c) return !1;
         let { enabled: d } = (0, C.j)(c, "handleSoundPlayStart");
         if (!d) return !1;
-        let h = {
+        let m = {
             soundId: t,
             name: r,
             guildId: s ?? "0",
@@ -87,7 +87,7 @@ let v = new S(g.h, {
                     g.h.dispatch({ type: "SOUNDBOARD_ECHO_EXPIRED", soundId: l });
                 }, E)),
                 y.set(l, n));
-        })({ soundId: t, sound: h, authorId: i ?? l, playedByUserId: l, isEcho: u });
+        })({ soundId: t, sound: m, authorId: i ?? l, playedByUserId: l, isEcho: u });
     },
     VOICE_CHANNEL_SELECT: function (e) {
         (y.forEach(clearTimeout), y.clear(), I.clear());
@@ -107,9 +107,9 @@ function b(e) {
             mostRecentPlayedUser: N.default.getUser(x),
         })),
         I = i.useCallback(() => {
-            (0, p.CZ)(s, n);
+            (0, f.CZ)(s, n);
         }, [n, s]),
-        y = (0, a.bG)([f.A], () => f.A.isPlayingSound(s.soundId), [s]);
+        y = (0, a.bG)([p.A], () => p.A.isPlayingSound(s.soundId), [s]);
     if (null == t || null == C) return null;
     let { emojiId: S, emojiName: v, emojiAnimated: b, name: T } = s;
     return (0, l.jsxs)("div", {
@@ -128,13 +128,13 @@ function b(e) {
                 "aria-label": _.intl.formatToPlainString(_.t.VOmeSq, { name: T }),
                 children: [
                     (null != v || null != S) &&
-                        (0, l.jsx)(h.A, { size: "reaction", className: j.FA, emojiId: S, emojiName: v, animated: b }),
+                        (0, l.jsx)(m.A, { size: "reaction", className: j.FA, emojiId: S, emojiName: v, animated: b }),
                     (0, l.jsx)(d.E, { variant: "text-md/medium", children: T }),
                     (0, l.jsx)("div", { className: j.SU }),
                     (0, l.jsxs)(d.E, {
                         variant: "text-md/medium",
                         className: j.Zi,
-                        children: ["x", (0, l.jsx)(m.A, { className: j.Zi, value: A, digitWidth: 8 })],
+                        children: ["x", (0, l.jsx)(h.A, { className: j.Zi, value: A, digitWidth: 8 })],
                     }),
                 ],
             }),

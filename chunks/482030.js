@@ -8,10 +8,10 @@ var l = n(582128),
     u = n(849269),
     c = n(869003),
     d = n(95561),
-    h = n(264322),
-    m = n(392054),
-    f = n(247186),
-    p = n(999915),
+    m = n(264322),
+    h = n(392054),
+    p = n(247186),
+    f = n(999915),
     g = n(551965),
     x = n(625494),
     A = n(211401),
@@ -20,11 +20,11 @@ var l = n(582128),
     I = n(652215),
     y = n(375708);
 let S = {
-        ...p.Ay.RULES.commandMention,
-        parse: (e, t, n) => ({ content: p.Ay.RULES.commandMention.parse(e, t, n).content }),
+        ...f.Ay.RULES.commandMention,
+        parse: (e, t, n) => ({ content: f.Ay.RULES.commandMention.parse(e, t, n).content }),
     },
     v = s().pick(
-        (0, g.A)([p.Ay.RULES, { commandMention: S }, (0, f.Ay)({ enableBuildOverrides: !1, enableEmojiClick: !1 })]),
+        (0, g.A)([f.Ay.RULES, { commandMention: S }, (0, p.Ay)({ enableBuildOverrides: !1, enableEmojiClick: !1 })]),
         [
             "commandMention",
             "customEmoji",
@@ -50,8 +50,8 @@ function _(e) {
             location: i,
             sectionName: s,
             commandName: a,
-            autoDismissOnClick: f = !0,
-            launchingComponentId: p,
+            autoDismissOnClick: p = !0,
+            launchingComponentId: f,
             submitting: g = !1,
             fetchesApplication: x = !0,
             onConfirmActivityLaunchChecksAlertOpen: S,
@@ -72,7 +72,7 @@ function _(e) {
         })((0, u.Hq)({ context: t, applicationId: n.id, fetchesApplication: x })),
         _ = (0, r.bG)([C.A], () => C.A.entrypoint()),
         j = l.useMemo(() => {
-            if ("channel" !== t.type) return n.bot?.id ?? (0, h.Sx)(t, n.id).descriptor?.botId;
+            if ("channel" !== t.type) return n.bot?.id ?? (0, m.Sx)(t, n.id).descriptor?.botId;
         }, [t, n.id, n.bot]),
         b = (0, u.wK)({
             application: n,
@@ -82,7 +82,7 @@ function _(e) {
             locationObject: v.location,
             onActivityItemSelectedProp: (e) => {
                 let { applicationId: t } = e;
-                (f && A.k(E.Se.ACTIVITY),
+                (p && A.k(E.Se.ACTIVITY),
                     (0, d.zV)(I.HAw.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
                         location: i,
                         application_id: t,
@@ -91,8 +91,8 @@ function _(e) {
                         source: _,
                     }));
             },
-            launchingComponentId: p,
-            commandOrigin: m.iw.APPLICATION_LAUNCHER,
+            launchingComponentId: f,
+            commandOrigin: h.iw.APPLICATION_LAUNCHER,
             sectionName: s,
             source: _,
             fetchesApplication: x,

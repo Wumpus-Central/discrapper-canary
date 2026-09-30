@@ -8,15 +8,15 @@ var l = n(477900),
     u = n(17928),
     c = n(939249),
     d = n(554830),
-    h = n(975460),
-    m = n(531913),
-    f = n(633075),
-    p = n(321191),
+    m = n(975460),
+    h = n(531913),
+    p = n(633075),
+    f = n(321191),
     g = n(903209),
     x = n(375708),
     A = n(374129);
 function C(e) {
-    let t = (0, h.g)(e.activityApplication);
+    let t = (0, m.g)(e.activityApplication);
     return null == t ? null : (0, l.jsx)(E, { ...e, widgetApplication: t });
 }
 function E(e) {
@@ -25,14 +25,14 @@ function E(e) {
         { hasWidget: r, isLoadingProfile: a } =
             ((t = e.userId),
             (n = e.widgetApplication),
-            (s = (0, u.bG)([p.A], () => p.A.getUserProfile(t))),
+            (s = (0, u.bG)([f.A], () => f.A.getUserProfile(t))),
             i.useEffect(() => {
                 let e = new AbortController();
                 return ((0, g.A)(t, void 0, { abortSignal: e.signal }), () => e.abort());
             }, [t]),
             i.useMemo(
                 () => ({
-                    hasWidget: null != s && null != s.widgets && s.widgets.some((e) => (0, f.E)(e, n?.id)),
+                    hasWidget: null != s && null != s.widgets && s.widgets.some((e) => (0, p.E)(e, n?.id)),
                     isLoadingProfile: null == s,
                 }),
                 [s, n],
@@ -54,23 +54,23 @@ function I(e) {
             widgetApplicationId: i,
             hasWidget: s,
             compactViewMore: u = !1,
-            onClickViewMore: h,
+            onClickViewMore: m,
         } = e,
-        f = (0, m.A)(n, i),
-        p = f.surfaceConfigs[o.m.ACTIVITY_ACCESSORY];
-    return null != p && f.hasIdentity
+        p = (0, h.A)(n, i),
+        f = p.surfaceConfigs[o.m.ACTIVITY_ACCESSORY];
+    return null != f && p.hasIdentity
         ? (0, l.jsxs)("div", {
               className: r()(A.kL, t),
               children: [
                   (0, l.jsx)("div", {
                       className: A.Qs,
-                      children: (0, l.jsx)(a.kH, { ...f, surface: o.m.ACTIVITY_ACCESSORY, surfaceConfig: p }),
+                      children: (0, l.jsx)(a.kH, { ...p, surface: o.m.ACTIVITY_ACCESSORY, surfaceConfig: f }),
                   }),
                   s &&
                       (0, l.jsx)(c.D, {
                           "aria-label": x.intl.string(x.t["OBCR+p"]),
                           className: r()(A.NO, { [A.O7]: u }),
-                          onClick: h,
+                          onClick: m,
                           children: (0, l.jsx)(d.K, { size: "xxs" }),
                       }),
               ],

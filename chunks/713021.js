@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => m, dx: () => u, k0: () => o });
+n.d(t, { Ay: () => h, dx: () => u, k0: () => o });
 var l,
     i = n(635377),
     s = n.n(i),
@@ -10,7 +10,7 @@ function u(e, t) {
 }
 let c = { rates: { voice_message: 1 }, positions: new (s())({ max: 25 }) },
     d = { ...c };
-class h extends r.Ay.DeviceSettingsStore {
+class m extends r.Ay.DeviceSettingsStore {
     static displayName = "MediaPlaybackStore";
     static persistKey = "MediaPlaybackStore";
     initialize(e) {
@@ -27,7 +27,7 @@ class h extends r.Ay.DeviceSettingsStore {
         return d.positions.get(e) ?? 0;
     }
 }
-let m = new h(a.h, {
+let h = new m(a.h, {
     MEDIA_PLAYBACK_RATE_UPDATE: function (e) {
         let { rate: t, playbackType: n } = e;
         d = { ...d, rates: { ...d.rates, [n]: t } };

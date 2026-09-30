@@ -14,10 +14,10 @@ let c = function (e) {
             isSelected: i = !0,
             width: c = 32,
             height: d = 32,
-            shouldAnimate: h = !0,
-            isLocked: m = !1,
+            shouldAnimate: m = !0,
+            isLocked: h = !1,
         } = e,
-        f = (0, o.Iv)(n, 32, h && i);
+        p = (0, o.Iv)(n, 32, m && i);
     return (0, l.jsxs)("div", {
         children: [
             (0, l.jsx)(a.Ay, {
@@ -26,14 +26,14 @@ let c = function (e) {
                 width: c,
                 height: d,
                 children:
-                    null == f
+                    null == p
                         ? (0, l.jsx)("div", {
                               className: s()(u.$f, u.Gc),
                               children: (0, l.jsx)("div", { className: u.Hj, children: (0, o.Rb)(n) }),
                           })
-                        : (0, l.jsx)("img", { alt: n.name, src: f, className: u.$f }),
+                        : (0, l.jsx)("img", { alt: n.name, src: p, className: u.$f }),
             }),
-            m
+            h
                 ? (0, l.jsx)("div", {
                       className: u.bg,
                       children: (0, l.jsx)(r.LockIcon, {

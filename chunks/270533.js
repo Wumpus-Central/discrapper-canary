@@ -42,8 +42,8 @@ function b(e) {
     return I.useConfig({ location: e }).enabled;
 }
 var G = n(990208),
-    R = n(864310),
-    j = n(363487),
+    j = n(864310),
+    R = n(363487),
     v = n(828162),
     y = n(490557),
     L = n(565553),
@@ -269,7 +269,7 @@ function Z(e) {
 }
 function $(e) {
     let { guildId: t, type: n, markAsDismissed: i, channelRowRef: s } = e,
-        { available: r } = (0, R.A)(t),
+        { available: r } = (0, j.A)(t),
         { gameName: a, gameName2: d } = (0, f.A)(),
         c = (0, o.bG)([A.Ay], () => A.Ay.useReducedMotion);
     return (0, l.jsx)(ei, {
@@ -362,7 +362,7 @@ function ee(e) {
     let { guildId: t, markAsDismissed: n, channelRowRef: i } = e,
         s = (0, o.bG)([_.A], () => _.A.getStateForGuild(t)?.allPowerups[a.d0]),
         r = (0, G.A)(s, !0) ?? W,
-        { available: d } = (0, R.A)(t),
+        { available: d } = (0, j.A)(t),
         c = P.fe - d,
         { analyticsLocations: u } = (0, m.Ay)(g.A.GUILD_POWERUPS_COACHMARK_GUILD_THEME_MEMBER);
     return (0, l.jsx)(ei, {
@@ -399,7 +399,7 @@ function ee(e) {
 }
 function et(e) {
     let { guildId: t, markAsDismissed: n, channelRowRef: i, ...s } = e,
-        r = (0, j.A)(t);
+        r = (0, R.A)(t);
     return (0, l.jsx)(ei, {
         targetElementRef: i,
         ...s,
@@ -432,11 +432,11 @@ function et(e) {
 }
 function en(e) {
     let { guildId: t, powerup: n, channelRowRef: s, markAsDismissed: r, ...a } = e,
-        { available: o } = (0, R.A)(t),
+        { available: o } = (0, j.A)(t),
         d = n.cost - o,
         c = (0, G.A)(n, !0),
         { analyticsLocations: u } = (0, m.Ay)(g.A.GUILD_POWERUPS_COACHMARK_BOOST_TO_UNLOCK),
-        h = (0, j.A)(t),
+        h = (0, R.A)(t),
         A = i.useRef(null);
     return (0, l.jsx)(ei, {
         asset:

@@ -8,10 +8,10 @@ var l = n(477900),
     u = n(315629),
     c = n(305866),
     d = n(353795),
-    h = n(508770),
-    m = n(297264),
-    f = n(834730),
-    p = n(821609),
+    m = n(508770),
+    h = n(297264),
+    p = n(834730),
+    f = n(821609),
     g = n(398590),
     x = n(523527),
     A = n(976860),
@@ -28,8 +28,8 @@ var l = n(477900),
     T = n(202541),
     R = n(652215),
     O = n(259589),
-    M = n(375708),
-    L = n(237790),
+    L = n(375708),
+    M = n(237790),
     k = n(592551),
     w = n(644242),
     P = n(309427);
@@ -43,8 +43,8 @@ function D(e) {
             onClose: V,
             onDisplay: G,
             onUpsellClicked: F,
-            isEmojiPickerOverlay: B = !1,
-            graphic: H,
+            isEmojiPickerOverlay: H = !1,
+            graphic: B,
             useNitroGradient: W = !1,
         } = e;
     i.useEffect(() => {
@@ -55,68 +55,68 @@ function D(e) {
             G?.());
     }, [G, U]);
     let K = (0, v.V)(),
-        z = i.useCallback(() => (0, I.LE)(K, T.pe.TIER_2) ?? M.intl.string(M.t.pj0XBN), [K]),
+        z = i.useCallback(() => (0, I.LE)(K, T.pe.TIER_2) ?? L.intl.string(L.t.pj0XBN), [K]),
         Z = (0, N.A)(T.pe.TIER_2),
         Y = (0, _.O9)();
-    t = B
+    t = H
         ? (0, E.TM)()
             ? "https://cdn.discordapp.com/assets/content/c0f100da7d39f5e84ae361150c05077f9ca94ea62d0f7dd086ba1aa8fe17ae68.mov"
             : "https://cdn.discordapp.com/assets/content/75e94ffcd07b3b84cdd4305c93b43b3c94bf3ae56ace551f59b8dba7f3616c1c.webm"
         : (0, E.TM)()
           ? w.A
           : P.A;
-    let q = B || W ? "nitro-pink" : "green";
+    let q = H || W ? "nitro-pink" : "green";
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsx)(o.p, { onClick: V, isVisible: !0 }),
             (0, l.jsx)(u.h, {
                 color: q,
-                className: L.kL,
+                className: M.kL,
                 children: (0, l.jsxs)(c.l, {
                     "aria-label": n,
-                    className: L.r3,
+                    className: M.r3,
                     children: [
                         (0, l.jsxs)("div", {
-                            className: L.Qs,
+                            className: M.Qs,
                             children: [
-                                (0, l.jsx)(a.s_, { "data-migration-pending": !0, onClick: V, className: L.b }),
+                                (0, l.jsx)(a.s_, { "data-migration-pending": !0, onClick: V, className: M.b }),
                                 (0, l.jsxs)("div", {
-                                    className: L.hQ,
+                                    className: M.hQ,
                                     children: [
                                         (0, l.jsx)("div", {
                                             className: k.headerGraphic,
                                             children:
-                                                H ?? (0, l.jsx)(d.v, { type: "video", src: t, loop: !0, loopAt: 5 }),
+                                                B ?? (0, l.jsx)(d.v, { type: "video", src: t, loop: !0, loopAt: 5 }),
                                         }),
-                                        null != Z && (0, l.jsx)(h.E, { type: { text: Z }, variant: "brand" }),
-                                        (0, l.jsx)(m.D, {
-                                            className: r()(L.DD, { [L.GU]: null != Z }),
+                                        null != Z && (0, l.jsx)(m.E, { type: { text: Z }, variant: "brand" }),
+                                        (0, l.jsx)(h.D, {
+                                            className: r()(M.DD, { [M.GU]: null != Z }),
                                             variant: "heading-xl/bold",
                                             color: "text-strong",
                                             children: n,
                                         }),
-                                        (0, l.jsx)(f.E, {
+                                        (0, l.jsx)(p.E, {
                                             variant: "text-md/medium",
                                             color: "text-subtle",
-                                            className: L.rf,
+                                            className: M.rf,
                                             children: s,
                                         }),
                                     ],
                                 }),
-                                B &&
+                                H &&
                                     Y &&
                                     (0, l.jsx)("div", {
-                                        className: L.Zr,
-                                        children: (0, l.jsx)(j.A, { subtitle: M.intl.string(O.default.BkJYQ5) }),
+                                        className: M.Zr,
+                                        children: (0, l.jsx)(j.A, { subtitle: L.intl.string(O.default.BkJYQ5) }),
                                     }),
                             ],
                         }),
                         (0, l.jsx)("div", {
-                            className: L.qr,
+                            className: M.qr,
                             children: (0, l.jsxs)("div", {
-                                className: L.UD,
+                                className: M.UD,
                                 children: [
-                                    (0, l.jsx)(p.$, {
+                                    (0, l.jsx)(f.$, {
                                         variant: "secondary",
                                         onClick: function () {
                                             (C.default.track(R.HAw.PREMIUM_PROMOTION_OPENED, {
@@ -129,7 +129,7 @@ function D(e) {
                                                 (0, g.jH)(),
                                                 (0, A.pX)(R.BVt.APPLICATION_STORE));
                                         },
-                                        text: M.intl.string(M.t.ZnqyZ2),
+                                        text: L.intl.string(L.t.ZnqyZ2),
                                         fullWidth: !0,
                                     }),
                                     (0, l.jsx)(b.A, {

@@ -6,8 +6,8 @@ var l = n(582128),
     a = n(71393);
 function o(e) {
     let { guildId: t, roleId: n, size: s = 20, role: o, guild: c } = e,
-        h = (0, i.bG)([a.A, r.A], () => d({ guildId: t, roleId: n, role: o, guild: c }, a.A, r.A), [t, n, o, c]);
-    return l.useMemo(() => u(h, s), [h, s]);
+        m = (0, i.bG)([a.A, r.A], () => d({ guildId: t, roleId: n, role: o, guild: c }, a.A, r.A), [t, n, o, c]);
+    return l.useMemo(() => u(m, s), [m, s]);
 }
 function u(e, t) {
     if (null == e) return;

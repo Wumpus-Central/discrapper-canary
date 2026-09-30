@@ -1,13 +1,13 @@
-(n.d(t, { H6: () => f, p3: () => h, qv: () => _, wP: () => p }), n(321073));
+(n.d(t, { H6: () => h, p3: () => f, qv: () => _, wP: () => p }), n(321073));
 var r = n(582128),
     i = n(462180),
     u = n(882035),
     a = n(121894),
     l = n(913122),
     E = n(995786),
-    A = n(904813),
-    o = n(243277),
-    s = n(652215);
+    o = n(904813),
+    s = n(243277),
+    A = n(652215);
 let S = {},
     c = (0, u.h)((e, t) => ({
         rules: {},
@@ -17,10 +17,10 @@ let S = {},
             let { guildId: r, id: i, triggerType: u } = n,
                 { rules: l } = t(),
                 E = l[r] ?? {},
-                o = E[u] ?? [],
-                s = o.some((e) => e.id === i),
-                S = o.filter((e) => !(0, A.R)(e.id) || e.triggerType !== u),
-                c = s ? S.map((e) => (e.id === i ? n : e)) : [...S, n];
+                s = E[u] ?? [],
+                A = s.some((e) => e.id === i),
+                S = s.filter((e) => !(0, o.R)(e.id) || e.triggerType !== u),
+                c = A ? S.map((e) => (e.id === i ? n : e)) : [...S, n];
             (0, a.r)(() => {
                 e({ rules: { ...l, [r]: { ...E, [u]: c } }, error: null });
             });
@@ -47,13 +47,13 @@ let S = {},
                         u =
                             ((r = await (0, E.H0)(n)),
                             (i = {
-                                [o.uh.KEYWORD]: [],
-                                [o.uh.ML_SPAM]: [],
-                                [o.uh.DEFAULT_KEYWORD_LIST]: [],
-                                [o.uh.MENTION_SPAM]: [],
-                                [o.uh.USER_PROFILE]: [],
-                                [o.uh.SERVER_POLICY]: [],
-                                [o.uh.APPLICATION]: [],
+                                [s.uh.KEYWORD]: [],
+                                [s.uh.ML_SPAM]: [],
+                                [s.uh.DEFAULT_KEYWORD_LIST]: [],
+                                [s.uh.MENTION_SPAM]: [],
+                                [s.uh.USER_PROFILE]: [],
+                                [s.uh.SERVER_POLICY]: [],
+                                [s.uh.APPLICATION]: [],
                             }),
                             r.forEach((e) => {
                                 let { triggerType: t } = e;
@@ -73,11 +73,11 @@ let S = {},
             }
         },
     }));
-function h(e, t) {
+function f(e, t) {
     let n = c.getState().rules;
     return (n[e]?.[t] ?? []).length;
 }
-function f(e) {
+function h(e) {
     let [t, n] = r.useState(!1),
         [u, a] = c((e) => [e.syncRules, e.fetching], i.x);
     return [
@@ -93,7 +93,7 @@ function f(e) {
     ];
 }
 function _(e) {
-    let [t, n] = f(e);
+    let [t, n] = h(e);
     return (
         r.useEffect(() => {
             (async () => {
@@ -105,7 +105,7 @@ function _(e) {
 }
 function p(e) {
     return c(
-        (t) => ({ rulesByTriggerType: t.rules[e ?? s.dJq] ?? {}, updateRule: t.updateRule, removeRule: t.removeRule }),
+        (t) => ({ rulesByTriggerType: t.rules[e ?? A.dJq] ?? {}, updateRule: t.updateRule, removeRule: t.removeRule }),
         i.x,
     );
 }

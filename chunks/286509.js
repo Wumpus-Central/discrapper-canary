@@ -1,4 +1,4 @@
-n.d(t, { A: () => h });
+n.d(t, { A: () => m });
 var l = n(477900),
     i = n(582128),
     s = n(503698),
@@ -8,19 +8,19 @@ var l = n(477900),
     u = n(847374),
     c = n(650583),
     d = n(146583);
-let h = i.memo(function (e) {
-    let { children: t, trailing: n, className: i, icon: s, isCollapsed: h, onClick: m, "aria-label": f } = e;
+let m = i.memo(function (e) {
+    let { children: t, trailing: n, className: i, icon: s, isCollapsed: m, onClick: h, "aria-label": p } = e;
     return (0, l.jsxs)("div", {
         className: r()(d.iE, i),
         children: [
             (0, l.jsxs)(a.D, {
-                onClick: m,
+                onClick: h,
                 onKeyDown: (e) => {
                     e.key !== c.dh.ESCAPE && e.stopPropagation();
                 },
-                className: r()(d.wx, { [d.bG]: null != h }),
-                "aria-expanded": null != h ? !h : void 0,
-                "aria-label": f,
+                className: r()(d.wx, { [d.bG]: null != m }),
+                "aria-expanded": null != m ? !m : void 0,
+                "aria-label": p,
                 children: [
                     null != s && (0, l.jsx)("div", { "aria-hidden": !0, className: d.nr, children: s }),
                     (0, l.jsx)(o.E, {
@@ -31,11 +31,11 @@ let h = i.memo(function (e) {
                         className: d.Gp,
                         children: t,
                     }),
-                    null != h
+                    null != m
                         ? (0, l.jsx)(u.a, {
                               size: "custom",
                               color: "currentColor",
-                              className: r()(d.Cj, { [d.Tu]: h }),
+                              className: r()(d.Cj, { [d.Tu]: m }),
                               height: 16,
                               width: 16,
                           })

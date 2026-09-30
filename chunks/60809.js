@@ -7,7 +7,7 @@ n.d(t, {
     Wx: () => s,
     gS: () => r,
     qp: () => u,
-    sK: () => h,
+    sK: () => m,
 });
 var l,
     i = (((l = {})[(l.POPULAR = 0)] = "POPULAR"), (l[(l.ALPHABETICAL = 1)] = "ALPHABETICAL"), l);
@@ -18,4 +18,4 @@ let s = "app-launcher-element",
     u = "app-launcher-app-details-more-menu",
     c = "app-launcher-profile-friend-activity-entry",
     d = "min(100vh, 680px)",
-    h = { "--custom-app-launcher-width": "500px", "--custom-app-launcher-height": d };
+    m = { "--custom-app-launcher-width": "500px", "--custom-app-launcher-height": d };

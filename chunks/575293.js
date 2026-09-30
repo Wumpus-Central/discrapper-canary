@@ -8,10 +8,10 @@ var l = n(477900),
     u = n(834730),
     c = n(276293),
     d = n(602853),
-    h = n(661531),
-    m = n(939249),
-    f = n(935286),
-    p = n(628284),
+    m = n(661531),
+    h = n(939249),
+    p = n(935286),
+    f = n(628284),
     g = n(775602),
     x = n(47167),
     A = n(713654),
@@ -28,7 +28,7 @@ var l = n(477900),
     T = n(375708),
     R = n(160639);
 let O = { compact: 58, cozy: 74, default: 64 };
-function M(e) {
+function L(e) {
     let { action: t } = e,
         n = (0, o.bG)([E.A], () => E.A.getChannel(t.channelId)),
         i = (0, x.Ay)(n, !0);
@@ -44,7 +44,7 @@ function M(e) {
               children: T.intl.format(T.t.MkzlDL, { channelName: i }),
           });
 }
-function L(e) {
+function M(e) {
     let { channelId: t, emojiId: n, emojiName: i } = e,
         s = (0, o.bG)([E.A], () => E.A.getChannel(t));
     if (null == s) return null;
@@ -62,7 +62,7 @@ function k(e) {
         A = (0, N.Lr)(t, c?.channelId),
         E = (0, o.bG)([g.Ay], () => g.Ay.useReducedMotion),
         I = c?.actionType === v.NewMemberActionTypes.VIEW,
-        y = (0, d.r)(h.A.colors.WHITE),
+        y = (0, d.r)(m.A.colors.WHITE),
         _ = O[(0, C.C)()],
         [j, b] = i.useState(!1),
         [k] = i.useState(new a.A.Value(0)),
@@ -88,11 +88,11 @@ function k(e) {
                   j && null != A
                       ? (0, l.jsx)(a.A.div, {
                             style: { marginBottom: w.interpolate({ inputRange: [0, 1], outputRange: [-_, 0] }) },
-                            children: (0, l.jsxs)(m.D, {
+                            children: (0, l.jsxs)(h.D, {
                                 className: r()(R.vK, R.vk, { [R.pJ]: n.isForumChannel() }),
                                 onClick: P,
                                 children: [
-                                    (0, l.jsx)(L, {
+                                    (0, l.jsx)(M, {
                                         channelId: A.channelId,
                                         emojiId: A.emoji?.id,
                                         emojiName: A?.emoji?.name,
@@ -105,12 +105,12 @@ function k(e) {
                                                 color: "text-strong",
                                                 children: T.intl.format(T.t["/beONw"], { step: A.title }),
                                             }),
-                                            (0, l.jsx)(M, { action: A }),
+                                            (0, l.jsx)(L, { action: A }),
                                         ],
                                     }),
                                     (0, l.jsx)("div", {
                                         className: R.kJ,
-                                        children: (0, l.jsx)(f.E, { size: "xs", color: y.hex(), className: R.fz }),
+                                        children: (0, l.jsx)(p.E, { size: "xs", color: y.hex(), className: R.fz }),
                                     }),
                                 ],
                             }),
@@ -119,7 +119,7 @@ function k(e) {
                             className: r()(R.vK, { [R.pJ]: n.isForumChannel() }),
                             style: { marginBottom: k.interpolate({ inputRange: [0, 1], outputRange: [-_, 0] }) },
                             children: [
-                                (0, l.jsx)(L, {
+                                (0, l.jsx)(M, {
                                     channelId: c.channelId,
                                     emojiId: c.emoji?.id,
                                     emojiName: c?.emoji?.name,
@@ -140,7 +140,7 @@ function k(e) {
                                     ],
                                 }),
                                 x
-                                    ? (0, l.jsx)(p.y, {
+                                    ? (0, l.jsx)(f.y, {
                                           size: "custom",
                                           color: "currentColor",
                                           className: R.so,

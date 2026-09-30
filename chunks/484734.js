@@ -5,7 +5,7 @@ n.d(t, {
     lg: () => F,
     nG: () => B,
     c3: () => H,
-    OS: () => w,
+    OS: () => j,
     Y9: () => K,
     IH: () => W,
 });
@@ -51,7 +51,7 @@ var m = n(769015),
     x = n(427262),
     P = n(375708),
     V = n(445388);
-class j extends l.PureComponent {
+class w extends l.PureComponent {
     node;
     componentDidMount() {
         let { focused: e, onFocus: t } = this.props,
@@ -95,7 +95,7 @@ class j extends l.PureComponent {
         });
     }
 }
-class w extends l.Component {
+class j extends l.Component {
     renderIcon() {
         let { guild: e } = this.props;
         return (0, i.jsx)("div", {
@@ -126,7 +126,7 @@ class w extends l.Component {
     }
     render() {
         let { onMouseEnter: e, onClick: t, onFocus: n, onContextMenu: l, focused: r, score: s, id: a } = this.props;
-        return (0, i.jsx)(j, {
+        return (0, i.jsx)(w, {
             id: a,
             "aria-label": this.getAccessibilityLabel(),
             onMouseEnter: e,
@@ -202,7 +202,7 @@ class H extends l.Component {
     }
     render() {
         let { onMouseEnter: e, onClick: t, onFocus: n, onContextMenu: l, focused: r, score: s, id: a } = this.props;
-        return (0, i.jsx)(j, {
+        return (0, i.jsx)(w, {
             id: a,
             "aria-label": this.getAccessibilityLabel(),
             onMouseEnter: e,
@@ -250,7 +250,7 @@ class B extends l.Component {
     }
     render() {
         let { onMouseEnter: e, onClick: t, onFocus: n, onContextMenu: l, focused: r, score: s, id: a } = this.props;
-        return (0, i.jsx)(j, {
+        return (0, i.jsx)(w, {
             id: a,
             "aria-label": this.getAccessibilityLabel(),
             onMouseEnter: e,
@@ -320,7 +320,7 @@ class k extends l.Component {
     }
     render() {
         let { onMouseEnter: e, onClick: t, onFocus: n, onContextMenu: l, focused: r, score: s, id: a } = this.props;
-        return (0, i.jsx)(j, {
+        return (0, i.jsx)(w, {
             id: a,
             "aria-label": this.getAccessibilityLabel(),
             onMouseEnter: e,
@@ -350,7 +350,7 @@ class F extends l.Component {
     }
     render() {
         let { onMouseEnter: e, onClick: t, onFocus: n, focused: l, id: r } = this.props;
-        return (0, i.jsx)(j, {
+        return (0, i.jsx)(w, {
             id: r,
             onMouseEnter: e,
             onClick: t,
@@ -362,7 +362,7 @@ class F extends l.Component {
 }
 function W(e) {
     let { game: t, onMouseEnter: n, onClick: l, onFocus: r, focused: s, id: a, inlineLabel: o, children: d } = e;
-    return (0, i.jsx)(j, {
+    return (0, i.jsx)(w, {
         id: a,
         onMouseEnter: n,
         onClick: l,
@@ -422,7 +422,7 @@ class Y extends l.Component {
     }
     render() {
         let { onMouseEnter: e, onClick: t, onFocus: n, onContextMenu: l, focused: r, score: s, id: a } = this.props;
-        return (0, i.jsx)(j, {
+        return (0, i.jsx)(w, {
             id: a,
             onMouseEnter: e,
             onClick: t,
@@ -483,7 +483,7 @@ class Z extends l.Component {
     }
     render() {
         let { onMouseEnter: e, onClick: t, onFocus: n, onContextMenu: l, focused: r, score: s, id: a } = this.props;
-        return (0, i.jsx)(j, {
+        return (0, i.jsx)(w, {
             id: a,
             onMouseEnter: e,
             onClick: t,

@@ -2,18 +2,18 @@ n.d(t, { A: () => a });
 var r = n(582128);
 let l = "requestVideoFrameCallback" in HTMLVideoElement.prototype;
 function a(e) {
-    let { videoRef: t, canvasRef: n, enabled: a, canvasWidth: i = 10, canvasHeight: u = 6 } = e;
+    let { videoRef: t, canvasRef: n, enabled: a, canvasWidth: i = 10, canvasHeight: s = 6 } = e;
     r.useEffect(() => {
         if (!a) return;
         let e = t.current,
             r = n.current;
         if (null == e || null == r) return;
-        ((r.width = i), (r.height = u));
-        let s = r.getContext("2d");
-        if (null == s) return;
+        ((r.width = i), (r.height = s));
+        let u = r.getContext("2d");
+        if (null == u) return;
         let o = !1;
         function c() {
-            o || e.readyState < 2 || s.drawImage(e, 0, 0, i, u);
+            o || e.readyState < 2 || u.drawImage(e, 0, 0, i, s);
         }
         if (l) {
             let t;
@@ -23,13 +23,13 @@ function a(e) {
             function m() {
                 t = e.requestVideoFrameCallback(d);
             }
-            function f() {
+            function h() {
                 e.cancelVideoFrameCallback(t);
             }
             return (
                 e.addEventListener("play", m),
-                e.addEventListener("pause", f),
-                e.addEventListener("ended", f),
+                e.addEventListener("pause", h),
+                e.addEventListener("ended", h),
                 e.addEventListener("seeked", c),
                 e.addEventListener("loadeddata", c),
                 e.paused ? e.readyState >= 2 && c() : (t = e.requestVideoFrameCallback(d)),
@@ -37,8 +37,8 @@ function a(e) {
                     ((o = !0),
                         e.cancelVideoFrameCallback(t),
                         e.removeEventListener("play", m),
-                        e.removeEventListener("pause", f),
-                        e.removeEventListener("ended", f),
+                        e.removeEventListener("pause", h),
+                        e.removeEventListener("ended", h),
                         e.removeEventListener("seeked", c),
                         e.removeEventListener("loadeddata", c));
                 }
@@ -46,11 +46,11 @@ function a(e) {
         }
         {
             let t;
-            function h() {
-                o || (c(), (t = requestAnimationFrame(h)));
+            function f() {
+                o || (c(), (t = requestAnimationFrame(f)));
             }
             function p() {
-                t = requestAnimationFrame(h);
+                t = requestAnimationFrame(f);
             }
             function v() {
                 cancelAnimationFrame(t);
@@ -61,7 +61,7 @@ function a(e) {
                 e.addEventListener("ended", v),
                 e.addEventListener("seeked", c),
                 e.addEventListener("loadeddata", c),
-                e.paused ? e.readyState >= 2 && c() : (t = requestAnimationFrame(h)),
+                e.paused ? e.readyState >= 2 && c() : (t = requestAnimationFrame(f)),
                 () => {
                     ((o = !0),
                         cancelAnimationFrame(t),
@@ -73,5 +73,5 @@ function a(e) {
                 }
             );
         }
-    }, [t, n, a, i, u]);
+    }, [t, n, a, i, s]);
 }

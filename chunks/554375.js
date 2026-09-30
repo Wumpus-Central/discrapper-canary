@@ -8,10 +8,10 @@ var l = n(435558),
     u = n(181658),
     c = n(268429),
     d = n(236285),
-    h = n(7584),
-    m = n(635222),
-    f = n(597643),
-    p = n(594061),
+    m = n(7584),
+    h = n(635222),
+    p = n(597643),
+    f = n(594061),
     g = n(919638),
     x = n(403362),
     A = n(157559),
@@ -19,7 +19,7 @@ var l = n(435558),
     E = n(355097),
     I = n(375708);
 function y(e) {
-    p.wc.updateAsync(
+    f.wc.updateAsync(
         "textAndImages",
         (t) => {
             ((t.diversitySurrogate = r.hU.create()), (t.diversitySurrogate.value = e));
@@ -78,17 +78,17 @@ async function _(e) {
     }
 }
 function j(e) {
-    if (g.A.totalUnavailableGuilds > 0 || !f.A.isConnected()) return e;
-    let t = e.map((e) => d.Ay.getCustomEmojiById(e) ?? h.Ay.getByName(e)).filter(x.Vq);
-    return [...(0, m.A)(t).keys()];
+    if (g.A.totalUnavailableGuilds > 0 || !p.A.isConnected()) return e;
+    let t = e.map((e) => d.Ay.getCustomEmojiById(e) ?? m.Ay.getByName(e)).filter(x.Vq);
+    return [...(0, h.A)(t).keys()];
 }
 function b(e) {
-    return null == e ? null : (e.id ?? h.Ay.convertSurrogateToBase(e.surrogates)?.name ?? e.name);
+    return null == e ? null : (e.id ?? m.Ay.convertSurrogateToBase(e.surrogates)?.name ?? e.name);
 }
 function T(e) {
     let t = b(e);
     null != t &&
-        p.bW.updateAsync(
+        f.bW.updateAsync(
             "favoriteEmojis",
             (e) =>
                 ((e.emojis = j(e.emojis)), i().size(e.emojis) >= 250)
@@ -104,7 +104,7 @@ function T(e) {
 function R(e) {
     let t = b(e);
     null != t &&
-        p.bW.updateAsync(
+        f.bW.updateAsync(
             "favoriteEmojis",
             (e) => {
                 if (((e.emojis = j(e.emojis)), !e.emojis.includes(t))) return !1;

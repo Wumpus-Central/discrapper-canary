@@ -1,4 +1,4 @@
-n.d(t, { A: () => p });
+n.d(t, { A: () => f });
 var l = n(477900),
     i = n(582128),
     s = n(503698),
@@ -8,9 +8,9 @@ var l = n(477900),
     u = n(793920),
     c = n(939249),
     d = n(122641),
-    h = n(375708),
-    m = n(28680);
-class f extends i.PureComponent {
+    m = n(375708),
+    h = n(28680);
+class p extends i.PureComponent {
     _mediaBar = i.createRef();
     _hoverTimeout;
     state = { hovered: !1, focused: !1, dragging: !1 };
@@ -72,8 +72,8 @@ class f extends i.PureComponent {
                 className: n,
                 sliderWrapperClassName: i,
                 sliderClassName: s,
-                currentWindow: f,
-                muted: p,
+                currentWindow: p,
+                muted: f,
                 minValue: g,
                 maxValue: x,
                 value: A,
@@ -83,9 +83,9 @@ class f extends i.PureComponent {
             { hovered: I, focused: y, dragging: S } = this.state,
             v = a.H;
         return (
-            p || A === g ? (v = o._) : A < x / 2 && (v = u.S),
+            f || A === g ? (v = o._) : A < x / 2 && (v = u.S),
             (0, l.jsxs)("div", {
-                className: r()(n, m.kL),
+                className: r()(n, h.kL),
                 onMouseEnter: () => {
                     (clearTimeout(this._hoverTimeout), this.setState({ hovered: !0 }), C?.());
                 },
@@ -99,7 +99,7 @@ class f extends i.PureComponent {
                 onKeyDown: this.handleKeyDown,
                 children: [
                     (0, l.jsx)("div", {
-                        className: r()(m.QS, i, { [m.OZ]: I || y || S }),
+                        className: r()(h.QS, i, { [h.OZ]: I || y || S }),
                         onMouseEnter: () => {
                             (clearTimeout(this._hoverTimeout), this.setState({ hovered: !0 }));
                         },
@@ -108,20 +108,20 @@ class f extends i.PureComponent {
                                 (this._hoverTimeout = setTimeout(() => this.setState({ hovered: !1 }), 150)));
                         },
                         children: (0, l.jsx)(d.A, {
-                            className: m.YZ,
+                            className: h.YZ,
                             sliderClassName: s,
                             type: d.A.Types.VOLUME,
                             value: A / x,
                             onDrag: this.handleValueChange,
                             onDragStart: this.handleDragStart,
                             onDragEnd: this.handleDragEnd,
-                            currentWindow: f,
+                            currentWindow: p,
                             ref: this._mediaBar,
                         }),
                     }),
                     (0, l.jsx)(c.D, {
-                        className: m.bk,
-                        "aria-label": h.intl.string(h.t["19lt24"]),
+                        className: h.bk,
+                        "aria-label": m.intl.string(m.t["19lt24"]),
                         onClick: this.handleToggleMute,
                         children: (0, l.jsx)(v, { color: t, className: e }),
                     }),
@@ -130,4 +130,4 @@ class f extends i.PureComponent {
         );
     }
 }
-let p = f;
+let f = p;

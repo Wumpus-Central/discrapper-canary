@@ -275,15 +275,15 @@ let d = (0, c.mj)({
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-var h = n(56815);
-let m = (0, c.mj)({
+var m = n(56815);
+let h = (0, c.mj)({
     name: "2026-02-non-dm-gifting-modal-redesign",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-var f = n(990820),
-    p = n(202541);
+var p = n(990820),
+    f = n(202541);
 function g(e) {
     let {
             giftRecipient: t,
@@ -297,7 +297,7 @@ function g(e) {
             location: C,
         } = e,
         { enabled: E } = d.useConfig({ location: C }),
-        { enabled: I } = m.useConfig({ location: C }),
+        { enabled: I } = h.useConfig({ location: C }),
         y = (0, u.F5)(C),
         S = (0, s.tA)({ isGift: !0, giftRecipient: t }),
         v = E && null != t,
@@ -315,7 +315,7 @@ function g(e) {
                       analyticsLocation: g,
                       analyticsObject: c ?? r,
                       giftMessage: x,
-                      ...(0, h.Dv)(A, !0, C),
+                      ...(0, m.Dv)(A, !0, C),
                   })
                 : y
                   ? j
@@ -326,7 +326,7 @@ function g(e) {
                             analyticsObject: a ?? r,
                             giftMessage: x,
                         })
-                      : (0, f.A)({
+                      : (0, p.A)({
                             giftRecipient: t ?? void 0,
                             analyticsLocations: n,
                             analyticsLocation: g,
@@ -334,7 +334,7 @@ function g(e) {
                             giftMessage: x,
                         })
                   : v && null != t
-                    ? (0, f.A)({
+                    ? (0, p.A)({
                           giftRecipient: t,
                           analyticsLocations: n,
                           analyticsLocation: g,
@@ -342,12 +342,12 @@ function g(e) {
                           giftMessage: x,
                       })
                     : N
-                      ? (0, f.A)({
+                      ? (0, p.A)({
                             analyticsLocations: n,
                             analyticsLocation: g,
                             analyticsObject: a ?? r,
                             giftMessage: x,
-                            giftingOrigin: p.vQ.GUILD_CHANNEL,
+                            giftingOrigin: f.vQ.GUILD_CHANNEL,
                         })
                       : j && null != t
                         ? o({

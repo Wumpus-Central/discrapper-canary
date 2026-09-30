@@ -12,10 +12,10 @@ let d = function (e) {
             href: t,
             className: n,
             iconClassName: d,
-            rel: h,
-            target: m,
-            mimeType: f,
-            fileName: p,
+            rel: m,
+            target: h,
+            mimeType: p,
+            fileName: f,
             focusProps: g,
             onClick: x,
             ...A
@@ -24,30 +24,30 @@ let d = function (e) {
         E = i.useCallback(
             (e) => {
                 (o.default.track(u.HAw.MEDIA_DOWNLOAD_BUTTON_TAPPED, {
-                    attachment_type: f?.[0],
-                    attachment_subtype: f?.[1],
+                    attachment_type: p?.[0],
+                    attachment_subtype: p?.[1],
                 }),
                     x?.(),
                     C?.(e));
             },
-            [C, f, x],
+            [C, p, x],
         );
-    return null != p
+    return null != f
         ? (0, l.jsx)(r.Anchor, {
               href: t,
               onClick: E,
-              target: m,
-              rel: h,
+              target: h,
+              rel: m,
               className: n,
               focusProps: g,
               ...A,
-              children: p,
+              children: f,
           })
         : (0, l.jsx)(r.Anchor, {
               href: t,
               onClick: E,
-              target: m,
-              rel: h,
+              target: h,
+              rel: m,
               className: n,
               "aria-label": c.intl.string(c.t["1WjMbC"]),
               focusProps: g,

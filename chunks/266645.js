@@ -8,10 +8,10 @@ var l = n(477900),
     u = n(60465),
     c = n(409626),
     d = n(106191),
-    h = n(332173),
-    m = n(936755),
-    f = n(827669);
-let p = 0,
+    m = n(332173),
+    h = n(936755),
+    p = n(827669);
+let f = 0,
     g = "data-mention-game-id",
     x = new Set([
         "DIV",
@@ -61,7 +61,7 @@ function E(e) {
         if (a) {
             let t = s.getAttribute(g);
             if (null == t || "" === t) return;
-            (e.preventDefault(), e.clipboardData.setData("text/plain", (0, f.KW)(t)));
+            (e.preventDefault(), e.clipboardData.setData("text/plain", (0, p.KW)(t)));
             return;
         }
         (e.preventDefault(),
@@ -76,7 +76,7 @@ function E(e) {
                             if (t.nodeType === Node.TEXT_NODE) return t.textContent ?? "";
                             if (t.nodeType !== Node.ELEMENT_NODE) return "";
                             let l = t.getAttribute(g);
-                            if (null != l) return (0, f.KW)(l);
+                            if (null != l) return (0, p.KW)(l);
                             let i = t.tagName.toUpperCase();
                             if ("IMG" === i) {
                                 let e = t.getAttribute("alt");
@@ -98,7 +98,7 @@ function E(e) {
                     let t = e.getAttribute(g);
                     if (null == t || "" === t) return;
                     let n = e.ownerDocument ?? document;
-                    e.parentNode?.replaceChild(n.createTextNode((0, f.KW)(t)), e);
+                    e.parentNode?.replaceChild(n.createTextNode((0, p.KW)(t)), e);
                 }),
                 (n = document.createElement("div")).appendChild(t),
                 n.innerHTML),
@@ -108,16 +108,16 @@ function E(e) {
 var I = n(375708),
     y = n(379961);
 let S = function (e) {
-    let { gameId: t, authorId: f } = e,
+    let { gameId: t, authorId: p } = e,
         g = (0, o.K)(t),
         x = null != g,
         A = g?.gameName ?? I.intl.string(I.t["11pdXZ"]),
         C = g?.gameIcon;
     i.useEffect(
         () => (
-            1 === (p += 1) && document.addEventListener("copy", E),
+            1 === (f += 1) && document.addEventListener("copy", E),
             () => {
-                0 == (p -= 1) && document.removeEventListener("copy", E);
+                0 == (f -= 1) && document.removeEventListener("copy", E);
             }
         ),
         [],
@@ -129,10 +129,10 @@ let S = function (e) {
                         let { default: e } = await Promise.all([n.e("926132"), n.e("146652"), n.e("738392")]).then(
                             n.bind(n, 55947),
                         );
-                        return (n) => (0, l.jsx)(e, { ...n, gameId: t, gameName: A, authorId: f });
+                        return (n) => (0, l.jsx)(e, { ...n, gameId: t, gameName: A, authorId: p });
                     });
             },
-            [x, t, A, f],
+            [x, t, A, p],
         ),
         v = i.useCallback(() => {
             (0, s.openModalLazy)(async () => {
@@ -147,11 +147,11 @@ let S = function (e) {
                           gameId: t,
                           gameProfileModalChecks: { shouldOpenGameProfile: !0, gameId: t },
                           source: c.GameProfileSources.GameMention,
-                          sourceUserId: f,
+                          sourceUserId: p,
                       })
                     : v();
             },
-            [t, x, v, f],
+            [t, x, v, p],
         ),
         _ = x ? `@game ${A}` : void 0;
     return (0, l.jsx)(r.m, {
@@ -160,12 +160,12 @@ let S = function (e) {
         text: _,
         "aria-label": _,
         delay: 750,
-        children: (0, l.jsxs)(h.A, {
+        children: (0, l.jsxs)(m.A, {
             "data-mention-game-id": t,
             onContextMenu: S,
             onClick: N,
             children: [
-                (0, l.jsx)(m.A, {
+                (0, l.jsx)(h.A, {
                     children: (0, l.jsx)("span", {
                         "aria-hidden": "true",
                         className: y.P0,

@@ -8,19 +8,19 @@ var l = n(477900),
     u = n(17928),
     c = n(911608),
     d = n(939249),
-    h = n(789645),
-    m = n(28863),
-    f = n(834730),
-    p = n(228366),
+    m = n(789645),
+    h = n(28863),
+    p = n(834730),
+    f = n(228366),
     g = n(31717),
     x = n(399263);
 let A = {
     cancel(e, t) {
-        p.h.dispatch({ type: "UPLOAD_CANCEL_REQUEST", channelId: e, file: t });
+        f.h.dispatch({ type: "UPLOAD_CANCEL_REQUEST", channelId: e, file: t });
         let n = x.A.getMessageForFile(t.id);
         null == n ||
             ("" === g.A.getDraft(n.channel_id, g.C.ChannelMessage) &&
-                p.h.dispatch({
+                f.h.dispatch({
                     type: "DRAFT_SAVE",
                     channelId: n.channel_id,
                     draft: n.content,
@@ -57,12 +57,12 @@ function v(e) {
         a = i.useCallback(() => {
             A.cancel(t, n);
         }, [t, n]),
-        m = 100 === n.progress,
-        f = !m && n.currentSize > 0,
-        p = i.useMemo(() => (null == s || "" === s.trim() ? null : C.A.parse(s)), [s]);
+        h = 100 === n.progress,
+        p = !h && n.currentSize > 0,
+        f = i.useMemo(() => (null == s || "" === s.trim() ? null : C.A.parse(s)), [s]);
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            null != p && (0, l.jsx)("div", { className: y.Qs, children: p }),
+            null != f && (0, l.jsx)("div", { className: y.Qs, children: f }),
             (0, l.jsx)("div", {
                 className: y.Ig,
                 children: (0, l.jsxs)("div", {
@@ -76,7 +76,7 @@ function v(e) {
                                     className: y.tP,
                                     children: [
                                         (0, l.jsx)("div", { className: y.iW, children: r }),
-                                        f
+                                        p
                                             ? (0, l.jsx)("div", {
                                                   className: y.Ej,
                                                   children: `\u{2014} ${o().filesize(n.currentSize)}`,
@@ -86,17 +86,17 @@ function v(e) {
                                 }),
                                 (0, l.jsx)("div", {
                                     className: y.L$,
-                                    children: m
+                                    children: h
                                         ? I.intl.string(I.t.jfKTes)
                                         : (0, l.jsx)(c.z, { value: n.progress, "aria-label": r }),
                                 }),
                             ],
                         }),
-                        m
+                        h
                             ? null
                             : (0, l.jsx)(d.D, {
                                   onClick: a,
-                                  children: (0, l.jsx)(h.P, { size: "md", color: "currentColor", className: y.x7 }),
+                                  children: (0, l.jsx)(m.P, { size: "md", color: "currentColor", className: y.x7 }),
                               }),
                     ],
                 }),
@@ -118,7 +118,7 @@ let N = function (e) {
                         children: [
                             (0, l.jsx)("div", {
                                 className: y.RT,
-                                children: (0, l.jsx)(m.Anchor, {
+                                children: (0, l.jsx)(h.Anchor, {
                                     className: y.AD,
                                     href: n,
                                     onClick: a,
@@ -126,7 +126,7 @@ let N = function (e) {
                                     children: i,
                                 }),
                             }),
-                            (0, l.jsx)(f.E, {
+                            (0, l.jsx)(p.E, {
                                 variant: "text-xs/normal",
                                 color: "text-muted",
                                 children: o().filesize(s),

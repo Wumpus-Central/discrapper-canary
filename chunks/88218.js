@@ -8,19 +8,19 @@ var l = n(477900),
     u = n(151271),
     c = n(887129),
     d = n(602034),
-    h = n(17928),
-    m = n(775602);
-function f(e) {
+    m = n(17928),
+    h = n(775602);
+function p(e) {
     let t = document.activeElement?.getAttribute(d.eM);
     return null == t ? null : e((0, d.HP)(t));
 }
-function p(e, t, n) {
+function f(e, t, n) {
     let l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 8,
         i = arguments.length > 4 ? arguments[4] : void 0,
         s = i ?? ++n.current;
     if (s !== n.current) return;
     let r = document.querySelector((0, d.Mz)((0, d.t$)(e, t)));
-    null != r ? r.focus() : l > 0 && requestAnimationFrame(() => p(e, t, n, l - 1, s));
+    null != r ? r.focus() : l > 0 && requestAnimationFrame(() => f(e, t, n, l - 1, s));
 }
 function g(e) {
     return {
@@ -56,8 +56,8 @@ let C = function (e) {
             itemIdPrefix: R,
         } = e,
         O = d.useStore((e) => e.activeCategoryIndex),
-        M = null != T && null != R,
-        { itemIdForIndex: L, parseIndex: k } = i.useMemo(() => g(R ?? "expression-category-"), [R]),
+        L = null != T && null != R,
+        { itemIdForIndex: M, parseIndex: k } = i.useMemo(() => g(R ?? "expression-category-"), [R]),
         w = (function (e) {
             let {
                     navId: t,
@@ -69,7 +69,7 @@ let C = function (e) {
                     getScrollOffsetForIndex: o,
                     enabled: u = !0,
                 } = e,
-                d = (0, h.bG)([m.Ay], () => m.Ay.keyboardModeEnabled),
+                d = (0, m.bG)([h.Ay], () => h.Ay.keyboardModeEnabled),
                 g = i.useRef(null),
                 x = i.useRef(0),
                 A = u && d;
@@ -90,7 +90,7 @@ let C = function (e) {
                     (e, n) => {
                         let i = s(n);
                         if (null != i) {
-                            let e = f(s) ?? g.current;
+                            let e = p(s) ?? g.current;
                             (C(i, null == e || i >= e), (g.current = i));
                         }
                         let r = document.querySelector(e);
@@ -98,13 +98,13 @@ let C = function (e) {
                             ((x.current += 1), r.focus());
                             return;
                         }
-                        null != i && p(t, l(i), x);
+                        null != i && f(t, l(i), x);
                     },
                     [l, t, s, C],
                 ),
                 I = i.useCallback(
                     (e, n) => {
-                        (C(e, n), (g.current = e), p(t, l(e), x));
+                        (C(e, n), (g.current = e), f(t, l(e), x));
                     },
                     [l, t, C],
                 ),
@@ -130,11 +130,11 @@ let C = function (e) {
                     [n],
                 ),
                 v = i.useCallback(() => {
-                    let e = f(s) ?? g.current;
+                    let e = p(s) ?? g.current;
                     null == e || e >= r - 1 || I(e + 1, !0);
                 }, [I, s, r]),
                 N = i.useCallback(() => {
-                    let e = f(s) ?? g.current;
+                    let e = p(s) ?? g.current;
                     null == e || e <= 0 || I(e - 1, !1);
                 }, [I, s]),
                 _ = (0, c.Ay)({
@@ -167,12 +167,12 @@ let C = function (e) {
         })({
             navId: T ?? "expression-picker-categories-disabled",
             categoryListRef: t,
-            itemIdForIndex: L,
+            itemIdForIndex: M,
             parseIndex: k,
             rowCount: y,
             activeIndex: O,
             getScrollOffsetForIndex: S,
-            enabled: M,
+            enabled: L,
         });
     !(function (e) {
         let { activeIndex: t, categoryListRef: n, getScrollOffsetForIndex: l } = e,
@@ -209,12 +209,12 @@ let C = function (e) {
             hideScrollbar: !0,
             rowCountBySection: j,
             renderSection: b,
-            role: M ? "none presentation" : void 0,
+            role: L ? "none presentation" : void 0,
         }),
         G = (0, l.jsxs)("div", {
             className: r()(A.i, E),
             children: [
-                M
+                L
                     ? (0, l.jsx)(a.PR, {
                           children: (e) => {
                               let { ref: t, ...n } = e;
@@ -225,5 +225,5 @@ let C = function (e) {
                 C?.(P),
             ],
         });
-    return M ? (0, l.jsx)(a.hD, { navigator: w, children: G }) : G;
+    return L ? (0, l.jsx)(a.hD, { navigator: w, children: G }) : G;
 };

@@ -13,11 +13,11 @@ function a(e) {
             location: u,
             variant: c = "secondary",
             size: d = "sm",
-            ...h
+            ...m
         } = e,
-        m = (0, r.l)({ activity: t ?? void 0, embeddedActivity: n, user: a, onGameJoin: o, location: u });
-    if (null == m) return null;
-    let { isJoining: f, handleJoinRequest: p, buttonCTA: g, tooltip: x, isEnabled: A } = m;
+        h = (0, r.l)({ activity: t ?? void 0, embeddedActivity: n, user: a, onGameJoin: o, location: u });
+    if (null == h) return null;
+    let { isJoining: p, handleJoinRequest: f, buttonCTA: g, tooltip: x, isEnabled: A } = h;
     return (0, l.jsx)(
         i.m,
         {
@@ -27,11 +27,11 @@ function a(e) {
                 variant: c,
                 size: d,
                 text: g,
-                onClick: p,
+                onClick: f,
                 disabled: !A,
-                loading: f,
+                loading: p,
                 fullWidth: !0,
-                ...h,
+                ...m,
             }),
         },
         "join",

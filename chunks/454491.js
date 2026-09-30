@@ -2,8 +2,8 @@ t.d(l, { e: () => b });
 var s = t(477900),
     n = t(582128),
     i = t(403581),
-    r = t(939249),
-    a = t(320448),
+    a = t(939249),
+    r = t(320448),
     o = t(75678),
     c = t(871123),
     d = t(906383),
@@ -29,7 +29,7 @@ function b(e) {
         : "nitro" !== l.flavor
           ? (0, s.jsx)(m.O0, { Icon: l.Icon, text: l.text, endDatetime: l.endsAt, tooltip: l.tooltip })
           : (0, d.ad)(_)
-            ? (0, s.jsx)(r.D, {
+            ? (0, s.jsx)(a.D, {
                   className: h.U,
                   onClick: g,
                   children: (0, s.jsx)(m.Ay, {
@@ -37,7 +37,7 @@ function b(e) {
                       Icon: N,
                       text: l.text,
                       tooltip: l.tooltip,
-                      trailing: (0, s.jsx)(a._, { size: "xs", color: "currentColor" }),
+                      trailing: (0, s.jsx)(r._, { size: "xs", color: "currentColor" }),
                   }),
               })
             : (0, s.jsx)(m.O0, {
